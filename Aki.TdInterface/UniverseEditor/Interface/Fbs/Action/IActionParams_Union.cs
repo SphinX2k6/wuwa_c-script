@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006086 RID: 24710
+	// Token: 0x020066E8 RID: 26344
 	public struct IActionParams_Union : IFlatbufferObject
 	{
-		// Token: 0x1700B622 RID: 46626
-		// (get) Token: 0x06029DB1 RID: 171441 RVA: 0x005BDC8E File Offset: 0x005BBE8E
+		// Token: 0x1700BF8D RID: 49037
+		// (get) Token: 0x0602C465 RID: 181349 RVA: 0x00607172 File Offset: 0x00605372
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06029DB2 RID: 171442 RVA: 0x005BDC9B File Offset: 0x005BBE9B
+		// Token: 0x0602C466 RID: 181350 RVA: 0x0060717F File Offset: 0x0060537F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029DB3 RID: 171443 RVA: 0x005BDCA4 File Offset: 0x005BBEA4
+		// Token: 0x0602C467 RID: 181351 RVA: 0x00607188 File Offset: 0x00605388
 		public static IActionParams_Union GetRootAsIActionParams_Union(ByteBuffer _bb)
 		{
 			return IActionParams_Union.GetRootAsIActionParams_Union(_bb, default(IActionParams_Union));
 		}
 
-		// Token: 0x06029DB4 RID: 171444 RVA: 0x005BDCC0 File Offset: 0x005BBEC0
+		// Token: 0x0602C468 RID: 181352 RVA: 0x006071A4 File Offset: 0x006053A4
 		public static IActionParams_Union GetRootAsIActionParams_Union(ByteBuffer _bb, IActionParams_Union obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029DB5 RID: 171445 RVA: 0x005BDCDD File Offset: 0x005BBEDD
+		// Token: 0x0602C469 RID: 181353 RVA: 0x006071C1 File Offset: 0x006053C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029DB6 RID: 171446 RVA: 0x005BDCEC File Offset: 0x005BBEEC
+		// Token: 0x0602C46A RID: 181354 RVA: 0x006071D0 File Offset: 0x006053D0
 		public IActionParams_Union __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B623 RID: 46627
-		// (get) Token: 0x06029DB7 RID: 171447 RVA: 0x005BDCFC File Offset: 0x005BBEFC
+		// Token: 0x1700BF8E RID: 49038
+		// (get) Token: 0x0602C46B RID: 181355 RVA: 0x006071E0 File Offset: 0x006053E0
 		public byte UnionIndex
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B624 RID: 46628
-		// (get) Token: 0x06029DB8 RID: 171448 RVA: 0x005BDD38 File Offset: 0x005BBF38
+		// Token: 0x1700BF8F RID: 49039
+		// (get) Token: 0x0602C46C RID: 181356 RVA: 0x0060721C File Offset: 0x0060541C
 		public IActionParams_Union_0 Data0Type
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06029DB9 RID: 171449 RVA: 0x005BDD74 File Offset: 0x005BBF74
+		// Token: 0x0602C46D RID: 181357 RVA: 0x00607258 File Offset: 0x00605458
 		public TTable? Data0<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,1538 +88,1538 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06029DBA RID: 171450 RVA: 0x005BDDB8 File Offset: 0x005BBFB8
+		// Token: 0x0602C46E RID: 181358 RVA: 0x0060729C File Offset: 0x0060549C
 		public IActionParams Data0AsIActionParams()
 		{
 			return this.Data0<IActionParams>().Value;
 		}
 
-		// Token: 0x06029DBB RID: 171451 RVA: 0x005BDDD4 File Offset: 0x005BBFD4
+		// Token: 0x0602C46F RID: 181359 RVA: 0x006072B8 File Offset: 0x006054B8
 		public IInvoke Data0AsIInvoke()
 		{
 			return this.Data0<IInvoke>().Value;
 		}
 
-		// Token: 0x06029DBC RID: 171452 RVA: 0x005BDDF0 File Offset: 0x005BBFF0
+		// Token: 0x0602C470 RID: 181360 RVA: 0x006072D4 File Offset: 0x006054D4
 		public IInteract Data0AsIInteract()
 		{
 			return this.Data0<IInteract>().Value;
 		}
 
-		// Token: 0x06029DBD RID: 171453 RVA: 0x005BDE0C File Offset: 0x005BC00C
+		// Token: 0x0602C471 RID: 181361 RVA: 0x006072F0 File Offset: 0x006054F0
 		public IFinishCondition Data0AsIFinishCondition()
 		{
 			return this.Data0<IFinishCondition>().Value;
 		}
 
-		// Token: 0x06029DBE RID: 171454 RVA: 0x005BDE28 File Offset: 0x005BC028
+		// Token: 0x0602C472 RID: 181362 RVA: 0x0060730C File Offset: 0x0060550C
 		public IGetRewardByInteract Data0AsIGetRewardByInteract()
 		{
 			return this.Data0<IGetRewardByInteract>().Value;
 		}
 
-		// Token: 0x06029DBF RID: 171455 RVA: 0x005BDE44 File Offset: 0x005BC044
+		// Token: 0x0602C473 RID: 181363 RVA: 0x00607328 File Offset: 0x00605528
 		public IWaitUntilLevelSequenceReachMark Data0AsIWaitUntilLevelSequenceReachMark()
 		{
 			return this.Data0<IWaitUntilLevelSequenceReachMark>().Value;
 		}
 
-		// Token: 0x06029DC0 RID: 171456 RVA: 0x005BDE60 File Offset: 0x005BC060
+		// Token: 0x0602C474 RID: 181364 RVA: 0x00607344 File Offset: 0x00605544
 		public IClearEntityVisibleTag Data0AsIClearEntityVisibleTag()
 		{
 			return this.Data0<IClearEntityVisibleTag>().Value;
 		}
 
-		// Token: 0x06029DC1 RID: 171457 RVA: 0x005BDE7C File Offset: 0x005BC07C
+		// Token: 0x0602C475 RID: 181365 RVA: 0x00607360 File Offset: 0x00605560
 		public ISetEntityPos Data0AsISetEntityPos()
 		{
 			return this.Data0<ISetEntityPos>().Value;
 		}
 
-		// Token: 0x06029DC2 RID: 171458 RVA: 0x005BDE98 File Offset: 0x005BC098
+		// Token: 0x0602C476 RID: 181366 RVA: 0x0060737C File Offset: 0x0060557C
 		public IResetEntityPos Data0AsIResetEntityPos()
 		{
 			return this.Data0<IResetEntityPos>().Value;
 		}
 
-		// Token: 0x06029DC3 RID: 171459 RVA: 0x005BDEB4 File Offset: 0x005BC0B4
+		// Token: 0x0602C477 RID: 181367 RVA: 0x00607398 File Offset: 0x00605598
 		public IServerSetPlayerPos Data0AsIServerSetPlayerPos()
 		{
 			return this.Data0<IServerSetPlayerPos>().Value;
 		}
 
-		// Token: 0x06029DC4 RID: 171460 RVA: 0x005BDED0 File Offset: 0x005BC0D0
+		// Token: 0x0602C478 RID: 181368 RVA: 0x006073B4 File Offset: 0x006055B4
 		public IFixTeleControllerPos Data0AsIFixTeleControllerPos()
 		{
 			return this.Data0<IFixTeleControllerPos>().Value;
 		}
 
-		// Token: 0x06029DC5 RID: 171461 RVA: 0x005BDEEC File Offset: 0x005BC0EC
+		// Token: 0x0602C479 RID: 181369 RVA: 0x006073D0 File Offset: 0x006055D0
 		public IFixTeleControllerResetPos Data0AsIFixTeleControllerResetPos()
 		{
 			return this.Data0<IFixTeleControllerResetPos>().Value;
 		}
 
-		// Token: 0x06029DC6 RID: 171462 RVA: 0x005BDF08 File Offset: 0x005BC108
+		// Token: 0x0602C47A RID: 181370 RVA: 0x006073EC File Offset: 0x006055EC
 		public IFixFoundationRelation Data0AsIFixFoundationRelation()
 		{
 			return this.Data0<IFixFoundationRelation>().Value;
 		}
 
-		// Token: 0x06029DC7 RID: 171463 RVA: 0x005BDF24 File Offset: 0x005BC124
+		// Token: 0x0602C47B RID: 181371 RVA: 0x00607408 File Offset: 0x00605608
 		public ITraceCurrentQuest Data0AsITraceCurrentQuest()
 		{
 			return this.Data0<ITraceCurrentQuest>().Value;
 		}
 
-		// Token: 0x06029DC8 RID: 171464 RVA: 0x005BDF40 File Offset: 0x005BC140
+		// Token: 0x0602C47C RID: 181372 RVA: 0x00607424 File Offset: 0x00605624
 		public IFixShowTargetRange Data0AsIFixShowTargetRange()
 		{
 			return this.Data0<IFixShowTargetRange>().Value;
 		}
 
-		// Token: 0x06029DC9 RID: 171465 RVA: 0x005BDF5C File Offset: 0x005BC15C
+		// Token: 0x0602C47D RID: 181373 RVA: 0x00607440 File Offset: 0x00605640
 		public IFixGetItem Data0AsIFixGetItem()
 		{
 			return this.Data0<IFixGetItem>().Value;
 		}
 
-		// Token: 0x06029DCA RID: 171466 RVA: 0x005BDF78 File Offset: 0x005BC178
+		// Token: 0x0602C47E RID: 181374 RVA: 0x0060745C File Offset: 0x0060565C
 		public ILog Data0AsILog()
 		{
 			return this.Data0<ILog>().Value;
 		}
 
-		// Token: 0x06029DCB RID: 171467 RVA: 0x005BDF94 File Offset: 0x005BC194
+		// Token: 0x0602C47F RID: 181375 RVA: 0x00607478 File Offset: 0x00605678
 		public IShowMessage Data0AsIShowMessage()
 		{
 			return this.Data0<IShowMessage>().Value;
 		}
 
-		// Token: 0x06029DCC RID: 171468 RVA: 0x005BDFB0 File Offset: 0x005BC1B0
+		// Token: 0x0602C480 RID: 181376 RVA: 0x00607494 File Offset: 0x00605694
 		public IPrompt Data0AsIPrompt()
 		{
 			return this.Data0<IPrompt>().Value;
 		}
 
-		// Token: 0x06029DCD RID: 171469 RVA: 0x005BDFCC File Offset: 0x005BC1CC
+		// Token: 0x0602C481 RID: 181377 RVA: 0x006074B0 File Offset: 0x006056B0
 		public ISendNpcMail Data0AsISendNpcMail()
 		{
 			return this.Data0<ISendNpcMail>().Value;
 		}
 
-		// Token: 0x06029DCE RID: 171470 RVA: 0x005BDFE8 File Offset: 0x005BC1E8
+		// Token: 0x0602C482 RID: 181378 RVA: 0x006074CC File Offset: 0x006056CC
 		public IAdjustTodTime Data0AsIAdjustTodTime()
 		{
 			return this.Data0<IAdjustTodTime>().Value;
 		}
 
-		// Token: 0x06029DCF RID: 171471 RVA: 0x005BE004 File Offset: 0x005BC204
+		// Token: 0x0602C483 RID: 181379 RVA: 0x006074E8 File Offset: 0x006056E8
 		public ISetAreaTimeState Data0AsISetAreaTimeState()
 		{
 			return this.Data0<ISetAreaTimeState>().Value;
 		}
 
-		// Token: 0x06029DD0 RID: 171472 RVA: 0x005BE020 File Offset: 0x005BC220
+		// Token: 0x0602C484 RID: 181380 RVA: 0x00607504 File Offset: 0x00605704
 		public ISetTimeScale Data0AsISetTimeScale()
 		{
 			return this.Data0<ISetTimeScale>().Value;
 		}
 
-		// Token: 0x06029DD1 RID: 171473 RVA: 0x005BE03C File Offset: 0x005BC23C
+		// Token: 0x0602C485 RID: 181381 RVA: 0x00607520 File Offset: 0x00605720
 		public IJumpTalk Data0AsIJumpTalk()
 		{
 			return this.Data0<IJumpTalk>().Value;
 		}
 
-		// Token: 0x06029DD2 RID: 171474 RVA: 0x005BE058 File Offset: 0x005BC258
+		// Token: 0x0602C486 RID: 181382 RVA: 0x0060753C File Offset: 0x0060573C
 		public ISetHeadIconVisible Data0AsISetHeadIconVisible()
 		{
 			return this.Data0<ISetHeadIconVisible>().Value;
 		}
 
-		// Token: 0x06029DD3 RID: 171475 RVA: 0x005BE074 File Offset: 0x005BC274
+		// Token: 0x0602C487 RID: 181383 RVA: 0x00607558 File Offset: 0x00605758
 		public IPlayMontage Data0AsIPlayMontage()
 		{
 			return this.Data0<IPlayMontage>().Value;
 		}
 
-		// Token: 0x06029DD4 RID: 171476 RVA: 0x005BE090 File Offset: 0x005BC290
+		// Token: 0x0602C488 RID: 181384 RVA: 0x00607574 File Offset: 0x00605774
 		public IAvgPlayRoleAction Data0AsIAvgPlayRoleAction()
 		{
 			return this.Data0<IAvgPlayRoleAction>().Value;
 		}
 
-		// Token: 0x06029DD5 RID: 171477 RVA: 0x005BE0AC File Offset: 0x005BC2AC
+		// Token: 0x0602C489 RID: 181385 RVA: 0x00607590 File Offset: 0x00605790
 		public IAvgMoveRole Data0AsIAvgMoveRole()
 		{
 			return this.Data0<IAvgMoveRole>().Value;
 		}
 
-		// Token: 0x06029DD6 RID: 171478 RVA: 0x005BE0C8 File Offset: 0x005BC2C8
+		// Token: 0x0602C48A RID: 181386 RVA: 0x006075AC File Offset: 0x006057AC
 		public IAvgFocusRole Data0AsIAvgFocusRole()
 		{
 			return this.Data0<IAvgFocusRole>().Value;
 		}
 
-		// Token: 0x06029DD7 RID: 171479 RVA: 0x005BE0E4 File Offset: 0x005BC2E4
+		// Token: 0x0602C48B RID: 181387 RVA: 0x006075C8 File Offset: 0x006057C8
 		public IAvgShakeUi Data0AsIAvgShakeUi()
 		{
 			return this.Data0<IAvgShakeUi>().Value;
 		}
 
-		// Token: 0x06029DD8 RID: 171480 RVA: 0x005BE100 File Offset: 0x005BC300
+		// Token: 0x0602C48C RID: 181388 RVA: 0x006075E4 File Offset: 0x006057E4
 		public IDestroyDynamicEntities Data0AsIDestroyDynamicEntities()
 		{
 			return this.Data0<IDestroyDynamicEntities>().Value;
 		}
 
-		// Token: 0x06029DD9 RID: 171481 RVA: 0x005BE11C File Offset: 0x005BC31C
+		// Token: 0x0602C48D RID: 181389 RVA: 0x00607600 File Offset: 0x00605800
 		public IActorLookAt Data0AsIActorLookAt()
 		{
 			return this.Data0<IActorLookAt>().Value;
 		}
 
-		// Token: 0x06029DDA RID: 171482 RVA: 0x005BE138 File Offset: 0x005BC338
+		// Token: 0x0602C48E RID: 181390 RVA: 0x0060761C File Offset: 0x0060581C
 		public IActorTurnTo Data0AsIActorTurnTo()
 		{
 			return this.Data0<IActorTurnTo>().Value;
 		}
 
-		// Token: 0x06029DDB RID: 171483 RVA: 0x005BE154 File Offset: 0x005BC354
+		// Token: 0x0602C48F RID: 181391 RVA: 0x00607638 File Offset: 0x00605838
 		public IShowTalk Data0AsIShowTalk()
 		{
 			return this.Data0<IShowTalk>().Value;
 		}
 
-		// Token: 0x06029DDC RID: 171484 RVA: 0x005BE170 File Offset: 0x005BC370
+		// Token: 0x0602C490 RID: 181392 RVA: 0x00607654 File Offset: 0x00605854
 		public IFinishTalk Data0AsIFinishTalk()
 		{
 			return this.Data0<IFinishTalk>().Value;
 		}
 
-		// Token: 0x06029DDD RID: 171485 RVA: 0x005BE18C File Offset: 0x005BC38C
+		// Token: 0x0602C491 RID: 181393 RVA: 0x00607670 File Offset: 0x00605870
 		public IShowCenterText Data0AsIShowCenterText()
 		{
 			return this.Data0<IShowCenterText>().Value;
 		}
 
-		// Token: 0x06029DDE RID: 171486 RVA: 0x005BE1A8 File Offset: 0x005BC3A8
+		// Token: 0x0602C492 RID: 181394 RVA: 0x0060768C File Offset: 0x0060588C
 		public IFinishState Data0AsIFinishState()
 		{
 			return this.Data0<IFinishState>().Value;
 		}
 
-		// Token: 0x06029DDF RID: 171487 RVA: 0x005BE1C4 File Offset: 0x005BC3C4
+		// Token: 0x0602C493 RID: 181395 RVA: 0x006076A8 File Offset: 0x006058A8
 		public IChangeState Data0AsIChangeState()
 		{
 			return this.Data0<IChangeState>().Value;
 		}
 
-		// Token: 0x06029DE0 RID: 171488 RVA: 0x005BE1E0 File Offset: 0x005BC3E0
+		// Token: 0x0602C494 RID: 181396 RVA: 0x006076C4 File Offset: 0x006058C4
 		public IChangeBehaviorState Data0AsIChangeBehaviorState()
 		{
 			return this.Data0<IChangeBehaviorState>().Value;
 		}
 
-		// Token: 0x06029DE1 RID: 171489 RVA: 0x005BE1FC File Offset: 0x005BC3FC
+		// Token: 0x0602C495 RID: 181397 RVA: 0x006076E0 File Offset: 0x006058E0
 		public ISetBehaviorIsPaused Data0AsISetBehaviorIsPaused()
 		{
 			return this.Data0<ISetBehaviorIsPaused>().Value;
 		}
 
-		// Token: 0x06029DE2 RID: 171490 RVA: 0x005BE218 File Offset: 0x005BC418
+		// Token: 0x0602C496 RID: 181398 RVA: 0x006076FC File Offset: 0x006058FC
 		public IChangeRandomState Data0AsIChangeRandomState()
 		{
 			return this.Data0<IChangeRandomState>().Value;
 		}
 
-		// Token: 0x06029DE3 RID: 171491 RVA: 0x005BE234 File Offset: 0x005BC434
+		// Token: 0x0602C497 RID: 181399 RVA: 0x00607718 File Offset: 0x00605918
 		public IChangeActorState Data0AsIChangeActorState()
 		{
 			return this.Data0<IChangeActorState>().Value;
 		}
 
-		// Token: 0x06029DE4 RID: 171492 RVA: 0x005BE250 File Offset: 0x005BC450
+		// Token: 0x0602C498 RID: 181400 RVA: 0x00607734 File Offset: 0x00605934
 		public IChangeOtherState Data0AsIChangeOtherState()
 		{
 			return this.Data0<IChangeOtherState>().Value;
 		}
 
-		// Token: 0x06029DE5 RID: 171493 RVA: 0x005BE26C File Offset: 0x005BC46C
+		// Token: 0x0602C499 RID: 181401 RVA: 0x00607750 File Offset: 0x00605950
 		public ISetCameraMode Data0AsISetCameraMode()
 		{
 			return this.Data0<ISetCameraMode>().Value;
 		}
 
-		// Token: 0x06029DE6 RID: 171494 RVA: 0x005BE288 File Offset: 0x005BC488
+		// Token: 0x0602C49A RID: 181402 RVA: 0x0060776C File Offset: 0x0060596C
+		public IModifySceneUiSubtitle Data0AsIModifySceneUiSubtitle()
+		{
+			return this.Data0<IModifySceneUiSubtitle>().Value;
+		}
+
+		// Token: 0x0602C49B RID: 181403 RVA: 0x00607788 File Offset: 0x00605988
 		public ISetPlotMode Data0AsISetPlotMode()
 		{
 			return this.Data0<ISetPlotMode>().Value;
 		}
 
-		// Token: 0x06029DE7 RID: 171495 RVA: 0x005BE2A4 File Offset: 0x005BC4A4
+		// Token: 0x0602C49C RID: 181404 RVA: 0x006077A4 File Offset: 0x006059A4
 		public IPlaySequenceData Data0AsIPlaySequenceData()
 		{
 			return this.Data0<IPlaySequenceData>().Value;
 		}
 
-		// Token: 0x06029DE8 RID: 171496 RVA: 0x005BE2C0 File Offset: 0x005BC4C0
+		// Token: 0x0602C49D RID: 181405 RVA: 0x006077C0 File Offset: 0x006059C0
 		public IPlayCustomSequence Data0AsIPlayCustomSequence()
 		{
 			return this.Data0<IPlayCustomSequence>().Value;
 		}
 
-		// Token: 0x06029DE9 RID: 171497 RVA: 0x005BE2DC File Offset: 0x005BC4DC
+		// Token: 0x0602C49E RID: 181406 RVA: 0x006077DC File Offset: 0x006059DC
 		public IPlayMovie Data0AsIPlayMovie()
 		{
 			return this.Data0<IPlayMovie>().Value;
 		}
 
-		// Token: 0x06029DEA RID: 171498 RVA: 0x005BE2F8 File Offset: 0x005BC4F8
+		// Token: 0x0602C49F RID: 181407 RVA: 0x006077F8 File Offset: 0x006059F8
 		public IPlayEffect Data0AsIPlayEffect()
 		{
 			return this.Data0<IPlayEffect>().Value;
 		}
 
-		// Token: 0x06029DEB RID: 171499 RVA: 0x005BE314 File Offset: 0x005BC514
+		// Token: 0x0602C4A0 RID: 181408 RVA: 0x00607814 File Offset: 0x00605A14
 		public IPlayEffect2 Data0AsIPlayEffect2()
 		{
 			return this.Data0<IPlayEffect2>().Value;
 		}
 
-		// Token: 0x06029DEC RID: 171500 RVA: 0x005BE330 File Offset: 0x005BC530
+		// Token: 0x0602C4A1 RID: 181409 RVA: 0x00607830 File Offset: 0x00605A30
 		public IPlayCommonEffect Data0AsIPlayCommonEffect()
 		{
 			return this.Data0<IPlayCommonEffect>().Value;
 		}
 
-		// Token: 0x06029DED RID: 171501 RVA: 0x005BE34C File Offset: 0x005BC54C
+		// Token: 0x0602C4A2 RID: 181410 RVA: 0x0060784C File Offset: 0x00605A4C
 		public IPlayScreenEffect Data0AsIPlayScreenEffect()
 		{
 			return this.Data0<IPlayScreenEffect>().Value;
 		}
 
-		// Token: 0x06029DEE RID: 171502 RVA: 0x005BE368 File Offset: 0x005BC568
+		// Token: 0x0602C4A3 RID: 181411 RVA: 0x00607868 File Offset: 0x00605A68
 		public ISwitchEffectState Data0AsISwitchEffectState()
 		{
 			return this.Data0<ISwitchEffectState>().Value;
 		}
 
-		// Token: 0x06029DEF RID: 171503 RVA: 0x005BE384 File Offset: 0x005BC584
+		// Token: 0x0602C4A4 RID: 181412 RVA: 0x00607884 File Offset: 0x00605A84
 		public IPlayDissolveEffect Data0AsIPlayDissolveEffect()
 		{
 			return this.Data0<IPlayDissolveEffect>().Value;
 		}
 
-		// Token: 0x06029DF0 RID: 171504 RVA: 0x005BE3A0 File Offset: 0x005BC5A0
+		// Token: 0x0602C4A5 RID: 181413 RVA: 0x006078A0 File Offset: 0x00605AA0
 		public IPlayMpcEffect Data0AsIPlayMpcEffect()
 		{
 			return this.Data0<IPlayMpcEffect>().Value;
 		}
 
-		// Token: 0x06029DF1 RID: 171505 RVA: 0x005BE3BC File Offset: 0x005BC5BC
+		// Token: 0x0602C4A6 RID: 181414 RVA: 0x006078BC File Offset: 0x00605ABC
 		public IRemoveEffect Data0AsIRemoveEffect()
 		{
 			return this.Data0<IRemoveEffect>().Value;
 		}
 
-		// Token: 0x06029DF2 RID: 171506 RVA: 0x005BE3D8 File Offset: 0x005BC5D8
+		// Token: 0x0602C4A7 RID: 181415 RVA: 0x006078D8 File Offset: 0x00605AD8
 		public IWait Data0AsIWait()
 		{
 			return this.Data0<IWait>().Value;
 		}
 
-		// Token: 0x06029DF3 RID: 171507 RVA: 0x005BE3F4 File Offset: 0x005BC5F4
+		// Token: 0x0602C4A8 RID: 181416 RVA: 0x006078F4 File Offset: 0x00605AF4
 		public IMoveToPosA Data0AsIMoveToPosA()
 		{
 			return this.Data0<IMoveToPosA>().Value;
 		}
 
-		// Token: 0x06029DF4 RID: 171508 RVA: 0x005BE410 File Offset: 0x005BC610
+		// Token: 0x0602C4A9 RID: 181417 RVA: 0x00607910 File Offset: 0x00605B10
 		public ISetMoveSpeed Data0AsISetMoveSpeed()
 		{
 			return this.Data0<ISetMoveSpeed>().Value;
 		}
 
-		// Token: 0x06029DF5 RID: 171509 RVA: 0x005BE42C File Offset: 0x005BC62C
+		// Token: 0x0602C4AA RID: 181418 RVA: 0x0060792C File Offset: 0x00605B2C
 		public ISetPosA Data0AsISetPosA()
 		{
 			return this.Data0<ISetPosA>().Value;
 		}
 
-		// Token: 0x06029DF6 RID: 171510 RVA: 0x005BE448 File Offset: 0x005BC648
+		// Token: 0x0602C4AB RID: 181419 RVA: 0x00607948 File Offset: 0x00605B48
 		public IFaceToPos Data0AsIFaceToPos()
 		{
 			return this.Data0<IFaceToPos>().Value;
 		}
 
-		// Token: 0x06029DF7 RID: 171511 RVA: 0x005BE464 File Offset: 0x005BC664
+		// Token: 0x0602C4AC RID: 181420 RVA: 0x00607964 File Offset: 0x00605B64
 		public ISpawnChild Data0AsISpawnChild()
 		{
 			return this.Data0<ISpawnChild>().Value;
 		}
 
-		// Token: 0x06029DF8 RID: 171512 RVA: 0x005BE480 File Offset: 0x005BC680
+		// Token: 0x0602C4AD RID: 181421 RVA: 0x00607980 File Offset: 0x00605B80
 		public ISimpleMove Data0AsISimpleMove()
 		{
 			return this.Data0<ISimpleMove>().Value;
 		}
 
-		// Token: 0x06029DF9 RID: 171513 RVA: 0x005BE49C File Offset: 0x005BC69C
+		// Token: 0x0602C4AE RID: 181422 RVA: 0x0060799C File Offset: 0x00605B9C
 		public ISetNumberVar Data0AsISetNumberVar()
 		{
 			return this.Data0<ISetNumberVar>().Value;
 		}
 
-		// Token: 0x06029DFA RID: 171514 RVA: 0x005BE4B8 File Offset: 0x005BC6B8
+		// Token: 0x0602C4AF RID: 181423 RVA: 0x006079B8 File Offset: 0x00605BB8
 		public ISyncVarToActorState Data0AsISyncVarToActorState()
 		{
 			return this.Data0<ISyncVarToActorState>().Value;
 		}
 
-		// Token: 0x06029DFB RID: 171515 RVA: 0x005BE4D4 File Offset: 0x005BC6D4
+		// Token: 0x0602C4B0 RID: 181424 RVA: 0x006079D4 File Offset: 0x00605BD4
 		public IDoCalculate Data0AsIDoCalculate()
 		{
 			return this.Data0<IDoCalculate>().Value;
 		}
 
-		// Token: 0x06029DFC RID: 171516 RVA: 0x005BE4F0 File Offset: 0x005BC6F0
+		// Token: 0x0602C4B1 RID: 181425 RVA: 0x006079F0 File Offset: 0x00605BF0
 		public ICallByCondition Data0AsICallByCondition()
 		{
 			return this.Data0<ICallByCondition>().Value;
 		}
 
-		// Token: 0x06029DFD RID: 171517 RVA: 0x005BE50C File Offset: 0x005BC70C
+		// Token: 0x0602C4B2 RID: 181426 RVA: 0x00607A0C File Offset: 0x00605C0C
 		public ICallFunction Data0AsICallFunction()
 		{
 			return this.Data0<ICallFunction>().Value;
 		}
 
-		// Token: 0x06029DFE RID: 171518 RVA: 0x005BE528 File Offset: 0x005BC728
+		// Token: 0x0602C4B3 RID: 181427 RVA: 0x00607A28 File Offset: 0x00605C28
 		public IAddFlowInteractOption Data0AsIAddFlowInteractOption()
 		{
 			return this.Data0<IAddFlowInteractOption>().Value;
 		}
 
-		// Token: 0x06029DFF RID: 171519 RVA: 0x005BE544 File Offset: 0x005BC744
+		// Token: 0x0602C4B4 RID: 181428 RVA: 0x00607A44 File Offset: 0x00605C44
 		public IRemoveFlowInteractOption Data0AsIRemoveFlowInteractOption()
 		{
 			return this.Data0<IRemoveFlowInteractOption>().Value;
 		}
 
-		// Token: 0x06029E00 RID: 171520 RVA: 0x005BE560 File Offset: 0x005BC760
+		// Token: 0x0602C4B5 RID: 181429 RVA: 0x00607A60 File Offset: 0x00605C60
 		public IChangeInteractOptionText Data0AsIChangeInteractOptionText()
 		{
 			return this.Data0<IChangeInteractOptionText>().Value;
 		}
 
-		// Token: 0x06029E01 RID: 171521 RVA: 0x005BE57C File Offset: 0x005BC77C
+		// Token: 0x0602C4B6 RID: 181430 RVA: 0x00607A7C File Offset: 0x00605C7C
 		public ISpawnEntity Data0AsISpawnEntity()
 		{
 			return this.Data0<ISpawnEntity>().Value;
 		}
 
-		// Token: 0x06029E02 RID: 171522 RVA: 0x005BE598 File Offset: 0x005BC798
+		// Token: 0x0602C4B7 RID: 181431 RVA: 0x00607A98 File Offset: 0x00605C98
 		public IDestroyAllChild Data0AsIDestroyAllChild()
 		{
 			return this.Data0<IDestroyAllChild>().Value;
 		}
 
-		// Token: 0x06029E03 RID: 171523 RVA: 0x005BE5B4 File Offset: 0x005BC7B4
+		// Token: 0x0602C4B8 RID: 181432 RVA: 0x00607AB4 File Offset: 0x00605CB4
 		public IDestroyEntity Data0AsIDestroyEntity()
 		{
 			return this.Data0<IDestroyEntity>().Value;
 		}
 
-		// Token: 0x06029E04 RID: 171524 RVA: 0x005BE5D0 File Offset: 0x005BC7D0
+		// Token: 0x0602C4B9 RID: 181433 RVA: 0x00607AD0 File Offset: 0x00605CD0
 		public IPlayFlow Data0AsIPlayFlow()
 		{
 			return this.Data0<IPlayFlow>().Value;
 		}
 
-		// Token: 0x06029E05 RID: 171525 RVA: 0x005BE5EC File Offset: 0x005BC7EC
+		// Token: 0x0602C4BA RID: 181434 RVA: 0x00607AEC File Offset: 0x00605CEC
 		public IBubbleData Data0AsIBubbleData()
 		{
 			return this.Data0<IBubbleData>().Value;
 		}
 
-		// Token: 0x06029E06 RID: 171526 RVA: 0x005BE608 File Offset: 0x005BC808
+		// Token: 0x0602C4BB RID: 181435 RVA: 0x00607B08 File Offset: 0x00605D08
 		public IPlayerLookAt Data0AsIPlayerLookAt()
 		{
 			return this.Data0<IPlayerLookAt>().Value;
 		}
 
-		// Token: 0x06029E07 RID: 171527 RVA: 0x005BE624 File Offset: 0x005BC824
+		// Token: 0x0602C4BC RID: 181436 RVA: 0x00607B24 File Offset: 0x00605D24
 		public IEntityLookAt Data0AsIEntityLookAt()
 		{
 			return this.Data0<IEntityLookAt>().Value;
 		}
 
-		// Token: 0x06029E08 RID: 171528 RVA: 0x005BE640 File Offset: 0x005BC840
+		// Token: 0x0602C4BD RID: 181437 RVA: 0x00607B40 File Offset: 0x00605D40
 		public ICharacterLookAt Data0AsICharacterLookAt()
 		{
 			return this.Data0<ICharacterLookAt>().Value;
 		}
 
-		// Token: 0x06029E09 RID: 171529 RVA: 0x005BE65C File Offset: 0x005BC85C
+		// Token: 0x0602C4BE RID: 181438 RVA: 0x00607B5C File Offset: 0x00605D5C
 		public IPlayerLookTowards Data0AsIPlayerLookTowards()
 		{
 			return this.Data0<IPlayerLookTowards>().Value;
 		}
 
-		// Token: 0x06029E0A RID: 171530 RVA: 0x005BE678 File Offset: 0x005BC878
+		// Token: 0x0602C4BF RID: 181439 RVA: 0x00607B78 File Offset: 0x00605D78
 		public IEntityTurnTo Data0AsIEntityTurnTo()
 		{
 			return this.Data0<IEntityTurnTo>().Value;
 		}
 
-		// Token: 0x06029E0B RID: 171531 RVA: 0x005BE694 File Offset: 0x005BC894
+		// Token: 0x0602C4C0 RID: 181440 RVA: 0x00607B94 File Offset: 0x00605D94
 		public ICameraLookAt Data0AsICameraLookAt()
 		{
 			return this.Data0<ICameraLookAt>().Value;
 		}
 
-		// Token: 0x06029E0C RID: 171532 RVA: 0x005BE6B0 File Offset: 0x005BC8B0
+		// Token: 0x0602C4C1 RID: 181441 RVA: 0x00607BB0 File Offset: 0x00605DB0
 		public IStopCameraLookAt Data0AsIStopCameraLookAt()
 		{
 			return this.Data0<IStopCameraLookAt>().Value;
 		}
 
-		// Token: 0x06029E0D RID: 171533 RVA: 0x005BE6CC File Offset: 0x005BC8CC
+		// Token: 0x0602C4C2 RID: 181442 RVA: 0x00607BCC File Offset: 0x00605DCC
 		public ISetVar Data0AsISetVar()
 		{
 			return this.Data0<ISetVar>().Value;
 		}
 
-		// Token: 0x06029E0E RID: 171534 RVA: 0x005BE6E8 File Offset: 0x005BC8E8
+		// Token: 0x0602C4C3 RID: 181443 RVA: 0x00607BE8 File Offset: 0x00605DE8
 		public ISetActorVar Data0AsISetActorVar()
 		{
 			return this.Data0<ISetActorVar>().Value;
 		}
 
-		// Token: 0x06029E0F RID: 171535 RVA: 0x005BE704 File Offset: 0x005BC904
+		// Token: 0x0602C4C4 RID: 181444 RVA: 0x00607C04 File Offset: 0x00605E04
 		public ICalculateVar Data0AsICalculateVar()
 		{
 			return this.Data0<ICalculateVar>().Value;
 		}
 
-		// Token: 0x06029E10 RID: 171536 RVA: 0x005BE720 File Offset: 0x005BC920
+		// Token: 0x0602C4C5 RID: 181445 RVA: 0x00607C20 File Offset: 0x00605E20
 		public IRandomVar Data0AsIRandomVar()
 		{
 			return this.Data0<IRandomVar>().Value;
 		}
 
-		// Token: 0x06029E11 RID: 171537 RVA: 0x005BE73C File Offset: 0x005BC93C
+		// Token: 0x0602C4C6 RID: 181446 RVA: 0x00607C3C File Offset: 0x00605E3C
 		public IGuideTrigger Data0AsIGuideTrigger()
 		{
 			return this.Data0<IGuideTrigger>().Value;
 		}
 
-		// Token: 0x06029E12 RID: 171538 RVA: 0x005BE758 File Offset: 0x005BC958
+		// Token: 0x0602C4C7 RID: 181447 RVA: 0x00607C58 File Offset: 0x00605E58
 		public ICompleteGuide Data0AsICompleteGuide()
 		{
 			return this.Data0<ICompleteGuide>().Value;
 		}
 
-		// Token: 0x06029E13 RID: 171539 RVA: 0x005BE774 File Offset: 0x005BC974
+		// Token: 0x0602C4C8 RID: 181448 RVA: 0x00607C74 File Offset: 0x00605E74
 		public IGetItem Data0AsIGetItem()
 		{
 			return this.Data0<IGetItem>().Value;
 		}
 
-		// Token: 0x06029E14 RID: 171540 RVA: 0x005BE790 File Offset: 0x005BC990
+		// Token: 0x0602C4C9 RID: 181449 RVA: 0x00607C90 File Offset: 0x00605E90
 		public IDestroyQuestItem Data0AsIDestroyQuestItem()
 		{
 			return this.Data0<IDestroyQuestItem>().Value;
 		}
 
-		// Token: 0x06029E15 RID: 171541 RVA: 0x005BE7AC File Offset: 0x005BC9AC
+		// Token: 0x0602C4CA RID: 181450 RVA: 0x00607CAC File Offset: 0x00605EAC
 		public IAwakeEntity Data0AsIAwakeEntity()
 		{
 			return this.Data0<IAwakeEntity>().Value;
 		}
 
-		// Token: 0x06029E16 RID: 171542 RVA: 0x005BE7C8 File Offset: 0x005BC9C8
+		// Token: 0x0602C4CB RID: 181451 RVA: 0x00607CC8 File Offset: 0x00605EC8
 		public ISetEntityVisible Data0AsISetEntityVisible()
 		{
 			return this.Data0<ISetEntityVisible>().Value;
 		}
 
-		// Token: 0x06029E17 RID: 171543 RVA: 0x005BE7E4 File Offset: 0x005BC9E4
+		// Token: 0x0602C4CC RID: 181452 RVA: 0x00607CE4 File Offset: 0x00605EE4
 		public ISetEntityClientVisible Data0AsISetEntityClientVisible()
 		{
 			return this.Data0<ISetEntityClientVisible>().Value;
 		}
 
-		// Token: 0x06029E18 RID: 171544 RVA: 0x005BE800 File Offset: 0x005BCA00
+		// Token: 0x0602C4CD RID: 181453 RVA: 0x00607D00 File Offset: 0x00605F00
 		public ISetEntityClientVisibleSave Data0AsISetEntityClientVisibleSave()
 		{
 			return this.Data0<ISetEntityClientVisibleSave>().Value;
 		}
 
-		// Token: 0x06029E19 RID: 171545 RVA: 0x005BE81C File Offset: 0x005BCA1C
+		// Token: 0x0602C4CE RID: 181454 RVA: 0x00607D1C File Offset: 0x00605F1C
 		public ILockEntity Data0AsILockEntity()
 		{
 			return this.Data0<ILockEntity>().Value;
 		}
 
-		// Token: 0x06029E1A RID: 171546 RVA: 0x005BE838 File Offset: 0x005BCA38
+		// Token: 0x0602C4CF RID: 181455 RVA: 0x00607D38 File Offset: 0x00605F38
 		public IUnlockEntity Data0AsIUnlockEntity()
 		{
 			return this.Data0<IUnlockEntity>().Value;
 		}
 
-		// Token: 0x06029E1B RID: 171547 RVA: 0x005BE854 File Offset: 0x005BCA54
+		// Token: 0x0602C4D0 RID: 181456 RVA: 0x00607D54 File Offset: 0x00605F54
 		public ICompleteChildQuest Data0AsICompleteChildQuest()
 		{
 			return this.Data0<ICompleteChildQuest>().Value;
 		}
 
-		// Token: 0x06029E1C RID: 171548 RVA: 0x005BE870 File Offset: 0x005BCA70
+		// Token: 0x0602C4D1 RID: 181457 RVA: 0x00607D70 File Offset: 0x00605F70
 		public IAcceptCurrentQuest Data0AsIAcceptCurrentQuest()
 		{
 			return this.Data0<IAcceptCurrentQuest>().Value;
 		}
 
-		// Token: 0x06029E1D RID: 171549 RVA: 0x005BE88C File Offset: 0x005BCA8C
+		// Token: 0x0602C4D2 RID: 181458 RVA: 0x00607D8C File Offset: 0x00605F8C
 		public IFinishDoInteract Data0AsIFinishDoInteract()
 		{
 			return this.Data0<IFinishDoInteract>().Value;
 		}
 
-		// Token: 0x06029E1E RID: 171550 RVA: 0x005BE8A8 File Offset: 0x005BCAA8
+		// Token: 0x0602C4D3 RID: 181459 RVA: 0x00607DA8 File Offset: 0x00605FA8
+		public IModifyEntityDecoration Data0AsIModifyEntityDecoration()
+		{
+			return this.Data0<IModifyEntityDecoration>().Value;
+		}
+
+		// Token: 0x0602C4D4 RID: 181460 RVA: 0x00607DC4 File Offset: 0x00605FC4
 		public IAddBuffToEntity Data0AsIAddBuffToEntity()
 		{
 			return this.Data0<IAddBuffToEntity>().Value;
 		}
 
-		// Token: 0x06029E1F RID: 171551 RVA: 0x005BE8C4 File Offset: 0x005BCAC4
+		// Token: 0x0602C4D5 RID: 181461 RVA: 0x00607DE0 File Offset: 0x00605FE0
 		public IAddBuffToPlayer Data0AsIAddBuffToPlayer()
 		{
 			return this.Data0<IAddBuffToPlayer>().Value;
 		}
 
-		// Token: 0x06029E20 RID: 171552 RVA: 0x005BE8E0 File Offset: 0x005BCAE0
+		// Token: 0x0602C4D6 RID: 181462 RVA: 0x00607DFC File Offset: 0x00605FFC
 		public IAddBuffToFollowShooter Data0AsIAddBuffToFollowShooter()
 		{
 			return this.Data0<IAddBuffToFollowShooter>().Value;
 		}
 
-		// Token: 0x06029E21 RID: 171553 RVA: 0x005BE8FC File Offset: 0x005BCAFC
+		// Token: 0x0602C4D7 RID: 181463 RVA: 0x00607E18 File Offset: 0x00606018
 		public IOpenSystemBoard Data0AsIOpenSystemBoard()
 		{
 			return this.Data0<IOpenSystemBoard>().Value;
 		}
 
-		// Token: 0x06029E22 RID: 171554 RVA: 0x005BE918 File Offset: 0x005BCB18
+		// Token: 0x0602C4D8 RID: 181464 RVA: 0x00607E34 File Offset: 0x00606034
 		public IOpenSystemFunction Data0AsIOpenSystemFunction()
 		{
 			return this.Data0<IOpenSystemFunction>().Value;
 		}
 
-		// Token: 0x06029E23 RID: 171555 RVA: 0x005BE934 File Offset: 0x005BCB34
+		// Token: 0x0602C4D9 RID: 181465 RVA: 0x00607E50 File Offset: 0x00606050
 		public IChangeEntityState Data0AsIChangeEntityState()
 		{
 			return this.Data0<IChangeEntityState>().Value;
 		}
 
-		// Token: 0x06029E24 RID: 171556 RVA: 0x005BE950 File Offset: 0x005BCB50
+		// Token: 0x0602C4DA RID: 181466 RVA: 0x00607E6C File Offset: 0x0060606C
 		public IChangeEntityStateDirectly Data0AsIChangeEntityStateDirectly()
 		{
 			return this.Data0<IChangeEntityStateDirectly>().Value;
 		}
 
-		// Token: 0x06029E25 RID: 171557 RVA: 0x005BE96C File Offset: 0x005BCB6C
+		// Token: 0x0602C4DB RID: 181467 RVA: 0x00607E88 File Offset: 0x00606088
 		public IChangeEntityStateBatchDirectly Data0AsIChangeEntityStateBatchDirectly()
 		{
 			return this.Data0<IChangeEntityStateBatchDirectly>().Value;
 		}
 
-		// Token: 0x06029E26 RID: 171558 RVA: 0x005BE988 File Offset: 0x005BCB88
+		// Token: 0x0602C4DC RID: 181468 RVA: 0x00607EA4 File Offset: 0x006060A4
 		public IChangeEntityStateLoop Data0AsIChangeEntityStateLoop()
 		{
 			return this.Data0<IChangeEntityStateLoop>().Value;
 		}
 
-		// Token: 0x06029E27 RID: 171559 RVA: 0x005BE9A4 File Offset: 0x005BCBA4
+		// Token: 0x0602C4DD RID: 181469 RVA: 0x00607EC0 File Offset: 0x006060C0
 		public IChangeNpcPerformState Data0AsIChangeNpcPerformState()
 		{
 			return this.Data0<IChangeNpcPerformState>().Value;
 		}
 
-		// Token: 0x06029E28 RID: 171560 RVA: 0x005BE9C0 File Offset: 0x005BCBC0
+		// Token: 0x0602C4DE RID: 181470 RVA: 0x00607EDC File Offset: 0x006060DC
 		public ISetForceLock Data0AsISetForceLock()
 		{
 			return this.Data0<ISetForceLock>().Value;
 		}
 
-		// Token: 0x06029E29 RID: 171561 RVA: 0x005BE9DC File Offset: 0x005BCBDC
+		// Token: 0x0602C4DF RID: 181471 RVA: 0x00607EF8 File Offset: 0x006060F8
 		public ISetAreaState Data0AsISetAreaState()
 		{
 			return this.Data0<ISetAreaState>().Value;
 		}
 
-		// Token: 0x06029E2A RID: 171562 RVA: 0x005BE9F8 File Offset: 0x005BCBF8
+		// Token: 0x0602C4E0 RID: 181472 RVA: 0x00607F14 File Offset: 0x00606114
 		public ISetWuYinQuState Data0AsISetWuYinQuState()
 		{
 			return this.Data0<ISetWuYinQuState>().Value;
 		}
 
-		// Token: 0x06029E2B RID: 171563 RVA: 0x005BEA14 File Offset: 0x005BCC14
+		// Token: 0x0602C4E1 RID: 181473 RVA: 0x00607F30 File Offset: 0x00606130
 		public IRemoveBuffFromEntity Data0AsIRemoveBuffFromEntity()
 		{
 			return this.Data0<IRemoveBuffFromEntity>().Value;
 		}
 
-		// Token: 0x06029E2C RID: 171564 RVA: 0x005BEA30 File Offset: 0x005BCC30
+		// Token: 0x0602C4E2 RID: 181474 RVA: 0x00607F4C File Offset: 0x0060614C
 		public IRemoveBuffFromPlayer Data0AsIRemoveBuffFromPlayer()
 		{
 			return this.Data0<IRemoveBuffFromPlayer>().Value;
 		}
 
-		// Token: 0x06029E2D RID: 171565 RVA: 0x005BEA4C File Offset: 0x005BCC4C
+		// Token: 0x0602C4E3 RID: 181475 RVA: 0x00607F68 File Offset: 0x00606168
 		public ICollect Data0AsICollect()
 		{
 			return this.Data0<ICollect>().Value;
 		}
 
-		// Token: 0x06029E2E RID: 171566 RVA: 0x005BEA68 File Offset: 0x005BCC68
+		// Token: 0x0602C4E4 RID: 181476 RVA: 0x00607F84 File Offset: 0x00606184
 		public IDestroy Data0AsIDestroy()
 		{
 			return this.Data0<IDestroy>().Value;
 		}
 
-		// Token: 0x06029E2F RID: 171567 RVA: 0x005BEA84 File Offset: 0x005BCC84
+		// Token: 0x0602C4E5 RID: 181477 RVA: 0x00607FA0 File Offset: 0x006061A0
 		public IDestroySelf Data0AsIDestroySelf()
 		{
 			return this.Data0<IDestroySelf>().Value;
 		}
 
-		// Token: 0x06029E30 RID: 171568 RVA: 0x005BEAA0 File Offset: 0x005BCCA0
+		// Token: 0x0602C4E6 RID: 181478 RVA: 0x00607FBC File Offset: 0x006061BC
 		public ISetPlayerMoveControl Data0AsISetPlayerMoveControl()
 		{
 			return this.Data0<ISetPlayerMoveControl>().Value;
 		}
 
-		// Token: 0x06029E31 RID: 171569 RVA: 0x005BEABC File Offset: 0x005BCCBC
+		// Token: 0x0602C4E7 RID: 181479 RVA: 0x00607FD8 File Offset: 0x006061D8
 		public IUnlockTeleportTrigger Data0AsIUnlockTeleportTrigger()
 		{
 			return this.Data0<IUnlockTeleportTrigger>().Value;
 		}
 
-		// Token: 0x06029E32 RID: 171570 RVA: 0x005BEAD8 File Offset: 0x005BCCD8
+		// Token: 0x0602C4E8 RID: 181480 RVA: 0x00607FF4 File Offset: 0x006061F4
 		public IChangeTeamPosition Data0AsIChangeTeamPosition()
 		{
 			return this.Data0<IChangeTeamPosition>().Value;
 		}
 
-		// Token: 0x06029E33 RID: 171571 RVA: 0x005BEAF4 File Offset: 0x005BCCF4
+		// Token: 0x0602C4E9 RID: 181481 RVA: 0x00608010 File Offset: 0x00606210
 		public IClientChangeTeamPosition Data0AsIClientChangeTeamPosition()
 		{
 			return this.Data0<IClientChangeTeamPosition>().Value;
 		}
 
-		// Token: 0x06029E34 RID: 171572 RVA: 0x005BEB10 File Offset: 0x005BCD10
+		// Token: 0x0602C4EA RID: 181482 RVA: 0x0060802C File Offset: 0x0060622C
 		public IClaimLevelPlayReward Data0AsIClaimLevelPlayReward()
 		{
 			return this.Data0<IClaimLevelPlayReward>().Value;
 		}
 
-		// Token: 0x06029E35 RID: 171573 RVA: 0x005BEB2C File Offset: 0x005BCD2C
+		// Token: 0x0602C4EB RID: 181483 RVA: 0x00608048 File Offset: 0x00606248
 		public IClaimDynamicEntityReward Data0AsIClaimDynamicEntityReward()
 		{
 			return this.Data0<IClaimDynamicEntityReward>().Value;
 		}
 
-		// Token: 0x06029E36 RID: 171574 RVA: 0x005BEB48 File Offset: 0x005BCD48
+		// Token: 0x0602C4EC RID: 181484 RVA: 0x00608064 File Offset: 0x00606264
 		public IClearFishingCabinInSaleItems Data0AsIClearFishingCabinInSaleItems()
 		{
 			return this.Data0<IClearFishingCabinInSaleItems>().Value;
 		}
 
-		// Token: 0x06029E37 RID: 171575 RVA: 0x005BEB64 File Offset: 0x005BCD64
+		// Token: 0x0602C4ED RID: 181485 RVA: 0x00608080 File Offset: 0x00606280
 		public IAcceptFishingEntrust Data0AsIAcceptFishingEntrust()
 		{
 			return this.Data0<IAcceptFishingEntrust>().Value;
 		}
 
-		// Token: 0x06029E38 RID: 171576 RVA: 0x005BEB80 File Offset: 0x005BCD80
+		// Token: 0x0602C4EE RID: 181486 RVA: 0x0060809C File Offset: 0x0060629C
 		public IDestroyFishingBoat Data0AsIDestroyFishingBoat()
 		{
 			return this.Data0<IDestroyFishingBoat>().Value;
 		}
 
-		// Token: 0x06029E39 RID: 171577 RVA: 0x005BEB9C File Offset: 0x005BCD9C
+		// Token: 0x0602C4EF RID: 181487 RVA: 0x006080B8 File Offset: 0x006062B8
 		public ITeleportDungeon Data0AsITeleportDungeon()
 		{
 			return this.Data0<ITeleportDungeon>().Value;
 		}
 
-		// Token: 0x06029E3A RID: 171578 RVA: 0x005BEBB8 File Offset: 0x005BCDB8
+		// Token: 0x0602C4F0 RID: 181488 RVA: 0x006080D4 File Offset: 0x006062D4
 		public IStopUiScreenEffect Data0AsIStopUiScreenEffect()
 		{
 			return this.Data0<IStopUiScreenEffect>().Value;
 		}
 
-		// Token: 0x06029E3B RID: 171579 RVA: 0x005BEBD4 File Offset: 0x005BCDD4
+		// Token: 0x0602C4F1 RID: 181489 RVA: 0x006080F0 File Offset: 0x006062F0
 		public IClaimDungeonReward Data0AsIClaimDungeonReward()
 		{
 			return this.Data0<IClaimDungeonReward>().Value;
 		}
 
-		// Token: 0x06029E3C RID: 171580 RVA: 0x005BEBF0 File Offset: 0x005BCDF0
+		// Token: 0x0602C4F2 RID: 181490 RVA: 0x0060810C File Offset: 0x0060630C
 		public ISettlementDungeon Data0AsISettlementDungeon()
 		{
 			return this.Data0<ISettlementDungeon>().Value;
 		}
 
-		// Token: 0x06029E3D RID: 171581 RVA: 0x005BEC0C File Offset: 0x005BCE0C
+		// Token: 0x0602C4F3 RID: 181491 RVA: 0x00608128 File Offset: 0x00606328
 		public IExitDungeon Data0AsIExitDungeon()
 		{
 			return this.Data0<IExitDungeon>().Value;
 		}
 
-		// Token: 0x06029E3E RID: 171582 RVA: 0x005BEC28 File Offset: 0x005BCE28
+		// Token: 0x0602C4F4 RID: 181492 RVA: 0x00608144 File Offset: 0x00606344
 		public IUnlockDungeonEntry Data0AsIUnlockDungeonEntry()
 		{
 			return this.Data0<IUnlockDungeonEntry>().Value;
 		}
 
-		// Token: 0x06029E3F RID: 171583 RVA: 0x005BEC44 File Offset: 0x005BCE44
+		// Token: 0x0602C4F5 RID: 181493 RVA: 0x00608160 File Offset: 0x00606360
 		public IFinishDungeon Data0AsIFinishDungeon()
 		{
 			return this.Data0<IFinishDungeon>().Value;
 		}
 
-		// Token: 0x06029E40 RID: 171584 RVA: 0x005BEC60 File Offset: 0x005BCE60
+		// Token: 0x0602C4F6 RID: 181494 RVA: 0x0060817C File Offset: 0x0060637C
 		public ISetReviveRegion Data0AsISetReviveRegion()
 		{
 			return this.Data0<ISetReviveRegion>().Value;
 		}
 
-		// Token: 0x06029E41 RID: 171585 RVA: 0x005BEC7C File Offset: 0x005BCE7C
+		// Token: 0x0602C4F7 RID: 181495 RVA: 0x00608198 File Offset: 0x00606398
 		public IPromptQuestChapterUI Data0AsIPromptQuestChapterUI()
 		{
 			return this.Data0<IPromptQuestChapterUI>().Value;
 		}
 
-		// Token: 0x06029E42 RID: 171586 RVA: 0x005BEC98 File Offset: 0x005BCE98
+		// Token: 0x0602C4F8 RID: 181496 RVA: 0x006081B4 File Offset: 0x006063B4
 		public IFireBullet Data0AsIFireBullet()
 		{
 			return this.Data0<IFireBullet>().Value;
 		}
 
-		// Token: 0x06029E43 RID: 171587 RVA: 0x005BECB4 File Offset: 0x005BCEB4
+		// Token: 0x0602C4F9 RID: 181497 RVA: 0x006081D0 File Offset: 0x006063D0
 		public IFireBulletEffect Data0AsIFireBulletEffect()
 		{
 			return this.Data0<IFireBulletEffect>().Value;
 		}
 
-		// Token: 0x06029E44 RID: 171588 RVA: 0x005BECD0 File Offset: 0x005BCED0
+		// Token: 0x0602C4FA RID: 181498 RVA: 0x006081EC File Offset: 0x006063EC
+		public ISetAssistCharacterPos Data0AsISetAssistCharacterPos()
+		{
+			return this.Data0<ISetAssistCharacterPos>().Value;
+		}
+
+		// Token: 0x0602C4FB RID: 181499 RVA: 0x00608208 File Offset: 0x00606408
 		public ISetPlayerPos Data0AsISetPlayerPos()
 		{
 			return this.Data0<ISetPlayerPos>().Value;
 		}
 
-		// Token: 0x06029E45 RID: 171589 RVA: 0x005BECEC File Offset: 0x005BCEEC
+		// Token: 0x0602C4FC RID: 181500 RVA: 0x00608224 File Offset: 0x00606424
 		public IClientSetPlayerPos Data0AsIClientSetPlayerPos()
 		{
 			return this.Data0<IClientSetPlayerPos>().Value;
 		}
 
-		// Token: 0x06029E46 RID: 171590 RVA: 0x005BED08 File Offset: 0x005BCF08
+		// Token: 0x0602C4FD RID: 181501 RVA: 0x00608240 File Offset: 0x00606440
 		public IClientPreEnableSubLevels Data0AsIClientPreEnableSubLevels()
 		{
 			return this.Data0<IClientPreEnableSubLevels>().Value;
 		}
 
-		// Token: 0x06029E47 RID: 171591 RVA: 0x005BED24 File Offset: 0x005BCF24
+		// Token: 0x0602C4FE RID: 181502 RVA: 0x0060825C File Offset: 0x0060645C
 		public IRogueGotoNextFloor Data0AsIRogueGotoNextFloor()
 		{
 			return this.Data0<IRogueGotoNextFloor>().Value;
 		}
 
-		// Token: 0x06029E48 RID: 171592 RVA: 0x005BED40 File Offset: 0x005BCF40
+		// Token: 0x0602C4FF RID: 181503 RVA: 0x00608278 File Offset: 0x00606478
 		public IRogueSelectRoom Data0AsIRogueSelectRoom()
 		{
 			return this.Data0<IRogueSelectRoom>().Value;
 		}
 
-		// Token: 0x06029E49 RID: 171593 RVA: 0x005BED5C File Offset: 0x005BCF5C
+		// Token: 0x0602C500 RID: 181504 RVA: 0x00608294 File Offset: 0x00606494
 		public IRogueActivatePortal Data0AsIRogueActivatePortal()
 		{
 			return this.Data0<IRogueActivatePortal>().Value;
 		}
 
-		// Token: 0x06029E4A RID: 171594 RVA: 0x005BED78 File Offset: 0x005BCF78
+		// Token: 0x0602C501 RID: 181505 RVA: 0x006082B0 File Offset: 0x006064B0
 		public IRogueReceiveReward Data0AsIRogueReceiveReward()
 		{
 			return this.Data0<IRogueReceiveReward>().Value;
 		}
 
-		// Token: 0x06029E4B RID: 171595 RVA: 0x005BED94 File Offset: 0x005BCF94
+		// Token: 0x0602C502 RID: 181506 RVA: 0x006082CC File Offset: 0x006064CC
 		public IChangeSelfEntityState Data0AsIChangeSelfEntityState()
 		{
 			return this.Data0<IChangeSelfEntityState>().Value;
 		}
 
-		// Token: 0x06029E4C RID: 171596 RVA: 0x005BEDB0 File Offset: 0x005BCFB0
+		// Token: 0x0602C503 RID: 181507 RVA: 0x006082E8 File Offset: 0x006064E8
 		public IInterludeActions Data0AsIInterludeActions()
 		{
 			return this.Data0<IInterludeActions>().Value;
 		}
 
-		// Token: 0x06029E4D RID: 171597 RVA: 0x005BEDCC File Offset: 0x005BCFCC
+		// Token: 0x0602C504 RID: 181508 RVA: 0x00608304 File Offset: 0x00606504
 		public IAddBuffToTriggeredEntity Data0AsIAddBuffToTriggeredEntity()
 		{
 			return this.Data0<IAddBuffToTriggeredEntity>().Value;
 		}
 
-		// Token: 0x06029E4E RID: 171598 RVA: 0x005BEDE8 File Offset: 0x005BCFE8
+		// Token: 0x0602C505 RID: 181509 RVA: 0x00608320 File Offset: 0x00606520
 		public IRemoveBuffToTriggeredEntity Data0AsIRemoveBuffToTriggeredEntity()
 		{
 			return this.Data0<IRemoveBuffToTriggeredEntity>().Value;
 		}
 
-		// Token: 0x06029E4F RID: 171599 RVA: 0x005BEE04 File Offset: 0x005BD004
+		// Token: 0x0602C506 RID: 181510 RVA: 0x0060833C File Offset: 0x0060653C
 		public IDetectTrigger Data0AsIDetectTrigger()
 		{
 			return this.Data0<IDetectTrigger>().Value;
 		}
 
-		// Token: 0x06029E50 RID: 171600 RVA: 0x005BEE20 File Offset: 0x005BD020
+		// Token: 0x0602C507 RID: 181511 RVA: 0x00608358 File Offset: 0x00606558
 		public IItemFoundationMatch Data0AsIItemFoundationMatch()
 		{
 			return this.Data0<IItemFoundationMatch>().Value;
 		}
 
-		// Token: 0x06029E51 RID: 171601 RVA: 0x005BEE3C File Offset: 0x005BD03C
+		// Token: 0x0602C508 RID: 181512 RVA: 0x00608374 File Offset: 0x00606574
 		public ISetBattleState Data0AsISetBattleState()
 		{
 			return this.Data0<ISetBattleState>().Value;
 		}
 
-		// Token: 0x06029E52 RID: 171602 RVA: 0x005BEE58 File Offset: 0x005BD058
+		// Token: 0x0602C509 RID: 181513 RVA: 0x00608390 File Offset: 0x00606590
 		public IExecBattleAction Data0AsIExecBattleAction()
 		{
 			return this.Data0<IExecBattleAction>().Value;
 		}
 
-		// Token: 0x06029E53 RID: 171603 RVA: 0x005BEE74 File Offset: 0x005BD074
+		// Token: 0x0602C50A RID: 181514 RVA: 0x006083AC File Offset: 0x006065AC
 		public IExecClientMonsterNpcInteract Data0AsIExecClientMonsterNpcInteract()
 		{
 			return this.Data0<IExecClientMonsterNpcInteract>().Value;
 		}
 
-		// Token: 0x06029E54 RID: 171604 RVA: 0x005BEE90 File Offset: 0x005BD090
+		// Token: 0x0602C50B RID: 181515 RVA: 0x006083C8 File Offset: 0x006065C8
 		public IExecClientBattleAction Data0AsIExecClientBattleAction()
 		{
 			return this.Data0<IExecClientBattleAction>().Value;
 		}
 
-		// Token: 0x06029E55 RID: 171605 RVA: 0x005BEEAC File Offset: 0x005BD0AC
+		// Token: 0x0602C50C RID: 181516 RVA: 0x006083E4 File Offset: 0x006065E4
 		public IWaitBattleCondition Data0AsIWaitBattleCondition()
 		{
 			return this.Data0<IWaitBattleCondition>().Value;
 		}
 
-		// Token: 0x06029E56 RID: 171606 RVA: 0x005BEEC8 File Offset: 0x005BD0C8
+		// Token: 0x0602C50D RID: 181517 RVA: 0x00608400 File Offset: 0x00606600
 		public IEnableHostility Data0AsIEnableHostility()
 		{
 			return this.Data0<IEnableHostility>().Value;
 		}
 
-		// Token: 0x06029E57 RID: 171607 RVA: 0x005BEEE4 File Offset: 0x005BD0E4
+		// Token: 0x0602C50E RID: 181518 RVA: 0x0060841C File Offset: 0x0060661C
 		public IUnlockSystemItem Data0AsIUnlockSystemItem()
 		{
 			return this.Data0<IUnlockSystemItem>().Value;
 		}
 
-		// Token: 0x06029E58 RID: 171608 RVA: 0x005BEF00 File Offset: 0x005BD100
+		// Token: 0x0602C50F RID: 181519 RVA: 0x00608438 File Offset: 0x00606638
 		public IClientUnlockAchievementSystemItem Data0AsIClientUnlockAchievementSystemItem()
 		{
 			return this.Data0<IClientUnlockAchievementSystemItem>().Value;
 		}
 
-		// Token: 0x06029E59 RID: 171609 RVA: 0x005BEF1C File Offset: 0x005BD11C
+		// Token: 0x0602C510 RID: 181520 RVA: 0x00608454 File Offset: 0x00606654
 		public IAddPlayBubble Data0AsIAddPlayBubble()
 		{
 			return this.Data0<IAddPlayBubble>().Value;
 		}
 
-		// Token: 0x06029E5A RID: 171610 RVA: 0x005BEF38 File Offset: 0x005BD138
+		// Token: 0x0602C511 RID: 181521 RVA: 0x00608470 File Offset: 0x00606670
 		public IPlayBubble Data0AsIPlayBubble()
 		{
 			return this.Data0<IPlayBubble>().Value;
 		}
 
-		// Token: 0x06029E5B RID: 171611 RVA: 0x005BEF54 File Offset: 0x005BD154
+		// Token: 0x0602C512 RID: 181522 RVA: 0x0060848C File Offset: 0x0060668C
 		public IClearPlayBubble Data0AsIClearPlayBubble()
 		{
 			return this.Data0<IClearPlayBubble>().Value;
 		}
 
-		// Token: 0x06029E5C RID: 171612 RVA: 0x005BEF70 File Offset: 0x005BD170
+		// Token: 0x0602C513 RID: 181523 RVA: 0x006084A8 File Offset: 0x006066A8
 		public IMoveWithSpline Data0AsIMoveWithSpline()
 		{
 			return this.Data0<IMoveWithSpline>().Value;
 		}
 
-		// Token: 0x06029E5D RID: 171613 RVA: 0x005BEF8C File Offset: 0x005BD18C
+		// Token: 0x0602C514 RID: 181524 RVA: 0x006084C4 File Offset: 0x006066C4
 		public INewMoveWithSpline Data0AsINewMoveWithSpline()
 		{
 			return this.Data0<INewMoveWithSpline>().Value;
 		}
 
-		// Token: 0x06029E5E RID: 171614 RVA: 0x005BEFA8 File Offset: 0x005BD1A8
+		// Token: 0x0602C515 RID: 181525 RVA: 0x006084E0 File Offset: 0x006066E0
 		public IStopNewMoveWithSpline Data0AsIStopNewMoveWithSpline()
 		{
 			return this.Data0<IStopNewMoveWithSpline>().Value;
 		}
 
-		// Token: 0x06029E5F RID: 171615 RVA: 0x005BEFC4 File Offset: 0x005BD1C4
+		// Token: 0x0602C516 RID: 181526 RVA: 0x006084FC File Offset: 0x006066FC
 		public ICharacterMoveToPoint Data0AsICharacterMoveToPoint()
 		{
 			return this.Data0<ICharacterMoveToPoint>().Value;
 		}
 
-		// Token: 0x06029E60 RID: 171616 RVA: 0x005BEFE0 File Offset: 0x005BD1E0
+		// Token: 0x0602C517 RID: 181527 RVA: 0x00608518 File Offset: 0x00606718
 		public IPlayerMoveToPoint Data0AsIPlayerMoveToPoint()
 		{
 			return this.Data0<IPlayerMoveToPoint>().Value;
 		}
 
-		// Token: 0x06029E61 RID: 171617 RVA: 0x005BEFFC File Offset: 0x005BD1FC
+		// Token: 0x0602C518 RID: 181528 RVA: 0x00608534 File Offset: 0x00606734
 		public INpcMoveToPoint Data0AsINpcMoveToPoint()
 		{
 			return this.Data0<INpcMoveToPoint>().Value;
 		}
 
-		// Token: 0x06029E62 RID: 171618 RVA: 0x005BF018 File Offset: 0x005BD218
+		// Token: 0x0602C519 RID: 181529 RVA: 0x00608550 File Offset: 0x00606750
 		public IToggleScanSplineEffect Data0AsIToggleScanSplineEffect()
 		{
 			return this.Data0<IToggleScanSplineEffect>().Value;
 		}
 
-		// Token: 0x06029E63 RID: 171619 RVA: 0x005BF034 File Offset: 0x005BD234
+		// Token: 0x0602C51A RID: 181530 RVA: 0x0060856C File Offset: 0x0060676C
 		public IOpenTraceSpline Data0AsIOpenTraceSpline()
 		{
 			return this.Data0<IOpenTraceSpline>().Value;
 		}
 
-		// Token: 0x06029E64 RID: 171620 RVA: 0x005BF050 File Offset: 0x005BD250
+		// Token: 0x0602C51B RID: 181531 RVA: 0x00608588 File Offset: 0x00606788
 		public ICloseTraceSpline Data0AsICloseTraceSpline()
 		{
 			return this.Data0<ICloseTraceSpline>().Value;
 		}
 
-		// Token: 0x06029E65 RID: 171621 RVA: 0x005BF06C File Offset: 0x005BD26C
+		// Token: 0x0602C51C RID: 181532 RVA: 0x006085A4 File Offset: 0x006067A4
 		public ITraceSpline Data0AsITraceSpline()
 		{
 			return this.Data0<ITraceSpline>().Value;
 		}
 
-		// Token: 0x06029E66 RID: 171622 RVA: 0x005BF088 File Offset: 0x005BD288
+		// Token: 0x0602C51D RID: 181533 RVA: 0x006085C0 File Offset: 0x006067C0
 		public IEnableAI Data0AsIEnableAI()
 		{
 			return this.Data0<IEnableAI>().Value;
 		}
 
-		// Token: 0x06029E67 RID: 171623 RVA: 0x005BF0A4 File Offset: 0x005BD2A4
+		// Token: 0x0602C51E RID: 181534 RVA: 0x006085DC File Offset: 0x006067DC
 		public IRunActions Data0AsIRunActions()
 		{
 			return this.Data0<IRunActions>().Value;
 		}
 
-		// Token: 0x06029E68 RID: 171624 RVA: 0x005BF0C0 File Offset: 0x005BD2C0
+		// Token: 0x0602C51F RID: 181535 RVA: 0x006085F8 File Offset: 0x006067F8
 		public ICommonTip Data0AsICommonTip()
 		{
 			return this.Data0<ICommonTip>().Value;
 		}
 
-		// Token: 0x06029E69 RID: 171625 RVA: 0x005BF0DC File Offset: 0x005BD2DC
+		// Token: 0x0602C520 RID: 181536 RVA: 0x00608614 File Offset: 0x00606814
 		public ICommonTip2 Data0AsICommonTip2()
 		{
 			return this.Data0<ICommonTip2>().Value;
 		}
 
-		// Token: 0x06029E6A RID: 171626 RVA: 0x005BF0F8 File Offset: 0x005BD2F8
+		// Token: 0x0602C521 RID: 181537 RVA: 0x00608630 File Offset: 0x00606830
 		public IEndCommonTip Data0AsIEndCommonTip()
 		{
 			return this.Data0<IEndCommonTip>().Value;
 		}
 
-		// Token: 0x06029E6B RID: 171627 RVA: 0x005BF114 File Offset: 0x005BD314
+		// Token: 0x0602C522 RID: 181538 RVA: 0x0060864C File Offset: 0x0060684C
 		public IEnableNearbyTracking Data0AsIEnableNearbyTracking()
 		{
 			return this.Data0<IEnableNearbyTracking>().Value;
 		}
 
-		// Token: 0x06029E6C RID: 171628 RVA: 0x005BF130 File Offset: 0x005BD330
+		// Token: 0x0602C523 RID: 181539 RVA: 0x00608668 File Offset: 0x00606868
 		public ISendAiEvent Data0AsISendAiEvent()
 		{
 			return this.Data0<ISendAiEvent>().Value;
 		}
 
-		// Token: 0x06029E6D RID: 171629 RVA: 0x005BF14C File Offset: 0x005BD34C
+		// Token: 0x0602C524 RID: 181540 RVA: 0x00608684 File Offset: 0x00606884
 		public IEnableLevelPlay Data0AsIEnableLevelPlay()
 		{
 			return this.Data0<IEnableLevelPlay>().Value;
 		}
 
-		// Token: 0x06029E6E RID: 171630 RVA: 0x005BF168 File Offset: 0x005BD368
+		// Token: 0x0602C525 RID: 181541 RVA: 0x006086A0 File Offset: 0x006068A0
 		public IServerForceEnableLevelPlay Data0AsIServerForceEnableLevelPlay()
 		{
 			return this.Data0<IServerForceEnableLevelPlay>().Value;
 		}
 
-		// Token: 0x06029E6F RID: 171631 RVA: 0x005BF184 File Offset: 0x005BD384
+		// Token: 0x0602C526 RID: 181542 RVA: 0x006086BC File Offset: 0x006068BC
 		public ITeleportDungeonPos Data0AsITeleportDungeonPos()
 		{
 			return this.Data0<ITeleportDungeonPos>().Value;
 		}
 
-		// Token: 0x06029E70 RID: 171632 RVA: 0x005BF1A0 File Offset: 0x005BD3A0
+		// Token: 0x0602C527 RID: 181543 RVA: 0x006086D8 File Offset: 0x006068D8
 		public IFadeInScreen Data0AsIFadeInScreen()
 		{
 			return this.Data0<IFadeInScreen>().Value;
 		}
 
-		// Token: 0x06029E71 RID: 171633 RVA: 0x005BF1BC File Offset: 0x005BD3BC
+		// Token: 0x0602C528 RID: 181544 RVA: 0x006086F4 File Offset: 0x006068F4
 		public IFadeOutScreen Data0AsIFadeOutScreen()
 		{
 			return this.Data0<IFadeOutScreen>().Value;
 		}
 
-		// Token: 0x06029E72 RID: 171634 RVA: 0x005BF1D8 File Offset: 0x005BD3D8
+		// Token: 0x0602C529 RID: 181545 RVA: 0x00608710 File Offset: 0x00606910
 		public IStartFlowTemplate Data0AsIStartFlowTemplate()
 		{
 			return this.Data0<IStartFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E73 RID: 171635 RVA: 0x005BF1F4 File Offset: 0x005BD3F4
+		// Token: 0x0602C52A RID: 181546 RVA: 0x0060872C File Offset: 0x0060692C
 		public IEndFlowTemplate Data0AsIEndFlowTemplate()
 		{
 			return this.Data0<IEndFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E74 RID: 171636 RVA: 0x005BF210 File Offset: 0x005BD410
+		// Token: 0x0602C52B RID: 181547 RVA: 0x00608748 File Offset: 0x00606948
 		public ICloseFlowTemplate Data0AsICloseFlowTemplate()
 		{
 			return this.Data0<ICloseFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E75 RID: 171637 RVA: 0x005BF22C File Offset: 0x005BD42C
+		// Token: 0x0602C52C RID: 181548 RVA: 0x00608764 File Offset: 0x00606964
 		public IChangeFlowTemplate Data0AsIChangeFlowTemplate()
 		{
 			return this.Data0<IChangeFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E76 RID: 171638 RVA: 0x005BF248 File Offset: 0x005BD448
+		// Token: 0x0602C52D RID: 181549 RVA: 0x00608780 File Offset: 0x00606980
 		public IBeginFlowTemplate Data0AsIBeginFlowTemplate()
 		{
 			return this.Data0<IBeginFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E77 RID: 171639 RVA: 0x005BF264 File Offset: 0x005BD464
+		// Token: 0x0602C52E RID: 181550 RVA: 0x0060879C File Offset: 0x0060699C
 		public ISetFlowTemplate Data0AsISetFlowTemplate()
 		{
 			return this.Data0<ISetFlowTemplate>().Value;
 		}
 
-		// Token: 0x06029E78 RID: 171640 RVA: 0x005BF280 File Offset: 0x005BD480
+		// Token: 0x0602C52F RID: 181551 RVA: 0x006087B8 File Offset: 0x006069B8
 		public IHideTargetRange Data0AsIHideTargetRange()
 		{
 			return this.Data0<IHideTargetRange>().Value;
 		}
 
-		// Token: 0x06029E79 RID: 171641 RVA: 0x005BF29C File Offset: 0x005BD49C
+		// Token: 0x0602C530 RID: 181552 RVA: 0x006087D4 File Offset: 0x006069D4
 		public IShowTargetRange Data0AsIShowTargetRange()
 		{
 			return this.Data0<IShowTargetRange>().Value;
 		}
 
-		// Token: 0x06029E7A RID: 171642 RVA: 0x005BF2B8 File Offset: 0x005BD4B8
+		// Token: 0x0602C531 RID: 181553 RVA: 0x006087F0 File Offset: 0x006069F0
 		public IHideSpecificEntities Data0AsIHideSpecificEntities()
 		{
 			return this.Data0<IHideSpecificEntities>().Value;
 		}
 
-		// Token: 0x06029E7B RID: 171643 RVA: 0x005BF2D4 File Offset: 0x005BD4D4
+		// Token: 0x0602C532 RID: 181554 RVA: 0x0060880C File Offset: 0x00606A0C
 		public IShowSpecificEntities Data0AsIShowSpecificEntities()
 		{
 			return this.Data0<IShowSpecificEntities>().Value;
 		}
 
-		// Token: 0x06029E7C RID: 171644 RVA: 0x005BF2F0 File Offset: 0x005BD4F0
+		// Token: 0x0602C533 RID: 181555 RVA: 0x00608828 File Offset: 0x00606A28
 		public IHideGroup Data0AsIHideGroup()
 		{
 			return this.Data0<IHideGroup>().Value;
 		}
 
-		// Token: 0x06029E7D RID: 171645 RVA: 0x005BF30C File Offset: 0x005BD50C
+		// Token: 0x0602C534 RID: 181556 RVA: 0x00608844 File Offset: 0x00606A44
 		public IShowHidedGroup Data0AsIShowHidedGroup()
 		{
 			return this.Data0<IShowHidedGroup>().Value;
 		}
 
-		// Token: 0x06029E7E RID: 171646 RVA: 0x005BF328 File Offset: 0x005BD528
+		// Token: 0x0602C535 RID: 181557 RVA: 0x00608860 File Offset: 0x00606A60
 		public ISetSubScreenMode Data0AsISetSubScreenMode()
 		{
 			return this.Data0<ISetSubScreenMode>().Value;
 		}
 
-		// Token: 0x06029E7F RID: 171647 RVA: 0x005BF344 File Offset: 0x005BD544
+		// Token: 0x0602C536 RID: 181558 RVA: 0x0060887C File Offset: 0x00606A7C
 		public IToggleDragActorPlay Data0AsIToggleDragActorPlay()
 		{
 			return this.Data0<IToggleDragActorPlay>().Value;
 		}
 
-		// Token: 0x06029E80 RID: 171648 RVA: 0x005BF360 File Offset: 0x005BD560
+		// Token: 0x0602C537 RID: 181559 RVA: 0x00608898 File Offset: 0x00606A98
+		public IDarkTideSetMapMarkState Data0AsIDarkTideSetMapMarkState()
+		{
+			return this.Data0<IDarkTideSetMapMarkState>().Value;
+		}
+
+		// Token: 0x0602C538 RID: 181560 RVA: 0x006088B4 File Offset: 0x00606AB4
 		public IManualOccupations Data0AsIManualOccupations()
 		{
 			return this.Data0<IManualOccupations>().Value;
 		}
 
-		// Token: 0x06029E81 RID: 171649 RVA: 0x005BF37C File Offset: 0x005BD57C
+		// Token: 0x0602C539 RID: 181561 RVA: 0x006088D0 File Offset: 0x00606AD0
 		public IForceOccupations Data0AsIForceOccupations()
 		{
 			return this.Data0<IForceOccupations>().Value;
 		}
 
-		// Token: 0x06029E82 RID: 171650 RVA: 0x005BF398 File Offset: 0x005BD598
+		// Token: 0x0602C53A RID: 181562 RVA: 0x006088EC File Offset: 0x00606AEC
 		public IChangeFightTeam Data0AsIChangeFightTeam()
 		{
 			return this.Data0<IChangeFightTeam>().Value;
 		}
 
-		// Token: 0x06029E83 RID: 171651 RVA: 0x005BF3B4 File Offset: 0x005BD5B4
+		// Token: 0x0602C53B RID: 181563 RVA: 0x00608908 File Offset: 0x00606B08
 		public IActiveRange Data0AsIActiveRange()
 		{
 			return this.Data0<IActiveRange>().Value;
 		}
 
-		// Token: 0x06029E84 RID: 171652 RVA: 0x005BF3D0 File Offset: 0x005BD5D0
+		// Token: 0x0602C53C RID: 181564 RVA: 0x00608924 File Offset: 0x00606B24
 		public IAddTrialCharacter Data0AsIAddTrialCharacter()
 		{
 			return this.Data0<IAddTrialCharacter>().Value;
 		}
 
-		// Token: 0x06029E85 RID: 171653 RVA: 0x005BF3EC File Offset: 0x005BD5EC
+		// Token: 0x0602C53D RID: 181565 RVA: 0x00608940 File Offset: 0x00606B40
 		public IUpdateTrialCharacter Data0AsIUpdateTrialCharacter()
 		{
 			return this.Data0<IUpdateTrialCharacter>().Value;
 		}
 
-		// Token: 0x06029E86 RID: 171654 RVA: 0x005BF408 File Offset: 0x005BD608
+		// Token: 0x0602C53E RID: 181566 RVA: 0x0060895C File Offset: 0x00606B5C
 		public IRestoreTrialCharacter Data0AsIRestoreTrialCharacter()
 		{
 			return this.Data0<IRestoreTrialCharacter>().Value;
 		}
 
-		// Token: 0x06029E87 RID: 171655 RVA: 0x005BF424 File Offset: 0x005BD624
+		// Token: 0x0602C53F RID: 181567 RVA: 0x00608978 File Offset: 0x00606B78
 		public IRemoveTrialCharacter Data0AsIRemoveTrialCharacter()
 		{
 			return this.Data0<IRemoveTrialCharacter>().Value;
 		}
 
-		// Token: 0x06029E88 RID: 171656 RVA: 0x005BF440 File Offset: 0x005BD640
+		// Token: 0x0602C540 RID: 181568 RVA: 0x00608994 File Offset: 0x00606B94
 		public IAddGuestCharacter Data0AsIAddGuestCharacter()
 		{
 			return this.Data0<IAddGuestCharacter>().Value;
 		}
 
-		// Token: 0x06029E89 RID: 171657 RVA: 0x005BF45C File Offset: 0x005BD65C
+		// Token: 0x0602C541 RID: 181569 RVA: 0x006089B0 File Offset: 0x00606BB0
 		public IRemoveGuestCharacter Data0AsIRemoveGuestCharacter()
 		{
 			return this.Data0<IRemoveGuestCharacter>().Value;
 		}
 
-		// Token: 0x06029E8A RID: 171658 RVA: 0x005BF478 File Offset: 0x005BD678
+		// Token: 0x0602C542 RID: 181570 RVA: 0x006089CC File Offset: 0x00606BCC
 		public IDestroyQuest Data0AsIDestroyQuest()
 		{
 			return this.Data0<IDestroyQuest>().Value;
 		}
 
-		// Token: 0x06029E8B RID: 171659 RVA: 0x005BF494 File Offset: 0x005BD694
+		// Token: 0x0602C543 RID: 181571 RVA: 0x006089E8 File Offset: 0x00606BE8
 		public ISetCameraAnim Data0AsISetCameraAnim()
 		{
 			return this.Data0<ISetCameraAnim>().Value;
 		}
 
-		// Token: 0x06029E8C RID: 171660 RVA: 0x005BF4B0 File Offset: 0x005BD6B0
+		// Token: 0x0602C544 RID: 181572 RVA: 0x00608A04 File Offset: 0x00606C04
 		public IChangeTimer Data0AsIChangeTimer()
 		{
 			return this.Data0<IChangeTimer>().Value;
 		}
 
-		// Token: 0x06029E8D RID: 171661 RVA: 0x005BF4CC File Offset: 0x005BD6CC
+		// Token: 0x0602C545 RID: 181573 RVA: 0x00608A20 File Offset: 0x00606C20
 		public IToggleTimerPauseState Data0AsIToggleTimerPauseState()
 		{
 			return this.Data0<IToggleTimerPauseState>().Value;
 		}
 
-		// Token: 0x06029E8E RID: 171662 RVA: 0x005BF4E8 File Offset: 0x005BD6E8
+		// Token: 0x0602C546 RID: 181574 RVA: 0x00608A3C File Offset: 0x00606C3C
 		public IRotatorEntity Data0AsIRotatorEntity()
 		{
 			return this.Data0<IRotatorEntity>().Value;
 		}
 
-		// Token: 0x06029E8F RID: 171663 RVA: 0x005BF504 File Offset: 0x005BD704
+		// Token: 0x0602C547 RID: 181575 RVA: 0x00608A58 File Offset: 0x00606C58
 		public IUnLimitPlayerOperation Data0AsIUnLimitPlayerOperation()
 		{
 			return this.Data0<IUnLimitPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029E90 RID: 171664 RVA: 0x005BF520 File Offset: 0x005BD720
+		// Token: 0x0602C548 RID: 181576 RVA: 0x00608A74 File Offset: 0x00606C74
 		public ILimitPlayerOperation Data0AsILimitPlayerOperation()
 		{
 			return this.Data0<ILimitPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029E91 RID: 171665 RVA: 0x005BF53C File Offset: 0x005BD73C
+		// Token: 0x0602C549 RID: 181577 RVA: 0x00608A90 File Offset: 0x00606C90
 		public IEnableSystem Data0AsIEnableSystem()
 		{
 			return this.Data0<IEnableSystem>().Value;
 		}
 
-		// Token: 0x06029E92 RID: 171666 RVA: 0x005BF558 File Offset: 0x005BD758
+		// Token: 0x0602C54A RID: 181578 RVA: 0x00608AAC File Offset: 0x00606CAC
 		public ILeisureInteract Data0AsILeisureInteract()
 		{
 			return this.Data0<ILeisureInteract>().Value;
 		}
 
-		// Token: 0x06029E93 RID: 171667 RVA: 0x005BF574 File Offset: 0x005BD774
+		// Token: 0x0602C54B RID: 181579 RVA: 0x00608AC8 File Offset: 0x00606CC8
 		public INpcLeisureInteract Data0AsINpcLeisureInteract()
 		{
 			return this.Data0<INpcLeisureInteract>().Value;
 		}
 
-		// Token: 0x06029E94 RID: 171668 RVA: 0x005BF590 File Offset: 0x005BD790
+		// Token: 0x0602C54C RID: 181580 RVA: 0x00608AE4 File Offset: 0x00606CE4
 		public IPostAkEvent Data0AsIPostAkEvent()
 		{
 			return this.Data0<IPostAkEvent>().Value;
 		}
 
-		// Token: 0x06029E95 RID: 171669 RVA: 0x005BF5AC File Offset: 0x005BD7AC
+		// Token: 0x0602C54D RID: 181581 RVA: 0x00608B00 File Offset: 0x00606D00
 		public IMoveSceneItem Data0AsIMoveSceneItem()
 		{
 			return this.Data0<IMoveSceneItem>().Value;
 		}
 
-		// Token: 0x06029E96 RID: 171670 RVA: 0x005BF5C8 File Offset: 0x005BD7C8
+		// Token: 0x0602C54E RID: 181582 RVA: 0x00608B1C File Offset: 0x00606D1C
 		public IStopSceneItemMove Data0AsIStopSceneItemMove()
 		{
 			return this.Data0<IStopSceneItemMove>().Value;
 		}
 
-		// Token: 0x06029E97 RID: 171671 RVA: 0x005BF5E4 File Offset: 0x005BD7E4
+		// Token: 0x0602C54F RID: 181583 RVA: 0x00608B38 File Offset: 0x00606D38
 		public IChangeLiftTarget Data0AsIChangeLiftTarget()
 		{
 			return this.Data0<IChangeLiftTarget>().Value;
 		}
 
-		// Token: 0x06029E98 RID: 171672 RVA: 0x005BF600 File Offset: 0x005BD800
+		// Token: 0x0602C550 RID: 181584 RVA: 0x00608B54 File Offset: 0x00606D54
 		public IHideByRangeInFlow Data0AsIHideByRangeInFlow()
 		{
 			return this.Data0<IHideByRangeInFlow>().Value;
 		}
 
-		// Token: 0x06029E99 RID: 171673 RVA: 0x005BF61C File Offset: 0x005BD81C
+		// Token: 0x0602C551 RID: 181585 RVA: 0x00608B70 File Offset: 0x00606D70
 		public IShowAllHidedGroupInFlow Data0AsIShowAllHidedGroupInFlow()
 		{
 			return this.Data0<IShowAllHidedGroupInFlow>().Value;
 		}
 
-		// Token: 0x06029E9A RID: 171674 RVA: 0x005BF638 File Offset: 0x005BD838
+		// Token: 0x0602C552 RID: 181586 RVA: 0x00608B8C File Offset: 0x00606D8C
 		public IOpenSimpleGameplay Data0AsIOpenSimpleGameplay()
 		{
 			return this.Data0<IOpenSimpleGameplay>().Value;
 		}
 
-		// Token: 0x06029E9B RID: 171675 RVA: 0x005BF654 File Offset: 0x005BD854
-		public ICloseSimpleGameplay Data0AsICloseSimpleGameplay()
+		// Token: 0x0602C553 RID: 181587 RVA: 0x00608BA8 File Offset: 0x00606DA8
+		public IToggleRideFlyingCarUiGameplay Data0AsIToggleRideFlyingCarUiGameplay()
 		{
-			return this.Data0<ICloseSimpleGameplay>().Value;
+			return this.Data0<IToggleRideFlyingCarUiGameplay>().Value;
 		}
 
-		// Token: 0x06029E9C RID: 171676 RVA: 0x005BF670 File Offset: 0x005BD870
+		// Token: 0x0602C554 RID: 181588 RVA: 0x00608BC4 File Offset: 0x00606DC4
 		public IChangePhantom Data0AsIChangePhantom()
 		{
 			return this.Data0<IChangePhantom>().Value;
 		}
 
-		// Token: 0x06029E9D RID: 171677 RVA: 0x005BF68C File Offset: 0x005BD88C
+		// Token: 0x0602C555 RID: 181589 RVA: 0x00608BE0 File Offset: 0x00606DE0
 		public IRestorePhantom Data0AsIRestorePhantom()
 		{
 			return this.Data0<IRestorePhantom>().Value;
 		}
 
-		// Token: 0x06029E9E RID: 171678 RVA: 0x005BF6A8 File Offset: 0x005BD8A8
+		// Token: 0x0602C556 RID: 181590 RVA: 0x00608BFC File Offset: 0x00606DFC
 		public ITakePlotPhoto Data0AsITakePlotPhoto()
 		{
 			return this.Data0<ITakePlotPhoto>().Value;
 		}
 
-		// Token: 0x06029E9F RID: 171679 RVA: 0x005BF6C4 File Offset: 0x005BD8C4
+		// Token: 0x0602C557 RID: 181591 RVA: 0x00608C18 File Offset: 0x00606E18
 		public IChangeActorTalker Data0AsIChangeActorTalker()
 		{
 			return this.Data0<IChangeActorTalker>().Value;
 		}
 
-		// Token: 0x06029EA0 RID: 171680 RVA: 0x005BF6E0 File Offset: 0x005BD8E0
+		// Token: 0x0602C558 RID: 181592 RVA: 0x00608C34 File Offset: 0x00606E34
 		public ISwitchSubLevels Data0AsISwitchSubLevels()
 		{
 			return this.Data0<ISwitchSubLevels>().Value;
 		}
 
-		// Token: 0x06029EA1 RID: 171681 RVA: 0x005BF6FC File Offset: 0x005BD8FC
+		// Token: 0x0602C559 RID: 181593 RVA: 0x00608C50 File Offset: 0x00606E50
 		public ISwitchSubLevelsDirectly Data0AsISwitchSubLevelsDirectly()
 		{
 			return this.Data0<ISwitchSubLevelsDirectly>().Value;
 		}
 
-		// Token: 0x06029EA2 RID: 171682 RVA: 0x005BF718 File Offset: 0x005BD918
+		// Token: 0x0602C55A RID: 181594 RVA: 0x00608C6C File Offset: 0x00606E6C
 		public IPreloadSubLevels Data0AsIPreloadSubLevels()
 		{
 			return this.Data0<IPreloadSubLevels>().Value;
 		}
 
-		// Token: 0x06029EA3 RID: 171683 RVA: 0x005BF734 File Offset: 0x005BD934
+		// Token: 0x0602C55B RID: 181595 RVA: 0x00608C88 File Offset: 0x00606E88
 		public ISwitchPermission Data0AsISwitchPermission()
 		{
 			return this.Data0<ISwitchPermission>().Value;
 		}
 
-		// Token: 0x06029EA4 RID: 171684 RVA: 0x005BF750 File Offset: 0x005BD950
+		// Token: 0x0602C55C RID: 181596 RVA: 0x00608CA4 File Offset: 0x00606EA4
 		public ISwitchDataLayers Data0AsISwitchDataLayers()
 		{
 			return this.Data0<ISwitchDataLayers>().Value;
 		}
 
-		// Token: 0x06029EA5 RID: 171685 RVA: 0x005BF76C File Offset: 0x005BD96C
+		// Token: 0x0602C55D RID: 181597 RVA: 0x00608CC0 File Offset: 0x00606EC0
 		public IActivateResetPoint Data0AsIActivateResetPoint()
 		{
 			return this.Data0<IActivateResetPoint>().Value;
 		}
 
-		// Token: 0x06029EA6 RID: 171686 RVA: 0x005BF788 File Offset: 0x005BD988
+		// Token: 0x0602C55E RID: 181598 RVA: 0x00608CDC File Offset: 0x00606EDC
 		public ITeleportToLatestResetPoint Data0AsITeleportToLatestResetPoint()
 		{
 			return this.Data0<ITeleportToLatestResetPoint>().Value;
 		}
 
-		// Token: 0x06029EA7 RID: 171687 RVA: 0x005BF7A4 File Offset: 0x005BD9A4
+		// Token: 0x0602C55F RID: 181599 RVA: 0x00608CF8 File Offset: 0x00606EF8
 		public ISetWeather Data0AsISetWeather()
 		{
 			return this.Data0<ISetWeather>().Value;
 		}
 
-		// Token: 0x06029EA8 RID: 171688 RVA: 0x005BF7C0 File Offset: 0x005BD9C0
+		// Token: 0x0602C560 RID: 181600 RVA: 0x00608D14 File Offset: 0x00606F14
 		public ISetTimeLockState Data0AsISetTimeLockState()
 		{
 			return this.Data0<ISetTimeLockState>().Value;
 		}
 
-		// Token: 0x06029EA9 RID: 171689 RVA: 0x005BF7DC File Offset: 0x005BD9DC
+		// Token: 0x0602C561 RID: 181601 RVA: 0x00608D30 File Offset: 0x00606F30
 		public ISetWeatherLockState Data0AsISetWeatherLockState()
 		{
 			return this.Data0<ISetWeatherLockState>().Value;
 		}
 
-		// Token: 0x06029EAA RID: 171690 RVA: 0x005BF7F8 File Offset: 0x005BD9F8
+		// Token: 0x0602C562 RID: 181602 RVA: 0x00608D4C File Offset: 0x00606F4C
 		public IClientSetSeasonState Data0AsIClientSetSeasonState()
 		{
 			return this.Data0<IClientSetSeasonState>().Value;
 		}
 
-		// Token: 0x06029EAB RID: 171691 RVA: 0x005BF814 File Offset: 0x005BDA14
+		// Token: 0x0602C563 RID: 181603 RVA: 0x00608D68 File Offset: 0x00606F68
 		public IAxisLockScreenConfig Data0AsIAxisLockScreenConfig()
 		{
 			return this.Data0<IAxisLockScreenConfig>().Value;
 		}
 
-		// Token: 0x06029EAC RID: 171692 RVA: 0x005BF830 File Offset: 0x005BDA30
+		// Token: 0x0602C564 RID: 181604 RVA: 0x00608D84 File Offset: 0x00606F84
 		public IAdjustPlayerCamera Data0AsIAdjustPlayerCamera()
 		{
 			return this.Data0<IAdjustPlayerCamera>().Value;
 		}
 
-		// Token: 0x06029EAD RID: 171693 RVA: 0x005BF84C File Offset: 0x005BDA4C
+		// Token: 0x0602C565 RID: 181605 RVA: 0x00608DA0 File Offset: 0x00606FA0
 		public IRestorePlayerCameraAdjustment Data0AsIRestorePlayerCameraAdjustment()
 		{
 			return this.Data0<IRestorePlayerCameraAdjustment>().Value;
 		}
 
-		// Token: 0x06029EAE RID: 171694 RVA: 0x005BF868 File Offset: 0x005BDA68
+		// Token: 0x0602C566 RID: 181606 RVA: 0x00608DBC File Offset: 0x00606FBC
 		public IAdjustPlayerCameraGravity Data0AsIAdjustPlayerCameraGravity()
 		{
 			return this.Data0<IAdjustPlayerCameraGravity>().Value;
 		}
 
-		// Token: 0x06029EAF RID: 171695 RVA: 0x005BF884 File Offset: 0x005BDA84
+		// Token: 0x0602C567 RID: 181607 RVA: 0x00608DD8 File Offset: 0x00606FD8
 		public IEnterMovieCamera Data0AsIEnterMovieCamera()
 		{
 			return this.Data0<IEnterMovieCamera>().Value;
 		}
 
-		// Token: 0x06029EB0 RID: 171696 RVA: 0x005BF8A0 File Offset: 0x005BDAA0
+		// Token: 0x0602C568 RID: 181608 RVA: 0x00608DF4 File Offset: 0x00606FF4
 		public IExitMovieCamera Data0AsIExitMovieCamera()
 		{
 			return this.Data0<IExitMovieCamera>().Value;
 		}
 
-		// Token: 0x06029EB1 RID: 171697 RVA: 0x005BF8BC File Offset: 0x005BDABC
+		// Token: 0x0602C569 RID: 181609 RVA: 0x00608E10 File Offset: 0x00607010
 		public IResetPlayerCameraFocus Data0AsIResetPlayerCameraFocus()
 		{
 			return this.Data0<IResetPlayerCameraFocus>().Value;
 		}
 
-		// Token: 0x06029EB2 RID: 171698 RVA: 0x005BF8D8 File Offset: 0x005BDAD8
+		// Token: 0x0602C56A RID: 181610 RVA: 0x00608E2C File Offset: 0x0060702C
 		public IUsePhantomSkill Data0AsIUsePhantomSkill()
 		{
 			return this.Data0<IUsePhantomSkill>().Value;
 		}
 
-		// Token: 0x06029EB3 RID: 171699 RVA: 0x005BF8F4 File Offset: 0x005BDAF4
+		// Token: 0x0602C56B RID: 181611 RVA: 0x00608E48 File Offset: 0x00607048
 		public IChangePhantomFormation Data0AsIChangePhantomFormation()
 		{
 			return this.Data0<IChangePhantomFormation>().Value;
 		}
 
-		// Token: 0x06029EB4 RID: 171700 RVA: 0x005BF910 File Offset: 0x005BDB10
+		// Token: 0x0602C56C RID: 181612 RVA: 0x00608E64 File Offset: 0x00607064
 		public IRestorePhantomFormation Data0AsIRestorePhantomFormation()
 		{
 			return this.Data0<IRestorePhantomFormation>().Value;
 		}
 
-		// Token: 0x06029EB5 RID: 171701 RVA: 0x005BF92C File Offset: 0x005BDB2C
-		public IEnterOrbitalCamera Data0AsIEnterOrbitalCamera()
-		{
-			return this.Data0<IEnterOrbitalCamera>().Value;
-		}
-
-		// Token: 0x06029EB6 RID: 171702 RVA: 0x005BF948 File Offset: 0x005BDB48
-		public IExitOrbitalCamera Data0AsIExitOrbitalCamera()
-		{
-			return this.Data0<IExitOrbitalCamera>().Value;
-		}
-
-		// Token: 0x06029EB7 RID: 171703 RVA: 0x005BF964 File Offset: 0x005BDB64
-		public IEnableSplineMoveModel Data0AsIEnableSplineMoveModel()
-		{
-			return this.Data0<IEnableSplineMoveModel>().Value;
-		}
-
-		// Token: 0x06029EB8 RID: 171704 RVA: 0x005BF980 File Offset: 0x005BDB80
-		public IEnableActor Data0AsIEnableActor()
-		{
-			return this.Data0<IEnableActor>().Value;
-		}
-
-		// Token: 0x1700B625 RID: 46629
-		// (get) Token: 0x06029EB9 RID: 171705 RVA: 0x005BF99C File Offset: 0x005BDB9C
+		// Token: 0x1700BF90 RID: 49040
+		// (get) Token: 0x0602C56D RID: 181613 RVA: 0x00608E80 File Offset: 0x00607080
 		public IActionParams_Union_1 Data1Type
 		{
 			get
@@ -1633,7 +1633,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06029EBA RID: 171706 RVA: 0x005BF9DC File Offset: 0x005BDBDC
+		// Token: 0x0602C56E RID: 181614 RVA: 0x00608EC0 File Offset: 0x006070C0
 		public TTable? Data1<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -1644,1153 +1644,1243 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06029EBB RID: 171707 RVA: 0x005BFA24 File Offset: 0x005BDC24
+		// Token: 0x0602C56F RID: 181615 RVA: 0x00608F08 File Offset: 0x00607108
+		public IEnterOrbitalCamera Data1AsIEnterOrbitalCamera()
+		{
+			return this.Data1<IEnterOrbitalCamera>().Value;
+		}
+
+		// Token: 0x0602C570 RID: 181616 RVA: 0x00608F24 File Offset: 0x00607124
+		public IExitOrbitalCamera Data1AsIExitOrbitalCamera()
+		{
+			return this.Data1<IExitOrbitalCamera>().Value;
+		}
+
+		// Token: 0x0602C571 RID: 181617 RVA: 0x00608F40 File Offset: 0x00607140
+		public IEnableSplineMoveModel Data1AsIEnableSplineMoveModel()
+		{
+			return this.Data1<IEnableSplineMoveModel>().Value;
+		}
+
+		// Token: 0x0602C572 RID: 181618 RVA: 0x00608F5C File Offset: 0x0060715C
+		public IEnableActor Data1AsIEnableActor()
+		{
+			return this.Data1<IEnableActor>().Value;
+		}
+
+		// Token: 0x0602C573 RID: 181619 RVA: 0x00608F78 File Offset: 0x00607178
 		public ISetSportsState Data1AsISetSportsState()
 		{
 			return this.Data1<ISetSportsState>().Value;
 		}
 
-		// Token: 0x06029EBC RID: 171708 RVA: 0x005BFA40 File Offset: 0x005BDC40
+		// Token: 0x0602C574 RID: 181620 RVA: 0x00608F94 File Offset: 0x00607194
 		public ISetExploreState Data1AsISetExploreState()
 		{
 			return this.Data1<ISetExploreState>().Value;
 		}
 
-		// Token: 0x06029EBD RID: 171709 RVA: 0x005BFA5C File Offset: 0x005BDC5C
+		// Token: 0x0602C575 RID: 181621 RVA: 0x00608FB0 File Offset: 0x006071B0
 		public IModifyActorMaterial Data1AsIModifyActorMaterial()
 		{
 			return this.Data1<IModifyActorMaterial>().Value;
 		}
 
-		// Token: 0x06029EBE RID: 171710 RVA: 0x005BFA78 File Offset: 0x005BDC78
+		// Token: 0x0602C576 RID: 181622 RVA: 0x00608FCC File Offset: 0x006071CC
 		public IModifyActorMaterialParamBySplineProgress Data1AsIModifyActorMaterialParamBySplineProgress()
 		{
 			return this.Data1<IModifyActorMaterialParamBySplineProgress>().Value;
 		}
 
-		// Token: 0x06029EBF RID: 171711 RVA: 0x005BFA94 File Offset: 0x005BDC94
+		// Token: 0x0602C577 RID: 181623 RVA: 0x00608FE8 File Offset: 0x006071E8
 		public IModifyActorMedia Data1AsIModifyActorMedia()
 		{
 			return this.Data1<IModifyActorMedia>().Value;
 		}
 
-		// Token: 0x06029EC0 RID: 171712 RVA: 0x005BFAB0 File Offset: 0x005BDCB0
+		// Token: 0x0602C578 RID: 181624 RVA: 0x00609004 File Offset: 0x00607204
 		public IPlayLevelSequence Data1AsIPlayLevelSequence()
 		{
 			return this.Data1<IPlayLevelSequence>().Value;
 		}
 
-		// Token: 0x06029EC1 RID: 171713 RVA: 0x005BFACC File Offset: 0x005BDCCC
+		// Token: 0x0602C579 RID: 181625 RVA: 0x00609020 File Offset: 0x00607220
 		public IEnableTakePhotoClip Data1AsIEnableTakePhotoClip()
 		{
 			return this.Data1<IEnableTakePhotoClip>().Value;
 		}
 
-		// Token: 0x06029EC2 RID: 171714 RVA: 0x005BFAE8 File Offset: 0x005BDCE8
+		// Token: 0x0602C57A RID: 181626 RVA: 0x0060903C File Offset: 0x0060723C
 		public IToggleAirWall Data1AsIToggleAirWall()
 		{
 			return this.Data1<IToggleAirWall>().Value;
 		}
 
-		// Token: 0x06029EC3 RID: 171715 RVA: 0x005BFB04 File Offset: 0x005BDD04
+		// Token: 0x0602C57B RID: 181627 RVA: 0x00609058 File Offset: 0x00607258
 		public ITriggerCameraShake Data1AsITriggerCameraShake()
 		{
 			return this.Data1<ITriggerCameraShake>().Value;
 		}
 
-		// Token: 0x06029EC4 RID: 171716 RVA: 0x005BFB20 File Offset: 0x005BDD20
+		// Token: 0x0602C57C RID: 181628 RVA: 0x00609074 File Offset: 0x00607274
 		public ITriggerGamepadShake Data1AsITriggerGamepadShake()
 		{
 			return this.Data1<ITriggerGamepadShake>().Value;
 		}
 
-		// Token: 0x06029EC5 RID: 171717 RVA: 0x005BFB3C File Offset: 0x005BDD3C
+		// Token: 0x0602C57D RID: 181629 RVA: 0x00609090 File Offset: 0x00607290
 		public IPlayRegisteredMontage Data1AsIPlayRegisteredMontage()
 		{
 			return this.Data1<IPlayRegisteredMontage>().Value;
 		}
 
-		// Token: 0x06029EC6 RID: 171718 RVA: 0x005BFB58 File Offset: 0x005BDD58
+		// Token: 0x0602C57E RID: 181630 RVA: 0x006090AC File Offset: 0x006072AC
 		public ICreatePrefab Data1AsICreatePrefab()
 		{
 			return this.Data1<ICreatePrefab>().Value;
 		}
 
-		// Token: 0x06029EC7 RID: 171719 RVA: 0x005BFB74 File Offset: 0x005BDD74
+		// Token: 0x0602C57F RID: 181631 RVA: 0x006090C8 File Offset: 0x006072C8
 		public IDestroyPrefab Data1AsIDestroyPrefab()
 		{
 			return this.Data1<IDestroyPrefab>().Value;
 		}
 
-		// Token: 0x06029EC8 RID: 171720 RVA: 0x005BFB90 File Offset: 0x005BDD90
+		// Token: 0x0602C580 RID: 181632 RVA: 0x006090E4 File Offset: 0x006072E4
 		public ISetDataLayerTransitions Data1AsISetDataLayerTransitions()
 		{
 			return this.Data1<ISetDataLayerTransitions>().Value;
 		}
 
-		// Token: 0x06029EC9 RID: 171721 RVA: 0x005BFBAC File Offset: 0x005BDDAC
+		// Token: 0x0602C581 RID: 181633 RVA: 0x00609100 File Offset: 0x00607300
 		public IEnableAoiNotify Data1AsIEnableAoiNotify()
 		{
 			return this.Data1<IEnableAoiNotify>().Value;
 		}
 
-		// Token: 0x06029ECA RID: 171722 RVA: 0x005BFBC8 File Offset: 0x005BDDC8
+		// Token: 0x0602C582 RID: 181634 RVA: 0x0060911C File Offset: 0x0060731C
 		public IRecoverDurability Data1AsIRecoverDurability()
 		{
 			return this.Data1<IRecoverDurability>().Value;
 		}
 
-		// Token: 0x06029ECB RID: 171723 RVA: 0x005BFBE4 File Offset: 0x005BDDE4
+		// Token: 0x0602C583 RID: 181635 RVA: 0x00609138 File Offset: 0x00607338
 		public ISetPlayerOperationRestriction Data1AsISetPlayerOperationRestriction()
 		{
 			return this.Data1<ISetPlayerOperationRestriction>().Value;
 		}
 
-		// Token: 0x06029ECC RID: 171724 RVA: 0x005BFC00 File Offset: 0x005BDE00
+		// Token: 0x0602C584 RID: 181636 RVA: 0x00609154 File Offset: 0x00607354
 		public IEnableAllPlayerOperation Data1AsIEnableAllPlayerOperation()
 		{
 			return this.Data1<IEnableAllPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ECD RID: 171725 RVA: 0x005BFC1C File Offset: 0x005BDE1C
+		// Token: 0x0602C585 RID: 181637 RVA: 0x00609170 File Offset: 0x00607370
 		public IDisableAllPlayerOperation Data1AsIDisableAllPlayerOperation()
 		{
 			return this.Data1<IDisableAllPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ECE RID: 171726 RVA: 0x005BFC38 File Offset: 0x005BDE38
+		// Token: 0x0602C586 RID: 181638 RVA: 0x0060918C File Offset: 0x0060738C
 		public IDisableModulePlayerOperation Data1AsIDisableModulePlayerOperation()
 		{
 			return this.Data1<IDisableModulePlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ECF RID: 171727 RVA: 0x005BFC54 File Offset: 0x005BDE54
+		// Token: 0x0602C587 RID: 181639 RVA: 0x006091A8 File Offset: 0x006073A8
 		public IClientSetPlayerOperationRestriction Data1AsIClientSetPlayerOperationRestriction()
 		{
 			return this.Data1<IClientSetPlayerOperationRestriction>().Value;
 		}
 
-		// Token: 0x06029ED0 RID: 171728 RVA: 0x005BFC70 File Offset: 0x005BDE70
+		// Token: 0x0602C588 RID: 181640 RVA: 0x006091C4 File Offset: 0x006073C4
 		public IClientEnableAllPlayerOperation Data1AsIClientEnableAllPlayerOperation()
 		{
 			return this.Data1<IClientEnableAllPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ED1 RID: 171729 RVA: 0x005BFC8C File Offset: 0x005BDE8C
+		// Token: 0x0602C589 RID: 181641 RVA: 0x006091E0 File Offset: 0x006073E0
 		public IClientDisableAllPlayerOperation Data1AsIClientDisableAllPlayerOperation()
 		{
 			return this.Data1<IClientDisableAllPlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ED2 RID: 171730 RVA: 0x005BFCA8 File Offset: 0x005BDEA8
+		// Token: 0x0602C58A RID: 181642 RVA: 0x006091FC File Offset: 0x006073FC
 		public IClientDisableModulePlayerOperation Data1AsIClientDisableModulePlayerOperation()
 		{
 			return this.Data1<IClientDisableModulePlayerOperation>().Value;
 		}
 
-		// Token: 0x06029ED3 RID: 171731 RVA: 0x005BFCC4 File Offset: 0x005BDEC4
+		// Token: 0x0602C58B RID: 181643 RVA: 0x00609218 File Offset: 0x00607418
 		public IEnableFunction Data1AsIEnableFunction()
 		{
 			return this.Data1<IEnableFunction>().Value;
 		}
 
-		// Token: 0x06029ED4 RID: 171732 RVA: 0x005BFCE0 File Offset: 0x005BDEE0
+		// Token: 0x0602C58C RID: 181644 RVA: 0x00609234 File Offset: 0x00607434
 		public ITeleportDungeonFunction Data1AsITeleportDungeonFunction()
 		{
 			return this.Data1<ITeleportDungeonFunction>().Value;
 		}
 
-		// Token: 0x06029ED5 RID: 171733 RVA: 0x005BFCFC File Offset: 0x005BDEFC
+		// Token: 0x0602C58D RID: 181645 RVA: 0x00609250 File Offset: 0x00607450
 		public IMotorRadioUiFunction Data1AsIMotorRadioUiFunction()
 		{
 			return this.Data1<IMotorRadioUiFunction>().Value;
 		}
 
-		// Token: 0x06029ED6 RID: 171734 RVA: 0x005BFD18 File Offset: 0x005BDF18
+		// Token: 0x0602C58E RID: 181646 RVA: 0x0060926C File Offset: 0x0060746C
 		public IInteractiveItemsFunction Data1AsIInteractiveItemsFunction()
 		{
 			return this.Data1<IInteractiveItemsFunction>().Value;
 		}
 
-		// Token: 0x06029ED7 RID: 171735 RVA: 0x005BFD34 File Offset: 0x005BDF34
+		// Token: 0x0602C58F RID: 181647 RVA: 0x00609288 File Offset: 0x00607488
 		public IEnableClientFunction Data1AsIEnableClientFunction()
 		{
 			return this.Data1<IEnableClientFunction>().Value;
 		}
 
-		// Token: 0x06029ED8 RID: 171736 RVA: 0x005BFD50 File Offset: 0x005BDF50
+		// Token: 0x0602C590 RID: 181648 RVA: 0x006092A4 File Offset: 0x006074A4
 		public IHealthBarDisplayClientFunction Data1AsIHealthBarDisplayClientFunction()
 		{
 			return this.Data1<IHealthBarDisplayClientFunction>().Value;
 		}
 
-		// Token: 0x06029ED9 RID: 171737 RVA: 0x005BFD6C File Offset: 0x005BDF6C
+		// Token: 0x0602C591 RID: 181649 RVA: 0x006092C0 File Offset: 0x006074C0
 		public IChangeEntityPrefabPerformance Data1AsIChangeEntityPrefabPerformance()
 		{
 			return this.Data1<IChangeEntityPrefabPerformance>().Value;
 		}
 
-		// Token: 0x06029EDA RID: 171738 RVA: 0x005BFD88 File Offset: 0x005BDF88
+		// Token: 0x0602C592 RID: 181650 RVA: 0x006092DC File Offset: 0x006074DC
 		public IChangeTargetEntityPrefabPerformance Data1AsIChangeTargetEntityPrefabPerformance()
 		{
 			return this.Data1<IChangeTargetEntityPrefabPerformance>().Value;
 		}
 
-		// Token: 0x06029EDB RID: 171739 RVA: 0x005BFDA4 File Offset: 0x005BDFA4
+		// Token: 0x0602C593 RID: 181651 RVA: 0x006092F8 File Offset: 0x006074F8
 		public IChangeSelfEntityPrefabPerformance Data1AsIChangeSelfEntityPrefabPerformance()
 		{
 			return this.Data1<IChangeSelfEntityPrefabPerformance>().Value;
 		}
 
-		// Token: 0x06029EDC RID: 171740 RVA: 0x005BFDC0 File Offset: 0x005BDFC0
+		// Token: 0x0602C594 RID: 181652 RVA: 0x00609314 File Offset: 0x00607514
 		public IModifySceneItemAttributeTag Data1AsIModifySceneItemAttributeTag()
 		{
 			return this.Data1<IModifySceneItemAttributeTag>().Value;
 		}
 
-		// Token: 0x06029EDD RID: 171741 RVA: 0x005BFDDC File Offset: 0x005BDFDC
+		// Token: 0x0602C595 RID: 181653 RVA: 0x00609330 File Offset: 0x00607530
 		public IModifySelfSceneItemAttributeTag Data1AsIModifySelfSceneItemAttributeTag()
 		{
 			return this.Data1<IModifySelfSceneItemAttributeTag>().Value;
 		}
 
-		// Token: 0x06029EDE RID: 171742 RVA: 0x005BFDF8 File Offset: 0x005BDFF8
+		// Token: 0x0602C596 RID: 181654 RVA: 0x0060934C File Offset: 0x0060754C
 		public IModifyTargetSceneItemAttributeTag Data1AsIModifyTargetSceneItemAttributeTag()
 		{
 			return this.Data1<IModifyTargetSceneItemAttributeTag>().Value;
 		}
 
-		// Token: 0x06029EDF RID: 171743 RVA: 0x005BFE14 File Offset: 0x005BE014
+		// Token: 0x0602C597 RID: 181655 RVA: 0x00609368 File Offset: 0x00607568
 		public IClientModifyTargetTag Data1AsIClientModifyTargetTag()
 		{
 			return this.Data1<IClientModifyTargetTag>().Value;
 		}
 
-		// Token: 0x06029EE0 RID: 171744 RVA: 0x005BFE30 File Offset: 0x005BE030
+		// Token: 0x0602C598 RID: 181656 RVA: 0x00609384 File Offset: 0x00607584
 		public IToggleMapMarkState Data1AsIToggleMapMarkState()
 		{
 			return this.Data1<IToggleMapMarkState>().Value;
 		}
 
-		// Token: 0x06029EE1 RID: 171745 RVA: 0x005BFE4C File Offset: 0x005BE04C
+		// Token: 0x0602C599 RID: 181657 RVA: 0x006093A0 File Offset: 0x006075A0
 		public IShowMapMark Data1AsIShowMapMark()
 		{
 			return this.Data1<IShowMapMark>().Value;
 		}
 
-		// Token: 0x06029EE2 RID: 171746 RVA: 0x005BFE68 File Offset: 0x005BE068
+		// Token: 0x0602C59A RID: 181658 RVA: 0x006093BC File Offset: 0x006075BC
 		public IHideMapMark Data1AsIHideMapMark()
 		{
 			return this.Data1<IHideMapMark>().Value;
 		}
 
-		// Token: 0x06029EE3 RID: 171747 RVA: 0x005BFE84 File Offset: 0x005BE084
+		// Token: 0x0602C59B RID: 181659 RVA: 0x006093D8 File Offset: 0x006075D8
 		public IDisableMapMark Data1AsIDisableMapMark()
 		{
 			return this.Data1<IDisableMapMark>().Value;
 		}
 
-		// Token: 0x06029EE4 RID: 171748 RVA: 0x005BFEA0 File Offset: 0x005BE0A0
+		// Token: 0x0602C59C RID: 181660 RVA: 0x006093F4 File Offset: 0x006075F4
 		public IFocusOnMapMarkAction Data1AsIFocusOnMapMarkAction()
 		{
 			return this.Data1<IFocusOnMapMarkAction>().Value;
 		}
 
-		// Token: 0x06029EE5 RID: 171749 RVA: 0x005BFEBC File Offset: 0x005BE0BC
+		// Token: 0x0602C59D RID: 181661 RVA: 0x00609410 File Offset: 0x00607610
 		public IEnableTemporaryTeleport Data1AsIEnableTemporaryTeleport()
 		{
 			return this.Data1<IEnableTemporaryTeleport>().Value;
 		}
 
-		// Token: 0x06029EE6 RID: 171750 RVA: 0x005BFED8 File Offset: 0x005BE0D8
+		// Token: 0x0602C59E RID: 181662 RVA: 0x0060942C File Offset: 0x0060762C
 		public ISetRegionConfig Data1AsISetRegionConfig()
 		{
 			return this.Data1<ISetRegionConfig>().Value;
 		}
 
-		// Token: 0x06029EE7 RID: 171751 RVA: 0x005BFEF4 File Offset: 0x005BE0F4
+		// Token: 0x0602C59F RID: 181663 RVA: 0x00609448 File Offset: 0x00607648
 		public ISetRegionMpc Data1AsISetRegionMpc()
 		{
 			return this.Data1<ISetRegionMpc>().Value;
 		}
 
-		// Token: 0x06029EE8 RID: 171752 RVA: 0x005BFF10 File Offset: 0x005BE110
+		// Token: 0x0602C5A0 RID: 181664 RVA: 0x00609464 File Offset: 0x00607664
 		public ISetJigsawItem Data1AsISetJigsawItem()
 		{
 			return this.Data1<ISetJigsawItem>().Value;
 		}
 
-		// Token: 0x06029EE9 RID: 171753 RVA: 0x005BFF2C File Offset: 0x005BE12C
+		// Token: 0x0602C5A1 RID: 181665 RVA: 0x00609480 File Offset: 0x00607680
 		public ISetJigsawFoundation Data1AsISetJigsawFoundation()
 		{
 			return this.Data1<ISetJigsawFoundation>().Value;
 		}
 
-		// Token: 0x06029EEA RID: 171754 RVA: 0x005BFF48 File Offset: 0x005BE148
+		// Token: 0x0602C5A2 RID: 181666 RVA: 0x0060949C File Offset: 0x0060769C
 		public IToggleHighlightExploreUi Data1AsIToggleHighlightExploreUi()
 		{
 			return this.Data1<IToggleHighlightExploreUi>().Value;
 		}
 
-		// Token: 0x06029EEB RID: 171755 RVA: 0x005BFF64 File Offset: 0x005BE164
+		// Token: 0x0602C5A3 RID: 181667 RVA: 0x006094B8 File Offset: 0x006076B8
 		public IShowHighlightExploreSkillIcon Data1AsIShowHighlightExploreSkillIcon()
 		{
 			return this.Data1<IShowHighlightExploreSkillIcon>().Value;
 		}
 
-		// Token: 0x06029EEC RID: 171756 RVA: 0x005BFF80 File Offset: 0x005BE180
+		// Token: 0x0602C5A4 RID: 181668 RVA: 0x006094D4 File Offset: 0x006076D4
 		public IHideHighlightExploreSkillIcon Data1AsIHideHighlightExploreSkillIcon()
 		{
 			return this.Data1<IHideHighlightExploreSkillIcon>().Value;
 		}
 
-		// Token: 0x06029EED RID: 171757 RVA: 0x005BFF9C File Offset: 0x005BE19C
+		// Token: 0x0602C5A5 RID: 181669 RVA: 0x006094F0 File Offset: 0x006076F0
 		public IToggleAndHighlightItem Data1AsIToggleAndHighlightItem()
 		{
 			return this.Data1<IToggleAndHighlightItem>().Value;
 		}
 
-		// Token: 0x06029EEE RID: 171758 RVA: 0x005BFFB8 File Offset: 0x005BE1B8
+		// Token: 0x0602C5A6 RID: 181670 RVA: 0x0060950C File Offset: 0x0060770C
 		public IResetEntity Data1AsIResetEntity()
 		{
 			return this.Data1<IResetEntity>().Value;
 		}
 
-		// Token: 0x06029EEF RID: 171759 RVA: 0x005BFFD4 File Offset: 0x005BE1D4
+		// Token: 0x0602C5A7 RID: 181671 RVA: 0x00609528 File Offset: 0x00607728
 		public IResetLevelPlay Data1AsIResetLevelPlay()
 		{
 			return this.Data1<IResetLevelPlay>().Value;
 		}
 
-		// Token: 0x06029EF0 RID: 171760 RVA: 0x005BFFF0 File Offset: 0x005BE1F0
+		// Token: 0x0602C5A8 RID: 181672 RVA: 0x00609544 File Offset: 0x00607744
 		public IPlayDynamicSettlement Data1AsIPlayDynamicSettlement()
 		{
 			return this.Data1<IPlayDynamicSettlement>().Value;
 		}
 
-		// Token: 0x06029EF1 RID: 171761 RVA: 0x005C000C File Offset: 0x005BE20C
+		// Token: 0x0602C5A9 RID: 181673 RVA: 0x00609560 File Offset: 0x00607760
 		public ISetInteractionLockState Data1AsISetInteractionLockState()
 		{
 			return this.Data1<ISetInteractionLockState>().Value;
 		}
 
-		// Token: 0x06029EF2 RID: 171762 RVA: 0x005C0028 File Offset: 0x005BE228
+		// Token: 0x0602C5AA RID: 181674 RVA: 0x0060957C File Offset: 0x0060777C
 		public ISetAudioState Data1AsISetAudioState()
 		{
 			return this.Data1<ISetAudioState>().Value;
 		}
 
-		// Token: 0x06029EF3 RID: 171763 RVA: 0x005C0044 File Offset: 0x005BE244
+		// Token: 0x0602C5AB RID: 181675 RVA: 0x00609598 File Offset: 0x00607798
+		public ISendBattleTag Data1AsISendBattleTag()
+		{
+			return this.Data1<ISendBattleTag>().Value;
+		}
+
+		// Token: 0x0602C5AC RID: 181676 RVA: 0x006095B4 File Offset: 0x006077B4
 		public IPerformerAiSplineMove Data1AsIPerformerAiSplineMove()
 		{
 			return this.Data1<IPerformerAiSplineMove>().Value;
 		}
 
-		// Token: 0x06029EF4 RID: 171764 RVA: 0x005C0060 File Offset: 0x005BE260
+		// Token: 0x0602C5AD RID: 181677 RVA: 0x006095D0 File Offset: 0x006077D0
 		public IPerformerAiMoveTo Data1AsIPerformerAiMoveTo()
 		{
 			return this.Data1<IPerformerAiMoveTo>().Value;
 		}
 
-		// Token: 0x06029EF5 RID: 171765 RVA: 0x005C007C File Offset: 0x005BE27C
+		// Token: 0x0602C5AE RID: 181678 RVA: 0x006095EC File Offset: 0x006077EC
 		public IAddTrialFollowShooter Data1AsIAddTrialFollowShooter()
 		{
 			return this.Data1<IAddTrialFollowShooter>().Value;
 		}
 
-		// Token: 0x06029EF6 RID: 171766 RVA: 0x005C0098 File Offset: 0x005BE298
+		// Token: 0x0602C5AF RID: 181679 RVA: 0x00609608 File Offset: 0x00607808
 		public IRemoveTrialFollowShooter Data1AsIRemoveTrialFollowShooter()
 		{
 			return this.Data1<IRemoveTrialFollowShooter>().Value;
 		}
 
-		// Token: 0x06029EF7 RID: 171767 RVA: 0x005C00B4 File Offset: 0x005BE2B4
+		// Token: 0x0602C5B0 RID: 181680 RVA: 0x00609624 File Offset: 0x00607824
 		public IEnableFollowShooterAbility Data1AsIEnableFollowShooterAbility()
 		{
 			return this.Data1<IEnableFollowShooterAbility>().Value;
 		}
 
-		// Token: 0x06029EF8 RID: 171768 RVA: 0x005C00D0 File Offset: 0x005BE2D0
+		// Token: 0x0602C5B1 RID: 181681 RVA: 0x00609640 File Offset: 0x00607840
+		public IFollowShooterLeisureInteract Data1AsIFollowShooterLeisureInteract()
+		{
+			return this.Data1<IFollowShooterLeisureInteract>().Value;
+		}
+
+		// Token: 0x0602C5B2 RID: 181682 RVA: 0x0060965C File Offset: 0x0060785C
 		public IClientFollowShooterLeisureInteract Data1AsIClientFollowShooterLeisureInteract()
 		{
 			return this.Data1<IClientFollowShooterLeisureInteract>().Value;
 		}
 
-		// Token: 0x06029EF9 RID: 171769 RVA: 0x005C00EC File Offset: 0x005BE2EC
+		// Token: 0x0602C5B3 RID: 181683 RVA: 0x00609678 File Offset: 0x00607878
 		public ICustomJson Data1AsICustomJson()
 		{
 			return this.Data1<ICustomJson>().Value;
 		}
 
-		// Token: 0x06029EFA RID: 171770 RVA: 0x005C0108 File Offset: 0x005BE308
+		// Token: 0x0602C5B4 RID: 181684 RVA: 0x00609694 File Offset: 0x00607894
 		public IExecResurrection Data1AsIExecResurrection()
 		{
 			return this.Data1<IExecResurrection>().Value;
 		}
 
-		// Token: 0x06029EFB RID: 171771 RVA: 0x005C0124 File Offset: 0x005BE324
+		// Token: 0x0602C5B5 RID: 181685 RVA: 0x006096B0 File Offset: 0x006078B0
 		public IOpenSystemBoardWithReturn Data1AsIOpenSystemBoardWithReturn()
 		{
 			return this.Data1<IOpenSystemBoardWithReturn>().Value;
 		}
 
-		// Token: 0x06029EFC RID: 171772 RVA: 0x005C0140 File Offset: 0x005BE340
+		// Token: 0x0602C5B6 RID: 181686 RVA: 0x006096CC File Offset: 0x006078CC
 		public IResumeSystemRewardPopup Data1AsIResumeSystemRewardPopup()
 		{
 			return this.Data1<IResumeSystemRewardPopup>().Value;
 		}
 
-		// Token: 0x06029EFD RID: 171773 RVA: 0x005C015C File Offset: 0x005BE35C
+		// Token: 0x0602C5B7 RID: 181687 RVA: 0x006096E8 File Offset: 0x006078E8
 		public IExecRiskHarvestEffect Data1AsIExecRiskHarvestEffect()
 		{
 			return this.Data1<IExecRiskHarvestEffect>().Value;
 		}
 
-		// Token: 0x06029EFE RID: 171774 RVA: 0x005C0178 File Offset: 0x005BE378
+		// Token: 0x0602C5B8 RID: 181688 RVA: 0x00609704 File Offset: 0x00607904
 		public ISetTeleControl Data1AsISetTeleControl()
 		{
 			return this.Data1<ISetTeleControl>().Value;
 		}
 
-		// Token: 0x06029EFF RID: 171775 RVA: 0x005C0194 File Offset: 0x005BE394
+		// Token: 0x0602C5B9 RID: 181689 RVA: 0x00609720 File Offset: 0x00607920
 		public IMowingTowerGotoNextFloor Data1AsIMowingTowerGotoNextFloor()
 		{
 			return this.Data1<IMowingTowerGotoNextFloor>().Value;
 		}
 
-		// Token: 0x06029F00 RID: 171776 RVA: 0x005C01B0 File Offset: 0x005BE3B0
+		// Token: 0x0602C5BA RID: 181690 RVA: 0x0060973C File Offset: 0x0060793C
 		public ISlashAndTowerGotoNextFloor Data1AsISlashAndTowerGotoNextFloor()
 		{
 			return this.Data1<ISlashAndTowerGotoNextFloor>().Value;
 		}
 
-		// Token: 0x06029F01 RID: 171777 RVA: 0x005C01CC File Offset: 0x005BE3CC
+		// Token: 0x0602C5BB RID: 181691 RVA: 0x00609758 File Offset: 0x00607958
 		public IRoleTowerGotoNextFloor Data1AsIRoleTowerGotoNextFloor()
 		{
 			return this.Data1<IRoleTowerGotoNextFloor>().Value;
 		}
 
-		// Token: 0x06029F02 RID: 171778 RVA: 0x005C01E8 File Offset: 0x005BE3E8
+		// Token: 0x0602C5BC RID: 181692 RVA: 0x00609774 File Offset: 0x00607974
 		public IVehicleEnter Data1AsIVehicleEnter()
 		{
 			return this.Data1<IVehicleEnter>().Value;
 		}
 
-		// Token: 0x06029F03 RID: 171779 RVA: 0x005C0204 File Offset: 0x005BE404
+		// Token: 0x0602C5BD RID: 181693 RVA: 0x00609790 File Offset: 0x00607990
 		public IEnterNpcVehicle Data1AsIEnterNpcVehicle()
 		{
 			return this.Data1<IEnterNpcVehicle>().Value;
 		}
 
-		// Token: 0x06029F04 RID: 171780 RVA: 0x005C0220 File Offset: 0x005BE420
+		// Token: 0x0602C5BE RID: 181694 RVA: 0x006097AC File Offset: 0x006079AC
 		public IVehicleExitPlayer Data1AsIVehicleExitPlayer()
 		{
 			return this.Data1<IVehicleExitPlayer>().Value;
 		}
 
-		// Token: 0x06029F05 RID: 171781 RVA: 0x005C023C File Offset: 0x005BE43C
+		// Token: 0x0602C5BF RID: 181695 RVA: 0x006097C8 File Offset: 0x006079C8
 		public IVehicleExitNpc Data1AsIVehicleExitNpc()
 		{
 			return this.Data1<IVehicleExitNpc>().Value;
 		}
 
-		// Token: 0x06029F06 RID: 171782 RVA: 0x005C0258 File Offset: 0x005BE458
+		// Token: 0x0602C5C0 RID: 181696 RVA: 0x006097E4 File Offset: 0x006079E4
 		public ITeleportVehicle Data1AsITeleportVehicle()
 		{
 			return this.Data1<ITeleportVehicle>().Value;
 		}
 
-		// Token: 0x06029F07 RID: 171783 RVA: 0x005C0274 File Offset: 0x005BE474
+		// Token: 0x0602C5C1 RID: 181697 RVA: 0x00609800 File Offset: 0x00607A00
 		public IClientTeleportVehicle Data1AsIClientTeleportVehicle()
 		{
 			return this.Data1<IClientTeleportVehicle>().Value;
 		}
 
-		// Token: 0x06029F08 RID: 171784 RVA: 0x005C0290 File Offset: 0x005BE490
+		// Token: 0x0602C5C2 RID: 181698 RVA: 0x0060981C File Offset: 0x00607A1C
 		public IVehiclePlayPassengerVoice Data1AsIVehiclePlayPassengerVoice()
 		{
 			return this.Data1<IVehiclePlayPassengerVoice>().Value;
 		}
 
-		// Token: 0x06029F09 RID: 171785 RVA: 0x005C02AC File Offset: 0x005BE4AC
+		// Token: 0x0602C5C3 RID: 181699 RVA: 0x00609838 File Offset: 0x00607A38
 		public IVehicleWaterfallClimbing Data1AsIVehicleWaterfallClimbing()
 		{
 			return this.Data1<IVehicleWaterfallClimbing>().Value;
 		}
 
-		// Token: 0x06029F0A RID: 171786 RVA: 0x005C02C8 File Offset: 0x005BE4C8
+		// Token: 0x0602C5C4 RID: 181700 RVA: 0x00609854 File Offset: 0x00607A54
 		public ITeleportToAndEnterVehicle Data1AsITeleportToAndEnterVehicle()
 		{
 			return this.Data1<ITeleportToAndEnterVehicle>().Value;
 		}
 
-		// Token: 0x06029F0B RID: 171787 RVA: 0x005C02E4 File Offset: 0x005BE4E4
+		// Token: 0x0602C5C5 RID: 181701 RVA: 0x00609870 File Offset: 0x00607A70
 		public IVehicleMoveWithPathLine Data1AsIVehicleMoveWithPathLine()
 		{
 			return this.Data1<IVehicleMoveWithPathLine>().Value;
 		}
 
-		// Token: 0x06029F0C RID: 171788 RVA: 0x005C0300 File Offset: 0x005BE500
+		// Token: 0x0602C5C6 RID: 181702 RVA: 0x0060988C File Offset: 0x00607A8C
 		public IVehicleSprint Data1AsIVehicleSprint()
 		{
 			return this.Data1<IVehicleSprint>().Value;
 		}
 
-		// Token: 0x06029F0D RID: 171789 RVA: 0x005C031C File Offset: 0x005BE51C
+		// Token: 0x0602C5C7 RID: 181703 RVA: 0x006098A8 File Offset: 0x00607AA8
 		public IOpenQteAction Data1AsIOpenQteAction()
 		{
 			return this.Data1<IOpenQteAction>().Value;
 		}
 
-		// Token: 0x06029F0E RID: 171790 RVA: 0x005C0338 File Offset: 0x005BE538
+		// Token: 0x0602C5C8 RID: 181704 RVA: 0x006098C4 File Offset: 0x00607AC4
 		public IPlayerInput Data1AsIPlayerInput()
 		{
 			return this.Data1<IPlayerInput>().Value;
 		}
 
-		// Token: 0x06029F0F RID: 171791 RVA: 0x005C0354 File Offset: 0x005BE554
+		// Token: 0x0602C5C9 RID: 181705 RVA: 0x006098E0 File Offset: 0x00607AE0
 		public IPreloadAction Data1AsIPreloadAction()
 		{
 			return this.Data1<IPreloadAction>().Value;
 		}
 
-		// Token: 0x06029F10 RID: 171792 RVA: 0x005C0370 File Offset: 0x005BE570
+		// Token: 0x0602C5CA RID: 181706 RVA: 0x006098FC File Offset: 0x00607AFC
 		public IRemovePreloadResourceAction Data1AsIRemovePreloadResourceAction()
 		{
 			return this.Data1<IRemovePreloadResourceAction>().Value;
 		}
 
-		// Token: 0x06029F11 RID: 171793 RVA: 0x005C038C File Offset: 0x005BE58C
+		// Token: 0x0602C5CB RID: 181707 RVA: 0x00609918 File Offset: 0x00607B18
 		public IExecAlertSystemAction Data1AsIExecAlertSystemAction()
 		{
 			return this.Data1<IExecAlertSystemAction>().Value;
 		}
 
-		// Token: 0x06029F12 RID: 171794 RVA: 0x005C03A8 File Offset: 0x005BE5A8
+		// Token: 0x0602C5CC RID: 181708 RVA: 0x00609934 File Offset: 0x00607B34
 		public ISetSpineAnimation Data1AsISetSpineAnimation()
 		{
 			return this.Data1<ISetSpineAnimation>().Value;
 		}
 
-		// Token: 0x06029F13 RID: 171795 RVA: 0x005C03C4 File Offset: 0x005BE5C4
+		// Token: 0x0602C5CD RID: 181709 RVA: 0x00609950 File Offset: 0x00607B50
 		public IChangeEntityCamp Data1AsIChangeEntityCamp()
 		{
 			return this.Data1<IChangeEntityCamp>().Value;
 		}
 
-		// Token: 0x06029F14 RID: 171796 RVA: 0x005C03E0 File Offset: 0x005BE5E0
+		// Token: 0x0602C5CE RID: 181710 RVA: 0x0060996C File Offset: 0x00607B6C
 		public IRecordDungeonEvent Data1AsIRecordDungeonEvent()
 		{
 			return this.Data1<IRecordDungeonEvent>().Value;
 		}
 
-		// Token: 0x06029F15 RID: 171797 RVA: 0x005C03FC File Offset: 0x005BE5FC
+		// Token: 0x0602C5CF RID: 181711 RVA: 0x00609988 File Offset: 0x00607B88
 		public IDangoAbyssGotoNextFloor Data1AsIDangoAbyssGotoNextFloor()
 		{
 			return this.Data1<IDangoAbyssGotoNextFloor>().Value;
 		}
 
-		// Token: 0x06029F16 RID: 171798 RVA: 0x005C0418 File Offset: 0x005BE618
+		// Token: 0x0602C5D0 RID: 181712 RVA: 0x006099A4 File Offset: 0x00607BA4
 		public IDangoAbyssCreateRewardTreasureBox Data1AsIDangoAbyssCreateRewardTreasureBox()
 		{
 			return this.Data1<IDangoAbyssCreateRewardTreasureBox>().Value;
 		}
 
-		// Token: 0x06029F17 RID: 171799 RVA: 0x005C0434 File Offset: 0x005BE634
+		// Token: 0x0602C5D1 RID: 181713 RVA: 0x006099C0 File Offset: 0x00607BC0
 		public IDangoAbyssActivatePortal Data1AsIDangoAbyssActivatePortal()
 		{
 			return this.Data1<IDangoAbyssActivatePortal>().Value;
 		}
 
-		// Token: 0x06029F18 RID: 171800 RVA: 0x005C0450 File Offset: 0x005BE650
+		// Token: 0x0602C5D2 RID: 181714 RVA: 0x006099DC File Offset: 0x00607BDC
 		public IDangoAbyssReceiveReward Data1AsIDangoAbyssReceiveReward()
 		{
 			return this.Data1<IDangoAbyssReceiveReward>().Value;
 		}
 
-		// Token: 0x06029F19 RID: 171801 RVA: 0x005C046C File Offset: 0x005BE66C
+		// Token: 0x0602C5D3 RID: 181715 RVA: 0x006099F8 File Offset: 0x00607BF8
 		public IRoverRogueActivate Data1AsIRoverRogueActivate()
 		{
 			return this.Data1<IRoverRogueActivate>().Value;
 		}
 
-		// Token: 0x06029F1A RID: 171802 RVA: 0x005C0488 File Offset: 0x005BE688
+		// Token: 0x0602C5D4 RID: 181716 RVA: 0x00609A14 File Offset: 0x00607C14
 		public IRoverRogueRoomFinish Data1AsIRoverRogueRoomFinish()
 		{
 			return this.Data1<IRoverRogueRoomFinish>().Value;
 		}
 
-		// Token: 0x06029F1B RID: 171803 RVA: 0x005C04A4 File Offset: 0x005BE6A4
+		// Token: 0x0602C5D5 RID: 181717 RVA: 0x00609A30 File Offset: 0x00607C30
 		public IRoverRogueCreateRoomReward Data1AsIRoverRogueCreateRoomReward()
 		{
 			return this.Data1<IRoverRogueCreateRoomReward>().Value;
 		}
 
-		// Token: 0x06029F1C RID: 171804 RVA: 0x005C04C0 File Offset: 0x005BE6C0
+		// Token: 0x0602C5D6 RID: 181718 RVA: 0x00609A4C File Offset: 0x00607C4C
 		public IGuestOperateUiAnimation Data1AsIGuestOperateUiAnimation()
 		{
 			return this.Data1<IGuestOperateUiAnimation>().Value;
 		}
 
-		// Token: 0x06029F1D RID: 171805 RVA: 0x005C04DC File Offset: 0x005BE6DC
+		// Token: 0x0602C5D7 RID: 181719 RVA: 0x00609A68 File Offset: 0x00607C68
 		public ISlideRailStart Data1AsISlideRailStart()
 		{
 			return this.Data1<ISlideRailStart>().Value;
 		}
 
-		// Token: 0x06029F1E RID: 171806 RVA: 0x005C04F8 File Offset: 0x005BE6F8
+		// Token: 0x0602C5D8 RID: 181720 RVA: 0x00609A84 File Offset: 0x00607C84
 		public ISlideRailEnd Data1AsISlideRailEnd()
 		{
 			return this.Data1<ISlideRailEnd>().Value;
 		}
 
-		// Token: 0x06029F1F RID: 171807 RVA: 0x005C0514 File Offset: 0x005BE714
+		// Token: 0x0602C5D9 RID: 181721 RVA: 0x00609AA0 File Offset: 0x00607CA0
 		public ISlidePerformStart Data1AsISlidePerformStart()
 		{
 			return this.Data1<ISlidePerformStart>().Value;
 		}
 
-		// Token: 0x06029F20 RID: 171808 RVA: 0x005C0530 File Offset: 0x005BE730
+		// Token: 0x0602C5DA RID: 181722 RVA: 0x00609ABC File Offset: 0x00607CBC
 		public IBvbSendSystemEvent Data1AsIBvbSendSystemEvent()
 		{
 			return this.Data1<IBvbSendSystemEvent>().Value;
 		}
 
-		// Token: 0x06029F21 RID: 171809 RVA: 0x005C054C File Offset: 0x005BE74C
+		// Token: 0x0602C5DB RID: 181723 RVA: 0x00609AD8 File Offset: 0x00607CD8
 		public IBvbSendAiEvent Data1AsIBvbSendAiEvent()
 		{
 			return this.Data1<IBvbSendAiEvent>().Value;
 		}
 
-		// Token: 0x06029F22 RID: 171810 RVA: 0x005C0568 File Offset: 0x005BE768
+		// Token: 0x0602C5DC RID: 181724 RVA: 0x00609AF4 File Offset: 0x00607CF4
 		public IBvbPlayDialog Data1AsIBvbPlayDialog()
 		{
 			return this.Data1<IBvbPlayDialog>().Value;
 		}
 
-		// Token: 0x06029F23 RID: 171811 RVA: 0x005C0584 File Offset: 0x005BE784
+		// Token: 0x0602C5DD RID: 181725 RVA: 0x00609B10 File Offset: 0x00607D10
 		public IBvbPlayerOperationConstraint Data1AsIBvbPlayerOperationConstraint()
 		{
 			return this.Data1<IBvbPlayerOperationConstraint>().Value;
 		}
 
-		// Token: 0x06029F24 RID: 171812 RVA: 0x005C05A0 File Offset: 0x005BE7A0
+		// Token: 0x0602C5DE RID: 181726 RVA: 0x00609B2C File Offset: 0x00607D2C
 		public IBvbSkipChallenge Data1AsIBvbSkipChallenge()
 		{
 			return this.Data1<IBvbSkipChallenge>().Value;
 		}
 
-		// Token: 0x06029F25 RID: 171813 RVA: 0x005C05BC File Offset: 0x005BE7BC
+		// Token: 0x0602C5DF RID: 181727 RVA: 0x00609B48 File Offset: 0x00607D48
 		public IActiveAntiGravitySafePoint Data1AsIActiveAntiGravitySafePoint()
 		{
 			return this.Data1<IActiveAntiGravitySafePoint>().Value;
 		}
 
-		// Token: 0x06029F26 RID: 171814 RVA: 0x005C05D8 File Offset: 0x005BE7D8
+		// Token: 0x0602C5E0 RID: 181728 RVA: 0x00609B64 File Offset: 0x00607D64
 		public ISummonEntity Data1AsISummonEntity()
 		{
 			return this.Data1<ISummonEntity>().Value;
 		}
 
-		// Token: 0x06029F27 RID: 171815 RVA: 0x005C05F4 File Offset: 0x005BE7F4
+		// Token: 0x0602C5E1 RID: 181729 RVA: 0x00609B80 File Offset: 0x00607D80
 		public IDestroySummonedEntities Data1AsIDestroySummonedEntities()
 		{
 			return this.Data1<IDestroySummonedEntities>().Value;
 		}
 
-		// Token: 0x06029F28 RID: 171816 RVA: 0x005C0610 File Offset: 0x005BE810
+		// Token: 0x0602C5E2 RID: 181730 RVA: 0x00609B9C File Offset: 0x00607D9C
 		public ISetupMoraleSystem Data1AsISetupMoraleSystem()
 		{
 			return this.Data1<ISetupMoraleSystem>().Value;
 		}
 
-		// Token: 0x06029F29 RID: 171817 RVA: 0x005C062C File Offset: 0x005BE82C
+		// Token: 0x0602C5E3 RID: 181731 RVA: 0x00609BB8 File Offset: 0x00607DB8
 		public IGiantToggleModel Data1AsIGiantToggleModel()
 		{
 			return this.Data1<IGiantToggleModel>().Value;
 		}
 
-		// Token: 0x06029F2A RID: 171818 RVA: 0x005C0648 File Offset: 0x005BE848
+		// Token: 0x0602C5E4 RID: 181732 RVA: 0x00609BD4 File Offset: 0x00607DD4
 		public IGiantTriggerResponse Data1AsIGiantTriggerResponse()
 		{
 			return this.Data1<IGiantTriggerResponse>().Value;
 		}
 
-		// Token: 0x06029F2B RID: 171819 RVA: 0x005C0664 File Offset: 0x005BE864
+		// Token: 0x0602C5E5 RID: 181733 RVA: 0x00609BF0 File Offset: 0x00607DF0
 		public IActivateGiantTotalProgressNode Data1AsIActivateGiantTotalProgressNode()
 		{
 			return this.Data1<IActivateGiantTotalProgressNode>().Value;
 		}
 
-		// Token: 0x06029F2C RID: 171820 RVA: 0x005C0680 File Offset: 0x005BE880
+		// Token: 0x0602C5E6 RID: 181734 RVA: 0x00609C0C File Offset: 0x00607E0C
 		public IRunActorCustomEvent Data1AsIRunActorCustomEvent()
 		{
 			return this.Data1<IRunActorCustomEvent>().Value;
 		}
 
-		// Token: 0x06029F2D RID: 171821 RVA: 0x005C069C File Offset: 0x005BE89C
+		// Token: 0x0602C5E7 RID: 181735 RVA: 0x00609C28 File Offset: 0x00607E28
 		public ITriggerSpecificScanEffect Data1AsITriggerSpecificScanEffect()
 		{
 			return this.Data1<ITriggerSpecificScanEffect>().Value;
 		}
 
-		// Token: 0x06029F2E RID: 171822 RVA: 0x005C06B8 File Offset: 0x005BE8B8
+		// Token: 0x0602C5E8 RID: 181736 RVA: 0x00609C44 File Offset: 0x00607E44
 		public ISendClientEvent Data1AsISendClientEvent()
 		{
 			return this.Data1<ISendClientEvent>().Value;
 		}
 
-		// Token: 0x06029F2F RID: 171823 RVA: 0x005C06D4 File Offset: 0x005BE8D4
+		// Token: 0x0602C5E9 RID: 181737 RVA: 0x00609C60 File Offset: 0x00607E60
 		public IScanEnrichmentArea Data1AsIScanEnrichmentArea()
 		{
 			return this.Data1<IScanEnrichmentArea>().Value;
 		}
 
-		// Token: 0x06029F30 RID: 171824 RVA: 0x005C06F0 File Offset: 0x005BE8F0
+		// Token: 0x0602C5EA RID: 181738 RVA: 0x00609C7C File Offset: 0x00607E7C
 		public IRequestSystemFunction Data1AsIRequestSystemFunction()
 		{
 			return this.Data1<IRequestSystemFunction>().Value;
 		}
 
-		// Token: 0x06029F31 RID: 171825 RVA: 0x005C070C File Offset: 0x005BE90C
+		// Token: 0x0602C5EB RID: 181739 RVA: 0x00609C98 File Offset: 0x00607E98
 		public IReignsSetPropertyVisible Data1AsIReignsSetPropertyVisible()
 		{
 			return this.Data1<IReignsSetPropertyVisible>().Value;
 		}
 
-		// Token: 0x06029F32 RID: 171826 RVA: 0x005C0728 File Offset: 0x005BE928
+		// Token: 0x0602C5EC RID: 181740 RVA: 0x00609CB4 File Offset: 0x00607EB4
 		public IReignsChangeBackground Data1AsIReignsChangeBackground()
 		{
 			return this.Data1<IReignsChangeBackground>().Value;
 		}
 
-		// Token: 0x06029F33 RID: 171827 RVA: 0x005C0744 File Offset: 0x005BE944
+		// Token: 0x0602C5ED RID: 181741 RVA: 0x00609CD0 File Offset: 0x00607ED0
 		public IReignsSetUiEffect Data1AsIReignsSetUiEffect()
 		{
 			return this.Data1<IReignsSetUiEffect>().Value;
 		}
 
-		// Token: 0x06029F34 RID: 171828 RVA: 0x005C0760 File Offset: 0x005BE960
+		// Token: 0x0602C5EE RID: 181742 RVA: 0x00609CEC File Offset: 0x00607EEC
 		public IReignsChangePlayerName Data1AsIReignsChangePlayerName()
 		{
 			return this.Data1<IReignsChangePlayerName>().Value;
 		}
 
-		// Token: 0x06029F35 RID: 171829 RVA: 0x005C077C File Offset: 0x005BE97C
+		// Token: 0x0602C5EF RID: 181743 RVA: 0x00609D08 File Offset: 0x00607F08
 		public IReignsCallCard Data1AsIReignsCallCard()
 		{
 			return this.Data1<IReignsCallCard>().Value;
 		}
 
-		// Token: 0x06029F36 RID: 171830 RVA: 0x005C0798 File Offset: 0x005BE998
+		// Token: 0x0602C5F0 RID: 181744 RVA: 0x00609D24 File Offset: 0x00607F24
 		public IReignsTriggerGuide Data1AsIReignsTriggerGuide()
 		{
 			return this.Data1<IReignsTriggerGuide>().Value;
 		}
 
-		// Token: 0x06029F37 RID: 171831 RVA: 0x005C07B4 File Offset: 0x005BE9B4
+		// Token: 0x0602C5F1 RID: 181745 RVA: 0x00609D40 File Offset: 0x00607F40
 		public IReignsAddBuff Data1AsIReignsAddBuff()
 		{
 			return this.Data1<IReignsAddBuff>().Value;
 		}
 
-		// Token: 0x06029F38 RID: 171832 RVA: 0x005C07D0 File Offset: 0x005BE9D0
+		// Token: 0x0602C5F2 RID: 181746 RVA: 0x00609D5C File Offset: 0x00607F5C
 		public IReignsCheckSettle Data1AsIReignsCheckSettle()
 		{
 			return this.Data1<IReignsCheckSettle>().Value;
 		}
 
-		// Token: 0x06029F39 RID: 171833 RVA: 0x005C07EC File Offset: 0x005BE9EC
+		// Token: 0x0602C5F3 RID: 181747 RVA: 0x00609D78 File Offset: 0x00607F78
 		public ISetNpcGroupPerform Data1AsISetNpcGroupPerform()
 		{
 			return this.Data1<ISetNpcGroupPerform>().Value;
 		}
 
-		// Token: 0x06029F3A RID: 171834 RVA: 0x005C0808 File Offset: 0x005BEA08
+		// Token: 0x0602C5F4 RID: 181748 RVA: 0x00609D94 File Offset: 0x00607F94
 		public IRemoveNpcGroupPerform Data1AsIRemoveNpcGroupPerform()
 		{
 			return this.Data1<IRemoveNpcGroupPerform>().Value;
 		}
 
-		// Token: 0x06029F3B RID: 171835 RVA: 0x005C0824 File Offset: 0x005BEA24
+		// Token: 0x0602C5F5 RID: 181749 RVA: 0x00609DB0 File Offset: 0x00607FB0
 		public IEnableEntityLookAt Data1AsIEnableEntityLookAt()
 		{
 			return this.Data1<IEnableEntityLookAt>().Value;
 		}
 
-		// Token: 0x06029F3C RID: 171836 RVA: 0x005C0840 File Offset: 0x005BEA40
+		// Token: 0x0602C5F6 RID: 181750 RVA: 0x00609DCC File Offset: 0x00607FCC
 		public IDisableEntityLookAt Data1AsIDisableEntityLookAt()
 		{
 			return this.Data1<IDisableEntityLookAt>().Value;
 		}
 
-		// Token: 0x06029F3D RID: 171837 RVA: 0x005C085C File Offset: 0x005BEA5C
+		// Token: 0x0602C5F7 RID: 181751 RVA: 0x00609DE8 File Offset: 0x00607FE8
 		public IOverrideAiBehaviorTree Data1AsIOverrideAiBehaviorTree()
 		{
 			return this.Data1<IOverrideAiBehaviorTree>().Value;
 		}
 
-		// Token: 0x06029F3E RID: 171838 RVA: 0x005C0878 File Offset: 0x005BEA78
+		// Token: 0x0602C5F8 RID: 181752 RVA: 0x00609E04 File Offset: 0x00608004
 		public IRestoreAiBehaviorTree Data1AsIRestoreAiBehaviorTree()
 		{
 			return this.Data1<IRestoreAiBehaviorTree>().Value;
 		}
 
-		// Token: 0x06029F3F RID: 171839 RVA: 0x005C0894 File Offset: 0x005BEA94
+		// Token: 0x0602C5F9 RID: 181753 RVA: 0x00609E20 File Offset: 0x00608020
 		public IFlowDefineNpcGroupPerform Data1AsIFlowDefineNpcGroupPerform()
 		{
 			return this.Data1<IFlowDefineNpcGroupPerform>().Value;
 		}
 
-		// Token: 0x06029F40 RID: 171840 RVA: 0x005C08B0 File Offset: 0x005BEAB0
+		// Token: 0x0602C5FA RID: 181754 RVA: 0x00609E3C File Offset: 0x0060803C
 		public ISeqEventAddTagToSelf Data1AsISeqEventAddTagToSelf()
 		{
 			return this.Data1<ISeqEventAddTagToSelf>().Value;
 		}
 
-		// Token: 0x06029F41 RID: 171841 RVA: 0x005C08CC File Offset: 0x005BEACC
+		// Token: 0x0602C5FB RID: 181755 RVA: 0x00609E58 File Offset: 0x00608058
 		public ISeqEventFireBullet Data1AsISeqEventFireBullet()
 		{
 			return this.Data1<ISeqEventFireBullet>().Value;
 		}
 
-		// Token: 0x06029F42 RID: 171842 RVA: 0x005C08E8 File Offset: 0x005BEAE8
+		// Token: 0x0602C5FC RID: 181756 RVA: 0x00609E74 File Offset: 0x00608074
 		public ITrapDefenseChangeMiniMap Data1AsITrapDefenseChangeMiniMap()
 		{
 			return this.Data1<ITrapDefenseChangeMiniMap>().Value;
 		}
 
-		// Token: 0x06029F43 RID: 171843 RVA: 0x005C0904 File Offset: 0x005BEB04
+		// Token: 0x0602C5FD RID: 181757 RVA: 0x00609E90 File Offset: 0x00608090
 		public ITrapDefensePlayerOperationConstraint Data1AsITrapDefensePlayerOperationConstraint()
 		{
 			return this.Data1<ITrapDefensePlayerOperationConstraint>().Value;
 		}
 
-		// Token: 0x06029F44 RID: 171844 RVA: 0x005C0920 File Offset: 0x005BEB20
+		// Token: 0x0602C5FE RID: 181758 RVA: 0x00609EAC File Offset: 0x006080AC
 		public IHonamiStoryInteractPickUp Data1AsIHonamiStoryInteractPickUp()
 		{
 			return this.Data1<IHonamiStoryInteractPickUp>().Value;
 		}
 
-		// Token: 0x06029F45 RID: 171845 RVA: 0x005C093C File Offset: 0x005BEB3C
+		// Token: 0x0602C5FF RID: 181759 RVA: 0x00609EC8 File Offset: 0x006080C8
 		public IHonamiStoryReceiveCorruptedChestReward Data1AsIHonamiStoryReceiveCorruptedChestReward()
 		{
 			return this.Data1<IHonamiStoryReceiveCorruptedChestReward>().Value;
 		}
 
-		// Token: 0x06029F46 RID: 171846 RVA: 0x005C0958 File Offset: 0x005BEB58
+		// Token: 0x0602C600 RID: 181760 RVA: 0x00609EE4 File Offset: 0x006080E4
 		public IHonamiStoryActivateSafeEvacuation Data1AsIHonamiStoryActivateSafeEvacuation()
 		{
 			return this.Data1<IHonamiStoryActivateSafeEvacuation>().Value;
 		}
 
-		// Token: 0x06029F47 RID: 171847 RVA: 0x005C0974 File Offset: 0x005BEB74
+		// Token: 0x0602C601 RID: 181761 RVA: 0x00609F00 File Offset: 0x00608100
 		public IHonamiStorySetFormation Data1AsIHonamiStorySetFormation()
 		{
 			return this.Data1<IHonamiStorySetFormation>().Value;
 		}
 
-		// Token: 0x06029F48 RID: 171848 RVA: 0x005C0990 File Offset: 0x005BEB90
+		// Token: 0x0602C602 RID: 181762 RVA: 0x00609F1C File Offset: 0x0060811C
 		public IHonamiStoryGetItem Data1AsIHonamiStoryGetItem()
 		{
 			return this.Data1<IHonamiStoryGetItem>().Value;
 		}
 
-		// Token: 0x06029F49 RID: 171849 RVA: 0x005C09AC File Offset: 0x005BEBAC
+		// Token: 0x0602C603 RID: 181763 RVA: 0x00609F38 File Offset: 0x00608138
 		public IInfrActivityUpgradeInfrastructure Data1AsIInfrActivityUpgradeInfrastructure()
 		{
 			return this.Data1<IInfrActivityUpgradeInfrastructure>().Value;
 		}
 
-		// Token: 0x06029F4A RID: 171850 RVA: 0x005C09C8 File Offset: 0x005BEBC8
+		// Token: 0x0602C604 RID: 181764 RVA: 0x00609F54 File Offset: 0x00608154
 		public IPlayWalkingOverlayMontage Data1AsIPlayWalkingOverlayMontage()
 		{
 			return this.Data1<IPlayWalkingOverlayMontage>().Value;
 		}
 
-		// Token: 0x06029F4B RID: 171851 RVA: 0x005C09E4 File Offset: 0x005BEBE4
+		// Token: 0x0602C605 RID: 181765 RVA: 0x00609F70 File Offset: 0x00608170
 		public IEnableKey4Func Data1AsIEnableKey4Func()
 		{
 			return this.Data1<IEnableKey4Func>().Value;
 		}
 
-		// Token: 0x06029F4C RID: 171852 RVA: 0x005C0A00 File Offset: 0x005BEC00
+		// Token: 0x0602C606 RID: 181766 RVA: 0x00609F8C File Offset: 0x0060818C
 		public IChangeNpcAbpState Data1AsIChangeNpcAbpState()
 		{
 			return this.Data1<IChangeNpcAbpState>().Value;
 		}
 
-		// Token: 0x06029F4D RID: 171853 RVA: 0x005C0A1C File Offset: 0x005BEC1C
+		// Token: 0x0602C607 RID: 181767 RVA: 0x00609FA8 File Offset: 0x006081A8
 		public IOverrideAbpAnimScheme Data1AsIOverrideAbpAnimScheme()
 		{
 			return this.Data1<IOverrideAbpAnimScheme>().Value;
 		}
 
-		// Token: 0x06029F4E RID: 171854 RVA: 0x005C0A38 File Offset: 0x005BEC38
+		// Token: 0x0602C608 RID: 181768 RVA: 0x00609FC4 File Offset: 0x006081C4
 		public ICloseWalkingOverlayMontage Data1AsICloseWalkingOverlayMontage()
 		{
 			return this.Data1<ICloseWalkingOverlayMontage>().Value;
 		}
 
-		// Token: 0x06029F4F RID: 171855 RVA: 0x005C0A54 File Offset: 0x005BEC54
+		// Token: 0x0602C609 RID: 181769 RVA: 0x00609FE0 File Offset: 0x006081E0
 		public ISetMotorSpeed Data1AsISetMotorSpeed()
 		{
 			return this.Data1<ISetMotorSpeed>().Value;
 		}
 
-		// Token: 0x06029F50 RID: 171856 RVA: 0x005C0A70 File Offset: 0x005BEC70
+		// Token: 0x0602C60A RID: 181770 RVA: 0x00609FFC File Offset: 0x006081FC
 		public IVehicleSetSpeedImmediately Data1AsIVehicleSetSpeedImmediately()
 		{
 			return this.Data1<IVehicleSetSpeedImmediately>().Value;
 		}
 
-		// Token: 0x06029F51 RID: 171857 RVA: 0x005C0A8C File Offset: 0x005BEC8C
+		// Token: 0x0602C60B RID: 181771 RVA: 0x0060A018 File Offset: 0x00608218
 		public IStartMotorCruise Data1AsIStartMotorCruise()
 		{
 			return this.Data1<IStartMotorCruise>().Value;
 		}
 
-		// Token: 0x06029F52 RID: 171858 RVA: 0x005C0AA8 File Offset: 0x005BECA8
+		// Token: 0x0602C60C RID: 181772 RVA: 0x0060A034 File Offset: 0x00608234
 		public IStopMotorCruise Data1AsIStopMotorCruise()
 		{
 			return this.Data1<IStopMotorCruise>().Value;
 		}
 
-		// Token: 0x06029F53 RID: 171859 RVA: 0x005C0AC4 File Offset: 0x005BECC4
+		// Token: 0x0602C60D RID: 181773 RVA: 0x0060A050 File Offset: 0x00608250
 		public IDriveMotorInSpecConfig Data1AsIDriveMotorInSpecConfig()
 		{
 			return this.Data1<IDriveMotorInSpecConfig>().Value;
 		}
 
-		// Token: 0x06029F54 RID: 171860 RVA: 0x005C0AE0 File Offset: 0x005BECE0
+		// Token: 0x0602C60E RID: 181774 RVA: 0x0060A06C File Offset: 0x0060826C
 		public IMotorSoarInWindField Data1AsIMotorSoarInWindField()
 		{
 			return this.Data1<IMotorSoarInWindField>().Value;
 		}
 
-		// Token: 0x06029F55 RID: 171861 RVA: 0x005C0AFC File Offset: 0x005BECFC
+		// Token: 0x0602C60F RID: 181775 RVA: 0x0060A088 File Offset: 0x00608288
 		public ISetSkillBtnEffect Data1AsISetSkillBtnEffect()
 		{
 			return this.Data1<ISetSkillBtnEffect>().Value;
 		}
 
-		// Token: 0x06029F56 RID: 171862 RVA: 0x005C0B18 File Offset: 0x005BED18
+		// Token: 0x0602C610 RID: 181776 RVA: 0x0060A0A4 File Offset: 0x006082A4
 		public ICollectSunSpirit Data1AsICollectSunSpirit()
 		{
 			return this.Data1<ICollectSunSpirit>().Value;
 		}
 
-		// Token: 0x06029F57 RID: 171863 RVA: 0x005C0B34 File Offset: 0x005BED34
+		// Token: 0x0602C611 RID: 181777 RVA: 0x0060A0C0 File Offset: 0x006082C0
 		public IPerformSunSpiritGearRoundTrip Data1AsIPerformSunSpiritGearRoundTrip()
 		{
 			return this.Data1<IPerformSunSpiritGearRoundTrip>().Value;
 		}
 
-		// Token: 0x06029F58 RID: 171864 RVA: 0x005C0B50 File Offset: 0x005BED50
+		// Token: 0x0602C612 RID: 181778 RVA: 0x0060A0DC File Offset: 0x006082DC
 		public ITriggerDeadeyeMode Data1AsITriggerDeadeyeMode()
 		{
 			return this.Data1<ITriggerDeadeyeMode>().Value;
 		}
 
-		// Token: 0x06029F59 RID: 171865 RVA: 0x005C0B6C File Offset: 0x005BED6C
+		// Token: 0x0602C613 RID: 181779 RVA: 0x0060A0F8 File Offset: 0x006082F8
 		public ITriggerSystemRandomPlot Data1AsITriggerSystemRandomPlot()
 		{
 			return this.Data1<ITriggerSystemRandomPlot>().Value;
 		}
 
-		// Token: 0x06029F5A RID: 171866 RVA: 0x005C0B88 File Offset: 0x005BED88
+		// Token: 0x0602C614 RID: 181780 RVA: 0x0060A114 File Offset: 0x00608314
 		public ISetAudioEnable Data1AsISetAudioEnable()
 		{
 			return this.Data1<ISetAudioEnable>().Value;
 		}
 
-		// Token: 0x06029F5B RID: 171867 RVA: 0x005C0BA4 File Offset: 0x005BEDA4
+		// Token: 0x0602C615 RID: 181781 RVA: 0x0060A130 File Offset: 0x00608330
 		public IPhoneSystemInteract Data1AsIPhoneSystemInteract()
 		{
 			return this.Data1<IPhoneSystemInteract>().Value;
 		}
 
-		// Token: 0x06029F5C RID: 171868 RVA: 0x005C0BC0 File Offset: 0x005BEDC0
+		// Token: 0x0602C616 RID: 181782 RVA: 0x0060A14C File Offset: 0x0060834C
 		public IRollBlockGetReward Data1AsIRollBlockGetReward()
 		{
 			return this.Data1<IRollBlockGetReward>().Value;
 		}
 
-		// Token: 0x06029F5D RID: 171869 RVA: 0x005C0BDC File Offset: 0x005BEDDC
+		// Token: 0x0602C617 RID: 181783 RVA: 0x0060A168 File Offset: 0x00608368
 		public IEnterMovieMode Data1AsIEnterMovieMode()
 		{
 			return this.Data1<IEnterMovieMode>().Value;
 		}
 
-		// Token: 0x06029F5E RID: 171870 RVA: 0x005C0BF8 File Offset: 0x005BEDF8
+		// Token: 0x0602C618 RID: 181784 RVA: 0x0060A184 File Offset: 0x00608384
 		public IExitMovieMode Data1AsIExitMovieMode()
 		{
 			return this.Data1<IExitMovieMode>().Value;
 		}
 
-		// Token: 0x06029F5F RID: 171871 RVA: 0x005C0C14 File Offset: 0x005BEE14
+		// Token: 0x0602C619 RID: 181785 RVA: 0x0060A1A0 File Offset: 0x006083A0
 		public IStartRoadNetworkNavigation Data1AsIStartRoadNetworkNavigation()
 		{
 			return this.Data1<IStartRoadNetworkNavigation>().Value;
 		}
 
-		// Token: 0x06029F60 RID: 171872 RVA: 0x005C0C30 File Offset: 0x005BEE30
+		// Token: 0x0602C61A RID: 181786 RVA: 0x0060A1BC File Offset: 0x006083BC
 		public ISetWayOccupancyState Data1AsISetWayOccupancyState()
 		{
 			return this.Data1<ISetWayOccupancyState>().Value;
 		}
 
-		// Token: 0x06029F61 RID: 171873 RVA: 0x005C0C4C File Offset: 0x005BEE4C
+		// Token: 0x0602C61B RID: 181787 RVA: 0x0060A1D8 File Offset: 0x006083D8
 		public IEnterPatrolState Data1AsIEnterPatrolState()
 		{
 			return this.Data1<IEnterPatrolState>().Value;
 		}
 
-		// Token: 0x06029F62 RID: 171874 RVA: 0x005C0C68 File Offset: 0x005BEE68
+		// Token: 0x0602C61C RID: 181788 RVA: 0x0060A1F4 File Offset: 0x006083F4
 		public IPerformAiHideSelf Data1AsIPerformAiHideSelf()
 		{
 			return this.Data1<IPerformAiHideSelf>().Value;
 		}
 
-		// Token: 0x06029F63 RID: 171875 RVA: 0x005C0C84 File Offset: 0x005BEE84
+		// Token: 0x0602C61D RID: 181789 RVA: 0x0060A210 File Offset: 0x00608410
 		public ISendSceneActorEvent Data1AsISendSceneActorEvent()
 		{
 			return this.Data1<ISendSceneActorEvent>().Value;
 		}
 
-		// Token: 0x06029F64 RID: 171876 RVA: 0x005C0CA0 File Offset: 0x005BEEA0
+		// Token: 0x0602C61E RID: 181790 RVA: 0x0060A22C File Offset: 0x0060842C
 		public IExecBpActorFunc Data1AsIExecBpActorFunc()
 		{
 			return this.Data1<IExecBpActorFunc>().Value;
 		}
 
-		// Token: 0x06029F65 RID: 171877 RVA: 0x005C0CBC File Offset: 0x005BEEBC
+		// Token: 0x0602C61F RID: 181791 RVA: 0x0060A248 File Offset: 0x00608448
 		public IResetPlayerPosWithPresentation Data1AsIResetPlayerPosWithPresentation()
 		{
 			return this.Data1<IResetPlayerPosWithPresentation>().Value;
 		}
 
-		// Token: 0x06029F66 RID: 171878 RVA: 0x005C0CD8 File Offset: 0x005BEED8
+		// Token: 0x0602C620 RID: 181792 RVA: 0x0060A264 File Offset: 0x00608464
 		public IDrinksRollRoleRequirement Data1AsIDrinksRollRoleRequirement()
 		{
 			return this.Data1<IDrinksRollRoleRequirement>().Value;
 		}
 
-		// Token: 0x06029F67 RID: 171879 RVA: 0x005C0CF4 File Offset: 0x005BEEF4
+		// Token: 0x0602C621 RID: 181793 RVA: 0x0060A280 File Offset: 0x00608480
 		public ISetBlendAnim Data1AsISetBlendAnim()
 		{
 			return this.Data1<ISetBlendAnim>().Value;
 		}
 
-		// Token: 0x06029F68 RID: 171880 RVA: 0x005C0D10 File Offset: 0x005BEF10
+		// Token: 0x0602C622 RID: 181794 RVA: 0x0060A29C File Offset: 0x0060849C
 		public IReportTrackingEvent Data1AsIReportTrackingEvent()
 		{
 			return this.Data1<IReportTrackingEvent>().Value;
 		}
 
-		// Token: 0x06029F69 RID: 171881 RVA: 0x005C0D2C File Offset: 0x005BEF2C
+		// Token: 0x0602C623 RID: 181795 RVA: 0x0060A2B8 File Offset: 0x006084B8
 		public ITetrisThrowBlock Data1AsITetrisThrowBlock()
 		{
 			return this.Data1<ITetrisThrowBlock>().Value;
 		}
 
-		// Token: 0x06029F6A RID: 171882 RVA: 0x005C0D48 File Offset: 0x005BEF48
+		// Token: 0x0602C624 RID: 181796 RVA: 0x0060A2D4 File Offset: 0x006084D4
 		public ITetrisGameComplete Data1AsITetrisGameComplete()
 		{
 			return this.Data1<ITetrisGameComplete>().Value;
 		}
 
-		// Token: 0x06029F6B RID: 171883 RVA: 0x005C0D64 File Offset: 0x005BEF64
+		// Token: 0x0602C625 RID: 181797 RVA: 0x0060A2F0 File Offset: 0x006084F0
 		public ITetrisTriggerDelayFall Data1AsITetrisTriggerDelayFall()
 		{
 			return this.Data1<ITetrisTriggerDelayFall>().Value;
 		}
 
-		// Token: 0x06029F6C RID: 171884 RVA: 0x005C0D80 File Offset: 0x005BEF80
+		// Token: 0x0602C626 RID: 181798 RVA: 0x0060A30C File Offset: 0x0060850C
 		public IBossPilingRandomBuff Data1AsIBossPilingRandomBuff()
 		{
 			return this.Data1<IBossPilingRandomBuff>().Value;
 		}
 
-		// Token: 0x06029F6D RID: 171885 RVA: 0x005C0D9C File Offset: 0x005BEF9C
+		// Token: 0x0602C627 RID: 181799 RVA: 0x0060A328 File Offset: 0x00608528
 		public IBossPilingEnterNextInst Data1AsIBossPilingEnterNextInst()
 		{
 			return this.Data1<IBossPilingEnterNextInst>().Value;
 		}
 
-		// Token: 0x06029F6E RID: 171886 RVA: 0x005C0DB8 File Offset: 0x005BEFB8
+		// Token: 0x0602C628 RID: 181800 RVA: 0x0060A344 File Offset: 0x00608544
 		public IOpenQuickHackSystem Data1AsIOpenQuickHackSystem()
 		{
 			return this.Data1<IOpenQuickHackSystem>().Value;
 		}
 
-		// Token: 0x06029F6F RID: 171887 RVA: 0x005C0DD4 File Offset: 0x005BEFD4
+		// Token: 0x0602C629 RID: 181801 RVA: 0x0060A360 File Offset: 0x00608560
 		public IDollGrabItemDelivery Data1AsIDollGrabItemDelivery()
 		{
 			return this.Data1<IDollGrabItemDelivery>().Value;
 		}
 
-		// Token: 0x06029F70 RID: 171888 RVA: 0x005C0DF0 File Offset: 0x005BEFF0
+		// Token: 0x0602C62A RID: 181802 RVA: 0x0060A37C File Offset: 0x0060857C
 		public ISheriffUnlockClue Data1AsISheriffUnlockClue()
 		{
 			return this.Data1<ISheriffUnlockClue>().Value;
 		}
 
-		// Token: 0x06029F71 RID: 171889 RVA: 0x005C0E0C File Offset: 0x005BF00C
+		// Token: 0x0602C62B RID: 181803 RVA: 0x0060A398 File Offset: 0x00608598
 		public ISheriffUnlockProgress Data1AsISheriffUnlockProgress()
 		{
 			return this.Data1<ISheriffUnlockProgress>().Value;
 		}
 
-		// Token: 0x06029F72 RID: 171890 RVA: 0x005C0E28 File Offset: 0x005BF028
+		// Token: 0x0602C62C RID: 181804 RVA: 0x0060A3B4 File Offset: 0x006085B4
 		public ISheriffChangeCriminalState Data1AsISheriffChangeCriminalState()
 		{
 			return this.Data1<ISheriffChangeCriminalState>().Value;
 		}
 
-		// Token: 0x06029F73 RID: 171891 RVA: 0x005C0E44 File Offset: 0x005BF044
+		// Token: 0x0602C62D RID: 181805 RVA: 0x0060A3D0 File Offset: 0x006085D0
 		public ISheriffChangeCriminalIdentity Data1AsISheriffChangeCriminalIdentity()
 		{
 			return this.Data1<ISheriffChangeCriminalIdentity>().Value;
 		}
 
-		// Token: 0x06029F74 RID: 171892 RVA: 0x005C0E60 File Offset: 0x005BF060
+		// Token: 0x0602C62E RID: 181806 RVA: 0x0060A3EC File Offset: 0x006085EC
 		public ISheriffUnlockEnding Data1AsISheriffUnlockEnding()
 		{
 			return this.Data1<ISheriffUnlockEnding>().Value;
 		}
 
-		// Token: 0x06029F75 RID: 171893 RVA: 0x005C0E7C File Offset: 0x005BF07C
+		// Token: 0x0602C62F RID: 181807 RVA: 0x0060A408 File Offset: 0x00608608
 		public ISetTargetElementalAbility Data1AsISetTargetElementalAbility()
 		{
 			return this.Data1<ISetTargetElementalAbility>().Value;
 		}
 
-		// Token: 0x06029F76 RID: 171894 RVA: 0x005C0E98 File Offset: 0x005BF098
+		// Token: 0x0602C630 RID: 181808 RVA: 0x0060A424 File Offset: 0x00608624
 		public IToggleEntityElementalAbility Data1AsIToggleEntityElementalAbility()
 		{
 			return this.Data1<IToggleEntityElementalAbility>().Value;
 		}
 
-		// Token: 0x06029F77 RID: 171895 RVA: 0x005C0EB4 File Offset: 0x005BF0B4
+		// Token: 0x0602C631 RID: 181809 RVA: 0x0060A440 File Offset: 0x00608640
 		public ICaptureElementalBox Data1AsICaptureElementalBox()
 		{
 			return this.Data1<ICaptureElementalBox>().Value;
 		}
 
-		// Token: 0x06029F78 RID: 171896 RVA: 0x005C0ED0 File Offset: 0x005BF0D0
+		// Token: 0x0602C632 RID: 181810 RVA: 0x0060A45C File Offset: 0x0060865C
 		public IChangeElementalBoxState Data1AsIChangeElementalBoxState()
 		{
 			return this.Data1<IChangeElementalBoxState>().Value;
 		}
 
-		// Token: 0x06029F79 RID: 171897 RVA: 0x005C0EEC File Offset: 0x005BF0EC
+		// Token: 0x0602C633 RID: 181811 RVA: 0x0060A478 File Offset: 0x00608678
 		public ISetElementalBoxToTarget Data1AsISetElementalBoxToTarget()
 		{
 			return this.Data1<ISetElementalBoxToTarget>().Value;
 		}
 
-		// Token: 0x06029F7A RID: 171898 RVA: 0x005C0F07 File Offset: 0x005BF107
+		// Token: 0x0602C634 RID: 181812 RVA: 0x0060A494 File Offset: 0x00608694
+		public ISeasonWeatherSetRotationLock Data1AsISeasonWeatherSetRotationLock()
+		{
+			return this.Data1<ISeasonWeatherSetRotationLock>().Value;
+		}
+
+		// Token: 0x0602C635 RID: 181813 RVA: 0x0060A4B0 File Offset: 0x006086B0
+		public ISeasonWeatherChangeTo Data1AsISeasonWeatherChangeTo()
+		{
+			return this.Data1<ISeasonWeatherChangeTo>().Value;
+		}
+
+		// Token: 0x0602C636 RID: 181814 RVA: 0x0060A4CC File Offset: 0x006086CC
+		public ISeasonWeatherUnlockSpecial Data1AsISeasonWeatherUnlockSpecial()
+		{
+			return this.Data1<ISeasonWeatherUnlockSpecial>().Value;
+		}
+
+		// Token: 0x0602C637 RID: 181815 RVA: 0x0060A4E8 File Offset: 0x006086E8
+		public IHandBookModifySystemProgress Data1AsIHandBookModifySystemProgress()
+		{
+			return this.Data1<IHandBookModifySystemProgress>().Value;
+		}
+
+		// Token: 0x0602C638 RID: 181816 RVA: 0x0060A504 File Offset: 0x00608704
+		public IClientExecEntityPrefabAction Data1AsIClientExecEntityPrefabAction()
+		{
+			return this.Data1<IClientExecEntityPrefabAction>().Value;
+		}
+
+		// Token: 0x0602C639 RID: 181817 RVA: 0x0060A520 File Offset: 0x00608720
+		public ILiveSetUi Data1AsILiveSetUi()
+		{
+			return this.Data1<ILiveSetUi>().Value;
+		}
+
+		// Token: 0x0602C63A RID: 181818 RVA: 0x0060A53C File Offset: 0x0060873C
+		public ILiveSetDanmaku Data1AsILiveSetDanmaku()
+		{
+			return this.Data1<ILiveSetDanmaku>().Value;
+		}
+
+		// Token: 0x0602C63B RID: 181819 RVA: 0x0060A558 File Offset: 0x00608758
+		public ILiveSetParam Data1AsILiveSetParam()
+		{
+			return this.Data1<ILiveSetParam>().Value;
+		}
+
+		// Token: 0x0602C63C RID: 181820 RVA: 0x0060A574 File Offset: 0x00608774
+		public ILiveSetSc Data1AsILiveSetSc()
+		{
+			return this.Data1<ILiveSetSc>().Value;
+		}
+
+		// Token: 0x0602C63D RID: 181821 RVA: 0x0060A58F File Offset: 0x0060878F
 		public static Offset<IActionParams_Union> CreateIActionParams_Union(FlatBufferBuilder builder, byte union_index = 0, IActionParams_Union_0 data_0_type = IActionParams_Union_0.NONE, int data_0Offset = 0, IActionParams_Union_1 data_1_type = IActionParams_Union_1.NONE, int data_1Offset = 0)
 		{
 			builder.StartTable(5);
@@ -2802,49 +2892,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActionParams_Union.EndIActionParams_Union(builder);
 		}
 
-		// Token: 0x06029F7B RID: 171899 RVA: 0x005C0F3B File Offset: 0x005BF13B
+		// Token: 0x0602C63E RID: 181822 RVA: 0x0060A5C3 File Offset: 0x006087C3
 		public static void StartIActionParams_Union(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06029F7C RID: 171900 RVA: 0x005C0F44 File Offset: 0x005BF144
+		// Token: 0x0602C63F RID: 181823 RVA: 0x0060A5CC File Offset: 0x006087CC
 		public static void AddUnionIndex(FlatBufferBuilder builder, byte unionIndex)
 		{
 			builder.AddByte(0, unionIndex, 0);
 		}
 
-		// Token: 0x06029F7D RID: 171901 RVA: 0x005C0F4F File Offset: 0x005BF14F
+		// Token: 0x0602C640 RID: 181824 RVA: 0x0060A5D7 File Offset: 0x006087D7
 		public static void AddData0Type(FlatBufferBuilder builder, IActionParams_Union_0 data0Type)
 		{
 			builder.AddByte(1, (byte)data0Type, 0);
 		}
 
-		// Token: 0x06029F7E RID: 171902 RVA: 0x005C0F5A File Offset: 0x005BF15A
+		// Token: 0x0602C641 RID: 181825 RVA: 0x0060A5E2 File Offset: 0x006087E2
 		public static void AddData0(FlatBufferBuilder builder, int data0Offset)
 		{
 			builder.AddOffset(2, data0Offset, 0);
 		}
 
-		// Token: 0x06029F7F RID: 171903 RVA: 0x005C0F65 File Offset: 0x005BF165
+		// Token: 0x0602C642 RID: 181826 RVA: 0x0060A5ED File Offset: 0x006087ED
 		public static void AddData1Type(FlatBufferBuilder builder, IActionParams_Union_1 data1Type)
 		{
 			builder.AddByte(3, (byte)data1Type, 0);
 		}
 
-		// Token: 0x06029F80 RID: 171904 RVA: 0x005C0F70 File Offset: 0x005BF170
+		// Token: 0x0602C643 RID: 181827 RVA: 0x0060A5F8 File Offset: 0x006087F8
 		public static void AddData1(FlatBufferBuilder builder, int data1Offset)
 		{
 			builder.AddOffset(4, data1Offset, 0);
 		}
 
-		// Token: 0x06029F81 RID: 171905 RVA: 0x005C0F7B File Offset: 0x005BF17B
+		// Token: 0x0602C644 RID: 181828 RVA: 0x0060A603 File Offset: 0x00608803
 		public static Offset<IActionParams_Union> EndIActionParams_Union(FlatBufferBuilder builder)
 		{
 			return new Offset<IActionParams_Union>(builder.EndTable());
 		}
 
-		// Token: 0x06029F82 RID: 171906 RVA: 0x005C0F88 File Offset: 0x005BF188
+		// Token: 0x0602C645 RID: 181829 RVA: 0x0060A610 File Offset: 0x00608810
 		public IActionParams_UnionT UnPack()
 		{
 			IActionParams_UnionT actionParams_UnionT = new IActionParams_UnionT();
@@ -2852,7 +2942,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actionParams_UnionT;
 		}
 
-		// Token: 0x06029F83 RID: 171907 RVA: 0x005C0FA4 File Offset: 0x005BF1A4
+		// Token: 0x0602C646 RID: 181830 RVA: 0x0060A62C File Offset: 0x0060882C
 		public void UnPackTo(IActionParams_UnionT _o)
 		{
 			_o.UnionIndex = this.UnionIndex;
@@ -2991,6 +3081,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case IActionParams_Union_0.ISetCameraMode:
 				_o.Data0.Value = ((this.Data0<ISetCameraMode>() != null) ? this.Data0<ISetCameraMode>().Value.UnPack() : null);
+				break;
+			case IActionParams_Union_0.IModifySceneUiSubtitle:
+				_o.Data0.Value = ((this.Data0<IModifySceneUiSubtitle>() != null) ? this.Data0<IModifySceneUiSubtitle>().Value.UnPack() : null);
 				break;
 			case IActionParams_Union_0.ISetPlotMode:
 				_o.Data0.Value = ((this.Data0<ISetPlotMode>() != null) ? this.Data0<ISetPlotMode>().Value.UnPack() : null);
@@ -3160,6 +3253,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_0.IFinishDoInteract:
 				_o.Data0.Value = ((this.Data0<IFinishDoInteract>() != null) ? this.Data0<IFinishDoInteract>().Value.UnPack() : null);
 				break;
+			case IActionParams_Union_0.IModifyEntityDecoration:
+				_o.Data0.Value = ((this.Data0<IModifyEntityDecoration>() != null) ? this.Data0<IModifyEntityDecoration>().Value.UnPack() : null);
+				break;
 			case IActionParams_Union_0.IAddBuffToEntity:
 				_o.Data0.Value = ((this.Data0<IAddBuffToEntity>() != null) ? this.Data0<IAddBuffToEntity>().Value.UnPack() : null);
 				break;
@@ -3273,6 +3369,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case IActionParams_Union_0.IFireBulletEffect:
 				_o.Data0.Value = ((this.Data0<IFireBulletEffect>() != null) ? this.Data0<IFireBulletEffect>().Value.UnPack() : null);
+				break;
+			case IActionParams_Union_0.ISetAssistCharacterPos:
+				_o.Data0.Value = ((this.Data0<ISetAssistCharacterPos>() != null) ? this.Data0<ISetAssistCharacterPos>().Value.UnPack() : null);
 				break;
 			case IActionParams_Union_0.ISetPlayerPos:
 				_o.Data0.Value = ((this.Data0<ISetPlayerPos>() != null) ? this.Data0<ISetPlayerPos>().Value.UnPack() : null);
@@ -3454,6 +3553,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_0.IToggleDragActorPlay:
 				_o.Data0.Value = ((this.Data0<IToggleDragActorPlay>() != null) ? this.Data0<IToggleDragActorPlay>().Value.UnPack() : null);
 				break;
+			case IActionParams_Union_0.IDarkTideSetMapMarkState:
+				_o.Data0.Value = ((this.Data0<IDarkTideSetMapMarkState>() != null) ? this.Data0<IDarkTideSetMapMarkState>().Value.UnPack() : null);
+				break;
 			case IActionParams_Union_0.IManualOccupations:
 				_o.Data0.Value = ((this.Data0<IManualOccupations>() != null) ? this.Data0<IManualOccupations>().Value.UnPack() : null);
 				break;
@@ -3535,8 +3637,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_0.IOpenSimpleGameplay:
 				_o.Data0.Value = ((this.Data0<IOpenSimpleGameplay>() != null) ? this.Data0<IOpenSimpleGameplay>().Value.UnPack() : null);
 				break;
-			case IActionParams_Union_0.ICloseSimpleGameplay:
-				_o.Data0.Value = ((this.Data0<ICloseSimpleGameplay>() != null) ? this.Data0<ICloseSimpleGameplay>().Value.UnPack() : null);
+			case IActionParams_Union_0.IToggleRideFlyingCarUiGameplay:
+				_o.Data0.Value = ((this.Data0<IToggleRideFlyingCarUiGameplay>() != null) ? this.Data0<IToggleRideFlyingCarUiGameplay>().Value.UnPack() : null);
 				break;
 			case IActionParams_Union_0.IChangePhantom:
 				_o.Data0.Value = ((this.Data0<IChangePhantom>() != null) ? this.Data0<IChangePhantom>().Value.UnPack() : null);
@@ -3613,23 +3715,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_0.IRestorePhantomFormation:
 				_o.Data0.Value = ((this.Data0<IRestorePhantomFormation>() != null) ? this.Data0<IRestorePhantomFormation>().Value.UnPack() : null);
 				break;
-			case IActionParams_Union_0.IEnterOrbitalCamera:
-				_o.Data0.Value = ((this.Data0<IEnterOrbitalCamera>() != null) ? this.Data0<IEnterOrbitalCamera>().Value.UnPack() : null);
-				break;
-			case IActionParams_Union_0.IExitOrbitalCamera:
-				_o.Data0.Value = ((this.Data0<IExitOrbitalCamera>() != null) ? this.Data0<IExitOrbitalCamera>().Value.UnPack() : null);
-				break;
-			case IActionParams_Union_0.IEnableSplineMoveModel:
-				_o.Data0.Value = ((this.Data0<IEnableSplineMoveModel>() != null) ? this.Data0<IEnableSplineMoveModel>().Value.UnPack() : null);
-				break;
-			case IActionParams_Union_0.IEnableActor:
-				_o.Data0.Value = ((this.Data0<IEnableActor>() != null) ? this.Data0<IEnableActor>().Value.UnPack() : null);
-				break;
 			}
 			_o.Data1 = new IActionParams_Union_1Union();
 			_o.Data1.Type = this.Data1Type;
 			switch (this.Data1Type)
 			{
+			case IActionParams_Union_1.IEnterOrbitalCamera:
+				_o.Data1.Value = ((this.Data1<IEnterOrbitalCamera>() != null) ? this.Data1<IEnterOrbitalCamera>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IExitOrbitalCamera:
+				_o.Data1.Value = ((this.Data1<IExitOrbitalCamera>() != null) ? this.Data1<IExitOrbitalCamera>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IEnableSplineMoveModel:
+				_o.Data1.Value = ((this.Data1<IEnableSplineMoveModel>() != null) ? this.Data1<IEnableSplineMoveModel>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IEnableActor:
+				_o.Data1.Value = ((this.Data1<IEnableActor>() != null) ? this.Data1<IEnableActor>().Value.UnPack() : null);
+				return;
 			case IActionParams_Union_1.ISetSportsState:
 				_o.Data1.Value = ((this.Data1<ISetSportsState>() != null) ? this.Data1<ISetSportsState>().Value.UnPack() : null);
 				return;
@@ -3798,6 +3900,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_1.ISetAudioState:
 				_o.Data1.Value = ((this.Data1<ISetAudioState>() != null) ? this.Data1<ISetAudioState>().Value.UnPack() : null);
 				return;
+			case IActionParams_Union_1.ISendBattleTag:
+				_o.Data1.Value = ((this.Data1<ISendBattleTag>() != null) ? this.Data1<ISendBattleTag>().Value.UnPack() : null);
+				return;
 			case IActionParams_Union_1.IPerformerAiSplineMove:
 				_o.Data1.Value = ((this.Data1<IPerformerAiSplineMove>() != null) ? this.Data1<IPerformerAiSplineMove>().Value.UnPack() : null);
 				return;
@@ -3812,6 +3917,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return;
 			case IActionParams_Union_1.IEnableFollowShooterAbility:
 				_o.Data1.Value = ((this.Data1<IEnableFollowShooterAbility>() != null) ? this.Data1<IEnableFollowShooterAbility>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IFollowShooterLeisureInteract:
+				_o.Data1.Value = ((this.Data1<IFollowShooterLeisureInteract>() != null) ? this.Data1<IFollowShooterLeisureInteract>().Value.UnPack() : null);
 				return;
 			case IActionParams_Union_1.IClientFollowShooterLeisureInteract:
 				_o.Data1.Value = ((this.Data1<IClientFollowShooterLeisureInteract>() != null) ? this.Data1<IClientFollowShooterLeisureInteract>().Value.UnPack() : null);
@@ -4203,12 +4311,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case IActionParams_Union_1.ISetElementalBoxToTarget:
 				_o.Data1.Value = ((this.Data1<ISetElementalBoxToTarget>() != null) ? this.Data1<ISetElementalBoxToTarget>().Value.UnPack() : null);
 				return;
+			case IActionParams_Union_1.ISeasonWeatherSetRotationLock:
+				_o.Data1.Value = ((this.Data1<ISeasonWeatherSetRotationLock>() != null) ? this.Data1<ISeasonWeatherSetRotationLock>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ISeasonWeatherChangeTo:
+				_o.Data1.Value = ((this.Data1<ISeasonWeatherChangeTo>() != null) ? this.Data1<ISeasonWeatherChangeTo>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ISeasonWeatherUnlockSpecial:
+				_o.Data1.Value = ((this.Data1<ISeasonWeatherUnlockSpecial>() != null) ? this.Data1<ISeasonWeatherUnlockSpecial>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IHandBookModifySystemProgress:
+				_o.Data1.Value = ((this.Data1<IHandBookModifySystemProgress>() != null) ? this.Data1<IHandBookModifySystemProgress>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.IClientExecEntityPrefabAction:
+				_o.Data1.Value = ((this.Data1<IClientExecEntityPrefabAction>() != null) ? this.Data1<IClientExecEntityPrefabAction>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ILiveSetUi:
+				_o.Data1.Value = ((this.Data1<ILiveSetUi>() != null) ? this.Data1<ILiveSetUi>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ILiveSetDanmaku:
+				_o.Data1.Value = ((this.Data1<ILiveSetDanmaku>() != null) ? this.Data1<ILiveSetDanmaku>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ILiveSetParam:
+				_o.Data1.Value = ((this.Data1<ILiveSetParam>() != null) ? this.Data1<ILiveSetParam>().Value.UnPack() : null);
+				return;
+			case IActionParams_Union_1.ILiveSetSc:
+				_o.Data1.Value = ((this.Data1<ILiveSetSc>() != null) ? this.Data1<ILiveSetSc>().Value.UnPack() : null);
+				return;
 			default:
 				return;
 			}
 		}
 
-		// Token: 0x06029F84 RID: 171908 RVA: 0x005C9A84 File Offset: 0x005C7C84
+		// Token: 0x0602C647 RID: 181831 RVA: 0x006135F8 File Offset: 0x006117F8
 		public static Offset<IActionParams_Union> Pack(FlatBufferBuilder builder, IActionParams_UnionT _o)
 		{
 			if (_o == null)
@@ -4222,7 +4357,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActionParams_Union.CreateIActionParams_Union(builder, _o.UnionIndex, data_0_type, data_0Offset, data_1_type, data_1Offset);
 		}
 
-		// Token: 0x0401025E RID: 66142
+		// Token: 0x04011053 RID: 69715
 		private Table __p;
 	}
 }

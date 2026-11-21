@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B19 RID: 19225
+	// Token: 0x02003AC1 RID: 15041
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class TowerDefenseRankItemUtil : Singleton
 	{
-		// Token: 0x06031CD8 RID: 203992 RVA: 0x00B8F94D File Offset: 0x00B8DB4D
+		// Token: 0x06026A68 RID: 158312 RVA: 0x00AD39B1 File Offset: 0x00AD1BB1
 		public string GetPosTexture(int index)
 		{
 			if (index == 0)
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return "FormationOnline3PIcon";
 		}
 
-		// Token: 0x17007B4F RID: 31567
-		// (get) Token: 0x06031CD9 RID: 203993 RVA: 0x00B8F967 File Offset: 0x00B8DB67
+		// Token: 0x17004EFC RID: 20220
+		// (get) Token: 0x06026A69 RID: 158313 RVA: 0x00AD39CB File Offset: 0x00AD1BCB
 		public static TowerDefenseRankItemUtil Instance
 		{
 			get
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CDA RID: 203994 RVA: 0x00B8F98A File Offset: 0x00B8DB8A
+		// Token: 0x06026A6A RID: 158314 RVA: 0x00AD39EE File Offset: 0x00AD1BEE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031CDB RID: 203995 RVA: 0x00B8F98C File Offset: 0x00B8DB8C
+		// Token: 0x06026A6B RID: 158315 RVA: 0x00AD39F0 File Offset: 0x00AD1BF0
 		public static void ResetStaticDefaultValue()
 		{
 			TowerDefenseRankItemUtil instance = TowerDefenseRankItemUtil._instance;
@@ -53,22 +53,22 @@ namespace CSharpScript.Game.Module.TowerDefence
 			TowerDefenseRankItemUtil._instance = null;
 		}
 
-		// Token: 0x06031CDC RID: 203996 RVA: 0x00B8F9A5 File Offset: 0x00B8DBA5
+		// Token: 0x06026A6C RID: 158316 RVA: 0x00AD3A09 File Offset: 0x00AD1C09
 		static TowerDefenseRankItemUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenseRankItemUtil.CreateStaticDefaultValue), new Action(TowerDefenseRankItemUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A93E RID: 108862
+		// Token: 0x04015290 RID: 86672
 		public const string FIRSTPLAYER_ICON = "FormationOnline1PIcon";
 
-		// Token: 0x0401A93F RID: 108863
+		// Token: 0x04015291 RID: 86673
 		public const string SECONDPLAYER_ICON = "FormationOnline2PIcon";
 
-		// Token: 0x0401A940 RID: 108864
+		// Token: 0x04015292 RID: 86674
 		public const string THIRDPLAYER_ICON = "FormationOnline3PIcon";
 
-		// Token: 0x0401A941 RID: 108865
+		// Token: 0x04015293 RID: 86675
 		[Nullable(2)]
 		private static TowerDefenseRankItemUtil _instance;
 	}

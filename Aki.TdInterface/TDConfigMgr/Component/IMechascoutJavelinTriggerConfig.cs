@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004E8 RID: 1256
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000541 RID: 1345
 	public class IMechascoutJavelinTriggerConfig : ITeleCtrlTriggerConfig
 	{
-		// Token: 0x06001984 RID: 6532 RVA: 0x0004B424 File Offset: 0x00049624
+		// Token: 0x06001B1E RID: 6942 RVA: 0x0004F16C File Offset: 0x0004D36C
 		private IMechascoutJavelinTriggerConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001985 RID: 6533 RVA: 0x0004B45C File Offset: 0x0004965C
+		// Token: 0x06001B1F RID: 6943 RVA: 0x0004F1A4 File Offset: 0x0004D3A4
 		public static IMechascoutJavelinTriggerConfig Create([Nullable(2)] IMechascoutJavelinTriggerConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001986 RID: 6534 RVA: 0x0004B46F File Offset: 0x0004966F
+		// Token: 0x06001B20 RID: 6944 RVA: 0x0004F1B7 File Offset: 0x0004D3B7
 		public static IMechascoutJavelinTriggerConfig CreateFromSetValue([Nullable(2)] IMechascoutJavelinTriggerConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001987 RID: 6535 RVA: 0x0004B482 File Offset: 0x00049682
+		// Token: 0x06001B21 RID: 6945 RVA: 0x0004F1CA File Offset: 0x0004D3CA
 		public new IMechascoutJavelinTriggerConfig_SetValue ToSetValue()
 		{
 			return new IMechascoutJavelinTriggerConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006C5 RID: 1733
-		// (get) Token: 0x06001988 RID: 6536 RVA: 0x0004B495 File Offset: 0x00049695
-		// (set) Token: 0x06001989 RID: 6537 RVA: 0x0004B4C0 File Offset: 0x000496C0
+		// Token: 0x1700072C RID: 1836
+		// (get) Token: 0x06001B22 RID: 6946 RVA: 0x0004F1DD File Offset: 0x0004D3DD
+		// (set) Token: 0x06001B23 RID: 6947 RVA: 0x0004F208 File Offset: 0x0004D408
 		public override ETeleCtrlTriggerType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012AF RID: 4783
+		// Token: 0x040013D1 RID: 5073
 		[Nullable(2)]
 		protected new IMechascoutJavelinTriggerConfig FbInstance;
 
-		// Token: 0x040012B0 RID: 4784
+		// Token: 0x040013D2 RID: 5074
 		[Nullable(2)]
 		protected new IMechascoutJavelinTriggerConfig_SetValue PocoInterface;
 	}

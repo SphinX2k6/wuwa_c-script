@@ -7,22 +7,22 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 {
-	// Token: 0x02003DBD RID: 15805
+	// Token: 0x02003107 RID: 12551
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectSubConfig.SWaterEffectSubConfig")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 128)]
 	public class SWaterEffectSubConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060274A6 RID: 160934 RVA: 0x0098D5E3 File Offset: 0x0098B7E3
+		// Token: 0x0601EB89 RID: 125833 RVA: 0x0091B53B File Offset: 0x0091973B
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SWaterEffectSubConfig._ScriptStructPtr != 0) ? SWaterEffectSubConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectSubConfig.SWaterEffectSubConfig", ref SWaterEffectSubConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x1700573F RID: 22335
-		// (get) Token: 0x060274A7 RID: 160935 RVA: 0x0098D608 File Offset: 0x0098B808
-		// (set) Token: 0x060274A8 RID: 160936 RVA: 0x0098D64B File Offset: 0x0098B84B
+		// Token: 0x17003534 RID: 13620
+		// (get) Token: 0x0601EB8A RID: 125834 RVA: 0x0091B560 File Offset: 0x00919760
+		// (set) Token: 0x0601EB8B RID: 125835 RVA: 0x0091B5A3 File Offset: 0x009197A3
 		public TArray<SWaterEffectGroup> MoveEffects
 		{
 			get
@@ -31,7 +31,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TArray<SWaterEffectGroup> result;
 				if ((result = this._MoveEffects) == null)
 				{
-					result = (this._MoveEffects = new TArray<SWaterEffectGroup>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._MoveEffects = new TArray<SWaterEffectGroup>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_MoveEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -41,9 +41,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x17005740 RID: 22336
-		// (get) Token: 0x060274A9 RID: 160937 RVA: 0x0098D65C File Offset: 0x0098B85C
-		// (set) Token: 0x060274AA RID: 160938 RVA: 0x0098D69F File Offset: 0x0098B89F
+		// Token: 0x17003535 RID: 13621
+		// (get) Token: 0x0601EB8C RID: 125836 RVA: 0x0091B5B4 File Offset: 0x009197B4
+		// (set) Token: 0x0601EB8D RID: 125837 RVA: 0x0091B5F7 File Offset: 0x009197F7
 		public TArray<SWaterEffectGroup> ShallowMoveEffects
 		{
 			get
@@ -52,7 +52,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TArray<SWaterEffectGroup> result;
 				if ((result = this._ShallowMoveEffects) == null)
 				{
-					result = (this._ShallowMoveEffects = new TArray<SWaterEffectGroup>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._ShallowMoveEffects = new TArray<SWaterEffectGroup>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_ShallowMoveEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -62,9 +62,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x17005741 RID: 22337
-		// (get) Token: 0x060274AB RID: 160939 RVA: 0x0098D6B0 File Offset: 0x0098B8B0
-		// (set) Token: 0x060274AC RID: 160940 RVA: 0x0098D6F3 File Offset: 0x0098B8F3
+		// Token: 0x17003536 RID: 13622
+		// (get) Token: 0x0601EB8E RID: 125838 RVA: 0x0091B608 File Offset: 0x00919808
+		// (set) Token: 0x0601EB8F RID: 125839 RVA: 0x0091B64B File Offset: 0x0091984B
 		public TArray<SWaterEffectItem> FallEffects
 		{
 			get
@@ -73,7 +73,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TArray<SWaterEffectItem> result;
 				if ((result = this._FallEffects) == null)
 				{
-					result = (this._FallEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._FallEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FallEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -83,9 +83,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x17005742 RID: 22338
-		// (get) Token: 0x060274AD RID: 160941 RVA: 0x0098D704 File Offset: 0x0098B904
-		// (set) Token: 0x060274AE RID: 160942 RVA: 0x0098D747 File Offset: 0x0098B947
+		// Token: 0x17003537 RID: 13623
+		// (get) Token: 0x0601EB90 RID: 125840 RVA: 0x0091B65C File Offset: 0x0091985C
+		// (set) Token: 0x0601EB91 RID: 125841 RVA: 0x0091B69F File Offset: 0x0091989F
 		public TArray<SWaterEffectItem> JumpEffects
 		{
 			get
@@ -94,7 +94,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TArray<SWaterEffectItem> result;
 				if ((result = this._JumpEffects) == null)
 				{
-					result = (this._JumpEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._JumpEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_JumpEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -104,9 +104,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x17005743 RID: 22339
-		// (get) Token: 0x060274AF RID: 160943 RVA: 0x0098D758 File Offset: 0x0098B958
-		// (set) Token: 0x060274B0 RID: 160944 RVA: 0x0098D79B File Offset: 0x0098B99B
+		// Token: 0x17003538 RID: 13624
+		// (get) Token: 0x0601EB92 RID: 125842 RVA: 0x0091B6B0 File Offset: 0x009198B0
+		// (set) Token: 0x0601EB93 RID: 125843 RVA: 0x0091B6F3 File Offset: 0x009198F3
 		public TArray<SWaterEffectItem> FlyEffects
 		{
 			get
@@ -115,7 +115,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				TArray<SWaterEffectItem> result;
 				if ((result = this._FlyEffects) == null)
 				{
-					result = (this._FlyEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._FlyEffects = new TArray<SWaterEffectItem>(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FlyEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -125,69 +125,69 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 			}
 		}
 
-		// Token: 0x17005744 RID: 22340
-		// (get) Token: 0x060274B1 RID: 160945 RVA: 0x0098D7A9 File Offset: 0x0098B9A9
-		// (set) Token: 0x060274B2 RID: 160946 RVA: 0x0098D7B9 File Offset: 0x0098B9B9
+		// Token: 0x17003539 RID: 13625
+		// (get) Token: 0x0601EB94 RID: 125844 RVA: 0x0091B701 File Offset: 0x00919901
+		// (set) Token: 0x0601EB95 RID: 125845 RVA: 0x0091B711 File Offset: 0x00919911
 		public unsafe float FallJumpDepthThreshold
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FallJumpDepthThreshold);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FallJumpDepthThreshold) = value;
 			}
 		}
 
-		// Token: 0x17005745 RID: 22341
-		// (get) Token: 0x060274B3 RID: 160947 RVA: 0x0098D7CA File Offset: 0x0098B9CA
-		// (set) Token: 0x060274B4 RID: 160948 RVA: 0x0098D7DA File Offset: 0x0098B9DA
+		// Token: 0x1700353A RID: 13626
+		// (get) Token: 0x0601EB96 RID: 125846 RVA: 0x0091B722 File Offset: 0x00919922
+		// (set) Token: 0x0601EB97 RID: 125847 RVA: 0x0091B732 File Offset: 0x00919932
 		public unsafe bool TriggerInGrass
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_TriggerInGrass) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_TriggerInGrass) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005746 RID: 22342
-		// (get) Token: 0x060274B5 RID: 160949 RVA: 0x0098D7EB File Offset: 0x0098B9EB
-		// (set) Token: 0x060274B6 RID: 160950 RVA: 0x0098D7FB File Offset: 0x0098B9FB
+		// Token: 0x1700353B RID: 13627
+		// (get) Token: 0x0601EB98 RID: 125848 RVA: 0x0091B743 File Offset: 0x00919943
+		// (set) Token: 0x0601EB99 RID: 125849 RVA: 0x0091B753 File Offset: 0x00919953
 		public unsafe float FlyEffectTriggerHeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FlyEffectTriggerHeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_FlyEffectTriggerHeight) = value;
 			}
 		}
 
-		// Token: 0x17005747 RID: 22343
-		// (get) Token: 0x060274B7 RID: 160951 RVA: 0x0098D80C File Offset: 0x0098BA0C
-		// (set) Token: 0x060274B8 RID: 160952 RVA: 0x0098D81C File Offset: 0x0098BA1C
+		// Token: 0x1700353C RID: 13628
+		// (get) Token: 0x0601EB9A RID: 125850 RVA: 0x0091B764 File Offset: 0x00919964
+		// (set) Token: 0x0601EB9B RID: 125851 RVA: 0x0091B774 File Offset: 0x00919974
 		public unsafe float ShallowMoveDepthThreshold
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_ShallowMoveDepthThreshold);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_ShallowMoveDepthThreshold) = value;
 			}
 		}
 
-		// Token: 0x17005748 RID: 22344
-		// (get) Token: 0x060274B9 RID: 160953 RVA: 0x0098D830 File Offset: 0x0098BA30
-		// (set) Token: 0x060274BA RID: 160954 RVA: 0x0098D873 File Offset: 0x0098BA73
+		// Token: 0x1700353D RID: 13629
+		// (get) Token: 0x0601EB9C RID: 125852 RVA: 0x0091B788 File Offset: 0x00919988
+		// (set) Token: 0x0601EB9D RID: 125853 RVA: 0x0091B7CB File Offset: 0x009199CB
 		public FGameplayTagContainer ShallowFallbackTag
 		{
 			get
@@ -196,75 +196,60 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 				FGameplayTagContainer result;
 				if ((result = this._ShallowFallbackTag) == null)
 				{
-					result = (this._ShallowFallbackTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._ShallowFallbackTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_ShallowFallbackTag, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_9, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SWaterEffectSubConfig.__PropertyOffset_ShallowFallbackTag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x060274BB RID: 160955 RVA: 0x0098D894 File Offset: 0x0098BA94
+		// Token: 0x0601EB9E RID: 125854 RVA: 0x0091B7EC File Offset: 0x009199EC
 		public SWaterEffectSubConfig()
 		{
 		}
 
-		// Token: 0x060274BC RID: 160956 RVA: 0x0098D89C File Offset: 0x0098BA9C
-		public SWaterEffectSubConfig(TArray<SWaterEffectGroup> MoveEffects, TArray<SWaterEffectGroup> ShallowMoveEffects, TArray<SWaterEffectItem> FallEffects, TArray<SWaterEffectItem> JumpEffects, TArray<SWaterEffectItem> FlyEffects, float FallJumpDepthThreshold, bool TriggerInGrass, float FlyEffectTriggerHeight, float ShallowMoveDepthThreshold, FGameplayTagContainer ShallowFallbackTag)
-		{
-			this.MoveEffects = MoveEffects;
-			this.ShallowMoveEffects = ShallowMoveEffects;
-			this.FallEffects = FallEffects;
-			this.JumpEffects = JumpEffects;
-			this.FlyEffects = FlyEffects;
-			this.FallJumpDepthThreshold = FallJumpDepthThreshold;
-			this.TriggerInGrass = TriggerInGrass;
-			this.FlyEffectTriggerHeight = FlyEffectTriggerHeight;
-			this.ShallowMoveDepthThreshold = ShallowMoveDepthThreshold;
-			this.ShallowFallbackTag = ShallowFallbackTag;
-		}
-
-		// Token: 0x060274BD RID: 160957 RVA: 0x0098D8FC File Offset: 0x0098BAFC
+		// Token: 0x0601EB9F RID: 125855 RVA: 0x0091B7F4 File Offset: 0x009199F4
 		protected override IntPtr GetUStructPtr()
 		{
 			return SWaterEffectSubConfig.StaticStruct();
 		}
 
-		// Token: 0x060274BE RID: 160958 RVA: 0x0098D908 File Offset: 0x0098BB08
+		// Token: 0x0601EBA0 RID: 125856 RVA: 0x0091B800 File Offset: 0x00919A00
 		[NullableContext(2)]
 		public SWaterEffectSubConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060274BF RID: 160959 RVA: 0x0098D912 File Offset: 0x0098BB12
+		// Token: 0x0601EBA1 RID: 125857 RVA: 0x0091B80A File Offset: 0x00919A0A
 		public SWaterEffectSubConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060274C0 RID: 160960 RVA: 0x0098D91D File Offset: 0x0098BB1D
+		// Token: 0x0601EBA2 RID: 125858 RVA: 0x0091B815 File Offset: 0x00919A15
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SWaterEffectSubConfig(Pointer, false, true);
 		}
 
-		// Token: 0x060274C1 RID: 160961 RVA: 0x0098D927 File Offset: 0x0098BB27
+		// Token: 0x0601EBA3 RID: 125859 RVA: 0x0091B81F File Offset: 0x00919A1F
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SWaterEffectSubConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013D33 RID: 81203
+		// Token: 0x040104DE RID: 66782
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/WaterInteraction/SWaterEffectSubConfig.SWaterEffectSubConfig";
 
-		// Token: 0x04013D34 RID: 81204
+		// Token: 0x040104DF RID: 66783
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013D35 RID: 81205
-		internal static int __PropertyOffset_0;
+		// Token: 0x040104E0 RID: 66784
+		internal static int __PropertyOffset_MoveEffects;
 
-		// Token: 0x04013D36 RID: 81206
+		// Token: 0x040104E1 RID: 66785
 		[Nullable(new byte[]
 		{
 			2,
@@ -272,10 +257,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 		})]
 		private TArray<SWaterEffectGroup> _MoveEffects;
 
-		// Token: 0x04013D37 RID: 81207
-		internal static int __PropertyOffset_1;
+		// Token: 0x040104E2 RID: 66786
+		internal static int __PropertyOffset_ShallowMoveEffects;
 
-		// Token: 0x04013D38 RID: 81208
+		// Token: 0x040104E3 RID: 66787
 		[Nullable(new byte[]
 		{
 			2,
@@ -283,10 +268,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 		})]
 		private TArray<SWaterEffectGroup> _ShallowMoveEffects;
 
-		// Token: 0x04013D39 RID: 81209
-		internal static int __PropertyOffset_2;
+		// Token: 0x040104E4 RID: 66788
+		internal static int __PropertyOffset_FallEffects;
 
-		// Token: 0x04013D3A RID: 81210
+		// Token: 0x040104E5 RID: 66789
 		[Nullable(new byte[]
 		{
 			2,
@@ -294,10 +279,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 		})]
 		private TArray<SWaterEffectItem> _FallEffects;
 
-		// Token: 0x04013D3B RID: 81211
-		internal static int __PropertyOffset_3;
+		// Token: 0x040104E6 RID: 66790
+		internal static int __PropertyOffset_JumpEffects;
 
-		// Token: 0x04013D3C RID: 81212
+		// Token: 0x040104E7 RID: 66791
 		[Nullable(new byte[]
 		{
 			2,
@@ -305,10 +290,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 		})]
 		private TArray<SWaterEffectItem> _JumpEffects;
 
-		// Token: 0x04013D3D RID: 81213
-		internal static int __PropertyOffset_4;
+		// Token: 0x040104E8 RID: 66792
+		internal static int __PropertyOffset_FlyEffects;
 
-		// Token: 0x04013D3E RID: 81214
+		// Token: 0x040104E9 RID: 66793
 		[Nullable(new byte[]
 		{
 			2,
@@ -316,22 +301,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.WaterInteraction
 		})]
 		private TArray<SWaterEffectItem> _FlyEffects;
 
-		// Token: 0x04013D3F RID: 81215
-		internal static int __PropertyOffset_5;
+		// Token: 0x040104EA RID: 66794
+		internal static int __PropertyOffset_FallJumpDepthThreshold;
 
-		// Token: 0x04013D40 RID: 81216
-		internal static int __PropertyOffset_6;
+		// Token: 0x040104EB RID: 66795
+		internal static int __PropertyOffset_TriggerInGrass;
 
-		// Token: 0x04013D41 RID: 81217
-		internal static int __PropertyOffset_7;
+		// Token: 0x040104EC RID: 66796
+		internal static int __PropertyOffset_FlyEffectTriggerHeight;
 
-		// Token: 0x04013D42 RID: 81218
-		internal static int __PropertyOffset_8;
+		// Token: 0x040104ED RID: 66797
+		internal static int __PropertyOffset_ShallowMoveDepthThreshold;
 
-		// Token: 0x04013D43 RID: 81219
-		internal static int __PropertyOffset_9;
+		// Token: 0x040104EE RID: 66798
+		internal static int __PropertyOffset_ShallowFallbackTag;
 
-		// Token: 0x04013D44 RID: 81220
+		// Token: 0x040104EF RID: 66799
 		[Nullable(2)]
 		private FGameplayTagContainer _ShallowFallbackTag;
 	}

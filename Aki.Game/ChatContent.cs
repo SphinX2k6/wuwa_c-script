@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200179F RID: 6047
+// Token: 0x02000C58 RID: 3160
 [NullableContext(2)]
 [Nullable(0)]
 public class ChatContent : UiPanelBase
 {
-	// Token: 0x0600B035 RID: 45109 RVA: 0x0027C5B4 File Offset: 0x0027A7B4
+	// Token: 0x0600841D RID: 33821 RVA: 0x00286B4C File Offset: 0x00284D4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -55,7 +55,7 @@ public class ChatContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B036 RID: 45110 RVA: 0x0027C794 File Offset: 0x0027A994
+	// Token: 0x0600841E RID: 33822 RVA: 0x00286D2C File Offset: 0x00284F2C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ChatContent.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class ChatContent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B037 RID: 45111 RVA: 0x0027C7D8 File Offset: 0x0027A9D8
+	// Token: 0x0600841F RID: 33823 RVA: 0x00286D70 File Offset: 0x00284F70
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -75,7 +75,7 @@ public class ChatContent : UiPanelBase
 		this.AddEvents();
 	}
 
-	// Token: 0x0600B038 RID: 45112 RVA: 0x0027C815 File Offset: 0x0027AA15
+	// Token: 0x06008420 RID: 33824 RVA: 0x00286DAD File Offset: 0x00284FAD
 	protected override void OnBeforeDestroy()
 	{
 		this.PlayerHeadItem = null;
@@ -87,19 +87,19 @@ public class ChatContent : UiPanelBase
 		this.RemoveEvents();
 	}
 
-	// Token: 0x0600B039 RID: 45113 RVA: 0x0027C836 File Offset: 0x0027AA36
+	// Token: 0x06008421 RID: 33825 RVA: 0x00286DCE File Offset: 0x00284FCE
 	private void AddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnChatPlayerInfoChanged, new Action<int>(this.OnChatPlayerInfoChanged));
 	}
 
-	// Token: 0x0600B03A RID: 45114 RVA: 0x0027C854 File Offset: 0x0027AA54
+	// Token: 0x06008422 RID: 33826 RVA: 0x00286DEC File Offset: 0x00284FEC
 	private void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChatPlayerInfoChanged, new Action<int>(this.OnChatPlayerInfoChanged));
 	}
 
-	// Token: 0x0600B03B RID: 45115 RVA: 0x0027C872 File Offset: 0x0027AA72
+	// Token: 0x06008423 RID: 33827 RVA: 0x00286E0A File Offset: 0x0028500A
 	private void OnChatPlayerInfoChanged(int playerId)
 	{
 		this.RefreshPlayerTexture();
@@ -107,7 +107,7 @@ public class ChatContent : UiPanelBase
 		this.PlayerStartAnimation();
 	}
 
-	// Token: 0x0600B03C RID: 45116 RVA: 0x0027C886 File Offset: 0x0027AA86
+	// Token: 0x06008424 RID: 33828 RVA: 0x00286E1E File Offset: 0x0028501E
 	[NullableContext(1)]
 	public void Refresh(ChatContentData data)
 	{
@@ -119,7 +119,7 @@ public class ChatContent : UiPanelBase
 		this.RefreshThirdPartyItem();
 	}
 
-	// Token: 0x0600B03D RID: 45117 RVA: 0x0027C8B0 File Offset: 0x0027AAB0
+	// Token: 0x06008425 RID: 33829 RVA: 0x00286E48 File Offset: 0x00285048
 	private void RefreshPlayerTexture()
 	{
 		PersonalModel instance = PersonalModel.Instance;
@@ -153,7 +153,7 @@ public class ChatContent : UiPanelBase
 		this.PlayerHeadItem.RefreshByPlayerId(num, true);
 	}
 
-	// Token: 0x0600B03E RID: 45118 RVA: 0x0027C980 File Offset: 0x0027AB80
+	// Token: 0x06008426 RID: 33830 RVA: 0x00286F18 File Offset: 0x00285118
 	private void RefreshContent()
 	{
 		UUIItem item = base.GetItem(5);
@@ -200,7 +200,7 @@ public class ChatContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B03F RID: 45119 RVA: 0x0027CB04 File Offset: 0x0027AD04
+	// Token: 0x06008427 RID: 33831 RVA: 0x0028709C File Offset: 0x0028529C
 	private void RefreshThirdPartyItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -300,7 +300,7 @@ public class ChatContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B040 RID: 45120 RVA: 0x0027CCBC File Offset: 0x0027AEBC
+	// Token: 0x06008428 RID: 33832 RVA: 0x00287254 File Offset: 0x00285454
 	private void RefreshPlayerNameAndTitle()
 	{
 		int num = (this.ChatContentData == null) ? 0 : this.ChatContentData.SenderPlayerId;
@@ -375,7 +375,7 @@ public class ChatContent : UiPanelBase
 		titleItem5.GetRootItem().SetUIActive(false);
 	}
 
-	// Token: 0x0600B041 RID: 45121 RVA: 0x0027CE68 File Offset: 0x0027B068
+	// Token: 0x06008429 RID: 33833 RVA: 0x00287400 File Offset: 0x00285600
 	private void RefreshTimeText()
 	{
 		UUIText text = base.GetText(2);
@@ -427,7 +427,7 @@ public class ChatContent : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600B042 RID: 45122 RVA: 0x0027D0CC File Offset: 0x0027B2CC
+	// Token: 0x0600842A RID: 33834 RVA: 0x00287664 File Offset: 0x00285864
 	private void PlayerStartAnimation()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -438,7 +438,7 @@ public class ChatContent : UiPanelBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600B043 RID: 45123 RVA: 0x0027D0F9 File Offset: 0x0027B2F9
+	// Token: 0x0600842B RID: 33835 RVA: 0x00287691 File Offset: 0x00285891
 	public UUIItem GetBtnItem()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -448,59 +448,59 @@ public class ChatContent : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x04005011 RID: 20497
+	// Token: 0x040050BB RID: 20667
 	private ChatContentData ChatContentData;
 
-	// Token: 0x04005012 RID: 20498
+	// Token: 0x040050BC RID: 20668
 	private PlayerHeadItem PlayerHeadItem;
 
-	// Token: 0x04005013 RID: 20499
+	// Token: 0x040050BD RID: 20669
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x04005014 RID: 20500
+	// Token: 0x040050BE RID: 20670
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02007DAC RID: 32172
+	// Token: 0x02006F32 RID: 28466
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04029254 RID: 168532
+		// Token: 0x0402457F RID: 148863
 		public const int PlayerHeadItem = 0;
 
-		// Token: 0x04029255 RID: 168533
+		// Token: 0x04024580 RID: 148864
 		public const int ChatText = 1;
 
-		// Token: 0x04029256 RID: 168534
+		// Token: 0x04024581 RID: 148865
 		public const int TimeText = 2;
 
-		// Token: 0x04029257 RID: 168535
+		// Token: 0x04024582 RID: 148866
 		public const int ExpressionItem = 3;
 
-		// Token: 0x04029258 RID: 168536
+		// Token: 0x04024583 RID: 148867
 		public const int ExpressionTexture = 4;
 
-		// Token: 0x04029259 RID: 168537
+		// Token: 0x04024584 RID: 148868
 		public const int TextContentItem = 5;
 
-		// Token: 0x0402925A RID: 168538
+		// Token: 0x04024585 RID: 148869
 		public const int PlayerNameText = 6;
 
-		// Token: 0x0402925B RID: 168539
+		// Token: 0x04024586 RID: 148870
 		public const int PlayerTitleItem = 7;
 
-		// Token: 0x0402925C RID: 168540
+		// Token: 0x04024587 RID: 148871
 		public const int ThirdPartyItem = 8;
 
-		// Token: 0x0402925D RID: 168541
+		// Token: 0x04024588 RID: 148872
 		public const int ThirdPartyTexture = 9;
 
-		// Token: 0x0402925E RID: 168542
+		// Token: 0x04024589 RID: 148873
 		public const int ThirdPartyText = 10;
 
-		// Token: 0x0402925F RID: 168543
+		// Token: 0x0402458A RID: 148874
 		public const int PcItem = 11;
 
-		// Token: 0x04029260 RID: 168544
+		// Token: 0x0402458B RID: 148875
 		public const int NavItem = 12;
 	}
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DEB RID: 11755
+// Token: 0x02002346 RID: 9030
 [NullableContext(1)]
 [Nullable(0)]
 public class KuroHitResultCache
 {
-	// Token: 0x06018AD0 RID: 101072 RVA: 0x00654534 File Offset: 0x00652734
+	// Token: 0x0601637D RID: 91005 RVA: 0x0067A66C File Offset: 0x0067886C
 	public void Append(UKuroHitResult ueObj)
 	{
 		int hitCount = ueObj.GetHitCount();
@@ -30,16 +30,16 @@ public class KuroHitResultCache
 		}
 	}
 
-	// Token: 0x0400B7FE RID: 47102
+	// Token: 0x0400BB84 RID: 48004
 	public int HitCount;
 
-	// Token: 0x0400B7FF RID: 47103
+	// Token: 0x0400BB85 RID: 48005
 	public List<AActor> Actors = new List<AActor>();
 
-	// Token: 0x0400B800 RID: 47104
+	// Token: 0x0400BB86 RID: 48006
 	public List<FName> BoneNameArray = new List<FName>();
 
-	// Token: 0x0400B801 RID: 47105
+	// Token: 0x0400BB87 RID: 48007
 	[Nullable(new byte[]
 	{
 		1,
@@ -48,16 +48,16 @@ public class KuroHitResultCache
 	})]
 	public List<TWeakObjectPtr<UPrimitiveComponent>> Components = new List<TWeakObjectPtr<UPrimitiveComponent>>();
 
-	// Token: 0x0400B802 RID: 47106
+	// Token: 0x0400BB88 RID: 48008
 	public List<float> ImpactPointX = new List<float>();
 
-	// Token: 0x0400B803 RID: 47107
+	// Token: 0x0400BB89 RID: 48009
 	public List<float> ImpactPointY = new List<float>();
 
-	// Token: 0x0400B804 RID: 47108
+	// Token: 0x0400BB8A RID: 48010
 	public List<float> ImpactPointZ = new List<float>();
 
-	// Token: 0x0400B805 RID: 47109
+	// Token: 0x0400BB8B RID: 48011
 	[StaticVariableRuleIgnore]
 	private static readonly Stat stat = Stat.Create("KuroHitResultCache", "", "");
 }

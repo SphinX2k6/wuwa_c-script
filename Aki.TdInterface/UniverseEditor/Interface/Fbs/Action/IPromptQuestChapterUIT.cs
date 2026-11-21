@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DC3 RID: 28099
+	// Token: 0x0200753E RID: 30014
 	public class IPromptQuestChapterUIT
 	{
-		// Token: 0x1700D189 RID: 53641
-		// (get) Token: 0x06031A31 RID: 203313 RVA: 0x006B993E File Offset: 0x006B7B3E
-		// (set) Token: 0x06031A32 RID: 203314 RVA: 0x006B9946 File Offset: 0x006B7B46
+		// Token: 0x1700DCD1 RID: 56529
+		// (get) Token: 0x06034A2D RID: 215597 RVA: 0x00715026 File Offset: 0x00713226
+		// (set) Token: 0x06034A2E RID: 215598 RVA: 0x0071502E File Offset: 0x0071322E
 		public EQuestChapterState ChapterState { get; set; }
 
-		// Token: 0x1700D18A RID: 53642
-		// (get) Token: 0x06031A33 RID: 203315 RVA: 0x006B994F File Offset: 0x006B7B4F
-		// (set) Token: 0x06031A34 RID: 203316 RVA: 0x006B9957 File Offset: 0x006B7B57
+		// Token: 0x1700DCD2 RID: 56530
+		// (get) Token: 0x06034A2F RID: 215599 RVA: 0x00715037 File Offset: 0x00713237
+		// (set) Token: 0x06034A30 RID: 215600 RVA: 0x0071503F File Offset: 0x0071323F
 		public int QuestId { get; set; }
 
-		// Token: 0x1700D18B RID: 53643
-		// (get) Token: 0x06031A35 RID: 203317 RVA: 0x006B9960 File Offset: 0x006B7B60
-		// (set) Token: 0x06031A36 RID: 203318 RVA: 0x006B9968 File Offset: 0x006B7B68
+		// Token: 0x1700DCD3 RID: 56531
+		// (get) Token: 0x06034A31 RID: 215601 RVA: 0x00715048 File Offset: 0x00713248
+		// (set) Token: 0x06034A32 RID: 215602 RVA: 0x00715050 File Offset: 0x00713250
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031A37 RID: 203319 RVA: 0x006B9971 File Offset: 0x006B7B71
+		// Token: 0x06034A33 RID: 215603 RVA: 0x00715059 File Offset: 0x00713259
 		public IPromptQuestChapterUIT()
 		{
 			this.ChapterState = EQuestChapterState.Start;

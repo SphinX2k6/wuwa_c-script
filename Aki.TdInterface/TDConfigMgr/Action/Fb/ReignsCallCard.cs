@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A52 RID: 10834
+	// Token: 0x02002D3F RID: 11583
 	public class ReignsCallCard : ActionParams
 	{
-		// Token: 0x0600EE69 RID: 61033 RVA: 0x0022B4DB File Offset: 0x002296DB
-		[NullableContext(1)]
+		// Token: 0x0600FD01 RID: 64769 RVA: 0x00248E8F File Offset: 0x0024708F
 		public static ReignsCallCard Create(IReignsCallCard? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B87 RID: 19335
-		// (get) Token: 0x0600EE6A RID: 61034 RVA: 0x0022B4FA File Offset: 0x002296FA
+		// Token: 0x17004F31 RID: 20273
+		// (get) Token: 0x0600FD02 RID: 64770 RVA: 0x00248EAE File Offset: 0x002470AE
 		public virtual int CardId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832E RID: 33582
+		// Token: 0x04008A21 RID: 35361
 		private IReignsCallCard Instance;
 	}
 }

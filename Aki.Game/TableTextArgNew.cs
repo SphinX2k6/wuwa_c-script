@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002CD7 RID: 11479
+// Token: 0x02002230 RID: 8752
 [NullableContext(2)]
 [Nullable(0)]
 public class TableTextArgNew
 {
-	// Token: 0x0601814A RID: 98634 RVA: 0x0061F46E File Offset: 0x0061D66E
+	// Token: 0x060159C7 RID: 88519 RVA: 0x00645026 File Offset: 0x00643226
 	public TableTextArgNew(string textKey, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -16,7 +16,7 @@ public class TableTextArgNew
 	{
 	}
 
-	// Token: 0x0400B31A RID: 45850
+	// Token: 0x0400B686 RID: 46726
 	[Nullable(new byte[]
 	{
 		1,
@@ -24,6 +24,6 @@ public class TableTextArgNew
 	})]
 	public IReadOnlyList<object> Params = args;
 
-	// Token: 0x0400B31B RID: 45851
+	// Token: 0x0400B687 RID: 46727
 	public string TextKey = textKey;
 }

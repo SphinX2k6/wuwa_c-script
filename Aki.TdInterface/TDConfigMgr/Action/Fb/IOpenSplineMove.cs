@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028E3 RID: 10467
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BBB RID: 11195
 	public class IOpenSplineMove : ISplineMoveConfig
 	{
-		// Token: 0x0600E893 RID: 59539 RVA: 0x0022221B File Offset: 0x0022041B
+		// Token: 0x0600F6D4 RID: 63188 RVA: 0x0023F3D3 File Offset: 0x0023D5D3
 		public static IOpenSplineMove Create(IOpenSplineMove? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700488F RID: 18575
-		// (get) Token: 0x0600E894 RID: 59540 RVA: 0x0022223A File Offset: 0x0022043A
+		// Token: 0x17004C0C RID: 19468
+		// (get) Token: 0x0600F6D5 RID: 63189 RVA: 0x0023F3F2 File Offset: 0x0023D5F2
 		public override ESplineMoveConfigType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004890 RID: 18576
-		// (get) Token: 0x0600E895 RID: 59541 RVA: 0x00222247 File Offset: 0x00220447
+		// Token: 0x17004C0D RID: 19469
+		// (get) Token: 0x0600F6D6 RID: 63190 RVA: 0x0023F3FF File Offset: 0x0023D5FF
 		public override ITargetEntityType Target
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004891 RID: 18577
-		// (get) Token: 0x0600E896 RID: 59542 RVA: 0x00222276 File Offset: 0x00220476
+		// Token: 0x17004C0E RID: 19470
+		// (get) Token: 0x0600F6D7 RID: 63191 RVA: 0x0023F42E File Offset: 0x0023D62E
 		public override int SplineEntityId
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004892 RID: 18578
-		// (get) Token: 0x0600E897 RID: 59543 RVA: 0x00222283 File Offset: 0x00220483
+		// Token: 0x17004C0F RID: 19471
+		// (get) Token: 0x0600F6D8 RID: 63192 RVA: 0x0023F43B File Offset: 0x0023D63B
 		public virtual ISplineMovePattern Pattern
 		{
 			get
@@ -74,19 +71,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008069 RID: 32873
+		// Token: 0x0400872D RID: 34605
 		private IOpenSplineMove Instance;
 
-		// Token: 0x0400806A RID: 32874
+		// Token: 0x0400872E RID: 34606
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x0400806B RID: 32875
+		// Token: 0x0400872F RID: 34607
 		private bool _TargetInited;
 
-		// Token: 0x0400806C RID: 32876
+		// Token: 0x04008730 RID: 34608
 		private ISplineMovePattern _PatternCache;
 
-		// Token: 0x0400806D RID: 32877
+		// Token: 0x04008731 RID: 34609
 		private bool _PatternInited;
 	}
 }

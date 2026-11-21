@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x0200484D RID: 18509
+	// Token: 0x0200377E RID: 14206
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HandleCursorButton : UiPanelBase
 	{
-		// Token: 0x060306FE RID: 198398 RVA: 0x00B3F0E0 File Offset: 0x00B3D2E0
+		// Token: 0x06024ECD RID: 151245 RVA: 0x00A6F324 File Offset: 0x00A6D524
 		[NullableContext(1)]
 		public UniTask Initialize(UUIItem rootItem, Action onClickCall)
 		{
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060306FF RID: 198399 RVA: 0x00B3F134 File Offset: 0x00B3D334
+		// Token: 0x06024ECE RID: 151246 RVA: 0x00A6F378 File Offset: 0x00A6D578
 		protected override void OnStart()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.Button.OnClickCallBack.Bind(this.ClickCall);
 		}
 
-		// Token: 0x06030700 RID: 198400 RVA: 0x00B3F189 File Offset: 0x00B3D389
+		// Token: 0x06024ECF RID: 151247 RVA: 0x00A6F3CD File Offset: 0x00A6D5CD
 		protected override void OnBeforeDestroy()
 		{
 			this.Button.OnClickCallBack.Unbind();
 		}
 
-		// Token: 0x06030701 RID: 198401 RVA: 0x00B3F19B File Offset: 0x00B3D39B
+		// Token: 0x06024ED0 RID: 151248 RVA: 0x00A6F3DF File Offset: 0x00A6D5DF
 		public void SetSelected(bool isSet)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.Button.SetSelectionState(EUISelectableSelectionState.Normal);
 		}
 
-		// Token: 0x06030702 RID: 198402 RVA: 0x00B3F1D7 File Offset: 0x00B3D3D7
+		// Token: 0x06024ED1 RID: 151249 RVA: 0x00A6F41B File Offset: 0x00A6D61B
 		public void SetCursorActive(bool value)
 		{
 			if (Info.Instance.IsInGamepad() && value)
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.SetActive(false);
 		}
 
-		// Token: 0x0401A076 RID: 106614
+		// Token: 0x0401472A RID: 83754
 		private bool IsSet;
 
-		// Token: 0x0401A077 RID: 106615
+		// Token: 0x0401472B RID: 83755
 		private UUIButtonComponent Button;
 
-		// Token: 0x0401A078 RID: 106616
+		// Token: 0x0401472C RID: 83756
 		private Action ClickCall;
 	}
 }

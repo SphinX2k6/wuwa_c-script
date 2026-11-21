@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F47 RID: 8007
+// Token: 0x02001409 RID: 5129
 [NullableContext(2)]
 [Nullable(0)]
 public class FollowShootAutoAimUnit : HudUnitBase
 {
-	// Token: 0x0600F77F RID: 63359 RVA: 0x003BDCDC File Offset: 0x003BBEDC
+	// Token: 0x0600CB9E RID: 52126 RVA: 0x003C97C8 File Offset: 0x003C79C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -35,7 +35,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F780 RID: 63360 RVA: 0x003BDDEA File Offset: 0x003BBFEA
+	// Token: 0x0600CB9F RID: 52127 RVA: 0x003C98D6 File Offset: 0x003C7AD6
 	protected override void OnStart()
 	{
 		this.TargetItem = base.GetItem(0);
@@ -46,14 +46,14 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		this.IsActive = true;
 	}
 
-	// Token: 0x0600F781 RID: 63361 RVA: 0x003BDE26 File Offset: 0x003BC026
+	// Token: 0x0600CBA0 RID: 52128 RVA: 0x003C9912 File Offset: 0x003C7B12
 	protected override void OnAfterShow()
 	{
 		base.StopTweenAnim(2);
 		base.PlayTweenAnim(1);
 	}
 
-	// Token: 0x0600F782 RID: 63362 RVA: 0x003BDE38 File Offset: 0x003BC038
+	// Token: 0x0600CBA1 RID: 52129 RVA: 0x003C9924 File Offset: 0x003C7B24
 	protected override UniTask OnBeforeHideAsync()
 	{
 		FollowShootAutoAimUnit.<OnBeforeHideAsync>d__11 <OnBeforeHideAsync>d__;
@@ -64,7 +64,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F783 RID: 63363 RVA: 0x003BDE7B File Offset: 0x003BC07B
+	// Token: 0x0600CBA2 RID: 52130 RVA: 0x003C9967 File Offset: 0x003C7B67
 	protected override void OnBeforeDestroy()
 	{
 		this.TargetItem = null;
@@ -72,7 +72,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F784 RID: 63364 RVA: 0x003BDE90 File Offset: 0x003BC090
+	// Token: 0x0600CBA3 RID: 52131 RVA: 0x003C997C File Offset: 0x003C7B7C
 	public void SetTargetItemOffset(float x, float y)
 	{
 		if (this.TargetItem == null)
@@ -83,7 +83,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		this.TargetItem.SetAnchorOffsetY(y);
 	}
 
-	// Token: 0x0600F785 RID: 63365 RVA: 0x003BDEB4 File Offset: 0x003BC0B4
+	// Token: 0x0600CBA4 RID: 52132 RVA: 0x003C99A0 File Offset: 0x003C7BA0
 	public void SetTargetAimVisible(bool isVisible, bool isTargetChanged)
 	{
 		if (this.TargetItem == null)
@@ -107,7 +107,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		this.PlayCloseAimAnim();
 	}
 
-	// Token: 0x0600F786 RID: 63366 RVA: 0x003BDF0F File Offset: 0x003BC10F
+	// Token: 0x0600CBA5 RID: 52133 RVA: 0x003C99FB File Offset: 0x003C7BFB
 	public void SetRingAimVisible(bool isVisible)
 	{
 		if (this.RingAimItem == null)
@@ -117,7 +117,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		this.RingAimItem.SetUIActive(isVisible);
 	}
 
-	// Token: 0x0600F787 RID: 63367 RVA: 0x003BDF26 File Offset: 0x003BC126
+	// Token: 0x0600CBA6 RID: 52134 RVA: 0x003C9A12 File Offset: 0x003C7C12
 	private void DestroyCloseAnimTimer()
 	{
 		if (this.CloseAnimTimer != null)
@@ -132,7 +132,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F788 RID: 63368 RVA: 0x003BDF62 File Offset: 0x003BC162
+	// Token: 0x0600CBA7 RID: 52135 RVA: 0x003C9A4E File Offset: 0x003C7C4E
 	private void InitAllTweenAnim()
 	{
 		base.InitTweenAnim(1);
@@ -142,7 +142,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.InitTweenAnim(5);
 	}
 
-	// Token: 0x0600F789 RID: 63369 RVA: 0x003BDF87 File Offset: 0x003BC187
+	// Token: 0x0600CBA8 RID: 52136 RVA: 0x003C9A73 File Offset: 0x003C7C73
 	public void PlayStartAimAnim()
 	{
 		if (!this.IsActive)
@@ -152,7 +152,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.PlayTweenAnim(3);
 	}
 
-	// Token: 0x0600F78A RID: 63370 RVA: 0x003BDF99 File Offset: 0x003BC199
+	// Token: 0x0600CBA9 RID: 52137 RVA: 0x003C9A85 File Offset: 0x003C7C85
 	public void PlayCloseAimAnim()
 	{
 		if (!this.IsActive)
@@ -162,7 +162,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.PlayTweenAnim(4);
 	}
 
-	// Token: 0x0600F78B RID: 63371 RVA: 0x003BDFAB File Offset: 0x003BC1AB
+	// Token: 0x0600CBAA RID: 52138 RVA: 0x003C9A97 File Offset: 0x003C7C97
 	public void PlayLoopAimAnim()
 	{
 		if (!this.IsActive)
@@ -172,7 +172,7 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.PlayTweenAnim(5);
 	}
 
-	// Token: 0x0600F78C RID: 63372 RVA: 0x003BDFBD File Offset: 0x003BC1BD
+	// Token: 0x0600CBAB RID: 52139 RVA: 0x003C9AA9 File Offset: 0x003C7CA9
 	public void StopLoopAimAnim()
 	{
 		if (!this.IsActive)
@@ -182,44 +182,44 @@ public class FollowShootAutoAimUnit : HudUnitBase
 		base.StopTweenAnim(5);
 	}
 
-	// Token: 0x040072C4 RID: 29380
+	// Token: 0x040073A5 RID: 29605
 	private const int CLOSE_ANIM_TIME = 200;
 
-	// Token: 0x040072C5 RID: 29381
+	// Token: 0x040073A6 RID: 29606
 	private UUIItem TargetItem;
 
-	// Token: 0x040072C6 RID: 29382
+	// Token: 0x040073A7 RID: 29607
 	private TimerHandle CloseAnimTimer;
 
-	// Token: 0x040072C7 RID: 29383
+	// Token: 0x040073A8 RID: 29608
 	private CustomPromise CloseAnimPromise;
 
-	// Token: 0x040072C8 RID: 29384
+	// Token: 0x040073A9 RID: 29609
 	private bool IsActive;
 
-	// Token: 0x040072C9 RID: 29385
+	// Token: 0x040073AA RID: 29610
 	private bool IsTargetItemActive;
 
-	// Token: 0x040072CA RID: 29386
+	// Token: 0x040073AB RID: 29611
 	private UUIItem RingAimItem;
 
-	// Token: 0x02008536 RID: 34102
+	// Token: 0x020076BB RID: 30395
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B5EB RID: 177643
+		// Token: 0x0402690F RID: 157967
 		TargetItem,
-		// Token: 0x0402B5EC RID: 177644
+		// Token: 0x04026910 RID: 157968
 		AnimStart,
-		// Token: 0x0402B5ED RID: 177645
+		// Token: 0x04026911 RID: 157969
 		AnimClose,
-		// Token: 0x0402B5EE RID: 177646
+		// Token: 0x04026912 RID: 157970
 		AnimStartAim,
-		// Token: 0x0402B5EF RID: 177647
+		// Token: 0x04026913 RID: 157971
 		AnimCloseAim,
-		// Token: 0x0402B5F0 RID: 177648
+		// Token: 0x04026914 RID: 157972
 		AnimLoopAim,
-		// Token: 0x0402B5F1 RID: 177649
+		// Token: 0x04026915 RID: 157973
 		RingAim
 	}
 }

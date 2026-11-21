@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019FC RID: 6652
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B8F RID: 7055
 	public class IEnterMovieCameraType
 	{
-		// Token: 0x06008E85 RID: 36485 RVA: 0x0014D51C File Offset: 0x0014B71C
+		// Token: 0x060095E7 RID: 38375 RVA: 0x0015D38C File Offset: 0x0015B58C
 		private IEnterMovieCameraType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E86 RID: 36486 RVA: 0x0014D554 File Offset: 0x0014B754
+		// Token: 0x060095E8 RID: 38376 RVA: 0x0015D3C4 File Offset: 0x0015B5C4
 		public static IEnterMovieCameraType Create([Nullable(2)] IEnterMovieCameraType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E87 RID: 36487 RVA: 0x0014D567 File Offset: 0x0014B767
+		// Token: 0x060095E9 RID: 38377 RVA: 0x0015D3D7 File Offset: 0x0015B5D7
 		public static IEnterMovieCameraType CreateFromSetValue([Nullable(2)] IEnterMovieCameraType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E88 RID: 36488 RVA: 0x0014D57A File Offset: 0x0014B77A
+		// Token: 0x060095EA RID: 38378 RVA: 0x0015D3EA File Offset: 0x0015B5EA
 		public IEnterMovieCameraType_SetValue ToSetValue()
 		{
 			return new IEnterMovieCameraType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D9D RID: 11677
-		// (get) Token: 0x06008E89 RID: 36489 RVA: 0x0014D58D File Offset: 0x0014B78D
-		// (set) Token: 0x06008E8A RID: 36490 RVA: 0x0014D5B8 File Offset: 0x0014B7B8
+		// Token: 0x17002FA9 RID: 12201
+		// (get) Token: 0x060095EB RID: 38379 RVA: 0x0015D3FD File Offset: 0x0015B5FD
+		// (set) Token: 0x060095EC RID: 38380 RVA: 0x0015D428 File Offset: 0x0015B628
 		public virtual EMovieCameraType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005854 RID: 22612
+		// Token: 0x04005CB6 RID: 23734
 		[Nullable(2)]
 		protected IEnterMovieCameraType FbInstance;
 
-		// Token: 0x04005855 RID: 22613
+		// Token: 0x04005CB7 RID: 23735
 		[Nullable(2)]
 		protected IEnterMovieCameraType_SetValue PocoInterface;
 	}

@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006922 RID: 26914
+	// Token: 0x02005872 RID: 22642
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AnniversarySubActivityWuWuPack : AnniversarySubActivityDataBase
 	{
-		// Token: 0x060431AB RID: 274859 RVA: 0x0105A643 File Offset: 0x01058843
+		// Token: 0x06037D03 RID: 228611 RVA: 0x00F9BC6F File Offset: 0x00F99E6F
 		public AnniversarySubActivityWuWuPack(int id) : base(id)
 		{
 		}
 
-		// Token: 0x170097ED RID: 38893
-		// (get) Token: 0x060431AC RID: 274860 RVA: 0x0105A64C File Offset: 0x0105884C
+		// Token: 0x17006B2D RID: 27437
+		// (get) Token: 0x06037D04 RID: 228612 RVA: 0x00F9BC78 File Offset: 0x00F99E78
 		public WuWuLogisticsActivityData ActivityData
 		{
 			get
@@ -30,12 +30,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431AD RID: 274861 RVA: 0x0105A66D File Offset: 0x0105886D
+		// Token: 0x06037D05 RID: 228613 RVA: 0x00F9BC99 File Offset: 0x00F99E99
 		public void ClickOpenView()
 		{
 		}
 
-		// Token: 0x060431AE RID: 274862 RVA: 0x0105A670 File Offset: 0x01058870
+		// Token: 0x06037D06 RID: 228614 RVA: 0x00F9BC9C File Offset: 0x00F99E9C
 		[NullableContext(0)]
 		public override ValueTuple<int, int> GetCurrentProgress()
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return new ValueTuple<int, int>(num2, num);
 		}
 
-		// Token: 0x04022EF3 RID: 143091
+		// Token: 0x0401D74F RID: 120655
 		private WuWuLogisticsActivityData ActivityDataCache;
 	}
 }

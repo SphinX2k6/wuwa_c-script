@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x020014EE RID: 5358
+// Token: 0x020009A6 RID: 2470
 [NullableContext(1)]
 [Nullable(0)]
 public class ScratchTicketRoundData
 {
-	// Token: 0x06009891 RID: 39057 RVA: 0x0020F2AC File Offset: 0x0020D4AC
+	// Token: 0x06006C6B RID: 27755 RVA: 0x00218FB4 File Offset: 0x002171B4
 	public void Init(ScratchCardRoundInfo roundInfo)
 	{
 		this.Id = roundInfo.RoundId;
@@ -25,11 +24,11 @@ public class ScratchTicketRoundData
 		this.UnlockTime = roundInfo.UnlockTime;
 		this.InitCellDataList();
 		this.InitRewardSortMap();
-		this.UpdateCellDataReward(roundInfo.RewardIds.ToDictionary<int, ScratchCardRewardData>());
-		this.UpdateRemainReward(roundInfo.LeftRewardItem.ToDictionary<int, int>());
+		this.UpdateCellDataReward(roundInfo.RewardIds);
+		this.UpdateRemainReward(roundInfo.LeftRewardItem);
 	}
 
-	// Token: 0x06009892 RID: 39058 RVA: 0x0020F350 File Offset: 0x0020D550
+	// Token: 0x06006C6C RID: 27756 RVA: 0x00219050 File Offset: 0x00217250
 	private void InitCellDataList()
 	{
 		this.CellDataList.Clear();
@@ -40,7 +39,7 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x06009893 RID: 39059 RVA: 0x0020F38C File Offset: 0x0020D58C
+	// Token: 0x06006C6D RID: 27757 RVA: 0x0021908C File Offset: 0x0021728C
 	private void InitRewardSortMap()
 	{
 		this.RewardSortMap.Clear();
@@ -51,8 +50,13 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x06009894 RID: 39060 RVA: 0x0020F3E8 File Offset: 0x0020D5E8
-	public void UpdateCellDataReward(Dictionary<int, ScratchCardRewardData> rewardMap)
+	// Token: 0x06006C6E RID: 27758 RVA: 0x002190E8 File Offset: 0x002172E8
+	public void UpdateCellDataReward([Nullable(new byte[]
+	{
+		1,
+		0,
+		1
+	})] IEnumerable<KeyValuePair<int, ScratchCardRewardData>> rewardMap)
 	{
 		foreach (KeyValuePair<int, ScratchCardRewardData> keyValuePair in rewardMap)
 		{
@@ -65,8 +69,12 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x06009895 RID: 39061 RVA: 0x0020F470 File Offset: 0x0020D670
-	public void UpdateRemainReward(Dictionary<int, int> rewardList)
+	// Token: 0x06006C6F RID: 27759 RVA: 0x0021916C File Offset: 0x0021736C
+	public void UpdateRemainReward([Nullable(new byte[]
+	{
+		1,
+		0
+	})] IEnumerable<KeyValuePair<int, int>> rewardList)
 	{
 		this.RemainRewardList.Clear();
 		foreach (KeyValuePair<int, int> keyValuePair in rewardList)
@@ -86,7 +94,7 @@ public class ScratchTicketRoundData
 		});
 	}
 
-	// Token: 0x06009896 RID: 39062 RVA: 0x0020F508 File Offset: 0x0020D708
+	// Token: 0x06006C70 RID: 27760 RVA: 0x002191FC File Offset: 0x002173FC
 	public void UpdateRoundState(EScratchTicketRoundState preState)
 	{
 		if (TimeUtil.Instance.GetServerTimeStamp() <= (double)this.UnlockTime || preState != EScratchTicketRoundState.Finish)
@@ -102,13 +110,13 @@ public class ScratchTicketRoundData
 		this.RoundState = EScratchTicketRoundState.InProgress;
 	}
 
-	// Token: 0x06009897 RID: 39063 RVA: 0x0020F572 File Offset: 0x0020D772
+	// Token: 0x06006C71 RID: 27761 RVA: 0x00219266 File Offset: 0x00217466
 	public long GetUnlockTime()
 	{
 		return this.UnlockTime;
 	}
 
-	// Token: 0x06009898 RID: 39064 RVA: 0x0020F57C File Offset: 0x0020D77C
+	// Token: 0x06006C72 RID: 27762 RVA: 0x00219270 File Offset: 0x00217470
 	public EScratchTicketRoundState GetPreRoundState()
 	{
 		ScratchTicketRoundData scratchRoundData = ActivityScratchTicketModel.Instance.GetScratchRoundData(this.Config.Value.PreRoundId);
@@ -119,26 +127,30 @@ public class ScratchTicketRoundData
 		return scratchRoundData.GetRoundState();
 	}
 
-	// Token: 0x06009899 RID: 39065 RVA: 0x0020F5B2 File Offset: 0x0020D7B2
+	// Token: 0x06006C73 RID: 27763 RVA: 0x002192A6 File Offset: 0x002174A6
 	public EScratchTicketRoundState GetRoundState()
 	{
 		return this.RoundState;
 	}
 
-	// Token: 0x0600989A RID: 39066 RVA: 0x0020F5BA File Offset: 0x0020D7BA
+	// Token: 0x06006C74 RID: 27764 RVA: 0x002192AE File Offset: 0x002174AE
 	public List<ScratchTicketCellData> GetCellDataList()
 	{
 		return this.CellDataList;
 	}
 
-	// Token: 0x0600989B RID: 39067 RVA: 0x0020F5C2 File Offset: 0x0020D7C2
+	// Token: 0x06006C75 RID: 27765 RVA: 0x002192B6 File Offset: 0x002174B6
 	public List<TItem> GetRemainRewardList()
 	{
 		return this.RemainRewardList;
 	}
 
-	// Token: 0x0600989C RID: 39068 RVA: 0x0020F5CC File Offset: 0x0020D7CC
-	public List<RewardItemData> GetRewardDataList(Dictionary<int, int> itemMap)
+	// Token: 0x06006C76 RID: 27766 RVA: 0x002192C0 File Offset: 0x002174C0
+	public List<RewardItemData> GetRewardDataList([Nullable(new byte[]
+	{
+		1,
+		0
+	})] IEnumerable<KeyValuePair<int, int>> itemMap)
 	{
 		List<RewardItemData> list = new List<RewardItemData>();
 		foreach (KeyValuePair<int, int> keyValuePair in itemMap)
@@ -159,7 +171,7 @@ public class ScratchTicketRoundData
 		return list;
 	}
 
-	// Token: 0x0600989D RID: 39069 RVA: 0x0020F658 File Offset: 0x0020D858
+	// Token: 0x06006C77 RID: 27767 RVA: 0x00219344 File Offset: 0x00217544
 	public List<ScratchTicketRoundResult> GetRewardResultList(int index, EScratchTicketRewardType rewardType)
 	{
 		if (!this.CheckIndexValid(index, true))
@@ -187,7 +199,7 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x0600989E RID: 39070 RVA: 0x0020F6E0 File Offset: 0x0020D8E0
+	// Token: 0x06006C78 RID: 27768 RVA: 0x002193CC File Offset: 0x002175CC
 	private List<ScratchTicketRoundResult> GetRewardCenterResult(int index, float delayInterval, string sequenceName)
 	{
 		List<ScratchTicketRoundResult> list = new List<ScratchTicketRoundResult>();
@@ -204,7 +216,7 @@ public class ScratchTicketRoundData
 		return list;
 	}
 
-	// Token: 0x0600989F RID: 39071 RVA: 0x0020F728 File Offset: 0x0020D928
+	// Token: 0x06006C79 RID: 27769 RVA: 0x00219414 File Offset: 0x00217614
 	private List<ScratchTicketRoundResult> GetRewardCrossResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 700f, "HamsterB");
@@ -214,7 +226,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098A0 RID: 39072 RVA: 0x0020F76C File Offset: 0x0020D96C
+	// Token: 0x06006C7A RID: 27770 RVA: 0x00219458 File Offset: 0x00217658
 	private void PushRewardCrossRoundResult(List<ScratchTicketRoundResult> result, int index, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -231,7 +243,7 @@ public class ScratchTicketRoundData
 		result.Add(roundResultData);
 	}
 
-	// Token: 0x060098A1 RID: 39073 RVA: 0x0020F7D0 File Offset: 0x0020D9D0
+	// Token: 0x06006C7B RID: 27771 RVA: 0x002194BC File Offset: 0x002176BC
 	private List<ScratchTicketRoundResult> GetRewardNineGridCellResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 700f, "HamsterB");
@@ -241,7 +253,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098A2 RID: 39074 RVA: 0x0020F814 File Offset: 0x0020DA14
+	// Token: 0x06006C7C RID: 27772 RVA: 0x00219500 File Offset: 0x00217700
 	private void PushRewardNineGridCellRoundResult(List<ScratchTicketRoundResult> result, int index, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -262,7 +274,7 @@ public class ScratchTicketRoundData
 		result.Add(roundResultData);
 	}
 
-	// Token: 0x060098A3 RID: 39075 RVA: 0x0020F8A0 File Offset: 0x0020DAA0
+	// Token: 0x06006C7D RID: 27773 RVA: 0x0021958C File Offset: 0x0021778C
 	private List<ScratchTicketRoundResult> GetRewardRowResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 700f, "HamsterB");
@@ -272,7 +284,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098A4 RID: 39076 RVA: 0x0020F8E4 File Offset: 0x0020DAE4
+	// Token: 0x06006C7E RID: 27774 RVA: 0x002195D0 File Offset: 0x002177D0
 	private void PushRewardRowRoundResult(List<ScratchTicketRoundResult> result, int index, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -281,7 +293,7 @@ public class ScratchTicketRoundData
 		this.PushRewardResultAlongDirection(result, list, checkLock);
 	}
 
-	// Token: 0x060098A5 RID: 39077 RVA: 0x0020F914 File Offset: 0x0020DB14
+	// Token: 0x06006C7F RID: 27775 RVA: 0x00219600 File Offset: 0x00217800
 	private List<ScratchTicketRoundResult> GetRewardColumnResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 700f, "HamsterB");
@@ -291,7 +303,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098A6 RID: 39078 RVA: 0x0020F958 File Offset: 0x0020DB58
+	// Token: 0x06006C80 RID: 27776 RVA: 0x00219644 File Offset: 0x00217844
 	private void PushRewardColumnRoundResult(List<ScratchTicketRoundResult> result, int index, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -300,7 +312,7 @@ public class ScratchTicketRoundData
 		this.PushRewardResultAlongDirection(result, list, checkLock);
 	}
 
-	// Token: 0x060098A7 RID: 39079 RVA: 0x0020F988 File Offset: 0x0020DB88
+	// Token: 0x06006C81 RID: 27777 RVA: 0x00219674 File Offset: 0x00217874
 	private List<ScratchTicketRoundResult> GetRewardRowAndColumnResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 700f, "HamsterB");
@@ -310,7 +322,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098A8 RID: 39080 RVA: 0x0020F9CC File Offset: 0x0020DBCC
+	// Token: 0x06006C82 RID: 27778 RVA: 0x002196B8 File Offset: 0x002178B8
 	private void PushRewardRowAndColumnRoundResult(List<ScratchTicketRoundResult> result, int index, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -321,7 +333,7 @@ public class ScratchTicketRoundData
 		this.PushRewardResultAlongDirection(result, list, checkLock);
 	}
 
-	// Token: 0x060098A9 RID: 39081 RVA: 0x0020FA10 File Offset: 0x0020DC10
+	// Token: 0x06006C83 RID: 27779 RVA: 0x002196FC File Offset: 0x002178FC
 	private List<ScratchTicketRoundResult> GetRemainingRewardResult(int index)
 	{
 		List<ScratchTicketRoundResult> rewardCenterResult = this.GetRewardCenterResult(index, 1000f, "HamsterC");
@@ -331,7 +343,7 @@ public class ScratchTicketRoundData
 		return rewardCenterResult;
 	}
 
-	// Token: 0x060098AA RID: 39082 RVA: 0x0020FA54 File Offset: 0x0020DC54
+	// Token: 0x06006C84 RID: 27780 RVA: 0x00219740 File Offset: 0x00217940
 	private void PushRewardRemainingRoundResult(List<ScratchTicketRoundResult> result, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -351,7 +363,7 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x060098AB RID: 39083 RVA: 0x0020FAF0 File Offset: 0x0020DCF0
+	// Token: 0x06006C85 RID: 27781 RVA: 0x002197DC File Offset: 0x002179DC
 	private void PushRewardResultAlongDirection(List<ScratchTicketRoundResult> result, List<ScratchTicketRewardResult> rewardResultList, bool checkLock)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>(rewardResultList);
@@ -369,7 +381,7 @@ public class ScratchTicketRoundData
 		}
 	}
 
-	// Token: 0x060098AC RID: 39084 RVA: 0x0020FB88 File Offset: 0x0020DD88
+	// Token: 0x06006C86 RID: 27782 RVA: 0x00219874 File Offset: 0x00217A74
 	private void PushDirectionFirstReward(List<ScratchTicketRewardResult> roundResult, int index, EScratchDirectionType direction, bool checkLock)
 	{
 		int num = index;
@@ -390,7 +402,7 @@ public class ScratchTicketRoundData
 		roundResult.Add(rewardResultData);
 	}
 
-	// Token: 0x060098AD RID: 39085 RVA: 0x0020FBD0 File Offset: 0x0020DDD0
+	// Token: 0x06006C87 RID: 27783 RVA: 0x002198BC File Offset: 0x00217ABC
 	private void PushRewardResult(List<ScratchTicketRewardResult> roundResult, int index, EScratchDirectionType direction, bool checkLock)
 	{
 		int cellDataIndexByDirection = this.GetCellDataIndexByDirection(index, direction);
@@ -407,14 +419,14 @@ public class ScratchTicketRoundData
 		roundResult.Add(rewardResultData);
 	}
 
-	// Token: 0x060098AE RID: 39086 RVA: 0x0020FC14 File Offset: 0x0020DE14
+	// Token: 0x06006C88 RID: 27784 RVA: 0x00219900 File Offset: 0x00217B00
 	private void PushSequenceRoundResult(List<ScratchTicketRoundResult> result, int delayInterval, string sequenceName)
 	{
 		ScratchTicketRoundResult roundResultData = this.GetRoundResultData(new List<ScratchTicketRewardResult>(), (float)delayInterval, sequenceName);
 		result.Add(roundResultData);
 	}
 
-	// Token: 0x060098AF RID: 39087 RVA: 0x0020FC38 File Offset: 0x0020DE38
+	// Token: 0x06006C89 RID: 27785 RVA: 0x00219924 File Offset: 0x00217B24
 	public List<ScratchTicketRoundResult> GetDiagonalResultList()
 	{
 		if (this.DiagonalResultList != null)
@@ -430,7 +442,7 @@ public class ScratchTicketRoundData
 		return this.DiagonalResultList;
 	}
 
-	// Token: 0x060098B0 RID: 39088 RVA: 0x0020FC94 File Offset: 0x0020DE94
+	// Token: 0x06006C8A RID: 27786 RVA: 0x00219980 File Offset: 0x00217B80
 	private void PushDiagonalRoundResult(List<ScratchTicketRoundResult> result, int roundIndex)
 	{
 		List<ScratchTicketRewardResult> list = new List<ScratchTicketRewardResult>();
@@ -453,19 +465,19 @@ public class ScratchTicketRoundData
 		result.Add(roundResultData);
 	}
 
-	// Token: 0x060098B1 RID: 39089 RVA: 0x0020FCFC File Offset: 0x0020DEFC
+	// Token: 0x06006C8B RID: 27787 RVA: 0x002199E8 File Offset: 0x00217BE8
 	private bool CheckIndexValid(int index, bool needLog = true)
 	{
 		return index >= 0 && index < this.Capacity;
 	}
 
-	// Token: 0x060098B2 RID: 39090 RVA: 0x0020FD0D File Offset: 0x0020DF0D
+	// Token: 0x06006C8C RID: 27788 RVA: 0x002199F9 File Offset: 0x00217BF9
 	private ScratchTicketRoundResult GetRoundResultData(List<ScratchTicketRewardResult> rewardList, int delayInterval)
 	{
 		return this.GetRoundResultData(rewardList, (float)delayInterval, "Empty");
 	}
 
-	// Token: 0x060098B3 RID: 39091 RVA: 0x0020FD1D File Offset: 0x0020DF1D
+	// Token: 0x06006C8D RID: 27789 RVA: 0x00219A09 File Offset: 0x00217C09
 	private ScratchTicketRoundResult GetRoundResultData(List<ScratchTicketRewardResult> rewardList, float delayInterval, string sequenceName)
 	{
 		return new ScratchTicketRoundResult
@@ -476,7 +488,7 @@ public class ScratchTicketRoundData
 		};
 	}
 
-	// Token: 0x060098B4 RID: 39092 RVA: 0x0020FD3C File Offset: 0x0020DF3C
+	// Token: 0x06006C8E RID: 27790 RVA: 0x00219A28 File Offset: 0x00217C28
 	private ScratchTicketRewardResult GetRewardResultData(int index, EScratchDirectionType directionType, bool checkLock)
 	{
 		ECellSequenceType sequenceType = ECellSequenceType.Warning;
@@ -492,7 +504,7 @@ public class ScratchTicketRoundData
 		};
 	}
 
-	// Token: 0x060098B5 RID: 39093 RVA: 0x0020FD76 File Offset: 0x0020DF76
+	// Token: 0x06006C8F RID: 27791 RVA: 0x00219A62 File Offset: 0x00217C62
 	private int GetDelayInterval(bool isFirst, bool isWaring)
 	{
 		if (isFirst)
@@ -506,7 +518,7 @@ public class ScratchTicketRoundData
 		return 100;
 	}
 
-	// Token: 0x060098B6 RID: 39094 RVA: 0x0020FD89 File Offset: 0x0020DF89
+	// Token: 0x06006C90 RID: 27792 RVA: 0x00219A75 File Offset: 0x00217C75
 	public ScratchTicketCellData GetCellDataByIndex(int index)
 	{
 		if (!this.CheckIndexValid(index, true))
@@ -516,7 +528,7 @@ public class ScratchTicketRoundData
 		return this.CellDataList[index];
 	}
 
-	// Token: 0x060098B7 RID: 39095 RVA: 0x0020FDA4 File Offset: 0x0020DFA4
+	// Token: 0x06006C91 RID: 27793 RVA: 0x00219A90 File Offset: 0x00217C90
 	private int GetCellDataIndex(int row, int column)
 	{
 		int size = this.Config.Value.Size;
@@ -527,7 +539,7 @@ public class ScratchTicketRoundData
 		return row * size + column;
 	}
 
-	// Token: 0x060098B8 RID: 39096 RVA: 0x0020FDDC File Offset: 0x0020DFDC
+	// Token: 0x06006C92 RID: 27794 RVA: 0x00219AC8 File Offset: 0x00217CC8
 	private int GetCellDataIndexByDirection(int index, EScratchDirectionType directionType)
 	{
 		int size = this.Config.Value.Size;
@@ -567,34 +579,34 @@ public class ScratchTicketRoundData
 		return this.GetCellDataIndex(num2, num);
 	}
 
-	// Token: 0x0400432B RID: 17195
+	// Token: 0x040043D0 RID: 17360
 	public int Id;
 
-	// Token: 0x0400432C RID: 17196
+	// Token: 0x040043D1 RID: 17361
 	private long UnlockTime;
 
-	// Token: 0x0400432D RID: 17197
+	// Token: 0x040043D2 RID: 17362
 	public ScratchCardRoundRe? Config;
 
-	// Token: 0x0400432E RID: 17198
+	// Token: 0x040043D3 RID: 17363
 	private List<ScratchTicketCellData> CellDataList = new List<ScratchTicketCellData>();
 
-	// Token: 0x0400432F RID: 17199
+	// Token: 0x040043D4 RID: 17364
 	private int RewardCount;
 
-	// Token: 0x04004330 RID: 17200
+	// Token: 0x040043D5 RID: 17365
 	private List<TItem> RemainRewardList = new List<TItem>();
 
-	// Token: 0x04004331 RID: 17201
+	// Token: 0x040043D6 RID: 17366
 	private EScratchTicketRoundState RoundState;
 
-	// Token: 0x04004332 RID: 17202
+	// Token: 0x040043D7 RID: 17367
 	private readonly Dictionary<int, int> RewardSortMap = new Dictionary<int, int>();
 
-	// Token: 0x04004333 RID: 17203
+	// Token: 0x040043D8 RID: 17368
 	private int Capacity;
 
-	// Token: 0x04004334 RID: 17204
+	// Token: 0x040043D9 RID: 17369
 	[Nullable(new byte[]
 	{
 		2,

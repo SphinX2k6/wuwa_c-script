@@ -4,19 +4,19 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8B RID: 28555
+	// Token: 0x0200610C RID: 24844
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowFollowShooterReloadConfig : LevelFlowActionBase
 	{
-		// Token: 0x06045713 RID: 284435 RVA: 0x01138575 File Offset: 0x01136775
+		// Token: 0x0603B8C1 RID: 243905 RVA: 0x010E2379 File Offset: 0x010E0579
 		public LevelFlowFollowShooterReloadConfig Init(string configPath)
 		{
 			this.ConfigPath = configPath;
 			return this;
 		}
 
-		// Token: 0x06045714 RID: 284436 RVA: 0x01138580 File Offset: 0x01136780
+		// Token: 0x0603B8C2 RID: 243906 RVA: 0x010E2384 File Offset: 0x010E0584
 		protected override void OnExecute()
 		{
 			Entity entity = Global.BaseCharacter.CharacterActorComponent.Entity;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045715 RID: 284437 RVA: 0x0113868C File Offset: 0x0113688C
+		// Token: 0x0603B8C3 RID: 243907 RVA: 0x010E2490 File Offset: 0x010E0690
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x040243BD RID: 148413
+		// Token: 0x0401F672 RID: 128626
 		private string ConfigPath = string.Empty;
 	}
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050AF RID: 20655
+	// Token: 0x0200407F RID: 16511
 	public class FlowActionChangeEntityState : FlowActionBase
 	{
-		// Token: 0x06034EB6 RID: 216758 RVA: 0x00C88C00 File Offset: 0x00C86E00
+		// Token: 0x06029DAF RID: 171439 RVA: 0x00BD5EBC File Offset: 0x00BD40BC
 		protected unsafe override void OnExecute()
 		{
 			FlowActionChangeEntityState.<>c__DisplayClass0_0 CS$<>8__locals1 = new FlowActionChangeEntityState.<>c__DisplayClass0_0();

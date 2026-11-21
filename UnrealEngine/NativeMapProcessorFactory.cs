@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200006A RID: 106
+	// Token: 0x0200004F RID: 79
 	public static class NativeMapProcessorFactory
 	{
-		// Token: 0x06000DAC RID: 3500 RVA: 0x00013AE4 File Offset: 0x00011CE4
+		// Token: 0x0600093A RID: 2362 RVA: 0x0000E78C File Offset: 0x0000C98C
 		[NullableContext(2)]
 		[return: Nullable(1)]
 		public static INativeMapProcessor<K, V> GetProcessor<K, V>()

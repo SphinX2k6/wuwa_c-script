@@ -2,56 +2,56 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CE4 RID: 23780
+	// Token: 0x02006318 RID: 25368
 	public enum EBvbEventName : byte
 	{
-		// Token: 0x0400F5E8 RID: 62952
+		// Token: 0x04010336 RID: 66358
 		AIEvolution,
-		// Token: 0x0400F5E9 RID: 62953
+		// Token: 0x04010337 RID: 66359
 		AIDeploy,
-		// Token: 0x0400F5EA RID: 62954
+		// Token: 0x04010338 RID: 66360
 		AIChange,
-		// Token: 0x0400F5EB RID: 62955
+		// Token: 0x04010339 RID: 66361
 		AIRecycle,
-		// Token: 0x0400F5EC RID: 62956
+		// Token: 0x0401033A RID: 66362
 		AIRearrange,
-		// Token: 0x0400F5ED RID: 62957
+		// Token: 0x0401033B RID: 66363
 		AISwap,
-		// Token: 0x0400F5EE RID: 62958
+		// Token: 0x0401033C RID: 66364
 		AIDiscard,
-		// Token: 0x0400F5EF RID: 62959
+		// Token: 0x0401033D RID: 66365
 		AIGetBestDeploy,
-		// Token: 0x0400F5F0 RID: 62960
+		// Token: 0x0401033E RID: 66366
 		AIGetBestRearrange,
-		// Token: 0x0400F5F1 RID: 62961
+		// Token: 0x0401033F RID: 66367
 		AIGetBestSwap,
-		// Token: 0x0400F5F2 RID: 62962
+		// Token: 0x04010340 RID: 66368
 		AIGetBestReplace,
-		// Token: 0x0400F5F3 RID: 62963
+		// Token: 0x04010341 RID: 66369
 		AiDiscardForEnergyAndAct,
-		// Token: 0x0400F5F4 RID: 62964
+		// Token: 0x04010342 RID: 66370
 		AITurnEnd,
-		// Token: 0x0400F5F5 RID: 62965
+		// Token: 0x04010343 RID: 66371
 		StartAI,
-		// Token: 0x0400F5F6 RID: 62966
+		// Token: 0x04010344 RID: 66372
 		StartBattle,
-		// Token: 0x0400F5F7 RID: 62967
+		// Token: 0x04010345 RID: 66373
 		EnableHatred,
-		// Token: 0x0400F5F8 RID: 62968
+		// Token: 0x04010346 RID: 66374
 		StartRound,
-		// Token: 0x0400F5F9 RID: 62969
+		// Token: 0x04010347 RID: 66375
 		BurnBuffTimeUp,
-		// Token: 0x0400F5FA RID: 62970
+		// Token: 0x04010348 RID: 66376
 		WaitForGameBegin,
-		// Token: 0x0400F5FB RID: 62971
+		// Token: 0x04010349 RID: 66377
 		PlayerTurnStart,
-		// Token: 0x0400F5FC RID: 62972
+		// Token: 0x0401034A RID: 66378
 		PlayerTurnEnd,
-		// Token: 0x0400F5FD RID: 62973
+		// Token: 0x0401034B RID: 66379
 		AIBattleWin,
-		// Token: 0x0400F5FE RID: 62974
+		// Token: 0x0401034C RID: 66380
 		PlayerBattleWin,
-		// Token: 0x0400F5FF RID: 62975
+		// Token: 0x0401034D RID: 66381
 		SelectCardsEnd
 	}
 }

@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView;
 
-// Token: 0x020021E9 RID: 8681
+// Token: 0x020016CD RID: 5837
 [NullableContext(1)]
 public interface IMarkPoolHandle
 {
-	// Token: 0x1700156E RID: 5486
-	// (get) Token: 0x06010E52 RID: 69202
-	// (set) Token: 0x06010E53 RID: 69203
+	// Token: 0x170015A5 RID: 5541
+	// (get) Token: 0x0600E2E3 RID: 58083
+	// (set) Token: 0x0600E2E4 RID: 58084
 	double RecycleTimeStamp { get; set; }
 
-	// Token: 0x1700156F RID: 5487
-	// (get) Token: 0x06010E54 RID: 69204
-	// (set) Token: 0x06010E55 RID: 69205
+	// Token: 0x170015A6 RID: 5542
+	// (get) Token: 0x0600E2E5 RID: 58085
+	// (set) Token: 0x0600E2E6 RID: 58086
 	MarkPanelBase Obj { get; set; }
 
-	// Token: 0x17001570 RID: 5488
-	// (get) Token: 0x06010E56 RID: 69206
-	// (set) Token: 0x06010E57 RID: 69207
+	// Token: 0x170015A7 RID: 5543
+	// (get) Token: 0x0600E2E7 RID: 58087
+	// (set) Token: 0x0600E2E8 RID: 58088
 	int? RefCount { get; set; }
 }

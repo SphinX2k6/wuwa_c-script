@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x02002AD0 RID: 10960
+// Token: 0x0200204C RID: 8268
 internal enum <SurvivorsRogueCardBase>FDE991F19910B9E4471E238181280D4D71214EFE4CD761A9231E1049751C02EC5__ECardComponents
 {
-	// Token: 0x0400A963 RID: 43363
+	// Token: 0x0400AD69 RID: 44393
 	TogSelf,
-	// Token: 0x0400A964 RID: 43364
+	// Token: 0x0400AD6A RID: 44394
 	TexQuality,
-	// Token: 0x0400A965 RID: 43365
+	// Token: 0x0400AD6B RID: 44395
 	TexIcon,
-	// Token: 0x0400A966 RID: 43366
+	// Token: 0x0400AD6C RID: 44396
 	PanelType,
-	// Token: 0x0400A967 RID: 43367
+	// Token: 0x0400AD6D RID: 44397
 	TagItem,
-	// Token: 0x0400A968 RID: 43368
+	// Token: 0x0400AD6E RID: 44398
 	TxtTag,
-	// Token: 0x0400A969 RID: 43369
+	// Token: 0x0400AD6F RID: 44399
 	TogLock,
-	// Token: 0x0400A96A RID: 43370
+	// Token: 0x0400AD70 RID: 44400
 	TxtTitle,
-	// Token: 0x0400A96B RID: 43371
+	// Token: 0x0400AD71 RID: 44401
 	TxtDesc,
-	// Token: 0x0400A96C RID: 43372
+	// Token: 0x0400AD72 RID: 44402
 	PanelContent,
-	// Token: 0x0400A96D RID: 43373
+	// Token: 0x0400AD73 RID: 44403
 	TxtDebug,
-	// Token: 0x0400A96E RID: 43374
+	// Token: 0x0400AD74 RID: 44404
 	TagUpItem,
-	// Token: 0x0400A96F RID: 43375
+	// Token: 0x0400AD75 RID: 44405
 	PanelLvUpTag,
-	// Token: 0x0400A970 RID: 43376
+	// Token: 0x0400AD76 RID: 44406
 	SpriteLvUpTag,
-	// Token: 0x0400A971 RID: 43377
+	// Token: 0x0400AD77 RID: 44407
 	TxtLvUpTag
 }

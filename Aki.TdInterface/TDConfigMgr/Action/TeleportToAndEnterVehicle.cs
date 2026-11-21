@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002236 RID: 8758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024A1 RID: 9377
 	public class TeleportToAndEnterVehicle : ActionParams
 	{
-		// Token: 0x0600C036 RID: 49206 RVA: 0x001B99C8 File Offset: 0x001B7BC8
+		// Token: 0x0600CBF4 RID: 52212 RVA: 0x001D1094 File Offset: 0x001CF294
 		private TeleportToAndEnterVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C037 RID: 49207 RVA: 0x001B9A00 File Offset: 0x001B7C00
+		// Token: 0x0600CBF5 RID: 52213 RVA: 0x001D10CC File Offset: 0x001CF2CC
 		public static TeleportToAndEnterVehicle Create([Nullable(2)] TeleportToAndEnterVehicle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C038 RID: 49208 RVA: 0x001B9A13 File Offset: 0x001B7C13
+		// Token: 0x0600CBF6 RID: 52214 RVA: 0x001D10DF File Offset: 0x001CF2DF
 		public static TeleportToAndEnterVehicle CreateFromSetValue([Nullable(2)] TeleportToAndEnterVehicle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C039 RID: 49209 RVA: 0x001B9A26 File Offset: 0x001B7C26
+		// Token: 0x0600CBF7 RID: 52215 RVA: 0x001D10F2 File Offset: 0x001CF2F2
 		public TeleportToAndEnterVehicle_SetValue ToSetValue()
 		{
 			return new TeleportToAndEnterVehicle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A34 RID: 14900
-		// (get) Token: 0x0600C03A RID: 49210 RVA: 0x001B9A3C File Offset: 0x001B7C3C
-		// (set) Token: 0x0600C03B RID: 49211 RVA: 0x001B9A9D File Offset: 0x001B7C9D
+		// Token: 0x17003D2A RID: 15658
+		// (get) Token: 0x0600CBF8 RID: 52216 RVA: 0x001D1108 File Offset: 0x001CF308
+		// (set) Token: 0x0600CBF9 RID: 52217 RVA: 0x001D1169 File Offset: 0x001CF369
 		public virtual ITeleportToAndEnterFishingBoat ToVehicle
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400729C RID: 29340
+		// Token: 0x040078E6 RID: 30950
 		[Nullable(2)]
 		protected new TeleportToAndEnterVehicle FbInstance;
 
-		// Token: 0x0400729D RID: 29341
+		// Token: 0x040078E7 RID: 30951
 		[Nullable(2)]
 		protected TeleportToAndEnterVehicle_SetValue PocoInterface;
 
-		// Token: 0x0400729E RID: 29342
+		// Token: 0x040078E8 RID: 30952
 		private ITeleportToAndEnterFishingBoat _ToVehicleCache;
 
-		// Token: 0x0400729F RID: 29343
+		// Token: 0x040078E9 RID: 30953
 		private bool _ToVehicleInited;
 	}
 }

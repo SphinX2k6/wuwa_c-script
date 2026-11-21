@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006052 RID: 24658
+	// Token: 0x020066B3 RID: 26291
 	public enum EVehicleOption : byte
 	{
-		// Token: 0x040101D6 RID: 66006
+		// Token: 0x04010FC9 RID: 69577
 		EnterVehicle,
-		// Token: 0x040101D7 RID: 66007
+		// Token: 0x04010FCA RID: 69578
 		ExitVehicle,
-		// Token: 0x040101D8 RID: 66008
+		// Token: 0x04010FCB RID: 69579
 		GongduolaWaterfallClimbing
 	}
 }

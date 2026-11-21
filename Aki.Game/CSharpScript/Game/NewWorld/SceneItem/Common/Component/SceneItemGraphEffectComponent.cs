@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200721D RID: 29213
+	// Token: 0x020062D2 RID: 25298
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemGraphEffectComponent : EntityComponent
 	{
-		// Token: 0x0604784D RID: 292941 RVA: 0x0123C804 File Offset: 0x0123AA04
+		// Token: 0x0603D17B RID: 250235 RVA: 0x01195E64 File Offset: 0x01194064
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604784E RID: 292942 RVA: 0x0123C88C File Offset: 0x0123AA8C
+		// Token: 0x0603D17C RID: 250236 RVA: 0x01195EEC File Offset: 0x011940EC
 		protected override bool OnStart()
 		{
 			if (this.Config == null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604784F RID: 292943 RVA: 0x0123C8F0 File Offset: 0x0123AAF0
+		// Token: 0x0603D17D RID: 250237 RVA: 0x01195F50 File Offset: 0x01194150
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.Remove<string, int>(EEventName.OnChangeModuleDebugLevel, new Action<string, int>(this.OnChangeModuleDebugLevel));
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047850 RID: 292944 RVA: 0x0123C940 File Offset: 0x0123AB40
+		// Token: 0x0603D17E RID: 250238 RVA: 0x01195FA0 File Offset: 0x011941A0
 		protected override bool OnClear()
 		{
 			this.Config = null;
 			return true;
 		}
 
-		// Token: 0x06047851 RID: 292945 RVA: 0x0123C94C File Offset: 0x0123AB4C
+		// Token: 0x0603D17F RID: 250239 RVA: 0x01195FAC File Offset: 0x011941AC
 		private unsafe void OnGraphEntityReady(bool? result)
 		{
 			this.WaitGraphEntityTask = null;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.RefreshDebugDraw();
 		}
 
-		// Token: 0x06047852 RID: 292946 RVA: 0x0123CB2D File Offset: 0x0123AD2D
+		// Token: 0x0603D180 RID: 250240 RVA: 0x0119618D File Offset: 0x0119438D
 		private void OnChangeModuleDebugLevel(string key, int level)
 		{
 			if (key != "SceneItemGraphEffectComponent")
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.RefreshDebugDraw();
 		}
 
-		// Token: 0x06047853 RID: 292947 RVA: 0x0123CB44 File Offset: 0x0123AD44
+		// Token: 0x0603D181 RID: 250241 RVA: 0x011961A4 File Offset: 0x011943A4
 		private void RefreshDebugDraw()
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DebugDrawActive = true;
 		}
 
-		// Token: 0x06047854 RID: 292948 RVA: 0x0123CBA0 File Offset: 0x0123ADA0
+		// Token: 0x0603D182 RID: 250242 RVA: 0x01196200 File Offset: 0x01194400
 		private void ClearDebugDraw()
 		{
 			if (!this.DebugDrawActive)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			UKismetSystemLibrary.FlushDebugStrings(world);
 		}
 
-		// Token: 0x06047855 RID: 292949 RVA: 0x0123CBD4 File Offset: 0x0123ADD4
+		// Token: 0x0603D183 RID: 250243 RVA: 0x01196234 File Offset: 0x01194434
 		private void ClearBuildResult()
 		{
 			if (this.BuildResult == null)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.BuildResult = null;
 		}
 
-		// Token: 0x06047856 RID: 292950 RVA: 0x0123CC58 File Offset: 0x0123AE58
+		// Token: 0x0603D184 RID: 250244 RVA: 0x011962B8 File Offset: 0x011944B8
 		private static IGraphSplineResult BuildSpline(Graph<Vector> graph, [Nullable(2)] string effectPath = null, int? entityId = null)
 		{
 			if (graph.EdgeCount == 0)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return SceneItemGraphEffectComponent.EmptyResult();
 		}
 
-		// Token: 0x06047857 RID: 292951 RVA: 0x0123CCD8 File Offset: 0x0123AED8
+		// Token: 0x0603D185 RID: 250245 RVA: 0x01196338 File Offset: 0x01194538
 		private static IGraphSplineResult BuildStrokes(Graph<Vector> graph, List<List<int>> strokes, EGraphSplineMode mode, [Nullable(2)] string effectPath, int? entityId)
 		{
 			Vector vector = SceneItemGraphEffectComponent.FirstValidLocation(graph, strokes);
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			};
 		}
 
-		// Token: 0x06047858 RID: 292952 RVA: 0x0123CDF0 File Offset: 0x0123AFF0
+		// Token: 0x0603D186 RID: 250246 RVA: 0x01196450 File Offset: 0x01194650
 		private static List<Vector> StrokeToPoints(Graph<Vector> graph, List<int> stroke)
 		{
 			List<Vector> list = new List<Vector>();
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return list;
 		}
 
-		// Token: 0x06047859 RID: 292953 RVA: 0x0123CE50 File Offset: 0x0123B050
+		// Token: 0x0603D187 RID: 250247 RVA: 0x011964B0 File Offset: 0x011946B0
 		[return: Nullable(2)]
 		private static Vector FirstValidLocation(Graph<Vector> graph, List<List<int>> strokes)
 		{
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return null;
 		}
 
-		// Token: 0x0604785A RID: 292954 RVA: 0x0123CEE0 File Offset: 0x0123B0E0
+		// Token: 0x0603D188 RID: 250248 RVA: 0x01196540 File Offset: 0x01194740
 		private static IGraphSplineResult EmptyResult()
 		{
 			return new GraphSplineResult
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			};
 		}
 
-		// Token: 0x0604785B RID: 292955 RVA: 0x0123CF08 File Offset: 0x0123B108
+		// Token: 0x0603D189 RID: 250249 RVA: 0x01196568 File Offset: 0x01194768
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -330,59 +330,77 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemGraphEffectComponent sceneItemGraphEffectComponent = (SceneItemGraphEffectComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemGraphEffectComponent.Config == null)
 			{
-				if (sceneItemGraphEffectComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Graph3dEffectComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("WaitGraphEntityTask"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemGraphEffectComponent.WaitGraphEntityTask == null)
-				{
-					this.WaitGraphEntityTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaitEntityTask>(this.WaitGraphEntityTask), "WaitGraphEntityTask"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("BuildResult"))
+			if (sceneItemGraphEffectComponent.WaitGraphEntityTask == null)
 			{
-				if (sceneItemGraphEffectComponent.BuildResult == null)
-				{
-					this.BuildResult = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IGraphSplineResult>(this.BuildResult), "BuildResult"))
-				{
-					return false;
-				}
+				this.WaitGraphEntityTask = null;
 			}
-			if (base.CanResetComponentProperty("DebugDrawActive"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitGraphEntityTask), "WaitGraphEntityTask"))
 			{
-				this.DebugDrawActive = sceneItemGraphEffectComponent.DebugDrawActive;
+				return false;
 			}
+			if (sceneItemGraphEffectComponent.BuildResult == null)
+			{
+				this.BuildResult = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuildResult), "BuildResult"))
+			{
+				return false;
+			}
+			this.DebugDrawActive = sceneItemGraphEffectComponent.DebugDrawActive;
 			return true;
 		}
 
-		// Token: 0x040259FE RID: 154110
+		// Token: 0x170073AB RID: 29611
+		// (get) Token: 0x0603D18A RID: 250250 RVA: 0x01196615 File Offset: 0x01194815
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073AC RID: 29612
+		// (get) Token: 0x0603D18B RID: 250251 RVA: 0x01196618 File Offset: 0x01194818
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073AD RID: 29613
+		// (get) Token: 0x0603D18C RID: 250252 RVA: 0x0119661B File Offset: 0x0119481B
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402066D RID: 132717
 		[Nullable(2)]
 		private Graph3dEffectComponent Config;
 
-		// Token: 0x040259FF RID: 154111
+		// Token: 0x0402066E RID: 132718
 		[Nullable(2)]
 		private WaitEntityTask WaitGraphEntityTask;
 
-		// Token: 0x04025A00 RID: 154112
+		// Token: 0x0402066F RID: 132719
 		[Nullable(2)]
 		private IGraphSplineResult BuildResult;
 
-		// Token: 0x04025A01 RID: 154113
+		// Token: 0x04020670 RID: 132720
 		private bool DebugDrawActive;
 	}
 }

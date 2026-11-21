@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B65 RID: 19301
+	// Token: 0x02003B0D RID: 15117
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseSettleRecordPanel : UiPanelBase
 	{
-		// Token: 0x06031F91 RID: 204689 RVA: 0x00B9930C File Offset: 0x00B9750C
+		// Token: 0x06026D20 RID: 159008 RVA: 0x00ADD548 File Offset: 0x00ADB748
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F92 RID: 204690 RVA: 0x00B99396 File Offset: 0x00B97596
+		// Token: 0x06026D21 RID: 159009 RVA: 0x00ADD5D2 File Offset: 0x00ADB7D2
 		public void SetTitleById(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06031F93 RID: 204691 RVA: 0x00B993AF File Offset: 0x00B975AF
+		// Token: 0x06026D22 RID: 159010 RVA: 0x00ADD5EB File Offset: 0x00ADB7EB
 		public void SetTitleOnly(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
@@ -42,31 +42,31 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.GetItem(2).SetUIActive(false);
 		}
 
-		// Token: 0x06031F94 RID: 204692 RVA: 0x00B993E2 File Offset: 0x00B975E2
+		// Token: 0x06026D23 RID: 159011 RVA: 0x00ADD61E File Offset: 0x00ADB81E
 		public void SetRecord(string record, bool isNewRecord)
 		{
 			base.GetText(1).SetText(record, true);
 			base.GetItem(2).SetUIActive(isNewRecord);
 		}
 
-		// Token: 0x06031F95 RID: 204693 RVA: 0x00B993FF File Offset: 0x00B975FF
+		// Token: 0x06026D24 RID: 159012 RVA: 0x00ADD63B File Offset: 0x00ADB83B
 		public void SetRecordRolling(int record, bool isNewRecord)
 		{
 			base.GetText(1).SetText(record.ToString(), true);
 			base.GetItem(2).SetUIActive(isNewRecord);
 		}
 
-		// Token: 0x0200ACFB RID: 44283
+		// Token: 0x0200971A RID: 38682
 		[NullableContext(0)]
 		private class ERecordComponent
 		{
-			// Token: 0x040348F3 RID: 215283
+			// Token: 0x0402F29C RID: 193180
 			public const int TitleTxt = 0;
 
-			// Token: 0x040348F4 RID: 215284
+			// Token: 0x0402F29D RID: 193181
 			public const int NumTxt = 1;
 
-			// Token: 0x040348F5 RID: 215285
+			// Token: 0x0402F29E RID: 193182
 			public const int NewRecordItem = 2;
 		}
 	}

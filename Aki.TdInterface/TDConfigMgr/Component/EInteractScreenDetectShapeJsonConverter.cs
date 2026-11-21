@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000979 RID: 2425
+	// Token: 0x02000A2C RID: 2604
 	public class EInteractScreenDetectShapeJsonConverter : JsonConverter<EInteractScreenDetectShape>
 	{
-		// Token: 0x06003653 RID: 13907 RVA: 0x0008DA7C File Offset: 0x0008BC7C
+		// Token: 0x060039DA RID: 14810 RVA: 0x000959E8 File Offset: 0x00093BE8
 		public override EInteractScreenDetectShape Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EInteractScreenDetectShapeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003654 RID: 13908 RVA: 0x0008DAA0 File Offset: 0x0008BCA0
+		// Token: 0x060039DB RID: 14811 RVA: 0x00095A0C File Offset: 0x00093C0C
 		public override void Write(Utf8JsonWriter writer, EInteractScreenDetectShape value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

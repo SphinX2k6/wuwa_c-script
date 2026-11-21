@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,12 +10,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068B0 RID: 26800
+	// Token: 0x02005800 RID: 22528
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CyberPunkData : ActivityBaseData
 	{
-		// Token: 0x06042E16 RID: 273942 RVA: 0x0104824C File Offset: 0x0104644C
+		// Token: 0x0603796E RID: 227694 RVA: 0x00F8985C File Offset: 0x00F87A5C
 		protected override void PhraseEx(ActivityData data)
 		{
 			EdgeRunnerActivityInfo edgeRunnerActivityInfo = data.EdgeRunnerActivityInfo;
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06042E17 RID: 273943 RVA: 0x01048368 File Offset: 0x01046568
+		// Token: 0x0603796F RID: 227695 RVA: 0x00F89978 File Offset: 0x00F87B78
 		private void InitAdamSmasherData(EdgeRunnerActivityInfo activityData)
 		{
 			foreach (EdgeRunnerLordGymPassRecord edgeRunnerLordGymPassRecord in activityData.EdgeRunnerLordGymPassRecords)
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E18 RID: 273944 RVA: 0x010483C0 File Offset: 0x010465C0
+		// Token: 0x06037970 RID: 227696 RVA: 0x00F899D0 File Offset: 0x00F87BD0
 		private void InitUnlockedFunctionIds(EdgeRunnerActivityInfo activityData)
 		{
 			foreach (int item in activityData.EdgeRunnerFunctionIds)
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E19 RID: 273945 RVA: 0x01048414 File Offset: 0x01046614
+		// Token: 0x06037971 RID: 227697 RVA: 0x00F89A24 File Offset: 0x00F87C24
 		private void InitLordGymPassRecords(EdgeRunnerActivityInfo activityData)
 		{
 			foreach (EdgeRunnerLordGymPassRecord edgeRunnerLordGymPassRecord in activityData.EdgeRunnerLordGymPassRecords)
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E1A RID: 273946 RVA: 0x01048474 File Offset: 0x01046674
+		// Token: 0x06037972 RID: 227698 RVA: 0x00F89A84 File Offset: 0x00F87C84
 		private void InitTaskDataMap(EdgeRunnerActivityInfo activityData)
 		{
 			foreach (ConditionTask task in activityData.ConditionTasks)
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E1B RID: 273947 RVA: 0x010484C4 File Offset: 0x010466C4
+		// Token: 0x06037973 RID: 227699 RVA: 0x00F89AD4 File Offset: 0x00F87CD4
 		private void InitPreUnlockedQuestIds(EdgeRunnerActivityInfo activityData)
 		{
 			foreach (int item in activityData.PreUnlockIds)
@@ -91,13 +90,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E1C RID: 273948 RVA: 0x01048518 File Offset: 0x01046718
+		// Token: 0x06037974 RID: 227700 RVA: 0x00F89B28 File Offset: 0x00F87D28
 		public int GetRewardScoreId()
 		{
 			return this.RewardScoreId;
 		}
 
-		// Token: 0x06042E1D RID: 273949 RVA: 0x01048520 File Offset: 0x01046720
+		// Token: 0x06037975 RID: 227701 RVA: 0x00F89B30 File Offset: 0x00F87D30
 		public void UpdateRewardScoreId(int scoreId)
 		{
 			if (scoreId != this.RewardScoreId)
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E1E RID: 273950 RVA: 0x01048532 File Offset: 0x01046732
+		// Token: 0x06037976 RID: 227702 RVA: 0x00F89B42 File Offset: 0x00F87D42
 		public void AddUnlockedFunctionId(int functionId)
 		{
 			this.UnlockedFunctionIds.Add(functionId);
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06042E1F RID: 273951 RVA: 0x01048568 File Offset: 0x01046768
+		// Token: 0x06037977 RID: 227703 RVA: 0x00F89B78 File Offset: 0x00F87D78
 		public void AddPreUnlockedQuestIds(EdgeRunnerPreUnlockAvailableNotify notify)
 		{
 			foreach (int item in notify.PreUnlockIds)
@@ -125,37 +124,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06042E20 RID: 273952 RVA: 0x010485E4 File Offset: 0x010467E4
+		// Token: 0x06037978 RID: 227704 RVA: 0x00F89BF4 File Offset: 0x00F87DF4
 		public bool IsFunctionUnlocked(int functionId)
 		{
 			return this.UnlockedFunctionIds.Contains(functionId);
 		}
 
-		// Token: 0x06042E21 RID: 273953 RVA: 0x010485F2 File Offset: 0x010467F2
+		// Token: 0x06037979 RID: 227705 RVA: 0x00F89C02 File Offset: 0x00F87E02
 		public bool IsFunctionPreUnlocked(int questId)
 		{
 			return this.PreUnlockedQuestIds.Contains(questId);
 		}
 
-		// Token: 0x06042E22 RID: 273954 RVA: 0x01048600 File Offset: 0x01046800
+		// Token: 0x0603797A RID: 227706 RVA: 0x00F89C10 File Offset: 0x00F87E10
 		public List<int> GetUnlockedFunctionIds()
 		{
-			return this.UnlockedFunctionIds.ToList<int>();
+			return new List<int>(this.UnlockedFunctionIds);
 		}
 
-		// Token: 0x06042E23 RID: 273955 RVA: 0x0104860D File Offset: 0x0104680D
+		// Token: 0x0603797B RID: 227707 RVA: 0x00F89C1D File Offset: 0x00F87E1D
 		public List<int> GetPreUnlockedQuestIds()
 		{
-			return this.PreUnlockedQuestIds.ToList<int>();
+			return new List<int>(this.PreUnlockedQuestIds);
 		}
 
-		// Token: 0x06042E24 RID: 273956 RVA: 0x0104861A File Offset: 0x0104681A
+		// Token: 0x0603797C RID: 227708 RVA: 0x00F89C2A File Offset: 0x00F87E2A
 		public bool IsLordGymPassed(int lordGymId)
 		{
 			return this.LordGymPassRecords.ContainsKey(lordGymId);
 		}
 
-		// Token: 0x06042E25 RID: 273957 RVA: 0x01048628 File Offset: 0x01046828
+		// Token: 0x0603797D RID: 227709 RVA: 0x00F89C38 File Offset: 0x00F87E38
 		public int GetLordGymPassTime(int lordGymId)
 		{
 			int result;
@@ -166,13 +165,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return result;
 		}
 
-		// Token: 0x06042E26 RID: 273958 RVA: 0x01048648 File Offset: 0x01046848
+		// Token: 0x0603797E RID: 227710 RVA: 0x00F89C58 File Offset: 0x00F87E58
 		public Dictionary<int, int> GetAllLordGymPassRecords()
 		{
 			return this.LordGymPassRecords;
 		}
 
-		// Token: 0x06042E27 RID: 273959 RVA: 0x01048650 File Offset: 0x01046850
+		// Token: 0x0603797F RID: 227711 RVA: 0x00F89C60 File Offset: 0x00F87E60
 		public void RefreshSingleTaskData(ConditionTask task)
 		{
 			this.UpdateSingleTaskData(task);
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06042E28 RID: 273960 RVA: 0x01048680 File Offset: 0x01046880
+		// Token: 0x06037980 RID: 227712 RVA: 0x00F89C90 File Offset: 0x00F87E90
 		private void UpdateSingleTaskData(ConditionTask task)
 		{
 			CyberPunkTaskData cyberPunkTaskData;
@@ -197,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E29 RID: 273961 RVA: 0x010486D0 File Offset: 0x010468D0
+		// Token: 0x06037981 RID: 227713 RVA: 0x00F89CE0 File Offset: 0x00F87EE0
 		public void MarkTaskAsClaimed(int taskId)
 		{
 			CyberPunkTaskData cyberPunkTaskData;
@@ -207,13 +206,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042E2A RID: 273962 RVA: 0x010486F3 File Offset: 0x010468F3
+		// Token: 0x06037982 RID: 227714 RVA: 0x00F89D03 File Offset: 0x00F87F03
 		public List<CyberPunkTaskData> GetAllTaskData()
 		{
-			return this.TaskDataMap.Values.ToList<CyberPunkTaskData>();
+			return new List<CyberPunkTaskData>(this.TaskDataMap.Values);
 		}
 
-		// Token: 0x06042E2B RID: 273963 RVA: 0x01048708 File Offset: 0x01046908
+		// Token: 0x06037983 RID: 227715 RVA: 0x00F89D18 File Offset: 0x00F87F18
 		[NullableContext(2)]
 		public CyberPunkTaskData GetTaskDataById(int taskId)
 		{
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return result;
 		}
 
-		// Token: 0x06042E2C RID: 273964 RVA: 0x01048728 File Offset: 0x01046928
+		// Token: 0x06037984 RID: 227716 RVA: 0x00F89D38 File Offset: 0x00F87F38
 		public int GetFinishedTaskCount()
 		{
 			int num = 0;
@@ -239,13 +238,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return num;
 		}
 
-		// Token: 0x06042E2D RID: 273965 RVA: 0x01048790 File Offset: 0x01046990
+		// Token: 0x06037985 RID: 227717 RVA: 0x00F89DA0 File Offset: 0x00F87FA0
 		public int GetTotalTaskCount()
 		{
 			return this.TaskDataMap.Count;
 		}
 
-		// Token: 0x06042E2E RID: 273966 RVA: 0x010487A0 File Offset: 0x010469A0
+		// Token: 0x06037986 RID: 227718 RVA: 0x00F89DB0 File Offset: 0x00F87FB0
 		public int GetClaimableTaskCount()
 		{
 			int num = 0;
@@ -262,13 +261,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return num;
 		}
 
-		// Token: 0x06042E2F RID: 273967 RVA: 0x01048800 File Offset: 0x01046A00
+		// Token: 0x06037987 RID: 227719 RVA: 0x00F89E10 File Offset: 0x00F88010
 		public bool HasClaimableTask()
 		{
 			return this.GetClaimableTaskCount() > 0;
 		}
 
-		// Token: 0x06042E30 RID: 273968 RVA: 0x0104880C File Offset: 0x01046A0C
+		// Token: 0x06037988 RID: 227720 RVA: 0x00F89E1C File Offset: 0x00F8801C
 		public List<int> GetClaimableTaskIds()
 		{
 			List<int> list = new List<int>();
@@ -282,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return list;
 		}
 
-		// Token: 0x06042E31 RID: 273969 RVA: 0x01048878 File Offset: 0x01046A78
+		// Token: 0x06037989 RID: 227721 RVA: 0x00F89E88 File Offset: 0x00F88088
 		public string GetOverallProgressText()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -292,13 +291,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06042E32 RID: 273970 RVA: 0x010488BB File Offset: 0x01046ABB
+		// Token: 0x0603798A RID: 227722 RVA: 0x00F89ECB File Offset: 0x00F880CB
 		public bool IsAllCompleted()
 		{
 			return this.GetFinishedTaskCount() >= this.GetTotalTaskCount();
 		}
 
-		// Token: 0x06042E33 RID: 273971 RVA: 0x010488D0 File Offset: 0x01046AD0
+		// Token: 0x0603798B RID: 227723 RVA: 0x00F89EE0 File Offset: 0x00F880E0
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetTaskProgress()
 		{
@@ -307,19 +306,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return new ValueTuple<int, int>(finishedTaskCount, totalTaskCount);
 		}
 
-		// Token: 0x06042E34 RID: 273972 RVA: 0x010488F0 File Offset: 0x01046AF0
+		// Token: 0x0603798C RID: 227724 RVA: 0x00F89F00 File Offset: 0x00F88100
 		public override bool GetExDataRedPointShowState()
 		{
 			return (base.GetPreGuideQuestFinishState() && this.HasClaimableTask()) || this.HasClaimableTrialRoleReward() || this.GetCyberPunkTaskSliderData().Status == ConditionTaskState.ConditionTaskFinish || this.HasUnclickedBossEntrance();
 		}
 
-		// Token: 0x06042E35 RID: 273973 RVA: 0x01048924 File Offset: 0x01046B24
+		// Token: 0x0603798D RID: 227725 RVA: 0x00F89F34 File Offset: 0x00F88134
 		private bool HasUnclickedBossEntrance()
 		{
 			return this.IsFunctionUnlocked(5) && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.CyberPunkBossEntranceFirstClicked, false);
 		}
 
-		// Token: 0x06042E36 RID: 273974 RVA: 0x01048940 File Offset: 0x01046B40
+		// Token: 0x0603798E RID: 227726 RVA: 0x00F89F50 File Offset: 0x00F88150
 		private bool HasClaimableTrialRoleReward()
 		{
 			IReadOnlyList<EdgeRunnerTrial> configList = ConfigEdgeRunnerTrialByCyberPunkActivityId.GetConfigList(base.Id, true);
@@ -338,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return false;
 		}
 
-		// Token: 0x06042E37 RID: 273975 RVA: 0x010489D0 File Offset: 0x01046BD0
+		// Token: 0x0603798F RID: 227727 RVA: 0x00F89FE0 File Offset: 0x00F881E0
 		public int GetRecommendTaskId()
 		{
 			List<int> preGuideQuestIds = base.GetPreGuideQuestIds();
@@ -349,14 +348,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return 0;
 		}
 
-		// Token: 0x06042E38 RID: 273976 RVA: 0x010489FC File Offset: 0x01046BFC
+		// Token: 0x06037990 RID: 227728 RVA: 0x00F8A00C File Offset: 0x00F8820C
 		public bool IsRecommendTaskAccepted()
 		{
 			int recommendTaskId = this.GetRecommendTaskId();
 			return recommendTaskId == 0 || QuestNewModel.Instance.GetQuestState(recommendTaskId) >= EQuestState.Ready;
 		}
 
-		// Token: 0x06042E39 RID: 273977 RVA: 0x01048A28 File Offset: 0x01046C28
+		// Token: 0x06037991 RID: 227729 RVA: 0x00F8A038 File Offset: 0x00F88238
 		public string GetRecommendTaskDisplayName()
 		{
 			int recommendTaskId = this.GetRecommendTaskId();
@@ -378,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return "";
 		}
 
-		// Token: 0x06042E3A RID: 273978 RVA: 0x01048A98 File Offset: 0x01046C98
+		// Token: 0x06037992 RID: 227730 RVA: 0x00F8A0A8 File Offset: 0x00F882A8
 		public List<CyberPunkTaskTabData> GetCyberPunkTaskTabDataList()
 		{
 			int id = base.Id;
@@ -406,27 +405,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			{
 				return list2;
 			}
-			foreach (EdgeRunnerTag edgeRunnerTag in (from a in configList2
-			orderby a.Id
-			select a).ToList<EdgeRunnerTag>())
+			List<EdgeRunnerTag> list3 = new List<EdgeRunnerTag>(configList2);
+			NoLinq.SortStable<EdgeRunnerTag>(list3, (EdgeRunnerTag left, EdgeRunnerTag right) => left.Id.CompareTo(right.Id));
+			foreach (EdgeRunnerTag edgeRunnerTag in list3)
 			{
-				List<EdgeRunnerReward> list3;
-				if (dictionary.TryGetValue(edgeRunnerTag.Id, out list3) && list3.Count > 0)
+				List<EdgeRunnerReward> list4;
+				if (dictionary.TryGetValue(edgeRunnerTag.Id, out list4) && list4.Count > 0)
 				{
 					string tabName = ConfigMultiTextLang.GetLocalTextNew(edgeRunnerTag.TextKey, null) ?? "";
-					List<CyberPunkTaskTabData> list4 = list2;
-					CyberPunkTaskTabData cyberPunkTaskTabData = new CyberPunkTaskTabData();
-					cyberPunkTaskTabData.TabId = edgeRunnerTag.Id;
-					cyberPunkTaskTabData.TabName = tabName;
-					cyberPunkTaskTabData.RewardIds = (from r in list3
-					select r.Id).ToList<int>();
-					list4.Add(cyberPunkTaskTabData);
+					List<int> list5 = new List<int>(list4.Count);
+					for (int i = 0; i < list4.Count; i++)
+					{
+						list5.Add(list4[i].Id);
+					}
+					list2.Add(new CyberPunkTaskTabData
+					{
+						TabId = edgeRunnerTag.Id,
+						TabName = tabName,
+						RewardIds = list5
+					});
 				}
 			}
 			return list2;
 		}
 
-		// Token: 0x06042E3B RID: 273979 RVA: 0x01048C3C File Offset: 0x01046E3C
+		// Token: 0x06037993 RID: 227731 RVA: 0x00F8A264 File Offset: 0x00F88464
 		public List<CyberPunkTaskData> GetCyberPunkTaskListByTabId(int tabId)
 		{
 			int id = base.Id;
@@ -503,7 +506,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return list2;
 		}
 
-		// Token: 0x06042E3C RID: 273980 RVA: 0x01048E24 File Offset: 0x01047024
+		// Token: 0x06037994 RID: 227732 RVA: 0x00F8A44C File Offset: 0x00F8864C
 		public bool HasCyberPunkTaskRedDot(int tabId)
 		{
 			int id = base.Id;
@@ -535,13 +538,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return false;
 		}
 
-		// Token: 0x06042E3D RID: 273981 RVA: 0x01048F08 File Offset: 0x01047108
+		// Token: 0x06037995 RID: 227733 RVA: 0x00F8A530 File Offset: 0x00F88730
 		public EdgeRunnerScoreReward? GetCyberPunkTaskSliderConfig()
 		{
 			return ConfigEdgeRunnerScoreRewardById.GetConfig(1, true);
 		}
 
-		// Token: 0x06042E3E RID: 273982 RVA: 0x01048F14 File Offset: 0x01047114
+		// Token: 0x06037996 RID: 227734 RVA: 0x00F8A53C File Offset: 0x00F8873C
 		public CyberPunkTaskSliderData GetCyberPunkTaskSliderData()
 		{
 			EdgeRunnerScoreReward? cyberPunkTaskSliderConfig = this.GetCyberPunkTaskSliderConfig();
@@ -569,7 +572,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return cyberPunkTaskSliderData;
 		}
 
-		// Token: 0x06042E3F RID: 273983 RVA: 0x01048FF0 File Offset: 0x010471F0
+		// Token: 0x06037997 RID: 227735 RVA: 0x00F8A618 File Offset: 0x00F88818
 		[NullableContext(2)]
 		public EdgeRunnerLordGymPassRecord GetAdamSmasherData(int stageId)
 		{
@@ -581,14 +584,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return result;
 		}
 
-		// Token: 0x06042E40 RID: 273984 RVA: 0x01049010 File Offset: 0x01047210
+		// Token: 0x06037998 RID: 227736 RVA: 0x00F8A638 File Offset: 0x00F88838
 		public void UpdateAdamSmasherPassRecord(EdgeRunnerLordGymPassRecord passRecord)
 		{
 			this.AdamSmasherData[passRecord.LoadGymId] = passRecord;
 			this.LordGymPassRecords[passRecord.LoadGymId] = passRecord.PassTime;
 		}
 
-		// Token: 0x06042E41 RID: 273985 RVA: 0x0104903C File Offset: 0x0104723C
+		// Token: 0x06037999 RID: 227737 RVA: 0x00F8A664 File Offset: 0x00F88864
 		public ECyberPunkTrialState GetTrialRewardState(int trialId)
 		{
 			ECyberPunkTrialState result;
@@ -599,25 +602,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return result;
 		}
 
-		// Token: 0x06042E42 RID: 273986 RVA: 0x0104905C File Offset: 0x0104725C
+		// Token: 0x0603799A RID: 227738 RVA: 0x00F8A684 File Offset: 0x00F88884
 		public void SetTrialRewardState(int trialId, ECyberPunkTrialState state)
 		{
 			this.TrialRewardStateMap[trialId] = state;
 		}
 
-		// Token: 0x06042E43 RID: 273987 RVA: 0x0104906B File Offset: 0x0104726B
+		// Token: 0x0603799B RID: 227739 RVA: 0x00F8A693 File Offset: 0x00F88893
 		public List<int> GetEdgeRunnerFunctionIds()
 		{
 			return this.EdgeRunnerFunctionIds;
 		}
 
-		// Token: 0x06042E44 RID: 273988 RVA: 0x01049073 File Offset: 0x01047273
+		// Token: 0x0603799C RID: 227740 RVA: 0x00F8A69B File Offset: 0x00F8889B
 		public List<ConditionTask> GetConditionTasks()
 		{
 			return this.ConditionTasks;
 		}
 
-		// Token: 0x06042E45 RID: 273989 RVA: 0x0104907B File Offset: 0x0104727B
+		// Token: 0x0603799D RID: 227741 RVA: 0x00F8A6A3 File Offset: 0x00F888A3
 		public bool IsEntranceUnlockedByProtocol(int conditionGroup, int unlockConfigId)
 		{
 			if (conditionGroup - 1 > 2)
@@ -627,31 +630,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return this.IsFunctionUnlocked(unlockConfigId);
 		}
 
-		// Token: 0x04022CC0 RID: 142528
+		// Token: 0x0401D51C RID: 120092
 		private readonly Dictionary<int, EdgeRunnerLordGymPassRecord> AdamSmasherData = new Dictionary<int, EdgeRunnerLordGymPassRecord>();
 
-		// Token: 0x04022CC1 RID: 142529
+		// Token: 0x0401D51D RID: 120093
 		private readonly Dictionary<int, ECyberPunkTrialState> TrialRewardStateMap = new Dictionary<int, ECyberPunkTrialState>();
 
-		// Token: 0x04022CC2 RID: 142530
+		// Token: 0x0401D51E RID: 120094
 		private List<int> EdgeRunnerFunctionIds = new List<int>();
 
-		// Token: 0x04022CC3 RID: 142531
+		// Token: 0x0401D51F RID: 120095
 		private int RewardScoreId;
 
-		// Token: 0x04022CC4 RID: 142532
+		// Token: 0x0401D520 RID: 120096
 		private List<ConditionTask> ConditionTasks = new List<ConditionTask>();
 
-		// Token: 0x04022CC5 RID: 142533
+		// Token: 0x0401D521 RID: 120097
 		private readonly HashSet<int> UnlockedFunctionIds = new HashSet<int>();
 
-		// Token: 0x04022CC6 RID: 142534
+		// Token: 0x0401D522 RID: 120098
 		private readonly HashSet<int> PreUnlockedQuestIds = new HashSet<int>();
 
-		// Token: 0x04022CC7 RID: 142535
+		// Token: 0x0401D523 RID: 120099
 		private readonly Dictionary<int, CyberPunkTaskData> TaskDataMap = new Dictionary<int, CyberPunkTaskData>();
 
-		// Token: 0x04022CC8 RID: 142536
+		// Token: 0x0401D524 RID: 120100
 		private readonly Dictionary<int, int> LordGymPassRecords = new Dictionary<int, int>();
 	}
 }

@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200240A RID: 9226
+	// Token: 0x0200077F RID: 1919
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneFloatValue")]
 	[UnrealStructLayout(28, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 28)]
 	public class FMovieSceneFloatValue : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060229A6 RID: 141734 RVA: 0x00332DA4 File Offset: 0x00330FA4
+		// Token: 0x0600A5BE RID: 42430 RVA: 0x000F4CA4 File Offset: 0x000F2EA4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneFloatValue._ScriptStructPtr != 0) ? FMovieSceneFloatValue._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieScene.MovieSceneFloatValue", ref FMovieSceneFloatValue._ScriptStructPtr);
 		}
 
-		// Token: 0x17008535 RID: 34101
-		// (get) Token: 0x060229A7 RID: 141735 RVA: 0x00332DC8 File Offset: 0x00330FC8
-		// (set) Token: 0x060229A8 RID: 141736 RVA: 0x00332DD8 File Offset: 0x00330FD8
+		// Token: 0x17001EC2 RID: 7874
+		// (get) Token: 0x0600A5BF RID: 42431 RVA: 0x000F4CC8 File Offset: 0x000F2EC8
+		// (set) Token: 0x0600A5C0 RID: 42432 RVA: 0x000F4CD8 File Offset: 0x000F2ED8
 		public unsafe float Value
 		{
 			get
@@ -31,24 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008536 RID: 34102
-		// (get) Token: 0x060229A9 RID: 141737 RVA: 0x00332DE9 File Offset: 0x00330FE9
-		// (set) Token: 0x060229AA RID: 141738 RVA: 0x00332DFD File Offset: 0x00330FFD
-		public unsafe FMovieSceneTangentData Tangent
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)FMovieSceneFloatValue.__PropertyOffset_Tangent);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FMovieSceneFloatValue.__PropertyOffset_Tangent) = value;
-			}
-		}
-
-		// Token: 0x17008537 RID: 34103
-		// (get) Token: 0x060229AB RID: 141739 RVA: 0x00332E12 File Offset: 0x00331012
-		// (set) Token: 0x060229AC RID: 141740 RVA: 0x00332E26 File Offset: 0x00331026
+		// Token: 0x17001EC3 RID: 7875
+		// (get) Token: 0x0600A5C1 RID: 42433 RVA: 0x000F4CE9 File Offset: 0x000F2EE9
+		// (set) Token: 0x0600A5C2 RID: 42434 RVA: 0x000F4CFD File Offset: 0x000F2EFD
 		public unsafe TEnumAsByte<ERichCurveInterpMode> InterpMode
 		{
 			get
@@ -61,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008538 RID: 34104
-		// (get) Token: 0x060229AD RID: 141741 RVA: 0x00332E3B File Offset: 0x0033103B
-		// (set) Token: 0x060229AE RID: 141742 RVA: 0x00332E4F File Offset: 0x0033104F
+		// Token: 0x17001EC4 RID: 7876
+		// (get) Token: 0x0600A5C3 RID: 42435 RVA: 0x000F4D12 File Offset: 0x000F2F12
+		// (set) Token: 0x0600A5C4 RID: 42436 RVA: 0x000F4D26 File Offset: 0x000F2F26
 		public unsafe TEnumAsByte<ERichCurveTangentMode> TangentMode
 		{
 			get
@@ -76,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008539 RID: 34105
-		// (get) Token: 0x060229AF RID: 141743 RVA: 0x00332E64 File Offset: 0x00331064
-		// (set) Token: 0x060229B0 RID: 141744 RVA: 0x00332E74 File Offset: 0x00331074
+		// Token: 0x17001EC5 RID: 7877
+		// (get) Token: 0x0600A5C5 RID: 42437 RVA: 0x000F4D3B File Offset: 0x000F2F3B
+		// (set) Token: 0x0600A5C6 RID: 42438 RVA: 0x000F4D4B File Offset: 0x000F2F4B
 		public unsafe byte PaddingByte
 		{
 			get
@@ -91,72 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060229B1 RID: 141745 RVA: 0x00332E85 File Offset: 0x00331085
+		// Token: 0x0600A5C7 RID: 42439 RVA: 0x000F4D5C File Offset: 0x000F2F5C
 		public FMovieSceneFloatValue()
 		{
 		}
 
-		// Token: 0x060229B2 RID: 141746 RVA: 0x00332E8D File Offset: 0x0033108D
-		public FMovieSceneFloatValue(float Value, FMovieSceneTangentData Tangent, TEnumAsByte<ERichCurveInterpMode> InterpMode, TEnumAsByte<ERichCurveTangentMode> TangentMode, byte PaddingByte)
-		{
-			this.Value = Value;
-			this.Tangent = Tangent;
-			this.InterpMode = InterpMode;
-			this.TangentMode = TangentMode;
-			this.PaddingByte = PaddingByte;
-		}
-
-		// Token: 0x060229B3 RID: 141747 RVA: 0x00332EBA File Offset: 0x003310BA
+		// Token: 0x0600A5C8 RID: 42440 RVA: 0x000F4D64 File Offset: 0x000F2F64
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneFloatValue.StaticStruct();
 		}
 
-		// Token: 0x060229B4 RID: 141748 RVA: 0x00332EC6 File Offset: 0x003310C6
+		// Token: 0x0600A5C9 RID: 42441 RVA: 0x000F4D70 File Offset: 0x000F2F70
 		[NullableContext(2)]
 		public FMovieSceneFloatValue(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060229B5 RID: 141749 RVA: 0x00332ED0 File Offset: 0x003310D0
+		// Token: 0x0600A5CA RID: 42442 RVA: 0x000F4D7A File Offset: 0x000F2F7A
 		public FMovieSceneFloatValue(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060229B6 RID: 141750 RVA: 0x00332EDB File Offset: 0x003310DB
+		// Token: 0x0600A5CB RID: 42443 RVA: 0x000F4D85 File Offset: 0x000F2F85
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneFloatValue(Pointer, false, true);
 		}
 
-		// Token: 0x060229B7 RID: 141751 RVA: 0x00332EE5 File Offset: 0x003310E5
+		// Token: 0x0600A5CC RID: 42444 RVA: 0x000F4D8F File Offset: 0x000F2F8F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneFloatValue(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040127DA RID: 75738
+		// Token: 0x040046F4 RID: 18164
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MovieScene.MovieSceneFloatValue";
 
-		// Token: 0x040127DB RID: 75739
+		// Token: 0x040046F5 RID: 18165
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040127DC RID: 75740
+		// Token: 0x040046F6 RID: 18166
 		internal static int __PropertyOffset_Value;
 
-		// Token: 0x040127DD RID: 75741
-		internal static int __PropertyOffset_Tangent;
-
-		// Token: 0x040127DE RID: 75742
+		// Token: 0x040046F7 RID: 18167
 		internal static int __PropertyOffset_InterpMode;
 
-		// Token: 0x040127DF RID: 75743
+		// Token: 0x040046F8 RID: 18168
 		internal static int __PropertyOffset_TangentMode;
 
-		// Token: 0x040127E0 RID: 75744
+		// Token: 0x040046F9 RID: 18169
 		internal static int __PropertyOffset_PaddingByte;
 	}
 }

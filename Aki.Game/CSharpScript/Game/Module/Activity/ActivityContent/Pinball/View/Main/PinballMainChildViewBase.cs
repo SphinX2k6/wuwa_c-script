@@ -7,60 +7,60 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006333 RID: 25395
+	// Token: 0x020052B1 RID: 21169
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballMainChildViewBase : UiPanelBase, GuideDefine.ICustomTabViewForGuide
 	{
-		// Token: 0x0603FE39 RID: 261689 RVA: 0x00F74ED5 File Offset: 0x00F730D5
+		// Token: 0x06034AFA RID: 215802 RVA: 0x00EBBE31 File Offset: 0x00EBA031
 		protected virtual void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x0603FE3A RID: 261690 RVA: 0x00F74ED7 File Offset: 0x00F730D7
+		// Token: 0x06034AFB RID: 215803 RVA: 0x00EBBE33 File Offset: 0x00EBA033
 		protected virtual UniTask OnPlayingStartSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603FE3B RID: 261691 RVA: 0x00F74EDE File Offset: 0x00F730DE
+		// Token: 0x06034AFC RID: 215804 RVA: 0x00EBBE3A File Offset: 0x00EBA03A
 		protected virtual UniTask OnPlayingShowSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603FE3C RID: 261692 RVA: 0x00F74EE5 File Offset: 0x00F730E5
+		// Token: 0x06034AFD RID: 215805 RVA: 0x00EBBE41 File Offset: 0x00EBA041
 		protected virtual UniTask OnPlayingHideSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603FE3D RID: 261693 RVA: 0x00F74EEC File Offset: 0x00F730EC
+		// Token: 0x06034AFE RID: 215806 RVA: 0x00EBBE48 File Offset: 0x00EBA048
 		protected virtual UniTask OnPlayingCloseSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603FE3E RID: 261694 RVA: 0x00F74EF3 File Offset: 0x00F730F3
+		// Token: 0x06034AFF RID: 215807 RVA: 0x00EBBE4F File Offset: 0x00EBA04F
 		protected virtual void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x0603FE3F RID: 261695 RVA: 0x00F74EF5 File Offset: 0x00F730F5
+		// Token: 0x06034B00 RID: 215808 RVA: 0x00EBBE51 File Offset: 0x00EBA051
 		protected override void OnStartImplement()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.FirstShow = true;
 		}
 
-		// Token: 0x0603FE40 RID: 261696 RVA: 0x00F74F0F File Offset: 0x00F7310F
+		// Token: 0x06034B01 RID: 215809 RVA: 0x00EBBE6B File Offset: 0x00EBA06B
 		protected override void OnBeforeShowImplement()
 		{
 			this.OnAddEventListener();
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, this.ViewName);
 		}
 
-		// Token: 0x0603FE41 RID: 261697 RVA: 0x00F74F30 File Offset: 0x00F73130
+		// Token: 0x06034B02 RID: 215810 RVA: 0x00EBBE8C File Offset: 0x00EBA08C
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PinballMainChildViewBase.<OnShowAsyncImplementImplement>d__14 <OnShowAsyncImplementImplement>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE42 RID: 261698 RVA: 0x00F74F74 File Offset: 0x00F73174
+		// Token: 0x06034B03 RID: 215811 RVA: 0x00EBBED0 File Offset: 0x00EBA0D0
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PinballMainChildViewBase.<OnHideAsyncImplementImplement>d__15 <OnHideAsyncImplementImplement>d__;
@@ -82,19 +82,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE43 RID: 261699 RVA: 0x00F74FB7 File Offset: 0x00F731B7
+		// Token: 0x06034B04 RID: 215812 RVA: 0x00EBBF13 File Offset: 0x00EBA113
 		protected override void OnAfterHideImplement()
 		{
 			this.OnRemoveEventListener();
 		}
 
-		// Token: 0x0603FE44 RID: 261700 RVA: 0x00F74FBF File Offset: 0x00F731BF
+		// Token: 0x06034B05 RID: 215813 RVA: 0x00EBBF1B File Offset: 0x00EBA11B
 		public void OpenChildView(string viewName)
 		{
 			this.RootView.OpenChildView(viewName);
 		}
 
-		// Token: 0x0603FE45 RID: 261701 RVA: 0x00F74FD0 File Offset: 0x00F731D0
+		// Token: 0x06034B06 RID: 215814 RVA: 0x00EBBF2C File Offset: 0x00EBA12C
 		public UniTask OpenChildViewAsync(string viewName)
 		{
 			PinballMainChildViewBase.<OpenChildViewAsync>d__18 <OpenChildViewAsync>d__;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OpenChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE46 RID: 261702 RVA: 0x00F7501C File Offset: 0x00F7321C
+		// Token: 0x06034B07 RID: 215815 RVA: 0x00EBBF78 File Offset: 0x00EBA178
 		[NullableContext(0)]
 		public override UniTask<bool> CloseMeAsync()
 		{
@@ -118,31 +118,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CloseMeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE47 RID: 261703 RVA: 0x00F7505F File Offset: 0x00F7325F
+		// Token: 0x06034B08 RID: 215816 RVA: 0x00EBBFBB File Offset: 0x00EBA1BB
 		public void CloseMe()
 		{
 			this.RootView.CloseCurChildView();
 		}
 
-		// Token: 0x0603FE48 RID: 261704 RVA: 0x00F7506C File Offset: 0x00F7326C
+		// Token: 0x06034B09 RID: 215817 RVA: 0x00EBBFC8 File Offset: 0x00EBA1C8
 		public string GetViewName()
 		{
 			return this.ViewName ?? "";
 		}
 
-		// Token: 0x0603FE49 RID: 261705 RVA: 0x00F7507D File Offset: 0x00F7327D
+		// Token: 0x06034B0A RID: 215818 RVA: 0x00EBBFD9 File Offset: 0x00EBA1D9
 		public void BackToLastView()
 		{
 			this.RootView.Back();
 		}
 
-		// Token: 0x0603FE4A RID: 261706 RVA: 0x00F7508A File Offset: 0x00F7328A
+		// Token: 0x06034B0B RID: 215819 RVA: 0x00EBBFE6 File Offset: 0x00EBA1E6
 		public void PlayRootSequence(string sequenceName)
 		{
 			this.RootView.PlaySequenceByName(sequenceName);
 		}
 
-		// Token: 0x0603FE4B RID: 261707 RVA: 0x00F75098 File Offset: 0x00F73298
+		// Token: 0x06034B0C RID: 215820 RVA: 0x00EBBFF4 File Offset: 0x00EBA1F4
 		public UniTask PlayRootSequenceAsync(string sequenceName)
 		{
 			PinballMainChildViewBase.<PlayRootSequenceAsync>d__24 <PlayRootSequenceAsync>d__;
@@ -154,26 +154,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <PlayRootSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04021540 RID: 136512
+		// Token: 0x0401BE6F RID: 114287
 		[Nullable(2)]
 		public PinballMainRootViewBase RootView;
 
-		// Token: 0x04021541 RID: 136513
+		// Token: 0x0401BE70 RID: 114288
 		[Nullable(2)]
 		public object ViewModel;
 
-		// Token: 0x04021542 RID: 136514
+		// Token: 0x0401BE71 RID: 114289
 		[Nullable(2)]
 		public string ViewName;
 
-		// Token: 0x04021543 RID: 136515
+		// Token: 0x0401BE72 RID: 114290
 		public int ActivityId;
 
-		// Token: 0x04021544 RID: 136516
+		// Token: 0x0401BE73 RID: 114291
 		[Nullable(2)]
 		protected UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04021545 RID: 136517
+		// Token: 0x0401BE74 RID: 114292
 		private bool FirstShow;
 	}
 }

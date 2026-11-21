@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021D8 RID: 8664
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002443 RID: 9283
 	public class SetSkillBtnEffect : ActionParams
 	{
-		// Token: 0x0600BE63 RID: 48739 RVA: 0x001B65A0 File Offset: 0x001B47A0
+		// Token: 0x0600CA1F RID: 51743 RVA: 0x001CDC2C File Offset: 0x001CBE2C
 		private SetSkillBtnEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE64 RID: 48740 RVA: 0x001B65D8 File Offset: 0x001B47D8
+		// Token: 0x0600CA20 RID: 51744 RVA: 0x001CDC64 File Offset: 0x001CBE64
 		public static SetSkillBtnEffect Create([Nullable(2)] SetSkillBtnEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE65 RID: 48741 RVA: 0x001B65EB File Offset: 0x001B47EB
+		// Token: 0x0600CA21 RID: 51745 RVA: 0x001CDC77 File Offset: 0x001CBE77
 		public static SetSkillBtnEffect CreateFromSetValue([Nullable(2)] SetSkillBtnEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE66 RID: 48742 RVA: 0x001B65FE File Offset: 0x001B47FE
+		// Token: 0x0600CA22 RID: 51746 RVA: 0x001CDC8A File Offset: 0x001CBE8A
 		public SetSkillBtnEffect_SetValue ToSetValue()
 		{
 			return new SetSkillBtnEffect_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039CF RID: 14799
-		// (get) Token: 0x0600BE67 RID: 48743 RVA: 0x001B6629 File Offset: 0x001B4829
-		// (set) Token: 0x0600BE68 RID: 48744 RVA: 0x001B6654 File Offset: 0x001B4854
+		// Token: 0x17003CC4 RID: 15556
+		// (get) Token: 0x0600CA23 RID: 51747 RVA: 0x001CDCB5 File Offset: 0x001CBEB5
+		// (set) Token: 0x0600CA24 RID: 51748 RVA: 0x001CDCE0 File Offset: 0x001CBEE0
 		public virtual ESkillButtonType SkillBtnType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039D0 RID: 14800
-		// (get) Token: 0x0600BE69 RID: 48745 RVA: 0x001B6664 File Offset: 0x001B4864
-		// (set) Token: 0x0600BE6A RID: 48746 RVA: 0x001B66C5 File Offset: 0x001B48C5
+		// Token: 0x17003CC5 RID: 15557
+		// (get) Token: 0x0600CA25 RID: 51749 RVA: 0x001CDCF0 File Offset: 0x001CBEF0
+		// (set) Token: 0x0600CA26 RID: 51750 RVA: 0x001CDD51 File Offset: 0x001CBF51
 		public virtual IMusicBattleBtnEffect SkillBtnEffectData
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039D1 RID: 14801
-		// (get) Token: 0x0600BE6B RID: 48747 RVA: 0x001B66DA File Offset: 0x001B48DA
-		// (set) Token: 0x0600BE6C RID: 48748 RVA: 0x001B6709 File Offset: 0x001B4909
+		// Token: 0x17003CC6 RID: 15558
+		// (get) Token: 0x0600CA27 RID: 51751 RVA: 0x001CDD66 File Offset: 0x001CBF66
+		// (set) Token: 0x0600CA28 RID: 51752 RVA: 0x001CDD95 File Offset: 0x001CBF95
 		public virtual float Time
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400719F RID: 29087
+		// Token: 0x040077E8 RID: 30696
 		[Nullable(2)]
 		protected new SetSkillBtnEffect FbInstance;
 
-		// Token: 0x040071A0 RID: 29088
+		// Token: 0x040077E9 RID: 30697
 		[Nullable(2)]
 		protected SetSkillBtnEffect_SetValue PocoInterface;
 
-		// Token: 0x040071A1 RID: 29089
+		// Token: 0x040077EA RID: 30698
 		private IMusicBattleBtnEffect _SkillBtnEffectDataCache;
 
-		// Token: 0x040071A2 RID: 29090
+		// Token: 0x040077EB RID: 30699
 		private bool _SkillBtnEffectDataInited;
 	}
 }

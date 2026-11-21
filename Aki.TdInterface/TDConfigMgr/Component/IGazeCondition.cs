@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003D2 RID: 978
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000429 RID: 1065
 	public class IGazeCondition
 	{
-		// Token: 0x060013A5 RID: 5029 RVA: 0x0003F9E4 File Offset: 0x0003DBE4
+		// Token: 0x06001533 RID: 5427 RVA: 0x00043564 File Offset: 0x00041764
 		private IGazeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060013A6 RID: 5030 RVA: 0x0003FA1C File Offset: 0x0003DC1C
+		// Token: 0x06001534 RID: 5428 RVA: 0x0004359C File Offset: 0x0004179C
 		public static IGazeCondition Create([Nullable(2)] IGazeCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013A7 RID: 5031 RVA: 0x0003FA2F File Offset: 0x0003DC2F
+		// Token: 0x06001535 RID: 5429 RVA: 0x000435AF File Offset: 0x000417AF
 		public static IGazeCondition CreateFromSetValue([Nullable(2)] IGazeCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013A8 RID: 5032 RVA: 0x0003FA42 File Offset: 0x0003DC42
+		// Token: 0x06001536 RID: 5430 RVA: 0x000435C2 File Offset: 0x000417C2
 		public IGazeCondition_SetValue ToSetValue()
 		{
 			return new IGazeCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000575 RID: 1397
-		// (get) Token: 0x060013A9 RID: 5033 RVA: 0x0003FA64 File Offset: 0x0003DC64
-		// (set) Token: 0x060013AA RID: 5034 RVA: 0x0003FA9E File Offset: 0x0003DC9E
+		// Token: 0x170005D9 RID: 1497
+		// (get) Token: 0x06001537 RID: 5431 RVA: 0x000435E4 File Offset: 0x000417E4
+		// (set) Token: 0x06001538 RID: 5432 RVA: 0x0004361E File Offset: 0x0004181E
 		public virtual int? GazeInDistance
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000576 RID: 1398
-		// (get) Token: 0x060013AB RID: 5035 RVA: 0x0003FAAC File Offset: 0x0003DCAC
-		// (set) Token: 0x060013AC RID: 5036 RVA: 0x0003FB0D File Offset: 0x0003DD0D
+		// Token: 0x170005DA RID: 1498
+		// (get) Token: 0x06001539 RID: 5433 RVA: 0x0004362C File Offset: 0x0004182C
+		// (set) Token: 0x0600153A RID: 5434 RVA: 0x0004368D File Offset: 0x0004188D
 		[Nullable(2)]
 		public virtual IConeTriggerShape ScanRange
 		{
@@ -118,18 +116,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F9E RID: 3998
+		// Token: 0x040010B7 RID: 4279
 		[Nullable(2)]
 		protected IGazeCondition FbInstance;
 
-		// Token: 0x04000F9F RID: 3999
+		// Token: 0x040010B8 RID: 4280
 		[Nullable(2)]
 		protected IGazeCondition_SetValue PocoInterface;
 
-		// Token: 0x04000FA0 RID: 4000
+		// Token: 0x040010B9 RID: 4281
 		private IConeTriggerShape _ScanRangeCache;
 
-		// Token: 0x04000FA1 RID: 4001
+		// Token: 0x040010BA RID: 4282
 		private bool _ScanRangeInited;
 	}
 }

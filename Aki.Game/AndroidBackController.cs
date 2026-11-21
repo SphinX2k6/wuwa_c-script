@@ -4,13 +4,13 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016E4 RID: 5860
+// Token: 0x02000B9C RID: 2972
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class AndroidBackController : UiControllerBase
 {
-	// Token: 0x0600A7EE RID: 42990 RVA: 0x0025B397 File Offset: 0x00259597
+	// Token: 0x06007BCE RID: 31694 RVA: 0x0026579F File Offset: 0x0026399F
 	protected override bool OnInit()
 	{
 		if (Info.Instance.IsMobilePlatform())
@@ -20,19 +20,19 @@ public class AndroidBackController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A7EF RID: 42991 RVA: 0x0025B3AD File Offset: 0x002595AD
+	// Token: 0x06007BCF RID: 31695 RVA: 0x002657B5 File Offset: 0x002639B5
 	protected override void OnAddEvents()
 	{
 		InputDistributeController.Instance.BindKey("Android_Back", new TInputHandle<InputDistributeDefine.EActionType>(this.OnAndroidBackEvent));
 	}
 
-	// Token: 0x0600A7F0 RID: 42992 RVA: 0x0025B3CA File Offset: 0x002595CA
+	// Token: 0x06007BD0 RID: 31696 RVA: 0x002657D2 File Offset: 0x002639D2
 	protected override void OnRemoveEvents()
 	{
 		InputDistributeController.Instance.UnBindKey("Android_Back", new TInputHandle<InputDistributeDefine.EActionType>(this.OnAndroidBackEvent));
 	}
 
-	// Token: 0x0600A7F1 RID: 42993 RVA: 0x0025B3E8 File Offset: 0x002595E8
+	// Token: 0x06007BD1 RID: 31697 RVA: 0x002657F0 File Offset: 0x002639F0
 	private void OnAndroidBackEvent(string keyName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (actionType == InputDistributeDefine.EActionType.Press)
@@ -63,7 +63,7 @@ public class AndroidBackController : UiControllerBase
 		this.ClickButtonInternal(topActiveAndroidBack);
 	}
 
-	// Token: 0x0600A7F2 RID: 42994 RVA: 0x0025B488 File Offset: 0x00259688
+	// Token: 0x06007BD2 RID: 31698 RVA: 0x00265890 File Offset: 0x00263A90
 	private void HandleAndroidBackEmpty()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.LoginView))
@@ -98,7 +98,7 @@ public class AndroidBackController : UiControllerBase
 		ConfirmBoxController.Instance.ShowReturnLoginConfirmBox();
 	}
 
-	// Token: 0x0600A7F3 RID: 42995 RVA: 0x0025B578 File Offset: 0x00259778
+	// Token: 0x06007BD3 RID: 31699 RVA: 0x00265980 File Offset: 0x00263B80
 	private void ClickButtonInternal(UUIAndroidBackComponent component)
 	{
 		TsLguiEventSystemActor lguiEventSystemActor = LguiEventSystemManager.Instance.LguiEventSystemActor;
@@ -108,14 +108,14 @@ public class AndroidBackController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A7F4 RID: 42996 RVA: 0x0025B5B1 File Offset: 0x002597B1
+	// Token: 0x06007BD4 RID: 31700 RVA: 0x002659B9 File Offset: 0x00263BB9
 	protected override bool OnClear()
 	{
 		UUIAndroidBackComponent.ClearAndroidBackComponent();
 		return true;
 	}
 
-	// Token: 0x0600A7F5 RID: 42997 RVA: 0x0025B5BC File Offset: 0x002597BC
+	// Token: 0x06007BD5 RID: 31701 RVA: 0x002659C4 File Offset: 0x00263BC4
 	public void GmTestAndroidBack()
 	{
 		if (this.TestAndroidBack != null)
@@ -144,7 +144,7 @@ public class AndroidBackController : UiControllerBase
 		LguiUtil.Instance.SetActorIsPermanent(this.TestAndroidBack, true, true);
 	}
 
-	// Token: 0x0600A7F6 RID: 42998 RVA: 0x0025B6CD File Offset: 0x002598CD
+	// Token: 0x06007BD6 RID: 31702 RVA: 0x00265AD5 File Offset: 0x00263CD5
 	private void CloseTestAndroidBack()
 	{
 		(this.TestAndroidBack.GetComponentByClass(UUIButtonComponent.StaticClass()) as UUIButtonComponent).OnClickCallBack.Unbind();
@@ -152,8 +152,8 @@ public class AndroidBackController : UiControllerBase
 		this.TestAndroidBack = null;
 	}
 
-	// Token: 0x17000DEC RID: 3564
-	// (get) Token: 0x0600A7F7 RID: 42999 RVA: 0x0025B705 File Offset: 0x00259905
+	// Token: 0x17000E0D RID: 3597
+	// (get) Token: 0x06007BD7 RID: 31703 RVA: 0x00265B0D File Offset: 0x00263D0D
 	public static AndroidBackController Instance
 	{
 		get
@@ -162,7 +162,7 @@ public class AndroidBackController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A7F8 RID: 43000 RVA: 0x0025B70C File Offset: 0x0025990C
+	// Token: 0x06007BD8 RID: 31704 RVA: 0x00265B14 File Offset: 0x00263D14
 	public static AndroidBackController GetOrCreateInstance()
 	{
 		if (AndroidBackController._Instance == null)
@@ -172,7 +172,7 @@ public class AndroidBackController : UiControllerBase
 		return AndroidBackController._Instance;
 	}
 
-	// Token: 0x0600A7F9 RID: 43001 RVA: 0x0025B720 File Offset: 0x00259920
+	// Token: 0x06007BD9 RID: 31705 RVA: 0x00265B28 File Offset: 0x00263D28
 	public static bool CreateInstance()
 	{
 		if (AndroidBackController._Instance != null)
@@ -183,34 +183,34 @@ public class AndroidBackController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A7FA RID: 43002 RVA: 0x0025B736 File Offset: 0x00259936
+	// Token: 0x06007BDA RID: 31706 RVA: 0x00265B3E File Offset: 0x00263D3E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A7FB RID: 43003 RVA: 0x0025B738 File Offset: 0x00259938
+	// Token: 0x06007BDB RID: 31707 RVA: 0x00265B40 File Offset: 0x00263D40
 	public static void ResetStaticDefaultValue()
 	{
 		AndroidBackController._Instance = null;
 	}
 
-	// Token: 0x0600A7FC RID: 43004 RVA: 0x0025B740 File Offset: 0x00259940
+	// Token: 0x06007BDC RID: 31708 RVA: 0x00265B48 File Offset: 0x00263D48
 	static AndroidBackController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AndroidBackController.CreateStaticDefaultValue), new Action(AndroidBackController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004BAC RID: 19372
+	// Token: 0x04004C53 RID: 19539
 	private const int ANDROID_BACK_POINT_ID = 1;
 
-	// Token: 0x04004BAD RID: 19373
+	// Token: 0x04004C54 RID: 19540
 	public bool IsLogOpen;
 
-	// Token: 0x04004BAE RID: 19374
+	// Token: 0x04004C55 RID: 19541
 	[Nullable(2)]
 	private AActor TestAndroidBack;
 
-	// Token: 0x04004BAF RID: 19375
+	// Token: 0x04004C56 RID: 19542
 	[Nullable(2)]
 	private static AndroidBackController _Instance;
 }

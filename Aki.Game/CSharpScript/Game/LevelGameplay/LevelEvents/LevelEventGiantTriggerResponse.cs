@@ -8,15 +8,15 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B30 RID: 27440
+	// Token: 0x02005CA8 RID: 23720
 	public class LevelEventGiantTriggerResponse : LevelEventBase
 	{
-		// Token: 0x0604411F RID: 278815 RVA: 0x010BCC5E File Offset: 0x010BAE5E
+		// Token: 0x0603A271 RID: 238193 RVA: 0x010664EA File Offset: 0x010646EA
 		public LevelEventGiantTriggerResponse(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044120 RID: 278816 RVA: 0x010BCC68 File Offset: 0x010BAE68
+		// Token: 0x0603A272 RID: 238194 RVA: 0x010664F4 File Offset: 0x010646F4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

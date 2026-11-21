@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000F2A RID: 3882
+// Token: 0x020003DF RID: 991
 public class AchievementProgressConfirmItem : UiPanelBase
 {
-	// Token: 0x06006269 RID: 25193 RVA: 0x00134158 File Offset: 0x00132358
+	// Token: 0x06003601 RID: 13825 RVA: 0x0013CA80 File Offset: 0x0013AC80
 	[NullableContext(1)]
 	public AchievementProgressConfirmItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600626A RID: 25194 RVA: 0x00134170 File Offset: 0x00132370
+	// Token: 0x06003602 RID: 13826 RVA: 0x0013CA98 File Offset: 0x0013AC98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -36,14 +36,14 @@ public class AchievementProgressConfirmItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600626B RID: 25195 RVA: 0x00134216 File Offset: 0x00132416
+	// Token: 0x06003603 RID: 13827 RVA: 0x0013CB3E File Offset: 0x0013AD3E
 	[NullableContext(1)]
 	public void SetClickCallback(Action call)
 	{
 		this.OnClickCallback = call;
 	}
 
-	// Token: 0x0600626C RID: 25196 RVA: 0x0013421F File Offset: 0x0013241F
+	// Token: 0x06003604 RID: 13828 RVA: 0x0013CB47 File Offset: 0x0013AD47
 	private void OnClickButton()
 	{
 		Action onClickCallback = this.OnClickCallback;
@@ -54,22 +54,22 @@ public class AchievementProgressConfirmItem : UiPanelBase
 		onClickCallback();
 	}
 
-	// Token: 0x0600626D RID: 25197 RVA: 0x00134231 File Offset: 0x00132431
+	// Token: 0x06003605 RID: 13829 RVA: 0x0013CB59 File Offset: 0x0013AD59
 	public void RefreshRedPoint(bool value)
 	{
 		base.GetItem(1).SetUIActive(value);
 	}
 
-	// Token: 0x04002CA9 RID: 11433
+	// Token: 0x04002D42 RID: 11586
 	[Nullable(2)]
 	private Action OnClickCallback;
 
-	// Token: 0x02007572 RID: 30066
+	// Token: 0x02006706 RID: 26374
 	private enum EComponents
 	{
-		// Token: 0x04026D4C RID: 159052
+		// Token: 0x04022097 RID: 139415
 		ConfirmBtn,
-		// Token: 0x04026D4D RID: 159053
+		// Token: 0x04022098 RID: 139416
 		RedDot
 	}
 }

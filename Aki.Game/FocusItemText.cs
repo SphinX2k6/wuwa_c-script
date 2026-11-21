@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DC7 RID: 7623
+// Token: 0x02001289 RID: 4745
 [NullableContext(2)]
 [Nullable(0)]
 public class FocusItemText : UiPanelBase
 {
-	// Token: 0x0600E7D5 RID: 59349 RVA: 0x0036BB8E File Offset: 0x00369D8E
+	// Token: 0x0600BBF4 RID: 48116 RVA: 0x00377822 File Offset: 0x00375A22
 	[NullableContext(1)]
 	public FocusItemText(GuideFocusItem owner)
 	{
@@ -20,7 +20,7 @@ public class FocusItemText : UiPanelBase
 		this.View = owner.Owner;
 	}
 
-	// Token: 0x0600E7D6 RID: 59350 RVA: 0x0036BBB0 File Offset: 0x00369DB0
+	// Token: 0x0600BBF5 RID: 48117 RVA: 0x00377844 File Offset: 0x00375A44
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -54,7 +54,7 @@ public class FocusItemText : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E7D7 RID: 59351 RVA: 0x0036BD68 File Offset: 0x00369F68
+	// Token: 0x0600BBF6 RID: 48118 RVA: 0x003779FC File Offset: 0x00375BFC
 	protected override void OnStart()
 	{
 		float totalDuration = this.View.TotalDuration;
@@ -72,13 +72,13 @@ public class FocusItemText : UiPanelBase
 		this.RootItem.SetAnchorOffset(FVector2D.ZeroVector);
 	}
 
-	// Token: 0x0600E7D8 RID: 59352 RVA: 0x0036BDC9 File Offset: 0x00369FC9
+	// Token: 0x0600BBF7 RID: 48119 RVA: 0x00377A5D File Offset: 0x00375C5D
 	private void ReClampTextPosition(UUILayoutBase _)
 	{
 		this.ClampDelay = 1;
 	}
 
-	// Token: 0x0600E7D9 RID: 59353 RVA: 0x0036BDD4 File Offset: 0x00369FD4
+	// Token: 0x0600BBF8 RID: 48120 RVA: 0x00377A68 File Offset: 0x00375C68
 	public void ShowText()
 	{
 		UUIText text = base.GetText(7);
@@ -131,14 +131,14 @@ public class FocusItemText : UiPanelBase
 		base.GetItem(10).SetUIActive(false);
 	}
 
-	// Token: 0x0600E7DA RID: 59354 RVA: 0x0036BFD5 File Offset: 0x0036A1D5
+	// Token: 0x0600BBF9 RID: 48121 RVA: 0x00377C69 File Offset: 0x00375E69
 	public void OnTick(float delta)
 	{
 		this.SetUpTextPosition();
 		this.ClampTextPosition();
 	}
 
-	// Token: 0x0600E7DB RID: 59355 RVA: 0x0036BFE4 File Offset: 0x0036A1E4
+	// Token: 0x0600BBFA RID: 48122 RVA: 0x00377C78 File Offset: 0x00375E78
 	private void SetUpTextPosition()
 	{
 		if (!GuideController.Instance.GmEnableFocusTextPosTick)
@@ -195,7 +195,7 @@ public class FocusItemText : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E7DC RID: 59356 RVA: 0x0036C254 File Offset: 0x0036A454
+	// Token: 0x0600BBFB RID: 48123 RVA: 0x00377EE8 File Offset: 0x003760E8
 	private void ClampTextPosition()
 	{
 		if (this.ClampTxtInScreen && this.ClampDelay > 0)
@@ -244,7 +244,7 @@ public class FocusItemText : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E7DD RID: 59357 RVA: 0x0036C45F File Offset: 0x0036A65F
+	// Token: 0x0600BBFC RID: 48124 RVA: 0x003780F3 File Offset: 0x003762F3
 	public void OnDurationChange(float remainDuration)
 	{
 		if (this.CountDownItem != null)
@@ -253,7 +253,7 @@ public class FocusItemText : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E7DE RID: 59358 RVA: 0x0036C475 File Offset: 0x0036A675
+	// Token: 0x0600BBFD RID: 48125 RVA: 0x00378109 File Offset: 0x00376309
 	public void OnBaseViewCloseWhenFinish()
 	{
 		GuideCountDownItem countDownItem = this.CountDownItem;
@@ -264,57 +264,57 @@ public class FocusItemText : UiPanelBase
 		base.GetItem(9).SetUIActive(true);
 	}
 
-	// Token: 0x04006B43 RID: 27459
+	// Token: 0x04006C24 RID: 27684
 	private const float HorizontalScreenSpace = 80f;
 
-	// Token: 0x04006B44 RID: 27460
+	// Token: 0x04006C25 RID: 27685
 	private const float VerticalScreenSpace = 10f;
 
-	// Token: 0x04006B45 RID: 27461
+	// Token: 0x04006C26 RID: 27686
 	private const float MaxTextWidth = 1120f;
 
-	// Token: 0x04006B46 RID: 27462
+	// Token: 0x04006C27 RID: 27687
 	private int ClampDelay;
 
-	// Token: 0x04006B47 RID: 27463
+	// Token: 0x04006C28 RID: 27688
 	private bool ClampTxtInScreen = true;
 
-	// Token: 0x04006B48 RID: 27464
+	// Token: 0x04006C29 RID: 27689
 	private GuideCountDownItem CountDownItem;
 
-	// Token: 0x04006B49 RID: 27465
+	// Token: 0x04006C2A RID: 27690
 	private readonly GuideFocusView View;
 
-	// Token: 0x04006B4A RID: 27466
+	// Token: 0x04006C2B RID: 27691
 	private readonly GuideFocusItem Owner;
 
-	// Token: 0x0200839C RID: 33692
+	// Token: 0x02007524 RID: 29988
 	[NullableContext(0)]
 	private enum EFocusItemText
 	{
-		// Token: 0x0402ADF0 RID: 175600
+		// Token: 0x04026116 RID: 155926
 		Vertical,
-		// Token: 0x0402ADF1 RID: 175601
+		// Token: 0x04026117 RID: 155927
 		Up,
-		// Token: 0x0402ADF2 RID: 175602
+		// Token: 0x04026118 RID: 155928
 		Down,
-		// Token: 0x0402ADF3 RID: 175603
+		// Token: 0x04026119 RID: 155929
 		Horizontal,
-		// Token: 0x0402ADF4 RID: 175604
+		// Token: 0x0402611A RID: 155930
 		Left,
-		// Token: 0x0402ADF5 RID: 175605
+		// Token: 0x0402611B RID: 155931
 		Right,
-		// Token: 0x0402ADF6 RID: 175606
+		// Token: 0x0402611C RID: 155932
 		TextBg,
-		// Token: 0x0402ADF7 RID: 175607
+		// Token: 0x0402611D RID: 155933
 		Text,
-		// Token: 0x0402ADF8 RID: 175608
+		// Token: 0x0402611E RID: 155934
 		CountDown,
-		// Token: 0x0402ADF9 RID: 175609
+		// Token: 0x0402611F RID: 155935
 		Toggle,
-		// Token: 0x0402ADFA RID: 175610
+		// Token: 0x04026120 RID: 155936
 		PanelRoleIcon,
-		// Token: 0x0402ADFB RID: 175611
+		// Token: 0x04026121 RID: 155937
 		RoleHead
 	}
 }

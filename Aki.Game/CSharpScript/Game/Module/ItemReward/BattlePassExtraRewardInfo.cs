@@ -4,40 +4,40 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057C3 RID: 22467
+	// Token: 0x0200479A RID: 18330
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattlePassExtraRewardInfo : RewardInfo, IBattlePassExtraRewardInfo, IRewardInfo
 	{
-		// Token: 0x1700898E RID: 35214
-		// (get) Token: 0x06039221 RID: 234017 RVA: 0x00D8FFB8 File Offset: 0x00D8E1B8
-		// (set) Token: 0x06039222 RID: 234018 RVA: 0x00D8FFC0 File Offset: 0x00D8E1C0
+		// Token: 0x17005D56 RID: 23894
+		// (get) Token: 0x0602E131 RID: 188721 RVA: 0x00CDEDF0 File Offset: 0x00CDCFF0
+		// (set) Token: 0x0602E132 RID: 188722 RVA: 0x00CDEDF8 File Offset: 0x00CDCFF8
 		public List<RewardItemData> CommonItems { get; set; }
 
-		// Token: 0x1700898F RID: 35215
-		// (get) Token: 0x06039223 RID: 234019 RVA: 0x00D8FFC9 File Offset: 0x00D8E1C9
-		// (set) Token: 0x06039224 RID: 234020 RVA: 0x00D8FFD1 File Offset: 0x00D8E1D1
+		// Token: 0x17005D57 RID: 23895
+		// (get) Token: 0x0602E133 RID: 188723 RVA: 0x00CDEE01 File Offset: 0x00CDD001
+		// (set) Token: 0x0602E134 RID: 188724 RVA: 0x00CDEE09 File Offset: 0x00CDD009
 		public List<RewardItemData> ExtraItems { get; set; }
 
-		// Token: 0x17008990 RID: 35216
-		// (get) Token: 0x06039225 RID: 234021 RVA: 0x00D8FFDA File Offset: 0x00D8E1DA
-		// (set) Token: 0x06039226 RID: 234022 RVA: 0x00D8FFE2 File Offset: 0x00D8E1E2
+		// Token: 0x17005D58 RID: 23896
+		// (get) Token: 0x0602E135 RID: 188725 RVA: 0x00CDEE12 File Offset: 0x00CDD012
+		// (set) Token: 0x0602E136 RID: 188726 RVA: 0x00CDEE1A File Offset: 0x00CDD01A
 		[Nullable(2)]
 		public string TipsTextId { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008991 RID: 35217
-		// (get) Token: 0x06039227 RID: 234023 RVA: 0x00D8FFEB File Offset: 0x00D8E1EB
-		// (set) Token: 0x06039228 RID: 234024 RVA: 0x00D8FFF3 File Offset: 0x00D8E1F3
+		// Token: 0x17005D59 RID: 23897
+		// (get) Token: 0x0602E137 RID: 188727 RVA: 0x00CDEE23 File Offset: 0x00CDD023
+		// (set) Token: 0x0602E138 RID: 188728 RVA: 0x00CDEE2B File Offset: 0x00CDD02B
 		public Action LeftAction { get; set; }
 
-		// Token: 0x17008992 RID: 35218
-		// (get) Token: 0x06039229 RID: 234025 RVA: 0x00D8FFFC File Offset: 0x00D8E1FC
-		// (set) Token: 0x0603922A RID: 234026 RVA: 0x00D90004 File Offset: 0x00D8E204
+		// Token: 0x17005D5A RID: 23898
+		// (get) Token: 0x0602E139 RID: 188729 RVA: 0x00CDEE34 File Offset: 0x00CDD034
+		// (set) Token: 0x0602E13A RID: 188730 RVA: 0x00CDEE3C File Offset: 0x00CDD03C
 		public Action RightAction { get; set; }
 
-		// Token: 0x17008993 RID: 35219
-		// (get) Token: 0x0603922B RID: 234027 RVA: 0x00D9000D File Offset: 0x00D8E20D
-		// (set) Token: 0x0603922C RID: 234028 RVA: 0x00D90015 File Offset: 0x00D8E215
+		// Token: 0x17005D5B RID: 23899
+		// (get) Token: 0x0602E13B RID: 188731 RVA: 0x00CDEE45 File Offset: 0x00CDD045
+		// (set) Token: 0x0602E13C RID: 188732 RVA: 0x00CDEE4D File Offset: 0x00CDD04D
 		[Nullable(2)]
 		public Action<bool> FinishCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

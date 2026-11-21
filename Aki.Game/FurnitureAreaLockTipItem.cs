@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FBD RID: 4029
+// Token: 0x02000472 RID: 1138
 public class FurnitureAreaLockTipItem : UiPanelBase
 {
-	// Token: 0x0600672B RID: 26411 RVA: 0x001465FC File Offset: 0x001447FC
+	// Token: 0x06003AC3 RID: 15043 RVA: 0x0014EEC0 File Offset: 0x0014D0C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class FurnitureAreaLockTipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600672C RID: 26412 RVA: 0x00146679 File Offset: 0x00144879
+	// Token: 0x06003AC4 RID: 15044 RVA: 0x0014EF3D File Offset: 0x0014D13D
 	[NullableContext(1)]
 	public void Refresh(string content, Action jumpCallback)
 	{
@@ -30,7 +30,7 @@ public class FurnitureAreaLockTipItem : UiPanelBase
 		this.JumpCallback = jumpCallback;
 	}
 
-	// Token: 0x0600672D RID: 26413 RVA: 0x00146699 File Offset: 0x00144899
+	// Token: 0x06003AC5 RID: 15045 RVA: 0x0014EF5D File Offset: 0x0014D15D
 	private void OnJumpButtonClick()
 	{
 		Action jumpCallback = this.JumpCallback;
@@ -41,7 +41,7 @@ public class FurnitureAreaLockTipItem : UiPanelBase
 		jumpCallback();
 	}
 
-	// Token: 0x04002EC5 RID: 11973
+	// Token: 0x04002F5E RID: 12126
 	[Nullable(2)]
 	private Action JumpCallback;
 }

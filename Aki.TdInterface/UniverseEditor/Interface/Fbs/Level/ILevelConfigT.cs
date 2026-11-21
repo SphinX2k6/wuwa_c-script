@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Level
 {
-	// Token: 0x0200440A RID: 17418
+	// Token: 0x02004872 RID: 18546
 	public class ILevelConfigT
 	{
-		// Token: 0x17007AE5 RID: 31461
-		// (get) Token: 0x06019EF4 RID: 106228 RVA: 0x003B5A20 File Offset: 0x003B3C20
-		// (set) Token: 0x06019EF5 RID: 106229 RVA: 0x003B5A28 File Offset: 0x003B3C28
+		// Token: 0x17008124 RID: 33060
+		// (get) Token: 0x0601B6C5 RID: 112325 RVA: 0x003E1C2C File Offset: 0x003DFE2C
+		// (set) Token: 0x0601B6C6 RID: 112326 RVA: 0x003E1C34 File Offset: 0x003DFE34
 		public int Id { get; set; }
 
-		// Token: 0x17007AE6 RID: 31462
-		// (get) Token: 0x06019EF6 RID: 106230 RVA: 0x003B5A31 File Offset: 0x003B3C31
-		// (set) Token: 0x06019EF7 RID: 106231 RVA: 0x003B5A39 File Offset: 0x003B3C39
+		// Token: 0x17008125 RID: 33061
+		// (get) Token: 0x0601B6C7 RID: 112327 RVA: 0x003E1C3D File Offset: 0x003DFE3D
+		// (set) Token: 0x0601B6C8 RID: 112328 RVA: 0x003E1C45 File Offset: 0x003DFE45
 		public string Name { get; set; }
 
-		// Token: 0x17007AE7 RID: 31463
-		// (get) Token: 0x06019EF8 RID: 106232 RVA: 0x003B5A42 File Offset: 0x003B3C42
-		// (set) Token: 0x06019EF9 RID: 106233 RVA: 0x003B5A4A File Offset: 0x003B3C4A
+		// Token: 0x17008126 RID: 33062
+		// (get) Token: 0x0601B6C9 RID: 112329 RVA: 0x003E1C4E File Offset: 0x003DFE4E
+		// (set) Token: 0x0601B6CA RID: 112330 RVA: 0x003E1C56 File Offset: 0x003DFE56
 		public string ContentPath { get; set; }
 
-		// Token: 0x17007AE8 RID: 31464
-		// (get) Token: 0x06019EFA RID: 106234 RVA: 0x003B5A53 File Offset: 0x003B3C53
-		// (set) Token: 0x06019EFB RID: 106235 RVA: 0x003B5A5B File Offset: 0x003B3C5B
+		// Token: 0x17008127 RID: 33063
+		// (get) Token: 0x0601B6CB RID: 112331 RVA: 0x003E1C5F File Offset: 0x003DFE5F
+		// (set) Token: 0x0601B6CC RID: 112332 RVA: 0x003E1C67 File Offset: 0x003DFE67
 		public bool IsPartition { get; set; }
 
-		// Token: 0x17007AE9 RID: 31465
-		// (get) Token: 0x06019EFC RID: 106236 RVA: 0x003B5A64 File Offset: 0x003B3C64
-		// (set) Token: 0x06019EFD RID: 106237 RVA: 0x003B5A6C File Offset: 0x003B3C6C
+		// Token: 0x17008128 RID: 33064
+		// (get) Token: 0x0601B6CD RID: 112333 RVA: 0x003E1C70 File Offset: 0x003DFE70
+		// (set) Token: 0x0601B6CE RID: 112334 RVA: 0x003E1C78 File Offset: 0x003DFE78
 		public IMainWpPartitionDataT PartitionData { get; set; }
 
-		// Token: 0x17007AEA RID: 31466
-		// (get) Token: 0x06019EFE RID: 106238 RVA: 0x003B5A75 File Offset: 0x003B3C75
-		// (set) Token: 0x06019EFF RID: 106239 RVA: 0x003B5A7D File Offset: 0x003B3C7D
+		// Token: 0x17008129 RID: 33065
+		// (get) Token: 0x0601B6CF RID: 112335 RVA: 0x003E1C81 File Offset: 0x003DFE81
+		// (set) Token: 0x0601B6D0 RID: 112336 RVA: 0x003E1C89 File Offset: 0x003DFE89
 		public bool IsTest { get; set; }
 
-		// Token: 0x06019F00 RID: 106240 RVA: 0x003B5A86 File Offset: 0x003B3C86
+		// Token: 0x0601B6D1 RID: 112337 RVA: 0x003E1C92 File Offset: 0x003DFE92
 		public ILevelConfigT()
 		{
 			this.Id = 0;

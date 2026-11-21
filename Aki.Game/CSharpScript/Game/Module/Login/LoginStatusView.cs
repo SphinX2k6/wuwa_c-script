@@ -8,28 +8,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B9 RID: 22201
+	// Token: 0x0200468F RID: 18063
 	public class LoginStatusView : UiViewBase
 	{
-		// Token: 0x06038782 RID: 231298 RVA: 0x00D682AF File Offset: 0x00D664AF
+		// Token: 0x0602D67F RID: 185983 RVA: 0x00CB6473 File Offset: 0x00CB4673
 		[NullableContext(1)]
 		public LoginStatusView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038783 RID: 231299 RVA: 0x00D682B8 File Offset: 0x00D664B8
+		// Token: 0x0602D680 RID: 185984 RVA: 0x00CB647C File Offset: 0x00CB467C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.LoginStatusChange, new Action(this.RefreshStatus));
 		}
 
-		// Token: 0x06038784 RID: 231300 RVA: 0x00D682D3 File Offset: 0x00D664D3
+		// Token: 0x0602D681 RID: 185985 RVA: 0x00CB6497 File Offset: 0x00CB4697
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.LoginStatusChange, new Action(this.RefreshStatus));
 		}
 
-		// Token: 0x06038785 RID: 231301 RVA: 0x00D682F0 File Offset: 0x00D664F0
+		// Token: 0x0602D682 RID: 185986 RVA: 0x00CB64B4 File Offset: 0x00CB46B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Login
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038786 RID: 231302 RVA: 0x00D68338 File Offset: 0x00D66538
+		// Token: 0x0602D683 RID: 185987 RVA: 0x00CB64FC File Offset: 0x00CB46FC
 		protected override void OnStart()
 		{
 			this.RefreshStatus();
 		}
 
-		// Token: 0x06038787 RID: 231303 RVA: 0x00D68340 File Offset: 0x00D66540
+		// Token: 0x0602D684 RID: 185988 RVA: 0x00CB6504 File Offset: 0x00CB4704
 		private void RefreshStatus()
 		{
 			LoginDefine.ELoginStatus loginStatus = LoginModel.Instance.GetLoginStatus();
@@ -77,10 +77,10 @@ namespace CSharpScript.Game.Module.Login
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0200B87A RID: 47226
+		// Token: 0x0200A2A1 RID: 41633
 		public enum ELoginStatusCom
 		{
-			// Token: 0x04037D6D RID: 228717
+			// Token: 0x04032787 RID: 206727
 			MySelf
 		}
 	}

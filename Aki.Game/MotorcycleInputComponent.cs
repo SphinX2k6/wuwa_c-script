@@ -13,14 +13,14 @@ using CSharpScript.Game.NewWorld.Vehicle.Motorcycle;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020032F8 RID: 13048
+// Token: 0x0200286A RID: 10346
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleInputComponent : VehicleInputComponent
 {
-	// Token: 0x1700274D RID: 10061
-	// (get) Token: 0x0601C66B RID: 116331 RVA: 0x007F43A7 File Offset: 0x007F25A7
-	// (set) Token: 0x0601C66C RID: 116332 RVA: 0x007F43B0 File Offset: 0x007F25B0
+	// Token: 0x17002ACE RID: 10958
+	// (get) Token: 0x0601A340 RID: 107328 RVA: 0x0081A88D File Offset: 0x00818A8D
+	// (set) Token: 0x0601A341 RID: 107329 RVA: 0x0081A898 File Offset: 0x00818A98
 	protected bool InSprint
 	{
 		get
@@ -45,7 +45,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C66D RID: 116333 RVA: 0x007F443C File Offset: 0x007F263C
+	// Token: 0x0601A342 RID: 107330 RVA: 0x0081A924 File Offset: 0x00818B24
 	protected void BanSprint(int tagId, bool isTagExist)
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -74,7 +74,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.RefreshSprint();
 	}
 
-	// Token: 0x0601C66E RID: 116334 RVA: 0x007F44B4 File Offset: 0x007F26B4
+	// Token: 0x0601A343 RID: 107331 RVA: 0x0081A99C File Offset: 0x00818B9C
 	protected void RefreshSprint()
 	{
 		bool flag = this.CheckNitroBoostPress();
@@ -97,9 +97,9 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.InSprint = flag3;
 	}
 
-	// Token: 0x1700274E RID: 10062
-	// (get) Token: 0x0601C66F RID: 116335 RVA: 0x007F4532 File Offset: 0x007F2732
-	// (set) Token: 0x0601C670 RID: 116336 RVA: 0x007F453A File Offset: 0x007F273A
+	// Token: 0x17002ACF RID: 10959
+	// (get) Token: 0x0601A344 RID: 107332 RVA: 0x0081AA1A File Offset: 0x00818C1A
+	// (set) Token: 0x0601A345 RID: 107333 RVA: 0x0081AA22 File Offset: 0x00818C22
 	protected bool InBackBraking
 	{
 		get
@@ -117,7 +117,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C671 RID: 116337 RVA: 0x007F455C File Offset: 0x007F275C
+	// Token: 0x0601A346 RID: 107334 RVA: 0x0081AA44 File Offset: 0x00818C44
 	protected void BanDrift(int tagId, bool isTagExist)
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -149,7 +149,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.RefreshBackBraking();
 	}
 
-	// Token: 0x0601C672 RID: 116338 RVA: 0x007F45F8 File Offset: 0x007F27F8
+	// Token: 0x0601A347 RID: 107335 RVA: 0x0081AAE0 File Offset: 0x00818CE0
 	protected void OnSoarChanged(int tagId, bool tagExist)
 	{
 		if (!this.InSprint)
@@ -166,14 +166,14 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["载具.摩托.移动.冲刺.玩家输入"]));
 	}
 
-	// Token: 0x0601C673 RID: 116339 RVA: 0x007F4690 File Offset: 0x007F2890
+	// Token: 0x0601A348 RID: 107336 RVA: 0x0081AB78 File Offset: 0x00818D78
 	protected void RefreshBackBraking()
 	{
 		this.InBackBraking = (this.PressingBackBraking && !this.BannedBackBraking);
 		this.RefreshSprint();
 	}
 
-	// Token: 0x0601C674 RID: 116340 RVA: 0x007F46B2 File Offset: 0x007F28B2
+	// Token: 0x0601A349 RID: 107337 RVA: 0x0081AB9A File Offset: 0x00818D9A
 	protected override void OnEnterOrLeaveVehicle(VehiclePassengerInfo info, bool enter)
 	{
 		base.OnEnterOrLeaveVehicle(info, enter);
@@ -194,7 +194,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.BanDrift(0, false);
 	}
 
-	// Token: 0x0601C675 RID: 116341 RVA: 0x007F46F0 File Offset: 0x007F28F0
+	// Token: 0x0601A34A RID: 107338 RVA: 0x0081ABD8 File Offset: 0x00818DD8
 	private void EnterVehicle(VehiclePassengerInfo info)
 	{
 		Entity passengerEntity = info.PassengerEntity;
@@ -216,7 +216,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		EventSystem.Instance.Add<string>(EEventName.ForceReleaseInput, new Action<string>(this.OnForceReleaseInput));
 	}
 
-	// Token: 0x0601C676 RID: 116342 RVA: 0x007F47E8 File Offset: 0x007F29E8
+	// Token: 0x0601A34B RID: 107339 RVA: 0x0081ACD0 File Offset: 0x00818ED0
 	private void LeaveVehicle(VehiclePassengerInfo info)
 	{
 		Entity passengerEntity = info.PassengerEntity;
@@ -242,7 +242,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		EventSystem.Instance.Remove<string>(EEventName.ForceReleaseInput, new Action<string>(this.OnForceReleaseInput));
 	}
 
-	// Token: 0x0601C677 RID: 116343 RVA: 0x007F48EC File Offset: 0x007F2AEC
+	// Token: 0x0601A34C RID: 107340 RVA: 0x0081ADD4 File Offset: 0x00818FD4
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -288,7 +288,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return true;
 	}
 
-	// Token: 0x0601C678 RID: 116344 RVA: 0x007F4AD0 File Offset: 0x007F2CD0
+	// Token: 0x0601A34D RID: 107341 RVA: 0x0081AFB8 File Offset: 0x008191B8
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -326,13 +326,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return true;
 	}
 
-	// Token: 0x0601C679 RID: 116345 RVA: 0x007F4C05 File Offset: 0x007F2E05
+	// Token: 0x0601A34E RID: 107342 RVA: 0x0081B0ED File Offset: 0x008192ED
 	protected override void OnDisable(string reason)
 	{
 		this.AirRotateInput = 0.0;
 	}
 
-	// Token: 0x0601C67A RID: 116346 RVA: 0x007F4C18 File Offset: 0x007F2E18
+	// Token: 0x0601A34F RID: 107343 RVA: 0x0081B100 File Offset: 0x00819300
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -343,7 +343,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.UpdateAssistedInput((double)delta);
 	}
 
-	// Token: 0x0601C67B RID: 116347 RVA: 0x007F4C6C File Offset: 0x007F2E6C
+	// Token: 0x0601A350 RID: 107344 RVA: 0x0081B154 File Offset: 0x00819354
 	protected override void UpdateVehicleInputDirectAndFacing()
 	{
 		OneOf<CharacterActorComponent, VehicleActorComponent> value = this.ActorComp.Value;
@@ -401,15 +401,15 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		value = this.ActorComp.Value;
 		value.Switch(delegate(CharacterActorComponent t1)
 		{
-			t1.SetInputDirect(this.MotorInputCache, false);
+			t1.SetInputDirect(this.MotorInputCache, false, EInputDirectSpace.Relative);
 		}, delegate(VehicleActorComponent t2)
 		{
-			t2.SetInputDirect(this.MotorInputCache, false);
+			t2.SetInputDirect(this.MotorInputCache, false, EInputDirectSpace.Relative);
 		});
 		this.SetInputFacingFromInputDirect(true);
 	}
 
-	// Token: 0x0601C67C RID: 116348 RVA: 0x007F4F10 File Offset: 0x007F3110
+	// Token: 0x0601A351 RID: 107345 RVA: 0x0081B3F8 File Offset: 0x008195F8
 	protected override void SetInputFacingFromInputDirect(bool clearWhenNoInput = true)
 	{
 		this.ActorComp.Value.Switch(delegate(CharacterActorComponent t1)
@@ -421,7 +421,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		});
 	}
 
-	// Token: 0x0601C67D RID: 116349 RVA: 0x007F4F70 File Offset: 0x007F3170
+	// Token: 0x0601A352 RID: 107346 RVA: 0x0081B458 File Offset: 0x00819658
 	protected void InputAdjustedTouch(global::Vector outInputDirect)
 	{
 		if (BattleUiModel.Instance.MotorcycleData.GetIsRoundJoystick())
@@ -475,7 +475,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		outInputDirect.DeepCopy(this.TmpVector1);
 	}
 
-	// Token: 0x0601C67E RID: 116350 RVA: 0x007F50EC File Offset: 0x007F32EC
+	// Token: 0x0601A353 RID: 107347 RVA: 0x0081B5D4 File Offset: 0x008197D4
 	public override void ExecuteInputCommand(InputCommand inputCommand, string context)
 	{
 		SInputCommand command = inputCommand.Command;
@@ -503,14 +503,14 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C67F RID: 116351 RVA: 0x007F5148 File Offset: 0x007F3348
+	// Token: 0x0601A354 RID: 107348 RVA: 0x0081B630 File Offset: 0x00819830
 	protected override void ExecuteSprint(SInputCommand command)
 	{
 		this.PressingSprint = (command.IntValue != 0);
 		this.RefreshSprint();
 	}
 
-	// Token: 0x0601C680 RID: 116352 RVA: 0x007F515F File Offset: 0x007F335F
+	// Token: 0x0601A355 RID: 107349 RVA: 0x0081B647 File Offset: 0x00819847
 	protected override void ExecuteJump(SInputCommand command)
 	{
 		this.PressingBackBraking = (command.IntValue != 0);
@@ -526,7 +526,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C681 RID: 116353 RVA: 0x007F5190 File Offset: 0x007F3390
+	// Token: 0x0601A356 RID: 107350 RVA: 0x0081B678 File Offset: 0x00819878
 	protected override void ExecuteSkill(SInputCommand command)
 	{
 		this.LastInputSeconds = Time.Instance.NowSeconds;
@@ -545,13 +545,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C682 RID: 116354 RVA: 0x007F51EF File Offset: 0x007F33EF
+	// Token: 0x0601A357 RID: 107351 RVA: 0x0081B6D7 File Offset: 0x008198D7
 	protected void ExecuteSwitchWalk(SInputCommand command)
 	{
 		this.AirRotateInput = (command.IntValue != 0);
 	}
 
-	// Token: 0x0601C683 RID: 116355 RVA: 0x007F5201 File Offset: 0x007F3401
+	// Token: 0x0601A358 RID: 107352 RVA: 0x0081B6E9 File Offset: 0x008198E9
 	private void BeginSkill(int skillId)
 	{
 		base.Entity.GetComponent<BaseSkillComponent>().BeginSkill(skillId, new SkillParam
@@ -560,7 +560,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		});
 	}
 
-	// Token: 0x0601C684 RID: 116356 RVA: 0x007F5225 File Offset: 0x007F3425
+	// Token: 0x0601A359 RID: 107353 RVA: 0x0081B70D File Offset: 0x0081990D
 	public void ForceRefreshBraking()
 	{
 		this.InBackBraking = !this.InBackBraking;
@@ -568,7 +568,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.RefreshSprint();
 	}
 
-	// Token: 0x0601C685 RID: 116357 RVA: 0x007F524B File Offset: 0x007F344B
+	// Token: 0x0601A35A RID: 107354 RVA: 0x0081B733 File Offset: 0x00819933
 	protected void OnAddBlockAction(AkiClient.Game.Aki.Character.Input.Enum.EInputAction inputAction)
 	{
 		if (inputAction == AkiClient.Game.Aki.Character.Input.Enum.EInputAction.跳跃)
@@ -587,13 +587,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C686 RID: 116358 RVA: 0x007F5280 File Offset: 0x007F3480
+	// Token: 0x0601A35B RID: 107355 RVA: 0x0081B768 File Offset: 0x00819968
 	protected override bool IsEnableExecuteCommandImmediately()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C687 RID: 116359 RVA: 0x007F5284 File Offset: 0x007F3484
+	// Token: 0x0601A35C RID: 107356 RVA: 0x0081B76C File Offset: 0x0081996C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -637,13 +637,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return list;
 	}
 
-	// Token: 0x0601C688 RID: 116360 RVA: 0x007F53C4 File Offset: 0x007F35C4
+	// Token: 0x0601A35D RID: 107357 RVA: 0x0081B8AC File Offset: 0x00819AAC
 	protected override int QuerySkillPriority(int skillId)
 	{
 		return 2;
 	}
 
-	// Token: 0x0601C689 RID: 116361 RVA: 0x007F53C8 File Offset: 0x007F35C8
+	// Token: 0x0601A35E RID: 107358 RVA: 0x0081B8B0 File Offset: 0x00819AB0
 	protected override int? QueryCommandPriority(SInputCommand command)
 	{
 		AkiClient.Game.Aki.Character.Input.Enum.EInputAction action;
@@ -667,7 +667,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return null;
 	}
 
-	// Token: 0x0601C68A RID: 116362 RVA: 0x007F5448 File Offset: 0x007F3648
+	// Token: 0x0601A35F RID: 107359 RVA: 0x0081B930 File Offset: 0x00819B30
 	private void InitCommandActionMap()
 	{
 		this.CommandActionMap[ECommandType.Jump] = AkiClient.Game.Aki.Character.Input.Enum.EInputAction.跳跃;
@@ -675,7 +675,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.CommandActionMap[ECommandType.SwitchWalk] = AkiClient.Game.Aki.Character.Input.Enum.EInputAction.走跑切换;
 	}
 
-	// Token: 0x0601C68B RID: 116363 RVA: 0x007F5471 File Offset: 0x007F3671
+	// Token: 0x0601A360 RID: 107360 RVA: 0x0081B959 File Offset: 0x00819B59
 	private void InitInputAssistConfig()
 	{
 		ResourceSystem.Instance.LoadTypeAsync("BP_MotorAssistInputConfig_C", delegate
@@ -695,13 +695,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}, "js_undefined");
 	}
 
-	// Token: 0x0601C68C RID: 116364 RVA: 0x007F5493 File Offset: 0x007F3693
+	// Token: 0x0601A361 RID: 107361 RVA: 0x0081B97B File Offset: 0x00819B7B
 	private bool CheckAssistDrift()
 	{
 		return BattleUiModel.Instance.MotorcycleData.DriftAcceleratorSettingEnable || this.DebugAssistDrift;
 	}
 
-	// Token: 0x0601C68D RID: 116365 RVA: 0x007F54B0 File Offset: 0x007F36B0
+	// Token: 0x0601A362 RID: 107362 RVA: 0x0081B998 File Offset: 0x00819B98
 	[NullableContext(2)]
 	private void ResetAssistInput(string context = null, bool nitro = true, bool throttle = true)
 	{
@@ -750,7 +750,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C68E RID: 116366 RVA: 0x007F5532 File Offset: 0x007F3732
+	// Token: 0x0601A363 RID: 107363 RVA: 0x0081BA1A File Offset: 0x00819C1A
 	private void UpdateAssistedInput(double delta)
 	{
 		if (!this.IsDriving)
@@ -762,7 +762,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		this.UpdateHoldThrottle(delta);
 	}
 
-	// Token: 0x0601C68F RID: 116367 RVA: 0x007F5558 File Offset: 0x007F3758
+	// Token: 0x0601A364 RID: 107364 RVA: 0x0081BA40 File Offset: 0x00819C40
 	private void UpdateNitroBoost(double delta)
 	{
 		MotorcycleInputComponent.NitroBoostInfo nitroBoostInfo = this.NitroBoostInfo1;
@@ -829,7 +829,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C690 RID: 116368 RVA: 0x007F56FC File Offset: 0x007F38FC
+	// Token: 0x0601A365 RID: 107365 RVA: 0x0081BBE4 File Offset: 0x00819DE4
 	private void UpdateHoldThrottle(double delta)
 	{
 		MotorcycleInputComponent.HoldThrottleInfo holdThrottleInfo = this.HoldThrottleInfo1;
@@ -915,7 +915,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		holdThrottleInfo12.SetStartEnter(false);
 	}
 
-	// Token: 0x0601C691 RID: 116369 RVA: 0x007F5910 File Offset: 0x007F3B10
+	// Token: 0x0601A366 RID: 107366 RVA: 0x0081BDF8 File Offset: 0x00819FF8
 	private bool CheckNitroBoostPress()
 	{
 		MotorcycleInputComponent.NitroBoostInfo nitroBoostInfo = this.NitroBoostInfo1;
@@ -948,18 +948,18 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return flag;
 	}
 
-	// Token: 0x0601C692 RID: 116370 RVA: 0x007F598E File Offset: 0x007F3B8E
+	// Token: 0x0601A367 RID: 107367 RVA: 0x0081BE76 File Offset: 0x0081A076
 	private void HoldThrottleChange(int tagId, bool tagExist)
 	{
 	}
 
-	// Token: 0x0601C693 RID: 116371 RVA: 0x007F5990 File Offset: 0x007F3B90
+	// Token: 0x0601A368 RID: 107368 RVA: 0x0081BE78 File Offset: 0x0081A078
 	protected void NitroBoostChange(int tagId, bool tagExist)
 	{
 		this.RefreshSprint();
 	}
 
-	// Token: 0x0601C694 RID: 116372 RVA: 0x007F5998 File Offset: 0x007F3B98
+	// Token: 0x0601A369 RID: 107369 RVA: 0x0081BE80 File Offset: 0x0081A080
 	private void OnCharUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		MotorcycleInputComponent.NitroBoostInfo nitroBoostInfo = this.NitroBoostInfo1;
@@ -974,13 +974,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C695 RID: 116373 RVA: 0x007F5A07 File Offset: 0x007F3C07
+	// Token: 0x0601A36A RID: 107370 RVA: 0x0081BEEF File Offset: 0x0081A0EF
 	private void OnRoleDead()
 	{
 		this.ResetAssistInput("角色死亡", true, true);
 	}
 
-	// Token: 0x0601C696 RID: 116374 RVA: 0x007F5A18 File Offset: 0x007F3C18
+	// Token: 0x0601A36B RID: 107371 RVA: 0x0081BF00 File Offset: 0x0081A100
 	private void OnForceReleaseInput(string reason)
 	{
 		if (this.PressingSprint)
@@ -1003,7 +1003,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C697 RID: 116375 RVA: 0x007F5A98 File Offset: 0x007F3C98
+	// Token: 0x0601A36C RID: 107372 RVA: 0x0081BF80 File Offset: 0x0081A180
 	private void OnViewShow(EUiViewName viewName, int _)
 	{
 		UiShow? uiShowConfig = UiViewConfig.Instance.GetUiShowConfig(viewName);
@@ -1013,28 +1013,28 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C698 RID: 116376 RVA: 0x007F5AE3 File Offset: 0x007F3CE3
+	// Token: 0x0601A36D RID: 107373 RVA: 0x0081BFCB File Offset: 0x0081A1CB
 	[NullableContext(2)]
 	public MotorcycleInputComponent.NitroBoostInfo GetNitroBoostInfo()
 	{
 		return this.NitroBoostInfo1;
 	}
 
-	// Token: 0x0601C699 RID: 116377 RVA: 0x007F5AEB File Offset: 0x007F3CEB
+	// Token: 0x0601A36E RID: 107374 RVA: 0x0081BFD3 File Offset: 0x0081A1D3
 	[NullableContext(2)]
 	public MotorcycleInputComponent.HoldThrottleInfo GetHoldThrottleInfo()
 	{
 		return this.HoldThrottleInfo1;
 	}
 
-	// Token: 0x0601C69A RID: 116378 RVA: 0x007F5AF3 File Offset: 0x007F3CF3
+	// Token: 0x0601A36F RID: 107375 RVA: 0x0081BFDB File Offset: 0x0081A1DB
 	[NullableContext(2)]
 	public void ExternalResetAssistInput(string context = null, bool nitro = true, bool throttle = true)
 	{
 		this.ResetAssistInput(context, nitro, throttle);
 	}
 
-	// Token: 0x0601C69B RID: 116379 RVA: 0x007F5B00 File Offset: 0x007F3D00
+	// Token: 0x0601A370 RID: 107376 RVA: 0x0081BFE8 File Offset: 0x0081A1E8
 	public static void ConvertCycleInputToSquared(global::Vector inInput, global::Vector outInput)
 	{
 		double num = inInput.Size();
@@ -1046,7 +1046,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		inInput.Multiply(num / Math.Max(Math.Abs(inInput.X), Math.Abs(inInput.Y)), outInput);
 	}
 
-	// Token: 0x0601C69C RID: 116380 RVA: 0x007F5B50 File Offset: 0x007F3D50
+	// Token: 0x0601A371 RID: 107377 RVA: 0x0081C038 File Offset: 0x0081A238
 	public static bool ConvertPolarInput(global::Vector inInput, global::Vector outInput, double positiveLimit, double negativeLimit, bool prevIsPositive)
 	{
 		if (inInput.IsNearlyZero(9.999999747378752E-05))
@@ -1074,7 +1074,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 		return false;
 	}
 
-	// Token: 0x0601C69D RID: 116381 RVA: 0x007F5C14 File Offset: 0x007F3E14
+	// Token: 0x0601A372 RID: 107378 RVA: 0x0081C0FC File Offset: 0x0081A2FC
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1082,242 +1082,235 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			return false;
 		}
 		MotorcycleInputComponent motorcycleInputComponent = (MotorcycleInputComponent)componentTemplate;
-		if (base.CanResetComponentProperty("IsDriving"))
-		{
-			this.IsDriving = motorcycleInputComponent.IsDriving;
-		}
-		if (base.CanResetComponentProperty("PlayerMotorInput") && motorcycleInputComponent.PlayerMotorInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PlayerMotorInput), "PlayerMotorInput"))
+		this.IsDriving = motorcycleInputComponent.IsDriving;
+		if (motorcycleInputComponent.PlayerMotorInput != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerMotorInput), "PlayerMotorInput"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NitroBoostInfo1"))
+		if (motorcycleInputComponent.NitroBoostInfo1 == null)
 		{
-			if (motorcycleInputComponent.NitroBoostInfo1 == null)
-			{
-				this.NitroBoostInfo1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleInputComponent.NitroBoostInfo>(this.NitroBoostInfo1), "NitroBoostInfo1"))
-			{
-				return false;
-			}
+			this.NitroBoostInfo1 = null;
 		}
-		if (base.CanResetComponentProperty("HoldThrottleInfo1"))
-		{
-			if (motorcycleInputComponent.HoldThrottleInfo1 == null)
-			{
-				this.HoldThrottleInfo1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleInputComponent.HoldThrottleInfo>(this.HoldThrottleInfo1), "HoldThrottleInfo1"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (motorcycleInputComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AudioComp"))
-		{
-			if (motorcycleInputComponent.AudioComp == null)
-			{
-				this.AudioComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorcycleAudioComponent>(this.AudioComp), "AudioComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastInputSeconds"))
-		{
-			this.LastInputSeconds = motorcycleInputComponent.LastInputSeconds;
-		}
-		if (base.CanResetComponentProperty("TmpVector1"))
-		{
-			if (motorcycleInputComponent.TmpVector1 == null)
-			{
-				this.TmpVector1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector1), "TmpVector1"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MotorInputCache"))
-		{
-			if (motorcycleInputComponent.MotorInputCache == null)
-			{
-				this.MotorInputCache = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MotorInputCache), "MotorInputCache"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PressingBackBraking"))
-		{
-			this.PressingBackBraking = motorcycleInputComponent.PressingBackBraking;
-		}
-		if (base.CanResetComponentProperty("PressingSprint"))
-		{
-			this.PressingSprint = motorcycleInputComponent.PressingSprint;
-		}
-		if (base.CanResetComponentProperty("InSprintInternal"))
-		{
-			this.InSprintInternal = motorcycleInputComponent.InSprintInternal;
-		}
-		if (base.CanResetComponentProperty("BannedSprint"))
-		{
-			this.BannedSprint = motorcycleInputComponent.BannedSprint;
-		}
-		if (base.CanResetComponentProperty("InBackBrakingInternal"))
-		{
-			this.InBackBrakingInternal = motorcycleInputComponent.InBackBrakingInternal;
-		}
-		if (base.CanResetComponentProperty("BannedBackBraking"))
-		{
-			this.BannedBackBraking = motorcycleInputComponent.BannedBackBraking;
-		}
-		if (base.CanResetComponentProperty("MotorJoyStickAngle1"))
-		{
-			this.MotorJoyStickAngle1 = motorcycleInputComponent.MotorJoyStickAngle1;
-		}
-		if (base.CanResetComponentProperty("MotorJoyStickAngle2"))
-		{
-			this.MotorJoyStickAngle2 = motorcycleInputComponent.MotorJoyStickAngle2;
-		}
-		if (base.CanResetComponentProperty("PrevIsPositive"))
-		{
-			this.PrevIsPositive = motorcycleInputComponent.PrevIsPositive;
-		}
-		if (base.CanResetComponentProperty("AirRotateInput"))
-		{
-			this.AirRotateInput = motorcycleInputComponent.AirRotateInput;
-		}
-		if (base.CanResetComponentProperty("CommandIndexMap") && motorcycleInputComponent.CommandIndexMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECommandType, int>>(this.CommandIndexMap), "CommandIndexMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.NitroBoostInfo1), "NitroBoostInfo1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CommandPriorityMap") && motorcycleInputComponent.CommandPriorityMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECommandType, int>>(this.CommandPriorityMap), "CommandPriorityMap"))
+		if (motorcycleInputComponent.HoldThrottleInfo1 == null)
+		{
+			this.HoldThrottleInfo1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HoldThrottleInfo1), "HoldThrottleInfo1"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CommandActionMap") && motorcycleInputComponent.CommandActionMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECommandType, AkiClient.Game.Aki.Character.Input.Enum.EInputAction>>(this.CommandActionMap), "CommandActionMap"))
+		if (motorcycleInputComponent.MoveComp == null)
+		{
+			this.MoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DebugAssistDrift"))
+		if (motorcycleInputComponent.AudioComp == null)
 		{
-			this.DebugAssistDrift = motorcycleInputComponent.DebugAssistDrift;
+			this.AudioComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioComp), "AudioComp"))
+		{
+			return false;
+		}
+		this.LastInputSeconds = motorcycleInputComponent.LastInputSeconds;
+		if (motorcycleInputComponent.TmpVector1 == null)
+		{
+			this.TmpVector1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
+		{
+			return false;
+		}
+		if (motorcycleInputComponent.MotorInputCache == null)
+		{
+			this.MotorInputCache = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorInputCache), "MotorInputCache"))
+		{
+			return false;
+		}
+		this.PressingBackBraking = motorcycleInputComponent.PressingBackBraking;
+		this.PressingSprint = motorcycleInputComponent.PressingSprint;
+		this.InSprintInternal = motorcycleInputComponent.InSprintInternal;
+		this.BannedSprint = motorcycleInputComponent.BannedSprint;
+		this.InBackBrakingInternal = motorcycleInputComponent.InBackBrakingInternal;
+		this.BannedBackBraking = motorcycleInputComponent.BannedBackBraking;
+		this.MotorJoyStickAngle1 = motorcycleInputComponent.MotorJoyStickAngle1;
+		this.MotorJoyStickAngle2 = motorcycleInputComponent.MotorJoyStickAngle2;
+		this.PrevIsPositive = motorcycleInputComponent.PrevIsPositive;
+		this.AirRotateInput = motorcycleInputComponent.AirRotateInput;
+		if (motorcycleInputComponent.CommandIndexMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommandIndexMap), "CommandIndexMap"))
+		{
+			return false;
+		}
+		if (motorcycleInputComponent.CommandPriorityMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommandPriorityMap), "CommandPriorityMap"))
+		{
+			return false;
+		}
+		if (motorcycleInputComponent.CommandActionMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommandActionMap), "CommandActionMap"))
+		{
+			return false;
+		}
+		this.DebugAssistDrift = motorcycleInputComponent.DebugAssistDrift;
 		return true;
 	}
 
-	// Token: 0x0400E153 RID: 57683
+	// Token: 0x17002AD0 RID: 10960
+	// (get) Token: 0x0601A373 RID: 107379 RVA: 0x0081C342 File Offset: 0x0081A542
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AD1 RID: 10961
+	// (get) Token: 0x0601A374 RID: 107380 RVA: 0x0081C345 File Offset: 0x0081A545
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AD2 RID: 10962
+	// (get) Token: 0x0601A375 RID: 107381 RVA: 0x0081C348 File Offset: 0x0081A548
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AD3 RID: 10963
+	// (get) Token: 0x0601A376 RID: 107382 RVA: 0x0081C34B File Offset: 0x0081A54B
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AD4 RID: 10964
+	// (get) Token: 0x0601A377 RID: 107383 RVA: 0x0081C34E File Offset: 0x0081A54E
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E5FE RID: 58878
 	private const string ASSIST_INPUT_DATA_ASSET_PATH = "/Game/Aki/Character/Vehicle/Motor/Data/DA/DA_MotorAssistInputConfig.DA_MotorAssistInputConfig";
 
-	// Token: 0x0400E154 RID: 57684
+	// Token: 0x0400E5FF RID: 58879
 	private bool IsDriving;
 
-	// Token: 0x0400E155 RID: 57685
+	// Token: 0x0400E600 RID: 58880
 	private readonly global::Vector PlayerMotorInput = global::Vector.Create();
 
-	// Token: 0x0400E156 RID: 57686
+	// Token: 0x0400E601 RID: 58881
 	[Nullable(2)]
 	private MotorcycleInputComponent.NitroBoostInfo NitroBoostInfo1;
 
-	// Token: 0x0400E157 RID: 57687
+	// Token: 0x0400E602 RID: 58882
 	[Nullable(2)]
 	private MotorcycleInputComponent.HoldThrottleInfo HoldThrottleInfo1;
 
-	// Token: 0x0400E158 RID: 57688
+	// Token: 0x0400E603 RID: 58883
 	[Nullable(2)]
 	protected MotorcycleMoveComponent MoveComp;
 
-	// Token: 0x0400E159 RID: 57689
+	// Token: 0x0400E604 RID: 58884
 	[Nullable(2)]
 	protected MotorcycleAudioComponent AudioComp;
 
-	// Token: 0x0400E15A RID: 57690
+	// Token: 0x0400E605 RID: 58885
 	public double LastInputSeconds;
 
-	// Token: 0x0400E15B RID: 57691
+	// Token: 0x0400E606 RID: 58886
 	protected global::Vector TmpVector1 = global::Vector.Create();
 
-	// Token: 0x0400E15C RID: 57692
+	// Token: 0x0400E607 RID: 58887
 	protected global::Vector MotorInputCache = global::Vector.Create();
 
-	// Token: 0x0400E15D RID: 57693
+	// Token: 0x0400E608 RID: 58888
 	protected bool PressingBackBraking;
 
-	// Token: 0x0400E15E RID: 57694
+	// Token: 0x0400E609 RID: 58889
 	protected bool PressingSprint;
 
-	// Token: 0x0400E15F RID: 57695
+	// Token: 0x0400E60A RID: 58890
 	protected bool InSprintInternal;
 
-	// Token: 0x0400E160 RID: 57696
+	// Token: 0x0400E60B RID: 58891
 	private bool BannedSprint;
 
-	// Token: 0x0400E161 RID: 57697
+	// Token: 0x0400E60C RID: 58892
 	protected bool InBackBrakingInternal;
 
-	// Token: 0x0400E162 RID: 57698
+	// Token: 0x0400E60D RID: 58893
 	private bool BannedBackBraking;
 
-	// Token: 0x0400E163 RID: 57699
+	// Token: 0x0400E60E RID: 58894
 	private double MotorJoyStickAngle1 = 60.0;
 
-	// Token: 0x0400E164 RID: 57700
+	// Token: 0x0400E60F RID: 58895
 	private double MotorJoyStickAngle2 = 120.0;
 
-	// Token: 0x0400E165 RID: 57701
+	// Token: 0x0400E610 RID: 58896
 	private bool PrevIsPositive = true;
 
-	// Token: 0x0400E166 RID: 57702
+	// Token: 0x0400E611 RID: 58897
 	public double AirRotateInput;
 
-	// Token: 0x0400E167 RID: 57703
+	// Token: 0x0400E612 RID: 58898
 	private readonly Dictionary<ECommandType, int> CommandIndexMap = new Dictionary<ECommandType, int>();
 
-	// Token: 0x0400E168 RID: 57704
+	// Token: 0x0400E613 RID: 58899
 	private readonly Dictionary<ECommandType, int> CommandPriorityMap = new Dictionary<ECommandType, int>();
 
-	// Token: 0x0400E169 RID: 57705
+	// Token: 0x0400E614 RID: 58900
 	private readonly Dictionary<ECommandType, AkiClient.Game.Aki.Character.Input.Enum.EInputAction> CommandActionMap = new Dictionary<ECommandType, AkiClient.Game.Aki.Character.Input.Enum.EInputAction>();
 
-	// Token: 0x0400E16A RID: 57706
+	// Token: 0x0400E615 RID: 58901
 	private bool DebugAssistDrift;
 
-	// Token: 0x02009784 RID: 38788
+	// Token: 0x020089A7 RID: 35239
 	[Nullable(0)]
 	public class AssistedInputInfo
 	{
-		// Token: 0x0604C56D RID: 312685 RVA: 0x0141DB1C File Offset: 0x0141BD1C
+		// Token: 0x060429F3 RID: 272883 RVA: 0x013C86D0 File Offset: 0x013C68D0
 		public AssistedInputInfo(BaseTagComponent tagComp, int gameplayTag)
 		{
 			this.GameplayTag = gameplayTag;
 			this.TagComp = tagComp;
 		}
 
-		// Token: 0x0604C56E RID: 312686 RVA: 0x0141DB6D File Offset: 0x0141BD6D
+		// Token: 0x060429F4 RID: 272884 RVA: 0x013C8721 File Offset: 0x013C6921
 		public virtual void InitConfig(BP_MotorAssistInputConfig_C asset)
 		{
 		}
 
-		// Token: 0x0604C56F RID: 312687 RVA: 0x0141DB6F File Offset: 0x0141BD6F
+		// Token: 0x060429F5 RID: 272885 RVA: 0x013C8723 File Offset: 0x013C6923
 		public virtual bool UpdateAutoState()
 		{
 			return false;
 		}
 
-		// Token: 0x0604C570 RID: 312688 RVA: 0x0141DB72 File Offset: 0x0141BD72
+		// Token: 0x060429F6 RID: 272886 RVA: 0x013C8726 File Offset: 0x013C6926
 		public void SetAutoState(bool value)
 		{
 			if (value == this.LastState)
@@ -1328,7 +1321,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			this.UpdateAutoTag(value);
 		}
 
-		// Token: 0x0604C571 RID: 312689 RVA: 0x0141DB8C File Offset: 0x0141BD8C
+		// Token: 0x060429F7 RID: 272887 RVA: 0x013C8740 File Offset: 0x013C6940
 		public void AddTimeAccumulation(double delta)
 		{
 			if (!this.CheckForbiddenTag())
@@ -1339,13 +1332,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			this.CurrentTime += delta;
 		}
 
-		// Token: 0x0604C572 RID: 312690 RVA: 0x0141DBAB File Offset: 0x0141BDAB
+		// Token: 0x060429F8 RID: 272888 RVA: 0x013C875F File Offset: 0x013C695F
 		public void ClearTimeAccumulation()
 		{
 			this.CurrentTime = 0.0;
 		}
 
-		// Token: 0x0604C573 RID: 312691 RVA: 0x0141DBBC File Offset: 0x0141BDBC
+		// Token: 0x060429F9 RID: 272889 RVA: 0x013C8770 File Offset: 0x013C6970
 		[NullableContext(2)]
 		public void ResetAutoState(string context = null)
 		{
@@ -1353,25 +1346,25 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			this.SetAutoState(false);
 		}
 
-		// Token: 0x0604C574 RID: 312692 RVA: 0x0141DBCD File Offset: 0x0141BDCD
+		// Token: 0x060429FA RID: 272890 RVA: 0x013C8781 File Offset: 0x013C6981
 		public bool CheckTimeDuration()
 		{
 			return this.CurrentTime > this.Duration;
 		}
 
-		// Token: 0x0604C575 RID: 312693 RVA: 0x0141DBDD File Offset: 0x0141BDDD
+		// Token: 0x060429FB RID: 272891 RVA: 0x013C8791 File Offset: 0x013C6991
 		public double GetCurrentTime()
 		{
 			return this.CurrentTime;
 		}
 
-		// Token: 0x0604C576 RID: 312694 RVA: 0x0141DBE5 File Offset: 0x0141BDE5
+		// Token: 0x060429FC RID: 272892 RVA: 0x013C8799 File Offset: 0x013C6999
 		public double GetDuration()
 		{
 			return this.Duration;
 		}
 
-		// Token: 0x0604C577 RID: 312695 RVA: 0x0141DBF0 File Offset: 0x0141BDF0
+		// Token: 0x060429FD RID: 272893 RVA: 0x013C87A4 File Offset: 0x013C69A4
 		private bool CheckForbiddenTag()
 		{
 			if (this.TagList != null && this.TagList.Count > 0)
@@ -1389,44 +1382,44 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			return true;
 		}
 
-		// Token: 0x0604C578 RID: 312696 RVA: 0x0141DC70 File Offset: 0x0141BE70
+		// Token: 0x060429FE RID: 272894 RVA: 0x013C8824 File Offset: 0x013C6A24
 		public bool CheckPermitSkill(int skillId)
 		{
 			return this.SkillList.Contains((long)skillId);
 		}
 
-		// Token: 0x0604C579 RID: 312697 RVA: 0x0141DC7F File Offset: 0x0141BE7F
+		// Token: 0x060429FF RID: 272895 RVA: 0x013C8833 File Offset: 0x013C6A33
 		public bool IsStartEnter()
 		{
 			return this.StartEnter;
 		}
 
-		// Token: 0x0604C57A RID: 312698 RVA: 0x0141DC87 File Offset: 0x0141BE87
+		// Token: 0x06042A00 RID: 272896 RVA: 0x013C883B File Offset: 0x013C6A3B
 		public void SetStartEnter(bool value)
 		{
 			this.StartEnter = value;
 		}
 
-		// Token: 0x0604C57B RID: 312699 RVA: 0x0141DC90 File Offset: 0x0141BE90
+		// Token: 0x06042A01 RID: 272897 RVA: 0x013C8844 File Offset: 0x013C6A44
 		public bool IsIgnoreInput()
 		{
 			return this.IgnoreInput;
 		}
 
-		// Token: 0x0604C57C RID: 312700 RVA: 0x0141DC98 File Offset: 0x0141BE98
+		// Token: 0x06042A02 RID: 272898 RVA: 0x013C884C File Offset: 0x013C6A4C
 		public void SetIgnoreInput(bool value)
 		{
 			this.IgnoreInput = value;
 		}
 
-		// Token: 0x0604C57D RID: 312701 RVA: 0x0141DCA1 File Offset: 0x0141BEA1
+		// Token: 0x06042A03 RID: 272899 RVA: 0x013C8855 File Offset: 0x013C6A55
 		protected bool CheckGameplayTag()
 		{
 			BaseTagComponent tagComp = this.TagComp;
 			return tagComp != null && tagComp.HasTag(this.GameplayTag) && this.CheckForbiddenTag();
 		}
 
-		// Token: 0x0604C57E RID: 312702 RVA: 0x0141DCC8 File Offset: 0x0141BEC8
+		// Token: 0x06042A04 RID: 272900 RVA: 0x013C887C File Offset: 0x013C6A7C
 		protected void UpdateAutoTag(bool value)
 		{
 			if (value)
@@ -1456,49 +1449,49 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			}
 		}
 
-		// Token: 0x040306FB RID: 198395
+		// Token: 0x0402BD88 RID: 179592
 		protected bool LastState;
 
-		// Token: 0x040306FC RID: 198396
+		// Token: 0x0402BD89 RID: 179593
 		protected double CurrentTime;
 
-		// Token: 0x040306FD RID: 198397
+		// Token: 0x0402BD8A RID: 179594
 		private bool StartEnter;
 
-		// Token: 0x040306FE RID: 198398
+		// Token: 0x0402BD8B RID: 179595
 		private bool IgnoreInput;
 
-		// Token: 0x040306FF RID: 198399
+		// Token: 0x0402BD8C RID: 179596
 		protected double Duration = 3.402823466E+38;
 
-		// Token: 0x04030700 RID: 198400
+		// Token: 0x0402BD8D RID: 179597
 		protected readonly List<int> TagList = new List<int>();
 
-		// Token: 0x04030701 RID: 198401
+		// Token: 0x0402BD8E RID: 179598
 		protected readonly List<long> SkillList = new List<long>();
 
-		// Token: 0x04030702 RID: 198402
+		// Token: 0x0402BD8F RID: 179599
 		protected string DebugText = "";
 
-		// Token: 0x04030703 RID: 198403
+		// Token: 0x0402BD90 RID: 179600
 		[Nullable(2)]
 		protected BaseTagComponent TagComp;
 
-		// Token: 0x04030704 RID: 198404
+		// Token: 0x0402BD91 RID: 179601
 		protected int GameplayTag;
 	}
 
-	// Token: 0x02009785 RID: 38789
+	// Token: 0x020089A8 RID: 35240
 	[Nullable(0)]
 	public class NitroBoostInfo : MotorcycleInputComponent.AssistedInputInfo
 	{
-		// Token: 0x0604C57F RID: 312703 RVA: 0x0141DD4A File Offset: 0x0141BF4A
+		// Token: 0x06042A05 RID: 272901 RVA: 0x013C88FE File Offset: 0x013C6AFE
 		public NitroBoostInfo(BaseTagComponent tagComp, int gameplayTag) : base(tagComp, gameplayTag)
 		{
 			this.DebugText = "氮气维持";
 		}
 
-		// Token: 0x0604C580 RID: 312704 RVA: 0x0141DD60 File Offset: 0x0141BF60
+		// Token: 0x06042A06 RID: 272902 RVA: 0x013C8914 File Offset: 0x013C6B14
 		public override bool UpdateAutoState()
 		{
 			bool flag = this.GetSettingEnable() && base.CheckGameplayTag();
@@ -1509,13 +1502,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			return flag;
 		}
 
-		// Token: 0x0604C581 RID: 312705 RVA: 0x0141DD96 File Offset: 0x0141BF96
+		// Token: 0x06042A07 RID: 272903 RVA: 0x013C894A File Offset: 0x013C6B4A
 		public bool GetSettingEnable()
 		{
 			return BattleUiModel.Instance.MotorcycleData.AutoNitrogenSettingEnable || this.DebugEnable;
 		}
 
-		// Token: 0x0604C582 RID: 312706 RVA: 0x0141DDB4 File Offset: 0x0141BFB4
+		// Token: 0x06042A08 RID: 272904 RVA: 0x013C8968 File Offset: 0x013C6B68
 		public override void InitConfig(BP_MotorAssistInputConfig_C asset)
 		{
 			this.Duration = (double)asset.NitroBoostTime;
@@ -1530,21 +1523,21 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			}
 		}
 
-		// Token: 0x04030705 RID: 198405
+		// Token: 0x0402BD92 RID: 179602
 		private bool DebugEnable;
 	}
 
-	// Token: 0x02009786 RID: 38790
+	// Token: 0x020089A9 RID: 35241
 	[Nullable(0)]
 	public class HoldThrottleInfo : MotorcycleInputComponent.AssistedInputInfo
 	{
-		// Token: 0x0604C583 RID: 312707 RVA: 0x0141DE44 File Offset: 0x0141C044
+		// Token: 0x06042A09 RID: 272905 RVA: 0x013C89F8 File Offset: 0x013C6BF8
 		public HoldThrottleInfo(BaseTagComponent tagComp, int gameplayTag) : base(tagComp, gameplayTag)
 		{
 			this.DebugText = "油门维持";
 		}
 
-		// Token: 0x0604C584 RID: 312708 RVA: 0x0141DE5C File Offset: 0x0141C05C
+		// Token: 0x06042A0A RID: 272906 RVA: 0x013C8A10 File Offset: 0x013C6C10
 		public override bool UpdateAutoState()
 		{
 			bool flag = this.GetSettingEnable() && base.CheckGameplayTag();
@@ -1555,13 +1548,13 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			return flag;
 		}
 
-		// Token: 0x0604C585 RID: 312709 RVA: 0x0141DE92 File Offset: 0x0141C092
+		// Token: 0x06042A0B RID: 272907 RVA: 0x013C8A46 File Offset: 0x013C6C46
 		public bool GetSettingEnable()
 		{
 			return BattleUiModel.Instance.MotorcycleData.AutoAcceleratorSettingEnable || this.DebugEnable;
 		}
 
-		// Token: 0x0604C586 RID: 312710 RVA: 0x0141DEB0 File Offset: 0x0141C0B0
+		// Token: 0x06042A0C RID: 272908 RVA: 0x013C8A64 File Offset: 0x013C6C64
 		public override void InitConfig(BP_MotorAssistInputConfig_C asset)
 		{
 			this.Duration = (double)asset.HoldThrottleTime;
@@ -1576,7 +1569,7 @@ public class MotorcycleInputComponent : VehicleInputComponent
 			}
 		}
 
-		// Token: 0x04030706 RID: 198406
+		// Token: 0x0402BD93 RID: 179603
 		private bool DebugEnable;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Combat
 {
-	// Token: 0x02005EE8 RID: 24296
+	// Token: 0x0200652B RID: 25899
 	public class IBuffsConfigT
 	{
-		// Token: 0x1700B5AB RID: 46507
-		// (get) Token: 0x06029B9E RID: 170910 RVA: 0x005B9FE1 File Offset: 0x005B81E1
-		// (set) Token: 0x06029B9F RID: 170911 RVA: 0x005B9FE9 File Offset: 0x005B81E9
+		// Token: 0x1700BF16 RID: 48918
+		// (get) Token: 0x0602C252 RID: 180818 RVA: 0x006034C5 File Offset: 0x006016C5
+		// (set) Token: 0x0602C253 RID: 180819 RVA: 0x006034CD File Offset: 0x006016CD
 		public List<IBuffConfigT> Buffs { get; set; }
 
-		// Token: 0x06029BA0 RID: 170912 RVA: 0x005B9FF2 File Offset: 0x005B81F2
+		// Token: 0x0602C254 RID: 180820 RVA: 0x006034D6 File Offset: 0x006016D6
 		public IBuffsConfigT()
 		{
 			this.Buffs = null;

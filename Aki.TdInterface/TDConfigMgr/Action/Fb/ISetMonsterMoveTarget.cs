@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026EA RID: 9962
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029AE RID: 10670
 	public class ISetMonsterMoveTarget : IExecBattleActionType
 	{
-		// Token: 0x0600DE82 RID: 56962 RVA: 0x002102B1 File Offset: 0x0020E4B1
+		// Token: 0x0600EC5E RID: 60510 RVA: 0x0022CAF1 File Offset: 0x0022ACF1
 		public static ISetMonsterMoveTarget Create(ISetMonsterMoveTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004270 RID: 17008
-		// (get) Token: 0x0600DE83 RID: 56963 RVA: 0x002102D0 File Offset: 0x0020E4D0
+		// Token: 0x170045B0 RID: 17840
+		// (get) Token: 0x0600EC5F RID: 60511 RVA: 0x0022CB10 File Offset: 0x0022AD10
 		public override EExecBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004271 RID: 17009
-		// (get) Token: 0x0600DE84 RID: 56964 RVA: 0x002102DD File Offset: 0x0020E4DD
+		// Token: 0x170045B1 RID: 17841
+		// (get) Token: 0x0600EC60 RID: 60512 RVA: 0x0022CB1D File Offset: 0x0022AD1D
 		public virtual int TargetEntityId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004272 RID: 17010
-		// (get) Token: 0x0600DE85 RID: 56965 RVA: 0x002102EC File Offset: 0x0020E4EC
+		// Token: 0x170045B2 RID: 17842
+		// (get) Token: 0x0600EC61 RID: 60513 RVA: 0x0022CB2C File Offset: 0x0022AD2C
 		public virtual EMoveEvent? MoveEvent
 		{
 			get
@@ -57,8 +54,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004273 RID: 17011
-		// (get) Token: 0x0600DE86 RID: 56966 RVA: 0x00210324 File Offset: 0x0020E524
+		// Token: 0x170045B3 RID: 17843
+		// (get) Token: 0x0600EC62 RID: 60514 RVA: 0x0022CB64 File Offset: 0x0022AD64
 		public virtual List<int> MonsterEntityIds
 		{
 			get
@@ -78,13 +75,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B82 RID: 31618
+		// Token: 0x04008222 RID: 33314
 		private ISetMonsterMoveTarget Instance;
 
-		// Token: 0x04007B83 RID: 31619
+		// Token: 0x04008223 RID: 33315
 		private List<int> _MonsterEntityIdsCache;
 
-		// Token: 0x04007B84 RID: 31620
+		// Token: 0x04008224 RID: 33316
 		private bool _MonsterEntityIdsInited;
 	}
 }

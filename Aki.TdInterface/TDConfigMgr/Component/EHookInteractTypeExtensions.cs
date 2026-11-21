@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000966 RID: 2406
+	// Token: 0x02000A19 RID: 2585
 	public static class EHookInteractTypeExtensions
 	{
-		// Token: 0x060035FC RID: 13820 RVA: 0x0008CA7C File Offset: 0x0008AC7C
+		// Token: 0x06003983 RID: 14723 RVA: 0x000949D0 File Offset: 0x00092BD0
 		public static string ToEnumString(this EHookInteractType value)
 		{
 			string result;
@@ -68,11 +68,11 @@ namespace Aki.TDConfigMgr.Component
 			case EHookInteractType.WaterBoxBigWeapon:
 				result = "WaterBoxBigWeapon";
 				break;
-			case EHookInteractType.MechHook:
-				result = "MechHook";
+			case EHookInteractType.MechTransformHook:
+				result = "MechTransformHook";
 				break;
-			case EHookInteractType.MechPullInteract:
-				result = "MechPullInteract";
+			case EHookInteractType.ChongLouHook:
+				result = "ChongLouHook";
 				break;
 			default:
 				result = value.ToString();
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035FD RID: 13821 RVA: 0x0008CBB4 File Offset: 0x0008ADB4
+		// Token: 0x06003984 RID: 14724 RVA: 0x00094B08 File Offset: 0x00092D08
 		public static EHookInteractType FromString(string name)
 		{
 			EHookInteractType result;
@@ -92,7 +92,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035FE RID: 13822 RVA: 0x0008CBE0 File Offset: 0x0008ADE0
+		// Token: 0x06003985 RID: 14725 RVA: 0x00094B34 File Offset: 0x00092D34
 		public static bool TryFromString(string name, out EHookInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -109,21 +109,13 @@ namespace Aki.TDConfigMgr.Component
 					char c = name[0];
 					if (c != 'C')
 					{
-						if (c != 'K')
+						if (c == 'K')
 						{
-							if (c == 'M')
+							if (name == "KiteHook")
 							{
-								if (name == "MechHook")
-								{
-									value = EHookInteractType.MechHook;
-									return true;
-								}
+								value = EHookInteractType.KiteHook;
+								return true;
 							}
-						}
-						else if (name == "KiteHook")
-						{
-							value = EHookInteractType.KiteHook;
-							return true;
 						}
 					}
 					else if (name == "CableWay")
@@ -169,12 +161,26 @@ namespace Aki.TDConfigMgr.Component
 					}
 					break;
 				case 12:
-					if (name == "SuiGuangHook")
+				{
+					char c = name[0];
+					if (c != 'C')
 					{
-						value = EHookInteractType.SuiGuangHook;
+						if (c == 'S')
+						{
+							if (name == "SuiGuangHook")
+							{
+								value = EHookInteractType.SuiGuangHook;
+								return true;
+							}
+						}
+					}
+					else if (name == "ChongLouHook")
+					{
+						value = EHookInteractType.ChongLouHook;
 						return true;
 					}
 					break;
+				}
 				case 13:
 				{
 					char c = name[1];
@@ -224,13 +230,6 @@ namespace Aki.TDConfigMgr.Component
 					}
 					break;
 				}
-				case 16:
-					if (name == "MechPullInteract")
-					{
-						value = EHookInteractType.MechPullInteract;
-						return true;
-					}
-					break;
 				case 17:
 				{
 					char c = name[5];
@@ -255,13 +254,21 @@ namespace Aki.TDConfigMgr.Component
 					}
 					else if (c != 'e')
 					{
-						if (c == 'i')
+						if (c != 'i')
 						{
-							if (name == "SunSpiritLauncher")
+							if (c == 'r')
 							{
-								value = EHookInteractType.SunSpiritLauncher;
-								return true;
+								if (name == "MechTransformHook")
+								{
+									value = EHookInteractType.MechTransformHook;
+									return true;
+								}
 							}
+						}
+						else if (name == "SunSpiritLauncher")
+						{
+							value = EHookInteractType.SunSpiritLauncher;
+							return true;
 						}
 					}
 					else if (name == "MovementPointHook")
@@ -298,7 +305,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035FF RID: 13823 RVA: 0x0008CF28 File Offset: 0x0008B128
+		// Token: 0x06003986 RID: 14726 RVA: 0x00094E94 File Offset: 0x00093094
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -322,12 +329,12 @@ namespace Aki.TDConfigMgr.Component
 				"MotorEject",
 				"FoxJumpingPoint",
 				"WaterBoxBigWeapon",
-				"MechHook",
-				"MechPullInteract"
+				"MechTransformHook",
+				"ChongLouHook"
 			};
 		}
 
-		// Token: 0x06003600 RID: 13824 RVA: 0x0008CFF0 File Offset: 0x0008B1F0
+		// Token: 0x06003987 RID: 14727 RVA: 0x00094F5C File Offset: 0x0009315C
 		public static EHookInteractType[] GetValues()
 		{
 			return new EHookInteractType[]
@@ -351,12 +358,12 @@ namespace Aki.TDConfigMgr.Component
 				EHookInteractType.MotorEject,
 				EHookInteractType.FoxJumpingPoint,
 				EHookInteractType.WaterBoxBigWeapon,
-				EHookInteractType.MechHook,
-				EHookInteractType.MechPullInteract
+				EHookInteractType.MechTransformHook,
+				EHookInteractType.ChongLouHook
 			};
 		}
 
-		// Token: 0x06003601 RID: 13825 RVA: 0x0008D004 File Offset: 0x0008B204
+		// Token: 0x06003988 RID: 14728 RVA: 0x00094F70 File Offset: 0x00093170
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -380,8 +387,8 @@ namespace Aki.TDConfigMgr.Component
 				"MotorEject",
 				"FoxJumpingPoint",
 				"WaterBoxBigWeapon",
-				"MechHook",
-				"MechPullInteract"
+				"MechTransformHook",
+				"ChongLouHook"
 			};
 		}
 	}

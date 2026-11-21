@@ -6,13 +6,13 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002899 RID: 10393
+// Token: 0x02001E14 RID: 7700
 [NullableContext(2)]
 [Nullable(0)]
 public class ResonanceChainBaseItem : UiPanelBase
 {
-	// Token: 0x17001CC6 RID: 7366
-	// (get) Token: 0x0601570F RID: 87823 RVA: 0x00568CDD File Offset: 0x00566EDD
+	// Token: 0x17001D1E RID: 7454
+	// (get) Token: 0x0601310F RID: 78095 RVA: 0x00593B25 File Offset: 0x00591D25
 	protected virtual string ActivateSequenceName
 	{
 		get
@@ -21,7 +21,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015710 RID: 87824 RVA: 0x00568CE0 File Offset: 0x00566EE0
+	// Token: 0x06013110 RID: 78096 RVA: 0x00593B28 File Offset: 0x00591D28
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,13 +40,13 @@ public class ResonanceChainBaseItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015711 RID: 87825 RVA: 0x00568DB5 File Offset: 0x00566FB5
+	// Token: 0x06013111 RID: 78097 RVA: 0x00593BFD File Offset: 0x00591DFD
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x06015712 RID: 87826 RVA: 0x00568DC8 File Offset: 0x00566FC8
+	// Token: 0x06013112 RID: 78098 RVA: 0x00593C10 File Offset: 0x00591E10
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -57,7 +57,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		sequencePlayer.Clear();
 	}
 
-	// Token: 0x06015713 RID: 87827 RVA: 0x00568DDA File Offset: 0x00566FDA
+	// Token: 0x06013113 RID: 78099 RVA: 0x00593C22 File Offset: 0x00591E22
 	public void Update(int roleId, int resonanceId, bool isActivate)
 	{
 		this.ResonanceId = resonanceId;
@@ -66,7 +66,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x06015714 RID: 87828 RVA: 0x00568DF7 File Offset: 0x00566FF7
+	// Token: 0x06013114 RID: 78100 RVA: 0x00593C3F File Offset: 0x00591E3F
 	public void Refresh()
 	{
 		this.RefreshToggleState(false);
@@ -75,14 +75,14 @@ public class ResonanceChainBaseItem : UiPanelBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06015715 RID: 87829 RVA: 0x00568E12 File Offset: 0x00567012
+	// Token: 0x06013115 RID: 78101 RVA: 0x00593C5A File Offset: 0x00591E5A
 	public void ShowItem()
 	{
 		base.SetUiActive(true);
 		this.PlayStartSequence();
 	}
 
-	// Token: 0x06015716 RID: 87830 RVA: 0x00568E21 File Offset: 0x00567021
+	// Token: 0x06013116 RID: 78102 RVA: 0x00593C69 File Offset: 0x00591E69
 	[NullableContext(1)]
 	public UUIItem GetUiItemForGuide()
 	{
@@ -90,7 +90,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		return ((extendToggle != null) ? extendToggle.GetOwner().GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem;
 	}
 
-	// Token: 0x06015717 RID: 87831 RVA: 0x00568E4A File Offset: 0x0056704A
+	// Token: 0x06013117 RID: 78103 RVA: 0x00593C92 File Offset: 0x00591E92
 	private void OnItemClick(EToggleState toggleState)
 	{
 		if (this.ToggleCallBack != null)
@@ -99,14 +99,14 @@ public class ResonanceChainBaseItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015718 RID: 87832 RVA: 0x00568E65 File Offset: 0x00567065
+	// Token: 0x06013118 RID: 78104 RVA: 0x00593CAD File Offset: 0x00591EAD
 	[NullableContext(1)]
 	public void BindToggleCallBack(Action<int> callBack)
 	{
 		this.ToggleCallBack = callBack;
 	}
 
-	// Token: 0x06015719 RID: 87833 RVA: 0x00568E70 File Offset: 0x00567070
+	// Token: 0x06013119 RID: 78105 RVA: 0x00593CB8 File Offset: 0x00591EB8
 	public void RefreshToggleState(bool force = false)
 	{
 		EToggleState state = this.IsSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -118,13 +118,13 @@ public class ResonanceChainBaseItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0601571A RID: 87834 RVA: 0x00568EAF File Offset: 0x005670AF
+	// Token: 0x0601311A RID: 78106 RVA: 0x00593CF7 File Offset: 0x00591EF7
 	public void SetSelectState(bool isSelect)
 	{
 		this.IsSelect = isSelect;
 	}
 
-	// Token: 0x0601571B RID: 87835 RVA: 0x00568EB8 File Offset: 0x005670B8
+	// Token: 0x0601311B RID: 78107 RVA: 0x00593D00 File Offset: 0x00591F00
 	private void RefreshIcon()
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(this.ResonanceId);
@@ -139,7 +139,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		texture.SetUIActive(this.IsActivate);
 	}
 
-	// Token: 0x0601571C RID: 87836 RVA: 0x00568F62 File Offset: 0x00567162
+	// Token: 0x0601311C RID: 78108 RVA: 0x00593DAA File Offset: 0x00591FAA
 	private void RefreshActivateItem()
 	{
 		UUIItem item = base.GetItem(2);
@@ -155,7 +155,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		item2.SetUIActive(this.IsActivate);
 	}
 
-	// Token: 0x0601571D RID: 87837 RVA: 0x00568F96 File Offset: 0x00567196
+	// Token: 0x0601311D RID: 78109 RVA: 0x00593DDE File Offset: 0x00591FDE
 	public void RefreshMaxActivateItem(bool isAllActive)
 	{
 		UUIItem item = base.GetItem(1);
@@ -166,7 +166,7 @@ public class ResonanceChainBaseItem : UiPanelBase
 		item.SetUIActive(isAllActive);
 	}
 
-	// Token: 0x0601571E RID: 87838 RVA: 0x00568FAC File Offset: 0x005671AC
+	// Token: 0x0601311E RID: 78110 RVA: 0x00593DF4 File Offset: 0x00591FF4
 	public void RefreshRedDot()
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(this.ResonanceId);
@@ -179,25 +179,25 @@ public class ResonanceChainBaseItem : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0601571F RID: 87839 RVA: 0x00568FFC File Offset: 0x005671FC
+	// Token: 0x0601311F RID: 78111 RVA: 0x00593E44 File Offset: 0x00592044
 	public int GetResonanceId()
 	{
 		return this.ResonanceId;
 	}
 
-	// Token: 0x06015720 RID: 87840 RVA: 0x00569004 File Offset: 0x00567204
+	// Token: 0x06013120 RID: 78112 RVA: 0x00593E4C File Offset: 0x0059204C
 	public UUIItem GetRedDotItem()
 	{
 		return base.GetItem(5);
 	}
 
-	// Token: 0x06015721 RID: 87841 RVA: 0x00569010 File Offset: 0x00567210
+	// Token: 0x06013121 RID: 78113 RVA: 0x00593E58 File Offset: 0x00592058
 	public void PlayActivateSequence()
 	{
 		this.SequencePlayer.PlayLevelSequenceByName("Unlock", false, null, false);
 	}
 
-	// Token: 0x06015722 RID: 87842 RVA: 0x00569038 File Offset: 0x00567238
+	// Token: 0x06013122 RID: 78114 RVA: 0x00593E80 File Offset: 0x00592080
 	private void PlayStartSequence()
 	{
 		if (this.IsActivate)
@@ -208,44 +208,44 @@ public class ResonanceChainBaseItem : UiPanelBase
 		this.SequencePlayer.PlayOrReplaySequenceByName("LockSet", false, null);
 	}
 
-	// Token: 0x04009FE6 RID: 40934
+	// Token: 0x0400A3CF RID: 41935
 	protected int ResonanceId;
 
-	// Token: 0x04009FE7 RID: 40935
+	// Token: 0x0400A3D0 RID: 41936
 	protected int RoleId;
 
-	// Token: 0x04009FE8 RID: 40936
+	// Token: 0x0400A3D1 RID: 41937
 	protected bool IsActivate;
 
-	// Token: 0x04009FE9 RID: 40937
+	// Token: 0x0400A3D2 RID: 41938
 	private bool IsSelect;
 
-	// Token: 0x04009FEA RID: 40938
+	// Token: 0x0400A3D3 RID: 41939
 	private Action<int> ToggleCallBack;
 
-	// Token: 0x04009FEB RID: 40939
+	// Token: 0x0400A3D4 RID: 41940
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04009FEC RID: 40940
+	// Token: 0x0400A3D5 RID: 41941
 	protected UniTask? LoadPromise;
 
-	// Token: 0x02008EA2 RID: 36514
+	// Token: 0x020080E9 RID: 33001
 	[NullableContext(0)]
 	public enum EResonanceChainItemCom
 	{
-		// Token: 0x0402E402 RID: 189442
+		// Token: 0x04029AFF RID: 170751
 		Toggle,
-		// Token: 0x0402E403 RID: 189443
+		// Token: 0x04029B00 RID: 170752
 		MaxActivateItem,
-		// Token: 0x0402E404 RID: 189444
+		// Token: 0x04029B01 RID: 170753
 		DeActivateItem,
-		// Token: 0x0402E405 RID: 189445
+		// Token: 0x04029B02 RID: 170754
 		ActivateItem,
-		// Token: 0x0402E406 RID: 189446
+		// Token: 0x04029B03 RID: 170755
 		DeActivateIconTexture,
-		// Token: 0x0402E407 RID: 189447
+		// Token: 0x04029B04 RID: 170756
 		RedDot,
-		// Token: 0x0402E408 RID: 189448
+		// Token: 0x04029B05 RID: 170757
 		ActivateIconTexture
 	}
 }

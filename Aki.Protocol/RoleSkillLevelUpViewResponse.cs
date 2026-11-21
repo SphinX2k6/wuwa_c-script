@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020010B2 RID: 4274
+	// Token: 0x020010A2 RID: 4258
 	[NetMessage(EMessageId.RoleSkillLevelUpViewResponse)]
 	public sealed class RoleSkillLevelUpViewResponse : IMessage<RoleSkillLevelUpViewResponse>, IMessage, IEquatable<RoleSkillLevelUpViewResponse>, IDeepCloneable<RoleSkillLevelUpViewResponse>, IBufferMessage
 	{
-		// Token: 0x06016D17 RID: 93463 RVA: 0x00350924 File Offset: 0x0034EB24
+		// Token: 0x06016C32 RID: 93234 RVA: 0x0034F248 File Offset: 0x0034D448
 		[NullableContext(1)]
 		public static RoleSkillLevelUpViewResponse Create()
 		{
 			return new RoleSkillLevelUpViewResponse();
 		}
 
-		// Token: 0x17004C72 RID: 19570
-		// (get) Token: 0x06016D18 RID: 93464 RVA: 0x0035092B File Offset: 0x0034EB2B
+		// Token: 0x17004C48 RID: 19528
+		// (get) Token: 0x06016C33 RID: 93235 RVA: 0x0034F24F File Offset: 0x0034D44F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C73 RID: 19571
-		// (get) Token: 0x06016D19 RID: 93465 RVA: 0x0035092E File Offset: 0x0034EB2E
+		// Token: 0x17004C49 RID: 19529
+		// (get) Token: 0x06016C34 RID: 93236 RVA: 0x0034F252 File Offset: 0x0034D452
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016D1A RID: 93466 RVA: 0x00350935 File Offset: 0x0034EB35
+		// Token: 0x06016C35 RID: 93237 RVA: 0x0034F259 File Offset: 0x0034D459
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkillLevelUpViewResponse()
 		{
 		}
 
-		// Token: 0x06016D1B RID: 93467 RVA: 0x00350954 File Offset: 0x0034EB54
+		// Token: 0x06016C36 RID: 93238 RVA: 0x0034F278 File Offset: 0x0034D478
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkillLevelUpViewResponse(RoleSkillLevelUpViewResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016D1C RID: 93468 RVA: 0x003509A6 File Offset: 0x0034EBA6
+		// Token: 0x06016C37 RID: 93239 RVA: 0x0034F2CA File Offset: 0x0034D4CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSkillLevelUpViewResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new RoleSkillLevelUpViewResponse(this);
 		}
 
-		// Token: 0x17004C74 RID: 19572
-		// (get) Token: 0x06016D1D RID: 93469 RVA: 0x003509AE File Offset: 0x0034EBAE
-		// (set) Token: 0x06016D1E RID: 93470 RVA: 0x003509B6 File Offset: 0x0034EBB6
+		// Token: 0x17004C4A RID: 19530
+		// (get) Token: 0x06016C38 RID: 93240 RVA: 0x0034F2D2 File Offset: 0x0034D4D2
+		// (set) Token: 0x06016C39 RID: 93241 RVA: 0x0034F2DA File Offset: 0x0034D4DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C75 RID: 19573
-		// (get) Token: 0x06016D1F RID: 93471 RVA: 0x003509BF File Offset: 0x0034EBBF
+		// Token: 0x17004C4B RID: 19531
+		// (get) Token: 0x06016C3A RID: 93242 RVA: 0x0034F2E3 File Offset: 0x0034D4E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SkillEffect> SkillEffectList
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C76 RID: 19574
-		// (get) Token: 0x06016D20 RID: 93472 RVA: 0x003509C7 File Offset: 0x0034EBC7
+		// Token: 0x17004C4C RID: 19532
+		// (get) Token: 0x06016C3B RID: 93243 RVA: 0x0034F2EB File Offset: 0x0034D4EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ArrayIntInt> CostList
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016D21 RID: 93473 RVA: 0x003509CF File Offset: 0x0034EBCF
+		// Token: 0x06016C3C RID: 93244 RVA: 0x0034F2F3 File Offset: 0x0034D4F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoleSkillLevelUpViewResponse);
 		}
 
-		// Token: 0x06016D22 RID: 93474 RVA: 0x003509E0 File Offset: 0x0034EBE0
+		// Token: 0x06016C3D RID: 93245 RVA: 0x0034F304 File Offset: 0x0034D504
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoleSkillLevelUpViewResponse other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && this.skillEffectList_.Equals(other.skillEffectList_) && this.costList_.Equals(other.costList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016D23 RID: 93475 RVA: 0x00350A44 File Offset: 0x0034EC44
+		// Token: 0x06016C3E RID: 93246 RVA: 0x0034F368 File Offset: 0x0034D568
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016D24 RID: 93476 RVA: 0x00350AA5 File Offset: 0x0034ECA5
+		// Token: 0x06016C3F RID: 93247 RVA: 0x0034F3C9 File Offset: 0x0034D5C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016D25 RID: 93477 RVA: 0x00350AB2 File Offset: 0x0034ECB2
+		// Token: 0x06016C40 RID: 93248 RVA: 0x0034F3D6 File Offset: 0x0034D5D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,25 +161,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016D26 RID: 93478 RVA: 0x00350ABC File Offset: 0x0034ECBC
+		// Token: 0x06016C41 RID: 93249 RVA: 0x0034F3E0 File Offset: 0x0034D5E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.skillEffectList_.WriteTo(ref output, RoleSkillLevelUpViewResponse._repeated_skillEffectList_codec);
-			this.costList_.WriteTo(ref output, RoleSkillLevelUpViewResponse._repeated_costList_codec);
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(16);
 				output.WriteEnum((int)this.Code);
 			}
+			this.costList_.WriteTo(ref output, RoleSkillLevelUpViewResponse._repeated_costList_codec);
+			this.skillEffectList_.WriteTo(ref output, RoleSkillLevelUpViewResponse._repeated_skillEffectList_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x06016D27 RID: 93479 RVA: 0x00350B1C File Offset: 0x0034ED1C
+		// Token: 0x06016C42 RID: 93250 RVA: 0x0034F440 File Offset: 0x0034D640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016D28 RID: 93480 RVA: 0x00350B80 File Offset: 0x0034ED80
+		// Token: 0x06016C43 RID: 93251 RVA: 0x0034F4A4 File Offset: 0x0034D6A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoleSkillLevelUpViewResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016D29 RID: 93481 RVA: 0x00350BDE File Offset: 0x0034EDDE
+		// Token: 0x06016C44 RID: 93252 RVA: 0x0034F502 File Offset: 0x0034D702
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016D2A RID: 93482 RVA: 0x00350BE8 File Offset: 0x0034EDE8
+		// Token: 0x06016C45 RID: 93253 RVA: 0x0034F50C File Offset: 0x0034D70C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,17 +236,17 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 26U)
+				if (num != 16U)
 				{
-					if (num != 98U)
+					if (num != 50U)
 					{
-						if (num != 112U)
+						if (num != 98U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.Code = (ErrorCode)input.ReadEnum();
+							this.skillEffectList_.AddEntriesFrom(ref input, RoleSkillLevelUpViewResponse._repeated_skillEffectList_codec);
 						}
 					}
 					else
@@ -256,36 +256,36 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					this.skillEffectList_.AddEntriesFrom(ref input, RoleSkillLevelUpViewResponse._repeated_skillEffectList_codec);
+					this.Code = (ErrorCode)input.ReadEnum();
 				}
 			}
 		}
 
-		// Token: 0x04008826 RID: 34854
+		// Token: 0x04008850 RID: 34896
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008827 RID: 34855
-		public const int CodeFieldNumber = 14;
+		// Token: 0x04008851 RID: 34897
+		public const int CodeFieldNumber = 2;
 
-		// Token: 0x04008828 RID: 34856
+		// Token: 0x04008852 RID: 34898
 		private ErrorCode code_;
 
-		// Token: 0x04008829 RID: 34857
-		public const int SkillEffectListFieldNumber = 3;
+		// Token: 0x04008853 RID: 34899
+		public const int SkillEffectListFieldNumber = 12;
 
-		// Token: 0x0400882A RID: 34858
-		private static readonly FieldCodec<SkillEffect> _repeated_skillEffectList_codec = FieldCodec.ForMessage<SkillEffect>(26U, SkillEffect.Parser);
+		// Token: 0x04008854 RID: 34900
+		private static readonly FieldCodec<SkillEffect> _repeated_skillEffectList_codec = FieldCodec.ForMessage<SkillEffect>(98U, SkillEffect.Parser);
 
-		// Token: 0x0400882B RID: 34859
+		// Token: 0x04008855 RID: 34901
 		private readonly RepeatedField<SkillEffect> skillEffectList_ = new RepeatedField<SkillEffect>();
 
-		// Token: 0x0400882C RID: 34860
-		public const int CostListFieldNumber = 12;
+		// Token: 0x04008856 RID: 34902
+		public const int CostListFieldNumber = 6;
 
-		// Token: 0x0400882D RID: 34861
-		private static readonly FieldCodec<ArrayIntInt> _repeated_costList_codec = FieldCodec.ForMessage<ArrayIntInt>(98U, ArrayIntInt.Parser);
+		// Token: 0x04008857 RID: 34903
+		private static readonly FieldCodec<ArrayIntInt> _repeated_costList_codec = FieldCodec.ForMessage<ArrayIntInt>(50U, ArrayIntInt.Parser);
 
-		// Token: 0x0400882E RID: 34862
+		// Token: 0x04008858 RID: 34904
 		private readonly RepeatedField<ArrayIntInt> costList_ = new RepeatedField<ArrayIntInt>();
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E69 RID: 24169
+	// Token: 0x020064A9 RID: 25769
 	public struct IUnlockPlotPhotoAtlasV2 : IFlatbufferObject
 	{
-		// Token: 0x1700B4B5 RID: 46261
-		// (get) Token: 0x06029641 RID: 169537 RVA: 0x005AC52E File Offset: 0x005AA72E
+		// Token: 0x1700BE1E RID: 48670
+		// (get) Token: 0x0602BCDD RID: 179421 RVA: 0x005F53D6 File Offset: 0x005F35D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029642 RID: 169538 RVA: 0x005AC53B File Offset: 0x005AA73B
+		// Token: 0x0602BCDE RID: 179422 RVA: 0x005F53E3 File Offset: 0x005F35E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029643 RID: 169539 RVA: 0x005AC544 File Offset: 0x005AA744
+		// Token: 0x0602BCDF RID: 179423 RVA: 0x005F53EC File Offset: 0x005F35EC
 		public static IUnlockPlotPhotoAtlasV2 GetRootAsIUnlockPlotPhotoAtlasV2(ByteBuffer _bb)
 		{
 			return IUnlockPlotPhotoAtlasV2.GetRootAsIUnlockPlotPhotoAtlasV2(_bb, default(IUnlockPlotPhotoAtlasV2));
 		}
 
-		// Token: 0x06029644 RID: 169540 RVA: 0x005AC560 File Offset: 0x005AA760
+		// Token: 0x0602BCE0 RID: 179424 RVA: 0x005F5408 File Offset: 0x005F3608
 		public static IUnlockPlotPhotoAtlasV2 GetRootAsIUnlockPlotPhotoAtlasV2(ByteBuffer _bb, IUnlockPlotPhotoAtlasV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029645 RID: 169541 RVA: 0x005AC57D File Offset: 0x005AA77D
+		// Token: 0x0602BCE1 RID: 179425 RVA: 0x005F5425 File Offset: 0x005F3625
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029646 RID: 169542 RVA: 0x005AC58C File Offset: 0x005AA78C
+		// Token: 0x0602BCE2 RID: 179426 RVA: 0x005F5434 File Offset: 0x005F3634
 		public IUnlockPlotPhotoAtlasV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B4B6 RID: 46262
-		// (get) Token: 0x06029647 RID: 169543 RVA: 0x005AC59C File Offset: 0x005AA79C
+		// Token: 0x1700BE1F RID: 48671
+		// (get) Token: 0x0602BCE3 RID: 179427 RVA: 0x005F5444 File Offset: 0x005F3644
 		public EUnlockAtlasSystemTypeV2 Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B4B7 RID: 46263
-		// (get) Token: 0x06029648 RID: 169544 RVA: 0x005AC5D8 File Offset: 0x005AA7D8
+		// Token: 0x1700BE20 RID: 48672
+		// (get) Token: 0x0602BCE4 RID: 179428 RVA: 0x005F5480 File Offset: 0x005F3680
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029649 RID: 169545 RVA: 0x005AC614 File Offset: 0x005AA814
+		// Token: 0x0602BCE5 RID: 179429 RVA: 0x005F54BC File Offset: 0x005F36BC
 		public static Offset<IUnlockPlotPhotoAtlasV2> CreateIUnlockPlotPhotoAtlasV2(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 Type = EUnlockAtlasSystemTypeV2.GeographicalAtlas, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockPlotPhotoAtlasV2.EndIUnlockPlotPhotoAtlasV2(builder);
 		}
 
-		// Token: 0x0602964A RID: 169546 RVA: 0x005AC631 File Offset: 0x005AA831
+		// Token: 0x0602BCE6 RID: 179430 RVA: 0x005F54D9 File Offset: 0x005F36D9
 		public static void StartIUnlockPlotPhotoAtlasV2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602964B RID: 169547 RVA: 0x005AC63A File Offset: 0x005AA83A
+		// Token: 0x0602BCE7 RID: 179431 RVA: 0x005F54E2 File Offset: 0x005F36E2
 		public static void AddType(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602964C RID: 169548 RVA: 0x005AC645 File Offset: 0x005AA845
+		// Token: 0x0602BCE8 RID: 179432 RVA: 0x005F54ED File Offset: 0x005F36ED
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0602964D RID: 169549 RVA: 0x005AC650 File Offset: 0x005AA850
+		// Token: 0x0602BCE9 RID: 179433 RVA: 0x005F54F8 File Offset: 0x005F36F8
 		public static Offset<IUnlockPlotPhotoAtlasV2> EndIUnlockPlotPhotoAtlasV2(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockPlotPhotoAtlasV2>(builder.EndTable());
 		}
 
-		// Token: 0x0602964E RID: 169550 RVA: 0x005AC660 File Offset: 0x005AA860
+		// Token: 0x0602BCEA RID: 179434 RVA: 0x005F5508 File Offset: 0x005F3708
 		public IUnlockPlotPhotoAtlasV2T UnPack()
 		{
 			IUnlockPlotPhotoAtlasV2T unlockPlotPhotoAtlasV2T = new IUnlockPlotPhotoAtlasV2T();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return unlockPlotPhotoAtlasV2T;
 		}
 
-		// Token: 0x0602964F RID: 169551 RVA: 0x005AC67B File Offset: 0x005AA87B
+		// Token: 0x0602BCEB RID: 179435 RVA: 0x005F5523 File Offset: 0x005F3723
 		public void UnPackTo(IUnlockPlotPhotoAtlasV2T _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06029650 RID: 169552 RVA: 0x005AC698 File Offset: 0x005AA898
+		// Token: 0x0602BCEC RID: 179436 RVA: 0x005F5540 File Offset: 0x005F3740
 		public static Offset<IUnlockPlotPhotoAtlasV2> Pack(FlatBufferBuilder builder, IUnlockPlotPhotoAtlasV2T _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockPlotPhotoAtlasV2.CreateIUnlockPlotPhotoAtlasV2(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400F87A RID: 63610
+		// Token: 0x040105D7 RID: 67031
 		private Table __p;
 	}
 }

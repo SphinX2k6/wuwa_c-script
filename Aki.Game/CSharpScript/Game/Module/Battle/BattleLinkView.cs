@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C4B RID: 23627
+	// Token: 0x02004C2B RID: 19499
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleLinkView : UiViewBase
 	{
-		// Token: 0x0603BB46 RID: 244550 RVA: 0x00E421DD File Offset: 0x00E403DD
+		// Token: 0x06030A91 RID: 199313 RVA: 0x00D925A9 File Offset: 0x00D907A9
 		public BattleLinkView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BB47 RID: 244551 RVA: 0x00E421FC File Offset: 0x00E403FC
+		// Token: 0x06030A92 RID: 199314 RVA: 0x00D925C8 File Offset: 0x00D907C8
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnBattleLinkStop, new Action(this.OnBattleLinkStop));
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnUiTimeDilation));
 		}
 
-		// Token: 0x0603BB48 RID: 244552 RVA: 0x00E4225C File Offset: 0x00E4045C
+		// Token: 0x06030A93 RID: 199315 RVA: 0x00D92628 File Offset: 0x00D90828
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBattleLinkStop, new Action(this.OnBattleLinkStop));
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnUiTimeDilation));
 		}
 
-		// Token: 0x0603BB49 RID: 244553 RVA: 0x00E422BC File Offset: 0x00E404BC
+		// Token: 0x06030A94 RID: 199316 RVA: 0x00D92688 File Offset: 0x00D90888
 		protected override void OnStart()
 		{
 			if (this.OpenParam != null)
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Battle
 			this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEnd), false);
 		}
 
-		// Token: 0x0603BB4A RID: 244554 RVA: 0x00E42373 File Offset: 0x00E40573
+		// Token: 0x06030A95 RID: 199317 RVA: 0x00D9273F File Offset: 0x00D9093F
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603BB4B RID: 244555 RVA: 0x00E4237C File Offset: 0x00E4057C
+		// Token: 0x06030A96 RID: 199318 RVA: 0x00D92748 File Offset: 0x00D90948
 		protected override void OnAfterShow()
 		{
 			this.IsInRestart = false;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Battle
 			sequencePlayer.PlayLevelSequenceByName("StartLink", false, null, false);
 		}
 
-		// Token: 0x0603BB4C RID: 244556 RVA: 0x00E423C4 File Offset: 0x00E405C4
+		// Token: 0x06030A97 RID: 199319 RVA: 0x00D92790 File Offset: 0x00D90990
 		protected override void OnBeforeHide()
 		{
 			ACameraActor cameraActor = CameraModel.Instance.MainModel.FightCamera.DisplayComponent.CameraActor;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB4D RID: 244557 RVA: 0x00E423F5 File Offset: 0x00E405F5
+		// Token: 0x06030A98 RID: 199320 RVA: 0x00D927C1 File Offset: 0x00D909C1
 		private void OnSequencePlayEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "PlayProgress")
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB4E RID: 244558 RVA: 0x00E4242D File Offset: 0x00E4062D
+		// Token: 0x06030A99 RID: 199321 RVA: 0x00D927F9 File Offset: 0x00D909F9
 		private void OnBattleLinkStop()
 		{
 			this.IsInRestart = false;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Battle
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603BB4F RID: 244559 RVA: 0x00E42458 File Offset: 0x00E40658
+		// Token: 0x06030A9A RID: 199322 RVA: 0x00D92824 File Offset: 0x00D90A24
 		private void Close()
 		{
 			if (!this.IsInRestart)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Battle
 			sequencePlayer.PlayLevelSequenceByName("StartLink", false, null, false);
 		}
 
-		// Token: 0x0603BB50 RID: 244560 RVA: 0x00E4249C File Offset: 0x00E4069C
+		// Token: 0x06030A9B RID: 199323 RVA: 0x00D92868 File Offset: 0x00D90A68
 		private void OnSequenceStart(string sequenceName)
 		{
 			if (sequenceName == "StartLink")
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB51 RID: 244561 RVA: 0x00E424F8 File Offset: 0x00E406F8
+		// Token: 0x06030A9C RID: 199324 RVA: 0x00D928C4 File Offset: 0x00D90AC4
 		private void OnSequenceEnd(string sequenceName)
 		{
 			if (sequenceName == "StartLink")
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB52 RID: 244562 RVA: 0x00E42538 File Offset: 0x00E40738
+		// Token: 0x06030A9D RID: 199325 RVA: 0x00D92904 File Offset: 0x00D90B04
 		private void SaveCameraSettings(ACameraActor camera)
 		{
 			UCameraComponent cameraComponent = camera.CameraComponent;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB53 RID: 244563 RVA: 0x00E42574 File Offset: 0x00E40774
+		// Token: 0x06030A9E RID: 199326 RVA: 0x00D92940 File Offset: 0x00D90B40
 		private void ModifyCameraSettings(ACameraActor camera)
 		{
 			if (this.IsCameraModify)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB54 RID: 244564 RVA: 0x00E425A8 File Offset: 0x00E407A8
+		// Token: 0x06030A9F RID: 199327 RVA: 0x00D92974 File Offset: 0x00D90B74
 		private void RecoverCameraSettings(ACameraActor camera)
 		{
 			if (!this.IsCameraModify)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB55 RID: 244565 RVA: 0x00E425F1 File Offset: 0x00E407F1
+		// Token: 0x06030AA0 RID: 199328 RVA: 0x00D929BD File Offset: 0x00D90BBD
 		private void OnRestart(double startTime)
 		{
 			this.IsInRestart = true;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Battle
 			uiViewSequence.StopSequenceByKey("Progress", false, false);
 		}
 
-		// Token: 0x0603BB56 RID: 244566 RVA: 0x00E42618 File Offset: 0x00E40818
+		// Token: 0x06030AA1 RID: 199329 RVA: 0x00D929E4 File Offset: 0x00D90BE4
 		private void OnUiTimeDilation()
 		{
 			float playRate = this.PlayRate * Time.Instance.TimeDilation;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Battle
 			sequencePlayer.SetPlayRate(playRate);
 		}
 
-		// Token: 0x0603BB57 RID: 244567 RVA: 0x00E42664 File Offset: 0x00E40864
+		// Token: 0x06030AA2 RID: 199330 RVA: 0x00D92A30 File Offset: 0x00D90C30
 		private void UpdatePlayRate()
 		{
 			this.PlayRate = this.DefaultPlayRate;
@@ -253,48 +253,48 @@ namespace CSharpScript.Game.Module.Battle
 			sequencePlayer.SetPlayRate(playRate);
 		}
 
-		// Token: 0x0603BB58 RID: 244568 RVA: 0x00E42748 File Offset: 0x00E40948
+		// Token: 0x06030AA3 RID: 199331 RVA: 0x00D92B14 File Offset: 0x00D90D14
 		private void PlayProgressAnim()
 		{
 			base.PlaySequence("Progress", new Action(this.Close), false);
 			this.UpdatePlayRate();
 		}
 
-		// Token: 0x0401F15C RID: 127324
+		// Token: 0x04019C0D RID: 105485
 		private const float PROGRESS_SEQ_DURATION = 1f;
 
-		// Token: 0x0401F15D RID: 127325
+		// Token: 0x04019C0E RID: 105486
 		private bool IsInRestart;
 
-		// Token: 0x0401F15E RID: 127326
+		// Token: 0x04019C0F RID: 105487
 		private float LinkDuration;
 
-		// Token: 0x0401F15F RID: 127327
+		// Token: 0x04019C10 RID: 105488
 		private float DefaultPlayRate = 1f;
 
-		// Token: 0x0401F160 RID: 127328
+		// Token: 0x04019C11 RID: 105489
 		private double StartTime;
 
-		// Token: 0x0401F161 RID: 127329
+		// Token: 0x04019C12 RID: 105490
 		private int OpenViewTime;
 
-		// Token: 0x0401F162 RID: 127330
+		// Token: 0x04019C13 RID: 105491
 		private float AnimDelay;
 
-		// Token: 0x0401F163 RID: 127331
+		// Token: 0x04019C14 RID: 105492
 		private float PlayRate = 1f;
 
-		// Token: 0x0401F164 RID: 127332
+		// Token: 0x04019C15 RID: 105493
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401F165 RID: 127333
+		// Token: 0x04019C16 RID: 105494
 		private bool IsCameraModify;
 
-		// Token: 0x0401F166 RID: 127334
+		// Token: 0x04019C17 RID: 105495
 		private bool RadialBlurIntensityOverrideTemp;
 
-		// Token: 0x0401F167 RID: 127335
+		// Token: 0x04019C18 RID: 105496
 		private float RadialBlurIntensityTemp;
 	}
 }

@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005AC8 RID: 23240
+	// Token: 0x02004AA9 RID: 19113
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReviveItem : UiPanelBase
 	{
-		// Token: 0x0603ADC0 RID: 241088 RVA: 0x00E07B30 File Offset: 0x00E05D30
+		// Token: 0x0602FD32 RID: 195890 RVA: 0x00D58810 File Offset: 0x00D56A10
 		public ReviveItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603ADC1 RID: 241089 RVA: 0x00E07B94 File Offset: 0x00E05D94
+		// Token: 0x0602FD33 RID: 195891 RVA: 0x00D58874 File Offset: 0x00D56A74
 		public void ShowReviveItem(int itemId, int itemCount)
 		{
 			this.ItemId = new int?(itemId);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.CountDownInit();
 		}
 
-		// Token: 0x0603ADC2 RID: 241090 RVA: 0x00E07C18 File Offset: 0x00E05E18
+		// Token: 0x0602FD34 RID: 195892 RVA: 0x00D588F8 File Offset: 0x00D56AF8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADC3 RID: 241091 RVA: 0x00E07D68 File Offset: 0x00E05F68
+		// Token: 0x0602FD35 RID: 195893 RVA: 0x00D58A48 File Offset: 0x00D56C48
 		protected override void OnStart()
 		{
 			this.Toggle = base.GetExtendToggle(9);
 		}
 
-		// Token: 0x0603ADC4 RID: 241092 RVA: 0x00E07D78 File Offset: 0x00E05F78
+		// Token: 0x0602FD36 RID: 195894 RVA: 0x00D58A58 File Offset: 0x00D56C58
 		protected override void OnBeforeDestroy()
 		{
 			this.ItemId = null;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.TotalCdTime = 1.0;
 		}
 
-		// Token: 0x0603ADC5 RID: 241093 RVA: 0x00E07DD1 File Offset: 0x00E05FD1
+		// Token: 0x0602FD37 RID: 195895 RVA: 0x00D58AB1 File Offset: 0x00D56CB1
 		protected void ToggleClick(EToggleState state)
 		{
 			if (this.ClickCallback == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADC6 RID: 241094 RVA: 0x00E07DF8 File Offset: 0x00E05FF8
+		// Token: 0x0602FD38 RID: 195896 RVA: 0x00D58AD8 File Offset: 0x00D56CD8
 		private void CountDownInit()
 		{
 			double buffItemRemainCdTime = BuffItemModel.Instance.GetBuffItemRemainCdTime(this.ItemId.Value);
@@ -113,20 +113,20 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.Timer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.TimerHandle), 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603ADC7 RID: 241095 RVA: 0x00E07ED0 File Offset: 0x00E060D0
+		// Token: 0x0602FD39 RID: 195897 RVA: 0x00D58BB0 File Offset: 0x00D56DB0
 		public void SetToggleState(bool bSelected, bool bFire = true)
 		{
 			EToggleState state = bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			this.Toggle.SetToggleState(state, bFire, false, false);
 		}
 
-		// Token: 0x0603ADC8 RID: 241096 RVA: 0x00E07EF5 File Offset: 0x00E060F5
+		// Token: 0x0602FD3A RID: 195898 RVA: 0x00D58BD5 File Offset: 0x00D56DD5
 		public void BindClickCallback(TItemClickCallback bindClickCallback)
 		{
 			this.ClickCallback = bindClickCallback;
 		}
 
-		// Token: 0x0603ADC9 RID: 241097 RVA: 0x00E07F00 File Offset: 0x00E06100
+		// Token: 0x0602FD3B RID: 195899 RVA: 0x00D58BE0 File Offset: 0x00D56DE0
 		private void TimerHandle(float delta)
 		{
 			if (this.RemainCdTime <= 0.0)
@@ -147,52 +147,52 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.RemainCdTime -= 0.02;
 		}
 
-		// Token: 0x0401EB73 RID: 125811
+		// Token: 0x0401962F RID: 103983
 		private int? ItemId;
 
-		// Token: 0x0401EB74 RID: 125812
+		// Token: 0x04019630 RID: 103984
 		private TItemClickCallback ClickCallback = delegate(int itemConfigId)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null, false);
 		};
 
-		// Token: 0x0401EB75 RID: 125813
+		// Token: 0x04019631 RID: 103985
 		[Nullable(2)]
 		private UUIExtendToggle Toggle;
 
-		// Token: 0x0401EB76 RID: 125814
+		// Token: 0x04019632 RID: 103986
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401EB77 RID: 125815
+		// Token: 0x04019633 RID: 103987
 		private double RemainCdTime = -1.0;
 
-		// Token: 0x0401EB78 RID: 125816
+		// Token: 0x04019634 RID: 103988
 		private double TotalCdTime = 1.0;
 
-		// Token: 0x0200BD1A RID: 48410
+		// Token: 0x0200A722 RID: 42786
 		[NullableContext(0)]
 		private class EReviveItemDefine
 		{
-			// Token: 0x0403908B RID: 233611
+			// Token: 0x04033A55 RID: 211541
 			public const int IconTexture = 1;
 
-			// Token: 0x0403908C RID: 233612
+			// Token: 0x04033A56 RID: 211542
 			public const int IconSprite = 2;
 
-			// Token: 0x0403908D RID: 233613
+			// Token: 0x04033A57 RID: 211543
 			public const int TextCount = 4;
 
-			// Token: 0x0403908E RID: 233614
+			// Token: 0x04033A58 RID: 211544
 			public const int Toggle = 9;
 
-			// Token: 0x0403908F RID: 233615
+			// Token: 0x04033A59 RID: 211545
 			public const int ItemCountDown = 14;
 
-			// Token: 0x04039090 RID: 233616
+			// Token: 0x04033A5A RID: 211546
 			public const int TextCountDown = 15;
 
-			// Token: 0x04039091 RID: 233617
+			// Token: 0x04033A5B RID: 211547
 			public const int SpriteCountDown = 16;
 		}
 	}

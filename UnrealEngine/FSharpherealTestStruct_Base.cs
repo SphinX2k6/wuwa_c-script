@@ -5,7 +5,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200273C RID: 10044
+	// Token: 0x020007F1 RID: 2033
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -13,15 +13,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(2072, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 2072)]
 	public class FSharpherealTestStruct_Base : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060252DE RID: 152286 RVA: 0x0037142A File Offset: 0x0036F62A
+		// Token: 0x0600ADCD RID: 44493 RVA: 0x001013FA File Offset: 0x000FF5FA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_Base._ScriptStructPtr != 0) ? FSharpherealTestStruct_Base._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_Base", ref FSharpherealTestStruct_Base._ScriptStructPtr);
 		}
 
-		// Token: 0x17008F6C RID: 36716
-		// (get) Token: 0x060252DF RID: 152287 RVA: 0x0037144E File Offset: 0x0036F64E
-		// (set) Token: 0x060252E0 RID: 152288 RVA: 0x0037145E File Offset: 0x0036F65E
+		// Token: 0x17002055 RID: 8277
+		// (get) Token: 0x0600ADCE RID: 44494 RVA: 0x0010141E File Offset: 0x000FF61E
+		// (set) Token: 0x0600ADCF RID: 44495 RVA: 0x0010142E File Offset: 0x000FF62E
 		public unsafe bool Bool
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F6D RID: 36717
-		// (get) Token: 0x060252E1 RID: 152289 RVA: 0x0037146F File Offset: 0x0036F66F
-		// (set) Token: 0x060252E2 RID: 152290 RVA: 0x00371488 File Offset: 0x0036F688
+		// Token: 0x17002056 RID: 8278
+		// (get) Token: 0x0600ADD0 RID: 44496 RVA: 0x0010143F File Offset: 0x000FF63F
+		// (set) Token: 0x0600ADD1 RID: 44497 RVA: 0x00101458 File Offset: 0x000FF658
 		public unsafe bool Bool1
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F6E RID: 36718
-		// (get) Token: 0x060252E3 RID: 152291 RVA: 0x003714B8 File Offset: 0x0036F6B8
-		// (set) Token: 0x060252E4 RID: 152292 RVA: 0x003714D1 File Offset: 0x0036F6D1
+		// Token: 0x17002057 RID: 8279
+		// (get) Token: 0x0600ADD2 RID: 44498 RVA: 0x00101488 File Offset: 0x000FF688
+		// (set) Token: 0x0600ADD3 RID: 44499 RVA: 0x001014A1 File Offset: 0x000FF6A1
 		public unsafe bool Bool2
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F6F RID: 36719
-		// (get) Token: 0x060252E5 RID: 152293 RVA: 0x00371501 File Offset: 0x0036F701
-		// (set) Token: 0x060252E6 RID: 152294 RVA: 0x00371511 File Offset: 0x0036F711
+		// Token: 0x17002058 RID: 8280
+		// (get) Token: 0x0600ADD4 RID: 44500 RVA: 0x001014D1 File Offset: 0x000FF6D1
+		// (set) Token: 0x0600ADD5 RID: 44501 RVA: 0x001014E1 File Offset: 0x000FF6E1
 		public unsafe sbyte I8
 		{
 			get
@@ -79,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F70 RID: 36720
-		// (get) Token: 0x060252E7 RID: 152295 RVA: 0x00371522 File Offset: 0x0036F722
-		// (set) Token: 0x060252E8 RID: 152296 RVA: 0x00371532 File Offset: 0x0036F732
+		// Token: 0x17002059 RID: 8281
+		// (get) Token: 0x0600ADD6 RID: 44502 RVA: 0x001014F2 File Offset: 0x000FF6F2
+		// (set) Token: 0x0600ADD7 RID: 44503 RVA: 0x00101502 File Offset: 0x000FF702
 		public unsafe byte U8
 		{
 			get
@@ -94,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F71 RID: 36721
-		// (get) Token: 0x060252E9 RID: 152297 RVA: 0x00371543 File Offset: 0x0036F743
-		// (set) Token: 0x060252EA RID: 152298 RVA: 0x00371553 File Offset: 0x0036F753
+		// Token: 0x1700205A RID: 8282
+		// (get) Token: 0x0600ADD8 RID: 44504 RVA: 0x00101513 File Offset: 0x000FF713
+		// (set) Token: 0x0600ADD9 RID: 44505 RVA: 0x00101523 File Offset: 0x000FF723
 		public unsafe short I16
 		{
 			get
@@ -109,9 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F72 RID: 36722
-		// (get) Token: 0x060252EB RID: 152299 RVA: 0x00371564 File Offset: 0x0036F764
-		// (set) Token: 0x060252EC RID: 152300 RVA: 0x00371574 File Offset: 0x0036F774
+		// Token: 0x1700205B RID: 8283
+		// (get) Token: 0x0600ADDA RID: 44506 RVA: 0x00101534 File Offset: 0x000FF734
+		// (set) Token: 0x0600ADDB RID: 44507 RVA: 0x00101544 File Offset: 0x000FF744
 		public unsafe ushort U16
 		{
 			get
@@ -124,9 +124,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F73 RID: 36723
-		// (get) Token: 0x060252ED RID: 152301 RVA: 0x00371585 File Offset: 0x0036F785
-		// (set) Token: 0x060252EE RID: 152302 RVA: 0x00371595 File Offset: 0x0036F795
+		// Token: 0x1700205C RID: 8284
+		// (get) Token: 0x0600ADDC RID: 44508 RVA: 0x00101555 File Offset: 0x000FF755
+		// (set) Token: 0x0600ADDD RID: 44509 RVA: 0x00101565 File Offset: 0x000FF765
 		public unsafe int I32
 		{
 			get
@@ -139,9 +139,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F74 RID: 36724
-		// (get) Token: 0x060252EF RID: 152303 RVA: 0x003715A6 File Offset: 0x0036F7A6
-		// (set) Token: 0x060252F0 RID: 152304 RVA: 0x003715B6 File Offset: 0x0036F7B6
+		// Token: 0x1700205D RID: 8285
+		// (get) Token: 0x0600ADDE RID: 44510 RVA: 0x00101576 File Offset: 0x000FF776
+		// (set) Token: 0x0600ADDF RID: 44511 RVA: 0x00101586 File Offset: 0x000FF786
 		public unsafe uint U32
 		{
 			get
@@ -154,9 +154,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F75 RID: 36725
-		// (get) Token: 0x060252F1 RID: 152305 RVA: 0x003715C7 File Offset: 0x0036F7C7
-		// (set) Token: 0x060252F2 RID: 152306 RVA: 0x003715D7 File Offset: 0x0036F7D7
+		// Token: 0x1700205E RID: 8286
+		// (get) Token: 0x0600ADE0 RID: 44512 RVA: 0x00101597 File Offset: 0x000FF797
+		// (set) Token: 0x0600ADE1 RID: 44513 RVA: 0x001015A7 File Offset: 0x000FF7A7
 		public unsafe long I64
 		{
 			get
@@ -169,9 +169,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F76 RID: 36726
-		// (get) Token: 0x060252F3 RID: 152307 RVA: 0x003715E8 File Offset: 0x0036F7E8
-		// (set) Token: 0x060252F4 RID: 152308 RVA: 0x003715F8 File Offset: 0x0036F7F8
+		// Token: 0x1700205F RID: 8287
+		// (get) Token: 0x0600ADE2 RID: 44514 RVA: 0x001015B8 File Offset: 0x000FF7B8
+		// (set) Token: 0x0600ADE3 RID: 44515 RVA: 0x001015C8 File Offset: 0x000FF7C8
 		public unsafe ulong U64
 		{
 			get
@@ -184,9 +184,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F77 RID: 36727
-		// (get) Token: 0x060252F5 RID: 152309 RVA: 0x00371609 File Offset: 0x0036F809
-		// (set) Token: 0x060252F6 RID: 152310 RVA: 0x00371619 File Offset: 0x0036F819
+		// Token: 0x17002060 RID: 8288
+		// (get) Token: 0x0600ADE4 RID: 44516 RVA: 0x001015D9 File Offset: 0x000FF7D9
+		// (set) Token: 0x0600ADE5 RID: 44517 RVA: 0x001015E9 File Offset: 0x000FF7E9
 		public unsafe float F32
 		{
 			get
@@ -199,9 +199,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F78 RID: 36728
-		// (get) Token: 0x060252F7 RID: 152311 RVA: 0x0037162A File Offset: 0x0036F82A
-		// (set) Token: 0x060252F8 RID: 152312 RVA: 0x0037163A File Offset: 0x0036F83A
+		// Token: 0x17002061 RID: 8289
+		// (get) Token: 0x0600ADE6 RID: 44518 RVA: 0x001015FA File Offset: 0x000FF7FA
+		// (set) Token: 0x0600ADE7 RID: 44519 RVA: 0x0010160A File Offset: 0x000FF80A
 		public unsafe double F64
 		{
 			get
@@ -214,9 +214,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F79 RID: 36729
-		// (get) Token: 0x060252F9 RID: 152313 RVA: 0x0037164C File Offset: 0x0036F84C
-		// (set) Token: 0x060252FA RID: 152314 RVA: 0x0037168F File Offset: 0x0036F88F
+		// Token: 0x17002062 RID: 8290
+		// (get) Token: 0x0600ADE8 RID: 44520 RVA: 0x0010161C File Offset: 0x000FF81C
+		// (set) Token: 0x0600ADE9 RID: 44521 RVA: 0x0010165F File Offset: 0x000FF85F
 		public TArray<bool> BoolArray
 		{
 			get
@@ -235,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7A RID: 36730
-		// (get) Token: 0x060252FB RID: 152315 RVA: 0x003716A0 File Offset: 0x0036F8A0
-		// (set) Token: 0x060252FC RID: 152316 RVA: 0x003716E3 File Offset: 0x0036F8E3
+		// Token: 0x17002063 RID: 8291
+		// (get) Token: 0x0600ADEA RID: 44522 RVA: 0x00101670 File Offset: 0x000FF870
+		// (set) Token: 0x0600ADEB RID: 44523 RVA: 0x001016B3 File Offset: 0x000FF8B3
 		public TArray<sbyte> Int8Array
 		{
 			get
@@ -256,9 +256,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7B RID: 36731
-		// (get) Token: 0x060252FD RID: 152317 RVA: 0x003716F4 File Offset: 0x0036F8F4
-		// (set) Token: 0x060252FE RID: 152318 RVA: 0x00371737 File Offset: 0x0036F937
+		// Token: 0x17002064 RID: 8292
+		// (get) Token: 0x0600ADEC RID: 44524 RVA: 0x001016C4 File Offset: 0x000FF8C4
+		// (set) Token: 0x0600ADED RID: 44525 RVA: 0x00101707 File Offset: 0x000FF907
 		public TArray<byte> Uint8Array
 		{
 			get
@@ -277,9 +277,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7C RID: 36732
-		// (get) Token: 0x060252FF RID: 152319 RVA: 0x00371748 File Offset: 0x0036F948
-		// (set) Token: 0x06025300 RID: 152320 RVA: 0x0037178B File Offset: 0x0036F98B
+		// Token: 0x17002065 RID: 8293
+		// (get) Token: 0x0600ADEE RID: 44526 RVA: 0x00101718 File Offset: 0x000FF918
+		// (set) Token: 0x0600ADEF RID: 44527 RVA: 0x0010175B File Offset: 0x000FF95B
 		public TArray<short> Int16Array
 		{
 			get
@@ -298,9 +298,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7D RID: 36733
-		// (get) Token: 0x06025301 RID: 152321 RVA: 0x0037179C File Offset: 0x0036F99C
-		// (set) Token: 0x06025302 RID: 152322 RVA: 0x003717DF File Offset: 0x0036F9DF
+		// Token: 0x17002066 RID: 8294
+		// (get) Token: 0x0600ADF0 RID: 44528 RVA: 0x0010176C File Offset: 0x000FF96C
+		// (set) Token: 0x0600ADF1 RID: 44529 RVA: 0x001017AF File Offset: 0x000FF9AF
 		public TArray<ushort> Uint16Array
 		{
 			get
@@ -319,9 +319,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7E RID: 36734
-		// (get) Token: 0x06025303 RID: 152323 RVA: 0x003717F0 File Offset: 0x0036F9F0
-		// (set) Token: 0x06025304 RID: 152324 RVA: 0x00371833 File Offset: 0x0036FA33
+		// Token: 0x17002067 RID: 8295
+		// (get) Token: 0x0600ADF2 RID: 44530 RVA: 0x001017C0 File Offset: 0x000FF9C0
+		// (set) Token: 0x0600ADF3 RID: 44531 RVA: 0x00101803 File Offset: 0x000FFA03
 		public TArray<int> Int32Array
 		{
 			get
@@ -340,9 +340,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F7F RID: 36735
-		// (get) Token: 0x06025305 RID: 152325 RVA: 0x00371844 File Offset: 0x0036FA44
-		// (set) Token: 0x06025306 RID: 152326 RVA: 0x00371887 File Offset: 0x0036FA87
+		// Token: 0x17002068 RID: 8296
+		// (get) Token: 0x0600ADF4 RID: 44532 RVA: 0x00101814 File Offset: 0x000FFA14
+		// (set) Token: 0x0600ADF5 RID: 44533 RVA: 0x00101857 File Offset: 0x000FFA57
 		public TArray<uint> Uint32Array
 		{
 			get
@@ -361,9 +361,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F80 RID: 36736
-		// (get) Token: 0x06025307 RID: 152327 RVA: 0x00371898 File Offset: 0x0036FA98
-		// (set) Token: 0x06025308 RID: 152328 RVA: 0x003718DB File Offset: 0x0036FADB
+		// Token: 0x17002069 RID: 8297
+		// (get) Token: 0x0600ADF6 RID: 44534 RVA: 0x00101868 File Offset: 0x000FFA68
+		// (set) Token: 0x0600ADF7 RID: 44535 RVA: 0x001018AB File Offset: 0x000FFAAB
 		public TArray<long> Int64Array
 		{
 			get
@@ -382,9 +382,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F81 RID: 36737
-		// (get) Token: 0x06025309 RID: 152329 RVA: 0x003718EC File Offset: 0x0036FAEC
-		// (set) Token: 0x0602530A RID: 152330 RVA: 0x0037192F File Offset: 0x0036FB2F
+		// Token: 0x1700206A RID: 8298
+		// (get) Token: 0x0600ADF8 RID: 44536 RVA: 0x001018BC File Offset: 0x000FFABC
+		// (set) Token: 0x0600ADF9 RID: 44537 RVA: 0x001018FF File Offset: 0x000FFAFF
 		public TArray<ulong> Uint64Array
 		{
 			get
@@ -403,9 +403,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F82 RID: 36738
-		// (get) Token: 0x0602530B RID: 152331 RVA: 0x00371940 File Offset: 0x0036FB40
-		// (set) Token: 0x0602530C RID: 152332 RVA: 0x00371983 File Offset: 0x0036FB83
+		// Token: 0x1700206B RID: 8299
+		// (get) Token: 0x0600ADFA RID: 44538 RVA: 0x00101910 File Offset: 0x000FFB10
+		// (set) Token: 0x0600ADFB RID: 44539 RVA: 0x00101953 File Offset: 0x000FFB53
 		public TArray<float> FloatArray
 		{
 			get
@@ -424,9 +424,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F83 RID: 36739
-		// (get) Token: 0x0602530D RID: 152333 RVA: 0x00371994 File Offset: 0x0036FB94
-		// (set) Token: 0x0602530E RID: 152334 RVA: 0x003719D7 File Offset: 0x0036FBD7
+		// Token: 0x1700206C RID: 8300
+		// (get) Token: 0x0600ADFC RID: 44540 RVA: 0x00101964 File Offset: 0x000FFB64
+		// (set) Token: 0x0600ADFD RID: 44541 RVA: 0x001019A7 File Offset: 0x000FFBA7
 		public TArray<double> DoubleArray
 		{
 			get
@@ -445,9 +445,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F84 RID: 36740
-		// (get) Token: 0x0602530F RID: 152335 RVA: 0x003719E8 File Offset: 0x0036FBE8
-		// (set) Token: 0x06025310 RID: 152336 RVA: 0x00371A2C File Offset: 0x0036FC2C
+		// Token: 0x1700206D RID: 8301
+		// (get) Token: 0x0600ADFE RID: 44542 RVA: 0x001019B8 File Offset: 0x000FFBB8
+		// (set) Token: 0x0600ADFF RID: 44543 RVA: 0x001019FC File Offset: 0x000FFBFC
 		public TFixedArray<sbyte> Int8FixedArray
 		{
 			get
@@ -466,9 +466,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F85 RID: 36741
-		// (get) Token: 0x06025311 RID: 152337 RVA: 0x00371A3C File Offset: 0x0036FC3C
-		// (set) Token: 0x06025312 RID: 152338 RVA: 0x00371A80 File Offset: 0x0036FC80
+		// Token: 0x1700206E RID: 8302
+		// (get) Token: 0x0600AE00 RID: 44544 RVA: 0x00101A0C File Offset: 0x000FFC0C
+		// (set) Token: 0x0600AE01 RID: 44545 RVA: 0x00101A50 File Offset: 0x000FFC50
 		public TFixedArray<byte> Uint8FixedArray
 		{
 			get
@@ -487,9 +487,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F86 RID: 36742
-		// (get) Token: 0x06025313 RID: 152339 RVA: 0x00371A90 File Offset: 0x0036FC90
-		// (set) Token: 0x06025314 RID: 152340 RVA: 0x00371AD4 File Offset: 0x0036FCD4
+		// Token: 0x1700206F RID: 8303
+		// (get) Token: 0x0600AE02 RID: 44546 RVA: 0x00101A60 File Offset: 0x000FFC60
+		// (set) Token: 0x0600AE03 RID: 44547 RVA: 0x00101AA4 File Offset: 0x000FFCA4
 		public TFixedArray<short> Int16FixedArray
 		{
 			get
@@ -508,9 +508,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F87 RID: 36743
-		// (get) Token: 0x06025315 RID: 152341 RVA: 0x00371AE4 File Offset: 0x0036FCE4
-		// (set) Token: 0x06025316 RID: 152342 RVA: 0x00371B28 File Offset: 0x0036FD28
+		// Token: 0x17002070 RID: 8304
+		// (get) Token: 0x0600AE04 RID: 44548 RVA: 0x00101AB4 File Offset: 0x000FFCB4
+		// (set) Token: 0x0600AE05 RID: 44549 RVA: 0x00101AF8 File Offset: 0x000FFCF8
 		public TFixedArray<ushort> Uint16FixedArray
 		{
 			get
@@ -529,9 +529,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F88 RID: 36744
-		// (get) Token: 0x06025317 RID: 152343 RVA: 0x00371B38 File Offset: 0x0036FD38
-		// (set) Token: 0x06025318 RID: 152344 RVA: 0x00371B7C File Offset: 0x0036FD7C
+		// Token: 0x17002071 RID: 8305
+		// (get) Token: 0x0600AE06 RID: 44550 RVA: 0x00101B08 File Offset: 0x000FFD08
+		// (set) Token: 0x0600AE07 RID: 44551 RVA: 0x00101B4C File Offset: 0x000FFD4C
 		public TFixedArray<int> Int32FixedArray
 		{
 			get
@@ -550,9 +550,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F89 RID: 36745
-		// (get) Token: 0x06025319 RID: 152345 RVA: 0x00371B8C File Offset: 0x0036FD8C
-		// (set) Token: 0x0602531A RID: 152346 RVA: 0x00371BD0 File Offset: 0x0036FDD0
+		// Token: 0x17002072 RID: 8306
+		// (get) Token: 0x0600AE08 RID: 44552 RVA: 0x00101B5C File Offset: 0x000FFD5C
+		// (set) Token: 0x0600AE09 RID: 44553 RVA: 0x00101BA0 File Offset: 0x000FFDA0
 		public TFixedArray<uint> Uint32FixedArray
 		{
 			get
@@ -571,9 +571,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8A RID: 36746
-		// (get) Token: 0x0602531B RID: 152347 RVA: 0x00371BE0 File Offset: 0x0036FDE0
-		// (set) Token: 0x0602531C RID: 152348 RVA: 0x00371C24 File Offset: 0x0036FE24
+		// Token: 0x17002073 RID: 8307
+		// (get) Token: 0x0600AE0A RID: 44554 RVA: 0x00101BB0 File Offset: 0x000FFDB0
+		// (set) Token: 0x0600AE0B RID: 44555 RVA: 0x00101BF4 File Offset: 0x000FFDF4
 		public TFixedArray<long> Int64FixedArray
 		{
 			get
@@ -592,9 +592,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8B RID: 36747
-		// (get) Token: 0x0602531D RID: 152349 RVA: 0x00371C34 File Offset: 0x0036FE34
-		// (set) Token: 0x0602531E RID: 152350 RVA: 0x00371C78 File Offset: 0x0036FE78
+		// Token: 0x17002074 RID: 8308
+		// (get) Token: 0x0600AE0C RID: 44556 RVA: 0x00101C04 File Offset: 0x000FFE04
+		// (set) Token: 0x0600AE0D RID: 44557 RVA: 0x00101C48 File Offset: 0x000FFE48
 		public TFixedArray<ulong> Uint64FixedArray
 		{
 			get
@@ -613,9 +613,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8C RID: 36748
-		// (get) Token: 0x0602531F RID: 152351 RVA: 0x00371C88 File Offset: 0x0036FE88
-		// (set) Token: 0x06025320 RID: 152352 RVA: 0x00371CCC File Offset: 0x0036FECC
+		// Token: 0x17002075 RID: 8309
+		// (get) Token: 0x0600AE0E RID: 44558 RVA: 0x00101C58 File Offset: 0x000FFE58
+		// (set) Token: 0x0600AE0F RID: 44559 RVA: 0x00101C9C File Offset: 0x000FFE9C
 		public TFixedArray<float> FloatFixedArray
 		{
 			get
@@ -634,9 +634,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8D RID: 36749
-		// (get) Token: 0x06025321 RID: 152353 RVA: 0x00371CDC File Offset: 0x0036FEDC
-		// (set) Token: 0x06025322 RID: 152354 RVA: 0x00371D20 File Offset: 0x0036FF20
+		// Token: 0x17002076 RID: 8310
+		// (get) Token: 0x0600AE10 RID: 44560 RVA: 0x00101CAC File Offset: 0x000FFEAC
+		// (set) Token: 0x0600AE11 RID: 44561 RVA: 0x00101CF0 File Offset: 0x000FFEF0
 		public TFixedArray<double> DoubleFixedArray
 		{
 			get
@@ -655,9 +655,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8E RID: 36750
-		// (get) Token: 0x06025323 RID: 152355 RVA: 0x00371D30 File Offset: 0x0036FF30
-		// (set) Token: 0x06025324 RID: 152356 RVA: 0x00371D73 File Offset: 0x0036FF73
+		// Token: 0x17002077 RID: 8311
+		// (get) Token: 0x0600AE12 RID: 44562 RVA: 0x00101D00 File Offset: 0x000FFF00
+		// (set) Token: 0x0600AE13 RID: 44563 RVA: 0x00101D43 File Offset: 0x000FFF43
 		public TSet<bool> BoolSet
 		{
 			get
@@ -676,9 +676,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F8F RID: 36751
-		// (get) Token: 0x06025325 RID: 152357 RVA: 0x00371D84 File Offset: 0x0036FF84
-		// (set) Token: 0x06025326 RID: 152358 RVA: 0x00371DC7 File Offset: 0x0036FFC7
+		// Token: 0x17002078 RID: 8312
+		// (get) Token: 0x0600AE14 RID: 44564 RVA: 0x00101D54 File Offset: 0x000FFF54
+		// (set) Token: 0x0600AE15 RID: 44565 RVA: 0x00101D97 File Offset: 0x000FFF97
 		public TSet<sbyte> Int8Set
 		{
 			get
@@ -697,9 +697,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F90 RID: 36752
-		// (get) Token: 0x06025327 RID: 152359 RVA: 0x00371DD8 File Offset: 0x0036FFD8
-		// (set) Token: 0x06025328 RID: 152360 RVA: 0x00371E1B File Offset: 0x0037001B
+		// Token: 0x17002079 RID: 8313
+		// (get) Token: 0x0600AE16 RID: 44566 RVA: 0x00101DA8 File Offset: 0x000FFFA8
+		// (set) Token: 0x0600AE17 RID: 44567 RVA: 0x00101DEB File Offset: 0x000FFFEB
 		public TSet<byte> Uint8Set
 		{
 			get
@@ -718,9 +718,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F91 RID: 36753
-		// (get) Token: 0x06025329 RID: 152361 RVA: 0x00371E2C File Offset: 0x0037002C
-		// (set) Token: 0x0602532A RID: 152362 RVA: 0x00371E6F File Offset: 0x0037006F
+		// Token: 0x1700207A RID: 8314
+		// (get) Token: 0x0600AE18 RID: 44568 RVA: 0x00101DFC File Offset: 0x000FFFFC
+		// (set) Token: 0x0600AE19 RID: 44569 RVA: 0x00101E3F File Offset: 0x0010003F
 		public TSet<short> Int16Set
 		{
 			get
@@ -739,9 +739,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F92 RID: 36754
-		// (get) Token: 0x0602532B RID: 152363 RVA: 0x00371E80 File Offset: 0x00370080
-		// (set) Token: 0x0602532C RID: 152364 RVA: 0x00371EC3 File Offset: 0x003700C3
+		// Token: 0x1700207B RID: 8315
+		// (get) Token: 0x0600AE1A RID: 44570 RVA: 0x00101E50 File Offset: 0x00100050
+		// (set) Token: 0x0600AE1B RID: 44571 RVA: 0x00101E93 File Offset: 0x00100093
 		public TSet<ushort> Uint16Set
 		{
 			get
@@ -760,9 +760,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F93 RID: 36755
-		// (get) Token: 0x0602532D RID: 152365 RVA: 0x00371ED4 File Offset: 0x003700D4
-		// (set) Token: 0x0602532E RID: 152366 RVA: 0x00371F17 File Offset: 0x00370117
+		// Token: 0x1700207C RID: 8316
+		// (get) Token: 0x0600AE1C RID: 44572 RVA: 0x00101EA4 File Offset: 0x001000A4
+		// (set) Token: 0x0600AE1D RID: 44573 RVA: 0x00101EE7 File Offset: 0x001000E7
 		public TSet<int> Int32Set
 		{
 			get
@@ -781,9 +781,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F94 RID: 36756
-		// (get) Token: 0x0602532F RID: 152367 RVA: 0x00371F28 File Offset: 0x00370128
-		// (set) Token: 0x06025330 RID: 152368 RVA: 0x00371F6B File Offset: 0x0037016B
+		// Token: 0x1700207D RID: 8317
+		// (get) Token: 0x0600AE1E RID: 44574 RVA: 0x00101EF8 File Offset: 0x001000F8
+		// (set) Token: 0x0600AE1F RID: 44575 RVA: 0x00101F3B File Offset: 0x0010013B
 		public TSet<uint> Uint32Set
 		{
 			get
@@ -802,9 +802,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F95 RID: 36757
-		// (get) Token: 0x06025331 RID: 152369 RVA: 0x00371F7C File Offset: 0x0037017C
-		// (set) Token: 0x06025332 RID: 152370 RVA: 0x00371FBF File Offset: 0x003701BF
+		// Token: 0x1700207E RID: 8318
+		// (get) Token: 0x0600AE20 RID: 44576 RVA: 0x00101F4C File Offset: 0x0010014C
+		// (set) Token: 0x0600AE21 RID: 44577 RVA: 0x00101F8F File Offset: 0x0010018F
 		public TSet<long> Int64Set
 		{
 			get
@@ -823,9 +823,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F96 RID: 36758
-		// (get) Token: 0x06025333 RID: 152371 RVA: 0x00371FD0 File Offset: 0x003701D0
-		// (set) Token: 0x06025334 RID: 152372 RVA: 0x00372013 File Offset: 0x00370213
+		// Token: 0x1700207F RID: 8319
+		// (get) Token: 0x0600AE22 RID: 44578 RVA: 0x00101FA0 File Offset: 0x001001A0
+		// (set) Token: 0x0600AE23 RID: 44579 RVA: 0x00101FE3 File Offset: 0x001001E3
 		public TSet<ulong> Uint64Set
 		{
 			get
@@ -844,9 +844,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F97 RID: 36759
-		// (get) Token: 0x06025335 RID: 152373 RVA: 0x00372024 File Offset: 0x00370224
-		// (set) Token: 0x06025336 RID: 152374 RVA: 0x00372067 File Offset: 0x00370267
+		// Token: 0x17002080 RID: 8320
+		// (get) Token: 0x0600AE24 RID: 44580 RVA: 0x00101FF4 File Offset: 0x001001F4
+		// (set) Token: 0x0600AE25 RID: 44581 RVA: 0x00102037 File Offset: 0x00100237
 		public TSet<float> FloatSet
 		{
 			get
@@ -865,9 +865,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F98 RID: 36760
-		// (get) Token: 0x06025337 RID: 152375 RVA: 0x00372078 File Offset: 0x00370278
-		// (set) Token: 0x06025338 RID: 152376 RVA: 0x003720BB File Offset: 0x003702BB
+		// Token: 0x17002081 RID: 8321
+		// (get) Token: 0x0600AE26 RID: 44582 RVA: 0x00102048 File Offset: 0x00100248
+		// (set) Token: 0x0600AE27 RID: 44583 RVA: 0x0010208B File Offset: 0x0010028B
 		public TSet<double> DoubleSet
 		{
 			get
@@ -886,9 +886,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F99 RID: 36761
-		// (get) Token: 0x06025339 RID: 152377 RVA: 0x003720CC File Offset: 0x003702CC
-		// (set) Token: 0x0602533A RID: 152378 RVA: 0x0037210F File Offset: 0x0037030F
+		// Token: 0x17002082 RID: 8322
+		// (get) Token: 0x0600AE28 RID: 44584 RVA: 0x0010209C File Offset: 0x0010029C
+		// (set) Token: 0x0600AE29 RID: 44585 RVA: 0x001020DF File Offset: 0x001002DF
 		public TMap<bool, int> BoolMap
 		{
 			get
@@ -907,9 +907,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9A RID: 36762
-		// (get) Token: 0x0602533B RID: 152379 RVA: 0x00372120 File Offset: 0x00370320
-		// (set) Token: 0x0602533C RID: 152380 RVA: 0x00372163 File Offset: 0x00370363
+		// Token: 0x17002083 RID: 8323
+		// (get) Token: 0x0600AE2A RID: 44586 RVA: 0x001020F0 File Offset: 0x001002F0
+		// (set) Token: 0x0600AE2B RID: 44587 RVA: 0x00102133 File Offset: 0x00100333
 		public TMap<sbyte, int> Int8Map
 		{
 			get
@@ -928,9 +928,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9B RID: 36763
-		// (get) Token: 0x0602533D RID: 152381 RVA: 0x00372174 File Offset: 0x00370374
-		// (set) Token: 0x0602533E RID: 152382 RVA: 0x003721B7 File Offset: 0x003703B7
+		// Token: 0x17002084 RID: 8324
+		// (get) Token: 0x0600AE2C RID: 44588 RVA: 0x00102144 File Offset: 0x00100344
+		// (set) Token: 0x0600AE2D RID: 44589 RVA: 0x00102187 File Offset: 0x00100387
 		public TMap<byte, int> Uint8Map
 		{
 			get
@@ -949,9 +949,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9C RID: 36764
-		// (get) Token: 0x0602533F RID: 152383 RVA: 0x003721C8 File Offset: 0x003703C8
-		// (set) Token: 0x06025340 RID: 152384 RVA: 0x0037220B File Offset: 0x0037040B
+		// Token: 0x17002085 RID: 8325
+		// (get) Token: 0x0600AE2E RID: 44590 RVA: 0x00102198 File Offset: 0x00100398
+		// (set) Token: 0x0600AE2F RID: 44591 RVA: 0x001021DB File Offset: 0x001003DB
 		public TMap<short, int> Int16Map
 		{
 			get
@@ -970,9 +970,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9D RID: 36765
-		// (get) Token: 0x06025341 RID: 152385 RVA: 0x0037221C File Offset: 0x0037041C
-		// (set) Token: 0x06025342 RID: 152386 RVA: 0x0037225F File Offset: 0x0037045F
+		// Token: 0x17002086 RID: 8326
+		// (get) Token: 0x0600AE30 RID: 44592 RVA: 0x001021EC File Offset: 0x001003EC
+		// (set) Token: 0x0600AE31 RID: 44593 RVA: 0x0010222F File Offset: 0x0010042F
 		public TMap<ushort, int> Uint16Map
 		{
 			get
@@ -991,9 +991,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9E RID: 36766
-		// (get) Token: 0x06025343 RID: 152387 RVA: 0x00372270 File Offset: 0x00370470
-		// (set) Token: 0x06025344 RID: 152388 RVA: 0x003722B3 File Offset: 0x003704B3
+		// Token: 0x17002087 RID: 8327
+		// (get) Token: 0x0600AE32 RID: 44594 RVA: 0x00102240 File Offset: 0x00100440
+		// (set) Token: 0x0600AE33 RID: 44595 RVA: 0x00102283 File Offset: 0x00100483
 		public TMap<int, int> Int32Map
 		{
 			get
@@ -1012,9 +1012,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F9F RID: 36767
-		// (get) Token: 0x06025345 RID: 152389 RVA: 0x003722C4 File Offset: 0x003704C4
-		// (set) Token: 0x06025346 RID: 152390 RVA: 0x00372307 File Offset: 0x00370507
+		// Token: 0x17002088 RID: 8328
+		// (get) Token: 0x0600AE34 RID: 44596 RVA: 0x00102294 File Offset: 0x00100494
+		// (set) Token: 0x0600AE35 RID: 44597 RVA: 0x001022D7 File Offset: 0x001004D7
 		public TMap<uint, int> Uint32Map
 		{
 			get
@@ -1033,9 +1033,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FA0 RID: 36768
-		// (get) Token: 0x06025347 RID: 152391 RVA: 0x00372318 File Offset: 0x00370518
-		// (set) Token: 0x06025348 RID: 152392 RVA: 0x0037235B File Offset: 0x0037055B
+		// Token: 0x17002089 RID: 8329
+		// (get) Token: 0x0600AE36 RID: 44598 RVA: 0x001022E8 File Offset: 0x001004E8
+		// (set) Token: 0x0600AE37 RID: 44599 RVA: 0x0010232B File Offset: 0x0010052B
 		public TMap<long, int> Int64Map
 		{
 			get
@@ -1054,9 +1054,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FA1 RID: 36769
-		// (get) Token: 0x06025349 RID: 152393 RVA: 0x0037236C File Offset: 0x0037056C
-		// (set) Token: 0x0602534A RID: 152394 RVA: 0x003723AF File Offset: 0x003705AF
+		// Token: 0x1700208A RID: 8330
+		// (get) Token: 0x0600AE38 RID: 44600 RVA: 0x0010233C File Offset: 0x0010053C
+		// (set) Token: 0x0600AE39 RID: 44601 RVA: 0x0010237F File Offset: 0x0010057F
 		public TMap<ulong, int> Uint64Map
 		{
 			get
@@ -1075,9 +1075,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FA2 RID: 36770
-		// (get) Token: 0x0602534B RID: 152395 RVA: 0x003723C0 File Offset: 0x003705C0
-		// (set) Token: 0x0602534C RID: 152396 RVA: 0x00372403 File Offset: 0x00370603
+		// Token: 0x1700208B RID: 8331
+		// (get) Token: 0x0600AE3A RID: 44602 RVA: 0x00102390 File Offset: 0x00100590
+		// (set) Token: 0x0600AE3B RID: 44603 RVA: 0x001023D3 File Offset: 0x001005D3
 		public TMap<float, int> FloatMap
 		{
 			get
@@ -1096,9 +1096,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FA3 RID: 36771
-		// (get) Token: 0x0602534D RID: 152397 RVA: 0x00372414 File Offset: 0x00370614
-		// (set) Token: 0x0602534E RID: 152398 RVA: 0x00372457 File Offset: 0x00370657
+		// Token: 0x1700208C RID: 8332
+		// (get) Token: 0x0600AE3C RID: 44604 RVA: 0x001023E4 File Offset: 0x001005E4
+		// (set) Token: 0x0600AE3D RID: 44605 RVA: 0x00102427 File Offset: 0x00100627
 		public TMap<double, int> DoubleMap
 		{
 			get
@@ -1117,450 +1117,389 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602534F RID: 152399 RVA: 0x00372465 File Offset: 0x00370665
+		// Token: 0x0600AE3E RID: 44606 RVA: 0x00102435 File Offset: 0x00100635
 		public FSharpherealTestStruct_Base()
 		{
 		}
 
-		// Token: 0x06025350 RID: 152400 RVA: 0x00372470 File Offset: 0x00370670
-		public FSharpherealTestStruct_Base(bool Bool, bool Bool1, bool Bool2, sbyte I8, byte U8, short I16, ushort U16, int I32, uint U32, long I64, ulong U64, float F32, double F64, TArray<bool> BoolArray, TArray<sbyte> Int8Array, TArray<byte> Uint8Array, TArray<short> Int16Array, TArray<ushort> Uint16Array, TArray<int> Int32Array, TArray<uint> Uint32Array, TArray<long> Int64Array, TArray<ulong> Uint64Array, TArray<float> FloatArray, TArray<double> DoubleArray, TFixedArray<sbyte> Int8FixedArray, TFixedArray<byte> Uint8FixedArray, TFixedArray<short> Int16FixedArray, TFixedArray<ushort> Uint16FixedArray, TFixedArray<int> Int32FixedArray, TFixedArray<uint> Uint32FixedArray, TFixedArray<long> Int64FixedArray, TFixedArray<ulong> Uint64FixedArray, TFixedArray<float> FloatFixedArray, TFixedArray<double> DoubleFixedArray, TSet<bool> BoolSet, TSet<sbyte> Int8Set, TSet<byte> Uint8Set, TSet<short> Int16Set, TSet<ushort> Uint16Set, TSet<int> Int32Set, TSet<uint> Uint32Set, TSet<long> Int64Set, TSet<ulong> Uint64Set, TSet<float> FloatSet, TSet<double> DoubleSet, TMap<bool, int> BoolMap, TMap<sbyte, int> Int8Map, TMap<byte, int> Uint8Map, TMap<short, int> Int16Map, TMap<ushort, int> Uint16Map, TMap<int, int> Int32Map, TMap<uint, int> Uint32Map, TMap<long, int> Int64Map, TMap<ulong, int> Uint64Map, TMap<float, int> FloatMap, TMap<double, int> DoubleMap)
-		{
-			this.Bool = Bool;
-			this.Bool1 = Bool1;
-			this.Bool2 = Bool2;
-			this.I8 = I8;
-			this.U8 = U8;
-			this.I16 = I16;
-			this.U16 = U16;
-			this.I32 = I32;
-			this.U32 = U32;
-			this.I64 = I64;
-			this.U64 = U64;
-			this.F32 = F32;
-			this.F64 = F64;
-			this.BoolArray = BoolArray;
-			this.Int8Array = Int8Array;
-			this.Uint8Array = Uint8Array;
-			this.Int16Array = Int16Array;
-			this.Uint16Array = Uint16Array;
-			this.Int32Array = Int32Array;
-			this.Uint32Array = Uint32Array;
-			this.Int64Array = Int64Array;
-			this.Uint64Array = Uint64Array;
-			this.FloatArray = FloatArray;
-			this.DoubleArray = DoubleArray;
-			this.Int8FixedArray = Int8FixedArray;
-			this.Uint8FixedArray = Uint8FixedArray;
-			this.Int16FixedArray = Int16FixedArray;
-			this.Uint16FixedArray = Uint16FixedArray;
-			this.Int32FixedArray = Int32FixedArray;
-			this.Uint32FixedArray = Uint32FixedArray;
-			this.Int64FixedArray = Int64FixedArray;
-			this.Uint64FixedArray = Uint64FixedArray;
-			this.FloatFixedArray = FloatFixedArray;
-			this.DoubleFixedArray = DoubleFixedArray;
-			this.BoolSet = BoolSet;
-			this.Int8Set = Int8Set;
-			this.Uint8Set = Uint8Set;
-			this.Int16Set = Int16Set;
-			this.Uint16Set = Uint16Set;
-			this.Int32Set = Int32Set;
-			this.Uint32Set = Uint32Set;
-			this.Int64Set = Int64Set;
-			this.Uint64Set = Uint64Set;
-			this.FloatSet = FloatSet;
-			this.DoubleSet = DoubleSet;
-			this.BoolMap = BoolMap;
-			this.Int8Map = Int8Map;
-			this.Uint8Map = Uint8Map;
-			this.Int16Map = Int16Map;
-			this.Uint16Map = Uint16Map;
-			this.Int32Map = Int32Map;
-			this.Uint32Map = Uint32Map;
-			this.Int64Map = Int64Map;
-			this.Uint64Map = Uint64Map;
-			this.FloatMap = FloatMap;
-			this.DoubleMap = DoubleMap;
-		}
-
-		// Token: 0x06025351 RID: 152401 RVA: 0x00372640 File Offset: 0x00370840
+		// Token: 0x0600AE3F RID: 44607 RVA: 0x0010243D File Offset: 0x0010063D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_Base.StaticStruct();
 		}
 
-		// Token: 0x06025352 RID: 152402 RVA: 0x0037264C File Offset: 0x0037084C
+		// Token: 0x0600AE40 RID: 44608 RVA: 0x00102449 File Offset: 0x00100649
 		[NullableContext(2)]
 		public FSharpherealTestStruct_Base(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025353 RID: 152403 RVA: 0x00372656 File Offset: 0x00370856
+		// Token: 0x0600AE41 RID: 44609 RVA: 0x00102453 File Offset: 0x00100653
 		public FSharpherealTestStruct_Base(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025354 RID: 152404 RVA: 0x00372661 File Offset: 0x00370861
+		// Token: 0x0600AE42 RID: 44610 RVA: 0x0010245E File Offset: 0x0010065E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_Base(Pointer, false, true);
 		}
 
-		// Token: 0x06025355 RID: 152405 RVA: 0x0037266B File Offset: 0x0037086B
+		// Token: 0x0600AE43 RID: 44611 RVA: 0x00102468 File Offset: 0x00100668
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_Base(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014099 RID: 82073
+		// Token: 0x04004AFC RID: 19196
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_Base";
 
-		// Token: 0x0401409A RID: 82074
+		// Token: 0x04004AFD RID: 19197
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401409B RID: 82075
+		// Token: 0x04004AFE RID: 19198
 		internal static int __PropertyOffset_Bool;
 
-		// Token: 0x0401409C RID: 82076
+		// Token: 0x04004AFF RID: 19199
 		internal static int __PropertyOffset_Bool1;
 
-		// Token: 0x0401409D RID: 82077
+		// Token: 0x04004B00 RID: 19200
 		internal static byte __PropertyMask_Bool1;
 
-		// Token: 0x0401409E RID: 82078
+		// Token: 0x04004B01 RID: 19201
 		internal static int __PropertyOffset_Bool2;
 
-		// Token: 0x0401409F RID: 82079
+		// Token: 0x04004B02 RID: 19202
 		internal static byte __PropertyMask_Bool2;
 
-		// Token: 0x040140A0 RID: 82080
+		// Token: 0x04004B03 RID: 19203
 		internal static int __PropertyOffset_I8;
 
-		// Token: 0x040140A1 RID: 82081
+		// Token: 0x04004B04 RID: 19204
 		internal static int __PropertyOffset_U8;
 
-		// Token: 0x040140A2 RID: 82082
+		// Token: 0x04004B05 RID: 19205
 		internal static int __PropertyOffset_I16;
 
-		// Token: 0x040140A3 RID: 82083
+		// Token: 0x04004B06 RID: 19206
 		internal static int __PropertyOffset_U16;
 
-		// Token: 0x040140A4 RID: 82084
+		// Token: 0x04004B07 RID: 19207
 		internal static int __PropertyOffset_I32;
 
-		// Token: 0x040140A5 RID: 82085
+		// Token: 0x04004B08 RID: 19208
 		internal static int __PropertyOffset_U32;
 
-		// Token: 0x040140A6 RID: 82086
+		// Token: 0x04004B09 RID: 19209
 		internal static int __PropertyOffset_I64;
 
-		// Token: 0x040140A7 RID: 82087
+		// Token: 0x04004B0A RID: 19210
 		internal static int __PropertyOffset_U64;
 
-		// Token: 0x040140A8 RID: 82088
+		// Token: 0x04004B0B RID: 19211
 		internal static int __PropertyOffset_F32;
 
-		// Token: 0x040140A9 RID: 82089
+		// Token: 0x04004B0C RID: 19212
 		internal static int __PropertyOffset_F64;
 
-		// Token: 0x040140AA RID: 82090
+		// Token: 0x04004B0D RID: 19213
 		internal static int __PropertyOffset_BoolArray;
 
-		// Token: 0x040140AB RID: 82091
+		// Token: 0x04004B0E RID: 19214
 		[Nullable(2)]
 		private TArray<bool> _BoolArray;
 
-		// Token: 0x040140AC RID: 82092
+		// Token: 0x04004B0F RID: 19215
 		internal static int __PropertyOffset_Int8Array;
 
-		// Token: 0x040140AD RID: 82093
+		// Token: 0x04004B10 RID: 19216
 		[Nullable(2)]
 		private TArray<sbyte> _Int8Array;
 
-		// Token: 0x040140AE RID: 82094
+		// Token: 0x04004B11 RID: 19217
 		internal static int __PropertyOffset_Uint8Array;
 
-		// Token: 0x040140AF RID: 82095
+		// Token: 0x04004B12 RID: 19218
 		[Nullable(2)]
 		private TArray<byte> _Uint8Array;
 
-		// Token: 0x040140B0 RID: 82096
+		// Token: 0x04004B13 RID: 19219
 		internal static int __PropertyOffset_Int16Array;
 
-		// Token: 0x040140B1 RID: 82097
+		// Token: 0x04004B14 RID: 19220
 		[Nullable(2)]
 		private TArray<short> _Int16Array;
 
-		// Token: 0x040140B2 RID: 82098
+		// Token: 0x04004B15 RID: 19221
 		internal static int __PropertyOffset_Uint16Array;
 
-		// Token: 0x040140B3 RID: 82099
+		// Token: 0x04004B16 RID: 19222
 		[Nullable(2)]
 		private TArray<ushort> _Uint16Array;
 
-		// Token: 0x040140B4 RID: 82100
+		// Token: 0x04004B17 RID: 19223
 		internal static int __PropertyOffset_Int32Array;
 
-		// Token: 0x040140B5 RID: 82101
+		// Token: 0x04004B18 RID: 19224
 		[Nullable(2)]
 		private TArray<int> _Int32Array;
 
-		// Token: 0x040140B6 RID: 82102
+		// Token: 0x04004B19 RID: 19225
 		internal static int __PropertyOffset_Uint32Array;
 
-		// Token: 0x040140B7 RID: 82103
+		// Token: 0x04004B1A RID: 19226
 		[Nullable(2)]
 		private TArray<uint> _Uint32Array;
 
-		// Token: 0x040140B8 RID: 82104
+		// Token: 0x04004B1B RID: 19227
 		internal static int __PropertyOffset_Int64Array;
 
-		// Token: 0x040140B9 RID: 82105
+		// Token: 0x04004B1C RID: 19228
 		[Nullable(2)]
 		private TArray<long> _Int64Array;
 
-		// Token: 0x040140BA RID: 82106
+		// Token: 0x04004B1D RID: 19229
 		internal static int __PropertyOffset_Uint64Array;
 
-		// Token: 0x040140BB RID: 82107
+		// Token: 0x04004B1E RID: 19230
 		[Nullable(2)]
 		private TArray<ulong> _Uint64Array;
 
-		// Token: 0x040140BC RID: 82108
+		// Token: 0x04004B1F RID: 19231
 		internal static int __PropertyOffset_FloatArray;
 
-		// Token: 0x040140BD RID: 82109
+		// Token: 0x04004B20 RID: 19232
 		[Nullable(2)]
 		private TArray<float> _FloatArray;
 
-		// Token: 0x040140BE RID: 82110
+		// Token: 0x04004B21 RID: 19233
 		internal static int __PropertyOffset_DoubleArray;
 
-		// Token: 0x040140BF RID: 82111
+		// Token: 0x04004B22 RID: 19234
 		[Nullable(2)]
 		private TArray<double> _DoubleArray;
 
-		// Token: 0x040140C0 RID: 82112
+		// Token: 0x04004B23 RID: 19235
 		internal static int __PropertyOffset_Int8FixedArray;
 
-		// Token: 0x040140C1 RID: 82113
+		// Token: 0x04004B24 RID: 19236
 		[Nullable(2)]
 		private TFixedArray<sbyte> _Int8FixedArray;
 
-		// Token: 0x040140C2 RID: 82114
+		// Token: 0x04004B25 RID: 19237
 		internal static int __PropertyOffset_Uint8FixedArray;
 
-		// Token: 0x040140C3 RID: 82115
+		// Token: 0x04004B26 RID: 19238
 		[Nullable(2)]
 		private TFixedArray<byte> _Uint8FixedArray;
 
-		// Token: 0x040140C4 RID: 82116
+		// Token: 0x04004B27 RID: 19239
 		internal static int __PropertyOffset_Int16FixedArray;
 
-		// Token: 0x040140C5 RID: 82117
+		// Token: 0x04004B28 RID: 19240
 		[Nullable(2)]
 		private TFixedArray<short> _Int16FixedArray;
 
-		// Token: 0x040140C6 RID: 82118
+		// Token: 0x04004B29 RID: 19241
 		internal static int __PropertyOffset_Uint16FixedArray;
 
-		// Token: 0x040140C7 RID: 82119
+		// Token: 0x04004B2A RID: 19242
 		[Nullable(2)]
 		private TFixedArray<ushort> _Uint16FixedArray;
 
-		// Token: 0x040140C8 RID: 82120
+		// Token: 0x04004B2B RID: 19243
 		internal static int __PropertyOffset_Int32FixedArray;
 
-		// Token: 0x040140C9 RID: 82121
+		// Token: 0x04004B2C RID: 19244
 		[Nullable(2)]
 		private TFixedArray<int> _Int32FixedArray;
 
-		// Token: 0x040140CA RID: 82122
+		// Token: 0x04004B2D RID: 19245
 		internal static int __PropertyOffset_Uint32FixedArray;
 
-		// Token: 0x040140CB RID: 82123
+		// Token: 0x04004B2E RID: 19246
 		[Nullable(2)]
 		private TFixedArray<uint> _Uint32FixedArray;
 
-		// Token: 0x040140CC RID: 82124
+		// Token: 0x04004B2F RID: 19247
 		internal static int __PropertyOffset_Int64FixedArray;
 
-		// Token: 0x040140CD RID: 82125
+		// Token: 0x04004B30 RID: 19248
 		[Nullable(2)]
 		private TFixedArray<long> _Int64FixedArray;
 
-		// Token: 0x040140CE RID: 82126
+		// Token: 0x04004B31 RID: 19249
 		internal static int __PropertyOffset_Uint64FixedArray;
 
-		// Token: 0x040140CF RID: 82127
+		// Token: 0x04004B32 RID: 19250
 		[Nullable(2)]
 		private TFixedArray<ulong> _Uint64FixedArray;
 
-		// Token: 0x040140D0 RID: 82128
+		// Token: 0x04004B33 RID: 19251
 		internal static int __PropertyOffset_FloatFixedArray;
 
-		// Token: 0x040140D1 RID: 82129
+		// Token: 0x04004B34 RID: 19252
 		[Nullable(2)]
 		private TFixedArray<float> _FloatFixedArray;
 
-		// Token: 0x040140D2 RID: 82130
+		// Token: 0x04004B35 RID: 19253
 		internal static int __PropertyOffset_DoubleFixedArray;
 
-		// Token: 0x040140D3 RID: 82131
+		// Token: 0x04004B36 RID: 19254
 		[Nullable(2)]
 		private TFixedArray<double> _DoubleFixedArray;
 
-		// Token: 0x040140D4 RID: 82132
+		// Token: 0x04004B37 RID: 19255
 		internal static int __PropertyOffset_BoolSet;
 
-		// Token: 0x040140D5 RID: 82133
+		// Token: 0x04004B38 RID: 19256
 		[Nullable(2)]
 		private TSet<bool> _BoolSet;
 
-		// Token: 0x040140D6 RID: 82134
+		// Token: 0x04004B39 RID: 19257
 		internal static int __PropertyOffset_Int8Set;
 
-		// Token: 0x040140D7 RID: 82135
+		// Token: 0x04004B3A RID: 19258
 		[Nullable(2)]
 		private TSet<sbyte> _Int8Set;
 
-		// Token: 0x040140D8 RID: 82136
+		// Token: 0x04004B3B RID: 19259
 		internal static int __PropertyOffset_Uint8Set;
 
-		// Token: 0x040140D9 RID: 82137
+		// Token: 0x04004B3C RID: 19260
 		[Nullable(2)]
 		private TSet<byte> _Uint8Set;
 
-		// Token: 0x040140DA RID: 82138
+		// Token: 0x04004B3D RID: 19261
 		internal static int __PropertyOffset_Int16Set;
 
-		// Token: 0x040140DB RID: 82139
+		// Token: 0x04004B3E RID: 19262
 		[Nullable(2)]
 		private TSet<short> _Int16Set;
 
-		// Token: 0x040140DC RID: 82140
+		// Token: 0x04004B3F RID: 19263
 		internal static int __PropertyOffset_Uint16Set;
 
-		// Token: 0x040140DD RID: 82141
+		// Token: 0x04004B40 RID: 19264
 		[Nullable(2)]
 		private TSet<ushort> _Uint16Set;
 
-		// Token: 0x040140DE RID: 82142
+		// Token: 0x04004B41 RID: 19265
 		internal static int __PropertyOffset_Int32Set;
 
-		// Token: 0x040140DF RID: 82143
+		// Token: 0x04004B42 RID: 19266
 		[Nullable(2)]
 		private TSet<int> _Int32Set;
 
-		// Token: 0x040140E0 RID: 82144
+		// Token: 0x04004B43 RID: 19267
 		internal static int __PropertyOffset_Uint32Set;
 
-		// Token: 0x040140E1 RID: 82145
+		// Token: 0x04004B44 RID: 19268
 		[Nullable(2)]
 		private TSet<uint> _Uint32Set;
 
-		// Token: 0x040140E2 RID: 82146
+		// Token: 0x04004B45 RID: 19269
 		internal static int __PropertyOffset_Int64Set;
 
-		// Token: 0x040140E3 RID: 82147
+		// Token: 0x04004B46 RID: 19270
 		[Nullable(2)]
 		private TSet<long> _Int64Set;
 
-		// Token: 0x040140E4 RID: 82148
+		// Token: 0x04004B47 RID: 19271
 		internal static int __PropertyOffset_Uint64Set;
 
-		// Token: 0x040140E5 RID: 82149
+		// Token: 0x04004B48 RID: 19272
 		[Nullable(2)]
 		private TSet<ulong> _Uint64Set;
 
-		// Token: 0x040140E6 RID: 82150
+		// Token: 0x04004B49 RID: 19273
 		internal static int __PropertyOffset_FloatSet;
 
-		// Token: 0x040140E7 RID: 82151
+		// Token: 0x04004B4A RID: 19274
 		[Nullable(2)]
 		private TSet<float> _FloatSet;
 
-		// Token: 0x040140E8 RID: 82152
+		// Token: 0x04004B4B RID: 19275
 		internal static int __PropertyOffset_DoubleSet;
 
-		// Token: 0x040140E9 RID: 82153
+		// Token: 0x04004B4C RID: 19276
 		[Nullable(2)]
 		private TSet<double> _DoubleSet;
 
-		// Token: 0x040140EA RID: 82154
+		// Token: 0x04004B4D RID: 19277
 		internal static int __PropertyOffset_BoolMap;
 
-		// Token: 0x040140EB RID: 82155
+		// Token: 0x04004B4E RID: 19278
 		[Nullable(2)]
 		private TMap<bool, int> _BoolMap;
 
-		// Token: 0x040140EC RID: 82156
+		// Token: 0x04004B4F RID: 19279
 		internal static int __PropertyOffset_Int8Map;
 
-		// Token: 0x040140ED RID: 82157
+		// Token: 0x04004B50 RID: 19280
 		[Nullable(2)]
 		private TMap<sbyte, int> _Int8Map;
 
-		// Token: 0x040140EE RID: 82158
+		// Token: 0x04004B51 RID: 19281
 		internal static int __PropertyOffset_Uint8Map;
 
-		// Token: 0x040140EF RID: 82159
+		// Token: 0x04004B52 RID: 19282
 		[Nullable(2)]
 		private TMap<byte, int> _Uint8Map;
 
-		// Token: 0x040140F0 RID: 82160
+		// Token: 0x04004B53 RID: 19283
 		internal static int __PropertyOffset_Int16Map;
 
-		// Token: 0x040140F1 RID: 82161
+		// Token: 0x04004B54 RID: 19284
 		[Nullable(2)]
 		private TMap<short, int> _Int16Map;
 
-		// Token: 0x040140F2 RID: 82162
+		// Token: 0x04004B55 RID: 19285
 		internal static int __PropertyOffset_Uint16Map;
 
-		// Token: 0x040140F3 RID: 82163
+		// Token: 0x04004B56 RID: 19286
 		[Nullable(2)]
 		private TMap<ushort, int> _Uint16Map;
 
-		// Token: 0x040140F4 RID: 82164
+		// Token: 0x04004B57 RID: 19287
 		internal static int __PropertyOffset_Int32Map;
 
-		// Token: 0x040140F5 RID: 82165
+		// Token: 0x04004B58 RID: 19288
 		[Nullable(2)]
 		private TMap<int, int> _Int32Map;
 
-		// Token: 0x040140F6 RID: 82166
+		// Token: 0x04004B59 RID: 19289
 		internal static int __PropertyOffset_Uint32Map;
 
-		// Token: 0x040140F7 RID: 82167
+		// Token: 0x04004B5A RID: 19290
 		[Nullable(2)]
 		private TMap<uint, int> _Uint32Map;
 
-		// Token: 0x040140F8 RID: 82168
+		// Token: 0x04004B5B RID: 19291
 		internal static int __PropertyOffset_Int64Map;
 
-		// Token: 0x040140F9 RID: 82169
+		// Token: 0x04004B5C RID: 19292
 		[Nullable(2)]
 		private TMap<long, int> _Int64Map;
 
-		// Token: 0x040140FA RID: 82170
+		// Token: 0x04004B5D RID: 19293
 		internal static int __PropertyOffset_Uint64Map;
 
-		// Token: 0x040140FB RID: 82171
+		// Token: 0x04004B5E RID: 19294
 		[Nullable(2)]
 		private TMap<ulong, int> _Uint64Map;
 
-		// Token: 0x040140FC RID: 82172
+		// Token: 0x04004B5F RID: 19295
 		internal static int __PropertyOffset_FloatMap;
 
-		// Token: 0x040140FD RID: 82173
+		// Token: 0x04004B60 RID: 19296
 		[Nullable(2)]
 		private TMap<float, int> _FloatMap;
 
-		// Token: 0x040140FE RID: 82174
+		// Token: 0x04004B61 RID: 19297
 		internal static int __PropertyOffset_DoubleMap;
 
-		// Token: 0x040140FF RID: 82175
+		// Token: 0x04004B62 RID: 19298
 		[Nullable(2)]
 		private TMap<double, int> _DoubleMap;
 	}

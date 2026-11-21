@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol.Summon;
 using CSharpScript.Game.Module.GenericPrompt;
 
-// Token: 0x02001BC1 RID: 7105
+// Token: 0x02001080 RID: 4224
 [NullableContext(1)]
 [Nullable(0)]
 public static class FormationValidators
 {
-	// Token: 0x0600D3BF RID: 54207 RVA: 0x0030B168 File Offset: 0x00309368
+	// Token: 0x0600A7D1 RID: 42961 RVA: 0x003162B4 File Offset: 0x003144B4
 	private static TRuleResult Fail(EOpenViewBlockReason reason)
 	{
 		return new TRuleResult
@@ -19,7 +19,7 @@ public static class FormationValidators
 		};
 	}
 
-	// Token: 0x0600D3C0 RID: 54208 RVA: 0x0030B17D File Offset: 0x0030937D
+	// Token: 0x0600A7D2 RID: 42962 RVA: 0x003162C9 File Offset: 0x003144C9
 	private static bool HasTag(int tagId)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -37,7 +37,7 @@ public static class FormationValidators
 		return obj2 != null && obj2.HasTag(tagId);
 	}
 
-	// Token: 0x0600D3C1 RID: 54209 RVA: 0x0030B1AD File Offset: 0x003093AD
+	// Token: 0x0600A7D3 RID: 42963 RVA: 0x003162F9 File Offset: 0x003144F9
 	private static TRuleResult RuleFunctionOpen()
 	{
 		if (!FunctionModel.Instance.IsOpen(EFunctionType.FormatTeam))
@@ -47,7 +47,7 @@ public static class FormationValidators
 		return FormationValidators.Pass;
 	}
 
-	// Token: 0x0600D3C2 RID: 54210 RVA: 0x0030B1CC File Offset: 0x003093CC
+	// Token: 0x0600A7D4 RID: 42964 RVA: 0x00316318 File Offset: 0x00314518
 	private static TRuleResult RuleNotLockByBehaviorTree()
 	{
 		if (!FunctionModel.Instance.IsLockByBehaviorTree(10007))
@@ -57,7 +57,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.LockByBehaviorTree);
 	}
 
-	// Token: 0x0600D3C3 RID: 54211 RVA: 0x0030B1EB File Offset: 0x003093EB
+	// Token: 0x0600A7D5 RID: 42965 RVA: 0x00316337 File Offset: 0x00314537
 	private static TRuleResult RuleNotPhantomTeam()
 	{
 		if (!SceneTeamModel.Instance.IsPhantomTeam)
@@ -67,7 +67,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InPhantomTeam);
 	}
 
-	// Token: 0x0600D3C4 RID: 54212 RVA: 0x0030B205 File Offset: 0x00309405
+	// Token: 0x0600A7D6 RID: 42966 RVA: 0x00316351 File Offset: 0x00314551
 	private static TRuleResult RuleEntityValid()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -78,7 +78,7 @@ public static class FormationValidators
 		return FormationValidators.Pass;
 	}
 
-	// Token: 0x0600D3C5 RID: 54213 RVA: 0x0030B22C File Offset: 0x0030942C
+	// Token: 0x0600A7D7 RID: 42967 RVA: 0x00316378 File Offset: 0x00314578
 	private static TRuleResult RuleTeamNotDead()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -89,7 +89,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.Dead);
 	}
 
-	// Token: 0x0600D3C6 RID: 54214 RVA: 0x0030B25E File Offset: 0x0030945E
+	// Token: 0x0600A7D8 RID: 42968 RVA: 0x003163AA File Offset: 0x003145AA
 	private static TRuleResult RuleTagComponentExists()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -111,7 +111,7 @@ public static class FormationValidators
 		return FormationValidators.Pass;
 	}
 
-	// Token: 0x0600D3C7 RID: 54215 RVA: 0x0030B29C File Offset: 0x0030949C
+	// Token: 0x0600A7D9 RID: 42969 RVA: 0x003163E8 File Offset: 0x003145E8
 	private static TRuleResult RuleBuffComponentExists()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -133,7 +133,7 @@ public static class FormationValidators
 		return FormationValidators.Pass;
 	}
 
-	// Token: 0x0600D3C8 RID: 54216 RVA: 0x0030B2DA File Offset: 0x003094DA
+	// Token: 0x0600A7DA RID: 42970 RVA: 0x00316426 File Offset: 0x00314626
 	private static TRuleResult RuleNotOnVehicle()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -155,7 +155,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.OnVehicle);
 	}
 
-	// Token: 0x0600D3C9 RID: 54217 RVA: 0x0030B318 File Offset: 0x00309518
+	// Token: 0x0600A7DB RID: 42971 RVA: 0x00316464 File Offset: 0x00314664
 	private static TRuleResult RuleNotInRoleTrial()
 	{
 		if (!RoleController.Instance.IsInRoleTrial())
@@ -165,7 +165,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InRoleTrial);
 	}
 
-	// Token: 0x0600D3CA RID: 54218 RVA: 0x0030B333 File Offset: 0x00309533
+	// Token: 0x0600A7DC RID: 42972 RVA: 0x0031647F File Offset: 0x0031467F
 	private static TRuleResult RuleNotInWater()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]))
@@ -175,7 +175,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InWater);
 	}
 
-	// Token: 0x0600D3CB RID: 54219 RVA: 0x0030B358 File Offset: 0x00309558
+	// Token: 0x0600A7DD RID: 42973 RVA: 0x003164A4 File Offset: 0x003146A4
 	private static TRuleResult RuleNotDrowning()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.溺水"]))
@@ -185,7 +185,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.Drowning);
 	}
 
-	// Token: 0x0600D3CC RID: 54220 RVA: 0x0030B37D File Offset: 0x0030957D
+	// Token: 0x0600A7DE RID: 42974 RVA: 0x003164C9 File Offset: 0x003146C9
 	private static TRuleResult RuleNotInAir()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.空中"]))
@@ -195,7 +195,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InAir);
 	}
 
-	// Token: 0x0600D3CD RID: 54221 RVA: 0x0030B3A2 File Offset: 0x003095A2
+	// Token: 0x0600A7DF RID: 42975 RVA: 0x003164EE File Offset: 0x003146EE
 	private static TRuleResult RuleNotInFight()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]))
@@ -205,7 +205,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InFight);
 	}
 
-	// Token: 0x0600D3CE RID: 54222 RVA: 0x0030B3C7 File Offset: 0x003095C7
+	// Token: 0x0600A7E0 RID: 42976 RVA: 0x00316513 File Offset: 0x00314713
 	private static TRuleResult RuleNotClimbing()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.攀爬"]))
@@ -215,7 +215,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.Climbing);
 	}
 
-	// Token: 0x0600D3CF RID: 54223 RVA: 0x0030B3EC File Offset: 0x003095EC
+	// Token: 0x0600A7E1 RID: 42977 RVA: 0x00316538 File Offset: 0x00314738
 	private static TRuleResult RuleCanSwitchRole()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.不能切人"]))
@@ -225,7 +225,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.CannotSwitchRole);
 	}
 
-	// Token: 0x0600D3D0 RID: 54224 RVA: 0x0030B414 File Offset: 0x00309614
+	// Token: 0x0600A7E2 RID: 42978 RVA: 0x00316560 File Offset: 0x00314760
 	private static TRuleResult RuleNotPhantomTransformedInAir()
 	{
 		if (!FormationValidators.HasTag(GameplayTagDefine.EGameplayTagId["角色.BaseRole.技能通用标识.幻象变身中"]))
@@ -257,7 +257,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.PhantomTransformedInAir);
 	}
 
-	// Token: 0x0600D3D1 RID: 54225 RVA: 0x0030B4A8 File Offset: 0x003096A8
+	// Token: 0x0600A7E3 RID: 42979 RVA: 0x003165F4 File Offset: 0x003147F4
 	private static TRuleResult RuleNotInElevator()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -279,7 +279,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.InElevator);
 	}
 
-	// Token: 0x0600D3D2 RID: 54226 RVA: 0x0030B4FC File Offset: 0x003096FC
+	// Token: 0x0600A7E4 RID: 42980 RVA: 0x00316648 File Offset: 0x00314848
 	private static TRuleResult RuleNotWalkingOnWater()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -301,7 +301,7 @@ public static class FormationValidators
 		return FormationValidators.Fail(EOpenViewBlockReason.WalkingOnWater);
 	}
 
-	// Token: 0x0600D3D3 RID: 54227 RVA: 0x0030B545 File Offset: 0x00309745
+	// Token: 0x0600A7E5 RID: 42981 RVA: 0x00316691 File Offset: 0x00314891
 	private static TRuleResult RuleInBattleGroup()
 	{
 		if (SceneTeamModel.Instance.CurrentGroupType.GetValueOrDefault() != ETeamGroupType.Battle)
@@ -311,7 +311,7 @@ public static class FormationValidators
 		return FormationValidators.Pass;
 	}
 
-	// Token: 0x0600D3D4 RID: 54228 RVA: 0x0030B568 File Offset: 0x00309768
+	// Token: 0x0600A7E6 RID: 42982 RVA: 0x003166B4 File Offset: 0x003148B4
 	public static void ApplyOpenViewBlockReason(EOpenViewBlockReason reason)
 	{
 		if (reason == EOpenViewBlockReason.None)
@@ -340,32 +340,32 @@ public static class FormationValidators
 		}
 	}
 
-	// Token: 0x040060D1 RID: 24785
+	// Token: 0x040061A0 RID: 24992
 	private const string FORBIDDEN_STAT_TIPS = "EditBattleTeamForbitState";
 
-	// Token: 0x040060D2 RID: 24786
+	// Token: 0x040061A1 RID: 24993
 	private const string FORBIDDEN_IN_FIGHT_TIPS = "ForbiddenActionInFight";
 
-	// Token: 0x040060D3 RID: 24787
+	// Token: 0x040061A2 RID: 24994
 	private const string PHANTOM_TEAM_TIPS = "PhantomFormationEnterFormationTip";
 
-	// Token: 0x040060D4 RID: 24788
+	// Token: 0x040061A3 RID: 24995
 	private const string TRIAL_ROLE_LIMIT_PROMPT = "TrialRoleTeamLimit";
 
-	// Token: 0x040060D5 RID: 24789
+	// Token: 0x040061A4 RID: 24996
 	private const int ELEVATOR_BUFF_ID = 90003001;
 
-	// Token: 0x040060D6 RID: 24790
+	// Token: 0x040061A5 RID: 24997
 	public const int FORMATION_ID_NONE = 0;
 
-	// Token: 0x040060D7 RID: 24791
+	// Token: 0x040061A6 RID: 24998
 	[StaticVariableRuleIgnore]
 	private static readonly TRuleResult Pass = new TRuleResult
 	{
 		Pass = true
 	};
 
-	// Token: 0x040060D8 RID: 24792
+	// Token: 0x040061A7 RID: 24999
 	[StaticVariableRuleIgnore]
 	public static readonly FormationRuleChain CanOpenFormationViewChain = new FormationRuleChain(new Func<TRuleResult>[]
 	{
@@ -390,7 +390,7 @@ public static class FormationValidators
 		new Func<TRuleResult>(FormationValidators.RuleInBattleGroup)
 	});
 
-	// Token: 0x040060D9 RID: 24793
+	// Token: 0x040061A8 RID: 25000
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EOpenViewBlockReason, IBlockReasonEffect> BlockReasonEffects = new Dictionary<EOpenViewBlockReason, IBlockReasonEffect>
 	{

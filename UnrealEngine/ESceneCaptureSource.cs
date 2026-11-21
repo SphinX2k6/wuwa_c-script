@@ -4,38 +4,38 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B5B RID: 2907
+	// Token: 0x020001FA RID: 506
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ESceneCaptureSource")]
 	public enum ESceneCaptureSource
 	{
-		// Token: 0x04004FFA RID: 20474
+		// Token: 0x04000C95 RID: 3221
 		SCS_SceneColorHDR,
-		// Token: 0x04004FFB RID: 20475
+		// Token: 0x04000C96 RID: 3222
 		SCS_SceneColorHDRNoAlpha,
-		// Token: 0x04004FFC RID: 20476
+		// Token: 0x04000C97 RID: 3223
 		SCS_FinalColorLDR,
-		// Token: 0x04004FFD RID: 20477
+		// Token: 0x04000C98 RID: 3224
 		SCS_SceneColorSceneDepth,
-		// Token: 0x04004FFE RID: 20478
+		// Token: 0x04000C99 RID: 3225
 		SCS_SceneDepth,
-		// Token: 0x04004FFF RID: 20479
+		// Token: 0x04000C9A RID: 3226
 		SCS_DeviceDepth,
-		// Token: 0x04005000 RID: 20480
+		// Token: 0x04000C9B RID: 3227
 		SCS_Normal,
-		// Token: 0x04005001 RID: 20481
+		// Token: 0x04000C9C RID: 3228
 		SCS_BaseColor,
-		// Token: 0x04005002 RID: 20482
+		// Token: 0x04000C9D RID: 3229
 		SCS_BaseColorAndAO,
-		// Token: 0x04005003 RID: 20483
+		// Token: 0x04000C9E RID: 3230
 		SCS_FinalColorHDR,
-		// Token: 0x04005004 RID: 20484
+		// Token: 0x04000C9F RID: 3231
 		SCS_FinalToneCurveHDR,
-		// Token: 0x04005005 RID: 20485
+		// Token: 0x04000CA0 RID: 3232
 		SCS_ShadowDepths,
-		// Token: 0x04005006 RID: 20486
+		// Token: 0x04000CA1 RID: 3233
 		SCS_SceneColorHDRAlpha,
-		// Token: 0x04005007 RID: 20487
+		// Token: 0x04000CA2 RID: 3234
 		SCS_MAX
 	}
 }

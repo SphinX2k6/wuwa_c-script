@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200252E RID: 9518
+	// Token: 0x020027D5 RID: 10197
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IActorFxEmoteOverrideConfig
 	{
-		// Token: 0x0600D42E RID: 54318 RVA: 0x001F6ADD File Offset: 0x001F4CDD
-		[NullableContext(1)]
+		// Token: 0x0600E18E RID: 57742 RVA: 0x0021253D File Offset: 0x0021073D
+		[NullableContext(0)]
 		public static IActorFxEmoteOverrideConfig Create(IActorFxEmoteOverrideConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B94 RID: 15252
-		// (get) Token: 0x0600D42F RID: 54319 RVA: 0x001F6AFC File Offset: 0x001F4CFC
+		// Token: 0x17003E92 RID: 16018
+		// (get) Token: 0x0600E18F RID: 57743 RVA: 0x0021255C File Offset: 0x0021075C
 		public virtual string SocketName
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B95 RID: 15253
-		// (get) Token: 0x0600D430 RID: 54320 RVA: 0x001F6B09 File Offset: 0x001F4D09
+		// Token: 0x17003E93 RID: 16019
+		// (get) Token: 0x0600E190 RID: 57744 RVA: 0x00212569 File Offset: 0x00210769
 		public virtual VectorInfo RelativePosition
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B96 RID: 15254
-		// (get) Token: 0x0600D431 RID: 54321 RVA: 0x001F6B3D File Offset: 0x001F4D3D
+		// Token: 0x17003E94 RID: 16020
+		// (get) Token: 0x0600E191 RID: 57745 RVA: 0x0021259D File Offset: 0x0021079D
 		public virtual VectorInfo RelativeRotation
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B97 RID: 15255
-		// (get) Token: 0x0600D432 RID: 54322 RVA: 0x001F6B71 File Offset: 0x001F4D71
+		// Token: 0x17003E95 RID: 16021
+		// (get) Token: 0x0600E192 RID: 57746 RVA: 0x002125D1 File Offset: 0x002107D1
 		public virtual VectorInfo Scale
 		{
 			get
@@ -82,25 +82,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400743A RID: 29754
+		// Token: 0x04007A8F RID: 31375
 		private IActorFxEmoteOverrideConfig Instance;
 
-		// Token: 0x0400743B RID: 29755
+		// Token: 0x04007A90 RID: 31376
 		private VectorInfo _RelativePositionCache;
 
-		// Token: 0x0400743C RID: 29756
+		// Token: 0x04007A91 RID: 31377
 		private bool _RelativePositionInited;
 
-		// Token: 0x0400743D RID: 29757
+		// Token: 0x04007A92 RID: 31378
 		private VectorInfo _RelativeRotationCache;
 
-		// Token: 0x0400743E RID: 29758
+		// Token: 0x04007A93 RID: 31379
 		private bool _RelativeRotationInited;
 
-		// Token: 0x0400743F RID: 29759
+		// Token: 0x04007A94 RID: 31380
 		private VectorInfo _ScaleCache;
 
-		// Token: 0x04007440 RID: 29760
+		// Token: 0x04007A95 RID: 31381
 		private bool _ScaleInited;
 	}
 }

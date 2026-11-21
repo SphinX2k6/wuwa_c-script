@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CD0 RID: 19664
+	// Token: 0x02003C81 RID: 15489
 	[NullableContext(1)]
 	public interface IPlanSwitchButtonState
 	{
-		// Token: 0x17007D77 RID: 32119
-		// (get) Token: 0x06032C3A RID: 207930
-		// (set) Token: 0x06032C3B RID: 207931
+		// Token: 0x17005121 RID: 20769
+		// (get) Token: 0x060279EE RID: 162286
+		// (set) Token: 0x060279EF RID: 162287
 		bool IsShow { get; set; }
 
-		// Token: 0x17007D78 RID: 32120
-		// (get) Token: 0x06032C3C RID: 207932
-		// (set) Token: 0x06032C3D RID: 207933
+		// Token: 0x17005122 RID: 20770
+		// (get) Token: 0x060279F0 RID: 162288
+		// (set) Token: 0x060279F1 RID: 162289
 		string Text { get; set; }
 
-		// Token: 0x17007D79 RID: 32121
-		// (get) Token: 0x06032C3E RID: 207934
-		// (set) Token: 0x06032C3F RID: 207935
+		// Token: 0x17005123 RID: 20771
+		// (get) Token: 0x060279F2 RID: 162290
+		// (set) Token: 0x060279F3 RID: 162291
 		bool IsHighlight { get; set; }
 	}
 }

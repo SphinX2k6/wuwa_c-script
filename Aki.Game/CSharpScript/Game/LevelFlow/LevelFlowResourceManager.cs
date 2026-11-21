@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F6D RID: 28525
+	// Token: 0x020060EE RID: 24814
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowResourceManager : IStaticVariableResetter
 	{
-		// Token: 0x06045633 RID: 284211 RVA: 0x0112D1A8 File Offset: 0x0112B3A8
+		// Token: 0x0603B7E1 RID: 243681 RVA: 0x010D6FAC File Offset: 0x010D51AC
 		static LevelFlowResourceManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowResourceManager.CreateStaticDefaultValue), new Action(LevelFlowResourceManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045634 RID: 284212 RVA: 0x0112D238 File Offset: 0x0112B438
+		// Token: 0x0603B7E2 RID: 243682 RVA: 0x010D703C File Offset: 0x010D523C
 		public static void HandleSequence(PlayLevelSequence inSequenceConfig)
 		{
 			if (string.IsNullOrEmpty(inSequenceConfig.LevelSequencePath) || inSequenceConfig.LevelSequencePath == "None")
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.PlaySequence(sequenceActor, inSequenceConfig);
 		}
 
-		// Token: 0x06045635 RID: 284213 RVA: 0x0112D314 File Offset: 0x0112B514
+		// Token: 0x0603B7E3 RID: 243683 RVA: 0x010D7118 File Offset: 0x010D5318
 		[return: Nullable(2)]
 		public static SimpleLevelSequenceActor GetLevelSequenceActor(string path)
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelFlow
 			return result;
 		}
 
-		// Token: 0x06045636 RID: 284214 RVA: 0x0112D330 File Offset: 0x0112B530
+		// Token: 0x0603B7E4 RID: 243684 RVA: 0x010D7134 File Offset: 0x010D5334
 		public static void ReleaseSequence(string path)
 		{
 			SimpleLevelSequenceActor simpleLevelSequenceActor;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.SimpleSequenceActorMap.Remove(path);
 		}
 
-		// Token: 0x06045637 RID: 284215 RVA: 0x0112D360 File Offset: 0x0112B560
+		// Token: 0x0603B7E5 RID: 243685 RVA: 0x010D7164 File Offset: 0x010D5364
 		public static void ReleaseAllSequence()
 		{
 			foreach (KeyValuePair<string, SimpleLevelSequenceActor> keyValuePair in LevelFlowResourceManager.SimpleSequenceActorMap)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.SimpleSequenceActorMap.Clear();
 		}
 
-		// Token: 0x06045638 RID: 284216 RVA: 0x0112D3C4 File Offset: 0x0112B5C4
+		// Token: 0x0603B7E6 RID: 243686 RVA: 0x010D71C8 File Offset: 0x010D53C8
 		private static void PlaySequence(SimpleLevelSequenceActor sequenceActor, PlayLevelSequence inSequenceConfig)
 		{
 			ILevelSequenceTransitionType levelSequenceTransitionType = null;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.LevelFlow
 			sequenceActor.PlayToMark(inSequenceConfig.Mark, tempInTransit, tempOutTransit, playRateStruct, false);
 		}
 
-		// Token: 0x06045639 RID: 284217 RVA: 0x0112D980 File Offset: 0x0112BB80
+		// Token: 0x0603B7E7 RID: 243687 RVA: 0x010D7784 File Offset: 0x010D5984
 		private static int LoadResourceAsyncWithQueue<[Nullable(0)] T>(string path, [Nullable(new byte[]
 		{
 			1,
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.LevelFlow
 			return handle.ResourceSystemId;
 		}
 
-		// Token: 0x0604563A RID: 284218 RVA: 0x0112D9F8 File Offset: 0x0112BBF8
+		// Token: 0x0603B7E8 RID: 243688 RVA: 0x010D77FC File Offset: 0x010D59FC
 		private static void OnResourceLoadAsyncCallback(ResourceLoadCallbackHandle handle, [Nullable(2)] UObject asset)
 		{
 			handle.Asset = asset;
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x0604563B RID: 284219 RVA: 0x0112DA6C File Offset: 0x0112BC6C
+		// Token: 0x0603B7E9 RID: 243689 RVA: 0x010D7870 File Offset: 0x010D5A70
 		private static void SequenceDilationChange(float timeDilation)
 		{
 			foreach (KeyValuePair<string, SimpleLevelSequenceActor> keyValuePair in LevelFlowResourceManager.SimpleSequenceActorMap)
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x0604563C RID: 284220 RVA: 0x0112DAC4 File Offset: 0x0112BCC4
+		// Token: 0x0603B7EA RID: 243690 RVA: 0x010D78C8 File Offset: 0x010D5AC8
 		public static void ShowHookEffect(int entityId, string targetTag, int cueId)
 		{
 			if (LevelFlowResourceManager.HookCueMap.ContainsKey(entityId))
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.HookTargetActorMap.Add(entityId, actorWithTag);
 		}
 
-		// Token: 0x0604563D RID: 284221 RVA: 0x0112DD40 File Offset: 0x0112BF40
+		// Token: 0x0603B7EB RID: 243691 RVA: 0x010D7B44 File Offset: 0x010D5D44
 		public static void HideHookEffect(int entityId)
 		{
 			GameplayCueHookCommonItem gameplayCueHookCommonItem;
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.HookTargetActorMap.Remove(entityId);
 		}
 
-		// Token: 0x0604563E RID: 284222 RVA: 0x0112DD7C File Offset: 0x0112BF7C
+		// Token: 0x0603B7EC RID: 243692 RVA: 0x010D7B80 File Offset: 0x010D5D80
 		public static void TickHookEffect(float deltaTime)
 		{
 			foreach (KeyValuePair<int, GameplayCueHookCommonItem> keyValuePair in LevelFlowResourceManager.HookCueMap)
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x0604563F RID: 284223 RVA: 0x0112DDFC File Offset: 0x0112BFFC
+		// Token: 0x0603B7ED RID: 243693 RVA: 0x010D7C00 File Offset: 0x010D5E00
 		private static void ReleaseHookEffect()
 		{
 			foreach (KeyValuePair<int, GameplayCueHookCommonItem> keyValuePair in LevelFlowResourceManager.HookCueMap)
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.HookTargetActorMap.Clear();
 		}
 
-		// Token: 0x06045640 RID: 284224 RVA: 0x0112DE68 File Offset: 0x0112C068
+		// Token: 0x0603B7EE RID: 243694 RVA: 0x010D7C6C File Offset: 0x010D5E6C
 		public static UniTask LoadDestructibleActor(int key, ActionSpawnDestructibleActorWithTrackCapability param)
 		{
 			LevelFlowResourceManager.<LoadDestructibleActor>d__25 <LoadDestructibleActor>d__;
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.LevelFlow
 			return <LoadDestructibleActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045641 RID: 284225 RVA: 0x0112DEB4 File Offset: 0x0112C0B4
+		// Token: 0x0603B7EF RID: 243695 RVA: 0x010D7CB8 File Offset: 0x010D5EB8
 		public static void ReleaseDestructibleActor(int key)
 		{
 			AKuroDestructibleActor akuroDestructibleActor;
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.ClearEffect(key);
 		}
 
-		// Token: 0x06045642 RID: 284226 RVA: 0x0112DF40 File Offset: 0x0112C140
+		// Token: 0x0603B7F0 RID: 243696 RVA: 0x010D7D44 File Offset: 0x010D5F44
 		private static void ReleaseAllDestructibleActor()
 		{
 			foreach (int key in new List<int>(LevelFlowResourceManager.DestructibleActorMap.Keys))
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x06045643 RID: 284227 RVA: 0x0112DF9C File Offset: 0x0112C19C
+		// Token: 0x0603B7F1 RID: 243697 RVA: 0x010D7DA0 File Offset: 0x010D5FA0
 		private static UniTask LoadTypeAsync()
 		{
 			LevelFlowResourceManager.<LoadTypeAsync>d__28 <LoadTypeAsync>d__;
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.LevelFlow
 			return <LoadTypeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045644 RID: 284228 RVA: 0x0112DFD8 File Offset: 0x0112C1D8
+		// Token: 0x0603B7F2 RID: 243698 RVA: 0x010D7DDC File Offset: 0x010D5FDC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.LevelFlow
 			return <LoadKuroDestructibleAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045645 RID: 284229 RVA: 0x0112E01C File Offset: 0x0112C21C
+		// Token: 0x0603B7F3 RID: 243699 RVA: 0x010D7E20 File Offset: 0x010D6020
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.LevelFlow
 			return <LoadKuroDestructibleDestructionAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045646 RID: 284230 RVA: 0x0112E060 File Offset: 0x0112C260
+		// Token: 0x0603B7F4 RID: 243700 RVA: 0x010D7E64 File Offset: 0x010D6064
 		private static int SpawnEffect(AActor actor, FKuroDestructibleEffect effectData)
 		{
 			EffectSystem instance = EffectSystem.Instance;
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.LevelFlow
 			return num;
 		}
 
-		// Token: 0x06045647 RID: 284231 RVA: 0x0112E120 File Offset: 0x0112C320
+		// Token: 0x0603B7F5 RID: 243701 RVA: 0x010D7F24 File Offset: 0x010D6124
 		private static void ClearEffect(int key)
 		{
 			HashSet<int> hashSet;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x06045648 RID: 284232 RVA: 0x0112E194 File Offset: 0x0112C394
+		// Token: 0x0603B7F6 RID: 243702 RVA: 0x010D7F98 File Offset: 0x010D6198
 		private static void SpawnThenCacheEffectId(AActor actor, FKuroDestructibleEffect effectData, int key)
 		{
 			if (!actor.IsValid())
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.DestructibleEffectIds[key].Add(item);
 		}
 
-		// Token: 0x06045649 RID: 284233 RVA: 0x0112E1E4 File Offset: 0x0112C3E4
+		// Token: 0x0603B7F7 RID: 243703 RVA: 0x010D7FE8 File Offset: 0x010D61E8
 		[return: Nullable(2)]
 		private static AKuroDestructibleActor SpawnKuroDestructibleActor(int key, FTransformDouble spawnTransform, UKuroDestructibleAsset kuroDestructibleAsset, UKuroDestructibleDestructionAsset kuroDestructibleDestructionAsset)
 		{
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.LevelFlow
 			return kuroDestructibleActor;
 		}
 
-		// Token: 0x0604564A RID: 284234 RVA: 0x0112E284 File Offset: 0x0112C484
+		// Token: 0x0603B7F8 RID: 243704 RVA: 0x010D8088 File Offset: 0x010D6288
 		private static void OnStopTrackTarget(int key, bool hitPlayer, int hitBuff, int revertMaxHp)
 		{
 			AKuroDestructibleActor akuroDestructibleActor;
@@ -588,19 +588,19 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x0604564B RID: 284235 RVA: 0x0112E398 File Offset: 0x0112C598
+		// Token: 0x0603B7F9 RID: 243705 RVA: 0x010D819C File Offset: 0x010D639C
 		public static void OnTick(float deltaTime)
 		{
 			LevelFlowResourceManager.TickHookEffect(deltaTime);
 		}
 
-		// Token: 0x0604564C RID: 284236 RVA: 0x0112E3A0 File Offset: 0x0112C5A0
+		// Token: 0x0603B7FA RID: 243706 RVA: 0x010D81A4 File Offset: 0x010D63A4
 		public static void OnTimeDilationChange()
 		{
 			LevelFlowResourceManager.SequenceDilationChange(Time.Instance.TimeDilation);
 		}
 
-		// Token: 0x0604564D RID: 284237 RVA: 0x0112E3B1 File Offset: 0x0112C5B1
+		// Token: 0x0603B7FB RID: 243707 RVA: 0x010D81B5 File Offset: 0x010D63B5
 		public static void Release()
 		{
 			LevelFlowResourceManager.ReleaseAllSequence();
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.ReleaseAllDestructibleActor();
 		}
 
-		// Token: 0x0604564E RID: 284238 RVA: 0x0112E3C4 File Offset: 0x0112C5C4
+		// Token: 0x0603B7FC RID: 243708 RVA: 0x010D81C8 File Offset: 0x010D63C8
 		public static void CreateStaticDefaultValue()
 		{
 			LevelFlowResourceManager.SimpleSequenceActorMap = new Dictionary<string, SimpleLevelSequenceActor>();
@@ -620,7 +620,7 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.HookTargetActorMap = new Dictionary<int, AActor>();
 		}
 
-		// Token: 0x0604564F RID: 284239 RVA: 0x0112E418 File Offset: 0x0112C618
+		// Token: 0x0603B7FD RID: 243709 RVA: 0x010D821C File Offset: 0x010D641C
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowResourceManager.SimpleSequenceActorMap = null;
@@ -632,10 +632,10 @@ namespace CSharpScript.Game.LevelFlow
 			LevelFlowResourceManager.HookTargetActorMap = null;
 		}
 
-		// Token: 0x0402433E RID: 148286
+		// Token: 0x0401F5F3 RID: 128499
 		private const string AUTO_AIM_TAG = "关卡.Common.表现.摩托车浮游炮.辅助瞄准";
 
-		// Token: 0x0402433F RID: 148287
+		// Token: 0x0401F5F4 RID: 128500
 		[Nullable(new byte[]
 		{
 			2,
@@ -644,7 +644,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<string, SimpleLevelSequenceActor> SimpleSequenceActorMap;
 
-		// Token: 0x04024340 RID: 148288
+		// Token: 0x0401F5F5 RID: 128501
 		[Nullable(new byte[]
 		{
 			2,
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Queue<ResourceLoadCallbackHandle> ResourceLoadCallbackHandleQueue;
 
-		// Token: 0x04024341 RID: 148289
+		// Token: 0x0401F5F6 RID: 128502
 		[Nullable(new byte[]
 		{
 			2,
@@ -660,7 +660,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<int, GameplayCueHookCommonItem> HookCueMap;
 
-		// Token: 0x04024342 RID: 148290
+		// Token: 0x0401F5F7 RID: 128503
 		[Nullable(new byte[]
 		{
 			2,
@@ -668,7 +668,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<int, AActor> HookTargetActorMap;
 
-		// Token: 0x04024343 RID: 148291
+		// Token: 0x0401F5F8 RID: 128504
 		[Nullable(new byte[]
 		{
 			2,
@@ -676,7 +676,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<int, BP_KuroTrackTargetWhileRotate_C> DestructibleRotateActorMap;
 
-		// Token: 0x04024344 RID: 148292
+		// Token: 0x0401F5F9 RID: 128505
 		[Nullable(new byte[]
 		{
 			2,
@@ -684,7 +684,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<int, HashSet<int>> DestructibleEffectIds;
 
-		// Token: 0x04024345 RID: 148293
+		// Token: 0x0401F5FA RID: 128506
 		[Nullable(new byte[]
 		{
 			2,
@@ -692,7 +692,7 @@ namespace CSharpScript.Game.LevelFlow
 		})]
 		private static Dictionary<int, AKuroDestructibleActor> DestructibleActorMap;
 
-		// Token: 0x04024346 RID: 148294
+		// Token: 0x0401F5FB RID: 128507
 		[StaticVariableRuleIgnore]
 		private static readonly FKuroDestructibleEffect stopTrackTargetEffectParam = new FKuroDestructibleEffect
 		{
@@ -705,13 +705,13 @@ namespace CSharpScript.Game.LevelFlow
 			Socket = FNameUtil.EMPTY
 		};
 
-		// Token: 0x04024347 RID: 148295
+		// Token: 0x0401F5FC RID: 128508
 		private const string DEFAULT_AK_EVENT_NAME = "play_interact_seq_luxin_fireball_explode";
 
-		// Token: 0x04024348 RID: 148296
+		// Token: 0x0401F5FD RID: 128509
 		public const string STONE_TRAIL_EFFECT_PATH = "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_0/3_0LuXin/DA_FX_SC1_LuXin_YunShiTrail_02.DA_FX_SC1_LuXin_YunShiTrail_02";
 
-		// Token: 0x04024349 RID: 148297
+		// Token: 0x0401F5FE RID: 128510
 		public const string EXPLOSION_EFFECT_PATH = "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_0/3_0LuXin/DA_Fx_Sc1_LuXin_ExploderSmoke_03.DA_Fx_Sc1_LuXin_ExploderSmoke_03";
 	}
 }

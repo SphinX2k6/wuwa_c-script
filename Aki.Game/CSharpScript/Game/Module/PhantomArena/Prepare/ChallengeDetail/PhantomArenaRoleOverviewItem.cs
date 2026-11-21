@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 {
-	// Token: 0x020051BF RID: 20927
+	// Token: 0x0200418F RID: 16783
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRoleOverviewItem : UiPanelBase
 	{
-		// Token: 0x0603595C RID: 219484 RVA: 0x00CB239C File Offset: 0x00CB059C
+		// Token: 0x0602A857 RID: 174167 RVA: 0x00BFF9D8 File Offset: 0x00BFDBD8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			};
 		}
 
-		// Token: 0x0603595D RID: 219485 RVA: 0x00CB245C File Offset: 0x00CB065C
+		// Token: 0x0602A858 RID: 174168 RVA: 0x00BFFA98 File Offset: 0x00BFDC98
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRoleOverviewItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603595E RID: 219486 RVA: 0x00CB24A0 File Offset: 0x00CB06A0
+		// Token: 0x0602A859 RID: 174169 RVA: 0x00BFFADC File Offset: 0x00BFDCDC
 		public void Refresh(IPhantomArenaRoleOverviewItemData data)
 		{
 			this.Data = data;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			}
 		}
 
-		// Token: 0x0603595F RID: 219487 RVA: 0x00CB2584 File Offset: 0x00CB0784
+		// Token: 0x0602A85A RID: 174170 RVA: 0x00BFFBC0 File Offset: 0x00BFDDC0
 		public void PlaySelectAnim()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			sequencePlayer.PlayLevelSequenceByName("In", false, null, false);
 		}
 
-		// Token: 0x06035960 RID: 219488 RVA: 0x00CB25B1 File Offset: 0x00CB07B1
+		// Token: 0x0602A85B RID: 174171 RVA: 0x00BFFBED File Offset: 0x00BFDDED
 		private void OnItemButtonClick()
 		{
 			Action onRoleOverviewItemClick = this.OnRoleOverviewItemClick;
@@ -95,38 +95,38 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.ChallengeDetail
 			onRoleOverviewItemClick();
 		}
 
-		// Token: 0x0401C716 RID: 116502
+		// Token: 0x0401714B RID: 94539
 		protected IPhantomArenaRoleOverviewItemData Data;
 
-		// Token: 0x0401C717 RID: 116503
+		// Token: 0x0401714C RID: 94540
 		public Action OnRoleOverviewItemClick;
 
-		// Token: 0x0401C718 RID: 116504
+		// Token: 0x0401714D RID: 94541
 		private CardElementItem ElementItem;
 
-		// Token: 0x0401C719 RID: 116505
+		// Token: 0x0401714E RID: 94542
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B34D RID: 45901
+		// Token: 0x02009D85 RID: 40325
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036594 RID: 222612
+			// Token: 0x04030FE7 RID: 200679
 			public const int ItemButton = 0;
 
-			// Token: 0x04036595 RID: 222613
+			// Token: 0x04030FE8 RID: 200680
 			public const int RoleItem = 1;
 
-			// Token: 0x04036596 RID: 222614
+			// Token: 0x04030FE9 RID: 200681
 			public const int RoleTexture = 2;
 
-			// Token: 0x04036597 RID: 222615
+			// Token: 0x04030FEA RID: 200682
 			public const int NameText = 3;
 
-			// Token: 0x04036598 RID: 222616
+			// Token: 0x04030FEB RID: 200683
 			public const int ElementItem = 4;
 
-			// Token: 0x04036599 RID: 222617
+			// Token: 0x04030FEC RID: 200684
 			public const int EmptyItem = 5;
 		}
 	}

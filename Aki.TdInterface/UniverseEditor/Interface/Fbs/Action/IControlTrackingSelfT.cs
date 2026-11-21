@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064DB RID: 25819
+	// Token: 0x02006B46 RID: 27462
 	public class IControlTrackingSelfT
 	{
-		// Token: 0x1700C01E RID: 49182
-		// (get) Token: 0x0602CCA2 RID: 183458 RVA: 0x00627A52 File Offset: 0x00625C52
-		// (set) Token: 0x0602CCA3 RID: 183459 RVA: 0x00627A5A File Offset: 0x00625C5A
+		// Token: 0x1700C9AB RID: 51627
+		// (get) Token: 0x0602F426 RID: 193574 RVA: 0x00673B7A File Offset: 0x00671D7A
+		// (set) Token: 0x0602F427 RID: 193575 RVA: 0x00673B82 File Offset: 0x00671D82
 		public EControlTrackingType Type { get; set; }
 
-		// Token: 0x0602CCA4 RID: 183460 RVA: 0x00627A63 File Offset: 0x00625C63
+		// Token: 0x0602F428 RID: 193576 RVA: 0x00673B8B File Offset: 0x00671D8B
 		public IControlTrackingSelfT()
 		{
 			this.Type = EControlTrackingType.Self;

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x0200572D RID: 22317
+	// Token: 0x02004704 RID: 18180
 	internal class RoleItem : SyncGridProxyAbstract<int>
 	{
-		// Token: 0x06038BCB RID: 232395 RVA: 0x00D774F4 File Offset: 0x00D756F4
+		// Token: 0x0602DADB RID: 187099 RVA: 0x00CC5BA0 File Offset: 0x00CC3DA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,12 +34,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038BCC RID: 232396 RVA: 0x00D775BB File Offset: 0x00D757BB
+		// Token: 0x0602DADC RID: 187100 RVA: 0x00CC5C67 File Offset: 0x00CC3E67
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06038BCD RID: 232397 RVA: 0x00D775C0 File Offset: 0x00D757C0
+		// Token: 0x0602DADD RID: 187101 RVA: 0x00CC5C6C File Offset: 0x00CC3E6C
 		public override void Refresh(int data)
 		{
 			this.Data = data;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(2).ShowTextNew(value.Name);
 		}
 
-		// Token: 0x06038BCE RID: 232398 RVA: 0x00D77640 File Offset: 0x00D75840
+		// Token: 0x0602DADE RID: 187102 RVA: 0x00CC5CEC File Offset: 0x00CC3EEC
 		private void OnClickBtn()
 		{
 			Action<int> onClickCb = this.OnClickCb;
@@ -60,23 +60,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			onClickCb(this.Data);
 		}
 
-		// Token: 0x0401DC4C RID: 121932
+		// Token: 0x040186E2 RID: 100066
 		public int Data;
 
-		// Token: 0x0401DC4D RID: 121933
+		// Token: 0x040186E3 RID: 100067
 		[Nullable(1)]
 		public Action<int> OnClickCb;
 
-		// Token: 0x0200B8F6 RID: 47350
+		// Token: 0x0200A317 RID: 41751
 		private class ERoleComps
 		{
-			// Token: 0x04037F1A RID: 229146
+			// Token: 0x0403292A RID: 207146
 			public const int Btn = 0;
 
-			// Token: 0x04037F1B RID: 229147
+			// Token: 0x0403292B RID: 207147
 			public const int TextureRole = 1;
 
-			// Token: 0x04037F1C RID: 229148
+			// Token: 0x0403292C RID: 207148
 			public const int TextName = 2;
 		}
 	}

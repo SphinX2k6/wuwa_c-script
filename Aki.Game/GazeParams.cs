@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
-// Token: 0x0200020D RID: 525
+// Token: 0x02000211 RID: 529
 internal class GazeParams
 {
-	// Token: 0x060020A4 RID: 8356 RVA: 0x000B0FA8 File Offset: 0x000AF1A8
+	// Token: 0x06002152 RID: 8530 RVA: 0x000B82C8 File Offset: 0x000B64C8
 	[NullableContext(1)]
 	public GazeParams(GrapplingHookPointComponent grapplingPoint, bool useGaze2 = false)
 	{
@@ -33,15 +33,15 @@ internal class GazeParams
 		this.StayTime = ((cameraGaze4 != null) ? cameraGaze4.StayTime : 0f);
 	}
 
-	// Token: 0x040014A6 RID: 5286
+	// Token: 0x040014E8 RID: 5352
 	public bool LockCamera;
 
-	// Token: 0x040014A7 RID: 5287
+	// Token: 0x040014E9 RID: 5353
 	public float FadeInTime;
 
-	// Token: 0x040014A8 RID: 5288
+	// Token: 0x040014EA RID: 5354
 	public float? FadeOutTime;
 
-	// Token: 0x040014A9 RID: 5289
+	// Token: 0x040014EB RID: 5355
 	public float StayTime;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F12 RID: 3858
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001028 RID: 4136
 	public class ICombatState2Condition
 	{
-		// Token: 0x0600554C RID: 21836 RVA: 0x000D1208 File Offset: 0x000CF408
+		// Token: 0x06005AC8 RID: 23240 RVA: 0x000DD3B0 File Offset: 0x000DB5B0
 		private ICombatState2Condition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600554D RID: 21837 RVA: 0x000D1240 File Offset: 0x000CF440
+		// Token: 0x06005AC9 RID: 23241 RVA: 0x000DD3E8 File Offset: 0x000DB5E8
 		public static ICombatState2Condition Create([Nullable(2)] ICombatState2Condition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600554E RID: 21838 RVA: 0x000D1253 File Offset: 0x000CF453
+		// Token: 0x06005ACA RID: 23242 RVA: 0x000DD3FB File Offset: 0x000DB5FB
 		public static ICombatState2Condition CreateFromSetValue([Nullable(2)] ICombatState2Condition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600554F RID: 21839 RVA: 0x000D1266 File Offset: 0x000CF466
+		// Token: 0x06005ACB RID: 23243 RVA: 0x000DD40E File Offset: 0x000DB60E
 		public ICombatState2Condition_SetValue ToSetValue()
 		{
 			return new ICombatState2Condition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C8C RID: 7308
-		// (get) Token: 0x06005550 RID: 21840 RVA: 0x000D12A0 File Offset: 0x000CF4A0
-		// (set) Token: 0x06005551 RID: 21841 RVA: 0x000D12DA File Offset: 0x000CF4DA
+		// Token: 0x17001E24 RID: 7716
+		// (get) Token: 0x06005ACC RID: 23244 RVA: 0x000DD448 File Offset: 0x000DB648
+		// (set) Token: 0x06005ACD RID: 23245 RVA: 0x000DD482 File Offset: 0x000DB682
 		public virtual int? EntityId
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C8D RID: 7309
-		// (get) Token: 0x06005552 RID: 21842 RVA: 0x000D12E8 File Offset: 0x000CF4E8
-		// (set) Token: 0x06005553 RID: 21843 RVA: 0x000D1313 File Offset: 0x000CF513
+		// Token: 0x17001E25 RID: 7717
+		// (get) Token: 0x06005ACE RID: 23246 RVA: 0x000DD490 File Offset: 0x000DB690
+		// (set) Token: 0x06005ACF RID: 23247 RVA: 0x000DD4BB File Offset: 0x000DB6BB
 		public virtual string State
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C8E RID: 7310
-		// (get) Token: 0x06005554 RID: 21844 RVA: 0x000D1324 File Offset: 0x000CF524
-		// (set) Token: 0x06005555 RID: 21845 RVA: 0x000D135E File Offset: 0x000CF55E
+		// Token: 0x17001E26 RID: 7718
+		// (get) Token: 0x06005AD0 RID: 23248 RVA: 0x000DD4CC File Offset: 0x000DB6CC
+		// (set) Token: 0x06005AD1 RID: 23249 RVA: 0x000DD506 File Offset: 0x000DB706
 		public virtual ECompare? Compare
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C8F RID: 7311
-		// (get) Token: 0x06005556 RID: 21846 RVA: 0x000D136C File Offset: 0x000CF56C
-		// (set) Token: 0x06005557 RID: 21847 RVA: 0x000D13A6 File Offset: 0x000CF5A6
+		// Token: 0x17001E27 RID: 7719
+		// (get) Token: 0x06005AD2 RID: 23250 RVA: 0x000DD514 File Offset: 0x000DB714
+		// (set) Token: 0x06005AD3 RID: 23251 RVA: 0x000DD54E File Offset: 0x000DB74E
 		public virtual EDetectTarget? DetectTarget
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040033A1 RID: 13217
+		// Token: 0x040036AE RID: 13998
 		[Nullable(2)]
 		protected ICombatState2Condition FbInstance;
 
-		// Token: 0x040033A2 RID: 13218
+		// Token: 0x040036AF RID: 13999
 		[Nullable(2)]
 		protected ICombatState2Condition_SetValue PocoInterface;
 	}

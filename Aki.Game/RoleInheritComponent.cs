@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003247 RID: 12871
+// Token: 0x020027B6 RID: 10166
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleInheritComponent : EntityComponent
 {
-	// Token: 0x0601BC6B RID: 113771 RVA: 0x007A8B35 File Offset: 0x007A6D35
+	// Token: 0x0601981F RID: 104479 RVA: 0x007D1219 File Offset: 0x007CF419
 	protected override bool OnStart()
 	{
 		this.CreatureDataComponent = base.Entity.GetComponent<CreatureDataComponent>();
@@ -15,7 +15,7 @@ public class RoleInheritComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BC6C RID: 113772 RVA: 0x007A8B5C File Offset: 0x007A6D5C
+	// Token: 0x06019820 RID: 104480 RVA: 0x007D1240 File Offset: 0x007CF440
 	public static void StateInherit(RoleInheritComponent last, RoleInheritComponent newly, ERoleInheritType inheritType, bool skill)
 	{
 		if (last != null && newly != null)
@@ -50,7 +50,7 @@ public class RoleInheritComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC6D RID: 113773 RVA: 0x007A8C58 File Offset: 0x007A6E58
+	// Token: 0x06019821 RID: 104481 RVA: 0x007D133C File Offset: 0x007CF53C
 	[NullableContext(1)]
 	private static void InheritBuffs(RoleInheritComponent last, RoleInheritComponent newly)
 	{
@@ -89,7 +89,7 @@ public class RoleInheritComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC6E RID: 113774 RVA: 0x007A8DA8 File Offset: 0x007A6FA8
+	// Token: 0x06019822 RID: 104482 RVA: 0x007D148C File Offset: 0x007CF68C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -98,34 +98,38 @@ public class RoleInheritComponent : EntityComponent
 			return false;
 		}
 		RoleInheritComponent roleInheritComponent = (RoleInheritComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (roleInheritComponent.CreatureDataComponent == null)
 		{
-			if (roleInheritComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("BuffComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
-			if (roleInheritComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (roleInheritComponent.BuffComponent == null)
+		{
+			this.BuffComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DADA RID: 56026
+	// Token: 0x170028B3 RID: 10419
+	// (get) Token: 0x06019823 RID: 104483 RVA: 0x007D1502 File Offset: 0x007CF702
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF79 RID: 57209
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400DADB RID: 56027
+	// Token: 0x0400DF7A RID: 57210
 	private CharacterBuffComponent BuffComponent;
 }

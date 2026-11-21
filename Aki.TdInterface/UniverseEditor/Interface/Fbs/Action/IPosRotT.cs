@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D6C RID: 28012
+	// Token: 0x020074E7 RID: 29927
 	public class IPosRotT
 	{
-		// Token: 0x1700D0F4 RID: 53492
-		// (get) Token: 0x06031786 RID: 202630 RVA: 0x006B4FDA File Offset: 0x006B31DA
-		// (set) Token: 0x06031787 RID: 202631 RVA: 0x006B4FE2 File Offset: 0x006B31E2
+		// Token: 0x1700DC3C RID: 56380
+		// (get) Token: 0x06034782 RID: 214914 RVA: 0x007106C2 File Offset: 0x0070E8C2
+		// (set) Token: 0x06034783 RID: 214915 RVA: 0x007106CA File Offset: 0x0070E8CA
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700D0F5 RID: 53493
-		// (get) Token: 0x06031788 RID: 202632 RVA: 0x006B4FEB File Offset: 0x006B31EB
-		// (set) Token: 0x06031789 RID: 202633 RVA: 0x006B4FF3 File Offset: 0x006B31F3
+		// Token: 0x1700DC3D RID: 56381
+		// (get) Token: 0x06034784 RID: 214916 RVA: 0x007106D3 File Offset: 0x0070E8D3
+		// (set) Token: 0x06034785 RID: 214917 RVA: 0x007106DB File Offset: 0x0070E8DB
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x0603178A RID: 202634 RVA: 0x006B4FFC File Offset: 0x006B31FC
+		// Token: 0x06034786 RID: 214918 RVA: 0x007106E4 File Offset: 0x0070E8E4
 		public IPosRotT()
 		{
 			this.Pos = null;

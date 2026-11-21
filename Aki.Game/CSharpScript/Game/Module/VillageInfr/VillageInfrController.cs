@@ -11,11 +11,11 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200488D RID: 18573
+	// Token: 0x02003804 RID: 14340
 	[Controller(0)]
 	public class VillageInfrController : ActivityControllerBase
 	{
-		// Token: 0x0603094F RID: 198991 RVA: 0x00B489C0 File Offset: 0x00B46BC0
+		// Token: 0x0602547B RID: 152699 RVA: 0x00A837C8 File Offset: 0x00A819C8
 		[NullableContext(1)]
 		protected override void OnOpenView(ActivityBaseData data)
 		{
@@ -34,27 +34,27 @@ namespace CSharpScript.Game.Module.VillageInfr
 			UiManager.Instance.OpenView(EUiViewName.QuestView, num, null);
 		}
 
-		// Token: 0x06030950 RID: 198992 RVA: 0x00B48A31 File Offset: 0x00B46C31
+		// Token: 0x0602547C RID: 152700 RVA: 0x00A83839 File Offset: 0x00A81A39
 		[NullableContext(1)]
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_VillageInfrActivityMain";
 		}
 
-		// Token: 0x06030951 RID: 198993 RVA: 0x00B48A38 File Offset: 0x00B46C38
+		// Token: 0x0602547D RID: 152701 RVA: 0x00A83840 File Offset: 0x00A81A40
 		[NullableContext(1)]
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new VillageInfrActivityMainView();
 		}
 
-		// Token: 0x06030952 RID: 198994 RVA: 0x00B48A3F File Offset: 0x00B46C3F
+		// Token: 0x0602547E RID: 152702 RVA: 0x00A83847 File Offset: 0x00A81A47
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x06030953 RID: 198995 RVA: 0x00B48A44 File Offset: 0x00B46C44
+		// Token: 0x0602547F RID: 152703 RVA: 0x00A8384C File Offset: 0x00A81A4C
 		[NullableContext(1)]
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return villageInfrActivityData;
 		}
 
-		// Token: 0x06030954 RID: 198996 RVA: 0x00B48A64 File Offset: 0x00B46C64
+		// Token: 0x06025480 RID: 152704 RVA: 0x00A8386C File Offset: 0x00A81A6C
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.InfrV2TaskDataUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTaskUpdate));
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			Net.Instance.Register(ENotifyMessageId.InfrV2InfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnInfrV2InfoNotify));
 		}
 
-		// Token: 0x06030955 RID: 198997 RVA: 0x00B48B00 File Offset: 0x00B46D00
+		// Token: 0x06025481 RID: 152705 RVA: 0x00A83908 File Offset: 0x00A81B08
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.InfrV2TaskDataUpdateNotify);
@@ -83,21 +83,21 @@ namespace CSharpScript.Game.Module.VillageInfr
 			Net.Instance.UnRegister(ENotifyMessageId.InfrV2InfoNotify);
 		}
 
-		// Token: 0x06030956 RID: 198998 RVA: 0x00B48B5D File Offset: 0x00B46D5D
+		// Token: 0x06025482 RID: 152706 RVA: 0x00A83965 File Offset: 0x00A81B65
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<IProto_NormalItem, bool>(EEventName.OnAddCommonItem, new Action<IProto_NormalItem, bool>(this.OnAddCommonItem));
 			EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x06030957 RID: 198999 RVA: 0x00B48B97 File Offset: 0x00B46D97
+		// Token: 0x06025483 RID: 152707 RVA: 0x00A8399F File Offset: 0x00A81B9F
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAddCommonItem, new Action<IProto_NormalItem, bool>(this.OnAddCommonItem));
 			EventSystem.Instance.Remove(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x06030958 RID: 199000 RVA: 0x00B48BD4 File Offset: 0x00B46DD4
+		// Token: 0x06025484 RID: 152708 RVA: 0x00A839DC File Offset: 0x00A81BDC
 		public UniTask<bool> RequestInfrV2Info()
 		{
 			VillageInfrController.<RequestInfrV2Info>d__9 <RequestInfrV2Info>d__;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2Info>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030959 RID: 199001 RVA: 0x00B48C10 File Offset: 0x00B46E10
+		// Token: 0x06025485 RID: 152709 RVA: 0x00A83A18 File Offset: 0x00A81C18
 		public UniTask<bool> RequestInfrV2LevelUp()
 		{
 			VillageInfrController.<RequestInfrV2LevelUp>d__10 <RequestInfrV2LevelUp>d__;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2LevelUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095A RID: 199002 RVA: 0x00B48C4C File Offset: 0x00B46E4C
+		// Token: 0x06025486 RID: 152710 RVA: 0x00A83A54 File Offset: 0x00A81C54
 		public UniTask<bool> RequestInfrV2TreeBuild(int treeId)
 		{
 			VillageInfrController.<RequestInfrV2TreeBuild>d__11 <RequestInfrV2TreeBuild>d__;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2TreeBuild>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095B RID: 199003 RVA: 0x00B48C90 File Offset: 0x00B46E90
+		// Token: 0x06025487 RID: 152711 RVA: 0x00A83A98 File Offset: 0x00A81C98
 		public UniTask<bool> RequestInfrV2ManualSwitchTraceTree(int treeId)
 		{
 			VillageInfrController.<RequestInfrV2ManualSwitchTraceTree>d__12 <RequestInfrV2ManualSwitchTraceTree>d__;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2ManualSwitchTraceTree>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095C RID: 199004 RVA: 0x00B48CD4 File Offset: 0x00B46ED4
+		// Token: 0x06025488 RID: 152712 RVA: 0x00A83ADC File Offset: 0x00A81CDC
 		public UniTask<bool> RequestInfrV2ManualCancelTraceTree()
 		{
 			VillageInfrController.<RequestInfrV2ManualCancelTraceTree>d__13 <RequestInfrV2ManualCancelTraceTree>d__;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2ManualCancelTraceTree>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095D RID: 199005 RVA: 0x00B48D10 File Offset: 0x00B46F10
+		// Token: 0x06025489 RID: 152713 RVA: 0x00A83B18 File Offset: 0x00A81D18
 		public UniTask<bool> RequestInfrV2ScoreReward()
 		{
 			VillageInfrController.<RequestInfrV2ScoreReward>d__14 <RequestInfrV2ScoreReward>d__;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2ScoreReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095E RID: 199006 RVA: 0x00B48D4C File Offset: 0x00B46F4C
+		// Token: 0x0602548A RID: 152714 RVA: 0x00A83B54 File Offset: 0x00A81D54
 		public UniTask<bool> RequestInfrV2TaskReward([Nullable(1)] List<int> taskIds)
 		{
 			VillageInfrController.<RequestInfrV2TaskReward>d__15 <RequestInfrV2TaskReward>d__;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <RequestInfrV2TaskReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603095F RID: 199007 RVA: 0x00B48D90 File Offset: 0x00B46F90
+		// Token: 0x0602548B RID: 152715 RVA: 0x00A83B98 File Offset: 0x00A81D98
 		[NullableContext(2)]
 		private void OnInfrV2InfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			VillageInfrModel.Instance.SetData(infrV2InfoNotify.InfrInfo);
 		}
 
-		// Token: 0x06030960 RID: 199008 RVA: 0x00B48DB4 File Offset: 0x00B46FB4
+		// Token: 0x0602548C RID: 152716 RVA: 0x00A83BBC File Offset: 0x00A81DBC
 		[NullableContext(2)]
 		private void OnTaskUpdate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			VillageInfrModel.Instance.UpdateActivityTask(infrV2TaskDataUpdateNotify.Task);
 		}
 
-		// Token: 0x06030961 RID: 199009 RVA: 0x00B48DD8 File Offset: 0x00B46FD8
+		// Token: 0x0602548D RID: 152717 RVA: 0x00A83BE0 File Offset: 0x00A81DE0
 		[NullableContext(2)]
 		private void OnTreeUpdate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			VillageInfrModel.Instance.SetAllTreeData(infrV2TreeUpdateNotify.TreeInfo);
 		}
 
-		// Token: 0x06030962 RID: 199010 RVA: 0x00B48DFC File Offset: 0x00B46FFC
+		// Token: 0x0602548E RID: 152718 RVA: 0x00A83C04 File Offset: 0x00A81E04
 		[NullableContext(2)]
 		private void OnVillageUpdate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			VillageInfrModel.Instance.SetVillageData(infrV2FireUpdateNotify.FireInfo);
 		}
 
-		// Token: 0x06030963 RID: 199011 RVA: 0x00B48E20 File Offset: 0x00B47020
+		// Token: 0x0602548F RID: 152719 RVA: 0x00A83C28 File Offset: 0x00A81E28
 		[NullableContext(2)]
 		private void OnFinishConditionUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			VillageInfrModel.Instance.SetAllTreeFinishConditionData(infrV2TreeFinishCondUpdateNotify.Cond);
 		}
 
-		// Token: 0x06030964 RID: 199012 RVA: 0x00B48E44 File Offset: 0x00B47044
+		// Token: 0x06025490 RID: 152720 RVA: 0x00A83C4C File Offset: 0x00A81E4C
 		[NullableContext(1)]
 		private void OnAddCommonItem(IProto_NormalItem normalItem, bool isShowNewTips)
 		{
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030965 RID: 199013 RVA: 0x00B48E90 File Offset: 0x00B47090
+		// Token: 0x06025491 RID: 152721 RVA: 0x00A83C98 File Offset: 0x00A81E98
 		[NullableContext(1)]
 		private void OnCommonItemCountAnyChange(IProto_NormalItem normalItem, int count, int lastCount)
 		{
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030966 RID: 199014 RVA: 0x00B48ED8 File Offset: 0x00B470D8
+		// Token: 0x06025492 RID: 152722 RVA: 0x00A83CE0 File Offset: 0x00A81EE0
 		public UniTask<int?> OpenVillageInfrMainView([Nullable(2)] IVillageInfrMainParam param = null)
 		{
 			VillageInfrController.<OpenVillageInfrMainView>d__23 <OpenVillageInfrMainView>d__;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OpenVillageInfrMainView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030967 RID: 199015 RVA: 0x00B48F1C File Offset: 0x00B4711C
+		// Token: 0x06025493 RID: 152723 RVA: 0x00A83D24 File Offset: 0x00A81F24
 		public UniTask<int?> OpenVillageInfrWorldBuildViewAsync(EVillageInfrSelectType selectType, int selectId, [Nullable(1)] string uiCameraName)
 		{
 			VillageInfrController.<OpenVillageInfrWorldBuildViewAsync>d__24 <OpenVillageInfrWorldBuildViewAsync>d__;
@@ -256,8 +256,8 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OpenVillageInfrWorldBuildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x1700792F RID: 31023
-		// (get) Token: 0x06030968 RID: 199016 RVA: 0x00B48F6F File Offset: 0x00B4716F
+		// Token: 0x17004C97 RID: 19607
+		// (get) Token: 0x06025494 RID: 152724 RVA: 0x00A83D77 File Offset: 0x00A81F77
 		[Nullable(1)]
 		public static VillageInfrController Instance
 		{
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030969 RID: 199017 RVA: 0x00B48F76 File Offset: 0x00B47176
+		// Token: 0x06025495 RID: 152725 RVA: 0x00A83D7E File Offset: 0x00A81F7E
 		[NullableContext(1)]
 		public static VillageInfrController GetOrCreateInstance()
 		{
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return VillageInfrController._Instance;
 		}
 
-		// Token: 0x0603096A RID: 199018 RVA: 0x00B48F8A File Offset: 0x00B4718A
+		// Token: 0x06025496 RID: 152726 RVA: 0x00A83D92 File Offset: 0x00A81F92
 		public static bool CreateInstance()
 		{
 			if (VillageInfrController._Instance != null)
@@ -290,24 +290,24 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return true;
 		}
 
-		// Token: 0x0603096B RID: 199019 RVA: 0x00B48FA0 File Offset: 0x00B471A0
+		// Token: 0x06025497 RID: 152727 RVA: 0x00A83DA8 File Offset: 0x00A81FA8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603096C RID: 199020 RVA: 0x00B48FA2 File Offset: 0x00B471A2
+		// Token: 0x06025498 RID: 152728 RVA: 0x00A83DAA File Offset: 0x00A81FAA
 		public static void ResetStaticDefaultValue()
 		{
 			VillageInfrController._Instance = null;
 		}
 
-		// Token: 0x0603096D RID: 199021 RVA: 0x00B48FAA File Offset: 0x00B471AA
+		// Token: 0x06025499 RID: 152729 RVA: 0x00A83DB2 File Offset: 0x00A81FB2
 		static VillageInfrController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VillageInfrController.CreateStaticDefaultValue), new Action(VillageInfrController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A1B2 RID: 106930
+		// Token: 0x04014A25 RID: 84517
 		[Nullable(2)]
 		private static VillageInfrController _Instance;
 	}

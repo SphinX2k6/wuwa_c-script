@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200232F RID: 9007
+	// Token: 0x020025A0 RID: 9632
 	public static class EFaceExpressionConfigTypeExtensions
 	{
-		// Token: 0x0600C4D2 RID: 50386 RVA: 0x001CBC10 File Offset: 0x001C9E10
+		// Token: 0x0600D0AA RID: 53418 RVA: 0x001E3CC8 File Offset: 0x001E1EC8
 		public static string ToEnumString(this EFaceExpressionConfigType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4D3 RID: 50387 RVA: 0x001CBC64 File Offset: 0x001C9E64
+		// Token: 0x0600D0AB RID: 53419 RVA: 0x001E3D1C File Offset: 0x001E1F1C
 		public static EFaceExpressionConfigType FromString(string name)
 		{
 			EFaceExpressionConfigType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C4D4 RID: 50388 RVA: 0x001CBC90 File Offset: 0x001C9E90
+		// Token: 0x0600D0AC RID: 53420 RVA: 0x001E3D48 File Offset: 0x001E1F48
 		public static bool TryFromString(string name, out EFaceExpressionConfigType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C4D5 RID: 50389 RVA: 0x001CBCF8 File Offset: 0x001C9EF8
+		// Token: 0x0600D0AD RID: 53421 RVA: 0x001E3DB0 File Offset: 0x001E1FB0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4D6 RID: 50390 RVA: 0x001CBD20 File Offset: 0x001C9F20
+		// Token: 0x0600D0AE RID: 53422 RVA: 0x001E3DD8 File Offset: 0x001E1FD8
 		public static EFaceExpressionConfigType[] GetValues()
 		{
 			return new EFaceExpressionConfigType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4D7 RID: 50391 RVA: 0x001CBD33 File Offset: 0x001C9F33
+		// Token: 0x0600D0AF RID: 53423 RVA: 0x001E3DEB File Offset: 0x001E1FEB
 		public static string[] GetNames()
 		{
 			return new string[]

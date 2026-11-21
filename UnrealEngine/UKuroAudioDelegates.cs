@@ -6,37 +6,37 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001696 RID: 5782
+	// Token: 0x02000310 RID: 784
 	[UnrealObjectPath("/Script/KuroAudio.KuroAudioDelegates")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroAudioDelegates : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06014F78 RID: 85880 RVA: 0x001ED21B File Offset: 0x001EB41B
+		// Token: 0x0600535A RID: 21338 RVA: 0x00074941 File Offset: 0x00072B41
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAudioDelegates._ClassPtr;
 		}
 
-		// Token: 0x06014F79 RID: 85881 RVA: 0x001ED228 File Offset: 0x001EB428
+		// Token: 0x0600535B RID: 21339 RVA: 0x00074950 File Offset: 0x00072B50
 		public UKuroAudioDelegates() : this(BuiltinUtils.AllocNativeUObject(UKuroAudioDelegates.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06014F7A RID: 85882 RVA: 0x001ED250 File Offset: 0x001EB450
+		// Token: 0x0600535C RID: 21340 RVA: 0x00074978 File Offset: 0x00072B78
 		[NullableContext(1)]
 		public UKuroAudioDelegates(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAudioDelegates.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06014F7B RID: 85883
+		// Token: 0x0600535D RID: 21341
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UnbindAudioResumeDelegate();
 
-		// Token: 0x06014F7C RID: 85884
+		// Token: 0x0600535E RID: 21342
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UnbindAudioPauseDelegate();
 
-		// Token: 0x06014F7D RID: 85885 RVA: 0x001ED283 File Offset: 0x001EB483
+		// Token: 0x0600535F RID: 21343 RVA: 0x000749AB File Offset: 0x00072BAB
 		[NullableContext(2)]
 		public static void SetAudioResumeDelegate(in FKuroAudioResumeDelegate InDelegate)
 		{
@@ -44,7 +44,7 @@ namespace UnrealEngine
 			UKuroAudioDelegates.__SetAudioResumeDelegate_Internal((fkuroAudioResumeDelegate != null) ? fkuroAudioResumeDelegate.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06014F7E RID: 85886 RVA: 0x001ED299 File Offset: 0x001EB499
+		// Token: 0x06005360 RID: 21344 RVA: 0x000749C1 File Offset: 0x00072BC1
 		[NullableContext(2)]
 		public static void SetAudioPauseDelegate(in FKuroAudioPauseDelegate InDelegate)
 		{
@@ -52,33 +52,33 @@ namespace UnrealEngine
 			UKuroAudioDelegates.__SetAudioPauseDelegate_Internal((fkuroAudioPauseDelegate != null) ? fkuroAudioPauseDelegate.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x06014F7F RID: 85887
+		// Token: 0x06005361 RID: 21345
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAudioResumeDelegate_Internal(IntPtr InDelegate);
 
-		// Token: 0x06014F80 RID: 85888
+		// Token: 0x06005362 RID: 21346
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAudioPauseDelegate_Internal(IntPtr InDelegate);
 
-		// Token: 0x06014F81 RID: 85889 RVA: 0x001ED2AF File Offset: 0x001EB4AF
+		// Token: 0x06005363 RID: 21347 RVA: 0x000749D7 File Offset: 0x00072BD7
 		static UKuroAudioDelegates()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAudio.KuroAudioDelegates");
 		}
 
-		// Token: 0x06014F82 RID: 85890 RVA: 0x001ED2BD File Offset: 0x001EB4BD
+		// Token: 0x06005364 RID: 21348 RVA: 0x000749E5 File Offset: 0x00072BE5
 		protected UKuroAudioDelegates(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B6CA RID: 46794
+		// Token: 0x0400221C RID: 8732
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroAudio.KuroAudioDelegates";
 
-		// Token: 0x0400B6CB RID: 46795
+		// Token: 0x0400221D RID: 8733
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B6CC RID: 46796
+		// Token: 0x0400221E RID: 8734
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

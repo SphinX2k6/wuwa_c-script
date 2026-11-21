@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002441 RID: 9281
+	// Token: 0x020026E2 RID: 9954
 	public static class ESwitchDataLayersTransitionTypeExtensions
 	{
-		// Token: 0x0600C9A3 RID: 51619 RVA: 0x001D8538 File Offset: 0x001D6738
+		// Token: 0x0600D653 RID: 54867 RVA: 0x001F2400 File Offset: 0x001F0600
 		public static string ToEnumString(this ESwitchDataLayersTransitionType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9A4 RID: 51620 RVA: 0x001D8560 File Offset: 0x001D6760
+		// Token: 0x0600D654 RID: 54868 RVA: 0x001F2428 File Offset: 0x001F0628
 		public static ESwitchDataLayersTransitionType FromString(string name)
 		{
 			ESwitchDataLayersTransitionType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9A5 RID: 51621 RVA: 0x001D8589 File Offset: 0x001D6789
+		// Token: 0x0600D655 RID: 54869 RVA: 0x001F2451 File Offset: 0x001F0651
 		public static bool TryFromString(string name, out ESwitchDataLayersTransitionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C9A6 RID: 51622 RVA: 0x001D85AE File Offset: 0x001D67AE
+		// Token: 0x0600D656 RID: 54870 RVA: 0x001F2476 File Offset: 0x001F0676
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9A7 RID: 51623 RVA: 0x001D85BE File Offset: 0x001D67BE
+		// Token: 0x0600D657 RID: 54871 RVA: 0x001F2486 File Offset: 0x001F0686
 		public static ESwitchDataLayersTransitionType[] GetValues()
 		{
 			return new ESwitchDataLayersTransitionType[1];
 		}
 
-		// Token: 0x0600C9A8 RID: 51624 RVA: 0x001D85C6 File Offset: 0x001D67C6
+		// Token: 0x0600D658 RID: 54872 RVA: 0x001F248E File Offset: 0x001F068E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002826 RID: 10278
+	// Token: 0x02002AF9 RID: 11001
 	public class IUniformMotion : ISceneItemMoveMotionType
 	{
-		// Token: 0x0600E3F1 RID: 58353 RVA: 0x0021927B File Offset: 0x0021747B
-		[NullableContext(1)]
+		// Token: 0x0600F216 RID: 61974 RVA: 0x002360DF File Offset: 0x002342DF
 		public static IUniformMotion Create(IUniformMotion? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004567 RID: 17767
-		// (get) Token: 0x0600E3F2 RID: 58354 RVA: 0x0021929A File Offset: 0x0021749A
+		// Token: 0x170048D2 RID: 18642
+		// (get) Token: 0x0600F217 RID: 61975 RVA: 0x002360FE File Offset: 0x002342FE
 		public override EMoveMotion Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004568 RID: 17768
-		// (get) Token: 0x0600E3F3 RID: 58355 RVA: 0x002192A7 File Offset: 0x002174A7
+		// Token: 0x170048D3 RID: 18643
+		// (get) Token: 0x0600F218 RID: 61976 RVA: 0x0023610B File Offset: 0x0023430B
 		public virtual float Time
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E22 RID: 32290
+		// Token: 0x040084DF RID: 34015
 		private IUniformMotion Instance;
 	}
 }

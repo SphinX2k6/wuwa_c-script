@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C38 RID: 7224
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001E2F RID: 7727
 	public class IMoveToEntity : IMoveSceneItemType
 	{
-		// Token: 0x06009AF7 RID: 39671 RVA: 0x00164278 File Offset: 0x00162478
-		[NullableContext(1)]
+		// Token: 0x0600A44F RID: 42063 RVA: 0x001775B8 File Offset: 0x001757B8
 		private IMoveToEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009AF8 RID: 39672 RVA: 0x001642B0 File Offset: 0x001624B0
-		[NullableContext(1)]
+		// Token: 0x0600A450 RID: 42064 RVA: 0x001775F0 File Offset: 0x001757F0
 		public static IMoveToEntity Create([Nullable(2)] IMoveToEntity instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AF9 RID: 39673 RVA: 0x001642C3 File Offset: 0x001624C3
-		[NullableContext(1)]
+		// Token: 0x0600A451 RID: 42065 RVA: 0x00177603 File Offset: 0x00175803
 		public static IMoveToEntity CreateFromSetValue([Nullable(2)] IMoveToEntity_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AFA RID: 39674 RVA: 0x001642D6 File Offset: 0x001624D6
-		[NullableContext(1)]
+		// Token: 0x0600A452 RID: 42066 RVA: 0x00177616 File Offset: 0x00175816
 		public new IMoveToEntity_SetValue ToSetValue()
 		{
 			return new IMoveToEntity_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700307E RID: 12414
-		// (get) Token: 0x06009AFB RID: 39675 RVA: 0x00164301 File Offset: 0x00162501
-		// (set) Token: 0x06009AFC RID: 39676 RVA: 0x0016432C File Offset: 0x0016252C
+		// Token: 0x170032EF RID: 13039
+		// (get) Token: 0x0600A453 RID: 42067 RVA: 0x00177641 File Offset: 0x00175841
+		// (set) Token: 0x0600A454 RID: 42068 RVA: 0x0017766C File Offset: 0x0017586C
 		public override EMoveSceneItemType Type
 		{
 			get
@@ -88,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700307F RID: 12415
-		// (get) Token: 0x06009AFD RID: 39677 RVA: 0x0016433A File Offset: 0x0016253A
-		// (set) Token: 0x06009AFE RID: 39678 RVA: 0x00164365 File Offset: 0x00162565
+		// Token: 0x170032F0 RID: 13040
+		// (get) Token: 0x0600A455 RID: 42069 RVA: 0x0017767A File Offset: 0x0017587A
+		// (set) Token: 0x0600A456 RID: 42070 RVA: 0x001776A5 File Offset: 0x001758A5
 		public virtual int EntityId
 		{
 			get
@@ -111,11 +105,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003080 RID: 12416
-		// (get) Token: 0x06009AFF RID: 39679 RVA: 0x00164373 File Offset: 0x00162573
-		// (set) Token: 0x06009B00 RID: 39680 RVA: 0x0016439A File Offset: 0x0016259A
+		// Token: 0x170032F1 RID: 13041
+		// (get) Token: 0x0600A457 RID: 42071 RVA: 0x001776B3 File Offset: 0x001758B3
+		// (set) Token: 0x0600A458 RID: 42072 RVA: 0x001776DA File Offset: 0x001758DA
+		[Nullable(2)]
 		public virtual ISceneItemMoveMotionType MoveMotion
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -129,16 +125,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.MoveMotion;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().MoveMotion = value;
 			}
 		}
 
-		// Token: 0x04005E2F RID: 24111
+		// Token: 0x04006366 RID: 25446
+		[Nullable(2)]
 		protected new IMoveToEntity FbInstance;
 
-		// Token: 0x04005E30 RID: 24112
+		// Token: 0x04006367 RID: 25447
+		[Nullable(2)]
 		protected new IMoveToEntity_SetValue PocoInterface;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C6C RID: 7276
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E71 RID: 7793
 	public class INpcLeisureInteractType
 	{
-		// Token: 0x06009C0B RID: 39947 RVA: 0x00166148 File Offset: 0x00164348
+		// Token: 0x0600A5A5 RID: 42405 RVA: 0x00179B3C File Offset: 0x00177D3C
 		private INpcLeisureInteractType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C0C RID: 39948 RVA: 0x00166180 File Offset: 0x00164380
+		// Token: 0x0600A5A6 RID: 42406 RVA: 0x00179B74 File Offset: 0x00177D74
 		public static INpcLeisureInteractType Create([Nullable(2)] INpcLeisureInteractType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C0D RID: 39949 RVA: 0x00166193 File Offset: 0x00164393
+		// Token: 0x0600A5A7 RID: 42407 RVA: 0x00179B87 File Offset: 0x00177D87
 		public static INpcLeisureInteractType CreateFromSetValue([Nullable(2)] INpcLeisureInteractType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C0E RID: 39950 RVA: 0x001661A6 File Offset: 0x001643A6
+		// Token: 0x0600A5A8 RID: 42408 RVA: 0x00179B9A File Offset: 0x00177D9A
 		public INpcLeisureInteractType_SetValue ToSetValue()
 		{
 			return new INpcLeisureInteractType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030BA RID: 12474
-		// (get) Token: 0x06009C0F RID: 39951 RVA: 0x001661C5 File Offset: 0x001643C5
-		// (set) Token: 0x06009C10 RID: 39952 RVA: 0x001661F0 File Offset: 0x001643F0
+		// Token: 0x17003337 RID: 13111
+		// (get) Token: 0x0600A5A9 RID: 42409 RVA: 0x00179BB9 File Offset: 0x00177DB9
+		// (set) Token: 0x0600A5AA RID: 42410 RVA: 0x00179BE4 File Offset: 0x00177DE4
 		public virtual ENpcLeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030BB RID: 12475
-		// (get) Token: 0x06009C11 RID: 39953 RVA: 0x00166200 File Offset: 0x00164400
-		// (set) Token: 0x06009C12 RID: 39954 RVA: 0x0016623A File Offset: 0x0016443A
+		// Token: 0x17003338 RID: 13112
+		// (get) Token: 0x0600A5AB RID: 42411 RVA: 0x00179BF4 File Offset: 0x00177DF4
+		// (set) Token: 0x0600A5AC RID: 42412 RVA: 0x00179C2E File Offset: 0x00177E2E
 		public virtual bool? KeepState
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EAF RID: 24239
+		// Token: 0x04006402 RID: 25602
 		[Nullable(2)]
 		protected INpcLeisureInteractType FbInstance;
 
-		// Token: 0x04005EB0 RID: 24240
+		// Token: 0x04006403 RID: 25603
 		[Nullable(2)]
 		protected INpcLeisureInteractType_SetValue PocoInterface;
 	}

@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x020020BD RID: 8381
+// Token: 0x02001594 RID: 5524
 public class MonsterSkillRecord
 {
-	// Token: 0x0601087A RID: 67706 RVA: 0x0040A23E File Offset: 0x0040843E
+	// Token: 0x0600DCEA RID: 56554 RVA: 0x00416946 File Offset: 0x00414B46
 	public MonsterSkillRecord(int skillId)
 	{
 		this.skill_id = (long)skillId;
 	}
 
-	// Token: 0x04007AC4 RID: 31428
+	// Token: 0x04007BC2 RID: 31682
 	public long skill_id;
 
-	// Token: 0x04007AC5 RID: 31429
+	// Token: 0x04007BC3 RID: 31683
 	public int use_count;
 
-	// Token: 0x04007AC6 RID: 31430
+	// Token: 0x04007BC4 RID: 31684
 	public int hit_count;
 
-	// Token: 0x04007AC7 RID: 31431
+	// Token: 0x04007BC5 RID: 31685
 	public int real_hit_count;
 
-	// Token: 0x04007AC8 RID: 31432
+	// Token: 0x04007BC6 RID: 31686
 	public int damage;
 
-	// Token: 0x04007AC9 RID: 31433
+	// Token: 0x04007BC7 RID: 31687
 	public int counter_attack_times;
 
-	// Token: 0x04007ACA RID: 31434
+	// Token: 0x04007BC8 RID: 31688
 	public int bullet_rebound_times;
 
-	// Token: 0x04007ACB RID: 31435
+	// Token: 0x04007BC9 RID: 31689
 	public int dodge_succ_times;
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000E27 RID: 3623
+// Token: 0x020002DC RID: 732
 public enum EThirdPartySearchColorSet
 {
-	// Token: 0x04002803 RID: 10243
+	// Token: 0x0400289C RID: 10396
 	Set1,
-	// Token: 0x04002804 RID: 10244
+	// Token: 0x0400289D RID: 10397
 	Set2
 }

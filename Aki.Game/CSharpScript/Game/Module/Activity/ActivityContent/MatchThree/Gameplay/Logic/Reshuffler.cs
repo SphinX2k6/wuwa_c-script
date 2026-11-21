@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F7 RID: 25847
+	// Token: 0x02005475 RID: 21621
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Reshuffler
 	{
-		// Token: 0x06040E44 RID: 265796 RVA: 0x00FBA06C File Offset: 0x00FB826C
+		// Token: 0x06035B08 RID: 219912 RVA: 0x00F0109C File Offset: 0x00EFF29C
 		public Reshuffler(SequenceDetector detector, GameRandom rng)
 		{
 		}
 
-		// Token: 0x06040E45 RID: 265797 RVA: 0x00FBA0C4 File Offset: 0x00FB82C4
+		// Token: 0x06035B09 RID: 219913 RVA: 0x00F010F4 File Offset: 0x00EFF2F4
 		public unsafe List<IJob> Reshuffle(Board board)
 		{
 			this.Slots.Clear();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.Jobs;
 		}
 
-		// Token: 0x06040E46 RID: 265798 RVA: 0x00FBA270 File Offset: 0x00FB8470
+		// Token: 0x06035B0A RID: 219914 RVA: 0x00F012A0 File Offset: 0x00EFF4A0
 		private bool TryFillOnce(Board board)
 		{
 			this.Pool.Clear();
@@ -104,37 +104,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return flag;
 		}
 
-		// Token: 0x06040E47 RID: 265799 RVA: 0x00FBA3C6 File Offset: 0x00FB85C6
+		// Token: 0x06035B0B RID: 219915 RVA: 0x00F013F6 File Offset: 0x00EFF5F6
 		private bool IsSafe(Board board, int r, int c, Piece piece)
 		{
 			return !piece.IsMatchable || !this.Detector.HasMatchAt(board, r, c, piece.Type);
 		}
 
-		// Token: 0x04021D2E RID: 138542
+		// Token: 0x0401C65F RID: 116319
 		private const int MAX_ATTEMPTS = 20;
 
-		// Token: 0x04021D2F RID: 138543
+		// Token: 0x0401C660 RID: 116320
 		private readonly SequenceDetector Detector = detector;
 
-		// Token: 0x04021D30 RID: 138544
+		// Token: 0x0401C661 RID: 116321
 		private readonly GameRandom Rng = rng;
 
-		// Token: 0x04021D31 RID: 138545
+		// Token: 0x0401C662 RID: 116322
 		private readonly ReshuffleJob ReshuffleJob = new ReshuffleJob();
 
-		// Token: 0x04021D32 RID: 138546
+		// Token: 0x0401C663 RID: 116323
 		private readonly List<IJob> Jobs = new List<IJob>();
 
-		// Token: 0x04021D33 RID: 138547
+		// Token: 0x0401C664 RID: 116324
 		public bool LastLayoutFailed;
 
-		// Token: 0x04021D34 RID: 138548
+		// Token: 0x0401C665 RID: 116325
 		private readonly List<GridPosition> Slots = new List<GridPosition>();
 
-		// Token: 0x04021D35 RID: 138549
+		// Token: 0x0401C666 RID: 116326
 		private readonly List<Piece> Pieces = new List<Piece>();
 
-		// Token: 0x04021D36 RID: 138550
+		// Token: 0x0401C667 RID: 116327
 		private readonly List<Piece> Pool = new List<Piece>();
 	}
 }

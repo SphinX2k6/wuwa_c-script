@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001482 RID: 5250
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020015DB RID: 5595
 	public class ActionInfo
 	{
-		// Token: 0x06007775 RID: 30581 RVA: 0x0011EC68 File Offset: 0x0011CE68
-		[NullableContext(1)]
+		// Token: 0x06007E42 RID: 32322 RVA: 0x0012D8B4 File Offset: 0x0012BAB4
 		private ActionInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007776 RID: 30582 RVA: 0x0011ECA0 File Offset: 0x0011CEA0
-		[NullableContext(1)]
+		// Token: 0x06007E43 RID: 32323 RVA: 0x0012D8EC File Offset: 0x0012BAEC
 		public static ActionInfo Create([Nullable(2)] ActionInfo instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007777 RID: 30583 RVA: 0x0011ECB3 File Offset: 0x0011CEB3
-		[NullableContext(1)]
+		// Token: 0x06007E44 RID: 32324 RVA: 0x0012D8FF File Offset: 0x0012BAFF
 		public static ActionInfo CreateFromSetValue([Nullable(2)] ActionInfo_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007778 RID: 30584 RVA: 0x0011ECC8 File Offset: 0x0011CEC8
-		[NullableContext(1)]
+		// Token: 0x06007E45 RID: 32325 RVA: 0x0012D914 File Offset: 0x0012BB14
 		public ActionInfo_SetValue ToSetValue()
 		{
 			return new ActionInfo_SetValue
@@ -71,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700282B RID: 10283
-		// (get) Token: 0x06007779 RID: 30585 RVA: 0x0011ED46 File Offset: 0x0011CF46
-		// (set) Token: 0x0600777A RID: 30586 RVA: 0x0011ED71 File Offset: 0x0011CF71
+		// Token: 0x17002A15 RID: 10773
+		// (get) Token: 0x06007E46 RID: 32326 RVA: 0x0012D992 File Offset: 0x0012BB92
+		// (set) Token: 0x06007E47 RID: 32327 RVA: 0x0012D9BD File Offset: 0x0012BBBD
 		public virtual EAction Name
 		{
 			get
@@ -94,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700282C RID: 10284
-		// (get) Token: 0x0600777B RID: 30587 RVA: 0x0011ED80 File Offset: 0x0011CF80
-		// (set) Token: 0x0600777C RID: 30588 RVA: 0x0011EDBA File Offset: 0x0011CFBA
+		// Token: 0x17002A16 RID: 10774
+		// (get) Token: 0x06007E48 RID: 32328 RVA: 0x0012D9CC File Offset: 0x0012BBCC
+		// (set) Token: 0x06007E49 RID: 32329 RVA: 0x0012DA06 File Offset: 0x0012BC06
 		public virtual bool? Async
 		{
 			get
@@ -118,13 +112,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700282D RID: 10285
-		// (get) Token: 0x0600777D RID: 30589 RVA: 0x0011EDC8 File Offset: 0x0011CFC8
-		// (set) Token: 0x0600777E RID: 30590 RVA: 0x0011EDEF File Offset: 0x0011CFEF
-		[Nullable(1)]
+		// Token: 0x17002A17 RID: 10775
+		// (get) Token: 0x06007E4A RID: 32330 RVA: 0x0012DA14 File Offset: 0x0012BC14
+		// (set) Token: 0x06007E4B RID: 32331 RVA: 0x0012DA3B File Offset: 0x0012BC3B
 		public virtual ActionParams Params
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -138,16 +130,15 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.Params;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().Params = value;
 			}
 		}
 
-		// Token: 0x1700282E RID: 10286
-		// (get) Token: 0x0600777F RID: 30591 RVA: 0x0011EE00 File Offset: 0x0011D000
-		// (set) Token: 0x06007780 RID: 30592 RVA: 0x0011EE3A File Offset: 0x0011D03A
+		// Token: 0x17002A18 RID: 10776
+		// (get) Token: 0x06007E4C RID: 32332 RVA: 0x0012DA4C File Offset: 0x0012BC4C
+		// (set) Token: 0x06007E4D RID: 32333 RVA: 0x0012DA86 File Offset: 0x0012BC86
 		public virtual int? ActionId
 		{
 			get
@@ -169,9 +160,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700282F RID: 10287
-		// (get) Token: 0x06007781 RID: 30593 RVA: 0x0011EE48 File Offset: 0x0011D048
-		// (set) Token: 0x06007782 RID: 30594 RVA: 0x0011EE82 File Offset: 0x0011D082
+		// Token: 0x17002A19 RID: 10777
+		// (get) Token: 0x06007E4E RID: 32334 RVA: 0x0012DA94 File Offset: 0x0012BC94
+		// (set) Token: 0x06007E4F RID: 32335 RVA: 0x0012DACE File Offset: 0x0012BCCE
 		public virtual bool? Disabled
 		{
 			get
@@ -193,11 +184,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002830 RID: 10288
-		// (get) Token: 0x06007783 RID: 30595 RVA: 0x0011EE90 File Offset: 0x0011D090
-		// (set) Token: 0x06007784 RID: 30596 RVA: 0x0011EEB7 File Offset: 0x0011D0B7
+		// Token: 0x17002A1A RID: 10778
+		// (get) Token: 0x06007E50 RID: 32336 RVA: 0x0012DADC File Offset: 0x0012BCDC
+		// (set) Token: 0x06007E51 RID: 32337 RVA: 0x0012DB03 File Offset: 0x0012BD03
+		[Nullable(2)]
 		public virtual string ActionGuid
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -211,15 +204,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ActionGuid;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ActionGuid = value;
 			}
 		}
 
-		// Token: 0x17002831 RID: 10289
-		// (get) Token: 0x06007785 RID: 30597 RVA: 0x0011EEC8 File Offset: 0x0011D0C8
-		// (set) Token: 0x06007786 RID: 30598 RVA: 0x0011EF02 File Offset: 0x0011D102
+		// Token: 0x17002A1B RID: 10779
+		// (get) Token: 0x06007E52 RID: 32338 RVA: 0x0012DB14 File Offset: 0x0012BD14
+		// (set) Token: 0x06007E53 RID: 32339 RVA: 0x0012DB4E File Offset: 0x0012BD4E
 		public virtual float? Timeout
 		{
 			get
@@ -241,9 +235,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002832 RID: 10290
-		// (get) Token: 0x06007787 RID: 30599 RVA: 0x0011EF10 File Offset: 0x0011D110
-		// (set) Token: 0x06007788 RID: 30600 RVA: 0x0011EF3A File Offset: 0x0011D13A
+		// Token: 0x17002A1C RID: 10780
+		// (get) Token: 0x06007E54 RID: 32340 RVA: 0x0012DB5C File Offset: 0x0012BD5C
+		// (set) Token: 0x06007E55 RID: 32341 RVA: 0x0012DB86 File Offset: 0x0012BD86
 		public virtual bool? EdLocalDisabled
 		{
 			get
@@ -260,11 +254,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002833 RID: 10291
-		// (get) Token: 0x06007789 RID: 30601 RVA: 0x0011EF48 File Offset: 0x0011D148
-		// (set) Token: 0x0600778A RID: 30602 RVA: 0x0011EF5F File Offset: 0x0011D15F
+		// Token: 0x17002A1D RID: 10781
+		// (get) Token: 0x06007E56 RID: 32342 RVA: 0x0012DB94 File Offset: 0x0012BD94
+		// (set) Token: 0x06007E57 RID: 32343 RVA: 0x0012DBAB File Offset: 0x0012BDAB
+		[Nullable(2)]
 		public virtual string EdNote
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -273,16 +269,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdNote = value;
 			}
 		}
 
-		// Token: 0x04004581 RID: 17793
+		// Token: 0x0400491C RID: 18716
+		[Nullable(2)]
 		protected ActionInfo FbInstance;
 
-		// Token: 0x04004582 RID: 17794
+		// Token: 0x0400491D RID: 18717
+		[Nullable(2)]
 		protected ActionInfo_SetValue PocoInterface;
 	}
 }

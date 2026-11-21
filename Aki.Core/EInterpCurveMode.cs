@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020000E5 RID: 229
+// Token: 0x020000E7 RID: 231
 public enum EInterpCurveMode
 {
-	// Token: 0x04000592 RID: 1426
+	// Token: 0x040005A1 RID: 1441
 	Linear,
-	// Token: 0x04000593 RID: 1427
+	// Token: 0x040005A2 RID: 1442
 	CurveAuto,
-	// Token: 0x04000594 RID: 1428
+	// Token: 0x040005A3 RID: 1443
 	Constant,
-	// Token: 0x04000595 RID: 1429
+	// Token: 0x040005A4 RID: 1444
 	CurveUser,
-	// Token: 0x04000596 RID: 1430
+	// Token: 0x040005A5 RID: 1445
 	CurveBreak,
-	// Token: 0x04000597 RID: 1431
+	// Token: 0x040005A6 RID: 1446
 	CurveAutoClamped,
-	// Token: 0x04000598 RID: 1432
+	// Token: 0x040005A7 RID: 1447
 	MAX
 }

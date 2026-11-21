@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002E76 RID: 11894
+// Token: 0x020023C8 RID: 9160
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseFrozenComponent : EntityComponent
 {
-	// Token: 0x060196BF RID: 104127 RVA: 0x0068FD51 File Offset: 0x0068DF51
+	// Token: 0x06016F8C RID: 94092 RVA: 0x006B61C0 File Offset: 0x006B43C0
 	protected override bool OnStart()
 	{
 		this.ActorComponent = base.Entity.GetComponent<CharacterActorComponent>();
@@ -20,7 +20,7 @@ public class BaseFrozenComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060196C0 RID: 104128 RVA: 0x0068FD8D File Offset: 0x0068DF8D
+	// Token: 0x06016F8D RID: 94093 RVA: 0x006B61FC File Offset: 0x006B43FC
 	protected override bool OnEnd()
 	{
 		if (this.StunnedTagListenTask != null)
@@ -36,21 +36,21 @@ public class BaseFrozenComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060196C1 RID: 104129 RVA: 0x0068FDC4 File Offset: 0x0068DFC4
+	// Token: 0x06016F8E RID: 94094 RVA: 0x006B6233 File Offset: 0x006B4433
 	protected override bool OnClear()
 	{
 		this.FrozenLockSet.Clear();
 		return true;
 	}
 
-	// Token: 0x060196C2 RID: 104130 RVA: 0x0068FDD4 File Offset: 0x0068DFD4
+	// Token: 0x06016F8F RID: 94095 RVA: 0x006B6244 File Offset: 0x006B4444
 	private void AddListenTasks()
 	{
 		BaseTagComponent baseTagComponent = base.Entity.CheckGetComponent<BaseTagComponent>();
 		this.StunnedTagListenTask = baseTagComponent.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["Damage.Stunned"]), new BaseTagComponent.TTagSwitchedCallback(this.StunnedTagListenTaskCallback), null);
 	}
 
-	// Token: 0x060196C3 RID: 104131 RVA: 0x0068FE1A File Offset: 0x0068E01A
+	// Token: 0x06016F90 RID: 94096 RVA: 0x006B628A File Offset: 0x006B448A
 	private void StunnedTagListenTaskCallback(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -59,7 +59,7 @@ public class BaseFrozenComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196C4 RID: 104132 RVA: 0x0068FE30 File Offset: 0x0068E030
+	// Token: 0x06016F91 RID: 94097 RVA: 0x006B62A0 File Offset: 0x006B44A0
 	[NullableContext(2)]
 	public void AddTimeScaleByBuff(int handleId, int priority, double timeDilation, double? duration, UCurveFloat curve)
 	{
@@ -75,7 +75,7 @@ public class BaseFrozenComponent : EntityComponent
 		this.BuffTimeScaleMap[handleId] = value;
 	}
 
-	// Token: 0x060196C5 RID: 104133 RVA: 0x0068FE8C File Offset: 0x0068E08C
+	// Token: 0x06016F92 RID: 94098 RVA: 0x006B62FC File Offset: 0x006B44FC
 	public void RemoveTimeScaleByBuff(int handleId)
 	{
 		int id;
@@ -86,7 +86,7 @@ public class BaseFrozenComponent : EntityComponent
 		this.BuffTimeScaleMap.Remove(handleId);
 	}
 
-	// Token: 0x060196C6 RID: 104134 RVA: 0x0068FEC4 File Offset: 0x0068E0C4
+	// Token: 0x06016F93 RID: 94099 RVA: 0x006B6334 File Offset: 0x006B4534
 	public unsafe void SetForeverTimeScale(int handleId, int priority, float timeDilation)
 	{
 		this.RemoveForeverTimeScale(handleId);
@@ -108,7 +108,7 @@ public class BaseFrozenComponent : EntityComponent
 		this.ForeverTimeScaleMap[handleId] = value;
 	}
 
-	// Token: 0x060196C7 RID: 104135 RVA: 0x0068FF94 File Offset: 0x0068E194
+	// Token: 0x06016F94 RID: 94100 RVA: 0x006B6404 File Offset: 0x006B4604
 	public void RemoveForeverTimeScale(int handleId)
 	{
 		int id;
@@ -119,7 +119,7 @@ public class BaseFrozenComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196C8 RID: 104136 RVA: 0x0068FFCC File Offset: 0x0068E1CC
+	// Token: 0x06016F95 RID: 94101 RVA: 0x006B643C File Offset: 0x006B463C
 	public void SetBuffBaseForeverTimeScale(float baseBuffTimeScale)
 	{
 		if (MathUtils.Instance.IsNearlyEqual((double)this.BaseBuffForeverTimeScale, (double)baseBuffTimeScale, null))
@@ -138,18 +138,18 @@ public class BaseFrozenComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196C9 RID: 104137 RVA: 0x0069003D File Offset: 0x0068E23D
+	// Token: 0x06016F96 RID: 94102 RVA: 0x006B64AD File Offset: 0x006B46AD
 	public virtual bool IsFrozen()
 	{
 		return false;
 	}
 
-	// Token: 0x060196CA RID: 104138 RVA: 0x00690040 File Offset: 0x0068E240
+	// Token: 0x06016F97 RID: 94103 RVA: 0x006B64B0 File Offset: 0x006B46B0
 	protected virtual void SetFrozen(bool bFrozen)
 	{
 	}
 
-	// Token: 0x060196CB RID: 104139 RVA: 0x00690044 File Offset: 0x0068E244
+	// Token: 0x06016F98 RID: 94104 RVA: 0x006B64B4 File Offset: 0x006B46B4
 	protected virtual void RefreshFrozen()
 	{
 		bool flag = this.FrozenLockSet.Count > 0;
@@ -157,7 +157,7 @@ public class BaseFrozenComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<bool>(base.Entity, EEventName.CharAfterFrozenChange, flag);
 	}
 
-	// Token: 0x060196CC RID: 104140 RVA: 0x0069007B File Offset: 0x0068E27B
+	// Token: 0x06016F99 RID: 94105 RVA: 0x006B64EB File Offset: 0x006B46EB
 	public void LockFrozen(string lockName)
 	{
 		if (this.FrozenLockSet.Contains(lockName))
@@ -168,7 +168,7 @@ public class BaseFrozenComponent : EntityComponent
 		this.RefreshFrozen();
 	}
 
-	// Token: 0x060196CD RID: 104141 RVA: 0x0069009F File Offset: 0x0068E29F
+	// Token: 0x06016F9A RID: 94106 RVA: 0x006B650F File Offset: 0x006B470F
 	public void UnlockFrozen(string lockName)
 	{
 		if (!this.FrozenLockSet.Remove(lockName))
@@ -178,7 +178,7 @@ public class BaseFrozenComponent : EntityComponent
 		this.RefreshFrozen();
 	}
 
-	// Token: 0x060196CE RID: 104142 RVA: 0x006900B8 File Offset: 0x0068E2B8
+	// Token: 0x06016F9B RID: 94107 RVA: 0x006B6528 File Offset: 0x006B4728
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -186,123 +186,129 @@ public class BaseFrozenComponent : EntityComponent
 			return false;
 		}
 		BaseFrozenComponent baseFrozenComponent = (BaseFrozenComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (baseFrozenComponent.ActorComponent == null)
 		{
-			if (baseFrozenComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("HitComponent"))
-		{
-			if (baseFrozenComponent.HitComponent == null)
-			{
-				this.HitComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterHitComponent>(this.HitComponent), "HitComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TimeScaleComponent"))
-		{
-			if (baseFrozenComponent.TimeScaleComponent == null)
-			{
-				this.TimeScaleComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComponent), "TimeScaleComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StunnedTagListenTask"))
-		{
-			if (baseFrozenComponent.StunnedTagListenTask == null)
-			{
-				this.StunnedTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.StunnedTagListenTask), "StunnedTagListenTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FrozenTagListenTask"))
-		{
-			if (baseFrozenComponent.FrozenTagListenTask == null)
-			{
-				this.FrozenTagListenTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.FrozenTagListenTask), "FrozenTagListenTask"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BuffTimeScaleMap") && baseFrozenComponent.BuffTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.BuffTimeScaleMap), "BuffTimeScaleMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ForeverTimeScaleMap") && baseFrozenComponent.ForeverTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.ForeverTimeScaleMap), "ForeverTimeScaleMap"))
+		if (baseFrozenComponent.HitComponent == null)
+		{
+			this.HitComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComponent), "HitComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BaseBuffForeverTimeScale"))
+		if (baseFrozenComponent.TimeScaleComponent == null)
 		{
-			this.BaseBuffForeverTimeScale = baseFrozenComponent.BaseBuffForeverTimeScale;
+			this.TimeScaleComponent = null;
 		}
-		if (base.CanResetComponentProperty("BaseBuffTimeScaleHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComponent), "TimeScaleComponent"))
 		{
-			this.BaseBuffTimeScaleHandle = baseFrozenComponent.BaseBuffTimeScaleHandle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("FrozenLockSet"))
+		if (baseFrozenComponent.StunnedTagListenTask == null)
 		{
-			if (baseFrozenComponent.FrozenLockSet == null)
-			{
-				this.FrozenLockSet = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.FrozenLockSet), "FrozenLockSet"))
-			{
-				return false;
-			}
+			this.StunnedTagListenTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StunnedTagListenTask), "StunnedTagListenTask"))
+		{
+			return false;
+		}
+		if (baseFrozenComponent.FrozenTagListenTask == null)
+		{
+			this.FrozenTagListenTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FrozenTagListenTask), "FrozenTagListenTask"))
+		{
+			return false;
+		}
+		if (baseFrozenComponent.BuffTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffTimeScaleMap), "BuffTimeScaleMap"))
+		{
+			return false;
+		}
+		if (baseFrozenComponent.ForeverTimeScaleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForeverTimeScaleMap), "ForeverTimeScaleMap"))
+		{
+			return false;
+		}
+		this.BaseBuffForeverTimeScale = baseFrozenComponent.BaseBuffForeverTimeScale;
+		this.BaseBuffTimeScaleHandle = baseFrozenComponent.BaseBuffTimeScaleHandle;
+		if (baseFrozenComponent.FrozenLockSet == null)
+		{
+			this.FrozenLockSet = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.FrozenLockSet), "FrozenLockSet"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400BCE5 RID: 48357
+	// Token: 0x17002376 RID: 9078
+	// (get) Token: 0x06016F9C RID: 94108 RVA: 0x006B66A6 File Offset: 0x006B48A6
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002377 RID: 9079
+	// (get) Token: 0x06016F9D RID: 94109 RVA: 0x006B66A9 File Offset: 0x006B48A9
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002378 RID: 9080
+	// (get) Token: 0x06016F9E RID: 94110 RVA: 0x006B66AC File Offset: 0x006B48AC
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C07B RID: 49275
 	[Nullable(2)]
 	protected CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400BCE6 RID: 48358
+	// Token: 0x0400C07C RID: 49276
 	[Nullable(2)]
 	private CharacterHitComponent HitComponent;
 
-	// Token: 0x0400BCE7 RID: 48359
+	// Token: 0x0400C07D RID: 49277
 	[Nullable(2)]
 	private PawnTimeScaleComponent TimeScaleComponent;
 
-	// Token: 0x0400BCE8 RID: 48360
+	// Token: 0x0400C07E RID: 49278
 	[Nullable(2)]
 	private ITagTask StunnedTagListenTask;
 
-	// Token: 0x0400BCE9 RID: 48361
+	// Token: 0x0400C07F RID: 49279
 	[Nullable(2)]
 	private ITagTask FrozenTagListenTask;
 
-	// Token: 0x0400BCEA RID: 48362
+	// Token: 0x0400C080 RID: 49280
 	private readonly Dictionary<int, int> BuffTimeScaleMap = new Dictionary<int, int>();
 
-	// Token: 0x0400BCEB RID: 48363
+	// Token: 0x0400C081 RID: 49281
 	private readonly Dictionary<int, int> ForeverTimeScaleMap = new Dictionary<int, int>();
 
-	// Token: 0x0400BCEC RID: 48364
+	// Token: 0x0400C082 RID: 49282
 	private float BaseBuffForeverTimeScale;
 
-	// Token: 0x0400BCED RID: 48365
+	// Token: 0x0400C083 RID: 49283
 	private int BaseBuffTimeScaleHandle;
 
-	// Token: 0x0400BCEE RID: 48366
+	// Token: 0x0400C084 RID: 49284
 	protected HashSet<string> FrozenLockSet = new HashSet<string>();
 }

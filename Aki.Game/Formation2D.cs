@@ -9,30 +9,30 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BFC RID: 7164
+// Token: 0x020010BB RID: 4283
 [NullableContext(1)]
 [Nullable(0)]
 public class Formation2D : FormationFlavorViewBase
 {
-	// Token: 0x0600D5BD RID: 54717 RVA: 0x00315604 File Offset: 0x00313804
+	// Token: 0x0600A9D0 RID: 43472 RVA: 0x00320900 File Offset: 0x0031EB00
 	public Formation2D(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x1700119F RID: 4511
-	// (get) Token: 0x0600D5BE RID: 54718 RVA: 0x00315681 File Offset: 0x00313881
+	// Token: 0x170011C4 RID: 4548
+	// (get) Token: 0x0600A9D1 RID: 43473 RVA: 0x0032097D File Offset: 0x0031EB7D
 	protected virtual SlotPresenter2D Presenter { [PreserveBaseOverrides] get; } = new SlotPresenter2D();
 
-	// Token: 0x170011A0 RID: 4512
-	// (get) Token: 0x0600D5BF RID: 54719 RVA: 0x00315689 File Offset: 0x00313889
+	// Token: 0x170011C5 RID: 4549
+	// (get) Token: 0x0600A9D2 RID: 43474 RVA: 0x00320985 File Offset: 0x0031EB85
 	protected override FormationActionKeys FormationActionKeys { get; } = new FormationActionKeys
 	{
 		PresetForm = 14,
 		EditFormName = 15
 	};
 
-	// Token: 0x170011A1 RID: 4513
-	// (get) Token: 0x0600D5C0 RID: 54720 RVA: 0x00315691 File Offset: 0x00313891
+	// Token: 0x170011C6 RID: 4550
+	// (get) Token: 0x0600A9D3 RID: 43475 RVA: 0x0032098D File Offset: 0x0031EB8D
 	protected override FormationViewKeys Keys { get; } = new FormationViewKeys
 	{
 		Close = 7,
@@ -44,7 +44,7 @@ public class Formation2D : FormationFlavorViewBase
 		DescToggleItem = new int?(16)
 	};
 
-	// Token: 0x0600D5C1 RID: 54721 RVA: 0x0031569C File Offset: 0x0031389C
+	// Token: 0x0600A9D4 RID: 43476 RVA: 0x00320998 File Offset: 0x0031EB98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -103,7 +103,7 @@ public class Formation2D : FormationFlavorViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D5C2 RID: 54722 RVA: 0x003159CC File Offset: 0x00313BCC
+	// Token: 0x0600A9D5 RID: 43477 RVA: 0x00320CC8 File Offset: 0x0031EEC8
 	protected override UniTask CreateAllSlotsAsync()
 	{
 		Formation2D.<CreateAllSlotsAsync>d__12 <CreateAllSlotsAsync>d__;
@@ -114,21 +114,21 @@ public class Formation2D : FormationFlavorViewBase
 		return <CreateAllSlotsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D5C3 RID: 54723 RVA: 0x00315A0F File Offset: 0x00313C0F
+	// Token: 0x0600A9D6 RID: 43478 RVA: 0x00320D0B File Offset: 0x0031EF0B
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		GameSettingsDeviceRender.Instance.TemporaryDisableFrameGeneration("Formation2D");
 	}
 
-	// Token: 0x0600D5C4 RID: 54724 RVA: 0x00315A26 File Offset: 0x00313C26
+	// Token: 0x0600A9D7 RID: 43479 RVA: 0x00320D22 File Offset: 0x0031EF22
 	protected override void OnAfterHide()
 	{
 		GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("Formation2D");
 		base.OnAfterHide();
 	}
 
-	// Token: 0x0600D5C5 RID: 54725 RVA: 0x00315A3D File Offset: 0x00313C3D
+	// Token: 0x0600A9D8 RID: 43480 RVA: 0x00320D39 File Offset: 0x0031EF39
 	protected override void OnAddEventListener()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -137,7 +137,7 @@ public class Formation2D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5C6 RID: 54726 RVA: 0x00315A67 File Offset: 0x00313C67
+	// Token: 0x0600A9D9 RID: 43481 RVA: 0x00320D63 File Offset: 0x0031EF63
 	protected override void OnRemoveEventListener()
 	{
 		if (EventSystem.Instance.Has(EEventName.OnRefreshPlayerPing, new Action<int, ENetPingState>(this.OnRefreshPlayerPing)))
@@ -146,7 +146,7 @@ public class Formation2D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5C7 RID: 54727 RVA: 0x00315AA2 File Offset: 0x00313CA2
+	// Token: 0x0600A9DA RID: 43482 RVA: 0x00320D9E File Offset: 0x0031EF9E
 	private void ExchangeRoleCallBack(int dropPosition, int fromPosition, int fromRoleId, int dropRoleId)
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -159,7 +159,7 @@ public class Formation2D : FormationFlavorViewBase
 		});
 	}
 
-	// Token: 0x0600D5C8 RID: 54728 RVA: 0x00315AE0 File Offset: 0x00313CE0
+	// Token: 0x0600A9DB RID: 43483 RVA: 0x00320DDC File Offset: 0x0031EFDC
 	private void OnRefreshPlayerPing(int playerId, ENetPingState ping)
 	{
 		foreach (FormationRoleSlot formationRoleSlot in this.Presenter.RoleSlots)
@@ -172,7 +172,7 @@ public class Formation2D : FormationFlavorViewBase
 		}
 	}
 
-	// Token: 0x0600D5C9 RID: 54729 RVA: 0x00315B58 File Offset: 0x00313D58
+	// Token: 0x0600A9DC RID: 43484 RVA: 0x00320E54 File Offset: 0x0031F054
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -203,43 +203,43 @@ public class Formation2D : FormationFlavorViewBase
 		return null;
 	}
 
-	// Token: 0x0200819D RID: 33181
+	// Token: 0x02007329 RID: 29481
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402A4AA RID: 173226
+		// Token: 0x040257D8 RID: 153560
 		TabComponent,
-		// Token: 0x0402A4AB RID: 173227
+		// Token: 0x040257D9 RID: 153561
 		TeamRoleContentItem,
-		// Token: 0x0402A4AC RID: 173228
+		// Token: 0x040257DA RID: 153562
 		TeamRoleSlot1,
-		// Token: 0x0402A4AD RID: 173229
+		// Token: 0x040257DB RID: 153563
 		TeamRoleSlot2,
-		// Token: 0x0402A4AE RID: 173230
+		// Token: 0x040257DC RID: 153564
 		TeamRoleSlot3,
-		// Token: 0x0402A4AF RID: 173231
+		// Token: 0x040257DD RID: 153565
 		ConfirmButton,
-		// Token: 0x0402A4B0 RID: 173232
+		// Token: 0x040257DE RID: 153566
 		ConfirmText,
-		// Token: 0x0402A4B1 RID: 173233
+		// Token: 0x040257DF RID: 153567
 		CloseButton,
-		// Token: 0x0402A4B2 RID: 173234
+		// Token: 0x040257E0 RID: 153568
 		QuickSelectButton,
-		// Token: 0x0402A4B3 RID: 173235
+		// Token: 0x040257E1 RID: 153569
 		LoadingItem,
-		// Token: 0x0402A4B4 RID: 173236
+		// Token: 0x040257E2 RID: 153570
 		DisableClickMask,
-		// Token: 0x0402A4B5 RID: 173237
+		// Token: 0x040257E3 RID: 153571
 		DragItem,
-		// Token: 0x0402A4B6 RID: 173238
+		// Token: 0x040257E4 RID: 153572
 		DragRoleItem,
-		// Token: 0x0402A4B7 RID: 173239
+		// Token: 0x040257E5 RID: 153573
 		TeamNameText,
-		// Token: 0x0402A4B8 RID: 173240
+		// Token: 0x040257E6 RID: 153574
 		BtnPresetForm,
-		// Token: 0x0402A4B9 RID: 173241
+		// Token: 0x040257E7 RID: 153575
 		BtnEditFormName,
-		// Token: 0x0402A4BA RID: 173242
+		// Token: 0x040257E8 RID: 153576
 		DescToggleItem
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F3A RID: 12090
+// Token: 0x0200248D RID: 9357
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationLockUpperBound : BuffEffect
 {
-	// Token: 0x06019BE3 RID: 105443 RVA: 0x006B536F File Offset: 0x006B356F
+	// Token: 0x060174EE RID: 95470 RVA: 0x006DB697 File Offset: 0x006D9897
 	public FormationLockUpperBound(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BE4 RID: 105444 RVA: 0x006B5388 File Offset: 0x006B3588
+	// Token: 0x060174EF RID: 95471 RVA: 0x006DB6B0 File Offset: 0x006D98B0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -28,7 +28,7 @@ public class FormationLockUpperBound : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BE5 RID: 105445 RVA: 0x006B5408 File Offset: 0x006B3608
+	// Token: 0x060174F0 RID: 95472 RVA: 0x006DB730 File Offset: 0x006D9930
 	public override void OnCreated()
 	{
 		if (this.AttributeId != (EFormationAttributeId)(-1))
@@ -40,7 +40,7 @@ public class FormationLockUpperBound : BuffEffect
 				{
 					LockUpperBounds = true,
 					LockLowerBounds = false,
-					UpperPercent = this.Percent * 0.0001f,
+					UpperPercent = this.Percent,
 					UpperOffset = this.Offset,
 					LowerPercent = 0f,
 					LowerOffset = 0f
@@ -49,14 +49,14 @@ public class FormationLockUpperBound : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BE6 RID: 105446 RVA: 0x006B5490 File Offset: 0x006B3690
+	// Token: 0x060174F1 RID: 95473 RVA: 0x006DB7B2 File Offset: 0x006D99B2
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019BE7 RID: 105447 RVA: 0x006B5493 File Offset: 0x006B3693
+	// Token: 0x060174F2 RID: 95474 RVA: 0x006DB7B5 File Offset: 0x006D99B5
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.AttributeId != (EFormationAttributeId)(-1))
@@ -69,12 +69,12 @@ public class FormationLockUpperBound : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C215 RID: 49685
+	// Token: 0x0400C5B7 RID: 50615
 	protected EFormationAttributeId AttributeId = (EFormationAttributeId)(-1);
 
-	// Token: 0x0400C216 RID: 49686
+	// Token: 0x0400C5B8 RID: 50616
 	protected float Offset;
 
-	// Token: 0x0400C217 RID: 49687
+	// Token: 0x0400C5B9 RID: 50617
 	protected float Percent;
 }

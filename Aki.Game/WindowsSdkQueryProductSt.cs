@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E5A RID: 3674
+// Token: 0x0200030F RID: 783
 public class WindowsSdkQueryProductSt
 {
-	// Token: 0x040028CA RID: 10442
+	// Token: 0x04002965 RID: 10597
 	[Nullable(new byte[]
 	{
 		2,
@@ -12,10 +12,10 @@ public class WindowsSdkQueryProductSt
 	})]
 	public WindowsSdkProductContentSt[] data;
 
-	// Token: 0x040028CB RID: 10443
+	// Token: 0x04002966 RID: 10598
 	public int error;
 
-	// Token: 0x040028CC RID: 10444
+	// Token: 0x04002967 RID: 10599
 	[Nullable(1)]
 	public string type = "";
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020017C4 RID: 6084
+// Token: 0x02000C7D RID: 3197
 public enum EComboKeyType
 {
-	// Token: 0x04005090 RID: 20624
+	// Token: 0x0400513A RID: 20794
 	Press,
-	// Token: 0x04005091 RID: 20625
+	// Token: 0x0400513B RID: 20795
 	Release,
-	// Token: 0x04005092 RID: 20626
+	// Token: 0x0400513C RID: 20796
 	Hold
 }

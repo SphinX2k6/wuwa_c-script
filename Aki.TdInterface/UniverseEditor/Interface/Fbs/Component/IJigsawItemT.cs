@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054AD RID: 21677
+	// Token: 0x02005A33 RID: 23091
 	public class IJigsawItemT
 	{
-		// Token: 0x17009FA8 RID: 40872
-		// (get) Token: 0x06023B1E RID: 146206 RVA: 0x004EF635 File Offset: 0x004ED835
-		// (set) Token: 0x06023B1F RID: 146207 RVA: 0x004EF63D File Offset: 0x004ED83D
+		// Token: 0x1700A7E2 RID: 42978
+		// (get) Token: 0x06025BD6 RID: 154582 RVA: 0x0052C6A9 File Offset: 0x0052A8A9
+		// (set) Token: 0x06025BD7 RID: 154583 RVA: 0x0052C6B1 File Offset: 0x0052A8B1
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009FA9 RID: 40873
-		// (get) Token: 0x06023B20 RID: 146208 RVA: 0x004EF646 File Offset: 0x004ED846
-		// (set) Token: 0x06023B21 RID: 146209 RVA: 0x004EF64E File Offset: 0x004ED84E
+		// Token: 0x1700A7E3 RID: 42979
+		// (get) Token: 0x06025BD8 RID: 154584 RVA: 0x0052C6BA File Offset: 0x0052A8BA
+		// (set) Token: 0x06025BD9 RID: 154585 RVA: 0x0052C6C2 File Offset: 0x0052A8C2
 		public TFillConfigUnion FillCfg { get; set; }
 
-		// Token: 0x17009FAA RID: 40874
-		// (get) Token: 0x06023B22 RID: 146210 RVA: 0x004EF657 File Offset: 0x004ED857
-		// (set) Token: 0x06023B23 RID: 146211 RVA: 0x004EF65F File Offset: 0x004ED85F
+		// Token: 0x1700A7E4 RID: 42980
+		// (get) Token: 0x06025BDA RID: 154586 RVA: 0x0052C6CB File Offset: 0x0052A8CB
+		// (set) Token: 0x06025BDB RID: 154587 RVA: 0x0052C6D3 File Offset: 0x0052A8D3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023B24 RID: 146212 RVA: 0x004EF668 File Offset: 0x004ED868
+		// Token: 0x06025BDC RID: 154588 RVA: 0x0052C6DC File Offset: 0x0052A8DC
 		public IJigsawItemT()
 		{
 			this.Disabled = false;

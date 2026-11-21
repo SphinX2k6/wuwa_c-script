@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FirstPersonTurret.View
 {
-	// Token: 0x02005A84 RID: 23172
+	// Token: 0x02004A60 RID: 19040
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FirstPersonTurretRoleHpItem : UiPanelBase
 	{
-		// Token: 0x0603AAFD RID: 240381 RVA: 0x00DF9DA8 File Offset: 0x00DF7FA8
+		// Token: 0x0602FA46 RID: 195142 RVA: 0x00D4A33C File Offset: 0x00D4853C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AAFE RID: 240382 RVA: 0x00DF9F60 File Offset: 0x00DF8160
+		// Token: 0x0602FA47 RID: 195143 RVA: 0x00D4A4F4 File Offset: 0x00D486F4
 		protected override void OnStart()
 		{
 			this.HpBarSprite = base.GetSprite(0);
@@ -82,19 +82,19 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.InitHpBar();
 		}
 
-		// Token: 0x0603AAFF RID: 240383 RVA: 0x00DFA05F File Offset: 0x00DF825F
+		// Token: 0x0602FA48 RID: 195144 RVA: 0x00D4A5F3 File Offset: 0x00D487F3
 		public void Refresh(float hp, float hpMax)
 		{
 			this.RefreshHpAndShield(hp, hpMax);
 		}
 
-		// Token: 0x0603AB00 RID: 240384 RVA: 0x00DFA069 File Offset: 0x00DF8269
+		// Token: 0x0602FA49 RID: 195145 RVA: 0x00D4A5FD File Offset: 0x00D487FD
 		public void Tick(float delta)
 		{
 			this.LerpBarPercent(delta);
 		}
 
-		// Token: 0x0603AB01 RID: 240385 RVA: 0x00DFA072 File Offset: 0x00DF8272
+		// Token: 0x0602FA4A RID: 195146 RVA: 0x00D4A606 File Offset: 0x00D48806
 		private void InitHpBar()
 		{
 			this.LowHpBarSprite.SetUIActive(false);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.ShieldBarSprite.SetUIActive(false);
 		}
 
-		// Token: 0x0603AB02 RID: 240386 RVA: 0x00DFA0A4 File Offset: 0x00DF82A4
+		// Token: 0x0602FA4B RID: 195147 RVA: 0x00D4A638 File Offset: 0x00D48838
 		private void RefreshHpAndShield(float hp, float hpMax)
 		{
 			if (hpMax <= 0f)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.CurrentBarPercent = num;
 		}
 
-		// Token: 0x0603AB03 RID: 240387 RVA: 0x00DFA160 File Offset: 0x00DF8360
+		// Token: 0x0602FA4C RID: 195148 RVA: 0x00D4A6F4 File Offset: 0x00D488F4
 		private void SetHpBarPercent(float percent)
 		{
 			if (percent <= 0.2f)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.HpBarSprite.SetFillAmount(percent);
 		}
 
-		// Token: 0x0603AB04 RID: 240388 RVA: 0x00DFA1C0 File Offset: 0x00DF83C0
+		// Token: 0x0602FA4D RID: 195149 RVA: 0x00D4A754 File Offset: 0x00D48954
 		private void PlayBarAnimation()
 		{
 			float num = this.CurHp / this.CurHpMax;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.HpBufferAnimTime = 0f;
 		}
 
-		// Token: 0x0603AB05 RID: 240389 RVA: 0x00DFA200 File Offset: 0x00DF8400
+		// Token: 0x0602FA4E RID: 195150 RVA: 0x00D4A794 File Offset: 0x00D48994
 		private void StopBarLerpAnimation()
 		{
 			this.TargetBarPercent = 0f;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.HpBufferSprite.SetUIActive(false);
 		}
 
-		// Token: 0x0603AB06 RID: 240390 RVA: 0x00DFA230 File Offset: 0x00DF8430
+		// Token: 0x0602FA4F RID: 195151 RVA: 0x00D4A7C4 File Offset: 0x00D489C4
 		private void LerpBarPercent(float delta)
 		{
 			if (this.HpBufferAnimTime == -1f)
@@ -188,55 +188,55 @@ namespace CSharpScript.Game.Module.FirstPersonTurret.View
 			this.HpBufferAnimTime += delta;
 		}
 
-		// Token: 0x0401EA20 RID: 125472
+		// Token: 0x040194C7 RID: 103623
 		private const float LOW_HP_PERCENT = 0.2f;
 
-		// Token: 0x0401EA21 RID: 125473
+		// Token: 0x040194C8 RID: 103624
 		private UUISprite HpBarSprite;
 
-		// Token: 0x0401EA22 RID: 125474
+		// Token: 0x040194C9 RID: 103625
 		private UUISprite LowHpBarSprite;
 
-		// Token: 0x0401EA23 RID: 125475
+		// Token: 0x040194CA RID: 103626
 		private UUISprite HpBufferSprite;
 
-		// Token: 0x0401EA24 RID: 125476
+		// Token: 0x040194CB RID: 103627
 		private UUISprite ShieldBarSprite;
 
-		// Token: 0x0401EA25 RID: 125477
+		// Token: 0x040194CC RID: 103628
 		private UUIText HpText;
 
-		// Token: 0x0401EA26 RID: 125478
+		// Token: 0x040194CD RID: 103629
 		private UUIText HpText2;
 
-		// Token: 0x0401EA27 RID: 125479
+		// Token: 0x040194CE RID: 103630
 		private ULGUICanvas HpTextMask;
 
-		// Token: 0x0401EA28 RID: 125480
+		// Token: 0x040194CF RID: 103631
 		private float HpTextWidth;
 
-		// Token: 0x0401EA29 RID: 125481
+		// Token: 0x040194D0 RID: 103632
 		private FMargin UeMargin;
 
-		// Token: 0x0401EA2A RID: 125482
+		// Token: 0x040194D1 RID: 103633
 		private float CurrentBarPercent = -1f;
 
-		// Token: 0x0401EA2B RID: 125483
+		// Token: 0x040194D2 RID: 103634
 		private float TargetBarPercent;
 
-		// Token: 0x0401EA2C RID: 125484
+		// Token: 0x040194D3 RID: 103635
 		private float SourceBarPercent;
 
-		// Token: 0x0401EA2D RID: 125485
+		// Token: 0x040194D4 RID: 103636
 		private float HpBufferAnimTime = -1f;
 
-		// Token: 0x0401EA2E RID: 125486
+		// Token: 0x040194D5 RID: 103637
 		private float HpBufferAnimDuration;
 
-		// Token: 0x0401EA2F RID: 125487
+		// Token: 0x040194D6 RID: 103638
 		private float CurHp;
 
-		// Token: 0x0401EA30 RID: 125488
+		// Token: 0x040194D7 RID: 103639
 		private float CurHpMax = 1f;
 	}
 }

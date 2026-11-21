@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A2 RID: 1186
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004FB RID: 1275
 	public class IJigsawCompleteCondition
 	{
-		// Token: 0x060017E4 RID: 6116 RVA: 0x00047DC4 File Offset: 0x00045FC4
+		// Token: 0x0600197E RID: 6526 RVA: 0x0004BB0C File Offset: 0x00049D0C
 		private IJigsawCompleteCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060017E5 RID: 6117 RVA: 0x00047DFC File Offset: 0x00045FFC
+		// Token: 0x0600197F RID: 6527 RVA: 0x0004BB44 File Offset: 0x00049D44
 		public static IJigsawCompleteCondition Create([Nullable(2)] IJigsawCompleteCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017E6 RID: 6118 RVA: 0x00047E0F File Offset: 0x0004600F
+		// Token: 0x06001980 RID: 6528 RVA: 0x0004BB57 File Offset: 0x00049D57
 		public static IJigsawCompleteCondition CreateFromSetValue([Nullable(2)] IJigsawCompleteCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017E7 RID: 6119 RVA: 0x00047E22 File Offset: 0x00046022
+		// Token: 0x06001981 RID: 6529 RVA: 0x0004BB6A File Offset: 0x00049D6A
 		public IJigsawCompleteCondition_SetValue ToSetValue()
 		{
 			return new IJigsawCompleteCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700065E RID: 1630
-		// (get) Token: 0x060017E8 RID: 6120 RVA: 0x00047E35 File Offset: 0x00046035
-		// (set) Token: 0x060017E9 RID: 6121 RVA: 0x00047E60 File Offset: 0x00046060
+		// Token: 0x170006C5 RID: 1733
+		// (get) Token: 0x06001982 RID: 6530 RVA: 0x0004BB7D File Offset: 0x00049D7D
+		// (set) Token: 0x06001983 RID: 6531 RVA: 0x0004BBA8 File Offset: 0x00049DA8
 		public virtual EJigsawCompleteCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011CA RID: 4554
+		// Token: 0x040012EC RID: 4844
 		[Nullable(2)]
 		protected IJigsawCompleteCondition FbInstance;
 
-		// Token: 0x040011CB RID: 4555
+		// Token: 0x040012ED RID: 4845
 		[Nullable(2)]
 		protected IJigsawCompleteCondition_SetValue PocoInterface;
 	}

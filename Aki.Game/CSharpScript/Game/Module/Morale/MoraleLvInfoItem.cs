@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B2 RID: 21426
+	// Token: 0x02004395 RID: 17301
 	public class MoraleLvInfoItem : UiPanelBase
 	{
-		// Token: 0x06036C0F RID: 224271 RVA: 0x00CF5878 File Offset: 0x00CF3A78
+		// Token: 0x0602BB55 RID: 179029 RVA: 0x00C44920 File Offset: 0x00C42B20
 		[NullableContext(1)]
 		public UniTask Init(UUIItem item)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C10 RID: 224272 RVA: 0x00CF58C4 File Offset: 0x00CF3AC4
+		// Token: 0x0602BB56 RID: 179030 RVA: 0x00C4496C File Offset: 0x00C42B6C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C11 RID: 224273 RVA: 0x00CF5970 File Offset: 0x00CF3B70
+		// Token: 0x0602BB57 RID: 179031 RVA: 0x00C44A18 File Offset: 0x00C42C18
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleLvInfoItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C12 RID: 224274 RVA: 0x00CF59B3 File Offset: 0x00CF3BB3
+		// Token: 0x0602BB58 RID: 179032 RVA: 0x00C44A5B File Offset: 0x00C42C5B
 		private void OnBtnHelp()
 		{
 			HelpController.Instance.OpenHelpById(328);
 		}
 
-		// Token: 0x06036C13 RID: 224275 RVA: 0x00CF59C4 File Offset: 0x00CF3BC4
+		// Token: 0x0602BB59 RID: 179033 RVA: 0x00C44A6C File Offset: 0x00C42C6C
 		public void UpdateData()
 		{
 			MoraleBattleModel instance = MoraleBattleModel.Instance;
@@ -91,22 +91,22 @@ namespace CSharpScript.Game.Module.Morale
 			text2.ShowTextNew("Morale_title_2");
 		}
 
-		// Token: 0x0200B64E RID: 46670
+		// Token: 0x0200A086 RID: 41094
 		private class EChildType
 		{
-			// Token: 0x040373AD RID: 226221
+			// Token: 0x04031E02 RID: 204290
 			public const int ArtTextMoraleLv = 0;
 
-			// Token: 0x040373AE RID: 226222
+			// Token: 0x04031E03 RID: 204291
 			public const int TxtMoraleLvExpProgress = 1;
 
-			// Token: 0x040373AF RID: 226223
+			// Token: 0x04031E04 RID: 204292
 			public const int SpriteMoraleLvExpProgress = 2;
 
-			// Token: 0x040373B0 RID: 226224
+			// Token: 0x04031E05 RID: 204293
 			public const int BtnHelp = 3;
 
-			// Token: 0x040373B1 RID: 226225
+			// Token: 0x04031E06 RID: 204294
 			public const int TxtTitle = 4;
 		}
 	}

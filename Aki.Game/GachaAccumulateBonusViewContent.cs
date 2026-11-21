@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C5B RID: 7259
+// Token: 0x0200111A RID: 4378
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 {
-	// Token: 0x0600DAEB RID: 56043 RVA: 0x0032D9A4 File Offset: 0x0032BBA4
+	// Token: 0x0600AF01 RID: 44801 RVA: 0x00338DEC File Offset: 0x00336FEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -38,14 +38,14 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DAEC RID: 56044 RVA: 0x0032DA8C File Offset: 0x0032BC8C
+	// Token: 0x0600AF02 RID: 44802 RVA: 0x00338ED4 File Offset: 0x003370D4
 	protected override void OnStart()
 	{
 		this.UiSequencePlayerInstance = new UiSequencePlayer(this.RootItem);
 		this.Layout = new GenericLayout<GachaAccumulateRewardItem, GachaAccumulateRewardItemData>(base.GetHorizontalLayout(2), new Func<GachaAccumulateRewardItem>(this.OnCreateRewardItem), null, false, true);
 	}
 
-	// Token: 0x0600DAED RID: 56045 RVA: 0x0032DAC0 File Offset: 0x0032BCC0
+	// Token: 0x0600AF03 RID: 44803 RVA: 0x00338F08 File Offset: 0x00337108
 	public override UniTask PlayStartSequence()
 	{
 		GachaAccumulateBonusViewContent.<PlayStartSequence>d__5 <PlayStartSequence>d__;
@@ -56,7 +56,7 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		return <PlayStartSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAEE RID: 56046 RVA: 0x0032DB04 File Offset: 0x0032BD04
+	// Token: 0x0600AF04 RID: 44804 RVA: 0x00338F4C File Offset: 0x0033714C
 	public override UniTask PlayCloseSequence()
 	{
 		GachaAccumulateBonusViewContent.<PlayCloseSequence>d__6 <PlayCloseSequence>d__;
@@ -67,25 +67,25 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAEF RID: 56047 RVA: 0x0032DB47 File Offset: 0x0032BD47
+	// Token: 0x0600AF05 RID: 44805 RVA: 0x00338F8F File Offset: 0x0033718F
 	private GachaAccumulateRewardItem OnCreateRewardItem()
 	{
 		return new GachaAccumulateRewardItem();
 	}
 
-	// Token: 0x0600DAF0 RID: 56048 RVA: 0x0032DB4E File Offset: 0x0032BD4E
+	// Token: 0x0600AF06 RID: 44806 RVA: 0x00338F96 File Offset: 0x00337196
 	private void OnBackButtonClick()
 	{
 		this.OnClickBackButtonCallBack();
 	}
 
-	// Token: 0x0600DAF1 RID: 56049 RVA: 0x0032DB5B File Offset: 0x0032BD5B
+	// Token: 0x0600AF07 RID: 44807 RVA: 0x00338FA3 File Offset: 0x003371A3
 	public override void SetOnClickBackButtonCallBack(Action callback)
 	{
 		this.OnClickBackButtonCallBack = callback;
 	}
 
-	// Token: 0x0600DAF2 RID: 56050 RVA: 0x0032DB64 File Offset: 0x0032BD64
+	// Token: 0x0600AF08 RID: 44808 RVA: 0x00338FAC File Offset: 0x003371AC
 	public override void RefreshView(int gachaAccumulateId)
 	{
 		GachaAccumulateModel.Instance.GetAccumulateData(gachaAccumulateId);
@@ -93,7 +93,7 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		this.RefreshLayoutAsync(gachaAccumulateId).Forget();
 	}
 
-	// Token: 0x0600DAF3 RID: 56051 RVA: 0x0032DB88 File Offset: 0x0032BD88
+	// Token: 0x0600AF09 RID: 44809 RVA: 0x00338FD0 File Offset: 0x003371D0
 	private UniTask RefreshLayoutAsync(int gachaAccumulateId)
 	{
 		GachaAccumulateBonusViewContent.<RefreshLayoutAsync>d__11 <RefreshLayoutAsync>d__;
@@ -105,7 +105,7 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		return <RefreshLayoutAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DAF4 RID: 56052 RVA: 0x0032DBD4 File Offset: 0x0032BDD4
+	// Token: 0x0600AF0A RID: 44810 RVA: 0x0033901C File Offset: 0x0033721C
 	public void RefreshSlider()
 	{
 		int displayGridNum = this.Layout.GetDisplayGridNum();
@@ -121,7 +121,7 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		}
 	}
 
-	// Token: 0x0600DAF5 RID: 56053 RVA: 0x0032DC38 File Offset: 0x0032BE38
+	// Token: 0x0600AF0B RID: 44811 RVA: 0x00339080 File Offset: 0x00337280
 	private void RefreshNumText(int gachaAccumulateId)
 	{
 		List<GachaAccumulateRewardData> rewardInfos = GachaAccumulateModel.Instance.GetAccumulateData(gachaAccumulateId).GroupData.RewardInfos;
@@ -140,11 +140,11 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 		}));
 	}
 
-	// Token: 0x04006428 RID: 25640
+	// Token: 0x040064FA RID: 25850
 	[Nullable(2)]
 	private UiSequencePlayer UiSequencePlayerInstance;
 
-	// Token: 0x04006429 RID: 25641
+	// Token: 0x040064FB RID: 25851
 	[Nullable(new byte[]
 	{
 		2,
@@ -153,7 +153,7 @@ public class GachaAccumulateBonusViewContent : GachaAccumulateBonusContentBase
 	})]
 	private GenericLayout<GachaAccumulateRewardItem, GachaAccumulateRewardItemData> Layout;
 
-	// Token: 0x0400642A RID: 25642
+	// Token: 0x040064FC RID: 25852
 	private Action OnClickBackButtonCallBack = delegate()
 	{
 	};

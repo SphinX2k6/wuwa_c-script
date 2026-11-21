@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002869 RID: 10345
+	// Token: 0x02002B3F RID: 11071
 	public class IDragActor : IUiGame
 	{
-		// Token: 0x0600E542 RID: 58690 RVA: 0x0021B756 File Offset: 0x00219956
-		[NullableContext(1)]
+		// Token: 0x0600F372 RID: 62322 RVA: 0x00238670 File Offset: 0x00236870
 		public static IDragActor Create(IDragActor? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004632 RID: 17970
-		// (get) Token: 0x0600E543 RID: 58691 RVA: 0x0021B775 File Offset: 0x00219975
+		// Token: 0x170049A2 RID: 18850
+		// (get) Token: 0x0600F373 RID: 62323 RVA: 0x0023868F File Offset: 0x0023688F
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004633 RID: 17971
-		// (get) Token: 0x0600E544 RID: 58692 RVA: 0x0021B782 File Offset: 0x00219982
+		// Token: 0x170049A3 RID: 18851
+		// (get) Token: 0x0600F374 RID: 62324 RVA: 0x0023869C File Offset: 0x0023689C
 		public virtual int TargetEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ECB RID: 32459
+		// Token: 0x0400858B RID: 34187
 		private IDragActor Instance;
 	}
 }

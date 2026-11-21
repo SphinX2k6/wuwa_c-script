@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028AC RID: 10412
+	// Token: 0x02002B81 RID: 11137
 	public class ICameraDepthOfField
 	{
-		// Token: 0x0600E6AD RID: 59053 RVA: 0x0021E266 File Offset: 0x0021C466
-		[NullableContext(1)]
+		// Token: 0x0600F4DC RID: 62684 RVA: 0x0023B1E6 File Offset: 0x002393E6
 		public static ICameraDepthOfField Create(ICameraDepthOfField? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004717 RID: 18199
-		// (get) Token: 0x0600E6AE RID: 59054 RVA: 0x0021E288 File Offset: 0x0021C488
+		// Token: 0x17004A88 RID: 19080
+		// (get) Token: 0x0600F4DD RID: 62685 RVA: 0x0023B208 File Offset: 0x00239408
 		public virtual float? Fstop
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004718 RID: 18200
-		// (get) Token: 0x0600E6AF RID: 59055 RVA: 0x0021E2C0 File Offset: 0x0021C4C0
+		// Token: 0x17004A89 RID: 19081
+		// (get) Token: 0x0600F4DE RID: 62686 RVA: 0x0023B240 File Offset: 0x00239440
 		public virtual float? Distance
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004719 RID: 18201
-		// (get) Token: 0x0600E6B0 RID: 59056 RVA: 0x0021E2F8 File Offset: 0x0021C4F8
+		// Token: 0x17004A8A RID: 19082
+		// (get) Token: 0x0600F4DF RID: 62687 RVA: 0x0023B278 File Offset: 0x00239478
 		public virtual float? BlurAmount
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700471A RID: 18202
-		// (get) Token: 0x0600E6B1 RID: 59057 RVA: 0x0021E330 File Offset: 0x0021C530
+		// Token: 0x17004A8B RID: 19083
+		// (get) Token: 0x0600F4E0 RID: 62688 RVA: 0x0023B2B0 File Offset: 0x002394B0
 		public virtual float? BlurRadius
 		{
 			get
@@ -77,7 +75,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F82 RID: 32642
+		// Token: 0x04008641 RID: 34369
 		private ICameraDepthOfField Instance;
 	}
 }

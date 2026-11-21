@@ -7,10 +7,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020012A4 RID: 4772
+// Token: 0x02000758 RID: 1880
 public class LongShanStageItem : UiPanelBase
 {
-	// Token: 0x060082E5 RID: 33509 RVA: 0x001BD018 File Offset: 0x001BB218
+	// Token: 0x0600567C RID: 22140 RVA: 0x001C5DA8 File Offset: 0x001C3FA8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -45,7 +45,7 @@ public class LongShanStageItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060082E6 RID: 33510 RVA: 0x001BD1A6 File Offset: 0x001BB3A6
+	// Token: 0x0600567D RID: 22141 RVA: 0x001C5F36 File Offset: 0x001C4136
 	[NullableContext(1)]
 	public LongShanStageItem(ActivityLongShanData activityData, int id)
 	{
@@ -53,13 +53,13 @@ public class LongShanStageItem : UiPanelBase
 		this.StageId = id;
 	}
 
-	// Token: 0x060082E7 RID: 33511 RVA: 0x001BD1BC File Offset: 0x001BB3BC
+	// Token: 0x0600567E RID: 22142 RVA: 0x001C5F4C File Offset: 0x001C414C
 	protected override void OnStart()
 	{
 		this.RefreshState();
 	}
 
-	// Token: 0x060082E8 RID: 33512 RVA: 0x001BD1C4 File Offset: 0x001BB3C4
+	// Token: 0x0600567F RID: 22143 RVA: 0x001C5F54 File Offset: 0x001C4154
 	public void RefreshState()
 	{
 		LongShanStage value = ConfigLongShanStageById.GetConfig(this.StageId, true).Value;
@@ -79,7 +79,7 @@ public class LongShanStageItem : UiPanelBase
 		base.GetItem(7).SetUIActive(this.ActivityData.CheckStageRed(this.StageId));
 	}
 
-	// Token: 0x060082E9 RID: 33513 RVA: 0x001BD2BF File Offset: 0x001BB4BF
+	// Token: 0x06005680 RID: 22144 RVA: 0x001C604F File Offset: 0x001C424F
 	private void OnClickStageDetailInternal()
 	{
 		Action<int> onClickStageDetail = this.OnClickStageDetail;
@@ -90,7 +90,7 @@ public class LongShanStageItem : UiPanelBase
 		onClickStageDetail(this.StageId);
 	}
 
-	// Token: 0x060082EA RID: 33514 RVA: 0x001BD2D7 File Offset: 0x001BB4D7
+	// Token: 0x06005681 RID: 22145 RVA: 0x001C6067 File Offset: 0x001C4267
 	public void SetButtonInteractive(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -101,52 +101,52 @@ public class LongShanStageItem : UiPanelBase
 		button.SetSelfInteractive(value);
 	}
 
-	// Token: 0x060082EB RID: 33515 RVA: 0x001BD2EB File Offset: 0x001BB4EB
+	// Token: 0x06005682 RID: 22146 RVA: 0x001C607B File Offset: 0x001C427B
 	[NullableContext(1)]
 	public UUIItem GetLongShanButton()
 	{
 		return base.GetButton(0).RootUIComp;
 	}
 
-	// Token: 0x04003B06 RID: 15110
+	// Token: 0x04003B9E RID: 15262
 	private int StageId;
 
-	// Token: 0x04003B07 RID: 15111
+	// Token: 0x04003B9F RID: 15263
 	[Nullable(2)]
 	private ActivityLongShanData ActivityData;
 
-	// Token: 0x04003B08 RID: 15112
+	// Token: 0x04003BA0 RID: 15264
 	[Nullable(2)]
 	public Action<int> OnClickStageDetail;
 
-	// Token: 0x020078BE RID: 30910
+	// Token: 0x02006A48 RID: 27208
 	private class EComponents
 	{
-		// Token: 0x04027C71 RID: 162929
+		// Token: 0x04022F9F RID: 143263
 		public const int BtnInfo = 0;
 
-		// Token: 0x04027C72 RID: 162930
+		// Token: 0x04022FA0 RID: 143264
 		public const int ItemState = 1;
 
-		// Token: 0x04027C73 RID: 162931
+		// Token: 0x04022FA1 RID: 143265
 		public const int TxtName = 2;
 
-		// Token: 0x04027C74 RID: 162932
+		// Token: 0x04022FA2 RID: 143266
 		public const int TxtProgress = 3;
 
-		// Token: 0x04027C75 RID: 162933
+		// Token: 0x04022FA3 RID: 143267
 		public const int LabelFinish = 4;
 
-		// Token: 0x04027C76 RID: 162934
+		// Token: 0x04022FA4 RID: 143268
 		public const int LockItem = 5;
 
-		// Token: 0x04027C77 RID: 162935
+		// Token: 0x04022FA5 RID: 143269
 		public const int TxtLockTip = 6;
 
-		// Token: 0x04027C78 RID: 162936
+		// Token: 0x04022FA6 RID: 143270
 		public const int RedDot = 7;
 
-		// Token: 0x04027C79 RID: 162937
+		// Token: 0x04022FA7 RID: 143271
 		public const int MaskItem = 8;
 	}
 }

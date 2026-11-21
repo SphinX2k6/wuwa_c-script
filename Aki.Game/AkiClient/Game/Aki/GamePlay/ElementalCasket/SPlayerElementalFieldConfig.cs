@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 {
-	// Token: 0x02003E69 RID: 15977
+	// Token: 0x02003158 RID: 12632
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/GamePlay/ElementalCasket/SPlayerElementalFieldConfig.SPlayerElementalFieldConfig")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class SPlayerElementalFieldConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028319 RID: 164633 RVA: 0x009A64D4 File Offset: 0x009A46D4
+		// Token: 0x0601F15E RID: 127326 RVA: 0x0092603A File Offset: 0x0092423A
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SPlayerElementalFieldConfig._ScriptStructPtr != 0) ? SPlayerElementalFieldConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/GamePlay/ElementalCasket/SPlayerElementalFieldConfig.SPlayerElementalFieldConfig", ref SPlayerElementalFieldConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x17005C3F RID: 23615
-		// (get) Token: 0x0602831A RID: 164634 RVA: 0x009A64F8 File Offset: 0x009A46F8
-		// (set) Token: 0x0602831B RID: 164635 RVA: 0x009A653B File Offset: 0x009A473B
+		// Token: 0x17003746 RID: 14150
+		// (get) Token: 0x0601F15F RID: 127327 RVA: 0x00926060 File Offset: 0x00924260
+		// (set) Token: 0x0601F160 RID: 127328 RVA: 0x009260A3 File Offset: 0x009242A3
 		public TArray<long> UnopenedGameplayCueList
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 				TArray<long> result;
 				if ((result = this._UnopenedGameplayCueList) == null)
 				{
-					result = (this._UnopenedGameplayCueList = new TArray<long>(base.NativePtr + (IntPtr)SPlayerElementalFieldConfig.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._UnopenedGameplayCueList = new TArray<long>(base.NativePtr + (IntPtr)SPlayerElementalFieldConfig.__PropertyOffset_UnopenedGameplayCueList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,9 +40,9 @@ namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x17005C40 RID: 23616
-		// (get) Token: 0x0602831C RID: 164636 RVA: 0x009A654C File Offset: 0x009A474C
-		// (set) Token: 0x0602831D RID: 164637 RVA: 0x009A658F File Offset: 0x009A478F
+		// Token: 0x17003747 RID: 14151
+		// (get) Token: 0x0601F161 RID: 127329 RVA: 0x009260B4 File Offset: 0x009242B4
+		// (set) Token: 0x0601F162 RID: 127330 RVA: 0x009260F7 File Offset: 0x009242F7
 		public TArray<long> OpenedFieldGameplayCueList
 		{
 			get
@@ -51,7 +51,7 @@ namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 				TArray<long> result;
 				if ((result = this._OpenedFieldGameplayCueList) == null)
 				{
-					result = (this._OpenedFieldGameplayCueList = new TArray<long>(base.NativePtr + (IntPtr)SPlayerElementalFieldConfig.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._OpenedFieldGameplayCueList = new TArray<long>(base.NativePtr + (IntPtr)SPlayerElementalFieldConfig.__PropertyOffset_OpenedFieldGameplayCueList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -61,64 +61,57 @@ namespace AkiClient.Game.Aki.GamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x0602831E RID: 164638 RVA: 0x009A659D File Offset: 0x009A479D
+		// Token: 0x0601F163 RID: 127331 RVA: 0x00926105 File Offset: 0x00924305
 		public SPlayerElementalFieldConfig()
 		{
 		}
 
-		// Token: 0x0602831F RID: 164639 RVA: 0x009A65A5 File Offset: 0x009A47A5
-		public SPlayerElementalFieldConfig(TArray<long> UnopenedGameplayCueList, TArray<long> OpenedFieldGameplayCueList)
-		{
-			this.UnopenedGameplayCueList = UnopenedGameplayCueList;
-			this.OpenedFieldGameplayCueList = OpenedFieldGameplayCueList;
-		}
-
-		// Token: 0x06028320 RID: 164640 RVA: 0x009A65BB File Offset: 0x009A47BB
+		// Token: 0x0601F164 RID: 127332 RVA: 0x0092610D File Offset: 0x0092430D
 		protected override IntPtr GetUStructPtr()
 		{
 			return SPlayerElementalFieldConfig.StaticStruct();
 		}
 
-		// Token: 0x06028321 RID: 164641 RVA: 0x009A65C7 File Offset: 0x009A47C7
+		// Token: 0x0601F165 RID: 127333 RVA: 0x00926119 File Offset: 0x00924319
 		[NullableContext(2)]
 		public SPlayerElementalFieldConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028322 RID: 164642 RVA: 0x009A65D1 File Offset: 0x009A47D1
+		// Token: 0x0601F166 RID: 127334 RVA: 0x00926123 File Offset: 0x00924323
 		public SPlayerElementalFieldConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028323 RID: 164643 RVA: 0x009A65DC File Offset: 0x009A47DC
+		// Token: 0x0601F167 RID: 127335 RVA: 0x0092612E File Offset: 0x0092432E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SPlayerElementalFieldConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06028324 RID: 164644 RVA: 0x009A65E6 File Offset: 0x009A47E6
+		// Token: 0x0601F168 RID: 127336 RVA: 0x00926138 File Offset: 0x00924338
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SPlayerElementalFieldConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014762 RID: 83810
+		// Token: 0x040109C3 RID: 68035
 		public const string __ObjectPath = "/Game/Aki/GamePlay/ElementalCasket/SPlayerElementalFieldConfig.SPlayerElementalFieldConfig";
 
-		// Token: 0x04014763 RID: 83811
+		// Token: 0x040109C4 RID: 68036
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014764 RID: 83812
-		internal static int __PropertyOffset_0;
+		// Token: 0x040109C5 RID: 68037
+		internal static int __PropertyOffset_UnopenedGameplayCueList;
 
-		// Token: 0x04014765 RID: 83813
+		// Token: 0x040109C6 RID: 68038
 		[Nullable(2)]
 		private TArray<long> _UnopenedGameplayCueList;
 
-		// Token: 0x04014766 RID: 83814
-		internal static int __PropertyOffset_1;
+		// Token: 0x040109C7 RID: 68039
+		internal static int __PropertyOffset_OpenedFieldGameplayCueList;
 
-		// Token: 0x04014767 RID: 83815
+		// Token: 0x040109C8 RID: 68040
 		[Nullable(2)]
 		private TArray<long> _OpenedFieldGameplayCueList;
 	}

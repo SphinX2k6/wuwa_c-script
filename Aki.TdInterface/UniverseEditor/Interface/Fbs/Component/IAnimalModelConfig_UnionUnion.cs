@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EB1 RID: 20145
+	// Token: 0x020053DA RID: 21466
 	public class IAnimalModelConfig_UnionUnion
 	{
-		// Token: 0x17009086 RID: 36998
-		// (get) Token: 0x0601FB8A RID: 129930 RVA: 0x0046A9B9 File Offset: 0x00468BB9
-		// (set) Token: 0x0601FB8B RID: 129931 RVA: 0x0046A9C1 File Offset: 0x00468BC1
+		// Token: 0x170097E7 RID: 38887
+		// (get) Token: 0x0602188B RID: 137355 RVA: 0x0049FE35 File Offset: 0x0049E035
+		// (set) Token: 0x0602188C RID: 137356 RVA: 0x0049FE3D File Offset: 0x0049E03D
 		public IAnimalModelConfig_Union Type { get; set; }
 
-		// Token: 0x17009087 RID: 36999
-		// (get) Token: 0x0601FB8C RID: 129932 RVA: 0x0046A9CA File Offset: 0x00468BCA
-		// (set) Token: 0x0601FB8D RID: 129933 RVA: 0x0046A9D2 File Offset: 0x00468BD2
+		// Token: 0x170097E8 RID: 38888
+		// (get) Token: 0x0602188D RID: 137357 RVA: 0x0049FE46 File Offset: 0x0049E046
+		// (set) Token: 0x0602188E RID: 137358 RVA: 0x0049FE4E File Offset: 0x0049E04E
 		public object Value { get; set; }
 
-		// Token: 0x0601FB8E RID: 129934 RVA: 0x0046A9DB File Offset: 0x00468BDB
+		// Token: 0x0602188F RID: 137359 RVA: 0x0049FE57 File Offset: 0x0049E057
 		public IAnimalModelConfig_UnionUnion()
 		{
 			this.Type = IAnimalModelConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601FB8F RID: 129935 RVA: 0x0046A9F1 File Offset: 0x00468BF1
+		// Token: 0x06021890 RID: 137360 RVA: 0x0049FE6D File Offset: 0x0049E06D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601FB90 RID: 129936 RVA: 0x0046AA03 File Offset: 0x00468C03
+		// Token: 0x06021891 RID: 137361 RVA: 0x0049FE7F File Offset: 0x0049E07F
 		public IAnimalModelConfigT AsIAnimalModelConfig()
 		{
 			return this.As<IAnimalModelConfigT>();
 		}
 
-		// Token: 0x0601FB91 RID: 129937 RVA: 0x0046AA0B File Offset: 0x00468C0B
+		// Token: 0x06021892 RID: 137362 RVA: 0x0049FE87 File Offset: 0x0049E087
 		public static IAnimalModelConfig_UnionUnion FromIAnimalModelConfig(IAnimalModelConfigT _ianimalmodelconfig)
 		{
 			return new IAnimalModelConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0601FB92 RID: 129938 RVA: 0x0046AA20 File Offset: 0x00468C20
+		// Token: 0x06021893 RID: 137363 RVA: 0x0049FE9C File Offset: 0x0049E09C
 		public IMeshAnimalModelT AsIMeshAnimalModel()
 		{
 			return this.As<IMeshAnimalModelT>();
 		}
 
-		// Token: 0x0601FB93 RID: 129939 RVA: 0x0046AA28 File Offset: 0x00468C28
+		// Token: 0x06021894 RID: 137364 RVA: 0x0049FEA4 File Offset: 0x0049E0A4
 		public static IAnimalModelConfig_UnionUnion FromIMeshAnimalModel(IMeshAnimalModelT _imeshanimalmodel)
 		{
 			return new IAnimalModelConfig_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0601FB94 RID: 129940 RVA: 0x0046AA40 File Offset: 0x00468C40
+		// Token: 0x06021895 RID: 137365 RVA: 0x0049FEBC File Offset: 0x0049E0BC
 		public static int Pack(FlatBufferBuilder builder, IAnimalModelConfig_UnionUnion _o)
 		{
 			IAnimalModelConfig_Union type = _o.Type;

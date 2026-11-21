@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000195 RID: 405
+	// Token: 0x020001A7 RID: 423
 	public class ConfigConnectBlockWhiteAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000981 RID: 2433 RVA: 0x0008F464 File Offset: 0x0008D664
+		// Token: 0x060009ED RID: 2541 RVA: 0x0009539C File Offset: 0x0009359C
 		static ConfigConnectBlockWhiteAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigConnectBlockWhiteAll.CreateStaticDefaultValue), new Action(ConfigConnectBlockWhiteAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000982 RID: 2434 RVA: 0x0008F484 File Offset: 0x0008D684
+		// Token: 0x060009EE RID: 2542 RVA: 0x000953BC File Offset: 0x000935BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigConnectBlockWhiteAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000983 RID: 2435 RVA: 0x0008F503 File Offset: 0x0008D703
+		// Token: 0x060009EF RID: 2543 RVA: 0x0009543B File Offset: 0x0009363B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigConnectBlockWhiteAll.LogPair = null;
 			ConfigConnectBlockWhiteAll.HandleId = 0;
 		}
 
-		// Token: 0x06000984 RID: 2436 RVA: 0x0008F511 File Offset: 0x0008D711
+		// Token: 0x060009F0 RID: 2544 RVA: 0x00095449 File Offset: 0x00093649
 		public static void Init()
 		{
 			ConfigConnectBlockWhiteAll.HandleId = ConfigCommon.InitDataStatement(ConfigConnectBlockWhiteAll.HandleId, "db_download.db", "select BinData from `ConnectBlockWhite`");
 		}
 
-		// Token: 0x06000985 RID: 2437 RVA: 0x0008F52C File Offset: 0x0008D72C
+		// Token: 0x060009F1 RID: 2545 RVA: 0x00095464 File Offset: 0x00093664
 		[NullableContext(2)]
 		public static IReadOnlyList<ConnectBlockWhite> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000AF7 RID: 2807
+		// Token: 0x04000B75 RID: 2933
 		private const string DB = "db_download.db";
 
-		// Token: 0x04000AF8 RID: 2808
+		// Token: 0x04000B76 RID: 2934
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x04000AF9 RID: 2809
+		// Token: 0x04000B77 RID: 2935
 		private const string TABLE = "ConnectBlockWhite";
 
-		// Token: 0x04000AFA RID: 2810
+		// Token: 0x04000B78 RID: 2936
 		private const string COMMAND = "select BinData from `ConnectBlockWhite`";
 
-		// Token: 0x04000AFB RID: 2811
+		// Token: 0x04000B79 RID: 2937
 		private const string KEY_PREFIX = "ConnectBlockWhiteAll";
 
-		// Token: 0x04000AFC RID: 2812
+		// Token: 0x04000B7A RID: 2938
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000AFD RID: 2813
+		// Token: 0x04000B7B RID: 2939
 		private static int HandleId;
 	}
 }

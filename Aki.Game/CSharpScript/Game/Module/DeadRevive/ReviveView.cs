@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACC RID: 23244
+	// Token: 0x02004AAD RID: 19117
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ReviveView : UiTickViewBase
 	{
-		// Token: 0x0603ADDB RID: 241115 RVA: 0x00E085A0 File Offset: 0x00E067A0
+		// Token: 0x0602FD4D RID: 195917 RVA: 0x00D59280 File Offset: 0x00D57480
 		[NullableContext(1)]
 		public ReviveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ADDC RID: 241116 RVA: 0x00E085B0 File Offset: 0x00E067B0
+		// Token: 0x0602FD4E RID: 195918 RVA: 0x00D59290 File Offset: 0x00D57490
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADDD RID: 241117 RVA: 0x00E0880C File Offset: 0x00E06A0C
+		// Token: 0x0602FD4F RID: 195919 RVA: 0x00D594EC File Offset: 0x00D576EC
 		protected override void OnStart()
 		{
 			this.CountDown = base.GetText(4);
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.TrainingView.Show(base.GetHorizontalLayout(7), this.GetTrainingDataList());
 		}
 
-		// Token: 0x0603ADDE RID: 241118 RVA: 0x00E08AB6 File Offset: 0x00E06CB6
+		// Token: 0x0602FD50 RID: 195920 RVA: 0x00D59796 File Offset: 0x00D57996
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return null;
 		}
 
-		// Token: 0x0603ADDF RID: 241119 RVA: 0x00E08ACC File Offset: 0x00E06CCC
+		// Token: 0x0602FD51 RID: 195921 RVA: 0x00D597AC File Offset: 0x00D579AC
 		[NullableContext(1)]
 		private string GetReviveContent()
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			return ((instance.ReviveConfig != null) ? instance.ReviveConfig.GetValueOrDefault().ReviveContent : null) ?? "";
 		}
 
-		// Token: 0x0603ADE0 RID: 241120 RVA: 0x00E08B14 File Offset: 0x00E06D14
+		// Token: 0x0602FD52 RID: 195922 RVA: 0x00D597F4 File Offset: 0x00D579F4
 		private void InitItemInfo()
 		{
 			int num = -1;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			text.SetText(itemCountByConfigId.ToString(), true);
 		}
 
-		// Token: 0x0603ADE1 RID: 241121 RVA: 0x00E08CBC File Offset: 0x00E06EBC
+		// Token: 0x0602FD53 RID: 195923 RVA: 0x00D5999C File Offset: 0x00D57B9C
 		private void OnClickRevive()
 		{
 			if (this.ReviveNumber == 0)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			Log.Instance.Info(ELogModule.Battle, ELogAuthor.YZ, "Time Or Times Limit!!!", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603ADE2 RID: 241122 RVA: 0x00E08D2A File Offset: 0x00E06F2A
+		// Token: 0x0602FD54 RID: 195924 RVA: 0x00D59A0A File Offset: 0x00D57C0A
 		private void ReviveFinish(bool result)
 		{
 			if (!result)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADE3 RID: 241123 RVA: 0x00E08D43 File Offset: 0x00E06F43
+		// Token: 0x0602FD55 RID: 195925 RVA: 0x00D59A23 File Offset: 0x00D57C23
 		private void OnClickGiveUp()
 		{
 			base.CloseMe(null);
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 		}
 
-		// Token: 0x0603ADE4 RID: 241124 RVA: 0x00E08D78 File Offset: 0x00E06F78
+		// Token: 0x0602FD56 RID: 195926 RVA: 0x00D59A58 File Offset: 0x00D57C58
 		private void OnClickReviveAtLocation()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.UsingItemRevive);
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603ADE5 RID: 241125 RVA: 0x00E08DD0 File Offset: 0x00E06FD0
+		// Token: 0x0602FD57 RID: 195927 RVA: 0x00D59AB0 File Offset: 0x00D57CB0
 		protected override void OnTick(float delta)
 		{
 			if ((this.CanRevive || this.CountNumber < 0) && this.IsAutoRevived)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADE6 RID: 241126 RVA: 0x00E08E2C File Offset: 0x00E0702C
+		// Token: 0x0602FD58 RID: 195928 RVA: 0x00D59B0C File Offset: 0x00D57D0C
 		private void AutoReviveOnTick()
 		{
 			if (this.IsInInstance)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			LguiUtil.Instance.SetLocalText(this.AutoReviveCountDown, "ReviveItemTips", new <>z__ReadOnlySingleElementList<object>(this.AutoReviveCountDownTime));
 		}
 
-		// Token: 0x0603ADE7 RID: 241127 RVA: 0x00E08EA0 File Offset: 0x00E070A0
+		// Token: 0x0602FD59 RID: 195929 RVA: 0x00D59B80 File Offset: 0x00D57D80
 		private void CanReviveOnTick()
 		{
 			if (this.CountNumber <= 0)
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.CountDown.SetText(this.CountNumber.ToString() + "s", true);
 		}
 
-		// Token: 0x0603ADE8 RID: 241128 RVA: 0x00E08F08 File Offset: 0x00E07108
+		// Token: 0x0602FD5A RID: 195930 RVA: 0x00D59BE8 File Offset: 0x00D57DE8
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TrainingView != null)
@@ -347,95 +347,95 @@ namespace CSharpScript.Game.Module.DeadRevive
 			DeadReviveModel.Instance.ClearExternalHandles();
 		}
 
-		// Token: 0x0401EB85 RID: 125829
+		// Token: 0x04019641 RID: 104001
 		private const int TIME_SECOND = 1000;
 
-		// Token: 0x0401EB86 RID: 125830
+		// Token: 0x04019642 RID: 104002
 		private const int AUTO_REVIVE_TIME = 60;
 
-		// Token: 0x0401EB87 RID: 125831
+		// Token: 0x04019643 RID: 104003
 		private float TimeCount;
 
-		// Token: 0x0401EB88 RID: 125832
+		// Token: 0x04019644 RID: 104004
 		private int CountNumber;
 
-		// Token: 0x0401EB89 RID: 125833
+		// Token: 0x04019645 RID: 104005
 		private int ReviveNumber = -1;
 
-		// Token: 0x0401EB8A RID: 125834
+		// Token: 0x04019646 RID: 104006
 		private int AutoReviveCountDownTime;
 
-		// Token: 0x0401EB8B RID: 125835
+		// Token: 0x04019647 RID: 104007
 		private bool IsAutoRevived;
 
-		// Token: 0x0401EB8C RID: 125836
+		// Token: 0x04019648 RID: 104008
 		private UUIText CountDown;
 
-		// Token: 0x0401EB8D RID: 125837
+		// Token: 0x04019649 RID: 104009
 		private UUIText AutoReviveCountDown;
 
-		// Token: 0x0401EB8E RID: 125838
+		// Token: 0x0401964A RID: 104010
 		private UUIInteractionGroup ReviveBtnInteraction;
 
-		// Token: 0x0401EB8F RID: 125839
+		// Token: 0x0401964B RID: 104011
 		private string ItemName;
 
-		// Token: 0x0401EB90 RID: 125840
+		// Token: 0x0401964C RID: 104012
 		private string ItemCd;
 
-		// Token: 0x0401EB91 RID: 125841
+		// Token: 0x0401964D RID: 104013
 		private bool CanRevive;
 
-		// Token: 0x0401EB92 RID: 125842
+		// Token: 0x0401964E RID: 104014
 		private TrainingView TrainingView;
 
-		// Token: 0x0401EB93 RID: 125843
+		// Token: 0x0401964F RID: 104015
 		private bool IsInInstance;
 
-		// Token: 0x0401EB94 RID: 125844
+		// Token: 0x04019650 RID: 104016
 		private bool IsMorale;
 
-		// Token: 0x0200BD1D RID: 48413
+		// Token: 0x0200A725 RID: 42789
 		[NullableContext(0)]
 		private class EReviveViewComponent
 		{
-			// Token: 0x04039097 RID: 233623
+			// Token: 0x04033A61 RID: 211553
 			public const int Revive = 0;
 
-			// Token: 0x04039098 RID: 233624
+			// Token: 0x04033A62 RID: 211554
 			public const int Fail = 1;
 
-			// Token: 0x04039099 RID: 233625
+			// Token: 0x04033A63 RID: 211555
 			public const int ReviveBtn = 2;
 
-			// Token: 0x0403909A RID: 233626
+			// Token: 0x04033A64 RID: 211556
 			public const int GiveUpBtn = 3;
 
-			// Token: 0x0403909B RID: 233627
+			// Token: 0x04033A65 RID: 211557
 			public const int WaitTime = 4;
 
-			// Token: 0x0403909C RID: 233628
+			// Token: 0x04033A66 RID: 211558
 			public const int ReviveTitle = 5;
 
-			// Token: 0x0403909D RID: 233629
+			// Token: 0x04033A67 RID: 211559
 			public const int ReviveContent = 6;
 
-			// Token: 0x0403909E RID: 233630
+			// Token: 0x04033A68 RID: 211560
 			public const int RoleTrainingLayout = 7;
 
-			// Token: 0x0403909F RID: 233631
+			// Token: 0x04033A69 RID: 211561
 			public const int ReviveAtLocationBtn = 8;
 
-			// Token: 0x040390A0 RID: 233632
+			// Token: 0x04033A6A RID: 211562
 			public const int AutoReviveCountDownText = 9;
 
-			// Token: 0x040390A1 RID: 233633
+			// Token: 0x04033A6B RID: 211563
 			public const int ItemTexture = 10;
 
-			// Token: 0x040390A2 RID: 233634
+			// Token: 0x04033A6C RID: 211564
 			public const int ItemText = 11;
 
-			// Token: 0x040390A3 RID: 233635
+			// Token: 0x04033A6D RID: 211565
 			public const int GiveUpBtnText = 12;
 		}
 	}

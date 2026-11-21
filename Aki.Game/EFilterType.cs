@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020034B7 RID: 13495
+// Token: 0x02002A2B RID: 10795
 public enum EFilterType
 {
-	// Token: 0x0400E79D RID: 59293
+	// Token: 0x0400EC51 RID: 60497
 	Top,
-	// Token: 0x0400E79E RID: 59294
+	// Token: 0x0400EC52 RID: 60498
 	BindGroup,
-	// Token: 0x0400E79F RID: 59295
+	// Token: 0x0400EC53 RID: 60499
 	Black
 }

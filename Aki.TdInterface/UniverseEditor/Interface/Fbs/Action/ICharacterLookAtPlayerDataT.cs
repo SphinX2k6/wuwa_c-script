@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200634A RID: 25418
+	// Token: 0x020069BB RID: 27067
 	public class ICharacterLookAtPlayerDataT
 	{
-		// Token: 0x1700BDA7 RID: 48551
-		// (get) Token: 0x0602BF7C RID: 180092 RVA: 0x0060AD96 File Offset: 0x00608F96
-		// (set) Token: 0x0602BF7D RID: 180093 RVA: 0x0060AD9E File Offset: 0x00608F9E
+		// Token: 0x1700C72F RID: 50991
+		// (get) Token: 0x0602E6E6 RID: 190182 RVA: 0x00655EEA File Offset: 0x006540EA
+		// (set) Token: 0x0602E6E7 RID: 190183 RVA: 0x00655EF2 File Offset: 0x006540F2
 		public ECharacterLookAt Type { get; set; }
 
-		// Token: 0x0602BF7E RID: 180094 RVA: 0x0060ADA7 File Offset: 0x00608FA7
+		// Token: 0x0602E6E8 RID: 190184 RVA: 0x00655EFB File Offset: 0x006540FB
 		public ICharacterLookAtPlayerDataT()
 		{
 			this.Type = ECharacterLookAt.Empty;

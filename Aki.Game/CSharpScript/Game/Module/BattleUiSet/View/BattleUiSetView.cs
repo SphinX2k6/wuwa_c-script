@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUiSet.View
 {
-	// Token: 0x02005E64 RID: 24164
+	// Token: 0x02004E49 RID: 20041
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiSetView : UiTickViewBase
 	{
-		// Token: 0x0603D6D9 RID: 251609 RVA: 0x00ED133B File Offset: 0x00ECF53B
+		// Token: 0x06032669 RID: 206441 RVA: 0x00E228AB File Offset: 0x00E20AAB
 		public BattleUiSetView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603D6DA RID: 251610 RVA: 0x00ED1350 File Offset: 0x00ECF550
+		// Token: 0x0603266A RID: 206442 RVA: 0x00E228C0 File Offset: 0x00E20AC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603D6DB RID: 251611 RVA: 0x00ED15AD File Offset: 0x00ECF7AD
+		// Token: 0x0603266B RID: 206443 RVA: 0x00E22B1D File Offset: 0x00E20D1D
 		protected override void OnBeforeDestroy()
 		{
 			this.SelectedPanelItem = null;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.EditMobileBattleView = null;
 		}
 
-		// Token: 0x0603D6DC RID: 251612 RVA: 0x00ED15DC File Offset: 0x00ECF7DC
+		// Token: 0x0603266C RID: 206444 RVA: 0x00E22B4C File Offset: 0x00E20D4C
 		protected override void OnAddEventListener()
 		{
 			base.GetSlider(2).OnValueChangeCb.Bind(new Action<float>(this.OnSizeSliderValueChanged));
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			EventSystem.Instance.Add(EEventName.OnSelectedEditPanelItem, new Action<BattleUiSetPanelItemData>(this.OnSelectedEditPanelItem));
 		}
 
-		// Token: 0x0603D6DD RID: 251613 RVA: 0x00ED17E0 File Offset: 0x00ECF9E0
+		// Token: 0x0603266D RID: 206445 RVA: 0x00E22D50 File Offset: 0x00E20F50
 		protected override void OnRemoveEventListener()
 		{
 			base.GetSlider(2).OnValueChangeCb.Unbind();
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			EventSystem.Instance.Remove(EEventName.OnSelectedEditPanelItem, new Action<BattleUiSetPanelItemData>(this.OnSelectedEditPanelItem));
 		}
 
-		// Token: 0x0603D6DE RID: 251614 RVA: 0x00ED18F0 File Offset: 0x00ECFAF0
+		// Token: 0x0603266E RID: 206446 RVA: 0x00E22E60 File Offset: 0x00E21060
 		public void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 		{
 			InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D6DF RID: 251615 RVA: 0x00ED1938 File Offset: 0x00ECFB38
+		// Token: 0x0603266F RID: 206447 RVA: 0x00E22EA8 File Offset: 0x00E210A8
 		private void TouchTrigger(bool bTouchPress, int touchId)
 		{
 			TouchFingerData touchFingerData = TouchFingerManager.Instance.GetTouchFingerData((EFingerIndex)touchId);
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			BattleUiSetModel.Instance.RemoveTouchFingerData(touchFingerData);
 		}
 
-		// Token: 0x0603D6E0 RID: 251616 RVA: 0x00ED1970 File Offset: 0x00ECFB70
+		// Token: 0x06032670 RID: 206448 RVA: 0x00E22EE0 File Offset: 0x00E210E0
 		private void TouchMoved(int touchId)
 		{
 			BattleUiSetModel instance = BattleUiSetModel.Instance;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			slider.SetValue(num2, true);
 		}
 
-		// Token: 0x0603D6E1 RID: 251617 RVA: 0x00ED1A30 File Offset: 0x00ECFC30
+		// Token: 0x06032671 RID: 206449 RVA: 0x00E22FA0 File Offset: 0x00E211A0
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -267,55 +267,55 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D6E2 RID: 251618 RVA: 0x00ED1B10 File Offset: 0x00ECFD10
+		// Token: 0x06032672 RID: 206450 RVA: 0x00E23080 File Offset: 0x00E21280
 		private void OnPressDownButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.Down;
 		}
 
-		// Token: 0x0603D6E3 RID: 251619 RVA: 0x00ED1B19 File Offset: 0x00ECFD19
+		// Token: 0x06032673 RID: 206451 RVA: 0x00E23089 File Offset: 0x00E21289
 		private void OnReleaseDownButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.None;
 		}
 
-		// Token: 0x0603D6E4 RID: 251620 RVA: 0x00ED1B22 File Offset: 0x00ECFD22
+		// Token: 0x06032674 RID: 206452 RVA: 0x00E23092 File Offset: 0x00E21292
 		private void OnPressUpButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.Up;
 		}
 
-		// Token: 0x0603D6E5 RID: 251621 RVA: 0x00ED1B2B File Offset: 0x00ECFD2B
+		// Token: 0x06032675 RID: 206453 RVA: 0x00E2309B File Offset: 0x00E2129B
 		private void OnReleaseUpButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.None;
 		}
 
-		// Token: 0x0603D6E6 RID: 251622 RVA: 0x00ED1B34 File Offset: 0x00ECFD34
+		// Token: 0x06032676 RID: 206454 RVA: 0x00E230A4 File Offset: 0x00E212A4
 		private void OnPressLeftButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.Left;
 		}
 
-		// Token: 0x0603D6E7 RID: 251623 RVA: 0x00ED1B3D File Offset: 0x00ECFD3D
+		// Token: 0x06032677 RID: 206455 RVA: 0x00E230AD File Offset: 0x00E212AD
 		private void OnReleaseLeftButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.None;
 		}
 
-		// Token: 0x0603D6E8 RID: 251624 RVA: 0x00ED1B46 File Offset: 0x00ECFD46
+		// Token: 0x06032678 RID: 206456 RVA: 0x00E230B6 File Offset: 0x00E212B6
 		private void OnPressRightButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.Right;
 		}
 
-		// Token: 0x0603D6E9 RID: 251625 RVA: 0x00ED1B4F File Offset: 0x00ECFD4F
+		// Token: 0x06032679 RID: 206457 RVA: 0x00E230BF File Offset: 0x00E212BF
 		private void OnReleaseRightButton()
 		{
 			this.Direction = BattleUiSetView.EDirection.None;
 		}
 
-		// Token: 0x0603D6EA RID: 251626 RVA: 0x00ED1B58 File Offset: 0x00ECFD58
+		// Token: 0x0603267A RID: 206458 RVA: 0x00E230C8 File Offset: 0x00E212C8
 		public void ClampBound(ref FVector relativeLocation)
 		{
 			UUIItem item = base.GetItem(11);
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			relativeLocation.Y = MathCommon.Clamp(relativeLocation.Y, -num3 + num5 * y, num3 - num5 * (1f - y));
 		}
 
-		// Token: 0x0603D6EB RID: 251627 RVA: 0x00ED1C28 File Offset: 0x00ECFE28
+		// Token: 0x0603267B RID: 206459 RVA: 0x00E23198 File Offset: 0x00E21398
 		public void SetRelativeLocation(FVector relativeLocation)
 		{
 			UUIItem item = base.GetItem(11);
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			item.SetUIRelativeLocation(relativeLocation);
 		}
 
-		// Token: 0x0603D6EC RID: 251628 RVA: 0x00ED1C40 File Offset: 0x00ECFE40
+		// Token: 0x0603267C RID: 206460 RVA: 0x00E231B0 File Offset: 0x00E213B0
 		[NullableContext(2)]
 		private void OnDrag(ULGUIPointerEventData eventData)
 		{
@@ -369,21 +369,21 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.LocalOffsetVector = new FVector?(localPointInPlane);
 		}
 
-		// Token: 0x0603D6ED RID: 251629 RVA: 0x00ED1D37 File Offset: 0x00ECFF37
+		// Token: 0x0603267D RID: 206461 RVA: 0x00E232A7 File Offset: 0x00E214A7
 		[NullableContext(2)]
 		private void OnDragBegin(ULGUIPointerEventData ulguiPointerEventData)
 		{
 			this.LocalOffsetVector = null;
 		}
 
-		// Token: 0x0603D6EE RID: 251630 RVA: 0x00ED1D45 File Offset: 0x00ECFF45
+		// Token: 0x0603267E RID: 206462 RVA: 0x00E232B5 File Offset: 0x00E214B5
 		[NullableContext(2)]
 		private void OnDragEnded(ULGUIPointerEventData ulguiPointerEventData)
 		{
 			this.LocalOffsetVector = null;
 		}
 
-		// Token: 0x0603D6EF RID: 251631 RVA: 0x00ED1D54 File Offset: 0x00ECFF54
+		// Token: 0x0603267F RID: 206463 RVA: 0x00E232C4 File Offset: 0x00E214C4
 		private void OnSelectedEditPanelItem(BattleUiSetPanelItemData panelItemData)
 		{
 			EditMobileBattleViewPanelItem selectedPanelItem = this.SelectedPanelItem;
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.EditMobileBattleView.RefreshHierarchyIndex();
 		}
 
-		// Token: 0x0603D6F0 RID: 251632 RVA: 0x00ED1E08 File Offset: 0x00ED0008
+		// Token: 0x06032680 RID: 206464 RVA: 0x00E23378 File Offset: 0x00E21578
 		private void SetSelectedPanelItem(EditMobileBattleViewPanelItem panelItem)
 		{
 			UUIItem rootItem = panelItem.GetRootItem();
@@ -432,13 +432,13 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			item.SetUIActive(true);
 		}
 
-		// Token: 0x0603D6F1 RID: 251633 RVA: 0x00ED1E7A File Offset: 0x00ED007A
+		// Token: 0x06032681 RID: 206465 RVA: 0x00E233EA File Offset: 0x00E215EA
 		private void OnSizeSliderValueChanged(float value)
 		{
 			this.RefreshSelectedPanelItemScale(value);
 		}
 
-		// Token: 0x0603D6F2 RID: 251634 RVA: 0x00ED1E84 File Offset: 0x00ED0084
+		// Token: 0x06032682 RID: 206466 RVA: 0x00E233F4 File Offset: 0x00E215F4
 		private void RefreshSelectedPanelItemScale(float value)
 		{
 			BattleUiSetPanelItemData selectedPanelItemData = BattleUiSetModel.Instance.SelectedPanelItemData;
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.SelectedPanelItem.RefreshRelativeLocation();
 		}
 
-		// Token: 0x0603D6F3 RID: 251635 RVA: 0x00ED1EDC File Offset: 0x00ED00DC
+		// Token: 0x06032683 RID: 206467 RVA: 0x00E2344C File Offset: 0x00E2164C
 		private void OnAlphaSliderValueChanged(float value)
 		{
 			BattleUiSetPanelItemData selectedPanelItemData = BattleUiSetModel.Instance.SelectedPanelItemData;
@@ -471,14 +471,14 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			this.SelectedPanelItem.GetRootItem().SetUIItemAlpha(value);
 		}
 
-		// Token: 0x0603D6F4 RID: 251636 RVA: 0x00ED1F21 File Offset: 0x00ED0121
+		// Token: 0x06032684 RID: 206468 RVA: 0x00E23491 File Offset: 0x00E21691
 		protected override void OnStart()
 		{
 			this.ResultLocation = base.GetItem(11).RelativeLocation;
 			this.EditMobileBattleView = new EditMobileBattleView(base.GetItem(0));
 		}
 
-		// Token: 0x0603D6F5 RID: 251637 RVA: 0x00ED1F48 File Offset: 0x00ED0148
+		// Token: 0x06032685 RID: 206469 RVA: 0x00E234B8 File Offset: 0x00E216B8
 		private void OnClickedResetButton()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ButtonReset);
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603D6F6 RID: 251638 RVA: 0x00ED1F84 File Offset: 0x00ED0184
+		// Token: 0x06032686 RID: 206470 RVA: 0x00E234F4 File Offset: 0x00E216F4
 		private void OnClickedSaveButton()
 		{
 			foreach (EditMobileBattleViewPanelItem editMobileBattleViewPanelItem in this.SelectedPanelItemSet)
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			UiManager.Instance.CloseView(EUiViewName.BattleUiSetView, null);
 		}
 
-		// Token: 0x0603D6F7 RID: 251639 RVA: 0x00ED2050 File Offset: 0x00ED0250
+		// Token: 0x06032687 RID: 206471 RVA: 0x00E235C0 File Offset: 0x00E217C0
 		private void OnClickedCloseButton()
 		{
 			if (this.IsEdited())
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			UiManager.Instance.CloseView(EUiViewName.BattleUiSetView, null);
 		}
 
-		// Token: 0x0603D6F8 RID: 251640 RVA: 0x00ED20EC File Offset: 0x00ED02EC
+		// Token: 0x06032688 RID: 206472 RVA: 0x00E2365C File Offset: 0x00E2185C
 		private bool IsEdited()
 		{
 			using (IEnumerator<BattleUiSetPanelItemData> enumerator = BattleUiSetModel.Instance.GetPanelItemDataMap().Values.GetEnumerator())
@@ -559,7 +559,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return false;
 		}
 
-		// Token: 0x0603D6F9 RID: 251641 RVA: 0x00ED2148 File Offset: 0x00ED0348
+		// Token: 0x06032689 RID: 206473 RVA: 0x00E236B8 File Offset: 0x00E218B8
 		private void RefreshSetting(BattleUiSetPanelItemData panelItemData)
 		{
 			UUISliderComponent slider = base.GetSlider(2);
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			slider2.SetValue(panelItemData.EditAlpha, true);
 		}
 
-		// Token: 0x0603D6FA RID: 251642 RVA: 0x00ED2180 File Offset: 0x00ED0380
+		// Token: 0x0603268A RID: 206474 RVA: 0x00E236F0 File Offset: 0x00E218F0
 		[NullableContext(2)]
 		private void ResetSetting(BattleUiSetPanelItemData panelItemData)
 		{
@@ -582,71 +582,71 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			slider2.SetValue(panelItemData.SourceAlpha, true);
 		}
 
-		// Token: 0x040200F3 RID: 131315
+		// Token: 0x0401ABBA RID: 109498
 		[Nullable(2)]
 		private EditMobileBattleView EditMobileBattleView;
 
-		// Token: 0x040200F4 RID: 131316
+		// Token: 0x0401ABBB RID: 109499
 		[Nullable(2)]
 		public EditMobileBattleViewPanelItem SelectedPanelItem;
 
-		// Token: 0x040200F5 RID: 131317
+		// Token: 0x0401ABBC RID: 109500
 		private readonly HashSet<EditMobileBattleViewPanelItem> SelectedPanelItemSet = new HashSet<EditMobileBattleViewPanelItem>();
 
-		// Token: 0x040200F6 RID: 131318
+		// Token: 0x0401ABBD RID: 109501
 		private BattleUiSetView.EDirection Direction;
 
-		// Token: 0x040200F7 RID: 131319
+		// Token: 0x0401ABBE RID: 109502
 		private FVector? LocalOffsetVector;
 
-		// Token: 0x040200F8 RID: 131320
+		// Token: 0x0401ABBF RID: 109503
 		private FVector ResultLocation;
 
-		// Token: 0x0200C1D4 RID: 49620
+		// Token: 0x0200ABE3 RID: 44003
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A939 RID: 239929
+			// Token: 0x0403532B RID: 217899
 			BattleViewItem,
-			// Token: 0x0403A93A RID: 239930
+			// Token: 0x0403532C RID: 217900
 			AlphaSlider,
-			// Token: 0x0403A93B RID: 239931
+			// Token: 0x0403532D RID: 217901
 			SizeSlider,
-			// Token: 0x0403A93C RID: 239932
+			// Token: 0x0403532E RID: 217902
 			DownButton,
-			// Token: 0x0403A93D RID: 239933
+			// Token: 0x0403532F RID: 217903
 			UpButton,
-			// Token: 0x0403A93E RID: 239934
+			// Token: 0x04035330 RID: 217904
 			RightButton,
-			// Token: 0x0403A93F RID: 239935
+			// Token: 0x04035331 RID: 217905
 			LeftButton,
-			// Token: 0x0403A940 RID: 239936
+			// Token: 0x04035332 RID: 217906
 			ResetButton,
-			// Token: 0x0403A941 RID: 239937
+			// Token: 0x04035333 RID: 217907
 			SaveButton,
-			// Token: 0x0403A942 RID: 239938
+			// Token: 0x04035334 RID: 217908
 			CloseButton,
-			// Token: 0x0403A943 RID: 239939
+			// Token: 0x04035335 RID: 217909
 			DraggableComponent,
-			// Token: 0x0403A944 RID: 239940
+			// Token: 0x04035336 RID: 217910
 			SettingItem,
-			// Token: 0x0403A945 RID: 239941
+			// Token: 0x04035337 RID: 217911
 			SelectedItem
 		}
 
-		// Token: 0x0200C1D5 RID: 49621
+		// Token: 0x0200ABE4 RID: 44004
 		[NullableContext(0)]
 		private enum EDirection
 		{
-			// Token: 0x0403A947 RID: 239943
+			// Token: 0x04035339 RID: 217913
 			None,
-			// Token: 0x0403A948 RID: 239944
+			// Token: 0x0403533A RID: 217914
 			Up,
-			// Token: 0x0403A949 RID: 239945
+			// Token: 0x0403533B RID: 217915
 			Down,
-			// Token: 0x0403A94A RID: 239946
+			// Token: 0x0403533C RID: 217916
 			Left,
-			// Token: 0x0403A94B RID: 239947
+			// Token: 0x0403533D RID: 217917
 			Right
 		}
 	}

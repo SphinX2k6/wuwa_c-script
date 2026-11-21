@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Module.RoleMorph.Handle
 {
-	// Token: 0x02004D6B RID: 19819
+	// Token: 0x02003D34 RID: 15668
 	public class RoleMorphGuYingXiongKaiHandle : RoleMorphHandleBase
 	{
-		// Token: 0x060333C1 RID: 209857 RVA: 0x00BF3098 File Offset: 0x00BF1298
+		// Token: 0x0602822F RID: 164399 RVA: 0x00B3C2BC File Offset: 0x00B3A4BC
 		public override void BeginMorph()
 		{
 			TrackModel.Instance.SetForceCloseTracked(true);
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.RoleMorph.Handle
 			BattleUiModel.Instance.SetTagIdMoveCursorVisible(list.ToArray());
 		}
 
-		// Token: 0x060333C2 RID: 209858 RVA: 0x00BF3100 File Offset: 0x00BF1300
+		// Token: 0x06028230 RID: 164400 RVA: 0x00B3C324 File Offset: 0x00B3A524
 		public override void EndMorph()
 		{
 			TrackModel.Instance.SetForceCloseTracked(false);

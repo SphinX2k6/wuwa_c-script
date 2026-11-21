@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002B97 RID: 11159
+// Token: 0x02002113 RID: 8467
 public class SurvivorsHandbookViewOpenParams : ISurvivorsHandbookViewOpenParams
 {
-	// Token: 0x17001F1F RID: 7967
-	// (get) Token: 0x060171F4 RID: 94708 RVA: 0x005DCB83 File Offset: 0x005DAD83
-	// (set) Token: 0x060171F5 RID: 94709 RVA: 0x005DCB8B File Offset: 0x005DAD8B
+	// Token: 0x17001F77 RID: 8055
+	// (get) Token: 0x06014C25 RID: 85029 RVA: 0x00609763 File Offset: 0x00607963
+	// (set) Token: 0x06014C26 RID: 85030 RVA: 0x0060976B File Offset: 0x0060796B
 	public ESurvivorsRogueItemType SelectTabType { get; set; }
 
-	// Token: 0x17001F20 RID: 7968
-	// (get) Token: 0x060171F6 RID: 94710 RVA: 0x005DCB94 File Offset: 0x005DAD94
-	// (set) Token: 0x060171F7 RID: 94711 RVA: 0x005DCB9C File Offset: 0x005DAD9C
+	// Token: 0x17001F78 RID: 8056
+	// (get) Token: 0x06014C27 RID: 85031 RVA: 0x00609774 File Offset: 0x00607974
+	// (set) Token: 0x06014C28 RID: 85032 RVA: 0x0060977C File Offset: 0x0060797C
 	public int? SelectCfgId { get; set; }
 }

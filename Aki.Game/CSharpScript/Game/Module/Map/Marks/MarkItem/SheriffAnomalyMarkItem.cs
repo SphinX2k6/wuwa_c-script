@@ -10,36 +10,36 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054F6 RID: 21750
+	// Token: 0x020044C9 RID: 17609
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffAnomalyMarkItem : ConfigMarkItem
 	{
-		// Token: 0x060378F9 RID: 227577 RVA: 0x00D30F49 File Offset: 0x00D2F149
+		// Token: 0x0602C7C7 RID: 182215 RVA: 0x00C7EE96 File Offset: 0x00C7D096
 		public SheriffAnomalyMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 		}
 
-		// Token: 0x060378FA RID: 227578 RVA: 0x00D30F5F File Offset: 0x00D2F15F
+		// Token: 0x0602C7C8 RID: 182216 RVA: 0x00C7EEAC File Offset: 0x00C7D0AC
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.SheriffAnomalyMarkItemView;
 		}
 
-		// Token: 0x060378FB RID: 227579 RVA: 0x00D30F63 File Offset: 0x00D2F163
+		// Token: 0x0602C7C9 RID: 182217 RVA: 0x00C7EEB0 File Offset: 0x00C7D0B0
 		[PreserveBaseOverrides]
 		protected new virtual SheriffAnomalyMarkItemView CreateView()
 		{
 			return new SheriffAnomalyMarkItemView(this);
 		}
 
-		// Token: 0x060378FC RID: 227580 RVA: 0x00D30F6B File Offset: 0x00D2F16B
+		// Token: 0x0602C7CA RID: 182218 RVA: 0x00C7EEB8 File Offset: 0x00C7D0B8
 		public override bool CheckCanShowView()
 		{
 			return MapModel.Instance.IsExtraUiMarkType(base.MapType, this.MarkType);
 		}
 
-		// Token: 0x060378FD RID: 227581 RVA: 0x00D30F84 File Offset: 0x00D2F184
+		// Token: 0x0602C7CB RID: 182219 RVA: 0x00C7EED0 File Offset: 0x00C7D0D0
 		public override bool CheckCanShowViewInExtraUi()
 		{
 			SheriffAnomaly? anomalyConfigByMarkId = SheriffConfig.Instance.GetAnomalyConfigByMarkId(this.MarkId);
@@ -47,14 +47,16 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return anomalyInfo.State != ESheriffAnomalyState.Lock && (anomalyInfo.State != ESheriffAnomalyState.Completed || !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.SheriffHideCompletedMarkItem, false));
 		}
 
-		// Token: 0x060378FE RID: 227582 RVA: 0x00D30FDF File Offset: 0x00D2F1DF
+		// Token: 0x0602C7CC RID: 182220 RVA: 0x00C7EF2B File Offset: 0x00C7D12B
 		protected override bool IsTracking()
 		{
 			return !MapModel.Instance.IsExtraUiMarkType(base.MapType, this.MarkType) && base.IsTracking();
 		}
 
-		// Token: 0x0401D3D3 RID: 119763
-		[Nullable(2)]
-		public SheriffAnomalyMarkItemView InnerView;
+		// Token: 0x0602C7CD RID: 182221 RVA: 0x00C7EF4D File Offset: 0x00C7D14D
+		protected override bool IsGamePlayFinishRaw()
+		{
+			return false;
+		}
 	}
 }

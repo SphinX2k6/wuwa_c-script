@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AFD RID: 11005
+// Token: 0x02002079 RID: 8313
 public class SurvivorsItemDetailTabView : UiPanelBase
 {
-	// Token: 0x06016E35 RID: 93749 RVA: 0x005CE7AC File Offset: 0x005CC9AC
+	// Token: 0x06014866 RID: 84070 RVA: 0x005FB32C File Offset: 0x005F952C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016E36 RID: 93750 RVA: 0x005CE860 File Offset: 0x005CCA60
+	// Token: 0x06014867 RID: 84071 RVA: 0x005FB3E0 File Offset: 0x005F95E0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsItemDetailTabView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016E37 RID: 93751 RVA: 0x005CE8A3 File Offset: 0x005CCAA3
+	// Token: 0x06014868 RID: 84072 RVA: 0x005FB423 File Offset: 0x005F9623
 	[NullableContext(1)]
 	private SurvivorsItemGrid CreateItemProxy()
 	{
@@ -46,7 +46,7 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		return survivorsItemGrid;
 	}
 
-	// Token: 0x06016E38 RID: 93752 RVA: 0x005CE8D0 File Offset: 0x005CCAD0
+	// Token: 0x06014869 RID: 84073 RVA: 0x005FB450 File Offset: 0x005F9650
 	protected override void OnStart()
 	{
 		List<SurvivorsItemGainData> itemGainList = SurvivorsRogueModel.Instance.GainData.GetItemGainList();
@@ -79,7 +79,7 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "SurvivorsPropAttribute_PropNum", new <>z__ReadOnlySingleElementList<object>(itemGainList.Count));
 	}
 
-	// Token: 0x06016E39 RID: 93753 RVA: 0x005CE951 File Offset: 0x005CCB51
+	// Token: 0x0601486A RID: 84074 RVA: 0x005FB4D1 File Offset: 0x005F96D1
 	private void RefreshEmptyState(bool isEmpty)
 	{
 		UUIItem item = base.GetItem(4);
@@ -100,7 +100,7 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		texture.SetUIActive(!isEmpty);
 	}
 
-	// Token: 0x06016E3A RID: 93754 RVA: 0x005CE991 File Offset: 0x005CCB91
+	// Token: 0x0601486B RID: 84075 RVA: 0x005FB511 File Offset: 0x005F9711
 	private void OnSelectItem(int index, int itemId)
 	{
 		this.RefreshItemCard(new int?(itemId));
@@ -112,14 +112,14 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		loopScroll.SelectGridProxy(index, false);
 	}
 
-	// Token: 0x06016E3B RID: 93755 RVA: 0x005CE9B1 File Offset: 0x005CCBB1
+	// Token: 0x0601486C RID: 84076 RVA: 0x005FB531 File Offset: 0x005F9731
 	private bool CanExecuteChange(int index)
 	{
 		LoopScrollView<SurvivorsItemGrid, SurvivorsItemGainData> loopScroll = this.LoopScroll;
 		return loopScroll == null || loopScroll.GetSelectedGridIndex() != index;
 	}
 
-	// Token: 0x06016E3C RID: 93756 RVA: 0x005CE9CC File Offset: 0x005CCBCC
+	// Token: 0x0601486D RID: 84077 RVA: 0x005FB54C File Offset: 0x005F974C
 	private void RefreshItemCard(int? itemId)
 	{
 		if (itemId == null)
@@ -150,11 +150,11 @@ public class SurvivorsItemDetailTabView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A9F0 RID: 43504
+	// Token: 0x0400ADF6 RID: 44534
 	[Nullable(2)]
 	private SurvivorsRogueCardBase CardItem;
 
-	// Token: 0x0400A9F1 RID: 43505
+	// Token: 0x0400ADF7 RID: 44535
 	[Nullable(new byte[]
 	{
 		2,

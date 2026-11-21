@@ -4,37 +4,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model
 {
-	// Token: 0x02004734 RID: 18228
+	// Token: 0x02003665 RID: 13925
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class WuWaGoBaseUnit : IStaticVariableResetter
 	{
-		// Token: 0x0602F9FC RID: 195068 RVA: 0x00B08C0B File Offset: 0x00B06E0B
+		// Token: 0x060241C6 RID: 147910 RVA: 0x00A38AC7 File Offset: 0x00A36CC7
 		static WuWaGoBaseUnit()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoBaseUnit.CreateStaticDefaultValue), new Action(WuWaGoBaseUnit.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F9FD RID: 195069 RVA: 0x00B08C2A File Offset: 0x00B06E2A
+		// Token: 0x060241C7 RID: 147911 RVA: 0x00A38AE6 File Offset: 0x00A36CE6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602F9FE RID: 195070 RVA: 0x00B08C2C File Offset: 0x00B06E2C
+		// Token: 0x060241C8 RID: 147912 RVA: 0x00A38AE8 File Offset: 0x00A36CE8
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoBaseUnit._unitIndex = 0;
 		}
 
-		// Token: 0x170076FC RID: 30460
-		// (get) Token: 0x0602F9FF RID: 195071
+		// Token: 0x170049B8 RID: 18872
+		// (get) Token: 0x060241C9 RID: 147913
 		public abstract bool Actionable { get; }
 
-		// Token: 0x170076FD RID: 30461
-		// (get) Token: 0x0602FA00 RID: 195072
+		// Token: 0x170049B9 RID: 18873
+		// (get) Token: 0x060241CA RID: 147914
 		public abstract bool MoveAbility { get; }
 
-		// Token: 0x0602FA01 RID: 195073 RVA: 0x00B08C34 File Offset: 0x00B06E34
+		// Token: 0x060241CB RID: 147915 RVA: 0x00A38AF0 File Offset: 0x00A36CF0
 		protected WuWaGoBaseUnit(Vector coordinateInner, Rotator rotatorInner)
 		{
 			this.Coordinate = coordinateInner;
@@ -42,60 +42,60 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.Id = ++WuWaGoBaseUnit._unitIndex;
 		}
 
-		// Token: 0x170076FE RID: 30462
-		// (get) Token: 0x0602FA02 RID: 195074 RVA: 0x00B08C5D File Offset: 0x00B06E5D
+		// Token: 0x170049BA RID: 18874
+		// (get) Token: 0x060241CC RID: 147916 RVA: 0x00A38B19 File Offset: 0x00A36D19
 		public Vector Coordinate { get; }
 
-		// Token: 0x170076FF RID: 30463
-		// (get) Token: 0x0602FA03 RID: 195075 RVA: 0x00B08C65 File Offset: 0x00B06E65
+		// Token: 0x170049BB RID: 18875
+		// (get) Token: 0x060241CD RID: 147917 RVA: 0x00A38B21 File Offset: 0x00A36D21
 		public Rotator Rotator { get; }
 
-		// Token: 0x0602FA04 RID: 195076 RVA: 0x00B08C6D File Offset: 0x00B06E6D
+		// Token: 0x060241CE RID: 147918 RVA: 0x00A38B29 File Offset: 0x00A36D29
 		public void SetCoordinate(Vector target)
 		{
 			this.MarkRollbackDirty();
 			this.Coordinate.DeepCopy(target);
 		}
 
-		// Token: 0x0602FA05 RID: 195077 RVA: 0x00B08C81 File Offset: 0x00B06E81
+		// Token: 0x060241CF RID: 147919 RVA: 0x00A38B3D File Offset: 0x00A36D3D
 		public void SetRotator(Rotator target)
 		{
 			this.MarkRollbackDirty();
 			this.Rotator.DeepCopy(target);
 		}
 
-		// Token: 0x0602FA06 RID: 195078 RVA: 0x00B08C95 File Offset: 0x00B06E95
+		// Token: 0x060241D0 RID: 147920 RVA: 0x00A38B51 File Offset: 0x00A36D51
 		protected void MarkRollbackDirty()
 		{
 			WuWaGoRollbackPreStates.MarkDirty(this);
 		}
 
-		// Token: 0x0602FA07 RID: 195079 RVA: 0x00B08C9D File Offset: 0x00B06E9D
+		// Token: 0x060241D1 RID: 147921 RVA: 0x00A38B59 File Offset: 0x00A36D59
 		[NullableContext(2)]
 		public virtual IRollbackCapture CaptureRollback()
 		{
 			return null;
 		}
 
-		// Token: 0x0602FA08 RID: 195080
+		// Token: 0x060241D2 RID: 147922
 		[NullableContext(2)]
 		protected abstract AActor GetActorRaw();
 
-		// Token: 0x0602FA09 RID: 195081 RVA: 0x00B08CA0 File Offset: 0x00B06EA0
+		// Token: 0x060241D3 RID: 147923 RVA: 0x00A38B5C File Offset: 0x00A36D5C
 		public bool IsActorValid()
 		{
 			AActor actorRaw = this.GetActorRaw();
 			return actorRaw != null && actorRaw.IsValid();
 		}
 
-		// Token: 0x0602FA0A RID: 195082 RVA: 0x00B08CB3 File Offset: 0x00B06EB3
+		// Token: 0x060241D4 RID: 147924 RVA: 0x00A38B6F File Offset: 0x00A36D6F
 		public string GetActorName()
 		{
 			AActor actorRaw = this.GetActorRaw();
 			return ((actorRaw != null) ? actorRaw.GetName() : null) ?? "";
 		}
 
-		// Token: 0x0602FA0B RID: 195083 RVA: 0x00B08CD0 File Offset: 0x00B06ED0
+		// Token: 0x060241D5 RID: 147925 RVA: 0x00A38B8C File Offset: 0x00A36D8C
 		public FVectorDouble? GetWorldLocation()
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return new FVectorDouble?(actorRaw.D_K2_GetActorLocation());
 		}
 
-		// Token: 0x0602FA0C RID: 195084 RVA: 0x00B08D04 File Offset: 0x00B06F04
+		// Token: 0x060241D6 RID: 147926 RVA: 0x00A38BC0 File Offset: 0x00A36DC0
 		public FRotator? GetWorldRotation()
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return new FRotator?(actorRaw.K2_GetActorRotation());
 		}
 
-		// Token: 0x0602FA0D RID: 195085 RVA: 0x00B08D38 File Offset: 0x00B06F38
+		// Token: 0x060241D7 RID: 147927 RVA: 0x00A38BF4 File Offset: 0x00A36DF4
 		[NullableContext(2)]
 		public UObject GetActorAsObject()
 		{
 			return this.GetActorRaw();
 		}
 
-		// Token: 0x0602FA0E RID: 195086 RVA: 0x00B08D40 File Offset: 0x00B06F40
+		// Token: 0x060241D8 RID: 147928 RVA: 0x00A38BFC File Offset: 0x00A36DFC
 		public void SetHiddenInGame(bool hidden)
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			actorRaw.SetActorHiddenInGame(hidden);
 		}
 
-		// Token: 0x0602FA0F RID: 195087 RVA: 0x00B08D6D File Offset: 0x00B06F6D
+		// Token: 0x060241D9 RID: 147929 RVA: 0x00A38C29 File Offset: 0x00A36E29
 		public void MarkActorWorldTransformDirty()
 		{
 			if (!this.IsActorValid())
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.MarkRollbackDirty();
 		}
 
-		// Token: 0x0602FA10 RID: 195088 RVA: 0x00B08D80 File Offset: 0x00B06F80
+		// Token: 0x060241DA RID: 147930 RVA: 0x00A38C3C File Offset: 0x00A36E3C
 		public void SetActorWorldLocation(Vector worldLocation, bool sweep = false)
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			actorRaw.D_K2_SetActorLocation(worldLocation.ToUeVector(false), sweep, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x0602FA11 RID: 195089 RVA: 0x00B08DC4 File Offset: 0x00B06FC4
+		// Token: 0x060241DB RID: 147931 RVA: 0x00A38C80 File Offset: 0x00A36E80
 		public void SetActorWorldRotation(Rotator worldRotation)
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			actorRaw.K2_SetActorRotation(worldRotation.ToUeRotator(), false);
 		}
 
-		// Token: 0x0602FA12 RID: 195090 RVA: 0x00B08E00 File Offset: 0x00B07000
+		// Token: 0x060241DC RID: 147932 RVA: 0x00A38CBC File Offset: 0x00A36EBC
 		public void SetActorWorldTransform(Vector worldLocation, Rotator worldRotation, bool teleport = false)
 		{
 			AActor actorRaw = this.GetActorRaw();
@@ -181,10 +181,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			actorRaw.D_K2_SetActorLocationAndRotation(worldLocation.ToUeVector(false), worldRotation.ToUeRotator(), false, ref WorldGlobal.SweepHitResult, teleport);
 		}
 
-		// Token: 0x04019B84 RID: 105348
+		// Token: 0x04014234 RID: 82484
 		private static int _unitIndex;
 
-		// Token: 0x04019B85 RID: 105349
+		// Token: 0x04014235 RID: 82485
 		public readonly int Id;
 	}
 }

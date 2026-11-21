@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B95 RID: 2965
+	// Token: 0x02000C77 RID: 3191
 	public struct ConditionGroup : IFlatbufferObject
 	{
-		// Token: 0x170008FF RID: 2303
-		// (get) Token: 0x06005815 RID: 22549 RVA: 0x001FC2DA File Offset: 0x001FA4DA
+		// Token: 0x17000945 RID: 2373
+		// (get) Token: 0x06005DEE RID: 24046 RVA: 0x0021C0B6 File Offset: 0x0021A2B6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005816 RID: 22550 RVA: 0x001FC2E7 File Offset: 0x001FA4E7
+		// Token: 0x06005DEF RID: 24047 RVA: 0x0021C0C3 File Offset: 0x0021A2C3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005817 RID: 22551 RVA: 0x001FC2F0 File Offset: 0x001FA4F0
+		// Token: 0x06005DF0 RID: 24048 RVA: 0x0021C0CC File Offset: 0x0021A2CC
 		public static ConditionGroup GetRootAsConditionGroup(ByteBuffer _bb)
 		{
 			return ConditionGroup.GetRootAsConditionGroup(_bb, default(ConditionGroup));
 		}
 
-		// Token: 0x06005818 RID: 22552 RVA: 0x001FC30C File Offset: 0x001FA50C
+		// Token: 0x06005DF1 RID: 24049 RVA: 0x0021C0E8 File Offset: 0x0021A2E8
 		public static ConditionGroup GetRootAsConditionGroup(ByteBuffer _bb, ConditionGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005819 RID: 22553 RVA: 0x001FC329 File Offset: 0x001FA529
+		// Token: 0x06005DF2 RID: 24050 RVA: 0x0021C105 File Offset: 0x0021A305
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600581A RID: 22554 RVA: 0x001FC338 File Offset: 0x001FA538
+		// Token: 0x06005DF3 RID: 24051 RVA: 0x0021C114 File Offset: 0x0021A314
 		public ConditionGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000900 RID: 2304
-		// (get) Token: 0x0600581B RID: 22555 RVA: 0x001FC348 File Offset: 0x001FA548
+		// Token: 0x17000946 RID: 2374
+		// (get) Token: 0x06005DF4 RID: 24052 RVA: 0x0021C124 File Offset: 0x0021A324
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600581C RID: 22556 RVA: 0x001FC384 File Offset: 0x001FA584
+		// Token: 0x06005DF5 RID: 24053 RVA: 0x0021C160 File Offset: 0x0021A360
 		public int GroupId(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000901 RID: 2305
-		// (get) Token: 0x0600581D RID: 22557 RVA: 0x001FC3C4 File Offset: 0x001FA5C4
+		// Token: 0x17000947 RID: 2375
+		// (get) Token: 0x06005DF6 RID: 24054 RVA: 0x0021C1A0 File Offset: 0x0021A3A0
 		public int GroupIdLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600581E RID: 22558 RVA: 0x001FC3EF File Offset: 0x001FA5EF
+		// Token: 0x06005DF7 RID: 24055 RVA: 0x0021C1CB File Offset: 0x0021A3CB
 		public Span<int> GetGroupIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600581F RID: 22559 RVA: 0x001FC3FE File Offset: 0x001FA5FE
+		// Token: 0x06005DF8 RID: 24056 RVA: 0x0021C1DA File Offset: 0x0021A3DA
 		public int[] GetGroupIdArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000902 RID: 2306
-		// (get) Token: 0x06005820 RID: 22560 RVA: 0x001FC418 File Offset: 0x001FA618
+		// Token: 0x17000948 RID: 2376
+		// (get) Token: 0x06005DF9 RID: 24057 RVA: 0x0021C1F4 File Offset: 0x0021A3F4
 		public int Relation
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000903 RID: 2307
-		// (get) Token: 0x06005821 RID: 22561 RVA: 0x001FC454 File Offset: 0x001FA654
+		// Token: 0x17000949 RID: 2377
+		// (get) Token: 0x06005DFA RID: 24058 RVA: 0x0021C230 File Offset: 0x0021A430
 		public string HintText
 		{
 			get
@@ -132,37 +132,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005822 RID: 22562 RVA: 0x001FC48C File Offset: 0x001FA68C
+		// Token: 0x06005DFB RID: 24059 RVA: 0x0021C268 File Offset: 0x0021A468
 		public Span<byte> GetHintTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06005823 RID: 22563 RVA: 0x001FC49C File Offset: 0x001FA69C
+		// Token: 0x06005DFC RID: 24060 RVA: 0x0021C278 File Offset: 0x0021A478
 		public byte[] GetHintTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06005824 RID: 22564 RVA: 0x001FC4B4 File Offset: 0x001FA6B4
+		// Token: 0x06005DFD RID: 24061 RVA: 0x0021C290 File Offset: 0x0021A490
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupIdIter()或GetGroupIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupId()
+		public int[] GroupId()
 		{
-			ConditionGroup conditionGroup = this;
-			return conditionGroup.GetGroupIdArray() ?? Array.Empty<int>();
+			return this.GetGroupIdArray();
 		}
 
-		// Token: 0x06005825 RID: 22565 RVA: 0x001FC4D8 File Offset: 0x001FA6D8
+		// Token: 0x06005DFE RID: 24062 RVA: 0x0021C298 File Offset: 0x0021A498
 		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupIdIter()
+		public IEnumerable<int> GroupIdIter()
 		{
 			ConditionGroup.<GroupIdIter>d__22 <GroupIdIter>d__ = new ConditionGroup.<GroupIdIter>d__22(-2);
 			<GroupIdIter>d__.<>3__<>4__this = this;
 			return <GroupIdIter>d__;
 		}
 
-		// Token: 0x04004BA6 RID: 19366
+		// Token: 0x04005188 RID: 20872
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E1B RID: 19995
+	// Token: 0x0200532A RID: 21290
 	public enum ESpecialAnimalType : byte
 	{
-		// Token: 0x0400DB40 RID: 56128
+		// Token: 0x0400E6B1 RID: 59057
 		CollectAnimal
 	}
 }

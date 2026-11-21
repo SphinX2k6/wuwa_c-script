@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026FC RID: 9980
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029C2 RID: 10690
 	public class IExecClientMonsterNpcInteract : ActionParams
 	{
-		// Token: 0x0600DECC RID: 57036 RVA: 0x00210ABF File Offset: 0x0020ECBF
+		// Token: 0x0600ECB4 RID: 60596 RVA: 0x0022D427 File Offset: 0x0022B627
 		public static IExecClientMonsterNpcInteract Create(IExecClientMonsterNpcInteract? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004296 RID: 17046
-		// (get) Token: 0x0600DECD RID: 57037 RVA: 0x00210ADE File Offset: 0x0020ECDE
+		// Token: 0x170045DE RID: 17886
+		// (get) Token: 0x0600ECB5 RID: 60597 RVA: 0x0022D446 File Offset: 0x0022B646
 		public virtual int MonsterNpcEntityId
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004297 RID: 17047
-		// (get) Token: 0x0600DECE RID: 57038 RVA: 0x00210AEB File Offset: 0x0020ECEB
+		// Token: 0x170045DF RID: 17887
+		// (get) Token: 0x0600ECB6 RID: 60598 RVA: 0x0022D453 File Offset: 0x0022B653
 		public virtual IMonsterNpcInteractTriggerHook Config
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BA8 RID: 31656
+		// Token: 0x0400824C RID: 33356
 		private IExecClientMonsterNpcInteract Instance;
 
-		// Token: 0x04007BA9 RID: 31657
+		// Token: 0x0400824D RID: 33357
 		[Nullable(2)]
 		private IMonsterNpcInteractTriggerHook _ConfigCache;
 
-		// Token: 0x04007BAA RID: 31658
+		// Token: 0x0400824E RID: 33358
 		private bool _ConfigInited;
 	}
 }

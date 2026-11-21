@@ -1,81 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x02001397 RID: 5015
+// Token: 0x0200084B RID: 2123
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 {
-	// Token: 0x06008C94 RID: 35988 RVA: 0x001E2566 File Offset: 0x001E0766
+	// Token: 0x0600602E RID: 24622 RVA: 0x001EB392 File Offset: 0x001E9592
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int, int, int, int, int, int>(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
 	}
 
-	// Token: 0x06008C95 RID: 35989 RVA: 0x001E2584 File Offset: 0x001E0784
+	// Token: 0x0600602F RID: 24623 RVA: 0x001EB3B0 File Offset: 0x001E95B0
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int, int, int, int, int, int>(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
 	}
 
-	// Token: 0x06008C96 RID: 35990 RVA: 0x001E25A2 File Offset: 0x001E07A2
+	// Token: 0x06006030 RID: 24624 RVA: 0x001EB3CE File Offset: 0x001E95CE
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.NewbieCourseV2RewardNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRewardNotify));
 	}
 
-	// Token: 0x06008C97 RID: 35991 RVA: 0x001E25C0 File Offset: 0x001E07C0
+	// Token: 0x06006031 RID: 24625 RVA: 0x001EB3EC File Offset: 0x001E95EC
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NewbieCourseV2RewardNotify);
 	}
 
-	// Token: 0x06008C98 RID: 35992 RVA: 0x001E25D2 File Offset: 0x001E07D2
+	// Token: 0x06006032 RID: 24626 RVA: 0x001EB3FE File Offset: 0x001E95FE
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008C99 RID: 35993 RVA: 0x001E25D4 File Offset: 0x001E07D4
+	// Token: 0x06006033 RID: 24627 RVA: 0x001EB400 File Offset: 0x001E9600
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_NewcomerSynesthesiaLevelMain";
 	}
 
-	// Token: 0x06008C9A RID: 35994 RVA: 0x001E25DB File Offset: 0x001E07DB
+	// Token: 0x06006034 RID: 24628 RVA: 0x001EB407 File Offset: 0x001E9607
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewNewbieCourseV2();
 	}
 
-	// Token: 0x06008C9B RID: 35995 RVA: 0x001E25E2 File Offset: 0x001E07E2
+	// Token: 0x06006035 RID: 24629 RVA: 0x001EB40E File Offset: 0x001E960E
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.DataId = data.Id;
 		return new ActivityNewbieCourseV2Data();
 	}
 
-	// Token: 0x06008C9C RID: 35996 RVA: 0x001E25F5 File Offset: 0x001E07F5
+	// Token: 0x06006036 RID: 24630 RVA: 0x001EB421 File Offset: 0x001E9621
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008C9D RID: 35997 RVA: 0x001E25F8 File Offset: 0x001E07F8
+	// Token: 0x06006037 RID: 24631 RVA: 0x001EB424 File Offset: 0x001E9624
 	protected override bool OnClear()
 	{
 		this.DataId = 0;
 		return true;
 	}
 
-	// Token: 0x06008C9E RID: 35998 RVA: 0x001E2604 File Offset: 0x001E0804
+	// Token: 0x06006038 RID: 24632 RVA: 0x001EB430 File Offset: 0x001E9630
 	public void RequestRewards(IReadOnlyList<int> targetLevels, int? activityId = null)
 	{
 		int dataId = activityId ?? this.DataId;
@@ -96,10 +94,10 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 			{
 				return;
 			}
-			Aki.Protocol.ErrorCode errorCode = ActivityNewbieCourseV2Controller.ReadResponseErrorCode(newbieCourseV2RewardResponse);
+			Aki.Protocol.ErrorCode errorCode = newbieCourseV2RewardResponse.ErrorCode;
 			if (errorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(errorCode, 21399, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(errorCode, 16170, null, true, true);
 				return;
 			}
 			ActivityNewbieCourseV2Data activityNewbieCourseV2Data = ActivityModel.Instance.GetActivityById(dataId) as ActivityNewbieCourseV2Data;
@@ -115,13 +113,13 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06008C9F RID: 35999 RVA: 0x001E26D4 File Offset: 0x001E08D4
+	// Token: 0x06006039 RID: 24633 RVA: 0x001EB500 File Offset: 0x001E9700
 	public void RequestReward(int targetLevel, int? activityId = null)
 	{
 		this.RequestRewards(new <>z__ReadOnlySingleElementList<int>(targetLevel), activityId);
 	}
 
-	// Token: 0x06008CA0 RID: 36000 RVA: 0x001E26E4 File Offset: 0x001E08E4
+	// Token: 0x0600603A RID: 24634 RVA: 0x001EB510 File Offset: 0x001E9710
 	public void RequestAllClaimableRewards(int? activityId = null)
 	{
 		int num = activityId ?? this.DataId;
@@ -145,35 +143,7 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		this.RequestRewards(list, new int?(num));
 	}
 
-	// Token: 0x06008CA1 RID: 36001 RVA: 0x001E27A4 File Offset: 0x001E09A4
-	private static Aki.Protocol.ErrorCode ReadResponseErrorCode(NewbieCourseV2RewardResponse response)
-	{
-		Type type = response.GetType();
-		foreach (string name in new string[]
-		{
-			"ErrorCode",
-			"Error",
-			"Code"
-		})
-		{
-			PropertyInfo property = type.GetProperty(name);
-			if (!(property == null))
-			{
-				object value = property.GetValue(response);
-				if (value is Aki.Protocol.ErrorCode)
-				{
-					return (Aki.Protocol.ErrorCode)value;
-				}
-				if (value is int)
-				{
-					return (Aki.Protocol.ErrorCode)((int)value);
-				}
-			}
-		}
-		return Aki.Protocol.ErrorCode.UnKnownError;
-	}
-
-	// Token: 0x06008CA2 RID: 36002 RVA: 0x001E2834 File Offset: 0x001E0A34
+	// Token: 0x0600603B RID: 24635 RVA: 0x001EB5D0 File Offset: 0x001E97D0
 	private void OnPlayerLevelChanged(int lastLevel, int currentLevel, int currentExp, int lastExp, int addExp, int currentMaxExp, int lastMaxExp)
 	{
 		if (this.DataId == 0)
@@ -188,7 +158,7 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.DataId);
 	}
 
-	// Token: 0x06008CA3 RID: 36003 RVA: 0x001E2880 File Offset: 0x001E0A80
+	// Token: 0x0600603C RID: 24636 RVA: 0x001EB61C File Offset: 0x001E981C
 	[NullableContext(2)]
 	private void OnRewardNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -202,12 +172,12 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		{
 			return;
 		}
-		activityNewbieCourseV2Data.SetReceiveData(newbieCourseV2RewardNotify.HadTakeReward.ToArray<int>());
+		activityNewbieCourseV2Data.SetReceiveData(newbieCourseV2RewardNotify.HadTakeReward);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.DataId);
 	}
 
-	// Token: 0x17000BE2 RID: 3042
-	// (get) Token: 0x06008CA4 RID: 36004 RVA: 0x001E28EE File Offset: 0x001E0AEE
+	// Token: 0x17000C02 RID: 3074
+	// (get) Token: 0x0600603D RID: 24637 RVA: 0x001EB685 File Offset: 0x001E9885
 	public static ActivityNewbieCourseV2Controller Instance
 	{
 		get
@@ -216,7 +186,7 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008CA5 RID: 36005 RVA: 0x001E28F5 File Offset: 0x001E0AF5
+	// Token: 0x0600603E RID: 24638 RVA: 0x001EB68C File Offset: 0x001E988C
 	public static ActivityNewbieCourseV2Controller GetOrCreateInstance()
 	{
 		if (ActivityNewbieCourseV2Controller._Instance == null)
@@ -226,7 +196,7 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		return ActivityNewbieCourseV2Controller._Instance;
 	}
 
-	// Token: 0x06008CA6 RID: 36006 RVA: 0x001E2909 File Offset: 0x001E0B09
+	// Token: 0x0600603F RID: 24639 RVA: 0x001EB6A0 File Offset: 0x001E98A0
 	public static bool CreateInstance()
 	{
 		if (ActivityNewbieCourseV2Controller._Instance != null)
@@ -237,27 +207,27 @@ public class ActivityNewbieCourseV2Controller : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008CA7 RID: 36007 RVA: 0x001E291F File Offset: 0x001E0B1F
+	// Token: 0x06006040 RID: 24640 RVA: 0x001EB6B6 File Offset: 0x001E98B6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008CA8 RID: 36008 RVA: 0x001E2921 File Offset: 0x001E0B21
+	// Token: 0x06006041 RID: 24641 RVA: 0x001EB6B8 File Offset: 0x001E98B8
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNewbieCourseV2Controller._Instance = null;
 	}
 
-	// Token: 0x06008CA9 RID: 36009 RVA: 0x001E2929 File Offset: 0x001E0B29
+	// Token: 0x06006042 RID: 24642 RVA: 0x001EB6C0 File Offset: 0x001E98C0
 	static ActivityNewbieCourseV2Controller()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNewbieCourseV2Controller.CreateStaticDefaultValue), new Action(ActivityNewbieCourseV2Controller.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003E63 RID: 15971
+	// Token: 0x04003EFB RID: 16123
 	private int DataId;
 
-	// Token: 0x04003E64 RID: 15972
+	// Token: 0x04003EFC RID: 16124
 	[Nullable(2)]
 	private static ActivityNewbieCourseV2Controller _Instance;
 }

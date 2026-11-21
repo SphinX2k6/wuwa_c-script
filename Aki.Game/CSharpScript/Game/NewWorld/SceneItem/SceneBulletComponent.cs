@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716A RID: 29034
+	// Token: 0x0200621E RID: 25118
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneBulletComponent : EntityComponent
 	{
-		// Token: 0x06046DEB RID: 290283 RVA: 0x011DFD00 File Offset: 0x011DDF00
+		// Token: 0x0603C638 RID: 247352 RVA: 0x0113B6F0 File Offset: 0x011398F0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CacheRange = global::Vector.Create(0.0, 0.0, 0.0);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DEC RID: 290284 RVA: 0x011DFEA0 File Offset: 0x011DE0A0
+		// Token: 0x0603C639 RID: 247353 RVA: 0x0113B890 File Offset: 0x01139A90
 		protected override bool OnStart()
 		{
 			CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent component = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DED RID: 290285 RVA: 0x011DFF50 File Offset: 0x011DE150
+		// Token: 0x0603C63A RID: 247354 RVA: 0x0113B940 File Offset: 0x01139B40
 		protected override void OnActivate()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DEE RID: 290286 RVA: 0x011DFFCD File Offset: 0x011DE1CD
+		// Token: 0x0603C63B RID: 247355 RVA: 0x0113B9BD File Offset: 0x01139BBD
 		private void OnWorldDone()
 		{
 			this.CreateBullets(this.CurrentState);
 		}
 
-		// Token: 0x06046DEF RID: 290287 RVA: 0x011DFFDC File Offset: 0x011DE1DC
+		// Token: 0x0603C63C RID: 247356 RVA: 0x0113B9CC File Offset: 0x01139BCC
 		[NullableContext(1)]
 		private void OnEntityTrigger(bool isEnter, EntityHandle handle)
 		{
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CreateBullets(this.CurrentState);
 		}
 
-		// Token: 0x06046DF0 RID: 290288 RVA: 0x011E0070 File Offset: 0x011DE270
+		// Token: 0x0603C63D RID: 247357 RVA: 0x0113BA60 File Offset: 0x01139C60
 		protected override void OnTick(float delta)
 		{
 			this.ProcessTrafficBullet();
 		}
 
-		// Token: 0x06046DF1 RID: 290289 RVA: 0x011E0078 File Offset: 0x011DE278
+		// Token: 0x0603C63E RID: 247358 RVA: 0x0113BA68 File Offset: 0x01139C68
 		private void ProcessTrafficBullet()
 		{
 			if (!GameModeModel.Instance.WorldDone)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DF2 RID: 290290 RVA: 0x011E0170 File Offset: 0x011DE370
+		// Token: 0x0603C63F RID: 247359 RVA: 0x0113BB60 File Offset: 0x01139D60
 		private void CreateBullets(int state)
 		{
 			if (this.BulletState == null)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DF3 RID: 290291 RVA: 0x011E02A8 File Offset: 0x011DE4A8
+		// Token: 0x0603C640 RID: 247360 RVA: 0x0113BC98 File Offset: 0x01139E98
 		[NullableContext(1)]
 		private unsafe bool CreateBullet(BulletData bulletData)
 		{
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return bulletEntity != null && bulletEntity.Valid;
 		}
 
-		// Token: 0x06046DF4 RID: 290292 RVA: 0x011E0538 File Offset: 0x011DE738
+		// Token: 0x0603C641 RID: 247361 RVA: 0x0113BF28 File Offset: 0x0113A128
 		private void DestroyBullets(int state)
 		{
 			if (!this.BulletState.ContainsKey(state) || this.BulletState.GetValueOrDefault(state).Count == 0)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DF5 RID: 290293 RVA: 0x011E05B4 File Offset: 0x011DE7B4
+		// Token: 0x0603C642 RID: 247362 RVA: 0x0113BFA4 File Offset: 0x0113A1A4
 		[NullableContext(1)]
 		private bool DestroyBullet(BulletData bulletData)
 		{
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DF6 RID: 290294 RVA: 0x011E0630 File Offset: 0x011DE830
+		// Token: 0x0603C643 RID: 247363 RVA: 0x0113C020 File Offset: 0x0113A220
 		private void HandleUpdateState(int stateId, bool isReady)
 		{
 			this.CurrentState = stateId;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DF7 RID: 290295 RVA: 0x011E06C0 File Offset: 0x011DE8C0
+		// Token: 0x0603C644 RID: 247364 RVA: 0x0113C0B0 File Offset: 0x0113A2B0
 		[NullableContext(1)]
 		private void CreateBulletTransform(BulletData bullet)
 		{
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DF8 RID: 290296 RVA: 0x011E077C File Offset: 0x011DE97C
+		// Token: 0x0603C645 RID: 247365 RVA: 0x0113C16C File Offset: 0x0113A36C
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.Has(EEventName.WorldDone, new Action(this.OnWorldDone)))
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DF9 RID: 290297 RVA: 0x011E0844 File Offset: 0x011DEA44
+		// Token: 0x0603C646 RID: 247366 RVA: 0x0113C234 File Offset: 0x0113A434
 		protected override bool OnClear()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.HandleUpdateState)))
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DFA RID: 290298 RVA: 0x011E0898 File Offset: 0x011DEA98
+		// Token: 0x0603C647 RID: 247367 RVA: 0x0113C288 File Offset: 0x0113A488
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -409,115 +409,129 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneBulletComponent sceneBulletComponent = (SceneBulletComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsInitComplete"))
+			this.IsInitComplete = sceneBulletComponent.IsInitComplete;
+			this.IsEnterTrigger = sceneBulletComponent.IsEnterTrigger;
+			this.CurrentState = sceneBulletComponent.CurrentState;
+			if (sceneBulletComponent.CacheOffset == null)
 			{
-				this.IsInitComplete = sceneBulletComponent.IsInitComplete;
+				this.CacheOffset = null;
 			}
-			if (base.CanResetComponentProperty("IsEnterTrigger"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheOffset), "CacheOffset"))
 			{
-				this.IsEnterTrigger = sceneBulletComponent.IsEnterTrigger;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentState"))
+			if (sceneBulletComponent.CacheRange == null)
 			{
-				this.CurrentState = sceneBulletComponent.CurrentState;
+				this.CacheRange = null;
 			}
-			if (base.CanResetComponentProperty("CacheOffset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheRange), "CacheRange"))
 			{
-				if (sceneBulletComponent.CacheOffset == null)
-				{
-					this.CacheOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheOffset), "CacheOffset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CacheRange"))
+			if (sceneBulletComponent.BulletState == null)
 			{
-				if (sceneBulletComponent.CacheRange == null)
-				{
-					this.CacheRange = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheRange), "CacheRange"))
-				{
-					return false;
-				}
+				this.BulletState = null;
 			}
-			if (base.CanResetComponentProperty("BulletState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BulletState), "BulletState"))
 			{
-				if (sceneBulletComponent.BulletState == null)
-				{
-					this.BulletState = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<BulletData>>>(this.BulletState), "BulletState"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			if (sceneBulletComponent.RangeComp == null)
 			{
-				if (sceneBulletComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				if (sceneBulletComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RoadNetworkComp"))
+			if (sceneBulletComponent.ActorComp == null)
 			{
-				if (sceneBulletComponent.RoadNetworkComp == null)
-				{
-					this.RoadNetworkComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Common.Component.RoadNetworkNavigationComponent>(this.RoadNetworkComp), "RoadNetworkComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ContextMessageId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.ContextMessageId = sceneBulletComponent.ContextMessageId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DisableGenerateByRange"))
+			if (sceneBulletComponent.RoadNetworkComp == null)
 			{
-				this.DisableGenerateByRange = sceneBulletComponent.DisableGenerateByRange;
+				this.RoadNetworkComp = null;
 			}
-			if (base.CanResetComponentProperty("IsPermanentBullet"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoadNetworkComp), "RoadNetworkComp"))
 			{
-				this.IsPermanentBullet = sceneBulletComponent.IsPermanentBullet;
+				return false;
 			}
+			this.ContextMessageId = sceneBulletComponent.ContextMessageId;
+			this.DisableGenerateByRange = sceneBulletComponent.DisableGenerateByRange;
+			this.IsPermanentBullet = sceneBulletComponent.IsPermanentBullet;
 			return true;
 		}
 
-		// Token: 0x04025337 RID: 152375
+		// Token: 0x1700720B RID: 29195
+		// (get) Token: 0x0603C648 RID: 247368 RVA: 0x0113C3F2 File Offset: 0x0113A5F2
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700720C RID: 29196
+		// (get) Token: 0x0603C649 RID: 247369 RVA: 0x0113C3F5 File Offset: 0x0113A5F5
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700720D RID: 29197
+		// (get) Token: 0x0603C64A RID: 247370 RVA: 0x0113C3F8 File Offset: 0x0113A5F8
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700720E RID: 29198
+		// (get) Token: 0x0603C64B RID: 247371 RVA: 0x0113C3FB File Offset: 0x0113A5FB
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700720F RID: 29199
+		// (get) Token: 0x0603C64C RID: 247372 RVA: 0x0113C3FE File Offset: 0x0113A5FE
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF9E RID: 130974
 		private bool IsInitComplete;
 
-		// Token: 0x04025338 RID: 152376
+		// Token: 0x0401FF9F RID: 130975
 		private bool IsEnterTrigger;
 
-		// Token: 0x04025339 RID: 152377
+		// Token: 0x0401FFA0 RID: 130976
 		private int CurrentState;
 
-		// Token: 0x0402533A RID: 152378
+		// Token: 0x0401FFA1 RID: 130977
 		private global::Vector CacheOffset;
 
-		// Token: 0x0402533B RID: 152379
+		// Token: 0x0401FFA2 RID: 130978
 		private global::Vector CacheRange;
 
-		// Token: 0x0402533C RID: 152380
+		// Token: 0x0401FFA3 RID: 130979
 		[Nullable(new byte[]
 		{
 			2,
@@ -526,22 +540,22 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<int, List<BulletData>> BulletState;
 
-		// Token: 0x0402533D RID: 152381
+		// Token: 0x0401FFA4 RID: 130980
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x0402533E RID: 152382
+		// Token: 0x0401FFA5 RID: 130981
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x0402533F RID: 152383
+		// Token: 0x0401FFA6 RID: 130982
 		private CSharpScript.Game.NewWorld.Common.Component.RoadNetworkNavigationComponent RoadNetworkComp;
 
-		// Token: 0x04025340 RID: 152384
+		// Token: 0x0401FFA7 RID: 130983
 		private long? ContextMessageId;
 
-		// Token: 0x04025341 RID: 152385
+		// Token: 0x0401FFA8 RID: 130984
 		private bool DisableGenerateByRange;
 
-		// Token: 0x04025342 RID: 152386
+		// Token: 0x0401FFA9 RID: 130985
 		private bool IsPermanentBullet;
 	}
 }

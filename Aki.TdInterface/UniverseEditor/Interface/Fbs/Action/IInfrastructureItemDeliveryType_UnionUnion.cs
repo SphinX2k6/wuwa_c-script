@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006961 RID: 26977
+	// Token: 0x02007014 RID: 28692
 	public class IInfrastructureItemDeliveryType_UnionUnion
 	{
-		// Token: 0x1700C813 RID: 51219
-		// (get) Token: 0x0602F194 RID: 192916 RVA: 0x0066AF15 File Offset: 0x00669115
-		// (set) Token: 0x0602F195 RID: 192917 RVA: 0x0066AF1D File Offset: 0x0066911D
+		// Token: 0x1700D216 RID: 53782
+		// (get) Token: 0x06031B64 RID: 203620 RVA: 0x006BB3FD File Offset: 0x006B95FD
+		// (set) Token: 0x06031B65 RID: 203621 RVA: 0x006BB405 File Offset: 0x006B9605
 		public IInfrastructureItemDeliveryType_Union Type { get; set; }
 
-		// Token: 0x1700C814 RID: 51220
-		// (get) Token: 0x0602F196 RID: 192918 RVA: 0x0066AF26 File Offset: 0x00669126
-		// (set) Token: 0x0602F197 RID: 192919 RVA: 0x0066AF2E File Offset: 0x0066912E
+		// Token: 0x1700D217 RID: 53783
+		// (get) Token: 0x06031B66 RID: 203622 RVA: 0x006BB40E File Offset: 0x006B960E
+		// (set) Token: 0x06031B67 RID: 203623 RVA: 0x006BB416 File Offset: 0x006B9616
 		public object Value { get; set; }
 
-		// Token: 0x0602F198 RID: 192920 RVA: 0x0066AF37 File Offset: 0x00669137
+		// Token: 0x06031B68 RID: 203624 RVA: 0x006BB41F File Offset: 0x006B961F
 		public IInfrastructureItemDeliveryType_UnionUnion()
 		{
 			this.Type = IInfrastructureItemDeliveryType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602F199 RID: 192921 RVA: 0x0066AF4D File Offset: 0x0066914D
+		// Token: 0x06031B69 RID: 203625 RVA: 0x006BB435 File Offset: 0x006B9635
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602F19A RID: 192922 RVA: 0x0066AF5F File Offset: 0x0066915F
+		// Token: 0x06031B6A RID: 203626 RVA: 0x006BB447 File Offset: 0x006B9647
 		public IInfrastructureItemDeliveryTypeT AsIInfrastructureItemDeliveryType()
 		{
 			return this.As<IInfrastructureItemDeliveryTypeT>();
 		}
 
-		// Token: 0x0602F19B RID: 192923 RVA: 0x0066AF67 File Offset: 0x00669167
+		// Token: 0x06031B6B RID: 203627 RVA: 0x006BB44F File Offset: 0x006B964F
 		public static IInfrastructureItemDeliveryType_UnionUnion FromIInfrastructureItemDeliveryType(IInfrastructureItemDeliveryTypeT _iinfrastructureitemdeliverytype)
 		{
 			return new IInfrastructureItemDeliveryType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F19C RID: 192924 RVA: 0x0066AF7C File Offset: 0x0066917C
+		// Token: 0x06031B6C RID: 203628 RVA: 0x006BB464 File Offset: 0x006B9664
 		public IInfrastructureItemDeliveryObservatoryT AsIInfrastructureItemDeliveryObservatory()
 		{
 			return this.As<IInfrastructureItemDeliveryObservatoryT>();
 		}
 
-		// Token: 0x0602F19D RID: 192925 RVA: 0x0066AF84 File Offset: 0x00669184
+		// Token: 0x06031B6D RID: 203629 RVA: 0x006BB46C File Offset: 0x006B966C
 		public static IInfrastructureItemDeliveryType_UnionUnion FromIInfrastructureItemDeliveryObservatory(IInfrastructureItemDeliveryObservatoryT _iinfrastructureitemdeliveryobservatory)
 		{
 			return new IInfrastructureItemDeliveryType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F19E RID: 192926 RVA: 0x0066AF99 File Offset: 0x00669199
+		// Token: 0x06031B6E RID: 203630 RVA: 0x006BB481 File Offset: 0x006B9681
 		public IInfrastructureItemDeliveryRoadBuildT AsIInfrastructureItemDeliveryRoadBuild()
 		{
 			return this.As<IInfrastructureItemDeliveryRoadBuildT>();
 		}
 
-		// Token: 0x0602F19F RID: 192927 RVA: 0x0066AFA1 File Offset: 0x006691A1
+		// Token: 0x06031B6F RID: 203631 RVA: 0x006BB489 File Offset: 0x006B9689
 		public static IInfrastructureItemDeliveryType_UnionUnion FromIInfrastructureItemDeliveryRoadBuild(IInfrastructureItemDeliveryRoadBuildT _iinfrastructureitemdeliveryroadbuild)
 		{
 			return new IInfrastructureItemDeliveryType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602F1A0 RID: 192928 RVA: 0x0066AFB8 File Offset: 0x006691B8
+		// Token: 0x06031B70 RID: 203632 RVA: 0x006BB4A0 File Offset: 0x006B96A0
 		public static int Pack(FlatBufferBuilder builder, IInfrastructureItemDeliveryType_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000EE RID: 238
+	// Token: 0x020000FD RID: 253
 	public class ConfigBehaviorCommonButtonById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000595 RID: 1429 RVA: 0x00079367 File Offset: 0x00077567
+		// Token: 0x060005EF RID: 1519 RVA: 0x0007ECCB File Offset: 0x0007CECB
 		static ConfigBehaviorCommonButtonById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBehaviorCommonButtonById.CreateStaticDefaultValue), new Action(ConfigBehaviorCommonButtonById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000596 RID: 1430 RVA: 0x00079388 File Offset: 0x00077588
+		// Token: 0x060005F0 RID: 1520 RVA: 0x0007ECEC File Offset: 0x0007CEEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBehaviorCommonButtonById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000597 RID: 1431 RVA: 0x00079407 File Offset: 0x00077607
+		// Token: 0x060005F1 RID: 1521 RVA: 0x0007ED6B File Offset: 0x0007CF6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBehaviorCommonButtonById.LogPair = null;
 			ConfigBehaviorCommonButtonById.HandleId = 0;
 		}
 
-		// Token: 0x06000598 RID: 1432 RVA: 0x00079415 File Offset: 0x00077615
+		// Token: 0x060005F2 RID: 1522 RVA: 0x0007ED79 File Offset: 0x0007CF79
 		public static void Init()
 		{
 			ConfigBehaviorCommonButtonById.HandleId = ConfigCommon.InitDataStatement(ConfigBehaviorCommonButtonById.HandleId, "db_skillbutton.db", "select BinData from `BehaviorCommonButton` where Id=?");
 		}
 
-		// Token: 0x06000599 RID: 1433 RVA: 0x00079430 File Offset: 0x00077630
+		// Token: 0x060005F3 RID: 1523 RVA: 0x0007ED94 File Offset: 0x0007CF94
 		public static BehaviorCommonButton? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBehaviorCommonButtonById.HandleId, ConfigBehaviorCommonButtonById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BehaviorCommonButton?(rootAsBehaviorCommonButton);
 		}
 
-		// Token: 0x04000666 RID: 1638
+		// Token: 0x040006CF RID: 1743
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x04000667 RID: 1639
+		// Token: 0x040006D0 RID: 1744
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x04000668 RID: 1640
+		// Token: 0x040006D1 RID: 1745
 		private const string TABLE = "BehaviorCommonButton";
 
-		// Token: 0x04000669 RID: 1641
+		// Token: 0x040006D2 RID: 1746
 		private const string COMMAND = "select BinData from `BehaviorCommonButton` where Id=?";
 
-		// Token: 0x0400066A RID: 1642
+		// Token: 0x040006D3 RID: 1747
 		private const string KEY_PREFIX = "BehaviorCommonButtonById";
 
-		// Token: 0x0400066B RID: 1643
+		// Token: 0x040006D4 RID: 1748
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400066C RID: 1644
+		// Token: 0x040006D5 RID: 1749
 		private static int HandleId;
 	}
 }

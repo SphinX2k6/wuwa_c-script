@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026D1 RID: 9937
+// Token: 0x02001BBC RID: 7100
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoRankChangeCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A6A RID: 6762
-	// (get) Token: 0x06014613 RID: 83475 RVA: 0x005276A2 File Offset: 0x005258A2
+	// Token: 0x17001AA2 RID: 6818
+	// (get) Token: 0x06011AF5 RID: 72437 RVA: 0x005363DA File Offset: 0x005345DA
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -19,13 +19,13 @@ public class RacingBetsDangoRankChangeCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014614 RID: 83476 RVA: 0x005276A6 File Offset: 0x005258A6
+	// Token: 0x06011AF6 RID: 72438 RVA: 0x005363DE File Offset: 0x005345DE
 	public void Init(List<int> rankList)
 	{
 		this.RankList = rankList;
 	}
 
-	// Token: 0x06014615 RID: 83477 RVA: 0x005276B0 File Offset: 0x005258B0
+	// Token: 0x06011AF7 RID: 72439 RVA: 0x005363E8 File Offset: 0x005345E8
 	public override UniTask OnExecute()
 	{
 		RacingBetsDangoRankChangeCommand.<OnExecute>d__4 <OnExecute>d__;
@@ -36,12 +36,12 @@ public class RacingBetsDangoRankChangeCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014616 RID: 83478 RVA: 0x005276F3 File Offset: 0x005258F3
+	// Token: 0x06011AF8 RID: 72440 RVA: 0x0053642B File Offset: 0x0053462B
 	public override string LogInfo()
 	{
 		return "RacingBetsDangoRankChangeCommand";
 	}
 
-	// Token: 0x0400991D RID: 39197
+	// Token: 0x04009A75 RID: 39541
 	private List<int> RankList = new List<int>();
 }

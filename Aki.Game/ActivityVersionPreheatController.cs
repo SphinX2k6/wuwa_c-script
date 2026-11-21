@@ -7,64 +7,64 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001555 RID: 5461
+// Token: 0x02000A0D RID: 2573
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityVersionPreheatController : ActivityControllerBase
 {
-	// Token: 0x06009C69 RID: 40041 RVA: 0x0021D785 File Offset: 0x0021B985
+	// Token: 0x06007047 RID: 28743 RVA: 0x00227535 File Offset: 0x00225735
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06009C6A RID: 40042 RVA: 0x0021D787 File Offset: 0x0021B987
+	// Token: 0x06007048 RID: 28744 RVA: 0x00227537 File Offset: 0x00225737
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityPreheatMain";
 	}
 
-	// Token: 0x06009C6B RID: 40043 RVA: 0x0021D78E File Offset: 0x0021B98E
+	// Token: 0x06007049 RID: 28745 RVA: 0x0022753E File Offset: 0x0022573E
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivityVersionPreheatSubView();
 	}
 
-	// Token: 0x06009C6C RID: 40044 RVA: 0x0021D795 File Offset: 0x0021B995
+	// Token: 0x0600704A RID: 28746 RVA: 0x00227545 File Offset: 0x00225745
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return VersionPreheatModel.Instance.ActivityData;
 	}
 
-	// Token: 0x06009C6D RID: 40045 RVA: 0x0021D7A1 File Offset: 0x0021B9A1
+	// Token: 0x0600704B RID: 28747 RVA: 0x00227551 File Offset: 0x00225751
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06009C6E RID: 40046 RVA: 0x0021D7A4 File Offset: 0x0021B9A4
+	// Token: 0x0600704C RID: 28748 RVA: 0x00227554 File Offset: 0x00225754
 	protected override void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06009C6F RID: 40047 RVA: 0x0021D7A6 File Offset: 0x0021B9A6
+	// Token: 0x0600704D RID: 28749 RVA: 0x00227556 File Offset: 0x00225756
 	protected override void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06009C70 RID: 40048 RVA: 0x0021D7A8 File Offset: 0x0021B9A8
+	// Token: 0x0600704E RID: 28750 RVA: 0x00227558 File Offset: 0x00225758
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.HandleOnCloseRewardView));
 	}
 
-	// Token: 0x06009C71 RID: 40049 RVA: 0x0021D7C6 File Offset: 0x0021B9C6
+	// Token: 0x0600704F RID: 28751 RVA: 0x00227576 File Offset: 0x00225776
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.HandleOnCloseRewardView));
 	}
 
-	// Token: 0x06009C72 RID: 40050 RVA: 0x0021D7E4 File Offset: 0x0021B9E4
+	// Token: 0x06007050 RID: 28752 RVA: 0x00227594 File Offset: 0x00225794
 	public UniTask RequestPreheatSignRewardRequest(int id, bool myAnswer)
 	{
 		ActivityVersionPreheatController.<RequestPreheatSignRewardRequest>d__10 <RequestPreheatSignRewardRequest>d__;
@@ -76,7 +76,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return <RequestPreheatSignRewardRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C73 RID: 40051 RVA: 0x0021D830 File Offset: 0x0021BA30
+	// Token: 0x06007051 RID: 28753 RVA: 0x002275E0 File Offset: 0x002257E0
 	public UniTask RequestPreheatSignSurveyInfoRequest(int id)
 	{
 		ActivityVersionPreheatController.<RequestPreheatSignSurveyInfoRequest>d__11 <RequestPreheatSignSurveyInfoRequest>d__;
@@ -87,7 +87,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return <RequestPreheatSignSurveyInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C74 RID: 40052 RVA: 0x0021D874 File Offset: 0x0021BA74
+	// Token: 0x06007052 RID: 28754 RVA: 0x00227624 File Offset: 0x00225824
 	public void SendDetailClickLogData(int? id)
 	{
 		ActivityPreheatLogData activityPreheatLogData = new ActivityPreheatLogData();
@@ -101,7 +101,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		LogReportController.Instance.LogReport(activityPreheatLogData);
 	}
 
-	// Token: 0x06009C75 RID: 40053 RVA: 0x0021D8F8 File Offset: 0x0021BAF8
+	// Token: 0x06007053 RID: 28755 RVA: 0x002276A8 File Offset: 0x002258A8
 	[NullableContext(0)]
 	public UniTask<bool> OpenTargetViewAsyncById(int? id, bool fromTree)
 	{
@@ -115,7 +115,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return <OpenTargetViewAsyncById>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C76 RID: 40054 RVA: 0x0021D94C File Offset: 0x0021BB4C
+	// Token: 0x06007054 RID: 28756 RVA: 0x002276FC File Offset: 0x002258FC
 	public void OpenShareView(string photoPath, string nameTextId, string themeTextId)
 	{
 		PhotoSaveViewParam param = new PhotoSaveViewParam
@@ -138,14 +138,14 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhotoSaveView, param, null);
 	}
 
-	// Token: 0x06009C77 RID: 40055 RVA: 0x0021D9C8 File Offset: 0x0021BBC8
+	// Token: 0x06007055 RID: 28757 RVA: 0x00227778 File Offset: 0x00225978
 	public bool IsQuestFinishedById(int id)
 	{
 		int questIdById = VersionPreheatModel.Instance.GetQuestIdById(id);
 		return QuestNewModel.Instance.CheckQuestFinished(questIdById);
 	}
 
-	// Token: 0x06009C78 RID: 40056 RVA: 0x0021D9EC File Offset: 0x0021BBEC
+	// Token: 0x06007056 RID: 28758 RVA: 0x0022779C File Offset: 0x0022599C
 	public bool IsQuestAvailableButNotFinishedById(int id)
 	{
 		int questIdById = VersionPreheatModel.Instance.GetQuestIdById(id);
@@ -153,14 +153,14 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return questState == EQuestState.Ready || questState == EQuestState.Progress;
 	}
 
-	// Token: 0x06009C79 RID: 40057 RVA: 0x0021DA1C File Offset: 0x0021BC1C
+	// Token: 0x06007057 RID: 28759 RVA: 0x002277CC File Offset: 0x002259CC
 	private bool IsQuestProgressById(int id)
 	{
 		int questIdById = VersionPreheatModel.Instance.GetQuestIdById(id);
 		return QuestNewModel.Instance.GetQuestState(questIdById) == EQuestState.Progress;
 	}
 
-	// Token: 0x06009C7A RID: 40058 RVA: 0x0021DA43 File Offset: 0x0021BC43
+	// Token: 0x06007058 RID: 28760 RVA: 0x002277F3 File Offset: 0x002259F3
 	public void HandleQuestDetailClickInReward(int passData)
 	{
 		if (QuestNewModel.Instance.GetQuestState(passData) < EQuestState.Finish)
@@ -169,7 +169,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009C7B RID: 40059 RVA: 0x0021DA6C File Offset: 0x0021BC6C
+	// Token: 0x06007059 RID: 28761 RVA: 0x0022781C File Offset: 0x00225A1C
 	public UniTask HandleVoteClickAsync(int id, bool isLeft)
 	{
 		ActivityVersionPreheatController.<HandleVoteClickAsync>d__19 <HandleVoteClickAsync>d__;
@@ -182,7 +182,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return <HandleVoteClickAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009C7C RID: 40060 RVA: 0x0021DABF File Offset: 0x0021BCBF
+	// Token: 0x0600705A RID: 28762 RVA: 0x0022786F File Offset: 0x00225A6F
 	private void HandleOnCloseRewardView()
 	{
 		CustomPromise waitForRewardClosePromise = this.WaitForRewardClosePromise;
@@ -193,8 +193,8 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		waitForRewardClosePromise.SetResult();
 	}
 
-	// Token: 0x17000D67 RID: 3431
-	// (get) Token: 0x06009C7D RID: 40061 RVA: 0x0021DAD4 File Offset: 0x0021BCD4
+	// Token: 0x17000D88 RID: 3464
+	// (get) Token: 0x0600705B RID: 28763 RVA: 0x00227884 File Offset: 0x00225A84
 	public int SelfPlayerId
 	{
 		get
@@ -203,8 +203,8 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000D68 RID: 3432
-	// (get) Token: 0x06009C7E RID: 40062 RVA: 0x0021DAF3 File Offset: 0x0021BCF3
+	// Token: 0x17000D89 RID: 3465
+	// (get) Token: 0x0600705C RID: 28764 RVA: 0x002278A3 File Offset: 0x00225AA3
 	public static ActivityVersionPreheatController Instance
 	{
 		get
@@ -213,7 +213,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009C7F RID: 40063 RVA: 0x0021DAFA File Offset: 0x0021BCFA
+	// Token: 0x0600705D RID: 28765 RVA: 0x002278AA File Offset: 0x00225AAA
 	public static ActivityVersionPreheatController GetOrCreateInstance()
 	{
 		if (ActivityVersionPreheatController._Instance == null)
@@ -223,7 +223,7 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return ActivityVersionPreheatController._Instance;
 	}
 
-	// Token: 0x06009C80 RID: 40064 RVA: 0x0021DB0E File Offset: 0x0021BD0E
+	// Token: 0x0600705E RID: 28766 RVA: 0x002278BE File Offset: 0x00225ABE
 	public static bool CreateInstance()
 	{
 		if (ActivityVersionPreheatController._Instance != null)
@@ -234,28 +234,28 @@ public class ActivityVersionPreheatController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009C81 RID: 40065 RVA: 0x0021DB24 File Offset: 0x0021BD24
+	// Token: 0x0600705F RID: 28767 RVA: 0x002278D4 File Offset: 0x00225AD4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009C82 RID: 40066 RVA: 0x0021DB26 File Offset: 0x0021BD26
+	// Token: 0x06007060 RID: 28768 RVA: 0x002278D6 File Offset: 0x00225AD6
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityVersionPreheatController._Instance = null;
 	}
 
-	// Token: 0x06009C83 RID: 40067 RVA: 0x0021DB2E File Offset: 0x0021BD2E
+	// Token: 0x06007061 RID: 28769 RVA: 0x002278DE File Offset: 0x00225ADE
 	static ActivityVersionPreheatController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityVersionPreheatController.CreateStaticDefaultValue), new Action(ActivityVersionPreheatController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004480 RID: 17536
+	// Token: 0x04004526 RID: 17702
 	[Nullable(2)]
 	private CustomPromise WaitForRewardClosePromise;
 
-	// Token: 0x04004481 RID: 17537
+	// Token: 0x04004527 RID: 17703
 	[Nullable(2)]
 	private static ActivityVersionPreheatController _Instance;
 }

@@ -12,13 +12,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D33 RID: 7475
+// Token: 0x020011F5 RID: 4597
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 {
-	// Token: 0x1700121E RID: 4638
-	// (get) Token: 0x0600E257 RID: 57943 RVA: 0x00352C1F File Offset: 0x00350E1F
+	// Token: 0x17001248 RID: 4680
+	// (get) Token: 0x0600B674 RID: 46708 RVA: 0x0035E64F File Offset: 0x0035C84F
 	private bool IsInBuild
 	{
 		get
@@ -27,8 +27,8 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x1700121F RID: 4639
-	// (get) Token: 0x0600E258 RID: 57944 RVA: 0x00352C34 File Offset: 0x00350E34
+	// Token: 0x17001249 RID: 4681
+	// (get) Token: 0x0600B675 RID: 46709 RVA: 0x0035E664 File Offset: 0x0035C864
 	private bool IsInRecycle
 	{
 		get
@@ -37,8 +37,8 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x17001220 RID: 4640
-	// (get) Token: 0x0600E259 RID: 57945 RVA: 0x00352C41 File Offset: 0x00350E41
+	// Token: 0x1700124A RID: 4682
+	// (get) Token: 0x0600B676 RID: 46710 RVA: 0x0035E671 File Offset: 0x0035C871
 	private bool IsInPollute
 	{
 		get
@@ -47,8 +47,8 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x17001221 RID: 4641
-	// (get) Token: 0x0600E25A RID: 57946 RVA: 0x00352C56 File Offset: 0x00350E56
+	// Token: 0x1700124B RID: 4683
+	// (get) Token: 0x0600B677 RID: 46711 RVA: 0x0035E686 File Offset: 0x0035C886
 	private bool IsInRotate
 	{
 		get
@@ -57,8 +57,8 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x17001222 RID: 4642
-	// (get) Token: 0x0600E25B RID: 57947 RVA: 0x00352C6B File Offset: 0x00350E6B
+	// Token: 0x1700124C RID: 4684
+	// (get) Token: 0x0600B678 RID: 46712 RVA: 0x0035E69B File Offset: 0x0035C89B
 	private bool IsInDisable
 	{
 		get
@@ -67,7 +67,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E25C RID: 57948 RVA: 0x00352C84 File Offset: 0x00350E84
+	// Token: 0x0600B679 RID: 46713 RVA: 0x0035E6B4 File Offset: 0x0035C8B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -86,7 +86,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		};
 	}
 
-	// Token: 0x0600E25D RID: 57949 RVA: 0x00352D90 File Offset: 0x00350F90
+	// Token: 0x0600B67A RID: 46714 RVA: 0x0035E7C0 File Offset: 0x0035C9C0
 	public override UniTask InitializeAsync()
 	{
 		TrapDefenseBuildTipsPanel.<InitializeAsync>d__26 <InitializeAsync>d__;
@@ -97,7 +97,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E25E RID: 57950 RVA: 0x00352DD4 File Offset: 0x00350FD4
+	// Token: 0x0600B67B RID: 46715 RVA: 0x0035E804 File Offset: 0x0035CA04
 	public override void InitializeTemp()
 	{
 		this.Sequence = new UiSequencePlayer(base.GetRootItem());
@@ -115,7 +115,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600E25F RID: 57951 RVA: 0x00352E54 File Offset: 0x00351054
+	// Token: 0x0600B67C RID: 46716 RVA: 0x0035E884 File Offset: 0x0035CA84
 	private void OnEndSequenceEvent(string sequenceName)
 	{
 		if (sequenceName == "CloseTip")
@@ -153,19 +153,19 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E260 RID: 57952 RVA: 0x00352EBF File Offset: 0x003510BF
+	// Token: 0x0600B67D RID: 46717 RVA: 0x0035E8EF File Offset: 0x0035CAEF
 	protected override void OnShowBattleChildViewPanel(bool isFirst)
 	{
 		this.BindAction();
 	}
 
-	// Token: 0x0600E261 RID: 57953 RVA: 0x00352EC7 File Offset: 0x003510C7
+	// Token: 0x0600B67E RID: 46718 RVA: 0x0035E8F7 File Offset: 0x0035CAF7
 	protected override void OnHideBattleChildViewPanel()
 	{
 		this.UnbindAction();
 	}
 
-	// Token: 0x0600E262 RID: 57954 RVA: 0x00352ECF File Offset: 0x003510CF
+	// Token: 0x0600B67F RID: 46719 RVA: 0x0035E8FF File Offset: 0x0035CAFF
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		if (this.UpdateCannotMode())
@@ -175,13 +175,13 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		this.UpdatePolluteCostNum();
 	}
 
-	// Token: 0x0600E263 RID: 57955 RVA: 0x00352EE5 File Offset: 0x003510E5
+	// Token: 0x0600B680 RID: 46720 RVA: 0x0035E915 File Offset: 0x0035CB15
 	protected override void OnBeforeDestroy()
 	{
 		this.Sequence.Clear();
 	}
 
-	// Token: 0x0600E264 RID: 57956 RVA: 0x00352EF4 File Offset: 0x003510F4
+	// Token: 0x0600B681 RID: 46721 RVA: 0x0035E924 File Offset: 0x0035CB24
 	private void BindAction()
 	{
 		if (!this.IsBindAction)
@@ -192,7 +192,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E265 RID: 57957 RVA: 0x00352F48 File Offset: 0x00351148
+	// Token: 0x0600B682 RID: 46722 RVA: 0x0035E978 File Offset: 0x0035CB78
 	private void UnbindAction()
 	{
 		if (this.IsBindAction)
@@ -203,7 +203,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E266 RID: 57958 RVA: 0x00352F9C File Offset: 0x0035119C
+	// Token: 0x0600B683 RID: 46723 RVA: 0x0035E9CC File Offset: 0x0035CBCC
 	private void RefreshState()
 	{
 		this.RefreshDisableItemActive();
@@ -252,7 +252,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E267 RID: 57959 RVA: 0x00353077 File Offset: 0x00351277
+	// Token: 0x0600B684 RID: 46724 RVA: 0x0035EAA7 File Offset: 0x0035CCA7
 	private void RefreshTipsItem(ETrapDefenseBuildTipsType type)
 	{
 		if (this.Type == type)
@@ -263,13 +263,13 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		this.RefreshState();
 	}
 
-	// Token: 0x0600E268 RID: 57960 RVA: 0x00353090 File Offset: 0x00351290
+	// Token: 0x0600B685 RID: 46725 RVA: 0x0035EAC0 File Offset: 0x0035CCC0
 	private bool CheckSettingItemActive()
 	{
 		return !Info.Instance.IsInTouch() && this.IsInBuild && (!this.IsInPollute || TrapDefenseModel.Instance.BattleData.IsPurificationItemEnough);
 	}
 
-	// Token: 0x0600E269 RID: 57961 RVA: 0x003530C4 File Offset: 0x003512C4
+	// Token: 0x0600B686 RID: 46726 RVA: 0x0035EAF4 File Offset: 0x0035CCF4
 	private void PlayBtnSequence(bool isActive)
 	{
 		if (isActive)
@@ -282,7 +282,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		this.Sequence.PlaySequencePurely("CloseBtn", false, false);
 	}
 
-	// Token: 0x0600E26A RID: 57962 RVA: 0x00353120 File Offset: 0x00351320
+	// Token: 0x0600B687 RID: 46727 RVA: 0x0035EB50 File Offset: 0x0035CD50
 	private void RefreshPolluteItemActive()
 	{
 		UUIItem item = base.GetItem(4);
@@ -310,7 +310,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E26B RID: 57963 RVA: 0x003531E8 File Offset: 0x003513E8
+	// Token: 0x0600B688 RID: 46728 RVA: 0x0035EC18 File Offset: 0x0035CE18
 	private void UpdatePolluteCostNum()
 	{
 		if (this.IsInPollute)
@@ -338,7 +338,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E26C RID: 57964 RVA: 0x003532A4 File Offset: 0x003514A4
+	// Token: 0x0600B689 RID: 46729 RVA: 0x0035ECD4 File Offset: 0x0035CED4
 	private void RefreshDisableItemActive()
 	{
 		UUIItem item = base.GetItem(3);
@@ -356,7 +356,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		this.Sequence.PlaySequencePurely("CloseDisable", false, false);
 	}
 
-	// Token: 0x0600E26D RID: 57965 RVA: 0x00353314 File Offset: 0x00351514
+	// Token: 0x0600B68A RID: 46730 RVA: 0x0035ED44 File Offset: 0x0035CF44
 	private void RefreshCannotPlaceText()
 	{
 		if (this.CannotMode == 1 || this.CannotMode == 0 || this.CannotMode == 7)
@@ -387,7 +387,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		this.Sequence.PlaySequencePurely("StartWarn", false, false);
 	}
 
-	// Token: 0x0600E26E RID: 57966 RVA: 0x0035342C File Offset: 0x0035162C
+	// Token: 0x0600B68B RID: 46731 RVA: 0x0035EE5C File Offset: 0x0035D05C
 	private bool UpdateCannotMode()
 	{
 		int num = 0;
@@ -434,7 +434,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		return true;
 	}
 
-	// Token: 0x0600E26F RID: 57967 RVA: 0x003534BE File Offset: 0x003516BE
+	// Token: 0x0600B68C RID: 46732 RVA: 0x0035EEEE File Offset: 0x0035D0EE
 	private void OnRotateMachineCallback(string name, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 	{
 		if (!this.IsInRotate)
@@ -448,7 +448,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		TowerDefenseEventController.Instance.ExecuteRotateTrap();
 	}
 
-	// Token: 0x0600E270 RID: 57968 RVA: 0x003534D7 File Offset: 0x003516D7
+	// Token: 0x0600B68D RID: 46733 RVA: 0x0035EF07 File Offset: 0x0035D107
 	private void OnRecycleMachineCallback(string name, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 	{
 		if (!this.IsInRecycle)
@@ -462,7 +462,7 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		TowerDefenseEventController.Instance.ExecuteUnOccupyTrap();
 	}
 
-	// Token: 0x0600E271 RID: 57969 RVA: 0x003534F1 File Offset: 0x003516F1
+	// Token: 0x0600B68E RID: 46734 RVA: 0x0035EF21 File Offset: 0x0035D121
 	public void SetRecyclePrice(int recyclePrice)
 	{
 		if (this.RecyclePriceItem != null)
@@ -471,26 +471,26 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		}
 	}
 
-	// Token: 0x0600E272 RID: 57970 RVA: 0x00353507 File Offset: 0x00351707
+	// Token: 0x0600B68F RID: 46735 RVA: 0x0035EF37 File Offset: 0x0035D137
 	public void SetTipsType(ETrapDefenseBuildTipsType type)
 	{
 		this.RefreshTipsItem(type);
 	}
 
-	// Token: 0x0600E273 RID: 57971 RVA: 0x00353510 File Offset: 0x00351710
+	// Token: 0x0600B690 RID: 46736 RVA: 0x0035EF40 File Offset: 0x0035D140
 	public void ResetCannotMode()
 	{
 		this.CannotMode = 0;
 	}
 
-	// Token: 0x0600E274 RID: 57972 RVA: 0x00353519 File Offset: 0x00351719
+	// Token: 0x0600B691 RID: 46737 RVA: 0x0035EF49 File Offset: 0x0035D149
 	public void SetIsInSelectBuild(bool isInSelectBuild)
 	{
 		this.IsInSelectBuild = isInSelectBuild;
 		this.RefreshState();
 	}
 
-	// Token: 0x0600E276 RID: 57974 RVA: 0x00353530 File Offset: 0x00351730
+	// Token: 0x0600B693 RID: 46739 RVA: 0x0035EF60 File Offset: 0x0035D160
 	// Note: this type is marked as 'beforefieldinit'.
 	static TrapDefenseBuildTipsPanel()
 	{
@@ -501,113 +501,113 @@ public class TrapDefenseBuildTipsPanel : BattleChildViewPanel
 		TrapDefenseBuildTipsPanel.cannotPlaceTextMap = dictionary;
 	}
 
-	// Token: 0x040068B1 RID: 26801
+	// Token: 0x04006990 RID: 27024
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ETowerDefenseEventTrapPlacementType, string> cannotPlaceTextMap;
 
-	// Token: 0x040068B2 RID: 26802
+	// Token: 0x04006991 RID: 27025
 	protected bool IsInSelectBuild;
 
-	// Token: 0x040068B3 RID: 26803
+	// Token: 0x04006992 RID: 27026
 	protected bool NeedShowBtnSequence;
 
-	// Token: 0x040068B4 RID: 26804
+	// Token: 0x04006993 RID: 27027
 	private ETrapDefenseBuildTipsType Type;
 
-	// Token: 0x040068B5 RID: 26805
+	// Token: 0x04006994 RID: 27028
 	private bool IsBindAction;
 
-	// Token: 0x040068B6 RID: 26806
+	// Token: 0x04006995 RID: 27029
 	[Nullable(2)]
 	private UUIItem CannotPlaceItem;
 
-	// Token: 0x040068B7 RID: 26807
+	// Token: 0x04006996 RID: 27030
 	[Nullable(2)]
 	private UUIText CannotPlaceText;
 
-	// Token: 0x040068B8 RID: 26808
+	// Token: 0x04006997 RID: 27031
 	private int CannotMode;
 
-	// Token: 0x040068B9 RID: 26809
+	// Token: 0x04006998 RID: 27032
 	[Nullable(2)]
 	private TrapDefenseRecyclePriceItem RecyclePriceItem;
 
-	// Token: 0x040068BA RID: 26810
+	// Token: 0x04006999 RID: 27033
 	protected UiSequencePlayer Sequence;
 
-	// Token: 0x040068BB RID: 26811
+	// Token: 0x0400699A RID: 27034
 	protected UUIText CostNumText;
 
-	// Token: 0x040068BC RID: 26812
+	// Token: 0x0400699B RID: 27035
 	protected UUIItem EnoughItem;
 
-	// Token: 0x040068BD RID: 26813
+	// Token: 0x0400699C RID: 27036
 	protected UUIItem NotEnoughItem;
 
-	// Token: 0x02008339 RID: 33593
+	// Token: 0x020074C2 RID: 29890
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC98 RID: 175256
+		// Token: 0x04025FC0 RID: 155584
 		public const int SettingItem = 0;
 
-		// Token: 0x0402AC99 RID: 175257
+		// Token: 0x04025FC1 RID: 155585
 		public const int RotateItem = 1;
 
-		// Token: 0x0402AC9A RID: 175258
+		// Token: 0x04025FC2 RID: 155586
 		public const int RecycleItem = 2;
 
-		// Token: 0x0402AC9B RID: 175259
+		// Token: 0x04025FC3 RID: 155587
 		public const int DisableItem = 3;
 
-		// Token: 0x0402AC9C RID: 175260
+		// Token: 0x04025FC4 RID: 155588
 		public const int PolluteItem = 4;
 
-		// Token: 0x0402AC9D RID: 175261
+		// Token: 0x04025FC5 RID: 155589
 		public const int CostNum = 5;
 
-		// Token: 0x0402AC9E RID: 175262
+		// Token: 0x04025FC6 RID: 155590
 		public const int CostIcon = 6;
 
-		// Token: 0x0402AC9F RID: 175263
+		// Token: 0x04025FC7 RID: 155591
 		public const int EnoughItem = 7;
 
-		// Token: 0x0402ACA0 RID: 175264
+		// Token: 0x04025FC8 RID: 155592
 		public const int NotEnoughItem = 8;
 
-		// Token: 0x0402ACA1 RID: 175265
+		// Token: 0x04025FC9 RID: 155593
 		public const int CannotPlaceItem = 9;
 
-		// Token: 0x0402ACA2 RID: 175266
+		// Token: 0x04025FCA RID: 155594
 		public const int CannotPlaceText = 10;
 	}
 
-	// Token: 0x0200833A RID: 33594
+	// Token: 0x020074C3 RID: 29891
 	[NullableContext(0)]
 	private static class ECannotMode
 	{
-		// Token: 0x0402ACA3 RID: 175267
+		// Token: 0x04025FCB RID: 155595
 		public const int None = 0;
 
-		// Token: 0x0402ACA4 RID: 175268
+		// Token: 0x04025FCC RID: 155596
 		public const int IsInDisable = 1;
 
-		// Token: 0x0402ACA5 RID: 175269
+		// Token: 0x04025FCD RID: 155597
 		public const int GroundLimit = 2;
 
-		// Token: 0x0402ACA6 RID: 175270
+		// Token: 0x04025FCE RID: 155598
 		public const int WallLimit = 3;
 
-		// Token: 0x0402ACA7 RID: 175271
+		// Token: 0x04025FCF RID: 155599
 		public const int RoofLimit = 4;
 
-		// Token: 0x0402ACA8 RID: 175272
+		// Token: 0x04025FD0 RID: 155600
 		public const int NumLimit = 5;
 
-		// Token: 0x0402ACA9 RID: 175273
+		// Token: 0x04025FD1 RID: 155601
 		public const int GoldLimit = 6;
 
-		// Token: 0x0402ACAA RID: 175274
+		// Token: 0x04025FD2 RID: 155602
 		public const int IsNotInSelectBuild = 7;
 	}
 }

@@ -16,18 +16,18 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.GameSettings
 {
-	// Token: 0x02007241 RID: 29249
+	// Token: 0x020063C0 RID: 25536
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameSettingsUtils : IStaticVariableResetter
 	{
-		// Token: 0x06047AF0 RID: 293616 RVA: 0x01258DFE File Offset: 0x01256FFE
+		// Token: 0x0603DE9D RID: 253597 RVA: 0x011F9178 File Offset: 0x011F7378
 		static GameSettingsUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameSettingsUtils.CreateStaticDefaultValue), new Action(GameSettingsUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047AF1 RID: 293617 RVA: 0x01258E20 File Offset: 0x01257020
+		// Token: 0x0603DE9E RID: 253598 RVA: 0x011F9197 File Offset: 0x011F7397
 		public static void CreateStaticDefaultValue()
 		{
 			GameSettingsUtils.Fsr3FgSwitchStates = new Dictionary<int, int>
@@ -49,12 +49,10 @@ namespace CSharpScript.Game.GameSettings
 					0
 				}
 			};
-			GameSettingsUtils.GrassCullDistanceCache = null;
-			GameSettingsUtils.GrassMobileCullDistanceCache = null;
 			GameSettingsUtils.GrassLODDistanceScaleCache = null;
 		}
 
-		// Token: 0x06047AF2 RID: 293618 RVA: 0x01258E78 File Offset: 0x01257078
+		// Token: 0x0603DE9F RID: 253599 RVA: 0x011F91D0 File Offset: 0x011F73D0
 		public static void ResetStaticDefaultValue()
 		{
 			GameSettingsUtils.NvidiaSuperSamplingQualityCache = null;
@@ -64,19 +62,20 @@ namespace CSharpScript.Game.GameSettings
 			GameSettingsUtils.Fsr3FgApplyMode = EFFXFIApplyMode.Default;
 			GameSettingsUtils.Fsr3FgInTemporaryApplyState = false;
 			GameSettingsUtils.Fsr3FgSwitchStates = null;
-			GameSettingsUtils.GrassCullDistanceCache = null;
-			GameSettingsUtils.GrassMobileCullDistanceCache = null;
 			GameSettingsUtils.GrassLODDistanceScaleCache = null;
+			GameSettingsUtils.DistanceConfig = null;
+			GameSettingsUtils.AppliedDistanceQuality = null;
+			GameSettingsUtils.HasAppliedRenderDistance = false;
 		}
 
-		// Token: 0x06047AF3 RID: 293619 RVA: 0x01258EDC File Offset: 0x012570DC
+		// Token: 0x0603DEA0 RID: 253600 RVA: 0x011F9234 File Offset: 0x011F7434
 		public static bool ApplyVolume(float value, string volumeTag)
 		{
 			UAkGameplayStatics.SetRTPCValue(null, value, 0, null, FNameUtil.GetDynamicFName(volumeTag).Value);
 			return true;
 		}
 
-		// Token: 0x06047AF4 RID: 293620 RVA: 0x01258F04 File Offset: 0x01257104
+		// Token: 0x0603DEA1 RID: 253601 RVA: 0x011F925C File Offset: 0x011F745C
 		public unsafe static bool ApplyImageQualityOnly(int value)
 		{
 			if (UKuroRenderingRuntimeBPPluginBPLibrary.GetCVarFloat("r.Kuro.Movie.EnableCGMovieRendering") > 0f)
@@ -91,9 +90,11 @@ namespace CSharpScript.Game.GameSettings
 				UPerfSightHelper.PostEvent(815, GameSettingsDeviceRender.Instance.CPUFrequency.ToString());
 				UPerfSightHelper.PostEvent(816, GameSettingsDeviceRender.Instance.CPUCoresIncludingHyperthreads.ToString());
 				UPerfSightHelper.PostEvent(825, GameSettingsDeviceRender.Instance.IsVulkanRHI().ToString());
+				UPerfSightHelper.PostEvent(841, GameSettingsDeviceRender.Instance.IsMetalCpp().ToString());
 			}
 			FCrashSightProxy.SetCustomData("DX12", GameSettingsDeviceRender.Instance.GetD3D12Type().ToString());
 			FCrashSightProxy.SetCustomData("Vulkan", GameSettingsDeviceRender.Instance.IsVulkanRHI().ToString());
+			FCrashSightProxy.SetCustomData("Metal-cpp", GameSettingsDeviceRender.Instance.IsMetalCpp().ToString());
 			UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
 			if (gameUserSettings == null)
 			{
@@ -105,38 +106,40 @@ namespace CSharpScript.Game.GameSettings
 				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				return false;
 			}
+			GameSettingsUtils.RestoreGrassLodDistanceBase();
 			bool flag = Info.Instance.IsPcOrGamepadPlatform();
 			bool flag2 = Info.Instance.IsMobilePlatform();
-			bool flag3 = Info.Instance.IsPs5Platform() || (Info.Instance.IsXboxPlatform() && !Info.Instance.IsWinGDKPlatform());
+			bool flag3 = Info.Instance.IsPs5Platform();
+			bool flag4 = Info.Instance.IsXboxPlatform() && !Info.Instance.IsWinGDKPlatform();
+			int? num = null;
 			Log instance2 = Log.Instance;
 			ELogModule module2 = ELogModule.GameSettings;
 			ELogAuthor author2 = ELogAuthor.WZ;
 			string message2 = "ApplyImageQualityOnly: ";
-			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("isPcOrGamepadPlatform", flag.ToString());
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("isMobilePlatform", flag2.ToString());
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("isSingleImageQualityOption", flag3.ToString());
-			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("isPcOrGamepadPlatform", flag.ToString());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("isMobilePlatform", flag2.ToString());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("isPs5Platform", flag3.ToString());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("isXboxConsolePlatform", flag4.ToString());
+			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 			if (flag)
 			{
-				if (flag3)
+				if (flag3 || flag4)
 				{
-					int num;
-					if (value == 3)
-					{
-						num = 1;
-					}
-					else
-					{
-						num = 0;
-					}
 					Log instance3 = Log.Instance;
 					ELogModule module3 = ELogModule.GameSettings;
 					ELogAuthor author3 = ELogAuthor.ZYT;
-					string message3 = "优先应用的画质等级[done]@[PS5/XSX]";
-					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("PS5/XSX quality level", num);
-					instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-					gameUserSettings.SetGameQualitySettingLevel((float)num);
+					string message3 = "优先应用的画质等级[done]@[Console]";
+					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("platform", flag3 ? "PS5" : "Xbox");
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("menuQualityLevel", value);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("gameQualitySettingLevel", value);
+					instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
+					gameUserSettings.SetGameQualitySettingLevel((float)value);
+					if (flag3)
+					{
+						num = new int?(value);
+					}
 				}
 				else
 				{
@@ -164,10 +167,14 @@ namespace CSharpScript.Game.GameSettings
 					ELogModule module4 = ELogModule.GameSettings;
 					ELogAuthor author4 = ELogAuthor.WZ;
 					string message4 = "优先应用的画质等级[done]@[Pc或手柄平台]";
-					ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("quality level", value);
-					instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("quality level", value);
+					instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 				}
 				gameUserSettings.ApplySettings(true);
+				if (num != null)
+				{
+					GameSettingsUtils.ApplyPs5RenderResolution(num.Value);
+				}
 			}
 			else if (flag2)
 			{
@@ -176,23 +183,45 @@ namespace CSharpScript.Game.GameSettings
 				ELogModule module5 = ELogModule.GameSettings;
 				ELogAuthor author5 = ELogAuthor.WZ;
 				string message5 = "优先应用的画质等级[done]@[移动端平台]";
-				ValueTuple<string, object> valueTuple4 = new ValueTuple<string, object>("quality level", value);
-				instance5.Info(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
+				ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("quality level", value);
+				instance5.Info(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 			}
 			GameSettingsUtils.ReApplyMaterialQualityLevel(new int?(value));
-			GameSettingsUtils.GrassCullDistanceCache = new float?(UKismetSystemLibrary.GetConsoleVariableFloatValue("r.Kuro.Foliage.GrassCullDistanceMax"));
-			GameSettingsUtils.GrassMobileCullDistanceCache = new float?(UKismetSystemLibrary.GetConsoleVariableFloatValue("r.Kuro.Foliage.MobileGrassCullDistanceMax"));
-			GameSettingsUtils.GrassLODDistanceScaleCache = new float?(UKismetSystemLibrary.GetConsoleVariableFloatValue("foliage.LODDistanceScale"));
+			GameSettingsUtils.RefreshDistanceSettingsAfterQuality(value);
 			return true;
 		}
 
-		// Token: 0x06047AF5 RID: 293621 RVA: 0x01259277 File Offset: 0x01257477
+		// Token: 0x0603DEA2 RID: 253602 RVA: 0x011F9670 File Offset: 0x011F7870
+		private unsafe static void ApplyPs5RenderResolution(int gameQualitySettingLevel)
+		{
+			string consoleModelName = UKuroStaticLibrary.GetConsoleModelName();
+			bool flag = consoleModelName == "PS5PRO";
+			int num = (flag && gameQualitySettingLevel == 1) ? 50 : 77;
+			UObject world = GlobalData.World;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(19, 1);
+			defaultInterpolatedStringHandler.AppendLiteral("r.ScreenPercentage ");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(num);
+			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.ZYT;
+			string message = "PS5渲染分辨率配置";
+			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("consoleModelName", consoleModelName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("isPs5Pro", flag.ToString());
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("gameQualitySettingLevel", gameQualitySettingLevel);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("qualityMode", (gameQualitySettingLevel == 1) ? "性能优先" : "画质优先");
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("screenPercentage", num);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
+		}
+
+		// Token: 0x0603DEA3 RID: 253603 RVA: 0x011F978A File Offset: 0x011F798A
 		public static void SetIsCustomImageQuality(bool value)
 		{
 			LocalStorage.SetGlobal<bool>(ELocalStorageGlobalKey.IsCustomImageQuality, value);
 		}
 
-		// Token: 0x06047AF6 RID: 293622 RVA: 0x01259284 File Offset: 0x01257484
+		// Token: 0x0603DEA4 RID: 253604 RVA: 0x011F9798 File Offset: 0x011F7998
 		public static bool ReApplyMaterialQualityLevel(int? value = null)
 		{
 			int? num = value;
@@ -205,7 +234,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AF7 RID: 293623 RVA: 0x012592E0 File Offset: 0x012574E0
+		// Token: 0x0603DEA5 RID: 253605 RVA: 0x011F97F4 File Offset: 0x011F79F4
 		public static bool ApplyShadowQuality(int value)
 		{
 			UObject world = GlobalData.World;
@@ -224,7 +253,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AF8 RID: 293624 RVA: 0x01259360 File Offset: 0x01257560
+		// Token: 0x0603DEA6 RID: 253606 RVA: 0x011F9874 File Offset: 0x011F7A74
 		public static bool ApplyDisplayMode(int value)
 		{
 			EWindowMode[] array = new EWindowMode[]
@@ -241,13 +270,13 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AF9 RID: 293625 RVA: 0x012593B5 File Offset: 0x012575B5
+		// Token: 0x0603DEA7 RID: 253607 RVA: 0x011F98C9 File Offset: 0x011F7AC9
 		public static bool ApplyResourceStandard(int value)
 		{
 			return true;
 		}
 
-		// Token: 0x06047AFA RID: 293626 RVA: 0x012593B8 File Offset: 0x012575B8
+		// Token: 0x0603DEA8 RID: 253608 RVA: 0x011F98CC File Offset: 0x011F7ACC
 		public static bool ApplyResolution(int value)
 		{
 			FIntPoint resolutionByList = GameSettingsDeviceRender.Instance.GetResolutionByList(value);
@@ -275,7 +304,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AFB RID: 293627 RVA: 0x01259440 File Offset: 0x01257640
+		// Token: 0x0603DEA9 RID: 253609 RVA: 0x011F9954 File Offset: 0x011F7B54
 		public static bool ApplyBrightness(float value)
 		{
 			float num;
@@ -297,7 +326,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AFC RID: 293628 RVA: 0x012594EC File Offset: 0x012576EC
+		// Token: 0x0603DEAA RID: 253610 RVA: 0x011F9A00 File Offset: 0x011F7C00
 		public static bool ApplyHighestFps(int value)
 		{
 			int frameByList = GameSettingsDeviceRender.Instance.GetFrameByList(value);
@@ -305,7 +334,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AFD RID: 293629 RVA: 0x01259514 File Offset: 0x01257714
+		// Token: 0x0603DEAB RID: 253611 RVA: 0x011F9A28 File Offset: 0x011F7C28
 		public static bool ApplyNiagaraQuality(int value)
 		{
 			UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
@@ -340,7 +369,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AFE RID: 293630 RVA: 0x01259600 File Offset: 0x01257800
+		// Token: 0x0603DEAC RID: 253612 RVA: 0x011F9B14 File Offset: 0x011F7D14
 		public unsafe static bool ApplyImageDetail(int value)
 		{
 			if (PerfSightController.IsEnable)
@@ -428,7 +457,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047AFF RID: 293631 RVA: 0x01259904 File Offset: 0x01257B04
+		// Token: 0x0603DEAD RID: 253613 RVA: 0x011F9E18 File Offset: 0x011F8018
 		public static bool ApplyAntiAliasing(int value)
 		{
 			if (!Info.Instance.IsPcOrGamepadPlatform())
@@ -454,7 +483,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B00 RID: 293632 RVA: 0x012599A4 File Offset: 0x01257BA4
+		// Token: 0x0603DEAE RID: 253614 RVA: 0x011F9EB8 File Offset: 0x011F80B8
 		public static bool ApplySceneAo(int value, int? shadowQualityOverride = null)
 		{
 			if (Info.Instance.IsPcOrGamepadPlatform())
@@ -503,7 +532,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B01 RID: 293633 RVA: 0x01259B48 File Offset: 0x01257D48
+		// Token: 0x0603DEAF RID: 253615 RVA: 0x011FA05C File Offset: 0x011F825C
 		public static bool ApplyNpcDensity(int value)
 		{
 			int num = value;
@@ -525,7 +554,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B02 RID: 293634 RVA: 0x01259BC4 File Offset: 0x01257DC4
+		// Token: 0x0603DEB0 RID: 253616 RVA: 0x011FA0D8 File Offset: 0x011F82D8
 		public static bool ApplyNvidiaSuperSamplingEnable(int value, EGameSettingsApplyReason reason)
 		{
 			if (Info.Instance.IsPs5Platform())
@@ -569,7 +598,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B03 RID: 293635 RVA: 0x01259CD0 File Offset: 0x01257ED0
+		// Token: 0x0603DEB1 RID: 253617 RVA: 0x011FA1E4 File Offset: 0x011F83E4
 		public static bool ApplyNvidiaSuperSamplingFrameGenerate(int value)
 		{
 			if (!GameSettingsDeviceRender.Instance.IsDlss3GpuDevice())
@@ -587,7 +616,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B04 RID: 293636 RVA: 0x01259D10 File Offset: 0x01257F10
+		// Token: 0x0603DEB2 RID: 253618 RVA: 0x011FA224 File Offset: 0x011F8424
 		public static bool ApplyPcVsync(int value)
 		{
 			UGameUserSettings gameUserSettings = UGameUserSettings.GetGameUserSettings();
@@ -600,7 +629,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B05 RID: 293637 RVA: 0x01259D40 File Offset: 0x01257F40
+		// Token: 0x0603DEB3 RID: 253619 RVA: 0x011FA254 File Offset: 0x011F8454
 		public static bool ApplyNvidiaSuperSamplingQuality(int value)
 		{
 			if (!GameSettingsDeviceRender.Instance.IsDlssGpuDevice())
@@ -665,7 +694,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B06 RID: 293638 RVA: 0x01259EF8 File Offset: 0x012580F8
+		// Token: 0x0603DEB4 RID: 253620 RVA: 0x011FA40C File Offset: 0x011F860C
 		public static bool ApplyNvidiaSuperSamplingSharpness(float value)
 		{
 			if (!GameSettingsDeviceRender.Instance.IsDlssGpuDevice())
@@ -679,13 +708,13 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B07 RID: 293639 RVA: 0x01259F1B File Offset: 0x0125811B
+		// Token: 0x0603DEB5 RID: 253621 RVA: 0x011FA42F File Offset: 0x011F862F
 		public static bool ApplyNvidiaReflex(int value)
 		{
 			return true;
 		}
 
-		// Token: 0x06047B08 RID: 293640 RVA: 0x01259F20 File Offset: 0x01258120
+		// Token: 0x0603DEB6 RID: 253622 RVA: 0x011FA434 File Offset: 0x011F8634
 		public static bool ApplyHdrEnable(int value)
 		{
 			UObject world = GlobalData.World;
@@ -696,7 +725,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B09 RID: 293641 RVA: 0x01259F60 File Offset: 0x01258160
+		// Token: 0x0603DEB7 RID: 253623 RVA: 0x011FA474 File Offset: 0x011F8674
 		public static bool ApplyFsrEnable(int value)
 		{
 			if (GameSettingsDeviceRender.Instance.IsDlssGpuDevice())
@@ -707,18 +736,9 @@ namespace CSharpScript.Game.GameSettings
 			{
 				return false;
 			}
-			if (Info.Instance.IsXSXPlatform())
-			{
-				return false;
-			}
 			if (Info.Instance.IsGamepadPlatform())
 			{
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.TemporalAASamples 4", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.FidelityFX.FSR.PrimaryUpscale 1", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.ScreenPercentage 77", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MipMapLODBias -0.3765", null);
-				UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.TemporalAACurrentFrameWeight 0.09", null);
-				return true;
+				return false;
 			}
 			if (!Info.Instance.IsPcPlatform())
 			{
@@ -761,7 +781,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0A RID: 293642 RVA: 0x0125A130 File Offset: 0x01258330
+		// Token: 0x0603DEB8 RID: 253624 RVA: 0x011FA5E4 File Offset: 0x011F87E4
 		public static bool ApplyXessEnable(int value)
 		{
 			UObject world = GlobalData.World;
@@ -772,7 +792,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0B RID: 293643 RVA: 0x0125A170 File Offset: 0x01258370
+		// Token: 0x0603DEB9 RID: 253625 RVA: 0x011FA624 File Offset: 0x011F8824
 		public static bool ApplyXessQuality(int value)
 		{
 			UObject world = GlobalData.World;
@@ -783,7 +803,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0C RID: 293644 RVA: 0x0125A1B0 File Offset: 0x012583B0
+		// Token: 0x0603DEBA RID: 253626 RVA: 0x011FA664 File Offset: 0x011F8864
 		public static bool ApplyXess2Enable(int value)
 		{
 			bool flag = value != 0;
@@ -799,7 +819,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0D RID: 293645 RVA: 0x0125A1F8 File Offset: 0x012583F8
+		// Token: 0x0603DEBB RID: 253627 RVA: 0x011FA6AC File Offset: 0x011F88AC
 		public static bool ApplyXess2Fg(int value)
 		{
 			GameSettingsDeviceRender.Instance.EnableXefg(value);
@@ -810,7 +830,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0E RID: 293646 RVA: 0x0125A220 File Offset: 0x01258420
+		// Token: 0x0603DEBC RID: 253628 RVA: 0x011FA6D4 File Offset: 0x011F88D4
 		public static bool ApplyXess2Quality(int value)
 		{
 			UObject world = GlobalData.World;
@@ -825,7 +845,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B0F RID: 293647 RVA: 0x0125A278 File Offset: 0x01258478
+		// Token: 0x0603DEBD RID: 253629 RVA: 0x011FA72C File Offset: 0x011F892C
 		public static bool ApplyFsr3Enable(int value)
 		{
 			if (!UKuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn())
@@ -849,7 +869,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B10 RID: 293648 RVA: 0x0125A308 File Offset: 0x01258508
+		// Token: 0x0603DEBE RID: 253630 RVA: 0x011FA7BC File Offset: 0x011F89BC
 		public static bool ApplyFsr3Fg(int value, EFFXFIApplyMode mode)
 		{
 			if (!UKuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn())
@@ -880,19 +900,19 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B11 RID: 293649 RVA: 0x0125A3B0 File Offset: 0x012585B0
+		// Token: 0x0603DEBF RID: 253631 RVA: 0x011FA864 File Offset: 0x011F8A64
 		public static bool IsFsr3FgEnable()
 		{
 			return GameSettingsUtils.Fsr3FgEnable;
 		}
 
-		// Token: 0x06047B12 RID: 293650 RVA: 0x0125A3B7 File Offset: 0x012585B7
+		// Token: 0x0603DEC0 RID: 253632 RVA: 0x011FA86B File Offset: 0x011F8A6B
 		public static EFFXFIApplyMode GetFsr3FgApplyMode()
 		{
 			return GameSettingsUtils.Fsr3FgApplyMode;
 		}
 
-		// Token: 0x06047B13 RID: 293651 RVA: 0x0125A3C0 File Offset: 0x012585C0
+		// Token: 0x0603DEC1 RID: 253633 RVA: 0x011FA874 File Offset: 0x011F8A74
 		public static int GetFsr3FgSwitchState(EFFXFIApplyMode mode)
 		{
 			int result;
@@ -903,31 +923,31 @@ namespace CSharpScript.Game.GameSettings
 			return result;
 		}
 
-		// Token: 0x06047B14 RID: 293652 RVA: 0x0125A3DF File Offset: 0x012585DF
+		// Token: 0x0603DEC2 RID: 253634 RVA: 0x011FA893 File Offset: 0x011F8A93
 		public static bool IsTemporaryFFXFIApplyMode(EFFXFIApplyMode mode)
 		{
 			return mode > EFFXFIApplyMode.Default;
 		}
 
-		// Token: 0x06047B15 RID: 293653 RVA: 0x0125A3E5 File Offset: 0x012585E5
+		// Token: 0x0603DEC3 RID: 253635 RVA: 0x011FA899 File Offset: 0x011F8A99
 		public static bool IsInTemporaryFFXFIApplyState()
 		{
 			return GameSettingsUtils.Fsr3FgInTemporaryApplyState;
 		}
 
-		// Token: 0x06047B16 RID: 293654 RVA: 0x0125A3EC File Offset: 0x012585EC
+		// Token: 0x0603DEC4 RID: 253636 RVA: 0x011FA8A0 File Offset: 0x011F8AA0
 		public static void EnterTemporaryFFXFIApplyState()
 		{
 			GameSettingsUtils.Fsr3FgInTemporaryApplyState = true;
 		}
 
-		// Token: 0x06047B17 RID: 293655 RVA: 0x0125A3F4 File Offset: 0x012585F4
+		// Token: 0x0603DEC5 RID: 253637 RVA: 0x011FA8A8 File Offset: 0x011F8AA8
 		public static void LeaveTemporaryFFXFIApplyState()
 		{
 			GameSettingsUtils.Fsr3FgInTemporaryApplyState = false;
 		}
 
-		// Token: 0x06047B18 RID: 293656 RVA: 0x0125A3FC File Offset: 0x012585FC
+		// Token: 0x0603DEC6 RID: 253638 RVA: 0x011FA8B0 File Offset: 0x011F8AB0
 		public static bool ApplyFsr3Quality(int value)
 		{
 			if (!UKuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn())
@@ -947,7 +967,26 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B19 RID: 293657 RVA: 0x0125A460 File Offset: 0x01258660
+		// Token: 0x0603DEC7 RID: 253639 RVA: 0x011FA914 File Offset: 0x011F8B14
+		public unsafe static bool ApplyPssrEnable(int value, EGameSettingsApplyReason reason)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.ZYT;
+			string message = "ApplyPssrEnable";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("r.SIE.PSSR.Enable", value);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("reason", reason);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+			UObject world = GlobalData.World;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(18, 1);
+			defaultInterpolatedStringHandler.AppendLiteral("r.SIE.PSSR.Enable ");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
+			return true;
+		}
+
+		// Token: 0x0603DEC8 RID: 253640 RVA: 0x011FA9B4 File Offset: 0x011F8BB4
 		public static bool ApplyMetalFxEnable(int value)
 		{
 			UObject world = GlobalData.World;
@@ -967,7 +1006,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1A RID: 293658 RVA: 0x0125A4F0 File Offset: 0x012586F0
+		// Token: 0x0603DEC9 RID: 253641 RVA: 0x011FAA44 File Offset: 0x011F8C44
 		public static bool ApplyBloomEnable(int value)
 		{
 			UObject world = GlobalData.World;
@@ -982,7 +1021,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1B RID: 293659 RVA: 0x0125A546 File Offset: 0x01258746
+		// Token: 0x0603DECA RID: 253642 RVA: 0x011FAA9A File Offset: 0x011F8C9A
 		public static bool ApplyIrxEnable(int value)
 		{
 			if (value == 1)
@@ -996,7 +1035,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1C RID: 293660 RVA: 0x0125A564 File Offset: 0x01258764
+		// Token: 0x0603DECB RID: 253643 RVA: 0x011FAAB8 File Offset: 0x011F8CB8
 		public static bool ApplySceneLightQuality(int value)
 		{
 			if (!Info.Instance.IsMobilePlatform())
@@ -1053,7 +1092,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1D RID: 293661 RVA: 0x0125A670 File Offset: 0x01258870
+		// Token: 0x0603DECC RID: 253644 RVA: 0x011FABC4 File Offset: 0x011F8DC4
 		public static bool ApplyVolumeFog(int value)
 		{
 			if (!GameSettingsDeviceRender.Instance.IsEnableVolumeFog())
@@ -1081,7 +1120,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1E RID: 293662 RVA: 0x0125A718 File Offset: 0x01258918
+		// Token: 0x0603DECD RID: 253645 RVA: 0x011FAC6C File Offset: 0x011F8E6C
 		public static bool ApplyVolumeLight(int value)
 		{
 			if (Info.Instance.IsPcOrGamepadPlatform())
@@ -1108,7 +1147,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B1F RID: 293663 RVA: 0x0125A7C8 File Offset: 0x012589C8
+		// Token: 0x0603DECE RID: 253646 RVA: 0x011FAD1C File Offset: 0x011F8F1C
 		public static bool ApplyMotionBlur(float value)
 		{
 			CameraModel instance = CameraModel.Instance;
@@ -1125,7 +1164,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B20 RID: 293664 RVA: 0x0125A844 File Offset: 0x01258A44
+		// Token: 0x0603DECF RID: 253647 RVA: 0x011FAD98 File Offset: 0x011F8F98
 		public unsafe static bool ApplyMobileResolution(int value)
 		{
 			if (!Info.Instance.IsMobilePlatform())
@@ -1205,13 +1244,13 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B21 RID: 293665 RVA: 0x0125AAAD File Offset: 0x01258CAD
+		// Token: 0x0603DED0 RID: 253648 RVA: 0x011FB001 File Offset: 0x011F9201
 		public static bool ApplySuperResolution(int value)
 		{
 			return false;
 		}
 
-		// Token: 0x06047B22 RID: 293666 RVA: 0x0125AAB0 File Offset: 0x01258CB0
+		// Token: 0x0603DED1 RID: 253649 RVA: 0x011FB004 File Offset: 0x011F9204
 		public static bool ApplyHarmonySuperResolution(int value)
 		{
 			if (value > 0)
@@ -1232,7 +1271,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B23 RID: 293667 RVA: 0x0125AB24 File Offset: 0x01258D24
+		// Token: 0x0603DED2 RID: 253650 RVA: 0x011FB078 File Offset: 0x011F9278
 		public static bool ApplyHarmonyRayTracingBoost(int value)
 		{
 			if (value <= 0)
@@ -1262,31 +1301,31 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B24 RID: 293668 RVA: 0x0125AC08 File Offset: 0x01258E08
+		// Token: 0x0603DED3 RID: 253651 RVA: 0x011FB15C File Offset: 0x011F935C
 		public static void ApplyHorizontalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraBaseYawSensitivity((double)value);
 		}
 
-		// Token: 0x06047B25 RID: 293669 RVA: 0x0125AC1B File Offset: 0x01258E1B
+		// Token: 0x0603DED4 RID: 253652 RVA: 0x011FB16F File Offset: 0x011F936F
 		public static void ApplyVerticalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraBasePitchSensitivity((double)value);
 		}
 
-		// Token: 0x06047B26 RID: 293670 RVA: 0x0125AC2E File Offset: 0x01258E2E
+		// Token: 0x0603DED5 RID: 253653 RVA: 0x011FB182 File Offset: 0x011F9382
 		public static void ApplyAimHorizontalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraAimingYawSensitivity((double)value);
 		}
 
-		// Token: 0x06047B27 RID: 293671 RVA: 0x0125AC41 File Offset: 0x01258E41
+		// Token: 0x0603DED6 RID: 253654 RVA: 0x011FB195 File Offset: 0x011F9395
 		public static void ApplyAimVerticalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraAimingPitchSensitivity((double)value);
 		}
 
-		// Token: 0x06047B28 RID: 293672 RVA: 0x0125AC54 File Offset: 0x01258E54
+		// Token: 0x0603DED7 RID: 253655 RVA: 0x011FB1A8 File Offset: 0x011F93A8
 		public static void ApplyCameraShakeStrength(float value)
 		{
 			float num = 0f;
@@ -1312,7 +1351,7 @@ namespace CSharpScript.Game.GameSettings
 			CameraModel.Instance.MainModel.SetCameraShakeModify((double)num);
 		}
 
-		// Token: 0x06047B29 RID: 293673 RVA: 0x0125ACC4 File Offset: 0x01258EC4
+		// Token: 0x0603DED8 RID: 253656 RVA: 0x011FB218 File Offset: 0x011F9418
 		public static bool ApplyTextLanguage(int value)
 		{
 			string languageCodeById = GameSettingsManager.Instance.GetLanguageCodeById(value);
@@ -1324,11 +1363,10 @@ namespace CSharpScript.Game.GameSettings
 			LanguageSystem.Instance.PackageLanguage = languageCodeById;
 			KuroSdkController.Instance.PostKuroSdkEvent(EKuroSdkEventKey.KuroNotiLanguage);
 			EventSystem.Instance.Emit<string, string>(EEventName.TextLanguageChange, packageLanguage, languageCodeById);
-			EventSystemBridge.EmitToJavaScript<int>(2577U, 0, value);
 			return true;
 		}
 
-		// Token: 0x06047B2A RID: 293674 RVA: 0x0125AD28 File Offset: 0x01258F28
+		// Token: 0x0603DED9 RID: 253657 RVA: 0x011FB270 File Offset: 0x011F9470
 		public static bool ApplyTextLanguageOnGameStart(int value)
 		{
 			string languageCodeById = GameSettingsManager.Instance.GetLanguageCodeById(value);
@@ -1340,7 +1378,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B2B RID: 293675 RVA: 0x0125AD54 File Offset: 0x01258F54
+		// Token: 0x0603DEDA RID: 253658 RVA: 0x011FB29C File Offset: 0x011F949C
 		public static bool ApplyLanguageAudio(int value)
 		{
 			string audioCodeById = GameSettingsManager.Instance.GetAudioCodeById(value);
@@ -1364,68 +1402,68 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B2C RID: 293676 RVA: 0x0125ADC3 File Offset: 0x01258FC3
+		// Token: 0x0603DEDB RID: 253659 RVA: 0x011FB30B File Offset: 0x011F950B
 		public static void ApplyMobileHorizontalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraBaseYawSensitivity((double)value);
 		}
 
-		// Token: 0x06047B2D RID: 293677 RVA: 0x0125ADD6 File Offset: 0x01258FD6
+		// Token: 0x0603DEDC RID: 253660 RVA: 0x011FB31E File Offset: 0x011F951E
 		public static void ApplyMobileVerticalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraBasePitchSensitivity((double)value);
 		}
 
-		// Token: 0x06047B2E RID: 293678 RVA: 0x0125ADE9 File Offset: 0x01258FE9
+		// Token: 0x0603DEDD RID: 253661 RVA: 0x011FB331 File Offset: 0x011F9531
 		public static void ApplyMobileAimHorizontalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraAimingYawSensitivity((double)value);
 		}
 
-		// Token: 0x06047B2F RID: 293679 RVA: 0x0125ADFC File Offset: 0x01258FFC
+		// Token: 0x0603DEDE RID: 253662 RVA: 0x011FB344 File Offset: 0x011F9544
 		public static void ApplyMobileAimVerticalViewSensitivity(float value)
 		{
 			CameraModel.Instance.MainModel.SetCameraAimingPitchSensitivity((double)value);
 		}
 
-		// Token: 0x06047B30 RID: 293680 RVA: 0x0125AE0F File Offset: 0x0125900F
+		// Token: 0x0603DEDF RID: 253663 RVA: 0x011FB357 File Offset: 0x011F9557
 		public static void ApplyCommonSpringArmLength(float value)
 		{
 			CameraModel.Instance.MainModel.CameraSettingNormalAdditionArmLength = (double)value;
 		}
 
-		// Token: 0x06047B31 RID: 293681 RVA: 0x0125AE22 File Offset: 0x01259022
+		// Token: 0x0603DEE0 RID: 253664 RVA: 0x011FB36A File Offset: 0x011F956A
 		public static void ApplyFightSpringArmLength(float value)
 		{
 			CameraModel.Instance.MainModel.CameraSettingFightAdditionArmLength = (double)value;
 		}
 
-		// Token: 0x06047B32 RID: 293682 RVA: 0x0125AE35 File Offset: 0x01259035
+		// Token: 0x0603DEE1 RID: 253665 RVA: 0x011FB37D File Offset: 0x011F957D
 		public static void ApplyResetFocusEnable(int value)
 		{
 			CameraModel.Instance.MainModel.IsEnableResetFocus = (value == 1);
 		}
 
-		// Token: 0x06047B33 RID: 293683 RVA: 0x0125AE4A File Offset: 0x0125904A
+		// Token: 0x0603DEE2 RID: 253666 RVA: 0x011FB392 File Offset: 0x011F9592
 		public static void ApplyIsSidestepCameraEnable(int value)
 		{
 			CameraModel.Instance.MainModel.IsEnableSidestepCamera = (value == 1);
 		}
 
-		// Token: 0x06047B34 RID: 293684 RVA: 0x0125AE5F File Offset: 0x0125905F
+		// Token: 0x0603DEE3 RID: 253667 RVA: 0x011FB3A7 File Offset: 0x011F95A7
 		public static void ApplyIsSoftLockCameraEnable(int value)
 		{
 			CameraModel.Instance.MainModel.SetSettingSoftLockState(value == 1);
 		}
 
-		// Token: 0x06047B35 RID: 293685 RVA: 0x0125AE74 File Offset: 0x01259074
+		// Token: 0x0603DEE4 RID: 253668 RVA: 0x011FB3BC File Offset: 0x011F95BC
 		public static bool ApplyJoystickShakeStrength(int value)
 		{
 			GameSettingsUtils.ApplyJoystickShakeInternal((EGlobalKuroForceFeedbackType)GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.JoystickShakeType, 0, true), value);
 			return true;
 		}
 
-		// Token: 0x06047B36 RID: 293686 RVA: 0x0125AE8C File Offset: 0x0125908C
+		// Token: 0x0603DEE5 RID: 253669 RVA: 0x011FB3D4 File Offset: 0x011F95D4
 		public static bool ApplyJoystickShakeType(int value)
 		{
 			int currentValueSafely = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.JoystickShakeStrength, 0, true);
@@ -1433,31 +1471,31 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B37 RID: 293687 RVA: 0x0125AEB1 File Offset: 0x012590B1
+		// Token: 0x0603DEE6 RID: 253670 RVA: 0x011FB3F9 File Offset: 0x011F95F9
 		private static void ApplyJoystickShakeInternal(EGlobalKuroForceFeedbackType joystickShakeType, int joystickShakeStrength)
 		{
 			ABasePlayerController.SetKuroForceFeedbackConfig(joystickShakeType, joystickShakeStrength);
 		}
 
-		// Token: 0x06047B38 RID: 293688 RVA: 0x0125AEBA File Offset: 0x012590BA
+		// Token: 0x0603DEE7 RID: 253671 RVA: 0x011FB402 File Offset: 0x011F9602
 		public static void ApplyWalkOrRunRate(float value)
 		{
 			RoleGaitStatic.SetWalkOrRunRateForRocker(value);
 		}
 
-		// Token: 0x06047B39 RID: 293689 RVA: 0x0125AEC2 File Offset: 0x012590C2
+		// Token: 0x0603DEE8 RID: 253672 RVA: 0x011FB40A File Offset: 0x011F960A
 		public static void ApplyJoystickMode(int value)
 		{
 			BattleUiModel.Instance.SetIsDynamicJoystick(value == 1);
 		}
 
-		// Token: 0x06047B3A RID: 293690 RVA: 0x0125AED2 File Offset: 0x012590D2
+		// Token: 0x0603DEE9 RID: 253673 RVA: 0x011FB41A File Offset: 0x011F961A
 		public static void ApplyAutoSwitchSkillButtonMode(int value)
 		{
 			BattleUiModel.Instance.SetIsAutoSwitchSkillButtonMode(value == 0);
 		}
 
-		// Token: 0x06047B3B RID: 293691 RVA: 0x0125AEE2 File Offset: 0x012590E2
+		// Token: 0x0603DEEA RID: 253674 RVA: 0x011FB42A File Offset: 0x011F962A
 		public static void ApplyAimAssistEnable(int value)
 		{
 			CameraModel instance = CameraModel.Instance;
@@ -1468,13 +1506,13 @@ namespace CSharpScript.Game.GameSettings
 			instance.MainModel.SetAimAssistEnable(value == 1);
 		}
 
-		// Token: 0x06047B3C RID: 293692 RVA: 0x0125AEFC File Offset: 0x012590FC
+		// Token: 0x0603DEEB RID: 253675 RVA: 0x011FB444 File Offset: 0x011F9644
 		public static void ApplyKeyboardLockEnemyMode(int value)
 		{
 			FormationDataController.Instance.SetKeyboardLockEnemyMode((ELockEnemyMode)value);
 		}
 
-		// Token: 0x06047B3D RID: 293693 RVA: 0x0125AF0C File Offset: 0x0125910C
+		// Token: 0x0603DEEC RID: 253676 RVA: 0x011FB454 File Offset: 0x011F9654
 		public static void ApplyHorizontalViewRevert(int value)
 		{
 			IReadOnlyList<AxisRevert> axisRevertConfigListByRevertType = MenuBaseConfig.Instance.GetAxisRevertConfigListByRevertType(0);
@@ -1485,7 +1523,7 @@ namespace CSharpScript.Game.GameSettings
 			GameSettingsUtils.ApplyAxisRevert(value == 1, axisRevertConfigListByRevertType);
 		}
 
-		// Token: 0x06047B3E RID: 293694 RVA: 0x0125AF34 File Offset: 0x01259134
+		// Token: 0x0603DEED RID: 253677 RVA: 0x011FB47C File Offset: 0x011F967C
 		public static void ApplyVerticalViewRevert(int value)
 		{
 			IReadOnlyList<AxisRevert> axisRevertConfigListByRevertType = MenuBaseConfig.Instance.GetAxisRevertConfigListByRevertType(1);
@@ -1496,7 +1534,7 @@ namespace CSharpScript.Game.GameSettings
 			GameSettingsUtils.ApplyAxisRevert(value == 1, axisRevertConfigListByRevertType);
 		}
 
-		// Token: 0x06047B3F RID: 293695 RVA: 0x0125AF5C File Offset: 0x0125915C
+		// Token: 0x0603DEEE RID: 253678 RVA: 0x011FB4A4 File Offset: 0x011F96A4
 		public static void RefreshViewRevertState(EInputControllerMainType mainType)
 		{
 			int value = 0;
@@ -1510,7 +1548,7 @@ namespace CSharpScript.Game.GameSettings
 			GameSettingsUtils.ApplyVerticalViewRevert(value2);
 		}
 
-		// Token: 0x06047B40 RID: 293696 RVA: 0x0125AFA4 File Offset: 0x012591A4
+		// Token: 0x0603DEEF RID: 253679 RVA: 0x011FB4EC File Offset: 0x011F96EC
 		private static void ApplyAxisRevert(bool bRevert, IReadOnlyList<AxisRevert> axisRevertConfigList)
 		{
 			foreach (AxisRevert axisRevert in axisRevertConfigList)
@@ -1572,19 +1610,19 @@ namespace CSharpScript.Game.GameSettings
 			}
 		}
 
-		// Token: 0x06047B41 RID: 293697 RVA: 0x0125B180 File Offset: 0x01259380
+		// Token: 0x0603DEF0 RID: 253680 RVA: 0x011FB6C8 File Offset: 0x011F98C8
 		public static void ApplyGamepadLockEnemyMode(int value)
 		{
 			FormationDataController.Instance.SetGamepadLockEnemyMode((ELockEnemyMode)value);
 		}
 
-		// Token: 0x06047B42 RID: 293698 RVA: 0x0125B18D File Offset: 0x0125938D
+		// Token: 0x0603DEF1 RID: 253681 RVA: 0x011FB6D5 File Offset: 0x011F98D5
 		public static void ApplyEnemyHitDisplayMode(int value)
 		{
 			BulletModel.Instance.OpenHitMaterial = (value == 1);
 		}
 
-		// Token: 0x06047B43 RID: 293699 RVA: 0x0125B1A0 File Offset: 0x012593A0
+		// Token: 0x0603DEF2 RID: 253682 RVA: 0x011FB6E8 File Offset: 0x011F98E8
 		public static void ApplyPushEnableState(int value, EGameSettingsApplyReason? reason = null)
 		{
 			if (value == 0)
@@ -1596,7 +1634,7 @@ namespace CSharpScript.Game.GameSettings
 			KuroPushController.Instance.TurnOnPush(checkPermissionState);
 		}
 
-		// Token: 0x06047B44 RID: 293700 RVA: 0x0125B1D2 File Offset: 0x012593D2
+		// Token: 0x0603DEF3 RID: 253683 RVA: 0x011FB71A File Offset: 0x011F991A
 		public static void ApplyAutoAdjustImageQuality(int value)
 		{
 			GameSettingsDeviceRender.Instance.SetIsAutoAdjustImageQuality(value == 1);
@@ -1606,25 +1644,25 @@ namespace CSharpScript.Game.GameSettings
 			}
 		}
 
-		// Token: 0x06047B45 RID: 293701 RVA: 0x0125B1FA File Offset: 0x012593FA
+		// Token: 0x0603DEF4 RID: 253684 RVA: 0x011FB742 File Offset: 0x011F9942
 		public static void ApplyShowDamage(int value)
 		{
 			DamageUiManager.Instance.SetDamageViewVisible(value == 1);
 		}
 
-		// Token: 0x06047B46 RID: 293702 RVA: 0x0125B20A File Offset: 0x0125940A
+		// Token: 0x0603DEF5 RID: 253685 RVA: 0x011FB752 File Offset: 0x011F9952
 		public static void ApplyDynamicBones(int value)
 		{
 			CreatureController.Instance.SetKawaiiEnable(value);
 		}
 
-		// Token: 0x06047B47 RID: 293703 RVA: 0x0125B218 File Offset: 0x01259418
+		// Token: 0x0603DEF6 RID: 253686 RVA: 0x011FB760 File Offset: 0x011F9960
 		public static void ApplyDolbyAtmos(int value)
 		{
 			AudioSystem.Instance.SetRtpcValue("dolby_atmos", (float)value, null);
 		}
 
-		// Token: 0x06047B48 RID: 293704 RVA: 0x0125B23F File Offset: 0x0125943F
+		// Token: 0x0603DEF7 RID: 253687 RVA: 0x011FB787 File Offset: 0x011F9987
 		public static bool ApplyUiPureMode(int value)
 		{
 			if (value == 1)
@@ -1635,7 +1673,7 @@ namespace CSharpScript.Game.GameSettings
 			return BattleUiControl.Instance.TryClosePureMode();
 		}
 
-		// Token: 0x06047B49 RID: 293705 RVA: 0x0125B25C File Offset: 0x0125945C
+		// Token: 0x0603DEF8 RID: 253688 RVA: 0x011FB7A4 File Offset: 0x011F99A4
 		public unsafe static bool ApplyRayTracing(int value)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -1675,7 +1713,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4A RID: 293706 RVA: 0x0125B398 File Offset: 0x01259598
+		// Token: 0x0603DEF9 RID: 253689 RVA: 0x011FB8E0 File Offset: 0x011F9AE0
 		public static bool ApplyRayTracedReflection(int value)
 		{
 			if (value > 0)
@@ -1696,7 +1734,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4B RID: 293707 RVA: 0x0125B438 File Offset: 0x01259638
+		// Token: 0x0603DEFA RID: 253690 RVA: 0x011FB980 File Offset: 0x011F9B80
 		public static bool ApplyRayTracedGI(int value)
 		{
 			if (value > 0)
@@ -1716,7 +1754,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4C RID: 293708 RVA: 0x0125B4C4 File Offset: 0x012596C4
+		// Token: 0x0603DEFB RID: 253691 RVA: 0x011FBA0C File Offset: 0x011F9C0C
 		public static bool ApplyRayTracedShadow(int value)
 		{
 			if (value > 0)
@@ -1732,7 +1770,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4D RID: 293709 RVA: 0x0125B538 File Offset: 0x01259738
+		// Token: 0x0603DEFC RID: 253692 RVA: 0x011FBA80 File Offset: 0x011F9C80
 		public static bool ApplySaturationClient(int value)
 		{
 			float value2 = 1f;
@@ -1752,7 +1790,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4E RID: 293710 RVA: 0x0125B5C8 File Offset: 0x012597C8
+		// Token: 0x0603DEFD RID: 253693 RVA: 0x011FBB10 File Offset: 0x011F9D10
 		public static bool ApplyContrastClient(int value)
 		{
 			float value2 = 1f;
@@ -1772,14 +1810,14 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B4F RID: 293711 RVA: 0x0125B657 File Offset: 0x01259857
+		// Token: 0x0603DEFE RID: 253694 RVA: 0x011FBB9F File Offset: 0x011F9D9F
 		public static void ApplySkinDamageMode(int value)
 		{
 			CharacterSkinDamageComponent.EnableSkinDamage = (value == 1);
 			EventSystem.Instance.Emit(EEventName.OnResetSkinDamageMode);
 		}
 
-		// Token: 0x06047B50 RID: 293712 RVA: 0x0125B674 File Offset: 0x01259874
+		// Token: 0x0603DEFF RID: 253695 RVA: 0x011FBBBC File Offset: 0x011F9DBC
 		public static void ApplyAFMEOption(int value)
 		{
 			GameSettingsDeviceRender.Instance.EnableAFME(value);
@@ -1794,7 +1832,7 @@ namespace CSharpScript.Game.GameSettings
 			}
 		}
 
-		// Token: 0x06047B51 RID: 293713 RVA: 0x0125B6D5 File Offset: 0x012598D5
+		// Token: 0x0603DF00 RID: 253696 RVA: 0x011FBC1D File Offset: 0x011F9E1D
 		public static bool ApplyAutoRun(int value)
 		{
 			if (BattleUiModel.Instance == null)
@@ -1809,7 +1847,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B52 RID: 293714 RVA: 0x0125B702 File Offset: 0x01259902
+		// Token: 0x0603DF01 RID: 253697 RVA: 0x011FBC4A File Offset: 0x011F9E4A
 		public static bool ApplyAutoSprint(int value)
 		{
 			if (BattleUiModel.Instance == null)
@@ -1824,14 +1862,14 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B53 RID: 293715 RVA: 0x0125B72F File Offset: 0x0125992F
+		// Token: 0x0603DF02 RID: 253698 RVA: 0x011FBC77 File Offset: 0x011F9E77
 		public static bool ApplyVulkan(int value)
 		{
 			UKuroRenderingRuntimeBPPluginBPLibrary.SetVulkanPromotion(value > 0);
 			return true;
 		}
 
-		// Token: 0x06047B54 RID: 293716 RVA: 0x0125B73C File Offset: 0x0125993C
+		// Token: 0x0603DF03 RID: 253699 RVA: 0x011FBC84 File Offset: 0x011F9E84
 		public static bool ApplyWaterInteract(int value)
 		{
 			if (value == 0)
@@ -1857,7 +1895,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B55 RID: 293717 RVA: 0x0125B7E0 File Offset: 0x012599E0
+		// Token: 0x0603DF04 RID: 253700 RVA: 0x011FBD28 File Offset: 0x011F9F28
 		public static bool ApplyVegetationDither(int value)
 		{
 			FName parameterName = new FName("FoliageDitherState");
@@ -1865,7 +1903,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B56 RID: 293718 RVA: 0x0125B820 File Offset: 0x01259A20
+		// Token: 0x0603DF05 RID: 253701 RVA: 0x011FBD68 File Offset: 0x011F9F68
 		public static bool ApplyVegetationDensity(int value)
 		{
 			switch (value)
@@ -1886,7 +1924,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B57 RID: 293719 RVA: 0x0125B88C File Offset: 0x01259A8C
+		// Token: 0x0603DF06 RID: 253702 RVA: 0x011FBDD4 File Offset: 0x011F9FD4
 		public static bool ApplyImageDisplayMode(int value)
 		{
 			switch (value)
@@ -1917,7 +1955,7 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B58 RID: 293720 RVA: 0x0125B968 File Offset: 0x01259B68
+		// Token: 0x0603DF07 RID: 253703 RVA: 0x011FBEB0 File Offset: 0x011FA0B0
 		public static bool ApplyEyeProtectionMode(int value)
 		{
 			UKuroGISystem.ApplyEyeProtectionEnvironment(GlobalData.World, (float)value);
@@ -1935,35 +1973,35 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B59 RID: 293721 RVA: 0x0125B9FC File Offset: 0x01259BFC
+		// Token: 0x0603DF08 RID: 253704 RVA: 0x011FBF44 File Offset: 0x011FA144
 		public static bool ApplyEyeProtectionTemp(float value, int mode)
 		{
 			UKuroGISystem.ApplyEyeProtectionTemperature(GlobalData.World, value, (float)mode);
 			return true;
 		}
 
-		// Token: 0x06047B5A RID: 293722 RVA: 0x0125BA0C File Offset: 0x01259C0C
+		// Token: 0x0603DF09 RID: 253705 RVA: 0x011FBF54 File Offset: 0x011FA154
 		public static bool ApplyEyeProtectionStrength(float value, int mode)
 		{
 			UKuroGISystem.ApplyEyeProtectionStrength(GlobalData.World, value, (float)mode);
 			return true;
 		}
 
-		// Token: 0x06047B5B RID: 293723 RVA: 0x0125BA1C File Offset: 0x01259C1C
+		// Token: 0x0603DF0A RID: 253706 RVA: 0x011FBF64 File Offset: 0x011FA164
 		public static bool ApplyEyeProtectionBrightness(float value, int mode)
 		{
 			UKuroGISystem.ApplyEyeProtectionBrightness(GlobalData.World, value, (float)mode);
 			return true;
 		}
 
-		// Token: 0x06047B5C RID: 293724 RVA: 0x0125BA2C File Offset: 0x01259C2C
+		// Token: 0x0603DF0B RID: 253707 RVA: 0x011FBF74 File Offset: 0x011FA174
 		public static bool ApplyEyeProtectionTexture(float value, int mode)
 		{
 			UKuroGISystem.ApplyEyeProtectionTexture(GlobalData.World, value, (float)mode);
 			return true;
 		}
 
-		// Token: 0x06047B5D RID: 293725 RVA: 0x0125BA3C File Offset: 0x01259C3C
+		// Token: 0x0603DF0C RID: 253708 RVA: 0x011FBF84 File Offset: 0x011FA184
 		public static bool ApplyAutoExposure(int value)
 		{
 			UObject world = GlobalData.World;
@@ -1974,13 +2012,13 @@ namespace CSharpScript.Game.GameSettings
 			return true;
 		}
 
-		// Token: 0x06047B5E RID: 293726 RVA: 0x0125BA7A File Offset: 0x01259C7A
+		// Token: 0x0603DF0D RID: 253709 RVA: 0x011FBFC2 File Offset: 0x011FA1C2
 		public static void ApplyAdjustiveGamePadTrigger(int value)
 		{
 			UTriggerEffectBPLibrary.SetTriggerEffectState(Global.CharacterController, value == 1);
 		}
 
-		// Token: 0x06047B5F RID: 293727 RVA: 0x0125BA8A File Offset: 0x01259C8A
+		// Token: 0x0603DF0E RID: 253710 RVA: 0x011FBFD2 File Offset: 0x011FA1D2
 		public static float MapGamepadDeadZoneUiToEngine(int uiValue)
 		{
 			if (Info.Instance.IsIosPlatform())
@@ -1990,7 +2028,7 @@ namespace CSharpScript.Game.GameSettings
 			return (float)uiValue / 100f * 0.9f;
 		}
 
-		// Token: 0x06047B60 RID: 293728 RVA: 0x0125BAB2 File Offset: 0x01259CB2
+		// Token: 0x0603DF0F RID: 253711 RVA: 0x011FBFFA File Offset: 0x011FA1FA
 		public static void ApplyGamepadLeftStickDeadZone(int uiValue)
 		{
 			GameSettingsUtils.ApplyGamepadDeadZoneToKeys(uiValue, new EKey[]
@@ -2000,7 +2038,7 @@ namespace CSharpScript.Game.GameSettings
 			});
 		}
 
-		// Token: 0x06047B61 RID: 293729 RVA: 0x0125BAD8 File Offset: 0x01259CD8
+		// Token: 0x0603DF10 RID: 253712 RVA: 0x011FC020 File Offset: 0x011FA220
 		public static void ApplyGamepadRightStickDeadZone(int uiValue)
 		{
 			GameSettingsUtils.ApplyGamepadDeadZoneToKeys(uiValue, new EKey[]
@@ -2010,7 +2048,7 @@ namespace CSharpScript.Game.GameSettings
 			});
 		}
 
-		// Token: 0x06047B62 RID: 293730 RVA: 0x0125BAFE File Offset: 0x01259CFE
+		// Token: 0x0603DF11 RID: 253713 RVA: 0x011FC046 File Offset: 0x011FA246
 		public static void ApplyGamepadLeftTriggerDeadZone(int uiValue)
 		{
 			GameSettingsUtils.ApplyGamepadDeadZoneToKeys(uiValue, new EKey[]
@@ -2019,7 +2057,7 @@ namespace CSharpScript.Game.GameSettings
 			});
 		}
 
-		// Token: 0x06047B63 RID: 293731 RVA: 0x0125BB18 File Offset: 0x01259D18
+		// Token: 0x0603DF12 RID: 253714 RVA: 0x011FC060 File Offset: 0x011FA260
 		public static void ApplyGamepadRightTriggerDeadZone(int uiValue)
 		{
 			GameSettingsUtils.ApplyGamepadDeadZoneToKeys(uiValue, new EKey[]
@@ -2028,62 +2066,65 @@ namespace CSharpScript.Game.GameSettings
 			});
 		}
 
-		// Token: 0x06047B64 RID: 293732 RVA: 0x0125BB34 File Offset: 0x01259D34
+		// Token: 0x0603DF13 RID: 253715 RVA: 0x011FC07C File Offset: 0x011FA27C
 		private static void ApplyGamepadDeadZoneToKeys(int uiValue, EKey[] keys)
 		{
 			float deadZone = GameSettingsUtils.MapGamepadDeadZoneUiToEngine(uiValue);
 			int playerIndex = 0;
 			foreach (EKey key in keys)
 			{
-				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey(new FName(key)), deadZone);
+				UKuroStaticLibrary.SetInputKeyDeadZone(Global.CharacterController, playerIndex, new FKey
+				{
+					KeyName = new FName(key)
+				}, deadZone);
 			}
 		}
 
-		// Token: 0x06047B65 RID: 293733 RVA: 0x0125BB80 File Offset: 0x01259D80
+		// Token: 0x0603DF14 RID: 253716 RVA: 0x011FC0CE File Offset: 0x011FA2CE
 		public static void ApplyMotorAutoLongPressSpeedUp(int value)
 		{
 			BattleUiModel.Instance.MotorcycleData.AutoNitrogenSettingEnable = (value == 1);
 		}
 
-		// Token: 0x06047B66 RID: 293734 RVA: 0x0125BB95 File Offset: 0x01259D95
+		// Token: 0x0603DF15 RID: 253717 RVA: 0x011FC0E3 File Offset: 0x011FA2E3
 		public static void ApplyMotorAutoAcceleratorSettingEnable(int value)
 		{
 			BattleUiModel.Instance.MotorcycleData.AutoAcceleratorSettingEnable = (value == 1);
 		}
 
-		// Token: 0x06047B67 RID: 293735 RVA: 0x0125BBAA File Offset: 0x01259DAA
+		// Token: 0x0603DF16 RID: 253718 RVA: 0x011FC0F8 File Offset: 0x011FA2F8
 		public static void ApplyMotorDriftAcceleratorSettingEnable(int value)
 		{
 			BattleUiModel.Instance.MotorcycleData.DriftAcceleratorSettingEnable = (value == 1);
 		}
 
-		// Token: 0x06047B68 RID: 293736 RVA: 0x0125BBBF File Offset: 0x01259DBF
+		// Token: 0x0603DF17 RID: 253719 RVA: 0x011FC10D File Offset: 0x011FA30D
 		public static void ApplyMotorHudVisible(int value)
 		{
 			BattleUiModel.Instance.MotorcycleData.SetHudVisible(value == 0, "设置系统设置");
 		}
 
-		// Token: 0x06047B69 RID: 293737 RVA: 0x0125BBD9 File Offset: 0x01259DD9
+		// Token: 0x0603DF18 RID: 253720 RVA: 0x011FC127 File Offset: 0x011FA327
 		public static void ApplyMotorIsDynamicJoystick(int value)
 		{
 			BattleUiModel.Instance.MotorcycleData.SetIsDynamicJoystick(value == 1);
 		}
 
-		// Token: 0x06047B6A RID: 293738 RVA: 0x0125BBF0 File Offset: 0x01259DF0
+		// Token: 0x0603DF19 RID: 253721 RVA: 0x011FC13C File Offset: 0x011FA33C
 		public static void ApplyUiBrightness(float value)
 		{
 			int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(EFunction.PeakBrightness);
 			UKuroGISystem.ApplyHDRMetaData(GlobalData.World, value, (float)dataCacheOrCurValue.GetValueOrDefault());
 		}
 
-		// Token: 0x06047B6B RID: 293739 RVA: 0x0125BC20 File Offset: 0x01259E20
+		// Token: 0x0603DF1A RID: 253722 RVA: 0x011FC16C File Offset: 0x011FA36C
 		public static void ApplyPeakBrightness(float value)
 		{
 			int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(EFunction.UiBrightness);
 			UKuroGISystem.ApplyHDRMetaData(GlobalData.World, (float)dataCacheOrCurValue.GetValueOrDefault(), value);
 		}
 
-		// Token: 0x06047B6C RID: 293740 RVA: 0x0125BC50 File Offset: 0x01259E50
+		// Token: 0x0603DF1B RID: 253723 RVA: 0x011FC19C File Offset: 0x011FA39C
 		public static void ApplyAnisoLevel(int value)
 		{
 			switch (value)
@@ -2110,102 +2151,340 @@ namespace CSharpScript.Game.GameSettings
 			}
 		}
 
-		// Token: 0x06047B6D RID: 293741 RVA: 0x0125BCB8 File Offset: 0x01259EB8
-		public unsafe static bool ApplyLoadingRangeScaleLevel(int value)
+		// Token: 0x0603DF1C RID: 253724 RVA: 0x011FC204 File Offset: 0x011FA404
+		[NullableContext(2)]
+		private static GameSettingsUtils.RenderDistanceConfig GetRenderDistanceConfig()
 		{
-			int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(EFunction.IMAGEQUALITY);
-			if (dataCacheOrCurValue == null)
+			IReadOnlyList<DeviceRenderFeature> renderDistanceFeatures = GameSettingsDeviceRender.Instance.GetRenderDistanceFeatures();
+			if (renderDistanceFeatures == null)
+			{
+				return null;
+			}
+			if (GameSettingsUtils.DistanceConfig == null || GameSettingsUtils.DistanceConfig.SourceFeatures != renderDistanceFeatures)
+			{
+				GameSettingsUtils.RenderDistanceConfig renderDistanceConfig = new GameSettingsUtils.RenderDistanceConfig();
+				renderDistanceConfig.Load(renderDistanceFeatures);
+				GameSettingsUtils.DistanceConfig = renderDistanceConfig;
+			}
+			return GameSettingsUtils.DistanceConfig;
+		}
+
+		// Token: 0x0603DF1D RID: 253725 RVA: 0x011FC24B File Offset: 0x011FA44B
+		private static string GetRenderDistanceGrassVariable()
+		{
+			if (!Info.Instance.IsPcOrGamepadPlatform())
+			{
+				return "r.Kuro.Foliage.MobileGrassCullDistanceMax";
+			}
+			return "r.Kuro.Foliage.GrassCullDistanceMax";
+		}
+
+		// Token: 0x0603DF1E RID: 253726 RVA: 0x011FC264 File Offset: 0x011FA464
+		private unsafe static void RestoreGrassLodDistanceBase()
+		{
+			if (GameSettingsUtils.GrassLODDistanceScaleCache == null)
+			{
+				return;
+			}
+			float value = GameSettingsUtils.GrassLODDistanceScaleCache.Value;
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("foliage.LODDistanceScale", value);
+			GameSettingsUtils.GrassLODDistanceScaleCache = null;
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.TZD;
+			string message = "RenderDistance.GrassLOD.Restore";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("LodTarget", value);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("LodActual", UKismetSystemLibrary.GetConsoleVariableFloatValue("foliage.LODDistanceScale"));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+		}
+
+		// Token: 0x0603DF1F RID: 253727 RVA: 0x011FC308 File Offset: 0x011FA508
+		private unsafe static void ApplyGrassLODDistance(int stepIndex)
+		{
+			int num = Math.Max(stepIndex - GameSettingsDeviceRender.GetRenderDistanceBaseMaxStepIndex(), 0);
+			if (num == 0)
+			{
+				GameSettingsUtils.RestoreGrassLodDistanceBase();
+				return;
+			}
+			if (GameSettingsUtils.GrassLODDistanceScaleCache == null)
+			{
+				GameSettingsUtils.GrassLODDistanceScaleCache = new float?(UKismetSystemLibrary.GetConsoleVariableFloatValue("foliage.LODDistanceScale"));
+			}
+			float num2 = Info.Instance.IsPcOrGamepadPlatform() ? 0.3f : 0.15f;
+			float num3 = GameSettingsUtils.GrassLODDistanceScaleCache.Value + num2 * (float)num;
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("foliage.LODDistanceScale", num3);
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.TZD;
+			string message = "RenderDistance.GrassLOD";
+			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("StepIndex", stepIndex);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ExtensionLevel", num);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("LodBase", GameSettingsUtils.GrassLODDistanceScaleCache.Value);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("LodTarget", num3);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("LodActual", UKismetSystemLibrary.GetConsoleVariableFloatValue("foliage.LODDistanceScale"));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
+		}
+
+		// Token: 0x0603DF20 RID: 253728 RVA: 0x011FC44C File Offset: 0x011FA64C
+		private static GameSettingsUtils.RenderDistanceValues CalculateRenderDistanceValues(GameSettingsUtils.RenderDistanceConfig config, float value)
+		{
+			int renderDistanceStepIndex = GameSettingsDeviceRender.GetRenderDistanceStepIndex(value);
+			int renderDistanceBaseMaxStepIndex = GameSettingsDeviceRender.GetRenderDistanceBaseMaxStepIndex();
+			GameSettingsUtils.RenderDistanceValues baseValues = config.GetBaseValues(renderDistanceStepIndex);
+			if (renderDistanceStepIndex <= renderDistanceBaseMaxStepIndex)
+			{
+				return baseValues;
+			}
+			int renderDistanceMaxStepIndex = GameSettingsDeviceRender.GetRenderDistanceMaxStepIndex();
+			float num = (float)(renderDistanceStepIndex - renderDistanceBaseMaxStepIndex) / (float)(renderDistanceMaxStepIndex - renderDistanceBaseMaxStepIndex);
+			GameSettingsUtils.RenderDistanceValues maximumValues = config.MaximumValues;
+			return new GameSettingsUtils.RenderDistanceValues(baseValues.GrassCull + (maximumValues.GrassCull - baseValues.GrassCull) * num, baseValues.LoadingRange + (maximumValues.LoadingRange - baseValues.LoadingRange) * num, baseValues.PlannedLoadingRange + (maximumValues.PlannedLoadingRange - baseValues.PlannedLoadingRange) * num);
+		}
+
+		// Token: 0x0603DF21 RID: 253729 RVA: 0x011FC4DC File Offset: 0x011FA6DC
+		private unsafe static void ApplyWpDistanceValues(GameSettingsUtils.RenderDistanceValues values)
+		{
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("wp.Runtime.LoadingRangeScale", values.LoadingRange);
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("wp.Runtime.PlannedLoadingRangeScale", values.PlannedLoadingRange);
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.TZD;
+			string message = "RenderDistance.WP";
+			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("LoadingTarget", values.LoadingRange);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("LoadingActual", UKismetSystemLibrary.GetConsoleVariableFloatValue("wp.Runtime.LoadingRangeScale"));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("PlannedTarget", values.PlannedLoadingRange);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("PlannedActual", UKismetSystemLibrary.GetConsoleVariableFloatValue("wp.Runtime.PlannedLoadingRangeScale"));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
+		}
+
+		// Token: 0x0603DF22 RID: 253730 RVA: 0x011FC5C0 File Offset: 0x011FA7C0
+		public unsafe static bool ApplyLoadingRangeScale(float value)
+		{
+			if (!GameSettingsManager.Instance.IsValid(EFunction.LOADINGRANGESCALELEVEL, false))
 			{
 				return false;
 			}
-			DeviceRenderFeature? deviceRenderFeature = GameSettingsDeviceRender.Instance.GetDeviceRenderFeature((EGameQualitySettingLevel)dataCacheOrCurValue.Value);
-			if (deviceRenderFeature == null)
+			GameSettingsUtils.RenderDistanceConfig renderDistanceConfig = GameSettingsUtils.GetRenderDistanceConfig();
+			if (renderDistanceConfig == null)
 			{
 				return false;
 			}
-			int loadingRangeScale = deviceRenderFeature.Value.LoadingRangeScale;
-			float num = (float)(loadingRangeScale - 100) / 2f;
-			float num2 = MathUtils.Instance.Clamp(100f + num * (float)value, 100f, (float)loadingRangeScale) / 100f;
-			UObject world = GlobalData.World;
-			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(41, 1);
-			defaultInterpolatedStringHandler.AppendLiteral("wp.Runtime.PlannedLoadingRangeScaleExtra ");
-			defaultInterpolatedStringHandler.AppendFormatted<float>(num2);
-			UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-			UObject world2 = GlobalData.World;
-			defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(34, 1);
-			defaultInterpolatedStringHandler.AppendLiteral("wp.Runtime.LoadingRangeScaleExtra ");
-			defaultInterpolatedStringHandler.AppendFormatted<float>(num2);
-			UKismetSystemLibrary.ExecuteConsoleCommand(world2, defaultInterpolatedStringHandler.ToStringAndClear(), null);
-			if (GameSettingsUtils.GrassCullDistanceCache != null && GameSettingsUtils.GrassMobileCullDistanceCache != null && GameSettingsUtils.GrassLODDistanceScaleCache != null)
-			{
-				if (Info.Instance.IsPcOrGamepadPlatform())
-				{
-					float num3 = GameSettingsUtils.GrassCullDistanceCache.Value * num2;
-					UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("r.Kuro.Foliage.GrassCullDistanceMax", num3);
-					float num4 = GameSettingsUtils.GrassLODDistanceScaleCache.Value + 0.3f * (float)value;
-					UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("foliage.LODDistanceScale", num4);
-					Log instance = Log.Instance;
-					ELogModule module = ELogModule.GameSettings;
-					ELogAuthor author = ELogAuthor.LQX;
-					string message = "ApplyLoadingRangeScaleLevel";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("grassCullDistance", num3);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("grassLODDistanceScale", num4);
-					instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				}
-				else
-				{
-					float num5 = GameSettingsUtils.GrassMobileCullDistanceCache.Value * num2;
-					UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("r.Kuro.Foliage.MobileGrassCullDistanceMax", num5);
-					float num6 = GameSettingsUtils.GrassLODDistanceScaleCache.Value + 0.15f * (float)value;
-					UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float("foliage.LODDistanceScale", num6);
-					Log instance2 = Log.Instance;
-					ELogModule module2 = ELogModule.GameSettings;
-					ELogAuthor author2 = ELogAuthor.LQX;
-					string message2 = "ApplyLoadingRangeScaleLevel";
-					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("grassCullDistance", num5);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("grassLODDistanceScale", num6);
-					instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
-				}
-			}
-			EventSystem.Instance.Emit<float>(EEventName.LoadingRangeScaleChanged, num2);
-			if (PerfSightController.IsEnable)
-			{
-				UPerfSightHelper.PostEvent(838, value.ToString());
-			}
+			float num = GameSettingsDeviceRender.NormalizeRenderDistanceValue(value);
+			int renderDistanceStepIndex = GameSettingsDeviceRender.GetRenderDistanceStepIndex(num);
+			GameSettingsUtils.RenderDistanceValues renderDistanceValues = GameSettingsUtils.CalculateRenderDistanceValues(renderDistanceConfig, num);
+			string renderDistanceGrassVariable = GameSettingsUtils.GetRenderDistanceGrassVariable();
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float(renderDistanceGrassVariable, renderDistanceValues.GrassCull);
+			GameSettingsUtils.ApplyWpDistanceValues(renderDistanceValues);
+			GameSettingsUtils.ApplyGrassLODDistance(renderDistanceStepIndex);
+			GameSettingsUtils.HasAppliedRenderDistance = true;
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.GameSettings;
+			ELogAuthor author = ELogAuthor.TZD;
+			string message = "RenderDistance.Grass";
+			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Slider", num);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("GrassVariable", renderDistanceGrassVariable);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("GrassTarget", renderDistanceValues.GrassCull);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("GrassActual", UKismetSystemLibrary.GetConsoleVariableFloatValue(renderDistanceGrassVariable));
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 			return true;
 		}
 
-		// Token: 0x04025B6B RID: 154475
+		// Token: 0x0603DF23 RID: 253731 RVA: 0x011FC6C4 File Offset: 0x011FA8C4
+		public static void RefreshDistanceSettingsAfterQuality(int quality)
+		{
+			GameSettingsUtils.AppliedDistanceQuality = new int?(quality);
+			if (!GameSettingsManager.Instance.IsValid(EFunction.LOADINGRANGESCALELEVEL, false))
+			{
+				return;
+			}
+			float? renderDistanceRecommendation = GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(quality);
+			if (renderDistanceRecommendation == null)
+			{
+				return;
+			}
+			GameSettingsUtils.ApplyLoadingRangeScale(GameSettingsManager.Instance.GetCurrentValueSafelyFloat(EFunction.LOADINGRANGESCALELEVEL, renderDistanceRecommendation.Value, false));
+		}
+
+		// Token: 0x0603DF24 RID: 253732 RVA: 0x011FC724 File Offset: 0x011FA924
+		public static void ReApplyLoadingRangeScale()
+		{
+			if (!GameSettingsManager.Instance.IsValid(EFunction.LOADINGRANGESCALELEVEL, false))
+			{
+				return;
+			}
+			GameSettingsUtils.RenderDistanceConfig renderDistanceConfig = GameSettingsUtils.GetRenderDistanceConfig();
+			if (renderDistanceConfig == null)
+			{
+				return;
+			}
+			int quality = GameSettingsUtils.AppliedDistanceQuality ?? ((int)GameSettingsDeviceRender.Instance.GameQualitySettingLevel);
+			float? renderDistanceRecommendation = GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(quality);
+			if (renderDistanceRecommendation == null)
+			{
+				return;
+			}
+			float currentValueSafelyFloat = GameSettingsManager.Instance.GetCurrentValueSafelyFloat(EFunction.LOADINGRANGESCALELEVEL, renderDistanceRecommendation.Value, false);
+			GameSettingsUtils.ApplyWpDistanceValues(GameSettingsUtils.CalculateRenderDistanceValues(renderDistanceConfig, currentValueSafelyFloat));
+			GameSettingsUtils.HasAppliedRenderDistance = true;
+		}
+
+		// Token: 0x0603DF25 RID: 253733 RVA: 0x011FC7B4 File Offset: 0x011FA9B4
+		public static void RestoreDistanceQualityDefaults()
+		{
+			GameSettingsUtils.RestoreGrassLodDistanceBase();
+			if (!GameSettingsUtils.HasAppliedRenderDistance)
+			{
+				return;
+			}
+			GameSettingsUtils.RenderDistanceConfig renderDistanceConfig = GameSettingsUtils.GetRenderDistanceConfig();
+			if (renderDistanceConfig == null)
+			{
+				return;
+			}
+			int quality = GameSettingsUtils.AppliedDistanceQuality ?? ((int)GameSettingsDeviceRender.Instance.GameQualitySettingLevel);
+			float? renderDistanceRecommendation = GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(quality);
+			if (renderDistanceRecommendation == null)
+			{
+				return;
+			}
+			int renderDistanceStepIndex = GameSettingsDeviceRender.GetRenderDistanceStepIndex(renderDistanceRecommendation.Value);
+			GameSettingsUtils.RenderDistanceValues baseValues = renderDistanceConfig.GetBaseValues(renderDistanceStepIndex);
+			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float(GameSettingsUtils.GetRenderDistanceGrassVariable(), baseValues.GrassCull);
+			GameSettingsUtils.ApplyWpDistanceValues(baseValues);
+			GameSettingsUtils.HasAppliedRenderDistance = false;
+		}
+
+		// Token: 0x04020E23 RID: 134691
 		private static int? NvidiaSuperSamplingQualityCache;
 
-		// Token: 0x04025B6C RID: 154476
+		// Token: 0x04020E24 RID: 134692
 		private static int? KuroLocalRenderSettingIndexCache;
 
-		// Token: 0x04025B6D RID: 154477
+		// Token: 0x04020E25 RID: 134693
 		private static bool XessEnabled;
 
-		// Token: 0x04025B6E RID: 154478
+		// Token: 0x04020E26 RID: 134694
 		private static bool Fsr3FgEnable;
 
-		// Token: 0x04025B6F RID: 154479
+		// Token: 0x04020E27 RID: 134695
 		private static EFFXFIApplyMode Fsr3FgApplyMode;
 
-		// Token: 0x04025B70 RID: 154480
+		// Token: 0x04020E28 RID: 134696
 		[Nullable(2)]
 		private static Dictionary<int, int> Fsr3FgSwitchStates;
 
-		// Token: 0x04025B71 RID: 154481
+		// Token: 0x04020E29 RID: 134697
 		private static bool Fsr3FgInTemporaryApplyState;
 
-		// Token: 0x04025B72 RID: 154482
-		private static float? GrassCullDistanceCache;
+		// Token: 0x04020E2A RID: 134698
+		private const string GrassKey = "r.Kuro.Foliage.GrassCullDistanceMax";
 
-		// Token: 0x04025B73 RID: 154483
-		private static float? GrassMobileCullDistanceCache;
+		// Token: 0x04020E2B RID: 134699
+		private const string MobileGrassKey = "r.Kuro.Foliage.MobileGrassCullDistanceMax";
 
-		// Token: 0x04025B74 RID: 154484
+		// Token: 0x04020E2C RID: 134700
+		private const string GrassLodKey = "foliage.LODDistanceScale";
+
+		// Token: 0x04020E2D RID: 134701
+		private const string LoadingKey = "wp.Runtime.LoadingRangeScale";
+
+		// Token: 0x04020E2E RID: 134702
+		private const string PlannedKey = "wp.Runtime.PlannedLoadingRangeScale";
+
+		// Token: 0x04020E2F RID: 134703
+		[Nullable(2)]
+		private static GameSettingsUtils.RenderDistanceConfig DistanceConfig;
+
+		// Token: 0x04020E30 RID: 134704
+		private static int? AppliedDistanceQuality;
+
+		// Token: 0x04020E31 RID: 134705
+		private static bool HasAppliedRenderDistance;
+
+		// Token: 0x04020E32 RID: 134706
 		private static float? GrassLODDistanceScaleCache;
+
+		// Token: 0x0200BB75 RID: 47989
+		[NullableContext(0)]
+		private readonly struct RenderDistanceValues
+		{
+			// Token: 0x0604896C RID: 297324 RVA: 0x01621B36 File Offset: 0x0161FD36
+			public RenderDistanceValues(float grassCull, float loadingRange, float plannedLoadingRange)
+			{
+				this.GrassCull = grassCull;
+				this.LoadingRange = loadingRange;
+				this.PlannedLoadingRange = plannedLoadingRange;
+			}
+
+			// Token: 0x04039A1C RID: 236060
+			public readonly float GrassCull;
+
+			// Token: 0x04039A1D RID: 236061
+			public readonly float LoadingRange;
+
+			// Token: 0x04039A1E RID: 236062
+			public readonly float PlannedLoadingRange;
+		}
+
+		// Token: 0x0200BB76 RID: 47990
+		[NullableContext(2)]
+		[Nullable(0)]
+		private sealed class RenderDistanceConfig
+		{
+			// Token: 0x17007A80 RID: 31360
+			// (get) Token: 0x0604896D RID: 297325 RVA: 0x01621B4D File Offset: 0x0161FD4D
+			// (set) Token: 0x0604896E RID: 297326 RVA: 0x01621B55 File Offset: 0x0161FD55
+			public IReadOnlyList<DeviceRenderFeature> SourceFeatures { get; private set; }
+
+			// Token: 0x17007A81 RID: 31361
+			// (get) Token: 0x0604896F RID: 297327 RVA: 0x01621B5E File Offset: 0x0161FD5E
+			// (set) Token: 0x06048970 RID: 297328 RVA: 0x01621B66 File Offset: 0x0161FD66
+			public GameSettingsUtils.RenderDistanceValues MaximumValues { get; private set; }
+
+			// Token: 0x06048971 RID: 297329 RVA: 0x01621B70 File Offset: 0x0161FD70
+			[NullableContext(1)]
+			public void Load(IReadOnlyList<DeviceRenderFeature> configs)
+			{
+				float num = Info.Instance.IsMacPlatform() ? 0.85f : 1f;
+				this.BaseValues.Clear();
+				foreach (DeviceRenderFeature deviceRenderFeature in configs)
+				{
+					float grassCull = (float)deviceRenderFeature.GrassCullDistance * num;
+					float loadingRange = (float)deviceRenderFeature.LoadingRangeScale / 100f * num;
+					float plannedLoadingRange = (float)deviceRenderFeature.PlannedLoadingRangeScale / 100f * num;
+					this.BaseValues.Add(new GameSettingsUtils.RenderDistanceValues(grassCull, loadingRange, plannedLoadingRange));
+				}
+				DeviceRenderFeature deviceRenderFeature2 = configs[configs.Count - 1];
+				this.MaximumValues = new GameSettingsUtils.RenderDistanceValues((float)deviceRenderFeature2.GrassCullDistanceMax * num, (float)deviceRenderFeature2.LoadingRangeScaleMax / 100f * num, (float)deviceRenderFeature2.PlannedLoadingRangeScaleMax / 100f * num);
+				this.SourceFeatures = configs;
+			}
+
+			// Token: 0x06048972 RID: 297330 RVA: 0x01621C68 File Offset: 0x0161FE68
+			public GameSettingsUtils.RenderDistanceValues GetBaseValues(int stepIndex)
+			{
+				int count = this.BaseValues.Count;
+				int renderDistanceQualityIndex = GameSettingsDeviceRender.GetRenderDistanceQualityIndex(stepIndex, count);
+				GameSettingsUtils.RenderDistanceValues renderDistanceValues = this.BaseValues[renderDistanceQualityIndex];
+				int renderDistanceRecommendStepIndex = GameSettingsDeviceRender.GetRenderDistanceRecommendStepIndex(renderDistanceQualityIndex, count);
+				if (renderDistanceQualityIndex == count - 1 || stepIndex == renderDistanceRecommendStepIndex)
+				{
+					return renderDistanceValues;
+				}
+				int index = renderDistanceQualityIndex + 1;
+				GameSettingsUtils.RenderDistanceValues renderDistanceValues2 = this.BaseValues[index];
+				int renderDistanceRecommendStepIndex2 = GameSettingsDeviceRender.GetRenderDistanceRecommendStepIndex(index, count);
+				float num = (float)(stepIndex - renderDistanceRecommendStepIndex) / (float)(renderDistanceRecommendStepIndex2 - renderDistanceRecommendStepIndex);
+				return new GameSettingsUtils.RenderDistanceValues(renderDistanceValues.GrassCull + (renderDistanceValues2.GrassCull - renderDistanceValues.GrassCull) * num, renderDistanceValues.LoadingRange + (renderDistanceValues2.LoadingRange - renderDistanceValues.LoadingRange) * num, renderDistanceValues.PlannedLoadingRange + (renderDistanceValues2.PlannedLoadingRange - renderDistanceValues.PlannedLoadingRange) * num);
+			}
+
+			// Token: 0x04039A1F RID: 236063
+			[Nullable(1)]
+			private readonly List<GameSettingsUtils.RenderDistanceValues> BaseValues = new List<GameSettingsUtils.RenderDistanceValues>();
+		}
 	}
 }

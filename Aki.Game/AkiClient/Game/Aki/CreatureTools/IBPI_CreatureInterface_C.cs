@@ -7,13 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.CreatureTools
 {
-	// Token: 0x02003FCA RID: 16330
+	// Token: 0x0200324F RID: 12879
 	[UnrealObjectPath("/Game/Aki/CreatureTools/BPI_CreatureInterface.BPI_CreatureInterface_C")]
 	public interface IBPI_CreatureInterface_C : IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x06029CFC RID: 171260 RVA: 0x009CD024 File Offset: 0x009CB224
+		// Token: 0x060202E6 RID: 131814 RVA: 0x0093F224 File Offset: 0x0093D424
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe int GetEntityId()
 		{
 			IBPI_CreatureInterface_C.__GetEntityId_FunctionParams* ptr = stackalloc IBPI_CreatureInterface_C.__GetEntityId_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(IBPI_CreatureInterface_C.__GetEntityId_FunctionParams) & -16L;
@@ -22,16 +21,16 @@ namespace AkiClient.Game.Aki.CreatureTools
 			return ptr->__Result;
 		}
 
-		// Token: 0x04015791 RID: 87953
+		// Token: 0x04011522 RID: 70946
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/CreatureTools/BPI_CreatureInterface.BPI_CreatureInterface_C";
 
-		// Token: 0x0200A2E4 RID: 41700
+		// Token: 0x02008F2C RID: 36652
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetEntityId_FunctionParams
 		{
-			// Token: 0x04032032 RID: 204850
+			// Token: 0x0402CC68 RID: 183400
 			[FieldOffset(0)]
 			public int __Result;
 		}

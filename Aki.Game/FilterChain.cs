@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034BA RID: 13498
+// Token: 0x02002A2E RID: 10798
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterChain<[Nullable(2)] T>
 {
-	// Token: 0x0601D654 RID: 120404 RVA: 0x00833410 File Offset: 0x00831610
+	// Token: 0x0601B353 RID: 111443 RVA: 0x0085A830 File Offset: 0x00858A30
 	protected FilterChain()
 	{
 	}
 
-	// Token: 0x0601D655 RID: 120405 RVA: 0x00833484 File Offset: 0x00831684
+	// Token: 0x0601B354 RID: 111444 RVA: 0x0085A8A4 File Offset: 0x00858AA4
 	protected void Init()
 	{
 		foreach (EFilterType key in FilterTypeHelper.FilterTypePriority)
@@ -25,13 +24,13 @@ public class FilterChain<[Nullable(2)] T>
 		FilterTypeHelper.TryCatchWrapper<bool>(new Func<bool>(this.OnInit), "[FilterChain] OnInit执行出错", base.GetType().Name);
 	}
 
-	// Token: 0x0601D656 RID: 120406 RVA: 0x008334F9 File Offset: 0x008316F9
+	// Token: 0x0601B355 RID: 111445 RVA: 0x0085A919 File Offset: 0x00858B19
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D657 RID: 120407 RVA: 0x008334FC File Offset: 0x008316FC
+	// Token: 0x0601B356 RID: 111446 RVA: 0x0085A91C File Offset: 0x00858B1C
 	public void Cleanup()
 	{
 		foreach (HashSet<Filter<T>> hashSet in this.AllTypeFilters.Values)
@@ -50,13 +49,13 @@ public class FilterChain<[Nullable(2)] T>
 		FilterTypeHelper.TryCatchWrapper<bool>(new Func<bool>(this.OnCleanup), "[FilterChain] OnCleanup执行出错", base.GetType().Name);
 	}
 
-	// Token: 0x0601D658 RID: 120408 RVA: 0x008335F8 File Offset: 0x008317F8
+	// Token: 0x0601B357 RID: 111447 RVA: 0x0085AA18 File Offset: 0x00858C18
 	protected virtual bool OnCleanup()
 	{
 		return true;
 	}
 
-	// Token: 0x0601D659 RID: 120409 RVA: 0x008335FC File Offset: 0x008317FC
+	// Token: 0x0601B358 RID: 111448 RVA: 0x0085AA1C File Offset: 0x00858C1C
 	public virtual void AddFilter(Filter<T> filter)
 	{
 		if (this.FilterHoldTargets.ContainsKey(filter))
@@ -76,7 +75,7 @@ public class FilterChain<[Nullable(2)] T>
 			foreach (Filter<T> key in this.AllTypeFilters[FilterTypeHelper.FilterTypePriority[i]])
 			{
 				HashSet<T> hashSet = this.FilterHoldTargets[key];
-				foreach (T t in hashSet.ToList<T>())
+				foreach (T t in new List<T>(hashSet))
 				{
 					bool flag = filter.ExecuteCriteria(t);
 					if (flag == FilterTypeHelper.FilterResult[filter.FilterType])
@@ -91,7 +90,7 @@ public class FilterChain<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x0601D65A RID: 120410 RVA: 0x0083377C File Offset: 0x0083197C
+	// Token: 0x0601B359 RID: 111449 RVA: 0x0085AB9C File Offset: 0x00858D9C
 	public unsafe virtual bool RemoveFilter(Filter<T> filter)
 	{
 		if (!this.AllTypeFilters[filter.FilterType].Remove(filter))
@@ -108,9 +107,9 @@ public class FilterChain<[Nullable(2)] T>
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 			return false;
 		}
-		IEnumerable<T> source = this.FilterHoldTargets[filter];
+		HashSet<T> hashSet = this.FilterHoldTargets[filter];
 		this.FilterHoldTargets.Remove(filter);
-		foreach (T t in source.ToList<T>())
+		foreach (T t in hashSet)
 		{
 			if (FilterTypeHelper.FilterResult[filter.FilterType])
 			{
@@ -122,7 +121,7 @@ public class FilterChain<[Nullable(2)] T>
 		return true;
 	}
 
-	// Token: 0x0601D65B RID: 120411 RVA: 0x008338CC File Offset: 0x00831ACC
+	// Token: 0x0601B35A RID: 111450 RVA: 0x0085ACE8 File Offset: 0x00858EE8
 	public unsafe bool AddTarget(T target, EFilterType priority = EFilterType.Top)
 	{
 		bool flag = true;
@@ -161,13 +160,34 @@ public class FilterChain<[Nullable(2)] T>
 		return true;
 	}
 
-	// Token: 0x0601D65C RID: 120412 RVA: 0x00833A10 File Offset: 0x00831C10
+	// Token: 0x0601B35B RID: 111451 RVA: 0x0085AE2C File Offset: 0x0085902C
 	public Filter<T>[] GetAllFilters()
 	{
-		return this.AllTypeFilters.Values.SelectMany((HashSet<Filter<T>> filters) => filters).ToArray<Filter<T>>();
+		int num = 0;
+		Filter<T>[] array;
+		int num2;
+		checked
+		{
+			foreach (HashSet<Filter<T>> hashSet in this.AllTypeFilters.Values)
+			{
+				num += hashSet.Count;
+			}
+			if (num == 0)
+			{
+				return Array.Empty<Filter<T>>();
+			}
+			array = new Filter<T>[num];
+			num2 = 0;
+		}
+		foreach (HashSet<Filter<T>> hashSet2 in this.AllTypeFilters.Values)
+		{
+			hashSet2.CopyTo(array, num2);
+			num2 += hashSet2.Count;
+		}
+		return array;
 	}
 
-	// Token: 0x0601D65D RID: 120413 RVA: 0x00833A48 File Offset: 0x00831C48
+	// Token: 0x0601B35C RID: 111452 RVA: 0x0085AEF4 File Offset: 0x008590F4
 	public unsafe bool RemoveTarget(T target)
 	{
 		bool flag = false;
@@ -206,12 +226,12 @@ public class FilterChain<[Nullable(2)] T>
 		return false;
 	}
 
-	// Token: 0x0601D65E RID: 120414 RVA: 0x00833BBB File Offset: 0x00831DBB
+	// Token: 0x0601B35D RID: 111453 RVA: 0x0085B067 File Offset: 0x00859267
 	protected virtual void OnPassedTargetModified(T target, bool isAdd)
 	{
 	}
 
-	// Token: 0x0601D65F RID: 120415 RVA: 0x00833BC0 File Offset: 0x00831DC0
+	// Token: 0x0601B35E RID: 111454 RVA: 0x0085B06C File Offset: 0x0085926C
 	private void OnFilterCriteriaChanged(object filterUnknown)
 	{
 		Filter<T> filter = filterUnknown as Filter<T>;
@@ -219,16 +239,16 @@ public class FilterChain<[Nullable(2)] T>
 		{
 			return;
 		}
-		IEnumerable<T> source = this.FilterHoldTargets[filter];
+		HashSet<T> hashSet = this.FilterHoldTargets[filter];
 		this.FilterHoldTargets[filter] = new HashSet<T>();
-		foreach (T t in source.ToList<T>())
+		foreach (T t in hashSet)
 		{
 			this.TargetsWithFilter.Remove(t);
 			this.AddTarget(t, filter.FilterType);
 		}
 	}
 
-	// Token: 0x0601D660 RID: 120416 RVA: 0x00833C50 File Offset: 0x00831E50
+	// Token: 0x0601B35F RID: 111455 RVA: 0x0085B0F8 File Offset: 0x008592F8
 	private bool TryModifyPassedTarget(T target, bool isAdd)
 	{
 		if (isAdd)
@@ -248,21 +268,21 @@ public class FilterChain<[Nullable(2)] T>
 		return false;
 	}
 
-	// Token: 0x0400E7A4 RID: 59300
+	// Token: 0x0400EC58 RID: 60504
 	protected readonly Dictionary<EFilterType, HashSet<Filter<T>>> AllTypeFilters = new Dictionary<EFilterType, HashSet<Filter<T>>>();
 
-	// Token: 0x0400E7A5 RID: 59301
+	// Token: 0x0400EC59 RID: 60505
 	private readonly Dictionary<T, Filter<T>> TargetsWithFilter = new Dictionary<T, Filter<T>>();
 
-	// Token: 0x0400E7A6 RID: 59302
+	// Token: 0x0400EC5A RID: 60506
 	private readonly Dictionary<Filter<T>, HashSet<T>> FilterHoldTargets = new Dictionary<Filter<T>, HashSet<T>>();
 
-	// Token: 0x0400E7A7 RID: 59303
+	// Token: 0x0400EC5B RID: 60507
 	private readonly HashSet<T> TargetsPassed = new HashSet<T>();
 
-	// Token: 0x0400E7A8 RID: 59304
+	// Token: 0x0400EC5C RID: 60508
 	private readonly Stat AddTargetStat = Stat.Create("FilterChain.AddTarget", "", "");
 
-	// Token: 0x0400E7A9 RID: 59305
+	// Token: 0x0400EC5D RID: 60509
 	private readonly Stat AddFilterStat = Stat.Create("FilterChain.AddFilter", "", "");
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000993 RID: 2451
+	// Token: 0x02000A68 RID: 2664
 	public class ConfigSubtitleTextByRowNameAndDatatableName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003986 RID: 14726 RVA: 0x0019EC08 File Offset: 0x0019CE08
+		// Token: 0x06003E84 RID: 16004 RVA: 0x001BDF9C File Offset: 0x001BC19C
 		static ConfigSubtitleTextByRowNameAndDatatableName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSubtitleTextByRowNameAndDatatableName.CreateStaticDefaultValue), new Action(ConfigSubtitleTextByRowNameAndDatatableName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003987 RID: 14727 RVA: 0x0019EC28 File Offset: 0x0019CE28
+		// Token: 0x06003E85 RID: 16005 RVA: 0x001BDFBC File Offset: 0x001BC1BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSubtitleTextByRowNameAndDatatableName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003988 RID: 14728 RVA: 0x0019ECA7 File Offset: 0x0019CEA7
+		// Token: 0x06003E86 RID: 16006 RVA: 0x001BE03B File Offset: 0x001BC23B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSubtitleTextByRowNameAndDatatableName.LogPair = null;
 			ConfigSubtitleTextByRowNameAndDatatableName.HandleId = 0;
 		}
 
-		// Token: 0x06003989 RID: 14729 RVA: 0x0019ECB5 File Offset: 0x0019CEB5
+		// Token: 0x06003E87 RID: 16007 RVA: 0x001BE049 File Offset: 0x001BC249
 		public static void Init()
 		{
 			ConfigSubtitleTextByRowNameAndDatatableName.HandleId = ConfigCommon.InitDataStatement(ConfigSubtitleTextByRowNameAndDatatableName.HandleId, "db_subtitle_text.db", "select BinData from `SubtitleText` where RowName = ? AND DatatableName = ?");
 		}
 
-		// Token: 0x0600398A RID: 14730 RVA: 0x0019ECD0 File Offset: 0x0019CED0
+		// Token: 0x06003E88 RID: 16008 RVA: 0x001BE064 File Offset: 0x001BC264
 		public static SubtitleText? GetConfig(int p0RowName, string p1DatatableName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSubtitleTextByRowNameAndDatatableName.HandleId, ConfigSubtitleTextByRowNameAndDatatableName.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new SubtitleText?(rootAsSubtitleText);
 		}
 
-		// Token: 0x040042EB RID: 17131
+		// Token: 0x040048BE RID: 18622
 		private const string DB = "db_subtitle_text.db";
 
-		// Token: 0x040042EC RID: 17132
+		// Token: 0x040048BF RID: 18623
 		private const string FILE = "k.可视化编辑/j.剧情/字幕*";
 
-		// Token: 0x040042ED RID: 17133
+		// Token: 0x040048C0 RID: 18624
 		private const string TABLE = "SubtitleText";
 
-		// Token: 0x040042EE RID: 17134
+		// Token: 0x040048C1 RID: 18625
 		private const string COMMAND = "select BinData from `SubtitleText` where RowName = ? AND DatatableName = ?";
 
-		// Token: 0x040042EF RID: 17135
+		// Token: 0x040048C2 RID: 18626
 		private const string KEY_PREFIX = "SubtitleTextByRowNameAndDatatableName";
 
-		// Token: 0x040042F0 RID: 17136
+		// Token: 0x040048C3 RID: 18627
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042F1 RID: 17137
+		// Token: 0x040048C4 RID: 18628
 		private static int HandleId;
 	}
 }

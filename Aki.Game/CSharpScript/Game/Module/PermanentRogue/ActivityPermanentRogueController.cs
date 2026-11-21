@@ -13,26 +13,26 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x020052EC RID: 21228
+	// Token: 0x020042BC RID: 17084
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityPermanentRogueController : ActivityControllerBase
 	{
-		// Token: 0x060364F7 RID: 222455 RVA: 0x00CD8E9B File Offset: 0x00CD709B
+		// Token: 0x0602B3F2 RID: 177138 RVA: 0x00C2665B File Offset: 0x00C2485B
 		[NullableContext(1)]
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x060364F8 RID: 222456 RVA: 0x00CD8E9D File Offset: 0x00CD709D
+		// Token: 0x0602B3F3 RID: 177139 RVA: 0x00C2665D File Offset: 0x00C2485D
 		[NullableContext(1)]
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_ActivityRogue23Main";
 		}
 
-		// Token: 0x060364F9 RID: 222457 RVA: 0x00CD8EA4 File Offset: 0x00CD70A4
+		// Token: 0x0602B3F4 RID: 177140 RVA: 0x00C26664 File Offset: 0x00C24864
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060364FA RID: 222458 RVA: 0x00CD8EE7 File Offset: 0x00CD70E7
+		// Token: 0x0602B3F5 RID: 177141 RVA: 0x00C266A7 File Offset: 0x00C248A7
 		[NullableContext(1)]
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewPermanentRogue();
 		}
 
-		// Token: 0x060364FB RID: 222459 RVA: 0x00CD8EEE File Offset: 0x00CD70EE
+		// Token: 0x0602B3F6 RID: 177142 RVA: 0x00C266AE File Offset: 0x00C248AE
 		[NullableContext(1)]
 		[PreserveBaseOverrides]
 		protected new virtual ActivityPermanentRogueData OnCreateActivityData(ActivityData data)
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return this.ActivityData;
 		}
 
-		// Token: 0x060364FC RID: 222460 RVA: 0x00CD8F0D File Offset: 0x00CD710D
+		// Token: 0x0602B3F7 RID: 177143 RVA: 0x00C266CD File Offset: 0x00C248CD
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060364FD RID: 222461 RVA: 0x00CD8F10 File Offset: 0x00CD7110
+		// Token: 0x0602B3F8 RID: 177144 RVA: 0x00C266D0 File Offset: 0x00C248D0
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RogueResIllustrationUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueResIllustrationUpdateNotify));
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			Net.Instance.Register(ENotifyMessageId.RogueResTalentUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueResTalentUnlockNotify));
 		}
 
-		// Token: 0x060364FE RID: 222462 RVA: 0x00CD8FE4 File Offset: 0x00CD71E4
+		// Token: 0x0602B3F9 RID: 177145 RVA: 0x00C267A4 File Offset: 0x00C249A4
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResIllustrationUpdateNotify);
@@ -91,26 +91,26 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			Net.Instance.UnRegister(ENotifyMessageId.RogueResTalentUnlockNotify);
 		}
 
-		// Token: 0x060364FF RID: 222463 RVA: 0x00CD9061 File Offset: 0x00CD7261
+		// Token: 0x0602B3FA RID: 177146 RVA: 0x00C26821 File Offset: 0x00C24A21
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoading));
 		}
 
-		// Token: 0x06036500 RID: 222464 RVA: 0x00CD907F File Offset: 0x00CD727F
+		// Token: 0x0602B3FB RID: 177147 RVA: 0x00C2683F File Offset: 0x00C24A3F
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoading));
 		}
 
-		// Token: 0x06036501 RID: 222465 RVA: 0x00CD90A0 File Offset: 0x00CD72A0
+		// Token: 0x0602B3FC RID: 177148 RVA: 0x00C26860 File Offset: 0x00C24A60
 		[NullableContext(1)]
 		public new void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			GenericPromptController.Instance.ShowPromptByItsType(EPromptSubViewType.RogueResOpen, null, null, null, null, null, null);
 		}
 
-		// Token: 0x06036502 RID: 222466 RVA: 0x00CD90C8 File Offset: 0x00CD72C8
+		// Token: 0x0602B3FD RID: 177149 RVA: 0x00C26888 File Offset: 0x00C24A88
 		private void OnCloseLoading()
 		{
 			if (!this.IsFromRogue)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			UiManager.Instance.OpenView(EUiViewName.RogueSeasonEntranceView, seasonId, null);
 		}
 
-		// Token: 0x06036503 RID: 222467 RVA: 0x00CD9124 File Offset: 0x00CD7324
+		// Token: 0x0602B3FE RID: 177150 RVA: 0x00C268E4 File Offset: 0x00C24AE4
 		public void SetReturnToWorld(int dungeonId)
 		{
 			if (ConfigRogueResDungeonConfigById.GetConfig(dungeonId, true) == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.IsFromRogue = true;
 		}
 
-		// Token: 0x06036504 RID: 222468 RVA: 0x00CD9154 File Offset: 0x00CD7354
+		// Token: 0x0602B3FF RID: 177151 RVA: 0x00C26914 File Offset: 0x00C24B14
 		public ActivityRogueData GetCurrentActivityData()
 		{
 			ActivityRogueData activityRogueData = ActivityModel.Instance.GetActivityById(this.ActivityId) as ActivityRogueData;
@@ -149,14 +149,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return activityRogueData;
 		}
 
-		// Token: 0x06036505 RID: 222469 RVA: 0x00CD9180 File Offset: 0x00CD7380
+		// Token: 0x0602B400 RID: 177152 RVA: 0x00C26940 File Offset: 0x00C24B40
 		private void OnRogueResIllustrationUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResIllustrationUpdateNotify updateData = (RogueResIllustrationUpdateNotify)msg;
 			ActivityPermanentRogueModel.Instance.GetActivityData().UpdateIllustrateState(updateData);
 		}
 
-		// Token: 0x06036506 RID: 222470 RVA: 0x00CD91A4 File Offset: 0x00CD73A4
+		// Token: 0x0602B401 RID: 177153 RVA: 0x00C26964 File Offset: 0x00C24B64
 		[NullableContext(1)]
 		public void RequestIllustrationAward(int[] configId)
 		{
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				RogueResIllustrationAwardResponse rogueResIllustrationAwardResponse = (RogueResIllustrationAwardResponse)msg;
 				if (rogueResIllustrationAwardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResIllustrationAwardResponse.ErrorCode, 23918, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResIllustrationAwardResponse.ErrorCode, 24417, null, true, true);
 					return;
 				}
 				if (rogueResIllustrationAwardResponse.IsFull)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}, 0);
 		}
 
-		// Token: 0x06036507 RID: 222471 RVA: 0x00CD91FC File Offset: 0x00CD73FC
+		// Token: 0x0602B402 RID: 177154 RVA: 0x00C269BC File Offset: 0x00C24BBC
 		public void RequestTaskAward(int configId)
 		{
 			RogueResTaskAwardRequest rogueResTaskAwardRequest = RogueResTaskAwardRequest.Create();
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				RogueResTaskAwardResponse rogueResTaskAwardResponse = (RogueResTaskAwardResponse)msg;
 				if (rogueResTaskAwardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResTaskAwardResponse.ErrorCode, 24954, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResTaskAwardResponse.ErrorCode, 29739, null, true, true);
 					return;
 				}
 				ActivityPermanentRogueModel.Instance.GetActivityData().SetTaskRewardGot(configId);
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}, 0);
 		}
 
-		// Token: 0x06036508 RID: 222472 RVA: 0x00CD9248 File Offset: 0x00CD7448
+		// Token: 0x0602B403 RID: 177155 RVA: 0x00C26A08 File Offset: 0x00C24C08
 		public void RequestEnterDungeon(int dungeonId)
 		{
 			RogueResInstStartRequest rogueResInstStartRequest = RogueResInstStartRequest.Create();
@@ -233,47 +233,47 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				RogueResInstStartResponse rogueResInstStartResponse = (RogueResInstStartResponse)msg;
 				if (rogueResInstStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResInstStartResponse.ErrorCode, 15616, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResInstStartResponse.ErrorCode, 29103, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06036509 RID: 222473 RVA: 0x00CD9294 File Offset: 0x00CD7494
+		// Token: 0x0602B404 RID: 177156 RVA: 0x00C26A54 File Offset: 0x00C24C54
 		private void OnRogueResTaskUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResTaskUpdateNotify updateData = (RogueResTaskUpdateNotify)msg;
 			ActivityPermanentRogueModel.Instance.GetActivityData().UpdateTaskNotify(updateData);
 		}
 
-		// Token: 0x0603650A RID: 222474 RVA: 0x00CD92B8 File Offset: 0x00CD74B8
+		// Token: 0x0602B405 RID: 177157 RVA: 0x00C26A78 File Offset: 0x00C24C78
 		private void OnRogueResCurrencyNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResCurrencyNotify rogueResCurrencyNotify = (RogueResCurrencyNotify)msg;
 			ActivityPermanentRogueModel.Instance.InitCurrency(rogueResCurrencyNotify.CurrencyDict);
 		}
 
-		// Token: 0x0603650B RID: 222475 RVA: 0x00CD92DC File Offset: 0x00CD74DC
+		// Token: 0x0602B406 RID: 177158 RVA: 0x00C26A9C File Offset: 0x00C24C9C
 		private void OnRogueResCurrencyUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResCurrencyUpdateNotify rogueResCurrencyUpdateNotify = (RogueResCurrencyUpdateNotify)msg;
 			ActivityPermanentRogueModel.Instance.UpdateCurrency(rogueResCurrencyUpdateNotify.CurrencyUpdateDict, new int?(rogueResCurrencyUpdateNotify.EventType));
 		}
 
-		// Token: 0x0603650C RID: 222476 RVA: 0x00CD930C File Offset: 0x00CD750C
+		// Token: 0x0602B407 RID: 177159 RVA: 0x00C26ACC File Offset: 0x00C24CCC
 		private void OnRogueResTotalShopItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResTotalShopItemUpdateNotify rogueResTotalShopItemUpdateNotify = (RogueResTotalShopItemUpdateNotify)msg;
 			ActivityPermanentRogueModel.Instance.UpdateTotalShopItem(rogueResTotalShopItemUpdateNotify.SeasonId, rogueResTotalShopItemUpdateNotify.TotalShopItem);
 		}
 
-		// Token: 0x0603650D RID: 222477 RVA: 0x00CD9338 File Offset: 0x00CD7538
+		// Token: 0x0602B408 RID: 177160 RVA: 0x00C26AF8 File Offset: 0x00C24CF8
 		private void OnRogueResTalentUnlockNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResTalentUnlockNotify rogueResTalentUnlockNotify = (RogueResTalentUnlockNotify)msg;
 			ActivityPermanentRogueModel.Instance.UpdateSkillTreeUnlockState(rogueResTalentUnlockNotify.SkillId);
 		}
 
-		// Token: 0x0603650E RID: 222478 RVA: 0x00CD935C File Offset: 0x00CD755C
+		// Token: 0x0602B409 RID: 177161 RVA: 0x00C26B1C File Offset: 0x00C24D1C
 		public UniTask RequestRogueResTalentSkillLevel(int skillId)
 		{
 			ActivityPermanentRogueController.<RequestRogueResTalentSkillLevel>d__27 <RequestRogueResTalentSkillLevel>d__;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <RequestRogueResTalentSkillLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603650F RID: 222479 RVA: 0x00CD93A0 File Offset: 0x00CD75A0
+		// Token: 0x0602B40A RID: 177162 RVA: 0x00C26B60 File Offset: 0x00C24D60
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -299,14 +299,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <RequestRogueResLastInstInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036510 RID: 222480 RVA: 0x00CD93DC File Offset: 0x00CD75DC
+		// Token: 0x0602B40B RID: 177163 RVA: 0x00C26B9C File Offset: 0x00C24D9C
 		private void OnRogueResEndingUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueResEndingUpdateNotify message = (RogueResEndingUpdateNotify)msg;
 			ActivityPermanentRogueModel.Instance.GetActivityData().UpdateEndingNotify(message);
 		}
 
-		// Token: 0x06036511 RID: 222481 RVA: 0x00CD9400 File Offset: 0x00CD7600
+		// Token: 0x0602B40C RID: 177164 RVA: 0x00C26BC0 File Offset: 0x00C24DC0
 		public void RequestRogueResEndingReward(int seasonId, int configId, int index)
 		{
 			RogueResEndingRewardRequest rogueResEndingRewardRequest = RogueResEndingRewardRequest.Create();
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 				RogueResEndingRewardResponse rogueResEndingRewardResponse = (RogueResEndingRewardResponse)msg;
 				if (rogueResEndingRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResEndingRewardResponse.ErrorCode, 24880, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueResEndingRewardResponse.ErrorCode, 17493, null, true, true);
 					return;
 				}
 				ActivityPermanentRogueModel.Instance.SetEndingAwardData(configId);
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}, 0);
 		}
 
-		// Token: 0x06036512 RID: 222482 RVA: 0x00CD9458 File Offset: 0x00CD7658
+		// Token: 0x0602B40D RID: 177165 RVA: 0x00C26C18 File Offset: 0x00C24E18
 		[NullableContext(0)]
 		public UniTask<bool> OpenSeasonMainView()
 		{
@@ -338,8 +338,8 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OpenSeasonMainView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x1700830E RID: 33550
-		// (get) Token: 0x06036513 RID: 222483 RVA: 0x00CD9493 File Offset: 0x00CD7693
+		// Token: 0x170056CE RID: 22222
+		// (get) Token: 0x0602B40E RID: 177166 RVA: 0x00C26C53 File Offset: 0x00C24E53
 		[Nullable(1)]
 		public static ActivityPermanentRogueController Instance
 		{
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036514 RID: 222484 RVA: 0x00CD949A File Offset: 0x00CD769A
+		// Token: 0x0602B40F RID: 177167 RVA: 0x00C26C5A File Offset: 0x00C24E5A
 		[NullableContext(1)]
 		public static ActivityPermanentRogueController GetOrCreateInstance()
 		{
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return ActivityPermanentRogueController._Instance;
 		}
 
-		// Token: 0x06036515 RID: 222485 RVA: 0x00CD94AE File Offset: 0x00CD76AE
+		// Token: 0x0602B410 RID: 177168 RVA: 0x00C26C6E File Offset: 0x00C24E6E
 		public static bool CreateInstance()
 		{
 			if (ActivityPermanentRogueController._Instance != null)
@@ -372,36 +372,36 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return true;
 		}
 
-		// Token: 0x06036516 RID: 222486 RVA: 0x00CD94C4 File Offset: 0x00CD76C4
+		// Token: 0x0602B411 RID: 177169 RVA: 0x00C26C84 File Offset: 0x00C24E84
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036517 RID: 222487 RVA: 0x00CD94C6 File Offset: 0x00CD76C6
+		// Token: 0x0602B412 RID: 177170 RVA: 0x00C26C86 File Offset: 0x00C24E86
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityPermanentRogueController._Instance = null;
 		}
 
-		// Token: 0x06036518 RID: 222488 RVA: 0x00CD94CE File Offset: 0x00CD76CE
+		// Token: 0x0602B413 RID: 177171 RVA: 0x00C26C8E File Offset: 0x00C24E8E
 		static ActivityPermanentRogueController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityPermanentRogueController.CreateStaticDefaultValue), new Action(ActivityPermanentRogueController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CB21 RID: 117537
+		// Token: 0x04017556 RID: 95574
 		public int ActivityId;
 
-		// Token: 0x0401CB22 RID: 117538
+		// Token: 0x04017557 RID: 95575
 		private int DungeonId;
 
-		// Token: 0x0401CB23 RID: 117539
+		// Token: 0x04017558 RID: 95576
 		private bool IsFromRogue;
 
-		// Token: 0x0401CB24 RID: 117540
+		// Token: 0x04017559 RID: 95577
 		private ActivityPermanentRogueData ActivityData;
 
-		// Token: 0x0401CB25 RID: 117541
+		// Token: 0x0401755A RID: 95578
 		private static ActivityPermanentRogueController _Instance;
 	}
 }

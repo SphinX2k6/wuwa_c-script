@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D52 RID: 23890
+	// Token: 0x02004D34 RID: 19764
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleHonamiStoryMapLevelView : BattleVisibleChildView
 	{
-		// Token: 0x0603CA6F RID: 248431 RVA: 0x00E8E7E4 File Offset: 0x00E8C9E4
+		// Token: 0x060319C8 RID: 203208 RVA: 0x00DDEF98 File Offset: 0x00DDD198
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CA70 RID: 248432 RVA: 0x00E8E998 File Offset: 0x00E8CB98
+		// Token: 0x060319C9 RID: 203209 RVA: 0x00DDF14C File Offset: 0x00DDD34C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleHonamiStoryMapLevelView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CA71 RID: 248433 RVA: 0x00E8E9DC File Offset: 0x00E8CBDC
+		// Token: 0x060319CA RID: 203210 RVA: 0x00DDF190 File Offset: 0x00DDD390
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA72 RID: 248434 RVA: 0x00E8EA87 File Offset: 0x00E8CC87
+		// Token: 0x060319CB RID: 203211 RVA: 0x00DDF23B File Offset: 0x00DDD43B
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -100,14 +100,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CA73 RID: 248435 RVA: 0x00E8EAC7 File Offset: 0x00E8CCC7
+		// Token: 0x060319CC RID: 203212 RVA: 0x00DDF27B File Offset: 0x00DDD47B
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnHonamiStoryInstInfoUpdate, new Action(this.OnPollutionInit));
 			EventSystem.Instance.Add<int>(EEventName.OnHonamiStoryPollutionUpdate, new Action<int>(this.OnPollutionUpdate));
 		}
 
-		// Token: 0x0603CA74 RID: 248436 RVA: 0x00E8EB01 File Offset: 0x00E8CD01
+		// Token: 0x060319CD RID: 203213 RVA: 0x00DDF2B5 File Offset: 0x00DDD4B5
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryInstInfoUpdate, new Action(this.OnPollutionInit));
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveFunctionOpenEvents();
 		}
 
-		// Token: 0x0603CA75 RID: 248437 RVA: 0x00E8EB44 File Offset: 0x00E8CD44
+		// Token: 0x060319CE RID: 203214 RVA: 0x00DDF2F8 File Offset: 0x00DDD4F8
 		private void RemoveFunctionOpenEvents()
 		{
 			if (EventSystem.Instance.Has(EEventName.OnFunctionOpenSet, new Action<EFunctionType, bool>(this.OnFunctionOpenUpdate)))
@@ -128,13 +128,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA76 RID: 248438 RVA: 0x00E8EBC3 File Offset: 0x00E8CDC3
+		// Token: 0x060319CF RID: 203215 RVA: 0x00DDF377 File Offset: 0x00DDD577
 		private void OnPollutionInit()
 		{
 			this.RefreshPollution(true);
 		}
 
-		// Token: 0x0603CA77 RID: 248439 RVA: 0x00E8EBCC File Offset: 0x00E8CDCC
+		// Token: 0x060319D0 RID: 203216 RVA: 0x00DDF380 File Offset: 0x00DDD580
 		private void OnPollutionUpdate(int _)
 		{
 			this.RefreshPollution(false);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			hoverItem.Refresh();
 		}
 
-		// Token: 0x0603CA78 RID: 248440 RVA: 0x00E8EBE5 File Offset: 0x00E8CDE5
+		// Token: 0x060319D1 RID: 203217 RVA: 0x00DDF399 File Offset: 0x00DDD599
 		private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 		{
 			if (functionType == EFunctionType.HonamiStoryPollution && isOpen)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA79 RID: 248441 RVA: 0x00E8EC04 File Offset: 0x00E8CE04
+		// Token: 0x060319D2 RID: 203218 RVA: 0x00DDF3B8 File Offset: 0x00DDD5B8
 		private void RefreshPollution(bool isInit = false)
 		{
 			int pollutionLevel = HonamiStoryModel.Instance.PollutionLevel;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA7A RID: 248442 RVA: 0x00E8ED94 File Offset: 0x00E8CF94
+		// Token: 0x060319D3 RID: 203219 RVA: 0x00DDF548 File Offset: 0x00DDD748
 		private void RefreshPollutionState(BattleHonamiStoryMapLevelView.EPollutionStateType state)
 		{
 			string hexStr;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetTexture(5).SetColor(color2);
 		}
 
-		// Token: 0x0603CA7B RID: 248443 RVA: 0x00E8EE08 File Offset: 0x00E8D008
+		// Token: 0x060319D4 RID: 203220 RVA: 0x00DDF5BC File Offset: 0x00DDD7BC
 		private BattleHonamiStoryMapLevelView.EPollutionStateType GetPollutionState(int level)
 		{
 			int pollutionWarningLevel = HonamiStoryModel.Instance.PollutionWarningLevel;
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return BattleHonamiStoryMapLevelView.EPollutionStateType.Safe;
 		}
 
-		// Token: 0x0603CA7C RID: 248444 RVA: 0x00E8EE40 File Offset: 0x00E8D040
+		// Token: 0x060319D5 RID: 203221 RVA: 0x00DDF5F4 File Offset: 0x00DDD7F4
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			BattleHonamiStoryMapLevelHoverItem hoverItem = this.HoverItem;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			hoverItem.SetActive(toggleState == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0603CA7D RID: 248445 RVA: 0x00E8EE58 File Offset: 0x00E8D058
+		// Token: 0x060319D6 RID: 203222 RVA: 0x00DDF60C File Offset: 0x00DDD80C
 		private void OnAutoClose()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -298,65 +298,65 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F97F RID: 129407
+		// Token: 0x0401A438 RID: 107576
 		private const float BAR_MAX_FILL = 0.186f;
 
-		// Token: 0x0401F980 RID: 129408
+		// Token: 0x0401A439 RID: 107577
 		private const float BAR_MIN_YAW = 10f;
 
-		// Token: 0x0401F981 RID: 129409
+		// Token: 0x0401A43A RID: 107578
 		private const float BAR_MAX_YAW = 76f;
 
-		// Token: 0x0401F982 RID: 129410
+		// Token: 0x0401A43B RID: 107579
 		private BattleHonamiStoryMapLevelView.EPollutionStateType CurrentState;
 
-		// Token: 0x0401F983 RID: 129411
+		// Token: 0x0401A43C RID: 107580
 		private TimerHandle PollutionTimer;
 
-		// Token: 0x0401F984 RID: 129412
+		// Token: 0x0401A43D RID: 107581
 		private BattleUiTweenAnimPlayer TweenPlayer;
 
-		// Token: 0x0401F985 RID: 129413
+		// Token: 0x0401A43E RID: 107582
 		private int LastLevel;
 
-		// Token: 0x0401F986 RID: 129414
+		// Token: 0x0401A43F RID: 107583
 		private BattleHonamiStoryMapLevelHoverItem HoverItem;
 
-		// Token: 0x0200BFFE RID: 49150
+		// Token: 0x0200AA04 RID: 43524
 		[NullableContext(0)]
 		private enum EPollutionStateType
 		{
-			// Token: 0x04039EEE RID: 237294
+			// Token: 0x040348B0 RID: 215216
 			Safe,
-			// Token: 0x04039EEF RID: 237295
+			// Token: 0x040348B1 RID: 215217
 			Warning,
-			// Token: 0x04039EF0 RID: 237296
+			// Token: 0x040348B2 RID: 215218
 			Danger
 		}
 
-		// Token: 0x0200BFFF RID: 49151
+		// Token: 0x0200AA05 RID: 43525
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039EF2 RID: 237298
+			// Token: 0x040348B4 RID: 215220
 			IconBgSprite,
-			// Token: 0x04039EF3 RID: 237299
+			// Token: 0x040348B5 RID: 215221
 			IconTexture,
-			// Token: 0x04039EF4 RID: 237300
+			// Token: 0x040348B6 RID: 215222
 			LevelBarSprite,
-			// Token: 0x04039EF5 RID: 237301
+			// Token: 0x040348B7 RID: 215223
 			BarLightItem,
-			// Token: 0x04039EF6 RID: 237302
+			// Token: 0x040348B8 RID: 215224
 			LevelText,
-			// Token: 0x04039EF7 RID: 237303
+			// Token: 0x040348B9 RID: 215225
 			ShineTexture,
-			// Token: 0x04039EF8 RID: 237304
+			// Token: 0x040348BA RID: 215226
 			LevelUpItem,
-			// Token: 0x04039EF9 RID: 237305
+			// Token: 0x040348BB RID: 215227
 			LevelUpMaxItem,
-			// Token: 0x04039EFA RID: 237306
+			// Token: 0x040348BC RID: 215228
 			HoverItem,
-			// Token: 0x04039EFB RID: 237307
+			// Token: 0x040348BD RID: 215229
 			Toggle
 		}
 	}

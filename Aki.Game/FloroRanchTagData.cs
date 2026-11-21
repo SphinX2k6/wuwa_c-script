@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Aki.Config;
 
-// Token: 0x02001B03 RID: 6915
+// Token: 0x02000FC2 RID: 4034
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchTagData
 {
-	// Token: 0x0600CD55 RID: 52565 RVA: 0x002ECE3E File Offset: 0x002EB03E
+	// Token: 0x0600A166 RID: 41318 RVA: 0x002F7F2A File Offset: 0x002F612A
 	public void SetTagId(int tagId)
 	{
 		if (tagId == this.TagIdInternal)
@@ -20,7 +20,7 @@ public class FloroRanchTagData
 		this.DynamicParams = null;
 	}
 
-	// Token: 0x0600CD56 RID: 52566 RVA: 0x002ECE6E File Offset: 0x002EB06E
+	// Token: 0x0600A167 RID: 41319 RVA: 0x002F7F5A File Offset: 0x002F615A
 	public void SetDynamicParams(int n, int m, int p)
 	{
 		this.DynamicParams = new TagDynamicParams
@@ -31,8 +31,8 @@ public class FloroRanchTagData
 		};
 	}
 
-	// Token: 0x17001118 RID: 4376
-	// (get) Token: 0x0600CD57 RID: 52567 RVA: 0x002ECE90 File Offset: 0x002EB090
+	// Token: 0x1700113D RID: 4413
+	// (get) Token: 0x0600A168 RID: 41320 RVA: 0x002F7F7C File Offset: 0x002F617C
 	public int TagId
 	{
 		get
@@ -41,8 +41,8 @@ public class FloroRanchTagData
 		}
 	}
 
-	// Token: 0x17001119 RID: 4377
-	// (get) Token: 0x0600CD58 RID: 52568 RVA: 0x002ECE98 File Offset: 0x002EB098
+	// Token: 0x1700113E RID: 4414
+	// (get) Token: 0x0600A169 RID: 41321 RVA: 0x002F7F84 File Offset: 0x002F6184
 	public string Desc
 	{
 		get
@@ -90,13 +90,13 @@ public class FloroRanchTagData
 		}
 	}
 
-	// Token: 0x04005E2B RID: 24107
+	// Token: 0x04005EFA RID: 24314
 	private int TagIdInternal;
 
-	// Token: 0x04005E2C RID: 24108
+	// Token: 0x04005EFB RID: 24315
 	private FloroRanchTag? TagConfig;
 
-	// Token: 0x04005E2D RID: 24109
+	// Token: 0x04005EFC RID: 24316
 	[Nullable(2)]
 	private ITagDynamicParams DynamicParams;
 }

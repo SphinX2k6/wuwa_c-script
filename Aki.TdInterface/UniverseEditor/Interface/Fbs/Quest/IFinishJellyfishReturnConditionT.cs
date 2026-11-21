@@ -3,50 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E3A RID: 15930
+	// Token: 0x02004275 RID: 17013
 	public class IFinishJellyfishReturnConditionT
 	{
-		// Token: 0x17006E31 RID: 28209
-		// (get) Token: 0x06016573 RID: 91507 RVA: 0x00339AD4 File Offset: 0x00337CD4
-		// (set) Token: 0x06016574 RID: 91508 RVA: 0x00339ADC File Offset: 0x00337CDC
+		// Token: 0x17007416 RID: 29718
+		// (get) Token: 0x06017B9C RID: 97180 RVA: 0x0036262D File Offset: 0x0036082D
+		// (set) Token: 0x06017B9D RID: 97181 RVA: 0x00362635 File Offset: 0x00360835
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006E32 RID: 28210
-		// (get) Token: 0x06016575 RID: 91509 RVA: 0x00339AE5 File Offset: 0x00337CE5
-		// (set) Token: 0x06016576 RID: 91510 RVA: 0x00339AED File Offset: 0x00337CED
+		// Token: 0x17007417 RID: 29719
+		// (get) Token: 0x06017B9E RID: 97182 RVA: 0x0036263E File Offset: 0x0036083E
+		// (set) Token: 0x06017B9F RID: 97183 RVA: 0x00362646 File Offset: 0x00360846
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006E33 RID: 28211
-		// (get) Token: 0x06016577 RID: 91511 RVA: 0x00339AF6 File Offset: 0x00337CF6
-		// (set) Token: 0x06016578 RID: 91512 RVA: 0x00339AFE File Offset: 0x00337CFE
+		// Token: 0x17007418 RID: 29720
+		// (get) Token: 0x06017BA0 RID: 97184 RVA: 0x0036264F File Offset: 0x0036084F
+		// (set) Token: 0x06017BA1 RID: 97185 RVA: 0x00362657 File Offset: 0x00360857
 		public int StartPosEntityId { get; set; }
 
-		// Token: 0x17006E34 RID: 28212
-		// (get) Token: 0x06016579 RID: 91513 RVA: 0x00339B07 File Offset: 0x00337D07
-		// (set) Token: 0x0601657A RID: 91514 RVA: 0x00339B0F File Offset: 0x00337D0F
+		// Token: 0x17007419 RID: 29721
+		// (get) Token: 0x06017BA2 RID: 97186 RVA: 0x00362660 File Offset: 0x00360860
+		// (set) Token: 0x06017BA3 RID: 97187 RVA: 0x00362668 File Offset: 0x00360868
 		public float StartRadius { get; set; }
 
-		// Token: 0x17006E35 RID: 28213
-		// (get) Token: 0x0601657B RID: 91515 RVA: 0x00339B18 File Offset: 0x00337D18
-		// (set) Token: 0x0601657C RID: 91516 RVA: 0x00339B20 File Offset: 0x00337D20
+		// Token: 0x1700741A RID: 29722
+		// (get) Token: 0x06017BA4 RID: 97188 RVA: 0x00362671 File Offset: 0x00360871
+		// (set) Token: 0x06017BA5 RID: 97189 RVA: 0x00362679 File Offset: 0x00360879
 		public int EndPosEntityId { get; set; }
 
-		// Token: 0x17006E36 RID: 28214
-		// (get) Token: 0x0601657D RID: 91517 RVA: 0x00339B29 File Offset: 0x00337D29
-		// (set) Token: 0x0601657E RID: 91518 RVA: 0x00339B31 File Offset: 0x00337D31
+		// Token: 0x1700741B RID: 29723
+		// (get) Token: 0x06017BA6 RID: 97190 RVA: 0x00362682 File Offset: 0x00360882
+		// (set) Token: 0x06017BA7 RID: 97191 RVA: 0x0036268A File Offset: 0x0036088A
 		public float EndRadius { get; set; }
 
-		// Token: 0x17006E37 RID: 28215
-		// (get) Token: 0x0601657F RID: 91519 RVA: 0x00339B3A File Offset: 0x00337D3A
-		// (set) Token: 0x06016580 RID: 91520 RVA: 0x00339B42 File Offset: 0x00337D42
+		// Token: 0x1700741C RID: 29724
+		// (get) Token: 0x06017BA8 RID: 97192 RVA: 0x00362693 File Offset: 0x00360893
+		// (set) Token: 0x06017BA9 RID: 97193 RVA: 0x0036269B File Offset: 0x0036089B
 		public string LevelConfigDa { get; set; }
 
-		// Token: 0x17006E38 RID: 28216
-		// (get) Token: 0x06016581 RID: 91521 RVA: 0x00339B4B File Offset: 0x00337D4B
-		// (set) Token: 0x06016582 RID: 91522 RVA: 0x00339B53 File Offset: 0x00337D53
-		public string EffectDa { get; set; }
-
-		// Token: 0x06016583 RID: 91523 RVA: 0x00339B5C File Offset: 0x00337D5C
+		// Token: 0x06017BAA RID: 97194 RVA: 0x003626A4 File Offset: 0x003608A4
 		public IFinishJellyfishReturnConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;
@@ -56,7 +51,6 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			this.EndPosEntityId = 0;
 			this.EndRadius = 0f;
 			this.LevelConfigDa = null;
-			this.EffectDa = null;
 		}
 	}
 }

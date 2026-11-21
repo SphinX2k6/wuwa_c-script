@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Activity.ActivityContent.FarmGold;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001267 RID: 4711
+// Token: 0x0200071B RID: 1819
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 {
-	// Token: 0x06008042 RID: 32834 RVA: 0x001B2384 File Offset: 0x001B0584
+	// Token: 0x060053D9 RID: 21465 RVA: 0x001BB054 File Offset: 0x001B9254
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -50,7 +50,7 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008043 RID: 32835 RVA: 0x001B2513 File Offset: 0x001B0713
+	// Token: 0x060053DA RID: 21466 RVA: 0x001BB1E3 File Offset: 0x001B93E3
 	private void OnClickItem(EToggleState toggleState)
 	{
 		Action<FarmGoldLevelData, int> callback = this.Callback;
@@ -61,13 +61,13 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		callback(this.Data, base.GridIndex);
 	}
 
-	// Token: 0x06008044 RID: 32836 RVA: 0x001B2531 File Offset: 0x001B0731
+	// Token: 0x060053DB RID: 21467 RVA: 0x001BB201 File Offset: 0x001B9401
 	public void SetClickCallback(Action<FarmGoldLevelData, int> callback)
 	{
 		this.Callback = callback;
 	}
 
-	// Token: 0x06008045 RID: 32837 RVA: 0x001B253C File Offset: 0x001B073C
+	// Token: 0x060053DC RID: 21468 RVA: 0x001BB20C File Offset: 0x001B940C
 	public override void Refresh(FarmGoldLevelData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -79,7 +79,7 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		this.SetToggleState(isSelected);
 	}
 
-	// Token: 0x06008046 RID: 32838 RVA: 0x001B25B0 File Offset: 0x001B07B0
+	// Token: 0x060053DD RID: 21469 RVA: 0x001BB280 File Offset: 0x001B9480
 	private void RefreshSubTitle()
 	{
 		FarmGoldLevelData data = this.Data;
@@ -107,7 +107,7 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		}
 	}
 
-	// Token: 0x06008047 RID: 32839 RVA: 0x001B2604 File Offset: 0x001B0804
+	// Token: 0x060053DE RID: 21470 RVA: 0x001BB2D4 File Offset: 0x001B94D4
 	private void RefreshSubTitleValueText(bool isSelected)
 	{
 		if (this.Data != null)
@@ -137,7 +137,7 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		base.GetText(9).SetUIActive(false);
 	}
 
-	// Token: 0x06008048 RID: 32840 RVA: 0x001B26CC File Offset: 0x001B08CC
+	// Token: 0x060053DF RID: 21471 RVA: 0x001BB39C File Offset: 0x001B959C
 	private void SetToggleState(bool isSelected)
 	{
 		EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -145,19 +145,19 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 		this.RefreshSubTitleValueText(isSelected);
 	}
 
-	// Token: 0x06008049 RID: 32841 RVA: 0x001B26F9 File Offset: 0x001B08F9
+	// Token: 0x060053E0 RID: 21472 RVA: 0x001BB3C9 File Offset: 0x001B95C9
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600804A RID: 32842 RVA: 0x001B2702 File Offset: 0x001B0902
+	// Token: 0x060053E1 RID: 21473 RVA: 0x001BB3D2 File Offset: 0x001B95D2
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x04003A3C RID: 14908
+	// Token: 0x04003AD4 RID: 15060
 	[Nullable(new byte[]
 	{
 		2,
@@ -165,33 +165,33 @@ public class FarmGoldInstanceTabItem : GridProxyAbstract<FarmGoldLevelData>
 	})]
 	private Action<FarmGoldLevelData, int> Callback;
 
-	// Token: 0x04003A3D RID: 14909
+	// Token: 0x04003AD5 RID: 15061
 	[Nullable(2)]
 	private FarmGoldLevelData Data;
 
-	// Token: 0x0200787E RID: 30846
+	// Token: 0x02006A09 RID: 27145
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027B3C RID: 162620
+		// Token: 0x04022E6D RID: 142957
 		NumText,
-		// Token: 0x04027B3D RID: 162621
+		// Token: 0x04022E6E RID: 142958
 		TitleText,
-		// Token: 0x04027B3E RID: 162622
+		// Token: 0x04022E6F RID: 142959
 		SubTitleValueText,
-		// Token: 0x04027B3F RID: 162623
+		// Token: 0x04022E70 RID: 142960
 		FinishItem,
-		// Token: 0x04027B40 RID: 162624
+		// Token: 0x04022E71 RID: 142961
 		LockItem,
-		// Token: 0x04027B41 RID: 162625
+		// Token: 0x04022E72 RID: 142962
 		RedDotItem,
-		// Token: 0x04027B42 RID: 162626
+		// Token: 0x04022E73 RID: 142963
 		TabItem,
-		// Token: 0x04027B43 RID: 162627
+		// Token: 0x04022E74 RID: 142964
 		ToggleItem,
-		// Token: 0x04027B44 RID: 162628
+		// Token: 0x04022E75 RID: 142965
 		SubTitleText,
-		// Token: 0x04027B45 RID: 162629
+		// Token: 0x04022E76 RID: 142966
 		SubTitleValueZeroText
 	}
 }

@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E5F RID: 28255
+	// Token: 0x02005FE0 RID: 24544
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ElementalCasketController : ControllerBase
 	{
-		// Token: 0x06044DB6 RID: 282038 RVA: 0x010FEC10 File Offset: 0x010FCE10
+		// Token: 0x0603AF43 RID: 241475 RVA: 0x010A9170 File Offset: 0x010A7370
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.ElementalAbilityUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.ElementalAbilityUpdateNotify));
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044DB7 RID: 282039 RVA: 0x010FEC90 File Offset: 0x010FCE90
+		// Token: 0x0603AF44 RID: 241476 RVA: 0x010A91F0 File Offset: 0x010A73F0
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ElementalAbilityUpdateNotify);
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044DB8 RID: 282040 RVA: 0x010FECE4 File Offset: 0x010FCEE4
+		// Token: 0x0603AF45 RID: 241477 RVA: 0x010A9244 File Offset: 0x010A7444
 		protected override bool OnLeaveLevel()
 		{
 			this.StopSceneItemFieldRenderMaskTimer();
 			return true;
 		}
 
-		// Token: 0x06044DB9 RID: 282041 RVA: 0x010FECF0 File Offset: 0x010FCEF0
+		// Token: 0x0603AF46 RID: 241478 RVA: 0x010A9250 File Offset: 0x010A7450
 		[NullableContext(2)]
 		public PlayerElementalCasketComponent GetPlayerElementalCasketComponent()
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return playerEntity.GetComponent<PlayerElementalCasketComponent>();
 		}
 
-		// Token: 0x06044DBA RID: 282042 RVA: 0x010FED20 File Offset: 0x010FCF20
+		// Token: 0x0603AF47 RID: 241479 RVA: 0x010A9280 File Offset: 0x010A7480
 		[NullableContext(2)]
 		private void ElementalAbilityUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			playerElementalCasketComponent.RefreshPlayerFieldType();
 		}
 
-		// Token: 0x06044DBB RID: 282043 RVA: 0x010FED74 File Offset: 0x010FCF74
+		// Token: 0x0603AF48 RID: 241480 RVA: 0x010A92D4 File Offset: 0x010A74D4
 		[NullableContext(2)]
 		private void EntityElementalAbilityEnableNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			component.UpdateFieldOpened(entityElementalAbilityEnableNotify.Enable);
 		}
 
-		// Token: 0x06044DBC RID: 282044 RVA: 0x010FEDE0 File Offset: 0x010FCFE0
+		// Token: 0x0603AF49 RID: 241481 RVA: 0x010A9340 File Offset: 0x010A7540
 		public void RequestAccessField(EntityHandle fieldOwner, List<EntityHandle> targets, bool isEnter)
 		{
 			List<EntityHandle> list = new List<EntityHandle>();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}, 0);
 		}
 
-		// Token: 0x06044DBD RID: 282045 RVA: 0x010FEF7C File Offset: 0x010FD17C
+		// Token: 0x0603AF4A RID: 241482 RVA: 0x010A94DC File Offset: 0x010A76DC
 		public void RegisterMonsterDetectable(Entity entity)
 		{
 			int id = entity.Id;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DBE RID: 282046 RVA: 0x010FEFBC File Offset: 0x010FD1BC
+		// Token: 0x0603AF4B RID: 241483 RVA: 0x010A951C File Offset: 0x010A771C
 		public void UnRegisterMonsterDetectable(Entity entity)
 		{
 			int id = entity.Id;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			monsterDetectableMap.Remove(id);
 		}
 
-		// Token: 0x06044DBF RID: 282047 RVA: 0x010FEFF8 File Offset: 0x010FD1F8
+		// Token: 0x0603AF4C RID: 241484 RVA: 0x010A9558 File Offset: 0x010A7758
 		public void RegisterField(int ownerEntityId, UKuroFastCollisionShapeComponent shape)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(ownerEntityId);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.GetCollision().RegisterDetector(entityById, shape);
 		}
 
-		// Token: 0x06044DC0 RID: 282048 RVA: 0x010FF02A File Offset: 0x010FD22A
+		// Token: 0x0603AF4D RID: 241485 RVA: 0x010A958A File Offset: 0x010A778A
 		public void UnregisterField(int ownerEntityId)
 		{
 			ElementalFieldCollision collision = ElementalCasketModel.Instance.Collision;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			collision.UnregisterDetector(ownerEntityId);
 		}
 
-		// Token: 0x06044DC1 RID: 282049 RVA: 0x010FF044 File Offset: 0x010FD244
+		// Token: 0x0603AF4E RID: 241486 RVA: 0x010A95A4 File Offset: 0x010A77A4
 		public void RegisterDetectable(int entityId, List<UObject> shapes)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.GetCollision().RegisterDetectable(entityById, shapes);
 		}
 
-		// Token: 0x06044DC2 RID: 282050 RVA: 0x010FF076 File Offset: 0x010FD276
+		// Token: 0x0603AF4F RID: 241487 RVA: 0x010A95D6 File Offset: 0x010A77D6
 		public void UnregisterDetectable(int entityId)
 		{
 			ElementalFieldCollision collision = ElementalCasketModel.Instance.Collision;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			collision.UnregisterDetectable(entityId);
 		}
 
-		// Token: 0x06044DC3 RID: 282051 RVA: 0x010FF090 File Offset: 0x010FD290
+		// Token: 0x0603AF50 RID: 241488 RVA: 0x010A95F0 File Offset: 0x010A77F0
 		public void AddDetectableShape(int entityId, UKuroFastCollisionShapeComponent shape)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.GetCollision().AddDetectableShape(entityById, shape);
 		}
 
-		// Token: 0x06044DC4 RID: 282052 RVA: 0x010FF0C2 File Offset: 0x010FD2C2
+		// Token: 0x0603AF51 RID: 241489 RVA: 0x010A9622 File Offset: 0x010A7822
 		public void RemoveDetectableShape(int entityId, UKuroFastCollisionShapeComponent shape)
 		{
 			ElementalFieldCollision collision = ElementalCasketModel.Instance.Collision;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			collision.RemoveDetectableShape(entityId, shape);
 		}
 
-		// Token: 0x06044DC5 RID: 282053 RVA: 0x010FF0DC File Offset: 0x010FD2DC
+		// Token: 0x0603AF52 RID: 241490 RVA: 0x010A963C File Offset: 0x010A783C
 		private ElementalFieldCollision GetCollision()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return instance.Collision;
 		}
 
-		// Token: 0x06044DC6 RID: 282054 RVA: 0x010FF128 File Offset: 0x010FD328
+		// Token: 0x0603AF53 RID: 241491 RVA: 0x010A9688 File Offset: 0x010A7888
 		public void SetFieldReactions(int ownerEntityId, List<EElementalFieldReactionType> reactions)
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(ownerEntityId);
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DC7 RID: 282055 RVA: 0x010FF17F File Offset: 0x010FD37F
+		// Token: 0x0603AF54 RID: 241492 RVA: 0x010A96DF File Offset: 0x010A78DF
 		public void ClearFieldReactions(int ownerEntityId)
 		{
 			ElementalFieldReactionManager reactionManager = ElementalCasketModel.Instance.ReactionManager;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.ClearFieldReactions(ownerEntityId);
 		}
 
-		// Token: 0x06044DC8 RID: 282056 RVA: 0x010FF196 File Offset: 0x010FD396
+		// Token: 0x0603AF55 RID: 241493 RVA: 0x010A96F6 File Offset: 0x010A78F6
 		private void OnTargetEnter(EntityHandle detector, List<ElementalFieldTarget> targets)
 		{
 			ElementalFieldReactionManager reactionManager = ElementalCasketModel.Instance.ReactionManager;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.TryExecuteEnter(detector, targets);
 		}
 
-		// Token: 0x06044DC9 RID: 282057 RVA: 0x010FF1AE File Offset: 0x010FD3AE
+		// Token: 0x0603AF56 RID: 241494 RVA: 0x010A970E File Offset: 0x010A790E
 		private void OnTargetExit(EntityHandle detector, List<ElementalFieldTarget> targets)
 		{
 			ElementalFieldReactionManager reactionManager = ElementalCasketModel.Instance.ReactionManager;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.TryExecuteLeave(detector, targets);
 		}
 
-		// Token: 0x06044DCA RID: 282058 RVA: 0x010FF1C6 File Offset: 0x010FD3C6
+		// Token: 0x0603AF57 RID: 241495 RVA: 0x010A9726 File Offset: 0x010A7926
 		public void StartImmuneFieldReaction(int detectableId)
 		{
 			ElementalFieldReactionManager reactionManager = ElementalCasketModel.Instance.ReactionManager;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.StartImmuneReaction(detectableId);
 		}
 
-		// Token: 0x06044DCB RID: 282059 RVA: 0x010FF1DD File Offset: 0x010FD3DD
+		// Token: 0x0603AF58 RID: 241496 RVA: 0x010A973D File Offset: 0x010A793D
 		public void StopImmuneFieldReaction(int detectableId)
 		{
 			ElementalFieldReactionManager reactionManager = ElementalCasketModel.Instance.ReactionManager;
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.StopImmuneReaction(detectableId);
 		}
 
-		// Token: 0x06044DCC RID: 282060 RVA: 0x010FF1F4 File Offset: 0x010FD3F4
+		// Token: 0x0603AF59 RID: 241497 RVA: 0x010A9754 File Offset: 0x010A7954
 		[return: TupleElementNames(new string[]
 		{
 			"Detector",
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return <GetOverlappingFieldList>d__;
 		}
 
-		// Token: 0x06044DCD RID: 282061 RVA: 0x010FF204 File Offset: 0x010FD404
+		// Token: 0x0603AF5A RID: 241498 RVA: 0x010A9764 File Offset: 0x010A7964
 		private ElementalFieldReactionManager GetReactionManager()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return instance.ReactionManager;
 		}
 
-		// Token: 0x06044DCE RID: 282062 RVA: 0x010FF238 File Offset: 0x010FD438
+		// Token: 0x0603AF5B RID: 241499 RVA: 0x010A9798 File Offset: 0x010A7998
 		public unsafe void RegisterFieldNeedPlayerDetectable(int ownerEntityId)
 		{
 			bool count = ElementalCasketModel.Instance.NeedPlayerDetectableSet.Count != 0;
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DCF RID: 282063 RVA: 0x010FF2B0 File Offset: 0x010FD4B0
+		// Token: 0x0603AF5C RID: 241500 RVA: 0x010A9810 File Offset: 0x010A7A10
 		public unsafe void UnregisterFieldNeedPlayerDetectable(int ownerEntityId)
 		{
 			int count = ElementalCasketModel.Instance.NeedPlayerDetectableSet.Count;
@@ -398,14 +398,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DD0 RID: 282064 RVA: 0x010FF328 File Offset: 0x010FD528
+		// Token: 0x0603AF5D RID: 241501 RVA: 0x010A9888 File Offset: 0x010A7A88
 		[NullableContext(2)]
 		private void UpdatePlayerCoreData(int fromFoundationPbDataId, FoundationCoreInfo coreInfo)
 		{
 			ElementalCasketModel.Instance.PlayerElementalCoreData = ElementalCasketHelper.CreateElementalCoreData(fromFoundationPbDataId, coreInfo);
 		}
 
-		// Token: 0x06044DD1 RID: 282065 RVA: 0x010FF33C File Offset: 0x010FD53C
+		// Token: 0x0603AF5E RID: 241502 RVA: 0x010A989C File Offset: 0x010A7A9C
 		[NullableContext(2)]
 		private void PlayerHandFoundationCoreChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EventSystem.Instance.Emit(EEventName.OnElementalFoundationCoreChanged);
 		}
 
-		// Token: 0x06044DD2 RID: 282066 RVA: 0x010FF390 File Offset: 0x010FD590
+		// Token: 0x0603AF5F RID: 241503 RVA: 0x010A98F0 File Offset: 0x010A7AF0
 		[NullableContext(2)]
 		private void EntityFoundationCoreChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			EventSystem.Instance.Emit(EEventName.OnElementalFoundationCoreChanged);
 		}
 
-		// Token: 0x06044DD3 RID: 282067 RVA: 0x010FF408 File Offset: 0x010FD608
+		// Token: 0x0603AF60 RID: 241504 RVA: 0x010A9968 File Offset: 0x010A7B68
 		[NullableContext(2)]
 		private void RequestFoundationCoreOperate(SceneItemElementalCoreFoundationComponent foundationComp, long targetCreatureDataId, bool isTakeOut, Action<bool> onFinish = null)
 		{
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}, 0);
 		}
 
-		// Token: 0x06044DD4 RID: 282068 RVA: 0x010FF480 File Offset: 0x010FD680
+		// Token: 0x0603AF61 RID: 241505 RVA: 0x010A99E0 File Offset: 0x010A7BE0
 		public bool StartInteractCoreFoundation(Entity targetEntity, UKuroBooleanEventBinder eventBinder)
 		{
 			SceneItemElementalCoreFoundationComponent foundationComp = targetEntity.GetComponent<SceneItemElementalCoreFoundationComponent>();
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DD5 RID: 282069 RVA: 0x010FF614 File Offset: 0x010FD814
+		// Token: 0x0603AF62 RID: 241506 RVA: 0x010A9B74 File Offset: 0x010A7D74
 		private void RequestDrawElementalCore(SceneItemElementalCoreFoundationComponent foundationComp, EntityHandle foundationHandle, UKuroBooleanEventBinder eventBinder)
 		{
 			this.RequestFoundationCoreOperate(foundationComp, foundationHandle.CreatureDataId, true, delegate(bool result)
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			});
 		}
 
-		// Token: 0x06044DD6 RID: 282070 RVA: 0x010FF650 File Offset: 0x010FD850
+		// Token: 0x0603AF63 RID: 241507 RVA: 0x010A9BB0 File Offset: 0x010A7DB0
 		[NullableContext(2)]
 		public void PlayerResetElementalCore(Action<bool> onFinish = null)
 		{
@@ -615,7 +615,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DD7 RID: 282071 RVA: 0x010FF708 File Offset: 0x010FD908
+		// Token: 0x0603AF64 RID: 241508 RVA: 0x010A9C68 File Offset: 0x010A7E68
 		public void RegisterSceneItemFieldRenderMask(int ownerEntityId)
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -634,7 +634,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DD8 RID: 282072 RVA: 0x010FF768 File Offset: 0x010FD968
+		// Token: 0x0603AF65 RID: 241509 RVA: 0x010A9CC8 File Offset: 0x010A7EC8
 		public void UnregisterSceneItemFieldRenderMask(int ownerEntityId)
 		{
 			List<int> sceneItemFieldRenderMaskList = ElementalCasketModel.Instance.SceneItemFieldRenderMaskList;
@@ -651,7 +651,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DD9 RID: 282073 RVA: 0x010FF7A8 File Offset: 0x010FD9A8
+		// Token: 0x0603AF66 RID: 241510 RVA: 0x010A9D08 File Offset: 0x010A7F08
 		private void StopSceneItemFieldRenderMaskTimer()
 		{
 			ElementalCasketModel instance = ElementalCasketModel.Instance;
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DDA RID: 282074 RVA: 0x010FF7DC File Offset: 0x010FD9DC
+		// Token: 0x0603AF67 RID: 241511 RVA: 0x010A9D3C File Offset: 0x010A7F3C
 		private void WriteSceneItemFieldRenderMask()
 		{
 			UMaterialParameterCollection sceneInteractionMaterialParameterCollection = RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection();
@@ -739,7 +739,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DDB RID: 282075 RVA: 0x010FFA34 File Offset: 0x010FDC34
+		// Token: 0x0603AF68 RID: 241512 RVA: 0x010A9F94 File Offset: 0x010A8194
 		public void PlayerElementalFieldBurst()
 		{
 			ElementalFieldCollision collision = ElementalCasketModel.Instance.Collision;
@@ -803,8 +803,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			reactionManager.ClearFieldReactions(id);
 		}
 
-		// Token: 0x17009A48 RID: 39496
-		// (get) Token: 0x06044DDC RID: 282076 RVA: 0x010FFBA4 File Offset: 0x010FDDA4
+		// Token: 0x17006F5D RID: 28509
+		// (get) Token: 0x0603AF69 RID: 241513 RVA: 0x010AA104 File Offset: 0x010A8304
 		public static ElementalCasketController Instance
 		{
 			get
@@ -813,7 +813,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044DDD RID: 282077 RVA: 0x010FFBAB File Offset: 0x010FDDAB
+		// Token: 0x0603AF6A RID: 241514 RVA: 0x010AA10B File Offset: 0x010A830B
 		public static ElementalCasketController GetOrCreateInstance()
 		{
 			if (ElementalCasketController._Instance == null)
@@ -823,7 +823,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return ElementalCasketController._Instance;
 		}
 
-		// Token: 0x06044DDE RID: 282078 RVA: 0x010FFBBF File Offset: 0x010FDDBF
+		// Token: 0x0603AF6B RID: 241515 RVA: 0x010AA11F File Offset: 0x010A831F
 		public static bool CreateInstance()
 		{
 			if (ElementalCasketController._Instance != null)
@@ -834,24 +834,24 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044DDF RID: 282079 RVA: 0x010FFBD5 File Offset: 0x010FDDD5
+		// Token: 0x0603AF6C RID: 241516 RVA: 0x010AA135 File Offset: 0x010A8335
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044DE0 RID: 282080 RVA: 0x010FFBD7 File Offset: 0x010FDDD7
+		// Token: 0x0603AF6D RID: 241517 RVA: 0x010AA137 File Offset: 0x010A8337
 		public static void ResetStaticDefaultValue()
 		{
 			ElementalCasketController._Instance = null;
 		}
 
-		// Token: 0x06044DE1 RID: 282081 RVA: 0x010FFBDF File Offset: 0x010FDDDF
+		// Token: 0x0603AF6E RID: 241518 RVA: 0x010AA13F File Offset: 0x010A833F
 		static ElementalCasketController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ElementalCasketController.CreateStaticDefaultValue), new Action(ElementalCasketController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023D4A RID: 146762
+		// Token: 0x0401EFFF RID: 126975
 		[Nullable(2)]
 		private static ElementalCasketController _Instance;
 	}

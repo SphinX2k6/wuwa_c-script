@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200030F RID: 783
+	// Token: 0x02000316 RID: 790
 	public sealed class CowLevel : IMessage<CowLevel>, IMessage, IEquatable<CowLevel>, IDeepCloneable<CowLevel>, IBufferMessage
 	{
-		// Token: 0x06004ED3 RID: 20179 RVA: 0x000BF364 File Offset: 0x000BD564
+		// Token: 0x06004FAC RID: 20396 RVA: 0x000C1750 File Offset: 0x000BF950
 		[NullableContext(1)]
 		public static CowLevel Create()
 		{
 			return new CowLevel();
 		}
 
-		// Token: 0x17000DFE RID: 3582
-		// (get) Token: 0x06004ED4 RID: 20180 RVA: 0x000BF36B File Offset: 0x000BD56B
+		// Token: 0x17000E2B RID: 3627
+		// (get) Token: 0x06004FAD RID: 20397 RVA: 0x000C1757 File Offset: 0x000BF957
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000DFF RID: 3583
-		// (get) Token: 0x06004ED5 RID: 20181 RVA: 0x000BF36E File Offset: 0x000BD56E
+		// Token: 0x17000E2C RID: 3628
+		// (get) Token: 0x06004FAE RID: 20398 RVA: 0x000C175A File Offset: 0x000BF95A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004ED6 RID: 20182 RVA: 0x000BF375 File Offset: 0x000BD575
+		// Token: 0x06004FAF RID: 20399 RVA: 0x000C1761 File Offset: 0x000BF961
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CowLevel()
 		{
 		}
 
-		// Token: 0x06004ED7 RID: 20183 RVA: 0x000BF37D File Offset: 0x000BD57D
+		// Token: 0x06004FB0 RID: 20400 RVA: 0x000C1769 File Offset: 0x000BF969
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CowLevel(CowLevel other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004ED8 RID: 20184 RVA: 0x000BF3A2 File Offset: 0x000BD5A2
+		// Token: 0x06004FB1 RID: 20401 RVA: 0x000C178E File Offset: 0x000BF98E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CowLevel Clone()
@@ -65,9 +65,9 @@ namespace Aki.Protocol
 			return new CowLevel(this);
 		}
 
-		// Token: 0x17000E00 RID: 3584
-		// (get) Token: 0x06004ED9 RID: 20185 RVA: 0x000BF3AA File Offset: 0x000BD5AA
-		// (set) Token: 0x06004EDA RID: 20186 RVA: 0x000BF3B2 File Offset: 0x000BD5B2
+		// Token: 0x17000E2D RID: 3629
+		// (get) Token: 0x06004FB2 RID: 20402 RVA: 0x000C1796 File Offset: 0x000BF996
+		// (set) Token: 0x06004FB3 RID: 20403 RVA: 0x000C179E File Offset: 0x000BF99E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelScore
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004EDB RID: 20187 RVA: 0x000BF3BB File Offset: 0x000BD5BB
+		// Token: 0x06004FB4 RID: 20404 RVA: 0x000C17A7 File Offset: 0x000BF9A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CowLevel);
 		}
 
-		// Token: 0x06004EDC RID: 20188 RVA: 0x000BF3C9 File Offset: 0x000BD5C9
+		// Token: 0x06004FB5 RID: 20405 RVA: 0x000C17B5 File Offset: 0x000BF9B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CowLevel other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelScore == other.LevelScore && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004EDD RID: 20189 RVA: 0x000BF3F8 File Offset: 0x000BD5F8
+		// Token: 0x06004FB6 RID: 20406 RVA: 0x000C17E4 File Offset: 0x000BF9E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004EDE RID: 20190 RVA: 0x000BF437 File Offset: 0x000BD637
+		// Token: 0x06004FB7 RID: 20407 RVA: 0x000C1823 File Offset: 0x000BFA23
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004EDF RID: 20191 RVA: 0x000BF444 File Offset: 0x000BD644
+		// Token: 0x06004FB8 RID: 20408 RVA: 0x000C1830 File Offset: 0x000BFA30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004EE0 RID: 20192 RVA: 0x000BF44D File Offset: 0x000BD64D
+		// Token: 0x06004FB9 RID: 20409 RVA: 0x000C1839 File Offset: 0x000BFA39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004EE1 RID: 20193 RVA: 0x000BF480 File Offset: 0x000BD680
+		// Token: 0x06004FBA RID: 20410 RVA: 0x000C186C File Offset: 0x000BFA6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004EE2 RID: 20194 RVA: 0x000BF4BE File Offset: 0x000BD6BE
+		// Token: 0x06004FBB RID: 20411 RVA: 0x000C18AA File Offset: 0x000BFAAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CowLevel other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004EE3 RID: 20195 RVA: 0x000BF4EF File Offset: 0x000BD6EF
+		// Token: 0x06004FBC RID: 20412 RVA: 0x000C18DB File Offset: 0x000BFADB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004EE4 RID: 20196 RVA: 0x000BF4F8 File Offset: 0x000BD6F8
+		// Token: 0x06004FBD RID: 20413 RVA: 0x000C18E4 File Offset: 0x000BFAE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -211,13 +211,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040031B2 RID: 12722
+		// Token: 0x04003249 RID: 12873
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040031B3 RID: 12723
+		// Token: 0x0400324A RID: 12874
 		public const int LevelScoreFieldNumber = 1;
 
-		// Token: 0x040031B4 RID: 12724
+		// Token: 0x0400324B RID: 12875
 		private int levelScore_;
 	}
 }

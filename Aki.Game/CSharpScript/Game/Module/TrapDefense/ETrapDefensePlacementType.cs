@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A41 RID: 19009
+	// Token: 0x020039E9 RID: 14825
 	public enum ETrapDefensePlacementType
 	{
-		// Token: 0x0401A615 RID: 108053
+		// Token: 0x04014F67 RID: 85863
 		None,
-		// Token: 0x0401A616 RID: 108054
+		// Token: 0x04014F68 RID: 85864
 		Floor,
-		// Token: 0x0401A617 RID: 108055
+		// Token: 0x04014F69 RID: 85865
 		Wall,
-		// Token: 0x0401A618 RID: 108056
+		// Token: 0x04014F6A RID: 85866
 		Ceil = 4
 	}
 }

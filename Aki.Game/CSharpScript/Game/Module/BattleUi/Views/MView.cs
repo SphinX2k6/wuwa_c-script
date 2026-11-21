@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA6 RID: 23974
+	// Token: 0x02004D88 RID: 19848
 	public class MView : UiTickViewBase
 	{
-		// Token: 0x0603CDFE RID: 249342 RVA: 0x00E9F693 File Offset: 0x00E9D893
+		// Token: 0x06031D5B RID: 204123 RVA: 0x00DEFF4B File Offset: 0x00DEE14B
 		[NullableContext(1)]
 		public MView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603CDFF RID: 249343 RVA: 0x00E9F6A8 File Offset: 0x00E9D8A8
+		// Token: 0x06031D5C RID: 204124 RVA: 0x00DEFF60 File Offset: 0x00DEE160
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,19 +30,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE00 RID: 249344 RVA: 0x00E9F6F0 File Offset: 0x00E9D8F0
+		// Token: 0x06031D5D RID: 204125 RVA: 0x00DEFFA8 File Offset: 0x00DEE1A8
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.MReady, new Action(this.UpdateMask));
 		}
 
-		// Token: 0x0603CE01 RID: 249345 RVA: 0x00E9F70E File Offset: 0x00E9D90E
+		// Token: 0x06031D5E RID: 204126 RVA: 0x00DEFFC6 File Offset: 0x00DEE1C6
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MReady, new Action(this.UpdateMask));
 		}
 
-		// Token: 0x0603CE02 RID: 249346 RVA: 0x00E9F72C File Offset: 0x00E9D92C
+		// Token: 0x06031D5F RID: 204127 RVA: 0x00DEFFE4 File Offset: 0x00DEE1E4
 		protected override void OnStart()
 		{
 			if (!BaseConfigController.Instance.GetRptIsOpen())
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitMask();
 		}
 
-		// Token: 0x0603CE03 RID: 249347 RVA: 0x00E9F758 File Offset: 0x00E9D958
+		// Token: 0x06031D60 RID: 204128 RVA: 0x00DF0010 File Offset: 0x00DEE210
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.MaskReady)
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaskCheckTimeMs += (int)deltaTime;
 		}
 
-		// Token: 0x0603CE04 RID: 249348 RVA: 0x00E9F78D File Offset: 0x00E9D98D
+		// Token: 0x06031D61 RID: 204129 RVA: 0x00DF0045 File Offset: 0x00DEE245
 		private void UpdateMask()
 		{
 			this.InitMask();
 		}
 
-		// Token: 0x0603CE05 RID: 249349 RVA: 0x00E9F798 File Offset: 0x00E9D998
+		// Token: 0x06031D62 RID: 204130 RVA: 0x00DF0050 File Offset: 0x00DEE250
 		private void InitMask()
 		{
 			if (UKuroStaticLibrary.FileExists(this.MaskPath))
@@ -103,26 +103,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FB59 RID: 129881
+		// Token: 0x0401A611 RID: 108049
 		private const int CHECK_INTERVAL = 1000;
 
-		// Token: 0x0401FB5A RID: 129882
+		// Token: 0x0401A612 RID: 108050
 		private bool MaskReady;
 
-		// Token: 0x0401FB5B RID: 129883
+		// Token: 0x0401A613 RID: 108051
 		[Nullable(1)]
 		private string MaskPath = "";
 
-		// Token: 0x0401FB5C RID: 129884
+		// Token: 0x0401A614 RID: 108052
 		private int MaskCheckTimeMs;
 
-		// Token: 0x0401FB5D RID: 129885
+		// Token: 0x0401A615 RID: 108053
 		private int Index;
 
-		// Token: 0x0200C080 RID: 49280
+		// Token: 0x0200AA86 RID: 43654
 		private enum EComponents
 		{
-			// Token: 0x0403A176 RID: 237942
+			// Token: 0x04034B39 RID: 215865
 			ItemMask
 		}
 	}

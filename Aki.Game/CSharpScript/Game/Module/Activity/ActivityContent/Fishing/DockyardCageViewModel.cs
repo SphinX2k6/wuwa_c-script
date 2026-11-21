@@ -4,25 +4,25 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200659E RID: 26014
+	// Token: 0x0200551C RID: 21788
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardCageViewModel : DockyardWareHouseViewModelBase
 	{
-		// Token: 0x1700956D RID: 38253
-		// (get) Token: 0x0604139E RID: 267166 RVA: 0x00FCE66D File Offset: 0x00FCC86D
+		// Token: 0x170068CF RID: 26831
+		// (get) Token: 0x06036063 RID: 221283 RVA: 0x00F15681 File Offset: 0x00F13881
 		public virtual DockyardCageBackpackPanelModel BackpackPanelModel { [PreserveBaseOverrides] get; } = new DockyardCageBackpackPanelModel();
 
-		// Token: 0x1700956E RID: 38254
-		// (get) Token: 0x0604139F RID: 267167 RVA: 0x00FCE675 File Offset: 0x00FCC875
+		// Token: 0x170068D0 RID: 26832
+		// (get) Token: 0x06036064 RID: 221284 RVA: 0x00F15689 File Offset: 0x00F13889
 		public virtual DockyardCageListPanelModel ListPanelModel { [PreserveBaseOverrides] get; } = new DockyardCageListPanelModel();
 
-		// Token: 0x1700956F RID: 38255
-		// (get) Token: 0x060413A0 RID: 267168 RVA: 0x00FCE67D File Offset: 0x00FCC87D
+		// Token: 0x170068D1 RID: 26833
+		// (get) Token: 0x06036065 RID: 221285 RVA: 0x00F15691 File Offset: 0x00F13891
 		protected override CabinType RequestCabinType { get; } = 3;
 
-		// Token: 0x17009570 RID: 38256
-		// (get) Token: 0x060413A1 RID: 267169 RVA: 0x00FCE685 File Offset: 0x00FCC885
+		// Token: 0x170068D2 RID: 26834
+		// (get) Token: 0x06036066 RID: 221286 RVA: 0x00F15699 File Offset: 0x00F13899
 		protected override int RequestId
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413A2 RID: 267170 RVA: 0x00FCE68D File Offset: 0x00FCC88D
+		// Token: 0x06036067 RID: 221287 RVA: 0x00F156A1 File Offset: 0x00F138A1
 		protected override void OnInit()
 		{
 			this.ViewTitle = "Fishing_CageText3";
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ListPanelModel.Init(this.ConfigId);
 		}
 
-		// Token: 0x060413A3 RID: 267171 RVA: 0x00FCE6BC File Offset: 0x00FCC8BC
+		// Token: 0x06036068 RID: 221288 RVA: 0x00F156D0 File Offset: 0x00F138D0
 		public override DockyardItemBlockOriginalData GetItemBlockData(int id)
 		{
 			DockyardItemBlockOriginalData itemBlockData = DockyardModel.Instance.GetItemBlockData(id);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return FishingModel.Instance.GetDataByCage(this.ConfigId, id);
 		}
 
-		// Token: 0x04021F51 RID: 139089
+		// Token: 0x0401C882 RID: 116866
 		public int ConfigId;
 	}
 }

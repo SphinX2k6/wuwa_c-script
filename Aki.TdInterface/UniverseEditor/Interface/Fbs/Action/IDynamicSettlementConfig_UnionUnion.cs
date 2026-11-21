@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006622 RID: 26146
+	// Token: 0x02006C93 RID: 27795
 	public class IDynamicSettlementConfig_UnionUnion
 	{
-		// Token: 0x1700C240 RID: 49728
-		// (get) Token: 0x0602D669 RID: 185961 RVA: 0x00638731 File Offset: 0x00636931
-		// (set) Token: 0x0602D66A RID: 185962 RVA: 0x00638739 File Offset: 0x00636939
+		// Token: 0x1700CBDE RID: 52190
+		// (get) Token: 0x0602FE3A RID: 196154 RVA: 0x00685299 File Offset: 0x00683499
+		// (set) Token: 0x0602FE3B RID: 196155 RVA: 0x006852A1 File Offset: 0x006834A1
 		public IDynamicSettlementConfig_Union Type { get; set; }
 
-		// Token: 0x1700C241 RID: 49729
-		// (get) Token: 0x0602D66B RID: 185963 RVA: 0x00638742 File Offset: 0x00636942
-		// (set) Token: 0x0602D66C RID: 185964 RVA: 0x0063874A File Offset: 0x0063694A
+		// Token: 0x1700CBDF RID: 52191
+		// (get) Token: 0x0602FE3C RID: 196156 RVA: 0x006852AA File Offset: 0x006834AA
+		// (set) Token: 0x0602FE3D RID: 196157 RVA: 0x006852B2 File Offset: 0x006834B2
 		public object Value { get; set; }
 
-		// Token: 0x0602D66D RID: 185965 RVA: 0x00638753 File Offset: 0x00636953
+		// Token: 0x0602FE3E RID: 196158 RVA: 0x006852BB File Offset: 0x006834BB
 		public IDynamicSettlementConfig_UnionUnion()
 		{
 			this.Type = IDynamicSettlementConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602D66E RID: 185966 RVA: 0x00638769 File Offset: 0x00636969
+		// Token: 0x0602FE3F RID: 196159 RVA: 0x006852D1 File Offset: 0x006834D1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602D66F RID: 185967 RVA: 0x0063877B File Offset: 0x0063697B
+		// Token: 0x0602FE40 RID: 196160 RVA: 0x006852E3 File Offset: 0x006834E3
 		public IDynamicSettlementConfigT AsIDynamicSettlementConfig()
 		{
 			return this.As<IDynamicSettlementConfigT>();
 		}
 
-		// Token: 0x0602D670 RID: 185968 RVA: 0x00638783 File Offset: 0x00636983
+		// Token: 0x0602FE41 RID: 196161 RVA: 0x006852EB File Offset: 0x006834EB
 		public static IDynamicSettlementConfig_UnionUnion FromIDynamicSettlementConfig(IDynamicSettlementConfigT _idynamicsettlementconfig)
 		{
 			return new IDynamicSettlementConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D671 RID: 185969 RVA: 0x00638798 File Offset: 0x00636998
+		// Token: 0x0602FE42 RID: 196162 RVA: 0x00685300 File Offset: 0x00683500
 		public IBattleSettlementT AsIBattleSettlement()
 		{
 			return this.As<IBattleSettlementT>();
 		}
 
-		// Token: 0x0602D672 RID: 185970 RVA: 0x006387A0 File Offset: 0x006369A0
+		// Token: 0x0602FE43 RID: 196163 RVA: 0x00685308 File Offset: 0x00683508
 		public static IDynamicSettlementConfig_UnionUnion FromIBattleSettlement(IBattleSettlementT _ibattlesettlement)
 		{
 			return new IDynamicSettlementConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D673 RID: 185971 RVA: 0x006387B5 File Offset: 0x006369B5
+		// Token: 0x0602FE44 RID: 196164 RVA: 0x0068531D File Offset: 0x0068351D
 		public ISoaringChallengeSettlementT AsISoaringChallengeSettlement()
 		{
 			return this.As<ISoaringChallengeSettlementT>();
 		}
 
-		// Token: 0x0602D674 RID: 185972 RVA: 0x006387BD File Offset: 0x006369BD
+		// Token: 0x0602FE45 RID: 196165 RVA: 0x00685325 File Offset: 0x00683525
 		public static IDynamicSettlementConfig_UnionUnion FromISoaringChallengeSettlement(ISoaringChallengeSettlementT _isoaringchallengesettlement)
 		{
 			return new IDynamicSettlementConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D675 RID: 185973 RVA: 0x006387D4 File Offset: 0x006369D4
+		// Token: 0x0602FE46 RID: 196166 RVA: 0x0068533C File Offset: 0x0068353C
 		public static int Pack(FlatBufferBuilder builder, IDynamicSettlementConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BDF RID: 11231
+// Token: 0x0200215A RID: 8538
 public class TowerAreaItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601753D RID: 95549 RVA: 0x005EE5C4 File Offset: 0x005EC7C4
+	// Token: 0x06014F6E RID: 85870 RVA: 0x0061B104 File Offset: 0x00619304
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -48,7 +48,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601753E RID: 95550 RVA: 0x005EE774 File Offset: 0x005EC974
+	// Token: 0x06014F6F RID: 85871 RVA: 0x0061B2B4 File Offset: 0x006194B4
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -57,7 +57,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		base.GetText(1).SetUIActive(false);
 	}
 
-	// Token: 0x0601753F RID: 95551 RVA: 0x005EE7D4 File Offset: 0x005EC9D4
+	// Token: 0x06014F70 RID: 85872 RVA: 0x0061B314 File Offset: 0x00619514
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(data).Value;
@@ -67,7 +67,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		this.RefreshTowerStar(value);
 	}
 
-	// Token: 0x06017540 RID: 95552 RVA: 0x005EE830 File Offset: 0x005ECA30
+	// Token: 0x06014F71 RID: 85873 RVA: 0x0061B370 File Offset: 0x00619570
 	private void RefreshTowerStar(TowerConfig towerInfo)
 	{
 		int areaAllStars = TowerModel.Instance.GetAreaAllStars(towerInfo.Difficulty, towerInfo.AreaNum);
@@ -105,7 +105,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		base.GetItem(7).SetColor(color2);
 	}
 
-	// Token: 0x06017541 RID: 95553 RVA: 0x005EE994 File Offset: 0x005ECB94
+	// Token: 0x06014F72 RID: 85874 RVA: 0x0061B4D4 File Offset: 0x006196D4
 	private void OnClickTowerBtn()
 	{
 		if (this.IsLock)
@@ -117,7 +117,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		this.LevelSequencePlayer.PlaySequencePurely("Click", true, false, null, null, false);
 	}
 
-	// Token: 0x06017542 RID: 95554 RVA: 0x005EE9E8 File Offset: 0x005ECBE8
+	// Token: 0x06014F73 RID: 85875 RVA: 0x0061B528 File Offset: 0x00619728
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnTowerRefresh, new Action(this.OnTowerRefresh));
@@ -130,7 +130,7 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x06017543 RID: 95555 RVA: 0x005EEA25 File Offset: 0x005ECC25
+	// Token: 0x06014F74 RID: 85876 RVA: 0x0061B565 File Offset: 0x00619765
 	[NullableContext(1)]
 	private void FinishSequenceEvent(string name)
 	{
@@ -140,48 +140,48 @@ public class TowerAreaItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06017544 RID: 95556 RVA: 0x005EEA50 File Offset: 0x005ECC50
+	// Token: 0x06014F75 RID: 85877 RVA: 0x0061B590 File Offset: 0x00619790
 	private void OnTowerRefresh()
 	{
 		TowerConfig value = TowerClimbConfig.Instance.GetTowerInfo(this.TowerData).Value;
 		this.RefreshTowerStar(value);
 	}
 
-	// Token: 0x0400AEAC RID: 44716
+	// Token: 0x0400B2B1 RID: 45745
 	private bool IsLock = true;
 
-	// Token: 0x0400AEAD RID: 44717
+	// Token: 0x0400B2B2 RID: 45746
 	private int AreaNumber = -1;
 
-	// Token: 0x0400AEAE RID: 44718
+	// Token: 0x0400B2B3 RID: 45747
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AEAF RID: 44719
+	// Token: 0x0400B2B4 RID: 45748
 	private int TowerData = -1;
 
-	// Token: 0x02009197 RID: 37271
+	// Token: 0x020083DB RID: 33755
 	private enum EChildType
 	{
-		// Token: 0x0402F1C2 RID: 192962
+		// Token: 0x0402A8C7 RID: 174279
 		LockItem,
-		// Token: 0x0402F1C3 RID: 192963
+		// Token: 0x0402A8C8 RID: 174280
 		AreaNumberText,
-		// Token: 0x0402F1C4 RID: 192964
+		// Token: 0x0402A8C9 RID: 174281
 		AreaNameText,
-		// Token: 0x0402F1C5 RID: 192965
+		// Token: 0x0402A8CA RID: 174282
 		StarText,
-		// Token: 0x0402F1C6 RID: 192966
+		// Token: 0x0402A8CB RID: 174283
 		TowerBtn,
-		// Token: 0x0402F1C7 RID: 192967
+		// Token: 0x0402A8CC RID: 174284
 		UnLockItem,
-		// Token: 0x0402F1C8 RID: 192968
+		// Token: 0x0402A8CD RID: 174285
 		FinishItem,
-		// Token: 0x0402F1C9 RID: 192969
+		// Token: 0x0402A8CE RID: 174286
 		StarItem,
-		// Token: 0x0402F1CA RID: 192970
+		// Token: 0x0402A8CF RID: 174287
 		NormalEffectItem,
-		// Token: 0x0402F1CB RID: 192971
+		// Token: 0x0402A8D0 RID: 174288
 		DarkEffectItem
 	}
 }

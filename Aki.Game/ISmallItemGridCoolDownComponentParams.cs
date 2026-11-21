@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200196D RID: 6509
+// Token: 0x02000E2A RID: 3626
 public interface ISmallItemGridCoolDownComponentParams
 {
-	// Token: 0x17000FEA RID: 4074
-	// (get) Token: 0x0600BEAF RID: 48815
-	// (set) Token: 0x0600BEB0 RID: 48816
+	// Token: 0x1700100E RID: 4110
+	// (get) Token: 0x060092B7 RID: 37559
+	// (set) Token: 0x060092B8 RID: 37560
 	float? CoolDown { get; set; }
 
-	// Token: 0x17000FEB RID: 4075
-	// (get) Token: 0x0600BEB1 RID: 48817
-	// (set) Token: 0x0600BEB2 RID: 48818
+	// Token: 0x1700100F RID: 4111
+	// (get) Token: 0x060092B9 RID: 37561
+	// (set) Token: 0x060092BA RID: 37562
 	float? TotalCdTime { get; set; }
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001150 RID: 4432
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001280 RID: 4736
 	public class ISunSpiritProcess
 	{
-		// Token: 0x060064B8 RID: 25784 RVA: 0x000F20A8 File Offset: 0x000F02A8
+		// Token: 0x06006ABF RID: 27327 RVA: 0x000FF36C File Offset: 0x000FD56C
 		private ISunSpiritProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060064B9 RID: 25785 RVA: 0x000F20E0 File Offset: 0x000F02E0
+		// Token: 0x06006AC0 RID: 27328 RVA: 0x000FF3A4 File Offset: 0x000FD5A4
 		public static ISunSpiritProcess Create([Nullable(2)] ISunSpiritProcess instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060064BA RID: 25786 RVA: 0x000F20F3 File Offset: 0x000F02F3
+		// Token: 0x06006AC1 RID: 27329 RVA: 0x000FF3B7 File Offset: 0x000FD5B7
 		public static ISunSpiritProcess CreateFromSetValue([Nullable(2)] ISunSpiritProcess_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060064BB RID: 25787 RVA: 0x000F2106 File Offset: 0x000F0306
+		// Token: 0x06006AC2 RID: 27330 RVA: 0x000FF3CA File Offset: 0x000FD5CA
 		public ISunSpiritProcess_SetValue ToSetValue()
 		{
 			return new ISunSpiritProcess_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020E9 RID: 8425
-		// (get) Token: 0x060064BC RID: 25788 RVA: 0x000F2125 File Offset: 0x000F0325
-		// (set) Token: 0x060064BD RID: 25789 RVA: 0x000F2150 File Offset: 0x000F0350
+		// Token: 0x1700229F RID: 8863
+		// (get) Token: 0x06006AC3 RID: 27331 RVA: 0x000FF3E9 File Offset: 0x000FD5E9
+		// (set) Token: 0x06006AC4 RID: 27332 RVA: 0x000FF414 File Offset: 0x000FD614
 		public virtual int LauncherId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020EA RID: 8426
-		// (get) Token: 0x060064BE RID: 25790 RVA: 0x000F2160 File Offset: 0x000F0360
-		// (set) Token: 0x060064BF RID: 25791 RVA: 0x000F219A File Offset: 0x000F039A
+		// Token: 0x170022A0 RID: 8864
+		// (get) Token: 0x06006AC5 RID: 27333 RVA: 0x000FF424 File Offset: 0x000FD624
+		// (set) Token: 0x06006AC6 RID: 27334 RVA: 0x000FF45E File Offset: 0x000FD65E
 		public virtual bool? IsRecycle
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C7E RID: 15486
+		// Token: 0x04003FD1 RID: 16337
 		[Nullable(2)]
 		protected ISunSpiritProcess FbInstance;
 
-		// Token: 0x04003C7F RID: 15487
+		// Token: 0x04003FD2 RID: 16338
 		[Nullable(2)]
 		protected ISunSpiritProcess_SetValue PocoInterface;
 	}

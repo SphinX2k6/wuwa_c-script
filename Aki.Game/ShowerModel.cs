@@ -5,14 +5,14 @@ using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002A00 RID: 10752
+// Token: 0x02001F7B RID: 8059
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ShowerModel : ModelBase
 {
-	// Token: 0x17001DC7 RID: 7623
-	// (get) Token: 0x060164F0 RID: 91376 RVA: 0x005A540B File Offset: 0x005A360B
+	// Token: 0x17001E20 RID: 7712
+	// (get) Token: 0x06013EF7 RID: 81655 RVA: 0x005D03E3 File Offset: 0x005CE5E3
 	public int CurSelectPosIndex
 	{
 		get
@@ -21,8 +21,8 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001DC8 RID: 7624
-	// (get) Token: 0x060164F1 RID: 91377 RVA: 0x005A5413 File Offset: 0x005A3613
+	// Token: 0x17001E21 RID: 7713
+	// (get) Token: 0x06013EF8 RID: 81656 RVA: 0x005D03EB File Offset: 0x005CE5EB
 	public int PosCount
 	{
 		get
@@ -31,7 +31,7 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164F2 RID: 91378 RVA: 0x005A5420 File Offset: 0x005A3620
+	// Token: 0x06013EF9 RID: 81657 RVA: 0x005D03F8 File Offset: 0x005CE5F8
 	public string GetInviteNumString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -41,7 +41,7 @@ public class ShowerModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060164F3 RID: 91379 RVA: 0x005A5468 File Offset: 0x005A3668
+	// Token: 0x06013EFA RID: 81658 RVA: 0x005D0440 File Offset: 0x005CE640
 	[NullableContext(2)]
 	public RoleInstance GetRoleInstanceByPos(int posIndex)
 	{
@@ -53,7 +53,7 @@ public class ShowerModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060164F4 RID: 91380 RVA: 0x005A5488 File Offset: 0x005A3688
+	// Token: 0x06013EFB RID: 81659 RVA: 0x005D0460 File Offset: 0x005CE660
 	[NullableContext(2)]
 	public void SetShowerSeatConfigIds(List<int> configIds)
 	{
@@ -90,7 +90,7 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164F5 RID: 91381 RVA: 0x005A5538 File Offset: 0x005A3738
+	// Token: 0x06013EFC RID: 81660 RVA: 0x005D0510 File Offset: 0x005CE710
 	[NullableContext(2)]
 	public WorldEntity GetShowerSeatEntityByPos(int posIndex)
 	{
@@ -123,7 +123,7 @@ public class ShowerModel : ModelBase
 		return worldEntity2;
 	}
 
-	// Token: 0x060164F6 RID: 91382 RVA: 0x005A55A6 File Offset: 0x005A37A6
+	// Token: 0x06013EFD RID: 81661 RVA: 0x005D057E File Offset: 0x005CE77E
 	public void RightPos()
 	{
 		if (this.CurSelectPosIndexInternal >= this.PosCount - 1)
@@ -134,7 +134,7 @@ public class ShowerModel : ModelBase
 		this.CurSelectPosIndexInternal++;
 	}
 
-	// Token: 0x060164F7 RID: 91383 RVA: 0x005A55CE File Offset: 0x005A37CE
+	// Token: 0x06013EFE RID: 81662 RVA: 0x005D05A6 File Offset: 0x005CE7A6
 	public void LeftPos()
 	{
 		if (this.CurSelectPosIndexInternal <= 0)
@@ -145,7 +145,7 @@ public class ShowerModel : ModelBase
 		this.CurSelectPosIndexInternal--;
 	}
 
-	// Token: 0x060164F8 RID: 91384 RVA: 0x005A55F6 File Offset: 0x005A37F6
+	// Token: 0x06013EFF RID: 81663 RVA: 0x005D05CE File Offset: 0x005CE7CE
 	public void ChangePos(int posIndex)
 	{
 		if (posIndex >= this.PosCount || posIndex < 0)
@@ -155,7 +155,7 @@ public class ShowerModel : ModelBase
 		this.CurSelectPosIndexInternal = posIndex;
 	}
 
-	// Token: 0x060164F9 RID: 91385 RVA: 0x005A5610 File Offset: 0x005A3810
+	// Token: 0x06013F00 RID: 81664 RVA: 0x005D05E8 File Offset: 0x005CE7E8
 	public void InviteRole(RoleInstance roleInstance)
 	{
 		int curSelectPosIndexInternal = this.CurSelectPosIndexInternal;
@@ -193,7 +193,7 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164FA RID: 91386 RVA: 0x005A56E4 File Offset: 0x005A38E4
+	// Token: 0x06013F01 RID: 81665 RVA: 0x005D06BC File Offset: 0x005CE8BC
 	public int GetRolePos(RoleInstance roleInstance)
 	{
 		foreach (KeyValuePair<int, RoleInstance> keyValuePair in this.SelectInviteMap)
@@ -206,14 +206,14 @@ public class ShowerModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x060164FB RID: 91387 RVA: 0x005A5754 File Offset: 0x005A3954
+	// Token: 0x06013F02 RID: 81666 RVA: 0x005D072C File Offset: 0x005CE92C
 	public bool CheckRoleInCurPos(RoleInstance roleInstance)
 	{
 		RoleInstance roleInstance2;
 		return this.SelectInviteMap.TryGetValue(this.CurSelectPosIndexInternal, out roleInstance2) && roleInstance2.GetRoleId() == roleInstance.GetRoleId();
 	}
 
-	// Token: 0x060164FC RID: 91388 RVA: 0x005A5788 File Offset: 0x005A3988
+	// Token: 0x06013F03 RID: 81667 RVA: 0x005D0760 File Offset: 0x005CE960
 	public void ExitAndClear()
 	{
 		this.VehicleSeatConfigIds.Clear();
@@ -232,14 +232,14 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164FD RID: 91389 RVA: 0x005A5811 File Offset: 0x005A3A11
+	// Token: 0x06013F04 RID: 81668 RVA: 0x005D07E9 File Offset: 0x005CE9E9
 	public void ClearCurInviteRoles()
 	{
 		this.SelectInviteMap.Clear();
 		this.CurSelectPosIndexInternal = 0;
 	}
 
-	// Token: 0x060164FE RID: 91390 RVA: 0x005A5828 File Offset: 0x005A3A28
+	// Token: 0x06013F05 RID: 81669 RVA: 0x005D0800 File Offset: 0x005CEA00
 	public void ResetCurInviteRoles()
 	{
 		this.SelectInviteMap.Clear();
@@ -249,7 +249,7 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x060164FF RID: 91391 RVA: 0x005A5898 File Offset: 0x005A3A98
+	// Token: 0x06013F06 RID: 81670 RVA: 0x005D0870 File Offset: 0x005CEA70
 	public void SendAndSave()
 	{
 		this.IsInShower = true;
@@ -271,8 +271,8 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001DC9 RID: 7625
-	// (get) Token: 0x06016500 RID: 91392 RVA: 0x005A59F8 File Offset: 0x005A3BF8
+	// Token: 0x17001E22 RID: 7714
+	// (get) Token: 0x06013F07 RID: 81671 RVA: 0x005D09D0 File Offset: 0x005CEBD0
 	public static ShowerModel Instance
 	{
 		get
@@ -281,7 +281,7 @@ public class ShowerModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016501 RID: 91393 RVA: 0x005A59FF File Offset: 0x005A3BFF
+	// Token: 0x06013F08 RID: 81672 RVA: 0x005D09D7 File Offset: 0x005CEBD7
 	public static ShowerModel GetOrCreateInstance()
 	{
 		if (ShowerModel._Instance == null)
@@ -291,7 +291,7 @@ public class ShowerModel : ModelBase
 		return ShowerModel._Instance;
 	}
 
-	// Token: 0x06016502 RID: 91394 RVA: 0x005A5A13 File Offset: 0x005A3C13
+	// Token: 0x06013F09 RID: 81673 RVA: 0x005D09EB File Offset: 0x005CEBEB
 	public static bool CreateInstance()
 	{
 		if (ShowerModel._Instance != null)
@@ -302,42 +302,42 @@ public class ShowerModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016503 RID: 91395 RVA: 0x005A5A29 File Offset: 0x005A3C29
+	// Token: 0x06013F0A RID: 81674 RVA: 0x005D0A01 File Offset: 0x005CEC01
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016504 RID: 91396 RVA: 0x005A5A2B File Offset: 0x005A3C2B
+	// Token: 0x06013F0B RID: 81675 RVA: 0x005D0A03 File Offset: 0x005CEC03
 	public static void ResetStaticDefaultValue()
 	{
 		ShowerModel._Instance = null;
 	}
 
-	// Token: 0x06016505 RID: 91397 RVA: 0x005A5A33 File Offset: 0x005A3C33
+	// Token: 0x06013F0C RID: 81676 RVA: 0x005D0A0B File Offset: 0x005CEC0B
 	static ShowerModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShowerModel.CreateStaticDefaultValue), new Action(ShowerModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A5EE RID: 42478
+	// Token: 0x0400A9D8 RID: 43480
 	private readonly Dictionary<int, RoleInstance> SelectInviteMap = new Dictionary<int, RoleInstance>();
 
-	// Token: 0x0400A5EF RID: 42479
+	// Token: 0x0400A9D9 RID: 43481
 	private readonly Dictionary<int, RoleInstance> CurInviteMap = new Dictionary<int, RoleInstance>();
 
-	// Token: 0x0400A5F0 RID: 42480
+	// Token: 0x0400A9DA RID: 43482
 	private int CurSelectPosIndexInternal;
 
-	// Token: 0x0400A5F1 RID: 42481
+	// Token: 0x0400A9DB RID: 43483
 	private List<int> VehicleSeatConfigIds = new List<int>();
 
-	// Token: 0x0400A5F2 RID: 42482
+	// Token: 0x0400A9DC RID: 43484
 	private readonly List<int> RolePosIdList = new List<int>();
 
-	// Token: 0x0400A5F3 RID: 42483
+	// Token: 0x0400A9DD RID: 43485
 	public bool IsInShower;
 
-	// Token: 0x0400A5F4 RID: 42484
+	// Token: 0x0400A9DE RID: 43486
 	[Nullable(2)]
 	private static ShowerModel _Instance;
 }

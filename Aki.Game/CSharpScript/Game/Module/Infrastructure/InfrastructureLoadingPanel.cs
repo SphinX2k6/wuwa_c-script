@@ -4,12 +4,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005911 RID: 22801
+	// Token: 0x020048EA RID: 18666
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureLoadingPanel : UiPanelBase
 	{
-		// Token: 0x06039E68 RID: 237160 RVA: 0x00DC1024 File Offset: 0x00DBF224
+		// Token: 0x0602ED8B RID: 191883 RVA: 0x00D10324 File Offset: 0x00D0E524
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.SeqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06039E69 RID: 237161 RVA: 0x00DC1078 File Offset: 0x00DBF278
+		// Token: 0x0602ED8C RID: 191884 RVA: 0x00D10378 File Offset: 0x00D0E578
 		public void CloseSelf()
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			seqPlayer.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x06039E6A RID: 237162 RVA: 0x00DC10A5 File Offset: 0x00DBF2A5
+		// Token: 0x0602ED8D RID: 191885 RVA: 0x00D103A5 File Offset: 0x00D0E5A5
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x0401E322 RID: 123682
+		// Token: 0x04018DBF RID: 101823
 		private LevelSequencePlayer SeqPlayer;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,12 +13,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02001655 RID: 5717
+// Token: 0x02000B0D RID: 2829
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerTotalScoreSharePanel : UiPanelBase
 {
-	// Token: 0x0600A07E RID: 41086 RVA: 0x00235D68 File Offset: 0x00233F68
+	// Token: 0x0600745C RID: 29788 RVA: 0x0023FBA4 File Offset: 0x0023DDA4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -47,7 +46,7 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A07F RID: 41087 RVA: 0x00235EBC File Offset: 0x002340BC
+	// Token: 0x0600745D RID: 29789 RVA: 0x0023FCF8 File Offset: 0x0023DEF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerTotalScoreSharePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -58,13 +57,13 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A080 RID: 41088 RVA: 0x00235EFF File Offset: 0x002340FF
+	// Token: 0x0600745E RID: 29790 RVA: 0x0023FD3B File Offset: 0x0023DF3B
 	private WheelTowerShareTeamItem CreateTeamItem()
 	{
 		return new WheelTowerShareTeamItem();
 	}
 
-	// Token: 0x0600A081 RID: 41089 RVA: 0x00235F08 File Offset: 0x00234108
+	// Token: 0x0600745F RID: 29791 RVA: 0x0023FD44 File Offset: 0x0023DF44
 	private UniTask LoadSeasonBgItem()
 	{
 		WheelTowerTotalScoreSharePanel.<LoadSeasonBgItem>d__7 <LoadSeasonBgItem>d__;
@@ -75,7 +74,7 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		return <LoadSeasonBgItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A082 RID: 41090 RVA: 0x00235F4C File Offset: 0x0023414C
+	// Token: 0x06007460 RID: 29792 RVA: 0x0023FD88 File Offset: 0x0023DF88
 	protected override void OnStart()
 	{
 		WheelTowerSeasonBgItem seasonBgItem = this.SeasonBgItem;
@@ -102,13 +101,27 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		}
 		RepeatedField<TeamChallengeInfo> teamChallengeInfos = WheelTowerModel.Instance.GetCurrentLevelRecord(null).TeamChallengeInfos;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), "Share_NewTowerTotal_1001", new <>z__ReadOnlySingleElementList<object>(teamChallengeInfos.Count.ToString()));
-		List<TeamChallengeInfo> data = (from t in teamChallengeInfos
-		orderby t.TeamScore descending
-		select t).Take(this.SHARE_TEAM_MAX_NUM).ToList<TeamChallengeInfo>();
+		List<TeamChallengeInfo> list = new List<TeamChallengeInfo>(this.SHARE_TEAM_MAX_NUM);
+		foreach (TeamChallengeInfo teamChallengeInfo in teamChallengeInfos)
+		{
+			int num = list.Count;
+			while (num > 0 && list[num - 1].TeamScore < teamChallengeInfo.TeamScore)
+			{
+				num--;
+			}
+			if (num < this.SHARE_TEAM_MAX_NUM)
+			{
+				list.Insert(num, teamChallengeInfo);
+				if (list.Count > this.SHARE_TEAM_MAX_NUM)
+				{
+					list.RemoveAt(this.SHARE_TEAM_MAX_NUM);
+				}
+			}
+		}
 		GenericLayout<WheelTowerShareTeamItem, TeamChallengeInfo> teamScrollLayout = this.TeamScrollLayout;
 		if (teamScrollLayout != null)
 		{
-			teamScrollLayout.RefreshByData(data, null, false);
+			teamScrollLayout.RefreshByData(list, null, false);
 		}
 		int seasonId = WheelTowerModel.Instance.ActivityData.SeasonId;
 		if (seasonId != 0)
@@ -121,7 +134,7 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		base.SetTextureByPath(WheelTowerConfig.Instance.GetScoreLevelConfigById((int)totalScoreLevel).Value.Icon, base.GetTexture(3), null, null);
 	}
 
-	// Token: 0x0600A083 RID: 41091 RVA: 0x002361A8 File Offset: 0x002343A8
+	// Token: 0x06007461 RID: 29793 RVA: 0x00240054 File Offset: 0x0023E254
 	protected override void OnFinishShow()
 	{
 		WheelTowerSeasonBgItem seasonBgItem = this.SeasonBgItem;
@@ -132,45 +145,45 @@ public class WheelTowerTotalScoreSharePanel : UiPanelBase
 		seasonBgItem.StopAllTweenAndSpine();
 	}
 
-	// Token: 0x0600A084 RID: 41092 RVA: 0x002361BA File Offset: 0x002343BA
+	// Token: 0x06007462 RID: 29794 RVA: 0x00240066 File Offset: 0x0023E266
 	public AActor GetBlurOverrideActor()
 	{
 		AUIBaseActor rootActor = this.RootActor;
 		return (((rootActor != null) ? rootActor.GetComponentByClass(TsUiBlur.StaticClass()) : null) as TsUiBlur).OverrideItem;
 	}
 
-	// Token: 0x0400493C RID: 18748
+	// Token: 0x040049E2 RID: 18914
 	private int SHARE_TEAM_MAX_NUM = 5;
 
-	// Token: 0x0400493D RID: 18749
+	// Token: 0x040049E3 RID: 18915
 	public GenericLayout<WheelTowerShareTeamItem, TeamChallengeInfo> TeamScrollLayout;
 
-	// Token: 0x0400493E RID: 18750
+	// Token: 0x040049E4 RID: 18916
 	private WheelTowerSeasonBgItem SeasonBgItem;
 
-	// Token: 0x02007C15 RID: 31765
+	// Token: 0x02006D9D RID: 28061
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04028BD9 RID: 166873
+		// Token: 0x04023F0C RID: 147212
 		BgItem,
-		// Token: 0x04028BDA RID: 166874
+		// Token: 0x04023F0D RID: 147213
 		TextSeasonTitle,
-		// Token: 0x04028BDB RID: 166875
+		// Token: 0x04023F0E RID: 147214
 		SeasonTexture,
-		// Token: 0x04028BDC RID: 166876
+		// Token: 0x04023F0F RID: 147215
 		TextureScoreLevel,
-		// Token: 0x04028BDD RID: 166877
+		// Token: 0x04023F10 RID: 147216
 		TextScore,
-		// Token: 0x04028BDE RID: 166878
+		// Token: 0x04023F11 RID: 147217
 		TextBossTurn,
-		// Token: 0x04028BDF RID: 166879
+		// Token: 0x04023F12 RID: 147218
 		TextBossProgress,
-		// Token: 0x04028BE0 RID: 166880
+		// Token: 0x04023F13 RID: 147219
 		ScrollViewTeam,
-		// Token: 0x04028BE1 RID: 166881
+		// Token: 0x04023F14 RID: 147220
 		ScrollViewTeamItem,
-		// Token: 0x04028BE2 RID: 166882
+		// Token: 0x04023F15 RID: 147221
 		TeamNum
 	}
 }

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004892 RID: 18578
+	// Token: 0x02003809 RID: 14345
 	public enum EVillageInfrPopupMsgType
 	{
-		// Token: 0x0401A1BC RID: 106940
+		// Token: 0x04014A2F RID: 84527
 		TreeLock = 1,
-		// Token: 0x0401A1BD RID: 106941
+		// Token: 0x04014A30 RID: 84528
 		TreeProgress,
-		// Token: 0x0401A1BE RID: 106942
+		// Token: 0x04014A31 RID: 84529
 		TreeCanBuild,
-		// Token: 0x0401A1BF RID: 106943
+		// Token: 0x04014A32 RID: 84530
 		TreeComplete,
-		// Token: 0x0401A1C0 RID: 106944
+		// Token: 0x04014A33 RID: 84531
 		VillageProgress,
-		// Token: 0x0401A1C1 RID: 106945
+		// Token: 0x04014A34 RID: 84532
 		VillageCanBuild,
-		// Token: 0x0401A1C2 RID: 106946
+		// Token: 0x04014A35 RID: 84533
 		VillageComplete
 	}
 }

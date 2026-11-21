@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001104 RID: 4356
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001232 RID: 4658
 	public class IRoleTowerChallengeTitlePhantomExp : IRoleTowerChallengeTitleTypeBase
 	{
-		// Token: 0x0600627A RID: 25210 RVA: 0x000ED268 File Offset: 0x000EB468
+		// Token: 0x06006875 RID: 26741 RVA: 0x000FA3DC File Offset: 0x000F85DC
 		private IRoleTowerChallengeTitlePhantomExp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600627B RID: 25211 RVA: 0x000ED2A0 File Offset: 0x000EB4A0
+		// Token: 0x06006876 RID: 26742 RVA: 0x000FA414 File Offset: 0x000F8614
 		public static IRoleTowerChallengeTitlePhantomExp Create([Nullable(2)] IRoleTowerChallengeTitlePhantomExp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600627C RID: 25212 RVA: 0x000ED2B3 File Offset: 0x000EB4B3
+		// Token: 0x06006877 RID: 26743 RVA: 0x000FA427 File Offset: 0x000F8627
 		public static IRoleTowerChallengeTitlePhantomExp CreateFromSetValue([Nullable(2)] IRoleTowerChallengeTitlePhantomExp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600627D RID: 25213 RVA: 0x000ED2C6 File Offset: 0x000EB4C6
+		// Token: 0x06006878 RID: 26744 RVA: 0x000FA43A File Offset: 0x000F863A
 		public new IRoleTowerChallengeTitlePhantomExp_SetValue ToSetValue()
 		{
 			return new IRoleTowerChallengeTitlePhantomExp_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700203B RID: 8251
-		// (get) Token: 0x0600627E RID: 25214 RVA: 0x000ED2D9 File Offset: 0x000EB4D9
-		// (set) Token: 0x0600627F RID: 25215 RVA: 0x000ED304 File Offset: 0x000EB504
+		// Token: 0x170021EE RID: 8686
+		// (get) Token: 0x06006879 RID: 26745 RVA: 0x000FA44D File Offset: 0x000F864D
+		// (set) Token: 0x0600687A RID: 26746 RVA: 0x000FA478 File Offset: 0x000F8678
 		public override ERoleTowerChallengeTitleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B22 RID: 15138
+		// Token: 0x04003E70 RID: 15984
 		[Nullable(2)]
 		protected new IRoleTowerChallengeTitlePhantomExp FbInstance;
 
-		// Token: 0x04003B23 RID: 15139
+		// Token: 0x04003E71 RID: 15985
 		[Nullable(2)]
 		protected new IRoleTowerChallengeTitlePhantomExp_SetValue PocoInterface;
 	}

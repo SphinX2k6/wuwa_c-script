@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02002F98 RID: 12184
+// Token: 0x020024EC RID: 9452
 [NullableContext(1)]
 [Nullable(0)]
 public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 {
-	// Token: 0x06019DBD RID: 105917 RVA: 0x006C0D98 File Offset: 0x006BEF98
+	// Token: 0x060176CF RID: 95951 RVA: 0x006E7660 File Offset: 0x006E5860
 	public PeriodAddBuffToAdjacentEntity(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DBE RID: 105918 RVA: 0x006C0DD0 File Offset: 0x006BEFD0
+	// Token: 0x060176D0 RID: 95952 RVA: 0x006E7698 File Offset: 0x006E5898
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -66,7 +66,7 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		this.BuffReason = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06019DBF RID: 105919 RVA: 0x006C0F68 File Offset: 0x006BF168
+	// Token: 0x060176D1 RID: 95953 RVA: 0x006E7830 File Offset: 0x006E5A30
 	protected override bool CheckExecutable()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -77,7 +77,7 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		return true;
 	}
 
-	// Token: 0x06019DC0 RID: 105920 RVA: 0x006C0F8C File Offset: 0x006BF18C
+	// Token: 0x060176D2 RID: 95954 RVA: 0x006E7854 File Offset: 0x006E5A54
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -241,13 +241,13 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DC1 RID: 105921 RVA: 0x006C1520 File Offset: 0x006BF720
+	// Token: 0x060176D3 RID: 95955 RVA: 0x006E7DE8 File Offset: 0x006E5FE8
 	public override void OnBuffRemovedCallback(ActiveBuffInternal buff)
 	{
 		this.ClearAuraBuffsOnLeave(buff);
 	}
 
-	// Token: 0x06019DC2 RID: 105922 RVA: 0x006C1529 File Offset: 0x006BF729
+	// Token: 0x060176D4 RID: 95956 RVA: 0x006E7DF1 File Offset: 0x006E5FF1
 	public override void OnBuffActiveChangedCallback(ActiveBuffInternal buff, bool isActive)
 	{
 		if (!isActive)
@@ -256,7 +256,7 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DC3 RID: 105923 RVA: 0x006C1538 File Offset: 0x006BF738
+	// Token: 0x060176D5 RID: 95957 RVA: 0x006E7E00 File Offset: 0x006E6000
 	private void ClearAuraBuffsOnLeave(ActiveBuffInternal buff)
 	{
 		if (!this.RemoveBuffOnLeave)
@@ -305,7 +305,7 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		orCreateExecutionState.Clear();
 	}
 
-	// Token: 0x06019DC4 RID: 105924 RVA: 0x006C1684 File Offset: 0x006BF884
+	// Token: 0x060176D6 RID: 95958 RVA: 0x006E7F4C File Offset: 0x006E614C
 	public bool CheckCamp(EAuraTargetFilter filter, int targetId, ECamp targetCamp, int? instigatorId, ECamp? instigatorCamp, int ownerId, ECamp ownerCamp)
 	{
 		switch (filter)
@@ -333,7 +333,7 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DC5 RID: 105925 RVA: 0x006C1740 File Offset: 0x006BF940
+	// Token: 0x060176D7 RID: 95959 RVA: 0x006E8008 File Offset: 0x006E6208
 	public override string GetDebugEffectString()
 	{
 		List<string> list = new List<string>();
@@ -380,33 +380,33 @@ public class PeriodAddBuffToAdjacentEntity : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C364 RID: 50020
+	// Token: 0x0400C70D RID: 50957
 	private float Distance;
 
-	// Token: 0x0400C365 RID: 50021
+	// Token: 0x0400C70E RID: 50958
 	private EAuraTargetFilter[] CampFilter = Array.Empty<EAuraTargetFilter>();
 
-	// Token: 0x0400C366 RID: 50022
+	// Token: 0x0400C70F RID: 50959
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C367 RID: 50023
+	// Token: 0x0400C710 RID: 50960
 	private bool HasWarned;
 
-	// Token: 0x0400C368 RID: 50024
+	// Token: 0x0400C711 RID: 50961
 	private readonly List<EntityHandle> EntityHandleList = new List<EntityHandle>();
 
-	// Token: 0x0400C369 RID: 50025
+	// Token: 0x0400C712 RID: 50962
 	private string BuffReason = string.Empty;
 
-	// Token: 0x0400C36A RID: 50026
+	// Token: 0x0400C713 RID: 50963
 	private bool NeedInstigator;
 
-	// Token: 0x0400C36B RID: 50027
+	// Token: 0x0400C714 RID: 50964
 	private bool TransferStackCount;
 
-	// Token: 0x0400C36C RID: 50028
+	// Token: 0x0400C715 RID: 50965
 	private bool CheckBeforeAdd;
 
-	// Token: 0x0400C36D RID: 50029
+	// Token: 0x0400C716 RID: 50966
 	private bool RemoveBuffOnLeave;
 }

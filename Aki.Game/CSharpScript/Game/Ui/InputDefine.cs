@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046AB RID: 18091
+	// Token: 0x020035DC RID: 13788
 	public class InputDefine
 	{
-		// Token: 0x0602EA6F RID: 191087 RVA: 0x00ACC048 File Offset: 0x00ACA248
+		// Token: 0x060231BB RID: 143803 RVA: 0x009FA91C File Offset: 0x009F8B1C
 		// Note: this type is marked as 'beforefieldinit'.
 		static InputDefine()
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Ui
 			InputDefine.openViewActionsMap = dictionary;
 		}
 
-		// Token: 0x04019691 RID: 104081
+		// Token: 0x04013D36 RID: 81206
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<string, EUiViewName> openViewActionsMap;

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077FF RID: 30719
+	// Token: 0x0200803D RID: 32829
 	public class TVehicleControlTypeUnion
 	{
-		// Token: 0x1700E6ED RID: 59117
-		// (get) Token: 0x06037B64 RID: 228196 RVA: 0x007883E6 File Offset: 0x007865E6
-		// (set) Token: 0x06037B65 RID: 228197 RVA: 0x007883EE File Offset: 0x007865EE
+		// Token: 0x1700F34B RID: 62283
+		// (get) Token: 0x0603B109 RID: 241929 RVA: 0x007EDD5E File Offset: 0x007EBF5E
+		// (set) Token: 0x0603B10A RID: 241930 RVA: 0x007EDD66 File Offset: 0x007EBF66
 		public TVehicleControlType Type { get; set; }
 
-		// Token: 0x1700E6EE RID: 59118
-		// (get) Token: 0x06037B66 RID: 228198 RVA: 0x007883F7 File Offset: 0x007865F7
-		// (set) Token: 0x06037B67 RID: 228199 RVA: 0x007883FF File Offset: 0x007865FF
+		// Token: 0x1700F34C RID: 62284
+		// (get) Token: 0x0603B10B RID: 241931 RVA: 0x007EDD6F File Offset: 0x007EBF6F
+		// (set) Token: 0x0603B10C RID: 241932 RVA: 0x007EDD77 File Offset: 0x007EBF77
 		public object Value { get; set; }
 
-		// Token: 0x06037B68 RID: 228200 RVA: 0x00788408 File Offset: 0x00786608
+		// Token: 0x0603B10D RID: 241933 RVA: 0x007EDD80 File Offset: 0x007EBF80
 		public TVehicleControlTypeUnion()
 		{
 			this.Type = TVehicleControlType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037B69 RID: 228201 RVA: 0x0078841E File Offset: 0x0078661E
+		// Token: 0x0603B10E RID: 241934 RVA: 0x007EDD96 File Offset: 0x007EBF96
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037B6A RID: 228202 RVA: 0x00788430 File Offset: 0x00786630
+		// Token: 0x0603B10F RID: 241935 RVA: 0x007EDDA8 File Offset: 0x007EBFA8
 		public IVehicleEnterPathMoveT AsIVehicleEnterPathMove()
 		{
 			return this.As<IVehicleEnterPathMoveT>();
 		}
 
-		// Token: 0x06037B6B RID: 228203 RVA: 0x00788438 File Offset: 0x00786638
+		// Token: 0x0603B110 RID: 241936 RVA: 0x007EDDB0 File Offset: 0x007EBFB0
 		public static TVehicleControlTypeUnion FromIVehicleEnterPathMove(IVehicleEnterPathMoveT _ivehicleenterpathmove)
 		{
 			return new TVehicleControlTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B6C RID: 228204 RVA: 0x0078844D File Offset: 0x0078664D
+		// Token: 0x0603B111 RID: 241937 RVA: 0x007EDDC5 File Offset: 0x007EBFC5
 		public IVehicleExitPathMoveT AsIVehicleExitPathMove()
 		{
 			return this.As<IVehicleExitPathMoveT>();
 		}
 
-		// Token: 0x06037B6D RID: 228205 RVA: 0x00788455 File Offset: 0x00786655
+		// Token: 0x0603B112 RID: 241938 RVA: 0x007EDDCD File Offset: 0x007EBFCD
 		public static TVehicleControlTypeUnion FromIVehicleExitPathMove(IVehicleExitPathMoveT _ivehicleexitpathmove)
 		{
 			return new TVehicleControlTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037B6E RID: 228206 RVA: 0x0078846C File Offset: 0x0078666C
+		// Token: 0x0603B113 RID: 241939 RVA: 0x007EDDE4 File Offset: 0x007EBFE4
 		public static int Pack(FlatBufferBuilder builder, TVehicleControlTypeUnion _o)
 		{
 			TVehicleControlType type = _o.Type;

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006201 RID: 25089
+	// Token: 0x0200517F RID: 20863
 	public interface IRhythmShipLevelDifficultyInfo
 	{
-		// Token: 0x17009230 RID: 37424
-		// (get) Token: 0x0603F4EC RID: 259308
-		// (set) Token: 0x0603F4ED RID: 259309
+		// Token: 0x17006592 RID: 26002
+		// (get) Token: 0x060341AD RID: 213421
+		// (set) Token: 0x060341AE RID: 213422
 		int HistoryScore { get; set; }
 
-		// Token: 0x17009231 RID: 37425
-		// (get) Token: 0x0603F4EE RID: 259310
-		// (set) Token: 0x0603F4EF RID: 259311
+		// Token: 0x17006593 RID: 26003
+		// (get) Token: 0x060341AF RID: 213423
+		// (set) Token: 0x060341B0 RID: 213424
 		int Accuracy { get; set; }
 
-		// Token: 0x17009232 RID: 37426
-		// (get) Token: 0x0603F4F0 RID: 259312
-		// (set) Token: 0x0603F4F1 RID: 259313
+		// Token: 0x17006594 RID: 26004
+		// (get) Token: 0x060341B1 RID: 213425
+		// (set) Token: 0x060341B2 RID: 213426
 		int Rating { get; set; }
 	}
 }

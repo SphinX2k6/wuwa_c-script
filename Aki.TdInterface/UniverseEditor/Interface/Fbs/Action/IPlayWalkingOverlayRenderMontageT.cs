@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D4B RID: 27979
+	// Token: 0x020074C6 RID: 29894
 	public class IPlayWalkingOverlayRenderMontageT
 	{
-		// Token: 0x1700D0B1 RID: 53425
-		// (get) Token: 0x0603167D RID: 202365 RVA: 0x006B332D File Offset: 0x006B152D
-		// (set) Token: 0x0603167E RID: 202366 RVA: 0x006B3335 File Offset: 0x006B1535
+		// Token: 0x1700DBF9 RID: 56313
+		// (get) Token: 0x06034679 RID: 214649 RVA: 0x0070EA15 File Offset: 0x0070CC15
+		// (set) Token: 0x0603467A RID: 214650 RVA: 0x0070EA1D File Offset: 0x0070CC1D
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D0B2 RID: 53426
-		// (get) Token: 0x0603167F RID: 202367 RVA: 0x006B333E File Offset: 0x006B153E
-		// (set) Token: 0x06031680 RID: 202368 RVA: 0x006B3346 File Offset: 0x006B1546
+		// Token: 0x1700DBFA RID: 56314
+		// (get) Token: 0x0603467B RID: 214651 RVA: 0x0070EA26 File Offset: 0x0070CC26
+		// (set) Token: 0x0603467C RID: 214652 RVA: 0x0070EA2E File Offset: 0x0070CC2E
 		public IMontageIdT OverlapMontageId { get; set; }
 
-		// Token: 0x1700D0B3 RID: 53427
-		// (get) Token: 0x06031681 RID: 202369 RVA: 0x006B334F File Offset: 0x006B154F
-		// (set) Token: 0x06031682 RID: 202370 RVA: 0x006B3357 File Offset: 0x006B1557
+		// Token: 0x1700DBFB RID: 56315
+		// (get) Token: 0x0603467D RID: 214653 RVA: 0x0070EA37 File Offset: 0x0070CC37
+		// (set) Token: 0x0603467E RID: 214654 RVA: 0x0070EA3F File Offset: 0x0070CC3F
 		public float LoopDuration { get; set; }
 
-		// Token: 0x1700D0B4 RID: 53428
-		// (get) Token: 0x06031683 RID: 202371 RVA: 0x006B3360 File Offset: 0x006B1560
-		// (set) Token: 0x06031684 RID: 202372 RVA: 0x006B3368 File Offset: 0x006B1568
+		// Token: 0x1700DBFC RID: 56316
+		// (get) Token: 0x0603467F RID: 214655 RVA: 0x0070EA48 File Offset: 0x0070CC48
+		// (set) Token: 0x06034680 RID: 214656 RVA: 0x0070EA50 File Offset: 0x0070CC50
 		public int RepeatTimes { get; set; }
 
-		// Token: 0x1700D0B5 RID: 53429
-		// (get) Token: 0x06031685 RID: 202373 RVA: 0x006B3371 File Offset: 0x006B1571
-		// (set) Token: 0x06031686 RID: 202374 RVA: 0x006B3379 File Offset: 0x006B1579
+		// Token: 0x1700DBFD RID: 56317
+		// (get) Token: 0x06034681 RID: 214657 RVA: 0x0070EA59 File Offset: 0x0070CC59
+		// (set) Token: 0x06034682 RID: 214658 RVA: 0x0070EA61 File Offset: 0x0070CC61
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031687 RID: 202375 RVA: 0x006B3382 File Offset: 0x006B1582
+		// Token: 0x06034683 RID: 214659 RVA: 0x0070EA6A File Offset: 0x0070CC6A
 		public IPlayWalkingOverlayRenderMontageT()
 		{
 			this.EntityId = 0;

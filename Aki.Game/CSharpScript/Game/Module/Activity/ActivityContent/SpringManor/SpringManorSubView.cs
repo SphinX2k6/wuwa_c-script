@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006090 RID: 24720
+	// Token: 0x0200500E RID: 20494
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringManorSubView : ActivitySubViewBase
 	{
-		// Token: 0x17009077 RID: 36983
-		// (get) Token: 0x0603E7CC RID: 255948 RVA: 0x00F1A872 File Offset: 0x00F18A72
+		// Token: 0x170063D9 RID: 25561
+		// (get) Token: 0x06033490 RID: 210064 RVA: 0x00E61636 File Offset: 0x00E5F836
 		protected new SpringManorData ActivityBaseData
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7CD RID: 255949 RVA: 0x00F1A880 File Offset: 0x00F18A80
+		// Token: 0x06033491 RID: 210065 RVA: 0x00E61644 File Offset: 0x00E5F844
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E7CE RID: 255950 RVA: 0x00F1A9B0 File Offset: 0x00F18BB0
+		// Token: 0x06033492 RID: 210066 RVA: 0x00E61774 File Offset: 0x00E5F974
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E7CF RID: 255951 RVA: 0x00F1A9F3 File Offset: 0x00F18BF3
+		// Token: 0x06033493 RID: 210067 RVA: 0x00E617B7 File Offset: 0x00E5F9B7
 		protected override void OnStart()
 		{
 			ActivitySubViewGeneralInfo infoItem = this.InfoItem;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			activityBaseData.ReadFirstOpenRedDot();
 		}
 
-		// Token: 0x0603E7D0 RID: 255952 RVA: 0x00F1AA22 File Offset: 0x00F18C22
+		// Token: 0x06033494 RID: 210068 RVA: 0x00E617E6 File Offset: 0x00E5F9E6
 		protected override void OnBeforeShow()
 		{
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603E7D1 RID: 255953 RVA: 0x00F1AA2A File Offset: 0x00F18C2A
+		// Token: 0x06033495 RID: 210069 RVA: 0x00E617EE File Offset: 0x00E5F9EE
 		protected override void OnRefreshView()
 		{
 			this.RefreshAtmosphere();
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603E7D2 RID: 255954 RVA: 0x00F1AA3E File Offset: 0x00F18C3E
+		// Token: 0x06033496 RID: 210070 RVA: 0x00E61802 File Offset: 0x00E5FA02
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 		}
 
-		// Token: 0x0603E7D3 RID: 255955 RVA: 0x00F1AA5C File Offset: 0x00F18C5C
+		// Token: 0x06033497 RID: 210071 RVA: 0x00E61820 File Offset: 0x00E5FA20
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 		}
 
-		// Token: 0x0603E7D4 RID: 255956 RVA: 0x00F1AA7C File Offset: 0x00F18C7C
+		// Token: 0x06033498 RID: 210072 RVA: 0x00E61840 File Offset: 0x00E5FA40
 		private void OnRefreshRedDot(int activityId)
 		{
 			SpringManorData activityBaseData = this.ActivityBaseData;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603E7D5 RID: 255957 RVA: 0x00F1AACC File Offset: 0x00F18CCC
+		// Token: 0x06033499 RID: 210073 RVA: 0x00E61890 File Offset: 0x00E5FA90
 		private void RefreshInfo()
 		{
 			string textId;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshFuncButtonRedDot();
 		}
 
-		// Token: 0x0603E7D6 RID: 255958 RVA: 0x00F1AB18 File Offset: 0x00F18D18
+		// Token: 0x0603349A RID: 210074 RVA: 0x00E618DC File Offset: 0x00E5FADC
 		private void RefreshAtmosphere()
 		{
 			SpringManorData activityBaseData = this.ActivityBaseData;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			sprite.SetFillAmount((float)num);
 		}
 
-		// Token: 0x0603E7D7 RID: 255959 RVA: 0x00F1AC2C File Offset: 0x00F18E2C
+		// Token: 0x0603349B RID: 210075 RVA: 0x00E619F0 File Offset: 0x00E5FBF0
 		private void RefreshAtmosphereProgressText(int curLevel, int curProgress, int targetProgress)
 		{
 			UUIArtText artText = base.GetArtText(4);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Spring26_Atmosphere_TargetProgress", new <>z__ReadOnlySingleElementList<object>(targetProgress.ToString()));
 		}
 
-		// Token: 0x0603E7D8 RID: 255960 RVA: 0x00F1AC8E File Offset: 0x00F18E8E
+		// Token: 0x0603349C RID: 210076 RVA: 0x00E61A52 File Offset: 0x00E5FC52
 		private void RefreshFuncButtonRedDot()
 		{
 			SpringManorData activityBaseData = this.ActivityBaseData;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			infoItem.SetFunctionRedDotVisible(activityBaseData2 != null && activityBaseData2.HasActivityRedDot());
 		}
 
-		// Token: 0x0603E7D9 RID: 255961 RVA: 0x00F1ACCC File Offset: 0x00F18ECC
+		// Token: 0x0603349D RID: 210077 RVA: 0x00E61A90 File Offset: 0x00E5FC90
 		private void RefreshReward()
 		{
 			int currentRewardTaskProgress = this.ActivityBaseData.GetCurrentRewardTaskProgress();
@@ -231,13 +231,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(this.ActivityBaseData.HasRewardRedDot());
 		}
 
-		// Token: 0x0603E7DA RID: 255962 RVA: 0x00F1AD4E File Offset: 0x00F18F4E
+		// Token: 0x0603349E RID: 210078 RVA: 0x00E61B12 File Offset: 0x00E5FD12
 		private void OnClickRewardBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.SpringManorRewardView, null, null);
 		}
 
-		// Token: 0x0603E7DB RID: 255963 RVA: 0x00F1AD61 File Offset: 0x00F18F61
+		// Token: 0x0603349F RID: 210079 RVA: 0x00E61B25 File Offset: 0x00E5FD25
 		private void OnClickEnter(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E7DC RID: 255964 RVA: 0x00F1AD80 File Offset: 0x00F18F80
+		// Token: 0x060334A0 RID: 210080 RVA: 0x00E61B44 File Offset: 0x00E5FD44
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x04020B3B RID: 133947
+		// Token: 0x0401B468 RID: 111720
 		private ActivitySubViewGeneralInfo InfoItem;
 	}
 }

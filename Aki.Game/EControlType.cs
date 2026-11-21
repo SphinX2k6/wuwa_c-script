@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002F23 RID: 12067
+// Token: 0x02002476 RID: 9334
 public enum EControlType
 {
-	// Token: 0x0400C1C1 RID: 49601
+	// Token: 0x0400C563 RID: 50531
 	Taunt,
-	// Token: 0x0400C1C2 RID: 49602
+	// Token: 0x0400C564 RID: 50532
 	Tempt
 }

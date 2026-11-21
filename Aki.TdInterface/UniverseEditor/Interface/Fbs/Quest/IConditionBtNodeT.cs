@@ -4,55 +4,55 @@ using Aki.UniverseEditor.Interface.Fbs.FixProcessor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DAD RID: 15789
+	// Token: 0x020041C4 RID: 16836
 	public class IConditionBtNodeT
 	{
-		// Token: 0x17006CA8 RID: 27816
-		// (get) Token: 0x06015F5E RID: 89950 RVA: 0x0032BE22 File Offset: 0x0032A022
-		// (set) Token: 0x06015F5F RID: 89951 RVA: 0x0032BE2A File Offset: 0x0032A02A
+		// Token: 0x17007262 RID: 29282
+		// (get) Token: 0x06017496 RID: 95382 RVA: 0x0035314E File Offset: 0x0035134E
+		// (set) Token: 0x06017497 RID: 95383 RVA: 0x00353156 File Offset: 0x00351356
 		public EBtNode Type { get; set; }
 
-		// Token: 0x17006CA9 RID: 27817
-		// (get) Token: 0x06015F60 RID: 89952 RVA: 0x0032BE33 File Offset: 0x0032A033
-		// (set) Token: 0x06015F61 RID: 89953 RVA: 0x0032BE3B File Offset: 0x0032A03B
+		// Token: 0x17007263 RID: 29283
+		// (get) Token: 0x06017498 RID: 95384 RVA: 0x0035315F File Offset: 0x0035135F
+		// (set) Token: 0x06017499 RID: 95385 RVA: 0x00353167 File Offset: 0x00351367
 		public int Id { get; set; }
 
-		// Token: 0x17006CAA RID: 27818
-		// (get) Token: 0x06015F62 RID: 89954 RVA: 0x0032BE44 File Offset: 0x0032A044
-		// (set) Token: 0x06015F63 RID: 89955 RVA: 0x0032BE4C File Offset: 0x0032A04C
+		// Token: 0x17007264 RID: 29284
+		// (get) Token: 0x0601749A RID: 95386 RVA: 0x00353170 File Offset: 0x00351370
+		// (set) Token: 0x0601749B RID: 95387 RVA: 0x00353178 File Offset: 0x00351378
 		public string Desc { get; set; }
 
-		// Token: 0x17006CAB RID: 27819
-		// (get) Token: 0x06015F64 RID: 89956 RVA: 0x0032BE55 File Offset: 0x0032A055
-		// (set) Token: 0x06015F65 RID: 89957 RVA: 0x0032BE5D File Offset: 0x0032A05D
+		// Token: 0x17007265 RID: 29285
+		// (get) Token: 0x0601749C RID: 95388 RVA: 0x00353181 File Offset: 0x00351381
+		// (set) Token: 0x0601749D RID: 95389 RVA: 0x00353189 File Offset: 0x00351389
 		public IFixProcessorT FixProcessor { get; set; }
 
-		// Token: 0x17006CAC RID: 27820
-		// (get) Token: 0x06015F66 RID: 89958 RVA: 0x0032BE66 File Offset: 0x0032A066
-		// (set) Token: 0x06015F67 RID: 89959 RVA: 0x0032BE6E File Offset: 0x0032A06E
+		// Token: 0x17007266 RID: 29286
+		// (get) Token: 0x0601749E RID: 95390 RVA: 0x00353192 File Offset: 0x00351392
+		// (set) Token: 0x0601749F RID: 95391 RVA: 0x0035319A File Offset: 0x0035139A
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x17006CAD RID: 27821
-		// (get) Token: 0x06015F68 RID: 89960 RVA: 0x0032BE77 File Offset: 0x0032A077
-		// (set) Token: 0x06015F69 RID: 89961 RVA: 0x0032BE7F File Offset: 0x0032A07F
+		// Token: 0x17007267 RID: 29287
+		// (get) Token: 0x060174A0 RID: 95392 RVA: 0x003531A3 File Offset: 0x003513A3
+		// (set) Token: 0x060174A1 RID: 95393 RVA: 0x003531AB File Offset: 0x003513AB
 		public bool Disabled { get; set; }
 
-		// Token: 0x17006CAE RID: 27822
-		// (get) Token: 0x06015F6A RID: 89962 RVA: 0x0032BE88 File Offset: 0x0032A088
-		// (set) Token: 0x06015F6B RID: 89963 RVA: 0x0032BE90 File Offset: 0x0032A090
+		// Token: 0x17007268 RID: 29288
+		// (get) Token: 0x060174A2 RID: 95394 RVA: 0x003531B4 File Offset: 0x003513B4
+		// (set) Token: 0x060174A3 RID: 95395 RVA: 0x003531BC File Offset: 0x003513BC
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006CAF RID: 27823
-		// (get) Token: 0x06015F6C RID: 89964 RVA: 0x0032BE99 File Offset: 0x0032A099
-		// (set) Token: 0x06015F6D RID: 89965 RVA: 0x0032BEA1 File Offset: 0x0032A0A1
+		// Token: 0x17007269 RID: 29289
+		// (get) Token: 0x060174A4 RID: 95396 RVA: 0x003531C5 File Offset: 0x003513C5
+		// (set) Token: 0x060174A5 RID: 95397 RVA: 0x003531CD File Offset: 0x003513CD
 		public bool WaitUntilTrue { get; set; }
 
-		// Token: 0x17006CB0 RID: 27824
-		// (get) Token: 0x06015F6E RID: 89966 RVA: 0x0032BEAA File Offset: 0x0032A0AA
-		// (set) Token: 0x06015F6F RID: 89967 RVA: 0x0032BEB2 File Offset: 0x0032A0B2
+		// Token: 0x1700726A RID: 29290
+		// (get) Token: 0x060174A6 RID: 95398 RVA: 0x003531D6 File Offset: 0x003513D6
+		// (set) Token: 0x060174A7 RID: 95399 RVA: 0x003531DE File Offset: 0x003513DE
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015F70 RID: 89968 RVA: 0x0032BEBC File Offset: 0x0032A0BC
+		// Token: 0x060174A8 RID: 95400 RVA: 0x003531E8 File Offset: 0x003513E8
 		public IConditionBtNodeT()
 		{
 			this.Type = EBtNode.Start;

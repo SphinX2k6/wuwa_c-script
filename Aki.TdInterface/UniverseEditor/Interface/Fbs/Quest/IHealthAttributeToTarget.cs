@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E96 RID: 16022
+	// Token: 0x020042D4 RID: 17108
 	public struct IHealthAttributeToTarget : IFlatbufferObject
 	{
-		// Token: 0x17006F3C RID: 28476
-		// (get) Token: 0x060169E0 RID: 92640 RVA: 0x00344849 File Offset: 0x00342A49
+		// Token: 0x17007529 RID: 29993
+		// (get) Token: 0x0601802D RID: 98349 RVA: 0x0036D7D2 File Offset: 0x0036B9D2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060169E1 RID: 92641 RVA: 0x00344856 File Offset: 0x00342A56
+		// Token: 0x0601802E RID: 98350 RVA: 0x0036D7DF File Offset: 0x0036B9DF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060169E2 RID: 92642 RVA: 0x00344860 File Offset: 0x00342A60
+		// Token: 0x0601802F RID: 98351 RVA: 0x0036D7E8 File Offset: 0x0036B9E8
 		public static IHealthAttributeToTarget GetRootAsIHealthAttributeToTarget(ByteBuffer _bb)
 		{
 			return IHealthAttributeToTarget.GetRootAsIHealthAttributeToTarget(_bb, default(IHealthAttributeToTarget));
 		}
 
-		// Token: 0x060169E3 RID: 92643 RVA: 0x0034487C File Offset: 0x00342A7C
+		// Token: 0x06018030 RID: 98352 RVA: 0x0036D804 File Offset: 0x0036BA04
 		public static IHealthAttributeToTarget GetRootAsIHealthAttributeToTarget(ByteBuffer _bb, IHealthAttributeToTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060169E4 RID: 92644 RVA: 0x00344899 File Offset: 0x00342A99
+		// Token: 0x06018031 RID: 98353 RVA: 0x0036D821 File Offset: 0x0036BA21
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060169E5 RID: 92645 RVA: 0x003448A8 File Offset: 0x00342AA8
+		// Token: 0x06018032 RID: 98354 RVA: 0x0036D830 File Offset: 0x0036BA30
 		public IHealthAttributeToTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F3D RID: 28477
-		// (get) Token: 0x060169E6 RID: 92646 RVA: 0x003448B8 File Offset: 0x00342AB8
+		// Token: 0x1700752A RID: 29994
+		// (get) Token: 0x06018033 RID: 98355 RVA: 0x0036D840 File Offset: 0x0036BA40
 		public EAttributeToTarget Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F3E RID: 28478
-		// (get) Token: 0x060169E7 RID: 92647 RVA: 0x003448F4 File Offset: 0x00342AF4
+		// Token: 0x1700752B RID: 29995
+		// (get) Token: 0x06018034 RID: 98356 RVA: 0x0036D87C File Offset: 0x0036BA7C
 		public float Min
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F3F RID: 28479
-		// (get) Token: 0x060169E8 RID: 92648 RVA: 0x00344934 File Offset: 0x00342B34
+		// Token: 0x1700752C RID: 29996
+		// (get) Token: 0x06018035 RID: 98357 RVA: 0x0036D8BC File Offset: 0x0036BABC
 		public float Max
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F40 RID: 28480
-		// (get) Token: 0x060169E9 RID: 92649 RVA: 0x00344974 File Offset: 0x00342B74
+		// Token: 0x1700752D RID: 29997
+		// (get) Token: 0x06018036 RID: 98358 RVA: 0x0036D8FC File Offset: 0x0036BAFC
 		public bool ZeroHealthOnDeath
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F41 RID: 28481
-		// (get) Token: 0x060169EA RID: 92650 RVA: 0x003449B4 File Offset: 0x00342BB4
+		// Token: 0x1700752E RID: 29998
+		// (get) Token: 0x06018037 RID: 98359 RVA: 0x0036D93C File Offset: 0x0036BB3C
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060169EB RID: 92651 RVA: 0x003449F1 File Offset: 0x00342BF1
+		// Token: 0x06018038 RID: 98360 RVA: 0x0036D979 File Offset: 0x0036BB79
 		public static Offset<IHealthAttributeToTarget> CreateIHealthAttributeToTarget(FlatBufferBuilder builder, EAttributeToTarget Type = EAttributeToTarget.Health, float Min = 0f, float Max = 0f, bool ZeroHealthOnDeath = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IHealthAttributeToTarget.EndIHealthAttributeToTarget(builder);
 		}
 
-		// Token: 0x060169EC RID: 92652 RVA: 0x00344A25 File Offset: 0x00342C25
+		// Token: 0x06018039 RID: 98361 RVA: 0x0036D9AD File Offset: 0x0036BBAD
 		public static void StartIHealthAttributeToTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060169ED RID: 92653 RVA: 0x00344A2E File Offset: 0x00342C2E
+		// Token: 0x0601803A RID: 98362 RVA: 0x0036D9B6 File Offset: 0x0036BBB6
 		public static void AddType(FlatBufferBuilder builder, EAttributeToTarget type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060169EE RID: 92654 RVA: 0x00344A39 File Offset: 0x00342C39
+		// Token: 0x0601803B RID: 98363 RVA: 0x0036D9C1 File Offset: 0x0036BBC1
 		public static void AddMin(FlatBufferBuilder builder, float min)
 		{
 			builder.AddFloat(1, min, 0.0);
 		}
 
-		// Token: 0x060169EF RID: 92655 RVA: 0x00344A4C File Offset: 0x00342C4C
+		// Token: 0x0601803C RID: 98364 RVA: 0x0036D9D4 File Offset: 0x0036BBD4
 		public static void AddMax(FlatBufferBuilder builder, float max)
 		{
 			builder.AddFloat(2, max, 0.0);
 		}
 
-		// Token: 0x060169F0 RID: 92656 RVA: 0x00344A5F File Offset: 0x00342C5F
+		// Token: 0x0601803D RID: 98365 RVA: 0x0036D9E7 File Offset: 0x0036BBE7
 		public static void AddZeroHealthOnDeath(FlatBufferBuilder builder, bool zeroHealthOnDeath)
 		{
 			builder.AddBool(3, zeroHealthOnDeath, false);
 		}
 
-		// Token: 0x060169F1 RID: 92657 RVA: 0x00344A6A File Offset: 0x00342C6A
+		// Token: 0x0601803E RID: 98366 RVA: 0x0036D9F2 File Offset: 0x0036BBF2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x060169F2 RID: 92658 RVA: 0x00344A75 File Offset: 0x00342C75
+		// Token: 0x0601803F RID: 98367 RVA: 0x0036D9FD File Offset: 0x0036BBFD
 		public static Offset<IHealthAttributeToTarget> EndIHealthAttributeToTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IHealthAttributeToTarget>(builder.EndTable());
 		}
 
-		// Token: 0x060169F3 RID: 92659 RVA: 0x00344A84 File Offset: 0x00342C84
+		// Token: 0x06018040 RID: 98368 RVA: 0x0036DA0C File Offset: 0x0036BC0C
 		public IHealthAttributeToTargetT UnPack()
 		{
 			IHealthAttributeToTargetT healthAttributeToTargetT = new IHealthAttributeToTargetT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return healthAttributeToTargetT;
 		}
 
-		// Token: 0x060169F4 RID: 92660 RVA: 0x00344A9F File Offset: 0x00342C9F
+		// Token: 0x06018041 RID: 98369 RVA: 0x0036DA27 File Offset: 0x0036BC27
 		public void UnPackTo(IHealthAttributeToTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060169F5 RID: 92661 RVA: 0x00344AE0 File Offset: 0x00342CE0
+		// Token: 0x06018042 RID: 98370 RVA: 0x0036DA68 File Offset: 0x0036BC68
 		public static Offset<IHealthAttributeToTarget> Pack(FlatBufferBuilder builder, IHealthAttributeToTargetT _o)
 		{
 			if (_o == null)
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IHealthAttributeToTarget.CreateIHealthAttributeToTarget(builder, _o.Type, _o.Min, _o.Max, _o.ZeroHealthOnDeath, _o.NullMask);
 		}
 
-		// Token: 0x0400B85E RID: 47198
+		// Token: 0x0400C23A RID: 49722
 		private Table __p;
 	}
 }

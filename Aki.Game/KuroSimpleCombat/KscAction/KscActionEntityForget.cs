@@ -4,15 +4,15 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace KuroSimpleCombat.KscAction
 {
-	// Token: 0x020044E7 RID: 17639
+	// Token: 0x02003033 RID: 12339
 	public class KscActionEntityForget : KscActionBase
 	{
-		// Token: 0x0602D6EF RID: 186095 RVA: 0x00A416EC File Offset: 0x00A3F8EC
+		// Token: 0x0601D439 RID: 119865 RVA: 0x008EF584 File Offset: 0x008ED784
 		public KscActionEntityForget(long creatureId) : base(creatureId)
 		{
 		}
 
-		// Token: 0x0602D6F0 RID: 186096 RVA: 0x00A416F8 File Offset: 0x00A3F8F8
+		// Token: 0x0601D43A RID: 119866 RVA: 0x008EF590 File Offset: 0x008ED790
 		protected override UniTask RunContent()
 		{
 			KscActionEntityForget.<RunContent>d__1 <RunContent>d__;

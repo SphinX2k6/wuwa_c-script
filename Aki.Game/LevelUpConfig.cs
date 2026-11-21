@@ -2,38 +2,38 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002065 RID: 8293
+// Token: 0x02001538 RID: 5432
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class LevelUpConfig : ConfigBase
 {
-	// Token: 0x06010523 RID: 66851 RVA: 0x003FBCE8 File Offset: 0x003F9EE8
+	// Token: 0x0600D98B RID: 55691 RVA: 0x00408130 File Offset: 0x00406330
 	public int? GetExpBarAnimationLength()
 	{
 		return ConfigCommonParamById.GetIntConfig("LevelUpAnimationLength");
 	}
 
-	// Token: 0x06010524 RID: 66852 RVA: 0x003FBCF4 File Offset: 0x003F9EF4
+	// Token: 0x0600D98C RID: 55692 RVA: 0x0040813C File Offset: 0x0040633C
 	public int? GetLevelUpViewCloseDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("LevelUpViewCloseDelay");
 	}
 
-	// Token: 0x06010525 RID: 66853 RVA: 0x003FBD00 File Offset: 0x003F9F00
+	// Token: 0x0600D98D RID: 55693 RVA: 0x00408148 File Offset: 0x00406348
 	public int? GetMaxExpCloseDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("MaxExpCloseDelay");
 	}
 
-	// Token: 0x06010526 RID: 66854 RVA: 0x003FBD0C File Offset: 0x003F9F0C
+	// Token: 0x0600D98E RID: 55694 RVA: 0x00408154 File Offset: 0x00406354
 	public int? GetHiddenLevelUpLevel()
 	{
 		return ConfigCommonParamById.GetIntConfig("HiddenLevelUpView");
 	}
 
-	// Token: 0x1700141C RID: 5148
-	// (get) Token: 0x06010527 RID: 66855 RVA: 0x003FBD18 File Offset: 0x003F9F18
+	// Token: 0x17001449 RID: 5193
+	// (get) Token: 0x0600D98F RID: 55695 RVA: 0x00408160 File Offset: 0x00406360
 	public static LevelUpConfig Instance
 	{
 		get
@@ -42,7 +42,7 @@ public class LevelUpConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010528 RID: 66856 RVA: 0x003FBD1F File Offset: 0x003F9F1F
+	// Token: 0x0600D990 RID: 55696 RVA: 0x00408167 File Offset: 0x00406367
 	public static LevelUpConfig GetOrCreateInstance()
 	{
 		if (LevelUpConfig._Instance == null)
@@ -52,7 +52,7 @@ public class LevelUpConfig : ConfigBase
 		return LevelUpConfig._Instance;
 	}
 
-	// Token: 0x06010529 RID: 66857 RVA: 0x003FBD33 File Offset: 0x003F9F33
+	// Token: 0x0600D991 RID: 55697 RVA: 0x0040817B File Offset: 0x0040637B
 	public static bool CreateInstance()
 	{
 		if (LevelUpConfig._Instance != null)
@@ -63,24 +63,24 @@ public class LevelUpConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601052A RID: 66858 RVA: 0x003FBD49 File Offset: 0x003F9F49
+	// Token: 0x0600D992 RID: 55698 RVA: 0x00408191 File Offset: 0x00406391
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601052B RID: 66859 RVA: 0x003FBD4B File Offset: 0x003F9F4B
+	// Token: 0x0600D993 RID: 55699 RVA: 0x00408193 File Offset: 0x00406393
 	public static void ResetStaticDefaultValue()
 	{
 		LevelUpConfig._Instance = null;
 	}
 
-	// Token: 0x0601052C RID: 66860 RVA: 0x003FBD53 File Offset: 0x003F9F53
+	// Token: 0x0600D994 RID: 55700 RVA: 0x0040819B File Offset: 0x0040639B
 	static LevelUpConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelUpConfig.CreateStaticDefaultValue), new Action(LevelUpConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400789F RID: 30879
+	// Token: 0x04007988 RID: 31112
 	[Nullable(2)]
 	private static LevelUpConfig _Instance;
 }

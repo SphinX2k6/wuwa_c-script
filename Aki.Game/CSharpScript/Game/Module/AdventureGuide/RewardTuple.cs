@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EB5 RID: 24245
+	// Token: 0x02004E9A RID: 20122
 	public class RewardTuple
 	{
-		// Token: 0x04020307 RID: 131847
+		// Token: 0x0401ADCE RID: 110030
 		public int Id;
 
-		// Token: 0x04020308 RID: 131848
+		// Token: 0x0401ADCF RID: 110031
 		public int? Num;
 
-		// Token: 0x04020309 RID: 131849
+		// Token: 0x0401ADD0 RID: 110032
 		public bool Received;
 	}
 }

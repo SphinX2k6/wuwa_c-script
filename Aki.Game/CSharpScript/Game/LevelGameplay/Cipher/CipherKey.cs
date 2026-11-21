@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Cipher
 {
-	// Token: 0x02006F36 RID: 28470
+	// Token: 0x020060B7 RID: 24759
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CipherKey : UiPanelBase
 	{
-		// Token: 0x0604542E RID: 283694 RVA: 0x01122D4A File Offset: 0x01120F4A
+		// Token: 0x0603B5DC RID: 243164 RVA: 0x010CCCF6 File Offset: 0x010CAEF6
 		[NullableContext(1)]
 		public CipherKey(UUIItem uiItem, int index)
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0604542F RID: 283695 RVA: 0x01122D66 File Offset: 0x01120F66
+		// Token: 0x0603B5DD RID: 243165 RVA: 0x010CCD12 File Offset: 0x010CAF12
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			};
 		}
 
-		// Token: 0x06045430 RID: 283696 RVA: 0x01122DA0 File Offset: 0x01120FA0
+		// Token: 0x0603B5DE RID: 243166 RVA: 0x010CCD4C File Offset: 0x010CAF4C
 		protected override void OnStart()
 		{
 			this.AllNumber = new int[10];
@@ -55,30 +55,30 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			this.AddEvent();
 		}
 
-		// Token: 0x06045431 RID: 283697 RVA: 0x01122E94 File Offset: 0x01121094
+		// Token: 0x0603B5DF RID: 243167 RVA: 0x010CCE40 File Offset: 0x010CB040
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvent();
 			this.CircleExhibitionView.Clear();
 		}
 
-		// Token: 0x06045432 RID: 283698 RVA: 0x01122EA7 File Offset: 0x011210A7
+		// Token: 0x0603B5E0 RID: 243168 RVA: 0x010CCE53 File Offset: 0x010CB053
 		public void AddEvent()
 		{
 		}
 
-		// Token: 0x06045433 RID: 283699 RVA: 0x01122EA9 File Offset: 0x011210A9
+		// Token: 0x0603B5E1 RID: 243169 RVA: 0x010CCE55 File Offset: 0x010CB055
 		public void RemoveEvent()
 		{
 		}
 
-		// Token: 0x06045434 RID: 283700 RVA: 0x01122EAB File Offset: 0x011210AB
+		// Token: 0x0603B5E2 RID: 243170 RVA: 0x010CCE57 File Offset: 0x010CB057
 		public void InitKey(Action<int, int> cb)
 		{
 			this.KeySelectedCallback = cb;
 		}
 
-		// Token: 0x06045435 RID: 283701 RVA: 0x01122EB4 File Offset: 0x011210B4
+		// Token: 0x0603B5E3 RID: 243171 RVA: 0x010CCE60 File Offset: 0x010CB060
 		[NullableContext(1)]
 		private CipherCircleAttachItem CreateCircleItem(AActor actor, int index, int showNum)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			return cipherCircleAttachItem;
 		}
 
-		// Token: 0x06045436 RID: 283702 RVA: 0x01122EE7 File Offset: 0x011210E7
+		// Token: 0x0603B5E4 RID: 243172 RVA: 0x010CCE93 File Offset: 0x010CB093
 		private void KeyItemSelectedHandle(int value)
 		{
 			this.SelectedItemValue = value;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			this.KeySelectedCallback(this.KeyIndex, value);
 		}
 
-		// Token: 0x06045437 RID: 283703 RVA: 0x01122F0C File Offset: 0x0112110C
+		// Token: 0x0603B5E5 RID: 243173 RVA: 0x010CCEB8 File Offset: 0x010CB0B8
 		public void HandleConfirm(bool result)
 		{
 			foreach (CipherCircleAttachItem cipherCircleAttachItem in this.CircleItemList)
@@ -114,26 +114,26 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			}
 		}
 
-		// Token: 0x06045438 RID: 283704 RVA: 0x01122F84 File Offset: 0x01121184
+		// Token: 0x0603B5E6 RID: 243174 RVA: 0x010CCF30 File Offset: 0x010CB130
 		public void HandleRest()
 		{
 			this.CircleExhibitionView.ReloadView(10, this.AllNumber, 0);
 			this.CircleExhibitionView.AttachToIndex(0, false);
 		}
 
-		// Token: 0x040241CA RID: 147914
+		// Token: 0x0401F47F RID: 128127
 		private const int INITGP = 0;
 
-		// Token: 0x040241CB RID: 147915
+		// Token: 0x0401F480 RID: 128128
 		private const int LEN = 10;
 
-		// Token: 0x040241CC RID: 147916
+		// Token: 0x0401F481 RID: 128129
 		public int KeyIndex;
 
-		// Token: 0x040241CD RID: 147917
+		// Token: 0x0401F482 RID: 128130
 		private Action<int, int> KeySelectedCallback;
 
-		// Token: 0x040241CE RID: 147918
+		// Token: 0x0401F483 RID: 128131
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,10 +141,10 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 		})]
 		private CircleAttachView<int, CipherCircleAttachItem> CircleExhibitionView;
 
-		// Token: 0x040241CF RID: 147919
+		// Token: 0x0401F484 RID: 128132
 		private int[] AllNumber;
 
-		// Token: 0x040241D0 RID: 147920
+		// Token: 0x0401F485 RID: 128133
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,20 +152,20 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 		})]
 		private List<CipherCircleAttachItem> CircleItemList;
 
-		// Token: 0x040241D1 RID: 147921
+		// Token: 0x0401F486 RID: 128134
 		private Action<int> OnKeyItemSelectedHandle;
 
-		// Token: 0x040241D2 RID: 147922
+		// Token: 0x0401F487 RID: 128135
 		private int SelectedItemValue;
 
-		// Token: 0x0200CD76 RID: 52598
+		// Token: 0x0200B968 RID: 47464
 		[NullableContext(0)]
 		private class ECipherKey
 		{
-			// Token: 0x0403DEA7 RID: 253607
+			// Token: 0x040392D6 RID: 234198
 			public const int DragCipherList = 0;
 
-			// Token: 0x0403DEA8 RID: 253608
+			// Token: 0x040392D7 RID: 234199
 			public const int CipherCircleItem = 1;
 		}
 	}

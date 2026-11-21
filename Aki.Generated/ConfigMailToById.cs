@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000502 RID: 1282
+	// Token: 0x02000518 RID: 1304
 	public class ConfigMailToById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E17 RID: 7703 RVA: 0x001034C0 File Offset: 0x001016C0
+		// Token: 0x06001E9B RID: 7835 RVA: 0x00109C14 File Offset: 0x00107E14
 		static ConfigMailToById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMailToById.CreateStaticDefaultValue), new Action(ConfigMailToById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E18 RID: 7704 RVA: 0x001034E0 File Offset: 0x001016E0
+		// Token: 0x06001E9C RID: 7836 RVA: 0x00109C34 File Offset: 0x00107E34
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMailToById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E19 RID: 7705 RVA: 0x0010355F File Offset: 0x0010175F
+		// Token: 0x06001E9D RID: 7837 RVA: 0x00109CB3 File Offset: 0x00107EB3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMailToById.LogPair = null;
 			ConfigMailToById.HandleId = 0;
 		}
 
-		// Token: 0x06001E1A RID: 7706 RVA: 0x0010356D File Offset: 0x0010176D
+		// Token: 0x06001E9E RID: 7838 RVA: 0x00109CC1 File Offset: 0x00107EC1
 		public static void Init()
 		{
 			ConfigMailToById.HandleId = ConfigCommon.InitDataStatement(ConfigMailToById.HandleId, "db_mail.db", "select BinData from `MailTo` where Id=?");
 		}
 
-		// Token: 0x06001E1B RID: 7707 RVA: 0x00103588 File Offset: 0x00101788
+		// Token: 0x06001E9F RID: 7839 RVA: 0x00109CDC File Offset: 0x00107EDC
 		public static MailTo? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMailToById.HandleId, ConfigMailToById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MailTo?(rootAsMailTo);
 		}
 
-		// Token: 0x040022F2 RID: 8946
+		// Token: 0x0400238C RID: 9100
 		private const string DB = "db_mail.db";
 
-		// Token: 0x040022F3 RID: 8947
+		// Token: 0x0400238D RID: 9101
 		private const string FILE = "y.邮件.xlsx";
 
-		// Token: 0x040022F4 RID: 8948
+		// Token: 0x0400238E RID: 9102
 		private const string TABLE = "MailTo";
 
-		// Token: 0x040022F5 RID: 8949
+		// Token: 0x0400238F RID: 9103
 		private const string COMMAND = "select BinData from `MailTo` where Id=?";
 
-		// Token: 0x040022F6 RID: 8950
+		// Token: 0x04002390 RID: 9104
 		private const string KEY_PREFIX = "MailToById";
 
-		// Token: 0x040022F7 RID: 8951
+		// Token: 0x04002391 RID: 9105
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040022F8 RID: 8952
+		// Token: 0x04002392 RID: 9106
 		private static int HandleId;
 	}
 }

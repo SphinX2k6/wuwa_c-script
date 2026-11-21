@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A62 RID: 23138
+	// Token: 0x02004A3E RID: 19006
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeFormationRoleItem : GridProxyAbstract<IFlagChallengeFormationRoleItemData>
 	{
-		// Token: 0x0603AA55 RID: 240213 RVA: 0x00DF62D8 File Offset: 0x00DF44D8
+		// Token: 0x0602F99E RID: 194974 RVA: 0x00D4685C File Offset: 0x00D44A5C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA56 RID: 240214 RVA: 0x00DF6358 File Offset: 0x00DF4558
+		// Token: 0x0602F99F RID: 194975 RVA: 0x00D468DC File Offset: 0x00D44ADC
 		public override void Refresh(IFlagChallengeFormationRoleItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA57 RID: 240215 RVA: 0x00DF63CA File Offset: 0x00DF45CA
+		// Token: 0x0602F9A0 RID: 194976 RVA: 0x00D4694E File Offset: 0x00D44B4E
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0603AA58 RID: 240216 RVA: 0x00DF63D3 File Offset: 0x00DF45D3
+		// Token: 0x0602F9A1 RID: 194977 RVA: 0x00D46957 File Offset: 0x00D44B57
 		private void OnClickButton()
 		{
 			if (this.Data == null || this.Data.RoleData == null)
@@ -67,11 +67,11 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			clickCallback(this.Data.RoleData.GetDataId());
 		}
 
-		// Token: 0x0401E941 RID: 125249
+		// Token: 0x040193E8 RID: 103400
 		[Nullable(2)]
 		private IFlagChallengeFormationRoleItemData Data;
 
-		// Token: 0x0401E942 RID: 125250
+		// Token: 0x040193E9 RID: 103401
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 	}

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062DF RID: 25311
+	// Token: 0x0200525D RID: 21085
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponEquipTipItem : UiPanelBase
 	{
-		// Token: 0x0603FAF6 RID: 260854 RVA: 0x00F68860 File Offset: 0x00F66A60
+		// Token: 0x060347B7 RID: 214967 RVA: 0x00EAF7BC File Offset: 0x00EAD9BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FAF7 RID: 260855 RVA: 0x00F68990 File Offset: 0x00F66B90
+		// Token: 0x060347B8 RID: 214968 RVA: 0x00EAF8EC File Offset: 0x00EADAEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballWeaponEquipTipItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FAF8 RID: 260856 RVA: 0x00F689D3 File Offset: 0x00F66BD3
+		// Token: 0x060347B9 RID: 214969 RVA: 0x00EAF92F File Offset: 0x00EADB2F
 		public void SetLockToggleShowState(bool bShow)
 		{
 			PinballWeaponTipsTopView weaponTopItem = this.WeaponTopItem;
@@ -63,14 +63,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			weaponTopItem.SetLockToggleShowState(bShow);
 		}
 
-		// Token: 0x0603FAF9 RID: 260857 RVA: 0x00F689E6 File Offset: 0x00F66BE6
+		// Token: 0x060347BA RID: 214970 RVA: 0x00EAF942 File Offset: 0x00EADB42
 		public void Refresh(IPinballWeaponEquipTipItemData data)
 		{
 			this.Data = data;
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603FAFA RID: 260858 RVA: 0x00F689F8 File Offset: 0x00F66BF8
+		// Token: 0x060347BB RID: 214971 RVA: 0x00EAF954 File Offset: 0x00EADB54
 		public void RefreshUi()
 		{
 			if (this.Data == null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.RefreshStateItem();
 		}
 
-		// Token: 0x0603FAFB RID: 260859 RVA: 0x00F68A4A File Offset: 0x00F66C4A
+		// Token: 0x060347BC RID: 214972 RVA: 0x00EAF9A6 File Offset: 0x00EADBA6
 		public void RefreshLockToggleShowState()
 		{
 			PinballWeaponTipsTopView weaponTopItem = this.WeaponTopItem;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			weaponTopItem.RefreshLockToggleShowState();
 		}
 
-		// Token: 0x0603FAFC RID: 260860 RVA: 0x00F68A5C File Offset: 0x00F66C5C
+		// Token: 0x060347BD RID: 214973 RVA: 0x00EAF9B8 File Offset: 0x00EADBB8
 		public void RefreshRoleItem()
 		{
 			if (this.Data == null)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(6), "Pinball_Weapon_ArmedInfo2", new <>z__ReadOnlySingleElementList<object>(localTextNew));
 		}
 
-		// Token: 0x0603FAFD RID: 260861 RVA: 0x00F68B30 File Offset: 0x00F66D30
+		// Token: 0x060347BE RID: 214974 RVA: 0x00EAFA8C File Offset: 0x00EADC8C
 		public void RefreshStateItem()
 		{
 			if (this.Data == null)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FAFE RID: 260862 RVA: 0x00F68BDE File Offset: 0x00F66DDE
+		// Token: 0x060347BF RID: 214975 RVA: 0x00EAFB3A File Offset: 0x00EADD3A
 		private void OnClickEquipButton()
 		{
 			if (this.Data == null)
@@ -189,37 +189,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			confirmDelegate();
 		}
 
-		// Token: 0x0402144B RID: 136267
+		// Token: 0x0401BD7A RID: 114042
 		private IPinballWeaponEquipTipItemData Data;
 
-		// Token: 0x0402144C RID: 136268
+		// Token: 0x0401BD7B RID: 114043
 		private PinballWeaponTipsTopView WeaponTopItem;
 
-		// Token: 0x0402144D RID: 136269
+		// Token: 0x0401BD7C RID: 114044
 		private PinballWeaponAttrView WeaponAttrItem;
 
-		// Token: 0x0402144E RID: 136270
+		// Token: 0x0401BD7D RID: 114045
 		private ButtonItem EquipButtonItem;
 
-		// Token: 0x0200C4CD RID: 50381
+		// Token: 0x0200AEB4 RID: 44724
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B62C RID: 243244
+			// Token: 0x04035F8E RID: 221070
 			WeaponTopItem,
-			// Token: 0x0403B62D RID: 243245
+			// Token: 0x04035F8F RID: 221071
 			WeaponAttrRootItem,
-			// Token: 0x0403B62E RID: 243246
+			// Token: 0x04035F90 RID: 221072
 			CurEquipItem,
-			// Token: 0x0403B62F RID: 243247
+			// Token: 0x04035F91 RID: 221073
 			EquipButtonItem,
-			// Token: 0x0403B630 RID: 243248
+			// Token: 0x04035F92 RID: 221074
 			RoleItem,
-			// Token: 0x0403B631 RID: 243249
+			// Token: 0x04035F93 RID: 221075
 			RoleTexture,
-			// Token: 0x0403B632 RID: 243250
+			// Token: 0x04035F94 RID: 221076
 			RoleNameText,
-			// Token: 0x0403B633 RID: 243251
+			// Token: 0x04035F95 RID: 221077
 			DebugIdText
 		}
 	}

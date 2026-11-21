@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200129E RID: 4766
+	// Token: 0x020013E4 RID: 5092
 	public static class ETargetBattleAttributeExtensions
 	{
-		// Token: 0x06006B6E RID: 27502 RVA: 0x001021F8 File Offset: 0x001003F8
+		// Token: 0x060071DC RID: 29148 RVA: 0x001101C0 File Offset: 0x0010E3C0
 		public static string ToEnumString(this ETargetBattleAttribute value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B6F RID: 27503 RVA: 0x00102230 File Offset: 0x00100430
+		// Token: 0x060071DD RID: 29149 RVA: 0x001101F8 File Offset: 0x0010E3F8
 		public static ETargetBattleAttribute FromString(string name)
 		{
 			ETargetBattleAttribute result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B70 RID: 27504 RVA: 0x00102259 File Offset: 0x00100459
+		// Token: 0x060071DE RID: 29150 RVA: 0x00110221 File Offset: 0x0010E421
 		public static bool TryFromString(string name, out ETargetBattleAttribute value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B71 RID: 27505 RVA: 0x00102292 File Offset: 0x00100492
+		// Token: 0x060071DF RID: 29151 RVA: 0x0011025A File Offset: 0x0010E45A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B72 RID: 27506 RVA: 0x001022AA File Offset: 0x001004AA
+		// Token: 0x060071E0 RID: 29152 RVA: 0x00110272 File Offset: 0x0010E472
 		public static ETargetBattleAttribute[] GetValues()
 		{
 			return new ETargetBattleAttribute[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B73 RID: 27507 RVA: 0x001022B6 File Offset: 0x001004B6
+		// Token: 0x060071E1 RID: 29153 RVA: 0x0011027E File Offset: 0x0010E47E
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD6 RID: 3030
+	// Token: 0x02000CA5 RID: 3237
 	public class IAutoConfig
 	{
-		// Token: 0x060045A8 RID: 17832 RVA: 0x000B0584 File Offset: 0x000AE784
-		[NullableContext(1)]
+		// Token: 0x06004A06 RID: 18950 RVA: 0x000BA700 File Offset: 0x000B8900
 		public static IAutoConfig Create(IAutoConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013B9 RID: 5049
-		// (get) Token: 0x060045A9 RID: 17833 RVA: 0x000B05A3 File Offset: 0x000AE7A3
+		// Token: 0x170014B7 RID: 5303
+		// (get) Token: 0x06004A07 RID: 18951 RVA: 0x000BA71F File Offset: 0x000B891F
 		public virtual bool IsCircle
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013BA RID: 5050
-		// (get) Token: 0x060045AA RID: 17834 RVA: 0x000B05B0 File Offset: 0x000AE7B0
+		// Token: 0x170014B8 RID: 5304
+		// (get) Token: 0x06004A08 RID: 18952 RVA: 0x000BA72C File Offset: 0x000B892C
 		public virtual int Interval
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027AF RID: 10159
+		// Token: 0x040029FA RID: 10746
 		private IAutoConfig Instance;
 	}
 }

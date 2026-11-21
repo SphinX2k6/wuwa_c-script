@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C5 RID: 5061
+	// Token: 0x0200151C RID: 5404
 	public class ICheckPlayerInputBase
 	{
-		// Token: 0x06007397 RID: 29591 RVA: 0x0011559D File Offset: 0x0011379D
-		[NullableContext(1)]
+		// Token: 0x06007A58 RID: 31320 RVA: 0x00123F82 File Offset: 0x00122182
 		public static ICheckPlayerInputBase Create(ICheckPlayerInputBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025E0 RID: 9696
-		// (get) Token: 0x06007398 RID: 29592 RVA: 0x001155BC File Offset: 0x001137BC
+		// Token: 0x170027C2 RID: 10178
+		// (get) Token: 0x06007A59 RID: 31321 RVA: 0x00123FA1 File Offset: 0x001221A1
 		public virtual ECheckPlayerInputType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042EB RID: 17131
+		// Token: 0x0400467C RID: 18044
 		private ICheckPlayerInputBase Instance;
 	}
 }

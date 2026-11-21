@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B1F RID: 19231
+	// Token: 0x02003AC7 RID: 15047
 	public class TowerDefenseRankRoleData
 	{
-		// Token: 0x0401A94E RID: 108878
+		// Token: 0x040152A0 RID: 86688
 		public bool IsEmpty = true;
 
-		// Token: 0x0401A94F RID: 108879
+		// Token: 0x040152A1 RID: 86689
 		public int RoleSkinId;
 
-		// Token: 0x0401A950 RID: 108880
+		// Token: 0x040152A2 RID: 86690
 		public int RoleLevel;
 
-		// Token: 0x0401A951 RID: 108881
+		// Token: 0x040152A3 RID: 86691
 		public int PhantomId;
 
-		// Token: 0x0401A952 RID: 108882
+		// Token: 0x040152A4 RID: 86692
 		public bool IsOnline;
 
-		// Token: 0x0401A953 RID: 108883
+		// Token: 0x040152A5 RID: 86693
 		public int Pos;
 	}
 }

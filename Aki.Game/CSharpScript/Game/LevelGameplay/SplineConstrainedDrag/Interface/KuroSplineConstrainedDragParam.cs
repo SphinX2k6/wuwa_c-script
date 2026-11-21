@@ -7,41 +7,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 {
-	// Token: 0x02006A38 RID: 27192
+	// Token: 0x02005B95 RID: 23445
 	[NullableContext(2)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class KuroSplineConstrainedDragParam : IKuroSplineConstrainedDragParam
 	{
-		// Token: 0x170098F7 RID: 39159
-		// (get) Token: 0x06043A57 RID: 277079 RVA: 0x0108D213 File Offset: 0x0108B413
-		// (set) Token: 0x06043A58 RID: 277080 RVA: 0x0108D21B File Offset: 0x0108B41B
+		// Token: 0x17006DDC RID: 28124
+		// (get) Token: 0x06039AA5 RID: 236197 RVA: 0x01031A1B File Offset: 0x0102FC1B
+		// (set) Token: 0x06039AA6 RID: 236198 RVA: 0x01031A23 File Offset: 0x0102FC23
 		[Nullable(1)]
 		[RequiredMember]
 		public string ActorKey { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098F8 RID: 39160
-		// (get) Token: 0x06043A59 RID: 277081 RVA: 0x0108D224 File Offset: 0x0108B424
-		// (set) Token: 0x06043A5A RID: 277082 RVA: 0x0108D22C File Offset: 0x0108B42C
+		// Token: 0x17006DDD RID: 28125
+		// (get) Token: 0x06039AA7 RID: 236199 RVA: 0x01031A2C File Offset: 0x0102FC2C
+		// (set) Token: 0x06039AA8 RID: 236200 RVA: 0x01031A34 File Offset: 0x0102FC34
 		[Nullable(1)]
 		[RequiredMember]
 		public USplineComponent ConstraintSpline { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098F9 RID: 39161
-		// (get) Token: 0x06043A5B RID: 277083 RVA: 0x0108D235 File Offset: 0x0108B435
-		// (set) Token: 0x06043A5C RID: 277084 RVA: 0x0108D23D File Offset: 0x0108B43D
+		// Token: 0x17006DDE RID: 28126
+		// (get) Token: 0x06039AA9 RID: 236201 RVA: 0x01031A3D File Offset: 0x0102FC3D
+		// (set) Token: 0x06039AAA RID: 236202 RVA: 0x01031A45 File Offset: 0x0102FC45
 		[Nullable(1)]
 		[RequiredMember]
 		public AActor Actor { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098FA RID: 39162
-		// (get) Token: 0x06043A5D RID: 277085 RVA: 0x0108D246 File Offset: 0x0108B446
-		// (set) Token: 0x06043A5E RID: 277086 RVA: 0x0108D24E File Offset: 0x0108B44E
+		// Token: 0x17006DDF RID: 28127
+		// (get) Token: 0x06039AAB RID: 236203 RVA: 0x01031A4E File Offset: 0x0102FC4E
+		// (set) Token: 0x06039AAC RID: 236204 RVA: 0x01031A56 File Offset: 0x0102FC56
 		public ISequenceProgressController SequenceProgressController { get; set; }
 
-		// Token: 0x170098FB RID: 39163
-		// (get) Token: 0x06043A5F RID: 277087 RVA: 0x0108D257 File Offset: 0x0108B457
-		// (set) Token: 0x06043A60 RID: 277088 RVA: 0x0108D25F File Offset: 0x0108B45F
+		// Token: 0x17006DE0 RID: 28128
+		// (get) Token: 0x06039AAD RID: 236205 RVA: 0x01031A5F File Offset: 0x0102FC5F
+		// (set) Token: 0x06039AAE RID: 236206 RVA: 0x01031A67 File Offset: 0x0102FC67
 		[Nullable(new byte[]
 		{
 			2,
@@ -57,57 +57,57 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 			1
 		})] set; }
 
-		// Token: 0x170098FC RID: 39164
-		// (get) Token: 0x06043A61 RID: 277089 RVA: 0x0108D268 File Offset: 0x0108B468
-		// (set) Token: 0x06043A62 RID: 277090 RVA: 0x0108D270 File Offset: 0x0108B470
+		// Token: 0x17006DE1 RID: 28129
+		// (get) Token: 0x06039AAF RID: 236207 RVA: 0x01031A70 File Offset: 0x0102FC70
+		// (set) Token: 0x06039AB0 RID: 236208 RVA: 0x01031A78 File Offset: 0x0102FC78
 		public long? CreatureDataId { get; set; }
 
-		// Token: 0x170098FD RID: 39165
-		// (get) Token: 0x06043A63 RID: 277091 RVA: 0x0108D279 File Offset: 0x0108B479
-		// (set) Token: 0x06043A64 RID: 277092 RVA: 0x0108D281 File Offset: 0x0108B481
+		// Token: 0x17006DE2 RID: 28130
+		// (get) Token: 0x06039AB1 RID: 236209 RVA: 0x01031A81 File Offset: 0x0102FC81
+		// (set) Token: 0x06039AB2 RID: 236210 RVA: 0x01031A89 File Offset: 0x0102FC89
 		public float? MaxPlaySpeed { get; set; }
 
-		// Token: 0x170098FE RID: 39166
-		// (get) Token: 0x06043A65 RID: 277093 RVA: 0x0108D28A File Offset: 0x0108B48A
-		// (set) Token: 0x06043A66 RID: 277094 RVA: 0x0108D292 File Offset: 0x0108B492
+		// Token: 0x17006DE3 RID: 28131
+		// (get) Token: 0x06039AB3 RID: 236211 RVA: 0x01031A92 File Offset: 0x0102FC92
+		// (set) Token: 0x06039AB4 RID: 236212 RVA: 0x01031A9A File Offset: 0x0102FC9A
 		public float? Stiffness { get; set; }
 
-		// Token: 0x170098FF RID: 39167
-		// (get) Token: 0x06043A67 RID: 277095 RVA: 0x0108D29B File Offset: 0x0108B49B
-		// (set) Token: 0x06043A68 RID: 277096 RVA: 0x0108D2A3 File Offset: 0x0108B4A3
+		// Token: 0x17006DE4 RID: 28132
+		// (get) Token: 0x06039AB5 RID: 236213 RVA: 0x01031AA3 File Offset: 0x0102FCA3
+		// (set) Token: 0x06039AB6 RID: 236214 RVA: 0x01031AAB File Offset: 0x0102FCAB
 		public float? Damping { get; set; }
 
-		// Token: 0x17009900 RID: 39168
-		// (get) Token: 0x06043A69 RID: 277097 RVA: 0x0108D2AC File Offset: 0x0108B4AC
-		// (set) Token: 0x06043A6A RID: 277098 RVA: 0x0108D2B4 File Offset: 0x0108B4B4
+		// Token: 0x17006DE5 RID: 28133
+		// (get) Token: 0x06039AB7 RID: 236215 RVA: 0x01031AB4 File Offset: 0x0102FCB4
+		// (set) Token: 0x06039AB8 RID: 236216 RVA: 0x01031ABC File Offset: 0x0102FCBC
 		public string DraggableActorEffectDa { get; set; }
 
-		// Token: 0x17009901 RID: 39169
-		// (get) Token: 0x06043A6B RID: 277099 RVA: 0x0108D2BD File Offset: 0x0108B4BD
-		// (set) Token: 0x06043A6C RID: 277100 RVA: 0x0108D2C5 File Offset: 0x0108B4C5
+		// Token: 0x17006DE6 RID: 28134
+		// (get) Token: 0x06039AB9 RID: 236217 RVA: 0x01031AC5 File Offset: 0x0102FCC5
+		// (set) Token: 0x06039ABA RID: 236218 RVA: 0x01031ACD File Offset: 0x0102FCCD
 		public IConditionGroup Condition { get; set; }
 
-		// Token: 0x17009902 RID: 39170
-		// (get) Token: 0x06043A6D RID: 277101 RVA: 0x0108D2CE File Offset: 0x0108B4CE
-		// (set) Token: 0x06043A6E RID: 277102 RVA: 0x0108D2D6 File Offset: 0x0108B4D6
+		// Token: 0x17006DE7 RID: 28135
+		// (get) Token: 0x06039ABB RID: 236219 RVA: 0x01031AD6 File Offset: 0x0102FCD6
+		// (set) Token: 0x06039ABC RID: 236220 RVA: 0x01031ADE File Offset: 0x0102FCDE
 		public IDraggableStateApplier CustomStateApplier { get; set; }
 
-		// Token: 0x17009903 RID: 39171
-		// (get) Token: 0x06043A6F RID: 277103 RVA: 0x0108D2DF File Offset: 0x0108B4DF
-		// (set) Token: 0x06043A70 RID: 277104 RVA: 0x0108D2E7 File Offset: 0x0108B4E7
+		// Token: 0x17006DE8 RID: 28136
+		// (get) Token: 0x06039ABD RID: 236221 RVA: 0x01031AE7 File Offset: 0x0102FCE7
+		// (set) Token: 0x06039ABE RID: 236222 RVA: 0x01031AEF File Offset: 0x0102FCEF
 		public bool? IgnoreRotation { get; set; }
 
-		// Token: 0x17009904 RID: 39172
-		// (get) Token: 0x06043A71 RID: 277105 RVA: 0x0108D2F0 File Offset: 0x0108B4F0
-		// (set) Token: 0x06043A72 RID: 277106 RVA: 0x0108D2F8 File Offset: 0x0108B4F8
+		// Token: 0x17006DE9 RID: 28137
+		// (get) Token: 0x06039ABF RID: 236223 RVA: 0x01031AF8 File Offset: 0x0102FCF8
+		// (set) Token: 0x06039AC0 RID: 236224 RVA: 0x01031B00 File Offset: 0x0102FD00
 		public string AkEvent { get; set; }
 
-		// Token: 0x17009905 RID: 39173
-		// (get) Token: 0x06043A73 RID: 277107 RVA: 0x0108D301 File Offset: 0x0108B501
-		// (set) Token: 0x06043A74 RID: 277108 RVA: 0x0108D309 File Offset: 0x0108B509
+		// Token: 0x17006DEA RID: 28138
+		// (get) Token: 0x06039AC1 RID: 236225 RVA: 0x01031B09 File Offset: 0x0102FD09
+		// (set) Token: 0x06039AC2 RID: 236226 RVA: 0x01031B11 File Offset: 0x0102FD11
 		public EDragHintType? DragHintType { get; set; }
 
-		// Token: 0x06043A75 RID: 277109 RVA: 0x0108D312 File Offset: 0x0108B512
+		// Token: 0x06039AC3 RID: 236227 RVA: 0x01031B1A File Offset: 0x0102FD1A
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public KuroSplineConstrainedDragParam()

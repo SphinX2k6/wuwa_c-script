@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E60 RID: 7776
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002095 RID: 8341
 	public class IShowTalkCameraMotionPreset : IShowTalkCameraMotion
 	{
-		// Token: 0x0600A66B RID: 42603 RVA: 0x00178920 File Offset: 0x00176B20
+		// Token: 0x0600B123 RID: 45347 RVA: 0x0018E620 File Offset: 0x0018C820
 		private IShowTalkCameraMotionPreset_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A66C RID: 42604 RVA: 0x00178958 File Offset: 0x00176B58
+		// Token: 0x0600B124 RID: 45348 RVA: 0x0018E658 File Offset: 0x0018C858
 		public static IShowTalkCameraMotionPreset Create([Nullable(2)] IShowTalkCameraMotionPreset instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A66D RID: 42605 RVA: 0x0017896B File Offset: 0x00176B6B
+		// Token: 0x0600B125 RID: 45349 RVA: 0x0018E66B File Offset: 0x0018C86B
 		public static IShowTalkCameraMotionPreset CreateFromSetValue([Nullable(2)] IShowTalkCameraMotionPreset_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A66E RID: 42606 RVA: 0x0017897E File Offset: 0x00176B7E
+		// Token: 0x0600B126 RID: 45350 RVA: 0x0018E67E File Offset: 0x0018C87E
 		public new IShowTalkCameraMotionPreset_SetValue ToSetValue()
 		{
 			return new IShowTalkCameraMotionPreset_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032FC RID: 13052
-		// (get) Token: 0x0600A66F RID: 42607 RVA: 0x001789A9 File Offset: 0x00176BA9
-		// (set) Token: 0x0600A670 RID: 42608 RVA: 0x001789D4 File Offset: 0x00176BD4
+		// Token: 0x170035C0 RID: 13760
+		// (get) Token: 0x0600B127 RID: 45351 RVA: 0x0018E6A9 File Offset: 0x0018C8A9
+		// (set) Token: 0x0600B128 RID: 45352 RVA: 0x0018E6D4 File Offset: 0x0018C8D4
 		public override EShowTalkCameraMotionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032FD RID: 13053
-		// (get) Token: 0x0600A671 RID: 42609 RVA: 0x001789E2 File Offset: 0x00176BE2
-		// (set) Token: 0x0600A672 RID: 42610 RVA: 0x00178A0D File Offset: 0x00176C0D
+		// Token: 0x170035C1 RID: 13761
+		// (get) Token: 0x0600B129 RID: 45353 RVA: 0x0018E6E2 File Offset: 0x0018C8E2
+		// (set) Token: 0x0600B12A RID: 45354 RVA: 0x0018E70D File Offset: 0x0018C90D
 		public virtual string Sequence
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032FE RID: 13054
-		// (get) Token: 0x0600A673 RID: 42611 RVA: 0x00178A1C File Offset: 0x00176C1C
-		// (set) Token: 0x0600A674 RID: 42612 RVA: 0x00178A7D File Offset: 0x00176C7D
+		// Token: 0x170035C2 RID: 13762
+		// (get) Token: 0x0600B12B RID: 45355 RVA: 0x0018E71C File Offset: 0x0018C91C
+		// (set) Token: 0x0600B12C RID: 45356 RVA: 0x0018E77D File Offset: 0x0018C97D
 		[Nullable(2)]
 		public virtual IFlowCameraShake CamShake
 		{
@@ -140,18 +138,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006363 RID: 25443
+		// Token: 0x04006947 RID: 26951
 		[Nullable(2)]
 		protected new IShowTalkCameraMotionPreset FbInstance;
 
-		// Token: 0x04006364 RID: 25444
+		// Token: 0x04006948 RID: 26952
 		[Nullable(2)]
 		protected new IShowTalkCameraMotionPreset_SetValue PocoInterface;
 
-		// Token: 0x04006365 RID: 25445
+		// Token: 0x04006949 RID: 26953
 		private IFlowCameraShake _CamShakeCache;
 
-		// Token: 0x04006366 RID: 25446
+		// Token: 0x0400694A RID: 26954
 		private bool _CamShakeInited;
 	}
 }

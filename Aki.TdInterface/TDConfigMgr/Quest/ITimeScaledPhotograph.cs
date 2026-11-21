@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011A8 RID: 4520
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012E2 RID: 4834
 	public class ITimeScaledPhotograph : IQuestCondition
 	{
-		// Token: 0x060066A0 RID: 26272 RVA: 0x000F5DD8 File Offset: 0x000F3FD8
+		// Token: 0x06006CD7 RID: 27863 RVA: 0x001035A4 File Offset: 0x001017A4
 		private ITimeScaledPhotograph_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060066A1 RID: 26273 RVA: 0x000F5E10 File Offset: 0x000F4010
+		// Token: 0x06006CD8 RID: 27864 RVA: 0x001035DC File Offset: 0x001017DC
 		public static ITimeScaledPhotograph Create([Nullable(2)] ITimeScaledPhotograph instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066A2 RID: 26274 RVA: 0x000F5E23 File Offset: 0x000F4023
+		// Token: 0x06006CD9 RID: 27865 RVA: 0x001035EF File Offset: 0x001017EF
 		public static ITimeScaledPhotograph CreateFromSetValue([Nullable(2)] ITimeScaledPhotograph_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066A3 RID: 26275 RVA: 0x000F5E38 File Offset: 0x000F4038
+		// Token: 0x06006CDA RID: 27866 RVA: 0x00103604 File Offset: 0x00101804
 		public new ITimeScaledPhotograph_SetValue ToSetValue()
 		{
 			return new ITimeScaledPhotograph_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002159 RID: 8537
-		// (get) Token: 0x060066A4 RID: 26276 RVA: 0x000F5E86 File Offset: 0x000F4086
-		// (set) Token: 0x060066A5 RID: 26277 RVA: 0x000F5EB1 File Offset: 0x000F40B1
+		// Token: 0x17002318 RID: 8984
+		// (get) Token: 0x06006CDB RID: 27867 RVA: 0x00103652 File Offset: 0x00101852
+		// (set) Token: 0x06006CDC RID: 27868 RVA: 0x0010367D File Offset: 0x0010187D
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700215A RID: 8538
-		// (get) Token: 0x060066A6 RID: 26278 RVA: 0x000F5EC0 File Offset: 0x000F40C0
-		// (set) Token: 0x060066A7 RID: 26279 RVA: 0x000F5F21 File Offset: 0x000F4121
+		// Token: 0x17002319 RID: 8985
+		// (get) Token: 0x06006CDD RID: 27869 RVA: 0x0010368C File Offset: 0x0010188C
+		// (set) Token: 0x06006CDE RID: 27870 RVA: 0x001036ED File Offset: 0x001018ED
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700215B RID: 8539
-		// (get) Token: 0x060066A8 RID: 26280 RVA: 0x000F5F36 File Offset: 0x000F4136
-		// (set) Token: 0x060066A9 RID: 26281 RVA: 0x000F5F61 File Offset: 0x000F4161
+		// Token: 0x1700231A RID: 8986
+		// (get) Token: 0x06006CDF RID: 27871 RVA: 0x00103702 File Offset: 0x00101902
+		// (set) Token: 0x06006CE0 RID: 27872 RVA: 0x0010372D File Offset: 0x0010192D
 		public virtual ETimeScaledPhotographTip ViewFinderTip
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700215C RID: 8540
-		// (get) Token: 0x060066AA RID: 26282 RVA: 0x000F5F70 File Offset: 0x000F4170
-		// (set) Token: 0x060066AB RID: 26283 RVA: 0x000F5FD1 File Offset: 0x000F41D1
+		// Token: 0x1700231B RID: 8987
+		// (get) Token: 0x06006CE1 RID: 27873 RVA: 0x0010373C File Offset: 0x0010193C
+		// (set) Token: 0x06006CE2 RID: 27874 RVA: 0x0010379D File Offset: 0x0010199D
 		public virtual IPhotographCondition PhotographCondition
 		{
 			get
@@ -173,9 +171,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700215D RID: 8541
-		// (get) Token: 0x060066AC RID: 26284 RVA: 0x000F5FE8 File Offset: 0x000F41E8
-		// (set) Token: 0x060066AD RID: 26285 RVA: 0x000F6049 File Offset: 0x000F4249
+		// Token: 0x1700231C RID: 8988
+		// (get) Token: 0x06006CE3 RID: 27875 RVA: 0x001037B4 File Offset: 0x001019B4
+		// (set) Token: 0x06006CE4 RID: 27876 RVA: 0x00103815 File Offset: 0x00101A15
 		public virtual ICameraCondition CameraCondition
 		{
 			get
@@ -203,30 +201,30 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D92 RID: 15762
+		// Token: 0x040040FA RID: 16634
 		[Nullable(2)]
 		protected new ITimeScaledPhotograph FbInstance;
 
-		// Token: 0x04003D93 RID: 15763
+		// Token: 0x040040FB RID: 16635
 		[Nullable(2)]
 		protected new ITimeScaledPhotograph_SetValue PocoInterface;
 
-		// Token: 0x04003D94 RID: 15764
+		// Token: 0x040040FC RID: 16636
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003D95 RID: 15765
+		// Token: 0x040040FD RID: 16637
 		private bool _PreConditionsInited;
 
-		// Token: 0x04003D96 RID: 15766
+		// Token: 0x040040FE RID: 16638
 		private IPhotographCondition _PhotographConditionCache;
 
-		// Token: 0x04003D97 RID: 15767
+		// Token: 0x040040FF RID: 16639
 		private bool _PhotographConditionInited;
 
-		// Token: 0x04003D98 RID: 15768
+		// Token: 0x04004100 RID: 16640
 		private ICameraCondition _CameraConditionCache;
 
-		// Token: 0x04003D99 RID: 15769
+		// Token: 0x04004101 RID: 16641
 		private bool _CameraConditionInited;
 	}
 }

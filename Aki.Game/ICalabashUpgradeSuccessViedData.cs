@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x02001726 RID: 5926
+// Token: 0x02000BDE RID: 3038
 public interface ICalabashUpgradeSuccessViedData
 {
-	// Token: 0x17000E18 RID: 3608
-	// (get) Token: 0x0600AB37 RID: 43831
-	// (set) Token: 0x0600AB38 RID: 43832
+	// Token: 0x17000E39 RID: 3641
+	// (get) Token: 0x06007F19 RID: 32537
+	// (set) Token: 0x06007F1A RID: 32538
 	bool AddExp { get; set; }
 
-	// Token: 0x17000E19 RID: 3609
-	// (get) Token: 0x0600AB39 RID: 43833
-	// (set) Token: 0x0600AB3A RID: 43834
+	// Token: 0x17000E3A RID: 3642
+	// (get) Token: 0x06007F1B RID: 32539
+	// (set) Token: 0x06007F1C RID: 32540
 	int PreLevel { get; set; }
 
-	// Token: 0x17000E1A RID: 3610
-	// (get) Token: 0x0600AB3B RID: 43835
-	// (set) Token: 0x0600AB3C RID: 43836
+	// Token: 0x17000E3B RID: 3643
+	// (get) Token: 0x06007F1D RID: 32541
+	// (set) Token: 0x06007F1E RID: 32542
 	int PreExp { get; set; }
 
-	// Token: 0x17000E1B RID: 3611
-	// (get) Token: 0x0600AB3D RID: 43837
-	// (set) Token: 0x0600AB3E RID: 43838
+	// Token: 0x17000E3C RID: 3644
+	// (get) Token: 0x06007F1F RID: 32543
+	// (set) Token: 0x06007F20 RID: 32544
 	int CurLevel { get; set; }
 
-	// Token: 0x17000E1C RID: 3612
-	// (get) Token: 0x0600AB3F RID: 43839
-	// (set) Token: 0x0600AB40 RID: 43840
+	// Token: 0x17000E3D RID: 3645
+	// (get) Token: 0x06007F21 RID: 32545
+	// (set) Token: 0x06007F22 RID: 32546
 	int CurExp { get; set; }
 }

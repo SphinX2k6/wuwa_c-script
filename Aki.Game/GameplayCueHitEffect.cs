@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02002FC4 RID: 12228
+// Token: 0x02002518 RID: 9496
 public class GameplayCueHitEffect : GameplayCueBase
 {
-	// Token: 0x06019EC4 RID: 106180 RVA: 0x006C7FA4 File Offset: 0x006C61A4
+	// Token: 0x060177D6 RID: 96214 RVA: 0x006EE878 File Offset: 0x006ECA78
 	protected override void OnCreate()
 	{
 		if (string.IsNullOrEmpty(this.CueConfig.Path))
@@ -22,7 +22,7 @@ public class GameplayCueHitEffect : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019EC5 RID: 106181 RVA: 0x006C7FF2 File Offset: 0x006C61F2
+	// Token: 0x060177D7 RID: 96215 RVA: 0x006EE8C6 File Offset: 0x006ECAC6
 	protected override void OnDestroy()
 	{
 		if (this.HandleId != 0)
@@ -37,7 +37,7 @@ public class GameplayCueHitEffect : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EC6 RID: 106182 RVA: 0x006C8028 File Offset: 0x006C6228
+	// Token: 0x060177D8 RID: 96216 RVA: 0x006EE8FC File Offset: 0x006ECAFC
 	[NullableContext(2)]
 	private bool ReplaceHitEffect(BP_ReplaceHitEffect_C dataAsset)
 	{
@@ -53,7 +53,7 @@ public class GameplayCueHitEffect : GameplayCueBase
 		return component != null && component.ReplaceHitEffect(dataAsset);
 	}
 
-	// Token: 0x06019EC7 RID: 106183 RVA: 0x006C8068 File Offset: 0x006C6268
+	// Token: 0x060177D9 RID: 96217 RVA: 0x006EE93C File Offset: 0x006ECB3C
 	private void RemoveHitEffectReplaced()
 	{
 		if (!this.EntityHandle.Valid)
@@ -68,9 +68,9 @@ public class GameplayCueHitEffect : GameplayCueBase
 		component.RemoveHitEffectReplaced();
 	}
 
-	// Token: 0x0400C42C RID: 50220
+	// Token: 0x0400C7D5 RID: 51157
 	private int HandleId;
 
-	// Token: 0x0400C42D RID: 50221
+	// Token: 0x0400C7D6 RID: 51158
 	private bool IsReplaced;
 }

@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A40 RID: 6720
+	// Token: 0x02001BD5 RID: 7125
 	public class IFadeBackgroundFadeInEffect_SetValue
 	{
-		// Token: 0x040058ED RID: 22765
-		[Nullable(1)]
+		// Token: 0x04005D52 RID: 23890
 		public IFadeBackgroundFadeInEffectTypeBase FadeInEffect;
 	}
 }

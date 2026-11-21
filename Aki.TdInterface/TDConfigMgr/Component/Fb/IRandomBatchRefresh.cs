@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC5 RID: 2757
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B8F RID: 2959
 	public class IRandomBatchRefresh : IEntityBatchRefreshMode
 	{
-		// Token: 0x06003F7C RID: 16252 RVA: 0x000A2292 File Offset: 0x000A0492
+		// Token: 0x060043A6 RID: 17318 RVA: 0x000AB886 File Offset: 0x000A9A86
 		public static IRandomBatchRefresh Create(IRandomBatchRefresh? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FAF RID: 4015
-		// (get) Token: 0x06003F7D RID: 16253 RVA: 0x000A22B1 File Offset: 0x000A04B1
+		// Token: 0x17001083 RID: 4227
+		// (get) Token: 0x060043A7 RID: 17319 RVA: 0x000AB8A5 File Offset: 0x000A9AA5
 		public override EEntityBatchRefreshMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FB0 RID: 4016
-		// (get) Token: 0x06003F7E RID: 16254 RVA: 0x000A22C0 File Offset: 0x000A04C0
+		// Token: 0x17001084 RID: 4228
+		// (get) Token: 0x060043A8 RID: 17320 RVA: 0x000AB8B4 File Offset: 0x000A9AB4
 		public override List<IEntityListBatch> EntityBatches
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002346 RID: 9030
+		// Token: 0x04002562 RID: 9570
 		private IRandomBatchRefresh Instance;
 
-		// Token: 0x04002347 RID: 9031
+		// Token: 0x04002563 RID: 9571
 		private List<IEntityListBatch> _EntityBatchesCache;
 
-		// Token: 0x04002348 RID: 9032
+		// Token: 0x04002564 RID: 9572
 		private bool _EntityBatchesInited;
 	}
 }

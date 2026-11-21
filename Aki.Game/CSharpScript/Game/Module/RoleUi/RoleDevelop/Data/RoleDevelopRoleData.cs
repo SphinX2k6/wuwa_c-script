@@ -5,59 +5,59 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 {
-	// Token: 0x02004D60 RID: 19808
+	// Token: 0x02003D29 RID: 15657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopRoleData : RoleDevelopRoleBaseData
 	{
-		// Token: 0x0603333C RID: 209724 RVA: 0x00BF1387 File Offset: 0x00BEF587
+		// Token: 0x060281A9 RID: 164265 RVA: 0x00B3A542 File Offset: 0x00B38742
 		public RoleDevelopRoleData(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0603333D RID: 209725 RVA: 0x00BF1390 File Offset: 0x00BEF590
+		// Token: 0x060281AA RID: 164266 RVA: 0x00B3A54B File Offset: 0x00B3874B
 		public override ERoleDevelopRoleType GetRoleType()
 		{
 			return ERoleDevelopRoleType.Normal;
 		}
 
-		// Token: 0x0603333E RID: 209726 RVA: 0x00BF1393 File Offset: 0x00BEF593
+		// Token: 0x060281AB RID: 164267 RVA: 0x00B3A54E File Offset: 0x00B3874E
 		private RoleDataBase GetRoleData()
 		{
 			return RoleModel.Instance.GetRoleDataById(this.Id, true);
 		}
 
-		// Token: 0x0603333F RID: 209727 RVA: 0x00BF13A6 File Offset: 0x00BEF5A6
+		// Token: 0x060281AC RID: 164268 RVA: 0x00B3A561 File Offset: 0x00B38761
 		private bool IsOwned()
 		{
 			return RoleModel.Instance.IsRoleOwned(this.Id);
 		}
 
-		// Token: 0x06033340 RID: 209728 RVA: 0x00BF13B8 File Offset: 0x00BEF5B8
+		// Token: 0x060281AD RID: 164269 RVA: 0x00B3A574 File Offset: 0x00B38774
 		private RoleInfo GetRoleConfig()
 		{
 			return RoleConfig.Instance.GetRoleConfig(this.Id).Value;
 		}
 
-		// Token: 0x06033341 RID: 209729 RVA: 0x00BF13E0 File Offset: 0x00BEF5E0
+		// Token: 0x060281AE RID: 164270 RVA: 0x00B3A59C File Offset: 0x00B3879C
 		public RoleDevCultivateProject GetCultivateProject()
 		{
 			return RoleDevelopUtil.GetCultivateProject(this.Id).Value;
 		}
 
-		// Token: 0x06033342 RID: 209730 RVA: 0x00BF1400 File Offset: 0x00BEF600
+		// Token: 0x060281AF RID: 164271 RVA: 0x00B3A5BC File Offset: 0x00B387BC
 		public override string GetName()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(this.GetRoleConfig().Name, null);
 		}
 
-		// Token: 0x06033343 RID: 209731 RVA: 0x00BF1424 File Offset: 0x00BEF624
+		// Token: 0x060281B0 RID: 164272 RVA: 0x00B3A5E0 File Offset: 0x00B387E0
 		public override int GetElementId()
 		{
 			return this.GetRoleConfig().ElementId;
 		}
 
-		// Token: 0x06033344 RID: 209732 RVA: 0x00BF1440 File Offset: 0x00BEF640
+		// Token: 0x060281B1 RID: 164273 RVA: 0x00B3A5FC File Offset: 0x00B387FC
 		public override string GetRoleIconPath()
 		{
 			if (RoleDevelopUtil.IsHotRole(this.Id) && RoleDevConfig.Instance.GetRoleDevProsListConfig(this.Id).TypeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(this.Id))
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return roleSkinDataByRoleId.GetRoleSkinConfig().RoleHeadIconLarge;
 		}
 
-		// Token: 0x06033345 RID: 209733 RVA: 0x00BF14C8 File Offset: 0x00BEF6C8
+		// Token: 0x060281B2 RID: 164274 RVA: 0x00B3A684 File Offset: 0x00B38884
 		public override string GetRoleIllustrationPath()
 		{
 			if (RoleDevelopUtil.IsHotRole(this.Id) && RoleDevConfig.Instance.GetRoleDevProsListConfig(this.Id).TypeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(this.Id))
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return roleSkinDataByRoleId.GetRoleSkinConfig().FormationRoleCard;
 		}
 
-		// Token: 0x06033346 RID: 209734 RVA: 0x00BF1550 File Offset: 0x00BEF750
+		// Token: 0x060281B3 RID: 164275 RVA: 0x00B3A70C File Offset: 0x00B3890C
 		public override string GetRoleCircleIconPath()
 		{
 			if (RoleDevelopUtil.IsHotRole(this.Id) && RoleDevConfig.Instance.GetRoleDevProsListConfig(this.Id).TypeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(this.Id))
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return roleSkinDataByRoleId.GetRoleSkinConfig().RoleHeadIconCircle;
 		}
 
-		// Token: 0x06033347 RID: 209735 RVA: 0x00BF15D8 File Offset: 0x00BEF7D8
+		// Token: 0x060281B4 RID: 164276 RVA: 0x00B3A794 File Offset: 0x00B38994
 		public override string GetRoleSmallIconPath()
 		{
 			if (RoleDevelopUtil.IsHotRole(this.Id) && RoleDevConfig.Instance.GetRoleDevProsListConfig(this.Id).TypeId == 2 && RoleDevelopUtil.IsRoleInProspectTime(this.Id))
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return roleSkinDataByRoleId.GetRoleSkinConfig().RoleHeadIcon;
 		}
 
-		// Token: 0x06033348 RID: 209736 RVA: 0x00BF1660 File Offset: 0x00BEF860
+		// Token: 0x060281B5 RID: 164277 RVA: 0x00B3A81C File Offset: 0x00B38A1C
 		public override int GetKeyProperty()
 		{
 			return RoleDevConfig.Instance.GetRoleDevProjectConfig(this.Id).Value.KeyProperty;
 		}
 
-		// Token: 0x06033349 RID: 209737 RVA: 0x00BF168D File Offset: 0x00BEF88D
+		// Token: 0x060281B6 RID: 164278 RVA: 0x00B3A849 File Offset: 0x00B38A49
 		public override int GetRoleLevel()
 		{
 			if (this.IsOwned())
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 1;
 		}
 
-		// Token: 0x0603334A RID: 209738 RVA: 0x00BF16A9 File Offset: 0x00BEF8A9
+		// Token: 0x060281B7 RID: 164279 RVA: 0x00B3A865 File Offset: 0x00B38A65
 		public override int GetRoleBreachLevel()
 		{
 			if (this.IsOwned())
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 0;
 		}
 
-		// Token: 0x0603334B RID: 209739 RVA: 0x00BF16C5 File Offset: 0x00BEF8C5
+		// Token: 0x060281B8 RID: 164280 RVA: 0x00B3A881 File Offset: 0x00B38A81
 		public override int GetRoleExp()
 		{
 			if (this.IsOwned())
@@ -153,37 +153,37 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 0;
 		}
 
-		// Token: 0x0603334C RID: 209740 RVA: 0x00BF16E1 File Offset: 0x00BEF8E1
+		// Token: 0x060281B9 RID: 164281 RVA: 0x00B3A89D File Offset: 0x00B38A9D
 		public override bool IsRoleMaxLevel()
 		{
 			return this.IsOwned() && this.GetRoleData().GetLevelData().GetRoleIsMaxLevel();
 		}
 
-		// Token: 0x0603334D RID: 209741 RVA: 0x00BF16FD File Offset: 0x00BEF8FD
+		// Token: 0x060281BA RID: 164282 RVA: 0x00B3A8B9 File Offset: 0x00B38AB9
 		public override bool IsRoleNeedBreakUp()
 		{
 			return !this.IsOwned() || this.GetRoleData().GetLevelData().GetRoleNeedBreakUp();
 		}
 
-		// Token: 0x0603334E RID: 209742 RVA: 0x00BF171C File Offset: 0x00BEF91C
+		// Token: 0x060281BB RID: 164283 RVA: 0x00B3A8D8 File Offset: 0x00B38AD8
 		public override int GetRoleTargetLevel()
 		{
 			return this.GetCultivateProject().RoleLevel;
 		}
 
-		// Token: 0x0603334F RID: 209743 RVA: 0x00BF1738 File Offset: 0x00BEF938
+		// Token: 0x060281BC RID: 164284 RVA: 0x00B3A8F4 File Offset: 0x00B38AF4
 		public override int GetRoleTargetBreachLevel()
 		{
 			return this.GetCultivateProject().RoleBreachLevel;
 		}
 
-		// Token: 0x06033350 RID: 209744 RVA: 0x00BF1754 File Offset: 0x00BEF954
+		// Token: 0x060281BD RID: 164285 RVA: 0x00B3A910 File Offset: 0x00B38B10
 		public override int GetWeaponType()
 		{
 			return RoleDevConfig.Instance.GetRoleDevProjectConfig(this.Id).Value.WeaponType;
 		}
 
-		// Token: 0x06033351 RID: 209745 RVA: 0x00BF1781 File Offset: 0x00BEF981
+		// Token: 0x060281BE RID: 164286 RVA: 0x00B3A93D File Offset: 0x00B38B3D
 		public override WeaponInstance GetWeaponInstance()
 		{
 			if (!this.IsOwned())
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return WeaponModel.Instance.GetWeaponInstanceByRoleId(this.Id);
 		}
 
-		// Token: 0x06033352 RID: 209746 RVA: 0x00BF17A0 File Offset: 0x00BEF9A0
+		// Token: 0x060281BF RID: 164287 RVA: 0x00B3A95C File Offset: 0x00B38B5C
 		public override string GetWeaponName()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return RoleDevConfig.Instance.GetRoleDevWeaponItemConfig(this.GetWeaponType()).Value.WeaponTypeDescribe;
 		}
 
-		// Token: 0x06033353 RID: 209747 RVA: 0x00BF17FC File Offset: 0x00BEF9FC
+		// Token: 0x060281C0 RID: 164288 RVA: 0x00B3A9B8 File Offset: 0x00B38BB8
 		public override int GetWeaponLevel()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 0;
 		}
 
-		// Token: 0x06033354 RID: 209748 RVA: 0x00BF181C File Offset: 0x00BEFA1C
+		// Token: 0x060281C1 RID: 164289 RVA: 0x00B3A9D8 File Offset: 0x00B38BD8
 		public override int GetWeaponBreachLevel()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 0;
 		}
 
-		// Token: 0x06033355 RID: 209749 RVA: 0x00BF183C File Offset: 0x00BEFA3C
+		// Token: 0x060281C2 RID: 164290 RVA: 0x00B3A9F8 File Offset: 0x00B38BF8
 		public override int GetWeaponExp()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
@@ -237,13 +237,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return 0;
 		}
 
-		// Token: 0x06033356 RID: 209750 RVA: 0x00BF185C File Offset: 0x00BEFA5C
+		// Token: 0x060281C3 RID: 164291 RVA: 0x00B3AA18 File Offset: 0x00B38C18
 		public override int GetWeaponTargetLevel()
 		{
 			return this.GetCultivateProject().WeaponLevel;
 		}
 
-		// Token: 0x06033357 RID: 209751 RVA: 0x00BF1878 File Offset: 0x00BEFA78
+		// Token: 0x060281C4 RID: 164292 RVA: 0x00B3AA34 File Offset: 0x00B38C34
 		public override int GetWeaponTargetBreachLevel()
 		{
 			int num = this.GetCultivateProject().WeaponBreachLevel;
@@ -260,21 +260,21 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return num;
 		}
 
-		// Token: 0x06033358 RID: 209752 RVA: 0x00BF18D4 File Offset: 0x00BEFAD4
+		// Token: 0x060281C5 RID: 164293 RVA: 0x00B3AA90 File Offset: 0x00B38C90
 		public override bool IsWeaponMaxLevel()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
 			return weaponInstance != null && weaponInstance.GetLevel() >= weaponInstance.GetMaxLevel();
 		}
 
-		// Token: 0x06033359 RID: 209753 RVA: 0x00BF1900 File Offset: 0x00BEFB00
+		// Token: 0x060281C6 RID: 164294 RVA: 0x00B3AABC File Offset: 0x00B38CBC
 		public override bool IsWeaponNeedBreakUp()
 		{
 			WeaponInstance weaponInstance = this.GetWeaponInstance();
 			return weaponInstance != null && weaponInstance.GetBreachLevel() < this.GetWeaponTargetBreachLevel();
 		}
 
-		// Token: 0x0603335A RID: 209754 RVA: 0x00BF1927 File Offset: 0x00BEFB27
+		// Token: 0x060281C7 RID: 164295 RVA: 0x00B3AAE3 File Offset: 0x00B38CE3
 		public override List<int> GetPhantomIdList()
 		{
 			if (!RoleModel.Instance.IsRoleOwned(this.Id))
@@ -284,13 +284,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return PhantomBattleModel.Instance.GetBattleDataById(this.Id).GetIncrIdList();
 		}
 
-		// Token: 0x0603335B RID: 209755 RVA: 0x00BF1956 File Offset: 0x00BEFB56
+		// Token: 0x060281C8 RID: 164296 RVA: 0x00B3AB12 File Offset: 0x00B38D12
 		public override bool CanDevelopPhantom()
 		{
 			return RoleModel.Instance.IsRoleOwned(this.Id);
 		}
 
-		// Token: 0x0603335C RID: 209756 RVA: 0x00BF1968 File Offset: 0x00BEFB68
+		// Token: 0x060281C9 RID: 164297 RVA: 0x00B3AB24 File Offset: 0x00B38D24
 		public override List<RoleDevelopPhantomSuitData> GetRecommendPhantomSuits(int? planId = null, int? firstVisionMonsterId = null)
 		{
 			List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.Id);
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return RoleDevelopUtil.CreatePhantomSuitDataList(this.Id, roleFetterRecommendInfo, recommendPlanId, firstVisionMonsterId);
 		}
 
-		// Token: 0x0603335D RID: 209757 RVA: 0x00BF19C4 File Offset: 0x00BEFBC4
+		// Token: 0x060281CA RID: 164298 RVA: 0x00B3AB80 File Offset: 0x00B38D80
 		public override int GetRecommendPlanId()
 		{
 			if (RoleDevelopModel.Instance.DevTargetRoleId == this.Id)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.Data
 			return RoleDevelopUtil.GetDefaultRecommendPlanId(this.Id);
 		}
 
-		// Token: 0x0603335E RID: 209758 RVA: 0x00BF1A00 File Offset: 0x00BEFC00
+		// Token: 0x060281CB RID: 164299 RVA: 0x00B3ABBC File Offset: 0x00B38DBC
 		public override int GetRecommendFirstVisionMonsterId()
 		{
 			List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.Id);

@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Activity.ActivityContent.WheelTower;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015B4 RID: 5556
+// Token: 0x02000A6C RID: 2668
 public class WheelTowerBossBuffItem : UiPanelBase
 {
-	// Token: 0x06009DC2 RID: 40386 RVA: 0x002241B8 File Offset: 0x002223B8
+	// Token: 0x060071A0 RID: 29088 RVA: 0x0022DF68 File Offset: 0x0022C168
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -32,7 +32,7 @@ public class WheelTowerBossBuffItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009DC3 RID: 40387 RVA: 0x002242A8 File Offset: 0x002224A8
+	// Token: 0x060071A1 RID: 29089 RVA: 0x0022E058 File Offset: 0x0022C258
 	[NullableContext(1)]
 	public void Refresh(IWheelTowerBossBuffData data)
 	{

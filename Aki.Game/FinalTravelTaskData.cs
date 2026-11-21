@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020012D6 RID: 4822
+// Token: 0x0200078A RID: 1930
 [NullableContext(1)]
 [Nullable(0)]
 public class FinalTravelTaskData
 {
-	// Token: 0x17000B6B RID: 2923
-	// (get) Token: 0x060084F5 RID: 34037 RVA: 0x001C4821 File Offset: 0x001C2A21
+	// Token: 0x17000B8B RID: 2955
+	// (get) Token: 0x06005890 RID: 22672 RVA: 0x001CD67D File Offset: 0x001CB87D
 	public int Current
 	{
 		get
@@ -17,21 +17,21 @@ public class FinalTravelTaskData
 		}
 	}
 
-	// Token: 0x17000B6C RID: 2924
-	// (get) Token: 0x060084F6 RID: 34038 RVA: 0x001C482E File Offset: 0x001C2A2E
-	// (set) Token: 0x060084F7 RID: 34039 RVA: 0x001C4836 File Offset: 0x001C2A36
+	// Token: 0x17000B8C RID: 2956
+	// (get) Token: 0x06005891 RID: 22673 RVA: 0x001CD68A File Offset: 0x001CB88A
+	// (set) Token: 0x06005892 RID: 22674 RVA: 0x001CD692 File Offset: 0x001CB892
 	public int Target { get; set; } = 1;
 
-	// Token: 0x17000B6D RID: 2925
-	// (get) Token: 0x060084F8 RID: 34040 RVA: 0x001C483F File Offset: 0x001C2A3F
+	// Token: 0x17000B8D RID: 2957
+	// (get) Token: 0x06005893 RID: 22675 RVA: 0x001CD69B File Offset: 0x001CB89B
 	public HashSet<int> FinishedIdSet { get; } = new HashSet<int>();
 
-	// Token: 0x17000B6E RID: 2926
-	// (get) Token: 0x060084F9 RID: 34041 RVA: 0x001C4847 File Offset: 0x001C2A47
-	// (set) Token: 0x060084FA RID: 34042 RVA: 0x001C484F File Offset: 0x001C2A4F
+	// Token: 0x17000B8E RID: 2958
+	// (get) Token: 0x06005894 RID: 22676 RVA: 0x001CD6A3 File Offset: 0x001CB8A3
+	// (set) Token: 0x06005895 RID: 22677 RVA: 0x001CD6AB File Offset: 0x001CB8AB
 	public bool IsReceived { get; set; }
 
-	// Token: 0x060084FB RID: 34043 RVA: 0x001C4858 File Offset: 0x001C2A58
+	// Token: 0x06005896 RID: 22678 RVA: 0x001CD6B4 File Offset: 0x001CB8B4
 	public bool CanReceive()
 	{
 		return !this.IsReceived && this.Current == this.Target;

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D61 RID: 3425
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E5B RID: 3675
 	public class IInhalationConfig
 	{
-		// Token: 0x06004E01 RID: 19969 RVA: 0x000C1C81 File Offset: 0x000BFE81
+		// Token: 0x0600531D RID: 21277 RVA: 0x000CD3C5 File Offset: 0x000CB5C5
 		public static IInhalationConfig Create(IInhalationConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018FC RID: 6396
-		// (get) Token: 0x06004E02 RID: 19970 RVA: 0x000C1CA0 File Offset: 0x000BFEA0
+		// Token: 0x17001A62 RID: 6754
+		// (get) Token: 0x0600531E RID: 21278 RVA: 0x000CD3E4 File Offset: 0x000CB5E4
 		public virtual IInhalationMatching InhalationMatching
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018FD RID: 6397
-		// (get) Token: 0x06004E03 RID: 19971 RVA: 0x000C1CD4 File Offset: 0x000BFED4
+		// Token: 0x17001A63 RID: 6755
+		// (get) Token: 0x0600531F RID: 21279 RVA: 0x000CD418 File Offset: 0x000CB618
 		public virtual IInhalationPerformanceType InhalationPerformance
 		{
 			get
@@ -54,20 +52,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CB6 RID: 11446
+		// Token: 0x04002F76 RID: 12150
 		private IInhalationConfig Instance;
 
-		// Token: 0x04002CB7 RID: 11447
+		// Token: 0x04002F77 RID: 12151
 		[Nullable(2)]
 		private IInhalationMatching _InhalationMatchingCache;
 
-		// Token: 0x04002CB8 RID: 11448
+		// Token: 0x04002F78 RID: 12152
 		private bool _InhalationMatchingInited;
 
-		// Token: 0x04002CB9 RID: 11449
+		// Token: 0x04002F79 RID: 12153
 		private IInhalationPerformanceType _InhalationPerformanceCache;
 
-		// Token: 0x04002CBA RID: 11450
+		// Token: 0x04002F7A RID: 12154
 		private bool _InhalationPerformanceInited;
 	}
 }

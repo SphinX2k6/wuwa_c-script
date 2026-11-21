@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001987 RID: 6535
+	// Token: 0x02000443 RID: 1091
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroCheckProgress : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601845D RID: 99421 RVA: 0x0023CDE7 File Offset: 0x0023AFE7
+		// Token: 0x0600694A RID: 26954 RVA: 0x00099D16 File Offset: 0x00097F16
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroCheckProgress.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601845E RID: 99422 RVA: 0x0023CDF3 File Offset: 0x0023AFF3
+		// Token: 0x0600694B RID: 26955 RVA: 0x00099D22 File Offset: 0x00097F22
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroCheckProgress._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FKuroCheckProgress._FunctionPtr;
 		}
 
-		// Token: 0x0601845F RID: 99423 RVA: 0x0023CE16 File Offset: 0x0023B016
+		// Token: 0x0600694C RID: 26956 RVA: 0x00099D45 File Offset: 0x00097F45
 		public FKuroCheckProgress()
 		{
 		}
 
-		// Token: 0x06018460 RID: 99424 RVA: 0x0023CE1E File Offset: 0x0023B01E
+		// Token: 0x0600694D RID: 26957 RVA: 0x00099D4D File Offset: 0x00097F4D
 		[NullableContext(2)]
 		public FKuroCheckProgress(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018461 RID: 99425 RVA: 0x0023CE28 File Offset: 0x0023B028
+		// Token: 0x0600694E RID: 26958 RVA: 0x00099D57 File Offset: 0x00097F57
 		public FKuroCheckProgress(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018462 RID: 99426 RVA: 0x0023CE33 File Offset: 0x0023B033
+		// Token: 0x0600694F RID: 26959 RVA: 0x00099D62 File Offset: 0x00097F62
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018463 RID: 99427 RVA: 0x0023CE65 File Offset: 0x0023B065
+		// Token: 0x06006950 RID: 26960 RVA: 0x00099D94 File Offset: 0x00097F94
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FKuroCheckProgress.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroCheckProgress.RegisterId);
 		}
 
-		// Token: 0x06018464 RID: 99428 RVA: 0x0023CE9F File Offset: 0x0023B09F
+		// Token: 0x06006951 RID: 26961 RVA: 0x00099DCE File Offset: 0x00097FCE
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018465 RID: 99429 RVA: 0x0023CEA8 File Offset: 0x0023B0A8
+		// Token: 0x06006952 RID: 26962 RVA: 0x00099DD8 File Offset: 0x00097FD8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int Current, int Total)
 		{
 			FKuroCheckProgress.__FKuroCheckProgress_DelegateParams* ptr = stackalloc FKuroCheckProgress.__FKuroCheckProgress_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FKuroCheckProgress.__FKuroCheckProgress_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06018466 RID: 99430 RVA: 0x0023CEEC File Offset: 0x0023B0EC
+		// Token: 0x06006953 RID: 26963 RVA: 0x00099E1C File Offset: 0x0009801C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FKuroCheckProgress.__FKuroCheckProgress_DelegateParams*)__Parameters)->Current, ((FKuroCheckProgress.__FKuroCheckProgress_DelegateParams*)__Parameters)->Total);
 		}
 
-		// Token: 0x0400D24E RID: 53838
+		// Token: 0x04002CE2 RID: 11490
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D24F RID: 53839
+		// Token: 0x04002CE3 RID: 11491
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroHotPatch.KuroCheckProgress__DelegateSignature";
 
-		// Token: 0x0400D250 RID: 53840
+		// Token: 0x04002CE4 RID: 11492
 		private static int RegisterId;
 
-		// Token: 0x0200307E RID: 12414
+		// Token: 0x02000B64 RID: 2916
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FKuroCheckProgress_DelegateParams
+		private ref struct __FKuroCheckProgress_DelegateParams
 		{
-			// Token: 0x04016D59 RID: 93529
+			// Token: 0x04005C7C RID: 23676
 			[FieldOffset(0)]
 			public int Current;
 
-			// Token: 0x04016D5A RID: 93530
+			// Token: 0x04005C7D RID: 23677
 			[FieldOffset(4)]
 			public int Total;
 		}
 
-		// Token: 0x0200307F RID: 12415
+		// Token: 0x02000B65 RID: 2917
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D5B RID: 93531
+			// Token: 0x04005C7E RID: 23678
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

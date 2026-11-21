@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E98 RID: 7832
+	// Token: 0x020005BC RID: 1468
 	public sealed class FEndLoadMapDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC6D RID: 121965 RVA: 0x002C0116 File Offset: 0x002BE316
+		// Token: 0x0600836E RID: 33646 RVA: 0x000C28E2 File Offset: 0x000C0AE2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEndLoadMapDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC6E RID: 121966 RVA: 0x002C0122 File Offset: 0x002BE322
+		// Token: 0x0600836F RID: 33647 RVA: 0x000C28EE File Offset: 0x000C0AEE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEndLoadMapDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FEndLoadMapDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601DC6F RID: 121967 RVA: 0x002C0145 File Offset: 0x002BE345
+		// Token: 0x06008370 RID: 33648 RVA: 0x000C2911 File Offset: 0x000C0B11
 		public FEndLoadMapDelegate()
 		{
 		}
 
-		// Token: 0x0601DC70 RID: 121968 RVA: 0x002C014D File Offset: 0x002BE34D
+		// Token: 0x06008371 RID: 33649 RVA: 0x000C2919 File Offset: 0x000C0B19
 		[NullableContext(2)]
 		public FEndLoadMapDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC71 RID: 121969 RVA: 0x002C0157 File Offset: 0x002BE357
+		// Token: 0x06008372 RID: 33650 RVA: 0x000C2923 File Offset: 0x000C0B23
 		public FEndLoadMapDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC72 RID: 121970 RVA: 0x002C0162 File Offset: 0x002BE362
+		// Token: 0x06008373 RID: 33651 RVA: 0x000C292E File Offset: 0x000C0B2E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC73 RID: 121971 RVA: 0x002C0194 File Offset: 0x002BE394
+		// Token: 0x06008374 RID: 33652 RVA: 0x000C2960 File Offset: 0x000C0B60
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string> Callback)
 		{
 			if (FEndLoadMapDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEndLoadMapDelegate.RegisterId);
 		}
 
-		// Token: 0x0601DC74 RID: 121972 RVA: 0x002C01D0 File Offset: 0x002BE3D0
+		// Token: 0x06008375 RID: 33653 RVA: 0x000C299C File Offset: 0x000C0B9C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string MapName)
 		{
 			FEndLoadMapDelegate.__FEndLoadMapDelegate_DelegateParams* ptr = stackalloc FEndLoadMapDelegate.__FEndLoadMapDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FEndLoadMapDelegate.__FEndLoadMapDelegate_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FEndLoadMapDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601DC75 RID: 121973 RVA: 0x002C0224 File Offset: 0x002BE424
+		// Token: 0x06008376 RID: 33654 RVA: 0x000C29F0 File Offset: 0x000C0BF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -93,31 +90,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x040101ED RID: 66029
+		// Token: 0x04003929 RID: 14633
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101EE RID: 66030
+		// Token: 0x0400392A RID: 14634
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.EndLoadMapDelegate__DelegateSignature";
 
-		// Token: 0x040101EF RID: 66031
+		// Token: 0x0400392B RID: 14635
 		private static int RegisterId;
 
-		// Token: 0x020032E6 RID: 13030
+		// Token: 0x02000D40 RID: 3392
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FEndLoadMapDelegate_DelegateParams
+		private ref struct __FEndLoadMapDelegate_DelegateParams
 		{
-			// Token: 0x04017196 RID: 94614
+			// Token: 0x04005FDD RID: 24541
 			[FieldOffset(0)]
 			public FString MapName;
 		}
 
-		// Token: 0x020032E7 RID: 13031
+		// Token: 0x02000D41 RID: 3393
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017197 RID: 94615
+			// Token: 0x04005FDE RID: 24542
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E01 RID: 19969
+	// Token: 0x0200530E RID: 21262
 	public enum ERenderFlagType : byte
 	{
-		// Token: 0x0400DAE7 RID: 56039
+		// Token: 0x0400E64F RID: 58959
 		Fog,
-		// Token: 0x0400DAE8 RID: 56040
+		// Token: 0x0400E650 RID: 58960
 		Atmosphere,
-		// Token: 0x0400DAE9 RID: 56041
+		// Token: 0x0400E651 RID: 58961
 		InstancedFoliage,
-		// Token: 0x0400DAEA RID: 56042
+		// Token: 0x0400E652 RID: 58962
 		InstancedGrass,
-		// Token: 0x0400DAEB RID: 56043
+		// Token: 0x0400E653 RID: 58963
 		VolumetricFog,
-		// Token: 0x0400DAEC RID: 56044
+		// Token: 0x0400E654 RID: 58964
 		PostProcessing
 	}
 }

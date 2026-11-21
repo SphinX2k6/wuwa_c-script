@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200770D RID: 30477
+	// Token: 0x02007F30 RID: 32560
 	public enum TLongPressInteractStyleConfig : byte
 	{
-		// Token: 0x0401280C RID: 75788
+		// Token: 0x04013892 RID: 80018
 		NONE,
-		// Token: 0x0401280D RID: 75789
+		// Token: 0x04013893 RID: 80019
 		ILongPressInteractStyleConfigDefault,
-		// Token: 0x0401280E RID: 75790
+		// Token: 0x04013894 RID: 80020
 		ILongPressInteractStyleConfigTimeBackInteract,
-		// Token: 0x0401280F RID: 75791
+		// Token: 0x04013895 RID: 80021
 		ILongPressInteractStyleCoreFix,
-		// Token: 0x04012810 RID: 75792
+		// Token: 0x04013896 RID: 80022
 		ILongPressInteractStyleSwordRider
 	}
 }

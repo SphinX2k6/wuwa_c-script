@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026BF RID: 9919
+// Token: 0x02001BAA RID: 7082
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeMainView : UiTickViewBase
 {
-	// Token: 0x06014561 RID: 83297 RVA: 0x005259DD File Offset: 0x00523BDD
+	// Token: 0x06011A43 RID: 72259 RVA: 0x00534715 File Offset: 0x00532915
 	public QuestTreeMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06014562 RID: 83298 RVA: 0x005259E8 File Offset: 0x00523BE8
+	// Token: 0x06011A44 RID: 72260 RVA: 0x00534720 File Offset: 0x00532920
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -54,7 +54,7 @@ public class QuestTreeMainView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014563 RID: 83299 RVA: 0x00525B78 File Offset: 0x00523D78
+	// Token: 0x06011A45 RID: 72261 RVA: 0x005348B0 File Offset: 0x00532AB0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestTreeMainView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ public class QuestTreeMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014564 RID: 83300 RVA: 0x00525BBC File Offset: 0x00523DBC
+	// Token: 0x06011A46 RID: 72262 RVA: 0x005348F4 File Offset: 0x00532AF4
 	protected override void OnStart()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(3);
@@ -82,7 +82,7 @@ public class QuestTreeMainView : UiTickViewBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x06014565 RID: 83301 RVA: 0x00525C34 File Offset: 0x00523E34
+	// Token: 0x06011A47 RID: 72263 RVA: 0x0053496C File Offset: 0x00532B6C
 	protected override void OnBeforeShow()
 	{
 		this.TickDefaultLocate = true;
@@ -90,14 +90,14 @@ public class QuestTreeMainView : UiTickViewBase
 		this.RefreshTrackBtn();
 	}
 
-	// Token: 0x06014566 RID: 83302 RVA: 0x00525C5F File Offset: 0x00523E5F
+	// Token: 0x06011A48 RID: 72264 RVA: 0x00534997 File Offset: 0x00532B97
 	protected override void OnAfterShow()
 	{
 		this.LocateToDefaultNode(true);
 		this.TickDefaultLocate = false;
 	}
 
-	// Token: 0x06014567 RID: 83303 RVA: 0x00525C6F File Offset: 0x00523E6F
+	// Token: 0x06011A49 RID: 72265 RVA: 0x005349A7 File Offset: 0x00532BA7
 	protected override void OnBeforeDestroy()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(3);
@@ -109,7 +109,7 @@ public class QuestTreeMainView : UiTickViewBase
 		QuestTreeModel.Instance.ViewModelMain.OnViewClose();
 	}
 
-	// Token: 0x06014568 RID: 83304 RVA: 0x00525CA7 File Offset: 0x00523EA7
+	// Token: 0x06011A4A RID: 72266 RVA: 0x005349DF File Offset: 0x00532BDF
 	protected override void OnTick(float delta)
 	{
 		if (!this.TickDefaultLocate)
@@ -119,13 +119,13 @@ public class QuestTreeMainView : UiTickViewBase
 		this.LocateToDefaultNode(false);
 	}
 
-	// Token: 0x06014569 RID: 83305 RVA: 0x00525CB9 File Offset: 0x00523EB9
+	// Token: 0x06011A4B RID: 72267 RVA: 0x005349F1 File Offset: 0x00532BF1
 	private void RefreshTrackBtn()
 	{
 		base.GetButton(7).GetRootComponent().SetUIActive(QuestTreeModel.Instance.GetCurTrackingChapterData() != null);
 	}
 
-	// Token: 0x0601456A RID: 83306 RVA: 0x00525CDC File Offset: 0x00523EDC
+	// Token: 0x06011A4C RID: 72268 RVA: 0x00534A14 File Offset: 0x00532C14
 	private void LocateToDefaultNode(bool tween = true)
 	{
 		QuestTreeChapterData defaultLocatingNode = QuestTreeModel.Instance.ViewModelMain.GetDefaultLocatingNode();
@@ -135,7 +135,7 @@ public class QuestTreeMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601456B RID: 83307 RVA: 0x00525D20 File Offset: 0x00523F20
+	// Token: 0x06011A4D RID: 72269 RVA: 0x00534A58 File Offset: 0x00532C58
 	private void OnScrollValueChange(FVector2D value)
 	{
 		UUIHorizontalLayout horizontalLayout = base.GetHorizontalLayout(4);
@@ -178,7 +178,7 @@ public class QuestTreeMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601456C RID: 83308 RVA: 0x00525E14 File Offset: 0x00524014
+	// Token: 0x06011A4E RID: 72270 RVA: 0x00534B4C File Offset: 0x00532D4C
 	private void OnClickBtnPickUp()
 	{
 		List<QuestTreeNodeData> allAcceptableNodeList = QuestTreeModel.Instance.GetAllAcceptableNodeList();
@@ -189,7 +189,7 @@ public class QuestTreeMainView : UiTickViewBase
 		QuestTreeController.Instance.OpenAvailableListView(allAcceptableNodeList);
 	}
 
-	// Token: 0x0601456D RID: 83309 RVA: 0x00525E40 File Offset: 0x00524040
+	// Token: 0x06011A4F RID: 72271 RVA: 0x00534B78 File Offset: 0x00532D78
 	private void OnClickBtnTracking()
 	{
 		QuestTreeChapterData curTrackingChapterData = QuestTreeModel.Instance.GetCurTrackingChapterData();
@@ -199,7 +199,7 @@ public class QuestTreeMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601456E RID: 83310 RVA: 0x00525E6C File Offset: 0x0052406C
+	// Token: 0x06011A50 RID: 72272 RVA: 0x00534BA4 File Offset: 0x00532DA4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -238,50 +238,50 @@ public class QuestTreeMainView : UiTickViewBase
 		return null;
 	}
 
-	// Token: 0x040098E6 RID: 39142
+	// Token: 0x04009A3E RID: 39486
 	private GenericScrollViewNew<QuestTreeChapterGroupItem, List<QuestTreeChapterData>> ScrollChapter;
 
-	// Token: 0x040098E7 RID: 39143
+	// Token: 0x04009A3F RID: 39487
 	private PopupCaptionItem Caption;
 
-	// Token: 0x040098E8 RID: 39144
+	// Token: 0x04009A40 RID: 39488
 	private HomeBtnItem HomeBtn;
 
-	// Token: 0x040098E9 RID: 39145
+	// Token: 0x04009A41 RID: 39489
 	private float LastScrollOffsetX;
 
-	// Token: 0x040098EA RID: 39146
+	// Token: 0x04009A42 RID: 39490
 	private const float BG_MOVEMENT_RATE = 0.2f;
 
-	// Token: 0x040098EB RID: 39147
+	// Token: 0x04009A43 RID: 39491
 	private bool TickDefaultLocate;
 
-	// Token: 0x02008D21 RID: 36129
+	// Token: 0x02007EAA RID: 32426
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DCFA RID: 187642
+		// Token: 0x04029011 RID: 167953
 		public const int ScrollBackground = 0;
 
-		// Token: 0x0402DCFB RID: 187643
+		// Token: 0x04029012 RID: 167954
 		public const int TextureBackground = 1;
 
-		// Token: 0x0402DCFC RID: 187644
+		// Token: 0x04029013 RID: 167955
 		public const int ItemCaption = 2;
 
-		// Token: 0x0402DCFD RID: 187645
+		// Token: 0x04029014 RID: 167956
 		public const int ScrollChapter = 3;
 
-		// Token: 0x0402DCFE RID: 187646
+		// Token: 0x04029015 RID: 167957
 		public const int LayoutContent = 4;
 
-		// Token: 0x0402DCFF RID: 187647
+		// Token: 0x04029016 RID: 167958
 		public const int ItemChapterGroup = 5;
 
-		// Token: 0x0402DD00 RID: 187648
+		// Token: 0x04029017 RID: 167959
 		public const int BtnPickUp = 6;
 
-		// Token: 0x0402DD01 RID: 187649
+		// Token: 0x04029018 RID: 167960
 		public const int BtnTracking = 7;
 	}
 }

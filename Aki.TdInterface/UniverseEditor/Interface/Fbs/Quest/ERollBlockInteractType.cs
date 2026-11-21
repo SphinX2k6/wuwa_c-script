@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CC9 RID: 15561
+	// Token: 0x020040DD RID: 16605
 	public enum ERollBlockInteractType : byte
 	{
-		// Token: 0x0400B4B6 RID: 46262
+		// Token: 0x0400BE5C RID: 48732
 		Normal,
-		// Token: 0x0400B4B7 RID: 46263
+		// Token: 0x0400BE5D RID: 48733
 		Attack,
-		// Token: 0x0400B4B8 RID: 46264
+		// Token: 0x0400BE5E RID: 48734
 		Trigger
 	}
 }

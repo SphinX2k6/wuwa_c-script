@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067EB RID: 26603
+	// Token: 0x0200573B RID: 22331
 	public class DangoBrawlCombineItem : UiPanelBase
 	{
-		// Token: 0x06042477 RID: 271479 RVA: 0x01016C00 File Offset: 0x01014E00
+		// Token: 0x06036FCD RID: 225229 RVA: 0x00F58098 File Offset: 0x00F56298
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042478 RID: 271480 RVA: 0x01016CC7 File Offset: 0x01014EC7
+		// Token: 0x06036FCE RID: 225230 RVA: 0x00F5815F File Offset: 0x00F5635F
 		protected override void OnStart()
 		{
 			this.InitSequencePlayer();
 		}
 
-		// Token: 0x06042479 RID: 271481 RVA: 0x01016CCF File Offset: 0x01014ECF
+		// Token: 0x06036FCF RID: 225231 RVA: 0x00F58167 File Offset: 0x00F56367
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x0604247A RID: 271482 RVA: 0x01016CD8 File Offset: 0x01014ED8
+		// Token: 0x06036FD0 RID: 225232 RVA: 0x00F58170 File Offset: 0x00F56370
 		private void InitSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x0604247B RID: 271483 RVA: 0x01016D02 File Offset: 0x01014F02
+		// Token: 0x06036FD1 RID: 225233 RVA: 0x00F5819A File Offset: 0x00F5639A
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0604247C RID: 271484 RVA: 0x01016D1C File Offset: 0x01014F1C
+		// Token: 0x06036FD2 RID: 225234 RVA: 0x00F581B4 File Offset: 0x00F563B4
 		public void Refresh(DangoBrawlCombineRowData data)
 		{
 			this.Data = new DangoBrawlCombineRowData?(data);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x0604247D RID: 271485 RVA: 0x01016DD8 File Offset: 0x01014FD8
+		// Token: 0x06036FD3 RID: 225235 RVA: 0x00F58270 File Offset: 0x00F56470
 		private void OnClickCombine()
 		{
 			if (this.Data == null || DangoBrawlViewManager.TryBlockIfThreeChoose(true) || DangoBrawlViewManager.TryBlockIfCombineUniqueWeapon(this.Data.Value, true))
@@ -111,21 +111,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}, null);
 		}
 
-		// Token: 0x04022944 RID: 141636
+		// Token: 0x0401D1A1 RID: 119201
 		private DangoBrawlCombineRowData? Data;
 
-		// Token: 0x04022945 RID: 141637
+		// Token: 0x0401D1A2 RID: 119202
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C91C RID: 51484
+		// Token: 0x0200B2EA RID: 45802
 		private enum EComponents
 		{
-			// Token: 0x0403CB7D RID: 248701
+			// Token: 0x0403746E RID: 226414
 			BtnCombine,
-			// Token: 0x0403CB7E RID: 248702
+			// Token: 0x0403746F RID: 226415
 			TexIcon,
-			// Token: 0x0403CB7F RID: 248703
+			// Token: 0x04037470 RID: 226416
 			SprQuality
 		}
 	}

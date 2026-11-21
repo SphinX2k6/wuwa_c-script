@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001382 RID: 4994
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014D3 RID: 5331
 	public class IFinishDungeonQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007245 RID: 29253 RVA: 0x00112F7F File Offset: 0x0011117F
+		// Token: 0x060078EB RID: 30955 RVA: 0x00121603 File Offset: 0x0011F803
 		public static IFinishDungeonQuestCondition Create(IFinishDungeonQuestCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002514 RID: 9492
-		// (get) Token: 0x06007246 RID: 29254 RVA: 0x00112F9E File Offset: 0x0011119E
+		// Token: 0x170026E7 RID: 9959
+		// (get) Token: 0x060078EC RID: 30956 RVA: 0x00121622 File Offset: 0x0011F822
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002515 RID: 9493
-		// (get) Token: 0x06007247 RID: 29255 RVA: 0x00112FAB File Offset: 0x001111AB
+		// Token: 0x170026E8 RID: 9960
+		// (get) Token: 0x060078ED RID: 30957 RVA: 0x0012162F File Offset: 0x0011F82F
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002516 RID: 9494
-		// (get) Token: 0x06007248 RID: 29256 RVA: 0x00112FDF File Offset: 0x001111DF
+		// Token: 0x170026E9 RID: 9961
+		// (get) Token: 0x060078EE RID: 30958 RVA: 0x00121663 File Offset: 0x0011F863
 		public virtual IDungeonCondition Condition
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400420A RID: 16906
+		// Token: 0x0400458B RID: 17803
 		private IFinishDungeonQuestCondition Instance;
 
-		// Token: 0x0400420B RID: 16907
+		// Token: 0x0400458C RID: 17804
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400420C RID: 16908
+		// Token: 0x0400458D RID: 17805
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400420D RID: 16909
+		// Token: 0x0400458E RID: 17806
 		private IDungeonCondition _ConditionCache;
 
-		// Token: 0x0400420E RID: 16910
+		// Token: 0x0400458F RID: 17807
 		private bool _ConditionInited;
 	}
 }

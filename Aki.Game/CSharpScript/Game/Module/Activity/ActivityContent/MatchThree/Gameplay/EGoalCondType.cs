@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064B6 RID: 25782
+	// Token: 0x02005434 RID: 21556
 	public enum EGoalCondType
 	{
-		// Token: 0x04021B45 RID: 138053
+		// Token: 0x0401C476 RID: 115830
 		Score = 1,
-		// Token: 0x04021B46 RID: 138054
+		// Token: 0x0401C477 RID: 115831
 		ClearCharger,
-		// Token: 0x04021B47 RID: 138055
+		// Token: 0x0401C478 RID: 115832
 		ClearHourglass
 	}
 }

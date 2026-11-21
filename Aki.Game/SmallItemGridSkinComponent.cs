@@ -7,19 +7,19 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Skin;
 using UnrealEngine;
 
-// Token: 0x02001993 RID: 6547
+// Token: 0x02000E50 RID: 3664
 [NullableContext(1)]
 [Nullable(0)]
 public class SmallItemGridSkinComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF43 RID: 48963 RVA: 0x002B37A3 File Offset: 0x002B19A3
+	// Token: 0x0600934B RID: 37707 RVA: 0x002BE727 File Offset: 0x002BC927
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBSkin";
 	}
 
-	// Token: 0x0600BF44 RID: 48964 RVA: 0x002B37AC File Offset: 0x002B19AC
+	// Token: 0x0600934C RID: 37708 RVA: 0x002BE730 File Offset: 0x002BC930
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF45 RID: 48965 RVA: 0x002B389C File Offset: 0x002B1A9C
+	// Token: 0x0600934D RID: 37709 RVA: 0x002BE820 File Offset: 0x002BCA20
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -53,7 +53,7 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		this.RefreshNum(param);
 	}
 
-	// Token: 0x0600BF46 RID: 48966 RVA: 0x002B38D4 File Offset: 0x002B1AD4
+	// Token: 0x0600934E RID: 37710 RVA: 0x002BE858 File Offset: 0x002BCA58
 	private void RefreshTexture(ISmallItemGridSkinComponentParams param)
 	{
 		string texturePath = this.GetTexturePath(param);
@@ -67,14 +67,14 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		base.SetTextureByPath(resourcePath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600BF47 RID: 48967 RVA: 0x002B3930 File Offset: 0x002B1B30
+	// Token: 0x0600934F RID: 37711 RVA: 0x002BE8B4 File Offset: 0x002BCAB4
 	private void RefreshQualitySprite(ISmallItemGridSkinComponentParams param)
 	{
 		string qualitySpritePath = this.GetQualitySpritePath(param);
 		this.SetSpriteByPath(qualitySpritePath, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x0600BF48 RID: 48968 RVA: 0x002B3960 File Offset: 0x002B1B60
+	// Token: 0x06009350 RID: 37712 RVA: 0x002BE8E4 File Offset: 0x002BCAE4
 	private string GetQualitySpritePath(ISmallItemGridSkinComponentParams param)
 	{
 		int? qualityId = param.QualityId;
@@ -91,7 +91,7 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		return CommonConfig.Instance.GetItemQualityById(qualityId.Value).Value.SkinItemBg;
 	}
 
-	// Token: 0x0600BF49 RID: 48969 RVA: 0x002B39D0 File Offset: 0x002B1BD0
+	// Token: 0x06009351 RID: 37713 RVA: 0x002BE954 File Offset: 0x002BCB54
 	private string GetTexturePath(ISmallItemGridSkinComponentParams param)
 	{
 		int? skinId = param.SkinId;
@@ -131,7 +131,7 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BF4A RID: 48970 RVA: 0x002B3A8C File Offset: 0x002B1C8C
+	// Token: 0x06009352 RID: 37714 RVA: 0x002BEA10 File Offset: 0x002BCC10
 	private void RefreshWeaponIcon(ISmallItemGridSkinComponentParams param)
 	{
 		int? skinId = param.SkinId;
@@ -154,7 +154,7 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BF4B RID: 48971 RVA: 0x002B3B30 File Offset: 0x002B1D30
+	// Token: 0x06009353 RID: 37715 RVA: 0x002BEAB4 File Offset: 0x002BCCB4
 	private void RefreshNum(ISmallItemGridSkinComponentParams param)
 	{
 		string bottomText = param.BottomText;
@@ -166,27 +166,27 @@ public class SmallItemGridSkinComponent : SmallItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BF4C RID: 48972 RVA: 0x002B3B6C File Offset: 0x002B1D6C
+	// Token: 0x06009354 RID: 37716 RVA: 0x002BEAF0 File Offset: 0x002BCCF0
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007ECE RID: 32462
+	// Token: 0x0200705D RID: 28765
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029713 RID: 169747
+		// Token: 0x04024A50 RID: 150096
 		QualitySprite,
-		// Token: 0x04029714 RID: 169748
+		// Token: 0x04024A51 RID: 150097
 		Texture,
-		// Token: 0x04029715 RID: 169749
+		// Token: 0x04024A52 RID: 150098
 		WeaponItem,
-		// Token: 0x04029716 RID: 169750
+		// Token: 0x04024A53 RID: 150099
 		WeaponTexture,
-		// Token: 0x04029717 RID: 169751
+		// Token: 0x04024A54 RID: 150100
 		NumItem,
-		// Token: 0x04029718 RID: 169752
+		// Token: 0x04024A55 RID: 150101
 		NumText
 	}
 }

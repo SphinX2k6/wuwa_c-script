@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005046 RID: 20550
+	// Token: 0x020055A5 RID: 21925
 	public class ICreateStageConfigT
 	{
-		// Token: 0x1700951E RID: 38174
-		// (get) Token: 0x06020EE5 RID: 134885 RVA: 0x00494070 File Offset: 0x00492270
-		// (set) Token: 0x06020EE6 RID: 134886 RVA: 0x00494078 File Offset: 0x00492278
+		// Token: 0x17009CFF RID: 40191
+		// (get) Token: 0x06022E05 RID: 142853 RVA: 0x004CDAC0 File Offset: 0x004CBCC0
+		// (set) Token: 0x06022E06 RID: 142854 RVA: 0x004CDAC8 File Offset: 0x004CBCC8
 		public float PerformDuration { get; set; }
 
-		// Token: 0x1700951F RID: 38175
-		// (get) Token: 0x06020EE7 RID: 134887 RVA: 0x00494081 File Offset: 0x00492281
-		// (set) Token: 0x06020EE8 RID: 134888 RVA: 0x00494089 File Offset: 0x00492289
+		// Token: 0x17009D00 RID: 40192
+		// (get) Token: 0x06022E07 RID: 142855 RVA: 0x004CDAD1 File Offset: 0x004CBCD1
+		// (set) Token: 0x06022E08 RID: 142856 RVA: 0x004CDAD9 File Offset: 0x004CBCD9
 		public ICreateBulletConfigT BulletConfig { get; set; }
 
-		// Token: 0x17009520 RID: 38176
-		// (get) Token: 0x06020EE9 RID: 134889 RVA: 0x00494092 File Offset: 0x00492292
-		// (set) Token: 0x06020EEA RID: 134890 RVA: 0x0049409A File Offset: 0x0049229A
+		// Token: 0x17009D01 RID: 40193
+		// (get) Token: 0x06022E09 RID: 142857 RVA: 0x004CDAE2 File Offset: 0x004CBCE2
+		// (set) Token: 0x06022E0A RID: 142858 RVA: 0x004CDAEA File Offset: 0x004CBCEA
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x17009521 RID: 38177
-		// (get) Token: 0x06020EEB RID: 134891 RVA: 0x004940A3 File Offset: 0x004922A3
-		// (set) Token: 0x06020EEC RID: 134892 RVA: 0x004940AB File Offset: 0x004922AB
+		// Token: 0x17009D02 RID: 40194
+		// (get) Token: 0x06022E0B RID: 142859 RVA: 0x004CDAF3 File Offset: 0x004CBCF3
+		// (set) Token: 0x06022E0C RID: 142860 RVA: 0x004CDAFB File Offset: 0x004CBCFB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020EED RID: 134893 RVA: 0x004940B4 File Offset: 0x004922B4
+		// Token: 0x06022E0D RID: 142861 RVA: 0x004CDB04 File Offset: 0x004CBD04
 		public ICreateStageConfigT()
 		{
 			this.PerformDuration = 0f;

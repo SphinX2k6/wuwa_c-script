@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C60 RID: 27744
+	// Token: 0x020073C7 RID: 29639
 	public struct IParticipateGroupPatrol : IFlatbufferObject
 	{
-		// Token: 0x1700CE9C RID: 52892
-		// (get) Token: 0x06030E17 RID: 200215 RVA: 0x006A3971 File Offset: 0x006A1B71
+		// Token: 0x1700D9B7 RID: 55735
+		// (get) Token: 0x06033D72 RID: 212338 RVA: 0x006FDE71 File Offset: 0x006FC071
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030E18 RID: 200216 RVA: 0x006A397E File Offset: 0x006A1B7E
+		// Token: 0x06033D73 RID: 212339 RVA: 0x006FDE7E File Offset: 0x006FC07E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030E19 RID: 200217 RVA: 0x006A3988 File Offset: 0x006A1B88
+		// Token: 0x06033D74 RID: 212340 RVA: 0x006FDE88 File Offset: 0x006FC088
 		public static IParticipateGroupPatrol GetRootAsIParticipateGroupPatrol(ByteBuffer _bb)
 		{
 			return IParticipateGroupPatrol.GetRootAsIParticipateGroupPatrol(_bb, default(IParticipateGroupPatrol));
 		}
 
-		// Token: 0x06030E1A RID: 200218 RVA: 0x006A39A4 File Offset: 0x006A1BA4
+		// Token: 0x06033D75 RID: 212341 RVA: 0x006FDEA4 File Offset: 0x006FC0A4
 		public static IParticipateGroupPatrol GetRootAsIParticipateGroupPatrol(ByteBuffer _bb, IParticipateGroupPatrol obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030E1B RID: 200219 RVA: 0x006A39C1 File Offset: 0x006A1BC1
+		// Token: 0x06033D76 RID: 212342 RVA: 0x006FDEC1 File Offset: 0x006FC0C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030E1C RID: 200220 RVA: 0x006A39D0 File Offset: 0x006A1BD0
+		// Token: 0x06033D77 RID: 212343 RVA: 0x006FDED0 File Offset: 0x006FC0D0
 		public IParticipateGroupPatrol __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CE9D RID: 52893
-		// (get) Token: 0x06030E1D RID: 200221 RVA: 0x006A39E0 File Offset: 0x006A1BE0
+		// Token: 0x1700D9B8 RID: 55736
+		// (get) Token: 0x06033D78 RID: 212344 RVA: 0x006FDEE0 File Offset: 0x006FC0E0
 		public ELeisureInteract Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CE9E RID: 52894
-		// (get) Token: 0x06030E1E RID: 200222 RVA: 0x006A3A1C File Offset: 0x006A1C1C
+		// Token: 0x1700D9B9 RID: 55737
+		// (get) Token: 0x06033D79 RID: 212345 RVA: 0x006FDF1C File Offset: 0x006FC11C
 		public int GroupAiEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030E1F RID: 200223 RVA: 0x006A3A58 File Offset: 0x006A1C58
+		// Token: 0x06033D7A RID: 212346 RVA: 0x006FDF58 File Offset: 0x006FC158
 		public static Offset<IParticipateGroupPatrol> CreateIParticipateGroupPatrol(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, int GroupAiEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IParticipateGroupPatrol.EndIParticipateGroupPatrol(builder);
 		}
 
-		// Token: 0x06030E20 RID: 200224 RVA: 0x006A3A75 File Offset: 0x006A1C75
+		// Token: 0x06033D7B RID: 212347 RVA: 0x006FDF75 File Offset: 0x006FC175
 		public static void StartIParticipateGroupPatrol(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06030E21 RID: 200225 RVA: 0x006A3A7E File Offset: 0x006A1C7E
+		// Token: 0x06033D7C RID: 212348 RVA: 0x006FDF7E File Offset: 0x006FC17E
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030E22 RID: 200226 RVA: 0x006A3A89 File Offset: 0x006A1C89
+		// Token: 0x06033D7D RID: 212349 RVA: 0x006FDF89 File Offset: 0x006FC189
 		public static void AddGroupAiEntityId(FlatBufferBuilder builder, int groupAiEntityId)
 		{
 			builder.AddInt(1, groupAiEntityId, 0);
 		}
 
-		// Token: 0x06030E23 RID: 200227 RVA: 0x006A3A94 File Offset: 0x006A1C94
+		// Token: 0x06033D7E RID: 212350 RVA: 0x006FDF94 File Offset: 0x006FC194
 		public static Offset<IParticipateGroupPatrol> EndIParticipateGroupPatrol(FlatBufferBuilder builder)
 		{
 			return new Offset<IParticipateGroupPatrol>(builder.EndTable());
 		}
 
-		// Token: 0x06030E24 RID: 200228 RVA: 0x006A3AA4 File Offset: 0x006A1CA4
+		// Token: 0x06033D7F RID: 212351 RVA: 0x006FDFA4 File Offset: 0x006FC1A4
 		public IParticipateGroupPatrolT UnPack()
 		{
 			IParticipateGroupPatrolT participateGroupPatrolT = new IParticipateGroupPatrolT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return participateGroupPatrolT;
 		}
 
-		// Token: 0x06030E25 RID: 200229 RVA: 0x006A3ABF File Offset: 0x006A1CBF
+		// Token: 0x06033D80 RID: 212352 RVA: 0x006FDFBF File Offset: 0x006FC1BF
 		public void UnPackTo(IParticipateGroupPatrolT _o)
 		{
 			_o.Type = this.Type;
 			_o.GroupAiEntityId = this.GroupAiEntityId;
 		}
 
-		// Token: 0x06030E26 RID: 200230 RVA: 0x006A3ADC File Offset: 0x006A1CDC
+		// Token: 0x06033D81 RID: 212353 RVA: 0x006FDFDC File Offset: 0x006FC1DC
 		public static Offset<IParticipateGroupPatrol> Pack(FlatBufferBuilder builder, IParticipateGroupPatrolT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IParticipateGroupPatrol.CreateIParticipateGroupPatrol(builder, _o.Type, _o.GroupAiEntityId);
 		}
 
-		// Token: 0x040115A4 RID: 71076
+		// Token: 0x040124FC RID: 75004
 		private Table __p;
 	}
 }

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Role.Common;
 using UnrealEngine;
 
-// Token: 0x02003241 RID: 12865
+// Token: 0x020027B0 RID: 10160
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFrozenComponent : BaseFrozenComponent
 {
-	// Token: 0x0601BC3B RID: 113723 RVA: 0x007A6CF4 File Offset: 0x007A4EF4
+	// Token: 0x060197E5 RID: 104421 RVA: 0x007CF54B File Offset: 0x007CD74B
 	public override bool IsFrozen()
 	{
 		return this.IsFrozenInternal;
 	}
 
-	// Token: 0x0601BC3C RID: 113724 RVA: 0x007A6CFC File Offset: 0x007A4EFC
+	// Token: 0x060197E6 RID: 104422 RVA: 0x007CF554 File Offset: 0x007CD754
 	protected override void SetFrozen(bool bFrozen)
 	{
 		if (this.IsFrozenInternal == bFrozen)
@@ -167,7 +167,7 @@ public class RoleFrozenComponent : BaseFrozenComponent
 		}
 	}
 
-	// Token: 0x0601BC3D RID: 113725 RVA: 0x007A7208 File Offset: 0x007A5408
+	// Token: 0x060197E7 RID: 104423 RVA: 0x007CFA60 File Offset: 0x007CDC60
 	[NullableContext(2)]
 	protected void ChangeMovementModeInFrozen(CharacterMoveComponent moveComp)
 	{
@@ -192,7 +192,7 @@ public class RoleFrozenComponent : BaseFrozenComponent
 		}
 	}
 
-	// Token: 0x0601BC3E RID: 113726 RVA: 0x007A72AC File Offset: 0x007A54AC
+	// Token: 0x060197E8 RID: 104424 RVA: 0x007CFB04 File Offset: 0x007CDD04
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -200,52 +200,64 @@ public class RoleFrozenComponent : BaseFrozenComponent
 			return false;
 		}
 		RoleFrozenComponent roleFrozenComponent = (RoleFrozenComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MoveForbidHandle"))
-		{
-			this.MoveForbidHandle = roleFrozenComponent.MoveForbidHandle;
-		}
-		if (base.CanResetComponentProperty("AnimForbidHandle"))
-		{
-			this.AnimForbidHandle = roleFrozenComponent.AnimForbidHandle;
-		}
-		if (base.CanResetComponentProperty("AbilityForbidHandle"))
-		{
-			this.AbilityForbidHandle = roleFrozenComponent.AbilityForbidHandle;
-		}
-		if (base.CanResetComponentProperty("SkillForbidHandle"))
-		{
-			this.SkillForbidHandle = roleFrozenComponent.SkillForbidHandle;
-		}
-		if (base.CanResetComponentProperty("FrozenCueHandle"))
-		{
-			this.FrozenCueHandle = roleFrozenComponent.FrozenCueHandle;
-		}
-		if (base.CanResetComponentProperty("IsFrozenInternal"))
-		{
-			this.IsFrozenInternal = roleFrozenComponent.IsFrozenInternal;
-		}
+		this.MoveForbidHandle = roleFrozenComponent.MoveForbidHandle;
+		this.AnimForbidHandle = roleFrozenComponent.AnimForbidHandle;
+		this.AbilityForbidHandle = roleFrozenComponent.AbilityForbidHandle;
+		this.SkillForbidHandle = roleFrozenComponent.SkillForbidHandle;
+		this.FrozenCueHandle = roleFrozenComponent.FrozenCueHandle;
+		this.IsFrozenInternal = roleFrozenComponent.IsFrozenInternal;
 		return true;
 	}
 
-	// Token: 0x0400DAB1 RID: 55985
+	// Token: 0x170028A8 RID: 10408
+	// (get) Token: 0x060197E9 RID: 104425 RVA: 0x007CFB6C File Offset: 0x007CDD6C
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028A9 RID: 10409
+	// (get) Token: 0x060197EA RID: 104426 RVA: 0x007CFB6F File Offset: 0x007CDD6F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028AA RID: 10410
+	// (get) Token: 0x060197EB RID: 104427 RVA: 0x007CFB72 File Offset: 0x007CDD72
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF50 RID: 57168
 	[StaticVariableRuleIgnore]
 	protected static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400DAB2 RID: 55986
+	// Token: 0x0400DF51 RID: 57169
 	protected int? MoveForbidHandle;
 
-	// Token: 0x0400DAB3 RID: 55987
+	// Token: 0x0400DF52 RID: 57170
 	protected int? AnimForbidHandle;
 
-	// Token: 0x0400DAB4 RID: 55988
+	// Token: 0x0400DF53 RID: 57171
 	protected int? AbilityForbidHandle;
 
-	// Token: 0x0400DAB5 RID: 55989
+	// Token: 0x0400DF54 RID: 57172
 	protected int? SkillForbidHandle;
 
-	// Token: 0x0400DAB6 RID: 55990
+	// Token: 0x0400DF55 RID: 57173
 	protected int FrozenCueHandle;
 
-	// Token: 0x0400DAB7 RID: 55991
+	// Token: 0x0400DF56 RID: 57174
 	protected bool IsFrozenInternal;
 }

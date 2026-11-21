@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000374 RID: 884
+	// Token: 0x02000389 RID: 905
 	public class ConfigGaChaShareById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014BE RID: 5310 RVA: 0x000CED48 File Offset: 0x000CCF48
+		// Token: 0x0600153C RID: 5436 RVA: 0x000D5254 File Offset: 0x000D3454
 		static ConfigGaChaShareById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGaChaShareById.CreateStaticDefaultValue), new Action(ConfigGaChaShareById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014BF RID: 5311 RVA: 0x000CED68 File Offset: 0x000CCF68
+		// Token: 0x0600153D RID: 5437 RVA: 0x000D5274 File Offset: 0x000D3474
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGaChaShareById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014C0 RID: 5312 RVA: 0x000CEDE7 File Offset: 0x000CCFE7
+		// Token: 0x0600153E RID: 5438 RVA: 0x000D52F3 File Offset: 0x000D34F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGaChaShareById.LogPair = null;
 			ConfigGaChaShareById.HandleId = 0;
 		}
 
-		// Token: 0x060014C1 RID: 5313 RVA: 0x000CEDF5 File Offset: 0x000CCFF5
+		// Token: 0x0600153F RID: 5439 RVA: 0x000D5301 File Offset: 0x000D3501
 		public static void Init()
 		{
 			ConfigGaChaShareById.HandleId = ConfigCommon.InitDataStatement(ConfigGaChaShareById.HandleId, "db_shareinfo.db", "select BinData from `GaChaShare` where Id=?");
 		}
 
-		// Token: 0x060014C2 RID: 5314 RVA: 0x000CEE10 File Offset: 0x000CD010
+		// Token: 0x06001540 RID: 5440 RVA: 0x000D531C File Offset: 0x000D351C
 		public static GaChaShare? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGaChaShareById.HandleId, ConfigGaChaShareById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GaChaShare?(rootAsGaChaShare);
 		}
 
-		// Token: 0x04001810 RID: 6160
+		// Token: 0x040018A3 RID: 6307
 		private const string DB = "db_shareinfo.db";
 
-		// Token: 0x04001811 RID: 6161
+		// Token: 0x040018A4 RID: 6308
 		private const string FILE = "f.分享.xlsx";
 
-		// Token: 0x04001812 RID: 6162
+		// Token: 0x040018A5 RID: 6309
 		private const string TABLE = "GaChaShare";
 
-		// Token: 0x04001813 RID: 6163
+		// Token: 0x040018A6 RID: 6310
 		private const string COMMAND = "select BinData from `GaChaShare` where Id=?";
 
-		// Token: 0x04001814 RID: 6164
+		// Token: 0x040018A7 RID: 6311
 		private const string KEY_PREFIX = "GaChaShareById";
 
-		// Token: 0x04001815 RID: 6165
+		// Token: 0x040018A8 RID: 6312
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001816 RID: 6166
+		// Token: 0x040018A9 RID: 6313
 		private static int HandleId;
 	}
 }

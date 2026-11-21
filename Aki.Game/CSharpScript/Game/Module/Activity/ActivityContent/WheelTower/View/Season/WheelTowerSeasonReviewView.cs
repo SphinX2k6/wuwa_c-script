@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F6F RID: 24431
+	// Token: 0x02004F56 RID: 20310
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerSeasonReviewView : UiViewBase
 	{
-		// Token: 0x0603E05B RID: 254043 RVA: 0x00EF916B File Offset: 0x00EF736B
+		// Token: 0x06032FF5 RID: 208885 RVA: 0x00E4AE53 File Offset: 0x00E49053
 		public WheelTowerSeasonReviewView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E05C RID: 254044 RVA: 0x00EF9174 File Offset: 0x00EF7374
+		// Token: 0x06032FF6 RID: 208886 RVA: 0x00E4AE5C File Offset: 0x00E4905C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E05D RID: 254045 RVA: 0x00EF9328 File Offset: 0x00EF7528
+		// Token: 0x06032FF7 RID: 208887 RVA: 0x00E4B010 File Offset: 0x00E49210
 		protected override void OnStart()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 1);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.RefreshScoreLayout();
 		}
 
-		// Token: 0x0603E05E RID: 254046 RVA: 0x00EF9404 File Offset: 0x00EF7604
+		// Token: 0x06032FF8 RID: 208888 RVA: 0x00E4B0EC File Offset: 0x00E492EC
 		private void RefreshMedalLayout()
 		{
 			int seasonId = this.GetSeasonId();
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			medalLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E05F RID: 254047 RVA: 0x00EF94A4 File Offset: 0x00EF76A4
+		// Token: 0x06032FF9 RID: 208889 RVA: 0x00E4B18C File Offset: 0x00E4938C
 		private void RefreshScoreLayout()
 		{
 			int seasonId = this.GetSeasonId();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			scoreLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E060 RID: 254048 RVA: 0x00EF952E File Offset: 0x00EF772E
+		// Token: 0x06032FFA RID: 208890 RVA: 0x00E4B216 File Offset: 0x00E49416
 		private int GetSeasonId()
 		{
 			WheelTowerSeasonReviewViewData wheelTowerSeasonReviewViewData = this.OpenParam as WheelTowerSeasonReviewViewData;
@@ -135,31 +135,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return activityData.SeasonId;
 		}
 
-		// Token: 0x0603E061 RID: 254049 RVA: 0x00EF955A File Offset: 0x00EF775A
+		// Token: 0x06032FFB RID: 208891 RVA: 0x00E4B242 File Offset: 0x00E49442
 		private WheelTowerSeasonMedalItem CreateMedalItem()
 		{
 			return new WheelTowerSeasonMedalItem();
 		}
 
-		// Token: 0x0603E062 RID: 254050 RVA: 0x00EF9561 File Offset: 0x00EF7761
+		// Token: 0x06032FFC RID: 208892 RVA: 0x00E4B249 File Offset: 0x00E49449
 		private WheelTowerStageMedalItem CreateScoreMedalItem()
 		{
 			return new WheelTowerStageMedalItem();
 		}
 
-		// Token: 0x0603E063 RID: 254051 RVA: 0x00EF9568 File Offset: 0x00EF7768
+		// Token: 0x06032FFD RID: 208893 RVA: 0x00E4B250 File Offset: 0x00E49450
 		private void OnConfirmBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E064 RID: 254052 RVA: 0x00EF9571 File Offset: 0x00EF7771
+		// Token: 0x06032FFE RID: 208894 RVA: 0x00E4B259 File Offset: 0x00E49459
 		private void OnShareBtnClick()
 		{
 			WheelTowerController.Instance.OpenSeasonMedalView(this.GetSeasonId(), true);
 		}
 
-		// Token: 0x0402062D RID: 132653
+		// Token: 0x0401B0FF RID: 110847
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 		})]
 		private GenericLayout<WheelTowerSeasonMedalItem, IWheelTowerMedalItemData> MedalLayout;
 
-		// Token: 0x0402062E RID: 132654
+		// Token: 0x0401B100 RID: 110848
 		[Nullable(new byte[]
 		{
 			2,

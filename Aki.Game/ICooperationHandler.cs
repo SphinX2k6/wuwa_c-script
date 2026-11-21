@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020016FE RID: 5886
+// Token: 0x02000BB6 RID: 2998
 [NullableContext(1)]
 public interface ICooperationHandler
 {
-	// Token: 0x0600A8D5 RID: 43221
+	// Token: 0x06007CB5 RID: 31925
 	bool Trigger(SceneTeamItem goDownRole, SceneTeamItem goBattleRole);
 
-	// Token: 0x0600A8D6 RID: 43222
+	// Token: 0x06007CB6 RID: 31926
 	void Clear();
 }

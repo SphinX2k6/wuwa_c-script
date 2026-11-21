@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000378 RID: 888
+	// Token: 0x02000380 RID: 896
 	public sealed class DangoBrawlShopSlotInfo : IMessage<DangoBrawlShopSlotInfo>, IMessage, IEquatable<DangoBrawlShopSlotInfo>, IDeepCloneable<DangoBrawlShopSlotInfo>, IBufferMessage
 	{
-		// Token: 0x06005828 RID: 22568 RVA: 0x000D7149 File Offset: 0x000D5349
+		// Token: 0x06005915 RID: 22805 RVA: 0x000D97D1 File Offset: 0x000D79D1
 		[NullableContext(1)]
 		public static DangoBrawlShopSlotInfo Create()
 		{
 			return new DangoBrawlShopSlotInfo();
 		}
 
-		// Token: 0x1700103A RID: 4154
-		// (get) Token: 0x06005829 RID: 22569 RVA: 0x000D7150 File Offset: 0x000D5350
+		// Token: 0x1700106B RID: 4203
+		// (get) Token: 0x06005916 RID: 22806 RVA: 0x000D97D8 File Offset: 0x000D79D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DangoBrawlShopSlotInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700103B RID: 4155
-		// (get) Token: 0x0600582A RID: 22570 RVA: 0x000D7157 File Offset: 0x000D5357
+		// Token: 0x1700106C RID: 4204
+		// (get) Token: 0x06005917 RID: 22807 RVA: 0x000D97DF File Offset: 0x000D79DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700103C RID: 4156
-		// (get) Token: 0x0600582B RID: 22571 RVA: 0x000D715A File Offset: 0x000D535A
+		// Token: 0x1700106D RID: 4205
+		// (get) Token: 0x06005918 RID: 22808 RVA: 0x000D97E2 File Offset: 0x000D79E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600582C RID: 22572 RVA: 0x000D7161 File Offset: 0x000D5361
+		// Token: 0x06005919 RID: 22809 RVA: 0x000D97E9 File Offset: 0x000D79E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSlotInfo()
 		{
 		}
 
-		// Token: 0x0600582D RID: 22573 RVA: 0x000D716C File Offset: 0x000D536C
+		// Token: 0x0600591A RID: 22810 RVA: 0x000D97F4 File Offset: 0x000D79F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSlotInfo(DangoBrawlShopSlotInfo other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600582E RID: 22574 RVA: 0x000D71C4 File Offset: 0x000D53C4
+		// Token: 0x0600591B RID: 22811 RVA: 0x000D984C File Offset: 0x000D7A4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlShopSlotInfo Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new DangoBrawlShopSlotInfo(this);
 		}
 
-		// Token: 0x1700103D RID: 4157
-		// (get) Token: 0x0600582F RID: 22575 RVA: 0x000D71CC File Offset: 0x000D53CC
-		// (set) Token: 0x06005830 RID: 22576 RVA: 0x000D71D4 File Offset: 0x000D53D4
+		// Token: 0x1700106E RID: 4206
+		// (get) Token: 0x0600591C RID: 22812 RVA: 0x000D9854 File Offset: 0x000D7A54
+		// (set) Token: 0x0600591D RID: 22813 RVA: 0x000D985C File Offset: 0x000D7A5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlBaseItemInfo Item
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700103E RID: 4158
-		// (get) Token: 0x06005831 RID: 22577 RVA: 0x000D71DD File Offset: 0x000D53DD
-		// (set) Token: 0x06005832 RID: 22578 RVA: 0x000D71E5 File Offset: 0x000D53E5
+		// Token: 0x1700106F RID: 4207
+		// (get) Token: 0x0600591E RID: 22814 RVA: 0x000D9865 File Offset: 0x000D7A65
+		// (set) Token: 0x0600591F RID: 22815 RVA: 0x000D986D File Offset: 0x000D7A6D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Locked
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700103F RID: 4159
-		// (get) Token: 0x06005833 RID: 22579 RVA: 0x000D71EE File Offset: 0x000D53EE
-		// (set) Token: 0x06005834 RID: 22580 RVA: 0x000D71F6 File Offset: 0x000D53F6
+		// Token: 0x17001070 RID: 4208
+		// (get) Token: 0x06005920 RID: 22816 RVA: 0x000D9876 File Offset: 0x000D7A76
+		// (set) Token: 0x06005921 RID: 22817 RVA: 0x000D987E File Offset: 0x000D7A7E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Price
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005835 RID: 22581 RVA: 0x000D71FF File Offset: 0x000D53FF
+		// Token: 0x06005922 RID: 22818 RVA: 0x000D9887 File Offset: 0x000D7A87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlShopSlotInfo);
 		}
 
-		// Token: 0x06005836 RID: 22582 RVA: 0x000D7210 File Offset: 0x000D5410
+		// Token: 0x06005923 RID: 22819 RVA: 0x000D9898 File Offset: 0x000D7A98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlShopSlotInfo other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.Item, other.Item) && this.Locked == other.Locked && this.Price == other.Price && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005837 RID: 22583 RVA: 0x000D7270 File Offset: 0x000D5470
+		// Token: 0x06005924 RID: 22820 RVA: 0x000D98F8 File Offset: 0x000D7AF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005838 RID: 22584 RVA: 0x000D72DE File Offset: 0x000D54DE
+		// Token: 0x06005925 RID: 22821 RVA: 0x000D9966 File Offset: 0x000D7B66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005839 RID: 22585 RVA: 0x000D72EB File Offset: 0x000D54EB
+		// Token: 0x06005926 RID: 22822 RVA: 0x000D9973 File Offset: 0x000D7B73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600583A RID: 22586 RVA: 0x000D72F4 File Offset: 0x000D54F4
+		// Token: 0x06005927 RID: 22823 RVA: 0x000D997C File Offset: 0x000D7B7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600583B RID: 22587 RVA: 0x000D736C File Offset: 0x000D556C
+		// Token: 0x06005928 RID: 22824 RVA: 0x000D99F4 File Offset: 0x000D7BF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600583C RID: 22588 RVA: 0x000D73D0 File Offset: 0x000D55D0
+		// Token: 0x06005929 RID: 22825 RVA: 0x000D9A58 File Offset: 0x000D7C58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlShopSlotInfo other)
@@ -266,7 +266,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600583D RID: 22589 RVA: 0x000D744C File Offset: 0x000D564C
+		// Token: 0x0600592A RID: 22826 RVA: 0x000D9AD4 File Offset: 0x000D7CD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -274,7 +274,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600583E RID: 22590 RVA: 0x000D7458 File Offset: 0x000D5658
+		// Token: 0x0600592B RID: 22827 RVA: 0x000D9AE0 File Offset: 0x000D7CE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -315,28 +315,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003502 RID: 13570
+		// Token: 0x0400359E RID: 13726
 		private static readonly MessageParser<DangoBrawlShopSlotInfo> _parser = new MessageParser<DangoBrawlShopSlotInfo>(() => new DangoBrawlShopSlotInfo());
 
-		// Token: 0x04003503 RID: 13571
+		// Token: 0x0400359F RID: 13727
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003504 RID: 13572
+		// Token: 0x040035A0 RID: 13728
 		public const int ItemFieldNumber = 1;
 
-		// Token: 0x04003505 RID: 13573
+		// Token: 0x040035A1 RID: 13729
 		private DangoBrawlBaseItemInfo item_;
 
-		// Token: 0x04003506 RID: 13574
+		// Token: 0x040035A2 RID: 13730
 		public const int LockedFieldNumber = 2;
 
-		// Token: 0x04003507 RID: 13575
+		// Token: 0x040035A3 RID: 13731
 		private bool locked_;
 
-		// Token: 0x04003508 RID: 13576
+		// Token: 0x040035A4 RID: 13732
 		public const int PriceFieldNumber = 3;
 
-		// Token: 0x04003509 RID: 13577
+		// Token: 0x040035A5 RID: 13733
 		private int price_;
 	}
 }

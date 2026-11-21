@@ -5,13 +5,13 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x0200005F RID: 95
 	public class DynamicLevelPlayComponent_SetValue
 	{
-		// Token: 0x040001F9 RID: 505
+		// Token: 0x040001FE RID: 510
 		public bool? Disabled;
 
-		// Token: 0x040001FA RID: 506
+		// Token: 0x040001FF RID: 511
 		public bool? EdIsLocked;
 
-		// Token: 0x040001FB RID: 507
+		// Token: 0x04000200 RID: 512
 		public int DynamicLevelPlayId;
 	}
 }

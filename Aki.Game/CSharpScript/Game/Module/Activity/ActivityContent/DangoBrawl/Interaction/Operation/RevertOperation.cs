@@ -4,11 +4,11 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Operation
 {
-	// Token: 0x02006875 RID: 26741
+	// Token: 0x020057C5 RID: 22469
 	public sealed class RevertOperation : IInteractionOperation
 	{
-		// Token: 0x1700979F RID: 38815
-		// (get) Token: 0x06042C52 RID: 273490 RVA: 0x01040272 File Offset: 0x0103E472
+		// Token: 0x17006AE0 RID: 27360
+		// (get) Token: 0x060377A9 RID: 227241 RVA: 0x00F81752 File Offset: 0x00F7F952
 		public EDangoBrawlOptionType Type
 		{
 			get
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C53 RID: 273491 RVA: 0x01040275 File Offset: 0x0103E475
+		// Token: 0x060377AA RID: 227242 RVA: 0x00F81755 File Offset: 0x00F7F955
 		public bool CanExecute(in OperationContext ctx)
 		{
 			return true;
 		}
 
-		// Token: 0x06042C54 RID: 273492 RVA: 0x01040278 File Offset: 0x0103E478
+		// Token: 0x060377AB RID: 227243 RVA: 0x00F81758 File Offset: 0x00F7F958
 		public UniTask<bool> Execute(in OperationContext ctx)
 		{
 			DangoBrawlModel instance = DangoBrawlModel.Instance;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return UniTask.FromResult<bool>(true);
 		}
 
-		// Token: 0x06042C56 RID: 273494 RVA: 0x010402A3 File Offset: 0x0103E4A3
+		// Token: 0x060377AD RID: 227245 RVA: 0x00F81783 File Offset: 0x00F7F983
 		bool IInteractionOperation.CanExecute(in OperationContext ctx)
 		{
 			return this.CanExecute(ctx);
 		}
 
-		// Token: 0x06042C57 RID: 273495 RVA: 0x010402AC File Offset: 0x0103E4AC
+		// Token: 0x060377AE RID: 227246 RVA: 0x00F8178C File Offset: 0x00F7F98C
 		UniTask<bool> IInteractionOperation.Execute(in OperationContext ctx)
 		{
 			return this.Execute(ctx);

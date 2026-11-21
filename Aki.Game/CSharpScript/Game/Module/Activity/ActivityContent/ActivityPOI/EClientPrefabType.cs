@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 {
-	// Token: 0x0200692C RID: 26924
+	// Token: 0x0200587C RID: 22652
 	internal enum EClientPrefabType
 	{
-		// Token: 0x04022F03 RID: 143107
+		// Token: 0x0401D75F RID: 120671
 		Poi = 1
 	}
 }

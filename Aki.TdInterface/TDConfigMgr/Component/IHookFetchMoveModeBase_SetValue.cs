@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000437 RID: 1079
+	// Token: 0x02000490 RID: 1168
 	public class IHookFetchMoveModeBase_SetValue
 	{
-		// Token: 0x040010C4 RID: 4292
+		// Token: 0x040011E6 RID: 4582
 		public EHookFetchMoveMode Type;
 	}
 }

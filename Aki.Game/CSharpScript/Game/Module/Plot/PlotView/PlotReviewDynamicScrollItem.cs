@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200505B RID: 20571
+	// Token: 0x0200402B RID: 16427
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotReviewDynamicScrollItem : UiPanelBase, IDynamicScrollItem<PlotReviewItemData>
 	{
-		// Token: 0x06034A41 RID: 215617 RVA: 0x00C70744 File Offset: 0x00C6E944
+		// Token: 0x06029934 RID: 170292 RVA: 0x00BBD9E4 File Offset: 0x00BBBBE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034A42 RID: 215618 RVA: 0x00C707B0 File Offset: 0x00C6E9B0
+		// Token: 0x06029935 RID: 170293 RVA: 0x00BBDA50 File Offset: 0x00BBBC50
 		public UniTask Init(UUIItem actor)
 		{
 			PlotReviewDynamicScrollItem.<Init>d__6 <Init>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034A43 RID: 215619 RVA: 0x00C707FC File Offset: 0x00C6E9FC
+		// Token: 0x06029936 RID: 170294 RVA: 0x00BBDA9C File Offset: 0x00BBBC9C
 		private UniTask InitChildItem()
 		{
 			PlotReviewDynamicScrollItem.<InitChildItem>d__7 <InitChildItem>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <InitChildItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034A44 RID: 215620 RVA: 0x00C70840 File Offset: 0x00C6EA40
+		// Token: 0x06029937 RID: 170295 RVA: 0x00BBDAE0 File Offset: 0x00BBBCE0
 		public AUIBaseActor GetUsingItem(PlotReviewItemData data)
 		{
 			int? num = null;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return base.GetItem(num.GetValueOrDefault()).GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x06034A45 RID: 215621 RVA: 0x00C7088E File Offset: 0x00C6EA8E
+		// Token: 0x06029938 RID: 170296 RVA: 0x00BBDB2E File Offset: 0x00BBBD2E
 		public void Update(PlotReviewItemData data, int index)
 		{
 			this.Data = data;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Refresh();
 		}
 
-		// Token: 0x06034A46 RID: 215622 RVA: 0x00C708A4 File Offset: 0x00C6EAA4
+		// Token: 0x06029939 RID: 170297 RVA: 0x00BBDB44 File Offset: 0x00BBBD44
 		public void Refresh()
 		{
 			bool uiactive = false;
@@ -102,65 +102,65 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			base.GetItem(1).SetUIActive(uiactive2);
 		}
 
-		// Token: 0x06034A47 RID: 215623 RVA: 0x00C708F8 File Offset: 0x00C6EAF8
+		// Token: 0x0602993A RID: 170298 RVA: 0x00BBDB98 File Offset: 0x00BBBD98
 		public void RefreshTalkItem()
 		{
 			PlotReviewTalkItemData data = (PlotReviewTalkItemData)this.Data.Data;
 			this.TalkItem.Update(data, this.Index);
 		}
 
-		// Token: 0x06034A48 RID: 215624 RVA: 0x00C70928 File Offset: 0x00C6EB28
+		// Token: 0x0602993B RID: 170299 RVA: 0x00BBDBC8 File Offset: 0x00BBBDC8
 		public void RefreshOptionItem()
 		{
 			PlotReviewOptionItemData data = (PlotReviewOptionItemData)this.Data.Data;
 			this.OptionItem.Update(data, this.Index);
 		}
 
-		// Token: 0x06034A49 RID: 215625 RVA: 0x00C70958 File Offset: 0x00C6EB58
+		// Token: 0x0602993C RID: 170300 RVA: 0x00BBDBF8 File Offset: 0x00BBBDF8
 		public void SetTalkItemToggleClickCallBack(Action<int> onToggleClick)
 		{
 			this.TalkItem.OnToggleClick = onToggleClick;
 		}
 
-		// Token: 0x06034A4A RID: 215626 RVA: 0x00C70966 File Offset: 0x00C6EB66
+		// Token: 0x0602993D RID: 170301 RVA: 0x00BBDC06 File Offset: 0x00BBBE06
 		public void SetTalkItemCanToggleChangeCallBack(Func<int, bool> canToggleChange)
 		{
 			this.TalkItem.CanToggleChange = canToggleChange;
 		}
 
-		// Token: 0x06034A4B RID: 215627 RVA: 0x00C70974 File Offset: 0x00C6EB74
+		// Token: 0x0602993E RID: 170302 RVA: 0x00BBDC14 File Offset: 0x00BBBE14
 		public void SetTalkItemToggleState(EToggleState state)
 		{
 			this.TalkItem.SetToggleState(state);
 		}
 
-		// Token: 0x06034A4C RID: 215628 RVA: 0x00C70982 File Offset: 0x00C6EB82
+		// Token: 0x0602993F RID: 170303 RVA: 0x00BBDC22 File Offset: 0x00BBBE22
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x0401C0E2 RID: 114914
+		// Token: 0x04016B0D RID: 92941
 		protected int Index = -1;
 
-		// Token: 0x0401C0E3 RID: 114915
+		// Token: 0x04016B0E RID: 92942
 		[Nullable(2)]
 		private PlotReviewItemData Data;
 
-		// Token: 0x0401C0E4 RID: 114916
+		// Token: 0x04016B0F RID: 92943
 		private readonly PlotReviewTalkItem TalkItem = new PlotReviewTalkItem();
 
-		// Token: 0x0401C0E5 RID: 114917
+		// Token: 0x04016B10 RID: 92944
 		private readonly PlotReviewOptionItem OptionItem = new PlotReviewOptionItem();
 
-		// Token: 0x0200B1C0 RID: 45504
+		// Token: 0x02009BFA RID: 39930
 		[NullableContext(0)]
 		private static class EPlotReviewDynamicScrollItemComponent
 		{
-			// Token: 0x04035E81 RID: 220801
+			// Token: 0x040308D6 RID: 198870
 			public const int TalkItem = 0;
 
-			// Token: 0x04035E82 RID: 220802
+			// Token: 0x040308D7 RID: 198871
 			public const int OptionItem = 1;
 		}
 	}

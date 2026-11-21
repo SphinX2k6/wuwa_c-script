@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001584 RID: 5508
+	// Token: 0x020016E2 RID: 5858
 	[EnumExtensions]
 	public enum EAiEventType
 	{
-		// Token: 0x0400493A RID: 18746
+		// Token: 0x04004CE9 RID: 19689
 		CatAndDogPlayFlow,
-		// Token: 0x0400493B RID: 18747
+		// Token: 0x04004CEA RID: 19690
 		AnimalStandUp,
-		// Token: 0x0400493C RID: 18748
+		// Token: 0x04004CEB RID: 19691
 		AnimalSitDown,
-		// Token: 0x0400493D RID: 18749
+		// Token: 0x04004CEC RID: 19692
 		AnimalRandomAction
 	}
 }

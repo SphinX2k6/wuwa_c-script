@@ -1,53 +1,53 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000248 RID: 584
+// Token: 0x0200024C RID: 588
 [NullableContext(1)]
 [Nullable(0)]
 public class CloudGameUserInfo : ICloudGameUserInfo
 {
-	// Token: 0x17000577 RID: 1399
-	// (get) Token: 0x060023A1 RID: 9121 RVA: 0x000DAB0F File Offset: 0x000D8D0F
-	// (set) Token: 0x060023A2 RID: 9122 RVA: 0x000DAB17 File Offset: 0x000D8D17
+	// Token: 0x1700059E RID: 1438
+	// (get) Token: 0x06002459 RID: 9305 RVA: 0x000E1057 File Offset: 0x000DF257
+	// (set) Token: 0x0600245A RID: 9306 RVA: 0x000E105F File Offset: 0x000DF25F
 	public LoginInfo LoginInfo { get; set; }
 
-	// Token: 0x17000578 RID: 1400
-	// (get) Token: 0x060023A3 RID: 9123 RVA: 0x000DAB20 File Offset: 0x000D8D20
-	// (set) Token: 0x060023A4 RID: 9124 RVA: 0x000DAB28 File Offset: 0x000D8D28
+	// Token: 0x1700059F RID: 1439
+	// (get) Token: 0x0600245B RID: 9307 RVA: 0x000E1068 File Offset: 0x000DF268
+	// (set) Token: 0x0600245C RID: 9308 RVA: 0x000E1070 File Offset: 0x000DF270
 	public string TraceId { get; set; }
 
-	// Token: 0x17000579 RID: 1401
-	// (get) Token: 0x060023A5 RID: 9125 RVA: 0x000DAB31 File Offset: 0x000D8D31
-	// (set) Token: 0x060023A6 RID: 9126 RVA: 0x000DAB39 File Offset: 0x000D8D39
+	// Token: 0x170005A0 RID: 1440
+	// (get) Token: 0x0600245D RID: 9309 RVA: 0x000E1079 File Offset: 0x000DF279
+	// (set) Token: 0x0600245E RID: 9310 RVA: 0x000E1081 File Offset: 0x000DF281
 	public string Platform { get; set; }
 
-	// Token: 0x1700057A RID: 1402
-	// (get) Token: 0x060023A7 RID: 9127 RVA: 0x000DAB42 File Offset: 0x000D8D42
-	// (set) Token: 0x060023A8 RID: 9128 RVA: 0x000DAB4A File Offset: 0x000D8D4A
+	// Token: 0x170005A1 RID: 1441
+	// (get) Token: 0x0600245F RID: 9311 RVA: 0x000E108A File Offset: 0x000DF28A
+	// (set) Token: 0x06002460 RID: 9312 RVA: 0x000E1092 File Offset: 0x000DF292
 	public float Fps { get; set; }
 
-	// Token: 0x1700057B RID: 1403
-	// (get) Token: 0x060023A9 RID: 9129 RVA: 0x000DAB53 File Offset: 0x000D8D53
-	// (set) Token: 0x060023AA RID: 9130 RVA: 0x000DAB5B File Offset: 0x000D8D5B
+	// Token: 0x170005A2 RID: 1442
+	// (get) Token: 0x06002461 RID: 9313 RVA: 0x000E109B File Offset: 0x000DF29B
+	// (set) Token: 0x06002462 RID: 9314 RVA: 0x000E10A3 File Offset: 0x000DF2A3
 	public float Dpi { get; set; }
 
-	// Token: 0x1700057C RID: 1404
-	// (get) Token: 0x060023AB RID: 9131 RVA: 0x000DAB64 File Offset: 0x000D8D64
-	// (set) Token: 0x060023AC RID: 9132 RVA: 0x000DAB6C File Offset: 0x000D8D6C
+	// Token: 0x170005A3 RID: 1443
+	// (get) Token: 0x06002463 RID: 9315 RVA: 0x000E10AC File Offset: 0x000DF2AC
+	// (set) Token: 0x06002464 RID: 9316 RVA: 0x000E10B4 File Offset: 0x000DF2B4
 	public ResolutionInfo DeviceResolution { get; set; }
 
-	// Token: 0x1700057D RID: 1405
-	// (get) Token: 0x060023AD RID: 9133 RVA: 0x000DAB75 File Offset: 0x000D8D75
-	// (set) Token: 0x060023AE RID: 9134 RVA: 0x000DAB7D File Offset: 0x000D8D7D
+	// Token: 0x170005A4 RID: 1444
+	// (get) Token: 0x06002465 RID: 9317 RVA: 0x000E10BD File Offset: 0x000DF2BD
+	// (set) Token: 0x06002466 RID: 9318 RVA: 0x000E10C5 File Offset: 0x000DF2C5
 	public ResolutionInfo ScreenResolution { get; set; }
 
-	// Token: 0x1700057E RID: 1406
-	// (get) Token: 0x060023AF RID: 9135 RVA: 0x000DAB86 File Offset: 0x000D8D86
-	// (set) Token: 0x060023B0 RID: 9136 RVA: 0x000DAB8E File Offset: 0x000D8D8E
+	// Token: 0x170005A5 RID: 1445
+	// (get) Token: 0x06002467 RID: 9319 RVA: 0x000E10CE File Offset: 0x000DF2CE
+	// (set) Token: 0x06002468 RID: 9320 RVA: 0x000E10D6 File Offset: 0x000DF2D6
 	public string ServerTag { get; set; }
 
-	// Token: 0x1700057F RID: 1407
-	// (get) Token: 0x060023B1 RID: 9137 RVA: 0x000DAB97 File Offset: 0x000D8D97
-	// (set) Token: 0x060023B2 RID: 9138 RVA: 0x000DAB9F File Offset: 0x000D8D9F
+	// Token: 0x170005A6 RID: 1446
+	// (get) Token: 0x06002469 RID: 9321 RVA: 0x000E10DF File Offset: 0x000DF2DF
+	// (set) Token: 0x0600246A RID: 9322 RVA: 0x000E10E7 File Offset: 0x000DF2E7
 	public string Device { get; set; }
 }

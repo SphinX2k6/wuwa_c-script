@@ -6,10 +6,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA2 RID: 28578
+	// Token: 0x02006123 RID: 24867
 	public class LevelFlowSwitchDataLayers : LevelFlowActionBase
 	{
-		// Token: 0x06045781 RID: 284545 RVA: 0x0113B66B File Offset: 0x0113986B
+		// Token: 0x0603B92F RID: 244015 RVA: 0x010E546F File Offset: 0x010E366F
 		[NullableContext(1)]
 		public LevelFlowSwitchDataLayers Init(SwitchDataLayers params_)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045782 RID: 284546 RVA: 0x0113B678 File Offset: 0x01139878
+		// Token: 0x0603B930 RID: 244016 RVA: 0x010E547C File Offset: 0x010E367C
 		protected unsafe override void OnExecute()
 		{
 			if (this.Params == null)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243F8 RID: 148472
+		// Token: 0x0401F6AD RID: 128685
 		[Nullable(2)]
 		private SwitchDataLayers Params;
 	}

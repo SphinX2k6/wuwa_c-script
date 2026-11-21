@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D38 RID: 3384
+	// Token: 0x02000231 RID: 561
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.LevelStreaming")]
 	[UnrealStructLayout(480, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public abstract class ULevelStreaming : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B536 RID: 46390 RVA: 0x00102790 File Offset: 0x00100990
+		// Token: 0x06002D59 RID: 11609 RVA: 0x00040147 File Offset: 0x0003E347
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULevelStreaming._ClassPtr;
 		}
 
-		// Token: 0x17002972 RID: 10610
-		// (get) Token: 0x0600B537 RID: 46391 RVA: 0x0010279C File Offset: 0x0010099C
-		// (set) Token: 0x0600B538 RID: 46392 RVA: 0x001027B1 File Offset: 0x001009B1
+		// Token: 0x17000560 RID: 1376
+		// (get) Token: 0x06002D5A RID: 11610 RVA: 0x00040153 File Offset: 0x0003E353
+		// (set) Token: 0x06002D5B RID: 11611 RVA: 0x00040168 File Offset: 0x0003E368
 		public TSoftObjectPtr<UWorld> WorldAsset
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002973 RID: 10611
-		// (get) Token: 0x0600B539 RID: 46393 RVA: 0x001027D6 File Offset: 0x001009D6
-		// (set) Token: 0x0600B53A RID: 46394 RVA: 0x001027E6 File Offset: 0x001009E6
+		// Token: 0x17000561 RID: 1377
+		// (get) Token: 0x06002D5C RID: 11612 RVA: 0x0004018D File Offset: 0x0003E38D
+		// (set) Token: 0x06002D5D RID: 11613 RVA: 0x0004019D File Offset: 0x0003E39D
 		public unsafe int StreamingPriority
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002974 RID: 10612
-		// (get) Token: 0x0600B53B RID: 46395 RVA: 0x001027F7 File Offset: 0x001009F7
-		// (set) Token: 0x0600B53C RID: 46396 RVA: 0x0010280B File Offset: 0x00100A0B
+		// Token: 0x17000562 RID: 1378
+		// (get) Token: 0x06002D5E RID: 11614 RVA: 0x000401AE File Offset: 0x0003E3AE
+		// (set) Token: 0x06002D5F RID: 11615 RVA: 0x000401C2 File Offset: 0x0003E3C2
 		public unsafe FName PackageNameToLoad
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002975 RID: 10613
-		// (get) Token: 0x0600B53D RID: 46397 RVA: 0x00102820 File Offset: 0x00100A20
-		// (set) Token: 0x0600B53E RID: 46398 RVA: 0x00102859 File Offset: 0x00100A59
+		// Token: 0x17000563 RID: 1379
+		// (get) Token: 0x06002D60 RID: 11616 RVA: 0x000401D8 File Offset: 0x0003E3D8
+		// (set) Token: 0x06002D61 RID: 11617 RVA: 0x00040211 File Offset: 0x0003E411
 		public TArray<FName> LODPackageNames
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002976 RID: 10614
-		// (get) Token: 0x0600B53F RID: 46399 RVA: 0x00102867 File Offset: 0x00100A67
-		// (set) Token: 0x0600B540 RID: 46400 RVA: 0x0010287B File Offset: 0x00100A7B
+		// Token: 0x17000564 RID: 1380
+		// (get) Token: 0x06002D62 RID: 11618 RVA: 0x0004021F File Offset: 0x0003E41F
+		// (set) Token: 0x06002D63 RID: 11619 RVA: 0x00040233 File Offset: 0x0003E433
 		public unsafe FTransform LevelTransform
 		{
 			get
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002977 RID: 10615
-		// (get) Token: 0x0600B541 RID: 46401 RVA: 0x00102890 File Offset: 0x00100A90
-		// (set) Token: 0x0600B542 RID: 46402 RVA: 0x001028A0 File Offset: 0x00100AA0
+		// Token: 0x17000565 RID: 1381
+		// (get) Token: 0x06002D64 RID: 11620 RVA: 0x00040248 File Offset: 0x0003E448
+		// (set) Token: 0x06002D65 RID: 11621 RVA: 0x00040258 File Offset: 0x0003E458
 		public unsafe bool bClientOnlyVisible
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002978 RID: 10616
-		// (get) Token: 0x0600B543 RID: 46403 RVA: 0x001028B1 File Offset: 0x00100AB1
-		// (set) Token: 0x0600B544 RID: 46404 RVA: 0x001028C1 File Offset: 0x00100AC1
+		// Token: 0x17000566 RID: 1382
+		// (get) Token: 0x06002D66 RID: 11622 RVA: 0x00040269 File Offset: 0x0003E469
+		// (set) Token: 0x06002D67 RID: 11623 RVA: 0x00040279 File Offset: 0x0003E479
 		public unsafe int LevelLODIndex
 		{
 			get
@@ -130,9 +130,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002979 RID: 10617
-		// (get) Token: 0x0600B545 RID: 46405 RVA: 0x001028D2 File Offset: 0x00100AD2
-		// (set) Token: 0x0600B546 RID: 46406 RVA: 0x001028EB File Offset: 0x00100AEB
+		// Token: 0x17000567 RID: 1383
+		// (get) Token: 0x06002D68 RID: 11624 RVA: 0x0004028A File Offset: 0x0003E48A
+		// (set) Token: 0x06002D69 RID: 11625 RVA: 0x000402A3 File Offset: 0x0003E4A3
 		public unsafe bool bShouldBeVisible
 		{
 			get
@@ -145,9 +145,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297A RID: 10618
-		// (get) Token: 0x0600B547 RID: 46407 RVA: 0x0010291B File Offset: 0x00100B1B
-		// (set) Token: 0x0600B548 RID: 46408 RVA: 0x00102934 File Offset: 0x00100B34
+		// Token: 0x17000568 RID: 1384
+		// (get) Token: 0x06002D6A RID: 11626 RVA: 0x000402D3 File Offset: 0x0003E4D3
+		// (set) Token: 0x06002D6B RID: 11627 RVA: 0x000402EC File Offset: 0x0003E4EC
 		public unsafe bool bShouldBeLoaded
 		{
 			get
@@ -160,9 +160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297B RID: 10619
-		// (get) Token: 0x0600B549 RID: 46409 RVA: 0x00102964 File Offset: 0x00100B64
-		// (set) Token: 0x0600B54A RID: 46410 RVA: 0x0010297D File Offset: 0x00100B7D
+		// Token: 0x17000569 RID: 1385
+		// (get) Token: 0x06002D6C RID: 11628 RVA: 0x0004031C File Offset: 0x0003E51C
+		// (set) Token: 0x06002D6D RID: 11629 RVA: 0x00040335 File Offset: 0x0003E535
 		public unsafe bool bLocked
 		{
 			get
@@ -175,9 +175,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297C RID: 10620
-		// (get) Token: 0x0600B54B RID: 46411 RVA: 0x001029AD File Offset: 0x00100BAD
-		// (set) Token: 0x0600B54C RID: 46412 RVA: 0x001029C6 File Offset: 0x00100BC6
+		// Token: 0x1700056A RID: 1386
+		// (get) Token: 0x06002D6E RID: 11630 RVA: 0x00040365 File Offset: 0x0003E565
+		// (set) Token: 0x06002D6F RID: 11631 RVA: 0x0004037E File Offset: 0x0003E57E
 		public unsafe bool bIsStatic
 		{
 			get
@@ -190,9 +190,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297D RID: 10621
-		// (get) Token: 0x0600B54D RID: 46413 RVA: 0x001029F6 File Offset: 0x00100BF6
-		// (set) Token: 0x0600B54E RID: 46414 RVA: 0x00102A0F File Offset: 0x00100C0F
+		// Token: 0x1700056B RID: 1387
+		// (get) Token: 0x06002D70 RID: 11632 RVA: 0x000403AE File Offset: 0x0003E5AE
+		// (set) Token: 0x06002D71 RID: 11633 RVA: 0x000403C7 File Offset: 0x0003E5C7
 		public unsafe bool bShouldBlockOnLoad
 		{
 			get
@@ -205,9 +205,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297E RID: 10622
-		// (get) Token: 0x0600B54F RID: 46415 RVA: 0x00102A3F File Offset: 0x00100C3F
-		// (set) Token: 0x0600B550 RID: 46416 RVA: 0x00102A58 File Offset: 0x00100C58
+		// Token: 0x1700056C RID: 1388
+		// (get) Token: 0x06002D72 RID: 11634 RVA: 0x000403F7 File Offset: 0x0003E5F7
+		// (set) Token: 0x06002D73 RID: 11635 RVA: 0x00040410 File Offset: 0x0003E610
 		public unsafe bool bShouldBlockOnUnload
 		{
 			get
@@ -220,9 +220,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700297F RID: 10623
-		// (get) Token: 0x0600B551 RID: 46417 RVA: 0x00102A88 File Offset: 0x00100C88
-		// (set) Token: 0x0600B552 RID: 46418 RVA: 0x00102AA1 File Offset: 0x00100CA1
+		// Token: 0x1700056D RID: 1389
+		// (get) Token: 0x06002D74 RID: 11636 RVA: 0x00040440 File Offset: 0x0003E640
+		// (set) Token: 0x06002D75 RID: 11637 RVA: 0x00040459 File Offset: 0x0003E659
 		public unsafe bool bDisableDistanceStreaming
 		{
 			get
@@ -235,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002980 RID: 10624
-		// (get) Token: 0x0600B553 RID: 46419 RVA: 0x00102AD1 File Offset: 0x00100CD1
-		// (set) Token: 0x0600B554 RID: 46420 RVA: 0x00102AEA File Offset: 0x00100CEA
+		// Token: 0x1700056E RID: 1390
+		// (get) Token: 0x06002D76 RID: 11638 RVA: 0x00040489 File Offset: 0x0003E689
+		// (set) Token: 0x06002D77 RID: 11639 RVA: 0x000404A2 File Offset: 0x0003E6A2
 		public unsafe bool bDrawOnLevelStatusMap
 		{
 			get
@@ -250,9 +250,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002981 RID: 10625
-		// (get) Token: 0x0600B555 RID: 46421 RVA: 0x00102B1A File Offset: 0x00100D1A
-		// (set) Token: 0x0600B556 RID: 46422 RVA: 0x00102B2E File Offset: 0x00100D2E
+		// Token: 0x1700056F RID: 1391
+		// (get) Token: 0x06002D78 RID: 11640 RVA: 0x000404D2 File Offset: 0x0003E6D2
+		// (set) Token: 0x06002D79 RID: 11641 RVA: 0x000404E6 File Offset: 0x0003E6E6
 		public unsafe FLinearColor LevelColor
 		{
 			get
@@ -265,30 +265,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002982 RID: 10626
-		// (get) Token: 0x0600B557 RID: 46423 RVA: 0x00102B44 File Offset: 0x00100D44
-		// (set) Token: 0x0600B558 RID: 46424 RVA: 0x00102B7D File Offset: 0x00100D7D
-		public TArray<ALevelStreamingVolume> EditorStreamingVolumes
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<ALevelStreamingVolume> result;
-				if ((result = this._EditorStreamingVolumes) == null)
-				{
-					result = (this._EditorStreamingVolumes = new TArray<ALevelStreamingVolume>(base.NativePtr + (IntPtr)ULevelStreaming.__PropertyOffset_EditorStreamingVolumes, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.EditorStreamingVolumes.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002983 RID: 10627
-		// (get) Token: 0x0600B559 RID: 46425 RVA: 0x00102B8B File Offset: 0x00100D8B
-		// (set) Token: 0x0600B55A RID: 46426 RVA: 0x00102B9B File Offset: 0x00100D9B
+		// Token: 0x17000570 RID: 1392
+		// (get) Token: 0x06002D7A RID: 11642 RVA: 0x000404FB File Offset: 0x0003E6FB
+		// (set) Token: 0x06002D7B RID: 11643 RVA: 0x0004050B File Offset: 0x0003E70B
 		public unsafe float MinTimeBetweenVolumeUnloadRequests
 		{
 			get
@@ -301,9 +280,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002984 RID: 10628
-		// (get) Token: 0x0600B55B RID: 46427 RVA: 0x00102BAC File Offset: 0x00100DAC
-		// (set) Token: 0x0600B55C RID: 46428 RVA: 0x00102BE5 File Offset: 0x00100DE5
+		// Token: 0x17000571 RID: 1393
+		// (get) Token: 0x06002D7C RID: 11644 RVA: 0x0004051C File Offset: 0x0003E71C
+		// (set) Token: 0x06002D7D RID: 11645 RVA: 0x00040555 File Offset: 0x0003E755
 		public FLevelStreamingLoadedStatus OnLevelLoaded
 		{
 			get
@@ -322,9 +301,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002985 RID: 10629
-		// (get) Token: 0x0600B55D RID: 46429 RVA: 0x00102C08 File Offset: 0x00100E08
-		// (set) Token: 0x0600B55E RID: 46430 RVA: 0x00102C41 File Offset: 0x00100E41
+		// Token: 0x17000572 RID: 1394
+		// (get) Token: 0x06002D7E RID: 11646 RVA: 0x00040578 File Offset: 0x0003E778
+		// (set) Token: 0x06002D7F RID: 11647 RVA: 0x000405B1 File Offset: 0x0003E7B1
 		public FLevelStreamingLoadedStatus OnLevelUnloaded
 		{
 			get
@@ -343,9 +322,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002986 RID: 10630
-		// (get) Token: 0x0600B55F RID: 46431 RVA: 0x00102C64 File Offset: 0x00100E64
-		// (set) Token: 0x0600B560 RID: 46432 RVA: 0x00102C9D File Offset: 0x00100E9D
+		// Token: 0x17000573 RID: 1395
+		// (get) Token: 0x06002D80 RID: 11648 RVA: 0x000405D4 File Offset: 0x0003E7D4
+		// (set) Token: 0x06002D81 RID: 11649 RVA: 0x0004060D File Offset: 0x0003E80D
 		public FLevelStreamingVisibilityStatus OnLevelShown
 		{
 			get
@@ -364,9 +343,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002987 RID: 10631
-		// (get) Token: 0x0600B561 RID: 46433 RVA: 0x00102CC0 File Offset: 0x00100EC0
-		// (set) Token: 0x0600B562 RID: 46434 RVA: 0x00102CF9 File Offset: 0x00100EF9
+		// Token: 0x17000574 RID: 1396
+		// (get) Token: 0x06002D82 RID: 11650 RVA: 0x00040630 File Offset: 0x0003E830
+		// (set) Token: 0x06002D83 RID: 11651 RVA: 0x00040669 File Offset: 0x0003E869
 		public FLevelStreamingVisibilityStatus OnLevelHidden
 		{
 			get
@@ -385,9 +364,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002988 RID: 10632
-		// (get) Token: 0x0600B563 RID: 46435 RVA: 0x00102D1A File Offset: 0x00100F1A
-		// (set) Token: 0x0600B564 RID: 46436 RVA: 0x00102D2E File Offset: 0x00100F2E
+		// Token: 0x17000575 RID: 1397
+		// (get) Token: 0x06002D84 RID: 11652 RVA: 0x0004068A File Offset: 0x0003E88A
+		// (set) Token: 0x06002D85 RID: 11653 RVA: 0x0004069E File Offset: 0x0003E89E
 		[Nullable(2)]
 		public unsafe ULevel LoadedLevel
 		{
@@ -403,9 +382,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002989 RID: 10633
-		// (get) Token: 0x0600B565 RID: 46437 RVA: 0x00102D43 File Offset: 0x00100F43
-		// (set) Token: 0x0600B566 RID: 46438 RVA: 0x00102D57 File Offset: 0x00100F57
+		// Token: 0x17000576 RID: 1398
+		// (get) Token: 0x06002D86 RID: 11654 RVA: 0x000406B3 File Offset: 0x0003E8B3
+		// (set) Token: 0x06002D87 RID: 11655 RVA: 0x000406C7 File Offset: 0x0003E8C7
 		[Nullable(2)]
 		public unsafe ULevel PendingUnloadLevel
 		{
@@ -421,87 +400,80 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B567 RID: 46439 RVA: 0x00102D6C File Offset: 0x00100F6C
+		// Token: 0x06002D88 RID: 11656 RVA: 0x000406DC File Offset: 0x0003E8DC
 		public bool ShouldBeLoaded()
 		{
 			return ULevelStreaming.__ShouldBeLoaded_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B568 RID: 46440 RVA: 0x00102D79 File Offset: 0x00100F79
+		// Token: 0x06002D89 RID: 11657 RVA: 0x000406E9 File Offset: 0x0003E8E9
 		public void SetShouldBeVisible(bool bInShouldBeVisible)
 		{
 			ULevelStreaming.__SetShouldBeVisible_Internal(base.NativePtr, bInShouldBeVisible);
 		}
 
-		// Token: 0x0600B569 RID: 46441 RVA: 0x00102D87 File Offset: 0x00100F87
+		// Token: 0x06002D8A RID: 11658 RVA: 0x000406F7 File Offset: 0x0003E8F7
 		public void SetShouldBeLoaded(bool bInShouldBeLoaded)
 		{
 			ULevelStreaming.__SetShouldBeLoaded_Internal(base.NativePtr, bInShouldBeLoaded);
 		}
 
-		// Token: 0x0600B56A RID: 46442 RVA: 0x00102D95 File Offset: 0x00100F95
+		// Token: 0x06002D8B RID: 11659 RVA: 0x00040705 File Offset: 0x0003E905
 		public void SetPriority(int NewPriority)
 		{
 			ULevelStreaming.__SetPriority_Internal(base.NativePtr, NewPriority);
 		}
 
-		// Token: 0x0600B56B RID: 46443 RVA: 0x00102DA3 File Offset: 0x00100FA3
+		// Token: 0x06002D8C RID: 11660 RVA: 0x00040713 File Offset: 0x0003E913
 		public void SetLevelLODIndex(int LODIndex)
 		{
 			ULevelStreaming.__SetLevelLODIndex_Internal(base.NativePtr, LODIndex);
 		}
 
-		// Token: 0x0600B56C RID: 46444 RVA: 0x00102DB1 File Offset: 0x00100FB1
+		// Token: 0x06002D8D RID: 11661 RVA: 0x00040721 File Offset: 0x0003E921
 		public void SetIsRequestingUnloadAndRemoval(bool bInIsRequestingUnloadAndRemoval)
 		{
 			ULevelStreaming.__SetIsRequestingUnloadAndRemoval_Internal(base.NativePtr, bInIsRequestingUnloadAndRemoval);
 		}
 
-		// Token: 0x0600B56D RID: 46445 RVA: 0x00102DBF File Offset: 0x00100FBF
+		// Token: 0x06002D8E RID: 11662 RVA: 0x0004072F File Offset: 0x0003E92F
 		public bool IsStreamingStatePending()
 		{
 			return ULevelStreaming.__IsStreamingStatePending_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B56E RID: 46446 RVA: 0x00102DCC File Offset: 0x00100FCC
+		// Token: 0x06002D8F RID: 11663 RVA: 0x0004073C File Offset: 0x0003E93C
 		public bool IsLevelVisible()
 		{
 			return ULevelStreaming.__IsLevelVisible_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B56F RID: 46447 RVA: 0x00102DD9 File Offset: 0x00100FD9
+		// Token: 0x06002D90 RID: 11664 RVA: 0x00040749 File Offset: 0x0003E949
 		public bool IsLevelLoaded()
 		{
 			return ULevelStreaming.__IsLevelLoaded_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B570 RID: 46448 RVA: 0x00102DE6 File Offset: 0x00100FE6
+		// Token: 0x06002D91 RID: 11665 RVA: 0x00040756 File Offset: 0x0003E956
 		public FName GetWorldAssetPackageFName()
 		{
 			return ULevelStreaming.__GetWorldAssetPackageFName_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B571 RID: 46449 RVA: 0x00102DF3 File Offset: 0x00100FF3
+		// Token: 0x06002D92 RID: 11666 RVA: 0x00040763 File Offset: 0x0003E963
 		[NullableContext(2)]
 		public ULevel GetLoadedLevel()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevel>(ULevelStreaming.__GetLoadedLevel_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600B572 RID: 46450 RVA: 0x00102E05 File Offset: 0x00101005
-		[NullableContext(2)]
-		public ALevelScriptActor GetLevelScriptActor()
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ALevelScriptActor>(ULevelStreaming.__GetLevelScriptActor_Internal(base.NativePtr));
-		}
-
-		// Token: 0x0600B573 RID: 46451 RVA: 0x00102E17 File Offset: 0x00101017
+		// Token: 0x06002D93 RID: 11667 RVA: 0x00040775 File Offset: 0x0003E975
 		public bool GetIsRequestingUnloadAndRemoval()
 		{
 			return ULevelStreaming.__GetIsRequestingUnloadAndRemoval_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600B574 RID: 46452 RVA: 0x00102E24 File Offset: 0x00101024
+		// Token: 0x06002D94 RID: 11668 RVA: 0x00040784 File Offset: 0x0003E984
 		[return: Nullable(2)]
 		public unsafe ULevelStreaming CreateInstance(string UniqueInstanceName)
 		{
@@ -511,209 +483,194 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x0600B575 RID: 46453
+		// Token: 0x06002D95 RID: 11669
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ShouldBeLoaded_Internal(IntPtr @this);
 
-		// Token: 0x0600B576 RID: 46454
+		// Token: 0x06002D96 RID: 11670
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShouldBeVisible_Internal(IntPtr @this, bool bInShouldBeVisible);
 
-		// Token: 0x0600B577 RID: 46455
+		// Token: 0x06002D97 RID: 11671
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShouldBeLoaded_Internal(IntPtr @this, bool bInShouldBeLoaded);
 
-		// Token: 0x0600B578 RID: 46456
+		// Token: 0x06002D98 RID: 11672
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPriority_Internal(IntPtr @this, int NewPriority);
 
-		// Token: 0x0600B579 RID: 46457
+		// Token: 0x06002D99 RID: 11673
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLevelLODIndex_Internal(IntPtr @this, int LODIndex);
 
-		// Token: 0x0600B57A RID: 46458
+		// Token: 0x06002D9A RID: 11674
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIsRequestingUnloadAndRemoval_Internal(IntPtr @this, bool bInIsRequestingUnloadAndRemoval);
 
-		// Token: 0x0600B57B RID: 46459
+		// Token: 0x06002D9B RID: 11675
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingStatePending_Internal(IntPtr @this);
 
-		// Token: 0x0600B57C RID: 46460
+		// Token: 0x06002D9C RID: 11676
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLevelVisible_Internal(IntPtr @this);
 
-		// Token: 0x0600B57D RID: 46461
+		// Token: 0x06002D9D RID: 11677
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLevelLoaded_Internal(IntPtr @this);
 
-		// Token: 0x0600B57E RID: 46462
+		// Token: 0x06002D9E RID: 11678
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetWorldAssetPackageFName_Internal(IntPtr @this);
 
-		// Token: 0x0600B57F RID: 46463
+		// Token: 0x06002D9F RID: 11679
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLoadedLevel_Internal(IntPtr @this);
 
-		// Token: 0x0600B580 RID: 46464
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetLevelScriptActor_Internal(IntPtr @this);
-
-		// Token: 0x0600B581 RID: 46465
+		// Token: 0x06002DA0 RID: 11680
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIsRequestingUnloadAndRemoval_Internal(IntPtr @this);
 
-		// Token: 0x0600B582 RID: 46466
+		// Token: 0x06002DA1 RID: 11681
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __CreateInstance_Internal(IntPtr @this, in FString UniqueInstanceName);
 
-		// Token: 0x0600B583 RID: 46467 RVA: 0x00102E53 File Offset: 0x00101053
+		// Token: 0x06002DA2 RID: 11682 RVA: 0x000407B3 File Offset: 0x0003E9B3
 		static ULevelStreaming()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.LevelStreaming");
 		}
 
-		// Token: 0x0600B584 RID: 46468 RVA: 0x00102E64 File Offset: 0x00101064
+		// Token: 0x06002DA3 RID: 11683 RVA: 0x000407C4 File Offset: 0x0003E9C4
 		protected ULevelStreaming() : this(BuiltinUtils.AllocNativeUObject(ULevelStreaming.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B585 RID: 46469 RVA: 0x00102E8C File Offset: 0x0010108C
+		// Token: 0x06002DA4 RID: 11684 RVA: 0x000407EC File Offset: 0x0003E9EC
 		protected ULevelStreaming(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005F3E RID: 24382
+		// Token: 0x04000E76 RID: 3702
 		public new const string __ObjectPath = "/Script/Engine.LevelStreaming";
 
-		// Token: 0x04005F3F RID: 24383
+		// Token: 0x04000E77 RID: 3703
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005F40 RID: 24384
+		// Token: 0x04000E78 RID: 3704
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005F41 RID: 24385
+		// Token: 0x04000E79 RID: 3705
 		internal static int __PropertyOffset_WorldAsset;
 
-		// Token: 0x04005F42 RID: 24386
+		// Token: 0x04000E7A RID: 3706
 		internal static int __PropertyOffset_StreamingPriority;
 
-		// Token: 0x04005F43 RID: 24387
+		// Token: 0x04000E7B RID: 3707
 		internal static int __PropertyOffset_PackageNameToLoad;
 
-		// Token: 0x04005F44 RID: 24388
+		// Token: 0x04000E7C RID: 3708
 		internal static int __PropertyOffset_LODPackageNames;
 
-		// Token: 0x04005F45 RID: 24389
+		// Token: 0x04000E7D RID: 3709
 		[Nullable(2)]
 		private TArray<FName> _LODPackageNames;
 
-		// Token: 0x04005F46 RID: 24390
+		// Token: 0x04000E7E RID: 3710
 		internal static int __PropertyOffset_LevelTransform;
 
-		// Token: 0x04005F47 RID: 24391
+		// Token: 0x04000E7F RID: 3711
 		internal static int __PropertyOffset_bClientOnlyVisible;
 
-		// Token: 0x04005F48 RID: 24392
+		// Token: 0x04000E80 RID: 3712
 		internal static int __PropertyOffset_LevelLODIndex;
 
-		// Token: 0x04005F49 RID: 24393
+		// Token: 0x04000E81 RID: 3713
 		internal static int __PropertyOffset_bShouldBeVisible;
 
-		// Token: 0x04005F4A RID: 24394
+		// Token: 0x04000E82 RID: 3714
 		internal static byte __PropertyMask_bShouldBeVisible;
 
-		// Token: 0x04005F4B RID: 24395
+		// Token: 0x04000E83 RID: 3715
 		internal static int __PropertyOffset_bShouldBeLoaded;
 
-		// Token: 0x04005F4C RID: 24396
+		// Token: 0x04000E84 RID: 3716
 		internal static byte __PropertyMask_bShouldBeLoaded;
 
-		// Token: 0x04005F4D RID: 24397
+		// Token: 0x04000E85 RID: 3717
 		internal static int __PropertyOffset_bLocked;
 
-		// Token: 0x04005F4E RID: 24398
+		// Token: 0x04000E86 RID: 3718
 		internal static byte __PropertyMask_bLocked;
 
-		// Token: 0x04005F4F RID: 24399
+		// Token: 0x04000E87 RID: 3719
 		internal static int __PropertyOffset_bIsStatic;
 
-		// Token: 0x04005F50 RID: 24400
+		// Token: 0x04000E88 RID: 3720
 		internal static byte __PropertyMask_bIsStatic;
 
-		// Token: 0x04005F51 RID: 24401
+		// Token: 0x04000E89 RID: 3721
 		internal static int __PropertyOffset_bShouldBlockOnLoad;
 
-		// Token: 0x04005F52 RID: 24402
+		// Token: 0x04000E8A RID: 3722
 		internal static byte __PropertyMask_bShouldBlockOnLoad;
 
-		// Token: 0x04005F53 RID: 24403
+		// Token: 0x04000E8B RID: 3723
 		internal static int __PropertyOffset_bShouldBlockOnUnload;
 
-		// Token: 0x04005F54 RID: 24404
+		// Token: 0x04000E8C RID: 3724
 		internal static byte __PropertyMask_bShouldBlockOnUnload;
 
-		// Token: 0x04005F55 RID: 24405
+		// Token: 0x04000E8D RID: 3725
 		internal static int __PropertyOffset_bDisableDistanceStreaming;
 
-		// Token: 0x04005F56 RID: 24406
+		// Token: 0x04000E8E RID: 3726
 		internal static byte __PropertyMask_bDisableDistanceStreaming;
 
-		// Token: 0x04005F57 RID: 24407
+		// Token: 0x04000E8F RID: 3727
 		internal static int __PropertyOffset_bDrawOnLevelStatusMap;
 
-		// Token: 0x04005F58 RID: 24408
+		// Token: 0x04000E90 RID: 3728
 		internal static byte __PropertyMask_bDrawOnLevelStatusMap;
 
-		// Token: 0x04005F59 RID: 24409
+		// Token: 0x04000E91 RID: 3729
 		internal static int __PropertyOffset_LevelColor;
 
-		// Token: 0x04005F5A RID: 24410
-		internal static int __PropertyOffset_EditorStreamingVolumes;
-
-		// Token: 0x04005F5B RID: 24411
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<ALevelStreamingVolume> _EditorStreamingVolumes;
-
-		// Token: 0x04005F5C RID: 24412
+		// Token: 0x04000E92 RID: 3730
 		internal static int __PropertyOffset_MinTimeBetweenVolumeUnloadRequests;
 
-		// Token: 0x04005F5D RID: 24413
+		// Token: 0x04000E93 RID: 3731
 		internal static int __PropertyOffset_OnLevelLoaded;
 
-		// Token: 0x04005F5E RID: 24414
+		// Token: 0x04000E94 RID: 3732
 		[Nullable(2)]
 		private FLevelStreamingLoadedStatus _OnLevelLoaded;
 
-		// Token: 0x04005F5F RID: 24415
+		// Token: 0x04000E95 RID: 3733
 		internal static int __PropertyOffset_OnLevelUnloaded;
 
-		// Token: 0x04005F60 RID: 24416
+		// Token: 0x04000E96 RID: 3734
 		[Nullable(2)]
 		private FLevelStreamingLoadedStatus _OnLevelUnloaded;
 
-		// Token: 0x04005F61 RID: 24417
+		// Token: 0x04000E97 RID: 3735
 		internal static int __PropertyOffset_OnLevelShown;
 
-		// Token: 0x04005F62 RID: 24418
+		// Token: 0x04000E98 RID: 3736
 		[Nullable(2)]
 		private FLevelStreamingVisibilityStatus _OnLevelShown;
 
-		// Token: 0x04005F63 RID: 24419
+		// Token: 0x04000E99 RID: 3737
 		internal static int __PropertyOffset_OnLevelHidden;
 
-		// Token: 0x04005F64 RID: 24420
+		// Token: 0x04000E9A RID: 3738
 		[Nullable(2)]
 		private FLevelStreamingVisibilityStatus _OnLevelHidden;
 
-		// Token: 0x04005F65 RID: 24421
+		// Token: 0x04000E9B RID: 3739
 		internal static int __PropertyOffset_LoadedLevel;
 
-		// Token: 0x04005F66 RID: 24422
+		// Token: 0x04000E9C RID: 3740
 		internal static int __PropertyOffset_PendingUnloadLevel;
 	}
 }

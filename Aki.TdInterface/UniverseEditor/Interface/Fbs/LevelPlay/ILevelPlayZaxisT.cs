@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200451F RID: 17695
+	// Token: 0x02004987 RID: 18823
 	public class ILevelPlayZaxisT
 	{
-		// Token: 0x17007D71 RID: 32113
-		// (get) Token: 0x0601A989 RID: 108937 RVA: 0x003CC05E File Offset: 0x003CA25E
-		// (set) Token: 0x0601A98A RID: 108938 RVA: 0x003CC066 File Offset: 0x003CA266
+		// Token: 0x170083B2 RID: 33714
+		// (get) Token: 0x0601C15E RID: 115038 RVA: 0x003F82FA File Offset: 0x003F64FA
+		// (set) Token: 0x0601C15F RID: 115039 RVA: 0x003F8302 File Offset: 0x003F6502
 		public int Up { get; set; }
 
-		// Token: 0x17007D72 RID: 32114
-		// (get) Token: 0x0601A98B RID: 108939 RVA: 0x003CC06F File Offset: 0x003CA26F
-		// (set) Token: 0x0601A98C RID: 108940 RVA: 0x003CC077 File Offset: 0x003CA277
+		// Token: 0x170083B3 RID: 33715
+		// (get) Token: 0x0601C160 RID: 115040 RVA: 0x003F830B File Offset: 0x003F650B
+		// (set) Token: 0x0601C161 RID: 115041 RVA: 0x003F8313 File Offset: 0x003F6513
 		public int Down { get; set; }
 
-		// Token: 0x17007D73 RID: 32115
-		// (get) Token: 0x0601A98D RID: 108941 RVA: 0x003CC080 File Offset: 0x003CA280
-		// (set) Token: 0x0601A98E RID: 108942 RVA: 0x003CC088 File Offset: 0x003CA288
+		// Token: 0x170083B4 RID: 33716
+		// (get) Token: 0x0601C162 RID: 115042 RVA: 0x003F831C File Offset: 0x003F651C
+		// (set) Token: 0x0601C163 RID: 115043 RVA: 0x003F8324 File Offset: 0x003F6524
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A98F RID: 108943 RVA: 0x003CC091 File Offset: 0x003CA291
+		// Token: 0x0601C164 RID: 115044 RVA: 0x003F832D File Offset: 0x003F652D
 		public ILevelPlayZaxisT()
 		{
 			this.Up = 0;

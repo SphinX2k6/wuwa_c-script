@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002174 RID: 8564
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023D5 RID: 9173
 	public class RogueSelectRoom : ActionParams
 	{
-		// Token: 0x0600BC50 RID: 48208 RVA: 0x001B2418 File Offset: 0x001B0618
+		// Token: 0x0600C7DE RID: 51166 RVA: 0x001C95CC File Offset: 0x001C77CC
 		private RogueSelectRoom_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC51 RID: 48209 RVA: 0x001B2450 File Offset: 0x001B0650
+		// Token: 0x0600C7DF RID: 51167 RVA: 0x001C9604 File Offset: 0x001C7804
 		public static RogueSelectRoom Create([Nullable(2)] RogueSelectRoom instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC52 RID: 48210 RVA: 0x001B2463 File Offset: 0x001B0663
+		// Token: 0x0600C7E0 RID: 51168 RVA: 0x001C9617 File Offset: 0x001C7817
 		public static RogueSelectRoom CreateFromSetValue([Nullable(2)] RogueSelectRoom_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC53 RID: 48211 RVA: 0x001B2476 File Offset: 0x001B0676
+		// Token: 0x0600C7E1 RID: 51169 RVA: 0x001C962A File Offset: 0x001C782A
 		public RogueSelectRoom_SetValue ToSetValue()
 		{
 			return new RogueSelectRoom_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003959 RID: 14681
-		// (get) Token: 0x0600BC54 RID: 48212 RVA: 0x001B248C File Offset: 0x001B068C
-		// (set) Token: 0x0600BC55 RID: 48213 RVA: 0x001B24ED File Offset: 0x001B06ED
+		// Token: 0x17003C46 RID: 15430
+		// (get) Token: 0x0600C7E2 RID: 51170 RVA: 0x001C9640 File Offset: 0x001C7840
+		// (set) Token: 0x0600C7E3 RID: 51171 RVA: 0x001C96A1 File Offset: 0x001C78A1
 		public virtual IRogueRoleSelectRoom Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400707B RID: 28795
+		// Token: 0x040076B0 RID: 30384
 		[Nullable(2)]
 		protected new RogueSelectRoom FbInstance;
 
-		// Token: 0x0400707C RID: 28796
+		// Token: 0x040076B1 RID: 30385
 		[Nullable(2)]
 		protected RogueSelectRoom_SetValue PocoInterface;
 
-		// Token: 0x0400707D RID: 28797
+		// Token: 0x040076B2 RID: 30386
 		private IRogueRoleSelectRoom _ConfigCache;
 
-		// Token: 0x0400707E RID: 28798
+		// Token: 0x040076B3 RID: 30387
 		private bool _ConfigInited;
 	}
 }

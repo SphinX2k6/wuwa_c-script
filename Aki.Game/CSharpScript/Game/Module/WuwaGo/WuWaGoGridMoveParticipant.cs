@@ -4,26 +4,26 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004705 RID: 18181
+	// Token: 0x02003635 RID: 13877
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class WuWaGoGridMoveParticipant : IWuWaGoGridMoveParticipant
 	{
-		// Token: 0x170076A8 RID: 30376
-		// (get) Token: 0x0602F85A RID: 194650 RVA: 0x00B036FC File Offset: 0x00B018FC
-		// (set) Token: 0x0602F85B RID: 194651 RVA: 0x00B03704 File Offset: 0x00B01904
+		// Token: 0x17004964 RID: 18788
+		// (get) Token: 0x06024020 RID: 147488 RVA: 0x00A333CC File Offset: 0x00A315CC
+		// (set) Token: 0x06024021 RID: 147489 RVA: 0x00A333D4 File Offset: 0x00A315D4
 		[RequiredMember]
 		public string ParticipantKey { get; set; }
 
-		// Token: 0x170076A9 RID: 30377
-		// (get) Token: 0x0602F85C RID: 194652 RVA: 0x00B0370D File Offset: 0x00B0190D
-		// (set) Token: 0x0602F85D RID: 194653 RVA: 0x00B03715 File Offset: 0x00B01915
+		// Token: 0x17004965 RID: 18789
+		// (get) Token: 0x06024022 RID: 147490 RVA: 0x00A333DD File Offset: 0x00A315DD
+		// (set) Token: 0x06024023 RID: 147491 RVA: 0x00A333E5 File Offset: 0x00A315E5
 		public int? MovedRoleId { get; set; }
 
-		// Token: 0x170076AA RID: 30378
-		// (get) Token: 0x0602F85E RID: 194654 RVA: 0x00B0371E File Offset: 0x00B0191E
-		// (set) Token: 0x0602F85F RID: 194655 RVA: 0x00B03726 File Offset: 0x00B01926
+		// Token: 0x17004966 RID: 18790
+		// (get) Token: 0x06024024 RID: 147492 RVA: 0x00A333EE File Offset: 0x00A315EE
+		// (set) Token: 0x06024025 RID: 147493 RVA: 0x00A333F6 File Offset: 0x00A315F6
 		[Nullable(new byte[]
 		{
 			2,
@@ -42,9 +42,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			2
 		})] set; }
 
-		// Token: 0x170076AB RID: 30379
-		// (get) Token: 0x0602F860 RID: 194656 RVA: 0x00B0372F File Offset: 0x00B0192F
-		// (set) Token: 0x0602F861 RID: 194657 RVA: 0x00B03737 File Offset: 0x00B01937
+		// Token: 0x17004967 RID: 18791
+		// (get) Token: 0x06024026 RID: 147494 RVA: 0x00A333FF File Offset: 0x00A315FF
+		// (set) Token: 0x06024027 RID: 147495 RVA: 0x00A33407 File Offset: 0x00A31607
 		[Nullable(new byte[]
 		{
 			2,
@@ -60,9 +60,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			1
 		})] set; }
 
-		// Token: 0x170076AC RID: 30380
-		// (get) Token: 0x0602F862 RID: 194658 RVA: 0x00B03740 File Offset: 0x00B01940
-		// (set) Token: 0x0602F863 RID: 194659 RVA: 0x00B03748 File Offset: 0x00B01948
+		// Token: 0x17004968 RID: 18792
+		// (get) Token: 0x06024028 RID: 147496 RVA: 0x00A33410 File Offset: 0x00A31610
+		// (set) Token: 0x06024029 RID: 147497 RVA: 0x00A33418 File Offset: 0x00A31618
 		[Nullable(new byte[]
 		{
 			2,
@@ -78,9 +78,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			1
 		})] set; }
 
-		// Token: 0x170076AD RID: 30381
-		// (get) Token: 0x0602F864 RID: 194660 RVA: 0x00B03751 File Offset: 0x00B01951
-		// (set) Token: 0x0602F865 RID: 194661 RVA: 0x00B03759 File Offset: 0x00B01959
+		// Token: 0x17004969 RID: 18793
+		// (get) Token: 0x0602402A RID: 147498 RVA: 0x00A33421 File Offset: 0x00A31621
+		// (set) Token: 0x0602402B RID: 147499 RVA: 0x00A33429 File Offset: 0x00A31629
 		[Nullable(new byte[]
 		{
 			2,
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			1
 		})] set; }
 
-		// Token: 0x0602F866 RID: 194662 RVA: 0x00B03762 File Offset: 0x00B01962
+		// Token: 0x0602402C RID: 147500 RVA: 0x00A33432 File Offset: 0x00A31632
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public WuWaGoGridMoveParticipant()

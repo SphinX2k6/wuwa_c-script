@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E51 RID: 24145
+	// Token: 0x02004E36 RID: 20022
 	public class BattleUiSpecialRoleDataLuPa : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D676 RID: 251510 RVA: 0x00ECFE44 File Offset: 0x00ECE044
+		// Token: 0x06032606 RID: 206342 RVA: 0x00E213B4 File Offset: 0x00E1F5B4
 		protected override void OnInit()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D677 RID: 251511 RVA: 0x00ECFE94 File Offset: 0x00ECE094
+		// Token: 0x06032607 RID: 206343 RVA: 0x00E21404 File Offset: 0x00E1F604
 		protected override void OnClear()
 		{
 			BattleUiRoleData roleData = this.RoleData;

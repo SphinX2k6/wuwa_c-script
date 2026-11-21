@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002674 RID: 9844
+// Token: 0x02001B5F RID: 7007
 public enum EQuestReviewLineState
 {
-	// Token: 0x040097E6 RID: 38886
+	// Token: 0x0400993E RID: 39230
 	Hide,
-	// Token: 0x040097E7 RID: 38887
+	// Token: 0x0400993F RID: 39231
 	Show,
-	// Token: 0x040097E8 RID: 38888
+	// Token: 0x04009940 RID: 39232
 	Destroy
 }

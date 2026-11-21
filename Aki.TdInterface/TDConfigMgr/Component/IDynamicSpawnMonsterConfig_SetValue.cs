@@ -1,32 +1,29 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002EE RID: 750
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000335 RID: 821
 	public class IDynamicSpawnMonsterConfig_SetValue
 	{
-		// Token: 0x04000CC9 RID: 3273
+		// Token: 0x04000DB3 RID: 3507
 		public int Id;
 
-		// Token: 0x04000CCA RID: 3274
+		// Token: 0x04000DB4 RID: 3508
 		public float DelayTime;
 
-		// Token: 0x04000CCB RID: 3275
+		// Token: 0x04000DB5 RID: 3509
 		public ISpawnMonsterCompleteCondition CompleteCondition;
 
-		// Token: 0x04000CCC RID: 3276
+		// Token: 0x04000DB6 RID: 3510
 		public ISpawnMonsterPreDependOnPreceding PreCondition;
 
-		// Token: 0x04000CCD RID: 3277
+		// Token: 0x04000DB7 RID: 3511
 		public float? Interval;
 
-		// Token: 0x04000CCE RID: 3278
+		// Token: 0x04000DB8 RID: 3512
 		public IRandomPoolChoose MonsterChooseType;
 
-		// Token: 0x04000CCF RID: 3279
+		// Token: 0x04000DB9 RID: 3513
 		public ISpawnMonsterPoint PointChooseType;
 	}
 }

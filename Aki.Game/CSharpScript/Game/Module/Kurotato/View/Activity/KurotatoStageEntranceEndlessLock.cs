@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x0200578D RID: 22413
+	// Token: 0x02004764 RID: 18276
 	public class KurotatoStageEntranceEndlessLock : UiPanelBase
 	{
-		// Token: 0x06038EED RID: 233197 RVA: 0x00D88410 File Offset: 0x00D86610
+		// Token: 0x0602DDFD RID: 187901 RVA: 0x00CD716C File Offset: 0x00CD536C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038EEE RID: 233198 RVA: 0x00D8847C File Offset: 0x00D8667C
+		// Token: 0x0602DDFE RID: 187902 RVA: 0x00CD71D8 File Offset: 0x00CD53D8
 		public void RefreshView()
 		{
 			int levelId = KurotatoConfig.Instance.GetLevelGroupConfig(3).Value.LevelId;
@@ -53,12 +53,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Kurotato_Level_Select_UnlockTip", new <>z__ReadOnlySingleElementList<object>(multiTextByKey));
 		}
 
-		// Token: 0x0200B9B4 RID: 47540
+		// Token: 0x0200A3CA RID: 41930
 		private enum ELockComponents
 		{
-			// Token: 0x04038265 RID: 229989
+			// Token: 0x04032C56 RID: 207958
 			UpText,
-			// Token: 0x04038266 RID: 229990
+			// Token: 0x04032C57 RID: 207959
 			DownText
 		}
 	}

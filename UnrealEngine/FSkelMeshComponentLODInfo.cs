@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200110E RID: 4366
+	// Token: 0x02000282 RID: 642
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.SkelMeshComponentLODInfo")]
-	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
+	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FSkelMeshComponentLODInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600FD59 RID: 64857 RVA: 0x0017628F File Offset: 0x0017448F
+		// Token: 0x060044A9 RID: 17577 RVA: 0x00061673 File Offset: 0x0005F873
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSkelMeshComponentLODInfo._ScriptStructPtr != 0) ? FSkelMeshComponentLODInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.SkelMeshComponentLODInfo", ref FSkelMeshComponentLODInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17003DD1 RID: 15825
-		// (get) Token: 0x0600FD5A RID: 64858 RVA: 0x001762B4 File Offset: 0x001744B4
-		// (set) Token: 0x0600FD5B RID: 64859 RVA: 0x001762F7 File Offset: 0x001744F7
+		// Token: 0x17000CCD RID: 3277
+		// (get) Token: 0x060044AA RID: 17578 RVA: 0x00061698 File Offset: 0x0005F898
+		// (set) Token: 0x060044AB RID: 17579 RVA: 0x000616DB File Offset: 0x0005F8DB
 		public TArray<bool> HiddenMaterials
 		{
 			get
@@ -39,56 +39,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600FD5C RID: 64860 RVA: 0x00176305 File Offset: 0x00174505
+		// Token: 0x060044AC RID: 17580 RVA: 0x000616E9 File Offset: 0x0005F8E9
 		public FSkelMeshComponentLODInfo()
 		{
 		}
 
-		// Token: 0x0600FD5D RID: 64861 RVA: 0x0017630D File Offset: 0x0017450D
-		public FSkelMeshComponentLODInfo(TArray<bool> HiddenMaterials)
-		{
-			this.HiddenMaterials = HiddenMaterials;
-		}
-
-		// Token: 0x0600FD5E RID: 64862 RVA: 0x0017631C File Offset: 0x0017451C
+		// Token: 0x060044AD RID: 17581 RVA: 0x000616F1 File Offset: 0x0005F8F1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSkelMeshComponentLODInfo.StaticStruct();
 		}
 
-		// Token: 0x0600FD5F RID: 64863 RVA: 0x00176328 File Offset: 0x00174528
+		// Token: 0x060044AE RID: 17582 RVA: 0x000616FD File Offset: 0x0005F8FD
 		[NullableContext(2)]
 		public FSkelMeshComponentLODInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600FD60 RID: 64864 RVA: 0x00176332 File Offset: 0x00174532
+		// Token: 0x060044AF RID: 17583 RVA: 0x00061707 File Offset: 0x0005F907
 		public FSkelMeshComponentLODInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600FD61 RID: 64865 RVA: 0x0017633D File Offset: 0x0017453D
+		// Token: 0x060044B0 RID: 17584 RVA: 0x00061712 File Offset: 0x0005F912
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSkelMeshComponentLODInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0600FD62 RID: 64866 RVA: 0x00176347 File Offset: 0x00174547
+		// Token: 0x060044B1 RID: 17585 RVA: 0x0006171C File Offset: 0x0005F91C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSkelMeshComponentLODInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400889C RID: 34972
+		// Token: 0x04001ADD RID: 6877
 		public const string __ObjectPath = "/Script/Engine.SkelMeshComponentLODInfo";
 
-		// Token: 0x0400889D RID: 34973
+		// Token: 0x04001ADE RID: 6878
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400889E RID: 34974
+		// Token: 0x04001ADF RID: 6879
 		internal static int __PropertyOffset_HiddenMaterials;
 
-		// Token: 0x0400889F RID: 34975
+		// Token: 0x04001AE0 RID: 6880
 		[Nullable(2)]
 		private TArray<bool> _HiddenMaterials;
 	}

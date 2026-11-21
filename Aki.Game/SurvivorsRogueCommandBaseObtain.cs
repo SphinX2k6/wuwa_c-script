@@ -5,13 +5,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002ADD RID: 10973
+// Token: 0x02002059 RID: 8281
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueCommandBaseObtain : SurvivorsRogueCommandBase
 {
-	// Token: 0x17001E5F RID: 7775
-	// (get) Token: 0x06016D62 RID: 93538 RVA: 0x005CC181 File Offset: 0x005CA381
+	// Token: 0x17001EB7 RID: 7863
+	// (get) Token: 0x06014793 RID: 83859 RVA: 0x005F8CD1 File Offset: 0x005F6ED1
 	protected SurvivorsRogueGeneralObtainView ObtainViewProxy
 	{
 		get
@@ -20,18 +20,18 @@ public class SurvivorsRogueCommandBaseObtain : SurvivorsRogueCommandBase
 		}
 	}
 
-	// Token: 0x06016D63 RID: 93539 RVA: 0x005CC18E File Offset: 0x005CA38E
+	// Token: 0x06014794 RID: 83860 RVA: 0x005F8CDE File Offset: 0x005F6EDE
 	public SurvivorsRogueCommandBaseObtain(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016D64 RID: 93540 RVA: 0x005CC1A2 File Offset: 0x005CA3A2
+	// Token: 0x06014795 RID: 83861 RVA: 0x005F8CF2 File Offset: 0x005F6EF2
 	protected override void OnStartExecute()
 	{
 		this.TryOpenViewOrRefresh();
 	}
 
-	// Token: 0x06016D65 RID: 93541 RVA: 0x005CC1AA File Offset: 0x005CA3AA
+	// Token: 0x06014796 RID: 83862 RVA: 0x005F8CFA File Offset: 0x005F6EFA
 	protected override void Back2Fore()
 	{
 		if (this.ObtainViewProxy == null)
@@ -40,7 +40,7 @@ public class SurvivorsRogueCommandBaseObtain : SurvivorsRogueCommandBase
 		}
 	}
 
-	// Token: 0x06016D66 RID: 93542 RVA: 0x005CC1BA File Offset: 0x005CA3BA
+	// Token: 0x06014797 RID: 83863 RVA: 0x005F8D0A File Offset: 0x005F6F0A
 	private void TryOpenViewOrRefresh()
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.SurvivorsRogueGeneralObtainView))
@@ -51,26 +51,26 @@ public class SurvivorsRogueCommandBaseObtain : SurvivorsRogueCommandBase
 		EventSystem.Instance.Emit<int>(EEventName.SurvivorsRebindCommandView, this.IncId);
 	}
 
-	// Token: 0x06016D67 RID: 93543 RVA: 0x005CC1F0 File Offset: 0x005CA3F0
+	// Token: 0x06014798 RID: 83864 RVA: 0x005F8D40 File Offset: 0x005F6F40
 	protected override void OnFinish()
 	{
 		base.RequestCommand(this.SelectIds.ToArray(), null);
 	}
 
-	// Token: 0x06016D68 RID: 93544 RVA: 0x005CC204 File Offset: 0x005CA404
+	// Token: 0x06014799 RID: 83865 RVA: 0x005F8D54 File Offset: 0x005F6F54
 	[NullableContext(1)]
 	protected ISurvivorsChooseData GetChooseData(SurvivorsOption info, ESurvivorsObtainMode? forceMode = null)
 	{
 		return new SurvivorsChooseData(forceMode ?? ((info.MaxSelectCount >= info.GoodsDetails.Count) ? ESurvivorsObtainMode.All : ESurvivorsObtainMode.SingleSelect));
 	}
 
-	// Token: 0x06016D69 RID: 93545 RVA: 0x005CC241 File Offset: 0x005CA441
+	// Token: 0x0601479A RID: 83866 RVA: 0x005F8D91 File Offset: 0x005F6F91
 	public virtual ISurvivorsObtainViewInfo GetViewInfo()
 	{
 		return null;
 	}
 
-	// Token: 0x0400A9A8 RID: 43432
+	// Token: 0x0400ADAE RID: 44462
 	[Nullable(1)]
 	public List<int> SelectIds = new List<int>();
 }

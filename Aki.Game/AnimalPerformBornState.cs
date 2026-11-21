@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.World.Define;
 using UnrealEngine;
 
-// Token: 0x02002E28 RID: 11816
+// Token: 0x02002384 RID: 9092
 [NullableContext(2)]
 [Nullable(0)]
 public class AnimalPerformBornState : AnimalPerformStateBase
 {
-	// Token: 0x06018E3E RID: 101950 RVA: 0x0066A08D File Offset: 0x0066828D
+	// Token: 0x0601670B RID: 91915 RVA: 0x0068FF7D File Offset: 0x0068E17D
 	[NullableContext(1)]
 	public AnimalPerformBornState(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 	{
 	}
 
-	// Token: 0x06018E3F RID: 101951 RVA: 0x0066A098 File Offset: 0x00668298
+	// Token: 0x0601670C RID: 91916 RVA: 0x0068FF88 File Offset: 0x0068E188
 	protected override void OnStart()
 	{
 		Entity owner = this.Owner;
@@ -44,7 +44,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E40 RID: 101952 RVA: 0x0066A154 File Offset: 0x00668354
+	// Token: 0x0601670D RID: 91917 RVA: 0x00690044 File Offset: 0x0068E244
 	protected override void OnExit(EAnimalPerformState nextState)
 	{
 		this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["动物.Common.状态标识.交互.站起"]));
@@ -52,7 +52,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		this.AbortBornMontage();
 	}
 
-	// Token: 0x06018E41 RID: 101953 RVA: 0x0066A1A8 File Offset: 0x006683A8
+	// Token: 0x0601670E RID: 91918 RVA: 0x00690098 File Offset: 0x0068E298
 	protected void InitBornMontageInfo()
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -108,7 +108,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		this.TryLoadBornBranchMontageAssets(this.BornMontageInfo.BranchPathList);
 	}
 
-	// Token: 0x06018E42 RID: 101954 RVA: 0x0066A308 File Offset: 0x00668508
+	// Token: 0x0601670F RID: 91919 RVA: 0x006901F8 File Offset: 0x0068E3F8
 	protected void TryLoadBornMontageAsset(string path, AnimalPerformBornState.EAnimalBornMontagePhase phase)
 	{
 		if (path2 == null || path2 == "" || path2 == "None")
@@ -124,7 +124,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06018E43 RID: 101955 RVA: 0x0066A37C File Offset: 0x0066857C
+	// Token: 0x06016710 RID: 91920 RVA: 0x0069026C File Offset: 0x0068E46C
 	[NullableContext(1)]
 	protected void TryLoadBornBranchMontageAssets(List<string> paths)
 	{
@@ -174,7 +174,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E44 RID: 101956 RVA: 0x0066A478 File Offset: 0x00668678
+	// Token: 0x06016711 RID: 91921 RVA: 0x00690368 File Offset: 0x0068E568
 	protected void MarkAssetLoadedComplete(UAnimMontage asset, AnimalPerformBornState.EAnimalBornMontagePhase phase)
 	{
 		switch (phase)
@@ -199,7 +199,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E45 RID: 101957 RVA: 0x0066A4F5 File Offset: 0x006686F5
+	// Token: 0x06016712 RID: 91922 RVA: 0x006903E5 File Offset: 0x0068E5E5
 	protected void WaitAssetLoadedComplete()
 	{
 		AnimalBornMontageInfo bornMontageInfo = this.BornMontageInfo;
@@ -218,7 +218,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		this.FinishBornPerformance();
 	}
 
-	// Token: 0x06018E46 RID: 101958 RVA: 0x0066A528 File Offset: 0x00668728
+	// Token: 0x06016713 RID: 91923 RVA: 0x00690418 File Offset: 0x0068E618
 	protected bool TryPlayBornMontageStart()
 	{
 		if (this.BornMontagePhase == AnimalPerformBornState.EAnimalBornMontagePhase.Finish)
@@ -249,7 +249,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		return true;
 	}
 
-	// Token: 0x06018E47 RID: 101959 RVA: 0x0066A5B0 File Offset: 0x006687B0
+	// Token: 0x06016714 RID: 91924 RVA: 0x006904A0 File Offset: 0x0068E6A0
 	protected bool TryPlayBornMontageLoop()
 	{
 		if (this.BornMontagePhase == AnimalPerformBornState.EAnimalBornMontagePhase.Finish)
@@ -291,7 +291,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		return true;
 	}
 
-	// Token: 0x06018E48 RID: 101960 RVA: 0x0066A6A4 File Offset: 0x006688A4
+	// Token: 0x06016715 RID: 91925 RVA: 0x00690594 File Offset: 0x0068E794
 	protected bool TryPlayBornMontageBranch()
 	{
 		if (this.BornMontagePhase == AnimalPerformBornState.EAnimalBornMontagePhase.Finish)
@@ -329,7 +329,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		return true;
 	}
 
-	// Token: 0x06018E49 RID: 101961 RVA: 0x0066A790 File Offset: 0x00668990
+	// Token: 0x06016716 RID: 91926 RVA: 0x00690680 File Offset: 0x0068E880
 	[NullableContext(1)]
 	protected bool TryPlayBornMontageEnd(Action callback)
 	{
@@ -364,7 +364,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		return true;
 	}
 
-	// Token: 0x06018E4A RID: 101962 RVA: 0x0066A838 File Offset: 0x00668A38
+	// Token: 0x06016717 RID: 91927 RVA: 0x00690728 File Offset: 0x0068E928
 	[NullableContext(1)]
 	public void InterruptBornPerformance(Action callback)
 	{
@@ -383,7 +383,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		callback();
 	}
 
-	// Token: 0x06018E4B RID: 101963 RVA: 0x0066A89C File Offset: 0x00668A9C
+	// Token: 0x06016718 RID: 91928 RVA: 0x0069078C File Offset: 0x0068E98C
 	protected void FinishBornPerformance()
 	{
 		EAnimalPerformState? currentState = this.StateMachine.CurrentState;
@@ -398,7 +398,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		base.AnimalEcologicalInterface.StateMachineInitializationComplete();
 	}
 
-	// Token: 0x06018E4C RID: 101964 RVA: 0x0066A8F4 File Offset: 0x00668AF4
+	// Token: 0x06016719 RID: 91929 RVA: 0x006907E4 File Offset: 0x0068E9E4
 	protected bool AbortBornMontage()
 	{
 		if (this.BornMontageInfo == null)
@@ -442,7 +442,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		return true;
 	}
 
-	// Token: 0x06018E4D RID: 101965 RVA: 0x0066A9AC File Offset: 0x00668BAC
+	// Token: 0x0601671A RID: 91930 RVA: 0x0069089C File Offset: 0x0068EA9C
 	protected void OnStartSectionFinished(UAnimMontage montage, bool bInterrupted)
 	{
 		if (this.BornMontageInfo == null || this.BornMontageInfo.Start != montage)
@@ -478,7 +478,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E4E RID: 101966 RVA: 0x0066AA50 File Offset: 0x00668C50
+	// Token: 0x0601671B RID: 91931 RVA: 0x00690940 File Offset: 0x0068EB40
 	protected void OnLoopSectionFinished(UAnimMontage montage, bool bInterrupted)
 	{
 		if (this.BornMontageInfo == null || this.BornMontageInfo.Loop != montage)
@@ -514,7 +514,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E4F RID: 101967 RVA: 0x0066AAF4 File Offset: 0x00668CF4
+	// Token: 0x0601671C RID: 91932 RVA: 0x006909E4 File Offset: 0x0068EBE4
 	protected void OnBranchSectionFinished(UAnimMontage montage, bool bInterrupted)
 	{
 		if (this.BornMontageInfo == null || this.BornMontageInfo.Branch != montage)
@@ -550,7 +550,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E50 RID: 101968 RVA: 0x0066AB98 File Offset: 0x00668D98
+	// Token: 0x0601671D RID: 91933 RVA: 0x00690A88 File Offset: 0x0068EC88
 	protected void OnEndSectionFinished(UAnimMontage montage, bool bInterrupted)
 	{
 		if (this.BornMontageInfo == null || this.BornMontageInfo.End != montage)
@@ -588,7 +588,7 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		this.FinishBornPerformance();
 	}
 
-	// Token: 0x06018E51 RID: 101969 RVA: 0x0066AC44 File Offset: 0x00668E44
+	// Token: 0x0601671E RID: 91934 RVA: 0x00690B34 File Offset: 0x0068ED34
 	[NullableContext(1)]
 	protected void PlayBornMontage(UAnimMontage montage, float playTime, [Nullable(new byte[]
 	{
@@ -639,48 +639,48 @@ public class AnimalPerformBornState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x0400BACD RID: 47821
+	// Token: 0x0400BE5B RID: 48731
 	private const float DEFAULT_BLEND_OUT_TIME = 0.5f;
 
-	// Token: 0x0400BACE RID: 47822
+	// Token: 0x0400BE5C RID: 48732
 	protected BasePerformComponent PerformComp;
 
-	// Token: 0x0400BACF RID: 47823
+	// Token: 0x0400BE5D RID: 48733
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400BAD0 RID: 47824
+	// Token: 0x0400BE5E RID: 48734
 	protected CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400BAD1 RID: 47825
+	// Token: 0x0400BE5F RID: 48735
 	protected CreatureDataComponent CreatureData;
 
-	// Token: 0x0400BAD2 RID: 47826
+	// Token: 0x0400BE60 RID: 48736
 	protected AnimalBornMontageInfo BornMontageInfo;
 
-	// Token: 0x0400BAD3 RID: 47827
+	// Token: 0x0400BE61 RID: 48737
 	protected AnimalPerformBornState.EAnimalBornMontagePhase BornMontagePhase;
 
-	// Token: 0x0400BAD4 RID: 47828
+	// Token: 0x0400BE62 RID: 48738
 	protected TimerHandle TimerHandle;
 
-	// Token: 0x0400BAD5 RID: 47829
+	// Token: 0x0400BE63 RID: 48739
 	protected Action BornEndMontageCallback;
 
-	// Token: 0x0200934B RID: 37707
+	// Token: 0x02008571 RID: 34161
 	[NullableContext(0)]
 	protected enum EAnimalBornMontagePhase
 	{
-		// Token: 0x0402F936 RID: 194870
+		// Token: 0x0402AFBC RID: 176060
 		None,
-		// Token: 0x0402F937 RID: 194871
+		// Token: 0x0402AFBD RID: 176061
 		Start,
-		// Token: 0x0402F938 RID: 194872
+		// Token: 0x0402AFBE RID: 176062
 		Loop,
-		// Token: 0x0402F939 RID: 194873
+		// Token: 0x0402AFBF RID: 176063
 		Branch,
-		// Token: 0x0402F93A RID: 194874
+		// Token: 0x0402AFC0 RID: 176064
 		End,
-		// Token: 0x0402F93B RID: 194875
+		// Token: 0x0402AFC1 RID: 176065
 		Finish
 	}
 }

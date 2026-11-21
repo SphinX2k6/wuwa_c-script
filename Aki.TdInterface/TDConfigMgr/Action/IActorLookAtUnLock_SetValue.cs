@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200178F RID: 6031
+	// Token: 0x02001910 RID: 6416
 	public class IActorLookAtUnLock_SetValue
 	{
-		// Token: 0x0400511D RID: 20765
+		// Token: 0x04005553 RID: 21843
 		public EActorLookAtMode Type;
 	}
 }

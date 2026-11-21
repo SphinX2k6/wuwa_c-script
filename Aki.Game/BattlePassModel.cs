@@ -10,44 +10,44 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02002326 RID: 8998
+// Token: 0x0200180B RID: 6155
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BattlePassModel : ModelBase
 {
-	// Token: 0x06011CBB RID: 72891 RVA: 0x004616B3 File Offset: 0x0045F8B3
+	// Token: 0x0600F16B RID: 61803 RVA: 0x0046E757 File Offset: 0x0046C957
 	public bool GetInTimeRange()
 	{
 		return this.InTimeRange;
 	}
 
-	// Token: 0x06011CBC RID: 72892 RVA: 0x004616BB File Offset: 0x0045F8BB
+	// Token: 0x0600F16C RID: 61804 RVA: 0x0046E75F File Offset: 0x0046C95F
 	public void SetInTimeRange(bool value)
 	{
 		this.InTimeRange = value;
 	}
 
-	// Token: 0x06011CBD RID: 72893 RVA: 0x004616C4 File Offset: 0x0045F8C4
+	// Token: 0x0600F16D RID: 61805 RVA: 0x0046E768 File Offset: 0x0046C968
 	public long GetDayEndTime()
 	{
 		return this.DayEndTime;
 	}
 
-	// Token: 0x06011CBE RID: 72894 RVA: 0x004616CC File Offset: 0x0045F8CC
+	// Token: 0x0600F16E RID: 61806 RVA: 0x0046E770 File Offset: 0x0046C970
 	public long GetWeekEndTime()
 	{
 		return this.WeekEndTime;
 	}
 
-	// Token: 0x06011CBF RID: 72895 RVA: 0x004616D4 File Offset: 0x0045F8D4
+	// Token: 0x0600F16F RID: 61807 RVA: 0x0046E778 File Offset: 0x0046C978
 	public int GetGiftId()
 	{
 		return this.GiftId;
 	}
 
-	// Token: 0x170016BA RID: 5818
-	// (get) Token: 0x06011CC0 RID: 72896 RVA: 0x004616DC File Offset: 0x0045F8DC
+	// Token: 0x170016F4 RID: 5876
+	// (get) Token: 0x0600F170 RID: 61808 RVA: 0x0046E780 File Offset: 0x0046C980
 	public int PrimaryItemId
 	{
 		get
@@ -56,8 +56,8 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016BB RID: 5819
-	// (get) Token: 0x06011CC1 RID: 72897 RVA: 0x004616EE File Offset: 0x0045F8EE
+	// Token: 0x170016F5 RID: 5877
+	// (get) Token: 0x0600F171 RID: 61809 RVA: 0x0046E792 File Offset: 0x0046C992
 	public int AdvanceItemId
 	{
 		get
@@ -66,9 +66,9 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016BC RID: 5820
-	// (get) Token: 0x06011CC2 RID: 72898 RVA: 0x00461700 File Offset: 0x0045F900
-	// (set) Token: 0x06011CC3 RID: 72899 RVA: 0x00461708 File Offset: 0x0045F908
+	// Token: 0x170016F6 RID: 5878
+	// (get) Token: 0x0600F172 RID: 61810 RVA: 0x0046E7A4 File Offset: 0x0046C9A4
+	// (set) Token: 0x0600F173 RID: 61811 RVA: 0x0046E7AC File Offset: 0x0046C9AC
 	public bool HadEnter
 	{
 		get
@@ -85,7 +85,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CC4 RID: 72900 RVA: 0x0046172C File Offset: 0x0045F92C
+	// Token: 0x0600F174 RID: 61812 RVA: 0x0046E7D0 File Offset: 0x0046C9D0
 	public List<WeaponDataBase> GetWeaponDataList()
 	{
 		if (this.WeaponDataList == null)
@@ -101,7 +101,7 @@ public class BattlePassModel : ModelBase
 		return this.WeaponDataList;
 	}
 
-	// Token: 0x06011CC5 RID: 72901 RVA: 0x004617AC File Offset: 0x0045F9AC
+	// Token: 0x0600F175 RID: 61813 RVA: 0x0046E850 File Offset: 0x0046CA50
 	[NullableContext(2)]
 	public BattlePassRewardData GetRewardData(int level)
 	{
@@ -129,9 +129,9 @@ public class BattlePassModel : ModelBase
 		return battlePassRewardData;
 	}
 
-	// Token: 0x170016BD RID: 5821
-	// (get) Token: 0x06011CC6 RID: 72902 RVA: 0x0046183C File Offset: 0x0045FA3C
-	// (set) Token: 0x06011CC7 RID: 72903 RVA: 0x0046186C File Offset: 0x0045FA6C
+	// Token: 0x170016F7 RID: 5879
+	// (get) Token: 0x0600F176 RID: 61814 RVA: 0x0046E8E0 File Offset: 0x0046CAE0
+	// (set) Token: 0x0600F177 RID: 61815 RVA: 0x0046E910 File Offset: 0x0046CB10
 	public bool PayButtonRedDotState
 	{
 		get
@@ -154,25 +154,25 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CC8 RID: 72904 RVA: 0x004618C0 File Offset: 0x0045FAC0
+	// Token: 0x0600F178 RID: 61816 RVA: 0x0046E964 File Offset: 0x0046CB64
 	public int GetMaxLevel()
 	{
 		return this.MaxLevel;
 	}
 
-	// Token: 0x06011CC9 RID: 72905 RVA: 0x004618C8 File Offset: 0x0045FAC8
+	// Token: 0x0600F179 RID: 61817 RVA: 0x0046E96C File Offset: 0x0046CB6C
 	public bool IsLevelMax()
 	{
 		return this.CurrentBattlePassLevel >= this.MaxLevel;
 	}
 
-	// Token: 0x06011CCA RID: 72906 RVA: 0x004618DB File Offset: 0x0045FADB
+	// Token: 0x0600F17A RID: 61818 RVA: 0x0046E97F File Offset: 0x0046CB7F
 	public bool IsWeekMax()
 	{
 		return this.WeekExp >= this.MaxWeekExp;
 	}
 
-	// Token: 0x06011CCB RID: 72907 RVA: 0x004618F0 File Offset: 0x0045FAF0
+	// Token: 0x0600F17B RID: 61819 RVA: 0x0046E994 File Offset: 0x0046CB94
 	public int GetNextStageLevel(int currentLevel)
 	{
 		if (currentLevel == 0)
@@ -191,7 +191,7 @@ public class BattlePassModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06011CCC RID: 72908 RVA: 0x0046194C File Offset: 0x0045FB4C
+	// Token: 0x0600F17C RID: 61820 RVA: 0x0046E9F0 File Offset: 0x0046CBF0
 	public void InitBattlePassConfigData()
 	{
 		int battlePassId = this.BattlePassId;
@@ -233,14 +233,14 @@ public class BattlePassModel : ModelBase
 		this.UpdateLimitValue();
 	}
 
-	// Token: 0x06011CCD RID: 72909 RVA: 0x00461B84 File Offset: 0x0045FD84
+	// Token: 0x0600F17D RID: 61821 RVA: 0x0046EC28 File Offset: 0x0046CE28
 	private void UpdateLimitValue()
 	{
 		this.AllExpLimitValue = this.MaxLevelExp * (this.MaxLevel - this.CurrentBattlePassLevel) - this.LevelExp;
 		this.WeekExpLimitValue = this.MaxWeekExp - this.WeekExp;
 	}
 
-	// Token: 0x06011CCE RID: 72910 RVA: 0x00461BBC File Offset: 0x0045FDBC
+	// Token: 0x0600F17E RID: 61822 RVA: 0x0046EC60 File Offset: 0x0046CE60
 	[NullableContext(0)]
 	private ValueTuple<int, int> GetTasksExp([Nullable(1)] List<int> taskIdList)
 	{
@@ -255,7 +255,7 @@ public class BattlePassModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x06011CCF RID: 72911 RVA: 0x00461C38 File Offset: 0x0045FE38
+	// Token: 0x0600F17F RID: 61823 RVA: 0x0046ECDC File Offset: 0x0046CEDC
 	public void TryRequestTaskList(List<int> taskIdList)
 	{
 		ValueTuple<int, int> tasksExp = this.GetTasksExp(taskIdList);
@@ -282,7 +282,7 @@ public class BattlePassModel : ModelBase
 		BattlePassController.Instance.RequestBattlePassTaskTake(taskIdList);
 	}
 
-	// Token: 0x06011CD0 RID: 72912 RVA: 0x00461D0C File Offset: 0x0045FF0C
+	// Token: 0x0600F180 RID: 61824 RVA: 0x0046EDB0 File Offset: 0x0046CFB0
 	public void UpdateBattlePassRewardDataFromResponse([Nullable(new byte[]
 	{
 		2,
@@ -299,7 +299,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CD1 RID: 72913 RVA: 0x00461D74 File Offset: 0x0045FF74
+	// Token: 0x0600F181 RID: 61825 RVA: 0x0046EE18 File Offset: 0x0046D018
 	public void UpdateRewardDataWithTargetLevel(int targetLevel)
 	{
 		for (int i = 1; i <= targetLevel; i++)
@@ -308,7 +308,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CD2 RID: 72914 RVA: 0x00461D98 File Offset: 0x0045FF98
+	// Token: 0x0600F182 RID: 61826 RVA: 0x0046EE3C File Offset: 0x0046D03C
 	private void SetRewardCanGet(int level, bool force = false)
 	{
 		if (level - 1 >= 0 && level - 1 < this.RewardDataList.Count)
@@ -341,7 +341,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CD3 RID: 72915 RVA: 0x00461EB8 File Offset: 0x004600B8
+	// Token: 0x0600F183 RID: 61827 RVA: 0x0046EF5C File Offset: 0x0046D15C
 	public unsafe void TakeReward(BattlePassType battlePassType, int level, int itemId)
 	{
 		BattlePassRewardData rewardData = this.GetRewardData(level);
@@ -370,16 +370,16 @@ public class BattlePassModel : ModelBase
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06011CD4 RID: 72916 RVA: 0x00461F6D File Offset: 0x0046016D
+	// Token: 0x0600F184 RID: 61828 RVA: 0x0046F011 File Offset: 0x0046D211
 	public void OnResponseTakeReward(BattlePassType battlePassType, int level, int itemId, int gridIndex)
 	{
 		this.TakeReward(battlePassType, level, itemId);
 		EventSystem.Instance.Emit<int?>(EEventName.GetBattlePassRewardEvent, new int?(gridIndex));
 	}
 
-	// Token: 0x170016BE RID: 5822
-	// (get) Token: 0x06011CD5 RID: 72917 RVA: 0x00461F8F File Offset: 0x0046018F
-	// (set) Token: 0x06011CD6 RID: 72918 RVA: 0x00461F97 File Offset: 0x00460197
+	// Token: 0x170016F8 RID: 5880
+	// (get) Token: 0x0600F185 RID: 61829 RVA: 0x0046F033 File Offset: 0x0046D233
+	// (set) Token: 0x0600F186 RID: 61830 RVA: 0x0046F03B File Offset: 0x0046D23B
 	public int BattlePassLevel
 	{
 		get
@@ -392,9 +392,9 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016BF RID: 5823
-	// (get) Token: 0x06011CD7 RID: 72919 RVA: 0x00461FA0 File Offset: 0x004601A0
-	// (set) Token: 0x06011CD8 RID: 72920 RVA: 0x00461FA8 File Offset: 0x004601A8
+	// Token: 0x170016F9 RID: 5881
+	// (get) Token: 0x0600F187 RID: 61831 RVA: 0x0046F044 File Offset: 0x0046D244
+	// (set) Token: 0x0600F188 RID: 61832 RVA: 0x0046F04C File Offset: 0x0046D24C
 	public int WeekExp
 	{
 		get
@@ -407,9 +407,9 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016C0 RID: 5824
-	// (get) Token: 0x06011CD9 RID: 72921 RVA: 0x00461FB1 File Offset: 0x004601B1
-	// (set) Token: 0x06011CDA RID: 72922 RVA: 0x00461FB9 File Offset: 0x004601B9
+	// Token: 0x170016FA RID: 5882
+	// (get) Token: 0x0600F189 RID: 61833 RVA: 0x0046F055 File Offset: 0x0046D255
+	// (set) Token: 0x0600F18A RID: 61834 RVA: 0x0046F05D File Offset: 0x0046D25D
 	public int LevelExp
 	{
 		get
@@ -422,9 +422,9 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016C1 RID: 5825
-	// (get) Token: 0x06011CDB RID: 72923 RVA: 0x00461FC2 File Offset: 0x004601C2
-	// (set) Token: 0x06011CDC RID: 72924 RVA: 0x00461FCA File Offset: 0x004601CA
+	// Token: 0x170016FB RID: 5883
+	// (get) Token: 0x0600F18B RID: 61835 RVA: 0x0046F066 File Offset: 0x0046D266
+	// (set) Token: 0x0600F18C RID: 61836 RVA: 0x0046F06E File Offset: 0x0046D26E
 	public BattlePassPayStatus PayType
 	{
 		get
@@ -437,62 +437,62 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CDD RID: 72925 RVA: 0x00461FD3 File Offset: 0x004601D3
+	// Token: 0x0600F18D RID: 61837 RVA: 0x0046F077 File Offset: 0x0046D277
 	public long GetBattlePassStartTime()
 	{
 		return this.BattlePassStartTime;
 	}
 
-	// Token: 0x06011CDE RID: 72926 RVA: 0x00461FDB File Offset: 0x004601DB
+	// Token: 0x0600F18E RID: 61838 RVA: 0x0046F07F File Offset: 0x0046D27F
 	public long GetBattlePassEndTime()
 	{
 		return this.BattlePassEndTime;
 	}
 
-	// Token: 0x06011CDF RID: 72927 RVA: 0x00461FE3 File Offset: 0x004601E3
+	// Token: 0x0600F18F RID: 61839 RVA: 0x0046F087 File Offset: 0x0046D287
 	public bool InBattlePassInWarningTime()
 	{
 		return TimeUtil.Instance.GetServerTime() > (double)this.WarningTime;
 	}
 
-	// Token: 0x06011CE0 RID: 72928 RVA: 0x00461FF8 File Offset: 0x004601F8
+	// Token: 0x0600F190 RID: 61840 RVA: 0x0046F09C File Offset: 0x0046D29C
 	private void SetBattlePassStartTime(long value)
 	{
 		this.BattlePassStartTime = MathUtils.Instance.LongToBigInt(value);
 	}
 
-	// Token: 0x06011CE1 RID: 72929 RVA: 0x0046200C File Offset: 0x0046020C
+	// Token: 0x0600F191 RID: 61841 RVA: 0x0046F0B0 File Offset: 0x0046D2B0
 	private void SetBattlePassEndTime(long value)
 	{
 		this.BattlePassEndTime = MathUtils.Instance.LongToBigInt(value);
 		this.WarningTime = this.BattlePassEndTime - (long)(ConfigCommonParamById.GetIntConfig("BattlePassSettleBugTime").Value * 3600);
 	}
 
-	// Token: 0x06011CE2 RID: 72930 RVA: 0x00462050 File Offset: 0x00460250
+	// Token: 0x0600F192 RID: 61842 RVA: 0x0046F0F4 File Offset: 0x0046D2F4
 	public void SetDayEndTime(long value)
 	{
 		this.DayEndTime = MathUtils.Instance.LongToBigInt(value);
 	}
 
-	// Token: 0x06011CE3 RID: 72931 RVA: 0x00462063 File Offset: 0x00460263
+	// Token: 0x0600F193 RID: 61843 RVA: 0x0046F107 File Offset: 0x0046D307
 	public void SetWeekEndTime(long value)
 	{
 		this.WeekEndTime = MathUtils.Instance.LongToBigInt(value);
 	}
 
-	// Token: 0x06011CE4 RID: 72932 RVA: 0x00462076 File Offset: 0x00460276
+	// Token: 0x0600F194 RID: 61844 RVA: 0x0046F11A File Offset: 0x0046D31A
 	public int GetMaxWeekExp()
 	{
 		return this.MaxWeekExp;
 	}
 
-	// Token: 0x06011CE5 RID: 72933 RVA: 0x0046207E File Offset: 0x0046027E
+	// Token: 0x0600F195 RID: 61845 RVA: 0x0046F122 File Offset: 0x0046D322
 	public int GetMaxLevelExp()
 	{
 		return this.MaxLevelExp;
 	}
 
-	// Token: 0x06011CE6 RID: 72934 RVA: 0x00462088 File Offset: 0x00460288
+	// Token: 0x0600F196 RID: 61846 RVA: 0x0046F12C File Offset: 0x0046D32C
 	public string GetPassPayBtnKey()
 	{
 		switch (this.BattlePassType)
@@ -508,7 +508,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CE7 RID: 72935 RVA: 0x004620C7 File Offset: 0x004602C7
+	// Token: 0x0600F197 RID: 61847 RVA: 0x0046F16B File Offset: 0x0046D36B
 	protected override bool OnInit()
 	{
 		this.GiftId = 301;
@@ -520,20 +520,20 @@ public class BattlePassModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011CE8 RID: 72936 RVA: 0x00462104 File Offset: 0x00460304
+	// Token: 0x0600F198 RID: 61848 RVA: 0x0046F1A8 File Offset: 0x0046D3A8
 	public int GetBattlePassRemainTime()
 	{
 		return (int)TimeUtil.Instance.CalculateHourGapBetweenNow((double)this.BattlePassEndTime, true);
 	}
 
-	// Token: 0x06011CE9 RID: 72937 RVA: 0x0046211C File Offset: 0x0046031C
+	// Token: 0x0600F199 RID: 61849 RVA: 0x0046F1C0 File Offset: 0x0046D3C0
 	public double GetBattlePassRemainTimeSecond()
 	{
 		double num = TimeUtil.Instance.GetServerTimeStamp() / (double)TimeUtil.Instance.InverseMillisecond;
 		return (double)this.BattlePassEndTime - num;
 	}
 
-	// Token: 0x06011CEA RID: 72938 RVA: 0x0046214C File Offset: 0x0046034C
+	// Token: 0x0600F19A RID: 61850 RVA: 0x0046F1F0 File Offset: 0x0046D3F0
 	public void GetTargetLevelRewardList(int targetLevel, List<TItem> rewardList)
 	{
 		rewardList.Clear();
@@ -577,7 +577,7 @@ public class BattlePassModel : ModelBase
 		rewardList.Sort(new Comparison<TItem>(BattlePassModel.<GetTargetLevelRewardList>g__compare|80_0));
 	}
 
-	// Token: 0x06011CEB RID: 72939 RVA: 0x004622BC File Offset: 0x004604BC
+	// Token: 0x0600F19B RID: 61851 RVA: 0x0046F360 File Offset: 0x0046D560
 	[NullableContext(2)]
 	public BattlePassTaskData GetTaskData(int id)
 	{
@@ -589,7 +589,7 @@ public class BattlePassModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06011CEC RID: 72940 RVA: 0x004622DC File Offset: 0x004604DC
+	// Token: 0x0600F19C RID: 61852 RVA: 0x0046F380 File Offset: 0x0046D580
 	public void GetTaskList(EBattlePassTaskUpdateState updateState, List<BattlePassTaskData> outArray)
 	{
 		outArray.Clear();
@@ -603,7 +603,7 @@ public class BattlePassModel : ModelBase
 		outArray.Sort(new Comparison<BattlePassTaskData>(BattlePassModel.<GetTaskList>g__compare|83_0));
 	}
 
-	// Token: 0x06011CED RID: 72941 RVA: 0x0046235C File Offset: 0x0046055C
+	// Token: 0x0600F19D RID: 61853 RVA: 0x0046F400 File Offset: 0x0046D600
 	public EBattlePassTaskUpdateState[] GetTaskTypeList()
 	{
 		EBattlePassTaskUpdateState[] array = new EBattlePassTaskUpdateState[3];
@@ -612,25 +612,25 @@ public class BattlePassModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x06011CEE RID: 72942 RVA: 0x0046236C File Offset: 0x0046056C
+	// Token: 0x0600F19E RID: 61854 RVA: 0x0046F410 File Offset: 0x0046D610
 	public int GetPrimaryBattlePassGoodsId()
 	{
 		return ConfigCommonParamById.GetIntConfig("PrimaryBattlePassShopId").Value;
 	}
 
-	// Token: 0x06011CEF RID: 72943 RVA: 0x0046238C File Offset: 0x0046058C
+	// Token: 0x0600F19F RID: 61855 RVA: 0x0046F430 File Offset: 0x0046D630
 	public int GetHighBattlePassGoodsId()
 	{
 		return ConfigCommonParamById.GetIntConfig("AdvancedWithActive").Value;
 	}
 
-	// Token: 0x06011CF0 RID: 72944 RVA: 0x004623AC File Offset: 0x004605AC
+	// Token: 0x0600F1A0 RID: 61856 RVA: 0x0046F450 File Offset: 0x0046D650
 	public int GetSupplyBattlePassGoodsId()
 	{
 		return ConfigCommonParamById.GetIntConfig("AdvancedWithoutActive").Value;
 	}
 
-	// Token: 0x06011CF1 RID: 72945 RVA: 0x004623CC File Offset: 0x004605CC
+	// Token: 0x0600F1A1 RID: 61857 RVA: 0x0046F470 File Offset: 0x0046D670
 	public List<int> GetAllFinishedTask()
 	{
 		List<int> list = new List<int>();
@@ -644,7 +644,7 @@ public class BattlePassModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06011CF2 RID: 72946 RVA: 0x0046243C File Offset: 0x0046063C
+	// Token: 0x0600F1A2 RID: 61858 RVA: 0x0046F4E0 File Offset: 0x0046D6E0
 	public bool CheckHasRewardWaitTake()
 	{
 		if (!this.GetInTimeRange())
@@ -677,7 +677,7 @@ public class BattlePassModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011CF3 RID: 72947 RVA: 0x00462534 File Offset: 0x00460734
+	// Token: 0x0600F1A3 RID: 61859 RVA: 0x0046F5D8 File Offset: 0x0046D7D8
 	public bool CheckHasTaskWaitTake()
 	{
 		if (this.MaxLevel == this.BattlePassLevel)
@@ -694,7 +694,7 @@ public class BattlePassModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011CF4 RID: 72948 RVA: 0x004625A8 File Offset: 0x004607A8
+	// Token: 0x0600F1A4 RID: 61860 RVA: 0x0046F64C File Offset: 0x0046D84C
 	public bool CheckHasTaskWaitTakeWithType(EBattlePassTaskUpdateState type)
 	{
 		if (!this.GetInTimeRange())
@@ -715,7 +715,7 @@ public class BattlePassModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06011CF5 RID: 72949 RVA: 0x00462634 File Offset: 0x00460834
+	// Token: 0x0600F1A5 RID: 61861 RVA: 0x0046F6D8 File Offset: 0x0046D8D8
 	public void AddTaskDataFromProtocol(PbBattlePassTask task)
 	{
 		int? intConfig = ConfigCommonParamById.GetIntConfig("BattlePassExp");
@@ -753,7 +753,7 @@ public class BattlePassModel : ModelBase
 		battlePassTaskMap[task.Id] = battlePassTaskData;
 	}
 
-	// Token: 0x06011CF6 RID: 72950 RVA: 0x004627B8 File Offset: 0x004609B8
+	// Token: 0x0600F1A6 RID: 61862 RVA: 0x0046F85C File Offset: 0x0046DA5C
 	public void SetDataFromBattlePassResponse(BattlePassResponse response)
 	{
 		PbBattlePass battlePass = response.BattlePass;
@@ -780,8 +780,8 @@ public class BattlePassModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ReceiveBattlePassDataEvent);
 	}
 
-	// Token: 0x06011CF7 RID: 72951 RVA: 0x0046288C File Offset: 0x00460A8C
-	public void UpdateTaskDataFromBattlePassTaskTakeResponse(int[] ids)
+	// Token: 0x0600F1A7 RID: 61863 RVA: 0x0046F930 File Offset: 0x0046DB30
+	public void UpdateTaskDataFromBattlePassTaskTakeResponse(IReadOnlyList<int> ids)
 	{
 		Dictionary<int, BattlePassTaskData> battlePassTaskMap = this.BattlePassTaskMap;
 		foreach (int key in ids)
@@ -795,7 +795,7 @@ public class BattlePassModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.UpdateBattlePassTaskEvent);
 	}
 
-	// Token: 0x06011CF8 RID: 72952 RVA: 0x004628D8 File Offset: 0x00460AD8
+	// Token: 0x0600F1A8 RID: 61864 RVA: 0x0046F99C File Offset: 0x0046DB9C
 	public void UpdateExpDataFromBattlePassExpUpdateNotify(int level, int exp, int weekExp)
 	{
 		this.UpdateRewardDataWithTargetLevel(level);
@@ -815,7 +815,7 @@ public class BattlePassModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ReceiveBattlePassDataEvent);
 	}
 
-	// Token: 0x06011CF9 RID: 72953 RVA: 0x0046294C File Offset: 0x00460B4C
+	// Token: 0x0600F1A9 RID: 61865 RVA: 0x0046FA10 File Offset: 0x0046DC10
 	public void UpdateRewardDataFromBattlePassTakeAllRewardResponse(BattlePassTakeAllRewardResponse response)
 	{
 		foreach (PbBattlePassReward pbBattlePassReward in response.TakenRewards)
@@ -825,7 +825,7 @@ public class BattlePassModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ReceiveBattlePassDataEvent);
 	}
 
-	// Token: 0x06011CFA RID: 72954 RVA: 0x004629BC File Offset: 0x00460BBC
+	// Token: 0x0600F1AA RID: 61866 RVA: 0x0046FA80 File Offset: 0x0046DC80
 	public void UpdateRewardDataFormFreeToPay()
 	{
 		for (int i = 1; i <= this.CurrentBattlePassLevel; i++)
@@ -841,7 +841,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011CFB RID: 72955 RVA: 0x00462A30 File Offset: 0x00460C30
+	// Token: 0x0600F1AB RID: 61867 RVA: 0x0046FAF4 File Offset: 0x0046DCF4
 	[NullableContext(2)]
 	public string GetBattlePassIconPath()
 	{
@@ -853,7 +853,7 @@ public class BattlePassModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06011CFC RID: 72956 RVA: 0x00462A68 File Offset: 0x00460C68
+	// Token: 0x0600F1AC RID: 61868 RVA: 0x0046FB2C File Offset: 0x0046DD2C
 	public int GetCurrentShowLevel()
 	{
 		int num = 0;
@@ -882,7 +882,7 @@ public class BattlePassModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06011CFD RID: 72957 RVA: 0x00462B28 File Offset: 0x00460D28
+	// Token: 0x0600F1AD RID: 61869 RVA: 0x0046FBEC File Offset: 0x0046DDEC
 	public string GetHighBattlePassOriginalPrice()
 	{
 		int primaryBattlePassGoodsId = this.GetPrimaryBattlePassGoodsId();
@@ -898,7 +898,7 @@ public class BattlePassModel : ModelBase
 		return payShow;
 	}
 
-	// Token: 0x06011CFE RID: 72958 RVA: 0x00462BE8 File Offset: 0x00460DE8
+	// Token: 0x0600F1AE RID: 61870 RVA: 0x0046FCAC File Offset: 0x0046DEAC
 	public EConfirmBoxConfigId GetBattlePassItemConfirmId(int itemId)
 	{
 		if (!FunctionModel.Instance.IsOpen(10040))
@@ -939,8 +939,8 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x170016C2 RID: 5826
-	// (get) Token: 0x06011CFF RID: 72959 RVA: 0x00462C8A File Offset: 0x00460E8A
+	// Token: 0x170016FC RID: 5884
+	// (get) Token: 0x0600F1AF RID: 61871 RVA: 0x0046FD4E File Offset: 0x0046DF4E
 	public int? RemindLevel
 	{
 		get
@@ -949,7 +949,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011D00 RID: 72960 RVA: 0x00462C94 File Offset: 0x00460E94
+	// Token: 0x0600F1B0 RID: 61872 RVA: 0x0046FD58 File Offset: 0x0046DF58
 	public void TryAssignRemindLevel(int? level = null)
 	{
 		if (this.PayType > BattlePassPayStatus.NoPaid)
@@ -993,7 +993,7 @@ public class BattlePassModel : ModelBase
 		this.RemindLevelInternal = null;
 	}
 
-	// Token: 0x06011D01 RID: 72961 RVA: 0x00462E0C File Offset: 0x0046100C
+	// Token: 0x0600F1B1 RID: 61873 RVA: 0x0046FED0 File Offset: 0x0046E0D0
 	public RewardItemData[] GetExtraRewardItems()
 	{
 		if (this.RemindLevelInternal == null)
@@ -1041,8 +1041,8 @@ public class BattlePassModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x170016C3 RID: 5827
-	// (get) Token: 0x06011D02 RID: 72962 RVA: 0x00462FDC File Offset: 0x004611DC
+	// Token: 0x170016FD RID: 5885
+	// (get) Token: 0x0600F1B2 RID: 61874 RVA: 0x004700A0 File Offset: 0x0046E2A0
 	public static BattlePassModel Instance
 	{
 		get
@@ -1051,7 +1051,7 @@ public class BattlePassModel : ModelBase
 		}
 	}
 
-	// Token: 0x06011D03 RID: 72963 RVA: 0x00462FE3 File Offset: 0x004611E3
+	// Token: 0x0600F1B3 RID: 61875 RVA: 0x004700A7 File Offset: 0x0046E2A7
 	public static BattlePassModel GetOrCreateInstance()
 	{
 		if (BattlePassModel._Instance == null)
@@ -1061,7 +1061,7 @@ public class BattlePassModel : ModelBase
 		return BattlePassModel._Instance;
 	}
 
-	// Token: 0x06011D04 RID: 72964 RVA: 0x00462FF7 File Offset: 0x004611F7
+	// Token: 0x0600F1B4 RID: 61876 RVA: 0x004700BB File Offset: 0x0046E2BB
 	public static bool CreateInstance()
 	{
 		if (BattlePassModel._Instance != null)
@@ -1072,24 +1072,24 @@ public class BattlePassModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011D05 RID: 72965 RVA: 0x0046300D File Offset: 0x0046120D
+	// Token: 0x0600F1B5 RID: 61877 RVA: 0x004700D1 File Offset: 0x0046E2D1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011D06 RID: 72966 RVA: 0x0046300F File Offset: 0x0046120F
+	// Token: 0x0600F1B6 RID: 61878 RVA: 0x004700D3 File Offset: 0x0046E2D3
 	public static void ResetStaticDefaultValue()
 	{
 		BattlePassModel._Instance = null;
 	}
 
-	// Token: 0x06011D07 RID: 72967 RVA: 0x00463017 File Offset: 0x00461217
+	// Token: 0x0600F1B7 RID: 61879 RVA: 0x004700DB File Offset: 0x0046E2DB
 	static BattlePassModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattlePassModel.CreateStaticDefaultValue), new Action(BattlePassModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06011D09 RID: 72969 RVA: 0x00463040 File Offset: 0x00461240
+	// Token: 0x0600F1B9 RID: 61881 RVA: 0x00470104 File Offset: 0x0046E304
 	[CompilerGenerated]
 	internal static int <GetTargetLevelRewardList>g__compare|80_0(TItem a, TItem b)
 	{
@@ -1102,7 +1102,7 @@ public class BattlePassModel : ModelBase
 		return qualityId2 - qualityId;
 	}
 
-	// Token: 0x06011D0A RID: 72970 RVA: 0x004630AE File Offset: 0x004612AE
+	// Token: 0x0600F1BA RID: 61882 RVA: 0x00470172 File Offset: 0x0046E372
 	[CompilerGenerated]
 	internal static int <GetTaskList>g__compare|83_0(BattlePassTaskData a, BattlePassTaskData b)
 	{
@@ -1117,19 +1117,19 @@ public class BattlePassModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x040086E9 RID: 34537
+	// Token: 0x0400882C RID: 34860
 	private const int GIFT_ID = 301;
 
-	// Token: 0x040086EA RID: 34538
+	// Token: 0x0400882D RID: 34861
 	public bool IsRequiringViewData;
 
-	// Token: 0x040086EB RID: 34539
+	// Token: 0x0400882E RID: 34862
 	private bool InTimeRange;
 
-	// Token: 0x040086EC RID: 34540
+	// Token: 0x0400882F RID: 34863
 	public int IncreasedLevelToShow;
 
-	// Token: 0x040086ED RID: 34541
+	// Token: 0x04008830 RID: 34864
 	[Nullable(new byte[]
 	{
 		2,
@@ -1137,73 +1137,73 @@ public class BattlePassModel : ModelBase
 	})]
 	private List<WeaponDataBase> WeaponDataList;
 
-	// Token: 0x040086EE RID: 34542
+	// Token: 0x04008831 RID: 34865
 	private long WarningTime;
 
-	// Token: 0x040086EF RID: 34543
+	// Token: 0x04008832 RID: 34866
 	private bool HadEnterInternal;
 
-	// Token: 0x040086F0 RID: 34544
+	// Token: 0x04008833 RID: 34867
 	private bool? PayButtonRedDotStateInternal;
 
-	// Token: 0x040086F1 RID: 34545
+	// Token: 0x04008834 RID: 34868
 	private int WeekExpLimitValue;
 
-	// Token: 0x040086F2 RID: 34546
+	// Token: 0x04008835 RID: 34869
 	private int AllExpLimitValue;
 
-	// Token: 0x040086F3 RID: 34547
+	// Token: 0x04008836 RID: 34870
 	private int GiftId;
 
-	// Token: 0x040086F4 RID: 34548
+	// Token: 0x04008837 RID: 34871
 	private long DayEndTime;
 
-	// Token: 0x040086F5 RID: 34549
+	// Token: 0x04008838 RID: 34872
 	private long WeekEndTime;
 
-	// Token: 0x040086F6 RID: 34550
+	// Token: 0x04008839 RID: 34873
 	public List<BattlePassRewardData> RewardDataList;
 
-	// Token: 0x040086F7 RID: 34551
+	// Token: 0x0400883A RID: 34874
 	public int BattlePassId;
 
-	// Token: 0x040086F8 RID: 34552
+	// Token: 0x0400883B RID: 34875
 	private int MaxLevel;
 
-	// Token: 0x040086F9 RID: 34553
+	// Token: 0x0400883C RID: 34876
 	public List<int> StageLevelList;
 
-	// Token: 0x040086FA RID: 34554
+	// Token: 0x0400883D RID: 34877
 	private int CurrentBattlePassLevel;
 
-	// Token: 0x040086FB RID: 34555
+	// Token: 0x0400883E RID: 34878
 	private int CurrentWeekExp;
 
-	// Token: 0x040086FC RID: 34556
+	// Token: 0x0400883F RID: 34879
 	private int CurrentLevelExp;
 
-	// Token: 0x040086FD RID: 34557
+	// Token: 0x04008840 RID: 34880
 	private BattlePassPayStatus BattlePassType;
 
-	// Token: 0x040086FE RID: 34558
+	// Token: 0x04008841 RID: 34881
 	private long BattlePassStartTime;
 
-	// Token: 0x040086FF RID: 34559
+	// Token: 0x04008842 RID: 34882
 	private long BattlePassEndTime;
 
-	// Token: 0x04008700 RID: 34560
+	// Token: 0x04008843 RID: 34883
 	private int MaxWeekExp;
 
-	// Token: 0x04008701 RID: 34561
+	// Token: 0x04008844 RID: 34884
 	private int MaxLevelExp;
 
-	// Token: 0x04008702 RID: 34562
+	// Token: 0x04008845 RID: 34885
 	public Dictionary<int, BattlePassTaskData> BattlePassTaskMap;
 
-	// Token: 0x04008703 RID: 34563
+	// Token: 0x04008846 RID: 34886
 	private int? RemindLevelInternal;
 
-	// Token: 0x04008704 RID: 34564
+	// Token: 0x04008847 RID: 34887
 	[Nullable(2)]
 	private static BattlePassModel _Instance;
 }

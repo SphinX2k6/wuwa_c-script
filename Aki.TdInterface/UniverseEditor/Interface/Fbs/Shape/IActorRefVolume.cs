@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BE9 RID: 15337
+	// Token: 0x02003FF5 RID: 16373
 	public struct IActorRefVolume : IFlatbufferObject
 	{
-		// Token: 0x17006939 RID: 26937
-		// (get) Token: 0x06015167 RID: 86375 RVA: 0x0030E558 File Offset: 0x0030C758
+		// Token: 0x17006EE1 RID: 28385
+		// (get) Token: 0x0601665D RID: 91741 RVA: 0x003350E0 File Offset: 0x003332E0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015168 RID: 86376 RVA: 0x0030E565 File Offset: 0x0030C765
+		// Token: 0x0601665E RID: 91742 RVA: 0x003350ED File Offset: 0x003332ED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015169 RID: 86377 RVA: 0x0030E56C File Offset: 0x0030C76C
+		// Token: 0x0601665F RID: 91743 RVA: 0x003350F4 File Offset: 0x003332F4
 		public static IActorRefVolume GetRootAsIActorRefVolume(ByteBuffer _bb)
 		{
 			return IActorRefVolume.GetRootAsIActorRefVolume(_bb, default(IActorRefVolume));
 		}
 
-		// Token: 0x0601516A RID: 86378 RVA: 0x0030E588 File Offset: 0x0030C788
+		// Token: 0x06016660 RID: 91744 RVA: 0x00335110 File Offset: 0x00333310
 		public static IActorRefVolume GetRootAsIActorRefVolume(ByteBuffer _bb, IActorRefVolume obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601516B RID: 86379 RVA: 0x0030E5A5 File Offset: 0x0030C7A5
+		// Token: 0x06016661 RID: 91745 RVA: 0x0033512D File Offset: 0x0033332D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601516C RID: 86380 RVA: 0x0030E5B4 File Offset: 0x0030C7B4
+		// Token: 0x06016662 RID: 91746 RVA: 0x0033513C File Offset: 0x0033333C
 		public IActorRefVolume __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700693A RID: 26938
-		// (get) Token: 0x0601516D RID: 86381 RVA: 0x0030E5C4 File Offset: 0x0030C7C4
+		// Token: 0x17006EE2 RID: 28386
+		// (get) Token: 0x06016663 RID: 91747 RVA: 0x0033514C File Offset: 0x0033334C
 		public ETriggerShape Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601516E RID: 86382 RVA: 0x0030E600 File Offset: 0x0030C800
+		// Token: 0x06016664 RID: 91748 RVA: 0x00335188 File Offset: 0x00333388
 		public static Offset<IActorRefVolume> CreateIActorRefVolume(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IActorRefVolume.EndIActorRefVolume(builder);
 		}
 
-		// Token: 0x0601516F RID: 86383 RVA: 0x0030E616 File Offset: 0x0030C816
+		// Token: 0x06016665 RID: 91749 RVA: 0x0033519E File Offset: 0x0033339E
 		public static void StartIActorRefVolume(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06015170 RID: 86384 RVA: 0x0030E61F File Offset: 0x0030C81F
+		// Token: 0x06016666 RID: 91750 RVA: 0x003351A7 File Offset: 0x003333A7
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015171 RID: 86385 RVA: 0x0030E62A File Offset: 0x0030C82A
+		// Token: 0x06016667 RID: 91751 RVA: 0x003351B2 File Offset: 0x003333B2
 		public static Offset<IActorRefVolume> EndIActorRefVolume(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorRefVolume>(builder.EndTable());
 		}
 
-		// Token: 0x06015172 RID: 86386 RVA: 0x0030E638 File Offset: 0x0030C838
+		// Token: 0x06016668 RID: 91752 RVA: 0x003351C0 File Offset: 0x003333C0
 		public IActorRefVolumeT UnPack()
 		{
 			IActorRefVolumeT actorRefVolumeT = new IActorRefVolumeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return actorRefVolumeT;
 		}
 
-		// Token: 0x06015173 RID: 86387 RVA: 0x0030E653 File Offset: 0x0030C853
+		// Token: 0x06016669 RID: 91753 RVA: 0x003351DB File Offset: 0x003333DB
 		public void UnPackTo(IActorRefVolumeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06015174 RID: 86388 RVA: 0x0030E664 File Offset: 0x0030C864
+		// Token: 0x0601666A RID: 91754 RVA: 0x003351EC File Offset: 0x003333EC
 		public static Offset<IActorRefVolume> Pack(FlatBufferBuilder builder, IActorRefVolumeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IActorRefVolume.CreateIActorRefVolume(builder, _o.Type);
 		}
 
-		// Token: 0x0400B1AD RID: 45485
+		// Token: 0x0400BB38 RID: 47928
 		private Table __p;
 	}
 }

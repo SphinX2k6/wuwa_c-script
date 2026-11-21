@@ -3,19 +3,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068AF RID: 26799
+	// Token: 0x020057FF RID: 22527
 	public class CyberPunkTaskSliderData
 	{
-		// Token: 0x04022CBC RID: 142524
+		// Token: 0x0401D518 RID: 120088
 		public int Id;
 
-		// Token: 0x04022CBD RID: 142525
+		// Token: 0x0401D519 RID: 120089
 		public int Target;
 
-		// Token: 0x04022CBE RID: 142526
+		// Token: 0x0401D51A RID: 120090
 		public int Current;
 
-		// Token: 0x04022CBF RID: 142527
+		// Token: 0x0401D51B RID: 120091
 		public ConditionTaskState Status;
 	}
 }

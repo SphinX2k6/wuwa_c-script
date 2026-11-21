@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x02000136 RID: 310
+	// Token: 0x0200013B RID: 315
 	[AttributeUsage(AttributeTargets.Class)]
 	public class TickControllerAttribute : Attribute
 	{
-		// Token: 0x17000107 RID: 263
-		// (get) Token: 0x06000AF9 RID: 2809 RVA: 0x00034D4B File Offset: 0x00032F4B
-		// (set) Token: 0x06000AFA RID: 2810 RVA: 0x00034D53 File Offset: 0x00032F53
+		// Token: 0x1700011A RID: 282
+		// (get) Token: 0x06000B56 RID: 2902 RVA: 0x000358DD File Offset: 0x00033ADD
+		// (set) Token: 0x06000B57 RID: 2903 RVA: 0x000358E5 File Offset: 0x00033AE5
 		public int Priority { get; private set; }
 
-		// Token: 0x06000AFB RID: 2811 RVA: 0x00034D5C File Offset: 0x00032F5C
+		// Token: 0x06000B58 RID: 2904 RVA: 0x000358EE File Offset: 0x00033AEE
 		public TickControllerAttribute(int priority = 0)
 		{
 			this.Priority = priority;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002415 RID: 9237
+	// Token: 0x020026B4 RID: 9908
 	public static class EShowTalkCameraMotionTypeExtensions
 	{
-		// Token: 0x0600C8DD RID: 51421 RVA: 0x001D62C4 File Offset: 0x001D44C4
+		// Token: 0x0600D584 RID: 54660 RVA: 0x001EFEC0 File Offset: 0x001EE0C0
 		public static string ToEnumString(this EShowTalkCameraMotionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8DE RID: 51422 RVA: 0x001D62FC File Offset: 0x001D44FC
+		// Token: 0x0600D585 RID: 54661 RVA: 0x001EFEF8 File Offset: 0x001EE0F8
 		public static EShowTalkCameraMotionType FromString(string name)
 		{
 			EShowTalkCameraMotionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8DF RID: 51423 RVA: 0x001D6325 File Offset: 0x001D4525
+		// Token: 0x0600D586 RID: 54662 RVA: 0x001EFF21 File Offset: 0x001EE121
 		public static bool TryFromString(string name, out EShowTalkCameraMotionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C8E0 RID: 51424 RVA: 0x001D635E File Offset: 0x001D455E
+		// Token: 0x0600D587 RID: 54663 RVA: 0x001EFF5A File Offset: 0x001EE15A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8E1 RID: 51425 RVA: 0x001D6376 File Offset: 0x001D4576
+		// Token: 0x0600D588 RID: 54664 RVA: 0x001EFF72 File Offset: 0x001EE172
 		public static EShowTalkCameraMotionType[] GetValues()
 		{
 			return new EShowTalkCameraMotionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8E2 RID: 51426 RVA: 0x001D6382 File Offset: 0x001D4582
+		// Token: 0x0600D589 RID: 54665 RVA: 0x001EFF7E File Offset: 0x001EE17E
 		public static string[] GetNames()
 		{
 			return new string[]

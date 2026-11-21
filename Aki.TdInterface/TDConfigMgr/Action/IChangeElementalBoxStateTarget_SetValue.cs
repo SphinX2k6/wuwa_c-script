@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001869 RID: 6249
+	// Token: 0x020019F4 RID: 6644
 	public class IChangeElementalBoxStateTarget_SetValue
 	{
-		// Token: 0x040054B6 RID: 21686
+		// Token: 0x04005903 RID: 22787
 		public EChangeElementalBoxStateTargetType Type;
 	}
 }

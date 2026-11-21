@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004734 RID: 18228
+	// Token: 0x02004B9C RID: 19356
 	public class IFavoriteFlowConfigT
 	{
-		// Token: 0x170082BD RID: 33469
-		// (get) Token: 0x0601C079 RID: 114809 RVA: 0x003F8DB9 File Offset: 0x003F6FB9
-		// (set) Token: 0x0601C07A RID: 114810 RVA: 0x003F8DC1 File Offset: 0x003F6FC1
+		// Token: 0x170088FE RID: 35070
+		// (get) Token: 0x0601D84E RID: 120910 RVA: 0x00425055 File Offset: 0x00423255
+		// (set) Token: 0x0601D84F RID: 120911 RVA: 0x0042505D File Offset: 0x0042325D
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x170082BE RID: 33470
-		// (get) Token: 0x0601C07B RID: 114811 RVA: 0x003F8DCA File Offset: 0x003F6FCA
-		// (set) Token: 0x0601C07C RID: 114812 RVA: 0x003F8DD2 File Offset: 0x003F6FD2
+		// Token: 0x170088FF RID: 35071
+		// (get) Token: 0x0601D850 RID: 120912 RVA: 0x00425066 File Offset: 0x00423266
+		// (set) Token: 0x0601D851 RID: 120913 RVA: 0x0042506E File Offset: 0x0042326E
 		public List<IFavoriteFlowNodeInfoT> FavoriteFlowNodes { get; set; }
 
-		// Token: 0x170082BF RID: 33471
-		// (get) Token: 0x0601C07D RID: 114813 RVA: 0x003F8DDB File Offset: 0x003F6FDB
-		// (set) Token: 0x0601C07E RID: 114814 RVA: 0x003F8DE3 File Offset: 0x003F6FE3
+		// Token: 0x17008900 RID: 35072
+		// (get) Token: 0x0601D852 RID: 120914 RVA: 0x00425077 File Offset: 0x00423277
+		// (set) Token: 0x0601D853 RID: 120915 RVA: 0x0042507F File Offset: 0x0042327F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C07F RID: 114815 RVA: 0x003F8DEC File Offset: 0x003F6FEC
+		// Token: 0x0601D854 RID: 120916 RVA: 0x00425088 File Offset: 0x00423288
 		public IFavoriteFlowConfigT()
 		{
 			this._FoldedForTree = false;

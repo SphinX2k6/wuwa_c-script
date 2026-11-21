@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F41 RID: 24385
+	// Token: 0x02004F28 RID: 20264
 	[NullableContext(1)]
 	public interface IWheelTowerResultViewButtonData
 	{
-		// Token: 0x17008F82 RID: 36738
-		// (get) Token: 0x0603DF2E RID: 253742
-		// (set) Token: 0x0603DF2F RID: 253743
+		// Token: 0x17006354 RID: 25428
+		// (get) Token: 0x06032EC9 RID: 208585
+		// (set) Token: 0x06032ECA RID: 208586
 		string Name { get; set; }
 
-		// Token: 0x17008F83 RID: 36739
-		// (get) Token: 0x0603DF30 RID: 253744
-		// (set) Token: 0x0603DF31 RID: 253745
+		// Token: 0x17006355 RID: 25429
+		// (get) Token: 0x06032ECB RID: 208587
+		// (set) Token: 0x06032ECC RID: 208588
 		Action OnClick { get; set; }
 
-		// Token: 0x17008F84 RID: 36740
-		// (get) Token: 0x0603DF32 RID: 253746
-		// (set) Token: 0x0603DF33 RID: 253747
+		// Token: 0x17006356 RID: 25430
+		// (get) Token: 0x06032ECD RID: 208589
+		// (set) Token: 0x06032ECE RID: 208590
 		EConfirmBoxConfigId? ConfirmBoxId { get; set; }
 	}
 }

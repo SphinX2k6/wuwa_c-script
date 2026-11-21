@@ -2,36 +2,36 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E80 RID: 3712
+	// Token: 0x02000F93 RID: 3987
 	public enum EQuest
 	{
-		// Token: 0x040030F7 RID: 12535
+		// Token: 0x040033F9 RID: 13305
 		Main = 1,
-		// Token: 0x040030F8 RID: 12536
+		// Token: 0x040033FA RID: 13306
 		Branch,
-		// Token: 0x040030F9 RID: 12537
+		// Token: 0x040033FB RID: 13307
 		Role,
-		// Token: 0x040030FA RID: 12538
+		// Token: 0x040033FC RID: 13308
 		Daily,
-		// Token: 0x040030FB RID: 12539
+		// Token: 0x040033FD RID: 13309
 		Guide = 7,
-		// Token: 0x040030FC RID: 12540
+		// Token: 0x040033FE RID: 13310
 		POI = 9,
-		// Token: 0x040030FD RID: 12541
+		// Token: 0x040033FF RID: 13311
 		Activity,
-		// Token: 0x040030FE RID: 12542
+		// Token: 0x04003400 RID: 13312
 		Hidden,
-		// Token: 0x040030FF RID: 12543
+		// Token: 0x04003401 RID: 13313
 		DangoActivity,
-		// Token: 0x04003100 RID: 12544
+		// Token: 0x04003402 RID: 13314
 		SpringFestivalInvitation = 14,
-		// Token: 0x04003101 RID: 12545
+		// Token: 0x04003403 RID: 13315
 		Recall,
-		// Token: 0x04003102 RID: 12546
+		// Token: 0x04003404 RID: 13316
 		Linkage,
-		// Token: 0x04003103 RID: 12547
+		// Token: 0x04003405 RID: 13317
 		POI2,
-		// Token: 0x04003104 RID: 12548
+		// Token: 0x04003406 RID: 13318
 		Test = 100
 	}
 }

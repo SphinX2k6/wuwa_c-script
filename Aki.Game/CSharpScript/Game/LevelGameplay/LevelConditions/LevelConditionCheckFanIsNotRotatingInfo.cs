@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C3D RID: 27709
+	// Token: 0x02005DB6 RID: 23990
 	public class LevelConditionCheckFanIsNotRotatingInfo : CodeCondition
 	{
-		// Token: 0x170099AB RID: 39339
-		// (get) Token: 0x060444D4 RID: 279764 RVA: 0x010D3931 File Offset: 0x010D1B31
+		// Token: 0x17006EAE RID: 28334
+		// (get) Token: 0x0603A62C RID: 239148 RVA: 0x0107D7E1 File Offset: 0x0107B9E1
 		public override ECodeCondition CodeType
 		{
 			get
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x04023997 RID: 145815
+		// Token: 0x0401EC39 RID: 126009
 		public int EntityId;
 	}
 }

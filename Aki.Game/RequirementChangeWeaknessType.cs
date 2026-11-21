@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F1C RID: 12060
+// Token: 0x0200246F RID: 9327
 [RequiredMember]
 public class RequirementChangeWeaknessType : IRequirement
 {
-	// Token: 0x170023AC RID: 9132
-	// (get) Token: 0x06019B69 RID: 105321 RVA: 0x006B1BAB File Offset: 0x006AFDAB
+	// Token: 0x1700246E RID: 9326
+	// (get) Token: 0x06017474 RID: 95348 RVA: 0x006D7EC3 File Offset: 0x006D60C3
 	public EExtraEffectRequire Type
 	{
 		get
@@ -15,14 +15,14 @@ public class RequirementChangeWeaknessType : IRequirement
 		}
 	}
 
-	// Token: 0x06019B6A RID: 105322 RVA: 0x006B1BAF File Offset: 0x006AFDAF
+	// Token: 0x06017475 RID: 95349 RVA: 0x006D7EC7 File Offset: 0x006D60C7
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementChangeWeaknessType()
 	{
 	}
 
-	// Token: 0x0400C18D RID: 49549
+	// Token: 0x0400C52F RID: 50479
 	[RequiredMember]
 	public EChangeWeaknessType ChangeWeaknessType;
 }

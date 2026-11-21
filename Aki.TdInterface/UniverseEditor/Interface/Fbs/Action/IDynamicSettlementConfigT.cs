@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200661F RID: 26143
+	// Token: 0x02006C90 RID: 27792
 	public class IDynamicSettlementConfigT
 	{
-		// Token: 0x1700C23F RID: 49727
-		// (get) Token: 0x0602D665 RID: 185957 RVA: 0x006386EE File Offset: 0x006368EE
-		// (set) Token: 0x0602D666 RID: 185958 RVA: 0x006386F6 File Offset: 0x006368F6
+		// Token: 0x1700CBDD RID: 52189
+		// (get) Token: 0x0602FE36 RID: 196150 RVA: 0x00685256 File Offset: 0x00683456
+		// (set) Token: 0x0602FE37 RID: 196151 RVA: 0x0068525E File Offset: 0x0068345E
 		public EDynamicSettlementType Type { get; set; }
 
-		// Token: 0x0602D667 RID: 185959 RVA: 0x006386FF File Offset: 0x006368FF
+		// Token: 0x0602FE38 RID: 196152 RVA: 0x00685267 File Offset: 0x00683467
 		public IDynamicSettlementConfigT()
 		{
 			this.Type = EDynamicSettlementType.Battle;

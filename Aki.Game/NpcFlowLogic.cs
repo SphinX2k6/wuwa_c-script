@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
+using Aki.Game.Module.Plot;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Module.Plot;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02003204 RID: 12804
+// Token: 0x02002773 RID: 10099
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcFlowLogic : CharacterFlowLogic
 {
-	// Token: 0x0601BA11 RID: 113169 RVA: 0x0079730C File Offset: 0x0079550C
+	// Token: 0x06019596 RID: 103830 RVA: 0x007BF958 File Offset: 0x007BDB58
 	public NpcFlowLogic(BaseActorComponent actorComp, BubbleComponent bubbleData) : base(actorComp, bubbleData)
 	{
 	}
 
-	// Token: 0x17002633 RID: 9779
-	// (get) Token: 0x0601BA12 RID: 113170 RVA: 0x00797316 File Offset: 0x00795516
+	// Token: 0x17002874 RID: 10356
+	// (get) Token: 0x06019597 RID: 103831 RVA: 0x007BF96D File Offset: 0x007BDB6D
 	public NpcRedDotFlowLogic RedDotLogic
 	{
 		get
@@ -31,16 +32,18 @@ public class NpcFlowLogic : CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601BA13 RID: 113171 RVA: 0x00797331 File Offset: 0x00795531
+	// Token: 0x06019598 RID: 103832 RVA: 0x007BF988 File Offset: 0x007BDB88
 	protected override void ResetFlowState()
 	{
+		this.MouthAnimPlayer.Stop();
 		base.ResetFlowState();
 		this.RedDotLogic.ManualControlRedDotActive(false, false);
 	}
 
-	// Token: 0x0601BA14 RID: 113172 RVA: 0x00797348 File Offset: 0x00795548
+	// Token: 0x06019599 RID: 103833 RVA: 0x007BF9A8 File Offset: 0x007BDBA8
 	protected override void PlayTalk(int id)
 	{
+		this.MouthAnimPlayer.Stop();
 		if (id < this.CurrentTalkItems.Count && this.DynamicFlowData != null && this.DynamicFlowData.RedDot != null)
 		{
 			this.RedDotLogic.ManualControlRedDotActive(true, this.DynamicFlowData.RedDot.Value);
@@ -48,7 +51,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		base.PlayTalk(id);
 	}
 
-	// Token: 0x0601BA15 RID: 113173 RVA: 0x007973A8 File Offset: 0x007955A8
+	// Token: 0x0601959A RID: 103834 RVA: 0x007BFA14 File Offset: 0x007BDC14
 	protected unsafe override bool HandleTalkAction([Nullable(2)] Entity entity, ITalkItem config)
 	{
 		if (entity == null)
@@ -115,7 +118,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		return true;
 	}
 
-	// Token: 0x0601BA16 RID: 113174 RVA: 0x007975B4 File Offset: 0x007957B4
+	// Token: 0x0601959B RID: 103835 RVA: 0x007BFC20 File Offset: 0x007BDE20
 	private void HandleNormalAudio(PlotAudio audioConfig, ITalkItem config, Entity entity)
 	{
 		ExternalSourceSetting? config2 = ConfigExternalSourceSettingById.GetConfig(audioConfig.ExternalSourceSetting, true);
@@ -128,12 +131,12 @@ public class NpcFlowLogic : CharacterFlowLogic
 			CallbackMask = new ECallbackMask?(ECallbackMask.Duration),
 			CallbackHandler = delegate(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 			{
-				this.OnAudioCallback(id, callbackType, callbackInfo);
+				this.OnAudioCallback(id, callbackType, callbackInfo, new PlotAudio?(audioConfig));
 			}
 		});
 	}
 
-	// Token: 0x0601BA17 RID: 113175 RVA: 0x0079768C File Offset: 0x0079588C
+	// Token: 0x0601959C RID: 103836 RVA: 0x007BFD10 File Offset: 0x007BDF10
 	private void HandleInterjection(Interjection audioConfig, ITalkItem config, Entity entity)
 	{
 		this.BeginAudio(entity, config, 0f);
@@ -143,12 +146,12 @@ public class NpcFlowLogic : CharacterFlowLogic
 			CallbackMask = new ECallbackMask?(ECallbackMask.Duration),
 			CallbackHandler = delegate(EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
 			{
-				this.OnAudioCallback(id, callbackType, callbackInfo);
+				this.OnAudioCallback(id, callbackType, callbackInfo, null);
 			}
 		});
 	}
 
-	// Token: 0x0601BA18 RID: 113176 RVA: 0x00797705 File Offset: 0x00795905
+	// Token: 0x0601959D RID: 103837 RVA: 0x007BFD89 File Offset: 0x007BDF89
 	private void BeginAudio(Entity entity, ITalkItem config, float extraDuration = 0f)
 	{
 		this.IsAudioLoading = true;
@@ -159,9 +162,9 @@ public class NpcFlowLogic : CharacterFlowLogic
 		this.AudioExtraDuration = extraDuration;
 	}
 
-	// Token: 0x0601BA19 RID: 113177 RVA: 0x00797740 File Offset: 0x00795940
+	// Token: 0x0601959E RID: 103838 RVA: 0x007BFDC4 File Offset: 0x007BDFC4
 	[NullableContext(2)]
-	private void OnAudioCallback(int id, EAkCallbackType callbackType, UAkCallbackInfo callbackInfo)
+	private void OnAudioCallback(int id, EAkCallbackType callbackType, UAkCallbackInfo callbackInfo, PlotAudio? plotAudio = null)
 	{
 		if (id != this.AudioUniqueId)
 		{
@@ -171,11 +174,40 @@ public class NpcFlowLogic : CharacterFlowLogic
 		{
 			return;
 		}
+		if (base.IsPlayMouthAnim && plotAudio != null)
+		{
+			ETalkItemType? type = this.AudioConfig.Type;
+			ETalkItemType etalkItemType = ETalkItemType.Talk;
+			if (type.GetValueOrDefault() == etalkItemType & type != null)
+			{
+				ITalkItemDialog talkItemDialog = this.AudioConfig as ITalkItemDialog;
+				if (talkItemDialog == null || !talkItemDialog.NoMouthAnim.GetValueOrDefault())
+				{
+					ITalkItemDialog talkItemDialog2 = this.AudioConfig as ITalkItemDialog;
+					bool flag;
+					if (talkItemDialog2 == null)
+					{
+						flag = true;
+					}
+					else
+					{
+						ITalkItemStyle style = talkItemDialog2.Style;
+						ETalkItemStyle? etalkItemStyle = (style != null) ? new ETalkItemStyle?(style.Type) : null;
+						ETalkItemStyle etalkItemStyle2 = ETalkItemStyle.InnerVoice;
+						flag = !(etalkItemStyle.GetValueOrDefault() == etalkItemStyle2 & etalkItemStyle != null);
+					}
+					if (flag)
+					{
+						this.MouthAnimPlayer.Play(this.AudioEntity, plotAudio.Value, this.AudioConfig.TidTalk);
+					}
+				}
+			}
+		}
 		float duration = (callbackInfo as UAkDurationCallbackInfo).Duration;
 		this.CallBackDuration(duration + this.AudioExtraDuration, this.AudioEntity, this.AudioConfig);
 	}
 
-	// Token: 0x0601BA1A RID: 113178 RVA: 0x00797784 File Offset: 0x00795984
+	// Token: 0x0601959F RID: 103839 RVA: 0x007BFED8 File Offset: 0x007BE0D8
 	private int PostBubbleAudio(string eventName, PostEventArgs args)
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -192,7 +224,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		return AudioSystem.Instance.PostEvent(eventName, andPrepareAudioTarget, new PostEventArgs?(args));
 	}
 
-	// Token: 0x0601BA1B RID: 113179 RVA: 0x007977E4 File Offset: 0x007959E4
+	// Token: 0x060195A0 RID: 103840 RVA: 0x007BFF38 File Offset: 0x007BE138
 	[return: Nullable(2)]
 	private UAkComponent GetAndPrepareAudioTarget(AActor owner)
 	{
@@ -205,7 +237,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		return akComponent;
 	}
 
-	// Token: 0x0601BA1C RID: 113180 RVA: 0x00797828 File Offset: 0x00795A28
+	// Token: 0x060195A1 RID: 103841 RVA: 0x007BFF7C File Offset: 0x007BE17C
 	[NullableContext(2)]
 	private void PlayAkEvent(IPostAkEventType config)
 	{
@@ -249,7 +281,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601BA1D RID: 113181 RVA: 0x0079795C File Offset: 0x00795B5C
+	// Token: 0x060195A2 RID: 103842 RVA: 0x007C00B0 File Offset: 0x007BE2B0
 	private void CallBackDuration(float duration, Entity entity, ITalkItem config)
 	{
 		this.IsAudioLoading = false;
@@ -281,7 +313,7 @@ public class NpcFlowLogic : CharacterFlowLogic
 		});
 	}
 
-	// Token: 0x0601BA1E RID: 113182 RVA: 0x00797A2C File Offset: 0x00795C2C
+	// Token: 0x060195A3 RID: 103843 RVA: 0x007C0180 File Offset: 0x007BE380
 	public override void Tick(float deltaSeconds)
 	{
 		if (!this.EnableUpdate)
@@ -319,9 +351,10 @@ public class NpcFlowLogic : CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0601BA1F RID: 113183 RVA: 0x00797ADC File Offset: 0x00795CDC
+	// Token: 0x060195A4 RID: 103844 RVA: 0x007C0230 File Offset: 0x007BE430
 	public void ClearAudio()
 	{
+		this.MouthAnimPlayer.Stop();
 		this.IsAudioLoading = false;
 		this.AudioUniqueId++;
 		if (this.PlayEventHandle != 0)
@@ -334,36 +367,39 @@ public class NpcFlowLogic : CharacterFlowLogic
 		}
 	}
 
-	// Token: 0x0400D943 RID: 55619
+	// Token: 0x0400DDE1 RID: 56801
 	private const int DEFAULT_WAIT_TIME = 3;
 
-	// Token: 0x0400D944 RID: 55620
+	// Token: 0x0400DDE2 RID: 56802
 	private const int LOAD_AUDIO_TIME = 1;
 
-	// Token: 0x0400D945 RID: 55621
+	// Token: 0x0400DDE3 RID: 56803
 	private const int BREAK_TIME = 1000;
 
-	// Token: 0x0400D946 RID: 55622
+	// Token: 0x0400DDE4 RID: 56804
 	private int PlayEventHandle;
 
-	// Token: 0x0400D947 RID: 55623
+	// Token: 0x0400DDE5 RID: 56805
 	private int AudioUniqueId;
 
-	// Token: 0x0400D948 RID: 55624
+	// Token: 0x0400DDE6 RID: 56806
 	[Nullable(2)]
 	private Entity AudioEntity;
 
-	// Token: 0x0400D949 RID: 55625
+	// Token: 0x0400DDE7 RID: 56807
 	[Nullable(2)]
 	private ITalkItem AudioConfig;
 
-	// Token: 0x0400D94A RID: 55626
+	// Token: 0x0400DDE8 RID: 56808
 	private float AudioExtraDuration;
 
-	// Token: 0x0400D94B RID: 55627
+	// Token: 0x0400DDE9 RID: 56809
 	private bool IsAudioLoading;
 
-	// Token: 0x0400D94C RID: 55628
+	// Token: 0x0400DDEA RID: 56810
+	private PlotMouthAnimPlayer MouthAnimPlayer = new PlotMouthAnimPlayer();
+
+	// Token: 0x0400DDEB RID: 56811
 	[Nullable(2)]
 	private NpcRedDotFlowLogic RedDotInternal;
 }

@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002AC3 RID: 10947
+// Token: 0x0200203F RID: 8255
 public class SurvivorsRogueCardAttributeItem : UiPanelBase
 {
-	// Token: 0x06016CA2 RID: 93346 RVA: 0x005C9974 File Offset: 0x005C7B74
+	// Token: 0x060146D3 RID: 83667 RVA: 0x005F64C8 File Offset: 0x005F46C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,14 +18,14 @@ public class SurvivorsRogueCardAttributeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016CA3 RID: 93347 RVA: 0x005C99CE File Offset: 0x005C7BCE
+	// Token: 0x060146D4 RID: 83668 RVA: 0x005F6522 File Offset: 0x005F4722
 	public void SetIsUp(bool bUp)
 	{
 		base.GetItem(0).SetUIActive(!bUp);
 		base.GetItem(1).SetUIActive(bUp);
 	}
 
-	// Token: 0x06016CA4 RID: 93348 RVA: 0x005C99ED File Offset: 0x005C7BED
+	// Token: 0x060146D5 RID: 83669 RVA: 0x005F6541 File Offset: 0x005F4741
 	[NullableContext(2)]
 	public void SetTextureIcon(string path)
 	{

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006661 RID: 26209
+	// Token: 0x02006CD2 RID: 27858
 	public class IEnableFuncConfigT
 	{
-		// Token: 0x1700C2B9 RID: 49849
-		// (get) Token: 0x0602D87F RID: 186495 RVA: 0x0063C180 File Offset: 0x0063A380
-		// (set) Token: 0x0602D880 RID: 186496 RVA: 0x0063C188 File Offset: 0x0063A388
+		// Token: 0x1700CC57 RID: 52311
+		// (get) Token: 0x06030050 RID: 196688 RVA: 0x00688CE8 File Offset: 0x00686EE8
+		// (set) Token: 0x06030051 RID: 196689 RVA: 0x00688CF0 File Offset: 0x00686EF0
 		public float DelayDuration { get; set; }
 
-		// Token: 0x1700C2BA RID: 49850
-		// (get) Token: 0x0602D881 RID: 186497 RVA: 0x0063C191 File Offset: 0x0063A391
-		// (set) Token: 0x0602D882 RID: 186498 RVA: 0x0063C199 File Offset: 0x0063A399
+		// Token: 0x1700CC58 RID: 52312
+		// (get) Token: 0x06030052 RID: 196690 RVA: 0x00688CF9 File Offset: 0x00686EF9
+		// (set) Token: 0x06030053 RID: 196691 RVA: 0x00688D01 File Offset: 0x00686F01
 		public bool IsEnableEsc { get; set; }
 
-		// Token: 0x1700C2BB RID: 49851
-		// (get) Token: 0x0602D883 RID: 186499 RVA: 0x0063C1A2 File Offset: 0x0063A3A2
-		// (set) Token: 0x0602D884 RID: 186500 RVA: 0x0063C1AA File Offset: 0x0063A3AA
+		// Token: 0x1700CC59 RID: 52313
+		// (get) Token: 0x06030054 RID: 196692 RVA: 0x00688D0A File Offset: 0x00686F0A
+		// (set) Token: 0x06030055 RID: 196693 RVA: 0x00688D12 File Offset: 0x00686F12
 		public bool IsEnablePhoto { get; set; }
 
-		// Token: 0x1700C2BC RID: 49852
-		// (get) Token: 0x0602D885 RID: 186501 RVA: 0x0063C1B3 File Offset: 0x0063A3B3
-		// (set) Token: 0x0602D886 RID: 186502 RVA: 0x0063C1BB File Offset: 0x0063A3BB
+		// Token: 0x1700CC5A RID: 52314
+		// (get) Token: 0x06030056 RID: 196694 RVA: 0x00688D1B File Offset: 0x00686F1B
+		// (set) Token: 0x06030057 RID: 196695 RVA: 0x00688D23 File Offset: 0x00686F23
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D887 RID: 186503 RVA: 0x0063C1C4 File Offset: 0x0063A3C4
+		// Token: 0x06030058 RID: 196696 RVA: 0x00688D2C File Offset: 0x00686F2C
 		public IEnableFuncConfigT()
 		{
 			this.DelayDuration = 0f;

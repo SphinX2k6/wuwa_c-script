@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015A1 RID: 5537
+	// Token: 0x02001613 RID: 5651
 	public enum ExitVehicleType
 	{
-		// Token: 0x0400A81C RID: 43036
+		// Token: 0x0400AC9B RID: 44187
 		[OriginalName("ExitVehicleTypeLaunch")]
 		Launch,
-		// Token: 0x0400A81D RID: 43037
+		// Token: 0x0400AC9C RID: 44188
 		[OriginalName("ExitVehicleTypeNormal")]
 		Normal,
-		// Token: 0x0400A81E RID: 43038
+		// Token: 0x0400AC9D RID: 44189
 		[OriginalName("ExitVehicleTypeDelayShow")]
 		DelayShow,
-		// Token: 0x0400A81F RID: 43039
+		// Token: 0x0400AC9E RID: 44190
 		[OriginalName("ExitVehicleTypeSeatStandUp")]
 		SeatStandUp,
-		// Token: 0x0400A820 RID: 43040
+		// Token: 0x0400AC9F RID: 44191
 		[OriginalName("ExitVehicleTypeAllRole")]
 		AllRole
 	}

@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B8F RID: 2959
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C5D RID: 3165
 	public class IActionByHitTypeConfig
 	{
-		// Token: 0x06004405 RID: 17413 RVA: 0x000AD00D File Offset: 0x000AB20D
+		// Token: 0x0600485E RID: 18526 RVA: 0x000B70D1 File Offset: 0x000B52D1
 		public static IActionByHitTypeConfig Create(IActionByHitTypeConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012A4 RID: 4772
-		// (get) Token: 0x06004406 RID: 17414 RVA: 0x000AD02C File Offset: 0x000AB22C
+		// Token: 0x1700139F RID: 5023
+		// (get) Token: 0x0600485F RID: 18527 RVA: 0x000B70F0 File Offset: 0x000B52F0
 		public virtual IHitBulletType HitBullets
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012A5 RID: 4773
-		// (get) Token: 0x06004407 RID: 17415 RVA: 0x000AD05B File Offset: 0x000AB25B
+		// Token: 0x170013A0 RID: 5024
+		// (get) Token: 0x06004860 RID: 18528 RVA: 0x000B711F File Offset: 0x000B531F
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -59,19 +57,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012A6 RID: 4774
-		// (get) Token: 0x06004408 RID: 17416 RVA: 0x000AD090 File Offset: 0x000AB290
+		// Token: 0x170013A1 RID: 5025
+		// (get) Token: 0x06004861 RID: 18529 RVA: 0x000B7154 File Offset: 0x000B5354
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -94,31 +92,31 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002660 RID: 9824
+		// Token: 0x040028A8 RID: 10408
 		private IActionByHitTypeConfig Instance;
 
-		// Token: 0x04002661 RID: 9825
+		// Token: 0x040028A9 RID: 10409
 		private IHitBulletType _HitBulletsCache;
 
-		// Token: 0x04002662 RID: 9826
+		// Token: 0x040028AA RID: 10410
 		private bool _HitBulletsInited;
 
-		// Token: 0x04002663 RID: 9827
+		// Token: 0x040028AB RID: 10411
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002664 RID: 9828
+		// Token: 0x040028AC RID: 10412
 		private bool _ConditionInited;
 
-		// Token: 0x04002665 RID: 9829
+		// Token: 0x040028AD RID: 10413
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002666 RID: 9830
+		// Token: 0x040028AE RID: 10414
 		private bool _ActionsInited;
 	}
 }

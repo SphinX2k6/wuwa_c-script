@@ -3,17 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000375 RID: 885
+	// Token: 0x020003BE RID: 958
 	public class IFanInteractByFKey_SetValue
 	{
-		// Token: 0x04000E66 RID: 3686
+		// Token: 0x04000F5D RID: 3933
 		public EFanInteractType Type;
 
-		// Token: 0x04000E67 RID: 3687
-		[Nullable(1)]
+		// Token: 0x04000F5E RID: 3934
 		public string TidInteractOptionText;
 
-		// Token: 0x04000E68 RID: 3688
+		// Token: 0x04000F5F RID: 3935
 		[Nullable(2)]
 		public string EdTidInteractOptionText;
 	}

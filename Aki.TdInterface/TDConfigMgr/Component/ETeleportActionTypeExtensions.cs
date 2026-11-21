@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A34 RID: 2612
+	// Token: 0x02000AF9 RID: 2809
 	public static class ETeleportActionTypeExtensions
 	{
-		// Token: 0x0600399B RID: 14747 RVA: 0x00094B48 File Offset: 0x00092D48
+		// Token: 0x06003D73 RID: 15731 RVA: 0x0009D47C File Offset: 0x0009B67C
 		public static string ToEnumString(this ETeleportActionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600399C RID: 14748 RVA: 0x00094B80 File Offset: 0x00092D80
+		// Token: 0x06003D74 RID: 15732 RVA: 0x0009D4B4 File Offset: 0x0009B6B4
 		public static ETeleportActionType FromString(string name)
 		{
 			ETeleportActionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600399D RID: 14749 RVA: 0x00094BA9 File Offset: 0x00092DA9
+		// Token: 0x06003D75 RID: 15733 RVA: 0x0009D4DD File Offset: 0x0009B6DD
 		public static bool TryFromString(string name, out ETeleportActionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600399E RID: 14750 RVA: 0x00094BE2 File Offset: 0x00092DE2
+		// Token: 0x06003D76 RID: 15734 RVA: 0x0009D516 File Offset: 0x0009B716
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600399F RID: 14751 RVA: 0x00094BFA File Offset: 0x00092DFA
+		// Token: 0x06003D77 RID: 15735 RVA: 0x0009D52E File Offset: 0x0009B72E
 		public static ETeleportActionType[] GetValues()
 		{
 			return new ETeleportActionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060039A0 RID: 14752 RVA: 0x00094C06 File Offset: 0x00092E06
+		// Token: 0x06003D78 RID: 15736 RVA: 0x0009D53A File Offset: 0x0009B73A
 		public static string[] GetNames()
 		{
 			return new string[]

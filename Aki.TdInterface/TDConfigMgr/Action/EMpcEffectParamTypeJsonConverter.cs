@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023AA RID: 9130
+	// Token: 0x02002635 RID: 9781
 	public class EMpcEffectParamTypeJsonConverter : JsonConverter<EMpcEffectParamType>
 	{
-		// Token: 0x0600C6FD RID: 50941 RVA: 0x001D22F4 File Offset: 0x001D04F4
+		// Token: 0x0600D34A RID: 54090 RVA: 0x001EB494 File Offset: 0x001E9694
 		public override EMpcEffectParamType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMpcEffectParamTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6FE RID: 50942 RVA: 0x001D2318 File Offset: 0x001D0518
+		// Token: 0x0600D34B RID: 54091 RVA: 0x001EB4B8 File Offset: 0x001E96B8
 		public override void Write(Utf8JsonWriter writer, EMpcEffectParamType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

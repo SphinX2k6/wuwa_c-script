@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000608 RID: 1544
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006A5 RID: 1701
 	public class IPointAttachTarget : IAttachTarget
 	{
-		// Token: 0x060020F8 RID: 8440 RVA: 0x0005B8E0 File Offset: 0x00059AE0
+		// Token: 0x060023FE RID: 9214 RVA: 0x000625F4 File Offset: 0x000607F4
 		private IPointAttachTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060020F9 RID: 8441 RVA: 0x0005B918 File Offset: 0x00059B18
+		// Token: 0x060023FF RID: 9215 RVA: 0x0006262C File Offset: 0x0006082C
 		public static IPointAttachTarget Create([Nullable(2)] IPointAttachTarget instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020FA RID: 8442 RVA: 0x0005B92B File Offset: 0x00059B2B
+		// Token: 0x06002400 RID: 9216 RVA: 0x0006263F File Offset: 0x0006083F
 		public static IPointAttachTarget CreateFromSetValue([Nullable(2)] IPointAttachTarget_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060020FB RID: 8443 RVA: 0x0005B93E File Offset: 0x00059B3E
+		// Token: 0x06002401 RID: 9217 RVA: 0x00062652 File Offset: 0x00060852
 		public new IPointAttachTarget_SetValue ToSetValue()
 		{
 			return new IPointAttachTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008CF RID: 2255
-		// (get) Token: 0x060020FC RID: 8444 RVA: 0x0005B95D File Offset: 0x00059B5D
-		// (set) Token: 0x060020FD RID: 8445 RVA: 0x0005B988 File Offset: 0x00059B88
+		// Token: 0x17000986 RID: 2438
+		// (get) Token: 0x06002402 RID: 9218 RVA: 0x00062671 File Offset: 0x00060871
+		// (set) Token: 0x06002403 RID: 9219 RVA: 0x0006269C File Offset: 0x0006089C
 		public override EAttachType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008D0 RID: 2256
-		// (get) Token: 0x060020FE RID: 8446 RVA: 0x0005B998 File Offset: 0x00059B98
-		// (set) Token: 0x060020FF RID: 8447 RVA: 0x0005B9F9 File Offset: 0x00059BF9
+		// Token: 0x17000987 RID: 2439
+		// (get) Token: 0x06002404 RID: 9220 RVA: 0x000626AC File Offset: 0x000608AC
+		// (set) Token: 0x06002405 RID: 9221 RVA: 0x0006270D File Offset: 0x0006090D
 		public virtual VectorInfo RelativePoint
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001713 RID: 5907
+		// Token: 0x04001905 RID: 6405
 		[Nullable(2)]
 		protected new IPointAttachTarget FbInstance;
 
-		// Token: 0x04001714 RID: 5908
+		// Token: 0x04001906 RID: 6406
 		[Nullable(2)]
 		protected new IPointAttachTarget_SetValue PocoInterface;
 
-		// Token: 0x04001715 RID: 5909
+		// Token: 0x04001907 RID: 6407
 		private VectorInfo _RelativePointCache;
 
-		// Token: 0x04001716 RID: 5910
+		// Token: 0x04001908 RID: 6408
 		private bool _RelativePointInited;
 	}
 }

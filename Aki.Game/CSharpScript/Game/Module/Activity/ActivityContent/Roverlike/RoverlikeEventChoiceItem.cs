@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F6 RID: 24822
+	// Token: 0x02005074 RID: 20596
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,25 +17,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeEventChoiceItem : GridProxyAbstract<IRoverlikeEventChoiceData>
 	{
-		// Token: 0x0603EC5A RID: 257114 RVA: 0x00F29924 File Offset: 0x00F27B24
+		// Token: 0x0603391C RID: 211228 RVA: 0x00E70738 File Offset: 0x00E6E938
 		public void BindOnItemSelect(Action<IRoverlikeEventChoiceData> callback)
 		{
 			this.OnItemSelect = callback;
 		}
 
-		// Token: 0x0603EC5B RID: 257115 RVA: 0x00F2992D File Offset: 0x00F27B2D
+		// Token: 0x0603391D RID: 211229 RVA: 0x00E70741 File Offset: 0x00E6E941
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603EC5C RID: 257116 RVA: 0x00F29940 File Offset: 0x00F27B40
+		// Token: 0x0603391E RID: 211230 RVA: 0x00E70754 File Offset: 0x00E6E954
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC5D RID: 257117 RVA: 0x00F29954 File Offset: 0x00F27B54
+		// Token: 0x0603391F RID: 211231 RVA: 0x00E70768 File Offset: 0x00E6E968
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EC5E RID: 257118 RVA: 0x00F299FC File Offset: 0x00F27BFC
+		// Token: 0x06033920 RID: 211232 RVA: 0x00E70810 File Offset: 0x00E6EA10
 		public override void Refresh(IRoverlikeEventChoiceData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC5F RID: 257119 RVA: 0x00F29A48 File Offset: 0x00F27C48
+		// Token: 0x06033921 RID: 211233 RVA: 0x00E7085C File Offset: 0x00E6EA5C
 		public void RefreshDescMode()
 		{
 			if (this.CurrentData == null)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), eventChoiceConfig.Value.Desc, eventChoiceConfig.Value.Params());
 		}
 
-		// Token: 0x0603EC60 RID: 257120 RVA: 0x00F29AAD File Offset: 0x00F27CAD
+		// Token: 0x06033922 RID: 211234 RVA: 0x00E708C1 File Offset: 0x00E6EAC1
 		private void OnTogCommonStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.CurrentData != null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC61 RID: 257121 RVA: 0x00F29AD4 File Offset: 0x00F27CD4
+		// Token: 0x06033923 RID: 211235 RVA: 0x00E708E8 File Offset: 0x00E6EAE8
 		protected override void OnStart()
 		{
 			ITermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -109,18 +109,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x0603EC62 RID: 257122 RVA: 0x00F29B0F File Offset: 0x00F27D0F
+		// Token: 0x06033924 RID: 211236 RVA: 0x00E70923 File Offset: 0x00E6EB23
 		protected override void OnBeforeDestroy()
 		{
 			TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(1));
 			this.OnItemSelect = null;
 		}
 
-		// Token: 0x04020CCF RID: 134351
+		// Token: 0x0401B5FC RID: 112124
 		[Nullable(2)]
 		private IRoverlikeEventChoiceData CurrentData;
 
-		// Token: 0x04020CD0 RID: 134352
+		// Token: 0x0401B5FD RID: 112125
 		[Nullable(new byte[]
 		{
 			2,
@@ -128,14 +128,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<IRoverlikeEventChoiceData> OnItemSelect;
 
-		// Token: 0x0200C353 RID: 50003
+		// Token: 0x0200AD3B RID: 44347
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF3C RID: 241468
+			// Token: 0x040358A1 RID: 219297
 			public const int TogCommon = 0;
 
-			// Token: 0x0403AF3D RID: 241469
+			// Token: 0x040358A2 RID: 219298
 			public const int TxtName = 1;
 		}
 	}

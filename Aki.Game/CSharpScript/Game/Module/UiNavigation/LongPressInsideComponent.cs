@@ -4,27 +4,27 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004983 RID: 18819
+	// Token: 0x020038FC RID: 14588
 	public class LongPressInsideComponent : HotKeyComponent
 	{
-		// Token: 0x060310E3 RID: 200931 RVA: 0x00B62DFE File Offset: 0x00B60FFE
+		// Token: 0x06025C17 RID: 154647 RVA: 0x00A9DCF2 File Offset: 0x00A9BEF2
 		public LongPressInsideComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310E4 RID: 200932 RVA: 0x00B62E07 File Offset: 0x00B61007
+		// Token: 0x06025C18 RID: 154648 RVA: 0x00A9DCFB File Offset: 0x00A9BEFB
 		protected override void OnRelease(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.SimulationPointUpInside(config.BindButtonTag, config.Id, this.PressListener);
 		}
 
-		// Token: 0x060310E5 RID: 200933 RVA: 0x00B62E27 File Offset: 0x00B61027
+		// Token: 0x06025C19 RID: 154649 RVA: 0x00A9DD1B File Offset: 0x00A9BF1B
 		protected override void OnPress(HotKeyMap config)
 		{
 			this.PressListener = UiNavigationNewController.Instance.SimulationPointDownInside(config.BindButtonTag, config.Id);
 		}
 
-		// Token: 0x060310E6 RID: 200934 RVA: 0x00B62E48 File Offset: 0x00B61048
+		// Token: 0x06025C1A RID: 154650 RVA: 0x00A9DD3C File Offset: 0x00A9BF3C
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, childListenerByTag != null && childListenerByTag.IsListenerActive(), false);
 		}
 
-		// Token: 0x0401A4A8 RID: 107688
+		// Token: 0x04014D1A RID: 85274
 		[Nullable(2)]
 		protected TsUiNavigationBehaviorListener PressListener;
 	}

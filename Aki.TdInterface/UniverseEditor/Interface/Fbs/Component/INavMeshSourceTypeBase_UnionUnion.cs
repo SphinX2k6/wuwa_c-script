@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055EE RID: 21998
+	// Token: 0x02005B8C RID: 23436
 	public class INavMeshSourceTypeBase_UnionUnion
 	{
-		// Token: 0x1700A2C5 RID: 41669
-		// (get) Token: 0x060247E5 RID: 149477 RVA: 0x00509839 File Offset: 0x00507A39
-		// (set) Token: 0x060247E6 RID: 149478 RVA: 0x00509841 File Offset: 0x00507A41
+		// Token: 0x1700AB4D RID: 43853
+		// (get) Token: 0x060269F2 RID: 158194 RVA: 0x00549DB1 File Offset: 0x00547FB1
+		// (set) Token: 0x060269F3 RID: 158195 RVA: 0x00549DB9 File Offset: 0x00547FB9
 		public INavMeshSourceTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700A2C6 RID: 41670
-		// (get) Token: 0x060247E7 RID: 149479 RVA: 0x0050984A File Offset: 0x00507A4A
-		// (set) Token: 0x060247E8 RID: 149480 RVA: 0x00509852 File Offset: 0x00507A52
+		// Token: 0x1700AB4E RID: 43854
+		// (get) Token: 0x060269F4 RID: 158196 RVA: 0x00549DC2 File Offset: 0x00547FC2
+		// (set) Token: 0x060269F5 RID: 158197 RVA: 0x00549DCA File Offset: 0x00547FCA
 		public object Value { get; set; }
 
-		// Token: 0x060247E9 RID: 149481 RVA: 0x0050985B File Offset: 0x00507A5B
+		// Token: 0x060269F6 RID: 158198 RVA: 0x00549DD3 File Offset: 0x00547FD3
 		public INavMeshSourceTypeBase_UnionUnion()
 		{
 			this.Type = INavMeshSourceTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060247EA RID: 149482 RVA: 0x00509871 File Offset: 0x00507A71
+		// Token: 0x060269F7 RID: 158199 RVA: 0x00549DE9 File Offset: 0x00547FE9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060247EB RID: 149483 RVA: 0x00509883 File Offset: 0x00507A83
+		// Token: 0x060269F8 RID: 158200 RVA: 0x00549DFB File Offset: 0x00547FFB
 		public INavMeshSourceTypeBaseT AsINavMeshSourceTypeBase()
 		{
 			return this.As<INavMeshSourceTypeBaseT>();
 		}
 
-		// Token: 0x060247EC RID: 149484 RVA: 0x0050988B File Offset: 0x00507A8B
+		// Token: 0x060269F9 RID: 158201 RVA: 0x00549E03 File Offset: 0x00548003
 		public static INavMeshSourceTypeBase_UnionUnion FromINavMeshSourceTypeBase(INavMeshSourceTypeBaseT _inavmeshsourcetypebase)
 		{
 			return new INavMeshSourceTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060247ED RID: 149485 RVA: 0x005098A0 File Offset: 0x00507AA0
+		// Token: 0x060269FA RID: 158202 RVA: 0x00549E18 File Offset: 0x00548018
 		public INavMeshAkiEntitySourceT AsINavMeshAkiEntitySource()
 		{
 			return this.As<INavMeshAkiEntitySourceT>();
 		}
 
-		// Token: 0x060247EE RID: 149486 RVA: 0x005098A8 File Offset: 0x00507AA8
+		// Token: 0x060269FB RID: 158203 RVA: 0x00549E20 File Offset: 0x00548020
 		public static INavMeshSourceTypeBase_UnionUnion FromINavMeshAkiEntitySource(INavMeshAkiEntitySourceT _inavmeshakientitysource)
 		{
 			return new INavMeshSourceTypeBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060247EF RID: 149487 RVA: 0x005098C0 File Offset: 0x00507AC0
+		// Token: 0x060269FC RID: 158204 RVA: 0x00549E38 File Offset: 0x00548038
 		public static int Pack(FlatBufferBuilder builder, INavMeshSourceTypeBase_UnionUnion _o)
 		{
 			INavMeshSourceTypeBase_Union type = _o.Type;

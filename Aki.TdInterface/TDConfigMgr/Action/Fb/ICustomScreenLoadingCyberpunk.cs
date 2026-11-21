@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200269F RID: 9887
+	// Token: 0x02002962 RID: 10594
 	public class ICustomScreenLoadingCyberpunk : ICustomScreenLoadingTypeBase
 	{
-		// Token: 0x0600DD45 RID: 56645 RVA: 0x0020E030 File Offset: 0x0020C230
-		[NullableContext(1)]
+		// Token: 0x0600EB1C RID: 60188 RVA: 0x0022A7D0 File Offset: 0x002289D0
 		public static ICustomScreenLoadingCyberpunk Create(ICustomScreenLoadingCyberpunk? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041C9 RID: 16841
-		// (get) Token: 0x0600DD46 RID: 56646 RVA: 0x0020E04F File Offset: 0x0020C24F
+		// Token: 0x17004506 RID: 17670
+		// (get) Token: 0x0600EB1D RID: 60189 RVA: 0x0022A7EF File Offset: 0x002289EF
 		public override ECustomScreenLoading Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AE3 RID: 31459
+		// Token: 0x04008180 RID: 33152
 		private ICustomScreenLoadingCyberpunk Instance;
 	}
 }

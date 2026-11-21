@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C22 RID: 27682
+	// Token: 0x02007389 RID: 29577
 	public class IOpenQuickHackCameraConfigT
 	{
-		// Token: 0x1700CDE0 RID: 52704
-		// (get) Token: 0x06030AF3 RID: 199411 RVA: 0x0069BF12 File Offset: 0x0069A112
-		// (set) Token: 0x06030AF4 RID: 199412 RVA: 0x0069BF1A File Offset: 0x0069A11A
+		// Token: 0x1700D8FB RID: 55547
+		// (get) Token: 0x06033A47 RID: 211527 RVA: 0x006F620E File Offset: 0x006F440E
+		// (set) Token: 0x06033A48 RID: 211528 RVA: 0x006F6216 File Offset: 0x006F4416
 		public bool AutoOpenSystem { get; set; }
 
-		// Token: 0x1700CDE1 RID: 52705
-		// (get) Token: 0x06030AF5 RID: 199413 RVA: 0x0069BF23 File Offset: 0x0069A123
-		// (set) Token: 0x06030AF6 RID: 199414 RVA: 0x0069BF2B File Offset: 0x0069A12B
+		// Token: 0x1700D8FC RID: 55548
+		// (get) Token: 0x06033A49 RID: 211529 RVA: 0x006F621F File Offset: 0x006F441F
+		// (set) Token: 0x06033A4A RID: 211530 RVA: 0x006F6227 File Offset: 0x006F4427
 		public IVectorInfoT RelativePos { get; set; }
 
-		// Token: 0x1700CDE2 RID: 52706
-		// (get) Token: 0x06030AF7 RID: 199415 RVA: 0x0069BF34 File Offset: 0x0069A134
-		// (set) Token: 0x06030AF8 RID: 199416 RVA: 0x0069BF3C File Offset: 0x0069A13C
+		// Token: 0x1700D8FD RID: 55549
+		// (get) Token: 0x06033A4B RID: 211531 RVA: 0x006F6230 File Offset: 0x006F4430
+		// (set) Token: 0x06033A4C RID: 211532 RVA: 0x006F6238 File Offset: 0x006F4438
 		public IOpenQuickHackCameraFovConfigT FovConfig { get; set; }
 
-		// Token: 0x1700CDE3 RID: 52707
-		// (get) Token: 0x06030AF9 RID: 199417 RVA: 0x0069BF45 File Offset: 0x0069A145
-		// (set) Token: 0x06030AFA RID: 199418 RVA: 0x0069BF4D File Offset: 0x0069A14D
+		// Token: 0x1700D8FE RID: 55550
+		// (get) Token: 0x06033A4D RID: 211533 RVA: 0x006F6241 File Offset: 0x006F4441
+		// (set) Token: 0x06033A4E RID: 211534 RVA: 0x006F6249 File Offset: 0x006F4449
 		public IAdjustFixedCameraRotateConfigT RotateConfig { get; set; }
 
-		// Token: 0x1700CDE4 RID: 52708
-		// (get) Token: 0x06030AFB RID: 199419 RVA: 0x0069BF56 File Offset: 0x0069A156
-		// (set) Token: 0x06030AFC RID: 199420 RVA: 0x0069BF5E File Offset: 0x0069A15E
+		// Token: 0x1700D8FF RID: 55551
+		// (get) Token: 0x06033A4F RID: 211535 RVA: 0x006F6252 File Offset: 0x006F4452
+		// (set) Token: 0x06033A50 RID: 211536 RVA: 0x006F625A File Offset: 0x006F445A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030AFD RID: 199421 RVA: 0x0069BF67 File Offset: 0x0069A167
+		// Token: 0x06033A51 RID: 211537 RVA: 0x006F6263 File Offset: 0x006F4463
 		public IOpenQuickHackCameraConfigT()
 		{
 			this.AutoOpenSystem = false;

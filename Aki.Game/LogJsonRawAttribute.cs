@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x0200355F RID: 13663
+// Token: 0x02002AD4 RID: 10964
 [AttributeUsage(AttributeTargets.Field)]
 internal sealed class LogJsonRawAttribute : Attribute
 {

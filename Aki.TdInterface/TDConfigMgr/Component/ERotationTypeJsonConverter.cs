@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009FD RID: 2557
+	// Token: 0x02000AC2 RID: 2754
 	public class ERotationTypeJsonConverter : JsonConverter<ERotationType>
 	{
-		// Token: 0x060038A5 RID: 14501 RVA: 0x0009298C File Offset: 0x00090B8C
+		// Token: 0x06003C7D RID: 15485 RVA: 0x0009B27C File Offset: 0x0009947C
 		public override ERotationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERotationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060038A6 RID: 14502 RVA: 0x000929B0 File Offset: 0x00090BB0
+		// Token: 0x06003C7E RID: 15486 RVA: 0x0009B2A0 File Offset: 0x000994A0
 		public override void Write(Utf8JsonWriter writer, ERotationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

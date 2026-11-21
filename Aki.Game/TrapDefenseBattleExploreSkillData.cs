@@ -5,11 +5,11 @@ using CSharpScript.Game.Module.Battle;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.TrapDefense;
 
-// Token: 0x02001D3E RID: 7486
+// Token: 0x02001200 RID: 4608
 public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 {
-	// Token: 0x17001224 RID: 4644
-	// (get) Token: 0x0600E305 RID: 58117 RVA: 0x00355B53 File Offset: 0x00353D53
+	// Token: 0x1700124E RID: 4686
+	// (get) Token: 0x0600B722 RID: 46882 RVA: 0x00361583 File Offset: 0x0035F783
 	private bool IsUseItem
 	{
 		get
@@ -18,7 +18,7 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		}
 	}
 
-	// Token: 0x0600E306 RID: 58118 RVA: 0x00355B60 File Offset: 0x00353D60
+	// Token: 0x0600B723 RID: 46883 RVA: 0x00361590 File Offset: 0x0035F790
 	protected override void RefreshSkillTexturePath()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_IconSkillNone");
@@ -48,37 +48,37 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		this.SkillTexturePath = this.Config.Value.SkillIcon;
 	}
 
-	// Token: 0x0600E307 RID: 58119 RVA: 0x00355C26 File Offset: 0x00353E26
+	// Token: 0x0600B724 RID: 46884 RVA: 0x00361656 File Offset: 0x0035F856
 	public override bool IsEnableLongPress()
 	{
 		return true;
 	}
 
-	// Token: 0x0600E308 RID: 58120 RVA: 0x00355C29 File Offset: 0x00353E29
+	// Token: 0x0600B725 RID: 46885 RVA: 0x00361659 File Offset: 0x0035F859
 	public override bool IsEnableInput()
 	{
 		return this.IsEnableInternal;
 	}
 
-	// Token: 0x0600E309 RID: 58121 RVA: 0x00355C31 File Offset: 0x00353E31
+	// Token: 0x0600B726 RID: 46886 RVA: 0x00361661 File Offset: 0x0035F861
 	public override bool IsEquippedItemBanReqUse()
 	{
 		return this.IsUseItem && RouletteModel.Instance.IsEquippedItemBanReqUse();
 	}
 
-	// Token: 0x0600E30A RID: 58122 RVA: 0x00355C47 File Offset: 0x00353E47
+	// Token: 0x0600B727 RID: 46887 RVA: 0x00361677 File Offset: 0x0035F877
 	public override bool IsSkillInItemUseCd()
 	{
 		return this.IsSkillInItemUseBuffCd() || this.IsSkillInItemUseSkillCd();
 	}
 
-	// Token: 0x0600E30B RID: 58123 RVA: 0x00355C59 File Offset: 0x00353E59
+	// Token: 0x0600B728 RID: 46888 RVA: 0x00361689 File Offset: 0x0035F889
 	public override bool IsSkillInItemUseBuffCd()
 	{
 		return this.IsUseItem && !base.IsExploreAsFight && RouletteModel.Instance.IsEquipItemInBuffCd();
 	}
 
-	// Token: 0x0600E30C RID: 58124 RVA: 0x00355C78 File Offset: 0x00353E78
+	// Token: 0x0600B729 RID: 46889 RVA: 0x003616A8 File Offset: 0x0035F8A8
 	public override bool IsSkillInItemUseSkillCd()
 	{
 		if (this.IsUseItem && this.CharacterSkillCdComponent != null && !base.IsExploreAsFight)
@@ -97,7 +97,7 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		return false;
 	}
 
-	// Token: 0x0600E30D RID: 58125 RVA: 0x00355D80 File Offset: 0x00353F80
+	// Token: 0x0600B72A RID: 46890 RVA: 0x003617B0 File Offset: 0x0035F9B0
 	public override ValueTuple<double, double> GetEquippedItemUsingBuffCd()
 	{
 		if (this.IsUseItem)
@@ -111,7 +111,7 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		return new ValueTuple<double, double>(0.0, 0.0);
 	}
 
-	// Token: 0x0600E30E RID: 58126 RVA: 0x00355DD4 File Offset: 0x00353FD4
+	// Token: 0x0600B72B RID: 46891 RVA: 0x00361804 File Offset: 0x0035FA04
 	public override ValueTuple<double, double> GetEquippedItemUsingSkillCd()
 	{
 		if (this.IsUseItem && this.CharacterSkillCdComponent != null)
@@ -130,13 +130,13 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		return new ValueTuple<double, double>(0.0, 0.0);
 	}
 
-	// Token: 0x0600E30F RID: 58127 RVA: 0x00355E64 File Offset: 0x00354064
+	// Token: 0x0600B72C RID: 46892 RVA: 0x00361894 File Offset: 0x0035FA94
 	public override int GetSkillId()
 	{
 		return this.ExploreSkillId;
 	}
 
-	// Token: 0x0600E310 RID: 58128 RVA: 0x00355E6C File Offset: 0x0035406C
+	// Token: 0x0600B72D RID: 46893 RVA: 0x0036189C File Offset: 0x0035FA9C
 	public void SetExploreSkillId(int exploreSkillId)
 	{
 		bool exploreSkillChange = this.ExploreSkillId != exploreSkillId;
@@ -145,7 +145,7 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		this.RefreshSkillTexturePath();
 	}
 
-	// Token: 0x0600E311 RID: 58129 RVA: 0x00355E9A File Offset: 0x0035409A
+	// Token: 0x0600B72E RID: 46894 RVA: 0x003618CA File Offset: 0x0035FACA
 	public override void RefreshSkillCd()
 	{
 		if (this.IsUseItem && !base.IsExploreAsFight && (this.IsEquippedItemBanReqUse() || this.IsSkillInItemUseCd()))
@@ -156,10 +156,10 @@ public class TrapDefenseBattleExploreSkillData : TrapDefenseBattleSkillData
 		base.RefreshSkillCd();
 	}
 
-	// Token: 0x040068DD RID: 26845
+	// Token: 0x040069BC RID: 27068
 	[Nullable(1)]
 	private const string SKILL_NONE_PATH = "T_IconSkillNone";
 
-	// Token: 0x040068DE RID: 26846
+	// Token: 0x040069BD RID: 27069
 	protected int ExploreSkillId;
 }

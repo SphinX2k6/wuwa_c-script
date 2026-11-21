@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022D8 RID: 8920
+	// Token: 0x02002547 RID: 9543
 	public class EChangeTimerTypeJsonConverter : JsonConverter<EChangeTimerType>
 	{
-		// Token: 0x0600C34C RID: 49996 RVA: 0x001C89F8 File Offset: 0x001C6BF8
+		// Token: 0x0600CF1B RID: 53019 RVA: 0x001E0800 File Offset: 0x001DEA00
 		public override EChangeTimerType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EChangeTimerTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C34D RID: 49997 RVA: 0x001C8A1C File Offset: 0x001C6C1C
+		// Token: 0x0600CF1C RID: 53020 RVA: 0x001E0824 File Offset: 0x001DEA24
 		public override void Write(Utf8JsonWriter writer, EChangeTimerType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

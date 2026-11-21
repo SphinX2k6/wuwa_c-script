@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D63 RID: 7523
+	// Token: 0x02001F74 RID: 8052
 	public class IPromptStyleBattle2_SetValue
 	{
-		// Token: 0x0400611A RID: 24858
+		// Token: 0x04006696 RID: 26262
 		public EPromptStyle Type;
 	}
 }

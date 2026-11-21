@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using AkiClient.Game.Aki.Render.RuntimeBP.Interaction;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
@@ -9,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 {
-	// Token: 0x02003B91 RID: 15249
-	[NullableContext(2)]
+	// Token: 0x020030CF RID: 12495
+	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Common/DollMachine/BP_DollShowCaseActor.BP_DollShowCaseActor_C")]
 	[UnrealStructLayout(1616, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1616)]
 	public class BP_DollShowCaseActor_C : AKuroBPActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021F24 RID: 139044 RVA: 0x008FA421 File Offset: 0x008F8621
+		// Token: 0x0601E13A RID: 123194 RVA: 0x0090A594 File Offset: 0x00908794
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_DollShowCaseActor_C._ClassPtr == IntPtr.Zero)
@@ -26,212 +25,195 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			return BP_DollShowCaseActor_C._ClassPtr;
 		}
 
-		// Token: 0x06021F25 RID: 139045 RVA: 0x008FA448 File Offset: 0x008F8648
+		// Token: 0x0601E13B RID: 123195 RVA: 0x0090A5B8 File Offset: 0x009087B8
 		public BP_DollShowCaseActor_C() : this(BuiltinUtils.AllocNativeUObject(BP_DollShowCaseActor_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021F26 RID: 139046 RVA: 0x008FA470 File Offset: 0x008F8670
-		[NullableContext(1)]
+		// Token: 0x0601E13C RID: 123196 RVA: 0x0090A5E0 File Offset: 0x009087E0
 		public BP_DollShowCaseActor_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_DollShowCaseActor_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003919 RID: 14617
-		// (get) Token: 0x06021F27 RID: 139047 RVA: 0x008FA4A3 File Offset: 0x008F86A3
-		// (set) Token: 0x06021F28 RID: 139048 RVA: 0x008FA4B7 File Offset: 0x008F86B7
+		// Token: 0x170031D9 RID: 12761
+		// (get) Token: 0x0601E13D RID: 123197 RVA: 0x0090A613 File Offset: 0x00908813
+		// (set) Token: 0x0601E13E RID: 123198 RVA: 0x0090A627 File Offset: 0x00908827
+		[Nullable(2)]
 		public unsafe USkeletalMeshComponent SkeletalMesh
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USkeletalMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_SkeletalMesh);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_SkeletalMesh, value);
 			}
 		}
 
-		// Token: 0x1700391A RID: 14618
-		// (get) Token: 0x06021F29 RID: 139049 RVA: 0x008FA4CC File Offset: 0x008F86CC
-		// (set) Token: 0x06021F2A RID: 139050 RVA: 0x008FA4E0 File Offset: 0x008F86E0
+		// Token: 0x170031DA RID: 12762
+		// (get) Token: 0x0601E13F RID: 123199 RVA: 0x0090A63C File Offset: 0x0090883C
+		// (set) Token: 0x0601E140 RID: 123200 RVA: 0x0090A650 File Offset: 0x00908850
+		[Nullable(2)]
 		public unsafe UStaticMeshComponent StaticMesh
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_StaticMesh);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_StaticMesh, value);
 			}
 		}
 
-		// Token: 0x1700391B RID: 14619
-		// (get) Token: 0x06021F2B RID: 139051 RVA: 0x008FA4F5 File Offset: 0x008F86F5
-		// (set) Token: 0x06021F2C RID: 139052 RVA: 0x008FA509 File Offset: 0x008F8709
+		// Token: 0x170031DB RID: 12763
+		// (get) Token: 0x0601E141 RID: 123201 RVA: 0x0090A665 File Offset: 0x00908865
+		// (set) Token: 0x0601E142 RID: 123202 RVA: 0x0090A679 File Offset: 0x00908879
+		[Nullable(2)]
 		public unsafe UPointLightComponent PointLight
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UPointLightComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_PointLight);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_PointLight, value);
 			}
 		}
 
-		// Token: 0x1700391C RID: 14620
-		// (get) Token: 0x06021F2D RID: 139053 RVA: 0x008FA51E File Offset: 0x008F871E
-		// (set) Token: 0x06021F2E RID: 139054 RVA: 0x008FA52E File Offset: 0x008F872E
+		// Token: 0x170031DC RID: 12764
+		// (get) Token: 0x0601E143 RID: 123203 RVA: 0x0090A68E File Offset: 0x0090888E
+		// (set) Token: 0x0601E144 RID: 123204 RVA: 0x0090A69E File Offset: 0x0090889E
 		public unsafe int DollElementId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_DollElementId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_DollElementId) = value;
 			}
 		}
 
-		// Token: 0x1700391D RID: 14621
-		// (get) Token: 0x06021F2F RID: 139055 RVA: 0x008FA540 File Offset: 0x008F8740
-		// (set) Token: 0x06021F30 RID: 139056 RVA: 0x008FA579 File Offset: 0x008F8779
-		[Nullable(1)]
+		// Token: 0x170031DD RID: 12765
+		// (get) Token: 0x0601E145 RID: 123205 RVA: 0x0090A6B0 File Offset: 0x009088B0
+		// (set) Token: 0x0601E146 RID: 123206 RVA: 0x0090A6E9 File Offset: 0x009088E9
 		public TMap<int, USkeletalMeshComponent> SkeletalMeshMap
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<int, USkeletalMeshComponent> result;
 				if ((result = this._SkeletalMeshMap) == null)
 				{
-					result = (this._SkeletalMeshMap = new TMap<int, USkeletalMeshComponent>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_5, this));
+					result = (this._SkeletalMeshMap = new TMap<int, USkeletalMeshComponent>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_SkeletalMeshMap, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.SkeletalMeshMap.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x1700391E RID: 14622
-		// (get) Token: 0x06021F31 RID: 139057 RVA: 0x008FA587 File Offset: 0x008F8787
-		// (set) Token: 0x06021F32 RID: 139058 RVA: 0x008FA59B File Offset: 0x008F879B
-		public unsafe BP_DollGrabLight_C BP_Light
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_DollGrabLight_C>(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_6);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_DollShowCaseActor_C.__PropertyOffset_6, value);
-			}
-		}
-
-		// Token: 0x1700391F RID: 14623
-		// (get) Token: 0x06021F33 RID: 139059 RVA: 0x008FA5B0 File Offset: 0x008F87B0
-		// (set) Token: 0x06021F34 RID: 139060 RVA: 0x008FA5C0 File Offset: 0x008F87C0
+		// Token: 0x170031DE RID: 12766
+		// (get) Token: 0x0601E147 RID: 123207 RVA: 0x0090A6F7 File Offset: 0x009088F7
+		// (set) Token: 0x0601E148 RID: 123208 RVA: 0x0090A707 File Offset: 0x00908907
 		public unsafe float PlayEffectIntervalTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_PlayEffectIntervalTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_PlayEffectIntervalTime) = value;
 			}
 		}
 
-		// Token: 0x17003920 RID: 14624
-		// (get) Token: 0x06021F35 RID: 139061 RVA: 0x008FA5D1 File Offset: 0x008F87D1
-		// (set) Token: 0x06021F36 RID: 139062 RVA: 0x008FA5E1 File Offset: 0x008F87E1
+		// Token: 0x170031DF RID: 12767
+		// (get) Token: 0x0601E149 RID: 123209 RVA: 0x0090A718 File Offset: 0x00908918
+		// (set) Token: 0x0601E14A RID: 123210 RVA: 0x0090A728 File Offset: 0x00908928
 		public unsafe float CompleteEffectDurationTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_CompleteEffectDurationTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_CompleteEffectDurationTime) = value;
 			}
 		}
 
-		// Token: 0x17003921 RID: 14625
-		// (get) Token: 0x06021F37 RID: 139063 RVA: 0x008FA5F2 File Offset: 0x008F87F2
-		// (set) Token: 0x06021F38 RID: 139064 RVA: 0x008FA602 File Offset: 0x008F8802
+		// Token: 0x170031E0 RID: 12768
+		// (get) Token: 0x0601E14B RID: 123211 RVA: 0x0090A739 File Offset: 0x00908939
+		// (set) Token: 0x0601E14C RID: 123212 RVA: 0x0090A749 File Offset: 0x00908949
 		public unsafe float SetMaterialDelayTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_SetMaterialDelayTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_SetMaterialDelayTime) = value;
 			}
 		}
 
-		// Token: 0x17003922 RID: 14626
-		// (get) Token: 0x06021F39 RID: 139065 RVA: 0x008FA614 File Offset: 0x008F8814
-		// (set) Token: 0x06021F3A RID: 139066 RVA: 0x008FA64D File Offset: 0x008F884D
-		[Nullable(1)]
+		// Token: 0x170031E1 RID: 12769
+		// (get) Token: 0x0601E14D RID: 123213 RVA: 0x0090A75C File Offset: 0x0090895C
+		// (set) Token: 0x0601E14E RID: 123214 RVA: 0x0090A795 File Offset: 0x00908995
 		public TArray<FVectorDouble> EffectOffsetLocationList
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TArray<FVectorDouble> result;
 				if ((result = this._EffectOffsetLocationList) == null)
 				{
-					result = (this._EffectOffsetLocationList = new TArray<FVectorDouble>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_10, this));
+					result = (this._EffectOffsetLocationList = new TArray<FVectorDouble>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_EffectOffsetLocationList, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.EffectOffsetLocationList.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17003923 RID: 14627
-		// (get) Token: 0x06021F3B RID: 139067 RVA: 0x008FA65C File Offset: 0x008F885C
-		// (set) Token: 0x06021F3C RID: 139068 RVA: 0x008FA695 File Offset: 0x008F8895
-		[Nullable(1)]
+		// Token: 0x170031E2 RID: 12770
+		// (get) Token: 0x0601E14F RID: 123215 RVA: 0x0090A7A4 File Offset: 0x009089A4
+		// (set) Token: 0x0601E150 RID: 123216 RVA: 0x0090A7DD File Offset: 0x009089DD
 		public TArray<FVector> PartDollScaleList
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TArray<FVector> result;
 				if ((result = this._PartDollScaleList) == null)
 				{
-					result = (this._PartDollScaleList = new TArray<FVector>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_11, this));
+					result = (this._PartDollScaleList = new TArray<FVector>(base.NativePtr + (IntPtr)BP_DollShowCaseActor_C.__PropertyOffset_PartDollScaleList, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.PartDollScaleList.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x06021F3D RID: 139069 RVA: 0x008FA6A4 File Offset: 0x008F88A4
+		// Token: 0x0601E151 RID: 123217 RVA: 0x0090A7EC File Offset: 0x009089EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SwitchLightState(int ActiveItemIdLength, bool IsComplete)
 		{
 			BP_DollShowCaseActor_C.__SwitchLightState_FunctionParams* ptr = stackalloc BP_DollShowCaseActor_C.__SwitchLightState_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(BP_DollShowCaseActor_C.__SwitchLightState_FunctionParams) & -16L;
@@ -241,53 +223,50 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_DollShowCaseActor_C.__SwitchLightState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021F3E RID: 139070 RVA: 0x008FA6F1 File Offset: 0x008F88F1
+		// Token: 0x0601E152 RID: 123218 RVA: 0x0090A839 File Offset: 0x00908A39
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_DollShowCaseActor_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021F3F RID: 139071 RVA: 0x008FA705 File Offset: 0x008F8905
+		// Token: 0x0601E153 RID: 123219 RVA: 0x0090A84D File Offset: 0x00908A4D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_DollShowCaseActor_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_DollShowCaseActor_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021F40 RID: 139072 RVA: 0x008FA71A File Offset: 0x008F891A
+		// Token: 0x0601E154 RID: 123220 RVA: 0x0090A861 File Offset: 0x00908A61
 		protected BP_DollShowCaseActor_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401098D RID: 67981
-		[Nullable(1)]
+		// Token: 0x0400FE63 RID: 65123
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Common/DollMachine/BP_DollShowCaseActor.BP_DollShowCaseActor_C";
 
-		// Token: 0x0401098E RID: 67982
+		// Token: 0x0400FE64 RID: 65124
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401098F RID: 67983
+		// Token: 0x0400FE65 RID: 65125
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010990 RID: 67984
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FE66 RID: 65126
+		internal static int __PropertyOffset_SkeletalMesh;
 
-		// Token: 0x04010991 RID: 67985
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FE67 RID: 65127
+		internal static int __PropertyOffset_StaticMesh;
 
-		// Token: 0x04010992 RID: 67986
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FE68 RID: 65128
+		internal static int __PropertyOffset_PointLight;
 
-		// Token: 0x04010993 RID: 67987
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FE69 RID: 65129
+		internal static int __PropertyOffset_DollElementId;
 
-		// Token: 0x04010994 RID: 67988
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FE6A RID: 65130
+		internal static int __PropertyOffset_SkeletalMeshMap;
 
-		// Token: 0x04010995 RID: 67989
+		// Token: 0x0400FE6B RID: 65131
 		[Nullable(new byte[]
 		{
 			2,
@@ -295,47 +274,46 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Common.DollMachine
 		})]
 		private TMap<int, USkeletalMeshComponent> _SkeletalMeshMap;
 
-		// Token: 0x04010996 RID: 67990
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FE6C RID: 65132
+		internal static int __PropertyOffset_PlayEffectIntervalTime;
 
-		// Token: 0x04010997 RID: 67991
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FE6D RID: 65133
+		internal static int __PropertyOffset_CompleteEffectDurationTime;
 
-		// Token: 0x04010998 RID: 67992
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FE6E RID: 65134
+		internal static int __PropertyOffset_SetMaterialDelayTime;
 
-		// Token: 0x04010999 RID: 67993
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FE6F RID: 65135
+		internal static int __PropertyOffset_EffectOffsetLocationList;
 
-		// Token: 0x0401099A RID: 67994
-		internal static int __PropertyOffset_10;
-
-		// Token: 0x0401099B RID: 67995
+		// Token: 0x0400FE70 RID: 65136
+		[Nullable(2)]
 		private TArray<FVectorDouble> _EffectOffsetLocationList;
 
-		// Token: 0x0401099C RID: 67996
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FE71 RID: 65137
+		internal static int __PropertyOffset_PartDollScaleList;
 
-		// Token: 0x0401099D RID: 67997
+		// Token: 0x0400FE72 RID: 65138
+		[Nullable(2)]
 		private TArray<FVector> _PartDollScaleList;
 
-		// Token: 0x0401099E RID: 67998
+		// Token: 0x0400FE73 RID: 65139
 		private static IntPtr __SwitchLightState_NativeFunctionPtr;
 
-		// Token: 0x0401099F RID: 67999
+		// Token: 0x0400FE74 RID: 65140
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x02009CF6 RID: 40182
+		// Token: 0x02008E16 RID: 36374
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __SwitchLightState_FunctionParams
 		{
-			// Token: 0x040313F7 RID: 201719
+			// Token: 0x0402CA54 RID: 182868
 			[FieldOffset(0)]
 			public int ActiveItemIdLength;
 
-			// Token: 0x040313F8 RID: 201720
+			// Token: 0x0402CA55 RID: 182869
 			[FieldOffset(4)]
 			public bool IsComplete;
 		}

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200642E RID: 25646
+	// Token: 0x020053AC RID: 21420
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightRoleSelectView : UiViewBase
 	{
-		// Token: 0x060407BA RID: 264122 RVA: 0x00F9AF2B File Offset: 0x00F9912B
+		// Token: 0x0603547B RID: 218235 RVA: 0x00EE1ECB File Offset: 0x00EE00CB
 		public MotorFightRoleSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060407BB RID: 264123 RVA: 0x00F9AF34 File Offset: 0x00F99134
+		// Token: 0x0603547C RID: 218236 RVA: 0x00EE1ED4 File Offset: 0x00EE00D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060407BC RID: 264124 RVA: 0x00F9B0E4 File Offset: 0x00F992E4
+		// Token: 0x0603547D RID: 218237 RVA: 0x00EE2084 File Offset: 0x00EE0284
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightRoleSelectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407BD RID: 264125 RVA: 0x00F9B128 File Offset: 0x00F99328
+		// Token: 0x0603547E RID: 218238 RVA: 0x00EE20C8 File Offset: 0x00EE02C8
 		protected override void OnBeforeShow()
 		{
 			MotorFightLevelData levelData = this.ViewModel.LevelData;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.RefreshView(this.RoleData);
 		}
 
-		// Token: 0x060407BE RID: 264126 RVA: 0x00F9B1A8 File Offset: 0x00F993A8
+		// Token: 0x0603547F RID: 218239 RVA: 0x00EE2148 File Offset: 0x00EE0348
 		private void RefreshView(MotorFightRoleData roleData)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), roleData.RoleName, Array.Empty<object>());
@@ -117,13 +117,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(9), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x060407BF RID: 264127 RVA: 0x00F9B2BF File Offset: 0x00F994BF
+		// Token: 0x06035480 RID: 218240 RVA: 0x00EE225F File Offset: 0x00EE045F
 		private bool IsSelected(int roleId)
 		{
 			return this.ViewModel.SelectedRoleId == roleId;
 		}
 
-		// Token: 0x060407C0 RID: 264128 RVA: 0x00F9B2D0 File Offset: 0x00F994D0
+		// Token: 0x06035481 RID: 218241 RVA: 0x00EE2270 File Offset: 0x00EE0470
 		private void OnToggleClickCallback(MotorFightRoleData data)
 		{
 			this.RoleData = data;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			MotorcycleUiModelUtil.Instance.RefreshRoleInMotor(roleDataById.GetRoleId(), roleDataById.GetRoleSkinId(), data.AnimPath);
 		}
 
-		// Token: 0x060407C1 RID: 264129 RVA: 0x00F9B34C File Offset: 0x00F9954C
+		// Token: 0x06035482 RID: 218242 RVA: 0x00EE22EC File Offset: 0x00EE04EC
 		private MotorFightRoleItem CreateRoleItem()
 		{
 			return new MotorFightRoleItem
@@ -149,20 +149,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x060407C2 RID: 264130 RVA: 0x00F9B398 File Offset: 0x00F99598
+		// Token: 0x06035483 RID: 218243 RVA: 0x00EE2338 File Offset: 0x00EE0538
 		private void OnConfirmBtnClick()
 		{
 			this.ViewModel.SelectedRoleId = this.RoleData.Id;
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060407C3 RID: 264131 RVA: 0x00F9B3B7 File Offset: 0x00F995B7
+		// Token: 0x06035484 RID: 218244 RVA: 0x00EE2357 File Offset: 0x00EE0557
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060407C4 RID: 264132 RVA: 0x00F9B3C0 File Offset: 0x00F995C0
+		// Token: 0x06035485 RID: 218245 RVA: 0x00EE2360 File Offset: 0x00EE0560
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -189,17 +189,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x0402185B RID: 137307
+		// Token: 0x0401C18A RID: 115082
 		private MotorFightLevelDetailViewModel ViewModel;
 
-		// Token: 0x0402185C RID: 137308
+		// Token: 0x0401C18B RID: 115083
 		private MotorFightRoleData RoleData;
 
-		// Token: 0x0402185D RID: 137309
+		// Token: 0x0401C18C RID: 115084
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402185E RID: 137310
+		// Token: 0x0401C18D RID: 115085
 		[Nullable(new byte[]
 		{
 			2,
@@ -208,42 +208,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<MotorFightRoleItem, MotorFightRoleData> RoleLayout;
 
-		// Token: 0x0402185F RID: 137311
+		// Token: 0x0401C18E RID: 115086
 		[Nullable(2)]
 		private FunctionalPanelConditionLock LockPanel;
 
-		// Token: 0x0200C66C RID: 50796
+		// Token: 0x0200B053 RID: 45139
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BE77 RID: 245367
+			// Token: 0x040367D4 RID: 223188
 			public const int TextureBg = 0;
 
-			// Token: 0x0403BE78 RID: 245368
+			// Token: 0x040367D5 RID: 223189
 			public const int ItemCaption = 1;
 
-			// Token: 0x0403BE79 RID: 245369
+			// Token: 0x040367D6 RID: 223190
 			public const int LayoutRole = 2;
 
-			// Token: 0x0403BE7A RID: 245370
+			// Token: 0x040367D7 RID: 223191
 			public const int ItemRole = 3;
 
-			// Token: 0x0403BE7B RID: 245371
+			// Token: 0x040367D8 RID: 223192
 			public const int TextRoleName = 4;
 
-			// Token: 0x0403BE7C RID: 245372
+			// Token: 0x040367D9 RID: 223193
 			public const int TextBuffDesc = 5;
 
-			// Token: 0x0403BE7D RID: 245373
+			// Token: 0x040367DA RID: 223194
 			public const int BtnConfirm = 6;
 
-			// Token: 0x0403BE7E RID: 245374
+			// Token: 0x040367DB RID: 223195
 			public const int ItemLockPanel = 7;
 
-			// Token: 0x0403BE7F RID: 245375
+			// Token: 0x040367DC RID: 223196
 			public const int TextBuffName = 8;
 
-			// Token: 0x0403BE80 RID: 245376
+			// Token: 0x040367DD RID: 223197
 			public const int TextConfirmBtn = 9;
 		}
 	}

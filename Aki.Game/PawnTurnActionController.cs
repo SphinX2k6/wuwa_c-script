@@ -4,12 +4,12 @@ using CSharpScript.Game;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200328B RID: 12939
+// Token: 0x020027FC RID: 10236
 [NullableContext(2)]
 [Nullable(0)]
 public class PawnTurnActionController
 {
-	// Token: 0x0601C02E RID: 114734 RVA: 0x007C9290 File Offset: 0x007C7490
+	// Token: 0x06019C40 RID: 105536 RVA: 0x007F0580 File Offset: 0x007EE780
 	[NullableContext(1)]
 	public PawnTurnActionController(Entity entity)
 	{
@@ -23,7 +23,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C02F RID: 114735 RVA: 0x007C9304 File Offset: 0x007C7504
+	// Token: 0x06019C41 RID: 105537 RVA: 0x007F05F4 File Offset: 0x007EE7F4
 	public void AddEvents()
 	{
 		if (!EventSystem.Instance.HasWithTarget(this.Entity, EEventName.CharTurnBegin, new Action(this.OnCharTurnBegin)))
@@ -33,7 +33,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C030 RID: 114736 RVA: 0x007C9378 File Offset: 0x007C7578
+	// Token: 0x06019C42 RID: 105538 RVA: 0x007F0668 File Offset: 0x007EE868
 	public void RemoveEvents()
 	{
 		if (EventSystem.Instance.HasWithTarget(this.Entity, EEventName.CharTurnBegin, new Action(this.OnCharTurnBegin)))
@@ -43,12 +43,12 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C031 RID: 114737 RVA: 0x007C93EC File Offset: 0x007C75EC
+	// Token: 0x06019C43 RID: 105539 RVA: 0x007F06DC File Offset: 0x007EE8DC
 	private void OnCharTurnBegin()
 	{
 	}
 
-	// Token: 0x0601C032 RID: 114738 RVA: 0x007C93EE File Offset: 0x007C75EE
+	// Token: 0x06019C44 RID: 105540 RVA: 0x007F06DE File Offset: 0x007EE8DE
 	private void OnCharTurnEnd()
 	{
 		this.RemoveEvents();
@@ -58,7 +58,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C033 RID: 114739 RVA: 0x007C940C File Offset: 0x007C760C
+	// Token: 0x06019C45 RID: 105541 RVA: 0x007F06FC File Offset: 0x007EE8FC
 	public unsafe void TurnToInteractTarget()
 	{
 		if (!this.NeedTurn)
@@ -171,7 +171,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C034 RID: 114740 RVA: 0x007C9810 File Offset: 0x007C7A10
+	// Token: 0x06019C46 RID: 105542 RVA: 0x007F0B08 File Offset: 0x007EED08
 	private void TurnToInteractTargetEnd()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -199,7 +199,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C035 RID: 114741 RVA: 0x007C989C File Offset: 0x007C7A9C
+	// Token: 0x06019C47 RID: 105543 RVA: 0x007F0B94 File Offset: 0x007EED94
 	private void SetPlayerLock(bool value)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -221,7 +221,7 @@ public class PawnTurnActionController
 		CharacterInputComponent component = entity2.GetComponent<CharacterInputComponent>();
 		if (value)
 		{
-			entity2.GetComponent<CharacterActorComponent>().SetInputDirect(Vector.ZeroVectorProxy, false);
+			entity2.GetComponent<CharacterActorComponent>().SetInputDirect(Vector.ZeroVectorProxy, false, EInputDirectSpace.World);
 			component.ClearMoveVectorCache();
 			component.SetActive(false);
 		}
@@ -232,7 +232,7 @@ public class PawnTurnActionController
 		this.IsPlayerInputLocked = value;
 	}
 
-	// Token: 0x0601C036 RID: 114742 RVA: 0x007C9908 File Offset: 0x007C7B08
+	// Token: 0x06019C48 RID: 105544 RVA: 0x007F0C04 File Offset: 0x007EEE04
 	public void TurnToDefaultForward()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -294,7 +294,7 @@ public class PawnTurnActionController
 		this.HasInteractTurned = new bool?(false);
 	}
 
-	// Token: 0x0601C037 RID: 114743 RVA: 0x007C9AEB File Offset: 0x007C7CEB
+	// Token: 0x06019C49 RID: 105545 RVA: 0x007F0DE7 File Offset: 0x007EEFE7
 	private void TurnToDefaultForwardEnd()
 	{
 		if (this.OnTurnToDefaultForwardEndHandle != null)
@@ -303,7 +303,7 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0601C038 RID: 114744 RVA: 0x007C9B00 File Offset: 0x007C7D00
+	// Token: 0x06019C4A RID: 105546 RVA: 0x007F0DFC File Offset: 0x007EEFFC
 	[NullableContext(1)]
 	public unsafe void UpdateDefaultDirect(Vector newDirect)
 	{
@@ -321,7 +321,7 @@ public class PawnTurnActionController
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601C039 RID: 114745 RVA: 0x007C9B97 File Offset: 0x007C7D97
+	// Token: 0x06019C4B RID: 105547 RVA: 0x007F0E93 File Offset: 0x007EF093
 	public void Dispose()
 	{
 		this.RemoveEvents();
@@ -332,44 +332,44 @@ public class PawnTurnActionController
 		}
 	}
 
-	// Token: 0x0400DD73 RID: 56691
+	// Token: 0x0400E21B RID: 57883
 	private const int TURN_ANGLE_MAX = 60;
 
-	// Token: 0x0400DD74 RID: 56692
+	// Token: 0x0400E21C RID: 57884
 	private readonly Entity Entity;
 
-	// Token: 0x0400DD75 RID: 56693
+	// Token: 0x0400E21D RID: 57885
 	private bool? HasInteractTurned;
 
-	// Token: 0x0400DD76 RID: 56694
+	// Token: 0x0400E21E RID: 57886
 	[Nullable(1)]
 	private readonly Vector DefaultDirect = Vector.Create();
 
-	// Token: 0x0400DD77 RID: 56695
+	// Token: 0x0400E21F RID: 57887
 	private readonly BaseActorComponent ActorComp;
 
-	// Token: 0x0400DD78 RID: 56696
+	// Token: 0x0400E220 RID: 57888
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400DD79 RID: 56697
+	// Token: 0x0400E221 RID: 57889
 	public bool NeedTurn;
 
-	// Token: 0x0400DD7A RID: 56698
+	// Token: 0x0400E222 RID: 57890
 	public bool WaitTurnEnd;
 
-	// Token: 0x0400DD7B RID: 56699
+	// Token: 0x0400E223 RID: 57891
 	[Nullable(1)]
 	public Vector PlayerOffset = Vector.Create();
 
-	// Token: 0x0400DD7C RID: 56700
+	// Token: 0x0400E224 RID: 57892
 	protected bool IsPlayerInputLocked;
 
-	// Token: 0x0400DD7D RID: 56701
+	// Token: 0x0400E225 RID: 57893
 	public Action OnTurnEndHandle;
 
-	// Token: 0x0400DD7E RID: 56702
+	// Token: 0x0400E226 RID: 57894
 	public Action OnTurnToDefaultForwardEndHandle;
 
-	// Token: 0x0400DD7F RID: 56703
+	// Token: 0x0400E227 RID: 57895
 	public Action OnTurnToInteractTargetEndHandle;
 }

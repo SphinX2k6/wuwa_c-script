@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FFB RID: 4091
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001127 RID: 4391
 	public class IListenToEvent : IQuestCondition
 	{
-		// Token: 0x06005B00 RID: 23296 RVA: 0x000DCC0C File Offset: 0x000DAE0C
+		// Token: 0x060060E0 RID: 24800 RVA: 0x000E984C File Offset: 0x000E7A4C
 		private IListenToEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B01 RID: 23297 RVA: 0x000DCC44 File Offset: 0x000DAE44
+		// Token: 0x060060E1 RID: 24801 RVA: 0x000E9884 File Offset: 0x000E7A84
 		public static IListenToEvent Create([Nullable(2)] IListenToEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B02 RID: 23298 RVA: 0x000DCC57 File Offset: 0x000DAE57
+		// Token: 0x060060E2 RID: 24802 RVA: 0x000E9897 File Offset: 0x000E7A97
 		public static IListenToEvent CreateFromSetValue([Nullable(2)] IListenToEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005B03 RID: 23299 RVA: 0x000DCC6A File Offset: 0x000DAE6A
+		// Token: 0x060060E3 RID: 24803 RVA: 0x000E98AA File Offset: 0x000E7AAA
 		public new IListenToEvent_SetValue ToSetValue()
 		{
 			return new IListenToEvent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E09 RID: 7689
-		// (get) Token: 0x06005B04 RID: 23300 RVA: 0x000DCC95 File Offset: 0x000DAE95
-		// (set) Token: 0x06005B05 RID: 23301 RVA: 0x000DCCC0 File Offset: 0x000DAEC0
+		// Token: 0x17001FB2 RID: 8114
+		// (get) Token: 0x060060E4 RID: 24804 RVA: 0x000E98D5 File Offset: 0x000E7AD5
+		// (set) Token: 0x060060E5 RID: 24805 RVA: 0x000E9900 File Offset: 0x000E7B00
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E0A RID: 7690
-		// (get) Token: 0x06005B06 RID: 23302 RVA: 0x000DCCD0 File Offset: 0x000DAED0
-		// (set) Token: 0x06005B07 RID: 23303 RVA: 0x000DCD31 File Offset: 0x000DAF31
+		// Token: 0x17001FB3 RID: 8115
+		// (get) Token: 0x060060E6 RID: 24806 RVA: 0x000E9910 File Offset: 0x000E7B10
+		// (set) Token: 0x060060E7 RID: 24807 RVA: 0x000E9971 File Offset: 0x000E7B71
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E0B RID: 7691
-		// (get) Token: 0x06005B08 RID: 23304 RVA: 0x000DCD46 File Offset: 0x000DAF46
-		// (set) Token: 0x06005B09 RID: 23305 RVA: 0x000DCD6D File Offset: 0x000DAF6D
+		// Token: 0x17001FB4 RID: 8116
+		// (get) Token: 0x060060E8 RID: 24808 RVA: 0x000E9986 File Offset: 0x000E7B86
+		// (set) Token: 0x060060E9 RID: 24809 RVA: 0x000E99AD File Offset: 0x000E7BAD
 		public virtual IEventTypeConfig EventType
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040036BE RID: 14014
+		// Token: 0x040039F6 RID: 14838
 		[Nullable(2)]
 		protected new IListenToEvent FbInstance;
 
-		// Token: 0x040036BF RID: 14015
+		// Token: 0x040039F7 RID: 14839
 		[Nullable(2)]
 		protected new IListenToEvent_SetValue PocoInterface;
 
-		// Token: 0x040036C0 RID: 14016
+		// Token: 0x040039F8 RID: 14840
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040036C1 RID: 14017
+		// Token: 0x040039F9 RID: 14841
 		private bool _PreConditionsInited;
 	}
 }

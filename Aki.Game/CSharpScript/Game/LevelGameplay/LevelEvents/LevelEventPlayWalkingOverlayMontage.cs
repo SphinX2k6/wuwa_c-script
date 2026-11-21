@@ -7,17 +7,17 @@ using CSharpScript.Game.NewWorld.Character.Npc.Logics;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B56 RID: 27478
+	// Token: 0x02005CCE RID: 23758
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPlayWalkingOverlayMontage : LevelEventBase
 	{
-		// Token: 0x060441CB RID: 278987 RVA: 0x010C345D File Offset: 0x010C165D
+		// Token: 0x0603A31D RID: 238365 RVA: 0x0106D011 File Offset: 0x0106B211
 		public LevelEventPlayWalkingOverlayMontage(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441CC RID: 278988 RVA: 0x010C3468 File Offset: 0x010C1668
+		// Token: 0x0603A31E RID: 238366 RVA: 0x0106D01C File Offset: 0x0106B21C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PlayWalkingOverlayMontage playWalkingOverlayMontage = inParams as PlayWalkingOverlayMontage;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(playWalkingOverlayMontage.EntityId);
 		}
 
-		// Token: 0x060441CD RID: 278989 RVA: 0x010C3490 File Offset: 0x010C1690
+		// Token: 0x0603A31F RID: 238367 RVA: 0x0106D044 File Offset: 0x0106B244
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			if (this.EventParam == null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441CE RID: 278990 RVA: 0x010C3550 File Offset: 0x010C1750
+		// Token: 0x0603A320 RID: 238368 RVA: 0x0106D104 File Offset: 0x0106B304
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.EntityHandle != handle)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441CF RID: 278991 RVA: 0x010C3604 File Offset: 0x010C1804
+		// Token: 0x0603A321 RID: 238369 RVA: 0x0106D1B8 File Offset: 0x0106B3B8
 		protected override void OnReset()
 		{
 			if (this.PlayMontageHandle != 0)
@@ -92,15 +92,15 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.PlayMontageHandle = 0;
 		}
 
-		// Token: 0x04023934 RID: 145716
+		// Token: 0x0401EBD6 RID: 125910
 		[Nullable(2)]
 		private PlayWalkingOverlayMontage EventParam;
 
-		// Token: 0x04023935 RID: 145717
+		// Token: 0x0401EBD7 RID: 125911
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x04023936 RID: 145718
+		// Token: 0x0401EBD8 RID: 125912
 		private int PlayMontageHandle;
 	}
 }

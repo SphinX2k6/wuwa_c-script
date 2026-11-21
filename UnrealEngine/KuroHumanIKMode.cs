@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001663 RID: 5731
+	// Token: 0x020002FB RID: 763
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroAnim.KuroHumanIKMode")]
 	public enum KuroHumanIKMode : byte
 	{
-		// Token: 0x0400B50C RID: 46348
+		// Token: 0x040021A3 RID: 8611
 		None,
-		// Token: 0x0400B50D RID: 46349
+		// Token: 0x040021A4 RID: 8612
 		GroundMode,
-		// Token: 0x0400B50E RID: 46350
+		// Token: 0x040021A5 RID: 8613
 		ClimbMode,
-		// Token: 0x0400B50F RID: 46351
+		// Token: 0x040021A6 RID: 8614
 		SlideMode,
-		// Token: 0x0400B510 RID: 46352
+		// Token: 0x040021A7 RID: 8615
 		RideMode,
-		// Token: 0x0400B511 RID: 46353
+		// Token: 0x040021A8 RID: 8616
 		KuroHumanIKMode_MAX
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008EF RID: 2287
+	// Token: 0x02000994 RID: 2452
 	public class EAiGearStrategyJsonConverter : JsonConverter<EAiGearStrategy>
 	{
-		// Token: 0x060033E6 RID: 13286 RVA: 0x00084B50 File Offset: 0x00082D50
+		// Token: 0x0600372E RID: 14126 RVA: 0x0008C18C File Offset: 0x0008A38C
 		public override EAiGearStrategy Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EAiGearStrategyExtensions.FromString(@string);
 		}
 
-		// Token: 0x060033E7 RID: 13287 RVA: 0x00084B74 File Offset: 0x00082D74
+		// Token: 0x0600372F RID: 14127 RVA: 0x0008C1B0 File Offset: 0x0008A3B0
 		public override void Write(Utf8JsonWriter writer, EAiGearStrategy value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

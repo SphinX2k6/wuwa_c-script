@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001390 RID: 5008
+// Token: 0x02000844 RID: 2116
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,13 +15,13 @@ using UnrealEngine;
 })]
 internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDetailInfo>
 {
-	// Token: 0x06008C53 RID: 35923 RVA: 0x001E13B8 File Offset: 0x001DF5B8
+	// Token: 0x06005FEE RID: 24558 RVA: 0x001EA20C File Offset: 0x001E840C
 	public void SetClickCallBack(Action<MowingTowerRewardTabItem> callback)
 	{
 		this.ClickCallBack = callback;
 	}
 
-	// Token: 0x06008C54 RID: 35924 RVA: 0x001E13C4 File Offset: 0x001DF5C4
+	// Token: 0x06005FEF RID: 24559 RVA: 0x001EA218 File Offset: 0x001E8418
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDeta
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06008C55 RID: 35925 RVA: 0x001E1474 File Offset: 0x001DF674
+	// Token: 0x06005FF0 RID: 24560 RVA: 0x001EA2C8 File Offset: 0x001E84C8
 	public override void Refresh(MowingTowerLevelDetailInfo data, bool isSelected, int gridIndex)
 	{
 		this.LevelData = data;
@@ -66,7 +66,7 @@ internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDeta
 		base.SetTextureByPath(config.Value.RewardTexture, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x06008C56 RID: 35926 RVA: 0x001E1512 File Offset: 0x001DF712
+	// Token: 0x06005FF1 RID: 24561 RVA: 0x001EA366 File Offset: 0x001E8566
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<MowingTowerRewardTabItem> clickCallBack = this.ClickCallBack;
@@ -77,13 +77,13 @@ internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDeta
 		clickCallBack(this);
 	}
 
-	// Token: 0x06008C57 RID: 35927 RVA: 0x001E1525 File Offset: 0x001DF725
+	// Token: 0x06005FF2 RID: 24562 RVA: 0x001EA379 File Offset: 0x001E8579
 	public void SetToggleUnCheck()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06008C58 RID: 35928 RVA: 0x001E1538 File Offset: 0x001DF738
+	// Token: 0x06005FF3 RID: 24563 RVA: 0x001EA38C File Offset: 0x001E858C
 	public int? GetLevelId()
 	{
 		MowingTowerLevelDetailInfo levelData = this.LevelData;
@@ -94,7 +94,7 @@ internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDeta
 		return new int?(levelData.GetId());
 	}
 
-	// Token: 0x06008C59 RID: 35929 RVA: 0x001E1563 File Offset: 0x001DF763
+	// Token: 0x06005FF4 RID: 24564 RVA: 0x001EA3B7 File Offset: 0x001E85B7
 	public void SetRedDotActive(bool isShow)
 	{
 		UUIItem item = base.GetItem(3);
@@ -105,11 +105,11 @@ internal class MowingTowerRewardTabItem : GridProxyAbstract<MowingTowerLevelDeta
 		item.SetUIActive(isShow);
 	}
 
-	// Token: 0x04003E4B RID: 15947
+	// Token: 0x04003EE3 RID: 16099
 	[Nullable(2)]
 	private MowingTowerLevelDetailInfo LevelData;
 
-	// Token: 0x04003E4C RID: 15948
+	// Token: 0x04003EE4 RID: 16100
 	[Nullable(new byte[]
 	{
 		2,

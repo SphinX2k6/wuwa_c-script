@@ -11,7 +11,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019F1 RID: 6641
+// Token: 0x02000EB0 RID: 3760
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -20,7 +20,7 @@ using UnrealEngine;
 })]
 public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 {
-	// Token: 0x0600C25B RID: 49755 RVA: 0x002BDC48 File Offset: 0x002BBE48
+	// Token: 0x06009668 RID: 38504 RVA: 0x002C8C20 File Offset: 0x002C6E20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,18 +46,18 @@ public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 		};
 	}
 
-	// Token: 0x0600C25C RID: 49756 RVA: 0x002BDDBE File Offset: 0x002BBFBE
+	// Token: 0x06009669 RID: 38505 RVA: 0x002C8D96 File Offset: 0x002C6F96
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600C25D RID: 49757 RVA: 0x002BDDD1 File Offset: 0x002BBFD1
+	// Token: 0x0600966A RID: 38506 RVA: 0x002C8DA9 File Offset: 0x002C6FA9
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600C25E RID: 49758 RVA: 0x002BDDD3 File Offset: 0x002BBFD3
+	// Token: 0x0600966B RID: 38507 RVA: 0x002C8DAB File Offset: 0x002C6FAB
 	private void OnClickTakeRewardBtn()
 	{
 		if (this.TaskId == 0)
@@ -72,7 +72,7 @@ public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 		clickReceiveCb();
 	}
 
-	// Token: 0x0600C25F RID: 49759 RVA: 0x002BDDEE File Offset: 0x002BBFEE
+	// Token: 0x0600966C RID: 38508 RVA: 0x002C8DC6 File Offset: 0x002C6FC6
 	private void OnClickJumpToBtn()
 	{
 		if (this.TaskId == 0)
@@ -87,17 +87,17 @@ public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 		SkipTaskManager.RunByConfigId(this.JumpId, null);
 	}
 
-	// Token: 0x0600C260 RID: 49760 RVA: 0x002BDE22 File Offset: 0x002BC022
+	// Token: 0x0600966D RID: 38509 RVA: 0x002C8DFA File Offset: 0x002C6FFA
 	private void OnClickItem()
 	{
 		if (this.TaskId == 0 || this.RewardItemId == 0)
 		{
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.RewardItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.RewardItemId, true, null, false);
 	}
 
-	// Token: 0x0600C261 RID: 49761 RVA: 0x002BDE48 File Offset: 0x002BC048
+	// Token: 0x0600966E RID: 38510 RVA: 0x002C8E20 File Offset: 0x002C7020
 	public override void Refresh(DailyActiveTaskData data, bool isSelected, int gridIndex)
 	{
 		this.TaskId = data.TaskId.Value;
@@ -165,13 +165,13 @@ public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 		base.GetItem(11).SetAlpha(flag2 ? 0.5f : 1f);
 	}
 
-	// Token: 0x0600C262 RID: 49762 RVA: 0x002BE138 File Offset: 0x002BC338
+	// Token: 0x0600966F RID: 38511 RVA: 0x002C9110 File Offset: 0x002C7310
 	public void SetClickReceiveCb(Action cb)
 	{
 		this.ClickReceiveCb = cb;
 	}
 
-	// Token: 0x0600C263 RID: 49763 RVA: 0x002BE144 File Offset: 0x002BC344
+	// Token: 0x06009670 RID: 38512 RVA: 0x002C911C File Offset: 0x002C731C
 	public UniTask PlayRewardAnimAsync()
 	{
 		DailyActivityTaskItem.<PlayRewardAnimAsync>d__15 <PlayRewardAnimAsync>d__;
@@ -182,53 +182,53 @@ public class DailyActivityTaskItem : GridProxyAbstract<DailyActiveTaskData>
 		return <PlayRewardAnimAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400597B RID: 22907
+	// Token: 0x04005A4A RID: 23114
 	private int TaskId;
 
-	// Token: 0x0400597C RID: 22908
+	// Token: 0x04005A4B RID: 23115
 	private bool IsFunctionUnlock;
 
-	// Token: 0x0400597D RID: 22909
+	// Token: 0x04005A4C RID: 23116
 	private int RewardItemId;
 
-	// Token: 0x0400597E RID: 22910
+	// Token: 0x04005A4D RID: 23117
 	private int JumpId;
 
-	// Token: 0x0400597F RID: 22911
+	// Token: 0x04005A4E RID: 23118
 	[Nullable(2)]
 	private Action ClickReceiveCb;
 
-	// Token: 0x04005980 RID: 22912
+	// Token: 0x04005A4F RID: 23119
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02007F28 RID: 32552
+	// Token: 0x020070B7 RID: 28855
 	[NullableContext(0)]
 	private enum EActiveTaskComponent
 	{
-		// Token: 0x04029872 RID: 170098
+		// Token: 0x04024BAF RID: 150447
 		TxtDescription,
-		// Token: 0x04029873 RID: 170099
+		// Token: 0x04024BB0 RID: 150448
 		TxtProcess,
-		// Token: 0x04029874 RID: 170100
+		// Token: 0x04024BB1 RID: 150449
 		TxtStatus,
-		// Token: 0x04029875 RID: 170101
+		// Token: 0x04024BB2 RID: 150450
 		PanelFinished,
-		// Token: 0x04029876 RID: 170102
+		// Token: 0x04024BB3 RID: 150451
 		RewardItem,
-		// Token: 0x04029877 RID: 170103
+		// Token: 0x04024BB4 RID: 150452
 		JumpButton,
-		// Token: 0x04029878 RID: 170104
+		// Token: 0x04024BB5 RID: 150453
 		RewardButton,
-		// Token: 0x04029879 RID: 170105
+		// Token: 0x04024BB6 RID: 150454
 		PanelMask,
-		// Token: 0x0402987A RID: 170106
+		// Token: 0x04024BB7 RID: 150455
 		TxtValue,
-		// Token: 0x0402987B RID: 170107
+		// Token: 0x04024BB8 RID: 150456
 		TextureActiveBg,
-		// Token: 0x0402987C RID: 170108
+		// Token: 0x04024BB9 RID: 150457
 		TextureDoneBg,
-		// Token: 0x0402987D RID: 170109
+		// Token: 0x04024BBA RID: 150458
 		ContentItem
 	}
 }

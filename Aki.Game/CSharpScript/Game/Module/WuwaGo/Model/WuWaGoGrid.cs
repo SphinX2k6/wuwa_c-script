@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
@@ -10,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model
 {
-	// Token: 0x02004738 RID: 18232
+	// Token: 0x02003669 RID: 13929
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoGrid : WuWaGoBaseUnit
 	{
-		// Token: 0x0602FA4B RID: 195147 RVA: 0x00B0AEE0 File Offset: 0x00B090E0
+		// Token: 0x06024215 RID: 147989 RVA: 0x00A3AE34 File Offset: 0x00A39034
 		public WuWaGoGrid(Vector coordinate, Rotator rotator, EGridShape gridShape, IWuWaGoGridLinkData gridLinkConfig, [Nullable(2)] IWuWaGoGridLinkData gearLinkConfig = null, [Nullable(2)] Vector attachedCubeCoordinate = null) : base(coordinate, rotator)
 		{
 		}
 
-		// Token: 0x17007700 RID: 30464
-		// (get) Token: 0x0602FA4C RID: 195148 RVA: 0x00B0AF61 File Offset: 0x00B09161
+		// Token: 0x170049BC RID: 18876
+		// (get) Token: 0x06024216 RID: 147990 RVA: 0x00A3AEB5 File Offset: 0x00A390B5
 		public override bool Actionable
 		{
 			get
@@ -30,8 +29,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007701 RID: 30465
-		// (get) Token: 0x0602FA4D RID: 195149 RVA: 0x00B0AF64 File Offset: 0x00B09164
+		// Token: 0x170049BD RID: 18877
+		// (get) Token: 0x06024217 RID: 147991 RVA: 0x00A3AEB8 File Offset: 0x00A390B8
 		public override bool MoveAbility
 		{
 			get
@@ -40,27 +39,27 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007702 RID: 30466
-		// (get) Token: 0x0602FA4E RID: 195150 RVA: 0x00B0AF67 File Offset: 0x00B09167
-		// (set) Token: 0x0602FA4F RID: 195151 RVA: 0x00B0AF6F File Offset: 0x00B0916F
+		// Token: 0x170049BE RID: 18878
+		// (get) Token: 0x06024218 RID: 147992 RVA: 0x00A3AEBB File Offset: 0x00A390BB
+		// (set) Token: 0x06024219 RID: 147993 RVA: 0x00A3AEC3 File Offset: 0x00A390C3
 		[Nullable(2)]
 		public AActor Applique { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-		// Token: 0x0602FA50 RID: 195152 RVA: 0x00B0AF78 File Offset: 0x00B09178
+		// Token: 0x0602421A RID: 147994 RVA: 0x00A3AECC File Offset: 0x00A390CC
 		[NullableContext(2)]
 		protected override AActor GetActorRaw()
 		{
 			return CharacterController.Instance.GetActor(this.EntityHandle);
 		}
 
-		// Token: 0x0602FA51 RID: 195153 RVA: 0x00B0AF8A File Offset: 0x00B0918A
+		// Token: 0x0602421B RID: 147995 RVA: 0x00A3AEDE File Offset: 0x00A390DE
 		public override IRollbackCapture CaptureRollback()
 		{
 			return new GridRollbackCapture(this);
 		}
 
-		// Token: 0x17007703 RID: 30467
-		// (get) Token: 0x0602FA52 RID: 195154 RVA: 0x00B0AF92 File Offset: 0x00B09192
+		// Token: 0x170049BF RID: 18879
+		// (get) Token: 0x0602421C RID: 147996 RVA: 0x00A3AEE6 File Offset: 0x00A390E6
 		[Nullable(2)]
 		public EntityHandle EntityHandle
 		{
@@ -71,8 +70,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007704 RID: 30468
-		// (get) Token: 0x0602FA53 RID: 195155 RVA: 0x00B0AFA4 File Offset: 0x00B091A4
+		// Token: 0x170049C0 RID: 18880
+		// (get) Token: 0x0602421D RID: 147997 RVA: 0x00A3AEF8 File Offset: 0x00A390F8
 		[Nullable(2)]
 		public SceneItemMoveComponent SceneItemMoveComponent
 		{
@@ -93,8 +92,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007705 RID: 30469
-		// (get) Token: 0x0602FA54 RID: 195156 RVA: 0x00B0AFC2 File Offset: 0x00B091C2
+		// Token: 0x170049C1 RID: 18881
+		// (get) Token: 0x0602421E RID: 147998 RVA: 0x00A3AF16 File Offset: 0x00A39116
 		public bool IsOccupied
 		{
 			get
@@ -103,8 +102,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007706 RID: 30470
-		// (get) Token: 0x0602FA55 RID: 195157 RVA: 0x00B0AFCD File Offset: 0x00B091CD
+		// Token: 0x170049C2 RID: 18882
+		// (get) Token: 0x0602421F RID: 147999 RVA: 0x00A3AF21 File Offset: 0x00A39121
 		public int OccupiedUnitId
 		{
 			get
@@ -113,8 +112,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007707 RID: 30471
-		// (get) Token: 0x0602FA56 RID: 195158 RVA: 0x00B0AFD5 File Offset: 0x00B091D5
+		// Token: 0x170049C3 RID: 18883
+		// (get) Token: 0x06024220 RID: 148000 RVA: 0x00A3AF29 File Offset: 0x00A39129
 		public bool IsEntityGrid
 		{
 			get
@@ -123,8 +122,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007708 RID: 30472
-		// (get) Token: 0x0602FA57 RID: 195159 RVA: 0x00B0AFE0 File Offset: 0x00B091E0
+		// Token: 0x170049C4 RID: 18884
+		// (get) Token: 0x06024221 RID: 148001 RVA: 0x00A3AF34 File Offset: 0x00A39134
 		public int EntityPbDataId
 		{
 			get
@@ -133,8 +132,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007709 RID: 30473
-		// (get) Token: 0x0602FA58 RID: 195160 RVA: 0x00B0AFE8 File Offset: 0x00B091E8
+		// Token: 0x170049C5 RID: 18885
+		// (get) Token: 0x06024222 RID: 148002 RVA: 0x00A3AF3C File Offset: 0x00A3913C
 		public EWuWaGoEntityType? EntityType
 		{
 			get
@@ -143,8 +142,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770A RID: 30474
-		// (get) Token: 0x0602FA59 RID: 195161 RVA: 0x00B0AFF0 File Offset: 0x00B091F0
+		// Token: 0x170049C6 RID: 18886
+		// (get) Token: 0x06024223 RID: 148003 RVA: 0x00A3AF44 File Offset: 0x00A39144
 		public bool HasAttachedGameplayEntity
 		{
 			get
@@ -153,8 +152,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770B RID: 30475
-		// (get) Token: 0x0602FA5A RID: 195162 RVA: 0x00B0B000 File Offset: 0x00B09200
+		// Token: 0x170049C7 RID: 18887
+		// (get) Token: 0x06024224 RID: 148004 RVA: 0x00A3AF54 File Offset: 0x00A39154
 		public IReadOnlyList<int> AttachedGameplayEntityPbDataIds
 		{
 			get
@@ -163,8 +162,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770C RID: 30476
-		// (get) Token: 0x0602FA5B RID: 195163 RVA: 0x00B0B008 File Offset: 0x00B09208
+		// Token: 0x170049C8 RID: 18888
+		// (get) Token: 0x06024225 RID: 148005 RVA: 0x00A3AF5C File Offset: 0x00A3915C
 		public bool IsEndPoint
 		{
 			get
@@ -173,8 +172,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770D RID: 30477
-		// (get) Token: 0x0602FA5C RID: 195164 RVA: 0x00B0B018 File Offset: 0x00B09218
+		// Token: 0x170049C9 RID: 18889
+		// (get) Token: 0x06024226 RID: 148006 RVA: 0x00A3AF6C File Offset: 0x00A3916C
 		public IReadOnlyList<Vector> LinkedDirections
 		{
 			get
@@ -183,8 +182,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770E RID: 30478
-		// (get) Token: 0x0602FA5D RID: 195165 RVA: 0x00B0B020 File Offset: 0x00B09220
+		// Token: 0x170049CA RID: 18890
+		// (get) Token: 0x06024227 RID: 148007 RVA: 0x00A3AF74 File Offset: 0x00A39174
 		public IReadOnlyList<Vector> GearLinkDirections
 		{
 			get
@@ -193,8 +192,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x1700770F RID: 30479
-		// (get) Token: 0x0602FA5E RID: 195166 RVA: 0x00B0B028 File Offset: 0x00B09228
+		// Token: 0x170049CB RID: 18891
+		// (get) Token: 0x06024228 RID: 148008 RVA: 0x00A3AF7C File Offset: 0x00A3917C
 		public bool HasGearPath
 		{
 			get
@@ -203,8 +202,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x17007710 RID: 30480
-		// (get) Token: 0x0602FA5F RID: 195167 RVA: 0x00B0B030 File Offset: 0x00B09230
+		// Token: 0x170049CC RID: 18892
+		// (get) Token: 0x06024229 RID: 148009 RVA: 0x00A3AF84 File Offset: 0x00A39184
 		[Nullable(2)]
 		public IWallFrame WallFrame
 		{
@@ -215,16 +214,38 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA60 RID: 195168 RVA: 0x00B0B038 File Offset: 0x00B09238
+		// Token: 0x0602422A RID: 148010 RVA: 0x00A3AF8C File Offset: 0x00A3918C
 		public bool IsBidirectionalLinkedTo(WuWaGoGrid other)
 		{
-			double dx = other.Coordinate.X - base.Coordinate.X;
-			double dy = other.Coordinate.Y - base.Coordinate.Y;
-			double dz = other.Coordinate.Z - base.Coordinate.Z;
-			return this.LinkDirections.Any((Vector d) => d.X.Equals(dx) && d.Y.Equals(dy) && d.Z.Equals(dz)) && other.LinkDirections.Any((Vector d) => d.X.Equals(-dx) && d.Y.Equals(-dy) && d.Z.Equals(-dz));
+			double num = other.Coordinate.X - base.Coordinate.X;
+			double num2 = other.Coordinate.Y - base.Coordinate.Y;
+			double num3 = other.Coordinate.Z - base.Coordinate.Z;
+			bool flag = false;
+			for (int i = 0; i < this.LinkDirections.Count; i++)
+			{
+				Vector vector = this.LinkDirections[i];
+				if (vector.X.Equals(num) && vector.Y.Equals(num2) && vector.Z.Equals(num3))
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (!flag)
+			{
+				return false;
+			}
+			for (int j = 0; j < other.LinkDirections.Count; j++)
+			{
+				Vector vector2 = other.LinkDirections[j];
+				if (vector2.X.Equals(-num) && vector2.Y.Equals(-num2) && vector2.Z.Equals(-num3))
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x0602FA61 RID: 195169 RVA: 0x00B0B0D4 File Offset: 0x00B092D4
+		// Token: 0x0602422B RID: 148011 RVA: 0x00A3B0A0 File Offset: 0x00A392A0
 		public void InitOpeningDirections()
 		{
 			this.InitRotatedOpeningDirections(this.GridLinkConfig.GridLinkType, this.OpeningDirections);
@@ -232,7 +253,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.HasGearPathInternal = this.InitBaseOpeningDirections((gearLinkConfig != null) ? new EWuWaGoGridLinkType?(gearLinkConfig.GridLinkType) : null, this.GearOpeningDirections);
 		}
 
-		// Token: 0x0602FA62 RID: 195170 RVA: 0x00B0B12C File Offset: 0x00B0932C
+		// Token: 0x0602422C RID: 148012 RVA: 0x00A3B0F8 File Offset: 0x00A392F8
 		private void InitRotatedOpeningDirections(EWuWaGoGridLinkType linkType, List<Vector> targetDirections)
 		{
 			targetDirections.Clear();
@@ -251,7 +272,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA63 RID: 195171 RVA: 0x00B0B1E4 File Offset: 0x00B093E4
+		// Token: 0x0602422D RID: 148013 RVA: 0x00A3B1B0 File Offset: 0x00A393B0
 		private bool InitBaseOpeningDirections(EWuWaGoGridLinkType? linkType, List<Vector> targetDirections)
 		{
 			targetDirections.Clear();
@@ -275,7 +296,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return true;
 		}
 
-		// Token: 0x0602FA64 RID: 195172 RVA: 0x00B0B2AC File Offset: 0x00B094AC
+		// Token: 0x0602422E RID: 148014 RVA: 0x00A3B278 File Offset: 0x00A39478
 		[NullableContext(0)]
 		public UniTask<bool> Create()
 		{
@@ -287,7 +308,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return <Create>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FA65 RID: 195173 RVA: 0x00B0B2F0 File Offset: 0x00B094F0
+		// Token: 0x0602422F RID: 148015 RVA: 0x00A3B2BC File Offset: 0x00A394BC
 		public void Destroy()
 		{
 			AActor applique = this.Applique;
@@ -315,7 +336,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.AttachedGameplayEntityPbDataIdsValue.Clear();
 		}
 
-		// Token: 0x0602FA66 RID: 195174 RVA: 0x00B0B3BC File Offset: 0x00B095BC
+		// Token: 0x06024230 RID: 148016 RVA: 0x00A3B388 File Offset: 0x00A39588
 		[NullableContext(0)]
 		private UniTask<bool> CreateAppliqueActor()
 		{
@@ -327,7 +348,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return <CreateAppliqueActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FA67 RID: 195175 RVA: 0x00B0B400 File Offset: 0x00B09600
+		// Token: 0x06024231 RID: 148017 RVA: 0x00A3B3CC File Offset: 0x00A395CC
 		public unsafe void BuildLinks(WuWaGoModel model)
 		{
 			this.LinkDirections.Clear();
@@ -367,7 +388,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA68 RID: 195176 RVA: 0x00B0B530 File Offset: 0x00B09730
+		// Token: 0x06024232 RID: 148018 RVA: 0x00A3B4FC File Offset: 0x00A396FC
 		private void BuildLinksForHorizontal(WuWaGoModel model, IReadOnlyList<Vector> openingDirections, List<Vector> targetDirections, bool requireGearPathOnNeighbor = false)
 		{
 			if (openingDirections.Count == 0)
@@ -414,7 +435,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA69 RID: 195177 RVA: 0x00B0B6B8 File Offset: 0x00B098B8
+		// Token: 0x06024233 RID: 148019 RVA: 0x00A3B684 File Offset: 0x00A39884
 		private void BuildLinksForVertical(WuWaGoModel model, IReadOnlyList<Vector> openingDirections, List<Vector> targetDirections, bool requireGearPathOnNeighbor = false)
 		{
 			if (openingDirections.Count == 0)
@@ -455,7 +476,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA6A RID: 195178 RVA: 0x00B0B82C File Offset: 0x00B09A2C
+		// Token: 0x06024234 RID: 148020 RVA: 0x00A3B7F8 File Offset: 0x00A399F8
 		[return: Nullable(2)]
 		private IWallFrame GetVerticalGridWallFrame(WuWaGoModel model, Vector coordinate)
 		{
@@ -478,7 +499,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return this.GetVerticalGridWallFrameByGeometry(model, coordinate);
 		}
 
-		// Token: 0x0602FA6B RID: 195179 RVA: 0x00B0B874 File Offset: 0x00B09A74
+		// Token: 0x06024235 RID: 148021 RVA: 0x00A3B840 File Offset: 0x00A39A40
 		[return: Nullable(2)]
 		private IWallFrame BuildWallFrameFromAttachedCube(Vector coordinate, Vector cubeCoordinate)
 		{
@@ -511,7 +532,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			};
 		}
 
-		// Token: 0x0602FA6C RID: 195180 RVA: 0x00B0B970 File Offset: 0x00B09B70
+		// Token: 0x06024236 RID: 148022 RVA: 0x00A3B93C File Offset: 0x00A39B3C
 		[return: Nullable(2)]
 		private IWallFrame TryGetVerticalGridWallFrameByEntityRotator(Vector coordinate)
 		{
@@ -549,7 +570,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			};
 		}
 
-		// Token: 0x0602FA6D RID: 195181 RVA: 0x00B0BA94 File Offset: 0x00B09C94
+		// Token: 0x06024237 RID: 148023 RVA: 0x00A3BA60 File Offset: 0x00A39C60
 		[return: Nullable(2)]
 		private IWallFrame GetVerticalGridWallFrameByGeometry(WuWaGoModel model, Vector coordinate)
 		{
@@ -596,7 +617,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return null;
 		}
 
-		// Token: 0x0602FA6E RID: 195182 RVA: 0x00B0BC14 File Offset: 0x00B09E14
+		// Token: 0x06024238 RID: 148024 RVA: 0x00A3BBE0 File Offset: 0x00A39DE0
 		private bool TryAddNeighborLink(WuWaGoModel model, double dx, double dy, double dz, EGridShape expectedShape, List<Vector> targetDirections, bool requireGearPathOnNeighbor = false)
 		{
 			WuWaGoGrid.ProbeBufferTemp.Set(base.Coordinate.X + dx, base.Coordinate.Y + dy, base.Coordinate.Z + dz);
@@ -612,7 +633,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return true;
 		}
 
-		// Token: 0x0602FA6F RID: 195183 RVA: 0x00B0BC8C File Offset: 0x00B09E8C
+		// Token: 0x06024239 RID: 148025 RVA: 0x00A3BC58 File Offset: 0x00A39E58
 		public Rotator GetLinkRotator()
 		{
 			float yaw = WuWaGoGrid.RotationTypeToAngle[this.GridLinkConfig.RotationType];
@@ -624,19 +645,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			return quat2.Rotator(null);
 		}
 
-		// Token: 0x0602FA70 RID: 195184 RVA: 0x00B0BD0C File Offset: 0x00B09F0C
+		// Token: 0x0602423A RID: 148026 RVA: 0x00A3BCD8 File Offset: 0x00A39ED8
 		public void AddOccupiedUnitChangedListener(WuWaGoGridOccupiedUnitChangedListener listener)
 		{
 			this.OccupiedUnitChangedListeners.Add(listener);
 		}
 
-		// Token: 0x0602FA71 RID: 195185 RVA: 0x00B0BD1B File Offset: 0x00B09F1B
+		// Token: 0x0602423B RID: 148027 RVA: 0x00A3BCE7 File Offset: 0x00A39EE7
 		public void RemoveOccupiedUnitChangedListener(WuWaGoGridOccupiedUnitChangedListener listener)
 		{
 			this.OccupiedUnitChangedListeners.Remove(listener);
 		}
 
-		// Token: 0x0602FA72 RID: 195186 RVA: 0x00B0BD2C File Offset: 0x00B09F2C
+		// Token: 0x0602423C RID: 148028 RVA: 0x00A3BCF8 File Offset: 0x00A39EF8
 		public void SetOccupiedUnit(int? unitId = null)
 		{
 			int valueOrDefault = unitId.GetValueOrDefault();
@@ -656,32 +677,32 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA73 RID: 195187 RVA: 0x00B0BDA8 File Offset: 0x00B09FA8
+		// Token: 0x0602423D RID: 148029 RVA: 0x00A3BD74 File Offset: 0x00A39F74
 		public void RegisterMoveParticipant(IWuWaGoGridMoveParticipant participant)
 		{
 			this.MoveParticipants.Add(participant);
 		}
 
-		// Token: 0x0602FA74 RID: 195188 RVA: 0x00B0BDB7 File Offset: 0x00B09FB7
+		// Token: 0x0602423E RID: 148030 RVA: 0x00A3BD83 File Offset: 0x00A39F83
 		public void UnregisterMoveParticipant(IWuWaGoGridMoveParticipant participant)
 		{
 			this.MoveParticipants.Remove(participant);
 		}
 
-		// Token: 0x0602FA75 RID: 195189 RVA: 0x00B0BDC6 File Offset: 0x00B09FC6
+		// Token: 0x0602423F RID: 148031 RVA: 0x00A3BD92 File Offset: 0x00A39F92
 		public IReadOnlyList<IWuWaGoGridMoveParticipant> SnapshotMoveParticipants()
 		{
 			return new List<IWuWaGoGridMoveParticipant>(this.MoveParticipants);
 		}
 
-		// Token: 0x0602FA76 RID: 195190 RVA: 0x00B0BDD3 File Offset: 0x00B09FD3
+		// Token: 0x06024240 RID: 148032 RVA: 0x00A3BD9F File Offset: 0x00A39F9F
 		public void SetEntity(int pbDataId, EWuWaGoEntityType type)
 		{
 			this.EntityPbDataIdValue = pbDataId;
 			this.EntityTypeValue = new EWuWaGoEntityType?(type);
 		}
 
-		// Token: 0x0602FA77 RID: 195191 RVA: 0x00B0BDE8 File Offset: 0x00B09FE8
+		// Token: 0x06024241 RID: 148033 RVA: 0x00A3BDB4 File Offset: 0x00A39FB4
 		public void AttachGameplayEntity(int pbDataId)
 		{
 			if (this.AttachedGameplayEntityPbDataIdsValue.Contains(pbDataId))
@@ -691,68 +712,68 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.AttachedGameplayEntityPbDataIdsValue.Add(pbDataId);
 		}
 
-		// Token: 0x04019BA7 RID: 105383
+		// Token: 0x04014257 RID: 82519
 		private readonly List<Vector> OpeningDirections = new List<Vector>();
 
-		// Token: 0x04019BA8 RID: 105384
+		// Token: 0x04014258 RID: 82520
 		private readonly List<Vector> GearOpeningDirections = new List<Vector>();
 
-		// Token: 0x04019BA9 RID: 105385
+		// Token: 0x04014259 RID: 82521
 		private readonly List<Vector> LinkDirections = new List<Vector>();
 
-		// Token: 0x04019BAA RID: 105386
+		// Token: 0x0401425A RID: 82522
 		private readonly List<Vector> GearLinkDirectionsInternal = new List<Vector>();
 
-		// Token: 0x04019BAB RID: 105387
+		// Token: 0x0401425B RID: 82523
 		private bool HasGearPathInternal;
 
-		// Token: 0x04019BAC RID: 105388
+		// Token: 0x0401425C RID: 82524
 		[Nullable(2)]
 		private IWallFrame WallFrameInfo;
 
-		// Token: 0x04019BAD RID: 105389
+		// Token: 0x0401425D RID: 82525
 		[StaticVariableRuleIgnore]
 		private static readonly Vector ProbeBufferTemp = Vector.Create();
 
-		// Token: 0x04019BAE RID: 105390
+		// Token: 0x0401425E RID: 82526
 		private const int MAX_CUBE_STACK_PROBE = 16;
 
-		// Token: 0x04019BAF RID: 105391
+		// Token: 0x0401425F RID: 82527
 		private const float GRID_COORDINATE_EPSILON = 0.0001f;
 
-		// Token: 0x04019BB0 RID: 105392
+		// Token: 0x04014260 RID: 82528
 		private int OccupiedUnit;
 
-		// Token: 0x04019BB1 RID: 105393
+		// Token: 0x04014261 RID: 82529
 		private readonly HashSet<WuWaGoGridOccupiedUnitChangedListener> OccupiedUnitChangedListeners = new HashSet<WuWaGoGridOccupiedUnitChangedListener>();
 
-		// Token: 0x04019BB2 RID: 105394
+		// Token: 0x04014262 RID: 82530
 		private readonly HashSet<IWuWaGoGridMoveParticipant> MoveParticipants = new HashSet<IWuWaGoGridMoveParticipant>();
 
-		// Token: 0x04019BB3 RID: 105395
+		// Token: 0x04014263 RID: 82531
 		private int EntityPbDataIdValue;
 
-		// Token: 0x04019BB4 RID: 105396
+		// Token: 0x04014264 RID: 82532
 		private EWuWaGoEntityType? EntityTypeValue;
 
-		// Token: 0x04019BB5 RID: 105397
+		// Token: 0x04014265 RID: 82533
 		private readonly List<int> AttachedGameplayEntityPbDataIdsValue = new List<int>();
 
-		// Token: 0x04019BB7 RID: 105399
+		// Token: 0x04014267 RID: 82535
 		public EGridShape GridShape = gridShape;
 
-		// Token: 0x04019BB8 RID: 105400
+		// Token: 0x04014268 RID: 82536
 		public IWuWaGoGridLinkData GridLinkConfig = gridLinkConfig;
 
-		// Token: 0x04019BB9 RID: 105401
+		// Token: 0x04014269 RID: 82537
 		[Nullable(2)]
 		public IWuWaGoGridLinkData GearLinkConfig = gearLinkConfig;
 
-		// Token: 0x04019BBA RID: 105402
+		// Token: 0x0401426A RID: 82538
 		[Nullable(2)]
 		public Vector AttachedCubeCoordinate = attachedCubeCoordinate;
 
-		// Token: 0x04019BBB RID: 105403
+		// Token: 0x0401426B RID: 82539
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EWuWaGoGridRotationType, float> RotationTypeToAngle = new Dictionary<EWuWaGoGridRotationType, float>
 		{
@@ -774,7 +795,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		};
 
-		// Token: 0x04019BBC RID: 105404
+		// Token: 0x0401426C RID: 82540
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EWuWaGoGridLinkType, IReadOnlyList<Vector>> BaseOpeningPatterns = new Dictionary<EWuWaGoGridLinkType, IReadOnlyList<Vector>>
 		{

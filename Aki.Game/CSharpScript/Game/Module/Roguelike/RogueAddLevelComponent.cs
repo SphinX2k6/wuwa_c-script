@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E1B RID: 19995
+	// Token: 0x02003DE4 RID: 15844
 	public class RogueAddLevelComponent : MediumItemGridComponent
 	{
-		// Token: 0x06033938 RID: 211256 RVA: 0x00C0F5EC File Offset: 0x00C0D7EC
+		// Token: 0x060287A3 RID: 165795 RVA: 0x00B58B24 File Offset: 0x00B56D24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,14 +23,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033939 RID: 211257 RVA: 0x00C0F655 File Offset: 0x00C0D855
+		// Token: 0x060287A4 RID: 165796 RVA: 0x00B58B8D File Offset: 0x00B56D8D
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRogueRoleType";
 		}
 
-		// Token: 0x0603393A RID: 211258 RVA: 0x00C0F65C File Offset: 0x00C0D85C
+		// Token: 0x060287A5 RID: 165797 RVA: 0x00B58B94 File Offset: 0x00B56D94
 		[NullableContext(2)]
 		protected override void OnRefresh(object @params = null)
 		{

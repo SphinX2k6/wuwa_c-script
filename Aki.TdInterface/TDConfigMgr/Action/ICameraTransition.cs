@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001854 RID: 6228
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019DF RID: 6623
 	public class ICameraTransition : ILevelSequenceTransitionType
 	{
-		// Token: 0x060085CF RID: 34255 RVA: 0x0013E2AC File Offset: 0x0013C4AC
+		// Token: 0x06008CF5 RID: 36085 RVA: 0x0014DAA0 File Offset: 0x0014BCA0
 		private ICameraTransition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060085D0 RID: 34256 RVA: 0x0013E2E4 File Offset: 0x0013C4E4
+		// Token: 0x06008CF6 RID: 36086 RVA: 0x0014DAD8 File Offset: 0x0014BCD8
 		public static ICameraTransition Create([Nullable(2)] ICameraTransition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085D1 RID: 34257 RVA: 0x0013E2F7 File Offset: 0x0013C4F7
+		// Token: 0x06008CF7 RID: 36087 RVA: 0x0014DAEB File Offset: 0x0014BCEB
 		public static ICameraTransition CreateFromSetValue([Nullable(2)] ICameraTransition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060085D2 RID: 34258 RVA: 0x0013E30A File Offset: 0x0013C50A
+		// Token: 0x06008CF8 RID: 36088 RVA: 0x0014DAFE File Offset: 0x0014BCFE
 		public new ICameraTransition_SetValue ToSetValue()
 		{
 			return new ICameraTransition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BBE RID: 11198
-		// (get) Token: 0x060085D3 RID: 34259 RVA: 0x0013E329 File Offset: 0x0013C529
-		// (set) Token: 0x060085D4 RID: 34260 RVA: 0x0013E354 File Offset: 0x0013C554
+		// Token: 0x17002DB8 RID: 11704
+		// (get) Token: 0x06008CF9 RID: 36089 RVA: 0x0014DB1D File Offset: 0x0014BD1D
+		// (set) Token: 0x06008CFA RID: 36090 RVA: 0x0014DB48 File Offset: 0x0014BD48
 		public override ELevelSequenceTransition Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BBF RID: 11199
-		// (get) Token: 0x060085D5 RID: 34261 RVA: 0x0013E364 File Offset: 0x0013C564
-		// (set) Token: 0x060085D6 RID: 34262 RVA: 0x0013E39E File Offset: 0x0013C59E
+		// Token: 0x17002DB9 RID: 11705
+		// (get) Token: 0x06008CFB RID: 36091 RVA: 0x0014DB58 File Offset: 0x0014BD58
+		// (set) Token: 0x06008CFC RID: 36092 RVA: 0x0014DB92 File Offset: 0x0014BD92
 		public override float? Duration
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400547D RID: 21629
+		// Token: 0x040058C9 RID: 22729
 		[Nullable(2)]
 		protected new ICameraTransition FbInstance;
 
-		// Token: 0x0400547E RID: 21630
+		// Token: 0x040058CA RID: 22730
 		[Nullable(2)]
 		protected new ICameraTransition_SetValue PocoInterface;
 	}

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Avg
 {
-	// Token: 0x020050DF RID: 20703
+	// Token: 0x020040AF RID: 16559
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotAvg
 	{
-		// Token: 0x06034F71 RID: 216945 RVA: 0x00C8BFE0 File Offset: 0x00C8A1E0
+		// Token: 0x06029E6A RID: 171626 RVA: 0x00BD92C8 File Offset: 0x00BD74C8
 		[NullableContext(0)]
 		public UniTask<bool> AvgCharacterEnterAsync([Nullable(1)] AvgTalkerEnterActionContext context)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <AvgCharacterEnterAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F72 RID: 216946 RVA: 0x00C8C02C File Offset: 0x00C8A22C
+		// Token: 0x06029E6B RID: 171627 RVA: 0x00BD9314 File Offset: 0x00BD7514
 		private UniTask PlayCharacterEnterPerformAsync(AvgTalkerEnterActionContext context)
 		{
 			PlotAvg.<PlayCharacterEnterPerformAsync>d__3 <PlayCharacterEnterPerformAsync>d__;
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <PlayCharacterEnterPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F73 RID: 216947 RVA: 0x00C8C077 File Offset: 0x00C8A277
+		// Token: 0x06029E6C RID: 171628 RVA: 0x00BD935F File Offset: 0x00BD755F
 		public void SetPerformHandler(IPlotAvgPerformHandler handler)
 		{
 			this.PerformHandler = handler;
 		}
 
-		// Token: 0x06034F74 RID: 216948 RVA: 0x00C8C080 File Offset: 0x00C8A280
+		// Token: 0x06029E6D RID: 171629 RVA: 0x00BD9368 File Offset: 0x00BD7568
 		public void ClearPerformHandler()
 		{
 			this.PerformHandler = null;
 		}
 
-		// Token: 0x06034F75 RID: 216949 RVA: 0x00C8C08C File Offset: 0x00C8A28C
+		// Token: 0x06029E6E RID: 171630 RVA: 0x00BD9374 File Offset: 0x00BD7574
 		[NullableContext(0)]
 		public UniTask<bool> AvgCharacterExitAsync(int characterId)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <AvgCharacterExitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F76 RID: 216950 RVA: 0x00C8C0D8 File Offset: 0x00C8A2D8
+		// Token: 0x06029E6F RID: 171631 RVA: 0x00BD93C0 File Offset: 0x00BD75C0
 		private UniTask PlayCharacterExitPerformAsync(int characterId)
 		{
 			PlotAvg.<PlayCharacterExitPerformAsync>d__7 <PlayCharacterExitPerformAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <PlayCharacterExitPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F77 RID: 216951 RVA: 0x00C8C124 File Offset: 0x00C8A324
+		// Token: 0x06029E70 RID: 171632 RVA: 0x00BD940C File Offset: 0x00BD760C
 		public UniTask AvgCharacterMoveAsync(AvgTalkerMoveActionContext context)
 		{
 			PlotAvg.<AvgCharacterMoveAsync>d__8 <AvgCharacterMoveAsync>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <AvgCharacterMoveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F78 RID: 216952 RVA: 0x00C8C170 File Offset: 0x00C8A370
+		// Token: 0x06029E71 RID: 171633 RVA: 0x00BD9458 File Offset: 0x00BD7658
 		private UniTask PlayCharacterMovePerformAsync(AvgTalkerMoveActionContext context)
 		{
 			PlotAvg.<PlayCharacterMovePerformAsync>d__9 <PlayCharacterMovePerformAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <PlayCharacterMovePerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F79 RID: 216953 RVA: 0x00C8C1BC File Offset: 0x00C8A3BC
+		// Token: 0x06029E72 RID: 171634 RVA: 0x00BD94A4 File Offset: 0x00BD76A4
 		public void ChangeCharacterAnim(int characterId, EAvgRoleAnimationType animationType, bool isLoop)
 		{
 			PlotAvgCharacter plotAvgCharacter;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			this.PerformHandler.ChangeCharacterAnim(characterId, animationType, isLoop);
 		}
 
-		// Token: 0x06034F7A RID: 216954 RVA: 0x00C8C23C File Offset: 0x00C8A43C
+		// Token: 0x06029E73 RID: 171635 RVA: 0x00BD9524 File Offset: 0x00BD7724
 		public UniTask AvgCharacterEnterOrChangeAnim(AvgTalkerEnterActionContext context)
 		{
 			PlotAvg.<AvgCharacterEnterOrChangeAnim>d__11 <AvgCharacterEnterOrChangeAnim>d__;
@@ -133,21 +133,21 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return <AvgCharacterEnterOrChangeAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034F7B RID: 216955 RVA: 0x00C8C287 File Offset: 0x00C8A487
+		// Token: 0x06029E74 RID: 171636 RVA: 0x00BD956F File Offset: 0x00BD776F
 		public void OnPlotEnd()
 		{
 			this.ClearPerformHandler();
 			this.CharacterMap.Clear();
 		}
 
-		// Token: 0x06034F7C RID: 216956 RVA: 0x00C8C29A File Offset: 0x00C8A49A
+		// Token: 0x06029E75 RID: 171637 RVA: 0x00BD9582 File Offset: 0x00BD7782
 		[NullableContext(2)]
 		public PlotAvgCharacter GetCharacter(int characterId)
 		{
 			return this.CharacterMap.GetValueOrDefault(characterId);
 		}
 
-		// Token: 0x06034F7D RID: 216957 RVA: 0x00C8C2A8 File Offset: 0x00C8A4A8
+		// Token: 0x06029E76 RID: 171638 RVA: 0x00BD9590 File Offset: 0x00BD7790
 		[NullableContext(2)]
 		public PlotAvgCharacter GetCharacterByPosition(EAvgRolePosition position)
 		{
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return null;
 		}
 
-		// Token: 0x06034F7E RID: 216958 RVA: 0x00C8C30C File Offset: 0x00C8A50C
+		// Token: 0x06029E77 RID: 171639 RVA: 0x00BD95F4 File Offset: 0x00BD77F4
 		public HashSet<int> CollectCharacters(string flowListName, int flowId, int stateId)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			return hashSet;
 		}
 
-		// Token: 0x06034F7F RID: 216959 RVA: 0x00C8C3E8 File Offset: 0x00C8A5E8
+		// Token: 0x06029E78 RID: 171640 RVA: 0x00BD96D0 File Offset: 0x00BD78D0
 		public void CollectCharactersFromAvgTalk(ITalkItem talkItem, HashSet<int> characterIdSet)
 		{
 			if (talkItem.Type.GetValueOrDefault() != ETalkItemType.AvgTalk)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			characterIdSet.Add(talkItemAvgTalk.WhoId.Value);
 		}
 
-		// Token: 0x06034F80 RID: 216960 RVA: 0x00C8C448 File Offset: 0x00C8A648
+		// Token: 0x06029E79 RID: 171641 RVA: 0x00BD9730 File Offset: 0x00BD7930
 		public void CollectCharactersFromActions(ITalkItem talkItem, HashSet<int> characterIdSet)
 		{
 			if (talkItem.IntroActions != null)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			}
 		}
 
-		// Token: 0x06034F81 RID: 216961 RVA: 0x00C8C4F0 File Offset: 0x00C8A6F0
+		// Token: 0x06029E7A RID: 171642 RVA: 0x00BD97D8 File Offset: 0x00BD79D8
 		public void CollectCharactersFromAction(ActionInfo actionInfo, HashSet<int> characterIdSet)
 		{
 			if (actionInfo.Name != EAction.AvgPlayRoleAction)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			this.CollectCharactersFromRoleActions(avgPlayRoleAction, characterIdSet);
 		}
 
-		// Token: 0x06034F82 RID: 216962 RVA: 0x00C8C520 File Offset: 0x00C8A720
+		// Token: 0x06029E7B RID: 171643 RVA: 0x00BD9808 File Offset: 0x00BD7A08
 		public void CollectCharactersFromRoleActions(AvgPlayRoleAction avgPlayRoleAction, HashSet<int> characterIdSet)
 		{
 			foreach (IAvgPlayRoleActionItem avgPlayRoleActionItem in avgPlayRoleAction.RoleActionList)
@@ -253,10 +253,10 @@ namespace CSharpScript.Game.Module.Plot.Avg
 			}
 		}
 
-		// Token: 0x0401C319 RID: 115481
+		// Token: 0x04016D4A RID: 93514
 		private readonly Dictionary<int, PlotAvgCharacter> CharacterMap = new Dictionary<int, PlotAvgCharacter>();
 
-		// Token: 0x0401C31A RID: 115482
+		// Token: 0x04016D4B RID: 93515
 		[Nullable(2)]
 		private IPlotAvgPerformHandler PerformHandler;
 	}

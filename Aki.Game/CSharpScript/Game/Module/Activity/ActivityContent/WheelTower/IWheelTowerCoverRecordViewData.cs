@@ -3,39 +3,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F37 RID: 24375
+	// Token: 0x02004F1E RID: 20254
 	[NullableContext(1)]
 	public interface IWheelTowerCoverRecordViewData
 	{
-		// Token: 0x17008F48 RID: 36680
-		// (get) Token: 0x0603DEB5 RID: 253621
-		// (set) Token: 0x0603DEB6 RID: 253622
+		// Token: 0x1700631A RID: 25370
+		// (get) Token: 0x06032E50 RID: 208464
+		// (set) Token: 0x06032E51 RID: 208465
 		IWheelTowerCoverRecordData BeforeData { get; set; }
 
-		// Token: 0x17008F49 RID: 36681
-		// (get) Token: 0x0603DEB7 RID: 253623
-		// (set) Token: 0x0603DEB8 RID: 253624
+		// Token: 0x1700631B RID: 25371
+		// (get) Token: 0x06032E52 RID: 208466
+		// (set) Token: 0x06032E53 RID: 208467
 		IWheelTowerCoverRecordData AfterData { get; set; }
 
-		// Token: 0x17008F4A RID: 36682
-		// (get) Token: 0x0603DEB9 RID: 253625
-		// (set) Token: 0x0603DEBA RID: 253626
+		// Token: 0x1700631C RID: 25372
+		// (get) Token: 0x06032E54 RID: 208468
+		// (set) Token: 0x06032E55 RID: 208469
 		int TeamNum { get; set; }
 
-		// Token: 0x17008F4B RID: 36683
-		// (get) Token: 0x0603DEBB RID: 253627
-		// (set) Token: 0x0603DEBC RID: 253628
+		// Token: 0x1700631D RID: 25373
+		// (get) Token: 0x06032E56 RID: 208470
+		// (set) Token: 0x06032E57 RID: 208471
 		bool IsEndless { get; set; }
 
-		// Token: 0x17008F4C RID: 36684
-		// (get) Token: 0x0603DEBD RID: 253629
-		// (set) Token: 0x0603DEBE RID: 253630
+		// Token: 0x1700631E RID: 25374
+		// (get) Token: 0x06032E58 RID: 208472
+		// (set) Token: 0x06032E59 RID: 208473
 		[Nullable(2)]
 		Action OnClickConfirm { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008F4D RID: 36685
-		// (get) Token: 0x0603DEBF RID: 253631
-		// (set) Token: 0x0603DEC0 RID: 253632
+		// Token: 0x1700631F RID: 25375
+		// (get) Token: 0x06032E5A RID: 208474
+		// (set) Token: 0x06032E5B RID: 208475
 		[Nullable(2)]
 		Action OnClickCancel { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

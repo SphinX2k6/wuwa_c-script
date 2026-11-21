@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E9A RID: 7834
+	// Token: 0x020005BE RID: 1470
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroUtility.EXboxAchievementOrderBy")]
 	public enum EXboxAchievementOrderBy : byte
 	{
-		// Token: 0x040101F4 RID: 66036
+		// Token: 0x04003930 RID: 14640
 		DefaultOrder,
-		// Token: 0x040101F5 RID: 66037
+		// Token: 0x04003931 RID: 14641
 		TitleId,
-		// Token: 0x040101F6 RID: 66038
+		// Token: 0x04003932 RID: 14642
 		UnlockTime,
-		// Token: 0x040101F7 RID: 66039
+		// Token: 0x04003933 RID: 14643
 		EXboxAchievementOrderBy_MAX
 	}
 }

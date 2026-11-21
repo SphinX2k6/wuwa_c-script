@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002518 RID: 9496
+// Token: 0x020019FF RID: 6655
 public class PhoneMsgEmojiItem : GridProxyAbstract<int>
 {
-	// Token: 0x06013153 RID: 78163 RVA: 0x004BAD16 File Offset: 0x004B8F16
+	// Token: 0x06010612 RID: 67090 RVA: 0x004C8A7A File Offset: 0x004C6C7A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class PhoneMsgEmojiItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06013154 RID: 78164 RVA: 0x004BAD4F File Offset: 0x004B8F4F
+	// Token: 0x06010613 RID: 67091 RVA: 0x004C8AB3 File Offset: 0x004C6CB3
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -26,7 +26,7 @@ public class PhoneMsgEmojiItem : GridProxyAbstract<int>
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x06013155 RID: 78165 RVA: 0x004BAD8C File Offset: 0x004B8F8C
+	// Token: 0x06010614 RID: 67092 RVA: 0x004C8AF0 File Offset: 0x004C6CF0
 	public override void Refresh(int emojiId, bool isSelected, int gridIndex)
 	{
 		this.Data = emojiId;
@@ -35,7 +35,7 @@ public class PhoneMsgEmojiItem : GridProxyAbstract<int>
 		base.SetTextureByPath(emojiTexturePathByEmojiId, texture, null, null);
 	}
 
-	// Token: 0x06013156 RID: 78166 RVA: 0x004BADC6 File Offset: 0x004B8FC6
+	// Token: 0x06010615 RID: 67093 RVA: 0x004C8B2A File Offset: 0x004C6D2A
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<int> onClickDelegate = this.OnClickDelegate;
@@ -46,25 +46,25 @@ public class PhoneMsgEmojiItem : GridProxyAbstract<int>
 		onClickDelegate(base.GridIndex);
 	}
 
-	// Token: 0x06013157 RID: 78167 RVA: 0x004BADDE File Offset: 0x004B8FDE
+	// Token: 0x06010616 RID: 67094 RVA: 0x004C8B42 File Offset: 0x004C6D42
 	private bool CanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0400900E RID: 36878
+	// Token: 0x04009162 RID: 37218
 	protected int Data;
 
-	// Token: 0x0400900F RID: 36879
+	// Token: 0x04009163 RID: 37219
 	[Nullable(2)]
 	public Action<int> OnClickDelegate;
 
-	// Token: 0x02008A9B RID: 35483
+	// Token: 0x02007C23 RID: 31779
 	private enum ETogEmojiComponent
 	{
-		// Token: 0x0402D019 RID: 184345
+		// Token: 0x04028331 RID: 164657
 		TogEmoji,
-		// Token: 0x0402D01A RID: 184346
+		// Token: 0x04028332 RID: 164658
 		TexEmoji
 	}
 }

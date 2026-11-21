@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 {
-	// Token: 0x02006E4D RID: 28237
+	// Token: 0x02005FCE RID: 24526
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FindSunSpiritLevelConfig
 	{
-		// Token: 0x04023CE4 RID: 146660
+		// Token: 0x0401EF99 RID: 126873
 		public int CurrentLevelId;
 
-		// Token: 0x04023CE5 RID: 146661
+		// Token: 0x0401EF9A RID: 126874
 		[Nullable(new byte[]
 		{
 			2,
@@ -20,28 +20,28 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 		})]
 		public FindSunSpiritGrid[] GridList;
 
-		// Token: 0x04023CE6 RID: 146662
+		// Token: 0x0401EF9B RID: 126875
 		public int LevelWidth;
 
-		// Token: 0x04023CE7 RID: 146663
+		// Token: 0x0401EF9C RID: 126876
 		public int LevelHeight;
 
-		// Token: 0x04023CE8 RID: 146664
+		// Token: 0x0401EF9D RID: 126877
 		public List<int> SunSpiritStartGridIndices = new List<int>();
 
-		// Token: 0x04023CE9 RID: 146665
+		// Token: 0x0401EF9E RID: 126878
 		public int SunSpiritEndIndex = -1;
 
-		// Token: 0x04023CEA RID: 146666
+		// Token: 0x0401EF9F RID: 126879
 		public int MaxJumpHeight = 1;
 
-		// Token: 0x04023CEB RID: 146667
+		// Token: 0x0401EFA0 RID: 126880
 		public int MaxDropHeight = -1;
 
-		// Token: 0x04023CEC RID: 146668
+		// Token: 0x0401EFA1 RID: 126881
 		public int MaxStep = -1;
 
-		// Token: 0x04023CED RID: 146669
+		// Token: 0x0401EFA2 RID: 126882
 		public List<FindSunSpiritModifier> ModifierList = new List<FindSunSpiritModifier>();
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200189B RID: 6299
+// Token: 0x02000D54 RID: 3412
 public class WeaponHandBookSort : CommonSort<EWeaponHandBookSortWayType>
 {
-	// Token: 0x0600B875 RID: 47221 RVA: 0x0029DC18 File Offset: 0x0029BE18
+	// Token: 0x06008C5E RID: 35934 RVA: 0x002A8334 File Offset: 0x002A6534
 	[NullableContext(2)]
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
@@ -43,7 +43,7 @@ public class WeaponHandBookSort : CommonSort<EWeaponHandBookSortWayType>
 		return num6 - num3;
 	}
 
-	// Token: 0x0600B876 RID: 47222 RVA: 0x0029DCA6 File Offset: 0x0029BEA6
+	// Token: 0x06008C5F RID: 35935 RVA: 0x002A83C2 File Offset: 0x002A65C2
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EWeaponHandBookSortWayType.Quality, new TSortResult(this.SortQuality));

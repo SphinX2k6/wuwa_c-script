@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044F7 RID: 17655
+	// Token: 0x0200495F RID: 18783
 	public struct ILevelPlayInfoMappingNightmareSpawnPoint : IFlatbufferObject
 	{
-		// Token: 0x17007D17 RID: 32023
-		// (get) Token: 0x0601A7E7 RID: 108519 RVA: 0x003C8D0A File Offset: 0x003C6F0A
+		// Token: 0x17008358 RID: 33624
+		// (get) Token: 0x0601BFBC RID: 114620 RVA: 0x003F4FA6 File Offset: 0x003F31A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A7E8 RID: 108520 RVA: 0x003C8D17 File Offset: 0x003C6F17
+		// Token: 0x0601BFBD RID: 114621 RVA: 0x003F4FB3 File Offset: 0x003F31B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A7E9 RID: 108521 RVA: 0x003C8D20 File Offset: 0x003C6F20
+		// Token: 0x0601BFBE RID: 114622 RVA: 0x003F4FBC File Offset: 0x003F31BC
 		public static ILevelPlayInfoMappingNightmareSpawnPoint GetRootAsILevelPlayInfoMappingNightmareSpawnPoint(ByteBuffer _bb)
 		{
 			return ILevelPlayInfoMappingNightmareSpawnPoint.GetRootAsILevelPlayInfoMappingNightmareSpawnPoint(_bb, default(ILevelPlayInfoMappingNightmareSpawnPoint));
 		}
 
-		// Token: 0x0601A7EA RID: 108522 RVA: 0x003C8D3C File Offset: 0x003C6F3C
+		// Token: 0x0601BFBF RID: 114623 RVA: 0x003F4FD8 File Offset: 0x003F31D8
 		public static ILevelPlayInfoMappingNightmareSpawnPoint GetRootAsILevelPlayInfoMappingNightmareSpawnPoint(ByteBuffer _bb, ILevelPlayInfoMappingNightmareSpawnPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A7EB RID: 108523 RVA: 0x003C8D59 File Offset: 0x003C6F59
+		// Token: 0x0601BFC0 RID: 114624 RVA: 0x003F4FF5 File Offset: 0x003F31F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A7EC RID: 108524 RVA: 0x003C8D68 File Offset: 0x003C6F68
+		// Token: 0x0601BFC1 RID: 114625 RVA: 0x003F5004 File Offset: 0x003F3204
 		public ILevelPlayInfoMappingNightmareSpawnPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007D18 RID: 32024
-		// (get) Token: 0x0601A7ED RID: 108525 RVA: 0x003C8D78 File Offset: 0x003C6F78
+		// Token: 0x17008359 RID: 33625
+		// (get) Token: 0x0601BFC2 RID: 114626 RVA: 0x003F5014 File Offset: 0x003F3214
 		public ELevelPlayInfoMappingType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D19 RID: 32025
-		// (get) Token: 0x0601A7EE RID: 108526 RVA: 0x003C8DB4 File Offset: 0x003C6FB4
+		// Token: 0x1700835A RID: 33626
+		// (get) Token: 0x0601BFC3 RID: 114627 RVA: 0x003F5050 File Offset: 0x003F3250
 		public int LevelPlayId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A7EF RID: 108527 RVA: 0x003C8DF0 File Offset: 0x003C6FF0
+		// Token: 0x0601BFC4 RID: 114628 RVA: 0x003F508C File Offset: 0x003F328C
 		public string Vars(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007D1A RID: 32026
-		// (get) Token: 0x0601A7F0 RID: 108528 RVA: 0x003C8E2C File Offset: 0x003C702C
+		// Token: 0x1700835B RID: 33627
+		// (get) Token: 0x0601BFC5 RID: 114629 RVA: 0x003F50C8 File Offset: 0x003F32C8
 		public int VarsLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A7F1 RID: 108529 RVA: 0x003C8E58 File Offset: 0x003C7058
+		// Token: 0x0601BFC6 RID: 114630 RVA: 0x003F50F4 File Offset: 0x003F32F4
 		public int DefaultValues(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007D1B RID: 32027
-		// (get) Token: 0x0601A7F2 RID: 108530 RVA: 0x003C8E98 File Offset: 0x003C7098
+		// Token: 0x1700835C RID: 33628
+		// (get) Token: 0x0601BFC7 RID: 114631 RVA: 0x003F5134 File Offset: 0x003F3334
 		public int DefaultValuesLength
 		{
 			get
@@ -130,20 +130,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A7F3 RID: 108531 RVA: 0x003C8EC4 File Offset: 0x003C70C4
+		// Token: 0x0601BFC8 RID: 114632 RVA: 0x003F5160 File Offset: 0x003F3360
 		public Span<int> GetDefaultValuesBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0601A7F4 RID: 108532 RVA: 0x003C8ED4 File Offset: 0x003C70D4
+		// Token: 0x0601BFC9 RID: 114633 RVA: 0x003F5170 File Offset: 0x003F3370
 		public int[] GetDefaultValuesArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x17007D1C RID: 32028
-		// (get) Token: 0x0601A7F5 RID: 108533 RVA: 0x003C8EE4 File Offset: 0x003C70E4
+		// Token: 0x1700835D RID: 33629
+		// (get) Token: 0x0601BFCA RID: 114634 RVA: 0x003F5180 File Offset: 0x003F3380
 		public byte NullMask
 		{
 			get
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A7F6 RID: 108534 RVA: 0x003C8F21 File Offset: 0x003C7121
+		// Token: 0x0601BFCB RID: 114635 RVA: 0x003F51BD File Offset: 0x003F33BD
 		public static Offset<ILevelPlayInfoMappingNightmareSpawnPoint> CreateILevelPlayInfoMappingNightmareSpawnPoint(FlatBufferBuilder builder, ELevelPlayInfoMappingType Type = ELevelPlayInfoMappingType.PunishReport, int LevelPlayId = 0, VectorOffset VarsOffset = default(VectorOffset), VectorOffset DefaultValuesOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -169,31 +169,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelPlayInfoMappingNightmareSpawnPoint.EndILevelPlayInfoMappingNightmareSpawnPoint(builder);
 		}
 
-		// Token: 0x0601A7F7 RID: 108535 RVA: 0x003C8F55 File Offset: 0x003C7155
+		// Token: 0x0601BFCC RID: 114636 RVA: 0x003F51F1 File Offset: 0x003F33F1
 		public static void StartILevelPlayInfoMappingNightmareSpawnPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601A7F8 RID: 108536 RVA: 0x003C8F5E File Offset: 0x003C715E
+		// Token: 0x0601BFCD RID: 114637 RVA: 0x003F51FA File Offset: 0x003F33FA
 		public static void AddType(FlatBufferBuilder builder, ELevelPlayInfoMappingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601A7F9 RID: 108537 RVA: 0x003C8F69 File Offset: 0x003C7169
+		// Token: 0x0601BFCE RID: 114638 RVA: 0x003F5205 File Offset: 0x003F3405
 		public static void AddLevelPlayId(FlatBufferBuilder builder, int levelPlayId)
 		{
 			builder.AddInt(1, levelPlayId, 0);
 		}
 
-		// Token: 0x0601A7FA RID: 108538 RVA: 0x003C8F74 File Offset: 0x003C7174
+		// Token: 0x0601BFCF RID: 114639 RVA: 0x003F5210 File Offset: 0x003F3410
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(2, varsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A7FB RID: 108539 RVA: 0x003C8F84 File Offset: 0x003C7184
+		// Token: 0x0601BFD0 RID: 114640 RVA: 0x003F5220 File Offset: 0x003F3420
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A7FC RID: 108540 RVA: 0x003C8FC4 File Offset: 0x003C71C4
+		// Token: 0x0601BFD1 RID: 114641 RVA: 0x003F5260 File Offset: 0x003F3460
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -212,7 +212,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A7FD RID: 108541 RVA: 0x003C8FDE File Offset: 0x003C71DE
+		// Token: 0x0601BFD2 RID: 114642 RVA: 0x003F527A File Offset: 0x003F347A
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A7FE RID: 108542 RVA: 0x003C8FFC File Offset: 0x003C71FC
+		// Token: 0x0601BFD3 RID: 114643 RVA: 0x003F5298 File Offset: 0x003F3498
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -228,19 +228,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A7FF RID: 108543 RVA: 0x003C9015 File Offset: 0x003C7215
+		// Token: 0x0601BFD4 RID: 114644 RVA: 0x003F52B1 File Offset: 0x003F34B1
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A800 RID: 108544 RVA: 0x003C9020 File Offset: 0x003C7220
+		// Token: 0x0601BFD5 RID: 114645 RVA: 0x003F52BC File Offset: 0x003F34BC
 		public static void AddDefaultValues(FlatBufferBuilder builder, VectorOffset defaultValuesOffset)
 		{
 			builder.AddOffset(3, defaultValuesOffset.Value, 0);
 		}
 
-		// Token: 0x0601A801 RID: 108545 RVA: 0x003C9030 File Offset: 0x003C7230
+		// Token: 0x0601BFD6 RID: 114646 RVA: 0x003F52CC File Offset: 0x003F34CC
 		public static VectorOffset CreateDefaultValuesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A802 RID: 108546 RVA: 0x003C9067 File Offset: 0x003C7267
+		// Token: 0x0601BFD7 RID: 114647 RVA: 0x003F5303 File Offset: 0x003F3503
 		public static VectorOffset CreateDefaultValuesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A803 RID: 108547 RVA: 0x003C9081 File Offset: 0x003C7281
+		// Token: 0x0601BFD8 RID: 114648 RVA: 0x003F531D File Offset: 0x003F351D
 		public static VectorOffset CreateDefaultValuesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -267,7 +267,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A804 RID: 108548 RVA: 0x003C909F File Offset: 0x003C729F
+		// Token: 0x0601BFD9 RID: 114649 RVA: 0x003F533B File Offset: 0x003F353B
 		public static VectorOffset CreateDefaultValuesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -275,25 +275,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A805 RID: 108549 RVA: 0x003C90B8 File Offset: 0x003C72B8
+		// Token: 0x0601BFDA RID: 114650 RVA: 0x003F5354 File Offset: 0x003F3554
 		public static void StartDefaultValuesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A806 RID: 108550 RVA: 0x003C90C3 File Offset: 0x003C72C3
+		// Token: 0x0601BFDB RID: 114651 RVA: 0x003F535F File Offset: 0x003F355F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0601A807 RID: 108551 RVA: 0x003C90CE File Offset: 0x003C72CE
+		// Token: 0x0601BFDC RID: 114652 RVA: 0x003F536A File Offset: 0x003F356A
 		public static Offset<ILevelPlayInfoMappingNightmareSpawnPoint> EndILevelPlayInfoMappingNightmareSpawnPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayInfoMappingNightmareSpawnPoint>(builder.EndTable());
 		}
 
-		// Token: 0x0601A808 RID: 108552 RVA: 0x003C90DC File Offset: 0x003C72DC
+		// Token: 0x0601BFDD RID: 114653 RVA: 0x003F5378 File Offset: 0x003F3578
 		public ILevelPlayInfoMappingNightmareSpawnPointT UnPack()
 		{
 			ILevelPlayInfoMappingNightmareSpawnPointT levelPlayInfoMappingNightmareSpawnPointT = new ILevelPlayInfoMappingNightmareSpawnPointT();
@@ -301,7 +301,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return levelPlayInfoMappingNightmareSpawnPointT;
 		}
 
-		// Token: 0x0601A809 RID: 108553 RVA: 0x003C90F8 File Offset: 0x003C72F8
+		// Token: 0x0601BFDE RID: 114654 RVA: 0x003F5394 File Offset: 0x003F3594
 		public void UnPackTo(ILevelPlayInfoMappingNightmareSpawnPointT _o)
 		{
 			_o.Type = this.Type;
@@ -319,7 +319,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601A80A RID: 108554 RVA: 0x003C9188 File Offset: 0x003C7388
+		// Token: 0x0601BFDF RID: 114655 RVA: 0x003F5424 File Offset: 0x003F3624
 		public static Offset<ILevelPlayInfoMappingNightmareSpawnPoint> Pack(FlatBufferBuilder builder, ILevelPlayInfoMappingNightmareSpawnPointT _o)
 		{
 			if (_o == null)
@@ -345,7 +345,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelPlayInfoMappingNightmareSpawnPoint.CreateILevelPlayInfoMappingNightmareSpawnPoint(builder, _o.Type, _o.LevelPlayId, varsOffset, defaultValuesOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400C555 RID: 50517
+		// Token: 0x0400CF84 RID: 53124
 		private Table __p;
 	}
 }

@@ -5,25 +5,25 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F85 RID: 24453
+	// Token: 0x02004F6C RID: 20332
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Config(0)]
 	public class TotalTopUpConfig : ConfigBase
 	{
-		// Token: 0x0603E0DF RID: 254175 RVA: 0x00EFB556 File Offset: 0x00EF9756
+		// Token: 0x06033079 RID: 209017 RVA: 0x00E4D226 File Offset: 0x00E4B426
 		public TotalTopUpReward? GetRewardConfigById(int rewardId)
 		{
 			return ConfigTotalTopUpRewardById.GetConfig(rewardId, true);
 		}
 
-		// Token: 0x0603E0E0 RID: 254176 RVA: 0x00EFB55F File Offset: 0x00EF975F
+		// Token: 0x0603307A RID: 209018 RVA: 0x00E4D22F File Offset: 0x00E4B42F
 		public IReadOnlyList<TotalTopUpReward> GetAllRewardConfigs()
 		{
 			return ConfigTotalTopUpRewardAll.GetConfigList(true);
 		}
 
-		// Token: 0x0603E0E1 RID: 254177 RVA: 0x00EFB568 File Offset: 0x00EF9768
+		// Token: 0x0603307B RID: 209019 RVA: 0x00E4D238 File Offset: 0x00E4B438
 		public string GetTotalUpScoreIcon(int activityId)
 		{
 			TotalTopUpViewConfig? config = ConfigTotalTopUpViewConfigByActivityId.GetConfig(activityId, true);
@@ -34,26 +34,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return config.Value.ScoreIcon;
 		}
 
-		// Token: 0x0603E0E2 RID: 254178 RVA: 0x00EFB597 File Offset: 0x00EF9797
+		// Token: 0x0603307C RID: 209020 RVA: 0x00E4D267 File Offset: 0x00E4B467
 		public TotalTopUpRoleViewConfig? GetRoleViewConfigByRoleIdOrItemId(int roleIdOrItemId)
 		{
 			return ConfigTotalTopUpRoleViewConfigByItemId.GetConfig(roleIdOrItemId, true);
 		}
 
-		// Token: 0x0603E0E3 RID: 254179 RVA: 0x00EFB5A0 File Offset: 0x00EF97A0
+		// Token: 0x0603307D RID: 209021 RVA: 0x00E4D270 File Offset: 0x00E4B470
 		public TotalTopUpViewConfig? GetViewConfigByActivityId(int activityId)
 		{
 			return ConfigTotalTopUpViewConfigByActivityId.GetConfig(activityId, true);
 		}
 
-		// Token: 0x0603E0E4 RID: 254180 RVA: 0x00EFB5A9 File Offset: 0x00EF97A9
+		// Token: 0x0603307E RID: 209022 RVA: 0x00E4D279 File Offset: 0x00E4B479
 		public IReadOnlyList<TotalTopUpRotation> GetRotationListByActivityId(int activityId)
 		{
 			return ConfigTotalTopUpRotationByActivityId.GetConfigList(activityId, true);
 		}
 
-		// Token: 0x17008FE0 RID: 36832
-		// (get) Token: 0x0603E0E5 RID: 254181 RVA: 0x00EFB5B2 File Offset: 0x00EF97B2
+		// Token: 0x170063B2 RID: 25522
+		// (get) Token: 0x0603307F RID: 209023 RVA: 0x00E4D282 File Offset: 0x00E4B482
 		[Nullable(1)]
 		public static TotalTopUpConfig Instance
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E0E6 RID: 254182 RVA: 0x00EFB5B9 File Offset: 0x00EF97B9
+		// Token: 0x06033080 RID: 209024 RVA: 0x00E4D289 File Offset: 0x00E4B489
 		[NullableContext(1)]
 		public static TotalTopUpConfig GetOrCreateInstance()
 		{
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return TotalTopUpConfig._Instance;
 		}
 
-		// Token: 0x0603E0E7 RID: 254183 RVA: 0x00EFB5CD File Offset: 0x00EF97CD
+		// Token: 0x06033081 RID: 209025 RVA: 0x00E4D29D File Offset: 0x00E4B49D
 		public static bool CreateInstance()
 		{
 			if (TotalTopUpConfig._Instance != null)
@@ -86,24 +86,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return true;
 		}
 
-		// Token: 0x0603E0E8 RID: 254184 RVA: 0x00EFB5E3 File Offset: 0x00EF97E3
+		// Token: 0x06033082 RID: 209026 RVA: 0x00E4D2B3 File Offset: 0x00E4B4B3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E0E9 RID: 254185 RVA: 0x00EFB5E5 File Offset: 0x00EF97E5
+		// Token: 0x06033083 RID: 209027 RVA: 0x00E4D2B5 File Offset: 0x00E4B4B5
 		public static void ResetStaticDefaultValue()
 		{
 			TotalTopUpConfig._Instance = null;
 		}
 
-		// Token: 0x0603E0EA RID: 254186 RVA: 0x00EFB5ED File Offset: 0x00EF97ED
+		// Token: 0x06033084 RID: 209028 RVA: 0x00E4D2BD File Offset: 0x00E4B4BD
 		static TotalTopUpConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TotalTopUpConfig.CreateStaticDefaultValue), new Action(TotalTopUpConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402067D RID: 132733
+		// Token: 0x0401B14F RID: 110927
 		private static TotalTopUpConfig _Instance;
 	}
 }

@@ -10,18 +10,18 @@ using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022EA RID: 8938
+// Token: 0x020017CE RID: 6094
 [NullableContext(2)]
 [Nullable(0)]
 public class OnlineChallengeApplyView : UiTickViewBase
 {
-	// Token: 0x060119C2 RID: 72130 RVA: 0x00450FC0 File Offset: 0x0044F1C0
+	// Token: 0x0600EE5A RID: 61018 RVA: 0x0045DC8C File Offset: 0x0045BE8C
 	[NullableContext(1)]
 	public OnlineChallengeApplyView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060119C3 RID: 72131 RVA: 0x00450FE0 File Offset: 0x0044F1E0
+	// Token: 0x0600EE5B RID: 61019 RVA: 0x0045DCAC File Offset: 0x0045BEAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -66,7 +66,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060119C4 RID: 72132 RVA: 0x0045121C File Offset: 0x0044F41C
+	// Token: 0x0600EE5C RID: 61020 RVA: 0x0045DEE8 File Offset: 0x0045C0E8
 	protected override void OnStart()
 	{
 		base.GetButton(8).GetRootComponent().SetUIActive(true);
@@ -85,21 +85,21 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		this.RefreshViewOutInstance();
 	}
 
-	// Token: 0x060119C5 RID: 72133 RVA: 0x004512B3 File Offset: 0x0044F4B3
+	// Token: 0x0600EE5D RID: 61021 RVA: 0x0045DF7F File Offset: 0x0045C17F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshSuggestChallengePlayerInfo, new Action(this.OnRefreshSuggestChallengePlayerInfo));
 		EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.PlotNetworkStart));
 	}
 
-	// Token: 0x060119C6 RID: 72134 RVA: 0x004512ED File Offset: 0x0044F4ED
+	// Token: 0x0600EE5E RID: 61022 RVA: 0x0045DFB9 File Offset: 0x0045C1B9
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshSuggestChallengePlayerInfo, new Action(this.OnRefreshSuggestChallengePlayerInfo));
 		EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.PlotNetworkStart));
 	}
 
-	// Token: 0x060119C7 RID: 72135 RVA: 0x00451328 File Offset: 0x0044F528
+	// Token: 0x0600EE5F RID: 61023 RVA: 0x0045DFF4 File Offset: 0x0045C1F4
 	protected override void OnTick(float delta)
 	{
 		if (this.IsViewClose)
@@ -125,7 +125,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		this.CountDownBar.SetFillAmount(this.CountDownNumber / this.CountDownNumberMax);
 	}
 
-	// Token: 0x060119C8 RID: 72136 RVA: 0x004513D0 File Offset: 0x0044F5D0
+	// Token: 0x0600EE60 RID: 61024 RVA: 0x0045E09C File Offset: 0x0045C29C
 	private void RefreshViewInInstance()
 	{
 		UUIItem item = base.GetItem(3);
@@ -176,7 +176,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		this.RefreshPcItem(currentTeamListById.ThirdPartyOnlineId);
 	}
 
-	// Token: 0x060119C9 RID: 72137 RVA: 0x00451564 File Offset: 0x0044F764
+	// Token: 0x0600EE61 RID: 61025 RVA: 0x0045E230 File Offset: 0x0045C430
 	private void RefreshThirdPartyItem(string onlineId, string userId)
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -219,7 +219,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119CA RID: 72138 RVA: 0x00451628 File Offset: 0x0044F828
+	// Token: 0x0600EE62 RID: 61026 RVA: 0x0045E2F4 File Offset: 0x0045C4F4
 	private void RefreshPcItem(string onlineId)
 	{
 		KuroSdkController instance = KuroSdkController.Instance;
@@ -246,7 +246,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119CB RID: 72139 RVA: 0x0045169C File Offset: 0x0044F89C
+	// Token: 0x0600EE63 RID: 61027 RVA: 0x0045E368 File Offset: 0x0045C568
 	private void RefreshViewOutInstance()
 	{
 		UUIItem item = base.GetItem(3);
@@ -307,7 +307,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119CC RID: 72140 RVA: 0x0045183C File Offset: 0x0044FA3C
+	// Token: 0x0600EE64 RID: 61028 RVA: 0x0045E508 File Offset: 0x0045C708
 	private void OnClickHandleBtn()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -328,7 +328,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060119CD RID: 72141 RVA: 0x004518C0 File Offset: 0x0044FAC0
+	// Token: 0x0600EE65 RID: 61029 RVA: 0x0045E58C File Offset: 0x0045C78C
 	private void OnClickCancelBtn()
 	{
 		if (!GameModeController.Instance.IsInInstance())
@@ -342,7 +342,7 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060119CE RID: 72142 RVA: 0x004518F0 File Offset: 0x0044FAF0
+	// Token: 0x0600EE66 RID: 61030 RVA: 0x0045E5BC File Offset: 0x0045C7BC
 	private void OnRefreshSuggestChallengePlayerInfo()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -356,57 +356,57 @@ public class OnlineChallengeApplyView : UiTickViewBase
 		this.RefreshViewOutInstance();
 	}
 
-	// Token: 0x060119CF RID: 72143 RVA: 0x00451942 File Offset: 0x0044FB42
+	// Token: 0x0600EE67 RID: 61031 RVA: 0x0045E60E File Offset: 0x0045C80E
 	[NullableContext(1)]
 	private void PlotNetworkStart(PlotInfo plotInfo)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040085AF RID: 34223
+	// Token: 0x040086ED RID: 34541
 	private float CountDownNumber = -1f;
 
-	// Token: 0x040085B0 RID: 34224
+	// Token: 0x040086EE RID: 34542
 	private float CountDownNumberMax = -1f;
 
-	// Token: 0x040085B1 RID: 34225
+	// Token: 0x040086EF RID: 34543
 	private UUIText CountDown;
 
-	// Token: 0x040085B2 RID: 34226
+	// Token: 0x040086F0 RID: 34544
 	private UUISprite CountDownBar;
 
-	// Token: 0x040085B3 RID: 34227
+	// Token: 0x040086F1 RID: 34545
 	private bool IsViewClose;
 
-	// Token: 0x02008860 RID: 34912
+	// Token: 0x020079E4 RID: 31204
 	[NullableContext(0)]
 	private enum EOnlineChallengeApplyView
 	{
-		// Token: 0x0402C4F9 RID: 181497
+		// Token: 0x040277FB RID: 161787
 		RoleTexture,
-		// Token: 0x0402C4FA RID: 181498
+		// Token: 0x040277FC RID: 161788
 		PlayerName,
-		// Token: 0x0402C4FB RID: 181499
+		// Token: 0x040277FD RID: 161789
 		HandleBtn,
-		// Token: 0x0402C4FC RID: 181500
+		// Token: 0x040277FE RID: 161790
 		ApplySprite,
-		// Token: 0x0402C4FD RID: 181501
+		// Token: 0x040277FF RID: 161791
 		MoreSprite,
-		// Token: 0x0402C4FE RID: 181502
+		// Token: 0x04027800 RID: 161792
 		CountDown,
-		// Token: 0x0402C4FF RID: 181503
+		// Token: 0x04027801 RID: 161793
 		CountDownProgressBar,
-		// Token: 0x0402C500 RID: 181504
+		// Token: 0x04027802 RID: 161794
 		MultipleApplyText,
-		// Token: 0x0402C501 RID: 181505
+		// Token: 0x04027803 RID: 161795
 		CancelBtn,
-		// Token: 0x0402C502 RID: 181506
+		// Token: 0x04027804 RID: 161796
 		TexturePc = 15,
-		// Token: 0x0402C503 RID: 181507
+		// Token: 0x04027805 RID: 161797
 		ThirdPartyItem,
-		// Token: 0x0402C504 RID: 181508
+		// Token: 0x04027806 RID: 161798
 		ThirdPartyText,
-		// Token: 0x0402C505 RID: 181509
+		// Token: 0x04027807 RID: 161799
 		ThirdPartyTexture
 	}
 }

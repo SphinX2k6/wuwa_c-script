@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C88 RID: 7304
+// Token: 0x02001147 RID: 4423
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaSelectionView : UiViewBase
 {
-	// Token: 0x0600DC64 RID: 56420 RVA: 0x0033653A File Offset: 0x0033473A
+	// Token: 0x0600B07A RID: 45178 RVA: 0x00341A66 File Offset: 0x0033FC66
 	public GachaSelectionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x170011EA RID: 4586
-	// (get) Token: 0x0600DC65 RID: 56421 RVA: 0x00336544 File Offset: 0x00334744
+	// Token: 0x17001210 RID: 4624
+	// (get) Token: 0x0600B07B RID: 45179 RVA: 0x00341A70 File Offset: 0x0033FC70
 	private int CurSelectedPoolId
 	{
 		get
@@ -37,7 +36,7 @@ public class GachaSelectionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DC66 RID: 56422 RVA: 0x00336590 File Offset: 0x00334790
+	// Token: 0x0600B07C RID: 45180 RVA: 0x00341ABC File Offset: 0x0033FCBC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -68,19 +67,19 @@ public class GachaSelectionView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DC67 RID: 56423 RVA: 0x003366DB File Offset: 0x003348DB
+	// Token: 0x0600B07D RID: 45181 RVA: 0x00341C07 File Offset: 0x0033FE07
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.GachaSelectionViewRefresh, new Action<ProtoGachaInfo>(this.OnDataChange));
 	}
 
-	// Token: 0x0600DC68 RID: 56424 RVA: 0x003366F9 File Offset: 0x003348F9
+	// Token: 0x0600B07E RID: 45182 RVA: 0x00341C25 File Offset: 0x0033FE25
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.GachaSelectionViewRefresh, new Action<ProtoGachaInfo>(this.OnDataChange));
 	}
 
-	// Token: 0x0600DC69 RID: 56425 RVA: 0x00336718 File Offset: 0x00334918
+	// Token: 0x0600B07F RID: 45183 RVA: 0x00341C44 File Offset: 0x0033FE44
 	private void OnConfirmBtnClick()
 	{
 		int curSelectedPoolId = this.CurSelectedPoolId;
@@ -89,7 +88,7 @@ public class GachaSelectionView : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.GachaSelectionView, null);
 	}
 
-	// Token: 0x0600DC6A RID: 56426 RVA: 0x0033675C File Offset: 0x0033495C
+	// Token: 0x0600B080 RID: 45184 RVA: 0x00341C88 File Offset: 0x0033FE88
 	private void ReportGachaSelection(int poolId)
 	{
 		GachaViewInfo? gachaViewInfo = GachaConfig.Instance.GetGachaViewInfo(poolId);
@@ -105,14 +104,14 @@ public class GachaSelectionView : UiViewBase
 		LogReportController.Instance.LogReport(onConfirmGachaSelectionLogEvent);
 	}
 
-	// Token: 0x0600DC6B RID: 56427 RVA: 0x003367EB File Offset: 0x003349EB
+	// Token: 0x0600B081 RID: 45185 RVA: 0x00341D17 File Offset: 0x0033FF17
 	private void OnDataChange(ProtoGachaInfo gachaInfo)
 	{
 		this.GachaInfo = gachaInfo;
 		this.RefreshSelection();
 	}
 
-	// Token: 0x0600DC6C RID: 56428 RVA: 0x003367FC File Offset: 0x003349FC
+	// Token: 0x0600B082 RID: 45186 RVA: 0x00341D28 File Offset: 0x0033FF28
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaSelectionView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -123,7 +122,7 @@ public class GachaSelectionView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC6D RID: 56429 RVA: 0x0033683F File Offset: 0x00334A3F
+	// Token: 0x0600B083 RID: 45187 RVA: 0x00341D6B File Offset: 0x0033FF6B
 	private GachaSelectionItem CreateSelectionItem()
 	{
 		return new GachaSelectionItem
@@ -133,7 +132,7 @@ public class GachaSelectionView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600DC6E RID: 56430 RVA: 0x0033686A File Offset: 0x00334A6A
+	// Token: 0x0600B084 RID: 45188 RVA: 0x00341D96 File Offset: 0x0033FF96
 	private void SelectItemByIndex(int gridIndex)
 	{
 		GenericScrollViewNew<GachaSelectionItem, GachaPoolData> selectionScrollView = this.SelectionScrollView;
@@ -148,7 +147,7 @@ public class GachaSelectionView : UiViewBase
 		this.OnItemSelect();
 	}
 
-	// Token: 0x0600DC6F RID: 56431 RVA: 0x00336890 File Offset: 0x00334A90
+	// Token: 0x0600B085 RID: 45189 RVA: 0x00341DBC File Offset: 0x0033FFBC
 	private bool CanToggleChange(int gridIndex)
 	{
 		GenericScrollViewNew<GachaSelectionItem, GachaPoolData> selectionScrollView = this.SelectionScrollView;
@@ -167,7 +166,7 @@ public class GachaSelectionView : UiViewBase
 		return !(gridIndex == num3.GetValueOrDefault() & num3 != null);
 	}
 
-	// Token: 0x0600DC70 RID: 56432 RVA: 0x003368E8 File Offset: 0x00334AE8
+	// Token: 0x0600B086 RID: 45190 RVA: 0x00341E14 File Offset: 0x00340014
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -193,14 +192,14 @@ public class GachaSelectionView : UiViewBase
 		return array;
 	}
 
-	// Token: 0x0600DC71 RID: 56433 RVA: 0x0033693C File Offset: 0x00334B3C
+	// Token: 0x0600B087 RID: 45191 RVA: 0x00341E68 File Offset: 0x00340068
 	private bool CheckPoolListValid()
 	{
 		ProtoGachaPoolInfo[] validPoolList = this.GachaInfo.GetValidPoolList();
 		return validPoolList != null && this.SelectionDataList != null && validPoolList.Length == this.SelectionDataList.Length;
 	}
 
-	// Token: 0x0600DC72 RID: 56434 RVA: 0x00336970 File Offset: 0x00334B70
+	// Token: 0x0600B088 RID: 45192 RVA: 0x00341E9C File Offset: 0x0034009C
 	private void RefreshSelection()
 	{
 		GachaSelectionView.<>c__DisplayClass20_0 CS$<>8__locals1 = new GachaSelectionView.<>c__DisplayClass20_0();
@@ -219,10 +218,10 @@ public class GachaSelectionView : UiViewBase
 			return;
 		}
 		CS$<>8__locals1.lastSelectedPoolId = this.CurSelectedPoolId;
-		this.SelectionScrollView.RefreshByData(this.SelectionDataList.ToList<GachaPoolData>(), new Action(CS$<>8__locals1.<RefreshSelection>g__AfterRefreshSelection|0), false);
+		this.SelectionScrollView.RefreshByData(this.SelectionDataList, new Action(CS$<>8__locals1.<RefreshSelection>g__AfterRefreshSelection|0), false);
 	}
 
-	// Token: 0x0600DC73 RID: 56435 RVA: 0x003369E4 File Offset: 0x00334BE4
+	// Token: 0x0600B089 RID: 45193 RVA: 0x00341F08 File Offset: 0x00340108
 	private void OnItemSelect()
 	{
 		int selectedGridIndex = this.SelectionScrollView.GetGenericLayout().GetSelectedGridIndex();
@@ -265,11 +264,11 @@ public class GachaSelectionView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x0400651B RID: 25883
+	// Token: 0x040065ED RID: 26093
 	[Nullable(2)]
 	private ProtoGachaInfo GachaInfo;
 
-	// Token: 0x0400651C RID: 25884
+	// Token: 0x040065EE RID: 26094
 	[Nullable(new byte[]
 	{
 		2,
@@ -278,7 +277,7 @@ public class GachaSelectionView : UiViewBase
 	})]
 	private GenericScrollViewNew<GachaSelectionItem, GachaPoolData> SelectionScrollView;
 
-	// Token: 0x0400651D RID: 25885
+	// Token: 0x040065EF RID: 26095
 	[Nullable(new byte[]
 	{
 		2,
@@ -286,27 +285,27 @@ public class GachaSelectionView : UiViewBase
 	})]
 	private GachaPoolData[] SelectionDataList;
 
-	// Token: 0x0400651E RID: 25886
+	// Token: 0x040065F0 RID: 26096
 	[Nullable(2)]
 	private SmallItemGrid CurSelectedItem;
 
-	// Token: 0x0200825F RID: 33375
+	// Token: 0x020073E7 RID: 29671
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A89C RID: 174236
+		// Token: 0x04025BBD RID: 154557
 		TitleText,
-		// Token: 0x0402A89D RID: 174237
+		// Token: 0x04025BBE RID: 154558
 		TipText,
-		// Token: 0x0402A89E RID: 174238
+		// Token: 0x04025BBF RID: 154559
 		SelectionScrollView,
-		// Token: 0x0402A89F RID: 174239
+		// Token: 0x04025BC0 RID: 154560
 		CurSelectedItem,
-		// Token: 0x0402A8A0 RID: 174240
+		// Token: 0x04025BC1 RID: 154561
 		CurSelectedNameText,
-		// Token: 0x0402A8A1 RID: 174241
+		// Token: 0x04025BC2 RID: 154562
 		ConfirmBtn,
-		// Token: 0x0402A8A2 RID: 174242
+		// Token: 0x04025BC3 RID: 154563
 		SelectionTipText
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004501 RID: 17665
+	// Token: 0x02004969 RID: 18793
 	public class ILevelPlayInteractResetOptionT
 	{
-		// Token: 0x17007D39 RID: 32057
-		// (get) Token: 0x0601A87B RID: 108667 RVA: 0x003C9F20 File Offset: 0x003C8120
-		// (set) Token: 0x0601A87C RID: 108668 RVA: 0x003C9F28 File Offset: 0x003C8128
+		// Token: 0x1700837A RID: 33658
+		// (get) Token: 0x0601C050 RID: 114768 RVA: 0x003F61BC File Offset: 0x003F43BC
+		// (set) Token: 0x0601C051 RID: 114769 RVA: 0x003F61C4 File Offset: 0x003F43C4
 		public int Count { get; set; }
 
-		// Token: 0x17007D3A RID: 32058
-		// (get) Token: 0x0601A87D RID: 108669 RVA: 0x003C9F31 File Offset: 0x003C8131
-		// (set) Token: 0x0601A87E RID: 108670 RVA: 0x003C9F39 File Offset: 0x003C8139
+		// Token: 0x1700837B RID: 33659
+		// (get) Token: 0x0601C052 RID: 114770 RVA: 0x003F61CD File Offset: 0x003F43CD
+		// (set) Token: 0x0601C053 RID: 114771 RVA: 0x003F61D5 File Offset: 0x003F43D5
 		public ELevelPlayInteractResetTime Type { get; set; }
 
-		// Token: 0x0601A87F RID: 108671 RVA: 0x003C9F42 File Offset: 0x003C8142
+		// Token: 0x0601C054 RID: 114772 RVA: 0x003F61DE File Offset: 0x003F43DE
 		public ILevelPlayInteractResetOptionT()
 		{
 			this.Count = 0;

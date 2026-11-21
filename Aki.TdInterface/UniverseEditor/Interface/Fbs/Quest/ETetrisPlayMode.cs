@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CDA RID: 15578
+	// Token: 0x020040F1 RID: 16625
 	public enum ETetrisPlayMode : byte
 	{
-		// Token: 0x0400B534 RID: 46388
+		// Token: 0x0400BEE1 RID: 48865
 		Normal,
-		// Token: 0x0400B535 RID: 46389
+		// Token: 0x0400BEE2 RID: 48866
 		Endless,
-		// Token: 0x0400B536 RID: 46390
+		// Token: 0x0400BEE3 RID: 48867
 		MainLine
 	}
 }

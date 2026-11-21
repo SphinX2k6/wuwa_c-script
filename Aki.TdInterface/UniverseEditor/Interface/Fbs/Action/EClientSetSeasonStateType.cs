@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F3E RID: 24382
+	// Token: 0x02006583 RID: 25987
 	public enum EClientSetSeasonStateType : byte
 	{
-		// Token: 0x0400FC9D RID: 64669
+		// Token: 0x04010A16 RID: 68118
 		SwitchSeason,
-		// Token: 0x0400FC9E RID: 64670
+		// Token: 0x04010A17 RID: 68119
 		LoopSeasonChange
 	}
 }

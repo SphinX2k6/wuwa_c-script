@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200117A RID: 4474
+	// Token: 0x020012B0 RID: 4784
 	public struct TrialWeaponInfo : IFlatbufferObject
 	{
-		// Token: 0x17003CF1 RID: 15601
-		// (get) Token: 0x0600E58F RID: 58767 RVA: 0x0033D139 File Offset: 0x0033B339
+		// Token: 0x17004055 RID: 16469
+		// (get) Token: 0x0600F2FD RID: 62205 RVA: 0x00367F33 File Offset: 0x00366133
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E590 RID: 58768 RVA: 0x0033D146 File Offset: 0x0033B346
+		// Token: 0x0600F2FE RID: 62206 RVA: 0x00367F40 File Offset: 0x00366140
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E591 RID: 58769 RVA: 0x0033D150 File Offset: 0x0033B350
+		// Token: 0x0600F2FF RID: 62207 RVA: 0x00367F48 File Offset: 0x00366148
 		public static TrialWeaponInfo GetRootAsTrialWeaponInfo(ByteBuffer _bb)
 		{
 			return TrialWeaponInfo.GetRootAsTrialWeaponInfo(_bb, default(TrialWeaponInfo));
 		}
 
-		// Token: 0x0600E592 RID: 58770 RVA: 0x0033D16C File Offset: 0x0033B36C
+		// Token: 0x0600F300 RID: 62208 RVA: 0x00367F64 File Offset: 0x00366164
 		public static TrialWeaponInfo GetRootAsTrialWeaponInfo(ByteBuffer _bb, TrialWeaponInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E593 RID: 58771 RVA: 0x0033D189 File Offset: 0x0033B389
+		// Token: 0x0600F301 RID: 62209 RVA: 0x00367F81 File Offset: 0x00366181
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E594 RID: 58772 RVA: 0x0033D198 File Offset: 0x0033B398
+		// Token: 0x0600F302 RID: 62210 RVA: 0x00367F90 File Offset: 0x00366190
 		public TrialWeaponInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003CF2 RID: 15602
-		// (get) Token: 0x0600E595 RID: 58773 RVA: 0x0033D1A8 File Offset: 0x0033B3A8
+		// Token: 0x17004056 RID: 16470
+		// (get) Token: 0x0600F303 RID: 62211 RVA: 0x00367FA0 File Offset: 0x003661A0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CF3 RID: 15603
-		// (get) Token: 0x0600E596 RID: 58774 RVA: 0x0033D1E4 File Offset: 0x0033B3E4
+		// Token: 0x17004057 RID: 16471
+		// (get) Token: 0x0600F304 RID: 62212 RVA: 0x00367FDC File Offset: 0x003661DC
 		public int WeaponId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CF4 RID: 15604
-		// (get) Token: 0x0600E597 RID: 58775 RVA: 0x0033D220 File Offset: 0x0033B420
+		// Token: 0x17004058 RID: 16472
+		// (get) Token: 0x0600F305 RID: 62213 RVA: 0x00368018 File Offset: 0x00366218
 		public int WeaponLevel
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CF5 RID: 15605
-		// (get) Token: 0x0600E598 RID: 58776 RVA: 0x0033D25C File Offset: 0x0033B45C
+		// Token: 0x17004059 RID: 16473
+		// (get) Token: 0x0600F306 RID: 62214 RVA: 0x00368054 File Offset: 0x00366254
 		public int WeaponSkinId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CF6 RID: 15606
-		// (get) Token: 0x0600E599 RID: 58777 RVA: 0x0033D29C File Offset: 0x0033B49C
+		// Token: 0x1700405A RID: 16474
+		// (get) Token: 0x0600F307 RID: 62215 RVA: 0x00368094 File Offset: 0x00366294
 		public int WeaponResonanceLevel
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CF7 RID: 15607
-		// (get) Token: 0x0600E59A RID: 58778 RVA: 0x0033D2DC File Offset: 0x0033B4DC
+		// Token: 0x1700405B RID: 16475
+		// (get) Token: 0x0600F308 RID: 62216 RVA: 0x003680D4 File Offset: 0x003662D4
 		public int FullLevelTrialId
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052C0 RID: 21184
+		// Token: 0x04005903 RID: 22787
 		private Table __p;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C2F RID: 3119
+	// Token: 0x02000D02 RID: 3330
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityTrackControlPoint
 	{
-		// Token: 0x06004771 RID: 18289 RVA: 0x000B3F6A File Offset: 0x000B216A
-		[NullableContext(1)]
+		// Token: 0x06004BE1 RID: 19425 RVA: 0x000BE31A File Offset: 0x000BC51A
+		[NullableContext(0)]
 		public static IEntityTrackControlPoint Create(IEntityTrackControlPoint? instance)
 		{
 			if (instance == null)
@@ -24,20 +24,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014D0 RID: 5328
-		// (get) Token: 0x06004772 RID: 18290 RVA: 0x000B3F89 File Offset: 0x000B2189
-		[Nullable(1)]
+		// Token: 0x170015D8 RID: 5592
+		// (get) Token: 0x06004BE2 RID: 19426 RVA: 0x000BE339 File Offset: 0x000BC539
+		[Nullable(0)]
 		public virtual string State
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.State;
 			}
 		}
 
-		// Token: 0x170014D1 RID: 5329
-		// (get) Token: 0x06004773 RID: 18291 RVA: 0x000B3F96 File Offset: 0x000B2196
+		// Token: 0x170015D9 RID: 5593
+		// (get) Token: 0x06004BE3 RID: 19427 RVA: 0x000BE346 File Offset: 0x000BC546
 		public virtual IConditionGroup LeftCondition
 		{
 			get
@@ -52,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014D2 RID: 5330
-		// (get) Token: 0x06004774 RID: 18292 RVA: 0x000B3FCA File Offset: 0x000B21CA
+		// Token: 0x170015DA RID: 5594
+		// (get) Token: 0x06004BE4 RID: 19428 RVA: 0x000BE37A File Offset: 0x000BC57A
 		public virtual IConditionGroup RightCondition
 		{
 			get
@@ -68,19 +68,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002894 RID: 10388
+		// Token: 0x04002AE9 RID: 10985
 		private IEntityTrackControlPoint Instance;
 
-		// Token: 0x04002895 RID: 10389
+		// Token: 0x04002AEA RID: 10986
 		private IConditionGroup _LeftConditionCache;
 
-		// Token: 0x04002896 RID: 10390
+		// Token: 0x04002AEB RID: 10987
 		private bool _LeftConditionInited;
 
-		// Token: 0x04002897 RID: 10391
+		// Token: 0x04002AEC RID: 10988
 		private IConditionGroup _RightConditionCache;
 
-		// Token: 0x04002898 RID: 10392
+		// Token: 0x04002AED RID: 10989
 		private bool _RightConditionInited;
 	}
 }

@@ -6,41 +6,41 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002416 RID: 9238
+	// Token: 0x02000782 RID: 1922
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneNameableTrack")]
-	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
+	[UnrealStructLayout(232, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 232)]
 	public abstract class UMovieSceneNameableTrack : UMovieSceneTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022A15 RID: 141845 RVA: 0x00333694 File Offset: 0x00331894
+		// Token: 0x0600A5E5 RID: 42469 RVA: 0x000F5005 File Offset: 0x000F3205
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneNameableTrack._ClassPtr;
 		}
 
-		// Token: 0x06022A16 RID: 141846 RVA: 0x003336A0 File Offset: 0x003318A0
+		// Token: 0x0600A5E6 RID: 42470 RVA: 0x000F5011 File Offset: 0x000F3211
 		static UMovieSceneNameableTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneNameableTrack");
 		}
 
-		// Token: 0x06022A17 RID: 141847 RVA: 0x003336B0 File Offset: 0x003318B0
+		// Token: 0x0600A5E7 RID: 42471 RVA: 0x000F5020 File Offset: 0x000F3220
 		protected UMovieSceneNameableTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneNameableTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022A18 RID: 141848 RVA: 0x003336D8 File Offset: 0x003318D8
+		// Token: 0x0600A5E8 RID: 42472 RVA: 0x000F5048 File Offset: 0x000F3248
 		protected UMovieSceneNameableTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401280D RID: 75789
+		// Token: 0x04004709 RID: 18185
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneNameableTrack";
 
-		// Token: 0x0401280E RID: 75790
+		// Token: 0x0400470A RID: 18186
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401280F RID: 75791
+		// Token: 0x0400470B RID: 18187
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

@@ -5,12 +5,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002AE1 RID: 10977
+	// Token: 0x02000890 RID: 2192
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class PoolArrayExtensions
 	{
-		// Token: 0x060283F8 RID: 164856 RVA: 0x003D36A0 File Offset: 0x003D18A0
+		// Token: 0x0600BDAD RID: 48557 RVA: 0x0012E9B0 File Offset: 0x0012CBB0
 		private static void ToSharedArray<[Nullable(2)] TSource>(IEnumerable<TSource> source, out TSource[] array, out int length)
 		{
 			ICollection<TSource> collection = source as ICollection<TSource>;
@@ -35,7 +35,7 @@ namespace UnrealEngine.Extension
 			collection.CopyTo(array, 0);
 		}
 
-		// Token: 0x060283F9 RID: 164857 RVA: 0x003D371C File Offset: 0x003D191C
+		// Token: 0x0600BDAE RID: 48558 RVA: 0x0012EA2C File Offset: 0x0012CC2C
 		[return: Nullable(new byte[]
 		{
 			0,

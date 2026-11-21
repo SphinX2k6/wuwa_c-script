@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006463 RID: 25699
+	// Token: 0x020053E1 RID: 21473
 	internal class IllustratedUnLockItem : UiPanelBase
 	{
-		// Token: 0x0604095D RID: 264541 RVA: 0x00FA1A50 File Offset: 0x00F9FC50
+		// Token: 0x0603561E RID: 218654 RVA: 0x00EE89CC File Offset: 0x00EE6BCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604095E RID: 264542 RVA: 0x00FA1CF4 File Offset: 0x00F9FEF4
+		// Token: 0x0603561F RID: 218655 RVA: 0x00EE8C70 File Offset: 0x00EE6E70
 		protected override void OnStart()
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			button.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x0604095F RID: 264543 RVA: 0x00FA1D50 File Offset: 0x00F9FF50
+		// Token: 0x06035620 RID: 218656 RVA: 0x00EE8CCC File Offset: 0x00EE6ECC
 		public void RefreshItem(int moonId)
 		{
 			PhaseOfMoon? phaseOfMoonById = MoonSignInConfig.Instance.GetPhaseOfMoonById(moonId);
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(14), value.BuffDes, Array.Empty<object>());
 		}
 
-		// Token: 0x06040960 RID: 264544 RVA: 0x00FA1F5B File Offset: 0x00FA015B
+		// Token: 0x06035621 RID: 218657 RVA: 0x00EE8ED7 File Offset: 0x00EE70D7
 		private void OnClickShareBtn()
 		{
 			this.OpenShareView();
 		}
 
-		// Token: 0x06040961 RID: 264545 RVA: 0x00FA1F64 File Offset: 0x00FA0164
+		// Token: 0x06035622 RID: 218658 RVA: 0x00EE8EE0 File Offset: 0x00EE70E0
 		private void OpenShareView()
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06040962 RID: 264546 RVA: 0x00FA1FC4 File Offset: 0x00FA01C4
+		// Token: 0x06035623 RID: 218659 RVA: 0x00EE8F40 File Offset: 0x00EE7140
 		private UniTask OpenShareViewAsync()
 		{
 			IllustratedUnLockItem.<OpenShareViewAsync>d__7 <OpenShareViewAsync>d__;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <OpenShareViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040963 RID: 264547 RVA: 0x00FA2008 File Offset: 0x00FA0208
+		// Token: 0x06035624 RID: 218660 RVA: 0x00EE8F84 File Offset: 0x00EE7184
 		private UniTask WaitFrame()
 		{
 			IllustratedUnLockItem.<WaitFrame>d__8 <WaitFrame>d__;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <WaitFrame>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040964 RID: 264548 RVA: 0x00FA2044 File Offset: 0x00FA0244
+		// Token: 0x06035625 RID: 218661 RVA: 0x00EE8FC0 File Offset: 0x00EE71C0
 		private void OnClickBuffBtn()
 		{
 			base.GetItem(13).SetUIActive(true);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			button.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x06040965 RID: 264549 RVA: 0x00FA2080 File Offset: 0x00FA0280
+		// Token: 0x06035626 RID: 218662 RVA: 0x00EE8FFC File Offset: 0x00EE71FC
 		private void OnClickBuffTipsCloseBtn()
 		{
 			base.GetItem(13).SetUIActive(false);
@@ -183,66 +183,66 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			button.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06040966 RID: 264550 RVA: 0x00FA20BC File Offset: 0x00FA02BC
+		// Token: 0x06035627 RID: 218663 RVA: 0x00EE9038 File Offset: 0x00EE7238
 		public void RefreshShareBtn()
 		{
 			bool uiactive = ChannelController.Instance.CouldShare();
 			base.GetButton(2).RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x04021951 RID: 137553
+		// Token: 0x0401C280 RID: 115328
 		[Nullable(2)]
 		public Action<bool> SetNextAndBackBtnUiActive;
 
-		// Token: 0x0200C68A RID: 50826
+		// Token: 0x0200B070 RID: 45168
 		private class EIllustratedUnLockItemDefine
 		{
-			// Token: 0x0403BEF3 RID: 245491
+			// Token: 0x0403684E RID: 223310
 			public const int MoonTexture = 0;
 
-			// Token: 0x0403BEF4 RID: 245492
+			// Token: 0x0403684F RID: 223311
 			public const int MoonNameText = 1;
 
-			// Token: 0x0403BEF5 RID: 245493
+			// Token: 0x04036850 RID: 223312
 			public const int ShareBtn = 2;
 
-			// Token: 0x0403BEF6 RID: 245494
+			// Token: 0x04036851 RID: 223313
 			public const int StaticTitleText = 3;
 
-			// Token: 0x0403BEF7 RID: 245495
+			// Token: 0x04036852 RID: 223314
 			public const int MoonLabel1NameText = 4;
 
-			// Token: 0x0403BEF8 RID: 245496
+			// Token: 0x04036853 RID: 223315
 			public const int MoonLabel1DesText = 5;
 
-			// Token: 0x0403BEF9 RID: 245497
+			// Token: 0x04036854 RID: 223316
 			public const int MoonLabel2NameText = 6;
 
-			// Token: 0x0403BEFA RID: 245498
+			// Token: 0x04036855 RID: 223317
 			public const int MoonLabel2DesText = 7;
 
-			// Token: 0x0403BEFB RID: 245499
+			// Token: 0x04036856 RID: 223318
 			public const int MoonBuffNameText = 8;
 
-			// Token: 0x0403BEFC RID: 245500
+			// Token: 0x04036857 RID: 223319
 			public const int MoonBuffTexture = 9;
 
-			// Token: 0x0403BEFD RID: 245501
+			// Token: 0x04036858 RID: 223320
 			public const int MoonBuffUpItem = 10;
 
-			// Token: 0x0403BEFE RID: 245502
+			// Token: 0x04036859 RID: 223321
 			public const int MoonDesText = 11;
 
-			// Token: 0x0403BEFF RID: 245503
+			// Token: 0x0403685A RID: 223322
 			public const int BuffBtn = 12;
 
-			// Token: 0x0403BF00 RID: 245504
+			// Token: 0x0403685B RID: 223323
 			public const int BuffTipsItem = 13;
 
-			// Token: 0x0403BF01 RID: 245505
+			// Token: 0x0403685C RID: 223324
 			public const int BuffTipsText = 14;
 
-			// Token: 0x0403BF02 RID: 245506
+			// Token: 0x0403685D RID: 223325
 			public const int BuffTipsCloseBtn = 15;
 		}
 	}

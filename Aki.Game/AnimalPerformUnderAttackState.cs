@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E30 RID: 11824
+// Token: 0x0200238C RID: 9100
 public class AnimalPerformUnderAttackState : AnimalPerformStateBase
 {
-	// Token: 0x06018E6F RID: 101999 RVA: 0x0066B454 File Offset: 0x00669654
+	// Token: 0x0601673C RID: 91964 RVA: 0x00691344 File Offset: 0x0068F544
 	[NullableContext(1)]
 	public AnimalPerformUnderAttackState(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ public class AnimalPerformUnderAttackState : AnimalPerformStateBase
 	{
 	}
 
-	// Token: 0x06018E70 RID: 102000 RVA: 0x0066B460 File Offset: 0x00669660
+	// Token: 0x0601673D RID: 91965 RVA: 0x00691350 File Offset: 0x0068F550
 	protected override void OnEnter(EAnimalPerformState? lastState)
 	{
 		if (this.EcologicalInterface == null)
@@ -33,12 +33,12 @@ public class AnimalPerformUnderAttackState : AnimalPerformStateBase
 		this.ActionTime = num - 0.25f;
 	}
 
-	// Token: 0x06018E71 RID: 102001 RVA: 0x0066B4C4 File Offset: 0x006696C4
+	// Token: 0x0601673E RID: 91966 RVA: 0x006913B4 File Offset: 0x0068F5B4
 	protected override void OnUpdate(float delta)
 	{
 	}
 
-	// Token: 0x06018E72 RID: 102002 RVA: 0x0066B4C6 File Offset: 0x006696C6
+	// Token: 0x0601673F RID: 91967 RVA: 0x006913B6 File Offset: 0x0068F5B6
 	protected override void OnExit(EAnimalPerformState nextState)
 	{
 		if (this.EcologicalInterface == null)
@@ -48,6 +48,6 @@ public class AnimalPerformUnderAttackState : AnimalPerformStateBase
 		this.EcologicalInterface.UnderAttackEnd();
 	}
 
-	// Token: 0x0400BAE4 RID: 47844
+	// Token: 0x0400BE72 RID: 48754
 	private const float BLEND_OUT_TIME = 0.25f;
 }

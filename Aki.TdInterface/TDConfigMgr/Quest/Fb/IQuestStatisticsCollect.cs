@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200133F RID: 4927
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200148F RID: 5263
 	public class IQuestStatisticsCollect : IQuestStatisticsType
 	{
-		// Token: 0x060070EA RID: 28906 RVA: 0x001105B0 File Offset: 0x0010E7B0
+		// Token: 0x0600778A RID: 30602 RVA: 0x0011EB1C File Offset: 0x0011CD1C
 		public static IQuestStatisticsCollect Create(IQuestStatisticsCollect? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700243F RID: 9279
-		// (get) Token: 0x060070EB RID: 28907 RVA: 0x001105CF File Offset: 0x0010E7CF
+		// Token: 0x1700260E RID: 9742
+		// (get) Token: 0x0600778B RID: 30603 RVA: 0x0011EB3B File Offset: 0x0011CD3B
 		public override EStatisticsEventType Type
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002440 RID: 9280
-		// (get) Token: 0x060070EC RID: 28908 RVA: 0x001105DC File Offset: 0x0010E7DC
+		// Token: 0x1700260F RID: 9743
+		// (get) Token: 0x0600778C RID: 30604 RVA: 0x0011EB48 File Offset: 0x0011CD48
 		public override VarRef Var
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002441 RID: 9281
-		// (get) Token: 0x060070ED RID: 28909 RVA: 0x0011060B File Offset: 0x0010E80B
+		// Token: 0x17002610 RID: 9744
+		// (get) Token: 0x0600778D RID: 30605 RVA: 0x0011EB77 File Offset: 0x0011CD77
 		[Nullable(2)]
 		public virtual IStaticEntitiyMatch EntitiyMatch
 		{
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002442 RID: 9282
-		// (get) Token: 0x060070EE RID: 28910 RVA: 0x00110640 File Offset: 0x0010E840
+		// Token: 0x17002611 RID: 9745
+		// (get) Token: 0x0600778E RID: 30606 RVA: 0x0011EBAC File Offset: 0x0011CDAC
 		public virtual bool? IsGlobal
 		{
 			get
@@ -83,8 +81,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002443 RID: 9283
-		// (get) Token: 0x060070EF RID: 28911 RVA: 0x00110676 File Offset: 0x0010E876
+		// Token: 0x17002612 RID: 9746
+		// (get) Token: 0x0600778F RID: 30607 RVA: 0x0011EBE2 File Offset: 0x0011CDE2
 		public virtual IOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption
 		{
 			get
@@ -99,26 +97,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400412D RID: 16685
+		// Token: 0x040044A9 RID: 17577
 		private IQuestStatisticsCollect Instance;
 
-		// Token: 0x0400412E RID: 16686
+		// Token: 0x040044AA RID: 17578
 		private VarRef _VarCache;
 
-		// Token: 0x0400412F RID: 16687
+		// Token: 0x040044AB RID: 17579
 		private bool _VarInited;
 
-		// Token: 0x04004130 RID: 16688
+		// Token: 0x040044AC RID: 17580
 		[Nullable(2)]
 		private IStaticEntitiyMatch _EntitiyMatchCache;
 
-		// Token: 0x04004131 RID: 16689
+		// Token: 0x040044AD RID: 17581
 		private bool _EntitiyMatchInited;
 
-		// Token: 0x04004132 RID: 16690
+		// Token: 0x040044AE RID: 17582
 		private IOnlinePlayerConditionTarget _OnlinePlayerConditionTargetOptionCache;
 
-		// Token: 0x04004133 RID: 16691
+		// Token: 0x040044AF RID: 17583
 		private bool _OnlinePlayerConditionTargetOptionInited;
 	}
 }

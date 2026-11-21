@@ -8,17 +8,17 @@ using CSharpScript.Game.InputSetting;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046A1 RID: 18081
+	// Token: 0x020035D2 RID: 13778
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ViewHotKeyHandleRoulette : ViewHotKeyHandle
 	{
-		// Token: 0x0602E9E4 RID: 190948 RVA: 0x00ACB0C3 File Offset: 0x00AC92C3
+		// Token: 0x06023130 RID: 143664 RVA: 0x009F9997 File Offset: 0x009F7B97
 		public ViewHotKeyHandleRoulette(IOpenAndCloseViewHotKey parameters) : base(parameters)
 		{
 		}
 
-		// Token: 0x0602E9E5 RID: 190949 RVA: 0x00ACB0CC File Offset: 0x00AC92CC
+		// Token: 0x06023131 RID: 143665 RVA: 0x009F99A0 File Offset: 0x009F7BA0
 		public override void Bind()
 		{
 			this.Init();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Add(EEventName.OnActionKeyChanged, new Action<string>(this.OnActionKeyChanged));
 		}
 
-		// Token: 0x0602E9E6 RID: 190950 RVA: 0x00ACB10C File Offset: 0x00AC930C
+		// Token: 0x06023132 RID: 143666 RVA: 0x009F99E0 File Offset: 0x009F7BE0
 		protected override void UnBind()
 		{
 			InputDistributeController.Instance.UnBindAction(this.ActionName, new TInputHandle<InputDistributeDefine.EActionType>(this.OnRouletteInputAction));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Remove(EEventName.OnActionKeyChanged, new Action<string>(this.OnActionKeyChanged));
 		}
 
-		// Token: 0x0602E9E7 RID: 190951 RVA: 0x00ACB18A File Offset: 0x00AC938A
+		// Token: 0x06023133 RID: 143667 RVA: 0x009F9A5E File Offset: 0x009F7C5E
 		private void OnActionKeyChanged(string actionName)
 		{
 			if (!string.IsNullOrEmpty(this.ActionName) && this.ActionName == actionName)
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9E8 RID: 190952 RVA: 0x00ACB1B4 File Offset: 0x00AC93B4
+		// Token: 0x06023134 RID: 143668 RVA: 0x009F9A88 File Offset: 0x009F7C88
 		private void Init()
 		{
 			this.AxisDeadZone = ConfigCommonParamById.GetFloatConfig("Roulette_Gamepad_Open_DeadLimit").GetValueOrDefault();
 			this.SetNeedAxisFlag(this.IsActionCombinationAxisMainKey());
 		}
 
-		// Token: 0x0602E9E9 RID: 190953 RVA: 0x00ACB1E8 File Offset: 0x00AC93E8
+		// Token: 0x06023135 RID: 143669 RVA: 0x009F9ABC File Offset: 0x009F7CBC
 		private bool IsActionCombinationAxisMainKey()
 		{
 			if (this.ActionName == null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Ui
 			return list.Count == 1 && InputSettingsManager.Instance.IsCombinationAxisMainKey(list[0]);
 		}
 
-		// Token: 0x0602E9EA RID: 190954 RVA: 0x00ACB240 File Offset: 0x00AC9440
+		// Token: 0x06023136 RID: 143670 RVA: 0x009F9B14 File Offset: 0x009F7D14
 		private void SetNeedAxisFlag(bool flag)
 		{
 			if (flag == this.NeedAxisFlag)
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Ui
 			this.NeedAxisFlag = flag;
 		}
 
-		// Token: 0x0602E9EB RID: 190955 RVA: 0x00ACB2C8 File Offset: 0x00AC94C8
+		// Token: 0x06023137 RID: 143671 RVA: 0x009F9B9C File Offset: 0x009F7D9C
 		private void OnRouletteInputAxis(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!this.NeedAxisFlag || !this.ActionFlag)
@@ -116,20 +116,20 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9EC RID: 190956 RVA: 0x00ACB31C File Offset: 0x00AC951C
+		// Token: 0x06023138 RID: 143672 RVA: 0x009F9BF0 File Offset: 0x009F7DF0
 		private void OnRouletteInputAction(string name, InputDistributeDefine.EActionType value, InputIdentification inputIdentification)
 		{
 			this.ActionFlag = (value == InputDistributeDefine.EActionType.Press);
 			base.OnInputAction(name, value, inputIdentification);
 		}
 
-		// Token: 0x0602E9ED RID: 190957 RVA: 0x00ACB331 File Offset: 0x00AC9531
+		// Token: 0x06023139 RID: 143673 RVA: 0x009F9C05 File Offset: 0x009F7E05
 		protected override bool SpecialConditionCheck()
 		{
 			return !Info.Instance.IsInGamepad() || !this.NeedAxisFlag || this.AxisFlag;
 		}
 
-		// Token: 0x0602E9EE RID: 190958 RVA: 0x00ACB354 File Offset: 0x00AC9554
+		// Token: 0x0602313A RID: 143674 RVA: 0x009F9C28 File Offset: 0x009F7E28
 		protected override void OnOpenViewImplement()
 		{
 			RouletteMainViewProxyBase currentRouletteMainViewProxy = RouletteController.Instance.GetCurrentRouletteMainViewProxy();
@@ -137,16 +137,16 @@ namespace CSharpScript.Game.Ui
 			RouletteController.Instance.OpenRouletteMainView(currentRouletteMainViewProxy);
 		}
 
-		// Token: 0x04019659 RID: 104025
+		// Token: 0x04013CFE RID: 81150
 		private bool ActionFlag;
 
-		// Token: 0x0401965A RID: 104026
+		// Token: 0x04013CFF RID: 81151
 		private bool AxisFlag;
 
-		// Token: 0x0401965B RID: 104027
+		// Token: 0x04013D00 RID: 81152
 		private bool NeedAxisFlag;
 
-		// Token: 0x0401965C RID: 104028
+		// Token: 0x04013D01 RID: 81153
 		private float AxisDeadZone;
 	}
 }

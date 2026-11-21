@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001516 RID: 5398
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200166F RID: 5743
 	public class CommonTip : ActionParams
 	{
-		// Token: 0x06007A9E RID: 31390 RVA: 0x00124A54 File Offset: 0x00122C54
+		// Token: 0x06008169 RID: 33129 RVA: 0x0013367C File Offset: 0x0013187C
 		private CommonTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A9F RID: 31391 RVA: 0x00124A8C File Offset: 0x00122C8C
+		// Token: 0x0600816A RID: 33130 RVA: 0x001336B4 File Offset: 0x001318B4
 		public static CommonTip Create([Nullable(2)] CommonTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AA0 RID: 31392 RVA: 0x00124A9F File Offset: 0x00122C9F
+		// Token: 0x0600816B RID: 33131 RVA: 0x001336C7 File Offset: 0x001318C7
 		public static CommonTip CreateFromSetValue([Nullable(2)] CommonTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AA1 RID: 31393 RVA: 0x00124AB2 File Offset: 0x00122CB2
+		// Token: 0x0600816C RID: 33132 RVA: 0x001336DA File Offset: 0x001318DA
 		public CommonTip_SetValue ToSetValue()
 		{
 			return new CommonTip_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028E6 RID: 10470
-		// (get) Token: 0x06007AA2 RID: 31394 RVA: 0x00124ADD File Offset: 0x00122CDD
-		// (set) Token: 0x06007AA3 RID: 31395 RVA: 0x00124B04 File Offset: 0x00122D04
+		// Token: 0x17002ACF RID: 10959
+		// (get) Token: 0x0600816D RID: 33133 RVA: 0x00133705 File Offset: 0x00131905
+		// (set) Token: 0x0600816E RID: 33134 RVA: 0x0013372C File Offset: 0x0013192C
 		public virtual ICommonTipType TipOption
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028E7 RID: 10471
-		// (get) Token: 0x06007AA4 RID: 31396 RVA: 0x00124B14 File Offset: 0x00122D14
-		// (set) Token: 0x06007AA5 RID: 31397 RVA: 0x00124B4E File Offset: 0x00122D4E
+		// Token: 0x17002AD0 RID: 10960
+		// (get) Token: 0x0600816F RID: 33135 RVA: 0x0013373C File Offset: 0x0013193C
+		// (set) Token: 0x06008170 RID: 33136 RVA: 0x00133776 File Offset: 0x00131976
 		public virtual int? Duration
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028E8 RID: 10472
-		// (get) Token: 0x06007AA6 RID: 31398 RVA: 0x00124B5C File Offset: 0x00122D5C
-		// (set) Token: 0x06007AA7 RID: 31399 RVA: 0x00124B83 File Offset: 0x00122D83
+		// Token: 0x17002AD1 RID: 10961
+		// (get) Token: 0x06008171 RID: 33137 RVA: 0x00133784 File Offset: 0x00131984
+		// (set) Token: 0x06008172 RID: 33138 RVA: 0x001337AB File Offset: 0x001319AB
 		[Nullable(2)]
 		public virtual string Token
 		{
@@ -136,11 +134,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004701 RID: 18177
+		// Token: 0x04004A9D RID: 19101
 		[Nullable(2)]
 		protected new CommonTip FbInstance;
 
-		// Token: 0x04004702 RID: 18178
+		// Token: 0x04004A9E RID: 19102
 		[Nullable(2)]
 		protected CommonTip_SetValue PocoInterface;
 	}

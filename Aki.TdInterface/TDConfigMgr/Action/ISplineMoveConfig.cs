@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E9F RID: 7839
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020D6 RID: 8406
 	public class ISplineMoveConfig
 	{
-		// Token: 0x0600A7AE RID: 42926 RVA: 0x0017AD90 File Offset: 0x00178F90
+		// Token: 0x0600B276 RID: 45686 RVA: 0x00190C74 File Offset: 0x0018EE74
 		private ISplineMoveConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7AF RID: 42927 RVA: 0x0017ADC8 File Offset: 0x00178FC8
+		// Token: 0x0600B277 RID: 45687 RVA: 0x00190CAC File Offset: 0x0018EEAC
 		public static ISplineMoveConfig Create([Nullable(2)] ISplineMoveConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7B0 RID: 42928 RVA: 0x0017ADDB File Offset: 0x00178FDB
+		// Token: 0x0600B278 RID: 45688 RVA: 0x00190CBF File Offset: 0x0018EEBF
 		public static ISplineMoveConfig CreateFromSetValue([Nullable(2)] ISplineMoveConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7B1 RID: 42929 RVA: 0x0017ADEE File Offset: 0x00178FEE
+		// Token: 0x0600B279 RID: 45689 RVA: 0x00190CD2 File Offset: 0x0018EED2
 		public ISplineMoveConfig_SetValue ToSetValue()
 		{
 			return new ISplineMoveConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003340 RID: 13120
-		// (get) Token: 0x0600A7B2 RID: 42930 RVA: 0x0017AE19 File Offset: 0x00179019
-		// (set) Token: 0x0600A7B3 RID: 42931 RVA: 0x0017AE44 File Offset: 0x00179044
+		// Token: 0x17003609 RID: 13833
+		// (get) Token: 0x0600B27A RID: 45690 RVA: 0x00190CFD File Offset: 0x0018EEFD
+		// (set) Token: 0x0600B27B RID: 45691 RVA: 0x00190D28 File Offset: 0x0018EF28
 		public virtual ESplineMoveConfigType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003341 RID: 13121
-		// (get) Token: 0x0600A7B4 RID: 42932 RVA: 0x0017AE52 File Offset: 0x00179052
-		// (set) Token: 0x0600A7B5 RID: 42933 RVA: 0x0017AE79 File Offset: 0x00179079
+		// Token: 0x1700360A RID: 13834
+		// (get) Token: 0x0600B27C RID: 45692 RVA: 0x00190D36 File Offset: 0x0018EF36
+		// (set) Token: 0x0600B27D RID: 45693 RVA: 0x00190D5D File Offset: 0x0018EF5D
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003342 RID: 13122
-		// (get) Token: 0x0600A7B6 RID: 42934 RVA: 0x0017AE87 File Offset: 0x00179087
-		// (set) Token: 0x0600A7B7 RID: 42935 RVA: 0x0017AEB2 File Offset: 0x001790B2
+		// Token: 0x1700360B RID: 13835
+		// (get) Token: 0x0600B27E RID: 45694 RVA: 0x00190D6B File Offset: 0x0018EF6B
+		// (set) Token: 0x0600B27F RID: 45695 RVA: 0x00190D96 File Offset: 0x0018EF96
 		public virtual int SplineEntityId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063FB RID: 25595
+		// Token: 0x040069E6 RID: 27110
 		[Nullable(2)]
 		protected ISplineMoveConfig FbInstance;
 
-		// Token: 0x040063FC RID: 25596
+		// Token: 0x040069E7 RID: 27111
 		[Nullable(2)]
 		protected ISplineMoveConfig_SetValue PocoInterface;
 	}

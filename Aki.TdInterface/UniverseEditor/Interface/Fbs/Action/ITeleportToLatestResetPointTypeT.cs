@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007392 RID: 29586
+	// Token: 0x02007B79 RID: 31609
 	public class ITeleportToLatestResetPointTypeT
 	{
-		// Token: 0x1700E097 RID: 57495
-		// (get) Token: 0x06035B3F RID: 219967 RVA: 0x0074FA82 File Offset: 0x0074DC82
-		// (set) Token: 0x06035B40 RID: 219968 RVA: 0x0074FA8A File Offset: 0x0074DC8A
+		// Token: 0x1700ECA7 RID: 60583
+		// (get) Token: 0x06038EDA RID: 233178 RVA: 0x007B1FC2 File Offset: 0x007B01C2
+		// (set) Token: 0x06038EDB RID: 233179 RVA: 0x007B1FCA File Offset: 0x007B01CA
 		public ETeleportToLatestResetPointType Type { get; set; }
 
-		// Token: 0x06035B41 RID: 219969 RVA: 0x0074FA93 File Offset: 0x0074DC93
+		// Token: 0x06038EDC RID: 233180 RVA: 0x007B1FD3 File Offset: 0x007B01D3
 		public ITeleportToLatestResetPointTypeT()
 		{
 			this.Type = ETeleportToLatestResetPointType.Directly;

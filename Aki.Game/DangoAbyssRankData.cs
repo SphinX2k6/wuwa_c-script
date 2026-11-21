@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A53 RID: 6739
+// Token: 0x02000F12 RID: 3858
 public class DangoAbyssRankData
 {
-	// Token: 0x04005B64 RID: 23396
+	// Token: 0x04005C33 RID: 23603
 	public int OpenChallengeId;
 
-	// Token: 0x04005B65 RID: 23397
+	// Token: 0x04005C34 RID: 23604
 	[Nullable(1)]
 	public AbyssChallengeData[] DangoAbyssData = new AbyssChallengeData[0];
 }

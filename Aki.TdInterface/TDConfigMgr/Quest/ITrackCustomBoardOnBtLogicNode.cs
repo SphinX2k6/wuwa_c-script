@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011B2 RID: 4530
+	// Token: 0x020012EC RID: 4844
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackCustomBoardOnBtLogicNode
 	{
-		// Token: 0x060066E8 RID: 26344 RVA: 0x000F686C File Offset: 0x000F4A6C
-		[NullableContext(1)]
+		// Token: 0x06006D21 RID: 27937 RVA: 0x001040BC File Offset: 0x001022BC
+		[NullableContext(0)]
 		private ITrackCustomBoardOnBtLogicNode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060066E9 RID: 26345 RVA: 0x000F68A4 File Offset: 0x000F4AA4
-		[NullableContext(1)]
+		// Token: 0x06006D22 RID: 27938 RVA: 0x001040F4 File Offset: 0x001022F4
+		[NullableContext(0)]
 		public static ITrackCustomBoardOnBtLogicNode Create([Nullable(2)] ITrackCustomBoardOnBtLogicNode instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066EA RID: 26346 RVA: 0x000F68B7 File Offset: 0x000F4AB7
-		[NullableContext(1)]
+		// Token: 0x06006D23 RID: 27939 RVA: 0x00104107 File Offset: 0x00102307
+		[NullableContext(0)]
 		public static ITrackCustomBoardOnBtLogicNode CreateFromSetValue([Nullable(2)] ITrackCustomBoardOnBtLogicNode_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066EB RID: 26347 RVA: 0x000F68CA File Offset: 0x000F4ACA
-		[NullableContext(1)]
+		// Token: 0x06006D24 RID: 27940 RVA: 0x0010411A File Offset: 0x0010231A
+		[NullableContext(0)]
 		public ITrackCustomBoardOnBtLogicNode_SetValue ToSetValue()
 		{
 			return new ITrackCustomBoardOnBtLogicNode_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700216E RID: 8558
-		// (get) Token: 0x060066EC RID: 26348 RVA: 0x000F6904 File Offset: 0x000F4B04
-		// (set) Token: 0x060066ED RID: 26349 RVA: 0x000F6965 File Offset: 0x000F4B65
+		// Token: 0x1700232E RID: 9006
+		// (get) Token: 0x06006D25 RID: 27941 RVA: 0x00104154 File Offset: 0x00102354
+		// (set) Token: 0x06006D26 RID: 27942 RVA: 0x001041B5 File Offset: 0x001023B5
 		public virtual IFastReturnMapPos FastReturnMapPos
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x1700216F RID: 8559
-		// (get) Token: 0x060066EE RID: 26350 RVA: 0x000F697C File Offset: 0x000F4B7C
-		// (set) Token: 0x060066EF RID: 26351 RVA: 0x000F69DD File Offset: 0x000F4BDD
+		// Token: 0x1700232F RID: 9007
+		// (get) Token: 0x06006D27 RID: 27943 RVA: 0x001041CC File Offset: 0x001023CC
+		// (set) Token: 0x06006D28 RID: 27944 RVA: 0x0010422D File Offset: 0x0010242D
 		public virtual ISheriffAnomalyProgressBoardConfig SheriffAnomalyProgressBoard
 		{
 			get
@@ -126,9 +126,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002170 RID: 8560
-		// (get) Token: 0x060066F0 RID: 26352 RVA: 0x000F69F4 File Offset: 0x000F4BF4
-		// (set) Token: 0x060066F1 RID: 26353 RVA: 0x000F6A55 File Offset: 0x000F4C55
+		// Token: 0x17002330 RID: 9008
+		// (get) Token: 0x06006D29 RID: 27945 RVA: 0x00104244 File Offset: 0x00102444
+		// (set) Token: 0x06006D2A RID: 27946 RVA: 0x001042A5 File Offset: 0x001024A5
 		public virtual ISheriffMainBoardConfig SheriffMainBoard
 		{
 			get
@@ -156,9 +156,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002171 RID: 8561
-		// (get) Token: 0x060066F2 RID: 26354 RVA: 0x000F6A6C File Offset: 0x000F4C6C
-		// (set) Token: 0x060066F3 RID: 26355 RVA: 0x000F6ACD File Offset: 0x000F4CCD
+		// Token: 0x17002331 RID: 9009
+		// (get) Token: 0x06006D2B RID: 27947 RVA: 0x001042BC File Offset: 0x001024BC
+		// (set) Token: 0x06006D2C RID: 27948 RVA: 0x0010431D File Offset: 0x0010251D
 		public virtual ISheriffClueDetailBoardConfig SheriffClueDetailBoard
 		{
 			get
@@ -186,38 +186,38 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DC7 RID: 15815
+		// Token: 0x04004132 RID: 16690
 		protected ITrackCustomBoardOnBtLogicNode FbInstance;
 
-		// Token: 0x04003DC8 RID: 15816
+		// Token: 0x04004133 RID: 16691
 		protected ITrackCustomBoardOnBtLogicNode_SetValue PocoInterface;
 
-		// Token: 0x04003DC9 RID: 15817
-		[Nullable(1)]
+		// Token: 0x04004134 RID: 16692
+		[Nullable(0)]
 		private IFastReturnMapPos _FastReturnMapPosCache;
 
-		// Token: 0x04003DCA RID: 15818
+		// Token: 0x04004135 RID: 16693
 		private bool _FastReturnMapPosInited;
 
-		// Token: 0x04003DCB RID: 15819
-		[Nullable(1)]
+		// Token: 0x04004136 RID: 16694
+		[Nullable(0)]
 		private ISheriffAnomalyProgressBoardConfig _SheriffAnomalyProgressBoardCache;
 
-		// Token: 0x04003DCC RID: 15820
+		// Token: 0x04004137 RID: 16695
 		private bool _SheriffAnomalyProgressBoardInited;
 
-		// Token: 0x04003DCD RID: 15821
-		[Nullable(1)]
+		// Token: 0x04004138 RID: 16696
+		[Nullable(0)]
 		private ISheriffMainBoardConfig _SheriffMainBoardCache;
 
-		// Token: 0x04003DCE RID: 15822
+		// Token: 0x04004139 RID: 16697
 		private bool _SheriffMainBoardInited;
 
-		// Token: 0x04003DCF RID: 15823
-		[Nullable(1)]
+		// Token: 0x0400413A RID: 16698
+		[Nullable(0)]
 		private ISheriffClueDetailBoardConfig _SheriffClueDetailBoardCache;
 
-		// Token: 0x04003DD0 RID: 15824
+		// Token: 0x0400413B RID: 16699
 		private bool _SheriffClueDetailBoardInited;
 	}
 }

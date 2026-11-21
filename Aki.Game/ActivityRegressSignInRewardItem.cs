@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200149A RID: 5274
+// Token: 0x0200094E RID: 2382
 public class ActivityRegressSignInRewardItem : UiPanelBase
 {
-	// Token: 0x06009571 RID: 38257 RVA: 0x00203D60 File Offset: 0x00201F60
+	// Token: 0x06006906 RID: 26886 RVA: 0x0020CCC8 File Offset: 0x0020AEC8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ public class ActivityRegressSignInRewardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009572 RID: 38258 RVA: 0x00203E35 File Offset: 0x00202035
+	// Token: 0x06006907 RID: 26887 RVA: 0x0020CD9D File Offset: 0x0020AF9D
 	[NullableContext(1)]
 	public void RegisterItemClickCallBack(Action<int> onRewardItemClick)
 	{
 		this.OnRewardItemClick = onRewardItemClick;
 	}
 
-	// Token: 0x06009573 RID: 38259 RVA: 0x00203E40 File Offset: 0x00202040
+	// Token: 0x06006908 RID: 26888 RVA: 0x0020CDA8 File Offset: 0x0020AFA8
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
@@ -45,7 +45,7 @@ public class ActivityRegressSignInRewardItem : UiPanelBase
 		this.ItemGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnRewardItemClicked));
 	}
 
-	// Token: 0x06009574 RID: 38260 RVA: 0x00203EB0 File Offset: 0x002020B0
+	// Token: 0x06006909 RID: 26889 RVA: 0x0020CE18 File Offset: 0x0020B018
 	public void RefreshByData(int index)
 	{
 		this.Index = index;
@@ -69,14 +69,14 @@ public class ActivityRegressSignInRewardItem : UiPanelBase
 		ActivityRegressHelper.RefreshItemGridByData(this.ItemGrid, signRewardPreviewItemInfo);
 	}
 
-	// Token: 0x06009575 RID: 38261 RVA: 0x00203FA0 File Offset: 0x002021A0
+	// Token: 0x0600690A RID: 26890 RVA: 0x0020CF08 File Offset: 0x0020B108
 	[NullableContext(1)]
 	private void OnRewardItemClicked(MediumItemGridExtendCallback _)
 	{
 		this.OnClickRewardItem();
 	}
 
-	// Token: 0x06009576 RID: 38262 RVA: 0x00203FA8 File Offset: 0x002021A8
+	// Token: 0x0600690B RID: 26891 RVA: 0x0020CF10 File Offset: 0x0020B110
 	private void OnClickRewardItem()
 	{
 		if (!ActivityRegressModel.Instance.CheckSignRewardState(this.Day, ERegressRewardState.Reached))
@@ -85,7 +85,7 @@ public class ActivityRegressSignInRewardItem : UiPanelBase
 			int? item = ActivityRegressModel.Instance.GetSignRewardPreviewReward(signRewardConfigByIndex.Value).Item1;
 			if (item != null)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(item.Value, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(item.Value, true, null, false);
 			}
 			return;
 		}
@@ -97,42 +97,42 @@ public class ActivityRegressSignInRewardItem : UiPanelBase
 		onRewardItemClick(this.Index);
 	}
 
-	// Token: 0x04004216 RID: 16918
+	// Token: 0x040042AE RID: 17070
 	[Nullable(2)]
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04004217 RID: 16919
+	// Token: 0x040042AF RID: 17071
 	private int Index;
 
-	// Token: 0x04004218 RID: 16920
+	// Token: 0x040042B0 RID: 17072
 	private int Day;
 
-	// Token: 0x04004219 RID: 16921
+	// Token: 0x040042B1 RID: 17073
 	[Nullable(2)]
 	private Action<int> OnRewardItemClick;
 
-	// Token: 0x02007ACC RID: 31436
+	// Token: 0x02006C50 RID: 27728
 	private class EComponents
 	{
-		// Token: 0x04028664 RID: 165476
+		// Token: 0x0402397E RID: 145790
 		public const int RootBtn = 0;
 
-		// Token: 0x04028665 RID: 165477
+		// Token: 0x0402397F RID: 145791
 		public const int PnlReceive = 1;
 
-		// Token: 0x04028666 RID: 165478
+		// Token: 0x04023980 RID: 145792
 		public const int PnlDone = 2;
 
-		// Token: 0x04028667 RID: 165479
+		// Token: 0x04023981 RID: 145793
 		public const int TxtNor = 3;
 
-		// Token: 0x04028668 RID: 165480
+		// Token: 0x04023982 RID: 145794
 		public const int ItemGrid = 4;
 
-		// Token: 0x04028669 RID: 165481
+		// Token: 0x04023983 RID: 145795
 		public const int TxtNum = 5;
 
-		// Token: 0x0402866A RID: 165482
+		// Token: 0x04023984 RID: 145796
 		public const int SprLight = 6;
 	}
 }

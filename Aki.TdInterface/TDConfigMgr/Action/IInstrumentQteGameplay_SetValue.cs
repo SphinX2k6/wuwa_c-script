@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B43 RID: 6979
+	// Token: 0x02001CF2 RID: 7410
 	public class IInstrumentQteGameplay_SetValue
 	{
-		// Token: 0x04005B67 RID: 23399
+		// Token: 0x04006005 RID: 24581
 		public ESimpleGameplayType Type;
 
-		// Token: 0x04005B68 RID: 23400
+		// Token: 0x04006006 RID: 24582
 		public EInstrumentType InstrumentType;
 
-		// Token: 0x04005B69 RID: 23401
+		// Token: 0x04006007 RID: 24583
 		public int Id;
 	}
 }

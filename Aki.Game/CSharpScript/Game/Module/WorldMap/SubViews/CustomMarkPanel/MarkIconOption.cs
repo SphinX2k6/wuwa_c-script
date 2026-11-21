@@ -8,15 +8,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 {
-	// Token: 0x0200482C RID: 18476
+	// Token: 0x0200375D RID: 14173
 	public class MarkIconOption : UiPanelBase
 	{
-		// Token: 0x170078EC RID: 30956
-		// (get) Token: 0x060305C3 RID: 198083 RVA: 0x00B3A339 File Offset: 0x00B38539
-		// (set) Token: 0x060305C4 RID: 198084 RVA: 0x00B3A341 File Offset: 0x00B38541
+		// Token: 0x17004BA9 RID: 19369
+		// (get) Token: 0x06024D93 RID: 150931 RVA: 0x00A6A405 File Offset: 0x00A68605
+		// (set) Token: 0x06024D94 RID: 150932 RVA: 0x00A6A40D File Offset: 0x00A6860D
 		public CustomMark? Config { get; set; }
 
-		// Token: 0x060305C5 RID: 198085 RVA: 0x00B3A34C File Offset: 0x00B3854C
+		// Token: 0x06024D95 RID: 150933 RVA: 0x00A6A418 File Offset: 0x00A68618
 		[NullableContext(1)]
 		public void Initialize(UUIItem item, UUIItem parent, CustomMark config)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			rootItem.SetRaycastTarget(true);
 		}
 
-		// Token: 0x060305C6 RID: 198086 RVA: 0x00B3A3CC File Offset: 0x00B385CC
+		// Token: 0x06024D96 RID: 150934 RVA: 0x00A6A498 File Offset: 0x00A68698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060305C7 RID: 198087 RVA: 0x00B3A435 File Offset: 0x00B38635
+		// Token: 0x06024D97 RID: 150935 RVA: 0x00A6A501 File Offset: 0x00A68701
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(1).SetToggleGroup(this.ParentMarkUi.GetOwner());
 			base.GetExtendToggle(1).bLockStateOnSelect = true;
 		}
 
-		// Token: 0x060305C8 RID: 198088 RVA: 0x00B3A45B File Offset: 0x00B3865B
+		// Token: 0x06024D98 RID: 150936 RVA: 0x00A6A527 File Offset: 0x00A68727
 		[NullableContext(1)]
 		public void SetOnclick(Action<EToggleState> fn)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			extendToggle.OnStateChange.Add(fn);
 		}
 
-		// Token: 0x060305C9 RID: 198089 RVA: 0x00B3A47A File Offset: 0x00B3867A
+		// Token: 0x06024D99 RID: 150937 RVA: 0x00A6A546 File Offset: 0x00A68746
 		public void SetToggleChecked()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, true, false, false);
 		}
 
-		// Token: 0x060305CA RID: 198090 RVA: 0x00B3A492 File Offset: 0x00B38692
+		// Token: 0x06024D9A RID: 150938 RVA: 0x00A6A55E File Offset: 0x00A6875E
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -90,17 +90,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.CustomMarkPanel
 			extendToggle.OnStateChange.Clear();
 		}
 
-		// Token: 0x0401A02B RID: 106539
+		// Token: 0x040146DF RID: 83679
 		[Nullable(2)]
 		private UUIItem ParentMarkUi;
 
-		// Token: 0x0200AB05 RID: 43781
+		// Token: 0x020094B4 RID: 38068
 		public static class EMarkOptionsComponents
 		{
-			// Token: 0x04033FB4 RID: 212916
+			// Token: 0x0402E734 RID: 190260
 			public const int Icon = 0;
 
-			// Token: 0x04033FB5 RID: 212917
+			// Token: 0x0402E735 RID: 190261
 			public const int Toggle = 1;
 		}
 	}

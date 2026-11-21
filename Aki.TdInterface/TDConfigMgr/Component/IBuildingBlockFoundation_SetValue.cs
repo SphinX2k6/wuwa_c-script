@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000204 RID: 516
+	// Token: 0x0200022D RID: 557
 	public class IBuildingBlockFoundation_SetValue
 	{
-		// Token: 0x04000933 RID: 2355
+		// Token: 0x040009C4 RID: 2500
 		public EItemFoundation Type;
 	}
 }

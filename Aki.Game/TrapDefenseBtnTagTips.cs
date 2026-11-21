@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C20 RID: 11296
+// Token: 0x0200219B RID: 8603
 public class TrapDefenseBtnTagTips : UiPanelBase
 {
-	// Token: 0x06017891 RID: 96401 RVA: 0x005FC200 File Offset: 0x005FA400
+	// Token: 0x060152C3 RID: 86723 RVA: 0x00628C24 File Offset: 0x00626E24
 	[NullableContext(1)]
 	public UniTask Init(UUIItem item)
 	{
@@ -24,12 +24,12 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017892 RID: 96402 RVA: 0x005FC24B File Offset: 0x005FA44B
+	// Token: 0x060152C4 RID: 86724 RVA: 0x00628C6F File Offset: 0x00626E6F
 	protected override void OnBeforeCreate()
 	{
 	}
 
-	// Token: 0x06017893 RID: 96403 RVA: 0x005FC250 File Offset: 0x005FA450
+	// Token: 0x060152C5 RID: 86725 RVA: 0x00628C74 File Offset: 0x00626E74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -47,7 +47,7 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017894 RID: 96404 RVA: 0x005FC2FC File Offset: 0x005FA4FC
+	// Token: 0x060152C6 RID: 86726 RVA: 0x00628D20 File Offset: 0x00626F20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TrapDefenseBtnTagTips.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -58,22 +58,22 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017895 RID: 96405 RVA: 0x005FC33F File Offset: 0x005FA53F
+	// Token: 0x060152C7 RID: 86727 RVA: 0x00628D63 File Offset: 0x00626F63
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06017896 RID: 96406 RVA: 0x005FC341 File Offset: 0x005FA541
+	// Token: 0x060152C8 RID: 86728 RVA: 0x00628D65 File Offset: 0x00626F65
 	protected override void OnBeforeShow()
 	{
 	}
 
-	// Token: 0x06017897 RID: 96407 RVA: 0x005FC343 File Offset: 0x005FA543
+	// Token: 0x060152C9 RID: 86729 RVA: 0x00628D67 File Offset: 0x00626F67
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x06017898 RID: 96408 RVA: 0x005FC348 File Offset: 0x005FA548
+	// Token: 0x060152CA RID: 86730 RVA: 0x00628D6C File Offset: 0x00626F6C
 	public void UpdateQuality(ETrapDefenseBdBuffQuality quality)
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -103,7 +103,7 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		uuiitem3.SetChangeColor(bUseChangeColor3, fcolor);
 	}
 
-	// Token: 0x06017899 RID: 96409 RVA: 0x005FC3C0 File Offset: 0x005FA5C0
+	// Token: 0x060152CB RID: 86731 RVA: 0x00628DE4 File Offset: 0x00626FE4
 	public void UpdateDescForBuffSelect(ETrapDefenseBdBuffQuality quality)
 	{
 		if (quality == ETrapDefenseBdBuffQuality.Purple)
@@ -119,7 +119,7 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		this.SetDesc(ETrapDefenseTextKey.BdBuffSelectGoldBuffToPool.ToString(), Array.Empty<string>());
 	}
 
-	// Token: 0x0601789A RID: 96410 RVA: 0x005FC42C File Offset: 0x005FA62C
+	// Token: 0x060152CC RID: 86732 RVA: 0x00628E50 File Offset: 0x00627050
 	private void ShowBg(int key)
 	{
 		foreach (int num in new List<int>
@@ -136,7 +136,7 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601789B RID: 96411 RVA: 0x005FC49C File Offset: 0x005FA69C
+	// Token: 0x060152CD RID: 86733 RVA: 0x00628EC0 File Offset: 0x006270C0
 	[NullableContext(1)]
 	public void SetDesc(string textKey, params string[] args)
 	{
@@ -144,19 +144,19 @@ public class TrapDefenseBtnTagTips : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(text, textKey, args);
 	}
 
-	// Token: 0x02009213 RID: 37395
+	// Token: 0x02008456 RID: 33878
 	private class EChildType
 	{
-		// Token: 0x0402F407 RID: 193543
+		// Token: 0x0402AB08 RID: 174856
 		public const int ItemBgGold = 0;
 
-		// Token: 0x0402F408 RID: 193544
+		// Token: 0x0402AB09 RID: 174857
 		public const int ItemBgPurple = 1;
 
-		// Token: 0x0402F409 RID: 193545
+		// Token: 0x0402AB0A RID: 174858
 		public const int SpriteArrow = 2;
 
-		// Token: 0x0402F40A RID: 193546
+		// Token: 0x0402AB0B RID: 174859
 		public const int TextDesc = 3;
 	}
 }

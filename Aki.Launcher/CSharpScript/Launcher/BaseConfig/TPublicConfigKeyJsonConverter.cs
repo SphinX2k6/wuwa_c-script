@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000277 RID: 631
+	// Token: 0x0200027E RID: 638
 	public class TPublicConfigKeyJsonConverter : JsonConverter<TPublicConfigKey>
 	{
-		// Token: 0x06000F56 RID: 3926 RVA: 0x000598DC File Offset: 0x00057ADC
+		// Token: 0x06000FA1 RID: 4001 RVA: 0x0005C880 File Offset: 0x0005AA80
 		public override TPublicConfigKey Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return TPublicConfigKeyExtensions.FromString(@string);
 		}
 
-		// Token: 0x06000F57 RID: 3927 RVA: 0x00059900 File Offset: 0x00057B00
+		// Token: 0x06000FA2 RID: 4002 RVA: 0x0005C8A4 File Offset: 0x0005AAA4
 		public override void Write(Utf8JsonWriter writer, TPublicConfigKey value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

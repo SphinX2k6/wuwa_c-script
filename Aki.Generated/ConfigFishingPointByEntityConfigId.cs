@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002E2 RID: 738
+	// Token: 0x020002F7 RID: 759
 	public class ConfigFishingPointByEntityConfigId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001151 RID: 4433 RVA: 0x000BB57D File Offset: 0x000B977D
+		// Token: 0x060011CF RID: 4559 RVA: 0x000C1A89 File Offset: 0x000BFC89
 		static ConfigFishingPointByEntityConfigId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingPointByEntityConfigId.CreateStaticDefaultValue), new Action(ConfigFishingPointByEntityConfigId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001152 RID: 4434 RVA: 0x000BB59C File Offset: 0x000B979C
+		// Token: 0x060011D0 RID: 4560 RVA: 0x000C1AA8 File Offset: 0x000BFCA8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingPointByEntityConfigId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001153 RID: 4435 RVA: 0x000BB61B File Offset: 0x000B981B
+		// Token: 0x060011D1 RID: 4561 RVA: 0x000C1B27 File Offset: 0x000BFD27
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingPointByEntityConfigId.LogPair = null;
 			ConfigFishingPointByEntityConfigId.HandleId = 0;
 		}
 
-		// Token: 0x06001154 RID: 4436 RVA: 0x000BB629 File Offset: 0x000B9829
+		// Token: 0x060011D2 RID: 4562 RVA: 0x000C1B35 File Offset: 0x000BFD35
 		public static void Init()
 		{
 			ConfigFishingPointByEntityConfigId.HandleId = ConfigCommon.InitDataStatement(ConfigFishingPointByEntityConfigId.HandleId, "db_fishing.db", "select BinData from `FishingPoint` where EntityConfigId=?");
 		}
 
-		// Token: 0x06001155 RID: 4437 RVA: 0x000BB644 File Offset: 0x000B9844
+		// Token: 0x060011D3 RID: 4563 RVA: 0x000C1B50 File Offset: 0x000BFD50
 		public static FishingPoint? GetConfig(int p0EntityConfigId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingPointByEntityConfigId.HandleId, ConfigFishingPointByEntityConfigId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingPoint?(rootAsFishingPoint);
 		}
 
-		// Token: 0x04001412 RID: 5138
+		// Token: 0x040014A5 RID: 5285
 		private const string DB = "db_fishing.db";
 
-		// Token: 0x04001413 RID: 5139
+		// Token: 0x040014A6 RID: 5286
 		private const string FILE = "b.捕鱼相关.xlsx";
 
-		// Token: 0x04001414 RID: 5140
+		// Token: 0x040014A7 RID: 5287
 		private const string TABLE = "FishingPoint";
 
-		// Token: 0x04001415 RID: 5141
+		// Token: 0x040014A8 RID: 5288
 		private const string COMMAND = "select BinData from `FishingPoint` where EntityConfigId=?";
 
-		// Token: 0x04001416 RID: 5142
+		// Token: 0x040014A9 RID: 5289
 		private const string KEY_PREFIX = "FishingPointByEntityConfigId";
 
-		// Token: 0x04001417 RID: 5143
+		// Token: 0x040014AA RID: 5290
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001418 RID: 5144
+		// Token: 0x040014AB RID: 5291
 		private static int HandleId;
 	}
 }

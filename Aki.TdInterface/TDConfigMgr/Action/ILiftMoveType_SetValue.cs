@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B81 RID: 7041
+	// Token: 0x02001D2E RID: 7470
 	public class ILiftMoveType_SetValue
 	{
-		// Token: 0x04005C26 RID: 23590
+		// Token: 0x040060BF RID: 24767
 		public ELiftMoveType Type;
 	}
 }

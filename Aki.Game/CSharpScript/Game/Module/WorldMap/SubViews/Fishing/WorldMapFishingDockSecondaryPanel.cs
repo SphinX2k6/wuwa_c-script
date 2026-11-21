@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 {
-	// Token: 0x02004824 RID: 18468
+	// Token: 0x02003755 RID: 14165
 	public class WorldMapFishingDockSecondaryPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030585 RID: 198021 RVA: 0x00B38D2F File Offset: 0x00B36F2F
+		// Token: 0x06024D55 RID: 150869 RVA: 0x00A68DFB File Offset: 0x00A66FFB
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030586 RID: 198022 RVA: 0x00B38D38 File Offset: 0x00B36F38
+		// Token: 0x06024D56 RID: 150870 RVA: 0x00A68E04 File Offset: 0x00A67004
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06030587 RID: 198023 RVA: 0x00B38DB4 File Offset: 0x00B36FB4
+		// Token: 0x06024D57 RID: 150871 RVA: 0x00A68E80 File Offset: 0x00A67080
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}
 		}
 
-		// Token: 0x06030588 RID: 198024 RVA: 0x00B38E1C File Offset: 0x00B3701C
+		// Token: 0x06024D58 RID: 150872 RVA: 0x00A68EE8 File Offset: 0x00A670E8
 		private void UpdateConfirmButton()
 		{
 			if (FishingModel.Instance.IsOnShipVehicle())
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			WorldMapSecondaryUiLayoutHelper.UpdateConfirmButtonTextWithFastMoveStyle(this.LayoutContext);
 		}
 
-		// Token: 0x06030589 RID: 198025 RVA: 0x00B38E41 File Offset: 0x00B37041
+		// Token: 0x06024D59 RID: 150873 RVA: 0x00A68F0D File Offset: 0x00A6710D
 		protected override void OnConfirmBtnClick(int index)
 		{
 			if (FishingModel.Instance.IsOnShipVehicle())
@@ -87,10 +87,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			this.HandleTeleport();
 		}
 
-		// Token: 0x0200AAF9 RID: 43769
+		// Token: 0x020094A8 RID: 38056
 		public static class EComponents
 		{
-			// Token: 0x04033F98 RID: 212888
+			// Token: 0x0402E718 RID: 190232
 			public const int FishingDock = 0;
 		}
 	}

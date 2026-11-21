@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001684 RID: 5764
+	// Token: 0x020017F9 RID: 6137
 	public enum ERangeCheckType
 	{
-		// Token: 0x04004D42 RID: 19778
+		// Token: 0x0400514D RID: 20813
 		Cone
 	}
 }

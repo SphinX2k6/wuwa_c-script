@@ -8,35 +8,35 @@ using CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x0200476E RID: 18286
+	// Token: 0x0200369F RID: 13983
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameplayEntityLinkService : IGameplayEntityLinkService
 	{
-		// Token: 0x0602FCDC RID: 195804 RVA: 0x00B133B1 File Offset: 0x00B115B1
+		// Token: 0x060244A6 RID: 148646 RVA: 0x00A43371 File Offset: 0x00A41571
 		public GameplayEntityLinkService(WuWaGoGameData gameData)
 		{
 		}
 
-		// Token: 0x0602FCDD RID: 195805 RVA: 0x00B133CB File Offset: 0x00B115CB
+		// Token: 0x060244A7 RID: 148647 RVA: 0x00A4338B File Offset: 0x00A4158B
 		public IReadOnlyList<int> GetLinkedGroupPbDataIds(int sourcePbDataId)
 		{
 			return this.<gameData>P.GetLinkedGameplayEntityGroupPbDataIds(sourcePbDataId);
 		}
 
-		// Token: 0x0602FCDE RID: 195806 RVA: 0x00B133D9 File Offset: 0x00B115D9
+		// Token: 0x060244A8 RID: 148648 RVA: 0x00A43399 File Offset: 0x00A41599
 		public int GetLinkedGroupRootPbDataId(int sourcePbDataId)
 		{
 			return this.<gameData>P.GetLinkedGameplayEntityGroupRootPbDataId(sourcePbDataId);
 		}
 
-		// Token: 0x0602FCDF RID: 195807 RVA: 0x00B133E7 File Offset: 0x00B115E7
+		// Token: 0x060244A9 RID: 148649 RVA: 0x00A433A7 File Offset: 0x00A415A7
 		public IReadOnlyList<ActionInfo> FilterLinkedActionList(int sourcePbDataId, IReadOnlyList<ActionInfo> actionList)
 		{
 			return this.<gameData>P.FilterLinkedGameplayEntityActionList(sourcePbDataId, actionList);
 		}
 
-		// Token: 0x0602FCE0 RID: 195808 RVA: 0x00B133F8 File Offset: 0x00B115F8
+		// Token: 0x060244AA RID: 148650 RVA: 0x00A433B8 File Offset: 0x00A415B8
 		public void SyncLinkedEntityState(int sourcePbDataId, EGameplayEntityState targetState)
 		{
 			foreach (int num in this.GetLinkedGroupPbDataIds(sourcePbDataId))
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FCE1 RID: 195809 RVA: 0x00B13488 File Offset: 0x00B11688
+		// Token: 0x060244AB RID: 148651 RVA: 0x00A43448 File Offset: 0x00A41648
 		public void OnRollbackRestore()
 		{
 			this.RebuildPressureTriggerGroupPressedState();
 		}
 
-		// Token: 0x0602FCE2 RID: 195810 RVA: 0x00B13490 File Offset: 0x00B11690
+		// Token: 0x060244AC RID: 148652 RVA: 0x00A43450 File Offset: 0x00A41650
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return null;
 		}
 
-		// Token: 0x0602FCE3 RID: 195811 RVA: 0x00B13578 File Offset: 0x00B11778
+		// Token: 0x060244AD RID: 148653 RVA: 0x00A43538 File Offset: 0x00A41738
 		private void RebuildPressureTriggerGroupPressedState()
 		{
 			this.PressureTriggerGroupPressedState.Clear();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FCE4 RID: 195812 RVA: 0x00B13680 File Offset: 0x00B11880
+		// Token: 0x060244AE RID: 148654 RVA: 0x00A43640 File Offset: 0x00A41840
 		private bool IsPressureTriggerGroupPressed(int sourcePbDataId)
 		{
 			foreach (int pbDataId in this.GetLinkedGroupPbDataIds(sourcePbDataId))
@@ -144,11 +144,11 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return false;
 		}
 
-		// Token: 0x04019C9A RID: 105626
+		// Token: 0x0401434A RID: 82762
 		[CompilerGenerated]
 		private WuWaGoGameData <gameData>P = gameData;
 
-		// Token: 0x04019C9B RID: 105627
+		// Token: 0x0401434B RID: 82763
 		private readonly Dictionary<int, bool> PressureTriggerGroupPressedState = new Dictionary<int, bool>();
 	}
 }

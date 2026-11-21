@@ -5,45 +5,45 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057AD RID: 22445
+	// Token: 0x02004784 RID: 18308
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ItemRewardConfig : ConfigBase
 	{
-		// Token: 0x06039072 RID: 233586 RVA: 0x00D8DD8F File Offset: 0x00D8BF8F
+		// Token: 0x0602DF82 RID: 188290 RVA: 0x00CDCB4B File Offset: 0x00CDAD4B
 		public RewardViewFromSource? GetRewardViewFromSourceConfig(int sourceId)
 		{
 			return ConfigRewardViewFromSourceBySourceId.GetConfig(sourceId, true);
 		}
 
-		// Token: 0x06039073 RID: 233587 RVA: 0x00D8DD98 File Offset: 0x00D8BF98
+		// Token: 0x0602DF83 RID: 188291 RVA: 0x00CDCB54 File Offset: 0x00CDAD54
 		public CommonRewardViewDisplay? GetCommonRewardViewDisplayConfig(int configId)
 		{
 			return ConfigCommonRewardViewDisplayById.GetConfig(configId, true);
 		}
 
-		// Token: 0x06039074 RID: 233588 RVA: 0x00D8DDA1 File Offset: 0x00D8BFA1
+		// Token: 0x0602DF84 RID: 188292 RVA: 0x00CDCB5D File Offset: 0x00CDAD5D
 		public CompositeRewardDisplay? GetCompositeRewardViewDisplayConfig(int configId)
 		{
 			return ConfigCompositeRewardDisplayById.GetConfig(configId, true);
 		}
 
-		// Token: 0x06039075 RID: 233589 RVA: 0x00D8DDAA File Offset: 0x00D8BFAA
+		// Token: 0x0602DF85 RID: 188293 RVA: 0x00CDCB66 File Offset: 0x00CDAD66
 		public ExploreRewardDisplay? GetExploreRewardDisplayConfig(int configId)
 		{
 			return ConfigExploreRewardDisplayById.GetConfig(configId, true);
 		}
 
-		// Token: 0x06039076 RID: 233590 RVA: 0x00D8DDB3 File Offset: 0x00D8BFB3
+		// Token: 0x0602DF86 RID: 188294 RVA: 0x00CDCB6F File Offset: 0x00CDAD6F
 		[NullableContext(2)]
 		public IReadOnlyList<RewardViewFromSource> GetAllRewardViewFromSourceConfig()
 		{
 			return ConfigRewardViewFromSourceAll.GetConfigList(true);
 		}
 
-		// Token: 0x170088D8 RID: 35032
-		// (get) Token: 0x06039077 RID: 233591 RVA: 0x00D8DDBB File Offset: 0x00D8BFBB
+		// Token: 0x17005CA0 RID: 23712
+		// (get) Token: 0x0602DF87 RID: 188295 RVA: 0x00CDCB77 File Offset: 0x00CDAD77
 		public static ItemRewardConfig Instance
 		{
 			get
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039078 RID: 233592 RVA: 0x00D8DDC2 File Offset: 0x00D8BFC2
+		// Token: 0x0602DF88 RID: 188296 RVA: 0x00CDCB7E File Offset: 0x00CDAD7E
 		public static ItemRewardConfig GetOrCreateInstance()
 		{
 			if (ItemRewardConfig._Instance == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return ItemRewardConfig._Instance;
 		}
 
-		// Token: 0x06039079 RID: 233593 RVA: 0x00D8DDD6 File Offset: 0x00D8BFD6
+		// Token: 0x0602DF89 RID: 188297 RVA: 0x00CDCB92 File Offset: 0x00CDAD92
 		public static bool CreateInstance()
 		{
 			if (ItemRewardConfig._Instance != null)
@@ -73,24 +73,24 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x0603907A RID: 233594 RVA: 0x00D8DDEC File Offset: 0x00D8BFEC
+		// Token: 0x0602DF8A RID: 188298 RVA: 0x00CDCBA8 File Offset: 0x00CDADA8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603907B RID: 233595 RVA: 0x00D8DDEE File Offset: 0x00D8BFEE
+		// Token: 0x0602DF8B RID: 188299 RVA: 0x00CDCBAA File Offset: 0x00CDADAA
 		public static void ResetStaticDefaultValue()
 		{
 			ItemRewardConfig._Instance = null;
 		}
 
-		// Token: 0x0603907C RID: 233596 RVA: 0x00D8DDF6 File Offset: 0x00D8BFF6
+		// Token: 0x0602DF8C RID: 188300 RVA: 0x00CDCBB2 File Offset: 0x00CDADB2
 		static ItemRewardConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemRewardConfig.CreateStaticDefaultValue), new Action(ItemRewardConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DDFB RID: 122363
+		// Token: 0x04018891 RID: 100497
 		[Nullable(2)]
 		private static ItemRewardConfig _Instance;
 	}

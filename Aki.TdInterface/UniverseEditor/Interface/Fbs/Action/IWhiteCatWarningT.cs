@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007605 RID: 30213
+	// Token: 0x02007E13 RID: 32275
 	public class IWhiteCatWarningT
 	{
-		// Token: 0x1700E582 RID: 58754
-		// (get) Token: 0x0603709C RID: 225436 RVA: 0x007777EB File Offset: 0x007759EB
-		// (set) Token: 0x0603709D RID: 225437 RVA: 0x007777F3 File Offset: 0x007759F3
+		// Token: 0x1700F1C0 RID: 61888
+		// (get) Token: 0x0603A541 RID: 238913 RVA: 0x007DB8E7 File Offset: 0x007D9AE7
+		// (set) Token: 0x0603A542 RID: 238914 RVA: 0x007DB8EF File Offset: 0x007D9AEF
 		public ECommonTipType Type { get; set; }
 
-		// Token: 0x1700E583 RID: 58755
-		// (get) Token: 0x0603709E RID: 225438 RVA: 0x007777FC File Offset: 0x007759FC
-		// (set) Token: 0x0603709F RID: 225439 RVA: 0x00777804 File Offset: 0x00775A04
+		// Token: 0x1700F1C1 RID: 61889
+		// (get) Token: 0x0603A543 RID: 238915 RVA: 0x007DB8F8 File Offset: 0x007D9AF8
+		// (set) Token: 0x0603A544 RID: 238916 RVA: 0x007DB900 File Offset: 0x007D9B00
 		public string WarningText { get; set; }
 
-		// Token: 0x060370A0 RID: 225440 RVA: 0x0077780D File Offset: 0x00775A0D
+		// Token: 0x0603A545 RID: 238917 RVA: 0x007DB909 File Offset: 0x007D9B09
 		public IWhiteCatWarningT()
 		{
 			this.Type = ECommonTipType.ChallengeCondition;

@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 {
-	// Token: 0x02003B12 RID: 15122
+	// Token: 0x020030B4 RID: 12468
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Light/BP_LightsGroup.BP_LightsGroup_C")]
 	[UnrealStructLayout(1152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1145)]
-	public class BP_LightsGroup_C : AActor, IUnrealUObject, IUnrealObject, IInterface_KuroLightBP, IUnrealNativeInterface, IUnrealInterface
+	public class BP_LightsGroup_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602102C RID: 135212 RVA: 0x008E283E File Offset: 0x008E0A3E
+		// Token: 0x0601DF2B RID: 122667 RVA: 0x00906BC2 File Offset: 0x00904DC2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_LightsGroup_C._ClassPtr == IntPtr.Zero)
@@ -23,149 +23,143 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			return BP_LightsGroup_C._ClassPtr;
 		}
 
-		// Token: 0x0602102D RID: 135213 RVA: 0x008E2862 File Offset: 0x008E0A62
-		int IInterface_KuroLightBP.InterfaceOffset()
-		{
-			return BP_LightsGroup_C.__InterfaceOffset_IInterface_KuroLightBP;
-		}
-
-		// Token: 0x0602102E RID: 135214 RVA: 0x008E286C File Offset: 0x008E0A6C
+		// Token: 0x0601DF2C RID: 122668 RVA: 0x00906BE8 File Offset: 0x00904DE8
 		public BP_LightsGroup_C() : this(BuiltinUtils.AllocNativeUObject(BP_LightsGroup_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602102F RID: 135215 RVA: 0x008E2894 File Offset: 0x008E0A94
+		// Token: 0x0601DF2D RID: 122669 RVA: 0x00906C10 File Offset: 0x00904E10
 		[NullableContext(1)]
 		public BP_LightsGroup_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_LightsGroup_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170033DD RID: 13277
-		// (get) Token: 0x06021030 RID: 135216 RVA: 0x008E28C7 File Offset: 0x008E0AC7
-		// (set) Token: 0x06021031 RID: 135217 RVA: 0x008E28DB File Offset: 0x008E0ADB
+		// Token: 0x17003140 RID: 12608
+		// (get) Token: 0x0601DF2E RID: 122670 RVA: 0x00906C43 File Offset: 0x00904E43
+		// (set) Token: 0x0601DF2F RID: 122671 RVA: 0x00906C57 File Offset: 0x00904E57
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_LightsGroup_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_LightsGroup_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_LightsGroup_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_LightsGroup_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x170033DE RID: 13278
-		// (get) Token: 0x06021032 RID: 135218 RVA: 0x008E28F0 File Offset: 0x008E0AF0
-		// (set) Token: 0x06021033 RID: 135219 RVA: 0x008E2900 File Offset: 0x008E0B00
+		// Token: 0x17003141 RID: 12609
+		// (get) Token: 0x0601DF30 RID: 122672 RVA: 0x00906C6C File Offset: 0x00904E6C
+		// (set) Token: 0x0601DF31 RID: 122673 RVA: 0x00906C7C File Offset: 0x00904E7C
 		public unsafe bool IsTick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_IsTick) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_IsTick) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170033DF RID: 13279
-		// (get) Token: 0x06021034 RID: 135220 RVA: 0x008E2911 File Offset: 0x008E0B11
-		// (set) Token: 0x06021035 RID: 135221 RVA: 0x008E2921 File Offset: 0x008E0B21
+		// Token: 0x17003142 RID: 12610
+		// (get) Token: 0x0601DF32 RID: 122674 RVA: 0x00906C8D File Offset: 0x00904E8D
+		// (set) Token: 0x0601DF33 RID: 122675 RVA: 0x00906C9D File Offset: 0x00904E9D
 		public unsafe bool TurnOffOrOn
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_TurnOffOrOn) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_TurnOffOrOn) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170033E0 RID: 13280
-		// (get) Token: 0x06021036 RID: 135222 RVA: 0x008E2932 File Offset: 0x008E0B32
-		// (set) Token: 0x06021037 RID: 135223 RVA: 0x008E2942 File Offset: 0x008E0B42
+		// Token: 0x17003143 RID: 12611
+		// (get) Token: 0x0601DF34 RID: 122676 RVA: 0x00906CAE File Offset: 0x00904EAE
+		// (set) Token: 0x0601DF35 RID: 122677 RVA: 0x00906CBE File Offset: 0x00904EBE
 		public unsafe bool UseSimpleToggle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_UseSimpleToggle) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_UseSimpleToggle) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170033E1 RID: 13281
-		// (get) Token: 0x06021038 RID: 135224 RVA: 0x008E2953 File Offset: 0x008E0B53
-		// (set) Token: 0x06021039 RID: 135225 RVA: 0x008E2963 File Offset: 0x008E0B63
+		// Token: 0x17003144 RID: 12612
+		// (get) Token: 0x0601DF36 RID: 122678 RVA: 0x00906CCF File Offset: 0x00904ECF
+		// (set) Token: 0x0601DF37 RID: 122679 RVA: 0x00906CDF File Offset: 0x00904EDF
 		public unsafe bool UseColorChange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_UseColorChange) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_UseColorChange) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170033E2 RID: 13282
-		// (get) Token: 0x0602103A RID: 135226 RVA: 0x008E2974 File Offset: 0x008E0B74
-		// (set) Token: 0x0602103B RID: 135227 RVA: 0x008E2984 File Offset: 0x008E0B84
+		// Token: 0x17003145 RID: 12613
+		// (get) Token: 0x0601DF38 RID: 122680 RVA: 0x00906CF0 File Offset: 0x00904EF0
+		// (set) Token: 0x0601DF39 RID: 122681 RVA: 0x00906D00 File Offset: 0x00904F00
 		public unsafe float Time
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_Time);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_Time) = value;
 			}
 		}
 
-		// Token: 0x170033E3 RID: 13283
-		// (get) Token: 0x0602103C RID: 135228 RVA: 0x008E2995 File Offset: 0x008E0B95
-		// (set) Token: 0x0602103D RID: 135229 RVA: 0x008E29A5 File Offset: 0x008E0BA5
+		// Token: 0x17003146 RID: 12614
+		// (get) Token: 0x0601DF3A RID: 122682 RVA: 0x00906D11 File Offset: 0x00904F11
+		// (set) Token: 0x0601DF3B RID: 122683 RVA: 0x00906D21 File Offset: 0x00904F21
 		public unsafe float Duration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_Duration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_Duration) = value;
 			}
 		}
 
-		// Token: 0x170033E4 RID: 13284
-		// (get) Token: 0x0602103E RID: 135230 RVA: 0x008E29B6 File Offset: 0x008E0BB6
-		// (set) Token: 0x0602103F RID: 135231 RVA: 0x008E29C6 File Offset: 0x008E0BC6
+		// Token: 0x17003147 RID: 12615
+		// (get) Token: 0x0601DF3C RID: 122684 RVA: 0x00906D32 File Offset: 0x00904F32
+		// (set) Token: 0x0601DF3D RID: 122685 RVA: 0x00906D42 File Offset: 0x00904F42
 		public unsafe float DeltaSeconds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_DeltaSeconds);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_DeltaSeconds) = value;
 			}
 		}
 
-		// Token: 0x170033E5 RID: 13285
-		// (get) Token: 0x06021040 RID: 135232 RVA: 0x008E29D8 File Offset: 0x008E0BD8
-		// (set) Token: 0x06021041 RID: 135233 RVA: 0x008E2A11 File Offset: 0x008E0C11
+		// Token: 0x17003148 RID: 12616
+		// (get) Token: 0x0601DF3E RID: 122686 RVA: 0x00906D54 File Offset: 0x00904F54
+		// (set) Token: 0x0601DF3F RID: 122687 RVA: 0x00906D8D File Offset: 0x00904F8D
 		[Nullable(1)]
 		public TArray<float> LightsIntensity
 		{
@@ -176,7 +170,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 				TArray<float> result;
 				if ((result = this._LightsIntensity) == null)
 				{
-					result = (this._LightsIntensity = new TArray<float>(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_9, this));
+					result = (this._LightsIntensity = new TArray<float>(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_LightsIntensity, this));
 				}
 				return result;
 			}
@@ -187,72 +181,71 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			}
 		}
 
-		// Token: 0x170033E6 RID: 13286
-		// (get) Token: 0x06021042 RID: 135234 RVA: 0x008E2A1F File Offset: 0x008E0C1F
-		// (set) Token: 0x06021043 RID: 135235 RVA: 0x008E2A33 File Offset: 0x008E0C33
+		// Token: 0x17003149 RID: 12617
+		// (get) Token: 0x0601DF40 RID: 122688 RVA: 0x00906D9B File Offset: 0x00904F9B
+		// (set) Token: 0x0601DF41 RID: 122689 RVA: 0x00906DAF File Offset: 0x00904FAF
 		public unsafe FLinearColor ColorOriginal
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_ColorOriginal);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_ColorOriginal) = value;
 			}
 		}
 
-		// Token: 0x170033E7 RID: 13287
-		// (get) Token: 0x06021044 RID: 135236 RVA: 0x008E2A48 File Offset: 0x008E0C48
-		// (set) Token: 0x06021045 RID: 135237 RVA: 0x008E2A5C File Offset: 0x008E0C5C
+		// Token: 0x1700314A RID: 12618
+		// (get) Token: 0x0601DF42 RID: 122690 RVA: 0x00906DC4 File Offset: 0x00904FC4
+		// (set) Token: 0x0601DF43 RID: 122691 RVA: 0x00906DD8 File Offset: 0x00904FD8
 		public unsafe FLinearColor ColorTarget
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_ColorTarget);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_ColorTarget) = value;
 			}
 		}
 
-		// Token: 0x170033E8 RID: 13288
-		// (get) Token: 0x06021046 RID: 135238 RVA: 0x008E2A71 File Offset: 0x008E0C71
-		// (set) Token: 0x06021047 RID: 135239 RVA: 0x008E2A85 File Offset: 0x008E0C85
+		// Token: 0x1700314B RID: 12619
+		// (get) Token: 0x0601DF44 RID: 122692 RVA: 0x00906DED File Offset: 0x00904FED
+		// (set) Token: 0x0601DF45 RID: 122693 RVA: 0x00906E01 File Offset: 0x00905001
 		[Nullable(1)]
 		public unsafe string Test
 		{
 			[NullableContext(1)]
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_LightsGroup_C.__PropertyOffset_12)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_LightsGroup_C.__PropertyOffset_Test)));
 			}
 			[NullableContext(1)]
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_LightsGroup_C.__PropertyOffset_12)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_LightsGroup_C.__PropertyOffset_Test)), value);
 			}
 		}
 
-		// Token: 0x170033E9 RID: 13289
-		// (get) Token: 0x06021048 RID: 135240 RVA: 0x008E2A9A File Offset: 0x008E0C9A
-		// (set) Token: 0x06021049 RID: 135241 RVA: 0x008E2AAA File Offset: 0x008E0CAA
+		// Token: 0x1700314C RID: 12620
+		// (get) Token: 0x0601DF46 RID: 122694 RVA: 0x00906E16 File Offset: 0x00905016
+		// (set) Token: 0x0601DF47 RID: 122695 RVA: 0x00906E26 File Offset: 0x00905026
 		public unsafe bool EnableLightsOnBeginPlay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_EnableLightsOnBeginPlay) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_LightsGroup_C.__PropertyOffset_EnableLightsOnBeginPlay) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602104A RID: 135242 RVA: 0x008E2ABC File Offset: 0x008E0CBC
+		// Token: 0x0601DF48 RID: 122696 RVA: 0x00906E38 File Offset: 0x00905038
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual int GetPlacementSortOrder()
 		{
 			BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams) & -16L;
@@ -261,20 +254,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602104B RID: 135243 RVA: 0x008E2B04 File Offset: 0x008E0D04
+		// Token: 0x0601DF49 RID: 122697 RVA: 0x00906E80 File Offset: 0x00905080
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual int GetPlacementSortOrder_Implementation()
 		{
 			BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_LightsGroup_C.__GetPlacementSortOrder_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_LightsGroup_C.__GetPlacementSortOrder_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__GetPlacementSortOrder_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__GetPlacementSortOrder_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602104C RID: 135244 RVA: 0x008E2B4C File Offset: 0x008E0D4C
+		// Token: 0x0601DF4A RID: 122698 RVA: 0x00906EC8 File Offset: 0x009050C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void LightsColorChange(float ElapsedTime, FLinearColor ColorOriginal, FLinearColor ColorTarget)
 		{
 			BP_LightsGroup_C.__LightsColorChange_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__LightsColorChange_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(BP_LightsGroup_C.__LightsColorChange_FunctionParams) & -16L;
@@ -285,25 +276,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__LightsColorChange_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602104D RID: 135245 RVA: 0x008E2BA3 File Offset: 0x008E0DA3
+		// Token: 0x0601DF4B RID: 122699 RVA: 0x00906F1F File Offset: 0x0090511F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ToggleLightsColorChange()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__ToggleLightsColorChange_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602104E RID: 135246 RVA: 0x008E2BB7 File Offset: 0x008E0DB7
+		// Token: 0x0601DF4C RID: 122700 RVA: 0x00906F33 File Offset: 0x00905133
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void GetLightsIntensity()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__GetLightsIntensity_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602104F RID: 135247 RVA: 0x008E2BCC File Offset: 0x008E0DCC
+		// Token: 0x0601DF4D RID: 122701 RVA: 0x00906F48 File Offset: 0x00905148
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Timer(ref float ElapsedTime)
 		{
 			BP_LightsGroup_C.__Timer_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__Timer_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_LightsGroup_C.__Timer_FunctionParams) & -16L;
@@ -313,9 +301,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			ElapsedTime = ptr->ElapsedTime;
 		}
 
-		// Token: 0x06021050 RID: 135248 RVA: 0x008E2C1C File Offset: 0x008E0E1C
+		// Token: 0x0601DF4E RID: 122702 RVA: 0x00906F98 File Offset: 0x00905198
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void TurnOnLights(float ElapsedTime)
 		{
 			BP_LightsGroup_C.__TurnOnLights_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__TurnOnLights_FunctionParams[(UIntPtr)119] + 15L / (long)sizeof(BP_LightsGroup_C.__TurnOnLights_FunctionParams) & -16L;
@@ -324,9 +311,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__TurnOnLights_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021051 RID: 135249 RVA: 0x008E2C64 File Offset: 0x008E0E64
+		// Token: 0x0601DF4F RID: 122703 RVA: 0x00906FE0 File Offset: 0x009051E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void TurnOffLights(float ElapsedTime)
 		{
 			BP_LightsGroup_C.__TurnOffLights_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__TurnOffLights_FunctionParams[(UIntPtr)111] + 15L / (long)sizeof(BP_LightsGroup_C.__TurnOffLights_FunctionParams) & -16L;
@@ -335,17 +321,15 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__TurnOffLights_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021052 RID: 135250 RVA: 0x008E2CAA File Offset: 0x008E0EAA
+		// Token: 0x0601DF50 RID: 122704 RVA: 0x00907026 File Offset: 0x00905226
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ToggleLightsIntensity()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__ToggleLightsIntensity_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021053 RID: 135251 RVA: 0x008E2CC0 File Offset: 0x008E0EC0
+		// Token: 0x0601DF51 RID: 122705 RVA: 0x0090703C File Offset: 0x0090523C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ToggleLights(bool inEnable)
 		{
 			BP_LightsGroup_C.__ToggleLights_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__ToggleLights_FunctionParams[(UIntPtr)175] + 15L / (long)sizeof(BP_LightsGroup_C.__ToggleLights_FunctionParams) & -16L;
@@ -354,25 +338,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__ToggleLights_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021054 RID: 135252 RVA: 0x008E2D09 File Offset: 0x008E0F09
+		// Token: 0x0601DF52 RID: 122706 RVA: 0x00907085 File Offset: 0x00905285
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021055 RID: 135253 RVA: 0x008E2D1D File Offset: 0x008E0F1D
+		// Token: 0x0601DF53 RID: 122707 RVA: 0x00907099 File Offset: 0x00905299
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021056 RID: 135254 RVA: 0x008E2D34 File Offset: 0x008E0F34
+		// Token: 0x0601DF54 RID: 122708 RVA: 0x009070B0 File Offset: 0x009052B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_LightsGroup_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_LightsGroup_C.__ReceiveTick_FunctionParams) & -16L;
@@ -381,185 +362,181 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Light
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021057 RID: 135255 RVA: 0x008E2D7C File Offset: 0x008E0F7C
+		// Token: 0x0601DF55 RID: 122709 RVA: 0x009070F8 File Offset: 0x009052F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_LightsGroup_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_LightsGroup_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_LightsGroup_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_LightsGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_LightsGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021058 RID: 135256 RVA: 0x008E2DC3 File Offset: 0x008E0FC3
+		// Token: 0x0601DF56 RID: 122710 RVA: 0x0090713E File Offset: 0x0090533E
 		protected BP_LightsGroup_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040100DB RID: 65755
-		internal static int __InterfaceOffset_IInterface_KuroLightBP;
-
-		// Token: 0x040100DC RID: 65756
+		// Token: 0x0400FD20 RID: 64800
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Light/BP_LightsGroup.BP_LightsGroup_C";
 
-		// Token: 0x040100DD RID: 65757
+		// Token: 0x0400FD21 RID: 64801
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040100DE RID: 65758
+		// Token: 0x0400FD22 RID: 64802
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040100DF RID: 65759
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FD23 RID: 64803
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x040100E0 RID: 65760
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FD24 RID: 64804
+		internal static int __PropertyOffset_IsTick;
 
-		// Token: 0x040100E1 RID: 65761
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FD25 RID: 64805
+		internal static int __PropertyOffset_TurnOffOrOn;
 
-		// Token: 0x040100E2 RID: 65762
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FD26 RID: 64806
+		internal static int __PropertyOffset_UseSimpleToggle;
 
-		// Token: 0x040100E3 RID: 65763
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FD27 RID: 64807
+		internal static int __PropertyOffset_UseColorChange;
 
-		// Token: 0x040100E4 RID: 65764
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FD28 RID: 64808
+		internal static int __PropertyOffset_Time;
 
-		// Token: 0x040100E5 RID: 65765
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FD29 RID: 64809
+		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x040100E6 RID: 65766
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FD2A RID: 64810
+		internal static int __PropertyOffset_DeltaSeconds;
 
-		// Token: 0x040100E7 RID: 65767
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FD2B RID: 64811
+		internal static int __PropertyOffset_LightsIntensity;
 
-		// Token: 0x040100E8 RID: 65768
+		// Token: 0x0400FD2C RID: 64812
 		[Nullable(2)]
 		private TArray<float> _LightsIntensity;
 
-		// Token: 0x040100E9 RID: 65769
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FD2D RID: 64813
+		internal static int __PropertyOffset_ColorOriginal;
 
-		// Token: 0x040100EA RID: 65770
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FD2E RID: 64814
+		internal static int __PropertyOffset_ColorTarget;
 
-		// Token: 0x040100EB RID: 65771
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FD2F RID: 64815
+		internal static int __PropertyOffset_Test;
 
-		// Token: 0x040100EC RID: 65772
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FD30 RID: 64816
+		internal static int __PropertyOffset_EnableLightsOnBeginPlay;
 
-		// Token: 0x040100ED RID: 65773
+		// Token: 0x0400FD31 RID: 64817
 		private static IntPtr __GetPlacementSortOrder_NativeFunctionPtr;
 
-		// Token: 0x040100EE RID: 65774
+		// Token: 0x0400FD32 RID: 64818
 		private static IntPtr __LightsColorChange_NativeFunctionPtr;
 
-		// Token: 0x040100EF RID: 65775
+		// Token: 0x0400FD33 RID: 64819
 		private static IntPtr __ToggleLightsColorChange_NativeFunctionPtr;
 
-		// Token: 0x040100F0 RID: 65776
+		// Token: 0x0400FD34 RID: 64820
 		private static IntPtr __GetLightsIntensity_NativeFunctionPtr;
 
-		// Token: 0x040100F1 RID: 65777
+		// Token: 0x0400FD35 RID: 64821
 		private static IntPtr __Timer_NativeFunctionPtr;
 
-		// Token: 0x040100F2 RID: 65778
+		// Token: 0x0400FD36 RID: 64822
 		private static IntPtr __TurnOnLights_NativeFunctionPtr;
 
-		// Token: 0x040100F3 RID: 65779
+		// Token: 0x0400FD37 RID: 64823
 		private static IntPtr __TurnOffLights_NativeFunctionPtr;
 
-		// Token: 0x040100F4 RID: 65780
+		// Token: 0x0400FD38 RID: 64824
 		private static IntPtr __ToggleLightsIntensity_NativeFunctionPtr;
 
-		// Token: 0x040100F5 RID: 65781
+		// Token: 0x0400FD39 RID: 64825
 		private static IntPtr __ToggleLights_NativeFunctionPtr;
 
-		// Token: 0x040100F6 RID: 65782
+		// Token: 0x0400FD3A RID: 64826
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040100F7 RID: 65783
+		// Token: 0x0400FD3B RID: 64827
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009C5A RID: 40026
+		// Token: 0x02008DF1 RID: 36337
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetPlacementSortOrder_FunctionParams
 		{
-			// Token: 0x04031316 RID: 201494
+			// Token: 0x0402CA12 RID: 182802
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02009C5B RID: 40027
+		// Token: 0x02008DF2 RID: 36338
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __LightsColorChange_FunctionParams
 		{
-			// Token: 0x04031317 RID: 201495
+			// Token: 0x0402CA13 RID: 182803
 			[FieldOffset(0)]
 			public float ElapsedTime;
 
-			// Token: 0x04031318 RID: 201496
+			// Token: 0x0402CA14 RID: 182804
 			[FieldOffset(4)]
 			public FLinearColor ColorOriginal;
 
-			// Token: 0x04031319 RID: 201497
+			// Token: 0x0402CA15 RID: 182805
 			[FieldOffset(20)]
 			public FLinearColor ColorTarget;
 		}
 
-		// Token: 0x02009C5C RID: 40028
+		// Token: 0x02008DF3 RID: 36339
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __Timer_FunctionParams
 		{
-			// Token: 0x0403131A RID: 201498
+			// Token: 0x0402CA16 RID: 182806
 			[FieldOffset(0)]
 			public float ElapsedTime;
 		}
 
-		// Token: 0x02009C5D RID: 40029
+		// Token: 0x02008DF4 RID: 36340
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 104)]
 		protected ref struct __TurnOnLights_FunctionParams
 		{
-			// Token: 0x0403131B RID: 201499
+			// Token: 0x0402CA17 RID: 182807
 			[FieldOffset(0)]
 			public float ElapsedTime;
 		}
 
-		// Token: 0x02009C5E RID: 40030
+		// Token: 0x02008DF5 RID: 36341
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 96)]
 		protected ref struct __TurnOffLights_FunctionParams
 		{
-			// Token: 0x0403131C RID: 201500
+			// Token: 0x0402CA18 RID: 182808
 			[FieldOffset(0)]
 			public float ElapsedTime;
 		}
 
-		// Token: 0x02009C5F RID: 40031
+		// Token: 0x02008DF6 RID: 36342
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 160)]
 		protected ref struct __ToggleLights_FunctionParams
 		{
-			// Token: 0x0403131D RID: 201501
+			// Token: 0x0402CA19 RID: 182809
 			[FieldOffset(0)]
 			public bool inEnable;
 		}
 
-		// Token: 0x02009C60 RID: 40032
+		// Token: 0x02008DF7 RID: 36343
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403131E RID: 201502
+			// Token: 0x0402CA1A RID: 182810
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

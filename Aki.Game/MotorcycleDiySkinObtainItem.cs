@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200227F RID: 8831
+// Token: 0x02001763 RID: 5987
 public class MotorcycleDiySkinObtainItem : UiPanelBase
 {
-	// Token: 0x060113EB RID: 70635 RVA: 0x00435838 File Offset: 0x00433A38
+	// Token: 0x0600E881 RID: 59521 RVA: 0x00442444 File Offset: 0x00440644
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class MotorcycleDiySkinObtainItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060113EC RID: 70636 RVA: 0x004358E4 File Offset: 0x00433AE4
+	// Token: 0x0600E882 RID: 59522 RVA: 0x004424F0 File Offset: 0x004406F0
 	[NullableContext(1)]
 	public void Refresh(IList<int> accessIdList)
 	{
@@ -47,7 +47,7 @@ public class MotorcycleDiySkinObtainItem : UiPanelBase
 		this.JumpId = num;
 	}
 
-	// Token: 0x060113ED RID: 70637 RVA: 0x0043599C File Offset: 0x00433B9C
+	// Token: 0x0600E883 RID: 59523 RVA: 0x004425A8 File Offset: 0x004407A8
 	private void OnClickObtain()
 	{
 		if (this.JumpId <= 0)
@@ -62,29 +62,29 @@ public class MotorcycleDiySkinObtainItem : UiPanelBase
 		SkipTaskManager.RunByConfigId(this.JumpId, null);
 	}
 
-	// Token: 0x0400832E RID: 33582
+	// Token: 0x0400846C RID: 33900
 	private int JumpId;
 
-	// Token: 0x0400832F RID: 33583
+	// Token: 0x0400846D RID: 33901
 	[Nullable(2)]
 	public Action OnClickObtainBack;
 
-	// Token: 0x020087C4 RID: 34756
+	// Token: 0x0200794D RID: 31053
 	private class EMotorDiySkinObtainItemComponent
 	{
-		// Token: 0x0402C1F6 RID: 180726
+		// Token: 0x0402750E RID: 161038
 		public const int BtnObtain = 0;
 
-		// Token: 0x0402C1F7 RID: 180727
+		// Token: 0x0402750F RID: 161039
 		public const int HasAccessItem = 1;
 
-		// Token: 0x0402C1F8 RID: 180728
+		// Token: 0x04027510 RID: 161040
 		public const int LockItem = 2;
 
-		// Token: 0x0402C1F9 RID: 180729
+		// Token: 0x04027511 RID: 161041
 		public const int TxtAccess = 3;
 
-		// Token: 0x0402C1FA RID: 180730
+		// Token: 0x04027512 RID: 161042
 		public const int TxtLock = 4;
 	}
 }

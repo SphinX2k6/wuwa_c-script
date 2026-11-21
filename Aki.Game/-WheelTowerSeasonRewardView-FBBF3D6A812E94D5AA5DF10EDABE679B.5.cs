@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200164A RID: 5706
+// Token: 0x02000B02 RID: 2818
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,20 +11,20 @@ using System.Runtime.CompilerServices;
 })]
 internal class <WheelTowerSeasonRewardView>FBBF3D6A812E94D5AA5DF10EDABE679BF50A994B28144B2AF50A6ACDB52EB89EF__TaskGridData : MultiTemplateGridDataBase<ActivityTaskData, WheelTowerSeasonTaskItem>
 {
-	// Token: 0x0600A039 RID: 41017 RVA: 0x002343F5 File Offset: 0x002325F5
+	// Token: 0x06007417 RID: 29719 RVA: 0x0023E231 File Offset: 0x0023C431
 	public <WheelTowerSeasonRewardView>FBBF3D6A812E94D5AA5DF10EDABE679BF50A994B28144B2AF50A6ACDB52EB89EF__TaskGridData(ActivityTaskData data, Action onClickToGet)
 	{
 		base.Data = data;
 		this.OnClickToGet = onClickToGet;
 	}
 
-	// Token: 0x0600A03A RID: 41018 RVA: 0x0023440B File Offset: 0x0023260B
+	// Token: 0x06007418 RID: 29720 RVA: 0x0023E247 File Offset: 0x0023C447
 	public override int GetTemplateIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x0600A03B RID: 41019 RVA: 0x0023440E File Offset: 0x0023260E
+	// Token: 0x06007419 RID: 29721 RVA: 0x0023E24A File Offset: 0x0023C44A
 	public override WheelTowerSeasonTaskItem CreateProxy()
 	{
 		return new WheelTowerSeasonTaskItem
@@ -33,6 +33,6 @@ internal class <WheelTowerSeasonRewardView>FBBF3D6A812E94D5AA5DF10EDABE679BF50A9
 		};
 	}
 
-	// Token: 0x040048FE RID: 18686
+	// Token: 0x040049A4 RID: 18852
 	private readonly Action OnClickToGet;
 }

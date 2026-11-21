@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002108 RID: 8456
+// Token: 0x020015E0 RID: 5600
 [NullableContext(1)]
 [Nullable(0)]
 public class GameInformationClickLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014AE RID: 5294
-	// (get) Token: 0x06010954 RID: 67924 RVA: 0x0040B344 File Offset: 0x00409544
-	// (set) Token: 0x06010955 RID: 67925 RVA: 0x0040B34C File Offset: 0x0040954C
+	// Token: 0x170014DC RID: 5340
+	// (get) Token: 0x0600DDC7 RID: 56775 RVA: 0x00417A78 File Offset: 0x00415C78
+	// (set) Token: 0x0600DDC8 RID: 56776 RVA: 0x00417A80 File Offset: 0x00415C80
 	public override string event_id { get; set; } = "69001";
 }

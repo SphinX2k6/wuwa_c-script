@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003EA RID: 1002
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000443 RID: 1091
 	public class IGravityFlipTeleportConfig
 	{
-		// Token: 0x06001425 RID: 5157 RVA: 0x00040A2C File Offset: 0x0003EC2C
+		// Token: 0x060015BF RID: 5567 RVA: 0x00044774 File Offset: 0x00042974
 		private IGravityFlipTeleportConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001426 RID: 5158 RVA: 0x00040A64 File Offset: 0x0003EC64
+		// Token: 0x060015C0 RID: 5568 RVA: 0x000447AC File Offset: 0x000429AC
 		public static IGravityFlipTeleportConfig Create([Nullable(2)] IGravityFlipTeleportConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001427 RID: 5159 RVA: 0x00040A77 File Offset: 0x0003EC77
+		// Token: 0x060015C1 RID: 5569 RVA: 0x000447BF File Offset: 0x000429BF
 		public static IGravityFlipTeleportConfig CreateFromSetValue([Nullable(2)] IGravityFlipTeleportConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001428 RID: 5160 RVA: 0x00040A8A File Offset: 0x0003EC8A
+		// Token: 0x060015C2 RID: 5570 RVA: 0x000447D2 File Offset: 0x000429D2
 		public IGravityFlipTeleportConfig_SetValue ToSetValue()
 		{
 			return new IGravityFlipTeleportConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000591 RID: 1425
-		// (get) Token: 0x06001429 RID: 5161 RVA: 0x00040AA9 File Offset: 0x0003ECA9
-		// (set) Token: 0x0600142A RID: 5162 RVA: 0x00040AD0 File Offset: 0x0003ECD0
+		// Token: 0x170005F8 RID: 1528
+		// (get) Token: 0x060015C3 RID: 5571 RVA: 0x000447F1 File Offset: 0x000429F1
+		// (set) Token: 0x060015C4 RID: 5572 RVA: 0x00044818 File Offset: 0x00042A18
 		public virtual IGravityDirectionType GravityDirection
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000592 RID: 1426
-		// (get) Token: 0x0600142B RID: 5163 RVA: 0x00040AE0 File Offset: 0x0003ECE0
-		// (set) Token: 0x0600142C RID: 5164 RVA: 0x00040B41 File Offset: 0x0003ED41
+		// Token: 0x170005F9 RID: 1529
+		// (get) Token: 0x060015C5 RID: 5573 RVA: 0x00044828 File Offset: 0x00042A28
+		// (set) Token: 0x060015C6 RID: 5574 RVA: 0x00044889 File Offset: 0x00042A89
 		[Nullable(2)]
 		public virtual VectorInfo SafeLocation
 		{
@@ -119,18 +117,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FE4 RID: 4068
+		// Token: 0x04001106 RID: 4358
 		[Nullable(2)]
 		protected IGravityFlipTeleportConfig FbInstance;
 
-		// Token: 0x04000FE5 RID: 4069
+		// Token: 0x04001107 RID: 4359
 		[Nullable(2)]
 		protected IGravityFlipTeleportConfig_SetValue PocoInterface;
 
-		// Token: 0x04000FE6 RID: 4070
+		// Token: 0x04001108 RID: 4360
 		private VectorInfo _SafeLocationCache;
 
-		// Token: 0x04000FE7 RID: 4071
+		// Token: 0x04001109 RID: 4361
 		private bool _SafeLocationInited;
 	}
 }

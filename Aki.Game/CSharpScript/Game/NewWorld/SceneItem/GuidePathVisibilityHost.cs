@@ -3,37 +3,37 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007166 RID: 29030
+	// Token: 0x0200621A RID: 25114
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class GuidePathVisibilityHost : IGuidePathVisibilityHost
 	{
-		// Token: 0x17009D5B RID: 40283
-		// (get) Token: 0x06046DD5 RID: 290261 RVA: 0x011DF4DB File Offset: 0x011DD6DB
-		// (set) Token: 0x06046DD6 RID: 290262 RVA: 0x011DF4E3 File Offset: 0x011DD6E3
+		// Token: 0x17007206 RID: 29190
+		// (get) Token: 0x0603C621 RID: 247329 RVA: 0x0113AF3B File Offset: 0x0113913B
+		// (set) Token: 0x0603C622 RID: 247330 RVA: 0x0113AF43 File Offset: 0x01139143
 		[RequiredMember]
 		public Action<ISceneItemGuidePathVisibilityProvider, EGuidePathProviderRemovedBehavior?> SetExternalVisibilityProvider { get; set; }
 
-		// Token: 0x17009D5C RID: 40284
-		// (get) Token: 0x06046DD7 RID: 290263 RVA: 0x011DF4EC File Offset: 0x011DD6EC
-		// (set) Token: 0x06046DD8 RID: 290264 RVA: 0x011DF4F4 File Offset: 0x011DD6F4
+		// Token: 0x17007207 RID: 29191
+		// (get) Token: 0x0603C623 RID: 247331 RVA: 0x0113AF4C File Offset: 0x0113914C
+		// (set) Token: 0x0603C624 RID: 247332 RVA: 0x0113AF54 File Offset: 0x01139154
 		[RequiredMember]
 		public Action<ISceneItemGuidePathVisibilityProvider> ClearExternalVisibilityProvider { get; set; }
 
-		// Token: 0x17009D5D RID: 40285
-		// (get) Token: 0x06046DD9 RID: 290265 RVA: 0x011DF4FD File Offset: 0x011DD6FD
-		// (set) Token: 0x06046DDA RID: 290266 RVA: 0x011DF505 File Offset: 0x011DD705
+		// Token: 0x17007208 RID: 29192
+		// (get) Token: 0x0603C625 RID: 247333 RVA: 0x0113AF5D File Offset: 0x0113915D
+		// (set) Token: 0x0603C626 RID: 247334 RVA: 0x0113AF65 File Offset: 0x01139165
 		[RequiredMember]
 		public Action<ISceneItemGuidePathVisibilityProvider> NotifyExternalVisibilityChanged { get; set; }
 
-		// Token: 0x17009D5E RID: 40286
-		// (get) Token: 0x06046DDB RID: 290267 RVA: 0x011DF50E File Offset: 0x011DD70E
-		// (set) Token: 0x06046DDC RID: 290268 RVA: 0x011DF516 File Offset: 0x011DD716
+		// Token: 0x17007209 RID: 29193
+		// (get) Token: 0x0603C627 RID: 247335 RVA: 0x0113AF6E File Offset: 0x0113916E
+		// (set) Token: 0x0603C628 RID: 247336 RVA: 0x0113AF76 File Offset: 0x01139176
 		[RequiredMember]
 		public Func<bool> HasExternalVisibilityProvider { get; set; }
 
-		// Token: 0x06046DDD RID: 290269 RVA: 0x011DF51F File Offset: 0x011DD71F
+		// Token: 0x0603C629 RID: 247337 RVA: 0x0113AF7F File Offset: 0x0113917F
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public GuidePathVisibilityHost()

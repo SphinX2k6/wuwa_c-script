@@ -4,24 +4,24 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001BB1 RID: 7089
+// Token: 0x02001070 RID: 4208
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationEventBridge
 {
-	// Token: 0x0600D36F RID: 54127 RVA: 0x00309A96 File Offset: 0x00307C96
+	// Token: 0x0600A781 RID: 42881 RVA: 0x00314B8A File Offset: 0x00312D8A
 	private static void OnWorldDoneAndCloseLoading()
 	{
 		FormationController.Instance.PreloadFormationUi();
 	}
 
-	// Token: 0x0600D370 RID: 54128 RVA: 0x00309AA2 File Offset: 0x00307CA2
+	// Token: 0x0600A782 RID: 42882 RVA: 0x00314B96 File Offset: 0x00312D96
 	private static void OnLoadingNetDataDone()
 	{
 		FormationNetHandler.GetFormationDataRequest();
 	}
 
-	// Token: 0x0600D371 RID: 54129 RVA: 0x00309AAC File Offset: 0x00307CAC
+	// Token: 0x0600A783 RID: 42883 RVA: 0x00314BA0 File Offset: 0x00312DA0
 	private static void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;
@@ -43,19 +43,19 @@ public class FormationEventBridge
 		}
 	}
 
-	// Token: 0x0600D372 RID: 54130 RVA: 0x00309B1A File Offset: 0x00307D1A
+	// Token: 0x0600A784 RID: 42884 RVA: 0x00314C0E File Offset: 0x00312E0E
 	private static void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		FormationNetHandler.FlushCachedNotify(viewName);
 	}
 
-	// Token: 0x0600D373 RID: 54131 RVA: 0x00309B22 File Offset: 0x00307D22
+	// Token: 0x0600A785 RID: 42885 RVA: 0x00314C16 File Offset: 0x00312E16
 	private static void OnPrewarFormationChanged()
 	{
 		BattleTeamModel.Instance.RefreshAllMultiRoleData();
 	}
 
-	// Token: 0x0600D374 RID: 54132 RVA: 0x00309B30 File Offset: 0x00307D30
+	// Token: 0x0600A786 RID: 42886 RVA: 0x00314C24 File Offset: 0x00312E24
 	private unsafe static void OnPrewarReadyChanged(int playerId, bool ready)
 	{
 		Log instance = Log.Instance;
@@ -69,13 +69,13 @@ public class FormationEventBridge
 		BattleTeamModel.Instance.SetPlayerReady(playerId, ready);
 	}
 
-	// Token: 0x0600D375 RID: 54133 RVA: 0x00309BA6 File Offset: 0x00307DA6
+	// Token: 0x0600A787 RID: 42887 RVA: 0x00314C9A File Offset: 0x00312E9A
 	private static void OnDissolvePrewar()
 	{
 		FormationController.Instance.CloseBattleTeamView();
 	}
 
-	// Token: 0x0600D376 RID: 54134 RVA: 0x00309BB4 File Offset: 0x00307DB4
+	// Token: 0x0600A788 RID: 42888 RVA: 0x00314CA8 File Offset: 0x00312EA8
 	private static void OnRoleLevelUp(int configId, int exp, int level)
 	{
 		FormationEventBridge.UpdateSelfRoleSlot(configId, delegate(BattleRoleData roleData)
@@ -85,7 +85,7 @@ public class FormationEventBridge
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.LevelUp);
 	}
 
-	// Token: 0x0600D377 RID: 54135 RVA: 0x00309BF4 File Offset: 0x00307DF4
+	// Token: 0x0600A789 RID: 42889 RVA: 0x00314CE8 File Offset: 0x00312EE8
 	private static void OnRoleSkinChanged(int configId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(configId, true);
@@ -101,7 +101,7 @@ public class FormationEventBridge
 		EventSystem.Instance.Emit<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, ERefreshRoleSlotReason.SkinChange);
 	}
 
-	// Token: 0x0600D378 RID: 54136 RVA: 0x00309C48 File Offset: 0x00307E48
+	// Token: 0x0600A78A RID: 42890 RVA: 0x00314D3C File Offset: 0x00312F3C
 	public static void RegisterAll()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -178,7 +178,7 @@ public class FormationEventBridge
 		instance9.Add(name9, handle9);
 	}
 
-	// Token: 0x0600D379 RID: 54137 RVA: 0x00309DD8 File Offset: 0x00307FD8
+	// Token: 0x0600A78B RID: 42891 RVA: 0x00314ECC File Offset: 0x003130CC
 	public static void UnregisterAll()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -255,7 +255,7 @@ public class FormationEventBridge
 		instance9.Remove(name9, handle9);
 	}
 
-	// Token: 0x0600D37A RID: 54138 RVA: 0x00309F68 File Offset: 0x00308168
+	// Token: 0x0600A78C RID: 42892 RVA: 0x0031505C File Offset: 0x0031325C
 	private static void UpdateSelfRoleSlot(int configId, Action<BattleRoleData> mutator)
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -275,19 +275,19 @@ public class FormationEventBridge
 		}
 	}
 
-	// Token: 0x02008175 RID: 33141
+	// Token: 0x02007303 RID: 29443
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402A3E6 RID: 173030
+		// Token: 0x0402571A RID: 153370
 		[Nullable(0)]
 		public static Action <0>__OnWorldDoneAndCloseLoading;
 
-		// Token: 0x0402A3E7 RID: 173031
+		// Token: 0x0402571B RID: 153371
 		[Nullable(0)]
 		public static Action <1>__OnLoadingNetDataDone;
 
-		// Token: 0x0402A3E8 RID: 173032
+		// Token: 0x0402571C RID: 153372
 		[Nullable(new byte[]
 		{
 			0,
@@ -296,27 +296,27 @@ public class FormationEventBridge
 		})]
 		public static Action<EntityHandle, EntityHandle> <2>__OnChangeRole;
 
-		// Token: 0x0402A3E9 RID: 173033
+		// Token: 0x0402571D RID: 153373
 		[Nullable(0)]
 		public static Action<EUiViewName, int> <3>__OnCloseView;
 
-		// Token: 0x0402A3EA RID: 173034
+		// Token: 0x0402571E RID: 153374
 		[Nullable(0)]
 		public static Action <4>__OnPrewarFormationChanged;
 
-		// Token: 0x0402A3EB RID: 173035
+		// Token: 0x0402571F RID: 153375
 		[Nullable(0)]
 		public static Action<int, bool> <5>__OnPrewarReadyChanged;
 
-		// Token: 0x0402A3EC RID: 173036
+		// Token: 0x04025720 RID: 153376
 		[Nullable(0)]
 		public static Action <6>__OnDissolvePrewar;
 
-		// Token: 0x0402A3ED RID: 173037
+		// Token: 0x04025721 RID: 153377
 		[Nullable(0)]
 		public static Action<int, int, int> <7>__OnRoleLevelUp;
 
-		// Token: 0x0402A3EE RID: 173038
+		// Token: 0x04025722 RID: 153378
 		[Nullable(0)]
 		public static Action<int> <8>__OnRoleSkinChanged;
 	}

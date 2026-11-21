@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D7F RID: 15743
+	// Token: 0x02004196 RID: 16790
 	public struct ICheckTrapDefenseEventCondition : IFlatbufferObject
 	{
-		// Token: 0x17006C06 RID: 27654
-		// (get) Token: 0x06015CB9 RID: 89273 RVA: 0x003244E0 File Offset: 0x003226E0
+		// Token: 0x170071C0 RID: 29120
+		// (get) Token: 0x060171F1 RID: 94705 RVA: 0x0034B758 File Offset: 0x00349958
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CBA RID: 89274 RVA: 0x003244ED File Offset: 0x003226ED
+		// Token: 0x060171F2 RID: 94706 RVA: 0x0034B765 File Offset: 0x00349965
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015CBB RID: 89275 RVA: 0x003244F4 File Offset: 0x003226F4
+		// Token: 0x060171F3 RID: 94707 RVA: 0x0034B76C File Offset: 0x0034996C
 		public static ICheckTrapDefenseEventCondition GetRootAsICheckTrapDefenseEventCondition(ByteBuffer _bb)
 		{
 			return ICheckTrapDefenseEventCondition.GetRootAsICheckTrapDefenseEventCondition(_bb, default(ICheckTrapDefenseEventCondition));
 		}
 
-		// Token: 0x06015CBC RID: 89276 RVA: 0x00324510 File Offset: 0x00322710
+		// Token: 0x060171F4 RID: 94708 RVA: 0x0034B788 File Offset: 0x00349988
 		public static ICheckTrapDefenseEventCondition GetRootAsICheckTrapDefenseEventCondition(ByteBuffer _bb, ICheckTrapDefenseEventCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015CBD RID: 89277 RVA: 0x0032452D File Offset: 0x0032272D
+		// Token: 0x060171F5 RID: 94709 RVA: 0x0034B7A5 File Offset: 0x003499A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015CBE RID: 89278 RVA: 0x0032453C File Offset: 0x0032273C
+		// Token: 0x060171F6 RID: 94710 RVA: 0x0034B7B4 File Offset: 0x003499B4
 		public ICheckTrapDefenseEventCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C07 RID: 27655
-		// (get) Token: 0x06015CBF RID: 89279 RVA: 0x0032454C File Offset: 0x0032274C
+		// Token: 0x170071C1 RID: 29121
+		// (get) Token: 0x060171F7 RID: 94711 RVA: 0x0034B7C4 File Offset: 0x003499C4
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C08 RID: 27656
-		// (get) Token: 0x06015CC0 RID: 89280 RVA: 0x00324588 File Offset: 0x00322788
+		// Token: 0x170071C2 RID: 29122
+		// (get) Token: 0x060171F8 RID: 94712 RVA: 0x0034B800 File Offset: 0x00349A00
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C09 RID: 27657
-		// (get) Token: 0x06015CC1 RID: 89281 RVA: 0x003245E8 File Offset: 0x003227E8
+		// Token: 0x170071C3 RID: 29123
+		// (get) Token: 0x060171F9 RID: 94713 RVA: 0x0034B860 File Offset: 0x00349A60
 		public TCheckTrapDefenseEvent ConfigType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CC2 RID: 89282 RVA: 0x00324624 File Offset: 0x00322824
+		// Token: 0x060171FA RID: 94714 RVA: 0x0034B89C File Offset: 0x00349A9C
 		public TTable? Config<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06015CC3 RID: 89283 RVA: 0x0032466C File Offset: 0x0032286C
+		// Token: 0x060171FB RID: 94715 RVA: 0x0034B8E4 File Offset: 0x00349AE4
 		public ICheckTrapDefenseBdBuffQualityUp ConfigAsICheckTrapDefenseBdBuffQualityUp()
 		{
 			return this.Config<ICheckTrapDefenseBdBuffQualityUp>().Value;
 		}
 
-		// Token: 0x06015CC4 RID: 89284 RVA: 0x00324688 File Offset: 0x00322888
+		// Token: 0x060171FC RID: 94716 RVA: 0x0034B900 File Offset: 0x00349B00
 		public ICheckTrapDefenseEventMonsterKilled ConfigAsICheckTrapDefenseEventMonsterKilled()
 		{
 			return this.Config<ICheckTrapDefenseEventMonsterKilled>().Value;
 		}
 
-		// Token: 0x06015CC5 RID: 89285 RVA: 0x003246A3 File Offset: 0x003228A3
+		// Token: 0x060171FD RID: 94717 RVA: 0x0034B91B File Offset: 0x00349B1B
 		public static Offset<ICheckTrapDefenseEventCondition> CreateICheckTrapDefenseEventCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TCheckTrapDefenseEvent Config_type = TCheckTrapDefenseEvent.NONE, int ConfigOffset = 0)
 		{
 			builder.StartTable(4);
@@ -127,43 +127,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTrapDefenseEventCondition.EndICheckTrapDefenseEventCondition(builder);
 		}
 
-		// Token: 0x06015CC6 RID: 89286 RVA: 0x003246CF File Offset: 0x003228CF
+		// Token: 0x060171FE RID: 94718 RVA: 0x0034B947 File Offset: 0x00349B47
 		public static void StartICheckTrapDefenseEventCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015CC7 RID: 89287 RVA: 0x003246D8 File Offset: 0x003228D8
+		// Token: 0x060171FF RID: 94719 RVA: 0x0034B950 File Offset: 0x00349B50
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015CC8 RID: 89288 RVA: 0x003246E3 File Offset: 0x003228E3
+		// Token: 0x06017200 RID: 94720 RVA: 0x0034B95B File Offset: 0x00349B5B
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015CC9 RID: 89289 RVA: 0x003246F3 File Offset: 0x003228F3
+		// Token: 0x06017201 RID: 94721 RVA: 0x0034B96B File Offset: 0x00349B6B
 		public static void AddConfigType(FlatBufferBuilder builder, TCheckTrapDefenseEvent configType)
 		{
 			builder.AddByte(2, (byte)configType, 0);
 		}
 
-		// Token: 0x06015CCA RID: 89290 RVA: 0x003246FE File Offset: 0x003228FE
+		// Token: 0x06017202 RID: 94722 RVA: 0x0034B976 File Offset: 0x00349B76
 		public static void AddConfig(FlatBufferBuilder builder, int configOffset)
 		{
 			builder.AddOffset(3, configOffset, 0);
 		}
 
-		// Token: 0x06015CCB RID: 89291 RVA: 0x00324709 File Offset: 0x00322909
+		// Token: 0x06017203 RID: 94723 RVA: 0x0034B981 File Offset: 0x00349B81
 		public static Offset<ICheckTrapDefenseEventCondition> EndICheckTrapDefenseEventCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckTrapDefenseEventCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06015CCC RID: 89292 RVA: 0x00324718 File Offset: 0x00322918
+		// Token: 0x06017204 RID: 94724 RVA: 0x0034B990 File Offset: 0x00349B90
 		public ICheckTrapDefenseEventConditionT UnPack()
 		{
 			ICheckTrapDefenseEventConditionT checkTrapDefenseEventConditionT = new ICheckTrapDefenseEventConditionT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkTrapDefenseEventConditionT;
 		}
 
-		// Token: 0x06015CCD RID: 89293 RVA: 0x00324734 File Offset: 0x00322934
+		// Token: 0x06017205 RID: 94725 RVA: 0x0034B9AC File Offset: 0x00349BAC
 		public void UnPackTo(ICheckTrapDefenseEventConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.Config.Value = ((this.Config<ICheckTrapDefenseEventMonsterKilled>() != null) ? this.Config<ICheckTrapDefenseEventMonsterKilled>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06015CCE RID: 89294 RVA: 0x00324818 File Offset: 0x00322A18
+		// Token: 0x06017206 RID: 94726 RVA: 0x0034BA90 File Offset: 0x00349C90
 		public static Offset<ICheckTrapDefenseEventCondition> Pack(FlatBufferBuilder builder, ICheckTrapDefenseEventConditionT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTrapDefenseEventCondition.CreateICheckTrapDefenseEventCondition(builder, _o.Type, preConditionsOffset, config_type, configOffset);
 		}
 
-		// Token: 0x0400B66A RID: 46698
+		// Token: 0x0400C017 RID: 49175
 		private Table __p;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020019D8 RID: 6616
+// Token: 0x02000E97 RID: 3735
 public enum EConfirmBoxToggleType
 {
-	// Token: 0x040058F5 RID: 22773
+	// Token: 0x040059C4 RID: 22980
 	None,
-	// Token: 0x040058F6 RID: 22774
+	// Token: 0x040059C5 RID: 22981
 	NotShowAgainPerLogin,
-	// Token: 0x040058F7 RID: 22775
+	// Token: 0x040059C6 RID: 22982
 	UploadLog
 }

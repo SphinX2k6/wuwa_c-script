@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020F7 RID: 8439
+	// Token: 0x02002358 RID: 9048
 	public class OverrideAbpAnimScheme_SetValue
 	{
-		// Token: 0x04006F34 RID: 28468
-		[Nullable(1)]
+		// Token: 0x04007568 RID: 30056
 		public List<IOverrideAbpAnimSchemeConfig> OverrideConfigs;
 	}
 }

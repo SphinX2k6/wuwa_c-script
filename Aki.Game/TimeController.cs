@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Battle;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using Google.Protobuf;
-using UnrealEngine;
 
-// Token: 0x020034E8 RID: 13544
+// Token: 0x02002A5C RID: 10844
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class TimeController : ControllerBase
 {
-	// Token: 0x0601DADB RID: 121563 RVA: 0x008502C8 File Offset: 0x0084E4C8
+	// Token: 0x0601B7E9 RID: 112617 RVA: 0x00878640 File Offset: 0x00876840
 	protected override bool OnInit()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -31,12 +29,12 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DADC RID: 121564 RVA: 0x0085031D File Offset: 0x0084E51D
+	// Token: 0x0601B7EA RID: 112618 RVA: 0x00878695 File Offset: 0x00876895
 	protected override void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x0601DADD RID: 121565 RVA: 0x00850320 File Offset: 0x0084E520
+	// Token: 0x0601B7EB RID: 112619 RVA: 0x00878698 File Offset: 0x00876898
 	protected override bool OnClear()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -56,7 +54,7 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DADE RID: 121566 RVA: 0x00850398 File Offset: 0x0084E598
+	// Token: 0x0601B7EC RID: 112620 RVA: 0x00878710 File Offset: 0x00876910
 	private static void OnWorldDone()
 	{
 		TimeController instance = TimeController.Instance;
@@ -69,7 +67,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DADF RID: 121567 RVA: 0x008503F0 File Offset: 0x0084E5F0
+	// Token: 0x0601B7ED RID: 112621 RVA: 0x00878768 File Offset: 0x00876968
 	public unsafe void TimeCheck(long lastClientTime, long serverTime, long serverStopTime, long flowTime, long combatTime)
 	{
 		double predictedServerCombatTimeOffset = this._predictedServerCombatTimeOffset;
@@ -94,7 +92,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAE0 RID: 121568 RVA: 0x00850558 File Offset: 0x0084E758
+	// Token: 0x0601B7EE RID: 112622 RVA: 0x008788D0 File Offset: 0x00876AD0
 	[NullableContext(2)]
 	public void TimeCheckNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -107,7 +105,7 @@ public class TimeController : ControllerBase
 		this.TimeCheck(clientTime, serverTime, sceneStopTime, flowTime, serverStopTime);
 	}
 
-	// Token: 0x0601DAE1 RID: 121569 RVA: 0x0085059C File Offset: 0x0084E79C
+	// Token: 0x0601B7EF RID: 112623 RVA: 0x00878914 File Offset: 0x00876B14
 	public void TimeCheckRequest()
 	{
 		if (!Net.Instance.IsServerConnected())
@@ -116,19 +114,12 @@ public class TimeController : ControllerBase
 		}
 		TimeCheckRequest timeCheckRequest = new TimeCheckRequest();
 		timeCheckRequest.ClientTime = (long)Time.Instance.WorldTime;
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			timeCheckRequest.Dilation = Time.Instance.TimeDilation * UGameplayStatics.GetGlobalTimeDilation(GlobalData.World);
-		}
-		else
-		{
-			timeCheckRequest.Dilation = Time.Instance.TimeDilation;
-		}
+		timeCheckRequest.Dilation = Time.Instance.TimeDilation;
 		timeCheckRequest.RDilation = Time.Instance.FlowTimeDilation;
 		Net.Instance.Call(ERequestMessageId.TimeCheckRequest, timeCheckRequest, new Action<IMessage, Net.CallbackStatus>(this.<TimeCheckRequest>g__Response|14_0), 0);
 	}
 
-	// Token: 0x0601DAE2 RID: 121570 RVA: 0x00850633 File Offset: 0x0084E833
+	// Token: 0x0601B7F0 RID: 112624 RVA: 0x00878982 File Offset: 0x00876B82
 	private static float NormalizeTimeScale(float timeScale)
 	{
 		if (timeScale <= 0f)
@@ -138,7 +129,7 @@ public class TimeController : ControllerBase
 		return MathUtils.Instance.Clamp(timeScale, 0f, 1f);
 	}
 
-	// Token: 0x0601DAE3 RID: 121571 RVA: 0x00850658 File Offset: 0x0084E858
+	// Token: 0x0601B7F1 RID: 112625 RVA: 0x008789A8 File Offset: 0x00876BA8
 	private static float CalcFinalTimeScale(IEnumerable<TimeStopInfo> list)
 	{
 		float num = 1f;
@@ -159,7 +150,7 @@ public class TimeController : ControllerBase
 		return num;
 	}
 
-	// Token: 0x0601DAE4 RID: 121572 RVA: 0x008506D4 File Offset: 0x0084E8D4
+	// Token: 0x0601B7F2 RID: 112626 RVA: 0x00878A24 File Offset: 0x00876C24
 	public bool AddLock(int instigatorId, bool stopMove, float timeScale = 0f)
 	{
 		if (this._instigatorList.ContainsKey(instigatorId))
@@ -185,7 +176,7 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAE5 RID: 121573 RVA: 0x0085075E File Offset: 0x0084E95E
+	// Token: 0x0601B7F3 RID: 112627 RVA: 0x00878AAE File Offset: 0x00876CAE
 	public bool RemoveLock(int instigatorId)
 	{
 		if (!this._instigatorList.Remove(instigatorId))
@@ -205,7 +196,7 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAE6 RID: 121574 RVA: 0x008507A0 File Offset: 0x0084E9A0
+	// Token: 0x0601B7F4 RID: 112628 RVA: 0x00878AF0 File Offset: 0x00876CF0
 	private void RefreshStopState()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -244,7 +235,7 @@ public class TimeController : ControllerBase
 		this.RecoverInner();
 	}
 
-	// Token: 0x0601DAE7 RID: 121575 RVA: 0x008508D4 File Offset: 0x0084EAD4
+	// Token: 0x0601B7F5 RID: 112629 RVA: 0x00878C24 File Offset: 0x00876E24
 	private bool IsFinalStopMove()
 	{
 		bool result = true;
@@ -262,7 +253,7 @@ public class TimeController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601DAE8 RID: 121576 RVA: 0x00850934 File Offset: 0x0084EB34
+	// Token: 0x0601B7F6 RID: 112630 RVA: 0x00878C84 File Offset: 0x00876E84
 	private void StopInner(bool stopMove, float stopScale)
 	{
 		List<EntityHandle> list = new List<EntityHandle>();
@@ -330,7 +321,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAE9 RID: 121577 RVA: 0x00850A84 File Offset: 0x0084EC84
+	// Token: 0x0601B7F7 RID: 112631 RVA: 0x00878DD4 File Offset: 0x00876FD4
 	private void RecoverInner()
 	{
 		List<EntityHandle> list = new List<EntityHandle>(this._timeStopAnimEntitySet);
@@ -344,7 +335,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAEA RID: 121578 RVA: 0x00850AC8 File Offset: 0x0084ECC8
+	// Token: 0x0601B7F8 RID: 112632 RVA: 0x00878E18 File Offset: 0x00877018
 	private void StopEntityInner(EntityHandle handle, bool stopMove, float stopScale)
 	{
 		this._timeStopAnimEntitySet.Add(handle);
@@ -387,7 +378,7 @@ public class TimeController : ControllerBase
 		BulletUtil.SetCharacterBulletTimeScale(handle.Id, stopScale, orCreateBulletScaleHandleMap, ETimeScaleSourceType.InnerPauseLock);
 	}
 
-	// Token: 0x0601DAEB RID: 121579 RVA: 0x00850BB4 File Offset: 0x0084EDB4
+	// Token: 0x0601B7F9 RID: 112633 RVA: 0x00878F04 File Offset: 0x00877104
 	private void RecoverEntityInner(EntityHandle handle)
 	{
 		this._timeStopAnimEntitySet.Remove(handle);
@@ -411,7 +402,7 @@ public class TimeController : ControllerBase
 		this.RemoveCharacterBulletTimeScale(handle.Id);
 	}
 
-	// Token: 0x0601DAEC RID: 121580 RVA: 0x00850C3C File Offset: 0x0084EE3C
+	// Token: 0x0601B7FA RID: 112634 RVA: 0x00878F8C File Offset: 0x0087718C
 	private Dictionary<int, int> GetOrCreateBulletScaleHandleMap(int entityId)
 	{
 		Dictionary<int, int> dictionary;
@@ -423,7 +414,7 @@ public class TimeController : ControllerBase
 		return dictionary;
 	}
 
-	// Token: 0x0601DAED RID: 121581 RVA: 0x00850C70 File Offset: 0x0084EE70
+	// Token: 0x0601B7FB RID: 112635 RVA: 0x00878FC0 File Offset: 0x008771C0
 	private void RemoveCharacterBulletTimeScale(int entityId)
 	{
 		Dictionary<int, int> handleMap;
@@ -435,7 +426,7 @@ public class TimeController : ControllerBase
 		this._timeStopBulletScaleHandleMap.Remove(entityId);
 	}
 
-	// Token: 0x0601DAEE RID: 121582 RVA: 0x00850CA4 File Offset: 0x0084EEA4
+	// Token: 0x0601B7FC RID: 112636 RVA: 0x00878FF4 File Offset: 0x008771F4
 	private void OnCharBornFinished(int entityId)
 	{
 		if (this._stopState)
@@ -448,7 +439,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAEF RID: 121583 RVA: 0x00850CE4 File Offset: 0x0084EEE4
+	// Token: 0x0601B7FD RID: 112637 RVA: 0x00879034 File Offset: 0x00877234
 	public bool AddTimeStopRequestLock(int instigatorId, float timeScale = 0f)
 	{
 		if (this._timeStopRequestInstigatorMap.ContainsKey(instigatorId))
@@ -474,7 +465,7 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAF0 RID: 121584 RVA: 0x00850D6E File Offset: 0x0084EF6E
+	// Token: 0x0601B7FE RID: 112638 RVA: 0x008790BE File Offset: 0x008772BE
 	public bool RemoveTimeStopRequestLock(int instigatorId)
 	{
 		if (!this._timeStopRequestInstigatorMap.Remove(instigatorId))
@@ -494,7 +485,7 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAF1 RID: 121585 RVA: 0x00850DB0 File Offset: 0x0084EFB0
+	// Token: 0x0601B7FF RID: 112639 RVA: 0x00879100 File Offset: 0x00877300
 	private void RefreshTimeStopRequestState()
 	{
 		float num = TimeController.CalcFinalTimeScale(this._timeStopRequestInstigatorMap.Values);
@@ -509,7 +500,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAF2 RID: 121586 RVA: 0x00850E00 File Offset: 0x0084F000
+	// Token: 0x0601B800 RID: 112640 RVA: 0x00879150 File Offset: 0x00877350
 	private void StartTimeStopRequest(float timeScale)
 	{
 		this._lastAppliedRequestScale = timeScale;
@@ -534,7 +525,7 @@ public class TimeController : ControllerBase
 		SkillCdController.Instance.Pause(ESkillCdPauseReason.AnsAbsoluteTimeStop, timeScale <= 0f);
 	}
 
-	// Token: 0x0601DAF3 RID: 121587 RVA: 0x00850EF4 File Offset: 0x0084F0F4
+	// Token: 0x0601B801 RID: 112641 RVA: 0x00879244 File Offset: 0x00877444
 	private void StopTimeStopRequest()
 	{
 		this._lastAppliedRequestScale = 1f;
@@ -553,8 +544,8 @@ public class TimeController : ControllerBase
 		SkillCdController.Instance.Pause(ESkillCdPauseReason.AnsAbsoluteTimeStop, false);
 	}
 
-	// Token: 0x170028ED RID: 10477
-	// (get) Token: 0x0601DAF4 RID: 121588 RVA: 0x00850FA8 File Offset: 0x0084F1A8
+	// Token: 0x17002C85 RID: 11397
+	// (get) Token: 0x0601B802 RID: 112642 RVA: 0x008792F8 File Offset: 0x008774F8
 	public static TimeController Instance
 	{
 		get
@@ -563,7 +554,7 @@ public class TimeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DAF5 RID: 121589 RVA: 0x00850FAF File Offset: 0x0084F1AF
+	// Token: 0x0601B803 RID: 112643 RVA: 0x008792FF File Offset: 0x008774FF
 	public static TimeController GetOrCreateInstance()
 	{
 		if (TimeController._Instance == null)
@@ -573,7 +564,7 @@ public class TimeController : ControllerBase
 		return TimeController._Instance;
 	}
 
-	// Token: 0x0601DAF6 RID: 121590 RVA: 0x00850FC3 File Offset: 0x0084F1C3
+	// Token: 0x0601B804 RID: 112644 RVA: 0x00879313 File Offset: 0x00877513
 	public static bool CreateInstance()
 	{
 		if (TimeController._Instance != null)
@@ -584,24 +575,24 @@ public class TimeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DAF7 RID: 121591 RVA: 0x00850FD9 File Offset: 0x0084F1D9
+	// Token: 0x0601B805 RID: 112645 RVA: 0x00879329 File Offset: 0x00877529
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DAF8 RID: 121592 RVA: 0x00850FDB File Offset: 0x0084F1DB
+	// Token: 0x0601B806 RID: 112646 RVA: 0x0087932B File Offset: 0x0087752B
 	public static void ResetStaticDefaultValue()
 	{
 		TimeController._Instance = null;
 	}
 
-	// Token: 0x0601DAF9 RID: 121593 RVA: 0x00850FE3 File Offset: 0x0084F1E3
+	// Token: 0x0601B807 RID: 112647 RVA: 0x00879333 File Offset: 0x00877533
 	static TimeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeController.CreateStaticDefaultValue), new Action(TimeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DAFB RID: 121595 RVA: 0x00851060 File Offset: 0x0084F260
+	// Token: 0x0601B809 RID: 112649 RVA: 0x008793B0 File Offset: 0x008775B0
 	[NullableContext(2)]
 	[CompilerGenerated]
 	private void <TimeCheckRequest>g__Response|14_0(IMessage msg, Net.CallbackStatus callbackStatus)
@@ -619,67 +610,67 @@ public class TimeController : ControllerBase
 		this.TimeCheck(clientTime, serverTime, sceneStopTime, flowTime, serverStopTime);
 	}
 
-	// Token: 0x0400E8DC RID: 59612
+	// Token: 0x0400ED93 RID: 60819
 	private const int TIME_STOP_DISTANCE = 20000;
 
-	// Token: 0x0400E8DD RID: 59613
+	// Token: 0x0400ED94 RID: 60820
 	private const string ABSOLUTE_TIME_STOP_TARGET_LOCK = "ANS AbsoluteTimeStop Other";
 
-	// Token: 0x0400E8DE RID: 59614
+	// Token: 0x0400ED95 RID: 60821
 	private const string ABSOLUTE_TIME_STOP_SELF_LOCK = "ANS AbsoluteTimeStop Self";
 
-	// Token: 0x0400E8DF RID: 59615
+	// Token: 0x0400ED96 RID: 60822
 	private const string ABSOLUTE_TIME_STOP_TARGET_SCALE_LOCK = "ANS AbsoluteTimeStop Other Scale";
 
-	// Token: 0x0400E8E0 RID: 59616
+	// Token: 0x0400ED97 RID: 60823
 	private const string TIME_STOP_REQUEST_SELF_LOCK = "TIME_STOP_REQUEST_SELF_LOCK";
 
-	// Token: 0x0400E8E1 RID: 59617
+	// Token: 0x0400ED98 RID: 60824
 	private double _predictedServerCombatTimeOffset;
 
-	// Token: 0x0400E8E2 RID: 59618
+	// Token: 0x0400ED99 RID: 60825
 	private double _predictedServerStopTimeOffset;
 
-	// Token: 0x0400E8E3 RID: 59619
+	// Token: 0x0400ED9A RID: 60826
 	[Nullable(2)]
 	private TimerHandle _timeCheckTimerId;
 
-	// Token: 0x0400E8E4 RID: 59620
+	// Token: 0x0400ED9B RID: 60827
 	private Dictionary<int, TimeStopInfo> _instigatorList = new Dictionary<int, TimeStopInfo>();
 
-	// Token: 0x0400E8E5 RID: 59621
+	// Token: 0x0400ED9C RID: 60828
 	private HashSet<EntityHandle> _timeStopAnimEntitySet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400E8E6 RID: 59622
+	// Token: 0x0400ED9D RID: 60829
 	private Dictionary<int, Dictionary<int, int>> _timeStopBulletScaleHandleMap = new Dictionary<int, Dictionary<int, int>>();
 
-	// Token: 0x0400E8E7 RID: 59623
+	// Token: 0x0400ED9E RID: 60830
 	private bool _stopState;
 
-	// Token: 0x0400E8E8 RID: 59624
+	// Token: 0x0400ED9F RID: 60831
 	private bool _lastAppliedStopMove = true;
 
-	// Token: 0x0400E8E9 RID: 59625
+	// Token: 0x0400EDA0 RID: 60832
 	private float _lastAppliedStopScale;
 
-	// Token: 0x0400E8EA RID: 59626
+	// Token: 0x0400EDA1 RID: 60833
 	private HashSet<EntityHandle> _timeStopBuffEntitySet = new HashSet<EntityHandle>();
 
-	// Token: 0x0400E8EB RID: 59627
+	// Token: 0x0400EDA2 RID: 60834
 	private Dictionary<int, TimeStopInfo> _timeStopRequestInstigatorMap = new Dictionary<int, TimeStopInfo>();
 
-	// Token: 0x0400E8EC RID: 59628
+	// Token: 0x0400EDA3 RID: 60835
 	private float _lastAppliedRequestScale = 1f;
 
-	// Token: 0x0400E8ED RID: 59629
+	// Token: 0x0400EDA4 RID: 60836
 	[Nullable(2)]
 	private static TimeController _Instance;
 
-	// Token: 0x0200999E RID: 39326
+	// Token: 0x02008BB8 RID: 35768
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030DBA RID: 200122
+		// Token: 0x0402C43D RID: 181309
 		[Nullable(0)]
 		public static Action <0>__OnWorldDone;
 	}

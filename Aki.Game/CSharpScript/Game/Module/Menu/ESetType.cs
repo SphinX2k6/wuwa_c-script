@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053E8 RID: 21480
+	// Token: 0x020043CB RID: 17355
 	public enum ESetType
 	{
-		// Token: 0x0401CF7B RID: 118651
+		// Token: 0x04017A14 RID: 96788
 		SLIDER = 1,
-		// Token: 0x0401CF7C RID: 118652
+		// Token: 0x04017A15 RID: 96789
 		OPTIONS,
-		// Token: 0x0401CF7D RID: 118653
+		// Token: 0x04017A16 RID: 96790
 		KEYMAP,
-		// Token: 0x0401CF7E RID: 118654
+		// Token: 0x04017A17 RID: 96791
 		BUTTON,
-		// Token: 0x0401CF7F RID: 118655
+		// Token: 0x04017A18 RID: 96792
 		DROPDOWN
 	}
 }

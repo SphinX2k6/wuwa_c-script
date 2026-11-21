@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005222 RID: 21026
+	// Token: 0x020041F2 RID: 16882
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CardDetailPassiveSkillItem : UiPanelBase
 	{
-		// Token: 0x06035C1F RID: 220191 RVA: 0x00CB9208 File Offset: 0x00CB7408
+		// Token: 0x0602AB1A RID: 174874 RVA: 0x00C0684C File Offset: 0x00C04A4C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			};
 		}
 
-		// Token: 0x06035C20 RID: 220192 RVA: 0x00CB92D0 File Offset: 0x00CB74D0
+		// Token: 0x0602AB1B RID: 174875 RVA: 0x00C06914 File Offset: 0x00C04B14
 		private void RefreshCondition(ICardDetailConditionOutData outData)
 		{
 			if (outData == null || StringUtils.IsBlank(outData.ConditionDesc))
@@ -53,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			uuiitem.SetChangeColor(valueOrDefault, fcolor);
 		}
 
-		// Token: 0x06035C21 RID: 220193 RVA: 0x00CB9394 File Offset: 0x00CB7594
+		// Token: 0x0602AB1C RID: 174876 RVA: 0x00C069D8 File Offset: 0x00C04BD8
 		private void RefreshProgress(ICardDetailConditionOutData outData)
 		{
 			UUIText text = base.GetText(3);
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			}));
 		}
 
-		// Token: 0x06035C22 RID: 220194 RVA: 0x00CB9444 File Offset: 0x00CB7644
+		// Token: 0x0602AB1D RID: 174877 RVA: 0x00C06A88 File Offset: 0x00C04C88
 		private void RefreshInData(ICardDetailConditionInData data)
 		{
 			if (data != null)
@@ -83,18 +82,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 				base.GetItem(1).SetUIActive(false);
 				base.GetSprite(4).SetUIActive(false);
 				base.GetText(3).SetUIActive(true);
-				LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.TextArg.TextKey, data.TextArg.Params.ToArray<object>());
+				LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.TextArg.TextKey, data.TextArg.Params);
 			}
 		}
 
-		// Token: 0x06035C23 RID: 220195 RVA: 0x00CB94A7 File Offset: 0x00CB76A7
+		// Token: 0x0602AB1E RID: 174878 RVA: 0x00C06AE6 File Offset: 0x00C04CE6
 		private void RefreshOutData(ICardDetailConditionOutData outData)
 		{
 			this.RefreshCondition(outData);
 			this.RefreshProgress(outData);
 		}
 
-		// Token: 0x06035C24 RID: 220196 RVA: 0x00CB94B8 File Offset: 0x00CB76B8
+		// Token: 0x0602AB1F RID: 174879 RVA: 0x00C06AF8 File Offset: 0x00C04CF8
 		private void RefreshEffectCount(ICardDetailEffectCountData effectCountData)
 		{
 			base.GetItem(6).SetUIActive(effectCountData != null);
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			}
 		}
 
-		// Token: 0x06035C25 RID: 220197 RVA: 0x00CB9518 File Offset: 0x00CB7718
+		// Token: 0x0602AB20 RID: 174880 RVA: 0x00C06B58 File Offset: 0x00C04D58
 		public void Refresh(ICardDetailPassiveSkillData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Desc, data.Params.ToArray());
@@ -119,32 +118,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			this.RefreshEffectCount(data.EffectCountData);
 		}
 
-		// Token: 0x0200B3B9 RID: 46009
+		// Token: 0x02009DF1 RID: 40433
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04036787 RID: 223111
+			// Token: 0x040311DA RID: 201178
 			public const int DescText = 0;
 
-			// Token: 0x04036788 RID: 223112
+			// Token: 0x040311DB RID: 201179
 			public const int ConditionItem = 1;
 
-			// Token: 0x04036789 RID: 223113
+			// Token: 0x040311DC RID: 201180
 			public const int ConditionText = 2;
 
-			// Token: 0x0403678A RID: 223114
+			// Token: 0x040311DD RID: 201181
 			public const int ProgressText = 3;
 
-			// Token: 0x0403678B RID: 223115
+			// Token: 0x040311DE RID: 201182
 			public const int ProgressIcon = 4;
 
-			// Token: 0x0403678C RID: 223116
+			// Token: 0x040311DF RID: 201183
 			public const int TitleText = 5;
 
-			// Token: 0x0403678D RID: 223117
+			// Token: 0x040311E0 RID: 201184
 			public const int EffectCountItem = 6;
 
-			// Token: 0x0403678E RID: 223118
+			// Token: 0x040311E1 RID: 201185
 			public const int EffectCountText = 7;
 		}
 	}

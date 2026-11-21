@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CE6 RID: 23782
+	// Token: 0x0200631A RID: 25370
 	public enum EConstraintValueType : byte
 	{
-		// Token: 0x0400F605 RID: 62981
+		// Token: 0x04010354 RID: 66388
 		Max,
-		// Token: 0x0400F606 RID: 62982
+		// Token: 0x04010355 RID: 66389
 		Min,
-		// Token: 0x0400F607 RID: 62983
+		// Token: 0x04010356 RID: 66390
 		Clamp
 	}
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000F71 RID: 3953
+// Token: 0x02000426 RID: 1062
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureAreaData
 {
-	// Token: 0x0600651F RID: 25887 RVA: 0x00141BF4 File Offset: 0x0013FDF4
+	// Token: 0x060038B7 RID: 14519 RVA: 0x0014A490 File Offset: 0x00148690
 	public void DeepCopy(FurnitureAreaData other)
 	{
 		this.AreaId = other.AreaId;
@@ -29,7 +29,7 @@ public class FurnitureAreaData
 		}
 	}
 
-	// Token: 0x06006520 RID: 25888 RVA: 0x00141D04 File Offset: 0x0013FF04
+	// Token: 0x060038B8 RID: 14520 RVA: 0x0014A5A0 File Offset: 0x001487A0
 	public bool Compare(FurnitureAreaData other)
 	{
 		if (this.AreaId != other.AreaId)
@@ -83,31 +83,31 @@ public class FurnitureAreaData
 		return true;
 	}
 
-	// Token: 0x06006521 RID: 25889 RVA: 0x00141E60 File Offset: 0x00140060
+	// Token: 0x060038B9 RID: 14521 RVA: 0x0014A6FC File Offset: 0x001488FC
 	public void SetAreaId(int areaId)
 	{
 		this.AreaId = areaId;
 	}
 
-	// Token: 0x06006522 RID: 25890 RVA: 0x00141E69 File Offset: 0x00140069
+	// Token: 0x060038BA RID: 14522 RVA: 0x0014A705 File Offset: 0x00148905
 	public void SetMapId(int mapId)
 	{
 		this.MapId = mapId;
 	}
 
-	// Token: 0x06006523 RID: 25891 RVA: 0x00141E72 File Offset: 0x00140072
+	// Token: 0x060038BB RID: 14523 RVA: 0x0014A70E File Offset: 0x0014890E
 	public void SetAtmosphere(int atmosphere)
 	{
 		this.Atmosphere = atmosphere;
 	}
 
-	// Token: 0x06006524 RID: 25892 RVA: 0x00141E7B File Offset: 0x0014007B
+	// Token: 0x060038BC RID: 14524 RVA: 0x0014A717 File Offset: 0x00148917
 	public void SetMaxAtmosphere(int maxAtmosphere)
 	{
 		this.MaxAtmosphere = maxAtmosphere;
 	}
 
-	// Token: 0x06006525 RID: 25893 RVA: 0x00141E84 File Offset: 0x00140084
+	// Token: 0x060038BD RID: 14525 RVA: 0x0014A720 File Offset: 0x00148920
 	public FurnitureSceneSlotData CreateSceneSlotData(int slotEntityId)
 	{
 		FurnitureSceneSlotData furnitureSceneSlotData = new FurnitureSceneSlotData();
@@ -116,7 +116,7 @@ public class FurnitureAreaData
 		return furnitureSceneSlotData;
 	}
 
-	// Token: 0x06006526 RID: 25894 RVA: 0x00141EB4 File Offset: 0x001400B4
+	// Token: 0x060038BE RID: 14526 RVA: 0x0014A750 File Offset: 0x00148950
 	public void SetSlotPlacedData(int slotEntityId, int subSlotIndex, int furnitureConfigId)
 	{
 		FurnitureSceneSlotData sceneSlotData;
@@ -132,7 +132,7 @@ public class FurnitureAreaData
 		this.SetSubSlotPlacedDataInternal(sceneSlotData, subSlotIndex, furnitureConfigId);
 	}
 
-	// Token: 0x06006527 RID: 25895 RVA: 0x00141EE8 File Offset: 0x001400E8
+	// Token: 0x060038BF RID: 14527 RVA: 0x0014A784 File Offset: 0x00148984
 	public void ClearSlotPlacedData()
 	{
 		this.FurnitureUseCountMap.Clear();
@@ -143,7 +143,7 @@ public class FurnitureAreaData
 		this.Atmosphere = 0;
 	}
 
-	// Token: 0x06006528 RID: 25896 RVA: 0x00141F50 File Offset: 0x00140150
+	// Token: 0x060038C0 RID: 14528 RVA: 0x0014A7EC File Offset: 0x001489EC
 	private void SetSceneSlotPlacedDataInternal(FurnitureSceneSlotData sceneSlotData, int furnitureConfigId)
 	{
 		for (int i = 0; i < sceneSlotData.GetSubSlotDataListLength(); i++)
@@ -161,7 +161,7 @@ public class FurnitureAreaData
 		}
 	}
 
-	// Token: 0x06006529 RID: 25897 RVA: 0x00141F98 File Offset: 0x00140198
+	// Token: 0x060038C1 RID: 14529 RVA: 0x0014A834 File Offset: 0x00148A34
 	private void SetSubSlotPlacedDataInternal(FurnitureSceneSlotData sceneSlotData, int subSlotIndex, int furnitureConfigId)
 	{
 		FurnitureSubSlotData subSlotData = sceneSlotData.GetSubSlotData(subSlotIndex);
@@ -176,21 +176,21 @@ public class FurnitureAreaData
 		}
 	}
 
-	// Token: 0x0600652A RID: 25898 RVA: 0x00141FC4 File Offset: 0x001401C4
+	// Token: 0x060038C2 RID: 14530 RVA: 0x0014A860 File Offset: 0x00148A60
 	private void PlaceFurnitureInternal(FurnitureSlotDataBase slotData, int furnitureConfigId)
 	{
 		slotData.PlaceFurniture(furnitureConfigId);
 		this.AddFurnitureCount(furnitureConfigId);
 	}
 
-	// Token: 0x0600652B RID: 25899 RVA: 0x00141FD4 File Offset: 0x001401D4
+	// Token: 0x060038C3 RID: 14531 RVA: 0x0014A870 File Offset: 0x00148A70
 	private void UnPlaceFurnitureInternal(FurnitureSlotDataBase slotData)
 	{
 		this.ReduceFurnitureCount(slotData.GetPlacedFurnitureConfigId());
 		slotData.UnPlaceFurniture();
 	}
 
-	// Token: 0x0600652C RID: 25900 RVA: 0x00141FE8 File Offset: 0x001401E8
+	// Token: 0x060038C4 RID: 14532 RVA: 0x0014A884 File Offset: 0x00148A84
 	protected void AddFurnitureCount(int furnitureConfigId)
 	{
 		if (furnitureConfigId <= 0)
@@ -202,7 +202,7 @@ public class FurnitureAreaData
 		this.FurnitureUseCountMap[furnitureConfigId] = num + 1;
 	}
 
-	// Token: 0x0600652D RID: 25901 RVA: 0x00142018 File Offset: 0x00140218
+	// Token: 0x060038C5 RID: 14533 RVA: 0x0014A8B4 File Offset: 0x00148AB4
 	protected void ReduceFurnitureCount(int furnitureConfigId)
 	{
 		if (furnitureConfigId <= 0)
@@ -223,7 +223,7 @@ public class FurnitureAreaData
 		this.FurnitureUseCountMap[furnitureConfigId] = num;
 	}
 
-	// Token: 0x0600652E RID: 25902 RVA: 0x0014206F File Offset: 0x0014026F
+	// Token: 0x060038C6 RID: 14534 RVA: 0x0014A90B File Offset: 0x00148B0B
 	public int GetPlacedFurnitureConfigId(int slotEntityId, int subSlotIndex)
 	{
 		FurnitureSlotDataBase slotData = this.GetSlotData(slotEntityId, subSlotIndex);
@@ -234,7 +234,7 @@ public class FurnitureAreaData
 		return slotData.GetPlacedFurnitureConfigId();
 	}
 
-	// Token: 0x0600652F RID: 25903 RVA: 0x00142084 File Offset: 0x00140284
+	// Token: 0x060038C7 RID: 14535 RVA: 0x0014A920 File Offset: 0x00148B20
 	[NullableContext(2)]
 	public FurnitureSceneSlotData GetSceneSlotData(int slotEntityId)
 	{
@@ -246,7 +246,7 @@ public class FurnitureAreaData
 		return result;
 	}
 
-	// Token: 0x06006530 RID: 25904 RVA: 0x001420A4 File Offset: 0x001402A4
+	// Token: 0x060038C8 RID: 14536 RVA: 0x0014A940 File Offset: 0x00148B40
 	[NullableContext(2)]
 	public FurnitureSlotDataBase GetSlotData(int slotEntityId, int subSlotIndex)
 	{
@@ -262,37 +262,37 @@ public class FurnitureAreaData
 		return sceneSlotData.GetSubSlotData(subSlotIndex);
 	}
 
-	// Token: 0x06006531 RID: 25905 RVA: 0x001420C5 File Offset: 0x001402C5
+	// Token: 0x060038C9 RID: 14537 RVA: 0x0014A961 File Offset: 0x00148B61
 	public IReadOnlyDictionary<int, FurnitureSceneSlotData> GetSceneSlotDataMap()
 	{
 		return this.SceneSlotDataMap;
 	}
 
-	// Token: 0x06006532 RID: 25906 RVA: 0x001420CD File Offset: 0x001402CD
+	// Token: 0x060038CA RID: 14538 RVA: 0x0014A969 File Offset: 0x00148B69
 	public int GetAreaId()
 	{
 		return this.AreaId;
 	}
 
-	// Token: 0x06006533 RID: 25907 RVA: 0x001420D5 File Offset: 0x001402D5
+	// Token: 0x060038CB RID: 14539 RVA: 0x0014A971 File Offset: 0x00148B71
 	public int GetMapId()
 	{
 		return this.MapId;
 	}
 
-	// Token: 0x06006534 RID: 25908 RVA: 0x001420DD File Offset: 0x001402DD
+	// Token: 0x060038CC RID: 14540 RVA: 0x0014A979 File Offset: 0x00148B79
 	public int GetAtmosphere()
 	{
 		return this.Atmosphere;
 	}
 
-	// Token: 0x06006535 RID: 25909 RVA: 0x001420E5 File Offset: 0x001402E5
+	// Token: 0x060038CD RID: 14541 RVA: 0x0014A981 File Offset: 0x00148B81
 	public int GetMaxAtmosphere()
 	{
 		return this.MaxAtmosphere;
 	}
 
-	// Token: 0x06006536 RID: 25910 RVA: 0x001420F0 File Offset: 0x001402F0
+	// Token: 0x060038CE RID: 14542 RVA: 0x0014A98C File Offset: 0x00148B8C
 	public int GetFurnitureUseCount(int furnitureConfigId)
 	{
 		int result;
@@ -303,7 +303,7 @@ public class FurnitureAreaData
 		return result;
 	}
 
-	// Token: 0x06006537 RID: 25911 RVA: 0x00142110 File Offset: 0x00140310
+	// Token: 0x060038CF RID: 14543 RVA: 0x0014A9AC File Offset: 0x00148BAC
 	public int GetPlacedSceneSlotCount()
 	{
 		int num = 0;
@@ -320,7 +320,7 @@ public class FurnitureAreaData
 		return num;
 	}
 
-	// Token: 0x06006538 RID: 25912 RVA: 0x00142170 File Offset: 0x00140370
+	// Token: 0x060038D0 RID: 14544 RVA: 0x0014AA0C File Offset: 0x00148C0C
 	public int GetPlacedSlotCount()
 	{
 		int num = 0;
@@ -334,7 +334,7 @@ public class FurnitureAreaData
 		return num;
 	}
 
-	// Token: 0x06006539 RID: 25913 RVA: 0x001421D8 File Offset: 0x001403D8
+	// Token: 0x060038D1 RID: 14545 RVA: 0x0014AA74 File Offset: 0x00148C74
 	public int GetPlacedSubSlotCount(FurnitureSceneSlotData sceneSlotData)
 	{
 		int num = 0;
@@ -351,7 +351,7 @@ public class FurnitureAreaData
 		return num;
 	}
 
-	// Token: 0x0600653A RID: 25914 RVA: 0x00142234 File Offset: 0x00140434
+	// Token: 0x060038D2 RID: 14546 RVA: 0x0014AAD0 File Offset: 0x00148CD0
 	public void UpdateAtmosphere()
 	{
 		int num = 0;
@@ -366,24 +366,24 @@ public class FurnitureAreaData
 		this.Atmosphere = num;
 	}
 
-	// Token: 0x04002DFC RID: 11772
+	// Token: 0x04002E95 RID: 11925
 	private int AreaId;
 
-	// Token: 0x04002DFD RID: 11773
+	// Token: 0x04002E96 RID: 11926
 	private int MapId;
 
-	// Token: 0x04002DFE RID: 11774
+	// Token: 0x04002E97 RID: 11927
 	protected int Atmosphere;
 
-	// Token: 0x04002DFF RID: 11775
+	// Token: 0x04002E98 RID: 11928
 	protected int MaxAtmosphere;
 
-	// Token: 0x04002E00 RID: 11776
+	// Token: 0x04002E99 RID: 11929
 	protected Dictionary<int, FurnitureSceneSlotData> SceneSlotDataMap = new Dictionary<int, FurnitureSceneSlotData>();
 
-	// Token: 0x04002E01 RID: 11777
+	// Token: 0x04002E9A RID: 11930
 	protected Dictionary<int, int> FurnitureUseCountMap = new Dictionary<int, int>();
 
-	// Token: 0x04002E02 RID: 11778
+	// Token: 0x04002E9B RID: 11931
 	public bool UsePreset;
 }

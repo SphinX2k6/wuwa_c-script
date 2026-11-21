@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001830 RID: 6192
+	// Token: 0x0200037E RID: 894
 	[UnrealObjectPath("/Script/KuroFastCollision.KuroFastCollisionAlgorithm_Grid")]
 	[UnrealStructLayout(696, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 696)]
 	public class UKuroFastCollisionAlgorithm_Grid : UKuroFastCollisionAlgorithm, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016D5A RID: 93530 RVA: 0x00215646 File Offset: 0x00213846
+		// Token: 0x06005A0A RID: 23050 RVA: 0x0007F3F6 File Offset: 0x0007D5F6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroFastCollisionAlgorithm_Grid._ClassPtr;
 		}
 
-		// Token: 0x06016D5B RID: 93531 RVA: 0x00215654 File Offset: 0x00213854
+		// Token: 0x06005A0B RID: 23051 RVA: 0x0007F404 File Offset: 0x0007D604
 		public UKuroFastCollisionAlgorithm_Grid() : this(BuiltinUtils.AllocNativeUObject(UKuroFastCollisionAlgorithm_Grid.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016D5C RID: 93532 RVA: 0x0021567C File Offset: 0x0021387C
+		// Token: 0x06005A0C RID: 23052 RVA: 0x0007F42C File Offset: 0x0007D62C
 		[NullableContext(1)]
 		public UKuroFastCollisionAlgorithm_Grid(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroFastCollisionAlgorithm_Grid.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06016D5D RID: 93533 RVA: 0x002156AF File Offset: 0x002138AF
+		// Token: 0x06005A0D RID: 23053 RVA: 0x0007F45F File Offset: 0x0007D65F
 		static UKuroFastCollisionAlgorithm_Grid()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroFastCollision.KuroFastCollisionAlgorithm_Grid");
 		}
 
-		// Token: 0x06016D5E RID: 93534 RVA: 0x002156BD File Offset: 0x002138BD
+		// Token: 0x06005A0E RID: 23054 RVA: 0x0007F46D File Offset: 0x0007D66D
 		protected UKuroFastCollisionAlgorithm_Grid(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C69E RID: 50846
+		// Token: 0x04002563 RID: 9571
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroFastCollision.KuroFastCollisionAlgorithm_Grid";
 
-		// Token: 0x0400C69F RID: 50847
+		// Token: 0x04002564 RID: 9572
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C6A0 RID: 50848
+		// Token: 0x04002565 RID: 9573
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

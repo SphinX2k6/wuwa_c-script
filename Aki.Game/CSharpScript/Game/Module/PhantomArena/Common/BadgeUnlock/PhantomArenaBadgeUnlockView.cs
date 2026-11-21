@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 {
-	// Token: 0x02005229 RID: 21033
+	// Token: 0x020041F9 RID: 16889
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBadgeUnlockView : UiViewBase
 	{
-		// Token: 0x06035C3B RID: 220219 RVA: 0x00CB9665 File Offset: 0x00CB7865
+		// Token: 0x0602AB36 RID: 174902 RVA: 0x00C06CA5 File Offset: 0x00C04EA5
 		public PhantomArenaBadgeUnlockView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x06035C3C RID: 220220 RVA: 0x00CB9670 File Offset: 0x00CB7870
+		// Token: 0x0602AB37 RID: 174903 RVA: 0x00C06CB0 File Offset: 0x00C04EB0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			};
 		}
 
-		// Token: 0x06035C3D RID: 220221 RVA: 0x00CB975C File Offset: 0x00CB795C
+		// Token: 0x0602AB38 RID: 174904 RVA: 0x00C06D9C File Offset: 0x00C04F9C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaBadgeUnlockView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035C3E RID: 220222 RVA: 0x00CB979F File Offset: 0x00CB799F
+		// Token: 0x0602AB39 RID: 174905 RVA: 0x00C06DDF File Offset: 0x00C04FDF
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x06035C3F RID: 220223 RVA: 0x00CB97BD File Offset: 0x00CB79BD
+		// Token: 0x0602AB3A RID: 174906 RVA: 0x00C06DFD File Offset: 0x00C04FFD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x06035C40 RID: 220224 RVA: 0x00CB97DC File Offset: 0x00CB79DC
+		// Token: 0x0602AB3B RID: 174907 RVA: 0x00C06E1C File Offset: 0x00C0501C
 		public void ShowNext()
 		{
 			UiAsyncTask task = new UiAsyncTask("PhantomArenaBadgeUnlockView", delegate()
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06035C41 RID: 220225 RVA: 0x00CB9810 File Offset: 0x00CB7A10
+		// Token: 0x0602AB3C RID: 174908 RVA: 0x00C06E50 File Offset: 0x00C05050
 		public UniTask ShowNextAsync()
 		{
 			PhantomArenaBadgeUnlockView.<ShowNextAsync>d__10 <ShowNextAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			return <ShowNextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035C42 RID: 220226 RVA: 0x00CB9854 File Offset: 0x00CB7A54
+		// Token: 0x0602AB3D RID: 174909 RVA: 0x00C06E94 File Offset: 0x00C05094
 		public void RefreshViewByBadgeId(int badgeId)
 		{
 			PhantomBattleBadge phantomBattleBadgeById = PhantomArenaConfig.Instance.GetPhantomBattleBadgeById(badgeId);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			base.GetSprite(4).SetSprite(this.BadgeSprite, true);
 		}
 
-		// Token: 0x06035C43 RID: 220227 RVA: 0x00CB98BA File Offset: 0x00CB7ABA
+		// Token: 0x0602AB3E RID: 174910 RVA: 0x00C06EFA File Offset: 0x00C050FA
 		private void OnCloseBtnClick()
 		{
 			if (PhantomArenaModel.Instance.BadgeUnlockQueue.Count > 0)
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06035C44 RID: 220228 RVA: 0x00CB98DC File Offset: 0x00CB7ADC
+		// Token: 0x0602AB3F RID: 174911 RVA: 0x00C06F1C File Offset: 0x00C0511C
 		protected override void OnAfterDestroy()
 		{
 			PhantomArenaController.Instance.PostUnlockView();
 		}
 
-		// Token: 0x06035C45 RID: 220229 RVA: 0x00CB98E9 File Offset: 0x00CB7AE9
+		// Token: 0x0602AB40 RID: 174912 RVA: 0x00C06F29 File Offset: 0x00C05129
 		private void OnSeqEvent(string param)
 		{
 			if (this.IsWaitingChange && param == "Change")
@@ -125,41 +125,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.BadgeUnlock
 			}
 		}
 
-		// Token: 0x0401C7DA RID: 116698
+		// Token: 0x0401720F RID: 94735
 		protected int BadgeId;
 
-		// Token: 0x0401C7DB RID: 116699
+		// Token: 0x04017210 RID: 94736
 		protected bool IsWaitingChange;
 
-		// Token: 0x0401C7DC RID: 116700
+		// Token: 0x04017211 RID: 94737
 		protected ULGUISpriteData_BaseObject BadgeSprite;
 
-		// Token: 0x0200B3BC RID: 46012
+		// Token: 0x02009DF4 RID: 40436
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04036792 RID: 223122
+			// Token: 0x040311E5 RID: 201189
 			public const int CloseBtn = 0;
 
-			// Token: 0x04036793 RID: 223123
+			// Token: 0x040311E6 RID: 201190
 			public const int RoleRootItem = 1;
 
-			// Token: 0x04036794 RID: 223124
+			// Token: 0x040311E7 RID: 201191
 			public const int RoleTexture = 2;
 
-			// Token: 0x04036795 RID: 223125
+			// Token: 0x040311E8 RID: 201192
 			public const int BadgeRootItem = 3;
 
-			// Token: 0x04036796 RID: 223126
+			// Token: 0x040311E9 RID: 201193
 			public const int BadgeSprite = 4;
 
-			// Token: 0x04036797 RID: 223127
+			// Token: 0x040311EA RID: 201194
 			public const int TitleText = 5;
 
-			// Token: 0x04036798 RID: 223128
+			// Token: 0x040311EB RID: 201195
 			public const int NameText = 6;
 
-			// Token: 0x04036799 RID: 223129
+			// Token: 0x040311EC RID: 201196
 			public const int BgDescText = 7;
 		}
 	}

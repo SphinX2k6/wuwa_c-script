@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EF5 RID: 7925
+// Token: 0x020013B7 RID: 5047
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryWeaponSelectView : UiViewBase
 {
-	// Token: 0x0600F3E4 RID: 62436 RVA: 0x003ACE25 File Offset: 0x003AB025
+	// Token: 0x0600C803 RID: 51203 RVA: 0x003B8921 File Offset: 0x003B6B21
 	public HonamiStoryWeaponSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3E5 RID: 62437 RVA: 0x003ACE3C File Offset: 0x003AB03C
+	// Token: 0x0600C804 RID: 51204 RVA: 0x003B8938 File Offset: 0x003B6B38
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 21;
@@ -75,19 +74,19 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F3E6 RID: 62438 RVA: 0x003AD125 File Offset: 0x003AB325
+	// Token: 0x0600C805 RID: 51205 RVA: 0x003B8C21 File Offset: 0x003B6E21
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnHonamiStorySkillDescModeChange, new Action<bool>(this.OnSkillDescModeChange));
 	}
 
-	// Token: 0x0600F3E7 RID: 62439 RVA: 0x003AD143 File Offset: 0x003AB343
+	// Token: 0x0600C806 RID: 51206 RVA: 0x003B8C3F File Offset: 0x003B6E3F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<bool>(EEventName.OnHonamiStorySkillDescModeChange, new Action<bool>(this.OnSkillDescModeChange));
 	}
 
-	// Token: 0x0600F3E8 RID: 62440 RVA: 0x003AD164 File Offset: 0x003AB364
+	// Token: 0x0600C807 RID: 51207 RVA: 0x003B8C60 File Offset: 0x003B6E60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryWeaponSelectView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -98,7 +97,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F3E9 RID: 62441 RVA: 0x003AD1A8 File Offset: 0x003AB3A8
+	// Token: 0x0600C808 RID: 51208 RVA: 0x003B8CA4 File Offset: 0x003B6EA4
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -110,7 +109,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600F3EA RID: 62442 RVA: 0x003AD1E3 File Offset: 0x003AB3E3
+	// Token: 0x0600C809 RID: 51209 RVA: 0x003B8CDF File Offset: 0x003B6EDF
 	protected override void OnBeforeShow()
 	{
 		UUIItem item = base.GetItem(19);
@@ -121,7 +120,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.UpdateDetailView();
 	}
 
-	// Token: 0x0600F3EB RID: 62443 RVA: 0x003AD200 File Offset: 0x003AB400
+	// Token: 0x0600C80A RID: 51210 RVA: 0x003B8CFC File Offset: 0x003B6EFC
 	protected override void OnBeforeHide()
 	{
 		HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryWeaponUnlockSet, null) ?? new HashSet<int>();
@@ -130,7 +129,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnHonamiStoryBackpackClickWeapon);
 	}
 
-	// Token: 0x0600F3EC RID: 62444 RVA: 0x003AD244 File Offset: 0x003AB444
+	// Token: 0x0600C80B RID: 51211 RVA: 0x003B8D40 File Offset: 0x003B6F40
 	private void UpdateDetailView()
 	{
 		if (this.CurSelectWeaponToggleItem == null)
@@ -177,7 +176,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 			GenericLayout<HonamiStoryWeaponTagItem, int> tagLayout = this.TagLayout;
 			if (tagLayout != null)
 			{
-				tagLayout.RefreshByData(value.PluginTags().ToList<int>(), null, false);
+				tagLayout.RefreshByData(value.PluginTags(), null, false);
 			}
 			int[] array = value.SuitId();
 			List<IHonamiStoryWeaponSuitData> list = new List<IHonamiStoryWeaponSuitData>();
@@ -202,7 +201,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.RefreshConfirmButton();
 	}
 
-	// Token: 0x0600F3ED RID: 62445 RVA: 0x003AD42C File Offset: 0x003AB62C
+	// Token: 0x0600C80C RID: 51212 RVA: 0x003B8F20 File Offset: 0x003B7120
 	private void RefreshConfirmButton()
 	{
 		switch (HonamiStoryModel.Instance.CheckSelectWeaponState(this.CurSelectWeaponToggleItem.WeaponId, this.EquipData))
@@ -221,13 +220,13 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F3EE RID: 62446 RVA: 0x003AD4A9 File Offset: 0x003AB6A9
+	// Token: 0x0600C80D RID: 51213 RVA: 0x003B8F9D File Offset: 0x003B719D
 	private void InitData()
 	{
 		this.EquipData = (HonamiStoryRoleEquipData)this.OpenParam;
 	}
 
-	// Token: 0x0600F3EF RID: 62447 RVA: 0x003AD4BC File Offset: 0x003AB6BC
+	// Token: 0x0600C80E RID: 51214 RVA: 0x003B8FB0 File Offset: 0x003B71B0
 	private void InitComponents()
 	{
 		this.WeaponPanelVerticalLayout = new GenericLayout<HonamiStoryWeaponPanelItem, EHonamiStoryWeaponType>(base.GetVerticalLayout(1), new Func<HonamiStoryWeaponPanelItem>(this.CreateWeaponPanelItem), (AUIBaseActor)base.GetItem(2).GetOwner(), true, true);
@@ -244,7 +243,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.ConfirmButtonItem.SetFunction(new Action<int>(this.OnClickConfirm));
 	}
 
-	// Token: 0x0600F3F0 RID: 62448 RVA: 0x003AD5C6 File Offset: 0x003AB7C6
+	// Token: 0x0600C80F RID: 51215 RVA: 0x003B90BA File Offset: 0x003B72BA
 	private HonamiStoryWeaponPanelItem CreateWeaponPanelItem()
 	{
 		HonamiStoryWeaponPanelItem honamiStoryWeaponPanelItem = new HonamiStoryWeaponPanelItem();
@@ -252,19 +251,19 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		return honamiStoryWeaponPanelItem;
 	}
 
-	// Token: 0x0600F3F1 RID: 62449 RVA: 0x003AD5DF File Offset: 0x003AB7DF
+	// Token: 0x0600C810 RID: 51216 RVA: 0x003B90D3 File Offset: 0x003B72D3
 	private HonamiStoryWeaponTagItem CreateTagItem()
 	{
 		return new HonamiStoryWeaponTagItem();
 	}
 
-	// Token: 0x0600F3F2 RID: 62450 RVA: 0x003AD5E6 File Offset: 0x003AB7E6
+	// Token: 0x0600C811 RID: 51217 RVA: 0x003B90DA File Offset: 0x003B72DA
 	private HonamiStoryWeaponSuitInfoItem CreateSuitItem()
 	{
 		return new HonamiStoryWeaponSuitInfoItem();
 	}
 
-	// Token: 0x0600F3F3 RID: 62451 RVA: 0x003AD5F0 File Offset: 0x003AB7F0
+	// Token: 0x0600C812 RID: 51218 RVA: 0x003B90E4 File Offset: 0x003B72E4
 	private void InitWeaponToggleList()
 	{
 		if (this.CurSelectWeaponToggleItem != null)
@@ -298,7 +297,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.UpdateDetailView();
 	}
 
-	// Token: 0x0600F3F4 RID: 62452 RVA: 0x003AD708 File Offset: 0x003AB908
+	// Token: 0x0600C813 RID: 51219 RVA: 0x003B91FC File Offset: 0x003B73FC
 	private void OnWeaponToggleClick(HonamiStoryWeaponToggleItem toggleItem)
 	{
 		if (this.CurSelectWeaponToggleItem == toggleItem)
@@ -315,7 +314,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.UpdateDetailView();
 	}
 
-	// Token: 0x0600F3F5 RID: 62453 RVA: 0x003AD740 File Offset: 0x003AB940
+	// Token: 0x0600C814 RID: 51220 RVA: 0x003B9234 File Offset: 0x003B7434
 	private void OnClickConfirm(int _)
 	{
 		if (this.CurSelectWeaponToggleItem == null || this.EquipData == null)
@@ -349,7 +348,7 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		this.DressRequest(weaponId, this.EquipData.GetPosition());
 	}
 
-	// Token: 0x0600F3F6 RID: 62454 RVA: 0x003AD836 File Offset: 0x003ABA36
+	// Token: 0x0600C815 RID: 51221 RVA: 0x003B932A File Offset: 0x003B752A
 	private void DressRequest(int weaponId, int position)
 	{
 		HonamiStoryController.Instance.SendHonamiStoryWeaponDressRequest(weaponId, position, delegate
@@ -366,96 +365,96 @@ public class HonamiStoryWeaponSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600F3F7 RID: 62455 RVA: 0x003AD850 File Offset: 0x003ABA50
+	// Token: 0x0600C816 RID: 51222 RVA: 0x003B9344 File Offset: 0x003B7544
 	private void OnClickBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F3F8 RID: 62456 RVA: 0x003AD859 File Offset: 0x003ABA59
+	// Token: 0x0600C817 RID: 51223 RVA: 0x003B934D File Offset: 0x003B754D
 	private void OnSkillDescModeChange(bool _)
 	{
 		this.UpdateDetailView();
 	}
 
-	// Token: 0x040070EB RID: 28907
+	// Token: 0x040071CC RID: 29132
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x040070EC RID: 28908
+	// Token: 0x040071CD RID: 29133
 	[Nullable(2)]
 	private HonamiStoryRoleEquipData EquipData;
 
-	// Token: 0x040070ED RID: 28909
+	// Token: 0x040071CE RID: 29134
 	[Nullable(2)]
 	private HonamiStoryWeaponToggleItem CurSelectWeaponToggleItem;
 
-	// Token: 0x040070EE RID: 28910
+	// Token: 0x040071CF RID: 29135
 	private readonly List<HonamiStoryWeaponToggleItem> WeaponToggleList = new List<HonamiStoryWeaponToggleItem>();
 
-	// Token: 0x040070EF RID: 28911
+	// Token: 0x040071D0 RID: 29136
 	private GenericLayout<HonamiStoryWeaponPanelItem, EHonamiStoryWeaponType> WeaponPanelVerticalLayout;
 
-	// Token: 0x040070F0 RID: 28912
+	// Token: 0x040071D1 RID: 29137
 	private GenericLayout<HonamiStoryWeaponTagItem, int> TagLayout;
 
-	// Token: 0x040070F1 RID: 28913
+	// Token: 0x040071D2 RID: 29138
 	private GenericLayout<HonamiStoryWeaponSuitInfoItem, IHonamiStoryWeaponSuitData> SuitVerticalLayout;
 
-	// Token: 0x040070F2 RID: 28914
+	// Token: 0x040071D3 RID: 29139
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x040070F3 RID: 28915
+	// Token: 0x040071D4 RID: 29140
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x040070F4 RID: 28916
+	// Token: 0x040071D5 RID: 29141
 	[Nullable(2)]
 	private HonamiStorySkillDescToggle DescToggleItem;
 
-	// Token: 0x020084EF RID: 34031
+	// Token: 0x02007674 RID: 30324
 	[NullableContext(0)]
 	private enum EHonamiStoryWeaponSelectComponent
 	{
-		// Token: 0x0402B423 RID: 177187
+		// Token: 0x04026747 RID: 157511
 		SkillModeToggle,
-		// Token: 0x0402B424 RID: 177188
+		// Token: 0x04026748 RID: 157512
 		WeaponPanelVerticalLayout,
-		// Token: 0x0402B425 RID: 177189
+		// Token: 0x04026749 RID: 157513
 		WeaponPanelItem,
-		// Token: 0x0402B426 RID: 177190
+		// Token: 0x0402674A RID: 157514
 		ConfirmButton,
-		// Token: 0x0402B427 RID: 177191
+		// Token: 0x0402674B RID: 157515
 		ItemCaption,
-		// Token: 0x0402B428 RID: 177192
+		// Token: 0x0402674C RID: 157516
 		DetailPanel,
-		// Token: 0x0402B429 RID: 177193
+		// Token: 0x0402674D RID: 157517
 		WeaponName,
-		// Token: 0x0402B42A RID: 177194
+		// Token: 0x0402674E RID: 157518
 		WeaponSkillTitle,
-		// Token: 0x0402B42B RID: 177195
+		// Token: 0x0402674F RID: 157519
 		WeaponSkillDesc,
-		// Token: 0x0402B42C RID: 177196
+		// Token: 0x04026750 RID: 157520
 		TagTitle,
-		// Token: 0x0402B42D RID: 177197
+		// Token: 0x04026751 RID: 157521
 		TagLayout,
-		// Token: 0x0402B42E RID: 177198
+		// Token: 0x04026752 RID: 157522
 		TagItem,
-		// Token: 0x0402B42F RID: 177199
+		// Token: 0x04026753 RID: 157523
 		SuitTitle,
-		// Token: 0x0402B430 RID: 177200
+		// Token: 0x04026754 RID: 157524
 		SuitVerticalLayout,
-		// Token: 0x0402B431 RID: 177201
+		// Token: 0x04026755 RID: 157525
 		SuitItem,
-		// Token: 0x0402B432 RID: 177202
+		// Token: 0x04026756 RID: 157526
 		GetTitleText,
-		// Token: 0x0402B433 RID: 177203
+		// Token: 0x04026757 RID: 157527
 		GetDescText,
-		// Token: 0x0402B434 RID: 177204
+		// Token: 0x04026758 RID: 157528
 		TagPanel,
-		// Token: 0x0402B435 RID: 177205
+		// Token: 0x04026759 RID: 157529
 		SuitPanel,
-		// Token: 0x0402B436 RID: 177206
+		// Token: 0x0402675A RID: 157530
 		GetPanel,
-		// Token: 0x0402B437 RID: 177207
+		// Token: 0x0402675B RID: 157531
 		LockPanel
 	}
 }

@@ -5,28 +5,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D5 RID: 18645
+	// Token: 0x0200384C RID: 14412
 	[NullableContext(1)]
 	public interface IDynamicScrollItem<[Nullable(2)] TData>
 	{
-		// Token: 0x06030BA1 RID: 199585
+		// Token: 0x060256CD RID: 153293
 		[return: Nullable(2)]
 		AUIBaseActor GetUsingItem(TData data);
 
-		// Token: 0x06030BA2 RID: 199586
+		// Token: 0x060256CE RID: 153294
 		void Update(TData data, int index);
 
-		// Token: 0x06030BA3 RID: 199587
+		// Token: 0x060256CF RID: 153295
 		UniTask Init(UUIItem actor);
 
-		// Token: 0x06030BA4 RID: 199588
+		// Token: 0x060256D0 RID: 153296
 		void ClearItem();
 
-		// Token: 0x1700798A RID: 31114
-		// (set) Token: 0x06030BA5 RID: 199589
+		// Token: 0x17004CF2 RID: 19698
+		// (set) Token: 0x060256D1 RID: 153297
 		bool SkipDestroyActor { set; }
 
-		// Token: 0x06030BA6 RID: 199590
+		// Token: 0x060256D2 RID: 153298
 		void SetUiActive(bool visibility);
 	}
 }

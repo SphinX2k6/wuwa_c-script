@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.Data
 {
-	// Token: 0x0200485C RID: 18524
+	// Token: 0x0200378D RID: 14221
 	[NullableContext(2)]
 	public interface IRegionalTerminalViewParams
 	{
-		// Token: 0x17007918 RID: 31000
-		// (get) Token: 0x060307B1 RID: 198577
-		// (set) Token: 0x060307B2 RID: 198578
+		// Token: 0x17004BD5 RID: 19413
+		// (get) Token: 0x06024F80 RID: 151424
+		// (set) Token: 0x06024F81 RID: 151425
 		bool ShowLockPanel { get; set; }
 
-		// Token: 0x17007919 RID: 31001
-		// (get) Token: 0x060307B3 RID: 198579
-		// (set) Token: 0x060307B4 RID: 198580
+		// Token: 0x17004BD6 RID: 19414
+		// (get) Token: 0x06024F82 RID: 151426
+		// (set) Token: 0x06024F83 RID: 151427
 		bool ShowButton { get; set; }
 
-		// Token: 0x1700791A RID: 31002
-		// (get) Token: 0x060307B5 RID: 198581
-		// (set) Token: 0x060307B6 RID: 198582
+		// Token: 0x17004BD7 RID: 19415
+		// (get) Token: 0x06024F84 RID: 151428
+		// (set) Token: 0x06024F85 RID: 151429
 		Action LockClickFunc { get; set; }
 
-		// Token: 0x1700791B RID: 31003
-		// (get) Token: 0x060307B7 RID: 198583
-		// (set) Token: 0x060307B8 RID: 198584
+		// Token: 0x17004BD8 RID: 19416
+		// (get) Token: 0x06024F86 RID: 151430
+		// (set) Token: 0x06024F87 RID: 151431
 		string LockTxtId { get; set; }
 
-		// Token: 0x1700791C RID: 31004
-		// (get) Token: 0x060307B9 RID: 198585
-		// (set) Token: 0x060307BA RID: 198586
+		// Token: 0x17004BD9 RID: 19417
+		// (get) Token: 0x06024F88 RID: 151432
+		// (set) Token: 0x06024F89 RID: 151433
 		string ButtonTxtId { get; set; }
 	}
 }

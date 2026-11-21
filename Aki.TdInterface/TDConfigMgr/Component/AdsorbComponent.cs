@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000013 RID: 19
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class AdsorbComponent : IComponentBase
 	{
-		// Token: 0x06000040 RID: 64 RVA: 0x000142F8 File Offset: 0x000124F8
+		// Token: 0x06000040 RID: 64 RVA: 0x00014BA4 File Offset: 0x00012DA4
 		private AdsorbComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000041 RID: 65 RVA: 0x00014330 File Offset: 0x00012530
+		// Token: 0x06000041 RID: 65 RVA: 0x00014BDC File Offset: 0x00012DDC
 		public static AdsorbComponent Create([Nullable(2)] AdsorbComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000042 RID: 66 RVA: 0x00014343 File Offset: 0x00012543
+		// Token: 0x06000042 RID: 66 RVA: 0x00014BEF File Offset: 0x00012DEF
 		public static AdsorbComponent CreateFromSetValue([Nullable(2)] AdsorbComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000043 RID: 67 RVA: 0x00014358 File Offset: 0x00012558
+		// Token: 0x06000043 RID: 67 RVA: 0x00014C04 File Offset: 0x00012E04
 		public new AdsorbComponent_SetValue ToSetValue()
 		{
 			return new AdsorbComponent_SetValue
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x06000044 RID: 68 RVA: 0x000143C0 File Offset: 0x000125C0
-		// (set) Token: 0x06000045 RID: 69 RVA: 0x000143FA File Offset: 0x000125FA
+		// (get) Token: 0x06000044 RID: 68 RVA: 0x00014C6C File Offset: 0x00012E6C
+		// (set) Token: 0x06000045 RID: 69 RVA: 0x00014CA6 File Offset: 0x00012EA6
 		public override bool? Disabled
 		{
 			get
@@ -90,8 +88,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x06000046 RID: 70 RVA: 0x00014408 File Offset: 0x00012608
-		// (set) Token: 0x06000047 RID: 71 RVA: 0x00014432 File Offset: 0x00012632
+		// (get) Token: 0x06000046 RID: 70 RVA: 0x00014CB4 File Offset: 0x00012EB4
+		// (set) Token: 0x06000047 RID: 71 RVA: 0x00014CDE File Offset: 0x00012EDE
 		public override bool? EdIsLocked
 		{
 			get
@@ -109,8 +107,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000016 RID: 22
-		// (get) Token: 0x06000048 RID: 72 RVA: 0x00014440 File Offset: 0x00012640
-		// (set) Token: 0x06000049 RID: 73 RVA: 0x0001446F File Offset: 0x0001266F
+		// (get) Token: 0x06000048 RID: 72 RVA: 0x00014CEC File Offset: 0x00012EEC
+		// (set) Token: 0x06000049 RID: 73 RVA: 0x00014D1B File Offset: 0x00012F1B
 		public virtual float Range
 		{
 			get
@@ -132,8 +130,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000017 RID: 23
-		// (get) Token: 0x0600004A RID: 74 RVA: 0x0001447D File Offset: 0x0001267D
-		// (set) Token: 0x0600004B RID: 75 RVA: 0x000144AC File Offset: 0x000126AC
+		// (get) Token: 0x0600004A RID: 74 RVA: 0x00014D29 File Offset: 0x00012F29
+		// (set) Token: 0x0600004B RID: 75 RVA: 0x00014D58 File Offset: 0x00012F58
 		public virtual float StartVelocity
 		{
 			get
@@ -155,8 +153,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000018 RID: 24
-		// (get) Token: 0x0600004C RID: 76 RVA: 0x000144BA File Offset: 0x000126BA
-		// (set) Token: 0x0600004D RID: 77 RVA: 0x000144E9 File Offset: 0x000126E9
+		// (get) Token: 0x0600004C RID: 76 RVA: 0x00014D66 File Offset: 0x00012F66
+		// (set) Token: 0x0600004D RID: 77 RVA: 0x00014D95 File Offset: 0x00012F95
 		public virtual float Acceleration
 		{
 			get
@@ -178,8 +176,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000019 RID: 25
-		// (get) Token: 0x0600004E RID: 78 RVA: 0x000144F8 File Offset: 0x000126F8
-		// (set) Token: 0x0600004F RID: 79 RVA: 0x00014559 File Offset: 0x00012759
+		// (get) Token: 0x0600004E RID: 78 RVA: 0x00014DA4 File Offset: 0x00012FA4
+		// (set) Token: 0x0600004F RID: 79 RVA: 0x00014E05 File Offset: 0x00013005
 		[Nullable(2)]
 		public virtual IEntityState ActiveStateCondition
 		{
@@ -211,8 +209,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700001A RID: 26
-		// (get) Token: 0x06000050 RID: 80 RVA: 0x0001456E File Offset: 0x0001276E
-		// (set) Token: 0x06000051 RID: 81 RVA: 0x00014599 File Offset: 0x00012799
+		// (get) Token: 0x06000050 RID: 80 RVA: 0x00014E1A File Offset: 0x0001301A
+		// (set) Token: 0x06000051 RID: 81 RVA: 0x00014E45 File Offset: 0x00013045
 		public virtual int AdsorbLimitedTime
 		{
 			get
@@ -233,18 +231,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000033 RID: 51
+		// Token: 0x04000034 RID: 52
 		[Nullable(2)]
 		protected new AdsorbComponent FbInstance;
 
-		// Token: 0x04000034 RID: 52
+		// Token: 0x04000035 RID: 53
 		[Nullable(2)]
 		protected new AdsorbComponent_SetValue PocoInterface;
 
-		// Token: 0x04000035 RID: 53
+		// Token: 0x04000036 RID: 54
 		private IEntityState _ActiveStateConditionCache;
 
-		// Token: 0x04000036 RID: 54
+		// Token: 0x04000037 RID: 55
 		private bool _ActiveStateConditionInited;
 	}
 }

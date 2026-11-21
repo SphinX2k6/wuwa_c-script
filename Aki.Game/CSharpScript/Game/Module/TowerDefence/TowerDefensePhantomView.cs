@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B59 RID: 19289
+	// Token: 0x02003B01 RID: 15105
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefensePhantomView : UiViewBase
 	{
-		// Token: 0x06031F19 RID: 204569 RVA: 0x00B96D66 File Offset: 0x00B94F66
+		// Token: 0x06026CA8 RID: 158888 RVA: 0x00ADAFA2 File Offset: 0x00AD91A2
 		public TowerDefensePhantomView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031F1A RID: 204570 RVA: 0x00B96D70 File Offset: 0x00B94F70
+		// Token: 0x06026CA9 RID: 158889 RVA: 0x00ADAFAC File Offset: 0x00AD91AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031F1B RID: 204571 RVA: 0x00B96FEC File Offset: 0x00B951EC
+		// Token: 0x06026CAA RID: 158890 RVA: 0x00ADB228 File Offset: 0x00AD9428
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.TowerDefenseOnClickOnePhantom, new Action<int>(this.HandleClickOnePhantom));
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			EventSystem.Instance.Add(EEventName.TowerDefensePhantomChanged, new Action(this.HandleTowerDefensePhantomChanged));
 		}
 
-		// Token: 0x06031F1C RID: 204572 RVA: 0x00B97050 File Offset: 0x00B95250
+		// Token: 0x06026CAB RID: 158891 RVA: 0x00ADB28C File Offset: 0x00AD948C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.TowerDefenseOnClickOnePhantom, new Action<int>(this.HandleClickOnePhantom));
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			EventSystem.Instance.Remove(EEventName.TowerDefensePhantomChanged, new Action(this.HandleTowerDefensePhantomChanged));
 		}
 
-		// Token: 0x06031F1D RID: 204573 RVA: 0x00B970B4 File Offset: 0x00B952B4
+		// Token: 0x06026CAC RID: 158892 RVA: 0x00ADB2F0 File Offset: 0x00AD94F0
 		private UniTask InitLockItem()
 		{
 			TowerDefensePhantomView.<InitLockItem>d__8 <InitLockItem>d__;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitLockItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F1E RID: 204574 RVA: 0x00B970F8 File Offset: 0x00B952F8
+		// Token: 0x06026CAD RID: 158893 RVA: 0x00ADB334 File Offset: 0x00AD9534
 		private UniTask InitPhantomIconScroll()
 		{
 			TowerDefensePhantomView.<InitPhantomIconScroll>d__9 <InitPhantomIconScroll>d__;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitPhantomIconScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F1F RID: 204575 RVA: 0x00B9713C File Offset: 0x00B9533C
+		// Token: 0x06026CAE RID: 158894 RVA: 0x00ADB378 File Offset: 0x00AD9578
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefensePhantomView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F20 RID: 204576 RVA: 0x00B9717F File Offset: 0x00B9537F
+		// Token: 0x06026CAF RID: 158895 RVA: 0x00ADB3BB File Offset: 0x00AD95BB
 		protected override void OnBeforeDestroy()
 		{
 			this.Args = null;
 		}
 
-		// Token: 0x06031F21 RID: 204577 RVA: 0x00B97188 File Offset: 0x00B95388
+		// Token: 0x06026CB0 RID: 158896 RVA: 0x00ADB3C4 File Offset: 0x00AD95C4
 		private UniTask RefreshIconScroll(bool isFirstTime)
 		{
 			TowerDefensePhantomView.<RefreshIconScroll>d__12 <RefreshIconScroll>d__;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshIconScroll>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F22 RID: 204578 RVA: 0x00B971D4 File Offset: 0x00B953D4
+		// Token: 0x06026CB1 RID: 158897 RVA: 0x00ADB410 File Offset: 0x00AD9610
 		private void RefreshSkillItems()
 		{
 			List<ITowerDefensePhantomSkillItemData> list = TowerDefenseController.Instance.BuildPhantomSkillLayoutData();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshOneSkillItem(13, 14, 15, data2);
 		}
 
-		// Token: 0x06031F23 RID: 204579 RVA: 0x00B97238 File Offset: 0x00B95438
+		// Token: 0x06026CB2 RID: 158898 RVA: 0x00ADB474 File Offset: 0x00AD9674
 		[NullableContext(2)]
 		private void RefreshOneSkillItem(int itemComp, int titleComp, int descComp, ITowerDefensePhantomSkillItemData data)
 		{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(descComp), data.DescriptionTextId, data.DescriptionArgs);
 		}
 
-		// Token: 0x06031F24 RID: 204580 RVA: 0x00B972C8 File Offset: 0x00B954C8
+		// Token: 0x06026CB3 RID: 158899 RVA: 0x00ADB504 File Offset: 0x00AD9704
 		private void RefreshConfirmButton(bool isLocked)
 		{
 			if (isLocked)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ConfirmButtonItem.SetLocalTextNew("PrefabTextItem_266690258_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x06031F25 RID: 204581 RVA: 0x00B973D4 File Offset: 0x00B955D4
+		// Token: 0x06026CB4 RID: 158900 RVA: 0x00ADB610 File Offset: 0x00AD9810
 		private void RefreshOther()
 		{
 			ITowerDefensePhantomOtherData towerDefensePhantomOtherData = TowerDefenseController.Instance.BuildPhantomOtherData();
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F26 RID: 204582 RVA: 0x00B97470 File Offset: 0x00B95670
+		// Token: 0x06026CB5 RID: 158901 RVA: 0x00ADB6AC File Offset: 0x00AD98AC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -253,13 +253,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			};
 		}
 
-		// Token: 0x06031F27 RID: 204583 RVA: 0x00B974A7 File Offset: 0x00B956A7
+		// Token: 0x06026CB6 RID: 158902 RVA: 0x00ADB6E3 File Offset: 0x00AD98E3
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F28 RID: 204584 RVA: 0x00B974B0 File Offset: 0x00B956B0
+		// Token: 0x06026CB7 RID: 158903 RVA: 0x00ADB6EC File Offset: 0x00AD98EC
 		private void HandleClickOnePhantom(int id)
 		{
 			TowerDefenseController.Instance.SetCurrentTowerDefensePhantomIdInUiTemp(id);
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshOther();
 		}
 
-		// Token: 0x06031F29 RID: 204585 RVA: 0x00B974D4 File Offset: 0x00B956D4
+		// Token: 0x06026CB8 RID: 158904 RVA: 0x00ADB710 File Offset: 0x00AD9910
 		private void HandleClickConfirmPhantom(int _)
 		{
 			int roleCfgId = this.Args.RoleCfgId;
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F2A RID: 204586 RVA: 0x00B97508 File Offset: 0x00B95708
+		// Token: 0x06026CB9 RID: 158905 RVA: 0x00ADB744 File Offset: 0x00AD9944
 		private void HandleClickCancelPhantom(int _)
 		{
 			int roleCfgId = this.Args.RoleCfgId;
@@ -285,27 +285,27 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F2B RID: 204587 RVA: 0x00B97544 File Offset: 0x00B95744
+		// Token: 0x06026CBA RID: 158906 RVA: 0x00ADB780 File Offset: 0x00AD9980
 		private void HandleDissolvePrewar()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031F2C RID: 204588 RVA: 0x00B9754D File Offset: 0x00B9574D
+		// Token: 0x06026CBB RID: 158907 RVA: 0x00ADB789 File Offset: 0x00AD9989
 		private void HandleTowerDefensePhantomChanged()
 		{
 			this.RefreshIconScroll(false);
 			this.RefreshOther();
 		}
 
-		// Token: 0x0401AA25 RID: 109093
+		// Token: 0x04015377 RID: 86903
 		[Nullable(2)]
 		private ITowerDefensePhantomViewArgs Args;
 
-		// Token: 0x0401AA26 RID: 109094
+		// Token: 0x04015378 RID: 86904
 		private ButtonItem ConfirmButtonItem;
 
-		// Token: 0x0401AA27 RID: 109095
+		// Token: 0x04015379 RID: 86905
 		[Nullable(new byte[]
 		{
 			2,
@@ -314,60 +314,60 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private LoopScrollView<TowerDefencePhantomIconItem, PhantomSmallItemGrid> PhantomIconScroll;
 
-		// Token: 0x0401AA28 RID: 109096
+		// Token: 0x0401537A RID: 86906
 		[Nullable(2)]
 		private TowerDefensePhantomLockItem PhantomLockItem;
 
-		// Token: 0x0200ACDE RID: 44254
+		// Token: 0x020096FD RID: 38653
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403486A RID: 215146
+			// Token: 0x0402F213 RID: 193043
 			public const int CloseButton = 0;
 
-			// Token: 0x0403486B RID: 215147
+			// Token: 0x0402F214 RID: 193044
 			public const int PhantomIconScroll = 1;
 
-			// Token: 0x0403486C RID: 215148
+			// Token: 0x0402F215 RID: 193045
 			public const int PhantomIconItem = 2;
 
-			// Token: 0x0403486D RID: 215149
+			// Token: 0x0402F216 RID: 193046
 			public const int NameText = 3;
 
-			// Token: 0x0403486E RID: 215150
+			// Token: 0x0402F217 RID: 193047
 			public const int TypeSprite = 4;
 
-			// Token: 0x0403486F RID: 215151
+			// Token: 0x0402F218 RID: 193048
 			public const int TypeText = 5;
 
-			// Token: 0x04034870 RID: 215152
+			// Token: 0x0402F219 RID: 193049
 			public const int PhantomSkillLayout = 6;
 
-			// Token: 0x04034871 RID: 215153
+			// Token: 0x0402F21A RID: 193050
 			public const int ConfirmButtonItem = 7;
 
-			// Token: 0x04034872 RID: 215154
+			// Token: 0x0402F21B RID: 193051
 			public const int PhantomTipsItem = 8;
 
-			// Token: 0x04034873 RID: 215155
+			// Token: 0x0402F21C RID: 193052
 			public const int PhantomLockItem = 9;
 
-			// Token: 0x04034874 RID: 215156
+			// Token: 0x0402F21D RID: 193053
 			public const int NormalSkillItem = 10;
 
-			// Token: 0x04034875 RID: 215157
+			// Token: 0x0402F21E RID: 193054
 			public const int NormalSkillTitleText = 11;
 
-			// Token: 0x04034876 RID: 215158
+			// Token: 0x0402F21F RID: 193055
 			public const int NormalSkillDescText = 12;
 
-			// Token: 0x04034877 RID: 215159
+			// Token: 0x0402F220 RID: 193056
 			public const int AdvancedSkillItem = 13;
 
-			// Token: 0x04034878 RID: 215160
+			// Token: 0x0402F221 RID: 193057
 			public const int AdvancedSkillTitleText = 14;
 
-			// Token: 0x04034879 RID: 215161
+			// Token: 0x0402F222 RID: 193058
 			public const int AdvancedSkillDescText = 15;
 		}
 	}

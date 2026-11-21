@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020013BB RID: 5051
+// Token: 0x0200086F RID: 2159
 [NullableContext(1)]
 public interface IActivityNewPlayerSupportTaskItemData
 {
-	// Token: 0x17000BF5 RID: 3061
-	// (get) Token: 0x06008E7F RID: 36479
+	// Token: 0x17000C15 RID: 3093
+	// (get) Token: 0x06006214 RID: 25108
 	ActivityNewPlayerSupportTaskData TaskData { get; }
 
-	// Token: 0x17000BF6 RID: 3062
-	// (get) Token: 0x06008E80 RID: 36480
+	// Token: 0x17000C16 RID: 3094
+	// (get) Token: 0x06006215 RID: 25109
 	bool ShowDecoration { get; }
 }

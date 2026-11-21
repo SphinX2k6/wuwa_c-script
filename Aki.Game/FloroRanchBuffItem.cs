@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B7D RID: 7037
+// Token: 0x0200103C RID: 4156
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class FloroRanchBuffItem : GridProxyAbstract<FloroRanchBuffData>
 {
-	// Token: 0x0600D171 RID: 53617 RVA: 0x002FFF3C File Offset: 0x002FE13C
+	// Token: 0x0600A582 RID: 42370 RVA: 0x0030B014 File Offset: 0x00309214
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -35,7 +35,7 @@ public class FloroRanchBuffItem : GridProxyAbstract<FloroRanchBuffData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D172 RID: 53618 RVA: 0x0030002C File Offset: 0x002FE22C
+	// Token: 0x0600A583 RID: 42371 RVA: 0x0030B104 File Offset: 0x00309304
 	protected override void OnStart()
 	{
 		ITermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -48,13 +48,13 @@ public class FloroRanchBuffItem : GridProxyAbstract<FloroRanchBuffData>
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D173 RID: 53619 RVA: 0x00300072 File Offset: 0x002FE272
+	// Token: 0x0600A584 RID: 42372 RVA: 0x0030B14A File Offset: 0x0030934A
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(3));
 	}
 
-	// Token: 0x0600D174 RID: 53620 RVA: 0x00300088 File Offset: 0x002FE288
+	// Token: 0x0600A585 RID: 42373 RVA: 0x0030B160 File Offset: 0x00309360
 	[NullableContext(1)]
 	public override void Refresh(FloroRanchBuffData data, bool isSelected, int gridIndex)
 	{
@@ -91,25 +91,25 @@ public class FloroRanchBuffItem : GridProxyAbstract<FloroRanchBuffData>
 		text3.SetUIActive(false);
 	}
 
-	// Token: 0x02008101 RID: 33025
+	// Token: 0x0200728F RID: 29327
 	private class EComponentDefine
 	{
-		// Token: 0x0402A19E RID: 172446
+		// Token: 0x040254D2 RID: 152786
 		public const int Item = 0;
 
-		// Token: 0x0402A19F RID: 172447
+		// Token: 0x040254D3 RID: 152787
 		public const int CountItem = 1;
 
-		// Token: 0x0402A1A0 RID: 172448
+		// Token: 0x040254D4 RID: 152788
 		public const int CountNum = 2;
 
-		// Token: 0x0402A1A1 RID: 172449
+		// Token: 0x040254D5 RID: 152789
 		public const int NameText = 3;
 
-		// Token: 0x0402A1A2 RID: 172450
+		// Token: 0x040254D6 RID: 152790
 		public const int CurrencyTexture = 4;
 
-		// Token: 0x0402A1A3 RID: 172451
+		// Token: 0x040254D7 RID: 152791
 		public const int CurrencyText = 5;
 	}
 }

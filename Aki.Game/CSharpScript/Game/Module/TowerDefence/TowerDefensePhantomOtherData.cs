@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B34 RID: 19252
+	// Token: 0x02003ADC RID: 15068
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefensePhantomOtherData : ITowerDefensePhantomOtherData
 	{
-		// Token: 0x17007B7D RID: 31613
-		// (get) Token: 0x06031DB7 RID: 204215 RVA: 0x00B92769 File Offset: 0x00B90969
-		// (set) Token: 0x06031DB8 RID: 204216 RVA: 0x00B92771 File Offset: 0x00B90971
+		// Token: 0x17004F2A RID: 20266
+		// (get) Token: 0x06026B47 RID: 158535 RVA: 0x00AD67CD File Offset: 0x00AD49CD
+		// (set) Token: 0x06026B48 RID: 158536 RVA: 0x00AD67D5 File Offset: 0x00AD49D5
 		public string NameTextId { get; set; }
 
-		// Token: 0x17007B7E RID: 31614
-		// (get) Token: 0x06031DB9 RID: 204217 RVA: 0x00B9277A File Offset: 0x00B9097A
-		// (set) Token: 0x06031DBA RID: 204218 RVA: 0x00B92782 File Offset: 0x00B90982
+		// Token: 0x17004F2B RID: 20267
+		// (get) Token: 0x06026B49 RID: 158537 RVA: 0x00AD67DE File Offset: 0x00AD49DE
+		// (set) Token: 0x06026B4A RID: 158538 RVA: 0x00AD67E6 File Offset: 0x00AD49E6
 		public string TypeTextId { get; set; }
 
-		// Token: 0x17007B7F RID: 31615
-		// (get) Token: 0x06031DBB RID: 204219 RVA: 0x00B9278B File Offset: 0x00B9098B
-		// (set) Token: 0x06031DBC RID: 204220 RVA: 0x00B92793 File Offset: 0x00B90993
+		// Token: 0x17004F2C RID: 20268
+		// (get) Token: 0x06026B4B RID: 158539 RVA: 0x00AD67EF File Offset: 0x00AD49EF
+		// (set) Token: 0x06026B4C RID: 158540 RVA: 0x00AD67F7 File Offset: 0x00AD49F7
 		public string TypeIconPath { get; set; }
 
-		// Token: 0x17007B80 RID: 31616
-		// (get) Token: 0x06031DBD RID: 204221 RVA: 0x00B9279C File Offset: 0x00B9099C
-		// (set) Token: 0x06031DBE RID: 204222 RVA: 0x00B927A4 File Offset: 0x00B909A4
+		// Token: 0x17004F2D RID: 20269
+		// (get) Token: 0x06026B4D RID: 158541 RVA: 0x00AD6800 File Offset: 0x00AD4A00
+		// (set) Token: 0x06026B4E RID: 158542 RVA: 0x00AD6808 File Offset: 0x00AD4A08
 		public bool IsLocked { get; set; }
 	}
 }

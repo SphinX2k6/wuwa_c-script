@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 {
-	// Token: 0x02007032 RID: 28722
+	// Token: 0x020061B3 RID: 25011
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleJumpAlongRailMoveData : MotorcycleRailMoveDataBase
 	{
-		// Token: 0x06045ED2 RID: 286418 RVA: 0x01168A60 File Offset: 0x01166C60
+		// Token: 0x0603C0B4 RID: 245940 RVA: 0x011128AC File Offset: 0x01110AAC
 		public MotorcycleJumpAlongRailMoveData(Entity owner, [Nullable(2)] MotorcycleRailComponent relatedRail) : base(EMotorcycleRailMoveDataType.JumpAlongRail, owner, relatedRail)
 		{
 		}
 
-		// Token: 0x17009BDA RID: 39898
-		// (get) Token: 0x06045ED3 RID: 286419 RVA: 0x01168B2D File Offset: 0x01166D2D
+		// Token: 0x17007147 RID: 28999
+		// (get) Token: 0x0603C0B5 RID: 245941 RVA: 0x01112979 File Offset: 0x01110B79
 		private ParabolaMoveConfig ParabolaMoveConfig
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x17009BDB RID: 39899
-		// (get) Token: 0x06045ED4 RID: 286420 RVA: 0x01168B3F File Offset: 0x01166D3F
+		// Token: 0x17007148 RID: 29000
+		// (get) Token: 0x0603C0B6 RID: 245942 RVA: 0x0111298B File Offset: 0x01110B8B
 		private CommonConfig CommonConfig
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x17009BDC RID: 39900
-		// (get) Token: 0x06045ED5 RID: 286421 RVA: 0x01168B51 File Offset: 0x01166D51
+		// Token: 0x17007149 RID: 29001
+		// (get) Token: 0x0603C0B7 RID: 245943 RVA: 0x0111299D File Offset: 0x01110B9D
 		private BasicRailMoveConfig BasicRailMoveConfig
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045ED6 RID: 286422 RVA: 0x01168B5E File Offset: 0x01166D5E
+		// Token: 0x0603C0B8 RID: 245944 RVA: 0x011129AA File Offset: 0x01110BAA
 		public override void OnTick(float deltaSeconds)
 		{
 			this.TickUpdateMove(deltaSeconds);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.UpdateIsFinishMove();
 		}
 
-		// Token: 0x06045ED7 RID: 286423 RVA: 0x01168B7C File Offset: 0x01166D7C
+		// Token: 0x0603C0B9 RID: 245945 RVA: 0x011129C8 File Offset: 0x01110BC8
 		[NullableContext(2)]
 		public unsafe override bool OnEnter(MotorcycleRailMoveDataBase lastRailMoveData)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			return true;
 		}
 
-		// Token: 0x06045ED8 RID: 286424 RVA: 0x011690D0 File Offset: 0x011672D0
+		// Token: 0x0603C0BA RID: 245946 RVA: 0x01112F1C File Offset: 0x0111111C
 		public override void OnExit()
 		{
 			BaseTagComponent component = this.OwnerEntity.GetComponent<BaseTagComponent>();
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			}
 		}
 
-		// Token: 0x06045ED9 RID: 286425 RVA: 0x01169160 File Offset: 0x01167360
+		// Token: 0x0603C0BB RID: 245947 RVA: 0x01112FAC File Offset: 0x011111AC
 		public override bool GetVelocity(Vector outVelocity)
 		{
 			this.CurrentGravityUpVelocity.Addition(this.PlaneVelocity, outVelocity);
 			return true;
 		}
 
-		// Token: 0x06045EDA RID: 286426 RVA: 0x01169178 File Offset: 0x01167378
+		// Token: 0x0603C0BC RID: 245948 RVA: 0x01112FC4 File Offset: 0x011111C4
 		public void TickUpdateMove(float deltaSeconds)
 		{
 			float num = Math.Min(Math.Min(this.ParabolaMoveConfig.Duration - this.CurrentMovingTime, deltaSeconds), this.BasicRailMoveConfig.MaxDeltaTimeForMoveUpdate);
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			Rotator.Lerp(this.StartRotation, this.EndRotation, this.CurrentMovingTime / this.ParabolaMoveConfig.Duration, this.CurrentRotator);
 		}
 
-		// Token: 0x06045EDB RID: 286427 RVA: 0x01169288 File Offset: 0x01167488
+		// Token: 0x0603C0BD RID: 245949 RVA: 0x011130D4 File Offset: 0x011112D4
 		private void ApplyMove()
 		{
 			if (this.CommonConfig.EnableBlockingCheck && this.IsBlocked)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			moveUpdater(this.CurrentLocation, this.CurrentRotator, velocity ? tmpVector : null, this.CommonConfig.EnableBlockingCheck);
 		}
 
-		// Token: 0x06045EDC RID: 286428 RVA: 0x011692E8 File Offset: 0x011674E8
+		// Token: 0x0603C0BE RID: 245950 RVA: 0x01113134 File Offset: 0x01111334
 		private unsafe void UpdateIsFinishMove()
 		{
 			if (this.CommonConfig.EnableBlockingCheck && this.IsBlocked && this.BlockingTime > this.CommonConfig.MaxBlockingTimeOut)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.IsFinishMove = (this.CurrentMovingTime >= this.ParabolaMoveConfig.Duration);
 		}
 
-		// Token: 0x06045EDD RID: 286429 RVA: 0x011693B4 File Offset: 0x011675B4
+		// Token: 0x0603C0BF RID: 245951 RVA: 0x01113200 File Offset: 0x01111400
 		private void UpdateIsBlocked(float deltaSeconds)
 		{
 			if (!this.CommonConfig.EnableBlockingCheck)
@@ -302,76 +302,76 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle.MotorcycleRailMove
 			this.BlockingTime = 0f;
 		}
 
-		// Token: 0x0402491D RID: 149789
+		// Token: 0x0401FBD3 RID: 130003
 		public MotorcycleRailMoveConfig MoveConfig = new MotorcycleRailMoveConfig();
 
-		// Token: 0x0402491E RID: 149790
+		// Token: 0x0401FBD4 RID: 130004
 		[Nullable(2)]
 		public SplineCurve TargetSpline;
 
-		// Token: 0x0402491F RID: 149791
+		// Token: 0x0401FBD5 RID: 130005
 		public bool TargetIsForward = true;
 
-		// Token: 0x04024920 RID: 149792
+		// Token: 0x0401FBD6 RID: 130006
 		public Vector GravityDir = Vector.Create();
 
-		// Token: 0x04024921 RID: 149793
+		// Token: 0x0401FBD7 RID: 130007
 		[Nullable(2)]
 		public TRailMoveUpdater MoveUpdater;
 
-		// Token: 0x04024922 RID: 149794
+		// Token: 0x0401FBD8 RID: 130008
 		[Nullable(2)]
 		public TRailMoveGetter MoveGetter;
 
-		// Token: 0x04024923 RID: 149795
+		// Token: 0x0401FBD9 RID: 130009
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x04024924 RID: 149796
+		// Token: 0x0401FBDA RID: 130010
 		private readonly Vector EndLocation = Vector.Create();
 
-		// Token: 0x04024925 RID: 149797
+		// Token: 0x0401FBDB RID: 130011
 		private readonly Rotator StartRotation = Rotator.Create();
 
-		// Token: 0x04024926 RID: 149798
+		// Token: 0x0401FBDC RID: 130012
 		private readonly Rotator EndRotation = Rotator.Create();
 
-		// Token: 0x04024927 RID: 149799
+		// Token: 0x0401FBDD RID: 130013
 		private readonly Vector PlaneVelocity = Vector.Create();
 
-		// Token: 0x04024928 RID: 149800
+		// Token: 0x0401FBDE RID: 130014
 		private readonly Vector CurrentGravityUpVelocity = Vector.Create();
 
-		// Token: 0x04024929 RID: 149801
+		// Token: 0x0401FBDF RID: 130015
 		private readonly Vector CurrentLocation = Vector.Create();
 
-		// Token: 0x0402492A RID: 149802
+		// Token: 0x0401FBE0 RID: 130016
 		private readonly Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x0402492B RID: 149803
+		// Token: 0x0401FBE1 RID: 130017
 		private float CurrentMovingTime;
 
-		// Token: 0x0402492C RID: 149804
+		// Token: 0x0401FBE2 RID: 130018
 		private readonly RailMoveContext RailMoveContext = new RailMoveContext();
 
-		// Token: 0x0402492D RID: 149805
+		// Token: 0x0401FBE3 RID: 130019
 		private readonly Vector TmpVector1 = Vector.Create();
 
-		// Token: 0x0402492E RID: 149806
+		// Token: 0x0401FBE4 RID: 130020
 		private readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x0402492F RID: 149807
+		// Token: 0x0401FBE5 RID: 130021
 		private readonly Vector TmpVector3 = Vector.Create();
 
-		// Token: 0x04024930 RID: 149808
+		// Token: 0x0401FBE6 RID: 130022
 		private readonly Vector TmpVector4 = Vector.Create();
 
-		// Token: 0x04024931 RID: 149809
+		// Token: 0x0401FBE7 RID: 130023
 		private readonly Transform TmpTransform1 = Transform.Create();
 
-		// Token: 0x04024932 RID: 149810
+		// Token: 0x0401FBE8 RID: 130024
 		private bool IsBlocked;
 
-		// Token: 0x04024933 RID: 149811
+		// Token: 0x0401FBE9 RID: 130025
 		private float BlockingTime;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F15 RID: 16149
+	// Token: 0x02004353 RID: 17235
 	public class ILogicProgramSpecialProcessT
 	{
-		// Token: 0x17007054 RID: 28756
-		// (get) Token: 0x06016ED6 RID: 93910 RVA: 0x0034F1F1 File Offset: 0x0034D3F1
-		// (set) Token: 0x06016ED7 RID: 93911 RVA: 0x0034F1F9 File Offset: 0x0034D3F9
+		// Token: 0x17007643 RID: 30275
+		// (get) Token: 0x0601852E RID: 99630 RVA: 0x00378419 File Offset: 0x00376619
+		// (set) Token: 0x0601852F RID: 99631 RVA: 0x00378421 File Offset: 0x00376621
 		public List<IDisableUroT> SpecialProcessList { get; set; }
 
-		// Token: 0x06016ED8 RID: 93912 RVA: 0x0034F202 File Offset: 0x0034D402
+		// Token: 0x06018530 RID: 99632 RVA: 0x0037842A File Offset: 0x0037662A
 		public ILogicProgramSpecialProcessT()
 		{
 			this.SpecialProcessList = null;

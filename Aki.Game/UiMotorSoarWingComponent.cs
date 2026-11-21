@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002CA6 RID: 11430
+// Token: 0x020021FF RID: 8703
 [NullableContext(2)]
 [Nullable(0)]
 public class UiMotorSoarWingComponent : UiModelComponentBase
 {
-	// Token: 0x06017E2D RID: 97837 RVA: 0x00612700 File Offset: 0x00610900
+	// Token: 0x060156A1 RID: 87713 RVA: 0x00638284 File Offset: 0x00636484
 	protected override void OnInit()
 	{
 		this.ModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
@@ -20,14 +20,14 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		this.SetActive(false);
 	}
 
-	// Token: 0x06017E2E RID: 97838 RVA: 0x00612754 File Offset: 0x00610954
+	// Token: 0x060156A2 RID: 87714 RVA: 0x006382D8 File Offset: 0x006364D8
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnMotorMeshLoadComplete));
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.OnUiMotorModelStartLoad));
 	}
 
-	// Token: 0x06017E2F RID: 97839 RVA: 0x006127A8 File Offset: 0x006109A8
+	// Token: 0x060156A3 RID: 87715 RVA: 0x0063832C File Offset: 0x0063652C
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnMotorMeshLoadComplete));
@@ -40,14 +40,14 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017E30 RID: 97840 RVA: 0x00612819 File Offset: 0x00610A19
+	// Token: 0x060156A4 RID: 87716 RVA: 0x0063839D File Offset: 0x0063659D
 	private bool IsMotorLoadComplete()
 	{
 		UiModelDataComponent modelDataComponent = this.ModelDataComponent;
 		return modelDataComponent != null && modelDataComponent.GetModelLoadState() == EUiModelLoadState.LoadComplete;
 	}
 
-	// Token: 0x06017E31 RID: 97841 RVA: 0x0061282F File Offset: 0x00610A2F
+	// Token: 0x060156A5 RID: 87717 RVA: 0x006383B3 File Offset: 0x006365B3
 	public void TrySetActive(bool isActive)
 	{
 		if (isActive && (!this.IsMotorLoadComplete() || !this.CanShowMotorSoarWing))
@@ -57,7 +57,7 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		this.SetActive(isActive);
 	}
 
-	// Token: 0x06017E32 RID: 97842 RVA: 0x0061284C File Offset: 0x00610A4C
+	// Token: 0x060156A6 RID: 87718 RVA: 0x006383D0 File Offset: 0x006365D0
 	public void SetActive(bool isActive)
 	{
 		if ((isActive && this.CurState == ESoaringWingState.Showing) || (!isActive && this.CurState == ESoaringWingState.Hidden))
@@ -83,19 +83,19 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		this.CurState = (isActive ? ESoaringWingState.Showing : ESoaringWingState.Hidden);
 	}
 
-	// Token: 0x06017E33 RID: 97843 RVA: 0x006128AA File Offset: 0x00610AAA
+	// Token: 0x060156A7 RID: 87719 RVA: 0x0063842E File Offset: 0x0063662E
 	public void SetSoarWingId(int soarWingId)
 	{
 		this.SoarWingId = soarWingId;
 	}
 
-	// Token: 0x06017E34 RID: 97844 RVA: 0x006128B3 File Offset: 0x00610AB3
+	// Token: 0x060156A8 RID: 87720 RVA: 0x00638437 File Offset: 0x00636637
 	public void SetCanShowSoarWing(bool canShow)
 	{
 		this.CanShowMotorSoarWing = canShow;
 	}
 
-	// Token: 0x06017E35 RID: 97845 RVA: 0x006128BC File Offset: 0x00610ABC
+	// Token: 0x060156A9 RID: 87721 RVA: 0x00638440 File Offset: 0x00636640
 	public void RefreshSoarWing(int soarWingId)
 	{
 		if (!this.CanShowMotorSoarWing)
@@ -121,20 +121,20 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		}, null, false);
 	}
 
-	// Token: 0x06017E36 RID: 97846 RVA: 0x0061295D File Offset: 0x00610B5D
+	// Token: 0x060156AA RID: 87722 RVA: 0x006384E1 File Offset: 0x006366E1
 	public void RefreshCurSoarWing()
 	{
 		this.RefreshSoarWing(this.SoarWingId);
 	}
 
-	// Token: 0x06017E37 RID: 97847 RVA: 0x0061296B File Offset: 0x00610B6B
+	// Token: 0x060156AB RID: 87723 RVA: 0x006384EF File Offset: 0x006366EF
 	[NullableContext(1)]
 	private SDecorationConfig GetSoarWingConfig(int configId)
 	{
 		return DataTableUtil.GetDataTableRowFromName<SDecorationConfig>(EDataTable.DecorationConfig, configId.ToString());
 	}
 
-	// Token: 0x06017E38 RID: 97848 RVA: 0x0061297C File Offset: 0x00610B7C
+	// Token: 0x060156AC RID: 87724 RVA: 0x00638500 File Offset: 0x00636700
 	private void SpawnSoarWingEffects(int soarWingId)
 	{
 		if (!this.CanShowMotorSoarWing || soarWingId <= 0 || this.SoarWingEffectHandleSet.Count > 0)
@@ -201,7 +201,7 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017E39 RID: 97849 RVA: 0x00612AAC File Offset: 0x00610CAC
+	// Token: 0x060156AD RID: 87725 RVA: 0x00638630 File Offset: 0x00636830
 	private void DestroySoarWingEffects()
 	{
 		if (this.SoarWingEffectHandleSet.Count <= 0)
@@ -232,42 +232,42 @@ public class UiMotorSoarWingComponent : UiModelComponentBase
 		this.SoarWingEffectHandleSet.Clear();
 	}
 
-	// Token: 0x06017E3A RID: 97850 RVA: 0x00612B48 File Offset: 0x00610D48
+	// Token: 0x060156AE RID: 87726 RVA: 0x006386CC File Offset: 0x006368CC
 	private void OnMotorMeshLoadComplete()
 	{
 		this.TrySetActive(true);
 		this.SpawnSoarWingEffects(this.SoarWingId);
 	}
 
-	// Token: 0x06017E3B RID: 97851 RVA: 0x00612B5D File Offset: 0x00610D5D
+	// Token: 0x060156AF RID: 87727 RVA: 0x006386E1 File Offset: 0x006368E1
 	private void OnUiMotorModelStartLoad()
 	{
 		this.SetActive(false);
 		this.RefreshSoarWing(this.SoarWingId);
 	}
 
-	// Token: 0x0400B217 RID: 45591
+	// Token: 0x0400B582 RID: 46466
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B218 RID: 45592
+	// Token: 0x0400B583 RID: 46467
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B219 RID: 45593
+	// Token: 0x0400B584 RID: 46468
 	private UiMotorDataComponent MotorDataComponent;
 
-	// Token: 0x0400B21A RID: 45594
+	// Token: 0x0400B585 RID: 46469
 	private SkeletalObserverHandle SoarWingHandle;
 
-	// Token: 0x0400B21B RID: 45595
+	// Token: 0x0400B586 RID: 46470
 	private ESoaringWingState CurState;
 
-	// Token: 0x0400B21C RID: 45596
+	// Token: 0x0400B587 RID: 46471
 	private int SoarWingId;
 
-	// Token: 0x0400B21D RID: 45597
+	// Token: 0x0400B588 RID: 46472
 	private bool CanShowMotorSoarWing;
 
-	// Token: 0x0400B21E RID: 45598
+	// Token: 0x0400B589 RID: 46473
 	[Nullable(1)]
 	private readonly HashSet<int> SoarWingEffectHandleSet = new HashSet<int>();
 }

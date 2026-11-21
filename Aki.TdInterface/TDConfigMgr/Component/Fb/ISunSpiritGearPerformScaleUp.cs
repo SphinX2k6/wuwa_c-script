@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DBD RID: 3517
+	// Token: 0x02000EB9 RID: 3769
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISunSpiritGearPerformScaleUp : ISunSpiritGearPerformConfig
 	{
-		// Token: 0x06004FD3 RID: 20435 RVA: 0x000C57CE File Offset: 0x000C39CE
-		[NullableContext(1)]
+		// Token: 0x060054F8 RID: 21752 RVA: 0x000D101E File Offset: 0x000CF21E
+		[NullableContext(0)]
 		public static ISunSpiritGearPerformScaleUp Create(ISunSpiritGearPerformScaleUp? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A16 RID: 6678
-		// (get) Token: 0x06004FD4 RID: 20436 RVA: 0x000C57ED File Offset: 0x000C39ED
+		// Token: 0x17001B81 RID: 7041
+		// (get) Token: 0x060054F9 RID: 21753 RVA: 0x000D103D File Offset: 0x000CF23D
 		public override ESunSpiritGearPerformType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A17 RID: 6679
-		// (get) Token: 0x06004FD5 RID: 20437 RVA: 0x000C57FA File Offset: 0x000C39FA
+		// Token: 0x17001B82 RID: 7042
+		// (get) Token: 0x060054FA RID: 21754 RVA: 0x000D104A File Offset: 0x000CF24A
 		public virtual float Scale
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A18 RID: 6680
-		// (get) Token: 0x06004FD6 RID: 20438 RVA: 0x000C5807 File Offset: 0x000C3A07
+		// Token: 0x17001B83 RID: 7043
+		// (get) Token: 0x060054FB RID: 21755 RVA: 0x000D1057 File Offset: 0x000CF257
 		public virtual IScaleUpSpiritPerformConfig ScaleUpPerformConfig
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DC8 RID: 11720
+		// Token: 0x0400308E RID: 12430
 		private ISunSpiritGearPerformScaleUp Instance;
 
-		// Token: 0x04002DC9 RID: 11721
+		// Token: 0x0400308F RID: 12431
 		private IScaleUpSpiritPerformConfig _ScaleUpPerformConfigCache;
 
-		// Token: 0x04002DCA RID: 11722
+		// Token: 0x04003090 RID: 12432
 		private bool _ScaleUpPerformConfigInited;
 	}
 }

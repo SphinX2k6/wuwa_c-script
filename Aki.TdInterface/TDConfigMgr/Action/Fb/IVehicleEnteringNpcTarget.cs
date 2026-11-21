@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029B8 RID: 10680
+	// Token: 0x02002CA5 RID: 11429
 	public class IVehicleEnteringNpcTarget : IVehicleEnteringTarget
 	{
-		// Token: 0x0600EC33 RID: 60467 RVA: 0x00228112 File Offset: 0x00226312
-		[NullableContext(1)]
+		// Token: 0x0600FACA RID: 64202 RVA: 0x00245A96 File Offset: 0x00243C96
 		public static IVehicleEnteringNpcTarget Create(IVehicleEnteringNpcTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A85 RID: 19077
-		// (get) Token: 0x0600EC34 RID: 60468 RVA: 0x00228131 File Offset: 0x00226331
+		// Token: 0x17004E2E RID: 20014
+		// (get) Token: 0x0600FACB RID: 64203 RVA: 0x00245AB5 File Offset: 0x00243CB5
 		public override EVehicleEnteringTarget Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A86 RID: 19078
-		// (get) Token: 0x0600EC35 RID: 60469 RVA: 0x00228140 File Offset: 0x00226340
+		// Token: 0x17004E2F RID: 20015
+		// (get) Token: 0x0600FACC RID: 64204 RVA: 0x00245AC4 File Offset: 0x00243CC4
 		public override int? TargetVehicle
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A87 RID: 19079
-		// (get) Token: 0x0600EC36 RID: 60470 RVA: 0x00228176 File Offset: 0x00226376
+		// Token: 0x17004E30 RID: 20016
+		// (get) Token: 0x0600FACD RID: 64205 RVA: 0x00245AFA File Offset: 0x00243CFA
 		public virtual int TargetNpc
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400820C RID: 33292
+		// Token: 0x040088FD RID: 35069
 		private IVehicleEnteringNpcTarget Instance;
 	}
 }

@@ -8,22 +8,22 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A24 RID: 10788
+// Token: 0x02001F9F RID: 8095
 [NullableContext(2)]
 [Nullable(0)]
 public class EquipBuffItemDetailView : UiViewBase
 {
-	// Token: 0x060166B5 RID: 91829 RVA: 0x005AB0FC File Offset: 0x005A92FC
+	// Token: 0x060140BB RID: 82107 RVA: 0x005D60D8 File Offset: 0x005D42D8
 	[NullableContext(1)]
 	public EquipBuffItemDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060166B6 RID: 91830 RVA: 0x005AB180 File Offset: 0x005A9380
+	// Token: 0x060140BC RID: 82108 RVA: 0x005D615C File Offset: 0x005D435C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -85,7 +85,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x060166B7 RID: 91831 RVA: 0x005AB66C File Offset: 0x005A986C
+	// Token: 0x060140BD RID: 82109 RVA: 0x005D6648 File Offset: 0x005D4848
 	protected override void OnAddEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(29);
@@ -106,7 +106,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x060166B8 RID: 91832 RVA: 0x005AB7A4 File Offset: 0x005A99A4
+	// Token: 0x060140BE RID: 82110 RVA: 0x005D6780 File Offset: 0x005D4980
 	private void RemoveCameraEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(29);
@@ -127,7 +127,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x060166B9 RID: 91833 RVA: 0x005AB8B1 File Offset: 0x005A9AB1
+	// Token: 0x060140BF RID: 82111 RVA: 0x005D688D File Offset: 0x005D4A8D
 	protected override void OnHandleLoadScene()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -149,7 +149,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		obj2.SetTransformByTag("RoleCase");
 	}
 
-	// Token: 0x060166BA RID: 91834 RVA: 0x005AB8E0 File Offset: 0x005A9AE0
+	// Token: 0x060140C0 RID: 82112 RVA: 0x005D68BC File Offset: 0x005D4ABC
 	[NullableContext(1)]
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
@@ -159,23 +159,23 @@ public class EquipBuffItemDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x060166BB RID: 91835 RVA: 0x005AB8F4 File Offset: 0x005A9AF4
+	// Token: 0x060140C1 RID: 82113 RVA: 0x005D68D0 File Offset: 0x005D4AD0
 	private void TouchMoved()
 	{
 		if (TouchFingerManager.Instance.GetTouchFingerCount() > 1)
 		{
 			float fingerExpandCloseValue = TouchFingerManager.Instance.GetFingerExpandCloseValue(EFingerIndex.One, EFingerIndex.Two);
-			this.UiCameraControlRotationComponent.AddZoomInput(-fingerExpandCloseValue);
+			this.UiCameraInputComponent.AddZoomInput(-fingerExpandCloseValue);
 		}
 	}
 
-	// Token: 0x060166BC RID: 91836 RVA: 0x005AB928 File Offset: 0x005A9B28
+	// Token: 0x060140C2 RID: 82114 RVA: 0x005D6904 File Offset: 0x005D4B04
 	private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
 		this.CurrentDragPosition = new FVector?(eventData.GetLocalPointInPlane());
 	}
 
-	// Token: 0x060166BD RID: 91837 RVA: 0x005AB93C File Offset: 0x005A9B3C
+	// Token: 0x060140C3 RID: 82115 RVA: 0x005D6918 File Offset: 0x005D4B18
 	private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (TouchFingerManager.Instance.GetTouchFingerCount() > 1 || InputSettings.Instance.IsInputKeyDown("RightMouseButton"))
@@ -193,30 +193,30 @@ public class EquipBuffItemDetailView : UiViewBase
 		float num2 = this.CurrentDragPosition.Value.Y - currentDragPosition.Value.Y;
 		if (num != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddYawInput(num);
+			this.UiCameraInputComponent.AddYawInput(num);
 		}
 		if (num2 != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddPitchInput(num2);
+			this.UiCameraInputComponent.AddPitchInput(num2);
 		}
 	}
 
-	// Token: 0x060166BE RID: 91838 RVA: 0x005AB9FA File Offset: 0x005A9BFA
+	// Token: 0x060140C4 RID: 82116 RVA: 0x005D69D6 File Offset: 0x005D4BD6
 	private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
 		this.CurrentDragPosition = null;
 	}
 
-	// Token: 0x060166BF RID: 91839 RVA: 0x005ABA08 File Offset: 0x005A9C08
+	// Token: 0x060140C5 RID: 82117 RVA: 0x005D69E4 File Offset: 0x005D4BE4
 	private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 	{
 		if (eventData.scrollAxisValue != 0f)
 		{
-			this.UiCameraControlRotationComponent.AddZoomInput(-eventData.scrollAxisValue);
+			this.UiCameraInputComponent.AddZoomInput(-eventData.scrollAxisValue);
 		}
 	}
 
-	// Token: 0x060166C0 RID: 91840 RVA: 0x005ABA2C File Offset: 0x005A9C2C
+	// Token: 0x060140C6 RID: 82118 RVA: 0x005D6A08 File Offset: 0x005D4C08
 	protected override void OnBeforeShow()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -254,13 +254,13 @@ public class EquipBuffItemDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x060166C1 RID: 91841 RVA: 0x005ABB74 File Offset: 0x005A9D74
+	// Token: 0x060140C7 RID: 82119 RVA: 0x005D6B50 File Offset: 0x005D4D50
 	protected override void OnAfterShow()
 	{
 		this.RefreshCameraRotationComponentByViewType();
 	}
 
-	// Token: 0x060166C2 RID: 91842 RVA: 0x005ABB7C File Offset: 0x005A9D7C
+	// Token: 0x060140C8 RID: 82120 RVA: 0x005D6B58 File Offset: 0x005D4D58
 	protected override void OnAfterHide()
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.TsUiSceneRoleActor;
@@ -271,10 +271,10 @@ public class EquipBuffItemDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x060166C3 RID: 91843 RVA: 0x005ABBAC File Offset: 0x005A9DAC
+	// Token: 0x060140C9 RID: 82121 RVA: 0x005D6B88 File Offset: 0x005D4D88
 	private void RefreshCameraRotationComponentByViewType()
 	{
-		if (UiCameraAnimationManager.Instance.IsPlayingAnimation())
+		if (UiCameraModel.Instance.IsPlayingAnimation())
 		{
 			return;
 		}
@@ -282,45 +282,46 @@ public class EquipBuffItemDetailView : UiViewBase
 		this.RefreshCameraRotationComponent(configId);
 	}
 
-	// Token: 0x060166C4 RID: 91844 RVA: 0x005ABBEC File Offset: 0x005A9DEC
+	// Token: 0x060140CA RID: 82122 RVA: 0x005D6BC8 File Offset: 0x005D4DC8
 	[NullableContext(1)]
 	private void RefreshCameraRotationComponent(string configId)
 	{
-		UiCamera uiCamera = UiCameraManager.Get();
-		this.UiCameraControlRotationComponent = (uiCamera.AddUiCameraComponent(typeof(UiCameraControlRotationComponent), false) as UiCameraControlRotationComponent);
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		this.UiCameraInputComponent = orCreateCamera.GetUiCameraComponent<UiCameraInputComponent>();
+		this.UiCameraLogicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
 		SUiRoleCameraSetting? roleCameraConfig = UiRoleCameraConfig.Instance.GetRoleCameraConfig(configId);
-		this.UiCameraControlRotationComponent.InitDataByConfig(roleCameraConfig.Value);
-		this.UiCameraControlRotationComponent.SetNeedFloorReflection(true);
+		this.UiCameraLogicComponent.InitDataByConfig(roleCameraConfig.Value);
+		this.UiCameraLogicComponent.SetNeedFloorReflection(true);
 		FVectorDouble sourceLocation = this.TsUiSceneRoleActor.D_K2_GetActorLocation();
 		int roleId = this.ViewData.RoleSkinData.GetRoleId();
 		string roleBody = RoleConfig.Instance.GetRoleConfig(roleId).Value.RoleBody;
 		SUiRoleCameraOffsetSetting? roleCameraOffsetConfig = UiRoleCameraConfig.Instance.GetRoleCameraOffsetConfig(roleBody);
-		this.UiCameraControlRotationComponent.UpdateData(sourceLocation, roleCameraOffsetConfig.Value.镜头浮动最大高度, roleCameraOffsetConfig.Value.镜头浮动最低高度, roleCameraOffsetConfig.Value.镜头浮动最长臂长, roleCameraOffsetConfig.Value.镜头浮动最短臂长);
-		this.UiCameraControlRotationComponent.Activate();
-		this.UiCameraControlRotationComponent.ResumeTick();
+		this.UiCameraLogicComponent.UpdateData(sourceLocation, roleCameraOffsetConfig.Value.镜头浮动最大高度, roleCameraOffsetConfig.Value.镜头浮动最低高度, roleCameraOffsetConfig.Value.镜头浮动最长臂长, roleCameraOffsetConfig.Value.镜头浮动最短臂长);
+		this.UiCameraInputComponent.Activate();
+		this.UiCameraInputComponent.ResumeTick();
 	}
 
-	// Token: 0x060166C5 RID: 91845 RVA: 0x005ABCE1 File Offset: 0x005A9EE1
+	// Token: 0x060140CB RID: 82123 RVA: 0x005D6CBE File Offset: 0x005D4EBE
 	private void OnInputUiLookUp(float value)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddPitchInput(-value);
+		this.UiCameraInputComponent.AddPitchInput(-value);
 	}
 
-	// Token: 0x060166C6 RID: 91846 RVA: 0x005ABD05 File Offset: 0x005A9F05
+	// Token: 0x060140CC RID: 82124 RVA: 0x005D6CE2 File Offset: 0x005D4EE2
 	private void OnInputUiTurn(float value)
 	{
 		if (value == 0f || !Info.Instance.IsInGamepad())
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddYawInput(value);
+		this.UiCameraInputComponent.AddYawInput(value);
 	}
 
-	// Token: 0x060166C7 RID: 91847 RVA: 0x005ABD28 File Offset: 0x005A9F28
+	// Token: 0x060140CD RID: 82125 RVA: 0x005D6D05 File Offset: 0x005D4F05
 	[NullableContext(1)]
 	private void OnInputUiZoom(string axisName, float value)
 	{
@@ -328,20 +329,43 @@ public class EquipBuffItemDetailView : UiViewBase
 		{
 			return;
 		}
-		this.UiCameraControlRotationComponent.AddZoomInput(value);
+		this.UiCameraInputComponent.AddZoomInput(value);
 	}
 
-	// Token: 0x060166C8 RID: 91848 RVA: 0x005ABD4C File Offset: 0x005A9F4C
+	// Token: 0x060140CE RID: 82126 RVA: 0x005D6D28 File Offset: 0x005D4F28
 	private void OnRightStickPress()
 	{
-		UiCameraHandleData lastHandleData = UiCameraAnimationManager.Instance.GetLastHandleData();
-		if (lastHandleData != null)
+		UiCameraModel instance = UiCameraModel.Instance;
+		UiCamera camera = instance.Camera;
+		UiCameraHandleData lastHandleData = instance.GetLastHandleData();
+		if (camera == null || !camera.IsEntered || camera.CurrentMode != EUiCameraMode.Normal || lastHandleData == null || lastHandleData.ShouldSkipApply())
 		{
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(lastHandleData.HandleName, true, true, "1001", false, null, null);
+			return;
+		}
+		UiCameraNormalMode mode = camera.GetMode<UiCameraNormalMode>();
+		if (mode.State != EUiCameraNormalState.Active || mode.IsInputBlocked || mode.TryGetLastAppliedData() != lastHandleData)
+		{
+			return;
+		}
+		if (camera.RefreshCameraActor())
+		{
+			UCineCameraComponent cineCameraComponent = camera.CineCameraComponent;
+			if (cineCameraComponent != null && cineCameraComponent.IsValid())
+			{
+				if (!lastHandleData.Refresh(instance) || lastHandleData.GetUiCameraAnimationConfig() == null)
+				{
+					return;
+				}
+				if (!mode.PushCameraHandle(lastHandleData, lastHandleData, true, false, "1001", null))
+				{
+					Log.Instance.Warn(ELogModule.UiCamera, ELogAuthor.BB, "手柄重置装备效果预览Ui镜头失败，当前镜头不可重置", default(ReadOnlySpan<ValueTuple<string, object>>));
+				}
+				return;
+			}
 		}
 	}
 
-	// Token: 0x060166C9 RID: 91849 RVA: 0x005ABD8C File Offset: 0x005A9F8C
+	// Token: 0x060140CF RID: 82127 RVA: 0x005D6DF4 File Offset: 0x005D4FF4
 	protected override void OnStart()
 	{
 		this.TsUiSceneRoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleInEquipBuffItemPreview);
@@ -356,28 +380,33 @@ public class EquipBuffItemDetailView : UiViewBase
 		this.ResetCurrentSkinTypeIndex();
 	}
 
-	// Token: 0x060166CA RID: 91850 RVA: 0x005ABE53 File Offset: 0x005AA053
+	// Token: 0x060140D0 RID: 82128 RVA: 0x005D6EBB File Offset: 0x005D50BB
 	private bool CanToggleExecuteChange()
 	{
 		return TimeUtil.Instance.GetServerTimeStamp() - (double)this.LastSwitchTime >= (double)SkinConfig.Instance.GetSkinDetailButtonSwitchGap();
 	}
 
-	// Token: 0x060166CB RID: 91851 RVA: 0x005ABE77 File Offset: 0x005AA077
+	// Token: 0x060140D1 RID: 82129 RVA: 0x005D6EDF File Offset: 0x005D50DF
 	protected override void OnBeforeHide()
 	{
 		this.RemoveCameraEventListener();
-		this.UiCameraControlRotationComponent.PauseTick();
+		this.UiCameraInputComponent.PauseTick();
 	}
 
-	// Token: 0x060166CC RID: 91852 RVA: 0x005ABE8A File Offset: 0x005AA08A
+	// Token: 0x060140D2 RID: 82130 RVA: 0x005D6EF2 File Offset: 0x005D50F2
 	protected override void OnBeforeDestroy()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
+		UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent != null)
+		{
+			uiCameraInputComponent.Deactivate();
+		}
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.TsUiSceneRoleActor);
 		this.TsUiSceneRoleActor = null;
 	}
 
-	// Token: 0x060166CD RID: 91853 RVA: 0x005ABEB8 File Offset: 0x005AA0B8
+	// Token: 0x060140D3 RID: 82131 RVA: 0x005D6F28 File Offset: 0x005D5128
 	private void RefreshRolePerformance()
 	{
 		int roleId = this.ViewData.RoleSkinData.GetRoleId();
@@ -390,49 +419,49 @@ public class EquipBuffItemDetailView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.OnSelectedRoleChanged);
 	}
 
-	// Token: 0x060166CE RID: 91854 RVA: 0x005ABF24 File Offset: 0x005AA124
+	// Token: 0x060140D4 RID: 82132 RVA: 0x005D6F94 File Offset: 0x005D5194
 	private void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060166CF RID: 91855 RVA: 0x005ABF2D File Offset: 0x005AA12D
+	// Token: 0x060140D5 RID: 82133 RVA: 0x005D6F9D File Offset: 0x005D519D
 	protected override void OnHandleReleaseScene()
 	{
 		this.HandleReleaseScene();
 	}
 
-	// Token: 0x060166D0 RID: 91856 RVA: 0x005ABF35 File Offset: 0x005AA135
+	// Token: 0x060140D6 RID: 82134 RVA: 0x005D6FA5 File Offset: 0x005D51A5
 	private void HandleReleaseScene()
 	{
 	}
 
-	// Token: 0x060166D1 RID: 91857 RVA: 0x005ABF37 File Offset: 0x005AA137
+	// Token: 0x060140D7 RID: 82135 RVA: 0x005D6FA7 File Offset: 0x005D51A7
 	[NullableContext(1)]
 	private void OnPlayCameraAnimationStart(UiCameraHandleData uiCameraHandleData, UiCameraHandleData cameraHandleData, string arg3)
 	{
-		UiCameraControlRotationComponent uiCameraControlRotationComponent = this.UiCameraControlRotationComponent;
-		if (uiCameraControlRotationComponent == null)
+		UiCameraInputComponent uiCameraInputComponent = this.UiCameraInputComponent;
+		if (uiCameraInputComponent == null)
 		{
 			return;
 		}
-		uiCameraControlRotationComponent.PauseTick();
+		uiCameraInputComponent.PauseTick();
 	}
 
-	// Token: 0x060166D2 RID: 91858 RVA: 0x005ABF49 File Offset: 0x005AA149
+	// Token: 0x060140D8 RID: 82136 RVA: 0x005D6FB9 File Offset: 0x005D51B9
 	[NullableContext(1)]
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
 		this.RefreshCameraRotationComponentByViewType();
 	}
 
-	// Token: 0x060166D3 RID: 91859 RVA: 0x005ABF51 File Offset: 0x005AA151
+	// Token: 0x060140D9 RID: 82137 RVA: 0x005D6FC1 File Offset: 0x005D51C1
 	private void ResetCurrentSkinTypeIndex()
 	{
 		this.CurrentSkinTypeIndex = 0;
 	}
 
-	// Token: 0x060166D4 RID: 91860 RVA: 0x005ABF5A File Offset: 0x005AA15A
+	// Token: 0x060140DA RID: 82138 RVA: 0x005D6FCA File Offset: 0x005D51CA
 	private void RefreshView()
 	{
 		this.RefreshTitleText(this.ViewData);
@@ -440,7 +469,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		this.RefreshRolePerformance();
 	}
 
-	// Token: 0x060166D5 RID: 91861 RVA: 0x005ABF7C File Offset: 0x005AA17C
+	// Token: 0x060140DB RID: 82139 RVA: 0x005D6FEC File Offset: 0x005D51EC
 	private void RefreshDescText(EquipBuffItemDetailViewData data)
 	{
 		if (data == null)
@@ -452,7 +481,7 @@ public class EquipBuffItemDetailView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), description, Array.Empty<object>());
 	}
 
-	// Token: 0x060166D6 RID: 91862 RVA: 0x005ABFC0 File Offset: 0x005AA1C0
+	// Token: 0x060140DC RID: 82140 RVA: 0x005D7030 File Offset: 0x005D5230
 	private void RefreshTitleText(EquipBuffItemDetailViewData data)
 	{
 		if (data == null)
@@ -464,28 +493,31 @@ public class EquipBuffItemDetailView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), titleName, Array.Empty<object>());
 	}
 
-	// Token: 0x0400A6A6 RID: 42662
+	// Token: 0x0400AA8F RID: 43663
 	private EquipBuffItemDetailViewData ViewData;
 
-	// Token: 0x0400A6A7 RID: 42663
+	// Token: 0x0400AA90 RID: 43664
 	private int CurrentSkinTypeIndex;
 
-	// Token: 0x0400A6A8 RID: 42664
+	// Token: 0x0400AA91 RID: 43665
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A6A9 RID: 42665
+	// Token: 0x0400AA92 RID: 43666
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A6AA RID: 42666
+	// Token: 0x0400AA93 RID: 43667
 	private FVector? CurrentDragPosition;
 
-	// Token: 0x0400A6AB RID: 42667
-	private UiCameraControlRotationComponent UiCameraControlRotationComponent;
+	// Token: 0x0400AA94 RID: 43668
+	private UiCameraInputComponent UiCameraInputComponent;
 
-	// Token: 0x0400A6AC RID: 42668
+	// Token: 0x0400AA95 RID: 43669
+	private UiCameraLogicComponent UiCameraLogicComponent;
+
+	// Token: 0x0400AA96 RID: 43670
 	private float LastSwitchTime;
 
-	// Token: 0x0400A6AD RID: 42669
+	// Token: 0x0400AA97 RID: 43671
 	[Nullable(1)]
 	private readonly List<int> disableNodeList = new List<int>
 	{
@@ -504,117 +536,117 @@ public class EquipBuffItemDetailView : UiViewBase
 		4
 	};
 
-	// Token: 0x02009057 RID: 36951
+	// Token: 0x0200829E RID: 33438
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402EBC7 RID: 191431
+		// Token: 0x0402A2BF RID: 172735
 		CaptionItem,
-		// Token: 0x0402EBC8 RID: 191432
+		// Token: 0x0402A2C0 RID: 172736
 		OnlyUiToggle,
-		// Token: 0x0402EBC9 RID: 191433
+		// Token: 0x0402A2C1 RID: 172737
 		DetailIconButton,
-		// Token: 0x0402EBCA RID: 191434
+		// Token: 0x0402A2C2 RID: 172738
 		ButtonLeft,
-		// Token: 0x0402EBCB RID: 191435
+		// Token: 0x0402A2C3 RID: 172739
 		ButtonRight,
-		// Token: 0x0402EBCC RID: 191436
+		// Token: 0x0402A2C4 RID: 172740
 		TitleText,
-		// Token: 0x0402EBCD RID: 191437
+		// Token: 0x0402A2C5 RID: 172741
 		SubTitleText,
-		// Token: 0x0402EBCE RID: 191438
+		// Token: 0x0402A2C6 RID: 172742
 		SwitchItem,
-		// Token: 0x0402EBCF RID: 191439
+		// Token: 0x0402A2C7 RID: 172743
 		ToggleLeft,
-		// Token: 0x0402EBD0 RID: 191440
+		// Token: 0x0402A2C8 RID: 172744
 		ExtraRewardItem,
-		// Token: 0x0402EBD1 RID: 191441
+		// Token: 0x0402A2C9 RID: 172745
 		ExtraRewardContentHorizontalLayout,
-		// Token: 0x0402EBD2 RID: 191442
+		// Token: 0x0402A2CA RID: 172746
 		RewardItem,
-		// Token: 0x0402EBD3 RID: 191443
+		// Token: 0x0402A2CB RID: 172747
 		DescText,
-		// Token: 0x0402EBD4 RID: 191444
+		// Token: 0x0402A2CC RID: 172748
 		NotHaveRoleItem,
-		// Token: 0x0402EBD5 RID: 191445
+		// Token: 0x0402A2CD RID: 172749
 		BuyItemIcon,
-		// Token: 0x0402EBD6 RID: 191446
+		// Token: 0x0402A2CE RID: 172750
 		NowPrice,
-		// Token: 0x0402EBD7 RID: 191447
+		// Token: 0x0402A2CF RID: 172751
 		BeforePrice,
-		// Token: 0x0402EBD8 RID: 191448
+		// Token: 0x0402A2D0 RID: 172752
 		BuyButton,
-		// Token: 0x0402EBD9 RID: 191449
+		// Token: 0x0402A2D1 RID: 172753
 		DiscountItem,
-		// Token: 0x0402EBDA RID: 191450
+		// Token: 0x0402A2D2 RID: 172754
 		DiscountText,
-		// Token: 0x0402EBDB RID: 191451
+		// Token: 0x0402A2D3 RID: 172755
 		LeftTimeItem,
-		// Token: 0x0402EBDC RID: 191452
+		// Token: 0x0402A2D4 RID: 172756
 		LeftTimeText,
-		// Token: 0x0402EBDD RID: 191453
+		// Token: 0x0402A2D5 RID: 172757
 		QualityTexture,
-		// Token: 0x0402EBDE RID: 191454
+		// Token: 0x0402A2D6 RID: 172758
 		RoleTexture,
-		// Token: 0x0402EBDF RID: 191455
+		// Token: 0x0402A2D7 RID: 172759
 		FrameTexture,
-		// Token: 0x0402EBE0 RID: 191456
+		// Token: 0x0402A2D8 RID: 172760
 		WeaponRootItem,
-		// Token: 0x0402EBE1 RID: 191457
+		// Token: 0x0402A2D9 RID: 172761
 		WeaponTexture,
-		// Token: 0x0402EBE2 RID: 191458
+		// Token: 0x0402A2DA RID: 172762
 		HaveItem,
-		// Token: 0x0402EBE3 RID: 191459
+		// Token: 0x0402A2DB RID: 172763
 		HideUiParentItem,
-		// Token: 0x0402EBE4 RID: 191460
+		// Token: 0x0402A2DC RID: 172764
 		DragComponent,
-		// Token: 0x0402EBE5 RID: 191461
+		// Token: 0x0402A2DD RID: 172765
 		WeaponQualityTexture,
-		// Token: 0x0402EBE6 RID: 191462
+		// Token: 0x0402A2DE RID: 172766
 		ToggleRight,
-		// Token: 0x0402EBE7 RID: 191463
+		// Token: 0x0402A2DF RID: 172767
 		EffectItemB,
-		// Token: 0x0402EBE8 RID: 191464
+		// Token: 0x0402A2E0 RID: 172768
 		EffectItemA,
-		// Token: 0x0402EBE9 RID: 191465
+		// Token: 0x0402A2E1 RID: 172769
 		TextureToggleLeft,
-		// Token: 0x0402EBEA RID: 191466
+		// Token: 0x0402A2E2 RID: 172770
 		TextToggleLeft,
-		// Token: 0x0402EBEB RID: 191467
+		// Token: 0x0402A2E3 RID: 172771
 		TextureToggleRight,
-		// Token: 0x0402EBEC RID: 191468
+		// Token: 0x0402A2E4 RID: 172772
 		TextToggleRight,
-		// Token: 0x0402EBED RID: 191469
+		// Token: 0x0402A2E5 RID: 172773
 		ItemNonCouponPrice,
-		// Token: 0x0402EBEE RID: 191470
+		// Token: 0x0402A2E6 RID: 172774
 		ItemCouponPrice,
-		// Token: 0x0402EBEF RID: 191471
+		// Token: 0x0402A2E7 RID: 172775
 		TextCouponPrice,
-		// Token: 0x0402EBF0 RID: 191472
+		// Token: 0x0402A2E8 RID: 172776
 		TextureCouponIcon,
-		// Token: 0x0402EBF1 RID: 191473
+		// Token: 0x0402A2E9 RID: 172777
 		TextOriginPrice,
-		// Token: 0x0402EBF2 RID: 191474
+		// Token: 0x0402A2EA RID: 172778
 		TexturePriceIcon,
-		// Token: 0x0402EBF3 RID: 191475
+		// Token: 0x0402A2EB RID: 172779
 		TextCurPrice,
-		// Token: 0x0402EBF4 RID: 191476
+		// Token: 0x0402A2EC RID: 172780
 		ItemGamePadKeyTipA,
-		// Token: 0x0402EBF5 RID: 191477
+		// Token: 0x0402A2ED RID: 172781
 		ItemGamePadKeyTipB,
-		// Token: 0x0402EBF6 RID: 191478
+		// Token: 0x0402A2EE RID: 172782
 		ToggleLayout,
-		// Token: 0x0402EBF7 RID: 191479
+		// Token: 0x0402A2EF RID: 172783
 		ToggleMale,
-		// Token: 0x0402EBF8 RID: 191480
+		// Token: 0x0402A2F0 RID: 172784
 		ToggleFemale,
-		// Token: 0x0402EBF9 RID: 191481
+		// Token: 0x0402A2F1 RID: 172785
 		ExtraRewardText,
-		// Token: 0x0402EBFA RID: 191482
+		// Token: 0x0402A2F2 RID: 172786
 		ItemPanelBuy,
-		// Token: 0x0402EBFB RID: 191483
+		// Token: 0x0402A2F3 RID: 172787
 		ItemPanelRole,
-		// Token: 0x0402EBFC RID: 191484
+		// Token: 0x0402A2F4 RID: 172788
 		ItemPanelLeftDownBtn
 	}
 }

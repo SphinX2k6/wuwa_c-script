@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BEC RID: 23532
+	// Token: 0x02006205 RID: 25093
 	public class TAttachTimingUnion
 	{
-		// Token: 0x1700B1C7 RID: 45511
-		// (get) Token: 0x06028531 RID: 165169 RVA: 0x0058A458 File Offset: 0x00588658
-		// (set) Token: 0x06028532 RID: 165170 RVA: 0x0058A460 File Offset: 0x00588660
+		// Token: 0x1700BB11 RID: 47889
+		// (get) Token: 0x0602AB01 RID: 174849 RVA: 0x005D1FE4 File Offset: 0x005D01E4
+		// (set) Token: 0x0602AB02 RID: 174850 RVA: 0x005D1FEC File Offset: 0x005D01EC
 		public TAttachTiming Type { get; set; }
 
-		// Token: 0x1700B1C8 RID: 45512
-		// (get) Token: 0x06028533 RID: 165171 RVA: 0x0058A469 File Offset: 0x00588669
-		// (set) Token: 0x06028534 RID: 165172 RVA: 0x0058A471 File Offset: 0x00588671
+		// Token: 0x1700BB12 RID: 47890
+		// (get) Token: 0x0602AB03 RID: 174851 RVA: 0x005D1FF5 File Offset: 0x005D01F5
+		// (set) Token: 0x0602AB04 RID: 174852 RVA: 0x005D1FFD File Offset: 0x005D01FD
 		public object Value { get; set; }
 
-		// Token: 0x06028535 RID: 165173 RVA: 0x0058A47A File Offset: 0x0058867A
+		// Token: 0x0602AB05 RID: 174853 RVA: 0x005D2006 File Offset: 0x005D0206
 		public TAttachTimingUnion()
 		{
 			this.Type = TAttachTiming.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028536 RID: 165174 RVA: 0x0058A490 File Offset: 0x00588690
+		// Token: 0x0602AB06 RID: 174854 RVA: 0x005D201C File Offset: 0x005D021C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028537 RID: 165175 RVA: 0x0058A4A2 File Offset: 0x005886A2
+		// Token: 0x0602AB07 RID: 174855 RVA: 0x005D202E File Offset: 0x005D022E
 		public IDefaultAttachTimingT AsIDefaultAttachTiming()
 		{
 			return this.As<IDefaultAttachTimingT>();
 		}
 
-		// Token: 0x06028538 RID: 165176 RVA: 0x0058A4AA File Offset: 0x005886AA
+		// Token: 0x0602AB08 RID: 174856 RVA: 0x005D2036 File Offset: 0x005D0236
 		public static TAttachTimingUnion FromIDefaultAttachTiming(IDefaultAttachTimingT _idefaultattachtiming)
 		{
 			return new TAttachTimingUnion
@@ -45,13 +45,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028539 RID: 165177 RVA: 0x0058A4BF File Offset: 0x005886BF
+		// Token: 0x0602AB09 RID: 174857 RVA: 0x005D204B File Offset: 0x005D024B
+		public IOnEntityStateChangeAttachTimingT AsIOnEntityStateChangeAttachTiming()
+		{
+			return this.As<IOnEntityStateChangeAttachTimingT>();
+		}
+
+		// Token: 0x0602AB0A RID: 174858 RVA: 0x005D2053 File Offset: 0x005D0253
+		public static TAttachTimingUnion FromIOnEntityStateChangeAttachTiming(IOnEntityStateChangeAttachTimingT _ionentitystatechangeattachtiming)
+		{
+			return new TAttachTimingUnion
+			{
+				Type = TAttachTiming.IOnEntityStateChangeAttachTiming,
+				Value = _ionentitystatechangeattachtiming
+			};
+		}
+
+		// Token: 0x0602AB0B RID: 174859 RVA: 0x005D2068 File Offset: 0x005D0268
 		public IOnMoveWithSplineEndAttachTimingT AsIOnMoveWithSplineEndAttachTiming()
 		{
 			return this.As<IOnMoveWithSplineEndAttachTimingT>();
 		}
 
-		// Token: 0x0602853A RID: 165178 RVA: 0x0058A4C7 File Offset: 0x005886C7
+		// Token: 0x0602AB0C RID: 174860 RVA: 0x005D2070 File Offset: 0x005D0270
 		public static TAttachTimingUnion FromIOnMoveWithSplineEndAttachTiming(IOnMoveWithSplineEndAttachTimingT _ionmovewithsplineendattachtiming)
 		{
 			return new TAttachTimingUnion
@@ -61,19 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602853B RID: 165179 RVA: 0x0058A4DC File Offset: 0x005886DC
+		// Token: 0x0602AB0D RID: 174861 RVA: 0x005D2088 File Offset: 0x005D0288
 		public static int Pack(FlatBufferBuilder builder, TAttachTimingUnion _o)
 		{
-			TAttachTiming type = _o.Type;
-			if (type == TAttachTiming.IDefaultAttachTiming)
+			switch (_o.Type)
 			{
+			case TAttachTiming.IDefaultAttachTiming:
 				return IDefaultAttachTiming.Pack(builder, _o.AsIDefaultAttachTiming()).Value;
-			}
-			if (type != TAttachTiming.IOnMoveWithSplineEndAttachTiming)
-			{
+			case TAttachTiming.IOnEntityStateChangeAttachTiming:
+				return IOnEntityStateChangeAttachTiming.Pack(builder, _o.AsIOnEntityStateChangeAttachTiming()).Value;
+			case TAttachTiming.IOnMoveWithSplineEndAttachTiming:
+				return IOnMoveWithSplineEndAttachTiming.Pack(builder, _o.AsIOnMoveWithSplineEndAttachTiming()).Value;
+			default:
 				return 0;
 			}
-			return IOnMoveWithSplineEndAttachTiming.Pack(builder, _o.AsIOnMoveWithSplineEndAttachTiming()).Value;
 		}
 	}
 }

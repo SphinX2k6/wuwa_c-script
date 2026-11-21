@@ -4,44 +4,44 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001671 RID: 5745
+// Token: 0x02000B29 RID: 2857
 [NullableContext(1)]
 public interface IActivityControllerBase
 {
-	// Token: 0x0600A21C RID: 41500
+	// Token: 0x060075FA RID: 30202
 	bool Init();
 
-	// Token: 0x0600A21D RID: 41501
+	// Token: 0x060075FB RID: 30203
 	bool Clear();
 
-	// Token: 0x0600A21E RID: 41502
+	// Token: 0x060075FC RID: 30204
 	string GetActivityResource(ActivityBaseData data);
 
-	// Token: 0x0600A21F RID: 41503
+	// Token: 0x060075FD RID: 30205
 	ActivitySubViewBase CreateSubPageComponent(ActivityBaseData data);
 
-	// Token: 0x0600A220 RID: 41504
+	// Token: 0x060075FE RID: 30206
 	void OpenView(ActivityBaseData data);
 
-	// Token: 0x0600A221 RID: 41505
+	// Token: 0x060075FF RID: 30207
 	[NullableContext(0)]
 	UniTask<bool> OpenViewByViewName(EUiViewName viewName, int activityId = 0);
 
-	// Token: 0x0600A222 RID: 41506
+	// Token: 0x06007600 RID: 30208
 	ActivityBaseData CreateActivityData(ActivityData data);
 
-	// Token: 0x0600A223 RID: 41507
+	// Token: 0x06007601 RID: 30209
 	bool GetIsOpeningActivityRelativeView();
 
-	// Token: 0x0600A224 RID: 41508
+	// Token: 0x06007602 RID: 30210
 	bool GetActivityLevelUnlockState(int levelId);
 
-	// Token: 0x0600A225 RID: 41509
+	// Token: 0x06007603 RID: 30211
 	bool GetActivityMapMarkState(int markId);
 
-	// Token: 0x0600A226 RID: 41510
+	// Token: 0x06007604 RID: 30212
 	void OnActivityFirstUnlock(ActivityBaseData data);
 
-	// Token: 0x0600A227 RID: 41511
+	// Token: 0x06007605 RID: 30213
 	void OnShowActivityFirstUnlockView(ActivityBaseData data);
 }

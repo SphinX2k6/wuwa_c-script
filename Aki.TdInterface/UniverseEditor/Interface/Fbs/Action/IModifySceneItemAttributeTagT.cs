@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ACB RID: 27339
+	// Token: 0x020071FF RID: 29183
 	public class IModifySceneItemAttributeTagT
 	{
-		// Token: 0x1700CAD2 RID: 51922
-		// (get) Token: 0x0602FE98 RID: 196248 RVA: 0x006844E1 File Offset: 0x006826E1
-		// (set) Token: 0x0602FE99 RID: 196249 RVA: 0x006844E9 File Offset: 0x006826E9
+		// Token: 0x1700D59A RID: 54682
+		// (get) Token: 0x06032C4E RID: 207950 RVA: 0x006DB785 File Offset: 0x006D9985
+		// (set) Token: 0x06032C4F RID: 207951 RVA: 0x006DB78D File Offset: 0x006D998D
 		public EChangeEntityPrefabPerformanceType Type { get; set; }
 
-		// Token: 0x1700CAD3 RID: 51923
-		// (get) Token: 0x0602FE9A RID: 196250 RVA: 0x006844F2 File Offset: 0x006826F2
-		// (set) Token: 0x0602FE9B RID: 196251 RVA: 0x006844FA File Offset: 0x006826FA
+		// Token: 0x1700D59B RID: 54683
+		// (get) Token: 0x06032C50 RID: 207952 RVA: 0x006DB796 File Offset: 0x006D9996
+		// (set) Token: 0x06032C51 RID: 207953 RVA: 0x006DB79E File Offset: 0x006D999E
 		public bool IsAddTag { get; set; }
 
-		// Token: 0x1700CAD4 RID: 51924
-		// (get) Token: 0x0602FE9C RID: 196252 RVA: 0x00684503 File Offset: 0x00682703
-		// (set) Token: 0x0602FE9D RID: 196253 RVA: 0x0068450B File Offset: 0x0068270B
+		// Token: 0x1700D59C RID: 54684
+		// (get) Token: 0x06032C52 RID: 207954 RVA: 0x006DB7A7 File Offset: 0x006D99A7
+		// (set) Token: 0x06032C53 RID: 207955 RVA: 0x006DB7AF File Offset: 0x006D99AF
 		public List<int> PerformanceTag { get; set; }
 
-		// Token: 0x0602FE9E RID: 196254 RVA: 0x00684514 File Offset: 0x00682714
+		// Token: 0x06032C54 RID: 207956 RVA: 0x006DB7B8 File Offset: 0x006D99B8
 		public IModifySceneItemAttributeTagT()
 		{
 			this.Type = EChangeEntityPrefabPerformanceType.Target;

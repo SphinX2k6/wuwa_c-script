@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A64 RID: 27236
+	// Token: 0x02005BC1 RID: 23489
 	public class SeekTraceGridStateView : UiPanelBase, IGridProxy<ESeekTraceGridStateViewType>
 	{
-		// Token: 0x1700991F RID: 39199
-		// (get) Token: 0x06043B7B RID: 277371 RVA: 0x0109382D File Offset: 0x01091A2D
-		// (set) Token: 0x06043B7C RID: 277372 RVA: 0x01093835 File Offset: 0x01091A35
+		// Token: 0x17006E04 RID: 28164
+		// (get) Token: 0x06039BC9 RID: 236489 RVA: 0x01038061 File Offset: 0x01036261
+		// (set) Token: 0x06039BCA RID: 236490 RVA: 0x01038069 File Offset: 0x01036269
 		[Nullable(new byte[]
 		{
 			2,
@@ -28,17 +28,17 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			1
 		})] set; }
 
-		// Token: 0x17009920 RID: 39200
-		// (get) Token: 0x06043B7D RID: 277373 RVA: 0x0109383E File Offset: 0x01091A3E
-		// (set) Token: 0x06043B7E RID: 277374 RVA: 0x01093846 File Offset: 0x01091A46
+		// Token: 0x17006E05 RID: 28165
+		// (get) Token: 0x06039BCB RID: 236491 RVA: 0x01038072 File Offset: 0x01036272
+		// (set) Token: 0x06039BCC RID: 236492 RVA: 0x0103807A File Offset: 0x0103627A
 		public int GridIndex { get; set; }
 
-		// Token: 0x17009921 RID: 39201
-		// (get) Token: 0x06043B7F RID: 277375 RVA: 0x0109384F File Offset: 0x01091A4F
-		// (set) Token: 0x06043B80 RID: 277376 RVA: 0x01093857 File Offset: 0x01091A57
+		// Token: 0x17006E06 RID: 28166
+		// (get) Token: 0x06039BCD RID: 236493 RVA: 0x01038083 File Offset: 0x01036283
+		// (set) Token: 0x06039BCE RID: 236494 RVA: 0x0103808B File Offset: 0x0103628B
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06043B81 RID: 277377 RVA: 0x01093860 File Offset: 0x01091A60
+		// Token: 0x06039BCF RID: 236495 RVA: 0x01038094 File Offset: 0x01036294
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			};
 		}
 
-		// Token: 0x06043B82 RID: 277378 RVA: 0x0109389C File Offset: 0x01091A9C
+		// Token: 0x06039BD0 RID: 236496 RVA: 0x010380D0 File Offset: 0x010362D0
 		public void Refresh(ESeekTraceGridStateViewType data, bool isSelected, int gridIndex)
 		{
 			UUIItem item = base.GetItem(0);
@@ -88,34 +88,34 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B83 RID: 277379 RVA: 0x01093935 File Offset: 0x01091B35
+		// Token: 0x06039BD1 RID: 236497 RVA: 0x01038169 File Offset: 0x01036369
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06043B84 RID: 277380 RVA: 0x01093937 File Offset: 0x01091B37
+		// Token: 0x06039BD2 RID: 236498 RVA: 0x0103816B File Offset: 0x0103636B
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06043B85 RID: 277381 RVA: 0x01093939 File Offset: 0x01091B39
+		// Token: 0x06039BD3 RID: 236499 RVA: 0x0103816D File Offset: 0x0103636D
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06043B86 RID: 277382 RVA: 0x0109393B File Offset: 0x01091B3B
+		// Token: 0x06039BD4 RID: 236500 RVA: 0x0103816F File Offset: 0x0103636F
 		[NullableContext(2)]
 		public object GetKey(ESeekTraceGridStateViewType data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x0200CB84 RID: 52100
+		// Token: 0x0200B763 RID: 46947
 		public enum EComponentType
 		{
-			// Token: 0x0403D714 RID: 251668
+			// Token: 0x04038AF6 RID: 232182
 			StateSprite,
-			// Token: 0x0403D715 RID: 251669
+			// Token: 0x04038AF7 RID: 232183
 			LightSprite
 		}
 	}

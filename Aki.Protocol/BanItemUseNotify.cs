@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000158 RID: 344
+	// Token: 0x0200015B RID: 347
 	[NetMessage(EMessageId.BanItemUseNotify)]
 	public sealed class BanItemUseNotify : IMessage<BanItemUseNotify>, IMessage, IEquatable<BanItemUseNotify>, IDeepCloneable<BanItemUseNotify>, IBufferMessage
 	{
-		// Token: 0x06002B69 RID: 11113 RVA: 0x00071327 File Offset: 0x0006F527
+		// Token: 0x06002BE0 RID: 11232 RVA: 0x00072758 File Offset: 0x00070958
 		[NullableContext(1)]
 		public static BanItemUseNotify Create()
 		{
 			return new BanItemUseNotify();
 		}
 
-		// Token: 0x17000676 RID: 1654
-		// (get) Token: 0x06002B6A RID: 11114 RVA: 0x0007132E File Offset: 0x0006F52E
+		// Token: 0x1700068A RID: 1674
+		// (get) Token: 0x06002BE1 RID: 11233 RVA: 0x0007275F File Offset: 0x0007095F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000677 RID: 1655
-		// (get) Token: 0x06002B6B RID: 11115 RVA: 0x00071331 File Offset: 0x0006F531
+		// Token: 0x1700068B RID: 1675
+		// (get) Token: 0x06002BE2 RID: 11234 RVA: 0x00072762 File Offset: 0x00070962
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B6C RID: 11116 RVA: 0x00071338 File Offset: 0x0006F538
+		// Token: 0x06002BE3 RID: 11235 RVA: 0x00072769 File Offset: 0x00070969
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanItemUseNotify()
 		{
 		}
 
-		// Token: 0x06002B6D RID: 11117 RVA: 0x00071340 File Offset: 0x0006F540
+		// Token: 0x06002BE4 RID: 11236 RVA: 0x00072771 File Offset: 0x00070971
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanItemUseNotify(BanItemUseNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002B6E RID: 11118 RVA: 0x00071371 File Offset: 0x0006F571
+		// Token: 0x06002BE5 RID: 11237 RVA: 0x000727A2 File Offset: 0x000709A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanItemUseNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new BanItemUseNotify(this);
 		}
 
-		// Token: 0x17000678 RID: 1656
-		// (get) Token: 0x06002B6F RID: 11119 RVA: 0x00071379 File Offset: 0x0006F579
-		// (set) Token: 0x06002B70 RID: 11120 RVA: 0x00071381 File Offset: 0x0006F581
+		// Token: 0x1700068C RID: 1676
+		// (get) Token: 0x06002BE6 RID: 11238 RVA: 0x000727AA File Offset: 0x000709AA
+		// (set) Token: 0x06002BE7 RID: 11239 RVA: 0x000727B2 File Offset: 0x000709B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BanEndTime
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000679 RID: 1657
-		// (get) Token: 0x06002B71 RID: 11121 RVA: 0x0007138A File Offset: 0x0006F58A
-		// (set) Token: 0x06002B72 RID: 11122 RVA: 0x00071392 File Offset: 0x0006F592
+		// Token: 0x1700068D RID: 1677
+		// (get) Token: 0x06002BE8 RID: 11240 RVA: 0x000727BB File Offset: 0x000709BB
+		// (set) Token: 0x06002BE9 RID: 11241 RVA: 0x000727C3 File Offset: 0x000709C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanItemUseType BanItemUseType
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B73 RID: 11123 RVA: 0x0007139B File Offset: 0x0006F59B
+		// Token: 0x06002BEA RID: 11242 RVA: 0x000727CC File Offset: 0x000709CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BanItemUseNotify);
 		}
 
-		// Token: 0x06002B74 RID: 11124 RVA: 0x000713A9 File Offset: 0x0006F5A9
+		// Token: 0x06002BEB RID: 11243 RVA: 0x000727DA File Offset: 0x000709DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BanItemUseNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BanEndTime == other.BanEndTime && this.BanItemUseType == other.BanItemUseType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002B75 RID: 11125 RVA: 0x000713E8 File Offset: 0x0006F5E8
+		// Token: 0x06002BEC RID: 11244 RVA: 0x00072818 File Offset: 0x00070A18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B76 RID: 11126 RVA: 0x00071446 File Offset: 0x0006F646
+		// Token: 0x06002BED RID: 11245 RVA: 0x00072876 File Offset: 0x00070A76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002B77 RID: 11127 RVA: 0x00071453 File Offset: 0x0006F653
+		// Token: 0x06002BEE RID: 11246 RVA: 0x00072883 File Offset: 0x00070A83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002B78 RID: 11128 RVA: 0x0007145C File Offset: 0x0006F65C
+		// Token: 0x06002BEF RID: 11247 RVA: 0x0007288C File Offset: 0x00070A8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.BanEndTime != 0L)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(16);
 				output.WriteInt64(this.BanEndTime);
 			}
 			if (this.BanItemUseType != BanItemUseType.BanItemUseNone)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(64);
 				output.WriteEnum((int)this.BanItemUseType);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B79 RID: 11129 RVA: 0x000714B8 File Offset: 0x0006F6B8
+		// Token: 0x06002BF0 RID: 11248 RVA: 0x000728E8 File Offset: 0x00070AE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B7A RID: 11130 RVA: 0x00071510 File Offset: 0x0006F710
+		// Token: 0x06002BF1 RID: 11249 RVA: 0x00072940 File Offset: 0x00070B40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BanItemUseNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002B7B RID: 11131 RVA: 0x00071560 File Offset: 0x0006F760
+		// Token: 0x06002BF2 RID: 11250 RVA: 0x00072990 File Offset: 0x00070B90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002B7C RID: 11132 RVA: 0x0007156C File Offset: 0x0006F76C
+		// Token: 0x06002BF3 RID: 11251 RVA: 0x0007299C File Offset: 0x00070B9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 64U)
+				if (num != 16U)
 				{
-					if (num != 80U)
+					if (num != 64U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400279D RID: 10141
+		// Token: 0x04002811 RID: 10257
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400279E RID: 10142
-		public const int BanEndTimeFieldNumber = 8;
+		// Token: 0x04002812 RID: 10258
+		public const int BanEndTimeFieldNumber = 2;
 
-		// Token: 0x0400279F RID: 10143
+		// Token: 0x04002813 RID: 10259
 		private long banEndTime_;
 
-		// Token: 0x040027A0 RID: 10144
-		public const int BanItemUseTypeFieldNumber = 10;
+		// Token: 0x04002814 RID: 10260
+		public const int BanItemUseTypeFieldNumber = 8;
 
-		// Token: 0x040027A1 RID: 10145
+		// Token: 0x04002815 RID: 10261
 		private BanItemUseType banItemUseType_;
 	}
 }

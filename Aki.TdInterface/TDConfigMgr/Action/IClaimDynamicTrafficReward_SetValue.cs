@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200189F RID: 6303
+	// Token: 0x02001A2A RID: 6698
 	public class IClaimDynamicTrafficReward_SetValue
 	{
-		// Token: 0x04005531 RID: 21809
+		// Token: 0x0400597E RID: 22910
 		public EDynamicEntityRewardType Type;
 	}
 }

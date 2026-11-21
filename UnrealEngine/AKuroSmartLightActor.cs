@@ -7,47 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BBF RID: 7103
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004E4 RID: 1252
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroSmartLightActor")]
 	[UnrealStructLayout(1216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1216)]
 	public class AKuroSmartLightActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B3E2 RID: 111586 RVA: 0x002827B0 File Offset: 0x002809B0
+		// Token: 0x06007625 RID: 30245 RVA: 0x000AC906 File Offset: 0x000AAB06
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroSmartLightActor._ClassPtr;
 		}
 
-		// Token: 0x0601B3E3 RID: 111587 RVA: 0x002827BC File Offset: 0x002809BC
+		// Token: 0x06007626 RID: 30246 RVA: 0x000AC914 File Offset: 0x000AAB14
 		public AKuroSmartLightActor() : this(BuiltinUtils.AllocNativeUObject(AKuroSmartLightActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B3E4 RID: 111588 RVA: 0x002827E4 File Offset: 0x002809E4
+		// Token: 0x06007627 RID: 30247 RVA: 0x000AC93C File Offset: 0x000AAB3C
+		[NullableContext(1)]
 		public AKuroSmartLightActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroSmartLightActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006D6F RID: 28015
-		// (get) Token: 0x0601B3E5 RID: 111589 RVA: 0x00282817 File Offset: 0x00280A17
-		// (set) Token: 0x0601B3E6 RID: 111590 RVA: 0x00282827 File Offset: 0x00280A27
-		public unsafe EKuroSmartLightActorDetectType DetectType
-		{
-			get
-			{
-				return (EKuroSmartLightActorDetectType)(*(base.NativePtr + (IntPtr)AKuroSmartLightActor.__PropertyOffset_DetectType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)AKuroSmartLightActor.__PropertyOffset_DetectType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17006D70 RID: 28016
-		// (get) Token: 0x0601B3E7 RID: 111591 RVA: 0x00282838 File Offset: 0x00280A38
-		// (set) Token: 0x0601B3E8 RID: 111592 RVA: 0x0028284C File Offset: 0x00280A4C
+		// Token: 0x170016C1 RID: 5825
+		// (get) Token: 0x06007628 RID: 30248 RVA: 0x000AC96F File Offset: 0x000AAB6F
+		// (set) Token: 0x06007629 RID: 30249 RVA: 0x000AC983 File Offset: 0x000AAB83
 		public unsafe FVector DetectCenter
 		{
 			get
@@ -60,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D71 RID: 28017
-		// (get) Token: 0x0601B3E9 RID: 111593 RVA: 0x00282861 File Offset: 0x00280A61
-		// (set) Token: 0x0601B3EA RID: 111594 RVA: 0x00282875 File Offset: 0x00280A75
+		// Token: 0x170016C2 RID: 5826
+		// (get) Token: 0x0600762A RID: 30250 RVA: 0x000AC998 File Offset: 0x000AAB98
+		// (set) Token: 0x0600762B RID: 30251 RVA: 0x000AC9AC File Offset: 0x000AABAC
 		public unsafe FVector DetectExtent
 		{
 			get
@@ -75,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D72 RID: 28018
-		// (get) Token: 0x0601B3EB RID: 111595 RVA: 0x0028288A File Offset: 0x00280A8A
-		// (set) Token: 0x0601B3EC RID: 111596 RVA: 0x0028289A File Offset: 0x00280A9A
+		// Token: 0x170016C3 RID: 5827
+		// (get) Token: 0x0600762C RID: 30252 RVA: 0x000AC9C1 File Offset: 0x000AABC1
+		// (set) Token: 0x0600762D RID: 30253 RVA: 0x000AC9D1 File Offset: 0x000AABD1
 		public unsafe float DetectRadius
 		{
 			get
@@ -90,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D73 RID: 28019
-		// (get) Token: 0x0601B3ED RID: 111597 RVA: 0x002828AB File Offset: 0x00280AAB
-		// (set) Token: 0x0601B3EE RID: 111598 RVA: 0x002828BB File Offset: 0x00280ABB
+		// Token: 0x170016C4 RID: 5828
+		// (get) Token: 0x0600762E RID: 30254 RVA: 0x000AC9E2 File Offset: 0x000AABE2
+		// (set) Token: 0x0600762F RID: 30255 RVA: 0x000AC9F2 File Offset: 0x000AABF2
 		public unsafe bool Enabled
 		{
 			get
@@ -105,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D74 RID: 28020
-		// (get) Token: 0x0601B3EF RID: 111599 RVA: 0x002828CC File Offset: 0x00280ACC
-		// (set) Token: 0x0601B3F0 RID: 111600 RVA: 0x002828DC File Offset: 0x00280ADC
+		// Token: 0x170016C5 RID: 5829
+		// (get) Token: 0x06007630 RID: 30256 RVA: 0x000ACA03 File Offset: 0x000AAC03
+		// (set) Token: 0x06007631 RID: 30257 RVA: 0x000ACA13 File Offset: 0x000AAC13
 		public unsafe float LightIntensity
 		{
 			get
@@ -120,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D75 RID: 28021
-		// (get) Token: 0x0601B3F1 RID: 111601 RVA: 0x002828ED File Offset: 0x00280AED
-		// (set) Token: 0x0601B3F2 RID: 111602 RVA: 0x002828FD File Offset: 0x00280AFD
+		// Token: 0x170016C6 RID: 5830
+		// (get) Token: 0x06007632 RID: 30258 RVA: 0x000ACA24 File Offset: 0x000AAC24
+		// (set) Token: 0x06007633 RID: 30259 RVA: 0x000ACA34 File Offset: 0x000AAC34
 		public unsafe float LightUpTime
 		{
 			get
@@ -135,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D76 RID: 28022
-		// (get) Token: 0x0601B3F3 RID: 111603 RVA: 0x0028290E File Offset: 0x00280B0E
-		// (set) Token: 0x0601B3F4 RID: 111604 RVA: 0x0028291E File Offset: 0x00280B1E
+		// Token: 0x170016C7 RID: 5831
+		// (get) Token: 0x06007634 RID: 30260 RVA: 0x000ACA45 File Offset: 0x000AAC45
+		// (set) Token: 0x06007635 RID: 30261 RVA: 0x000ACA55 File Offset: 0x000AAC55
 		public unsafe float LightUpDelay
 		{
 			get
@@ -150,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D77 RID: 28023
-		// (get) Token: 0x0601B3F5 RID: 111605 RVA: 0x0028292F File Offset: 0x00280B2F
-		// (set) Token: 0x0601B3F6 RID: 111606 RVA: 0x0028293F File Offset: 0x00280B3F
+		// Token: 0x170016C8 RID: 5832
+		// (get) Token: 0x06007636 RID: 30262 RVA: 0x000ACA66 File Offset: 0x000AAC66
+		// (set) Token: 0x06007637 RID: 30263 RVA: 0x000ACA76 File Offset: 0x000AAC76
 		public unsafe float LightOffTime
 		{
 			get
@@ -165,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D78 RID: 28024
-		// (get) Token: 0x0601B3F7 RID: 111607 RVA: 0x00282950 File Offset: 0x00280B50
-		// (set) Token: 0x0601B3F8 RID: 111608 RVA: 0x00282960 File Offset: 0x00280B60
+		// Token: 0x170016C9 RID: 5833
+		// (get) Token: 0x06007638 RID: 30264 RVA: 0x000ACA87 File Offset: 0x000AAC87
+		// (set) Token: 0x06007639 RID: 30265 RVA: 0x000ACA97 File Offset: 0x000AAC97
 		public unsafe float LightOffDelay
 		{
 			get
@@ -180,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D79 RID: 28025
-		// (get) Token: 0x0601B3F9 RID: 111609 RVA: 0x00282971 File Offset: 0x00280B71
-		// (set) Token: 0x0601B3FA RID: 111610 RVA: 0x00282981 File Offset: 0x00280B81
+		// Token: 0x170016CA RID: 5834
+		// (get) Token: 0x0600763A RID: 30266 RVA: 0x000ACAA8 File Offset: 0x000AACA8
+		// (set) Token: 0x0600763B RID: 30267 RVA: 0x000ACAB8 File Offset: 0x000AACB8
 		public unsafe float LightUpdateExtraTime
 		{
 			get
@@ -195,51 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006D7A RID: 28026
-		// (get) Token: 0x0601B3FB RID: 111611 RVA: 0x00282994 File Offset: 0x00280B94
-		// (set) Token: 0x0601B3FC RID: 111612 RVA: 0x002829CD File Offset: 0x00280BCD
-		public TArray<FKuroSmartLightCustomParameterFloat> CustomParameterFloats
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroSmartLightCustomParameterFloat> result;
-				if ((result = this._CustomParameterFloats) == null)
-				{
-					result = (this._CustomParameterFloats = new TArray<FKuroSmartLightCustomParameterFloat>(base.NativePtr + (IntPtr)AKuroSmartLightActor.__PropertyOffset_CustomParameterFloats, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.CustomParameterFloats.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D7B RID: 28027
-		// (get) Token: 0x0601B3FD RID: 111613 RVA: 0x002829DC File Offset: 0x00280BDC
-		// (set) Token: 0x0601B3FE RID: 111614 RVA: 0x00282A15 File Offset: 0x00280C15
-		public TArray<FKuroSmartLightCustomParameterLinearColor> CustomParameterLinearColors
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroSmartLightCustomParameterLinearColor> result;
-				if ((result = this._CustomParameterLinearColors) == null)
-				{
-					result = (this._CustomParameterLinearColors = new TArray<FKuroSmartLightCustomParameterLinearColor>(base.NativePtr + (IntPtr)AKuroSmartLightActor.__PropertyOffset_CustomParameterLinearColors, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.CustomParameterLinearColors.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17006D7C RID: 28028
-		// (get) Token: 0x0601B3FF RID: 111615 RVA: 0x00282A23 File Offset: 0x00280C23
-		// (set) Token: 0x0601B400 RID: 111616 RVA: 0x00282A37 File Offset: 0x00280C37
+		// Token: 0x170016CB RID: 5835
+		// (get) Token: 0x0600763C RID: 30268 RVA: 0x000ACAC9 File Offset: 0x000AACC9
+		// (set) Token: 0x0600763D RID: 30269 RVA: 0x000ACADD File Offset: 0x000AACDD
 		[Nullable(2)]
 		public unsafe USceneComponent SceneRoot
 		{
@@ -255,173 +197,147 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601B401 RID: 111617 RVA: 0x00282A4C File Offset: 0x00280C4C
+		// Token: 0x0600763E RID: 30270 RVA: 0x000ACAF2 File Offset: 0x000AACF2
 		public void TriggerLightOnEditorOnly()
 		{
 			AKuroSmartLightActor.__TriggerLightOnEditorOnly_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B402 RID: 111618 RVA: 0x00282A59 File Offset: 0x00280C59
+		// Token: 0x0600763F RID: 30271 RVA: 0x000ACAFF File Offset: 0x000AACFF
 		public void TriggerLightOffEditorOnly()
 		{
 			AKuroSmartLightActor.__TriggerLightOffEditorOnly_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B403 RID: 111619 RVA: 0x00282A66 File Offset: 0x00280C66
+		// Token: 0x06007640 RID: 30272 RVA: 0x000ACB0C File Offset: 0x000AAD0C
 		public virtual void OnUpdateLightOn(float Time)
 		{
 			AKuroSmartLightActor.__OnUpdateLightOn_Internal(base.NativePtr, Time);
 		}
 
-		// Token: 0x0601B404 RID: 111620 RVA: 0x00282A74 File Offset: 0x00280C74
+		// Token: 0x06007641 RID: 30273 RVA: 0x000ACB1A File Offset: 0x000AAD1A
 		protected virtual void OnUpdateLightOn_Implementation(float Time)
 		{
 			AKuroSmartLightActor.__OnUpdateLightOn_Implementation_Internal(base.NativePtr, Time);
 		}
 
-		// Token: 0x0601B405 RID: 111621 RVA: 0x00282A82 File Offset: 0x00280C82
+		// Token: 0x06007642 RID: 30274 RVA: 0x000ACB28 File Offset: 0x000AAD28
 		public virtual void OnUpdateLightOff(float Time)
 		{
 			AKuroSmartLightActor.__OnUpdateLightOff_Internal(base.NativePtr, Time);
 		}
 
-		// Token: 0x0601B406 RID: 111622 RVA: 0x00282A90 File Offset: 0x00280C90
+		// Token: 0x06007643 RID: 30275 RVA: 0x000ACB36 File Offset: 0x000AAD36
 		protected virtual void OnUpdateLightOff_Implementation(float Time)
 		{
 			AKuroSmartLightActor.__OnUpdateLightOff_Implementation_Internal(base.NativePtr, Time);
 		}
 
-		// Token: 0x0601B407 RID: 111623 RVA: 0x00282A9E File Offset: 0x00280C9E
+		// Token: 0x06007644 RID: 30276 RVA: 0x000ACB44 File Offset: 0x000AAD44
 		[NullableContext(2)]
 		public void ApplyLightParametersToStaticMeshComponent(UStaticMeshComponent Component)
 		{
 			AKuroSmartLightActor.__ApplyLightParametersToStaticMeshComponent_Internal(base.NativePtr, (Component != null) ? Component.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601B408 RID: 111624
+		// Token: 0x06007645 RID: 30277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TriggerLightOnEditorOnly_Internal(IntPtr @this);
 
-		// Token: 0x0601B409 RID: 111625
+		// Token: 0x06007646 RID: 30278
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __TriggerLightOffEditorOnly_Internal(IntPtr @this);
 
-		// Token: 0x0601B40A RID: 111626
+		// Token: 0x06007647 RID: 30279
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnUpdateLightOn_Internal(IntPtr @this, float Time);
 
-		// Token: 0x0601B40B RID: 111627
+		// Token: 0x06007648 RID: 30280
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnUpdateLightOn_Implementation_Internal(IntPtr @this, float Time);
 
-		// Token: 0x0601B40C RID: 111628
+		// Token: 0x06007649 RID: 30281
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnUpdateLightOff_Internal(IntPtr @this, float Time);
 
-		// Token: 0x0601B40D RID: 111629
+		// Token: 0x0600764A RID: 30282
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnUpdateLightOff_Implementation_Internal(IntPtr @this, float Time);
 
-		// Token: 0x0601B40E RID: 111630
+		// Token: 0x0600764B RID: 30283
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyLightParametersToStaticMeshComponent_Internal(IntPtr @this, IntPtr Component);
 
-		// Token: 0x0601B40F RID: 111631 RVA: 0x00282ABB File Offset: 0x00280CBB
+		// Token: 0x0600764C RID: 30284 RVA: 0x000ACB61 File Offset: 0x000AAD61
 		static AKuroSmartLightActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroSmartLightActor");
 		}
 
-		// Token: 0x0601B410 RID: 111632 RVA: 0x00282AC9 File Offset: 0x00280CC9
+		// Token: 0x0600764D RID: 30285 RVA: 0x000ACB6F File Offset: 0x000AAD6F
 		protected AKuroSmartLightActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400EAD0 RID: 60112
+		// Token: 0x040031CD RID: 12749
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroSmartLightActor";
 
-		// Token: 0x0400EAD1 RID: 60113
+		// Token: 0x040031CE RID: 12750
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400EAD2 RID: 60114
+		// Token: 0x040031CF RID: 12751
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400EAD3 RID: 60115
-		internal static int __PropertyOffset_DetectType;
-
-		// Token: 0x0400EAD4 RID: 60116
+		// Token: 0x040031D0 RID: 12752
 		internal static int __PropertyOffset_DetectCenter;
 
-		// Token: 0x0400EAD5 RID: 60117
+		// Token: 0x040031D1 RID: 12753
 		internal static int __PropertyOffset_DetectExtent;
 
-		// Token: 0x0400EAD6 RID: 60118
+		// Token: 0x040031D2 RID: 12754
 		internal static int __PropertyOffset_DetectRadius;
 
-		// Token: 0x0400EAD7 RID: 60119
+		// Token: 0x040031D3 RID: 12755
 		internal static int __PropertyOffset_Enabled;
 
-		// Token: 0x0400EAD8 RID: 60120
+		// Token: 0x040031D4 RID: 12756
 		internal static int __PropertyOffset_LightIntensity;
 
-		// Token: 0x0400EAD9 RID: 60121
+		// Token: 0x040031D5 RID: 12757
 		internal static int __PropertyOffset_LightUpTime;
 
-		// Token: 0x0400EADA RID: 60122
+		// Token: 0x040031D6 RID: 12758
 		internal static int __PropertyOffset_LightUpDelay;
 
-		// Token: 0x0400EADB RID: 60123
+		// Token: 0x040031D7 RID: 12759
 		internal static int __PropertyOffset_LightOffTime;
 
-		// Token: 0x0400EADC RID: 60124
+		// Token: 0x040031D8 RID: 12760
 		internal static int __PropertyOffset_LightOffDelay;
 
-		// Token: 0x0400EADD RID: 60125
+		// Token: 0x040031D9 RID: 12761
 		internal static int __PropertyOffset_LightUpdateExtraTime;
 
-		// Token: 0x0400EADE RID: 60126
-		internal static int __PropertyOffset_CustomParameterFloats;
-
-		// Token: 0x0400EADF RID: 60127
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroSmartLightCustomParameterFloat> _CustomParameterFloats;
-
-		// Token: 0x0400EAE0 RID: 60128
-		internal static int __PropertyOffset_CustomParameterLinearColors;
-
-		// Token: 0x0400EAE1 RID: 60129
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroSmartLightCustomParameterLinearColor> _CustomParameterLinearColors;
-
-		// Token: 0x0400EAE2 RID: 60130
+		// Token: 0x040031DA RID: 12762
 		internal static int __PropertyOffset_SceneRoot;
 
-		// Token: 0x0200317A RID: 12666
-		[NullableContext(0)]
+		// Token: 0x02000C20 RID: 3104
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __OnUpdateLightOn_FunctionParams
 		{
-			// Token: 0x04016FAF RID: 94127
+			// Token: 0x04005E68 RID: 24168
 			[FieldOffset(0)]
 			public float Time;
 		}
 
-		// Token: 0x0200317B RID: 12667
-		[NullableContext(0)]
+		// Token: 0x02000C21 RID: 3105
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __OnUpdateLightOff_FunctionParams
 		{
-			// Token: 0x04016FB0 RID: 94128
+			// Token: 0x04005E69 RID: 24169
 			[FieldOffset(0)]
 			public float Time;
 		}

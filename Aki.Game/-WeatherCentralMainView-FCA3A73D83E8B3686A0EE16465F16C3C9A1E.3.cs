@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002D24 RID: 11556
+// Token: 0x0200227E RID: 8830
 internal enum <WeatherCentralMainView>FCA3A73D83E8B3686A0EE16465F16C3C9A1E40830743953A3B3DA53602DD45085__EToggleState
 {
-	// Token: 0x0400B476 RID: 46198
+	// Token: 0x0400B7EB RID: 47083
 	None,
-	// Token: 0x0400B477 RID: 46199
+	// Token: 0x0400B7EC RID: 47084
 	Normal,
-	// Token: 0x0400B478 RID: 46200
+	// Token: 0x0400B7ED RID: 47085
 	Lock
 }

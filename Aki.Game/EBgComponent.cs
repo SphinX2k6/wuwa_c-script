@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002521 RID: 9505
+// Token: 0x02001A08 RID: 6664
 public enum EBgComponent
 {
-	// Token: 0x04009056 RID: 36950
+	// Token: 0x040091AB RID: 37291
 	TogItem,
-	// Token: 0x04009057 RID: 36951
+	// Token: 0x040091AC RID: 37292
 	PanelBgTex,
-	// Token: 0x04009058 RID: 36952
+	// Token: 0x040091AD RID: 37293
 	TextBg,
-	// Token: 0x04009059 RID: 36953
+	// Token: 0x040091AE RID: 37294
 	SpriteCheck,
-	// Token: 0x0400905A RID: 36954
+	// Token: 0x040091AF RID: 37295
 	PanelLock,
-	// Token: 0x0400905B RID: 36955
+	// Token: 0x040091B0 RID: 37296
 	RedDot
 }

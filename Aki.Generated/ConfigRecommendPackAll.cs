@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C0 RID: 1984
+	// Token: 0x020007DC RID: 2012
 	public class ConfigRecommendPackAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E92 RID: 11922 RVA: 0x00160A68 File Offset: 0x0015EC68
+		// Token: 0x06002F3A RID: 12090 RVA: 0x00167D50 File Offset: 0x00165F50
 		static ConfigRecommendPackAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRecommendPackAll.CreateStaticDefaultValue), new Action(ConfigRecommendPackAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E93 RID: 11923 RVA: 0x00160A88 File Offset: 0x0015EC88
+		// Token: 0x06002F3B RID: 12091 RVA: 0x00167D70 File Offset: 0x00165F70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRecommendPackAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E94 RID: 11924 RVA: 0x00160B07 File Offset: 0x0015ED07
+		// Token: 0x06002F3C RID: 12092 RVA: 0x00167DEF File Offset: 0x00165FEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRecommendPackAll.LogPair = null;
 			ConfigRecommendPackAll.HandleId = 0;
 		}
 
-		// Token: 0x06002E95 RID: 11925 RVA: 0x00160B15 File Offset: 0x0015ED15
+		// Token: 0x06002F3D RID: 12093 RVA: 0x00167DFD File Offset: 0x00165FFD
 		public static void Init()
 		{
 			ConfigRecommendPackAll.HandleId = ConfigCommon.InitDataStatement(ConfigRecommendPackAll.HandleId, "db_download.db", "select BinData from `RecommendPack`");
 		}
 
-		// Token: 0x06002E96 RID: 11926 RVA: 0x00160B30 File Offset: 0x0015ED30
+		// Token: 0x06002F3E RID: 12094 RVA: 0x00167E18 File Offset: 0x00166018
 		[NullableContext(2)]
 		public static IReadOnlyList<RecommendPack> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003626 RID: 13862
+		// Token: 0x040036EA RID: 14058
 		private const string DB = "db_download.db";
 
-		// Token: 0x04003627 RID: 13863
+		// Token: 0x040036EB RID: 14059
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x04003628 RID: 13864
+		// Token: 0x040036EC RID: 14060
 		private const string TABLE = "RecommendPack";
 
-		// Token: 0x04003629 RID: 13865
+		// Token: 0x040036ED RID: 14061
 		private const string COMMAND = "select BinData from `RecommendPack`";
 
-		// Token: 0x0400362A RID: 13866
+		// Token: 0x040036EE RID: 14062
 		private const string KEY_PREFIX = "RecommendPackAll";
 
-		// Token: 0x0400362B RID: 13867
+		// Token: 0x040036EF RID: 14063
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400362C RID: 13868
+		// Token: 0x040036F0 RID: 14064
 		private static int HandleId;
 	}
 }

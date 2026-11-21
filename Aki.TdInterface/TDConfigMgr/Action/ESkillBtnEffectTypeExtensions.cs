@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200241B RID: 9243
+	// Token: 0x020026BA RID: 9914
 	public static class ESkillBtnEffectTypeExtensions
 	{
-		// Token: 0x0600C8F8 RID: 51448 RVA: 0x001D6F18 File Offset: 0x001D5118
+		// Token: 0x0600D59F RID: 54687 RVA: 0x001F0BEC File Offset: 0x001EEDEC
 		public static string ToEnumString(this ESkillBtnEffectType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8F9 RID: 51449 RVA: 0x001D6F40 File Offset: 0x001D5140
+		// Token: 0x0600D5A0 RID: 54688 RVA: 0x001F0C14 File Offset: 0x001EEE14
 		public static ESkillBtnEffectType FromString(string name)
 		{
 			ESkillBtnEffectType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8FA RID: 51450 RVA: 0x001D6F69 File Offset: 0x001D5169
+		// Token: 0x0600D5A1 RID: 54689 RVA: 0x001F0C3D File Offset: 0x001EEE3D
 		public static bool TryFromString(string name, out ESkillBtnEffectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C8FB RID: 51451 RVA: 0x001D6F8E File Offset: 0x001D518E
+		// Token: 0x0600D5A2 RID: 54690 RVA: 0x001F0C62 File Offset: 0x001EEE62
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C8FC RID: 51452 RVA: 0x001D6F9E File Offset: 0x001D519E
+		// Token: 0x0600D5A3 RID: 54691 RVA: 0x001F0C72 File Offset: 0x001EEE72
 		public static ESkillBtnEffectType[] GetValues()
 		{
 			return new ESkillBtnEffectType[1];
 		}
 
-		// Token: 0x0600C8FD RID: 51453 RVA: 0x001D6FA6 File Offset: 0x001D51A6
+		// Token: 0x0600D5A4 RID: 54692 RVA: 0x001F0C7A File Offset: 0x001EEE7A
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200112F RID: 4399
+// Token: 0x020005E3 RID: 1507
 public class BabelTowerBuffInfo : IBabelTowerBuffInfo
 {
-	// Token: 0x170009CB RID: 2507
-	// (get) Token: 0x06007368 RID: 29544 RVA: 0x0017B9A6 File Offset: 0x00179BA6
-	// (set) Token: 0x06007369 RID: 29545 RVA: 0x0017B9AE File Offset: 0x00179BAE
+	// Token: 0x170009EB RID: 2539
+	// (get) Token: 0x060046FF RID: 18175 RVA: 0x001844F4 File Offset: 0x001826F4
+	// (set) Token: 0x06004700 RID: 18176 RVA: 0x001844FC File Offset: 0x001826FC
 	public int Id { get; set; }
 
-	// Token: 0x170009CC RID: 2508
-	// (get) Token: 0x0600736A RID: 29546 RVA: 0x0017B9B7 File Offset: 0x00179BB7
-	// (set) Token: 0x0600736B RID: 29547 RVA: 0x0017B9BF File Offset: 0x00179BBF
+	// Token: 0x170009EC RID: 2540
+	// (get) Token: 0x06004701 RID: 18177 RVA: 0x00184505 File Offset: 0x00182705
+	// (set) Token: 0x06004702 RID: 18178 RVA: 0x0018450D File Offset: 0x0018270D
 	public EBabelTowerBuffState State { get; set; }
 
-	// Token: 0x170009CD RID: 2509
-	// (get) Token: 0x0600736C RID: 29548 RVA: 0x0017B9C8 File Offset: 0x00179BC8
-	// (set) Token: 0x0600736D RID: 29549 RVA: 0x0017B9D0 File Offset: 0x00179BD0
+	// Token: 0x170009ED RID: 2541
+	// (get) Token: 0x06004703 RID: 18179 RVA: 0x00184516 File Offset: 0x00182716
+	// (set) Token: 0x06004704 RID: 18180 RVA: 0x0018451E File Offset: 0x0018271E
 	public int? LevelId { get; set; }
 
-	// Token: 0x170009CE RID: 2510
-	// (get) Token: 0x0600736E RID: 29550 RVA: 0x0017B9D9 File Offset: 0x00179BD9
-	// (set) Token: 0x0600736F RID: 29551 RVA: 0x0017B9E1 File Offset: 0x00179BE1
+	// Token: 0x170009EE RID: 2542
+	// (get) Token: 0x06004705 RID: 18181 RVA: 0x00184527 File Offset: 0x00182727
+	// (set) Token: 0x06004706 RID: 18182 RVA: 0x0018452F File Offset: 0x0018272F
 	public bool IsRecommend { get; set; }
 }

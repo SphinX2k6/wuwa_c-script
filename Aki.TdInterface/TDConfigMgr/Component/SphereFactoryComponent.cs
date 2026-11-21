@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008A1 RID: 2209
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000944 RID: 2372
 	public class SphereFactoryComponent : IComponentBase
 	{
-		// Token: 0x06003171 RID: 12657 RVA: 0x0007F070 File Offset: 0x0007D270
+		// Token: 0x060034AD RID: 13485 RVA: 0x00086558 File Offset: 0x00084758
 		private SphereFactoryComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003172 RID: 12658 RVA: 0x0007F0A8 File Offset: 0x0007D2A8
+		// Token: 0x060034AE RID: 13486 RVA: 0x00086590 File Offset: 0x00084790
 		public static SphereFactoryComponent Create([Nullable(2)] SphereFactoryComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003173 RID: 12659 RVA: 0x0007F0BB File Offset: 0x0007D2BB
+		// Token: 0x060034AF RID: 13487 RVA: 0x000865A3 File Offset: 0x000847A3
 		public static SphereFactoryComponent CreateFromSetValue([Nullable(2)] SphereFactoryComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003174 RID: 12660 RVA: 0x0007F0CE File Offset: 0x0007D2CE
+		// Token: 0x060034B0 RID: 13488 RVA: 0x000865B6 File Offset: 0x000847B6
 		public new SphereFactoryComponent_SetValue ToSetValue()
 		{
 			return new SphereFactoryComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D2A RID: 3370
-		// (get) Token: 0x06003175 RID: 12661 RVA: 0x0007F108 File Offset: 0x0007D308
-		// (set) Token: 0x06003176 RID: 12662 RVA: 0x0007F142 File Offset: 0x0007D342
+		// Token: 0x17000DF3 RID: 3571
+		// (get) Token: 0x060034B1 RID: 13489 RVA: 0x000865F0 File Offset: 0x000847F0
+		// (set) Token: 0x060034B2 RID: 13490 RVA: 0x0008662A File Offset: 0x0008482A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D2B RID: 3371
-		// (get) Token: 0x06003177 RID: 12663 RVA: 0x0007F150 File Offset: 0x0007D350
-		// (set) Token: 0x06003178 RID: 12664 RVA: 0x0007F17A File Offset: 0x0007D37A
+		// Token: 0x17000DF4 RID: 3572
+		// (get) Token: 0x060034B3 RID: 13491 RVA: 0x00086638 File Offset: 0x00084838
+		// (set) Token: 0x060034B4 RID: 13492 RVA: 0x00086662 File Offset: 0x00084862
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D2C RID: 3372
-		// (get) Token: 0x06003179 RID: 12665 RVA: 0x0007F188 File Offset: 0x0007D388
-		// (set) Token: 0x0600317A RID: 12666 RVA: 0x0007F1E9 File Offset: 0x0007D3E9
+		// Token: 0x17000DF5 RID: 3573
+		// (get) Token: 0x060034B5 RID: 13493 RVA: 0x00086670 File Offset: 0x00084870
+		// (set) Token: 0x060034B6 RID: 13494 RVA: 0x000866D1 File Offset: 0x000848D1
 		public virtual VectorInfo SphereLocation
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D2D RID: 3373
-		// (get) Token: 0x0600317B RID: 12667 RVA: 0x0007F1FE File Offset: 0x0007D3FE
-		// (set) Token: 0x0600317C RID: 12668 RVA: 0x0007F229 File Offset: 0x0007D429
+		// Token: 0x17000DF6 RID: 3574
+		// (get) Token: 0x060034B7 RID: 13495 RVA: 0x000866E6 File Offset: 0x000848E6
+		// (set) Token: 0x060034B8 RID: 13496 RVA: 0x00086711 File Offset: 0x00084911
 		public virtual string SphereGuid
 		{
 			get
@@ -159,18 +157,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400207A RID: 8314
+		// Token: 0x0400228C RID: 8844
 		[Nullable(2)]
 		protected new SphereFactoryComponent FbInstance;
 
-		// Token: 0x0400207B RID: 8315
+		// Token: 0x0400228D RID: 8845
 		[Nullable(2)]
 		protected new SphereFactoryComponent_SetValue PocoInterface;
 
-		// Token: 0x0400207C RID: 8316
+		// Token: 0x0400228E RID: 8846
 		private VectorInfo _SphereLocationCache;
 
-		// Token: 0x0400207D RID: 8317
+		// Token: 0x0400228F RID: 8847
 		private bool _SphereLocationInited;
 	}
 }

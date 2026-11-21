@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EA1 RID: 7841
+// Token: 0x02001363 RID: 4963
 public class HonamiStoryItemLockStateItem : UiPanelBase
 {
-	// Token: 0x0600F0C8 RID: 61640 RVA: 0x0039D362 File Offset: 0x0039B562
+	// Token: 0x0600C4E7 RID: 50407 RVA: 0x003A8F1E File Offset: 0x003A711E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class HonamiStoryItemLockStateItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F0C9 RID: 61641 RVA: 0x0039D388 File Offset: 0x0039B588
+	// Token: 0x0600C4E8 RID: 50408 RVA: 0x003A8F44 File Offset: 0x003A7144
 	[NullableContext(1)]
 	public void RefreshMask(bool enable, HonamiStoryItemDataBase itemData, EHonamiStoryBackpackType backpackType)
 	{
@@ -42,10 +42,10 @@ public class HonamiStoryItemLockStateItem : UiPanelBase
 		rootItem.SetHeight((float)num2);
 	}
 
-	// Token: 0x0200846A RID: 33898
+	// Token: 0x020075EF RID: 30191
 	private enum EItemLock
 	{
-		// Token: 0x0402B196 RID: 176534
+		// Token: 0x040264BA RID: 156858
 		Mask
 	}
 }

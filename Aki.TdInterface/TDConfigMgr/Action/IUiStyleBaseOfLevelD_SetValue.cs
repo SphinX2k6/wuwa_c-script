@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002014 RID: 8212
+	// Token: 0x0200225D RID: 8797
 	public class IUiStyleBaseOfLevelD_SetValue
 	{
-		// Token: 0x04006CCB RID: 27851
+		// Token: 0x040072D2 RID: 29394
 		public EUiStyleTypeOfLevelD Type;
 	}
 }

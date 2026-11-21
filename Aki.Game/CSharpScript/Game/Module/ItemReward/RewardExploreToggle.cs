@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x0200580B RID: 22539
+	// Token: 0x020047E2 RID: 18402
 	public class RewardExploreToggle : UiPanelBase
 	{
-		// Token: 0x060394A8 RID: 234664 RVA: 0x00D96564 File Offset: 0x00D94764
+		// Token: 0x0602E3BC RID: 189372 RVA: 0x00CE53CC File Offset: 0x00CE35CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,22 +24,23 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060394A9 RID: 234665 RVA: 0x00D965CD File Offset: 0x00D947CD
+		// Token: 0x0602E3BD RID: 189373 RVA: 0x00CE5435 File Offset: 0x00CE3635
 		protected override void OnStart()
 		{
 			this.StateToggle = base.GetExtendToggle(1);
 		}
 
-		// Token: 0x060394AA RID: 234666 RVA: 0x00D965DC File Offset: 0x00D947DC
+		// Token: 0x0602E3BE RID: 189374 RVA: 0x00CE5444 File Offset: 0x00CE3644
 		protected override void OnBeforeDestroy()
 		{
 			this.StateToggle = null;
 		}
 
-		// Token: 0x060394AB RID: 234667 RVA: 0x00D965E5 File Offset: 0x00D947E5
+		// Token: 0x0602E3BF RID: 189375 RVA: 0x00CE5450 File Offset: 0x00CE3650
 		[NullableContext(1)]
 		public void Refresh(IRewardExploreToggle toggleData)
 		{
+			this.StateToggle.SetToggleState(toggleData.DefaultOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 			if (toggleData.OnToggleClick != null)
 			{
 				this.StateToggle.OnStateChange.Add(toggleData.OnToggleClick);
@@ -50,7 +51,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060394AC RID: 234668 RVA: 0x00D96624 File Offset: 0x00D94824
+		// Token: 0x0602E3C0 RID: 189376 RVA: 0x00CE54B4 File Offset: 0x00CE36B4
 		[NullableContext(1)]
 		private void SetTitleText(string titleTextId)
 		{
@@ -62,7 +63,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, titleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x060394AD RID: 234669 RVA: 0x00D96654 File Offset: 0x00D94854
+		// Token: 0x0602E3C1 RID: 189377 RVA: 0x00CE54E4 File Offset: 0x00CE36E4
 		public EToggleState? GetToggleState()
 		{
 			UUIExtendToggle stateToggle = this.StateToggle;
@@ -73,17 +74,17 @@ namespace CSharpScript.Game.Module.ItemReward
 			return new EToggleState?(stateToggle.GetToggleState());
 		}
 
-		// Token: 0x0401DF5A RID: 122714
+		// Token: 0x040189F1 RID: 100849
 		[Nullable(2)]
 		private UUIExtendToggle StateToggle;
 
-		// Token: 0x0200BA0C RID: 47628
+		// Token: 0x0200A422 RID: 42018
 		private class EChildType
 		{
-			// Token: 0x040383C4 RID: 230340
+			// Token: 0x04032DB1 RID: 208305
 			public const int TitleText = 0;
 
-			// Token: 0x040383C5 RID: 230341
+			// Token: 0x04032DB2 RID: 208306
 			public const int StateToggle = 1;
 		}
 	}

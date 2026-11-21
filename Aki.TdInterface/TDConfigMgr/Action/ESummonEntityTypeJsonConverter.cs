@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200243E RID: 9278
+	// Token: 0x020026DF RID: 9951
 	public class ESummonEntityTypeJsonConverter : JsonConverter<ESummonEntityType>
 	{
-		// Token: 0x0600C997 RID: 51607 RVA: 0x001D83E8 File Offset: 0x001D65E8
+		// Token: 0x0600D647 RID: 54855 RVA: 0x001F22B0 File Offset: 0x001F04B0
 		public override ESummonEntityType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESummonEntityTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C998 RID: 51608 RVA: 0x001D840C File Offset: 0x001D660C
+		// Token: 0x0600D648 RID: 54856 RVA: 0x001F22D4 File Offset: 0x001F04D4
 		public override void Write(Utf8JsonWriter writer, ESummonEntityType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

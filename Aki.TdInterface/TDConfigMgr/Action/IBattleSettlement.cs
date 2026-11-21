@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017FE RID: 6142
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001987 RID: 6535
 	public class IBattleSettlement : IDynamicSettlementConfig
 	{
-		// Token: 0x060083E5 RID: 33765 RVA: 0x0013A9C8 File Offset: 0x00138BC8
+		// Token: 0x06008B01 RID: 35585 RVA: 0x0014A0B0 File Offset: 0x001482B0
 		private IBattleSettlement_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083E6 RID: 33766 RVA: 0x0013AA00 File Offset: 0x00138C00
+		// Token: 0x06008B02 RID: 35586 RVA: 0x0014A0E8 File Offset: 0x001482E8
 		public static IBattleSettlement Create([Nullable(2)] IBattleSettlement instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083E7 RID: 33767 RVA: 0x0013AA13 File Offset: 0x00138C13
+		// Token: 0x06008B03 RID: 35587 RVA: 0x0014A0FB File Offset: 0x001482FB
 		public static IBattleSettlement CreateFromSetValue([Nullable(2)] IBattleSettlement_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083E8 RID: 33768 RVA: 0x0013AA26 File Offset: 0x00138C26
+		// Token: 0x06008B04 RID: 35588 RVA: 0x0014A10E File Offset: 0x0014830E
 		public new IBattleSettlement_SetValue ToSetValue()
 		{
 			return new IBattleSettlement_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B4A RID: 11082
-		// (get) Token: 0x060083E9 RID: 33769 RVA: 0x0013AA51 File Offset: 0x00138C51
-		// (set) Token: 0x060083EA RID: 33770 RVA: 0x0013AA7C File Offset: 0x00138C7C
+		// Token: 0x17002D42 RID: 11586
+		// (get) Token: 0x06008B05 RID: 35589 RVA: 0x0014A139 File Offset: 0x00148339
+		// (set) Token: 0x06008B06 RID: 35590 RVA: 0x0014A164 File Offset: 0x00148364
 		public override EDynamicSettlementType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B4B RID: 11083
-		// (get) Token: 0x060083EB RID: 33771 RVA: 0x0013AA8C File Offset: 0x00138C8C
-		// (set) Token: 0x060083EC RID: 33772 RVA: 0x0013AAC6 File Offset: 0x00138CC6
+		// Token: 0x17002D43 RID: 11587
+		// (get) Token: 0x06008B07 RID: 35591 RVA: 0x0014A174 File Offset: 0x00148374
+		// (set) Token: 0x06008B08 RID: 35592 RVA: 0x0014A1AE File Offset: 0x001483AE
 		public virtual int? GamePlayCue
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B4C RID: 11084
-		// (get) Token: 0x060083ED RID: 33773 RVA: 0x0013AAD4 File Offset: 0x00138CD4
-		// (set) Token: 0x060083EE RID: 33774 RVA: 0x0013AB0E File Offset: 0x00138D0E
+		// Token: 0x17002D44 RID: 11588
+		// (get) Token: 0x06008B09 RID: 35593 RVA: 0x0014A1BC File Offset: 0x001483BC
+		// (set) Token: 0x06008B0A RID: 35594 RVA: 0x0014A1F6 File Offset: 0x001483F6
 		public virtual EBattleSettlementBgmType? BgmType
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005397 RID: 21399
+		// Token: 0x040057DF RID: 22495
 		[Nullable(2)]
 		protected new IBattleSettlement FbInstance;
 
-		// Token: 0x04005398 RID: 21400
+		// Token: 0x040057E0 RID: 22496
 		[Nullable(2)]
 		protected new IBattleSettlement_SetValue PocoInterface;
 	}

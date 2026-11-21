@@ -1,33 +1,33 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001999 RID: 6553
+// Token: 0x02000E56 RID: 3670
 [NullableContext(2)]
 public interface ISmallItemTopRightTagComponentParams
 {
-	// Token: 0x17000FF8 RID: 4088
-	// (get) Token: 0x0600BF61 RID: 48993
-	// (set) Token: 0x0600BF62 RID: 48994
+	// Token: 0x1700101C RID: 4124
+	// (get) Token: 0x06009369 RID: 37737
+	// (set) Token: 0x0600936A RID: 37738
 	string TopRightTextBgColor { get; set; }
 
-	// Token: 0x17000FF9 RID: 4089
-	// (get) Token: 0x0600BF63 RID: 48995
-	// (set) Token: 0x0600BF64 RID: 48996
+	// Token: 0x1700101D RID: 4125
+	// (get) Token: 0x0600936B RID: 37739
+	// (set) Token: 0x0600936C RID: 37740
 	string TopRightTextColor { get; set; }
 
-	// Token: 0x17000FFA RID: 4090
-	// (get) Token: 0x0600BF65 RID: 48997
-	// (set) Token: 0x0600BF66 RID: 48998
+	// Token: 0x1700101E RID: 4126
+	// (get) Token: 0x0600936D RID: 37741
+	// (set) Token: 0x0600936E RID: 37742
 	string TopRightTextId { get; set; }
 
-	// Token: 0x17000FFB RID: 4091
-	// (get) Token: 0x0600BF67 RID: 48999
-	// (set) Token: 0x0600BF68 RID: 49000
+	// Token: 0x1700101F RID: 4127
+	// (get) Token: 0x0600936F RID: 37743
+	// (set) Token: 0x06009370 RID: 37744
 	string TopRightText { get; set; }
 
-	// Token: 0x17000FFC RID: 4092
-	// (get) Token: 0x0600BF69 RID: 49001
-	// (set) Token: 0x0600BF6A RID: 49002
+	// Token: 0x17001020 RID: 4128
+	// (get) Token: 0x06009371 RID: 37745
+	// (set) Token: 0x06009372 RID: 37746
 	[Nullable(new byte[]
 	{
 		2,

@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200007D RID: 125
+	// Token: 0x02000062 RID: 98
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.LazyObject)]
 	[UnrealStructLayout(28, 4, UnrealReflectionPropertyTypeCode.LazyObject, PropertiesSize = 28)]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 28)]
 	public struct FLazyObjectPtr : IEqualityOperators<FLazyObjectPtr, FLazyObjectPtr, bool>, IEquatable<FLazyObjectPtr>
 	{
-		// Token: 0x06000E85 RID: 3717 RVA: 0x00015E44 File Offset: 0x00014044
+		// Token: 0x06000A18 RID: 2584 RVA: 0x00010B64 File Offset: 0x0000ED64
 		public FLazyObjectPtr()
 		{
 			this.WeakObjectPtr = default(FWeakObjectPtr);
@@ -22,7 +22,7 @@ namespace UnrealEngine
 			this.Guid = default(FUniqueObjectGuid);
 		}
 
-		// Token: 0x06000E86 RID: 3718 RVA: 0x00015E68 File Offset: 0x00014068
+		// Token: 0x06000A19 RID: 2585 RVA: 0x00010B88 File Offset: 0x0000ED88
 		[NullableContext(2)]
 		public unsafe FLazyObjectPtr(UnrealObject obj)
 		{
@@ -39,20 +39,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E87 RID: 3719 RVA: 0x00015EB0 File Offset: 0x000140B0
+		// Token: 0x06000A1A RID: 2586 RVA: 0x00010BD0 File Offset: 0x0000EDD0
 		public void Reset()
 		{
 			this = new FLazyObjectPtr();
 		}
 
-		// Token: 0x06000E88 RID: 3720 RVA: 0x00015EBD File Offset: 0x000140BD
+		// Token: 0x06000A1B RID: 2587 RVA: 0x00010BDD File Offset: 0x0000EDDD
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public readonly FUniqueObjectGuid GetUniqueID()
 		{
 			return this.Guid;
 		}
 
-		// Token: 0x06000E89 RID: 3721 RVA: 0x00015EC8 File Offset: 0x000140C8
+		// Token: 0x06000A1C RID: 2588 RVA: 0x00010BE8 File Offset: 0x0000EDE8
 		[NullableContext(2)]
 		public unsafe readonly UnrealUObject Get()
 		{
@@ -62,7 +62,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E8A RID: 3722 RVA: 0x00015EE4 File Offset: 0x000140E4
+		// Token: 0x06000A1D RID: 2589 RVA: 0x00010C04 File Offset: 0x0000EE04
 		[NullableContext(2)]
 		public unsafe readonly UnrealUObject Get(bool bEvenIfPendingKill)
 		{
@@ -72,44 +72,44 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E8B RID: 3723 RVA: 0x00015F00 File Offset: 0x00014100
+		// Token: 0x06000A1E RID: 2590 RVA: 0x00010C20 File Offset: 0x0000EE20
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public readonly bool IsValid()
 		{
 			return this.Get() != null;
 		}
 
-		// Token: 0x06000E8C RID: 3724 RVA: 0x00015F0B File Offset: 0x0001410B
+		// Token: 0x06000A1F RID: 2591 RVA: 0x00010C2B File Offset: 0x0000EE2B
 		public readonly bool IsPending()
 		{
 			return this.Get() == null && this.Guid.Guid.IsValid();
 		}
 
-		// Token: 0x06000E8D RID: 3725 RVA: 0x00015F27 File Offset: 0x00014127
+		// Token: 0x06000A20 RID: 2592 RVA: 0x00010C47 File Offset: 0x0000EE47
 		public readonly bool IsNull()
 		{
 			return !this.Guid.Guid.IsValid();
 		}
 
-		// Token: 0x06000E8E RID: 3726 RVA: 0x00015F3C File Offset: 0x0001413C
+		// Token: 0x06000A21 RID: 2593 RVA: 0x00010C5C File Offset: 0x0000EE5C
 		public static bool operator ==(FLazyObjectPtr left, FLazyObjectPtr right)
 		{
 			return left.Guid == right.Guid;
 		}
 
-		// Token: 0x06000E8F RID: 3727 RVA: 0x00015F4F File Offset: 0x0001414F
+		// Token: 0x06000A22 RID: 2594 RVA: 0x00010C6F File Offset: 0x0000EE6F
 		public static bool operator !=(FLazyObjectPtr left, FLazyObjectPtr right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06000E90 RID: 3728 RVA: 0x00015F5B File Offset: 0x0001415B
+		// Token: 0x06000A23 RID: 2595 RVA: 0x00010C7B File Offset: 0x0000EE7B
 		public readonly bool Equals(FLazyObjectPtr other)
 		{
 			return this.Guid == other.Guid;
 		}
 
-		// Token: 0x06000E91 RID: 3729 RVA: 0x00015F70 File Offset: 0x00014170
+		// Token: 0x06000A24 RID: 2596 RVA: 0x00010C90 File Offset: 0x0000EE90
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -121,33 +121,33 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000E92 RID: 3730 RVA: 0x00015F98 File Offset: 0x00014198
+		// Token: 0x06000A25 RID: 2597 RVA: 0x00010CB8 File Offset: 0x0000EEB8
 		public override readonly int GetHashCode()
 		{
 			return this.Guid.GetHashCode();
 		}
 
-		// Token: 0x06000E93 RID: 3731
+		// Token: 0x06000A26 RID: 2598
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void Construct(FLazyObjectPtr* LazyObjectPtr, IntPtr UObject);
 
-		// Token: 0x06000E94 RID: 3732
+		// Token: 0x06000A27 RID: 2599
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern IntPtr Get(FLazyObjectPtr* LazyObjectPtr);
 
-		// Token: 0x06000E95 RID: 3733
+		// Token: 0x06000A28 RID: 2600
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern IntPtr Get_bool(FLazyObjectPtr* LazyObjectPtr, bool bEvenIfPendingKill);
 
-		// Token: 0x040001C2 RID: 450
+		// Token: 0x0400017B RID: 379
 		[FieldOffset(0)]
 		private readonly FWeakObjectPtr WeakObjectPtr;
 
-		// Token: 0x040001C3 RID: 451
+		// Token: 0x0400017C RID: 380
 		[FieldOffset(8)]
 		private readonly int TagAtLastTest;
 
-		// Token: 0x040001C4 RID: 452
+		// Token: 0x0400017D RID: 381
 		[FieldOffset(12)]
 		private readonly FUniqueObjectGuid Guid;
 	}

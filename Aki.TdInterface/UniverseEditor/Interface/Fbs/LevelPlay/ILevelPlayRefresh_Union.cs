@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004512 RID: 17682
+	// Token: 0x0200497A RID: 18810
 	public enum ILevelPlayRefresh_Union : byte
 	{
-		// Token: 0x0400C57D RID: 50557
+		// Token: 0x0400CFAC RID: 53164
 		NONE,
-		// Token: 0x0400C57E RID: 50558
+		// Token: 0x0400CFAD RID: 53165
 		ILevelPlayRefresh,
-		// Token: 0x0400C57F RID: 50559
+		// Token: 0x0400CFAE RID: 53166
 		INoneRefresh,
-		// Token: 0x0400C580 RID: 50560
+		// Token: 0x0400CFAF RID: 53167
 		ICompletedRefresh,
-		// Token: 0x0400C581 RID: 50561
+		// Token: 0x0400CFB0 RID: 53168
 		IChildDestroyRefresh,
-		// Token: 0x0400C582 RID: 50562
+		// Token: 0x0400CFB1 RID: 53169
 		IChildDestroyOrAwardedRefresh,
-		// Token: 0x0400C583 RID: 50563
+		// Token: 0x0400CFB2 RID: 53170
 		IFixedDateTimeRefresh,
-		// Token: 0x0400C584 RID: 50564
+		// Token: 0x0400CFB3 RID: 53171
 		ICustomRefresh,
-		// Token: 0x0400C585 RID: 50565
+		// Token: 0x0400CFB4 RID: 53172
 		ICustomOnlineRefresh
 	}
 }

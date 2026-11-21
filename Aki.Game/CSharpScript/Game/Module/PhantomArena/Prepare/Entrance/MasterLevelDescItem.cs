@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005179 RID: 20857
+	// Token: 0x02004149 RID: 16713
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 	})]
 	public class MasterLevelDescItem : GridProxyAbstract<MasterLevelDescData>
 	{
-		// Token: 0x06035561 RID: 218465 RVA: 0x00CA25E4 File Offset: 0x00CA07E4
+		// Token: 0x0602A45C RID: 173148 RVA: 0x00BEFB9C File Offset: 0x00BEDD9C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x06035562 RID: 218466 RVA: 0x00CA2640 File Offset: 0x00CA0840
+		// Token: 0x0602A45D RID: 173149 RVA: 0x00BEFBF8 File Offset: 0x00BEDDF8
 		[NullableContext(1)]
 		public override void Refresh(MasterLevelDescData data, bool isSelected, int gridIndex)
 		{
@@ -34,16 +34,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.StringId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200B2EB RID: 45803
+		// Token: 0x02009D24 RID: 40228
 		private class EDescComponent
 		{
-			// Token: 0x04036372 RID: 222066
+			// Token: 0x04030DC7 RID: 200135
 			public const int SpriteDone = 0;
 
-			// Token: 0x04036373 RID: 222067
+			// Token: 0x04030DC8 RID: 200136
 			public const int TextDesc = 1;
 
-			// Token: 0x04036374 RID: 222068
+			// Token: 0x04030DC9 RID: 200137
 			public const int SpritePending = 2;
 		}
 	}

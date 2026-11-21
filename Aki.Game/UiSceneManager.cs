@@ -10,17 +10,18 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.Module.UiComponent;
 using CSharpScript.Game.Render;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C60 RID: 11360
+// Token: 0x020021B9 RID: 8633
 [NullableContext(1)]
 [Nullable(0)]
 public class UiSceneManager : Singleton, ITickable
 {
-	// Token: 0x06017B76 RID: 97142 RVA: 0x006078C4 File Offset: 0x00605AC4
+	// Token: 0x060153EA RID: 87018 RVA: 0x0062D388 File Offset: 0x0062B588
 	public void Initialize()
 	{
 		GlobalData.SetUiState(EKuroUI3DState.NotLoaded);
@@ -29,7 +30,7 @@ public class UiSceneManager : Singleton, ITickable
 		EventSystem.Instance.Add(EEventName.ResetModuleAfterResetToBattleView, new Action(this.ForceCloseUiSceneImmediately));
 	}
 
-	// Token: 0x06017B77 RID: 97143 RVA: 0x00607900 File Offset: 0x00605B00
+	// Token: 0x060153EB RID: 87019 RVA: 0x0062D3C4 File Offset: 0x0062B5C4
 	private unsafe void UnloadLastAndRecordCurrentUiScene(string sceneId)
 	{
 		UKuroUiSceneSystem kuroUiSceneSystem = UKuroUiSceneSystem.GetKuroUiSceneSystem(GlobalData.World);
@@ -59,7 +60,7 @@ public class UiSceneManager : Singleton, ITickable
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06017B78 RID: 97144 RVA: 0x00607A1C File Offset: 0x00605C1C
+	// Token: 0x060153EC RID: 87020 RVA: 0x0062D4E0 File Offset: 0x0062B6E0
 	private void PreloadAllUiScene()
 	{
 		UKuroUiSceneSystem kuroUiSceneSystem = UKuroUiSceneSystem.GetKuroUiSceneSystem(GlobalData.World);
@@ -70,7 +71,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B79 RID: 97145 RVA: 0x00607A8C File Offset: 0x00605C8C
+	// Token: 0x060153ED RID: 87021 RVA: 0x0062D550 File Offset: 0x0062B750
 	private void EndAllUiSceneRendering()
 	{
 		UKuroUiSceneSystem kuroUiSceneSystem = UKuroUiSceneSystem.GetKuroUiSceneSystem(GlobalData.World);
@@ -92,7 +93,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.GlobalGiMainScene = string.Empty;
 	}
 
-	// Token: 0x06017B7A RID: 97146 RVA: 0x00607B38 File Offset: 0x00605D38
+	// Token: 0x060153EE RID: 87022 RVA: 0x0062D5FC File Offset: 0x0062B7FC
 	private void StartAllUiSceneRendering()
 	{
 		UKuroUiSceneSystem kuroUiSceneSystem = UKuroUiSceneSystem.GetKuroUiSceneSystem(GlobalData.World);
@@ -112,7 +113,7 @@ public class UiSceneManager : Singleton, ITickable
 		kuroUiSceneSystem.StartUiSceneRendering();
 	}
 
-	// Token: 0x06017B7B RID: 97147 RVA: 0x00607BCC File Offset: 0x00605DCC
+	// Token: 0x060153EF RID: 87023 RVA: 0x0062D690 File Offset: 0x0062B890
 	private bool CheckOpenUiScene(string sceneId)
 	{
 		if (GlobalData.World == null)
@@ -136,7 +137,7 @@ public class UiSceneManager : Singleton, ITickable
 		return true;
 	}
 
-	// Token: 0x06017B7C RID: 97148 RVA: 0x00607C24 File Offset: 0x00605E24
+	// Token: 0x060153F0 RID: 87024 RVA: 0x0062D6E8 File Offset: 0x0062B8E8
 	private void SetKuroUiSceneLoadOffset(string sceneId)
 	{
 		UiSceneCsv? sceneConfig = UiViewConfig.Instance.GetSceneConfig(sceneId);
@@ -148,7 +149,7 @@ public class UiSceneManager : Singleton, ITickable
 		RenderModuleController.Instance.SetKuroUiSceneLoadOffset(kuroUiSceneLoadOffset);
 	}
 
-	// Token: 0x06017B7D RID: 97149 RVA: 0x00607CBC File Offset: 0x00605EBC
+	// Token: 0x060153F1 RID: 87025 RVA: 0x0062D780 File Offset: 0x0062B980
 	private bool DisableClvForUiScene(string sceneId)
 	{
 		if (!this.DisableClvUiSceneIds.Contains(sceneId))
@@ -163,7 +164,7 @@ public class UiSceneManager : Singleton, ITickable
 		return true;
 	}
 
-	// Token: 0x06017B7E RID: 97150 RVA: 0x00607D0C File Offset: 0x00605F0C
+	// Token: 0x060153F2 RID: 87026 RVA: 0x0062D7D0 File Offset: 0x0062B9D0
 	private void RestoreClvEnableValue()
 	{
 		if (this.LastClvEnableValue == null)
@@ -178,13 +179,14 @@ public class UiSceneManager : Singleton, ITickable
 		this.LastClvEnableValue = null;
 	}
 
-	// Token: 0x06017B7F RID: 97151 RVA: 0x00607D70 File Offset: 0x00605F70
+	// Token: 0x060153F3 RID: 87027 RVA: 0x0062D834 File Offset: 0x0062BA34
 	public bool OpenUiScene(string sceneId, [Nullable(2)] Action successCallBack = null)
 	{
 		if (!this.CheckOpenUiScene(sceneId))
 		{
 			return false;
 		}
+		UiSceneUtils.RecordSceneFloorReflection();
 		if (this.CurUiSceneId == sceneId)
 		{
 			if (successCallBack != null)
@@ -215,7 +217,7 @@ public class UiSceneManager : Singleton, ITickable
 		return true;
 	}
 
-	// Token: 0x06017B80 RID: 97152 RVA: 0x00607E3C File Offset: 0x0060603C
+	// Token: 0x060153F4 RID: 87028 RVA: 0x0062D904 File Offset: 0x0062BB04
 	public void SwitchUiScene(string sceneId, [Nullable(2)] Action<bool> callBack = null)
 	{
 		this.SwitchUiSceneFunction = callBack;
@@ -250,7 +252,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B81 RID: 97153 RVA: 0x00607EC4 File Offset: 0x006060C4
+	// Token: 0x060153F5 RID: 87029 RVA: 0x0062D98C File Offset: 0x0062BB8C
 	public UniTask SwitchUiSceneWithBlackScreen(string sceneId, [Nullable(2)] Func<bool, UniTask> callBack = null)
 	{
 		UiSceneManager.<SwitchUiSceneWithBlackScreen>d__18 <SwitchUiSceneWithBlackScreen>d__;
@@ -263,21 +265,22 @@ public class UiSceneManager : Singleton, ITickable
 		return <SwitchUiSceneWithBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017B82 RID: 97154 RVA: 0x00607F17 File Offset: 0x00606117
+	// Token: 0x060153F6 RID: 87030 RVA: 0x0062D9DF File Offset: 0x0062BBDF
 	public void CloseUiScene()
 	{
 		this.ForceHandleScene();
 	}
 
-	// Token: 0x06017B83 RID: 97155 RVA: 0x00607F1F File Offset: 0x0060611F
+	// Token: 0x060153F7 RID: 87031 RVA: 0x0062D9E7 File Offset: 0x0062BBE7
 	private void ForceCloseUiSceneImmediately()
 	{
 		this.ForceHandleScene();
 	}
 
-	// Token: 0x06017B84 RID: 97156 RVA: 0x00607F28 File Offset: 0x00606128
+	// Token: 0x060153F8 RID: 87032 RVA: 0x0062D9F0 File Offset: 0x0062BBF0
 	private void ForceHandleScene()
 	{
+		UiSceneUtils.RestoreSceneFloorReflection();
 		if (StringUtils.IsEmpty(this.CurUiSceneId))
 		{
 			return;
@@ -305,7 +308,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B85 RID: 97157 RVA: 0x00607FC8 File Offset: 0x006061C8
+	// Token: 0x060153F9 RID: 87033 RVA: 0x0062DA94 File Offset: 0x0062BC94
 	public void Tick(float delta)
 	{
 		if (!GlobalData.IsUiSceneLoading)
@@ -352,7 +355,7 @@ public class UiSceneManager : Singleton, ITickable
 		GlobalData.SetUiState(EKuroUI3DState.Loading);
 	}
 
-	// Token: 0x06017B86 RID: 97158 RVA: 0x006080A8 File Offset: 0x006062A8
+	// Token: 0x060153FA RID: 87034 RVA: 0x0062DB74 File Offset: 0x0062BD74
 	private void HandleEnterUiSceneParams()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -372,7 +375,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B87 RID: 97159 RVA: 0x00608100 File Offset: 0x00606300
+	// Token: 0x060153FB RID: 87035 RVA: 0x0062DBCC File Offset: 0x0062BDCC
 	private void HandleExitUiSceneParams()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -392,7 +395,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B88 RID: 97160 RVA: 0x00608158 File Offset: 0x00606358
+	// Token: 0x060153FC RID: 87036 RVA: 0x0062DC24 File Offset: 0x0062BE24
 	private SkeletalObserverHandle SpawnSkeletalObserverHandle(EUiModelUseWay useWay)
 	{
 		if (GlobalData.World == null)
@@ -403,7 +406,7 @@ public class UiSceneManager : Singleton, ITickable
 		return SkeletalObserverManager.NewSkeletalObserver(useWay);
 	}
 
-	// Token: 0x06017B89 RID: 97161 RVA: 0x00608190 File Offset: 0x00606390
+	// Token: 0x060153FD RID: 87037 RVA: 0x0062DC5C File Offset: 0x0062BE5C
 	public SkeletalObserverHandle InitWeaponObserver(bool needMeshStreaming = false)
 	{
 		EUiModelUseWay useWay = needMeshStreaming ? EUiModelUseWay.WeaponWithLoadingIcon : EUiModelUseWay.WeaponInWeaponView;
@@ -412,7 +415,7 @@ public class UiSceneManager : Singleton, ITickable
 		return skeletalObserverHandle;
 	}
 
-	// Token: 0x06017B8A RID: 97162 RVA: 0x006081BC File Offset: 0x006063BC
+	// Token: 0x060153FE RID: 87038 RVA: 0x0062DC88 File Offset: 0x0062BE88
 	public SkeletalObserverHandle GetWeaponObserver()
 	{
 		if (this.WeaponObserverStack.Empty)
@@ -423,7 +426,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.WeaponObserverStack.Peek();
 	}
 
-	// Token: 0x06017B8B RID: 97163 RVA: 0x006081FF File Offset: 0x006063FF
+	// Token: 0x060153FF RID: 87039 RVA: 0x0062DCCB File Offset: 0x0062BECB
 	public void DestroyWeaponObserver(SkeletalObserverHandle weaponObserver)
 	{
 		if (this.WeaponObserverStack.Empty)
@@ -434,7 +437,7 @@ public class UiSceneManager : Singleton, ITickable
 		SkeletalObserverManager.DestroySkeletalObserver(weaponObserver);
 	}
 
-	// Token: 0x06017B8C RID: 97164 RVA: 0x00608224 File Offset: 0x00606424
+	// Token: 0x06015400 RID: 87040 RVA: 0x0062DCF0 File Offset: 0x0062BEF0
 	public void DestroyAllWeaponObserver()
 	{
 		while (!this.WeaponObserverStack.Empty)
@@ -444,7 +447,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B8D RID: 97165 RVA: 0x00608254 File Offset: 0x00606454
+	// Token: 0x06015401 RID: 87041 RVA: 0x0062DD20 File Offset: 0x0062BF20
 	public SkeletalObserverHandle InitWeaponScabbardObserver()
 	{
 		SkeletalObserverHandle skeletalObserverHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.WeaponInWeaponView);
@@ -452,7 +455,7 @@ public class UiSceneManager : Singleton, ITickable
 		return skeletalObserverHandle;
 	}
 
-	// Token: 0x06017B8E RID: 97166 RVA: 0x00608278 File Offset: 0x00606478
+	// Token: 0x06015402 RID: 87042 RVA: 0x0062DD44 File Offset: 0x0062BF44
 	public SkeletalObserverHandle GetWeaponScabbardObserver()
 	{
 		if (this.WeaponScabbardStack.Empty)
@@ -463,7 +466,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.WeaponScabbardStack.Peek();
 	}
 
-	// Token: 0x06017B8F RID: 97167 RVA: 0x006082BB File Offset: 0x006064BB
+	// Token: 0x06015403 RID: 87043 RVA: 0x0062DD87 File Offset: 0x0062BF87
 	public void DestroyWeaponScabbardObserver(SkeletalObserverHandle weaponScabbard)
 	{
 		if (this.WeaponScabbardStack.Empty)
@@ -474,7 +477,7 @@ public class UiSceneManager : Singleton, ITickable
 		SkeletalObserverManager.DestroySkeletalObserver(weaponScabbard);
 	}
 
-	// Token: 0x06017B90 RID: 97168 RVA: 0x006082E0 File Offset: 0x006064E0
+	// Token: 0x06015404 RID: 87044 RVA: 0x0062DDAC File Offset: 0x0062BFAC
 	public void DestroyAllWeaponScabbardObserver()
 	{
 		while (!this.WeaponScabbardStack.Empty)
@@ -484,7 +487,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017B91 RID: 97169 RVA: 0x00608310 File Offset: 0x00606510
+	// Token: 0x06015405 RID: 87045 RVA: 0x0062DDDC File Offset: 0x0062BFDC
 	public void InitPhantomObserver()
 	{
 		if (this.PhantomObserver != null)
@@ -495,7 +498,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.PhantomObserver = this.SpawnSkeletalObserverHandle(EUiModelUseWay.VisionInRoleView);
 	}
 
-	// Token: 0x06017B92 RID: 97170 RVA: 0x00608350 File Offset: 0x00606550
+	// Token: 0x06015406 RID: 87046 RVA: 0x0062DE1C File Offset: 0x0062C01C
 	public SkeletalObserverHandle GetPhantomObserver()
 	{
 		if (this.PhantomObserver == null)
@@ -506,7 +509,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.PhantomObserver;
 	}
 
-	// Token: 0x06017B93 RID: 97171 RVA: 0x00608389 File Offset: 0x00606589
+	// Token: 0x06015407 RID: 87047 RVA: 0x0062DE55 File Offset: 0x0062C055
 	public void DestroyPhantomObserver()
 	{
 		if (this.PhantomObserver == null)
@@ -517,14 +520,14 @@ public class UiSceneManager : Singleton, ITickable
 		this.PhantomObserver = null;
 	}
 
-	// Token: 0x06017B94 RID: 97172 RVA: 0x006083A6 File Offset: 0x006065A6
+	// Token: 0x06015408 RID: 87048 RVA: 0x0062DE72 File Offset: 0x0062C072
 	public SkeletalObserverHandle InitHuluObserver()
 	{
 		this.HuluObserver = UiSceneManager.Instance.SpawnSkeletalObserverHandle(EUiModelUseWay.HuluInSkinView);
 		return this.HuluObserver;
 	}
 
-	// Token: 0x06017B95 RID: 97173 RVA: 0x006083C0 File Offset: 0x006065C0
+	// Token: 0x06015409 RID: 87049 RVA: 0x0062DE8C File Offset: 0x0062C08C
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetHuluObserver()
 	{
@@ -536,7 +539,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.HuluObserver;
 	}
 
-	// Token: 0x06017B96 RID: 97174 RVA: 0x006083F9 File Offset: 0x006065F9
+	// Token: 0x0601540A RID: 87050 RVA: 0x0062DEC5 File Offset: 0x0062C0C5
 	public void DestroyHuluObserver()
 	{
 		if (this.HuluObserver == null)
@@ -547,7 +550,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.HuluObserver = null;
 	}
 
-	// Token: 0x06017B97 RID: 97175 RVA: 0x00608418 File Offset: 0x00606618
+	// Token: 0x0601540B RID: 87051 RVA: 0x0062DEE4 File Offset: 0x0062C0E4
 	public void InitHandBookObserver()
 	{
 		if (this.HandBookObserver != null)
@@ -558,7 +561,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.HandBookObserver = this.SpawnSkeletalObserverHandle(EUiModelUseWay.VisionInRoleView);
 	}
 
-	// Token: 0x06017B98 RID: 97176 RVA: 0x00608458 File Offset: 0x00606658
+	// Token: 0x0601540C RID: 87052 RVA: 0x0062DF24 File Offset: 0x0062C124
 	public SkeletalObserverHandle GetHandBookObserver()
 	{
 		if (this.HandBookObserver == null)
@@ -569,7 +572,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.HandBookObserver;
 	}
 
-	// Token: 0x06017B99 RID: 97177 RVA: 0x00608491 File Offset: 0x00606691
+	// Token: 0x0601540D RID: 87053 RVA: 0x0062DF5D File Offset: 0x0062C15D
 	public void DestroyHandBookObserver()
 	{
 		if (this.HandBookObserver == null)
@@ -580,7 +583,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.HandBookObserver = null;
 	}
 
-	// Token: 0x06017B9A RID: 97178 RVA: 0x006084B0 File Offset: 0x006066B0
+	// Token: 0x0601540E RID: 87054 RVA: 0x0062DF7C File Offset: 0x0062C17C
 	public TsUiSceneRoleActor InitRoleSystemRoleActor(EUiModelUseWay useWay)
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.RoleSystemActorStack.Peek();
@@ -593,7 +596,7 @@ public class UiSceneManager : Singleton, ITickable
 		return tsUiSceneRoleActor2;
 	}
 
-	// Token: 0x06017B9B RID: 97179 RVA: 0x006084EC File Offset: 0x006066EC
+	// Token: 0x0601540F RID: 87055 RVA: 0x0062DFB8 File Offset: 0x0062C1B8
 	[NullableContext(2)]
 	public TsUiSceneRoleActor GetRoleSystemRoleActor()
 	{
@@ -605,13 +608,13 @@ public class UiSceneManager : Singleton, ITickable
 		return this.RoleSystemActorStack.Peek();
 	}
 
-	// Token: 0x06017B9C RID: 97180 RVA: 0x0060852F File Offset: 0x0060672F
+	// Token: 0x06015410 RID: 87056 RVA: 0x0062DFFB File Offset: 0x0062C1FB
 	public bool HasRoleSystemRoleActor()
 	{
 		return !this.RoleSystemActorStack.Empty;
 	}
 
-	// Token: 0x06017B9D RID: 97181 RVA: 0x00608540 File Offset: 0x00606740
+	// Token: 0x06015411 RID: 87057 RVA: 0x0062E00C File Offset: 0x0062C20C
 	public void HideRoleSystemRoleActor()
 	{
 		if (this.RoleSystemActorStack.Empty)
@@ -622,7 +625,7 @@ public class UiSceneManager : Singleton, ITickable
 		UiModelUtil.Instance.SetVisible(model, false);
 	}
 
-	// Token: 0x06017B9E RID: 97182 RVA: 0x0060857C File Offset: 0x0060677C
+	// Token: 0x06015412 RID: 87058 RVA: 0x0062E048 File Offset: 0x0062C248
 	public void ShowRoleSystemRoleActor()
 	{
 		if (this.RoleSystemActorStack.Empty)
@@ -633,7 +636,7 @@ public class UiSceneManager : Singleton, ITickable
 		UiModelUtil.Instance.SetVisible(model, true);
 	}
 
-	// Token: 0x06017B9F RID: 97183 RVA: 0x006085B8 File Offset: 0x006067B8
+	// Token: 0x06015413 RID: 87059 RVA: 0x0062E084 File Offset: 0x0062C284
 	public bool DestroyRoleSystemRoleActor(TsUiSceneRoleActor roleActor)
 	{
 		bool result = false;
@@ -652,7 +655,7 @@ public class UiSceneManager : Singleton, ITickable
 		return result;
 	}
 
-	// Token: 0x06017BA0 RID: 97184 RVA: 0x00608628 File Offset: 0x00606828
+	// Token: 0x06015414 RID: 87060 RVA: 0x0062E0F4 File Offset: 0x0062C2F4
 	public void DestroyAllRoleSystemRoleActor()
 	{
 		while (!this.RoleSystemActorStack.Empty)
@@ -662,7 +665,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BA1 RID: 97185 RVA: 0x00608664 File Offset: 0x00606864
+	// Token: 0x06015415 RID: 87061 RVA: 0x0062E130 File Offset: 0x0062C330
 	public unsafe TsUiSceneRoleActor InitRoleFormationActor(EUiModelUseWay useWay)
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = UiSceneRoleActorManager.Instance.CreateUiSceneRoleActor(useWay);
@@ -678,7 +681,7 @@ public class UiSceneManager : Singleton, ITickable
 		return tsUiSceneRoleActor;
 	}
 
-	// Token: 0x06017BA2 RID: 97186 RVA: 0x006086EC File Offset: 0x006068EC
+	// Token: 0x06015416 RID: 87062 RVA: 0x0062E1B8 File Offset: 0x0062C3B8
 	public bool DestroyRoleFormationActor(TsUiSceneRoleActor roleActor)
 	{
 		int num = this.RoleFormationActorList.IndexOf(roleActor);
@@ -695,7 +698,7 @@ public class UiSceneManager : Singleton, ITickable
 		return UiSceneRoleActorManager.Instance.DestroyUiSceneRoleActor(roleActor.GetRoleActorIndex());
 	}
 
-	// Token: 0x06017BA3 RID: 97187 RVA: 0x00608752 File Offset: 0x00606952
+	// Token: 0x06015417 RID: 87063 RVA: 0x0062E21E File Offset: 0x0062C41E
 	[NullableContext(2)]
 	public TsUiSceneRoleActor GetCurrentSelectFormationRoleActor()
 	{
@@ -706,7 +709,7 @@ public class UiSceneManager : Singleton, ITickable
 		return this.GetRoleFormationActor(this.SelectFormationPosition);
 	}
 
-	// Token: 0x06017BA4 RID: 97188 RVA: 0x0060876C File Offset: 0x0060696C
+	// Token: 0x06015418 RID: 87064 RVA: 0x0062E238 File Offset: 0x0062C438
 	[NullableContext(2)]
 	public TsUiSceneRoleActor GetRoleFormationActor(int position)
 	{
@@ -722,7 +725,7 @@ public class UiSceneManager : Singleton, ITickable
 		return null;
 	}
 
-	// Token: 0x06017BA5 RID: 97189 RVA: 0x006087BC File Offset: 0x006069BC
+	// Token: 0x06015419 RID: 87065 RVA: 0x0062E288 File Offset: 0x0062C488
 	public void SetRoleFormationActorsVisibleExcept(int exceptPosition, bool othersVisible)
 	{
 		foreach (TsUiSceneRoleActor tsUiSceneRoleActor in this.RoleFormationActorList)
@@ -747,7 +750,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BA6 RID: 97190 RVA: 0x00608870 File Offset: 0x00606A70
+	// Token: 0x0601541A RID: 87066 RVA: 0x0062E33C File Offset: 0x0062C53C
 	private void DestroyAllRoleFormationActor()
 	{
 		foreach (TsUiSceneRoleActor tsUiSceneRoleActor in this.RoleFormationActorList)
@@ -758,7 +761,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.RoleFormationActorList.Clear();
 	}
 
-	// Token: 0x06017BA7 RID: 97191 RVA: 0x006088D8 File Offset: 0x00606AD8
+	// Token: 0x0601541B RID: 87067 RVA: 0x0062E3A4 File Offset: 0x0062C5A4
 	public void InitGachaItemObserver()
 	{
 		if (this.GachaItemObserver != null)
@@ -769,7 +772,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.GachaItemObserver = this.SpawnSkeletalObserverHandle(EUiModelUseWay.WeaponInWeaponView);
 	}
 
-	// Token: 0x06017BA8 RID: 97192 RVA: 0x00608918 File Offset: 0x00606B18
+	// Token: 0x0601541C RID: 87068 RVA: 0x0062E3E4 File Offset: 0x0062C5E4
 	public SkeletalObserverHandle GetGachaItemObserver()
 	{
 		SkeletalObserverHandle gachaItemObserver = this.GachaItemObserver;
@@ -781,7 +784,7 @@ public class UiSceneManager : Singleton, ITickable
 		return gachaItemObserver;
 	}
 
-	// Token: 0x06017BA9 RID: 97193 RVA: 0x0060894E File Offset: 0x00606B4E
+	// Token: 0x0601541D RID: 87069 RVA: 0x0062E41A File Offset: 0x0062C61A
 	public void DestroyGachaItemObserver()
 	{
 		if (this.GachaItemObserver != null)
@@ -791,7 +794,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BAA RID: 97194 RVA: 0x0060896C File Offset: 0x00606B6C
+	// Token: 0x0601541E RID: 87070 RVA: 0x0062E438 File Offset: 0x0062C638
 	public void InitDreamLinkRoleSkeletalHandle()
 	{
 		if (this.DreamLinkRoleSkeletalHandle != null)
@@ -802,7 +805,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.DreamLinkRoleSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.RoleInDreamLinkView);
 	}
 
-	// Token: 0x06017BAB RID: 97195 RVA: 0x006089B0 File Offset: 0x00606BB0
+	// Token: 0x0601541F RID: 87071 RVA: 0x0062E47C File Offset: 0x0062C67C
 	public SkeletalObserverHandle GetDreamLinkRoleSkeletalHandle()
 	{
 		if (this.DreamLinkRoleSkeletalHandle == null)
@@ -813,13 +816,13 @@ public class UiSceneManager : Singleton, ITickable
 		return this.DreamLinkRoleSkeletalHandle;
 	}
 
-	// Token: 0x06017BAC RID: 97196 RVA: 0x006089E9 File Offset: 0x00606BE9
+	// Token: 0x06015420 RID: 87072 RVA: 0x0062E4B5 File Offset: 0x0062C6B5
 	public bool HasDreamLinkRoleSkeletalHandle()
 	{
 		return this.DreamLinkRoleSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BAD RID: 97197 RVA: 0x006089F4 File Offset: 0x00606BF4
+	// Token: 0x06015421 RID: 87073 RVA: 0x0062E4C0 File Offset: 0x0062C6C0
 	public void DestroyDreamLinkRoleSkeletalHandle()
 	{
 		if (this.DreamLinkRoleSkeletalHandle != null)
@@ -829,7 +832,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BAE RID: 97198 RVA: 0x00608A10 File Offset: 0x00606C10
+	// Token: 0x06015422 RID: 87074 RVA: 0x0062E4DC File Offset: 0x0062C6DC
 	public SkeletalObserverHandle InitDreamLinkWeaponSkeletalHandle()
 	{
 		SkeletalObserverHandle skeletalObserverHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.WeaponInDreamLinkView);
@@ -837,13 +840,13 @@ public class UiSceneManager : Singleton, ITickable
 		return skeletalObserverHandle;
 	}
 
-	// Token: 0x06017BAF RID: 97199 RVA: 0x00608A33 File Offset: 0x00606C33
+	// Token: 0x06015423 RID: 87075 RVA: 0x0062E4FF File Offset: 0x0062C6FF
 	public bool HasDreamLinkWeaponSkeletalHandle()
 	{
 		return this.DreamLinkWeaponSkeletalHandleStack.Count > 0;
 	}
 
-	// Token: 0x06017BB0 RID: 97200 RVA: 0x00608A44 File Offset: 0x00606C44
+	// Token: 0x06015424 RID: 87076 RVA: 0x0062E510 File Offset: 0x0062C710
 	public void DestroyAllDreamLinkWeaponSkeletalHandle()
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in this.DreamLinkWeaponSkeletalHandleStack)
@@ -853,7 +856,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.DreamLinkWeaponSkeletalHandleStack.Clear();
 	}
 
-	// Token: 0x06017BB1 RID: 97201 RVA: 0x00608AA0 File Offset: 0x00606CA0
+	// Token: 0x06015425 RID: 87077 RVA: 0x0062E56C File Offset: 0x0062C76C
 	public void CreateHandBookVision(UClass csClass)
 	{
 		BP_KposeBase_C bp_KposeBase_C = ActorSystem.Instance.Spawn<BP_KposeBase_C>(csClass.ClassStackOnlyPtr, new FTransformDouble(), null);
@@ -885,26 +888,26 @@ public class UiSceneManager : Singleton, ITickable
 		this.HideHandBookVision();
 	}
 
-	// Token: 0x06017BB2 RID: 97202 RVA: 0x00608B95 File Offset: 0x00606D95
+	// Token: 0x06015426 RID: 87078 RVA: 0x0062E661 File Offset: 0x0062C861
 	[NullableContext(2)]
 	public BP_KposeBase_C GetHandBookVision()
 	{
 		return this.HandBookVision;
 	}
 
-	// Token: 0x06017BB3 RID: 97203 RVA: 0x00608B9D File Offset: 0x00606D9D
+	// Token: 0x06015427 RID: 87079 RVA: 0x0062E669 File Offset: 0x0062C869
 	public void ShowHandBookVision()
 	{
 		this.SetHandBookVisionVisible(true);
 	}
 
-	// Token: 0x06017BB4 RID: 97204 RVA: 0x00608BA6 File Offset: 0x00606DA6
+	// Token: 0x06015428 RID: 87080 RVA: 0x0062E672 File Offset: 0x0062C872
 	public void HideHandBookVision()
 	{
 		this.SetHandBookVisionVisible(false);
 	}
 
-	// Token: 0x06017BB5 RID: 97205 RVA: 0x00608BAF File Offset: 0x00606DAF
+	// Token: 0x06015429 RID: 87081 RVA: 0x0062E67B File Offset: 0x0062C87B
 	private void SetHandBookVisionVisible(bool visible)
 	{
 		if (this.HandBookVision == null)
@@ -921,7 +924,7 @@ public class UiSceneManager : Singleton, ITickable
 		UiSceneManager.SetActorAndComponentTickEnabled(this.HandBookVision, false);
 	}
 
-	// Token: 0x06017BB6 RID: 97206 RVA: 0x00608BF0 File Offset: 0x00606DF0
+	// Token: 0x0601542A RID: 87082 RVA: 0x0062E6BC File Offset: 0x0062C8BC
 	private static void SetActorAndComponentTickEnabled(AActor actor, bool enabled)
 	{
 		actor.SetActorTickEnabled(enabled);
@@ -932,14 +935,14 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BB7 RID: 97207 RVA: 0x00608C34 File Offset: 0x00606E34
+	// Token: 0x0601542B RID: 87083 RVA: 0x0062E700 File Offset: 0x0062C900
 	[NullableContext(2)]
 	public AActor GetHandBookCaseActor()
 	{
 		return UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("MonsterCase").Value, ECollectActorType.UI);
 	}
 
-	// Token: 0x06017BB8 RID: 97208 RVA: 0x00608C59 File Offset: 0x00606E59
+	// Token: 0x0601542C RID: 87084 RVA: 0x0062E725 File Offset: 0x0062C925
 	public void DestroyHandBookVision()
 	{
 		if (this.HandBookVision == null)
@@ -951,7 +954,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.HandBookVision = null;
 	}
 
-	// Token: 0x06017BB9 RID: 97209 RVA: 0x00608C90 File Offset: 0x00606E90
+	// Token: 0x0601542D RID: 87085 RVA: 0x0062E75C File Offset: 0x0062C95C
 	public void InitVisionSkeletalHandle()
 	{
 		if (this.VisionSkeletalHandle != null)
@@ -962,13 +965,13 @@ public class UiSceneManager : Singleton, ITickable
 		this.VisionSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.VisionInRoleView);
 	}
 
-	// Token: 0x06017BBA RID: 97210 RVA: 0x00608CCF File Offset: 0x00606ECF
+	// Token: 0x0601542E RID: 87086 RVA: 0x0062E79B File Offset: 0x0062C99B
 	public bool HasVisionSkeletalHandle()
 	{
 		return this.VisionSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BBB RID: 97211 RVA: 0x00608CDC File Offset: 0x00606EDC
+	// Token: 0x0601542F RID: 87087 RVA: 0x0062E7A8 File Offset: 0x0062C9A8
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetVisionSkeletalHandle()
 	{
@@ -981,7 +984,7 @@ public class UiSceneManager : Singleton, ITickable
 		return visionSkeletalHandle;
 	}
 
-	// Token: 0x06017BBC RID: 97212 RVA: 0x00608D12 File Offset: 0x00606F12
+	// Token: 0x06015430 RID: 87088 RVA: 0x0062E7DE File Offset: 0x0062C9DE
 	public void DestroyVisionSkeletalHandle()
 	{
 		if (this.VisionSkeletalHandle != null)
@@ -991,7 +994,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BBD RID: 97213 RVA: 0x00608D30 File Offset: 0x00606F30
+	// Token: 0x06015431 RID: 87089 RVA: 0x0062E7FC File Offset: 0x0062C9FC
 	public void InitAbyssDangoObserver()
 	{
 		if (this.AbyssDangoObserver != null)
@@ -1002,7 +1005,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.AbyssDangoObserver = this.SpawnSkeletalObserverHandle(EUiModelUseWay.AbyssDango);
 	}
 
-	// Token: 0x06017BBE RID: 97214 RVA: 0x00608D70 File Offset: 0x00606F70
+	// Token: 0x06015432 RID: 87090 RVA: 0x0062E83C File Offset: 0x0062CA3C
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetAbyssDangoObserver()
 	{
@@ -1015,7 +1018,7 @@ public class UiSceneManager : Singleton, ITickable
 		return abyssDangoObserver;
 	}
 
-	// Token: 0x06017BBF RID: 97215 RVA: 0x00608DA6 File Offset: 0x00606FA6
+	// Token: 0x06015433 RID: 87091 RVA: 0x0062E872 File Offset: 0x0062CA72
 	public void DestroyAbyssDangoObserver()
 	{
 		if (this.AbyssDangoObserver != null)
@@ -1025,7 +1028,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BC0 RID: 97216 RVA: 0x00608DC4 File Offset: 0x00606FC4
+	// Token: 0x06015434 RID: 87092 RVA: 0x0062E890 File Offset: 0x0062CA90
 	public void InitLordSkeletalHandle()
 	{
 		if (this.LordSkeletalHandle != null)
@@ -1036,13 +1039,13 @@ public class UiSceneManager : Singleton, ITickable
 		this.LordSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.VisionInLordGymView);
 	}
 
-	// Token: 0x06017BC1 RID: 97217 RVA: 0x00608E04 File Offset: 0x00607004
+	// Token: 0x06015435 RID: 87093 RVA: 0x0062E8D0 File Offset: 0x0062CAD0
 	public bool HasLordSkeletalHandle()
 	{
 		return this.LordSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BC2 RID: 97218 RVA: 0x00608E10 File Offset: 0x00607010
+	// Token: 0x06015436 RID: 87094 RVA: 0x0062E8DC File Offset: 0x0062CADC
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetLordSkeletalHandle()
 	{
@@ -1055,7 +1058,7 @@ public class UiSceneManager : Singleton, ITickable
 		return lordSkeletalHandle;
 	}
 
-	// Token: 0x06017BC3 RID: 97219 RVA: 0x00608E46 File Offset: 0x00607046
+	// Token: 0x06015437 RID: 87095 RVA: 0x0062E912 File Offset: 0x0062CB12
 	public void DestroyLordSkeletalHandle()
 	{
 		if (this.LordSkeletalHandle != null)
@@ -1065,7 +1068,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BC4 RID: 97220 RVA: 0x00608E64 File Offset: 0x00607064
+	// Token: 0x06015438 RID: 87096 RVA: 0x0062E930 File Offset: 0x0062CB30
 	public void InitAdamSmasherSkeletalHandle()
 	{
 		if (this.AdamSmasherSkeletalHandle != null)
@@ -1076,13 +1079,13 @@ public class UiSceneManager : Singleton, ITickable
 		this.AdamSmasherSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.AdamSmasher);
 	}
 
-	// Token: 0x06017BC5 RID: 97221 RVA: 0x00608EA4 File Offset: 0x006070A4
+	// Token: 0x06015439 RID: 87097 RVA: 0x0062E970 File Offset: 0x0062CB70
 	public bool HasAdamSmasherSkeletalHandle()
 	{
 		return this.AdamSmasherSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BC6 RID: 97222 RVA: 0x00608EB0 File Offset: 0x006070B0
+	// Token: 0x0601543A RID: 87098 RVA: 0x0062E97C File Offset: 0x0062CB7C
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetAdamSmasherSkeletalHandle()
 	{
@@ -1095,7 +1098,7 @@ public class UiSceneManager : Singleton, ITickable
 		return adamSmasherSkeletalHandle;
 	}
 
-	// Token: 0x06017BC7 RID: 97223 RVA: 0x00608EE6 File Offset: 0x006070E6
+	// Token: 0x0601543B RID: 87099 RVA: 0x0062E9B2 File Offset: 0x0062CBB2
 	public void DestroyAdamSmasherSkeletalHandle()
 	{
 		if (this.AdamSmasherSkeletalHandle != null)
@@ -1105,19 +1108,19 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BC8 RID: 97224 RVA: 0x00608F02 File Offset: 0x00607102
+	// Token: 0x0601543C RID: 87100 RVA: 0x0062E9CE File Offset: 0x0062CBCE
 	public TsUiSceneDangoActor InitDangoActor(EUiModelUseWay useWay)
 	{
 		return UiSceneDangoActorManager.CreateUiSceneDangoActor(useWay);
 	}
 
-	// Token: 0x06017BC9 RID: 97225 RVA: 0x00608F0A File Offset: 0x0060710A
+	// Token: 0x0601543D RID: 87101 RVA: 0x0062E9D6 File Offset: 0x0062CBD6
 	public void DestroyDangoActor(TsUiSceneDangoActor dango)
 	{
 		UiSceneDangoActorManager.DestroyUiSceneDangoActor(dango.GetActorIndex());
 	}
 
-	// Token: 0x06017BCA RID: 97226 RVA: 0x00608F18 File Offset: 0x00607118
+	// Token: 0x0601543E RID: 87102 RVA: 0x0062E9E4 File Offset: 0x0062CBE4
 	[NullableContext(2)]
 	public TsUiSceneDangoActor RayTraceDangoActor(FVector viewportPosition)
 	{
@@ -1170,7 +1173,7 @@ public class UiSceneManager : Singleton, ITickable
 		return null;
 	}
 
-	// Token: 0x06017BCB RID: 97227 RVA: 0x006090B0 File Offset: 0x006072B0
+	// Token: 0x0601543F RID: 87103 RVA: 0x0062EB7C File Offset: 0x0062CD7C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1189,7 +1192,7 @@ public class UiSceneManager : Singleton, ITickable
 		return <LoadDangoActorList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017BCC RID: 97228 RVA: 0x00609104 File Offset: 0x00607304
+	// Token: 0x06015440 RID: 87104 RVA: 0x0062EBD0 File Offset: 0x0062CDD0
 	public void InitGliderSkeletalHandle()
 	{
 		if (this.GliderSkeletalHandle != null)
@@ -1200,13 +1203,13 @@ public class UiSceneManager : Singleton, ITickable
 		this.GliderSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.GliderInSkinView);
 	}
 
-	// Token: 0x06017BCD RID: 97229 RVA: 0x00609144 File Offset: 0x00607344
+	// Token: 0x06015441 RID: 87105 RVA: 0x0062EC10 File Offset: 0x0062CE10
 	public bool HasGliderSkeletalHandle()
 	{
 		return this.GliderSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BCE RID: 97230 RVA: 0x00609150 File Offset: 0x00607350
+	// Token: 0x06015442 RID: 87106 RVA: 0x0062EC1C File Offset: 0x0062CE1C
 	public SkeletalObserverHandle GetGliderSkeletalHandle()
 	{
 		SkeletalObserverHandle gliderSkeletalHandle = this.GliderSkeletalHandle;
@@ -1218,7 +1221,7 @@ public class UiSceneManager : Singleton, ITickable
 		return gliderSkeletalHandle;
 	}
 
-	// Token: 0x06017BCF RID: 97231 RVA: 0x00609186 File Offset: 0x00607386
+	// Token: 0x06015443 RID: 87107 RVA: 0x0062EC52 File Offset: 0x0062CE52
 	public void DestroyGliderSkeletalHandle()
 	{
 		if (this.GliderSkeletalHandle != null)
@@ -1228,7 +1231,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BD0 RID: 97232 RVA: 0x006091A4 File Offset: 0x006073A4
+	// Token: 0x06015444 RID: 87108 RVA: 0x0062EC70 File Offset: 0x0062CE70
 	public void InitSpecialItemSummonSkeletalHandle()
 	{
 		if (this.SpecialItemSummonSkeletalHandle != null)
@@ -1239,13 +1242,13 @@ public class UiSceneManager : Singleton, ITickable
 		this.SpecialItemSummonSkeletalHandle = this.SpawnSkeletalObserverHandle(EUiModelUseWay.SpecialItemSummonInSkinView);
 	}
 
-	// Token: 0x06017BD1 RID: 97233 RVA: 0x006091E4 File Offset: 0x006073E4
+	// Token: 0x06015445 RID: 87109 RVA: 0x0062ECB0 File Offset: 0x0062CEB0
 	public bool HasSpecialItemSummonSkeletalHandle()
 	{
 		return this.SpecialItemSummonSkeletalHandle != null;
 	}
 
-	// Token: 0x06017BD2 RID: 97234 RVA: 0x006091F0 File Offset: 0x006073F0
+	// Token: 0x06015446 RID: 87110 RVA: 0x0062ECBC File Offset: 0x0062CEBC
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetSpecialItemSummonSkeletalHandle()
 	{
@@ -1258,7 +1261,7 @@ public class UiSceneManager : Singleton, ITickable
 		return specialItemSummonSkeletalHandle;
 	}
 
-	// Token: 0x06017BD3 RID: 97235 RVA: 0x00609226 File Offset: 0x00607426
+	// Token: 0x06015447 RID: 87111 RVA: 0x0062ECF2 File Offset: 0x0062CEF2
 	public void DestroySpecialItemSummonSkeletalHandle()
 	{
 		if (this.SpecialItemSummonSkeletalHandle != null)
@@ -1268,7 +1271,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BD4 RID: 97236 RVA: 0x00609244 File Offset: 0x00607444
+	// Token: 0x06015448 RID: 87112 RVA: 0x0062ED10 File Offset: 0x0062CF10
 	public void InitMotorSkeletalHandle(EUiModelUseWay useWay = EUiModelUseWay.MotorInMotorView)
 	{
 		if (this.MotorSkeletalHandle != null)
@@ -1280,7 +1283,7 @@ public class UiSceneManager : Singleton, ITickable
 		this.MotorSkeletalHandle = this.SpawnSkeletalObserverHandle(useWay);
 	}
 
-	// Token: 0x06017BD5 RID: 97237 RVA: 0x006092A0 File Offset: 0x006074A0
+	// Token: 0x06015449 RID: 87113 RVA: 0x0062ED6C File Offset: 0x0062CF6C
 	[NullableContext(2)]
 	public SkeletalObserverHandle GetMotorSkeletalHandle()
 	{
@@ -1293,7 +1296,7 @@ public class UiSceneManager : Singleton, ITickable
 		return motorSkeletalHandle;
 	}
 
-	// Token: 0x06017BD6 RID: 97238 RVA: 0x006092D8 File Offset: 0x006074D8
+	// Token: 0x0601544A RID: 87114 RVA: 0x0062EDA4 File Offset: 0x0062CFA4
 	public void DestroyMotorSkeletalHandle()
 	{
 		if (this.MotorSkeletalHandle != null)
@@ -1304,7 +1307,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BD7 RID: 97239 RVA: 0x0060931C File Offset: 0x0060751C
+	// Token: 0x0601544B RID: 87115 RVA: 0x0062EDE8 File Offset: 0x0062CFE8
 	[NullableContext(2)]
 	public void AddUiShowRoomShowActor(AActor actor, bool includeFromChildActors)
 	{
@@ -1318,7 +1321,7 @@ public class UiSceneManager : Singleton, ITickable
 		bp_UIShowRoom_C.AddShowActor(ref actor, includeFromChildActors);
 	}
 
-	// Token: 0x06017BD8 RID: 97240 RVA: 0x0060937C File Offset: 0x0060757C
+	// Token: 0x0601544C RID: 87116 RVA: 0x0062EE48 File Offset: 0x0062D048
 	public void SetUiShowRoomFloorReflection(bool enable)
 	{
 		FName? dynamicFName = FNameUtil.GetDynamicFName("BP_UIShowRoom");
@@ -1342,7 +1345,7 @@ public class UiSceneManager : Singleton, ITickable
 		planarReflection.HideComponent(floorMesh);
 	}
 
-	// Token: 0x06017BD9 RID: 97241 RVA: 0x006093FC File Offset: 0x006075FC
+	// Token: 0x0601544D RID: 87117 RVA: 0x0062EEC8 File Offset: 0x0062D0C8
 	public UniTask LoadScene(string sceneId, Action callBack)
 	{
 		UiSceneManager.<LoadScene>d__128 <LoadScene>d__;
@@ -1355,7 +1358,7 @@ public class UiSceneManager : Singleton, ITickable
 		return <LoadScene>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017BDA RID: 97242 RVA: 0x00609450 File Offset: 0x00607650
+	// Token: 0x0601544E RID: 87118 RVA: 0x0062EF1C File Offset: 0x0062D11C
 	public UniTask ExitScene()
 	{
 		UiSceneManager.<ExitScene>d__129 <ExitScene>d__;
@@ -1366,14 +1369,14 @@ public class UiSceneManager : Singleton, ITickable
 		return <ExitScene>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017BDB RID: 97243 RVA: 0x00609493 File Offset: 0x00607693
+	// Token: 0x0601544F RID: 87119 RVA: 0x0062EF5F File Offset: 0x0062D15F
 	private void RecordAndLandscapeValue()
 	{
 		this.LastHideLandscapeValue = UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.HideLandscape");
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.HideLandscape 0", null);
 	}
 
-	// Token: 0x06017BDC RID: 97244 RVA: 0x006094B8 File Offset: 0x006076B8
+	// Token: 0x06015450 RID: 87120 RVA: 0x0062EF84 File Offset: 0x0062D184
 	private void ResetLandscapeValue()
 	{
 		UObject world = GlobalData.World;
@@ -1383,7 +1386,7 @@ public class UiSceneManager : Singleton, ITickable
 		UKismetSystemLibrary.ExecuteConsoleCommand(world, defaultInterpolatedStringHandler.ToStringAndClear(), null);
 	}
 
-	// Token: 0x06017BDD RID: 97245 RVA: 0x006094FC File Offset: 0x006076FC
+	// Token: 0x06015451 RID: 87121 RVA: 0x0062EFC8 File Offset: 0x0062D1C8
 	private void SetEnterSceneCamera()
 	{
 		if (GlobalData.World != null)
@@ -1393,7 +1396,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BDE RID: 97246 RVA: 0x0060954D File Offset: 0x0060774D
+	// Token: 0x06015452 RID: 87122 RVA: 0x0062F019 File Offset: 0x0062D219
 	public void SetUiStartSequenceFrame(int startSequenceFrame)
 	{
 		if (this.StartSequenceFrame == 0)
@@ -1402,7 +1405,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BDF RID: 97247 RVA: 0x0060955E File Offset: 0x0060775E
+	// Token: 0x06015453 RID: 87123 RVA: 0x0062F02A File Offset: 0x0062D22A
 	public void SetUiEndSequenceFrame(int endSequenceFrame)
 	{
 		if (this.EndSequenceFrame == 0)
@@ -1411,26 +1414,26 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BE0 RID: 97248 RVA: 0x0060956F File Offset: 0x0060776F
+	// Token: 0x06015454 RID: 87124 RVA: 0x0062F03B File Offset: 0x0062D23B
 	public void ClearUiSequenceFrame()
 	{
 		this.StartSequenceFrame = 0;
 		this.EndSequenceFrame = 0;
 	}
 
-	// Token: 0x06017BE1 RID: 97249 RVA: 0x0060957F File Offset: 0x0060777F
+	// Token: 0x06015455 RID: 87125 RVA: 0x0062F04B File Offset: 0x0062D24B
 	public int GetUiStartSequenceFrame()
 	{
 		return this.StartSequenceFrame;
 	}
 
-	// Token: 0x06017BE2 RID: 97250 RVA: 0x00609587 File Offset: 0x00607787
+	// Token: 0x06015456 RID: 87126 RVA: 0x0062F053 File Offset: 0x0062D253
 	public int GetUiEndSequenceFrame()
 	{
 		return this.EndSequenceFrame;
 	}
 
-	// Token: 0x06017BE3 RID: 97251 RVA: 0x00609590 File Offset: 0x00607790
+	// Token: 0x06015457 RID: 87127 RVA: 0x0062F05C File Offset: 0x0062D25C
 	public void HideObserver(SkeletalObserverHandle observer, string effectId)
 	{
 		if (observer == null)
@@ -1444,7 +1447,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BE4 RID: 97252 RVA: 0x006095C4 File Offset: 0x006077C4
+	// Token: 0x06015458 RID: 87128 RVA: 0x0062F090 File Offset: 0x0062D290
 	public void HideObserverWithCallback(SkeletalObserverHandle observer, string effectId, Action<SkeletalObserverHandle> callback)
 	{
 		if (observer == null)
@@ -1461,7 +1464,7 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BE5 RID: 97253 RVA: 0x00609620 File Offset: 0x00607820
+	// Token: 0x06015459 RID: 87129 RVA: 0x0062F0EC File Offset: 0x0062D2EC
 	[return: Nullable(2)]
 	public AActor GetActorByTag(string tag)
 	{
@@ -1473,7 +1476,7 @@ public class UiSceneManager : Singleton, ITickable
 		return UKuroCollectActorComponent.GetActorWithTag(dynamicFName.Value, ECollectActorType.UI);
 	}
 
-	// Token: 0x06017BE6 RID: 97254 RVA: 0x0060964C File Offset: 0x0060784C
+	// Token: 0x0601545A RID: 87130 RVA: 0x0062F118 File Offset: 0x0062D318
 	public void Clear()
 	{
 		SkeletalObserverManager.ClearAllSkeletalObserver();
@@ -1491,8 +1494,8 @@ public class UiSceneManager : Singleton, ITickable
 		this.DestroyHuluObserver();
 	}
 
-	// Token: 0x17001FD9 RID: 8153
-	// (get) Token: 0x06017BE7 RID: 97255 RVA: 0x006096A8 File Offset: 0x006078A8
+	// Token: 0x1700202A RID: 8234
+	// (get) Token: 0x0601545B RID: 87131 RVA: 0x0062F174 File Offset: 0x0062D374
 	public static UiSceneManager Instance
 	{
 		get
@@ -1506,12 +1509,12 @@ public class UiSceneManager : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x06017BE8 RID: 97256 RVA: 0x006096CB File Offset: 0x006078CB
+	// Token: 0x0601545C RID: 87132 RVA: 0x0062F197 File Offset: 0x0062D397
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017BE9 RID: 97257 RVA: 0x006096CD File Offset: 0x006078CD
+	// Token: 0x0601545D RID: 87133 RVA: 0x0062F199 File Offset: 0x0062D399
 	public static void ResetStaticDefaultValue()
 	{
 		UiSceneManager instance = UiSceneManager._instance;
@@ -1522,13 +1525,13 @@ public class UiSceneManager : Singleton, ITickable
 		UiSceneManager._instance = null;
 	}
 
-	// Token: 0x06017BEA RID: 97258 RVA: 0x006096E6 File Offset: 0x006078E6
+	// Token: 0x0601545E RID: 87134 RVA: 0x0062F1B2 File Offset: 0x0062D3B2
 	static UiSceneManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiSceneManager.CreateStaticDefaultValue), new Action(UiSceneManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B0AF RID: 45231
+	// Token: 0x0400B41B RID: 46107
 	private readonly HashSet<string> DisableClvUiSceneIds = new HashSet<string>
 	{
 		"Instance_ChouKa_01",
@@ -1538,111 +1541,111 @@ public class UiSceneManager : Singleton, ITickable
 		"UL_UIMap_HologramUI"
 	};
 
-	// Token: 0x0400B0B0 RID: 45232
+	// Token: 0x0400B41C RID: 46108
 	private int? LastClvEnableValue;
 
-	// Token: 0x0400B0B1 RID: 45233
+	// Token: 0x0400B41D RID: 46109
 	public string CurUiSceneId = string.Empty;
 
-	// Token: 0x0400B0B2 RID: 45234
+	// Token: 0x0400B41E RID: 46110
 	public HashSet<string> CurUiScenePathSet = new HashSet<string>();
 
-	// Token: 0x0400B0B3 RID: 45235
+	// Token: 0x0400B41F RID: 46111
 	public string GlobalGiMainScene = string.Empty;
 
-	// Token: 0x0400B0B4 RID: 45236
+	// Token: 0x0400B420 RID: 46112
 	[Nullable(2)]
 	protected Action LoadSuccessFunction;
 
-	// Token: 0x0400B0B5 RID: 45237
+	// Token: 0x0400B421 RID: 46113
 	[Nullable(2)]
 	protected Action<bool> SwitchUiSceneFunction;
 
-	// Token: 0x0400B0B6 RID: 45238
+	// Token: 0x0400B422 RID: 46114
 	private readonly global::Stack<SkeletalObserverHandle> WeaponObserverStack = new global::Stack<SkeletalObserverHandle>();
 
-	// Token: 0x0400B0B7 RID: 45239
+	// Token: 0x0400B423 RID: 46115
 	private readonly global::Stack<SkeletalObserverHandle> WeaponScabbardStack = new global::Stack<SkeletalObserverHandle>();
 
-	// Token: 0x0400B0B8 RID: 45240
+	// Token: 0x0400B424 RID: 46116
 	private SkeletalObserverHandle PhantomObserver;
 
-	// Token: 0x0400B0B9 RID: 45241
+	// Token: 0x0400B425 RID: 46117
 	[Nullable(2)]
 	private SkeletalObserverHandle HuluObserver;
 
-	// Token: 0x0400B0BA RID: 45242
+	// Token: 0x0400B426 RID: 46118
 	private SkeletalObserverHandle HandBookObserver;
 
-	// Token: 0x0400B0BB RID: 45243
+	// Token: 0x0400B427 RID: 46119
 	private readonly global::Stack<TsUiSceneRoleActor> RoleSystemActorStack = new global::Stack<TsUiSceneRoleActor>();
 
-	// Token: 0x0400B0BC RID: 45244
+	// Token: 0x0400B428 RID: 46120
 	public int SelectFormationPosition = -1;
 
-	// Token: 0x0400B0BD RID: 45245
+	// Token: 0x0400B429 RID: 46121
 	private readonly List<TsUiSceneRoleActor> RoleFormationActorList = new List<TsUiSceneRoleActor>();
 
-	// Token: 0x0400B0BE RID: 45246
+	// Token: 0x0400B42A RID: 46122
 	private SkeletalObserverHandle GachaItemObserver;
 
-	// Token: 0x0400B0BF RID: 45247
+	// Token: 0x0400B42B RID: 46123
 	[Nullable(2)]
 	private SkeletalObserverHandle DreamLinkRoleSkeletalHandle;
 
-	// Token: 0x0400B0C0 RID: 45248
+	// Token: 0x0400B42C RID: 46124
 	private readonly List<SkeletalObserverHandle> DreamLinkWeaponSkeletalHandleStack = new List<SkeletalObserverHandle>();
 
-	// Token: 0x0400B0C1 RID: 45249
+	// Token: 0x0400B42D RID: 46125
 	[Nullable(2)]
 	private BP_KposeBase_C HandBookVision;
 
-	// Token: 0x0400B0C2 RID: 45250
+	// Token: 0x0400B42E RID: 46126
 	[Nullable(2)]
 	private SkeletalObserverHandle VisionSkeletalHandle;
 
-	// Token: 0x0400B0C3 RID: 45251
+	// Token: 0x0400B42F RID: 46127
 	[Nullable(2)]
 	private SkeletalObserverHandle AbyssDangoObserver;
 
-	// Token: 0x0400B0C4 RID: 45252
+	// Token: 0x0400B430 RID: 46128
 	[Nullable(2)]
 	private SkeletalObserverHandle LordSkeletalHandle;
 
-	// Token: 0x0400B0C5 RID: 45253
+	// Token: 0x0400B431 RID: 46129
 	[Nullable(2)]
 	private SkeletalObserverHandle AdamSmasherSkeletalHandle;
 
-	// Token: 0x0400B0C6 RID: 45254
+	// Token: 0x0400B432 RID: 46130
 	private readonly global::Vector LocationOffset = global::Vector.Create();
 
-	// Token: 0x0400B0C7 RID: 45255
+	// Token: 0x0400B433 RID: 46131
 	private FVector2D ScreenPosition = new FVector2D();
 
-	// Token: 0x0400B0C8 RID: 45256
+	// Token: 0x0400B434 RID: 46132
 	private SkeletalObserverHandle GliderSkeletalHandle;
 
-	// Token: 0x0400B0C9 RID: 45257
+	// Token: 0x0400B435 RID: 46133
 	[Nullable(2)]
 	private SkeletalObserverHandle SpecialItemSummonSkeletalHandle;
 
-	// Token: 0x0400B0CA RID: 45258
+	// Token: 0x0400B436 RID: 46134
 	[Nullable(2)]
 	private SkeletalObserverHandle MotorSkeletalHandle;
 
-	// Token: 0x0400B0CB RID: 45259
+	// Token: 0x0400B437 RID: 46135
 	private int LastStencilFixedValue;
 
-	// Token: 0x0400B0CC RID: 45260
+	// Token: 0x0400B438 RID: 46136
 	private int LastHideLandscapeValue;
 
-	// Token: 0x0400B0CD RID: 45261
+	// Token: 0x0400B439 RID: 46137
 	private int StartSequenceFrame;
 
-	// Token: 0x0400B0CE RID: 45262
+	// Token: 0x0400B43A RID: 46138
 	private int EndSequenceFrame;
 
-	// Token: 0x0400B0CF RID: 45263
+	// Token: 0x0400B43B RID: 46139
 	[Nullable(2)]
 	private static UiSceneManager _instance;
 }

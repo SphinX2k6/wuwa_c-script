@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CAE RID: 15534
+	// Token: 0x020040C2 RID: 16578
 	public enum EPhoneMessageProgressType : byte
 	{
-		// Token: 0x0400B414 RID: 46100
+		// Token: 0x0400BDB6 RID: 48566
 		CompleteMessage
 	}
 }

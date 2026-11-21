@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001AEF RID: 6895
+	// Token: 0x020004C7 RID: 1223
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroEffectMakerANS")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 144)]
 	public class UKuroEffectMakerANS : UKuroAnimNotifyState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06019BBE RID: 105406 RVA: 0x00260490 File Offset: 0x0025E690
+		// Token: 0x060070D7 RID: 28887 RVA: 0x000A67F8 File Offset: 0x000A49F8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroEffectMakerANS._ClassPtr;
 		}
 
-		// Token: 0x06019BBF RID: 105407 RVA: 0x0026049C File Offset: 0x0025E69C
+		// Token: 0x060070D8 RID: 28888 RVA: 0x000A6804 File Offset: 0x000A4A04
 		public UKuroEffectMakerANS() : this(BuiltinUtils.AllocNativeUObject(UKuroEffectMakerANS.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06019BC0 RID: 105408 RVA: 0x002604C4 File Offset: 0x0025E6C4
+		// Token: 0x060070D9 RID: 28889 RVA: 0x000A682C File Offset: 0x000A4A2C
 		[NullableContext(1)]
 		public UKuroEffectMakerANS(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroEffectMakerANS.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170066D6 RID: 26326
-		// (get) Token: 0x06019BC1 RID: 105409 RVA: 0x002604F7 File Offset: 0x0025E6F7
-		// (set) Token: 0x06019BC2 RID: 105410 RVA: 0x0026050B File Offset: 0x0025E70B
+		// Token: 0x17001611 RID: 5649
+		// (get) Token: 0x060070DA RID: 28890 RVA: 0x000A685F File Offset: 0x000A4A5F
+		// (set) Token: 0x060070DB RID: 28891 RVA: 0x000A6873 File Offset: 0x000A4A73
 		public unsafe FVector Location
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066D7 RID: 26327
-		// (get) Token: 0x06019BC3 RID: 105411 RVA: 0x00260520 File Offset: 0x0025E720
-		// (set) Token: 0x06019BC4 RID: 105412 RVA: 0x00260534 File Offset: 0x0025E734
+		// Token: 0x17001612 RID: 5650
+		// (get) Token: 0x060070DC RID: 28892 RVA: 0x000A6888 File Offset: 0x000A4A88
+		// (set) Token: 0x060070DD RID: 28893 RVA: 0x000A689C File Offset: 0x000A4A9C
 		public unsafe FRotator Rotation
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066D8 RID: 26328
-		// (get) Token: 0x06019BC5 RID: 105413 RVA: 0x00260549 File Offset: 0x0025E749
-		// (set) Token: 0x06019BC6 RID: 105414 RVA: 0x0026055D File Offset: 0x0025E75D
+		// Token: 0x17001613 RID: 5651
+		// (get) Token: 0x060070DE RID: 28894 RVA: 0x000A68B1 File Offset: 0x000A4AB1
+		// (set) Token: 0x060070DF RID: 28895 RVA: 0x000A68C5 File Offset: 0x000A4AC5
 		public unsafe FVector Scale
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066D9 RID: 26329
-		// (get) Token: 0x06019BC7 RID: 105415 RVA: 0x00260572 File Offset: 0x0025E772
-		// (set) Token: 0x06019BC8 RID: 105416 RVA: 0x00260582 File Offset: 0x0025E782
+		// Token: 0x17001614 RID: 5652
+		// (get) Token: 0x060070E0 RID: 28896 RVA: 0x000A68DA File Offset: 0x000A4ADA
+		// (set) Token: 0x060070E1 RID: 28897 RVA: 0x000A68EA File Offset: 0x000A4AEA
 		public unsafe bool Attached
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066DA RID: 26330
-		// (get) Token: 0x06019BC9 RID: 105417 RVA: 0x00260593 File Offset: 0x0025E793
-		// (set) Token: 0x06019BCA RID: 105418 RVA: 0x002605A3 File Offset: 0x0025E7A3
+		// Token: 0x17001615 RID: 5653
+		// (get) Token: 0x060070E2 RID: 28898 RVA: 0x000A68FB File Offset: 0x000A4AFB
+		// (set) Token: 0x060070E3 RID: 28899 RVA: 0x000A690B File Offset: 0x000A4B0B
 		public unsafe bool AttachLocationOnly
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066DB RID: 26331
-		// (get) Token: 0x06019BCB RID: 105419 RVA: 0x002605B4 File Offset: 0x0025E7B4
-		// (set) Token: 0x06019BCC RID: 105420 RVA: 0x002605C8 File Offset: 0x0025E7C8
+		// Token: 0x17001616 RID: 5654
+		// (get) Token: 0x060070E4 RID: 28900 RVA: 0x000A691C File Offset: 0x000A4B1C
+		// (set) Token: 0x060070E5 RID: 28901 RVA: 0x000A6930 File Offset: 0x000A4B30
 		public unsafe FName SocketName
 		{
 			get
@@ -118,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066DC RID: 26332
-		// (get) Token: 0x06019BCD RID: 105421 RVA: 0x002605DD File Offset: 0x0025E7DD
-		// (set) Token: 0x06019BCE RID: 105422 RVA: 0x002605ED File Offset: 0x0025E7ED
+		// Token: 0x17001617 RID: 5655
+		// (get) Token: 0x060070E6 RID: 28902 RVA: 0x000A6945 File Offset: 0x000A4B45
+		// (set) Token: 0x060070E7 RID: 28903 RVA: 0x000A6955 File Offset: 0x000A4B55
 		public unsafe float AttachLocationTime
 		{
 			get
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170066DD RID: 26333
-		// (get) Token: 0x06019BCF RID: 105423 RVA: 0x002605FE File Offset: 0x0025E7FE
-		// (set) Token: 0x06019BD0 RID: 105424 RVA: 0x0026060E File Offset: 0x0025E80E
+		// Token: 0x17001618 RID: 5656
+		// (get) Token: 0x060070E8 RID: 28904 RVA: 0x000A6966 File Offset: 0x000A4B66
+		// (set) Token: 0x060070E9 RID: 28905 RVA: 0x000A6976 File Offset: 0x000A4B76
 		public unsafe float AttachRotationTime
 		{
 			get
@@ -148,49 +148,49 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06019BD1 RID: 105425 RVA: 0x0026061F File Offset: 0x0025E81F
+		// Token: 0x060070EA RID: 28906 RVA: 0x000A6987 File Offset: 0x000A4B87
 		static UKuroEffectMakerANS()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroEffectMakerANS");
 		}
 
-		// Token: 0x06019BD2 RID: 105426 RVA: 0x0026062D File Offset: 0x0025E82D
+		// Token: 0x060070EB RID: 28907 RVA: 0x000A6995 File Offset: 0x000A4B95
 		protected UKuroEffectMakerANS(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400DFEB RID: 57323
+		// Token: 0x040030B6 RID: 12470
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroEffectMakerANS";
 
-		// Token: 0x0400DFEC RID: 57324
+		// Token: 0x040030B7 RID: 12471
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400DFED RID: 57325
+		// Token: 0x040030B8 RID: 12472
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400DFEE RID: 57326
+		// Token: 0x040030B9 RID: 12473
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400DFEF RID: 57327
+		// Token: 0x040030BA RID: 12474
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x0400DFF0 RID: 57328
+		// Token: 0x040030BB RID: 12475
 		internal static int __PropertyOffset_Scale;
 
-		// Token: 0x0400DFF1 RID: 57329
+		// Token: 0x040030BC RID: 12476
 		internal static int __PropertyOffset_Attached;
 
-		// Token: 0x0400DFF2 RID: 57330
+		// Token: 0x040030BD RID: 12477
 		internal static int __PropertyOffset_AttachLocationOnly;
 
-		// Token: 0x0400DFF3 RID: 57331
+		// Token: 0x040030BE RID: 12478
 		internal static int __PropertyOffset_SocketName;
 
-		// Token: 0x0400DFF4 RID: 57332
+		// Token: 0x040030BF RID: 12479
 		internal static int __PropertyOffset_AttachLocationTime;
 
-		// Token: 0x0400DFF5 RID: 57333
+		// Token: 0x040030C0 RID: 12480
 		internal static int __PropertyOffset_AttachRotationTime;
 	}
 }

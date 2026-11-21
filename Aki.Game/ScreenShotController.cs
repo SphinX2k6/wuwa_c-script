@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200295E RID: 10590
+// Token: 0x02001ED9 RID: 7897
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ScreenShotController : ControllerBase
 {
-	// Token: 0x06015E52 RID: 89682 RVA: 0x00586489 File Offset: 0x00584689
+	// Token: 0x06013856 RID: 79958 RVA: 0x005B1489 File Offset: 0x005AF689
 	protected override bool OnClear()
 	{
 		ScreenShotManager.Clear();
 		return true;
 	}
 
-	// Token: 0x06015E53 RID: 89683 RVA: 0x00586491 File Offset: 0x00584691
+	// Token: 0x06013857 RID: 79959 RVA: 0x005B1491 File Offset: 0x005AF691
 	protected override bool OnLeaveLevel()
 	{
 		ScreenShotManager.Clear();
 		return true;
 	}
 
-	// Token: 0x17001D82 RID: 7554
-	// (get) Token: 0x06015E54 RID: 89684 RVA: 0x00586499 File Offset: 0x00584699
+	// Token: 0x17001DDB RID: 7643
+	// (get) Token: 0x06013858 RID: 79960 RVA: 0x005B1499 File Offset: 0x005AF699
 	public static ScreenShotController Instance
 	{
 		get
@@ -31,7 +31,7 @@ public class ScreenShotController : ControllerBase
 		}
 	}
 
-	// Token: 0x06015E55 RID: 89685 RVA: 0x005864A0 File Offset: 0x005846A0
+	// Token: 0x06013859 RID: 79961 RVA: 0x005B14A0 File Offset: 0x005AF6A0
 	public static ScreenShotController GetOrCreateInstance()
 	{
 		if (ScreenShotController._Instance == null)
@@ -41,7 +41,7 @@ public class ScreenShotController : ControllerBase
 		return ScreenShotController._Instance;
 	}
 
-	// Token: 0x06015E56 RID: 89686 RVA: 0x005864B4 File Offset: 0x005846B4
+	// Token: 0x0601385A RID: 79962 RVA: 0x005B14B4 File Offset: 0x005AF6B4
 	public static bool CreateInstance()
 	{
 		if (ScreenShotController._Instance != null)
@@ -52,24 +52,24 @@ public class ScreenShotController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06015E57 RID: 89687 RVA: 0x005864CA File Offset: 0x005846CA
+	// Token: 0x0601385B RID: 79963 RVA: 0x005B14CA File Offset: 0x005AF6CA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015E58 RID: 89688 RVA: 0x005864CC File Offset: 0x005846CC
+	// Token: 0x0601385C RID: 79964 RVA: 0x005B14CC File Offset: 0x005AF6CC
 	public static void ResetStaticDefaultValue()
 	{
 		ScreenShotController._Instance = null;
 	}
 
-	// Token: 0x06015E59 RID: 89689 RVA: 0x005864D4 File Offset: 0x005846D4
+	// Token: 0x0601385D RID: 79965 RVA: 0x005B14D4 File Offset: 0x005AF6D4
 	static ScreenShotController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ScreenShotController.CreateStaticDefaultValue), new Action(ScreenShotController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A2F8 RID: 41720
+	// Token: 0x0400A6E2 RID: 42722
 	[Nullable(2)]
 	private static ScreenShotController _Instance;
 }

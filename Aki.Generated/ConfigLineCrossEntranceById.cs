@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004D9 RID: 1241
+	// Token: 0x020004EF RID: 1263
 	public class ConfigLineCrossEntranceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D21 RID: 7457 RVA: 0x000FDD48 File Offset: 0x000FBF48
+		// Token: 0x06001DA5 RID: 7589 RVA: 0x0010449C File Offset: 0x0010269C
 		static ConfigLineCrossEntranceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLineCrossEntranceById.CreateStaticDefaultValue), new Action(ConfigLineCrossEntranceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D22 RID: 7458 RVA: 0x000FDD68 File Offset: 0x000FBF68
+		// Token: 0x06001DA6 RID: 7590 RVA: 0x001044BC File Offset: 0x001026BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLineCrossEntranceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D23 RID: 7459 RVA: 0x000FDDE7 File Offset: 0x000FBFE7
+		// Token: 0x06001DA7 RID: 7591 RVA: 0x0010453B File Offset: 0x0010273B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLineCrossEntranceById.LogPair = null;
 			ConfigLineCrossEntranceById.HandleId = 0;
 		}
 
-		// Token: 0x06001D24 RID: 7460 RVA: 0x000FDDF5 File Offset: 0x000FBFF5
+		// Token: 0x06001DA8 RID: 7592 RVA: 0x00104549 File Offset: 0x00102749
 		public static void Init()
 		{
 			ConfigLineCrossEntranceById.HandleId = ConfigCommon.InitDataStatement(ConfigLineCrossEntranceById.HandleId, "db_linecross.db", "select BinData from `LineCrossEntrance` where Id=?");
 		}
 
-		// Token: 0x06001D25 RID: 7461 RVA: 0x000FDE10 File Offset: 0x000FC010
+		// Token: 0x06001DA9 RID: 7593 RVA: 0x00104564 File Offset: 0x00102764
 		public static LineCrossEntrance? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLineCrossEntranceById.HandleId, ConfigLineCrossEntranceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LineCrossEntrance?(rootAsLineCrossEntrance);
 		}
 
-		// Token: 0x040021D3 RID: 8659
+		// Token: 0x0400226D RID: 8813
 		private const string DB = "db_linecross.db";
 
-		// Token: 0x040021D4 RID: 8660
+		// Token: 0x0400226E RID: 8814
 		private const string FILE = "s.十字连线.xlsx";
 
-		// Token: 0x040021D5 RID: 8661
+		// Token: 0x0400226F RID: 8815
 		private const string TABLE = "LineCrossEntrance";
 
-		// Token: 0x040021D6 RID: 8662
+		// Token: 0x04002270 RID: 8816
 		private const string COMMAND = "select BinData from `LineCrossEntrance` where Id=?";
 
-		// Token: 0x040021D7 RID: 8663
+		// Token: 0x04002271 RID: 8817
 		private const string KEY_PREFIX = "LineCrossEntranceById";
 
-		// Token: 0x040021D8 RID: 8664
+		// Token: 0x04002272 RID: 8818
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021D9 RID: 8665
+		// Token: 0x04002273 RID: 8819
 		private static int HandleId;
 	}
 }

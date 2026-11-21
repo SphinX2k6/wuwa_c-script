@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CB5 RID: 7349
+	// Token: 0x02001EBC RID: 7868
 	public class IOpenTraceSpline_SetValue
 	{
-		// Token: 0x04005F76 RID: 24438
+		// Token: 0x040064D2 RID: 25810
 		public ETraceSplineOptionType Type;
 
-		// Token: 0x04005F77 RID: 24439
+		// Token: 0x040064D3 RID: 25811
 		public int SplineEntityId;
 
-		// Token: 0x04005F78 RID: 24440
+		// Token: 0x040064D4 RID: 25812
 		public float Duration;
 	}
 }

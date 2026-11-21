@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011CD RID: 4557
+	// Token: 0x02001303 RID: 4867
 	public struct IntIntMap : IFlatbufferObject
 	{
-		// Token: 0x17003EEE RID: 16110
-		// (get) Token: 0x0600EA94 RID: 60052 RVA: 0x003484CD File Offset: 0x003466CD
+		// Token: 0x17004253 RID: 16979
+		// (get) Token: 0x0600F805 RID: 63493 RVA: 0x0037311A File Offset: 0x0037131A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,38 +20,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA95 RID: 60053 RVA: 0x003484DA File Offset: 0x003466DA
+		// Token: 0x0600F806 RID: 63494 RVA: 0x00373127 File Offset: 0x00371327
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EA96 RID: 60054 RVA: 0x003484E4 File Offset: 0x003466E4
+		// Token: 0x0600F807 RID: 63495 RVA: 0x00373130 File Offset: 0x00371330
 		public static IntIntMap GetRootAsIntIntMap(ByteBuffer _bb)
 		{
 			return IntIntMap.GetRootAsIntIntMap(_bb, default(IntIntMap));
 		}
 
-		// Token: 0x0600EA97 RID: 60055 RVA: 0x00348500 File Offset: 0x00346700
+		// Token: 0x0600F808 RID: 63496 RVA: 0x0037314C File Offset: 0x0037134C
 		public static IntIntMap GetRootAsIntIntMap(ByteBuffer _bb, IntIntMap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EA98 RID: 60056 RVA: 0x0034851D File Offset: 0x0034671D
+		// Token: 0x0600F809 RID: 63497 RVA: 0x00373169 File Offset: 0x00371369
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EA99 RID: 60057 RVA: 0x0034852C File Offset: 0x0034672C
+		// Token: 0x0600F80A RID: 63498 RVA: 0x00373178 File Offset: 0x00371378
 		public IntIntMap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EA9A RID: 60058 RVA: 0x0034853C File Offset: 0x0034673C
+		// Token: 0x0600F80B RID: 63499 RVA: 0x00373188 File Offset: 0x00371388
 		public DicIntInt? MapIntInt(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -62,8 +62,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003EEF RID: 16111
-		// (get) Token: 0x0600EA9B RID: 60059 RVA: 0x0034859C File Offset: 0x0034679C
+		// Token: 0x17004254 RID: 16980
+		// (get) Token: 0x0600F80C RID: 63500 RVA: 0x003731E8 File Offset: 0x003713E8
 		public int MapIntIntLength
 		{
 			get
@@ -77,24 +77,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA9C RID: 60060 RVA: 0x003485C8 File Offset: 0x003467C8
+		// Token: 0x0600F80D RID: 63501 RVA: 0x00373214 File Offset: 0x00371414
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用MapIntIntFrozenDict()缓存字典，遍历请使用MapIntIntIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> MapIntInt()
+		public Dictionary<int, int> MapIntInt()
 		{
 			return this.MapIntIntIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600EA9D RID: 60061 RVA: 0x0034861E File Offset: 0x0034681E
+		// Token: 0x0600F80E RID: 63502 RVA: 0x0037326A File Offset: 0x0037146A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> MapIntIntIter()
+		public IEnumerable<DicIntInt> MapIntIntIter()
 		{
 			IntIntMap.<MapIntIntIter>d__12 <MapIntIntIter>d__ = new IntIntMap.<MapIntIntIter>d__12(-2);
 			<MapIntIntIter>d__.<>3__<>4__this = this;
 			return <MapIntIntIter>d__;
 		}
 
-		// Token: 0x0600EA9E RID: 60062 RVA: 0x00348634 File Offset: 0x00346834
+		// Token: 0x0600F80F RID: 63503 RVA: 0x00373280 File Offset: 0x00371480
 		public int? GetMapIntInt(int key)
 		{
 			this.EnsureMapIntIntCacheIfNeeded();
@@ -106,7 +105,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600EA9F RID: 60063 RVA: 0x00348668 File Offset: 0x00346868
+		// Token: 0x0600F810 RID: 63504 RVA: 0x003732B4 File Offset: 0x003714B4
 		private void EnsureMapIntIntCacheIfNeeded()
 		{
 			if (this.MapIntIntCache != null)
@@ -116,18 +115,18 @@ namespace Aki.Config
 			this.MapIntIntCache = this.MapIntIntIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600EAA0 RID: 60064 RVA: 0x003486CE File Offset: 0x003468CE
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetMapIntIntFrozenDict(int key)
+		// Token: 0x0600F811 RID: 63505 RVA: 0x0037331A File Offset: 0x0037151A
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetMapIntIntFrozenDict()
 		{
 			this.EnsureMapIntIntCacheIfNeeded();
 			return this.MapIntIntCache;
 		}
 
-		// Token: 0x0400533A RID: 21306
+		// Token: 0x0400597D RID: 22909
 		private Table __p;
 
-		// Token: 0x0400533B RID: 21307
+		// Token: 0x0400597E RID: 22910
 		[Nullable(2)]
 		private FrozenDictionary<int, int> MapIntIntCache;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000430 RID: 1072
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000489 RID: 1161
 	public class IHoldCfg
 	{
-		// Token: 0x0600159B RID: 5531 RVA: 0x0004383C File Offset: 0x00041A3C
+		// Token: 0x06001735 RID: 5941 RVA: 0x00047584 File Offset: 0x00045784
 		private IHoldCfg_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600159C RID: 5532 RVA: 0x00043874 File Offset: 0x00041A74
+		// Token: 0x06001736 RID: 5942 RVA: 0x000475BC File Offset: 0x000457BC
 		public static IHoldCfg Create([Nullable(2)] IHoldCfg instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600159D RID: 5533 RVA: 0x00043887 File Offset: 0x00041A87
+		// Token: 0x06001737 RID: 5943 RVA: 0x000475CF File Offset: 0x000457CF
 		public static IHoldCfg CreateFromSetValue([Nullable(2)] IHoldCfg_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600159E RID: 5534 RVA: 0x0004389A File Offset: 0x00041A9A
+		// Token: 0x06001738 RID: 5944 RVA: 0x000475E2 File Offset: 0x000457E2
 		public IHoldCfg_SetValue ToSetValue()
 		{
 			return new IHoldCfg_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005E3 RID: 1507
-		// (get) Token: 0x0600159F RID: 5535 RVA: 0x000438B0 File Offset: 0x00041AB0
-		// (set) Token: 0x060015A0 RID: 5536 RVA: 0x00043911 File Offset: 0x00041B11
+		// Token: 0x1700064A RID: 1610
+		// (get) Token: 0x06001739 RID: 5945 RVA: 0x000475F8 File Offset: 0x000457F8
+		// (set) Token: 0x0600173A RID: 5946 RVA: 0x00047659 File Offset: 0x00045859
 		[Nullable(2)]
 		public virtual IHoldingTrackTarget TrackTarget
 		{
@@ -92,18 +90,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010A8 RID: 4264
+		// Token: 0x040011CA RID: 4554
 		[Nullable(2)]
 		protected IHoldCfg FbInstance;
 
-		// Token: 0x040010A9 RID: 4265
+		// Token: 0x040011CB RID: 4555
 		[Nullable(2)]
 		protected IHoldCfg_SetValue PocoInterface;
 
-		// Token: 0x040010AA RID: 4266
+		// Token: 0x040011CC RID: 4556
 		private IHoldingTrackTarget _TrackTargetCache;
 
-		// Token: 0x040010AB RID: 4267
+		// Token: 0x040011CD RID: 4557
 		private bool _TrackTargetInited;
 	}
 }

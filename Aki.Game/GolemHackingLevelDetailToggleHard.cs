@@ -4,16 +4,16 @@ using System.Runtime.InteropServices;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x0200100C RID: 4108
+// Token: 0x020004C0 RID: 1216
 public class GolemHackingLevelDetailToggleHard : GolemHackingLevelDetailToggle
 {
-	// Token: 0x06006959 RID: 26969 RVA: 0x001501F2 File Offset: 0x0014E3F2
+	// Token: 0x06003CEE RID: 15598 RVA: 0x00158B1A File Offset: 0x00156D1A
 	public GolemHackingLevelDetailToggleHard(int levelId) : base(levelId)
 	{
 		this.IsHard = true;
 	}
 
-	// Token: 0x0600695A RID: 26970 RVA: 0x00150204 File Offset: 0x0014E404
+	// Token: 0x06003CEF RID: 15599 RVA: 0x00158B2C File Offset: 0x00156D2C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -31,7 +31,7 @@ public class GolemHackingLevelDetailToggleHard : GolemHackingLevelDetailToggle
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600695B RID: 26971 RVA: 0x001502B0 File Offset: 0x0014E4B0
+	// Token: 0x06003CF0 RID: 15600 RVA: 0x00158BD8 File Offset: 0x00156DD8
 	public override bool RefreshState(bool needAnim = false)
 	{
 		GolemHackingActivityData activityData = GolemHackingController.Instance.GetActivityData();

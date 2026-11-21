@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200231B RID: 8987
+// Token: 0x02001800 RID: 6144
 public class PayItemSuccess
 {
-	// Token: 0x040086C6 RID: 34502
+	// Token: 0x04008809 RID: 34825
 	public int PayItemId;
 
-	// Token: 0x040086C7 RID: 34503
+	// Token: 0x0400880A RID: 34826
 	[Nullable(1)]
 	public string OrderId;
 
-	// Token: 0x040086C8 RID: 34504
+	// Token: 0x0400880B RID: 34827
 	public int ItemId;
 
-	// Token: 0x040086C9 RID: 34505
+	// Token: 0x0400880C RID: 34828
 	public int ItemCount;
 }

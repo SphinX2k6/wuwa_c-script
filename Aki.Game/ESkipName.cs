@@ -1,116 +1,116 @@
 ﻿using System;
 
-// Token: 0x02002A77 RID: 10871
+// Token: 0x02001FF2 RID: 8178
 public enum ESkipName
 {
-	// Token: 0x0400A7DC RID: 42972
+	// Token: 0x0400ABE0 RID: 44000
 	NoSkip = -1,
-	// Token: 0x0400A7DD RID: 42973
+	// Token: 0x0400ABE1 RID: 44001
 	SkipToWorldMapView,
-	// Token: 0x0400A7DE RID: 42974
+	// Token: 0x0400ABE2 RID: 44002
 	SkipToAdventureGuide,
-	// Token: 0x0400A7DF RID: 42975
+	// Token: 0x0400ABE3 RID: 44003
 	SkipToInstanceEnterEntrance,
-	// Token: 0x0400A7E0 RID: 42976
+	// Token: 0x0400ABE4 RID: 44004
 	SkipToTaskPayShop,
-	// Token: 0x0400A7E1 RID: 42977
+	// Token: 0x0400ABE5 RID: 44005
 	SkipToWeaponRoot,
-	// Token: 0x0400A7E2 RID: 42978
+	// Token: 0x0400ABE6 RID: 44006
 	SkipToVisionIntensifyView,
-	// Token: 0x0400A7E3 RID: 42979
+	// Token: 0x0400ABE7 RID: 44007
 	SkipToRoguelike,
-	// Token: 0x0400A7E4 RID: 42980
+	// Token: 0x0400ABE8 RID: 44008
 	SkipToQuest,
-	// Token: 0x0400A7E5 RID: 42981
+	// Token: 0x0400ABE9 RID: 44009
 	SkipToDyMarkEntity,
-	// Token: 0x0400A7E6 RID: 42982
+	// Token: 0x0400ABEA RID: 44010
 	SkipToBusinessMainView,
-	// Token: 0x0400A7E7 RID: 42983
+	// Token: 0x0400ABEB RID: 44011
 	SkipToBusinessRoleView,
-	// Token: 0x0400A7E8 RID: 42984
+	// Token: 0x0400ABEC RID: 44012
 	SkipToBuildingView,
-	// Token: 0x0400A7E9 RID: 42985
+	// Token: 0x0400ABED RID: 44013
 	SkipToTaskView,
-	// Token: 0x0400A7EA RID: 42986
+	// Token: 0x0400ABEE RID: 44014
 	SkipToBusinessMainViewDirect,
-	// Token: 0x0400A7EB RID: 42987
+	// Token: 0x0400ABEF RID: 44015
 	SkipToTaskViewDirect,
-	// Token: 0x0400A7EC RID: 42988
+	// Token: 0x0400ABF0 RID: 44016
 	SkipToEnrichmentArea,
-	// Token: 0x0400A7ED RID: 42989
+	// Token: 0x0400ABF1 RID: 44017
 	SkipToHelp,
-	// Token: 0x0400A7EE RID: 42990
+	// Token: 0x0400ABF2 RID: 44018
 	SkipToActivity,
-	// Token: 0x0400A7EF RID: 42991
+	// Token: 0x0400ABF3 RID: 44019
 	SkipToRole,
-	// Token: 0x0400A7F0 RID: 42992
+	// Token: 0x0400ABF4 RID: 44020
 	SkipToMapTempMark,
-	// Token: 0x0400A7F1 RID: 42993
+	// Token: 0x0400ABF5 RID: 44021
 	SkipTaskPayShopToSpecifyTab,
-	// Token: 0x0400A7F2 RID: 42994
+	// Token: 0x0400ABF6 RID: 44022
 	SkipToCompose,
-	// Token: 0x0400A7F3 RID: 42995
+	// Token: 0x0400ABF7 RID: 44023
 	SkipToComposeExchange,
-	// Token: 0x0400A7F4 RID: 42996
+	// Token: 0x0400ABF8 RID: 44024
 	SkipToExploreAreaDetailView,
-	// Token: 0x0400A7F5 RID: 42997
+	// Token: 0x0400ABF9 RID: 44025
 	SkipToExploreAreaPlayPoint,
-	// Token: 0x0400A7F6 RID: 42998
+	// Token: 0x0400ABFA RID: 44026
 	SkipToFishingTech,
-	// Token: 0x0400A7F7 RID: 42999
+	// Token: 0x0400ABFB RID: 44027
 	SkipToTrackNewSoundArea,
-	// Token: 0x0400A7F8 RID: 43000
+	// Token: 0x0400ABFC RID: 44028
 	SkipToFishingRelatedView,
-	// Token: 0x0400A7F9 RID: 43001
+	// Token: 0x0400ABFD RID: 44029
 	SkipToInventoryGiftView,
-	// Token: 0x0400A7FA RID: 43002
+	// Token: 0x0400ABFE RID: 44030
 	SkipToGachaView,
-	// Token: 0x0400A7FB RID: 43003
+	// Token: 0x0400ABFF RID: 44031
 	SkipToFloroRanchRelatedView,
-	// Token: 0x0400A7FC RID: 43004
+	// Token: 0x0400AC00 RID: 44032
 	SkipToDailyActiveTask,
-	// Token: 0x0400A7FD RID: 43005
+	// Token: 0x0400AC01 RID: 44033
 	SkipToQuestByType,
-	// Token: 0x0400A7FE RID: 43006
+	// Token: 0x0400AC02 RID: 44034
 	SkipToWorldMapWithMarkCheck,
-	// Token: 0x0400A7FF RID: 43007
+	// Token: 0x0400AC03 RID: 44035
 	SkipToMapWithPhantomAreaChallenge,
-	// Token: 0x0400A800 RID: 43008
+	// Token: 0x0400AC04 RID: 44036
 	SkipToInfrastructureMainView,
-	// Token: 0x0400A801 RID: 43009
+	// Token: 0x0400AC05 RID: 44037
 	SkipToMotorcycleView,
-	// Token: 0x0400A802 RID: 43010
+	// Token: 0x0400AC06 RID: 44038
 	SkipToDetectionMaterial,
-	// Token: 0x0400A803 RID: 43011
+	// Token: 0x0400AC07 RID: 44039
 	SkipCommonView,
-	// Token: 0x0400A804 RID: 43012
+	// Token: 0x0400AC08 RID: 44040
 	SkipToVillageInfrMainView,
-	// Token: 0x0400A805 RID: 43013
+	// Token: 0x0400AC09 RID: 44041
 	SkipToRouletteAssembly,
-	// Token: 0x0400A806 RID: 43014
+	// Token: 0x0400AC0A RID: 44042
 	SkipToShopRecommendId,
-	// Token: 0x0400A807 RID: 43015
+	// Token: 0x0400AC0B RID: 44043
 	SkipToFloroRanchWeekly,
-	// Token: 0x0400A808 RID: 43016
+	// Token: 0x0400AC0C RID: 44044
 	SkipToWeeklyRogue,
-	// Token: 0x0400A809 RID: 43017
+	// Token: 0x0400AC0D RID: 44045
 	SkipToQuestTreeNode,
-	// Token: 0x0400A80A RID: 43018
+	// Token: 0x0400AC0E RID: 44046
 	SkipToDailyActivityWeeklyTab,
-	// Token: 0x0400A80B RID: 43019
+	// Token: 0x0400AC0F RID: 44047
 	SkipToRoleOrnamentId,
-	// Token: 0x0400A80C RID: 43020
+	// Token: 0x0400AC10 RID: 44048
 	SkipCyberPunkAdamSmasher,
-	// Token: 0x0400A80D RID: 43021
+	// Token: 0x0400AC11 RID: 44049
 	SkipToPhoneMsgSetting,
-	// Token: 0x0400A80E RID: 43022
+	// Token: 0x0400AC12 RID: 44050
 	SkipToKurotatoLevelSelectView,
-	// Token: 0x0400A80F RID: 43023
+	// Token: 0x0400AC13 RID: 44051
 	SkipToMusicalInstrumentView,
-	// Token: 0x0400A810 RID: 43024
+	// Token: 0x0400AC14 RID: 44052
 	SkipToQuestMultiLineView,
-	// Token: 0x0400A811 RID: 43025
+	// Token: 0x0400AC15 RID: 44053
 	SkipToAdventureGuideNew,
-	// Token: 0x0400A812 RID: 43026
+	// Token: 0x0400AC16 RID: 44054
 	SkipToSummonShowView
 }

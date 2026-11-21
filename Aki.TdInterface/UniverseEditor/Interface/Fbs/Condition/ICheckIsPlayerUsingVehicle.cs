@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A99 RID: 19097
+	// Token: 0x02004F65 RID: 20325
 	public struct ICheckIsPlayerUsingVehicle : IFlatbufferObject
 	{
-		// Token: 0x17008A59 RID: 35417
-		// (get) Token: 0x0601DF3E RID: 122686 RVA: 0x004349E1 File Offset: 0x00432BE1
+		// Token: 0x1700913F RID: 37183
+		// (get) Token: 0x0601FA0D RID: 129549 RVA: 0x00465F6D File Offset: 0x0046416D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF3F RID: 122687 RVA: 0x004349EE File Offset: 0x00432BEE
+		// Token: 0x0601FA0E RID: 129550 RVA: 0x00465F7A File Offset: 0x0046417A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DF40 RID: 122688 RVA: 0x004349F8 File Offset: 0x00432BF8
+		// Token: 0x0601FA0F RID: 129551 RVA: 0x00465F84 File Offset: 0x00464184
 		public static ICheckIsPlayerUsingVehicle GetRootAsICheckIsPlayerUsingVehicle(ByteBuffer _bb)
 		{
 			return ICheckIsPlayerUsingVehicle.GetRootAsICheckIsPlayerUsingVehicle(_bb, default(ICheckIsPlayerUsingVehicle));
 		}
 
-		// Token: 0x0601DF41 RID: 122689 RVA: 0x00434A14 File Offset: 0x00432C14
+		// Token: 0x0601FA10 RID: 129552 RVA: 0x00465FA0 File Offset: 0x004641A0
 		public static ICheckIsPlayerUsingVehicle GetRootAsICheckIsPlayerUsingVehicle(ByteBuffer _bb, ICheckIsPlayerUsingVehicle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DF42 RID: 122690 RVA: 0x00434A31 File Offset: 0x00432C31
+		// Token: 0x0601FA11 RID: 129553 RVA: 0x00465FBD File Offset: 0x004641BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DF43 RID: 122691 RVA: 0x00434A40 File Offset: 0x00432C40
+		// Token: 0x0601FA12 RID: 129554 RVA: 0x00465FCC File Offset: 0x004641CC
 		public ICheckIsPlayerUsingVehicle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A5A RID: 35418
-		// (get) Token: 0x0601DF44 RID: 122692 RVA: 0x00434A50 File Offset: 0x00432C50
+		// Token: 0x17009140 RID: 37184
+		// (get) Token: 0x0601FA13 RID: 129555 RVA: 0x00465FDC File Offset: 0x004641DC
 		public EVehicleConditionType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A5B RID: 35419
-		// (get) Token: 0x0601DF45 RID: 122693 RVA: 0x00434A8C File Offset: 0x00432C8C
+		// Token: 0x17009141 RID: 37185
+		// (get) Token: 0x0601FA14 RID: 129556 RVA: 0x00466018 File Offset: 0x00464218
 		public EVehicleType VehicleType
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A5C RID: 35420
-		// (get) Token: 0x0601DF46 RID: 122694 RVA: 0x00434AC8 File Offset: 0x00432CC8
+		// Token: 0x17009142 RID: 37186
+		// (get) Token: 0x0601FA15 RID: 129557 RVA: 0x00466054 File Offset: 0x00464254
 		public bool CheckType
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A5D RID: 35421
-		// (get) Token: 0x0601DF47 RID: 122695 RVA: 0x00434B08 File Offset: 0x00432D08
+		// Token: 0x17009143 RID: 37187
+		// (get) Token: 0x0601FA16 RID: 129558 RVA: 0x00466094 File Offset: 0x00464294
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF48 RID: 122696 RVA: 0x00434B48 File Offset: 0x00432D48
+		// Token: 0x0601FA17 RID: 129559 RVA: 0x004660D4 File Offset: 0x004642D4
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -115,20 +115,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601DF49 RID: 122697 RVA: 0x00434B90 File Offset: 0x00432D90
+		// Token: 0x0601FA18 RID: 129560 RVA: 0x0046611C File Offset: 0x0046431C
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601DF4A RID: 122698 RVA: 0x00434BAC File Offset: 0x00432DAC
+		// Token: 0x0601FA19 RID: 129561 RVA: 0x00466138 File Offset: 0x00464338
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x17008A5E RID: 35422
-		// (get) Token: 0x0601DF4B RID: 122699 RVA: 0x00434BC8 File Offset: 0x00432DC8
+		// Token: 0x17009144 RID: 37188
+		// (get) Token: 0x0601FA1A RID: 129562 RVA: 0x00466154 File Offset: 0x00464354
 		public byte NullMask
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF4C RID: 122700 RVA: 0x00434C05 File Offset: 0x00432E05
+		// Token: 0x0601FA1B RID: 129563 RVA: 0x00466191 File Offset: 0x00464391
 		public static Offset<ICheckIsPlayerUsingVehicle> CreateICheckIsPlayerUsingVehicle(FlatBufferBuilder builder, EVehicleConditionType Type = EVehicleConditionType.UsingVehicle, EVehicleType VehicleType = EVehicleType.Gongduola, bool CheckType = false, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -155,55 +155,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsPlayerUsingVehicle.EndICheckIsPlayerUsingVehicle(builder);
 		}
 
-		// Token: 0x0601DF4D RID: 122701 RVA: 0x00434C41 File Offset: 0x00432E41
+		// Token: 0x0601FA1C RID: 129564 RVA: 0x004661CD File Offset: 0x004643CD
 		public static void StartICheckIsPlayerUsingVehicle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601DF4E RID: 122702 RVA: 0x00434C4A File Offset: 0x00432E4A
+		// Token: 0x0601FA1D RID: 129565 RVA: 0x004661D6 File Offset: 0x004643D6
 		public static void AddType(FlatBufferBuilder builder, EVehicleConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DF4F RID: 122703 RVA: 0x00434C55 File Offset: 0x00432E55
+		// Token: 0x0601FA1E RID: 129566 RVA: 0x004661E1 File Offset: 0x004643E1
 		public static void AddVehicleType(FlatBufferBuilder builder, EVehicleType vehicleType)
 		{
 			builder.AddByte(1, (byte)vehicleType, 0);
 		}
 
-		// Token: 0x0601DF50 RID: 122704 RVA: 0x00434C60 File Offset: 0x00432E60
+		// Token: 0x0601FA1F RID: 129567 RVA: 0x004661EC File Offset: 0x004643EC
 		public static void AddCheckType(FlatBufferBuilder builder, bool checkType)
 		{
 			builder.AddBool(2, checkType, false);
 		}
 
-		// Token: 0x0601DF51 RID: 122705 RVA: 0x00434C6B File Offset: 0x00432E6B
+		// Token: 0x0601FA20 RID: 129568 RVA: 0x004661F7 File Offset: 0x004643F7
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(3, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601DF52 RID: 122706 RVA: 0x00434C76 File Offset: 0x00432E76
+		// Token: 0x0601FA21 RID: 129569 RVA: 0x00466202 File Offset: 0x00464402
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(4, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601DF53 RID: 122707 RVA: 0x00434C81 File Offset: 0x00432E81
+		// Token: 0x0601FA22 RID: 129570 RVA: 0x0046620D File Offset: 0x0046440D
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0601DF54 RID: 122708 RVA: 0x00434C8C File Offset: 0x00432E8C
+		// Token: 0x0601FA23 RID: 129571 RVA: 0x00466218 File Offset: 0x00464418
 		public static Offset<ICheckIsPlayerUsingVehicle> EndICheckIsPlayerUsingVehicle(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsPlayerUsingVehicle>(builder.EndTable());
 		}
 
-		// Token: 0x0601DF55 RID: 122709 RVA: 0x00434C9C File Offset: 0x00432E9C
+		// Token: 0x0601FA24 RID: 129572 RVA: 0x00466228 File Offset: 0x00464428
 		public ICheckIsPlayerUsingVehicleT UnPack()
 		{
 			ICheckIsPlayerUsingVehicleT checkIsPlayerUsingVehicleT = new ICheckIsPlayerUsingVehicleT();
@@ -211,7 +211,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsPlayerUsingVehicleT;
 		}
 
-		// Token: 0x0601DF56 RID: 122710 RVA: 0x00434CB8 File Offset: 0x00432EB8
+		// Token: 0x0601FA25 RID: 129573 RVA: 0x00466244 File Offset: 0x00464444
 		public void UnPackTo(ICheckIsPlayerUsingVehicleT _o)
 		{
 			_o.Type = this.Type;
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601DF57 RID: 122711 RVA: 0x00434D90 File Offset: 0x00432F90
+		// Token: 0x0601FA26 RID: 129574 RVA: 0x0046631C File Offset: 0x0046451C
 		public static Offset<ICheckIsPlayerUsingVehicle> Pack(FlatBufferBuilder builder, ICheckIsPlayerUsingVehicleT _o)
 		{
 			if (_o == null)
@@ -246,7 +246,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsPlayerUsingVehicle.CreateICheckIsPlayerUsingVehicle(builder, _o.Type, _o.VehicleType, _o.CheckType, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400D309 RID: 54025
+		// Token: 0x0400DDEA RID: 56810
 		private Table __p;
 	}
 }

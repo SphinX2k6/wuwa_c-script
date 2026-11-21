@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E2B RID: 7723
+	// Token: 0x0200205E RID: 8286
 	public class ISetMonsterMoveWithSpline_SetValue
 	{
-		// Token: 0x040062CE RID: 25294
+		// Token: 0x040068A5 RID: 26789
 		public EExecBattleActionType Type;
 
-		// Token: 0x040062CF RID: 25295
-		[Nullable(1)]
+		// Token: 0x040068A6 RID: 26790
 		public List<IMonsterMoveSplineConfig> MoveSplineConfigs;
 	}
 }

@@ -2,44 +2,44 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002038 RID: 8248
+// Token: 0x0200150B RID: 5387
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class KingShipConfig : ConfigBase
 {
-	// Token: 0x06010320 RID: 66336 RVA: 0x003F2C00 File Offset: 0x003F0E00
+	// Token: 0x0600D788 RID: 55176 RVA: 0x003FF1F8 File Offset: 0x003FD3F8
 	public KingShipAttribute GetKingShipAttribute(int id)
 	{
 		return ConfigKingShipAttributeById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x06010321 RID: 66337 RVA: 0x003F2C1C File Offset: 0x003F0E1C
+	// Token: 0x0600D789 RID: 55177 RVA: 0x003FF214 File Offset: 0x003FD414
 	public KingShipBuff GetKingShipBuff(int id)
 	{
 		return ConfigKingShipBuffById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x06010322 RID: 66338 RVA: 0x003F2C38 File Offset: 0x003F0E38
+	// Token: 0x0600D78A RID: 55178 RVA: 0x003FF230 File Offset: 0x003FD430
 	public Reigns GetReigns(int id)
 	{
 		return ConfigReignsById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x06010323 RID: 66339 RVA: 0x003F2C54 File Offset: 0x003F0E54
+	// Token: 0x0600D78B RID: 55179 RVA: 0x003FF24C File Offset: 0x003FD44C
 	public Reigns? TryGetReigns(int id)
 	{
 		return ConfigReignsById.GetConfig(id, true);
 	}
 
-	// Token: 0x06010324 RID: 66340 RVA: 0x003F2C60 File Offset: 0x003F0E60
+	// Token: 0x0600D78C RID: 55180 RVA: 0x003FF258 File Offset: 0x003FD458
 	public ReignsCard GetReignsCallCard(int id)
 	{
 		return ConfigReignsCardById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x170013C3 RID: 5059
-	// (get) Token: 0x06010325 RID: 66341 RVA: 0x003F2C7C File Offset: 0x003F0E7C
+	// Token: 0x170013F0 RID: 5104
+	// (get) Token: 0x0600D78D RID: 55181 RVA: 0x003FF274 File Offset: 0x003FD474
 	public static KingShipConfig Instance
 	{
 		get
@@ -48,7 +48,7 @@ public class KingShipConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010326 RID: 66342 RVA: 0x003F2C83 File Offset: 0x003F0E83
+	// Token: 0x0600D78E RID: 55182 RVA: 0x003FF27B File Offset: 0x003FD47B
 	public static KingShipConfig GetOrCreateInstance()
 	{
 		if (KingShipConfig._Instance == null)
@@ -58,7 +58,7 @@ public class KingShipConfig : ConfigBase
 		return KingShipConfig._Instance;
 	}
 
-	// Token: 0x06010327 RID: 66343 RVA: 0x003F2C97 File Offset: 0x003F0E97
+	// Token: 0x0600D78F RID: 55183 RVA: 0x003FF28F File Offset: 0x003FD48F
 	public static bool CreateInstance()
 	{
 		if (KingShipConfig._Instance != null)
@@ -69,24 +69,24 @@ public class KingShipConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06010328 RID: 66344 RVA: 0x003F2CAD File Offset: 0x003F0EAD
+	// Token: 0x0600D790 RID: 55184 RVA: 0x003FF2A5 File Offset: 0x003FD4A5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010329 RID: 66345 RVA: 0x003F2CAF File Offset: 0x003F0EAF
+	// Token: 0x0600D791 RID: 55185 RVA: 0x003FF2A7 File Offset: 0x003FD4A7
 	public static void ResetStaticDefaultValue()
 	{
 		KingShipConfig._Instance = null;
 	}
 
-	// Token: 0x0601032A RID: 66346 RVA: 0x003F2CB7 File Offset: 0x003F0EB7
+	// Token: 0x0600D792 RID: 55186 RVA: 0x003FF2AF File Offset: 0x003FD4AF
 	static KingShipConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KingShipConfig.CreateStaticDefaultValue), new Action(KingShipConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040077DA RID: 30682
+	// Token: 0x040078C3 RID: 30915
 	[Nullable(2)]
 	private static KingShipConfig _Instance;
 }

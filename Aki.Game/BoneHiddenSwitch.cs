@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02003016 RID: 12310
+// Token: 0x0200256C RID: 9580
 [NullableContext(1)]
 [Nullable(0)]
 public class BoneHiddenSwitch : IDynamicConditionSwitch
 {
-	// Token: 0x0601A141 RID: 106817 RVA: 0x006D6320 File Offset: 0x006D4520
+	// Token: 0x06017A89 RID: 96905 RVA: 0x006FE228 File Offset: 0x006FC428
 	public void Init(CharacterActorComponent actor, EntityAudioConfig config)
 	{
 		if (config.BoneHiddenSwitchLength != 4)
@@ -28,7 +28,7 @@ public class BoneHiddenSwitch : IDynamicConditionSwitch
 		this.SetSwitch(this.LastHidden, actor);
 	}
 
-	// Token: 0x0601A142 RID: 106818 RVA: 0x006D63E4 File Offset: 0x006D45E4
+	// Token: 0x06017A8A RID: 96906 RVA: 0x006FE2EC File Offset: 0x006FC4EC
 	public void Do(CharacterActorComponent actor)
 	{
 		bool flag = actor.Actor.Mesh.IsBoneHiddenByName(FNameUtil.GetDynamicFName(this.BoneName) ?? FName.NAME_None);
@@ -40,31 +40,31 @@ public class BoneHiddenSwitch : IDynamicConditionSwitch
 		}
 	}
 
-	// Token: 0x0601A143 RID: 106819 RVA: 0x006D6447 File Offset: 0x006D4647
+	// Token: 0x06017A8B RID: 96907 RVA: 0x006FE34F File Offset: 0x006FC54F
 	private void SetSwitch(bool isHiddenBone, CharacterActorComponent actor)
 	{
 	}
 
-	// Token: 0x0601A144 RID: 106820 RVA: 0x006D6449 File Offset: 0x006D4649
+	// Token: 0x06017A8C RID: 96908 RVA: 0x006FE351 File Offset: 0x006FC551
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0400C5B3 RID: 50611
+	// Token: 0x0400C980 RID: 51584
 	private const int BONE_HIDDEN_SWITCH = 4;
 
-	// Token: 0x0400C5B4 RID: 50612
+	// Token: 0x0400C981 RID: 51585
 	public string BoneName = "";
 
-	// Token: 0x0400C5B5 RID: 50613
+	// Token: 0x0400C982 RID: 51586
 	public string SwitchGroup = "";
 
-	// Token: 0x0400C5B6 RID: 50614
+	// Token: 0x0400C983 RID: 51587
 	public string HiddenSwitch = "";
 
-	// Token: 0x0400C5B7 RID: 50615
+	// Token: 0x0400C984 RID: 51588
 	public string VisibleSwitch = "";
 
-	// Token: 0x0400C5B8 RID: 50616
+	// Token: 0x0400C985 RID: 51589
 	public bool LastHidden;
 }

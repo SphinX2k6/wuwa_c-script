@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D2B RID: 19755
+	// Token: 0x02003CE4 RID: 15588
 	public enum ERoleDevelopStateTagType
 	{
-		// Token: 0x0401B22C RID: 111148
+		// Token: 0x04015BC6 RID: 89030
 		Lack = 1,
-		// Token: 0x0401B22D RID: 111149
+		// Token: 0x04015BC7 RID: 89031
 		CanBeFilled,
-		// Token: 0x0401B22E RID: 111150
+		// Token: 0x04015BC8 RID: 89032
 		Completed
 	}
 }

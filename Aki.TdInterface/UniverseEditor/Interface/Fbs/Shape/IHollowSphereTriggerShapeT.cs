@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C23 RID: 15395
+	// Token: 0x0200402F RID: 16431
 	public class IHollowSphereTriggerShapeT
 	{
-		// Token: 0x170069FA RID: 27130
-		// (get) Token: 0x060153E5 RID: 87013 RVA: 0x0031370F File Offset: 0x0031190F
-		// (set) Token: 0x060153E6 RID: 87014 RVA: 0x00313717 File Offset: 0x00311917
+		// Token: 0x17006FA2 RID: 28578
+		// (get) Token: 0x060168DB RID: 92379 RVA: 0x0033A297 File Offset: 0x00338497
+		// (set) Token: 0x060168DC RID: 92380 RVA: 0x0033A29F File Offset: 0x0033849F
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x170069FB RID: 27131
-		// (get) Token: 0x060153E7 RID: 87015 RVA: 0x00313720 File Offset: 0x00311920
-		// (set) Token: 0x060153E8 RID: 87016 RVA: 0x00313728 File Offset: 0x00311928
+		// Token: 0x17006FA3 RID: 28579
+		// (get) Token: 0x060168DD RID: 92381 RVA: 0x0033A2A8 File Offset: 0x003384A8
+		// (set) Token: 0x060168DE RID: 92382 RVA: 0x0033A2B0 File Offset: 0x003384B0
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x170069FC RID: 27132
-		// (get) Token: 0x060153E9 RID: 87017 RVA: 0x00313731 File Offset: 0x00311931
-		// (set) Token: 0x060153EA RID: 87018 RVA: 0x00313739 File Offset: 0x00311939
+		// Token: 0x17006FA4 RID: 28580
+		// (get) Token: 0x060168DF RID: 92383 RVA: 0x0033A2B9 File Offset: 0x003384B9
+		// (set) Token: 0x060168E0 RID: 92384 RVA: 0x0033A2C1 File Offset: 0x003384C1
 		public int Radius { get; set; }
 
-		// Token: 0x170069FD RID: 27133
-		// (get) Token: 0x060153EB RID: 87019 RVA: 0x00313742 File Offset: 0x00311942
-		// (set) Token: 0x060153EC RID: 87020 RVA: 0x0031374A File Offset: 0x0031194A
+		// Token: 0x17006FA5 RID: 28581
+		// (get) Token: 0x060168E1 RID: 92385 RVA: 0x0033A2CA File Offset: 0x003384CA
+		// (set) Token: 0x060168E2 RID: 92386 RVA: 0x0033A2D2 File Offset: 0x003384D2
 		public int InnerRadius { get; set; }
 
-		// Token: 0x060153ED RID: 87021 RVA: 0x00313753 File Offset: 0x00311953
+		// Token: 0x060168E3 RID: 92387 RVA: 0x0033A2DB File Offset: 0x003384DB
 		public IHollowSphereTriggerShapeT()
 		{
 			this.Type = ETriggerShape.Box;

@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Utils.Command
 {
-	// Token: 0x0200456D RID: 17773
+	// Token: 0x02003495 RID: 13461
 	public interface ICommandTypeRemoveFollower : ICommandType
 	{
 	}

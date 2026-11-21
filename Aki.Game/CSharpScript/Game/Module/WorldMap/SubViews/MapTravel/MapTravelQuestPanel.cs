@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapTravel
 {
-	// Token: 0x02004801 RID: 18433
+	// Token: 0x02003732 RID: 14130
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MapTravelQuestPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030450 RID: 197712 RVA: 0x00B32637 File Offset: 0x00B30837
+		// Token: 0x06024C20 RID: 150560 RVA: 0x00A6259F File Offset: 0x00A6079F
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030451 RID: 197713 RVA: 0x00B32640 File Offset: 0x00B30840
+		// Token: 0x06024C21 RID: 150561 RVA: 0x00A625A8 File Offset: 0x00A607A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapTravelQuestPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapTravel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030452 RID: 197714 RVA: 0x00B32684 File Offset: 0x00B30884
+		// Token: 0x06024C22 RID: 150562 RVA: 0x00A625EC File Offset: 0x00A607EC
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapTravel
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06030453 RID: 197715 RVA: 0x00B32700 File Offset: 0x00B30900
+		// Token: 0x06024C23 RID: 150563 RVA: 0x00A62668 File Offset: 0x00A60868
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapTravel
 			}
 		}
 
-		// Token: 0x06030454 RID: 197716 RVA: 0x00B3279B File Offset: 0x00B3099B
+		// Token: 0x06024C24 RID: 150564 RVA: 0x00A62703 File Offset: 0x00A60903
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleTrack();
 		}
 
-		// Token: 0x06030455 RID: 197717 RVA: 0x00B327A4 File Offset: 0x00B309A4
+		// Token: 0x06024C25 RID: 150565 RVA: 0x00A6270C File Offset: 0x00A6090C
 		private void UpdateSubTypeView()
 		{
 			if (this.SelectedMarkItem == null)
@@ -130,20 +130,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapTravel
 			}
 		}
 
-		// Token: 0x04019FAE RID: 106414
+		// Token: 0x04014662 RID: 83554
 		private ConfigMarkItem SelectedMarkItem;
 
-		// Token: 0x04019FAF RID: 106415
+		// Token: 0x04014663 RID: 83555
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x04019FB0 RID: 106416
+		// Token: 0x04014664 RID: 83556
 		private PopupListItemPanel PopupListItemPanel;
 
-		// Token: 0x0200AAD1 RID: 43729
+		// Token: 0x02009482 RID: 38018
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F35 RID: 212789
+			// Token: 0x0402E6B8 RID: 190136
 			public const int MapTravelQuestPanel = 0;
 		}
 	}

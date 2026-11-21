@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A66 RID: 14950
+	// Token: 0x02003E41 RID: 15937
 	public struct IBvbMaxRound : IFlatbufferObject
 	{
-		// Token: 0x17006678 RID: 26232
-		// (get) Token: 0x0601443F RID: 83007 RVA: 0x002F5E31 File Offset: 0x002F4031
+		// Token: 0x17006BA8 RID: 27560
+		// (get) Token: 0x0601575B RID: 87899 RVA: 0x0031901D File Offset: 0x0031721D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014440 RID: 83008 RVA: 0x002F5E3E File Offset: 0x002F403E
+		// Token: 0x0601575C RID: 87900 RVA: 0x0031902A File Offset: 0x0031722A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014441 RID: 83009 RVA: 0x002F5E48 File Offset: 0x002F4048
+		// Token: 0x0601575D RID: 87901 RVA: 0x00319034 File Offset: 0x00317234
 		public static IBvbMaxRound GetRootAsIBvbMaxRound(ByteBuffer _bb)
 		{
 			return IBvbMaxRound.GetRootAsIBvbMaxRound(_bb, default(IBvbMaxRound));
 		}
 
-		// Token: 0x06014442 RID: 83010 RVA: 0x002F5E64 File Offset: 0x002F4064
+		// Token: 0x0601575E RID: 87902 RVA: 0x00319050 File Offset: 0x00317250
 		public static IBvbMaxRound GetRootAsIBvbMaxRound(ByteBuffer _bb, IBvbMaxRound obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014443 RID: 83011 RVA: 0x002F5E81 File Offset: 0x002F4081
+		// Token: 0x0601575F RID: 87903 RVA: 0x0031906D File Offset: 0x0031726D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014444 RID: 83012 RVA: 0x002F5E90 File Offset: 0x002F4090
+		// Token: 0x06015760 RID: 87904 RVA: 0x0031907C File Offset: 0x0031727C
 		public IBvbMaxRound __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006679 RID: 26233
-		// (get) Token: 0x06014445 RID: 83013 RVA: 0x002F5EA0 File Offset: 0x002F40A0
+		// Token: 0x17006BA9 RID: 27561
+		// (get) Token: 0x06015761 RID: 87905 RVA: 0x0031908C File Offset: 0x0031728C
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014446 RID: 83014 RVA: 0x002F5EDC File Offset: 0x002F40DC
+		// Token: 0x06015762 RID: 87906 RVA: 0x003190C8 File Offset: 0x003172C8
 		public static Offset<IBvbMaxRound> CreateIBvbMaxRound(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbMaxRound.EndIBvbMaxRound(builder);
 		}
 
-		// Token: 0x06014447 RID: 83015 RVA: 0x002F5EF2 File Offset: 0x002F40F2
+		// Token: 0x06015763 RID: 87907 RVA: 0x003190DE File Offset: 0x003172DE
 		public static void StartIBvbMaxRound(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014448 RID: 83016 RVA: 0x002F5EFB File Offset: 0x002F40FB
+		// Token: 0x06015764 RID: 87908 RVA: 0x003190E7 File Offset: 0x003172E7
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014449 RID: 83017 RVA: 0x002F5F06 File Offset: 0x002F4106
+		// Token: 0x06015765 RID: 87909 RVA: 0x003190F2 File Offset: 0x003172F2
 		public static Offset<IBvbMaxRound> EndIBvbMaxRound(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbMaxRound>(builder.EndTable());
 		}
 
-		// Token: 0x0601444A RID: 83018 RVA: 0x002F5F14 File Offset: 0x002F4114
+		// Token: 0x06015766 RID: 87910 RVA: 0x00319100 File Offset: 0x00317300
 		public IBvbMaxRoundT UnPack()
 		{
 			IBvbMaxRoundT bvbMaxRoundT = new IBvbMaxRoundT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbMaxRoundT;
 		}
 
-		// Token: 0x0601444B RID: 83019 RVA: 0x002F5F2F File Offset: 0x002F412F
+		// Token: 0x06015767 RID: 87911 RVA: 0x0031911B File Offset: 0x0031731B
 		public void UnPackTo(IBvbMaxRoundT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601444C RID: 83020 RVA: 0x002F5F40 File Offset: 0x002F4140
+		// Token: 0x06015768 RID: 87912 RVA: 0x0031912C File Offset: 0x0031732C
 		public static Offset<IBvbMaxRound> Pack(FlatBufferBuilder builder, IBvbMaxRoundT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbMaxRound.CreateIBvbMaxRound(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEEA RID: 44778
+		// Token: 0x0400B80C RID: 47116
 		private Table __p;
 	}
 }

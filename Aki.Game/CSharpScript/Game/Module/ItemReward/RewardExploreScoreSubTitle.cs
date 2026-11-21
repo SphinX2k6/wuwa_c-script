@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005807 RID: 22535
+	// Token: 0x020047DE RID: 18398
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreScoreSubTitle : UiPanelBase
 	{
-		// Token: 0x06039495 RID: 234645 RVA: 0x00D9600C File Offset: 0x00D9420C
+		// Token: 0x0602E3A9 RID: 189353 RVA: 0x00CE4E74 File Offset: 0x00CE3074
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039496 RID: 234646 RVA: 0x00D960D8 File Offset: 0x00D942D8
+		// Token: 0x0602E3AA RID: 189354 RVA: 0x00CE4F40 File Offset: 0x00CE3140
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardExploreScoreSubTitle.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039497 RID: 234647 RVA: 0x00D9611C File Offset: 0x00D9431C
+		// Token: 0x0602E3AB RID: 189355 RVA: 0x00CE4F84 File Offset: 0x00CE3184
 		public void RefreshData(IRewardExploreScoreBelongHalfArea exploreScore)
 		{
 			int num = 0;
@@ -76,40 +76,40 @@ namespace CSharpScript.Game.Module.ItemReward
 			newRecordItemInstance.Refresh(exploreScore);
 		}
 
-		// Token: 0x0401DF54 RID: 122708
+		// Token: 0x040189EB RID: 100843
 		private readonly List<RewardExploreScoreSubTitleItem> FirstItemList = new List<RewardExploreScoreSubTitleItem>();
 
-		// Token: 0x0401DF55 RID: 122709
+		// Token: 0x040189EC RID: 100844
 		private readonly List<RewardExploreScoreSubTitleItem> LowItemList = new List<RewardExploreScoreSubTitleItem>();
 
-		// Token: 0x0401DF56 RID: 122710
+		// Token: 0x040189ED RID: 100845
 		private RewardExploreScoreSubTitle.NewRecordItem NewRecordItemInstance;
 
-		// Token: 0x0200BA06 RID: 47622
+		// Token: 0x0200A41C RID: 42012
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040383B1 RID: 230321
+			// Token: 0x04032D9E RID: 208286
 			public const int FirstTargetItem1 = 0;
 
-			// Token: 0x040383B2 RID: 230322
+			// Token: 0x04032D9F RID: 208287
 			public const int FirstTargetItem2 = 1;
 
-			// Token: 0x040383B3 RID: 230323
+			// Token: 0x04032DA0 RID: 208288
 			public const int LowTargetItem1 = 2;
 
-			// Token: 0x040383B4 RID: 230324
+			// Token: 0x04032DA1 RID: 208289
 			public const int LowTargetItem2 = 3;
 
-			// Token: 0x040383B5 RID: 230325
+			// Token: 0x04032DA2 RID: 208290
 			public const int NewRecordItem = 4;
 		}
 
-		// Token: 0x0200BA07 RID: 47623
+		// Token: 0x0200A41D RID: 42013
 		[NullableContext(0)]
 		public class NewRecordItem : UiPanelBase
 		{
-			// Token: 0x0604F73A RID: 325434 RVA: 0x0154377C File Offset: 0x0154197C
+			// Token: 0x06045CC6 RID: 285894 RVA: 0x014FCAC4 File Offset: 0x014FACC4
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 3;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 			}
 
-			// Token: 0x0604F73B RID: 325435 RVA: 0x01543811 File Offset: 0x01541A11
+			// Token: 0x06045CC7 RID: 285895 RVA: 0x014FCB59 File Offset: 0x014FAD59
 			[NullableContext(1)]
 			public void Refresh(IRewardExploreScoreBelongHalfArea data)
 			{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.SetNewRecordItemVisible(data.IfNewRecord);
 			}
 
-			// Token: 0x0604F73C RID: 325436 RVA: 0x01543828 File Offset: 0x01541A28
+			// Token: 0x06045CC8 RID: 285896 RVA: 0x014FCB70 File Offset: 0x014FAD70
 			[NullableContext(1)]
 			private void RefreshRecord(IRewardExploreScoreBelongHalfArea data)
 			{
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				text.SetText(data.FullScore.ToString(), true);
 			}
 
-			// Token: 0x0604F73D RID: 325437 RVA: 0x01543855 File Offset: 0x01541A55
+			// Token: 0x06045CC9 RID: 285897 RVA: 0x014FCB9D File Offset: 0x014FAD9D
 			private void SetNewRecordItemVisible(bool bVisible)
 			{
 				UUIItem item = base.GetItem(2);
@@ -157,16 +157,16 @@ namespace CSharpScript.Game.Module.ItemReward
 				item.SetUIActive(bVisible);
 			}
 
-			// Token: 0x0200D16E RID: 53614
+			// Token: 0x0200BD4C RID: 48460
 			private class ENewRecordComponent
 			{
-				// Token: 0x0403EDA0 RID: 257440
+				// Token: 0x0403A1E8 RID: 238056
 				public const int TitleText = 0;
 
-				// Token: 0x0403EDA1 RID: 257441
+				// Token: 0x0403A1E9 RID: 238057
 				public const int RecordText = 1;
 
-				// Token: 0x0403EDA2 RID: 257442
+				// Token: 0x0403A1EA RID: 238058
 				public const int NewRecordItem = 2;
 			}
 		}

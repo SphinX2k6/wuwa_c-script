@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005763 RID: 22371
+	// Token: 0x0200473A RID: 18234
 	public class KurotatoHandBookRoleTabView : UiTabViewBase
 	{
-		// Token: 0x06038D57 RID: 232791 RVA: 0x00D805D4 File Offset: 0x00D7E7D4
+		// Token: 0x0602DC67 RID: 187495 RVA: 0x00CCF07C File Offset: 0x00CCD27C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D58 RID: 232792 RVA: 0x00D8061C File Offset: 0x00D7E81C
+		// Token: 0x0602DC68 RID: 187496 RVA: 0x00CCF0C4 File Offset: 0x00CCD2C4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoHandBookRoleTabView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D59 RID: 232793 RVA: 0x00D8065F File Offset: 0x00D7E85F
+		// Token: 0x0602DC69 RID: 187497 RVA: 0x00CCF107 File Offset: 0x00CCD307
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -46,26 +46,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.KurotatoHandBookRolePanel.RefreshRoleList();
 		}
 
-		// Token: 0x06038D5A RID: 232794 RVA: 0x00D80682 File Offset: 0x00D7E882
+		// Token: 0x0602DC6A RID: 187498 RVA: 0x00CCF12A File Offset: 0x00CCD32A
 		protected override void OnShowUiTabViewFromView()
 		{
 			this.KurotatoHandBookRolePanel.RefreshRoleList();
 		}
 
-		// Token: 0x06038D5B RID: 232795 RVA: 0x00D8068F File Offset: 0x00D7E88F
+		// Token: 0x0602DC6B RID: 187499 RVA: 0x00CCF137 File Offset: 0x00CCD337
 		protected override void OnHideUiTabViewBase(bool fromToggle)
 		{
 			KurotatoActivityController.Instance.GetActivityData().ReadRoleRedDot();
 		}
 
-		// Token: 0x0401DCFA RID: 122106
+		// Token: 0x04018790 RID: 100240
 		[Nullable(1)]
 		private readonly KurotatoHandBookRolePanel KurotatoHandBookRolePanel = new KurotatoHandBookRolePanel();
 
-		// Token: 0x0200B95D RID: 47453
+		// Token: 0x0200A379 RID: 41849
 		private enum EHandBookRoleTabViewComponent
 		{
-			// Token: 0x040380DE RID: 229598
+			// Token: 0x04032AE0 RID: 207584
 			ItemRoleViewPanel
 		}
 	}

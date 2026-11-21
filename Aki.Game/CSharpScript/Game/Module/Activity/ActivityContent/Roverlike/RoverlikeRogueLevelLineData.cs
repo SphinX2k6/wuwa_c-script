@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200618D RID: 24973
+	// Token: 0x0200510B RID: 20747
 	public class RoverlikeRogueLevelLineData : IRoverlikeRogueLevelLineData
 	{
-		// Token: 0x170091E0 RID: 37344
-		// (get) Token: 0x0603F1A8 RID: 258472 RVA: 0x00F3F1A6 File Offset: 0x00F3D3A6
-		// (set) Token: 0x0603F1A9 RID: 258473 RVA: 0x00F3F1AE File Offset: 0x00F3D3AE
+		// Token: 0x17006542 RID: 25922
+		// (get) Token: 0x06033E68 RID: 212584 RVA: 0x00E8606E File Offset: 0x00E8426E
+		// (set) Token: 0x06033E69 RID: 212585 RVA: 0x00E86076 File Offset: 0x00E84276
 		public ERoverlikeRoadLayerType LayerType { get; set; } = ERoverlikeRoadLayerType.Normal;
 
-		// Token: 0x170091E1 RID: 37345
-		// (get) Token: 0x0603F1AA RID: 258474 RVA: 0x00F3F1B7 File Offset: 0x00F3D3B7
-		// (set) Token: 0x0603F1AB RID: 258475 RVA: 0x00F3F1BF File Offset: 0x00F3D3BF
+		// Token: 0x17006543 RID: 25923
+		// (get) Token: 0x06033E6A RID: 212586 RVA: 0x00E8607F File Offset: 0x00E8427F
+		// (set) Token: 0x06033E6B RID: 212587 RVA: 0x00E86087 File Offset: 0x00E84287
 		public bool IsCurrent { get; set; }
 
-		// Token: 0x170091E2 RID: 37346
-		// (get) Token: 0x0603F1AC RID: 258476 RVA: 0x00F3F1C8 File Offset: 0x00F3D3C8
-		// (set) Token: 0x0603F1AD RID: 258477 RVA: 0x00F3F1D0 File Offset: 0x00F3D3D0
+		// Token: 0x17006544 RID: 25924
+		// (get) Token: 0x06033E6C RID: 212588 RVA: 0x00E86090 File Offset: 0x00E84290
+		// (set) Token: 0x06033E6D RID: 212589 RVA: 0x00E86098 File Offset: 0x00E84298
 		public bool IsPassed { get; set; }
 
-		// Token: 0x170091E3 RID: 37347
-		// (get) Token: 0x0603F1AE RID: 258478 RVA: 0x00F3F1D9 File Offset: 0x00F3D3D9
-		// (set) Token: 0x0603F1AF RID: 258479 RVA: 0x00F3F1E1 File Offset: 0x00F3D3E1
+		// Token: 0x17006545 RID: 25925
+		// (get) Token: 0x06033E6E RID: 212590 RVA: 0x00E860A1 File Offset: 0x00E842A1
+		// (set) Token: 0x06033E6F RID: 212591 RVA: 0x00E860A9 File Offset: 0x00E842A9
 		public bool ShowCurrent { get; set; }
 	}
 }

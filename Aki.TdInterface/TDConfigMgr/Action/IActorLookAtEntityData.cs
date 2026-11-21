@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001782 RID: 6018
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001903 RID: 6403
 	public class IActorLookAtEntityData : IActorLookAtLockable
 	{
-		// Token: 0x06007F67 RID: 32615 RVA: 0x0013093C File Offset: 0x0012EB3C
+		// Token: 0x06008657 RID: 34391 RVA: 0x0013FB9C File Offset: 0x0013DD9C
 		private IActorLookAtEntityData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F68 RID: 32616 RVA: 0x00130974 File Offset: 0x0012EB74
+		// Token: 0x06008658 RID: 34392 RVA: 0x0013FBD4 File Offset: 0x0013DDD4
 		public static IActorLookAtEntityData Create([Nullable(2)] IActorLookAtEntityData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F69 RID: 32617 RVA: 0x00130987 File Offset: 0x0012EB87
+		// Token: 0x06008659 RID: 34393 RVA: 0x0013FBE7 File Offset: 0x0013DDE7
 		public static IActorLookAtEntityData CreateFromSetValue([Nullable(2)] IActorLookAtEntityData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F6A RID: 32618 RVA: 0x0013099A File Offset: 0x0012EB9A
+		// Token: 0x0600865A RID: 34394 RVA: 0x0013FBFA File Offset: 0x0013DDFA
 		public new IActorLookAtEntityData_SetValue ToSetValue()
 		{
 			return new IActorLookAtEntityData_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029C5 RID: 10693
-		// (get) Token: 0x06007F6B RID: 32619 RVA: 0x001309C5 File Offset: 0x0012EBC5
-		// (set) Token: 0x06007F6C RID: 32620 RVA: 0x001309F0 File Offset: 0x0012EBF0
+		// Token: 0x17002BB3 RID: 11187
+		// (get) Token: 0x0600865B RID: 34395 RVA: 0x0013FC25 File Offset: 0x0013DE25
+		// (set) Token: 0x0600865C RID: 34396 RVA: 0x0013FC50 File Offset: 0x0013DE50
 		public override EActorLookAtMode Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029C6 RID: 10694
-		// (get) Token: 0x06007F6D RID: 32621 RVA: 0x00130A00 File Offset: 0x0012EC00
-		// (set) Token: 0x06007F6E RID: 32622 RVA: 0x00130A3A File Offset: 0x0012EC3A
+		// Token: 0x17002BB4 RID: 11188
+		// (get) Token: 0x0600865D RID: 34397 RVA: 0x0013FC60 File Offset: 0x0013DE60
+		// (set) Token: 0x0600865E RID: 34398 RVA: 0x0013FC9A File Offset: 0x0013DE9A
 		public override bool? Lock
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029C7 RID: 10695
-		// (get) Token: 0x06007F6F RID: 32623 RVA: 0x00130A48 File Offset: 0x0012EC48
-		// (set) Token: 0x06007F70 RID: 32624 RVA: 0x00130A73 File Offset: 0x0012EC73
+		// Token: 0x17002BB5 RID: 11189
+		// (get) Token: 0x0600865F RID: 34399 RVA: 0x0013FCA8 File Offset: 0x0013DEA8
+		// (set) Token: 0x06008660 RID: 34400 RVA: 0x0013FCD3 File Offset: 0x0013DED3
 		public virtual int EntityId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050FE RID: 20734
+		// Token: 0x04005534 RID: 21812
 		[Nullable(2)]
 		protected new IActorLookAtEntityData FbInstance;
 
-		// Token: 0x040050FF RID: 20735
+		// Token: 0x04005535 RID: 21813
 		[Nullable(2)]
 		protected new IActorLookAtEntityData_SetValue PocoInterface;
 	}

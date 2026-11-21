@@ -14,19 +14,19 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 {
-	// Token: 0x020061AD RID: 25005
+	// Token: 0x0200512B RID: 20779
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivityRogueController : ActivityControllerBase
 	{
-		// Token: 0x0603F264 RID: 258660 RVA: 0x00F414CB File Offset: 0x00F3F6CB
+		// Token: 0x06033F24 RID: 212772 RVA: 0x00E88393 File Offset: 0x00E86593
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603F265 RID: 258661 RVA: 0x00F414D0 File Offset: 0x00F3F6D0
+		// Token: 0x06033F25 RID: 212773 RVA: 0x00E88398 File Offset: 0x00E86598
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			if (this.GetFunctionTypeById(data.Id).GetValueOrDefault() != ERogueFunctionType.View)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			this.ActivityFunctionExecute(data.Id);
 		}
 
-		// Token: 0x0603F266 RID: 258662 RVA: 0x00F41504 File Offset: 0x00F3F704
+		// Token: 0x06033F26 RID: 212774 RVA: 0x00E883CC File Offset: 0x00E865CC
 		private ERogueFunctionType? GetFunctionTypeById(int activityId)
 		{
 			ActivityRogueConfig instance = ActivityRogueConfig.Instance;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return new ERogueFunctionType?((ERogueFunctionType)rogueActivity.Value.FunctionType);
 		}
 
-		// Token: 0x0603F267 RID: 258663 RVA: 0x00F41554 File Offset: 0x00F3F754
+		// Token: 0x06033F27 RID: 212775 RVA: 0x00E8841C File Offset: 0x00E8661C
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			ActivityRogueConfig instance = ActivityRogueConfig.Instance;
@@ -60,46 +60,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return rogueActivity.Value.ActivityResource;
 		}
 
-		// Token: 0x0603F268 RID: 258664 RVA: 0x00F4159F File Offset: 0x00F3F79F
+		// Token: 0x06033F28 RID: 212776 RVA: 0x00E88467 File Offset: 0x00E86667
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySubViewRogue();
 		}
 
-		// Token: 0x0603F269 RID: 258665 RVA: 0x00F415A6 File Offset: 0x00F3F7A6
+		// Token: 0x06033F29 RID: 212777 RVA: 0x00E8846E File Offset: 0x00E8666E
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
 			return new ActivityRogueData();
 		}
 
-		// Token: 0x0603F26A RID: 258666 RVA: 0x00F415B9 File Offset: 0x00F3F7B9
+		// Token: 0x06033F2A RID: 212778 RVA: 0x00E88481 File Offset: 0x00E86681
 		protected override bool OnInit()
 		{
 			this.RegisterOpenViewFunc();
 			return true;
 		}
 
-		// Token: 0x0603F26B RID: 258667 RVA: 0x00F415C2 File Offset: 0x00F3F7C2
+		// Token: 0x06033F2B RID: 212779 RVA: 0x00E8848A File Offset: 0x00E8668A
 		protected override bool OnClear()
 		{
 			this.OpenViewFuncMap.Clear();
 			return true;
 		}
 
-		// Token: 0x0603F26C RID: 258668 RVA: 0x00F415D0 File Offset: 0x00F3F7D0
+		// Token: 0x06033F2C RID: 212780 RVA: 0x00E88498 File Offset: 0x00E86698
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603F26D RID: 258669 RVA: 0x00F415EE File Offset: 0x00F3F7EE
+		// Token: 0x06033F2D RID: 212781 RVA: 0x00E884B6 File Offset: 0x00E866B6
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		}
 
-		// Token: 0x0603F26E RID: 258670 RVA: 0x00F4160C File Offset: 0x00F3F80C
+		// Token: 0x06033F2E RID: 212782 RVA: 0x00E884D4 File Offset: 0x00E866D4
 		private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason _)
 		{
 			foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.RougeActivity))
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x0603F26F RID: 258671 RVA: 0x00F41670 File Offset: 0x00F3F870
+		// Token: 0x06033F2F RID: 212783 RVA: 0x00E88538 File Offset: 0x00E86738
 		[NullableContext(2)]
 		public ActivityRogueData GetCurrentActivityData()
 		{
@@ -124,13 +124,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return activityRogueData;
 		}
 
-		// Token: 0x0603F270 RID: 258672 RVA: 0x00F41699 File Offset: 0x00F3F899
+		// Token: 0x06033F30 RID: 212784 RVA: 0x00E88561 File Offset: 0x00E86761
 		public void RefreshActivityRedDot()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}
 
-		// Token: 0x0603F271 RID: 258673 RVA: 0x00F416B4 File Offset: 0x00F3F8B4
+		// Token: 0x06033F31 RID: 212785 RVA: 0x00E8857C File Offset: 0x00E8677C
 		public void ActivityFunctionExecute(int activityId)
 		{
 			ActivityRogueConfig instance = ActivityRogueConfig.Instance;
@@ -168,13 +168,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x0603F272 RID: 258674 RVA: 0x00F417A0 File Offset: 0x00F3F9A0
+		// Token: 0x06033F32 RID: 212786 RVA: 0x00E88668 File Offset: 0x00E86868
 		private void FunctionExecuteQuest(int? questId)
 		{
 			UiManager.Instance.OpenView(EUiViewName.QuestView, questId, null);
 		}
 
-		// Token: 0x0603F273 RID: 258675 RVA: 0x00F417B8 File Offset: 0x00F3F9B8
+		// Token: 0x06033F33 RID: 212787 RVA: 0x00E88680 File Offset: 0x00E86880
 		private void FunctionExecuteView(EUiViewName viewName, [Nullable(new byte[]
 		{
 			2,
@@ -190,14 +190,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			UiManager.Instance.OpenView(viewName, (params_ != null) ? params_.ToArray() : null, null);
 		}
 
-		// Token: 0x0603F274 RID: 258676 RVA: 0x00F41809 File Offset: 0x00F3FA09
+		// Token: 0x06033F34 RID: 212788 RVA: 0x00E886D1 File Offset: 0x00E868D1
 		private void RegisterOpenViewFunc()
 		{
 			this.OpenViewFuncMap[EUiViewName.WorldMapView] = new Action<string[]>(this.OpenWorldMapView);
 			this.OpenViewFuncMap[EUiViewName.RoguelikeActivityView] = new Action<string[]>(this.OpenRoguelikeActivityView);
 		}
 
-		// Token: 0x0603F275 RID: 258677 RVA: 0x00F41844 File Offset: 0x00F3FA44
+		// Token: 0x06033F35 RID: 212789 RVA: 0x00E8870C File Offset: 0x00E8690C
 		private void OpenWorldMapView([Nullable(new byte[]
 		{
 			2,
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 		}
 
-		// Token: 0x0603F276 RID: 258678 RVA: 0x00F418F2 File Offset: 0x00F3FAF2
+		// Token: 0x06033F36 RID: 212790 RVA: 0x00E887BA File Offset: 0x00E869BA
 		private void OpenRoguelikeActivityView([Nullable(new byte[]
 		{
 			2,
@@ -229,8 +229,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			RoguelikeController.Instance.OpenRoguelikeActivityView().Forget<bool>();
 		}
 
-		// Token: 0x1700920A RID: 37386
-		// (get) Token: 0x0603F277 RID: 258679 RVA: 0x00F41903 File Offset: 0x00F3FB03
+		// Token: 0x1700656C RID: 25964
+		// (get) Token: 0x06033F37 RID: 212791 RVA: 0x00E887CB File Offset: 0x00E869CB
 		public static ActivityRogueController Instance
 		{
 			get
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			}
 		}
 
-		// Token: 0x0603F278 RID: 258680 RVA: 0x00F4190A File Offset: 0x00F3FB0A
+		// Token: 0x06033F38 RID: 212792 RVA: 0x00E887D2 File Offset: 0x00E869D2
 		public static ActivityRogueController GetOrCreateInstance()
 		{
 			if (ActivityRogueController._Instance == null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return ActivityRogueController._Instance;
 		}
 
-		// Token: 0x0603F279 RID: 258681 RVA: 0x00F4191E File Offset: 0x00F3FB1E
+		// Token: 0x06033F39 RID: 212793 RVA: 0x00E887E6 File Offset: 0x00E869E6
 		public static bool CreateInstance()
 		{
 			if (ActivityRogueController._Instance != null)
@@ -260,27 +260,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 			return true;
 		}
 
-		// Token: 0x0603F27A RID: 258682 RVA: 0x00F41934 File Offset: 0x00F3FB34
+		// Token: 0x06033F3A RID: 212794 RVA: 0x00E887FC File Offset: 0x00E869FC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F27B RID: 258683 RVA: 0x00F41936 File Offset: 0x00F3FB36
+		// Token: 0x06033F3B RID: 212795 RVA: 0x00E887FE File Offset: 0x00E869FE
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityRogueController._Instance = null;
 		}
 
-		// Token: 0x0603F27C RID: 258684 RVA: 0x00F4193E File Offset: 0x00F3FB3E
+		// Token: 0x06033F3C RID: 212796 RVA: 0x00E88806 File Offset: 0x00E86A06
 		static ActivityRogueController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityRogueController.CreateStaticDefaultValue), new Action(ActivityRogueController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020EA8 RID: 134824
+		// Token: 0x0401B7D5 RID: 112597
 		public int ActivityId;
 
-		// Token: 0x04020EA9 RID: 134825
+		// Token: 0x0401B7D6 RID: 112598
 		[Nullable(new byte[]
 		{
 			1,
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 		})]
 		public Dictionary<EUiViewName, Action<string[]>> OpenViewFuncMap = new Dictionary<EUiViewName, Action<string[]>>();
 
-		// Token: 0x04020EAA RID: 134826
+		// Token: 0x0401B7D7 RID: 112599
 		[Nullable(2)]
 		private static ActivityRogueController _Instance;
 	}

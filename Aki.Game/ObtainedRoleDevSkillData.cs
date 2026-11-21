@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200281E RID: 10270
+// Token: 0x02001D99 RID: 7577
 [NullableContext(1)]
 [Nullable(0)]
 public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 {
-	// Token: 0x060151E2 RID: 86498 RVA: 0x00558303 File Offset: 0x00556503
+	// Token: 0x06012BE2 RID: 76770 RVA: 0x005830AB File Offset: 0x005812AB
 	protected override void InitByRoleType(int roleId, RoleDevViewModel roleDevViewModel)
 	{
 		this.RoleDevViewModelInternal = roleDevViewModel;
 		this.InitSkillData(roleId);
 	}
 
-	// Token: 0x060151E3 RID: 86499 RVA: 0x00558314 File Offset: 0x00556514
+	// Token: 0x06012BE3 RID: 76771 RVA: 0x005830BC File Offset: 0x005812BC
 	private void InitSkillData(int roleId)
 	{
 		RoleDevCultivateProject? cultivateProject = RoleDevUtils.GetCultivateProject(roleId);
@@ -25,10 +24,8 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		{
 			return;
 		}
-		int[] normalSkillLevelArray = cultivateProject.Value.GetNormalSkillLevelArray();
-		List<int> list = ((normalSkillLevelArray != null) ? normalSkillLevelArray.ToList<int>() : null) ?? new List<int>();
-		int[] prefectSkillLevelArray = cultivateProject.Value.GetPrefectSkillLevelArray();
-		List<int> list2 = ((prefectSkillLevelArray != null) ? prefectSkillLevelArray.ToList<int>() : null) ?? new List<int>();
+		List<int> list = new List<int>(cultivateProject.Value.GetNormalSkillLevelArray());
+		List<int> list2 = new List<int>(cultivateProject.Value.GetPrefectSkillLevelArray());
 		int[] canLevelUpSkillNodeIndexList = RoleDevConfig.Instance.GetCanLevelUpSkillNodeIndexList();
 		if (canLevelUpSkillNodeIndexList.Length != list.Count || canLevelUpSkillNodeIndexList.Length != list2.Count)
 		{
@@ -56,10 +53,9 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 			}
 		}
 		int[] skillTreeConfigArrayArray = cultivateProject.Value.GetSkillTreeConfigArrayArray();
-		List<int> list8 = (skillTreeConfigArrayArray != null) ? skillTreeConfigArrayArray.ToList<int>() : null;
-		if (list8 != null && list8.Count > 0)
+		if (skillTreeConfigArrayArray != null && skillTreeConfigArrayArray.Length != 0)
 		{
-			foreach (int nodeIndex2 in list8)
+			foreach (int nodeIndex2 in skillTreeConfigArrayArray)
 			{
 				SkillTree? skillTreeNodeByGroupIdAndIndex2 = RoleSkillConfig.Instance.GetSkillTreeNodeByGroupIdAndIndex(roleConfig.Value.SkillTreeGroupId, nodeIndex2);
 				if (skillTreeNodeByGroupIdAndIndex2 != null)
@@ -72,25 +68,25 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 				}
 			}
 		}
-		List<ISkillSlotExtendData> list9 = new List<ISkillSlotExtendData>();
-		for (int j = 0; j < list7.Count; j++)
+		List<ISkillSlotExtendData> list8 = new List<ISkillSlotExtendData>();
+		for (int k = 0; k < list7.Count; k++)
 		{
 			SkillSlotExtendData item = new SkillSlotExtendData
 			{
 				RoleId = roleId,
-				SkillNodeId = list7[j],
-				IconId = list7[j],
-				CurrentLevel = list3[j],
-				NormalTargetLevel = list4[j],
-				PerfectTargetLevel = list5[j],
-				SkillType = j + ESkillType.Skill1,
-				NodeIndex = j
+				SkillNodeId = list7[k],
+				IconId = list7[k],
+				CurrentLevel = list3[k],
+				NormalTargetLevel = list4[k],
+				PerfectTargetLevel = list5[k],
+				SkillType = k + ESkillType.Skill1,
+				NodeIndex = k
 			};
-			list9.Add(item);
+			list8.Add(item);
 		}
 		List<IRoleDevDetailItemData> detailItemsInternal = this.CreateSkillDetailItemsData(list6.ToArray(), list3.ToArray(), list4.ToArray(), roleId);
 		List<IRoleDevDetailItemData> perfectDetailItemsInternal = this.CreateSkillDetailItemsData(list6.ToArray(), list3.ToArray(), list5.ToArray(), roleId);
-		this.SkillSlotsInternal = list9;
+		this.SkillSlotsInternal = list8;
 		this.NormalTargetSkillLevelInternal = list4;
 		this.PerfectTargetSkillLevelInternal = list5;
 		this.DetailItemsInternal = detailItemsInternal;
@@ -107,58 +103,56 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		}
 	}
 
-	// Token: 0x060151E4 RID: 86500 RVA: 0x0055868C File Offset: 0x0055688C
+	// Token: 0x06012BE4 RID: 76772 RVA: 0x005833E2 File Offset: 0x005815E2
 	protected override bool GetIsRoleOwned()
 	{
 		return true;
 	}
 
-	// Token: 0x060151E5 RID: 86501 RVA: 0x0055868F File Offset: 0x0055688F
+	// Token: 0x06012BE5 RID: 76773 RVA: 0x005833E5 File Offset: 0x005815E5
 	protected override bool GetIsPerfectPlan()
 	{
 		RoleDevViewModel roleDevViewModelInternal = this.RoleDevViewModelInternal;
 		return roleDevViewModelInternal != null && roleDevViewModelInternal.GetRoleSkillPlanState(base.RoleId);
 	}
 
-	// Token: 0x060151E6 RID: 86502 RVA: 0x005586A8 File Offset: 0x005568A8
+	// Token: 0x06012BE6 RID: 76774 RVA: 0x005833FE File Offset: 0x005815FE
 	protected override bool GetIsNormalPlanFinished()
 	{
-		return this.CheckPlanFinished((from skillNodeId in this.AllSkillNodeIdListInternal
-		select RoleModel.Instance.GetRoleSkillTreeNodeLevel(base.RoleId, skillNodeId)).ToList<int>(), this.NormalTargetSkillLevelInternal);
+		return ObtainedRoleDevSkillData.CheckPlanFinished(base.RoleId, this.AllSkillNodeIdListInternal, this.NormalTargetSkillLevelInternal);
 	}
 
-	// Token: 0x060151E7 RID: 86503 RVA: 0x005586D2 File Offset: 0x005568D2
+	// Token: 0x06012BE7 RID: 76775 RVA: 0x00583417 File Offset: 0x00581617
 	protected override bool GetIsPerfectPlanFinished()
 	{
-		return this.CheckPlanFinished((from skillNodeId in this.AllSkillNodeIdListInternal
-		select RoleModel.Instance.GetRoleSkillTreeNodeLevel(base.RoleId, skillNodeId)).ToList<int>(), this.PerfectTargetSkillLevelInternal);
+		return ObtainedRoleDevSkillData.CheckPlanFinished(base.RoleId, this.AllSkillNodeIdListInternal, this.PerfectTargetSkillLevelInternal);
 	}
 
-	// Token: 0x060151E8 RID: 86504 RVA: 0x005586FC File Offset: 0x005568FC
+	// Token: 0x06012BE8 RID: 76776 RVA: 0x00583430 File Offset: 0x00581630
 	protected override List<ISkillSlotExtendData> GetSkillSlots()
 	{
 		return this.SkillSlotsInternal;
 	}
 
-	// Token: 0x060151E9 RID: 86505 RVA: 0x00558704 File Offset: 0x00556904
+	// Token: 0x06012BE9 RID: 76777 RVA: 0x00583438 File Offset: 0x00581638
 	protected override List<int> GetSkillGoalUpgradeLevel()
 	{
 		return this.NormalTargetSkillLevelInternal;
 	}
 
-	// Token: 0x060151EA RID: 86506 RVA: 0x0055870C File Offset: 0x0055690C
+	// Token: 0x06012BEA RID: 76778 RVA: 0x00583440 File Offset: 0x00581640
 	protected override List<IRoleDevDetailItemData> GetNormalDetailItems()
 	{
 		return this.DetailItemsInternal;
 	}
 
-	// Token: 0x060151EB RID: 86507 RVA: 0x00558714 File Offset: 0x00556914
+	// Token: 0x06012BEB RID: 76779 RVA: 0x00583448 File Offset: 0x00581648
 	protected override bool GetIsNormalAllMaterialEnough()
 	{
 		return RoleDevUtils.CheckAllItemsUp(this.DetailItemsInternal);
 	}
 
-	// Token: 0x060151EC RID: 86508 RVA: 0x00558724 File Offset: 0x00556924
+	// Token: 0x06012BEC RID: 76780 RVA: 0x00583458 File Offset: 0x00581658
 	protected override bool GetIsUnlockedPerfect()
 	{
 		int? playerLevel = FunctionModel.Instance.GetPlayerLevel();
@@ -167,25 +161,25 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		return this.PerfectTargetSkillLevelInternal.Count > 0 && playerLevel != null && num != null && playerLevel.Value >= num.Value;
 	}
 
-	// Token: 0x060151ED RID: 86509 RVA: 0x005587AC File Offset: 0x005569AC
+	// Token: 0x06012BED RID: 76781 RVA: 0x005834E0 File Offset: 0x005816E0
 	protected override List<int> GetPerfectGoalUpgradeLevel()
 	{
 		return this.PerfectTargetSkillLevelInternal;
 	}
 
-	// Token: 0x060151EE RID: 86510 RVA: 0x005587B4 File Offset: 0x005569B4
+	// Token: 0x06012BEE RID: 76782 RVA: 0x005834E8 File Offset: 0x005816E8
 	protected override List<IRoleDevDetailItemData> GetPerfectDetailItems()
 	{
 		return this.PerfectDetailItemsInternal;
 	}
 
-	// Token: 0x060151EF RID: 86511 RVA: 0x005587BC File Offset: 0x005569BC
+	// Token: 0x06012BEF RID: 76783 RVA: 0x005834F0 File Offset: 0x005816F0
 	protected override bool GetIsPerfectMaterialEnough()
 	{
 		return RoleDevUtils.CheckAllItemsUp(this.PerfectDetailItemsInternal);
 	}
 
-	// Token: 0x060151F0 RID: 86512 RVA: 0x005587CC File Offset: 0x005569CC
+	// Token: 0x06012BF0 RID: 76784 RVA: 0x00583500 File Offset: 0x00581700
 	protected override bool GetIsBreakthroughLevelLow()
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(base.RoleId, true);
@@ -204,25 +198,25 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		return false;
 	}
 
-	// Token: 0x060151F1 RID: 86513 RVA: 0x00558838 File Offset: 0x00556A38
+	// Token: 0x06012BF1 RID: 76785 RVA: 0x0058356C File Offset: 0x0058176C
 	protected override bool GetIsHideMaterialList()
 	{
 		return false;
 	}
 
-	// Token: 0x060151F2 RID: 86514 RVA: 0x0055883B File Offset: 0x00556A3B
+	// Token: 0x06012BF2 RID: 76786 RVA: 0x0058356F File Offset: 0x0058176F
 	protected override bool GetIsForecast()
 	{
 		return false;
 	}
 
-	// Token: 0x060151F3 RID: 86515 RVA: 0x0055883E File Offset: 0x00556A3E
+	// Token: 0x06012BF3 RID: 76787 RVA: 0x00583572 File Offset: 0x00581772
 	protected override bool GetShouldForcePerfectPlan()
 	{
 		return false;
 	}
 
-	// Token: 0x060151F4 RID: 86516 RVA: 0x00558844 File Offset: 0x00556A44
+	// Token: 0x06012BF4 RID: 76788 RVA: 0x00583578 File Offset: 0x00581778
 	public override void SwitchPlan()
 	{
 		bool isPerfectPlan = !this.GetIsPerfectPlan();
@@ -234,7 +228,7 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		this.UpdateSkillSlots();
 	}
 
-	// Token: 0x060151F5 RID: 86517 RVA: 0x0055887C File Offset: 0x00556A7C
+	// Token: 0x06012BF5 RID: 76789 RVA: 0x005835B0 File Offset: 0x005817B0
 	private void UpdateSkillSlots()
 	{
 		foreach (ISkillSlotExtendData skillSlotExtendData in this.SkillSlotsInternal)
@@ -246,16 +240,16 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		}
 	}
 
-	// Token: 0x060151F6 RID: 86518 RVA: 0x005588FC File Offset: 0x00556AFC
-	private bool CheckPlanFinished(List<int> currentLevels, List<int> targetLevels)
+	// Token: 0x06012BF6 RID: 76790 RVA: 0x00583630 File Offset: 0x00581830
+	private static bool CheckPlanFinished(int roleId, List<int> skillNodeIdList, List<int> targetLevels)
 	{
-		if (targetLevels.Count == 0 || currentLevels.Count != targetLevels.Count)
+		if (targetLevels.Count == 0 || skillNodeIdList.Count != targetLevels.Count)
 		{
 			return false;
 		}
-		for (int i = 0; i < currentLevels.Count; i++)
+		for (int i = 0; i < skillNodeIdList.Count; i++)
 		{
-			if (currentLevels[i] < targetLevels[i])
+			if (RoleModel.Instance.GetRoleSkillTreeNodeLevel(roleId, skillNodeIdList[i]) < targetLevels[i])
 			{
 				return false;
 			}
@@ -263,31 +257,31 @@ public class ObtainedRoleDevSkillData : RoleDevSkillViewItemDataBase
 		return true;
 	}
 
-	// Token: 0x060151F7 RID: 86519 RVA: 0x00558945 File Offset: 0x00556B45
+	// Token: 0x06012BF7 RID: 76791 RVA: 0x00583684 File Offset: 0x00581884
 	private List<IRoleDevDetailItemData> CreateSkillDetailItemsData(int[] skillNodeIdList, int[] currentLevels, int[] targetLevels, int roleId)
 	{
 		return RoleDevUtils.CreateSkillDetailItemsData(skillNodeIdList, currentLevels, targetLevels, roleId);
 	}
 
-	// Token: 0x04009E50 RID: 40528
+	// Token: 0x0400A239 RID: 41529
 	private List<ISkillSlotExtendData> SkillSlotsInternal = new List<ISkillSlotExtendData>();
 
-	// Token: 0x04009E51 RID: 40529
+	// Token: 0x0400A23A RID: 41530
 	private List<int> AllSkillNodeIdListInternal = new List<int>();
 
-	// Token: 0x04009E52 RID: 40530
+	// Token: 0x0400A23B RID: 41531
 	private List<int> NormalTargetSkillLevelInternal = new List<int>();
 
-	// Token: 0x04009E53 RID: 40531
+	// Token: 0x0400A23C RID: 41532
 	private List<IRoleDevDetailItemData> DetailItemsInternal = new List<IRoleDevDetailItemData>();
 
-	// Token: 0x04009E54 RID: 40532
+	// Token: 0x0400A23D RID: 41533
 	private List<int> PerfectTargetSkillLevelInternal = new List<int>();
 
-	// Token: 0x04009E55 RID: 40533
+	// Token: 0x0400A23E RID: 41534
 	private List<IRoleDevDetailItemData> PerfectDetailItemsInternal = new List<IRoleDevDetailItemData>();
 
-	// Token: 0x04009E56 RID: 40534
+	// Token: 0x0400A23F RID: 41535
 	[Nullable(2)]
 	private RoleDevViewModel RoleDevViewModelInternal;
 }

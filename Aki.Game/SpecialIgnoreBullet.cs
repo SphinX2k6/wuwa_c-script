@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EB2 RID: 11954
+// Token: 0x02002405 RID: 9221
 [NullableContext(1)]
 [Nullable(0)]
 public static class SpecialIgnoreBullet
 {
-	// Token: 0x06019870 RID: 104560 RVA: 0x006996EB File Offset: 0x006978EB
+	// Token: 0x06017156 RID: 94550 RVA: 0x006BF9A3 File Offset: 0x006BDBA3
 	public static bool CheckBulletInSpecialList(string checkBulletId)
 	{
-		return SpecialIgnoreBullet.Values.Contains(checkBulletId);
+		return Array.IndexOf<string>(SpecialIgnoreBullet.Values, checkBulletId) >= 0;
 	}
 
-	// Token: 0x0400BEA0 RID: 48800
+	// Token: 0x0400C23B RID: 49723
 	[StaticVariableRuleIgnore]
 	public static readonly string[] Values = new string[]
 	{

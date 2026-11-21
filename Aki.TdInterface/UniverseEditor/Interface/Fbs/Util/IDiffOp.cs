@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Util
 {
-	// Token: 0x02003B6C RID: 15212
+	// Token: 0x02003F74 RID: 16244
 	public struct IDiffOp : IFlatbufferObject
 	{
-		// Token: 0x17006832 RID: 26674
-		// (get) Token: 0x06014CF1 RID: 85233 RVA: 0x00305B0E File Offset: 0x00303D0E
+		// Token: 0x17006DD1 RID: 28113
+		// (get) Token: 0x060161BB RID: 90555 RVA: 0x0032C0A6 File Offset: 0x0032A2A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			}
 		}
 
-		// Token: 0x06014CF2 RID: 85234 RVA: 0x00305B1B File Offset: 0x00303D1B
+		// Token: 0x060161BC RID: 90556 RVA: 0x0032C0B3 File Offset: 0x0032A2B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014CF3 RID: 85235 RVA: 0x00305B24 File Offset: 0x00303D24
+		// Token: 0x060161BD RID: 90557 RVA: 0x0032C0BC File Offset: 0x0032A2BC
 		public static IDiffOp GetRootAsIDiffOp(ByteBuffer _bb)
 		{
 			return IDiffOp.GetRootAsIDiffOp(_bb, default(IDiffOp));
 		}
 
-		// Token: 0x06014CF4 RID: 85236 RVA: 0x00305B40 File Offset: 0x00303D40
+		// Token: 0x060161BE RID: 90558 RVA: 0x0032C0D8 File Offset: 0x0032A2D8
 		public static IDiffOp GetRootAsIDiffOp(ByteBuffer _bb, IDiffOp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014CF5 RID: 85237 RVA: 0x00305B5D File Offset: 0x00303D5D
+		// Token: 0x060161BF RID: 90559 RVA: 0x0032C0F5 File Offset: 0x0032A2F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014CF6 RID: 85238 RVA: 0x00305B6C File Offset: 0x00303D6C
+		// Token: 0x060161C0 RID: 90560 RVA: 0x0032C104 File Offset: 0x0032A304
 		public IDiffOp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006833 RID: 26675
-		// (get) Token: 0x06014CF7 RID: 85239 RVA: 0x00305B7C File Offset: 0x00303D7C
+		// Token: 0x17006DD2 RID: 28114
+		// (get) Token: 0x060161C1 RID: 90561 RVA: 0x0032C114 File Offset: 0x0032A314
 		public EDiffOp Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			}
 		}
 
-		// Token: 0x17006834 RID: 26676
-		// (get) Token: 0x06014CF8 RID: 85240 RVA: 0x00305BB8 File Offset: 0x00303DB8
+		// Token: 0x17006DD3 RID: 28115
+		// (get) Token: 0x060161C2 RID: 90562 RVA: 0x0032C150 File Offset: 0x0032A350
 		public int Length
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			}
 		}
 
-		// Token: 0x17006835 RID: 26677
-		// (get) Token: 0x06014CF9 RID: 85241 RVA: 0x00305BF4 File Offset: 0x00303DF4
+		// Token: 0x17006DD4 RID: 28116
+		// (get) Token: 0x060161C3 RID: 90563 RVA: 0x0032C18C File Offset: 0x0032A38C
 		public IDiffOp? PreOp
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			}
 		}
 
-		// Token: 0x06014CFA RID: 85242 RVA: 0x00305C51 File Offset: 0x00303E51
+		// Token: 0x060161C4 RID: 90564 RVA: 0x0032C1E9 File Offset: 0x0032A3E9
 		public static Offset<IDiffOp> CreateIDiffOp(FlatBufferBuilder builder, EDiffOp Type = EDiffOp.Same, int Length = 0, Offset<IDiffOp> PreOpOffset = default(Offset<IDiffOp>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			return IDiffOp.EndIDiffOp(builder);
 		}
 
-		// Token: 0x06014CFB RID: 85243 RVA: 0x00305C75 File Offset: 0x00303E75
+		// Token: 0x060161C5 RID: 90565 RVA: 0x0032C20D File Offset: 0x0032A40D
 		public static void StartIDiffOp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06014CFC RID: 85244 RVA: 0x00305C7E File Offset: 0x00303E7E
+		// Token: 0x060161C6 RID: 90566 RVA: 0x0032C216 File Offset: 0x0032A416
 		public static void AddType(FlatBufferBuilder builder, EDiffOp type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014CFD RID: 85245 RVA: 0x00305C89 File Offset: 0x00303E89
+		// Token: 0x060161C7 RID: 90567 RVA: 0x0032C221 File Offset: 0x0032A421
 		public static void AddLength(FlatBufferBuilder builder, int length)
 		{
 			builder.AddInt(1, length, 0);
 		}
 
-		// Token: 0x06014CFE RID: 85246 RVA: 0x00305C94 File Offset: 0x00303E94
+		// Token: 0x060161C8 RID: 90568 RVA: 0x0032C22C File Offset: 0x0032A42C
 		public static void AddPreOp(FlatBufferBuilder builder, Offset<IDiffOp> preOpOffset)
 		{
 			builder.AddOffset(2, preOpOffset.Value, 0);
 		}
 
-		// Token: 0x06014CFF RID: 85247 RVA: 0x00305CA4 File Offset: 0x00303EA4
+		// Token: 0x060161C9 RID: 90569 RVA: 0x0032C23C File Offset: 0x0032A43C
 		public static Offset<IDiffOp> EndIDiffOp(FlatBufferBuilder builder)
 		{
 			return new Offset<IDiffOp>(builder.EndTable());
 		}
 
-		// Token: 0x06014D00 RID: 85248 RVA: 0x00305CB4 File Offset: 0x00303EB4
+		// Token: 0x060161CA RID: 90570 RVA: 0x0032C24C File Offset: 0x0032A44C
 		public IDiffOpT UnPack()
 		{
 			IDiffOpT diffOpT = new IDiffOpT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			return diffOpT;
 		}
 
-		// Token: 0x06014D01 RID: 85249 RVA: 0x00305CD0 File Offset: 0x00303ED0
+		// Token: 0x060161CB RID: 90571 RVA: 0x0032C268 File Offset: 0x0032A468
 		public void UnPackTo(IDiffOpT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			_o.PreOp = ((this.PreOp != null) ? this.PreOp.Value.UnPack() : null);
 		}
 
-		// Token: 0x06014D02 RID: 85250 RVA: 0x00305D24 File Offset: 0x00303F24
+		// Token: 0x060161CC RID: 90572 RVA: 0x0032C2BC File Offset: 0x0032A4BC
 		public static Offset<IDiffOp> Pack(FlatBufferBuilder builder, IDiffOpT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Util
 			return IDiffOp.CreateIDiffOp(builder, _o.Type, _o.Length, preOpOffset);
 		}
 
-		// Token: 0x0400B0A3 RID: 45219
+		// Token: 0x0400BA20 RID: 47648
 		private Table __p;
 	}
 }

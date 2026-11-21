@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C49 RID: 15433
+	// Token: 0x02004058 RID: 16472
 	public struct ISplineEffectTipsActor : IFlatbufferObject
 	{
-		// Token: 0x17006A59 RID: 27225
-		// (get) Token: 0x06015539 RID: 87353 RVA: 0x00315FF7 File Offset: 0x003141F7
+		// Token: 0x1700700A RID: 28682
+		// (get) Token: 0x06016A4D RID: 92749 RVA: 0x0033CE97 File Offset: 0x0033B097
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601553A RID: 87354 RVA: 0x00316004 File Offset: 0x00314204
+		// Token: 0x06016A4E RID: 92750 RVA: 0x0033CEA4 File Offset: 0x0033B0A4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601553B RID: 87355 RVA: 0x0031600C File Offset: 0x0031420C
+		// Token: 0x06016A4F RID: 92751 RVA: 0x0033CEAC File Offset: 0x0033B0AC
 		public static ISplineEffectTipsActor GetRootAsISplineEffectTipsActor(ByteBuffer _bb)
 		{
 			return ISplineEffectTipsActor.GetRootAsISplineEffectTipsActor(_bb, default(ISplineEffectTipsActor));
 		}
 
-		// Token: 0x0601553C RID: 87356 RVA: 0x00316028 File Offset: 0x00314228
+		// Token: 0x06016A50 RID: 92752 RVA: 0x0033CEC8 File Offset: 0x0033B0C8
 		public static ISplineEffectTipsActor GetRootAsISplineEffectTipsActor(ByteBuffer _bb, ISplineEffectTipsActor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601553D RID: 87357 RVA: 0x00316045 File Offset: 0x00314245
+		// Token: 0x06016A51 RID: 92753 RVA: 0x0033CEE5 File Offset: 0x0033B0E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601553E RID: 87358 RVA: 0x00316054 File Offset: 0x00314254
+		// Token: 0x06016A52 RID: 92754 RVA: 0x0033CEF4 File Offset: 0x0033B0F4
 		public ISplineEffectTipsActor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A5A RID: 27226
-		// (get) Token: 0x0601553F RID: 87359 RVA: 0x00316064 File Offset: 0x00314264
+		// Token: 0x1700700B RID: 28683
+		// (get) Token: 0x06016A53 RID: 92755 RVA: 0x0033CF04 File Offset: 0x0033B104
 		public ETipsActorType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A5B RID: 27227
-		// (get) Token: 0x06015540 RID: 87360 RVA: 0x003160A0 File Offset: 0x003142A0
+		// Token: 0x1700700C RID: 28684
+		// (get) Token: 0x06016A54 RID: 92756 RVA: 0x0033CF40 File Offset: 0x0033B140
 		public ETipsActorColorType ColorType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A5C RID: 27228
-		// (get) Token: 0x06015541 RID: 87361 RVA: 0x003160DC File Offset: 0x003142DC
+		// Token: 0x1700700D RID: 28685
+		// (get) Token: 0x06016A55 RID: 92757 RVA: 0x0033CF7C File Offset: 0x0033B17C
 		public int EntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A5D RID: 27229
-		// (get) Token: 0x06015542 RID: 87362 RVA: 0x00316118 File Offset: 0x00314318
+		// Token: 0x1700700E RID: 28686
+		// (get) Token: 0x06016A56 RID: 92758 RVA: 0x0033CFB8 File Offset: 0x0033B1B8
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015543 RID: 87363 RVA: 0x00316155 File Offset: 0x00314355
+		// Token: 0x06016A57 RID: 92759 RVA: 0x0033CFF5 File Offset: 0x0033B1F5
 		public static Offset<ISplineEffectTipsActor> CreateISplineEffectTipsActor(FlatBufferBuilder builder, ETipsActorType Type = ETipsActorType.Sphere, ETipsActorColorType ColorType = ETipsActorColorType.Inner, int EntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISplineEffectTipsActor.EndISplineEffectTipsActor(builder);
 		}
 
-		// Token: 0x06015544 RID: 87364 RVA: 0x00316181 File Offset: 0x00314381
+		// Token: 0x06016A58 RID: 92760 RVA: 0x0033D021 File Offset: 0x0033B221
 		public static void StartISplineEffectTipsActor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015545 RID: 87365 RVA: 0x0031618A File Offset: 0x0031438A
+		// Token: 0x06016A59 RID: 92761 RVA: 0x0033D02A File Offset: 0x0033B22A
 		public static void AddType(FlatBufferBuilder builder, ETipsActorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015546 RID: 87366 RVA: 0x00316195 File Offset: 0x00314395
+		// Token: 0x06016A5A RID: 92762 RVA: 0x0033D035 File Offset: 0x0033B235
 		public static void AddColorType(FlatBufferBuilder builder, ETipsActorColorType colorType)
 		{
 			builder.AddByte(1, (byte)colorType, 0);
 		}
 
-		// Token: 0x06015547 RID: 87367 RVA: 0x003161A0 File Offset: 0x003143A0
+		// Token: 0x06016A5B RID: 92763 RVA: 0x0033D040 File Offset: 0x0033B240
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(2, entityId, 0);
 		}
 
-		// Token: 0x06015548 RID: 87368 RVA: 0x003161AB File Offset: 0x003143AB
+		// Token: 0x06016A5C RID: 92764 RVA: 0x0033D04B File Offset: 0x0033B24B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06015549 RID: 87369 RVA: 0x003161B6 File Offset: 0x003143B6
+		// Token: 0x06016A5D RID: 92765 RVA: 0x0033D056 File Offset: 0x0033B256
 		public static Offset<ISplineEffectTipsActor> EndISplineEffectTipsActor(FlatBufferBuilder builder)
 		{
 			return new Offset<ISplineEffectTipsActor>(builder.EndTable());
 		}
 
-		// Token: 0x0601554A RID: 87370 RVA: 0x003161C4 File Offset: 0x003143C4
+		// Token: 0x06016A5E RID: 92766 RVA: 0x0033D064 File Offset: 0x0033B264
 		public ISplineEffectTipsActorT UnPack()
 		{
 			ISplineEffectTipsActorT splineEffectTipsActorT = new ISplineEffectTipsActorT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return splineEffectTipsActorT;
 		}
 
-		// Token: 0x0601554B RID: 87371 RVA: 0x003161DF File Offset: 0x003143DF
+		// Token: 0x06016A5F RID: 92767 RVA: 0x0033D07F File Offset: 0x0033B27F
 		public void UnPackTo(ISplineEffectTipsActorT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601554C RID: 87372 RVA: 0x00316214 File Offset: 0x00314414
+		// Token: 0x06016A60 RID: 92768 RVA: 0x0033D0B4 File Offset: 0x0033B2B4
 		public static Offset<ISplineEffectTipsActor> Pack(FlatBufferBuilder builder, ISplineEffectTipsActorT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISplineEffectTipsActor.CreateISplineEffectTipsActor(builder, _o.Type, _o.ColorType, _o.EntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400B253 RID: 45651
+		// Token: 0x0400BBE3 RID: 48099
 		private Table __p;
 	}
 }

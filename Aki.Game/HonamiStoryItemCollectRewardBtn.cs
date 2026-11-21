@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EBD RID: 7869
+// Token: 0x0200137F RID: 4991
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryItemCollectRewardBtn : UiPanelBase
 {
-	// Token: 0x0600F221 RID: 61985 RVA: 0x003A4C80 File Offset: 0x003A2E80
+	// Token: 0x0600C640 RID: 50752 RVA: 0x003B0780 File Offset: 0x003AE980
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class HonamiStoryItemCollectRewardBtn : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F222 RID: 61986 RVA: 0x003A4D8C File Offset: 0x003A2F8C
+	// Token: 0x0600C641 RID: 50753 RVA: 0x003B088C File Offset: 0x003AEA8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryItemCollectRewardBtn.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class HonamiStoryItemCollectRewardBtn : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F223 RID: 61987 RVA: 0x003A4DD0 File Offset: 0x003A2FD0
+	// Token: 0x0600C642 RID: 50754 RVA: 0x003B08D0 File Offset: 0x003AEAD0
 	[NullableContext(1)]
 	public void RefreshView(HonamiStoryItemCollectionData itemData)
 	{
@@ -89,7 +89,7 @@ public class HonamiStoryItemCollectRewardBtn : UiPanelBase
 		this.RewardItem.SetReceivedVisible(itemData.State == EHonamiStoryCollectState.GotReward);
 	}
 
-	// Token: 0x0600F224 RID: 61988 RVA: 0x003A4F0C File Offset: 0x003A310C
+	// Token: 0x0600C643 RID: 50755 RVA: 0x003B0A0C File Offset: 0x003AEC0C
 	private void OnClickRewardBtn()
 	{
 		if (this.CurSelectItemData == null)
@@ -114,9 +114,9 @@ public class HonamiStoryItemCollectRewardBtn : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006FE5 RID: 28645
+	// Token: 0x040070C6 RID: 28870
 	private HonamiStoryItemCollectionData CurSelectItemData;
 
-	// Token: 0x04006FE6 RID: 28646
+	// Token: 0x040070C7 RID: 28871
 	private CommonItemSmallItemGrid RewardItem;
 }

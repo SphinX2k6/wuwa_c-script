@@ -7,14 +7,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004642 RID: 17986
+	// Token: 0x02003573 RID: 13683
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiBehaviorLevelSequence : IUiBehavior
 	{
-		// Token: 0x170075FB RID: 30203
-		// (get) Token: 0x0602E674 RID: 190068 RVA: 0x00AB9338 File Offset: 0x00AB7538
-		// (set) Token: 0x0602E675 RID: 190069 RVA: 0x00AB9340 File Offset: 0x00AB7540
+		// Token: 0x170048B7 RID: 18615
+		// (get) Token: 0x06022DBE RID: 142782 RVA: 0x009E6968 File Offset: 0x009E4B68
+		// (set) Token: 0x06022DBF RID: 142783 RVA: 0x009E6970 File Offset: 0x009E4B70
 		public string StartSequenceName
 		{
 			get
@@ -27,9 +27,9 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075FC RID: 30204
-		// (get) Token: 0x0602E676 RID: 190070 RVA: 0x00AB9349 File Offset: 0x00AB7549
-		// (set) Token: 0x0602E677 RID: 190071 RVA: 0x00AB9351 File Offset: 0x00AB7551
+		// Token: 0x170048B8 RID: 18616
+		// (get) Token: 0x06022DC0 RID: 142784 RVA: 0x009E6979 File Offset: 0x009E4B79
+		// (set) Token: 0x06022DC1 RID: 142785 RVA: 0x009E6981 File Offset: 0x009E4B81
 		public string CloseSequenceName
 		{
 			get
@@ -42,9 +42,9 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075FD RID: 30205
-		// (get) Token: 0x0602E678 RID: 190072 RVA: 0x00AB935A File Offset: 0x00AB755A
-		// (set) Token: 0x0602E679 RID: 190073 RVA: 0x00AB9362 File Offset: 0x00AB7562
+		// Token: 0x170048B9 RID: 18617
+		// (get) Token: 0x06022DC2 RID: 142786 RVA: 0x009E698A File Offset: 0x009E4B8A
+		// (set) Token: 0x06022DC3 RID: 142787 RVA: 0x009E6992 File Offset: 0x009E4B92
 		public string ShowSequenceName
 		{
 			get
@@ -57,9 +57,9 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075FE RID: 30206
-		// (get) Token: 0x0602E67A RID: 190074 RVA: 0x00AB936B File Offset: 0x00AB756B
-		// (set) Token: 0x0602E67B RID: 190075 RVA: 0x00AB9373 File Offset: 0x00AB7573
+		// Token: 0x170048BA RID: 18618
+		// (get) Token: 0x06022DC4 RID: 142788 RVA: 0x009E699B File Offset: 0x009E4B9B
+		// (set) Token: 0x06022DC5 RID: 142789 RVA: 0x009E69A3 File Offset: 0x009E4BA3
 		public string HideSequenceName
 		{
 			get
@@ -72,27 +72,27 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E67C RID: 190076 RVA: 0x00AB937C File Offset: 0x00AB757C
+		// Token: 0x06022DC6 RID: 142790 RVA: 0x009E69AC File Offset: 0x009E4BAC
 		public UiBehaviorLevelSequence(UiPanelBase owner)
 		{
 			this.Owner = owner;
 		}
 
-		// Token: 0x0602E67D RID: 190077 RVA: 0x00AB93E3 File Offset: 0x00AB75E3
+		// Token: 0x06022DC7 RID: 142791 RVA: 0x009E6A13 File Offset: 0x009E4C13
 		public UniTask OnUiCreateAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E67E RID: 190078 RVA: 0x00AB93EC File Offset: 0x00AB75EC
-		public void OnAfterUiStart()
+		// Token: 0x06022DC8 RID: 142792 RVA: 0x009E6A1C File Offset: 0x009E4C1C
+		public void OnUiStart()
 		{
 			this.UiSequencePlayer = new UiSequencePlayer(this.Owner.GetRootItem());
 			this.UiSequencePlayer.BindOnStartSequenceEvent(new Action<string>(this.OnSequenceStart));
 			this.UiSequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEnd));
 		}
 
-		// Token: 0x0602E67F RID: 190079 RVA: 0x00AB9440 File Offset: 0x00AB7640
+		// Token: 0x06022DC9 RID: 142793 RVA: 0x009E6A70 File Offset: 0x009E4C70
 		private void OnSequenceStart(string sequenceName)
 		{
 			HashSet<Action<string>> hashSet;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E680 RID: 190080 RVA: 0x00AB94A4 File Offset: 0x00AB76A4
+		// Token: 0x06022DCA RID: 142794 RVA: 0x009E6AD4 File Offset: 0x009E4CD4
 		private void OnSequenceEnd(string sequenceName)
 		{
 			HashSet<Action<string>> hashSet;
@@ -124,20 +124,20 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E681 RID: 190081 RVA: 0x00AB9508 File Offset: 0x00AB7708
+		// Token: 0x06022DCB RID: 142795 RVA: 0x009E6B38 File Offset: 0x009E4D38
 		public bool IsInSequence()
 		{
 			return this.UiSequencePlayer.IsInSequence();
 		}
 
-		// Token: 0x0602E682 RID: 190082 RVA: 0x00AB9515 File Offset: 0x00AB7715
+		// Token: 0x06022DCC RID: 142796 RVA: 0x009E6B45 File Offset: 0x009E4D45
 		public bool HasSequenceNameInPlaying(string sequenceName)
 		{
 			UiSequencePlayer uiSequencePlayer = this.UiSequencePlayer;
 			return uiSequencePlayer != null && uiSequencePlayer.IsSequenceInPlaying(sequenceName);
 		}
 
-		// Token: 0x0602E683 RID: 190083 RVA: 0x00AB9529 File Offset: 0x00AB7729
+		// Token: 0x06022DCD RID: 142797 RVA: 0x009E6B59 File Offset: 0x009E4D59
 		public void SetSequenceName(UiViewData viewData)
 		{
 			if (viewData != null)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E684 RID: 190084 RVA: 0x00AB9558 File Offset: 0x00AB7758
+		// Token: 0x06022DCE RID: 142798 RVA: 0x009E6B88 File Offset: 0x009E4D88
 		public void AddSequenceFinishEvent(string sequenceName, Action<string> finishEvent, bool clear = false)
 		{
 			HashSet<Action<string>> hashSet;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Ui
 			hashSet.Add(finishEvent);
 		}
 
-		// Token: 0x0602E685 RID: 190085 RVA: 0x00AB95C0 File Offset: 0x00AB77C0
+		// Token: 0x06022DCF RID: 142799 RVA: 0x009E6BF0 File Offset: 0x009E4DF0
 		public void RemoveSequenceFinishEvent(string sequenceName, Action<string> finishEvent)
 		{
 			if (this.EndEventMap == null || finishEvent == null)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Ui
 			hashSet.Remove(finishEvent);
 		}
 
-		// Token: 0x0602E686 RID: 190086 RVA: 0x00AB95FC File Offset: 0x00AB77FC
+		// Token: 0x06022DD0 RID: 142800 RVA: 0x009E6C2C File Offset: 0x009E4E2C
 		public void AddSequenceStartEvent(string name, Action<string> eventAction)
 		{
 			HashSet<Action<string>> hashSet;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Ui
 			hashSet.Add(eventAction);
 		}
 
-		// Token: 0x0602E687 RID: 190087 RVA: 0x00AB965A File Offset: 0x00AB785A
+		// Token: 0x06022DD1 RID: 142801 RVA: 0x009E6C8A File Offset: 0x009E4E8A
 		public void StopSequenceByKey(string sequenceName, bool needEvent = false, bool toLastFrame = false)
 		{
 			UiSequencePlayer uiSequencePlayer = this.UiSequencePlayer;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Ui
 			uiSequencePlayer.StopSequenceByKey(sequenceName, needEvent, toLastFrame);
 		}
 
-		// Token: 0x0602E688 RID: 190088 RVA: 0x00AB966F File Offset: 0x00AB786F
+		// Token: 0x06022DD2 RID: 142802 RVA: 0x009E6C9F File Offset: 0x009E4E9F
 		public void SequencePlayReverseByKey(string sequenceName, bool block)
 		{
 			UiSequencePlayer uiSequencePlayer = this.UiSequencePlayer;
@@ -226,15 +226,15 @@ namespace CSharpScript.Game.Ui
 			uiSequencePlayer.PlaySequencePurely(sequenceName, block, true);
 		}
 
-		// Token: 0x0602E689 RID: 190089 RVA: 0x00AB9684 File Offset: 0x00AB7884
+		// Token: 0x06022DD3 RID: 142803 RVA: 0x009E6CB4 File Offset: 0x009E4EB4
 		public void PlaySequence(string sequenceName, bool blockClick = false, float? playRate = null)
 		{
 			this.CurrentPlayingSequenceName = sequenceName.ToString();
 			this.UiSequencePlayer.PlaySequence(sequenceName, blockClick, playRate);
 		}
 
-		// Token: 0x170075FF RID: 30207
-		// (get) Token: 0x0602E68A RID: 190090 RVA: 0x00AB96A0 File Offset: 0x00AB78A0
+		// Token: 0x170048BB RID: 18619
+		// (get) Token: 0x06022DD4 RID: 142804 RVA: 0x009E6CD0 File Offset: 0x009E4ED0
 		public string CurrentSequenceName
 		{
 			get
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E68B RID: 190091 RVA: 0x00AB96A8 File Offset: 0x00AB78A8
+		// Token: 0x06022DD5 RID: 142805 RVA: 0x009E6CD8 File Offset: 0x009E4ED8
 		public UniTask PlaySequenceAsync(string sequenceName, CustomPromise<bool> stopPromise, bool blockClick = false, bool playReverse = false, float? playRate = null)
 		{
 			UiBehaviorLevelSequence.<PlaySequenceAsync>d__37 <PlaySequenceAsync>d__;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Ui
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E68C RID: 190092 RVA: 0x00AB9718 File Offset: 0x00AB7918
+		// Token: 0x06022DD6 RID: 142806 RVA: 0x009E6D48 File Offset: 0x009E4F48
 		public UniTask PlaySequenceAsyncNoStopRunning(string sequenceName, CustomPromise<bool> stopPromise, bool blockClick = false, bool playReverse = false, float? playRate = null)
 		{
 			UiBehaviorLevelSequence.<PlaySequenceAsyncNoStopRunning>d__38 <PlaySequenceAsyncNoStopRunning>d__;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Ui
 			return <PlaySequenceAsyncNoStopRunning>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E68D RID: 190093 RVA: 0x00AB9785 File Offset: 0x00AB7985
+		// Token: 0x06022DD7 RID: 142807 RVA: 0x009E6DB5 File Offset: 0x009E4FB5
 		public void PlaySequencePurely(string sequenceName, bool blockClick = false, bool isReverse = false)
 		{
 			this.CurrentPlayingSequenceName = sequenceName.ToString();
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Ui
 			uiSequencePlayer.PlaySequencePurely(sequenceName.ToString(), blockClick, isReverse);
 		}
 
-		// Token: 0x0602E68E RID: 190094 RVA: 0x00AB97AB File Offset: 0x00AB79AB
+		// Token: 0x06022DD8 RID: 142808 RVA: 0x009E6DDB File Offset: 0x009E4FDB
 		public void PlayOrReplaySequenceByName(string sequenceName, bool blockClick = false, float? playRate = null)
 		{
 			UiSequencePlayer uiSequencePlayer = this.UiSequencePlayer;
@@ -298,19 +298,19 @@ namespace CSharpScript.Game.Ui
 			uiSequencePlayer.PlayOrReplaySequenceByName(sequenceName, blockClick, playRate);
 		}
 
-		// Token: 0x0602E68F RID: 190095 RVA: 0x00AB97C0 File Offset: 0x00AB79C0
+		// Token: 0x06022DD9 RID: 142809 RVA: 0x009E6DF0 File Offset: 0x009E4FF0
 		public void PauseSequence()
 		{
 			this.UiSequencePlayer.PauseSequence();
 		}
 
-		// Token: 0x0602E690 RID: 190096 RVA: 0x00AB97CD File Offset: 0x00AB79CD
+		// Token: 0x06022DDA RID: 142810 RVA: 0x009E6DFD File Offset: 0x009E4FFD
 		public void ResumeSequence()
 		{
 			this.UiSequencePlayer.ResumeSequence();
 		}
 
-		// Token: 0x0602E691 RID: 190097 RVA: 0x00AB97DA File Offset: 0x00AB79DA
+		// Token: 0x06022DDB RID: 142811 RVA: 0x009E6E0A File Offset: 0x009E500A
 		public void StopPrevSequence(bool needEvent, bool toLastFrame = false)
 		{
 			if (this.IsInSequence())
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E692 RID: 190098 RVA: 0x00AB97F7 File Offset: 0x00AB79F7
+		// Token: 0x06022DDC RID: 142812 RVA: 0x009E6E27 File Offset: 0x009E5027
 		public void ReplaySequence(string sequenceName)
 		{
 			if (this.IsInSequence())
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E693 RID: 190099 RVA: 0x00AB980D File Offset: 0x00AB7A0D
+		// Token: 0x06022DDD RID: 142813 RVA: 0x009E6E3D File Offset: 0x009E503D
 		public void ChangePlaybackDirection(string sequenceName)
 		{
 			if (!this.HasSequenceNameInPlaying(sequenceName))
@@ -338,20 +338,20 @@ namespace CSharpScript.Game.Ui
 			this.UiSequencePlayer.ChangePlaybackDirection(sequenceName);
 		}
 
-		// Token: 0x0602E694 RID: 190100 RVA: 0x00AB9825 File Offset: 0x00AB7A25
+		// Token: 0x06022DDE RID: 142814 RVA: 0x009E6E55 File Offset: 0x009E5055
 		public void SetActorTag(string sequenceName, FName tag, AActor actor)
 		{
 			this.UiSequencePlayer.SetActorTag(sequenceName, tag, actor);
 		}
 
-		// Token: 0x0602E695 RID: 190101 RVA: 0x00AB9835 File Offset: 0x00AB7A35
+		// Token: 0x06022DDF RID: 142815 RVA: 0x009E6E65 File Offset: 0x009E5065
 		public void SetRelativeTransform(string sequenceName, FTransformDouble transform)
 		{
 			this.UiSequencePlayer.SetRelativeTransform(sequenceName, transform);
 		}
 
-		// Token: 0x0602E696 RID: 190102 RVA: 0x00AB9844 File Offset: 0x00AB7A44
-		public void OnBeforeDestroy()
+		// Token: 0x06022DE0 RID: 142816 RVA: 0x009E6E74 File Offset: 0x009E5074
+		public void OnDestroy()
 		{
 			if (this.UiSequencePlayer != null)
 			{
@@ -362,42 +362,42 @@ namespace CSharpScript.Game.Ui
 			this.StartEventMap.Clear();
 		}
 
-		// Token: 0x0602E697 RID: 190103 RVA: 0x00AB9876 File Offset: 0x00AB7A76
-		public void OnAfterUiShow()
+		// Token: 0x06022DE1 RID: 142817 RVA: 0x009E6EA6 File Offset: 0x009E50A6
+		public void OnUiShow()
 		{
 		}
 
-		// Token: 0x0602E698 RID: 190104 RVA: 0x00AB9878 File Offset: 0x00AB7A78
-		public void OnBeforeUiHide()
+		// Token: 0x06022DE2 RID: 142818 RVA: 0x009E6EA8 File Offset: 0x009E50A8
+		public void OnUiHide()
 		{
 		}
 
-		// Token: 0x04018DD9 RID: 101849
+		// Token: 0x04013432 RID: 78898
 		[Nullable(2)]
 		private UiSequencePlayer UiSequencePlayer;
 
-		// Token: 0x04018DDA RID: 101850
+		// Token: 0x04013433 RID: 78899
 		private string StartSequenceNameInternal = "Start";
 
-		// Token: 0x04018DDB RID: 101851
+		// Token: 0x04013434 RID: 78900
 		private string CloseSequenceNameInternal = "Close";
 
-		// Token: 0x04018DDC RID: 101852
+		// Token: 0x04013435 RID: 78901
 		private string ShowSequenceNameInternal = "ShowView";
 
-		// Token: 0x04018DDD RID: 101853
+		// Token: 0x04013436 RID: 78902
 		private string HideSequenceNameInternal = "HideView";
 
-		// Token: 0x04018DDE RID: 101854
+		// Token: 0x04013437 RID: 78903
 		private readonly Dictionary<string, HashSet<Action<string>>> EndEventMap = new Dictionary<string, HashSet<Action<string>>>();
 
-		// Token: 0x04018DDF RID: 101855
+		// Token: 0x04013438 RID: 78904
 		private readonly Dictionary<string, HashSet<Action<string>>> StartEventMap = new Dictionary<string, HashSet<Action<string>>>();
 
-		// Token: 0x04018DE0 RID: 101856
+		// Token: 0x04013439 RID: 78905
 		private string CurrentPlayingSequenceName = "";
 
-		// Token: 0x04018DE1 RID: 101857
+		// Token: 0x0401343A RID: 78906
 		private readonly UiPanelBase Owner;
 	}
 }

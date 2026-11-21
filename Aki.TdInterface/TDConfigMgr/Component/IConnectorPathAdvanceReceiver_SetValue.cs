@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000278 RID: 632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002BB RID: 699
 	public class IConnectorPathAdvanceReceiver_SetValue
 	{
-		// Token: 0x04000B26 RID: 2854
+		// Token: 0x04000C07 RID: 3079
 		public string ConnectedState;
 
-		// Token: 0x04000B27 RID: 2855
+		// Token: 0x04000C08 RID: 3080
 		public string DisconnectedState;
 	}
 }

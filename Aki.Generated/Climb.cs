@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B82 RID: 2946
+	// Token: 0x02000C63 RID: 3171
 	public struct Climb : IFlatbufferObject
 	{
-		// Token: 0x1700084C RID: 2124
-		// (get) Token: 0x06005603 RID: 22019 RVA: 0x001F7028 File Offset: 0x001F5228
+		// Token: 0x1700088F RID: 2191
+		// (get) Token: 0x06005BD1 RID: 23505 RVA: 0x00216DE0 File Offset: 0x00214FE0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005604 RID: 22020 RVA: 0x001F7035 File Offset: 0x001F5235
+		// Token: 0x06005BD2 RID: 23506 RVA: 0x00216DED File Offset: 0x00214FED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005605 RID: 22021 RVA: 0x001F703C File Offset: 0x001F523C
+		// Token: 0x06005BD3 RID: 23507 RVA: 0x00216DF4 File Offset: 0x00214FF4
 		public static Climb GetRootAsClimb(ByteBuffer _bb)
 		{
 			return Climb.GetRootAsClimb(_bb, default(Climb));
 		}
 
-		// Token: 0x06005606 RID: 22022 RVA: 0x001F7058 File Offset: 0x001F5258
+		// Token: 0x06005BD4 RID: 23508 RVA: 0x00216E10 File Offset: 0x00215010
 		public static Climb GetRootAsClimb(ByteBuffer _bb, Climb obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005607 RID: 22023 RVA: 0x001F7075 File Offset: 0x001F5275
+		// Token: 0x06005BD5 RID: 23509 RVA: 0x00216E2D File Offset: 0x0021502D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005608 RID: 22024 RVA: 0x001F7084 File Offset: 0x001F5284
+		// Token: 0x06005BD6 RID: 23510 RVA: 0x00216E3C File Offset: 0x0021503C
 		public Climb __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700084D RID: 2125
-		// (get) Token: 0x06005609 RID: 22025 RVA: 0x001F7094 File Offset: 0x001F5294
+		// Token: 0x17000890 RID: 2192
+		// (get) Token: 0x06005BD7 RID: 23511 RVA: 0x00216E4C File Offset: 0x0021504C
 		public string Id
 		{
 			get
@@ -65,19 +65,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600560A RID: 22026 RVA: 0x001F70CB File Offset: 0x001F52CB
+		// Token: 0x06005BD8 RID: 23512 RVA: 0x00216E83 File Offset: 0x00215083
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600560B RID: 22027 RVA: 0x001F70DA File Offset: 0x001F52DA
+		// Token: 0x06005BD9 RID: 23513 RVA: 0x00216E92 File Offset: 0x00215092
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600560C RID: 22028 RVA: 0x001F70F4 File Offset: 0x001F52F4
+		// Token: 0x06005BDA RID: 23514 RVA: 0x00216EAC File Offset: 0x002150AC
 		public Vector? ClimbDetectPoints(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -88,8 +88,8 @@ namespace Aki.Config
 			return new Vector?(default(Vector).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700084E RID: 2126
-		// (get) Token: 0x0600560D RID: 22029 RVA: 0x001F7154 File Offset: 0x001F5354
+		// Token: 0x17000891 RID: 2193
+		// (get) Token: 0x06005BDB RID: 23515 RVA: 0x00216F0C File Offset: 0x0021510C
 		public int ClimbDetectPointsLength
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700084F RID: 2127
-		// (get) Token: 0x0600560E RID: 22030 RVA: 0x001F7180 File Offset: 0x001F5380
+		// Token: 0x17000892 RID: 2194
+		// (get) Token: 0x06005BDC RID: 23516 RVA: 0x00216F38 File Offset: 0x00215138
 		public float DetectRadius
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000850 RID: 2128
-		// (get) Token: 0x0600560F RID: 22031 RVA: 0x001F71C0 File Offset: 0x001F53C0
+		// Token: 0x17000893 RID: 2195
+		// (get) Token: 0x06005BDD RID: 23517 RVA: 0x00216F78 File Offset: 0x00215178
 		public float ClimbRadius
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000851 RID: 2129
-		// (get) Token: 0x06005610 RID: 22032 RVA: 0x001F7204 File Offset: 0x001F5404
+		// Token: 0x17000894 RID: 2196
+		// (get) Token: 0x06005BDE RID: 23518 RVA: 0x00216FBC File Offset: 0x002151BC
 		public Vector? ClimbFromTop
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000852 RID: 2130
-		// (get) Token: 0x06005611 RID: 22033 RVA: 0x001F7264 File Offset: 0x001F5464
+		// Token: 0x17000895 RID: 2197
+		// (get) Token: 0x06005BDF RID: 23519 RVA: 0x0021701C File Offset: 0x0021521C
 		public Vector? ClimbVault
 		{
 			get
@@ -163,8 +163,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000853 RID: 2131
-		// (get) Token: 0x06005612 RID: 22034 RVA: 0x001F72C4 File Offset: 0x001F54C4
+		// Token: 0x17000896 RID: 2198
+		// (get) Token: 0x06005BE0 RID: 23520 RVA: 0x0021707C File Offset: 0x0021527C
 		public Vector? ClimbOnTop
 		{
 			get
@@ -178,8 +178,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000854 RID: 2132
-		// (get) Token: 0x06005613 RID: 22035 RVA: 0x001F7324 File Offset: 0x001F5524
+		// Token: 0x17000897 RID: 2199
+		// (get) Token: 0x06005BE1 RID: 23521 RVA: 0x002170DC File Offset: 0x002152DC
 		public FloatRange? VaultRange
 		{
 			get
@@ -193,8 +193,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000855 RID: 2133
-		// (get) Token: 0x06005614 RID: 22036 RVA: 0x001F7384 File Offset: 0x001F5584
+		// Token: 0x17000898 RID: 2200
+		// (get) Token: 0x06005BE2 RID: 23522 RVA: 0x0021713C File Offset: 0x0021533C
 		public FloatRange? UpArriveRange
 		{
 			get
@@ -208,8 +208,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000856 RID: 2134
-		// (get) Token: 0x06005615 RID: 22037 RVA: 0x001F73E4 File Offset: 0x001F55E4
+		// Token: 0x17000899 RID: 2201
+		// (get) Token: 0x06005BE3 RID: 23523 RVA: 0x0021719C File Offset: 0x0021539C
 		public Vector? ClimbSprintVault
 		{
 			get
@@ -223,8 +223,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000857 RID: 2135
-		// (get) Token: 0x06005616 RID: 22038 RVA: 0x001F7444 File Offset: 0x001F5644
+		// Token: 0x1700089A RID: 2202
+		// (get) Token: 0x06005BE4 RID: 23524 RVA: 0x002171FC File Offset: 0x002153FC
 		public FloatRange? SprintVaultRange
 		{
 			get
@@ -238,8 +238,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000858 RID: 2136
-		// (get) Token: 0x06005617 RID: 22039 RVA: 0x001F74A4 File Offset: 0x001F56A4
+		// Token: 0x1700089B RID: 2203
+		// (get) Token: 0x06005BE5 RID: 23525 RVA: 0x0021725C File Offset: 0x0021545C
 		public float ForwardBlockHeight
 		{
 			get
@@ -253,8 +253,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000859 RID: 2137
-		// (get) Token: 0x06005618 RID: 22040 RVA: 0x001F74E8 File Offset: 0x001F56E8
+		// Token: 0x1700089C RID: 2204
+		// (get) Token: 0x06005BE6 RID: 23526 RVA: 0x002172A0 File Offset: 0x002154A0
 		public float ForwardBlockRadius
 		{
 			get
@@ -268,8 +268,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085A RID: 2138
-		// (get) Token: 0x06005619 RID: 22041 RVA: 0x001F752C File Offset: 0x001F572C
+		// Token: 0x1700089D RID: 2205
+		// (get) Token: 0x06005BE7 RID: 23527 RVA: 0x002172E4 File Offset: 0x002154E4
 		public FloatRange? ForwardBlockDistance
 		{
 			get
@@ -283,8 +283,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085B RID: 2139
-		// (get) Token: 0x0600561A RID: 22042 RVA: 0x001F758C File Offset: 0x001F578C
+		// Token: 0x1700089E RID: 2206
+		// (get) Token: 0x06005BE8 RID: 23528 RVA: 0x00217344 File Offset: 0x00215544
 		public float SprintVaultLongNeedDistance
 		{
 			get
@@ -298,8 +298,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085C RID: 2140
-		// (get) Token: 0x0600561B RID: 22043 RVA: 0x001F75D0 File Offset: 0x001F57D0
+		// Token: 0x1700089F RID: 2207
+		// (get) Token: 0x06005BE9 RID: 23529 RVA: 0x00217388 File Offset: 0x00215588
 		public float SprintVaultLongHeight
 		{
 			get
@@ -313,8 +313,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085D RID: 2141
-		// (get) Token: 0x0600561C RID: 22044 RVA: 0x001F7614 File Offset: 0x001F5814
+		// Token: 0x170008A0 RID: 2208
+		// (get) Token: 0x06005BEA RID: 23530 RVA: 0x002173CC File Offset: 0x002155CC
 		public FloatRange? SprintVaultLongRange
 		{
 			get
@@ -328,8 +328,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085E RID: 2142
-		// (get) Token: 0x0600561D RID: 22045 RVA: 0x001F7674 File Offset: 0x001F5874
+		// Token: 0x170008A1 RID: 2209
+		// (get) Token: 0x06005BEB RID: 23531 RVA: 0x0021742C File Offset: 0x0021562C
 		public Vector? BlockUpOffset
 		{
 			get
@@ -343,8 +343,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700085F RID: 2143
-		// (get) Token: 0x0600561E RID: 22046 RVA: 0x001F76D4 File Offset: 0x001F58D4
+		// Token: 0x170008A2 RID: 2210
+		// (get) Token: 0x06005BEC RID: 23532 RVA: 0x0021748C File Offset: 0x0021568C
 		public float BlockUpDetectRadius
 		{
 			get
@@ -358,8 +358,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000860 RID: 2144
-		// (get) Token: 0x0600561F RID: 22047 RVA: 0x001F7718 File Offset: 0x001F5918
+		// Token: 0x170008A3 RID: 2211
+		// (get) Token: 0x06005BED RID: 23533 RVA: 0x002174D0 File Offset: 0x002156D0
 		public float BlockUpDetectDistance
 		{
 			get
@@ -373,8 +373,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000861 RID: 2145
-		// (get) Token: 0x06005620 RID: 22048 RVA: 0x001F775C File Offset: 0x001F595C
+		// Token: 0x170008A4 RID: 2212
+		// (get) Token: 0x06005BEE RID: 23534 RVA: 0x00217514 File Offset: 0x00215714
 		public float BlockUpBackDistance
 		{
 			get
@@ -388,8 +388,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000862 RID: 2146
-		// (get) Token: 0x06005621 RID: 22049 RVA: 0x001F77A0 File Offset: 0x001F59A0
+		// Token: 0x170008A5 RID: 2213
+		// (get) Token: 0x06005BEF RID: 23535 RVA: 0x00217558 File Offset: 0x00215758
 		public float BlockUpBackMinDist
 		{
 			get
@@ -403,8 +403,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000863 RID: 2147
-		// (get) Token: 0x06005622 RID: 22050 RVA: 0x001F77E4 File Offset: 0x001F59E4
+		// Token: 0x170008A6 RID: 2214
+		// (get) Token: 0x06005BF0 RID: 23536 RVA: 0x0021759C File Offset: 0x0021579C
 		public Vector? BlockUpFinalMove
 		{
 			get
@@ -418,8 +418,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000864 RID: 2148
-		// (get) Token: 0x06005623 RID: 22051 RVA: 0x001F7844 File Offset: 0x001F5A44
+		// Token: 0x170008A7 RID: 2215
+		// (get) Token: 0x06005BF1 RID: 23537 RVA: 0x002175FC File Offset: 0x002157FC
 		public FloatRange? BlockUpVerticalRange
 		{
 			get
@@ -433,24 +433,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005624 RID: 22052 RVA: 0x001F78A2 File Offset: 0x001F5AA2
+		// Token: 0x06005BF2 RID: 23538 RVA: 0x0021765A File Offset: 0x0021585A
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ClimbDetectPointsIter()或GetClimbDetectPointsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Vector[] ClimbDetectPoints()
+		public Vector[] ClimbDetectPoints()
 		{
 			return this.ClimbDetectPointsIter().ToArray<Vector>();
 		}
 
-		// Token: 0x06005625 RID: 22053 RVA: 0x001F78AF File Offset: 0x001F5AAF
+		// Token: 0x06005BF3 RID: 23539 RVA: 0x00217667 File Offset: 0x00215867
 		[NullableContext(1)]
-		public readonly IEnumerable<Vector> ClimbDetectPointsIter()
+		public IEnumerable<Vector> ClimbDetectPointsIter()
 		{
 			Climb.<ClimbDetectPointsIter>d__60 <ClimbDetectPointsIter>d__ = new Climb.<ClimbDetectPointsIter>d__60(-2);
 			<ClimbDetectPointsIter>d__.<>3__<>4__this = this;
 			return <ClimbDetectPointsIter>d__;
 		}
 
-		// Token: 0x04004B86 RID: 19334
+		// Token: 0x04005167 RID: 20839
 		private Table __p;
 	}
 }

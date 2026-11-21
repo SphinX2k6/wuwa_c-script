@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200072B RID: 1835
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007CC RID: 1996
 	public class IStreamingSourceConfigBase
 	{
-		// Token: 0x060027A1 RID: 10145 RVA: 0x00069614 File Offset: 0x00067814
+		// Token: 0x06002AC5 RID: 10949 RVA: 0x000707BC File Offset: 0x0006E9BC
 		private IStreamingSourceConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027A2 RID: 10146 RVA: 0x0006964C File Offset: 0x0006784C
+		// Token: 0x06002AC6 RID: 10950 RVA: 0x000707F4 File Offset: 0x0006E9F4
 		public static IStreamingSourceConfigBase Create([Nullable(2)] IStreamingSourceConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027A3 RID: 10147 RVA: 0x0006965F File Offset: 0x0006785F
+		// Token: 0x06002AC7 RID: 10951 RVA: 0x00070807 File Offset: 0x0006EA07
 		public static IStreamingSourceConfigBase CreateFromSetValue([Nullable(2)] IStreamingSourceConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027A4 RID: 10148 RVA: 0x00069672 File Offset: 0x00067872
+		// Token: 0x06002AC8 RID: 10952 RVA: 0x0007081A File Offset: 0x0006EA1A
 		public IStreamingSourceConfigBase_SetValue ToSetValue()
 		{
 			return new IStreamingSourceConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A70 RID: 2672
-		// (get) Token: 0x060027A5 RID: 10149 RVA: 0x00069685 File Offset: 0x00067885
-		// (set) Token: 0x060027A6 RID: 10150 RVA: 0x000696B0 File Offset: 0x000678B0
+		// Token: 0x17000B30 RID: 2864
+		// (get) Token: 0x06002AC9 RID: 10953 RVA: 0x0007082D File Offset: 0x0006EA2D
+		// (set) Token: 0x06002ACA RID: 10954 RVA: 0x00070858 File Offset: 0x0006EA58
 		public virtual EStreamingSourceMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001ABC RID: 6844
+		// Token: 0x04001CC1 RID: 7361
 		[Nullable(2)]
 		protected IStreamingSourceConfigBase FbInstance;
 
-		// Token: 0x04001ABD RID: 6845
+		// Token: 0x04001CC2 RID: 7362
 		[Nullable(2)]
 		protected IStreamingSourceConfigBase_SetValue PocoInterface;
 	}

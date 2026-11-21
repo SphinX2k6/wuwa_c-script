@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A7 RID: 9127
+	// Token: 0x02002632 RID: 9778
 	public static class EMp4GamepadShakeCurveExtensions
 	{
-		// Token: 0x0600C6EE RID: 50926 RVA: 0x001D20FC File Offset: 0x001D02FC
+		// Token: 0x0600D33B RID: 54075 RVA: 0x001EB29C File Offset: 0x001E949C
 		public static string ToEnumString(this EMp4GamepadShakeCurve value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6EF RID: 50927 RVA: 0x001D2144 File Offset: 0x001D0344
+		// Token: 0x0600D33C RID: 54076 RVA: 0x001EB2E4 File Offset: 0x001E94E4
 		public static EMp4GamepadShakeCurve FromString(string name)
 		{
 			EMp4GamepadShakeCurve result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6F0 RID: 50928 RVA: 0x001D2170 File Offset: 0x001D0370
+		// Token: 0x0600D33D RID: 54077 RVA: 0x001EB310 File Offset: 0x001E9510
 		public static bool TryFromString(string name, out EMp4GamepadShakeCurve value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C6F1 RID: 50929 RVA: 0x001D21C6 File Offset: 0x001D03C6
+		// Token: 0x0600D33E RID: 54078 RVA: 0x001EB366 File Offset: 0x001E9566
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6F2 RID: 50930 RVA: 0x001D21E6 File Offset: 0x001D03E6
+		// Token: 0x0600D33F RID: 54079 RVA: 0x001EB386 File Offset: 0x001E9586
 		public static EMp4GamepadShakeCurve[] GetValues()
 		{
 			return new EMp4GamepadShakeCurve[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6F3 RID: 50931 RVA: 0x001D21F6 File Offset: 0x001D03F6
+		// Token: 0x0600D340 RID: 54080 RVA: 0x001EB396 File Offset: 0x001E9596
 		public static string[] GetNames()
 		{
 			return new string[]

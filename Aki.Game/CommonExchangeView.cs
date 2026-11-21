@@ -8,29 +8,29 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FF0 RID: 8176
+// Token: 0x020014C3 RID: 5315
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonExchangeView : UiTickViewBase
 {
-	// Token: 0x0601003D RID: 65597 RVA: 0x003E6FBD File Offset: 0x003E51BD
+	// Token: 0x0600D4A5 RID: 54437 RVA: 0x003F35B5 File Offset: 0x003F17B5
 	private CommonExchangeData GetExChangeData()
 	{
 		return ((CommonExchangeViewData)this.OpenParam).ExchangeData;
 	}
 
-	// Token: 0x0601003E RID: 65598 RVA: 0x003E6FCF File Offset: 0x003E51CF
+	// Token: 0x0600D4A6 RID: 54438 RVA: 0x003F35C7 File Offset: 0x003F17C7
 	private int GetExChangeItemId()
 	{
 		return this.GetExChangeData().GetDestItemId();
 	}
 
-	// Token: 0x0601003F RID: 65599 RVA: 0x003E6FDC File Offset: 0x003E51DC
+	// Token: 0x0600D4A7 RID: 54439 RVA: 0x003F35D4 File Offset: 0x003F17D4
 	public CommonExchangeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010040 RID: 65600 RVA: 0x003E6FE8 File Offset: 0x003E51E8
+	// Token: 0x0600D4A8 RID: 54440 RVA: 0x003F35E0 File Offset: 0x003F17E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -79,19 +79,19 @@ public class CommonExchangeView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06010041 RID: 65601 RVA: 0x003E7265 File Offset: 0x003E5465
+	// Token: 0x0600D4A9 RID: 54441 RVA: 0x003F385D File Offset: 0x003F1A5D
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("ExChangeCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x06010042 RID: 65602 RVA: 0x003E7286 File Offset: 0x003E5486
+	// Token: 0x0600D4AA RID: 54442 RVA: 0x003F387E File Offset: 0x003F1A7E
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.Refresh(selectValue);
 	}
 
-	// Token: 0x06010043 RID: 65603 RVA: 0x003E7290 File Offset: 0x003E5490
+	// Token: 0x0600D4AB RID: 54443 RVA: 0x003F3888 File Offset: 0x003F1A88
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonExchangeView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -102,7 +102,7 @@ public class CommonExchangeView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010044 RID: 65604 RVA: 0x003E72D4 File Offset: 0x003E54D4
+	// Token: 0x0600D4AC RID: 54444 RVA: 0x003F38CC File Offset: 0x003F1ACC
 	protected override void OnStart()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -127,7 +127,7 @@ public class CommonExchangeView : UiTickViewBase
 		this.InitConfirmState();
 	}
 
-	// Token: 0x06010045 RID: 65605 RVA: 0x003E73BC File Offset: 0x003E55BC
+	// Token: 0x0600D4AD RID: 54445 RVA: 0x003F39B4 File Offset: 0x003F1BB4
 	protected override void OnBeforeShow()
 	{
 		if (this.GetExChangeData().ShowPayGold)
@@ -166,13 +166,13 @@ public class CommonExchangeView : UiTickViewBase
 		childPopView2.PopItem.SetCurrencyItemList(this.CurrentExchangeViewData.ShowCurrencyList.ToArray());
 	}
 
-	// Token: 0x06010046 RID: 65606 RVA: 0x003E7486 File Offset: 0x003E5686
+	// Token: 0x0600D4AE RID: 54446 RVA: 0x003F3A7E File Offset: 0x003F1C7E
 	private void BeforeEnterPayShop()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010047 RID: 65607 RVA: 0x003E7490 File Offset: 0x003E5690
+	// Token: 0x0600D4AF RID: 54447 RVA: 0x003F3A88 File Offset: 0x003F1C88
 	private void InitNumberSelect()
 	{
 		this.NumberSelect = new NumberSelectComponent(base.GetItem(13));
@@ -190,20 +190,20 @@ public class CommonExchangeView : UiTickViewBase
 		this.NumberSelect.SetAddReduceButtonInteractive(maxExchangeTime > 1);
 	}
 
-	// Token: 0x06010048 RID: 65608 RVA: 0x003E7530 File Offset: 0x003E5730
+	// Token: 0x0600D4B0 RID: 54448 RVA: 0x003F3B28 File Offset: 0x003F1D28
 	protected void SetMaxValue()
 	{
 		this.NumberSelect.SelectMax();
 	}
 
-	// Token: 0x06010049 RID: 65609 RVA: 0x003E7540 File Offset: 0x003E5740
+	// Token: 0x0600D4B1 RID: 54449 RVA: 0x003F3B38 File Offset: 0x003F1D38
 	private void InitConfirmState()
 	{
 		int maxExchangeTime = this.CurrentExchangeViewData.MaxExchangeTime;
 		base.GetInteractionGroup(10).SetInteractable(maxExchangeTime > 0);
 	}
 
-	// Token: 0x0601004A RID: 65610 RVA: 0x003E756C File Offset: 0x003E576C
+	// Token: 0x0600D4B2 RID: 54450 RVA: 0x003F3B64 File Offset: 0x003F1D64
 	private void Refresh(int exchangeTime)
 	{
 		CommonExchangeData exChangeData = this.GetExChangeData();
@@ -225,7 +225,7 @@ public class CommonExchangeView : UiTickViewBase
 		base.GetItem(14).SetUIActive(ownSrcItemNum < num3);
 	}
 
-	// Token: 0x0601004B RID: 65611 RVA: 0x003E7680 File Offset: 0x003E5880
+	// Token: 0x0600D4B3 RID: 54451 RVA: 0x003F3C78 File Offset: 0x003F1E78
 	private void ConfirmBtn()
 	{
 		CommonExchangeData exChangeData = this.GetExChangeData();
@@ -240,7 +240,7 @@ public class CommonExchangeView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601004C RID: 65612 RVA: 0x003E76CC File Offset: 0x003E58CC
+	// Token: 0x0600D4B4 RID: 54452 RVA: 0x003F3CC4 File Offset: 0x003F1EC4
 	protected override void OnBeforeDestroy()
 	{
 		CommonCurrencyItem currencyItem = this.CurrencyItem;
@@ -251,7 +251,7 @@ public class CommonExchangeView : UiTickViewBase
 		currencyItem.Destroy(null);
 	}
 
-	// Token: 0x0601004D RID: 65613 RVA: 0x003E76E0 File Offset: 0x003E58E0
+	// Token: 0x0600D4B5 RID: 54453 RVA: 0x003F3CD8 File Offset: 0x003F1ED8
 	private void CancelBtn()
 	{
 		CommonExchangeData exChangeData = this.GetExChangeData();
@@ -263,65 +263,65 @@ public class CommonExchangeView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04007699 RID: 30361
+	// Token: 0x04007782 RID: 30594
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x0400769A RID: 30362
+	// Token: 0x04007783 RID: 30595
 	[Nullable(2)]
 	private CommonCurrencyItem CurrencyItem;
 
-	// Token: 0x0400769B RID: 30363
+	// Token: 0x04007784 RID: 30596
 	[Nullable(2)]
 	private CommonExchangeViewData CurrentExchangeViewData;
 
-	// Token: 0x02008601 RID: 34305
+	// Token: 0x02007788 RID: 30600
 	[NullableContext(0)]
 	private class ECommonExchangeCom
 	{
-		// Token: 0x0402B9D1 RID: 178641
+		// Token: 0x04026CE0 RID: 158944
 		public const int TitleText = 0;
 
-		// Token: 0x0402B9D2 RID: 178642
+		// Token: 0x04026CE1 RID: 158945
 		public const int SrcTexture = 1;
 
-		// Token: 0x0402B9D3 RID: 178643
+		// Token: 0x04026CE2 RID: 158946
 		public const int DestTexture = 2;
 
-		// Token: 0x0402B9D4 RID: 178644
+		// Token: 0x04026CE3 RID: 158947
 		public const int SrcNameText = 3;
 
-		// Token: 0x0402B9D5 RID: 178645
+		// Token: 0x04026CE4 RID: 158948
 		public const int DestNameText = 4;
 
-		// Token: 0x0402B9D6 RID: 178646
+		// Token: 0x04026CE5 RID: 158949
 		public const int ConsumeTexture = 5;
 
-		// Token: 0x0402B9D7 RID: 178647
+		// Token: 0x04026CE6 RID: 158950
 		public const int ConsumeCountText = 6;
 
-		// Token: 0x0402B9D8 RID: 178648
+		// Token: 0x04026CE7 RID: 158951
 		public const int CancelBtn = 7;
 
-		// Token: 0x0402B9D9 RID: 178649
+		// Token: 0x04026CE8 RID: 158952
 		public const int ConfirmBtn = 8;
 
-		// Token: 0x0402B9DA RID: 178650
+		// Token: 0x04026CE9 RID: 158953
 		public const int CancelInteractionGroup = 9;
 
-		// Token: 0x0402B9DB RID: 178651
+		// Token: 0x04026CEA RID: 158954
 		public const int ConfirmInteractionGroup = 10;
 
-		// Token: 0x0402B9DC RID: 178652
+		// Token: 0x04026CEB RID: 158955
 		public const int SrcNameCountText = 11;
 
-		// Token: 0x0402B9DD RID: 178653
+		// Token: 0x04026CEC RID: 158956
 		public const int DestNameCountText = 12;
 
-		// Token: 0x0402B9DE RID: 178654
+		// Token: 0x04026CED RID: 158957
 		public const int NumberSelect = 13;
 
-		// Token: 0x0402B9DF RID: 178655
+		// Token: 0x04026CEE RID: 158958
 		public const int NoEnoughItem = 14;
 	}
 }

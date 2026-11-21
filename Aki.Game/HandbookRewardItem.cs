@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001338 RID: 4920
+// Token: 0x020007EC RID: 2028
 [NullableContext(1)]
 [Nullable(0)]
 public class HandbookRewardItem : GridProxyAbstract<int>
 {
-	// Token: 0x060088FA RID: 35066 RVA: 0x001D4578 File Offset: 0x001D2778
+	// Token: 0x06005C95 RID: 23701 RVA: 0x001DD3E4 File Offset: 0x001DB5E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x060088FB RID: 35067 RVA: 0x001D46A7 File Offset: 0x001D28A7
+	// Token: 0x06005C96 RID: 23702 RVA: 0x001DD513 File Offset: 0x001DB713
 	protected override void OnStart()
 	{
 		base.GetUiNiagara(6).SetAlpha(0f);
@@ -41,7 +41,7 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		base.GetUiNiagara(7).SetUIActive(false);
 	}
 
-	// Token: 0x060088FC RID: 35068 RVA: 0x001D46D4 File Offset: 0x001D28D4
+	// Token: 0x06005C97 RID: 23703 RVA: 0x001DD540 File Offset: 0x001DB740
 	public override void Refresh(int rewardId, bool isSelected, int gridIndex)
 	{
 		HandbookRewardData handbookRewardDataById = MoonChasingModel.Instance.GetHandbookRewardDataById(rewardId);
@@ -56,7 +56,7 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		this.RefreshRewardState(state, this.RewardState == null);
 	}
 
-	// Token: 0x060088FD RID: 35069 RVA: 0x001D4730 File Offset: 0x001D2930
+	// Token: 0x06005C98 RID: 23704 RVA: 0x001DD59C File Offset: 0x001DB79C
 	public void SetRewardGoalValue(EHandbookRewardState state, int value)
 	{
 		UUIText[] array = new UUIText[]
@@ -76,7 +76,7 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060088FE RID: 35070 RVA: 0x001D4794 File Offset: 0x001D2994
+	// Token: 0x06005C99 RID: 23705 RVA: 0x001DD600 File Offset: 0x001DB800
 	public void RefreshRewardState(EHandbookRewardState state, bool isInit)
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(7);
@@ -112,7 +112,7 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		this.RewardState = new EHandbookRewardState?(state);
 	}
 
-	// Token: 0x060088FF RID: 35071 RVA: 0x001D4884 File Offset: 0x001D2A84
+	// Token: 0x06005C9A RID: 23706 RVA: 0x001DD6F0 File Offset: 0x001DB8F0
 	private void ClickRewardButton()
 	{
 		EHandbookRewardState? rewardState = this.RewardState;
@@ -135,13 +135,13 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008900 RID: 35072 RVA: 0x001D48D2 File Offset: 0x001D2AD2
+	// Token: 0x06005C9B RID: 23707 RVA: 0x001DD73E File Offset: 0x001DB93E
 	private void RequestGetAllAvailableReward()
 	{
 		MoonChasingController.Instance.RequestAllAvailableHandbookReward();
 	}
 
-	// Token: 0x06008901 RID: 35073 RVA: 0x001D48E0 File Offset: 0x001D2AE0
+	// Token: 0x06005C9C RID: 23708 RVA: 0x001DD74C File Offset: 0x001DB94C
 	private void RefreshRewardPopup(bool isClaimed)
 	{
 		List<DailyActivityDefine.RewardTuple> list = new List<DailyActivityDefine.RewardTuple>();
@@ -164,56 +164,56 @@ public class HandbookRewardItem : GridProxyAbstract<int>
 		EventSystem.Instance.Emit<RewardPopupData>(EEventName.RefreshRewardPopUp, p);
 	}
 
-	// Token: 0x04003D0E RID: 15630
+	// Token: 0x04003DA6 RID: 15782
 	private EHandbookRewardState? RewardState;
 
-	// Token: 0x04003D0F RID: 15631
+	// Token: 0x04003DA7 RID: 15783
 	private HandbookRewardData Data;
 
-	// Token: 0x04003D10 RID: 15632
+	// Token: 0x04003DA8 RID: 15784
 	private const int Y_BIAS = 30;
 
-	// Token: 0x04003D11 RID: 15633
+	// Token: 0x04003DA9 RID: 15785
 	private const string REWARD_BACKGROUND_COLOR_UNFINISHED = "00000033";
 
-	// Token: 0x04003D12 RID: 15634
+	// Token: 0x04003DAA RID: 15786
 	private const string REWARD_BACKGROUND_COLOR_FINISHED = "F3EAAB1E";
 
-	// Token: 0x020079A3 RID: 31139
+	// Token: 0x02006B2D RID: 27437
 	[NullableContext(0)]
 	private class ERewardItemNode
 	{
-		// Token: 0x040280D4 RID: 164052
+		// Token: 0x04023401 RID: 144385
 		public const int TxtValueUnFinished = 0;
 
-		// Token: 0x040280D5 RID: 164053
+		// Token: 0x04023402 RID: 144386
 		public const int BtnReward = 1;
 
-		// Token: 0x040280D6 RID: 164054
+		// Token: 0x04023403 RID: 144387
 		public const int SpriteUnfinished = 2;
 
-		// Token: 0x040280D7 RID: 164055
+		// Token: 0x04023404 RID: 144388
 		public const int SpriteClaimed = 3;
 
-		// Token: 0x040280D8 RID: 164056
+		// Token: 0x04023405 RID: 144389
 		public const int SpriteFinished = 4;
 
-		// Token: 0x040280D9 RID: 164057
+		// Token: 0x04023406 RID: 144390
 		public const int SpriteBackground = 5;
 
-		// Token: 0x040280DA RID: 164058
+		// Token: 0x04023407 RID: 144391
 		public const int NiagaraWait = 6;
 
-		// Token: 0x040280DB RID: 164059
+		// Token: 0x04023408 RID: 144392
 		public const int NiagaraGet = 7;
 
-		// Token: 0x040280DC RID: 164060
+		// Token: 0x04023409 RID: 144393
 		public const int RedDot = 8;
 
-		// Token: 0x040280DD RID: 164061
+		// Token: 0x0402340A RID: 144394
 		public const int TxtValueFinished = 9;
 
-		// Token: 0x040280DE RID: 164062
+		// Token: 0x0402340B RID: 144395
 		public const int TxtValueReceivable = 10;
 	}
 }

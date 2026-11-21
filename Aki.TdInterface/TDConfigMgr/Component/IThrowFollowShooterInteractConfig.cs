@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000768 RID: 1896
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000809 RID: 2057
 	public class IThrowFollowShooterInteractConfig
 	{
-		// Token: 0x060028F7 RID: 10487 RVA: 0x0006C480 File Offset: 0x0006A680
+		// Token: 0x06002C1B RID: 11291 RVA: 0x00073628 File Offset: 0x00071828
 		private IThrowFollowShooterInteractConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060028F8 RID: 10488 RVA: 0x0006C4B8 File Offset: 0x0006A6B8
+		// Token: 0x06002C1C RID: 11292 RVA: 0x00073660 File Offset: 0x00071860
 		public static IThrowFollowShooterInteractConfig Create([Nullable(2)] IThrowFollowShooterInteractConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028F9 RID: 10489 RVA: 0x0006C4CB File Offset: 0x0006A6CB
+		// Token: 0x06002C1D RID: 11293 RVA: 0x00073673 File Offset: 0x00071873
 		public static IThrowFollowShooterInteractConfig CreateFromSetValue([Nullable(2)] IThrowFollowShooterInteractConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028FA RID: 10490 RVA: 0x0006C4E0 File Offset: 0x0006A6E0
+		// Token: 0x06002C1E RID: 11294 RVA: 0x00073688 File Offset: 0x00071888
 		public IThrowFollowShooterInteractConfig_SetValue ToSetValue()
 		{
 			return new IThrowFollowShooterInteractConfig_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AC0 RID: 2752
-		// (get) Token: 0x060028FB RID: 10491 RVA: 0x0006C52E File Offset: 0x0006A72E
-		// (set) Token: 0x060028FC RID: 10492 RVA: 0x0006C55D File Offset: 0x0006A75D
+		// Token: 0x17000B80 RID: 2944
+		// (get) Token: 0x06002C1F RID: 11295 RVA: 0x000736D6 File Offset: 0x000718D6
+		// (set) Token: 0x06002C20 RID: 11296 RVA: 0x00073705 File Offset: 0x00071905
 		public virtual float Radius
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC1 RID: 2753
-		// (get) Token: 0x060028FD RID: 10493 RVA: 0x0006C56B File Offset: 0x0006A76B
-		// (set) Token: 0x060028FE RID: 10494 RVA: 0x0006C592 File Offset: 0x0006A792
+		// Token: 0x17000B81 RID: 2945
+		// (get) Token: 0x06002C21 RID: 11297 RVA: 0x00073713 File Offset: 0x00071913
+		// (set) Token: 0x06002C22 RID: 11298 RVA: 0x0007373A File Offset: 0x0007193A
 		public virtual List<int> MatchIds
 		{
 			get
@@ -112,9 +110,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC2 RID: 2754
-		// (get) Token: 0x060028FF RID: 10495 RVA: 0x0006C5A0 File Offset: 0x0006A7A0
-		// (set) Token: 0x06002900 RID: 10496 RVA: 0x0006C601 File Offset: 0x0006A801
+		// Token: 0x17000B82 RID: 2946
+		// (get) Token: 0x06002C23 RID: 11299 RVA: 0x00073748 File Offset: 0x00071948
+		// (set) Token: 0x06002C24 RID: 11300 RVA: 0x000737A9 File Offset: 0x000719A9
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -145,20 +143,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC3 RID: 2755
-		// (get) Token: 0x06002901 RID: 10497 RVA: 0x0006C618 File Offset: 0x0006A818
-		// (set) Token: 0x06002902 RID: 10498 RVA: 0x0006C6AB File Offset: 0x0006A8AB
+		// Token: 0x17000B83 RID: 2947
+		// (get) Token: 0x06002C25 RID: 11301 RVA: 0x000737C0 File Offset: 0x000719C0
+		// (set) Token: 0x06002C26 RID: 11302 RVA: 0x00073853 File Offset: 0x00071A53
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> ArrivedConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -189,7 +187,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -198,20 +196,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC4 RID: 2756
-		// (get) Token: 0x06002903 RID: 10499 RVA: 0x0006C6C0 File Offset: 0x0006A8C0
-		// (set) Token: 0x06002904 RID: 10500 RVA: 0x0006C753 File Offset: 0x0006A953
+		// Token: 0x17000B84 RID: 2948
+		// (get) Token: 0x06002C27 RID: 11303 RVA: 0x00073868 File Offset: 0x00071A68
+		// (set) Token: 0x06002C28 RID: 11304 RVA: 0x000738FB File Offset: 0x00071AFB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> LeavedConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -242,7 +240,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -251,40 +249,40 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B85 RID: 7045
+		// Token: 0x04001D8A RID: 7562
 		[Nullable(2)]
 		protected IThrowFollowShooterInteractConfig FbInstance;
 
-		// Token: 0x04001B86 RID: 7046
+		// Token: 0x04001D8B RID: 7563
 		[Nullable(2)]
 		protected IThrowFollowShooterInteractConfig_SetValue PocoInterface;
 
-		// Token: 0x04001B87 RID: 7047
+		// Token: 0x04001D8C RID: 7564
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04001B88 RID: 7048
+		// Token: 0x04001D8D RID: 7565
 		private bool _OffsetInited;
 
-		// Token: 0x04001B89 RID: 7049
+		// Token: 0x04001D8E RID: 7566
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _ArrivedConditionActionsCache;
 
-		// Token: 0x04001B8A RID: 7050
+		// Token: 0x04001D8F RID: 7567
 		private bool _ArrivedConditionActionsInited;
 
-		// Token: 0x04001B8B RID: 7051
+		// Token: 0x04001D90 RID: 7568
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _LeavedConditionActionsCache;
 
-		// Token: 0x04001B8C RID: 7052
+		// Token: 0x04001D91 RID: 7569
 		private bool _LeavedConditionActionsInited;
 	}
 }

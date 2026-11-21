@@ -5,25 +5,25 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060AA RID: 24746
+	// Token: 0x02005028 RID: 20520
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SolarSpeedProtocolContext : ActivityBaseData
 	{
-		// Token: 0x0603E921 RID: 256289 RVA: 0x00F1FD07 File Offset: 0x00F1DF07
+		// Token: 0x060335E5 RID: 210405 RVA: 0x00E66ACB File Offset: 0x00E64CCB
 		public SolarSpeedProtocolContext(SolarSpeedModel model)
 		{
 			this.AttachedModel = model;
 		}
 
-		// Token: 0x0603E922 RID: 256290 RVA: 0x00F1FD37 File Offset: 0x00F1DF37
+		// Token: 0x060335E6 RID: 210406 RVA: 0x00E66AFB File Offset: 0x00E64CFB
 		public void Dispose()
 		{
 			this.LevelMsgCache.Clear();
 			this.TaskMsgCache.Clear();
 		}
 
-		// Token: 0x0603E923 RID: 256291 RVA: 0x00F1FD50 File Offset: 0x00F1DF50
+		// Token: 0x060335E7 RID: 210407 RVA: 0x00E66B14 File Offset: 0x00E64D14
 		protected override void PhraseEx(ActivityData data)
 		{
 			TeamParkourLevelActivityInfo teamParkourLevelActivityInfo = data.TeamParkourLevelActivityInfo;
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E924 RID: 256292 RVA: 0x00F1FD6E File Offset: 0x00F1DF6E
+		// Token: 0x060335E8 RID: 210408 RVA: 0x00E66B32 File Offset: 0x00E64D32
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.AttachedModel.HasRewardRedDot || this.AttachedModel.HasLevelRedDot;
 		}
 
-		// Token: 0x0603E925 RID: 256293 RVA: 0x00F1FD8C File Offset: 0x00F1DF8C
+		// Token: 0x060335E9 RID: 210409 RVA: 0x00E66B50 File Offset: 0x00E64D50
 		private void ParseActivityInfo(TeamParkourLevelActivityInfo data)
 		{
 			this.LevelMsgCache.Clear();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E926 RID: 256294 RVA: 0x00F1FE50 File Offset: 0x00F1E050
+		// Token: 0x060335EA RID: 210410 RVA: 0x00E66C14 File Offset: 0x00E64E14
 		public void ParseTeamParkourTaskNotify(TeamParkourTaskNotify msg)
 		{
 			ActivityTask activityTask = msg.ActivityTask;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.TaskMsgCache[activityTask.Id] = activityTask;
 		}
 
-		// Token: 0x0603E927 RID: 256295 RVA: 0x00F1FE7C File Offset: 0x00F1E07C
+		// Token: 0x060335EB RID: 210411 RVA: 0x00E66C40 File Offset: 0x00E64E40
 		public void ParseTeamParkourSettleNotify(TeamParkourSettleNotify msg)
 		{
 			this.ResetTeamParkourSettleCache();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E928 RID: 256296 RVA: 0x00F1FFD0 File Offset: 0x00F1E1D0
+		// Token: 0x060335EC RID: 210412 RVA: 0x00E66D94 File Offset: 0x00E64F94
 		public void ResetTeamParkourSettleCache()
 		{
 			this.CurrentRankPointsCache = 0;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.PlayerSettleMsgCache.Clear();
 		}
 
-		// Token: 0x0603E929 RID: 256297 RVA: 0x00F1FFEC File Offset: 0x00F1E1EC
+		// Token: 0x060335ED RID: 210413 RVA: 0x00E66DB0 File Offset: 0x00E64FB0
 		public int GetScoreById(int id)
 		{
 			TeamParkourLevelPlayInfo teamParkourLevelPlayInfo;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return teamParkourLevelPlayInfo.Score;
 		}
 
-		// Token: 0x0603E92A RID: 256298 RVA: 0x00F20014 File Offset: 0x00F1E214
+		// Token: 0x060335EE RID: 210414 RVA: 0x00E66DD8 File Offset: 0x00E64FD8
 		public int GetRankingById(int id)
 		{
 			TeamParkourLevelPlayInfo teamParkourLevelPlayInfo;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return teamParkourLevelPlayInfo.Ranking;
 		}
 
-		// Token: 0x0603E92B RID: 256299 RVA: 0x00F2003C File Offset: 0x00F1E23C
+		// Token: 0x060335EF RID: 210415 RVA: 0x00E66E00 File Offset: 0x00E65000
 		public int GetStartTime(int id)
 		{
 			TeamParkourLevelPlayInfo teamParkourLevelPlayInfo;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return teamParkourLevelPlayInfo.StartTime;
 		}
 
-		// Token: 0x0603E92C RID: 256300 RVA: 0x00F20064 File Offset: 0x00F1E264
+		// Token: 0x060335F0 RID: 210416 RVA: 0x00E66E28 File Offset: 0x00E65028
 		public int GetLapRecord(int id)
 		{
 			TeamParkourLevelPlayInfo teamParkourLevelPlayInfo;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return teamParkourLevelPlayInfo.TimeCost;
 		}
 
-		// Token: 0x0603E92D RID: 256301 RVA: 0x00F2008C File Offset: 0x00F1E28C
+		// Token: 0x060335F1 RID: 210417 RVA: 0x00E66E50 File Offset: 0x00E65050
 		public int GetCurrentProgressById(int id)
 		{
 			ActivityTask activityTask;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return activityTask.Current;
 		}
 
-		// Token: 0x0603E92E RID: 256302 RVA: 0x00F200B4 File Offset: 0x00F1E2B4
+		// Token: 0x060335F2 RID: 210418 RVA: 0x00E66E78 File Offset: 0x00E65078
 		public int GetCurrentProgressTargetById(int id)
 		{
 			ActivityTask activityTask;
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return activityTask.Target;
 		}
 
-		// Token: 0x0603E92F RID: 256303 RVA: 0x00F200DC File Offset: 0x00F1E2DC
+		// Token: 0x060335F3 RID: 210419 RVA: 0x00E66EA0 File Offset: 0x00E650A0
 		public ActivityTaskState? GetTaskStateById(int id)
 		{
 			ActivityTask activityTask;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return new ActivityTaskState?(activityTask.Status);
 		}
 
-		// Token: 0x0603E930 RID: 256304 RVA: 0x00F20110 File Offset: 0x00F1E310
+		// Token: 0x060335F4 RID: 210420 RVA: 0x00E66ED4 File Offset: 0x00E650D4
 		public void SetTaskStateRewardedById(int id)
 		{
 			ActivityTask activityTask;
@@ -202,22 +202,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x04020B90 RID: 134032
+		// Token: 0x0401B4BD RID: 111805
 		private readonly SolarSpeedModel AttachedModel;
 
-		// Token: 0x04020B91 RID: 134033
+		// Token: 0x0401B4BE RID: 111806
 		private readonly Dictionary<int, TeamParkourLevelPlayInfo> LevelMsgCache = new Dictionary<int, TeamParkourLevelPlayInfo>();
 
-		// Token: 0x04020B92 RID: 134034
+		// Token: 0x0401B4BF RID: 111807
 		private readonly Dictionary<int, ActivityTask> TaskMsgCache = new Dictionary<int, ActivityTask>();
 
-		// Token: 0x04020B93 RID: 134035
+		// Token: 0x0401B4C0 RID: 111808
 		public int CurrentRankPointsCache;
 
-		// Token: 0x04020B94 RID: 134036
+		// Token: 0x0401B4C1 RID: 111809
 		public int CurrentDistancePointsCache;
 
-		// Token: 0x04020B95 RID: 134037
+		// Token: 0x0401B4C2 RID: 111810
 		public readonly Dictionary<int, PlayerSettleInfo> PlayerSettleMsgCache = new Dictionary<int, PlayerSettleInfo>();
 	}
 }

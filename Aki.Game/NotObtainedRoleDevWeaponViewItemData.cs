@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x0200282D RID: 10285
+// Token: 0x02001DA8 RID: 7592
 [NullableContext(2)]
 [Nullable(0)]
 public class NotObtainedRoleDevWeaponViewItemData : RoleDevWeaponViewItemDataBase
 {
-	// Token: 0x0601530B RID: 86795 RVA: 0x0055C192 File Offset: 0x0055A392
+	// Token: 0x06012D09 RID: 77065 RVA: 0x00586ECA File Offset: 0x005850CA
 	[NullableContext(1)]
 	protected override void InitByRoleType(int roleId, RoleDevViewModel roleDevViewModel)
 	{
@@ -24,7 +24,7 @@ public class NotObtainedRoleDevWeaponViewItemData : RoleDevWeaponViewItemDataBas
 		}
 	}
 
-	// Token: 0x0601530C RID: 86796 RVA: 0x0055C1CC File Offset: 0x0055A3CC
+	// Token: 0x06012D0A RID: 77066 RVA: 0x00586F04 File Offset: 0x00585104
 	private void InitBaseInfo(int roleId)
 	{
 		if (RoleDevConfig.Instance.GetRoleDevProjectConfig(roleId) == null)
@@ -34,43 +34,43 @@ public class NotObtainedRoleDevWeaponViewItemData : RoleDevWeaponViewItemDataBas
 		this.IsWeaponHighQualityInternal = true;
 	}
 
-	// Token: 0x0601530D RID: 86797 RVA: 0x0055C1F6 File Offset: 0x0055A3F6
+	// Token: 0x06012D0B RID: 77067 RVA: 0x00586F2E File Offset: 0x0058512E
 	private void InitItemData(int roleId)
 	{
 		this.DevItemDataInternal = RoleDevWeaponDevItemDataFactory.Create(roleId);
 		this.RecommendItemDataInternal = RoleDevWeaponRecommendItemDataFactory.Create(roleId);
 	}
 
-	// Token: 0x0601530E RID: 86798 RVA: 0x0055C210 File Offset: 0x0055A410
+	// Token: 0x06012D0C RID: 77068 RVA: 0x00586F48 File Offset: 0x00585148
 	protected override bool GetIsRoleObtained()
 	{
 		return false;
 	}
 
-	// Token: 0x0601530F RID: 86799 RVA: 0x0055C213 File Offset: 0x0055A413
+	// Token: 0x06012D0D RID: 77069 RVA: 0x00586F4B File Offset: 0x0058514B
 	protected override RoleDevWeaponDevItemDataBase GetDevItemData()
 	{
 		return this.DevItemDataInternal;
 	}
 
-	// Token: 0x06015310 RID: 86800 RVA: 0x0055C21B File Offset: 0x0055A41B
+	// Token: 0x06012D0E RID: 77070 RVA: 0x00586F53 File Offset: 0x00585153
 	protected override RoleDevWeaponRecommendItemDataBase GetRecommendItemData()
 	{
 		return this.RecommendItemDataInternal;
 	}
 
-	// Token: 0x06015311 RID: 86801 RVA: 0x0055C223 File Offset: 0x0055A423
+	// Token: 0x06012D0F RID: 77071 RVA: 0x00586F5B File Offset: 0x0058515B
 	protected override bool GetIsWeaponHighQuality()
 	{
 		return this.IsWeaponHighQualityInternal;
 	}
 
-	// Token: 0x04009E93 RID: 40595
+	// Token: 0x0400A27C RID: 41596
 	private RoleDevWeaponDevItemDataBase DevItemDataInternal;
 
-	// Token: 0x04009E94 RID: 40596
+	// Token: 0x0400A27D RID: 41597
 	private RoleDevWeaponRecommendItemDataBase RecommendItemDataInternal;
 
-	// Token: 0x04009E95 RID: 40597
+	// Token: 0x0400A27E RID: 41598
 	private bool IsWeaponHighQualityInternal;
 }

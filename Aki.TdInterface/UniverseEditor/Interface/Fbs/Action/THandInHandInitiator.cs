@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076E3 RID: 30435
+	// Token: 0x02007EF7 RID: 32503
 	public enum THandInHandInitiator : byte
 	{
-		// Token: 0x04012772 RID: 75634
+		// Token: 0x040137D0 RID: 79824
 		NONE,
-		// Token: 0x04012773 RID: 75635
+		// Token: 0x040137D1 RID: 79825
 		IEntityHandInHandInitiator,
-		// Token: 0x04012774 RID: 75636
+		// Token: 0x040137D2 RID: 79826
 		IPlayerHandInHandInitiator
 	}
 }

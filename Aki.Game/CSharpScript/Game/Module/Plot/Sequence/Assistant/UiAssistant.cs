@@ -13,13 +13,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005039 RID: 20537
+	// Token: 0x02004006 RID: 16390
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiAssistant : SeqBaseAssistant
 	{
-		// Token: 0x1700802A RID: 32810
-		// (get) Token: 0x06034912 RID: 215314 RVA: 0x00C695A6 File Offset: 0x00C677A6
+		// Token: 0x170053E0 RID: 21472
+		// (get) Token: 0x060297D0 RID: 169936 RVA: 0x00BB5A36 File Offset: 0x00BB3C36
 		private Dictionary<int, int> PendingOptionResult
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034913 RID: 215315 RVA: 0x00C695B4 File Offset: 0x00C677B4
+		// Token: 0x060297D1 RID: 169937 RVA: 0x00BB5A44 File Offset: 0x00BB3C44
 		[NullableContext(0)]
 		public override UniTask<bool> LoadPromise()
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <LoadPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034914 RID: 215316 RVA: 0x00C695F7 File Offset: 0x00C677F7
+		// Token: 0x060297D2 RID: 169938 RVA: 0x00BB5A87 File Offset: 0x00BB3C87
 		private void OnViewDone(bool result)
 		{
 			CustomPromise<bool> promise = this.Promise;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Promise = null;
 		}
 
-		// Token: 0x06034915 RID: 215317 RVA: 0x00C69614 File Offset: 0x00C67814
+		// Token: 0x060297D3 RID: 169939 RVA: 0x00BB5AA4 File Offset: 0x00BB3CA4
 		[NullableContext(2)]
 		public override void PreAllPlay(Action<bool> callback = null)
 		{
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.SequenceQteManger.Init();
 		}
 
-		// Token: 0x06034916 RID: 215318 RVA: 0x00C696E3 File Offset: 0x00C678E3
+		// Token: 0x060297D4 RID: 169940 RVA: 0x00BB5B73 File Offset: 0x00BB3D73
 		public override void EachStop()
 		{
 			PlotController.Instance.PlotViewManager.HandleSubSequenceStop();
 		}
 
-		// Token: 0x06034917 RID: 215319 RVA: 0x00C696F4 File Offset: 0x00C678F4
+		// Token: 0x060297D5 RID: 169941 RVA: 0x00BB5B84 File Offset: 0x00BB3D84
 		[NullableContext(2)]
 		public override void AllStop(Action<bool> callback = null)
 		{
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034918 RID: 215320 RVA: 0x00C69754 File Offset: 0x00C67954
+		// Token: 0x060297D6 RID: 169942 RVA: 0x00BB5BE4 File Offset: 0x00BB3DE4
 		public override void End()
 		{
 			if (this.Model.IsSubtitleUiUse)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034919 RID: 215321 RVA: 0x00C697DC File Offset: 0x00C679DC
+		// Token: 0x060297D7 RID: 169943 RVA: 0x00BB5C6C File Offset: 0x00BB3E6C
 		private void AddDialogueEvent()
 		{
 			if (this.SubtitleEventRegistered)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			qteManager.OnQteAnimEnd.Add(new Action<int>(this.OnQteAnimEnd));
 		}
 
-		// Token: 0x0603491A RID: 215322 RVA: 0x00C69860 File Offset: 0x00C67A60
+		// Token: 0x060297D8 RID: 169944 RVA: 0x00BB5CF0 File Offset: 0x00BB3EF0
 		private void RemoveDialogueEvent()
 		{
 			if (!this.SubtitleEventRegistered)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			qteManager.OnQteAnimEnd.Remove(new Action<int>(this.OnQteAnimEnd));
 		}
 
-		// Token: 0x0603491B RID: 215323 RVA: 0x00C698E1 File Offset: 0x00C67AE1
+		// Token: 0x060297D9 RID: 169945 RVA: 0x00BB5D71 File Offset: 0x00BB3F71
 		public void OnQteStart(FMovieSceneQteEventParam param)
 		{
 			if (this.Model.State != ESequenceState.Playing)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.SequenceQteManger.EnqueueQteStart(param);
 		}
 
-		// Token: 0x0603491C RID: 215324 RVA: 0x00C6990F File Offset: 0x00C67B0F
+		// Token: 0x060297DA RID: 169946 RVA: 0x00BB5D9F File Offset: 0x00BB3F9F
 		public void OnQteAnimEnd(int qteId)
 		{
 			if (this.Model.State != ESequenceState.Playing)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.SequenceQteManger.EnqueueQteAnimEnd(qteId);
 		}
 
-		// Token: 0x0603491D RID: 215325 RVA: 0x00C6992C File Offset: 0x00C67B2C
+		// Token: 0x060297DB RID: 169947 RVA: 0x00BB5DBC File Offset: 0x00BB3FBC
 		public void OnShowDialogue(bool bShow, in FText dialogueId, int guardTime, int audioDelay, int audioTransitionDuration, ELanguageAudio languageAudio, int autoPlayDelay, in TArray<int> unisonIdList)
 		{
 			if (this.Model.State != ESequenceState.Playing)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.CacheDialogueQueue.Push(new CacheDialogueData(bShow, dialogueId.ToString(), guardTime2, (float)audioDelay, (float)audioTransitionDuration, languageAudio, (float)autoPlayDelay, unisonIdList));
 		}
 
-		// Token: 0x0603491E RID: 215326 RVA: 0x00C69978 File Offset: 0x00C67B78
+		// Token: 0x060297DC RID: 169948 RVA: 0x00BB5E08 File Offset: 0x00BB4008
 		public void TriggerAllSubtitle()
 		{
 			if (this.Model.IsPaused.GetValueOrDefault())
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603491F RID: 215327 RVA: 0x00C699EB File Offset: 0x00C67BEB
+		// Token: 0x060297DD RID: 169949 RVA: 0x00BB5E7B File Offset: 0x00BB407B
 		private void HandleSequenceDialog(bool isShow, string id, float guardTime, float audioDelay, float audioTransitionDuration, ELanguageAudio languageAudio, float autoPlayDelay, [Nullable(2)] TArray<int> unisonIdList)
 		{
 			if (languageAudio != ELanguageAudio.All && languageAudio != this.Model.CurLanguageAudio)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.TriggerSubtitleEnd(id);
 		}
 
-		// Token: 0x06034920 RID: 215328 RVA: 0x00C69A1C File Offset: 0x00C67C1C
+		// Token: 0x060297DE RID: 169950 RVA: 0x00BB5EAC File Offset: 0x00BB40AC
 		private void TriggerSubtitle(string id, float guardTime, float audioDelay, float audioTransitionDuration, float autoPlayDelay, [Nullable(2)] TArray<int> unisonIdList)
 		{
 			if (id == "None")
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.HandlePlotSubtitle(talkItem, guardTime, audioDelay, audioTransitionDuration, autoPlayDelay, unisonIdList);
 		}
 
-		// Token: 0x06034921 RID: 215329 RVA: 0x00C69AC4 File Offset: 0x00C67CC4
+		// Token: 0x060297DF RID: 169951 RVA: 0x00BB5F54 File Offset: 0x00BB4154
 		private void TriggerSubtitleEnd(string id)
 		{
 			if (id == "None")
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.HandlePlotSubtitleEnd(num, false).Forget();
 		}
 
-		// Token: 0x06034922 RID: 215330 RVA: 0x00C69B94 File Offset: 0x00C67D94
+		// Token: 0x060297E0 RID: 169952 RVA: 0x00BB6024 File Offset: 0x00BB4224
 		private void InitSubtitle()
 		{
 			this.Model.DefaultGuardTime = PlotModel.Instance.PlotGlobalConfig.GuardTime;
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.IsSubtitleConfigInit = true;
 		}
 
-		// Token: 0x06034923 RID: 215331 RVA: 0x00C69BFC File Offset: 0x00C67DFC
+		// Token: 0x060297E1 RID: 169953 RVA: 0x00BB608C File Offset: 0x00BB428C
 		public void HandlePlotSubtitle(ITalkItem inSubtitles, float guardTime, float audioDelay, float audioTransitionDuration, float autoPlayDelay, [Nullable(2)] TArray<int> unisonIdList)
 		{
 			if (!this.Model.IsSubtitleConfigInit)
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034924 RID: 215332 RVA: 0x00C69E24 File Offset: 0x00C68024
+		// Token: 0x060297E2 RID: 169954 RVA: 0x00BB62B4 File Offset: 0x00BB44B4
 		public UniTask HandlePlotSubtitleEnd(int id, bool isSkip = false)
 		{
 			UiAssistant.<HandlePlotSubtitleEnd>d__26 <HandlePlotSubtitleEnd>d__;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <HandlePlotSubtitleEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034925 RID: 215333 RVA: 0x00C69E78 File Offset: 0x00C68078
+		// Token: 0x060297E3 RID: 169955 RVA: 0x00BB6308 File Offset: 0x00BB4508
 		public UniTask HandleSelectedOption(int inOption, int talkItemId)
 		{
 			UiAssistant.<HandleSelectedOption>d__27 <HandleSelectedOption>d__;
@@ -406,19 +406,19 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <HandleSelectedOption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034926 RID: 215334 RVA: 0x00C69ECB File Offset: 0x00C680CB
+		// Token: 0x060297E4 RID: 169956 RVA: 0x00BB635B File Offset: 0x00BB455B
 		private void HandlePlotNoText(ITalkItem subtitle)
 		{
 			FlowController.Instance.FlowSequence.OnSubtitleStart(subtitle.Id);
 		}
 
-		// Token: 0x06034927 RID: 215335 RVA: 0x00C69EE2 File Offset: 0x00C680E2
+		// Token: 0x060297E5 RID: 169957 RVA: 0x00BB6372 File Offset: 0x00BB4572
 		private void HandlePlotNoTextEnd(int id)
 		{
 			FlowController.Instance.FlowSequence.OnSubtitleEnd(new int?(id));
 		}
 
-		// Token: 0x06034928 RID: 215336 RVA: 0x00C69EFC File Offset: 0x00C680FC
+		// Token: 0x060297E6 RID: 169958 RVA: 0x00BB638C File Offset: 0x00BB458C
 		private UniTask PreloadQte()
 		{
 			UiAssistant.<PreloadQte>d__30 <PreloadQte>d__;
@@ -429,7 +429,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return <PreloadQte>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034929 RID: 215337 RVA: 0x00C69F40 File Offset: 0x00C68140
+		// Token: 0x060297E7 RID: 169959 RVA: 0x00BB63D0 File Offset: 0x00BB45D0
 		public void PreloadUi(CustomPromise<bool> promise)
 		{
 			UiAssistant.<>c__DisplayClass31_0 CS$<>8__locals1 = new UiAssistant.<>c__DisplayClass31_0();
@@ -500,25 +500,25 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			CS$<>8__locals1.<PreloadUi>g__SetResult|0();
 		}
 
-		// Token: 0x0401C02B RID: 114731
+		// Token: 0x04016A36 RID: 92726
 		private const string SUBTITLE_ACTION_PAUSE = "Action";
 
-		// Token: 0x0401C02C RID: 114732
+		// Token: 0x04016A37 RID: 92727
 		private const string OPTION_ACTION_PAUSE = "Option";
 
-		// Token: 0x0401C02D RID: 114733
+		// Token: 0x04016A38 RID: 92728
 		public Event<ESequenceEventName, Delegate> Event = new Event<ESequenceEventName, Delegate>();
 
-		// Token: 0x0401C02E RID: 114734
+		// Token: 0x04016A39 RID: 92729
 		private readonly Queue<CacheDialogueData> CacheDialogueQueue = new Queue<CacheDialogueData>(4);
 
-		// Token: 0x0401C02F RID: 114735
+		// Token: 0x04016A3A RID: 92730
 		private bool SubtitleEventRegistered;
 
-		// Token: 0x0401C030 RID: 114736
+		// Token: 0x04016A3B RID: 92731
 		private readonly QteManger QteManger = new QteManger();
 
-		// Token: 0x0401C031 RID: 114737
+		// Token: 0x04016A3C RID: 92732
 		private readonly SequenceQteManager SequenceQteManger = new SequenceQteManager();
 	}
 }

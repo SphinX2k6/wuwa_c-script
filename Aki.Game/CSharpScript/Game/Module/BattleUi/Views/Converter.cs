@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CFA RID: 23802
+	// Token: 0x02004CDC RID: 19676
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Converter
 	{
-		// Token: 0x0603C4AC RID: 246956 RVA: 0x00E6FD28 File Offset: 0x00E6DF28
+		// Token: 0x06031405 RID: 201733 RVA: 0x00DC0390 File Offset: 0x00DBE590
 		public static string Convert(string inputStr, int baseNum, int to)
 		{
 			if (baseNum == to)
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return text;
 		}
 
-		// Token: 0x0603C4AD RID: 246957 RVA: 0x00E6FD9C File Offset: 0x00E6DF9C
+		// Token: 0x06031406 RID: 201734 RVA: 0x00DC0404 File Offset: 0x00DBE604
 		private static double ConvertToDecimal(string inputStr, int baseNum)
 		{
 			double num = 0.0;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return num;
 		}
 
-		// Token: 0x0401F696 RID: 128662
+		// Token: 0x0401A14F RID: 106831
 		private static readonly string CodeTable = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	}
 }

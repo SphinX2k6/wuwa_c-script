@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001D5 RID: 469
+// Token: 0x020001D9 RID: 473
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySetCollisionSize.TsAnimNotifySetCollisionSize_C")]
 public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170004AF RID: 1199
-	// (get) Token: 0x06001D3D RID: 7485 RVA: 0x00093C5B File Offset: 0x00091E5B
-	// (set) Token: 0x06001D3E RID: 7486 RVA: 0x00093C6B File Offset: 0x00091E6B
+	// Token: 0x170004D1 RID: 1233
+	// (get) Token: 0x06001DDA RID: 7642 RVA: 0x0009AA9F File Offset: 0x00098C9F
+	// (set) Token: 0x06001DDB RID: 7643 RVA: 0x0009AAAF File Offset: 0x00098CAF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Radius
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x170004B0 RID: 1200
-	// (get) Token: 0x06001D3F RID: 7487 RVA: 0x00093C7C File Offset: 0x00091E7C
-	// (set) Token: 0x06001D40 RID: 7488 RVA: 0x00093C8C File Offset: 0x00091E8C
+	// Token: 0x170004D2 RID: 1234
+	// (get) Token: 0x06001DDC RID: 7644 RVA: 0x0009AAC0 File Offset: 0x00098CC0
+	// (set) Token: 0x06001DDD RID: 7645 RVA: 0x0009AAD0 File Offset: 0x00098CD0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float HalfHeight
 	{
@@ -43,32 +43,28 @@ public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x06001D41 RID: 7489 RVA: 0x00093CA0 File Offset: 0x00091EA0
+	// Token: 0x06001DDE RID: 7646 RVA: 0x0009AAE4 File Offset: 0x00098CE4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent MeshComp, UAnimSequenceBase Animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySetCollisionSize) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifySetCollisionSize.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((MeshComp != null) ? MeshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((Animation != null) ? Animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(MeshComp, Animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((MeshComp != null) ? MeshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((Animation != null) ? Animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001D42 RID: 7490 RVA: 0x00093D40 File Offset: 0x00091F40
+	// Token: 0x06001DDF RID: 7647 RVA: 0x0009AB9C File Offset: 0x00098D9C
 	[NullableContext(2)]
 	protected unsafe virtual bool K2_Notify_Implementation(USkeletalMeshComponent MeshComp, UAnimSequenceBase Animation)
 	{
@@ -94,37 +90,33 @@ public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x06001D43 RID: 7491 RVA: 0x00093E14 File Offset: 0x00092014
+	// Token: 0x06001DE0 RID: 7648 RVA: 0x0009AC70 File Offset: 0x00098E70
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySetCollisionSize) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifySetCollisionSize.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001D44 RID: 7492 RVA: 0x00093E8F File Offset: 0x0009208F
+	// Token: 0x06001DE1 RID: 7649 RVA: 0x0009AD00 File Offset: 0x00098F00
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "设置碰撞大小";
 	}
 
-	// Token: 0x06001D45 RID: 7493 RVA: 0x00093E96 File Offset: 0x00092096
+	// Token: 0x06001DE2 RID: 7650 RVA: 0x0009AD07 File Offset: 0x00098F07
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifySetCollisionSize._ClassPtr == IntPtr.Zero)
@@ -134,23 +126,23 @@ public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IU
 		return TsAnimNotifySetCollisionSize._ClassPtr;
 	}
 
-	// Token: 0x06001D46 RID: 7494 RVA: 0x00093EBC File Offset: 0x000920BC
+	// Token: 0x06001DE3 RID: 7651 RVA: 0x0009AD2C File Offset: 0x00098F2C
 	public TsAnimNotifySetCollisionSize() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySetCollisionSize.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001D47 RID: 7495 RVA: 0x00093EE4 File Offset: 0x000920E4
+	// Token: 0x06001DE4 RID: 7652 RVA: 0x0009AD54 File Offset: 0x00098F54
 	[NullableContext(1)]
 	public TsAnimNotifySetCollisionSize(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySetCollisionSize.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001D48 RID: 7496 RVA: 0x00093F17 File Offset: 0x00092117
+	// Token: 0x06001DE5 RID: 7653 RVA: 0x0009AD87 File Offset: 0x00098F87
 	protected TsAnimNotifySetCollisionSize(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001D49 RID: 7497 RVA: 0x00093F20 File Offset: 0x00092120
+	// Token: 0x06001DE6 RID: 7654 RVA: 0x0009AD90 File Offset: 0x00098F90
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -158,25 +150,25 @@ public class TsAnimNotifySetCollisionSize : TsAnimNotifyBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001D4A RID: 7498 RVA: 0x00093F53 File Offset: 0x00092153
+	// Token: 0x06001DE7 RID: 7655 RVA: 0x0009ADC3 File Offset: 0x00098FC3
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400123A RID: 4666
+	// Token: 0x0400127D RID: 4733
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySetCollisionSize.TsAnimNotifySetCollisionSize_C";
 
-	// Token: 0x0400123B RID: 4667
+	// Token: 0x0400127E RID: 4734
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400123C RID: 4668
+	// Token: 0x0400127F RID: 4735
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400123D RID: 4669
+	// Token: 0x04001280 RID: 4736
 	private static int __PropertyOffset_Radius;
 
-	// Token: 0x0400123E RID: 4670
+	// Token: 0x04001281 RID: 4737
 	private static int __PropertyOffset_HalfHeight;
 }

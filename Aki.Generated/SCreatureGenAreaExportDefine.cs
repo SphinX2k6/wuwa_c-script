@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011DB RID: 4571
+	// Token: 0x02001312 RID: 4882
 	public struct SCreatureGenAreaExportDefine : IFlatbufferObject
 	{
-		// Token: 0x17003F1A RID: 16154
-		// (get) Token: 0x0600EB17 RID: 60183 RVA: 0x003495C8 File Offset: 0x003477C8
+		// Token: 0x17004282 RID: 17026
+		// (get) Token: 0x0600F890 RID: 63632 RVA: 0x003742B8 File Offset: 0x003724B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB18 RID: 60184 RVA: 0x003495D5 File Offset: 0x003477D5
+		// Token: 0x0600F891 RID: 63633 RVA: 0x003742C5 File Offset: 0x003724C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EB19 RID: 60185 RVA: 0x003495DC File Offset: 0x003477DC
+		// Token: 0x0600F892 RID: 63634 RVA: 0x003742CC File Offset: 0x003724CC
 		public static SCreatureGenAreaExportDefine GetRootAsSCreatureGenAreaExportDefine(ByteBuffer _bb)
 		{
 			return SCreatureGenAreaExportDefine.GetRootAsSCreatureGenAreaExportDefine(_bb, default(SCreatureGenAreaExportDefine));
 		}
 
-		// Token: 0x0600EB1A RID: 60186 RVA: 0x003495F8 File Offset: 0x003477F8
+		// Token: 0x0600F893 RID: 63635 RVA: 0x003742E8 File Offset: 0x003724E8
 		public static SCreatureGenAreaExportDefine GetRootAsSCreatureGenAreaExportDefine(ByteBuffer _bb, SCreatureGenAreaExportDefine obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EB1B RID: 60187 RVA: 0x00349615 File Offset: 0x00347815
+		// Token: 0x0600F894 RID: 63636 RVA: 0x00374305 File Offset: 0x00372505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EB1C RID: 60188 RVA: 0x00349624 File Offset: 0x00347824
+		// Token: 0x0600F895 RID: 63637 RVA: 0x00374314 File Offset: 0x00372514
 		public SCreatureGenAreaExportDefine __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003F1B RID: 16155
-		// (get) Token: 0x0600EB1D RID: 60189 RVA: 0x00349634 File Offset: 0x00347834
+		// Token: 0x17004283 RID: 17027
+		// (get) Token: 0x0600F896 RID: 63638 RVA: 0x00374324 File Offset: 0x00372524
 		public int ShapeType
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB1E RID: 60190 RVA: 0x00349670 File Offset: 0x00347870
+		// Token: 0x0600F897 RID: 63639 RVA: 0x00374360 File Offset: 0x00372560
 		public IntVector? Transforms(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return new IntVector?(default(IntVector).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003F1C RID: 16156
-		// (get) Token: 0x0600EB1F RID: 60191 RVA: 0x003496D0 File Offset: 0x003478D0
+		// Token: 0x17004284 RID: 17028
+		// (get) Token: 0x0600F898 RID: 63640 RVA: 0x003743C0 File Offset: 0x003725C0
 		public int TransformsLength
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F1D RID: 16157
-		// (get) Token: 0x0600EB20 RID: 60192 RVA: 0x003496FC File Offset: 0x003478FC
+		// Token: 0x17004285 RID: 17029
+		// (get) Token: 0x0600F899 RID: 63641 RVA: 0x003743EC File Offset: 0x003725EC
 		public float Weight
 		{
 			get
@@ -106,24 +106,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB21 RID: 60193 RVA: 0x0034973C File Offset: 0x0034793C
+		// Token: 0x0600F89A RID: 63642 RVA: 0x0037442C File Offset: 0x0037262C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TransformsIter()或GetTransformsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntVector[] Transforms()
+		public IntVector[] Transforms()
 		{
 			return this.TransformsIter().ToArray<IntVector>();
 		}
 
-		// Token: 0x0600EB22 RID: 60194 RVA: 0x00349749 File Offset: 0x00347949
+		// Token: 0x0600F89B RID: 63643 RVA: 0x00374439 File Offset: 0x00372639
 		[NullableContext(1)]
-		public readonly IEnumerable<IntVector> TransformsIter()
+		public IEnumerable<IntVector> TransformsIter()
 		{
 			SCreatureGenAreaExportDefine.<TransformsIter>d__16 <TransformsIter>d__ = new SCreatureGenAreaExportDefine.<TransformsIter>d__16(-2);
 			<TransformsIter>d__.<>3__<>4__this = this;
 			return <TransformsIter>d__;
 		}
 
-		// Token: 0x0400534E RID: 21326
+		// Token: 0x04005992 RID: 22930
 		private Table __p;
 	}
 }

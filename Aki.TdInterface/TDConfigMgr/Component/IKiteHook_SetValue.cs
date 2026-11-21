@@ -5,45 +5,45 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004AD RID: 1197
+	// Token: 0x02000506 RID: 1286
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IKiteHook_SetValue
 	{
-		// Token: 0x040011F9 RID: 4601
+		// Token: 0x0400131B RID: 4891
 		public EHookInteractType Type;
 
-		// Token: 0x040011FA RID: 4602
+		// Token: 0x0400131C RID: 4892
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x040011FB RID: 4603
+		// Token: 0x0400131D RID: 4893
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x040011FC RID: 4604
+		// Token: 0x0400131E RID: 4894
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x040011FD RID: 4605
+		// Token: 0x0400131F RID: 4895
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x040011FE RID: 4606
+		// Token: 0x04001320 RID: 4896
 		public string HookDataAssetOverride;
 
-		// Token: 0x040011FF RID: 4607
+		// Token: 0x04001321 RID: 4897
 		public bool? SupportSwitchHookMidway;
 	}
 }

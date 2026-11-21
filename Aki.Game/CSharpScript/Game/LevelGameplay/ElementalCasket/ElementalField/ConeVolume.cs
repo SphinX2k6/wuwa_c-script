@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E93 RID: 28307
+	// Token: 0x02006013 RID: 24595
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConeVolume : IElementalFieldVolume
 	{
-		// Token: 0x06044FD4 RID: 282580 RVA: 0x0110D040 File Offset: 0x0110B240
+		// Token: 0x0603B175 RID: 242037 RVA: 0x010B711C File Offset: 0x010B531C
 		public ConeVolume(ISceneItemElementalFieldConeSnapshot snapshot)
 		{
 			this.Apex.Set(snapshot.Center.X, snapshot.Center.Y, snapshot.Center.Z);
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.FeatureSize = Math.Min(this.Radius, this.Height);
 		}
 
-		// Token: 0x06044FD5 RID: 282581 RVA: 0x0110D120 File Offset: 0x0110B320
+		// Token: 0x0603B176 RID: 242038 RVA: 0x010B71FC File Offset: 0x010B53FC
 		public bool ContainsPoint(Vector point)
 		{
 			return MathUtils.Instance.IsLocationInsideCone(this.Apex, this.Axis, this.Height, this.Radius, point);
 		}
 
-		// Token: 0x06044FD6 RID: 282582 RVA: 0x0110D148 File Offset: 0x0110B348
+		// Token: 0x0603B177 RID: 242039 RVA: 0x010B7224 File Offset: 0x010B5424
 		public bool IntersectsSegment(Vector a, Vector b)
 		{
 			Vector tempSamplePoint = ConeVolume.TempSamplePoint;
@@ -47,35 +47,35 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return false;
 		}
 
-		// Token: 0x06044FD7 RID: 282583 RVA: 0x0110D1E0 File Offset: 0x0110B3E0
+		// Token: 0x0603B178 RID: 242040 RVA: 0x010B72BC File Offset: 0x010B54BC
 		public void DebugDraw()
 		{
 			UKismetSystemLibrary.D_DrawDebugCone(GlobalData.World, this.Apex.ToUeVector(false), this.Axis.ToUeVector(false), (float)this.Height, (float)this.HalfAngle, (float)this.HalfAngle, 16, ElementalCasketDefine.activeVolumeDebugDrawColor, 0.2f, 1f);
 		}
 
-		// Token: 0x04023EBC RID: 147132
+		// Token: 0x0401F16F RID: 127343
 		[StaticVariableRuleIgnore]
 		private static readonly Stat coneIntersectsSegmentStat = Stat.Create("ElementalFieldVolume.Cone.IntersectsSegment", "", "");
 
-		// Token: 0x04023EBD RID: 147133
+		// Token: 0x0401F170 RID: 127344
 		private readonly Vector Apex = Vector.Create();
 
-		// Token: 0x04023EBE RID: 147134
+		// Token: 0x0401F171 RID: 127345
 		private readonly Vector Axis = Vector.Create();
 
-		// Token: 0x04023EBF RID: 147135
+		// Token: 0x0401F172 RID: 127346
 		private readonly double Height;
 
-		// Token: 0x04023EC0 RID: 147136
+		// Token: 0x0401F173 RID: 127347
 		private readonly double Radius;
 
-		// Token: 0x04023EC1 RID: 147137
+		// Token: 0x0401F174 RID: 127348
 		private readonly double HalfAngle;
 
-		// Token: 0x04023EC2 RID: 147138
+		// Token: 0x0401F175 RID: 127349
 		private readonly double FeatureSize;
 
-		// Token: 0x04023EC3 RID: 147139
+		// Token: 0x0401F176 RID: 127350
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TempSamplePoint = Vector.Create();
 	}

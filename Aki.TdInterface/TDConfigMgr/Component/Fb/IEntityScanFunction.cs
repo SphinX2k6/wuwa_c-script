@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA0 RID: 2720
+	// Token: 0x02000B6A RID: 2922
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityScanFunction
 	{
-		// Token: 0x06003EA5 RID: 16037 RVA: 0x000A0527 File Offset: 0x0009E727
-		[NullableContext(1)]
+		// Token: 0x060042CF RID: 17103 RVA: 0x000A9B1B File Offset: 0x000A7D1B
+		[NullableContext(0)]
 		public static IEntityScanFunction Create(IEntityScanFunction? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F22 RID: 3874
-		// (get) Token: 0x06003EA6 RID: 16038 RVA: 0x000A0546 File Offset: 0x0009E746
+		// Token: 0x17000FF6 RID: 4086
+		// (get) Token: 0x060042D0 RID: 17104 RVA: 0x000A9B3A File Offset: 0x000A7D3A
 		public virtual int ScanId
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F23 RID: 3875
-		// (get) Token: 0x06003EA7 RID: 16039 RVA: 0x000A0553 File Offset: 0x0009E753
+		// Token: 0x17000FF7 RID: 4087
+		// (get) Token: 0x060042D1 RID: 17105 RVA: 0x000A9B47 File Offset: 0x000A7D47
 		public virtual bool IsConcealed
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F24 RID: 3876
-		// (get) Token: 0x06003EA8 RID: 16040 RVA: 0x000A0560 File Offset: 0x0009E760
+		// Token: 0x17000FF8 RID: 4088
+		// (get) Token: 0x060042D2 RID: 17106 RVA: 0x000A9B54 File Offset: 0x000A7D54
 		public virtual IScanTraceEffect TraceEffect
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F25 RID: 3877
-		// (get) Token: 0x06003EA9 RID: 16041 RVA: 0x000A0594 File Offset: 0x0009E794
+		// Token: 0x17000FF9 RID: 4089
+		// (get) Token: 0x060042D3 RID: 17107 RVA: 0x000A9B88 File Offset: 0x000A7D88
 		public virtual ESpecificScanType? SpecificScanType
 		{
 			get
@@ -74,13 +74,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022CF RID: 8911
+		// Token: 0x040024EB RID: 9451
 		private IEntityScanFunction Instance;
 
-		// Token: 0x040022D0 RID: 8912
+		// Token: 0x040024EC RID: 9452
 		private IScanTraceEffect _TraceEffectCache;
 
-		// Token: 0x040022D1 RID: 8913
+		// Token: 0x040024ED RID: 9453
 		private bool _TraceEffectInited;
 	}
 }

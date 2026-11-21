@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200271F RID: 10015
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029E6 RID: 10726
 	public class IEntitySplineMoveTarget : ISplineMoveTargetType
 	{
-		// Token: 0x0600DF5C RID: 57180 RVA: 0x002119C6 File Offset: 0x0020FBC6
+		// Token: 0x0600ED48 RID: 60744 RVA: 0x0022E36E File Offset: 0x0022C56E
 		public static IEntitySplineMoveTarget Create(IEntitySplineMoveTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042E0 RID: 17120
-		// (get) Token: 0x0600DF5D RID: 57181 RVA: 0x002119E5 File Offset: 0x0020FBE5
+		// Token: 0x1700462A RID: 17962
+		// (get) Token: 0x0600ED49 RID: 60745 RVA: 0x0022E38D File Offset: 0x0022C58D
 		public override ESplineMoveTargetType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042E1 RID: 17121
-		// (get) Token: 0x0600DF5E RID: 57182 RVA: 0x002119F2 File Offset: 0x0020FBF2
+		// Token: 0x1700462B RID: 17963
+		// (get) Token: 0x0600ED4A RID: 60746 RVA: 0x0022E39A File Offset: 0x0022C59A
 		public virtual int EntityId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042E2 RID: 17122
-		// (get) Token: 0x0600DF5F RID: 57183 RVA: 0x002119FF File Offset: 0x0020FBFF
+		// Token: 0x1700462C RID: 17964
+		// (get) Token: 0x0600ED4B RID: 60747 RVA: 0x0022E3A7 File Offset: 0x0022C5A7
 		public virtual ISplineMoveDriveMode MoveDriveMode
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BF3 RID: 31731
+		// Token: 0x04008298 RID: 33432
 		private IEntitySplineMoveTarget Instance;
 
-		// Token: 0x04007BF4 RID: 31732
+		// Token: 0x04008299 RID: 33433
 		private ISplineMoveDriveMode _MoveDriveModeCache;
 
-		// Token: 0x04007BF5 RID: 31733
+		// Token: 0x0400829A RID: 33434
 		private bool _MoveDriveModeInited;
 	}
 }

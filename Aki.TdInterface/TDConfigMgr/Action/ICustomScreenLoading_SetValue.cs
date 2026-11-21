@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200194D RID: 6477
+	// Token: 0x02001AD8 RID: 6872
 	public class ICustomScreenLoading_SetValue
 	{
-		// Token: 0x040056B0 RID: 22192
+		// Token: 0x04005B03 RID: 23299
 		public ECustomScreenType Type;
 
-		// Token: 0x040056B1 RID: 22193
-		[Nullable(1)]
+		// Token: 0x04005B04 RID: 23300
 		public ICustomScreenLoadingCyberpunk LoadingType;
 	}
 }

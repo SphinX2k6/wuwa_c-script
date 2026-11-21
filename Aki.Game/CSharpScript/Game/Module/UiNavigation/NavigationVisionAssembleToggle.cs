@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004935 RID: 18741
+	// Token: 0x020038AC RID: 14508
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NavigationVisionAssembleToggle : NavigationToggle
 	{
-		// Token: 0x06030EDC RID: 200412 RVA: 0x00B5BDC5 File Offset: 0x00B59FC5
+		// Token: 0x06025A09 RID: 154121 RVA: 0x00A96C35 File Offset: 0x00A94E35
 		[NullableContext(1)]
 		public NavigationVisionAssembleToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030EDD RID: 200413 RVA: 0x00B5BDD0 File Offset: 0x00B59FD0
+		// Token: 0x06025A0A RID: 154122 RVA: 0x00A96C40 File Offset: 0x00A94E40
 		protected override UUISelectableComponent OnFindLoopScrollViewNavigationComponent(FVector direction, UINavigationWrapMode wrapMode)
 		{
 			if (this.Listener == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EDE RID: 200414 RVA: 0x00B5BE8A File Offset: 0x00B5A08A
+		// Token: 0x06025A0B RID: 154123 RVA: 0x00A96CFA File Offset: 0x00A94EFA
 		private UUISelectableComponent GetGroupFirstComponent()
 		{
 			TsUiNavigationBehaviorListener listener = this.Listener;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return navigationGroup.ActiveListenerList[0].GetSelectableComponent();
 		}
 
-		// Token: 0x06030EDF RID: 200415 RVA: 0x00B5BEB4 File Offset: 0x00B5A0B4
+		// Token: 0x06025A0C RID: 154124 RVA: 0x00A96D24 File Offset: 0x00A94F24
 		private UUISelectableComponent GetLoopScrollViewFirstComponent()
 		{
 			TsUiNavigationBehaviorListener listener = this.Listener;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030EE0 RID: 200416 RVA: 0x00B5BFBC File Offset: 0x00B5A1BC
+		// Token: 0x06025A0D RID: 154125 RVA: 0x00A96E2C File Offset: 0x00A9502C
 		private UUISelectableComponent GetLoopScrollViewLastComponent()
 		{
 			int filterDataLength = VisionEquipGroupModel.Instance.FilterDataLength;

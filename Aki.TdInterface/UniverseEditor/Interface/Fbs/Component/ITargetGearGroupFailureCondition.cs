@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A2E RID: 23086
+	// Token: 0x0200603B RID: 24635
 	public struct ITargetGearGroupFailureCondition : IFlatbufferObject
 	{
-		// Token: 0x1700ADA9 RID: 44457
-		// (get) Token: 0x060273EE RID: 160750 RVA: 0x0056698C File Offset: 0x00564B8C
+		// Token: 0x1700B6E1 RID: 46817
+		// (get) Token: 0x06029966 RID: 170342 RVA: 0x005AD950 File Offset: 0x005ABB50
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060273EF RID: 160751 RVA: 0x00566999 File Offset: 0x00564B99
+		// Token: 0x06029967 RID: 170343 RVA: 0x005AD95D File Offset: 0x005ABB5D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060273F0 RID: 160752 RVA: 0x005669A0 File Offset: 0x00564BA0
+		// Token: 0x06029968 RID: 170344 RVA: 0x005AD964 File Offset: 0x005ABB64
 		public static ITargetGearGroupFailureCondition GetRootAsITargetGearGroupFailureCondition(ByteBuffer _bb)
 		{
 			return ITargetGearGroupFailureCondition.GetRootAsITargetGearGroupFailureCondition(_bb, default(ITargetGearGroupFailureCondition));
 		}
 
-		// Token: 0x060273F1 RID: 160753 RVA: 0x005669BC File Offset: 0x00564BBC
+		// Token: 0x06029969 RID: 170345 RVA: 0x005AD980 File Offset: 0x005ABB80
 		public static ITargetGearGroupFailureCondition GetRootAsITargetGearGroupFailureCondition(ByteBuffer _bb, ITargetGearGroupFailureCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060273F2 RID: 160754 RVA: 0x005669D9 File Offset: 0x00564BD9
+		// Token: 0x0602996A RID: 170346 RVA: 0x005AD99D File Offset: 0x005ABB9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060273F3 RID: 160755 RVA: 0x005669E8 File Offset: 0x00564BE8
+		// Token: 0x0602996B RID: 170347 RVA: 0x005AD9AC File Offset: 0x005ABBAC
 		public ITargetGearGroupFailureCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ADAA RID: 44458
-		// (get) Token: 0x060273F4 RID: 160756 RVA: 0x005669F8 File Offset: 0x00564BF8
+		// Token: 0x1700B6E2 RID: 46818
+		// (get) Token: 0x0602996C RID: 170348 RVA: 0x005AD9BC File Offset: 0x005ABBBC
 		public ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060273F5 RID: 160757 RVA: 0x00566A34 File Offset: 0x00564C34
+		// Token: 0x0602996D RID: 170349 RVA: 0x005AD9F8 File Offset: 0x005ABBF8
 		public static Offset<ITargetGearGroupFailureCondition> CreateITargetGearGroupFailureCondition(FlatBufferBuilder builder, ETargetGearGroupFailureCondition Type = ETargetGearGroupFailureCondition.ArbitraryState)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITargetGearGroupFailureCondition.EndITargetGearGroupFailureCondition(builder);
 		}
 
-		// Token: 0x060273F6 RID: 160758 RVA: 0x00566A4A File Offset: 0x00564C4A
+		// Token: 0x0602996E RID: 170350 RVA: 0x005ADA0E File Offset: 0x005ABC0E
 		public static void StartITargetGearGroupFailureCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060273F7 RID: 160759 RVA: 0x00566A53 File Offset: 0x00564C53
+		// Token: 0x0602996F RID: 170351 RVA: 0x005ADA17 File Offset: 0x005ABC17
 		public static void AddType(FlatBufferBuilder builder, ETargetGearGroupFailureCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060273F8 RID: 160760 RVA: 0x00566A5E File Offset: 0x00564C5E
+		// Token: 0x06029970 RID: 170352 RVA: 0x005ADA22 File Offset: 0x005ABC22
 		public static Offset<ITargetGearGroupFailureCondition> EndITargetGearGroupFailureCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITargetGearGroupFailureCondition>(builder.EndTable());
 		}
 
-		// Token: 0x060273F9 RID: 160761 RVA: 0x00566A6C File Offset: 0x00564C6C
+		// Token: 0x06029971 RID: 170353 RVA: 0x005ADA30 File Offset: 0x005ABC30
 		public ITargetGearGroupFailureConditionT UnPack()
 		{
 			ITargetGearGroupFailureConditionT targetGearGroupFailureConditionT = new ITargetGearGroupFailureConditionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return targetGearGroupFailureConditionT;
 		}
 
-		// Token: 0x060273FA RID: 160762 RVA: 0x00566A87 File Offset: 0x00564C87
+		// Token: 0x06029972 RID: 170354 RVA: 0x005ADA4B File Offset: 0x005ABC4B
 		public void UnPackTo(ITargetGearGroupFailureConditionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060273FB RID: 160763 RVA: 0x00566A98 File Offset: 0x00564C98
+		// Token: 0x06029973 RID: 170355 RVA: 0x005ADA5C File Offset: 0x005ABC5C
 		public static Offset<ITargetGearGroupFailureCondition> Pack(FlatBufferBuilder builder, ITargetGearGroupFailureConditionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITargetGearGroupFailureCondition.CreateITargetGearGroupFailureCondition(builder, _o.Type);
 		}
 
-		// Token: 0x0400F096 RID: 61590
+		// Token: 0x0400FD8D RID: 64909
 		private Table __p;
 	}
 }

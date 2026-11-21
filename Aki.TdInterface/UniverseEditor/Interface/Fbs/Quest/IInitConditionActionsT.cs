@@ -5,20 +5,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EB5 RID: 16053
+	// Token: 0x020042F3 RID: 17139
 	public class IInitConditionActionsT
 	{
-		// Token: 0x17006F6B RID: 28523
-		// (get) Token: 0x06016ACB RID: 92875 RVA: 0x003461F0 File Offset: 0x003443F0
-		// (set) Token: 0x06016ACC RID: 92876 RVA: 0x003461F8 File Offset: 0x003443F8
+		// Token: 0x17007558 RID: 30040
+		// (get) Token: 0x06018118 RID: 98584 RVA: 0x0036F178 File Offset: 0x0036D378
+		// (set) Token: 0x06018119 RID: 98585 RVA: 0x0036F180 File Offset: 0x0036D380
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x17006F6C RID: 28524
-		// (get) Token: 0x06016ACD RID: 92877 RVA: 0x00346201 File Offset: 0x00344401
-		// (set) Token: 0x06016ACE RID: 92878 RVA: 0x00346209 File Offset: 0x00344409
+		// Token: 0x17007559 RID: 30041
+		// (get) Token: 0x0601811A RID: 98586 RVA: 0x0036F189 File Offset: 0x0036D389
+		// (set) Token: 0x0601811B RID: 98587 RVA: 0x0036F191 File Offset: 0x0036D391
 		public List<IActionInfoT> Action { get; set; }
 
-		// Token: 0x06016ACF RID: 92879 RVA: 0x00346212 File Offset: 0x00344412
+		// Token: 0x0601811C RID: 98588 RVA: 0x0036F19A File Offset: 0x0036D39A
 		public IInitConditionActionsT()
 		{
 			this.Condition = null;

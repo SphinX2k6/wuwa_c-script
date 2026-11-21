@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E1 RID: 9697
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028A0 RID: 10400
 	public class IEntityPos2 : IBasePos2
 	{
-		// Token: 0x0600D9F2 RID: 55794 RVA: 0x00207F18 File Offset: 0x00206118
+		// Token: 0x0600E7BB RID: 59323 RVA: 0x00224604 File Offset: 0x00222804
 		public static IEntityPos2 Create(IEntityPos2? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FF2 RID: 16370
-		// (get) Token: 0x0600D9F3 RID: 55795 RVA: 0x00207F37 File Offset: 0x00206137
+		// Token: 0x17004329 RID: 17193
+		// (get) Token: 0x0600E7BC RID: 59324 RVA: 0x00224623 File Offset: 0x00222823
 		public override EPos2 Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF3 RID: 16371
-		// (get) Token: 0x0600D9F4 RID: 55796 RVA: 0x00207F44 File Offset: 0x00206144
+		// Token: 0x1700432A RID: 17194
+		// (get) Token: 0x0600E7BD RID: 59325 RVA: 0x00224630 File Offset: 0x00222830
 		public virtual int EntityId
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FF4 RID: 16372
-		// (get) Token: 0x0600D9F5 RID: 55797 RVA: 0x00207F51 File Offset: 0x00206151
+		// Token: 0x1700432B RID: 17195
+		// (get) Token: 0x0600E7BE RID: 59326 RVA: 0x0022463D File Offset: 0x0022283D
 		public virtual VectorInfo Offset
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400790B RID: 30987
+		// Token: 0x04007FA2 RID: 32674
 		private IEntityPos2 Instance;
 
-		// Token: 0x0400790C RID: 30988
+		// Token: 0x04007FA3 RID: 32675
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x0400790D RID: 30989
+		// Token: 0x04007FA4 RID: 32676
 		private bool _OffsetInited;
 	}
 }

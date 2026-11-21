@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005464 RID: 21604
+	// Token: 0x020059EA RID: 23018
 	public enum IInteractPlayerDiractionType_Union : byte
 	{
-		// Token: 0x0400E6DD RID: 59101
+		// Token: 0x0400F30E RID: 62222
 		NONE,
-		// Token: 0x0400E6DE RID: 59102
+		// Token: 0x0400F30F RID: 62223
 		IInteractPlayerDiractionType,
-		// Token: 0x0400E6DF RID: 59103
+		// Token: 0x0400F310 RID: 62224
 		IInteractPlayerDiractionToNpc,
-		// Token: 0x0400E6E0 RID: 59104
+		// Token: 0x0400F311 RID: 62225
 		IInteractPlayerDiractionToLeisure
 	}
 }

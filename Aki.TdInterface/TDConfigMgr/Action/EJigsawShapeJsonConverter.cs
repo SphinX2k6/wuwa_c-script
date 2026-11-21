@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200236A RID: 9066
+	// Token: 0x020025DF RID: 9695
 	public class EJigsawShapeJsonConverter : JsonConverter<EJigsawShape>
 	{
-		// Token: 0x0600C5DD RID: 50653 RVA: 0x001CEDDC File Offset: 0x001CCFDC
+		// Token: 0x0600D1C7 RID: 53703 RVA: 0x001E70BC File Offset: 0x001E52BC
 		public override EJigsawShape Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EJigsawShapeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C5DE RID: 50654 RVA: 0x001CEE00 File Offset: 0x001CD000
+		// Token: 0x0600D1C8 RID: 53704 RVA: 0x001E70E0 File Offset: 0x001E52E0
 		public override void Write(Utf8JsonWriter writer, EJigsawShape value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

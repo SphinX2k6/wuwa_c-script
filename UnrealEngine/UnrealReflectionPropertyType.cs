@@ -5,10 +5,10 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200009F RID: 159
+	// Token: 0x02000084 RID: 132
 	public static class UnrealReflectionPropertyType
 	{
-		// Token: 0x0600108D RID: 4237 RVA: 0x00018C74 File Offset: 0x00016E74
+		// Token: 0x06000C20 RID: 3104 RVA: 0x00013998 File Offset: 0x00011B98
 		[NullableContext(1)]
 		public static UnrealReflectionPropertyTypeCode GetTypeCode(Type InType)
 		{

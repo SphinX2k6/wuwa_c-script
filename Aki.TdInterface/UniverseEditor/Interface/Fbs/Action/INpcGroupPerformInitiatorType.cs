@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BB8 RID: 27576
+	// Token: 0x02007304 RID: 29444
 	public struct INpcGroupPerformInitiatorType : IFlatbufferObject
 	{
-		// Token: 0x1700CCF7 RID: 52471
-		// (get) Token: 0x06030719 RID: 198425 RVA: 0x0069432B File Offset: 0x0069252B
+		// Token: 0x1700D7E3 RID: 55267
+		// (get) Token: 0x06033593 RID: 210323 RVA: 0x006ECCCB File Offset: 0x006EAECB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603071A RID: 198426 RVA: 0x00694338 File Offset: 0x00692538
+		// Token: 0x06033594 RID: 210324 RVA: 0x006ECCD8 File Offset: 0x006EAED8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603071B RID: 198427 RVA: 0x00694340 File Offset: 0x00692540
+		// Token: 0x06033595 RID: 210325 RVA: 0x006ECCE0 File Offset: 0x006EAEE0
 		public static INpcGroupPerformInitiatorType GetRootAsINpcGroupPerformInitiatorType(ByteBuffer _bb)
 		{
 			return INpcGroupPerformInitiatorType.GetRootAsINpcGroupPerformInitiatorType(_bb, default(INpcGroupPerformInitiatorType));
 		}
 
-		// Token: 0x0603071C RID: 198428 RVA: 0x0069435C File Offset: 0x0069255C
+		// Token: 0x06033596 RID: 210326 RVA: 0x006ECCFC File Offset: 0x006EAEFC
 		public static INpcGroupPerformInitiatorType GetRootAsINpcGroupPerformInitiatorType(ByteBuffer _bb, INpcGroupPerformInitiatorType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603071D RID: 198429 RVA: 0x00694379 File Offset: 0x00692579
+		// Token: 0x06033597 RID: 210327 RVA: 0x006ECD19 File Offset: 0x006EAF19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603071E RID: 198430 RVA: 0x00694388 File Offset: 0x00692588
+		// Token: 0x06033598 RID: 210328 RVA: 0x006ECD28 File Offset: 0x006EAF28
 		public INpcGroupPerformInitiatorType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CCF8 RID: 52472
-		// (get) Token: 0x0603071F RID: 198431 RVA: 0x00694398 File Offset: 0x00692598
+		// Token: 0x1700D7E4 RID: 55268
+		// (get) Token: 0x06033599 RID: 210329 RVA: 0x006ECD38 File Offset: 0x006EAF38
 		public ENpcGroupPerformInitiatorType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030720 RID: 198432 RVA: 0x006943D4 File Offset: 0x006925D4
+		// Token: 0x0603359A RID: 210330 RVA: 0x006ECD74 File Offset: 0x006EAF74
 		public static Offset<INpcGroupPerformInitiatorType> CreateINpcGroupPerformInitiatorType(FlatBufferBuilder builder, ENpcGroupPerformInitiatorType Type = ENpcGroupPerformInitiatorType.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcGroupPerformInitiatorType.EndINpcGroupPerformInitiatorType(builder);
 		}
 
-		// Token: 0x06030721 RID: 198433 RVA: 0x006943EA File Offset: 0x006925EA
+		// Token: 0x0603359B RID: 210331 RVA: 0x006ECD8A File Offset: 0x006EAF8A
 		public static void StartINpcGroupPerformInitiatorType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030722 RID: 198434 RVA: 0x006943F3 File Offset: 0x006925F3
+		// Token: 0x0603359C RID: 210332 RVA: 0x006ECD93 File Offset: 0x006EAF93
 		public static void AddType(FlatBufferBuilder builder, ENpcGroupPerformInitiatorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030723 RID: 198435 RVA: 0x006943FE File Offset: 0x006925FE
+		// Token: 0x0603359D RID: 210333 RVA: 0x006ECD9E File Offset: 0x006EAF9E
 		public static Offset<INpcGroupPerformInitiatorType> EndINpcGroupPerformInitiatorType(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcGroupPerformInitiatorType>(builder.EndTable());
 		}
 
-		// Token: 0x06030724 RID: 198436 RVA: 0x0069440C File Offset: 0x0069260C
+		// Token: 0x0603359E RID: 210334 RVA: 0x006ECDAC File Offset: 0x006EAFAC
 		public INpcGroupPerformInitiatorTypeT UnPack()
 		{
 			INpcGroupPerformInitiatorTypeT npcGroupPerformInitiatorTypeT = new INpcGroupPerformInitiatorTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return npcGroupPerformInitiatorTypeT;
 		}
 
-		// Token: 0x06030725 RID: 198437 RVA: 0x00694427 File Offset: 0x00692627
+		// Token: 0x0603359F RID: 210335 RVA: 0x006ECDC7 File Offset: 0x006EAFC7
 		public void UnPackTo(INpcGroupPerformInitiatorTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06030726 RID: 198438 RVA: 0x00694438 File Offset: 0x00692638
+		// Token: 0x060335A0 RID: 210336 RVA: 0x006ECDD8 File Offset: 0x006EAFD8
 		public static Offset<INpcGroupPerformInitiatorType> Pack(FlatBufferBuilder builder, INpcGroupPerformInitiatorTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return INpcGroupPerformInitiatorType.CreateINpcGroupPerformInitiatorType(builder, _o.Type);
 		}
 
-		// Token: 0x0401148D RID: 70797
+		// Token: 0x040123BF RID: 74687
 		private Table __p;
 	}
 }

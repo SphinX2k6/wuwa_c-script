@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028A5 RID: 10405
+	// Token: 0x02002B7A RID: 11130
 	public class ISpringArmFixConfig
 	{
-		// Token: 0x0600E656 RID: 58966 RVA: 0x0021D7D5 File Offset: 0x0021B9D5
-		[NullableContext(1)]
+		// Token: 0x0600F485 RID: 62597 RVA: 0x0023A755 File Offset: 0x00238955
 		public static ISpringArmFixConfig Create(ISpringArmFixConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046CE RID: 18126
-		// (get) Token: 0x0600E657 RID: 58967 RVA: 0x0021D7F4 File Offset: 0x0021B9F4
+		// Token: 0x17004A3F RID: 19007
+		// (get) Token: 0x0600F486 RID: 62598 RVA: 0x0023A774 File Offset: 0x00238974
 		public virtual bool? LeftRightFix
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046CF RID: 18127
-		// (get) Token: 0x0600E658 RID: 58968 RVA: 0x0021D82C File Offset: 0x0021BA2C
+		// Token: 0x17004A40 RID: 19008
+		// (get) Token: 0x0600F487 RID: 62599 RVA: 0x0023A7AC File Offset: 0x002389AC
 		public virtual bool? ForwardBackFix
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046D0 RID: 18128
-		// (get) Token: 0x0600E659 RID: 58969 RVA: 0x0021D864 File Offset: 0x0021BA64
+		// Token: 0x17004A41 RID: 19009
+		// (get) Token: 0x0600F488 RID: 62600 RVA: 0x0023A7E4 File Offset: 0x002389E4
 		public virtual bool? UpDownFix
 		{
 			get
@@ -63,7 +61,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F5B RID: 32603
+		// Token: 0x0400861A RID: 34330
 		private ISpringArmFixConfig Instance;
 	}
 }

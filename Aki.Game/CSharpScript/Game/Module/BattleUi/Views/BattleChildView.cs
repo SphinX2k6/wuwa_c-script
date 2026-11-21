@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CCF RID: 23759
+	// Token: 0x02004CB1 RID: 19633
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleChildView : UiPanelBase
 	{
-		// Token: 0x0603C1E6 RID: 246246 RVA: 0x00E64124 File Offset: 0x00E62324
+		// Token: 0x0603113C RID: 201020 RVA: 0x00DB4700 File Offset: 0x00DB2900
 		public UniTask NewByResourceId(UUIItem parentItem, string resourceId, bool bFromPool = false, [Nullable(2)] object param = null)
 		{
 			BattleChildView.<NewByResourceId>d__0 <NewByResourceId>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewByResourceId>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C1E7 RID: 246247 RVA: 0x00E64188 File Offset: 0x00E62388
+		// Token: 0x0603113D RID: 201021 RVA: 0x00DB4764 File Offset: 0x00DB2964
 		public UniTask NewByRootActorAsync(AActor rootActor, [Nullable(2)] object param = null)
 		{
 			BattleChildView.<NewByRootActorAsync>d__1 <NewByRootActorAsync>d__;
@@ -40,52 +40,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewByRootActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C1E8 RID: 246248 RVA: 0x00E641DB File Offset: 0x00E623DB
+		// Token: 0x0603113E RID: 201022 RVA: 0x00DB47B7 File Offset: 0x00DB29B7
 		[NullableContext(2)]
 		public virtual void Initialize(object param = null)
 		{
 		}
 
-		// Token: 0x0603C1E9 RID: 246249 RVA: 0x00E641DD File Offset: 0x00E623DD
+		// Token: 0x0603113F RID: 201023 RVA: 0x00DB47B9 File Offset: 0x00DB29B9
 		[NullableContext(2)]
 		protected virtual UniTask InitializeAsync(object param = null)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603C1EA RID: 246250 RVA: 0x00E641E4 File Offset: 0x00E623E4
+		// Token: 0x06031140 RID: 201024 RVA: 0x00DB47C0 File Offset: 0x00DB29C0
 		public virtual void Reset()
 		{
 		}
 
-		// Token: 0x0603C1EB RID: 246251 RVA: 0x00E641E6 File Offset: 0x00E623E6
+		// Token: 0x06031141 RID: 201025 RVA: 0x00DB47C2 File Offset: 0x00DB29C2
 		protected sealed override void OnAfterShowImplement()
 		{
 			this.OnShowBattleChildView();
 		}
 
-		// Token: 0x0603C1EC RID: 246252 RVA: 0x00E641EE File Offset: 0x00E623EE
+		// Token: 0x06031142 RID: 201026 RVA: 0x00DB47CA File Offset: 0x00DB29CA
 		protected sealed override void OnBeforeHideImplement()
 		{
 			this.OnHideBattleChildView();
 		}
 
-		// Token: 0x0603C1ED RID: 246253 RVA: 0x00E641F6 File Offset: 0x00E623F6
+		// Token: 0x06031143 RID: 201027 RVA: 0x00DB47D2 File Offset: 0x00DB29D2
 		protected virtual void OnShowBattleChildView()
 		{
 		}
 
-		// Token: 0x0603C1EE RID: 246254 RVA: 0x00E641F8 File Offset: 0x00E623F8
+		// Token: 0x06031144 RID: 201028 RVA: 0x00DB47D4 File Offset: 0x00DB29D4
 		protected virtual void OnHideBattleChildView()
 		{
 		}
 
-		// Token: 0x0603C1EF RID: 246255 RVA: 0x00E641FA File Offset: 0x00E623FA
+		// Token: 0x06031145 RID: 201029 RVA: 0x00DB47D6 File Offset: 0x00DB29D6
 		protected virtual void OnBeforeDestroyImplementImplement()
 		{
 		}
 
-		// Token: 0x0603C1F0 RID: 246256 RVA: 0x00E641FC File Offset: 0x00E623FC
+		// Token: 0x06031146 RID: 201030 RVA: 0x00DB47D8 File Offset: 0x00DB29D8
 		protected sealed override void OnBeforeDestroyImplement()
 		{
 			this.OnBeforeDestroyImplementImplement();

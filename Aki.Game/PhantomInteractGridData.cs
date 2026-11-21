@@ -4,84 +4,84 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200245C RID: 9308
+// Token: 0x02001941 RID: 6465
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractGridData : IPhantomInteractGridData
 {
-	// Token: 0x17001847 RID: 6215
-	// (get) Token: 0x06012AC9 RID: 76489 RVA: 0x0049C57B File Offset: 0x0049A77B
-	// (set) Token: 0x06012ACA RID: 76490 RVA: 0x0049C583 File Offset: 0x0049A783
+	// Token: 0x17001881 RID: 6273
+	// (get) Token: 0x0600FF81 RID: 65409 RVA: 0x004A9CE7 File Offset: 0x004A7EE7
+	// (set) Token: 0x0600FF82 RID: 65410 RVA: 0x004A9CEF File Offset: 0x004A7EEF
 	public int MonsterId { get; set; }
 
-	// Token: 0x17001848 RID: 6216
-	// (get) Token: 0x06012ACB RID: 76491 RVA: 0x0049C58C File Offset: 0x0049A78C
-	// (set) Token: 0x06012ACC RID: 76492 RVA: 0x0049C594 File Offset: 0x0049A794
+	// Token: 0x17001882 RID: 6274
+	// (get) Token: 0x0600FF83 RID: 65411 RVA: 0x004A9CF8 File Offset: 0x004A7EF8
+	// (set) Token: 0x0600FF84 RID: 65412 RVA: 0x004A9D00 File Offset: 0x004A7F00
 	public int MonsterInfoId { get; set; }
 
-	// Token: 0x17001849 RID: 6217
-	// (get) Token: 0x06012ACD RID: 76493 RVA: 0x0049C59D File Offset: 0x0049A79D
-	// (set) Token: 0x06012ACE RID: 76494 RVA: 0x0049C5A5 File Offset: 0x0049A7A5
+	// Token: 0x17001883 RID: 6275
+	// (get) Token: 0x0600FF85 RID: 65413 RVA: 0x004A9D09 File Offset: 0x004A7F09
+	// (set) Token: 0x0600FF86 RID: 65414 RVA: 0x004A9D11 File Offset: 0x004A7F11
 	public List<int> SkinIds { get; set; } = new List<int>();
 
-	// Token: 0x1700184A RID: 6218
-	// (get) Token: 0x06012ACF RID: 76495 RVA: 0x0049C5AE File Offset: 0x0049A7AE
-	// (set) Token: 0x06012AD0 RID: 76496 RVA: 0x0049C5B6 File Offset: 0x0049A7B6
+	// Token: 0x17001884 RID: 6276
+	// (get) Token: 0x0600FF87 RID: 65415 RVA: 0x004A9D1A File Offset: 0x004A7F1A
+	// (set) Token: 0x0600FF88 RID: 65416 RVA: 0x004A9D22 File Offset: 0x004A7F22
 	public int EquippedSkin { get; set; }
 
-	// Token: 0x1700184B RID: 6219
-	// (get) Token: 0x06012AD1 RID: 76497 RVA: 0x0049C5BF File Offset: 0x0049A7BF
-	// (set) Token: 0x06012AD2 RID: 76498 RVA: 0x0049C5C7 File Offset: 0x0049A7C7
+	// Token: 0x17001885 RID: 6277
+	// (get) Token: 0x0600FF89 RID: 65417 RVA: 0x004A9D2B File Offset: 0x004A7F2B
+	// (set) Token: 0x0600FF8A RID: 65418 RVA: 0x004A9D33 File Offset: 0x004A7F33
 	public bool IsSpecial { get; set; }
 
-	// Token: 0x1700184C RID: 6220
-	// (get) Token: 0x06012AD3 RID: 76499 RVA: 0x0049C5D0 File Offset: 0x0049A7D0
-	// (set) Token: 0x06012AD4 RID: 76500 RVA: 0x0049C5D8 File Offset: 0x0049A7D8
+	// Token: 0x17001886 RID: 6278
+	// (get) Token: 0x0600FF8B RID: 65419 RVA: 0x004A9D3C File Offset: 0x004A7F3C
+	// (set) Token: 0x0600FF8C RID: 65420 RVA: 0x004A9D44 File Offset: 0x004A7F44
 	public int Cost { get; set; }
 
-	// Token: 0x1700184D RID: 6221
-	// (get) Token: 0x06012AD5 RID: 76501 RVA: 0x0049C5E1 File Offset: 0x0049A7E1
-	// (set) Token: 0x06012AD6 RID: 76502 RVA: 0x0049C5E9 File Offset: 0x0049A7E9
+	// Token: 0x17001887 RID: 6279
+	// (get) Token: 0x0600FF8D RID: 65421 RVA: 0x004A9D4D File Offset: 0x004A7F4D
+	// (set) Token: 0x0600FF8E RID: 65422 RVA: 0x004A9D55 File Offset: 0x004A7F55
 	[Nullable(2)]
 	public string Name { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x1700184E RID: 6222
-	// (get) Token: 0x06012AD7 RID: 76503 RVA: 0x0049C5F2 File Offset: 0x0049A7F2
-	// (set) Token: 0x06012AD8 RID: 76504 RVA: 0x0049C5FA File Offset: 0x0049A7FA
+	// Token: 0x17001888 RID: 6280
+	// (get) Token: 0x0600FF8F RID: 65423 RVA: 0x004A9D5E File Offset: 0x004A7F5E
+	// (set) Token: 0x0600FF90 RID: 65424 RVA: 0x004A9D66 File Offset: 0x004A7F66
 	public bool IsUnlocked { get; set; }
 
-	// Token: 0x1700184F RID: 6223
-	// (get) Token: 0x06012AD9 RID: 76505 RVA: 0x0049C603 File Offset: 0x0049A803
-	// (set) Token: 0x06012ADA RID: 76506 RVA: 0x0049C60B File Offset: 0x0049A80B
+	// Token: 0x17001889 RID: 6281
+	// (get) Token: 0x0600FF91 RID: 65425 RVA: 0x004A9D6F File Offset: 0x004A7F6F
+	// (set) Token: 0x0600FF92 RID: 65426 RVA: 0x004A9D77 File Offset: 0x004A7F77
 	public List<int> InteractAreaList { get; set; } = new List<int>();
 
-	// Token: 0x17001850 RID: 6224
-	// (get) Token: 0x06012ADB RID: 76507 RVA: 0x0049C614 File Offset: 0x0049A814
-	// (set) Token: 0x06012ADC RID: 76508 RVA: 0x0049C61C File Offset: 0x0049A81C
+	// Token: 0x1700188A RID: 6282
+	// (get) Token: 0x0600FF93 RID: 65427 RVA: 0x004A9D80 File Offset: 0x004A7F80
+	// (set) Token: 0x0600FF94 RID: 65428 RVA: 0x004A9D88 File Offset: 0x004A7F88
 	public int InSlotIndex { get; set; } = -1;
 
-	// Token: 0x17001851 RID: 6225
-	// (get) Token: 0x06012ADD RID: 76509 RVA: 0x0049C625 File Offset: 0x0049A825
-	// (set) Token: 0x06012ADE RID: 76510 RVA: 0x0049C62D File Offset: 0x0049A82D
+	// Token: 0x1700188B RID: 6283
+	// (get) Token: 0x0600FF95 RID: 65429 RVA: 0x004A9D91 File Offset: 0x004A7F91
+	// (set) Token: 0x0600FF96 RID: 65430 RVA: 0x004A9D99 File Offset: 0x004A7F99
 	[Nullable(2)]
 	public string IconPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17001852 RID: 6226
-	// (get) Token: 0x06012ADF RID: 76511 RVA: 0x0049C636 File Offset: 0x0049A836
-	// (set) Token: 0x06012AE0 RID: 76512 RVA: 0x0049C63E File Offset: 0x0049A83E
+	// Token: 0x1700188C RID: 6284
+	// (get) Token: 0x0600FF97 RID: 65431 RVA: 0x004A9DA2 File Offset: 0x004A7FA2
+	// (set) Token: 0x0600FF98 RID: 65432 RVA: 0x004A9DAA File Offset: 0x004A7FAA
 	public bool HasSkin { get; set; }
 
-	// Token: 0x17001853 RID: 6227
-	// (get) Token: 0x06012AE1 RID: 76513 RVA: 0x0049C647 File Offset: 0x0049A847
-	// (set) Token: 0x06012AE2 RID: 76514 RVA: 0x0049C64F File Offset: 0x0049A84F
+	// Token: 0x1700188D RID: 6285
+	// (get) Token: 0x0600FF99 RID: 65433 RVA: 0x004A9DB3 File Offset: 0x004A7FB3
+	// (set) Token: 0x0600FF9A RID: 65434 RVA: 0x004A9DBB File Offset: 0x004A7FBB
 	public int GetWayConfigId { get; set; }
 
-	// Token: 0x17001854 RID: 6228
-	// (get) Token: 0x06012AE3 RID: 76515 RVA: 0x0049C658 File Offset: 0x0049A858
-	// (set) Token: 0x06012AE4 RID: 76516 RVA: 0x0049C660 File Offset: 0x0049A860
+	// Token: 0x1700188E RID: 6286
+	// (get) Token: 0x0600FF9B RID: 65435 RVA: 0x004A9DC4 File Offset: 0x004A7FC4
+	// (set) Token: 0x0600FF9C RID: 65436 RVA: 0x004A9DCC File Offset: 0x004A7FCC
 	public int SortId { get; set; }
 
-	// Token: 0x06012AE5 RID: 76517 RVA: 0x0049C66C File Offset: 0x0049A86C
+	// Token: 0x0600FF9D RID: 65437 RVA: 0x004A9DD8 File Offset: 0x004A7FD8
 	public void LoadSkinId(int skinId)
 	{
 		this.EquippedSkin = skinId;
@@ -121,7 +121,7 @@ public class PhantomInteractGridData : IPhantomInteractGridData
 		this.IconPath = phantomItemByMonsterId[0].IconMiddle;
 	}
 
-	// Token: 0x06012AE6 RID: 76518 RVA: 0x0049C768 File Offset: 0x0049A968
+	// Token: 0x0600FF9E RID: 65438 RVA: 0x004A9ED4 File Offset: 0x004A80D4
 	public void LoadData(UnlockIllustratedPhantom proto)
 	{
 		int monsterId = proto.MonsterId;
@@ -172,7 +172,7 @@ public class PhantomInteractGridData : IPhantomInteractGridData
 		}
 	}
 
-	// Token: 0x06012AE7 RID: 76519 RVA: 0x0049C938 File Offset: 0x0049AB38
+	// Token: 0x0600FF9F RID: 65439 RVA: 0x004AA0A4 File Offset: 0x004A82A4
 	public void LoadLockData(int monsterId)
 	{
 		CalabashDevelopReward? calabashDevelopRewardByMonsterId = CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(monsterId);
@@ -208,7 +208,7 @@ public class PhantomInteractGridData : IPhantomInteractGridData
 		this.HasSkin = false;
 	}
 
-	// Token: 0x06012AE8 RID: 76520 RVA: 0x0049CA98 File Offset: 0x0049AC98
+	// Token: 0x0600FFA0 RID: 65440 RVA: 0x004AA204 File Offset: 0x004A8404
 	private static bool CheckHasSkin(int monsterId)
 	{
 		IReadOnlyList<Aki.Config.PhantomItem> phantomItemByParentMonsterId = PhantomBattleConfig.Instance.GetPhantomItemByParentMonsterId(monsterId);

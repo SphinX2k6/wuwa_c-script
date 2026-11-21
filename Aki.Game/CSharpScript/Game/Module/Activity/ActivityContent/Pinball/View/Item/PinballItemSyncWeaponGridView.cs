@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x0200634C RID: 25420
+	// Token: 0x020052CA RID: 21194
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemSyncWeaponGridView : PinballItemView, ISyncGridProxy<IPinballItemSyncWeaponGridViewData>, ISyncGridProxy
 	{
-		// Token: 0x17009328 RID: 37672
-		// (get) Token: 0x0603FF77 RID: 262007 RVA: 0x00F79DD1 File Offset: 0x00F77FD1
-		// (set) Token: 0x0603FF78 RID: 262008 RVA: 0x00F79DD9 File Offset: 0x00F77FD9
+		// Token: 0x1700668A RID: 26250
+		// (get) Token: 0x06034C38 RID: 216120 RVA: 0x00EC0D31 File Offset: 0x00EBEF31
+		// (set) Token: 0x06034C39 RID: 216121 RVA: 0x00EC0D39 File Offset: 0x00EBEF39
 		public int GridIndex { get; set; }
 
-		// Token: 0x0603FF79 RID: 262009 RVA: 0x00F79DE2 File Offset: 0x00F77FE2
+		// Token: 0x06034C3A RID: 216122 RVA: 0x00EC0D42 File Offset: 0x00EBEF42
 		protected override void OnStart()
 		{
 			base.OnStart();
 			base.GetItemToggle().bLockStateOnSelect = true;
 		}
 
-		// Token: 0x0603FF7A RID: 262010 RVA: 0x00F79DF8 File Offset: 0x00F77FF8
+		// Token: 0x06034C3B RID: 216123 RVA: 0x00EC0D58 File Offset: 0x00EBEF58
 		public void Refresh(IPinballItemSyncWeaponGridViewData data)
 		{
 			PinballWeaponData weaponData = data.WeaponData;
@@ -43,25 +43,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.ApplyWithTask(data2);
 		}
 
-		// Token: 0x0603FF7B RID: 262011 RVA: 0x00F79E9F File Offset: 0x00F7809F
+		// Token: 0x06034C3C RID: 216124 RVA: 0x00EC0DFF File Offset: 0x00EBEFFF
 		void ISyncGridProxy.Refresh(object data)
 		{
 			this.Refresh((IPinballItemSyncWeaponGridViewData)data);
 		}
 
-		// Token: 0x0603FF7C RID: 262012 RVA: 0x00F79EAD File Offset: 0x00F780AD
+		// Token: 0x06034C3D RID: 216125 RVA: 0x00EC0E0D File Offset: 0x00EBF00D
 		void ISyncGridProxy.CreateByActor(AActor actor)
 		{
 			base.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0603FF7D RID: 262013 RVA: 0x00F79EB7 File Offset: 0x00F780B7
+		// Token: 0x06034C3E RID: 216126 RVA: 0x00EC0E17 File Offset: 0x00EBF017
 		void ISyncGridProxy.CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603FF7E RID: 262014 RVA: 0x00F79EC4 File Offset: 0x00F780C4
+		// Token: 0x06034C3F RID: 216127 RVA: 0x00EC0E24 File Offset: 0x00EBF024
 		private bool CheckIsRecommendedWeapon(PinballWeaponData weaponData, int roleId)
 		{
 			if (weaponData.RoleId != 0)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return weaponData.Quality == roleWeaponMaxQuality;
 		}
 
-		// Token: 0x0603FF7F RID: 262015 RVA: 0x00F79EF8 File Offset: 0x00F780F8
+		// Token: 0x06034C40 RID: 216128 RVA: 0x00EC0E58 File Offset: 0x00EBF058
 		private void ApplyWithTask(IPinballItemDataWeapon data)
 		{
 			PinballItemSyncWeaponGridView.<>c__DisplayClass11_0 CS$<>8__locals1 = new PinballItemSyncWeaponGridView.<>c__DisplayClass11_0();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FF80 RID: 262016 RVA: 0x00F79F40 File Offset: 0x00F78140
+		// Token: 0x06034C41 RID: 216129 RVA: 0x00EC0EA0 File Offset: 0x00EBF0A0
 		public void RefreshToggleState(bool bJumpToEnd)
 		{
 			if (this.SyncGridData == null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			itemToggle.SetToggleState(state, false, false, bJumpToEnd);
 		}
 
-		// Token: 0x0603FF81 RID: 262017 RVA: 0x00F79F80 File Offset: 0x00F78180
+		// Token: 0x06034C42 RID: 216130 RVA: 0x00EC0EE0 File Offset: 0x00EBF0E0
 		[NullableContext(2)]
 		public UUIItem GetWeaponItemToggleRootUiItem()
 		{
@@ -119,12 +119,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x0603FF82 RID: 262018 RVA: 0x00F79FC4 File Offset: 0x00F781C4
+		// Token: 0x06034C43 RID: 216131 RVA: 0x00EC0F24 File Offset: 0x00EBF124
 		public void Clear()
 		{
 		}
 
-		// Token: 0x040215AF RID: 136623
+		// Token: 0x0401BEDE RID: 114398
 		[Nullable(2)]
 		private IPinballItemSyncWeaponGridViewData SyncGridData;
 	}

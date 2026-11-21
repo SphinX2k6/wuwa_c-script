@@ -14,8 +14,8 @@ using UnrealEngine.Utils;
 public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000001 RID: 1
-	// (get) Token: 0x06000020 RID: 32 RVA: 0x00002057 File Offset: 0x00000257
-	// (set) Token: 0x06000021 RID: 33 RVA: 0x0000206B File Offset: 0x0000026B
+	// (get) Token: 0x06000020 RID: 32 RVA: 0x0000205C File Offset: 0x0000025C
+	// (set) Token: 0x06000021 RID: 33 RVA: 0x00002070 File Offset: 0x00000270
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKey
@@ -33,8 +33,8 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 	}
 
 	// Token: 0x17000002 RID: 2
-	// (get) Token: 0x06000022 RID: 34 RVA: 0x00002080 File Offset: 0x00000280
-	// (set) Token: 0x06000023 RID: 35 RVA: 0x00002094 File Offset: 0x00000294
+	// (get) Token: 0x06000022 RID: 34 RVA: 0x00002085 File Offset: 0x00000285
+	// (set) Token: 0x06000023 RID: 35 RVA: 0x00002099 File Offset: 0x00000299
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EArithmeticKeyOperation> Operation
 	{
@@ -49,8 +49,8 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 	}
 
 	// Token: 0x17000003 RID: 3
-	// (get) Token: 0x06000024 RID: 36 RVA: 0x000020A9 File Offset: 0x000002A9
-	// (set) Token: 0x06000025 RID: 37 RVA: 0x000020B9 File Offset: 0x000002B9
+	// (get) Token: 0x06000024 RID: 36 RVA: 0x000020AE File Offset: 0x000002AE
+	// (set) Token: 0x06000025 RID: 37 RVA: 0x000020BE File Offset: 0x000002BE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int CompareValue
 	{
@@ -64,7 +64,7 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000026 RID: 38 RVA: 0x000020CC File Offset: 0x000002CC
+	// Token: 0x06000026 RID: 38 RVA: 0x000020D0 File Offset: 0x000002D0
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -76,7 +76,7 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000027 RID: 39 RVA: 0x00002118 File Offset: 0x00000318
+	// Token: 0x06000027 RID: 39 RVA: 0x0000211C File Offset: 0x0000031C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
@@ -157,7 +157,7 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000028 RID: 40 RVA: 0x000022E2 File Offset: 0x000004E2
+	// Token: 0x06000028 RID: 40 RVA: 0x000022E6 File Offset: 0x000004E6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsCompositeIfBlackboardIntCompare._ClassPtr == IntPtr.Zero)
@@ -167,23 +167,23 @@ public class TsCompositeIfBlackboardIntCompare : UBTComposite_If, IUnrealUObject
 		return TsCompositeIfBlackboardIntCompare._ClassPtr;
 	}
 
-	// Token: 0x06000029 RID: 41 RVA: 0x00002308 File Offset: 0x00000508
+	// Token: 0x06000029 RID: 41 RVA: 0x0000230C File Offset: 0x0000050C
 	public TsCompositeIfBlackboardIntCompare() : this(BuiltinUtils.AllocNativeUObject(TsCompositeIfBlackboardIntCompare.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600002A RID: 42 RVA: 0x00002330 File Offset: 0x00000530
+	// Token: 0x0600002A RID: 42 RVA: 0x00002334 File Offset: 0x00000534
 	[NullableContext(1)]
 	public TsCompositeIfBlackboardIntCompare(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsCompositeIfBlackboardIntCompare.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600002B RID: 43 RVA: 0x00002363 File Offset: 0x00000563
+	// Token: 0x0600002B RID: 43 RVA: 0x00002367 File Offset: 0x00000567
 	protected TsCompositeIfBlackboardIntCompare(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600002C RID: 44 RVA: 0x00002378 File Offset: 0x00000578
+	// Token: 0x0600002C RID: 44 RVA: 0x0000237C File Offset: 0x0000057C
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTComposite_If.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

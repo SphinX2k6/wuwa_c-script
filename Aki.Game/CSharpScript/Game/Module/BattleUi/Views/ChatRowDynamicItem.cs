@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D17 RID: 23831
+	// Token: 0x02004CF9 RID: 19705
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChatRowDynamicItem : UiPanelBase, IDynamicScrollItem<ChatRowData>
 	{
-		// Token: 0x0603C66E RID: 247406 RVA: 0x00E7AED0 File Offset: 0x00E790D0
+		// Token: 0x060315C7 RID: 202183 RVA: 0x00DCB550 File Offset: 0x00DC9750
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C66F RID: 247407 RVA: 0x00E7AF39 File Offset: 0x00E79139
+		// Token: 0x060315C8 RID: 202184 RVA: 0x00DCB5B9 File Offset: 0x00DC97B9
 		public AUIBaseActor GetUsingItem(ChatRowData data)
 		{
 			return base.GetItem(1).GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x0603C670 RID: 247408 RVA: 0x00E7AF4C File Offset: 0x00E7914C
+		// Token: 0x060315C9 RID: 202185 RVA: 0x00DCB5CC File Offset: 0x00DC97CC
 		public void Update(ChatRowData chatRowData, int index)
 		{
 			ChatRowDynamicItemInSide itemInSide = this.ItemInSide;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			itemInSide.Update(chatRowData, index);
 		}
 
-		// Token: 0x0603C671 RID: 247409 RVA: 0x00E7AF60 File Offset: 0x00E79160
+		// Token: 0x060315CA RID: 202186 RVA: 0x00DCB5E0 File Offset: 0x00DC97E0
 		public UniTask Init(UUIItem actor)
 		{
 			ChatRowDynamicItem.<Init>d__5 <Init>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C672 RID: 247410 RVA: 0x00E7AFAC File Offset: 0x00E791AC
+		// Token: 0x060315CB RID: 202187 RVA: 0x00DCB62C File Offset: 0x00DC982C
 		private UniTask InitChildItem()
 		{
 			ChatRowDynamicItem.<InitChildItem>d__6 <InitChildItem>d__;
@@ -69,23 +69,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitChildItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C673 RID: 247411 RVA: 0x00E7AFEF File Offset: 0x00E791EF
+		// Token: 0x060315CC RID: 202188 RVA: 0x00DCB66F File Offset: 0x00DC986F
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x0401F78F RID: 128911
+		// Token: 0x0401A248 RID: 107080
 		[Nullable(2)]
 		private ChatRowDynamicItemInSide ItemInSide;
 
-		// Token: 0x0200BF8C RID: 49036
+		// Token: 0x0200A992 RID: 43410
 		[NullableContext(0)]
 		private enum EChild
 		{
-			// Token: 0x04039CA7 RID: 236711
+			// Token: 0x04034669 RID: 214633
 			RootItem,
-			// Token: 0x04039CA8 RID: 236712
+			// Token: 0x0403466A RID: 214634
 			PanelHorizon
 		}
 	}

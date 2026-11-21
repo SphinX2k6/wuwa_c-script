@@ -10,18 +10,18 @@ using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using Google.Protobuf.Collections;
 
-// Token: 0x020012C5 RID: 4805
+// Token: 0x02000779 RID: 1913
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityMapExploreData : ActivityBaseData
 {
-	// Token: 0x06008403 RID: 33795 RVA: 0x001C1A57 File Offset: 0x001BFC57
+	// Token: 0x0600579E RID: 22430 RVA: 0x001CA8B3 File Offset: 0x001C8AB3
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.IsFirstUnlockState(EActivityExploreFirstUnlockState.Set) || this.IsCanGetReward();
 	}
 
-	// Token: 0x06008404 RID: 33796 RVA: 0x001C1A6C File Offset: 0x001BFC6C
+	// Token: 0x0600579F RID: 22431 RVA: 0x001CA8C8 File Offset: 0x001C8AC8
 	protected override bool GetExDataFinishShowState()
 	{
 		for (int i = 0; i < this.TaskList.Count; i++)
@@ -34,7 +34,7 @@ public class ActivityMapExploreData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06008405 RID: 33797 RVA: 0x001C1AA8 File Offset: 0x001BFCA8
+	// Token: 0x060057A0 RID: 22432 RVA: 0x001CA904 File Offset: 0x001C8B04
 	public bool IsCanGetReward()
 	{
 		for (int i = 0; i < this.TaskList.Count; i++)
@@ -47,13 +47,13 @@ public class ActivityMapExploreData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008406 RID: 33798 RVA: 0x001C1AE1 File Offset: 0x001BFCE1
+	// Token: 0x060057A1 RID: 22433 RVA: 0x001CA93D File Offset: 0x001C8B3D
 	protected override void OnInit(ActivityData data)
 	{
-		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.ExploreActivityFirstUnlock, EClientStorageSystemIdType.ExploreActivityFirstUnlock);
+		ServerStorageUtil.OverrideLocalNumberToServerNumber(ELocalStoragePlayerKey.ExploreActivityFirstUnlock, EClientStorageSystemIdType.ExploreActivityFirstUnlock, true);
 	}
 
-	// Token: 0x06008407 RID: 33799 RVA: 0x001C1AF0 File Offset: 0x001BFCF0
+	// Token: 0x060057A2 RID: 22434 RVA: 0x001CA94C File Offset: 0x001C8B4C
 	private EActivityExploreFirstUnlockState GetFirstUnlockState()
 	{
 		ServerStorageNumber serverStorageNumber = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ExploreActivityFirstUnlock) as ServerStorageNumber;
@@ -69,7 +69,7 @@ public class ActivityMapExploreData : ActivityBaseData
 		return (EActivityExploreFirstUnlockState)num.Value;
 	}
 
-	// Token: 0x06008408 RID: 33800 RVA: 0x001C1B30 File Offset: 0x001BFD30
+	// Token: 0x060057A3 RID: 22435 RVA: 0x001CA98C File Offset: 0x001C8B8C
 	public void SetFirstUnlockState(EActivityExploreFirstUnlockState value)
 	{
 		ServerStorageNumber serverStorageNumber = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ExploreActivityFirstUnlock) as ServerStorageNumber;
@@ -79,13 +79,13 @@ public class ActivityMapExploreData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008409 RID: 33801 RVA: 0x001C1B5E File Offset: 0x001BFD5E
+	// Token: 0x060057A4 RID: 22436 RVA: 0x001CA9BA File Offset: 0x001C8BBA
 	public bool IsFirstUnlockState(EActivityExploreFirstUnlockState state)
 	{
 		return this.GetFirstUnlockState() == state;
 	}
 
-	// Token: 0x0600840A RID: 33802 RVA: 0x001C1B6C File Offset: 0x001BFD6C
+	// Token: 0x060057A5 RID: 22437 RVA: 0x001CA9C8 File Offset: 0x001C8BC8
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.TaskList.Clear();
@@ -123,7 +123,7 @@ public class ActivityMapExploreData : ActivityBaseData
 		this.UpdateTaskState(exploreActivityInfo.ActivityTasks);
 	}
 
-	// Token: 0x0600840B RID: 33803 RVA: 0x001C1D20 File Offset: 0x001BFF20
+	// Token: 0x060057A6 RID: 22438 RVA: 0x001CAB7C File Offset: 0x001C8D7C
 	public void UpdateTaskState(MapField<int, ActivityTaskState> stateMap)
 	{
 		if (stateMap == null)
@@ -144,7 +144,7 @@ public class ActivityMapExploreData : ActivityBaseData
 		EventSystem.Instance.Emit(EEventName.ActivityMapExploreStateUpdate);
 	}
 
-	// Token: 0x0600840C RID: 33804 RVA: 0x001C1DC4 File Offset: 0x001BFFC4
+	// Token: 0x060057A7 RID: 22439 RVA: 0x001CAC20 File Offset: 0x001C8E20
 	private void SortTaskList()
 	{
 		this.TaskList.Sort(delegate(IActivitySubMapExploreItemData a, IActivitySubMapExploreItemData b)
@@ -172,9 +172,9 @@ public class ActivityMapExploreData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x04003B63 RID: 15203
+	// Token: 0x04003BFB RID: 15355
 	private readonly int ItemId = 3;
 
-	// Token: 0x04003B64 RID: 15204
+	// Token: 0x04003BFC RID: 15356
 	public readonly List<IActivitySubMapExploreItemData> TaskList = new List<IActivitySubMapExploreItemData>();
 }

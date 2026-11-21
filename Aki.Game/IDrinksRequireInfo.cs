@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02000F3F RID: 3903
+// Token: 0x020003F4 RID: 1012
 public interface IDrinksRequireInfo
 {
-	// Token: 0x1700079F RID: 1951
-	// (get) Token: 0x0600638C RID: 25484
-	// (set) Token: 0x0600638D RID: 25485
+	// Token: 0x170007C1 RID: 1985
+	// (get) Token: 0x06003724 RID: 14116
+	// (set) Token: 0x06003725 RID: 14117
 	int RequireId { get; set; }
 
-	// Token: 0x170007A0 RID: 1952
-	// (get) Token: 0x0600638E RID: 25486
-	// (set) Token: 0x0600638F RID: 25487
+	// Token: 0x170007C2 RID: 1986
+	// (get) Token: 0x06003726 RID: 14118
+	// (set) Token: 0x06003727 RID: 14119
 	EDrinksRequireType Type { get; set; }
 
-	// Token: 0x170007A1 RID: 1953
-	// (get) Token: 0x06006390 RID: 25488
-	// (set) Token: 0x06006391 RID: 25489
+	// Token: 0x170007C3 RID: 1987
+	// (get) Token: 0x06003728 RID: 14120
+	// (set) Token: 0x06003729 RID: 14121
 	int? FlavorRangeId { get; set; }
 
-	// Token: 0x170007A2 RID: 1954
-	// (get) Token: 0x06006392 RID: 25490
-	// (set) Token: 0x06006393 RID: 25491
+	// Token: 0x170007C4 RID: 1988
+	// (get) Token: 0x0600372A RID: 14122
+	// (set) Token: 0x0600372B RID: 14123
 	bool Completed { get; set; }
 }

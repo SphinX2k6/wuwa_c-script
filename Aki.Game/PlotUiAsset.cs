@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200331C RID: 13084
+// Token: 0x0200288E RID: 10382
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotUiAsset
 {
-	// Token: 0x0601C7F7 RID: 116727 RVA: 0x007FE707 File Offset: 0x007FC907
+	// Token: 0x0601A4F0 RID: 107760 RVA: 0x00824C73 File Offset: 0x00822E73
 	public PlotUiAsset(string FlowListName, int FlowId, int StateId)
 	{
 		this.FlowListName = FlowListName;
@@ -18,19 +18,19 @@ public class PlotUiAsset
 		this.LoadPromise = new CustomPromise();
 	}
 
-	// Token: 0x0601C7F8 RID: 116728 RVA: 0x007FE73A File Offset: 0x007FC93A
+	// Token: 0x0601A4F1 RID: 107761 RVA: 0x00824CA6 File Offset: 0x00822EA6
 	public bool IsLoading()
 	{
 		return this.IsPlotUiAssetLoading && !this.IsPlotUiAssetLoaded;
 	}
 
-	// Token: 0x0601C7F9 RID: 116729 RVA: 0x007FE74F File Offset: 0x007FC94F
+	// Token: 0x0601A4F2 RID: 107762 RVA: 0x00824CBB File Offset: 0x00822EBB
 	public bool IsFinished()
 	{
 		return this.IsPlotUiAssetLoaded;
 	}
 
-	// Token: 0x0601C7FA RID: 116730 RVA: 0x007FE758 File Offset: 0x007FC958
+	// Token: 0x0601A4F3 RID: 107763 RVA: 0x00824CC4 File Offset: 0x00822EC4
 	public bool HasPreloadQte(List<int> qteIds)
 	{
 		foreach (int item in qteIds)
@@ -43,7 +43,7 @@ public class PlotUiAsset
 		return true;
 	}
 
-	// Token: 0x0601C7FB RID: 116731 RVA: 0x007FE7B4 File Offset: 0x007FC9B4
+	// Token: 0x0601A4F4 RID: 107764 RVA: 0x00824D20 File Offset: 0x00822F20
 	public UniTask WaitForLoadAsync()
 	{
 		PlotUiAsset.<WaitForLoadAsync>d__11 <WaitForLoadAsync>d__;
@@ -54,7 +54,7 @@ public class PlotUiAsset
 		return <WaitForLoadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601C7FC RID: 116732 RVA: 0x007FE7F7 File Offset: 0x007FC9F7
+	// Token: 0x0601A4F5 RID: 107765 RVA: 0x00824D63 File Offset: 0x00822F63
 	public void Clear()
 	{
 		this.IsPlotUiAssetLoaded = false;
@@ -62,7 +62,7 @@ public class PlotUiAsset
 		this.QteIdSet.Clear();
 	}
 
-	// Token: 0x0601C7FD RID: 116733 RVA: 0x007FE814 File Offset: 0x007FCA14
+	// Token: 0x0601A4F6 RID: 107766 RVA: 0x00824D80 File Offset: 0x00822F80
 	public UniTask LoadAsync()
 	{
 		PlotUiAsset.<LoadAsync>d__13 <LoadAsync>d__;
@@ -73,25 +73,25 @@ public class PlotUiAsset
 		return <LoadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400E26B RID: 57963
+	// Token: 0x0400E71C RID: 59164
 	private bool IsPlotUiAssetLoading;
 
-	// Token: 0x0400E26C RID: 57964
+	// Token: 0x0400E71D RID: 59165
 	private bool IsPlotUiAssetLoaded;
 
-	// Token: 0x0400E26D RID: 57965
+	// Token: 0x0400E71E RID: 59166
 	[Nullable(2)]
 	private readonly CustomPromise LoadPromise;
 
-	// Token: 0x0400E26E RID: 57966
+	// Token: 0x0400E71F RID: 59167
 	private readonly HashSet<int> QteIdSet = new HashSet<int>();
 
-	// Token: 0x0400E26F RID: 57967
+	// Token: 0x0400E720 RID: 59168
 	private string FlowListName;
 
-	// Token: 0x0400E270 RID: 57968
+	// Token: 0x0400E721 RID: 59169
 	private int FlowId;
 
-	// Token: 0x0400E271 RID: 57969
+	// Token: 0x0400E722 RID: 59170
 	private int StateId;
 }

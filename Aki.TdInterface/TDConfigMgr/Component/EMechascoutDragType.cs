@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000DE RID: 222
+	// Token: 0x020000E6 RID: 230
 	[EnumExtensions]
 	public enum EMechascoutDragType
 	{
-		// Token: 0x040004C8 RID: 1224
+		// Token: 0x040004EC RID: 1260
 		Instant,
-		// Token: 0x040004C9 RID: 1225
+		// Token: 0x040004ED RID: 1261
 		LongPress
 	}
 }

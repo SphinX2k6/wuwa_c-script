@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002FBA RID: 12218
+// Token: 0x0200250E RID: 9486
 public enum ECueEndRule
 {
-	// Token: 0x0400C3EE RID: 50158
+	// Token: 0x0400C797 RID: 51095
 	Recycle,
-	// Token: 0x0400C3EF RID: 50159
+	// Token: 0x0400C798 RID: 51096
 	End,
-	// Token: 0x0400C3F0 RID: 50160
+	// Token: 0x0400C799 RID: 51097
 	Continue
 }

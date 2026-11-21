@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AEB RID: 10987
+	// Token: 0x02002DDF RID: 11743
 	public class IPlayerBlendAnimTarget : IBlendAnimTargetBase
 	{
-		// Token: 0x0600F0C8 RID: 61640 RVA: 0x0022F2A2 File Offset: 0x0022D4A2
-		[NullableContext(1)]
+		// Token: 0x0600FF7E RID: 65406 RVA: 0x0024CFAE File Offset: 0x0024B1AE
 		public static IPlayerBlendAnimTarget Create(IPlayerBlendAnimTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CB4 RID: 19636
-		// (get) Token: 0x0600F0C9 RID: 61641 RVA: 0x0022F2C1 File Offset: 0x0022D4C1
+		// Token: 0x1700506E RID: 20590
+		// (get) Token: 0x0600FF7F RID: 65407 RVA: 0x0024CFCD File Offset: 0x0024B1CD
 		public override EBlendAnimTarget Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008477 RID: 33911
+		// Token: 0x04008B7B RID: 35707
 		private IPlayerBlendAnimTarget Instance;
 	}
 }

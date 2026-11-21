@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CCA RID: 7370
+// Token: 0x0200118C RID: 4492
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowCollectionItem : UiPanelBase
 {
-	// Token: 0x0600DF1B RID: 57115 RVA: 0x00343F24 File Offset: 0x00342124
+	// Token: 0x0600B338 RID: 45880 RVA: 0x0034F94C File Offset: 0x0034DB4C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DF1C RID: 57116 RVA: 0x00344010 File Offset: 0x00342210
+	// Token: 0x0600B339 RID: 45881 RVA: 0x0034FA38 File Offset: 0x0034DC38
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleArrowCollectionItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -43,13 +43,13 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DF1D RID: 57117 RVA: 0x00344054 File Offset: 0x00342254
+	// Token: 0x0600B33A RID: 45882 RVA: 0x0034FA7C File Offset: 0x0034DC7C
 	protected override void OnBeforeShow()
 	{
 		this.SequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600DF1E RID: 57118 RVA: 0x00344080 File Offset: 0x00342280
+	// Token: 0x0600B33B RID: 45883 RVA: 0x0034FAA8 File Offset: 0x0034DCA8
 	public void UpdateData(MotorcycleArrowCollectionItemData collectionItemData, bool bRefresh)
 	{
 		this.CollectionData = collectionItemData;
@@ -61,13 +61,13 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DF1F RID: 57119 RVA: 0x003440C0 File Offset: 0x003422C0
+	// Token: 0x0600B33C RID: 45884 RVA: 0x0034FAE8 File Offset: 0x0034DCE8
 	private void UpdateBgQuality()
 	{
 		base.SetTextureByPath(ConfigMotorFightQualityById.GetConfig(this.CollectionData.Config.Quality, true).Value.DetailCardBg, this.TextureQualityBg, null, null);
 	}
 
-	// Token: 0x0600DF20 RID: 57120 RVA: 0x0034410C File Offset: 0x0034230C
+	// Token: 0x0600B33D RID: 45885 RVA: 0x0034FB34 File Offset: 0x0034DD34
 	private void UpdateCollectionConfig()
 	{
 		MotorFightItem config = this.CollectionData.Config;
@@ -79,14 +79,14 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		base.SetTextureByPath(config.IconBig, this.TextureIcon, null, null);
 	}
 
-	// Token: 0x0600DF21 RID: 57121 RVA: 0x003441C8 File Offset: 0x003423C8
+	// Token: 0x0600B33E RID: 45886 RVA: 0x0034FBF0 File Offset: 0x0034DDF0
 	public void SetTextureBgByResId(string resId, UUITexture uiTexture)
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath(resId);
 		base.SetTextureByPath(resourcePath, uiTexture, null, null);
 	}
 
-	// Token: 0x0600DF22 RID: 57122 RVA: 0x003441F4 File Offset: 0x003423F4
+	// Token: 0x0600B33F RID: 45887 RVA: 0x0034FC1C File Offset: 0x0034DE1C
 	public void SetSelect(bool select)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -98,7 +98,7 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		extendToggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x0600DF23 RID: 57123 RVA: 0x0034421E File Offset: 0x0034241E
+	// Token: 0x0600B340 RID: 45888 RVA: 0x0034FC46 File Offset: 0x0034DE46
 	public void OnClickToggleRoot(EToggleState check)
 	{
 		Action<MotorcycleArrowCollectionItemData> onSelectCallback = this.OnSelectCallback;
@@ -109,35 +109,35 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 		onSelectCallback(this.CollectionData);
 	}
 
-	// Token: 0x04006692 RID: 26258
+	// Token: 0x04006771 RID: 26481
 	public MotorcycleArrowCollectionItemData CollectionData;
 
-	// Token: 0x04006693 RID: 26259
+	// Token: 0x04006772 RID: 26482
 	public UUITexture TextureQualityBg;
 
-	// Token: 0x04006694 RID: 26260
+	// Token: 0x04006773 RID: 26483
 	public UUIText TextTitle;
 
-	// Token: 0x04006695 RID: 26261
+	// Token: 0x04006774 RID: 26484
 	public UUITexture TextureIcon;
 
-	// Token: 0x04006696 RID: 26262
+	// Token: 0x04006775 RID: 26485
 	public UUIText TextCollectionType;
 
-	// Token: 0x04006697 RID: 26263
+	// Token: 0x04006776 RID: 26486
 	public UUISprite SpriteTypeIcon;
 
-	// Token: 0x04006698 RID: 26264
+	// Token: 0x04006777 RID: 26487
 	public UUIText TextCollectionDesc;
 
-	// Token: 0x04006699 RID: 26265
+	// Token: 0x04006778 RID: 26488
 	public UUIItem LockItem;
 
-	// Token: 0x0400669A RID: 26266
+	// Token: 0x04006779 RID: 26489
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0400669B RID: 26267
+	// Token: 0x0400677A RID: 26490
 	[Nullable(new byte[]
 	{
 		2,
@@ -145,32 +145,32 @@ public class MotorcycleArrowCollectionItem : UiPanelBase
 	})]
 	public Action<MotorcycleArrowCollectionItemData> OnSelectCallback;
 
-	// Token: 0x020082C9 RID: 33481
+	// Token: 0x02007452 RID: 29778
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA9D RID: 174749
+		// Token: 0x04025DC5 RID: 155077
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402AA9E RID: 174750
+		// Token: 0x04025DC6 RID: 155078
 		public const int TextureQualityBg = 1;
 
-		// Token: 0x0402AA9F RID: 174751
+		// Token: 0x04025DC7 RID: 155079
 		public const int TextTitle = 2;
 
-		// Token: 0x0402AAA0 RID: 174752
+		// Token: 0x04025DC8 RID: 155080
 		public const int TextureIcon = 3;
 
-		// Token: 0x0402AAA1 RID: 174753
+		// Token: 0x04025DC9 RID: 155081
 		public const int TextCollectionType = 4;
 
-		// Token: 0x0402AAA2 RID: 174754
+		// Token: 0x04025DCA RID: 155082
 		public const int SpriteTypeIcon = 5;
 
-		// Token: 0x0402AAA3 RID: 174755
+		// Token: 0x04025DCB RID: 155083
 		public const int TextCollectionDesc = 6;
 
-		// Token: 0x0402AAA4 RID: 174756
+		// Token: 0x04025DCC RID: 155084
 		public const int LockItem = 7;
 	}
 }

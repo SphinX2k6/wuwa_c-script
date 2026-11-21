@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003118 RID: 12568
+// Token: 0x02002673 RID: 9843
 [NullableContext(1)]
 [Nullable(0)]
 public class IStartMoveParams : PatrolParamsImpl, IActionParamMap
 {
-	// Token: 0x17002565 RID: 9573
-	// (get) Token: 0x0601B036 RID: 110646 RVA: 0x00754E96 File Offset: 0x00753096
-	// (set) Token: 0x0601B037 RID: 110647 RVA: 0x00754E9E File Offset: 0x0075309E
+	// Token: 0x17002710 RID: 10000
+	// (get) Token: 0x06018A91 RID: 101009 RVA: 0x0077AF02 File Offset: 0x00779102
+	// (set) Token: 0x06018A92 RID: 101010 RVA: 0x0077AF0A File Offset: 0x0077910A
 	public int SplineId { get; set; }
 
-	// Token: 0x17002566 RID: 9574
-	// (get) Token: 0x0601B038 RID: 110648 RVA: 0x00754EA7 File Offset: 0x007530A7
-	// (set) Token: 0x0601B039 RID: 110649 RVA: 0x00754EAF File Offset: 0x007530AF
+	// Token: 0x17002711 RID: 10001
+	// (get) Token: 0x06018A93 RID: 101011 RVA: 0x0077AF13 File Offset: 0x00779113
+	// (set) Token: 0x06018A94 RID: 101012 RVA: 0x0077AF1B File Offset: 0x0077911B
 	public string Context { get; set; }
 }

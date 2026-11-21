@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200627B RID: 25211
+	// Token: 0x020051F9 RID: 20985
 	public class ButtonWithRedDot : UiPanelBase
 	{
-		// Token: 0x0603F77B RID: 259963 RVA: 0x00F57F34 File Offset: 0x00F56134
+		// Token: 0x0603443C RID: 214076 RVA: 0x00E9EE90 File Offset: 0x00E9D090
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F77C RID: 259964 RVA: 0x00F57F9B File Offset: 0x00F5619B
+		// Token: 0x0603443D RID: 214077 RVA: 0x00E9EEF7 File Offset: 0x00E9D0F7
 		private void ButtonClick()
 		{
 			if (this.ButtonFunction != null)
@@ -32,20 +32,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F77D RID: 259965 RVA: 0x00F57FB0 File Offset: 0x00F561B0
+		// Token: 0x0603443E RID: 214078 RVA: 0x00E9EF0C File Offset: 0x00E9D10C
 		[NullableContext(1)]
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x0603F77E RID: 259966 RVA: 0x00F57FB9 File Offset: 0x00F561B9
+		// Token: 0x0603443F RID: 214079 RVA: 0x00E9EF15 File Offset: 0x00E9D115
 		public void SetRedDotVisible(bool bVisible)
 		{
 			base.GetItem(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x040212A5 RID: 135845
+		// Token: 0x0401BBD4 RID: 113620
 		[Nullable(2)]
 		private Action ButtonFunction;
 	}

@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x0200722C RID: 29228
+	// Token: 0x020062E1 RID: 25313
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BulletCasterBatch : IBulletCaster
 	{
-		// Token: 0x06047A40 RID: 293440 RVA: 0x0125451C File Offset: 0x0125271C
+		// Token: 0x0603D3A1 RID: 250785 RVA: 0x011AD0B4 File Offset: 0x011AB2B4
 		public unsafe BulletCasterBatch(Entity ownerEntity, float loopInterval, float delayTime, List<IBatchBulletCaster> casterList, string warmingEffect, long contextMessageId, List<Transform> casterTransformList, EBatchBulletMovementType? movementType)
 		{
 			this.OwnerEntity = ownerEntity;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			}
 		}
 
-		// Token: 0x06047A41 RID: 293441 RVA: 0x01254630 File Offset: 0x01252830
+		// Token: 0x0603D3A2 RID: 250786 RVA: 0x011AD1C8 File Offset: 0x011AB3C8
 		public void Start()
 		{
 			if (this.DelayTime < 20f)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilationRespectOwnerEntity();
 		}
 
-		// Token: 0x06047A42 RID: 293442 RVA: 0x01254684 File Offset: 0x01252884
+		// Token: 0x0603D3A3 RID: 250787 RVA: 0x011AD21C File Offset: 0x011AB41C
 		public void Stop()
 		{
 			foreach (IBulletCaster bulletCaster in this.BulletCasters)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.BatchDelayStartTimer = null;
 		}
 
-		// Token: 0x06047A43 RID: 293443 RVA: 0x01254724 File Offset: 0x01252924
+		// Token: 0x0603D3A4 RID: 250788 RVA: 0x011AD2BC File Offset: 0x011AB4BC
 		public void SetTimeDilationRespectOwnerEntity()
 		{
 			PawnTimeScaleComponent component = this.OwnerEntity.GetComponent<PawnTimeScaleComponent>();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilation(timeDilation);
 		}
 
-		// Token: 0x06047A44 RID: 293444 RVA: 0x01254764 File Offset: 0x01252964
+		// Token: 0x0603D3A5 RID: 250789 RVA: 0x011AD2FC File Offset: 0x011AB4FC
 		public void SetTimeDilation(float timeDilation)
 		{
 			TimerHandle batchDelayStartTimer = this.BatchDelayStartTimer;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			}
 		}
 
-		// Token: 0x06047A45 RID: 293445 RVA: 0x012547F8 File Offset: 0x012529F8
+		// Token: 0x0603D3A6 RID: 250790 RVA: 0x011AD390 File Offset: 0x011AB590
 		private void StartImmediately()
 		{
 			if (this.LoopInterval < 20f)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilationRespectOwnerEntity();
 		}
 
-		// Token: 0x06047A46 RID: 293446 RVA: 0x01254850 File Offset: 0x01252A50
+		// Token: 0x0603D3A7 RID: 250791 RVA: 0x011AD3E8 File Offset: 0x011AB5E8
 		private void TriggerCasters()
 		{
 			foreach (IBulletCaster bulletCaster in this.BulletCasters)
@@ -132,24 +132,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			}
 		}
 
-		// Token: 0x04025B12 RID: 154386
+		// Token: 0x04020781 RID: 132993
 		public readonly List<IBulletCaster> BulletCasters = new List<IBulletCaster>();
 
-		// Token: 0x04025B13 RID: 154387
+		// Token: 0x04020782 RID: 132994
 		[Nullable(2)]
 		private TimerHandle BatchDelayStartTimer;
 
-		// Token: 0x04025B14 RID: 154388
+		// Token: 0x04020783 RID: 132995
 		[Nullable(2)]
 		private TimerHandle BatchLoopTimer;
 
-		// Token: 0x04025B15 RID: 154389
+		// Token: 0x04020784 RID: 132996
 		public Entity OwnerEntity;
 
-		// Token: 0x04025B16 RID: 154390
+		// Token: 0x04020785 RID: 132997
 		public float LoopInterval;
 
-		// Token: 0x04025B17 RID: 154391
+		// Token: 0x04020786 RID: 132998
 		public float DelayTime;
 	}
 }

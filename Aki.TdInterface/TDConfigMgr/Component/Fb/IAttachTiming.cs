@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C81 RID: 3201
+	// Token: 0x02000D60 RID: 3424
 	public class IAttachTiming
 	{
-		// Token: 0x0600494A RID: 18762 RVA: 0x000B7D77 File Offset: 0x000B5F77
-		[NullableContext(1)]
+		// Token: 0x06004DE9 RID: 19945 RVA: 0x000C257B File Offset: 0x000C077B
 		public static IAttachTiming Create(IAttachTiming? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001605 RID: 5637
-		// (get) Token: 0x0600494B RID: 18763 RVA: 0x000B7D96 File Offset: 0x000B5F96
+		// Token: 0x17001724 RID: 5924
+		// (get) Token: 0x06004DEA RID: 19946 RVA: 0x000C259A File Offset: 0x000C079A
 		public virtual EAttachTimingType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029D0 RID: 10704
+		// Token: 0x04002C3D RID: 11325
 		private IAttachTiming Instance;
 	}
 }

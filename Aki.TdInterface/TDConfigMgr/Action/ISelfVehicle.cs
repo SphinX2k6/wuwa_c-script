@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DF4 RID: 7668
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002027 RID: 8231
 	public class ISelfVehicle : ITargetVehicle
 	{
-		// Token: 0x0600A417 RID: 42007 RVA: 0x0017440C File Offset: 0x0017260C
+		// Token: 0x0600AEBF RID: 44735 RVA: 0x00189E14 File Offset: 0x00188014
 		private ISelfVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A418 RID: 42008 RVA: 0x00174444 File Offset: 0x00172644
+		// Token: 0x0600AEC0 RID: 44736 RVA: 0x00189E4C File Offset: 0x0018804C
 		public static ISelfVehicle Create([Nullable(2)] ISelfVehicle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A419 RID: 42009 RVA: 0x00174457 File Offset: 0x00172657
+		// Token: 0x0600AEC1 RID: 44737 RVA: 0x00189E5F File Offset: 0x0018805F
 		public static ISelfVehicle CreateFromSetValue([Nullable(2)] ISelfVehicle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A41A RID: 42010 RVA: 0x0017446A File Offset: 0x0017266A
+		// Token: 0x0600AEC2 RID: 44738 RVA: 0x00189E72 File Offset: 0x00188072
 		public new ISelfVehicle_SetValue ToSetValue()
 		{
 			return new ISelfVehicle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003274 RID: 12916
-		// (get) Token: 0x0600A41B RID: 42011 RVA: 0x0017447D File Offset: 0x0017267D
-		// (set) Token: 0x0600A41C RID: 42012 RVA: 0x001744A8 File Offset: 0x001726A8
+		// Token: 0x17003533 RID: 13619
+		// (get) Token: 0x0600AEC3 RID: 44739 RVA: 0x00189E85 File Offset: 0x00188085
+		// (set) Token: 0x0600AEC4 RID: 44740 RVA: 0x00189EB0 File Offset: 0x001880B0
 		public override ETargetVehicle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006249 RID: 25161
+		// Token: 0x04006820 RID: 26656
 		[Nullable(2)]
 		protected new ISelfVehicle FbInstance;
 
-		// Token: 0x0400624A RID: 25162
+		// Token: 0x04006821 RID: 26657
 		[Nullable(2)]
 		protected new ISelfVehicle_SetValue PocoInterface;
 	}

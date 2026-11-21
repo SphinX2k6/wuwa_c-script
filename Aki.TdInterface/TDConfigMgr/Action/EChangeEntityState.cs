@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A5 RID: 5541
+	// Token: 0x02001704 RID: 5892
 	[EnumExtensions]
 	public enum EChangeEntityState
 	{
-		// Token: 0x040049C6 RID: 18886
+		// Token: 0x04004D78 RID: 19832
 		Directly,
-		// Token: 0x040049C7 RID: 18887
+		// Token: 0x04004D79 RID: 19833
 		BatchDirectly,
-		// Token: 0x040049C8 RID: 18888
+		// Token: 0x04004D7A RID: 19834
 		Loop
 	}
 }

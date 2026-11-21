@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002573 RID: 9587
+	// Token: 0x0200281C RID: 10268
 	public class IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D723 RID: 55075 RVA: 0x00200CF6 File Offset: 0x001FEEF6
-		[NullableContext(1)]
+		// Token: 0x0600E48F RID: 58511 RVA: 0x0021C93B File Offset: 0x0021AB3B
 		public static IVisualNovelPerformanceBase Create(IVisualNovelPerformanceBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DFF RID: 15871
-		// (get) Token: 0x0600D724 RID: 55076 RVA: 0x00200D15 File Offset: 0x001FEF15
+		// Token: 0x17004105 RID: 16645
+		// (get) Token: 0x0600E490 RID: 58512 RVA: 0x0021C95A File Offset: 0x0021AB5A
 		public virtual EVisualNovelPerformanceType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E00 RID: 15872
-		// (get) Token: 0x0600D725 RID: 55077 RVA: 0x00200D24 File Offset: 0x001FEF24
+		// Token: 0x17004106 RID: 16646
+		// (get) Token: 0x0600E491 RID: 58513 RVA: 0x0021C968 File Offset: 0x0021AB68
 		public virtual float? StartTime
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007715 RID: 30485
+		// Token: 0x04007D72 RID: 32114
 		private IVisualNovelPerformanceBase Instance;
 	}
 }

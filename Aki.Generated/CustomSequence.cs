@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BAE RID: 2990
+	// Token: 0x02000C90 RID: 3216
 	public struct CustomSequence : IFlatbufferObject
 	{
-		// Token: 0x170009E7 RID: 2535
-		// (get) Token: 0x06005AAE RID: 23214 RVA: 0x00202859 File Offset: 0x00200A59
+		// Token: 0x17000A2D RID: 2605
+		// (get) Token: 0x06006087 RID: 24711 RVA: 0x00222542 File Offset: 0x00220742
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005AAF RID: 23215 RVA: 0x00202866 File Offset: 0x00200A66
+		// Token: 0x06006088 RID: 24712 RVA: 0x0022254F File Offset: 0x0022074F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005AB0 RID: 23216 RVA: 0x00202870 File Offset: 0x00200A70
+		// Token: 0x06006089 RID: 24713 RVA: 0x00222558 File Offset: 0x00220758
 		public static CustomSequence GetRootAsCustomSequence(ByteBuffer _bb)
 		{
 			return CustomSequence.GetRootAsCustomSequence(_bb, default(CustomSequence));
 		}
 
-		// Token: 0x06005AB1 RID: 23217 RVA: 0x0020288C File Offset: 0x00200A8C
+		// Token: 0x0600608A RID: 24714 RVA: 0x00222574 File Offset: 0x00220774
 		public static CustomSequence GetRootAsCustomSequence(ByteBuffer _bb, CustomSequence obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005AB2 RID: 23218 RVA: 0x002028A9 File Offset: 0x00200AA9
+		// Token: 0x0600608B RID: 24715 RVA: 0x00222591 File Offset: 0x00220791
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005AB3 RID: 23219 RVA: 0x002028B8 File Offset: 0x00200AB8
+		// Token: 0x0600608C RID: 24716 RVA: 0x002225A0 File Offset: 0x002207A0
 		public CustomSequence __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170009E8 RID: 2536
-		// (get) Token: 0x06005AB4 RID: 23220 RVA: 0x002028C8 File Offset: 0x00200AC8
+		// Token: 0x17000A2E RID: 2606
+		// (get) Token: 0x0600608D RID: 24717 RVA: 0x002225B0 File Offset: 0x002207B0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009E9 RID: 2537
-		// (get) Token: 0x06005AB5 RID: 23221 RVA: 0x00202904 File Offset: 0x00200B04
+		// Token: 0x17000A2F RID: 2607
+		// (get) Token: 0x0600608E RID: 24718 RVA: 0x002225EC File Offset: 0x002207EC
 		public int Name
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170009EA RID: 2538
-		// (get) Token: 0x06005AB6 RID: 23222 RVA: 0x00202940 File Offset: 0x00200B40
+		// Token: 0x17000A30 RID: 2608
+		// (get) Token: 0x0600608F RID: 24719 RVA: 0x00222628 File Offset: 0x00220828
 		public string SeqDataPath
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005AB7 RID: 23223 RVA: 0x00202977 File Offset: 0x00200B77
+		// Token: 0x06006090 RID: 24720 RVA: 0x0022265F File Offset: 0x0022085F
 		public Span<byte> GetSeqDataPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06005AB8 RID: 23224 RVA: 0x00202986 File Offset: 0x00200B86
+		// Token: 0x06006091 RID: 24721 RVA: 0x0022266E File Offset: 0x0022086E
 		public byte[] GetSeqDataPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170009EB RID: 2539
-		// (get) Token: 0x06005AB9 RID: 23225 RVA: 0x002029A0 File Offset: 0x00200BA0
+		// Token: 0x17000A31 RID: 2609
+		// (get) Token: 0x06006092 RID: 24722 RVA: 0x00222688 File Offset: 0x00220888
 		public string BinderType
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005ABA RID: 23226 RVA: 0x002029D8 File Offset: 0x00200BD8
+		// Token: 0x06006093 RID: 24723 RVA: 0x002226C0 File Offset: 0x002208C0
 		public Span<byte> GetBinderTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06005ABB RID: 23227 RVA: 0x002029E8 File Offset: 0x00200BE8
+		// Token: 0x06006094 RID: 24724 RVA: 0x002226D0 File Offset: 0x002208D0
 		public byte[] GetBinderTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004BD1 RID: 19409
+		// Token: 0x040051B3 RID: 20915
 		private Table __p;
 	}
 }

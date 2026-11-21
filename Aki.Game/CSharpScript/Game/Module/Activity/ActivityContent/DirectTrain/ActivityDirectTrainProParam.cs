@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 {
-	// Token: 0x0200673D RID: 26429
+	// Token: 0x0200568D RID: 22157
 	public class ActivityDirectTrainProParam
 	{
-		// Token: 0x040225E3 RID: 140771
+		// Token: 0x0401CE3C RID: 118332
 		[Nullable(1)]
 		public List<ActivityDirectTrainData> ActivityDataList = new List<ActivityDirectTrainData>();
 
-		// Token: 0x040225E4 RID: 140772
+		// Token: 0x0401CE3D RID: 118333
 		public int? ForceRemindIndex;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A7F RID: 27263
+	// Token: 0x020071A1 RID: 29089
 	public struct IMechEscortFly : IFlatbufferObject
 	{
-		// Token: 0x1700CA5F RID: 51807
-		// (get) Token: 0x0602FC45 RID: 195653 RVA: 0x0067FFDE File Offset: 0x0067E1DE
+		// Token: 0x1700D50A RID: 54538
+		// (get) Token: 0x0603296B RID: 207211 RVA: 0x006D609E File Offset: 0x006D429E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC46 RID: 195654 RVA: 0x0067FFEB File Offset: 0x0067E1EB
+		// Token: 0x0603296C RID: 207212 RVA: 0x006D60AB File Offset: 0x006D42AB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FC47 RID: 195655 RVA: 0x0067FFF4 File Offset: 0x0067E1F4
+		// Token: 0x0603296D RID: 207213 RVA: 0x006D60B4 File Offset: 0x006D42B4
 		public static IMechEscortFly GetRootAsIMechEscortFly(ByteBuffer _bb)
 		{
 			return IMechEscortFly.GetRootAsIMechEscortFly(_bb, default(IMechEscortFly));
 		}
 
-		// Token: 0x0602FC48 RID: 195656 RVA: 0x00680010 File Offset: 0x0067E210
+		// Token: 0x0603296E RID: 207214 RVA: 0x006D60D0 File Offset: 0x006D42D0
 		public static IMechEscortFly GetRootAsIMechEscortFly(ByteBuffer _bb, IMechEscortFly obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FC49 RID: 195657 RVA: 0x0068002D File Offset: 0x0067E22D
+		// Token: 0x0603296F RID: 207215 RVA: 0x006D60ED File Offset: 0x006D42ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FC4A RID: 195658 RVA: 0x0068003C File Offset: 0x0067E23C
+		// Token: 0x06032970 RID: 207216 RVA: 0x006D60FC File Offset: 0x006D42FC
 		public IMechEscortFly __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CA60 RID: 51808
-		// (get) Token: 0x0602FC4B RID: 195659 RVA: 0x0068004C File Offset: 0x0067E24C
+		// Token: 0x1700D50B RID: 54539
+		// (get) Token: 0x06032971 RID: 207217 RVA: 0x006D610C File Offset: 0x006D430C
 		public ELeisureInteract Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA61 RID: 51809
-		// (get) Token: 0x0602FC4C RID: 195660 RVA: 0x00680088 File Offset: 0x0067E288
+		// Token: 0x1700D50C RID: 54540
+		// (get) Token: 0x06032972 RID: 207218 RVA: 0x006D6148 File Offset: 0x006D4348
 		public int TargetEntity
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA62 RID: 51810
-		// (get) Token: 0x0602FC4D RID: 195661 RVA: 0x006800C4 File Offset: 0x0067E2C4
+		// Token: 0x1700D50D RID: 54541
+		// (get) Token: 0x06032973 RID: 207219 RVA: 0x006D6184 File Offset: 0x006D4384
 		public int TargetSpline
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC4E RID: 195662 RVA: 0x00680100 File Offset: 0x0067E300
+		// Token: 0x06032974 RID: 207220 RVA: 0x006D61C0 File Offset: 0x006D43C0
 		public IMechEscortPoint? EscortPoints(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IMechEscortPoint?(default(IMechEscortPoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700CA63 RID: 51811
-		// (get) Token: 0x0602FC4F RID: 195663 RVA: 0x00680164 File Offset: 0x0067E364
+		// Token: 0x1700D50E RID: 54542
+		// (get) Token: 0x06032975 RID: 207221 RVA: 0x006D6224 File Offset: 0x006D4424
 		public int EscortPointsLength
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC50 RID: 195664 RVA: 0x00680190 File Offset: 0x0067E390
+		// Token: 0x06032976 RID: 207222 RVA: 0x006D6250 File Offset: 0x006D4450
 		public static Offset<IMechEscortFly> CreateIMechEscortFly(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill, int TargetEntity = 0, int TargetSpline = 0, VectorOffset EscortPointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -130,37 +130,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMechEscortFly.EndIMechEscortFly(builder);
 		}
 
-		// Token: 0x0602FC51 RID: 195665 RVA: 0x006801BC File Offset: 0x0067E3BC
+		// Token: 0x06032977 RID: 207223 RVA: 0x006D627C File Offset: 0x006D447C
 		public static void StartIMechEscortFly(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602FC52 RID: 195666 RVA: 0x006801C5 File Offset: 0x0067E3C5
+		// Token: 0x06032978 RID: 207224 RVA: 0x006D6285 File Offset: 0x006D4485
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602FC53 RID: 195667 RVA: 0x006801D0 File Offset: 0x0067E3D0
+		// Token: 0x06032979 RID: 207225 RVA: 0x006D6290 File Offset: 0x006D4490
 		public static void AddTargetEntity(FlatBufferBuilder builder, int targetEntity)
 		{
 			builder.AddInt(1, targetEntity, 0);
 		}
 
-		// Token: 0x0602FC54 RID: 195668 RVA: 0x006801DB File Offset: 0x0067E3DB
+		// Token: 0x0603297A RID: 207226 RVA: 0x006D629B File Offset: 0x006D449B
 		public static void AddTargetSpline(FlatBufferBuilder builder, int targetSpline)
 		{
 			builder.AddInt(2, targetSpline, 0);
 		}
 
-		// Token: 0x0602FC55 RID: 195669 RVA: 0x006801E6 File Offset: 0x0067E3E6
+		// Token: 0x0603297B RID: 207227 RVA: 0x006D62A6 File Offset: 0x006D44A6
 		public static void AddEscortPoints(FlatBufferBuilder builder, VectorOffset escortPointsOffset)
 		{
 			builder.AddOffset(3, escortPointsOffset.Value, 0);
 		}
 
-		// Token: 0x0602FC56 RID: 195670 RVA: 0x006801F8 File Offset: 0x0067E3F8
+		// Token: 0x0603297C RID: 207228 RVA: 0x006D62B8 File Offset: 0x006D44B8
 		public static VectorOffset CreateEscortPointsVector(FlatBufferBuilder builder, Offset<IMechEscortPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FC57 RID: 195671 RVA: 0x00680238 File Offset: 0x0067E438
+		// Token: 0x0603297D RID: 207229 RVA: 0x006D62F8 File Offset: 0x006D44F8
 		public static VectorOffset CreateEscortPointsVectorBlock(FlatBufferBuilder builder, Offset<IMechEscortPoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FC58 RID: 195672 RVA: 0x00680252 File Offset: 0x0067E452
+		// Token: 0x0603297E RID: 207230 RVA: 0x006D6312 File Offset: 0x006D4512
 		public static VectorOffset CreateEscortPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMechEscortPoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FC59 RID: 195673 RVA: 0x00680270 File Offset: 0x0067E470
+		// Token: 0x0603297F RID: 207231 RVA: 0x006D6330 File Offset: 0x006D4530
 		public static VectorOffset CreateEscortPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -195,19 +195,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602FC5A RID: 195674 RVA: 0x00680289 File Offset: 0x0067E489
+		// Token: 0x06032980 RID: 207232 RVA: 0x006D6349 File Offset: 0x006D4549
 		public static void StartEscortPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602FC5B RID: 195675 RVA: 0x00680294 File Offset: 0x0067E494
+		// Token: 0x06032981 RID: 207233 RVA: 0x006D6354 File Offset: 0x006D4554
 		public static Offset<IMechEscortFly> EndIMechEscortFly(FlatBufferBuilder builder)
 		{
 			return new Offset<IMechEscortFly>(builder.EndTable());
 		}
 
-		// Token: 0x0602FC5C RID: 195676 RVA: 0x006802A4 File Offset: 0x0067E4A4
+		// Token: 0x06032982 RID: 207234 RVA: 0x006D6364 File Offset: 0x006D4564
 		public IMechEscortFlyT UnPack()
 		{
 			IMechEscortFlyT mechEscortFlyT = new IMechEscortFlyT();
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return mechEscortFlyT;
 		}
 
-		// Token: 0x0602FC5D RID: 195677 RVA: 0x006802C0 File Offset: 0x0067E4C0
+		// Token: 0x06032983 RID: 207235 RVA: 0x006D6380 File Offset: 0x006D4580
 		public void UnPackTo(IMechEscortFlyT _o)
 		{
 			_o.Type = this.Type;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FC5E RID: 195678 RVA: 0x00680344 File Offset: 0x0067E544
+		// Token: 0x06032984 RID: 207236 RVA: 0x006D6404 File Offset: 0x006D4604
 		public static Offset<IMechEscortFly> Pack(FlatBufferBuilder builder, IMechEscortFlyT _o)
 		{
 			if (_o == null)
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMechEscortFly.CreateIMechEscortFly(builder, _o.Type, _o.TargetEntity, _o.TargetSpline, escortPointsOffset);
 		}
 
-		// Token: 0x040112B3 RID: 70323
+		// Token: 0x040121AB RID: 74155
 		private Table __p;
 	}
 }

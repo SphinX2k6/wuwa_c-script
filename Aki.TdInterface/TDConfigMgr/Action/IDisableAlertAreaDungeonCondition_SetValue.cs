@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200199F RID: 6559
+	// Token: 0x02001B26 RID: 6950
 	public class IDisableAlertAreaDungeonCondition_SetValue
 	{
-		// Token: 0x04005762 RID: 22370
+		// Token: 0x04005BAB RID: 23467
 		public EDisableAlertAreaCondition Type;
 
-		// Token: 0x04005763 RID: 22371
+		// Token: 0x04005BAC RID: 23468
 		public int RelatedDungeonId;
 	}
 }

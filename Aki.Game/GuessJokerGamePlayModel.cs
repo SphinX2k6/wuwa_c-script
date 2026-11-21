@@ -11,6 +11,7 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
@@ -19,13 +20,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200105F RID: 4191
+// Token: 0x02000513 RID: 1299
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class GuessJokerGamePlayModel : ModelBase
 {
-	// Token: 0x06006B65 RID: 27493 RVA: 0x00159230 File Offset: 0x00157430
+	// Token: 0x06003EFA RID: 16122 RVA: 0x00161B58 File Offset: 0x0015FD58
 	protected override bool OnInit()
 	{
 		IReadOnlyList<GuessJokerLevel> jokerLevelList = GuessJokerConfig.Instance.GetJokerLevelList();
@@ -38,7 +39,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B66 RID: 27494 RVA: 0x00159287 File Offset: 0x00157487
+	// Token: 0x06003EFB RID: 16123 RVA: 0x00161BAF File Offset: 0x0015FDAF
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotSequenceEnd, new Action(this.OnPlotSequenceEnd));
@@ -46,7 +47,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B67 RID: 27495 RVA: 0x001592B1 File Offset: 0x001574B1
+	// Token: 0x06003EFC RID: 16124 RVA: 0x00161BD9 File Offset: 0x0015FDD9
 	private void OnPlotSequenceEnd()
 	{
 		if (this.GetGamePlayView() == null)
@@ -56,7 +57,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.OpenGamePlayView(null);
 	}
 
-	// Token: 0x06006B68 RID: 27496 RVA: 0x001592C3 File Offset: 0x001574C3
+	// Token: 0x06003EFD RID: 16125 RVA: 0x00161BEB File Offset: 0x0015FDEB
 	public void InitGame()
 	{
 		this.InGamePlay = true;
@@ -64,7 +65,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.RoundStartTipShownMap.Clear();
 	}
 
-	// Token: 0x06006B69 RID: 27497 RVA: 0x001592E4 File Offset: 0x001574E4
+	// Token: 0x06003EFE RID: 16126 RVA: 0x00161C0C File Offset: 0x0015FE0C
 	public void EnterGame(JokerGuessInitGame response, int levelId, string serverTime)
 	{
 		if (SpringManorModel.Instance.ActivityData == null)
@@ -84,14 +85,14 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.InitTimerSystem();
 	}
 
-	// Token: 0x06006B6A RID: 27498 RVA: 0x00159367 File Offset: 0x00157567
+	// Token: 0x06003EFF RID: 16127 RVA: 0x00161C8F File Offset: 0x0015FE8F
 	public void NextRound()
 	{
 		this.RoundNumber++;
 		this.RoundStartTipShownMap.Clear();
 	}
 
-	// Token: 0x06006B6B RID: 27499 RVA: 0x00159384 File Offset: 0x00157584
+	// Token: 0x06003F00 RID: 16128 RVA: 0x00161CAC File Offset: 0x0015FEAC
 	public UniTask RematchGame(JokerGuessInitGame response, int levelId, string serverTime)
 	{
 		GuessJokerGamePlayModel.<RematchGame>d__34 <RematchGame>d__;
@@ -105,7 +106,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return <RematchGame>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006B6C RID: 27500 RVA: 0x001593DF File Offset: 0x001575DF
+	// Token: 0x06003F01 RID: 16129 RVA: 0x00161D07 File Offset: 0x0015FF07
 	public void ExitGame()
 	{
 		if (this.IsExit)
@@ -116,22 +117,22 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.ChangeState(EGuessJokerCardStateType.GameExit);
 	}
 
-	// Token: 0x06006B6D RID: 27501 RVA: 0x001593F8 File Offset: 0x001575F8
+	// Token: 0x06003F02 RID: 16130 RVA: 0x00161D20 File Offset: 0x0015FF20
 	public void GameEnd()
 	{
 		this.SetNpcPokerState(EPokerStateType.Idel);
-		UiCameraAnimationManager.Instance.EnablePlayerActor();
+		UiCameraModel.Instance.EnablePlayerActor();
 		this.ClearData();
 	}
 
-	// Token: 0x06006B6E RID: 27502 RVA: 0x00159412 File Offset: 0x00157612
+	// Token: 0x06003F03 RID: 16131 RVA: 0x00161D3A File Offset: 0x0015FF3A
 	public void SettleGameClear()
 	{
 		this.InGamePlay = false;
 	}
 
-	// Token: 0x170008C1 RID: 2241
-	// (get) Token: 0x06006B6F RID: 27503 RVA: 0x0015941B File Offset: 0x0015761B
+	// Token: 0x170008E1 RID: 2273
+	// (get) Token: 0x06003F04 RID: 16132 RVA: 0x00161D43 File Offset: 0x0015FF43
 	public bool InGame
 	{
 		get
@@ -140,7 +141,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B70 RID: 27504 RVA: 0x00159424 File Offset: 0x00157624
+	// Token: 0x06003F05 RID: 16133 RVA: 0x00161D4C File Offset: 0x0015FF4C
 	public unsafe void InitData(JokerGuessInitGame gameData, int levelId, string serverTime)
 	{
 		this.LevelId = levelId;
@@ -205,7 +206,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.ShowInitialNoPairTip = (!this.CheckPlayerHasPair(EGuessJokerPlayerType.Ai) || !this.CheckPlayerHasPair(EGuessJokerPlayerType.Me));
 	}
 
-	// Token: 0x06006B71 RID: 27505 RVA: 0x00159708 File Offset: 0x00157908
+	// Token: 0x06003F06 RID: 16134 RVA: 0x00162030 File Offset: 0x00160230
 	public GuessJokerCardData GetBlankCardData()
 	{
 		foreach (GuessJokerCardData guessJokerCardData in this.CardDataMap.Values)
@@ -218,7 +219,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06006B72 RID: 27506 RVA: 0x0015976C File Offset: 0x0015796C
+	// Token: 0x06003F07 RID: 16135 RVA: 0x00162094 File Offset: 0x00160294
 	public int GetJokerCardId()
 	{
 		foreach (GuessJokerCardData guessJokerCardData in this.CardDataMap.Values)
@@ -232,7 +233,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x06006B73 RID: 27507 RVA: 0x001597F4 File Offset: 0x001579F4
+	// Token: 0x06003F08 RID: 16136 RVA: 0x0016211C File Offset: 0x0016031C
 	public void RemoveCardData(int[] cardIdList)
 	{
 		foreach (int key in cardIdList)
@@ -245,7 +246,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B74 RID: 27508 RVA: 0x00159834 File Offset: 0x00157A34
+	// Token: 0x06003F09 RID: 16137 RVA: 0x0016215C File Offset: 0x0016035C
 	public void ClearData()
 	{
 		this.InGamePlay = false;
@@ -281,7 +282,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.GuessJokerFsm = null;
 	}
 
-	// Token: 0x06006B75 RID: 27509 RVA: 0x001598F9 File Offset: 0x00157AF9
+	// Token: 0x06003F0A RID: 16138 RVA: 0x00162221 File Offset: 0x00160421
 	private void InitTimerSystem()
 	{
 		if (this.GamePlayTimerHandle != null)
@@ -291,7 +292,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.GamePlayTimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.GamePlayTick), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06006B76 RID: 27510 RVA: 0x00159932 File Offset: 0x00157B32
+	// Token: 0x06003F0B RID: 16139 RVA: 0x0016225A File Offset: 0x0016045A
 	private void GamePlayTick(float deltaTime)
 	{
 		this.GuessJokerFsm.Tick(deltaTime);
@@ -308,13 +309,13 @@ public class GuessJokerGamePlayModel : ModelBase
 		plotActionRunner.Tick(deltaTime);
 	}
 
-	// Token: 0x06006B77 RID: 27511 RVA: 0x00159963 File Offset: 0x00157B63
+	// Token: 0x06003F0C RID: 16140 RVA: 0x0016228B File Offset: 0x0016048B
 	private void NpcSitTick(float deltaTime)
 	{
 		this.ProcessPendingNpcSit();
 	}
 
-	// Token: 0x06006B78 RID: 27512 RVA: 0x0015996C File Offset: 0x00157B6C
+	// Token: 0x06003F0D RID: 16141 RVA: 0x00162294 File Offset: 0x00160494
 	private void ClearTimerHandle()
 	{
 		if (this.GamePlayTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.GamePlayTimerHandle))
@@ -329,23 +330,23 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B79 RID: 27513 RVA: 0x001599DD File Offset: 0x00157BDD
+	// Token: 0x06003F0E RID: 16142 RVA: 0x00162305 File Offset: 0x00160505
 	public void InitStateMachine()
 	{
 		this.GuessJokerFsm = new GuessJokerStageFsm();
 		this.GuessJokerFsm.Init();
 	}
 
-	// Token: 0x06006B7A RID: 27514 RVA: 0x001599F5 File Offset: 0x00157BF5
+	// Token: 0x06003F0F RID: 16143 RVA: 0x0016231D File Offset: 0x0016051D
 	public void ChangeState(EGuessJokerCardStateType state)
 	{
 		this.GuessJokerFsm.ChangeState(state);
 	}
 
-	// Token: 0x06006B7B RID: 27515 RVA: 0x00159A04 File Offset: 0x00157C04
+	// Token: 0x06003F10 RID: 16144 RVA: 0x0016232C File Offset: 0x0016052C
 	public void OpenGamePlayView(Action finishCallback = null)
 	{
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 		UiManager.Instance.OpenView(EUiViewName.GuessJokerGamePlayView, this.EntityId, delegate(bool isSuccess, int viewId)
 		{
 			if (!isSuccess)
@@ -373,7 +374,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		});
 	}
 
-	// Token: 0x06006B7C RID: 27516 RVA: 0x00159A58 File Offset: 0x00157C58
+	// Token: 0x06003F11 RID: 16145 RVA: 0x00162380 File Offset: 0x00160580
 	public UniTask CloseGamePlayViewAsync()
 	{
 		GuessJokerGamePlayModel.<CloseGamePlayViewAsync>d__52 <CloseGamePlayViewAsync>d__;
@@ -384,7 +385,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return <CloseGamePlayViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006B7D RID: 27517 RVA: 0x00159A9C File Offset: 0x00157C9C
+	// Token: 0x06003F12 RID: 16146 RVA: 0x001623C4 File Offset: 0x001605C4
 	public GuessJokerGamePlayView GetGamePlayView()
 	{
 		if (this.GamePlayView == null)
@@ -395,7 +396,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return this.GamePlayView;
 	}
 
-	// Token: 0x06006B7E RID: 27518 RVA: 0x00159AD8 File Offset: 0x00157CD8
+	// Token: 0x06003F13 RID: 16147 RVA: 0x00162400 File Offset: 0x00160600
 	public void PushActions(IReadOnlyList<GuessJokerActionBase> actions)
 	{
 		if (this.ActionRunner == null)
@@ -406,7 +407,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.ActionRunner.PushActions(actions);
 	}
 
-	// Token: 0x06006B7F RID: 27519 RVA: 0x00159B1C File Offset: 0x00157D1C
+	// Token: 0x06003F14 RID: 16148 RVA: 0x00162444 File Offset: 0x00160644
 	public void PushPlotActions(GuessJokerPlotAction[] actions)
 	{
 		if (this.PlotActionRunner == null)
@@ -417,25 +418,25 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.PlotActionRunner.PushPlotActions(actions);
 	}
 
-	// Token: 0x06006B80 RID: 27520 RVA: 0x00159B5D File Offset: 0x00157D5D
+	// Token: 0x06003F15 RID: 16149 RVA: 0x00162485 File Offset: 0x00160685
 	public void SetWinner(JokerGuessActor winner)
 	{
 		this.Winner = GuessJokerUtils.ServerPlayerTransToClient(winner);
 	}
 
-	// Token: 0x06006B81 RID: 27521 RVA: 0x00159B6B File Offset: 0x00157D6B
+	// Token: 0x06003F16 RID: 16150 RVA: 0x00162493 File Offset: 0x00160693
 	public EGuessJokerPlayerType GetWinner()
 	{
 		return this.Winner;
 	}
 
-	// Token: 0x06006B82 RID: 27522 RVA: 0x00159B73 File Offset: 0x00157D73
+	// Token: 0x06003F17 RID: 16151 RVA: 0x0016249B File Offset: 0x0016069B
 	public int GetLevelId()
 	{
 		return this.LevelId;
 	}
 
-	// Token: 0x06006B83 RID: 27523 RVA: 0x00159B7B File Offset: 0x00157D7B
+	// Token: 0x06003F18 RID: 16152 RVA: 0x001624A3 File Offset: 0x001606A3
 	public void UpdateTaskData(IEnumerable<JokerGuessOp> taskList)
 	{
 		this.TaskDataList.Clear();
@@ -443,7 +444,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.GuessJokerCardUpdateTaskData);
 	}
 
-	// Token: 0x06006B84 RID: 27524 RVA: 0x00159BA4 File Offset: 0x00157DA4
+	// Token: 0x06003F19 RID: 16153 RVA: 0x001624CC File Offset: 0x001606CC
 	public List<JokerGuessOp> GetTaskDataList()
 	{
 		List<JokerGuessOp> result = new List<JokerGuessOp>(this.TaskDataList);
@@ -451,7 +452,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06006B85 RID: 27525 RVA: 0x00159BBC File Offset: 0x00157DBC
+	// Token: 0x06003F1A RID: 16154 RVA: 0x001624E4 File Offset: 0x001606E4
 	private bool CheckPlayerHasPair(EGuessJokerPlayerType playerType)
 	{
 		List<GuessJokerCardData> handCardsByPlayer = this.GetHandCardsByPlayer(playerType);
@@ -468,14 +469,14 @@ public class GuessJokerGamePlayModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06006B86 RID: 27526 RVA: 0x00159C30 File Offset: 0x00157E30
+	// Token: 0x06003F1B RID: 16155 RVA: 0x00162558 File Offset: 0x00160758
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x170008C2 RID: 2242
-	// (get) Token: 0x06006B87 RID: 27527 RVA: 0x00159C38 File Offset: 0x00157E38
+	// Token: 0x170008E2 RID: 2274
+	// (get) Token: 0x06003F1C RID: 16156 RVA: 0x00162560 File Offset: 0x00160760
 	public int EntityId
 	{
 		get
@@ -489,7 +490,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B88 RID: 27528 RVA: 0x00159C70 File Offset: 0x00157E70
+	// Token: 0x06003F1D RID: 16157 RVA: 0x00162598 File Offset: 0x00160798
 	public GuessJokerRoleData GetRoleData(EGuessJokerPlayerType playerType)
 	{
 		if (playerType == EGuessJokerPlayerType.Ai)
@@ -512,13 +513,13 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B89 RID: 27529 RVA: 0x00159CE0 File Offset: 0x00157EE0
+	// Token: 0x06003F1E RID: 16158 RVA: 0x00162608 File Offset: 0x00160808
 	public void UpdateHp(EGuessJokerPlayerType playerType, int value)
 	{
 		this.GetRoleData(playerType).SetHp(value);
 	}
 
-	// Token: 0x06006B8A RID: 27530 RVA: 0x00159CF0 File Offset: 0x00157EF0
+	// Token: 0x06003F1F RID: 16159 RVA: 0x00162618 File Offset: 0x00160818
 	public List<IPlayCardInfo> GetPlayerPlayCardIdList()
 	{
 		List<GuessJokerCardData> handCardsByPlayer = this.GetHandCardsByPlayer(EGuessJokerPlayerType.Me);
@@ -564,13 +565,13 @@ public class GuessJokerGamePlayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06006B8B RID: 27531 RVA: 0x00159E78 File Offset: 0x00158078
+	// Token: 0x06003F20 RID: 16160 RVA: 0x001627A0 File Offset: 0x001609A0
 	public List<GuessJokerCardData> GetAllCardDataList()
 	{
 		return new List<GuessJokerCardData>(this.CardDataMap.Values);
 	}
 
-	// Token: 0x06006B8C RID: 27532 RVA: 0x00159E8C File Offset: 0x0015808C
+	// Token: 0x06003F21 RID: 16161 RVA: 0x001627B4 File Offset: 0x001609B4
 	public GuessJokerCardData GetCardDataById(int cardId)
 	{
 		GuessJokerCardData result;
@@ -581,7 +582,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06006B8D RID: 27533 RVA: 0x00159EAC File Offset: 0x001580AC
+	// Token: 0x06003F22 RID: 16162 RVA: 0x001627D4 File Offset: 0x001609D4
 	public List<GuessJokerCardData> QueryCards(Func<GuessJokerCardData, bool> predicate)
 	{
 		List<GuessJokerCardData> list = new List<GuessJokerCardData>();
@@ -595,7 +596,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06006B8E RID: 27534 RVA: 0x00159F14 File Offset: 0x00158114
+	// Token: 0x06003F23 RID: 16163 RVA: 0x0016283C File Offset: 0x00160A3C
 	public List<GuessJokerCardData> GetHandCardsByPlayer(EGuessJokerPlayerType playerType)
 	{
 		return this.QueryCards(delegate(GuessJokerCardData card)
@@ -606,7 +607,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		});
 	}
 
-	// Token: 0x06006B8F RID: 27535 RVA: 0x00159F40 File Offset: 0x00158140
+	// Token: 0x06003F24 RID: 16164 RVA: 0x00162868 File Offset: 0x00160A68
 	public List<GuessJokerCardData> GetAllCardsByPlayer(EGuessJokerPlayerType playerType)
 	{
 		return this.QueryCards(delegate(GuessJokerCardData card)
@@ -617,8 +618,8 @@ public class GuessJokerGamePlayModel : ModelBase
 		});
 	}
 
-	// Token: 0x06006B90 RID: 27536 RVA: 0x00159F6C File Offset: 0x0015816C
-	public void UpdateCardBelongPlayerType(int[] cardIdList, EGuessJokerPlayerType? playerType = null)
+	// Token: 0x06003F25 RID: 16165 RVA: 0x00162894 File Offset: 0x00160A94
+	public void UpdateCardBelongPlayerType(IReadOnlyList<int> cardIdList, EGuessJokerPlayerType? playerType = null)
 	{
 		Log instance = Log.Instance;
 		ELogModule module = ELogModule.GuessJokerCard;
@@ -639,7 +640,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006B91 RID: 27537 RVA: 0x0015A004 File Offset: 0x00158204
+	// Token: 0x06003F26 RID: 16166 RVA: 0x0016294C File Offset: 0x00160B4C
 	public int GetLevelIdByNpcId(int npcId)
 	{
 		GuessJokerLevel? jokerLevelByNpcId = GuessJokerConfig.Instance.GetJokerLevelByNpcId(npcId);
@@ -650,7 +651,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return jokerLevelByNpcId.GetValueOrDefault().Id;
 	}
 
-	// Token: 0x06006B92 RID: 27538 RVA: 0x0015A038 File Offset: 0x00158238
+	// Token: 0x06003F27 RID: 16167 RVA: 0x00162980 File Offset: 0x00160B80
 	public int? GetLastUsedPlotId(int aiPlotConfigId)
 	{
 		int value;
@@ -661,13 +662,13 @@ public class GuessJokerGamePlayModel : ModelBase
 		return new int?(value);
 	}
 
-	// Token: 0x06006B93 RID: 27539 RVA: 0x0015A065 File Offset: 0x00158265
+	// Token: 0x06003F28 RID: 16168 RVA: 0x001629AD File Offset: 0x00160BAD
 	public void SetLastUsedPlotId(int aiPlotConfigId, int plotId)
 	{
 		this.LastUsedPlotIdMap[aiPlotConfigId] = plotId;
 	}
 
-	// Token: 0x06006B94 RID: 27540 RVA: 0x0015A074 File Offset: 0x00158274
+	// Token: 0x06003F29 RID: 16169 RVA: 0x001629BC File Offset: 0x00160BBC
 	public bool CheckBlankCardDisable()
 	{
 		using (Dictionary<int, GuessJokerCardData>.ValueCollection.Enumerator enumerator = this.CardDataMap.Values.GetEnumerator())
@@ -683,7 +684,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B95 RID: 27541 RVA: 0x0015A0D4 File Offset: 0x001582D4
+	// Token: 0x06003F2A RID: 16170 RVA: 0x00162A1C File Offset: 0x00160C1C
 	public int GetAiSkillId()
 	{
 		GuessJokerLevel? jokerLevelById = GuessJokerConfig.Instance.GetJokerLevelById(this.LevelId);
@@ -694,20 +695,20 @@ public class GuessJokerGamePlayModel : ModelBase
 		return jokerLevelById.GetValueOrDefault().AiCardSkill;
 	}
 
-	// Token: 0x06006B96 RID: 27542 RVA: 0x0015A10C File Offset: 0x0015830C
+	// Token: 0x06003F2B RID: 16171 RVA: 0x00162A54 File Offset: 0x00160C54
 	public void MarkRoundStartTipShown(EGuessJokerPlayerType playerType)
 	{
 		this.RoundStartTipShownMap[playerType] = true;
 	}
 
-	// Token: 0x06006B97 RID: 27543 RVA: 0x0015A11C File Offset: 0x0015831C
+	// Token: 0x06003F2C RID: 16172 RVA: 0x00162A64 File Offset: 0x00160C64
 	public bool HasShownRoundStartTip(EGuessJokerPlayerType playerType)
 	{
 		bool flag;
 		return this.RoundStartTipShownMap.TryGetValue(playerType, out flag) && flag;
 	}
 
-	// Token: 0x06006B98 RID: 27544 RVA: 0x0015A13C File Offset: 0x0015833C
+	// Token: 0x06003F2D RID: 16173 RVA: 0x00162A84 File Offset: 0x00160C84
 	public bool IsInFirstTutorial()
 	{
 		if (!this.InGamePlay)
@@ -722,7 +723,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return guessJokerGameData != null && !guessJokerGameData.FirstPass;
 	}
 
-	// Token: 0x06006B99 RID: 27545 RVA: 0x0015A188 File Offset: 0x00158388
+	// Token: 0x06003F2E RID: 16174 RVA: 0x00162AD0 File Offset: 0x00160CD0
 	public string GetPlayerNameByType(EGuessJokerPlayerType playerType)
 	{
 		if (playerType == EGuessJokerPlayerType.Me)
@@ -739,7 +740,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return "";
 	}
 
-	// Token: 0x06006B9A RID: 27546 RVA: 0x0015A1E4 File Offset: 0x001583E4
+	// Token: 0x06003F2F RID: 16175 RVA: 0x00162B2C File Offset: 0x00160D2C
 	public bool EnterNpcPokerState(int npcPbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(npcPbDataId);
@@ -783,7 +784,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B9B RID: 27547 RVA: 0x0015A288 File Offset: 0x00158488
+	// Token: 0x06003F30 RID: 16176 RVA: 0x00162BD0 File Offset: 0x00160DD0
 	public bool SetNpcPokerState(EPokerStateType state)
 	{
 		ABP_BaseRole_Gameplay_Poker_C npcAnimInst = this.GetNpcAnimInst(this.EntityId);
@@ -800,7 +801,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B9C RID: 27548 RVA: 0x0015A2CC File Offset: 0x001584CC
+	// Token: 0x06003F31 RID: 16177 RVA: 0x00162C14 File Offset: 0x00160E14
 	public void SetNpcEnterInteractiveStage(bool isInteractive)
 	{
 		ABP_BaseRole_Gameplay_Poker_C npcAnimInst = this.GetNpcAnimInst(this.EntityId);
@@ -811,7 +812,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		npcAnimInst.SetPlayerInteractiveStage(isInteractive);
 	}
 
-	// Token: 0x06006B9D RID: 27549 RVA: 0x0015A2F4 File Offset: 0x001584F4
+	// Token: 0x06003F32 RID: 16178 RVA: 0x00162C3C File Offset: 0x00160E3C
 	public void UpdateNpcIdleState()
 	{
 		List<GuessJokerCardData> handCardsByPlayer = this.GetHandCardsByPlayer(EGuessJokerPlayerType.Ai);
@@ -850,7 +851,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.SetNpcIdleState(npcIdleState);
 	}
 
-	// Token: 0x06006B9E RID: 27550 RVA: 0x0015A398 File Offset: 0x00158598
+	// Token: 0x06003F33 RID: 16179 RVA: 0x00162CE0 File Offset: 0x00160EE0
 	public bool SetNpcIdleState(EPokerIdleState state)
 	{
 		ABP_BaseRole_Gameplay_Poker_C npcAnimInst = this.GetNpcAnimInst(this.EntityId);
@@ -862,7 +863,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006B9F RID: 27551 RVA: 0x0015A3C0 File Offset: 0x001585C0
+	// Token: 0x06003F34 RID: 16180 RVA: 0x00162D08 File Offset: 0x00160F08
 	public unsafe ABP_BaseRole_Gameplay_Poker_C GetNpcAnimInst(int entityId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(entityId);
@@ -902,7 +903,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return abp_BaseRole_Gameplay_Poker_C;
 	}
 
-	// Token: 0x06006BA0 RID: 27552 RVA: 0x0015A494 File Offset: 0x00158694
+	// Token: 0x06003F35 RID: 16181 RVA: 0x00162DDC File Offset: 0x00160FDC
 	public List<int> GetLevelIdList()
 	{
 		IEnumerable<GuessJokerLevel> jokerLevelList = GuessJokerConfig.Instance.GetJokerLevelList();
@@ -919,31 +920,31 @@ public class GuessJokerGamePlayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06006BA1 RID: 27553 RVA: 0x0015A520 File Offset: 0x00158720
+	// Token: 0x06003F36 RID: 16182 RVA: 0x00162E68 File Offset: 0x00161068
 	public void SetActiveDialogLogic(GuessJokerDialogLogic logic)
 	{
 		this.ActiveDialogLogic = logic;
 	}
 
-	// Token: 0x06006BA2 RID: 27554 RVA: 0x0015A529 File Offset: 0x00158729
+	// Token: 0x06003F37 RID: 16183 RVA: 0x00162E71 File Offset: 0x00161071
 	public GuessJokerDialogLogic GetActiveDialogLogic()
 	{
 		return this.ActiveDialogLogic;
 	}
 
-	// Token: 0x06006BA3 RID: 27555 RVA: 0x0015A531 File Offset: 0x00158731
+	// Token: 0x06003F38 RID: 16184 RVA: 0x00162E79 File Offset: 0x00161079
 	public void SetPlayerDrawnCard(int cardId)
 	{
 		this.PlayerDrawnCardId = new int?(cardId);
 	}
 
-	// Token: 0x06006BA4 RID: 27556 RVA: 0x0015A53F File Offset: 0x0015873F
+	// Token: 0x06003F39 RID: 16185 RVA: 0x00162E87 File Offset: 0x00161087
 	public void SetAiDrawnCard(int cardId)
 	{
 		this.AiDrawnCardId = new int?(cardId);
 	}
 
-	// Token: 0x06006BA5 RID: 27557 RVA: 0x0015A550 File Offset: 0x00158750
+	// Token: 0x06003F3A RID: 16186 RVA: 0x00162E98 File Offset: 0x00161098
 	public bool HasPlayerNewCardInHand()
 	{
 		if (this.PlayerDrawnCardId == null)
@@ -961,7 +962,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06006BA6 RID: 27558 RVA: 0x0015A5AC File Offset: 0x001587AC
+	// Token: 0x06003F3B RID: 16187 RVA: 0x00162EF4 File Offset: 0x001610F4
 	public bool HasAiNewCardInHand()
 	{
 		if (this.AiDrawnCardId == null)
@@ -973,19 +974,19 @@ public class GuessJokerGamePlayModel : ModelBase
 		return guessJokerCardData != null && guessJokerCardData.GetBelongPlayerType().GetValueOrDefault() == EGuessJokerPlayerType.Ai;
 	}
 
-	// Token: 0x06006BA7 RID: 27559 RVA: 0x0015A5FD File Offset: 0x001587FD
+	// Token: 0x06003F3C RID: 16188 RVA: 0x00162F45 File Offset: 0x00161145
 	public void ClearPlayerDrawnCard()
 	{
 		this.PlayerDrawnCardId = null;
 	}
 
-	// Token: 0x06006BA8 RID: 27560 RVA: 0x0015A60B File Offset: 0x0015880B
+	// Token: 0x06003F3D RID: 16189 RVA: 0x00162F53 File Offset: 0x00161153
 	public void ClearAiDrawnCard()
 	{
 		this.AiDrawnCardId = null;
 	}
 
-	// Token: 0x06006BA9 RID: 27561 RVA: 0x0015A61C File Offset: 0x0015881C
+	// Token: 0x06003F3E RID: 16190 RVA: 0x00162F64 File Offset: 0x00161164
 	public void EnableGuessJokerNpcSit(int pdDataId)
 	{
 		int num = 0;
@@ -1010,7 +1011,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BAA RID: 27562 RVA: 0x0015A6D8 File Offset: 0x001588D8
+	// Token: 0x06003F3F RID: 16191 RVA: 0x00163020 File Offset: 0x00161220
 	private void ProcessPendingNpcSit()
 	{
 		if (this.PendingNpcSitSet.Count == 0)
@@ -1051,7 +1052,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BAB RID: 27563 RVA: 0x0015A848 File Offset: 0x00158A48
+	// Token: 0x06003F40 RID: 16192 RVA: 0x00163190 File Offset: 0x00161390
 	private bool CheckNpcIsReady(int npcPbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(npcPbDataId);
@@ -1059,7 +1060,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return worldEntity != null && ((worldEntity != null) ? worldEntity.GetComponent<NpcSitOnChairComponent>() : null) != null;
 	}
 
-	// Token: 0x06006BAC RID: 27564 RVA: 0x0015A884 File Offset: 0x00158A84
+	// Token: 0x06003F41 RID: 16193 RVA: 0x001631CC File Offset: 0x001613CC
 	private bool CheckChairIsReady(int chairPbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(chairPbDataId);
@@ -1077,7 +1078,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return pawnChairController != null && pawnChairController.IsSceneInteractionLoadCompleted();
 	}
 
-	// Token: 0x06006BAD RID: 27565 RVA: 0x0015A8D4 File Offset: 0x00158AD4
+	// Token: 0x06003F42 RID: 16194 RVA: 0x0016321C File Offset: 0x0016141C
 	public void GuessJokerDoSitDown(int npcPbDataId, int chairPbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(npcPbDataId);
@@ -1117,7 +1118,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BAE RID: 27566 RVA: 0x0015A9BC File Offset: 0x00158BBC
+	// Token: 0x06003F43 RID: 16195 RVA: 0x00163304 File Offset: 0x00161504
 	public List<int> GetAllGuessJokerNpcIds()
 	{
 		IEnumerable<GuessJokerLevel> jokerLevelList = GuessJokerConfig.Instance.GetJokerLevelList();
@@ -1133,7 +1134,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06006BAF RID: 27567 RVA: 0x0015AA40 File Offset: 0x00158C40
+	// Token: 0x06003F44 RID: 16196 RVA: 0x00163388 File Offset: 0x00161588
 	public bool CheckIsGuessJokerEntityId(int entityId)
 	{
 		bool result = false;
@@ -1148,7 +1149,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06006BB0 RID: 27568 RVA: 0x0015AAAC File Offset: 0x00158CAC
+	// Token: 0x06003F45 RID: 16197 RVA: 0x001633F4 File Offset: 0x001615F4
 	public void HideAllGuessJokerNpc()
 	{
 		foreach (int npcId in this.GetAllGuessJokerNpcIds())
@@ -1157,7 +1158,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BB1 RID: 27569 RVA: 0x0015AB00 File Offset: 0x00158D00
+	// Token: 0x06003F46 RID: 16198 RVA: 0x00163448 File Offset: 0x00161648
 	public void ShowAllGuessJokerNpc()
 	{
 		foreach (int npcId in this.GetAllGuessJokerNpcIds())
@@ -1166,7 +1167,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BB2 RID: 27570 RVA: 0x0015AB54 File Offset: 0x00158D54
+	// Token: 0x06003F47 RID: 16199 RVA: 0x0016349C File Offset: 0x0016169C
 	public void ShowOnlyGuessJokerNpc(int npcId)
 	{
 		foreach (int num in this.GetAllGuessJokerNpcIds())
@@ -1182,7 +1183,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BB3 RID: 27571 RVA: 0x0015ABB4 File Offset: 0x00158DB4
+	// Token: 0x06003F48 RID: 16200 RVA: 0x001634FC File Offset: 0x001616FC
 	public void HideGuessJokerNpc(int npcId)
 	{
 		if (this.HiddenGuessJokerNpcSet.Contains(npcId))
@@ -1202,7 +1203,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.HiddenGuessJokerNpcSet.Add(npcId);
 	}
 
-	// Token: 0x06006BB4 RID: 27572 RVA: 0x0015AC2C File Offset: 0x00158E2C
+	// Token: 0x06003F49 RID: 16201 RVA: 0x00163574 File Offset: 0x00161774
 	private void ShowGuessJokerNpc(int npcId)
 	{
 		if (!this.HiddenGuessJokerNpcSet.Contains(npcId))
@@ -1219,13 +1220,13 @@ public class GuessJokerGamePlayModel : ModelBase
 		this.HiddenGuessJokerNpcSet.Remove(npcId);
 	}
 
-	// Token: 0x06006BB5 RID: 27573 RVA: 0x0015AC9F File Offset: 0x00158E9F
+	// Token: 0x06003F4A RID: 16202 RVA: 0x001635E7 File Offset: 0x001617E7
 	public void ClearHideJokerNpcRecord(int npcId)
 	{
 		this.HiddenGuessJokerNpcSet.Remove(npcId);
 	}
 
-	// Token: 0x06006BB6 RID: 27574 RVA: 0x0015ACB0 File Offset: 0x00158EB0
+	// Token: 0x06003F4B RID: 16203 RVA: 0x001635F8 File Offset: 0x001617F8
 	public UniTask OpenSelectRoleView(int levelId = 0)
 	{
 		GuessJokerGamePlayModel.<OpenSelectRoleView>d__111 <OpenSelectRoleView>d__;
@@ -1237,7 +1238,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return <OpenSelectRoleView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006BB7 RID: 27575 RVA: 0x0015ACFC File Offset: 0x00158EFC
+	// Token: 0x06003F4C RID: 16204 RVA: 0x00163644 File Offset: 0x00161844
 	public bool CheckRedDot()
 	{
 		SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -1272,7 +1273,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return flag || (num != 0 && !hashSet.Contains(num));
 	}
 
-	// Token: 0x06006BB8 RID: 27576 RVA: 0x0015ADDC File Offset: 0x00158FDC
+	// Token: 0x06003F4D RID: 16205 RVA: 0x00163724 File Offset: 0x00161924
 	public EGuessJokerSkillEffectPlayStrategy GetSkillEffectPlayStrategy(int skillId)
 	{
 		JokerSkill? jokerSkill = GuessJokerConfig.Instance.GetJokerSkill(skillId);
@@ -1287,21 +1288,21 @@ public class GuessJokerGamePlayModel : ModelBase
 		return EGuessJokerSkillEffectPlayStrategy.NotOnce;
 	}
 
-	// Token: 0x06006BB9 RID: 27577 RVA: 0x0015AE18 File Offset: 0x00159018
+	// Token: 0x06003F4E RID: 16206 RVA: 0x00163760 File Offset: 0x00161960
 	public bool ShouldPlaySkillEffect(int skillId)
 	{
 		EGuessJokerSkillEffectPlayStrategy skillEffectPlayStrategy = this.GetSkillEffectPlayStrategy(skillId);
 		return skillEffectPlayStrategy == EGuessJokerSkillEffectPlayStrategy.Always || skillEffectPlayStrategy != EGuessJokerSkillEffectPlayStrategy.NotOnce;
 	}
 
-	// Token: 0x06006BBA RID: 27578 RVA: 0x0015AE3C File Offset: 0x0015903C
+	// Token: 0x06003F4F RID: 16207 RVA: 0x00163784 File Offset: 0x00161984
 	public bool ShowPlayGiveUpSkillTip(int skillId)
 	{
 		JokerSkill? jokerSkill = GuessJokerConfig.Instance.GetJokerSkill(skillId);
 		return jokerSkill != null && jokerSkill.Value.ShowGiveUpTip;
 	}
 
-	// Token: 0x06006BBB RID: 27579 RVA: 0x0015AE70 File Offset: 0x00159070
+	// Token: 0x06003F50 RID: 16208 RVA: 0x001637B8 File Offset: 0x001619B8
 	public void GuessJokerExitSaveReport()
 	{
 		if (!this.InGamePlay)
@@ -1321,8 +1322,8 @@ public class GuessJokerGamePlayModel : ModelBase
 		LogReportController.Instance.LogReport(guessJokerExitSaveReport);
 	}
 
-	// Token: 0x170008C3 RID: 2243
-	// (get) Token: 0x06006BBC RID: 27580 RVA: 0x0015AEF1 File Offset: 0x001590F1
+	// Token: 0x170008E3 RID: 2275
+	// (get) Token: 0x06003F51 RID: 16209 RVA: 0x00163839 File Offset: 0x00161A39
 	public static GuessJokerGamePlayModel Instance
 	{
 		get
@@ -1331,7 +1332,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		}
 	}
 
-	// Token: 0x06006BBD RID: 27581 RVA: 0x0015AEF8 File Offset: 0x001590F8
+	// Token: 0x06003F52 RID: 16210 RVA: 0x00163840 File Offset: 0x00161A40
 	public static GuessJokerGamePlayModel GetOrCreateInstance()
 	{
 		if (GuessJokerGamePlayModel._Instance == null)
@@ -1341,7 +1342,7 @@ public class GuessJokerGamePlayModel : ModelBase
 		return GuessJokerGamePlayModel._Instance;
 	}
 
-	// Token: 0x06006BBE RID: 27582 RVA: 0x0015AF0C File Offset: 0x0015910C
+	// Token: 0x06003F53 RID: 16211 RVA: 0x00163854 File Offset: 0x00161A54
 	public static bool CreateInstance()
 	{
 		if (GuessJokerGamePlayModel._Instance != null)
@@ -1352,110 +1353,110 @@ public class GuessJokerGamePlayModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06006BBF RID: 27583 RVA: 0x0015AF22 File Offset: 0x00159122
+	// Token: 0x06003F54 RID: 16212 RVA: 0x0016386A File Offset: 0x00161A6A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006BC0 RID: 27584 RVA: 0x0015AF24 File Offset: 0x00159124
+	// Token: 0x06003F55 RID: 16213 RVA: 0x0016386C File Offset: 0x00161A6C
 	public static void ResetStaticDefaultValue()
 	{
 		GuessJokerGamePlayModel._Instance = null;
 	}
 
-	// Token: 0x06006BC1 RID: 27585 RVA: 0x0015AF2C File Offset: 0x0015912C
+	// Token: 0x06003F56 RID: 16214 RVA: 0x00163874 File Offset: 0x00161A74
 	static GuessJokerGamePlayModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuessJokerGamePlayModel.CreateStaticDefaultValue), new Action(GuessJokerGamePlayModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040031C6 RID: 12742
+	// Token: 0x0400325F RID: 12895
 	private GuessJokerStageFsm GuessJokerFsm;
 
-	// Token: 0x040031C7 RID: 12743
+	// Token: 0x04003260 RID: 12896
 	private bool InGamePlay;
 
-	// Token: 0x040031C8 RID: 12744
+	// Token: 0x04003261 RID: 12897
 	public bool IsExit;
 
-	// Token: 0x040031C9 RID: 12745
+	// Token: 0x04003262 RID: 12898
 	private GuessJokerGamePlayView GamePlayView;
 
-	// Token: 0x040031CA RID: 12746
+	// Token: 0x04003263 RID: 12899
 	[Nullable(2)]
 	private TimerHandle GamePlayTimerHandle;
 
-	// Token: 0x040031CB RID: 12747
+	// Token: 0x04003264 RID: 12900
 	[Nullable(2)]
 	private TimerHandle NpcSitTimerHandle;
 
-	// Token: 0x040031CC RID: 12748
+	// Token: 0x04003265 RID: 12901
 	private int LevelId = -1;
 
-	// Token: 0x040031CD RID: 12749
+	// Token: 0x04003266 RID: 12902
 	private string S_Track_Id = "";
 
-	// Token: 0x040031CE RID: 12750
+	// Token: 0x04003267 RID: 12903
 	private int RoleId = -1;
 
-	// Token: 0x040031CF RID: 12751
+	// Token: 0x04003268 RID: 12904
 	public bool IsFinish;
 
-	// Token: 0x040031D0 RID: 12752
+	// Token: 0x04003269 RID: 12905
 	private GuessJokerRoleData AiRoleData;
 
-	// Token: 0x040031D1 RID: 12753
+	// Token: 0x0400326A RID: 12906
 	private GuessJokerRoleData PlayerRoleData;
 
-	// Token: 0x040031D2 RID: 12754
+	// Token: 0x0400326B RID: 12907
 	private readonly Dictionary<int, GuessJokerCardData> CardDataMap = new Dictionary<int, GuessJokerCardData>();
 
-	// Token: 0x040031D3 RID: 12755
+	// Token: 0x0400326C RID: 12908
 	public int RoundNumber;
 
-	// Token: 0x040031D4 RID: 12756
+	// Token: 0x0400326D RID: 12909
 	private readonly List<JokerGuessOp> TaskDataList = new List<JokerGuessOp>();
 
-	// Token: 0x040031D5 RID: 12757
+	// Token: 0x0400326E RID: 12910
 	public EGuessJokerPlayerType FirstPlayerTurn = EGuessJokerPlayerType.Ai;
 
-	// Token: 0x040031D6 RID: 12758
+	// Token: 0x0400326F RID: 12911
 	private EGuessJokerPlayerType Winner = EGuessJokerPlayerType.Ai;
 
-	// Token: 0x040031D7 RID: 12759
+	// Token: 0x04003270 RID: 12912
 	private GuessJokerActionRunner<GuessJokerActionBase> ActionRunner;
 
-	// Token: 0x040031D8 RID: 12760
+	// Token: 0x04003271 RID: 12913
 	private GuessJokerPlotActionRunner PlotActionRunner;
 
-	// Token: 0x040031D9 RID: 12761
+	// Token: 0x04003272 RID: 12914
 	public bool ShowInitialNoPairTip = true;
 
-	// Token: 0x040031DA RID: 12762
+	// Token: 0x04003273 RID: 12915
 	private readonly Dictionary<int, int> LastUsedPlotIdMap = new Dictionary<int, int>();
 
-	// Token: 0x040031DB RID: 12763
+	// Token: 0x04003274 RID: 12916
 	private GuessJokerDialogLogic ActiveDialogLogic;
 
-	// Token: 0x040031DC RID: 12764
+	// Token: 0x04003275 RID: 12917
 	private int? PlayerDrawnCardId;
 
-	// Token: 0x040031DD RID: 12765
+	// Token: 0x04003276 RID: 12918
 	private int? AiDrawnCardId;
 
-	// Token: 0x040031DE RID: 12766
+	// Token: 0x04003277 RID: 12919
 	private readonly Dictionary<EGuessJokerPlayerType, bool> RoundStartTipShownMap = new Dictionary<EGuessJokerPlayerType, bool>();
 
-	// Token: 0x040031DF RID: 12767
+	// Token: 0x04003278 RID: 12920
 	private readonly HashSet<int> HiddenGuessJokerNpcSet = new HashSet<int>();
 
-	// Token: 0x040031E0 RID: 12768
+	// Token: 0x04003279 RID: 12921
 	private readonly HashSet<int> PendingNpcSitSet = new HashSet<int>();
 
-	// Token: 0x040031E1 RID: 12769
+	// Token: 0x0400327A RID: 12922
 	public bool IsShowAiCards;
 
-	// Token: 0x040031E2 RID: 12770
+	// Token: 0x0400327B RID: 12923
 	[Nullable(2)]
 	private static GuessJokerGamePlayModel _Instance;
 }

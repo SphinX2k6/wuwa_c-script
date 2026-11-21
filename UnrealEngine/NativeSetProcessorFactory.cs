@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200006F RID: 111
+	// Token: 0x02000054 RID: 84
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class NativeSetProcessorFactory
 	{
-		// Token: 0x06000DBF RID: 3519 RVA: 0x00013C80 File Offset: 0x00011E80
+		// Token: 0x0600094D RID: 2381 RVA: 0x0000E928 File Offset: 0x0000CB28
 		public static INativeSetProcessor<T> GetProcessor<[Nullable(2)] T>()
 		{
 			switch (Type.GetTypeCode(typeof(T)))
@@ -50,46 +50,46 @@ namespace UnrealEngine
 			throw new ArgumentOutOfRangeException();
 		}
 
-		// Token: 0x04000178 RID: 376
+		// Token: 0x04000131 RID: 305
 		private static readonly UnmanagedSetProcessor<bool> s_BoolProcessor = new UnmanagedSetProcessor<bool>();
 
-		// Token: 0x04000179 RID: 377
+		// Token: 0x04000132 RID: 306
 		private static readonly UnmanagedSetProcessor<char> s_CharProcessor = new UnmanagedSetProcessor<char>();
 
-		// Token: 0x0400017A RID: 378
+		// Token: 0x04000133 RID: 307
 		private static readonly UnmanagedSetProcessor<byte> s_ByteProcessor = new UnmanagedSetProcessor<byte>();
 
-		// Token: 0x0400017B RID: 379
+		// Token: 0x04000134 RID: 308
 		private static readonly UnmanagedSetProcessor<sbyte> s_SByteProcessor = new UnmanagedSetProcessor<sbyte>();
 
-		// Token: 0x0400017C RID: 380
+		// Token: 0x04000135 RID: 309
 		private static readonly UnmanagedSetProcessor<short> s_Int16Processor = new UnmanagedSetProcessor<short>();
 
-		// Token: 0x0400017D RID: 381
+		// Token: 0x04000136 RID: 310
 		private static readonly UnmanagedSetProcessor<ushort> s_UInt16Processor = new UnmanagedSetProcessor<ushort>();
 
-		// Token: 0x0400017E RID: 382
+		// Token: 0x04000137 RID: 311
 		private static readonly UnmanagedSetProcessor<int> s_Int32Processor = new UnmanagedSetProcessor<int>();
 
-		// Token: 0x0400017F RID: 383
+		// Token: 0x04000138 RID: 312
 		private static readonly UnmanagedSetProcessor<uint> s_UInt32Processor = new UnmanagedSetProcessor<uint>();
 
-		// Token: 0x04000180 RID: 384
+		// Token: 0x04000139 RID: 313
 		private static readonly UnmanagedSetProcessor<long> s_Int64Processor = new UnmanagedSetProcessor<long>();
 
-		// Token: 0x04000181 RID: 385
+		// Token: 0x0400013A RID: 314
 		private static readonly UnmanagedSetProcessor<ulong> s_UInt64Processor = new UnmanagedSetProcessor<ulong>();
 
-		// Token: 0x04000182 RID: 386
+		// Token: 0x0400013B RID: 315
 		private static readonly UnmanagedSetProcessor<float> s_FloatProcessor = new UnmanagedSetProcessor<float>();
 
-		// Token: 0x04000183 RID: 387
+		// Token: 0x0400013C RID: 316
 		private static readonly UnmanagedSetProcessor<double> s_DoubleProcessor = new UnmanagedSetProcessor<double>();
 
-		// Token: 0x04000184 RID: 388
+		// Token: 0x0400013D RID: 317
 		private static readonly UnmanagedSetProcessor<decimal> s_DecimalProcessor = new UnmanagedSetProcessor<decimal>();
 
-		// Token: 0x04000185 RID: 389
+		// Token: 0x0400013E RID: 318
 		private static UnrealObjectSetProcessor<UnrealUObject> s_ObjectProcessor = new UnrealObjectSetProcessor<UnrealUObject>();
 	}
 }

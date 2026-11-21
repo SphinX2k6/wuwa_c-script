@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game;
 
-// Token: 0x020017D2 RID: 6098
+// Token: 0x02000C8B RID: 3211
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckBuffNotHaveCondition : BaseCheckCondition
 {
-	// Token: 0x0600B247 RID: 45639 RVA: 0x002848F8 File Offset: 0x00282AF8
+	// Token: 0x06008630 RID: 34352 RVA: 0x0028EF80 File Offset: 0x0028D180
 	public CheckBuffNotHaveCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
@@ -16,55 +15,47 @@ public class CheckBuffNotHaveCondition : BaseCheckCondition
 		this.SuccessType = EComboTeachingSuccessCondition.NotHaveBuff;
 	}
 
-	// Token: 0x17000EFB RID: 3835
-	// (get) Token: 0x0600B248 RID: 45640 RVA: 0x0028492C File Offset: 0x00282B2C
-	// (set) Token: 0x0600B249 RID: 45641 RVA: 0x00284934 File Offset: 0x00282B34
+	// Token: 0x17000F1E RID: 3870
+	// (get) Token: 0x06008631 RID: 34353 RVA: 0x0028EFB4 File Offset: 0x0028D1B4
+	// (set) Token: 0x06008632 RID: 34354 RVA: 0x0028EFBC File Offset: 0x0028D1BC
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000EFC RID: 3836
-	// (get) Token: 0x0600B24A RID: 45642 RVA: 0x0028493D File Offset: 0x00282B3D
-	// (set) Token: 0x0600B24B RID: 45643 RVA: 0x00284945 File Offset: 0x00282B45
+	// Token: 0x17000F1F RID: 3871
+	// (get) Token: 0x06008633 RID: 34355 RVA: 0x0028EFC5 File Offset: 0x0028D1C5
+	// (set) Token: 0x06008634 RID: 34356 RVA: 0x0028EFCD File Offset: 0x0028D1CD
 	protected override EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.NotHaveBuff;
 
-	// Token: 0x17000EFD RID: 3837
-	// (get) Token: 0x0600B24C RID: 45644 RVA: 0x0028494E File Offset: 0x00282B4E
-	// (set) Token: 0x0600B24D RID: 45645 RVA: 0x00284956 File Offset: 0x00282B56
+	// Token: 0x17000F20 RID: 3872
+	// (get) Token: 0x06008635 RID: 34357 RVA: 0x0028EFD6 File Offset: 0x0028D1D6
+	// (set) Token: 0x06008636 RID: 34358 RVA: 0x0028EFDE File Offset: 0x0028D1DE
 	protected override EComboTeachingSuccessCondition SuccessType { get; set; } = EComboTeachingSuccessCondition.NotHaveBuff;
 
-	// Token: 0x0600B24E RID: 45646 RVA: 0x00284960 File Offset: 0x00282B60
+	// Token: 0x06008637 RID: 34359 RVA: 0x0028EFE7 File Offset: 0x0028D1E7
 	protected override bool CheckFail(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		if (this.ParamsArray == null)
 		{
 			return false;
 		}
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		Entity entity = EntitySystem.Instance.Get(entityIdNoBlueprint);
-		CharacterBuffComponent characterBuffComponent = (entity != null) ? entity.GetComponent<CharacterBuffComponent>() : null;
-		return characterBuffComponent == null || characterBuffComponent.GetBuffTotalStackById(long.Parse(this.ParamsArray[0]), false) <= 0;
+		CharacterBuffComponent playerComponent = BaseCheckCondition.GetPlayerComponent<CharacterBuffComponent>();
+		return playerComponent == null || playerComponent.GetBuffTotalStackById(long.Parse(this.ParamsArray[0]), false) <= 0;
 	}
 
-	// Token: 0x0600B24F RID: 45647 RVA: 0x002849C0 File Offset: 0x00282BC0
+	// Token: 0x06008638 RID: 34360 RVA: 0x0028F01C File Offset: 0x0028D21C
 	protected override bool CheckSuccess(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo paramex = null)
 	{
 		if (this.SuccessParamsArray == null)
 		{
 			return false;
 		}
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		Entity entity = EntitySystem.Instance.Get(entityIdNoBlueprint);
-		if (entity == null)
-		{
-			return false;
-		}
-		CharacterBuffComponent characterBuffComponent = (entity != null) ? entity.GetComponent<CharacterBuffComponent>() : null;
-		if (characterBuffComponent == null)
+		CharacterBuffComponent playerComponent = BaseCheckCondition.GetPlayerComponent<CharacterBuffComponent>();
+		if (playerComponent == null)
 		{
 			return false;
 		}
 		foreach (List<string> list in this.SuccessParamsArray)
 		{
-			if (characterBuffComponent != null && characterBuffComponent.GetBuffTotalStackById(long.Parse(list[0]), false) == 0)
+			if (playerComponent.GetBuffTotalStackById(long.Parse(list[0]), false) == 0)
 			{
 				return true;
 			}

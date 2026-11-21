@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE9 RID: 6889
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C96 RID: 7318
 	public class IHandInHandInitiatorType
 	{
-		// Token: 0x0600939C RID: 37788 RVA: 0x001566DC File Offset: 0x001548DC
+		// Token: 0x06009B76 RID: 39798 RVA: 0x001671B0 File Offset: 0x001653B0
 		private IHandInHandInitiatorType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600939D RID: 37789 RVA: 0x00156714 File Offset: 0x00154914
+		// Token: 0x06009B77 RID: 39799 RVA: 0x001671E8 File Offset: 0x001653E8
 		public static IHandInHandInitiatorType Create([Nullable(2)] IHandInHandInitiatorType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600939E RID: 37790 RVA: 0x00156727 File Offset: 0x00154927
+		// Token: 0x06009B78 RID: 39800 RVA: 0x001671FB File Offset: 0x001653FB
 		public static IHandInHandInitiatorType CreateFromSetValue([Nullable(2)] IHandInHandInitiatorType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600939F RID: 37791 RVA: 0x0015673A File Offset: 0x0015493A
+		// Token: 0x06009B79 RID: 39801 RVA: 0x0016720E File Offset: 0x0016540E
 		public IHandInHandInitiatorType_SetValue ToSetValue()
 		{
 			return new IHandInHandInitiatorType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC6 RID: 11974
-		// (get) Token: 0x060093A0 RID: 37792 RVA: 0x0015674D File Offset: 0x0015494D
-		// (set) Token: 0x060093A1 RID: 37793 RVA: 0x00156778 File Offset: 0x00154978
+		// Token: 0x170030E7 RID: 12519
+		// (get) Token: 0x06009B7A RID: 39802 RVA: 0x00167221 File Offset: 0x00165421
+		// (set) Token: 0x06009B7B RID: 39803 RVA: 0x0016724C File Offset: 0x0016544C
 		public virtual EHandInHandInitiatorType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AAD RID: 23213
+		// Token: 0x04005F42 RID: 24386
 		[Nullable(2)]
 		protected IHandInHandInitiatorType FbInstance;
 
-		// Token: 0x04005AAE RID: 23214
+		// Token: 0x04005F43 RID: 24387
 		[Nullable(2)]
 		protected IHandInHandInitiatorType_SetValue PocoInterface;
 	}

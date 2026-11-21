@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Area;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001AB7 RID: 6839
+// Token: 0x02000F76 RID: 3958
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreCountryItem : UiPanelBase
 {
-	// Token: 0x0600CAAD RID: 51885 RVA: 0x002E2A29 File Offset: 0x002E0C29
+	// Token: 0x06009EBE RID: 40638 RVA: 0x002EDB79 File Offset: 0x002EBD79
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateByActorAsync(uiItem.GetOwner(), null, false);
 	}
 
-	// Token: 0x0600CAAE RID: 51886 RVA: 0x002E2A3C File Offset: 0x002E0C3C
+	// Token: 0x06009EBF RID: 40639 RVA: 0x002EDB8C File Offset: 0x002EBD8C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,13 +44,13 @@ public class ExploreCountryItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CAAF RID: 51887 RVA: 0x002E2B45 File Offset: 0x002E0D45
+	// Token: 0x06009EC0 RID: 40640 RVA: 0x002EDC95 File Offset: 0x002EBE95
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(3).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x0600CAB0 RID: 51888 RVA: 0x002E2B64 File Offset: 0x002E0D64
+	// Token: 0x06009EC1 RID: 40641 RVA: 0x002EDCB4 File Offset: 0x002EBEB4
 	protected override void OnBeforeDestroy()
 	{
 		this.OnSelectedCallback = null;
@@ -58,7 +58,7 @@ public class ExploreCountryItem : UiPanelBase
 		base.GetExtendToggle(3).CanExecuteChange.Unbind();
 	}
 
-	// Token: 0x0600CAB1 RID: 51889 RVA: 0x002E2B85 File Offset: 0x002E0D85
+	// Token: 0x06009EC2 RID: 40642 RVA: 0x002EDCD5 File Offset: 0x002EBED5
 	private void OnExtendToggleStateChanged(EToggleState state)
 	{
 		Action<ExploreCountryItem, ExploreAreaViewData, EToggleState> onSelectedCallback = this.OnSelectedCallback;
@@ -69,7 +69,7 @@ public class ExploreCountryItem : UiPanelBase
 		onSelectedCallback(this, this.Data, state);
 	}
 
-	// Token: 0x0600CAB2 RID: 51890 RVA: 0x002E2BA0 File Offset: 0x002E0DA0
+	// Token: 0x06009EC3 RID: 40643 RVA: 0x002EDCF0 File Offset: 0x002EBEF0
 	public void Refresh(ExploreAreaViewData data)
 	{
 		this.Data = data;
@@ -84,7 +84,7 @@ public class ExploreCountryItem : UiPanelBase
 		this.SetSelected(selectedCountryId == data.CountryId);
 	}
 
-	// Token: 0x0600CAB3 RID: 51891 RVA: 0x002E2C3C File Offset: 0x002E0E3C
+	// Token: 0x06009EC4 RID: 40644 RVA: 0x002EDD8C File Offset: 0x002EBF8C
 	public void SetSelected(bool bSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -96,29 +96,29 @@ public class ExploreCountryItem : UiPanelBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600CAB4 RID: 51892 RVA: 0x002E2C6B File Offset: 0x002E0E6B
+	// Token: 0x06009EC5 RID: 40645 RVA: 0x002EDDBB File Offset: 0x002EBFBB
 	private bool OnCanExecuteChange()
 	{
 		Func<bool> onCanExecuteChangeCallback = this.OnCanExecuteChangeCallback;
 		return onCanExecuteChangeCallback == null || onCanExecuteChangeCallback();
 	}
 
-	// Token: 0x0600CAB5 RID: 51893 RVA: 0x002E2C7E File Offset: 0x002E0E7E
+	// Token: 0x06009EC6 RID: 40646 RVA: 0x002EDDCE File Offset: 0x002EBFCE
 	public void BindCanExecuteChange(Func<bool> onCanExecuteChange)
 	{
 		base.GetExtendToggle(3).CanExecuteChange.Bind(onCanExecuteChange);
 	}
 
-	// Token: 0x0600CAB6 RID: 51894 RVA: 0x002E2C92 File Offset: 0x002E0E92
+	// Token: 0x06009EC7 RID: 40647 RVA: 0x002EDDE2 File Offset: 0x002EBFE2
 	public void BindOnSelected(Action<ExploreCountryItem, ExploreAreaViewData, EToggleState> onSelectedCallback)
 	{
 		this.OnSelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x04005D51 RID: 23889
+	// Token: 0x04005E20 RID: 24096
 	private ExploreAreaViewData Data;
 
-	// Token: 0x04005D52 RID: 23890
+	// Token: 0x04005E21 RID: 24097
 	[Nullable(new byte[]
 	{
 		2,
@@ -127,23 +127,23 @@ public class ExploreCountryItem : UiPanelBase
 	})]
 	private Action<ExploreCountryItem, ExploreAreaViewData, EToggleState> OnSelectedCallback;
 
-	// Token: 0x04005D53 RID: 23891
+	// Token: 0x04005E22 RID: 24098
 	[Nullable(2)]
 	private Func<bool> OnCanExecuteChangeCallback;
 
-	// Token: 0x0200800B RID: 32779
+	// Token: 0x0200719A RID: 29082
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029CD1 RID: 171217
+		// Token: 0x0402500B RID: 151563
 		TitleText,
-		// Token: 0x04029CD2 RID: 171218
+		// Token: 0x0402500C RID: 151564
 		LockSprite,
-		// Token: 0x04029CD3 RID: 171219
+		// Token: 0x0402500D RID: 151565
 		RedDotItem,
-		// Token: 0x04029CD4 RID: 171220
+		// Token: 0x0402500E RID: 151566
 		ExtendToggle,
-		// Token: 0x04029CD5 RID: 171221
+		// Token: 0x0402500F RID: 151567
 		LocationSprite
 	}
 }

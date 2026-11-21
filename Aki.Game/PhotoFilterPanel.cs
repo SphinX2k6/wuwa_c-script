@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002567 RID: 9575
+// Token: 0x02001A52 RID: 6738
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoFilterPanel : PhotoDetailPanelBase
 {
-	// Token: 0x06013524 RID: 79140 RVA: 0x004CE9F0 File Offset: 0x004CCBF0
+	// Token: 0x06010A06 RID: 68102 RVA: 0x004DD628 File Offset: 0x004DB828
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,8 +46,8 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x170018F6 RID: 6390
-	// (get) Token: 0x06013525 RID: 79141 RVA: 0x004CEC1E File Offset: 0x004CCE1E
+	// Token: 0x17001930 RID: 6448
+	// (get) Token: 0x06010A07 RID: 68103 RVA: 0x004DD856 File Offset: 0x004DBA56
 	protected override int TabLockPanelIndex
 	{
 		get
@@ -56,8 +56,8 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x170018F7 RID: 6391
-	// (get) Token: 0x06013526 RID: 79142 RVA: 0x004CEC22 File Offset: 0x004CCE22
+	// Token: 0x17001931 RID: 6449
+	// (get) Token: 0x06010A08 RID: 68104 RVA: 0x004DD85A File Offset: 0x004DBA5A
 	protected override int SubTabLockPanelIndex
 	{
 		get
@@ -66,8 +66,8 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x170018F8 RID: 6392
-	// (get) Token: 0x06013527 RID: 79143 RVA: 0x004CEC26 File Offset: 0x004CCE26
+	// Token: 0x17001932 RID: 6450
+	// (get) Token: 0x06010A09 RID: 68105 RVA: 0x004DD85E File Offset: 0x004DBA5E
 	protected override string SubTabSwitchSequenceName
 	{
 		get
@@ -76,7 +76,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x06013528 RID: 79144 RVA: 0x004CEC30 File Offset: 0x004CCE30
+	// Token: 0x06010A0A RID: 68106 RVA: 0x004DD868 File Offset: 0x004DBA68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoFilterPanel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013529 RID: 79145 RVA: 0x004CEC73 File Offset: 0x004CCE73
+	// Token: 0x06010A0B RID: 68107 RVA: 0x004DD8AB File Offset: 0x004DBAAB
 	public override void OnTick(float delta)
 	{
 		PhotoFilterPointItem pointItem = this.PointItem;
@@ -98,13 +98,13 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		pointItem.OnPointTick(delta);
 	}
 
-	// Token: 0x0601352A RID: 79146 RVA: 0x004CEC86 File Offset: 0x004CCE86
+	// Token: 0x06010A0C RID: 68108 RVA: 0x004DD8BE File Offset: 0x004DBABE
 	public override void RefreshDetail()
 	{
 		this.RefreshPanel();
 	}
 
-	// Token: 0x0601352B RID: 79147 RVA: 0x004CEC8E File Offset: 0x004CCE8E
+	// Token: 0x06010A0D RID: 68109 RVA: 0x004DD8C6 File Offset: 0x004DBAC6
 	private void RefreshPanel()
 	{
 		UUIItem item = base.GetItem(0);
@@ -120,7 +120,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		item2.SetUIActive(!this.IsFilterListPanel);
 	}
 
-	// Token: 0x0601352C RID: 79148 RVA: 0x004CECC2 File Offset: 0x004CCEC2
+	// Token: 0x06010A0E RID: 68110 RVA: 0x004DD8FA File Offset: 0x004DBAFA
 	private void SetFilterListMode(bool isListMode)
 	{
 		this.IsFilterListPanel = isListMode;
@@ -133,7 +133,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		onFilterDetailModeChanged(!isListMode);
 	}
 
-	// Token: 0x0601352D RID: 79149 RVA: 0x004CECEC File Offset: 0x004CCEEC
+	// Token: 0x06010A0F RID: 68111 RVA: 0x004DD924 File Offset: 0x004DBB24
 	private UniTask RefreshFilterList()
 	{
 		PhotoFilterPanel.<RefreshFilterList>d__20 <RefreshFilterList>d__;
@@ -144,7 +144,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		return <RefreshFilterList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601352E RID: 79150 RVA: 0x004CED30 File Offset: 0x004CCF30
+	// Token: 0x06010A10 RID: 68112 RVA: 0x004DD968 File Offset: 0x004DBB68
 	private UniTask RefreshSubTabList()
 	{
 		PhotoFilterPanel.<RefreshSubTabList>d__21 <RefreshSubTabList>d__;
@@ -155,7 +155,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		return <RefreshSubTabList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601352F RID: 79151 RVA: 0x004CED74 File Offset: 0x004CCF74
+	// Token: 0x06010A11 RID: 68113 RVA: 0x004DD9AC File Offset: 0x004DBBAC
 	private void ShowSubTabContent(EPhotoFilterSubTabType subTabType)
 	{
 		bool flag = subTabType == EPhotoFilterSubTabType.Point;
@@ -193,7 +193,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		pointItem3.RefreshResetBtn();
 	}
 
-	// Token: 0x06013530 RID: 79152 RVA: 0x004CEE10 File Offset: 0x004CD010
+	// Token: 0x06010A12 RID: 68114 RVA: 0x004DDA48 File Offset: 0x004DBC48
 	private UniTask RefreshSeniorParamList()
 	{
 		PhotoFilterPanel.<RefreshSeniorParamList>d__23 <RefreshSeniorParamList>d__;
@@ -204,14 +204,14 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		return <RefreshSeniorParamList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013531 RID: 79153 RVA: 0x004CEE53 File Offset: 0x004CD053
+	// Token: 0x06010A13 RID: 68115 RVA: 0x004DDA8B File Offset: 0x004DBC8B
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
 		this.FilterViewModel.OnViewDestroy();
 	}
 
-	// Token: 0x06013532 RID: 79154 RVA: 0x004CEE6C File Offset: 0x004CD06C
+	// Token: 0x06010A14 RID: 68116 RVA: 0x004DDAA4 File Offset: 0x004DBCA4
 	private void OnResetAllSenoirParamClick()
 	{
 		FilterSettingViewModel filterViewModel = this.FilterViewModel;
@@ -227,7 +227,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		this.RefreshResetAllSeniorParamBtn();
 	}
 
-	// Token: 0x06013533 RID: 79155 RVA: 0x004CEEBD File Offset: 0x004CD0BD
+	// Token: 0x06010A15 RID: 68117 RVA: 0x004DDAF5 File Offset: 0x004DBCF5
 	public override void HideDetail()
 	{
 		if (!this.IsFilterListPanel)
@@ -237,13 +237,13 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		base.HideDetail();
 	}
 
-	// Token: 0x06013534 RID: 79156 RVA: 0x004CEED3 File Offset: 0x004CD0D3
+	// Token: 0x06010A16 RID: 68118 RVA: 0x004DDB0B File Offset: 0x004DBD0B
 	private void OnBackClick()
 	{
 		this.BackToFilterListPanel();
 	}
 
-	// Token: 0x06013535 RID: 79157 RVA: 0x004CEEDB File Offset: 0x004CD0DB
+	// Token: 0x06010A17 RID: 68119 RVA: 0x004DDB13 File Offset: 0x004DBD13
 	private void BackToFilterListPanel()
 	{
 		this.SetFilterListMode(true);
@@ -255,7 +255,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		filterScroll.RefreshAllGridProxies();
 	}
 
-	// Token: 0x06013536 RID: 79158 RVA: 0x004CEEF4 File Offset: 0x004CD0F4
+	// Token: 0x06010A18 RID: 68120 RVA: 0x004DDB2C File Offset: 0x004DBD2C
 	private void OnFilterClick(FilterSetting data)
 	{
 		int gridIndex = Array.FindIndex<FilterSetting>(this.FilterViewModel.FilterList, (FilterSetting setting) => setting.Id == data.Id);
@@ -302,7 +302,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		this.RefreshResetAllSeniorParamBtn();
 	}
 
-	// Token: 0x06013537 RID: 79159 RVA: 0x004CEFDB File Offset: 0x004CD1DB
+	// Token: 0x06010A19 RID: 68121 RVA: 0x004DDC13 File Offset: 0x004DBE13
 	private void RefreshFilterName()
 	{
 		FilterSettingViewModel filterViewModel = this.FilterViewModel;
@@ -313,7 +313,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(20), this.FilterViewModel.FilterNameTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x06013538 RID: 79160 RVA: 0x004CF014 File Offset: 0x004CD214
+	// Token: 0x06010A1A RID: 68122 RVA: 0x004DDC4C File Offset: 0x004DBE4C
 	private PhotoFilterSetItem CreateFilterItem()
 	{
 		return new PhotoFilterSetItem
@@ -323,14 +323,14 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x06013539 RID: 79161 RVA: 0x004CF03F File Offset: 0x004CD23F
+	// Token: 0x06010A1B RID: 68123 RVA: 0x004DDC77 File Offset: 0x004DBE77
 	private void OnFilterEditClick(FilterSetting data)
 	{
 		base.PlaySequence("Switch2");
 		this.SetFilterListMode(false);
 	}
 
-	// Token: 0x0601353A RID: 79162 RVA: 0x004CF054 File Offset: 0x004CD254
+	// Token: 0x06010A1C RID: 68124 RVA: 0x004DDC8C File Offset: 0x004DBE8C
 	private void OnSubTabClick(PhotoSubTab data, bool playSwitchAnim = true)
 	{
 		GenericScrollViewNew<PhotoFilterSubTabItem, PhotoSubTab> subTabScroll = this.SubTabScroll;
@@ -346,7 +346,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		this.ShowSubTabContent((EPhotoFilterSubTabType)data.Type);
 	}
 
-	// Token: 0x0601353B RID: 79163 RVA: 0x004CF0A5 File Offset: 0x004CD2A5
+	// Token: 0x06010A1D RID: 68125 RVA: 0x004DDCDD File Offset: 0x004DBEDD
 	private PhotoFilterSubTabItem CreateSubTabItem()
 	{
 		return new PhotoFilterSubTabItem
@@ -358,7 +358,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x0601353C RID: 79164 RVA: 0x004CF0BE File Offset: 0x004CD2BE
+	// Token: 0x06010A1E RID: 68126 RVA: 0x004DDCF6 File Offset: 0x004DBEF6
 	private PhotoFilterSeniorSliderItem CreateSeniorParamItem()
 	{
 		return new PhotoFilterSeniorSliderItem
@@ -368,7 +368,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x0601353D RID: 79165 RVA: 0x004CF0E3 File Offset: 0x004CD2E3
+	// Token: 0x06010A1F RID: 68127 RVA: 0x004DDD1B File Offset: 0x004DBF1B
 	private void RefreshResetAllSeniorParamBtn()
 	{
 		UUIButtonComponent button = base.GetButton(10);
@@ -379,7 +379,7 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 		button.SetSelfInteractive(FilterSettingController.Instance.IsAnySeniorParamChanged());
 	}
 
-	// Token: 0x040091B7 RID: 37303
+	// Token: 0x04009310 RID: 37648
 	[Nullable(new byte[]
 	{
 		2,
@@ -387,15 +387,15 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 	})]
 	private LoopScrollView<PhotoFilterSetItem, FilterSetting> FilterScroll;
 
-	// Token: 0x040091B8 RID: 37304
+	// Token: 0x04009311 RID: 37649
 	[Nullable(2)]
 	private FilterSettingViewModel FilterViewModel;
 
-	// Token: 0x040091B9 RID: 37305
+	// Token: 0x04009312 RID: 37650
 	[Nullable(2)]
 	private PhotoFilterPointItem PointItem;
 
-	// Token: 0x040091BA RID: 37306
+	// Token: 0x04009313 RID: 37651
 	[Nullable(new byte[]
 	{
 		2,
@@ -403,11 +403,11 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 	})]
 	private GenericScrollViewNew<PhotoFilterSeniorSliderItem, FilterSeniorSetting> SeniorParamScroll;
 
-	// Token: 0x040091BB RID: 37307
+	// Token: 0x04009314 RID: 37652
 	[Nullable(2)]
 	private PhotoFilterStrengthSliderItem StrengthSlider;
 
-	// Token: 0x040091BC RID: 37308
+	// Token: 0x04009315 RID: 37653
 	[Nullable(new byte[]
 	{
 		2,
@@ -415,54 +415,54 @@ public class PhotoFilterPanel : PhotoDetailPanelBase
 	})]
 	private GenericScrollViewNew<PhotoFilterSubTabItem, PhotoSubTab> SubTabScroll;
 
-	// Token: 0x040091BD RID: 37309
+	// Token: 0x04009316 RID: 37654
 	private bool IsFilterListPanel = true;
 
-	// Token: 0x02008B44 RID: 35652
+	// Token: 0x02007CCA RID: 31946
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D370 RID: 185200
+		// Token: 0x0402867D RID: 165501
 		ItemFilterListPanel,
-		// Token: 0x0402D371 RID: 185201
+		// Token: 0x0402867E RID: 165502
 		LoopScrollFilters,
-		// Token: 0x0402D372 RID: 185202
+		// Token: 0x0402867F RID: 165503
 		ItemFilterTemplate,
-		// Token: 0x0402D373 RID: 185203
+		// Token: 0x04028680 RID: 165504
 		ItemDetailAdjustPanel,
-		// Token: 0x0402D374 RID: 185204
+		// Token: 0x04028681 RID: 165505
 		ItemSubTabMenu,
-		// Token: 0x0402D375 RID: 185205
+		// Token: 0x04028682 RID: 165506
 		BtnBack,
-		// Token: 0x0402D376 RID: 185206
+		// Token: 0x04028683 RID: 165507
 		ScrollSubTab,
-		// Token: 0x0402D377 RID: 185207
+		// Token: 0x04028684 RID: 165508
 		ItemSubTabTemplate,
-		// Token: 0x0402D378 RID: 185208
+		// Token: 0x04028685 RID: 165509
 		ItemPointArea,
-		// Token: 0x0402D379 RID: 185209
+		// Token: 0x04028686 RID: 165510
 		ItemSeniorParamPanel,
-		// Token: 0x0402D37A RID: 185210
+		// Token: 0x04028687 RID: 165511
 		BtnResetAllSeniorParam,
-		// Token: 0x0402D37B RID: 185211
+		// Token: 0x04028688 RID: 165512
 		ScrollSeniorParam,
-		// Token: 0x0402D37C RID: 185212
+		// Token: 0x04028689 RID: 165513
 		ItemSeniorParamTemplate,
-		// Token: 0x0402D37D RID: 185213
+		// Token: 0x0402868A RID: 165514
 		ItemStrengthPanel,
-		// Token: 0x0402D37E RID: 185214
+		// Token: 0x0402868B RID: 165515
 		ItemStrengthSlider,
-		// Token: 0x0402D37F RID: 185215
+		// Token: 0x0402868C RID: 165516
 		ItemEmpty,
-		// Token: 0x0402D380 RID: 185216
+		// Token: 0x0402868D RID: 165517
 		ItemTabLockPanel,
-		// Token: 0x0402D381 RID: 185217
+		// Token: 0x0402868E RID: 165518
 		TextTabLockTips,
-		// Token: 0x0402D382 RID: 185218
+		// Token: 0x0402868F RID: 165519
 		ItemSubTabLockPanel,
-		// Token: 0x0402D383 RID: 185219
+		// Token: 0x04028690 RID: 165520
 		TextSubTabLockTips,
-		// Token: 0x0402D384 RID: 185220
+		// Token: 0x04028691 RID: 165521
 		TextFilterName
 	}
 }

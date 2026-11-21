@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.QuickHack;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B5C RID: 27484
+	// Token: 0x02005CD4 RID: 23764
 	public class LevelEventQuickHackCameraControl : LevelEventBase
 	{
-		// Token: 0x060441E2 RID: 279010 RVA: 0x010C47D3 File Offset: 0x010C29D3
+		// Token: 0x0603A334 RID: 238388 RVA: 0x0106E3A0 File Offset: 0x0106C5A0
 		public LevelEventQuickHackCameraControl(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441E3 RID: 279011 RVA: 0x010C47DC File Offset: 0x010C29DC
+		// Token: 0x0603A335 RID: 238389 RVA: 0x0106E3AC File Offset: 0x0106C5AC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

@@ -4,13 +4,13 @@ using CSharpScript.Game.Module.BattleUi;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001D18 RID: 7448
+// Token: 0x020011DA RID: 4570
 [NullableContext(2)]
 [Nullable(0)]
 public class SpringManorMainViewProxy : GameMainViewProxy
 {
-	// Token: 0x17001217 RID: 4631
-	// (get) Token: 0x0600E140 RID: 57664 RVA: 0x0034DA44 File Offset: 0x0034BC44
+	// Token: 0x17001241 RID: 4673
+	// (get) Token: 0x0600B55D RID: 46429 RVA: 0x00359474 File Offset: 0x00357674
 	protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 	{
 		get
@@ -19,7 +19,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600E141 RID: 57665 RVA: 0x0034DA5C File Offset: 0x0034BC5C
+	// Token: 0x0600B55E RID: 46430 RVA: 0x0035948C File Offset: 0x0035768C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpringManorMainViewProxy.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -30,7 +30,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E142 RID: 57666 RVA: 0x0034DAA0 File Offset: 0x0034BCA0
+	// Token: 0x0600B55F RID: 46431 RVA: 0x003594D0 File Offset: 0x003576D0
 	private UniTask CreateMainHudPanel()
 	{
 		SpringManorMainViewProxy.<CreateMainHudPanel>d__6 <CreateMainHudPanel>d__;
@@ -41,7 +41,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <CreateMainHudPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E143 RID: 57667 RVA: 0x0034DAE4 File Offset: 0x0034BCE4
+	// Token: 0x0600B560 RID: 46432 RVA: 0x00359514 File Offset: 0x00357714
 	private UniTask CreateMobileBtnPanel()
 	{
 		SpringManorMainViewProxy.<CreateMobileBtnPanel>d__7 <CreateMobileBtnPanel>d__;
@@ -52,7 +52,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <CreateMobileBtnPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E144 RID: 57668 RVA: 0x0034DB28 File Offset: 0x0034BD28
+	// Token: 0x0600B561 RID: 46433 RVA: 0x00359558 File Offset: 0x00357758
 	private UniTask CreateDesktopBtnPanel()
 	{
 		SpringManorMainViewProxy.<CreateDesktopBtnPanel>d__8 <CreateDesktopBtnPanel>d__;
@@ -63,7 +63,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <CreateDesktopBtnPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E145 RID: 57669 RVA: 0x0034DB6C File Offset: 0x0034BD6C
+	// Token: 0x0600B562 RID: 46434 RVA: 0x0035959C File Offset: 0x0035779C
 	private UniTask CreateMobileSkillPanelInner()
 	{
 		SpringManorMainViewProxy.<CreateMobileSkillPanelInner>d__9 <CreateMobileSkillPanelInner>d__;
@@ -74,7 +74,7 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E146 RID: 57670 RVA: 0x0034DBB0 File Offset: 0x0034BDB0
+	// Token: 0x0600B563 RID: 46435 RVA: 0x003595E0 File Offset: 0x003577E0
 	private UniTask CreateDesktopSkillPanelInner()
 	{
 		SpringManorMainViewProxy.<CreateDesktopSkillPanelInner>d__10 <CreateDesktopSkillPanelInner>d__;
@@ -85,13 +85,13 @@ public class SpringManorMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04006801 RID: 26625
+	// Token: 0x040068E0 RID: 26848
 	[Nullable(1)]
 	public SpringManorMainHudPanel MainHudPanel;
 
-	// Token: 0x04006802 RID: 26626
+	// Token: 0x040068E1 RID: 26849
 	public SpringManorSkillPanel MobileSkillPanel;
 
-	// Token: 0x04006803 RID: 26627
+	// Token: 0x040068E2 RID: 26850
 	public SpringManorSkillPanel DesktopSkillPanel;
 }

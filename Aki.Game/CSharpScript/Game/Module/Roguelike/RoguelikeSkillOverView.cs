@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2F RID: 20015
+	// Token: 0x02003DF8 RID: 15864
 	public class RoguelikeSkillOverView : UiViewBase
 	{
-		// Token: 0x060339BC RID: 211388 RVA: 0x00C13AA5 File Offset: 0x00C11CA5
+		// Token: 0x06028827 RID: 165927 RVA: 0x00B5CFD4 File Offset: 0x00B5B1D4
 		[NullableContext(1)]
 		public RoguelikeSkillOverView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060339BD RID: 211389 RVA: 0x00C13ABC File Offset: 0x00C11CBC
+		// Token: 0x06028828 RID: 165928 RVA: 0x00B5CFE8 File Offset: 0x00B5B1E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060339BE RID: 211390 RVA: 0x00C13B88 File Offset: 0x00C11D88
+		// Token: 0x06028829 RID: 165929 RVA: 0x00B5D0B4 File Offset: 0x00B5B2B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeSkillOverView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060339BF RID: 211391 RVA: 0x00C13BCB File Offset: 0x00C11DCB
+		// Token: 0x0602882A RID: 165930 RVA: 0x00B5D0F7 File Offset: 0x00B5B2F7
 		protected override void OnBeforeDestroy()
 		{
 			this.SkillDescItemList = new List<RoguelikeSkillDesc>();
 		}
 
-		// Token: 0x060339C0 RID: 211392 RVA: 0x00C13BD8 File Offset: 0x00C11DD8
+		// Token: 0x0602882B RID: 165931 RVA: 0x00B5D104 File Offset: 0x00B5B304
 		protected UniTask InitDescItem()
 		{
 			RoguelikeSkillOverView.<InitDescItem>d__7 <InitDescItem>d__;
@@ -66,30 +66,30 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitDescItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B5F8 RID: 112120
+		// Token: 0x04015FCB RID: 90059
 		[Nullable(2)]
 		public PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B5F9 RID: 112121
+		// Token: 0x04015FCC RID: 90060
 		[Nullable(1)]
 		public List<RoguelikeSkillDesc> SkillDescItemList = new List<RoguelikeSkillDesc>();
 
-		// Token: 0x0200AFE1 RID: 45025
+		// Token: 0x02009A13 RID: 39443
 		private class ERoguelikeSkillOverViewDefine
 		{
-			// Token: 0x04035658 RID: 218712
+			// Token: 0x04030088 RID: 196744
 			public const int TxtSkillNum = 0;
 
-			// Token: 0x04035659 RID: 218713
+			// Token: 0x04030089 RID: 196745
 			public const int CaptionItem = 1;
 
-			// Token: 0x0403565A RID: 218714
+			// Token: 0x0403008A RID: 196746
 			public const int SkillDescItem = 2;
 
-			// Token: 0x0403565B RID: 218715
+			// Token: 0x0403008B RID: 196747
 			public const int SkillDescContent = 3;
 
-			// Token: 0x0403565C RID: 218716
+			// Token: 0x0403008C RID: 196748
 			public const int EmptyItem = 4;
 		}
 	}

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CCA RID: 27850
+	// Token: 0x02007440 RID: 29760
 	public class IPictureCaptionConfigT
 	{
-		// Token: 0x1700CF59 RID: 53081
-		// (get) Token: 0x06031161 RID: 201057 RVA: 0x006A9478 File Offset: 0x006A7678
-		// (set) Token: 0x06031162 RID: 201058 RVA: 0x006A9480 File Offset: 0x006A7680
+		// Token: 0x1700DA96 RID: 55958
+		// (get) Token: 0x06034138 RID: 213304 RVA: 0x007046AC File Offset: 0x007028AC
+		// (set) Token: 0x06034139 RID: 213305 RVA: 0x007046B4 File Offset: 0x007028B4
 		public string PictureCaption { get; set; }
 
-		// Token: 0x1700CF5A RID: 53082
-		// (get) Token: 0x06031163 RID: 201059 RVA: 0x006A9489 File Offset: 0x006A7689
-		// (set) Token: 0x06031164 RID: 201060 RVA: 0x006A9491 File Offset: 0x006A7691
+		// Token: 0x1700DA97 RID: 55959
+		// (get) Token: 0x0603413A RID: 213306 RVA: 0x007046BD File Offset: 0x007028BD
+		// (set) Token: 0x0603413B RID: 213307 RVA: 0x007046C5 File Offset: 0x007028C5
 		public string UiPrefabId { get; set; }
 
-		// Token: 0x1700CF5B RID: 53083
-		// (get) Token: 0x06031165 RID: 201061 RVA: 0x006A949A File Offset: 0x006A769A
-		// (set) Token: 0x06031166 RID: 201062 RVA: 0x006A94A2 File Offset: 0x006A76A2
+		// Token: 0x1700DA98 RID: 55960
+		// (get) Token: 0x0603413C RID: 213308 RVA: 0x007046CE File Offset: 0x007028CE
+		// (set) Token: 0x0603413D RID: 213309 RVA: 0x007046D6 File Offset: 0x007028D6
 		public float Duration { get; set; }
 
-		// Token: 0x1700CF5C RID: 53084
-		// (get) Token: 0x06031167 RID: 201063 RVA: 0x006A94AB File Offset: 0x006A76AB
-		// (set) Token: 0x06031168 RID: 201064 RVA: 0x006A94B3 File Offset: 0x006A76B3
+		// Token: 0x1700DA99 RID: 55961
+		// (get) Token: 0x0603413E RID: 213310 RVA: 0x007046DF File Offset: 0x007028DF
+		// (set) Token: 0x0603413F RID: 213311 RVA: 0x007046E7 File Offset: 0x007028E7
 		public IUiAnimConfigT UiAnimConfig { get; set; }
 
-		// Token: 0x06031169 RID: 201065 RVA: 0x006A94BC File Offset: 0x006A76BC
+		// Token: 0x06034140 RID: 213312 RVA: 0x007046F0 File Offset: 0x007028F0
 		public IPictureCaptionConfigT()
 		{
 			this.PictureCaption = null;

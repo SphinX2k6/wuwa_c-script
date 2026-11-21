@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02002DB6 RID: 11702
+// Token: 0x02002310 RID: 8976
 public enum EBulletShape
 {
-	// Token: 0x0400B6DF RID: 46815
+	// Token: 0x0400BA59 RID: 47705
 	Cube,
-	// Token: 0x0400B6E0 RID: 46816
+	// Token: 0x0400BA5A RID: 47706
 	Sphere,
-	// Token: 0x0400B6E1 RID: 46817
+	// Token: 0x0400BA5B RID: 47707
 	Sector,
-	// Token: 0x0400B6E2 RID: 46818
+	// Token: 0x0400BA5C RID: 47708
 	Cylinder,
-	// Token: 0x0400B6E3 RID: 46819
+	// Token: 0x0400BA5D RID: 47709
 	Ray,
-	// Token: 0x0400B6E4 RID: 46820
+	// Token: 0x0400BA5E RID: 47710
 	Other,
-	// Token: 0x0400B6E5 RID: 46821
+	// Token: 0x0400BA5F RID: 47711
 	BigCube,
-	// Token: 0x0400B6E6 RID: 46822
+	// Token: 0x0400BA60 RID: 47712
 	BigSphere,
-	// Token: 0x0400B6E7 RID: 46823
+	// Token: 0x0400BA61 RID: 47713
 	BigSector,
-	// Token: 0x0400B6E8 RID: 46824
+	// Token: 0x0400BA62 RID: 47714
 	BigCylinder
 }

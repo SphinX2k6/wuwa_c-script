@@ -7,13 +7,13 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000193 RID: 403
+// Token: 0x02000197 RID: 407
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBase.TsAnimNotifyBase_C")]
 public class TsAnimNotifyBase : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700042E RID: 1070
-	// (get) Token: 0x060019B7 RID: 6583 RVA: 0x00087B8C File Offset: 0x00085D8C
+	// Token: 0x17000450 RID: 1104
+	// (get) Token: 0x06001A54 RID: 6740 RVA: 0x0008DFAC File Offset: 0x0008C1AC
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SSkillBehaviorCondition> AN执行的前提条件
@@ -31,32 +31,28 @@ public class TsAnimNotifyBase : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060019B8 RID: 6584 RVA: 0x00087BC8 File Offset: 0x00085DC8
+	// Token: 0x06001A55 RID: 6741 RVA: 0x0008DFE8 File Offset: 0x0008C1E8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyConditionCheck(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyConditionCheck"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyBase) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyConditionCheck"), TsAnimNotifyBase.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyConditionCheck_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060019B9 RID: 6585 RVA: 0x00087C68 File Offset: 0x00085E68
+	// Token: 0x06001A56 RID: 6742 RVA: 0x0008E0A0 File Offset: 0x0008C2A0
 	[NullableContext(2)]
 	protected override bool K2_NotifyConditionCheck_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -86,7 +82,7 @@ public class TsAnimNotifyBase : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 		return SkillBehaviorCondition.SatisfyGroup(this.AN执行的前提条件, string.Empty, param);
 	}
 
-	// Token: 0x060019BA RID: 6586 RVA: 0x00087CFD File Offset: 0x00085EFD
+	// Token: 0x06001A57 RID: 6743 RVA: 0x0008E135 File Offset: 0x0008C335
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyBase._ClassPtr == IntPtr.Zero)
@@ -96,23 +92,23 @@ public class TsAnimNotifyBase : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 		return TsAnimNotifyBase._ClassPtr;
 	}
 
-	// Token: 0x060019BB RID: 6587 RVA: 0x00087D24 File Offset: 0x00085F24
+	// Token: 0x06001A58 RID: 6744 RVA: 0x0008E15C File Offset: 0x0008C35C
 	public TsAnimNotifyBase() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060019BC RID: 6588 RVA: 0x00087D4C File Offset: 0x00085F4C
+	// Token: 0x06001A59 RID: 6745 RVA: 0x0008E184 File Offset: 0x0008C384
 	[NullableContext(1)]
 	public TsAnimNotifyBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060019BD RID: 6589 RVA: 0x00087D7F File Offset: 0x00085F7F
+	// Token: 0x06001A5A RID: 6746 RVA: 0x0008E1B7 File Offset: 0x0008C3B7
 	protected TsAnimNotifyBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060019BE RID: 6590 RVA: 0x00087D88 File Offset: 0x00085F88
+	// Token: 0x06001A5B RID: 6747 RVA: 0x0008E1C0 File Offset: 0x0008C3C0
 	protected unsafe virtual void __CPPCALL_K2_NotifyConditionCheck_Implementation(UKuroAnimNotify.__K2_NotifyConditionCheck_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -120,20 +116,20 @@ public class TsAnimNotifyBase : UKuroAnimNotify, IUnrealUObject, IUnrealObject
 		__Params->__Result = this.K2_NotifyConditionCheck_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040010DD RID: 4317
+	// Token: 0x04001120 RID: 4384
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBase.TsAnimNotifyBase_C";
 
-	// Token: 0x040010DE RID: 4318
+	// Token: 0x04001121 RID: 4385
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040010DF RID: 4319
+	// Token: 0x04001122 RID: 4386
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040010E0 RID: 4320
+	// Token: 0x04001123 RID: 4387
 	private static int __PropertyOffset_AN执行的前提条件;
 
-	// Token: 0x040010E1 RID: 4321
+	// Token: 0x04001124 RID: 4388
 	[Nullable(new byte[]
 	{
 		2,

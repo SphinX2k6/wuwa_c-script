@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CAE RID: 27822
+	// Token: 0x02007424 RID: 29732
 	public struct IPhoneSystemInteractBase : IFlatbufferObject
 	{
-		// Token: 0x1700CF27 RID: 53031
-		// (get) Token: 0x0603107B RID: 200827 RVA: 0x006A7AB5 File Offset: 0x006A5CB5
+		// Token: 0x1700DA64 RID: 55908
+		// (get) Token: 0x06034052 RID: 213074 RVA: 0x00702CE9 File Offset: 0x00700EE9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603107C RID: 200828 RVA: 0x006A7AC2 File Offset: 0x006A5CC2
+		// Token: 0x06034053 RID: 213075 RVA: 0x00702CF6 File Offset: 0x00700EF6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603107D RID: 200829 RVA: 0x006A7ACC File Offset: 0x006A5CCC
+		// Token: 0x06034054 RID: 213076 RVA: 0x00702D00 File Offset: 0x00700F00
 		public static IPhoneSystemInteractBase GetRootAsIPhoneSystemInteractBase(ByteBuffer _bb)
 		{
 			return IPhoneSystemInteractBase.GetRootAsIPhoneSystemInteractBase(_bb, default(IPhoneSystemInteractBase));
 		}
 
-		// Token: 0x0603107E RID: 200830 RVA: 0x006A7AE8 File Offset: 0x006A5CE8
+		// Token: 0x06034055 RID: 213077 RVA: 0x00702D1C File Offset: 0x00700F1C
 		public static IPhoneSystemInteractBase GetRootAsIPhoneSystemInteractBase(ByteBuffer _bb, IPhoneSystemInteractBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603107F RID: 200831 RVA: 0x006A7B05 File Offset: 0x006A5D05
+		// Token: 0x06034056 RID: 213078 RVA: 0x00702D39 File Offset: 0x00700F39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031080 RID: 200832 RVA: 0x006A7B14 File Offset: 0x006A5D14
+		// Token: 0x06034057 RID: 213079 RVA: 0x00702D48 File Offset: 0x00700F48
 		public IPhoneSystemInteractBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF28 RID: 53032
-		// (get) Token: 0x06031081 RID: 200833 RVA: 0x006A7B24 File Offset: 0x006A5D24
+		// Token: 0x1700DA65 RID: 55909
+		// (get) Token: 0x06034058 RID: 213080 RVA: 0x00702D58 File Offset: 0x00700F58
 		public EPhoneSystemInteractType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031082 RID: 200834 RVA: 0x006A7B60 File Offset: 0x006A5D60
+		// Token: 0x06034059 RID: 213081 RVA: 0x00702D94 File Offset: 0x00700F94
 		public static Offset<IPhoneSystemInteractBase> CreateIPhoneSystemInteractBase(FlatBufferBuilder builder, EPhoneSystemInteractType Type = EPhoneSystemInteractType.SendPhoneMessage)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhoneSystemInteractBase.EndIPhoneSystemInteractBase(builder);
 		}
 
-		// Token: 0x06031083 RID: 200835 RVA: 0x006A7B76 File Offset: 0x006A5D76
+		// Token: 0x0603405A RID: 213082 RVA: 0x00702DAA File Offset: 0x00700FAA
 		public static void StartIPhoneSystemInteractBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031084 RID: 200836 RVA: 0x006A7B7F File Offset: 0x006A5D7F
+		// Token: 0x0603405B RID: 213083 RVA: 0x00702DB3 File Offset: 0x00700FB3
 		public static void AddType(FlatBufferBuilder builder, EPhoneSystemInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031085 RID: 200837 RVA: 0x006A7B8A File Offset: 0x006A5D8A
+		// Token: 0x0603405C RID: 213084 RVA: 0x00702DBE File Offset: 0x00700FBE
 		public static Offset<IPhoneSystemInteractBase> EndIPhoneSystemInteractBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhoneSystemInteractBase>(builder.EndTable());
 		}
 
-		// Token: 0x06031086 RID: 200838 RVA: 0x006A7B98 File Offset: 0x006A5D98
+		// Token: 0x0603405D RID: 213085 RVA: 0x00702DCC File Offset: 0x00700FCC
 		public IPhoneSystemInteractBaseT UnPack()
 		{
 			IPhoneSystemInteractBaseT phoneSystemInteractBaseT = new IPhoneSystemInteractBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return phoneSystemInteractBaseT;
 		}
 
-		// Token: 0x06031087 RID: 200839 RVA: 0x006A7BB3 File Offset: 0x006A5DB3
+		// Token: 0x0603405E RID: 213086 RVA: 0x00702DE7 File Offset: 0x00700FE7
 		public void UnPackTo(IPhoneSystemInteractBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06031088 RID: 200840 RVA: 0x006A7BC4 File Offset: 0x006A5DC4
+		// Token: 0x0603405F RID: 213087 RVA: 0x00702DF8 File Offset: 0x00700FF8
 		public static Offset<IPhoneSystemInteractBase> Pack(FlatBufferBuilder builder, IPhoneSystemInteractBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhoneSystemInteractBase.CreateIPhoneSystemInteractBase(builder, _o.Type);
 		}
 
-		// Token: 0x04011607 RID: 71175
+		// Token: 0x04012577 RID: 75127
 		private Table __p;
 	}
 }

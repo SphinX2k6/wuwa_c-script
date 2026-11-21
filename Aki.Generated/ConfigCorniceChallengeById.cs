@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001A9 RID: 425
+	// Token: 0x020001BB RID: 443
 	public class ConfigCorniceChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060009F9 RID: 2553 RVA: 0x00091EB8 File Offset: 0x000900B8
+		// Token: 0x06000A65 RID: 2661 RVA: 0x00097DF0 File Offset: 0x00095FF0
 		static ConfigCorniceChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCorniceChallengeById.CreateStaticDefaultValue), new Action(ConfigCorniceChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060009FA RID: 2554 RVA: 0x00091ED8 File Offset: 0x000900D8
+		// Token: 0x06000A66 RID: 2662 RVA: 0x00097E10 File Offset: 0x00096010
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCorniceChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060009FB RID: 2555 RVA: 0x00091F57 File Offset: 0x00090157
+		// Token: 0x06000A67 RID: 2663 RVA: 0x00097E8F File Offset: 0x0009608F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCorniceChallengeById.LogPair = null;
 			ConfigCorniceChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x060009FC RID: 2556 RVA: 0x00091F65 File Offset: 0x00090165
+		// Token: 0x06000A68 RID: 2664 RVA: 0x00097E9D File Offset: 0x0009609D
 		public static void Init()
 		{
 			ConfigCorniceChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigCorniceChallengeById.HandleId, "db_cornicechallenge.db", "select BinData from `CorniceChallenge` where Id=?");
 		}
 
-		// Token: 0x060009FD RID: 2557 RVA: 0x00091F80 File Offset: 0x00090180
+		// Token: 0x06000A69 RID: 2665 RVA: 0x00097EB8 File Offset: 0x000960B8
 		public static CorniceChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCorniceChallengeById.HandleId, ConfigCorniceChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CorniceChallenge?(rootAsCorniceChallenge);
 		}
 
-		// Token: 0x04000B83 RID: 2947
+		// Token: 0x04000C01 RID: 3073
 		private const string DB = "db_cornicechallenge.db";
 
-		// Token: 0x04000B84 RID: 2948
+		// Token: 0x04000C02 RID: 3074
 		private const string FILE = "s.数据收集异常活动.xlsx";
 
-		// Token: 0x04000B85 RID: 2949
+		// Token: 0x04000C03 RID: 3075
 		private const string TABLE = "CorniceChallenge";
 
-		// Token: 0x04000B86 RID: 2950
+		// Token: 0x04000C04 RID: 3076
 		private const string COMMAND = "select BinData from `CorniceChallenge` where Id=?";
 
-		// Token: 0x04000B87 RID: 2951
+		// Token: 0x04000C05 RID: 3077
 		private const string KEY_PREFIX = "CorniceChallengeById";
 
-		// Token: 0x04000B88 RID: 2952
+		// Token: 0x04000C06 RID: 3078
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B89 RID: 2953
+		// Token: 0x04000C07 RID: 3079
 		private static int HandleId;
 	}
 }

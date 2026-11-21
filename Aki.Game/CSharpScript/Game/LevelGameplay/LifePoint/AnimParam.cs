@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LifePoint
 {
-	// Token: 0x02006ACA RID: 27338
+	// Token: 0x02005C42 RID: 23618
 	public class AnimParam
 	{
-		// Token: 0x040237F1 RID: 145393
+		// Token: 0x0401EA91 RID: 125585
 		public float MaxTime;
 
-		// Token: 0x040237F2 RID: 145394
+		// Token: 0x0401EA92 RID: 125586
 		public float AccelerationRes;
 
-		// Token: 0x040237F3 RID: 145395
+		// Token: 0x0401EA93 RID: 125587
 		public float MinInterval;
 
-		// Token: 0x040237F4 RID: 145396
+		// Token: 0x0401EA94 RID: 125588
 		public float GridMinRate;
 
-		// Token: 0x040237F5 RID: 145397
+		// Token: 0x0401EA95 RID: 125589
 		public float GridMaxRate;
 
-		// Token: 0x040237F6 RID: 145398
+		// Token: 0x0401EA96 RID: 125590
 		public float GridAccelerationTime;
 	}
 }

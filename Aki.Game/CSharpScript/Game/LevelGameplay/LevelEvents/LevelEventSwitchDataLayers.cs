@@ -6,15 +6,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B9F RID: 27551
+	// Token: 0x02005D17 RID: 23831
 	public class LevelEventSwitchDataLayers : LevelEventBase
 	{
-		// Token: 0x060442E9 RID: 279273 RVA: 0x010CDBAF File Offset: 0x010CBDAF
+		// Token: 0x0603A43D RID: 238653 RVA: 0x010779E7 File Offset: 0x01075BE7
 		public LevelEventSwitchDataLayers(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442EA RID: 279274 RVA: 0x010CDBB8 File Offset: 0x010CBDB8
+		// Token: 0x0603A43E RID: 238654 RVA: 0x010779F0 File Offset: 0x01075BF0
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

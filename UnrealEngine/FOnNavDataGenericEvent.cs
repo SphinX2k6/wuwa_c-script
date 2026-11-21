@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020024AA RID: 9386
+	// Token: 0x0200079C RID: 1948
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnNavDataGenericEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060231E4 RID: 143844 RVA: 0x0033EF06 File Offset: 0x0033D106
+		// Token: 0x0600A865 RID: 43109 RVA: 0x000F8A5A File Offset: 0x000F6C5A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnNavDataGenericEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x060231E5 RID: 143845 RVA: 0x0033EF12 File Offset: 0x0033D112
+		// Token: 0x0600A866 RID: 43110 RVA: 0x000F8A66 File Offset: 0x000F6C66
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnNavDataGenericEvent._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnNavDataGenericEvent._FunctionPtr;
 		}
 
-		// Token: 0x060231E6 RID: 143846 RVA: 0x0033EF35 File Offset: 0x0033D135
+		// Token: 0x0600A867 RID: 43111 RVA: 0x000F8A89 File Offset: 0x000F6C89
 		public FOnNavDataGenericEvent()
 		{
 		}
 
-		// Token: 0x060231E7 RID: 143847 RVA: 0x0033EF3D File Offset: 0x0033D13D
+		// Token: 0x0600A868 RID: 43112 RVA: 0x000F8A91 File Offset: 0x000F6C91
 		[NullableContext(2)]
 		public FOnNavDataGenericEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060231E8 RID: 143848 RVA: 0x0033EF47 File Offset: 0x0033D147
+		// Token: 0x0600A869 RID: 43113 RVA: 0x000F8A9B File Offset: 0x000F6C9B
 		public FOnNavDataGenericEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060231E9 RID: 143849 RVA: 0x0033EF52 File Offset: 0x0033D152
+		// Token: 0x0600A86A RID: 43114 RVA: 0x000F8AA6 File Offset: 0x000F6CA6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<ANavigationData>) ?? ((Action<ANavigationData>)Delegate.CreateDelegate(typeof(Action<ANavigationData>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060231EA RID: 143850 RVA: 0x0033EF84 File Offset: 0x0033D184
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600A86B RID: 43115 RVA: 0x000F8AD8 File Offset: 0x000F6CD8
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnNavDataGenericEvent.RegisterId);
 		}
 
-		// Token: 0x060231EB RID: 143851 RVA: 0x0033EFBE File Offset: 0x0033D1BE
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600A86C RID: 43116 RVA: 0x000F8B12 File Offset: 0x000F6D12
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060231EC RID: 143852 RVA: 0x0033EFC8 File Offset: 0x0033D1C8
+		// Token: 0x0600A86D RID: 43117 RVA: 0x000F8B1C File Offset: 0x000F6D1C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(ANavigationData NavData)
 		{
 			FOnNavDataGenericEvent.__FOnNavDataGenericEvent_DelegateParams* ptr = stackalloc FOnNavDataGenericEvent.__FOnNavDataGenericEvent_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnNavDataGenericEvent.__FOnNavDataGenericEvent_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060231ED RID: 143853 RVA: 0x0033F014 File Offset: 0x0033D214
+		// Token: 0x0600A86E RID: 43118 RVA: 0x000F8B68 File Offset: 0x000F6D68
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<ANavigationData> action = target as Action<ANavigationData>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04012BF7 RID: 76791
+		// Token: 0x0400481D RID: 18461
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04012BF8 RID: 76792
+		// Token: 0x0400481E RID: 18462
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/NavigationSystem.OnNavDataGenericEvent__DelegateSignature";
 
-		// Token: 0x04012BF9 RID: 76793
+		// Token: 0x0400481F RID: 18463
 		private static int RegisterId;
 
-		// Token: 0x02003668 RID: 13928
+		// Token: 0x02000F5D RID: 3933
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnNavDataGenericEvent_DelegateParams
+		private ref struct __FOnNavDataGenericEvent_DelegateParams
 		{
-			// Token: 0x04017739 RID: 96057
+			// Token: 0x04006333 RID: 25395
 			[FieldOffset(0)]
 			public IntPtr NavData;
 		}
 
-		// Token: 0x02003669 RID: 13929
+		// Token: 0x02000F5E RID: 3934
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401773A RID: 96058
+			// Token: 0x04006334 RID: 25396
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

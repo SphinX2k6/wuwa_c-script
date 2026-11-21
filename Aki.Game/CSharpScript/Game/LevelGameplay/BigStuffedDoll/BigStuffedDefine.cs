@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F42 RID: 28482
+	// Token: 0x020060C3 RID: 24771
 	public static class BigStuffedDefine
 	{
-		// Token: 0x060454A6 RID: 283814 RVA: 0x01125D74 File Offset: 0x01123F74
+		// Token: 0x0603B654 RID: 243284 RVA: 0x010CFD20 File Offset: 0x010CDF20
 		public static int calculateCellSize(int startIndex, int endIndex)
 		{
 			if (endIndex >= startIndex)
@@ -15,10 +15,10 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return 36 - startIndex + 1 + endIndex;
 		}
 
-		// Token: 0x04024236 RID: 148022
+		// Token: 0x0401F4EB RID: 128235
 		public const int BIGSTUFFEDDOLL_RINGCELLCOUNT = 36;
 
-		// Token: 0x04024237 RID: 148023
+		// Token: 0x0401F4EC RID: 128236
 		public const float SINGLECELL_ANGLE = 10f;
 	}
 }

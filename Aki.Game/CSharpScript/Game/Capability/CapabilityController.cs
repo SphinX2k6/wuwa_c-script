@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
-using CSharpScript.Game.Capability.Editor;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Capability
 {
-	// Token: 0x0200729B RID: 29339
+	// Token: 0x0200641A RID: 25626
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class CapabilityController : ControllerBase
 	{
-		// Token: 0x06047F8A RID: 294794 RVA: 0x0126FEA3 File Offset: 0x0126E0A3
+		// Token: 0x0603E350 RID: 254800 RVA: 0x01210EEF File Offset: 0x0120F0EF
 		public CapabilityDebugger GetDebugger()
 		{
 			return CapabilityModel.Instance.Debugger;
 		}
 
-		// Token: 0x06047F8B RID: 294795 RVA: 0x0126FEAF File Offset: 0x0126E0AF
+		// Token: 0x0603E351 RID: 254801 RVA: 0x01210EFB File Offset: 0x0120F0FB
 		protected override bool OnClear()
 		{
 			this.UnregisterAllTickGroups();
@@ -36,21 +34,21 @@ namespace CSharpScript.Game.Capability
 			return true;
 		}
 
-		// Token: 0x06047F8C RID: 294796 RVA: 0x0126FED9 File Offset: 0x0126E0D9
+		// Token: 0x0603E352 RID: 254802 RVA: 0x01210F25 File Offset: 0x0120F125
 		public void RegisterGameObject(ICapabilityGameObject go)
 		{
 			CapabilityModel.Instance.GameObjects.Add(go);
 			CapabilityModel.Instance.BumpScheduleGeneration();
 		}
 
-		// Token: 0x06047F8D RID: 294797 RVA: 0x0126FEF6 File Offset: 0x0126E0F6
+		// Token: 0x0603E353 RID: 254803 RVA: 0x01210F42 File Offset: 0x0120F142
 		public void UnregisterGameObject(ICapabilityGameObject go)
 		{
 			CapabilityModel.Instance.GameObjects.Remove(go);
 			CapabilityModel.Instance.BumpScheduleGeneration();
 		}
 
-		// Token: 0x06047F8E RID: 294798 RVA: 0x0126FF14 File Offset: 0x0126E114
+		// Token: 0x0603E354 RID: 254804 RVA: 0x01210F60 File Offset: 0x0120F160
 		public void OnCapabilityAdded(Capability cap)
 		{
 			this.GetDebugger().LogEvent(Time.Instance.NowSeconds, cap, CapabilityCommonDefine.ECapabilityDebugEvent.Setup, null, null);
@@ -58,7 +56,7 @@ namespace CSharpScript.Game.Capability
 			CapabilityModel.Instance.BumpScheduleGeneration();
 		}
 
-		// Token: 0x06047F8F RID: 294799 RVA: 0x0126FF54 File Offset: 0x0126E154
+		// Token: 0x0603E355 RID: 254805 RVA: 0x01210FA0 File Offset: 0x0120F1A0
 		public void OnCapabilityRemoved(Capability cap)
 		{
 			CapabilityDebugger debugger = this.GetDebugger();
@@ -70,7 +68,7 @@ namespace CSharpScript.Game.Capability
 			CapabilityModel.Instance.BumpScheduleGeneration();
 		}
 
-		// Token: 0x06047F90 RID: 294800 RVA: 0x0126FFAC File Offset: 0x0126E1AC
+		// Token: 0x0603E356 RID: 254806 RVA: 0x01210FF8 File Offset: 0x0120F1F8
 		public void OnCapabilityBlocked(Capability cap, int tag)
 		{
 			CapabilityDebugger debugger = this.GetDebugger();
@@ -81,40 +79,18 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F91 RID: 294801 RVA: 0x0126FFFC File Offset: 0x0126E1FC
+		// Token: 0x0603E357 RID: 254807 RVA: 0x01211048 File Offset: 0x0120F248
 		public void OnCapabilityUnblocked(Capability cap, int tag)
 		{
 			this.GetDebugger().LogEvent(Time.Instance.NowSeconds, cap, CapabilityCommonDefine.ECapabilityDebugEvent.Unblocked, GameplayTagUtils.GetNameByTagId(tag), null);
 		}
 
-		// Token: 0x06047F92 RID: 294802 RVA: 0x01270030 File Offset: 0x0126E230
+		// Token: 0x0603E358 RID: 254808 RVA: 0x0121107B File Offset: 0x0120F27B
 		protected override void OnTick(float deltaMilliseconds)
 		{
-			if (!Info.Instance.IsBuildShipping)
-			{
-				if (SundryModel.Instance.GetModuleDebugLevel("Capability") > 0)
-				{
-					CapabilityTimelineDebugger timelineDebugger = CapabilityModel.Instance.TimelineDebugger;
-					if (timelineDebugger == null)
-					{
-						return;
-					}
-					timelineDebugger.Show();
-					return;
-				}
-				else
-				{
-					CapabilityTimelineDebugger timelineDebugger2 = CapabilityModel.Instance.TimelineDebugger;
-					if (timelineDebugger2 == null)
-					{
-						return;
-					}
-					timelineDebugger2.Hide();
-				}
-			}
 		}
 
-		// Token: 0x06047F93 RID: 294803 RVA: 0x01270084 File Offset: 0x0126E284
+		// Token: 0x0603E359 RID: 254809 RVA: 0x01211080 File Offset: 0x0120F280
 		public void TickHostDefaultGroup(ICapabilityGameObject host, float deltaMilliseconds)
 		{
 			if (!host.IsValid())
@@ -129,7 +105,7 @@ namespace CSharpScript.Game.Capability
 			this.RunSchedule(orBuildHostDefaultSchedule, deltaMilliseconds);
 		}
 
-		// Token: 0x06047F94 RID: 294804 RVA: 0x012700B4 File Offset: 0x0126E2B4
+		// Token: 0x0603E35A RID: 254810 RVA: 0x012110B0 File Offset: 0x0120F2B0
 		public void TickGroup(ETickingGroup group, float deltaMilliseconds)
 		{
 			List<IScheduledEntry> orBuildGroupSchedule = this.GetOrBuildGroupSchedule(group);
@@ -140,7 +116,7 @@ namespace CSharpScript.Game.Capability
 			this.RunSchedule(orBuildGroupSchedule, deltaMilliseconds);
 		}
 
-		// Token: 0x06047F95 RID: 294805 RVA: 0x012700DC File Offset: 0x0126E2DC
+		// Token: 0x0603E35B RID: 254811 RVA: 0x012110D8 File Offset: 0x0120F2D8
 		private List<IScheduledEntry> GetOrBuildGroupSchedule(ETickingGroup group)
 		{
 			CapabilityModel instance = CapabilityModel.Instance;
@@ -178,7 +154,7 @@ namespace CSharpScript.Game.Capability
 			return list;
 		}
 
-		// Token: 0x06047F96 RID: 294806 RVA: 0x01270220 File Offset: 0x0126E420
+		// Token: 0x0603E35C RID: 254812 RVA: 0x0121121C File Offset: 0x0120F41C
 		private List<IScheduledEntry> GetOrBuildHostDefaultSchedule(ICapabilityGameObject host)
 		{
 			CapabilityModel instance = CapabilityModel.Instance;
@@ -205,7 +181,7 @@ namespace CSharpScript.Game.Capability
 			return list;
 		}
 
-		// Token: 0x06047F97 RID: 294807 RVA: 0x0127030C File Offset: 0x0126E50C
+		// Token: 0x0603E35D RID: 254813 RVA: 0x01211308 File Offset: 0x0120F508
 		private void RunSchedule(List<IScheduledEntry> schedule, float deltaMilliseconds)
 		{
 			foreach (IScheduledEntry scheduledEntry in schedule)
@@ -235,7 +211,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F98 RID: 294808 RVA: 0x01270414 File Offset: 0x0126E614
+		// Token: 0x0603E35E RID: 254814 RVA: 0x01211410 File Offset: 0x0120F610
 		private void EnsureTickGroupRegisteredFor(Capability cap)
 		{
 			ICapabilityConfig config = cap.GetConfig();
@@ -249,7 +225,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F99 RID: 294809 RVA: 0x01270470 File Offset: 0x0126E670
+		// Token: 0x0603E35F RID: 254815 RVA: 0x0121146C File Offset: 0x0120F66C
 		private void EnsureTickGroupRegistered(ETickingGroup group)
 		{
 			CapabilityModel instance = CapabilityModel.Instance;
@@ -277,7 +253,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F9A RID: 294810 RVA: 0x01270534 File Offset: 0x0126E734
+		// Token: 0x0603E360 RID: 254816 RVA: 0x01211530 File Offset: 0x0120F730
 		private void UnregisterAllTickGroups()
 		{
 			CapabilityModel instance = CapabilityModel.Instance;
@@ -288,7 +264,7 @@ namespace CSharpScript.Game.Capability
 			instance.RegisteredTickGroups.Clear();
 		}
 
-		// Token: 0x06047F9B RID: 294811 RVA: 0x012705A4 File Offset: 0x0126E7A4
+		// Token: 0x0603E361 RID: 254817 RVA: 0x012115A0 File Offset: 0x0120F7A0
 		private ScheduledEntry MakeScheduledEntry(Capability cap)
 		{
 			ICapabilityConfig config = cap.GetConfig();
@@ -301,7 +277,7 @@ namespace CSharpScript.Game.Capability
 			};
 		}
 
-		// Token: 0x06047F9C RID: 294812 RVA: 0x01270624 File Offset: 0x0126E824
+		// Token: 0x0603E362 RID: 254818 RVA: 0x01211620 File Offset: 0x0120F820
 		private void TryActivateCapability(Capability cap, float dt)
 		{
 			if (cap.IsBlocked())
@@ -343,7 +319,7 @@ namespace CSharpScript.Game.Capability
 			this.TickActiveCapability(cap, dt);
 		}
 
-		// Token: 0x06047F9D RID: 294813 RVA: 0x01270728 File Offset: 0x0126E928
+		// Token: 0x0603E363 RID: 254819 RVA: 0x01211724 File Offset: 0x0120F924
 		private void InterruptByTags(Capability activator, IReadOnlyList<int> interruptTags)
 		{
 			CapabilityDebugger debugger = this.GetDebugger();
@@ -381,7 +357,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047F9E RID: 294814 RVA: 0x0127086C File Offset: 0x0126EA6C
+		// Token: 0x0603E364 RID: 254820 RVA: 0x01211868 File Offset: 0x0120FA68
 		private void TickActiveCapability(Capability cap, float dt)
 		{
 			CapabilityDebugger debugger = this.GetDebugger();
@@ -423,7 +399,7 @@ namespace CSharpScript.Game.Capability
 			debugger.LogEvent(Time.Instance.NowSeconds, cap, CapabilityCommonDefine.ECapabilityDebugEvent.TickActive, null, new double?(Time.Instance.Now - now));
 		}
 
-		// Token: 0x06047F9F RID: 294815 RVA: 0x01270994 File Offset: 0x0126EB94
+		// Token: 0x0603E365 RID: 254821 RVA: 0x01211990 File Offset: 0x0120FB90
 		private unsafe void LogError(string stage, Capability cap, object err)
 		{
 			Exception ex = err as Exception;
@@ -452,8 +428,8 @@ namespace CSharpScript.Game.Capability
 			instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x17009F03 RID: 40707
-		// (get) Token: 0x06047FA0 RID: 294816 RVA: 0x01270A9D File Offset: 0x0126EC9D
+		// Token: 0x17007665 RID: 30309
+		// (get) Token: 0x0603E366 RID: 254822 RVA: 0x01211A99 File Offset: 0x0120FC99
 		public static CapabilityController Instance
 		{
 			get
@@ -462,7 +438,7 @@ namespace CSharpScript.Game.Capability
 			}
 		}
 
-		// Token: 0x06047FA1 RID: 294817 RVA: 0x01270AA4 File Offset: 0x0126ECA4
+		// Token: 0x0603E367 RID: 254823 RVA: 0x01211AA0 File Offset: 0x0120FCA0
 		public static CapabilityController GetOrCreateInstance()
 		{
 			if (CapabilityController._Instance == null)
@@ -472,7 +448,7 @@ namespace CSharpScript.Game.Capability
 			return CapabilityController._Instance;
 		}
 
-		// Token: 0x06047FA2 RID: 294818 RVA: 0x01270AB8 File Offset: 0x0126ECB8
+		// Token: 0x0603E368 RID: 254824 RVA: 0x01211AB4 File Offset: 0x0120FCB4
 		public static bool CreateInstance()
 		{
 			if (CapabilityController._Instance != null)
@@ -483,48 +459,48 @@ namespace CSharpScript.Game.Capability
 			return true;
 		}
 
-		// Token: 0x06047FA3 RID: 294819 RVA: 0x01270ACE File Offset: 0x0126ECCE
+		// Token: 0x0603E369 RID: 254825 RVA: 0x01211ACA File Offset: 0x0120FCCA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047FA4 RID: 294820 RVA: 0x01270AD0 File Offset: 0x0126ECD0
+		// Token: 0x0603E36A RID: 254826 RVA: 0x01211ACC File Offset: 0x0120FCCC
 		public static void ResetStaticDefaultValue()
 		{
 			CapabilityController._Instance = null;
 		}
 
-		// Token: 0x06047FA5 RID: 294821 RVA: 0x01270AD8 File Offset: 0x0126ECD8
+		// Token: 0x0603E36B RID: 254827 RVA: 0x01211AD4 File Offset: 0x0120FCD4
 		static CapabilityController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CapabilityController.CreateStaticDefaultValue), new Action(CapabilityController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025EE1 RID: 155361
+		// Token: 0x040211B4 RID: 135604
 		private readonly Stat StatTickGroup = Stat.Create("Capability.TickGroup", "", "");
 
-		// Token: 0x04025EE2 RID: 155362
+		// Token: 0x040211B5 RID: 135605
 		private readonly Stat StatTickHostDefaultGroup = Stat.Create("Capability.TickHostDefaultGroup", "", "");
 
-		// Token: 0x04025EE3 RID: 155363
+		// Token: 0x040211B6 RID: 135606
 		private readonly Stat StatCollectSchedule = Stat.Create("Capability.CollectSchedule", "", "");
 
-		// Token: 0x04025EE4 RID: 155364
+		// Token: 0x040211B7 RID: 135607
 		private readonly Stat StatRunSchedule = Stat.Create("Capability.RunSchedule", "", "");
 
-		// Token: 0x04025EE5 RID: 155365
+		// Token: 0x040211B8 RID: 135608
 		private readonly Stat StatPreTick = Stat.Create("Capability.PreTick", "", "");
 
-		// Token: 0x04025EE6 RID: 155366
+		// Token: 0x040211B9 RID: 135609
 		private readonly Stat StatTickActive = Stat.Create("Capability.TickActive", "", "");
 
-		// Token: 0x04025EE7 RID: 155367
+		// Token: 0x040211BA RID: 135610
 		private readonly Stat StatTryActivate = Stat.Create("Capability.TryActivate", "", "");
 
-		// Token: 0x04025EE8 RID: 155368
+		// Token: 0x040211BB RID: 135611
 		private readonly Stat StatInterruptByTags = Stat.Create("Capability.InterruptByTags", "", "");
 
-		// Token: 0x04025EE9 RID: 155369
+		// Token: 0x040211BC RID: 135612
 		[Nullable(2)]
 		private static CapabilityController _Instance;
 	}

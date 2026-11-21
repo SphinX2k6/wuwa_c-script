@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001700 RID: 5888
+	// Token: 0x0200187C RID: 6268
 	[EnumExtensions]
 	public enum EVisualNovelPortraitEffectType
 	{
-		// Token: 0x04004FC0 RID: 20416
+		// Token: 0x040053ED RID: 21485
 		Jump,
-		// Token: 0x04004FC1 RID: 20417
+		// Token: 0x040053EE RID: 21486
 		Shake,
-		// Token: 0x04004FC2 RID: 20418
+		// Token: 0x040053EF RID: 21487
 		Sigh
 	}
 }

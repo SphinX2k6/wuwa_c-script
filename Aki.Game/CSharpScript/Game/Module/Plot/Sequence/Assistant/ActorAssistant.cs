@@ -19,12 +19,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x0200502E RID: 20526
+	// Token: 0x02003FF8 RID: 16376
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActorAssistant : SeqBaseAssistant
 	{
-		// Token: 0x06034871 RID: 215153 RVA: 0x00C6075C File Offset: 0x00C5E95C
+		// Token: 0x06029714 RID: 169748 RVA: 0x00BABCD4 File Offset: 0x00BA9ED4
 		[NullableContext(2)]
 		public override void Load(Action<bool> callback = null)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			});
 		}
 
-		// Token: 0x06034872 RID: 215154 RVA: 0x00C6079C File Offset: 0x00C5E99C
+		// Token: 0x06029715 RID: 169749 RVA: 0x00BABD14 File Offset: 0x00BA9F14
 		[NullableContext(2)]
 		public override void PreAllPlay(Action<bool> callback = null)
 		{
@@ -94,11 +94,11 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			{
 				foreach (int key in this.PreLoadNpcMap.Keys)
 				{
-					ActorAssistant.<>c__DisplayClass21_0 CS$<>8__locals1 = new ActorAssistant.<>c__DisplayClass21_0();
+					ActorAssistant.<>c__DisplayClass24_0 CS$<>8__locals1 = new ActorAssistant.<>c__DisplayClass24_0();
 					TsBaseCharacter tsBaseCharacter;
 					if (this.PreLoadNpcMap.TryGetValue(key, out tsBaseCharacter) && tsBaseCharacter.IsValid() && this.Model.BlendInCharacters != null)
 					{
-						ActorAssistant.<>c__DisplayClass21_0 CS$<>8__locals2 = CS$<>8__locals1;
+						ActorAssistant.<>c__DisplayClass24_0 CS$<>8__locals2 = CS$<>8__locals1;
 						List<AActor> blendInCharacters = this.Model.BlendInCharacters;
 						USkeletalMeshComponent mesh = tsBaseCharacter.Mesh;
 						CS$<>8__locals2.roleSeq = ActorAssistant.FindBlendRoleByMesh(blendInCharacters, (mesh != null) ? mesh.SkeletalMesh : null);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034873 RID: 215155 RVA: 0x00C60B18 File Offset: 0x00C5ED18
+		// Token: 0x06029716 RID: 169750 RVA: 0x00BAC090 File Offset: 0x00BAA290
 		public override void PreEachPlay()
 		{
 			if (!this.ControllingEntity)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034874 RID: 215156 RVA: 0x00C60E14 File Offset: 0x00C5F014
+		// Token: 0x06029717 RID: 169751 RVA: 0x00BAC38C File Offset: 0x00BAA58C
 		public override void EachStop()
 		{
 			foreach (KeyValuePair<FName, AActor> keyValuePair in this.Model.BindingActorMap)
@@ -289,19 +289,90 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034875 RID: 215157 RVA: 0x00C60E88 File Offset: 0x00C5F088
+		// Token: 0x06029718 RID: 169752 RVA: 0x00BAC400 File Offset: 0x00BAA600
 		[NullableContext(0)]
 		public override UniTask<bool> AllStopPromise()
 		{
-			ActorAssistant.<AllStopPromise>d__24 <AllStopPromise>d__;
+			ActorAssistant.<AllStopPromise>d__27 <AllStopPromise>d__;
 			<AllStopPromise>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<AllStopPromise>d__.<>4__this = this;
 			<AllStopPromise>d__.<>1__state = -1;
-			<AllStopPromise>d__.<>t__builder.Start<ActorAssistant.<AllStopPromise>d__24>(ref <AllStopPromise>d__);
+			<AllStopPromise>d__.<>t__builder.Start<ActorAssistant.<AllStopPromise>d__27>(ref <AllStopPromise>d__);
 			return <AllStopPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034876 RID: 215158 RVA: 0x00C60ECC File Offset: 0x00C5F0CC
+		// Token: 0x06029719 RID: 169753 RVA: 0x00BAC443 File Offset: 0x00BAA643
+		protected override void OnDestroy()
+		{
+			this.PredictSuppressor.Release();
+			base.OnDestroy();
+		}
+
+		// Token: 0x0602971A RID: 169754 RVA: 0x00BAC458 File Offset: 0x00BAA658
+		public bool ShouldDelayEndSwitchPose()
+		{
+			bool flag = this.IsPlayerSwitchTargetPending();
+			TsBaseCharacter tsBaseCharacter = this.FindPendingSwitchNpc();
+			if (!flag && tsBaseCharacter == null)
+			{
+				return false;
+			}
+			AActor item = flag ? Global.BaseCharacter : tsBaseCharacter;
+			this.Model.SwitchTargetWaitFrame++;
+			if (this.Model.SwitchTargetWaitFrame > 10)
+			{
+				global::Log instance = global::Log.Instance;
+				ELogModule module = ELogModule.Plot;
+				ELogAuthor author = ELogAuthor.HYF;
+				string message = "[SwitchPose] 等待实机显示超时，强制结束混出";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Actor", item);
+				instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				return false;
+			}
+			return true;
+		}
+
+		// Token: 0x0602971B RID: 169755 RVA: 0x00BAC4D4 File Offset: 0x00BAA6D4
+		private bool IsPlayerSwitchTargetPending()
+		{
+			if (!this.Model.WaitSwitchTargetVisible || this.Model.DoNotHandlePlayerForControlEntityMode)
+			{
+				return false;
+			}
+			TsBaseCharacter baseCharacter = Global.BaseCharacter;
+			CharacterActorComponent characterActorComponent = (baseCharacter != null) ? baseCharacter.CharacterActorComponent : null;
+			if (characterActorComponent != null && characterActorComponent.Valid)
+			{
+				TsBaseCharacter actor = characterActorComponent.Actor;
+				if (actor != null && actor.IsValid())
+				{
+					CharacterAnimationComponent component = characterActorComponent.Entity.GetComponent<CharacterAnimationComponent>();
+					if (component == null || !component.IsTemporaryHidden)
+					{
+						DisableEntityHandle disableActorHandle = characterActorComponent.DisableActorHandle;
+						return disableActorHandle != null && disableActorHandle.Empty && characterActorComponent.Actor.bHidden;
+					}
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0602971C RID: 169756 RVA: 0x00BAC578 File Offset: 0x00BAA778
+		[NullableContext(2)]
+		private TsBaseCharacter FindPendingSwitchNpc()
+		{
+			foreach (TsBaseCharacter tsBaseCharacter in this.SwitchingNpcList)
+			{
+				if (tsBaseCharacter.IsValid() && (tsBaseCharacter.bHidden || !tsBaseCharacter.WasRecentlyRenderedOnScreen(0.2f)))
+				{
+					return tsBaseCharacter;
+				}
+			}
+			return null;
+		}
+
+		// Token: 0x0602971D RID: 169757 RVA: 0x00BAC5E8 File Offset: 0x00BAA7E8
 		[NullableContext(2)]
 		private static AActor FindBlendRoleByMesh([Nullable(1)] List<AActor> candidates, USkeletalMesh targetMesh)
 		{
@@ -320,9 +391,10 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return null;
 		}
 
-		// Token: 0x06034877 RID: 215159 RVA: 0x00C60F34 File Offset: 0x00C5F134
+		// Token: 0x0602971E RID: 169758 RVA: 0x00BAC650 File Offset: 0x00BAA850
 		public void EndSwitchPose()
 		{
+			this.Model.WaitSwitchTargetVisible = false;
 			AActor aactor = this.Model.BlendOutCharacter;
 			if (aactor == null)
 			{
@@ -365,6 +437,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 				}
 			}
 			this.PreLoadNpcMap.Clear();
+			this.SwitchingNpcList.Clear();
 			this.DeleteBindingActor();
 			if (this.Promise != null)
 			{
@@ -373,7 +446,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034878 RID: 215160 RVA: 0x00C610A8 File Offset: 0x00C5F2A8
+		// Token: 0x0602971F RID: 169759 RVA: 0x00BAC7DC File Offset: 0x00BAA9DC
 		public void TeleportToFinal()
 		{
 			if (this.Model.DoNotHandlePlayerForControlEntityMode)
@@ -394,7 +467,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034879 RID: 215161 RVA: 0x00C61128 File Offset: 0x00C5F328
+		// Token: 0x06029720 RID: 169760 RVA: 0x00BAC85C File Offset: 0x00BAAA5C
 		private void HandleFinalPos(CharacterActorComponent actorComp, global::Transform finalTrans)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -488,7 +561,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603487A RID: 215162 RVA: 0x00C61430 File Offset: 0x00C5F630
+		// Token: 0x06029721 RID: 169761 RVA: 0x00BACB64 File Offset: 0x00BAAD64
 		public override void End()
 		{
 			if (this.WaitBindingEntityTask != null)
@@ -514,6 +587,9 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			{
 				this.Promise.SetResult(false);
 			}
+			this.Model.BeginSwitchFrame = 0f;
+			this.Model.WaitSwitchTargetVisible = false;
+			this.SwitchingNpcList.Clear();
 			this.StopStartTransformBlendTick();
 			this.Model.IsStartTransformBlending = false;
 			this.Model.StartTransformBlendCallback = null;
@@ -546,7 +622,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			SequenceModel.Instance.PlotBindingVehicle = null;
 		}
 
-		// Token: 0x0603487B RID: 215163 RVA: 0x00C615BC File Offset: 0x00C5F7BC
+		// Token: 0x06029722 RID: 169762 RVA: 0x00BACD14 File Offset: 0x00BAAF14
 		private void MakeNpcMap()
 		{
 			this.PreLoadNpcMap.Clear();
@@ -669,7 +745,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603487C RID: 215164 RVA: 0x00C61894 File Offset: 0x00C5FA94
+		// Token: 0x06029723 RID: 169763 RVA: 0x00BACFEC File Offset: 0x00BAB1EC
 		private void CreateBindingActor()
 		{
 			this.Model.BlendInCharacter = null;
@@ -774,7 +850,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603487D RID: 215165 RVA: 0x00C61BB0 File Offset: 0x00C5FDB0
+		// Token: 0x06029724 RID: 169764 RVA: 0x00BAD308 File Offset: 0x00BAB508
 		private void DeleteBindingActor()
 		{
 			if (this.Model.BindingActorMap == null || this.Model.BindingActorMap.Count == 0)
@@ -798,7 +874,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.BlendOutCharacters = null;
 		}
 
-		// Token: 0x0603487E RID: 215166 RVA: 0x00C61CA8 File Offset: 0x00C5FEA8
+		// Token: 0x06029725 RID: 169765 RVA: 0x00BAD400 File Offset: 0x00BAB600
 		private void HideBattleActor(bool valid)
 		{
 			EntityHandle hidePlayerEntityHandle = this.Model.HidePlayerEntityHandle;
@@ -836,7 +912,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603487F RID: 215167 RVA: 0x00C61DA0 File Offset: 0x00C5FFA0
+		// Token: 0x06029726 RID: 169766 RVA: 0x00BAD4F8 File Offset: 0x00BAB6F8
 		private void WaitBindingEntities([Nullable(new byte[]
 		{
 			1,
@@ -910,7 +986,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034880 RID: 215168 RVA: 0x00C61F2C File Offset: 0x00C6012C
+		// Token: 0x06029727 RID: 169767 RVA: 0x00BAD684 File Offset: 0x00BAB884
 		private void FilterNearestEntity([Nullable(new byte[]
 		{
 			2,
@@ -977,7 +1053,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034881 RID: 215169 RVA: 0x00C620FC File Offset: 0x00C602FC
+		// Token: 0x06029728 RID: 169768 RVA: 0x00BAD854 File Offset: 0x00BABA54
 		private void ControlBindingEntity()
 		{
 			foreach (KeyValuePair<FName, EntityHandle> keyValuePair in this.Model.BindingEntityMap)
@@ -1063,7 +1139,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034882 RID: 215170 RVA: 0x00C6239C File Offset: 0x00C6059C
+		// Token: 0x06029729 RID: 169769 RVA: 0x00BADAF4 File Offset: 0x00BABCF4
 		private unsafe void ReleaseBindingEntity()
 		{
 			this.ControllingEntity = false;
@@ -1189,7 +1265,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.BindingEntityMap.Clear();
 		}
 
-		// Token: 0x06034883 RID: 215171 RVA: 0x00C62858 File Offset: 0x00C60A58
+		// Token: 0x0602972A RID: 169770 RVA: 0x00BADFB0 File Offset: 0x00BAC1B0
 		[NullableContext(2)]
 		private void HandleMainCharacter(Action<bool> callback)
 		{
@@ -1314,7 +1390,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034884 RID: 215172 RVA: 0x00C628E8 File Offset: 0x00C60AE8
+		// Token: 0x0602972B RID: 169771 RVA: 0x00BAE040 File Offset: 0x00BAC240
 		private unsafe void LoadMouthAssetInternal()
 		{
 			if (this.CurLoadMouthIndex >= this.PreLoadMouthAssetName.Count)
@@ -1372,19 +1448,19 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034885 RID: 215173 RVA: 0x00C629EC File Offset: 0x00C60BEC
+		// Token: 0x0602972C RID: 169772 RVA: 0x00BAE144 File Offset: 0x00BAC344
 		[NullableContext(0)]
 		public UniTask<bool> BeginLoadMouthAssetPromise()
 		{
-			ActorAssistant.<BeginLoadMouthAssetPromise>d__40 <BeginLoadMouthAssetPromise>d__;
+			ActorAssistant.<BeginLoadMouthAssetPromise>d__47 <BeginLoadMouthAssetPromise>d__;
 			<BeginLoadMouthAssetPromise>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<BeginLoadMouthAssetPromise>d__.<>4__this = this;
 			<BeginLoadMouthAssetPromise>d__.<>1__state = -1;
-			<BeginLoadMouthAssetPromise>d__.<>t__builder.Start<ActorAssistant.<BeginLoadMouthAssetPromise>d__40>(ref <BeginLoadMouthAssetPromise>d__);
+			<BeginLoadMouthAssetPromise>d__.<>t__builder.Start<ActorAssistant.<BeginLoadMouthAssetPromise>d__47>(ref <BeginLoadMouthAssetPromise>d__);
 			return <BeginLoadMouthAssetPromise>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034886 RID: 215174 RVA: 0x00C62A30 File Offset: 0x00C60C30
+		// Token: 0x0602972D RID: 169773 RVA: 0x00BAE188 File Offset: 0x00BAC388
 		public void TryApplyMouthAnim(string TextKey, List<int> characterIdList)
 		{
 			SequenceModel model = this.Model;
@@ -1431,7 +1507,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034887 RID: 215175 RVA: 0x00C62B98 File Offset: 0x00C60D98
+		// Token: 0x0602972E RID: 169774 RVA: 0x00BAE2F0 File Offset: 0x00BAC4F0
 		public void FindApplyMouthAnim(List<int> characterIdList)
 		{
 			foreach (KeyValuePair<FName, AActor> keyValuePair in this.Model.BindingActorMap)
@@ -1447,7 +1523,6 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 						{
 							this.CurDialogueUnison.Add(seqMouthAnimInstance);
 						}
-						return;
 					}
 				}
 			}
@@ -1477,7 +1552,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034888 RID: 215176 RVA: 0x00C62D7C File Offset: 0x00C60F7C
+		// Token: 0x0602972F RID: 169775 RVA: 0x00BAE4D0 File Offset: 0x00BAC6D0
 		private void FindApplyControlEntityMouthAnim(List<int> characterIdList)
 		{
 			BP_SequenceData_C sequenceData = this.Model.SequenceData;
@@ -1497,7 +1572,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034889 RID: 215177 RVA: 0x00C62E28 File Offset: 0x00C61028
+		// Token: 0x06029730 RID: 169776 RVA: 0x00BAE57C File Offset: 0x00BAC77C
 		[NullableContext(2)]
 		private EntityHandle GetControlEntityBindingHandle(FName mouthEntityTag)
 		{
@@ -1511,7 +1586,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return null;
 		}
 
-		// Token: 0x0603488A RID: 215178 RVA: 0x00C62E98 File Offset: 0x00C61098
+		// Token: 0x06029731 RID: 169777 RVA: 0x00BAE5EC File Offset: 0x00BAC7EC
 		[NullableContext(2)]
 		private unsafe void TryAddControlEntityMouthAnim(EntityHandle handle, FName mouthEntityTag, int talkerId)
 		{
@@ -1559,7 +1634,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603488B RID: 215179 RVA: 0x00C6303C File Offset: 0x00C6123C
+		// Token: 0x06029732 RID: 169778 RVA: 0x00BAE790 File Offset: 0x00BAC990
 		public void StopMouthAnim()
 		{
 			foreach (UAnimInstance uanimInstance in this.CurDialogueUnison)
@@ -1569,7 +1644,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.CurDialogueUnison.Clear();
 		}
 
-		// Token: 0x0603488C RID: 215180 RVA: 0x00C630A4 File Offset: 0x00C612A4
+		// Token: 0x06029733 RID: 169779 RVA: 0x00BAE7F8 File Offset: 0x00BAC9F8
 		public void CheckHideBattleCharacter()
 		{
 			if (!this.Model.DoNotHandlePlayerForControlEntityMode && (this.Model.SequenceData.HidePlayer || this.Model.SequenceData.NeedSwitchMainCharacter))
@@ -1582,7 +1657,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0603488D RID: 215181 RVA: 0x00C63140 File Offset: 0x00C61340
+		// Token: 0x06029734 RID: 169780 RVA: 0x00BAE894 File Offset: 0x00BACA94
 		public void PlayerHide()
 		{
 			AActor aactor;
@@ -1599,7 +1674,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.JYS, "过场seq内不存在男女主，开始尝试隐藏", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603488E RID: 215182 RVA: 0x00C631A8 File Offset: 0x00C613A8
+		// Token: 0x06029735 RID: 169781 RVA: 0x00BAE8FC File Offset: 0x00BACAFC
 		private void DebugPrintStartBlend(string text, FLinearColor color)
 		{
 			if (!SequenceDefine.SHOW_SEAMLESS_SCREEN_DEBUG_INFO)
@@ -1614,7 +1689,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			UKismetSystemLibrary.PrintString(world, "[StartTransformBlend] " + text, true, false, new FLinearColor?(color), 10f);
 		}
 
-		// Token: 0x0603488F RID: 215183 RVA: 0x00C631E8 File Offset: 0x00C613E8
+		// Token: 0x06029736 RID: 169782 RVA: 0x00BAE93C File Offset: 0x00BACB3C
 		public void StartTransformBlend(Action callback)
 		{
 			BP_SequenceData_C sequenceData = this.Model.SequenceData;
@@ -1755,7 +1830,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.DebugPrintStartBlend(defaultInterpolatedStringHandler.ToStringAndClear(), new FLinearColor(0f, 1f, 0f, 1f));
 		}
 
-		// Token: 0x06034890 RID: 215184 RVA: 0x00C63810 File Offset: 0x00C61A10
+		// Token: 0x06029737 RID: 169783 RVA: 0x00BAEF64 File Offset: 0x00BAD164
 		public void TickStartTransformBlend(float delta)
 		{
 			if (this.StartBlendFirstTickPending)
@@ -1820,7 +1895,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034891 RID: 215185 RVA: 0x00C63B47 File Offset: 0x00C61D47
+		// Token: 0x06029738 RID: 169784 RVA: 0x00BAF29B File Offset: 0x00BAD49B
 		private void StopStartTransformBlendTick()
 		{
 			if (this.StartBlendTicker != null)
@@ -1830,81 +1905,90 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0401BFE0 RID: 114656
+		// Token: 0x040169CB RID: 92619
 		private const float BindingActorAnimBlendOutTime = 0.2f;
 
-		// Token: 0x0401BFE1 RID: 114657
+		// Token: 0x040169CC RID: 92620
+		private const int MaxSwitchTargetWaitFrame = 10;
+
+		// Token: 0x040169CD RID: 92621
+		private readonly PredictMotionSuppressor PredictSuppressor = new PredictMotionSuppressor();
+
+		// Token: 0x040169CE RID: 92622
 		[Nullable(2)]
 		private WaitEntityTask WaitBindingEntityTask;
 
-		// Token: 0x0401BFE2 RID: 114658
+		// Token: 0x040169CF RID: 92623
 		[Nullable(2)]
 		private TimerHandle BlendActionTimer;
 
-		// Token: 0x0401BFE3 RID: 114659
+		// Token: 0x040169D0 RID: 92624
 		private int CharacterLoading = -1;
 
-		// Token: 0x0401BFE4 RID: 114660
+		// Token: 0x040169D1 RID: 92625
 		private int MeshLoading = -1;
 
-		// Token: 0x0401BFE5 RID: 114661
+		// Token: 0x040169D2 RID: 92626
 		[Nullable(2)]
 		private UAnimSequence CurMouthAsset;
 
-		// Token: 0x0401BFE6 RID: 114662
+		// Token: 0x040169D3 RID: 92627
 		private readonly List<UAnimInstance> CurDialogueUnison = new List<UAnimInstance>();
 
-		// Token: 0x0401BFE7 RID: 114663
+		// Token: 0x040169D4 RID: 92628
 		public List<string> PreLoadMouthAssetName = new List<string>();
 
-		// Token: 0x0401BFE8 RID: 114664
+		// Token: 0x040169D5 RID: 92629
 		public int CurLoadMouthIndex;
 
-		// Token: 0x0401BFE9 RID: 114665
+		// Token: 0x040169D6 RID: 92630
 		public Dictionary<string, UAnimSequence> PreLoadMouthAssetMap = new Dictionary<string, UAnimSequence>();
 
-		// Token: 0x0401BFEA RID: 114666
+		// Token: 0x040169D7 RID: 92631
 		[Nullable(2)]
 		private CustomPromise<bool> LoadMouthAnimPromise;
 
-		// Token: 0x0401BFEB RID: 114667
+		// Token: 0x040169D8 RID: 92632
 		private bool ControllingEntity;
 
-		// Token: 0x0401BFEC RID: 114668
+		// Token: 0x040169D9 RID: 92633
 		public Dictionary<int, TsBaseCharacter> PreLoadNpcMap = new Dictionary<int, TsBaseCharacter>();
 
-		// Token: 0x0401BFED RID: 114669
+		// Token: 0x040169DA RID: 92634
+		private readonly List<TsBaseCharacter> SwitchingNpcList = new List<TsBaseCharacter>();
+
+		// Token: 0x040169DB RID: 92635
 		public Dictionary<int, Entity> NpcEntityMap = new Dictionary<int, Entity>();
 
-		// Token: 0x0401BFEE RID: 114670
+		// Token: 0x040169DC RID: 92636
 		private global::Vector StartBlendFromLocation = global::Vector.Create();
 
-		// Token: 0x0401BFEF RID: 114671
+		// Token: 0x040169DD RID: 92637
 		private global::Rotator StartBlendFromRotation = global::Rotator.Create();
 
-		// Token: 0x0401BFF0 RID: 114672
+		// Token: 0x040169DE RID: 92638
 		private global::Vector StartBlendToLocation = global::Vector.Create();
 
-		// Token: 0x0401BFF1 RID: 114673
+		// Token: 0x040169DF RID: 92639
 		private global::Rotator StartBlendToRotation = global::Rotator.Create();
 
-		// Token: 0x0401BFF2 RID: 114674
+		// Token: 0x040169E0 RID: 92640
 		[Nullable(2)]
 		private Ticker StartBlendTicker;
 
-		// Token: 0x0401BFF3 RID: 114675
+		// Token: 0x040169E1 RID: 92641
 		private bool StartBlendFirstTickPending;
 
-		// Token: 0x0401BFF4 RID: 114676
+		// Token: 0x040169E2 RID: 92642
 		private const float AUTO_BLEND_MIN_SPEED = 50f;
 
-		// Token: 0x0401BFF5 RID: 114677
+		// Token: 0x040169E3 RID: 92643
 		private const float AUTO_BLEND_TIME_MIN = 0.2f;
 
-		// Token: 0x0401BFF6 RID: 114678
+		// Token: 0x040169E4 RID: 92644
 		private const float AUTO_BLEND_TIME_MAX = 3f;
 
-		// Token: 0x0401BFF7 RID: 114679
+		// Token: 0x040169E5 RID: 92645
 		private const float START_BLEND_DEBUG_DURATION = 10f;
 	}
 }

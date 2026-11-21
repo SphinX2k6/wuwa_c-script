@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001204 RID: 4612
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001340 RID: 4928
 	public class IWaitTimeCondition : IQuestCondition
 	{
-		// Token: 0x060068A6 RID: 26790 RVA: 0x000F9BEC File Offset: 0x000F7DEC
+		// Token: 0x06006EE7 RID: 28391 RVA: 0x001074F8 File Offset: 0x001056F8
 		private IWaitTimeCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068A7 RID: 26791 RVA: 0x000F9C24 File Offset: 0x000F7E24
+		// Token: 0x06006EE8 RID: 28392 RVA: 0x00107530 File Offset: 0x00105730
 		public static IWaitTimeCondition Create([Nullable(2)] IWaitTimeCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068A8 RID: 26792 RVA: 0x000F9C37 File Offset: 0x000F7E37
+		// Token: 0x06006EE9 RID: 28393 RVA: 0x00107543 File Offset: 0x00105743
 		public static IWaitTimeCondition CreateFromSetValue([Nullable(2)] IWaitTimeCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068A9 RID: 26793 RVA: 0x000F9C4C File Offset: 0x000F7E4C
+		// Token: 0x06006EEA RID: 28394 RVA: 0x00107558 File Offset: 0x00105758
 		public new IWaitTimeCondition_SetValue ToSetValue()
 		{
 			return new IWaitTimeCondition_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021D2 RID: 8658
-		// (get) Token: 0x060068AA RID: 26794 RVA: 0x000F9CA6 File Offset: 0x000F7EA6
-		// (set) Token: 0x060068AB RID: 26795 RVA: 0x000F9CD1 File Offset: 0x000F7ED1
+		// Token: 0x17002393 RID: 9107
+		// (get) Token: 0x06006EEB RID: 28395 RVA: 0x001075B2 File Offset: 0x001057B2
+		// (set) Token: 0x06006EEC RID: 28396 RVA: 0x001075DD File Offset: 0x001057DD
 		public override EChildQuest Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D3 RID: 8659
-		// (get) Token: 0x060068AC RID: 26796 RVA: 0x000F9CE0 File Offset: 0x000F7EE0
-		// (set) Token: 0x060068AD RID: 26797 RVA: 0x000F9D41 File Offset: 0x000F7F41
+		// Token: 0x17002394 RID: 9108
+		// (get) Token: 0x06006EED RID: 28397 RVA: 0x001075EC File Offset: 0x001057EC
+		// (set) Token: 0x06006EEE RID: 28398 RVA: 0x0010764D File Offset: 0x0010584D
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D4 RID: 8660
-		// (get) Token: 0x060068AE RID: 26798 RVA: 0x000F9D56 File Offset: 0x000F7F56
-		// (set) Token: 0x060068AF RID: 26799 RVA: 0x000F9D81 File Offset: 0x000F7F81
+		// Token: 0x17002395 RID: 9109
+		// (get) Token: 0x06006EEF RID: 28399 RVA: 0x00107662 File Offset: 0x00105862
+		// (set) Token: 0x06006EF0 RID: 28400 RVA: 0x0010768D File Offset: 0x0010588D
 		public virtual int Days
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D5 RID: 8661
-		// (get) Token: 0x060068B0 RID: 26800 RVA: 0x000F9D8F File Offset: 0x000F7F8F
-		// (set) Token: 0x060068B1 RID: 26801 RVA: 0x000F9DBA File Offset: 0x000F7FBA
+		// Token: 0x17002396 RID: 9110
+		// (get) Token: 0x06006EF1 RID: 28401 RVA: 0x0010769B File Offset: 0x0010589B
+		// (set) Token: 0x06006EF2 RID: 28402 RVA: 0x001076C6 File Offset: 0x001058C6
 		public virtual int Hours
 		{
 			get
@@ -167,9 +165,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D6 RID: 8662
-		// (get) Token: 0x060068B2 RID: 26802 RVA: 0x000F9DC8 File Offset: 0x000F7FC8
-		// (set) Token: 0x060068B3 RID: 26803 RVA: 0x000F9DF3 File Offset: 0x000F7FF3
+		// Token: 0x17002397 RID: 9111
+		// (get) Token: 0x06006EF3 RID: 28403 RVA: 0x001076D4 File Offset: 0x001058D4
+		// (set) Token: 0x06006EF4 RID: 28404 RVA: 0x001076FF File Offset: 0x001058FF
 		public virtual int Minutes
 		{
 			get
@@ -190,9 +188,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021D7 RID: 8663
-		// (get) Token: 0x060068B4 RID: 26804 RVA: 0x000F9E01 File Offset: 0x000F8001
-		// (set) Token: 0x060068B5 RID: 26805 RVA: 0x000F9E2C File Offset: 0x000F802C
+		// Token: 0x17002398 RID: 9112
+		// (get) Token: 0x06006EF5 RID: 28405 RVA: 0x0010770D File Offset: 0x0010590D
+		// (set) Token: 0x06006EF6 RID: 28406 RVA: 0x00107738 File Offset: 0x00105938
 		public virtual int Seconds
 		{
 			get
@@ -213,18 +211,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EA1 RID: 16033
+		// Token: 0x0400420F RID: 16911
 		[Nullable(2)]
 		protected new IWaitTimeCondition FbInstance;
 
-		// Token: 0x04003EA2 RID: 16034
+		// Token: 0x04004210 RID: 16912
 		[Nullable(2)]
 		protected new IWaitTimeCondition_SetValue PocoInterface;
 
-		// Token: 0x04003EA3 RID: 16035
+		// Token: 0x04004211 RID: 16913
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003EA4 RID: 16036
+		// Token: 0x04004212 RID: 16914
 		private bool _PreConditionsInited;
 	}
 }

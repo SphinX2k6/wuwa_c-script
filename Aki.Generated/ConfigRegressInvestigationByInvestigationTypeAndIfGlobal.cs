@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007D3 RID: 2003
+	// Token: 0x020007EF RID: 2031
 	public class ConfigRegressInvestigationByInvestigationTypeAndIfGlobal : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F04 RID: 12036 RVA: 0x00162F7F File Offset: 0x0016117F
+		// Token: 0x06002FAC RID: 12204 RVA: 0x0016A267 File Offset: 0x00168467
 		static ConfigRegressInvestigationByInvestigationTypeAndIfGlobal()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.CreateStaticDefaultValue), new Action(ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F05 RID: 12037 RVA: 0x00162FA0 File Offset: 0x001611A0
+		// Token: 0x06002FAD RID: 12205 RVA: 0x0016A288 File Offset: 0x00168488
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F06 RID: 12038 RVA: 0x0016301F File Offset: 0x0016121F
+		// Token: 0x06002FAE RID: 12206 RVA: 0x0016A307 File Offset: 0x00168507
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.LogPair = null;
 			ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.HandleId = 0;
 		}
 
-		// Token: 0x06002F07 RID: 12039 RVA: 0x0016302D File Offset: 0x0016122D
+		// Token: 0x06002FAF RID: 12207 RVA: 0x0016A315 File Offset: 0x00168515
 		public static void Init()
 		{
 			ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.HandleId = ConfigCommon.InitDataStatement(ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.HandleId, "db_regressactivity.db", "select BinData from `RegressInvestigation` where InvestigationType=? And IfGlobal=?");
 		}
 
-		// Token: 0x06002F08 RID: 12040 RVA: 0x00163048 File Offset: 0x00161248
+		// Token: 0x06002FB0 RID: 12208 RVA: 0x0016A330 File Offset: 0x00168530
 		public static RegressInvestigation? GetConfig(int p0InvestigationType, bool p1IfGlobal, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.HandleId, ConfigRegressInvestigationByInvestigationTypeAndIfGlobal.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RegressInvestigation?(rootAsRegressInvestigation);
 		}
 
-		// Token: 0x040036AB RID: 13995
+		// Token: 0x0400376F RID: 14191
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036AC RID: 13996
+		// Token: 0x04003770 RID: 14192
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036AD RID: 13997
+		// Token: 0x04003771 RID: 14193
 		private const string TABLE = "RegressInvestigation";
 
-		// Token: 0x040036AE RID: 13998
+		// Token: 0x04003772 RID: 14194
 		private const string COMMAND = "select BinData from `RegressInvestigation` where InvestigationType=? And IfGlobal=?";
 
-		// Token: 0x040036AF RID: 13999
+		// Token: 0x04003773 RID: 14195
 		private const string KEY_PREFIX = "RegressInvestigationByInvestigationTypeAndIfGlobal";
 
-		// Token: 0x040036B0 RID: 14000
+		// Token: 0x04003774 RID: 14196
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036B1 RID: 14001
+		// Token: 0x04003775 RID: 14197
 		private static int HandleId;
 	}
 }

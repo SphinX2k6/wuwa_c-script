@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004986 RID: 18822
+	// Token: 0x02004E3D RID: 20029
 	public class ICheckAtlasUnlockedT
 	{
-		// Token: 0x170087F1 RID: 34801
-		// (get) Token: 0x0601D586 RID: 120198 RVA: 0x004234E1 File Offset: 0x004216E1
-		// (set) Token: 0x0601D587 RID: 120199 RVA: 0x004234E9 File Offset: 0x004216E9
+		// Token: 0x17008EAC RID: 36524
+		// (get) Token: 0x0601EFAB RID: 126891 RVA: 0x00453995 File Offset: 0x00451B95
+		// (set) Token: 0x0601EFAC RID: 126892 RVA: 0x0045399D File Offset: 0x00451B9D
 		public ECondition Type { get; set; }
 
-		// Token: 0x170087F2 RID: 34802
-		// (get) Token: 0x0601D588 RID: 120200 RVA: 0x004234F2 File Offset: 0x004216F2
-		// (set) Token: 0x0601D589 RID: 120201 RVA: 0x004234FA File Offset: 0x004216FA
+		// Token: 0x17008EAD RID: 36525
+		// (get) Token: 0x0601EFAD RID: 126893 RVA: 0x004539A6 File Offset: 0x00451BA6
+		// (set) Token: 0x0601EFAE RID: 126894 RVA: 0x004539AE File Offset: 0x00451BAE
 		public TUnlockAtlasSystemOptionV2Union Atlas { get; set; }
 
-		// Token: 0x170087F3 RID: 34803
-		// (get) Token: 0x0601D58A RID: 120202 RVA: 0x00423503 File Offset: 0x00421703
-		// (set) Token: 0x0601D58B RID: 120203 RVA: 0x0042350B File Offset: 0x0042170B
+		// Token: 0x17008EAE RID: 36526
+		// (get) Token: 0x0601EFAF RID: 126895 RVA: 0x004539B7 File Offset: 0x00451BB7
+		// (set) Token: 0x0601EFB0 RID: 126896 RVA: 0x004539BF File Offset: 0x00451BBF
 		public bool Unlocked { get; set; }
 
-		// Token: 0x0601D58C RID: 120204 RVA: 0x00423514 File Offset: 0x00421714
+		// Token: 0x0601EFB1 RID: 126897 RVA: 0x004539C8 File Offset: 0x00451BC8
 		public ICheckAtlasUnlockedT()
 		{
 			this.Type = ECondition.CompareVar;

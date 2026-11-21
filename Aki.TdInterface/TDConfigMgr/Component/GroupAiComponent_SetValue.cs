@@ -4,28 +4,26 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200018E RID: 398
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001A5 RID: 421
 	public class GroupAiComponent_SetValue
 	{
-		// Token: 0x0400078A RID: 1930
+		// Token: 0x040007E0 RID: 2016
 		public bool? Disabled;
 
-		// Token: 0x0400078B RID: 1931
+		// Token: 0x040007E1 RID: 2017
 		public bool? EdIsLocked;
 
-		// Token: 0x0400078C RID: 1932
+		// Token: 0x040007E2 RID: 2018
 		public List<int> Entities;
 
-		// Token: 0x0400078D RID: 1933
+		// Token: 0x040007E3 RID: 2019
 		public IGroupAiMode Option;
 
-		// Token: 0x0400078E RID: 1934
+		// Token: 0x040007E4 RID: 2020
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> SyncTags;
 	}

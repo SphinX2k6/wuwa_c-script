@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B84 RID: 7044
+// Token: 0x02001043 RID: 4163
 public class FloroRanchCurrencyItem : UiPanelBase
 {
-	// Token: 0x0600D1BA RID: 53690 RVA: 0x00301AB0 File Offset: 0x002FFCB0
+	// Token: 0x0600A5CB RID: 42443 RVA: 0x0030CB88 File Offset: 0x0030AD88
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,7 +33,7 @@ public class FloroRanchCurrencyItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D1BB RID: 53691 RVA: 0x00301B98 File Offset: 0x002FFD98
+	// Token: 0x0600A5CC RID: 42444 RVA: 0x0030CC70 File Offset: 0x0030AE70
 	[NullableContext(1)]
 	public void SetCurrencyData(FloroRanchCurrencyData currencyData)
 	{
@@ -47,7 +47,7 @@ public class FloroRanchCurrencyItem : UiPanelBase
 		base.GetText(2).SetText(FloroRanchModel.Instance.GetCoinText(amount), true);
 	}
 
-	// Token: 0x0600D1BC RID: 53692 RVA: 0x00301C00 File Offset: 0x002FFE00
+	// Token: 0x0600A5CD RID: 42445 RVA: 0x0030CCD8 File Offset: 0x0030AED8
 	private void SetTextureAllTransition()
 	{
 		UUITextureTransitionComponent uiTextureTransitionComponent = base.GetUiTextureTransitionComponent(1);
@@ -57,7 +57,7 @@ public class FloroRanchCurrencyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D1BD RID: 53693 RVA: 0x00301C2C File Offset: 0x002FFE2C
+	// Token: 0x0600A5CE RID: 42446 RVA: 0x0030CD04 File Offset: 0x0030AF04
 	private void OnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchCommonTipsView, new FloroRanchCommonTipParam
@@ -71,23 +71,23 @@ public class FloroRanchCurrencyItem : UiPanelBase
 		}, null);
 	}
 
-	// Token: 0x04006036 RID: 24630
+	// Token: 0x04006105 RID: 24837
 	[Nullable(1)]
 	private FloroRanchCurrencyData CurrencyData;
 
-	// Token: 0x02008107 RID: 33031
+	// Token: 0x02007295 RID: 29333
 	private class EComponentDefine
 	{
-		// Token: 0x0402A1DD RID: 172509
+		// Token: 0x04025511 RID: 152849
 		public const int Texture = 0;
 
-		// Token: 0x0402A1DE RID: 172510
+		// Token: 0x04025512 RID: 152850
 		public const int TextureTransition = 1;
 
-		// Token: 0x0402A1DF RID: 172511
+		// Token: 0x04025513 RID: 152851
 		public const int CountText = 2;
 
-		// Token: 0x0402A1E0 RID: 172512
+		// Token: 0x04025514 RID: 152852
 		public const int Button = 3;
 	}
 }

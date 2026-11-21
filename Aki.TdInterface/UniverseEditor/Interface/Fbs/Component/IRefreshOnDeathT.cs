@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200582D RID: 22573
+	// Token: 0x02005E34 RID: 24116
 	public class IRefreshOnDeathT
 	{
-		// Token: 0x1700A8A3 RID: 43171
-		// (get) Token: 0x06025F81 RID: 155521 RVA: 0x0053C2D6 File Offset: 0x0053A4D6
-		// (set) Token: 0x06025F82 RID: 155522 RVA: 0x0053C2DE File Offset: 0x0053A4DE
+		// Token: 0x1700B1C7 RID: 45511
+		// (get) Token: 0x060284A1 RID: 165025 RVA: 0x00582462 File Offset: 0x00580662
+		// (set) Token: 0x060284A2 RID: 165026 RVA: 0x0058246A File Offset: 0x0058066A
 		public ERewardDropType Type { get; set; }
 
-		// Token: 0x06025F83 RID: 155523 RVA: 0x0053C2E7 File Offset: 0x0053A4E7
+		// Token: 0x060284A3 RID: 165027 RVA: 0x00582473 File Offset: 0x00580673
 		public IRefreshOnDeathT()
 		{
 			this.Type = ERewardDropType.Death;

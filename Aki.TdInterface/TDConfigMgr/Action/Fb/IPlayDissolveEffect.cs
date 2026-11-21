@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025EC RID: 9708
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028AC RID: 10412
 	public class IPlayDissolveEffect : PlayEffect2
 	{
-		// Token: 0x0600DA28 RID: 55848 RVA: 0x002083E1 File Offset: 0x002065E1
+		// Token: 0x0600E7F4 RID: 59380 RVA: 0x00224B01 File Offset: 0x00222D01
 		public static IPlayDissolveEffect Create(IPlayDissolveEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004012 RID: 16402
-		// (get) Token: 0x0600DA29 RID: 55849 RVA: 0x00208400 File Offset: 0x00206600
+		// Token: 0x1700434A RID: 17226
+		// (get) Token: 0x0600E7F5 RID: 59381 RVA: 0x00224B20 File Offset: 0x00222D20
 		public override EEffectType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004013 RID: 16403
-		// (get) Token: 0x0600DA2A RID: 55850 RVA: 0x0020840D File Offset: 0x0020660D
+		// Token: 0x1700434B RID: 17227
+		// (get) Token: 0x0600E7F6 RID: 59382 RVA: 0x00224B2D File Offset: 0x00222D2D
 		public override string Path
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004014 RID: 16404
-		// (get) Token: 0x0600DA2B RID: 55851 RVA: 0x0020841A File Offset: 0x0020661A
+		// Token: 0x1700434C RID: 17228
+		// (get) Token: 0x0600E7F7 RID: 59383 RVA: 0x00224B3A File Offset: 0x00222D3A
 		public virtual IVector2 ScreenPos
 		{
 			get
@@ -59,8 +57,26 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004015 RID: 16405
-		// (get) Token: 0x0600DA2C RID: 55852 RVA: 0x00208450 File Offset: 0x00206650
+		// Token: 0x1700434D RID: 17229
+		// (get) Token: 0x0600E7F8 RID: 59384 RVA: 0x00224B6E File Offset: 0x00222D6E
+		[Nullable(2)]
+		public virtual IPlayDissolveEffectInActorPosConfig PlayInActorPos
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._PlayInActorPosInited)
+				{
+					return this._PlayInActorPosCache;
+				}
+				this._PlayInActorPosInited = true;
+				this._PlayInActorPosCache = IPlayDissolveEffectInActorPosConfig.Create(this.Instance.PlayInActorPos);
+				return this._PlayInActorPosCache;
+			}
+		}
+
+		// Token: 0x1700434E RID: 17230
+		// (get) Token: 0x0600E7F9 RID: 59385 RVA: 0x00224BA4 File Offset: 0x00222DA4
 		public virtual float? Scale
 		{
 			get
@@ -73,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004016 RID: 16406
-		// (get) Token: 0x0600DA2D RID: 55853 RVA: 0x00208488 File Offset: 0x00206688
+		// Token: 0x1700434F RID: 17231
+		// (get) Token: 0x0600E7FA RID: 59386 RVA: 0x00224BDC File Offset: 0x00222DDC
 		public virtual float? DissolveParam
 		{
 			get
@@ -87,8 +103,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004017 RID: 16407
-		// (get) Token: 0x0600DA2E RID: 55854 RVA: 0x002084C0 File Offset: 0x002066C0
+		// Token: 0x17004350 RID: 17232
+		// (get) Token: 0x0600E7FB RID: 59387 RVA: 0x00224C14 File Offset: 0x00222E14
 		public virtual float? FadeInTime
 		{
 			get
@@ -101,8 +117,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004018 RID: 16408
-		// (get) Token: 0x0600DA2F RID: 55855 RVA: 0x002084F8 File Offset: 0x002066F8
+		// Token: 0x17004351 RID: 17233
+		// (get) Token: 0x0600E7FC RID: 59388 RVA: 0x00224C4C File Offset: 0x00222E4C
 		public virtual float? FadeOutTime
 		{
 			get
@@ -115,8 +131,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004019 RID: 16409
-		// (get) Token: 0x0600DA30 RID: 55856 RVA: 0x00208530 File Offset: 0x00206730
+		// Token: 0x17004352 RID: 17234
+		// (get) Token: 0x0600E7FD RID: 59389 RVA: 0x00224C84 File Offset: 0x00222E84
 		public virtual bool? IsFullScreenMask
 		{
 			get
@@ -129,14 +145,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007924 RID: 31012
+		// Token: 0x04007FBC RID: 32700
 		private IPlayDissolveEffect Instance;
 
-		// Token: 0x04007925 RID: 31013
+		// Token: 0x04007FBD RID: 32701
 		[Nullable(2)]
 		private IVector2 _ScreenPosCache;
 
-		// Token: 0x04007926 RID: 31014
+		// Token: 0x04007FBE RID: 32702
 		private bool _ScreenPosInited;
+
+		// Token: 0x04007FBF RID: 32703
+		[Nullable(2)]
+		private IPlayDissolveEffectInActorPosConfig _PlayInActorPosCache;
+
+		// Token: 0x04007FC0 RID: 32704
+		private bool _PlayInActorPosInited;
 	}
 }

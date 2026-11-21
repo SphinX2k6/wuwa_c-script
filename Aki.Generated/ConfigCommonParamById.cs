@@ -11,13 +11,13 @@ namespace Aki.Config
 	[Nullable(0)]
 	public class ConfigCommonParamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000020 RID: 32 RVA: 0x0005A6D6 File Offset: 0x000588D6
+		// Token: 0x06000020 RID: 32 RVA: 0x0005DF52 File Offset: 0x0005C152
 		static ConfigCommonParamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommonParamById.CreateStaticDefaultValue), new Action(ConfigCommonParamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000021 RID: 33 RVA: 0x0005A6F8 File Offset: 0x000588F8
+		// Token: 0x06000021 RID: 33 RVA: 0x0005DF74 File Offset: 0x0005C174
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommonParamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -39,7 +39,7 @@ namespace Aki.Config
 			ConfigCommonParamById.StringListCache = new Dictionary<string, string[]>();
 		}
 
-		// Token: 0x06000022 RID: 34 RVA: 0x0005A7D4 File Offset: 0x000589D4
+		// Token: 0x06000022 RID: 34 RVA: 0x0005E050 File Offset: 0x0005C250
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommonParamById.LogPair = null;
@@ -55,13 +55,13 @@ namespace Aki.Config
 			ConfigCommonParamById.StringListCache = null;
 		}
 
-		// Token: 0x06000023 RID: 35 RVA: 0x0005A823 File Offset: 0x00058A23
+		// Token: 0x06000023 RID: 35 RVA: 0x0005E09F File Offset: 0x0005C29F
 		public static void Init()
 		{
 			ConfigCommonParamById.HandleId = ConfigCommon.InitDataStatement(ConfigCommonParamById.HandleId, "db_common_param.db", "select BinData from `CommonParam` where KeyName = ?");
 		}
 
-		// Token: 0x06000024 RID: 36 RVA: 0x0005A840 File Offset: 0x00058A40
+		// Token: 0x06000024 RID: 36 RVA: 0x0005E0BC File Offset: 0x0005C2BC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -95,7 +95,7 @@ namespace Aki.Config
 			return new ValueTuple<bool, byte[]>(item, item2.ToArray<byte>());
 		}
 
-		// Token: 0x06000025 RID: 37 RVA: 0x0005A934 File Offset: 0x00058B34
+		// Token: 0x06000025 RID: 37 RVA: 0x0005E1B0 File Offset: 0x0005C3B0
 		public static int? GetIntConfig(string id)
 		{
 			int value;
@@ -121,7 +121,7 @@ namespace Aki.Config
 			return new int?(deserializeConfigResult.Value);
 		}
 
-		// Token: 0x06000026 RID: 38 RVA: 0x0005A9D8 File Offset: 0x00058BD8
+		// Token: 0x06000026 RID: 38 RVA: 0x0005E254 File Offset: 0x0005C454
 		public static float? GetFloatConfig(string id)
 		{
 			float value;
@@ -147,7 +147,7 @@ namespace Aki.Config
 			return new float?(deserializeConfigResult.Value);
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x0005AA7C File Offset: 0x00058C7C
+		// Token: 0x06000027 RID: 39 RVA: 0x0005E2F8 File Offset: 0x0005C4F8
 		public static long? GetLong54Config(string id)
 		{
 			long value;
@@ -173,7 +173,7 @@ namespace Aki.Config
 			return new long?(deserializeConfigResult.Value);
 		}
 
-		// Token: 0x06000028 RID: 40 RVA: 0x0005AB20 File Offset: 0x00058D20
+		// Token: 0x06000028 RID: 40 RVA: 0x0005E39C File Offset: 0x0005C59C
 		public static bool? GetBoolConfig(string id)
 		{
 			bool value;
@@ -199,7 +199,7 @@ namespace Aki.Config
 			return new bool?(deserializeConfigResult.Value);
 		}
 
-		// Token: 0x06000029 RID: 41 RVA: 0x0005ABC4 File Offset: 0x00058DC4
+		// Token: 0x06000029 RID: 41 RVA: 0x0005E440 File Offset: 0x0005C640
 		[return: Nullable(2)]
 		public static string GetStringConfig(string id)
 		{
@@ -226,7 +226,7 @@ namespace Aki.Config
 			return deserializeConfigResult.Value;
 		}
 
-		// Token: 0x0600002A RID: 42 RVA: 0x0005AC4C File Offset: 0x00058E4C
+		// Token: 0x0600002A RID: 42 RVA: 0x0005E4C8 File Offset: 0x0005C6C8
 		[return: Nullable(2)]
 		public static IReadOnlyList<int> GetIntArrayConfig(string id)
 		{
@@ -265,7 +265,7 @@ namespace Aki.Config
 			return array;
 		}
 
-		// Token: 0x0600002B RID: 43 RVA: 0x0005AD28 File Offset: 0x00058F28
+		// Token: 0x0600002B RID: 43 RVA: 0x0005E5A4 File Offset: 0x0005C7A4
 		[return: Nullable(2)]
 		public static IReadOnlyList<float> GetFloatArrayConfig(string id)
 		{
@@ -304,7 +304,7 @@ namespace Aki.Config
 			return array;
 		}
 
-		// Token: 0x0600002C RID: 44 RVA: 0x0005AE04 File Offset: 0x00059004
+		// Token: 0x0600002C RID: 44 RVA: 0x0005E680 File Offset: 0x0005C880
 		[return: Nullable(2)]
 		public static IReadOnlyList<long> GetLong54ArrayConfig(string id)
 		{
@@ -343,7 +343,7 @@ namespace Aki.Config
 			return array;
 		}
 
-		// Token: 0x0600002D RID: 45 RVA: 0x0005AEE0 File Offset: 0x000590E0
+		// Token: 0x0600002D RID: 45 RVA: 0x0005E75C File Offset: 0x0005C95C
 		[return: Nullable(new byte[]
 		{
 			2,

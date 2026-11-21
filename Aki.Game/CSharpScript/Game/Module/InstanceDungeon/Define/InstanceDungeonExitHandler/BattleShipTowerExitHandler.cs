@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058E7 RID: 22759
+	// Token: 0x020048BF RID: 18623
 	public class BattleShipTowerExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D00 RID: 236800 RVA: 0x00DBB6E7 File Offset: 0x00DB98E7
+		// Token: 0x0602EC23 RID: 191523 RVA: 0x00D0A63F File Offset: 0x00D0883F
 		public override bool Checker()
 		{
 			return ShipTowerModel.Instance.CheckInBattleShipTower();
 		}
 
-		// Token: 0x06039D01 RID: 236801 RVA: 0x00DBB6F4 File Offset: 0x00DB98F4
+		// Token: 0x0602EC24 RID: 191524 RVA: 0x00D0A64C File Offset: 0x00D0884C
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

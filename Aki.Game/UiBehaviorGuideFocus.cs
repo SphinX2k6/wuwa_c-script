@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001DCE RID: 7630
+// Token: 0x02001290 RID: 4752
 [NullableContext(1)]
 [Nullable(0)]
 public class UiBehaviorGuideFocus : IUiBehavior
 {
-	// Token: 0x0600E83E RID: 59454 RVA: 0x0036EA48 File Offset: 0x0036CC48
+	// Token: 0x0600BC5D RID: 48221 RVA: 0x0037A748 File Offset: 0x00378948
 	public UiBehaviorGuideFocus(UiPanelBase owner)
 	{
 		this.Owner = owner;
@@ -31,7 +31,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		this.UiGuideMark = (obj as UUIGuideMarkComponent);
 	}
 
-	// Token: 0x0600E83F RID: 59455 RVA: 0x0036EA95 File Offset: 0x0036CC95
+	// Token: 0x0600BC5E RID: 48222 RVA: 0x0037A795 File Offset: 0x00378995
 	public void SetOwner(UiPanelBase owner)
 	{
 		this.Owner = owner;
@@ -49,7 +49,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		this.UiGuideMark = (obj as UUIGuideMarkComponent);
 	}
 
-	// Token: 0x0600E840 RID: 59456 RVA: 0x0036EAD4 File Offset: 0x0036CCD4
+	// Token: 0x0600BC5F RID: 48223 RVA: 0x0037A7D4 File Offset: 0x003789D4
 	public void SetParam(params object[] @params)
 	{
 		this.GuideStepInfo = (@params[0] as GuideStepInfo);
@@ -86,19 +86,19 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		}
 	}
 
-	// Token: 0x0600E841 RID: 59457 RVA: 0x0036EC0A File Offset: 0x0036CE0A
+	// Token: 0x0600BC60 RID: 48224 RVA: 0x0037A90A File Offset: 0x00378B0A
 	public UniTask OnUiCreateAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600E842 RID: 59458 RVA: 0x0036EC11 File Offset: 0x0036CE11
-	public void OnAfterUiStart()
+	// Token: 0x0600BC61 RID: 48225 RVA: 0x0037A911 File Offset: 0x00378B11
+	public void OnUiStart()
 	{
 	}
 
-	// Token: 0x0600E843 RID: 59459 RVA: 0x0036EC14 File Offset: 0x0036CE14
-	public void OnAfterUiShow()
+	// Token: 0x0600BC62 RID: 48226 RVA: 0x0037A914 File Offset: 0x00378B14
+	public void OnUiShow()
 	{
 		if (this.GuideStepInfo == null)
 		{
@@ -117,8 +117,8 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		guideView.Show(null);
 	}
 
-	// Token: 0x0600E844 RID: 59460 RVA: 0x0036EC67 File Offset: 0x0036CE67
-	public void OnBeforeUiHide()
+	// Token: 0x0600BC63 RID: 48227 RVA: 0x0037A967 File Offset: 0x00378B67
+	public void OnUiHide()
 	{
 		if (this.GuideStepInfo == null)
 		{
@@ -132,14 +132,14 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		guideView.Hide(null);
 	}
 
-	// Token: 0x0600E845 RID: 59461 RVA: 0x0036EC88 File Offset: 0x0036CE88
+	// Token: 0x0600BC64 RID: 48228 RVA: 0x0037A988 File Offset: 0x00378B88
 	public void CleanGuideStep()
 	{
 		this.GuideStepInfo = null;
 	}
 
-	// Token: 0x0600E846 RID: 59462 RVA: 0x0036EC94 File Offset: 0x0036CE94
-	public void OnBeforeDestroy()
+	// Token: 0x0600BC65 RID: 48229 RVA: 0x0037A994 File Offset: 0x00378B94
+	public void OnDestroy()
 	{
 		if (this.GuideStepInfo == null)
 		{
@@ -165,7 +165,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		this.GuideStepInfo = null;
 	}
 
-	// Token: 0x0600E847 RID: 59463 RVA: 0x0036ED10 File Offset: 0x0036CF10
+	// Token: 0x0600BC66 RID: 48230 RVA: 0x0037AA10 File Offset: 0x00378C10
 	public unsafe bool PrepareForOpenGuideFocus()
 	{
 		this.GuideStepInfo.ViewData.ResetAttachedUiItem();
@@ -207,7 +207,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return true;
 	}
 
-	// Token: 0x0600E848 RID: 59464 RVA: 0x0036EE98 File Offset: 0x0036D098
+	// Token: 0x0600BC67 RID: 48231 RVA: 0x0037AB98 File Offset: 0x00378D98
 	private bool TryAttachUiItem()
 	{
 		if (this.Owner == null)
@@ -222,7 +222,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return this.TryAttachGmTest() || this.TryMultiAttach() || this.TryAttachUiItemByGuideMark(value.GuideMarkName, value.GuideMarkNameForShow) || this.TryAttachUiItemByExtraParam(value.ExtraParam()) || this.TryAttachUiItemByHook(value.HookName, value.HookNameForShow);
 	}
 
-	// Token: 0x0600E849 RID: 59465 RVA: 0x0036EF30 File Offset: 0x0036D130
+	// Token: 0x0600BC68 RID: 48232 RVA: 0x0037AC30 File Offset: 0x00378E30
 	private unsafe bool TryMultiAttach()
 	{
 		GuideStepInfo guideStepInfo = this.GuideStepInfo;
@@ -291,7 +291,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return true;
 	}
 
-	// Token: 0x0600E84A RID: 59466 RVA: 0x0036F138 File Offset: 0x0036D338
+	// Token: 0x0600BC69 RID: 48233 RVA: 0x0037AE38 File Offset: 0x00379038
 	private unsafe bool TryAttachUiItemByGuideMark(string configName, string configNameForShow)
 	{
 		GuideStepInfo guideStepInfo = this.GuideStepInfo;
@@ -387,7 +387,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return true;
 	}
 
-	// Token: 0x0600E84B RID: 59467 RVA: 0x0036F3D4 File Offset: 0x0036D5D4
+	// Token: 0x0600BC6A RID: 48234 RVA: 0x0037B0D4 File Offset: 0x003792D4
 	private bool TryAttachUiItemByExtraParam(string[] configExtraParams)
 	{
 		GuideStepInfo guideStepInfo = this.GuideStepInfo;
@@ -417,7 +417,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return true;
 	}
 
-	// Token: 0x0600E84C RID: 59468 RVA: 0x0036F474 File Offset: 0x0036D674
+	// Token: 0x0600BC6B RID: 48235 RVA: 0x0037B174 File Offset: 0x00379374
 	private unsafe bool TryAttachUiItemByHook(string configHookName, string configHookNameForShow)
 	{
 		GuideStepInfo guideStepInfo = this.GuideStepInfo;
@@ -464,7 +464,7 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return true;
 	}
 
-	// Token: 0x0600E84D RID: 59469 RVA: 0x0036F670 File Offset: 0x0036D870
+	// Token: 0x0600BC6C RID: 48236 RVA: 0x0037B370 File Offset: 0x00379570
 	private bool TryAttachGmTest()
 	{
 		if (!GuideTestUtil.CheckIsGmTest(this.FocusConfig.Value))
@@ -490,26 +490,26 @@ public class UiBehaviorGuideFocus : IUiBehavior
 		return false;
 	}
 
-	// Token: 0x04006B6F RID: 27503
+	// Token: 0x04006C50 RID: 27728
 	[Nullable(2)]
 	private GuideStepInfo GuideStepInfo;
 
-	// Token: 0x04006B70 RID: 27504
+	// Token: 0x04006C51 RID: 27729
 	[Nullable(2)]
 	private string FocusConfViewName;
 
-	// Token: 0x04006B71 RID: 27505
+	// Token: 0x04006C52 RID: 27730
 	[Nullable(2)]
 	private string RealViewName;
 
-	// Token: 0x04006B72 RID: 27506
+	// Token: 0x04006C53 RID: 27731
 	private GuideFocusNew? FocusConfig;
 
-	// Token: 0x04006B73 RID: 27507
+	// Token: 0x04006C54 RID: 27732
 	[Nullable(2)]
 	private UiPanelBase Owner;
 
-	// Token: 0x04006B74 RID: 27508
+	// Token: 0x04006C55 RID: 27733
 	[Nullable(2)]
 	private UUIGuideMarkComponent UiGuideMark;
 }

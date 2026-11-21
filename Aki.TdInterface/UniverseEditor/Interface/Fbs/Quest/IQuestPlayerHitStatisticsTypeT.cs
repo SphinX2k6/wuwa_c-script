@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004005 RID: 16389
+	// Token: 0x02004446 RID: 17478
 	public class IQuestPlayerHitStatisticsTypeT
 	{
-		// Token: 0x1700732E RID: 29486
-		// (get) Token: 0x06017A70 RID: 96880 RVA: 0x0036979E File Offset: 0x0036799E
-		// (set) Token: 0x06017A71 RID: 96881 RVA: 0x003697A6 File Offset: 0x003679A6
+		// Token: 0x17007930 RID: 31024
+		// (get) Token: 0x06019109 RID: 102665 RVA: 0x00393592 File Offset: 0x00391792
+		// (set) Token: 0x0601910A RID: 102666 RVA: 0x0039359A File Offset: 0x0039179A
 		public EPlayerHitStatisticsType Type { get; set; }
 
-		// Token: 0x06017A72 RID: 96882 RVA: 0x003697AF File Offset: 0x003679AF
+		// Token: 0x0601910B RID: 102667 RVA: 0x003935A3 File Offset: 0x003917A3
 		public IQuestPlayerHitStatisticsTypeT()
 		{
 			this.Type = EPlayerHitStatisticsType.HitCount;

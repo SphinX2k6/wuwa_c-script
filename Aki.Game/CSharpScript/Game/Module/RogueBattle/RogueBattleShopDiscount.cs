@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EA7 RID: 20135
+	// Token: 0x02003E70 RID: 15984
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleShopDiscount : MediumItemGridComponent
 	{
-		// Token: 0x06033BB7 RID: 211895 RVA: 0x00C1E7F4 File Offset: 0x00C1C9F4
+		// Token: 0x06028A22 RID: 166434 RVA: 0x00B67D0C File Offset: 0x00B65F0C
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemDiscount";
 		}
 
-		// Token: 0x06033BB8 RID: 211896 RVA: 0x00C1E7FB File Offset: 0x00C1C9FB
+		// Token: 0x06028A23 RID: 166435 RVA: 0x00B67D13 File Offset: 0x00B65F13
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BB9 RID: 211897 RVA: 0x00C1E834 File Offset: 0x00C1CA34
+		// Token: 0x06028A24 RID: 166436 RVA: 0x00B67D4C File Offset: 0x00B65F4C
 		protected override void OnRefresh(object data)
 		{
 			RogueResGainData rogueResGainData = (RogueResGainData)data;

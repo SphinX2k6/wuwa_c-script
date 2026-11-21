@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000662 RID: 1634
+	// Token: 0x0200067A RID: 1658
 	public class ConfigPhantomBattleCardElementById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600265C RID: 9820 RVA: 0x0013292C File Offset: 0x00130B2C
+		// Token: 0x060026EC RID: 9964 RVA: 0x001393A8 File Offset: 0x001375A8
 		static ConfigPhantomBattleCardElementById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomBattleCardElementById.CreateStaticDefaultValue), new Action(ConfigPhantomBattleCardElementById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600265D RID: 9821 RVA: 0x0013294C File Offset: 0x00130B4C
+		// Token: 0x060026ED RID: 9965 RVA: 0x001393C8 File Offset: 0x001375C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomBattleCardElementById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600265E RID: 9822 RVA: 0x001329CB File Offset: 0x00130BCB
+		// Token: 0x060026EE RID: 9966 RVA: 0x00139447 File Offset: 0x00137647
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomBattleCardElementById.LogPair = null;
 			ConfigPhantomBattleCardElementById.HandleId = 0;
 		}
 
-		// Token: 0x0600265F RID: 9823 RVA: 0x001329D9 File Offset: 0x00130BD9
+		// Token: 0x060026EF RID: 9967 RVA: 0x00139455 File Offset: 0x00137655
 		public static void Init()
 		{
 			ConfigPhantomBattleCardElementById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomBattleCardElementById.HandleId, "db_phantombattle.db", "select BinData from `PhantomBattleCardElement` where Id=?");
 		}
 
-		// Token: 0x06002660 RID: 9824 RVA: 0x001329F4 File Offset: 0x00130BF4
+		// Token: 0x060026F0 RID: 9968 RVA: 0x00139470 File Offset: 0x00137670
 		public static PhantomBattleCardElement? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomBattleCardElementById.HandleId, ConfigPhantomBattleCardElementById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomBattleCardElement?(rootAsPhantomBattleCardElement);
 		}
 
-		// Token: 0x04002C94 RID: 11412
+		// Token: 0x04002D3C RID: 11580
 		private const string DB = "db_phantombattle.db";
 
-		// Token: 0x04002C95 RID: 11413
+		// Token: 0x04002D3D RID: 11581
 		private const string FILE = "s.声骸大作战外围.xlsx";
 
-		// Token: 0x04002C96 RID: 11414
+		// Token: 0x04002D3E RID: 11582
 		private const string TABLE = "PhantomBattleCardElement";
 
-		// Token: 0x04002C97 RID: 11415
+		// Token: 0x04002D3F RID: 11583
 		private const string COMMAND = "select BinData from `PhantomBattleCardElement` where Id=?";
 
-		// Token: 0x04002C98 RID: 11416
+		// Token: 0x04002D40 RID: 11584
 		private const string KEY_PREFIX = "PhantomBattleCardElementById";
 
-		// Token: 0x04002C99 RID: 11417
+		// Token: 0x04002D41 RID: 11585
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C9A RID: 11418
+		// Token: 0x04002D42 RID: 11586
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x0200450E RID: 17678
+	// Token: 0x02003430 RID: 13360
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CustomVariable
 	{
-		// Token: 0x0602D806 RID: 186374 RVA: 0x00A44B08 File Offset: 0x00A42D08
+		// Token: 0x06021ED6 RID: 138966 RVA: 0x00970918 File Offset: 0x0096EB18
 		private CustomVariable(Dictionary<string, string> customVariableStr)
 		{
 			foreach (KeyValuePair<string, string> keyValuePair in customVariableStr)
@@ -20,7 +20,7 @@ namespace CSharpScript.Utils
 			this.VariableMap.Clear();
 		}
 
-		// Token: 0x0602D807 RID: 186375 RVA: 0x00A44BA8 File Offset: 0x00A42DA8
+		// Token: 0x06021ED7 RID: 138967 RVA: 0x009709B8 File Offset: 0x0096EBB8
 		public unsafe static CustomVariable Create(Dictionary<string, string> customVariable, string reason)
 		{
 			CustomVariable customVariable2 = new CustomVariable(customVariable);
@@ -44,7 +44,7 @@ namespace CSharpScript.Utils
 			return customVariable2;
 		}
 
-		// Token: 0x0602D808 RID: 186376 RVA: 0x00A44C9C File Offset: 0x00A42E9C
+		// Token: 0x06021ED8 RID: 138968 RVA: 0x00970AAC File Offset: 0x0096ECAC
 		private void ParseCustomVariables(string variableName, string variableStr)
 		{
 			string[] array = variableStr.Replace(" ", string.Empty).Split('#', StringSplitOptions.None);
@@ -142,13 +142,13 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D809 RID: 186377 RVA: 0x00A44EAF File Offset: 0x00A430AF
+		// Token: 0x06021ED9 RID: 138969 RVA: 0x00970CBF File Offset: 0x0096EEBF
 		public bool HasVariable(string variableName)
 		{
 			return this.VariableMap.ContainsKey(variableName);
 		}
 
-		// Token: 0x0602D80A RID: 186378 RVA: 0x00A44EC0 File Offset: 0x00A430C0
+		// Token: 0x06021EDA RID: 138970 RVA: 0x00970CD0 File Offset: 0x0096EED0
 		public TFormulaValue GetVariable(string variableName)
 		{
 			IVariable variable;
@@ -159,19 +159,19 @@ namespace CSharpScript.Utils
 			return default(TFormulaValue);
 		}
 
-		// Token: 0x0602D80B RID: 186379 RVA: 0x00A44EED File Offset: 0x00A430ED
+		// Token: 0x06021EDB RID: 138971 RVA: 0x00970CFD File Offset: 0x0096EEFD
 		private void AddDebugInfo(string debugStr)
 		{
 			this._logInfo.Add(debugStr);
 		}
 
-		// Token: 0x04018521 RID: 99617
+		// Token: 0x04012B49 RID: 76617
 		private readonly Dictionary<string, string> _customVariableStr = new Dictionary<string, string>();
 
-		// Token: 0x04018522 RID: 99618
+		// Token: 0x04012B4A RID: 76618
 		public readonly Dictionary<string, IVariable> VariableMap = new Dictionary<string, IVariable>();
 
-		// Token: 0x04018523 RID: 99619
+		// Token: 0x04012B4B RID: 76619
 		private readonly List<string> _logInfo = new List<string>();
 	}
 }

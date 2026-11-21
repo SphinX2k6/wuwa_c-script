@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004679 RID: 18041
+	// Token: 0x02004AE1 RID: 19169
 	public class IOpenDungeonEntranceT
 	{
-		// Token: 0x1700801E RID: 32798
-		// (get) Token: 0x0601B63B RID: 112187 RVA: 0x003E4930 File Offset: 0x003E2B30
-		// (set) Token: 0x0601B63C RID: 112188 RVA: 0x003E4938 File Offset: 0x003E2B38
+		// Token: 0x1700865F RID: 34399
+		// (get) Token: 0x0601CE10 RID: 118288 RVA: 0x00410BCC File Offset: 0x0040EDCC
+		// (set) Token: 0x0601CE11 RID: 118289 RVA: 0x00410BD4 File Offset: 0x0040EDD4
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x1700801F RID: 32799
-		// (get) Token: 0x0601B63D RID: 112189 RVA: 0x003E4941 File Offset: 0x003E2B41
-		// (set) Token: 0x0601B63E RID: 112190 RVA: 0x003E4949 File Offset: 0x003E2B49
+		// Token: 0x17008660 RID: 34400
+		// (get) Token: 0x0601CE12 RID: 118290 RVA: 0x00410BDD File Offset: 0x0040EDDD
+		// (set) Token: 0x0601CE13 RID: 118291 RVA: 0x00410BE5 File Offset: 0x0040EDE5
 		public int EntranceId { get; set; }
 
-		// Token: 0x0601B63F RID: 112191 RVA: 0x003E4952 File Offset: 0x003E2B52
+		// Token: 0x0601CE14 RID: 118292 RVA: 0x00410BEE File Offset: 0x0040EDEE
 		public IOpenDungeonEntranceT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

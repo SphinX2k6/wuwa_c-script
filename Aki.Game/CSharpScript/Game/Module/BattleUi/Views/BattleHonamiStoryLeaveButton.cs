@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D50 RID: 23888
+	// Token: 0x02004D32 RID: 19762
 	public class BattleHonamiStoryLeaveButton : BattleEntranceButton
 	{
-		// Token: 0x0603CA5D RID: 248413 RVA: 0x00E8E45C File Offset: 0x00E8C65C
+		// Token: 0x060319B6 RID: 203190 RVA: 0x00DDEC10 File Offset: 0x00DDCE10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CA5E RID: 248414 RVA: 0x00E8E4F0 File Offset: 0x00E8C6F0
+		// Token: 0x060319B7 RID: 203191 RVA: 0x00DDECA4 File Offset: 0x00DDCEA4
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CA5F RID: 248415 RVA: 0x00E8E544 File Offset: 0x00E8C744
+		// Token: 0x060319B8 RID: 203192 RVA: 0x00DDECF8 File Offset: 0x00DDCEF8
 		public override void Reset()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -63,19 +63,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CA60 RID: 248416 RVA: 0x00E8E56A File Offset: 0x00E8C76A
+		// Token: 0x060319B9 RID: 203193 RVA: 0x00DDED1E File Offset: 0x00DDCF1E
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnHonamiStoryLeaveButtonUpdate, new Action(this.OnSafeLeaveUpdate));
 		}
 
-		// Token: 0x0603CA61 RID: 248417 RVA: 0x00E8E588 File Offset: 0x00E8C788
+		// Token: 0x060319BA RID: 203194 RVA: 0x00DDED3C File Offset: 0x00DDCF3C
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryLeaveButtonUpdate, new Action(this.OnSafeLeaveUpdate));
 		}
 
-		// Token: 0x0603CA62 RID: 248418 RVA: 0x00E8E5A6 File Offset: 0x00E8C7A6
+		// Token: 0x060319BB RID: 203195 RVA: 0x00DDED5A File Offset: 0x00DDCF5A
 		private void OnSafeLeaveUpdate()
 		{
 			if (BattleHonamiStoryLeaveButton.CanSafeLeave())
@@ -94,34 +94,34 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA63 RID: 248419 RVA: 0x00E8E5D9 File Offset: 0x00E8C7D9
+		// Token: 0x060319BC RID: 203196 RVA: 0x00DDED8D File Offset: 0x00DDCF8D
 		private static void OnLeaveClick()
 		{
 			HonamiStoryController.Instance.TryHonamiStoryInstLeave(false);
 		}
 
-		// Token: 0x0603CA64 RID: 248420 RVA: 0x00E8E5E6 File Offset: 0x00E8C7E6
+		// Token: 0x060319BD RID: 203197 RVA: 0x00DDED9A File Offset: 0x00DDCF9A
 		private static bool CanSafeLeave()
 		{
 			return HonamiStoryModel.Instance.CanSafeLeave;
 		}
 
-		// Token: 0x0401F97A RID: 129402
+		// Token: 0x0401A433 RID: 107571
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200BFF5 RID: 49141
+		// Token: 0x0200A9FB RID: 43515
 		private enum EComponentType
 		{
-			// Token: 0x04039ED8 RID: 237272
+			// Token: 0x0403489A RID: 215194
 			LeaveButton
 		}
 
-		// Token: 0x0200BFF6 RID: 49142
+		// Token: 0x0200A9FC RID: 43516
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04039ED9 RID: 237273
+			// Token: 0x0403489B RID: 215195
 			public static Action <0>__OnLeaveClick;
 		}
 	}

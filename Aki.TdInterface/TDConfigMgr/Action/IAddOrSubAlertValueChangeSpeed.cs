@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017AA RID: 6058
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200192D RID: 6445
 	public class IAddOrSubAlertValueChangeSpeed : IAlertValueSpeedChangeType
 	{
-		// Token: 0x06008033 RID: 32819 RVA: 0x00132014 File Offset: 0x00130214
+		// Token: 0x0600872D RID: 34605 RVA: 0x00141374 File Offset: 0x0013F574
 		private IAddOrSubAlertValueChangeSpeed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008034 RID: 32820 RVA: 0x0013204C File Offset: 0x0013024C
+		// Token: 0x0600872E RID: 34606 RVA: 0x001413AC File Offset: 0x0013F5AC
 		public static IAddOrSubAlertValueChangeSpeed Create([Nullable(2)] IAddOrSubAlertValueChangeSpeed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008035 RID: 32821 RVA: 0x0013205F File Offset: 0x0013025F
+		// Token: 0x0600872F RID: 34607 RVA: 0x001413BF File Offset: 0x0013F5BF
 		public static IAddOrSubAlertValueChangeSpeed CreateFromSetValue([Nullable(2)] IAddOrSubAlertValueChangeSpeed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008036 RID: 32822 RVA: 0x00132072 File Offset: 0x00130272
+		// Token: 0x06008730 RID: 34608 RVA: 0x001413D2 File Offset: 0x0013F5D2
 		public new IAddOrSubAlertValueChangeSpeed_SetValue ToSetValue()
 		{
 			return new IAddOrSubAlertValueChangeSpeed_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029EF RID: 10735
-		// (get) Token: 0x06008037 RID: 32823 RVA: 0x00132091 File Offset: 0x00130291
-		// (set) Token: 0x06008038 RID: 32824 RVA: 0x001320BC File Offset: 0x001302BC
+		// Token: 0x17002BDF RID: 11231
+		// (get) Token: 0x06008731 RID: 34609 RVA: 0x001413F1 File Offset: 0x0013F5F1
+		// (set) Token: 0x06008732 RID: 34610 RVA: 0x0014141C File Offset: 0x0013F61C
 		public override EValueChangeType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029F0 RID: 10736
-		// (get) Token: 0x06008039 RID: 32825 RVA: 0x001320CA File Offset: 0x001302CA
-		// (set) Token: 0x0600803A RID: 32826 RVA: 0x001320F9 File Offset: 0x001302F9
+		// Token: 0x17002BE0 RID: 11232
+		// (get) Token: 0x06008733 RID: 34611 RVA: 0x0014142A File Offset: 0x0013F62A
+		// (set) Token: 0x06008734 RID: 34612 RVA: 0x00141459 File Offset: 0x0013F659
 		public virtual float DeltaValue
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400515C RID: 20828
+		// Token: 0x04005596 RID: 21910
 		[Nullable(2)]
 		protected new IAddOrSubAlertValueChangeSpeed FbInstance;
 
-		// Token: 0x0400515D RID: 20829
+		// Token: 0x04005597 RID: 21911
 		[Nullable(2)]
 		protected new IAddOrSubAlertValueChangeSpeed_SetValue PocoInterface;
 	}

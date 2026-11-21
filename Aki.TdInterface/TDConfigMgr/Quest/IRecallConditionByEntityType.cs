@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010D8 RID: 4312
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001206 RID: 4614
 	public class IRecallConditionByEntityType : IRecallConditionBase
 	{
-		// Token: 0x06006184 RID: 24964 RVA: 0x000EB6E4 File Offset: 0x000E98E4
+		// Token: 0x0600677D RID: 26493 RVA: 0x000F8804 File Offset: 0x000F6A04
 		private IRecallConditionByEntityType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006185 RID: 24965 RVA: 0x000EB71C File Offset: 0x000E991C
+		// Token: 0x0600677E RID: 26494 RVA: 0x000F883C File Offset: 0x000F6A3C
 		public static IRecallConditionByEntityType Create([Nullable(2)] IRecallConditionByEntityType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006186 RID: 24966 RVA: 0x000EB72F File Offset: 0x000E992F
+		// Token: 0x0600677F RID: 26495 RVA: 0x000F884F File Offset: 0x000F6A4F
 		public static IRecallConditionByEntityType CreateFromSetValue([Nullable(2)] IRecallConditionByEntityType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006187 RID: 24967 RVA: 0x000EB742 File Offset: 0x000E9942
+		// Token: 0x06006780 RID: 26496 RVA: 0x000F8862 File Offset: 0x000F6A62
 		public new IRecallConditionByEntityType_SetValue ToSetValue()
 		{
 			return new IRecallConditionByEntityType_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002002 RID: 8194
-		// (get) Token: 0x06006188 RID: 24968 RVA: 0x000EB779 File Offset: 0x000E9979
-		// (set) Token: 0x06006189 RID: 24969 RVA: 0x000EB7A4 File Offset: 0x000E99A4
+		// Token: 0x170021B4 RID: 8628
+		// (get) Token: 0x06006781 RID: 26497 RVA: 0x000F8899 File Offset: 0x000F6A99
+		// (set) Token: 0x06006782 RID: 26498 RVA: 0x000F88C4 File Offset: 0x000F6AC4
 		public override ERecallConditionType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002003 RID: 8195
-		// (get) Token: 0x0600618A RID: 24970 RVA: 0x000EB7B2 File Offset: 0x000E99B2
-		// (set) Token: 0x0600618B RID: 24971 RVA: 0x000EB7DD File Offset: 0x000E99DD
+		// Token: 0x170021B5 RID: 8629
+		// (get) Token: 0x06006783 RID: 26499 RVA: 0x000F88D2 File Offset: 0x000F6AD2
+		// (set) Token: 0x06006784 RID: 26500 RVA: 0x000F88FD File Offset: 0x000F6AFD
 		public override ERecallOperation Operation
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002004 RID: 8196
-		// (get) Token: 0x0600618C RID: 24972 RVA: 0x000EB7EB File Offset: 0x000E99EB
-		// (set) Token: 0x0600618D RID: 24973 RVA: 0x000EB812 File Offset: 0x000E9A12
+		// Token: 0x170021B6 RID: 8630
+		// (get) Token: 0x06006785 RID: 26501 RVA: 0x000F890B File Offset: 0x000F6B0B
+		// (set) Token: 0x06006786 RID: 26502 RVA: 0x000F8932 File Offset: 0x000F6B32
 		public virtual List<string> EntityTypes
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002005 RID: 8197
-		// (get) Token: 0x0600618E RID: 24974 RVA: 0x000EB820 File Offset: 0x000E9A20
-		// (set) Token: 0x0600618F RID: 24975 RVA: 0x000EB847 File Offset: 0x000E9A47
+		// Token: 0x170021B7 RID: 8631
+		// (get) Token: 0x06006787 RID: 26503 RVA: 0x000F8940 File Offset: 0x000F6B40
+		// (set) Token: 0x06006788 RID: 26504 RVA: 0x000F8967 File Offset: 0x000F6B67
 		public virtual List<int> AreaIds
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003AB1 RID: 15025
+		// Token: 0x04003DFE RID: 15870
 		[Nullable(2)]
 		protected new IRecallConditionByEntityType FbInstance;
 
-		// Token: 0x04003AB2 RID: 15026
+		// Token: 0x04003DFF RID: 15871
 		[Nullable(2)]
 		protected new IRecallConditionByEntityType_SetValue PocoInterface;
 	}

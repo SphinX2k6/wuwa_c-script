@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200318E RID: 12686
+// Token: 0x020026FB RID: 9979
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SpecialSkillBase
 {
-	// Token: 0x0601B4F2 RID: 111858 RVA: 0x00774B5A File Offset: 0x00772D5A
+	// Token: 0x06018FF7 RID: 102391 RVA: 0x0079C4BE File Offset: 0x0079A6BE
 	protected SpecialSkillBase(CharacterSpecialSkillComponent specialSkillComponent)
 	{
 		this.SpecialSkillComponent = specialSkillComponent;
 	}
 
-	// Token: 0x0601B4F3 RID: 111859 RVA: 0x00774B95 File Offset: 0x00772D95
+	// Token: 0x06018FF8 RID: 102392 RVA: 0x0079C4F9 File Offset: 0x0079A6F9
 	public static T Spawn<[Nullable(0)] T>(CharacterSpecialSkillComponent specialSkillComponent) where T : SpecialSkillBase
 	{
 		return (T)((object)Activator.CreateInstance(typeof(T), new object[]
@@ -24,29 +23,31 @@ public abstract class SpecialSkillBase
 		}));
 	}
 
-	// Token: 0x0601B4F4 RID: 111860 RVA: 0x00774BB5 File Offset: 0x00772DB5
+	// Token: 0x06018FF9 RID: 102393 RVA: 0x0079C519 File Offset: 0x0079A719
 	public virtual void OnStart()
 	{
 	}
 
-	// Token: 0x0601B4F5 RID: 111861 RVA: 0x00774BB7 File Offset: 0x00772DB7
+	// Token: 0x06018FFA RID: 102394 RVA: 0x0079C51B File Offset: 0x0079A71B
 	public virtual void OnActivate()
 	{
 	}
 
-	// Token: 0x0601B4F6 RID: 111862 RVA: 0x00774BB9 File Offset: 0x00772DB9
+	// Token: 0x06018FFB RID: 102395 RVA: 0x0079C51D File Offset: 0x0079A71D
 	public virtual void OnEnd()
 	{
 	}
 
-	// Token: 0x0601B4F7 RID: 111863 RVA: 0x00774BBC File Offset: 0x00772DBC
+	// Token: 0x06018FFC RID: 102396 RVA: 0x0079C520 File Offset: 0x0079A720
 	public virtual void OnTick(float delta)
 	{
 		if (this.ActiveCodeSkills.Count == 0)
 		{
 			return;
 		}
-		foreach (KeyValuePair<int, CodeSkillBase> keyValuePair in this.ActiveCodeSkills.ToArray<KeyValuePair<int, CodeSkillBase>>())
+		KeyValuePair<int, CodeSkillBase>[] array = new KeyValuePair<int, CodeSkillBase>[this.ActiveCodeSkills.Count];
+		((ICollection<KeyValuePair<int, CodeSkillBase>>)this.ActiveCodeSkills).CopyTo(array, 0);
+		foreach (KeyValuePair<int, CodeSkillBase> keyValuePair in array)
 		{
 			int num;
 			CodeSkillBase codeSkillBase;
@@ -61,22 +62,17 @@ public abstract class SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B4F8 RID: 111864 RVA: 0x00774C26 File Offset: 0x00772E26
+	// Token: 0x06018FFD RID: 102397 RVA: 0x0079C5A0 File Offset: 0x0079A7A0
 	public virtual void OnEnable()
 	{
 	}
 
-	// Token: 0x0601B4F9 RID: 111865 RVA: 0x00774C28 File Offset: 0x00772E28
+	// Token: 0x06018FFE RID: 102398 RVA: 0x0079C5A2 File Offset: 0x0079A7A2
 	public virtual void OnDisable()
 	{
 	}
 
-	// Token: 0x0601B4FA RID: 111866 RVA: 0x00774C2A File Offset: 0x00772E2A
-	public static void SetOptimizeEnable(bool enable)
-	{
-	}
-
-	// Token: 0x0601B4FB RID: 111867 RVA: 0x00774C2C File Offset: 0x00772E2C
+	// Token: 0x06018FFF RID: 102399 RVA: 0x0079C5A4 File Offset: 0x0079A7A4
 	protected void RegisterCodeFunction(string functionName, CodeFunctionBase codeFunction)
 	{
 		if (string.IsNullOrEmpty(functionName))
@@ -97,7 +93,7 @@ public abstract class SpecialSkillBase
 		this.CodeFunctions[functionName] = codeFunction;
 	}
 
-	// Token: 0x0601B4FC RID: 111868 RVA: 0x00774CA8 File Offset: 0x00772EA8
+	// Token: 0x06019000 RID: 102400 RVA: 0x0079C620 File Offset: 0x0079A820
 	public unsafe FKuroCodeFunctionResult ExecuteCodeFunction(string functionName, FKuroCodeFunctionPayload payload)
 	{
 		if (string.IsNullOrEmpty(functionName))
@@ -130,7 +126,7 @@ public abstract class SpecialSkillBase
 		return result;
 	}
 
-	// Token: 0x0601B4FD RID: 111869 RVA: 0x00774D80 File Offset: 0x00772F80
+	// Token: 0x06019001 RID: 102401 RVA: 0x0079C6F8 File Offset: 0x0079A8F8
 	protected void RegisterCodeAnimNotify(string eventName, CodeAnimNotifyBase codeAnimNotify)
 	{
 		if (string.IsNullOrEmpty(eventName))
@@ -151,7 +147,7 @@ public abstract class SpecialSkillBase
 		this.CodeAnimNotifies[eventName] = codeAnimNotify;
 	}
 
-	// Token: 0x0601B4FE RID: 111870 RVA: 0x00774DFC File Offset: 0x00772FFC
+	// Token: 0x06019002 RID: 102402 RVA: 0x0079C774 File Offset: 0x0079A974
 	public void DispatchCodeAnimNotify(string eventName, FKuroCodeFunctionPayload payload)
 	{
 		this.InvokeCodeAnimNotify(eventName, "OnNotify", delegate(CodeAnimNotifyBase codeAnimNotify)
@@ -160,7 +156,7 @@ public abstract class SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B4FF RID: 111871 RVA: 0x00774E30 File Offset: 0x00773030
+	// Token: 0x06019003 RID: 102403 RVA: 0x0079C7A8 File Offset: 0x0079A9A8
 	public void DispatchCodeAnimNotifyBegin(string eventName, float totalDuration, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		this.InvokeCodeAnimNotify(eventName, "OnNotifyBegin", delegate(CodeAnimNotifyBase codeAnimNotify)
@@ -169,7 +165,7 @@ public abstract class SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B500 RID: 111872 RVA: 0x00774E74 File Offset: 0x00773074
+	// Token: 0x06019004 RID: 102404 RVA: 0x0079C7EC File Offset: 0x0079A9EC
 	public void DispatchCodeAnimNotifyTick(string eventName, float delta, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		this.InvokeCodeAnimNotify(eventName, "OnNotifyTick", delegate(CodeAnimNotifyBase codeAnimNotify)
@@ -178,7 +174,7 @@ public abstract class SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B501 RID: 111873 RVA: 0x00774EB8 File Offset: 0x007730B8
+	// Token: 0x06019005 RID: 102405 RVA: 0x0079C830 File Offset: 0x0079AA30
 	public void DispatchCodeAnimNotifyEnd(string eventName, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		this.InvokeCodeAnimNotify(eventName, "OnNotifyEnd", delegate(CodeAnimNotifyBase codeAnimNotify)
@@ -187,7 +183,7 @@ public abstract class SpecialSkillBase
 		});
 	}
 
-	// Token: 0x0601B502 RID: 111874 RVA: 0x00774EF4 File Offset: 0x007730F4
+	// Token: 0x06019006 RID: 102406 RVA: 0x0079C86C File Offset: 0x0079AA6C
 	private unsafe void InvokeCodeAnimNotify(string eventName, string phase, Action<CodeAnimNotifyBase> invoke)
 	{
 		if (string.IsNullOrEmpty(eventName))
@@ -230,13 +226,13 @@ public abstract class SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B503 RID: 111875 RVA: 0x00775004 File Offset: 0x00773204
+	// Token: 0x06019007 RID: 102407 RVA: 0x0079C97C File Offset: 0x0079AB7C
 	public Entity GetOwnerEntity()
 	{
 		return this.SpecialSkillComponent.Entity;
 	}
 
-	// Token: 0x0601B504 RID: 111876 RVA: 0x00775011 File Offset: 0x00773211
+	// Token: 0x06019008 RID: 102408 RVA: 0x0079C989 File Offset: 0x0079AB89
 	public BaseSkillComponent GetSkillComp()
 	{
 		if (this.SkillCompCache == null)
@@ -246,13 +242,13 @@ public abstract class SpecialSkillBase
 		return this.SkillCompCache;
 	}
 
-	// Token: 0x0601B505 RID: 111877 RVA: 0x00775037 File Offset: 0x00773237
+	// Token: 0x06019009 RID: 102409 RVA: 0x0079C9AF File Offset: 0x0079ABAF
 	protected void RegisterCodeSkill(int skillId, CodeSkillBase codeSkill)
 	{
 		this.CodeSkills[skillId] = codeSkill;
 	}
 
-	// Token: 0x0601B506 RID: 111878 RVA: 0x00775048 File Offset: 0x00773248
+	// Token: 0x0601900A RID: 102410 RVA: 0x0079C9C0 File Offset: 0x0079ABC0
 	public bool OnCodeSkillBegin(Skill skill)
 	{
 		CodeSkillBase codeSkillBase;
@@ -265,7 +261,7 @@ public abstract class SpecialSkillBase
 		return true;
 	}
 
-	// Token: 0x0601B507 RID: 111879 RVA: 0x00775088 File Offset: 0x00773288
+	// Token: 0x0601900B RID: 102411 RVA: 0x0079CA00 File Offset: 0x0079AC00
 	public void OnCodeSkillEnd(Skill skill)
 	{
 		CodeSkillBase codeSkillBase;
@@ -276,7 +272,7 @@ public abstract class SpecialSkillBase
 		codeSkillBase.OnEnd(skill);
 	}
 
-	// Token: 0x0601B508 RID: 111880 RVA: 0x007750B4 File Offset: 0x007732B4
+	// Token: 0x0601900C RID: 102412 RVA: 0x0079CA2C File Offset: 0x0079AC2C
 	public void OnCodeSkillInterrupt(Skill skill)
 	{
 		CodeSkillBase codeSkillBase;
@@ -286,27 +282,27 @@ public abstract class SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B509 RID: 111881 RVA: 0x007750DD File Offset: 0x007732DD
+	// Token: 0x0601900D RID: 102413 RVA: 0x0079CA55 File Offset: 0x0079AC55
 	public virtual void EndAddMoveByInputDirect()
 	{
 	}
 
-	// Token: 0x0400D580 RID: 54656
+	// Token: 0x0400D9E3 RID: 55779
 	protected readonly CharacterSpecialSkillComponent SpecialSkillComponent;
 
-	// Token: 0x0400D581 RID: 54657
+	// Token: 0x0400D9E4 RID: 55780
 	private readonly Dictionary<string, CodeFunctionBase> CodeFunctions = new Dictionary<string, CodeFunctionBase>();
 
-	// Token: 0x0400D582 RID: 54658
+	// Token: 0x0400D9E5 RID: 55781
 	private readonly Dictionary<int, CodeSkillBase> CodeSkills = new Dictionary<int, CodeSkillBase>();
 
-	// Token: 0x0400D583 RID: 54659
+	// Token: 0x0400D9E6 RID: 55782
 	private readonly Dictionary<string, CodeAnimNotifyBase> CodeAnimNotifies = new Dictionary<string, CodeAnimNotifyBase>();
 
-	// Token: 0x0400D584 RID: 54660
+	// Token: 0x0400D9E7 RID: 55783
 	private readonly Dictionary<int, CodeSkillBase> ActiveCodeSkills = new Dictionary<int, CodeSkillBase>();
 
-	// Token: 0x0400D585 RID: 54661
+	// Token: 0x0400D9E8 RID: 55784
 	[Nullable(2)]
 	private BaseSkillComponent SkillCompCache;
 }

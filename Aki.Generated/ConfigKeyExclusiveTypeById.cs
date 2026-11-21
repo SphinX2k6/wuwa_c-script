@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000467 RID: 1127
+	// Token: 0x0200047D RID: 1149
 	public class ConfigKeyExclusiveTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001A74 RID: 6772 RVA: 0x000EEF0C File Offset: 0x000ED10C
+		// Token: 0x06001AF8 RID: 6904 RVA: 0x000F5660 File Offset: 0x000F3860
 		static ConfigKeyExclusiveTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKeyExclusiveTypeById.CreateStaticDefaultValue), new Action(ConfigKeyExclusiveTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001A75 RID: 6773 RVA: 0x000EEF2C File Offset: 0x000ED12C
+		// Token: 0x06001AF9 RID: 6905 RVA: 0x000F5680 File Offset: 0x000F3880
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKeyExclusiveTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001A76 RID: 6774 RVA: 0x000EEFAB File Offset: 0x000ED1AB
+		// Token: 0x06001AFA RID: 6906 RVA: 0x000F56FF File Offset: 0x000F38FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKeyExclusiveTypeById.LogPair = null;
 			ConfigKeyExclusiveTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06001A77 RID: 6775 RVA: 0x000EEFB9 File Offset: 0x000ED1B9
+		// Token: 0x06001AFB RID: 6907 RVA: 0x000F570D File Offset: 0x000F390D
 		public static void Init()
 		{
 			ConfigKeyExclusiveTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigKeyExclusiveTypeById.HandleId, "db_menu.db", "select BinData from `KeyExclusiveType` where Id=?");
 		}
 
-		// Token: 0x06001A78 RID: 6776 RVA: 0x000EEFD4 File Offset: 0x000ED1D4
+		// Token: 0x06001AFC RID: 6908 RVA: 0x000F5728 File Offset: 0x000F3928
 		public static KeyExclusiveType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKeyExclusiveTypeById.HandleId, ConfigKeyExclusiveTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KeyExclusiveType?(rootAsKeyExclusiveType);
 		}
 
-		// Token: 0x04001EB5 RID: 7861
+		// Token: 0x04001F4F RID: 8015
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04001EB6 RID: 7862
+		// Token: 0x04001F50 RID: 8016
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04001EB7 RID: 7863
+		// Token: 0x04001F51 RID: 8017
 		private const string TABLE = "KeyExclusiveType";
 
-		// Token: 0x04001EB8 RID: 7864
+		// Token: 0x04001F52 RID: 8018
 		private const string COMMAND = "select BinData from `KeyExclusiveType` where Id=?";
 
-		// Token: 0x04001EB9 RID: 7865
+		// Token: 0x04001F53 RID: 8019
 		private const string KEY_PREFIX = "KeyExclusiveTypeById";
 
-		// Token: 0x04001EBA RID: 7866
+		// Token: 0x04001F54 RID: 8020
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001EBB RID: 7867
+		// Token: 0x04001F55 RID: 8021
 		private static int HandleId;
 	}
 }

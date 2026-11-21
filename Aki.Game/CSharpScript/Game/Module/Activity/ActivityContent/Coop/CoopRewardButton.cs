@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068D4 RID: 26836
+	// Token: 0x02005824 RID: 22564
 	public class CoopRewardButton : UiPanelBase
 	{
-		// Token: 0x06042F65 RID: 274277 RVA: 0x0104EBF8 File Offset: 0x0104CDF8
+		// Token: 0x06037ABD RID: 228029 RVA: 0x00F90220 File Offset: 0x00F8E420
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F66 RID: 274278 RVA: 0x0104EC8C File Offset: 0x0104CE8C
+		// Token: 0x06037ABE RID: 228030 RVA: 0x00F902B4 File Offset: 0x00F8E4B4
 		public void SetRedDotShow(bool isShow)
 		{
 			UUIItem item = base.GetItem(3);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F67 RID: 274279 RVA: 0x0104ECAC File Offset: 0x0104CEAC
+		// Token: 0x06037ABF RID: 228031 RVA: 0x00F902D4 File Offset: 0x00F8E4D4
 		public void RefreshRewardCount(int receivedCount)
 		{
 			UUIText text = base.GetText(1);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F68 RID: 274280 RVA: 0x0104ECE3 File Offset: 0x0104CEE3
+		// Token: 0x06037AC0 RID: 228032 RVA: 0x00F9030B File Offset: 0x00F8E50B
 		private void OnClickBtn()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			clickCallback();
 		}
 
-		// Token: 0x04022D75 RID: 142709
+		// Token: 0x0401D5D1 RID: 120273
 		[Nullable(2)]
 		public Action ClickCallback;
 	}

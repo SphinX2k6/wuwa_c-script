@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A43 RID: 19011
+	// Token: 0x020039EB RID: 14827
 	public enum ETrapDefenseBdTabType
 	{
-		// Token: 0x0401A61E RID: 108062
+		// Token: 0x04014F70 RID: 85872
 		BdProgress,
-		// Token: 0x0401A61F RID: 108063
+		// Token: 0x04014F71 RID: 85873
 		BuffSum
 	}
 }

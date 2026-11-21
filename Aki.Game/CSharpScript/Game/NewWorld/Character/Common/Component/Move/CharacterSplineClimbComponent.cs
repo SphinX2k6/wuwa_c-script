@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070FF RID: 28927
+	// Token: 0x020063AF RID: 25519
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterSplineClimbComponent : EntityComponent
 	{
-		// Token: 0x17009D09 RID: 40201
-		// (get) Token: 0x060469E6 RID: 289254 RVA: 0x011C46B1 File Offset: 0x011C28B1
+		// Token: 0x17007595 RID: 30101
+		// (get) Token: 0x0603DDE2 RID: 253410 RVA: 0x011F3809 File Offset: 0x011F1A09
 		private SplineClimbParams Params
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469E7 RID: 289255 RVA: 0x011C46CC File Offset: 0x011C28CC
+		// Token: 0x0603DDE3 RID: 253411 RVA: 0x011F3824 File Offset: 0x011F1A24
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return true;
 		}
 
-		// Token: 0x060469E8 RID: 289256 RVA: 0x011C474C File Offset: 0x011C294C
+		// Token: 0x0603DDE4 RID: 253412 RVA: 0x011F38A4 File Offset: 0x011F1AA4
 		protected override bool OnEnd()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x060469E9 RID: 289257 RVA: 0x011C4755 File Offset: 0x011C2955
+		// Token: 0x0603DDE5 RID: 253413 RVA: 0x011F38AD File Offset: 0x011F1AAD
 		protected override void OnTick(float delta)
 		{
 			if (this.StateChangeExit)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469EA RID: 289258 RVA: 0x011C4774 File Offset: 0x011C2974
+		// Token: 0x0603DDE6 RID: 253414 RVA: 0x011F38CC File Offset: 0x011F1ACC
 		public unsafe void EnterSplineClimb(USplineComponent splineAsset, Vector traceDirection, Action<bool> callback)
 		{
 			if (this.InSplineClimb)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
 		}
 
-		// Token: 0x060469EB RID: 289259 RVA: 0x011C4A6C File Offset: 0x011C2C6C
+		// Token: 0x0603DDE7 RID: 253415 RVA: 0x011F3BC4 File Offset: 0x011F1DC4
 		public unsafe void ExitSplineClimb(string reason, bool tryChangeState = true, bool jumpExit = true)
 		{
 			this.RemoveEvents();
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x060469EC RID: 289260 RVA: 0x011C4D0C File Offset: 0x011C2F0C
+		// Token: 0x0603DDE8 RID: 253416 RVA: 0x011F3E64 File Offset: 0x011F2064
 		private void OnExitSplineClimbState(bool falling)
 		{
 			if (falling)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469ED RID: 289261 RVA: 0x011C4D90 File Offset: 0x011C2F90
+		// Token: 0x0603DDE9 RID: 253417 RVA: 0x011F3EE8 File Offset: 0x011F20E8
 		private void FixCharacterExitRotation()
 		{
 			if (GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.ActorComp.ActorVelocityProxy) > 0.0)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469EE RID: 289262 RVA: 0x011C4EF4 File Offset: 0x011C30F4
+		// Token: 0x0603DDEA RID: 253418 RVA: 0x011F404C File Offset: 0x011F224C
 		private void SetCharacterTransformWithBuffer(FTransformDouble newTransform, float smoothTime, bool sweep = true)
 		{
 			CharacterAnimationComponent animComp = this.AnimComp;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ActorComp.SetActorTransform(newTransform, "[SplineClimb] SetCharacterTransformWithBuffer", sweep, null);
 		}
 
-		// Token: 0x060469EF RID: 289263 RVA: 0x011C4F4C File Offset: 0x011C314C
+		// Token: 0x0603DDEB RID: 253419 RVA: 0x011F40A4 File Offset: 0x011F22A4
 		private void InitSplineRuntime(USplineComponent splineAsset)
 		{
 			this.SplineRuntime = new SplineRuntime();
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			sourceSpline.SetSplineTransform(Transform.Create(splineAsset.D_K2_GetComponentToWorld()), false);
 		}
 
-		// Token: 0x060469F0 RID: 289264 RVA: 0x011C4FC8 File Offset: 0x011C31C8
+		// Token: 0x0603DDEC RID: 253420 RVA: 0x011F4120 File Offset: 0x011F2320
 		private void SetInitialLocation()
 		{
 			USplineComponent sourceSplineUe = this.SplineRuntime.SourceSplineUe;
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.SplineRuntime.DistanceInSource = distanceAlongSplineAtSplineInputKey;
 		}
 
-		// Token: 0x060469F1 RID: 289265 RVA: 0x011C5028 File Offset: 0x011C3228
+		// Token: 0x0603DDED RID: 253421 RVA: 0x011F4180 File Offset: 0x011F2380
 		private void AddEvents()
 		{
 			if (this.EventAdded)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EventAdded = true;
 		}
 
-		// Token: 0x060469F2 RID: 289266 RVA: 0x011C50E0 File Offset: 0x011C32E0
+		// Token: 0x0603DDEE RID: 253422 RVA: 0x011F4238 File Offset: 0x011F2438
 		private void RemoveEvents()
 		{
 			if (!this.EventAdded)
@@ -356,25 +356,25 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.EventAdded = false;
 		}
 
-		// Token: 0x060469F3 RID: 289267 RVA: 0x011C5195 File Offset: 0x011C3395
+		// Token: 0x0603DDEF RID: 253423 RVA: 0x011F42F0 File Offset: 0x011F24F0
 		private void ReceiveSplineClimbEvent(float deltaTime)
 		{
 			this.MoveToTarget(deltaTime);
 		}
 
-		// Token: 0x060469F4 RID: 289268 RVA: 0x011C519E File Offset: 0x011C339E
+		// Token: 0x0603DDF0 RID: 253424 RVA: 0x011F42F9 File Offset: 0x011F24F9
 		private void OnTeleportStart(bool _)
 		{
 			this.ExitSplineClimb("OnTeleportStart", true, false);
 		}
 
-		// Token: 0x060469F5 RID: 289269 RVA: 0x011C51AD File Offset: 0x011C33AD
+		// Token: 0x0603DDF1 RID: 253425 RVA: 0x011F4308 File Offset: 0x011F2508
 		private void OnRoleDead()
 		{
 			this.ExitSplineClimb("OnRoleDead", true, false);
 		}
 
-		// Token: 0x060469F6 RID: 289270 RVA: 0x011C51BC File Offset: 0x011C33BC
+		// Token: 0x0603DDF2 RID: 253426 RVA: 0x011F4318 File Offset: 0x011F2518
 		private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			SplineClimbParams @params = this.Params;
@@ -386,13 +386,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ExitSplineClimb("使用技能" + skillId.ToString(), true, false);
 		}
 
-		// Token: 0x060469F7 RID: 289271 RVA: 0x011C5210 File Offset: 0x011C3410
+		// Token: 0x0603DDF3 RID: 253427 RVA: 0x011F436C File Offset: 0x011F256C
 		private void OnPositionStateChange(ECharPositionState oldPositionState, ECharPositionState newPositionState)
 		{
 			this.StateChangeExit = true;
 		}
 
-		// Token: 0x060469F8 RID: 289272 RVA: 0x011C521C File Offset: 0x011C341C
+		// Token: 0x0603DDF4 RID: 253428 RVA: 0x011F4378 File Offset: 0x011F2578
 		private void MoveToTarget(float deltaSeconds)
 		{
 			SplineRuntime splineRuntime = this.SplineRuntime;
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			climbComp.SetLastSafeLocation(this.ActorComp.ActorLocationProxy);
 		}
 
-		// Token: 0x060469F9 RID: 289273 RVA: 0x011C53D8 File Offset: 0x011C35D8
+		// Token: 0x0603DDF5 RID: 253429 RVA: 0x011F4534 File Offset: 0x011F2734
 		private void GetTargetRotator(Transform targetTransform, Rotator outRotator)
 		{
 			this.TempVector3.DeepCopy(this.ActorComp.ActorGravityDirectProxy);
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			MathUtils.Instance.LookRotationForwardFirst(this.TempVector2, this.TempVector3, outRotator);
 		}
 
-		// Token: 0x060469FA RID: 289274 RVA: 0x011C5468 File Offset: 0x011C3668
+		// Token: 0x0603DDF6 RID: 253430 RVA: 0x011F45C4 File Offset: 0x011F27C4
 		private unsafe bool BuildWallSpline(SplineCurve sourceSpline, SplineCurve wallSpline, double startDistance, double endDistance, Vector direction, [Nullable(2)] Vector prependLocation = null)
 		{
 			List<InterpCurvePointVector> list = new List<InterpCurvePointVector>();
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return list.Count >= 1;
 		}
 
-		// Token: 0x060469FB RID: 289275 RVA: 0x011C5950 File Offset: 0x011C3B50
+		// Token: 0x0603DDF7 RID: 253431 RVA: 0x011F4AAC File Offset: 0x011F2CAC
 		private UTraceSphereElement CreateTraceElement()
 		{
 			UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return utraceSphereElement;
 		}
 
-		// Token: 0x060469FC RID: 289276 RVA: 0x011C59AC File Offset: 0x011C3BAC
+		// Token: 0x0603DDF8 RID: 253432 RVA: 0x011F4B08 File Offset: 0x011F2D08
 		private void UpdateAnimParams(Transform targetTransform, float deltaSeconds)
 		{
 			Quat rotation = targetTransform.GetRotation();
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.AnimInstance.FastClimbMix = this.FastClimbMix;
 		}
 
-		// Token: 0x060469FD RID: 289277 RVA: 0x011C5A0C File Offset: 0x011C3C0C
+		// Token: 0x0603DDF9 RID: 253433 RVA: 0x011F4B68 File Offset: 0x011F2D68
 		private double GetBlendSpaceAxis(Vector moveDirection)
 		{
 			Vector actorRightProxy = this.ActorComp.ActorRightProxy;
@@ -600,7 +600,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return num;
 		}
 
-		// Token: 0x060469FE RID: 289278 RVA: 0x011C5A60 File Offset: 0x011C3C60
+		// Token: 0x0603DDFA RID: 253434 RVA: 0x011F4BBC File Offset: 0x011F2DBC
 		private static SplineClimbParams LoadCommonParams()
 		{
 			string text = "/Game/Aki/Data/Level/SplineClimb/DA_SplineClimb_Common.DA_SplineClimb_Common";
@@ -618,13 +618,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			return CharacterSplineClimbComponent.CommonParams = new SplineClimbParams(bp_SplineClimbConfig_C);
 		}
 
-		// Token: 0x060469FF RID: 289279 RVA: 0x011C5AC9 File Offset: 0x011C3CC9
+		// Token: 0x0603DDFB RID: 253435 RVA: 0x011F4C25 File Offset: 0x011F2E25
 		private bool IsFirstPerson()
 		{
 			return this.TagComp != null && this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["功能.通用镜头.第一人称镜头"]);
 		}
 
-		// Token: 0x06046A00 RID: 289280 RVA: 0x011C5AF0 File Offset: 0x011C3CF0
+		// Token: 0x0603DDFC RID: 253436 RVA: 0x011F4C4C File Offset: 0x011F2E4C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -632,223 +632,208 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 				return false;
 			}
 			CharacterSplineClimbComponent characterSplineClimbComponent = (CharacterSplineClimbComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterSplineClimbComponent.ActorComp == null)
 			{
-				if (characterSplineClimbComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("AnimComp"))
-			{
-				if (characterSplineClimbComponent.AnimComp == null)
-				{
-					this.AnimComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClimbComp"))
-			{
-				if (characterSplineClimbComponent.ClimbComp == null)
-				{
-					this.ClimbComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterClimbComponent>(this.ClimbComp), "ClimbComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterSplineClimbComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveComp"))
-			{
-				if (characterSplineClimbComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EndCallback"))
-			{
-				if (characterSplineClimbComponent.EndCallback == null)
-				{
-					this.EndCallback = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<bool>>(this.EndCallback), "EndCallback"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SplineRuntime"))
-			{
-				if (characterSplineClimbComponent.SplineRuntime == null)
-				{
-					this.SplineRuntime = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SplineRuntime>(this.SplineRuntime), "SplineRuntime"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TraceDirection") && characterSplineClimbComponent.TraceDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TraceDirection), "TraceDirection"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("AnimInstance"))
+			if (characterSplineClimbComponent.AnimComp == null)
 			{
-				if (characterSplineClimbComponent.AnimInstance == null)
-				{
-					this.AnimInstance = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroAnimInstanceRole>(this.AnimInstance), "AnimInstance"))
-				{
-					return false;
-				}
+				this.AnimComp = null;
 			}
-			if (base.CanResetComponentProperty("FastClimbMix"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 			{
-				this.FastClimbMix = characterSplineClimbComponent.FastClimbMix;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SmoothedSpeed"))
+			if (characterSplineClimbComponent.ClimbComp == null)
 			{
-				this.SmoothedSpeed = characterSplineClimbComponent.SmoothedSpeed;
+				this.ClimbComp = null;
 			}
-			if (base.CanResetComponentProperty("TraceElement"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClimbComp), "ClimbComp"))
 			{
-				if (characterSplineClimbComponent.TraceElement == null)
-				{
-					this.TraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.TraceElement), "TraceElement"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("InSplineClimb"))
+			if (characterSplineClimbComponent.TagComp == null)
 			{
-				this.InSplineClimb = characterSplineClimbComponent.InSplineClimb;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("DisableClimbHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.DisableClimbHandle = characterSplineClimbComponent.DisableClimbHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("StateChangeExit"))
+			if (characterSplineClimbComponent.MoveComp == null)
 			{
-				this.StateChangeExit = characterSplineClimbComponent.StateChangeExit;
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("EventAdded"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				this.EventAdded = characterSplineClimbComponent.EventAdded;
+				return false;
 			}
-			return (!base.CanResetComponentProperty("TargetTransform") || characterSplineClimbComponent.TargetTransform == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TargetTransform), "TargetTransform")) && (!base.CanResetComponentProperty("MoveOffset") || characterSplineClimbComponent.MoveOffset == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveOffset), "MoveOffset")) && (!base.CanResetComponentProperty("TargetLocation") || characterSplineClimbComponent.TargetLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetLocation), "TargetLocation")) && (!base.CanResetComponentProperty("TargetRotator") || characterSplineClimbComponent.TargetRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TargetRotator), "TargetRotator")) && (!base.CanResetComponentProperty("TempTransform") || characterSplineClimbComponent.TempTransform == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TempTransform), "TempTransform")) && (!base.CanResetComponentProperty("TempVector") || characterSplineClimbComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector")) && (!base.CanResetComponentProperty("TempVector2") || characterSplineClimbComponent.TempVector2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector2), "TempVector2")) && (!base.CanResetComponentProperty("TempVector3") || characterSplineClimbComponent.TempVector3 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector3), "TempVector3")) && (!base.CanResetComponentProperty("TempQuat") || characterSplineClimbComponent.TempQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TempQuat), "TempQuat"));
+			if (characterSplineClimbComponent.EndCallback == null)
+			{
+				this.EndCallback = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndCallback), "EndCallback"))
+			{
+				return false;
+			}
+			if (characterSplineClimbComponent.SplineRuntime == null)
+			{
+				this.SplineRuntime = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineRuntime), "SplineRuntime"))
+			{
+				return false;
+			}
+			if (characterSplineClimbComponent.TraceDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceDirection), "TraceDirection"))
+			{
+				return false;
+			}
+			if (characterSplineClimbComponent.AnimInstance == null)
+			{
+				this.AnimInstance = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstance), "AnimInstance"))
+			{
+				return false;
+			}
+			this.FastClimbMix = characterSplineClimbComponent.FastClimbMix;
+			this.SmoothedSpeed = characterSplineClimbComponent.SmoothedSpeed;
+			if (characterSplineClimbComponent.TraceElement == null)
+			{
+				this.TraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
+			{
+				return false;
+			}
+			this.InSplineClimb = characterSplineClimbComponent.InSplineClimb;
+			this.DisableClimbHandle = characterSplineClimbComponent.DisableClimbHandle;
+			this.StateChangeExit = characterSplineClimbComponent.StateChangeExit;
+			this.EventAdded = characterSplineClimbComponent.EventAdded;
+			return (characterSplineClimbComponent.TargetTransform == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetTransform), "TargetTransform")) && (characterSplineClimbComponent.MoveOffset == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveOffset), "MoveOffset")) && (characterSplineClimbComponent.TargetLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation")) && (characterSplineClimbComponent.TargetRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetRotator), "TargetRotator")) && (characterSplineClimbComponent.TempTransform == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempTransform), "TempTransform")) && (characterSplineClimbComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector")) && (characterSplineClimbComponent.TempVector2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2")) && (characterSplineClimbComponent.TempVector3 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector3), "TempVector3")) && (characterSplineClimbComponent.TempQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempQuat), "TempQuat"));
 		}
 
-		// Token: 0x040250F0 RID: 151792
+		// Token: 0x17007596 RID: 30102
+		// (get) Token: 0x0603DDFD RID: 253437 RVA: 0x011F4F8B File Offset: 0x011F318B
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007597 RID: 30103
+		// (get) Token: 0x0603DDFE RID: 253438 RVA: 0x011F4F8E File Offset: 0x011F318E
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007598 RID: 30104
+		// (get) Token: 0x0603DDFF RID: 253439 RVA: 0x011F4F91 File Offset: 0x011F3191
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020D85 RID: 134533
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x040250F1 RID: 151793
+		// Token: 0x04020D86 RID: 134534
 		[Nullable(2)]
 		private CharacterAnimationComponent AnimComp;
 
-		// Token: 0x040250F2 RID: 151794
+		// Token: 0x04020D87 RID: 134535
 		[Nullable(2)]
 		private CharacterClimbComponent ClimbComp;
 
-		// Token: 0x040250F3 RID: 151795
+		// Token: 0x04020D88 RID: 134536
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x040250F4 RID: 151796
+		// Token: 0x04020D89 RID: 134537
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x040250F5 RID: 151797
+		// Token: 0x04020D8A RID: 134538
 		[Nullable(2)]
 		private Action<bool> EndCallback;
 
-		// Token: 0x040250F6 RID: 151798
+		// Token: 0x04020D8B RID: 134539
 		[Nullable(2)]
 		private SplineRuntime SplineRuntime;
 
-		// Token: 0x040250F7 RID: 151799
+		// Token: 0x04020D8C RID: 134540
 		private readonly Vector TraceDirection = Vector.Create();
 
-		// Token: 0x040250F8 RID: 151800
+		// Token: 0x04020D8D RID: 134541
 		[Nullable(2)]
 		private UKuroAnimInstanceRole AnimInstance;
 
-		// Token: 0x040250F9 RID: 151801
+		// Token: 0x04020D8E RID: 134542
 		private float FastClimbMix;
 
-		// Token: 0x040250FA RID: 151802
+		// Token: 0x04020D8F RID: 134543
 		private float SmoothedSpeed;
 
-		// Token: 0x040250FB RID: 151803
+		// Token: 0x04020D90 RID: 134544
 		[Nullable(2)]
 		private UTraceSphereElement TraceElement;
 
-		// Token: 0x040250FC RID: 151804
+		// Token: 0x04020D91 RID: 134545
 		private bool InSplineClimb;
 
-		// Token: 0x040250FD RID: 151805
+		// Token: 0x04020D92 RID: 134546
 		private int DisableClimbHandle;
 
-		// Token: 0x040250FE RID: 151806
+		// Token: 0x04020D93 RID: 134547
 		private bool StateChangeExit;
 
-		// Token: 0x040250FF RID: 151807
+		// Token: 0x04020D94 RID: 134548
 		private bool EventAdded;
 
-		// Token: 0x04025100 RID: 151808
+		// Token: 0x04020D95 RID: 134549
 		[Nullable(2)]
 		[StaticVariableRuleIgnore]
 		private static SplineClimbParams CommonParams;
 
-		// Token: 0x04025101 RID: 151809
+		// Token: 0x04020D96 RID: 134550
 		private readonly Transform TargetTransform = Transform.Create();
 
-		// Token: 0x04025102 RID: 151810
+		// Token: 0x04020D97 RID: 134551
 		private readonly Vector MoveOffset = Vector.Create();
 
-		// Token: 0x04025103 RID: 151811
+		// Token: 0x04020D98 RID: 134552
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x04025104 RID: 151812
+		// Token: 0x04020D99 RID: 134553
 		private readonly Rotator TargetRotator = Rotator.Create();
 
-		// Token: 0x04025105 RID: 151813
+		// Token: 0x04020D9A RID: 134554
 		private readonly Transform TempTransform = Transform.Create();
 
-		// Token: 0x04025106 RID: 151814
+		// Token: 0x04020D9B RID: 134555
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x04025107 RID: 151815
+		// Token: 0x04020D9C RID: 134556
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x04025108 RID: 151816
+		// Token: 0x04020D9D RID: 134557
 		private readonly Vector TempVector3 = Vector.Create();
 
-		// Token: 0x04025109 RID: 151817
+		// Token: 0x04020D9E RID: 134558
 		private readonly Quat TempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}
 }

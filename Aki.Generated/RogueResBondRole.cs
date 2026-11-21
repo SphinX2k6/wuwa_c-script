@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FF1 RID: 4081
+	// Token: 0x020010D9 RID: 4313
 	public struct RogueResBondRole : IFlatbufferObject
 	{
-		// Token: 0x17002FBF RID: 12223
-		// (get) Token: 0x0600C0D4 RID: 49364 RVA: 0x002E9178 File Offset: 0x002E7378
+		// Token: 0x1700303A RID: 12346
+		// (get) Token: 0x0600C71E RID: 50974 RVA: 0x0030547C File Offset: 0x0030367C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C0D5 RID: 49365 RVA: 0x002E9185 File Offset: 0x002E7385
+		// Token: 0x0600C71F RID: 50975 RVA: 0x00305489 File Offset: 0x00303689
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C0D6 RID: 49366 RVA: 0x002E918C File Offset: 0x002E738C
+		// Token: 0x0600C720 RID: 50976 RVA: 0x00305490 File Offset: 0x00303690
 		public static RogueResBondRole GetRootAsRogueResBondRole(ByteBuffer _bb)
 		{
 			return RogueResBondRole.GetRootAsRogueResBondRole(_bb, default(RogueResBondRole));
 		}
 
-		// Token: 0x0600C0D7 RID: 49367 RVA: 0x002E91A8 File Offset: 0x002E73A8
+		// Token: 0x0600C721 RID: 50977 RVA: 0x003054AC File Offset: 0x003036AC
 		public static RogueResBondRole GetRootAsRogueResBondRole(ByteBuffer _bb, RogueResBondRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C0D8 RID: 49368 RVA: 0x002E91C5 File Offset: 0x002E73C5
+		// Token: 0x0600C722 RID: 50978 RVA: 0x003054C9 File Offset: 0x003036C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C0D9 RID: 49369 RVA: 0x002E91D4 File Offset: 0x002E73D4
+		// Token: 0x0600C723 RID: 50979 RVA: 0x003054D8 File Offset: 0x003036D8
 		public RogueResBondRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002FC0 RID: 12224
-		// (get) Token: 0x0600C0DA RID: 49370 RVA: 0x002E91E4 File Offset: 0x002E73E4
+		// Token: 0x1700303B RID: 12347
+		// (get) Token: 0x0600C724 RID: 50980 RVA: 0x003054E8 File Offset: 0x003036E8
 		public int RoleId
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C0DB RID: 49371 RVA: 0x002E9220 File Offset: 0x002E7420
+		// Token: 0x0600C725 RID: 50981 RVA: 0x00305524 File Offset: 0x00303724
 		public int BondIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002FC1 RID: 12225
-		// (get) Token: 0x0600C0DC RID: 49372 RVA: 0x002E9260 File Offset: 0x002E7460
+		// Token: 0x1700303C RID: 12348
+		// (get) Token: 0x0600C726 RID: 50982 RVA: 0x00305564 File Offset: 0x00303764
 		public int BondIdsLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C0DD RID: 49373 RVA: 0x002E928B File Offset: 0x002E748B
+		// Token: 0x0600C727 RID: 50983 RVA: 0x0030558F File Offset: 0x0030378F
 		public Span<int> GetBondIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600C0DE RID: 49374 RVA: 0x002E929A File Offset: 0x002E749A
+		// Token: 0x0600C728 RID: 50984 RVA: 0x0030559E File Offset: 0x0030379E
 		public int[] GetBondIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002FC2 RID: 12226
-		// (get) Token: 0x0600C0DF RID: 49375 RVA: 0x002E92B4 File Offset: 0x002E74B4
+		// Token: 0x1700303D RID: 12349
+		// (get) Token: 0x0600C729 RID: 50985 RVA: 0x003055B8 File Offset: 0x003037B8
 		public int TrialRoleId
 		{
 			get
@@ -117,25 +117,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C0E0 RID: 49376 RVA: 0x002E92F0 File Offset: 0x002E74F0
+		// Token: 0x0600C72A RID: 50986 RVA: 0x003055F4 File Offset: 0x003037F4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BondIdsIter()或GetBondIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BondIds()
+		public int[] BondIds()
 		{
-			RogueResBondRole rogueResBondRole = this;
-			return rogueResBondRole.GetBondIdsArray() ?? Array.Empty<int>();
+			return this.GetBondIdsArray();
 		}
 
-		// Token: 0x0600C0E1 RID: 49377 RVA: 0x002E9314 File Offset: 0x002E7514
+		// Token: 0x0600C72B RID: 50987 RVA: 0x003055FC File Offset: 0x003037FC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BondIdsIter()
+		public IEnumerable<int> BondIdsIter()
 		{
 			RogueResBondRole.<BondIdsIter>d__18 <BondIdsIter>d__ = new RogueResBondRole.<BondIdsIter>d__18(-2);
 			<BondIdsIter>d__.<>3__<>4__this = this;
 			return <BondIdsIter>d__;
 		}
 
-		// Token: 0x040050D8 RID: 20696
+		// Token: 0x040056C0 RID: 22208
 		private Table __p;
 	}
 }

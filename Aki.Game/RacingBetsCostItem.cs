@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200270D RID: 9997
+// Token: 0x02001BF8 RID: 7160
 public class RacingBetsCostItem : UiPanelBase
 {
-	// Token: 0x060147E2 RID: 83938 RVA: 0x0052CE1C File Offset: 0x0052B01C
+	// Token: 0x06011CC4 RID: 72900 RVA: 0x0053BB38 File Offset: 0x00539D38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class RacingBetsCostItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147E3 RID: 83939 RVA: 0x0052CE78 File Offset: 0x0052B078
+	// Token: 0x06011CC5 RID: 72901 RVA: 0x0053BB94 File Offset: 0x00539D94
 	public void RefreshUi(int itemId, int count)
 	{
 		InventoryConfig instance = InventoryConfig.Instance;
@@ -36,14 +36,14 @@ public class RacingBetsCostItem : UiPanelBase
 		text.SetText(count.ToString(), true);
 	}
 
-	// Token: 0x02008D5B RID: 36187
+	// Token: 0x02007EE4 RID: 32484
 	private enum EComponent
 	{
-		// Token: 0x0402DDEC RID: 187884
+		// Token: 0x04029103 RID: 168195
 		TipsItem,
-		// Token: 0x0402DDED RID: 187885
+		// Token: 0x04029104 RID: 168196
 		CostText,
-		// Token: 0x0402DDEE RID: 187886
+		// Token: 0x04029105 RID: 168197
 		CostIcon
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002191 RID: 8593
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023FA RID: 9210
 	public class ServerForceEnableLevelPlay : ActionParams
 	{
-		// Token: 0x0600BCC6 RID: 48326 RVA: 0x001B2FF8 File Offset: 0x001B11F8
+		// Token: 0x0600C876 RID: 51318 RVA: 0x001CA4F0 File Offset: 0x001C86F0
 		private ServerForceEnableLevelPlay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCC7 RID: 48327 RVA: 0x001B3030 File Offset: 0x001B1230
+		// Token: 0x0600C877 RID: 51319 RVA: 0x001CA528 File Offset: 0x001C8728
 		public static ServerForceEnableLevelPlay Create([Nullable(2)] ServerForceEnableLevelPlay instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCC8 RID: 48328 RVA: 0x001B3043 File Offset: 0x001B1243
+		// Token: 0x0600C878 RID: 51320 RVA: 0x001CA53B File Offset: 0x001C873B
 		public static ServerForceEnableLevelPlay CreateFromSetValue([Nullable(2)] ServerForceEnableLevelPlay_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCC9 RID: 48329 RVA: 0x001B3056 File Offset: 0x001B1256
+		// Token: 0x0600C879 RID: 51321 RVA: 0x001CA54E File Offset: 0x001C874E
 		public ServerForceEnableLevelPlay_SetValue ToSetValue()
 		{
 			return new ServerForceEnableLevelPlay_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700396A RID: 14698
-		// (get) Token: 0x0600BCCA RID: 48330 RVA: 0x001B306C File Offset: 0x001B126C
-		// (set) Token: 0x0600BCCB RID: 48331 RVA: 0x001B30FF File Offset: 0x001B12FF
+		// Token: 0x17003C5C RID: 15452
+		// (get) Token: 0x0600C87A RID: 51322 RVA: 0x001CA564 File Offset: 0x001C8764
+		// (set) Token: 0x0600C87B RID: 51323 RVA: 0x001CA5F7 File Offset: 0x001C87F7
 		public virtual List<IEnableLevelPlayConfig> Configs
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070AF RID: 28847
+		// Token: 0x040076F1 RID: 30449
 		[Nullable(2)]
 		protected new ServerForceEnableLevelPlay FbInstance;
 
-		// Token: 0x040070B0 RID: 28848
+		// Token: 0x040076F2 RID: 30450
 		[Nullable(2)]
 		protected ServerForceEnableLevelPlay_SetValue PocoInterface;
 
-		// Token: 0x040070B1 RID: 28849
+		// Token: 0x040076F3 RID: 30451
 		private List<IEnableLevelPlayConfig> _ConfigsCache;
 
-		// Token: 0x040070B2 RID: 28850
+		// Token: 0x040076F4 RID: 30452
 		private bool _ConfigsInited;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D57 RID: 3415
+	// Token: 0x02000E3C RID: 3644
 	public struct HotKeyType : IFlatbufferObject
 	{
-		// Token: 0x17001890 RID: 6288
-		// (get) Token: 0x0600823E RID: 33342 RVA: 0x0025C77D File Offset: 0x0025A97D
+		// Token: 0x170018F3 RID: 6387
+		// (get) Token: 0x06008858 RID: 34904 RVA: 0x0027AEA9 File Offset: 0x002790A9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600823F RID: 33343 RVA: 0x0025C78A File Offset: 0x0025A98A
+		// Token: 0x06008859 RID: 34905 RVA: 0x0027AEB6 File Offset: 0x002790B6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008240 RID: 33344 RVA: 0x0025C794 File Offset: 0x0025A994
+		// Token: 0x0600885A RID: 34906 RVA: 0x0027AEC0 File Offset: 0x002790C0
 		public static HotKeyType GetRootAsHotKeyType(ByteBuffer _bb)
 		{
 			return HotKeyType.GetRootAsHotKeyType(_bb, default(HotKeyType));
 		}
 
-		// Token: 0x06008241 RID: 33345 RVA: 0x0025C7B0 File Offset: 0x0025A9B0
+		// Token: 0x0600885B RID: 34907 RVA: 0x0027AEDC File Offset: 0x002790DC
 		public static HotKeyType GetRootAsHotKeyType(ByteBuffer _bb, HotKeyType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008242 RID: 33346 RVA: 0x0025C7CD File Offset: 0x0025A9CD
+		// Token: 0x0600885C RID: 34908 RVA: 0x0027AEF9 File Offset: 0x002790F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008243 RID: 33347 RVA: 0x0025C7DC File Offset: 0x0025A9DC
+		// Token: 0x0600885D RID: 34909 RVA: 0x0027AF08 File Offset: 0x00279108
 		public HotKeyType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001891 RID: 6289
-		// (get) Token: 0x06008244 RID: 33348 RVA: 0x0025C7EC File Offset: 0x0025A9EC
+		// Token: 0x170018F4 RID: 6388
+		// (get) Token: 0x0600885E RID: 34910 RVA: 0x0027AF18 File Offset: 0x00279118
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001892 RID: 6290
-		// (get) Token: 0x06008245 RID: 33349 RVA: 0x0025C828 File Offset: 0x0025AA28
+		// Token: 0x170018F5 RID: 6389
+		// (get) Token: 0x0600885F RID: 34911 RVA: 0x0027AF54 File Offset: 0x00279154
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008246 RID: 33350 RVA: 0x0025C864 File Offset: 0x0025AA64
+		// Token: 0x06008860 RID: 34912 RVA: 0x0027AF90 File Offset: 0x00279190
 		public int HotKeyList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001893 RID: 6291
-		// (get) Token: 0x06008247 RID: 33351 RVA: 0x0025C8A4 File Offset: 0x0025AAA4
+		// Token: 0x170018F6 RID: 6390
+		// (get) Token: 0x06008861 RID: 34913 RVA: 0x0027AFD0 File Offset: 0x002791D0
 		public int HotKeyListLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008248 RID: 33352 RVA: 0x0025C8CF File Offset: 0x0025AACF
+		// Token: 0x06008862 RID: 34914 RVA: 0x0027AFFB File Offset: 0x002791FB
 		public Span<int> GetHotKeyListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06008249 RID: 33353 RVA: 0x0025C8DE File Offset: 0x0025AADE
+		// Token: 0x06008863 RID: 34915 RVA: 0x0027B00A File Offset: 0x0027920A
 		public int[] GetHotKeyListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600824A RID: 33354 RVA: 0x0025C8F8 File Offset: 0x0025AAF8
+		// Token: 0x06008864 RID: 34916 RVA: 0x0027B021 File Offset: 0x00279221
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用HotKeyListIter()或GetHotKeyListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] HotKeyList()
+		public int[] HotKeyList()
 		{
-			HotKeyType hotKeyType = this;
-			return hotKeyType.GetHotKeyListArray() ?? Array.Empty<int>();
+			return this.GetHotKeyListArray();
 		}
 
-		// Token: 0x0600824B RID: 33355 RVA: 0x0025C91C File Offset: 0x0025AB1C
+		// Token: 0x06008865 RID: 34917 RVA: 0x0027B029 File Offset: 0x00279229
 		[NullableContext(1)]
-		public readonly IEnumerable<int> HotKeyListIter()
+		public IEnumerable<int> HotKeyListIter()
 		{
 			HotKeyType.<HotKeyListIter>d__18 <HotKeyListIter>d__ = new HotKeyType.<HotKeyListIter>d__18(-2);
 			<HotKeyListIter>d__.<>3__<>4__this = this;
 			return <HotKeyListIter>d__;
 		}
 
-		// Token: 0x04004DD6 RID: 19926
+		// Token: 0x040053BB RID: 21435
 		private Table __p;
 	}
 }

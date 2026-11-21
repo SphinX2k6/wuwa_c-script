@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E61 RID: 20065
+	// Token: 0x02003E2A RID: 15914
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleFilterDropDownTitle : TitleItemBase<RoleBondInfo>
 	{
-		// Token: 0x06033AEB RID: 211691 RVA: 0x00C19F21 File Offset: 0x00C18121
+		// Token: 0x06028956 RID: 166230 RVA: 0x00B63449 File Offset: 0x00B61649
 		public RogueBattleFilterDropDownTitle(UUIItem uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x06033AEC RID: 211692 RVA: 0x00C19F2C File Offset: 0x00C1812C
+		// Token: 0x06028957 RID: 166231 RVA: 0x00B63454 File Offset: 0x00B61654
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AED RID: 211693 RVA: 0x00C19F88 File Offset: 0x00C18188
+		// Token: 0x06028958 RID: 166232 RVA: 0x00B634B0 File Offset: 0x00B616B0
 		public override void ShowTemp(RoleBondInfo fetterInfo, DropDownItemBase<RoleBondInfo> selectedItemObj)
 		{
 			if (fetterInfo.ConfigId == 0)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(2).SetUIActive(uiactive);
 		}
 
-		// Token: 0x06033AEE RID: 211694 RVA: 0x00C1A024 File Offset: 0x00C18224
+		// Token: 0x06028959 RID: 166233 RVA: 0x00B6354C File Offset: 0x00B6174C
 		private void SetFetterAllSelect()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_RogueSelectAll");

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020028D5 RID: 10453
+// Token: 0x02001E50 RID: 7760
 public enum ETeamPositionType
 {
-	// Token: 0x0400A0A4 RID: 41124
+	// Token: 0x0400A48D RID: 42125
 	Normal,
-	// Token: 0x0400A0A5 RID: 41125
+	// Token: 0x0400A48E RID: 42126
 	EditFormation,
-	// Token: 0x0400A0A6 RID: 41126
+	// Token: 0x0400A48F RID: 42127
 	RoleSelect
 }

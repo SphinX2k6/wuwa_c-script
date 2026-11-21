@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003B3 RID: 947
+	// Token: 0x020003C9 RID: 969
 	public class ConfigGuessJokerAIPlotConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001639 RID: 5689 RVA: 0x000D72EF File Offset: 0x000D54EF
+		// Token: 0x060016BD RID: 5821 RVA: 0x000DDA43 File Offset: 0x000DBC43
 		static ConfigGuessJokerAIPlotConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuessJokerAIPlotConfigById.CreateStaticDefaultValue), new Action(ConfigGuessJokerAIPlotConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600163A RID: 5690 RVA: 0x000D7310 File Offset: 0x000D5510
+		// Token: 0x060016BE RID: 5822 RVA: 0x000DDA64 File Offset: 0x000DBC64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuessJokerAIPlotConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600163B RID: 5691 RVA: 0x000D738F File Offset: 0x000D558F
+		// Token: 0x060016BF RID: 5823 RVA: 0x000DDAE3 File Offset: 0x000DBCE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuessJokerAIPlotConfigById.LogPair = null;
 			ConfigGuessJokerAIPlotConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600163C RID: 5692 RVA: 0x000D739D File Offset: 0x000D559D
+		// Token: 0x060016C0 RID: 5824 RVA: 0x000DDAF1 File Offset: 0x000DBCF1
 		public static void Init()
 		{
 			ConfigGuessJokerAIPlotConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigGuessJokerAIPlotConfigById.HandleId, "db_guessjokercard.db", "select BinData from `GuessJokerAIPlotConfig` where Id=?");
 		}
 
-		// Token: 0x0600163D RID: 5693 RVA: 0x000D73B8 File Offset: 0x000D55B8
+		// Token: 0x060016C1 RID: 5825 RVA: 0x000DDB0C File Offset: 0x000DBD0C
 		public static GuessJokerAIPlotConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuessJokerAIPlotConfigById.HandleId, ConfigGuessJokerAIPlotConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuessJokerAIPlotConfig?(rootAsGuessJokerAIPlotConfig);
 		}
 
-		// Token: 0x040019C9 RID: 6601
+		// Token: 0x04001A63 RID: 6755
 		private const string DB = "db_guessjokercard.db";
 
-		// Token: 0x040019CA RID: 6602
+		// Token: 0x04001A64 RID: 6756
 		private const string FILE = "c.猜鬼牌玩法.xlsx";
 
-		// Token: 0x040019CB RID: 6603
+		// Token: 0x04001A65 RID: 6757
 		private const string TABLE = "GuessJokerAIPlotConfig";
 
-		// Token: 0x040019CC RID: 6604
+		// Token: 0x04001A66 RID: 6758
 		private const string COMMAND = "select BinData from `GuessJokerAIPlotConfig` where Id=?";
 
-		// Token: 0x040019CD RID: 6605
+		// Token: 0x04001A67 RID: 6759
 		private const string KEY_PREFIX = "GuessJokerAIPlotConfigById";
 
-		// Token: 0x040019CE RID: 6606
+		// Token: 0x04001A68 RID: 6760
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040019CF RID: 6607
+		// Token: 0x04001A69 RID: 6761
 		private static int HandleId;
 	}
 }

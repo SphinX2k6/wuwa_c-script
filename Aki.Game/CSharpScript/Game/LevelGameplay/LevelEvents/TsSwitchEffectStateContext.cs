@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B8E RID: 27534
+	// Token: 0x02005D06 RID: 23814
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class TsSwitchEffectStateContext : IEffectContext
 	{
-		// Token: 0x1700999A RID: 39322
-		// (get) Token: 0x0604429F RID: 279199 RVA: 0x010CB599 File Offset: 0x010C9799
-		// (set) Token: 0x060442A0 RID: 279200 RVA: 0x010CB5A1 File Offset: 0x010C97A1
+		// Token: 0x17006E9D RID: 28317
+		// (get) Token: 0x0603A3F1 RID: 238577 RVA: 0x01075231 File Offset: 0x01073431
+		// (set) Token: 0x0603A3F2 RID: 238578 RVA: 0x01075239 File Offset: 0x01073439
 		public string AssetPath { get; set; }
 
-		// Token: 0x060442A1 RID: 279201 RVA: 0x010CB5AA File Offset: 0x010C97AA
+		// Token: 0x0603A3F3 RID: 238579 RVA: 0x01075242 File Offset: 0x01073442
 		public TsSwitchEffectStateContext(string assetPath)
 		{
 			this.AssetPath = assetPath;

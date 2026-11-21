@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Priority
 {
-	// Token: 0x0200455D RID: 17757
+	// Token: 0x02003485 RID: 13445
 	[RequiredMember]
 	public class CustomPriorityCallbackParam : ICustomPriorityCallbackParam
 	{
-		// Token: 0x17007557 RID: 30039
-		// (get) Token: 0x0602DDC6 RID: 187846 RVA: 0x00A8C1CF File Offset: 0x00A8A3CF
-		// (set) Token: 0x0602DDC7 RID: 187847 RVA: 0x00A8C1D7 File Offset: 0x00A8A3D7
+		// Token: 0x1700480E RID: 18446
+		// (get) Token: 0x060224A8 RID: 140456 RVA: 0x009B78E7 File Offset: 0x009B5AE7
+		// (set) Token: 0x060224A9 RID: 140457 RVA: 0x009B78EF File Offset: 0x009B5AEF
 		public bool? IsReentrant { get; set; }
 
-		// Token: 0x17007558 RID: 30040
-		// (get) Token: 0x0602DDC8 RID: 187848 RVA: 0x00A8C1E0 File Offset: 0x00A8A3E0
-		// (set) Token: 0x0602DDC9 RID: 187849 RVA: 0x00A8C1E8 File Offset: 0x00A8A3E8
+		// Token: 0x1700480F RID: 18447
+		// (get) Token: 0x060224AA RID: 140458 RVA: 0x009B78F8 File Offset: 0x009B5AF8
+		// (set) Token: 0x060224AB RID: 140459 RVA: 0x009B7900 File Offset: 0x009B5B00
 		[RequiredMember]
 		public bool IsForce { get; set; }
 
-		// Token: 0x0602DDCA RID: 187850 RVA: 0x00A8C1F1 File Offset: 0x00A8A3F1
+		// Token: 0x060224AC RID: 140460 RVA: 0x009B7909 File Offset: 0x009B5B09
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public CustomPriorityCallbackParam()

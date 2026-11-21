@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E99 RID: 7833
+// Token: 0x0200135B RID: 4955
 public class HonamiStoryLevelPowerItem : UiPanelBase
 {
-	// Token: 0x0600F082 RID: 61570 RVA: 0x0039B0CC File Offset: 0x003992CC
+	// Token: 0x0600C4A1 RID: 50337 RVA: 0x003A6C88 File Offset: 0x003A4E88
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class HonamiStoryLevelPowerItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F083 RID: 61571 RVA: 0x0039B152 File Offset: 0x00399352
+	// Token: 0x0600C4A2 RID: 50338 RVA: 0x003A6D0E File Offset: 0x003A4F0E
 	public void RefreshPowerVisible(bool isVisible)
 	{
 		UUIItem item = base.GetItem(4);
@@ -30,18 +30,18 @@ public class HonamiStoryLevelPowerItem : UiPanelBase
 		item.SetUIActive(isVisible);
 	}
 
-	// Token: 0x02008460 RID: 33888
+	// Token: 0x020075E5 RID: 30181
 	private enum EPower
 	{
-		// Token: 0x0402B161 RID: 176481
+		// Token: 0x04026485 RID: 156805
 		Txt,
-		// Token: 0x0402B162 RID: 176482
+		// Token: 0x04026486 RID: 156806
 		SpriteNumBg,
-		// Token: 0x0402B163 RID: 176483
+		// Token: 0x04026487 RID: 156807
 		SpriteLevelIcon,
-		// Token: 0x0402B164 RID: 176484
+		// Token: 0x04026488 RID: 156808
 		SpriteCircle,
-		// Token: 0x0402B165 RID: 176485
+		// Token: 0x04026489 RID: 156809
 		PanelNum
 	}
 }

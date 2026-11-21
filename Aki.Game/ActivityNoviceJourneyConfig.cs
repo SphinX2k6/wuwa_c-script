@@ -5,20 +5,20 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020013D3 RID: 5075
+// Token: 0x02000887 RID: 2183
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityNoviceJourneyConfig : ConfigBase
 {
-	// Token: 0x06008F30 RID: 36656 RVA: 0x001EF3D1 File Offset: 0x001ED5D1
+	// Token: 0x060062C5 RID: 25285 RVA: 0x001F7EF1 File Offset: 0x001F60F1
 	[NullableContext(2)]
 	public NewbieCourse[] GetNoticeJourneyConfigList()
 	{
 		return ConfigNewbieCourseAll.GetConfigList(true).ToArray<NewbieCourse>();
 	}
 
-	// Token: 0x06008F31 RID: 36657 RVA: 0x001EF3E0 File Offset: 0x001ED5E0
+	// Token: 0x060062C6 RID: 25286 RVA: 0x001F7F00 File Offset: 0x001F6100
 	public IItemData[] GetRewardList(int dropId)
 	{
 		DropPackage? dropPackage;
@@ -39,8 +39,8 @@ public class ActivityNoviceJourneyConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x17000C02 RID: 3074
-	// (get) Token: 0x06008F32 RID: 36658 RVA: 0x001EF48C File Offset: 0x001ED68C
+	// Token: 0x17000C22 RID: 3106
+	// (get) Token: 0x060062C7 RID: 25287 RVA: 0x001F7FAC File Offset: 0x001F61AC
 	public static ActivityNoviceJourneyConfig Instance
 	{
 		get
@@ -49,7 +49,7 @@ public class ActivityNoviceJourneyConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06008F33 RID: 36659 RVA: 0x001EF493 File Offset: 0x001ED693
+	// Token: 0x060062C8 RID: 25288 RVA: 0x001F7FB3 File Offset: 0x001F61B3
 	public static ActivityNoviceJourneyConfig GetOrCreateInstance()
 	{
 		if (ActivityNoviceJourneyConfig._Instance == null)
@@ -59,7 +59,7 @@ public class ActivityNoviceJourneyConfig : ConfigBase
 		return ActivityNoviceJourneyConfig._Instance;
 	}
 
-	// Token: 0x06008F34 RID: 36660 RVA: 0x001EF4A7 File Offset: 0x001ED6A7
+	// Token: 0x060062C9 RID: 25289 RVA: 0x001F7FC7 File Offset: 0x001F61C7
 	public static bool CreateInstance()
 	{
 		if (ActivityNoviceJourneyConfig._Instance != null)
@@ -70,24 +70,24 @@ public class ActivityNoviceJourneyConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008F35 RID: 36661 RVA: 0x001EF4BD File Offset: 0x001ED6BD
+	// Token: 0x060062CA RID: 25290 RVA: 0x001F7FDD File Offset: 0x001F61DD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008F36 RID: 36662 RVA: 0x001EF4BF File Offset: 0x001ED6BF
+	// Token: 0x060062CB RID: 25291 RVA: 0x001F7FDF File Offset: 0x001F61DF
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNoviceJourneyConfig._Instance = null;
 	}
 
-	// Token: 0x06008F37 RID: 36663 RVA: 0x001EF4C7 File Offset: 0x001ED6C7
+	// Token: 0x060062CC RID: 25292 RVA: 0x001F7FE7 File Offset: 0x001F61E7
 	static ActivityNoviceJourneyConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNoviceJourneyConfig.CreateStaticDefaultValue), new Action(ActivityNoviceJourneyConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003F66 RID: 16230
+	// Token: 0x04003FFE RID: 16382
 	[Nullable(2)]
 	private static ActivityNoviceJourneyConfig _Instance;
 }

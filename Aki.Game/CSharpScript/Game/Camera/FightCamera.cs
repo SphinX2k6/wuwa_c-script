@@ -4,34 +4,34 @@ using CSharpScript.Game.World.Define;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072CC RID: 29388
+	// Token: 0x0200644E RID: 25678
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FightCamera : Entity
 	{
-		// Token: 0x060481CE RID: 295374 RVA: 0x0127F4BA File Offset: 0x0127D6BA
+		// Token: 0x0603E5D1 RID: 255441 RVA: 0x01221FB6 File Offset: 0x012201B6
 		public FightCamera(int id, int index) : base(id, index)
 		{
 		}
 
-		// Token: 0x060481CF RID: 295375 RVA: 0x0127F4C4 File Offset: 0x0127D6C4
+		// Token: 0x0603E5D2 RID: 255442 RVA: 0x01221FC0 File Offset: 0x012201C0
 		[NullableContext(1)]
 		protected override TsGameBudgetGroupConfig StaticGameBudgetConfig()
 		{
 			return new TsGameBudgetGroupConfig(GameBudgetAllocatorConfigCreator.Instance.TsAlwaysTick2Config);
 		}
 
-		// Token: 0x17009F30 RID: 40752
-		// (get) Token: 0x060481D0 RID: 295376 RVA: 0x0127F4D5 File Offset: 0x0127D6D5
-		// (set) Token: 0x060481D1 RID: 295377 RVA: 0x0127F4DD File Offset: 0x0127D6DD
+		// Token: 0x17007699 RID: 30361
+		// (get) Token: 0x0603E5D3 RID: 255443 RVA: 0x01221FD1 File Offset: 0x012201D1
+		// (set) Token: 0x0603E5D4 RID: 255444 RVA: 0x01221FD9 File Offset: 0x012201D9
 		public FightCameraLogicComponent LogicComponent { get; private set; }
 
-		// Token: 0x17009F31 RID: 40753
-		// (get) Token: 0x060481D2 RID: 295378 RVA: 0x0127F4E6 File Offset: 0x0127D6E6
-		// (set) Token: 0x060481D3 RID: 295379 RVA: 0x0127F4EE File Offset: 0x0127D6EE
+		// Token: 0x1700769A RID: 30362
+		// (get) Token: 0x0603E5D5 RID: 255445 RVA: 0x01221FE2 File Offset: 0x012201E2
+		// (set) Token: 0x0603E5D6 RID: 255446 RVA: 0x01221FEA File Offset: 0x012201EA
 		public FightCameraDisplayComponent DisplayComponent { get; private set; }
 
-		// Token: 0x060481D4 RID: 295380 RVA: 0x0127F4F8 File Offset: 0x0127D6F8
+		// Token: 0x0603E5D7 RID: 255447 RVA: 0x01221FF4 File Offset: 0x012201F4
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			if (((args != null) ? args.GetP1<CameraModelInstance>() : null) == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481D5 RID: 295381 RVA: 0x0127F56F File Offset: 0x0127D76F
+		// Token: 0x0603E5D8 RID: 255448 RVA: 0x0122206B File Offset: 0x0122026B
 		protected override bool OnStart()
 		{
 			this.LogicComponent = base.GetComponent<FightCameraLogicComponent>();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481D6 RID: 295382 RVA: 0x0127F58A File Offset: 0x0127D78A
+		// Token: 0x0603E5D9 RID: 255449 RVA: 0x01222086 File Offset: 0x01220286
 		protected override bool OnClear()
 		{
 			this.LogicComponent = null;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060481D7 RID: 295383 RVA: 0x0127F59C File Offset: 0x0127D79C
+		// Token: 0x0603E5DA RID: 255450 RVA: 0x01222098 File Offset: 0x01220298
 		public override void Tick(float delta)
 		{
 			Stat stat;

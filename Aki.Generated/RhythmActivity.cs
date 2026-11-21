@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FBF RID: 4031
+	// Token: 0x020010A7 RID: 4263
 	public struct RhythmActivity : IFlatbufferObject
 	{
-		// Token: 0x17002E18 RID: 11800
-		// (get) Token: 0x0600BC1C RID: 48156 RVA: 0x002DE648 File Offset: 0x002DC848
+		// Token: 0x17002E93 RID: 11923
+		// (get) Token: 0x0600C266 RID: 49766 RVA: 0x002FAD60 File Offset: 0x002F8F60
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC1D RID: 48157 RVA: 0x002DE655 File Offset: 0x002DC855
+		// Token: 0x0600C267 RID: 49767 RVA: 0x002FAD6D File Offset: 0x002F8F6D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BC1E RID: 48158 RVA: 0x002DE65C File Offset: 0x002DC85C
+		// Token: 0x0600C268 RID: 49768 RVA: 0x002FAD74 File Offset: 0x002F8F74
 		public static RhythmActivity GetRootAsRhythmActivity(ByteBuffer _bb)
 		{
 			return RhythmActivity.GetRootAsRhythmActivity(_bb, default(RhythmActivity));
 		}
 
-		// Token: 0x0600BC1F RID: 48159 RVA: 0x002DE678 File Offset: 0x002DC878
+		// Token: 0x0600C269 RID: 49769 RVA: 0x002FAD90 File Offset: 0x002F8F90
 		public static RhythmActivity GetRootAsRhythmActivity(ByteBuffer _bb, RhythmActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BC20 RID: 48160 RVA: 0x002DE695 File Offset: 0x002DC895
+		// Token: 0x0600C26A RID: 49770 RVA: 0x002FADAD File Offset: 0x002F8FAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BC21 RID: 48161 RVA: 0x002DE6A4 File Offset: 0x002DC8A4
+		// Token: 0x0600C26B RID: 49771 RVA: 0x002FADBC File Offset: 0x002F8FBC
 		public RhythmActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002E19 RID: 11801
-		// (get) Token: 0x0600BC22 RID: 48162 RVA: 0x002DE6B4 File Offset: 0x002DC8B4
+		// Token: 0x17002E94 RID: 11924
+		// (get) Token: 0x0600C26C RID: 49772 RVA: 0x002FADCC File Offset: 0x002F8FCC
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E1A RID: 11802
-		// (get) Token: 0x0600BC23 RID: 48163 RVA: 0x002DE6F0 File Offset: 0x002DC8F0
+		// Token: 0x17002E95 RID: 11925
+		// (get) Token: 0x0600C26D RID: 49773 RVA: 0x002FAE08 File Offset: 0x002F9008
 		public int ActivityId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC24 RID: 48164 RVA: 0x002DE72C File Offset: 0x002DC92C
+		// Token: 0x0600C26E RID: 49774 RVA: 0x002FAE44 File Offset: 0x002F9044
 		public int Combo(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002E1B RID: 11803
-		// (get) Token: 0x0600BC25 RID: 48165 RVA: 0x002DE76C File Offset: 0x002DC96C
+		// Token: 0x17002E96 RID: 11926
+		// (get) Token: 0x0600C26F RID: 49775 RVA: 0x002FAE84 File Offset: 0x002F9084
 		public int ComboLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC26 RID: 48166 RVA: 0x002DE797 File Offset: 0x002DC997
+		// Token: 0x0600C270 RID: 49776 RVA: 0x002FAEAF File Offset: 0x002F90AF
 		public Span<int> GetComboBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600BC27 RID: 48167 RVA: 0x002DE7A6 File Offset: 0x002DC9A6
+		// Token: 0x0600C271 RID: 49777 RVA: 0x002FAEBE File Offset: 0x002F90BE
 		public int[] GetComboArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002E1C RID: 11804
-		// (get) Token: 0x0600BC28 RID: 48168 RVA: 0x002DE7C0 File Offset: 0x002DC9C0
+		// Token: 0x17002E97 RID: 11927
+		// (get) Token: 0x0600C272 RID: 49778 RVA: 0x002FAED8 File Offset: 0x002F90D8
 		public int FeverLimit
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E1D RID: 11805
-		// (get) Token: 0x0600BC29 RID: 48169 RVA: 0x002DE800 File Offset: 0x002DCA00
+		// Token: 0x17002E98 RID: 11928
+		// (get) Token: 0x0600C273 RID: 49779 RVA: 0x002FAF18 File Offset: 0x002F9118
 		public int FeverCost
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E1E RID: 11806
-		// (get) Token: 0x0600BC2A RID: 48170 RVA: 0x002DE840 File Offset: 0x002DCA40
+		// Token: 0x17002E99 RID: 11929
+		// (get) Token: 0x0600C274 RID: 49780 RVA: 0x002FAF58 File Offset: 0x002F9158
 		public int NoteScore
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC2B RID: 48171 RVA: 0x002DE880 File Offset: 0x002DCA80
+		// Token: 0x0600C275 RID: 49781 RVA: 0x002FAF98 File Offset: 0x002F9198
 		public int SettleRatio(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -173,8 +173,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002E1F RID: 11807
-		// (get) Token: 0x0600BC2C RID: 48172 RVA: 0x002DE8C0 File Offset: 0x002DCAC0
+		// Token: 0x17002E9A RID: 11930
+		// (get) Token: 0x0600C276 RID: 49782 RVA: 0x002FAFD8 File Offset: 0x002F91D8
 		public int SettleRatioLength
 		{
 			get
@@ -188,20 +188,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC2D RID: 48173 RVA: 0x002DE8EC File Offset: 0x002DCAEC
+		// Token: 0x0600C277 RID: 49783 RVA: 0x002FB004 File Offset: 0x002F9204
 		public Span<int> GetSettleRatioBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600BC2E RID: 48174 RVA: 0x002DE8FC File Offset: 0x002DCAFC
+		// Token: 0x0600C278 RID: 49784 RVA: 0x002FB014 File Offset: 0x002F9214
 		public int[] GetSettleRatioArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002E20 RID: 11808
-		// (get) Token: 0x0600BC2F RID: 48175 RVA: 0x002DE914 File Offset: 0x002DCB14
+		// Token: 0x17002E9B RID: 11931
+		// (get) Token: 0x0600C279 RID: 49785 RVA: 0x002FB02C File Offset: 0x002F922C
 		public int RecommendQuestId
 		{
 			get
@@ -215,8 +215,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E21 RID: 11809
-		// (get) Token: 0x0600BC30 RID: 48176 RVA: 0x002DE954 File Offset: 0x002DCB54
+		// Token: 0x17002E9C RID: 11932
+		// (get) Token: 0x0600C27A RID: 49786 RVA: 0x002FB06C File Offset: 0x002F926C
 		public string RecommendQuestTips
 		{
 			get
@@ -230,55 +230,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC31 RID: 48177 RVA: 0x002DE98C File Offset: 0x002DCB8C
+		// Token: 0x0600C27B RID: 49787 RVA: 0x002FB0A4 File Offset: 0x002F92A4
 		public Span<byte> GetRecommendQuestTipsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600BC32 RID: 48178 RVA: 0x002DE99C File Offset: 0x002DCB9C
+		// Token: 0x0600C27C RID: 49788 RVA: 0x002FB0B4 File Offset: 0x002F92B4
 		public byte[] GetRecommendQuestTipsArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600BC33 RID: 48179 RVA: 0x002DE9B4 File Offset: 0x002DCBB4
+		// Token: 0x0600C27D RID: 49789 RVA: 0x002FB0CC File Offset: 0x002F92CC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ComboIter()或GetComboBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Combo()
+		public int[] Combo()
 		{
-			RhythmActivity rhythmActivity = this;
-			return rhythmActivity.GetComboArray() ?? Array.Empty<int>();
+			return this.GetComboArray();
 		}
 
-		// Token: 0x0600BC34 RID: 48180 RVA: 0x002DE9D8 File Offset: 0x002DCBD8
+		// Token: 0x0600C27E RID: 49790 RVA: 0x002FB0D4 File Offset: 0x002F92D4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ComboIter()
+		public IEnumerable<int> ComboIter()
 		{
 			RhythmActivity.<ComboIter>d__35 <ComboIter>d__ = new RhythmActivity.<ComboIter>d__35(-2);
 			<ComboIter>d__.<>3__<>4__this = this;
 			return <ComboIter>d__;
 		}
 
-		// Token: 0x0600BC35 RID: 48181 RVA: 0x002DE9F0 File Offset: 0x002DCBF0
+		// Token: 0x0600C27F RID: 49791 RVA: 0x002FB0E9 File Offset: 0x002F92E9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SettleRatioIter()或GetSettleRatioBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SettleRatio()
+		public int[] SettleRatio()
 		{
-			RhythmActivity rhythmActivity = this;
-			return rhythmActivity.GetSettleRatioArray() ?? Array.Empty<int>();
+			return this.GetSettleRatioArray();
 		}
 
-		// Token: 0x0600BC36 RID: 48182 RVA: 0x002DEA14 File Offset: 0x002DCC14
+		// Token: 0x0600C280 RID: 49792 RVA: 0x002FB0F1 File Offset: 0x002F92F1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SettleRatioIter()
+		public IEnumerable<int> SettleRatioIter()
 		{
 			RhythmActivity.<SettleRatioIter>d__37 <SettleRatioIter>d__ = new RhythmActivity.<SettleRatioIter>d__37(-2);
 			<SettleRatioIter>d__.<>3__<>4__this = this;
 			return <SettleRatioIter>d__;
 		}
 
-		// Token: 0x04005099 RID: 20633
+		// Token: 0x04005681 RID: 22145
 		private Table __p;
 	}
 }

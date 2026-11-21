@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000BD RID: 189
+	// Token: 0x020000C5 RID: 197
 	[EnumExtensions]
 	public enum EIndependentSystemRewardType
 	{
-		// Token: 0x04000444 RID: 1092
+		// Token: 0x04000468 RID: 1128
 		DarkTide
 	}
 }

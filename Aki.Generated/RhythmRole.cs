@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FC2 RID: 4034
+	// Token: 0x020010AA RID: 4266
 	public struct RhythmRole : IFlatbufferObject
 	{
-		// Token: 0x17002E30 RID: 11824
-		// (get) Token: 0x0600BC61 RID: 48225 RVA: 0x002DEF18 File Offset: 0x002DD118
+		// Token: 0x17002EAB RID: 11947
+		// (get) Token: 0x0600C2AB RID: 49835 RVA: 0x002FB5F4 File Offset: 0x002F97F4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC62 RID: 48226 RVA: 0x002DEF25 File Offset: 0x002DD125
+		// Token: 0x0600C2AC RID: 49836 RVA: 0x002FB601 File Offset: 0x002F9801
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BC63 RID: 48227 RVA: 0x002DEF2C File Offset: 0x002DD12C
+		// Token: 0x0600C2AD RID: 49837 RVA: 0x002FB608 File Offset: 0x002F9808
 		public static RhythmRole GetRootAsRhythmRole(ByteBuffer _bb)
 		{
 			return RhythmRole.GetRootAsRhythmRole(_bb, default(RhythmRole));
 		}
 
-		// Token: 0x0600BC64 RID: 48228 RVA: 0x002DEF48 File Offset: 0x002DD148
+		// Token: 0x0600C2AE RID: 49838 RVA: 0x002FB624 File Offset: 0x002F9824
 		public static RhythmRole GetRootAsRhythmRole(ByteBuffer _bb, RhythmRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BC65 RID: 48229 RVA: 0x002DEF65 File Offset: 0x002DD165
+		// Token: 0x0600C2AF RID: 49839 RVA: 0x002FB641 File Offset: 0x002F9841
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BC66 RID: 48230 RVA: 0x002DEF74 File Offset: 0x002DD174
+		// Token: 0x0600C2B0 RID: 49840 RVA: 0x002FB650 File Offset: 0x002F9850
 		public RhythmRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002E31 RID: 11825
-		// (get) Token: 0x0600BC67 RID: 48231 RVA: 0x002DEF84 File Offset: 0x002DD184
+		// Token: 0x17002EAC RID: 11948
+		// (get) Token: 0x0600C2B1 RID: 49841 RVA: 0x002FB660 File Offset: 0x002F9860
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E32 RID: 11826
-		// (get) Token: 0x0600BC68 RID: 48232 RVA: 0x002DEFC0 File Offset: 0x002DD1C0
+		// Token: 0x17002EAD RID: 11949
+		// (get) Token: 0x0600C2B2 RID: 49842 RVA: 0x002FB69C File Offset: 0x002F989C
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E33 RID: 11827
-		// (get) Token: 0x0600BC69 RID: 48233 RVA: 0x002DEFFC File Offset: 0x002DD1FC
+		// Token: 0x17002EAE RID: 11950
+		// (get) Token: 0x0600C2B3 RID: 49843 RVA: 0x002FB6D8 File Offset: 0x002F98D8
 		public int UnlockCondition
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002E34 RID: 11828
-		// (get) Token: 0x0600BC6A RID: 48234 RVA: 0x002DF038 File Offset: 0x002DD238
+		// Token: 0x17002EAF RID: 11951
+		// (get) Token: 0x0600C2B4 RID: 49844 RVA: 0x002FB714 File Offset: 0x002F9914
 		public bool DefaultRole
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC6B RID: 48235 RVA: 0x002DF078 File Offset: 0x002DD278
+		// Token: 0x0600C2B5 RID: 49845 RVA: 0x002FB754 File Offset: 0x002F9954
 		public int Effect(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -116,8 +116,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002E35 RID: 11829
-		// (get) Token: 0x0600BC6C RID: 48236 RVA: 0x002DF0B8 File Offset: 0x002DD2B8
+		// Token: 0x17002EB0 RID: 11952
+		// (get) Token: 0x0600C2B6 RID: 49846 RVA: 0x002FB794 File Offset: 0x002F9994
 		public int EffectLength
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC6D RID: 48237 RVA: 0x002DF0E4 File Offset: 0x002DD2E4
+		// Token: 0x0600C2B7 RID: 49847 RVA: 0x002FB7C0 File Offset: 0x002F99C0
 		public Span<int> GetEffectBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600BC6E RID: 48238 RVA: 0x002DF0F4 File Offset: 0x002DD2F4
+		// Token: 0x0600C2B8 RID: 49848 RVA: 0x002FB7D0 File Offset: 0x002F99D0
 		public int[] GetEffectArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002E36 RID: 11830
-		// (get) Token: 0x0600BC6F RID: 48239 RVA: 0x002DF10C File Offset: 0x002DD30C
+		// Token: 0x17002EB1 RID: 11953
+		// (get) Token: 0x0600C2B9 RID: 49849 RVA: 0x002FB7E8 File Offset: 0x002F99E8
 		public string RoleNameText
 		{
 			get
@@ -158,20 +158,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC70 RID: 48240 RVA: 0x002DF144 File Offset: 0x002DD344
+		// Token: 0x0600C2BA RID: 49850 RVA: 0x002FB820 File Offset: 0x002F9A20
 		public Span<byte> GetRoleNameTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600BC71 RID: 48241 RVA: 0x002DF154 File Offset: 0x002DD354
+		// Token: 0x0600C2BB RID: 49851 RVA: 0x002FB830 File Offset: 0x002F9A30
 		public byte[] GetRoleNameTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E37 RID: 11831
-		// (get) Token: 0x0600BC72 RID: 48242 RVA: 0x002DF16C File Offset: 0x002DD36C
+		// Token: 0x17002EB2 RID: 11954
+		// (get) Token: 0x0600C2BC RID: 49852 RVA: 0x002FB848 File Offset: 0x002F9A48
 		public string RoleHeadTexture
 		{
 			get
@@ -185,20 +185,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC73 RID: 48243 RVA: 0x002DF1A4 File Offset: 0x002DD3A4
+		// Token: 0x0600C2BD RID: 49853 RVA: 0x002FB880 File Offset: 0x002F9A80
 		public Span<byte> GetRoleHeadTextureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600BC74 RID: 48244 RVA: 0x002DF1B4 File Offset: 0x002DD3B4
+		// Token: 0x0600C2BE RID: 49854 RVA: 0x002FB890 File Offset: 0x002F9A90
 		public byte[] GetRoleHeadTextureArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E38 RID: 11832
-		// (get) Token: 0x0600BC75 RID: 48245 RVA: 0x002DF1CC File Offset: 0x002DD3CC
+		// Token: 0x17002EB3 RID: 11955
+		// (get) Token: 0x0600C2BF RID: 49855 RVA: 0x002FB8A8 File Offset: 0x002F9AA8
 		public string RoleHeadTexture2
 		{
 			get
@@ -212,19 +212,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC76 RID: 48246 RVA: 0x002DF204 File Offset: 0x002DD404
+		// Token: 0x0600C2C0 RID: 49856 RVA: 0x002FB8E0 File Offset: 0x002F9AE0
 		public Span<byte> GetRoleHeadTexture2Bytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600BC77 RID: 48247 RVA: 0x002DF214 File Offset: 0x002DD414
+		// Token: 0x0600C2C1 RID: 49857 RVA: 0x002FB8F0 File Offset: 0x002F9AF0
 		public byte[] GetRoleHeadTexture2Array()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600BC78 RID: 48248 RVA: 0x002DF22C File Offset: 0x002DD42C
+		// Token: 0x0600C2C2 RID: 49858 RVA: 0x002FB908 File Offset: 0x002F9B08
 		public int SkillEffectList(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -235,8 +235,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002E39 RID: 11833
-		// (get) Token: 0x0600BC79 RID: 48249 RVA: 0x002DF26C File Offset: 0x002DD46C
+		// Token: 0x17002EB4 RID: 11956
+		// (get) Token: 0x0600C2C3 RID: 49859 RVA: 0x002FB948 File Offset: 0x002F9B48
 		public int SkillEffectListLength
 		{
 			get
@@ -250,20 +250,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC7A RID: 48250 RVA: 0x002DF298 File Offset: 0x002DD498
+		// Token: 0x0600C2C4 RID: 49860 RVA: 0x002FB974 File Offset: 0x002F9B74
 		public Span<int> GetSkillEffectListBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x0600BC7B RID: 48251 RVA: 0x002DF2A8 File Offset: 0x002DD4A8
+		// Token: 0x0600C2C5 RID: 49861 RVA: 0x002FB984 File Offset: 0x002F9B84
 		public int[] GetSkillEffectListArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002E3A RID: 11834
-		// (get) Token: 0x0600BC7C RID: 48252 RVA: 0x002DF2C0 File Offset: 0x002DD4C0
+		// Token: 0x17002EB5 RID: 11957
+		// (get) Token: 0x0600C2C6 RID: 49862 RVA: 0x002FB99C File Offset: 0x002F9B9C
 		public string SkillIcon
 		{
 			get
@@ -277,20 +277,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC7D RID: 48253 RVA: 0x002DF2F8 File Offset: 0x002DD4F8
+		// Token: 0x0600C2C7 RID: 49863 RVA: 0x002FB9D4 File Offset: 0x002F9BD4
 		public Span<byte> GetSkillIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600BC7E RID: 48254 RVA: 0x002DF308 File Offset: 0x002DD508
+		// Token: 0x0600C2C8 RID: 49864 RVA: 0x002FB9E4 File Offset: 0x002F9BE4
 		public byte[] GetSkillIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E3B RID: 11835
-		// (get) Token: 0x0600BC7F RID: 48255 RVA: 0x002DF320 File Offset: 0x002DD520
+		// Token: 0x17002EB6 RID: 11958
+		// (get) Token: 0x0600C2C9 RID: 49865 RVA: 0x002FB9FC File Offset: 0x002F9BFC
 		public string RoleDesText
 		{
 			get
@@ -304,20 +304,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC80 RID: 48256 RVA: 0x002DF358 File Offset: 0x002DD558
+		// Token: 0x0600C2CA RID: 49866 RVA: 0x002FBA34 File Offset: 0x002F9C34
 		public Span<byte> GetRoleDesTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x0600BC81 RID: 48257 RVA: 0x002DF368 File Offset: 0x002DD568
+		// Token: 0x0600C2CB RID: 49867 RVA: 0x002FBA44 File Offset: 0x002F9C44
 		public byte[] GetRoleDesTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E3C RID: 11836
-		// (get) Token: 0x0600BC82 RID: 48258 RVA: 0x002DF380 File Offset: 0x002DD580
+		// Token: 0x17002EB7 RID: 11959
+		// (get) Token: 0x0600C2CC RID: 49868 RVA: 0x002FBA5C File Offset: 0x002F9C5C
 		public string LockTips
 		{
 			get
@@ -331,20 +331,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC83 RID: 48259 RVA: 0x002DF3B8 File Offset: 0x002DD5B8
+		// Token: 0x0600C2CD RID: 49869 RVA: 0x002FBA94 File Offset: 0x002F9C94
 		public Span<byte> GetLockTipsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(26, 1);
 		}
 
-		// Token: 0x0600BC84 RID: 48260 RVA: 0x002DF3C8 File Offset: 0x002DD5C8
+		// Token: 0x0600C2CE RID: 49870 RVA: 0x002FBAA4 File Offset: 0x002F9CA4
 		public byte[] GetLockTipsArray()
 		{
 			return this.__p.__vector_as_array<byte>(26) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E3D RID: 11837
-		// (get) Token: 0x0600BC85 RID: 48261 RVA: 0x002DF3E0 File Offset: 0x002DD5E0
+		// Token: 0x17002EB8 RID: 11960
+		// (get) Token: 0x0600C2CF RID: 49871 RVA: 0x002FBABC File Offset: 0x002F9CBC
 		public string RoleSkillText
 		{
 			get
@@ -358,20 +358,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC86 RID: 48262 RVA: 0x002DF418 File Offset: 0x002DD618
+		// Token: 0x0600C2D0 RID: 49872 RVA: 0x002FBAF4 File Offset: 0x002F9CF4
 		public Span<byte> GetRoleSkillTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(28, 1);
 		}
 
-		// Token: 0x0600BC87 RID: 48263 RVA: 0x002DF428 File Offset: 0x002DD628
+		// Token: 0x0600C2D1 RID: 49873 RVA: 0x002FBB04 File Offset: 0x002F9D04
 		public byte[] GetRoleSkillTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(28) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002E3E RID: 11838
-		// (get) Token: 0x0600BC88 RID: 48264 RVA: 0x002DF440 File Offset: 0x002DD640
+		// Token: 0x17002EB9 RID: 11961
+		// (get) Token: 0x0600C2D2 RID: 49874 RVA: 0x002FBB1C File Offset: 0x002F9D1C
 		public string RoleSkillMusic
 		{
 			get
@@ -385,55 +385,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BC89 RID: 48265 RVA: 0x002DF478 File Offset: 0x002DD678
+		// Token: 0x0600C2D3 RID: 49875 RVA: 0x002FBB54 File Offset: 0x002F9D54
 		public Span<byte> GetRoleSkillMusicBytes()
 		{
 			return this.__p.__vector_as_span<byte>(30, 1);
 		}
 
-		// Token: 0x0600BC8A RID: 48266 RVA: 0x002DF488 File Offset: 0x002DD688
+		// Token: 0x0600C2D4 RID: 49876 RVA: 0x002FBB64 File Offset: 0x002F9D64
 		public byte[] GetRoleSkillMusicArray()
 		{
 			return this.__p.__vector_as_array<byte>(30) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600BC8B RID: 48267 RVA: 0x002DF4A0 File Offset: 0x002DD6A0
+		// Token: 0x0600C2D5 RID: 49877 RVA: 0x002FBB7C File Offset: 0x002F9D7C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用EffectIter()或GetEffectBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Effect()
+		public int[] Effect()
 		{
-			RhythmRole rhythmRole = this;
-			return rhythmRole.GetEffectArray() ?? Array.Empty<int>();
+			return this.GetEffectArray();
 		}
 
-		// Token: 0x0600BC8C RID: 48268 RVA: 0x002DF4C4 File Offset: 0x002DD6C4
+		// Token: 0x0600C2D6 RID: 49878 RVA: 0x002FBB84 File Offset: 0x002F9D84
 		[NullableContext(1)]
-		public readonly IEnumerable<int> EffectIter()
+		public IEnumerable<int> EffectIter()
 		{
 			RhythmRole.<EffectIter>d__59 <EffectIter>d__ = new RhythmRole.<EffectIter>d__59(-2);
 			<EffectIter>d__.<>3__<>4__this = this;
 			return <EffectIter>d__;
 		}
 
-		// Token: 0x0600BC8D RID: 48269 RVA: 0x002DF4DC File Offset: 0x002DD6DC
+		// Token: 0x0600C2D7 RID: 49879 RVA: 0x002FBB99 File Offset: 0x002F9D99
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillEffectListIter()或GetSkillEffectListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillEffectList()
+		public int[] SkillEffectList()
 		{
-			RhythmRole rhythmRole = this;
-			return rhythmRole.GetSkillEffectListArray() ?? Array.Empty<int>();
+			return this.GetSkillEffectListArray();
 		}
 
-		// Token: 0x0600BC8E RID: 48270 RVA: 0x002DF500 File Offset: 0x002DD700
+		// Token: 0x0600C2D8 RID: 49880 RVA: 0x002FBBA1 File Offset: 0x002F9DA1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillEffectListIter()
+		public IEnumerable<int> SkillEffectListIter()
 		{
 			RhythmRole.<SkillEffectListIter>d__61 <SkillEffectListIter>d__ = new RhythmRole.<SkillEffectListIter>d__61(-2);
 			<SkillEffectListIter>d__.<>3__<>4__this = this;
 			return <SkillEffectListIter>d__;
 		}
 
-		// Token: 0x0400509C RID: 20636
+		// Token: 0x04005684 RID: 22148
 		private Table __p;
 	}
 }

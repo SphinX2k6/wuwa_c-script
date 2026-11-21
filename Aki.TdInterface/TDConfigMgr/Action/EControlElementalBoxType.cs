@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015B7 RID: 5559
+	// Token: 0x02001716 RID: 5910
 	[EnumExtensions]
 	public enum EControlElementalBoxType
 	{
-		// Token: 0x04004A1B RID: 18971
+		// Token: 0x04004DD3 RID: 19923
 		Capture,
-		// Token: 0x04004A1C RID: 18972
+		// Token: 0x04004DD4 RID: 19924
 		Return
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E18 RID: 7704
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200204B RID: 8267
 	public class ISetBattleTagType
 	{
-		// Token: 0x0600A4CF RID: 42191 RVA: 0x00175A58 File Offset: 0x00173C58
+		// Token: 0x0600AF77 RID: 44919 RVA: 0x0018B460 File Offset: 0x00189660
 		private ISetBattleTagType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A4D0 RID: 42192 RVA: 0x00175A90 File Offset: 0x00173C90
+		// Token: 0x0600AF78 RID: 44920 RVA: 0x0018B498 File Offset: 0x00189698
 		public static ISetBattleTagType Create([Nullable(2)] ISetBattleTagType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4D1 RID: 42193 RVA: 0x00175AA3 File Offset: 0x00173CA3
+		// Token: 0x0600AF79 RID: 44921 RVA: 0x0018B4AB File Offset: 0x001896AB
 		public static ISetBattleTagType CreateFromSetValue([Nullable(2)] ISetBattleTagType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4D2 RID: 42194 RVA: 0x00175AB6 File Offset: 0x00173CB6
+		// Token: 0x0600AF7A RID: 44922 RVA: 0x0018B4BE File Offset: 0x001896BE
 		public ISetBattleTagType_SetValue ToSetValue()
 		{
 			return new ISetBattleTagType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700329A RID: 12954
-		// (get) Token: 0x0600A4D3 RID: 42195 RVA: 0x00175AC9 File Offset: 0x00173CC9
-		// (set) Token: 0x0600A4D4 RID: 42196 RVA: 0x00175AF4 File Offset: 0x00173CF4
+		// Token: 0x17003559 RID: 13657
+		// (get) Token: 0x0600AF7B RID: 44923 RVA: 0x0018B4D1 File Offset: 0x001896D1
+		// (set) Token: 0x0600AF7C RID: 44924 RVA: 0x0018B4FC File Offset: 0x001896FC
 		public virtual ESetBattleTagType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062A5 RID: 25253
+		// Token: 0x0400687C RID: 26748
 		[Nullable(2)]
 		protected ISetBattleTagType FbInstance;
 
-		// Token: 0x040062A6 RID: 25254
+		// Token: 0x0400687D RID: 26749
 		[Nullable(2)]
 		protected ISetBattleTagType_SetValue PocoInterface;
 	}

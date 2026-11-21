@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000640 RID: 1600
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006DD RID: 1757
 	public class IQuickHackSkill
 	{
-		// Token: 0x0600222E RID: 8750 RVA: 0x0005E09C File Offset: 0x0005C29C
+		// Token: 0x06002534 RID: 9524 RVA: 0x00064DB0 File Offset: 0x00062FB0
 		private IQuickHackSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600222F RID: 8751 RVA: 0x0005E0D4 File Offset: 0x0005C2D4
+		// Token: 0x06002535 RID: 9525 RVA: 0x00064DE8 File Offset: 0x00062FE8
 		public static IQuickHackSkill Create([Nullable(2)] IQuickHackSkill instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002230 RID: 8752 RVA: 0x0005E0E7 File Offset: 0x0005C2E7
+		// Token: 0x06002536 RID: 9526 RVA: 0x00064DFB File Offset: 0x00062FFB
 		public static IQuickHackSkill CreateFromSetValue([Nullable(2)] IQuickHackSkill_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002231 RID: 8753 RVA: 0x0005E0FA File Offset: 0x0005C2FA
+		// Token: 0x06002537 RID: 9527 RVA: 0x00064E0E File Offset: 0x0006300E
 		public IQuickHackSkill_SetValue ToSetValue()
 		{
 			return new IQuickHackSkill_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000916 RID: 2326
-		// (get) Token: 0x06002232 RID: 8754 RVA: 0x0005E119 File Offset: 0x0005C319
-		// (set) Token: 0x06002233 RID: 8755 RVA: 0x0005E144 File Offset: 0x0005C344
+		// Token: 0x170009CD RID: 2509
+		// (get) Token: 0x06002538 RID: 9528 RVA: 0x00064E2D File Offset: 0x0006302D
+		// (set) Token: 0x06002539 RID: 9529 RVA: 0x00064E58 File Offset: 0x00063058
 		public virtual int Id
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000917 RID: 2327
-		// (get) Token: 0x06002234 RID: 8756 RVA: 0x0005E154 File Offset: 0x0005C354
-		// (set) Token: 0x06002235 RID: 8757 RVA: 0x0005E1E7 File Offset: 0x0005C3E7
+		// Token: 0x170009CE RID: 2510
+		// (get) Token: 0x0600253A RID: 9530 RVA: 0x00064E68 File Offset: 0x00063068
+		// (set) Token: 0x0600253B RID: 9531 RVA: 0x00064EFB File Offset: 0x000630FB
 		public virtual List<IQuickHackSkillContent> Content
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017C0 RID: 6080
+		// Token: 0x040019B2 RID: 6578
 		[Nullable(2)]
 		protected IQuickHackSkill FbInstance;
 
-		// Token: 0x040017C1 RID: 6081
+		// Token: 0x040019B3 RID: 6579
 		[Nullable(2)]
 		protected IQuickHackSkill_SetValue PocoInterface;
 
-		// Token: 0x040017C2 RID: 6082
+		// Token: 0x040019B4 RID: 6580
 		private List<IQuickHackSkillContent> _ContentCache;
 
-		// Token: 0x040017C3 RID: 6083
+		// Token: 0x040019B5 RID: 6581
 		private bool _ContentInited;
 	}
 }

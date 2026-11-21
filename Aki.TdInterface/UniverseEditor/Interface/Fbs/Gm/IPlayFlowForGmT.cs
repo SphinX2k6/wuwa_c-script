@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200467F RID: 18047
+	// Token: 0x02004AE7 RID: 19175
 	public class IPlayFlowForGmT
 	{
-		// Token: 0x17008028 RID: 32808
-		// (get) Token: 0x0601B667 RID: 112231 RVA: 0x003E4D9B File Offset: 0x003E2F9B
-		// (set) Token: 0x0601B668 RID: 112232 RVA: 0x003E4DA3 File Offset: 0x003E2FA3
+		// Token: 0x17008669 RID: 34409
+		// (get) Token: 0x0601CE3C RID: 118332 RVA: 0x00411037 File Offset: 0x0040F237
+		// (set) Token: 0x0601CE3D RID: 118333 RVA: 0x0041103F File Offset: 0x0040F23F
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008029 RID: 32809
-		// (get) Token: 0x0601B669 RID: 112233 RVA: 0x003E4DAC File Offset: 0x003E2FAC
-		// (set) Token: 0x0601B66A RID: 112234 RVA: 0x003E4DB4 File Offset: 0x003E2FB4
+		// Token: 0x1700866A RID: 34410
+		// (get) Token: 0x0601CE3E RID: 118334 RVA: 0x00411048 File Offset: 0x0040F248
+		// (set) Token: 0x0601CE3F RID: 118335 RVA: 0x00411050 File Offset: 0x0040F250
 		public IPlayFlowT Flow { get; set; }
 
-		// Token: 0x0601B66B RID: 112235 RVA: 0x003E4DBD File Offset: 0x003E2FBD
+		// Token: 0x0601CE40 RID: 118336 RVA: 0x00411059 File Offset: 0x0040F259
 		public IPlayFlowForGmT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

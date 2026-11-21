@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002505 RID: 9477
+	// Token: 0x020027AB RID: 10155
 	public class IHeadStyleWeakSignal : IHeadStyle
 	{
-		// Token: 0x0600D37B RID: 54139 RVA: 0x001F58BE File Offset: 0x001F3ABE
-		[NullableContext(1)]
+		// Token: 0x0600E0D7 RID: 57559 RVA: 0x002112B6 File Offset: 0x0020F4B6
 		public static IHeadStyleWeakSignal Create(IHeadStyleWeakSignal? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B33 RID: 15155
-		// (get) Token: 0x0600D37C RID: 54140 RVA: 0x001F58DD File Offset: 0x001F3ADD
+		// Token: 0x17003E2F RID: 15919
+		// (get) Token: 0x0600E0D8 RID: 57560 RVA: 0x002112D5 File Offset: 0x0020F4D5
 		public override EHeadStyle Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073EF RID: 29679
+		// Token: 0x04007A41 RID: 31297
 		private IHeadStyleWeakSignal Instance;
 	}
 }

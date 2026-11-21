@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020027B5 RID: 10165
+// Token: 0x02001D30 RID: 7472
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleResonanceData : RoleModuleDataBase
 {
-	// Token: 0x06014E78 RID: 85624 RVA: 0x0054EE05 File Offset: 0x0054D005
+	// Token: 0x06012877 RID: 75895 RVA: 0x00579B2D File Offset: 0x00577D2D
 	public RoleResonanceData(int roleId) : base(roleId)
 	{
 	}
 
-	// Token: 0x06014E79 RID: 85625 RVA: 0x0054EE24 File Offset: 0x0054D024
+	// Token: 0x06012878 RID: 75896 RVA: 0x00579B4C File Offset: 0x00577D4C
 	public void SetResonance(ResonanceDataInfo resonance)
 	{
 		this.ResonanceInfoMap[resonance.ResonId] = resonance;
 	}
 
-	// Token: 0x06014E7A RID: 85626 RVA: 0x0054EE38 File Offset: 0x0054D038
+	// Token: 0x06012879 RID: 75897 RVA: 0x00579B60 File Offset: 0x00577D60
 	[NullableContext(2)]
 	public ResonanceDataInfo GetResonance(int id)
 	{
@@ -31,31 +31,31 @@ public class RoleResonanceData : RoleModuleDataBase
 		return result;
 	}
 
-	// Token: 0x06014E7B RID: 85627 RVA: 0x0054EE58 File Offset: 0x0054D058
+	// Token: 0x0601287A RID: 75898 RVA: 0x00579B80 File Offset: 0x00577D80
 	public void SetResonanceLock(int resonanceId)
 	{
 		this.ResonanceLockSet.Add(resonanceId);
 	}
 
-	// Token: 0x06014E7C RID: 85628 RVA: 0x0054EE67 File Offset: 0x0054D067
+	// Token: 0x0601287B RID: 75899 RVA: 0x00579B8F File Offset: 0x00577D8F
 	public void SetResonantChainGroupIndex(int index)
 	{
 		this.ResonantChainGroupIndex = index;
 	}
 
-	// Token: 0x06014E7D RID: 85629 RVA: 0x0054EE70 File Offset: 0x0054D070
+	// Token: 0x0601287C RID: 75900 RVA: 0x00579B98 File Offset: 0x00577D98
 	public int GetResonantChainGroupIndex()
 	{
 		return this.ResonantChainGroupIndex;
 	}
 
-	// Token: 0x06014E7E RID: 85630 RVA: 0x0054EE78 File Offset: 0x0054D078
+	// Token: 0x0601287D RID: 75901 RVA: 0x00579BA0 File Offset: 0x00577DA0
 	public bool CheckFrontResonanceOpen(int id, int groupId)
 	{
 		return true;
 	}
 
-	// Token: 0x06014E7F RID: 85631 RVA: 0x0054EE7C File Offset: 0x0054D07C
+	// Token: 0x0601287E RID: 75902 RVA: 0x00579BA4 File Offset: 0x00577DA4
 	public bool IsEnoughResonanceActive(int resonanceId)
 	{
 		ResonantChain? roleResonanceById = RoleResonanceConfig.Instance.GetRoleResonanceById(resonanceId);
@@ -81,7 +81,7 @@ public class RoleResonanceData : RoleModuleDataBase
 		return true;
 	}
 
-	// Token: 0x06014E80 RID: 85632 RVA: 0x0054EF38 File Offset: 0x0054D138
+	// Token: 0x0601287F RID: 75903 RVA: 0x00579C60 File Offset: 0x00577E60
 	public int GetResonanceLevel()
 	{
 		int num = 0;
@@ -95,7 +95,7 @@ public class RoleResonanceData : RoleModuleDataBase
 		return num;
 	}
 
-	// Token: 0x06014E81 RID: 85633 RVA: 0x0054EF98 File Offset: 0x0054D198
+	// Token: 0x06012880 RID: 75904 RVA: 0x00579CC0 File Offset: 0x00577EC0
 	public int GetResonanceIncreaseLevel()
 	{
 		int num = 0;
@@ -110,7 +110,7 @@ public class RoleResonanceData : RoleModuleDataBase
 		return num;
 	}
 
-	// Token: 0x06014E82 RID: 85634 RVA: 0x0054F000 File Offset: 0x0054D200
+	// Token: 0x06012881 RID: 75905 RVA: 0x00579D28 File Offset: 0x00577F28
 	public bool IsResonanceFullyUnLock()
 	{
 		int resonanceId = base.GetRoleConfig().ResonanceId;
@@ -125,7 +125,7 @@ public class RoleResonanceData : RoleModuleDataBase
 		return true;
 	}
 
-	// Token: 0x06014E83 RID: 85635 RVA: 0x0054F088 File Offset: 0x0054D288
+	// Token: 0x06012882 RID: 75906 RVA: 0x00579DB0 File Offset: 0x00577FB0
 	public void CopyFrom(RoleResonanceData data)
 	{
 		this.ResonantChainGroupIndex = data.ResonantChainGroupIndex;
@@ -142,7 +142,7 @@ public class RoleResonanceData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E84 RID: 85636 RVA: 0x0054F174 File Offset: 0x0054D374
+	// Token: 0x06012883 RID: 75907 RVA: 0x00579E9C File Offset: 0x0057809C
 	public void Clear()
 	{
 		this.ResonantChainGroupIndex = 0;
@@ -150,12 +150,12 @@ public class RoleResonanceData : RoleModuleDataBase
 		this.ResonanceLockSet.Clear();
 	}
 
-	// Token: 0x04009D0A RID: 40202
+	// Token: 0x0400A0ED RID: 41197
 	protected int ResonantChainGroupIndex;
 
-	// Token: 0x04009D0B RID: 40203
+	// Token: 0x0400A0EE RID: 41198
 	protected Dictionary<int, ResonanceDataInfo> ResonanceInfoMap = new Dictionary<int, ResonanceDataInfo>();
 
-	// Token: 0x04009D0C RID: 40204
+	// Token: 0x0400A0EF RID: 41199
 	protected HashSet<int> ResonanceLockSet = new HashSet<int>();
 }

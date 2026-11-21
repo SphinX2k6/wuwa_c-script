@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200241C RID: 9244
+// Token: 0x02001901 RID: 6401
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerApplySettingDetailInfo : IPhantomManagerApplySettingDetailInfo
 {
-	// Token: 0x170017FC RID: 6140
-	// (get) Token: 0x0601280E RID: 75790 RVA: 0x0048F4E4 File Offset: 0x0048D6E4
-	// (set) Token: 0x0601280F RID: 75791 RVA: 0x0048F4EC File Offset: 0x0048D6EC
+	// Token: 0x17001836 RID: 6198
+	// (get) Token: 0x0600FCC4 RID: 64708 RVA: 0x0049CB00 File Offset: 0x0049AD00
+	// (set) Token: 0x0600FCC5 RID: 64709 RVA: 0x0049CB08 File Offset: 0x0049AD08
 	public List<PhantomItemData> DiscardList { get; set; } = new List<PhantomItemData>();
 
-	// Token: 0x170017FD RID: 6141
-	// (get) Token: 0x06012810 RID: 75792 RVA: 0x0048F4F5 File Offset: 0x0048D6F5
-	// (set) Token: 0x06012811 RID: 75793 RVA: 0x0048F4FD File Offset: 0x0048D6FD
+	// Token: 0x17001837 RID: 6199
+	// (get) Token: 0x0600FCC6 RID: 64710 RVA: 0x0049CB11 File Offset: 0x0049AD11
+	// (set) Token: 0x0600FCC7 RID: 64711 RVA: 0x0049CB19 File Offset: 0x0049AD19
 	public List<PhantomItemData> LockList { get; set; } = new List<PhantomItemData>();
 }

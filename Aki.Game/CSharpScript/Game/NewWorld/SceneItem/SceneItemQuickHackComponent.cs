@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200718D RID: 29069
+	// Token: 0x02006241 RID: 25153
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemQuickHackComponent : EntityComponent
 	{
-		// Token: 0x0604718B RID: 291211 RVA: 0x01209990 File Offset: 0x01207B90
+		// Token: 0x0603CA45 RID: 248389 RVA: 0x011638C8 File Offset: 0x01161AC8
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604718C RID: 291212 RVA: 0x01209CD8 File Offset: 0x01207ED8
+		// Token: 0x0603CA46 RID: 248390 RVA: 0x01163C10 File Offset: 0x01161E10
 		protected override bool OnEnd()
 		{
 			TimerHandle refreshGuideLineTimer = this.RefreshGuideLineTimer;
@@ -136,26 +136,26 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604718D RID: 291213 RVA: 0x01209DB0 File Offset: 0x01207FB0
+		// Token: 0x0603CA47 RID: 248391 RVA: 0x01163CE8 File Offset: 0x01161EE8
 		private void OnSkillTagChange(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit(EEventName.OnQuickHackSceneItemStateChange);
 		}
 
-		// Token: 0x0604718E RID: 291214 RVA: 0x01209DC2 File Offset: 0x01207FC2
+		// Token: 0x0603CA48 RID: 248392 RVA: 0x01163CFA File Offset: 0x01161EFA
 		[NullableContext(1)]
 		public List<int> GetSkillIdList()
 		{
 			return this.SkillIdList;
 		}
 
-		// Token: 0x0604718F RID: 291215 RVA: 0x01209DCA File Offset: 0x01207FCA
+		// Token: 0x0603CA49 RID: 248393 RVA: 0x01163D02 File Offset: 0x01161F02
 		public global::Vector GetHackIconOffset()
 		{
 			return this.IconOffset;
 		}
 
-		// Token: 0x06047190 RID: 291216 RVA: 0x01209DD4 File Offset: 0x01207FD4
+		// Token: 0x0603CA4A RID: 248394 RVA: 0x01163D0C File Offset: 0x01161F0C
 		public bool CheckCanHack(int skillId)
 		{
 			if (this.IsHacking)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06047191 RID: 291217 RVA: 0x01209E60 File Offset: 0x01208060
+		// Token: 0x0603CA4B RID: 248395 RVA: 0x01163D98 File Offset: 0x01161F98
 		public void StartHack(int skillId)
 		{
 			if (!this.CheckCanHack(skillId))
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047192 RID: 291218 RVA: 0x01209F4C File Offset: 0x0120814C
+		// Token: 0x0603CA4C RID: 248396 RVA: 0x01163E84 File Offset: 0x01162084
 		private void CloseQuickHackNext()
 		{
 			this.StartDelayAutoClose();
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, null, null);
 		}
 
-		// Token: 0x06047193 RID: 291219 RVA: 0x01209F70 File Offset: 0x01208170
+		// Token: 0x0603CA4D RID: 248397 RVA: 0x01163EA8 File Offset: 0x011620A8
 		private void StartDelayAutoClose()
 		{
 			if (this.AutoCloseAfterUpload)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Add(EEventName.OnQuickHackCameraControlClose, new Action(this.OnQuickHackClose));
 		}
 
-		// Token: 0x06047194 RID: 291220 RVA: 0x01209FC8 File Offset: 0x012081C8
+		// Token: 0x0603CA4E RID: 248398 RVA: 0x01163F00 File Offset: 0x01162100
 		private void OnQuickHackClose()
 		{
 			QuickHackModel instance = QuickHackModel.Instance;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047195 RID: 291221 RVA: 0x01209FF4 File Offset: 0x012081F4
+		// Token: 0x0603CA4F RID: 248399 RVA: 0x01163F2C File Offset: 0x0116212C
 		private void FinishDelayAutoClose()
 		{
 			if (!this.AutoCloseAfterUpload)
@@ -274,14 +274,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Remove(EEventName.OnQuickHackCameraControlClose, new Action(this.OnQuickHackClose));
 		}
 
-		// Token: 0x06047196 RID: 291222 RVA: 0x0120A049 File Offset: 0x01208249
+		// Token: 0x0603CA50 RID: 248400 RVA: 0x01163F81 File Offset: 0x01162181
 		private void CloseQuickHackAndCameraControl()
 		{
 			QuickHackController.Instance.InteractFinish();
 			QuickHackController.Instance.CloseQuickHackCameraControl();
 		}
 
-		// Token: 0x06047197 RID: 291223 RVA: 0x0120A060 File Offset: 0x01208260
+		// Token: 0x0603CA51 RID: 248401 RVA: 0x01163F98 File Offset: 0x01162198
 		private void SkillRequest(int skillId)
 		{
 			QuickHackSkillRequest quickHackSkillRequest = new QuickHackSkillRequest();
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x06047198 RID: 291224 RVA: 0x0120A0A4 File Offset: 0x012082A4
+		// Token: 0x0603CA52 RID: 248402 RVA: 0x01163FDC File Offset: 0x011621DC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -311,19 +311,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return null;
 		}
 
-		// Token: 0x06047199 RID: 291225 RVA: 0x0120A0CF File Offset: 0x012082CF
+		// Token: 0x0603CA53 RID: 248403 RVA: 0x01164007 File Offset: 0x01162207
 		public OpenQuickHackSystem GetHackCameraParams()
 		{
 			return this.HackCameraParams;
 		}
 
-		// Token: 0x0604719A RID: 291226 RVA: 0x0120A0D7 File Offset: 0x012082D7
+		// Token: 0x0603CA54 RID: 248404 RVA: 0x0116400F File Offset: 0x0116220F
 		public int GetUploadTime()
 		{
 			return this.UploadTime;
 		}
 
-		// Token: 0x0604719B RID: 291227 RVA: 0x0120A0DF File Offset: 0x012082DF
+		// Token: 0x0603CA55 RID: 248405 RVA: 0x01164017 File Offset: 0x01162217
 		public bool ShowGuideLine()
 		{
 			if (this.GuideLineConfig != null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x0604719C RID: 291228 RVA: 0x0120A0FB File Offset: 0x012082FB
+		// Token: 0x0603CA56 RID: 248406 RVA: 0x01164033 File Offset: 0x01162233
 		public void StopGuideLine()
 		{
 			if (this.GuideLineConfig != null)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604719D RID: 291229 RVA: 0x0120A114 File Offset: 0x01208314
+		// Token: 0x0603CA57 RID: 248407 RVA: 0x0116404C File Offset: 0x0116224C
 		private void TryRefreshGuideLine(int tagId, bool tagExist)
 		{
 			TimerHandle refreshGuideLineTimer = this.RefreshGuideLineTimer;
@@ -356,14 +356,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.RefreshGuideLineTimer = TimerSystem.GameplayTimeInstance.Next(new TTimerAction(this.RefreshGuideLineNext), null, null);
 		}
 
-		// Token: 0x0604719E RID: 291230 RVA: 0x0120A146 File Offset: 0x01208346
+		// Token: 0x0603CA58 RID: 248408 RVA: 0x0116407E File Offset: 0x0116227E
 		private void RefreshGuideLineNext(float delta)
 		{
 			this.RefreshGuideLineTimer = null;
 			this.RefreshGuideLine();
 		}
 
-		// Token: 0x0604719F RID: 291231 RVA: 0x0120A158 File Offset: 0x01208358
+		// Token: 0x0603CA59 RID: 248409 RVA: 0x01164090 File Offset: 0x01162290
 		private void RefreshGuideLine()
 		{
 			BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SpawnGuideLineEffect();
 		}
 
-		// Token: 0x060471A0 RID: 291232 RVA: 0x0120A1B0 File Offset: 0x012083B0
+		// Token: 0x0603CA5A RID: 248410 RVA: 0x011640E8 File Offset: 0x011622E8
 		private void SpawnGuideLineEffect()
 		{
 			if (this.GuideLineConfig == null)
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			effectActor.K2_AttachToActor(splineActor, fname, EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, EAttachmentRule.SnapToTarget, false);
 		}
 
-		// Token: 0x060471A1 RID: 291233 RVA: 0x0120A354 File Offset: 0x01208554
+		// Token: 0x0603CA5B RID: 248411 RVA: 0x0116428C File Offset: 0x0116248C
 		private void StopGuideLineEffect()
 		{
 			if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471A2 RID: 291234 RVA: 0x0120A394 File Offset: 0x01208594
+		// Token: 0x0603CA5C RID: 248412 RVA: 0x011642CC File Offset: 0x011624CC
 		[NullableContext(1)]
 		private void UpdateSplinePoint(global::Vector actorLocation, Quat actorQuat)
 		{
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.SplineComp.D_SetSplinePoints(this.SplinePoints, ESplineCoordinateSpace.World, true);
 		}
 
-		// Token: 0x060471A3 RID: 291235 RVA: 0x0120A494 File Offset: 0x01208694
+		// Token: 0x0603CA5D RID: 248413 RVA: 0x011643CC File Offset: 0x011625CC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -491,180 +491,136 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemQuickHackComponent sceneItemQuickHackComponent = (SceneItemQuickHackComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataId"))
-			{
-				this.CreatureDataId = sceneItemQuickHackComponent.CreatureDataId;
-			}
-			if (base.CanResetComponentProperty("UploadTime"))
-			{
-				this.UploadTime = sceneItemQuickHackComponent.UploadTime;
-			}
-			if (base.CanResetComponentProperty("SkillTagIdToActionsMap") && sceneItemQuickHackComponent.SkillTagIdToActionsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, Dictionary<int, List<ActionInfo>>>>(this.SkillTagIdToActionsMap), "SkillTagIdToActionsMap"))
+			this.CreatureDataId = sceneItemQuickHackComponent.CreatureDataId;
+			this.UploadTime = sceneItemQuickHackComponent.UploadTime;
+			if (sceneItemQuickHackComponent.SkillTagIdToActionsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillTagIdToActionsMap), "SkillTagIdToActionsMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SkillIdList") && sceneItemQuickHackComponent.SkillIdList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.SkillIdList), "SkillIdList"))
+			if (sceneItemQuickHackComponent.SkillIdList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillIdList), "SkillIdList"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HackCameraParams"))
+			if (sceneItemQuickHackComponent.HackCameraParams == null)
 			{
-				if (sceneItemQuickHackComponent.HackCameraParams == null)
-				{
-					this.HackCameraParams = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<OpenQuickHackSystem>(this.HackCameraParams), "HackCameraParams"))
-				{
-					return false;
-				}
+				this.HackCameraParams = null;
 			}
-			if (base.CanResetComponentProperty("IsHacking"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HackCameraParams), "HackCameraParams"))
 			{
-				this.IsHacking = sceneItemQuickHackComponent.IsHacking;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagTaskList"))
+			this.IsHacking = sceneItemQuickHackComponent.IsHacking;
+			if (sceneItemQuickHackComponent.TagTaskList == null)
 			{
-				if (sceneItemQuickHackComponent.TagTaskList == null)
-				{
-					this.TagTaskList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagTaskList), "TagTaskList"))
-				{
-					return false;
-				}
+				this.TagTaskList = null;
 			}
-			if (base.CanResetComponentProperty("IconOffset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagTaskList), "TagTaskList"))
 			{
-				if (sceneItemQuickHackComponent.IconOffset == null)
-				{
-					this.IconOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.IconOffset), "IconOffset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("NeedShowGuideLine"))
+			if (sceneItemQuickHackComponent.IconOffset == null)
 			{
-				this.NeedShowGuideLine = sceneItemQuickHackComponent.NeedShowGuideLine;
+				this.IconOffset = null;
 			}
-			if (base.CanResetComponentProperty("GuideLineConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IconOffset), "IconOffset"))
 			{
-				if (sceneItemQuickHackComponent.GuideLineConfig == null)
-				{
-					this.GuideLineConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IQuickHackLinkEffect>(this.GuideLineConfig), "GuideLineConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("GuideLineStateTagId"))
+			this.NeedShowGuideLine = sceneItemQuickHackComponent.NeedShowGuideLine;
+			if (sceneItemQuickHackComponent.GuideLineConfig == null)
 			{
-				this.GuideLineStateTagId = sceneItemQuickHackComponent.GuideLineStateTagId;
+				this.GuideLineConfig = null;
 			}
-			if (base.CanResetComponentProperty("RefreshGuideLineTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GuideLineConfig), "GuideLineConfig"))
 			{
-				if (sceneItemQuickHackComponent.RefreshGuideLineTimer == null)
-				{
-					this.RefreshGuideLineTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RefreshGuideLineTimer), "RefreshGuideLineTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineActor"))
+			this.GuideLineStateTagId = sceneItemQuickHackComponent.GuideLineStateTagId;
+			if (sceneItemQuickHackComponent.RefreshGuideLineTimer == null)
 			{
-				if (sceneItemQuickHackComponent.SplineActor == null)
-				{
-					this.SplineActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.SplineActor), "SplineActor"))
-				{
-					return false;
-				}
+				this.RefreshGuideLineTimer = null;
 			}
-			if (base.CanResetComponentProperty("SplineComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefreshGuideLineTimer), "RefreshGuideLineTimer"))
 			{
-				if (sceneItemQuickHackComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplinePoints"))
+			if (sceneItemQuickHackComponent.SplineActor == null)
 			{
-				if (sceneItemQuickHackComponent.SplinePoints == null)
-				{
-					this.SplinePoints = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FVectorDouble>(this.SplinePoints), "SplinePoints"))
-				{
-					return false;
-				}
+				this.SplineActor = null;
 			}
-			if (base.CanResetComponentProperty("EffectHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineActor), "SplineActor"))
 			{
-				this.EffectHandle = sceneItemQuickHackComponent.EffectHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("EffectStartLocation"))
+			if (sceneItemQuickHackComponent.SplineComp == null)
 			{
-				if (sceneItemQuickHackComponent.EffectStartLocation == null)
-				{
-					this.EffectStartLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.EffectStartLocation), "EffectStartLocation"))
-				{
-					return false;
-				}
+				this.SplineComp = null;
 			}
-			if (base.CanResetComponentProperty("EffectEndLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
 			{
-				if (sceneItemQuickHackComponent.EffectEndLocation == null)
-				{
-					this.EffectEndLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.EffectEndLocation), "EffectEndLocation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AutoCloseType"))
+			if (sceneItemQuickHackComponent.SplinePoints == null)
 			{
-				this.AutoCloseType = sceneItemQuickHackComponent.AutoCloseType;
+				this.SplinePoints = null;
 			}
-			if (base.CanResetComponentProperty("AutoCloseAfterUpload"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FVectorDouble>(this.SplinePoints), "SplinePoints"))
 			{
-				this.AutoCloseAfterUpload = sceneItemQuickHackComponent.AutoCloseAfterUpload;
+				return false;
 			}
+			this.EffectHandle = sceneItemQuickHackComponent.EffectHandle;
+			if (sceneItemQuickHackComponent.EffectStartLocation == null)
+			{
+				this.EffectStartLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectStartLocation), "EffectStartLocation"))
+			{
+				return false;
+			}
+			if (sceneItemQuickHackComponent.EffectEndLocation == null)
+			{
+				this.EffectEndLocation = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectEndLocation), "EffectEndLocation"))
+			{
+				return false;
+			}
+			this.AutoCloseType = sceneItemQuickHackComponent.AutoCloseType;
+			this.AutoCloseAfterUpload = sceneItemQuickHackComponent.AutoCloseAfterUpload;
 			return true;
 		}
 
-		// Token: 0x040255F8 RID: 153080
+		// Token: 0x170072B3 RID: 29363
+		// (get) Token: 0x0603CA5E RID: 248414 RVA: 0x0116463E File Offset: 0x0116283E
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402025F RID: 131679
 		private long CreatureDataId;
 
-		// Token: 0x040255F9 RID: 153081
+		// Token: 0x04020260 RID: 131680
 		private int UploadTime;
 
-		// Token: 0x040255FA RID: 153082
+		// Token: 0x04020261 RID: 131681
 		[Nullable(1)]
 		private readonly Dictionary<int, Dictionary<int, List<ActionInfo>>> SkillTagIdToActionsMap = new Dictionary<int, Dictionary<int, List<ActionInfo>>>();
 
-		// Token: 0x040255FB RID: 153083
+		// Token: 0x04020262 RID: 131682
 		[Nullable(1)]
 		private readonly List<int> SkillIdList = new List<int>();
 
-		// Token: 0x040255FC RID: 153084
+		// Token: 0x04020263 RID: 131683
 		private OpenQuickHackSystem HackCameraParams;
 
-		// Token: 0x040255FD RID: 153085
+		// Token: 0x04020264 RID: 131684
 		private bool IsHacking;
 
-		// Token: 0x040255FE RID: 153086
+		// Token: 0x04020265 RID: 131685
 		[Nullable(new byte[]
 		{
 			2,
@@ -672,43 +628,43 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<ITagTask> TagTaskList;
 
-		// Token: 0x040255FF RID: 153087
+		// Token: 0x04020266 RID: 131686
 		private global::Vector IconOffset;
 
-		// Token: 0x04025600 RID: 153088
+		// Token: 0x04020267 RID: 131687
 		private bool NeedShowGuideLine;
 
-		// Token: 0x04025601 RID: 153089
+		// Token: 0x04020268 RID: 131688
 		private IQuickHackLinkEffect GuideLineConfig;
 
-		// Token: 0x04025602 RID: 153090
+		// Token: 0x04020269 RID: 131689
 		private int GuideLineStateTagId;
 
-		// Token: 0x04025603 RID: 153091
+		// Token: 0x0402026A RID: 131690
 		private TimerHandle RefreshGuideLineTimer;
 
-		// Token: 0x04025604 RID: 153092
+		// Token: 0x0402026B RID: 131691
 		private AActor SplineActor;
 
-		// Token: 0x04025605 RID: 153093
+		// Token: 0x0402026C RID: 131692
 		private USplineComponent SplineComp;
 
-		// Token: 0x04025606 RID: 153094
+		// Token: 0x0402026D RID: 131693
 		private TArray<FVectorDouble> SplinePoints;
 
-		// Token: 0x04025607 RID: 153095
+		// Token: 0x0402026E RID: 131694
 		private int EffectHandle;
 
-		// Token: 0x04025608 RID: 153096
+		// Token: 0x0402026F RID: 131695
 		private global::Vector EffectStartLocation;
 
-		// Token: 0x04025609 RID: 153097
+		// Token: 0x04020270 RID: 131696
 		private global::Vector EffectEndLocation;
 
-		// Token: 0x0402560A RID: 153098
+		// Token: 0x04020271 RID: 131697
 		private EQuickHackAutoCloseType? AutoCloseType;
 
-		// Token: 0x0402560B RID: 153099
+		// Token: 0x04020272 RID: 131698
 		private bool AutoCloseAfterUpload;
 	}
 }

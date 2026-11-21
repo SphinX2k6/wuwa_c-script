@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200191A RID: 6426
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AA3 RID: 6819
 	public class ICommonTipGeneralFloatingTip : ICommonTipType
 	{
-		// Token: 0x060089BF RID: 35263 RVA: 0x00144F44 File Offset: 0x00143144
+		// Token: 0x060090EB RID: 37099 RVA: 0x00154884 File Offset: 0x00152A84
 		private ICommonTipGeneralFloatingTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060089C0 RID: 35264 RVA: 0x00144F7C File Offset: 0x0014317C
+		// Token: 0x060090EC RID: 37100 RVA: 0x001548BC File Offset: 0x00152ABC
 		public static ICommonTipGeneralFloatingTip Create([Nullable(2)] ICommonTipGeneralFloatingTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089C1 RID: 35265 RVA: 0x00144F8F File Offset: 0x0014318F
+		// Token: 0x060090ED RID: 37101 RVA: 0x001548CF File Offset: 0x00152ACF
 		public static ICommonTipGeneralFloatingTip CreateFromSetValue([Nullable(2)] ICommonTipGeneralFloatingTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060089C2 RID: 35266 RVA: 0x00144FA2 File Offset: 0x001431A2
+		// Token: 0x060090EE RID: 37102 RVA: 0x001548E2 File Offset: 0x00152AE2
 		public new ICommonTipGeneralFloatingTip_SetValue ToSetValue()
 		{
 			return new ICommonTipGeneralFloatingTip_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C8D RID: 11405
-		// (get) Token: 0x060089C3 RID: 35267 RVA: 0x00144FCD File Offset: 0x001431CD
-		// (set) Token: 0x060089C4 RID: 35268 RVA: 0x00144FF8 File Offset: 0x001431F8
+		// Token: 0x17002E8D RID: 11917
+		// (get) Token: 0x060090EF RID: 37103 RVA: 0x0015490D File Offset: 0x00152B0D
+		// (set) Token: 0x060090F0 RID: 37104 RVA: 0x00154938 File Offset: 0x00152B38
 		public override ECommonTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C8E RID: 11406
-		// (get) Token: 0x060089C5 RID: 35269 RVA: 0x00145006 File Offset: 0x00143206
-		// (set) Token: 0x060089C6 RID: 35270 RVA: 0x00145031 File Offset: 0x00143231
+		// Token: 0x17002E8E RID: 11918
+		// (get) Token: 0x060090F1 RID: 37105 RVA: 0x00154946 File Offset: 0x00152B46
+		// (set) Token: 0x060090F2 RID: 37106 RVA: 0x00154971 File Offset: 0x00152B71
 		public virtual string TidMainText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C8F RID: 11407
-		// (get) Token: 0x060089C7 RID: 35271 RVA: 0x0014503F File Offset: 0x0014323F
-		// (set) Token: 0x060089C8 RID: 35272 RVA: 0x00145056 File Offset: 0x00143256
+		// Token: 0x17002E8F RID: 11919
+		// (get) Token: 0x060090F3 RID: 37107 RVA: 0x0015497F File Offset: 0x00152B7F
+		// (set) Token: 0x060090F4 RID: 37108 RVA: 0x00154996 File Offset: 0x00152B96
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400563E RID: 22078
+		// Token: 0x04005A8E RID: 23182
 		[Nullable(2)]
 		protected new ICommonTipGeneralFloatingTip FbInstance;
 
-		// Token: 0x0400563F RID: 22079
+		// Token: 0x04005A8F RID: 23183
 		[Nullable(2)]
 		protected new ICommonTipGeneralFloatingTip_SetValue PocoInterface;
 	}

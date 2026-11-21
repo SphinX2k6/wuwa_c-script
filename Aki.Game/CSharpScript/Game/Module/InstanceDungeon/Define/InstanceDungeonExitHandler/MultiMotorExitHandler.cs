@@ -4,17 +4,17 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F6 RID: 22774
+	// Token: 0x020048CE RID: 18638
 	public class MultiMotorExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D2C RID: 236844 RVA: 0x00DBC084 File Offset: 0x00DBA284
+		// Token: 0x0602EC4F RID: 191567 RVA: 0x00D0AFE8 File Offset: 0x00D091E8
 		public override bool Checker()
 		{
 			MultiMotorController instance = MultiMotorController.Instance;
 			return instance != null && instance.CheckInMultiMotorParkourDungeon();
 		}
 
-		// Token: 0x06039D2D RID: 236845 RVA: 0x00DBC0A0 File Offset: 0x00DBA2A0
+		// Token: 0x0602EC50 RID: 191568 RVA: 0x00D0B004 File Offset: 0x00D09204
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

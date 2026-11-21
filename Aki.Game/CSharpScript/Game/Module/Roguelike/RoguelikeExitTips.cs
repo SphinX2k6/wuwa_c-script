@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E0D RID: 19981
+	// Token: 0x02003DD6 RID: 15830
 	public class RoguelikeExitTips : UiViewBase
 	{
-		// Token: 0x060338D2 RID: 211154 RVA: 0x00C0C832 File Offset: 0x00C0AA32
+		// Token: 0x0602873D RID: 165693 RVA: 0x00B55D3E File Offset: 0x00B53F3E
 		[NullableContext(1)]
 		public RoguelikeExitTips(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060338D3 RID: 211155 RVA: 0x00C0C83C File Offset: 0x00C0AA3C
+		// Token: 0x0602873E RID: 165694 RVA: 0x00B55D48 File Offset: 0x00B53F48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060338D4 RID: 211156 RVA: 0x00C0C8E8 File Offset: 0x00C0AAE8
+		// Token: 0x0602873F RID: 165695 RVA: 0x00B55DF4 File Offset: 0x00B53FF4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeExitTips.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060338D5 RID: 211157 RVA: 0x00C0C92C File Offset: 0x00C0AB2C
+		// Token: 0x06028740 RID: 165696 RVA: 0x00B55E38 File Offset: 0x00B54038
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "RoguelikeExitTipsCurRoom", new <>z__ReadOnlyArray<object>(new object[]
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ButtonItemSettle.GetBtn().RootUIComp.Get().SetUIActive(!RoguelikeModel.Instance.CheckIsGuideDungeon());
 		}
 
-		// Token: 0x060338D6 RID: 211158 RVA: 0x00C0C9A8 File Offset: 0x00C0ABA8
+		// Token: 0x06028741 RID: 165697 RVA: 0x00B55EB4 File Offset: 0x00B540B4
 		private void OnClickBtnSettle(int _)
 		{
 			UiManager.Instance.CloseView(this.ViewInfo.Name, delegate(bool success)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x060338D7 RID: 211159 RVA: 0x00C0C9DE File Offset: 0x00C0ABDE
+		// Token: 0x06028742 RID: 165698 RVA: 0x00B55EEA File Offset: 0x00B540EA
 		private void OnClickBtnExit(int _)
 		{
 			UiManager.Instance.CloseView(this.ViewInfo.Name, delegate(bool success)
@@ -76,27 +76,27 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x0401B581 RID: 112001
+		// Token: 0x04015F54 RID: 89940
 		[Nullable(2)]
 		private ButtonItem ButtonItemSettle;
 
-		// Token: 0x0401B582 RID: 112002
+		// Token: 0x04015F55 RID: 89941
 		[Nullable(2)]
 		private ButtonItem ButtonItemExit;
 
-		// Token: 0x0200AFA2 RID: 44962
+		// Token: 0x020099D7 RID: 39383
 		private class ERoguelikeExitTipsDefine
 		{
-			// Token: 0x04035526 RID: 218406
+			// Token: 0x0402FF59 RID: 196441
 			public const int TxtCurRoom = 0;
 
-			// Token: 0x04035527 RID: 218407
+			// Token: 0x0402FF5A RID: 196442
 			public const int BtnSettle = 1;
 
-			// Token: 0x04035528 RID: 218408
+			// Token: 0x0402FF5B RID: 196443
 			public const int BtnExit = 2;
 
-			// Token: 0x04035529 RID: 218409
+			// Token: 0x0402FF5C RID: 196444
 			public const int TxtTips = 3;
 		}
 	}

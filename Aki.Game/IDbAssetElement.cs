@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200330E RID: 13070
+// Token: 0x02002880 RID: 10368
 [NullableContext(1)]
 public interface IDbAssetElement
 {
-	// Token: 0x1700276E RID: 10094
-	// (get) Token: 0x0601C77E RID: 116606
-	// (set) Token: 0x0601C77F RID: 116607
+	// Token: 0x17002B0B RID: 11019
+	// (get) Token: 0x0601A477 RID: 107639
+	// (set) Token: 0x0601A478 RID: 107640
 	List<string> ActorClass { get; set; }
 
-	// Token: 0x1700276F RID: 10095
-	// (get) Token: 0x0601C780 RID: 116608
-	// (set) Token: 0x0601C781 RID: 116609
+	// Token: 0x17002B0C RID: 11020
+	// (get) Token: 0x0601A479 RID: 107641
+	// (set) Token: 0x0601A47A RID: 107642
 	List<string> Animations { get; set; }
 
-	// Token: 0x17002770 RID: 10096
-	// (get) Token: 0x0601C782 RID: 116610
-	// (set) Token: 0x0601C783 RID: 116611
+	// Token: 0x17002B0D RID: 11021
+	// (get) Token: 0x0601A47B RID: 107643
+	// (set) Token: 0x0601A47C RID: 107644
 	List<string> Effects { get; set; }
 
-	// Token: 0x17002771 RID: 10097
-	// (get) Token: 0x0601C784 RID: 116612
-	// (set) Token: 0x0601C785 RID: 116613
+	// Token: 0x17002B0E RID: 11022
+	// (get) Token: 0x0601A47D RID: 107645
+	// (set) Token: 0x0601A47E RID: 107646
 	List<string> Audios { get; set; }
 
-	// Token: 0x17002772 RID: 10098
-	// (get) Token: 0x0601C786 RID: 116614
-	// (set) Token: 0x0601C787 RID: 116615
+	// Token: 0x17002B0F RID: 11023
+	// (get) Token: 0x0601A47F RID: 107647
+	// (set) Token: 0x0601A480 RID: 107648
 	List<string> Meshes { get; set; }
 
-	// Token: 0x17002773 RID: 10099
-	// (get) Token: 0x0601C788 RID: 116616
-	// (set) Token: 0x0601C789 RID: 116617
+	// Token: 0x17002B10 RID: 11024
+	// (get) Token: 0x0601A481 RID: 107649
+	// (set) Token: 0x0601A482 RID: 107650
 	List<string> Materials { get; set; }
 
-	// Token: 0x17002774 RID: 10100
-	// (get) Token: 0x0601C78A RID: 116618
-	// (set) Token: 0x0601C78B RID: 116619
+	// Token: 0x17002B11 RID: 11025
+	// (get) Token: 0x0601A483 RID: 107651
+	// (set) Token: 0x0601A484 RID: 107652
 	List<string> AnimationBlueprints { get; set; }
 
-	// Token: 0x17002775 RID: 10101
-	// (get) Token: 0x0601C78C RID: 116620
-	// (set) Token: 0x0601C78D RID: 116621
+	// Token: 0x17002B12 RID: 11026
+	// (get) Token: 0x0601A485 RID: 107653
+	// (set) Token: 0x0601A486 RID: 107654
 	List<string> Others { get; set; }
 }

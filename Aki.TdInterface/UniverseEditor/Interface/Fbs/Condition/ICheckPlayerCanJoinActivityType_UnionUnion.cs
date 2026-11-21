@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ADF RID: 19167
+	// Token: 0x02004FB4 RID: 20404
 	public class ICheckPlayerCanJoinActivityType_UnionUnion
 	{
-		// Token: 0x17008AF6 RID: 35574
-		// (get) Token: 0x0601E1B4 RID: 123316 RVA: 0x0043926A File Offset: 0x0043746A
-		// (set) Token: 0x0601E1B5 RID: 123317 RVA: 0x00439272 File Offset: 0x00437472
+		// Token: 0x170091ED RID: 37357
+		// (get) Token: 0x0601FCC9 RID: 130249 RVA: 0x0046AF16 File Offset: 0x00469116
+		// (set) Token: 0x0601FCCA RID: 130250 RVA: 0x0046AF1E File Offset: 0x0046911E
 		public ICheckPlayerCanJoinActivityType_Union Type { get; set; }
 
-		// Token: 0x17008AF7 RID: 35575
-		// (get) Token: 0x0601E1B6 RID: 123318 RVA: 0x0043927B File Offset: 0x0043747B
-		// (set) Token: 0x0601E1B7 RID: 123319 RVA: 0x00439283 File Offset: 0x00437483
+		// Token: 0x170091EE RID: 37358
+		// (get) Token: 0x0601FCCB RID: 130251 RVA: 0x0046AF27 File Offset: 0x00469127
+		// (set) Token: 0x0601FCCC RID: 130252 RVA: 0x0046AF2F File Offset: 0x0046912F
 		public object Value { get; set; }
 
-		// Token: 0x0601E1B8 RID: 123320 RVA: 0x0043928C File Offset: 0x0043748C
+		// Token: 0x0601FCCD RID: 130253 RVA: 0x0046AF38 File Offset: 0x00469138
 		public ICheckPlayerCanJoinActivityType_UnionUnion()
 		{
 			this.Type = ICheckPlayerCanJoinActivityType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601E1B9 RID: 123321 RVA: 0x004392A2 File Offset: 0x004374A2
+		// Token: 0x0601FCCE RID: 130254 RVA: 0x0046AF4E File Offset: 0x0046914E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601E1BA RID: 123322 RVA: 0x004392B4 File Offset: 0x004374B4
+		// Token: 0x0601FCCF RID: 130255 RVA: 0x0046AF60 File Offset: 0x00469160
 		public ICheckPlayerCanJoinActivityTypeT AsICheckPlayerCanJoinActivityType()
 		{
 			return this.As<ICheckPlayerCanJoinActivityTypeT>();
 		}
 
-		// Token: 0x0601E1BB RID: 123323 RVA: 0x004392BC File Offset: 0x004374BC
+		// Token: 0x0601FCD0 RID: 130256 RVA: 0x0046AF68 File Offset: 0x00469168
 		public static ICheckPlayerCanJoinActivityType_UnionUnion FromICheckPlayerCanJoinActivityType(ICheckPlayerCanJoinActivityTypeT _icheckplayercanjoinactivitytype)
 		{
 			return new ICheckPlayerCanJoinActivityType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E1BC RID: 123324 RVA: 0x004392D1 File Offset: 0x004374D1
+		// Token: 0x0601FCD1 RID: 130257 RVA: 0x0046AF7D File Offset: 0x0046917D
 		public ICheckPlayerCanJoinRogueT AsICheckPlayerCanJoinRogue()
 		{
 			return this.As<ICheckPlayerCanJoinRogueT>();
 		}
 
-		// Token: 0x0601E1BD RID: 123325 RVA: 0x004392D9 File Offset: 0x004374D9
+		// Token: 0x0601FCD2 RID: 130258 RVA: 0x0046AF85 File Offset: 0x00469185
 		public static ICheckPlayerCanJoinActivityType_UnionUnion FromICheckPlayerCanJoinRogue(ICheckPlayerCanJoinRogueT _icheckplayercanjoinrogue)
 		{
 			return new ICheckPlayerCanJoinActivityType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601E1BE RID: 123326 RVA: 0x004392F0 File Offset: 0x004374F0
+		// Token: 0x0601FCD3 RID: 130259 RVA: 0x0046AF9C File Offset: 0x0046919C
 		public static int Pack(FlatBufferBuilder builder, ICheckPlayerCanJoinActivityType_UnionUnion _o)
 		{
 			ICheckPlayerCanJoinActivityType_Union type = _o.Type;

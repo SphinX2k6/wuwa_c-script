@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018F6 RID: 6390
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A7D RID: 6781
 	public class IColorPiece
 	{
-		// Token: 0x060088F3 RID: 35059 RVA: 0x0014394C File Offset: 0x00141B4C
+		// Token: 0x06009011 RID: 36881 RVA: 0x001530D4 File Offset: 0x001512D4
 		private IColorPiece_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060088F4 RID: 35060 RVA: 0x00143984 File Offset: 0x00141B84
+		// Token: 0x06009012 RID: 36882 RVA: 0x0015310C File Offset: 0x0015130C
 		public static IColorPiece Create([Nullable(2)] IColorPiece instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088F5 RID: 35061 RVA: 0x00143997 File Offset: 0x00141B97
+		// Token: 0x06009013 RID: 36883 RVA: 0x0015311F File Offset: 0x0015131F
 		public static IColorPiece CreateFromSetValue([Nullable(2)] IColorPiece_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060088F6 RID: 35062 RVA: 0x001439AA File Offset: 0x00141BAA
+		// Token: 0x06009014 RID: 36884 RVA: 0x00153132 File Offset: 0x00151332
 		public IColorPiece_SetValue ToSetValue()
 		{
 			return new IColorPiece_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C5D RID: 11357
-		// (get) Token: 0x060088F7 RID: 35063 RVA: 0x001439BD File Offset: 0x00141BBD
-		// (set) Token: 0x060088F8 RID: 35064 RVA: 0x001439E8 File Offset: 0x00141BE8
+		// Token: 0x17002E59 RID: 11865
+		// (get) Token: 0x06009015 RID: 36885 RVA: 0x00153145 File Offset: 0x00151345
+		// (set) Token: 0x06009016 RID: 36886 RVA: 0x00153170 File Offset: 0x00151370
 		public virtual EPieceColorType Color
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055E4 RID: 21988
+		// Token: 0x04005A2E RID: 23086
 		[Nullable(2)]
 		protected IColorPiece FbInstance;
 
-		// Token: 0x040055E5 RID: 21989
+		// Token: 0x04005A2F RID: 23087
 		[Nullable(2)]
 		protected IColorPiece_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000920 RID: 2336
+	// Token: 0x0200096B RID: 2411
 	public class ConfigSheriffQuestionMainCsvById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060036D3 RID: 14035 RVA: 0x0018F528 File Offset: 0x0018D728
+		// Token: 0x06003895 RID: 14485 RVA: 0x0019C748 File Offset: 0x0019A948
 		static ConfigSheriffQuestionMainCsvById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSheriffQuestionMainCsvById.CreateStaticDefaultValue), new Action(ConfigSheriffQuestionMainCsvById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060036D4 RID: 14036 RVA: 0x0018F548 File Offset: 0x0018D748
+		// Token: 0x06003896 RID: 14486 RVA: 0x0019C768 File Offset: 0x0019A968
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSheriffQuestionMainCsvById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060036D5 RID: 14037 RVA: 0x0018F5C7 File Offset: 0x0018D7C7
+		// Token: 0x06003897 RID: 14487 RVA: 0x0019C7E7 File Offset: 0x0019A9E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSheriffQuestionMainCsvById.LogPair = null;
 			ConfigSheriffQuestionMainCsvById.HandleId = 0;
 		}
 
-		// Token: 0x060036D6 RID: 14038 RVA: 0x0018F5D5 File Offset: 0x0018D7D5
+		// Token: 0x06003898 RID: 14488 RVA: 0x0019C7F5 File Offset: 0x0019A9F5
 		public static void Init()
 		{
 			ConfigSheriffQuestionMainCsvById.HandleId = ConfigCommon.InitDataStatement(ConfigSheriffQuestionMainCsvById.HandleId, "db_sheriffquestionmaincsv.db", "select BinData from `SheriffQuestionMainCsv` where Id=?");
 		}
 
-		// Token: 0x060036D7 RID: 14039 RVA: 0x0018F5F0 File Offset: 0x0018D7F0
+		// Token: 0x06003899 RID: 14489 RVA: 0x0019C810 File Offset: 0x0019AA10
 		public static SheriffQuestionMainCsv? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSheriffQuestionMainCsvById.HandleId, ConfigSheriffQuestionMainCsvById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SheriffQuestionMainCsv?(rootAsSheriffQuestionMainCsv);
 		}
 
-		// Token: 0x04003FC6 RID: 16326
+		// Token: 0x040041D3 RID: 16851
 		private const string DB = "db_sheriffquestionmaincsv.db";
 
-		// Token: 0x04003FC7 RID: 16327
+		// Token: 0x040041D4 RID: 16852
 		private const string FILE = "k.可视化编辑/c.Csv/t.推理玩法总表/*.csv*";
 
-		// Token: 0x04003FC8 RID: 16328
+		// Token: 0x040041D5 RID: 16853
 		private const string TABLE = "SheriffQuestionMainCsv";
 
-		// Token: 0x04003FC9 RID: 16329
+		// Token: 0x040041D6 RID: 16854
 		private const string COMMAND = "select BinData from `SheriffQuestionMainCsv` where Id=?";
 
-		// Token: 0x04003FCA RID: 16330
+		// Token: 0x040041D7 RID: 16855
 		private const string KEY_PREFIX = "SheriffQuestionMainCsvById";
 
-		// Token: 0x04003FCB RID: 16331
+		// Token: 0x040041D8 RID: 16856
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003FCC RID: 16332
+		// Token: 0x040041D9 RID: 16857
 		private static int HandleId;
 	}
 }

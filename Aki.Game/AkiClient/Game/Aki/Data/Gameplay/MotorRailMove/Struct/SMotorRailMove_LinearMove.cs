@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 {
-	// Token: 0x02003F43 RID: 16195
+	// Token: 0x020031EF RID: 12783
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
@@ -16,32 +16,32 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct SMotorRailMove_LinearMove : IEqualityOperators<SMotorRailMove_LinearMove, SMotorRailMove_LinearMove, bool>, IEquatable<SMotorRailMove_LinearMove>, IUnrealScriptStruct
 	{
-		// Token: 0x0602938D RID: 168845 RVA: 0x009BECC0 File Offset: 0x009BCEC0
+		// Token: 0x0601FCB0 RID: 130224 RVA: 0x00935D91 File Offset: 0x00933F91
 		public SMotorRailMove_LinearMove(float MinSpeed, float MaxSpeed)
 		{
 			this.MinSpeed = MinSpeed;
 			this.MaxSpeed = MaxSpeed;
 		}
 
-		// Token: 0x0602938E RID: 168846 RVA: 0x009BECD0 File Offset: 0x009BCED0
+		// Token: 0x0601FCB1 RID: 130225 RVA: 0x00935DA1 File Offset: 0x00933FA1
 		public static bool operator ==(SMotorRailMove_LinearMove left, SMotorRailMove_LinearMove right)
 		{
 			return left.MinSpeed == right.MinSpeed && left.MaxSpeed == right.MaxSpeed;
 		}
 
-		// Token: 0x0602938F RID: 168847 RVA: 0x009BECF0 File Offset: 0x009BCEF0
+		// Token: 0x0601FCB2 RID: 130226 RVA: 0x00935DC1 File Offset: 0x00933FC1
 		public static bool operator !=(SMotorRailMove_LinearMove left, SMotorRailMove_LinearMove right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06029390 RID: 168848 RVA: 0x009BECFC File Offset: 0x009BCEFC
+		// Token: 0x0601FCB3 RID: 130227 RVA: 0x00935DCD File Offset: 0x00933FCD
 		public bool Equals(SMotorRailMove_LinearMove other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06029391 RID: 168849 RVA: 0x009BED0C File Offset: 0x009BCF0C
+		// Token: 0x0601FCB4 RID: 130228 RVA: 0x00935DDC File Offset: 0x00933FDC
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -53,30 +53,30 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			return false;
 		}
 
-		// Token: 0x06029392 RID: 168850 RVA: 0x009BED31 File Offset: 0x009BCF31
+		// Token: 0x0601FCB5 RID: 130229 RVA: 0x00935E01 File Offset: 0x00934001
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<float, float>(this.MinSpeed, this.MaxSpeed);
 		}
 
-		// Token: 0x06029393 RID: 168851 RVA: 0x009BED44 File Offset: 0x009BCF44
+		// Token: 0x0601FCB6 RID: 130230 RVA: 0x00935E14 File Offset: 0x00934014
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMotorRailMove_LinearMove._ScriptStructPtr != 0) ? SMotorRailMove_LinearMove._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMove_LinearMove.SMotorRailMove_LinearMove", ref SMotorRailMove_LinearMove._ScriptStructPtr);
 		}
 
-		// Token: 0x040151BE RID: 86462
+		// Token: 0x040110FA RID: 69882
 		[FieldOffset(0)]
 		public float MinSpeed;
 
-		// Token: 0x040151BF RID: 86463
+		// Token: 0x040110FB RID: 69883
 		[FieldOffset(4)]
 		public float MaxSpeed;
 
-		// Token: 0x040151C0 RID: 86464
+		// Token: 0x040110FC RID: 69884
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMove_LinearMove.SMotorRailMove_LinearMove";
 
-		// Token: 0x040151C1 RID: 86465
+		// Token: 0x040110FD RID: 69885
 		private static IntPtr _ScriptStructPtr;
 	}
 }

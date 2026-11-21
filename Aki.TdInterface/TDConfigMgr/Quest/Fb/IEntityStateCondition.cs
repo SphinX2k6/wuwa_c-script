@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135C RID: 4956
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014AC RID: 5292
 	public class IEntityStateCondition
 	{
-		// Token: 0x06007178 RID: 29048 RVA: 0x00111749 File Offset: 0x0010F949
+		// Token: 0x06007818 RID: 30744 RVA: 0x0011FCB5 File Offset: 0x0011DEB5
 		public static IEntityStateCondition Create(IEntityStateCondition? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002493 RID: 9363
-		// (get) Token: 0x06007179 RID: 29049 RVA: 0x00111768 File Offset: 0x0010F968
+		// Token: 0x17002662 RID: 9826
+		// (get) Token: 0x06007819 RID: 30745 RVA: 0x0011FCD4 File Offset: 0x0011DED4
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002494 RID: 9364
-		// (get) Token: 0x0600717A RID: 29050 RVA: 0x00111775 File Offset: 0x0010F975
+		// Token: 0x17002663 RID: 9827
+		// (get) Token: 0x0600781A RID: 30746 RVA: 0x0011FCE1 File Offset: 0x0011DEE1
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400418C RID: 16780
+		// Token: 0x04004508 RID: 17672
 		private IEntityStateCondition Instance;
 	}
 }

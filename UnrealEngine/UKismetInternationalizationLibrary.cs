@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CCF RID: 3279
+	// Token: 0x02000222 RID: 546
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.KismetInternationalizationLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKismetInternationalizationLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600A61B RID: 42523 RVA: 0x000ECAD5 File Offset: 0x000EACD5
+		// Token: 0x06002551 RID: 9553 RVA: 0x00035A96 File Offset: 0x00033C96
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKismetInternationalizationLibrary._ClassPtr;
 		}
 
-		// Token: 0x0600A61C RID: 42524 RVA: 0x000ECAE4 File Offset: 0x000EACE4
+		// Token: 0x06002552 RID: 9554 RVA: 0x00035AA4 File Offset: 0x00033CA4
 		public UKismetInternationalizationLibrary() : this(BuiltinUtils.AllocNativeUObject(UKismetInternationalizationLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600A61D RID: 42525 RVA: 0x000ECB0C File Offset: 0x000EAD0C
+		// Token: 0x06002553 RID: 9555 RVA: 0x00035ACC File Offset: 0x00033CCC
 		public UKismetInternationalizationLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKismetInternationalizationLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600A61E RID: 42526 RVA: 0x000ECB40 File Offset: 0x000EAD40
+		// Token: 0x06002554 RID: 9556 RVA: 0x00035B00 File Offset: 0x00033D00
 		public unsafe static bool SetCurrentLocale(string Culture, bool SaveToConfig = false)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -38,7 +38,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A61F RID: 42527 RVA: 0x000ECB68 File Offset: 0x000EAD68
+		// Token: 0x06002555 RID: 9557 RVA: 0x00035B28 File Offset: 0x00033D28
 		public unsafe static bool SetCurrentLanguageAndLocale(string Culture, bool SaveToConfig = false)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -47,7 +47,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A620 RID: 42528 RVA: 0x000ECB90 File Offset: 0x000EAD90
+		// Token: 0x06002556 RID: 9558 RVA: 0x00035B50 File Offset: 0x00033D50
 		public unsafe static bool SetCurrentLanguage(string Culture, bool SaveToConfig = false)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -56,7 +56,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A621 RID: 42529 RVA: 0x000ECBB8 File Offset: 0x000EADB8
+		// Token: 0x06002557 RID: 9559 RVA: 0x00035B78 File Offset: 0x00033D78
 		public unsafe static bool SetCurrentCulture(string Culture, bool SaveToConfig = false)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -65,7 +65,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A622 RID: 42530 RVA: 0x000ECBE0 File Offset: 0x000EADE0
+		// Token: 0x06002558 RID: 9560 RVA: 0x00035BA0 File Offset: 0x00033DA0
 		public unsafe static bool SetCurrentAssetGroupCulture(FName AssetGroup, string Culture, bool SaveToConfig = false)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -74,7 +74,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A623 RID: 42531 RVA: 0x000ECC08 File Offset: 0x000EAE08
+		// Token: 0x06002559 RID: 9561 RVA: 0x00035BC8 File Offset: 0x00033DC8
 		public unsafe static string GetSuitableCulture([Nullable(new byte[]
 		{
 			2,
@@ -89,43 +89,43 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A624 RID: 42532 RVA: 0x000ECC53 File Offset: 0x000EAE53
+		// Token: 0x0600255A RID: 9562 RVA: 0x00035C13 File Offset: 0x00033E13
 		public static string GetNativeCulture(ELocalizedTextSourceCategory TextCategory)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetInternationalizationLibrary.__GetNativeCulture_Internal(TextCategory));
 		}
 
-		// Token: 0x0600A625 RID: 42533 RVA: 0x000ECC60 File Offset: 0x000EAE60
+		// Token: 0x0600255B RID: 9563 RVA: 0x00035C20 File Offset: 0x00033E20
 		public static TArray<string> GetLocalizedCultures(bool IncludeGame = true, bool IncludeEngine = false, bool IncludeEditor = false, bool IncludeAdditional = false)
 		{
 			return new TArray<string>(UKismetInternationalizationLibrary.__GetLocalizedCultures_Internal(IncludeGame, IncludeEngine, IncludeEditor, IncludeAdditional), null);
 		}
 
-		// Token: 0x0600A626 RID: 42534 RVA: 0x000ECC71 File Offset: 0x000EAE71
+		// Token: 0x0600255C RID: 9564 RVA: 0x00035C31 File Offset: 0x00033E31
 		public static string GetCurrentLocale()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetInternationalizationLibrary.__GetCurrentLocale_Internal());
 		}
 
-		// Token: 0x0600A627 RID: 42535 RVA: 0x000ECC7D File Offset: 0x000EAE7D
+		// Token: 0x0600255D RID: 9565 RVA: 0x00035C3D File Offset: 0x00033E3D
 		public static string GetCurrentLanguage()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetInternationalizationLibrary.__GetCurrentLanguage_Internal());
 		}
 
-		// Token: 0x0600A628 RID: 42536 RVA: 0x000ECC89 File Offset: 0x000EAE89
+		// Token: 0x0600255E RID: 9566 RVA: 0x00035C49 File Offset: 0x00033E49
 		public static string GetCurrentCulture()
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetInternationalizationLibrary.__GetCurrentCulture_Internal());
 		}
 
-		// Token: 0x0600A629 RID: 42537 RVA: 0x000ECC95 File Offset: 0x000EAE95
+		// Token: 0x0600255F RID: 9567 RVA: 0x00035C55 File Offset: 0x00033E55
 		public static string GetCurrentAssetGroupCulture(FName AssetGroup)
 		{
 			return FString.ToStringAndDeleteNativePtr(UKismetInternationalizationLibrary.__GetCurrentAssetGroupCulture_Internal(AssetGroup));
 		}
 
-		// Token: 0x0600A62A RID: 42538 RVA: 0x000ECCA4 File Offset: 0x000EAEA4
+		// Token: 0x06002560 RID: 9568 RVA: 0x00035C64 File Offset: 0x00033E64
 		public unsafe static string GetCultureDisplayName(string Culture, bool Localized = true)
 		{
 			FString fstring = FString.AllocTemp(Culture);
@@ -134,87 +134,87 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600A62B RID: 42539
+		// Token: 0x06002561 RID: 9569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ClearCurrentAssetGroupCulture(FName AssetGroup, bool SaveToConfig = false);
 
-		// Token: 0x0600A62C RID: 42540
+		// Token: 0x06002562 RID: 9570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetCurrentLocale_Internal(in FString Culture, bool SaveToConfig);
 
-		// Token: 0x0600A62D RID: 42541
+		// Token: 0x06002563 RID: 9571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetCurrentLanguageAndLocale_Internal(in FString Culture, bool SaveToConfig);
 
-		// Token: 0x0600A62E RID: 42542
+		// Token: 0x06002564 RID: 9572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetCurrentLanguage_Internal(in FString Culture, bool SaveToConfig);
 
-		// Token: 0x0600A62F RID: 42543
+		// Token: 0x06002565 RID: 9573
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetCurrentCulture_Internal(in FString Culture, bool SaveToConfig);
 
-		// Token: 0x0600A630 RID: 42544
+		// Token: 0x06002566 RID: 9574
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetCurrentAssetGroupCulture_Internal(FName AssetGroup, in FString Culture, bool SaveToConfig);
 
-		// Token: 0x0600A631 RID: 42545
+		// Token: 0x06002567 RID: 9575
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetSuitableCulture_Internal(IntPtr AvailableCultures, in FString CultureToMatch, in FString FallbackCulture);
 
-		// Token: 0x0600A632 RID: 42546
+		// Token: 0x06002568 RID: 9576
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetNativeCulture_Internal(ELocalizedTextSourceCategory TextCategory);
 
-		// Token: 0x0600A633 RID: 42547
+		// Token: 0x06002569 RID: 9577
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetLocalizedCultures_Internal(bool IncludeGame, bool IncludeEngine, bool IncludeEditor, bool IncludeAdditional);
 
-		// Token: 0x0600A634 RID: 42548
+		// Token: 0x0600256A RID: 9578
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurrentLocale_Internal();
 
-		// Token: 0x0600A635 RID: 42549
+		// Token: 0x0600256B RID: 9579
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurrentLanguage_Internal();
 
-		// Token: 0x0600A636 RID: 42550
+		// Token: 0x0600256C RID: 9580
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurrentCulture_Internal();
 
-		// Token: 0x0600A637 RID: 42551
+		// Token: 0x0600256D RID: 9581
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCurrentAssetGroupCulture_Internal(FName AssetGroup);
 
-		// Token: 0x0600A638 RID: 42552
+		// Token: 0x0600256E RID: 9582
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetCultureDisplayName_Internal(in FString Culture, bool Localized);
 
-		// Token: 0x0600A639 RID: 42553 RVA: 0x000ECCCE File Offset: 0x000EAECE
+		// Token: 0x0600256F RID: 9583 RVA: 0x00035C8E File Offset: 0x00033E8E
 		static UKismetInternationalizationLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KismetInternationalizationLibrary");
 		}
 
-		// Token: 0x0600A63A RID: 42554 RVA: 0x000ECCDC File Offset: 0x000EAEDC
+		// Token: 0x06002570 RID: 9584 RVA: 0x00035C9C File Offset: 0x00033E9C
 		protected UKismetInternationalizationLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005B30 RID: 23344
+		// Token: 0x04000E0A RID: 3594
 		public new const string __ObjectPath = "/Script/Engine.KismetInternationalizationLibrary";
 
-		// Token: 0x04005B31 RID: 23345
+		// Token: 0x04000E0B RID: 3595
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005B32 RID: 23346
+		// Token: 0x04000E0C RID: 3596
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061DD RID: 25053
+	// Token: 0x0200515B RID: 20827
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomCardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F412 RID: 259090 RVA: 0x00F48BDA File Offset: 0x00F46DDA
+		// Token: 0x060340D3 RID: 213203 RVA: 0x00E8FB32 File Offset: 0x00E8DD32
 		public PhantomCardItem(ActivityRoadBookData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F413 RID: 259091 RVA: 0x00F48BEC File Offset: 0x00F46DEC
+		// Token: 0x060340D4 RID: 213204 RVA: 0x00E8FB44 File Offset: 0x00E8DD44
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F414 RID: 259092 RVA: 0x00F48D1C File Offset: 0x00F46F1C
+		// Token: 0x060340D5 RID: 213205 RVA: 0x00E8FC74 File Offset: 0x00E8DE74
 		public override void Refresh(int phantomId, bool isSelected, int gridIndex)
 		{
 			this.PhantomId = phantomId;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F415 RID: 259093 RVA: 0x00F48E7C File Offset: 0x00F4707C
+		// Token: 0x060340D6 RID: 213206 RVA: 0x00E8FDD4 File Offset: 0x00E8DFD4
 		private void RefreshTexture(int rarity)
 		{
 			int cost = PhantomBattleConfig.Instance.GetPhantomRareConfig(rarity).Value.Cost;
@@ -117,12 +117,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			base.GetSprite(10).SetColor(FColor.FromHex(hexStr));
 		}
 
-		// Token: 0x0603F416 RID: 259094 RVA: 0x00F49015 File Offset: 0x00F47215
+		// Token: 0x060340D7 RID: 213207 RVA: 0x00E8FF6D File Offset: 0x00E8E16D
 		private void TryUnlockItem()
 		{
 		}
 
-		// Token: 0x0603F417 RID: 259095 RVA: 0x00F49018 File Offset: 0x00F47218
+		// Token: 0x060340D8 RID: 213208 RVA: 0x00E8FF70 File Offset: 0x00E8E170
 		private void OnClickItem()
 		{
 			double systemNow = Time.Instance.SystemNow;
@@ -141,13 +141,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			AdventureGuideController.Instance.RequestForDetection(DetectionType.NormalMonster, Array.Empty<int>(), value.MonsterInfoId);
 		}
 
-		// Token: 0x04020FB2 RID: 135090
+		// Token: 0x0401B8E1 RID: 112865
 		protected int PhantomId;
 
-		// Token: 0x04020FB3 RID: 135091
+		// Token: 0x0401B8E2 RID: 112866
 		private double LastClickTimestamp;
 
-		// Token: 0x04020FB4 RID: 135092
+		// Token: 0x0401B8E3 RID: 112867
 		protected ActivityRoadBookData ActivityBaseData;
 	}
 }

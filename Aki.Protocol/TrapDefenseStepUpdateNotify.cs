@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001452 RID: 5202
+	// Token: 0x020014C5 RID: 5317
 	[NetMessage(EMessageId.TrapDefenseStepUpdateNotify)]
 	public sealed class TrapDefenseStepUpdateNotify : IMessage<TrapDefenseStepUpdateNotify>, IMessage, IEquatable<TrapDefenseStepUpdateNotify>, IDeepCloneable<TrapDefenseStepUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0601B8C0 RID: 112832 RVA: 0x003FCB55 File Offset: 0x003FAD55
+		// Token: 0x0601C34B RID: 115531 RVA: 0x00417E29 File Offset: 0x00416029
 		[NullableContext(1)]
 		public static TrapDefenseStepUpdateNotify Create()
 		{
 			return new TrapDefenseStepUpdateNotify();
 		}
 
-		// Token: 0x17005CE0 RID: 23776
-		// (get) Token: 0x0601B8C1 RID: 112833 RVA: 0x003FCB5C File Offset: 0x003FAD5C
+		// Token: 0x17005F75 RID: 24437
+		// (get) Token: 0x0601C34C RID: 115532 RVA: 0x00417E30 File Offset: 0x00416030
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CE1 RID: 23777
-		// (get) Token: 0x0601B8C2 RID: 112834 RVA: 0x003FCB5F File Offset: 0x003FAD5F
+		// Token: 0x17005F76 RID: 24438
+		// (get) Token: 0x0601C34D RID: 115533 RVA: 0x00417E33 File Offset: 0x00416033
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B8C3 RID: 112835 RVA: 0x003FCB66 File Offset: 0x003FAD66
+		// Token: 0x0601C34E RID: 115534 RVA: 0x00417E3A File Offset: 0x0041603A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseStepUpdateNotify()
 		{
 		}
 
-		// Token: 0x0601B8C4 RID: 112836 RVA: 0x003FCB70 File Offset: 0x003FAD70
+		// Token: 0x0601C34F RID: 115535 RVA: 0x00417E44 File Offset: 0x00416044
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseStepUpdateNotify(TrapDefenseStepUpdateNotify other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			TrapDefenseStepUpdateNotify.StepPbDataOneofCase stepPbDataCase = other.StepPbDataCase;
 			if (stepPbDataCase <= TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MapChangeStepPbData)
 			{
-				if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+				if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
 				{
 					if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MapChangeStepPbData)
 					{
@@ -66,24 +66,24 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					this.RewardStepPbData = other.RewardStepPbData.Clone();
+					this.PreviewStepPbData = other.PreviewStepPbData.Clone();
 				}
 			}
-			else if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MonsterStepPbData)
+			else if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
 			{
-				if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
+				if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MonsterStepPbData)
 				{
-					this.PreviewStepPbData = other.PreviewStepPbData.Clone();
+					this.MonsterStepPbData = other.MonsterStepPbData.Clone();
 				}
 			}
 			else
 			{
-				this.MonsterStepPbData = other.MonsterStepPbData.Clone();
+				this.RewardStepPbData = other.RewardStepPbData.Clone();
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B8C5 RID: 112837 RVA: 0x003FCBFF File Offset: 0x003FADFF
+		// Token: 0x0601C350 RID: 115536 RVA: 0x00417ED3 File Offset: 0x004160D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseStepUpdateNotify Clone()
@@ -91,9 +91,9 @@ namespace Aki.Protocol
 			return new TrapDefenseStepUpdateNotify(this);
 		}
 
-		// Token: 0x17005CE2 RID: 23778
-		// (get) Token: 0x0601B8C6 RID: 112838 RVA: 0x003FCC07 File Offset: 0x003FAE07
-		// (set) Token: 0x0601B8C7 RID: 112839 RVA: 0x003FCC1F File Offset: 0x003FAE1F
+		// Token: 0x17005F77 RID: 24439
+		// (get) Token: 0x0601C351 RID: 115537 RVA: 0x00417EDB File Offset: 0x004160DB
+		// (set) Token: 0x0601C352 RID: 115538 RVA: 0x00417EF3 File Offset: 0x004160F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseMapChangeStepPbData MapChangeStepPbData
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CE3 RID: 23779
-		// (get) Token: 0x0601B8C8 RID: 112840 RVA: 0x003FCC35 File Offset: 0x003FAE35
-		// (set) Token: 0x0601B8C9 RID: 112841 RVA: 0x003FCC4E File Offset: 0x003FAE4E
+		// Token: 0x17005F78 RID: 24440
+		// (get) Token: 0x0601C353 RID: 115539 RVA: 0x00417F09 File Offset: 0x00416109
+		// (set) Token: 0x0601C354 RID: 115540 RVA: 0x00417F21 File Offset: 0x00416121
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefensePreviewStepPbData PreviewStepPbData
@@ -135,9 +135,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CE4 RID: 23780
-		// (get) Token: 0x0601B8CA RID: 112842 RVA: 0x003FCC65 File Offset: 0x003FAE65
-		// (set) Token: 0x0601B8CB RID: 112843 RVA: 0x003FCC7E File Offset: 0x003FAE7E
+		// Token: 0x17005F79 RID: 24441
+		// (get) Token: 0x0601C355 RID: 115541 RVA: 0x00417F37 File Offset: 0x00416137
+		// (set) Token: 0x0601C356 RID: 115542 RVA: 0x00417F50 File Offset: 0x00416150
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseSpawnMonsterStepPbData MonsterStepPbData
@@ -157,9 +157,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CE5 RID: 23781
-		// (get) Token: 0x0601B8CC RID: 112844 RVA: 0x003FCC95 File Offset: 0x003FAE95
-		// (set) Token: 0x0601B8CD RID: 112845 RVA: 0x003FCCAD File Offset: 0x003FAEAD
+		// Token: 0x17005F7A RID: 24442
+		// (get) Token: 0x0601C357 RID: 115543 RVA: 0x00417F67 File Offset: 0x00416167
+		// (set) Token: 0x0601C358 RID: 115544 RVA: 0x00417F80 File Offset: 0x00416180
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseRewardStepPbData RewardStepPbData
@@ -179,8 +179,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005CE6 RID: 23782
-		// (get) Token: 0x0601B8CE RID: 112846 RVA: 0x003FCCC3 File Offset: 0x003FAEC3
+		// Token: 0x17005F7B RID: 24443
+		// (get) Token: 0x0601C359 RID: 115545 RVA: 0x00417F97 File Offset: 0x00416197
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseStepUpdateNotify.StepPbDataOneofCase StepPbDataCase
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B8CF RID: 112847 RVA: 0x003FCCCB File Offset: 0x003FAECB
+		// Token: 0x0601C35A RID: 115546 RVA: 0x00417F9F File Offset: 0x0041619F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearStepPbData()
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			this.stepPbData_ = null;
 		}
 
-		// Token: 0x0601B8D0 RID: 112848 RVA: 0x003FCCDB File Offset: 0x003FAEDB
+		// Token: 0x0601C35B RID: 115547 RVA: 0x00417FAF File Offset: 0x004161AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -208,7 +208,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseStepUpdateNotify);
 		}
 
-		// Token: 0x0601B8D1 RID: 112849 RVA: 0x003FCCEC File Offset: 0x003FAEEC
+		// Token: 0x0601C35C RID: 115548 RVA: 0x00417FC0 File Offset: 0x004161C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseStepUpdateNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.MapChangeStepPbData, other.MapChangeStepPbData) && object.Equals(this.PreviewStepPbData, other.PreviewStepPbData) && object.Equals(this.MonsterStepPbData, other.MonsterStepPbData) && object.Equals(this.RewardStepPbData, other.RewardStepPbData) && this.StepPbDataCase == other.StepPbDataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B8D2 RID: 112850 RVA: 0x003FCD7C File Offset: 0x003FAF7C
+		// Token: 0x0601C35D RID: 115549 RVA: 0x00418050 File Offset: 0x00416250
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -246,7 +246,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B8D3 RID: 112851 RVA: 0x003FCE09 File Offset: 0x003FB009
+		// Token: 0x0601C35E RID: 115550 RVA: 0x004180DD File Offset: 0x004162DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -254,7 +254,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B8D4 RID: 112852 RVA: 0x003FCE16 File Offset: 0x003FB016
+		// Token: 0x0601C35F RID: 115551 RVA: 0x004180EA File Offset: 0x004162EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -262,30 +262,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B8D5 RID: 112853 RVA: 0x003FCE20 File Offset: 0x003FB020
+		// Token: 0x0601C360 RID: 115552 RVA: 0x004180F4 File Offset: 0x004162F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
 			{
-				output.WriteRawTag(26);
-				output.WriteMessage(this.RewardStepPbData);
+				output.WriteRawTag(42);
+				output.WriteMessage(this.PreviewStepPbData);
 			}
 			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MapChangeStepPbData)
 			{
 				output.WriteRawTag(50);
 				output.WriteMessage(this.MapChangeStepPbData);
 			}
+			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+			{
+				output.WriteRawTag(98);
+				output.WriteMessage(this.RewardStepPbData);
+			}
 			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MonsterStepPbData)
 			{
 				output.WriteRawTag(114);
 				output.WriteMessage(this.MonsterStepPbData);
-			}
-			if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
-			{
-				output.WriteRawTag(122);
-				output.WriteMessage(this.PreviewStepPbData);
 			}
 			if (this._unknownFields != null)
 			{
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B8D6 RID: 112854 RVA: 0x003FCEB8 File Offset: 0x003FB0B8
+		// Token: 0x0601C361 RID: 115553 RVA: 0x0041818C File Offset: 0x0041638C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B8D7 RID: 112855 RVA: 0x003FCF44 File Offset: 0x003FB144
+		// Token: 0x0601C362 RID: 115554 RVA: 0x00418218 File Offset: 0x00416418
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseStepUpdateNotify other)
@@ -334,7 +334,7 @@ namespace Aki.Protocol
 			TrapDefenseStepUpdateNotify.StepPbDataOneofCase stepPbDataCase = other.StepPbDataCase;
 			if (stepPbDataCase <= TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MapChangeStepPbData)
 			{
-				if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+				if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
 				{
 					if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MapChangeStepPbData)
 					{
@@ -347,17 +347,6 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (this.RewardStepPbData == null)
-					{
-						this.RewardStepPbData = new TrapDefenseRewardStepPbData();
-					}
-					this.RewardStepPbData.MergeFrom(other.RewardStepPbData);
-				}
-			}
-			else if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MonsterStepPbData)
-			{
-				if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
-				{
 					if (this.PreviewStepPbData == null)
 					{
 						this.PreviewStepPbData = new TrapDefensePreviewStepPbData();
@@ -365,18 +354,29 @@ namespace Aki.Protocol
 					this.PreviewStepPbData.MergeFrom(other.PreviewStepPbData);
 				}
 			}
+			else if (stepPbDataCase != TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+			{
+				if (stepPbDataCase == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.MonsterStepPbData)
+				{
+					if (this.MonsterStepPbData == null)
+					{
+						this.MonsterStepPbData = new TrapDefenseSpawnMonsterStepPbData();
+					}
+					this.MonsterStepPbData.MergeFrom(other.MonsterStepPbData);
+				}
+			}
 			else
 			{
-				if (this.MonsterStepPbData == null)
+				if (this.RewardStepPbData == null)
 				{
-					this.MonsterStepPbData = new TrapDefenseSpawnMonsterStepPbData();
+					this.RewardStepPbData = new TrapDefenseRewardStepPbData();
 				}
-				this.MonsterStepPbData.MergeFrom(other.MonsterStepPbData);
+				this.RewardStepPbData.MergeFrom(other.RewardStepPbData);
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B8D8 RID: 112856 RVA: 0x003FD02C File Offset: 0x003FB22C
+		// Token: 0x0601C363 RID: 115555 RVA: 0x004182FD File Offset: 0x004164FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -384,7 +384,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B8D9 RID: 112857 RVA: 0x003FD038 File Offset: 0x003FB238
+		// Token: 0x0601C364 RID: 115556 RVA: 0x00418308 File Offset: 0x00416508
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -398,15 +398,15 @@ namespace Aki.Protocol
 				}
 				if (num <= 50U)
 				{
-					if (num == 26U)
+					if (num == 42U)
 					{
-						TrapDefenseRewardStepPbData trapDefenseRewardStepPbData = new TrapDefenseRewardStepPbData();
-						if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+						TrapDefensePreviewStepPbData trapDefensePreviewStepPbData = new TrapDefensePreviewStepPbData();
+						if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
 						{
-							trapDefenseRewardStepPbData.MergeFrom(this.RewardStepPbData);
+							trapDefensePreviewStepPbData.MergeFrom(this.PreviewStepPbData);
 						}
-						input.ReadMessage(trapDefenseRewardStepPbData);
-						this.RewardStepPbData = trapDefenseRewardStepPbData;
+						input.ReadMessage(trapDefensePreviewStepPbData);
+						this.PreviewStepPbData = trapDefensePreviewStepPbData;
 						continue;
 					}
 					if (num == 50U)
@@ -423,6 +423,17 @@ namespace Aki.Protocol
 				}
 				else
 				{
+					if (num == 98U)
+					{
+						TrapDefenseRewardStepPbData trapDefenseRewardStepPbData = new TrapDefenseRewardStepPbData();
+						if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.RewardStepPbData)
+						{
+							trapDefenseRewardStepPbData.MergeFrom(this.RewardStepPbData);
+						}
+						input.ReadMessage(trapDefenseRewardStepPbData);
+						this.RewardStepPbData = trapDefenseRewardStepPbData;
+						continue;
+					}
 					if (num == 114U)
 					{
 						TrapDefenseSpawnMonsterStepPbData trapDefenseSpawnMonsterStepPbData = new TrapDefenseSpawnMonsterStepPbData();
@@ -434,56 +445,45 @@ namespace Aki.Protocol
 						this.MonsterStepPbData = trapDefenseSpawnMonsterStepPbData;
 						continue;
 					}
-					if (num == 122U)
-					{
-						TrapDefensePreviewStepPbData trapDefensePreviewStepPbData = new TrapDefensePreviewStepPbData();
-						if (this.stepPbDataCase_ == TrapDefenseStepUpdateNotify.StepPbDataOneofCase.PreviewStepPbData)
-						{
-							trapDefensePreviewStepPbData.MergeFrom(this.PreviewStepPbData);
-						}
-						input.ReadMessage(trapDefensePreviewStepPbData);
-						this.PreviewStepPbData = trapDefensePreviewStepPbData;
-						continue;
-					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04009ECD RID: 40653
+		// Token: 0x0400A314 RID: 41748
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009ECE RID: 40654
+		// Token: 0x0400A315 RID: 41749
 		public const int MapChangeStepPbDataFieldNumber = 6;
 
-		// Token: 0x04009ECF RID: 40655
-		public const int PreviewStepPbDataFieldNumber = 15;
+		// Token: 0x0400A316 RID: 41750
+		public const int PreviewStepPbDataFieldNumber = 5;
 
-		// Token: 0x04009ED0 RID: 40656
+		// Token: 0x0400A317 RID: 41751
 		public const int MonsterStepPbDataFieldNumber = 14;
 
-		// Token: 0x04009ED1 RID: 40657
-		public const int RewardStepPbDataFieldNumber = 3;
+		// Token: 0x0400A318 RID: 41752
+		public const int RewardStepPbDataFieldNumber = 12;
 
-		// Token: 0x04009ED2 RID: 40658
+		// Token: 0x0400A319 RID: 41753
 		private object stepPbData_;
 
-		// Token: 0x04009ED3 RID: 40659
+		// Token: 0x0400A31A RID: 41754
 		private TrapDefenseStepUpdateNotify.StepPbDataOneofCase stepPbDataCase_;
 
-		// Token: 0x020019E1 RID: 6625
+		// Token: 0x02001A83 RID: 6787
 		public enum StepPbDataOneofCase
 		{
-			// Token: 0x0400CAB7 RID: 51895
+			// Token: 0x0400D022 RID: 53282
 			None,
-			// Token: 0x0400CAB8 RID: 51896
+			// Token: 0x0400D023 RID: 53283
 			MapChangeStepPbData = 6,
-			// Token: 0x0400CAB9 RID: 51897
-			PreviewStepPbData = 15,
-			// Token: 0x0400CABA RID: 51898
+			// Token: 0x0400D024 RID: 53284
+			PreviewStepPbData = 5,
+			// Token: 0x0400D025 RID: 53285
 			MonsterStepPbData = 14,
-			// Token: 0x0400CABB RID: 51899
-			RewardStepPbData = 3
+			// Token: 0x0400D026 RID: 53286
+			RewardStepPbData = 12
 		}
 	}
 }

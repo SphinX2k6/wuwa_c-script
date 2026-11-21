@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E1E RID: 15902
+	// Token: 0x02004259 RID: 16985
 	public struct IFastReturnGravityEntityPos : IFlatbufferObject
 	{
-		// Token: 0x17006DF0 RID: 28144
-		// (get) Token: 0x06016450 RID: 91216 RVA: 0x0033713C File Offset: 0x0033533C
+		// Token: 0x170073D6 RID: 29654
+		// (get) Token: 0x06017A7D RID: 96893 RVA: 0x0035FD34 File Offset: 0x0035DF34
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016451 RID: 91217 RVA: 0x00337149 File Offset: 0x00335349
+		// Token: 0x06017A7E RID: 96894 RVA: 0x0035FD41 File Offset: 0x0035DF41
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016452 RID: 91218 RVA: 0x00337150 File Offset: 0x00335350
+		// Token: 0x06017A7F RID: 96895 RVA: 0x0035FD48 File Offset: 0x0035DF48
 		public static IFastReturnGravityEntityPos GetRootAsIFastReturnGravityEntityPos(ByteBuffer _bb)
 		{
 			return IFastReturnGravityEntityPos.GetRootAsIFastReturnGravityEntityPos(_bb, default(IFastReturnGravityEntityPos));
 		}
 
-		// Token: 0x06016453 RID: 91219 RVA: 0x0033716C File Offset: 0x0033536C
+		// Token: 0x06017A80 RID: 96896 RVA: 0x0035FD64 File Offset: 0x0035DF64
 		public static IFastReturnGravityEntityPos GetRootAsIFastReturnGravityEntityPos(ByteBuffer _bb, IFastReturnGravityEntityPos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016454 RID: 91220 RVA: 0x00337189 File Offset: 0x00335389
+		// Token: 0x06017A81 RID: 96897 RVA: 0x0035FD81 File Offset: 0x0035DF81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016455 RID: 91221 RVA: 0x00337198 File Offset: 0x00335398
+		// Token: 0x06017A82 RID: 96898 RVA: 0x0035FD90 File Offset: 0x0035DF90
 		public IFastReturnGravityEntityPos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006DF1 RID: 28145
-		// (get) Token: 0x06016456 RID: 91222 RVA: 0x003371A8 File Offset: 0x003353A8
+		// Token: 0x170073D7 RID: 29655
+		// (get) Token: 0x06017A83 RID: 96899 RVA: 0x0035FDA0 File Offset: 0x0035DFA0
 		public EFastReturnPosType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006DF2 RID: 28146
-		// (get) Token: 0x06016457 RID: 91223 RVA: 0x003371E4 File Offset: 0x003353E4
+		// Token: 0x170073D8 RID: 29656
+		// (get) Token: 0x06017A84 RID: 96900 RVA: 0x0035FDDC File Offset: 0x0035DFDC
 		public int EntityId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006DF3 RID: 28147
-		// (get) Token: 0x06016458 RID: 91224 RVA: 0x00337220 File Offset: 0x00335420
+		// Token: 0x170073D9 RID: 29657
+		// (get) Token: 0x06017A85 RID: 96901 RVA: 0x0035FE18 File Offset: 0x0035E018
 		public TTeleportTransitionOption TransitionOptionType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016459 RID: 91225 RVA: 0x0033725C File Offset: 0x0033545C
+		// Token: 0x06017A86 RID: 96902 RVA: 0x0035FE54 File Offset: 0x0035E054
 		public TTable? TransitionOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,73 +104,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601645A RID: 91226 RVA: 0x003372A4 File Offset: 0x003354A4
+		// Token: 0x06017A87 RID: 96903 RVA: 0x0035FE9C File Offset: 0x0035E09C
 		public ITeleportTransitionInDigitalScreen TransitionOptionAsITeleportTransitionInDigitalScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionInDigitalScreen>().Value;
 		}
 
-		// Token: 0x0601645B RID: 91227 RVA: 0x003372C0 File Offset: 0x003354C0
+		// Token: 0x06017A88 RID: 96904 RVA: 0x0035FEB8 File Offset: 0x0035E0B8
 		public ITeleportTransitionInSeamlessType TransitionOptionAsITeleportTransitionInSeamlessType()
 		{
 			return this.TransitionOption<ITeleportTransitionInSeamlessType>().Value;
 		}
 
-		// Token: 0x0601645C RID: 91228 RVA: 0x003372DC File Offset: 0x003354DC
+		// Token: 0x06017A89 RID: 96905 RVA: 0x0035FED4 File Offset: 0x0035E0D4
 		public ITeleportTransitionWithCenterText TransitionOptionAsITeleportTransitionWithCenterText()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCenterText>().Value;
 		}
 
-		// Token: 0x0601645D RID: 91229 RVA: 0x003372F8 File Offset: 0x003354F8
+		// Token: 0x06017A8A RID: 96906 RVA: 0x0035FEF0 File Offset: 0x0035E0F0
 		public ITeleportTransitionWithCharacterDisplay TransitionOptionAsITeleportTransitionWithCharacterDisplay()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCharacterDisplay>().Value;
 		}
 
-		// Token: 0x0601645E RID: 91230 RVA: 0x00337314 File Offset: 0x00335514
+		// Token: 0x06017A8B RID: 96907 RVA: 0x0035FF0C File Offset: 0x0035E10C
 		public ITeleportTransitionWithCustomLoading TransitionOptionAsITeleportTransitionWithCustomLoading()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCustomLoading>().Value;
 		}
 
-		// Token: 0x0601645F RID: 91231 RVA: 0x00337330 File Offset: 0x00335530
+		// Token: 0x06017A8C RID: 96908 RVA: 0x0035FF28 File Offset: 0x0035E128
 		public ITeleportTransitionWithCustomScreen TransitionOptionAsITeleportTransitionWithCustomScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionWithCustomScreen>().Value;
 		}
 
-		// Token: 0x06016460 RID: 91232 RVA: 0x0033734C File Offset: 0x0033554C
+		// Token: 0x06017A8D RID: 96909 RVA: 0x0035FF44 File Offset: 0x0035E144
 		public ITeleportTransitionWithEffect TransitionOptionAsITeleportTransitionWithEffect()
 		{
 			return this.TransitionOption<ITeleportTransitionWithEffect>().Value;
 		}
 
-		// Token: 0x06016461 RID: 91233 RVA: 0x00337368 File Offset: 0x00335568
+		// Token: 0x06017A8E RID: 96910 RVA: 0x0035FF60 File Offset: 0x0035E160
 		public ITeleportTransitionWithFadeInScreen TransitionOptionAsITeleportTransitionWithFadeInScreen()
 		{
 			return this.TransitionOption<ITeleportTransitionWithFadeInScreen>().Value;
 		}
 
-		// Token: 0x06016462 RID: 91234 RVA: 0x00337384 File Offset: 0x00335584
+		// Token: 0x06017A8F RID: 96911 RVA: 0x0035FF7C File Offset: 0x0035E17C
 		public ITeleportTransitionWithMp4 TransitionOptionAsITeleportTransitionWithMp4()
 		{
 			return this.TransitionOption<ITeleportTransitionWithMp4>().Value;
 		}
 
-		// Token: 0x06016463 RID: 91235 RVA: 0x003373A0 File Offset: 0x003355A0
+		// Token: 0x06017A90 RID: 96912 RVA: 0x0035FF98 File Offset: 0x0035E198
 		public ITeleportTransitionWithPlayFlow TransitionOptionAsITeleportTransitionWithPlayFlow()
 		{
 			return this.TransitionOption<ITeleportTransitionWithPlayFlow>().Value;
 		}
 
-		// Token: 0x06016464 RID: 91236 RVA: 0x003373BC File Offset: 0x003355BC
+		// Token: 0x06017A91 RID: 96913 RVA: 0x0035FFB4 File Offset: 0x0035E1B4
 		public ITeleportTransitionWithSpecialCustomLoading TransitionOptionAsITeleportTransitionWithSpecialCustomLoading()
 		{
 			return this.TransitionOption<ITeleportTransitionWithSpecialCustomLoading>().Value;
 		}
 
-		// Token: 0x06016465 RID: 91237 RVA: 0x003373D7 File Offset: 0x003355D7
+		// Token: 0x06017A92 RID: 96914 RVA: 0x0035FFCF File Offset: 0x0035E1CF
 		public static Offset<IFastReturnGravityEntityPos> CreateIFastReturnGravityEntityPos(FlatBufferBuilder builder, EFastReturnPosType Type = EFastReturnPosType.EntityPos, int EntityId = 0, TTeleportTransitionOption TransitionOption_type = TTeleportTransitionOption.NONE, int TransitionOptionOffset = 0)
 		{
 			builder.StartTable(4);
@@ -181,43 +181,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFastReturnGravityEntityPos.EndIFastReturnGravityEntityPos(builder);
 		}
 
-		// Token: 0x06016466 RID: 91238 RVA: 0x00337403 File Offset: 0x00335603
+		// Token: 0x06017A93 RID: 96915 RVA: 0x0035FFFB File Offset: 0x0035E1FB
 		public static void StartIFastReturnGravityEntityPos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06016467 RID: 91239 RVA: 0x0033740C File Offset: 0x0033560C
+		// Token: 0x06017A94 RID: 96916 RVA: 0x00360004 File Offset: 0x0035E204
 		public static void AddType(FlatBufferBuilder builder, EFastReturnPosType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016468 RID: 91240 RVA: 0x00337417 File Offset: 0x00335617
+		// Token: 0x06017A95 RID: 96917 RVA: 0x0036000F File Offset: 0x0035E20F
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x06016469 RID: 91241 RVA: 0x00337422 File Offset: 0x00335622
+		// Token: 0x06017A96 RID: 96918 RVA: 0x0036001A File Offset: 0x0035E21A
 		public static void AddTransitionOptionType(FlatBufferBuilder builder, TTeleportTransitionOption transitionOptionType)
 		{
 			builder.AddByte(2, (byte)transitionOptionType, 0);
 		}
 
-		// Token: 0x0601646A RID: 91242 RVA: 0x0033742D File Offset: 0x0033562D
+		// Token: 0x06017A97 RID: 96919 RVA: 0x00360025 File Offset: 0x0035E225
 		public static void AddTransitionOption(FlatBufferBuilder builder, int transitionOptionOffset)
 		{
 			builder.AddOffset(3, transitionOptionOffset, 0);
 		}
 
-		// Token: 0x0601646B RID: 91243 RVA: 0x00337438 File Offset: 0x00335638
+		// Token: 0x06017A98 RID: 96920 RVA: 0x00360030 File Offset: 0x0035E230
 		public static Offset<IFastReturnGravityEntityPos> EndIFastReturnGravityEntityPos(FlatBufferBuilder builder)
 		{
 			return new Offset<IFastReturnGravityEntityPos>(builder.EndTable());
 		}
 
-		// Token: 0x0601646C RID: 91244 RVA: 0x00337448 File Offset: 0x00335648
+		// Token: 0x06017A99 RID: 96921 RVA: 0x00360040 File Offset: 0x0035E240
 		public IFastReturnGravityEntityPosT UnPack()
 		{
 			IFastReturnGravityEntityPosT fastReturnGravityEntityPosT = new IFastReturnGravityEntityPosT();
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return fastReturnGravityEntityPosT;
 		}
 
-		// Token: 0x0601646D RID: 91245 RVA: 0x00337464 File Offset: 0x00335664
+		// Token: 0x06017A9A RID: 96922 RVA: 0x0036005C File Offset: 0x0035E25C
 		public void UnPackTo(IFastReturnGravityEntityPosT _o)
 		{
 			_o.Type = this.Type;
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601646E RID: 91246 RVA: 0x00337744 File Offset: 0x00335944
+		// Token: 0x06017A9B RID: 96923 RVA: 0x0036033C File Offset: 0x0035E53C
 		public static Offset<IFastReturnGravityEntityPos> Pack(FlatBufferBuilder builder, IFastReturnGravityEntityPosT _o)
 		{
 			if (_o == null)
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFastReturnGravityEntityPos.CreateIFastReturnGravityEntityPos(builder, _o.Type, _o.EntityId, transitionOption_type, transitionOptionOffset);
 		}
 
-		// Token: 0x0400B79B RID: 47003
+		// Token: 0x0400C173 RID: 49523
 		private Table __p;
 	}
 }

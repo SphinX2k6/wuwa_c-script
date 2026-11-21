@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000E43 RID: 3651
+// Token: 0x020002F8 RID: 760
 public interface IShareResult
 {
-	// Token: 0x1700065C RID: 1628
-	// (get) Token: 0x060057E3 RID: 22499
-	// (set) Token: 0x060057E4 RID: 22500
+	// Token: 0x17000680 RID: 1664
+	// (get) Token: 0x06002B73 RID: 11123
+	// (set) Token: 0x06002B74 RID: 11124
 	int ErrorCode { get; set; }
 }

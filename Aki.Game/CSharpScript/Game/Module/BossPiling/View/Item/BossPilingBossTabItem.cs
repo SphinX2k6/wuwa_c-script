@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C1C RID: 23580
+	// Token: 0x02004BFC RID: 19452
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 	})]
 	public class BossPilingBossTabItem : GridProxyAbstract<BossPilingLevelInfo>
 	{
-		// Token: 0x0603B94B RID: 244043 RVA: 0x00E35BB8 File Offset: 0x00E33DB8
+		// Token: 0x06030896 RID: 198806 RVA: 0x00D85F14 File Offset: 0x00D84114
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B94C RID: 244044 RVA: 0x00E35D50 File Offset: 0x00E33F50
+		// Token: 0x06030897 RID: 198807 RVA: 0x00D860AC File Offset: 0x00D842AC
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
@@ -57,21 +57,21 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.Layout = new GenericLayout<BossPilingBossAchievementStar, bool>(base.GetHorizontalLayout(2), new Func<BossPilingBossAchievementStar>(this.CreateStar), null, false, true);
 		}
 
-		// Token: 0x0603B94D RID: 244045 RVA: 0x00E35DB8 File Offset: 0x00E33FB8
+		// Token: 0x06030898 RID: 198808 RVA: 0x00D86114 File Offset: 0x00D84314
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(0).OnStateChange.Remove(new Action<EToggleState>(this.OnToggleStateChange));
 			base.GetExtendToggle(0).OnUndeterminedClicked.Remove(new Action(this.OnUndeterminedClickToggle));
 		}
 
-		// Token: 0x0603B94E RID: 244046 RVA: 0x00E35DF4 File Offset: 0x00E33FF4
+		// Token: 0x06030899 RID: 198809 RVA: 0x00D86150 File Offset: 0x00D84350
 		public override void Refresh(BossPilingLevelInfo data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
 			this.UpdateInfo(false);
 		}
 
-		// Token: 0x0603B94F RID: 244047 RVA: 0x00E35E04 File Offset: 0x00E34004
+		// Token: 0x0603089A RID: 198810 RVA: 0x00D86160 File Offset: 0x00D84360
 		public bool OnTick()
 		{
 			if (this.CurrentData == null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return true;
 		}
 
-		// Token: 0x0603B950 RID: 244048 RVA: 0x00E35E38 File Offset: 0x00E34038
+		// Token: 0x0603089B RID: 198811 RVA: 0x00D86194 File Offset: 0x00D84394
 		protected void UpdateInfo(bool isUnlock = false)
 		{
 			bool flag = this.CurrentData.Id != this.CurrentId;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			item4.SetUIActive(false);
 		}
 
-		// Token: 0x0603B951 RID: 244049 RVA: 0x00E36064 File Offset: 0x00E34264
+		// Token: 0x0603089C RID: 198812 RVA: 0x00D863C0 File Offset: 0x00D845C0
 		protected void RefreshRemainTime()
 		{
 			string configTextByKey = PublicUtil.Instance.GetConfigTextByKey("BossPilingActivity_Main03");
@@ -180,13 +180,13 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603B952 RID: 244050 RVA: 0x00E360AD File Offset: 0x00E342AD
+		// Token: 0x0603089D RID: 198813 RVA: 0x00D86409 File Offset: 0x00D84609
 		private void SetSelected(bool bSelectOn, bool bFireEvent = false)
 		{
 			base.GetExtendToggle(0).SetToggleState(bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
 		}
 
-		// Token: 0x0603B953 RID: 244051 RVA: 0x00E360C6 File Offset: 0x00E342C6
+		// Token: 0x0603089E RID: 198814 RVA: 0x00D86422 File Offset: 0x00D84622
 		private bool CheckIsUnlock()
 		{
 			if (this.CurrentData.IsUnlock)
@@ -201,13 +201,13 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return flag;
 		}
 
-		// Token: 0x0603B954 RID: 244052 RVA: 0x00E36101 File Offset: 0x00E34301
+		// Token: 0x0603089F RID: 198815 RVA: 0x00D8645D File Offset: 0x00D8465D
 		private BossPilingBossAchievementStar CreateStar()
 		{
 			return new BossPilingBossAchievementStar();
 		}
 
-		// Token: 0x0603B955 RID: 244053 RVA: 0x00E36108 File Offset: 0x00E34308
+		// Token: 0x060308A0 RID: 198816 RVA: 0x00D86464 File Offset: 0x00D84664
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (this.OnToggleStateChangeFunction != null)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		}
 
-		// Token: 0x0603B956 RID: 244054 RVA: 0x00E36138 File Offset: 0x00E34338
+		// Token: 0x060308A1 RID: 198817 RVA: 0x00D86494 File Offset: 0x00D84694
 		private void OnUndeterminedClickToggle()
 		{
 			if (!this.CheckIsUnlock())
@@ -232,48 +232,48 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		}
 
-		// Token: 0x0401F058 RID: 127064
+		// Token: 0x04019B09 RID: 105225
 		protected int CurrentId;
 
-		// Token: 0x0401F059 RID: 127065
+		// Token: 0x04019B0A RID: 105226
 		protected BossPilingLevelInfo CurrentData;
 
-		// Token: 0x0401F05A RID: 127066
+		// Token: 0x04019B0B RID: 105227
 		[Nullable(2)]
 		public Func<int, bool> IsSelectOnCb;
 
-		// Token: 0x0401F05B RID: 127067
+		// Token: 0x04019B0C RID: 105228
 		[Nullable(2)]
 		public Action<int> OnToggleStateChangeFunction;
 
-		// Token: 0x0401F05C RID: 127068
+		// Token: 0x04019B0D RID: 105229
 		protected GenericLayout<BossPilingBossAchievementStar, bool> Layout;
 
-		// Token: 0x0200BE08 RID: 48648
+		// Token: 0x0200A810 RID: 43024
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x040394CE RID: 234702
+			// Token: 0x04033E91 RID: 212625
 			ToggleSelf,
-			// Token: 0x040394CF RID: 234703
+			// Token: 0x04033E92 RID: 212626
 			BossName,
-			// Token: 0x040394D0 RID: 234704
+			// Token: 0x04033E93 RID: 212627
 			PanelStar,
-			// Token: 0x040394D1 RID: 234705
+			// Token: 0x04033E94 RID: 212628
 			StarItem,
-			// Token: 0x040394D2 RID: 234706
+			// Token: 0x04033E95 RID: 212629
 			SpriteScoreIcon,
-			// Token: 0x040394D3 RID: 234707
+			// Token: 0x04033E96 RID: 212630
 			TexBoss,
-			// Token: 0x040394D4 RID: 234708
+			// Token: 0x04033E97 RID: 212631
 			RedDot,
-			// Token: 0x040394D5 RID: 234709
+			// Token: 0x04033E98 RID: 212632
 			SpriteToggleBg,
-			// Token: 0x040394D6 RID: 234710
+			// Token: 0x04033E99 RID: 212633
 			PanelContent,
-			// Token: 0x040394D7 RID: 234711
+			// Token: 0x04033E9A RID: 212634
 			PanelBossNone,
-			// Token: 0x040394D8 RID: 234712
+			// Token: 0x04033E9B RID: 212635
 			TxtTime
 		}
 	}

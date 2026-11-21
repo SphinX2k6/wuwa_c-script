@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.UiCameraAnimation.Enum
 {
-	// Token: 0x02003E92 RID: 16018
+	// Token: 0x02003169 RID: 12649
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/UiCameraAnimation/Enum/EUiCameraAnimationLocationType.EUiCameraAnimationLocationType")]
 	public enum EUiCameraAnimationLocationType : byte
 	{
-		// Token: 0x04014A39 RID: 84537
+		// Token: 0x04010ABA RID: 68282
 		WorldLocation,
-		// Token: 0x04014A3A RID: 84538
+		// Token: 0x04010ABB RID: 68283
 		TargetLocation,
-		// Token: 0x04014A3B RID: 84539
+		// Token: 0x04010ABC RID: 68284
 		SocketLocation,
-		// Token: 0x04014A3C RID: 84540
+		// Token: 0x04010ABD RID: 68285
 		EUiCameraAnimationLocationType_MAX
 	}
 }

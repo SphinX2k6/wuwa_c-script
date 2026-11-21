@@ -10,14 +10,14 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A93 RID: 6803
+// Token: 0x02000F52 RID: 3922
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 {
-	// Token: 0x17001077 RID: 4215
-	// (get) Token: 0x0600C8DC RID: 51420 RVA: 0x002DCE6F File Offset: 0x002DB06F
-	// (set) Token: 0x0600C8DD RID: 51421 RVA: 0x002DCE77 File Offset: 0x002DB077
+	// Token: 0x1700109C RID: 4252
+	// (get) Token: 0x06009CED RID: 40173 RVA: 0x002E7FA3 File Offset: 0x002E61A3
+	// (set) Token: 0x06009CEE RID: 40174 RVA: 0x002E7FAB File Offset: 0x002E61AB
 	[Nullable(new byte[]
 	{
 		2,
@@ -39,17 +39,17 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 		1
 	})] set; }
 
-	// Token: 0x17001078 RID: 4216
-	// (get) Token: 0x0600C8DE RID: 51422 RVA: 0x002DCE80 File Offset: 0x002DB080
-	// (set) Token: 0x0600C8DF RID: 51423 RVA: 0x002DCE88 File Offset: 0x002DB088
+	// Token: 0x1700109D RID: 4253
+	// (get) Token: 0x06009CEF RID: 40175 RVA: 0x002E7FB4 File Offset: 0x002E61B4
+	// (set) Token: 0x06009CF0 RID: 40176 RVA: 0x002E7FBC File Offset: 0x002E61BC
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001079 RID: 4217
-	// (get) Token: 0x0600C8E0 RID: 51424 RVA: 0x002DCE91 File Offset: 0x002DB091
-	// (set) Token: 0x0600C8E1 RID: 51425 RVA: 0x002DCE99 File Offset: 0x002DB099
+	// Token: 0x1700109E RID: 4254
+	// (get) Token: 0x06009CF1 RID: 40177 RVA: 0x002E7FC5 File Offset: 0x002E61C5
+	// (set) Token: 0x06009CF2 RID: 40178 RVA: 0x002E7FCD File Offset: 0x002E61CD
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600C8E2 RID: 51426 RVA: 0x002DCEA4 File Offset: 0x002DB0A4
+	// Token: 0x06009CF3 RID: 40179 RVA: 0x002E7FD8 File Offset: 0x002E61D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -82,29 +82,29 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C8E3 RID: 51427 RVA: 0x002DD012 File Offset: 0x002DB212
+	// Token: 0x06009CF4 RID: 40180 RVA: 0x002E8146 File Offset: 0x002E6346
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600C8E4 RID: 51428 RVA: 0x002DD014 File Offset: 0x002DB214
+	// Token: 0x06009CF5 RID: 40181 RVA: 0x002E8148 File Offset: 0x002E6348
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C8E5 RID: 51429 RVA: 0x002DD016 File Offset: 0x002DB216
+	// Token: 0x06009CF6 RID: 40182 RVA: 0x002E814A File Offset: 0x002E634A
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600C8E6 RID: 51430 RVA: 0x002DD018 File Offset: 0x002DB218
+	// Token: 0x06009CF7 RID: 40183 RVA: 0x002E814C File Offset: 0x002E634C
 	protected override void OnBeforeDestroy()
 	{
 		this.CountryExploreScoreData = null;
 		this.OnClickedReceiveButtonCallback = null;
 	}
 
-	// Token: 0x0600C8E7 RID: 51431 RVA: 0x002DD028 File Offset: 0x002DB228
+	// Token: 0x06009CF8 RID: 40184 RVA: 0x002E815C File Offset: 0x002E635C
 	public void Refresh(CountryExploreScoreData data, bool isSelected, int gridIndex)
 	{
 		this.CountryExploreScoreData = data;
@@ -146,13 +146,13 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 		base.SetButtonUiActive(5, false);
 	}
 
-	// Token: 0x0600C8E8 RID: 51432 RVA: 0x002DD169 File Offset: 0x002DB369
+	// Token: 0x06009CF9 RID: 40185 RVA: 0x002E829D File Offset: 0x002E649D
 	public void BindOnClickedReceiveButton(Action<CountryExploreScoreData> onClickedReceiveButton)
 	{
 		this.OnClickedReceiveButtonCallback = onClickedReceiveButton;
 	}
 
-	// Token: 0x0600C8E9 RID: 51433 RVA: 0x002DD174 File Offset: 0x002DB374
+	// Token: 0x06009CFA RID: 40186 RVA: 0x002E82A8 File Offset: 0x002E64A8
 	private void OnClickedSkipToButton()
 	{
 		CountryExploreScoreData countryExploreScoreData = this.CountryExploreScoreData;
@@ -178,7 +178,7 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 		});
 	}
 
-	// Token: 0x0600C8EA RID: 51434 RVA: 0x002DD1F8 File Offset: 0x002DB3F8
+	// Token: 0x06009CFB RID: 40187 RVA: 0x002E832C File Offset: 0x002E652C
 	private void OnClickedReceiveButton()
 	{
 		Action<CountryExploreScoreData> onClickedReceiveButtonCallback = this.OnClickedReceiveButtonCallback;
@@ -189,17 +189,17 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 		onClickedReceiveButtonCallback(this.CountryExploreScoreData);
 	}
 
-	// Token: 0x0600C8EB RID: 51435 RVA: 0x002DD210 File Offset: 0x002DB410
+	// Token: 0x06009CFC RID: 40188 RVA: 0x002E8344 File Offset: 0x002E6544
 	public object GetKey(CountryExploreScoreData data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x04005C86 RID: 23686
+	// Token: 0x04005D55 RID: 23893
 	[Nullable(2)]
 	private CountryExploreScoreData CountryExploreScoreData;
 
-	// Token: 0x04005C87 RID: 23687
+	// Token: 0x04005D56 RID: 23894
 	[Nullable(new byte[]
 	{
 		2,
@@ -207,23 +207,23 @@ public class ExploreLevelItem : UiPanelBase, IGridProxy<CountryExploreScoreData>
 	})]
 	private Action<CountryExploreScoreData> OnClickedReceiveButtonCallback;
 
-	// Token: 0x02007FF1 RID: 32753
+	// Token: 0x02007180 RID: 29056
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029C50 RID: 171088
+		// Token: 0x04024F8A RID: 151434
 		ScoreItemTexture,
-		// Token: 0x04029C51 RID: 171089
+		// Token: 0x04024F8B RID: 151435
 		TitleNameText,
-		// Token: 0x04029C52 RID: 171090
+		// Token: 0x04024F8C RID: 151436
 		CurrentProgressText,
-		// Token: 0x04029C53 RID: 171091
+		// Token: 0x04024F8D RID: 151437
 		ScoreRewardText,
-		// Token: 0x04029C54 RID: 171092
+		// Token: 0x04024F8E RID: 151438
 		SkipToButton,
-		// Token: 0x04029C55 RID: 171093
+		// Token: 0x04024F8F RID: 151439
 		ReceiveButton,
-		// Token: 0x04029C56 RID: 171094
+		// Token: 0x04024F90 RID: 151440
 		DoneSprite
 	}
 }

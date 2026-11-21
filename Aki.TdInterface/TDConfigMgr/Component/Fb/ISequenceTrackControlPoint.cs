@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C30 RID: 3120
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D03 RID: 3331
 	public class ISequenceTrackControlPoint
 	{
-		// Token: 0x06004776 RID: 18294 RVA: 0x000B4006 File Offset: 0x000B2206
+		// Token: 0x06004BE6 RID: 19430 RVA: 0x000BE3B6 File Offset: 0x000BC5B6
 		public static ISequenceTrackControlPoint Create(ISequenceTrackControlPoint? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014D3 RID: 5331
-		// (get) Token: 0x06004777 RID: 18295 RVA: 0x000B4025 File Offset: 0x000B2225
+		// Token: 0x170015DB RID: 5595
+		// (get) Token: 0x06004BE7 RID: 19431 RVA: 0x000BE3D5 File Offset: 0x000BC5D5
 		public virtual string Mark
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002899 RID: 10393
+		// Token: 0x04002AEE RID: 10990
 		private ISequenceTrackControlPoint Instance;
 	}
 }

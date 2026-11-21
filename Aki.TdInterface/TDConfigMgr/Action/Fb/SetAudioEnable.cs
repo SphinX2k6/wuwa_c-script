@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AC0 RID: 10944
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DB4 RID: 11700
 	public class SetAudioEnable : ActionParams
 	{
-		// Token: 0x0600F02B RID: 61483 RVA: 0x0022E211 File Offset: 0x0022C411
+		// Token: 0x0600FEE1 RID: 65249 RVA: 0x0024BF1D File Offset: 0x0024A11D
 		public static SetAudioEnable Create(ISetAudioEnable? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C6D RID: 19565
-		// (get) Token: 0x0600F02C RID: 61484 RVA: 0x0022E230 File Offset: 0x0022C430
+		// Token: 0x17005027 RID: 20519
+		// (get) Token: 0x0600FEE2 RID: 65250 RVA: 0x0024BF3C File Offset: 0x0024A13C
 		public virtual EAudioEnableType SetAudioEnableType
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C6E RID: 19566
-		// (get) Token: 0x0600F02D RID: 61485 RVA: 0x0022E23D File Offset: 0x0022C43D
+		// Token: 0x17005028 RID: 20520
+		// (get) Token: 0x0600FEE3 RID: 65251 RVA: 0x0024BF49 File Offset: 0x0024A149
 		public virtual IRoleSceneVoice AudioType
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400841A RID: 33818
+		// Token: 0x04008B1E RID: 35614
 		private ISetAudioEnable Instance;
 
-		// Token: 0x0400841B RID: 33819
+		// Token: 0x04008B1F RID: 35615
 		[Nullable(2)]
 		private IRoleSceneVoice _AudioTypeCache;
 
-		// Token: 0x0400841C RID: 33820
+		// Token: 0x04008B20 RID: 35616
 		private bool _AudioTypeInited;
 	}
 }

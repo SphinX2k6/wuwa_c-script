@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007772 RID: 30578
+	// Token: 0x02007F9E RID: 32670
 	public class TSceneActorEventUnion
 	{
-		// Token: 0x1700E68F RID: 59023
-		// (get) Token: 0x0603787C RID: 227452 RVA: 0x00783CFE File Offset: 0x00781EFE
-		// (set) Token: 0x0603787D RID: 227453 RVA: 0x00783D06 File Offset: 0x00781F06
+		// Token: 0x1700F2E1 RID: 62177
+		// (get) Token: 0x0603ADC5 RID: 241093 RVA: 0x007E8DCE File Offset: 0x007E6FCE
+		// (set) Token: 0x0603ADC6 RID: 241094 RVA: 0x007E8DD6 File Offset: 0x007E6FD6
 		public TSceneActorEvent Type { get; set; }
 
-		// Token: 0x1700E690 RID: 59024
-		// (get) Token: 0x0603787E RID: 227454 RVA: 0x00783D0F File Offset: 0x00781F0F
-		// (set) Token: 0x0603787F RID: 227455 RVA: 0x00783D17 File Offset: 0x00781F17
+		// Token: 0x1700F2E2 RID: 62178
+		// (get) Token: 0x0603ADC7 RID: 241095 RVA: 0x007E8DDF File Offset: 0x007E6FDF
+		// (set) Token: 0x0603ADC8 RID: 241096 RVA: 0x007E8DE7 File Offset: 0x007E6FE7
 		public object Value { get; set; }
 
-		// Token: 0x06037880 RID: 227456 RVA: 0x00783D20 File Offset: 0x00781F20
+		// Token: 0x0603ADC9 RID: 241097 RVA: 0x007E8DF0 File Offset: 0x007E6FF0
 		public TSceneActorEventUnion()
 		{
 			this.Type = TSceneActorEvent.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037881 RID: 227457 RVA: 0x00783D36 File Offset: 0x00781F36
+		// Token: 0x0603ADCA RID: 241098 RVA: 0x007E8E06 File Offset: 0x007E7006
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037882 RID: 227458 RVA: 0x00783D48 File Offset: 0x00781F48
+		// Token: 0x0603ADCB RID: 241099 RVA: 0x007E8E18 File Offset: 0x007E7018
 		public ISceneActorMusicLightsEventT AsISceneActorMusicLightsEvent()
 		{
 			return this.As<ISceneActorMusicLightsEventT>();
 		}
 
-		// Token: 0x06037883 RID: 227459 RVA: 0x00783D50 File Offset: 0x00781F50
+		// Token: 0x0603ADCC RID: 241100 RVA: 0x007E8E20 File Offset: 0x007E7020
 		public static TSceneActorEventUnion FromISceneActorMusicLightsEvent(ISceneActorMusicLightsEventT _isceneactormusiclightsevent)
 		{
 			return new TSceneActorEventUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037884 RID: 227460 RVA: 0x00783D65 File Offset: 0x00781F65
+		// Token: 0x0603ADCD RID: 241101 RVA: 0x007E8E35 File Offset: 0x007E7035
 		public ISceneActorMusicPlantsEventT AsISceneActorMusicPlantsEvent()
 		{
 			return this.As<ISceneActorMusicPlantsEventT>();
 		}
 
-		// Token: 0x06037885 RID: 227461 RVA: 0x00783D6D File Offset: 0x00781F6D
+		// Token: 0x0603ADCE RID: 241102 RVA: 0x007E8E3D File Offset: 0x007E703D
 		public static TSceneActorEventUnion FromISceneActorMusicPlantsEvent(ISceneActorMusicPlantsEventT _isceneactormusicplantsevent)
 		{
 			return new TSceneActorEventUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037886 RID: 227462 RVA: 0x00783D82 File Offset: 0x00781F82
+		// Token: 0x0603ADCF RID: 241103 RVA: 0x007E8E52 File Offset: 0x007E7052
 		public ISceneActorProjection3dTo2dEventT AsISceneActorProjection3dTo2dEvent()
 		{
 			return this.As<ISceneActorProjection3dTo2dEventT>();
 		}
 
-		// Token: 0x06037887 RID: 227463 RVA: 0x00783D8A File Offset: 0x00781F8A
+		// Token: 0x0603ADD0 RID: 241104 RVA: 0x007E8E5A File Offset: 0x007E705A
 		public static TSceneActorEventUnion FromISceneActorProjection3dTo2dEvent(ISceneActorProjection3dTo2dEventT _isceneactorprojection3dto2devent)
 		{
 			return new TSceneActorEventUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037888 RID: 227464 RVA: 0x00783DA0 File Offset: 0x00781FA0
+		// Token: 0x0603ADD1 RID: 241105 RVA: 0x007E8E70 File Offset: 0x007E7070
 		public static int Pack(FlatBufferBuilder builder, TSceneActorEventUnion _o)
 		{
 			switch (_o.Type)

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D9A RID: 23962
+	// Token: 0x02004D7C RID: 19836
 	public class MotorcycleControlPanel : MotorcycleControlPanelBase
 	{
-		// Token: 0x0603CD20 RID: 249120 RVA: 0x00E9B218 File Offset: 0x00E99418
+		// Token: 0x06031C7D RID: 203901 RVA: 0x00DEBAD0 File Offset: 0x00DE9CD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CD21 RID: 249121 RVA: 0x00E9B2C4 File Offset: 0x00E994C4
+		// Token: 0x06031C7E RID: 203902 RVA: 0x00DEBB7C File Offset: 0x00DE9D7C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorcycleControlPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD22 RID: 249122 RVA: 0x00E9B308 File Offset: 0x00E99508
+		// Token: 0x06031C7F RID: 203903 RVA: 0x00DEBBC0 File Offset: 0x00DE9DC0
 		public UniTask NewAllKeyItems()
 		{
 			MotorcycleControlPanel.<NewAllKeyItems>d__6 <NewAllKeyItems>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllKeyItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD23 RID: 249123 RVA: 0x00E9B34C File Offset: 0x00E9954C
+		// Token: 0x06031C80 RID: 203904 RVA: 0x00DEBC04 File Offset: 0x00DE9E04
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD24 RID: 249124 RVA: 0x00E9B397 File Offset: 0x00E99597
+		// Token: 0x06031C81 RID: 203905 RVA: 0x00DEBC4F File Offset: 0x00DE9E4F
 		private void RefreshAllKeyItems()
 		{
 			this.RefreshDrift();
@@ -79,25 +79,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshGetOff();
 		}
 
-		// Token: 0x0603CD25 RID: 249125 RVA: 0x00E9B3AB File Offset: 0x00E995AB
+		// Token: 0x06031C82 RID: 203906 RVA: 0x00DEBC63 File Offset: 0x00DE9E63
 		private void RefreshDrift()
 		{
 			this.RefreshKeyItem(0, ESkillButtonType.跳跃, "载具漂移", "HotKeyText_MotorDrift_Name", null, null);
 		}
 
-		// Token: 0x0603CD26 RID: 249126 RVA: 0x00E9B3C1 File Offset: 0x00E995C1
+		// Token: 0x06031C83 RID: 203907 RVA: 0x00DEBC79 File Offset: 0x00DE9E79
 		private void RefreshBulletJump()
 		{
 			this.RefreshKeyItem(1, ESkillButtonType.技能1, "载具子弹跳", null, "载具子弹跳1", "HotKeyText_MotorJump_Name");
 		}
 
-		// Token: 0x0603CD27 RID: 249127 RVA: 0x00E9B3DB File Offset: 0x00E995DB
+		// Token: 0x06031C84 RID: 203908 RVA: 0x00DEBC93 File Offset: 0x00DE9E93
 		private void RefreshGetOff()
 		{
 			this.RefreshKeyItem(2, ESkillButtonType.大招, "载具退场技和下车", "HotKeyText_MotorOff_Name", null, null);
 		}
 
-		// Token: 0x0603CD28 RID: 249128 RVA: 0x00E9B3F4 File Offset: 0x00E995F4
+		// Token: 0x06031C85 RID: 203909 RVA: 0x00DEBCAC File Offset: 0x00DE9EAC
 		[NullableContext(2)]
 		private void RefreshKeyItem(int index, ESkillButtonType buttonType, [Nullable(1)] string actionName, string descId = null, string actionName2 = null, string descId2 = null)
 		{
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshKeyItemVisibleByButtonType(buttonType, index);
 		}
 
-		// Token: 0x0603CD29 RID: 249129 RVA: 0x00E9B488 File Offset: 0x00E99688
+		// Token: 0x06031C86 RID: 203910 RVA: 0x00DEBD40 File Offset: 0x00DE9F40
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CD2A RID: 249130 RVA: 0x00E9B4F0 File Offset: 0x00E996F0
+		// Token: 0x06031C87 RID: 203911 RVA: 0x00DEBDA8 File Offset: 0x00DE9FA8
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiMotorcycleBulletJumpChanged, new Action(this.OnMotorcycleBulletJumpChanged));
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<int, bool>(EEventName.BattleUiMotorcycleCannonTagChanged, new Action<int, bool>(this.OnMotorCannonTagChanged));
 		}
 
-		// Token: 0x0603CD2B RID: 249131 RVA: 0x00E9B5C4 File Offset: 0x00E997C4
+		// Token: 0x06031C88 RID: 203912 RVA: 0x00DEBE7C File Offset: 0x00DEA07C
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiMotorcycleBulletJumpChanged, new Action(this.OnMotorcycleBulletJumpChanged));
@@ -165,37 +165,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiMotorcycleCannonTagChanged, new Action<int, bool>(this.OnMotorCannonTagChanged));
 		}
 
-		// Token: 0x0603CD2C RID: 249132 RVA: 0x00E9B695 File Offset: 0x00E99895
+		// Token: 0x06031C89 RID: 203913 RVA: 0x00DEBF4D File Offset: 0x00DEA14D
 		private void OnMotorcycleBulletJumpChanged()
 		{
 			this.RefreshAllKeyItems();
 		}
 
-		// Token: 0x0603CD2D RID: 249133 RVA: 0x00E9B69D File Offset: 0x00E9989D
+		// Token: 0x06031C8A RID: 203914 RVA: 0x00DEBF55 File Offset: 0x00DEA155
 		private void OnSkillButtonDataRefresh(ESkillButtonRefreshReason eSkillButtonRefreshReason)
 		{
 			this.RefreshAllKeyItems();
 		}
 
-		// Token: 0x0603CD2E RID: 249134 RVA: 0x00E9B6A5 File Offset: 0x00E998A5
+		// Token: 0x06031C8B RID: 203915 RVA: 0x00DEBF5D File Offset: 0x00DEA15D
 		private void OnSkillButtonEnableRefresh(ESkillButtonType buttonType, int extendCoolDown)
 		{
 			this.RefreshKeyItemByButtonType(buttonType);
 		}
 
-		// Token: 0x0603CD2F RID: 249135 RVA: 0x00E9B6AE File Offset: 0x00E998AE
+		// Token: 0x06031C8C RID: 203916 RVA: 0x00DEBF66 File Offset: 0x00DEA166
 		private void OnSkillButtonCdRefresh(ESkillButtonType buttonType)
 		{
 			this.RefreshKeyItemByButtonType(buttonType);
 		}
 
-		// Token: 0x0603CD30 RID: 249136 RVA: 0x00E9B6B7 File Offset: 0x00E998B7
+		// Token: 0x06031C8D RID: 203917 RVA: 0x00DEBF6F File Offset: 0x00DEA16F
 		private void OnSkillButtonPanelVisibleChange()
 		{
 			base.SetVisible(1, BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.SkillButton));
 		}
 
-		// Token: 0x0603CD31 RID: 249137 RVA: 0x00E9B6D1 File Offset: 0x00E998D1
+		// Token: 0x06031C8E RID: 203918 RVA: 0x00DEBF89 File Offset: 0x00DEA189
 		private void OnMotorFlyStateChanged(int tagId, bool tagExists)
 		{
 			if (tagId == GameplayTagDefine.EGameplayTagId["载具.摩托.状态.空中"])
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD32 RID: 249138 RVA: 0x00E9B6F3 File Offset: 0x00E998F3
+		// Token: 0x06031C8F RID: 203919 RVA: 0x00DEBFAB File Offset: 0x00DEA1AB
 		private void OnMotorCannonTagChanged(int tagId, bool tagExists)
 		{
 			if (tagId == GameplayTagDefine.EGameplayTagId["载具.摩托.浮游炮.自动开启"])
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD33 RID: 249139 RVA: 0x00E9B715 File Offset: 0x00E99915
+		// Token: 0x06031C90 RID: 203920 RVA: 0x00DEBFCD File Offset: 0x00DEA1CD
 		private void RefreshKeyItemByButtonType(ESkillButtonType buttonType)
 		{
 			if (buttonType == ESkillButtonType.跳跃)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD34 RID: 249140 RVA: 0x00E9B740 File Offset: 0x00E99940
+		// Token: 0x06031C91 RID: 203921 RVA: 0x00DEBFF8 File Offset: 0x00DEA1F8
 		private void RefreshKeyItemVisibleByButtonType(ESkillButtonType buttonType, int index)
 		{
 			bool active;
@@ -258,26 +258,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.KeyItemList[index].SetActive(active);
 		}
 
-		// Token: 0x0401FAEA RID: 129770
+		// Token: 0x0401A5A2 RID: 107938
 		[Nullable(1)]
 		private readonly List<InputMultiKeyItemGroup> KeyItemList = new List<InputMultiKeyItemGroup>();
 
-		// Token: 0x0401FAEB RID: 129771
+		// Token: 0x0401A5A3 RID: 107939
 		private bool IsMotorInAir;
 
-		// Token: 0x0401FAEC RID: 129772
+		// Token: 0x0401A5A4 RID: 107940
 		private bool IsCanonState;
 
-		// Token: 0x0200C068 RID: 49256
+		// Token: 0x0200AA6E RID: 43630
 		private enum EChildType
 		{
-			// Token: 0x0403A0EB RID: 237803
+			// Token: 0x04034AAE RID: 215726
 			LayoutItem,
-			// Token: 0x0403A0EC RID: 237804
+			// Token: 0x04034AAF RID: 215727
 			Item1,
-			// Token: 0x0403A0ED RID: 237805
+			// Token: 0x04034AB0 RID: 215728
 			Item2,
-			// Token: 0x0403A0EE RID: 237806
+			// Token: 0x04034AB1 RID: 215729
 			Item3
 		}
 	}

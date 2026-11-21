@@ -1,35 +1,35 @@
 ﻿using System;
 
-// Token: 0x02001F41 RID: 8001
+// Token: 0x02001403 RID: 5123
 public class AiMiSiHudData
 {
-	// Token: 0x0400726C RID: 29292
+	// Token: 0x0400734D RID: 29517
 	public bool IsMechanism;
 
-	// Token: 0x0400726D RID: 29293
+	// Token: 0x0400734E RID: 29518
 	public bool IsJoint;
 
-	// Token: 0x0400726E RID: 29294
+	// Token: 0x0400734F RID: 29519
 	public bool IsSpecialJoint;
 
-	// Token: 0x0400726F RID: 29295
+	// Token: 0x04007350 RID: 29520
 	public bool IsSprint;
 
-	// Token: 0x04007270 RID: 29296
+	// Token: 0x04007351 RID: 29521
 	public bool InFight;
 
-	// Token: 0x04007271 RID: 29297
+	// Token: 0x04007352 RID: 29522
 	public bool IsModeOne;
 
-	// Token: 0x04007272 RID: 29298
+	// Token: 0x04007353 RID: 29523
 	public bool InAir;
 
-	// Token: 0x04007273 RID: 29299
+	// Token: 0x04007354 RID: 29524
 	public bool IsUltraBuff;
 
-	// Token: 0x04007274 RID: 29300
+	// Token: 0x04007355 RID: 29525
 	public bool IsForeground;
 
-	// Token: 0x04007275 RID: 29301
+	// Token: 0x04007356 RID: 29526
 	public bool EmptyEndurance;
 }

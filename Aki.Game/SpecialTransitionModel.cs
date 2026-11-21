@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A86 RID: 10886
+// Token: 0x02002002 RID: 8194
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class SpecialTransitionModel : ModelBase
 {
-	// Token: 0x06016AB1 RID: 92849 RVA: 0x005BD9CA File Offset: 0x005BBBCA
+	// Token: 0x060144D6 RID: 83158 RVA: 0x005E9BFA File Offset: 0x005E7DFA
 	[NullableContext(2)]
 	public ISpecialTransitionParams GetSpecialTransitionParams()
 	{
 		return this.SpecialTransitionParams;
 	}
 
-	// Token: 0x06016AB2 RID: 92850 RVA: 0x005BD9D4 File Offset: 0x005BBBD4
+	// Token: 0x060144D7 RID: 83159 RVA: 0x005E9C04 File Offset: 0x005E7E04
 	public bool SetSpecialTransitionParams(ISpecialTransitionParams @params)
 	{
 		if (this.SpecialTransitionParams != null)
@@ -26,28 +26,28 @@ public class SpecialTransitionModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016AB3 RID: 92851 RVA: 0x005BDA0F File Offset: 0x005BBC0F
+	// Token: 0x060144D8 RID: 83160 RVA: 0x005E9C3F File Offset: 0x005E7E3F
 	public void ClearSpecialTransitionParams()
 	{
 		this.SpecialTransitionParams = null;
 	}
 
-	// Token: 0x06016AB4 RID: 92852 RVA: 0x005BDA18 File Offset: 0x005BBC18
+	// Token: 0x060144D9 RID: 83161 RVA: 0x005E9C48 File Offset: 0x005E7E48
 	public bool IsLoadingMode()
 	{
 		ISpecialTransitionParams specialTransitionParams = this.SpecialTransitionParams;
 		return specialTransitionParams != null && specialTransitionParams.LoadingType != null;
 	}
 
-	// Token: 0x06016AB5 RID: 92853 RVA: 0x005BDA3E File Offset: 0x005BBC3E
+	// Token: 0x060144DA RID: 83162 RVA: 0x005E9C6E File Offset: 0x005E7E6E
 	protected override bool OnClear()
 	{
 		this.SpecialTransitionParams = null;
 		return true;
 	}
 
-	// Token: 0x17001E34 RID: 7732
-	// (get) Token: 0x06016AB6 RID: 92854 RVA: 0x005BDA48 File Offset: 0x005BBC48
+	// Token: 0x17001E8C RID: 7820
+	// (get) Token: 0x060144DB RID: 83163 RVA: 0x005E9C78 File Offset: 0x005E7E78
 	public static SpecialTransitionModel Instance
 	{
 		get
@@ -56,7 +56,7 @@ public class SpecialTransitionModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016AB7 RID: 92855 RVA: 0x005BDA4F File Offset: 0x005BBC4F
+	// Token: 0x060144DC RID: 83164 RVA: 0x005E9C7F File Offset: 0x005E7E7F
 	public static SpecialTransitionModel GetOrCreateInstance()
 	{
 		if (SpecialTransitionModel._Instance == null)
@@ -66,7 +66,7 @@ public class SpecialTransitionModel : ModelBase
 		return SpecialTransitionModel._Instance;
 	}
 
-	// Token: 0x06016AB8 RID: 92856 RVA: 0x005BDA63 File Offset: 0x005BBC63
+	// Token: 0x060144DD RID: 83165 RVA: 0x005E9C93 File Offset: 0x005E7E93
 	public static bool CreateInstance()
 	{
 		if (SpecialTransitionModel._Instance != null)
@@ -77,28 +77,28 @@ public class SpecialTransitionModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016AB9 RID: 92857 RVA: 0x005BDA79 File Offset: 0x005BBC79
+	// Token: 0x060144DE RID: 83166 RVA: 0x005E9CA9 File Offset: 0x005E7EA9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016ABA RID: 92858 RVA: 0x005BDA7B File Offset: 0x005BBC7B
+	// Token: 0x060144DF RID: 83167 RVA: 0x005E9CAB File Offset: 0x005E7EAB
 	public static void ResetStaticDefaultValue()
 	{
 		SpecialTransitionModel._Instance = null;
 	}
 
-	// Token: 0x06016ABB RID: 92859 RVA: 0x005BDA83 File Offset: 0x005BBC83
+	// Token: 0x060144E0 RID: 83168 RVA: 0x005E9CB3 File Offset: 0x005E7EB3
 	static SpecialTransitionModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpecialTransitionModel.CreateStaticDefaultValue), new Action(SpecialTransitionModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A829 RID: 43049
+	// Token: 0x0400AC2E RID: 44078
 	[Nullable(2)]
 	private ISpecialTransitionParams SpecialTransitionParams;
 
-	// Token: 0x0400A82A RID: 43050
+	// Token: 0x0400AC2F RID: 44079
 	[Nullable(2)]
 	private static SpecialTransitionModel _Instance;
 }

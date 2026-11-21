@@ -2,28 +2,28 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02002A85 RID: 10885
+// Token: 0x02002001 RID: 8193
 [NullableContext(2)]
 [Nullable(0)]
 public class FadeEffect : IFadeEffect
 {
-	// Token: 0x17001E30 RID: 7728
-	// (get) Token: 0x06016AA8 RID: 92840 RVA: 0x005BD97E File Offset: 0x005BBB7E
-	// (set) Token: 0x06016AA9 RID: 92841 RVA: 0x005BD986 File Offset: 0x005BBB86
+	// Token: 0x17001E88 RID: 7816
+	// (get) Token: 0x060144CD RID: 83149 RVA: 0x005E9BAE File Offset: 0x005E7DAE
+	// (set) Token: 0x060144CE RID: 83150 RVA: 0x005E9BB6 File Offset: 0x005E7DB6
 	public EFadeInScreenShowType? FadeColor { get; set; }
 
-	// Token: 0x17001E31 RID: 7729
-	// (get) Token: 0x06016AAA RID: 92842 RVA: 0x005BD98F File Offset: 0x005BBB8F
-	// (set) Token: 0x06016AAB RID: 92843 RVA: 0x005BD997 File Offset: 0x005BBB97
+	// Token: 0x17001E89 RID: 7817
+	// (get) Token: 0x060144CF RID: 83151 RVA: 0x005E9BBF File Offset: 0x005E7DBF
+	// (set) Token: 0x060144D0 RID: 83152 RVA: 0x005E9BC7 File Offset: 0x005E7DC7
 	public float? FadeInTime { get; set; }
 
-	// Token: 0x17001E32 RID: 7730
-	// (get) Token: 0x06016AAC RID: 92844 RVA: 0x005BD9A0 File Offset: 0x005BBBA0
-	// (set) Token: 0x06016AAD RID: 92845 RVA: 0x005BD9A8 File Offset: 0x005BBBA8
+	// Token: 0x17001E8A RID: 7818
+	// (get) Token: 0x060144D1 RID: 83153 RVA: 0x005E9BD0 File Offset: 0x005E7DD0
+	// (set) Token: 0x060144D2 RID: 83154 RVA: 0x005E9BD8 File Offset: 0x005E7DD8
 	public float? FadeOutTime { get; set; }
 
-	// Token: 0x17001E33 RID: 7731
-	// (get) Token: 0x06016AAE RID: 92846 RVA: 0x005BD9B1 File Offset: 0x005BBBB1
-	// (set) Token: 0x06016AAF RID: 92847 RVA: 0x005BD9B9 File Offset: 0x005BBBB9
+	// Token: 0x17001E8B RID: 7819
+	// (get) Token: 0x060144D3 RID: 83155 RVA: 0x005E9BE1 File Offset: 0x005E7DE1
+	// (set) Token: 0x060144D4 RID: 83156 RVA: 0x005E9BE9 File Offset: 0x005E7DE9
 	public string ScreenEffect { get; set; }
 }

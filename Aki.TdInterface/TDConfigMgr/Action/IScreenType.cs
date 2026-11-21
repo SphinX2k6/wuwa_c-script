@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DEA RID: 7658
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200201D RID: 8221
 	public class IScreenType
 	{
-		// Token: 0x0600A3EB RID: 41963 RVA: 0x00173FB0 File Offset: 0x001721B0
+		// Token: 0x0600AE93 RID: 44691 RVA: 0x001899B8 File Offset: 0x00187BB8
 		private IScreenType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3EC RID: 41964 RVA: 0x00173FE8 File Offset: 0x001721E8
+		// Token: 0x0600AE94 RID: 44692 RVA: 0x001899F0 File Offset: 0x00187BF0
 		public static IScreenType Create([Nullable(2)] IScreenType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3ED RID: 41965 RVA: 0x00173FFB File Offset: 0x001721FB
+		// Token: 0x0600AE95 RID: 44693 RVA: 0x00189A03 File Offset: 0x00187C03
 		public static IScreenType CreateFromSetValue([Nullable(2)] IScreenType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3EE RID: 41966 RVA: 0x0017400E File Offset: 0x0017220E
+		// Token: 0x0600AE96 RID: 44694 RVA: 0x00189A16 File Offset: 0x00187C16
 		public IScreenType_SetValue ToSetValue()
 		{
 			return new IScreenType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700326D RID: 12909
-		// (get) Token: 0x0600A3EF RID: 41967 RVA: 0x00174021 File Offset: 0x00172221
-		// (set) Token: 0x0600A3F0 RID: 41968 RVA: 0x0017404C File Offset: 0x0017224C
+		// Token: 0x1700352C RID: 13612
+		// (get) Token: 0x0600AE97 RID: 44695 RVA: 0x00189A29 File Offset: 0x00187C29
+		// (set) Token: 0x0600AE98 RID: 44696 RVA: 0x00189A54 File Offset: 0x00187C54
 		public virtual EScreenType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006238 RID: 25144
+		// Token: 0x0400680F RID: 26639
 		[Nullable(2)]
 		protected IScreenType FbInstance;
 
-		// Token: 0x04006239 RID: 25145
+		// Token: 0x04006810 RID: 26640
 		[Nullable(2)]
 		protected IScreenType_SetValue PocoInterface;
 	}

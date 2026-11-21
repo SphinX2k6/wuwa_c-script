@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAC RID: 3244
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D8E RID: 3470
 	public class DynamicTeleportComponent : IComponentBase
 	{
-		// Token: 0x06004A45 RID: 19013 RVA: 0x000B9FDD File Offset: 0x000B81DD
+		// Token: 0x06004EF3 RID: 20211 RVA: 0x000C49ED File Offset: 0x000C2BED
 		public static DynamicTeleportComponent Create(IDynamicTeleportComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016AA RID: 5802
-		// (get) Token: 0x06004A46 RID: 19014 RVA: 0x000B9FFC File Offset: 0x000B81FC
+		// Token: 0x170017D2 RID: 6098
+		// (get) Token: 0x06004EF4 RID: 20212 RVA: 0x000C4A0C File Offset: 0x000C2C0C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016AB RID: 5803
-		// (get) Token: 0x06004A47 RID: 19015 RVA: 0x000BA034 File Offset: 0x000B8234
+		// Token: 0x170017D3 RID: 6099
+		// (get) Token: 0x06004EF5 RID: 20213 RVA: 0x000C4A44 File Offset: 0x000C2C44
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016AC RID: 5804
-		// (get) Token: 0x06004A48 RID: 19016 RVA: 0x000BA04A File Offset: 0x000B824A
+		// Token: 0x170017D4 RID: 6100
+		// (get) Token: 0x06004EF6 RID: 20214 RVA: 0x000C4A5A File Offset: 0x000C2C5A
 		public virtual PosA Offset
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016AD RID: 5805
-		// (get) Token: 0x06004A49 RID: 19017 RVA: 0x000BA07E File Offset: 0x000B827E
+		// Token: 0x170017D5 RID: 6101
+		// (get) Token: 0x06004EF7 RID: 20215 RVA: 0x000C4A8E File Offset: 0x000C2C8E
 		public virtual int PhantomSkillId
 		{
 			get
@@ -73,14 +71,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A63 RID: 10851
+		// Token: 0x04002CDD RID: 11485
 		private IDynamicTeleportComponent Instance;
 
-		// Token: 0x04002A64 RID: 10852
+		// Token: 0x04002CDE RID: 11486
 		[Nullable(2)]
 		private PosA _OffsetCache;
 
-		// Token: 0x04002A65 RID: 10853
+		// Token: 0x04002CDF RID: 11487
 		private bool _OffsetInited;
 	}
 }

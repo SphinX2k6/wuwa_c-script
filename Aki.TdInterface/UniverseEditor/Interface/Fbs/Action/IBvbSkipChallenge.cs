@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006263 RID: 25187
+	// Token: 0x020068D4 RID: 26836
 	public struct IBvbSkipChallenge : IFlatbufferObject
 	{
-		// Token: 0x1700BBB3 RID: 48051
-		// (get) Token: 0x0602B754 RID: 178004 RVA: 0x005FBC71 File Offset: 0x005F9E71
+		// Token: 0x1700C53B RID: 50491
+		// (get) Token: 0x0602DEB5 RID: 188085 RVA: 0x00646A79 File Offset: 0x00644C79
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B755 RID: 178005 RVA: 0x005FBC7E File Offset: 0x005F9E7E
+		// Token: 0x0602DEB6 RID: 188086 RVA: 0x00646A86 File Offset: 0x00644C86
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B756 RID: 178006 RVA: 0x005FBC88 File Offset: 0x005F9E88
+		// Token: 0x0602DEB7 RID: 188087 RVA: 0x00646A90 File Offset: 0x00644C90
 		public static IBvbSkipChallenge GetRootAsIBvbSkipChallenge(ByteBuffer _bb)
 		{
 			return IBvbSkipChallenge.GetRootAsIBvbSkipChallenge(_bb, default(IBvbSkipChallenge));
 		}
 
-		// Token: 0x0602B757 RID: 178007 RVA: 0x005FBCA4 File Offset: 0x005F9EA4
+		// Token: 0x0602DEB8 RID: 188088 RVA: 0x00646AAC File Offset: 0x00644CAC
 		public static IBvbSkipChallenge GetRootAsIBvbSkipChallenge(ByteBuffer _bb, IBvbSkipChallenge obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B758 RID: 178008 RVA: 0x005FBCC1 File Offset: 0x005F9EC1
+		// Token: 0x0602DEB9 RID: 188089 RVA: 0x00646AC9 File Offset: 0x00644CC9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B759 RID: 178009 RVA: 0x005FBCD0 File Offset: 0x005F9ED0
+		// Token: 0x0602DEBA RID: 188090 RVA: 0x00646AD8 File Offset: 0x00644CD8
 		public IBvbSkipChallenge __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BBB4 RID: 48052
-		// (get) Token: 0x0602B75A RID: 178010 RVA: 0x005FBCE0 File Offset: 0x005F9EE0
+		// Token: 0x1700C53C RID: 50492
+		// (get) Token: 0x0602DEBB RID: 188091 RVA: 0x00646AE8 File Offset: 0x00644CE8
 		public int ChallengeId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B75B RID: 178011 RVA: 0x005FBD1C File Offset: 0x005F9F1C
+		// Token: 0x0602DEBC RID: 188092 RVA: 0x00646B24 File Offset: 0x00644D24
 		public static Offset<IBvbSkipChallenge> CreateIBvbSkipChallenge(FlatBufferBuilder builder, int ChallengeId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbSkipChallenge.EndIBvbSkipChallenge(builder);
 		}
 
-		// Token: 0x0602B75C RID: 178012 RVA: 0x005FBD32 File Offset: 0x005F9F32
+		// Token: 0x0602DEBD RID: 188093 RVA: 0x00646B3A File Offset: 0x00644D3A
 		public static void StartIBvbSkipChallenge(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B75D RID: 178013 RVA: 0x005FBD3B File Offset: 0x005F9F3B
+		// Token: 0x0602DEBE RID: 188094 RVA: 0x00646B43 File Offset: 0x00644D43
 		public static void AddChallengeId(FlatBufferBuilder builder, int challengeId)
 		{
 			builder.AddInt(0, challengeId, 0);
 		}
 
-		// Token: 0x0602B75E RID: 178014 RVA: 0x005FBD46 File Offset: 0x005F9F46
+		// Token: 0x0602DEBF RID: 188095 RVA: 0x00646B4E File Offset: 0x00644D4E
 		public static Offset<IBvbSkipChallenge> EndIBvbSkipChallenge(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbSkipChallenge>(builder.EndTable());
 		}
 
-		// Token: 0x0602B75F RID: 178015 RVA: 0x005FBD54 File Offset: 0x005F9F54
+		// Token: 0x0602DEC0 RID: 188096 RVA: 0x00646B5C File Offset: 0x00644D5C
 		public IBvbSkipChallengeT UnPack()
 		{
 			IBvbSkipChallengeT bvbSkipChallengeT = new IBvbSkipChallengeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return bvbSkipChallengeT;
 		}
 
-		// Token: 0x0602B760 RID: 178016 RVA: 0x005FBD6F File Offset: 0x005F9F6F
+		// Token: 0x0602DEC1 RID: 188097 RVA: 0x00646B77 File Offset: 0x00644D77
 		public void UnPackTo(IBvbSkipChallengeT _o)
 		{
 			_o.ChallengeId = this.ChallengeId;
 		}
 
-		// Token: 0x0602B761 RID: 178017 RVA: 0x005FBD80 File Offset: 0x005F9F80
+		// Token: 0x0602DEC2 RID: 188098 RVA: 0x00646B88 File Offset: 0x00644D88
 		public static Offset<IBvbSkipChallenge> Pack(FlatBufferBuilder builder, IBvbSkipChallengeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBvbSkipChallenge.CreateIBvbSkipChallenge(builder, _o.ChallengeId);
 		}
 
-		// Token: 0x040107BE RID: 67518
+		// Token: 0x040115D3 RID: 71123
 		private Table __p;
 	}
 }

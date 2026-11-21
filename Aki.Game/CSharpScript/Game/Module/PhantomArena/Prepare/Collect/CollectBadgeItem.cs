@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051AD RID: 20909
+	// Token: 0x0200417D RID: 16765
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CollectBadgeItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603589C RID: 219292 RVA: 0x00CAEA2C File Offset: 0x00CACC2C
+		// Token: 0x0602A797 RID: 173975 RVA: 0x00BFC068 File Offset: 0x00BFA268
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x0603589D RID: 219293 RVA: 0x00CAEAEB File Offset: 0x00CACCEB
+		// Token: 0x0602A798 RID: 173976 RVA: 0x00BFC127 File Offset: 0x00BFA327
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.OnCanChange));
 		}
 
-		// Token: 0x0603589E RID: 219294 RVA: 0x00CAEB0C File Offset: 0x00CACD0C
+		// Token: 0x0602A799 RID: 173977 RVA: 0x00BFC148 File Offset: 0x00BFA348
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.BadgeId = data;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.SetSelected(isSelected);
 		}
 
-		// Token: 0x0603589F RID: 219295 RVA: 0x00CAEBB9 File Offset: 0x00CACDB9
+		// Token: 0x0602A79A RID: 173978 RVA: 0x00BFC1F5 File Offset: 0x00BFA3F5
 		private void OnClickBadge(EToggleState toggleState)
 		{
 			if (this.CallbackClickBadge != null && this.BadgeId > 0)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			}
 		}
 
-		// Token: 0x060358A0 RID: 219296 RVA: 0x00CAEBE0 File Offset: 0x00CACDE0
+		// Token: 0x0602A79B RID: 173979 RVA: 0x00BFC21C File Offset: 0x00BFA41C
 		private bool OnCanChange()
 		{
 			if (this.CallbackCanChange != null && this.BadgeId > 0)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			return false;
 		}
 
-		// Token: 0x060358A1 RID: 219297 RVA: 0x00CAEC1F File Offset: 0x00CACE1F
+		// Token: 0x0602A79C RID: 173980 RVA: 0x00BFC25B File Offset: 0x00BFA45B
 		private void SetSelected(bool isSelected)
 		{
 			if (isSelected)
@@ -81,53 +81,53 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.OnDeselected(false);
 		}
 
-		// Token: 0x060358A2 RID: 219298 RVA: 0x00CAEC33 File Offset: 0x00CACE33
+		// Token: 0x0602A79D RID: 173981 RVA: 0x00BFC26F File Offset: 0x00BFA46F
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060358A3 RID: 219299 RVA: 0x00CAEC46 File Offset: 0x00CACE46
+		// Token: 0x0602A79E RID: 173982 RVA: 0x00BFC282 File Offset: 0x00BFA482
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060358A4 RID: 219300 RVA: 0x00CAEC59 File Offset: 0x00CACE59
+		// Token: 0x0602A79F RID: 173983 RVA: 0x00BFC295 File Offset: 0x00BFA495
 		public override object GetKey(int data, int displayIndex)
 		{
 			return this.BadgeId;
 		}
 
-		// Token: 0x0401C6CA RID: 116426
+		// Token: 0x040170FF RID: 94463
 		private int BadgeId;
 
-		// Token: 0x0401C6CB RID: 116427
+		// Token: 0x04017100 RID: 94464
 		public Action<int> CallbackClickBadge;
 
-		// Token: 0x0401C6CC RID: 116428
+		// Token: 0x04017101 RID: 94465
 		public Func<int, EToggleState, bool> CallbackCanChange;
 
-		// Token: 0x0200B334 RID: 45876
+		// Token: 0x02009D6C RID: 40300
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040364FD RID: 222461
+			// Token: 0x04030F50 RID: 200528
 			public const int ToggleBadge = 0;
 
-			// Token: 0x040364FE RID: 222462
+			// Token: 0x04030F51 RID: 200529
 			public const int PanelLock = 1;
 
-			// Token: 0x040364FF RID: 222463
+			// Token: 0x04030F52 RID: 200530
 			public const int SpriteLock = 2;
 
-			// Token: 0x04036500 RID: 222464
+			// Token: 0x04030F53 RID: 200531
 			public const int PanelUnlock = 3;
 
-			// Token: 0x04036501 RID: 222465
+			// Token: 0x04030F54 RID: 200532
 			public const int SpriteUnlock = 4;
 
-			// Token: 0x04036502 RID: 222466
+			// Token: 0x04030F55 RID: 200533
 			public const int TextName = 5;
 		}
 	}

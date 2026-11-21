@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F79 RID: 3961
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010A3 RID: 4259
 	public class IFinishJellyfishReturnCondition : IQuestCondition
 	{
-		// Token: 0x0600580E RID: 22542 RVA: 0x000D6FF8 File Offset: 0x000D51F8
+		// Token: 0x06005DE2 RID: 24034 RVA: 0x000E3A64 File Offset: 0x000E1C64
 		private IFinishJellyfishReturnCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600580F RID: 22543 RVA: 0x000D7030 File Offset: 0x000D5230
+		// Token: 0x06005DE3 RID: 24035 RVA: 0x000E3A9C File Offset: 0x000E1C9C
 		public static IFinishJellyfishReturnCondition Create([Nullable(2)] IFinishJellyfishReturnCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005810 RID: 22544 RVA: 0x000D7043 File Offset: 0x000D5243
+		// Token: 0x06005DE4 RID: 24036 RVA: 0x000E3AAF File Offset: 0x000E1CAF
 		public static IFinishJellyfishReturnCondition CreateFromSetValue([Nullable(2)] IFinishJellyfishReturnCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005811 RID: 22545 RVA: 0x000D7058 File Offset: 0x000D5258
+		// Token: 0x06005DE5 RID: 24037 RVA: 0x000E3AC4 File Offset: 0x000E1CC4
 		public new IFinishJellyfishReturnCondition_SetValue ToSetValue()
 		{
 			return new IFinishJellyfishReturnCondition_SetValue
@@ -62,14 +60,13 @@ namespace Aki.TDConfigMgr.Quest
 				StartRadius = this.StartRadius,
 				EndPosEntityId = this.EndPosEntityId,
 				EndRadius = this.EndRadius,
-				LevelConfigDa = this.LevelConfigDa,
-				EffectDa = this.EffectDa
+				LevelConfigDa = this.LevelConfigDa
 			};
 		}
 
-		// Token: 0x17001D53 RID: 7507
-		// (get) Token: 0x06005812 RID: 22546 RVA: 0x000D70CA File Offset: 0x000D52CA
-		// (set) Token: 0x06005813 RID: 22547 RVA: 0x000D70F5 File Offset: 0x000D52F5
+		// Token: 0x17001EF9 RID: 7929
+		// (get) Token: 0x06005DE6 RID: 24038 RVA: 0x000E3B2A File Offset: 0x000E1D2A
+		// (set) Token: 0x06005DE7 RID: 24039 RVA: 0x000E3B55 File Offset: 0x000E1D55
 		public override EChildQuest Type
 		{
 			get
@@ -90,9 +87,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D54 RID: 7508
-		// (get) Token: 0x06005814 RID: 22548 RVA: 0x000D7104 File Offset: 0x000D5304
-		// (set) Token: 0x06005815 RID: 22549 RVA: 0x000D7165 File Offset: 0x000D5365
+		// Token: 0x17001EFA RID: 7930
+		// (get) Token: 0x06005DE8 RID: 24040 RVA: 0x000E3B64 File Offset: 0x000E1D64
+		// (set) Token: 0x06005DE9 RID: 24041 RVA: 0x000E3BC5 File Offset: 0x000E1DC5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -123,9 +120,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D55 RID: 7509
-		// (get) Token: 0x06005816 RID: 22550 RVA: 0x000D717A File Offset: 0x000D537A
-		// (set) Token: 0x06005817 RID: 22551 RVA: 0x000D71A5 File Offset: 0x000D53A5
+		// Token: 0x17001EFB RID: 7931
+		// (get) Token: 0x06005DEA RID: 24042 RVA: 0x000E3BDA File Offset: 0x000E1DDA
+		// (set) Token: 0x06005DEB RID: 24043 RVA: 0x000E3C05 File Offset: 0x000E1E05
 		public virtual int StartPosEntityId
 		{
 			get
@@ -146,9 +143,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D56 RID: 7510
-		// (get) Token: 0x06005818 RID: 22552 RVA: 0x000D71B3 File Offset: 0x000D53B3
-		// (set) Token: 0x06005819 RID: 22553 RVA: 0x000D71E2 File Offset: 0x000D53E2
+		// Token: 0x17001EFC RID: 7932
+		// (get) Token: 0x06005DEC RID: 24044 RVA: 0x000E3C13 File Offset: 0x000E1E13
+		// (set) Token: 0x06005DED RID: 24045 RVA: 0x000E3C42 File Offset: 0x000E1E42
 		public virtual float StartRadius
 		{
 			get
@@ -169,9 +166,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D57 RID: 7511
-		// (get) Token: 0x0600581A RID: 22554 RVA: 0x000D71F0 File Offset: 0x000D53F0
-		// (set) Token: 0x0600581B RID: 22555 RVA: 0x000D721B File Offset: 0x000D541B
+		// Token: 0x17001EFD RID: 7933
+		// (get) Token: 0x06005DEE RID: 24046 RVA: 0x000E3C50 File Offset: 0x000E1E50
+		// (set) Token: 0x06005DEF RID: 24047 RVA: 0x000E3C7B File Offset: 0x000E1E7B
 		public virtual int EndPosEntityId
 		{
 			get
@@ -192,9 +189,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D58 RID: 7512
-		// (get) Token: 0x0600581C RID: 22556 RVA: 0x000D7229 File Offset: 0x000D5429
-		// (set) Token: 0x0600581D RID: 22557 RVA: 0x000D7258 File Offset: 0x000D5458
+		// Token: 0x17001EFE RID: 7934
+		// (get) Token: 0x06005DF0 RID: 24048 RVA: 0x000E3C89 File Offset: 0x000E1E89
+		// (set) Token: 0x06005DF1 RID: 24049 RVA: 0x000E3CB8 File Offset: 0x000E1EB8
 		public virtual float EndRadius
 		{
 			get
@@ -215,9 +212,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D59 RID: 7513
-		// (get) Token: 0x0600581E RID: 22558 RVA: 0x000D7266 File Offset: 0x000D5466
-		// (set) Token: 0x0600581F RID: 22559 RVA: 0x000D7291 File Offset: 0x000D5491
+		// Token: 0x17001EFF RID: 7935
+		// (get) Token: 0x06005DF2 RID: 24050 RVA: 0x000E3CC6 File Offset: 0x000E1EC6
+		// (set) Token: 0x06005DF3 RID: 24051 RVA: 0x000E3CF1 File Offset: 0x000E1EF1
 		public virtual string LevelConfigDa
 		{
 			get
@@ -238,41 +235,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D5A RID: 7514
-		// (get) Token: 0x06005820 RID: 22560 RVA: 0x000D729F File Offset: 0x000D549F
-		// (set) Token: 0x06005821 RID: 22561 RVA: 0x000D72CA File Offset: 0x000D54CA
-		public virtual string EffectDa
-		{
-			get
-			{
-				if (this.FbInstance != null)
-				{
-					return this.FbInstance.EffectDa;
-				}
-				if (this.PocoInterface == null)
-				{
-					return null;
-				}
-				return this.PocoInterface.EffectDa;
-			}
-			set
-			{
-				this.GetOrCreatePoco().EffectDa = value;
-			}
-		}
-
-		// Token: 0x04003534 RID: 13620
+		// Token: 0x04003865 RID: 14437
 		[Nullable(2)]
 		protected new IFinishJellyfishReturnCondition FbInstance;
 
-		// Token: 0x04003535 RID: 13621
+		// Token: 0x04003866 RID: 14438
 		[Nullable(2)]
 		protected new IFinishJellyfishReturnCondition_SetValue PocoInterface;
 
-		// Token: 0x04003536 RID: 13622
+		// Token: 0x04003867 RID: 14439
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003537 RID: 13623
+		// Token: 0x04003868 RID: 14440
 		private bool _PreConditionsInited;
 	}
 }

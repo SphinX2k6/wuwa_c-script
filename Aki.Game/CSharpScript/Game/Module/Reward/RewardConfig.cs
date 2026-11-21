@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
@@ -8,19 +7,19 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.Reward
 {
-	// Token: 0x02004F08 RID: 20232
+	// Token: 0x02003ED1 RID: 16081
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class RewardConfig : ConfigBase
 	{
-		// Token: 0x06033E02 RID: 212482 RVA: 0x00C275D7 File Offset: 0x00C257D7
+		// Token: 0x06028C6D RID: 167021 RVA: 0x00B70B77 File Offset: 0x00B6ED77
 		public DropPackage? GetDropPackage(int id)
 		{
 			return ConfigDropPackageById.GetConfig(id, true);
 		}
 
-		// Token: 0x06033E03 RID: 212483 RVA: 0x00C275E0 File Offset: 0x00C257E0
+		// Token: 0x06028C6E RID: 167022 RVA: 0x00B70B80 File Offset: 0x00B6ED80
 		[NullableContext(2)]
 		public Dictionary<int, int> GetDropPackagePreview(int id)
 		{
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Reward
 			return config.Value.DropPreview();
 		}
 
-		// Token: 0x06033E04 RID: 212484 RVA: 0x00C27610 File Offset: 0x00C25810
+		// Token: 0x06028C6F RID: 167023 RVA: 0x00B70BB0 File Offset: 0x00B6EDB0
 		public List<TItem> GetDropPackagePreviewItemList(int id)
 		{
 			List<TItem> list = new List<TItem>();
@@ -50,7 +49,7 @@ namespace CSharpScript.Game.Module.Reward
 			return list;
 		}
 
-		// Token: 0x06033E05 RID: 212485 RVA: 0x00C276A4 File Offset: 0x00C258A4
+		// Token: 0x06028C70 RID: 167024 RVA: 0x00B70C44 File Offset: 0x00B6EE44
 		public List<TItem> GetDropPackagePreviewItemListByIdList(IReadOnlyList<int> idList)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -69,12 +68,15 @@ namespace CSharpScript.Game.Module.Reward
 				}
 			}
 			CSharpScript.Game.Module.Item.ItemConfig itemConfig = CSharpScript.Game.Module.Item.ItemConfig.Instance;
-			List<TItem> list = (from kvp in dictionary
-			select new TItem
+			List<TItem> list = new List<TItem>(dictionary.Count);
+			foreach (KeyValuePair<int, int> keyValuePair in dictionary)
 			{
-				ItemData = new InventoryDefine.GetItemData(kvp.Key, 0),
-				Count = kvp.Value
-			}).ToList<TItem>();
+				list.Add(new TItem
+				{
+					ItemData = new InventoryDefine.GetItemData(keyValuePair.Key, 0),
+					Count = keyValuePair.Value
+				});
+			}
 			list.Sort(delegate(TItem a, TItem b)
 			{
 				ItemInfo? config = itemConfig.GetConfig(a.ItemData.ItemId);
@@ -88,13 +90,13 @@ namespace CSharpScript.Game.Module.Reward
 			return list;
 		}
 
-		// Token: 0x06033E06 RID: 212486 RVA: 0x00C277B0 File Offset: 0x00C259B0
+		// Token: 0x06028C71 RID: 167025 RVA: 0x00B70DA0 File Offset: 0x00B6EFA0
 		public DropShowPlan? GetDropShowPlan(int id)
 		{
 			return ConfigDropShowPlanById.GetConfig(id, true);
 		}
 
-		// Token: 0x06033E07 RID: 212487 RVA: 0x00C277BC File Offset: 0x00C259BC
+		// Token: 0x06028C72 RID: 167026 RVA: 0x00B70DAC File Offset: 0x00B6EFAC
 		public int GetSpeed()
 		{
 			if (this.AdsorptionSpeed == null)
@@ -104,7 +106,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.AdsorptionSpeed.Value;
 		}
 
-		// Token: 0x06033E08 RID: 212488 RVA: 0x00C27800 File Offset: 0x00C25A00
+		// Token: 0x06028C73 RID: 167027 RVA: 0x00B70DF0 File Offset: 0x00B6EFF0
 		public int GetMaxAdsorption()
 		{
 			if (this.AdsorptionMaxTime == null)
@@ -114,7 +116,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.AdsorptionMaxTime.Value;
 		}
 
-		// Token: 0x06033E09 RID: 212489 RVA: 0x00C27844 File Offset: 0x00C25A44
+		// Token: 0x06028C74 RID: 167028 RVA: 0x00B70E34 File Offset: 0x00B6F034
 		public int GetHeightProtect()
 		{
 			if (this.DropHeightProtect == null)
@@ -124,7 +126,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropHeightProtect.Value;
 		}
 
-		// Token: 0x06033E0A RID: 212490 RVA: 0x00C27888 File Offset: 0x00C25A88
+		// Token: 0x06028C75 RID: 167029 RVA: 0x00B70E78 File Offset: 0x00B6F078
 		public float GetRestitution()
 		{
 			if (this.DropBounceCoefficient == null)
@@ -134,7 +136,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropBounceCoefficient.Value;
 		}
 
-		// Token: 0x06033E0B RID: 212491 RVA: 0x00C278CC File Offset: 0x00C25ACC
+		// Token: 0x06028C76 RID: 167030 RVA: 0x00B70EBC File Offset: 0x00B6F0BC
 		public float GetFriction()
 		{
 			if (this.DropFriction == null)
@@ -144,7 +146,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropFriction.Value;
 		}
 
-		// Token: 0x06033E0C RID: 212492 RVA: 0x00C27910 File Offset: 0x00C25B10
+		// Token: 0x06028C77 RID: 167031 RVA: 0x00B70F00 File Offset: 0x00B6F100
 		public int GetDropItemPickUpRange()
 		{
 			if (this.DropPickUpRange == null)
@@ -154,7 +156,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropPickUpRange.Value;
 		}
 
-		// Token: 0x06033E0D RID: 212493 RVA: 0x00C27954 File Offset: 0x00C25B54
+		// Token: 0x06028C78 RID: 167032 RVA: 0x00B70F44 File Offset: 0x00B6F144
 		public int GetPickUpInBagRange()
 		{
 			if (this.DropPickUpInBagRange == null)
@@ -164,7 +166,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropPickUpInBagRange.Value;
 		}
 
-		// Token: 0x06033E0E RID: 212494 RVA: 0x00C27998 File Offset: 0x00C25B98
+		// Token: 0x06028C79 RID: 167033 RVA: 0x00B70F88 File Offset: 0x00B6F188
 		public int GetDropItemAcceleration()
 		{
 			if (this.AdsorptionAcceleration == null)
@@ -174,7 +176,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.AdsorptionAcceleration.Value;
 		}
 
-		// Token: 0x06033E0F RID: 212495 RVA: 0x00C279DC File Offset: 0x00C25BDC
+		// Token: 0x06028C7A RID: 167034 RVA: 0x00B70FCC File Offset: 0x00B6F1CC
 		public int GetFallToGroundSpeed()
 		{
 			if (this.FallToGroundSpeed == null)
@@ -184,7 +186,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.FallToGroundSpeed.Value;
 		}
 
-		// Token: 0x06033E10 RID: 212496 RVA: 0x00C27A20 File Offset: 0x00C25C20
+		// Token: 0x06028C7B RID: 167035 RVA: 0x00B71010 File Offset: 0x00B6F210
 		public int GetDropChestOffsetZ()
 		{
 			if (this.DropChestOffsetZ == null)
@@ -194,7 +196,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropChestOffsetZ.Value;
 		}
 
-		// Token: 0x06033E11 RID: 212497 RVA: 0x00C27A64 File Offset: 0x00C25C64
+		// Token: 0x06028C7C RID: 167036 RVA: 0x00B71054 File Offset: 0x00B6F254
 		public int GetDropBornRadius()
 		{
 			if (this.DropBornRadius == null)
@@ -204,7 +206,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropBornRadius.Value;
 		}
 
-		// Token: 0x06033E12 RID: 212498 RVA: 0x00C27AA8 File Offset: 0x00C25CA8
+		// Token: 0x06028C7D RID: 167037 RVA: 0x00B71098 File Offset: 0x00B6F298
 		public int GetDropRotationProtectTime()
 		{
 			if (this.DropRotationProtectTime == null)
@@ -214,7 +216,7 @@ namespace CSharpScript.Game.Module.Reward
 			return this.DropRotationProtectTime.Value;
 		}
 
-		// Token: 0x06033E13 RID: 212499 RVA: 0x00C27AEC File Offset: 0x00C25CEC
+		// Token: 0x06028C7E RID: 167038 RVA: 0x00B710DC File Offset: 0x00B6F2DC
 		public List<TItem> GetMergedDropPackagePreviewItemList(int[] dropPackageIdList)
 		{
 			List<TItem> list = new List<TItem>();
@@ -238,7 +240,7 @@ namespace CSharpScript.Game.Module.Reward
 			return list;
 		}
 
-		// Token: 0x06033E14 RID: 212500 RVA: 0x00C27BA8 File Offset: 0x00C25DA8
+		// Token: 0x06028C7F RID: 167039 RVA: 0x00B71198 File Offset: 0x00B6F398
 		public int GetLowModeCount()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_list_low_count");
@@ -253,7 +255,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E15 RID: 212501 RVA: 0x00C27C00 File Offset: 0x00C25E00
+		// Token: 0x06028C80 RID: 167040 RVA: 0x00B711F0 File Offset: 0x00B6F3F0
 		public int GetFastModeCount()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_list_fast_count");
@@ -268,7 +270,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E16 RID: 212502 RVA: 0x00C27C58 File Offset: 0x00C25E58
+		// Token: 0x06028C81 RID: 167041 RVA: 0x00B71248 File Offset: 0x00B6F448
 		public int GetLowModeNextAddItemTime()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_next_item_low_time");
@@ -283,7 +285,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E17 RID: 212503 RVA: 0x00C27CB0 File Offset: 0x00C25EB0
+		// Token: 0x06028C82 RID: 167042 RVA: 0x00B712A0 File Offset: 0x00B6F4A0
 		public int GetFastModeNextAddItemTime()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_next_item_fast_time");
@@ -298,7 +300,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E18 RID: 212504 RVA: 0x00C27D08 File Offset: 0x00C25F08
+		// Token: 0x06028C83 RID: 167043 RVA: 0x00B712F8 File Offset: 0x00B6F4F8
 		public int GetIntoBagMaxCount()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("item_list_max_size");
@@ -313,7 +315,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E19 RID: 212505 RVA: 0x00C27D60 File Offset: 0x00C25F60
+		// Token: 0x06028C84 RID: 167044 RVA: 0x00B71350 File Offset: 0x00B6F550
 		public int GetShowTime()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_show_time");
@@ -328,7 +330,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E1A RID: 212506 RVA: 0x00C27DBC File Offset: 0x00C25FBC
+		// Token: 0x06028C85 RID: 167045 RVA: 0x00B713AC File Offset: 0x00B6F5AC
 		public int GetNextItemTime()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_next_item_time");
@@ -343,7 +345,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E1B RID: 212507 RVA: 0x00C27E18 File Offset: 0x00C26018
+		// Token: 0x06028C86 RID: 167046 RVA: 0x00B71408 File Offset: 0x00B6F608
 		public int GetSliderTime()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("into_bag_slide_time");
@@ -358,7 +360,7 @@ namespace CSharpScript.Game.Module.Reward
 			return intConfig.Value;
 		}
 
-		// Token: 0x06033E1C RID: 212508 RVA: 0x00C27E74 File Offset: 0x00C26074
+		// Token: 0x06028C87 RID: 167047 RVA: 0x00B71464 File Offset: 0x00B6F664
 		protected override bool OnClear()
 		{
 			this.AdsorptionSpeed = null;
@@ -376,8 +378,8 @@ namespace CSharpScript.Game.Module.Reward
 			return true;
 		}
 
-		// Token: 0x17007F33 RID: 32563
-		// (get) Token: 0x06033E1D RID: 212509 RVA: 0x00C27F12 File Offset: 0x00C26112
+		// Token: 0x170052E3 RID: 21219
+		// (get) Token: 0x06028C88 RID: 167048 RVA: 0x00B71502 File Offset: 0x00B6F702
 		public static RewardConfig Instance
 		{
 			get
@@ -386,7 +388,7 @@ namespace CSharpScript.Game.Module.Reward
 			}
 		}
 
-		// Token: 0x06033E1E RID: 212510 RVA: 0x00C27F19 File Offset: 0x00C26119
+		// Token: 0x06028C89 RID: 167049 RVA: 0x00B71509 File Offset: 0x00B6F709
 		public static RewardConfig GetOrCreateInstance()
 		{
 			if (RewardConfig._Instance == null)
@@ -396,7 +398,7 @@ namespace CSharpScript.Game.Module.Reward
 			return RewardConfig._Instance;
 		}
 
-		// Token: 0x06033E1F RID: 212511 RVA: 0x00C27F2D File Offset: 0x00C2612D
+		// Token: 0x06028C8A RID: 167050 RVA: 0x00B7151D File Offset: 0x00B6F71D
 		public static bool CreateInstance()
 		{
 			if (RewardConfig._Instance != null)
@@ -407,60 +409,60 @@ namespace CSharpScript.Game.Module.Reward
 			return true;
 		}
 
-		// Token: 0x06033E20 RID: 212512 RVA: 0x00C27F43 File Offset: 0x00C26143
+		// Token: 0x06028C8B RID: 167051 RVA: 0x00B71533 File Offset: 0x00B6F733
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06033E21 RID: 212513 RVA: 0x00C27F45 File Offset: 0x00C26145
+		// Token: 0x06028C8C RID: 167052 RVA: 0x00B71535 File Offset: 0x00B6F735
 		public static void ResetStaticDefaultValue()
 		{
 			RewardConfig._Instance = null;
 		}
 
-		// Token: 0x06033E22 RID: 212514 RVA: 0x00C27F4D File Offset: 0x00C2614D
+		// Token: 0x06028C8D RID: 167053 RVA: 0x00B7153D File Offset: 0x00B6F73D
 		static RewardConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RewardConfig.CreateStaticDefaultValue), new Action(RewardConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B933 RID: 112947
+		// Token: 0x04016306 RID: 90886
 		private int? AdsorptionSpeed;
 
-		// Token: 0x0401B934 RID: 112948
+		// Token: 0x04016307 RID: 90887
 		private int? AdsorptionMaxTime;
 
-		// Token: 0x0401B935 RID: 112949
+		// Token: 0x04016308 RID: 90888
 		private int? DropHeightProtect;
 
-		// Token: 0x0401B936 RID: 112950
+		// Token: 0x04016309 RID: 90889
 		private float? DropBounceCoefficient;
 
-		// Token: 0x0401B937 RID: 112951
+		// Token: 0x0401630A RID: 90890
 		private float? DropFriction;
 
-		// Token: 0x0401B938 RID: 112952
+		// Token: 0x0401630B RID: 90891
 		private int? DropPickUpRange;
 
-		// Token: 0x0401B939 RID: 112953
+		// Token: 0x0401630C RID: 90892
 		private int? DropPickUpInBagRange;
 
-		// Token: 0x0401B93A RID: 112954
+		// Token: 0x0401630D RID: 90893
 		private int? AdsorptionAcceleration;
 
-		// Token: 0x0401B93B RID: 112955
+		// Token: 0x0401630E RID: 90894
 		private int? FallToGroundSpeed;
 
-		// Token: 0x0401B93C RID: 112956
+		// Token: 0x0401630F RID: 90895
 		private int? DropChestOffsetZ;
 
-		// Token: 0x0401B93D RID: 112957
+		// Token: 0x04016310 RID: 90896
 		private int? DropBornRadius;
 
-		// Token: 0x0401B93E RID: 112958
+		// Token: 0x04016311 RID: 90897
 		private int? DropRotationProtectTime;
 
-		// Token: 0x0401B93F RID: 112959
+		// Token: 0x04016312 RID: 90898
 		[Nullable(2)]
 		private static RewardConfig _Instance;
 	}

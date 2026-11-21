@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014CB RID: 5323
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001624 RID: 5668
 	public class ChangeElementalBoxState_SetValue
 	{
-		// Token: 0x0400465F RID: 18015
+		// Token: 0x040049FA RID: 18938
 		public IChangeElementalBoxStateTarget Target;
 
-		// Token: 0x04004660 RID: 18016
+		// Token: 0x040049FB RID: 18939
 		public string State;
 	}
 }

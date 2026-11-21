@@ -4,12 +4,12 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using CSharpScript.Core.Common;
 
-// Token: 0x02000E0E RID: 3598
+// Token: 0x020002C1 RID: 705
 [NullableContext(1)]
 [Nullable(0)]
 public class KuroSdkControllerTool
 {
-	// Token: 0x0600567D RID: 22141 RVA: 0x000F98D4 File Offset: 0x000F7AD4
+	// Token: 0x06002A0C RID: 10764 RVA: 0x0010109C File Offset: 0x000FF29C
 	public static string GetCreateRoleInfo()
 	{
 		RoleInfoSdk createRoleInfoData = KuroSdkControllerTool.GetCreateRoleInfoData();
@@ -21,7 +21,7 @@ public class KuroSdkControllerTool
 		return JsonSerializer.Serialize<RoleInfoSdk>(createRoleInfoData, options);
 	}
 
-	// Token: 0x0600567E RID: 22142 RVA: 0x000F9904 File Offset: 0x000F7B04
+	// Token: 0x06002A0D RID: 10765 RVA: 0x001010CC File Offset: 0x000FF2CC
 	public static RoleInfoSdk GetCreateRoleInfoData()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -47,7 +47,7 @@ public class KuroSdkControllerTool
 		return roleInfoSdk;
 	}
 
-	// Token: 0x0600567F RID: 22143 RVA: 0x000F9A54 File Offset: 0x000F7C54
+	// Token: 0x06002A0E RID: 10766 RVA: 0x0010121C File Offset: 0x000FF41C
 	private static string GetRoleId()
 	{
 		if (PlayerInfoModel.Instance.GetId() != null)
@@ -63,7 +63,7 @@ public class KuroSdkControllerTool
 		return LoginModel.Instance.GetCreatePlayerId().ToString();
 	}
 
-	// Token: 0x06005680 RID: 22144 RVA: 0x000F9ACC File Offset: 0x000F7CCC
+	// Token: 0x06002A0F RID: 10767 RVA: 0x00101294 File Offset: 0x000FF494
 	public static RoleInfoSdk GetRoleInfoData()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -91,7 +91,7 @@ public class KuroSdkControllerTool
 		return roleInfoSdk;
 	}
 
-	// Token: 0x06005681 RID: 22145 RVA: 0x000F9C30 File Offset: 0x000F7E30
+	// Token: 0x06002A10 RID: 10768 RVA: 0x001013F8 File Offset: 0x000FF5F8
 	public static string GetRoleInfo()
 	{
 		RoleInfoSdk roleInfoData = KuroSdkControllerTool.GetRoleInfoData();
@@ -103,7 +103,7 @@ public class KuroSdkControllerTool
 		return JsonSerializer.Serialize<RoleInfoSdk>(roleInfoData, options);
 	}
 
-	// Token: 0x06005682 RID: 22146 RVA: 0x000F9C60 File Offset: 0x000F7E60
+	// Token: 0x06002A11 RID: 10769 RVA: 0x00101428 File Offset: 0x000FF628
 	public static string GetPaymentInfo(ISDKPayment payment, ISDKPayRole roleInfo)
 	{
 		if (Info.Instance.PlatformType != ESourcePlatformType.Mac && Info.Instance.PlatformType != ESourcePlatformType.IOS && !CloudGameManager.Instance.IsCloudGame)
@@ -145,7 +145,7 @@ public class KuroSdkControllerTool
 		return JsonSerializer.Serialize<PayInfoMacIos>(payInfoMacIos, KuroSdkJsonOptions.Unescaped) ?? "";
 	}
 
-	// Token: 0x06005683 RID: 22147 RVA: 0x000F9DEC File Offset: 0x000F7FEC
+	// Token: 0x06002A12 RID: 10770 RVA: 0x001015B4 File Offset: 0x000FF7B4
 	public static ISDKPayment GetSdkPayProduct(int payId, string orderId, string name, string desc, string callBackUrl)
 	{
 		int? num;
@@ -165,7 +165,7 @@ public class KuroSdkControllerTool
 		};
 	}
 
-	// Token: 0x06005684 RID: 22148 RVA: 0x000F9E80 File Offset: 0x000F8080
+	// Token: 0x06002A13 RID: 10771 RVA: 0x00101648 File Offset: 0x000FF848
 	public static ISDKPayRole GetSdkPayRoleInfo()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -185,7 +185,7 @@ public class KuroSdkControllerTool
 		};
 	}
 
-	// Token: 0x06005685 RID: 22149 RVA: 0x000F9F44 File Offset: 0x000F8144
+	// Token: 0x06002A14 RID: 10772 RVA: 0x0010170C File Offset: 0x000FF90C
 	[return: Nullable(2)]
 	public static string GetSdkOpenUrlWndInfo(string title, string url)
 	{

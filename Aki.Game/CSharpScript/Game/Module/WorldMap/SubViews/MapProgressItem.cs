@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews
 {
-	// Token: 0x020047BC RID: 18364
+	// Token: 0x020036ED RID: 14061
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 	})]
 	public class MapProgressItem : GridProxyAbstract<MapProgressItemData>
 	{
-		// Token: 0x060301C8 RID: 197064 RVA: 0x00B26D2C File Offset: 0x00B24F2C
+		// Token: 0x06024998 RID: 149912 RVA: 0x00A56B38 File Offset: 0x00A54D38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060301C9 RID: 197065 RVA: 0x00B26DF8 File Offset: 0x00B24FF8
+		// Token: 0x06024999 RID: 149913 RVA: 0x00A56C04 File Offset: 0x00A54E04
 		[NullableContext(1)]
 		public override void Refresh(MapProgressItemData data, bool isSelected, int gridIndex)
 		{
@@ -58,22 +58,22 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			}
 		}
 
-		// Token: 0x0200AA7F RID: 43647
+		// Token: 0x02009432 RID: 37938
 		public static class EComponent
 		{
-			// Token: 0x04033E05 RID: 212485
+			// Token: 0x0402E58E RID: 189838
 			public const int TxtTitle = 0;
 
-			// Token: 0x04033E06 RID: 212486
+			// Token: 0x0402E58F RID: 189839
 			public const int TexState = 1;
 
-			// Token: 0x04033E07 RID: 212487
+			// Token: 0x0402E590 RID: 189840
 			public const int PnlGift = 2;
 
-			// Token: 0x04033E08 RID: 212488
+			// Token: 0x0402E591 RID: 189841
 			public const int TxtCount = 3;
 
-			// Token: 0x04033E09 RID: 212489
+			// Token: 0x0402E592 RID: 189842
 			public const int SprIcon = 6;
 		}
 	}

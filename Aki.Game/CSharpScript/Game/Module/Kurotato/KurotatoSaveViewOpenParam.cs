@@ -5,19 +5,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005715 RID: 22293
+	// Token: 0x020046EC RID: 18156
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoSaveViewOpenParam : IKurotatoSaveViewOpenParam
 	{
-		// Token: 0x17008858 RID: 34904
-		// (get) Token: 0x06038AA0 RID: 232096 RVA: 0x00D709B0 File Offset: 0x00D6EBB0
-		// (set) Token: 0x06038AA1 RID: 232097 RVA: 0x00D709B8 File Offset: 0x00D6EBB8
+		// Token: 0x17005C20 RID: 23584
+		// (get) Token: 0x0602D9B0 RID: 186800 RVA: 0x00CBEF98 File Offset: 0x00CBD198
+		// (set) Token: 0x0602D9B1 RID: 186801 RVA: 0x00CBEFA0 File Offset: 0x00CBD1A0
 		public List<KurotatoInstInfo> InstInfos { get; set; }
 
-		// Token: 0x17008859 RID: 34905
-		// (get) Token: 0x06038AA2 RID: 232098 RVA: 0x00D709C1 File Offset: 0x00D6EBC1
-		// (set) Token: 0x06038AA3 RID: 232099 RVA: 0x00D709C9 File Offset: 0x00D6EBC9
+		// Token: 0x17005C21 RID: 23585
+		// (get) Token: 0x0602D9B2 RID: 186802 RVA: 0x00CBEFA9 File Offset: 0x00CBD1A9
+		// (set) Token: 0x0602D9B3 RID: 186803 RVA: 0x00CBEFB1 File Offset: 0x00CBD1B1
 		public int DefaultIndex { get; set; }
 	}
 }

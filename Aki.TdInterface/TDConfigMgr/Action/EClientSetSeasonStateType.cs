@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015B1 RID: 5553
+	// Token: 0x02001711 RID: 5905
 	[EnumExtensions]
 	public enum EClientSetSeasonStateType
 	{
-		// Token: 0x040049ED RID: 18925
+		// Token: 0x04004DA2 RID: 19874
 		SwitchSeason,
-		// Token: 0x040049EE RID: 18926
+		// Token: 0x04004DA3 RID: 19875
 		LoopSeasonChange
 	}
 }

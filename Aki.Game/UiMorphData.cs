@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C8E RID: 11406
+// Token: 0x020021E7 RID: 8679
 [NullableContext(2)]
 [Nullable(0)]
 public class UiMorphData : IUiMorphData
 {
-	// Token: 0x17002013 RID: 8211
-	// (get) Token: 0x06017D5C RID: 97628 RVA: 0x00610597 File Offset: 0x0060E797
-	// (set) Token: 0x06017D5D RID: 97629 RVA: 0x0061059F File Offset: 0x0060E79F
+	// Token: 0x17002064 RID: 8292
+	// (get) Token: 0x060155D0 RID: 87504 RVA: 0x00636137 File Offset: 0x00634337
+	// (set) Token: 0x060155D1 RID: 87505 RVA: 0x0063613F File Offset: 0x0063433F
 	public USkeletalMesh MainSkeletalMesh { get; set; }
 
-	// Token: 0x17002014 RID: 8212
-	// (get) Token: 0x06017D5E RID: 97630 RVA: 0x006105A8 File Offset: 0x0060E7A8
-	// (set) Token: 0x06017D5F RID: 97631 RVA: 0x006105B0 File Offset: 0x0060E7B0
+	// Token: 0x17002065 RID: 8293
+	// (get) Token: 0x060155D2 RID: 87506 RVA: 0x00636148 File Offset: 0x00634348
+	// (set) Token: 0x060155D3 RID: 87507 RVA: 0x00636150 File Offset: 0x00634350
 	[Nullable(new byte[]
 	{
 		2,
@@ -31,19 +31,19 @@ public class UiMorphData : IUiMorphData
 		1
 	})] set; }
 
-	// Token: 0x17002015 RID: 8213
-	// (get) Token: 0x06017D60 RID: 97632 RVA: 0x006105B9 File Offset: 0x0060E7B9
-	// (set) Token: 0x06017D61 RID: 97633 RVA: 0x006105C1 File Offset: 0x0060E7C1
+	// Token: 0x17002066 RID: 8294
+	// (get) Token: 0x060155D4 RID: 87508 RVA: 0x00636159 File Offset: 0x00634359
+	// (set) Token: 0x060155D5 RID: 87509 RVA: 0x00636161 File Offset: 0x00634361
 	[Nullable(1)]
 	public List<UiModelDecorationParam> DecorationParamList { [NullableContext(1)] get; [NullableContext(1)] set; } = new List<UiModelDecorationParam>();
 
-	// Token: 0x17002016 RID: 8214
-	// (get) Token: 0x06017D62 RID: 97634 RVA: 0x006105CA File Offset: 0x0060E7CA
-	// (set) Token: 0x06017D63 RID: 97635 RVA: 0x006105D2 File Offset: 0x0060E7D2
+	// Token: 0x17002067 RID: 8295
+	// (get) Token: 0x060155D6 RID: 87510 RVA: 0x0063616A File Offset: 0x0063436A
+	// (set) Token: 0x060155D7 RID: 87511 RVA: 0x00636172 File Offset: 0x00634372
 	public UClass AnimClass { get; set; }
 
-	// Token: 0x17002017 RID: 8215
-	// (get) Token: 0x06017D64 RID: 97636 RVA: 0x006105DB File Offset: 0x0060E7DB
-	// (set) Token: 0x06017D65 RID: 97637 RVA: 0x006105E3 File Offset: 0x0060E7E3
+	// Token: 0x17002068 RID: 8296
+	// (get) Token: 0x060155D8 RID: 87512 RVA: 0x0063617B File Offset: 0x0063437B
+	// (set) Token: 0x060155D9 RID: 87513 RVA: 0x00636183 File Offset: 0x00634383
 	public string RoleBody { get; set; }
 }

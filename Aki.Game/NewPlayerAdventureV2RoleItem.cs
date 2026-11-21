@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020013CE RID: 5070
+// Token: 0x02000882 RID: 2178
 internal class NewPlayerAdventureV2RoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x06008F16 RID: 36630 RVA: 0x001EE5A0 File Offset: 0x001EC7A0
+	// Token: 0x060062AB RID: 25259 RVA: 0x001F70C0 File Offset: 0x001F52C0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ internal class NewPlayerAdventureV2RoleItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06008F17 RID: 36631 RVA: 0x001EE608 File Offset: 0x001EC808
+	// Token: 0x060062AC RID: 25260 RVA: 0x001F7128 File Offset: 0x001F5328
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(data);
@@ -35,13 +35,13 @@ internal class NewPlayerAdventureV2RoleItem : GridProxyAbstract<int>
 		base.SetTextureShowUntilLoaded(roleConfig.Value.RoleHeadIcon, base.GetTexture(1), null);
 	}
 
-	// Token: 0x06008F18 RID: 36632 RVA: 0x001EE64F File Offset: 0x001EC84F
+	// Token: 0x060062AD RID: 25261 RVA: 0x001F716F File Offset: 0x001F536F
 	public void SelectToggle()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06008F19 RID: 36633 RVA: 0x001EE662 File Offset: 0x001EC862
+	// Token: 0x060062AE RID: 25262 RVA: 0x001F7182 File Offset: 0x001F5382
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<int, UUIExtendToggle> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -52,10 +52,10 @@ internal class NewPlayerAdventureV2RoleItem : GridProxyAbstract<int>
 		onClickToggleCallBack(this.RoleId, base.GetExtendToggle(0));
 	}
 
-	// Token: 0x04003F53 RID: 16211
+	// Token: 0x04003FEB RID: 16363
 	private int RoleId;
 
-	// Token: 0x04003F54 RID: 16212
+	// Token: 0x04003FEC RID: 16364
 	[Nullable(new byte[]
 	{
 		2,

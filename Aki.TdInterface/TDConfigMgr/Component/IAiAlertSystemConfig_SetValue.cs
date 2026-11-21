@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001B2 RID: 434
+	// Token: 0x020001C9 RID: 457
 	public class IAiAlertSystemConfig_SetValue
 	{
-		// Token: 0x04000841 RID: 2113
+		// Token: 0x0400089A RID: 2202
 		public int AreaId;
 
-		// Token: 0x04000842 RID: 2114
+		// Token: 0x0400089B RID: 2203
 		public float? PlayerHatredDeltaValue;
 	}
 }

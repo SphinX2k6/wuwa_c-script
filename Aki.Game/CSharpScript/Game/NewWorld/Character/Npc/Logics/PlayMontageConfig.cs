@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 {
-	// Token: 0x02007095 RID: 28821
+	// Token: 0x020062FA RID: 25338
 	public class PlayMontageConfig
 	{
-		// Token: 0x060463BF RID: 287679 RVA: 0x01192AE4 File Offset: 0x01190CE4
+		// Token: 0x0603D4AA RID: 251050 RVA: 0x011B5BF0 File Offset: 0x011B3DF0
 		public PlayMontageConfig(int times = 0, double duration = 0.0, bool playLoop = false, bool infinite = false)
 		{
 			this.RepeatTimes = times;
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			this.IsInfiniteLoop = (infinite || this.LoopDuration < 0.0 || this.RepeatTimes < 0);
 		}
 
-		// Token: 0x060463C0 RID: 287680 RVA: 0x01192B4C File Offset: 0x01190D4C
+		// Token: 0x0603D4AB RID: 251051 RVA: 0x011B5C58 File Offset: 0x011B3E58
 		public void CalculatePlayTime(double onceTime)
 		{
 			this.OncePlayTime = onceTime;
@@ -32,25 +32,25 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			}
 		}
 
-		// Token: 0x04024CC8 RID: 150728
+		// Token: 0x0402081A RID: 133146
 		private const int SECOND_TO_MILLISECOND = 1000;
 
-		// Token: 0x04024CC9 RID: 150729
+		// Token: 0x0402081B RID: 133147
 		public double PlayMontageTime;
 
-		// Token: 0x04024CCA RID: 150730
+		// Token: 0x0402081C RID: 133148
 		public double OncePlayTime;
 
-		// Token: 0x04024CCB RID: 150731
+		// Token: 0x0402081D RID: 133149
 		public bool IsInfiniteLoop;
 
-		// Token: 0x04024CCC RID: 150732
+		// Token: 0x0402081E RID: 133150
 		public bool IsPlayLoop;
 
-		// Token: 0x04024CCD RID: 150733
+		// Token: 0x0402081F RID: 133151
 		private readonly double LoopDuration;
 
-		// Token: 0x04024CCE RID: 150734
+		// Token: 0x04020820 RID: 133152
 		private readonly int RepeatTimes;
 	}
 }

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200586E RID: 22638
+	// Token: 0x02005E7B RID: 24187
 	public class IRoadNetworkNavigationComponentT
 	{
-		// Token: 0x1700A959 RID: 43353
-		// (get) Token: 0x0602625C RID: 156252 RVA: 0x00542A95 File Offset: 0x00540C95
-		// (set) Token: 0x0602625D RID: 156253 RVA: 0x00542A9D File Offset: 0x00540C9D
+		// Token: 0x1700B289 RID: 45705
+		// (get) Token: 0x060287BE RID: 165822 RVA: 0x005895E1 File Offset: 0x005877E1
+		// (set) Token: 0x060287BF RID: 165823 RVA: 0x005895E9 File Offset: 0x005877E9
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A95A RID: 43354
-		// (get) Token: 0x0602625E RID: 156254 RVA: 0x00542AA6 File Offset: 0x00540CA6
-		// (set) Token: 0x0602625F RID: 156255 RVA: 0x00542AAE File Offset: 0x00540CAE
+		// Token: 0x1700B28A RID: 45706
+		// (get) Token: 0x060287C0 RID: 165824 RVA: 0x005895F2 File Offset: 0x005877F2
+		// (set) Token: 0x060287C1 RID: 165825 RVA: 0x005895FA File Offset: 0x005877FA
 		public bool KeepSelf { get; set; }
 
-		// Token: 0x1700A95B RID: 43355
-		// (get) Token: 0x06026260 RID: 156256 RVA: 0x00542AB7 File Offset: 0x00540CB7
-		// (set) Token: 0x06026261 RID: 156257 RVA: 0x00542ABF File Offset: 0x00540CBF
+		// Token: 0x1700B28B RID: 45707
+		// (get) Token: 0x060287C2 RID: 165826 RVA: 0x00589603 File Offset: 0x00587803
+		// (set) Token: 0x060287C3 RID: 165827 RVA: 0x0058960B File Offset: 0x0058780B
 		public ITrafficNavigationConfigT BasicConfig { get; set; }
 
-		// Token: 0x1700A95C RID: 43356
-		// (get) Token: 0x06026262 RID: 156258 RVA: 0x00542AC8 File Offset: 0x00540CC8
-		// (set) Token: 0x06026263 RID: 156259 RVA: 0x00542AD0 File Offset: 0x00540CD0
+		// Token: 0x1700B28C RID: 45708
+		// (get) Token: 0x060287C4 RID: 165828 RVA: 0x00589614 File Offset: 0x00587814
+		// (set) Token: 0x060287C5 RID: 165829 RVA: 0x0058961C File Offset: 0x0058781C
 		public IObstacleDetectionConfigT ObstacleConfig { get; set; }
 
-		// Token: 0x1700A95D RID: 43357
-		// (get) Token: 0x06026264 RID: 156260 RVA: 0x00542AD9 File Offset: 0x00540CD9
-		// (set) Token: 0x06026265 RID: 156261 RVA: 0x00542AE1 File Offset: 0x00540CE1
+		// Token: 0x1700B28D RID: 45709
+		// (get) Token: 0x060287C6 RID: 165830 RVA: 0x00589625 File Offset: 0x00587825
+		// (set) Token: 0x060287C7 RID: 165831 RVA: 0x0058962D File Offset: 0x0058782D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026266 RID: 156262 RVA: 0x00542AEA File Offset: 0x00540CEA
+		// Token: 0x060287C8 RID: 165832 RVA: 0x00589636 File Offset: 0x00587836
 		public IRoadNetworkNavigationComponentT()
 		{
 			this.Disabled = false;

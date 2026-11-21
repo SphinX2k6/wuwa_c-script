@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200060D RID: 1549
+	// Token: 0x020006AA RID: 1706
 	public class IPointField_SetValue
 	{
-		// Token: 0x0400171E RID: 5918
+		// Token: 0x04001910 RID: 6416
 		public EConveyorBeltFieldType Type;
 	}
 }

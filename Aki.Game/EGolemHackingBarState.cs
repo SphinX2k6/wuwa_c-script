@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000FF7 RID: 4087
+// Token: 0x020004AB RID: 1195
 public enum EGolemHackingBarState
 {
-	// Token: 0x04003017 RID: 12311
+	// Token: 0x040030AE RID: 12462
 	Default,
-	// Token: 0x04003018 RID: 12312
+	// Token: 0x040030AF RID: 12463
 	Success,
-	// Token: 0x04003019 RID: 12313
+	// Token: 0x040030B0 RID: 12464
 	Fail
 }

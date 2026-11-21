@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200240C RID: 9228
+	// Token: 0x020026AB RID: 9899
 	public class ESetReviveTypeJsonConverter : JsonConverter<ESetReviveType>
 	{
-		// Token: 0x0600C8B6 RID: 51382 RVA: 0x001D5E70 File Offset: 0x001D4070
+		// Token: 0x0600D55D RID: 54621 RVA: 0x001EFA6C File Offset: 0x001EDC6C
 		public override ESetReviveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESetReviveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C8B7 RID: 51383 RVA: 0x001D5E94 File Offset: 0x001D4094
+		// Token: 0x0600D55E RID: 54622 RVA: 0x001EFA90 File Offset: 0x001EDC90
 		public override void Write(Utf8JsonWriter writer, ESetReviveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

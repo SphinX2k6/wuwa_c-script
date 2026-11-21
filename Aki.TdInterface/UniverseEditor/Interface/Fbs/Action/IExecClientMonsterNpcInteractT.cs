@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200670F RID: 26383
+	// Token: 0x02006D8F RID: 28047
 	public class IExecClientMonsterNpcInteractT
 	{
-		// Token: 0x1700C3FE RID: 50174
-		// (get) Token: 0x0602DE3D RID: 187965 RVA: 0x0064673B File Offset: 0x0064493B
-		// (set) Token: 0x0602DE3E RID: 187966 RVA: 0x00646743 File Offset: 0x00644943
+		// Token: 0x1700CDB4 RID: 52660
+		// (get) Token: 0x06030683 RID: 198275 RVA: 0x00693E7F File Offset: 0x0069207F
+		// (set) Token: 0x06030684 RID: 198276 RVA: 0x00693E87 File Offset: 0x00692087
 		public int MonsterNpcEntityId { get; set; }
 
-		// Token: 0x1700C3FF RID: 50175
-		// (get) Token: 0x0602DE3F RID: 187967 RVA: 0x0064674C File Offset: 0x0064494C
-		// (set) Token: 0x0602DE40 RID: 187968 RVA: 0x00646754 File Offset: 0x00644954
+		// Token: 0x1700CDB5 RID: 52661
+		// (get) Token: 0x06030685 RID: 198277 RVA: 0x00693E90 File Offset: 0x00692090
+		// (set) Token: 0x06030686 RID: 198278 RVA: 0x00693E98 File Offset: 0x00692098
 		public IMonsterNpcInteractTriggerHookT Config { get; set; }
 
-		// Token: 0x0602DE41 RID: 187969 RVA: 0x0064675D File Offset: 0x0064495D
+		// Token: 0x06030687 RID: 198279 RVA: 0x00693EA1 File Offset: 0x006920A1
 		public IExecClientMonsterNpcInteractT()
 		{
 			this.MonsterNpcEntityId = 0;

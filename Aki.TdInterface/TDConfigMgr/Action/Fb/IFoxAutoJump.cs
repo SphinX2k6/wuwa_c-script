@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002809 RID: 10249
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002ADC RID: 10972
 	public class IFoxAutoJump : ILeisureInteractType
 	{
-		// Token: 0x0600E371 RID: 58225 RVA: 0x002185EA File Offset: 0x002167EA
+		// Token: 0x0600F196 RID: 61846 RVA: 0x0023544E File Offset: 0x0023364E
 		public static IFoxAutoJump Create(IFoxAutoJump? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004521 RID: 17697
-		// (get) Token: 0x0600E372 RID: 58226 RVA: 0x00218609 File Offset: 0x00216809
+		// Token: 0x1700488C RID: 18572
+		// (get) Token: 0x0600F197 RID: 61847 RVA: 0x0023546D File Offset: 0x0023366D
 		public override ELeisureInteract Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004522 RID: 17698
-		// (get) Token: 0x0600E373 RID: 58227 RVA: 0x00218616 File Offset: 0x00216816
+		// Token: 0x1700488D RID: 18573
+		// (get) Token: 0x0600F198 RID: 61848 RVA: 0x0023547A File Offset: 0x0023367A
 		public virtual VectorInfo LandPosition
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DED RID: 32237
+		// Token: 0x040084AA RID: 33962
 		private IFoxAutoJump Instance;
 
-		// Token: 0x04007DEE RID: 32238
+		// Token: 0x040084AB RID: 33963
 		[Nullable(2)]
 		private VectorInfo _LandPositionCache;
 
-		// Token: 0x04007DEF RID: 32239
+		// Token: 0x040084AC RID: 33964
 		private bool _LandPositionInited;
 	}
 }

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045CA RID: 17866
+	// Token: 0x020034F2 RID: 13554
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EffectParametersBase
 	{
-		// Token: 0x0602E0F7 RID: 188663 RVA: 0x00A9E1B7 File Offset: 0x00A9C3B7
+		// Token: 0x060227E2 RID: 141282 RVA: 0x009CA47F File Offset: 0x009C867F
 		public virtual void CollectFloatCurve(FName name, FKuroCurveFloat value)
 		{
 			this.HasCurveParameters = true;
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Render
 			this.CollectFloatConst(name, value.Constant);
 		}
 
-		// Token: 0x0602E0F8 RID: 188664 RVA: 0x00A9E1E3 File Offset: 0x00A9C3E3
+		// Token: 0x060227E3 RID: 141283 RVA: 0x009CA4AB File Offset: 0x009C86AB
 		public virtual void CollectFloatConst(FName name, float value)
 		{
 			this.FloatConstMap[name] = value;
 		}
 
-		// Token: 0x0602E0F9 RID: 188665 RVA: 0x00A9E1F2 File Offset: 0x00A9C3F2
+		// Token: 0x060227E4 RID: 141284 RVA: 0x009CA4BA File Offset: 0x009C86BA
 		public virtual void CollectLinearColorCurve(FName name, FKuroCurveLinearColor value)
 		{
 			this.HasCurveParameters = true;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Render
 			this.CollectLinearColorConst(name, value.Constant);
 		}
 
-		// Token: 0x0602E0FA RID: 188666 RVA: 0x00A9E21E File Offset: 0x00A9C41E
+		// Token: 0x060227E5 RID: 141285 RVA: 0x009CA4E6 File Offset: 0x009C86E6
 		public virtual void CollectLinearColorConst(FName name, FLinearColor value)
 		{
 			this.LinearColorConstMap[name] = value;
 		}
 
-		// Token: 0x0602E0FB RID: 188667 RVA: 0x00A9E22D File Offset: 0x00A9C42D
+		// Token: 0x060227E6 RID: 141286 RVA: 0x009CA4F5 File Offset: 0x009C86F5
 		public virtual void CollectVectorCurve(FName name, FKuroCurveVector value)
 		{
 			this.HasCurveParameters = true;
@@ -58,34 +58,34 @@ namespace CSharpScript.Game.Render
 			this.CollectVectorConst(name, value.Constant);
 		}
 
-		// Token: 0x0602E0FC RID: 188668 RVA: 0x00A9E259 File Offset: 0x00A9C459
+		// Token: 0x060227E7 RID: 141287 RVA: 0x009CA521 File Offset: 0x009C8721
 		public virtual void CollectVectorConst(FName name, FVector value)
 		{
 			this.VectorConstMap[name] = value;
 		}
 
-		// Token: 0x0602E0FD RID: 188669 RVA: 0x00A9E268 File Offset: 0x00A9C468
+		// Token: 0x060227E8 RID: 141288 RVA: 0x009CA530 File Offset: 0x009C8730
 		public virtual void RemoveFloatCurveOrConst(FName name)
 		{
 			this.FloatCurveMap.Remove(name);
 			this.FloatConstMap.Remove(name);
 		}
 
-		// Token: 0x0602E0FE RID: 188670 RVA: 0x00A9E284 File Offset: 0x00A9C484
+		// Token: 0x060227E9 RID: 141289 RVA: 0x009CA54C File Offset: 0x009C874C
 		public virtual void RemoveLinearColorCurveOrConst(FName name)
 		{
 			this.LinearColorCurveMap.Remove(name);
 			this.LinearColorConstMap.Remove(name);
 		}
 
-		// Token: 0x0602E0FF RID: 188671 RVA: 0x00A9E2A0 File Offset: 0x00A9C4A0
+		// Token: 0x060227EA RID: 141290 RVA: 0x009CA568 File Offset: 0x009C8768
 		public virtual void RemoveVectorCurveOrConst(FName name)
 		{
 			this.VectorCurveMap.Remove(name);
 			this.VectorConstMap.Remove(name);
 		}
 
-		// Token: 0x0602E100 RID: 188672 RVA: 0x00A9E2BC File Offset: 0x00A9C4BC
+		// Token: 0x060227EB RID: 141291 RVA: 0x009CA584 File Offset: 0x009C8784
 		[NullableContext(2)]
 		public virtual void Apply(UObject target, float time, bool forceApply)
 		{
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E101 RID: 188673 RVA: 0x00A9E2EC File Offset: 0x00A9C4EC
+		// Token: 0x060227EC RID: 141292 RVA: 0x009CA5B4 File Offset: 0x009C87B4
 		[NullableContext(2)]
 		protected void ApplyNiagara(UNiagaraComponent NiagaraComponent, float Time, bool bForceApply)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E102 RID: 188674 RVA: 0x00A9E56C File Offset: 0x00A9C76C
+		// Token: 0x060227ED RID: 141293 RVA: 0x009CA834 File Offset: 0x009C8A34
 		[NullableContext(2)]
 		protected void ApplyMaterial(UMaterialInstanceDynamic MaterialInstanceDynamic, float Time, bool bForceApply)
 		{
@@ -193,25 +193,25 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018ACE RID: 101070
+		// Token: 0x04013109 RID: 78089
 		protected Dictionary<FName, FKuroCurveFloat> FloatCurveMap = new Dictionary<FName, FKuroCurveFloat>();
 
-		// Token: 0x04018ACF RID: 101071
+		// Token: 0x0401310A RID: 78090
 		protected Dictionary<FName, FKuroCurveLinearColor> LinearColorCurveMap = new Dictionary<FName, FKuroCurveLinearColor>();
 
-		// Token: 0x04018AD0 RID: 101072
+		// Token: 0x0401310B RID: 78091
 		protected Dictionary<FName, FKuroCurveVector> VectorCurveMap = new Dictionary<FName, FKuroCurveVector>();
 
-		// Token: 0x04018AD1 RID: 101073
+		// Token: 0x0401310C RID: 78092
 		protected Dictionary<FName, float> FloatConstMap = new Dictionary<FName, float>();
 
-		// Token: 0x04018AD2 RID: 101074
+		// Token: 0x0401310D RID: 78093
 		protected Dictionary<FName, FLinearColor> LinearColorConstMap = new Dictionary<FName, FLinearColor>();
 
-		// Token: 0x04018AD3 RID: 101075
+		// Token: 0x0401310E RID: 78094
 		protected Dictionary<FName, FVector> VectorConstMap = new Dictionary<FName, FVector>();
 
-		// Token: 0x04018AD4 RID: 101076
+		// Token: 0x0401310F RID: 78095
 		protected bool HasCurveParameters;
 	}
 }

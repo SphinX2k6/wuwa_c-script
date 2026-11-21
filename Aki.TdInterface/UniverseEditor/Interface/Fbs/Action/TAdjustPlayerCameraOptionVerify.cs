@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200763D RID: 30269
+	// Token: 0x02007E4B RID: 32331
 	public static class TAdjustPlayerCameraOptionVerify
 	{
-		// Token: 0x06037207 RID: 225799 RVA: 0x00779AAC File Offset: 0x00777CAC
+		// Token: 0x0603A6AC RID: 239276 RVA: 0x007DDBA8 File Offset: 0x007DBDA8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

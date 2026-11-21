@@ -3,25 +3,25 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x0200579A RID: 22426
+	// Token: 0x02004771 RID: 18289
 	public class KurotatoEnemyDetailBookBigItemDataWave : KurotatoEnemyDetailBookBigItemData
 	{
-		// Token: 0x17008885 RID: 34949
-		// (get) Token: 0x06038F95 RID: 233365 RVA: 0x00D8B548 File Offset: 0x00D89748
-		// (set) Token: 0x06038F96 RID: 233366 RVA: 0x00D8B550 File Offset: 0x00D89750
+		// Token: 0x17005C4D RID: 23629
+		// (get) Token: 0x0602DEA5 RID: 188069 RVA: 0x00CDA2C4 File Offset: 0x00CD84C4
+		// (set) Token: 0x0602DEA6 RID: 188070 RVA: 0x00CDA2CC File Offset: 0x00CD84CC
 		public int ThisWave { get; set; }
 
-		// Token: 0x17008886 RID: 34950
-		// (get) Token: 0x06038F97 RID: 233367 RVA: 0x00D8B559 File Offset: 0x00D89759
-		// (set) Token: 0x06038F98 RID: 233368 RVA: 0x00D8B561 File Offset: 0x00D89761
+		// Token: 0x17005C4E RID: 23630
+		// (get) Token: 0x0602DEA7 RID: 188071 RVA: 0x00CDA2D5 File Offset: 0x00CD84D5
+		// (set) Token: 0x0602DEA8 RID: 188072 RVA: 0x00CDA2DD File Offset: 0x00CD84DD
 		public EKurotatoWaveStatus WaveStatus { get; set; } = EKurotatoWaveStatus.NotCompleted;
 
-		// Token: 0x17008887 RID: 34951
-		// (get) Token: 0x06038F99 RID: 233369 RVA: 0x00D8B56A File Offset: 0x00D8976A
-		// (set) Token: 0x06038F9A RID: 233370 RVA: 0x00D8B572 File Offset: 0x00D89772
+		// Token: 0x17005C4F RID: 23631
+		// (get) Token: 0x0602DEA9 RID: 188073 RVA: 0x00CDA2E6 File Offset: 0x00CD84E6
+		// (set) Token: 0x0602DEAA RID: 188074 RVA: 0x00CDA2EE File Offset: 0x00CD84EE
 		public bool IsHighDiff { get; set; }
 
-		// Token: 0x06038F9B RID: 233371 RVA: 0x00D8B57C File Offset: 0x00D8977C
+		// Token: 0x0602DEAB RID: 188075 RVA: 0x00CDA2F8 File Offset: 0x00CD84F8
 		public KurotatoEnemyDetailBookBigItemDataWave(int targetLevel, int thisWave, int curWave = 0)
 		{
 			base.TabAllOrWave = EKurotatoEnemyDetailBookTabAllOrWave.Wave;

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F4A RID: 12106
+// Token: 0x0200249D RID: 9373
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyBuffDurationOrPeriod : BuffEffect
 {
-	// Token: 0x06019C57 RID: 105559 RVA: 0x006B7DA1 File Offset: 0x006B5FA1
+	// Token: 0x06017562 RID: 95586 RVA: 0x006DE0BD File Offset: 0x006DC2BD
 	public ModifyBuffDurationOrPeriod(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C58 RID: 105560 RVA: 0x006B7DC8 File Offset: 0x006B5FC8
+	// Token: 0x06017563 RID: 95587 RVA: 0x006DE0E4 File Offset: 0x006DC2E4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -30,7 +30,7 @@ public class ModifyBuffDurationOrPeriod : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C59 RID: 105561 RVA: 0x006B7E58 File Offset: 0x006B6058
+	// Token: 0x06017564 RID: 95588 RVA: 0x006DE174 File Offset: 0x006DC374
 	public override void OnCreated()
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -51,14 +51,14 @@ public class ModifyBuffDurationOrPeriod : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C5A RID: 105562 RVA: 0x006B7F58 File Offset: 0x006B6158
+	// Token: 0x06017565 RID: 95589 RVA: 0x006DE274 File Offset: 0x006DC474
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C5B RID: 105563 RVA: 0x006B7F5C File Offset: 0x006B615C
+	// Token: 0x06017566 RID: 95590 RVA: 0x006DE278 File Offset: 0x006DC478
 	public override void OnRemoved(bool bPremature)
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -78,7 +78,7 @@ public class ModifyBuffDurationOrPeriod : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C5C RID: 105564 RVA: 0x006B802C File Offset: 0x006B622C
+	// Token: 0x06017567 RID: 95591 RVA: 0x006DE348 File Offset: 0x006DC548
 	private void OnChangeTeam()
 	{
 		foreach (int id in BaseBuffComponent.GetNewOrRemoveTeamEntityIds(this.TeamEntityIds, true))
@@ -144,7 +144,7 @@ public class ModifyBuffDurationOrPeriod : BuffEffect
 		this.TeamEntityIds = BaseBuffComponent.GetCurrentEntityIds();
 	}
 
-	// Token: 0x06019C5D RID: 105565 RVA: 0x006B81B4 File Offset: 0x006B63B4
+	// Token: 0x06017568 RID: 95592 RVA: 0x006DE4D0 File Offset: 0x006DC6D0
 	public override string GetDebugEffectString()
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -163,15 +163,15 @@ public class ModifyBuffDurationOrPeriod : BuffEffect
 		return str2 + defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C241 RID: 49729
+	// Token: 0x0400C5E3 RID: 50659
 	protected long[] InvolvedBuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C242 RID: 49730
+	// Token: 0x0400C5E4 RID: 50660
 	protected float DurationRate;
 
-	// Token: 0x0400C243 RID: 49731
+	// Token: 0x0400C5E5 RID: 50661
 	protected float PeriodRate;
 
-	// Token: 0x0400C244 RID: 49732
+	// Token: 0x0400C5E6 RID: 50662
 	private List<int> TeamEntityIds = new List<int>();
 }

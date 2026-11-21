@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200463F RID: 17983
+	// Token: 0x02003570 RID: 13680
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class UiViewBase : UiPanelBase
 	{
-		// Token: 0x0602E60A RID: 189962 RVA: 0x00AB804C File Offset: 0x00AB624C
+		// Token: 0x06022D54 RID: 142676 RVA: 0x009E568C File Offset: 0x009E388C
 		protected UiViewBase(UiViewInfo viewInfo)
 		{
 			this.ViewInfo = viewInfo;
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Ui
 			this.MemoryTag = UiConfig.Instance.GetMemoryTag(viewInfo.Name);
 		}
 
-		// Token: 0x170075FA RID: 30202
-		// (get) Token: 0x0602E60B RID: 189963 RVA: 0x00AB80CA File Offset: 0x00AB62CA
+		// Token: 0x170048B6 RID: 18614
+		// (get) Token: 0x06022D55 RID: 142677 RVA: 0x009E570A File Offset: 0x009E390A
 		public bool IsQueueView
 		{
 			get
@@ -31,63 +31,63 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E60C RID: 189964 RVA: 0x00AB80DD File Offset: 0x00AB62DD
+		// Token: 0x06022D56 RID: 142678 RVA: 0x009E571D File Offset: 0x009E391D
 		[NullableContext(2)]
 		public override CustomPromise GetClosePromiseImplement()
 		{
 			return this.ClosePromise;
 		}
 
-		// Token: 0x0602E60D RID: 189965 RVA: 0x00AB80E5 File Offset: 0x00AB62E5
+		// Token: 0x06022D57 RID: 142679 RVA: 0x009E5725 File Offset: 0x009E3925
 		protected virtual void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x0602E60E RID: 189966 RVA: 0x00AB80E7 File Offset: 0x00AB62E7
+		// Token: 0x06022D58 RID: 142680 RVA: 0x009E5727 File Offset: 0x009E3927
 		protected virtual void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x0602E60F RID: 189967 RVA: 0x00AB80E9 File Offset: 0x00AB62E9
+		// Token: 0x06022D59 RID: 142681 RVA: 0x009E5729 File Offset: 0x009E3929
 		protected virtual UniTask OnPlayingStartSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E610 RID: 189968 RVA: 0x00AB80F0 File Offset: 0x00AB62F0
+		// Token: 0x06022D5A RID: 142682 RVA: 0x009E5730 File Offset: 0x009E3930
 		protected virtual void OnAfterPlayStartSequence()
 		{
 		}
 
-		// Token: 0x0602E611 RID: 189969 RVA: 0x00AB80F2 File Offset: 0x00AB62F2
+		// Token: 0x06022D5B RID: 142683 RVA: 0x009E5732 File Offset: 0x009E3932
 		protected virtual void OnBeforePlayCloseSequence()
 		{
 		}
 
-		// Token: 0x0602E612 RID: 189970 RVA: 0x00AB80F4 File Offset: 0x00AB62F4
+		// Token: 0x06022D5C RID: 142684 RVA: 0x009E5734 File Offset: 0x009E3934
 		protected virtual UniTask OnPlayingCloseSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E613 RID: 189971 RVA: 0x00AB80FB File Offset: 0x00AB62FB
+		// Token: 0x06022D5D RID: 142685 RVA: 0x009E573B File Offset: 0x009E393B
 		protected virtual UniTask OnPlayingHideSequenceAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E614 RID: 189972 RVA: 0x00AB8102 File Offset: 0x00AB6302
+		// Token: 0x06022D5E RID: 142686 RVA: 0x009E5742 File Offset: 0x009E3942
 		protected virtual bool OnCheckIfNeedScene()
 		{
 			return true;
 		}
 
-		// Token: 0x0602E615 RID: 189973 RVA: 0x00AB8105 File Offset: 0x00AB6305
+		// Token: 0x06022D5F RID: 142687 RVA: 0x009E5745 File Offset: 0x009E3945
 		protected virtual void OnHandleLoadScene()
 		{
 		}
 
-		// Token: 0x0602E616 RID: 189974 RVA: 0x00AB8108 File Offset: 0x00AB6308
+		// Token: 0x06022D60 RID: 142688 RVA: 0x009E5748 File Offset: 0x009E3948
 		protected virtual UniTask HandlePostLoadSceneAsync(bool isSceneLoad)
 		{
 			UiViewBase.<HandlePostLoadSceneAsync>d__34 <HandlePostLoadSceneAsync>d__;
@@ -99,23 +99,23 @@ namespace CSharpScript.Game.Ui
 			return <HandlePostLoadSceneAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E617 RID: 189975 RVA: 0x00AB8153 File Offset: 0x00AB6353
+		// Token: 0x06022D61 RID: 142689 RVA: 0x009E5793 File Offset: 0x009E3993
 		protected virtual UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E618 RID: 189976 RVA: 0x00AB815A File Offset: 0x00AB635A
+		// Token: 0x06022D62 RID: 142690 RVA: 0x009E579A File Offset: 0x009E399A
 		protected virtual void OnHandlePostLoadScene(bool isSceneLoad)
 		{
 		}
 
-		// Token: 0x0602E619 RID: 189977 RVA: 0x00AB815C File Offset: 0x00AB635C
+		// Token: 0x06022D63 RID: 142691 RVA: 0x009E579C File Offset: 0x009E399C
 		protected virtual void OnHandleReleaseScene()
 		{
 		}
 
-		// Token: 0x0602E61A RID: 189978 RVA: 0x00AB8160 File Offset: 0x00AB6360
+		// Token: 0x06022D64 RID: 142692 RVA: 0x009E57A0 File Offset: 0x009E39A0
 		protected UniTask HandlePreReleaseSceneAsync(bool isSceneRelease)
 		{
 			UiViewBase.<HandlePreReleaseSceneAsync>d__38 <HandlePreReleaseSceneAsync>d__;
@@ -127,13 +127,13 @@ namespace CSharpScript.Game.Ui
 			return <HandlePreReleaseSceneAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E61B RID: 189979 RVA: 0x00AB81AB File Offset: 0x00AB63AB
+		// Token: 0x06022D65 RID: 142693 RVA: 0x009E57EB File Offset: 0x009E39EB
 		protected virtual UniTask OnHandlePreReleaseSceneAsync(bool isSceneRelease)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E61C RID: 189980 RVA: 0x00AB81B2 File Offset: 0x00AB63B2
+		// Token: 0x06022D66 RID: 142694 RVA: 0x009E57F2 File Offset: 0x009E39F2
 		public virtual void CloseSelf()
 		{
 			this.CloseMeAsync().ContinueWith(delegate(bool result)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E61D RID: 189981 RVA: 0x00AB81CC File Offset: 0x00AB63CC
+		// Token: 0x06022D67 RID: 142695 RVA: 0x009E580C File Offset: 0x009E3A0C
 		[NullableContext(2)]
 		public void CloseMe(Action<bool> callback = null)
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E61E RID: 189982 RVA: 0x00AB8208 File Offset: 0x00AB6408
+		// Token: 0x06022D68 RID: 142696 RVA: 0x009E5848 File Offset: 0x009E3A48
 		[NullableContext(0)]
 		public override UniTask<bool> CloseMeAsync()
 		{
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Ui
 			return <CloseMeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E61F RID: 189983 RVA: 0x00AB824B File Offset: 0x00AB644B
+		// Token: 0x06022D69 RID: 142697 RVA: 0x009E588B File Offset: 0x009E3A8B
 		public int GetViewId()
 		{
 			return this.ComponentId;
 		}
 
-		// Token: 0x0602E620 RID: 189984 RVA: 0x00AB8254 File Offset: 0x00AB6454
+		// Token: 0x06022D6A RID: 142698 RVA: 0x009E5894 File Offset: 0x009E3A94
 		protected void PlaySequence(string sequenceName, [Nullable(2)] Action onStop = null, bool blockClick = false)
 		{
 			this.PlaySequenceAsync(sequenceName, blockClick, false, null).ContinueWith(delegate()
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E621 RID: 189985 RVA: 0x00AB8294 File Offset: 0x00AB6494
+		// Token: 0x06022D6B RID: 142699 RVA: 0x009E58D4 File Offset: 0x009E3AD4
 		protected UniTask PlaySequenceAsync(string sequenceName, bool blockClick = false, bool playReverse = false, float? playRate = null)
 		{
 			UiViewBase.<PlaySequenceAsync>d__45 <PlaySequenceAsync>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Ui
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E622 RID: 189986 RVA: 0x00AB82F8 File Offset: 0x00AB64F8
+		// Token: 0x06022D6C RID: 142700 RVA: 0x009E5938 File Offset: 0x009E3B38
 		protected void PlayOrReplaySequence(string sequenceName, bool blockClick = false, int? playRate = null)
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -240,14 +240,14 @@ namespace CSharpScript.Game.Ui
 			uiViewSequence.PlayOrReplaySequenceByName(sequenceName, blockClick, (num != null) ? new float?((float)num.GetValueOrDefault()) : null);
 		}
 
-		// Token: 0x0602E623 RID: 189987 RVA: 0x00AB8335 File Offset: 0x00AB6535
+		// Token: 0x06022D6D RID: 142701 RVA: 0x009E5975 File Offset: 0x009E3B75
 		[NullableContext(2)]
 		protected void SetAudioEvent(string audioEvent)
 		{
 			this.AudioEvent = audioEvent;
 		}
 
-		// Token: 0x0602E624 RID: 189988 RVA: 0x00AB833E File Offset: 0x00AB653E
+		// Token: 0x06022D6E RID: 142702 RVA: 0x009E597E File Offset: 0x009E3B7E
 		protected virtual void RegisterUiBehavior()
 		{
 			this.InitUiViewSequenceBehavior();
@@ -256,13 +256,13 @@ namespace CSharpScript.Game.Ui
 			this.RegisterUiBehaviorHomeBtn();
 		}
 
-		// Token: 0x0602E625 RID: 189989 RVA: 0x00AB8358 File Offset: 0x00AB6558
+		// Token: 0x06022D6F RID: 142703 RVA: 0x009E5998 File Offset: 0x009E3B98
 		private void PlayViewSequence(string sequenceName, [Nullable(2)] Action onStop = null)
 		{
 			this.PlaySequence(sequenceName, onStop, (this.ViewInfo.Type & (ELayerType.Normal | ELayerType.Plot | ELayerType.Pop)) > (ELayerType)0);
 		}
 
-		// Token: 0x0602E626 RID: 189990 RVA: 0x00AB8374 File Offset: 0x00AB6574
+		// Token: 0x06022D70 RID: 142704 RVA: 0x009E59B4 File Offset: 0x009E3BB4
 		private UniTask PlayViewSequenceAsync(string sequenceName)
 		{
 			UiViewBase.<PlayViewSequenceAsync>d__50 <PlayViewSequenceAsync>d__;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Ui
 			return <PlayViewSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E627 RID: 189991 RVA: 0x00AB83BF File Offset: 0x00AB65BF
+		// Token: 0x06022D71 RID: 142705 RVA: 0x009E59FF File Offset: 0x009E3BFF
 		public void PauseCurrentSequence()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Ui
 			uiViewSequence.PauseSequence();
 		}
 
-		// Token: 0x0602E628 RID: 189992 RVA: 0x00AB83D1 File Offset: 0x00AB65D1
+		// Token: 0x06022D72 RID: 142706 RVA: 0x009E5A11 File Offset: 0x009E3C11
 		public void ResumeCurrentSequence()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Ui
 			uiViewSequence.ResumeSequence();
 		}
 
-		// Token: 0x0602E629 RID: 189993 RVA: 0x00AB83E3 File Offset: 0x00AB65E3
+		// Token: 0x06022D73 RID: 142707 RVA: 0x009E5A23 File Offset: 0x009E3C23
 		private void InitUiViewSequenceBehavior()
 		{
 			this.UiViewSequence = new UiBehaviorLevelSequence(this);
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Ui
 			base.AddUiBehavior(this.UiViewSequence);
 		}
 
-		// Token: 0x0602E62A RID: 189994 RVA: 0x00AB8414 File Offset: 0x00AB6614
+		// Token: 0x06022D74 RID: 142708 RVA: 0x009E5A54 File Offset: 0x009E3C54
 		private void RegisterUiBlur()
 		{
 			UiBehaviourUiBlur uiBehaviourUiBlur = new UiBehaviourUiBlur();
@@ -314,14 +314,13 @@ namespace CSharpScript.Game.Ui
 			base.AddUiBehavior(uiBehaviourUiBlur);
 		}
 
-		// Token: 0x0602E62B RID: 189995 RVA: 0x00AB8450 File Offset: 0x00AB6650
+		// Token: 0x06022D75 RID: 142709 RVA: 0x009E5A8D File Offset: 0x009E3C8D
 		private void RegisterUiAudio()
 		{
-			UiBehaviorAudio behavior = new UiBehaviorAudio(this);
-			base.AddUiBehavior(behavior);
+			base.AddUiBehavior(new UiBehaviorAudio(this));
 		}
 
-		// Token: 0x0602E62C RID: 189996 RVA: 0x00AB846C File Offset: 0x00AB666C
+		// Token: 0x06022D76 RID: 142710 RVA: 0x009E5A9C File Offset: 0x009E3C9C
 		private void RegisterUiBehaviorHomeBtn()
 		{
 			UiBehaviourHomeBtn uiBehaviourHomeBtn = new UiBehaviourHomeBtn();
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Ui
 			base.AddUiBehavior(uiBehaviourHomeBtn);
 		}
 
-		// Token: 0x0602E62D RID: 189997 RVA: 0x00AB8494 File Offset: 0x00AB6694
+		// Token: 0x06022D77 RID: 142711 RVA: 0x009E5AC4 File Offset: 0x009E3CC4
 		[NullableContext(2)]
 		public UUIViewAudioEffectComponent GetUiAudioComponent()
 		{
@@ -342,13 +341,13 @@ namespace CSharpScript.Game.Ui
 			return aactor.GetComponentByClass(UUIViewAudioEffectComponent.StaticClass()) as UUIViewAudioEffectComponent;
 		}
 
-		// Token: 0x0602E62E RID: 189998 RVA: 0x00AB84DF File Offset: 0x00AB66DF
-		public string GetLoopAudioEvent()
+		// Token: 0x06022D78 RID: 142712 RVA: 0x009E5B0F File Offset: 0x009E3D0F
+		public string GetBgm()
 		{
-			return this.OnGetLoopAudioEvent();
+			return this.OnGetBgm();
 		}
 
-		// Token: 0x0602E62F RID: 189999 RVA: 0x00AB84E7 File Offset: 0x00AB66E7
+		// Token: 0x06022D79 RID: 142713 RVA: 0x009E5B17 File Offset: 0x009E3D17
 		public void RefreshUiBlurBehaviour()
 		{
 			UiBehaviourUiBlur uiBlurBehaviour = this.UiBlurBehaviour;
@@ -359,25 +358,25 @@ namespace CSharpScript.Game.Ui
 			uiBlurBehaviour.RefreshBlur();
 		}
 
-		// Token: 0x0602E630 RID: 190000 RVA: 0x00AB84F9 File Offset: 0x00AB66F9
+		// Token: 0x06022D7A RID: 142714 RVA: 0x009E5B29 File Offset: 0x009E3D29
 		public UUIItem GetBlurRootItem()
 		{
 			return this.OnGetBlurRootItem();
 		}
 
-		// Token: 0x0602E631 RID: 190001 RVA: 0x00AB8501 File Offset: 0x00AB6701
+		// Token: 0x06022D7B RID: 142715 RVA: 0x009E5B31 File Offset: 0x009E3D31
 		protected virtual UUIItem OnGetBlurRootItem()
 		{
 			return this.RootItem;
 		}
 
-		// Token: 0x0602E632 RID: 190002 RVA: 0x00AB8509 File Offset: 0x00AB6709
-		public virtual bool GetLoopAudioEventSwitch()
+		// Token: 0x06022D7C RID: 142716 RVA: 0x009E5B39 File Offset: 0x009E3D39
+		public virtual bool GetBgmSwitch()
 		{
 			return true;
 		}
 
-		// Token: 0x0602E633 RID: 190003 RVA: 0x00AB850C File Offset: 0x00AB670C
+		// Token: 0x06022D7D RID: 142717 RVA: 0x009E5B3C File Offset: 0x009E3D3C
 		[NullableContext(2)]
 		private UUIItem GetLayerRoot()
 		{
@@ -405,26 +404,26 @@ namespace CSharpScript.Game.Ui
 			return UiLayer.Instance.GetLayerRootUiItem(layer);
 		}
 
-		// Token: 0x0602E634 RID: 190004 RVA: 0x00AB85D0 File Offset: 0x00AB67D0
+		// Token: 0x06022D7E RID: 142718 RVA: 0x009E5C00 File Offset: 0x009E3E00
 		public void InitRootActorLoadInfo()
 		{
 			UiViewInfo viewInfo = this.ViewInfo;
 			base.SetRootActorLoadInfoByPath(viewInfo.UiPath, this.GetLayerRoot(), viewInfo.SourceType == ESourceType.UiActorPool, viewInfo.IsPermanent);
 		}
 
-		// Token: 0x0602E635 RID: 190005 RVA: 0x00AB8605 File Offset: 0x00AB6805
+		// Token: 0x06022D7F RID: 142719 RVA: 0x009E5C35 File Offset: 0x009E3E35
 		protected virtual void OnBeforeCreateImplementImplement()
 		{
 		}
 
-		// Token: 0x0602E636 RID: 190006 RVA: 0x00AB8607 File Offset: 0x00AB6807
+		// Token: 0x06022D80 RID: 142720 RVA: 0x009E5C37 File Offset: 0x009E3E37
 		protected override void OnBeforeCreateImplement()
 		{
 			this.RegisterUiBehavior();
 			this.OnBeforeCreateImplementImplement();
 		}
 
-		// Token: 0x0602E637 RID: 190007 RVA: 0x00AB8618 File Offset: 0x00AB6818
+		// Token: 0x06022D81 RID: 142721 RVA: 0x009E5C48 File Offset: 0x009E3E48
 		protected override void OnAfterCreateImplement()
 		{
 			if (this.IsExistInLeaveLevel || UiManager.Instance.IsLockOpen)
@@ -434,7 +433,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E638 RID: 190008 RVA: 0x00AB865C File Offset: 0x00AB685C
+		// Token: 0x06022D82 RID: 142722 RVA: 0x009E5C8C File Offset: 0x009E3E8C
 		private void SetViewPermanent()
 		{
 			Log instance = Log.Instance;
@@ -452,7 +451,7 @@ namespace CSharpScript.Game.Ui
 			childPopView.SetViewPermanent();
 		}
 
-		// Token: 0x0602E639 RID: 190009 RVA: 0x00AB86C4 File Offset: 0x00AB68C4
+		// Token: 0x06022D83 RID: 142723 RVA: 0x009E5CF4 File Offset: 0x009E3EF4
 		protected override UniTask OnCreateAsyncImplementImplement()
 		{
 			UiViewBase.<OnCreateAsyncImplementImplement>d__69 <OnCreateAsyncImplementImplement>d__;
@@ -462,12 +461,12 @@ namespace CSharpScript.Game.Ui
 			return <OnCreateAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E63A RID: 190010 RVA: 0x00AB86FF File Offset: 0x00AB68FF
+		// Token: 0x06022D84 RID: 142724 RVA: 0x009E5D2F File Offset: 0x009E3F2F
 		protected virtual void OnStartImplementImplement()
 		{
 		}
 
-		// Token: 0x0602E63B RID: 190011 RVA: 0x00AB8704 File Offset: 0x00AB6904
+		// Token: 0x06022D85 RID: 142725 RVA: 0x009E5D34 File Offset: 0x009E3F34
 		protected override void OnStartImplement()
 		{
 			this.SetAudioEvent(this.ViewInfo.AudioEvent);
@@ -490,12 +489,12 @@ namespace CSharpScript.Game.Ui
 			this.OnStartImplementImplement();
 		}
 
-		// Token: 0x0602E63C RID: 190012 RVA: 0x00AB87C0 File Offset: 0x00AB69C0
+		// Token: 0x06022D86 RID: 142726 RVA: 0x009E5DF0 File Offset: 0x009E3FF0
 		protected virtual void OnBeforeShowImplementImplement()
 		{
 		}
 
-		// Token: 0x0602E63D RID: 190013 RVA: 0x00AB87C4 File Offset: 0x00AB69C4
+		// Token: 0x06022D87 RID: 142727 RVA: 0x009E5DF4 File Offset: 0x009E3FF4
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			UiViewBase.<OnBeforeShowAsyncImplement>d__73 <OnBeforeShowAsyncImplement>d__;
@@ -506,13 +505,13 @@ namespace CSharpScript.Game.Ui
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E63E RID: 190014 RVA: 0x00AB8807 File Offset: 0x00AB6A07
+		// Token: 0x06022D88 RID: 142728 RVA: 0x009E5E37 File Offset: 0x009E4037
 		protected virtual UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E63F RID: 190015 RVA: 0x00AB8810 File Offset: 0x00AB6A10
+		// Token: 0x06022D89 RID: 142729 RVA: 0x009E5E40 File Offset: 0x009E4040
 		private UniTask OnBeforeShowAsync()
 		{
 			UiViewBase.<OnBeforeShowAsync>d__75 <OnBeforeShowAsync>d__;
@@ -523,7 +522,7 @@ namespace CSharpScript.Game.Ui
 			return <OnBeforeShowAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E640 RID: 190016 RVA: 0x00AB8853 File Offset: 0x00AB6A53
+		// Token: 0x06022D8A RID: 142730 RVA: 0x009E5E83 File Offset: 0x009E4083
 		protected override void OnBeforeShowImplement()
 		{
 			this.OnAddEventListener();
@@ -531,7 +530,7 @@ namespace CSharpScript.Game.Ui
 			this.ApplyPerformanceLimit();
 		}
 
-		// Token: 0x0602E641 RID: 190017 RVA: 0x00AB8868 File Offset: 0x00AB6A68
+		// Token: 0x06022D8B RID: 142731 RVA: 0x009E5E98 File Offset: 0x009E4098
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			UiViewBase.<OnShowAsyncImplementImplement>d__77 <OnShowAsyncImplementImplement>d__;
@@ -542,7 +541,7 @@ namespace CSharpScript.Game.Ui
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E642 RID: 190018 RVA: 0x00AB88AC File Offset: 0x00AB6AAC
+		// Token: 0x06022D8C RID: 142732 RVA: 0x009E5EDC File Offset: 0x009E40DC
 		private void InterruptOpSkipAnim(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification ii)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -557,7 +556,7 @@ namespace CSharpScript.Game.Ui
 			InputDistributeController.Instance.UnBindActions(this.ViewInfo.SkipAnimActions, new TInputHandle<InputDistributeDefine.EActionType>(this.InterruptOpSkipAnim));
 		}
 
-		// Token: 0x0602E643 RID: 190019 RVA: 0x00AB8920 File Offset: 0x00AB6B20
+		// Token: 0x06022D8D RID: 142733 RVA: 0x009E5F50 File Offset: 0x009E4150
 		public void TryEmitInterruptOpExitView()
 		{
 			if (this.SkipAnimViewFlow)
@@ -573,7 +572,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E644 RID: 190020 RVA: 0x00AB897C File Offset: 0x00AB6B7C
+		// Token: 0x06022D8E RID: 142734 RVA: 0x009E5FAC File Offset: 0x009E41AC
 		protected override void OnShowAsyncImplementImplementCompatible()
 		{
 			if (this.ViewInfo.IsFullScreen)
@@ -596,7 +595,7 @@ namespace CSharpScript.Game.Ui
 			this.PlayViewSequence(this.UiViewSequence.ShowSequenceName, null);
 		}
 
-		// Token: 0x0602E645 RID: 190021 RVA: 0x00AB89FC File Offset: 0x00AB6BFC
+		// Token: 0x06022D8F RID: 142735 RVA: 0x009E602C File Offset: 0x009E422C
 		protected override void OnAfterShowImplement()
 		{
 			CustomPromise<bool> openPromise = this.OpenPromise;
@@ -619,7 +618,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E646 RID: 190022 RVA: 0x00AB8A84 File Offset: 0x00AB6C84
+		// Token: 0x06022D90 RID: 142736 RVA: 0x009E60B4 File Offset: 0x009E42B4
 		protected unsafe override void HandleCacheShowActionFailIfIsPair()
 		{
 			if (this.FirstShow)
@@ -641,7 +640,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E647 RID: 190023 RVA: 0x00AB8B18 File Offset: 0x00AB6D18
+		// Token: 0x06022D91 RID: 142737 RVA: 0x009E6148 File Offset: 0x009E4348
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			UiViewBase.<OnHideAsyncImplementImplement>d__83 <OnHideAsyncImplementImplement>d__;
@@ -652,7 +651,7 @@ namespace CSharpScript.Game.Ui
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E648 RID: 190024 RVA: 0x00AB8B5C File Offset: 0x00AB6D5C
+		// Token: 0x06022D92 RID: 142738 RVA: 0x009E618C File Offset: 0x009E438C
 		protected override void OnHideAsyncImplementImplementCompatible()
 		{
 			this.CancelPerformanceSeqLimit();
@@ -673,12 +672,12 @@ namespace CSharpScript.Game.Ui
 			this.ReleaseScene();
 		}
 
-		// Token: 0x0602E649 RID: 190025 RVA: 0x00AB8BCF File Offset: 0x00AB6DCF
+		// Token: 0x06022D93 RID: 142739 RVA: 0x009E61FF File Offset: 0x009E43FF
 		protected virtual void OnAfterHideImplementImplement()
 		{
 		}
 
-		// Token: 0x0602E64A RID: 190026 RVA: 0x00AB8BD1 File Offset: 0x00AB6DD1
+		// Token: 0x06022D94 RID: 142740 RVA: 0x009E6201 File Offset: 0x009E4401
 		protected override void OnAfterHideImplement()
 		{
 			this.OnAfterHideImplementImplement();
@@ -693,7 +692,7 @@ namespace CSharpScript.Game.Ui
 			hidePromise.SetResult();
 		}
 
-		// Token: 0x0602E64B RID: 190027 RVA: 0x00AB8C10 File Offset: 0x00AB6E10
+		// Token: 0x06022D95 RID: 142741 RVA: 0x009E6240 File Offset: 0x009E4440
 		protected override UniTask OnDestroyAsyncImplementImplement()
 		{
 			UiViewBase.<OnDestroyAsyncImplementImplement>d__87 <OnDestroyAsyncImplementImplement>d__;
@@ -704,7 +703,7 @@ namespace CSharpScript.Game.Ui
 			return <OnDestroyAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E64C RID: 190028 RVA: 0x00AB8C53 File Offset: 0x00AB6E53
+		// Token: 0x06022D96 RID: 142742 RVA: 0x009E6283 File Offset: 0x009E4483
 		protected override void OnDestroyAsyncImplementImplementCompatible()
 		{
 			this.ChildPopView = null;
@@ -712,7 +711,7 @@ namespace CSharpScript.Game.Ui
 			UiManager.Instance.RemoveView(this.GetViewId());
 		}
 
-		// Token: 0x0602E64D RID: 190029 RVA: 0x00AB8C74 File Offset: 0x00AB6E74
+		// Token: 0x06022D97 RID: 142743 RVA: 0x009E62A4 File Offset: 0x009E44A4
 		protected override void OnAfterDestroyImplement()
 		{
 			CustomPromise closePromise = this.ClosePromise;
@@ -734,13 +733,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E64E RID: 190030 RVA: 0x00AB8D09 File Offset: 0x00AB6F09
+		// Token: 0x06022D98 RID: 142744 RVA: 0x009E6339 File Offset: 0x009E4539
 		public void AddChildViewById(int childViewId)
 		{
 			base.AddChild(UiManager.Instance.GetView(childViewId));
 		}
 
-		// Token: 0x0602E64F RID: 190031 RVA: 0x00AB8D1C File Offset: 0x00AB6F1C
+		// Token: 0x06022D99 RID: 142745 RVA: 0x009E634C File Offset: 0x009E454C
 		private UniTask PlayViewCloseSequenceAsync()
 		{
 			UiViewBase.<PlayViewCloseSequenceAsync>d__91 <PlayViewCloseSequenceAsync>d__;
@@ -751,7 +750,7 @@ namespace CSharpScript.Game.Ui
 			return <PlayViewCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E650 RID: 190032 RVA: 0x00AB8D60 File Offset: 0x00AB6F60
+		// Token: 0x06022D9A RID: 142746 RVA: 0x009E6390 File Offset: 0x009E4590
 		private UniTask PlayViewHideSequenceAsync()
 		{
 			UiViewBase.<PlayViewHideSequenceAsync>d__92 <PlayViewHideSequenceAsync>d__;
@@ -762,49 +761,49 @@ namespace CSharpScript.Game.Ui
 			return <PlayViewHideSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E651 RID: 190033 RVA: 0x00AB8DA3 File Offset: 0x00AB6FA3
+		// Token: 0x06022D9B RID: 142747 RVA: 0x009E63D3 File Offset: 0x009E45D3
 		protected void DeleteCloseSequence()
 		{
 			this.UiViewSequence.CloseSequenceName = "Close";
 		}
 
-		// Token: 0x0602E652 RID: 190034 RVA: 0x00AB8DB5 File Offset: 0x00AB6FB5
+		// Token: 0x06022D9C RID: 142748 RVA: 0x009E63E5 File Offset: 0x009E45E5
 		public ELayerType GetLayer()
 		{
 			return this.OnGetLayer();
 		}
 
-		// Token: 0x0602E653 RID: 190035 RVA: 0x00AB8DBD File Offset: 0x00AB6FBD
+		// Token: 0x06022D9D RID: 142749 RVA: 0x009E63ED File Offset: 0x009E45ED
 		protected virtual ELayerType OnGetLayer()
 		{
 			return this.ViewInfo.Type;
 		}
 
-		// Token: 0x0602E654 RID: 190036 RVA: 0x00AB8DCA File Offset: 0x00AB6FCA
+		// Token: 0x06022D9E RID: 142750 RVA: 0x009E63FA File Offset: 0x009E45FA
 		public float GetTimeDilation()
 		{
 			return this.OnGetTimeDilation();
 		}
 
-		// Token: 0x0602E655 RID: 190037 RVA: 0x00AB8DD2 File Offset: 0x00AB6FD2
+		// Token: 0x06022D9F RID: 142751 RVA: 0x009E6402 File Offset: 0x009E4602
 		protected virtual float OnGetTimeDilation()
 		{
 			return this.ViewInfo.TimeDilation;
 		}
 
-		// Token: 0x0602E656 RID: 190038 RVA: 0x00AB8DDF File Offset: 0x00AB6FDF
-		protected virtual string OnGetLoopAudioEvent()
+		// Token: 0x06022DA0 RID: 142752 RVA: 0x009E640F File Offset: 0x009E460F
+		protected virtual string OnGetBgm()
 		{
 			return this.ViewInfo.LoopAudioEvent;
 		}
 
-		// Token: 0x0602E657 RID: 190039 RVA: 0x00AB8DEC File Offset: 0x00AB6FEC
+		// Token: 0x06022DA1 RID: 142753 RVA: 0x009E641C File Offset: 0x009E461C
 		public void SetLoadingFinishOperation(Action finishOperation)
 		{
 			this.OperationQueue.Push(finishOperation);
 		}
 
-		// Token: 0x0602E658 RID: 190040 RVA: 0x00AB8DFA File Offset: 0x00AB6FFA
+		// Token: 0x06022DA2 RID: 142754 RVA: 0x009E642A File Offset: 0x009E462A
 		public void HandleAllLoadingFinishOperation()
 		{
 			while (this.OperationQueue.Size > 0)
@@ -817,55 +816,55 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E659 RID: 190041 RVA: 0x00AB8E22 File Offset: 0x00AB7022
+		// Token: 0x06022DA3 RID: 142755 RVA: 0x009E6452 File Offset: 0x009E4652
 		public void ResetOperationQueue()
 		{
 			this.OperationQueue.Clear();
 		}
 
-		// Token: 0x0602E65A RID: 190042 RVA: 0x00AB8E2F File Offset: 0x00AB702F
+		// Token: 0x06022DA4 RID: 142756 RVA: 0x009E645F File Offset: 0x009E465F
 		public virtual string GetBlackScreenTypeOnOpenViewLoadScene()
 		{
 			return "Start";
 		}
 
-		// Token: 0x0602E65B RID: 190043 RVA: 0x00AB8E36 File Offset: 0x00AB7036
+		// Token: 0x06022DA5 RID: 142757 RVA: 0x009E6466 File Offset: 0x009E4666
 		public virtual string GetBlackScreenTypeOnShowViewLoadScene()
 		{
 			return "Start";
 		}
 
-		// Token: 0x0602E65C RID: 190044 RVA: 0x00AB8E3D File Offset: 0x00AB703D
+		// Token: 0x06022DA6 RID: 142758 RVA: 0x009E646D File Offset: 0x009E466D
 		public virtual string GetBlackScreenStyle()
 		{
 			return "Default";
 		}
 
-		// Token: 0x0602E65D RID: 190045 RVA: 0x00AB8E44 File Offset: 0x00AB7044
+		// Token: 0x06022DA7 RID: 142759 RVA: 0x009E6474 File Offset: 0x009E4674
 		public virtual string GetBlackScreenStyleOnOpen()
 		{
 			return this.GetBlackScreenStyle();
 		}
 
-		// Token: 0x0602E65E RID: 190046 RVA: 0x00AB8E4C File Offset: 0x00AB704C
+		// Token: 0x06022DA8 RID: 142760 RVA: 0x009E647C File Offset: 0x009E467C
 		public virtual string GetBlackScreenStyleOnClose()
 		{
 			return this.GetBlackScreenStyle();
 		}
 
-		// Token: 0x0602E65F RID: 190047 RVA: 0x00AB8E54 File Offset: 0x00AB7054
+		// Token: 0x06022DA9 RID: 142761 RVA: 0x009E6484 File Offset: 0x009E4684
 		public bool WillLoadScene()
 		{
 			return !this.SkipLoadScene && !string.IsNullOrEmpty(this.ViewInfo.SceneId) && this.OnCheckIfNeedScene() && UiSceneManager.Instance.CurUiSceneId != this.ViewInfo.SceneId;
 		}
 
-		// Token: 0x0602E660 RID: 190048 RVA: 0x00AB8E94 File Offset: 0x00AB7094
+		// Token: 0x06022DAA RID: 142762 RVA: 0x009E64C4 File Offset: 0x009E46C4
 		public bool WillReleaseScene()
 		{
 			return !this.SkipReleaseScene && this.SceneLoaded;
 		}
 
-		// Token: 0x0602E661 RID: 190049 RVA: 0x00AB8EA8 File Offset: 0x00AB70A8
+		// Token: 0x06022DAB RID: 142763 RVA: 0x009E64D8 File Offset: 0x009E46D8
 		public virtual UniTask LoadScene()
 		{
 			UiViewBase.<LoadScene>d__113 <LoadScene>d__;
@@ -876,7 +875,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadScene>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E662 RID: 190050 RVA: 0x00AB8EEC File Offset: 0x00AB70EC
+		// Token: 0x06022DAC RID: 142764 RVA: 0x009E651C File Offset: 0x009E471C
 		public virtual UniTask ReleaseScene()
 		{
 			UiViewBase.<ReleaseScene>d__114 <ReleaseScene>d__;
@@ -887,13 +886,13 @@ namespace CSharpScript.Game.Ui
 			return <ReleaseScene>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E663 RID: 190051 RVA: 0x00AB8F2F File Offset: 0x00AB712F
+		// Token: 0x06022DAD RID: 142765 RVA: 0x009E655F File Offset: 0x009E475F
 		public void OnPreOpen()
 		{
 			this.IsPreOpening = true;
 		}
 
-		// Token: 0x0602E664 RID: 190052 RVA: 0x00AB8F38 File Offset: 0x00AB7138
+		// Token: 0x06022DAE RID: 142766 RVA: 0x009E6568 File Offset: 0x009E4768
 		public void OnOpenAfterPreOpened()
 		{
 			this.IsPreOpening = false;
@@ -903,7 +902,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E665 RID: 190053 RVA: 0x00AB8F5C File Offset: 0x00AB715C
+		// Token: 0x06022DAF RID: 142767 RVA: 0x009E658C File Offset: 0x009E478C
 		public void SetParentUiItem(UUIItem parentUiItem)
 		{
 			if (this.ParentUiItem == parentUiItem)
@@ -918,7 +917,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E666 RID: 190054 RVA: 0x00AB8F94 File Offset: 0x00AB7194
+		// Token: 0x06022DB0 RID: 142768 RVA: 0x009E65C4 File Offset: 0x009E47C4
 		public UniTask ClearAsync()
 		{
 			UiViewBase.<ClearAsync>d__118 <ClearAsync>d__;
@@ -929,7 +928,7 @@ namespace CSharpScript.Game.Ui
 			return <ClearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E667 RID: 190055 RVA: 0x00AB8FD8 File Offset: 0x00AB71D8
+		// Token: 0x06022DB1 RID: 142769 RVA: 0x009E6608 File Offset: 0x009E4808
 		private bool GetCacheWorldFrame()
 		{
 			switch (this.ViewInfo.LockWorldRender)
@@ -945,7 +944,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E668 RID: 190056 RVA: 0x00AB902C File Offset: 0x00AB722C
+		// Token: 0x06022DB2 RID: 142770 RVA: 0x009E665C File Offset: 0x009E485C
 		public void ApplyPerformanceLimit()
 		{
 			bool cacheWorldFrame = this.GetCacheWorldFrame();
@@ -956,13 +955,13 @@ namespace CSharpScript.Game.Ui
 			GameSettingsDeviceRender.Instance.ApplyPerformanceLimit(this.ViewInfo.Name.ToString(), cacheWorldFrame, this.ViewInfo.LockFrameRate);
 		}
 
-		// Token: 0x0602E669 RID: 190057 RVA: 0x00AB9080 File Offset: 0x00AB7280
+		// Token: 0x06022DB3 RID: 142771 RVA: 0x009E66B0 File Offset: 0x009E48B0
 		public void CancelPerformanceLimit()
 		{
 			GameSettingsDeviceRender.Instance.CancelPerformanceLimit(this.ViewInfo.Name.ToString());
 		}
 
-		// Token: 0x0602E66A RID: 190058 RVA: 0x00AB90B0 File Offset: 0x00AB72B0
+		// Token: 0x06022DB4 RID: 142772 RVA: 0x009E66E0 File Offset: 0x009E48E0
 		public void ApplyPerformanceSeqLimit()
 		{
 			bool flag = this.ViewInfo.LockWorldRender == EViewLockWorldRenderType.SeqLock;
@@ -973,95 +972,95 @@ namespace CSharpScript.Game.Ui
 			GameSettingsDeviceRender.Instance.ApplyPerformanceLimit(this.ViewInfo.Name.ToString() + "_Seq", flag, this.ViewInfo.LockFrameRate);
 		}
 
-		// Token: 0x0602E66B RID: 190059 RVA: 0x00AB9118 File Offset: 0x00AB7318
+		// Token: 0x06022DB5 RID: 142773 RVA: 0x009E6748 File Offset: 0x009E4948
 		public void CancelPerformanceSeqLimit()
 		{
 			GameSettingsDeviceRender.Instance.CancelPerformanceLimit(this.ViewInfo.Name.ToString() + "_Seq");
 		}
 
-		// Token: 0x04018DB3 RID: 101811
+		// Token: 0x0401340C RID: 78860
 		public readonly UiViewInfo ViewInfo;
 
-		// Token: 0x04018DB4 RID: 101812
+		// Token: 0x0401340D RID: 78861
 		[Nullable(2)]
 		public IUiPopFrameInterface ChildPopView;
 
-		// Token: 0x04018DB5 RID: 101813
+		// Token: 0x0401340E RID: 78862
 		[Nullable(2)]
 		public UiBehaviorLevelSequence UiViewSequence;
 
-		// Token: 0x04018DB6 RID: 101814
+		// Token: 0x0401340F RID: 78863
 		[Nullable(2)]
 		protected UiBehaviourUiBlur UiBlurBehaviour;
 
-		// Token: 0x04018DB7 RID: 101815
+		// Token: 0x04013410 RID: 78864
 		[Nullable(2)]
 		protected UiBehaviourHomeBtn UiBehaviourHomeBtn;
 
-		// Token: 0x04018DB8 RID: 101816
+		// Token: 0x04013411 RID: 78865
 		[Nullable(2)]
 		protected string AudioEvent;
 
-		// Token: 0x04018DB9 RID: 101817
+		// Token: 0x04013412 RID: 78866
 		private bool FirstShow = true;
 
-		// Token: 0x04018DBA RID: 101818
+		// Token: 0x04013413 RID: 78867
 		public bool LastHide;
 
-		// Token: 0x04018DBB RID: 101819
+		// Token: 0x04013414 RID: 78868
 		protected PlayResult PlayEventResult = new PlayResult();
 
-		// Token: 0x04018DBC RID: 101820
+		// Token: 0x04013415 RID: 78869
 		private bool LastUiSceneRendering;
 
-		// Token: 0x04018DBD RID: 101821
+		// Token: 0x04013416 RID: 78870
 		public bool IsPreOpening;
 
-		// Token: 0x04018DBE RID: 101822
+		// Token: 0x04013417 RID: 78871
 		public bool IsDestroyByClear;
 
-		// Token: 0x04018DBF RID: 101823
+		// Token: 0x04013418 RID: 78872
 		public bool IsExistInLeaveLevel;
 
-		// Token: 0x04018DC0 RID: 101824
+		// Token: 0x04013419 RID: 78873
 		[Nullable(2)]
 		public CustomPromise<bool> OpenPromise;
 
-		// Token: 0x04018DC1 RID: 101825
+		// Token: 0x0401341A RID: 78874
 		[Nullable(2)]
 		public CustomPromise ClosePromise;
 
-		// Token: 0x04018DC2 RID: 101826
+		// Token: 0x0401341B RID: 78875
 		[Nullable(2)]
 		public CustomPromise ShowPromise;
 
-		// Token: 0x04018DC3 RID: 101827
+		// Token: 0x0401341C RID: 78876
 		[Nullable(2)]
 		public CustomPromise HidePromise;
 
-		// Token: 0x04018DC4 RID: 101828
+		// Token: 0x0401341D RID: 78877
 		[Nullable(2)]
 		public CustomPromise LoadScenePromise;
 
-		// Token: 0x04018DC5 RID: 101829
+		// Token: 0x0401341E RID: 78878
 		private bool SkipAnimViewFlow;
 
-		// Token: 0x04018DC6 RID: 101830
+		// Token: 0x0401341F RID: 78879
 		public readonly string MaskTag;
 
-		// Token: 0x04018DC7 RID: 101831
+		// Token: 0x04013420 RID: 78880
 		private readonly Queue<Action> OperationQueue = new Queue<Action>(4);
 
-		// Token: 0x04018DC8 RID: 101832
+		// Token: 0x04013421 RID: 78881
 		public bool SkipLoadScene;
 
-		// Token: 0x04018DC9 RID: 101833
+		// Token: 0x04013422 RID: 78882
 		public bool SkipReleaseScene;
 
-		// Token: 0x04018DCA RID: 101834
+		// Token: 0x04013423 RID: 78883
 		public bool SceneLoaded;
 
-		// Token: 0x04018DCB RID: 101835
+		// Token: 0x04013424 RID: 78884
 		public bool SkipRemoveBlackScreen;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FF9 RID: 24569
+	// Token: 0x02006657 RID: 26199
 	public enum ESetSpineAnimation : byte
 	{
-		// Token: 0x0400FFD1 RID: 65489
+		// Token: 0x04010DAE RID: 69038
 		Play
 	}
 }

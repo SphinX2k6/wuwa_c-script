@@ -6,59 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002333 RID: 9011
+	// Token: 0x0200075E RID: 1886
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieScene3DTransformSection")]
-	[UnrealStructLayout(1928, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1928)]
-	public class UMovieScene3DTransformSection : UMovieSceneSection, IUnrealUObject, IUnrealObject, IMovieSceneEntityProvider, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(1944, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1944)]
+	public class UMovieScene3DTransformSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022140 RID: 139584 RVA: 0x0032617A File Offset: 0x0032437A
+		// Token: 0x0600A452 RID: 42066 RVA: 0x000F2AA5 File Offset: 0x000F0CA5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieScene3DTransformSection._ClassPtr;
 		}
 
-		// Token: 0x06022141 RID: 139585 RVA: 0x00326186 File Offset: 0x00324386
-		int IMovieSceneEntityProvider.InterfaceOffset()
-		{
-			return UMovieScene3DTransformSection.__InterfaceOffset_IMovieSceneEntityProvider;
-		}
-
-		// Token: 0x06022142 RID: 139586 RVA: 0x00326190 File Offset: 0x00324390
+		// Token: 0x0600A453 RID: 42067 RVA: 0x000F2AB4 File Offset: 0x000F0CB4
 		public UMovieScene3DTransformSection() : this(BuiltinUtils.AllocNativeUObject(UMovieScene3DTransformSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022143 RID: 139587 RVA: 0x003261B8 File Offset: 0x003243B8
+		// Token: 0x0600A454 RID: 42068 RVA: 0x000F2ADC File Offset: 0x000F0CDC
 		public UMovieScene3DTransformSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieScene3DTransformSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170083A5 RID: 33701
-		// (get) Token: 0x06022144 RID: 139588 RVA: 0x003261EC File Offset: 0x003243EC
-		// (set) Token: 0x06022145 RID: 139589 RVA: 0x00326225 File Offset: 0x00324425
-		public FMovieSceneTransformMask TransformMask
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMovieSceneTransformMask result;
-				if ((result = this._TransformMask) == null)
-				{
-					result = (this._TransformMask = new FMovieSceneTransformMask(base.NativePtr + (IntPtr)UMovieScene3DTransformSection.__PropertyOffset_TransformMask, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMovieSceneTransformMask.StaticStruct(), base.NativePtr + (IntPtr)UMovieScene3DTransformSection.__PropertyOffset_TransformMask, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170083A6 RID: 33702
-		// (get) Token: 0x06022146 RID: 139590 RVA: 0x00326248 File Offset: 0x00324448
-		// (set) Token: 0x06022147 RID: 139591 RVA: 0x00326282 File Offset: 0x00324482
+		// Token: 0x17001E62 RID: 7778
+		// (get) Token: 0x0600A455 RID: 42069 RVA: 0x000F2B10 File Offset: 0x000F0D10
+		// (set) Token: 0x0600A456 RID: 42070 RVA: 0x000F2B4A File Offset: 0x000F0D4A
 		public TFixedArray<FMovieSceneFloatChannel> Translation
 		{
 			get
@@ -77,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170083A7 RID: 33703
-		// (get) Token: 0x06022148 RID: 139592 RVA: 0x00326290 File Offset: 0x00324490
-		// (set) Token: 0x06022149 RID: 139593 RVA: 0x003262CA File Offset: 0x003244CA
+		// Token: 0x17001E63 RID: 7779
+		// (get) Token: 0x0600A457 RID: 42071 RVA: 0x000F2B58 File Offset: 0x000F0D58
+		// (set) Token: 0x0600A458 RID: 42072 RVA: 0x000F2B92 File Offset: 0x000F0D92
 		public TFixedArray<FMovieSceneFloatChannel> Rotation
 		{
 			get
@@ -98,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170083A8 RID: 33704
-		// (get) Token: 0x0602214A RID: 139594 RVA: 0x003262D8 File Offset: 0x003244D8
-		// (set) Token: 0x0602214B RID: 139595 RVA: 0x00326312 File Offset: 0x00324512
+		// Token: 0x17001E64 RID: 7780
+		// (get) Token: 0x0600A459 RID: 42073 RVA: 0x000F2BA0 File Offset: 0x000F0DA0
+		// (set) Token: 0x0600A45A RID: 42074 RVA: 0x000F2BDA File Offset: 0x000F0DDA
 		public TFixedArray<FMovieSceneFloatChannel> Scale
 		{
 			get
@@ -119,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170083A9 RID: 33705
-		// (get) Token: 0x0602214C RID: 139596 RVA: 0x00326320 File Offset: 0x00324520
-		// (set) Token: 0x0602214D RID: 139597 RVA: 0x00326359 File Offset: 0x00324559
+		// Token: 0x17001E65 RID: 7781
+		// (get) Token: 0x0600A45B RID: 42075 RVA: 0x000F2BE8 File Offset: 0x000F0DE8
+		// (set) Token: 0x0600A45C RID: 42076 RVA: 0x000F2C21 File Offset: 0x000F0E21
 		public FMovieSceneFloatChannel ManualWeight
 		{
 			get
@@ -140,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170083AA RID: 33706
-		// (get) Token: 0x0602214E RID: 139598 RVA: 0x0032637A File Offset: 0x0032457A
-		// (set) Token: 0x0602214F RID: 139599 RVA: 0x0032638A File Offset: 0x0032458A
+		// Token: 0x17001E66 RID: 7782
+		// (get) Token: 0x0600A45D RID: 42077 RVA: 0x000F2C42 File Offset: 0x000F0E42
+		// (set) Token: 0x0600A45E RID: 42078 RVA: 0x000F2C52 File Offset: 0x000F0E52
 		public unsafe bool bUseQuaternionInterpolation
 		{
 			get
@@ -155,40 +128,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022150 RID: 139600 RVA: 0x0032639B File Offset: 0x0032459B
+		// Token: 0x0600A45F RID: 42079 RVA: 0x000F2C63 File Offset: 0x000F0E63
 		static UMovieScene3DTransformSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieSceneTracks.MovieScene3DTransformSection");
 		}
 
-		// Token: 0x06022151 RID: 139601 RVA: 0x003263A9 File Offset: 0x003245A9
+		// Token: 0x0600A460 RID: 42080 RVA: 0x000F2C71 File Offset: 0x000F0E71
 		protected UMovieScene3DTransformSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040122FC RID: 74492
-		internal static int __InterfaceOffset_IMovieSceneEntityProvider;
-
-		// Token: 0x040122FD RID: 74493
+		// Token: 0x0400460B RID: 17931
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieScene3DTransformSection";
 
-		// Token: 0x040122FE RID: 74494
+		// Token: 0x0400460C RID: 17932
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040122FF RID: 74495
+		// Token: 0x0400460D RID: 17933
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012300 RID: 74496
-		internal static int __PropertyOffset_TransformMask;
-
-		// Token: 0x04012301 RID: 74497
-		[Nullable(2)]
-		private FMovieSceneTransformMask _TransformMask;
-
-		// Token: 0x04012302 RID: 74498
+		// Token: 0x0400460E RID: 17934
 		internal static int __PropertyOffset_Translation;
 
-		// Token: 0x04012303 RID: 74499
+		// Token: 0x0400460F RID: 17935
 		[Nullable(new byte[]
 		{
 			2,
@@ -196,10 +159,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FMovieSceneFloatChannel> _Translation;
 
-		// Token: 0x04012304 RID: 74500
+		// Token: 0x04004610 RID: 17936
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x04012305 RID: 74501
+		// Token: 0x04004611 RID: 17937
 		[Nullable(new byte[]
 		{
 			2,
@@ -207,10 +170,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FMovieSceneFloatChannel> _Rotation;
 
-		// Token: 0x04012306 RID: 74502
+		// Token: 0x04004612 RID: 17938
 		internal static int __PropertyOffset_Scale;
 
-		// Token: 0x04012307 RID: 74503
+		// Token: 0x04004613 RID: 17939
 		[Nullable(new byte[]
 		{
 			2,
@@ -218,14 +181,14 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FMovieSceneFloatChannel> _Scale;
 
-		// Token: 0x04012308 RID: 74504
+		// Token: 0x04004614 RID: 17940
 		internal static int __PropertyOffset_ManualWeight;
 
-		// Token: 0x04012309 RID: 74505
+		// Token: 0x04004615 RID: 17941
 		[Nullable(2)]
 		private FMovieSceneFloatChannel _ManualWeight;
 
-		// Token: 0x0401230A RID: 74506
+		// Token: 0x04004616 RID: 17942
 		internal static int __PropertyOffset_bUseQuaternionInterpolation;
 	}
 }

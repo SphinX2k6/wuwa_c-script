@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C2 RID: 450
+	// Token: 0x020001E5 RID: 485
 	public class IAngleWeight_SetValue
 	{
-		// Token: 0x0400087A RID: 2170
+		// Token: 0x040008EE RID: 2286
 		public EExploreSkillSearchTargetCfg Type;
 
-		// Token: 0x0400087B RID: 2171
-		[Nullable(1)]
+		// Token: 0x040008EF RID: 2287
 		public List<IEntityAngleWeight> AngleWeight;
 	}
 }

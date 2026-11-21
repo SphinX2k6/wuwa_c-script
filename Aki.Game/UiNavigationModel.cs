@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.UiNavigation;
 
-// Token: 0x02002CD1 RID: 11473
+// Token: 0x0200222A RID: 8746
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class UiNavigationModel : ModelBase
 {
-	// Token: 0x06018107 RID: 98567 RVA: 0x0061E8F4 File Offset: 0x0061CAF4
+	// Token: 0x06015984 RID: 88452 RVA: 0x00644498 File Offset: 0x00642698
 	public void InputControllerModeChange()
 	{
 		foreach (HashSet<HotKeyComponent> hashSet in this.ActionNameHotKeyComponentMap.Values)
@@ -30,11 +29,11 @@ public class UiNavigationModel : ModelBase
 		}
 		foreach (TsUiNavigationPlatformChangeListener tsUiNavigationPlatformChangeListener in this.PlatformListenerSet)
 		{
-			tsUiNavigationPlatformChangeListener.ChangeAlpha();
+			tsUiNavigationPlatformChangeListener.ChangeState();
 		}
 	}
 
-	// Token: 0x06018108 RID: 98568 RVA: 0x0061EA34 File Offset: 0x0061CC34
+	// Token: 0x06015985 RID: 88453 RVA: 0x006445D8 File Offset: 0x006427D8
 	public unsafe void CustomShieldHotKeyComponent(HashSet<int> excludeHotKeyIndexSet, bool bActive)
 	{
 		Log instance = Log.Instance;
@@ -68,7 +67,7 @@ public class UiNavigationModel : ModelBase
 		UiNavigationViewManager.Instance.RefreshCurrentHotKey();
 	}
 
-	// Token: 0x06018109 RID: 98569 RVA: 0x0061EBCC File Offset: 0x0061CDCC
+	// Token: 0x06015986 RID: 88454 RVA: 0x00644770 File Offset: 0x00642970
 	protected override bool OnClear()
 	{
 		this.ClearCursor();
@@ -76,82 +75,82 @@ public class UiNavigationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601810A RID: 98570 RVA: 0x0061EBDA File Offset: 0x0061CDDA
+	// Token: 0x06015987 RID: 88455 RVA: 0x0064477E File Offset: 0x0064297E
 	[NullableContext(2)]
 	public void SetCursorFollowItem(TsUiNavigationBehaviorListener listener)
 	{
 		this.Cursor.SetFollowItem(listener);
 	}
 
-	// Token: 0x0601810B RID: 98571 RVA: 0x0061EBE8 File Offset: 0x0061CDE8
+	// Token: 0x06015988 RID: 88456 RVA: 0x0064478C File Offset: 0x0064298C
 	public void SetIsUseMouse(bool value)
 	{
 		this.Cursor.SetIsUseMouse(value);
 	}
 
-	// Token: 0x0601810C RID: 98572 RVA: 0x0061EBF6 File Offset: 0x0061CDF6
+	// Token: 0x06015989 RID: 88457 RVA: 0x0064479A File Offset: 0x0064299A
 	public void MarkMoveInstantly()
 	{
 		this.Cursor.IsMoveInstantly = true;
 	}
 
-	// Token: 0x0601810D RID: 98573 RVA: 0x0061EC04 File Offset: 0x0061CE04
+	// Token: 0x0601598A RID: 88458 RVA: 0x006447A8 File Offset: 0x006429A8
 	public void SetCursorActiveDelayTime(float time)
 	{
 		this.Cursor.SetCursorActiveDelayTime(time);
 	}
 
-	// Token: 0x0601810E RID: 98574 RVA: 0x0061EC12 File Offset: 0x0061CE12
+	// Token: 0x0601598B RID: 88459 RVA: 0x006447B6 File Offset: 0x006429B6
 	public void TrySetCursorActive(bool value)
 	{
 		this.Cursor.TrySetUseItemUiActive(value);
 	}
 
-	// Token: 0x0601810F RID: 98575 RVA: 0x0061EC20 File Offset: 0x0061CE20
+	// Token: 0x0601598C RID: 88460 RVA: 0x006447C4 File Offset: 0x006429C4
 	public void RefreshCursorActive()
 	{
 		this.Cursor.RefreshCursorActive();
 	}
 
-	// Token: 0x06018110 RID: 98576 RVA: 0x0061EC2D File Offset: 0x0061CE2D
+	// Token: 0x0601598D RID: 88461 RVA: 0x006447D1 File Offset: 0x006429D1
 	public void RepeatMove()
 	{
 		this.Cursor.RepeatMove();
 	}
 
-	// Token: 0x06018111 RID: 98577 RVA: 0x0061EC3C File Offset: 0x0061CE3C
+	// Token: 0x0601598E RID: 88462 RVA: 0x006447E0 File Offset: 0x006429E0
 	public void ClearCursor()
 	{
 		Log.Instance.Info(ELogModule.UiNavigation, ELogAuthor.XXJ, "清理光标", default(ReadOnlySpan<ValueTuple<string, object>>));
 		this.Cursor.Clear();
 	}
 
-	// Token: 0x06018112 RID: 98578 RVA: 0x0061EC73 File Offset: 0x0061CE73
+	// Token: 0x0601598F RID: 88463 RVA: 0x00644817 File Offset: 0x00642A17
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearCursor();
 		return true;
 	}
 
-	// Token: 0x06018113 RID: 98579 RVA: 0x0061EC7C File Offset: 0x0061CE7C
+	// Token: 0x06015990 RID: 88464 RVA: 0x00644820 File Offset: 0x00642A20
 	public void Tick(float delta)
 	{
 		this.Cursor.Tick(delta);
 	}
 
-	// Token: 0x06018114 RID: 98580 RVA: 0x0061EC8A File Offset: 0x0061CE8A
+	// Token: 0x06015991 RID: 88465 RVA: 0x0064482E File Offset: 0x00642A2E
 	public void AddActionHotKeyComponent(string actionName, HashSet<HotKeyComponent> hotKeyComponentSet)
 	{
 		this.ActionNameHotKeyComponentMap[actionName] = hotKeyComponentSet;
 	}
 
-	// Token: 0x06018115 RID: 98581 RVA: 0x0061EC99 File Offset: 0x0061CE99
+	// Token: 0x06015992 RID: 88466 RVA: 0x0064483D File Offset: 0x00642A3D
 	public HashSet<HotKeyComponent> GetActionHotKeyComponentSet(string actionName)
 	{
 		return this.ActionNameHotKeyComponentMap[actionName];
 	}
 
-	// Token: 0x06018116 RID: 98582 RVA: 0x0061ECA8 File Offset: 0x0061CEA8
+	// Token: 0x06015993 RID: 88467 RVA: 0x0064484C File Offset: 0x00642A4C
 	public HashSet<HotKeyComponent> GetOrAddActionHotKeyComponentSet(string actionName)
 	{
 		HashSet<HotKeyComponent> hashSet;
@@ -163,7 +162,7 @@ public class UiNavigationModel : ModelBase
 		return hashSet;
 	}
 
-	// Token: 0x06018117 RID: 98583 RVA: 0x0061ECD4 File Offset: 0x0061CED4
+	// Token: 0x06015994 RID: 88468 RVA: 0x00644878 File Offset: 0x00642A78
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -198,7 +197,9 @@ public class UiNavigationModel : ModelBase
 				}
 				if (hashSet2.Count == hashSet.Count)
 				{
-					return hashSet2.ToArray<string>();
+					string[] array = new string[hashSet2.Count];
+					hashSet2.CopyTo(array, 0);
+					return array;
 				}
 			}
 			else
@@ -218,7 +219,7 @@ public class UiNavigationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06018118 RID: 98584 RVA: 0x0061EDF4 File Offset: 0x0061CFF4
+	// Token: 0x06015995 RID: 88469 RVA: 0x006449AC File Offset: 0x00642BAC
 	[return: Nullable(2)]
 	private string CheckAxisNameInKeySet(string axisName, HashSet<string> keyNameSet)
 	{
@@ -237,7 +238,7 @@ public class UiNavigationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06018119 RID: 98585 RVA: 0x0061EE54 File Offset: 0x0061D054
+	// Token: 0x06015996 RID: 88470 RVA: 0x00644A0C File Offset: 0x00642C0C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -268,7 +269,7 @@ public class UiNavigationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601811A RID: 98586 RVA: 0x0061EECC File Offset: 0x0061D0CC
+	// Token: 0x06015997 RID: 88471 RVA: 0x00644A84 File Offset: 0x00642C84
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -288,7 +289,7 @@ public class UiNavigationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601811B RID: 98587 RVA: 0x0061EEFC File Offset: 0x0061D0FC
+	// Token: 0x06015998 RID: 88472 RVA: 0x00644AB4 File Offset: 0x00642CB4
 	public IReadOnlyList<string> GetGamepadKeyNameListByActionName(string actionName)
 	{
 		InputCombinationActionBinding combinationActionBindingByActionName = InputSettingsManager.Instance.GetCombinationActionBindingByActionName(actionName);
@@ -313,7 +314,7 @@ public class UiNavigationModel : ModelBase
 		return Array.Empty<string>();
 	}
 
-	// Token: 0x0601811C RID: 98588 RVA: 0x0061EF58 File Offset: 0x0061D158
+	// Token: 0x06015999 RID: 88473 RVA: 0x00644B10 File Offset: 0x00642D10
 	public bool CheckActionNameListInNavigation(string refActionName)
 	{
 		ValueTuple<IReadOnlyList<string>, bool>? platformKeyNameDataByActionName = this.GetPlatformKeyNameDataByActionName(refActionName);
@@ -342,7 +343,7 @@ public class UiNavigationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601811D RID: 98589 RVA: 0x0061F038 File Offset: 0x0061D238
+	// Token: 0x0601599A RID: 88474 RVA: 0x00644BF0 File Offset: 0x00642DF0
 	public bool CheckAxisNameListInNavigation(string refAxisName)
 	{
 		IReadOnlyList<string> platformKeyNameListByAxisName = this.GetPlatformKeyNameListByAxisName(refAxisName);
@@ -372,19 +373,19 @@ public class UiNavigationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601811E RID: 98590 RVA: 0x0061F120 File Offset: 0x0061D320
+	// Token: 0x0601599B RID: 88475 RVA: 0x00644CD8 File Offset: 0x00642ED8
 	public void AddAxisHotKeyComponent(string axisName, HashSet<HotKeyComponent> hotKeyComponentSet)
 	{
 		this.AxisNameHotKeyComponentMap[axisName] = hotKeyComponentSet;
 	}
 
-	// Token: 0x0601811F RID: 98591 RVA: 0x0061F12F File Offset: 0x0061D32F
+	// Token: 0x0601599C RID: 88476 RVA: 0x00644CE7 File Offset: 0x00642EE7
 	public HashSet<HotKeyComponent> GetAxisHotKeyComponentSet(string axisName)
 	{
 		return this.AxisNameHotKeyComponentMap[axisName];
 	}
 
-	// Token: 0x06018120 RID: 98592 RVA: 0x0061F140 File Offset: 0x0061D340
+	// Token: 0x0601599D RID: 88477 RVA: 0x00644CF8 File Offset: 0x00642EF8
 	public HashSet<HotKeyComponent> GetOrAddAxisHotKeyComponentsSet(string axisName)
 	{
 		HashSet<HotKeyComponent> hashSet;
@@ -396,20 +397,20 @@ public class UiNavigationModel : ModelBase
 		return hashSet;
 	}
 
-	// Token: 0x06018121 RID: 98593 RVA: 0x0061F16C File Offset: 0x0061D36C
+	// Token: 0x0601599E RID: 88478 RVA: 0x00644D24 File Offset: 0x00642F24
 	public void AddPlatformListener(TsUiNavigationPlatformChangeListener listener)
 	{
 		this.PlatformListenerSet.Add(listener);
 	}
 
-	// Token: 0x06018122 RID: 98594 RVA: 0x0061F17B File Offset: 0x0061D37B
+	// Token: 0x0601599F RID: 88479 RVA: 0x00644D33 File Offset: 0x00642F33
 	public void RemovePlatformListener(TsUiNavigationPlatformChangeListener listener)
 	{
 		this.PlatformListenerSet.Remove(listener);
 	}
 
-	// Token: 0x17002073 RID: 8307
-	// (get) Token: 0x06018123 RID: 98595 RVA: 0x0061F18A File Offset: 0x0061D38A
+	// Token: 0x170020C6 RID: 8390
+	// (get) Token: 0x060159A0 RID: 88480 RVA: 0x00644D42 File Offset: 0x00642F42
 	[Nullable(2)]
 	public TsUiNavigationBehaviorListener GuideFocusListener
 	{
@@ -420,20 +421,20 @@ public class UiNavigationModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018124 RID: 98596 RVA: 0x0061F192 File Offset: 0x0061D392
+	// Token: 0x060159A1 RID: 88481 RVA: 0x00644D4A File Offset: 0x00642F4A
 	public void SetGuideFocusListener(TsUiNavigationBehaviorListener listener)
 	{
 		this.GuideFocusListenerInternal = listener;
 	}
 
-	// Token: 0x06018125 RID: 98597 RVA: 0x0061F19B File Offset: 0x0061D39B
+	// Token: 0x060159A2 RID: 88482 RVA: 0x00644D53 File Offset: 0x00642F53
 	public void ResetGuideFocusListener()
 	{
 		this.GuideFocusListenerInternal = null;
 	}
 
-	// Token: 0x17002074 RID: 8308
-	// (get) Token: 0x06018126 RID: 98598 RVA: 0x0061F1A4 File Offset: 0x0061D3A4
+	// Token: 0x170020C7 RID: 8391
+	// (get) Token: 0x060159A3 RID: 88483 RVA: 0x00644D5C File Offset: 0x00642F5C
 	public static UiNavigationModel Instance
 	{
 		get
@@ -442,7 +443,7 @@ public class UiNavigationModel : ModelBase
 		}
 	}
 
-	// Token: 0x06018127 RID: 98599 RVA: 0x0061F1AB File Offset: 0x0061D3AB
+	// Token: 0x060159A4 RID: 88484 RVA: 0x00644D63 File Offset: 0x00642F63
 	public static UiNavigationModel GetOrCreateInstance()
 	{
 		if (UiNavigationModel._Instance == null)
@@ -452,7 +453,7 @@ public class UiNavigationModel : ModelBase
 		return UiNavigationModel._Instance;
 	}
 
-	// Token: 0x06018128 RID: 98600 RVA: 0x0061F1BF File Offset: 0x0061D3BF
+	// Token: 0x060159A5 RID: 88485 RVA: 0x00644D77 File Offset: 0x00642F77
 	public static bool CreateInstance()
 	{
 		if (UiNavigationModel._Instance != null)
@@ -463,43 +464,43 @@ public class UiNavigationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06018129 RID: 98601 RVA: 0x0061F1D5 File Offset: 0x0061D3D5
+	// Token: 0x060159A6 RID: 88486 RVA: 0x00644D8D File Offset: 0x00642F8D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601812A RID: 98602 RVA: 0x0061F1D7 File Offset: 0x0061D3D7
+	// Token: 0x060159A7 RID: 88487 RVA: 0x00644D8F File Offset: 0x00642F8F
 	public static void ResetStaticDefaultValue()
 	{
 		UiNavigationModel._Instance = null;
 	}
 
-	// Token: 0x0601812B RID: 98603 RVA: 0x0061F1DF File Offset: 0x0061D3DF
+	// Token: 0x060159A8 RID: 88488 RVA: 0x00644D97 File Offset: 0x00642F97
 	static UiNavigationModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationModel.CreateStaticDefaultValue), new Action(UiNavigationModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B30D RID: 45837
+	// Token: 0x0400B679 RID: 46713
 	private readonly Cursor Cursor = new Cursor();
 
-	// Token: 0x0400B30E RID: 45838
+	// Token: 0x0400B67A RID: 46714
 	public bool IsOpenLog;
 
-	// Token: 0x0400B30F RID: 45839
+	// Token: 0x0400B67B RID: 46715
 	private readonly Dictionary<string, HashSet<HotKeyComponent>> ActionNameHotKeyComponentMap = new Dictionary<string, HashSet<HotKeyComponent>>();
 
-	// Token: 0x0400B310 RID: 45840
+	// Token: 0x0400B67C RID: 46716
 	private readonly Dictionary<string, HashSet<HotKeyComponent>> AxisNameHotKeyComponentMap = new Dictionary<string, HashSet<HotKeyComponent>>();
 
-	// Token: 0x0400B311 RID: 45841
+	// Token: 0x0400B67D RID: 46717
 	private readonly HashSet<TsUiNavigationPlatformChangeListener> PlatformListenerSet = new HashSet<TsUiNavigationPlatformChangeListener>();
 
-	// Token: 0x0400B312 RID: 45842
+	// Token: 0x0400B67E RID: 46718
 	[Nullable(2)]
 	private TsUiNavigationBehaviorListener GuideFocusListenerInternal;
 
-	// Token: 0x0400B313 RID: 45843
+	// Token: 0x0400B67F RID: 46719
 	[Nullable(2)]
 	private static UiNavigationModel _Instance;
 }

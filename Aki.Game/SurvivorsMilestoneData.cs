@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02002ABE RID: 10942
+// Token: 0x0200203A RID: 8250
 public class SurvivorsMilestoneData
 {
-	// Token: 0x06016C8B RID: 93323 RVA: 0x005C9404 File Offset: 0x005C7604
+	// Token: 0x060146BC RID: 83644 RVA: 0x005F5F58 File Offset: 0x005F4158
 	public SurvivorsMilestoneData(int id, int sortId, int goal, int dropId, bool isGot = false)
 	{
 		this.Id = id;
@@ -13,30 +13,30 @@ public class SurvivorsMilestoneData
 		this.IsGot = isGot;
 	}
 
-	// Token: 0x06016C8C RID: 93324 RVA: 0x005C9431 File Offset: 0x005C7631
+	// Token: 0x060146BD RID: 83645 RVA: 0x005F5F85 File Offset: 0x005F4185
 	public bool IsReceivable(int currentPoint)
 	{
 		return this.IsAchieved(currentPoint) && !this.IsGot;
 	}
 
-	// Token: 0x06016C8D RID: 93325 RVA: 0x005C9447 File Offset: 0x005C7647
+	// Token: 0x060146BE RID: 83646 RVA: 0x005F5F9B File Offset: 0x005F419B
 	public bool IsAchieved(int currentPoint)
 	{
 		return this.Goal <= currentPoint;
 	}
 
-	// Token: 0x0400A936 RID: 43318
+	// Token: 0x0400AD3C RID: 44348
 	public int Id;
 
-	// Token: 0x0400A937 RID: 43319
+	// Token: 0x0400AD3D RID: 44349
 	public int SortId;
 
-	// Token: 0x0400A938 RID: 43320
+	// Token: 0x0400AD3E RID: 44350
 	public int Goal;
 
-	// Token: 0x0400A939 RID: 43321
+	// Token: 0x0400AD3F RID: 44351
 	public int DropId;
 
-	// Token: 0x0400A93A RID: 43322
+	// Token: 0x0400AD40 RID: 44352
 	public bool IsGot;
 }

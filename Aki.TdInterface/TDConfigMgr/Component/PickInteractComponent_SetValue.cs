@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000856 RID: 2134
+	// Token: 0x020008F9 RID: 2297
 	public class PickInteractComponent_SetValue
 	{
-		// Token: 0x04001F1B RID: 7963
+		// Token: 0x0400212D RID: 8493
 		public bool? Disabled;
 
-		// Token: 0x04001F1C RID: 7964
+		// Token: 0x0400212E RID: 8494
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F1D RID: 7965
-		[Nullable(1)]
+		// Token: 0x0400212F RID: 8495
 		public IChessmanPickInteraction PickInteractType;
 	}
 }

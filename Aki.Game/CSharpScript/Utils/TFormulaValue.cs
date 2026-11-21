@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044EA RID: 17642
+	// Token: 0x0200340C RID: 13324
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct TFormulaValue
 	{
-		// Token: 0x170073AC RID: 29612
-		// (get) Token: 0x0602D6F3 RID: 186099 RVA: 0x00A4179F File Offset: 0x00A3F99F
+		// Token: 0x17004664 RID: 18020
+		// (get) Token: 0x06021DC3 RID: 138691 RVA: 0x0096D5AF File Offset: 0x0096B7AF
 		public EFormulaValueType Type { get; }
 
-		// Token: 0x0602D6F4 RID: 186100 RVA: 0x00A417A8 File Offset: 0x00A3F9A8
+		// Token: 0x06021DC4 RID: 138692 RVA: 0x0096D5B8 File Offset: 0x0096B7B8
 		[NullableContext(2)]
 		private TFormulaValue(EFormulaValueType type, double doubleValue = 0.0, bool boolValue = false, string stringValue = null, Entity entityValue = null, double[] doubleArrayValue = null, ContextParam contextValue = null, [Nullable(new byte[]
 		{
@@ -33,8 +33,8 @@ namespace CSharpScript.Utils
 			this._rotatorValue = rotatorValue;
 		}
 
-		// Token: 0x170073AD RID: 29613
-		// (get) Token: 0x0602D6F5 RID: 186101 RVA: 0x00A4180A File Offset: 0x00A3FA0A
+		// Token: 0x17004665 RID: 18021
+		// (get) Token: 0x06021DC5 RID: 138693 RVA: 0x0096D61A File Offset: 0x0096B81A
 		public bool IsNull
 		{
 			get
@@ -43,67 +43,67 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D6F6 RID: 186102 RVA: 0x00A41818 File Offset: 0x00A3FA18
+		// Token: 0x06021DC6 RID: 138694 RVA: 0x0096D628 File Offset: 0x0096B828
 		public static TFormulaValue FromInt(int value)
 		{
 			return new TFormulaValue(EFormulaValueType.Double, (double)value, false, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6F7 RID: 186103 RVA: 0x00A41838 File Offset: 0x00A3FA38
+		// Token: 0x06021DC7 RID: 138695 RVA: 0x0096D648 File Offset: 0x0096B848
 		public static TFormulaValue FromLong(long value)
 		{
 			return new TFormulaValue(EFormulaValueType.Double, (double)value, false, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6F8 RID: 186104 RVA: 0x00A41858 File Offset: 0x00A3FA58
+		// Token: 0x06021DC8 RID: 138696 RVA: 0x0096D668 File Offset: 0x0096B868
 		public static TFormulaValue FromFloat(float value)
 		{
 			return new TFormulaValue(EFormulaValueType.Double, (double)value, false, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6F9 RID: 186105 RVA: 0x00A41878 File Offset: 0x00A3FA78
+		// Token: 0x06021DC9 RID: 138697 RVA: 0x0096D688 File Offset: 0x0096B888
 		public static TFormulaValue FromDouble(double value)
 		{
 			return new TFormulaValue(EFormulaValueType.Double, value, false, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FA RID: 186106 RVA: 0x00A41898 File Offset: 0x00A3FA98
+		// Token: 0x06021DCA RID: 138698 RVA: 0x0096D6A8 File Offset: 0x0096B8A8
 		public static TFormulaValue FromBool(bool value)
 		{
 			return new TFormulaValue(EFormulaValueType.Bool, 0.0, value, null, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FB RID: 186107 RVA: 0x00A418C0 File Offset: 0x00A3FAC0
+		// Token: 0x06021DCB RID: 138699 RVA: 0x0096D6D0 File Offset: 0x0096B8D0
 		public static TFormulaValue FromString(string value)
 		{
 			return new TFormulaValue(EFormulaValueType.String, 0.0, false, value, null, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FC RID: 186108 RVA: 0x00A418E8 File Offset: 0x00A3FAE8
+		// Token: 0x06021DCC RID: 138700 RVA: 0x0096D6F8 File Offset: 0x0096B8F8
 		public static TFormulaValue FromEntity(Entity value)
 		{
 			return new TFormulaValue(EFormulaValueType.Entity, 0.0, false, null, value, null, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FD RID: 186109 RVA: 0x00A41910 File Offset: 0x00A3FB10
+		// Token: 0x06021DCD RID: 138701 RVA: 0x0096D720 File Offset: 0x0096B920
 		public static TFormulaValue FromIntArray(int[] value)
 		{
 			return new TFormulaValue(EFormulaValueType.DoubleArray, 0.0, false, null, null, Array.ConvertAll<int, double>(value, (int v) => (double)v), null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FE RID: 186110 RVA: 0x00A4195C File Offset: 0x00A3FB5C
+		// Token: 0x06021DCE RID: 138702 RVA: 0x0096D76C File Offset: 0x0096B96C
 		public static TFormulaValue FromLongArray(long[] value)
 		{
 			return new TFormulaValue(EFormulaValueType.DoubleArray, 0.0, false, null, null, Array.ConvertAll<long, double>(value, (long v) => (double)v), null, null, null, null, null);
 		}
 
-		// Token: 0x0602D6FF RID: 186111 RVA: 0x00A419A8 File Offset: 0x00A3FBA8
+		// Token: 0x06021DCF RID: 138703 RVA: 0x0096D7B8 File Offset: 0x0096B9B8
 		public static TFormulaValue FromDoubleArray(double[] value)
 		{
 			return new TFormulaValue(EFormulaValueType.DoubleArray, 0.0, false, null, null, value, null, null, null, null, null);
 		}
 
-		// Token: 0x0602D700 RID: 186112 RVA: 0x00A419D0 File Offset: 0x00A3FBD0
+		// Token: 0x06021DD0 RID: 138704 RVA: 0x0096D7E0 File Offset: 0x0096B9E0
 		[NullableContext(2)]
 		public static TFormulaValue FromContext(ContextParam value)
 		{
@@ -114,31 +114,31 @@ namespace CSharpScript.Utils
 			return default(TFormulaValue);
 		}
 
-		// Token: 0x0602D701 RID: 186113 RVA: 0x00A41A04 File Offset: 0x00A3FC04
+		// Token: 0x06021DD1 RID: 138705 RVA: 0x0096D814 File Offset: 0x0096BA14
 		public static TFormulaValue FromStringArray(string[] value)
 		{
 			return new TFormulaValue(EFormulaValueType.StringArray, 0.0, false, null, null, null, null, value, null, null, null);
 		}
 
-		// Token: 0x0602D702 RID: 186114 RVA: 0x00A41A2C File Offset: 0x00A3FC2C
+		// Token: 0x06021DD2 RID: 138706 RVA: 0x0096D83C File Offset: 0x0096BA3C
 		public static TFormulaValue FromTagContainer(TagContainer value)
 		{
 			return new TFormulaValue(EFormulaValueType.TagContainer, 0.0, false, null, null, null, null, null, value, null, null);
 		}
 
-		// Token: 0x0602D703 RID: 186115 RVA: 0x00A41A54 File Offset: 0x00A3FC54
+		// Token: 0x06021DD3 RID: 138707 RVA: 0x0096D864 File Offset: 0x0096BA64
 		public static TFormulaValue FromVector(Vector value)
 		{
 			return new TFormulaValue(EFormulaValueType.Vector, 0.0, false, null, null, null, null, null, null, value, null);
 		}
 
-		// Token: 0x0602D704 RID: 186116 RVA: 0x00A41A7C File Offset: 0x00A3FC7C
+		// Token: 0x06021DD4 RID: 138708 RVA: 0x0096D88C File Offset: 0x0096BA8C
 		public static TFormulaValue FromRotator(Rotator value)
 		{
 			return new TFormulaValue(EFormulaValueType.Rotator, 0.0, false, null, null, null, null, null, null, null, value);
 		}
 
-		// Token: 0x0602D705 RID: 186117 RVA: 0x00A41AA4 File Offset: 0x00A3FCA4
+		// Token: 0x06021DD5 RID: 138709 RVA: 0x0096D8B4 File Offset: 0x0096BAB4
 		public static TFormulaValue FromArrayLiteral(TFormulaValue[] values)
 		{
 			double[] array = new double[values.Length];
@@ -170,7 +170,7 @@ namespace CSharpScript.Utils
 			return TFormulaValue.FromStringArray(array2);
 		}
 
-		// Token: 0x0602D706 RID: 186118 RVA: 0x00A41B34 File Offset: 0x00A3FD34
+		// Token: 0x06021DD6 RID: 138710 RVA: 0x0096D944 File Offset: 0x0096BB44
 		public bool TryGetInt(out int value)
 		{
 			if (this.Type == EFormulaValueType.Double && this._doubleValue >= -2147483648.0 && this._doubleValue <= 2147483647.0)
@@ -182,7 +182,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D707 RID: 186119 RVA: 0x00A41B70 File Offset: 0x00A3FD70
+		// Token: 0x06021DD7 RID: 138711 RVA: 0x0096D980 File Offset: 0x0096BB80
 		public bool TryGetLong(out long value)
 		{
 			if (this.Type == EFormulaValueType.Double && this._doubleValue >= -9.223372036854776E+18 && this._doubleValue <= 9.223372036854776E+18)
@@ -194,7 +194,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D708 RID: 186120 RVA: 0x00A41BAD File Offset: 0x00A3FDAD
+		// Token: 0x06021DD8 RID: 138712 RVA: 0x0096D9BD File Offset: 0x0096BBBD
 		public bool TryGetFloat(out float value)
 		{
 			if (this.Type == EFormulaValueType.Double && this._doubleValue >= -3.4028234663852886E+38 && this._doubleValue <= 3.4028234663852886E+38)
@@ -206,21 +206,21 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D709 RID: 186121 RVA: 0x00A41BED File Offset: 0x00A3FDED
+		// Token: 0x06021DD9 RID: 138713 RVA: 0x0096D9FD File Offset: 0x0096BBFD
 		public bool TryGetDouble(out double value)
 		{
 			value = this._doubleValue;
 			return this.Type == EFormulaValueType.Double;
 		}
 
-		// Token: 0x0602D70A RID: 186122 RVA: 0x00A41C00 File Offset: 0x00A3FE00
+		// Token: 0x06021DDA RID: 138714 RVA: 0x0096DA10 File Offset: 0x0096BC10
 		public bool TryGetBool(out bool value)
 		{
 			value = this._boolValue;
 			return this.Type == EFormulaValueType.Bool;
 		}
 
-		// Token: 0x0602D70B RID: 186123 RVA: 0x00A41C13 File Offset: 0x00A3FE13
+		// Token: 0x06021DDB RID: 138715 RVA: 0x0096DA23 File Offset: 0x0096BC23
 		[NullableContext(2)]
 		public bool TryGetString(out string value)
 		{
@@ -228,7 +228,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.String;
 		}
 
-		// Token: 0x0602D70C RID: 186124 RVA: 0x00A41C26 File Offset: 0x00A3FE26
+		// Token: 0x06021DDC RID: 138716 RVA: 0x0096DA36 File Offset: 0x0096BC36
 		[NullableContext(2)]
 		public bool TryGetEntity(out Entity value)
 		{
@@ -236,7 +236,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.Entity;
 		}
 
-		// Token: 0x0602D70D RID: 186125 RVA: 0x00A41C3C File Offset: 0x00A3FE3C
+		// Token: 0x06021DDD RID: 138717 RVA: 0x0096DA4C File Offset: 0x0096BC4C
 		[NullableContext(2)]
 		public bool TryGetIntArray(out int[] value)
 		{
@@ -249,7 +249,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D70E RID: 186126 RVA: 0x00A41C8C File Offset: 0x00A3FE8C
+		// Token: 0x06021DDE RID: 138718 RVA: 0x0096DA9C File Offset: 0x0096BC9C
 		[NullableContext(2)]
 		public bool TryGetLongArray(out long[] value)
 		{
@@ -262,7 +262,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D70F RID: 186127 RVA: 0x00A41CDC File Offset: 0x00A3FEDC
+		// Token: 0x06021DDF RID: 138719 RVA: 0x0096DAEC File Offset: 0x0096BCEC
 		[NullableContext(2)]
 		public bool TryGetDoubleArray(out double[] value)
 		{
@@ -270,7 +270,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.DoubleArray;
 		}
 
-		// Token: 0x0602D710 RID: 186128 RVA: 0x00A41CEF File Offset: 0x00A3FEEF
+		// Token: 0x06021DE0 RID: 138720 RVA: 0x0096DAFF File Offset: 0x0096BCFF
 		[NullableContext(2)]
 		public bool TryGetContext(out ContextParam value)
 		{
@@ -278,7 +278,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.Context;
 		}
 
-		// Token: 0x0602D711 RID: 186129 RVA: 0x00A41D02 File Offset: 0x00A3FF02
+		// Token: 0x06021DE1 RID: 138721 RVA: 0x0096DB12 File Offset: 0x0096BD12
 		public bool TryGetStringArray([Nullable(new byte[]
 		{
 			2,
@@ -289,7 +289,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.StringArray;
 		}
 
-		// Token: 0x0602D712 RID: 186130 RVA: 0x00A41D15 File Offset: 0x00A3FF15
+		// Token: 0x06021DE2 RID: 138722 RVA: 0x0096DB25 File Offset: 0x0096BD25
 		[NullableContext(2)]
 		public bool TryGetTagContainer(out TagContainer value)
 		{
@@ -297,7 +297,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.TagContainer;
 		}
 
-		// Token: 0x0602D713 RID: 186131 RVA: 0x00A41D28 File Offset: 0x00A3FF28
+		// Token: 0x06021DE3 RID: 138723 RVA: 0x0096DB38 File Offset: 0x0096BD38
 		[NullableContext(2)]
 		public bool TryGetVector(out Vector value)
 		{
@@ -305,7 +305,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.Vector;
 		}
 
-		// Token: 0x0602D714 RID: 186132 RVA: 0x00A41D3C File Offset: 0x00A3FF3C
+		// Token: 0x06021DE4 RID: 138724 RVA: 0x0096DB4C File Offset: 0x0096BD4C
 		[NullableContext(2)]
 		public bool TryGetRotator(out Rotator value)
 		{
@@ -313,7 +313,7 @@ namespace CSharpScript.Utils
 			return this.Type == EFormulaValueType.Rotator;
 		}
 
-		// Token: 0x0602D715 RID: 186133 RVA: 0x00A41D50 File Offset: 0x00A3FF50
+		// Token: 0x06021DE5 RID: 138725 RVA: 0x0096DB60 File Offset: 0x0096BD60
 		public bool TryGetArrayElement(int index, out TFormulaValue value)
 		{
 			if (index < 0)
@@ -335,7 +335,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D716 RID: 186134 RVA: 0x00A41DD4 File Offset: 0x00A3FFD4
+		// Token: 0x06021DE6 RID: 138726 RVA: 0x0096DBE4 File Offset: 0x0096BDE4
 		public bool TryGetIndex(out int index)
 		{
 			if (this.Type == EFormulaValueType.Double && this._doubleValue >= -2147483648.0 && this._doubleValue <= 2147483647.0)
@@ -347,13 +347,13 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D717 RID: 186135 RVA: 0x00A41E10 File Offset: 0x00A40010
+		// Token: 0x06021DE7 RID: 138727 RVA: 0x0096DC20 File Offset: 0x0096BE20
 		private static bool IsNumeric(TFormulaValue value)
 		{
 			return value.Type == EFormulaValueType.Double;
 		}
 
-		// Token: 0x0602D718 RID: 186136 RVA: 0x00A41E1C File Offset: 0x00A4001C
+		// Token: 0x06021DE8 RID: 138728 RVA: 0x0096DC2C File Offset: 0x0096BE2C
 		public static TFormulaValue operator +(TFormulaValue operand)
 		{
 			if (!TFormulaValue.IsNumeric(operand))
@@ -366,7 +366,7 @@ namespace CSharpScript.Utils
 			return operand;
 		}
 
-		// Token: 0x0602D719 RID: 186137 RVA: 0x00A41E60 File Offset: 0x00A40060
+		// Token: 0x06021DE9 RID: 138729 RVA: 0x0096DC70 File Offset: 0x0096BE70
 		public static TFormulaValue operator -(TFormulaValue operand)
 		{
 			if (operand.Type == EFormulaValueType.Double)
@@ -379,7 +379,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D71A RID: 186138 RVA: 0x00A41EB0 File Offset: 0x00A400B0
+		// Token: 0x06021DEA RID: 138730 RVA: 0x0096DCC0 File Offset: 0x0096BEC0
 		public static TFormulaValue operator !(TFormulaValue operand)
 		{
 			bool flag;
@@ -393,7 +393,7 @@ namespace CSharpScript.Utils
 			return TFormulaValue.FromBool(!flag);
 		}
 
-		// Token: 0x0602D71B RID: 186139 RVA: 0x00A41EFC File Offset: 0x00A400FC
+		// Token: 0x06021DEB RID: 138731 RVA: 0x0096DD0C File Offset: 0x0096BF0C
 		public static TFormulaValue operator +(TFormulaValue left, TFormulaValue right)
 		{
 			if (left.Type == EFormulaValueType.String || right.Type == EFormulaValueType.String)
@@ -412,7 +412,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D71C RID: 186140 RVA: 0x00A41FA8 File Offset: 0x00A401A8
+		// Token: 0x06021DEC RID: 138732 RVA: 0x0096DDB8 File Offset: 0x0096BFB8
 		public static TFormulaValue operator -(TFormulaValue left, TFormulaValue right)
 		{
 			if (TFormulaValue.IsNumeric(left) && TFormulaValue.IsNumeric(right))
@@ -427,7 +427,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D71D RID: 186141 RVA: 0x00A42018 File Offset: 0x00A40218
+		// Token: 0x06021DED RID: 138733 RVA: 0x0096DE28 File Offset: 0x0096C028
 		public static TFormulaValue operator *(TFormulaValue left, TFormulaValue right)
 		{
 			if (TFormulaValue.IsNumeric(left) && TFormulaValue.IsNumeric(right))
@@ -442,7 +442,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D71E RID: 186142 RVA: 0x00A42088 File Offset: 0x00A40288
+		// Token: 0x06021DEE RID: 138734 RVA: 0x0096DE98 File Offset: 0x0096C098
 		public static TFormulaValue operator /(TFormulaValue left, TFormulaValue right)
 		{
 			if (TFormulaValue.IsNumeric(left) && TFormulaValue.IsNumeric(right))
@@ -457,7 +457,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D71F RID: 186143 RVA: 0x00A420F8 File Offset: 0x00A402F8
+		// Token: 0x06021DEF RID: 138735 RVA: 0x0096DF08 File Offset: 0x0096C108
 		public static TFormulaValue operator %(TFormulaValue left, TFormulaValue right)
 		{
 			if (TFormulaValue.IsNumeric(left) && TFormulaValue.IsNumeric(right))
@@ -472,7 +472,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D720 RID: 186144 RVA: 0x00A42168 File Offset: 0x00A40368
+		// Token: 0x06021DF0 RID: 138736 RVA: 0x0096DF78 File Offset: 0x0096C178
 		public static TFormulaValue operator &(TFormulaValue left, TFormulaValue right)
 		{
 			bool flag;
@@ -489,7 +489,7 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D721 RID: 186145 RVA: 0x00A421D4 File Offset: 0x00A403D4
+		// Token: 0x06021DF1 RID: 138737 RVA: 0x0096DFE4 File Offset: 0x0096C1E4
 		public static TFormulaValue operator |(TFormulaValue left, TFormulaValue right)
 		{
 			bool flag;
@@ -506,43 +506,43 @@ namespace CSharpScript.Utils
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0602D722 RID: 186146 RVA: 0x00A4223E File Offset: 0x00A4043E
+		// Token: 0x06021DF2 RID: 138738 RVA: 0x0096E04E File Offset: 0x0096C24E
 		public static bool operator >(TFormulaValue left, TFormulaValue right)
 		{
 			return TFormulaValue.Compare(left, right) > 0;
 		}
 
-		// Token: 0x0602D723 RID: 186147 RVA: 0x00A4224A File Offset: 0x00A4044A
+		// Token: 0x06021DF3 RID: 138739 RVA: 0x0096E05A File Offset: 0x0096C25A
 		public static bool operator >=(TFormulaValue left, TFormulaValue right)
 		{
 			return TFormulaValue.Compare(left, right) >= 0;
 		}
 
-		// Token: 0x0602D724 RID: 186148 RVA: 0x00A42259 File Offset: 0x00A40459
+		// Token: 0x06021DF4 RID: 138740 RVA: 0x0096E069 File Offset: 0x0096C269
 		public static bool operator <(TFormulaValue left, TFormulaValue right)
 		{
 			return TFormulaValue.Compare(left, right) < 0;
 		}
 
-		// Token: 0x0602D725 RID: 186149 RVA: 0x00A42265 File Offset: 0x00A40465
+		// Token: 0x06021DF5 RID: 138741 RVA: 0x0096E075 File Offset: 0x0096C275
 		public static bool operator <=(TFormulaValue left, TFormulaValue right)
 		{
 			return TFormulaValue.Compare(left, right) <= 0;
 		}
 
-		// Token: 0x0602D726 RID: 186150 RVA: 0x00A42274 File Offset: 0x00A40474
+		// Token: 0x06021DF6 RID: 138742 RVA: 0x0096E084 File Offset: 0x0096C284
 		public static bool operator ==(TFormulaValue left, TFormulaValue right)
 		{
 			return TFormulaValue.AreEqual(left, right);
 		}
 
-		// Token: 0x0602D727 RID: 186151 RVA: 0x00A4227D File Offset: 0x00A4047D
+		// Token: 0x06021DF7 RID: 138743 RVA: 0x0096E08D File Offset: 0x0096C28D
 		public static bool operator !=(TFormulaValue left, TFormulaValue right)
 		{
 			return !TFormulaValue.AreEqual(left, right);
 		}
 
-		// Token: 0x0602D728 RID: 186152 RVA: 0x00A4228C File Offset: 0x00A4048C
+		// Token: 0x06021DF8 RID: 138744 RVA: 0x0096E09C File Offset: 0x0096C29C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -554,7 +554,7 @@ namespace CSharpScript.Utils
 			return false;
 		}
 
-		// Token: 0x0602D729 RID: 186153 RVA: 0x00A422B8 File Offset: 0x00A404B8
+		// Token: 0x06021DF9 RID: 138745 RVA: 0x0096E0C8 File Offset: 0x0096C2C8
 		public override int GetHashCode()
 		{
 			switch (this.Type)
@@ -608,7 +608,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D72A RID: 186154 RVA: 0x00A4243C File Offset: 0x00A4063C
+		// Token: 0x06021DFA RID: 138746 RVA: 0x0096E24C File Offset: 0x0096C44C
 		private static int Compare(TFormulaValue left, TFormulaValue right)
 		{
 			if (!TFormulaValue.IsNumeric(left) || !TFormulaValue.IsNumeric(right))
@@ -632,7 +632,7 @@ namespace CSharpScript.Utils
 			return 1;
 		}
 
-		// Token: 0x0602D72B RID: 186155 RVA: 0x00A424CC File Offset: 0x00A406CC
+		// Token: 0x06021DFB RID: 138747 RVA: 0x0096E2DC File Offset: 0x0096C4DC
 		private static bool AreEqual(TFormulaValue left, TFormulaValue right)
 		{
 			if (left.Type != right.Type)
@@ -690,7 +690,7 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D72C RID: 186156 RVA: 0x00A426A8 File Offset: 0x00A408A8
+		// Token: 0x06021DFC RID: 138748 RVA: 0x0096E4B8 File Offset: 0x0096C6B8
 		public override string ToString()
 		{
 			switch (this.Type)
@@ -743,97 +743,97 @@ namespace CSharpScript.Utils
 			}
 		}
 
-		// Token: 0x0602D72D RID: 186157 RVA: 0x00A42806 File Offset: 0x00A40A06
+		// Token: 0x06021DFD RID: 138749 RVA: 0x0096E616 File Offset: 0x0096C816
 		public static implicit operator TFormulaValue(int value)
 		{
 			return TFormulaValue.FromInt(value);
 		}
 
-		// Token: 0x0602D72E RID: 186158 RVA: 0x00A4280E File Offset: 0x00A40A0E
+		// Token: 0x06021DFE RID: 138750 RVA: 0x0096E61E File Offset: 0x0096C81E
 		public static implicit operator TFormulaValue(long value)
 		{
 			return TFormulaValue.FromLong(value);
 		}
 
-		// Token: 0x0602D72F RID: 186159 RVA: 0x00A42816 File Offset: 0x00A40A16
+		// Token: 0x06021DFF RID: 138751 RVA: 0x0096E626 File Offset: 0x0096C826
 		public static implicit operator TFormulaValue(float value)
 		{
 			return TFormulaValue.FromFloat(value);
 		}
 
-		// Token: 0x0602D730 RID: 186160 RVA: 0x00A4281E File Offset: 0x00A40A1E
+		// Token: 0x06021E00 RID: 138752 RVA: 0x0096E62E File Offset: 0x0096C82E
 		public static implicit operator TFormulaValue(double value)
 		{
 			return TFormulaValue.FromDouble(value);
 		}
 
-		// Token: 0x0602D731 RID: 186161 RVA: 0x00A42826 File Offset: 0x00A40A26
+		// Token: 0x06021E01 RID: 138753 RVA: 0x0096E636 File Offset: 0x0096C836
 		public static implicit operator TFormulaValue(bool value)
 		{
 			return TFormulaValue.FromBool(value);
 		}
 
-		// Token: 0x0602D732 RID: 186162 RVA: 0x00A4282E File Offset: 0x00A40A2E
+		// Token: 0x06021E02 RID: 138754 RVA: 0x0096E63E File Offset: 0x0096C83E
 		public static implicit operator TFormulaValue(string value)
 		{
 			return TFormulaValue.FromString(value);
 		}
 
-		// Token: 0x0602D733 RID: 186163 RVA: 0x00A42836 File Offset: 0x00A40A36
+		// Token: 0x06021E03 RID: 138755 RVA: 0x0096E646 File Offset: 0x0096C846
 		public static implicit operator TFormulaValue(Entity value)
 		{
 			return TFormulaValue.FromEntity(value);
 		}
 
-		// Token: 0x0602D734 RID: 186164 RVA: 0x00A4283E File Offset: 0x00A40A3E
+		// Token: 0x06021E04 RID: 138756 RVA: 0x0096E64E File Offset: 0x0096C84E
 		public static implicit operator TFormulaValue(int[] value)
 		{
 			return TFormulaValue.FromIntArray(value);
 		}
 
-		// Token: 0x0602D735 RID: 186165 RVA: 0x00A42846 File Offset: 0x00A40A46
+		// Token: 0x06021E05 RID: 138757 RVA: 0x0096E656 File Offset: 0x0096C856
 		public static implicit operator TFormulaValue(long[] value)
 		{
 			return TFormulaValue.FromLongArray(value);
 		}
 
-		// Token: 0x0602D736 RID: 186166 RVA: 0x00A4284E File Offset: 0x00A40A4E
+		// Token: 0x06021E06 RID: 138758 RVA: 0x0096E65E File Offset: 0x0096C85E
 		public static implicit operator TFormulaValue(double[] value)
 		{
 			return TFormulaValue.FromDoubleArray(value);
 		}
 
-		// Token: 0x0602D737 RID: 186167 RVA: 0x00A42856 File Offset: 0x00A40A56
+		// Token: 0x06021E07 RID: 138759 RVA: 0x0096E666 File Offset: 0x0096C866
 		public static implicit operator TFormulaValue(string[] value)
 		{
 			return TFormulaValue.FromStringArray(value);
 		}
 
-		// Token: 0x0602D738 RID: 186168 RVA: 0x00A4285E File Offset: 0x00A40A5E
+		// Token: 0x06021E08 RID: 138760 RVA: 0x0096E66E File Offset: 0x0096C86E
 		public static implicit operator TFormulaValue(ContextParam value)
 		{
 			return TFormulaValue.FromContext(value);
 		}
 
-		// Token: 0x0602D739 RID: 186169 RVA: 0x00A42866 File Offset: 0x00A40A66
+		// Token: 0x06021E09 RID: 138761 RVA: 0x0096E676 File Offset: 0x0096C876
 		public static implicit operator TFormulaValue(TagContainer value)
 		{
 			return TFormulaValue.FromTagContainer(value);
 		}
 
-		// Token: 0x0602D73A RID: 186170 RVA: 0x00A4286E File Offset: 0x00A40A6E
+		// Token: 0x06021E0A RID: 138762 RVA: 0x0096E67E File Offset: 0x0096C87E
 		public static implicit operator TFormulaValue(Vector value)
 		{
 			return TFormulaValue.FromVector(value);
 		}
 
-		// Token: 0x0602D73B RID: 186171 RVA: 0x00A42876 File Offset: 0x00A40A76
+		// Token: 0x06021E0B RID: 138763 RVA: 0x0096E686 File Offset: 0x0096C886
 		public static implicit operator TFormulaValue(Rotator value)
 		{
 			return TFormulaValue.FromRotator(value);
 		}
 
-		// Token: 0x0602D73C RID: 186172 RVA: 0x00A42880 File Offset: 0x00A40A80
+		// Token: 0x06021E0C RID: 138764 RVA: 0x0096E690 File Offset: 0x0096C890
 		public static implicit operator long[](TFormulaValue value)
 		{
 			long[] array;
@@ -848,7 +848,7 @@ namespace CSharpScript.Utils
 			return array;
 		}
 
-		// Token: 0x0602D73D RID: 186173 RVA: 0x00A428DC File Offset: 0x00A40ADC
+		// Token: 0x06021E0D RID: 138765 RVA: 0x0096E6EC File Offset: 0x0096C8EC
 		public static explicit operator int(TFormulaValue value)
 		{
 			int result;
@@ -863,7 +863,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D73E RID: 186174 RVA: 0x00A42934 File Offset: 0x00A40B34
+		// Token: 0x06021E0E RID: 138766 RVA: 0x0096E744 File Offset: 0x0096C944
 		public static explicit operator long(TFormulaValue value)
 		{
 			long result;
@@ -878,7 +878,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D73F RID: 186175 RVA: 0x00A4298C File Offset: 0x00A40B8C
+		// Token: 0x06021E0F RID: 138767 RVA: 0x0096E79C File Offset: 0x0096C99C
 		public static explicit operator float(TFormulaValue value)
 		{
 			float result;
@@ -893,7 +893,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D740 RID: 186176 RVA: 0x00A429E4 File Offset: 0x00A40BE4
+		// Token: 0x06021E10 RID: 138768 RVA: 0x0096E7F4 File Offset: 0x0096C9F4
 		public static explicit operator double(TFormulaValue value)
 		{
 			double result;
@@ -908,7 +908,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D741 RID: 186177 RVA: 0x00A42A3C File Offset: 0x00A40C3C
+		// Token: 0x06021E11 RID: 138769 RVA: 0x0096E84C File Offset: 0x0096CA4C
 		public static explicit operator bool(TFormulaValue value)
 		{
 			bool result;
@@ -923,7 +923,7 @@ namespace CSharpScript.Utils
 			return result;
 		}
 
-		// Token: 0x0602D742 RID: 186178 RVA: 0x00A42A94 File Offset: 0x00A40C94
+		// Token: 0x06021E12 RID: 138770 RVA: 0x0096E8A4 File Offset: 0x0096CAA4
 		public static explicit operator string(TFormulaValue value)
 		{
 			string text;
@@ -938,7 +938,7 @@ namespace CSharpScript.Utils
 			return text;
 		}
 
-		// Token: 0x0602D743 RID: 186179 RVA: 0x00A42AF0 File Offset: 0x00A40CF0
+		// Token: 0x06021E13 RID: 138771 RVA: 0x0096E900 File Offset: 0x0096CB00
 		public static explicit operator Entity(TFormulaValue value)
 		{
 			Entity entity;
@@ -953,7 +953,7 @@ namespace CSharpScript.Utils
 			return entity;
 		}
 
-		// Token: 0x0602D744 RID: 186180 RVA: 0x00A42B4C File Offset: 0x00A40D4C
+		// Token: 0x06021E14 RID: 138772 RVA: 0x0096E95C File Offset: 0x0096CB5C
 		public static explicit operator int[](TFormulaValue value)
 		{
 			int[] array;
@@ -968,7 +968,7 @@ namespace CSharpScript.Utils
 			return array;
 		}
 
-		// Token: 0x0602D745 RID: 186181 RVA: 0x00A42BA8 File Offset: 0x00A40DA8
+		// Token: 0x06021E15 RID: 138773 RVA: 0x0096E9B8 File Offset: 0x0096CBB8
 		public static explicit operator double[](TFormulaValue value)
 		{
 			double[] array;
@@ -983,7 +983,7 @@ namespace CSharpScript.Utils
 			return array;
 		}
 
-		// Token: 0x0602D746 RID: 186182 RVA: 0x00A42C04 File Offset: 0x00A40E04
+		// Token: 0x06021E16 RID: 138774 RVA: 0x0096EA14 File Offset: 0x0096CC14
 		public static explicit operator string[](TFormulaValue value)
 		{
 			string[] array;
@@ -998,7 +998,7 @@ namespace CSharpScript.Utils
 			return array;
 		}
 
-		// Token: 0x0602D747 RID: 186183 RVA: 0x00A42C60 File Offset: 0x00A40E60
+		// Token: 0x06021E17 RID: 138775 RVA: 0x0096EA70 File Offset: 0x0096CC70
 		public static explicit operator TagContainer(TFormulaValue value)
 		{
 			TagContainer tagContainer;
@@ -1013,7 +1013,7 @@ namespace CSharpScript.Utils
 			return tagContainer;
 		}
 
-		// Token: 0x0602D748 RID: 186184 RVA: 0x00A42CBC File Offset: 0x00A40EBC
+		// Token: 0x06021E18 RID: 138776 RVA: 0x0096EACC File Offset: 0x0096CCCC
 		public static explicit operator Vector(TFormulaValue value)
 		{
 			Vector vector;
@@ -1028,7 +1028,7 @@ namespace CSharpScript.Utils
 			return vector;
 		}
 
-		// Token: 0x0602D749 RID: 186185 RVA: 0x00A42D18 File Offset: 0x00A40F18
+		// Token: 0x06021E19 RID: 138777 RVA: 0x0096EB28 File Offset: 0x0096CD28
 		public static explicit operator Rotator(TFormulaValue value)
 		{
 			Rotator rotator;
@@ -1043,29 +1043,29 @@ namespace CSharpScript.Utils
 			return rotator;
 		}
 
-		// Token: 0x040184C6 RID: 99526
+		// Token: 0x04012AEE RID: 76526
 		private readonly double _doubleValue;
 
-		// Token: 0x040184C7 RID: 99527
+		// Token: 0x04012AEF RID: 76527
 		private readonly bool _boolValue;
 
-		// Token: 0x040184C8 RID: 99528
+		// Token: 0x04012AF0 RID: 76528
 		[Nullable(2)]
 		private readonly string _stringValue;
 
-		// Token: 0x040184C9 RID: 99529
+		// Token: 0x04012AF1 RID: 76529
 		[Nullable(2)]
 		private readonly Entity _entityValue;
 
-		// Token: 0x040184CA RID: 99530
+		// Token: 0x04012AF2 RID: 76530
 		[Nullable(2)]
 		private readonly double[] _doubleArrayValue;
 
-		// Token: 0x040184CB RID: 99531
+		// Token: 0x04012AF3 RID: 76531
 		[Nullable(2)]
 		private readonly ContextParam _contextValue;
 
-		// Token: 0x040184CC RID: 99532
+		// Token: 0x04012AF4 RID: 76532
 		[Nullable(new byte[]
 		{
 			2,
@@ -1073,15 +1073,15 @@ namespace CSharpScript.Utils
 		})]
 		private readonly string[] _stringArrayValue;
 
-		// Token: 0x040184CD RID: 99533
+		// Token: 0x04012AF5 RID: 76533
 		[Nullable(2)]
 		private readonly TagContainer _tagContainerValue;
 
-		// Token: 0x040184CE RID: 99534
+		// Token: 0x04012AF6 RID: 76534
 		[Nullable(2)]
 		private readonly Vector _vectorValue;
 
-		// Token: 0x040184CF RID: 99535
+		// Token: 0x04012AF7 RID: 76535
 		[Nullable(2)]
 		private readonly Rotator _rotatorValue;
 	}

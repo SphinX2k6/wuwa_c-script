@@ -8,19 +8,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F2D RID: 3885
+// Token: 0x020003E2 RID: 994
 [NullableContext(2)]
 [Nullable(0)]
 public class AchievementSearchContentItem : UiPanelBase
 {
-	// Token: 0x0600627D RID: 25213 RVA: 0x001347F6 File Offset: 0x001329F6
+	// Token: 0x06003615 RID: 13845 RVA: 0x0013D11E File Offset: 0x0013B31E
 	[NullableContext(1)]
 	public AchievementSearchContentItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x0600627E RID: 25214 RVA: 0x00134808 File Offset: 0x00132A08
+	// Token: 0x06003616 RID: 13846 RVA: 0x0013D130 File Offset: 0x0013B330
 	public UniTask Init()
 	{
 		AchievementSearchContentItem.<Init>d__8 <Init>d__;
@@ -31,7 +31,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600627F RID: 25215 RVA: 0x0013484C File Offset: 0x00132A4C
+	// Token: 0x06003617 RID: 13847 RVA: 0x0013D174 File Offset: 0x0013B374
 	[NullableContext(1)]
 	public FVector2D GetItemSize(Vector2D vector)
 	{
@@ -40,20 +40,20 @@ public class AchievementSearchContentItem : UiPanelBase
 		return vector.ToUeVector2D(false);
 	}
 
-	// Token: 0x06006280 RID: 25216 RVA: 0x0013487B File Offset: 0x00132A7B
+	// Token: 0x06003618 RID: 13848 RVA: 0x0013D1A3 File Offset: 0x0013B3A3
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x06006281 RID: 25217 RVA: 0x00134884 File Offset: 0x00132A84
+	// Token: 0x06003619 RID: 13849 RVA: 0x0013D1AC File Offset: 0x0013B3AC
 	[NullableContext(1)]
 	public AUIBaseActor GetUsingItem()
 	{
 		return (AUIBaseActor)base.GetRootItem().GetOwner();
 	}
 
-	// Token: 0x06006282 RID: 25218 RVA: 0x00134898 File Offset: 0x00132A98
+	// Token: 0x0600361A RID: 13850 RVA: 0x0013D1C0 File Offset: 0x0013B3C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -77,7 +77,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006283 RID: 25219 RVA: 0x001349A8 File Offset: 0x00132BA8
+	// Token: 0x0600361B RID: 13851 RVA: 0x0013D2D0 File Offset: 0x0013B4D0
 	protected override void OnStart()
 	{
 		this.AchievementProgressItem = new AchievementProgressItem(base.GetItem(6));
@@ -89,19 +89,19 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.AddEventListener();
 	}
 
-	// Token: 0x06006284 RID: 25220 RVA: 0x00134A24 File Offset: 0x00132C24
+	// Token: 0x0600361C RID: 13852 RVA: 0x0013D34C File Offset: 0x0013B54C
 	protected void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x06006285 RID: 25221 RVA: 0x00134A42 File Offset: 0x00132C42
+	// Token: 0x0600361D RID: 13853 RVA: 0x0013D36A File Offset: 0x0013B56A
 	protected void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataWithIdNotify, new Action<int>(this.OnAchievementDataWithIdNotify));
 	}
 
-	// Token: 0x06006286 RID: 25222 RVA: 0x00134A60 File Offset: 0x00132C60
+	// Token: 0x0600361E RID: 13854 RVA: 0x0013D388 File Offset: 0x0013B588
 	private void OnAchievementDataWithIdNotify(int id)
 	{
 		if (AchievementModel.Instance.AchievementSearchState)
@@ -122,13 +122,13 @@ public class AchievementSearchContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006287 RID: 25223 RVA: 0x00134AFF File Offset: 0x00132CFF
+	// Token: 0x0600361F RID: 13855 RVA: 0x0013D427 File Offset: 0x0013B627
 	private void OnClickButton()
 	{
 		AchievementController.Instance.RequestGetAchievementReward(false, this.AchievementData.GetId());
 	}
 
-	// Token: 0x06006288 RID: 25224 RVA: 0x00134B17 File Offset: 0x00132D17
+	// Token: 0x06003620 RID: 13856 RVA: 0x0013D43F File Offset: 0x0013B63F
 	[NullableContext(1)]
 	public void Update(AchievementSearchData data)
 	{
@@ -143,7 +143,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.RefreshAchievementProgressItem();
 	}
 
-	// Token: 0x06006289 RID: 25225 RVA: 0x00134B58 File Offset: 0x00132D58
+	// Token: 0x06003621 RID: 13857 RVA: 0x0013D480 File Offset: 0x0013B680
 	private void RefreshTitle()
 	{
 		if (AchievementModel.Instance.AchievementSearchState)
@@ -154,7 +154,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		base.GetText(2).SetText(this.AchievementData.GetTitle(), true);
 	}
 
-	// Token: 0x0600628A RID: 25226 RVA: 0x00134BAC File Offset: 0x00132DAC
+	// Token: 0x06003622 RID: 13858 RVA: 0x0013D4D4 File Offset: 0x0013B6D4
 	private void RefreshDesc()
 	{
 		if (AchievementModel.Instance.AchievementSearchState)
@@ -165,7 +165,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		base.GetText(4).SetText(this.AchievementData.GetDesc(), true);
 	}
 
-	// Token: 0x0600628B RID: 25227 RVA: 0x00134C00 File Offset: 0x00132E00
+	// Token: 0x06003623 RID: 13859 RVA: 0x0013D528 File Offset: 0x0013B728
 	private void RefreshProgress()
 	{
 		int? currentProgress = this.AchievementData.GetCurrentProgress();
@@ -177,7 +177,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x0600628C RID: 25228 RVA: 0x00134C58 File Offset: 0x00132E58
+	// Token: 0x06003624 RID: 13860 RVA: 0x0013D580 File Offset: 0x0013B780
 	private void RefreshStar()
 	{
 		if (this.StarItem != null)
@@ -189,25 +189,25 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.StarItem = new AchievementStarItem(count, this.AchievementData, base.GetItem(5));
 	}
 
-	// Token: 0x0600628D RID: 25229 RVA: 0x00134CB9 File Offset: 0x00132EB9
+	// Token: 0x06003625 RID: 13861 RVA: 0x0013D5E1 File Offset: 0x0013B7E1
 	private void RefreshRedPoint()
 	{
 		this.ConfirmItem.RefreshRedPoint(this.AchievementData.RedPoint());
 	}
 
-	// Token: 0x0600628E RID: 25230 RVA: 0x00134CD1 File Offset: 0x00132ED1
+	// Token: 0x06003626 RID: 13862 RVA: 0x0013D5F9 File Offset: 0x0013B7F9
 	private void RefreshConfirmBtnState()
 	{
 		this.ConfirmItem.SetActive(this.AchievementData.GetFinishState() == EAchievementStateEnum.CanGetReward);
 	}
 
-	// Token: 0x0600628F RID: 25231 RVA: 0x00134CEC File Offset: 0x00132EEC
+	// Token: 0x06003627 RID: 13863 RVA: 0x0013D614 File Offset: 0x0013B814
 	private void RefreshAchievementProgressItem()
 	{
 		this.AchievementProgressItem.RefreshState(this.AchievementData);
 	}
 
-	// Token: 0x06006290 RID: 25232 RVA: 0x00134D00 File Offset: 0x00132F00
+	// Token: 0x06003628 RID: 13864 RVA: 0x0013D628 File Offset: 0x0013B828
 	private void RefreshReward()
 	{
 		List<TItem> rewards = this.AchievementData.GetRewards();
@@ -217,7 +217,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006291 RID: 25233 RVA: 0x00134D30 File Offset: 0x00132F30
+	// Token: 0x06003629 RID: 13865 RVA: 0x0013D658 File Offset: 0x0013B858
 	private void RefreshRewardItem(TItem data)
 	{
 		AchievementGridItemData achievementGridItemData = new AchievementGridItemData();
@@ -226,7 +226,7 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.AchievementGridItem.Refresh(achievementGridItemData, false, 0);
 	}
 
-	// Token: 0x06006292 RID: 25234 RVA: 0x00134D71 File Offset: 0x00132F71
+	// Token: 0x0600362A RID: 13866 RVA: 0x0013D699 File Offset: 0x0013B899
 	protected override void OnBeforeDestroy()
 	{
 		if (this.StarItem != null)
@@ -237,44 +237,44 @@ public class AchievementSearchContentItem : UiPanelBase
 		this.RemoveEventListener();
 	}
 
-	// Token: 0x04002CB2 RID: 11442
+	// Token: 0x04002D4B RID: 11595
 	private AchievementStarItem StarItem;
 
-	// Token: 0x04002CB3 RID: 11443
+	// Token: 0x04002D4C RID: 11596
 	private AchievementData AchievementData;
 
-	// Token: 0x04002CB4 RID: 11444
+	// Token: 0x04002D4D RID: 11597
 	private AchievementProgressItem AchievementProgressItem;
 
-	// Token: 0x04002CB5 RID: 11445
+	// Token: 0x04002D4E RID: 11598
 	private AchievementGridItem AchievementGridItem;
 
-	// Token: 0x04002CB6 RID: 11446
+	// Token: 0x04002D4F RID: 11599
 	private AchievementProgressConfirmItem ConfirmItem;
 
-	// Token: 0x04002CB7 RID: 11447
+	// Token: 0x04002D50 RID: 11600
 	private static readonly int MaxStarCount = 3;
 
-	// Token: 0x04002CB8 RID: 11448
+	// Token: 0x04002D51 RID: 11601
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x02007575 RID: 30069
+	// Token: 0x02006709 RID: 26377
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D57 RID: 159063
+		// Token: 0x040220A2 RID: 139426
 		Confirm,
-		// Token: 0x04026D58 RID: 159064
+		// Token: 0x040220A3 RID: 139427
 		CommonGridItem,
-		// Token: 0x04026D59 RID: 159065
+		// Token: 0x040220A4 RID: 139428
 		Title,
-		// Token: 0x04026D5A RID: 159066
+		// Token: 0x040220A5 RID: 139429
 		Progress,
-		// Token: 0x04026D5B RID: 159067
+		// Token: 0x040220A6 RID: 139430
 		Desc,
-		// Token: 0x04026D5C RID: 159068
+		// Token: 0x040220A7 RID: 139431
 		StarPos,
-		// Token: 0x04026D5D RID: 159069
+		// Token: 0x040220A8 RID: 139432
 		ProgressBox
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000E1 RID: 225
+	// Token: 0x020000F0 RID: 240
 	public class ConfigBanInfoByTypeAndReason : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000547 RID: 1351 RVA: 0x000776F4 File Offset: 0x000758F4
+		// Token: 0x060005A1 RID: 1441 RVA: 0x0007D058 File Offset: 0x0007B258
 		static ConfigBanInfoByTypeAndReason()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBanInfoByTypeAndReason.CreateStaticDefaultValue), new Action(ConfigBanInfoByTypeAndReason.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000548 RID: 1352 RVA: 0x00077714 File Offset: 0x00075914
+		// Token: 0x060005A2 RID: 1442 RVA: 0x0007D078 File Offset: 0x0007B278
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBanInfoByTypeAndReason.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000549 RID: 1353 RVA: 0x00077793 File Offset: 0x00075993
+		// Token: 0x060005A3 RID: 1443 RVA: 0x0007D0F7 File Offset: 0x0007B2F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBanInfoByTypeAndReason.LogPair = null;
 			ConfigBanInfoByTypeAndReason.HandleId = 0;
 		}
 
-		// Token: 0x0600054A RID: 1354 RVA: 0x000777A1 File Offset: 0x000759A1
+		// Token: 0x060005A4 RID: 1444 RVA: 0x0007D105 File Offset: 0x0007B305
 		public static void Init()
 		{
 			ConfigBanInfoByTypeAndReason.HandleId = ConfigCommon.InitDataStatement(ConfigBanInfoByTypeAndReason.HandleId, "db_report.db", "select BinData from `BanInfo` where BanType=? AND BanReason=?");
 		}
 
-		// Token: 0x0600054B RID: 1355 RVA: 0x000777BC File Offset: 0x000759BC
+		// Token: 0x060005A5 RID: 1445 RVA: 0x0007D120 File Offset: 0x0007B320
 		public static BanInfo? GetConfig(int p0BanType, int p1BanReason, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBanInfoByTypeAndReason.HandleId, ConfigBanInfoByTypeAndReason.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new BanInfo?(rootAsBanInfo);
 		}
 
-		// Token: 0x0400060B RID: 1547
+		// Token: 0x04000674 RID: 1652
 		private const string DB = "db_report.db";
 
-		// Token: 0x0400060C RID: 1548
+		// Token: 0x04000675 RID: 1653
 		private const string FILE = "f.封禁处罚.xlsx";
 
-		// Token: 0x0400060D RID: 1549
+		// Token: 0x04000676 RID: 1654
 		private const string TABLE = "BanInfo";
 
-		// Token: 0x0400060E RID: 1550
+		// Token: 0x04000677 RID: 1655
 		private const string COMMAND = "select BinData from `BanInfo` where BanType=? AND BanReason=?";
 
-		// Token: 0x0400060F RID: 1551
+		// Token: 0x04000678 RID: 1656
 		private const string KEY_PREFIX = "BanInfoByTypeAndReason";
 
-		// Token: 0x04000610 RID: 1552
+		// Token: 0x04000679 RID: 1657
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000611 RID: 1553
+		// Token: 0x0400067A RID: 1658
 		private static int HandleId;
 	}
 }

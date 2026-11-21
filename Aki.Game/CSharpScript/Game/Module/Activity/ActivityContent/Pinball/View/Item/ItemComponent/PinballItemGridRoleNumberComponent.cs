@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x0200635C RID: 25436
+	// Token: 0x020052DA RID: 21210
 	public class PinballItemGridRoleNumberComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x0604000A RID: 262154 RVA: 0x00F7BB68 File Offset: 0x00F79D68
+		// Token: 0x06034CCB RID: 216267 RVA: 0x00EC2AC8 File Offset: 0x00EC0CC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604000B RID: 262155 RVA: 0x00F7BBB0 File Offset: 0x00F79DB0
+		// Token: 0x06034CCC RID: 216268 RVA: 0x00EC2B10 File Offset: 0x00EC0D10
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseNum";
 		}
 
-		// Token: 0x0604000C RID: 262156 RVA: 0x00F7BBB8 File Offset: 0x00F79DB8
+		// Token: 0x06034CCD RID: 216269 RVA: 0x00EC2B18 File Offset: 0x00EC0D18
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{
@@ -43,10 +43,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.SetSpriteByPath(resourcePath, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x0200C57E RID: 50558
+		// Token: 0x0200AF65 RID: 44901
 		private enum EComponent
 		{
-			// Token: 0x0403B9B8 RID: 244152
+			// Token: 0x0403631A RID: 221978
 			NumberSprite
 		}
 	}

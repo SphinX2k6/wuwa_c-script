@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001AA8 RID: 6824
+	// Token: 0x020004B2 RID: 1202
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroANSCurveTrailDecal")]
 	[UnrealStructLayout(160, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 160)]
 	public class UKuroANSCurveTrailDecal : UKuroAnimNotifyState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601943A RID: 103482 RVA: 0x00255D0D File Offset: 0x00253F0D
+		// Token: 0x06006F18 RID: 28440 RVA: 0x000A4675 File Offset: 0x000A2875
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroANSCurveTrailDecal._ClassPtr;
 		}
 
-		// Token: 0x0601943B RID: 103483 RVA: 0x00255D1C File Offset: 0x00253F1C
+		// Token: 0x06006F19 RID: 28441 RVA: 0x000A4684 File Offset: 0x000A2884
 		public UKuroANSCurveTrailDecal() : this(BuiltinUtils.AllocNativeUObject(UKuroANSCurveTrailDecal.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601943C RID: 103484 RVA: 0x00255D44 File Offset: 0x00253F44
+		// Token: 0x06006F1A RID: 28442 RVA: 0x000A46AC File Offset: 0x000A28AC
 		[NullableContext(1)]
 		public UKuroANSCurveTrailDecal(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroANSCurveTrailDecal.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170064B3 RID: 25779
-		// (get) Token: 0x0601943D RID: 103485 RVA: 0x00255D77 File Offset: 0x00253F77
-		// (set) Token: 0x0601943E RID: 103486 RVA: 0x00255D8B File Offset: 0x00253F8B
+		// Token: 0x170015B0 RID: 5552
+		// (get) Token: 0x06006F1B RID: 28443 RVA: 0x000A46DF File Offset: 0x000A28DF
+		// (set) Token: 0x06006F1C RID: 28444 RVA: 0x000A46F3 File Offset: 0x000A28F3
 		public unsafe FName AttachSocketName
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170064B4 RID: 25780
-		// (get) Token: 0x0601943F RID: 103487 RVA: 0x00255DA0 File Offset: 0x00253FA0
-		// (set) Token: 0x06019440 RID: 103488 RVA: 0x00255DB4 File Offset: 0x00253FB4
+		// Token: 0x170015B1 RID: 5553
+		// (get) Token: 0x06006F1D RID: 28445 RVA: 0x000A4708 File Offset: 0x000A2908
+		// (set) Token: 0x06006F1E RID: 28446 RVA: 0x000A471C File Offset: 0x000A291C
 		public unsafe FTransform AttachTransform
 		{
 			get
@@ -58,52 +58,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170064B5 RID: 25781
-		// (get) Token: 0x06019441 RID: 103489 RVA: 0x00255DC9 File Offset: 0x00253FC9
-		// (set) Token: 0x06019442 RID: 103490 RVA: 0x00255DDD File Offset: 0x00253FDD
-		[Nullable(2)]
-		public unsafe UKuroCurveTrailDecalConfig Config
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroCurveTrailDecalConfig>(base.NativePtr / (IntPtr)sizeof(void*) + UKuroANSCurveTrailDecal.__PropertyOffset_Config);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKuroANSCurveTrailDecal.__PropertyOffset_Config, value);
-			}
-		}
-
-		// Token: 0x06019443 RID: 103491 RVA: 0x00255DF2 File Offset: 0x00253FF2
+		// Token: 0x06006F1F RID: 28447 RVA: 0x000A4731 File Offset: 0x000A2931
 		static UKuroANSCurveTrailDecal()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroANSCurveTrailDecal");
 		}
 
-		// Token: 0x06019444 RID: 103492 RVA: 0x00255E00 File Offset: 0x00254000
+		// Token: 0x06006F20 RID: 28448 RVA: 0x000A473F File Offset: 0x000A293F
 		protected UKuroANSCurveTrailDecal(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400DC70 RID: 56432
+		// Token: 0x04003009 RID: 12297
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroANSCurveTrailDecal";
 
-		// Token: 0x0400DC71 RID: 56433
+		// Token: 0x0400300A RID: 12298
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400DC72 RID: 56434
+		// Token: 0x0400300B RID: 12299
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400DC73 RID: 56435
+		// Token: 0x0400300C RID: 12300
 		internal static int __PropertyOffset_AttachSocketName;
 
-		// Token: 0x0400DC74 RID: 56436
+		// Token: 0x0400300D RID: 12301
 		internal static int __PropertyOffset_AttachTransform;
-
-		// Token: 0x0400DC75 RID: 56437
-		internal static int __PropertyOffset_Config;
 	}
 }

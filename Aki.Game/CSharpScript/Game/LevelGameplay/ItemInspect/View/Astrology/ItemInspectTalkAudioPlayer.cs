@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DEA RID: 28138
+	// Token: 0x02005F69 RID: 24425
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ItemInspectTalkAudioPlayer
 	{
-		// Token: 0x06044A4D RID: 281165 RVA: 0x010F0938 File Offset: 0x010EEB38
+		// Token: 0x0603ABB1 RID: 240561 RVA: 0x0109AB84 File Offset: 0x01098D84
 		public void Play(ITalkItem talkItem)
 		{
 			PlotAudio? plotAudio = (talkItem != null && talkItem.PlayVoice.GetValueOrDefault() && !string.IsNullOrEmpty(talkItem.TidTalk)) ? ConfigPlotAudioById.GetConfig(talkItem.TidTalk, true) : null;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}, 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044A4E RID: 281166 RVA: 0x010F0A98 File Offset: 0x010EEC98
+		// Token: 0x0603ABB2 RID: 240562 RVA: 0x0109ACE4 File Offset: 0x01098EE4
 		public void Stop()
 		{
 			this.RemoveWaitAudioLoadTimer();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.PlotPlayEventResult = 0;
 		}
 
-		// Token: 0x06044A4F RID: 281167 RVA: 0x010F0AF4 File Offset: 0x010EECF4
+		// Token: 0x0603ABB3 RID: 240563 RVA: 0x0109AD40 File Offset: 0x01098F40
 		private void RemoveWaitAudioLoadTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.WaitAudioLoadTimer))
@@ -90,16 +90,16 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.WaitAudioLoadTimer = null;
 		}
 
-		// Token: 0x04023B4F RID: 146255
+		// Token: 0x0401EDF1 RID: 126449
 		private const int MAX_LOAD_AUDIO_TIME = 3000;
 
-		// Token: 0x04023B50 RID: 146256
+		// Token: 0x0401EDF2 RID: 126450
 		private TimerHandle WaitAudioLoadTimer;
 
-		// Token: 0x04023B51 RID: 146257
+		// Token: 0x0401EDF3 RID: 126451
 		private int PlotPlayEventResult;
 
-		// Token: 0x04023B52 RID: 146258
+		// Token: 0x0401EDF4 RID: 126452
 		private int CallbackEnableId;
 	}
 }

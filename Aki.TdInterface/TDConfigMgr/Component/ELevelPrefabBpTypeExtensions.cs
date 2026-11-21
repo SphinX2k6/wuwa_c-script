@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200098A RID: 2442
+	// Token: 0x02000A3D RID: 2621
 	public static class ELevelPrefabBpTypeExtensions
 	{
-		// Token: 0x0600369E RID: 13982 RVA: 0x0008E414 File Offset: 0x0008C614
+		// Token: 0x06003A25 RID: 14885 RVA: 0x00096380 File Offset: 0x00094580
 		public static string ToEnumString(this ELevelPrefabBpType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600369F RID: 13983 RVA: 0x0008E45C File Offset: 0x0008C65C
+		// Token: 0x06003A26 RID: 14886 RVA: 0x000963C8 File Offset: 0x000945C8
 		public static ELevelPrefabBpType FromString(string name)
 		{
 			ELevelPrefabBpType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036A0 RID: 13984 RVA: 0x0008E488 File Offset: 0x0008C688
+		// Token: 0x06003A27 RID: 14887 RVA: 0x000963F4 File Offset: 0x000945F4
 		public static bool TryFromString(string name, out ELevelPrefabBpType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036A1 RID: 13985 RVA: 0x0008E4DE File Offset: 0x0008C6DE
+		// Token: 0x06003A28 RID: 14888 RVA: 0x0009644A File Offset: 0x0009464A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036A2 RID: 13986 RVA: 0x0008E4FE File Offset: 0x0008C6FE
+		// Token: 0x06003A29 RID: 14889 RVA: 0x0009646A File Offset: 0x0009466A
 		public static ELevelPrefabBpType[] GetValues()
 		{
 			return new ELevelPrefabBpType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036A3 RID: 13987 RVA: 0x0008E50E File Offset: 0x0008C70E
+		// Token: 0x06003A2A RID: 14890 RVA: 0x0009647A File Offset: 0x0009467A
 		public static string[] GetNames()
 		{
 			return new string[]

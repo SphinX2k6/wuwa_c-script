@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200095F RID: 2399
+	// Token: 0x020009AA RID: 2474
 	public class ConfigSoarById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600384E RID: 14414 RVA: 0x00197E91 File Offset: 0x00196091
+		// Token: 0x06003A10 RID: 14864 RVA: 0x001A50B1 File Offset: 0x001A32B1
 		static ConfigSoarById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSoarById.CreateStaticDefaultValue), new Action(ConfigSoarById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600384F RID: 14415 RVA: 0x00197EB0 File Offset: 0x001960B0
+		// Token: 0x06003A11 RID: 14865 RVA: 0x001A50D0 File Offset: 0x001A32D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSoarById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003850 RID: 14416 RVA: 0x00197F2F File Offset: 0x0019612F
+		// Token: 0x06003A12 RID: 14866 RVA: 0x001A514F File Offset: 0x001A334F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSoarById.LogPair = null;
 			ConfigSoarById.HandleId = 0;
 		}
 
-		// Token: 0x06003851 RID: 14417 RVA: 0x00197F3D File Offset: 0x0019613D
+		// Token: 0x06003A13 RID: 14867 RVA: 0x001A515D File Offset: 0x001A335D
 		public static void Init()
 		{
 			ConfigSoarById.HandleId = ConfigCommon.InitDataStatement(ConfigSoarById.HandleId, "db_soar.db", "select BinData from `Soar` where Id=?");
 		}
 
-		// Token: 0x06003852 RID: 14418 RVA: 0x00197F58 File Offset: 0x00196158
+		// Token: 0x06003A14 RID: 14868 RVA: 0x001A5178 File Offset: 0x001A3378
 		public static Soar? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSoarById.HandleId, ConfigSoarById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Soar?(rootAsSoar);
 		}
 
-		// Token: 0x0400417F RID: 16767
+		// Token: 0x0400438C RID: 17292
 		private const string DB = "db_soar.db";
 
-		// Token: 0x04004180 RID: 16768
+		// Token: 0x0400438D RID: 17293
 		private const string FILE = "a.翱翔.xlsx";
 
-		// Token: 0x04004181 RID: 16769
+		// Token: 0x0400438E RID: 17294
 		private const string TABLE = "Soar";
 
-		// Token: 0x04004182 RID: 16770
+		// Token: 0x0400438F RID: 17295
 		private const string COMMAND = "select BinData from `Soar` where Id=?";
 
-		// Token: 0x04004183 RID: 16771
+		// Token: 0x04004390 RID: 17296
 		private const string KEY_PREFIX = "SoarById";
 
-		// Token: 0x04004184 RID: 16772
+		// Token: 0x04004391 RID: 17297
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004185 RID: 16773
+		// Token: 0x04004392 RID: 17298
 		private static int HandleId;
 	}
 }

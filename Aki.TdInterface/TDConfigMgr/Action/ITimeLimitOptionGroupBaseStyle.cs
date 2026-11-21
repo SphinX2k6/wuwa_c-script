@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC2 RID: 8130
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002207 RID: 8711
 	public class ITimeLimitOptionGroupBaseStyle
 	{
-		// Token: 0x0600B2DA RID: 45786 RVA: 0x001A0AD4 File Offset: 0x0019ECD4
+		// Token: 0x0600BDE8 RID: 48616 RVA: 0x001B6F84 File Offset: 0x001B5184
 		private ITimeLimitOptionGroupBaseStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2DB RID: 45787 RVA: 0x001A0B0C File Offset: 0x0019ED0C
+		// Token: 0x0600BDE9 RID: 48617 RVA: 0x001B6FBC File Offset: 0x001B51BC
 		public static ITimeLimitOptionGroupBaseStyle Create([Nullable(2)] ITimeLimitOptionGroupBaseStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2DC RID: 45788 RVA: 0x001A0B1F File Offset: 0x0019ED1F
+		// Token: 0x0600BDEA RID: 48618 RVA: 0x001B6FCF File Offset: 0x001B51CF
 		public static ITimeLimitOptionGroupBaseStyle CreateFromSetValue([Nullable(2)] ITimeLimitOptionGroupBaseStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2DD RID: 45789 RVA: 0x001A0B32 File Offset: 0x0019ED32
+		// Token: 0x0600BDEB RID: 48619 RVA: 0x001B6FE2 File Offset: 0x001B51E2
 		public ITimeLimitOptionGroupBaseStyle_SetValue ToSetValue()
 		{
 			return new ITimeLimitOptionGroupBaseStyle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003722 RID: 14114
-		// (get) Token: 0x0600B2DE RID: 45790 RVA: 0x001A0B45 File Offset: 0x0019ED45
-		// (set) Token: 0x0600B2DF RID: 45791 RVA: 0x001A0B70 File Offset: 0x0019ED70
+		// Token: 0x170039F9 RID: 14841
+		// (get) Token: 0x0600BDEC RID: 48620 RVA: 0x001B6FF5 File Offset: 0x001B51F5
+		// (set) Token: 0x0600BDED RID: 48621 RVA: 0x001B7020 File Offset: 0x001B5220
 		public virtual ETimeLimitOptionGroupStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BFB RID: 27643
+		// Token: 0x040071FA RID: 29178
 		[Nullable(2)]
 		protected ITimeLimitOptionGroupBaseStyle FbInstance;
 
-		// Token: 0x04006BFC RID: 27644
+		// Token: 0x040071FB RID: 29179
 		[Nullable(2)]
 		protected ITimeLimitOptionGroupBaseStyle_SetValue PocoInterface;
 	}

@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE4 RID: 24292
+	// Token: 0x02004ECB RID: 20171
 	public enum EShipTowerItemComponent
 	{
-		// Token: 0x04020414 RID: 132116
+		// Token: 0x0401AEE6 RID: 110310
 		LevelText,
-		// Token: 0x04020415 RID: 132117
+		// Token: 0x0401AEE7 RID: 110311
 		LockItem,
-		// Token: 0x04020416 RID: 132118
+		// Token: 0x0401AEE8 RID: 110312
 		DoingItem,
-		// Token: 0x04020417 RID: 132119
+		// Token: 0x0401AEE9 RID: 110313
 		ScoreTexture,
-		// Token: 0x04020418 RID: 132120
+		// Token: 0x0401AEEA RID: 110314
 		NextItem
 	}
 }

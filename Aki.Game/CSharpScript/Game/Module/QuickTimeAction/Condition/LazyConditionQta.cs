@@ -5,17 +5,17 @@ using AkiClient.Game.Aki.Data.QuickTimeAction;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F59 RID: 20313
+	// Token: 0x02003F22 RID: 16162
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LazyConditionQta : LazyConditionBase
 	{
-		// Token: 0x06034109 RID: 213257 RVA: 0x00C3606F File Offset: 0x00C3426F
+		// Token: 0x06028F77 RID: 167799 RVA: 0x00B7F80F File Offset: 0x00B7DA0F
 		public LazyConditionQta(TLazyConditionResultCallback callback) : base(callback)
 		{
 		}
 
-		// Token: 0x0603410A RID: 213258 RVA: 0x00C36078 File Offset: 0x00C34278
+		// Token: 0x06028F78 RID: 167800 RVA: 0x00B7F818 File Offset: 0x00B7DA18
 		public void SetQtaCondition(SQtaCondition ueCondition, SQta qtaConfig, int payloadId, bool immediatelyCheck = true)
 		{
 			CfgLazyConditionGroup cfgLazyConditionGroup = new CfgLazyConditionGroup();

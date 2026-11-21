@@ -8,19 +8,19 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020016E3 RID: 5859
+// Token: 0x02000B9B RID: 2971
 [UClass("/Game/Aki/TypeScript/Game/Module/AiInteraction/AiWeapon/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/AiInteraction/AiWeapon/AiWeaponBlueprintFunctionLibrary.AiWeaponBlueprintFunctionLibrary_C")]
 public class AiWeaponBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600A7E8 RID: 42984 RVA: 0x0025B2E8 File Offset: 0x002594E8
+	// Token: 0x06007BC8 RID: 31688 RVA: 0x002656F0 File Offset: 0x002638F0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CharacterRequestPickUpAiWeapon(int entityId, int itemEntityId)
 	{
 		AiWeaponModel.Instance.Net.SendHoldWeaponPush(entityId, itemEntityId);
 	}
 
-	// Token: 0x0600A7E9 RID: 42985 RVA: 0x0025B2FC File Offset: 0x002594FC
+	// Token: 0x06007BC9 RID: 31689 RVA: 0x00265704 File Offset: 0x00263904
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (AiWeaponBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -30,52 +30,52 @@ public class AiWeaponBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnre
 		return AiWeaponBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0600A7EA RID: 42986 RVA: 0x0025B320 File Offset: 0x00259520
+	// Token: 0x06007BCA RID: 31690 RVA: 0x00265728 File Offset: 0x00263928
 	public AiWeaponBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(AiWeaponBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600A7EB RID: 42987 RVA: 0x0025B348 File Offset: 0x00259548
+	// Token: 0x06007BCB RID: 31691 RVA: 0x00265750 File Offset: 0x00263950
 	[NullableContext(1)]
 	public AiWeaponBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AiWeaponBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600A7EC RID: 42988 RVA: 0x0025B37B File Offset: 0x0025957B
+	// Token: 0x06007BCC RID: 31692 RVA: 0x00265783 File Offset: 0x00263983
 	protected AiWeaponBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600A7ED RID: 42989 RVA: 0x0025B384 File Offset: 0x00259584
+	// Token: 0x06007BCD RID: 31693 RVA: 0x0026578C File Offset: 0x0026398C
 	protected unsafe static void __CPPCALL_CharacterRequestPickUpAiWeapon_Implementation(AiWeaponBlueprintFunctionLibrary.__CharacterRequestPickUpAiWeapon_FunctionParams* __Params)
 	{
 		AiWeaponBlueprintFunctionLibrary.CharacterRequestPickUpAiWeapon(__Params->entityId, __Params->itemEntityId);
 	}
 
-	// Token: 0x04004BA9 RID: 19369
+	// Token: 0x04004C50 RID: 19536
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/AiInteraction/AiWeapon/AiWeaponBlueprintFunctionLibrary.AiWeaponBlueprintFunctionLibrary_C";
 
-	// Token: 0x04004BAA RID: 19370
+	// Token: 0x04004C51 RID: 19537
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04004BAB RID: 19371
+	// Token: 0x04004C52 RID: 19538
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02007CB6 RID: 31926
+	// Token: 0x02006E3B RID: 28219
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __CharacterRequestPickUpAiWeapon_FunctionParams
 	{
-		// Token: 0x04028E80 RID: 167552
+		// Token: 0x040241A9 RID: 147881
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04028E81 RID: 167553
+		// Token: 0x040241AA RID: 147882
 		[FieldOffset(4)]
 		public int itemEntityId;
 
-		// Token: 0x04028E82 RID: 167554
+		// Token: 0x040241AB RID: 147883
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}

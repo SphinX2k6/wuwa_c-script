@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Manufacture.Compose;
 
-// Token: 0x0200187D RID: 6269
+// Token: 0x02000D36 RID: 3382
 [NullableContext(1)]
 [Nullable(0)]
 public class ComposePurificationSort : CommonSort<EComposePurificationSortWayType>
 {
-	// Token: 0x0600B7D5 RID: 47061 RVA: 0x00299ABC File Offset: 0x00297CBC
+	// Token: 0x06008BBE RID: 35774 RVA: 0x002A41D4 File Offset: 0x002A23D4
 	private int SortMake(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -50,7 +50,7 @@ public class ComposePurificationSort : CommonSort<EComposePurificationSortWayTyp
 		}
 	}
 
-	// Token: 0x0600B7D6 RID: 47062 RVA: 0x00299B68 File Offset: 0x00297D68
+	// Token: 0x06008BBF RID: 35775 RVA: 0x002A4280 File Offset: 0x002A2480
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -86,7 +86,7 @@ public class ComposePurificationSort : CommonSort<EComposePurificationSortWayTyp
 		}
 	}
 
-	// Token: 0x0600B7D7 RID: 47063 RVA: 0x00299BE2 File Offset: 0x00297DE2
+	// Token: 0x06008BC0 RID: 35776 RVA: 0x002A42FA File Offset: 0x002A24FA
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EComposePurificationSortWayType.Make, new TSortResult(this.SortMake));

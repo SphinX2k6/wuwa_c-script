@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017B2 RID: 6066
+// Token: 0x02000C6B RID: 3179
 [NullableContext(1)]
 [Nullable(0)]
 public class AutoAttachExhibitionItem
 {
-	// Token: 0x0600B10F RID: 45327 RVA: 0x00281490 File Offset: 0x0027F690
+	// Token: 0x060084F7 RID: 34039 RVA: 0x0028BA28 File Offset: 0x00289C28
 	public AutoAttachExhibitionItem(AActor actor, int index, int showNum)
 	{
 		this.Actor = (actor.GetComponentByClass(UUIItem.StaticClass()) as UUIItem);
@@ -17,20 +17,20 @@ public class AutoAttachExhibitionItem
 		this.ShowItemNum = showNum;
 	}
 
-	// Token: 0x0600B110 RID: 45328 RVA: 0x00281504 File Offset: 0x0027F704
+	// Token: 0x060084F8 RID: 34040 RVA: 0x0028BA9C File Offset: 0x00289C9C
 	public void SetViewItem(AutoAttachExhibitionItemAbstract view)
 	{
 		this.ViewItem = view;
 		this.ViewItem.SetAttachItem(this);
 	}
 
-	// Token: 0x0600B111 RID: 45329 RVA: 0x00281519 File Offset: 0x0027F719
+	// Token: 0x060084F9 RID: 34041 RVA: 0x0028BAB1 File Offset: 0x00289CB1
 	public void SetActive(bool state)
 	{
 		this.Actor.SetUIActive(state);
 	}
 
-	// Token: 0x0600B112 RID: 45330 RVA: 0x00281527 File Offset: 0x0027F727
+	// Token: 0x060084FA RID: 34042 RVA: 0x0028BABF File Offset: 0x00289CBF
 	public void Init(AutoAttachExhibitionView exhibitionView)
 	{
 		this.ExhibitionView = exhibitionView;
@@ -41,98 +41,98 @@ public class AutoAttachExhibitionItem
 		this.OnUnSelect();
 	}
 
-	// Token: 0x0600B113 RID: 45331 RVA: 0x0028155B File Offset: 0x0027F75B
+	// Token: 0x060084FB RID: 34043 RVA: 0x0028BAF3 File Offset: 0x00289CF3
 	public void ForceUnSelectItem()
 	{
 		this.SelectState = false;
 		this.OnUnSelect();
 	}
 
-	// Token: 0x0600B114 RID: 45332 RVA: 0x0028156A File Offset: 0x0027F76A
+	// Token: 0x060084FC RID: 34044 RVA: 0x0028BB02 File Offset: 0x00289D02
 	protected virtual void OnInit()
 	{
 	}
 
-	// Token: 0x0600B115 RID: 45333 RVA: 0x0028156C File Offset: 0x0027F76C
+	// Token: 0x060084FD RID: 34045 RVA: 0x0028BB04 File Offset: 0x00289D04
 	public void OnControllerDragStart()
 	{
 		this.DragState = true;
 	}
 
-	// Token: 0x0600B116 RID: 45334 RVA: 0x00281575 File Offset: 0x0027F775
+	// Token: 0x060084FE RID: 34046 RVA: 0x0028BB0D File Offset: 0x00289D0D
 	public void MoveItem(Number offset)
 	{
 		this.OnMoveItem(offset);
 		this.ViewItem.OnMoveItem(offset);
 	}
 
-	// Token: 0x0600B117 RID: 45335 RVA: 0x00281590 File Offset: 0x0027F790
+	// Token: 0x060084FF RID: 34047 RVA: 0x0028BB28 File Offset: 0x00289D28
 	protected virtual void OnMoveItem(Number vectorX)
 	{
 	}
 
-	// Token: 0x0600B118 RID: 45336 RVA: 0x00281592 File Offset: 0x0027F792
+	// Token: 0x06008500 RID: 34048 RVA: 0x0028BB2A File Offset: 0x00289D2A
 	protected void OnMoveFromRightToLeft()
 	{
 		this.ViewItem.OnChangeDirection(1);
 	}
 
-	// Token: 0x0600B119 RID: 45337 RVA: 0x002815A0 File Offset: 0x0027F7A0
+	// Token: 0x06008501 RID: 34049 RVA: 0x0028BB38 File Offset: 0x00289D38
 	protected void OnMoveFromLeftToRight()
 	{
 		this.ViewItem.OnChangeDirection(-1);
 	}
 
-	// Token: 0x0600B11A RID: 45338 RVA: 0x002815AE File Offset: 0x0027F7AE
+	// Token: 0x06008502 RID: 34050 RVA: 0x0028BB46 File Offset: 0x00289D46
 	protected void OnMoveFromDownToUp()
 	{
 		this.ViewItem.OnChangeDirection(1);
 	}
 
-	// Token: 0x0600B11B RID: 45339 RVA: 0x002815BC File Offset: 0x0027F7BC
+	// Token: 0x06008503 RID: 34051 RVA: 0x0028BB54 File Offset: 0x00289D54
 	protected void OnMoveFromUpToDown()
 	{
 		this.ViewItem.OnChangeDirection(-1);
 	}
 
-	// Token: 0x0600B11C RID: 45340 RVA: 0x002815CA File Offset: 0x0027F7CA
+	// Token: 0x06008504 RID: 34052 RVA: 0x0028BB62 File Offset: 0x00289D62
 	public void RefreshItem()
 	{
 		this.ViewItem.SetShowItemIndex(this.ShowItemIndex);
 		this.ViewItem.RefreshItem(this.ShowItemIndex);
 	}
 
-	// Token: 0x0600B11D RID: 45341 RVA: 0x002815EE File Offset: 0x0027F7EE
+	// Token: 0x06008505 RID: 34053 RVA: 0x0028BB86 File Offset: 0x00289D86
 	public void SetData(object param)
 	{
 		this.ViewItem.SetData(param);
 	}
 
-	// Token: 0x0600B11E RID: 45342 RVA: 0x002815FC File Offset: 0x0027F7FC
+	// Token: 0x06008506 RID: 34054 RVA: 0x0028BB94 File Offset: 0x00289D94
 	public void OnControllerDragEnd()
 	{
 		this.DragState = false;
 	}
 
-	// Token: 0x0600B11F RID: 45343 RVA: 0x00281605 File Offset: 0x0027F805
+	// Token: 0x06008507 RID: 34055 RVA: 0x0028BB9D File Offset: 0x00289D9D
 	public Number GetItemPositionX()
 	{
 		return this.Actor.GetAnchorOffsetX();
 	}
 
-	// Token: 0x0600B120 RID: 45344 RVA: 0x00281617 File Offset: 0x0027F817
+	// Token: 0x06008508 RID: 34056 RVA: 0x0028BBAF File Offset: 0x00289DAF
 	public Number GetItemPositionY()
 	{
 		return this.Actor.GetAnchorOffsetY();
 	}
 
-	// Token: 0x0600B121 RID: 45345 RVA: 0x00281629 File Offset: 0x0027F829
+	// Token: 0x06008509 RID: 34057 RVA: 0x0028BBC1 File Offset: 0x00289DC1
 	public bool GetSelectState()
 	{
 		return this.SelectState;
 	}
 
-	// Token: 0x0600B122 RID: 45346 RVA: 0x00281631 File Offset: 0x0027F831
+	// Token: 0x0600850A RID: 34058 RVA: 0x0028BBC9 File Offset: 0x00289DC9
 	public void Select()
 	{
 		if (!this.SelectState)
@@ -143,13 +143,13 @@ public class AutoAttachExhibitionItem
 		}
 	}
 
-	// Token: 0x0600B123 RID: 45347 RVA: 0x00281659 File Offset: 0x0027F859
+	// Token: 0x0600850B RID: 34059 RVA: 0x0028BBF1 File Offset: 0x00289DF1
 	protected virtual void OnSelect()
 	{
 		this.ViewItem.OnSelect();
 	}
 
-	// Token: 0x0600B124 RID: 45348 RVA: 0x00281666 File Offset: 0x0027F866
+	// Token: 0x0600850C RID: 34060 RVA: 0x0028BBFE File Offset: 0x00289DFE
 	public void UnSelect()
 	{
 		if (this.SelectState)
@@ -159,56 +159,56 @@ public class AutoAttachExhibitionItem
 		}
 	}
 
-	// Token: 0x0600B125 RID: 45349 RVA: 0x0028167D File Offset: 0x0027F87D
+	// Token: 0x0600850D RID: 34061 RVA: 0x0028BC15 File Offset: 0x00289E15
 	protected virtual void OnUnSelect()
 	{
 		this.ViewItem.OnUnSelect();
 	}
 
-	// Token: 0x0600B126 RID: 45350 RVA: 0x0028168A File Offset: 0x0027F88A
+	// Token: 0x0600850E RID: 34062 RVA: 0x0028BC22 File Offset: 0x00289E22
 	public void Clear()
 	{
 		this.ViewItem.Clear();
 	}
 
-	// Token: 0x04005042 RID: 20546
+	// Token: 0x040050EC RID: 20716
 	protected bool SelectState;
 
-	// Token: 0x04005043 RID: 20547
+	// Token: 0x040050ED RID: 20717
 	protected EAutoAttachExhibitionViewDirection? CurrentDirection;
 
-	// Token: 0x04005044 RID: 20548
+	// Token: 0x040050EE RID: 20718
 	protected int Index;
 
-	// Token: 0x04005045 RID: 20549
+	// Token: 0x040050EF RID: 20719
 	public Number InitGap = 0;
 
-	// Token: 0x04005046 RID: 20550
+	// Token: 0x040050F0 RID: 20720
 	protected int ShowItemNum;
 
-	// Token: 0x04005047 RID: 20551
+	// Token: 0x040050F1 RID: 20721
 	protected int DataLength;
 
-	// Token: 0x04005048 RID: 20552
+	// Token: 0x040050F2 RID: 20722
 	protected bool DragState;
 
-	// Token: 0x04005049 RID: 20553
+	// Token: 0x040050F3 RID: 20723
 	protected readonly UUIItem Actor;
 
-	// Token: 0x0400504A RID: 20554
+	// Token: 0x040050F4 RID: 20724
 	protected readonly Number FullSizeX;
 
-	// Token: 0x0400504B RID: 20555
+	// Token: 0x040050F5 RID: 20725
 	protected readonly Number FullSizeY;
 
-	// Token: 0x0400504C RID: 20556
+	// Token: 0x040050F6 RID: 20726
 	[Nullable(2)]
 	public AutoAttachExhibitionView ExhibitionView;
 
-	// Token: 0x0400504D RID: 20557
+	// Token: 0x040050F7 RID: 20727
 	[Nullable(2)]
 	private AutoAttachExhibitionItemAbstract ViewItem;
 
-	// Token: 0x0400504E RID: 20558
+	// Token: 0x040050F8 RID: 20728
 	public int ShowItemIndex;
 }

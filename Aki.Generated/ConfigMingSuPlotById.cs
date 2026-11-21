@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000540 RID: 1344
+	// Token: 0x02000556 RID: 1366
 	public class ConfigMingSuPlotById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F8D RID: 8077 RVA: 0x0010BBE0 File Offset: 0x00109DE0
+		// Token: 0x06002011 RID: 8209 RVA: 0x00112334 File Offset: 0x00110534
 		static ConfigMingSuPlotById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMingSuPlotById.CreateStaticDefaultValue), new Action(ConfigMingSuPlotById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F8E RID: 8078 RVA: 0x0010BC00 File Offset: 0x00109E00
+		// Token: 0x06002012 RID: 8210 RVA: 0x00112354 File Offset: 0x00110554
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMingSuPlotById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F8F RID: 8079 RVA: 0x0010BC7F File Offset: 0x00109E7F
+		// Token: 0x06002013 RID: 8211 RVA: 0x001123D3 File Offset: 0x001105D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMingSuPlotById.LogPair = null;
 			ConfigMingSuPlotById.HandleId = 0;
 		}
 
-		// Token: 0x06001F90 RID: 8080 RVA: 0x0010BC8D File Offset: 0x00109E8D
+		// Token: 0x06002014 RID: 8212 RVA: 0x001123E1 File Offset: 0x001105E1
 		public static void Init()
 		{
 			ConfigMingSuPlotById.HandleId = ConfigCommon.InitDataStatement(ConfigMingSuPlotById.HandleId, "db_dragon_ball.db", "select BinData from `MingSuPlot` where Id=?");
 		}
 
-		// Token: 0x06001F91 RID: 8081 RVA: 0x0010BCA8 File Offset: 0x00109EA8
+		// Token: 0x06002015 RID: 8213 RVA: 0x001123FC File Offset: 0x001105FC
 		public static MingSuPlot? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMingSuPlotById.HandleId, ConfigMingSuPlotById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MingSuPlot?(rootAsMingSuPlot);
 		}
 
-		// Token: 0x040024A4 RID: 9380
+		// Token: 0x0400253E RID: 9534
 		private const string DB = "db_dragon_ball.db";
 
-		// Token: 0x040024A5 RID: 9381
+		// Token: 0x0400253F RID: 9535
 		private const string FILE = "m.鸣素体.xlsx";
 
-		// Token: 0x040024A6 RID: 9382
+		// Token: 0x04002540 RID: 9536
 		private const string TABLE = "MingSuPlot";
 
-		// Token: 0x040024A7 RID: 9383
+		// Token: 0x04002541 RID: 9537
 		private const string COMMAND = "select BinData from `MingSuPlot` where Id=?";
 
-		// Token: 0x040024A8 RID: 9384
+		// Token: 0x04002542 RID: 9538
 		private const string KEY_PREFIX = "MingSuPlotById";
 
-		// Token: 0x040024A9 RID: 9385
+		// Token: 0x04002543 RID: 9539
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024AA RID: 9386
+		// Token: 0x04002544 RID: 9540
 		private static int HandleId;
 	}
 }

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005667 RID: 22119
+	// Token: 0x0200463D RID: 17981
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 	})]
 	public class ComposeGroupTitleItem : SyncGridProxyAbstract<ComposeGroupTitleData_Data>
 	{
-		// Token: 0x0603844D RID: 230477 RVA: 0x00D56088 File Offset: 0x00D54288
+		// Token: 0x0602D34B RID: 185163 RVA: 0x00CA4014 File Offset: 0x00CA2214
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603844E RID: 230478 RVA: 0x00D560D0 File Offset: 0x00D542D0
+		// Token: 0x0602D34C RID: 185164 RVA: 0x00CA405C File Offset: 0x00CA225C
 		[NullableContext(1)]
 		public override void Refresh(ComposeGroupTitleData_Data data)
 		{
@@ -48,10 +48,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			text2.SetUIActive(false);
 		}
 
-		// Token: 0x0200B823 RID: 47139
+		// Token: 0x0200A24C RID: 41548
 		private class ETitleComp
 		{
-			// Token: 0x04037B77 RID: 228215
+			// Token: 0x04032595 RID: 206229
 			public const int TxtTitle = 0;
 		}
 	}

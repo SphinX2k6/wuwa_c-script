@@ -8,16 +8,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200237C RID: 9084
+// Token: 0x02001861 RID: 6241
 public class CumulativePayShopContentPanel : UiPanelBase
 {
-	// Token: 0x06012263 RID: 74339 RVA: 0x00475F88 File Offset: 0x00474188
+	// Token: 0x0600F713 RID: 63251 RVA: 0x00483108 File Offset: 0x00481308
 	private void OnPreviewCheckClick()
 	{
 		PayShopUtil.OpenItemPreview(InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(this.PreviewItemConfigId)), this.PreviewItemConfigId);
 	}
 
-	// Token: 0x06012264 RID: 74340 RVA: 0x00475FAC File Offset: 0x004741AC
+	// Token: 0x0600F714 RID: 63252 RVA: 0x0048312C File Offset: 0x0048132C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -29,20 +29,20 @@ public class CumulativePayShopContentPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06012265 RID: 74341 RVA: 0x00475FF4 File Offset: 0x004741F4
+	// Token: 0x0600F715 RID: 63253 RVA: 0x00483174 File Offset: 0x00481374
 	protected override void OnStart()
 	{
 		this.ApplyCheckButtonState();
 	}
 
-	// Token: 0x06012266 RID: 74342 RVA: 0x00475FFC File Offset: 0x004741FC
+	// Token: 0x0600F716 RID: 63254 RVA: 0x0048317C File Offset: 0x0048137C
 	public void SetCheckButtonVisible(bool active)
 	{
 		this.CheckBtnVisible = active;
 		this.ApplyCheckButtonState();
 	}
 
-	// Token: 0x06012267 RID: 74343 RVA: 0x0047600C File Offset: 0x0047420C
+	// Token: 0x0600F717 RID: 63255 RVA: 0x0048318C File Offset: 0x0048138C
 	public void RefreshCheckButtonVisibility(int itemConfigId)
 	{
 		this.PreviewItemConfigId = itemConfigId;
@@ -50,7 +50,7 @@ public class CumulativePayShopContentPanel : UiPanelBase
 		this.SetCheckButtonVisible(PayShopDefine.PayShopNeedCheckBtnItemTypeSet.Contains(itemDataTypeByConfigId));
 	}
 
-	// Token: 0x06012268 RID: 74344 RVA: 0x00476044 File Offset: 0x00474244
+	// Token: 0x0600F718 RID: 63256 RVA: 0x004831C4 File Offset: 0x004813C4
 	private void ApplyCheckButtonState()
 	{
 		if (!this.CheckBtnVisible)
@@ -96,20 +96,20 @@ public class CumulativePayShopContentPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008929 RID: 35113
+	// Token: 0x04008A6E RID: 35438
 	[Nullable(2)]
 	private PayShopCheckBtnItem CheckBtnItem;
 
-	// Token: 0x0400892A RID: 35114
+	// Token: 0x04008A6F RID: 35439
 	private bool CheckBtnVisible;
 
-	// Token: 0x0400892B RID: 35115
+	// Token: 0x04008A70 RID: 35440
 	private int PreviewItemConfigId;
 
-	// Token: 0x02008918 RID: 35096
+	// Token: 0x02007AA2 RID: 31394
 	private enum EComponents
 	{
-		// Token: 0x0402C8FC RID: 182524
+		// Token: 0x04027C14 RID: 162836
 		BtnItem
 	}
 }

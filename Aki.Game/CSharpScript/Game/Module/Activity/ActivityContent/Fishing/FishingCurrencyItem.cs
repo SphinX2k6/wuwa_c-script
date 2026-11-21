@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006606 RID: 26118
+	// Token: 0x02005584 RID: 21892
 	public class FishingCurrencyItem : UiPanelBase
 	{
-		// Token: 0x06041752 RID: 268114 RVA: 0x00FD9FA8 File Offset: 0x00FD81A8
+		// Token: 0x06036417 RID: 222231 RVA: 0x00F21028 File Offset: 0x00F1F228
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041753 RID: 268115 RVA: 0x00FDA138 File Offset: 0x00FD8338
+		// Token: 0x06036418 RID: 222232 RVA: 0x00F211B8 File Offset: 0x00F1F3B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingCurrencyItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041754 RID: 268116 RVA: 0x00FDA17C File Offset: 0x00FD837C
+		// Token: 0x06036419 RID: 222233 RVA: 0x00F211FC File Offset: 0x00F1F3FC
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.FishingShipDataRefresh, new Action(this.FishingShipDataRefresh));
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SetSpriteByPath(resourcePath, sprite, false, null, null);
 		}
 
-		// Token: 0x06041755 RID: 268117 RVA: 0x00FDA230 File Offset: 0x00FD8430
+		// Token: 0x0603641A RID: 222234 RVA: 0x00F212B0 File Offset: 0x00F1F4B0
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingShipDataRefresh, new Action(this.FishingShipDataRefresh));
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			shipData.RemoveAttributeListener(EAttributeType.LifeMax, new Action<EAttributeType, float, float>(this.FishingShipAttributeRefresh));
 		}
 
-		// Token: 0x06041756 RID: 268118 RVA: 0x00FDA288 File Offset: 0x00FD8488
+		// Token: 0x0603641B RID: 222235 RVA: 0x00F21308 File Offset: 0x00F1F508
 		protected override void OnBeforeShow()
 		{
 			this.RefreshItem();
 		}
 
-		// Token: 0x06041757 RID: 268119 RVA: 0x00FDA290 File Offset: 0x00FD8490
+		// Token: 0x0603641C RID: 222236 RVA: 0x00F21310 File Offset: 0x00F1F510
 		public void RefreshItem()
 		{
 			FishingShipData shipData = FishingModel.Instance.GetShipData();
@@ -122,19 +122,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			lowPowerTips.SetUiActive(currentHp < (float)valueOrDefault);
 		}
 
-		// Token: 0x06041758 RID: 268120 RVA: 0x00FDA301 File Offset: 0x00FD8501
+		// Token: 0x0603641D RID: 222237 RVA: 0x00F21381 File Offset: 0x00F1F581
 		private void OnClickButton()
 		{
 			HelpController.Instance.OpenHelpById(186);
 		}
 
-		// Token: 0x06041759 RID: 268121 RVA: 0x00FDA312 File Offset: 0x00FD8512
+		// Token: 0x0603641E RID: 222238 RVA: 0x00F21392 File Offset: 0x00F1F592
 		private void FishingShipAttributeRefresh(EAttributeType attrId, float oldValue, float newValue)
 		{
 			this.RefreshItem();
 		}
 
-		// Token: 0x0604175A RID: 268122 RVA: 0x00FDA31A File Offset: 0x00FD851A
+		// Token: 0x0603641F RID: 222239 RVA: 0x00F2139A File Offset: 0x00F1F59A
 		private void FishingShipDataRefresh()
 		{
 			this.RefreshItem();
@@ -143,38 +143,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			shipData.AddAttributeListener(EAttributeType.LifeMax, new Action<EAttributeType, float, float>(this.FishingShipAttributeRefresh));
 		}
 
-		// Token: 0x0402212B RID: 139563
+		// Token: 0x0401CA5C RID: 117340
 		[Nullable(2)]
 		private UiPanelBase LowPowerTips;
 
-		// Token: 0x0200C812 RID: 51218
+		// Token: 0x0200B1F5 RID: 45557
 		private class EComponentDefine
 		{
-			// Token: 0x0403C6B0 RID: 247472
+			// Token: 0x04036FF8 RID: 225272
 			public const int Texture = 0;
 
-			// Token: 0x0403C6B1 RID: 247473
+			// Token: 0x04036FF9 RID: 225273
 			public const int CountText = 1;
 
-			// Token: 0x0403C6B2 RID: 247474
+			// Token: 0x04036FFA RID: 225274
 			public const int Button = 2;
 
-			// Token: 0x0403C6B3 RID: 247475
+			// Token: 0x04036FFB RID: 225275
 			public const int TextureButton = 3;
 
-			// Token: 0x0403C6B4 RID: 247476
+			// Token: 0x04036FFC RID: 225276
 			public const int TextureTransition = 4;
 
-			// Token: 0x0403C6B5 RID: 247477
+			// Token: 0x04036FFD RID: 225277
 			public const int SliderItem = 5;
 
-			// Token: 0x0403C6B6 RID: 247478
+			// Token: 0x04036FFE RID: 225278
 			public const int SliderSprite = 6;
 
-			// Token: 0x0403C6B7 RID: 247479
+			// Token: 0x04036FFF RID: 225279
 			public const int SpriteIcon = 7;
 
-			// Token: 0x0403C6B8 RID: 247480
+			// Token: 0x04037000 RID: 225280
 			public const int MaxItem = 8;
 		}
 	}

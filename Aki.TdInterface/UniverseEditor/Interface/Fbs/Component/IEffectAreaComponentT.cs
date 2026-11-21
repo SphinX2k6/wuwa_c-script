@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200510C RID: 20748
+	// Token: 0x02005671 RID: 22129
 	public class IEffectAreaComponentT
 	{
-		// Token: 0x17009730 RID: 38704
-		// (get) Token: 0x060216EE RID: 136942 RVA: 0x004A45ED File Offset: 0x004A27ED
-		// (set) Token: 0x060216EF RID: 136943 RVA: 0x004A45F5 File Offset: 0x004A27F5
+		// Token: 0x17009F1D RID: 40733
+		// (get) Token: 0x06023642 RID: 144962 RVA: 0x004DE579 File Offset: 0x004DC779
+		// (set) Token: 0x06023643 RID: 144963 RVA: 0x004DE581 File Offset: 0x004DC781
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009731 RID: 38705
-		// (get) Token: 0x060216F0 RID: 136944 RVA: 0x004A45FE File Offset: 0x004A27FE
-		// (set) Token: 0x060216F1 RID: 136945 RVA: 0x004A4606 File Offset: 0x004A2806
+		// Token: 0x17009F1E RID: 40734
+		// (get) Token: 0x06023644 RID: 144964 RVA: 0x004DE58A File Offset: 0x004DC78A
+		// (set) Token: 0x06023645 RID: 144965 RVA: 0x004DE592 File Offset: 0x004DC792
 		public IBuffAreaT Config { get; set; }
 
-		// Token: 0x17009732 RID: 38706
-		// (get) Token: 0x060216F2 RID: 136946 RVA: 0x004A460F File Offset: 0x004A280F
-		// (set) Token: 0x060216F3 RID: 136947 RVA: 0x004A4617 File Offset: 0x004A2817
+		// Token: 0x17009F1F RID: 40735
+		// (get) Token: 0x06023646 RID: 144966 RVA: 0x004DE59B File Offset: 0x004DC79B
+		// (set) Token: 0x06023647 RID: 144967 RVA: 0x004DE5A3 File Offset: 0x004DC7A3
 		public byte NullMask { get; set; }
 
-		// Token: 0x060216F4 RID: 136948 RVA: 0x004A4620 File Offset: 0x004A2820
+		// Token: 0x06023648 RID: 144968 RVA: 0x004DE5AC File Offset: 0x004DC7AC
 		public IEffectAreaComponentT()
 		{
 			this.Disabled = false;

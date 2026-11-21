@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200270A RID: 9994
+// Token: 0x02001BF5 RID: 7157
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsBulletScreenPanel : UiPanelBase
 {
-	// Token: 0x060147BE RID: 83902 RVA: 0x0052C41C File Offset: 0x0052A61C
+	// Token: 0x06011CA0 RID: 72864 RVA: 0x0053B138 File Offset: 0x00539338
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147BF RID: 83903 RVA: 0x0052C440 File Offset: 0x0052A640
+	// Token: 0x06011CA1 RID: 72865 RVA: 0x0053B15C File Offset: 0x0053935C
 	protected override void OnStart()
 	{
 		this.TimerHandle = TimerSystem.FlowTimeInstance.Forever(new TTimerAction(this.OnTick), 20f, 1f, null, null, false);
@@ -56,7 +56,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		uiitem.SetUIActive(false);
 	}
 
-	// Token: 0x060147C0 RID: 83904 RVA: 0x0052C4FC File Offset: 0x0052A6FC
+	// Token: 0x06011CA2 RID: 72866 RVA: 0x0053B218 File Offset: 0x00539418
 	private void OnTick(float delta)
 	{
 		this.MoveBulletScreen(delta);
@@ -73,7 +73,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		this.ShowBulletScreenAsync().Forget();
 	}
 
-	// Token: 0x060147C1 RID: 83905 RVA: 0x0052C554 File Offset: 0x0052A754
+	// Token: 0x06011CA3 RID: 72867 RVA: 0x0053B270 File Offset: 0x00539470
 	private void MoveBulletScreen(float delta)
 	{
 		float num = delta * this.BulletScreenSpeed;
@@ -98,7 +98,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147C2 RID: 83906 RVA: 0x0052C638 File Offset: 0x0052A838
+	// Token: 0x06011CA4 RID: 72868 RVA: 0x0053B354 File Offset: 0x00539554
 	private UniTask ShowBulletScreenAsync()
 	{
 		RacingBetsBulletScreenPanel.<ShowBulletScreenAsync>d__21 <ShowBulletScreenAsync>d__;
@@ -109,7 +109,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return <ShowBulletScreenAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060147C3 RID: 83907 RVA: 0x0052C67C File Offset: 0x0052A87C
+	// Token: 0x06011CA5 RID: 72869 RVA: 0x0053B398 File Offset: 0x00539598
 	private void RemoveBulletScreen(RacingBetsBulletScreenItem bulletScreenItem)
 	{
 		this.BulletScreenItemList.Remove(bulletScreenItem);
@@ -122,7 +122,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		bulletScreenItem.OccupiedTracks.Clear();
 	}
 
-	// Token: 0x060147C4 RID: 83908 RVA: 0x0052C708 File Offset: 0x0052A908
+	// Token: 0x06011CA6 RID: 72870 RVA: 0x0053B424 File Offset: 0x00539624
 	private void InitBulletScreenBornPosition(int bulletScreenId, RacingBetsBulletScreenItem bulletScreenItem)
 	{
 		int bulletScreenTrackCount = this.GetBulletScreenTrackCount(bulletScreenId);
@@ -149,7 +149,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147C5 RID: 83909 RVA: 0x0052C7C3 File Offset: 0x0052A9C3
+	// Token: 0x06011CA7 RID: 72871 RVA: 0x0053B4DF File Offset: 0x005396DF
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerHandle != null)
@@ -159,7 +159,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147C6 RID: 83910 RVA: 0x0052C7E8 File Offset: 0x0052A9E8
+	// Token: 0x06011CA8 RID: 72872 RVA: 0x0053B504 File Offset: 0x00539704
 	private int GetRandomTrack(int trackCount)
 	{
 		int i = 0;
@@ -182,7 +182,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return 0;
 	}
 
-	// Token: 0x060147C7 RID: 83911 RVA: 0x0052C848 File Offset: 0x0052AA48
+	// Token: 0x06011CA9 RID: 72873 RVA: 0x0053B564 File Offset: 0x00539764
 	private bool CheckCanPushBulletScreen()
 	{
 		int bulletScreenId;
@@ -209,7 +209,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x060147C8 RID: 83912 RVA: 0x0052C8BC File Offset: 0x0052AABC
+	// Token: 0x06011CAA RID: 72874 RVA: 0x0053B5D8 File Offset: 0x005397D8
 	private bool CheckMultiTrackCanPushBulletScreen(int track, int trackCount)
 	{
 		for (int i = 0; i < trackCount; i++)
@@ -222,7 +222,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x060147C9 RID: 83913 RVA: 0x0052C8E4 File Offset: 0x0052AAE4
+	// Token: 0x06011CAB RID: 72875 RVA: 0x0053B600 File Offset: 0x00539800
 	private bool CheckTrackCanPushBulletScreen(int track)
 	{
 		RacingBetsBulletScreenItem racingBetsBulletScreenItem;
@@ -234,7 +234,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return rootItem == null || rootItem.GetAnchorOffsetX() + racingBetsBulletScreenItem.GetBulletScreenItemWidth() < this.ViewportWidth;
 	}
 
-	// Token: 0x060147CA RID: 83914 RVA: 0x0052C924 File Offset: 0x0052AB24
+	// Token: 0x06011CAC RID: 72876 RVA: 0x0053B640 File Offset: 0x00539840
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -250,7 +250,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return <GetBulletScreenItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060147CB RID: 83915 RVA: 0x0052C968 File Offset: 0x0052AB68
+	// Token: 0x06011CAD RID: 72877 RVA: 0x0053B684 File Offset: 0x00539884
 	private int GetBulletScreenTrackCount(int bulletScreenId)
 	{
 		RacingBetsBulletScreen? racingBetsBulletScreen = RacingBetsConfig.Instance.GetRacingBetsBulletScreen(bulletScreenId);
@@ -265,7 +265,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return 1;
 	}
 
-	// Token: 0x060147CC RID: 83916 RVA: 0x0052C9A1 File Offset: 0x0052ABA1
+	// Token: 0x06011CAE RID: 72878 RVA: 0x0053B6BD File Offset: 0x005398BD
 	[NullableContext(2)]
 	private UUIItem CreateBulletActor()
 	{
@@ -276,7 +276,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		return LguiUtil.Instance.CopyItem(this.TemplateGridActor.GetUIItem(), base.GetRootItem());
 	}
 
-	// Token: 0x060147CD RID: 83917 RVA: 0x0052C9C8 File Offset: 0x0052ABC8
+	// Token: 0x06011CAF RID: 72879 RVA: 0x0053B6E4 File Offset: 0x005398E4
 	public void SetBulletScreenShowType(ERacingBetsBulletScreenShowType showType)
 	{
 		if (showType == ERacingBetsBulletScreenShowType.Full)
@@ -287,7 +287,7 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		this.BulletTrackCount = (int)Math.Floor((double)(this.ViewportHeight / this.BulletScreenItemHeight / 2f));
 	}
 
-	// Token: 0x060147CE RID: 83918 RVA: 0x0052CA14 File Offset: 0x0052AC14
+	// Token: 0x06011CB0 RID: 72880 RVA: 0x0053B730 File Offset: 0x00539930
 	public void PushBulletScreen(IReadOnlyList<int> bulletScreenIdList, bool isSelf)
 	{
 		if (isSelf)
@@ -298,61 +298,61 @@ public class RacingBetsBulletScreenPanel : UiPanelBase
 		this.BulletScreenIdList = new List<int>(bulletScreenIdList);
 	}
 
-	// Token: 0x04009A18 RID: 39448
+	// Token: 0x04009B70 RID: 39792
 	private float ViewportHeight;
 
-	// Token: 0x04009A19 RID: 39449
+	// Token: 0x04009B71 RID: 39793
 	private float ViewportWidth;
 
-	// Token: 0x04009A1A RID: 39450
+	// Token: 0x04009B72 RID: 39794
 	private readonly float BulletScreenItemHeight = 80f;
 
-	// Token: 0x04009A1B RID: 39451
+	// Token: 0x04009B73 RID: 39795
 	private readonly float BulletScreenInternal = 200f;
 
-	// Token: 0x04009A1C RID: 39452
+	// Token: 0x04009B74 RID: 39796
 	private readonly float BulletScreenSpeed = 0.2f;
 
-	// Token: 0x04009A1D RID: 39453
+	// Token: 0x04009B75 RID: 39797
 	private readonly int MaxRandomTime = 5;
 
-	// Token: 0x04009A1E RID: 39454
+	// Token: 0x04009B76 RID: 39798
 	private float BulletScreenCurInternal;
 
-	// Token: 0x04009A1F RID: 39455
+	// Token: 0x04009B77 RID: 39799
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04009A20 RID: 39456
+	// Token: 0x04009B78 RID: 39800
 	private readonly Dictionary<int, RacingBetsBulletScreenItem> BulletTrackMap = new Dictionary<int, RacingBetsBulletScreenItem>();
 
-	// Token: 0x04009A21 RID: 39457
+	// Token: 0x04009B79 RID: 39801
 	private int BulletTrackCount;
 
-	// Token: 0x04009A22 RID: 39458
+	// Token: 0x04009B7A RID: 39802
 	private readonly HashSet<RacingBetsBulletScreenItem> BulletScreenItemList = new HashSet<RacingBetsBulletScreenItem>();
 
-	// Token: 0x04009A23 RID: 39459
+	// Token: 0x04009B7B RID: 39803
 	private readonly List<RacingBetsBulletScreenItem> BulletScreenItemPool = new List<RacingBetsBulletScreenItem>();
 
-	// Token: 0x04009A24 RID: 39460
+	// Token: 0x04009B7C RID: 39804
 	private List<int> BulletScreenIdList = new List<int>();
 
-	// Token: 0x04009A25 RID: 39461
+	// Token: 0x04009B7D RID: 39805
 	private readonly List<int> SelfBulletScreenIdList = new List<int>();
 
-	// Token: 0x04009A26 RID: 39462
+	// Token: 0x04009B7E RID: 39806
 	private readonly List<RacingBetsBulletScreenItem> PendingRemoveList = new List<RacingBetsBulletScreenItem>();
 
-	// Token: 0x04009A27 RID: 39463
+	// Token: 0x04009B7F RID: 39807
 	[Nullable(2)]
 	private AUIBaseActor TemplateGridActor;
 
-	// Token: 0x02008D56 RID: 36182
+	// Token: 0x02007EDF RID: 32479
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402DDD9 RID: 187865
+		// Token: 0x040290F0 RID: 168176
 		BulletContent
 	}
 }

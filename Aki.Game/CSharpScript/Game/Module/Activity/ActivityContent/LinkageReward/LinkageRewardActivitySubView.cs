@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006555 RID: 25941
+	// Token: 0x020054D3 RID: 21715
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LinkageRewardActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x06041007 RID: 266247 RVA: 0x00FC0A44 File Offset: 0x00FBEC44
+		// Token: 0x06035CCC RID: 220364 RVA: 0x00F07A2C File Offset: 0x00F05C2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041008 RID: 266248 RVA: 0x00FC0B52 File Offset: 0x00FBED52
+		// Token: 0x06035CCD RID: 220365 RVA: 0x00F07B3A File Offset: 0x00F05D3A
 		protected override void OnSetData()
 		{
 			this.LinkageRewardData = (this.ActivityBaseData as LinkageRewardActivityData);
 		}
 
-		// Token: 0x06041009 RID: 266249 RVA: 0x00FC0B68 File Offset: 0x00FBED68
+		// Token: 0x06035CCE RID: 220366 RVA: 0x00F07B50 File Offset: 0x00F05D50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LinkageRewardActivitySubView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604100A RID: 266250 RVA: 0x00FC0BAC File Offset: 0x00FBEDAC
+		// Token: 0x06035CCF RID: 220367 RVA: 0x00F07B94 File Offset: 0x00F05D94
 		protected override void OnStart()
 		{
 			this.RewardItemA1.OnClickToGet = new Action<int, int, bool>(this.OnGetReward);
@@ -71,25 +71,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.TitleComponent.ApplyLinkageSubTitleVisible(false);
 		}
 
-		// Token: 0x0604100B RID: 266251 RVA: 0x00FC0C49 File Offset: 0x00FBEE49
+		// Token: 0x06035CD0 RID: 220368 RVA: 0x00F07C31 File Offset: 0x00F05E31
 		protected override void OnRefreshView()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityBaseData.Id);
 		}
 
-		// Token: 0x0604100C RID: 266252 RVA: 0x00FC0C66 File Offset: 0x00FBEE66
+		// Token: 0x06035CD1 RID: 220369 RVA: 0x00F07C4E File Offset: 0x00F05E4E
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0604100D RID: 266253 RVA: 0x00FC0C84 File Offset: 0x00FBEE84
+		// Token: 0x06035CD2 RID: 220370 RVA: 0x00F07C6C File Offset: 0x00F05E6C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x0604100E RID: 266254 RVA: 0x00FC0CA4 File Offset: 0x00FBEEA4
+		// Token: 0x06035CD3 RID: 220371 RVA: 0x00F07C8C File Offset: 0x00F05E8C
 		protected override UniTask OnBeforeShowSelfAsync()
 		{
 			LinkageRewardActivitySubView.<OnBeforeShowSelfAsync>d__23 <OnBeforeShowSelfAsync>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604100F RID: 266255 RVA: 0x00FC0CE7 File Offset: 0x00FBEEE7
+		// Token: 0x06035CD4 RID: 220372 RVA: 0x00F07CCF File Offset: 0x00F05ECF
 		public override void SetActive(bool visibility)
 		{
 			if (!visibility)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			base.SetActive(visibility);
 		}
 
-		// Token: 0x06041010 RID: 266256 RVA: 0x00FC0D01 File Offset: 0x00FBEF01
+		// Token: 0x06035CD5 RID: 220373 RVA: 0x00F07CE9 File Offset: 0x00F05EE9
 		public override void OnCommonViewStateChange(bool show)
 		{
 			this.CanApplyGamepadFocus = !show;
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06041011 RID: 266257 RVA: 0x00FC0D34 File Offset: 0x00FBEF34
+		// Token: 0x06035CD6 RID: 220374 RVA: 0x00F07D1C File Offset: 0x00F05F1C
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x06041012 RID: 266258 RVA: 0x00FC0D3C File Offset: 0x00FBEF3C
+		// Token: 0x06035CD7 RID: 220375 RVA: 0x00F07D24 File Offset: 0x00F05F24
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06041013 RID: 266259 RVA: 0x00FC0D77 File Offset: 0x00FBEF77
+		// Token: 0x06035CD8 RID: 220376 RVA: 0x00F07D5F File Offset: 0x00F05F5F
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			if (this.ActivityBaseData.Id != id)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.ScheduleRefreshRewardLayout();
 		}
 
-		// Token: 0x06041014 RID: 266260 RVA: 0x00FC0D8E File Offset: 0x00FBEF8E
+		// Token: 0x06035CD9 RID: 220377 RVA: 0x00F07D76 File Offset: 0x00F05F76
 		private void ScheduleRefreshRewardLayout()
 		{
 			if (this.HasPendingRefreshRewardLayout)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}, null, null);
 		}
 
-		// Token: 0x06041015 RID: 266261 RVA: 0x00FC0DBC File Offset: 0x00FBEFBC
+		// Token: 0x06035CDA RID: 220378 RVA: 0x00F07DA4 File Offset: 0x00F05FA4
 		private void RefreshRewardLayout(bool playGridAnimForListB = false)
 		{
 			LinkageRewardActivitySubView.<>c__DisplayClass30_0 CS$<>8__locals1 = new LinkageRewardActivitySubView.<>c__DisplayClass30_0();
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			progressPanel.Refresh(keepRewardDataList, this.LinkageRewardData.GetCurrentCheckInDay());
 		}
 
-		// Token: 0x06041016 RID: 266262 RVA: 0x00FC0EAC File Offset: 0x00FBF0AC
+		// Token: 0x06035CDB RID: 220379 RVA: 0x00F07E94 File Offset: 0x00F06094
 		[NullableContext(1)]
 		private void CacheRewardItemBScrollView(UUIHorizontalLayout contentLayout)
 		{
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06041017 RID: 266263 RVA: 0x00FC0F44 File Offset: 0x00FBF144
+		// Token: 0x06035CDC RID: 220380 RVA: 0x00F07F2C File Offset: 0x00F0612C
 		private void TryAutoScrollRewardItemB(int targetIndex)
 		{
 			if (this.HasAutoScrolledRewardItemB || targetIndex < 0)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06041018 RID: 266264 RVA: 0x00FC0F9F File Offset: 0x00FBF19F
+		// Token: 0x06035CDD RID: 220381 RVA: 0x00F07F87 File Offset: 0x00F06187
 		[NullableContext(1)]
 		private LinkageRewardRewardItem InitRewardItemB()
 		{
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			};
 		}
 
-		// Token: 0x06041019 RID: 266265 RVA: 0x00FC0FB8 File Offset: 0x00FBF1B8
+		// Token: 0x06035CDE RID: 220382 RVA: 0x00F07FA0 File Offset: 0x00F061A0
 		[NullableContext(1)]
 		private int FindPreferredRewardIndex(List<TimePointRewardData> normalRewardList)
 		{
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return 0;
 		}
 
-		// Token: 0x0604101A RID: 266266 RVA: 0x00FC1038 File Offset: 0x00FBF238
+		// Token: 0x06035CDF RID: 220383 RVA: 0x00F08020 File Offset: 0x00F06220
 		private bool TryAlignGamepadEntryFocus(int targetIndex, int totalCount)
 		{
 			if (!Info.Instance.IsInGamepad() || totalCount <= 0 || targetIndex < 0)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return true;
 		}
 
-		// Token: 0x0604101B RID: 266267 RVA: 0x00FC1114 File Offset: 0x00FBF314
+		// Token: 0x06035CE0 RID: 220384 RVA: 0x00F080FC File Offset: 0x00F062FC
 		private void ScheduleApplyPendingFocus(int totalCount)
 		{
 			if (!Info.Instance.IsInGamepad() || totalCount <= 0)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.TryApplyPendingFocusWithRetry(requestId, totalCount, 600);
 		}
 
-		// Token: 0x0604101C RID: 266268 RVA: 0x00FC115C File Offset: 0x00FBF35C
+		// Token: 0x06035CE1 RID: 220385 RVA: 0x00F08144 File Offset: 0x00F06344
 		private void TryApplyPendingFocusWithRetry(int requestId, int totalCount, int remainRetryCount)
 		{
 			TimerSystem.Instance.Next(delegate(float _)
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}, null, null);
 		}
 
-		// Token: 0x0604101D RID: 266269 RVA: 0x00FC11A4 File Offset: 0x00FBF3A4
+		// Token: 0x06035CE2 RID: 220386 RVA: 0x00F0818C File Offset: 0x00F0638C
 		private UUIItem FindFocusTargetRewardItem(int index, int totalCount)
 		{
 			GenericLayout<LinkageRewardRewardItem, TimePointRewardData> rewardItemBLayout = this.RewardItemBLayout;
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return uuiitem;
 		}
 
-		// Token: 0x0604101E RID: 266270 RVA: 0x00FC11E0 File Offset: 0x00FBF3E0
+		// Token: 0x06035CE3 RID: 220387 RVA: 0x00F081C8 File Offset: 0x00F063C8
 		private void RefreshKeepRewardPanel(LinkageRewardRewardItemA panel, TimePointRewardData data, int gridIndex)
 		{
 			if (panel == null)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			panel.RefreshWithNextState(data, false, gridIndex, hasConnector);
 		}
 
-		// Token: 0x0604101F RID: 266271 RVA: 0x00FC1214 File Offset: 0x00FBF414
+		// Token: 0x06035CE4 RID: 220388 RVA: 0x00F081FC File Offset: 0x00F063FC
 		private void OnGetReward(int id, int gridIndex, bool isKeepReward)
 		{
 			LinkageCheckInType fallbackType = isKeepReward ? LinkageCheckInType.KeepCheckIn : LinkageCheckInType.NormalCheckIn;
@@ -406,25 +406,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			});
 		}
 
-		// Token: 0x04021E4A RID: 138826
+		// Token: 0x0401C77B RID: 116603
 		private const int FocusRetryMaxCount = 600;
 
-		// Token: 0x04021E4B RID: 138827
+		// Token: 0x0401C77C RID: 116604
 		private LinkageRewardActivityData LinkageRewardData;
 
-		// Token: 0x04021E4C RID: 138828
+		// Token: 0x0401C77D RID: 116605
 		private LinkageRewardActivityTitle TitleComponent;
 
-		// Token: 0x04021E4D RID: 138829
+		// Token: 0x0401C77E RID: 116606
 		private LinkageRewardRewardItemA RewardItemA1;
 
-		// Token: 0x04021E4E RID: 138830
+		// Token: 0x0401C77F RID: 116607
 		private LinkageRewardRewardItemA RewardItemA2;
 
-		// Token: 0x04021E4F RID: 138831
+		// Token: 0x0401C780 RID: 116608
 		private LinkageRewardRewardItemA RewardItemA3;
 
-		// Token: 0x04021E50 RID: 138832
+		// Token: 0x0401C781 RID: 116609
 		[Nullable(new byte[]
 		{
 			2,
@@ -433,53 +433,53 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 		})]
 		private GenericLayout<LinkageRewardRewardItem, TimePointRewardData> RewardItemBLayout;
 
-		// Token: 0x04021E51 RID: 138833
+		// Token: 0x0401C782 RID: 116610
 		private UUIScrollViewWithScrollbarComponent RewardItemBScrollView;
 
-		// Token: 0x04021E52 RID: 138834
+		// Token: 0x0401C783 RID: 116611
 		private LinkageRewardProgressPanel ProgressPanel;
 
-		// Token: 0x04021E53 RID: 138835
+		// Token: 0x0401C784 RID: 116612
 		private bool HasAutoScrolledRewardItemB;
 
-		// Token: 0x04021E54 RID: 138836
+		// Token: 0x0401C785 RID: 116613
 		private int AutoScrollRewardItemBRequestId;
 
-		// Token: 0x04021E55 RID: 138837
+		// Token: 0x0401C786 RID: 116614
 		private bool HasPendingRefreshRewardLayout;
 
-		// Token: 0x04021E56 RID: 138838
+		// Token: 0x0401C787 RID: 116615
 		private int PendingFocusRewardIndex = -1;
 
-		// Token: 0x04021E57 RID: 138839
+		// Token: 0x0401C788 RID: 116616
 		private int PendingFocusRequestId;
 
-		// Token: 0x04021E58 RID: 138840
+		// Token: 0x0401C789 RID: 116617
 		private bool CanApplyGamepadFocus = true;
 
-		// Token: 0x0200C745 RID: 51013
+		// Token: 0x0200B12A RID: 45354
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403C34B RID: 246603
+			// Token: 0x04036C9D RID: 224413
 			public const int TitleItem = 0;
 
-			// Token: 0x0403C34C RID: 246604
+			// Token: 0x04036C9E RID: 224414
 			public const int RewardItemA1 = 1;
 
-			// Token: 0x0403C34D RID: 246605
+			// Token: 0x04036C9F RID: 224415
 			public const int RewardItemA2 = 2;
 
-			// Token: 0x0403C34E RID: 246606
+			// Token: 0x04036CA0 RID: 224416
 			public const int RewardItemA3 = 3;
 
-			// Token: 0x0403C34F RID: 246607
+			// Token: 0x04036CA1 RID: 224417
 			public const int Progress = 4;
 
-			// Token: 0x0403C350 RID: 246608
+			// Token: 0x04036CA2 RID: 224418
 			public const int Content = 5;
 
-			// Token: 0x0403C351 RID: 246609
+			// Token: 0x04036CA3 RID: 224419
 			public const int RewardItemB = 6;
 		}
 	}

@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x02007300 RID: 29440
+	// Token: 0x02006483 RID: 25731
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Selfie)]
 	public class PhotoCameraSelfieComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x0604840D RID: 295949 RVA: 0x012912B8 File Offset: 0x0128F4B8
+		// Token: 0x0603E859 RID: 256089 RVA: 0x01233C94 File Offset: 0x01231E94
 		protected override void OnModeChangeFinish(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			if (next != PhotoCameraType.Selfie)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.EnterSelfie(currentConfig);
 		}
 
-		// Token: 0x0604840E RID: 295950 RVA: 0x01291308 File Offset: 0x0128F508
+		// Token: 0x0603E85A RID: 256090 RVA: 0x01233CE4 File Offset: 0x01231EE4
 		protected override void OnTick(float deltaTime)
 		{
 			PhotoCameraType? currentMode = this.Host.CurrentMode;
@@ -76,19 +76,19 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SelfieLogicInstance.SetLeftHandIkByCameraPose(this.IkPointWorldLocation, this.HandWorldRotation, cameraPitchInGravity);
 		}
 
-		// Token: 0x0604840F RID: 295951 RVA: 0x01291477 File Offset: 0x0128F677
+		// Token: 0x0603E85B RID: 256091 RVA: 0x01233E53 File Offset: 0x01232053
 		protected override void OnDeactivate()
 		{
 			this.LeaveSelfie();
 		}
 
-		// Token: 0x06048410 RID: 295952 RVA: 0x0129147F File Offset: 0x0128F67F
+		// Token: 0x0603E85C RID: 256092 RVA: 0x01233E5B File Offset: 0x0123205B
 		protected override void OnDestroy()
 		{
 			this.LeaveSelfie();
 		}
 
-		// Token: 0x06048411 RID: 295953 RVA: 0x01291488 File Offset: 0x0128F688
+		// Token: 0x0603E85D RID: 256093 RVA: 0x01233E64 File Offset: 0x01232064
 		private void ApplyConfig(BP_PhotoCameraConfig_C config)
 		{
 			SPhotoCameraSelfieIkConfig selfieIkConfig = config.SelfieIkConfig;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ApplyHeadIkConfig(selfieIkConfig);
 		}
 
-		// Token: 0x06048412 RID: 295954 RVA: 0x012914BC File Offset: 0x0128F6BC
+		// Token: 0x0603E85E RID: 256094 RVA: 0x01233E98 File Offset: 0x01232098
 		private void ApplyHandIkRotationConfig(SPhotoCameraSelfieIkConfig selfieIk)
 		{
 			FVector ikcameraRotationOffsetFromHandSpace = selfieIk.IKCameraRotationOffsetFromHandSpace;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.HandRotationOffsetFromCameraSpace.Inverse(this.HandRotationOffsetFromCameraSpace);
 		}
 
-		// Token: 0x06048413 RID: 295955 RVA: 0x01291510 File Offset: 0x0128F710
+		// Token: 0x0603E85F RID: 256095 RVA: 0x01233EEC File Offset: 0x012320EC
 		private void ApplyHeadIkConfig(SPhotoCameraSelfieIkConfig selfieIk)
 		{
 			this.HeadIkPitchLimit[0] = selfieIk.HeadIKPitchLimitMin;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.HeadIkYawLimit[1] = selfieIk.HeadIKYawLimitMax;
 		}
 
-		// Token: 0x06048414 RID: 295956 RVA: 0x0129154C File Offset: 0x0128F74C
+		// Token: 0x0603E860 RID: 256096 RVA: 0x01233F28 File Offset: 0x01232128
 		private void RefreshConfig(BP_PhotoCameraConfig_C config)
 		{
 			SPhotoCameraSelfieIkConfig selfieIkConfig = config.SelfieIkConfig;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SelfieLogicInstance.UpdateSelfieSightLimit(this.HeadIkPitchLimit, this.HeadIkYawLimit);
 		}
 
-		// Token: 0x06048415 RID: 295957 RVA: 0x012915D8 File Offset: 0x0128F7D8
+		// Token: 0x0603E861 RID: 256097 RVA: 0x01233FB4 File Offset: 0x012321B4
 		private void EnterSelfie(BP_PhotoCameraConfig_C config)
 		{
 			TsBaseCharacter character = this.Host.Character;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SelfieLogicInstance.EnterSelfie(entity, this.HeadIkPitchLimit, this.HeadIkYawLimit, config.CharacterMoveSpeed);
 		}
 
-		// Token: 0x06048416 RID: 295958 RVA: 0x01291620 File Offset: 0x0128F820
+		// Token: 0x0603E862 RID: 256098 RVA: 0x01233FFC File Offset: 0x012321FC
 		private void LeaveSelfie()
 		{
 			if (this.SelfieLogicInstance.IsInSelfie())
@@ -150,43 +150,43 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048417 RID: 295959 RVA: 0x0129163A File Offset: 0x0128F83A
+		// Token: 0x0603E863 RID: 256099 RVA: 0x01234016 File Offset: 0x01232216
 		public SelfieLogic GetSelfieLogic()
 		{
 			return this.SelfieLogicInstance;
 		}
 
-		// Token: 0x040262CA RID: 156362
+		// Token: 0x040215B5 RID: 136629
 		private readonly SelfieLogic SelfieLogicInstance = new SelfieLogic();
 
-		// Token: 0x040262CB RID: 156363
+		// Token: 0x040215B6 RID: 136630
 		private readonly Quat CameraRotation = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040262CC RID: 156364
+		// Token: 0x040215B7 RID: 136631
 		private readonly Rotator IkCameraRotationOffsetFromHandSpace = Rotator.Create();
 
-		// Token: 0x040262CD RID: 156365
+		// Token: 0x040215B8 RID: 136632
 		private readonly Quat HandRotationOffsetFromCameraSpace = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040262CE RID: 156366
+		// Token: 0x040215B9 RID: 136633
 		private readonly Quat HandWorldRotation = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040262CF RID: 156367
+		// Token: 0x040215BA RID: 136634
 		private readonly Vector IkPointToCameraOffset = Vector.Create();
 
-		// Token: 0x040262D0 RID: 156368
+		// Token: 0x040215BB RID: 136635
 		private readonly Vector WorldIkOffset = Vector.Create();
 
-		// Token: 0x040262D1 RID: 156369
+		// Token: 0x040215BC RID: 136636
 		private readonly Vector IkPointWorldLocation = Vector.Create();
 
-		// Token: 0x040262D2 RID: 156370
+		// Token: 0x040215BD RID: 136637
 		private readonly Vector CameraForward = Vector.Create();
 
-		// Token: 0x040262D3 RID: 156371
+		// Token: 0x040215BE RID: 136638
 		private readonly float[] HeadIkPitchLimit = new float[2];
 
-		// Token: 0x040262D4 RID: 156372
+		// Token: 0x040215BF RID: 136639
 		private readonly float[] HeadIkYawLimit = new float[2];
 	}
 }

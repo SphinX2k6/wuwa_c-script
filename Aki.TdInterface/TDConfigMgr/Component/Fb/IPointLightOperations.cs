@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DEC RID: 3564
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EE8 RID: 3816
 	public class IPointLightOperations
 	{
-		// Token: 0x060050BE RID: 20670 RVA: 0x000C74D0 File Offset: 0x000C56D0
+		// Token: 0x060055E5 RID: 21989 RVA: 0x000D2D98 File Offset: 0x000D0F98
 		public static IPointLightOperations Create(IPointLightOperations? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AA3 RID: 6819
-		// (get) Token: 0x060050BF RID: 20671 RVA: 0x000C74EF File Offset: 0x000C56EF
+		// Token: 0x17001C10 RID: 7184
+		// (get) Token: 0x060055E6 RID: 21990 RVA: 0x000D2DB7 File Offset: 0x000D0FB7
 		public virtual IEntityMatch Match
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AA4 RID: 6820
-		// (get) Token: 0x060050C0 RID: 20672 RVA: 0x000C7523 File Offset: 0x000C5723
+		// Token: 0x17001C11 RID: 7185
+		// (get) Token: 0x060055E7 RID: 21991 RVA: 0x000D2DEB File Offset: 0x000D0FEB
 		public virtual string SwitchToTargetState
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E5D RID: 11869
+		// Token: 0x04003125 RID: 12581
 		private IPointLightOperations Instance;
 
-		// Token: 0x04002E5E RID: 11870
+		// Token: 0x04003126 RID: 12582
 		[Nullable(2)]
 		private IEntityMatch _MatchCache;
 
-		// Token: 0x04002E5F RID: 11871
+		// Token: 0x04003127 RID: 12583
 		private bool _MatchInited;
 	}
 }

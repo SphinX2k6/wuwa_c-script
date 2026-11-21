@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021A3 RID: 8611
+// Token: 0x02001687 RID: 5767
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymEntranceView : UiViewBase
 {
-	// Token: 0x06010BE8 RID: 68584 RVA: 0x00411745 File Offset: 0x0040F945
+	// Token: 0x0600E079 RID: 57465 RVA: 0x0041E02D File Offset: 0x0041C22D
 	public LordGymEntranceView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010BE9 RID: 68585 RVA: 0x00411750 File Offset: 0x0040F950
+	// Token: 0x0600E07A RID: 57466 RVA: 0x0041E038 File Offset: 0x0041C238
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -63,7 +63,7 @@ public class LordGymEntranceView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010BEA RID: 68586 RVA: 0x00411A3C File Offset: 0x0040FC3C
+	// Token: 0x0600E07B RID: 57467 RVA: 0x0041E324 File Offset: 0x0041C524
 	private UniTask InitScroll()
 	{
 		LordGymEntranceView.<InitScroll>d__11 <InitScroll>d__;
@@ -74,7 +74,7 @@ public class LordGymEntranceView : UiViewBase
 		return <InitScroll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010BEB RID: 68587 RVA: 0x00411A80 File Offset: 0x0040FC80
+	// Token: 0x0600E07C RID: 57468 RVA: 0x0041E368 File Offset: 0x0041C568
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymEntranceView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -85,7 +85,7 @@ public class LordGymEntranceView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010BEC RID: 68588 RVA: 0x00411AC3 File Offset: 0x0040FCC3
+	// Token: 0x0600E07D RID: 57469 RVA: 0x0041E3AB File Offset: 0x0041C5AB
 	protected override void OnAfterShow()
 	{
 		if (!LordGymController.Instance.IsInEntranceEntity())
@@ -94,7 +94,7 @@ public class LordGymEntranceView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010BED RID: 68589 RVA: 0x00411AD8 File Offset: 0x0040FCD8
+	// Token: 0x0600E07E RID: 57470 RVA: 0x0041E3C0 File Offset: 0x0041C5C0
 	protected override void OnStart()
 	{
 		LordGym? lordGymConfig = LordGymConfig.Instance.GetLordGymConfig(this.LordList[0]);
@@ -111,7 +111,7 @@ public class LordGymEntranceView : UiViewBase
 		this.SetDefaultSelect();
 	}
 
-	// Token: 0x06010BEE RID: 68590 RVA: 0x00411BAC File Offset: 0x0040FDAC
+	// Token: 0x0600E07F RID: 57471 RVA: 0x0041E494 File Offset: 0x0041C694
 	private void SetDefaultSelect()
 	{
 		this.DefaultLord = this.LordList[0];
@@ -132,32 +132,32 @@ public class LordGymEntranceView : UiViewBase
 		this.OnRefreshView(this.DefaultLord);
 	}
 
-	// Token: 0x06010BEF RID: 68591 RVA: 0x00411C80 File Offset: 0x0040FE80
+	// Token: 0x0600E080 RID: 57472 RVA: 0x0041E568 File Offset: 0x0041C768
 	protected override void OnBeforeDestroy()
 	{
 		this.LordScroll = null;
 		this.RewardScroll = null;
 	}
 
-	// Token: 0x06010BF0 RID: 68592 RVA: 0x00411C90 File Offset: 0x0040FE90
+	// Token: 0x0600E081 RID: 57473 RVA: 0x0041E578 File Offset: 0x0041C778
 	private LordGymItem CreateLordItem()
 	{
 		return new LordGymItem(new Action<int>(this.OnRefreshView), new Func<int, bool>(this.CanChangeLoreToggleState));
 	}
 
-	// Token: 0x06010BF1 RID: 68593 RVA: 0x00411CAF File Offset: 0x0040FEAF
+	// Token: 0x0600E082 RID: 57474 RVA: 0x0041E597 File Offset: 0x0041C797
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06010BF2 RID: 68594 RVA: 0x00411CB6 File Offset: 0x0040FEB6
+	// Token: 0x0600E083 RID: 57475 RVA: 0x0041E59E File Offset: 0x0041C79E
 	private void OnClickBtnClose()
 	{
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x06010BF3 RID: 68595 RVA: 0x00411CCE File Offset: 0x0040FECE
+	// Token: 0x0600E084 RID: 57476 RVA: 0x0041E5B6 File Offset: 0x0041C7B6
 	private void OnClickBtnLord()
 	{
 		if (this.HelpId > 0)
@@ -166,7 +166,7 @@ public class LordGymEntranceView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010BF4 RID: 68596 RVA: 0x00411CE9 File Offset: 0x0040FEE9
+	// Token: 0x0600E085 RID: 57477 RVA: 0x0041E5D1 File Offset: 0x0041C7D1
 	private void OnClickBtnBegin()
 	{
 		if (!LordGymController.Instance.IsInEntranceEntity())
@@ -182,19 +182,19 @@ public class LordGymEntranceView : UiViewBase
 		});
 	}
 
-	// Token: 0x06010BF5 RID: 68597 RVA: 0x00411D1A File Offset: 0x0040FF1A
+	// Token: 0x0600E086 RID: 57478 RVA: 0x0041E602 File Offset: 0x0041C802
 	private void OnClickRecord()
 	{
 		UiManager.Instance.OpenView(EUiViewName.LordGymChallengeRecordView, this.LordEntranceId, null);
 	}
 
-	// Token: 0x06010BF6 RID: 68598 RVA: 0x00411D37 File Offset: 0x0040FF37
+	// Token: 0x0600E087 RID: 57479 RVA: 0x0041E61F File Offset: 0x0041C81F
 	private void OnClickShop()
 	{
 		PayShopController.Instance.OpenPayShopViewWithTab(PayShopDefine.EPayShopTabType.ActivityShop, 2);
 	}
 
-	// Token: 0x06010BF7 RID: 68599 RVA: 0x00411D48 File Offset: 0x0040FF48
+	// Token: 0x0600E088 RID: 57480 RVA: 0x0041E630 File Offset: 0x0041C830
 	private void OnRefreshView(int lordId)
 	{
 		this.SelectLordId = lordId;
@@ -292,32 +292,32 @@ public class LordGymEntranceView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010BF8 RID: 68600 RVA: 0x004120D5 File Offset: 0x004102D5
+	// Token: 0x0600E089 RID: 57481 RVA: 0x0041E9BD File Offset: 0x0041CBBD
 	private bool CanChangeLoreToggleState(int lordId)
 	{
 		return this.SelectLordId != lordId;
 	}
 
-	// Token: 0x04007F7A RID: 32634
+	// Token: 0x040080C1 RID: 32961
 	private int LordEntranceId;
 
-	// Token: 0x04007F7B RID: 32635
+	// Token: 0x040080C2 RID: 32962
 	[Nullable(2)]
 	private List<int> LordList;
 
-	// Token: 0x04007F7C RID: 32636
+	// Token: 0x040080C3 RID: 32963
 	private int SelectLordId;
 
-	// Token: 0x04007F7D RID: 32637
+	// Token: 0x040080C4 RID: 32964
 	private int HelpId;
 
-	// Token: 0x04007F7E RID: 32638
+	// Token: 0x040080C5 RID: 32965
 	private bool RewardReceived;
 
-	// Token: 0x04007F7F RID: 32639
+	// Token: 0x040080C6 RID: 32966
 	private int DefaultLord;
 
-	// Token: 0x04007F80 RID: 32640
+	// Token: 0x040080C7 RID: 32967
 	[Nullable(new byte[]
 	{
 		2,
@@ -325,7 +325,7 @@ public class LordGymEntranceView : UiViewBase
 	})]
 	private GenericScrollViewNew<LordGymItem, int> LordScroll;
 
-	// Token: 0x04007F81 RID: 32641
+	// Token: 0x040080C8 RID: 32968
 	[Nullable(new byte[]
 	{
 		2,
@@ -333,86 +333,86 @@ public class LordGymEntranceView : UiViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-	// Token: 0x020086D0 RID: 34512
+	// Token: 0x0200785B RID: 30811
 	[NullableContext(0)]
 	private class EChildCom
 	{
-		// Token: 0x0402BDD7 RID: 179671
+		// Token: 0x040270F8 RID: 159992
 		public const int TextEntranceName = 0;
 
-		// Token: 0x0402BDD8 RID: 179672
+		// Token: 0x040270F9 RID: 159993
 		public const int BtnBack = 1;
 
-		// Token: 0x0402BDD9 RID: 179673
+		// Token: 0x040270FA RID: 159994
 		public const int ScrollLord = 2;
 
-		// Token: 0x0402BDDA RID: 179674
+		// Token: 0x040270FB RID: 159995
 		public const int ScrollLordItem = 3;
 
-		// Token: 0x0402BDDB RID: 179675
+		// Token: 0x040270FC RID: 159996
 		public const int PnlShopEntrance = 4;
 
-		// Token: 0x0402BDDC RID: 179676
+		// Token: 0x040270FD RID: 159997
 		public const int TextLordName = 5;
 
-		// Token: 0x0402BDDD RID: 179677
+		// Token: 0x040270FE RID: 159998
 		public const int TextLordLevel = 6;
 
-		// Token: 0x0402BDDE RID: 179678
+		// Token: 0x040270FF RID: 159999
 		public const int TexBossBg = 7;
 
-		// Token: 0x0402BDDF RID: 179679
+		// Token: 0x04027100 RID: 160000
 		public const int TexBossElement = 8;
 
-		// Token: 0x0402BDE0 RID: 179680
+		// Token: 0x04027101 RID: 160001
 		public const int TexBoss = 9;
 
-		// Token: 0x0402BDE1 RID: 179681
+		// Token: 0x04027102 RID: 160002
 		public const int BtnLord = 10;
 
-		// Token: 0x0402BDE2 RID: 179682
+		// Token: 0x04027103 RID: 160003
 		public const int PnlContent = 11;
 
-		// Token: 0x0402BDE3 RID: 179683
+		// Token: 0x04027104 RID: 160004
 		public const int PnlBuff = 12;
 
-		// Token: 0x0402BDE4 RID: 179684
+		// Token: 0x04027105 RID: 160005
 		public const int TextHelpTitle = 13;
 
-		// Token: 0x0402BDE5 RID: 179685
+		// Token: 0x04027106 RID: 160006
 		public const int TextRewardTitle = 14;
 
-		// Token: 0x0402BDE6 RID: 179686
+		// Token: 0x04027107 RID: 160007
 		public const int TextDesc = 15;
 
-		// Token: 0x0402BDE7 RID: 179687
+		// Token: 0x04027108 RID: 160008
 		public const int ScrollReward = 16;
 
-		// Token: 0x0402BDE8 RID: 179688
+		// Token: 0x04027109 RID: 160009
 		public const int ItemReward = 17;
 
-		// Token: 0x0402BDE9 RID: 179689
+		// Token: 0x0402710A RID: 160010
 		public const int BtnChallengeRecord = 18;
 
-		// Token: 0x0402BDEA RID: 179690
+		// Token: 0x0402710B RID: 160011
 		public const int BtnBegin = 19;
 
-		// Token: 0x0402BDEB RID: 179691
+		// Token: 0x0402710C RID: 160012
 		public const int ItemLock = 20;
 
-		// Token: 0x0402BDEC RID: 179692
+		// Token: 0x0402710D RID: 160013
 		public const int TextLock = 21;
 
-		// Token: 0x0402BDED RID: 179693
+		// Token: 0x0402710E RID: 160014
 		public const int TextBegin = 22;
 
-		// Token: 0x0402BDEE RID: 179694
+		// Token: 0x0402710F RID: 160015
 		public const int BtnShop = 23;
 
-		// Token: 0x0402BDEF RID: 179695
+		// Token: 0x04027110 RID: 160016
 		public const int TxtRecord = 24;
 
-		// Token: 0x0402BDF0 RID: 179696
+		// Token: 0x04027111 RID: 160017
 		public const int PnlLevelTips = 25;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F05 RID: 20229
+	// Token: 0x02005437 RID: 21559
 	public class IBeamLayoutConfigT
 	{
-		// Token: 0x170091A2 RID: 37282
-		// (get) Token: 0x0601FF90 RID: 130960 RVA: 0x0047327A File Offset: 0x0047147A
-		// (set) Token: 0x0601FF91 RID: 130961 RVA: 0x00473282 File Offset: 0x00471482
+		// Token: 0x17009924 RID: 39204
+		// (get) Token: 0x06021D00 RID: 138496 RVA: 0x004A960E File Offset: 0x004A780E
+		// (set) Token: 0x06021D01 RID: 138497 RVA: 0x004A9616 File Offset: 0x004A7816
 		public EBeamLayoutType Type { get; set; }
 
-		// Token: 0x0601FF92 RID: 130962 RVA: 0x0047328B File Offset: 0x0047148B
+		// Token: 0x06021D02 RID: 138498 RVA: 0x004A961F File Offset: 0x004A781F
 		public IBeamLayoutConfigT()
 		{
 			this.Type = EBeamLayoutType.BeamWall;

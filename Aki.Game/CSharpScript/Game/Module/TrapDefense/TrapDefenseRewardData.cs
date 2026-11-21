@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A17 RID: 18967
+	// Token: 0x020039BF RID: 14783
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseRewardData
 	{
-		// Token: 0x060313CD RID: 201677 RVA: 0x00B6ADF5 File Offset: 0x00B68FF5
+		// Token: 0x0602615D RID: 155997 RVA: 0x00AAEDF1 File Offset: 0x00AACFF1
 		public static TrapDefenseRewardData Create(int activityId)
 		{
 			TrapDefenseRewardData trapDefenseRewardData = new TrapDefenseRewardData();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseRewardData;
 		}
 
-		// Token: 0x060313CE RID: 201678 RVA: 0x00B6AE0C File Offset: 0x00B6900C
+		// Token: 0x0602615E RID: 155998 RVA: 0x00AAEE08 File Offset: 0x00AAD008
 		public void UpdateRewardsByServerData(TrapDefenseRewardInfo[] serverDataList)
 		{
 			foreach (TrapDefenseRewardInfo trapDefenseRewardInfo in serverDataList)
@@ -35,21 +35,21 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313CF RID: 201679 RVA: 0x00B6AE58 File Offset: 0x00B69058
+		// Token: 0x0602615F RID: 155999 RVA: 0x00AAEE54 File Offset: 0x00AAD054
 		public void SetLimitTime(long beginTime, long endTime)
 		{
 			this.LimitBeginTime = beginTime;
 			this.LimitEndTime = endTime;
 		}
 
-		// Token: 0x060313D0 RID: 201680 RVA: 0x00B6AE68 File Offset: 0x00B69068
+		// Token: 0x06026160 RID: 156000 RVA: 0x00AAEE64 File Offset: 0x00AAD064
 		public void SetLimitTime(int beginTime, int endTime)
 		{
 			this.LimitBeginTime = (long)beginTime;
 			this.LimitEndTime = (long)endTime;
 		}
 
-		// Token: 0x060313D1 RID: 201681 RVA: 0x00B6AE7C File Offset: 0x00B6907C
+		// Token: 0x06026161 RID: 156001 RVA: 0x00AAEE78 File Offset: 0x00AAD078
 		public List<TrapDefenseRewardItemData> GetRewardListByType(ETrapDefenseRewardType type)
 		{
 			List<TrapDefenseRewardItemData> list;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new List<TrapDefenseRewardItemData>();
 		}
 
-		// Token: 0x060313D2 RID: 201682 RVA: 0x00B6AEB4 File Offset: 0x00B690B4
+		// Token: 0x06026162 RID: 156002 RVA: 0x00AAEEB0 File Offset: 0x00AAD0B0
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetRewardProgressByType(ETrapDefenseRewardType type)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<int, int>(num, rewardListByType.Count);
 		}
 
-		// Token: 0x060313D3 RID: 201683 RVA: 0x00B6AF1C File Offset: 0x00B6911C
+		// Token: 0x06026163 RID: 156003 RVA: 0x00AAEF18 File Offset: 0x00AAD118
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetLimitRewardTotalProgress()
 		{
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x060313D4 RID: 201684 RVA: 0x00B6AF84 File Offset: 0x00B69184
+		// Token: 0x06026164 RID: 156004 RVA: 0x00AAEF80 File Offset: 0x00AAD180
 		public string GetLimitRewardRemainTimeStr()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return ((remainTimeDataFormat != null) ? remainTimeDataFormat.CountDownText : null) ?? "";
 		}
 
-		// Token: 0x060313D5 RID: 201685 RVA: 0x00B6AFD0 File Offset: 0x00B691D0
+		// Token: 0x06026165 RID: 156005 RVA: 0x00AAEFCC File Offset: 0x00AAD1CC
 		public bool IsOpenLimitReward()
 		{
 			double startTime = (double)this.LimitBeginTime * TimeUtil.Instance.Millisecond;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return TimeUtil.Instance.IsInTimeSpan(startTime, endTime);
 		}
 
-		// Token: 0x060313D6 RID: 201686 RVA: 0x00B6B010 File Offset: 0x00B69210
+		// Token: 0x06026166 RID: 156006 RVA: 0x00AAF00C File Offset: 0x00AAD20C
 		public void RequestClaimRewardByType(ETrapDefenseRewardType type)
 		{
 			List<int> list = new List<int>();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseController.Instance.RequestTrapDefenseRewardClaim(list);
 		}
 
-		// Token: 0x060313D7 RID: 201687 RVA: 0x00B6B084 File Offset: 0x00B69284
+		// Token: 0x06026167 RID: 156007 RVA: 0x00AAF080 File Offset: 0x00AAD280
 		public void RequestFixedReward()
 		{
 			List<int> list = new List<int>();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseController.Instance.RequestTrapDefenseRewardClaim(list);
 		}
 
-		// Token: 0x060313D8 RID: 201688 RVA: 0x00B6B0F8 File Offset: 0x00B692F8
+		// Token: 0x06026168 RID: 156008 RVA: 0x00AAF0F4 File Offset: 0x00AAD2F4
 		private void Init()
 		{
 			TrapDefenseConfig instance = TrapDefenseConfig.Instance;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313D9 RID: 201689 RVA: 0x00B6B258 File Offset: 0x00B69458
+		// Token: 0x06026169 RID: 156009 RVA: 0x00AAF254 File Offset: 0x00AAD454
 		private int RewardListSortFunc(TrapDefenseRewardItemData a, TrapDefenseRewardItemData b)
 		{
 			if (a.State != b.State)
@@ -201,13 +201,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060313DA RID: 201690 RVA: 0x00B6B28B File Offset: 0x00B6948B
+		// Token: 0x0602616A RID: 156010 RVA: 0x00AAF287 File Offset: 0x00AAD487
 		public void SortFixedRewardList()
 		{
 			this.FixedRewardDataList.Sort(new Comparison<TrapDefenseRewardItemData>(this.RewardListSortFunc));
 		}
 
-		// Token: 0x060313DB RID: 201691 RVA: 0x00B6B2A4 File Offset: 0x00B694A4
+		// Token: 0x0602616B RID: 156011 RVA: 0x00AAF2A0 File Offset: 0x00AAD4A0
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetFixedRewardTotalProgress()
 		{
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<int, int>(num, count);
 		}
 
-		// Token: 0x060313DC RID: 201692 RVA: 0x00B6B310 File Offset: 0x00B69510
+		// Token: 0x0602616C RID: 156012 RVA: 0x00AAF30C File Offset: 0x00AAD50C
 		public bool IsCanClaimLimitReward()
 		{
 			foreach (List<TrapDefenseRewardItemData> list in this.RewardTypeMap.Values)
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return specialRewardData != null && specialRewardData.State == ETrapDefenseRewardState.CanClaim;
 		}
 
-		// Token: 0x060313DD RID: 201693 RVA: 0x00B6B3B8 File Offset: 0x00B695B8
+		// Token: 0x0602616D RID: 156013 RVA: 0x00AAF3B4 File Offset: 0x00AAD5B4
 		public bool IsCanClaimLimitRewardByType(ETrapDefenseRewardType type)
 		{
 			using (List<TrapDefenseRewardItemData>.Enumerator enumerator = this.GetRewardListByType(type).GetEnumerator())
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x060313DE RID: 201694 RVA: 0x00B6B414 File Offset: 0x00B69614
+		// Token: 0x0602616E RID: 156014 RVA: 0x00AAF410 File Offset: 0x00AAD610
 		public bool IsCanClaimFixedReward()
 		{
 			using (List<TrapDefenseRewardItemData>.Enumerator enumerator = this.FixedRewardDataList.GetEnumerator())
@@ -278,19 +278,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x060313DF RID: 201695 RVA: 0x00B6B470 File Offset: 0x00B69670
+		// Token: 0x0602616F RID: 156015 RVA: 0x00AAF46C File Offset: 0x00AAD66C
 		public bool RedDotFixedReward()
 		{
 			return this.IsCanClaimFixedReward();
 		}
 
-		// Token: 0x060313E0 RID: 201696 RVA: 0x00B6B478 File Offset: 0x00B69678
+		// Token: 0x06026170 RID: 156016 RVA: 0x00AAF474 File Offset: 0x00AAD674
 		public bool RedDotLimitReward()
 		{
 			return this.IsCanClaimLimitReward();
 		}
 
-		// Token: 0x060313E1 RID: 201697 RVA: 0x00B6B480 File Offset: 0x00B69680
+		// Token: 0x06026171 RID: 156017 RVA: 0x00AAF47C File Offset: 0x00AAD67C
 		public bool IsAllRewardClaimed()
 		{
 			TrapDefenseSpecialRewardData specialRewardData = this.SpecialRewardData;
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x060313E2 RID: 201698 RVA: 0x00B6B578 File Offset: 0x00B69778
+		// Token: 0x06026172 RID: 156018 RVA: 0x00AAF574 File Offset: 0x00AAD774
 		public bool IsFixedRewardAllClaimed()
 		{
 			using (List<TrapDefenseRewardItemData>.Enumerator enumerator = this.FixedRewardDataList.GetEnumerator())
@@ -340,26 +340,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x0401A532 RID: 107826
+		// Token: 0x04014E89 RID: 85641
 		private int ActivityId;
 
-		// Token: 0x0401A533 RID: 107827
+		// Token: 0x04014E8A RID: 85642
 		public Dictionary<ETrapDefenseRewardType, List<TrapDefenseRewardItemData>> RewardTypeMap = new Dictionary<ETrapDefenseRewardType, List<TrapDefenseRewardItemData>>();
 
-		// Token: 0x0401A534 RID: 107828
+		// Token: 0x04014E8B RID: 85643
 		[Nullable(2)]
 		public TrapDefenseSpecialRewardData SpecialRewardData;
 
-		// Token: 0x0401A535 RID: 107829
+		// Token: 0x04014E8C RID: 85644
 		public Dictionary<int, TrapDefenseRewardItemData> RewardDataMap = new Dictionary<int, TrapDefenseRewardItemData>();
 
-		// Token: 0x0401A536 RID: 107830
+		// Token: 0x04014E8D RID: 85645
 		public List<TrapDefenseRewardItemData> FixedRewardDataList = new List<TrapDefenseRewardItemData>();
 
-		// Token: 0x0401A537 RID: 107831
+		// Token: 0x04014E8E RID: 85646
 		public long LimitBeginTime;
 
-		// Token: 0x0401A538 RID: 107832
+		// Token: 0x04014E8F RID: 85647
 		public long LimitEndTime;
 	}
 }

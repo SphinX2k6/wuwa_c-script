@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F86 RID: 20358
+	// Token: 0x020054B5 RID: 21685
 	public class ICharacterConnectorRangeT
 	{
-		// Token: 0x17009325 RID: 37669
-		// (get) Token: 0x0602053B RID: 132411 RVA: 0x0047F6A4 File Offset: 0x0047D8A4
-		// (set) Token: 0x0602053C RID: 132412 RVA: 0x0047F6AC File Offset: 0x0047D8AC
+		// Token: 0x17009A9E RID: 39582
+		// (get) Token: 0x0602228D RID: 139917 RVA: 0x004B5694 File Offset: 0x004B3894
+		// (set) Token: 0x0602228E RID: 139918 RVA: 0x004B569C File Offset: 0x004B389C
 		public ECharacterConnectorLogicType Type { get; set; }
 
-		// Token: 0x17009326 RID: 37670
-		// (get) Token: 0x0602053D RID: 132413 RVA: 0x0047F6B5 File Offset: 0x0047D8B5
-		// (set) Token: 0x0602053E RID: 132414 RVA: 0x0047F6BD File Offset: 0x0047D8BD
+		// Token: 0x17009A9F RID: 39583
+		// (get) Token: 0x0602228F RID: 139919 RVA: 0x004B56A5 File Offset: 0x004B38A5
+		// (set) Token: 0x06022290 RID: 139920 RVA: 0x004B56AD File Offset: 0x004B38AD
 		public IConnectorEffectConfigT EffectConfig { get; set; }
 
-		// Token: 0x17009327 RID: 37671
-		// (get) Token: 0x0602053F RID: 132415 RVA: 0x0047F6C6 File Offset: 0x0047D8C6
-		// (set) Token: 0x06020540 RID: 132416 RVA: 0x0047F6CE File Offset: 0x0047D8CE
+		// Token: 0x17009AA0 RID: 39584
+		// (get) Token: 0x06022291 RID: 139921 RVA: 0x004B56B6 File Offset: 0x004B38B6
+		// (set) Token: 0x06022292 RID: 139922 RVA: 0x004B56BE File Offset: 0x004B38BE
 		public int EnterRange { get; set; }
 
-		// Token: 0x17009328 RID: 37672
-		// (get) Token: 0x06020541 RID: 132417 RVA: 0x0047F6D7 File Offset: 0x0047D8D7
-		// (set) Token: 0x06020542 RID: 132418 RVA: 0x0047F6DF File Offset: 0x0047D8DF
+		// Token: 0x17009AA1 RID: 39585
+		// (get) Token: 0x06022293 RID: 139923 RVA: 0x004B56C7 File Offset: 0x004B38C7
+		// (set) Token: 0x06022294 RID: 139924 RVA: 0x004B56CF File Offset: 0x004B38CF
 		public int LeaveRange { get; set; }
 
-		// Token: 0x17009329 RID: 37673
-		// (get) Token: 0x06020543 RID: 132419 RVA: 0x0047F6E8 File Offset: 0x0047D8E8
-		// (set) Token: 0x06020544 RID: 132420 RVA: 0x0047F6F0 File Offset: 0x0047D8F0
+		// Token: 0x17009AA2 RID: 39586
+		// (get) Token: 0x06022295 RID: 139925 RVA: 0x004B56D8 File Offset: 0x004B38D8
+		// (set) Token: 0x06022296 RID: 139926 RVA: 0x004B56E0 File Offset: 0x004B38E0
 		public List<int> TagConditions { get; set; }
 
-		// Token: 0x1700932A RID: 37674
-		// (get) Token: 0x06020545 RID: 132421 RVA: 0x0047F6F9 File Offset: 0x0047D8F9
-		// (set) Token: 0x06020546 RID: 132422 RVA: 0x0047F701 File Offset: 0x0047D901
+		// Token: 0x17009AA3 RID: 39587
+		// (get) Token: 0x06022297 RID: 139927 RVA: 0x004B56E9 File Offset: 0x004B38E9
+		// (set) Token: 0x06022298 RID: 139928 RVA: 0x004B56F1 File Offset: 0x004B38F1
 		public List<IDynamicEntityMatchT> MatchConditions { get; set; }
 
-		// Token: 0x1700932B RID: 37675
-		// (get) Token: 0x06020547 RID: 132423 RVA: 0x0047F70A File Offset: 0x0047D90A
-		// (set) Token: 0x06020548 RID: 132424 RVA: 0x0047F712 File Offset: 0x0047D912
+		// Token: 0x17009AA4 RID: 39588
+		// (get) Token: 0x06022299 RID: 139929 RVA: 0x004B56FA File Offset: 0x004B38FA
+		// (set) Token: 0x0602229A RID: 139930 RVA: 0x004B5702 File Offset: 0x004B3902
 		public List<IDynamicEntityMatchT> KeepConditions { get; set; }
 
-		// Token: 0x1700932C RID: 37676
-		// (get) Token: 0x06020549 RID: 132425 RVA: 0x0047F71B File Offset: 0x0047D91B
-		// (set) Token: 0x0602054A RID: 132426 RVA: 0x0047F723 File Offset: 0x0047D923
+		// Token: 0x17009AA5 RID: 39589
+		// (get) Token: 0x0602229B RID: 139931 RVA: 0x004B570B File Offset: 0x004B390B
+		// (set) Token: 0x0602229C RID: 139932 RVA: 0x004B5713 File Offset: 0x004B3913
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602054B RID: 132427 RVA: 0x0047F72C File Offset: 0x0047D92C
+		// Token: 0x0602229D RID: 139933 RVA: 0x004B571C File Offset: 0x004B391C
 		public ICharacterConnectorRangeT()
 		{
 			this.Type = ECharacterConnectorLogicType.Range;

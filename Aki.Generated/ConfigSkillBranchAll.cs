@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000932 RID: 2354
+	// Token: 0x0200097D RID: 2429
 	public class ConfigSkillBranchAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600373F RID: 14143 RVA: 0x00191BA0 File Offset: 0x0018FDA0
+		// Token: 0x06003901 RID: 14593 RVA: 0x0019EDC0 File Offset: 0x0019CFC0
 		static ConfigSkillBranchAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillBranchAll.CreateStaticDefaultValue), new Action(ConfigSkillBranchAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003740 RID: 14144 RVA: 0x00191BC0 File Offset: 0x0018FDC0
+		// Token: 0x06003902 RID: 14594 RVA: 0x0019EDE0 File Offset: 0x0019CFE0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillBranchAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003741 RID: 14145 RVA: 0x00191C3F File Offset: 0x0018FE3F
+		// Token: 0x06003903 RID: 14595 RVA: 0x0019EE5F File Offset: 0x0019D05F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillBranchAll.LogPair = null;
 			ConfigSkillBranchAll.HandleId = 0;
 		}
 
-		// Token: 0x06003742 RID: 14146 RVA: 0x00191C4D File Offset: 0x0018FE4D
+		// Token: 0x06003904 RID: 14596 RVA: 0x0019EE6D File Offset: 0x0019D06D
 		public static void Init()
 		{
 			ConfigSkillBranchAll.HandleId = ConfigCommon.InitDataStatement(ConfigSkillBranchAll.HandleId, "db_skill.db", "select BinData from `SkillBranch`");
 		}
 
-		// Token: 0x06003743 RID: 14147 RVA: 0x00191C68 File Offset: 0x0018FE68
+		// Token: 0x06003905 RID: 14597 RVA: 0x0019EE88 File Offset: 0x0019D088
 		[NullableContext(2)]
 		public static IReadOnlyList<SkillBranch> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004044 RID: 16452
+		// Token: 0x04004251 RID: 16977
 		private const string DB = "db_skill.db";
 
-		// Token: 0x04004045 RID: 16453
+		// Token: 0x04004252 RID: 16978
 		private const string FILE = "j.技能.xlsx";
 
-		// Token: 0x04004046 RID: 16454
+		// Token: 0x04004253 RID: 16979
 		private const string TABLE = "SkillBranch";
 
-		// Token: 0x04004047 RID: 16455
+		// Token: 0x04004254 RID: 16980
 		private const string COMMAND = "select BinData from `SkillBranch`";
 
-		// Token: 0x04004048 RID: 16456
+		// Token: 0x04004255 RID: 16981
 		private const string KEY_PREFIX = "SkillBranchAll";
 
-		// Token: 0x04004049 RID: 16457
+		// Token: 0x04004256 RID: 16982
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400404A RID: 16458
+		// Token: 0x04004257 RID: 16983
 		private static int HandleId;
 	}
 }

@@ -11,18 +11,18 @@ using CSharpScript.Game.Module.Common;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02003236 RID: 12854
+// Token: 0x020027A5 RID: 10149
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResetter
 {
-	// Token: 0x0601BB7A RID: 113530 RVA: 0x007A11B3 File Offset: 0x0079F3B3
+	// Token: 0x06019705 RID: 104197 RVA: 0x007C9ABF File Offset: 0x007C7CBF
 	static RoleAudioComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleAudioComponent.CreateStaticDefaultValue), new Action(RoleAudioComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BB7B RID: 113531 RVA: 0x007A11D4 File Offset: 0x0079F3D4
+	// Token: 0x06019706 RID: 104198 RVA: 0x007C9AE0 File Offset: 0x007C7CE0
 	public static void CreateStaticDefaultValue()
 	{
 		RoleAudioComponent.FootstepVariantMap = new Dictionary<E_FootstepVariant, string>
@@ -99,7 +99,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		RoleAudioComponent.LocationCache = global::Vector.Create();
 	}
 
-	// Token: 0x0601BB7C RID: 113532 RVA: 0x007A12CD File Offset: 0x0079F4CD
+	// Token: 0x06019707 RID: 104199 RVA: 0x007C9BD9 File Offset: 0x007C7DD9
 	public static void ResetStaticDefaultValue()
 	{
 		RoleAudioComponent.FootstepVariantMap = null;
@@ -108,7 +108,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		RoleAudioComponent.LocationCache = null;
 	}
 
-	// Token: 0x0601BB7D RID: 113533 RVA: 0x007A12F0 File Offset: 0x0079F4F0
+	// Token: 0x06019708 RID: 104200 RVA: 0x007C9BFC File Offset: 0x007C7DFC
 	protected override bool OnInit()
 	{
 		base.OnInit();
@@ -130,7 +130,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601BB7E RID: 113534 RVA: 0x007A1460 File Offset: 0x0079F660
+	// Token: 0x06019709 RID: 104201 RVA: 0x007C9D6C File Offset: 0x007C7F6C
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -138,7 +138,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601BB7F RID: 113535 RVA: 0x007A1470 File Offset: 0x0079F670
+	// Token: 0x0601970A RID: 104202 RVA: 0x007C9D7C File Offset: 0x007C7F7C
 	protected override bool OnClear()
 	{
 		base.OnClear();
@@ -157,7 +157,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601BB80 RID: 113536 RVA: 0x007A15B8 File Offset: 0x0079F7B8
+	// Token: 0x0601970B RID: 104203 RVA: 0x007C9EC4 File Offset: 0x007C80C4
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -166,7 +166,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601BB81 RID: 113537 RVA: 0x007A161C File Offset: 0x0079F81C
+	// Token: 0x0601970C RID: 104204 RVA: 0x007C9F28 File Offset: 0x007C8128
 	protected override void OnTick(float delta)
 	{
 		int id = base.Entity.Id;
@@ -179,7 +179,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB82 RID: 113538 RVA: 0x007A1698 File Offset: 0x0079F898
+	// Token: 0x0601970D RID: 104205 RVA: 0x007C9FA4 File Offset: 0x007C81A4
 	protected override void OnAkComponentCreated()
 	{
 		base.OnAkComponentCreated();
@@ -195,7 +195,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("role_interact_water", this.CurrentWaterType, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB83 RID: 113539 RVA: 0x007A1760 File Offset: 0x0079F960
+	// Token: 0x0601970E RID: 104206 RVA: 0x007CA06C File Offset: 0x007C826C
 	public void ChangeRoleName(string name)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -207,7 +207,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("role_name", this.CurrentRoleName, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB84 RID: 113540 RVA: 0x007A17A0 File Offset: 0x0079F9A0
+	// Token: 0x0601970F RID: 104207 RVA: 0x007CA0AC File Offset: 0x007C82AC
 	public void ChangeFootstepTexture(CharacterFootEffectComponent.EFootstepTexture texture)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -219,7 +219,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("footstep_texture", this.CurrentFootstepTexture, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB85 RID: 113541 RVA: 0x007A17F0 File Offset: 0x0079F9F0
+	// Token: 0x06019710 RID: 104208 RVA: 0x007CA0FC File Offset: 0x007C82FC
 	public void ChangeFootstepVariant(E_FootstepVariant variant)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -242,7 +242,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("footstep_variant", this.CurrentFootstepVariant, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB86 RID: 113542 RVA: 0x007A1878 File Offset: 0x0079FA78
+	// Token: 0x06019711 RID: 104209 RVA: 0x007CA184 File Offset: 0x007C8384
 	public void ChangeFoleyVariant(E_FoleyVariant variant)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -265,7 +265,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("foley_variant", this.CurrentFoleyVariant, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB87 RID: 113543 RVA: 0x007A1900 File Offset: 0x0079FB00
+	// Token: 0x06019712 RID: 104210 RVA: 0x007CA20C File Offset: 0x007C840C
 	private void LoadConfig()
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -294,7 +294,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		this.InitFootstepEvent();
 	}
 
-	// Token: 0x0601BB88 RID: 113544 RVA: 0x007A19F0 File Offset: 0x0079FBF0
+	// Token: 0x06019713 RID: 104211 RVA: 0x007CA2FC File Offset: 0x007C84FC
 	private void OnRoleSkinChanged(int roleId)
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -305,7 +305,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB89 RID: 113545 RVA: 0x007A1A38 File Offset: 0x0079FC38
+	// Token: 0x06019714 RID: 104212 RVA: 0x007CA344 File Offset: 0x007C8544
 	private void UpdateEnvironment()
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -332,7 +332,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB8A RID: 113546 RVA: 0x007A1B14 File Offset: 0x0079FD14
+	// Token: 0x06019715 RID: 104213 RVA: 0x007CA420 File Offset: 0x007C8620
 	private void OnCharPossessed(Entity entity, [Nullable(2)] AController oldController)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -343,7 +343,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB8B RID: 113547 RVA: 0x007A1B64 File Offset: 0x0079FD64
+	// Token: 0x06019716 RID: 104214 RVA: 0x007CA470 File Offset: 0x007C8670
 	private void OnCharUnpossessed(Entity entity, [Nullable(2)] AController oldController)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -355,7 +355,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		this.SetAudioMoveState(EMoveState.None);
 	}
 
-	// Token: 0x0601BB8C RID: 113548 RVA: 0x007A1BBC File Offset: 0x0079FDBC
+	// Token: 0x06019717 RID: 104215 RVA: 0x007CA4C8 File Offset: 0x007C86C8
 	private void OnInteractionWaterTypeChange(EInteractionWaterType type)
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -374,7 +374,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetSwitch("role_interact_water", this.CurrentWaterType, base.ActorComp.Owner);
 	}
 
-	// Token: 0x0601BB8D RID: 113549 RVA: 0x007A1C1C File Offset: 0x0079FE1C
+	// Token: 0x06019718 RID: 104216 RVA: 0x007CA528 File Offset: 0x007C8728
 	private void OnCharacterMovementModeChanged(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		int id = base.Entity.Id;
@@ -427,7 +427,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		this.SetAudioMoveState(audioMoveState);
 	}
 
-	// Token: 0x0601BB8E RID: 113550 RVA: 0x007A1D34 File Offset: 0x0079FF34
+	// Token: 0x06019719 RID: 104217 RVA: 0x007CA640 File Offset: 0x007C8840
 	private void SetAudioMoveState(EMoveState moveState)
 	{
 		if (this.LastMoveState == moveState)
@@ -438,7 +438,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		AudioSystem.Instance.SetState("role_move", moveState.Value, true);
 	}
 
-	// Token: 0x0601BB8F RID: 113551 RVA: 0x007A1D64 File Offset: 0x0079FF64
+	// Token: 0x0601971A RID: 104218 RVA: 0x007CA670 File Offset: 0x007C8870
 	private void OnBeDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 	{
 		if (attacker != victim && damageResult.ChangeLife > 0f && this.AttributeComponent != null)
@@ -479,7 +479,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB90 RID: 113552 RVA: 0x007A1EE0 File Offset: 0x007A00E0
+	// Token: 0x0601971B RID: 104219 RVA: 0x007CA7EC File Offset: 0x007C89EC
 	private void OnUseSkillRemote(int entityId, int skillId)
 	{
 		if (entityId != base.Entity.Id || !RoleAudioController.Instance.CheckSkillAudioId((long)skillId))
@@ -493,7 +493,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB91 RID: 113553 RVA: 0x007A1F40 File Offset: 0x007A0140
+	// Token: 0x0601971C RID: 104220 RVA: 0x007CA84C File Offset: 0x007C8A4C
 	private void OnUseSkill(int entityId, int skillId, bool _)
 	{
 		if (entityId != base.Entity.Id || !RoleAudioController.Instance.CheckSkillAudioId((long)skillId))
@@ -507,7 +507,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB92 RID: 113554 RVA: 0x007A1F84 File Offset: 0x007A0184
+	// Token: 0x0601971D RID: 104221 RVA: 0x007CA890 File Offset: 0x007C8A90
 	private void PlayUseSkillEvent(SkillAudioEvent? skillAudioEvent)
 	{
 		if (skillAudioEvent == null)
@@ -531,13 +531,13 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB93 RID: 113555 RVA: 0x007A2046 File Offset: 0x007A0246
+	// Token: 0x0601971E RID: 104222 RVA: 0x007CA952 File Offset: 0x007C8B52
 	private void OnGoDownFinish()
 	{
 		this.PostGoDownFinishEvent();
 	}
 
-	// Token: 0x0601BB94 RID: 113556 RVA: 0x007A2050 File Offset: 0x007A0250
+	// Token: 0x0601971F RID: 104223 RVA: 0x007CA95C File Offset: 0x007C8B5C
 	private void PostGoDownFinishEvent()
 	{
 		CharacterActorComponent actorComp = base.ActorComp;
@@ -553,7 +553,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB95 RID: 113557 RVA: 0x007A20C4 File Offset: 0x007A02C4
+	// Token: 0x06019720 RID: 104224 RVA: 0x007CA9D0 File Offset: 0x007C8BD0
 	public void PostFootstepAudio(CharacterFootEffectComponent.EFootstepTexture texture)
 	{
 		this.ChangeFootstepTexture(texture);
@@ -565,19 +565,19 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB96 RID: 113558 RVA: 0x007A2110 File Offset: 0x007A0310
+	// Token: 0x06019721 RID: 104225 RVA: 0x007CAA1C File Offset: 0x007C8C1C
 	public bool IsConfig()
 	{
 		return this.Config != null;
 	}
 
-	// Token: 0x0601BB97 RID: 113559 RVA: 0x007A211D File Offset: 0x007A031D
+	// Token: 0x06019722 RID: 104226 RVA: 0x007CAA29 File Offset: 0x007C8C29
 	public RoleSkinAudio? GetConfig()
 	{
 		return this.Config;
 	}
 
-	// Token: 0x0601BB98 RID: 113560 RVA: 0x007A2128 File Offset: 0x007A0328
+	// Token: 0x06019723 RID: 104227 RVA: 0x007CAA34 File Offset: 0x007C8C34
 	[NullableContext(2)]
 	public string GetConfigName()
 	{
@@ -588,7 +588,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return this.Config.GetValueOrDefault().Name;
 	}
 
-	// Token: 0x0601BB99 RID: 113561 RVA: 0x007A2154 File Offset: 0x007A0354
+	// Token: 0x06019724 RID: 104228 RVA: 0x007CAA60 File Offset: 0x007C8C60
 	[NullableContext(2)]
 	public string GetLowStrengthEvent()
 	{
@@ -599,7 +599,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return this.Config.GetValueOrDefault().LowStrengthEvent;
 	}
 
-	// Token: 0x0601BB9A RID: 113562 RVA: 0x007A2180 File Offset: 0x007A0380
+	// Token: 0x06019725 RID: 104229 RVA: 0x007CAA8C File Offset: 0x007C8C8C
 	[NullableContext(2)]
 	public string GetDeathEvent()
 	{
@@ -610,7 +610,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return this.Config.GetValueOrDefault().DeathEvent;
 	}
 
-	// Token: 0x0601BB9B RID: 113563 RVA: 0x007A21AC File Offset: 0x007A03AC
+	// Token: 0x06019726 RID: 104230 RVA: 0x007CAAB8 File Offset: 0x007C8CB8
 	private void InitFootstepEvent()
 	{
 		this.FootstepEvent = ((this.Config != null) ? this.Config.GetValueOrDefault().FootstepEvent : null);
@@ -626,14 +626,14 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB9C RID: 113564 RVA: 0x007A2238 File Offset: 0x007A0438
+	// Token: 0x06019727 RID: 104231 RVA: 0x007CAB44 File Offset: 0x007C8D44
 	[NullableContext(2)]
 	public string GetFootstepEvent()
 	{
 		return this.FootstepEvent;
 	}
 
-	// Token: 0x0601BB9D RID: 113565 RVA: 0x007A2240 File Offset: 0x007A0440
+	// Token: 0x06019728 RID: 104232 RVA: 0x007CAB4C File Offset: 0x007C8D4C
 	private void InitFoleyEvent()
 	{
 		this.FoleyEvent = ((this.Config != null) ? this.Config.GetValueOrDefault().FoleyEvent : null);
@@ -649,21 +649,21 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601BB9E RID: 113566 RVA: 0x007A22CC File Offset: 0x007A04CC
+	// Token: 0x06019729 RID: 104233 RVA: 0x007CABD8 File Offset: 0x007C8DD8
 	[NullableContext(2)]
 	public string GetFoleyEvent()
 	{
 		return this.FoleyEvent;
 	}
 
-	// Token: 0x0601BB9F RID: 113567 RVA: 0x007A22D4 File Offset: 0x007A04D4
+	// Token: 0x0601972A RID: 104234 RVA: 0x007CABE0 File Offset: 0x007C8DE0
 	public void UpdateIsInAudioShrubEvent(bool bIsInAudioShrub, FName audioShrubTag)
 	{
 		this.IsInAudioShrubOverride = bIsInAudioShrub;
 		this.AudioShrubTagNameOverride = new FName?(audioShrubTag);
 	}
 
-	// Token: 0x0601BBA0 RID: 113568 RVA: 0x007A22EC File Offset: 0x007A04EC
+	// Token: 0x0601972B RID: 104235 RVA: 0x007CABF8 File Offset: 0x007C8DF8
 	public bool GetInAudioShr()
 	{
 		bool flag = this.IsInAudioShrubOverride;
@@ -677,7 +677,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return flag;
 	}
 
-	// Token: 0x0601BBA1 RID: 113569 RVA: 0x007A2330 File Offset: 0x007A0530
+	// Token: 0x0601972C RID: 104236 RVA: 0x007CAC3C File Offset: 0x007C8E3C
 	public FName GetAudioShrubTag()
 	{
 		FName? audioShrubTagNameOverride = this.AudioShrubTagNameOverride;
@@ -695,7 +695,7 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 		return audioShrubTagNameOverride.Value;
 	}
 
-	// Token: 0x0601BBA2 RID: 113570 RVA: 0x007A23C4 File Offset: 0x007A05C4
+	// Token: 0x0601972D RID: 104237 RVA: 0x007CACD0 File Offset: 0x007C8ED0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -703,142 +703,153 @@ public class RoleAudioComponent : CharacterAudioComponent, IStaticVariableResett
 			return false;
 		}
 		RoleAudioComponent roleAudioComponent = (RoleAudioComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LastMoveState"))
+		this.LastMoveState = roleAudioComponent.LastMoveState;
+		this.Config = roleAudioComponent.Config;
+		this.CurrentRoleName = roleAudioComponent.CurrentRoleName;
+		this.CurrentFootstepTexture = roleAudioComponent.CurrentFootstepTexture;
+		this.CurrentFootstepVariant = roleAudioComponent.CurrentFootstepVariant;
+		this.CurrentFoleyVariant = roleAudioComponent.CurrentFoleyVariant;
+		this.CurrentWaterType = roleAudioComponent.CurrentWaterType;
+		if (roleAudioComponent.StateComp == null)
 		{
-			this.LastMoveState = roleAudioComponent.LastMoveState;
+			this.StateComp = null;
 		}
-		if (base.CanResetComponentProperty("Config"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 		{
-			this.Config = roleAudioComponent.Config;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentRoleName"))
+		if (roleAudioComponent.AttributeComponent == null)
 		{
-			this.CurrentRoleName = roleAudioComponent.CurrentRoleName;
+			this.AttributeComponent = null;
 		}
-		if (base.CanResetComponentProperty("CurrentFootstepTexture"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComponent), "AttributeComponent"))
 		{
-			this.CurrentFootstepTexture = roleAudioComponent.CurrentFootstepTexture;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentFootstepVariant"))
-		{
-			this.CurrentFootstepVariant = roleAudioComponent.CurrentFootstepVariant;
-		}
-		if (base.CanResetComponentProperty("CurrentFoleyVariant"))
-		{
-			this.CurrentFoleyVariant = roleAudioComponent.CurrentFoleyVariant;
-		}
-		if (base.CanResetComponentProperty("CurrentWaterType"))
-		{
-			this.CurrentWaterType = roleAudioComponent.CurrentWaterType;
-		}
-		if (base.CanResetComponentProperty("StateComp"))
-		{
-			if (roleAudioComponent.StateComp == null)
-			{
-				this.StateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.StateComp), "StateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AttributeComponent"))
-		{
-			if (roleAudioComponent.AttributeComponent == null)
-			{
-				this.AttributeComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComponent), "AttributeComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsInAudioShrubOverride"))
-		{
-			this.IsInAudioShrubOverride = roleAudioComponent.IsInAudioShrubOverride;
-		}
-		if (base.CanResetComponentProperty("AudioShrubTagNameOverride"))
-		{
-			this.AudioShrubTagNameOverride = roleAudioComponent.AudioShrubTagNameOverride;
-		}
-		if (base.CanResetComponentProperty("FootstepEvent"))
-		{
-			this.FootstepEvent = roleAudioComponent.FootstepEvent;
-		}
-		if (base.CanResetComponentProperty("FoleyEvent"))
-		{
-			this.FoleyEvent = roleAudioComponent.FoleyEvent;
-		}
+		this.IsInAudioShrubOverride = roleAudioComponent.IsInAudioShrubOverride;
+		this.AudioShrubTagNameOverride = roleAudioComponent.AudioShrubTagNameOverride;
+		this.FootstepEvent = roleAudioComponent.FootstepEvent;
+		this.FoleyEvent = roleAudioComponent.FoleyEvent;
 		return true;
 	}
 
-	// Token: 0x0400DA63 RID: 55907
+	// Token: 0x17002889 RID: 10377
+	// (get) Token: 0x0601972E RID: 104238 RVA: 0x007CADCA File Offset: 0x007C8FCA
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700288A RID: 10378
+	// (get) Token: 0x0601972F RID: 104239 RVA: 0x007CADCD File Offset: 0x007C8FCD
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700288B RID: 10379
+	// (get) Token: 0x06019730 RID: 104240 RVA: 0x007CADD0 File Offset: 0x007C8FD0
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700288C RID: 10380
+	// (get) Token: 0x06019731 RID: 104241 RVA: 0x007CADD3 File Offset: 0x007C8FD3
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700288D RID: 10381
+	// (get) Token: 0x06019732 RID: 104242 RVA: 0x007CADD6 File Offset: 0x007C8FD6
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF02 RID: 57090
 	private static Dictionary<E_FootstepVariant, string> FootstepVariantMap;
 
-	// Token: 0x0400DA64 RID: 55908
+	// Token: 0x0400DF03 RID: 57091
 	private static Dictionary<E_FoleyVariant, string> FoleyVariantMap;
 
-	// Token: 0x0400DA65 RID: 55909
+	// Token: 0x0400DF04 RID: 57092
 	private const string ROLE_GO_DOWN_FINISH_EVENT = "scene_role_switched_behind";
 
-	// Token: 0x0400DA66 RID: 55910
+	// Token: 0x0400DF05 RID: 57093
 	private const string ROLE_INTERACT_SHR = "play_amb_role_interact_shr";
 
-	// Token: 0x0400DA67 RID: 55911
+	// Token: 0x0400DF06 RID: 57094
 	private const string ROLE_MOVE = "role_move";
 
-	// Token: 0x0400DA68 RID: 55912
+	// Token: 0x0400DF07 RID: 57095
 	private const int TICK_INTERVAL = 250;
 
-	// Token: 0x0400DA69 RID: 55913
+	// Token: 0x0400DF08 RID: 57096
 	private const int LOCATION_TOLERANCE = 32;
 
-	// Token: 0x0400DA6A RID: 55914
+	// Token: 0x0400DF09 RID: 57097
 	private EMoveState LastMoveState = EMoveState.None;
 
-	// Token: 0x0400DA6B RID: 55915
+	// Token: 0x0400DF0A RID: 57098
 	private RoleSkinAudio? Config;
 
-	// Token: 0x0400DA6C RID: 55916
+	// Token: 0x0400DF0B RID: 57099
 	private string CurrentRoleName = "chixia";
 
-	// Token: 0x0400DA6D RID: 55917
+	// Token: 0x0400DF0C RID: 57100
 	private string CurrentFootstepTexture = "DirtSurface";
 
-	// Token: 0x0400DA6E RID: 55918
+	// Token: 0x0400DF0D RID: 57101
 	private string CurrentFootstepVariant = "walk";
 
-	// Token: 0x0400DA6F RID: 55919
+	// Token: 0x0400DF0E RID: 57102
 	private string CurrentFoleyVariant = "weak";
 
-	// Token: 0x0400DA70 RID: 55920
+	// Token: 0x0400DF0F RID: 57103
 	private string CurrentWaterType = "default";
 
-	// Token: 0x0400DA71 RID: 55921
+	// Token: 0x0400DF10 RID: 57104
 	private static double LastTickTime;
 
-	// Token: 0x0400DA72 RID: 55922
+	// Token: 0x0400DF11 RID: 57105
 	private static global::Vector LocationCache;
 
-	// Token: 0x0400DA73 RID: 55923
+	// Token: 0x0400DF12 RID: 57106
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent StateComp;
 
-	// Token: 0x0400DA74 RID: 55924
+	// Token: 0x0400DF13 RID: 57107
 	[Nullable(2)]
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400DA75 RID: 55925
+	// Token: 0x0400DF14 RID: 57108
 	protected bool IsInAudioShrubOverride;
 
-	// Token: 0x0400DA76 RID: 55926
+	// Token: 0x0400DF15 RID: 57109
 	protected FName? AudioShrubTagNameOverride;
 
-	// Token: 0x0400DA77 RID: 55927
+	// Token: 0x0400DF16 RID: 57110
 	[Nullable(2)]
 	private string FootstepEvent;
 
-	// Token: 0x0400DA78 RID: 55928
+	// Token: 0x0400DF17 RID: 57111
 	[Nullable(2)]
 	private string FoleyEvent;
 }

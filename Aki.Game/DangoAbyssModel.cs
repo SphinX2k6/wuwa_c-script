@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,15 +11,18 @@ using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.PayShop;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Module.InstanceDungeon;
+using Google.Protobuf.Collections;
 
-// Token: 0x02001A1E RID: 6686
+// Token: 0x02000EDD RID: 3805
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class DangoAbyssModel : ModelBase
 {
-	// Token: 0x0600C439 RID: 50233 RVA: 0x002C6D8E File Offset: 0x002C4F8E
+	// Token: 0x06009849 RID: 38985 RVA: 0x002D1E42 File Offset: 0x002D0042
 	protected override bool OnLeaveLevel()
 	{
 		this.ChallengeFinish = false;
@@ -28,16 +30,16 @@ public class DangoAbyssModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C43A RID: 50234 RVA: 0x002C6D9F File Offset: 0x002C4F9F
+	// Token: 0x0600984A RID: 38986 RVA: 0x002D1E53 File Offset: 0x002D0053
 	public void OnAbyssChallengeResultNotify(AbyssChallengeResultNotify notify)
 	{
 		this.CurrentAbyssResultInfo = new AbyssChallengeResultData();
 		this.CurrentAbyssResultInfo.Phrase(notify.Result);
 		this.ChallengeFinish = true;
-		this.SetLikeRecord(notify.Result.LikeRecord.ToList<AbyssLikeRecord>());
+		this.SetLikeRecord(notify.Result.LikeRecord);
 	}
 
-	// Token: 0x0600C43B RID: 50235 RVA: 0x002C6DDA File Offset: 0x002C4FDA
+	// Token: 0x0600984B RID: 38987 RVA: 0x002D1E89 File Offset: 0x002D0089
 	public AbyssRankChallengeInfo GetChallengeRankInfo()
 	{
 		if (this.ChallengeRankInfo == null)
@@ -47,19 +49,19 @@ public class DangoAbyssModel : ModelBase
 		return this.ChallengeRankInfo;
 	}
 
-	// Token: 0x0600C43C RID: 50236 RVA: 0x002C6DF5 File Offset: 0x002C4FF5
+	// Token: 0x0600984C RID: 38988 RVA: 0x002D1EA4 File Offset: 0x002D00A4
 	public void OnAnonymousNameStateChange(int challengeId, bool state)
 	{
 		this.GetChallengeRankInfo().SetIsOpenAnonymousName(challengeId, state);
 	}
 
-	// Token: 0x0600C43D RID: 50237 RVA: 0x002C6E04 File Offset: 0x002C5004
+	// Token: 0x0600984D RID: 38989 RVA: 0x002D1EB3 File Offset: 0x002D00B3
 	public bool GetChallengeAnonymousNameState(int challengeId)
 	{
 		return this.GetChallengeRankInfo().GetAnonymousNameMode(challengeId);
 	}
 
-	// Token: 0x0600C43E RID: 50238 RVA: 0x002C6E14 File Offset: 0x002C5014
+	// Token: 0x0600984E RID: 38990 RVA: 0x002D1EC4 File Offset: 0x002D00C4
 	public bool CheckPayShopRedDot()
 	{
 		using (List<PayShopGoods>.Enumerator enumerator = this.GetPayShopGoods().GetEnumerator())
@@ -75,26 +77,26 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C43F RID: 50239 RVA: 0x002C6E70 File Offset: 0x002C5070
+	// Token: 0x0600984F RID: 38991 RVA: 0x002D1F20 File Offset: 0x002D0120
 	public List<PayShopGoods> GetPayShopGoods()
 	{
 		int openShopId = DangoAbyssModel.Instance.GetOpenShopId();
 		return PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)openShopId, 1, false);
 	}
 
-	// Token: 0x0600C440 RID: 50240 RVA: 0x002C6E95 File Offset: 0x002C5095
+	// Token: 0x06009850 RID: 38992 RVA: 0x002D1F45 File Offset: 0x002D0145
 	public void OnAbyssChallegenRankUpdate(AbyssRankListResponse notify)
 	{
 		this.GetChallengeRankInfo().OnChallengeRankInfoUpdate(notify);
 	}
 
-	// Token: 0x0600C441 RID: 50241 RVA: 0x002C6EA3 File Offset: 0x002C50A3
+	// Token: 0x06009851 RID: 38993 RVA: 0x002D1F53 File Offset: 0x002D0153
 	public void OnAbyssChallengeSelfRankUpdate(AbyssSelfPassResponse notify)
 	{
 		this.GetChallengeRankInfo().OnSelfRankInfoUpdate(notify);
 	}
 
-	// Token: 0x0600C442 RID: 50242 RVA: 0x002C6EB4 File Offset: 0x002C50B4
+	// Token: 0x06009852 RID: 38994 RVA: 0x002D1F64 File Offset: 0x002D0164
 	public void OnAbyssLikeNotify(AbyssLikeNotify notify)
 	{
 		if (this.CurrentAbyssResultInfo == null)
@@ -109,10 +111,10 @@ public class DangoAbyssModel : ModelBase
 			return;
 		}
 		playerInfoByPlayerId.SetLikeCount(notify.LikeCount);
-		this.SetLikeRecord(notify.LikeRecord.ToList<AbyssLikeRecord>());
+		this.SetLikeRecord(notify.LikeRecord);
 	}
 
-	// Token: 0x0600C443 RID: 50243 RVA: 0x002C6F3C File Offset: 0x002C513C
+	// Token: 0x06009853 RID: 38995 RVA: 0x002D1FE8 File Offset: 0x002D01E8
 	public int GetPlayerLikeCount(int playerId)
 	{
 		if (this.CurrentAbyssResultInfo == null)
@@ -127,14 +129,14 @@ public class DangoAbyssModel : ModelBase
 		return playerInfoByPlayerId.GetLikeCount();
 	}
 
-	// Token: 0x0600C444 RID: 50244 RVA: 0x002C6F6B File Offset: 0x002C516B
+	// Token: 0x06009854 RID: 38996 RVA: 0x002D2017 File Offset: 0x002D0217
 	public void OnAbyssFormationRoleSelectUpdateNotify(AbyssRoleSelectUpdateNotify notify)
 	{
 		this.CurrentFormationSelectInfo = new AbyssFormationInfo();
 		this.CurrentFormationSelectInfo.Phrase(notify);
 	}
 
-	// Token: 0x0600C445 RID: 50245 RVA: 0x002C6F84 File Offset: 0x002C5184
+	// Token: 0x06009855 RID: 38997 RVA: 0x002D2030 File Offset: 0x002D0230
 	[NullableContext(2)]
 	public DangoAbyssActivityData GetCurrentOpenAbyssActivityData()
 	{
@@ -148,7 +150,7 @@ public class DangoAbyssModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600C446 RID: 50246 RVA: 0x002C6FF8 File Offset: 0x002C51F8
+	// Token: 0x06009856 RID: 38998 RVA: 0x002D20A4 File Offset: 0x002D02A4
 	[NullableContext(2)]
 	public AbyssDangoRoleData GetDangoAbyssRoleData(int id)
 	{
@@ -161,7 +163,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetRoleDataById(id);
 	}
 
-	// Token: 0x0600C447 RID: 50247 RVA: 0x002C7038 File Offset: 0x002C5238
+	// Token: 0x06009857 RID: 38999 RVA: 0x002D20E4 File Offset: 0x002D02E4
 	public bool GetAbyssUnLockState(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -173,7 +175,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAbyssChallengeDataById(id).GetIfUnlock();
 	}
 
-	// Token: 0x0600C448 RID: 50248 RVA: 0x002C707C File Offset: 0x002C527C
+	// Token: 0x06009858 RID: 39000 RVA: 0x002D2128 File Offset: 0x002D0328
 	public int GetAbyssMaxProgress(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -185,7 +187,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAbyssChallengeDataById(id).GetMaxProgress();
 	}
 
-	// Token: 0x0600C449 RID: 50249 RVA: 0x002C70C0 File Offset: 0x002C52C0
+	// Token: 0x06009859 RID: 39001 RVA: 0x002D216C File Offset: 0x002D036C
 	public bool GetAbyssTimeLimitState(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -197,7 +199,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAbyssChallengeDataById(id).GetOverUnlockTime();
 	}
 
-	// Token: 0x0600C44A RID: 50250 RVA: 0x002C7104 File Offset: 0x002C5304
+	// Token: 0x0600985A RID: 39002 RVA: 0x002D21B0 File Offset: 0x002D03B0
 	public bool GetAbyssConditionFinishState(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -209,7 +211,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAbyssChallengeDataById(id).GetConditionFinishState();
 	}
 
-	// Token: 0x0600C44B RID: 50251 RVA: 0x002C7148 File Offset: 0x002C5348
+	// Token: 0x0600985B RID: 39003 RVA: 0x002D21F4 File Offset: 0x002D03F4
 	public string GetAbyssUnlockTimeText(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -221,7 +223,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAbyssChallengeDataById(id).GetLeftTimeText();
 	}
 
-	// Token: 0x0600C44C RID: 50252 RVA: 0x002C7190 File Offset: 0x002C5390
+	// Token: 0x0600985C RID: 39004 RVA: 0x002D223C File Offset: 0x002D043C
 	public bool GetAbyssPreChallengeFinishState(int id)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -233,28 +235,28 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetPreChallengeFinishState(id);
 	}
 
-	// Token: 0x0600C44D RID: 50253 RVA: 0x002C71D0 File Offset: 0x002C53D0
+	// Token: 0x0600985D RID: 39005 RVA: 0x002D227C File Offset: 0x002D047C
 	public bool CheckIsSelf(int playerId)
 	{
 		int? id = PlayerInfoModel.Instance.GetId();
 		return id.GetValueOrDefault() == playerId & id != null;
 	}
 
-	// Token: 0x0600C44E RID: 50254 RVA: 0x002C71FC File Offset: 0x002C53FC
+	// Token: 0x0600985E RID: 39006 RVA: 0x002D22A8 File Offset: 0x002D04A8
 	public bool CheckInAbyss()
 	{
 		InstanceDungeon? instanceDungeon;
 		return InstanceDungeonConfig.Instance.GetConfig(CreatureModel.Instance.GetInstanceId()) != null && instanceDungeon.GetValueOrDefault().InstSubType == 33 && GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x0600C44F RID: 50255 RVA: 0x002C724C File Offset: 0x002C544C
+	// Token: 0x0600985F RID: 39007 RVA: 0x002D22F8 File Offset: 0x002D04F8
 	public bool CheckInAbyssEditFormationState()
 	{
 		InstanceDungeon? dungeonConfig = BattleTeamModel.Instance.Context.GetDungeonConfig();
 		return dungeonConfig != null && dungeonConfig.Value.InstSubType == 33;
 	}
 
-	// Token: 0x0600C450 RID: 50256 RVA: 0x002C728C File Offset: 0x002C548C
+	// Token: 0x06009860 RID: 39008 RVA: 0x002D2338 File Offset: 0x002D0538
 	public bool CheckAllDangoReady()
 	{
 		List<BattleRoleSlotData> allSlots = BattleTeamModel.Instance.GetAllSlots();
@@ -283,13 +285,13 @@ public class DangoAbyssModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C451 RID: 50257 RVA: 0x002C736F File Offset: 0x002C556F
+	// Token: 0x06009861 RID: 39009 RVA: 0x002D241B File Offset: 0x002D061B
 	public bool CheckIsInMatch()
 	{
 		return InstanceDungeonEntranceModel.Instance.GetMatchingState() > EInstanceMatchState.Default;
 	}
 
-	// Token: 0x0600C452 RID: 50258 RVA: 0x002C7380 File Offset: 0x002C5580
+	// Token: 0x06009862 RID: 39010 RVA: 0x002D242C File Offset: 0x002D062C
 	public void PhraseRoomInfo(AbyssChallengeRoomInfoNotify data)
 	{
 		this.CurrentLayer = data.CurFloor;
@@ -298,7 +300,7 @@ public class DangoAbyssModel : ModelBase
 		this.GainBoxCount = data.GainBox;
 		this.CurrentRouteId = data.RouteId;
 		this.CurrentChallengeId = data.ChallengeId;
-		this.RoleSelectDangoMap = data.RoleEquipMap.ToDictionary<int, int>();
+		this.RoleSelectDangoMap = new Dictionary<int, int>(data.RoleEquipMap);
 		this.MaxScore = data.MaxScore;
 		this.CurrentScore = data.CurScore;
 		bool currentRoomId = this.CurrentRoomId != 0;
@@ -307,64 +309,64 @@ public class DangoAbyssModel : ModelBase
 		{
 			EventSystem.Instance.Emit(EEventName.OnAbyssFirstRoomEnter);
 		}
-		this.SetLikeRecord(data.LikeRecord.ToList<AbyssLikeRecord>());
+		this.SetLikeRecord(data.LikeRecord);
 	}
 
-	// Token: 0x0600C453 RID: 50259 RVA: 0x002C743B File Offset: 0x002C563B
+	// Token: 0x06009863 RID: 39011 RVA: 0x002D24E2 File Offset: 0x002D06E2
 	public Dictionary<int, int> GetRoleSelectDangoMap()
 	{
 		return this.RoleSelectDangoMap ?? new Dictionary<int, int>();
 	}
 
-	// Token: 0x0600C454 RID: 50260 RVA: 0x002C744C File Offset: 0x002C564C
+	// Token: 0x06009864 RID: 39012 RVA: 0x002D24F3 File Offset: 0x002D06F3
 	public int GetAbyssLayer()
 	{
 		return this.CurrentLayer;
 	}
 
-	// Token: 0x0600C455 RID: 50261 RVA: 0x002C7454 File Offset: 0x002C5654
+	// Token: 0x06009865 RID: 39013 RVA: 0x002D24FB File Offset: 0x002D06FB
 	public int GetMaxLayer()
 	{
 		return this.MaxLayer;
 	}
 
-	// Token: 0x0600C456 RID: 50262 RVA: 0x002C745C File Offset: 0x002C565C
+	// Token: 0x06009866 RID: 39014 RVA: 0x002D2503 File Offset: 0x002D0703
 	public float GetCurrentAbyssCompletePercentage()
 	{
 		return (float)this.CurrentLayer / (float)this.MaxLayer;
 	}
 
-	// Token: 0x0600C457 RID: 50263 RVA: 0x002C746D File Offset: 0x002C566D
+	// Token: 0x06009867 RID: 39015 RVA: 0x002D2514 File Offset: 0x002D0714
 	public int GetCurrentRoomId()
 	{
 		return this.CurrentRoomId;
 	}
 
-	// Token: 0x0600C458 RID: 50264 RVA: 0x002C7475 File Offset: 0x002C5675
+	// Token: 0x06009868 RID: 39016 RVA: 0x002D251C File Offset: 0x002D071C
 	public int GetGainBoxCount()
 	{
 		return this.GainBoxCount;
 	}
 
-	// Token: 0x0600C459 RID: 50265 RVA: 0x002C747D File Offset: 0x002C567D
+	// Token: 0x06009869 RID: 39017 RVA: 0x002D2524 File Offset: 0x002D0724
 	public int GetMaxBoxCount()
 	{
 		return this.MaxBoxCount;
 	}
 
-	// Token: 0x0600C45A RID: 50266 RVA: 0x002C7485 File Offset: 0x002C5685
+	// Token: 0x0600986A RID: 39018 RVA: 0x002D252C File Offset: 0x002D072C
 	public bool GetInAbyssFlow()
 	{
 		return this.InAbyssFlowInternal;
 	}
 
-	// Token: 0x0600C45B RID: 50267 RVA: 0x002C748D File Offset: 0x002C568D
+	// Token: 0x0600986B RID: 39019 RVA: 0x002D2534 File Offset: 0x002D0734
 	public void SetInAbyssFlow(bool value)
 	{
 		this.InAbyssFlowInternal = value;
 	}
 
-	// Token: 0x0600C45C RID: 50268 RVA: 0x002C7498 File Offset: 0x002C5698
+	// Token: 0x0600986C RID: 39020 RVA: 0x002D2540 File Offset: 0x002D0740
 	public AttrListScrollData[] GetPluginShowAttributeList(int id)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -380,7 +382,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C45D RID: 50269 RVA: 0x002C7524 File Offset: 0x002C5724
+	// Token: 0x0600986D RID: 39021 RVA: 0x002D25CC File Offset: 0x002D07CC
 	public DangoAbyssDefine.DangoAbyssTagData[] GetPluginShowTagDataList(int itemId)
 	{
 		List<DangoAbyssDefine.DangoAbyssTagData> list = new List<DangoAbyssDefine.DangoAbyssTagData>();
@@ -400,13 +402,13 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C45E RID: 50270 RVA: 0x002C75CC File Offset: 0x002C57CC
+	// Token: 0x0600986E RID: 39022 RVA: 0x002D2674 File Offset: 0x002D0874
 	public CSharpScript.Game.Module.Inventory.ItemConfig GetDangoItemConfig(int itemId)
 	{
 		return InventoryConfig.Instance.GetItemConfigData(itemId);
 	}
 
-	// Token: 0x0600C45F RID: 50271 RVA: 0x002C75DC File Offset: 0x002C57DC
+	// Token: 0x0600986F RID: 39023 RVA: 0x002D2684 File Offset: 0x002D0884
 	public int GetDangoItemBelongId(int incId)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -424,7 +426,7 @@ public class DangoAbyssModel : ModelBase
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0600C460 RID: 50272 RVA: 0x002C7628 File Offset: 0x002C5828
+	// Token: 0x06009870 RID: 39024 RVA: 0x002D26D0 File Offset: 0x002D08D0
 	public int GetDangoBelongRoleId(int playerId, int id)
 	{
 		Dictionary<int, AbyssDangoOwnerData> playerOwnerDataMap = this.GetPlayerOwnerDataMap(playerId);
@@ -440,7 +442,7 @@ public class DangoAbyssModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600C461 RID: 50273 RVA: 0x002C7694 File Offset: 0x002C5894
+	// Token: 0x06009871 RID: 39025 RVA: 0x002D273C File Offset: 0x002D093C
 	public bool GetDangoItemLockState(int incId)
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -452,7 +454,7 @@ public class DangoAbyssModel : ModelBase
 		return pluginItemInfoById != null && pluginItemInfoById.GetIsLock();
 	}
 
-	// Token: 0x0600C462 RID: 50274 RVA: 0x002C76BF File Offset: 0x002C58BF
+	// Token: 0x06009872 RID: 39026 RVA: 0x002D2767 File Offset: 0x002D0967
 	private Dictionary<int, AbyssDangoOwnerData> GetPlayerOwnerDataMap(int playerId)
 	{
 		if (!this.DangoOwnerMap.ContainsKey(playerId))
@@ -462,7 +464,7 @@ public class DangoAbyssModel : ModelBase
 		return this.DangoOwnerMap[playerId];
 	}
 
-	// Token: 0x0600C463 RID: 50275 RVA: 0x002C76EC File Offset: 0x002C58EC
+	// Token: 0x06009873 RID: 39027 RVA: 0x002D2794 File Offset: 0x002D0994
 	[NullableContext(2)]
 	public AbyssDangoOwnerData GetPlayerRoleCfgOwnerData(int playerId, int roleCfgId)
 	{
@@ -482,7 +484,7 @@ public class DangoAbyssModel : ModelBase
 		return dictionary[roleCfgId];
 	}
 
-	// Token: 0x0600C464 RID: 50276 RVA: 0x002C7748 File Offset: 0x002C5948
+	// Token: 0x06009874 RID: 39028 RVA: 0x002D27F0 File Offset: 0x002D09F0
 	private void ResetDangoOwnerDataByRoleId(int playerId, int roleConfigId)
 	{
 		AbyssDangoOwnerData roleOwnerData = this.GetRoleOwnerData(playerId, roleConfigId);
@@ -495,14 +497,14 @@ public class DangoAbyssModel : ModelBase
 		roleOwnerData.DangoId = 0;
 	}
 
-	// Token: 0x0600C465 RID: 50277 RVA: 0x002C7777 File Offset: 0x002C5977
+	// Token: 0x06009875 RID: 39029 RVA: 0x002D281F File Offset: 0x002D0A1F
 	[NullableContext(2)]
 	public AbyssDangoOwnerData GetRoleOwnerData(int playerId, int roleConfigId)
 	{
 		return this.GetPlayerRoleCfgOwnerData(playerId, roleConfigId);
 	}
 
-	// Token: 0x0600C466 RID: 50278 RVA: 0x002C7784 File Offset: 0x002C5984
+	// Token: 0x06009876 RID: 39030 RVA: 0x002D282C File Offset: 0x002D0A2C
 	[NullableContext(2)]
 	public void RefreshOwnerListByMatchTeamInfo(MatchTeamInfo matchTeamInfo)
 	{
@@ -564,34 +566,43 @@ public class DangoAbyssModel : ModelBase
 						}
 						num2 = num3;
 						abyssDangoOwnerData2.DangoLevel = num2.GetValueOrDefault();
-						AbyssDangoOwnerData abyssDangoOwnerData3 = roleOwnerData;
 						MatchRoleContext roleContext3 = matchRoleInfo.RoleContext;
-						int[] array;
+						RepeatedField<int> repeatedField;
 						if (roleContext3 == null)
 						{
-							array = null;
+							repeatedField = null;
 						}
 						else
 						{
 							AbyssMatchRoleContext abyssCtx3 = roleContext3.AbyssCtx;
 							if (abyssCtx3 == null)
 							{
-								array = null;
+								repeatedField = null;
 							}
 							else
 							{
 								AbyssRoleInfo roleInfo3 = abyssCtx3.RoleInfo;
-								array = ((roleInfo3 != null) ? roleInfo3.EquipItems.ToArray<int>() : null);
+								repeatedField = ((roleInfo3 != null) ? roleInfo3.EquipItems : null);
 							}
 						}
-						abyssDangoOwnerData3.DangoEquipIds = (array ?? Array.Empty<int>());
+						RepeatedField<int> repeatedField2 = repeatedField;
+						if (repeatedField2 != null)
+						{
+							int[] array = new int[repeatedField2.Count];
+							repeatedField2.CopyTo(array, 0);
+							roleOwnerData.DangoEquipIds = array;
+						}
+						else
+						{
+							roleOwnerData.DangoEquipIds = Array.Empty<int>();
+						}
 					}
 				}
 			}
 		}
 	}
 
-	// Token: 0x0600C467 RID: 50279 RVA: 0x002C7960 File Offset: 0x002C5B60
+	// Token: 0x06009877 RID: 39031 RVA: 0x002D2A28 File Offset: 0x002D0C28
 	public Dictionary<int, int[]> CacheDangoSelect(int playerId, int roleConfigId, int dangoId)
 	{
 		Dictionary<int, int[]> dictionary = new Dictionary<int, int[]>();
@@ -638,13 +649,13 @@ public class DangoAbyssModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0600C468 RID: 50280 RVA: 0x002C7A94 File Offset: 0x002C5C94
+	// Token: 0x06009878 RID: 39032 RVA: 0x002D2B5C File Offset: 0x002D0D5C
 	public float GetInstanceProgress()
 	{
 		return Math.Min((float)this.CurrentScore / (float)this.MaxScore, 1f);
 	}
 
-	// Token: 0x0600C469 RID: 50281 RVA: 0x002C7AB0 File Offset: 0x002C5CB0
+	// Token: 0x06009879 RID: 39033 RVA: 0x002D2B78 File Offset: 0x002D0D78
 	public string GetInstanceReviveTipTips()
 	{
 		int currentShareReviveTimes = DeadReviveModel.Instance.CurrentShareReviveTimes;
@@ -653,7 +664,7 @@ public class DangoAbyssModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600C46A RID: 50282 RVA: 0x002C7AE0 File Offset: 0x002C5CE0
+	// Token: 0x0600987A RID: 39034 RVA: 0x002D2BA8 File Offset: 0x002D0DA8
 	public string GetInstanceFloorProgressText()
 	{
 		float value = DangoAbyssModel.Instance.GetCurrentAbyssCompletePercentage() * 100f;
@@ -663,7 +674,7 @@ public class DangoAbyssModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600C46B RID: 50283 RVA: 0x002C7B28 File Offset: 0x002C5D28
+	// Token: 0x0600987B RID: 39035 RVA: 0x002D2BF0 File Offset: 0x002D0DF0
 	public string GetInstanceFloorText()
 	{
 		int abyssLayer = this.GetAbyssLayer();
@@ -675,43 +686,43 @@ public class DangoAbyssModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600C46C RID: 50284 RVA: 0x002C7B6F File Offset: 0x002C5D6F
+	// Token: 0x0600987C RID: 39036 RVA: 0x002D2C37 File Offset: 0x002D0E37
 	public string GetInstanceFloorDetailProgressText()
 	{
 		return this.GetInstanceFloorText();
 	}
 
-	// Token: 0x0600C46D RID: 50285 RVA: 0x002C7B77 File Offset: 0x002C5D77
+	// Token: 0x0600987D RID: 39037 RVA: 0x002D2C3F File Offset: 0x002D0E3F
 	public int GetCurrentChallengeId()
 	{
 		return this.CurrentChallengeId;
 	}
 
-	// Token: 0x0600C46E RID: 50286 RVA: 0x002C7B80 File Offset: 0x002C5D80
+	// Token: 0x0600987E RID: 39038 RVA: 0x002D2C48 File Offset: 0x002D0E48
 	public int GetCurrentAbyssFullTime()
 	{
 		return DangoAbyssConfig.Instance.GetDangoAbyssInstById(this.CurrentChallengeId).Value.TotalTime;
 	}
 
-	// Token: 0x0600C46F RID: 50287 RVA: 0x002C7BB0 File Offset: 0x002C5DB0
+	// Token: 0x0600987F RID: 39039 RVA: 0x002D2C78 File Offset: 0x002D0E78
 	public int GetCurrentAbyssTotalScore()
 	{
 		return DangoAbyssConfig.Instance.GetDangoAbyssInstById(this.CurrentChallengeId).Value.TotalScore;
 	}
 
-	// Token: 0x0600C470 RID: 50288 RVA: 0x002C7BE0 File Offset: 0x002C5DE0
+	// Token: 0x06009880 RID: 39040 RVA: 0x002D2CA8 File Offset: 0x002D0EA8
 	public Dictionary<int, int> GetCurrentAbyssTreasureMap()
 	{
 		return DangoAbyssConfig.Instance.GetDangoAbyssInstById(this.CurrentChallengeId).Value.RewardTime();
 	}
 
-	// Token: 0x0600C471 RID: 50289 RVA: 0x002C7C10 File Offset: 0x002C5E10
+	// Token: 0x06009881 RID: 39041 RVA: 0x002D2CD8 File Offset: 0x002D0ED8
 	public bool IsPlanarDungeon()
 	{
 		return DangoAbyssConfig.Instance.GetDangoAbyssInstByInstId(CreatureModel.Instance.GetInstanceId()).Value.PlanarDungeon;
 	}
 
-	// Token: 0x0600C472 RID: 50290 RVA: 0x002C7C44 File Offset: 0x002C5E44
+	// Token: 0x06009882 RID: 39042 RVA: 0x002D2D0C File Offset: 0x002D0F0C
 	public string GetCurrentAbyssName()
 	{
 		if (this.CurrentChallengeId == 0)
@@ -730,7 +741,7 @@ public class DangoAbyssModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600C473 RID: 50291 RVA: 0x002C7CB0 File Offset: 0x002C5EB0
+	// Token: 0x06009883 RID: 39043 RVA: 0x002D2D78 File Offset: 0x002D0F78
 	public string GetCurrentRouteDesc()
 	{
 		if (this.CurrentRouteId == 0)
@@ -740,14 +751,14 @@ public class DangoAbyssModel : ModelBase
 		return ConfigMultiTextLang.GetLocalTextNew(DangoAbyssConfig.Instance.GetAbyssRouteByRouteIdAndFloorId(this.CurrentRouteId, this.CurrentLayer).Value.Desc, null);
 	}
 
-	// Token: 0x0600C474 RID: 50292 RVA: 0x002C7CF8 File Offset: 0x002C5EF8
+	// Token: 0x06009884 RID: 39044 RVA: 0x002D2DC0 File Offset: 0x002D0FC0
 	public string GetInstanceRemainTimeText()
 	{
 		double challengeRemainTime = InstanceDungeonModel.Instance.GetInstanceDungeonInfo().Tree.GetChallengeRemainTime(null);
 		return TimeUtil.Instance.GetTimeDataFormat(Math.Ceiling(challengeRemainTime));
 	}
 
-	// Token: 0x0600C475 RID: 50293 RVA: 0x002C7D34 File Offset: 0x002C5F34
+	// Token: 0x06009885 RID: 39045 RVA: 0x002D2DFC File Offset: 0x002D0FFC
 	public int GetOpenShopId()
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -759,7 +770,7 @@ public class DangoAbyssModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600C476 RID: 50294 RVA: 0x002C7D78 File Offset: 0x002C5F78
+	// Token: 0x06009886 RID: 39046 RVA: 0x002D2E40 File Offset: 0x002D1040
 	public void RefreshOwnDataAfterChange(int playerId)
 	{
 		foreach (KeyValuePair<int, AbyssDangoOwnerData> keyValuePair in this.GetPlayerOwnerDataMap(playerId))
@@ -768,7 +779,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C477 RID: 50295 RVA: 0x002C7DDC File Offset: 0x002C5FDC
+	// Token: 0x06009887 RID: 39047 RVA: 0x002D2EA4 File Offset: 0x002D10A4
 	private void RefreshOwnData(int roleId, AbyssDangoOwnerData data)
 	{
 		List<BattleRoleSlotData> allSlots = BattleTeamModel.Instance.GetAllSlots();
@@ -800,7 +811,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C478 RID: 50296 RVA: 0x002C7EBC File Offset: 0x002C60BC
+	// Token: 0x06009888 RID: 39048 RVA: 0x002D2F84 File Offset: 0x002D1184
 	[return: Nullable(2)]
 	public AbyssMatchChangeRoleContext GetMatchDangoRoleOwnData(int playerId, List<int> roleIdList)
 	{
@@ -815,7 +826,7 @@ public class DangoAbyssModel : ModelBase
 		return abyssMatchChangeRoleContext;
 	}
 
-	// Token: 0x0600C479 RID: 50297 RVA: 0x002C7F3C File Offset: 0x002C613C
+	// Token: 0x06009889 RID: 39049 RVA: 0x002D3004 File Offset: 0x002D1204
 	public AbyssDangoRoleData[] GetAllDangoList()
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -826,7 +837,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetAllDangoList();
 	}
 
-	// Token: 0x0600C47A RID: 50298 RVA: 0x002C7F60 File Offset: 0x002C6160
+	// Token: 0x0600988A RID: 39050 RVA: 0x002D3028 File Offset: 0x002D1228
 	[NullableContext(2)]
 	public global::AbyssPluginItemInfo GetPluginItemInfoById(int incId)
 	{
@@ -838,7 +849,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetPluginItemInfoById(incId);
 	}
 
-	// Token: 0x0600C47B RID: 50299 RVA: 0x002C7F80 File Offset: 0x002C6180
+	// Token: 0x0600988B RID: 39051 RVA: 0x002D3048 File Offset: 0x002D1248
 	public AbyssItem? GetPluginItemConfigByIncId(int incId)
 	{
 		global::AbyssPluginItemInfo pluginItemInfoById = this.GetPluginItemInfoById(incId);
@@ -849,7 +860,7 @@ public class DangoAbyssModel : ModelBase
 		return pluginItemInfoById.GetConfig().As<AbyssItem>();
 	}
 
-	// Token: 0x0600C47C RID: 50300 RVA: 0x002C7FAC File Offset: 0x002C61AC
+	// Token: 0x0600988C RID: 39052 RVA: 0x002D3074 File Offset: 0x002D1274
 	public global::AbyssPluginItemInfo[] GetPluginItemListByType(DangoAbyssDefine.ESlotType slotType)
 	{
 		global::AbyssPluginItemInfo[] allPluginItemList = this.GetAllPluginItemList();
@@ -864,7 +875,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C47D RID: 50301 RVA: 0x002C8008 File Offset: 0x002C6208
+	// Token: 0x0600988D RID: 39053 RVA: 0x002D30D0 File Offset: 0x002D12D0
 	public global::AbyssPluginItemInfo[] GetAllPluginItemList()
 	{
 		DangoAbyssActivityData currentOpenAbyssActivityData = this.GetCurrentOpenAbyssActivityData();
@@ -875,7 +886,7 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetPluginItemInfoAll();
 	}
 
-	// Token: 0x0600C47E RID: 50302 RVA: 0x002C802C File Offset: 0x002C622C
+	// Token: 0x0600988E RID: 39054 RVA: 0x002D30F4 File Offset: 0x002D12F4
 	public void InitCacheDangoOwnerMap()
 	{
 		this.DangoOwnerMap.Clear();
@@ -891,13 +902,13 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C47F RID: 50303 RVA: 0x002C8104 File Offset: 0x002C6304
+	// Token: 0x0600988F RID: 39055 RVA: 0x002D31CC File Offset: 0x002D13CC
 	public Dictionary<int, Dictionary<int, AbyssDangoOwnerData>> GetCacheDangoOwnerMap()
 	{
 		return LocalStorage.GetPlayer<Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>>(ELocalStoragePlayerKey.AbyssDangoFormationSelect, null) ?? new Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>();
 	}
 
-	// Token: 0x0600C480 RID: 50304 RVA: 0x002C8118 File Offset: 0x002C6318
+	// Token: 0x06009890 RID: 39056 RVA: 0x002D31E0 File Offset: 0x002D13E0
 	public void SaveCacheDangoOwnerMap()
 	{
 		Dictionary<int, Dictionary<int, AbyssDangoOwnerData>> dictionary = new Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>();
@@ -916,7 +927,7 @@ public class DangoAbyssModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>>(ELocalStoragePlayerKey.AbyssDangoFormationSelect, dictionary);
 	}
 
-	// Token: 0x0600C481 RID: 50305 RVA: 0x002C81F8 File Offset: 0x002C63F8
+	// Token: 0x06009891 RID: 39057 RVA: 0x002D32C0 File Offset: 0x002D14C0
 	public bool CheckInDangoAbyssInstance()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -928,7 +939,7 @@ public class DangoAbyssModel : ModelBase
 		return config != null && config.GetValueOrDefault().InstSubType == 33;
 	}
 
-	// Token: 0x0600C482 RID: 50306 RVA: 0x002C8248 File Offset: 0x002C6448
+	// Token: 0x06009892 RID: 39058 RVA: 0x002D3310 File Offset: 0x002D1510
 	public bool CheckIfInSmallWorldInstance()
 	{
 		int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -940,7 +951,7 @@ public class DangoAbyssModel : ModelBase
 		return config != null && config.GetValueOrDefault().InstSubType == 12 && (config != null && config.GetValueOrDefault().WorldDungeonSubType == 1);
 	}
 
-	// Token: 0x0600C483 RID: 50307 RVA: 0x002C82B8 File Offset: 0x002C64B8
+	// Token: 0x06009893 RID: 39059 RVA: 0x002D3380 File Offset: 0x002D1580
 	public DangoAbyssDefine.EAbyssItemTipsState GetDangoAbyssItemTipsConfirmState(DangoAbyssDefine.IAbyssItemTipsData data)
 	{
 		if (data.IncId == 0 || data.DangoId < 0 || data.SlotIndex < 0)
@@ -969,7 +980,7 @@ public class DangoAbyssModel : ModelBase
 		return this.GetItemTipsAvailableConfirmState(data);
 	}
 
-	// Token: 0x0600C484 RID: 50308 RVA: 0x002C8370 File Offset: 0x002C6570
+	// Token: 0x06009894 RID: 39060 RVA: 0x002D3438 File Offset: 0x002D1638
 	private bool CheckLimitPassiveSame(DangoAbyssDefine.IAbyssItemTipsData data)
 	{
 		global::AbyssPluginItemInfo pluginItemInfoById = DangoAbyssModel.Instance.GetPluginItemInfoById(data.IncId);
@@ -979,7 +990,7 @@ public class DangoAbyssModel : ModelBase
 		return belongRole == data.DangoId && flag;
 	}
 
-	// Token: 0x0600C485 RID: 50309 RVA: 0x002C83CC File Offset: 0x002C65CC
+	// Token: 0x06009895 RID: 39061 RVA: 0x002D3494 File Offset: 0x002D1694
 	private bool CheckLimitPassiveRepeat(DangoAbyssDefine.IAbyssItemTipsData data)
 	{
 		int roleId = DangoAbyssModel.Instance.GetPluginItemInfoById(data.IncId).GetRoleId();
@@ -989,7 +1000,7 @@ public class DangoAbyssModel : ModelBase
 		return valueTuple.Item1 && valueTuple.Item2 != data.SlotIndex && !flag;
 	}
 
-	// Token: 0x0600C486 RID: 50310 RVA: 0x002C8440 File Offset: 0x002C6640
+	// Token: 0x06009896 RID: 39062 RVA: 0x002D3508 File Offset: 0x002D1708
 	private DangoAbyssDefine.EAbyssItemTipsState GetItemTipsAvailableConfirmState(DangoAbyssDefine.IAbyssItemTipsData data)
 	{
 		global::AbyssPluginItemInfo pluginItemInfoById = DangoAbyssModel.Instance.GetPluginItemInfoById(data.IncId);
@@ -1031,7 +1042,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C487 RID: 50311 RVA: 0x002C84FC File Offset: 0x002C66FC
+	// Token: 0x06009897 RID: 39063 RVA: 0x002D35C4 File Offset: 0x002D17C4
 	private DangoAbyssDefine.EAbyssItemTipsState GetLimitPassiveItemTipsConfirmState(DangoAbyssDefine.IAbyssItemTipsData data)
 	{
 		int pluginItemIncIdBySlotIndex = this.GetPluginItemIncIdBySlotIndex(data.DangoId, data.SlotIndex);
@@ -1059,7 +1070,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C488 RID: 50312 RVA: 0x002C8584 File Offset: 0x002C6784
+	// Token: 0x06009898 RID: 39064 RVA: 0x002D364C File Offset: 0x002D184C
 	[NullableContext(0)]
 	private ValueTuple<bool, int> CheckRepeatPassivePlugin([Nullable(1)] int[] incIdList, int newIncId)
 	{
@@ -1080,7 +1091,7 @@ public class DangoAbyssModel : ModelBase
 		return new ValueTuple<bool, int>(false, -1);
 	}
 
-	// Token: 0x0600C489 RID: 50313 RVA: 0x002C8600 File Offset: 0x002C6800
+	// Token: 0x06009899 RID: 39065 RVA: 0x002D36C8 File Offset: 0x002D18C8
 	private int[] SwitchIndexWithValue(int[] list, int value, int newIndex)
 	{
 		int num = -1;
@@ -1097,7 +1108,7 @@ public class DangoAbyssModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600C48A RID: 50314 RVA: 0x002C8634 File Offset: 0x002C6834
+	// Token: 0x0600989A RID: 39066 RVA: 0x002D36FC File Offset: 0x002D18FC
 	public unsafe int[] GetDangoAbyssItemNewEquip(DangoAbyssDefine.IAbyssItemTipsData data, DangoAbyssDefine.EAbyssItemTipsState state)
 	{
 		List<int> list = new List<int>(DangoAbyssModel.Instance.GetDangoAbyssRoleData(data.DangoId).GetEquipItems());
@@ -1128,7 +1139,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C48B RID: 50315 RVA: 0x002C871D File Offset: 0x002C691D
+	// Token: 0x0600989B RID: 39067 RVA: 0x002D37E5 File Offset: 0x002D19E5
 	public int GetPluginItemIncIdBySlotIndex(int roleId, int slotIndex)
 	{
 		AbyssDangoRoleSlotData pluginSlotData = DangoAbyssModel.Instance.GetDangoAbyssRoleData(roleId).GetPluginSlotData(slotIndex);
@@ -1139,7 +1150,7 @@ public class DangoAbyssModel : ModelBase
 		return pluginSlotData.GetIncId();
 	}
 
-	// Token: 0x0600C48C RID: 50316 RVA: 0x002C873C File Offset: 0x002C693C
+	// Token: 0x0600989C RID: 39068 RVA: 0x002D3804 File Offset: 0x002D1A04
 	public int GetSlotUnlockLevel(int dangoId, int slotIndex)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(dangoId);
@@ -1154,7 +1165,7 @@ public class DangoAbyssModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0600C48D RID: 50317 RVA: 0x002C87A8 File Offset: 0x002C69A8
+	// Token: 0x0600989D RID: 39069 RVA: 0x002D3870 File Offset: 0x002D1A70
 	private int GetSlotUnlockCount(int slotIndex)
 	{
 		if (slotIndex == 0)
@@ -1164,7 +1175,7 @@ public class DangoAbyssModel : ModelBase
 		return slotIndex;
 	}
 
-	// Token: 0x0600C48E RID: 50318 RVA: 0x002C87B4 File Offset: 0x002C69B4
+	// Token: 0x0600989E RID: 39070 RVA: 0x002D387C File Offset: 0x002D1A7C
 	public bool GetSlotLockState(int dangoId, int slotIndex)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(dangoId);
@@ -1177,7 +1188,7 @@ public class DangoAbyssModel : ModelBase
 		return levelConfig.Value.PluginNum < slotUnlockCount;
 	}
 
-	// Token: 0x0600C48F RID: 50319 RVA: 0x002C87F8 File Offset: 0x002C69F8
+	// Token: 0x0600989F RID: 39071 RVA: 0x002D38C0 File Offset: 0x002D1AC0
 	public string GetPluginItemQualityIcon(int itemId)
 	{
 		AbyssItem? dangoItemById = DangoAbyssConfig.Instance.GetDangoItemById(itemId);
@@ -1206,7 +1217,7 @@ public class DangoAbyssModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600C490 RID: 50320 RVA: 0x002C889C File Offset: 0x002C6A9C
+	// Token: 0x060098A0 RID: 39072 RVA: 0x002D3964 File Offset: 0x002D1B64
 	public bool IsPluginHasValidTag(int roleId, global::AbyssPluginItemInfo item)
 	{
 		Dictionary<int, int> dictionary = this.GetPluginItemConfigByIncId(item.GetUniqueId()).Value.AddTag();
@@ -1224,7 +1235,7 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C491 RID: 50321 RVA: 0x002C8924 File Offset: 0x002C6B24
+	// Token: 0x060098A1 RID: 39073 RVA: 0x002D39EC File Offset: 0x002D1BEC
 	private bool IsTagTypeCorrect(int roleId, int tagId, DangoAbyssDefine.ETagDataGetType getType)
 	{
 		AbyssPluginPropDesc? dangoPluginPropDescById = DangoAbyssConfig.Instance.GetDangoPluginPropDescById(tagId);
@@ -1252,7 +1263,7 @@ public class DangoAbyssModel : ModelBase
 		return (flag && getType != DangoAbyssDefine.ETagDataGetType.InValid) || (!flag && getType == DangoAbyssDefine.ETagDataGetType.InValid);
 	}
 
-	// Token: 0x0600C492 RID: 50322 RVA: 0x002C89CC File Offset: 0x002C6BCC
+	// Token: 0x060098A2 RID: 39074 RVA: 0x002D3A94 File Offset: 0x002D1C94
 	private Dictionary<int, int> AddTagsToMap(Dictionary<int, int> map, Dictionary<int, int> tags)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in tags)
@@ -1269,7 +1280,7 @@ public class DangoAbyssModel : ModelBase
 		return map;
 	}
 
-	// Token: 0x0600C493 RID: 50323 RVA: 0x002C8A5C File Offset: 0x002C6C5C
+	// Token: 0x060098A3 RID: 39075 RVA: 0x002D3B24 File Offset: 0x002D1D24
 	public DangoAbyssDefine.DangoAbyssTagData[] GetDangoTagData(int roleId, DangoAbyssDefine.ETagDataGetType getType)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
@@ -1315,7 +1326,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C494 RID: 50324 RVA: 0x002C8BC4 File Offset: 0x002C6DC4
+	// Token: 0x060098A4 RID: 39076 RVA: 0x002D3C8C File Offset: 0x002D1E8C
 	private bool CheckOverMaxValue(int value, int maxValue)
 	{
 		if (maxValue < 0)
@@ -1325,7 +1336,7 @@ public class DangoAbyssModel : ModelBase
 		return value > maxValue;
 	}
 
-	// Token: 0x0600C495 RID: 50325 RVA: 0x002C8BD4 File Offset: 0x002C6DD4
+	// Token: 0x060098A5 RID: 39077 RVA: 0x002D3C9C File Offset: 0x002D1E9C
 	public string GetFormatAttributeValueByTagId(int value, int tagId, bool? hideMax = null)
 	{
 		AbyssPluginPropDesc? dangoPluginPropDescById = DangoAbyssConfig.Instance.GetDangoPluginPropDescById(tagId);
@@ -1402,7 +1413,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C496 RID: 50326 RVA: 0x002C8E0C File Offset: 0x002C700C
+	// Token: 0x060098A6 RID: 39078 RVA: 0x002D3ED4 File Offset: 0x002D20D4
 	[NullableContext(2)]
 	public DangoAbyssDefine.ESlotSwitchType GetSlotSwitchTypeByData(AbyssDangoRoleSlotData oldData, AbyssDangoRoleSlotData newData)
 	{
@@ -1427,7 +1438,7 @@ public class DangoAbyssModel : ModelBase
 		return DangoAbyssDefine.ESlotSwitchType.None;
 	}
 
-	// Token: 0x0600C497 RID: 50327 RVA: 0x002C8E60 File Offset: 0x002C7060
+	// Token: 0x060098A7 RID: 39079 RVA: 0x002D3F28 File Offset: 0x002D2128
 	public ConfigPropValue[] GetDangoAddPropData(int roleId)
 	{
 		int[] equipItems = this.GetDangoAbyssRoleData(roleId).GetEquipItems();
@@ -1445,13 +1456,13 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C498 RID: 50328 RVA: 0x002C8EE0 File Offset: 0x002C70E0
+	// Token: 0x060098A8 RID: 39080 RVA: 0x002D3FA8 File Offset: 0x002D21A8
 	public ConfigPropValue[] GetDangoBaseProp(int roleId)
 	{
 		return this.GetDangoAbyssRoleData(roleId).GetLevelConfig().Value.Prop();
 	}
 
-	// Token: 0x0600C499 RID: 50329 RVA: 0x002C8F0C File Offset: 0x002C710C
+	// Token: 0x060098A9 RID: 39081 RVA: 0x002D3FD4 File Offset: 0x002D21D4
 	public AttrListScrollData[] GetDangoShowAttributeList(int roleId)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -1482,7 +1493,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C49A RID: 50330 RVA: 0x002C905C File Offset: 0x002C725C
+	// Token: 0x060098AA RID: 39082 RVA: 0x002D4124 File Offset: 0x002D2324
 	private AttrListScrollData[] GetEquipViewAttributeScrollData(int roleId)
 	{
 		ConfigPropValue[] dangoAddPropData = this.GetDangoAddPropData(roleId);
@@ -1506,7 +1517,7 @@ public class DangoAbyssModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600C49B RID: 50331 RVA: 0x002C9144 File Offset: 0x002C7344
+	// Token: 0x060098AB RID: 39083 RVA: 0x002D420C File Offset: 0x002D240C
 	public List<DangoAbyssDefine.EquipViewAttributeData> GetEquipViewAttributeDataById(int roleId)
 	{
 		DangoAbyssDefine.EquipViewAttributeData equipViewAttributeData = new DangoAbyssDefine.EquipViewAttributeData();
@@ -1561,7 +1572,7 @@ public class DangoAbyssModel : ModelBase
 		return list3;
 	}
 
-	// Token: 0x0600C49C RID: 50332 RVA: 0x002C928C File Offset: 0x002C748C
+	// Token: 0x060098AC RID: 39084 RVA: 0x002D4354 File Offset: 0x002D2554
 	private bool GetSameIdDataInList(List<DangoAbyssDefine.EquipViewAttributeData> dataList, int checkId, float checkValue, bool isTag)
 	{
 		foreach (DangoAbyssDefine.EquipViewAttributeData equipViewAttributeData in dataList)
@@ -1596,7 +1607,7 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C49D RID: 50333 RVA: 0x002C940C File Offset: 0x002C760C
+	// Token: 0x060098AD RID: 39085 RVA: 0x002D44D4 File Offset: 0x002D26D4
 	public List<DangoAbyssDefine.EquipViewAttributeData> SetEquipViewAttributeType(List<DangoAbyssDefine.EquipViewAttributeData> oldList, List<DangoAbyssDefine.EquipViewAttributeData> newList)
 	{
 		foreach (DangoAbyssDefine.EquipViewAttributeData equipViewAttributeData in newList)
@@ -1626,7 +1637,7 @@ public class DangoAbyssModel : ModelBase
 		return newList;
 	}
 
-	// Token: 0x0600C49E RID: 50334 RVA: 0x002C94E0 File Offset: 0x002C76E0
+	// Token: 0x060098AE RID: 39086 RVA: 0x002D45A8 File Offset: 0x002D27A8
 	[NullableContext(2)]
 	public string GetSlotTypeTextIdBySlotIndex(int slotIndex)
 	{
@@ -1639,14 +1650,14 @@ public class DangoAbyssModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600C49F RID: 50335 RVA: 0x002C950C File Offset: 0x002C770C
+	// Token: 0x060098AF RID: 39087 RVA: 0x002D45D4 File Offset: 0x002D27D4
 	public global::AbyssPluginItemInfo[] GetPluginItemListBySlotIndex(int slotIndex)
 	{
 		DangoAbyssDefine.ESlotType slotTypeByIndex = DangoAbyssConfig.Instance.GetSlotTypeByIndex(slotIndex);
 		return DangoAbyssModel.Instance.GetPluginItemListByType(slotTypeByIndex);
 	}
 
-	// Token: 0x0600C4A0 RID: 50336 RVA: 0x002C9530 File Offset: 0x002C7730
+	// Token: 0x060098B0 RID: 39088 RVA: 0x002D45F8 File Offset: 0x002D27F8
 	public bool GetIfSlotTypeChange(int slotIndexOld, int slotIndexNew)
 	{
 		if (slotIndexOld < 0)
@@ -1658,7 +1669,7 @@ public class DangoAbyssModel : ModelBase
 		return slotTypeByIndex != slotTypeByIndex2;
 	}
 
-	// Token: 0x0600C4A1 RID: 50337 RVA: 0x002C9560 File Offset: 0x002C7760
+	// Token: 0x060098B1 RID: 39089 RVA: 0x002D4628 File Offset: 0x002D2828
 	public int GetPluginItemPackageCapacity()
 	{
 		InventoryDefine.EItemMainTypeId itemTypeId = InventoryDefine.EItemMainTypeId.DangoPluginItem;
@@ -1666,7 +1677,7 @@ public class DangoAbyssModel : ModelBase
 		return InventoryConfig.Instance.GetPackageConfig(packageId).Value.Capacity;
 	}
 
-	// Token: 0x0600C4A2 RID: 50338 RVA: 0x002C95AC File Offset: 0x002C77AC
+	// Token: 0x060098B2 RID: 39090 RVA: 0x002D4674 File Offset: 0x002D2874
 	public void SaveFormationSelectRole(int challengeId, List<int> roleId)
 	{
 		Dictionary<int, int[]> dictionary = LocalStorage.GetPlayer<Dictionary<int, int[]>>(ELocalStoragePlayerKey.AbyssSelectRole, null) ?? new Dictionary<int, int[]>();
@@ -1674,7 +1685,7 @@ public class DangoAbyssModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, int[]>>(ELocalStoragePlayerKey.AbyssSelectRole, dictionary);
 	}
 
-	// Token: 0x0600C4A3 RID: 50339 RVA: 0x002C95E8 File Offset: 0x002C77E8
+	// Token: 0x060098B3 RID: 39091 RVA: 0x002D46B0 File Offset: 0x002D28B0
 	public int[] GetFormationSelectRoleList(int challengeId)
 	{
 		int[] result;
@@ -1685,26 +1696,26 @@ public class DangoAbyssModel : ModelBase
 		return Array.Empty<int>();
 	}
 
-	// Token: 0x0600C4A4 RID: 50340 RVA: 0x002C961C File Offset: 0x002C781C
+	// Token: 0x060098B4 RID: 39092 RVA: 0x002D46E4 File Offset: 0x002D28E4
 	public bool GetDangoIfLock(int roleId)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
 		return dangoAbyssRoleData == null || dangoAbyssRoleData.GetIfLock();
 	}
 
-	// Token: 0x0600C4A5 RID: 50341 RVA: 0x002C963C File Offset: 0x002C783C
+	// Token: 0x060098B5 RID: 39093 RVA: 0x002D4704 File Offset: 0x002D2904
 	public bool GetDangoDevelopRedDot()
 	{
 		return this.GetDangoNewRedDot() || this.GetDangoLevelUpRedDot(new bool?(true));
 	}
 
-	// Token: 0x0600C4A6 RID: 50342 RVA: 0x002C9654 File Offset: 0x002C7854
+	// Token: 0x060098B6 RID: 39094 RVA: 0x002D471C File Offset: 0x002D291C
 	public bool GetDangoRoleRedDot(int roleId)
 	{
 		return this.GetDangoNewRedDotById(roleId) || this.GetDangoLevelUpRedDotById(roleId, new bool?(true));
 	}
 
-	// Token: 0x0600C4A7 RID: 50343 RVA: 0x002C9670 File Offset: 0x002C7870
+	// Token: 0x060098B7 RID: 39095 RVA: 0x002D4738 File Offset: 0x002D2938
 	public bool GetDangoFormationNewRedDot()
 	{
 		foreach (AbyssDangoRoleData abyssDangoRoleData in this.GetAllDangoList())
@@ -1717,13 +1728,13 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C4A8 RID: 50344 RVA: 0x002C96A7 File Offset: 0x002C78A7
+	// Token: 0x060098B8 RID: 39096 RVA: 0x002D476F File Offset: 0x002D296F
 	public bool GetDangoFormationNewRoleRedDot(int roleId)
 	{
 		return this.GetDangoFormationNewRedDotById(roleId);
 	}
 
-	// Token: 0x0600C4A9 RID: 50345 RVA: 0x002C96B0 File Offset: 0x002C78B0
+	// Token: 0x060098B9 RID: 39097 RVA: 0x002D4778 File Offset: 0x002D2978
 	public bool GetDangoNewRedDot()
 	{
 		foreach (AbyssDangoRoleData abyssDangoRoleData in this.GetAllDangoList())
@@ -1736,77 +1747,98 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C4AA RID: 50346 RVA: 0x002C96E7 File Offset: 0x002C78E7
+	// Token: 0x060098BA RID: 39098 RVA: 0x002D47AF File Offset: 0x002D29AF
 	public bool GetDangoNewRedDotById(int roleId)
 	{
 		return this.GetDangoAbyssRoleData(roleId) != null && this.GetDangoIfNew(roleId);
 	}
 
-	// Token: 0x0600C4AB RID: 50347 RVA: 0x002C96FE File Offset: 0x002C78FE
+	// Token: 0x060098BB RID: 39099 RVA: 0x002D47C6 File Offset: 0x002D29C6
 	public bool GetDangoFormationNewRedDotById(int roleId)
 	{
 		return this.GetDangoAbyssRoleData(roleId) != null && this.GetDangoFormationIfNew(roleId);
 	}
 
-	// Token: 0x0600C4AC RID: 50348 RVA: 0x002C9715 File Offset: 0x002C7915
+	// Token: 0x060098BC RID: 39100 RVA: 0x002D47DD File Offset: 0x002D29DD
 	public void SetDangoHasCheck(int roleId)
 	{
 		this.SetDangoIfNew(roleId, false);
 		this.SetDangoLevelCheck(roleId);
 	}
 
-	// Token: 0x0600C4AD RID: 50349 RVA: 0x002C9728 File Offset: 0x002C7928
+	// Token: 0x060098BD RID: 39101 RVA: 0x002D47F0 File Offset: 0x002D29F0
 	public void SetDangoIfNew(int roleId, bool ifNew)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
 		if (dangoAbyssRoleData != null && !dangoAbyssRoleData.GetIfLock())
 		{
-			Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoRoleNew, null) ?? new Dictionary<int, bool>();
-			dictionary[roleId] = ifNew;
-			LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoRoleNew, dictionary);
+			ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.AbyssDangoRoleNew, EClientStorageSystemIdType.AbyssDangoRoleNew, true);
+			ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoRoleNew) as ServerStorageSet;
+			if (ifNew)
+			{
+				serverStorageSet.Add(roleId);
+				return;
+			}
+			serverStorageSet.Remove(roleId);
 		}
 	}
 
-	// Token: 0x0600C4AE RID: 50350 RVA: 0x002C9774 File Offset: 0x002C7974
+	// Token: 0x060098BE RID: 39102 RVA: 0x002D4844 File Offset: 0x002D2A44
 	public bool GetDangoIfNew(int roleId)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
-		bool flag;
-		return dangoAbyssRoleData != null && !dangoAbyssRoleData.GetIfLock() && (LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoRoleNew, null) ?? new Dictionary<int, bool>()).TryGetValue(roleId, out flag) && flag;
+		if (dangoAbyssRoleData != null && !dangoAbyssRoleData.GetIfLock())
+		{
+			ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.AbyssDangoRoleNew, EClientStorageSystemIdType.AbyssDangoRoleNew, true);
+			return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoRoleNew) as ServerStorageSet).Has(roleId);
+		}
+		return false;
 	}
 
-	// Token: 0x0600C4AF RID: 50351 RVA: 0x002C97B7 File Offset: 0x002C79B7
+	// Token: 0x060098BF RID: 39103 RVA: 0x002D488C File Offset: 0x002D2A8C
 	public bool GetAbyssDangoEnterNew()
 	{
-		return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.AbyssDangoEnterNew, true);
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.AbyssDangoEnterNew, EClientStorageSystemIdType.AbyssDangoEnterNew, true);
+		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoEnterNew) as ServerStorageBoolean).Get().GetValueOrDefault(true);
 	}
 
-	// Token: 0x0600C4B0 RID: 50352 RVA: 0x002C97C4 File Offset: 0x002C79C4
+	// Token: 0x060098C0 RID: 39104 RVA: 0x002D48C6 File Offset: 0x002D2AC6
 	public void SetAbyssDangoEnterNew(bool ifNew)
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.AbyssDangoEnterNew, ifNew);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoEnterNew) as ServerStorageBoolean).Set(new bool?(ifNew));
 	}
 
-	// Token: 0x0600C4B1 RID: 50353 RVA: 0x002C97D4 File Offset: 0x002C79D4
+	// Token: 0x060098C1 RID: 39105 RVA: 0x002D48E4 File Offset: 0x002D2AE4
 	public void SetDangoFormationIfNew(int dangoId, bool ifNew)
 	{
 		if (this.GetDangoAbyssRoleData(dangoId) != null)
 		{
-			Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoFormationNew, null) ?? new Dictionary<int, bool>();
-			dictionary[dangoId] = ifNew;
-			LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoFormationNew, dictionary);
+			ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.AbyssDangoFormationNew, EClientStorageSystemIdType.AbyssDangoFormationNew, true);
+			ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoFormationNew) as ServerStorageSet;
+			if (ifNew)
+			{
+				serverStorageSet.Add(dangoId);
+			}
+			else
+			{
+				serverStorageSet.Remove(dangoId);
+			}
 		}
 		EventSystem.Instance.Emit<int>(EEventName.RefreshAbyssDangoRedDot, dangoId);
 	}
 
-	// Token: 0x0600C4B2 RID: 50354 RVA: 0x002C9824 File Offset: 0x002C7A24
+	// Token: 0x060098C2 RID: 39106 RVA: 0x002D493E File Offset: 0x002D2B3E
 	public bool GetDangoFormationIfNew(int dangoId)
 	{
-		bool flag;
-		return this.GetDangoAbyssRoleData(dangoId) != null && (LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.AbyssDangoFormationNew, null) ?? new Dictionary<int, bool>()).TryGetValue(dangoId, out flag) && flag;
+		if (this.GetDangoAbyssRoleData(dangoId) != null)
+		{
+			ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.AbyssDangoFormationNew, EClientStorageSystemIdType.AbyssDangoFormationNew, true);
+			return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoFormationNew) as ServerStorageSet).Has(dangoId);
+		}
+		return false;
 	}
 
-	// Token: 0x0600C4B3 RID: 50355 RVA: 0x002C9860 File Offset: 0x002C7A60
+	// Token: 0x060098C3 RID: 39107 RVA: 0x002D4970 File Offset: 0x002D2B70
 	public void SetDangoLevelCheck(int roleId)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
@@ -1816,23 +1848,18 @@ public class DangoAbyssModel : ModelBase
 			return;
 		}
 		int value = dangoAbyssRoleData.GetLevel() + 1;
-		Dictionary<int, int> dictionary = LocalStorage.GetPlayer<Dictionary<int, int>>(ELocalStoragePlayerKey.AbyssDangoLevelCheck, null) ?? new Dictionary<int, int>();
-		dictionary[roleId] = value;
-		LocalStorage.SetPlayer<Dictionary<int, int>>(ELocalStoragePlayerKey.AbyssDangoLevelCheck, dictionary);
+		ServerStorageUtil.OverrideLocalMapToServerMap(ELocalStoragePlayerKey.AbyssDangoLevelCheck, EClientStorageSystemIdType.AbyssDangoLevelCheck, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoLevelCheck) as ServerStorageMap).Set(roleId, value);
 	}
 
-	// Token: 0x0600C4B4 RID: 50356 RVA: 0x002C98BC File Offset: 0x002C7ABC
+	// Token: 0x060098C4 RID: 39108 RVA: 0x002D49CC File Offset: 0x002D2BCC
 	public int GetDangoLastCheckLevel(int roleId)
 	{
-		int result;
-		if ((LocalStorage.GetPlayer<Dictionary<int, int>>(ELocalStoragePlayerKey.AbyssDangoLevelCheck, null) ?? new Dictionary<int, int>()).TryGetValue(roleId, out result))
-		{
-			return result;
-		}
-		return 1;
+		ServerStorageUtil.OverrideLocalMapToServerMap(ELocalStoragePlayerKey.AbyssDangoLevelCheck, EClientStorageSystemIdType.AbyssDangoLevelCheck, true);
+		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.AbyssDangoLevelCheck) as ServerStorageMap).Get(roleId).GetValueOrDefault(1);
 	}
 
-	// Token: 0x0600C4B5 RID: 50357 RVA: 0x002C98EC File Offset: 0x002C7AEC
+	// Token: 0x060098C5 RID: 39109 RVA: 0x002D4A08 File Offset: 0x002D2C08
 	public bool GetDangoLevelUpRedDot(bool? needCheck = null)
 	{
 		foreach (AbyssDangoRoleData abyssDangoRoleData in this.GetAllDangoList())
@@ -1845,7 +1872,7 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C4B6 RID: 50358 RVA: 0x002C9924 File Offset: 0x002C7B24
+	// Token: 0x060098C6 RID: 39110 RVA: 0x002D4A40 File Offset: 0x002D2C40
 	public bool GetDangoLevelUpRedDotById(int roleId, bool? needCheck = null)
 	{
 		AbyssDangoRoleData dangoAbyssRoleData = this.GetDangoAbyssRoleData(roleId);
@@ -1858,7 +1885,7 @@ public class DangoAbyssModel : ModelBase
 		return ifCanLevelUp && ifLevelUpEnough && (!needCheck.GetValueOrDefault() || this.GetDangoLastCheckLevel(roleId) < dangoAbyssRoleData.GetLevel() + 1);
 	}
 
-	// Token: 0x0600C4B7 RID: 50359 RVA: 0x002C9978 File Offset: 0x002C7B78
+	// Token: 0x060098C7 RID: 39111 RVA: 0x002D4A94 File Offset: 0x002D2C94
 	public Dictionary<int, int> GetRecoverySelectionCountMap(List<ISelectedData> dataList)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1881,7 +1908,7 @@ public class DangoAbyssModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0600C4B8 RID: 50360 RVA: 0x002C9A18 File Offset: 0x002C7C18
+	// Token: 0x060098C8 RID: 39112 RVA: 0x002D4B34 File Offset: 0x002D2D34
 	public Dictionary<int, int> GetRecoveryTimesCountMap(Dictionary<int, int> qualityMap)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1893,7 +1920,7 @@ public class DangoAbyssModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0600C4B9 RID: 50361 RVA: 0x002C9A90 File Offset: 0x002C7C90
+	// Token: 0x060098C9 RID: 39113 RVA: 0x002D4BAC File Offset: 0x002D2DAC
 	public int GetRecoveryTimesCountAll(Dictionary<int, int> qualityMap)
 	{
 		int num = 0;
@@ -1904,7 +1931,7 @@ public class DangoAbyssModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600C4BA RID: 50362 RVA: 0x002C9AF8 File Offset: 0x002C7CF8
+	// Token: 0x060098CA RID: 39114 RVA: 0x002D4C14 File Offset: 0x002D2E14
 	public Dictionary<int, int> GetRecoveryRewardItemMap(Dictionary<int, int> timesMap)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1937,7 +1964,7 @@ public class DangoAbyssModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x0600C4BB RID: 50363 RVA: 0x002C9C04 File Offset: 0x002C7E04
+	// Token: 0x060098CB RID: 39115 RVA: 0x002D4D20 File Offset: 0x002D2F20
 	public bool GetRecoveryAvailable()
 	{
 		int currentLastFinishChallengeId = this.GetCurrentOpenAbyssActivityData().GetCurrentLastFinishChallengeId();
@@ -1945,7 +1972,7 @@ public class DangoAbyssModel : ModelBase
 		return dangoAbyssInstById != null && dangoAbyssInstById.Value.AbyssSynthesisEntr;
 	}
 
-	// Token: 0x0600C4BC RID: 50364 RVA: 0x002C9C44 File Offset: 0x002C7E44
+	// Token: 0x060098CC RID: 39116 RVA: 0x002D4D60 File Offset: 0x002D2F60
 	public bool GetRankOpen()
 	{
 		int currentLastFinishChallengeId = this.GetCurrentOpenAbyssActivityData().GetCurrentLastFinishChallengeId();
@@ -1953,8 +1980,8 @@ public class DangoAbyssModel : ModelBase
 		return dangoAbyssInstById != null && dangoAbyssInstById.Value.AbyssRank;
 	}
 
-	// Token: 0x0600C4BD RID: 50365 RVA: 0x002C9C84 File Offset: 0x002C7E84
-	public int GetMainHonorRank(List<IAbyssDescData> dataList, bool addRank = false)
+	// Token: 0x060098CD RID: 39117 RVA: 0x002D4DA0 File Offset: 0x002D2FA0
+	public int GetMainHonorRank(IReadOnlyList<IAbyssDescData> dataList, bool addRank = false)
 	{
 		if (dataList.Count == 0)
 		{
@@ -1982,7 +2009,7 @@ public class DangoAbyssModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600C4BE RID: 50366 RVA: 0x002C9D3C File Offset: 0x002C7F3C
+	// Token: 0x060098CE RID: 39118 RVA: 0x002D4E58 File Offset: 0x002D3058
 	public ItemTipsParam GetPluginItemTipsData(int itemId, int incId, int? slotIndex = null, int? dangoId = null)
 	{
 		DangoExtraParam extraParam = new DangoExtraParam
@@ -1998,7 +2025,7 @@ public class DangoAbyssModel : ModelBase
 		};
 	}
 
-	// Token: 0x0600C4BF RID: 50367 RVA: 0x002C9D88 File Offset: 0x002C7F88
+	// Token: 0x060098CF RID: 39119 RVA: 0x002D4EA4 File Offset: 0x002D30A4
 	public string GetSkillDescByDangoId(int dangoId)
 	{
 		AbyssLittleRole? dangoRoleById = DangoAbyssConfig.Instance.GetDangoRoleById(dangoId);
@@ -2011,7 +2038,7 @@ public class DangoAbyssModel : ModelBase
 		return PhantomBattleConfig.Instance.GetPhantomSkillDescStringBySkillIdAndQuality(phantomItemById.Value.SkillId, 2);
 	}
 
-	// Token: 0x0600C4C0 RID: 50368 RVA: 0x002C9DE8 File Offset: 0x002C7FE8
+	// Token: 0x060098D0 RID: 39120 RVA: 0x002D4F04 File Offset: 0x002D3104
 	public bool GetDangoUpAvailable()
 	{
 		int currentLastFinishChallengeId = this.GetCurrentOpenAbyssActivityData().GetCurrentLastFinishChallengeId();
@@ -2019,7 +2046,7 @@ public class DangoAbyssModel : ModelBase
 		return dangoAbyssInstById != null && dangoAbyssInstById.Value.AbyssDevelopEntr;
 	}
 
-	// Token: 0x0600C4C1 RID: 50369 RVA: 0x002C9E28 File Offset: 0x002C8028
+	// Token: 0x060098D1 RID: 39121 RVA: 0x002D4F44 File Offset: 0x002D3144
 	public bool GetShopAvailable()
 	{
 		int currentLastFinishChallengeId = this.GetCurrentOpenAbyssActivityData().GetCurrentLastFinishChallengeId();
@@ -2027,7 +2054,7 @@ public class DangoAbyssModel : ModelBase
 		return dangoAbyssInstById != null && dangoAbyssInstById.Value.AbyssStoreEntr;
 	}
 
-	// Token: 0x0600C4C2 RID: 50370 RVA: 0x002C9E68 File Offset: 0x002C8068
+	// Token: 0x060098D2 RID: 39122 RVA: 0x002D4F84 File Offset: 0x002D3184
 	[NullableContext(2)]
 	public global::AbyssRewardInfo GetRewardInfoById(int rewardId)
 	{
@@ -2039,8 +2066,8 @@ public class DangoAbyssModel : ModelBase
 		return currentOpenAbyssActivityData.GetRewardInfoById(rewardId);
 	}
 
-	// Token: 0x0600C4C3 RID: 50371 RVA: 0x002C9E88 File Offset: 0x002C8088
-	public void SetLikeRecord(List<AbyssLikeRecord> data)
+	// Token: 0x060098D3 RID: 39123 RVA: 0x002D4FA4 File Offset: 0x002D31A4
+	public void SetLikeRecord(IEnumerable<AbyssLikeRecord> data)
 	{
 		List<DangoAbyssDefine.IAbyssLikeRecord> list = new List<DangoAbyssDefine.IAbyssLikeRecord>();
 		foreach (AbyssLikeRecord abyssLikeRecord in data)
@@ -2048,14 +2075,14 @@ public class DangoAbyssModel : ModelBase
 			DangoAbyssDefine.IAbyssLikeRecord item = new DangoAbyssDefine.IAbyssLikeRecord
 			{
 				PlayerId = abyssLikeRecord.PlayerId,
-				LikedPlayerIdList = abyssLikeRecord.LikedPlayerId.ToList<int>()
+				LikedPlayerIdList = new List<int>(abyssLikeRecord.LikedPlayerId)
 			};
 			list.Add(item);
 		}
 		this.AbyssLikedRecord = list.ToArray();
 	}
 
-	// Token: 0x0600C4C4 RID: 50372 RVA: 0x002C9F0C File Offset: 0x002C810C
+	// Token: 0x060098D4 RID: 39124 RVA: 0x002D5024 File Offset: 0x002D3224
 	public bool GetPlayerIfLikePlayer(int playerId, int targetPlayerId)
 	{
 		if (playerId == targetPlayerId)
@@ -2081,14 +2108,14 @@ public class DangoAbyssModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600C4C5 RID: 50373 RVA: 0x002C9F8C File Offset: 0x002C818C
+	// Token: 0x060098D5 RID: 39125 RVA: 0x002D50A4 File Offset: 0x002D32A4
 	public bool IsChallengeFinish()
 	{
 		return this.ChallengeFinish;
 	}
 
-	// Token: 0x17001053 RID: 4179
-	// (get) Token: 0x0600C4C6 RID: 50374 RVA: 0x002C9F94 File Offset: 0x002C8194
+	// Token: 0x17001078 RID: 4216
+	// (get) Token: 0x060098D6 RID: 39126 RVA: 0x002D50AC File Offset: 0x002D32AC
 	public static DangoAbyssModel Instance
 	{
 		get
@@ -2097,7 +2124,7 @@ public class DangoAbyssModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600C4C7 RID: 50375 RVA: 0x002C9F9B File Offset: 0x002C819B
+	// Token: 0x060098D7 RID: 39127 RVA: 0x002D50B3 File Offset: 0x002D32B3
 	public static DangoAbyssModel GetOrCreateInstance()
 	{
 		if (DangoAbyssModel._Instance == null)
@@ -2107,7 +2134,7 @@ public class DangoAbyssModel : ModelBase
 		return DangoAbyssModel._Instance;
 	}
 
-	// Token: 0x0600C4C8 RID: 50376 RVA: 0x002C9FAF File Offset: 0x002C81AF
+	// Token: 0x060098D8 RID: 39128 RVA: 0x002D50C7 File Offset: 0x002D32C7
 	public static bool CreateInstance()
 	{
 		if (DangoAbyssModel._Instance != null)
@@ -2118,91 +2145,91 @@ public class DangoAbyssModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600C4C9 RID: 50377 RVA: 0x002C9FC5 File Offset: 0x002C81C5
+	// Token: 0x060098D9 RID: 39129 RVA: 0x002D50DD File Offset: 0x002D32DD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C4CA RID: 50378 RVA: 0x002C9FC7 File Offset: 0x002C81C7
+	// Token: 0x060098DA RID: 39130 RVA: 0x002D50DF File Offset: 0x002D32DF
 	public static void ResetStaticDefaultValue()
 	{
 		DangoAbyssModel._Instance = null;
 	}
 
-	// Token: 0x0600C4CB RID: 50379 RVA: 0x002C9FCF File Offset: 0x002C81CF
+	// Token: 0x060098DB RID: 39131 RVA: 0x002D50E7 File Offset: 0x002D32E7
 	static DangoAbyssModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DangoAbyssModel.CreateStaticDefaultValue), new Action(DangoAbyssModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005AA4 RID: 23204
+	// Token: 0x04005B73 RID: 23411
 	public bool LeaveFromAbyssWorld;
 
-	// Token: 0x04005AA5 RID: 23205
+	// Token: 0x04005B74 RID: 23412
 	private bool InAbyssFlowInternal;
 
-	// Token: 0x04005AA6 RID: 23206
+	// Token: 0x04005B75 RID: 23413
 	public int CurrentSelectEntranceId;
 
-	// Token: 0x04005AA7 RID: 23207
+	// Token: 0x04005B76 RID: 23414
 	public int CurrentSelectChallengeId;
 
-	// Token: 0x04005AA8 RID: 23208
+	// Token: 0x04005B77 RID: 23415
 	private int CurrentLayer;
 
-	// Token: 0x04005AA9 RID: 23209
+	// Token: 0x04005B78 RID: 23416
 	private int MaxLayer;
 
-	// Token: 0x04005AAA RID: 23210
+	// Token: 0x04005B79 RID: 23417
 	private int GainBoxCount;
 
-	// Token: 0x04005AAB RID: 23211
+	// Token: 0x04005B7A RID: 23418
 	private int MaxBoxCount;
 
-	// Token: 0x04005AAC RID: 23212
+	// Token: 0x04005B7B RID: 23419
 	private int CurrentRoomId;
 
-	// Token: 0x04005AAD RID: 23213
+	// Token: 0x04005B7C RID: 23420
 	private int CurrentChallengeId = 1;
 
-	// Token: 0x04005AAE RID: 23214
+	// Token: 0x04005B7D RID: 23421
 	private int CurrentRouteId;
 
-	// Token: 0x04005AAF RID: 23215
+	// Token: 0x04005B7E RID: 23422
 	[Nullable(2)]
 	private AbyssRankChallengeInfo ChallengeRankInfo;
 
-	// Token: 0x04005AB0 RID: 23216
+	// Token: 0x04005B7F RID: 23423
 	[Nullable(2)]
 	private AbyssFormationInfo CurrentFormationSelectInfo;
 
-	// Token: 0x04005AB1 RID: 23217
+	// Token: 0x04005B80 RID: 23424
 	[Nullable(2)]
 	private AbyssChallengeResultData CurrentAbyssResultInfo;
 
-	// Token: 0x04005AB2 RID: 23218
+	// Token: 0x04005B81 RID: 23425
 	public Dictionary<int, Dictionary<int, int>> FormationIndex2DangoIdMapCache = new Dictionary<int, Dictionary<int, int>>();
 
-	// Token: 0x04005AB3 RID: 23219
+	// Token: 0x04005B82 RID: 23426
 	[Nullable(2)]
 	private Dictionary<int, int> RoleSelectDangoMap;
 
-	// Token: 0x04005AB4 RID: 23220
+	// Token: 0x04005B83 RID: 23427
 	private int MaxScore;
 
-	// Token: 0x04005AB5 RID: 23221
+	// Token: 0x04005B84 RID: 23428
 	private int CurrentScore;
 
-	// Token: 0x04005AB6 RID: 23222
+	// Token: 0x04005B85 RID: 23429
 	private readonly Dictionary<int, Dictionary<int, AbyssDangoOwnerData>> DangoOwnerMap = new Dictionary<int, Dictionary<int, AbyssDangoOwnerData>>();
 
-	// Token: 0x04005AB7 RID: 23223
+	// Token: 0x04005B86 RID: 23430
 	private bool ChallengeFinish;
 
-	// Token: 0x04005AB8 RID: 23224
+	// Token: 0x04005B87 RID: 23431
 	private DangoAbyssDefine.IAbyssLikeRecord[] AbyssLikedRecord = Array.Empty<DangoAbyssDefine.IAbyssLikeRecord>();
 
-	// Token: 0x04005AB9 RID: 23225
+	// Token: 0x04005B88 RID: 23432
 	[Nullable(2)]
 	private static DangoAbyssModel _Instance;
 }

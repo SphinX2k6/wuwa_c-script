@@ -3,7 +3,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapTile
 {
-	// Token: 0x0200549E RID: 21662
-	// (Invoke) Token: 0x060375BD RID: 226749
+	// Token: 0x02004481 RID: 17537
+	// (Invoke) Token: 0x0602C511 RID: 181521
 	public delegate void TLoadMapTileCallBack(UTexture textureObject);
 }

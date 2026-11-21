@@ -15,13 +15,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Area
 {
-	// Token: 0x02005EA0 RID: 24224
+	// Token: 0x02004E85 RID: 20101
 	[NullableContext(2)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class AreaController : UiControllerBase
 	{
-		// Token: 0x0603DA22 RID: 252450 RVA: 0x00EE1840 File Offset: 0x00EDFA40
+		// Token: 0x060329B2 RID: 207282 RVA: 0x00E32D78 File Offset: 0x00E30F78
 		[NullableContext(1)]
 		public void SetEnterAreaFunctionEnabled(bool value, string reason)
 		{
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.Area
 			areaFunctionDispatcher.SetEnabled(value, reason);
 		}
 
-		// Token: 0x17008EA6 RID: 36518
-		// (get) Token: 0x0603DA23 RID: 252451 RVA: 0x00EE1865 File Offset: 0x00EDFA65
+		// Token: 0x17006278 RID: 25208
+		// (get) Token: 0x060329B3 RID: 207283 RVA: 0x00E32D9D File Offset: 0x00E30F9D
 		public bool IsEnterAreaFunctionEnabled
 		{
 			get
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA24 RID: 252452 RVA: 0x00EE1870 File Offset: 0x00EDFA70
+		// Token: 0x060329B4 RID: 207284 RVA: 0x00E32DA8 File Offset: 0x00E30FA8
 		protected override bool OnInit()
 		{
 			if (this.AreaAudio == null)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0603DA25 RID: 252453 RVA: 0x00EE1908 File Offset: 0x00EDFB08
+		// Token: 0x060329B5 RID: 207285 RVA: 0x00E32E40 File Offset: 0x00E31040
 		protected override bool OnClear()
 		{
 			if (this.AreaAudio != null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0603DA26 RID: 252454 RVA: 0x00EE1962 File Offset: 0x00EDFB62
+		// Token: 0x060329B6 RID: 207286 RVA: 0x00E32E9A File Offset: 0x00E3109A
 		protected override void OnTick(float delta)
 		{
 			if (this.AreaAtmosphere != null)
@@ -110,21 +110,21 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA27 RID: 252455 RVA: 0x00EE1995 File Offset: 0x00EDFB95
+		// Token: 0x060329B7 RID: 207287 RVA: 0x00E32ECD File Offset: 0x00E310CD
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.SceneAreaStateNotify, new Action<IMessage, Net.CallbackStatus>(this.AreaStatesChangeNotify));
 			Net.Instance.Register(ENotifyMessageId.EnterAreaNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPlayerEnterAreaNotify));
 		}
 
-		// Token: 0x0603DA28 RID: 252456 RVA: 0x00EE19CF File Offset: 0x00EDFBCF
+		// Token: 0x060329B8 RID: 207288 RVA: 0x00E32F07 File Offset: 0x00E31107
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SceneAreaStateNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.EnterAreaNotify);
 		}
 
-		// Token: 0x0603DA29 RID: 252457 RVA: 0x00EE19F4 File Offset: 0x00EDFBF4
+		// Token: 0x060329B9 RID: 207289 RVA: 0x00E32F2C File Offset: 0x00E3112C
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<IReadOnlyList<SceneAreaState>>(EEventName.InitArea, new Action<IReadOnlyList<SceneAreaState>>(this.AreaInitNotify));
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		}
 
-		// Token: 0x0603DA2A RID: 252458 RVA: 0x00EE1A58 File Offset: 0x00EDFC58
+		// Token: 0x060329BA RID: 207290 RVA: 0x00E32F90 File Offset: 0x00E31190
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.InitArea, new Action<IReadOnlyList<SceneAreaState>>(this.AreaInitNotify));
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Area
 			EventSystem.Instance.Remove(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		}
 
-		// Token: 0x0603DA2B RID: 252459 RVA: 0x00EE1ABC File Offset: 0x00EDFCBC
+		// Token: 0x060329BB RID: 207291 RVA: 0x00E32FF4 File Offset: 0x00E311F4
 		[NullableContext(1)]
 		public unsafe void EnterAreaRequest(int? preAreaId, int areaId, bool ensureChange, string reason)
 		{
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Area
 					{
 						if (enterAreaResponse.ErrorCode != Aki.Protocol.ErrorCode.Success && enterAreaResponse.ErrorCode != Aki.Protocol.ErrorCode.PlayerNotInTheScene)
 						{
-							ErrorCodeController.Instance.OpenErrorCodeTipView(enterAreaResponse.ErrorCode, 23858, null, true, true);
+							ErrorCodeController.Instance.OpenErrorCodeTipView(enterAreaResponse.ErrorCode, 17162, null, true, true);
 						}
 						else
 						{
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Area
 			}, 0);
 		}
 
-		// Token: 0x0603DA2C RID: 252460 RVA: 0x00EE1B30 File Offset: 0x00EDFD30
+		// Token: 0x060329BC RID: 207292 RVA: 0x00E33068 File Offset: 0x00E31268
 		public unsafe void EndOverlap(int areaId)
 		{
 			if (areaId == 0 || areaId == 1)
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Area
 					{
 						if (enterAreaResponse.ErrorCode != Aki.Protocol.ErrorCode.Success && enterAreaResponse.ErrorCode != Aki.Protocol.ErrorCode.PlayerNotInTheScene)
 						{
-							ErrorCodeController.Instance.OpenErrorCodeTipView(enterAreaResponse.ErrorCode, 23858, null, true, true);
+							ErrorCodeController.Instance.OpenErrorCodeTipView(enterAreaResponse.ErrorCode, 17162, null, true, true);
 						}
 						else
 						{
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Area
 			}, 0);
 		}
 
-		// Token: 0x0603DA2D RID: 252461 RVA: 0x00EE1BAA File Offset: 0x00EDFDAA
+		// Token: 0x060329BD RID: 207293 RVA: 0x00E330E2 File Offset: 0x00E312E2
 		[NullableContext(1)]
 		private void AreaInitNotify(IReadOnlyList<SceneAreaState> initModifiedAreaStates)
 		{
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Area
 			UnopenedAreaController.Instance.AreaCheckInit(AreaModel.Instance.GetAreaStates());
 		}
 
-		// Token: 0x0603DA2E RID: 252462 RVA: 0x00EE1BCC File Offset: 0x00EDFDCC
+		// Token: 0x060329BE RID: 207294 RVA: 0x00E33104 File Offset: 0x00E31304
 		private void AreaStatesChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			SceneAreaStateNotify sceneAreaStateNotify = (SceneAreaStateNotify)msg;
@@ -271,13 +271,13 @@ namespace CSharpScript.Game.Module.Area
 			UnopenedAreaController.Instance.AreaCheckStatesChange(sceneAreaStateNotify);
 		}
 
-		// Token: 0x0603DA2F RID: 252463 RVA: 0x00EE1C2C File Offset: 0x00EDFE2C
+		// Token: 0x060329BF RID: 207295 RVA: 0x00E33164 File Offset: 0x00E31364
 		private void OnTeleportStart(bool loading)
 		{
 			this.IsTeleporting = true;
 		}
 
-		// Token: 0x0603DA30 RID: 252464 RVA: 0x00EE1C38 File Offset: 0x00EDFE38
+		// Token: 0x060329C0 RID: 207296 RVA: 0x00E33170 File Offset: 0x00E31370
 		private void OnTeleportComplete(TeleportContext teleportContext)
 		{
 			this.IsTeleporting = false;
@@ -314,15 +314,15 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA31 RID: 252465 RVA: 0x00EE1D80 File Offset: 0x00EDFF80
+		// Token: 0x060329C1 RID: 207297 RVA: 0x00E332B8 File Offset: 0x00E314B8
 		private void OnPlayerEnterAreaNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			EnterAreaNotify enterAreaNotify = (EnterAreaNotify)msg;
 			CreatureModel.Instance.SetScenePlayerArea(enterAreaNotify.PlayerId, enterAreaNotify.AreaId);
 		}
 
-		// Token: 0x17008EA7 RID: 36519
-		// (get) Token: 0x0603DA32 RID: 252466 RVA: 0x00EE1DAA File Offset: 0x00EDFFAA
+		// Token: 0x17006279 RID: 25209
+		// (get) Token: 0x060329C2 RID: 207298 RVA: 0x00E332E2 File Offset: 0x00E314E2
 		[Nullable(1)]
 		public static AreaController Instance
 		{
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Area
 			}
 		}
 
-		// Token: 0x0603DA33 RID: 252467 RVA: 0x00EE1DB1 File Offset: 0x00EDFFB1
+		// Token: 0x060329C3 RID: 207299 RVA: 0x00E332E9 File Offset: 0x00E314E9
 		[NullableContext(1)]
 		public static AreaController GetOrCreateInstance()
 		{
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Area
 			return AreaController._Instance;
 		}
 
-		// Token: 0x0603DA34 RID: 252468 RVA: 0x00EE1DC5 File Offset: 0x00EDFFC5
+		// Token: 0x060329C4 RID: 207300 RVA: 0x00E332FD File Offset: 0x00E314FD
 		public static bool CreateInstance()
 		{
 			if (AreaController._Instance != null)
@@ -355,42 +355,42 @@ namespace CSharpScript.Game.Module.Area
 			return true;
 		}
 
-		// Token: 0x0603DA35 RID: 252469 RVA: 0x00EE1DDB File Offset: 0x00EDFFDB
+		// Token: 0x060329C5 RID: 207301 RVA: 0x00E33313 File Offset: 0x00E31513
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DA36 RID: 252470 RVA: 0x00EE1DDD File Offset: 0x00EDFFDD
+		// Token: 0x060329C6 RID: 207302 RVA: 0x00E33315 File Offset: 0x00E31515
 		public static void ResetStaticDefaultValue()
 		{
 			AreaController._Instance = null;
 		}
 
-		// Token: 0x0603DA37 RID: 252471 RVA: 0x00EE1DE5 File Offset: 0x00EDFFE5
+		// Token: 0x060329C7 RID: 207303 RVA: 0x00E3331D File Offset: 0x00E3151D
 		static AreaController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AreaController.CreateStaticDefaultValue), new Action(AreaController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020285 RID: 131717
+		// Token: 0x0401AD4C RID: 109900
 		private AreaAudio AreaAudio;
 
-		// Token: 0x04020286 RID: 131718
+		// Token: 0x0401AD4D RID: 109901
 		private AreaAtmosphere AreaAtmosphere;
 
-		// Token: 0x04020287 RID: 131719
+		// Token: 0x0401AD4E RID: 109902
 		private AreaTags AreaTags;
 
-		// Token: 0x04020288 RID: 131720
+		// Token: 0x0401AD4F RID: 109903
 		private AreaFunctionDispatcher AreaFunctionDispatcher;
 
-		// Token: 0x04020289 RID: 131721
+		// Token: 0x0401AD50 RID: 109904
 		private bool EnterAreaFunctionEnabled = true;
 
-		// Token: 0x0402028A RID: 131722
+		// Token: 0x0401AD51 RID: 109905
 		private bool IsTeleporting;
 
-		// Token: 0x0402028B RID: 131723
+		// Token: 0x0401AD52 RID: 109906
 		private static AreaController _Instance;
 	}
 }

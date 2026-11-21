@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C6F RID: 7279
+	// Token: 0x02001E74 RID: 7796
 	public class INpcLookAtConfig_SetValue
 	{
-		// Token: 0x04005EB5 RID: 24245
-		[Nullable(1)]
+		// Token: 0x04006408 RID: 25608
 		public INpcLookAtTypeBase Target;
 
-		// Token: 0x04005EB6 RID: 24246
+		// Token: 0x04006409 RID: 25609
 		public bool? IsKeepOverAngle;
 
-		// Token: 0x04005EB7 RID: 24247
+		// Token: 0x0400640A RID: 25610
 		public float MaxDistance;
 
-		// Token: 0x04005EB8 RID: 24248
+		// Token: 0x0400640B RID: 25611
 		public float MaxAngle;
 	}
 }

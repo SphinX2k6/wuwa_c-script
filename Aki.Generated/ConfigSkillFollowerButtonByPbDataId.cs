@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000941 RID: 2369
+	// Token: 0x0200098C RID: 2444
 	public class ConfigSkillFollowerButtonByPbDataId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003799 RID: 14233 RVA: 0x00193B7B File Offset: 0x00191D7B
+		// Token: 0x0600395B RID: 14683 RVA: 0x001A0D9B File Offset: 0x0019EF9B
 		static ConfigSkillFollowerButtonByPbDataId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillFollowerButtonByPbDataId.CreateStaticDefaultValue), new Action(ConfigSkillFollowerButtonByPbDataId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600379A RID: 14234 RVA: 0x00193B9C File Offset: 0x00191D9C
+		// Token: 0x0600395C RID: 14684 RVA: 0x001A0DBC File Offset: 0x0019EFBC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillFollowerButtonByPbDataId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600379B RID: 14235 RVA: 0x00193C1B File Offset: 0x00191E1B
+		// Token: 0x0600395D RID: 14685 RVA: 0x001A0E3B File Offset: 0x0019F03B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillFollowerButtonByPbDataId.LogPair = null;
 			ConfigSkillFollowerButtonByPbDataId.HandleId = 0;
 		}
 
-		// Token: 0x0600379C RID: 14236 RVA: 0x00193C29 File Offset: 0x00191E29
+		// Token: 0x0600395E RID: 14686 RVA: 0x001A0E49 File Offset: 0x0019F049
 		public static void Init()
 		{
 			ConfigSkillFollowerButtonByPbDataId.HandleId = ConfigCommon.InitDataStatement(ConfigSkillFollowerButtonByPbDataId.HandleId, "db_skillbutton.db", "select BinData from `SkillFollowerButton` where PbDataId=?");
 		}
 
-		// Token: 0x0600379D RID: 14237 RVA: 0x00193C44 File Offset: 0x00191E44
+		// Token: 0x0600395F RID: 14687 RVA: 0x001A0E64 File Offset: 0x0019F064
 		[NullableContext(2)]
 		public static IReadOnlyList<SkillFollowerButton> GetConfigList(int p0PbDataId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040040AD RID: 16557
+		// Token: 0x040042BA RID: 17082
 		private const string DB = "db_skillbutton.db";
 
-		// Token: 0x040040AE RID: 16558
+		// Token: 0x040042BB RID: 17083
 		private const string FILE = "j.技能按钮.xlsx";
 
-		// Token: 0x040040AF RID: 16559
+		// Token: 0x040042BC RID: 17084
 		private const string TABLE = "SkillFollowerButton";
 
-		// Token: 0x040040B0 RID: 16560
+		// Token: 0x040042BD RID: 17085
 		private const string COMMAND = "select BinData from `SkillFollowerButton` where PbDataId=?";
 
-		// Token: 0x040040B1 RID: 16561
+		// Token: 0x040042BE RID: 17086
 		private const string KEY_PREFIX = "SkillFollowerButtonByPbDataId";
 
-		// Token: 0x040040B2 RID: 16562
+		// Token: 0x040042BF RID: 17087
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040040B3 RID: 16563
+		// Token: 0x040042C0 RID: 17088
 		private static int HandleId;
 	}
 }

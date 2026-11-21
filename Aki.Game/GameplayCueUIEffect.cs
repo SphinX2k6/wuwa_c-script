@@ -2,22 +2,22 @@
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002FD7 RID: 12247
+// Token: 0x0200252C RID: 9516
 public class GameplayCueUIEffect : GameplayCueBase
 {
-	// Token: 0x06019F6A RID: 106346 RVA: 0x006CB980 File Offset: 0x006C9B80
+	// Token: 0x0601789D RID: 96413 RVA: 0x006F37C0 File Offset: 0x006F19C0
 	protected override void OnCreate()
 	{
 		this.SendGameplayCueUIEvent(true);
 	}
 
-	// Token: 0x06019F6B RID: 106347 RVA: 0x006CB989 File Offset: 0x006C9B89
+	// Token: 0x0601789E RID: 96414 RVA: 0x006F37C9 File Offset: 0x006F19C9
 	protected override void OnDestroy()
 	{
 		this.SendGameplayCueUIEvent(false);
 	}
 
-	// Token: 0x06019F6C RID: 106348 RVA: 0x006CB994 File Offset: 0x006C9B94
+	// Token: 0x0601789F RID: 96415 RVA: 0x006F37D4 File Offset: 0x006F19D4
 	private unsafe void SendGameplayCueUIEvent(bool isAdd)
 	{
 		if (this.CueConfig.CueType == 38)
@@ -48,7 +48,7 @@ public class GameplayCueUIEffect : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019F6D RID: 106349 RVA: 0x006CBB1C File Offset: 0x006C9D1C
+	// Token: 0x060178A0 RID: 96416 RVA: 0x006F395C File Offset: 0x006F1B5C
 	private bool HasEntityBuffAuthority()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -56,7 +56,7 @@ public class GameplayCueUIEffect : GameplayCueBase
 		return baseBuffComponent != null && baseBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019F6E RID: 106350 RVA: 0x006CBB4C File Offset: 0x006C9D4C
+	// Token: 0x060178A1 RID: 96417 RVA: 0x006F398C File Offset: 0x006F1B8C
 	private EEventName? GetEventName(ECueType type)
 	{
 		if (type <= ECueType.StateUITexture)
@@ -109,7 +109,7 @@ public class GameplayCueUIEffect : GameplayCueBase
 		return null;
 	}
 
-	// Token: 0x06019F6F RID: 106351 RVA: 0x006CBBF3 File Offset: 0x006C9DF3
+	// Token: 0x060178A2 RID: 96418 RVA: 0x006F3A33 File Offset: 0x006F1C33
 	public new static bool IsSingleInstance()
 	{
 		return false;

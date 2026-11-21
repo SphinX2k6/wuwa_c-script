@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053F2 RID: 21490
+	// Token: 0x02005978 RID: 22904
 	public struct IIndependentSystemRewardType : IFlatbufferObject
 	{
-		// Token: 0x17009E29 RID: 40489
-		// (get) Token: 0x060234A9 RID: 144553 RVA: 0x004E2DFB File Offset: 0x004E0FFB
+		// Token: 0x1700A663 RID: 42595
+		// (get) Token: 0x06025561 RID: 152929 RVA: 0x0051FE27 File Offset: 0x0051E027
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060234AA RID: 144554 RVA: 0x004E2E08 File Offset: 0x004E1008
+		// Token: 0x06025562 RID: 152930 RVA: 0x0051FE34 File Offset: 0x0051E034
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060234AB RID: 144555 RVA: 0x004E2E10 File Offset: 0x004E1010
+		// Token: 0x06025563 RID: 152931 RVA: 0x0051FE3C File Offset: 0x0051E03C
 		public static IIndependentSystemRewardType GetRootAsIIndependentSystemRewardType(ByteBuffer _bb)
 		{
 			return IIndependentSystemRewardType.GetRootAsIIndependentSystemRewardType(_bb, default(IIndependentSystemRewardType));
 		}
 
-		// Token: 0x060234AC RID: 144556 RVA: 0x004E2E2C File Offset: 0x004E102C
+		// Token: 0x06025564 RID: 152932 RVA: 0x0051FE58 File Offset: 0x0051E058
 		public static IIndependentSystemRewardType GetRootAsIIndependentSystemRewardType(ByteBuffer _bb, IIndependentSystemRewardType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060234AD RID: 144557 RVA: 0x004E2E49 File Offset: 0x004E1049
+		// Token: 0x06025565 RID: 152933 RVA: 0x0051FE75 File Offset: 0x0051E075
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060234AE RID: 144558 RVA: 0x004E2E58 File Offset: 0x004E1058
+		// Token: 0x06025566 RID: 152934 RVA: 0x0051FE84 File Offset: 0x0051E084
 		public IIndependentSystemRewardType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009E2A RID: 40490
-		// (get) Token: 0x060234AF RID: 144559 RVA: 0x004E2E68 File Offset: 0x004E1068
+		// Token: 0x1700A664 RID: 42596
+		// (get) Token: 0x06025567 RID: 152935 RVA: 0x0051FE94 File Offset: 0x0051E094
 		public EIndependentSystemRewardType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060234B0 RID: 144560 RVA: 0x004E2EA4 File Offset: 0x004E10A4
+		// Token: 0x06025568 RID: 152936 RVA: 0x0051FED0 File Offset: 0x0051E0D0
 		public static Offset<IIndependentSystemRewardType> CreateIIndependentSystemRewardType(FlatBufferBuilder builder, EIndependentSystemRewardType Type = EIndependentSystemRewardType.DarkTide)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIndependentSystemRewardType.EndIIndependentSystemRewardType(builder);
 		}
 
-		// Token: 0x060234B1 RID: 144561 RVA: 0x004E2EBA File Offset: 0x004E10BA
+		// Token: 0x06025569 RID: 152937 RVA: 0x0051FEE6 File Offset: 0x0051E0E6
 		public static void StartIIndependentSystemRewardType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060234B2 RID: 144562 RVA: 0x004E2EC3 File Offset: 0x004E10C3
+		// Token: 0x0602556A RID: 152938 RVA: 0x0051FEEF File Offset: 0x0051E0EF
 		public static void AddType(FlatBufferBuilder builder, EIndependentSystemRewardType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060234B3 RID: 144563 RVA: 0x004E2ECE File Offset: 0x004E10CE
+		// Token: 0x0602556B RID: 152939 RVA: 0x0051FEFA File Offset: 0x0051E0FA
 		public static Offset<IIndependentSystemRewardType> EndIIndependentSystemRewardType(FlatBufferBuilder builder)
 		{
 			return new Offset<IIndependentSystemRewardType>(builder.EndTable());
 		}
 
-		// Token: 0x060234B4 RID: 144564 RVA: 0x004E2EDC File Offset: 0x004E10DC
+		// Token: 0x0602556C RID: 152940 RVA: 0x0051FF08 File Offset: 0x0051E108
 		public IIndependentSystemRewardTypeT UnPack()
 		{
 			IIndependentSystemRewardTypeT independentSystemRewardTypeT = new IIndependentSystemRewardTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return independentSystemRewardTypeT;
 		}
 
-		// Token: 0x060234B5 RID: 144565 RVA: 0x004E2EF7 File Offset: 0x004E10F7
+		// Token: 0x0602556D RID: 152941 RVA: 0x0051FF23 File Offset: 0x0051E123
 		public void UnPackTo(IIndependentSystemRewardTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060234B6 RID: 144566 RVA: 0x004E2F08 File Offset: 0x004E1108
+		// Token: 0x0602556E RID: 152942 RVA: 0x0051FF34 File Offset: 0x0051E134
 		public static Offset<IIndependentSystemRewardType> Pack(FlatBufferBuilder builder, IIndependentSystemRewardTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IIndependentSystemRewardType.CreateIIndependentSystemRewardType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E633 RID: 58931
+		// Token: 0x0400F264 RID: 62052
 		private Table __p;
 	}
 }

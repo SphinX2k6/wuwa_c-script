@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D56 RID: 7510
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F67 RID: 8039
 	public class IProgramSpecialConfigBase
 	{
-		// Token: 0x0600A115 RID: 41237 RVA: 0x0016F250 File Offset: 0x0016D450
+		// Token: 0x0600AB01 RID: 43777 RVA: 0x00183674 File Offset: 0x00181874
 		private IProgramSpecialConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A116 RID: 41238 RVA: 0x0016F288 File Offset: 0x0016D488
+		// Token: 0x0600AB02 RID: 43778 RVA: 0x001836AC File Offset: 0x001818AC
 		public static IProgramSpecialConfigBase Create([Nullable(2)] IProgramSpecialConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A117 RID: 41239 RVA: 0x0016F29B File Offset: 0x0016D49B
+		// Token: 0x0600AB03 RID: 43779 RVA: 0x001836BF File Offset: 0x001818BF
 		public static IProgramSpecialConfigBase CreateFromSetValue([Nullable(2)] IProgramSpecialConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A118 RID: 41240 RVA: 0x0016F2AE File Offset: 0x0016D4AE
+		// Token: 0x0600AB04 RID: 43780 RVA: 0x001836D2 File Offset: 0x001818D2
 		public IProgramSpecialConfigBase_SetValue ToSetValue()
 		{
 			return new IProgramSpecialConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031E0 RID: 12768
-		// (get) Token: 0x0600A119 RID: 41241 RVA: 0x0016F2C1 File Offset: 0x0016D4C1
-		// (set) Token: 0x0600A11A RID: 41242 RVA: 0x0016F2EC File Offset: 0x0016D4EC
+		// Token: 0x17003474 RID: 13428
+		// (get) Token: 0x0600AB05 RID: 43781 RVA: 0x001836E5 File Offset: 0x001818E5
+		// (set) Token: 0x0600AB06 RID: 43782 RVA: 0x00183710 File Offset: 0x00181910
 		public virtual EPlayMovieProgramSpecialConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060FD RID: 24829
+		// Token: 0x04006679 RID: 26233
 		[Nullable(2)]
 		protected IProgramSpecialConfigBase FbInstance;
 
-		// Token: 0x040060FE RID: 24830
+		// Token: 0x0400667A RID: 26234
 		[Nullable(2)]
 		protected IProgramSpecialConfigBase_SetValue PocoInterface;
 	}

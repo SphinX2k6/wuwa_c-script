@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A81 RID: 6785
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C16 RID: 7190
 	public class IFlowCameraShake
 	{
-		// Token: 0x06009156 RID: 37206 RVA: 0x00152620 File Offset: 0x00150820
+		// Token: 0x060098C0 RID: 39104 RVA: 0x0016254C File Offset: 0x0016074C
 		private IFlowCameraShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009157 RID: 37207 RVA: 0x00152658 File Offset: 0x00150858
+		// Token: 0x060098C1 RID: 39105 RVA: 0x00162584 File Offset: 0x00160784
 		public static IFlowCameraShake Create([Nullable(2)] IFlowCameraShake instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009158 RID: 37208 RVA: 0x0015266B File Offset: 0x0015086B
+		// Token: 0x060098C2 RID: 39106 RVA: 0x00162597 File Offset: 0x00160797
 		public static IFlowCameraShake CreateFromSetValue([Nullable(2)] IFlowCameraShake_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009159 RID: 37209 RVA: 0x0015267E File Offset: 0x0015087E
+		// Token: 0x060098C3 RID: 39107 RVA: 0x001625AA File Offset: 0x001607AA
 		public IFlowCameraShake_SetValue ToSetValue()
 		{
 			return new IFlowCameraShake_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E3F RID: 11839
-		// (get) Token: 0x0600915A RID: 37210 RVA: 0x00152691 File Offset: 0x00150891
-		// (set) Token: 0x0600915B RID: 37211 RVA: 0x001526BC File Offset: 0x001508BC
+		// Token: 0x1700304C RID: 12364
+		// (get) Token: 0x060098C4 RID: 39108 RVA: 0x001625BD File Offset: 0x001607BD
+		// (set) Token: 0x060098C5 RID: 39109 RVA: 0x001625E8 File Offset: 0x001607E8
 		public virtual string CameraShakeBp
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059A6 RID: 22950
+		// Token: 0x04005E0B RID: 24075
 		[Nullable(2)]
 		protected IFlowCameraShake FbInstance;
 
-		// Token: 0x040059A7 RID: 22951
+		// Token: 0x04005E0C RID: 24076
 		[Nullable(2)]
 		protected IFlowCameraShake_SetValue PocoInterface;
 	}

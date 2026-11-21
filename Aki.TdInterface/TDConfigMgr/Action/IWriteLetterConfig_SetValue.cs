@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020C4 RID: 8388
+	// Token: 0x02002319 RID: 8985
 	public class IWriteLetterConfig_SetValue
 	{
-		// Token: 0x04006E86 RID: 28294
+		// Token: 0x040074A4 RID: 29860
 		public int LetterId;
 	}
 }

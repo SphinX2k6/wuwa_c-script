@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200248F RID: 9359
+	// Token: 0x02002732 RID: 10034
 	public static class EUiElementExtensions
 	{
-		// Token: 0x0600CB02 RID: 51970 RVA: 0x001DE3D4 File Offset: 0x001DC5D4
+		// Token: 0x0600D7BB RID: 55227 RVA: 0x001F859C File Offset: 0x001F679C
 		public static string ToEnumString(this EUiElement value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB03 RID: 51971 RVA: 0x001DE3FC File Offset: 0x001DC5FC
+		// Token: 0x0600D7BC RID: 55228 RVA: 0x001F85C4 File Offset: 0x001F67C4
 		public static EUiElement FromString(string name)
 		{
 			EUiElement result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB04 RID: 51972 RVA: 0x001DE425 File Offset: 0x001DC625
+		// Token: 0x0600D7BD RID: 55229 RVA: 0x001F85ED File Offset: 0x001F67ED
 		public static bool TryFromString(string name, out EUiElement value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CB05 RID: 51973 RVA: 0x001DE44A File Offset: 0x001DC64A
+		// Token: 0x0600D7BE RID: 55230 RVA: 0x001F8612 File Offset: 0x001F6812
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB06 RID: 51974 RVA: 0x001DE45A File Offset: 0x001DC65A
+		// Token: 0x0600D7BF RID: 55231 RVA: 0x001F8622 File Offset: 0x001F6822
 		public static EUiElement[] GetValues()
 		{
 			return new EUiElement[1];
 		}
 
-		// Token: 0x0600CB07 RID: 51975 RVA: 0x001DE462 File Offset: 0x001DC662
+		// Token: 0x0600D7C0 RID: 55232 RVA: 0x001F862A File Offset: 0x001F682A
 		public static string[] GetNames()
 		{
 			return new string[]

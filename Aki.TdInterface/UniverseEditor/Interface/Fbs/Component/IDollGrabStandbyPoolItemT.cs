@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050AF RID: 20655
+	// Token: 0x02005614 RID: 22036
 	public class IDollGrabStandbyPoolItemT
 	{
-		// Token: 0x1700961C RID: 38428
-		// (get) Token: 0x060212F3 RID: 135923 RVA: 0x0049C4A0 File Offset: 0x0049A6A0
-		// (set) Token: 0x060212F4 RID: 135924 RVA: 0x0049C4A8 File Offset: 0x0049A6A8
+		// Token: 0x17009E09 RID: 40457
+		// (get) Token: 0x06023247 RID: 143943 RVA: 0x004D642C File Offset: 0x004D462C
+		// (set) Token: 0x06023248 RID: 143944 RVA: 0x004D6434 File Offset: 0x004D4634
 		public int UniqueId { get; set; }
 
-		// Token: 0x1700961D RID: 38429
-		// (get) Token: 0x060212F5 RID: 135925 RVA: 0x0049C4B1 File Offset: 0x0049A6B1
-		// (set) Token: 0x060212F6 RID: 135926 RVA: 0x0049C4B9 File Offset: 0x0049A6B9
+		// Token: 0x17009E0A RID: 40458
+		// (get) Token: 0x06023249 RID: 143945 RVA: 0x004D643D File Offset: 0x004D463D
+		// (set) Token: 0x0602324A RID: 143946 RVA: 0x004D6445 File Offset: 0x004D4645
 		public int ItemId { get; set; }
 
-		// Token: 0x060212F7 RID: 135927 RVA: 0x0049C4C2 File Offset: 0x0049A6C2
+		// Token: 0x0602324B RID: 143947 RVA: 0x004D644E File Offset: 0x004D464E
 		public IDollGrabStandbyPoolItemT()
 		{
 			this.UniqueId = 0;

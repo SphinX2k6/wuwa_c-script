@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002BA RID: 698
+	// Token: 0x02000301 RID: 769
 	public class IDirectionFill_SetValue
 	{
-		// Token: 0x04000BF8 RID: 3064
+		// Token: 0x04000CE2 RID: 3298
 		public EFillType Type;
 
-		// Token: 0x04000BF9 RID: 3065
+		// Token: 0x04000CE3 RID: 3299
 		public bool W;
 
-		// Token: 0x04000BFA RID: 3066
+		// Token: 0x04000CE4 RID: 3300
 		public bool S;
 
-		// Token: 0x04000BFB RID: 3067
+		// Token: 0x04000CE5 RID: 3301
 		public bool A;
 
-		// Token: 0x04000BFC RID: 3068
+		// Token: 0x04000CE6 RID: 3302
 		public bool D;
 	}
 }

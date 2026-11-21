@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E52 RID: 7762
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002087 RID: 8327
 	public class ISheriffCriminalArrested : ICommonTipType
 	{
-		// Token: 0x0600A617 RID: 42519 RVA: 0x00177F78 File Offset: 0x00176178
+		// Token: 0x0600B0CF RID: 45263 RVA: 0x0018DC78 File Offset: 0x0018BE78
 		private ISheriffCriminalArrested_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A618 RID: 42520 RVA: 0x00177FB0 File Offset: 0x001761B0
+		// Token: 0x0600B0D0 RID: 45264 RVA: 0x0018DCB0 File Offset: 0x0018BEB0
 		public static ISheriffCriminalArrested Create([Nullable(2)] ISheriffCriminalArrested instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A619 RID: 42521 RVA: 0x00177FC3 File Offset: 0x001761C3
+		// Token: 0x0600B0D1 RID: 45265 RVA: 0x0018DCC3 File Offset: 0x0018BEC3
 		public static ISheriffCriminalArrested CreateFromSetValue([Nullable(2)] ISheriffCriminalArrested_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A61A RID: 42522 RVA: 0x00177FD6 File Offset: 0x001761D6
+		// Token: 0x0600B0D2 RID: 45266 RVA: 0x0018DCD6 File Offset: 0x0018BED6
 		public new ISheriffCriminalArrested_SetValue ToSetValue()
 		{
 			return new ISheriffCriminalArrested_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032E7 RID: 13031
-		// (get) Token: 0x0600A61B RID: 42523 RVA: 0x00177FF5 File Offset: 0x001761F5
-		// (set) Token: 0x0600A61C RID: 42524 RVA: 0x00178020 File Offset: 0x00176220
+		// Token: 0x170035AB RID: 13739
+		// (get) Token: 0x0600B0D3 RID: 45267 RVA: 0x0018DCF5 File Offset: 0x0018BEF5
+		// (set) Token: 0x0600B0D4 RID: 45268 RVA: 0x0018DD20 File Offset: 0x0018BF20
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032E8 RID: 13032
-		// (get) Token: 0x0600A61D RID: 42525 RVA: 0x0017802E File Offset: 0x0017622E
-		// (set) Token: 0x0600A61E RID: 42526 RVA: 0x00178059 File Offset: 0x00176259
+		// Token: 0x170035AC RID: 13740
+		// (get) Token: 0x0600B0D5 RID: 45269 RVA: 0x0018DD2E File Offset: 0x0018BF2E
+		// (set) Token: 0x0600B0D6 RID: 45270 RVA: 0x0018DD59 File Offset: 0x0018BF59
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400633E RID: 25406
+		// Token: 0x04006922 RID: 26914
 		[Nullable(2)]
 		protected new ISheriffCriminalArrested FbInstance;
 
-		// Token: 0x0400633F RID: 25407
+		// Token: 0x04006923 RID: 26915
 		[Nullable(2)]
 		protected new ISheriffCriminalArrested_SetValue PocoInterface;
 	}

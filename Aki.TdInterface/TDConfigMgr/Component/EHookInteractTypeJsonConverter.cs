@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000967 RID: 2407
+	// Token: 0x02000A1A RID: 2586
 	public class EHookInteractTypeJsonConverter : JsonConverter<EHookInteractType>
 	{
-		// Token: 0x06003602 RID: 13826 RVA: 0x0008D0CC File Offset: 0x0008B2CC
+		// Token: 0x06003989 RID: 14729 RVA: 0x00095038 File Offset: 0x00093238
 		public override EHookInteractType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EHookInteractTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003603 RID: 13827 RVA: 0x0008D0F0 File Offset: 0x0008B2F0
+		// Token: 0x0600398A RID: 14730 RVA: 0x0009505C File Offset: 0x0009325C
 		public override void Write(Utf8JsonWriter writer, EHookInteractType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

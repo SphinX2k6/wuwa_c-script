@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,12 +8,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001538 RID: 5432
+// Token: 0x020009F0 RID: 2544
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTurntableData : ActivityBaseData
 {
-	// Token: 0x06009B46 RID: 39750 RVA: 0x00219BF4 File Offset: 0x00217DF4
+	// Token: 0x06006F24 RID: 28452 RVA: 0x00223994 File Offset: 0x00221B94
 	protected override void PhraseEx(ActivityData data)
 	{
 		TurntableInfo? turntableInfoByActivityId = ActivityTurntableConfig.Instance.GetTurntableInfoByActivityId(base.Id);
@@ -139,29 +138,29 @@ public class ActivityTurntableData : ActivityBaseData
 		this.RoundIdList.Sort();
 	}
 
-	// Token: 0x06009B47 RID: 39751 RVA: 0x0021A0EC File Offset: 0x002182EC
+	// Token: 0x06006F25 RID: 28453 RVA: 0x00223E8C File Offset: 0x0022208C
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.IsActivityUnFinished() && (this.IsHasPreQuestRedDot() || this.IsHasRewardRedDot() || this.IsHasUnlockRedDot() || this.IsHasDailyRedDot() || this.IsHasNewQuestRedDot());
 	}
 
-	// Token: 0x06009B48 RID: 39752 RVA: 0x0021A126 File Offset: 0x00218326
+	// Token: 0x06006F26 RID: 28454 RVA: 0x00223EC6 File Offset: 0x002220C6
 	protected override bool GetExDataFinishShowState()
 	{
 		return !this.IsActivityUnFinished();
 	}
 
-	// Token: 0x06009B49 RID: 39753 RVA: 0x0021A131 File Offset: 0x00218331
+	// Token: 0x06006F27 RID: 28455 RVA: 0x00223ED1 File Offset: 0x002220D1
 	public int GetActivityCurrencyCount()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(this.TurntableCostConfigId, 0);
 	}
 
-	// Token: 0x06009B4A RID: 39754 RVA: 0x0021A144 File Offset: 0x00218344
+	// Token: 0x06006F28 RID: 28456 RVA: 0x00223EE4 File Offset: 0x002220E4
 	public void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		bool flag = false;
-		if (this.LocalConfig.Value.PreShowGuideQuest().Contains(questId))
+		if (Array.IndexOf<int>(this.LocalConfig.Value.PreShowGuideQuest(), questId) >= 0)
 		{
 			flag = true;
 		}
@@ -181,7 +180,7 @@ public class ActivityTurntableData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009B4B RID: 39755 RVA: 0x0021A1E8 File Offset: 0x002183E8
+	// Token: 0x06006F29 RID: 28457 RVA: 0x00223F8C File Offset: 0x0022218C
 	public void ReadCurrentUnlockQuest()
 	{
 		if (!this.IsActivityUnFinished())
@@ -197,7 +196,7 @@ public class ActivityTurntableData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009B4C RID: 39756 RVA: 0x0021A250 File Offset: 0x00218450
+	// Token: 0x06006F2A RID: 28458 RVA: 0x00223FF4 File Offset: 0x002221F4
 	public int GetCurrentQuestIndex()
 	{
 		int i = 0;
@@ -224,7 +223,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return this.QuestList.Count - 1;
 	}
 
-	// Token: 0x06009B4D RID: 39757 RVA: 0x0021A2B4 File Offset: 0x002184B4
+	// Token: 0x06006F2B RID: 28459 RVA: 0x00224058 File Offset: 0x00222258
 	public bool IsHasNewQuestRedDot()
 	{
 		if (this.TurntableType != ETurntableType.Quest)
@@ -249,7 +248,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009B4E RID: 39758 RVA: 0x0021A34C File Offset: 0x0021854C
+	// Token: 0x06006F2C RID: 28460 RVA: 0x002240F0 File Offset: 0x002222F0
 	public int GetCurrentQuestProgress()
 	{
 		int num = 0;
@@ -266,7 +265,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06009B4F RID: 39759 RVA: 0x0021A3AC File Offset: 0x002185AC
+	// Token: 0x06006F2D RID: 28461 RVA: 0x00224150 File Offset: 0x00222350
 	private long GetQuestUnlockStamp(long startTime, int index)
 	{
 		DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(startTime).UtcDateTime;
@@ -278,7 +277,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return new DateTimeOffset(dateTime, TimeSpan.Zero).ToUnixTimeSeconds() + (long)(index * TimeUtil.Instance.OneDaySeconds);
 	}
 
-	// Token: 0x06009B50 RID: 39760 RVA: 0x0021A437 File Offset: 0x00218637
+	// Token: 0x06006F2E RID: 28462 RVA: 0x002241DB File Offset: 0x002223DB
 	public void SavePreQuestRedDot(int preQuestId)
 	{
 		if (!this.IsHasPreQuestRedDot())
@@ -289,13 +288,13 @@ public class ActivityTurntableData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009B51 RID: 39761 RVA: 0x0021A46C File Offset: 0x0021866C
+	// Token: 0x06006F2F RID: 28463 RVA: 0x00224210 File Offset: 0x00222410
 	public bool IsHasPreQuestRedDot()
 	{
 		return !base.GetPreGuideQuestFinishState() && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, base.GetUnFinishPreGuideQuestId(), 0) == 0;
 	}
 
-	// Token: 0x06009B52 RID: 39762 RVA: 0x0021A499 File Offset: 0x00218699
+	// Token: 0x06006F30 RID: 28464 RVA: 0x0022423D File Offset: 0x0022243D
 	public void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		if (configId != this.TurntableCostConfigId)
@@ -305,7 +304,7 @@ public class ActivityTurntableData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009B53 RID: 39763 RVA: 0x0021A4BC File Offset: 0x002186BC
+	// Token: 0x06006F31 RID: 28465 RVA: 0x00224260 File Offset: 0x00222460
 	private int SortReward(ITurntableReward a, ITurntableReward b)
 	{
 		int num = (a.IsSpecial > false) ? 1 : 0;
@@ -317,7 +316,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return num2 - num;
 	}
 
-	// Token: 0x06009B54 RID: 39764 RVA: 0x0021A4F4 File Offset: 0x002186F4
+	// Token: 0x06006F32 RID: 28466 RVA: 0x00224298 File Offset: 0x00222498
 	public bool IsActivityUnFinished()
 	{
 		using (Dictionary<int, ITurntableReward>.ValueCollection.Enumerator enumerator = this.AllRewardInfo.Values.GetEnumerator())
@@ -333,7 +332,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009B55 RID: 39765 RVA: 0x0021A554 File Offset: 0x00218754
+	// Token: 0x06006F33 RID: 28467 RVA: 0x002242F8 File Offset: 0x002224F8
 	public bool IsRoundUnFinished(int roundId)
 	{
 		List<int> list;
@@ -351,13 +350,13 @@ public class ActivityTurntableData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009B56 RID: 39766 RVA: 0x0021A5C8 File Offset: 0x002187C8
+	// Token: 0x06006F34 RID: 28468 RVA: 0x0022436C File Offset: 0x0022256C
 	public bool IsHasRewardRedDot()
 	{
 		return this.GetActivityCurrencyCount() >= this.TurntableCostCount && this.IsActivityUnFinished();
 	}
 
-	// Token: 0x06009B57 RID: 39767 RVA: 0x0021A5E8 File Offset: 0x002187E8
+	// Token: 0x06006F35 RID: 28469 RVA: 0x0022438C File Offset: 0x0022258C
 	public int GetCurrentRoundId()
 	{
 		foreach (int num in this.RoundIdList)
@@ -371,17 +370,17 @@ public class ActivityTurntableData : ActivityBaseData
 		{
 			return 0;
 		}
-		return this.RoundIdList.Last<int>();
+		return this.RoundIdList[this.RoundIdList.Count - 1];
 	}
 
-	// Token: 0x06009B58 RID: 39768 RVA: 0x0021A660 File Offset: 0x00218860
+	// Token: 0x06006F36 RID: 28470 RVA: 0x00224410 File Offset: 0x00222610
 	public bool IsRewardSpecial(int rewardId)
 	{
 		ITurntableReward turntableReward;
 		return this.AllRewardInfo.TryGetValue(rewardId, out turntableReward) && turntableReward.IsSpecial;
 	}
 
-	// Token: 0x06009B59 RID: 39769 RVA: 0x0021A688 File Offset: 0x00218888
+	// Token: 0x06006F37 RID: 28471 RVA: 0x00224438 File Offset: 0x00222638
 	public void SetRunResult(int rewardId, List<TItem> getItemList)
 	{
 		ITurntableReward turntableReward = this.AllRewardInfo[rewardId];
@@ -396,13 +395,13 @@ public class ActivityTurntableData : ActivityBaseData
 		this.TempGetItemList = getItemList;
 	}
 
-	// Token: 0x06009B5A RID: 39770 RVA: 0x0021A714 File Offset: 0x00218914
+	// Token: 0x06006F38 RID: 28472 RVA: 0x002244C4 File Offset: 0x002226C4
 	public List<TItem> GetRunResult()
 	{
 		return this.TempGetItemList;
 	}
 
-	// Token: 0x06009B5B RID: 39771 RVA: 0x0021A71C File Offset: 0x0021891C
+	// Token: 0x06006F39 RID: 28473 RVA: 0x002244CC File Offset: 0x002226CC
 	public void RefreshTask(ActivityTask task, bool isInit)
 	{
 		global::ActivityTaskData activityTaskData;
@@ -418,15 +417,15 @@ public class ActivityTurntableData : ActivityBaseData
 		activityTaskData.Refresh(task, null);
 	}
 
-	// Token: 0x06009B5C RID: 39772 RVA: 0x0021A762 File Offset: 0x00218962
+	// Token: 0x06006F3A RID: 28474 RVA: 0x00224512 File Offset: 0x00222712
 	public List<global::ActivityTaskData> GetAllTurntableDailyQuestData()
 	{
-		List<global::ActivityTaskData> list = this.DailyTaskInfo.Values.ToList<global::ActivityTaskData>();
+		List<global::ActivityTaskData> list = new List<global::ActivityTaskData>(this.DailyTaskInfo.Values);
 		list.Sort(new Comparison<global::ActivityTaskData>(this.SortDailyQuestData));
 		return list;
 	}
 
-	// Token: 0x06009B5D RID: 39773 RVA: 0x0021A788 File Offset: 0x00218988
+	// Token: 0x06006F3B RID: 28475 RVA: 0x00224538 File Offset: 0x00222738
 	private int SortDailyQuestData(global::ActivityTaskData a, global::ActivityTaskData b)
 	{
 		TurntableTask? turntableTaskByTaskId = ActivityTurntableConfig.Instance.GetTurntableTaskByTaskId(a.Id);
@@ -438,7 +437,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return turntableTaskByTaskId.Value.TaskSort - turntableTaskByTaskId2.Value.TaskSort;
 	}
 
-	// Token: 0x06009B5E RID: 39774 RVA: 0x0021A804 File Offset: 0x00218A04
+	// Token: 0x06006F3C RID: 28476 RVA: 0x002245B4 File Offset: 0x002227B4
 	public bool IsHasDailyRedDot()
 	{
 		if (this.TurntableType != ETurntableType.Daily)
@@ -454,7 +453,7 @@ public class ActivityTurntableData : ActivityBaseData
 		return num != activityCacheData;
 	}
 
-	// Token: 0x06009B5F RID: 39775 RVA: 0x0021A84C File Offset: 0x00218A4C
+	// Token: 0x06006F3D RID: 28477 RVA: 0x002245FC File Offset: 0x002227FC
 	public void SaveDailyRedDot()
 	{
 		if (!this.IsHasDailyRedDot())
@@ -466,7 +465,7 @@ public class ActivityTurntableData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009B60 RID: 39776 RVA: 0x0021A898 File Offset: 0x00218A98
+	// Token: 0x06006F3E RID: 28478 RVA: 0x00224648 File Offset: 0x00222848
 	public void SaveUnlockRedDot()
 	{
 		if (!this.IsHasUnlockRedDot())
@@ -477,39 +476,39 @@ public class ActivityTurntableData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009B61 RID: 39777 RVA: 0x0021A8CD File Offset: 0x00218ACD
+	// Token: 0x06006F3F RID: 28479 RVA: 0x0022467D File Offset: 0x0022287D
 	public bool IsHasUnlockRedDot()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 2, 0, 0) == 0;
 	}
 
-	// Token: 0x0400443B RID: 17467
+	// Token: 0x040044E1 RID: 17633
 	public readonly Dictionary<int, ITurntableQuestInfo> QuestStateMap = new Dictionary<int, ITurntableQuestInfo>();
 
-	// Token: 0x0400443C RID: 17468
+	// Token: 0x040044E2 RID: 17634
 	public readonly List<int> QuestList = new List<int>();
 
-	// Token: 0x0400443D RID: 17469
+	// Token: 0x040044E3 RID: 17635
 	public Dictionary<int, global::ActivityTaskData> DailyTaskInfo = new Dictionary<int, global::ActivityTaskData>();
 
-	// Token: 0x0400443E RID: 17470
+	// Token: 0x040044E4 RID: 17636
 	public Dictionary<int, ITurntableReward> AllRewardInfo = new Dictionary<int, ITurntableReward>();
 
-	// Token: 0x0400443F RID: 17471
+	// Token: 0x040044E5 RID: 17637
 	public Dictionary<int, List<int>> RoundRewardIdMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x04004440 RID: 17472
+	// Token: 0x040044E6 RID: 17638
 	public List<int> RoundIdList = new List<int>();
 
-	// Token: 0x04004441 RID: 17473
+	// Token: 0x040044E7 RID: 17639
 	public int TurntableCostConfigId;
 
-	// Token: 0x04004442 RID: 17474
+	// Token: 0x040044E8 RID: 17640
 	public int TurntableCostCount;
 
-	// Token: 0x04004443 RID: 17475
+	// Token: 0x040044E9 RID: 17641
 	private List<TItem> TempGetItemList = new List<TItem>();
 
-	// Token: 0x04004444 RID: 17476
+	// Token: 0x040044EA RID: 17642
 	public ETurntableType TurntableType = ETurntableType.Quest;
 }

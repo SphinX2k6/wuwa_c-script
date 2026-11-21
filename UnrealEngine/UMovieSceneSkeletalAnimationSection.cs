@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020023A5 RID: 9125
+	// Token: 0x02000772 RID: 1906
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneSkeletalAnimationSection")]
-	[UnrealStructLayout(752, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 752)]
+	[UnrealStructLayout(832, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 832)]
 	public class UMovieSceneSkeletalAnimationSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060225D8 RID: 140760 RVA: 0x0032D344 File Offset: 0x0032B544
+		// Token: 0x0600A523 RID: 42275 RVA: 0x000F3ED0 File Offset: 0x000F20D0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSkeletalAnimationSection._ClassPtr;
 		}
 
-		// Token: 0x060225D9 RID: 140761 RVA: 0x0032D350 File Offset: 0x0032B550
+		// Token: 0x0600A524 RID: 42276 RVA: 0x000F3EDC File Offset: 0x000F20DC
 		public UMovieSceneSkeletalAnimationSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSkeletalAnimationSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060225DA RID: 140762 RVA: 0x0032D378 File Offset: 0x0032B578
+		// Token: 0x0600A525 RID: 42277 RVA: 0x000F3F04 File Offset: 0x000F2104
 		[NullableContext(1)]
 		public UMovieSceneSkeletalAnimationSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSkeletalAnimationSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008470 RID: 33904
-		// (get) Token: 0x060225DB RID: 140763 RVA: 0x0032D3AC File Offset: 0x0032B5AC
-		// (set) Token: 0x060225DC RID: 140764 RVA: 0x0032D3E5 File Offset: 0x0032B5E5
+		// Token: 0x17001E91 RID: 7825
+		// (get) Token: 0x0600A526 RID: 42278 RVA: 0x000F3F38 File Offset: 0x000F2138
+		// (set) Token: 0x0600A527 RID: 42279 RVA: 0x000F3F71 File Offset: 0x000F2171
 		[Nullable(1)]
 		public FMovieSceneSkeletalAnimationParams Params
 		{
@@ -54,9 +54,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008471 RID: 33905
-		// (get) Token: 0x060225DD RID: 140765 RVA: 0x0032D406 File Offset: 0x0032B606
-		// (set) Token: 0x060225DE RID: 140766 RVA: 0x0032D41A File Offset: 0x0032B61A
+		// Token: 0x17001E92 RID: 7826
+		// (get) Token: 0x0600A528 RID: 42280 RVA: 0x000F3F92 File Offset: 0x000F2192
+		// (set) Token: 0x0600A529 RID: 42281 RVA: 0x000F3FA6 File Offset: 0x000F21A6
 		public unsafe UAnimSequence AnimSequence_DEPRECATED
 		{
 			get
@@ -69,9 +69,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008472 RID: 33906
-		// (get) Token: 0x060225DF RID: 140767 RVA: 0x0032D42F File Offset: 0x0032B62F
-		// (set) Token: 0x060225E0 RID: 140768 RVA: 0x0032D443 File Offset: 0x0032B643
+		// Token: 0x17001E93 RID: 7827
+		// (get) Token: 0x0600A52A RID: 42282 RVA: 0x000F3FBB File Offset: 0x000F21BB
+		// (set) Token: 0x0600A52B RID: 42283 RVA: 0x000F3FCF File Offset: 0x000F21CF
 		public unsafe UAnimSequenceBase Animation_DEPRECATED
 		{
 			get
@@ -84,9 +84,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008473 RID: 33907
-		// (get) Token: 0x060225E1 RID: 140769 RVA: 0x0032D458 File Offset: 0x0032B658
-		// (set) Token: 0x060225E2 RID: 140770 RVA: 0x0032D468 File Offset: 0x0032B668
+		// Token: 0x17001E94 RID: 7828
+		// (get) Token: 0x0600A52C RID: 42284 RVA: 0x000F3FE4 File Offset: 0x000F21E4
+		// (set) Token: 0x0600A52D RID: 42285 RVA: 0x000F3FF4 File Offset: 0x000F21F4
 		public unsafe float StartOffset_DEPRECATED
 		{
 			get
@@ -99,9 +99,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008474 RID: 33908
-		// (get) Token: 0x060225E3 RID: 140771 RVA: 0x0032D479 File Offset: 0x0032B679
-		// (set) Token: 0x060225E4 RID: 140772 RVA: 0x0032D489 File Offset: 0x0032B689
+		// Token: 0x17001E95 RID: 7829
+		// (get) Token: 0x0600A52E RID: 42286 RVA: 0x000F4005 File Offset: 0x000F2205
+		// (set) Token: 0x0600A52F RID: 42287 RVA: 0x000F4015 File Offset: 0x000F2215
 		public unsafe float EndOffset_DEPRECATED
 		{
 			get
@@ -114,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008475 RID: 33909
-		// (get) Token: 0x060225E5 RID: 140773 RVA: 0x0032D49A File Offset: 0x0032B69A
-		// (set) Token: 0x060225E6 RID: 140774 RVA: 0x0032D4AA File Offset: 0x0032B6AA
+		// Token: 0x17001E96 RID: 7830
+		// (get) Token: 0x0600A530 RID: 42288 RVA: 0x000F4026 File Offset: 0x000F2226
+		// (set) Token: 0x0600A531 RID: 42289 RVA: 0x000F4036 File Offset: 0x000F2236
 		public unsafe float PlayRate_DEPRECATED
 		{
 			get
@@ -129,9 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008476 RID: 33910
-		// (get) Token: 0x060225E7 RID: 140775 RVA: 0x0032D4BB File Offset: 0x0032B6BB
-		// (set) Token: 0x060225E8 RID: 140776 RVA: 0x0032D4D4 File Offset: 0x0032B6D4
+		// Token: 0x17001E97 RID: 7831
+		// (get) Token: 0x0600A532 RID: 42290 RVA: 0x000F4047 File Offset: 0x000F2247
+		// (set) Token: 0x0600A533 RID: 42291 RVA: 0x000F4060 File Offset: 0x000F2260
 		public unsafe bool bReverse_DEPRECATED
 		{
 			get
@@ -144,9 +144,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008477 RID: 33911
-		// (get) Token: 0x060225E9 RID: 140777 RVA: 0x0032D504 File Offset: 0x0032B704
-		// (set) Token: 0x060225EA RID: 140778 RVA: 0x0032D518 File Offset: 0x0032B718
+		// Token: 0x17001E98 RID: 7832
+		// (get) Token: 0x0600A534 RID: 42292 RVA: 0x000F4090 File Offset: 0x000F2290
+		// (set) Token: 0x0600A535 RID: 42293 RVA: 0x000F40A4 File Offset: 0x000F22A4
 		public unsafe FName SlotName_DEPRECATED
 		{
 			get
@@ -159,9 +159,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008478 RID: 33912
-		// (get) Token: 0x060225EB RID: 140779 RVA: 0x0032D52D File Offset: 0x0032B72D
-		// (set) Token: 0x060225EC RID: 140780 RVA: 0x0032D541 File Offset: 0x0032B741
+		// Token: 0x17001E99 RID: 7833
+		// (get) Token: 0x0600A536 RID: 42294 RVA: 0x000F40B9 File Offset: 0x000F22B9
+		// (set) Token: 0x0600A537 RID: 42295 RVA: 0x000F40CD File Offset: 0x000F22CD
 		public unsafe FVector StartLocationOffset
 		{
 			get
@@ -174,9 +174,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008479 RID: 33913
-		// (get) Token: 0x060225ED RID: 140781 RVA: 0x0032D556 File Offset: 0x0032B756
-		// (set) Token: 0x060225EE RID: 140782 RVA: 0x0032D56A File Offset: 0x0032B76A
+		// Token: 0x17001E9A RID: 7834
+		// (get) Token: 0x0600A538 RID: 42296 RVA: 0x000F40E2 File Offset: 0x000F22E2
+		// (set) Token: 0x0600A539 RID: 42297 RVA: 0x000F40F6 File Offset: 0x000F22F6
 		public unsafe FRotator StartRotationOffset
 		{
 			get
@@ -189,9 +189,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847A RID: 33914
-		// (get) Token: 0x060225EF RID: 140783 RVA: 0x0032D57F File Offset: 0x0032B77F
-		// (set) Token: 0x060225F0 RID: 140784 RVA: 0x0032D58F File Offset: 0x0032B78F
+		// Token: 0x17001E9B RID: 7835
+		// (get) Token: 0x0600A53A RID: 42298 RVA: 0x000F410B File Offset: 0x000F230B
+		// (set) Token: 0x0600A53B RID: 42299 RVA: 0x000F411B File Offset: 0x000F231B
 		public unsafe bool bMatchWithPrevious
 		{
 			get
@@ -204,9 +204,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847B RID: 33915
-		// (get) Token: 0x060225F1 RID: 140785 RVA: 0x0032D5A0 File Offset: 0x0032B7A0
-		// (set) Token: 0x060225F2 RID: 140786 RVA: 0x0032D5B4 File Offset: 0x0032B7B4
+		// Token: 0x17001E9C RID: 7836
+		// (get) Token: 0x0600A53C RID: 42300 RVA: 0x000F412C File Offset: 0x000F232C
+		// (set) Token: 0x0600A53D RID: 42301 RVA: 0x000F4140 File Offset: 0x000F2340
 		public unsafe FName MatchedBoneName
 		{
 			get
@@ -219,9 +219,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847C RID: 33916
-		// (get) Token: 0x060225F3 RID: 140787 RVA: 0x0032D5C9 File Offset: 0x0032B7C9
-		// (set) Token: 0x060225F4 RID: 140788 RVA: 0x0032D5DD File Offset: 0x0032B7DD
+		// Token: 0x17001E9D RID: 7837
+		// (get) Token: 0x0600A53E RID: 42302 RVA: 0x000F4155 File Offset: 0x000F2355
+		// (set) Token: 0x0600A53F RID: 42303 RVA: 0x000F4169 File Offset: 0x000F2369
 		public unsafe FVector MatchedLocationOffset
 		{
 			get
@@ -234,9 +234,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847D RID: 33917
-		// (get) Token: 0x060225F5 RID: 140789 RVA: 0x0032D5F2 File Offset: 0x0032B7F2
-		// (set) Token: 0x060225F6 RID: 140790 RVA: 0x0032D606 File Offset: 0x0032B806
+		// Token: 0x17001E9E RID: 7838
+		// (get) Token: 0x0600A540 RID: 42304 RVA: 0x000F417E File Offset: 0x000F237E
+		// (set) Token: 0x0600A541 RID: 42305 RVA: 0x000F4192 File Offset: 0x000F2392
 		public unsafe FRotator MatchedRotationOffset
 		{
 			get
@@ -249,9 +249,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847E RID: 33918
-		// (get) Token: 0x060225F7 RID: 140791 RVA: 0x0032D61B File Offset: 0x0032B81B
-		// (set) Token: 0x060225F8 RID: 140792 RVA: 0x0032D62B File Offset: 0x0032B82B
+		// Token: 0x17001E9F RID: 7839
+		// (get) Token: 0x0600A542 RID: 42306 RVA: 0x000F41A7 File Offset: 0x000F23A7
+		// (set) Token: 0x0600A543 RID: 42307 RVA: 0x000F41B7 File Offset: 0x000F23B7
 		public unsafe bool bMatchTranslation
 		{
 			get
@@ -264,9 +264,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700847F RID: 33919
-		// (get) Token: 0x060225F9 RID: 140793 RVA: 0x0032D63C File Offset: 0x0032B83C
-		// (set) Token: 0x060225FA RID: 140794 RVA: 0x0032D64C File Offset: 0x0032B84C
+		// Token: 0x17001EA0 RID: 7840
+		// (get) Token: 0x0600A544 RID: 42308 RVA: 0x000F41C8 File Offset: 0x000F23C8
+		// (set) Token: 0x0600A545 RID: 42309 RVA: 0x000F41D8 File Offset: 0x000F23D8
 		public unsafe bool bMatchIncludeZHeight
 		{
 			get
@@ -279,9 +279,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008480 RID: 33920
-		// (get) Token: 0x060225FB RID: 140795 RVA: 0x0032D65D File Offset: 0x0032B85D
-		// (set) Token: 0x060225FC RID: 140796 RVA: 0x0032D66D File Offset: 0x0032B86D
+		// Token: 0x17001EA1 RID: 7841
+		// (get) Token: 0x0600A546 RID: 42310 RVA: 0x000F41E9 File Offset: 0x000F23E9
+		// (set) Token: 0x0600A547 RID: 42311 RVA: 0x000F41F9 File Offset: 0x000F23F9
 		public unsafe bool bMatchRotationYaw
 		{
 			get
@@ -294,9 +294,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008481 RID: 33921
-		// (get) Token: 0x060225FD RID: 140797 RVA: 0x0032D67E File Offset: 0x0032B87E
-		// (set) Token: 0x060225FE RID: 140798 RVA: 0x0032D68E File Offset: 0x0032B88E
+		// Token: 0x17001EA2 RID: 7842
+		// (get) Token: 0x0600A548 RID: 42312 RVA: 0x000F420A File Offset: 0x000F240A
+		// (set) Token: 0x0600A549 RID: 42313 RVA: 0x000F421A File Offset: 0x000F241A
 		public unsafe bool bMatchRotationPitch
 		{
 			get
@@ -309,9 +309,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008482 RID: 33922
-		// (get) Token: 0x060225FF RID: 140799 RVA: 0x0032D69F File Offset: 0x0032B89F
-		// (set) Token: 0x06022600 RID: 140800 RVA: 0x0032D6AF File Offset: 0x0032B8AF
+		// Token: 0x17001EA3 RID: 7843
+		// (get) Token: 0x0600A54A RID: 42314 RVA: 0x000F422B File Offset: 0x000F242B
+		// (set) Token: 0x0600A54B RID: 42315 RVA: 0x000F423B File Offset: 0x000F243B
 		public unsafe bool bMatchRotationRoll
 		{
 			get
@@ -324,9 +324,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008483 RID: 33923
-		// (get) Token: 0x06022601 RID: 140801 RVA: 0x0032D6C0 File Offset: 0x0032B8C0
-		// (set) Token: 0x06022602 RID: 140802 RVA: 0x0032D6D0 File Offset: 0x0032B8D0
+		// Token: 0x17001EA4 RID: 7844
+		// (get) Token: 0x0600A54C RID: 42316 RVA: 0x000F424C File Offset: 0x000F244C
+		// (set) Token: 0x0600A54D RID: 42317 RVA: 0x000F425C File Offset: 0x000F245C
 		public unsafe bool bMatchConnectedFrame
 		{
 			get
@@ -339,91 +339,91 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022603 RID: 140803 RVA: 0x0032D6E1 File Offset: 0x0032B8E1
+		// Token: 0x0600A54E RID: 42318 RVA: 0x000F426D File Offset: 0x000F246D
 		static UMovieSceneSkeletalAnimationSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieSceneTracks.MovieSceneSkeletalAnimationSection");
 		}
 
-		// Token: 0x06022604 RID: 140804 RVA: 0x0032D6EF File Offset: 0x0032B8EF
+		// Token: 0x0600A54F RID: 42319 RVA: 0x000F427B File Offset: 0x000F247B
 		protected UMovieSceneSkeletalAnimationSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401258A RID: 75146
+		// Token: 0x04004687 RID: 18055
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneSkeletalAnimationSection";
 
-		// Token: 0x0401258B RID: 75147
+		// Token: 0x04004688 RID: 18056
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401258C RID: 75148
+		// Token: 0x04004689 RID: 18057
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401258D RID: 75149
+		// Token: 0x0400468A RID: 18058
 		internal static int __PropertyOffset_Params;
 
-		// Token: 0x0401258E RID: 75150
+		// Token: 0x0400468B RID: 18059
 		private FMovieSceneSkeletalAnimationParams _Params;
 
-		// Token: 0x0401258F RID: 75151
+		// Token: 0x0400468C RID: 18060
 		internal static int __PropertyOffset_AnimSequence_DEPRECATED;
 
-		// Token: 0x04012590 RID: 75152
+		// Token: 0x0400468D RID: 18061
 		internal static int __PropertyOffset_Animation_DEPRECATED;
 
-		// Token: 0x04012591 RID: 75153
+		// Token: 0x0400468E RID: 18062
 		internal static int __PropertyOffset_StartOffset_DEPRECATED;
 
-		// Token: 0x04012592 RID: 75154
+		// Token: 0x0400468F RID: 18063
 		internal static int __PropertyOffset_EndOffset_DEPRECATED;
 
-		// Token: 0x04012593 RID: 75155
+		// Token: 0x04004690 RID: 18064
 		internal static int __PropertyOffset_PlayRate_DEPRECATED;
 
-		// Token: 0x04012594 RID: 75156
+		// Token: 0x04004691 RID: 18065
 		internal static int __PropertyOffset_bReverse_DEPRECATED;
 
-		// Token: 0x04012595 RID: 75157
+		// Token: 0x04004692 RID: 18066
 		internal static byte __PropertyMask_bReverse_DEPRECATED;
 
-		// Token: 0x04012596 RID: 75158
+		// Token: 0x04004693 RID: 18067
 		internal static int __PropertyOffset_SlotName_DEPRECATED;
 
-		// Token: 0x04012597 RID: 75159
+		// Token: 0x04004694 RID: 18068
 		internal static int __PropertyOffset_StartLocationOffset;
 
-		// Token: 0x04012598 RID: 75160
+		// Token: 0x04004695 RID: 18069
 		internal static int __PropertyOffset_StartRotationOffset;
 
-		// Token: 0x04012599 RID: 75161
+		// Token: 0x04004696 RID: 18070
 		internal static int __PropertyOffset_bMatchWithPrevious;
 
-		// Token: 0x0401259A RID: 75162
+		// Token: 0x04004697 RID: 18071
 		internal static int __PropertyOffset_MatchedBoneName;
 
-		// Token: 0x0401259B RID: 75163
+		// Token: 0x04004698 RID: 18072
 		internal static int __PropertyOffset_MatchedLocationOffset;
 
-		// Token: 0x0401259C RID: 75164
+		// Token: 0x04004699 RID: 18073
 		internal static int __PropertyOffset_MatchedRotationOffset;
 
-		// Token: 0x0401259D RID: 75165
+		// Token: 0x0400469A RID: 18074
 		internal static int __PropertyOffset_bMatchTranslation;
 
-		// Token: 0x0401259E RID: 75166
+		// Token: 0x0400469B RID: 18075
 		internal static int __PropertyOffset_bMatchIncludeZHeight;
 
-		// Token: 0x0401259F RID: 75167
+		// Token: 0x0400469C RID: 18076
 		internal static int __PropertyOffset_bMatchRotationYaw;
 
-		// Token: 0x040125A0 RID: 75168
+		// Token: 0x0400469D RID: 18077
 		internal static int __PropertyOffset_bMatchRotationPitch;
 
-		// Token: 0x040125A1 RID: 75169
+		// Token: 0x0400469E RID: 18078
 		internal static int __PropertyOffset_bMatchRotationRoll;
 
-		// Token: 0x040125A2 RID: 75170
+		// Token: 0x0400469F RID: 18079
 		internal static int __PropertyOffset_bMatchConnectedFrame;
 	}
 }

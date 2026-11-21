@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.GenericPrompt;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BC6 RID: 23494
+	// Token: 0x02004BA6 RID: 19366
 	internal class CiacconaGalPlayerChoosingState : BaseCiacconaGalPlayerState
 	{
-		// Token: 0x0603B654 RID: 243284 RVA: 0x00E2AA6F File Offset: 0x00E28C6F
+		// Token: 0x060305A0 RID: 198048 RVA: 0x00D7AD63 File Offset: 0x00D78F63
 		[NullableContext(1)]
 		public CiacconaGalPlayerChoosingState(CiacconaGalPlayer owner, ECiacconaGalPlayerState state, [Nullable(new byte[]
 		{
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		{
 		}
 
-		// Token: 0x0603B655 RID: 243285 RVA: 0x00E2AA7A File Offset: 0x00E28C7A
+		// Token: 0x060305A1 RID: 198049 RVA: 0x00D7AD6E File Offset: 0x00D78F6E
 		protected override void OnEnter(ECiacconaGalPlayerState? lastState)
 		{
 			base.OnEnter(lastState);
 			CiacconaGalModel.Instance.IsCurStepDataListDirty = true;
 		}
 
-		// Token: 0x0603B656 RID: 243286 RVA: 0x00E2AA90 File Offset: 0x00E28C90
+		// Token: 0x060305A2 RID: 198050 RVA: 0x00D7AD84 File Offset: 0x00D78F84
 		public override void OnClick(int? choiceId = null)
 		{
 			if (choiceId == null)

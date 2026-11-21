@@ -8,12 +8,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006913 RID: 26899
+	// Token: 0x02005863 RID: 22627
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AnniversaryActivityData : ActivityBaseData
 	{
-		// Token: 0x06043143 RID: 274755 RVA: 0x01057C40 File Offset: 0x01055E40
+		// Token: 0x06037C9B RID: 228507 RVA: 0x00F9926C File Offset: 0x00F9746C
 		protected override void PhraseEx(ActivityData data)
 		{
 			if (data != null && data.ThemeCelebration != null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}, 20f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043144 RID: 274756 RVA: 0x01057D98 File Offset: 0x01055F98
+		// Token: 0x06037C9C RID: 228508 RVA: 0x00F993C4 File Offset: 0x00F975C4
 		private void InitSubActivityUnlockTimeMap(IReadOnlyList<SubActivityBeginTime> times)
 		{
 			if (times == null || times.Count == 0)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043145 RID: 274757 RVA: 0x01057E14 File Offset: 0x01056014
+		// Token: 0x06037C9D RID: 228509 RVA: 0x00F99440 File Offset: 0x00F97640
 		private void InitSubActivityData()
 		{
 			this.SubActivityDataMap.Clear();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.RebuildRelativeActivityIds();
 		}
 
-		// Token: 0x06043146 RID: 274758 RVA: 0x01057ED4 File Offset: 0x010560D4
+		// Token: 0x06037C9E RID: 228510 RVA: 0x00F99500 File Offset: 0x00F97700
 		[NullableContext(2)]
 		public AnniversarySubActivityDataBase GetTargetSubActivityData(EAnniversarySubId id)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return null;
 		}
 
-		// Token: 0x06043147 RID: 274759 RVA: 0x01057EF4 File Offset: 0x010560F4
+		// Token: 0x06037C9F RID: 228511 RVA: 0x00F99520 File Offset: 0x00F97720
 		private void RebuildRelativeActivityIds()
 		{
 			this.RelativeActivityIds.Clear();
@@ -148,13 +148,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043148 RID: 274760 RVA: 0x01057FB8 File Offset: 0x010561B8
+		// Token: 0x06037CA0 RID: 228512 RVA: 0x00F995E4 File Offset: 0x00F977E4
 		public bool IsRelativeActivityId(int activityId)
 		{
 			return this.RelativeActivityIds.Contains(activityId);
 		}
 
-		// Token: 0x06043149 RID: 274761 RVA: 0x01057FC8 File Offset: 0x010561C8
+		// Token: 0x06037CA1 RID: 228513 RVA: 0x00F995F4 File Offset: 0x00F977F4
 		public void UpdatePersonalRewardIds(List<int> rewardIds)
 		{
 			foreach (int item in rewardIds)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604314A RID: 274762 RVA: 0x0105802C File Offset: 0x0105622C
+		// Token: 0x06037CA2 RID: 228514 RVA: 0x00F99658 File Offset: 0x00F97858
 		public void UpdateWorldRewardIds(List<int> rewardIds)
 		{
 			foreach (int item in rewardIds)
@@ -178,39 +178,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604314B RID: 274763 RVA: 0x01058090 File Offset: 0x01056290
+		// Token: 0x06037CA3 RID: 228515 RVA: 0x00F996BC File Offset: 0x00F978BC
 		public List<int> GetWorldRewardIds()
 		{
 			return this.WorldRewardIds;
 		}
 
-		// Token: 0x0604314C RID: 274764 RVA: 0x01058098 File Offset: 0x01056298
+		// Token: 0x06037CA4 RID: 228516 RVA: 0x00F996C4 File Offset: 0x00F978C4
 		public List<int> GetPersonalRewardIds()
 		{
 			return this.PersonalRewardIds;
 		}
 
-		// Token: 0x0604314D RID: 274765 RVA: 0x010580A0 File Offset: 0x010562A0
+		// Token: 0x06037CA5 RID: 228517 RVA: 0x00F996CC File Offset: 0x00F978CC
 		public int GetPersonalCurProgress()
 		{
 			return InventoryModel.Instance.GetItemCountByConfigId(74, 0);
 		}
 
-		// Token: 0x0604314E RID: 274766 RVA: 0x010580B0 File Offset: 0x010562B0
+		// Token: 0x06037CA6 RID: 228518 RVA: 0x00F996DC File Offset: 0x00F978DC
 		public bool NeedPlayWorldProgressNumberTweenToday()
 		{
 			int num = (int)(TimeUtil.Instance.GetCurrentCrossDayStamp() / (double)TimeUtil.Instance.InverseMillisecond);
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 10, 0, 0) != num;
 		}
 
-		// Token: 0x0604314F RID: 274767 RVA: 0x010580F0 File Offset: 0x010562F0
+		// Token: 0x06037CA7 RID: 228519 RVA: 0x00F9971C File Offset: 0x00F9791C
 		public void MarkWorldProgressNumberTweenPlayedToday()
 		{
 			int value = (int)(TimeUtil.Instance.GetCurrentCrossDayStamp() / (double)TimeUtil.Instance.InverseMillisecond);
 			ActivityModel.Instance.SaveActivityData(base.Id, 10, 0, 0, value);
 		}
 
-		// Token: 0x06043150 RID: 274768 RVA: 0x0105812C File Offset: 0x0105632C
+		// Token: 0x06037CA8 RID: 228520 RVA: 0x00F99758 File Offset: 0x00F97958
 		public int GetWorldCurProgressIdForActivityDay(int realValidDay)
 		{
 			IReadOnlyList<WorldProgressCurve> worldProgressCurveAll = AnniversaryActivityConfig.Instance.GetWorldProgressCurveAll();
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return result;
 		}
 
-		// Token: 0x06043151 RID: 274769 RVA: 0x01058198 File Offset: 0x01056398
+		// Token: 0x06037CA9 RID: 228521 RVA: 0x00F997C4 File Offset: 0x00F979C4
 		public int GetWorldCurProgressId()
 		{
 			long beginOpenTime = base.BeginOpenTime;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return this.GetWorldCurProgressIdForActivityDay(realValidDay);
 		}
 
-		// Token: 0x06043152 RID: 274770 RVA: 0x010581E4 File Offset: 0x010563E4
+		// Token: 0x06037CAA RID: 228522 RVA: 0x00F99810 File Offset: 0x00F97A10
 		public bool IsPreviousProgressFull()
 		{
 			long beginOpenTime = base.BeginOpenTime;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return ((worldProgressCurveById != null) ? worldProgressCurveById.Value.Percent : 0) >= num;
 		}
 
-		// Token: 0x06043153 RID: 274771 RVA: 0x010582D4 File Offset: 0x010564D4
+		// Token: 0x06037CAB RID: 228523 RVA: 0x00F99900 File Offset: 0x00F97B00
 		public bool IsCurrentProgressFull()
 		{
 			IReadOnlyList<WorldProgressCurve> worldProgressCurveAll = AnniversaryActivityConfig.Instance.GetWorldProgressCurveAll();
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return ((worldProgressCurveById != null) ? worldProgressCurveById.Value.Percent : 0) >= num;
 		}
 
-		// Token: 0x06043154 RID: 274772 RVA: 0x0105837C File Offset: 0x0105657C
+		// Token: 0x06037CAC RID: 228524 RVA: 0x00F999A8 File Offset: 0x00F97BA8
 		[NullableContext(2)]
 		public List<int> GetWorldCanReceiveRewardIds()
 		{
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return list;
 		}
 
-		// Token: 0x06043155 RID: 274773 RVA: 0x01058408 File Offset: 0x01056608
+		// Token: 0x06037CAD RID: 228525 RVA: 0x00F99A34 File Offset: 0x00F97C34
 		[NullableContext(2)]
 		public List<int> GetPersonalCanReceiveRewardIds()
 		{
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return list;
 		}
 
-		// Token: 0x06043156 RID: 274774 RVA: 0x0105847C File Offset: 0x0105667C
+		// Token: 0x06037CAE RID: 228526 RVA: 0x00F99AA8 File Offset: 0x00F97CA8
 		public bool TargetPersonalCanReceive(int cfgId)
 		{
 			PersonProgressCurve? personProgressCurveById = AnniversaryActivityConfig.Instance.GetPersonProgressCurveById(cfgId);
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return personProgressCurveById.Value.DropId > 0 && personalCurProgress >= personProgressCurveById.Value.Progress && !this.PersonalRewardIds.Contains(personProgressCurveById.Value.Id);
 		}
 
-		// Token: 0x06043157 RID: 274775 RVA: 0x010584EC File Offset: 0x010566EC
+		// Token: 0x06037CAF RID: 228527 RVA: 0x00F99B18 File Offset: 0x00F97D18
 		public override bool GetExDataRedPointShowState()
 		{
 			IReadOnlyList<WorldProgressCurve> worldProgressCurveHadReward = AnniversaryActivityConfig.Instance.GetWorldProgressCurveHadReward();
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return false;
 		}
 
-		// Token: 0x06043158 RID: 274776 RVA: 0x01058628 File Offset: 0x01056828
+		// Token: 0x06037CB0 RID: 228528 RVA: 0x00F99C54 File Offset: 0x00F97E54
 		protected override bool GetExDataFinishShowState()
 		{
 			if (this.SubActivityDataMap.Count == 0)
@@ -416,16 +416,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return true;
 		}
 
-		// Token: 0x04022E98 RID: 143000
+		// Token: 0x0401D6F4 RID: 120564
 		private readonly Dictionary<EAnniversarySubId, AnniversarySubActivityDataBase> SubActivityDataMap = new Dictionary<EAnniversarySubId, AnniversarySubActivityDataBase>();
 
-		// Token: 0x04022E99 RID: 143001
+		// Token: 0x0401D6F5 RID: 120565
 		private List<int> PersonalRewardIds = new List<int>();
 
-		// Token: 0x04022E9A RID: 143002
+		// Token: 0x0401D6F6 RID: 120566
 		private List<int> WorldRewardIds = new List<int>();
 
-		// Token: 0x04022E9B RID: 143003
+		// Token: 0x0401D6F7 RID: 120567
 		private readonly HashSet<int> RelativeActivityIds = new HashSet<int>();
 	}
 }

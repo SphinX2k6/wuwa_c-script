@@ -7,33 +7,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006336 RID: 25398
+	// Token: 0x020052B4 RID: 21172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class PinballMainRootViewBase : UiViewBase
 	{
-		// Token: 0x0603FE63 RID: 261731 RVA: 0x00F754F7 File Offset: 0x00F736F7
+		// Token: 0x06034B24 RID: 215844 RVA: 0x00EBC453 File Offset: 0x00EBA653
 		public PinballMainRootViewBase(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FE64 RID: 261732 RVA: 0x00F75516 File Offset: 0x00F73716
+		// Token: 0x06034B25 RID: 215845 RVA: 0x00EBC472 File Offset: 0x00EBA672
 		protected override void OnBeforeCreate()
 		{
 			this.OnRegisterViewData();
 			this.OnRegisterDefaultChildView();
 		}
 
-		// Token: 0x0603FE65 RID: 261733
+		// Token: 0x06034B26 RID: 215846
 		protected abstract void OnRegisterDefaultChildView();
 
-		// Token: 0x0603FE66 RID: 261734
+		// Token: 0x06034B27 RID: 215847
 		protected abstract void OnRegisterContentItem();
 
-		// Token: 0x0603FE67 RID: 261735
+		// Token: 0x06034B28 RID: 215848
 		protected abstract void OnRegisterViewData();
 
-		// Token: 0x0603FE68 RID: 261736 RVA: 0x00F75524 File Offset: 0x00F73724
+		// Token: 0x06034B29 RID: 215849 RVA: 0x00EBC480 File Offset: 0x00EBA680
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballMainRootViewBase.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE69 RID: 261737 RVA: 0x00F75568 File Offset: 0x00F73768
+		// Token: 0x06034B2A RID: 215850 RVA: 0x00EBC4C4 File Offset: 0x00EBA6C4
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PinballMainRootViewBase.<OnShowAsyncImplementImplement>d__12 <OnShowAsyncImplementImplement>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE6A RID: 261738 RVA: 0x00F755AC File Offset: 0x00F737AC
+		// Token: 0x06034B2B RID: 215851 RVA: 0x00EBC508 File Offset: 0x00EBA708
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PinballMainRootViewBase.<OnHideAsyncImplementImplement>d__13 <OnHideAsyncImplementImplement>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE6B RID: 261739 RVA: 0x00F755F0 File Offset: 0x00F737F0
+		// Token: 0x06034B2C RID: 215852 RVA: 0x00EBC54C File Offset: 0x00EBA74C
 		protected override UniTask OnDestroyAsyncImplementImplement()
 		{
 			PinballMainRootViewBase.<OnDestroyAsyncImplementImplement>d__14 <OnDestroyAsyncImplementImplement>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnDestroyAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE6C RID: 261740 RVA: 0x00F75634 File Offset: 0x00F73834
+		// Token: 0x06034B2D RID: 215853 RVA: 0x00EBC590 File Offset: 0x00EBA790
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CreateChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE6D RID: 261741 RVA: 0x00F75680 File Offset: 0x00F73880
+		// Token: 0x06034B2E RID: 215854 RVA: 0x00EBC5DC File Offset: 0x00EBA7DC
 		public void OpenChildView(string viewName)
 		{
 			PinballMainRootViewBase.<>c__DisplayClass16_0 CS$<>8__locals1 = new PinballMainRootViewBase.<>c__DisplayClass16_0();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FE6E RID: 261742 RVA: 0x00F756C8 File Offset: 0x00F738C8
+		// Token: 0x06034B2F RID: 215855 RVA: 0x00EBC624 File Offset: 0x00EBA824
 		public UniTask OpenChildViewAsync(string viewName)
 		{
 			PinballMainRootViewBase.<OpenChildViewAsync>d__17 <OpenChildViewAsync>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OpenChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE6F RID: 261743 RVA: 0x00F75714 File Offset: 0x00F73914
+		// Token: 0x06034B30 RID: 215856 RVA: 0x00EBC670 File Offset: 0x00EBA870
 		public void CloseCurChildView()
 		{
 			UiAsyncTask task = new UiAsyncTask("PinballMainRootViewCloseCurChild", delegate()
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FE70 RID: 261744 RVA: 0x00F75748 File Offset: 0x00F73948
+		// Token: 0x06034B31 RID: 215857 RVA: 0x00EBC6A4 File Offset: 0x00EBA8A4
 		[NullableContext(0)]
 		public UniTask<bool> CloseCurChildViewAsync()
 		{
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CloseCurChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE71 RID: 261745 RVA: 0x00F7578C File Offset: 0x00F7398C
+		// Token: 0x06034B32 RID: 215858 RVA: 0x00EBC6E8 File Offset: 0x00EBA8E8
 		public void CloseChildView(PinballMainChildViewBase childView)
 		{
 			PinballMainRootViewBase.<>c__DisplayClass20_0 CS$<>8__locals1 = new PinballMainRootViewBase.<>c__DisplayClass20_0();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FE72 RID: 261746 RVA: 0x00F757D4 File Offset: 0x00F739D4
+		// Token: 0x06034B33 RID: 215859 RVA: 0x00EBC730 File Offset: 0x00EBA930
 		[NullableContext(0)]
 		public UniTask<bool> CloseChildViewAsync([Nullable(1)] PinballMainChildViewBase childView)
 		{
@@ -182,19 +182,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CloseChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE73 RID: 261747 RVA: 0x00F7581F File Offset: 0x00F73A1F
+		// Token: 0x06034B34 RID: 215860 RVA: 0x00EBC77B File Offset: 0x00EBA97B
 		public int GetChildViewStackNum()
 		{
 			return this.ChildViewStack.Size;
 		}
 
-		// Token: 0x0603FE74 RID: 261748 RVA: 0x00F7582C File Offset: 0x00F73A2C
+		// Token: 0x06034B35 RID: 215861 RVA: 0x00EBC788 File Offset: 0x00EBA988
 		protected PinballMainChildViewBase GetCurChildView()
 		{
 			return this.ChildViewStack.Peek();
 		}
 
-		// Token: 0x0603FE75 RID: 261749 RVA: 0x00F7583C File Offset: 0x00F73A3C
+		// Token: 0x06034B36 RID: 215862 RVA: 0x00EBC798 File Offset: 0x00EBA998
 		public void Back()
 		{
 			if (this.ChildViewStack.Size > 1)
@@ -216,14 +216,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			instance.OpenConfirmBackWorld();
 		}
 
-		// Token: 0x0603FE76 RID: 261750 RVA: 0x00F75898 File Offset: 0x00F73A98
+		// Token: 0x06034B37 RID: 215863 RVA: 0x00EBC7F4 File Offset: 0x00EBA9F4
 		public void PlaySequenceByName(string sequenceName)
 		{
 			this.UiViewSequence.StopSequenceByKey(sequenceName, false, false);
 			this.UiViewSequence.PlaySequence(sequenceName, false, null);
 		}
 
-		// Token: 0x0603FE77 RID: 261751 RVA: 0x00F758CC File Offset: 0x00F73ACC
+		// Token: 0x06034B38 RID: 215864 RVA: 0x00EBC828 File Offset: 0x00EBAA28
 		public UniTask PlaySequenceByNameAsync(string sequenceName)
 		{
 			PinballMainRootViewBase.<PlaySequenceByNameAsync>d__26 <PlaySequenceByNameAsync>d__;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <PlaySequenceByNameAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE78 RID: 261752 RVA: 0x00F75917 File Offset: 0x00F73B17
+		// Token: 0x06034B39 RID: 215865 RVA: 0x00EBC873 File Offset: 0x00EBAA73
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -250,25 +250,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return this.GetCurChildView().GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x04021547 RID: 136519
+		// Token: 0x0401BE76 RID: 114294
 		[Nullable(2)]
 		public object ViewModel;
 
-		// Token: 0x04021548 RID: 136520
+		// Token: 0x0401BE77 RID: 114295
 		public int ActivityId;
 
-		// Token: 0x04021549 RID: 136521
+		// Token: 0x0401BE78 RID: 114296
 		[Nullable(2)]
 		protected UUIItem ContentItem;
 
-		// Token: 0x0402154A RID: 136522
+		// Token: 0x0401BE79 RID: 114297
 		[Nullable(2)]
 		protected string DefaultChildViewName;
 
-		// Token: 0x0402154B RID: 136523
+		// Token: 0x0401BE7A RID: 114298
 		private readonly Stack<PinballMainChildViewBase> ChildViewStack = new Stack<PinballMainChildViewBase>();
 
-		// Token: 0x0402154C RID: 136524
+		// Token: 0x0401BE7B RID: 114299
 		protected UiMask ViewMask = new UiMask();
 	}
 }

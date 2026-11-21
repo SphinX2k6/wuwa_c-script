@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F24 RID: 7972
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200215D RID: 8541
 	public class ITalkEffectActionType
 	{
-		// Token: 0x0600AA74 RID: 43636 RVA: 0x0017FCB4 File Offset: 0x0017DEB4
+		// Token: 0x0600B546 RID: 46406 RVA: 0x00195CAC File Offset: 0x00193EAC
 		private ITalkEffectActionType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA75 RID: 43637 RVA: 0x0017FCEC File Offset: 0x0017DEEC
+		// Token: 0x0600B547 RID: 46407 RVA: 0x00195CE4 File Offset: 0x00193EE4
 		public static ITalkEffectActionType Create([Nullable(2)] ITalkEffectActionType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA76 RID: 43638 RVA: 0x0017FCFF File Offset: 0x0017DEFF
+		// Token: 0x0600B548 RID: 46408 RVA: 0x00195CF7 File Offset: 0x00193EF7
 		public static ITalkEffectActionType CreateFromSetValue([Nullable(2)] ITalkEffectActionType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA77 RID: 43639 RVA: 0x0017FD12 File Offset: 0x0017DF12
+		// Token: 0x0600B549 RID: 46409 RVA: 0x00195D0A File Offset: 0x00193F0A
 		public ITalkEffectActionType_SetValue ToSetValue()
 		{
 			return new ITalkEffectActionType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033DC RID: 13276
-		// (get) Token: 0x0600AA78 RID: 43640 RVA: 0x0017FD25 File Offset: 0x0017DF25
-		// (set) Token: 0x0600AA79 RID: 43641 RVA: 0x0017FD50 File Offset: 0x0017DF50
+		// Token: 0x170036A7 RID: 13991
+		// (get) Token: 0x0600B54A RID: 46410 RVA: 0x00195D1D File Offset: 0x00193F1D
+		// (set) Token: 0x0600B54B RID: 46411 RVA: 0x00195D48 File Offset: 0x00193F48
 		public virtual ETalkEffectActionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400653E RID: 25918
+		// Token: 0x04006B2D RID: 27437
 		[Nullable(2)]
 		protected ITalkEffectActionType FbInstance;
 
-		// Token: 0x0400653F RID: 25919
+		// Token: 0x04006B2E RID: 27438
 		[Nullable(2)]
 		protected ITalkEffectActionType_SetValue PocoInterface;
 	}

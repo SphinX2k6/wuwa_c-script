@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 {
-	// Token: 0x020059BE RID: 22974
+	// Token: 0x02004997 RID: 18839
 	public class PunishReportView : UiViewBase
 	{
-		// Token: 0x0603A3D8 RID: 238552 RVA: 0x00DD766C File Offset: 0x00DD586C
+		// Token: 0x0602F2FF RID: 193279 RVA: 0x00D26B44 File Offset: 0x00D24D44
 		[NullableContext(1)]
 		public PunishReportView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A3D9 RID: 238553 RVA: 0x00DD7678 File Offset: 0x00DD5878
+		// Token: 0x0602F300 RID: 193280 RVA: 0x00D26B50 File Offset: 0x00D24D50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A3DA RID: 238554 RVA: 0x00DD7724 File Offset: 0x00DD5924
+		// Token: 0x0602F301 RID: 193281 RVA: 0x00D26BFC File Offset: 0x00D24DFC
 		protected override void OnStart()
 		{
 			this.UiViewSequence.AddSequenceFinishEvent(this.UiViewSequence.StartSequenceName, new Action<string>(this.OnStartSequenceEnd), false);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			}
 		}
 
-		// Token: 0x0603A3DB RID: 238555 RVA: 0x00DD7838 File Offset: 0x00DD5A38
+		// Token: 0x0602F302 RID: 193282 RVA: 0x00D26D10 File Offset: 0x00D24F10
 		[NullableContext(1)]
 		private void OnStartSequenceEnd(string _)
 		{
@@ -79,16 +79,16 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.View.PunishReport
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200BC26 RID: 48166
+		// Token: 0x0200A631 RID: 42545
 		private enum EViewComponent
 		{
-			// Token: 0x04038C85 RID: 232581
+			// Token: 0x04033654 RID: 210516
 			TitleText,
-			// Token: 0x04038C86 RID: 232582
+			// Token: 0x04033655 RID: 210517
 			DescribeText,
-			// Token: 0x04038C87 RID: 232583
+			// Token: 0x04033656 RID: 210518
 			Texture1,
-			// Token: 0x04038C88 RID: 232584
+			// Token: 0x04033657 RID: 210519
 			Texture2
 		}
 	}

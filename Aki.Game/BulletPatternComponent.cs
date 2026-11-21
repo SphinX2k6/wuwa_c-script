@@ -4,24 +4,24 @@ using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x0200313B RID: 12603
+// Token: 0x0200269B RID: 9883
 public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601B1D5 RID: 111061 RVA: 0x0075FE2D File Offset: 0x0075E02D
+	// Token: 0x06018C63 RID: 101475 RVA: 0x00786516 File Offset: 0x00784716
 	static BulletPatternComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletPatternComponent.CreateStaticDefaultValue), new Action(BulletPatternComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B1D6 RID: 111062 RVA: 0x0075FE4C File Offset: 0x0075E04C
+	// Token: 0x06018C64 RID: 101476 RVA: 0x00786535 File Offset: 0x00784735
 	[NullableContext(2)]
 	public static UKuroFastCollisionAlgorithm GetKuroFastCollisionAlgorithm()
 	{
 		return BulletPatternComponent.Algorithm;
 	}
 
-	// Token: 0x17002590 RID: 9616
-	// (get) Token: 0x0601B1D7 RID: 111063 RVA: 0x0075FE53 File Offset: 0x0075E053
+	// Token: 0x17002752 RID: 10066
+	// (get) Token: 0x06018C65 RID: 101477 RVA: 0x0078653C File Offset: 0x0078473C
 	public bool HasBulletPatternSkill
 	{
 		get
@@ -30,7 +30,7 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B1D8 RID: 111064 RVA: 0x0075FE5C File Offset: 0x0075E05C
+	// Token: 0x06018C66 RID: 101478 RVA: 0x00786544 File Offset: 0x00784744
 	protected override bool OnStart()
 	{
 		BaseSkillComponent component = base.Entity.GetComponent<BaseSkillComponent>();
@@ -42,7 +42,7 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B1D9 RID: 111065 RVA: 0x0075FE99 File Offset: 0x0075E099
+	// Token: 0x06018C67 RID: 101479 RVA: 0x00786581 File Offset: 0x00784781
 	protected override bool OnEnd()
 	{
 		if (this.HasBulletPatternSkillInternal)
@@ -52,7 +52,7 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B1DA RID: 111066 RVA: 0x0075FEAC File Offset: 0x0075E0AC
+	// Token: 0x06018C68 RID: 101480 RVA: 0x00786594 File Offset: 0x00784794
 	private void StartBulletPatternEnvironment()
 	{
 		if (++BulletPatternComponent.ActiveInstanceCount == 1 && BulletModel.Instance.GetKuroBulletWorld() == null)
@@ -70,7 +70,7 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B1DB RID: 111067 RVA: 0x0075FF64 File Offset: 0x0075E164
+	// Token: 0x06018C69 RID: 101481 RVA: 0x0078664C File Offset: 0x0078484C
 	private void StopBulletPatternEnvironment()
 	{
 		if (--BulletPatternComponent.ActiveInstanceCount == 0 && BulletPatternComponent.Algorithm != null)
@@ -82,21 +82,21 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B1DC RID: 111068 RVA: 0x0075FFB7 File Offset: 0x0075E1B7
+	// Token: 0x06018C6A RID: 101482 RVA: 0x0078669F File Offset: 0x0078489F
 	public static void CreateStaticDefaultValue()
 	{
 		BulletPatternComponent.Algorithm = null;
 		BulletPatternComponent.ActiveInstanceCount = 0;
 	}
 
-	// Token: 0x0601B1DD RID: 111069 RVA: 0x0075FFC5 File Offset: 0x0075E1C5
+	// Token: 0x06018C6B RID: 101483 RVA: 0x007866AD File Offset: 0x007848AD
 	public static void ResetStaticDefaultValue()
 	{
 		BulletPatternComponent.Algorithm = null;
 		BulletPatternComponent.ActiveInstanceCount = 0;
 	}
 
-	// Token: 0x0601B1DE RID: 111070 RVA: 0x0075FFD4 File Offset: 0x0075E1D4
+	// Token: 0x06018C6C RID: 101484 RVA: 0x007866BC File Offset: 0x007848BC
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -105,20 +105,37 @@ public class BulletPatternComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		BulletPatternComponent bulletPatternComponent = (BulletPatternComponent)componentTemplate;
-		if (base.CanResetComponentProperty("HasBulletPatternSkillInternal"))
-		{
-			this.HasBulletPatternSkillInternal = bulletPatternComponent.HasBulletPatternSkillInternal;
-		}
+		this.HasBulletPatternSkillInternal = bulletPatternComponent.HasBulletPatternSkillInternal;
 		return true;
 	}
 
-	// Token: 0x0400D2F9 RID: 54009
+	// Token: 0x17002753 RID: 10067
+	// (get) Token: 0x06018C6D RID: 101485 RVA: 0x007866E8 File Offset: 0x007848E8
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002754 RID: 10068
+	// (get) Token: 0x06018C6E RID: 101486 RVA: 0x007866EB File Offset: 0x007848EB
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D731 RID: 55089
 	[Nullable(2)]
 	private static UKuroFastCollisionAlgorithm Algorithm;
 
-	// Token: 0x0400D2FA RID: 54010
+	// Token: 0x0400D732 RID: 55090
 	private static int ActiveInstanceCount;
 
-	// Token: 0x0400D2FB RID: 54011
+	// Token: 0x0400D733 RID: 55091
 	private bool HasBulletPatternSkillInternal;
 }

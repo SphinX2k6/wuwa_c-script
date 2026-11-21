@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000099 RID: 153
+	// Token: 0x0200009E RID: 158
 	[EnumExtensions]
 	public enum EEffectSplineCreateMode
 	{
-		// Token: 0x040003AE RID: 942
+		// Token: 0x040003C7 RID: 967
 		WholeLine,
-		// Token: 0x040003AF RID: 943
+		// Token: 0x040003C8 RID: 968
 		EquidistantPoint
 	}
 }

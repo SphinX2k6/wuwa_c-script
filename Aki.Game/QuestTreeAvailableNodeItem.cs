@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026A9 RID: 9897
+// Token: 0x02001B94 RID: 7060
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class QuestTreeAvailableNodeItem : GridProxyAbstract<QuestTreeNodeData>
 {
-	// Token: 0x06014464 RID: 83044 RVA: 0x0051FA00 File Offset: 0x0051DC00
+	// Token: 0x06011946 RID: 72006 RVA: 0x0052E738 File Offset: 0x0052C938
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -51,7 +51,7 @@ public class QuestTreeAvailableNodeItem : GridProxyAbstract<QuestTreeNodeData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014465 RID: 83045 RVA: 0x0051FB90 File Offset: 0x0051DD90
+	// Token: 0x06011947 RID: 72007 RVA: 0x0052E8C8 File Offset: 0x0052CAC8
 	public override void Refresh(QuestTreeNodeData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -66,7 +66,7 @@ public class QuestTreeAvailableNodeItem : GridProxyAbstract<QuestTreeNodeData>
 		data.RemoveNewTag();
 	}
 
-	// Token: 0x06014466 RID: 83046 RVA: 0x0051FC7C File Offset: 0x0051DE7C
+	// Token: 0x06011948 RID: 72008 RVA: 0x0052E9B4 File Offset: 0x0052CBB4
 	private void OnClickGoto()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.QuestTreeChapterView))
@@ -81,38 +81,38 @@ public class QuestTreeAvailableNodeItem : GridProxyAbstract<QuestTreeNodeData>
 		UiManager.Instance.CloseView(EUiViewName.QuestTreeAvailableListView, null);
 	}
 
-	// Token: 0x0400988A RID: 39050
+	// Token: 0x040099E2 RID: 39394
 	private QuestTreeNodeData Data;
 
-	// Token: 0x02008CEA RID: 36074
+	// Token: 0x02007E73 RID: 32371
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DB7B RID: 187259
+		// Token: 0x04028E92 RID: 167570
 		public const int SpriteBlueBg = 0;
 
-		// Token: 0x0402DB7C RID: 187260
+		// Token: 0x04028E93 RID: 167571
 		public const int SpriteGreenBg = 1;
 
-		// Token: 0x0402DB7D RID: 187261
+		// Token: 0x04028E94 RID: 167572
 		public const int TextName = 2;
 
-		// Token: 0x0402DB7E RID: 187262
+		// Token: 0x04028E95 RID: 167573
 		public const int BtnGoto = 3;
 
-		// Token: 0x0402DB7F RID: 187263
+		// Token: 0x04028E96 RID: 167574
 		public const int BtnGoto2 = 4;
 
-		// Token: 0x0402DB80 RID: 187264
+		// Token: 0x04028E97 RID: 167575
 		public const int SpriteFinish = 5;
 
-		// Token: 0x0402DB81 RID: 187265
+		// Token: 0x04028E98 RID: 167576
 		public const int TextInProgress = 6;
 
-		// Token: 0x0402DB82 RID: 187266
+		// Token: 0x04028E99 RID: 167577
 		public const int SpriteTypeIcon = 7;
 
-		// Token: 0x0402DB83 RID: 187267
+		// Token: 0x04028E9A RID: 167578
 		public const int ItemNew = 8;
 	}
 }

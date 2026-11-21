@@ -3,15 +3,15 @@ using CSharpScript.Game.Module.AutoPilot;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004949 RID: 18761
+	// Token: 0x020038C0 RID: 14528
 	public class AutoPilotRideShareBtnComponent : LongPressWithProgressComponent
 	{
-		// Token: 0x06030FCB RID: 200651 RVA: 0x00B6066D File Offset: 0x00B5E86D
+		// Token: 0x06025AF7 RID: 154359 RVA: 0x00A9B4B1 File Offset: 0x00A996B1
 		public AutoPilotRideShareBtnComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FCC RID: 200652 RVA: 0x00B60676 File Offset: 0x00B5E876
+		// Token: 0x06025AF8 RID: 154360 RVA: 0x00A9B4BA File Offset: 0x00A996BA
 		protected override float OnGetProgress()
 		{
 			return AutoPilotModel.Instance.RideShareBtnProgress;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000972 RID: 2418
+	// Token: 0x02000A47 RID: 2631
 	public class ConfigSpringChatById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038C0 RID: 14528 RVA: 0x0019A720 File Offset: 0x00198920
+		// Token: 0x06003DBE RID: 15806 RVA: 0x001B9AB4 File Offset: 0x001B7CB4
 		static ConfigSpringChatById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringChatById.CreateStaticDefaultValue), new Action(ConfigSpringChatById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038C1 RID: 14529 RVA: 0x0019A740 File Offset: 0x00198940
+		// Token: 0x06003DBF RID: 15807 RVA: 0x001B9AD4 File Offset: 0x001B7CD4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringChatById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038C2 RID: 14530 RVA: 0x0019A7BF File Offset: 0x001989BF
+		// Token: 0x06003DC0 RID: 15808 RVA: 0x001B9B53 File Offset: 0x001B7D53
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringChatById.LogPair = null;
 			ConfigSpringChatById.HandleId = 0;
 		}
 
-		// Token: 0x060038C3 RID: 14531 RVA: 0x0019A7CD File Offset: 0x001989CD
+		// Token: 0x06003DC1 RID: 15809 RVA: 0x001B9B61 File Offset: 0x001B7D61
 		public static void Init()
 		{
 			ConfigSpringChatById.HandleId = ConfigCommon.InitDataStatement(ConfigSpringChatById.HandleId, "db_sprintsign.db", "select BinData from `SpringChat` where Id=?");
 		}
 
-		// Token: 0x060038C4 RID: 14532 RVA: 0x0019A7E8 File Offset: 0x001989E8
+		// Token: 0x06003DC2 RID: 15810 RVA: 0x001B9B7C File Offset: 0x001B7D7C
 		public static SpringChat? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpringChatById.HandleId, ConfigSpringChatById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpringChat?(rootAsSpringChat);
 		}
 
-		// Token: 0x04004204 RID: 16900
+		// Token: 0x040047D7 RID: 18391
 		private const string DB = "db_sprintsign.db";
 
-		// Token: 0x04004205 RID: 16901
+		// Token: 0x040047D8 RID: 18392
 		private const string FILE = "c.2.0春节签到.xlsx";
 
-		// Token: 0x04004206 RID: 16902
+		// Token: 0x040047D9 RID: 18393
 		private const string TABLE = "SpringChat";
 
-		// Token: 0x04004207 RID: 16903
+		// Token: 0x040047DA RID: 18394
 		private const string COMMAND = "select BinData from `SpringChat` where Id=?";
 
-		// Token: 0x04004208 RID: 16904
+		// Token: 0x040047DB RID: 18395
 		private const string KEY_PREFIX = "SpringChatById";
 
-		// Token: 0x04004209 RID: 16905
+		// Token: 0x040047DC RID: 18396
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400420A RID: 16906
+		// Token: 0x040047DD RID: 18397
 		private static int HandleId;
 	}
 }

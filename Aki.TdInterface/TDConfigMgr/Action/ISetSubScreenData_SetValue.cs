@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E47 RID: 7751
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200207C RID: 8316
 	public class ISetSubScreenData_SetValue
 	{
-		// Token: 0x04006323 RID: 25379
+		// Token: 0x04006907 RID: 26887
 		public IScreenType TargetScreen;
 
-		// Token: 0x04006324 RID: 25380
+		// Token: 0x04006908 RID: 26888
 		public ISubScreenConfig TargetSubScreenConfig;
 
-		// Token: 0x04006325 RID: 25381
+		// Token: 0x04006909 RID: 26889
 		public ISubScreenTransition Transition;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,12 +15,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013AD RID: 5037
+// Token: 0x02000861 RID: 2145
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 {
-	// Token: 0x06008D79 RID: 36217 RVA: 0x001E73DC File Offset: 0x001E55DC
+	// Token: 0x0600610F RID: 24847 RVA: 0x001F002C File Offset: 0x001EE22C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -82,19 +81,19 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D7A RID: 36218 RVA: 0x001E7729 File Offset: 0x001E5929
+	// Token: 0x06006110 RID: 24848 RVA: 0x001F0379 File Offset: 0x001EE579
 	private void ClickLeftBtn()
 	{
 		this.SetGrandRewardShowIndex(this.SelectGrandRewardIndex - 1);
 	}
 
-	// Token: 0x06008D7B RID: 36219 RVA: 0x001E7739 File Offset: 0x001E5939
+	// Token: 0x06006111 RID: 24849 RVA: 0x001F0389 File Offset: 0x001EE589
 	private void ClickRightBtn()
 	{
 		this.SetGrandRewardShowIndex(this.SelectGrandRewardIndex + 1);
 	}
 
-	// Token: 0x06008D7C RID: 36220 RVA: 0x001E774C File Offset: 0x001E594C
+	// Token: 0x06006112 RID: 24850 RVA: 0x001F039C File Offset: 0x001EE59C
 	private void ClickWeaponBtn()
 	{
 		if (this.SelectGrandRewardIndex < 0 || this.SelectGrandRewardIndex >= this.GrandRewardConfigs.Count)
@@ -122,7 +121,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x06008D7D RID: 36221 RVA: 0x001E7820 File Offset: 0x001E5A20
+	// Token: 0x06006113 RID: 24851 RVA: 0x001F0470 File Offset: 0x001EE670
 	private void ClickFreeRewardBtn()
 	{
 		if (this.ActivitySignData != null && !this.ActivitySignData.GetFreeRewardIsGet())
@@ -135,10 +134,10 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 			return;
 		}
 		List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(this.ActivitySignConfig.Value.FreeDropId);
-		ItemController.Instance.OpenItemTipsByItemId(dropPackagePreviewItemList[0].ItemData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(dropPackagePreviewItemList[0].ItemData.ItemId, true, null, false);
 	}
 
-	// Token: 0x06008D7E RID: 36222 RVA: 0x001E78A4 File Offset: 0x001E5AA4
+	// Token: 0x06006114 RID: 24852 RVA: 0x001F04F4 File Offset: 0x001EE6F4
 	private void ClickCharacterDetailBtn()
 	{
 		if (this.SelectGrandRewardIndex < 0 || this.SelectGrandRewardIndex >= this.GrandRewardConfigs.Count)
@@ -150,16 +149,16 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		{
 			return;
 		}
-		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, activitySignGrandReward.Value.GetPreviewListArray().ToList<int>(), null, null);
+		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, new List<int>(activitySignGrandReward.Value.GetPreviewListArray()), null, null);
 	}
 
-	// Token: 0x06008D7F RID: 36223 RVA: 0x001E7926 File Offset: 0x001E5B26
+	// Token: 0x06006115 RID: 24853 RVA: 0x001F0576 File Offset: 0x001EE776
 	protected override void OnSetData()
 	{
 		this.ActivitySignData = (this.ActivityBaseData as ActivitySevenDaySignData);
 	}
 
-	// Token: 0x06008D80 RID: 36224 RVA: 0x001E793C File Offset: 0x001E5B3C
+	// Token: 0x06006116 RID: 24854 RVA: 0x001F058C File Offset: 0x001EE78C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewNewcomerSignIn.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -170,7 +169,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D81 RID: 36225 RVA: 0x001E7980 File Offset: 0x001E5B80
+	// Token: 0x06006117 RID: 24855 RVA: 0x001F05D0 File Offset: 0x001EE7D0
 	protected override void OnStart()
 	{
 		foreach (int actId in (this.ActivitySignConfig != null) ? this.ActivitySignConfig.GetValueOrDefault().GetGrandRewardIdArray() : null)
@@ -225,19 +224,19 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D82 RID: 36226 RVA: 0x001E7BDA File Offset: 0x001E5DDA
+	// Token: 0x06006118 RID: 24856 RVA: 0x001F082A File Offset: 0x001EEA2A
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.CloseGachaSceneView, new Action(this.UpdateGrandRewardInfo));
 	}
 
-	// Token: 0x06008D83 RID: 36227 RVA: 0x001E7BF8 File Offset: 0x001E5DF8
+	// Token: 0x06006119 RID: 24857 RVA: 0x001F0848 File Offset: 0x001EEA48
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CloseGachaSceneView, new Action(this.UpdateGrandRewardInfo));
 	}
 
-	// Token: 0x06008D84 RID: 36228 RVA: 0x001E7C18 File Offset: 0x001E5E18
+	// Token: 0x0600611A RID: 24858 RVA: 0x001F0868 File Offset: 0x001EEA68
 	protected override void OnRefreshView()
 	{
 		List<OneItemConfig> list = new List<OneItemConfig>();
@@ -260,7 +259,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D85 RID: 36229 RVA: 0x001E7CDC File Offset: 0x001E5EDC
+	// Token: 0x0600611B RID: 24859 RVA: 0x001F092C File Offset: 0x001EEB2C
 	private void UpdateGrandRewardInfo()
 	{
 		int num = this.GrandRewardConfigs.FindIndex((ActivitySignGrandReward? cfg) => this.ActivitySignData != null && this.ActivitySignData.GetRewardStateByDay(cfg.Value.GrandRewardIndex - 1).GetValueOrDefault() != SignState.IsReceive);
@@ -268,7 +267,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		this.SetGrandRewardShowIndex(grandRewardShowIndex);
 	}
 
-	// Token: 0x06008D86 RID: 36230 RVA: 0x001E7D14 File Offset: 0x001E5F14
+	// Token: 0x0600611C RID: 24860 RVA: 0x001F0964 File Offset: 0x001EEB64
 	private void SetGrandRewardShowIndex(int index)
 	{
 		if (index < 0 || index >= this.GrandRewardConfigs.Count)
@@ -284,7 +283,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		this.SetGrandRewardShow(index);
 	}
 
-	// Token: 0x06008D87 RID: 36231 RVA: 0x001E7D68 File Offset: 0x001E5F68
+	// Token: 0x0600611D RID: 24861 RVA: 0x001F09B8 File Offset: 0x001EEBB8
 	private void SetGrandRewardShow(int index)
 	{
 		ActivitySignGrandReward? activitySignGrandReward = this.GrandRewardConfigs[index];
@@ -342,7 +341,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		this.SelectGrandRewardIndex = index;
 	}
 
-	// Token: 0x06008D88 RID: 36232 RVA: 0x001E7F90 File Offset: 0x001E6190
+	// Token: 0x0600611E RID: 24862 RVA: 0x001F0BE0 File Offset: 0x001EEDE0
 	private UniTask LoadGrandRewardItem(int index, string switchAnim)
 	{
 		ActivitySubViewNewcomerSignIn.<LoadGrandRewardItem>d__28 <LoadGrandRewardItem>d__;
@@ -355,7 +354,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		return <LoadGrandRewardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D89 RID: 36233 RVA: 0x001E7FE3 File Offset: 0x001E61E3
+	// Token: 0x0600611F RID: 24863 RVA: 0x001F0C33 File Offset: 0x001EEE33
 	protected override void OnSequenceStart(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -374,7 +373,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008D8A RID: 36234 RVA: 0x001E8013 File Offset: 0x001E6213
+	// Token: 0x06006120 RID: 24864 RVA: 0x001F0C63 File Offset: 0x001EEE63
 	private NewcomerSignInItem InitItem()
 	{
 		NewcomerSignInItem newcomerSignInItem = new NewcomerSignInItem();
@@ -383,7 +382,7 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		return newcomerSignInItem;
 	}
 
-	// Token: 0x06008D8B RID: 36235 RVA: 0x001E8034 File Offset: 0x001E6234
+	// Token: 0x06006121 RID: 24865 RVA: 0x001F0C84 File Offset: 0x001EEE84
 	protected override void OnTimer(float gap)
 	{
 		if (this.ActivityBaseData == null)
@@ -402,13 +401,13 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 		text.SetText(item2, true);
 	}
 
-	// Token: 0x04003ECD RID: 16077
+	// Token: 0x04003F65 RID: 16229
 	private string NEWCOMER_LOGO_MALE_RESOURCE_ID = "T_NewcomerLogoMale";
 
-	// Token: 0x04003ECE RID: 16078
+	// Token: 0x04003F66 RID: 16230
 	private string NEWCOMER_LOGO_FEMALE_RESOURCE_ID = "T_NewcomerLogoFemale";
 
-	// Token: 0x04003ECF RID: 16079
+	// Token: 0x04003F67 RID: 16231
 	[Nullable(new byte[]
 	{
 		2,
@@ -416,98 +415,98 @@ public class ActivitySubViewNewcomerSignIn : ActivitySubViewBase
 	})]
 	private GenericLayout<NewcomerSignInItem, OneItemConfig> Layout;
 
-	// Token: 0x04003ED0 RID: 16080
+	// Token: 0x04003F68 RID: 16232
 	[Nullable(2)]
 	private ActivitySevenDaySignData ActivitySignData;
 
-	// Token: 0x04003ED1 RID: 16081
+	// Token: 0x04003F69 RID: 16233
 	private ActivitySign? ActivitySignConfig;
 
-	// Token: 0x04003ED2 RID: 16082
+	// Token: 0x04003F6A RID: 16234
 	[Nullable(2)]
 	private global::RoleDescribeComponent DescComponent;
 
-	// Token: 0x04003ED3 RID: 16083
+	// Token: 0x04003F6B RID: 16235
 	private readonly List<ActivitySignGrandReward?> GrandRewardConfigs = new List<ActivitySignGrandReward?>();
 
-	// Token: 0x04003ED4 RID: 16084
+	// Token: 0x04003F6C RID: 16236
 	private readonly Dictionary<int, ActivitySignGrandReward?> GrandRewardConfigMap = new Dictionary<int, ActivitySignGrandReward?>();
 
-	// Token: 0x04003ED5 RID: 16085
+	// Token: 0x04003F6D RID: 16237
 	private readonly Dictionary<int, UUIItem> GrandRewardItemMap = new Dictionary<int, UUIItem>();
 
-	// Token: 0x04003ED6 RID: 16086
+	// Token: 0x04003F6E RID: 16238
 	private readonly HashSet<int> GrandRewardLoadSet = new HashSet<int>();
 
-	// Token: 0x04003ED7 RID: 16087
+	// Token: 0x04003F6F RID: 16239
 	[Nullable(2)]
 	private SimpleGenericLayout WeaponStarLayout;
 
-	// Token: 0x04003ED8 RID: 16088
+	// Token: 0x04003F70 RID: 16240
 	private int SelectGrandRewardIndex = -1;
 
-	// Token: 0x02007A1E RID: 31262
+	// Token: 0x02006BA4 RID: 27556
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028321 RID: 164641
+		// Token: 0x0402363E RID: 144958
 		public const int RewardContent = 0;
 
-		// Token: 0x04028322 RID: 164642
+		// Token: 0x0402363F RID: 144959
 		public const int LeftBtn = 1;
 
-		// Token: 0x04028323 RID: 164643
+		// Token: 0x04023640 RID: 144960
 		public const int RightBtn = 2;
 
-		// Token: 0x04028324 RID: 164644
+		// Token: 0x04023641 RID: 144961
 		public const int BtnFreeReward = 3;
 
-		// Token: 0x04028325 RID: 164645
+		// Token: 0x04023642 RID: 144962
 		public const int PnlNml = 4;
 
-		// Token: 0x04028326 RID: 164646
+		// Token: 0x04023643 RID: 144963
 		public const int PnlGot = 5;
 
-		// Token: 0x04028327 RID: 164647
+		// Token: 0x04023644 RID: 144964
 		public const int GrandRewardText = 6;
 
-		// Token: 0x04028328 RID: 164648
+		// Token: 0x04023645 RID: 144965
 		public const int GrandRoleItem = 7;
 
-		// Token: 0x04028329 RID: 164649
+		// Token: 0x04023646 RID: 144966
 		public const int GrandWeaponItem = 8;
 
-		// Token: 0x0402832A RID: 164650
+		// Token: 0x04023647 RID: 144967
 		public const int Layout = 9;
 
-		// Token: 0x0402832B RID: 164651
+		// Token: 0x04023648 RID: 144968
 		public const int GridItem = 10;
 
-		// Token: 0x0402832C RID: 164652
+		// Token: 0x04023649 RID: 144969
 		public const int WeaponText = 11;
 
-		// Token: 0x0402832D RID: 164653
+		// Token: 0x0402364A RID: 144970
 		public const int WeaponStarLayout = 12;
 
-		// Token: 0x0402832E RID: 164654
+		// Token: 0x0402364B RID: 144971
 		public const int WeaponStarItem = 13;
 
-		// Token: 0x0402832F RID: 164655
+		// Token: 0x0402364C RID: 144972
 		public const int LookWeaponBtn = 14;
 
-		// Token: 0x04028330 RID: 164656
+		// Token: 0x0402364D RID: 144973
 		public const int TitleText = 15;
 
-		// Token: 0x04028331 RID: 164657
+		// Token: 0x0402364E RID: 144974
 		public const int RewardCountText = 16;
 
-		// Token: 0x04028332 RID: 164658
+		// Token: 0x0402364F RID: 144975
 		public const int TitleLogo = 17;
 
-		// Token: 0x04028333 RID: 164659
+		// Token: 0x04023650 RID: 144976
 		public const int TitleLogo2 = 18;
 
-		// Token: 0x04028334 RID: 164660
+		// Token: 0x04023651 RID: 144977
 		public const int TitleSubText = 19;
 	}
 }

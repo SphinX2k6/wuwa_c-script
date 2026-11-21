@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B6C RID: 19308
+	// Token: 0x02005053 RID: 20563
 	public class ICheckVehicleSpeedConditionT
 	{
-		// Token: 0x17008C1E RID: 35870
-		// (get) Token: 0x0601E6C9 RID: 124617 RVA: 0x00442E62 File Offset: 0x00441062
-		// (set) Token: 0x0601E6CA RID: 124618 RVA: 0x00442E6A File Offset: 0x0044106A
+		// Token: 0x1700932E RID: 37678
+		// (get) Token: 0x06020257 RID: 131671 RVA: 0x004756AE File Offset: 0x004738AE
+		// (set) Token: 0x06020258 RID: 131672 RVA: 0x004756B6 File Offset: 0x004738B6
 		public EVehicleConditionType Type { get; set; }
 
-		// Token: 0x17008C1F RID: 35871
-		// (get) Token: 0x0601E6CB RID: 124619 RVA: 0x00442E73 File Offset: 0x00441073
-		// (set) Token: 0x0601E6CC RID: 124620 RVA: 0x00442E7B File Offset: 0x0044107B
+		// Token: 0x1700932F RID: 37679
+		// (get) Token: 0x06020259 RID: 131673 RVA: 0x004756BF File Offset: 0x004738BF
+		// (set) Token: 0x0602025A RID: 131674 RVA: 0x004756C7 File Offset: 0x004738C7
 		public ECompare CompareType { get; set; }
 
-		// Token: 0x17008C20 RID: 35872
-		// (get) Token: 0x0601E6CD RID: 124621 RVA: 0x00442E84 File Offset: 0x00441084
-		// (set) Token: 0x0601E6CE RID: 124622 RVA: 0x00442E8C File Offset: 0x0044108C
+		// Token: 0x17009330 RID: 37680
+		// (get) Token: 0x0602025B RID: 131675 RVA: 0x004756D0 File Offset: 0x004738D0
+		// (set) Token: 0x0602025C RID: 131676 RVA: 0x004756D8 File Offset: 0x004738D8
 		public float Speed { get; set; }
 
-		// Token: 0x0601E6CF RID: 124623 RVA: 0x00442E95 File Offset: 0x00441095
+		// Token: 0x0602025D RID: 131677 RVA: 0x004756E1 File Offset: 0x004738E1
 		public ICheckVehicleSpeedConditionT()
 		{
 			this.Type = EVehicleConditionType.UsingVehicle;

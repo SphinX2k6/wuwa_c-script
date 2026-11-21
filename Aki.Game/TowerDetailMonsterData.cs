@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002BD8 RID: 11224
+// Token: 0x02002153 RID: 8531
 public class TowerDetailMonsterData
 {
-	// Token: 0x0400AE75 RID: 44661
+	// Token: 0x0400B27A RID: 45690
 	[Nullable(1)]
 	public string Title = string.Empty;
 
-	// Token: 0x0400AE76 RID: 44662
+	// Token: 0x0400B27B RID: 45691
 	[Nullable(new byte[]
 	{
 		2,
@@ -17,6 +17,6 @@ public class TowerDetailMonsterData
 	})]
 	public List<TowerDetailMonster> MonsterInfos;
 
-	// Token: 0x0400AE77 RID: 44663
+	// Token: 0x0400B27C RID: 45692
 	public int Priority;
 }

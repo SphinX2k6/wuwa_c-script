@@ -12,13 +12,13 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using UnrealEngine;
 
-// Token: 0x0200230A RID: 8970
+// Token: 0x020017EE RID: 6126
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class PanoramicController : ControllerBase
 {
-	// Token: 0x06011B6D RID: 72557 RVA: 0x0045B1B4 File Offset: 0x004593B4
+	// Token: 0x0600F008 RID: 61448 RVA: 0x00467FC4 File Offset: 0x004661C4
 	public override bool Init()
 	{
 		bool result = base.Init();
@@ -31,7 +31,7 @@ public class PanoramicController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x06011B6E RID: 72558 RVA: 0x0045B240 File Offset: 0x00459440
+	// Token: 0x0600F009 RID: 61449 RVA: 0x00468050 File Offset: 0x00466250
 	public override bool Clear()
 	{
 		if (this.InputLayerHelper != null)
@@ -45,7 +45,7 @@ public class PanoramicController : ControllerBase
 		return base.Clear();
 	}
 
-	// Token: 0x06011B6F RID: 72559 RVA: 0x0045B2C4 File Offset: 0x004594C4
+	// Token: 0x0600F00A RID: 61450 RVA: 0x004680D4 File Offset: 0x004662D4
 	protected override void OnTick(float delta)
 	{
 		if (this.PanoramicModel == null || this.PanoramicModel.GetPointNum() <= 0)
@@ -81,7 +81,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B70 RID: 72560 RVA: 0x0045B398 File Offset: 0x00459598
+	// Token: 0x0600F00B RID: 61451 RVA: 0x004681A8 File Offset: 0x004663A8
 	private void CreateInputLayer()
 	{
 		InputLayerHelper inputLayerHelper = this.InputLayerHelper;
@@ -92,7 +92,7 @@ public class PanoramicController : ControllerBase
 		inputLayerHelper.AddInputLayer();
 	}
 
-	// Token: 0x06011B71 RID: 72561 RVA: 0x0045B3AA File Offset: 0x004595AA
+	// Token: 0x0600F00C RID: 61452 RVA: 0x004681BA File Offset: 0x004663BA
 	public void RemoveInputLayer()
 	{
 		InputLayerHelper inputLayerHelper = this.InputLayerHelper;
@@ -103,7 +103,7 @@ public class PanoramicController : ControllerBase
 		inputLayerHelper.RemoveInputLayer();
 	}
 
-	// Token: 0x06011B72 RID: 72562 RVA: 0x0045B3BC File Offset: 0x004595BC
+	// Token: 0x0600F00D RID: 61453 RVA: 0x004681CC File Offset: 0x004663CC
 	private void CheckToGetNowPanoramic()
 	{
 		if (this.PanoramicModel == null)
@@ -134,7 +134,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B73 RID: 72563 RVA: 0x0045B48C File Offset: 0x0045968C
+	// Token: 0x0600F00E RID: 61454 RVA: 0x0046829C File Offset: 0x0046649C
 	private void UpdatePanoramicPointComponentVisibleAndTickable(PanoramicPointComponent spotComp)
 	{
 		PawnInteractNewComponent component = spotComp.Entity.GetComponent<PawnInteractNewComponent>();
@@ -170,7 +170,7 @@ public class PanoramicController : ControllerBase
 		spotComp.ChangeSpotHidden(false);
 	}
 
-	// Token: 0x06011B74 RID: 72564 RVA: 0x0045B518 File Offset: 0x00459718
+	// Token: 0x0600F00F RID: 61455 RVA: 0x00468328 File Offset: 0x00466528
 	public void InteractPawn()
 	{
 		if (this.CheckDisablePanoramic())
@@ -225,7 +225,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B75 RID: 72565 RVA: 0x0045B654 File Offset: 0x00459854
+	// Token: 0x0600F010 RID: 61456 RVA: 0x00468464 File Offset: 0x00466664
 	private bool IsInFight()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -259,7 +259,7 @@ public class PanoramicController : ControllerBase
 		return flag2.GetValueOrDefault(false);
 	}
 
-	// Token: 0x06011B76 RID: 72566 RVA: 0x0045B6D4 File Offset: 0x004598D4
+	// Token: 0x0600F011 RID: 61457 RVA: 0x004684E4 File Offset: 0x004666E4
 	private bool IsInAir()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -310,13 +310,13 @@ public class PanoramicController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06011B77 RID: 72567 RVA: 0x0045B79B File Offset: 0x0045999B
+	// Token: 0x0600F012 RID: 61458 RVA: 0x004685AB File Offset: 0x004667AB
 	public bool CheckDisablePanoramic()
 	{
 		return this.IsInFight() || this.IsInAir();
 	}
 
-	// Token: 0x06011B78 RID: 72568 RVA: 0x0045B7B4 File Offset: 0x004599B4
+	// Token: 0x0600F013 RID: 61459 RVA: 0x004685C4 File Offset: 0x004667C4
 	public bool CheckCanEnterCameraGuide()
 	{
 		FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -329,7 +329,7 @@ public class PanoramicController : ControllerBase
 		return cameraGuideController != null && cameraGuideController.IsCameraGuideAvailable();
 	}
 
-	// Token: 0x06011B79 RID: 72569 RVA: 0x0045B7F4 File Offset: 0x004599F4
+	// Token: 0x0600F014 RID: 61460 RVA: 0x00468604 File Offset: 0x00466804
 	private void ToggleVehicleTag(bool value)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -404,7 +404,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B7A RID: 72570 RVA: 0x0045B92C File Offset: 0x00459B2C
+	// Token: 0x0600F015 RID: 61461 RVA: 0x0046873C File Offset: 0x0046693C
 	public void EnterPanoramic(bool value, EPlayerMoveTag? playerMoveTag)
 	{
 		if (this.PanoramicModel != null)
@@ -450,7 +450,7 @@ public class PanoramicController : ControllerBase
 		PanoramicUiDeferController.Instance.StopDeferAndReplay();
 	}
 
-	// Token: 0x06011B7B RID: 72571 RVA: 0x0045BA38 File Offset: 0x00459C38
+	// Token: 0x0600F016 RID: 61462 RVA: 0x00468848 File Offset: 0x00466A48
 	[NullableContext(2)]
 	private Entity GetMotorEntity()
 	{
@@ -501,7 +501,7 @@ public class PanoramicController : ControllerBase
 		return component3.VehicleEntity;
 	}
 
-	// Token: 0x06011B7C RID: 72572 RVA: 0x0045BAE4 File Offset: 0x00459CE4
+	// Token: 0x0600F017 RID: 61463 RVA: 0x004688F4 File Offset: 0x00466AF4
 	private void OnPanoramicActive()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -511,7 +511,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B7D RID: 72573 RVA: 0x0045BB34 File Offset: 0x00459D34
+	// Token: 0x0600F018 RID: 61464 RVA: 0x00468944 File Offset: 0x00466B44
 	private void OnPanoramicDisable()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -521,14 +521,14 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B7E RID: 72574 RVA: 0x0045BB81 File Offset: 0x00459D81
+	// Token: 0x0600F019 RID: 61465 RVA: 0x00468991 File Offset: 0x00466B91
 	private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.ToggleVehicleTag(false);
 	}
 
-	// Token: 0x170016AB RID: 5803
-	// (get) Token: 0x06011B7F RID: 72575 RVA: 0x0045BB8A File Offset: 0x00459D8A
+	// Token: 0x170016E2 RID: 5858
+	// (get) Token: 0x0600F01A RID: 61466 RVA: 0x0046899A File Offset: 0x00466B9A
 	public static PanoramicController Instance
 	{
 		get
@@ -537,7 +537,7 @@ public class PanoramicController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011B80 RID: 72576 RVA: 0x0045BB91 File Offset: 0x00459D91
+	// Token: 0x0600F01B RID: 61467 RVA: 0x004689A1 File Offset: 0x00466BA1
 	public static PanoramicController GetOrCreateInstance()
 	{
 		if (PanoramicController._Instance == null)
@@ -547,7 +547,7 @@ public class PanoramicController : ControllerBase
 		return PanoramicController._Instance;
 	}
 
-	// Token: 0x06011B81 RID: 72577 RVA: 0x0045BBA5 File Offset: 0x00459DA5
+	// Token: 0x0600F01C RID: 61468 RVA: 0x004689B5 File Offset: 0x00466BB5
 	public static bool CreateInstance()
 	{
 		if (PanoramicController._Instance != null)
@@ -558,35 +558,35 @@ public class PanoramicController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06011B82 RID: 72578 RVA: 0x0045BBBB File Offset: 0x00459DBB
+	// Token: 0x0600F01D RID: 61469 RVA: 0x004689CB File Offset: 0x00466BCB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011B83 RID: 72579 RVA: 0x0045BBBD File Offset: 0x00459DBD
+	// Token: 0x0600F01E RID: 61470 RVA: 0x004689CD File Offset: 0x00466BCD
 	public static void ResetStaticDefaultValue()
 	{
 		PanoramicController._Instance = null;
 	}
 
-	// Token: 0x06011B84 RID: 72580 RVA: 0x0045BBC5 File Offset: 0x00459DC5
+	// Token: 0x0600F01F RID: 61471 RVA: 0x004689D5 File Offset: 0x00466BD5
 	static PanoramicController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PanoramicController.CreateStaticDefaultValue), new Action(PanoramicController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008664 RID: 34404
+	// Token: 0x040087A4 RID: 34724
 	[Nullable(2)]
 	private PanoramicModel PanoramicModel;
 
-	// Token: 0x04008665 RID: 34405
+	// Token: 0x040087A5 RID: 34725
 	[Nullable(2)]
 	private InputLayerHelper InputLayerHelper;
 
-	// Token: 0x04008666 RID: 34406
+	// Token: 0x040087A6 RID: 34726
 	private const int PANORMIC_TAG = -826780033;
 
-	// Token: 0x04008667 RID: 34407
+	// Token: 0x040087A7 RID: 34727
 	[Nullable(2)]
 	private static PanoramicController _Instance;
 }

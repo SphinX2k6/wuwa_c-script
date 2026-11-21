@@ -3,43 +3,43 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x0200519B RID: 20891
+	// Token: 0x0200416B RID: 16747
 	[NullableContext(1)]
 	public interface ICardTabItemData
 	{
-		// Token: 0x1700818F RID: 33167
-		// (get) Token: 0x0603573C RID: 218940
-		// (set) Token: 0x0603573D RID: 218941
+		// Token: 0x1700554F RID: 21839
+		// (get) Token: 0x0602A637 RID: 173623
+		// (set) Token: 0x0602A638 RID: 173624
 		ECardTabType TabType { get; set; }
 
-		// Token: 0x17008190 RID: 33168
-		// (get) Token: 0x0603573E RID: 218942
-		// (set) Token: 0x0603573F RID: 218943
+		// Token: 0x17005550 RID: 21840
+		// (get) Token: 0x0602A639 RID: 173625
+		// (set) Token: 0x0602A63A RID: 173626
 		ECardElement? ElementConfigId { get; set; }
 
-		// Token: 0x17008191 RID: 33169
-		// (get) Token: 0x06035740 RID: 218944
-		// (set) Token: 0x06035741 RID: 218945
+		// Token: 0x17005551 RID: 21841
+		// (get) Token: 0x0602A63B RID: 173627
+		// (set) Token: 0x0602A63C RID: 173628
 		string TabTexturePath { get; set; }
 
-		// Token: 0x17008192 RID: 33170
-		// (get) Token: 0x06035742 RID: 218946
-		// (set) Token: 0x06035743 RID: 218947
+		// Token: 0x17005552 RID: 21842
+		// (get) Token: 0x0602A63D RID: 173629
+		// (set) Token: 0x0602A63E RID: 173630
 		string TabElementColor { get; set; }
 
-		// Token: 0x17008193 RID: 33171
-		// (get) Token: 0x06035744 RID: 218948
-		// (set) Token: 0x06035745 RID: 218949
+		// Token: 0x17005553 RID: 21843
+		// (get) Token: 0x0602A63F RID: 173631
+		// (set) Token: 0x0602A640 RID: 173632
 		bool ShowRedDot { get; set; }
 
-		// Token: 0x17008194 RID: 33172
-		// (get) Token: 0x06035746 RID: 218950
-		// (set) Token: 0x06035747 RID: 218951
+		// Token: 0x17005554 RID: 21844
+		// (get) Token: 0x0602A641 RID: 173633
+		// (set) Token: 0x0602A642 RID: 173634
 		bool IsDisable { get; set; }
 
-		// Token: 0x17008195 RID: 33173
-		// (get) Token: 0x06035748 RID: 218952
-		// (set) Token: 0x06035749 RID: 218953
+		// Token: 0x17005555 RID: 21845
+		// (get) Token: 0x0602A643 RID: 173635
+		// (set) Token: 0x0602A644 RID: 173636
 		bool IsArrivedMax { get; set; }
 	}
 }

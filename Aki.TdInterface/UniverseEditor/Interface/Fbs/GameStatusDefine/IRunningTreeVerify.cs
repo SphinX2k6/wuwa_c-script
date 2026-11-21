@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x0200470E RID: 18190
+	// Token: 0x02004B76 RID: 19318
 	public static class IRunningTreeVerify
 	{
-		// Token: 0x0601BE82 RID: 114306 RVA: 0x003F4838 File Offset: 0x003F2A38
+		// Token: 0x0601D657 RID: 120407 RVA: 0x00420AD4 File Offset: 0x0041ECD4
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return false;
 		}
 
-		// Token: 0x020079D8 RID: 31192
+		// Token: 0x02008221 RID: 33313
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401337B RID: 78715
+			// Token: 0x040143E2 RID: 82914
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

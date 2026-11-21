@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -21,13 +20,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C46 RID: 23622
+	// Token: 0x02004C26 RID: 19494
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleLinkController : ControllerBase
 	{
-		// Token: 0x0603BAD9 RID: 244441 RVA: 0x00E3E6BC File Offset: 0x00E3C8BC
+		// Token: 0x06030A24 RID: 199204 RVA: 0x00D8EA40 File Offset: 0x00D8CC40
 		protected override bool OnInit()
 		{
 			Net instance = Net.Instance;
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BADA RID: 244442 RVA: 0x00E3E720 File Offset: 0x00E3C920
+		// Token: 0x06030A25 RID: 199205 RVA: 0x00D8EAA4 File Offset: 0x00D8CCA4
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.LinkingStateNotify);
@@ -58,7 +57,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BADB RID: 244443 RVA: 0x00E3E74C File Offset: 0x00E3C94C
+		// Token: 0x06030A26 RID: 199206 RVA: 0x00D8EAD0 File Offset: 0x00D8CCD0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.Module.Battle
 			return null;
 		}
 
-		// Token: 0x0603BADC RID: 244444 RVA: 0x00E3E7EC File Offset: 0x00E3C9EC
+		// Token: 0x06030A27 RID: 199207 RVA: 0x00D8EB70 File Offset: 0x00D8CD70
 		protected override bool OnLeaveLevel()
 		{
 			this.UnbindEvents();
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BADD RID: 244445 RVA: 0x00E3E90C File Offset: 0x00E3CB0C
+		// Token: 0x06030A28 RID: 199208 RVA: 0x00D8EC90 File Offset: 0x00D8CE90
 		private void BindEvents()
 		{
 			if (this.HasBindEvents)
@@ -171,7 +170,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BADE RID: 244446 RVA: 0x00E3EA88 File Offset: 0x00E3CC88
+		// Token: 0x06030A29 RID: 199209 RVA: 0x00D8EE0C File Offset: 0x00D8D00C
 		private void UnbindEvents()
 		{
 			if (!this.HasBindEvents)
@@ -206,7 +205,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LinkBuffRoleIdMap = null;
 		}
 
-		// Token: 0x0603BADF RID: 244447 RVA: 0x00E3EC10 File Offset: 0x00E3CE10
+		// Token: 0x06030A2A RID: 199210 RVA: 0x00D8EF94 File Offset: 0x00D8D194
 		private void InitSequenceActor()
 		{
 			if (this.LevelSeqActor == null)
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAE0 RID: 244448 RVA: 0x00E3EC40 File Offset: 0x00E3CE40
+		// Token: 0x06030A2B RID: 199211 RVA: 0x00D8EFC4 File Offset: 0x00D8D1C4
 		private void OnCharUseSkill(int entityId, int skillId, bool isAutonomousProxy)
 		{
 			if (this.NeedEntityCache && !this.EntityCache.ContainsKey(entityId))
@@ -237,7 +236,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAE1 RID: 244449 RVA: 0x00E3ECDC File Offset: 0x00E3CEDC
+		// Token: 0x06030A2C RID: 199212 RVA: 0x00D8F060 File Offset: 0x00D8D260
 		private void OnUpdateSceneTeam()
 		{
 			if (BattleLinkModel.Instance.CheckInNewBattleLink())
@@ -273,20 +272,20 @@ namespace CSharpScript.Game.Module.Battle
 			this.NeedEntityCache = true;
 		}
 
-		// Token: 0x0603BAE2 RID: 244450 RVA: 0x00E3EDE0 File Offset: 0x00E3CFE0
+		// Token: 0x06030A2D RID: 199213 RVA: 0x00D8F164 File Offset: 0x00D8D364
 		private void OnCharDead(int entityId)
 		{
 			this.OnCharDeadOrAliveChanged(entityId, true);
 		}
 
-		// Token: 0x0603BAE3 RID: 244451 RVA: 0x00E3EDEA File Offset: 0x00E3CFEA
+		// Token: 0x06030A2E RID: 199214 RVA: 0x00D8F16E File Offset: 0x00D8D36E
 		[NullableContext(1)]
 		private void OnCharRevive(Entity entity)
 		{
 			this.OnCharDeadOrAliveChanged(entity.Id, false);
 		}
 
-		// Token: 0x0603BAE4 RID: 244452 RVA: 0x00E3EDF9 File Offset: 0x00E3CFF9
+		// Token: 0x06030A2F RID: 199215 RVA: 0x00D8F17D File Offset: 0x00D8D37D
 		private void OnCharDeadOrAliveChanged(int entityId, bool isDead)
 		{
 			if (!this.TeamEntityIdList.Contains(entityId))
@@ -296,7 +295,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Emit<ENewLinkStatus>(EEventName.OnNewLinkStatusChanged, BattleLinkModel.Instance.GetNewLinkStatus());
 		}
 
-		// Token: 0x0603BAE5 RID: 244453 RVA: 0x00E3EE24 File Offset: 0x00E3D024
+		// Token: 0x06030A30 RID: 199216 RVA: 0x00D8F1A8 File Offset: 0x00D8D3A8
 		private void OnBuffAdd(long buffId, int handle)
 		{
 			Dictionary<long, int> linkBuffRoleIdMap = this.LinkBuffRoleIdMap;
@@ -339,7 +338,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAE6 RID: 244454 RVA: 0x00E3EF28 File Offset: 0x00E3D128
+		// Token: 0x06030A31 RID: 199217 RVA: 0x00D8F2AC File Offset: 0x00D8D4AC
 		private void AddEntityCache(int entityId)
 		{
 			if (this.EntityCache.ContainsKey(entityId))
@@ -367,7 +366,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAE7 RID: 244455 RVA: 0x00E3F00C File Offset: 0x00E3D20C
+		// Token: 0x06030A32 RID: 199218 RVA: 0x00D8F390 File Offset: 0x00D8D590
 		public void UseLinkSkill(Entity entity)
 		{
 			if (entity == null)
@@ -396,7 +395,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAE8 RID: 244456 RVA: 0x00E3F09C File Offset: 0x00E3D29C
+		// Token: 0x06030A33 RID: 199219 RVA: 0x00D8F420 File Offset: 0x00D8D620
 		public void StartLink(double startTime = 0.0)
 		{
 			double num = (startTime == 0.0) ? TimeUtil.Instance.GetServerTimeStamp() : startTime;
@@ -408,20 +407,20 @@ namespace CSharpScript.Game.Module.Battle
 			UiManager.Instance.OpenView(EUiViewName.BattleLinkView, num, null);
 		}
 
-		// Token: 0x0603BAE9 RID: 244457 RVA: 0x00E3F0FC File Offset: 0x00E3D2FC
+		// Token: 0x06030A34 RID: 199220 RVA: 0x00D8F480 File Offset: 0x00D8D680
 		public void StopLink()
 		{
 			EventSystem.Instance.Emit(EEventName.OnBattleLinkStop);
 		}
 
-		// Token: 0x0603BAEA RID: 244458 RVA: 0x00E3F10E File Offset: 0x00E3D30E
+		// Token: 0x06030A35 RID: 199221 RVA: 0x00D8F492 File Offset: 0x00D8D692
 		public void StartLinkExplosion()
 		{
 			this.StopLink();
 			this.TryPlaySplitScreen();
 		}
 
-		// Token: 0x0603BAEB RID: 244459 RVA: 0x00E3F11C File Offset: 0x00E3D31C
+		// Token: 0x06030A36 RID: 199222 RVA: 0x00D8F4A0 File Offset: 0x00D8D6A0
 		public void TryPlaySplitScreen()
 		{
 			if (this.IsPlayingSplitScreen)
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LinkExplosionStart();
 		}
 
-		// Token: 0x0603BAEC RID: 244460 RVA: 0x00E3F1A4 File Offset: 0x00E3D3A4
+		// Token: 0x06030A37 RID: 199223 RVA: 0x00D8F528 File Offset: 0x00D8D728
 		private void PlaySplitScreenEffect()
 		{
 			WorldEntity entity = SceneTeamModel.Instance.GetCurrentEntity.Entity;
@@ -470,7 +469,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, interval, null, null, true, 1f);
 		}
 
-		// Token: 0x0603BAED RID: 244461 RVA: 0x00E3F220 File Offset: 0x00E3D420
+		// Token: 0x06030A38 RID: 199224 RVA: 0x00D8F5A4 File Offset: 0x00D8D7A4
 		private void OnTimerEnd()
 		{
 			WorldEntity entity = SceneTeamModel.Instance.GetCurrentEntity.Entity;
@@ -484,7 +483,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAEE RID: 244462 RVA: 0x00E3F258 File Offset: 0x00E3D458
+		// Token: 0x06030A39 RID: 199225 RVA: 0x00D8F5DC File Offset: 0x00D8D7DC
 		private void PlaySplitScreenSeq()
 		{
 			BattleLinkModel instance = BattleLinkModel.Instance;
@@ -530,7 +529,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LevelSeqActor.SequencePlayer.Play();
 		}
 
-		// Token: 0x0603BAEF RID: 244463 RVA: 0x00E3F468 File Offset: 0x00E3D668
+		// Token: 0x06030A3A RID: 199226 RVA: 0x00D8F7EC File Offset: 0x00D8D9EC
 		private void OnSequenceFinished()
 		{
 			this.IsPlayingSplitScreen = false;
@@ -565,7 +564,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.LinkExplosionEnd();
 		}
 
-		// Token: 0x0603BAF0 RID: 244464 RVA: 0x00E3F562 File Offset: 0x00E3D762
+		// Token: 0x06030A3B RID: 199227 RVA: 0x00D8F8E6 File Offset: 0x00D8DAE6
 		public void LinkExplosionStart()
 		{
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("BattleLinkController.LinkExplosionStart");
@@ -574,7 +573,7 @@ namespace CSharpScript.Game.Module.Battle
 			GameModeController.Instance.SetTimeDilation(0f, ETimeDilationType.Default);
 		}
 
-		// Token: 0x0603BAF1 RID: 244465 RVA: 0x00E3F5A0 File Offset: 0x00E3D7A0
+		// Token: 0x06030A3C RID: 199228 RVA: 0x00D8F924 File Offset: 0x00D8DB24
 		public void LinkExplosionEnd()
 		{
 			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("BattleLinkController.LinkExplosionStart");
@@ -635,7 +634,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAF2 RID: 244466 RVA: 0x00E3F788 File Offset: 0x00E3D988
+		// Token: 0x06030A3D RID: 199229 RVA: 0x00D8FB0C File Offset: 0x00D8DD0C
 		private void ClearLinkBurstBuffs()
 		{
 			if (this.CurrentLinkBurstBuffs == null || this.CurrentLinkBurstBuffs.Count == 0)
@@ -655,7 +654,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.CurrentLinkBurstBuffs.Clear();
 		}
 
-		// Token: 0x0603BAF3 RID: 244467 RVA: 0x00E3F844 File Offset: 0x00E3DA44
+		// Token: 0x06030A3E RID: 199230 RVA: 0x00D8FBC8 File Offset: 0x00D8DDC8
 		public void SetPlayerUltraSkillEnable(bool enable)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -682,7 +681,7 @@ namespace CSharpScript.Game.Module.Battle
 			baseTagComponent2.AddTag(new int?(GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止大招"]));
 		}
 
-		// Token: 0x0603BAF4 RID: 244468 RVA: 0x00E3F8B1 File Offset: 0x00E3DAB1
+		// Token: 0x06030A3F RID: 199231 RVA: 0x00D8FC35 File Offset: 0x00D8DE35
 		public void ShowLinkButton(bool isShow, bool isGm = false)
 		{
 			BattleView battleView = UiManager.Instance.GetViewByName(EUiViewName.BattleView) as BattleView;
@@ -698,53 +697,59 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BAF5 RID: 244469 RVA: 0x00E3F8F0 File Offset: 0x00E3DAF0
+		// Token: 0x06030A40 RID: 199232 RVA: 0x00D8FC74 File Offset: 0x00D8DE74
 		public void RefreshAliveRoleIdList()
 		{
 			List<int> list = SceneTeamModel.Instance.GetTeamRoleConfigIdList(false, true);
 			List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
-			List<int> deadRoleIdList = new List<int>();
+			List<int> list2 = new List<int>();
 			foreach (SceneTeamItem sceneTeamItem in teamItems)
 			{
 				int baseRoleId = RoleConfig.Instance.GetBaseRoleId(sceneTeamItem.GetConfigId);
 				if (baseRoleId != 0 && sceneTeamItem.IsDead())
 				{
-					deadRoleIdList.Add(baseRoleId);
+					list2.Add(baseRoleId);
 				}
 			}
-			list = (from roleId in list
-			where !deadRoleIdList.Contains(roleId)
-			select roleId).ToList<int>();
+			List<int> list3 = new List<int>();
+			foreach (int item in list)
+			{
+				if (!list2.Contains(item))
+				{
+					list3.Add(item);
+				}
+			}
+			list = list3;
 			BattleLinkModel.Instance.SetRoleIdList(list);
 			BattleLinkModel.Instance.ResetMainBp();
 		}
 
-		// Token: 0x0603BAF6 RID: 244470 RVA: 0x00E3F9B8 File Offset: 0x00E3DBB8
+		// Token: 0x06030A41 RID: 199233 RVA: 0x00D8FD68 File Offset: 0x00D8DF68
 		public bool GetIsInLinkExplosion()
 		{
 			return this.IsInLinkExplosion;
 		}
 
-		// Token: 0x0603BAF7 RID: 244471 RVA: 0x00E3F9C0 File Offset: 0x00E3DBC0
+		// Token: 0x06030A42 RID: 199234 RVA: 0x00D8FD70 File Offset: 0x00D8DF70
 		public void SetMessageId(long? msgId)
 		{
 			this.MessageId = msgId;
 		}
 
-		// Token: 0x0603BAF8 RID: 244472 RVA: 0x00E3F9C9 File Offset: 0x00E3DBC9
+		// Token: 0x06030A43 RID: 199235 RVA: 0x00D8FD79 File Offset: 0x00D8DF79
 		public long? GetMessageId()
 		{
 			return this.MessageId;
 		}
 
-		// Token: 0x0603BAF9 RID: 244473 RVA: 0x00E3F9D4 File Offset: 0x00E3DBD4
+		// Token: 0x06030A44 RID: 199236 RVA: 0x00D8FD84 File Offset: 0x00D8DF84
 		private static void HandleLinkingStateNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			LinkingStateNotify notify = (LinkingStateNotify)msg;
 			BattleLinkModel.Instance.HandleLinkingStateNotify(notify);
 		}
 
-		// Token: 0x0603BAFA RID: 244474 RVA: 0x00E3F9F4 File Offset: 0x00E3DBF4
+		// Token: 0x06030A45 RID: 199237 RVA: 0x00D8FDA4 File Offset: 0x00D8DFA4
 		private static void HandleLinkExitNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
 			LinkExitNotify notify = (LinkExitNotify)msg;
@@ -752,7 +757,7 @@ namespace CSharpScript.Game.Module.Battle
 			BattleLinkController.Instance.OnExitLinkBurst();
 		}
 
-		// Token: 0x0603BAFB RID: 244475 RVA: 0x00E3FA20 File Offset: 0x00E3DC20
+		// Token: 0x06030A46 RID: 199238 RVA: 0x00D8FDD0 File Offset: 0x00D8DFD0
 		[CombatListen(ENotifyMessageId.NewLinkNotify, false, false)]
 		public static void OnNewLinkStateNotify(Entity entity, [Nullable(1)] NewLinkNotify notify, CombatCommon combatCommon = null)
 		{
@@ -772,14 +777,14 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Emit<ELinkStatus>(EEventName.OnBattleLinkStatusChanged, ELinkStatus.None);
 		}
 
-		// Token: 0x0603BAFC RID: 244476 RVA: 0x00E3FAAB File Offset: 0x00E3DCAB
+		// Token: 0x06030A47 RID: 199239 RVA: 0x00D8FE5B File Offset: 0x00D8E05B
 		public void OnExitLinkBurst()
 		{
 			AudioSystem.Instance.SetState("game_rogue_link_state", "not_in_link", true);
 			this.ClearLinkBurstBuffs();
 		}
 
-		// Token: 0x0603BAFD RID: 244477 RVA: 0x00E3FAC8 File Offset: 0x00E3DCC8
+		// Token: 0x06030A48 RID: 199240 RVA: 0x00D8FE78 File Offset: 0x00D8E078
 		public void RequestNewLinkBurst()
 		{
 			if (this.MessageId == null)
@@ -806,7 +811,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.TryPlaySplitScreen();
 		}
 
-		// Token: 0x0603BAFE RID: 244478 RVA: 0x00E3FB68 File Offset: 0x00E3DD68
+		// Token: 0x06030A49 RID: 199241 RVA: 0x00D8FF18 File Offset: 0x00D8E118
 		public UniTask NewLinkBurstTest()
 		{
 			BattleLinkController.<NewLinkBurstTest>d__57 <NewLinkBurstTest>d__;
@@ -817,7 +822,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <NewLinkBurstTest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BAFF RID: 244479 RVA: 0x00E3FBAC File Offset: 0x00E3DDAC
+		// Token: 0x06030A4A RID: 199242 RVA: 0x00D8FF5C File Offset: 0x00D8E15C
 		[NullableContext(0)]
 		public UniTask<bool> PreloadRes(int id)
 		{
@@ -829,8 +834,8 @@ namespace CSharpScript.Game.Module.Battle
 			return <PreloadRes>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17008DB7 RID: 36279
-		// (get) Token: 0x0603BB00 RID: 244480 RVA: 0x00E3FBEF File Offset: 0x00E3DDEF
+		// Token: 0x17006189 RID: 24969
+		// (get) Token: 0x06030A4B RID: 199243 RVA: 0x00D8FF9F File Offset: 0x00D8E19F
 		[Nullable(1)]
 		public static BattleLinkController Instance
 		{
@@ -841,7 +846,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB01 RID: 244481 RVA: 0x00E3FBF6 File Offset: 0x00E3DDF6
+		// Token: 0x06030A4C RID: 199244 RVA: 0x00D8FFA6 File Offset: 0x00D8E1A6
 		[NullableContext(1)]
 		public static BattleLinkController GetOrCreateInstance()
 		{
@@ -852,7 +857,7 @@ namespace CSharpScript.Game.Module.Battle
 			return BattleLinkController._Instance;
 		}
 
-		// Token: 0x0603BB02 RID: 244482 RVA: 0x00E3FC0A File Offset: 0x00E3DE0A
+		// Token: 0x06030A4D RID: 199245 RVA: 0x00D8FFBA File Offset: 0x00D8E1BA
 		public static bool CreateInstance()
 		{
 			if (BattleLinkController._Instance != null)
@@ -863,96 +868,96 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BB03 RID: 244483 RVA: 0x00E3FC20 File Offset: 0x00E3DE20
+		// Token: 0x06030A4E RID: 199246 RVA: 0x00D8FFD0 File Offset: 0x00D8E1D0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BB04 RID: 244484 RVA: 0x00E3FC22 File Offset: 0x00E3DE22
+		// Token: 0x06030A4F RID: 199247 RVA: 0x00D8FFD2 File Offset: 0x00D8E1D2
 		public static void ResetStaticDefaultValue()
 		{
 			BattleLinkController._Instance = null;
 		}
 
-		// Token: 0x0603BB05 RID: 244485 RVA: 0x00E3FC2A File Offset: 0x00E3DE2A
+		// Token: 0x06030A50 RID: 199248 RVA: 0x00D8FFDA File Offset: 0x00D8E1DA
 		static BattleLinkController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleLinkController.CreateStaticDefaultValue), new Action(BattleLinkController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F110 RID: 127248
+		// Token: 0x04019BC1 RID: 105409
 		[StaticVariableRuleIgnore]
 		private static readonly FName SeqCameraTag = new FName("SequenceCamera");
 
-		// Token: 0x0401F111 RID: 127249
+		// Token: 0x04019BC2 RID: 105410
 		[StaticVariableRuleIgnore]
 		private static readonly FName CharacterTag = new FName("Character");
 
-		// Token: 0x0401F112 RID: 127250
+		// Token: 0x04019BC3 RID: 105411
 		private bool HasBindEvents;
 
-		// Token: 0x0401F113 RID: 127251
+		// Token: 0x04019BC4 RID: 105412
 		private int? VisibleId;
 
-		// Token: 0x0401F114 RID: 127252
+		// Token: 0x04019BC5 RID: 105413
 		private long? MessageId;
 
-		// Token: 0x0401F115 RID: 127253
+		// Token: 0x04019BC6 RID: 105414
 		private bool IsPlayingSplitScreen;
 
-		// Token: 0x0401F116 RID: 127254
+		// Token: 0x04019BC7 RID: 105415
 		private int ScreenEffectCueHandle;
 
-		// Token: 0x0401F117 RID: 127255
+		// Token: 0x04019BC8 RID: 105416
 		private ALevelSequenceActor LevelSeqActor;
 
-		// Token: 0x0401F118 RID: 127256
+		// Token: 0x04019BC9 RID: 105417
 		[Nullable(1)]
 		private readonly TArray<AActor> BindingActors = new TArray<AActor>();
 
-		// Token: 0x0401F119 RID: 127257
+		// Token: 0x04019BCA RID: 105418
 		private FRotator? RecoverRotation;
 
-		// Token: 0x0401F11A RID: 127258
+		// Token: 0x04019BCB RID: 105419
 		private TimerHandle Timer;
 
-		// Token: 0x0401F11B RID: 127259
+		// Token: 0x04019BCC RID: 105420
 		[Nullable(1)]
 		private readonly Dictionary<int, EntityHandle> EntityCache = new Dictionary<int, EntityHandle>();
 
-		// Token: 0x0401F11C RID: 127260
+		// Token: 0x04019BCD RID: 105421
 		private bool NeedEntityCache = true;
 
-		// Token: 0x0401F11D RID: 127261
+		// Token: 0x04019BCE RID: 105422
 		private bool IsInLinkExplosion;
 
-		// Token: 0x0401F11E RID: 127262
+		// Token: 0x04019BCF RID: 105423
 		[Nullable(1)]
 		private readonly List<int> TeamEntityIdList = new List<int>();
 
-		// Token: 0x0401F11F RID: 127263
+		// Token: 0x04019BD0 RID: 105424
 		private List<long> CurrentLinkBurstBuffs;
 
-		// Token: 0x0401F120 RID: 127264
+		// Token: 0x04019BD1 RID: 105425
 		private WorldEntity AbilityEventEntity;
 
-		// Token: 0x0401F121 RID: 127265
+		// Token: 0x04019BD2 RID: 105426
 		private Dictionary<long, int> LinkBuffRoleIdMap;
 
-		// Token: 0x0401F122 RID: 127266
+		// Token: 0x04019BD3 RID: 105427
 		private List<int> RoleIdQueue;
 
-		// Token: 0x0401F123 RID: 127267
+		// Token: 0x04019BD4 RID: 105428
 		private bool IsLinkTesting;
 
-		// Token: 0x0401F124 RID: 127268
+		// Token: 0x04019BD5 RID: 105429
 		private static BattleLinkController _Instance;
 
-		// Token: 0x0200BE44 RID: 48708
+		// Token: 0x0200A84C RID: 43084
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403960D RID: 235021
+			// Token: 0x04033FD0 RID: 212944
 			[Nullable(new byte[]
 			{
 				0,
@@ -961,7 +966,7 @@ namespace CSharpScript.Game.Module.Battle
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__HandleLinkingStateNotify;
 
-			// Token: 0x0403960E RID: 235022
+			// Token: 0x04033FD1 RID: 212945
 			[Nullable(new byte[]
 			{
 				0,

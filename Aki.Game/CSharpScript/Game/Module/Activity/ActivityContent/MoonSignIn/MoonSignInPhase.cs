@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006468 RID: 25704
+	// Token: 0x020053E6 RID: 21478
 	internal class MoonSignInPhase : UiPanelBase
 	{
-		// Token: 0x06040986 RID: 264582 RVA: 0x00FA2D24 File Offset: 0x00FA0F24
+		// Token: 0x06035647 RID: 218695 RVA: 0x00EE9CA0 File Offset: 0x00EE7EA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040987 RID: 264583 RVA: 0x00FA2DEB File Offset: 0x00FA0FEB
+		// Token: 0x06035648 RID: 218696 RVA: 0x00EE9D67 File Offset: 0x00EE7F67
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnClickUndeterminedToggle));
 		}
 
-		// Token: 0x06040988 RID: 264584 RVA: 0x00FA2E0C File Offset: 0x00FA100C
+		// Token: 0x06035649 RID: 218697 RVA: 0x00EE9D88 File Offset: 0x00EE7F88
 		public void RefreshItem(int phaseId)
 		{
 			PhaseOfMoon? phaseOfMoonById = MoonSignInConfig.Instance.GetPhaseOfMoonById(phaseId);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.GetExtendToggle(0).SetToggleState(flag ? EToggleState.ETT_UnDetermined : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06040989 RID: 264585 RVA: 0x00FA2EA4 File Offset: 0x00FA10A4
+		// Token: 0x0603564A RID: 218698 RVA: 0x00EE9E20 File Offset: 0x00EE8020
 		public void RefreshItemLockState()
 		{
 			if (this.PhaseId == 0)
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.GetExtendToggle(0).SetToggleState(flag ? EToggleState.ETT_UnDetermined : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0604098A RID: 264586 RVA: 0x00FA2EED File Offset: 0x00FA10ED
+		// Token: 0x0603564B RID: 218699 RVA: 0x00EE9E69 File Offset: 0x00EE8069
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			this.OnClickUndeterminedToggle();
 		}
 
-		// Token: 0x0604098B RID: 264587 RVA: 0x00FA2EF8 File Offset: 0x00FA10F8
+		// Token: 0x0603564C RID: 218700 RVA: 0x00EE9E74 File Offset: 0x00EE8074
 		private void OnClickUndeterminedToggle()
 		{
 			MoonSignInDetailViewOpenData param = new MoonSignInDetailViewOpenData
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			UiManager.Instance.OpenView(EUiViewName.MoonSignInDetailView, param, null);
 		}
 
-		// Token: 0x04021957 RID: 137559
+		// Token: 0x0401C286 RID: 115334
 		private int PhaseId;
 
-		// Token: 0x0200C694 RID: 50836
+		// Token: 0x0200B07A RID: 45178
 		private class EMoonSignInPhaseDefine
 		{
-			// Token: 0x0403BF38 RID: 245560
+			// Token: 0x04036893 RID: 223379
 			public const int Toggle = 0;
 
-			// Token: 0x0403BF39 RID: 245561
+			// Token: 0x04036894 RID: 223380
 			public const int Texture = 1;
 
-			// Token: 0x0403BF3A RID: 245562
+			// Token: 0x04036895 RID: 223381
 			public const int DisableTexture = 2;
 		}
 	}

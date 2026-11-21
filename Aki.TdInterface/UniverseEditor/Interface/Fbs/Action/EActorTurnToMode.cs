@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F0B RID: 24331
+	// Token: 0x0200654E RID: 25934
 	public enum EActorTurnToMode : byte
 	{
-		// Token: 0x0400FBBB RID: 64443
+		// Token: 0x0401092E RID: 67886
 		Talker,
-		// Token: 0x0400FBBC RID: 64444
+		// Token: 0x0401092F RID: 67887
 		Empty,
-		// Token: 0x0400FBBD RID: 64445
+		// Token: 0x04010930 RID: 67888
 		Entity,
-		// Token: 0x0400FBBE RID: 64446
+		// Token: 0x04010931 RID: 67889
 		Position,
-		// Token: 0x0400FBBF RID: 64447
+		// Token: 0x04010932 RID: 67890
 		Player
 	}
 }

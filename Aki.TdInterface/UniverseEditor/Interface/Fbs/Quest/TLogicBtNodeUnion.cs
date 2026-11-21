@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042E2 RID: 17122
+	// Token: 0x02004741 RID: 18241
 	public class TLogicBtNodeUnion
 	{
-		// Token: 0x1700794E RID: 31054
-		// (get) Token: 0x06019657 RID: 104023 RVA: 0x003A482E File Offset: 0x003A2A2E
-		// (set) Token: 0x06019658 RID: 104024 RVA: 0x003A4836 File Offset: 0x003A2A36
+		// Token: 0x17007F81 RID: 32641
+		// (get) Token: 0x0601ADD9 RID: 110041 RVA: 0x003D015E File Offset: 0x003CE35E
+		// (set) Token: 0x0601ADDA RID: 110042 RVA: 0x003D0166 File Offset: 0x003CE366
 		public TLogicBtNode Type { get; set; }
 
-		// Token: 0x1700794F RID: 31055
-		// (get) Token: 0x06019659 RID: 104025 RVA: 0x003A483F File Offset: 0x003A2A3F
-		// (set) Token: 0x0601965A RID: 104026 RVA: 0x003A4847 File Offset: 0x003A2A47
+		// Token: 0x17007F82 RID: 32642
+		// (get) Token: 0x0601ADDB RID: 110043 RVA: 0x003D016F File Offset: 0x003CE36F
+		// (set) Token: 0x0601ADDC RID: 110044 RVA: 0x003D0177 File Offset: 0x003CE377
 		public object Value { get; set; }
 
-		// Token: 0x0601965B RID: 104027 RVA: 0x003A4850 File Offset: 0x003A2A50
+		// Token: 0x0601ADDD RID: 110045 RVA: 0x003D0180 File Offset: 0x003CE380
 		public TLogicBtNodeUnion()
 		{
 			this.Type = TLogicBtNode.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601965C RID: 104028 RVA: 0x003A4866 File Offset: 0x003A2A66
+		// Token: 0x0601ADDE RID: 110046 RVA: 0x003D0196 File Offset: 0x003CE396
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601965D RID: 104029 RVA: 0x003A4878 File Offset: 0x003A2A78
+		// Token: 0x0601ADDF RID: 110047 RVA: 0x003D01A8 File Offset: 0x003CE3A8
 		public IConditionSelectorBtNodeT AsIConditionSelectorBtNode()
 		{
 			return this.As<IConditionSelectorBtNodeT>();
 		}
 
-		// Token: 0x0601965E RID: 104030 RVA: 0x003A4880 File Offset: 0x003A2A80
+		// Token: 0x0601ADE0 RID: 110048 RVA: 0x003D01B0 File Offset: 0x003CE3B0
 		public static TLogicBtNodeUnion FromIConditionSelectorBtNode(IConditionSelectorBtNodeT _iconditionselectorbtnode)
 		{
 			return new TLogicBtNodeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601965F RID: 104031 RVA: 0x003A4895 File Offset: 0x003A2A95
+		// Token: 0x0601ADE1 RID: 110049 RVA: 0x003D01C5 File Offset: 0x003CE3C5
 		public IParallelSelectBtNodeT AsIParallelSelectBtNode()
 		{
 			return this.As<IParallelSelectBtNodeT>();
 		}
 
-		// Token: 0x06019660 RID: 104032 RVA: 0x003A489D File Offset: 0x003A2A9D
+		// Token: 0x0601ADE2 RID: 110050 RVA: 0x003D01CD File Offset: 0x003CE3CD
 		public static TLogicBtNodeUnion FromIParallelSelectBtNode(IParallelSelectBtNodeT _iparallelselectbtnode)
 		{
 			return new TLogicBtNodeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019661 RID: 104033 RVA: 0x003A48B2 File Offset: 0x003A2AB2
+		// Token: 0x0601ADE3 RID: 110051 RVA: 0x003D01E2 File Offset: 0x003CE3E2
 		public ISelectBtNodeT AsISelectBtNode()
 		{
 			return this.As<ISelectBtNodeT>();
 		}
 
-		// Token: 0x06019662 RID: 104034 RVA: 0x003A48BA File Offset: 0x003A2ABA
+		// Token: 0x0601ADE4 RID: 110052 RVA: 0x003D01EA File Offset: 0x003CE3EA
 		public static TLogicBtNodeUnion FromISelectBtNode(ISelectBtNodeT _iselectbtnode)
 		{
 			return new TLogicBtNodeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019663 RID: 104035 RVA: 0x003A48CF File Offset: 0x003A2ACF
+		// Token: 0x0601ADE5 RID: 110053 RVA: 0x003D01FF File Offset: 0x003CE3FF
 		public ISequenceBtNodeT AsISequenceBtNode()
 		{
 			return this.As<ISequenceBtNodeT>();
 		}
 
-		// Token: 0x06019664 RID: 104036 RVA: 0x003A48D7 File Offset: 0x003A2AD7
+		// Token: 0x0601ADE6 RID: 110054 RVA: 0x003D0207 File Offset: 0x003CE407
 		public static TLogicBtNodeUnion FromISequenceBtNode(ISequenceBtNodeT _isequencebtnode)
 		{
 			return new TLogicBtNodeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019665 RID: 104037 RVA: 0x003A48EC File Offset: 0x003A2AEC
+		// Token: 0x0601ADE7 RID: 110055 RVA: 0x003D021C File Offset: 0x003CE41C
 		public static int Pack(FlatBufferBuilder builder, TLogicBtNodeUnion _o)
 		{
 			switch (_o.Type)

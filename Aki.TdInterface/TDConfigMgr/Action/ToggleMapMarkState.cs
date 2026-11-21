@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002248 RID: 8776
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024B3 RID: 9395
 	public class ToggleMapMarkState : ActionParams
 	{
-		// Token: 0x0600C096 RID: 49302 RVA: 0x001BA574 File Offset: 0x001B8774
+		// Token: 0x0600CC54 RID: 52308 RVA: 0x001D1C40 File Offset: 0x001CFE40
 		private ToggleMapMarkState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C097 RID: 49303 RVA: 0x001BA5AC File Offset: 0x001B87AC
+		// Token: 0x0600CC55 RID: 52309 RVA: 0x001D1C78 File Offset: 0x001CFE78
 		public static ToggleMapMarkState Create([Nullable(2)] ToggleMapMarkState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C098 RID: 49304 RVA: 0x001BA5BF File Offset: 0x001B87BF
+		// Token: 0x0600CC56 RID: 52310 RVA: 0x001D1C8B File Offset: 0x001CFE8B
 		public static ToggleMapMarkState CreateFromSetValue([Nullable(2)] ToggleMapMarkState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C099 RID: 49305 RVA: 0x001BA5D2 File Offset: 0x001B87D2
+		// Token: 0x0600CC57 RID: 52311 RVA: 0x001D1C9E File Offset: 0x001CFE9E
 		public ToggleMapMarkState_SetValue ToSetValue()
 		{
 			return new ToggleMapMarkState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A4A RID: 14922
-		// (get) Token: 0x0600C09A RID: 49306 RVA: 0x001BA5E5 File Offset: 0x001B87E5
-		// (set) Token: 0x0600C09B RID: 49307 RVA: 0x001BA610 File Offset: 0x001B8810
+		// Token: 0x17003D40 RID: 15680
+		// (get) Token: 0x0600CC58 RID: 52312 RVA: 0x001D1CB1 File Offset: 0x001CFEB1
+		// (set) Token: 0x0600CC59 RID: 52313 RVA: 0x001D1CDC File Offset: 0x001CFEDC
 		public virtual EMapMarkState Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040072CE RID: 29390
+		// Token: 0x04007918 RID: 31000
 		[Nullable(2)]
 		protected new ToggleMapMarkState FbInstance;
 
-		// Token: 0x040072CF RID: 29391
+		// Token: 0x04007919 RID: 31001
 		[Nullable(2)]
 		protected ToggleMapMarkState_SetValue PocoInterface;
 	}

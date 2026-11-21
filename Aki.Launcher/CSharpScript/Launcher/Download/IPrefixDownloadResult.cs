@@ -2,31 +2,31 @@
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001FA RID: 506
+	// Token: 0x020001FF RID: 511
 	public class IPrefixDownloadResult
 	{
-		// Token: 0x0400082A RID: 2090
+		// Token: 0x0400086A RID: 2154
 		public bool Complete;
 
-		// Token: 0x0400082B RID: 2091
+		// Token: 0x0400086B RID: 2155
 		public float RemainedTime;
 
-		// Token: 0x0400082C RID: 2092
+		// Token: 0x0400086C RID: 2156
 		public float SpendTime;
 
-		// Token: 0x0400082D RID: 2093
+		// Token: 0x0400086D RID: 2157
 		public long DownloadedSize;
 
-		// Token: 0x0400082E RID: 2094
+		// Token: 0x0400086E RID: 2158
 		public long CurrentFileSavedSize;
 
-		// Token: 0x0400082F RID: 2095
+		// Token: 0x0400086F RID: 2159
 		public int? FileIndex;
 
-		// Token: 0x04000830 RID: 2096
+		// Token: 0x04000870 RID: 2160
 		public EDownloadState DownloadState;
 
-		// Token: 0x04000831 RID: 2097
+		// Token: 0x04000871 RID: 2161
 		public int HttpCode;
 	}
 }

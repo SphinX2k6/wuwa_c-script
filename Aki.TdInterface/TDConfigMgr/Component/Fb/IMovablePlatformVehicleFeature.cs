@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D4A RID: 3402
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E44 RID: 3652
 	public class IMovablePlatformVehicleFeature : IVehicleFeature
 	{
-		// Token: 0x06004D8E RID: 19854 RVA: 0x000C0D9C File Offset: 0x000BEF9C
+		// Token: 0x060052AA RID: 21162 RVA: 0x000CC4E0 File Offset: 0x000CA6E0
 		public static IMovablePlatformVehicleFeature Create(IMovablePlatformVehicleFeature? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018B7 RID: 6327
-		// (get) Token: 0x06004D8F RID: 19855 RVA: 0x000C0DBB File Offset: 0x000BEFBB
+		// Token: 0x17001A1D RID: 6685
+		// (get) Token: 0x060052AB RID: 21163 RVA: 0x000CC4FF File Offset: 0x000CA6FF
 		public override EVehicleFeatureFlag Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018B8 RID: 6328
-		// (get) Token: 0x06004D90 RID: 19856 RVA: 0x000C0DC8 File Offset: 0x000BEFC8
+		// Token: 0x17001A1E RID: 6686
+		// (get) Token: 0x060052AC RID: 21164 RVA: 0x000CC50C File Offset: 0x000CA70C
 		public virtual List<int> PlayerAttachTags
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018B9 RID: 6329
-		// (get) Token: 0x06004D91 RID: 19857 RVA: 0x000C0E2C File Offset: 0x000BF02C
+		// Token: 0x17001A1F RID: 6687
+		// (get) Token: 0x060052AD RID: 21165 RVA: 0x000CC570 File Offset: 0x000CA770
 		public virtual int SafePointId
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C75 RID: 11381
+		// Token: 0x04002F35 RID: 12085
 		private IMovablePlatformVehicleFeature Instance;
 
-		// Token: 0x04002C76 RID: 11382
+		// Token: 0x04002F36 RID: 12086
 		private List<int> _PlayerAttachTagsCache;
 
-		// Token: 0x04002C77 RID: 11383
+		// Token: 0x04002F37 RID: 12087
 		private bool _PlayerAttachTagsInited;
 	}
 }

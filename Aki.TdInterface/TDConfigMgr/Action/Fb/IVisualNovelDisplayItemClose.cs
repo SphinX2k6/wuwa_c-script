@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200256F RID: 9583
+	// Token: 0x02002818 RID: 10264
 	public class IVisualNovelDisplayItemClose : IVisualNovelDisplayItemBase
 	{
-		// Token: 0x0600D710 RID: 55056 RVA: 0x00200AA1 File Offset: 0x001FECA1
-		[NullableContext(1)]
+		// Token: 0x0600E47B RID: 58491 RVA: 0x0021C6AA File Offset: 0x0021A8AA
 		public static IVisualNovelDisplayItemClose Create(IVisualNovelDisplayItemClose? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DF4 RID: 15860
-		// (get) Token: 0x0600D711 RID: 55057 RVA: 0x00200AC0 File Offset: 0x001FECC0
+		// Token: 0x170040F9 RID: 16633
+		// (get) Token: 0x0600E47C RID: 58492 RVA: 0x0021C6C9 File Offset: 0x0021A8C9
 		public override EVisualNovelDisplayItemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007711 RID: 30481
+		// Token: 0x04007D6E RID: 32110
 		private IVisualNovelDisplayItemClose Instance;
 	}
 }

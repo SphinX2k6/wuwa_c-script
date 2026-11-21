@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA0 RID: 19104
+	// Token: 0x02003A48 RID: 14920
 	public class TrapDefenseResultButton : UiPanelBase
 	{
-		// Token: 0x06031833 RID: 202803 RVA: 0x00B7A9F8 File Offset: 0x00B78BF8
+		// Token: 0x060265C3 RID: 157123 RVA: 0x00ABE9AC File Offset: 0x00ABCBAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031834 RID: 202804 RVA: 0x00B7AAA0 File Offset: 0x00B78CA0
+		// Token: 0x060265C4 RID: 157124 RVA: 0x00ABEA54 File Offset: 0x00ABCC54
 		public void BindRedDot(ERedDotName redDotName, int? uid = null)
 		{
 			this.RedDotName = new ERedDotName?(redDotName);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			RedDotController.Instance.BindRedDot(redDotName, item, null, uid.GetValueOrDefault());
 		}
 
-		// Token: 0x06031835 RID: 202805 RVA: 0x00B7AAD8 File Offset: 0x00B78CD8
+		// Token: 0x060265C5 RID: 157125 RVA: 0x00ABEA8C File Offset: 0x00ABCC8C
 		public void UnBindRedDot()
 		{
 			if (this.RedDotName == null)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			RedDotController.Instance.UnBindGivenUi(this.RedDotName.Value, item, 0);
 		}
 
-		// Token: 0x06031836 RID: 202806 RVA: 0x00B7AB12 File Offset: 0x00B78D12
+		// Token: 0x060265C6 RID: 157126 RVA: 0x00ABEAC6 File Offset: 0x00ABCCC6
 		private void OnClickedBtn()
 		{
 			if (this.OnClickCb != null)
@@ -59,20 +59,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A776 RID: 108406
+		// Token: 0x040150C8 RID: 86216
 		[Nullable(2)]
 		public Action OnClickCb;
 
-		// Token: 0x0401A777 RID: 108407
+		// Token: 0x040150C9 RID: 86217
 		private ERedDotName? RedDotName;
 
-		// Token: 0x0200ABF8 RID: 44024
+		// Token: 0x02009618 RID: 38424
 		private class EBtn
 		{
-			// Token: 0x0403441A RID: 214042
+			// Token: 0x0402EDCB RID: 191947
 			public const int Btn = 0;
 
-			// Token: 0x0403441B RID: 214043
+			// Token: 0x0402EDCC RID: 191948
 			public const int RedDot = 1;
 		}
 	}

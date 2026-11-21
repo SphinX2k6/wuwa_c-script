@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005ABA RID: 23226
+	// Token: 0x02004A96 RID: 19094
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DreamLinkCatProgressItem : UiPanelBase
 	{
-		// Token: 0x0603AD42 RID: 240962 RVA: 0x00E047B0 File Offset: 0x00E029B0
+		// Token: 0x0602FC8E RID: 195726 RVA: 0x00D54D78 File Offset: 0x00D52F78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -36,20 +36,20 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AD43 RID: 240963 RVA: 0x00E048BE File Offset: 0x00E02ABE
+		// Token: 0x0602FC8F RID: 195727 RVA: 0x00D54E86 File Offset: 0x00D53086
 		protected override void OnStart()
 		{
 			this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.OnTweenUpdate));
 			this.EffectDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.OnEffectTweenUpdate));
 		}
 
-		// Token: 0x0603AD44 RID: 240964 RVA: 0x00E048EE File Offset: 0x00E02AEE
+		// Token: 0x0602FC90 RID: 195728 RVA: 0x00D54EB6 File Offset: 0x00D530B6
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x0603AD45 RID: 240965 RVA: 0x00E048F8 File Offset: 0x00E02AF8
+		// Token: 0x0602FC91 RID: 195729 RVA: 0x00D54EC0 File Offset: 0x00D530C0
 		protected override void OnBeforeDestroy()
 		{
 			ULTweener addTween = this.AddTween;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD46 RID: 240966 RVA: 0x00E04994 File Offset: 0x00E02B94
+		// Token: 0x0602FC92 RID: 195730 RVA: 0x00D54F5C File Offset: 0x00D5315C
 		protected void RefreshView()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			sprite2.SetFillAmount(1f - (float)dungeonProgressRecord / (float)this.MaxValue);
 		}
 
-		// Token: 0x0603AD47 RID: 240967 RVA: 0x00E04A48 File Offset: 0x00E02C48
+		// Token: 0x0602FC93 RID: 195731 RVA: 0x00D55010 File Offset: 0x00D53210
 		public void PlayAddProgressAnim()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.AddEffectTween = ULTweenBPLibrary.FloatTo(this.RootActor, this.EffectDelegate, 0f, (float)(currentCatProgress - dungeonProgressRecord), 1f, 0f, LTweenEase.Linear);
 		}
 
-		// Token: 0x0603AD48 RID: 240968 RVA: 0x00E04BF4 File Offset: 0x00E02DF4
+		// Token: 0x0602FC94 RID: 195732 RVA: 0x00D551BC File Offset: 0x00D533BC
 		private void OnTweenUpdate(float value)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			text2.SetText(Math.Floor((double)((float)this.MaxValue - value)).ToString(), true);
 		}
 
-		// Token: 0x0603AD49 RID: 240969 RVA: 0x00E04C88 File Offset: 0x00E02E88
+		// Token: 0x0602FC95 RID: 195733 RVA: 0x00D55250 File Offset: 0x00D53450
 		private void OnEffectTweenUpdate(float value)
 		{
 			UUISprite sprite = base.GetSprite(5);
@@ -224,44 +224,44 @@ namespace CSharpScript.Game.Module.DreamLink
 			sprite2.SetFillAmount(value / (float)this.MaxValue);
 		}
 
-		// Token: 0x0401EB2C RID: 125740
+		// Token: 0x040195D3 RID: 103891
 		private ULTweener AddTween;
 
-		// Token: 0x0401EB2D RID: 125741
+		// Token: 0x040195D4 RID: 103892
 		private ULTweener AddEffectTween;
 
-		// Token: 0x0401EB2E RID: 125742
+		// Token: 0x040195D5 RID: 103893
 		private FLTweenFloatSetterDynamic Delegate;
 
-		// Token: 0x0401EB2F RID: 125743
+		// Token: 0x040195D6 RID: 103894
 		private FLTweenFloatSetterDynamic EffectDelegate;
 
-		// Token: 0x0401EB30 RID: 125744
+		// Token: 0x040195D7 RID: 103895
 		private int MaxValue;
 
-		// Token: 0x0200BD0D RID: 48397
+		// Token: 0x0200A715 RID: 42773
 		[NullableContext(0)]
 		private class EDreamLinkCatProgressItemDefine
 		{
-			// Token: 0x0403903F RID: 233535
+			// Token: 0x04033A09 RID: 211465
 			public const int SpriteBlueBar = 0;
 
-			// Token: 0x04039040 RID: 233536
+			// Token: 0x04033A0A RID: 211466
 			public const int SpriteRedBar = 1;
 
-			// Token: 0x04039041 RID: 233537
+			// Token: 0x04033A0B RID: 211467
 			public const int TxtBlueProgress = 2;
 
-			// Token: 0x04039042 RID: 233538
+			// Token: 0x04033A0C RID: 211468
 			public const int TxtRedProgress = 3;
 
-			// Token: 0x04039043 RID: 233539
+			// Token: 0x04033A0D RID: 211469
 			public const int SpriteWhiteBar = 4;
 
-			// Token: 0x04039044 RID: 233540
+			// Token: 0x04033A0E RID: 211470
 			public const int SpriteGlowBar = 5;
 
-			// Token: 0x04039045 RID: 233541
+			// Token: 0x04033A0F RID: 211471
 			public const int AnimItem = 6;
 		}
 	}

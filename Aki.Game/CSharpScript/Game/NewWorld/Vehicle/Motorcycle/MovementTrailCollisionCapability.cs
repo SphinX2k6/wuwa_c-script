@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x02007030 RID: 28720
+	// Token: 0x020061B1 RID: 25009
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MovementTrailCollisionCapability : WaterDetectedCapability
 	{
-		// Token: 0x06045EAD RID: 286381 RVA: 0x01166B80 File Offset: 0x01164D80
+		// Token: 0x0603C08F RID: 245903 RVA: 0x011109CC File Offset: 0x0110EBCC
 		[NullableContext(2)]
 		public MovementTrailCollisionCapability(AActor invoker = null, AActor owner = null, UKuroTrailCollisionAsset kuroTrailCollisionAsset = null)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.KuroTrailCollisionAsset = kuroTrailCollisionAsset;
 		}
 
-		// Token: 0x06045EAE RID: 286382 RVA: 0x01166BD4 File Offset: 0x01164DD4
+		// Token: 0x0603C090 RID: 245904 RVA: 0x01110A20 File Offset: 0x0110EC20
 		public void ResetTrail()
 		{
 			this.HaveLast = false;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			segmentsSpawnTimeQueue.Clear();
 		}
 
-		// Token: 0x06045EAF RID: 286383 RVA: 0x01166C70 File Offset: 0x01164E70
+		// Token: 0x0603C091 RID: 245905 RVA: 0x01110ABC File Offset: 0x0110ECBC
 		public override void Activate()
 		{
 			UKuroTrailCollisionAsset kuroTrailCollisionAsset = this.KuroTrailCollisionAsset;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.TickActive), this.KuroTrailCollisionAsset.StepInterval, 1f, null, null, true);
 		}
 
-		// Token: 0x06045EB0 RID: 286384 RVA: 0x01166D57 File Offset: 0x01164F57
+		// Token: 0x0603C092 RID: 245906 RVA: 0x01110BA3 File Offset: 0x0110EDA3
 		public override void Deactivate()
 		{
 			this.ResetTrail();
@@ -100,19 +100,19 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EB1 RID: 286385 RVA: 0x01166D78 File Offset: 0x01164F78
+		// Token: 0x0603C093 RID: 245907 RVA: 0x01110BC4 File Offset: 0x0110EDC4
 		public override bool? ShouldTickActive()
 		{
 			return new bool?(this.Segments != null && this.Segments.Count > 0);
 		}
 
-		// Token: 0x06045EB2 RID: 286386 RVA: 0x01166D98 File Offset: 0x01164F98
+		// Token: 0x0603C094 RID: 245908 RVA: 0x01110BE4 File Offset: 0x0110EDE4
 		public override void TickActive(float deltaTime)
 		{
 			this.TrimByTTL((float)Time.Instance.WorldTime);
 		}
 
-		// Token: 0x06045EB3 RID: 286387 RVA: 0x01166DAC File Offset: 0x01164FAC
+		// Token: 0x0603C095 RID: 245909 RVA: 0x01110BF8 File Offset: 0x0110EDF8
 		private void SpawnOrExtendSegment(Vector start, Vector end, Vector normal)
 		{
 			UKuroTrailCollisionAsset kuroTrailCollisionAsset = this.KuroTrailCollisionAsset;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.LastPos.DeepCopy(this.CurPos);
 		}
 
-		// Token: 0x06045EB4 RID: 286388 RVA: 0x01166F34 File Offset: 0x01165134
+		// Token: 0x0603C096 RID: 245910 RVA: 0x01110D80 File Offset: 0x0110EF80
 		private void UpdateBoxSegment(UBoxComponent box, Vector start, Vector end, Vector normal)
 		{
 			if (box == null || !box.IsValid())
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.UpdateBoxShapeAndCollision(box, MathUtils.Instance.CommonTempVector2.ToUeVector(false), rot, length);
 		}
 
-		// Token: 0x06045EB5 RID: 286389 RVA: 0x011670D4 File Offset: 0x011652D4
+		// Token: 0x0603C097 RID: 245911 RVA: 0x01110F20 File Offset: 0x0110F120
 		private void UpdateBoxShapeAndCollision(UBoxComponent box, FVectorDouble loc, FRotator rot, double length)
 		{
 			if (box != null && box.IsValid())
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			Log.Instance.Error(ELogModule.Movement, ELogAuthor.XDW, "MovementTrailCollision UpdateBoxShapeAndCollision Box或者KuroTrailCollisionAsset无效", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06045EB6 RID: 286390 RVA: 0x01167190 File Offset: 0x01165390
+		// Token: 0x0603C098 RID: 245912 RVA: 0x01110FDC File Offset: 0x0110F1DC
 		private bool Recycle(MovementTrailCollisionCapability.TrailSegment segment)
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("MovementTrailCollision") > 0)
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			return result;
 		}
 
-		// Token: 0x06045EB7 RID: 286391 RVA: 0x01167298 File Offset: 0x01165498
+		// Token: 0x0603C099 RID: 245913 RVA: 0x011110E4 File Offset: 0x0110F2E4
 		private unsafe void SpawnSegment(MovementTrailCollisionCapability.BoxComponentProxy box, Vector start, Vector end)
 		{
 			bool flag;
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EB8 RID: 286392 RVA: 0x011673B8 File Offset: 0x011655B8
+		// Token: 0x0603C09A RID: 245914 RVA: 0x01111204 File Offset: 0x0110F404
 		private void ApplyCollisionSetup(UBoxComponent box)
 		{
 			if (box != null && box.IsValid())
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			Log.Instance.Error(ELogModule.Movement, ELogAuthor.XDW, "MovementTrailCollision ApplyCollisionSetup Box或者KuroTrailCollisionAsset无效", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06045EB9 RID: 286393 RVA: 0x011674D4 File Offset: 0x011656D4
+		// Token: 0x0603C09B RID: 245915 RVA: 0x01111320 File Offset: 0x0110F520
 		private void TrimByTTL(float nowMilliseconds)
 		{
 			UKuroTrailCollisionAsset kuroTrailCollisionAsset = this.KuroTrailCollisionAsset;
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			}
 		}
 
-		// Token: 0x06045EBA RID: 286394 RVA: 0x0116780C File Offset: 0x01165A0C
+		// Token: 0x0603C09C RID: 245916 RVA: 0x01111658 File Offset: 0x0110F858
 		public override void OnWaterDetectedStart()
 		{
 			this.HaveLast = false;
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			Log.Instance.Info(ELogModule.Movement, ELogAuthor.XDW, "MovementTrailCollision OnWaterDetectedStart", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06045EBB RID: 286395 RVA: 0x01167844 File Offset: 0x01165A44
+		// Token: 0x0603C09D RID: 245917 RVA: 0x01111690 File Offset: 0x0110F890
 		public override void OnWaterDetectedEnd()
 		{
 			if (!this.DetectingWater)
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			UKismetMaterialLibrary.SetVectorParameterValue(invoker, globalShaderParameters, parameterName, flinearColor);
 		}
 
-		// Token: 0x06045EBC RID: 286396 RVA: 0x011678D8 File Offset: 0x01165AD8
+		// Token: 0x0603C09E RID: 245918 RVA: 0x01111724 File Offset: 0x0110F924
 		public unsafe void OnWaterDetectedTick(double deltaTime, Vector location, Vector normal)
 		{
 			if (!this.DetectingWater)
@@ -518,38 +518,38 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 			this.SpawnOrExtendSegment(this.LastPos, this.CurPos, normal);
 		}
 
-		// Token: 0x06045EBD RID: 286397 RVA: 0x01167AC5 File Offset: 0x01165CC5
+		// Token: 0x0603C09F RID: 245919 RVA: 0x01111911 File Offset: 0x0110FB11
 		public override void OnWaterDetectedTick(float deltaTime, Vector impactPoint, Vector impactNormal)
 		{
 			this.OnWaterDetectedTick((double)deltaTime, impactPoint, impactNormal);
 		}
 
-		// Token: 0x040248F7 RID: 149751
+		// Token: 0x0401FBAD RID: 129965
 		private const int MAX_DISTANCE = 1700;
 
-		// Token: 0x040248F8 RID: 149752
+		// Token: 0x0401FBAE RID: 129966
 		private const string DEBUG_KEY = "MovementTrailCollision";
 
-		// Token: 0x040248F9 RID: 149753
+		// Token: 0x0401FBAF RID: 129967
 		[StaticVariableRuleIgnore]
 		public static FName iceRiderPositionName = FNameUtil.GetDynamicFName("IceRiderPosition").Value;
 
-		// Token: 0x040248FA RID: 149754
+		// Token: 0x0401FBB0 RID: 129968
 		[Nullable(2)]
 		public AActor Invoker;
 
-		// Token: 0x040248FB RID: 149755
+		// Token: 0x0401FBB1 RID: 129969
 		[Nullable(2)]
 		public AActor Owner;
 
-		// Token: 0x040248FC RID: 149756
+		// Token: 0x0401FBB2 RID: 129970
 		[Nullable(2)]
 		public UKuroTrailCollisionAsset KuroTrailCollisionAsset;
 
-		// Token: 0x040248FD RID: 149757
+		// Token: 0x0401FBB3 RID: 129971
 		public bool IgnoreInvoker = true;
 
-		// Token: 0x040248FE RID: 149758
+		// Token: 0x0401FBB4 RID: 129972
 		[Nullable(new byte[]
 		{
 			2,
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private HashSet<MovementTrailCollisionCapability.TrailSegment> Segments;
 
-		// Token: 0x040248FF RID: 149759
+		// Token: 0x0401FBB5 RID: 129973
 		[Nullable(new byte[]
 		{
 			2,
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private PriorityQueue<MovementTrailCollisionCapability.TrailSegment> SegmentsSpawnTimeQueue;
 
-		// Token: 0x04024900 RID: 149760
+		// Token: 0x0401FBB6 RID: 129974
 		[Nullable(new byte[]
 		{
 			2,
@@ -573,59 +573,59 @@ namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 		})]
 		private Pool<MovementTrailCollisionCapability.BoxComponentProxy> BoxPool;
 
-		// Token: 0x04024901 RID: 149761
+		// Token: 0x0401FBB7 RID: 129975
 		private bool HaveLast;
 
-		// Token: 0x04024902 RID: 149762
+		// Token: 0x0401FBB8 RID: 129976
 		private bool DetectingWater;
 
-		// Token: 0x04024903 RID: 149763
+		// Token: 0x0401FBB9 RID: 129977
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x04024904 RID: 149764
+		// Token: 0x0401FBBA RID: 129978
 		private readonly Vector CurPos = Vector.Create();
 
-		// Token: 0x04024905 RID: 149765
+		// Token: 0x0401FBBB RID: 129979
 		private readonly Vector LastPos = Vector.Create();
 
-		// Token: 0x04024906 RID: 149766
+		// Token: 0x0401FBBC RID: 129980
 		[StaticVariableRuleIgnore]
 		private static readonly MovementTrailCollisionCapability.BoxComponentProxy EmptyBoxProxy = new MovementTrailCollisionCapability.BoxComponentProxy(null);
 
-		// Token: 0x04024907 RID: 149767
+		// Token: 0x0401FBBD RID: 129981
 		private double LastTime = -1.0;
 
-		// Token: 0x0200CE21 RID: 52769
+		// Token: 0x0200BA12 RID: 47634
 		[NullableContext(2)]
 		[Nullable(0)]
 		protected class BoxComponentProxy
 		{
-			// Token: 0x06051DE0 RID: 335328 RVA: 0x0163F3AA File Offset: 0x0163D5AA
+			// Token: 0x06048649 RID: 296521 RVA: 0x016146CA File Offset: 0x016128CA
 			public BoxComponentProxy(UBoxComponent boxComponent = null)
 			{
 				this.BoxComponent = boxComponent;
 			}
 
-			// Token: 0x0403E161 RID: 254305
+			// Token: 0x0403958C RID: 234892
 			public UBoxComponent BoxComponent;
 		}
 
-		// Token: 0x0200CE22 RID: 52770
+		// Token: 0x0200BA13 RID: 47635
 		[Nullable(0)]
 		protected class TrailSegment
 		{
-			// Token: 0x0403E162 RID: 254306
+			// Token: 0x0403958D RID: 234893
 			[Nullable(2)]
 			public MovementTrailCollisionCapability.BoxComponentProxy Box;
 
-			// Token: 0x0403E163 RID: 254307
+			// Token: 0x0403958E RID: 234894
 			public double SpawnTime;
 
-			// Token: 0x0403E164 RID: 254308
+			// Token: 0x0403958F RID: 234895
 			public Vector Start = Vector.ZeroVectorProxy;
 
-			// Token: 0x0403E165 RID: 254309
+			// Token: 0x04039590 RID: 234896
 			public Vector End = Vector.ZeroVectorProxy;
 		}
 	}

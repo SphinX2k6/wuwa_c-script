@@ -5,32 +5,32 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD8 RID: 20440
+	// Token: 0x02003FA2 RID: 16290
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MusicSubtitleConfig : ConfigBase
 	{
-		// Token: 0x060344CB RID: 214219 RVA: 0x00C485A0 File Offset: 0x00C467A0
+		// Token: 0x06029350 RID: 168784 RVA: 0x00B922FC File Offset: 0x00B904FC
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060344CC RID: 214220 RVA: 0x00C485A3 File Offset: 0x00C467A3
+		// Token: 0x06029351 RID: 168785 RVA: 0x00B922FF File Offset: 0x00B904FF
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x060344CD RID: 214221 RVA: 0x00C485A6 File Offset: 0x00C467A6
+		// Token: 0x06029352 RID: 168786 RVA: 0x00B92302 File Offset: 0x00B90502
 		[return: Nullable(2)]
 		public IReadOnlyList<MusicSubTitle> GetMusicSubtitle(string id)
 		{
 			return ConfigMusicSubTitleBySubtitleGroupTag.GetConfigList(id, true);
 		}
 
-		// Token: 0x17007FBB RID: 32699
-		// (get) Token: 0x060344CE RID: 214222 RVA: 0x00C485AF File Offset: 0x00C467AF
+		// Token: 0x1700536F RID: 21359
+		// (get) Token: 0x06029353 RID: 168787 RVA: 0x00B9230B File Offset: 0x00B9050B
 		public static MusicSubtitleConfig Instance
 		{
 			get
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344CF RID: 214223 RVA: 0x00C485B6 File Offset: 0x00C467B6
+		// Token: 0x06029354 RID: 168788 RVA: 0x00B92312 File Offset: 0x00B90512
 		public static MusicSubtitleConfig GetOrCreateInstance()
 		{
 			if (MusicSubtitleConfig._Instance == null)
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Plot
 			return MusicSubtitleConfig._Instance;
 		}
 
-		// Token: 0x060344D0 RID: 214224 RVA: 0x00C485CA File Offset: 0x00C467CA
+		// Token: 0x06029355 RID: 168789 RVA: 0x00B92326 File Offset: 0x00B90526
 		public static bool CreateInstance()
 		{
 			if (MusicSubtitleConfig._Instance != null)
@@ -60,24 +60,24 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x060344D1 RID: 214225 RVA: 0x00C485E0 File Offset: 0x00C467E0
+		// Token: 0x06029356 RID: 168790 RVA: 0x00B9233C File Offset: 0x00B9053C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060344D2 RID: 214226 RVA: 0x00C485E2 File Offset: 0x00C467E2
+		// Token: 0x06029357 RID: 168791 RVA: 0x00B9233E File Offset: 0x00B9053E
 		public static void ResetStaticDefaultValue()
 		{
 			MusicSubtitleConfig._Instance = null;
 		}
 
-		// Token: 0x060344D3 RID: 214227 RVA: 0x00C485EA File Offset: 0x00C467EA
+		// Token: 0x06029358 RID: 168792 RVA: 0x00B92346 File Offset: 0x00B90546
 		static MusicSubtitleConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MusicSubtitleConfig.CreateStaticDefaultValue), new Action(MusicSubtitleConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BD15 RID: 113941
+		// Token: 0x040166F0 RID: 91888
 		[Nullable(2)]
 		private static MusicSubtitleConfig _Instance;
 	}

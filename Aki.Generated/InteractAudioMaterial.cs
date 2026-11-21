@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D77 RID: 3447
+	// Token: 0x02000E5C RID: 3676
 	public struct InteractAudioMaterial : IFlatbufferObject
 	{
-		// Token: 0x170019CF RID: 6607
-		// (get) Token: 0x060085D3 RID: 34259 RVA: 0x00264C3D File Offset: 0x00262E3D
+		// Token: 0x17001A33 RID: 6707
+		// (get) Token: 0x06008BEE RID: 35822 RVA: 0x00282F0D File Offset: 0x0028110D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085D4 RID: 34260 RVA: 0x00264C4A File Offset: 0x00262E4A
+		// Token: 0x06008BEF RID: 35823 RVA: 0x00282F1A File Offset: 0x0028111A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060085D5 RID: 34261 RVA: 0x00264C54 File Offset: 0x00262E54
+		// Token: 0x06008BF0 RID: 35824 RVA: 0x00282F24 File Offset: 0x00281124
 		public static InteractAudioMaterial GetRootAsInteractAudioMaterial(ByteBuffer _bb)
 		{
 			return InteractAudioMaterial.GetRootAsInteractAudioMaterial(_bb, default(InteractAudioMaterial));
 		}
 
-		// Token: 0x060085D6 RID: 34262 RVA: 0x00264C70 File Offset: 0x00262E70
+		// Token: 0x06008BF1 RID: 35825 RVA: 0x00282F40 File Offset: 0x00281140
 		public static InteractAudioMaterial GetRootAsInteractAudioMaterial(ByteBuffer _bb, InteractAudioMaterial obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060085D7 RID: 34263 RVA: 0x00264C8D File Offset: 0x00262E8D
+		// Token: 0x06008BF2 RID: 35826 RVA: 0x00282F5D File Offset: 0x0028115D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060085D8 RID: 34264 RVA: 0x00264C9C File Offset: 0x00262E9C
+		// Token: 0x06008BF3 RID: 35827 RVA: 0x00282F6C File Offset: 0x0028116C
 		public InteractAudioMaterial __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019D0 RID: 6608
-		// (get) Token: 0x060085D9 RID: 34265 RVA: 0x00264CAC File Offset: 0x00262EAC
+		// Token: 0x17001A34 RID: 6708
+		// (get) Token: 0x06008BF4 RID: 35828 RVA: 0x00282F7C File Offset: 0x0028117C
 		public string CollisionMaterial
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085DA RID: 34266 RVA: 0x00264CE3 File Offset: 0x00262EE3
+		// Token: 0x06008BF5 RID: 35829 RVA: 0x00282FB3 File Offset: 0x002811B3
 		public Span<byte> GetCollisionMaterialBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060085DB RID: 34267 RVA: 0x00264CF2 File Offset: 0x00262EF2
+		// Token: 0x06008BF6 RID: 35830 RVA: 0x00282FC2 File Offset: 0x002811C2
 		public byte[] GetCollisionMaterialArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170019D1 RID: 6609
-		// (get) Token: 0x060085DC RID: 34268 RVA: 0x00264D0C File Offset: 0x00262F0C
+		// Token: 0x17001A35 RID: 6709
+		// (get) Token: 0x06008BF7 RID: 35831 RVA: 0x00282FDC File Offset: 0x002811DC
 		public bool IsActiveImpacter
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019D2 RID: 6610
-		// (get) Token: 0x060085DD RID: 34269 RVA: 0x00264D4C File Offset: 0x00262F4C
+		// Token: 0x17001A36 RID: 6710
+		// (get) Token: 0x06008BF8 RID: 35832 RVA: 0x0028301C File Offset: 0x0028121C
 		public string AudioEvent
 		{
 			get
@@ -100,20 +100,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060085DE RID: 34270 RVA: 0x00264D83 File Offset: 0x00262F83
+		// Token: 0x06008BF9 RID: 35833 RVA: 0x00283053 File Offset: 0x00281253
 		public Span<byte> GetAudioEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060085DF RID: 34271 RVA: 0x00264D92 File Offset: 0x00262F92
+		// Token: 0x06008BFA RID: 35834 RVA: 0x00283062 File Offset: 0x00281262
 		public byte[] GetAudioEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170019D3 RID: 6611
-		// (get) Token: 0x060085E0 RID: 34272 RVA: 0x00264DAC File Offset: 0x00262FAC
+		// Token: 0x17001A37 RID: 6711
+		// (get) Token: 0x06008BFB RID: 35835 RVA: 0x0028307C File Offset: 0x0028127C
 		public float ImpactMass
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019D4 RID: 6612
-		// (get) Token: 0x060085E1 RID: 34273 RVA: 0x00264DF0 File Offset: 0x00262FF0
+		// Token: 0x17001A38 RID: 6712
+		// (get) Token: 0x06008BFC RID: 35836 RVA: 0x002830C0 File Offset: 0x002812C0
 		public float Maxforce
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019D5 RID: 6613
-		// (get) Token: 0x060085E2 RID: 34274 RVA: 0x00264E34 File Offset: 0x00263034
+		// Token: 0x17001A39 RID: 6713
+		// (get) Token: 0x06008BFD RID: 35837 RVA: 0x00283104 File Offset: 0x00281304
 		public float MinimumPosteventForce
 		{
 			get
@@ -157,8 +157,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019D6 RID: 6614
-		// (get) Token: 0x060085E3 RID: 34275 RVA: 0x00264E78 File Offset: 0x00263078
+		// Token: 0x17001A3A RID: 6714
+		// (get) Token: 0x06008BFE RID: 35838 RVA: 0x00283148 File Offset: 0x00281348
 		public float MinimumTimeBetweenAkevent
 		{
 			get
@@ -172,7 +172,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004DFF RID: 19967
+		// Token: 0x040053E4 RID: 21476
 		private Table __p;
 	}
 }

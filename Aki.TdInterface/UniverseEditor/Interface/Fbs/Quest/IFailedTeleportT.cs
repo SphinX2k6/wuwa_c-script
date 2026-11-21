@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E19 RID: 15897
+	// Token: 0x02004254 RID: 16980
 	public class IFailedTeleportT
 	{
-		// Token: 0x17006DE2 RID: 28130
-		// (get) Token: 0x06016419 RID: 91161 RVA: 0x00336885 File Offset: 0x00334A85
-		// (set) Token: 0x0601641A RID: 91162 RVA: 0x0033688D File Offset: 0x00334A8D
+		// Token: 0x170073C8 RID: 29640
+		// (get) Token: 0x06017A46 RID: 96838 RVA: 0x0035F47D File Offset: 0x0035D67D
+		// (set) Token: 0x06017A47 RID: 96839 RVA: 0x0035F485 File Offset: 0x0035D685
 		public IPosAT Position { get; set; }
 
-		// Token: 0x17006DE3 RID: 28131
-		// (get) Token: 0x0601641B RID: 91163 RVA: 0x00336896 File Offset: 0x00334A96
-		// (set) Token: 0x0601641C RID: 91164 RVA: 0x0033689E File Offset: 0x00334A9E
+		// Token: 0x170073C9 RID: 29641
+		// (get) Token: 0x06017A48 RID: 96840 RVA: 0x0035F48E File Offset: 0x0035D68E
+		// (set) Token: 0x06017A49 RID: 96841 RVA: 0x0035F496 File Offset: 0x0035D696
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x17006DE4 RID: 28132
-		// (get) Token: 0x0601641D RID: 91165 RVA: 0x003368A7 File Offset: 0x00334AA7
-		// (set) Token: 0x0601641E RID: 91166 RVA: 0x003368AF File Offset: 0x00334AAF
+		// Token: 0x170073CA RID: 29642
+		// (get) Token: 0x06017A4A RID: 96842 RVA: 0x0035F49F File Offset: 0x0035D69F
+		// (set) Token: 0x06017A4B RID: 96843 RVA: 0x0035F4A7 File Offset: 0x0035D6A7
 		public bool IsConfirm { get; set; }
 
-		// Token: 0x17006DE5 RID: 28133
-		// (get) Token: 0x0601641F RID: 91167 RVA: 0x003368B8 File Offset: 0x00334AB8
-		// (set) Token: 0x06016420 RID: 91168 RVA: 0x003368C0 File Offset: 0x00334AC0
+		// Token: 0x170073CB RID: 29643
+		// (get) Token: 0x06017A4C RID: 96844 RVA: 0x0035F4B0 File Offset: 0x0035D6B0
+		// (set) Token: 0x06017A4D RID: 96845 RVA: 0x0035F4B8 File Offset: 0x0035D6B8
 		public int ConfirmId { get; set; }
 
-		// Token: 0x17006DE6 RID: 28134
-		// (get) Token: 0x06016421 RID: 91169 RVA: 0x003368C9 File Offset: 0x00334AC9
-		// (set) Token: 0x06016422 RID: 91170 RVA: 0x003368D1 File Offset: 0x00334AD1
+		// Token: 0x170073CC RID: 29644
+		// (get) Token: 0x06017A4E RID: 96846 RVA: 0x0035F4C1 File Offset: 0x0035D6C1
+		// (set) Token: 0x06017A4F RID: 96847 RVA: 0x0035F4C9 File Offset: 0x0035D6C9
 		public TTeleportTransitionOptionUnion TransitionOption { get; set; }
 
-		// Token: 0x17006DE7 RID: 28135
-		// (get) Token: 0x06016423 RID: 91171 RVA: 0x003368DA File Offset: 0x00334ADA
-		// (set) Token: 0x06016424 RID: 91172 RVA: 0x003368E2 File Offset: 0x00334AE2
+		// Token: 0x170073CD RID: 29645
+		// (get) Token: 0x06017A50 RID: 96848 RVA: 0x0035F4D2 File Offset: 0x0035D6D2
+		// (set) Token: 0x06017A51 RID: 96849 RVA: 0x0035F4DA File Offset: 0x0035D6DA
 		public bool GravityFlip { get; set; }
 
-		// Token: 0x17006DE8 RID: 28136
-		// (get) Token: 0x06016425 RID: 91173 RVA: 0x003368EB File Offset: 0x00334AEB
-		// (set) Token: 0x06016426 RID: 91174 RVA: 0x003368F3 File Offset: 0x00334AF3
+		// Token: 0x170073CE RID: 29646
+		// (get) Token: 0x06017A52 RID: 96850 RVA: 0x0035F4E3 File Offset: 0x0035D6E3
+		// (set) Token: 0x06017A53 RID: 96851 RVA: 0x0035F4EB File Offset: 0x0035D6EB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016427 RID: 91175 RVA: 0x003368FC File Offset: 0x00334AFC
+		// Token: 0x06017A54 RID: 96852 RVA: 0x0035F4F4 File Offset: 0x0035D6F4
 		public IFailedTeleportT()
 		{
 			this.Position = null;

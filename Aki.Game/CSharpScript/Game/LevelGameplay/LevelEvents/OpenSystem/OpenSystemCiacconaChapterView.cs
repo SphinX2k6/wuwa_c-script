@@ -7,24 +7,24 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BCE RID: 27598
+	// Token: 0x02005D47 RID: 23879
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemCiacconaChapterView : OpenSystemBase
 	{
-		// Token: 0x0604437F RID: 279423 RVA: 0x010D092F File Offset: 0x010CEB2F
+		// Token: 0x0603A4D7 RID: 238807 RVA: 0x0107A883 File Offset: 0x01078A83
 		public OpenSystemCiacconaChapterView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044380 RID: 279424 RVA: 0x010D0938 File Offset: 0x010CEB38
+		// Token: 0x0603A4D8 RID: 238808 RVA: 0x0107A88C File Offset: 0x01078A8C
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{
 			return new EUiViewName?(EUiViewName.CiacconaGalChapterView);
 		}
 
-		// Token: 0x06044381 RID: 279425 RVA: 0x010D0944 File Offset: 0x010CEB44
+		// Token: 0x0603A4D9 RID: 238809 RVA: 0x0107A898 File Offset: 0x01078A98
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{

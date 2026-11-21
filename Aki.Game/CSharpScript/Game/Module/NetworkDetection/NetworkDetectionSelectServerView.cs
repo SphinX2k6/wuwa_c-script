@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005364 RID: 21348
+	// Token: 0x02004347 RID: 17223
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NetworkDetectionSelectServerView : UiViewBase
 	{
-		// Token: 0x06036897 RID: 223383 RVA: 0x00CE9A0C File Offset: 0x00CE7C0C
+		// Token: 0x0602B7DD RID: 178141 RVA: 0x00C38894 File Offset: 0x00C36A94
 		public NetworkDetectionSelectServerView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036898 RID: 223384 RVA: 0x00CE9A18 File Offset: 0x00CE7C18
+		// Token: 0x0602B7DE RID: 178142 RVA: 0x00C388A0 File Offset: 0x00C36AA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06036899 RID: 223385 RVA: 0x00CE9B24 File Offset: 0x00CE7D24
+		// Token: 0x0602B7DF RID: 178143 RVA: 0x00C389AC File Offset: 0x00C36BAC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			NetworkDetectionSelectServerView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -60,19 +60,19 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603689A RID: 223386 RVA: 0x00CE9B67 File Offset: 0x00CE7D67
+		// Token: 0x0602B7E0 RID: 178144 RVA: 0x00C389EF File Offset: 0x00C36BEF
 		private NetworkDetectionSelectServerItem OnItemCreate(ILoginServersData data, UUIItem uiItem, int index)
 		{
 			return new NetworkDetectionSelectServerItem();
 		}
 
-		// Token: 0x0603689B RID: 223387 RVA: 0x00CE9B6E File Offset: 0x00CE7D6E
+		// Token: 0x0602B7E1 RID: 178145 RVA: 0x00C389F6 File Offset: 0x00C36BF6
 		private void OnClickExitBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603689C RID: 223388 RVA: 0x00CE9B78 File Offset: 0x00CE7D78
+		// Token: 0x0602B7E2 RID: 178146 RVA: 0x00C38A00 File Offset: 0x00C36C00
 		private void OnClickComfirmBtn()
 		{
 			ILoginServersData currentUiSelectSeverData = NetworkDetectionModel.Instance.CurrentUiSelectSeverData;
@@ -81,17 +81,17 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603689D RID: 223389 RVA: 0x00CE9BAF File Offset: 0x00CE7DAF
+		// Token: 0x0602B7E3 RID: 178147 RVA: 0x00C38A37 File Offset: 0x00C36C37
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x0603689E RID: 223390 RVA: 0x00CE9BB1 File Offset: 0x00CE7DB1
+		// Token: 0x0602B7E4 RID: 178148 RVA: 0x00C38A39 File Offset: 0x00C36C39
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x0603689F RID: 223391 RVA: 0x00CE9BB4 File Offset: 0x00CE7DB4
+		// Token: 0x0602B7E5 RID: 178149 RVA: 0x00C38A3C File Offset: 0x00C36C3C
 		private UniTask TryMoveToItem(List<ILoginServersData> dataList)
 		{
 			NetworkDetectionSelectServerView.<TryMoveToItem>d__10 <TryMoveToItem>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <TryMoveToItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368A0 RID: 223392 RVA: 0x00CE9C00 File Offset: 0x00CE7E00
+		// Token: 0x0602B7E6 RID: 178150 RVA: 0x00C38A88 File Offset: 0x00C36C88
 		private int GetRecommendedServerIndex(List<ILoginServersData> dataList)
 		{
 			int result = 0;
@@ -119,14 +119,14 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return result;
 		}
 
-		// Token: 0x060368A1 RID: 223393 RVA: 0x00CE9C3A File Offset: 0x00CE7E3A
+		// Token: 0x0602B7E7 RID: 178151 RVA: 0x00C38AC2 File Offset: 0x00C36CC2
 		protected override void OnBeforeDestroy()
 		{
 			this.ScrollView.ClearChildren();
 			this.ScrollView = null;
 		}
 
-		// Token: 0x0401CD5F RID: 118111
+		// Token: 0x040177F3 RID: 96243
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,17 +136,17 @@ namespace CSharpScript.Game.Module.NetworkDetection
 		})]
 		private DynamicScrollView<NetworkDetectionSelectServerItem, NetworkDetectionSelectServerDynItem, ILoginServersData> ScrollView;
 
-		// Token: 0x0200B5C9 RID: 46537
+		// Token: 0x0200A002 RID: 40962
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04037116 RID: 225558
+			// Token: 0x04031B6E RID: 203630
 			ExitBtn,
-			// Token: 0x04037117 RID: 225559
+			// Token: 0x04031B6F RID: 203631
 			ComfirmBtn,
-			// Token: 0x04037118 RID: 225560
+			// Token: 0x04031B70 RID: 203632
 			ScrollView,
-			// Token: 0x04037119 RID: 225561
+			// Token: 0x04031B71 RID: 203633
 			ScrollItem
 		}
 	}

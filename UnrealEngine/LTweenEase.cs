@@ -4,70 +4,70 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200223E RID: 8766
+	// Token: 0x02000743 RID: 1859
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LTween.LTweenEase")]
 	public enum LTweenEase : byte
 	{
-		// Token: 0x04011C7E RID: 72830
+		// Token: 0x0400456D RID: 17773
 		Linear,
-		// Token: 0x04011C7F RID: 72831
+		// Token: 0x0400456E RID: 17774
 		InQuad,
-		// Token: 0x04011C80 RID: 72832
+		// Token: 0x0400456F RID: 17775
 		OutQuad,
-		// Token: 0x04011C81 RID: 72833
+		// Token: 0x04004570 RID: 17776
 		InOutQuad,
-		// Token: 0x04011C82 RID: 72834
+		// Token: 0x04004571 RID: 17777
 		InCubic,
-		// Token: 0x04011C83 RID: 72835
+		// Token: 0x04004572 RID: 17778
 		OutCubic,
-		// Token: 0x04011C84 RID: 72836
+		// Token: 0x04004573 RID: 17779
 		InOutCubic,
-		// Token: 0x04011C85 RID: 72837
+		// Token: 0x04004574 RID: 17780
 		InQuart,
-		// Token: 0x04011C86 RID: 72838
+		// Token: 0x04004575 RID: 17781
 		OutQuart,
-		// Token: 0x04011C87 RID: 72839
+		// Token: 0x04004576 RID: 17782
 		InOutQuart,
-		// Token: 0x04011C88 RID: 72840
+		// Token: 0x04004577 RID: 17783
 		InSine,
-		// Token: 0x04011C89 RID: 72841
+		// Token: 0x04004578 RID: 17784
 		OutSine,
-		// Token: 0x04011C8A RID: 72842
+		// Token: 0x04004579 RID: 17785
 		InOutSine,
-		// Token: 0x04011C8B RID: 72843
+		// Token: 0x0400457A RID: 17786
 		InExpo,
-		// Token: 0x04011C8C RID: 72844
+		// Token: 0x0400457B RID: 17787
 		OutExpo,
-		// Token: 0x04011C8D RID: 72845
+		// Token: 0x0400457C RID: 17788
 		InOutExpo,
-		// Token: 0x04011C8E RID: 72846
+		// Token: 0x0400457D RID: 17789
 		InCirc,
-		// Token: 0x04011C8F RID: 72847
+		// Token: 0x0400457E RID: 17790
 		OutCirc,
-		// Token: 0x04011C90 RID: 72848
+		// Token: 0x0400457F RID: 17791
 		InOutCirc,
-		// Token: 0x04011C91 RID: 72849
+		// Token: 0x04004580 RID: 17792
 		InElastic,
-		// Token: 0x04011C92 RID: 72850
+		// Token: 0x04004581 RID: 17793
 		OutElastic,
-		// Token: 0x04011C93 RID: 72851
+		// Token: 0x04004582 RID: 17794
 		InOutElastic,
-		// Token: 0x04011C94 RID: 72852
+		// Token: 0x04004583 RID: 17795
 		InBack,
-		// Token: 0x04011C95 RID: 72853
+		// Token: 0x04004584 RID: 17796
 		OutBack,
-		// Token: 0x04011C96 RID: 72854
+		// Token: 0x04004585 RID: 17797
 		InOutBack,
-		// Token: 0x04011C97 RID: 72855
+		// Token: 0x04004586 RID: 17798
 		InBounce,
-		// Token: 0x04011C98 RID: 72856
+		// Token: 0x04004587 RID: 17799
 		OutBounce,
-		// Token: 0x04011C99 RID: 72857
+		// Token: 0x04004588 RID: 17800
 		InOutBounce,
-		// Token: 0x04011C9A RID: 72858
+		// Token: 0x04004589 RID: 17801
 		CurveFloat,
-		// Token: 0x04011C9B RID: 72859
+		// Token: 0x0400458A RID: 17802
 		LTweenEase_MAX
 	}
 }

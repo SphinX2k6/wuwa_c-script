@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200094D RID: 2381
+	// Token: 0x0200093C RID: 2364
 	[NetMessage(EMessageId.LogoutNotify)]
 	public sealed class LogoutNotify : IMessage<LogoutNotify>, IMessage, IEquatable<LogoutNotify>, IDeepCloneable<LogoutNotify>, IBufferMessage
 	{
-		// Token: 0x0600D1E6 RID: 53734 RVA: 0x001EEFE0 File Offset: 0x001ED1E0
+		// Token: 0x0600D0CC RID: 53452 RVA: 0x001ECDF8 File Offset: 0x001EAFF8
 		[NullableContext(1)]
 		public static LogoutNotify Create()
 		{
 			return new LogoutNotify();
 		}
 
-		// Token: 0x17002A7B RID: 10875
-		// (get) Token: 0x0600D1E7 RID: 53735 RVA: 0x001EEFE7 File Offset: 0x001ED1E7
+		// Token: 0x17002A3D RID: 10813
+		// (get) Token: 0x0600D0CD RID: 53453 RVA: 0x001ECDFF File Offset: 0x001EAFFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A7C RID: 10876
-		// (get) Token: 0x0600D1E8 RID: 53736 RVA: 0x001EEFEA File Offset: 0x001ED1EA
+		// Token: 0x17002A3E RID: 10814
+		// (get) Token: 0x0600D0CE RID: 53454 RVA: 0x001ECE02 File Offset: 0x001EB002
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D1E9 RID: 53737 RVA: 0x001EEFF1 File Offset: 0x001ED1F1
+		// Token: 0x0600D0CF RID: 53455 RVA: 0x001ECE09 File Offset: 0x001EB009
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogoutNotify()
 		{
 		}
 
-		// Token: 0x0600D1EA RID: 53738 RVA: 0x001EEFFC File Offset: 0x001ED1FC
+		// Token: 0x0600D0D0 RID: 53456 RVA: 0x001ECE14 File Offset: 0x001EB014
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogoutNotify(LogoutNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D1EB RID: 53739 RVA: 0x001EF054 File Offset: 0x001ED254
+		// Token: 0x0600D0D1 RID: 53457 RVA: 0x001ECE6C File Offset: 0x001EB06C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogoutNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new LogoutNotify(this);
 		}
 
-		// Token: 0x17002A7D RID: 10877
-		// (get) Token: 0x0600D1EC RID: 53740 RVA: 0x001EF05C File Offset: 0x001ED25C
-		// (set) Token: 0x0600D1ED RID: 53741 RVA: 0x001EF064 File Offset: 0x001ED264
+		// Token: 0x17002A3F RID: 10815
+		// (get) Token: 0x0600D0D2 RID: 53458 RVA: 0x001ECE74 File Offset: 0x001EB074
+		// (set) Token: 0x0600D0D3 RID: 53459 RVA: 0x001ECE7C File Offset: 0x001EB07C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A7E RID: 10878
-		// (get) Token: 0x0600D1EE RID: 53742 RVA: 0x001EF06D File Offset: 0x001ED26D
-		// (set) Token: 0x0600D1EF RID: 53743 RVA: 0x001EF075 File Offset: 0x001ED275
+		// Token: 0x17002A40 RID: 10816
+		// (get) Token: 0x0600D0D4 RID: 53460 RVA: 0x001ECE85 File Offset: 0x001EB085
+		// (set) Token: 0x0600D0D5 RID: 53461 RVA: 0x001ECE8D File Offset: 0x001EB08D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LogoutReason
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A7F RID: 10879
-		// (get) Token: 0x0600D1F0 RID: 53744 RVA: 0x001EF07E File Offset: 0x001ED27E
-		// (set) Token: 0x0600D1F1 RID: 53745 RVA: 0x001EF086 File Offset: 0x001ED286
+		// Token: 0x17002A41 RID: 10817
+		// (get) Token: 0x0600D0D6 RID: 53462 RVA: 0x001ECE96 File Offset: 0x001EB096
+		// (set) Token: 0x0600D0D7 RID: 53463 RVA: 0x001ECE9E File Offset: 0x001EB09E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanLogoutInfo BanInfo
@@ -119,7 +119,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D1F2 RID: 53746 RVA: 0x001EF08F File Offset: 0x001ED28F
+		// Token: 0x0600D0D8 RID: 53464 RVA: 0x001ECEA7 File Offset: 0x001EB0A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			return this.Equals(other as LogoutNotify);
 		}
 
-		// Token: 0x0600D1F3 RID: 53747 RVA: 0x001EF0A0 File Offset: 0x001ED2A0
+		// Token: 0x0600D0D9 RID: 53465 RVA: 0x001ECEB8 File Offset: 0x001EB0B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LogoutNotify other)
@@ -135,7 +135,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && this.LogoutReason == other.LogoutReason && object.Equals(this.BanInfo, other.BanInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D1F4 RID: 53748 RVA: 0x001EF100 File Offset: 0x001ED300
+		// Token: 0x0600D0DA RID: 53466 RVA: 0x001ECF18 File Offset: 0x001EB118
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D1F5 RID: 53749 RVA: 0x001EF174 File Offset: 0x001ED374
+		// Token: 0x0600D0DB RID: 53467 RVA: 0x001ECF8C File Offset: 0x001EB18C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D1F6 RID: 53750 RVA: 0x001EF181 File Offset: 0x001ED381
+		// Token: 0x0600D0DC RID: 53468 RVA: 0x001ECF99 File Offset: 0x001EB199
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -176,7 +176,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D1F7 RID: 53751 RVA: 0x001EF18C File Offset: 0x001ED38C
+		// Token: 0x0600D0DD RID: 53469 RVA: 0x001ECFA4 File Offset: 0x001EB1A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D1F8 RID: 53752 RVA: 0x001EF200 File Offset: 0x001ED400
+		// Token: 0x0600D0DE RID: 53470 RVA: 0x001ED018 File Offset: 0x001EB218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D1F9 RID: 53753 RVA: 0x001EF270 File Offset: 0x001ED470
+		// Token: 0x0600D0DF RID: 53471 RVA: 0x001ED088 File Offset: 0x001EB288
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LogoutNotify other)
@@ -255,7 +255,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D1FA RID: 53754 RVA: 0x001EF2EC File Offset: 0x001ED4EC
+		// Token: 0x0600D0E0 RID: 53472 RVA: 0x001ED104 File Offset: 0x001EB304
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -263,7 +263,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D1FB RID: 53755 RVA: 0x001EF2F8 File Offset: 0x001ED4F8
+		// Token: 0x0600D0E1 RID: 53473 RVA: 0x001ED110 File Offset: 0x001EB310
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -304,25 +304,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400585D RID: 22621
+		// Token: 0x04005866 RID: 22630
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400585E RID: 22622
+		// Token: 0x04005867 RID: 22631
 		public const int CodeFieldNumber = 1;
 
-		// Token: 0x0400585F RID: 22623
+		// Token: 0x04005868 RID: 22632
 		private ErrorCode code_;
 
-		// Token: 0x04005860 RID: 22624
+		// Token: 0x04005869 RID: 22633
 		public const int LogoutReasonFieldNumber = 2;
 
-		// Token: 0x04005861 RID: 22625
+		// Token: 0x0400586A RID: 22634
 		private int logoutReason_;
 
-		// Token: 0x04005862 RID: 22626
+		// Token: 0x0400586B RID: 22635
 		public const int BanInfoFieldNumber = 3;
 
-		// Token: 0x04005863 RID: 22627
+		// Token: 0x0400586C RID: 22636
 		private BanLogoutInfo banInfo_;
 	}
 }

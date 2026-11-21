@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F7B RID: 20347
+	// Token: 0x02003F44 RID: 16196
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackAimTargetSelector : QuickHackTargetSelector
 	{
-		// Token: 0x060341B8 RID: 213432 RVA: 0x00C3A410 File Offset: 0x00C38610
+		// Token: 0x06029026 RID: 167974 RVA: 0x00B83BBC File Offset: 0x00B81DBC
 		public override void Init(int selectRange, int selectScreenRadius)
 		{
 			base.Init(selectRange, selectScreenRadius);
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.LineElement = utraceLineElement;
 		}
 
-		// Token: 0x060341B9 RID: 213433 RVA: 0x00C3A492 File Offset: 0x00C38692
+		// Token: 0x06029027 RID: 167975 RVA: 0x00B83C3E File Offset: 0x00B81E3E
 		public override void Clear()
 		{
 			this.LineElement = null;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.OnScreenTargetInfo = null;
 		}
 
-		// Token: 0x060341BA RID: 213434 RVA: 0x00C3A4C0 File Offset: 0x00C386C0
+		// Token: 0x06029028 RID: 167976 RVA: 0x00B83C6C File Offset: 0x00B81E6C
 		public override bool UpdateTargetInfo(float delta)
 		{
 			if (this.LockTargetInfo == null)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return false;
 		}
 
-		// Token: 0x060341BB RID: 213435 RVA: 0x00C3A588 File Offset: 0x00C38788
+		// Token: 0x06029029 RID: 167977 RVA: 0x00B83D34 File Offset: 0x00B81F34
 		private void UpdatePendingTarget()
 		{
 			QuickHackAimTargetSelector.TraceInfo traceInfo = null;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.PendingLockTarget = pendingLockTarget;
 		}
 
-		// Token: 0x060341BC RID: 213436 RVA: 0x00C3A86C File Offset: 0x00C38A6C
+		// Token: 0x0602902A RID: 167978 RVA: 0x00B84018 File Offset: 0x00B82218
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return list;
 		}
 
-		// Token: 0x060341BD RID: 213437 RVA: 0x00C3A9C8 File Offset: 0x00C38BC8
+		// Token: 0x0602902B RID: 167979 RVA: 0x00B84174 File Offset: 0x00B82374
 		[return: Nullable(2)]
 		private QuickHackAimTargetSelector.TraceInfo LineTrace(Vector start, Vector startOffsetDirect, Vector endOffset)
 		{
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return null;
 		}
 
-		// Token: 0x060341BE RID: 213438 RVA: 0x00C3AAE4 File Offset: 0x00C38CE4
+		// Token: 0x0602902C RID: 167980 RVA: 0x00B84290 File Offset: 0x00B82490
 		private bool UpdateCurrentTarget()
 		{
 			EntityHandle pendingLockTarget = this.PendingLockTarget;
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x060341BF RID: 213439 RVA: 0x00C3ABB0 File Offset: 0x00C38DB0
+		// Token: 0x0602902D RID: 167981 RVA: 0x00B8435C File Offset: 0x00B8255C
 		private bool ClearCurrentTarget()
 		{
 			if (this.Targets.Count <= 0)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x060341C0 RID: 213440 RVA: 0x00C3ABF0 File Offset: 0x00C38DF0
+		// Token: 0x0602902E RID: 167982 RVA: 0x00B8439C File Offset: 0x00B8259C
 		public override IQuickHackLockTargetInfo GetLockTargetInfo()
 		{
 			if (this.LockTargetInfo == null)
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return this.LockTargetInfo;
 		}
 
-		// Token: 0x060341C1 RID: 213441 RVA: 0x00C3AC34 File Offset: 0x00C38E34
+		// Token: 0x0602902F RID: 167983 RVA: 0x00B843E0 File Offset: 0x00B825E0
 		public override IQuickHackOnScreenTargetInfo GetOnScreenTargetInfo()
 		{
 			if (this.OnScreenTargetInfo == null)
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return this.OnScreenTargetInfo;
 		}
 
-		// Token: 0x060341C2 RID: 213442 RVA: 0x00C3AC88 File Offset: 0x00C38E88
+		// Token: 0x06029030 RID: 167984 RVA: 0x00B84434 File Offset: 0x00B82634
 		private bool CheckEntityValid(EntityHandle entityHandle)
 		{
 			if (!entityHandle.IsInit)
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return component3 == null || !component3.IsDead();
 		}
 
-		// Token: 0x060341C3 RID: 213443 RVA: 0x00C3AD38 File Offset: 0x00C38F38
+		// Token: 0x06029031 RID: 167985 RVA: 0x00B844E4 File Offset: 0x00B826E4
 		private bool CheckEntityRendered(EntityHandle entityHandle)
 		{
 			WorldEntity entity = entityHandle.Entity;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return flag2.GetValueOrDefault();
 		}
 
-		// Token: 0x060341C4 RID: 213444 RVA: 0x00C3ADBC File Offset: 0x00C38FBC
+		// Token: 0x06029032 RID: 167986 RVA: 0x00B84568 File Offset: 0x00B82768
 		private FVectorDouble GetEntityLocation(EntityHandle entityHandle)
 		{
 			SceneItemActorComponent component = entityHandle.Entity.GetComponent<SceneItemActorComponent>();
@@ -378,80 +378,80 @@ namespace CSharpScript.Game.Module.QuickHack
 			return entityHandle.Entity.GetComponent<BaseActorComponent>().ActorLocation;
 		}
 
-		// Token: 0x0401BB48 RID: 113480
+		// Token: 0x0401651D RID: 91421
 		private const int TRACE_INTERVAL = 200;
 
-		// Token: 0x0401BB49 RID: 113481
+		// Token: 0x0401651E RID: 91422
 		private const int TRACE_RADIUS = 22;
 
-		// Token: 0x0401BB4A RID: 113482
+		// Token: 0x0401651F RID: 91423
 		private const int TRACE_DISTANCE_MAX = 2000;
 
-		// Token: 0x0401BB4B RID: 113483
+		// Token: 0x04016520 RID: 91424
 		private const string IGNORE_HACK_TRACE = "IgnoreHackTrace";
 
-		// Token: 0x0401BB4C RID: 113484
+		// Token: 0x04016521 RID: 91425
 		private readonly EEntityTypeQuery EntityTypeQuery = EEntityTypeQuery.NormalEntity | EEntityTypeQuery.NormalEntityAlwaysTick | EEntityTypeQuery.NormalEntityAlwaysTickWhitoutNotRenderedGroup | EEntityTypeQuery.MoveSceneItem | EEntityTypeQuery.PasserbyNPC | EEntityTypeQuery.Boss;
 
-		// Token: 0x0401BB4D RID: 113485
+		// Token: 0x04016522 RID: 91426
 		private readonly List<EntityHandle> EntitiesInRange = new List<EntityHandle>();
 
-		// Token: 0x0401BB4E RID: 113486
+		// Token: 0x04016523 RID: 91427
 		private readonly List<EntityHandle> Targets = new List<EntityHandle>();
 
-		// Token: 0x0401BB4F RID: 113487
+		// Token: 0x04016524 RID: 91428
 		[Nullable(2)]
 		private IQuickHackOnScreenTargetInfo OnScreenTargetInfo;
 
-		// Token: 0x0401BB50 RID: 113488
+		// Token: 0x04016525 RID: 91429
 		[Nullable(2)]
 		private IQuickHackLockTargetInfo LockTargetInfo;
 
-		// Token: 0x0401BB51 RID: 113489
+		// Token: 0x04016526 RID: 91430
 		[Nullable(2)]
 		private UTraceLineElement LineElement;
 
-		// Token: 0x0401BB52 RID: 113490
+		// Token: 0x04016527 RID: 91431
 		private float TraceInterval;
 
-		// Token: 0x0401BB53 RID: 113491
+		// Token: 0x04016528 RID: 91432
 		private bool NeedUpdateCurrentTarget;
 
-		// Token: 0x0401BB54 RID: 113492
+		// Token: 0x04016529 RID: 91433
 		[Nullable(2)]
 		private EntityHandle PendingLockTarget;
 
-		// Token: 0x0401BB55 RID: 113493
+		// Token: 0x0401652A RID: 91434
 		private readonly Vector2D ScreenPos = Vector2D.Create();
 
-		// Token: 0x0401BB56 RID: 113494
+		// Token: 0x0401652B RID: 91435
 		private readonly Vector CameraLocation = Vector.Create();
 
-		// Token: 0x0401BB57 RID: 113495
+		// Token: 0x0401652C RID: 91436
 		private readonly Vector StartLocation = Vector.Create();
 
-		// Token: 0x0401BB58 RID: 113496
+		// Token: 0x0401652D RID: 91437
 		private readonly Vector StartOffset = Vector.Create();
 
-		// Token: 0x0401BB59 RID: 113497
+		// Token: 0x0401652E RID: 91438
 		private readonly Vector EndLocation = Vector.Create();
 
-		// Token: 0x0401BB5A RID: 113498
+		// Token: 0x0401652F RID: 91439
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0200B098 RID: 45208
+		// Token: 0x02009AC8 RID: 39624
 		[Nullable(0)]
 		private class TraceInfo
 		{
-			// Token: 0x0604E413 RID: 320531 RVA: 0x014C077E File Offset: 0x014BE97E
+			// Token: 0x06044A03 RID: 281091 RVA: 0x01479896 File Offset: 0x01477A96
 			public TraceInfo(AActor actor, float distance)
 			{
 			}
 
-			// Token: 0x04035976 RID: 219510
+			// Token: 0x040303A1 RID: 197537
 			public readonly AActor Actor = actor;
 
-			// Token: 0x04035977 RID: 219511
+			// Token: 0x040303A2 RID: 197538
 			public readonly float Distance = distance;
 		}
 	}

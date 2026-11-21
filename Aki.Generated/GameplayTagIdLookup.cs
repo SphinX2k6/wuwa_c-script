@@ -10,7 +10,7 @@ using Aki.Common.Proxy;
 [Nullable(0)]
 public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnumerable<KeyValuePair<string, int>>, IEnumerable, IReadOnlyCollection<KeyValuePair<string, int>>
 {
-	// Token: 0x06000014 RID: 20 RVA: 0x0005A4B5 File Offset: 0x000586B5
+	// Token: 0x06000014 RID: 20 RVA: 0x0005DD31 File Offset: 0x0005BF31
 	public GameplayTagIdLookup(GameplayTagRuntimeTable table, bool allowOriginalNameRemap)
 	{
 	}
@@ -35,7 +35,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 		}
 	}
 
-	// Token: 0x06000016 RID: 22 RVA: 0x0005A528 File Offset: 0x00058728
+	// Token: 0x06000016 RID: 22 RVA: 0x0005DDA4 File Offset: 0x0005BFA4
 	public bool TryGetValue(string key, out int value)
 	{
 		if (this.NameToTagIdCache.TryGetValue(key, out value))
@@ -56,7 +56,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 		return false;
 	}
 
-	// Token: 0x06000017 RID: 23 RVA: 0x0005A58C File Offset: 0x0005878C
+	// Token: 0x06000017 RID: 23 RVA: 0x0005DE08 File Offset: 0x0005C008
 	public bool ContainsKey(string key)
 	{
 		int num;
@@ -64,7 +64,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 	}
 
 	// Token: 0x17000009 RID: 9
-	// (get) Token: 0x06000018 RID: 24 RVA: 0x0005A5A2 File Offset: 0x000587A2
+	// (get) Token: 0x06000018 RID: 24 RVA: 0x0005DE1E File Offset: 0x0005C01E
 	public int Count
 	{
 		get
@@ -74,7 +74,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 	}
 
 	// Token: 0x1700000A RID: 10
-	// (get) Token: 0x06000019 RID: 25 RVA: 0x0005A5B0 File Offset: 0x000587B0
+	// (get) Token: 0x06000019 RID: 25 RVA: 0x0005DE2C File Offset: 0x0005C02C
 	public IEnumerable<int> Values
 	{
 		get
@@ -85,7 +85,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 	}
 
 	// Token: 0x1700000B RID: 11
-	// (get) Token: 0x0600001A RID: 26 RVA: 0x0005A5E0 File Offset: 0x000587E0
+	// (get) Token: 0x0600001A RID: 26 RVA: 0x0005DE5C File Offset: 0x0005C05C
 	public IEnumerable<string> Keys
 	{
 		get
@@ -95,7 +95,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 		}
 	}
 
-	// Token: 0x0600001B RID: 27 RVA: 0x0005A610 File Offset: 0x00058810
+	// Token: 0x0600001B RID: 27 RVA: 0x0005DE8C File Offset: 0x0005C08C
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -108,7 +108,7 @@ public sealed class GameplayTagIdLookup : IReadOnlyDictionary<string, int>, IEnu
 		return Enumerable.Empty<KeyValuePair<string, int>>().GetEnumerator();
 	}
 
-	// Token: 0x0600001C RID: 28 RVA: 0x0005A643 File Offset: 0x00058843
+	// Token: 0x0600001C RID: 28 RVA: 0x0005DEBF File Offset: 0x0005C0BF
 	IEnumerator IEnumerable.GetEnumerator()
 	{
 		return this.GetEnumerator();

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020022FC RID: 8956
+	// Token: 0x0200075D RID: 1885
 	public sealed class FOnRequestContentSucceeded : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06021F15 RID: 139029 RVA: 0x0032322E File Offset: 0x0032142E
+		// Token: 0x0600A449 RID: 42057 RVA: 0x000F294E File Offset: 0x000F0B4E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnRequestContentSucceeded.StaticFunctionPtr();
 		}
 
-		// Token: 0x06021F16 RID: 139030 RVA: 0x0032323A File Offset: 0x0032143A
+		// Token: 0x0600A44A RID: 42058 RVA: 0x000F295A File Offset: 0x000F0B5A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnRequestContentSucceeded._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FOnRequestContentSucceeded._FunctionPtr;
 		}
 
-		// Token: 0x06021F17 RID: 139031 RVA: 0x0032325D File Offset: 0x0032145D
+		// Token: 0x0600A44B RID: 42059 RVA: 0x000F297D File Offset: 0x000F0B7D
 		public FOnRequestContentSucceeded()
 		{
 		}
 
-		// Token: 0x06021F18 RID: 139032 RVA: 0x00323265 File Offset: 0x00321465
+		// Token: 0x0600A44C RID: 42060 RVA: 0x000F2985 File Offset: 0x000F0B85
 		[NullableContext(2)]
 		public FOnRequestContentSucceeded(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021F19 RID: 139033 RVA: 0x0032326F File Offset: 0x0032146F
+		// Token: 0x0600A44D RID: 42061 RVA: 0x000F298F File Offset: 0x000F0B8F
 		public FOnRequestContentSucceeded(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06021F1A RID: 139034 RVA: 0x0032327A File Offset: 0x0032147A
+		// Token: 0x0600A44E RID: 42062 RVA: 0x000F299A File Offset: 0x000F0B9A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UMobilePendingContent>) ?? ((Action<UMobilePendingContent>)Delegate.CreateDelegate(typeof(Action<UMobilePendingContent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06021F1B RID: 139035 RVA: 0x003232AC File Offset: 0x003214AC
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600A44F RID: 42063 RVA: 0x000F29CC File Offset: 0x000F0BCC
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnRequestContentSucceeded.RegisterId);
 		}
 
-		// Token: 0x06021F1C RID: 139036 RVA: 0x003232E8 File Offset: 0x003214E8
+		// Token: 0x0600A450 RID: 42064 RVA: 0x000F2A08 File Offset: 0x000F0C08
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UMobilePendingContent MobilePendingContent)
 		{
 			FOnRequestContentSucceeded.__FOnRequestContentSucceeded_DelegateParams* ptr = stackalloc FOnRequestContentSucceeded.__FOnRequestContentSucceeded_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnRequestContentSucceeded.__FOnRequestContentSucceeded_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06021F1D RID: 139037 RVA: 0x00323334 File Offset: 0x00321534
+		// Token: 0x0600A451 RID: 42065 RVA: 0x000F2A54 File Offset: 0x000F0C54
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UMobilePendingContent> action = target as Action<UMobilePendingContent>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x040121AD RID: 74157
+		// Token: 0x04004608 RID: 17928
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040121AE RID: 74158
+		// Token: 0x04004609 RID: 17929
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MobilePatchingUtils.OnRequestContentSucceeded__DelegateSignature";
 
-		// Token: 0x040121AF RID: 74159
+		// Token: 0x0400460A RID: 17930
 		private static int RegisterId;
 
-		// Token: 0x02003643 RID: 13891
+		// Token: 0x02000F49 RID: 3913
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnRequestContentSucceeded_DelegateParams
+		private ref struct __FOnRequestContentSucceeded_DelegateParams
 		{
-			// Token: 0x0401770B RID: 96011
+			// Token: 0x0400631F RID: 25375
 			[FieldOffset(0)]
 			public IntPtr MobilePendingContent;
 		}
 
-		// Token: 0x02003644 RID: 13892
+		// Token: 0x02000F4A RID: 3914
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401770C RID: 96012
+			// Token: 0x04006320 RID: 25376
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

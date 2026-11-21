@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EEA RID: 24298
+	// Token: 0x02004ED1 RID: 20177
 	internal enum EComponent
 	{
-		// Token: 0x04020448 RID: 132168
+		// Token: 0x0401AF1A RID: 110362
 		ItemScoreLevelPanel,
-		// Token: 0x04020449 RID: 132169
+		// Token: 0x0401AF1B RID: 110363
 		TextureScoreLevelBg,
-		// Token: 0x0402044A RID: 132170
+		// Token: 0x0401AF1C RID: 110364
 		TextureScoreLevelIcon,
-		// Token: 0x0402044B RID: 132171
+		// Token: 0x0401AF1D RID: 110365
 		TextBossRound,
-		// Token: 0x0402044C RID: 132172
+		// Token: 0x0401AF1E RID: 110366
 		SpriteBossIcon,
-		// Token: 0x0402044D RID: 132173
+		// Token: 0x0401AF1F RID: 110367
 		TextProgress,
-		// Token: 0x0402044E RID: 132174
+		// Token: 0x0401AF20 RID: 110368
 		SpriteScoreIcon,
-		// Token: 0x0402044F RID: 132175
+		// Token: 0x0401AF21 RID: 110369
 		TextScore
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041D3 RID: 16851
+	// Token: 0x0200462C RID: 17964
 	public class ITetrisSingleIndexGridT
 	{
-		// Token: 0x1700777A RID: 30586
-		// (get) Token: 0x06018D32 RID: 101682 RVA: 0x0039262B File Offset: 0x0039082B
-		// (set) Token: 0x06018D33 RID: 101683 RVA: 0x00392633 File Offset: 0x00390833
+		// Token: 0x17007DA6 RID: 32166
+		// (get) Token: 0x0601A488 RID: 107656 RVA: 0x003BDA7F File Offset: 0x003BBC7F
+		// (set) Token: 0x0601A489 RID: 107657 RVA: 0x003BDA87 File Offset: 0x003BBC87
 		public int Index { get; set; }
 
-		// Token: 0x1700777B RID: 30587
-		// (get) Token: 0x06018D34 RID: 101684 RVA: 0x0039263C File Offset: 0x0039083C
-		// (set) Token: 0x06018D35 RID: 101685 RVA: 0x00392644 File Offset: 0x00390844
+		// Token: 0x17007DA7 RID: 32167
+		// (get) Token: 0x0601A48A RID: 107658 RVA: 0x003BDA90 File Offset: 0x003BBC90
+		// (set) Token: 0x0601A48B RID: 107659 RVA: 0x003BDA98 File Offset: 0x003BBC98
 		public ITetrisSingleGridT Value { get; set; }
 
-		// Token: 0x06018D36 RID: 101686 RVA: 0x0039264D File Offset: 0x0039084D
+		// Token: 0x0601A48C RID: 107660 RVA: 0x003BDAA1 File Offset: 0x003BBCA1
 		public ITetrisSingleIndexGridT()
 		{
 			this.Index = 0;

@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02001245 RID: 4677
+// Token: 0x020006F9 RID: 1785
 public class DangoMonopolyRollDiceViewParam
 {
-	// Token: 0x040039D1 RID: 14801
+	// Token: 0x04003A69 RID: 14953
 	public int BoardId;
 
-	// Token: 0x040039D2 RID: 14802
+	// Token: 0x04003A6A RID: 14954
 	public int DiceResult;
 
-	// Token: 0x040039D3 RID: 14803
+	// Token: 0x04003A6B RID: 14955
 	public int? TriggerBuffId;
 
-	// Token: 0x040039D4 RID: 14804
+	// Token: 0x04003A6C RID: 14956
 	public int? TriggerBuffResult;
 }

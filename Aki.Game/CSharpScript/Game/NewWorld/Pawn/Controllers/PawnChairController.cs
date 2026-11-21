@@ -4,31 +4,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 {
-	// Token: 0x02007064 RID: 28772
+	// Token: 0x020061E5 RID: 25061
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PawnChairController : SubEntityInteractLogicController
 	{
-		// Token: 0x0604606B RID: 286827 RVA: 0x0117493F File Offset: 0x01172B3F
+		// Token: 0x0603C266 RID: 246374 RVA: 0x0111E501 File Offset: 0x0111C701
 		public PawnChairController(CreatureDataComponent creatureDataComp) : base(creatureDataComp)
 		{
 		}
 
-		// Token: 0x0604606C RID: 286828 RVA: 0x01174950 File Offset: 0x01172B50
+		// Token: 0x0603C267 RID: 246375 RVA: 0x0111E512 File Offset: 0x0111C712
 		public override bool Possess(Entity masterEntity, bool force = false)
 		{
 			this.MasterEntity = masterEntity;
 			return true;
 		}
 
-		// Token: 0x0604606D RID: 286829 RVA: 0x0117495A File Offset: 0x01172B5A
+		// Token: 0x0603C268 RID: 246376 RVA: 0x0111E51C File Offset: 0x0111C71C
 		public override bool UnPossess(Entity masterEntity)
 		{
 			this.MasterEntity = null;
 			return true;
 		}
 
-		// Token: 0x0604606E RID: 286830 RVA: 0x01174964 File Offset: 0x01172B64
+		// Token: 0x0603C269 RID: 246377 RVA: 0x0111E528 File Offset: 0x0111C728
 		public Vector GetSitLocation()
 		{
 			Vector tmpVector = SubEntityInteractLogicController.TmpVector;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return tmpVector;
 		}
 
-		// Token: 0x0604606F RID: 286831 RVA: 0x01174A10 File Offset: 0x01172C10
+		// Token: 0x0603C26A RID: 246378 RVA: 0x0111E5D4 File Offset: 0x0111C7D4
 		public Vector GetForwardDirection()
 		{
 			return this.Entity.GetComponent<BaseActorComponent>().ActorRightProxy;
 		}
 
-		// Token: 0x06046070 RID: 286832 RVA: 0x01174A24 File Offset: 0x01172C24
+		// Token: 0x0603C26B RID: 246379 RVA: 0x0111E5E8 File Offset: 0x0111C7E8
 		private unsafe void IgnoreChairActorsCollision(bool bCollision)
 		{
 			if (this.RealSceneItemActorComp == null || this.MasterEntity == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			}
 		}
 
-		// Token: 0x06046071 RID: 286833 RVA: 0x01174BAD File Offset: 0x01172DAD
+		// Token: 0x0603C26C RID: 246380 RVA: 0x0111E771 File Offset: 0x0111C971
 		public void ResetCollision()
 		{
 			if (this.Entity.GetComponent<SceneItemActorComponent>() == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.IgnoreChairActorsCollision(false);
 		}
 
-		// Token: 0x06046072 RID: 286834 RVA: 0x01174BC4 File Offset: 0x01172DC4
+		// Token: 0x0603C26D RID: 246381 RVA: 0x0111E788 File Offset: 0x0111C988
 		public void IgnoreCollision()
 		{
 			if (this.Entity.GetComponent<SceneItemActorComponent>() == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			this.IgnoreChairActorsCollision(true);
 		}
 
-		// Token: 0x06046073 RID: 286835 RVA: 0x01174BDC File Offset: 0x01172DDC
+		// Token: 0x0603C26E RID: 246382 RVA: 0x0111E7A0 File Offset: 0x0111C9A0
 		public bool IsSceneInteractionLoadCompleted()
 		{
 			SceneItemActorComponent component = this.Entity.GetComponent<SceneItemActorComponent>();
@@ -148,10 +148,10 @@ namespace CSharpScript.Game.NewWorld.Pawn.Controllers
 			return this.RealSceneItemActorComp != null && this.RealSceneItemActorComp.GetIsSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x04024A90 RID: 150160
+		// Token: 0x0401FD46 RID: 130374
 		private readonly int SitPointOffset = 40;
 
-		// Token: 0x04024A91 RID: 150161
+		// Token: 0x0401FD47 RID: 130375
 		[Nullable(2)]
 		private SceneItemActorComponent RealSceneItemActorComp;
 	}

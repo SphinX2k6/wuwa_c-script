@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200062E RID: 1582
+	// Token: 0x020006CB RID: 1739
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IProjectileMotion : IThrowMotion
 	{
-		// Token: 0x060021CA RID: 8650 RVA: 0x0005D404 File Offset: 0x0005B604
-		[NullableContext(1)]
+		// Token: 0x060024D0 RID: 9424 RVA: 0x00064118 File Offset: 0x00062318
+		[NullableContext(0)]
 		private IProjectileMotion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060021CB RID: 8651 RVA: 0x0005D43C File Offset: 0x0005B63C
-		[NullableContext(1)]
+		// Token: 0x060024D1 RID: 9425 RVA: 0x00064150 File Offset: 0x00062350
+		[NullableContext(0)]
 		public static IProjectileMotion Create([Nullable(2)] IProjectileMotion instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021CC RID: 8652 RVA: 0x0005D44F File Offset: 0x0005B64F
-		[NullableContext(1)]
+		// Token: 0x060024D2 RID: 9426 RVA: 0x00064163 File Offset: 0x00062363
+		[NullableContext(0)]
 		public static IProjectileMotion CreateFromSetValue([Nullable(2)] IProjectileMotion_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021CD RID: 8653 RVA: 0x0005D464 File Offset: 0x0005B664
-		[NullableContext(1)]
+		// Token: 0x060024D3 RID: 9427 RVA: 0x00064178 File Offset: 0x00062378
+		[NullableContext(0)]
 		public new IProjectileMotion_SetValue ToSetValue()
 		{
 			return new IProjectileMotion_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008FF RID: 2303
-		// (get) Token: 0x060021CE RID: 8654 RVA: 0x0005D4B2 File Offset: 0x0005B6B2
-		// (set) Token: 0x060021CF RID: 8655 RVA: 0x0005D4DD File Offset: 0x0005B6DD
+		// Token: 0x170009B6 RID: 2486
+		// (get) Token: 0x060024D4 RID: 9428 RVA: 0x000641C6 File Offset: 0x000623C6
+		// (set) Token: 0x060024D5 RID: 9429 RVA: 0x000641F1 File Offset: 0x000623F1
 		public override EThrowMotion Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000900 RID: 2304
-		// (get) Token: 0x060021D0 RID: 8656 RVA: 0x0005D4EB File Offset: 0x0005B6EB
-		// (set) Token: 0x060021D1 RID: 8657 RVA: 0x0005D51A File Offset: 0x0005B71A
+		// Token: 0x170009B7 RID: 2487
+		// (get) Token: 0x060024D6 RID: 9430 RVA: 0x000641FF File Offset: 0x000623FF
+		// (set) Token: 0x060024D7 RID: 9431 RVA: 0x0006422E File Offset: 0x0006242E
 		public virtual float Velocity
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000901 RID: 2305
-		// (get) Token: 0x060021D2 RID: 8658 RVA: 0x0005D528 File Offset: 0x0005B728
-		// (set) Token: 0x060021D3 RID: 8659 RVA: 0x0005D557 File Offset: 0x0005B757
+		// Token: 0x170009B8 RID: 2488
+		// (get) Token: 0x060024D8 RID: 9432 RVA: 0x0006423C File Offset: 0x0006243C
+		// (set) Token: 0x060024D9 RID: 9433 RVA: 0x0006426B File Offset: 0x0006246B
 		public virtual float AngularVelocity
 		{
 			get
@@ -136,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000902 RID: 2306
-		// (get) Token: 0x060021D4 RID: 8660 RVA: 0x0005D565 File Offset: 0x0005B765
-		// (set) Token: 0x060021D5 RID: 8661 RVA: 0x0005D58C File Offset: 0x0005B78C
+		// Token: 0x170009B9 RID: 2489
+		// (get) Token: 0x060024DA RID: 9434 RVA: 0x00064279 File Offset: 0x00062479
+		// (set) Token: 0x060024DB RID: 9435 RVA: 0x000642A0 File Offset: 0x000624A0
 		public virtual string CameraShake
 		{
 			get
@@ -160,9 +160,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000903 RID: 2307
-		// (get) Token: 0x060021D6 RID: 8662 RVA: 0x0005D59C File Offset: 0x0005B79C
-		// (set) Token: 0x060021D7 RID: 8663 RVA: 0x0005D5FD File Offset: 0x0005B7FD
+		// Token: 0x170009BA RID: 2490
+		// (get) Token: 0x060024DC RID: 9436 RVA: 0x000642B0 File Offset: 0x000624B0
+		// (set) Token: 0x060024DD RID: 9437 RVA: 0x00064311 File Offset: 0x00062511
 		public virtual ISpeedCurveMotion MatchSpeedCurve
 		{
 			get
@@ -190,17 +190,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400178B RID: 6027
+		// Token: 0x0400197D RID: 6525
 		protected new IProjectileMotion FbInstance;
 
-		// Token: 0x0400178C RID: 6028
+		// Token: 0x0400197E RID: 6526
 		protected new IProjectileMotion_SetValue PocoInterface;
 
-		// Token: 0x0400178D RID: 6029
-		[Nullable(1)]
+		// Token: 0x0400197F RID: 6527
+		[Nullable(0)]
 		private ISpeedCurveMotion _MatchSpeedCurveCache;
 
-		// Token: 0x0400178E RID: 6030
+		// Token: 0x04001980 RID: 6528
 		private bool _MatchSpeedCurveInited;
 	}
 }

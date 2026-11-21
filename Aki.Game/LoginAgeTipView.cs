@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020020A6 RID: 8358
+// Token: 0x0200157D RID: 5501
 public class LoginAgeTipView : UiViewBase
 {
-	// Token: 0x060107DF RID: 67551 RVA: 0x00407237 File Offset: 0x00405437
+	// Token: 0x0600DC4E RID: 56398 RVA: 0x004138D7 File Offset: 0x00411AD7
 	[NullableContext(1)]
 	public LoginAgeTipView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060107E0 RID: 67552 RVA: 0x00407268 File Offset: 0x00405468
+	// Token: 0x0600DC4F RID: 56399 RVA: 0x00413908 File Offset: 0x00411B08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -41,7 +41,7 @@ public class LoginAgeTipView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060107E1 RID: 67553 RVA: 0x0040736C File Offset: 0x0040556C
+	// Token: 0x0600DC50 RID: 56400 RVA: 0x00413A0C File Offset: 0x00411C0C
 	protected override void OnStart()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -61,7 +61,7 @@ public class LoginAgeTipView : UiViewBase
 		this.UpdateTitle(type);
 	}
 
-	// Token: 0x060107E2 RID: 67554 RVA: 0x004073BC File Offset: 0x004055BC
+	// Token: 0x0600DC51 RID: 56401 RVA: 0x00413A5C File Offset: 0x00411C5C
 	private void UpdateShowData(LoginAgeTipView.ELoginShowType type)
 	{
 		switch (type)
@@ -97,7 +97,7 @@ public class LoginAgeTipView : UiViewBase
 		}
 	}
 
-	// Token: 0x060107E3 RID: 67555 RVA: 0x00407458 File Offset: 0x00405658
+	// Token: 0x0600DC52 RID: 56402 RVA: 0x00413AF8 File Offset: 0x00411CF8
 	[NullableContext(1)]
 	private void ShowAgreement(string content)
 	{
@@ -144,7 +144,7 @@ public class LoginAgeTipView : UiViewBase
 		}
 	}
 
-	// Token: 0x060107E4 RID: 67556 RVA: 0x004074FC File Offset: 0x004056FC
+	// Token: 0x0600DC53 RID: 56403 RVA: 0x00413B9C File Offset: 0x00411D9C
 	private void UpdateTitle(LoginAgeTipView.ELoginShowType type)
 	{
 		string id = null;
@@ -183,7 +183,7 @@ public class LoginAgeTipView : UiViewBase
 		text2.SetText(textById, true);
 	}
 
-	// Token: 0x040079FC RID: 31228
+	// Token: 0x04007AFB RID: 31483
 	[Nullable(1)]
 	private readonly Action CloseAgeTipBtnClickCallBack = delegate()
 	{
@@ -191,33 +191,33 @@ public class LoginAgeTipView : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.LoginAgeTipView, null);
 	};
 
-	// Token: 0x0200869E RID: 34462
+	// Token: 0x02007829 RID: 30761
 	public enum ELoginShowType
 	{
-		// Token: 0x0402BCB4 RID: 179380
+		// Token: 0x04026FD5 RID: 159701
 		AgeTip,
-		// Token: 0x0402BCB5 RID: 179381
+		// Token: 0x04026FD6 RID: 159702
 		UserAgreement,
-		// Token: 0x0402BCB6 RID: 179382
+		// Token: 0x04026FD7 RID: 159703
 		PrivacyAgreement,
-		// Token: 0x0402BCB7 RID: 179383
+		// Token: 0x04026FD8 RID: 159704
 		ChildPrivacyAgreement,
-		// Token: 0x0402BCB8 RID: 179384
+		// Token: 0x04026FD9 RID: 159705
 		LoginNotice
 	}
 
-	// Token: 0x0200869F RID: 34463
+	// Token: 0x0200782A RID: 30762
 	private enum ELoginAgeTipChildCom
 	{
-		// Token: 0x0402BCBA RID: 179386
+		// Token: 0x04026FDB RID: 159707
 		Text1,
-		// Token: 0x0402BCBB RID: 179387
+		// Token: 0x04026FDC RID: 159708
 		Text2,
-		// Token: 0x0402BCBC RID: 179388
+		// Token: 0x04026FDD RID: 159709
 		Text3,
-		// Token: 0x0402BCBD RID: 179389
+		// Token: 0x04026FDE RID: 159710
 		CloseBtn,
-		// Token: 0x0402BCBE RID: 179390
+		// Token: 0x04026FDF RID: 159711
 		Title
 	}
 }

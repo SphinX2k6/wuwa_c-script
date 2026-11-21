@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200772C RID: 30508
+	// Token: 0x02007F55 RID: 32597
 	public class TMoveOperationUnion
 	{
-		// Token: 0x1700E661 RID: 58977
-		// (get) Token: 0x06037718 RID: 227096 RVA: 0x00781B4E File Offset: 0x0077FD4E
-		// (set) Token: 0x06037719 RID: 227097 RVA: 0x00781B56 File Offset: 0x0077FD56
+		// Token: 0x1700F2B1 RID: 62129
+		// (get) Token: 0x0603AC53 RID: 240723 RVA: 0x007E6ADE File Offset: 0x007E4CDE
+		// (set) Token: 0x0603AC54 RID: 240724 RVA: 0x007E6AE6 File Offset: 0x007E4CE6
 		public TMoveOperation Type { get; set; }
 
-		// Token: 0x1700E662 RID: 58978
-		// (get) Token: 0x0603771A RID: 227098 RVA: 0x00781B5F File Offset: 0x0077FD5F
-		// (set) Token: 0x0603771B RID: 227099 RVA: 0x00781B67 File Offset: 0x0077FD67
+		// Token: 0x1700F2B2 RID: 62130
+		// (get) Token: 0x0603AC55 RID: 240725 RVA: 0x007E6AEF File Offset: 0x007E4CEF
+		// (set) Token: 0x0603AC56 RID: 240726 RVA: 0x007E6AF7 File Offset: 0x007E4CF7
 		public object Value { get; set; }
 
-		// Token: 0x0603771C RID: 227100 RVA: 0x00781B70 File Offset: 0x0077FD70
+		// Token: 0x0603AC57 RID: 240727 RVA: 0x007E6B00 File Offset: 0x007E4D00
 		public TMoveOperationUnion()
 		{
 			this.Type = TMoveOperation.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603771D RID: 227101 RVA: 0x00781B86 File Offset: 0x0077FD86
+		// Token: 0x0603AC58 RID: 240728 RVA: 0x007E6B16 File Offset: 0x007E4D16
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603771E RID: 227102 RVA: 0x00781B98 File Offset: 0x0077FD98
+		// Token: 0x0603AC59 RID: 240729 RVA: 0x007E6B28 File Offset: 0x007E4D28
 		public IDisableMoveOperationT AsIDisableMoveOperation()
 		{
 			return this.As<IDisableMoveOperationT>();
 		}
 
-		// Token: 0x0603771F RID: 227103 RVA: 0x00781BA0 File Offset: 0x0077FDA0
+		// Token: 0x0603AC5A RID: 240730 RVA: 0x007E6B30 File Offset: 0x007E4D30
 		public static TMoveOperationUnion FromIDisableMoveOperation(IDisableMoveOperationT _idisablemoveoperation)
 		{
 			return new TMoveOperationUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037720 RID: 227104 RVA: 0x00781BB5 File Offset: 0x0077FDB5
+		// Token: 0x0603AC5B RID: 240731 RVA: 0x007E6B45 File Offset: 0x007E4D45
 		public IEnableMoveOperationT AsIEnableMoveOperation()
 		{
 			return this.As<IEnableMoveOperationT>();
 		}
 
-		// Token: 0x06037721 RID: 227105 RVA: 0x00781BBD File Offset: 0x0077FDBD
+		// Token: 0x0603AC5C RID: 240732 RVA: 0x007E6B4D File Offset: 0x007E4D4D
 		public static TMoveOperationUnion FromIEnableMoveOperation(IEnableMoveOperationT _ienablemoveoperation)
 		{
 			return new TMoveOperationUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037722 RID: 227106 RVA: 0x00781BD4 File Offset: 0x0077FDD4
+		// Token: 0x0603AC5D RID: 240733 RVA: 0x007E6B64 File Offset: 0x007E4D64
 		public static int Pack(FlatBufferBuilder builder, TMoveOperationUnion _o)
 		{
 			TMoveOperation type = _o.Type;

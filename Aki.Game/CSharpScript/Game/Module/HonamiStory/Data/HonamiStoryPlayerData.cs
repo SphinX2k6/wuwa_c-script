@@ -5,18 +5,18 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.HonamiStory.Data
 {
-	// Token: 0x02005952 RID: 22866
+	// Token: 0x0200492B RID: 18731
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiStoryPlayerData
 	{
-		// Token: 0x0603A05B RID: 237659 RVA: 0x00DCAA39 File Offset: 0x00DC8C39
+		// Token: 0x0602EF7E RID: 192382 RVA: 0x00D19CED File Offset: 0x00D17EED
 		public static HonamiStoryPlayerData Create()
 		{
 			return new HonamiStoryPlayerData();
 		}
 
-		// Token: 0x0603A05C RID: 237660 RVA: 0x00DCAA40 File Offset: 0x00DC8C40
+		// Token: 0x0602EF7F RID: 192383 RVA: 0x00D19CF4 File Offset: 0x00D17EF4
 		public void SetLifeSupportLevel(int value)
 		{
 			if (this.LifeSupportLevelMap.Count == 0)
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.HonamiStory.Data
 			this.LifeSupportId = lifeSupport.Value.Id;
 		}
 
-		// Token: 0x0603A05D RID: 237661 RVA: 0x00DCAB0C File Offset: 0x00DC8D0C
+		// Token: 0x0602EF80 RID: 192384 RVA: 0x00D19DC0 File Offset: 0x00D17FC0
 		public int GetCurLevelId(int level)
 		{
 			return this.LifeSupportLevelMap.GetValueOrDefault(level, 0);
 		}
 
-		// Token: 0x0603A05E RID: 237662 RVA: 0x00DCAB1C File Offset: 0x00DC8D1C
+		// Token: 0x0602EF81 RID: 192385 RVA: 0x00D19DD0 File Offset: 0x00D17FD0
 		public int GetCurMaxValue()
 		{
 			int id;
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.HonamiStory.Data
 			return HonamiStoryConfig.Instance.GetLifeSupport(id).Value.SteadyValue;
 		}
 
-		// Token: 0x0603A05F RID: 237663 RVA: 0x00DCAB5B File Offset: 0x00DC8D5B
+		// Token: 0x0602EF82 RID: 192386 RVA: 0x00D19E0F File Offset: 0x00D1800F
 		public void UpdatePowerLevel()
 		{
 			this.PowerLevel = HonamiStoryModel.Instance.GetPlayerBackpackData().GetPowerLevel(true);
 		}
 
-		// Token: 0x0603A060 RID: 237664 RVA: 0x00DCAB74 File Offset: 0x00DC8D74
+		// Token: 0x0602EF83 RID: 192387 RVA: 0x00D19E28 File Offset: 0x00D18028
 		public int GetLifeSupportMaxLevel()
 		{
 			int num = 0;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.HonamiStory.Data
 			return num;
 		}
 
-		// Token: 0x0603A061 RID: 237665 RVA: 0x00DCABD8 File Offset: 0x00DC8DD8
+		// Token: 0x0602EF84 RID: 192388 RVA: 0x00D19E8C File Offset: 0x00D1808C
 		public string GetLifeSupportIcon()
 		{
 			if (!FunctionModel.Instance.IsOpen(10105))
@@ -112,28 +112,28 @@ namespace CSharpScript.Game.Module.HonamiStory.Data
 			return this.NormalDangerPath;
 		}
 
-		// Token: 0x0401E446 RID: 123974
+		// Token: 0x04018EE3 RID: 102115
 		private const int INVALID_NUM = -1;
 
-		// Token: 0x0401E447 RID: 123975
+		// Token: 0x04018EE4 RID: 102116
 		public int PowerLevel = -1;
 
-		// Token: 0x0401E448 RID: 123976
+		// Token: 0x04018EE5 RID: 102117
 		public int LifeSupportLevel = -1;
 
-		// Token: 0x0401E449 RID: 123977
+		// Token: 0x04018EE6 RID: 102118
 		public int LifeSupportId = -1;
 
-		// Token: 0x0401E44A RID: 123978
+		// Token: 0x04018EE7 RID: 102119
 		private string NormalIconPath = string.Empty;
 
-		// Token: 0x0401E44B RID: 123979
+		// Token: 0x04018EE8 RID: 102120
 		private string NormalDangerPath = string.Empty;
 
-		// Token: 0x0401E44C RID: 123980
+		// Token: 0x04018EE9 RID: 102121
 		private string MainInstPath = string.Empty;
 
-		// Token: 0x0401E44D RID: 123981
+		// Token: 0x04018EEA RID: 102122
 		private readonly Dictionary<int, int> LifeSupportLevelMap = new Dictionary<int, int>();
 	}
 }

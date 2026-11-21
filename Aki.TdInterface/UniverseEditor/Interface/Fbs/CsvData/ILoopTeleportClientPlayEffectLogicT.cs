@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x0200490F RID: 18703
+	// Token: 0x02004DAA RID: 19882
 	public class ILoopTeleportClientPlayEffectLogicT
 	{
-		// Token: 0x17008799 RID: 34713
-		// (get) Token: 0x0601D3D6 RID: 119766 RVA: 0x0041FE6B File Offset: 0x0041E06B
-		// (set) Token: 0x0601D3D7 RID: 119767 RVA: 0x0041FE73 File Offset: 0x0041E073
+		// Token: 0x17008E3C RID: 36412
+		// (get) Token: 0x0601ED6F RID: 126319 RVA: 0x0044F5CB File Offset: 0x0044D7CB
+		// (set) Token: 0x0601ED70 RID: 126320 RVA: 0x0044F5D3 File Offset: 0x0044D7D3
 		public ELoopTeleportClientLogicType Type { get; set; }
 
-		// Token: 0x1700879A RID: 34714
-		// (get) Token: 0x0601D3D8 RID: 119768 RVA: 0x0041FE7C File Offset: 0x0041E07C
-		// (set) Token: 0x0601D3D9 RID: 119769 RVA: 0x0041FE84 File Offset: 0x0041E084
+		// Token: 0x17008E3D RID: 36413
+		// (get) Token: 0x0601ED71 RID: 126321 RVA: 0x0044F5DC File Offset: 0x0044D7DC
+		// (set) Token: 0x0601ED72 RID: 126322 RVA: 0x0044F5E4 File Offset: 0x0044D7E4
 		public TLoopTeleportClientPlayEffectUnion EffectConfig { get; set; }
 
-		// Token: 0x0601D3DA RID: 119770 RVA: 0x0041FE8D File Offset: 0x0041E08D
+		// Token: 0x0601ED73 RID: 126323 RVA: 0x0044F5ED File Offset: 0x0044D7ED
 		public ILoopTeleportClientPlayEffectLogicT()
 		{
 			this.Type = ELoopTeleportClientLogicType.PlayEffect;

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064B2 RID: 25778
+	// Token: 0x02005430 RID: 21552
 	public enum EMatchShape
 	{
-		// Token: 0x04021B2C RID: 138028
+		// Token: 0x0401C45D RID: 115805
 		None,
-		// Token: 0x04021B2D RID: 138029
+		// Token: 0x0401C45E RID: 115806
 		Line3,
-		// Token: 0x04021B2E RID: 138030
+		// Token: 0x0401C45F RID: 115807
 		Line4,
-		// Token: 0x04021B2F RID: 138031
+		// Token: 0x0401C460 RID: 115808
 		Line5,
-		// Token: 0x04021B30 RID: 138032
+		// Token: 0x0401C461 RID: 115809
 		L,
-		// Token: 0x04021B31 RID: 138033
+		// Token: 0x0401C462 RID: 115810
 		T
 	}
 }

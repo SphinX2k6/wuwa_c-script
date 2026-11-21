@@ -12,10 +12,10 @@ using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001190 RID: 4496
+// Token: 0x02000644 RID: 1604
 public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007700 RID: 30464 RVA: 0x0018C8FC File Offset: 0x0018AAFC
+	// Token: 0x06004A97 RID: 19095 RVA: 0x001954DC File Offset: 0x001936DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -46,14 +46,14 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007701 RID: 30465 RVA: 0x0018CA47 File Offset: 0x0018AC47
+	// Token: 0x06004A98 RID: 19096 RVA: 0x00195627 File Offset: 0x00193827
 	protected override void OnStart()
 	{
 		this.Grid = new SmallItemGrid();
 		this.Grid.Initialize(base.GetItem(2).GetOwner());
 	}
 
-	// Token: 0x06007702 RID: 30466 RVA: 0x0018CA6C File Offset: 0x0018AC6C
+	// Token: 0x06004A99 RID: 19097 RVA: 0x0019564C File Offset: 0x0019384C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.DataId = data;
@@ -72,7 +72,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007703 RID: 30467 RVA: 0x0018CB38 File Offset: 0x0018AD38
+	// Token: 0x06004A9A RID: 19098 RVA: 0x00195718 File Offset: 0x00193918
 	private void RefreshGrid(WorldNewJourney config)
 	{
 		switch (config.SourceType)
@@ -157,7 +157,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 			}
 			grid6.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback _)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(config.SourceId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(config.SourceId, true, null, false);
 			});
 			return;
 		}
@@ -180,7 +180,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 			}
 			grid8.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback _)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(config.SourceId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(config.SourceId, true, null, false);
 			});
 			return;
 		}
@@ -189,13 +189,13 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007704 RID: 30468 RVA: 0x0018CCF2 File Offset: 0x0018AEF2
+	// Token: 0x06004A9B RID: 19099 RVA: 0x001958D2 File Offset: 0x00193AD2
 	public void SetEnableJump(bool enable)
 	{
 		this.EnableJump = enable;
 	}
 
-	// Token: 0x06007705 RID: 30469 RVA: 0x0018CCFC File Offset: 0x0018AEFC
+	// Token: 0x06004A9C RID: 19100 RVA: 0x001958DC File Offset: 0x00193ADC
 	public void SetFinish(bool isFinish)
 	{
 		UUIItem item = base.GetItem(0);
@@ -221,7 +221,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 		button.RootUIComp.Get().SetUIActive(!isFinish);
 	}
 
-	// Token: 0x06007706 RID: 30470 RVA: 0x0018CD68 File Offset: 0x0018AF68
+	// Token: 0x06004A9D RID: 19101 RVA: 0x00195948 File Offset: 0x00193B48
 	private unsafe void OnJumpClick()
 	{
 		if (!this.EnableJump)
@@ -298,7 +298,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 			return;
 		}
 		case 8:
-			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?((EUiTabViewName)this.JumpParam.Item2), null, null);
+			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?((EUiTabViewName)this.JumpParam.Item2), null, null, null);
 			return;
 		default:
 		{
@@ -315,7 +315,7 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0400368D RID: 13965
+	// Token: 0x04003726 RID: 14118
 	[Nullable(new byte[]
 	{
 		0,
@@ -323,41 +323,41 @@ public class ActivityBeginnerTargetItem : GridProxyAbstract<int>
 	})]
 	private ValueTuple<int, string> JumpParam = new ValueTuple<int, string>(-1, "");
 
-	// Token: 0x0400368E RID: 13966
+	// Token: 0x04003727 RID: 14119
 	private bool EnableJump;
 
-	// Token: 0x0400368F RID: 13967
+	// Token: 0x04003728 RID: 14120
 	private int Condition = -1;
 
-	// Token: 0x04003690 RID: 13968
+	// Token: 0x04003729 RID: 14121
 	public int DataId = -1;
 
-	// Token: 0x04003691 RID: 13969
+	// Token: 0x0400372A RID: 14122
 	[Nullable(2)]
 	private SmallItemGrid Grid;
 
-	// Token: 0x02007774 RID: 30580
+	// Token: 0x02006901 RID: 26881
 	private class EComponents
 	{
-		// Token: 0x0402766E RID: 161390
+		// Token: 0x040229A7 RID: 141735
 		public const int BgUnfinishItem = 0;
 
-		// Token: 0x0402766F RID: 161391
+		// Token: 0x040229A8 RID: 141736
 		public const int BgFinishItem = 1;
 
-		// Token: 0x04027670 RID: 161392
+		// Token: 0x040229A9 RID: 141737
 		public const int RewardItem = 2;
 
-		// Token: 0x04027671 RID: 161393
+		// Token: 0x040229AA RID: 141738
 		public const int RewardFinishItem = 3;
 
-		// Token: 0x04027672 RID: 161394
+		// Token: 0x040229AB RID: 141739
 		public const int JumpButton = 4;
 
-		// Token: 0x04027673 RID: 161395
+		// Token: 0x040229AC RID: 141740
 		public const int TitleText = 5;
 
-		// Token: 0x04027674 RID: 161396
+		// Token: 0x040229AD RID: 141741
 		public const int DesText = 6;
 	}
 }

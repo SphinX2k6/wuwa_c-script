@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C3C RID: 27708
+	// Token: 0x02005DB5 RID: 23989
 	public class LevelConditionCheckCharacterTagInfo : CodeCondition
 	{
-		// Token: 0x170099AA RID: 39338
-		// (get) Token: 0x060444D2 RID: 279762 RVA: 0x010D3926 File Offset: 0x010D1B26
+		// Token: 0x17006EAD RID: 28333
+		// (get) Token: 0x0603A62A RID: 239146 RVA: 0x0107D7D6 File Offset: 0x0107B9D6
 		public override ECodeCondition CodeType
 		{
 			get
@@ -15,10 +15,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x04023995 RID: 145813
+		// Token: 0x0401EC37 RID: 126007
 		public int TagId;
 
-		// Token: 0x04023996 RID: 145814
+		// Token: 0x0401EC38 RID: 126008
 		public bool IsContain;
 	}
 }

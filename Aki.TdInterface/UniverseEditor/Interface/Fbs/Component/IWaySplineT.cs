@@ -3,65 +3,65 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B57 RID: 23383
+	// Token: 0x0200616D RID: 24941
 	public class IWaySplineT
 	{
-		// Token: 0x1700B0A2 RID: 45218
-		// (get) Token: 0x06028019 RID: 163865 RVA: 0x0058038E File Offset: 0x0057E58E
-		// (set) Token: 0x0602801A RID: 163866 RVA: 0x00580396 File Offset: 0x0057E596
+		// Token: 0x1700B9EA RID: 47594
+		// (get) Token: 0x0602A5DD RID: 173533 RVA: 0x005C7E1E File Offset: 0x005C601E
+		// (set) Token: 0x0602A5DE RID: 173534 RVA: 0x005C7E26 File Offset: 0x005C6026
 		public ESplineType Type { get; set; }
 
-		// Token: 0x1700B0A3 RID: 45219
-		// (get) Token: 0x0602801B RID: 163867 RVA: 0x0058039F File Offset: 0x0057E59F
-		// (set) Token: 0x0602801C RID: 163868 RVA: 0x005803A7 File Offset: 0x0057E5A7
+		// Token: 0x1700B9EB RID: 47595
+		// (get) Token: 0x0602A5DF RID: 173535 RVA: 0x005C7E2F File Offset: 0x005C602F
+		// (set) Token: 0x0602A5E0 RID: 173536 RVA: 0x005C7E37 File Offset: 0x005C6037
 		public int RoadZoneId { get; set; }
 
-		// Token: 0x1700B0A4 RID: 45220
-		// (get) Token: 0x0602801D RID: 163869 RVA: 0x005803B0 File Offset: 0x0057E5B0
-		// (set) Token: 0x0602801E RID: 163870 RVA: 0x005803B8 File Offset: 0x0057E5B8
+		// Token: 0x1700B9EC RID: 47596
+		// (get) Token: 0x0602A5E1 RID: 173537 RVA: 0x005C7E40 File Offset: 0x005C6040
+		// (set) Token: 0x0602A5E2 RID: 173538 RVA: 0x005C7E48 File Offset: 0x005C6048
 		public string PcgRoadPathName { get; set; }
 
-		// Token: 0x1700B0A5 RID: 45221
-		// (get) Token: 0x0602801F RID: 163871 RVA: 0x005803C1 File Offset: 0x0057E5C1
-		// (set) Token: 0x06028020 RID: 163872 RVA: 0x005803C9 File Offset: 0x0057E5C9
+		// Token: 0x1700B9ED RID: 47597
+		// (get) Token: 0x0602A5E3 RID: 173539 RVA: 0x005C7E51 File Offset: 0x005C6051
+		// (set) Token: 0x0602A5E4 RID: 173540 RVA: 0x005C7E59 File Offset: 0x005C6059
 		public bool NoEntry { get; set; }
 
-		// Token: 0x1700B0A6 RID: 45222
-		// (get) Token: 0x06028021 RID: 163873 RVA: 0x005803D2 File Offset: 0x0057E5D2
-		// (set) Token: 0x06028022 RID: 163874 RVA: 0x005803DA File Offset: 0x0057E5DA
+		// Token: 0x1700B9EE RID: 47598
+		// (get) Token: 0x0602A5E5 RID: 173541 RVA: 0x005C7E62 File Offset: 0x005C6062
+		// (set) Token: 0x0602A5E6 RID: 173542 RVA: 0x005C7E6A File Offset: 0x005C606A
 		public IPavedWayConfigT PavedWayConfig { get; set; }
 
-		// Token: 0x1700B0A7 RID: 45223
-		// (get) Token: 0x06028023 RID: 163875 RVA: 0x005803E3 File Offset: 0x0057E5E3
-		// (set) Token: 0x06028024 RID: 163876 RVA: 0x005803EB File Offset: 0x0057E5EB
+		// Token: 0x1700B9EF RID: 47599
+		// (get) Token: 0x0602A5E7 RID: 173543 RVA: 0x005C7E73 File Offset: 0x005C6073
+		// (set) Token: 0x0602A5E8 RID: 173544 RVA: 0x005C7E7B File Offset: 0x005C607B
 		public List<IWaySplinePointT> Points { get; set; }
 
-		// Token: 0x1700B0A8 RID: 45224
-		// (get) Token: 0x06028025 RID: 163877 RVA: 0x005803F4 File Offset: 0x0057E5F4
-		// (set) Token: 0x06028026 RID: 163878 RVA: 0x005803FC File Offset: 0x0057E5FC
+		// Token: 0x1700B9F0 RID: 47600
+		// (get) Token: 0x0602A5E9 RID: 173545 RVA: 0x005C7E84 File Offset: 0x005C6084
+		// (set) Token: 0x0602A5EA RID: 173546 RVA: 0x005C7E8C File Offset: 0x005C608C
 		public List<int> Last { get; set; }
 
-		// Token: 0x1700B0A9 RID: 45225
-		// (get) Token: 0x06028027 RID: 163879 RVA: 0x00580405 File Offset: 0x0057E605
-		// (set) Token: 0x06028028 RID: 163880 RVA: 0x0058040D File Offset: 0x0057E60D
+		// Token: 0x1700B9F1 RID: 47601
+		// (get) Token: 0x0602A5EB RID: 173547 RVA: 0x005C7E95 File Offset: 0x005C6095
+		// (set) Token: 0x0602A5EC RID: 173548 RVA: 0x005C7E9D File Offset: 0x005C609D
 		public List<int> Next { get; set; }
 
-		// Token: 0x1700B0AA RID: 45226
-		// (get) Token: 0x06028029 RID: 163881 RVA: 0x00580416 File Offset: 0x0057E616
-		// (set) Token: 0x0602802A RID: 163882 RVA: 0x0058041E File Offset: 0x0057E61E
+		// Token: 0x1700B9F2 RID: 47602
+		// (get) Token: 0x0602A5ED RID: 173549 RVA: 0x005C7EA6 File Offset: 0x005C60A6
+		// (set) Token: 0x0602A5EE RID: 173550 RVA: 0x005C7EAE File Offset: 0x005C60AE
 		public int Opposite { get; set; }
 
-		// Token: 0x1700B0AB RID: 45227
-		// (get) Token: 0x0602802B RID: 163883 RVA: 0x00580427 File Offset: 0x0057E627
-		// (set) Token: 0x0602802C RID: 163884 RVA: 0x0058042F File Offset: 0x0057E62F
+		// Token: 0x1700B9F3 RID: 47603
+		// (get) Token: 0x0602A5EF RID: 173551 RVA: 0x005C7EB7 File Offset: 0x005C60B7
+		// (set) Token: 0x0602A5F0 RID: 173552 RVA: 0x005C7EBF File Offset: 0x005C60BF
 		public float Width { get; set; }
 
-		// Token: 0x1700B0AC RID: 45228
-		// (get) Token: 0x0602802D RID: 163885 RVA: 0x00580438 File Offset: 0x0057E638
-		// (set) Token: 0x0602802E RID: 163886 RVA: 0x00580440 File Offset: 0x0057E640
+		// Token: 0x1700B9F4 RID: 47604
+		// (get) Token: 0x0602A5F1 RID: 173553 RVA: 0x005C7EC8 File Offset: 0x005C60C8
+		// (set) Token: 0x0602A5F2 RID: 173554 RVA: 0x005C7ED0 File Offset: 0x005C60D0
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602802F RID: 163887 RVA: 0x0058044C File Offset: 0x0057E64C
+		// Token: 0x0602A5F3 RID: 173555 RVA: 0x005C7EDC File Offset: 0x005C60DC
 		public IWaySplineT()
 		{
 			this.Type = ESplineType.Common;

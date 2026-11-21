@@ -11,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014F4 RID: 5364
+// Token: 0x020009AC RID: 2476
 [NullableContext(1)]
 [Nullable(0)]
 public class ScratchTicketActivityView : ActivitySubViewBase
 {
-	// Token: 0x060098DD RID: 39133 RVA: 0x0021088C File Offset: 0x0020EA8C
+	// Token: 0x06006CB7 RID: 27831 RVA: 0x0021A57C File Offset: 0x0021877C
 	protected override void OnSetData()
 	{
 		this.ScratchTicketData = (this.ActivityBaseData as ScratchTicketData);
 	}
 
-	// Token: 0x060098DE RID: 39134 RVA: 0x002108A0 File Offset: 0x0020EAA0
+	// Token: 0x06006CB8 RID: 27832 RVA: 0x0021A590 File Offset: 0x00218790
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -56,7 +56,7 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060098DF RID: 39135 RVA: 0x00210A58 File Offset: 0x0020EC58
+	// Token: 0x06006CB9 RID: 27833 RVA: 0x0021A748 File Offset: 0x00218948
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ScratchTicketActivityView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060098E0 RID: 39136 RVA: 0x00210A9C File Offset: 0x0020EC9C
+	// Token: 0x06006CBA RID: 27834 RVA: 0x0021A78C File Offset: 0x0021898C
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ScratchTicketData.LocalConfig;
@@ -92,7 +92,7 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 		this.FunctionalItem.FunctionButton.SetFunction(new Action(this.FunctionExecute));
 	}
 
-	// Token: 0x060098E1 RID: 39137 RVA: 0x00210BAC File Offset: 0x0020EDAC
+	// Token: 0x06006CBB RID: 27835 RVA: 0x0021A89C File Offset: 0x00218A9C
 	protected override void OnRefreshView()
 	{
 		ScratchCardActivityRe? scratchCardActivityConfig = this.ScratchTicketData.GetScratchCardActivityConfig();
@@ -133,20 +133,20 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060098E2 RID: 39138 RVA: 0x00210D60 File Offset: 0x0020EF60
+	// Token: 0x06006CBC RID: 27836 RVA: 0x0021AA50 File Offset: 0x00218C50
 	private void RefreshTimerText()
 	{
 		string item = this.GetTimeVisibleAndRemainTime().Item2;
 		this.TitleItem.SetTimeTextByText(item);
 	}
 
-	// Token: 0x060098E3 RID: 39139 RVA: 0x00210D85 File Offset: 0x0020EF85
+	// Token: 0x06006CBD RID: 27837 RVA: 0x0021AA75 File Offset: 0x00218C75
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x060098E4 RID: 39140 RVA: 0x00210D8D File Offset: 0x0020EF8D
+	// Token: 0x06006CBE RID: 27838 RVA: 0x0021AA7D File Offset: 0x00218C7D
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -170,13 +170,13 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0400433E RID: 17214
+	// Token: 0x040043E3 RID: 17379
 	private ActivityTitleTypeA TitleItem;
 
-	// Token: 0x0400433F RID: 17215
+	// Token: 0x040043E4 RID: 17380
 	private ActivityDescriptionTypeA DescriptionItem;
 
-	// Token: 0x04004340 RID: 17216
+	// Token: 0x040043E5 RID: 17381
 	[Nullable(new byte[]
 	{
 		2,
@@ -184,11 +184,11 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListItem;
 
-	// Token: 0x04004341 RID: 17217
+	// Token: 0x040043E6 RID: 17382
 	[Nullable(2)]
 	private ActivityFunctionalTypeA FunctionalItem;
 
-	// Token: 0x04004342 RID: 17218
+	// Token: 0x040043E7 RID: 17383
 	[Nullable(new byte[]
 	{
 		2,
@@ -197,7 +197,7 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 	})]
 	private GenericLayout<ScratchTicketProgressItem, ScratchTicketRoundData> RoundLayout;
 
-	// Token: 0x04004343 RID: 17219
+	// Token: 0x040043E8 RID: 17384
 	[Nullable(new byte[]
 	{
 		2,
@@ -206,54 +206,54 @@ public class ScratchTicketActivityView : ActivitySubViewBase
 	})]
 	private GenericLayout<ScratchTicketConditionItem, ScratchTicketConditionData> ConditionLayout;
 
-	// Token: 0x04004344 RID: 17220
+	// Token: 0x040043E9 RID: 17385
 	[Nullable(2)]
 	private ScratchTicketData ScratchTicketData;
 
-	// Token: 0x04004345 RID: 17221
+	// Token: 0x040043EA RID: 17386
 	private readonly Func<ScratchTicketProgressItem> CreateRoundItem = () => new ScratchTicketProgressItem();
 
-	// Token: 0x04004346 RID: 17222
+	// Token: 0x040043EB RID: 17387
 	private readonly Func<ScratchTicketConditionItem> CreateConditionItem = () => new ScratchTicketConditionItem();
 
-	// Token: 0x02007B27 RID: 31527
+	// Token: 0x02006CB3 RID: 27827
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04028809 RID: 165897
+		// Token: 0x04023B47 RID: 146247
 		public const int TitleItem = 0;
 
-		// Token: 0x0402880A RID: 165898
+		// Token: 0x04023B48 RID: 146248
 		public const int DescriptionItem = 1;
 
-		// Token: 0x0402880B RID: 165899
+		// Token: 0x04023B49 RID: 146249
 		public const int RewardItem = 2;
 
-		// Token: 0x0402880C RID: 165900
+		// Token: 0x04023B4A RID: 146250
 		public const int FunctionItem = 3;
 
-		// Token: 0x0402880D RID: 165901
+		// Token: 0x04023B4B RID: 146251
 		public const int ScratchTicketRootItem = 4;
 
-		// Token: 0x0402880E RID: 165902
+		// Token: 0x04023B4C RID: 146252
 		public const int ScratchTicketProgressLayout = 5;
 
-		// Token: 0x0402880F RID: 165903
+		// Token: 0x04023B4D RID: 146253
 		public const int CostItemIcon = 6;
 
-		// Token: 0x04028810 RID: 165904
+		// Token: 0x04023B4E RID: 146254
 		public const int CostItemCount = 7;
 
-		// Token: 0x04028811 RID: 165905
+		// Token: 0x04023B4F RID: 146255
 		public const int ScratchTicketConditionLayout = 8;
 
-		// Token: 0x04028812 RID: 165906
+		// Token: 0x04023B50 RID: 146256
 		public const int EmptyItem = 9;
 
-		// Token: 0x04028813 RID: 165907
+		// Token: 0x04023B51 RID: 146257
 		public const int RoundSprite = 10;
 
-		// Token: 0x04028814 RID: 165908
+		// Token: 0x04023B52 RID: 146258
 		public const int ScratchTicketConditionRoot = 11;
 	}
 }

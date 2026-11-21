@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game.Module.Map.Mark;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x02005540 RID: 21824
+	// Token: 0x02004512 RID: 17682
 	public class TemporaryTeleportMarkItemChildIconHandle : MarkItemChildIconHandle
 	{
-		// Token: 0x06037B34 RID: 228148 RVA: 0x00D37C85 File Offset: 0x00D35E85
+		// Token: 0x0602CA04 RID: 182788 RVA: 0x00C857A2 File Offset: 0x00C839A2
 		[NullableContext(1)]
 		public TemporaryTeleportMarkItemChildIconHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B35 RID: 228149 RVA: 0x00D37C90 File Offset: 0x00D35E90
+		// Token: 0x0602CA05 RID: 182789 RVA: 0x00C857AC File Offset: 0x00C839AC
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
-			if (!this.Context.MarkItemEntity.ViewLifeCircle.IsChildViewVisible(EMarkViewComponentType.ChildIcon, false))
+			if (base.Visible)
 			{
-				string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_MarkTime");
-				this.Context.MarkItemEntity.Resource.ChildIconPath = resourcePath;
-				base.SetVisible(true);
+				return;
 			}
+			string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_MarkTime");
+			this.Context.MarkItem.ChildIconPath = resourcePath;
+			base.SetVisible(true);
 		}
 	}
 }

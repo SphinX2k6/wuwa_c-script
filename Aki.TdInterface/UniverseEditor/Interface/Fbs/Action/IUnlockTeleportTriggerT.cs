@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074E8 RID: 29928
+	// Token: 0x02007CDE RID: 31966
 	public class IUnlockTeleportTriggerT
 	{
-		// Token: 0x1700E30D RID: 58125
-		// (get) Token: 0x06036684 RID: 222852 RVA: 0x00764386 File Offset: 0x00762586
-		// (set) Token: 0x06036685 RID: 222853 RVA: 0x0076438E File Offset: 0x0076258E
+		// Token: 0x1700EF37 RID: 61239
+		// (get) Token: 0x06039A99 RID: 236185 RVA: 0x007C75D6 File Offset: 0x007C57D6
+		// (set) Token: 0x06039A9A RID: 236186 RVA: 0x007C75DE File Offset: 0x007C57DE
 		public int TeleportId { get; set; }
 
-		// Token: 0x06036686 RID: 222854 RVA: 0x00764397 File Offset: 0x00762597
+		// Token: 0x06039A9B RID: 236187 RVA: 0x007C75E7 File Offset: 0x007C57E7
 		public IUnlockTeleportTriggerT()
 		{
 			this.TeleportId = 0;

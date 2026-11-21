@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002D3E RID: 11582
+// Token: 0x02002298 RID: 8856
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class WeeklyRogueRolePosItem : GridProxyAbstract<IWeeklyRogueRolePosInfo>
 {
-	// Token: 0x06018582 RID: 99714 RVA: 0x00632480 File Offset: 0x00630680
+	// Token: 0x06015E24 RID: 89636 RVA: 0x00658490 File Offset: 0x00656690
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class WeeklyRogueRolePosItem : GridProxyAbstract<IWeeklyRogueRolePosInfo>
 		};
 	}
 
-	// Token: 0x06018583 RID: 99715 RVA: 0x00632514 File Offset: 0x00630714
+	// Token: 0x06015E25 RID: 89637 RVA: 0x00658524 File Offset: 0x00656724
 	public override void Refresh(IWeeklyRogueRolePosInfo info, bool isSelected, int gridIndex)
 	{
 		this.Info = info;
@@ -68,13 +68,13 @@ public class WeeklyRogueRolePosItem : GridProxyAbstract<IWeeklyRogueRolePosInfo>
 		}
 	}
 
-	// Token: 0x06018584 RID: 99716 RVA: 0x00632607 File Offset: 0x00630807
+	// Token: 0x06015E26 RID: 89638 RVA: 0x00658617 File Offset: 0x00656817
 	private void SetRoleShow(bool bShow)
 	{
 		base.GetTexture(1).SetUIActive(bShow);
 	}
 
-	// Token: 0x06018585 RID: 99717 RVA: 0x00632616 File Offset: 0x00630816
+	// Token: 0x06015E27 RID: 89639 RVA: 0x00658626 File Offset: 0x00656826
 	private void OnBtnClick()
 	{
 		Action<RoleDataBase> onBtnClickFunc = this.OnBtnClickFunc;
@@ -85,7 +85,7 @@ public class WeeklyRogueRolePosItem : GridProxyAbstract<IWeeklyRogueRolePosInfo>
 		onBtnClickFunc(this.Info.Data);
 	}
 
-	// Token: 0x06018586 RID: 99718 RVA: 0x00632634 File Offset: 0x00630834
+	// Token: 0x06015E28 RID: 89640 RVA: 0x00658644 File Offset: 0x00656844
 	private void SetSkillBranchIconToLeft(bool isLeft)
 	{
 		UUIItem item = base.GetItem(3);
@@ -98,24 +98,24 @@ public class WeeklyRogueRolePosItem : GridProxyAbstract<IWeeklyRogueRolePosInfo>
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0400B4BB RID: 46267
+	// Token: 0x0400B830 RID: 47152
 	private IWeeklyRogueRolePosInfo Info;
 
-	// Token: 0x0400B4BC RID: 46268
+	// Token: 0x0400B831 RID: 47153
 	[Nullable(2)]
 	public Action<RoleDataBase> OnBtnClickFunc;
 
-	// Token: 0x020092CB RID: 37579
+	// Token: 0x020084F2 RID: 34034
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402F727 RID: 194343
+		// Token: 0x0402ADAF RID: 175535
 		BtnSelf,
-		// Token: 0x0402F728 RID: 194344
+		// Token: 0x0402ADB0 RID: 175536
 		TexRole,
-		// Token: 0x0402F729 RID: 194345
+		// Token: 0x0402ADB1 RID: 175537
 		UpItem,
-		// Token: 0x0402F72A RID: 194346
+		// Token: 0x0402ADB2 RID: 175538
 		ItemSkillBranch
 	}
 }

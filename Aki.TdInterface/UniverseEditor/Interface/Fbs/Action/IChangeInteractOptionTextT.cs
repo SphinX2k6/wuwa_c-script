@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006303 RID: 25347
+	// Token: 0x02006974 RID: 26996
 	public class IChangeInteractOptionTextT
 	{
-		// Token: 0x1700BD35 RID: 48437
-		// (get) Token: 0x0602BD47 RID: 179527 RVA: 0x006071F1 File Offset: 0x006053F1
-		// (set) Token: 0x0602BD48 RID: 179528 RVA: 0x006071F9 File Offset: 0x006053F9
+		// Token: 0x1700C6BF RID: 50879
+		// (get) Token: 0x0602E4B0 RID: 189616 RVA: 0x006521FD File Offset: 0x006503FD
+		// (set) Token: 0x0602E4B1 RID: 189617 RVA: 0x00652205 File Offset: 0x00650405
 		public string TidContent { get; set; }
 
-		// Token: 0x0602BD49 RID: 179529 RVA: 0x00607202 File Offset: 0x00605402
+		// Token: 0x0602E4B2 RID: 189618 RVA: 0x0065220E File Offset: 0x0065040E
 		public IChangeInteractOptionTextT()
 		{
 			this.TidContent = null;

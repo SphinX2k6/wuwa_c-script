@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018B3 RID: 6323
+	// Token: 0x020003D5 RID: 981
 	public sealed class FEffectSystemSetEffectView : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017652 RID: 95826 RVA: 0x0022344B File Offset: 0x0022164B
+		// Token: 0x060060E5 RID: 24805 RVA: 0x0008A62B File Offset: 0x0008882B
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectSystemSetEffectView.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017653 RID: 95827 RVA: 0x00223457 File Offset: 0x00221657
+		// Token: 0x060060E6 RID: 24806 RVA: 0x0008A637 File Offset: 0x00088837
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectSystemSetEffectView._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectSystemSetEffectView._FunctionPtr;
 		}
 
-		// Token: 0x06017654 RID: 95828 RVA: 0x0022347A File Offset: 0x0022167A
+		// Token: 0x060060E7 RID: 24807 RVA: 0x0008A65A File Offset: 0x0008885A
 		public FEffectSystemSetEffectView()
 		{
 		}
 
-		// Token: 0x06017655 RID: 95829 RVA: 0x00223482 File Offset: 0x00221682
+		// Token: 0x060060E8 RID: 24808 RVA: 0x0008A662 File Offset: 0x00088862
 		[NullableContext(2)]
 		public FEffectSystemSetEffectView(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017656 RID: 95830 RVA: 0x0022348C File Offset: 0x0022168C
+		// Token: 0x060060E9 RID: 24809 RVA: 0x0008A66C File Offset: 0x0008886C
 		public FEffectSystemSetEffectView(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017657 RID: 95831 RVA: 0x00223497 File Offset: 0x00221697
+		// Token: 0x060060EA RID: 24810 RVA: 0x0008A677 File Offset: 0x00088877
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<AActor, int>) ?? ((Action<AActor, int>)Delegate.CreateDelegate(typeof(Action<AActor, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017658 RID: 95832 RVA: 0x002234C9 File Offset: 0x002216C9
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060060EB RID: 24811 RVA: 0x0008A6A9 File Offset: 0x000888A9
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectSystemSetEffectView.RegisterId);
 		}
 
-		// Token: 0x06017659 RID: 95833 RVA: 0x00223504 File Offset: 0x00221704
+		// Token: 0x060060EC RID: 24812 RVA: 0x0008A6E4 File Offset: 0x000888E4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(AActor Actor, int EffectId)
 		{
 			FEffectSystemSetEffectView.__FEffectSystemSetEffectView_DelegateParams* ptr = stackalloc FEffectSystemSetEffectView.__FEffectSystemSetEffectView_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FEffectSystemSetEffectView.__FEffectSystemSetEffectView_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601765A RID: 95834 RVA: 0x00223558 File Offset: 0x00221758
+		// Token: 0x060060ED RID: 24813 RVA: 0x0008A738 File Offset: 0x00088938
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AActor, int> action = target as Action<AActor, int>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FEffectSystemSetEffectView.__FEffectSystemSetEffectView_DelegateParams*)__Parameters)->EffectId);
 		}
 
-		// Token: 0x0400CB7F RID: 52095
+		// Token: 0x0400293E RID: 10558
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CB80 RID: 52096
+		// Token: 0x0400293F RID: 10559
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectSystemSetEffectView__DelegateSignature";
 
-		// Token: 0x0400CB81 RID: 52097
+		// Token: 0x04002940 RID: 10560
 		private static int RegisterId;
 
-		// Token: 0x02002FAB RID: 12203
+		// Token: 0x02000ACE RID: 2766
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FEffectSystemSetEffectView_DelegateParams
+		private ref struct __FEffectSystemSetEffectView_DelegateParams
 		{
-			// Token: 0x04016B8D RID: 93069
+			// Token: 0x04005B4A RID: 23370
 			[FieldOffset(0)]
 			public IntPtr Actor;
 
-			// Token: 0x04016B8E RID: 93070
+			// Token: 0x04005B4B RID: 23371
 			[FieldOffset(8)]
 			public int EffectId;
 		}
 
-		// Token: 0x02002FAC RID: 12204
+		// Token: 0x02000ACF RID: 2767
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B8F RID: 93071
+			// Token: 0x04005B4C RID: 23372
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

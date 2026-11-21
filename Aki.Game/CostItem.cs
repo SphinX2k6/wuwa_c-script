@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001819 RID: 6169
+// Token: 0x02000CD2 RID: 3282
 public class CostItem : UiPanelBase
 {
-	// Token: 0x0600B4EF RID: 46319 RVA: 0x0028D7DC File Offset: 0x0028B9DC
+	// Token: 0x060088DA RID: 35034 RVA: 0x00297EFC File Offset: 0x002960FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class CostItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B4F0 RID: 46320 RVA: 0x0028D838 File Offset: 0x0028BA38
+	// Token: 0x060088DB RID: 35035 RVA: 0x00297F58 File Offset: 0x00296158
 	[NullableContext(1)]
 	public void Refresh(ICostData costData)
 	{
@@ -31,9 +31,9 @@ public class CostItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0600B4F1 RID: 46321 RVA: 0x0028D8A4 File Offset: 0x0028BAA4
+	// Token: 0x060088DC RID: 35036 RVA: 0x00297FC4 File Offset: 0x002961C4
 	[NullableContext(1)]
-	public void RefreshCost(List<ICostData> costData)
+	public void RefreshCost(IReadOnlyList<ICostData> costData)
 	{
 		base.SetUiActive(false);
 		if (costData.Count > 0)
@@ -44,14 +44,14 @@ public class CostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x02007E07 RID: 32263
+	// Token: 0x02006F8D RID: 28557
 	private enum EComponent
 	{
-		// Token: 0x040293EF RID: 168943
+		// Token: 0x0402471A RID: 149274
 		TipsText,
-		// Token: 0x040293F0 RID: 168944
+		// Token: 0x0402471B RID: 149275
 		CostText,
-		// Token: 0x040293F1 RID: 168945
+		// Token: 0x0402471C RID: 149276
 		CostIcon
 	}
 }

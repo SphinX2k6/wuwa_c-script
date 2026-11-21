@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8B RID: 19595
+	// Token: 0x02003C3C RID: 15420
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeamlessTravelKeepMovementMode
 	{
-		// Token: 0x17007CF7 RID: 31991
-		// (get) Token: 0x06032A4B RID: 207435 RVA: 0x00BCF358 File Offset: 0x00BCD558
+		// Token: 0x170050A1 RID: 20641
+		// (get) Token: 0x060277FE RID: 161790 RVA: 0x00B13FBC File Offset: 0x00B121BC
 		public bool IsInit
 		{
 			get
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007CF8 RID: 31992
-		// (get) Token: 0x06032A4C RID: 207436 RVA: 0x00BCF360 File Offset: 0x00BCD560
+		// Token: 0x170050A2 RID: 20642
+		// (get) Token: 0x060277FF RID: 161791 RVA: 0x00B13FC4 File Offset: 0x00B121C4
 		public bool IsActive
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007CF9 RID: 31993
-		// (get) Token: 0x06032A4D RID: 207437 RVA: 0x00BCF368 File Offset: 0x00BCD568
+		// Token: 0x170050A3 RID: 20643
+		// (get) Token: 0x06027800 RID: 161792 RVA: 0x00B13FCC File Offset: 0x00B121CC
 		public EMovementMode? TargetMovementMode
 		{
 			get
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x17007CFA RID: 31994
-		// (get) Token: 0x06032A4E RID: 207438 RVA: 0x00BCF370 File Offset: 0x00BCD570
+		// Token: 0x170050A4 RID: 20644
+		// (get) Token: 0x06027801 RID: 161793 RVA: 0x00B13FD4 File Offset: 0x00B121D4
 		public byte? TargetCustomMode
 		{
 			get
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A4F RID: 207439 RVA: 0x00BCF378 File Offset: 0x00BCD578
+		// Token: 0x06027802 RID: 161794 RVA: 0x00B13FDC File Offset: 0x00B121DC
 		public void SetInitDataWithTargetMode(EMovementMode targetMovementMode, byte? targetCustomMode = null)
 		{
 			this.TargetMovementModeInternal = new EMovementMode?(targetMovementMode);
 			this.TargetCustomModeInternal = targetCustomMode;
 		}
 
-		// Token: 0x06032A50 RID: 207440 RVA: 0x00BCF390 File Offset: 0x00BCD590
+		// Token: 0x06027803 RID: 161795 RVA: 0x00B13FF4 File Offset: 0x00B121F4
 		[NullableContext(0)]
 		public static ValueTuple<EMovementMode, byte>? GetCurrentKeepableMovementMode([Nullable(1)] SeamlessTravelContext context)
 		{
@@ -121,14 +121,14 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return null;
 		}
 
-		// Token: 0x06032A51 RID: 207441 RVA: 0x00BCF5A6 File Offset: 0x00BCD7A6
+		// Token: 0x06027804 RID: 161796 RVA: 0x00B1420A File Offset: 0x00B1240A
 		[NullableContext(0)]
 		public static ValueTuple<EMovementMode, int>? GetMovementModeByConfigState(EKeepMovementState keepMovementState)
 		{
 			return new ValueTuple<EMovementMode, int>?(SeamlessTravelKeepMovementMode.configStateToMovementMode[keepMovementState]);
 		}
 
-		// Token: 0x06032A52 RID: 207442 RVA: 0x00BCF5B8 File Offset: 0x00BCD7B8
+		// Token: 0x06027805 RID: 161797 RVA: 0x00B1421C File Offset: 0x00B1241C
 		[NullableContext(1)]
 		public void Init(SeamlessTravelContext context, [Nullable(2)] Action<bool> callback = null)
 		{
@@ -173,13 +173,13 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A53 RID: 207443 RVA: 0x00BCF67A File Offset: 0x00BCD87A
+		// Token: 0x06027806 RID: 161798 RVA: 0x00B142DE File Offset: 0x00B124DE
 		public void Tick(float delta)
 		{
 			this.CheckAndKeepMoveState();
 		}
 
-		// Token: 0x06032A54 RID: 207444 RVA: 0x00BCF684 File Offset: 0x00BCD884
+		// Token: 0x06027807 RID: 161799 RVA: 0x00B142E8 File Offset: 0x00B124E8
 		public void CheckAndKeepMoveState()
 		{
 			if (!this.IsInit || !this.IsActive)
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			});
 		}
 
-		// Token: 0x06032A55 RID: 207445 RVA: 0x00BCF7D0 File Offset: 0x00BCD9D0
+		// Token: 0x06027808 RID: 161800 RVA: 0x00B14434 File Offset: 0x00B12634
 		public void Destroy()
 		{
 			global::Log.Instance.Info(ELogModule.Teleport, ELogAuthor.ZYL, "[无缝传送KeepMovementMode] 清理", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.Context = null;
 		}
 
-		// Token: 0x06032A56 RID: 207446 RVA: 0x00BCF814 File Offset: 0x00BCDA14
+		// Token: 0x06027809 RID: 161801 RVA: 0x00B14478 File Offset: 0x00B12678
 		public void AppearEffect(Action<bool> callback = null)
 		{
 			if (!this.IsInit)
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A57 RID: 207447 RVA: 0x00BCF8A0 File Offset: 0x00BCDAA0
+		// Token: 0x0602780A RID: 161802 RVA: 0x00B14504 File Offset: 0x00B12704
 		public void DisappearEffect(Action<bool> callback = null)
 		{
 			if (!this.IsInit)
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A59 RID: 207449 RVA: 0x00BCF90B File Offset: 0x00BCDB0B
+		// Token: 0x0602780C RID: 161804 RVA: 0x00B1456F File Offset: 0x00B1276F
 		// Note: this type is marked as 'beforefieldinit'.
 		static SeamlessTravelKeepMovementMode()
 		{
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			SeamlessTravelKeepMovementMode.configStateToMovementMode = dictionary;
 		}
 
-		// Token: 0x0401AF1F RID: 110367
+		// Token: 0x0401587C RID: 88188
 		[Nullable(new byte[]
 		{
 			1,
@@ -323,22 +323,22 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EKeepMovementState, ValueTuple<EMovementMode, int>> configStateToMovementMode;
 
-		// Token: 0x0401AF20 RID: 110368
+		// Token: 0x0401587D RID: 88189
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x0401AF21 RID: 110369
+		// Token: 0x0401587E RID: 88190
 		private SeamlessTravelContext Context;
 
-		// Token: 0x0401AF22 RID: 110370
+		// Token: 0x0401587F RID: 88191
 		private EMovementMode? TargetMovementModeInternal;
 
-		// Token: 0x0401AF23 RID: 110371
+		// Token: 0x04015880 RID: 88192
 		private byte? TargetCustomModeInternal;
 
-		// Token: 0x0401AF24 RID: 110372
+		// Token: 0x04015881 RID: 88193
 		private bool IsInitInternal;
 
-		// Token: 0x0401AF25 RID: 110373
+		// Token: 0x04015882 RID: 88194
 		private bool IsActiveInternal;
 	}
 }

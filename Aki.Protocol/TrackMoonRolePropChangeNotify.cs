@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013E9 RID: 5097
+	// Token: 0x0200145C RID: 5212
 	[NetMessage(EMessageId.TrackMoonRolePropChangeNotify)]
 	public sealed class TrackMoonRolePropChangeNotify : IMessage<TrackMoonRolePropChangeNotify>, IMessage, IEquatable<TrackMoonRolePropChangeNotify>, IDeepCloneable<TrackMoonRolePropChangeNotify>, IBufferMessage
 	{
-		// Token: 0x0601B031 RID: 110641 RVA: 0x003E9649 File Offset: 0x003E7849
+		// Token: 0x0601BABC RID: 113340 RVA: 0x00404915 File Offset: 0x00402B15
 		[NullableContext(1)]
 		public static TrackMoonRolePropChangeNotify Create()
 		{
 			return new TrackMoonRolePropChangeNotify();
 		}
 
-		// Token: 0x17005B07 RID: 23303
-		// (get) Token: 0x0601B032 RID: 110642 RVA: 0x003E9650 File Offset: 0x003E7850
+		// Token: 0x17005D9C RID: 23964
+		// (get) Token: 0x0601BABD RID: 113341 RVA: 0x0040491C File Offset: 0x00402B1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B08 RID: 23304
-		// (get) Token: 0x0601B033 RID: 110643 RVA: 0x003E9653 File Offset: 0x003E7853
+		// Token: 0x17005D9D RID: 23965
+		// (get) Token: 0x0601BABE RID: 113342 RVA: 0x0040491F File Offset: 0x00402B1F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B034 RID: 110644 RVA: 0x003E965A File Offset: 0x003E785A
+		// Token: 0x0601BABF RID: 113343 RVA: 0x00404926 File Offset: 0x00402B26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonRolePropChangeNotify()
 		{
 		}
 
-		// Token: 0x0601B035 RID: 110645 RVA: 0x003E966D File Offset: 0x003E786D
+		// Token: 0x0601BAC0 RID: 113344 RVA: 0x00404939 File Offset: 0x00402B39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonRolePropChangeNotify(TrackMoonRolePropChangeNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B036 RID: 110646 RVA: 0x003E9697 File Offset: 0x003E7897
+		// Token: 0x0601BAC1 RID: 113345 RVA: 0x00404963 File Offset: 0x00402B63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonRolePropChangeNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new TrackMoonRolePropChangeNotify(this);
 		}
 
-		// Token: 0x17005B09 RID: 23305
-		// (get) Token: 0x0601B037 RID: 110647 RVA: 0x003E969F File Offset: 0x003E789F
+		// Token: 0x17005D9E RID: 23966
+		// (get) Token: 0x0601BAC2 RID: 113346 RVA: 0x0040496B File Offset: 0x00402B6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EntrustRoleInfo> RoleProps
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B038 RID: 110648 RVA: 0x003E96A7 File Offset: 0x003E78A7
+		// Token: 0x0601BAC3 RID: 113347 RVA: 0x00404973 File Offset: 0x00402B73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrackMoonRolePropChangeNotify);
 		}
 
-		// Token: 0x0601B039 RID: 110649 RVA: 0x003E96B5 File Offset: 0x003E78B5
+		// Token: 0x0601BAC4 RID: 113348 RVA: 0x00404981 File Offset: 0x00402B81
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrackMoonRolePropChangeNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.roleProps_.Equals(other.roleProps_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B03A RID: 110650 RVA: 0x003E96E8 File Offset: 0x003E78E8
+		// Token: 0x0601BAC5 RID: 113349 RVA: 0x004049B4 File Offset: 0x00402BB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B03B RID: 110651 RVA: 0x003E971C File Offset: 0x003E791C
+		// Token: 0x0601BAC6 RID: 113350 RVA: 0x004049E8 File Offset: 0x00402BE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B03C RID: 110652 RVA: 0x003E9729 File Offset: 0x003E7929
+		// Token: 0x0601BAC7 RID: 113351 RVA: 0x004049F5 File Offset: 0x00402BF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B03D RID: 110653 RVA: 0x003E9732 File Offset: 0x003E7932
+		// Token: 0x0601BAC8 RID: 113352 RVA: 0x004049FE File Offset: 0x00402BFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B03E RID: 110654 RVA: 0x003E975C File Offset: 0x003E795C
+		// Token: 0x0601BAC9 RID: 113353 RVA: 0x00404A28 File Offset: 0x00402C28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B03F RID: 110655 RVA: 0x003E9795 File Offset: 0x003E7995
+		// Token: 0x0601BACA RID: 113354 RVA: 0x00404A61 File Offset: 0x00402C61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrackMoonRolePropChangeNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B040 RID: 110656 RVA: 0x003E97C3 File Offset: 0x003E79C3
+		// Token: 0x0601BACB RID: 113355 RVA: 0x00404A8F File Offset: 0x00402C8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B041 RID: 110657 RVA: 0x003E97CC File Offset: 0x003E79CC
+		// Token: 0x0601BACC RID: 113356 RVA: 0x00404A98 File Offset: 0x00402C98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 50U)
+				if (num != 58U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009C5E RID: 40030
+		// Token: 0x0400A0A5 RID: 41125
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009C5F RID: 40031
-		public const int RolePropsFieldNumber = 6;
+		// Token: 0x0400A0A6 RID: 41126
+		public const int RolePropsFieldNumber = 7;
 
-		// Token: 0x04009C60 RID: 40032
-		private static readonly FieldCodec<EntrustRoleInfo> _repeated_roleProps_codec = FieldCodec.ForMessage<EntrustRoleInfo>(50U, EntrustRoleInfo.Parser);
+		// Token: 0x0400A0A7 RID: 41127
+		private static readonly FieldCodec<EntrustRoleInfo> _repeated_roleProps_codec = FieldCodec.ForMessage<EntrustRoleInfo>(58U, EntrustRoleInfo.Parser);
 
-		// Token: 0x04009C61 RID: 40033
+		// Token: 0x0400A0A8 RID: 41128
 		private readonly RepeatedField<EntrustRoleInfo> roleProps_ = new RepeatedField<EntrustRoleInfo>();
 	}
 }

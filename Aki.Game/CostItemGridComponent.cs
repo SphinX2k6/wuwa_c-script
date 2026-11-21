@@ -11,12 +11,12 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020027A6 RID: 10150
+// Token: 0x02001D21 RID: 7457
 [NullableContext(1)]
 [Nullable(0)]
 public class CostItemGridComponent : UiPanelBase
 {
-	// Token: 0x06014D9A RID: 85402 RVA: 0x0054A6FE File Offset: 0x005488FE
+	// Token: 0x06012794 RID: 75668 RVA: 0x00575287 File Offset: 0x00573487
 	public CostItemGridComponent(UUIItem uiItem, Action<int> levelUpClickCallBack, [Nullable(2)] Action lockTipClickCallBack = null, EUiViewName? belongView = null)
 	{
 		this.LevelUpClickCallBack = levelUpClickCallBack;
@@ -25,7 +25,7 @@ public class CostItemGridComponent : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06014D9B RID: 85403 RVA: 0x0054A72C File Offset: 0x0054892C
+	// Token: 0x06012795 RID: 75669 RVA: 0x005752B4 File Offset: 0x005734B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -63,7 +63,7 @@ public class CostItemGridComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014D9C RID: 85404 RVA: 0x0054A908 File Offset: 0x00548B08
+	// Token: 0x06012796 RID: 75670 RVA: 0x00575490 File Offset: 0x00573690
 	protected override void OnStart()
 	{
 		this.ButtonItem = new ButtonItem(base.GetItem(11));
@@ -78,7 +78,7 @@ public class CostItemGridComponent : UiPanelBase
 		button.RootUIComp.Get().SetUIActive(this.LockTipClickCallBack != null);
 	}
 
-	// Token: 0x06014D9D RID: 85405 RVA: 0x0054A988 File Offset: 0x00548B88
+	// Token: 0x06012797 RID: 75671 RVA: 0x00575510 File Offset: 0x00573710
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -98,31 +98,31 @@ public class CostItemGridComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06014D9E RID: 85406 RVA: 0x0054AA04 File Offset: 0x00548C04
+	// Token: 0x06012798 RID: 75672 RVA: 0x0057558C File Offset: 0x0057378C
 	private void OnExtendToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 	{
 		ISelectedData selectedData = (ISelectedData)callbackParameter.Data;
-		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null, false);
 		ComposeModel.Instance.ComposeSelectItem = selectedData;
 		ComposeModel.Instance.ComposeSkipSourceView = this.BelongView;
 		InventoryModel.Instance.SetItemNeedCount(new int?(selectedData.Count - selectedData.SelectedCount));
 	}
 
-	// Token: 0x06014D9F RID: 85407 RVA: 0x0054AA66 File Offset: 0x00548C66
+	// Token: 0x06012799 RID: 75673 RVA: 0x005755EF File Offset: 0x005737EF
 	public void Update(List<ISelectedData> dataList, int moneyId, int needMoney)
 	{
 		this.UpdateByDataList(dataList);
 		this.UpdateMoney(moneyId, needMoney);
 	}
 
-	// Token: 0x06014DA0 RID: 85408 RVA: 0x0054AA78 File Offset: 0x00548C78
+	// Token: 0x0601279A RID: 75674 RVA: 0x00575600 File Offset: 0x00573800
 	public void UpdateByDataList(List<ISelectedData> dataList)
 	{
 		this.DataList = dataList;
 		this.ScrollView.RefreshByData<ISelectedData>(dataList, null);
 	}
 
-	// Token: 0x06014DA1 RID: 85409 RVA: 0x0054AAA4 File Offset: 0x00548CA4
+	// Token: 0x0601279B RID: 75675 RVA: 0x0057562C File Offset: 0x0057382C
 	public void UpdateMoney(int moneyId, int needMoney)
 	{
 		this.MoneyId = moneyId;
@@ -138,13 +138,13 @@ public class CostItemGridComponent : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x06014DA2 RID: 85410 RVA: 0x0054AB37 File Offset: 0x00548D37
+	// Token: 0x0601279C RID: 75676 RVA: 0x005756BF File Offset: 0x005738BF
 	public bool GetIsMoneyEnough()
 	{
 		return this.IsMoneyEnough;
 	}
 
-	// Token: 0x06014DA3 RID: 85411 RVA: 0x0054AB3F File Offset: 0x00548D3F
+	// Token: 0x0601279D RID: 75677 RVA: 0x005756C7 File Offset: 0x005738C7
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -155,49 +155,49 @@ public class CostItemGridComponent : UiPanelBase
 		return this.DataList;
 	}
 
-	// Token: 0x06014DA4 RID: 85412 RVA: 0x0054AB47 File Offset: 0x00548D47
+	// Token: 0x0601279E RID: 75678 RVA: 0x005756CF File Offset: 0x005738CF
 	public void SetMaxItemActive(bool active)
 	{
 		base.GetItem(12).SetUIActive(active);
 	}
 
-	// Token: 0x06014DA5 RID: 85413 RVA: 0x0054AB57 File Offset: 0x00548D57
+	// Token: 0x0601279F RID: 75679 RVA: 0x005756DF File Offset: 0x005738DF
 	public void SetLockItemActive(bool active)
 	{
 		base.GetItem(13).SetUIActive(active);
 	}
 
-	// Token: 0x06014DA6 RID: 85414 RVA: 0x0054AB67 File Offset: 0x00548D67
+	// Token: 0x060127A0 RID: 75680 RVA: 0x005756EF File Offset: 0x005738EF
 	public void SetButtonItemActive(bool active)
 	{
 		this.ButtonItem.SetActive(active);
 	}
 
-	// Token: 0x06014DA7 RID: 85415 RVA: 0x0054AB75 File Offset: 0x00548D75
+	// Token: 0x060127A1 RID: 75681 RVA: 0x005756FD File Offset: 0x005738FD
 	public void SetLockLocalText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(16), textId, args);
 	}
 
-	// Token: 0x06014DA8 RID: 85416 RVA: 0x0054AB8B File Offset: 0x00548D8B
+	// Token: 0x060127A2 RID: 75682 RVA: 0x00575713 File Offset: 0x00573913
 	public void SetButtonItemLocalText(string textId)
 	{
 		this.ButtonItem.SetLocalText(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06014DA9 RID: 85417 RVA: 0x0054AB9E File Offset: 0x00548D9E
+	// Token: 0x060127A3 RID: 75683 RVA: 0x00575726 File Offset: 0x00573926
 	public void SetButtonItemLocalTextNew(string textId)
 	{
 		this.ButtonItem.SetLocalTextNew(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06014DAA RID: 85418 RVA: 0x0054ABB1 File Offset: 0x00548DB1
+	// Token: 0x060127A4 RID: 75684 RVA: 0x00575739 File Offset: 0x00573939
 	public void SetButtonItemText(string text)
 	{
 		this.ButtonItem.SetText(text);
 	}
 
-	// Token: 0x06014DAB RID: 85419 RVA: 0x0054ABBF File Offset: 0x00548DBF
+	// Token: 0x060127A5 RID: 75685 RVA: 0x00575747 File Offset: 0x00573947
 	public void SetButtonItemInteractive(bool interactive)
 	{
 		UUIButtonComponent btn = this.ButtonItem.GetBtn();
@@ -208,7 +208,7 @@ public class CostItemGridComponent : UiPanelBase
 		btn.SetSelfInteractive(interactive);
 	}
 
-	// Token: 0x04009CD8 RID: 40152
+	// Token: 0x0400A0BB RID: 41147
 	[Nullable(new byte[]
 	{
 		2,
@@ -216,7 +216,7 @@ public class CostItemGridComponent : UiPanelBase
 	})]
 	protected GenericScrollView<CostMediumItemGrid> ScrollView;
 
-	// Token: 0x04009CD9 RID: 40153
+	// Token: 0x0400A0BC RID: 41148
 	[Nullable(new byte[]
 	{
 		2,
@@ -224,68 +224,68 @@ public class CostItemGridComponent : UiPanelBase
 	})]
 	private List<ISelectedData> DataList;
 
-	// Token: 0x04009CDA RID: 40154
+	// Token: 0x0400A0BD RID: 41149
 	private int MoneyId;
 
-	// Token: 0x04009CDB RID: 40155
+	// Token: 0x0400A0BE RID: 41150
 	private int NeedMoney;
 
-	// Token: 0x04009CDC RID: 40156
+	// Token: 0x0400A0BF RID: 41151
 	[Nullable(2)]
 	private ButtonItem ButtonItem;
 
-	// Token: 0x04009CDD RID: 40157
+	// Token: 0x0400A0C0 RID: 41152
 	private bool IsMoneyEnough;
 
-	// Token: 0x04009CDE RID: 40158
+	// Token: 0x0400A0C1 RID: 41153
 	private readonly Action<int> LevelUpClickCallBack;
 
-	// Token: 0x04009CDF RID: 40159
+	// Token: 0x0400A0C2 RID: 41154
 	[Nullable(2)]
 	private readonly Action LockTipClickCallBack;
 
-	// Token: 0x04009CE0 RID: 40160
+	// Token: 0x0400A0C3 RID: 41155
 	public readonly EUiViewName? BelongView;
 
-	// Token: 0x02008E1F RID: 36383
+	// Token: 0x02008068 RID: 32872
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E1CC RID: 188876
+		// Token: 0x040298C8 RID: 170184
 		AddMaterialText,
-		// Token: 0x0402E1CD RID: 188877
+		// Token: 0x040298C9 RID: 170185
 		PanelButton,
-		// Token: 0x0402E1CE RID: 188878
+		// Token: 0x040298CA RID: 170186
 		ConditionButton,
-		// Token: 0x0402E1CF RID: 188879
+		// Token: 0x040298CB RID: 170187
 		AutoButton,
-		// Token: 0x0402E1D0 RID: 188880
+		// Token: 0x040298CC RID: 170188
 		LoopItem,
-		// Token: 0x0402E1D1 RID: 188881
+		// Token: 0x040298CD RID: 170189
 		ScrollView,
-		// Token: 0x0402E1D2 RID: 188882
+		// Token: 0x040298CE RID: 170190
 		CostRootItem,
-		// Token: 0x0402E1D3 RID: 188883
+		// Token: 0x040298CF RID: 170191
 		ConsumeTexture,
-		// Token: 0x0402E1D4 RID: 188884
+		// Token: 0x040298D0 RID: 170192
 		ConsumeText,
-		// Token: 0x0402E1D5 RID: 188885
+		// Token: 0x040298D1 RID: 170193
 		ConditionText,
-		// Token: 0x0402E1D6 RID: 188886
+		// Token: 0x040298D2 RID: 170194
 		MaterialRootItem,
-		// Token: 0x0402E1D7 RID: 188887
+		// Token: 0x040298D3 RID: 170195
 		StrengthItem,
-		// Token: 0x0402E1D8 RID: 188888
+		// Token: 0x040298D4 RID: 170196
 		MaxItem,
-		// Token: 0x0402E1D9 RID: 188889
+		// Token: 0x040298D5 RID: 170197
 		LockItem,
-		// Token: 0x0402E1DA RID: 188890
+		// Token: 0x040298D6 RID: 170198
 		TopButtons,
-		// Token: 0x0402E1DB RID: 188891
+		// Token: 0x040298D7 RID: 170199
 		AutoButtonText,
-		// Token: 0x0402E1DC RID: 188892
+		// Token: 0x040298D8 RID: 170200
 		LockText,
-		// Token: 0x0402E1DD RID: 188893
+		// Token: 0x040298D9 RID: 170201
 		LockTipButton
 	}
 }

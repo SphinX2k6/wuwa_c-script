@@ -7,11 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E2E RID: 3630
+	// Token: 0x02000F2A RID: 3882
 	public class ElementalBoxFoundationComponent : IComponentBase
 	{
-		// Token: 0x06005210 RID: 21008 RVA: 0x000CA34E File Offset: 0x000C854E
-		[NullableContext(1)]
+		// Token: 0x06005737 RID: 22327 RVA: 0x000D5C16 File Offset: 0x000D3E16
 		public static ElementalBoxFoundationComponent Create(IElementalBoxFoundationComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B71 RID: 7025
-		// (get) Token: 0x06005211 RID: 21009 RVA: 0x000CA370 File Offset: 0x000C8570
+		// Token: 0x17001CDE RID: 7390
+		// (get) Token: 0x06005738 RID: 22328 RVA: 0x000D5C38 File Offset: 0x000D3E38
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B72 RID: 7026
-		// (get) Token: 0x06005212 RID: 21010 RVA: 0x000CA3A8 File Offset: 0x000C85A8
+		// Token: 0x17001CDF RID: 7391
+		// (get) Token: 0x06005739 RID: 22329 RVA: 0x000D5C70 File Offset: 0x000D3E70
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B73 RID: 7027
-		// (get) Token: 0x06005213 RID: 21011 RVA: 0x000CA3BE File Offset: 0x000C85BE
+		// Token: 0x17001CE0 RID: 7392
+		// (get) Token: 0x0600573A RID: 22330 RVA: 0x000D5C86 File Offset: 0x000D3E86
 		public virtual EElementalType ElementalType
 		{
 			get
@@ -58,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B74 RID: 7028
-		// (get) Token: 0x06005214 RID: 21012 RVA: 0x000CA3CB File Offset: 0x000C85CB
+		// Token: 0x17001CE1 RID: 7393
+		// (get) Token: 0x0600573B RID: 22331 RVA: 0x000D5C93 File Offset: 0x000D3E93
 		public virtual int MaxCarryRange
 		{
 			get
@@ -68,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B75 RID: 7029
-		// (get) Token: 0x06005215 RID: 21013 RVA: 0x000CA3D8 File Offset: 0x000C85D8
+		// Token: 0x17001CE2 RID: 7394
+		// (get) Token: 0x0600573C RID: 22332 RVA: 0x000D5CA0 File Offset: 0x000D3EA0
 		public virtual int? InitialActiveElementalBoxId
 		{
 			get
@@ -82,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B76 RID: 7030
-		// (get) Token: 0x06005216 RID: 21014 RVA: 0x000CA410 File Offset: 0x000C8610
+		// Token: 0x17001CE3 RID: 7395
+		// (get) Token: 0x0600573D RID: 22333 RVA: 0x000D5CD8 File Offset: 0x000D3ED8
 		public virtual int? LoopTeleportMappingFoundationId
 		{
 			get
@@ -96,19 +95,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B77 RID: 7031
-		// (get) Token: 0x06005217 RID: 21015 RVA: 0x000CA448 File Offset: 0x000C8648
+		// Token: 0x17001CE4 RID: 7396
+		// (get) Token: 0x0600573E RID: 22334 RVA: 0x000D5D10 File Offset: 0x000D3F10
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> OnObtainNucleusActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -131,19 +130,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B78 RID: 7032
-		// (get) Token: 0x06005218 RID: 21016 RVA: 0x000CA4C4 File Offset: 0x000C86C4
+		// Token: 0x17001CE5 RID: 7397
+		// (get) Token: 0x0600573F RID: 22335 RVA: 0x000D5D8C File Offset: 0x000D3F8C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> OnReturnNucleusActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -166,29 +165,29 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F47 RID: 12103
+		// Token: 0x0400320F RID: 12815
 		private IElementalBoxFoundationComponent Instance;
 
-		// Token: 0x04002F48 RID: 12104
+		// Token: 0x04003210 RID: 12816
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _OnObtainNucleusActionsCache;
 
-		// Token: 0x04002F49 RID: 12105
+		// Token: 0x04003211 RID: 12817
 		private bool _OnObtainNucleusActionsInited;
 
-		// Token: 0x04002F4A RID: 12106
+		// Token: 0x04003212 RID: 12818
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _OnReturnNucleusActionsCache;
 
-		// Token: 0x04002F4B RID: 12107
+		// Token: 0x04003213 RID: 12819
 		private bool _OnReturnNucleusActionsInited;
 	}
 }

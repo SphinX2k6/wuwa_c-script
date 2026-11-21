@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062D8 RID: 25304
+	// Token: 0x02005256 RID: 21078
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 	})]
 	public class PinballRankRoleHeadItem : GridProxyAbstract<PinballRankRoleHeadData>
 	{
-		// Token: 0x0603FAC9 RID: 260809 RVA: 0x00F67F94 File Offset: 0x00F66194
+		// Token: 0x0603478A RID: 214922 RVA: 0x00EAEEF0 File Offset: 0x00EAD0F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FACA RID: 260810 RVA: 0x00F68000 File Offset: 0x00F66200
+		// Token: 0x0603478B RID: 214923 RVA: 0x00EAEF5C File Offset: 0x00EAD15C
 		[NullableContext(1)]
 		public override void Refresh(PinballRankRoleHeadData data, bool isSelected, int gridIndex)
 		{
@@ -54,12 +54,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0200C4C3 RID: 50371
+		// Token: 0x0200AEAA RID: 44714
 		private enum EComponents
 		{
-			// Token: 0x0403B5FD RID: 243197
+			// Token: 0x04035F5F RID: 221023
 			TexRoleIcon,
-			// Token: 0x0403B5FE RID: 243198
+			// Token: 0x04035F60 RID: 221024
 			TxtLv
 		}
 	}

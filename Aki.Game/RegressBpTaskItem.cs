@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001487 RID: 5255
+// Token: 0x0200093B RID: 2363
 internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 {
-	// Token: 0x060094C2 RID: 38082 RVA: 0x00200D24 File Offset: 0x001FEF24
+	// Token: 0x06006857 RID: 26711 RVA: 0x00209C8C File Offset: 0x00207E8C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,20 +33,20 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 		};
 	}
 
-	// Token: 0x060094C3 RID: 38083 RVA: 0x00200E82 File Offset: 0x001FF082
+	// Token: 0x06006858 RID: 26712 RVA: 0x00209DEA File Offset: 0x00207FEA
 	protected override void OnStart()
 	{
 		this.RewardListView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 	}
 
-	// Token: 0x060094C4 RID: 38084 RVA: 0x00200EA5 File Offset: 0x001FF0A5
+	// Token: 0x06006859 RID: 26713 RVA: 0x00209E0D File Offset: 0x0020800D
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x060094C5 RID: 38085 RVA: 0x00200EAC File Offset: 0x001FF0AC
+	// Token: 0x0600685A RID: 26714 RVA: 0x00209E14 File Offset: 0x00208014
 	public override void Refresh(RegressQuest data, bool isSelected, int gridIndex)
 	{
 		this.Data = new RegressQuest?(data);
@@ -83,14 +83,14 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 		this.RefreshTag();
 	}
 
-	// Token: 0x060094C6 RID: 38086 RVA: 0x00200FFC File Offset: 0x001FF1FC
+	// Token: 0x0600685B RID: 26715 RVA: 0x00209F64 File Offset: 0x00208164
 	private void RefreshRewardLayout()
 	{
 		List<TItem> dropPreviewRewardItemListForPreview = ActivityRegressModel.Instance.GetDropPreviewRewardItemListForPreview(this.Data.Value.TargetReward);
 		this.RewardListView.RefreshByData(dropPreviewRewardItemListForPreview, null, false);
 	}
 
-	// Token: 0x060094C7 RID: 38087 RVA: 0x00201038 File Offset: 0x001FF238
+	// Token: 0x0600685C RID: 26716 RVA: 0x00209FA0 File Offset: 0x002081A0
 	private bool IsShowTag()
 	{
 		RegressQuest value = this.Data.Value;
@@ -104,7 +104,7 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 		return !flag;
 	}
 
-	// Token: 0x060094C8 RID: 38088 RVA: 0x00201080 File Offset: 0x001FF280
+	// Token: 0x0600685D RID: 26717 RVA: 0x00209FE8 File Offset: 0x002081E8
 	private void RefreshTag()
 	{
 		RegressQuest value = this.Data.Value;
@@ -134,7 +134,7 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 		}
 	}
 
-	// Token: 0x060094C9 RID: 38089 RVA: 0x00201130 File Offset: 0x001FF330
+	// Token: 0x0600685E RID: 26718 RVA: 0x0020A098 File Offset: 0x00208298
 	private void OnClickBtn()
 	{
 		RegressQuest value = this.Data.Value;
@@ -155,10 +155,10 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 		}
 	}
 
-	// Token: 0x040041E6 RID: 16870
+	// Token: 0x0400427E RID: 17022
 	private RegressQuest? Data;
 
-	// Token: 0x040041E7 RID: 16871
+	// Token: 0x0400427F RID: 17023
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,43 +166,43 @@ internal class RegressBpTaskItem : GridProxyAbstract<RegressQuest>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardListView;
 
-	// Token: 0x02007AB2 RID: 31410
+	// Token: 0x02006C36 RID: 27702
 	private class EMissionComponents
 	{
-		// Token: 0x040285DA RID: 165338
+		// Token: 0x040238F4 RID: 145652
 		public const int TxtName = 0;
 
-		// Token: 0x040285DB RID: 165339
+		// Token: 0x040238F5 RID: 145653
 		public const int TxtProgress = 1;
 
-		// Token: 0x040285DC RID: 165340
+		// Token: 0x040238F6 RID: 145654
 		public const int RewardScroll = 2;
 
-		// Token: 0x040285DD RID: 165341
+		// Token: 0x040238F7 RID: 145655
 		public const int ItemReward = 3;
 
-		// Token: 0x040285DE RID: 165342
+		// Token: 0x040238F8 RID: 145656
 		public const int BtnJump = 4;
 
-		// Token: 0x040285DF RID: 165343
+		// Token: 0x040238F9 RID: 145657
 		public const int SpriteMask = 5;
 
-		// Token: 0x040285E0 RID: 165344
+		// Token: 0x040238FA RID: 145658
 		public const int BtnGetReward = 6;
 
-		// Token: 0x040285E1 RID: 165345
+		// Token: 0x040238FB RID: 145659
 		public const int TxtDoing = 7;
 
-		// Token: 0x040285E2 RID: 165346
+		// Token: 0x040238FC RID: 145660
 		public const int PanelTag = 8;
 
-		// Token: 0x040285E3 RID: 165347
+		// Token: 0x040238FD RID: 145661
 		public const int SpriteTagBlue = 9;
 
-		// Token: 0x040285E4 RID: 165348
+		// Token: 0x040238FE RID: 145662
 		public const int SpriteTagYellow = 10;
 
-		// Token: 0x040285E5 RID: 165349
+		// Token: 0x040238FF RID: 145663
 		public const int TxtTagDesc = 11;
 	}
 }

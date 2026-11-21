@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200618A RID: 24970
+	// Token: 0x02005108 RID: 20744
 	public interface IRoverlikeEventChoiceData
 	{
-		// Token: 0x170091DA RID: 37338
-		// (get) Token: 0x0603F19B RID: 258459
-		// (set) Token: 0x0603F19C RID: 258460
+		// Token: 0x1700653C RID: 25916
+		// (get) Token: 0x06033E5B RID: 212571
+		// (set) Token: 0x06033E5C RID: 212572
 		int ConfigId { get; set; }
 	}
 }

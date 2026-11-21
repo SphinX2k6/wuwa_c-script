@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02002B91 RID: 11153
+// Token: 0x0200210D RID: 8461
 public class SurvivorsRogueWeaponCard : SurvivorsRogueCardBaseData, ISurvivorsRogueWeaponCard, ISurvivorsRogueCardBase
 {
-	// Token: 0x060171DB RID: 94683 RVA: 0x005DCAE6 File Offset: 0x005DACE6
+	// Token: 0x06014C0C RID: 85004 RVA: 0x006096C6 File Offset: 0x006078C6
 	public SurvivorsRogueWeaponCard()
 	{
 		base.Type = ESurvivorsRogueItemType.Weapon;
 	}
 
-	// Token: 0x17001F10 RID: 7952
-	// (get) Token: 0x060171DC RID: 94684 RVA: 0x005DCAF5 File Offset: 0x005DACF5
-	// (set) Token: 0x060171DD RID: 94685 RVA: 0x005DCAFD File Offset: 0x005DACFD
+	// Token: 0x17001F68 RID: 8040
+	// (get) Token: 0x06014C0D RID: 85005 RVA: 0x006096D5 File Offset: 0x006078D5
+	// (set) Token: 0x06014C0E RID: 85006 RVA: 0x006096DD File Offset: 0x006078DD
 	public int? PropertyId { get; set; }
 
-	// Token: 0x17001F11 RID: 7953
-	// (get) Token: 0x060171DE RID: 94686 RVA: 0x005DCB06 File Offset: 0x005DAD06
-	// (set) Token: 0x060171DF RID: 94687 RVA: 0x005DCB0E File Offset: 0x005DAD0E
+	// Token: 0x17001F69 RID: 8041
+	// (get) Token: 0x06014C0F RID: 85007 RVA: 0x006096E6 File Offset: 0x006078E6
+	// (set) Token: 0x06014C10 RID: 85008 RVA: 0x006096EE File Offset: 0x006078EE
 	public int? LvUpCount { get; set; }
 
-	// Token: 0x17001F12 RID: 7954
-	// (get) Token: 0x060171E0 RID: 94688 RVA: 0x005DCB17 File Offset: 0x005DAD17
-	// (set) Token: 0x060171E1 RID: 94689 RVA: 0x005DCB1F File Offset: 0x005DAD1F
+	// Token: 0x17001F6A RID: 8042
+	// (get) Token: 0x06014C11 RID: 85009 RVA: 0x006096F7 File Offset: 0x006078F7
+	// (set) Token: 0x06014C12 RID: 85010 RVA: 0x006096FF File Offset: 0x006078FF
 	public bool? WeaponBondInfo { get; set; }
 }

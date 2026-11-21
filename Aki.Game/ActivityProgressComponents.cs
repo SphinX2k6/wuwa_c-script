@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200154B RID: 5451
+// Token: 0x02000A03 RID: 2563
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityProgressComponents : UiPanelBase
 {
-	// Token: 0x06009BC7 RID: 39879 RVA: 0x0021B984 File Offset: 0x00219B84
+	// Token: 0x06006FA5 RID: 28581 RVA: 0x00225734 File Offset: 0x00223934
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -28,7 +28,7 @@ public class ActivityProgressComponents : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009BC8 RID: 39880 RVA: 0x0021BA2F File Offset: 0x00219C2F
+	// Token: 0x06006FA6 RID: 28582 RVA: 0x002257DF File Offset: 0x002239DF
 	public void SetProgressPercent(float progress)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -39,7 +39,7 @@ public class ActivityProgressComponents : UiPanelBase
 		sprite.SetFillAmount(progress);
 	}
 
-	// Token: 0x06009BC9 RID: 39881 RVA: 0x0021BA43 File Offset: 0x00219C43
+	// Token: 0x06006FA7 RID: 28583 RVA: 0x002257F3 File Offset: 0x002239F3
 	public void SetProgressTextByText(string text)
 	{
 		UUIText text2 = base.GetText(1);
@@ -50,7 +50,7 @@ public class ActivityProgressComponents : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06009BCA RID: 39882 RVA: 0x0021BA58 File Offset: 0x00219C58
+	// Token: 0x06006FA8 RID: 28584 RVA: 0x00225808 File Offset: 0x00223A08
 	public void SetTitleByTextId(string textId, [Nullable(new byte[]
 	{
 		2,
@@ -60,7 +60,7 @@ public class ActivityProgressComponents : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x06009BCB RID: 39883 RVA: 0x0021BA6D File Offset: 0x00219C6D
+	// Token: 0x06006FA9 RID: 28585 RVA: 0x0022581D File Offset: 0x00223A1D
 	public void SetTitleByText(string text)
 	{
 		UUIText text2 = base.GetText(2);
@@ -71,7 +71,7 @@ public class ActivityProgressComponents : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06009BCC RID: 39884 RVA: 0x0021BA82 File Offset: 0x00219C82
+	// Token: 0x06006FAA RID: 28586 RVA: 0x00225832 File Offset: 0x00223A32
 	public void SetDescriptionByTextId(string textId, [Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class ActivityProgressComponents : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textId, args);
 	}
 
-	// Token: 0x06009BCD RID: 39885 RVA: 0x0021BA97 File Offset: 0x00219C97
+	// Token: 0x06006FAB RID: 28587 RVA: 0x00225847 File Offset: 0x00223A47
 	public void SetDescriptionByText(string text)
 	{
 		UUIText text2 = base.GetText(3);
@@ -92,20 +92,20 @@ public class ActivityProgressComponents : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x02007B80 RID: 31616
+	// Token: 0x02006D0B RID: 27915
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040289A5 RID: 166309
+		// Token: 0x04023CE0 RID: 146656
 		public const int SpriteProgress = 0;
 
-		// Token: 0x040289A6 RID: 166310
+		// Token: 0x04023CE1 RID: 146657
 		public const int TextProgress = 1;
 
-		// Token: 0x040289A7 RID: 166311
+		// Token: 0x04023CE2 RID: 146658
 		public const int Title = 2;
 
-		// Token: 0x040289A8 RID: 166312
+		// Token: 0x04023CE3 RID: 146659
 		public const int TextDescription = 3;
 	}
 }

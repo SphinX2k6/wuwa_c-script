@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002430 RID: 9264
+	// Token: 0x020026D1 RID: 9937
 	public class EStopNewMoveWithSplineTypeJsonConverter : JsonConverter<EStopNewMoveWithSplineType>
 	{
-		// Token: 0x0600C958 RID: 51544 RVA: 0x001D7BDC File Offset: 0x001D5DDC
+		// Token: 0x0600D608 RID: 54792 RVA: 0x001F1AA4 File Offset: 0x001EFCA4
 		public override EStopNewMoveWithSplineType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EStopNewMoveWithSplineTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C959 RID: 51545 RVA: 0x001D7C00 File Offset: 0x001D5E00
+		// Token: 0x0600D609 RID: 54793 RVA: 0x001F1AC8 File Offset: 0x001EFCC8
 		public override void Write(Utf8JsonWriter writer, EStopNewMoveWithSplineType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

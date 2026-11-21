@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A93 RID: 19091
+	// Token: 0x02004F5C RID: 20316
 	public struct ICheckIsInDragActorPlay : IFlatbufferObject
 	{
-		// Token: 0x17008A51 RID: 35409
-		// (get) Token: 0x0601DF16 RID: 122646 RVA: 0x0043466C File Offset: 0x0043286C
+		// Token: 0x17009132 RID: 37170
+		// (get) Token: 0x0601F9CF RID: 129487 RVA: 0x004659F8 File Offset: 0x00463BF8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF17 RID: 122647 RVA: 0x00434679 File Offset: 0x00432879
+		// Token: 0x0601F9D0 RID: 129488 RVA: 0x00465A05 File Offset: 0x00463C05
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DF18 RID: 122648 RVA: 0x00434680 File Offset: 0x00432880
+		// Token: 0x0601F9D1 RID: 129489 RVA: 0x00465A0C File Offset: 0x00463C0C
 		public static ICheckIsInDragActorPlay GetRootAsICheckIsInDragActorPlay(ByteBuffer _bb)
 		{
 			return ICheckIsInDragActorPlay.GetRootAsICheckIsInDragActorPlay(_bb, default(ICheckIsInDragActorPlay));
 		}
 
-		// Token: 0x0601DF19 RID: 122649 RVA: 0x0043469C File Offset: 0x0043289C
+		// Token: 0x0601F9D2 RID: 129490 RVA: 0x00465A28 File Offset: 0x00463C28
 		public static ICheckIsInDragActorPlay GetRootAsICheckIsInDragActorPlay(ByteBuffer _bb, ICheckIsInDragActorPlay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DF1A RID: 122650 RVA: 0x004346B9 File Offset: 0x004328B9
+		// Token: 0x0601F9D3 RID: 129491 RVA: 0x00465A45 File Offset: 0x00463C45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DF1B RID: 122651 RVA: 0x004346C8 File Offset: 0x004328C8
+		// Token: 0x0601F9D4 RID: 129492 RVA: 0x00465A54 File Offset: 0x00463C54
 		public ICheckIsInDragActorPlay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A52 RID: 35410
-		// (get) Token: 0x0601DF1C RID: 122652 RVA: 0x004346D8 File Offset: 0x004328D8
+		// Token: 0x17009133 RID: 37171
+		// (get) Token: 0x0601F9D5 RID: 129493 RVA: 0x00465A64 File Offset: 0x00463C64
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A53 RID: 35411
-		// (get) Token: 0x0601DF1D RID: 122653 RVA: 0x00434714 File Offset: 0x00432914
+		// Token: 0x17009134 RID: 37172
+		// (get) Token: 0x0601F9D6 RID: 129494 RVA: 0x00465AA0 File Offset: 0x00463CA0
 		public bool IsIn
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DF1E RID: 122654 RVA: 0x00434753 File Offset: 0x00432953
+		// Token: 0x0601F9D7 RID: 129495 RVA: 0x00465ADF File Offset: 0x00463CDF
 		public static Offset<ICheckIsInDragActorPlay> CreateICheckIsInDragActorPlay(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool IsIn = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsInDragActorPlay.EndICheckIsInDragActorPlay(builder);
 		}
 
-		// Token: 0x0601DF1F RID: 122655 RVA: 0x00434770 File Offset: 0x00432970
+		// Token: 0x0601F9D8 RID: 129496 RVA: 0x00465AFC File Offset: 0x00463CFC
 		public static void StartICheckIsInDragActorPlay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DF20 RID: 122656 RVA: 0x00434779 File Offset: 0x00432979
+		// Token: 0x0601F9D9 RID: 129497 RVA: 0x00465B05 File Offset: 0x00463D05
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DF21 RID: 122657 RVA: 0x00434784 File Offset: 0x00432984
+		// Token: 0x0601F9DA RID: 129498 RVA: 0x00465B10 File Offset: 0x00463D10
 		public static void AddIsIn(FlatBufferBuilder builder, bool isIn)
 		{
 			builder.AddBool(1, isIn, false);
 		}
 
-		// Token: 0x0601DF22 RID: 122658 RVA: 0x0043478F File Offset: 0x0043298F
+		// Token: 0x0601F9DB RID: 129499 RVA: 0x00465B1B File Offset: 0x00463D1B
 		public static Offset<ICheckIsInDragActorPlay> EndICheckIsInDragActorPlay(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsInDragActorPlay>(builder.EndTable());
 		}
 
-		// Token: 0x0601DF23 RID: 122659 RVA: 0x0043479C File Offset: 0x0043299C
+		// Token: 0x0601F9DC RID: 129500 RVA: 0x00465B28 File Offset: 0x00463D28
 		public ICheckIsInDragActorPlayT UnPack()
 		{
 			ICheckIsInDragActorPlayT checkIsInDragActorPlayT = new ICheckIsInDragActorPlayT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsInDragActorPlayT;
 		}
 
-		// Token: 0x0601DF24 RID: 122660 RVA: 0x004347B7 File Offset: 0x004329B7
+		// Token: 0x0601F9DD RID: 129501 RVA: 0x00465B43 File Offset: 0x00463D43
 		public void UnPackTo(ICheckIsInDragActorPlayT _o)
 		{
 			_o.Type = this.Type;
 			_o.IsIn = this.IsIn;
 		}
 
-		// Token: 0x0601DF25 RID: 122661 RVA: 0x004347D4 File Offset: 0x004329D4
+		// Token: 0x0601F9DE RID: 129502 RVA: 0x00465B60 File Offset: 0x00463D60
 		public static Offset<ICheckIsInDragActorPlay> Pack(FlatBufferBuilder builder, ICheckIsInDragActorPlayT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsInDragActorPlay.CreateICheckIsInDragActorPlay(builder, _o.Type, _o.IsIn);
 		}
 
-		// Token: 0x0400D304 RID: 54020
+		// Token: 0x0400DDE2 RID: 56802
 		private Table __p;
 	}
 }

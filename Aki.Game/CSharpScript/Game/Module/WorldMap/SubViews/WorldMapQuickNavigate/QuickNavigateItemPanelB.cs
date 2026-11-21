@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D4 RID: 18388
+	// Token: 0x02003705 RID: 14085
 	public class QuickNavigateItemPanelB : UiPanelBase
 	{
-		// Token: 0x060302E0 RID: 197344 RVA: 0x00B2A150 File Offset: 0x00B28350
+		// Token: 0x06024AB0 RID: 150192 RVA: 0x00A59FEC File Offset: 0x00A581EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060302E1 RID: 197345 RVA: 0x00B2A1F8 File Offset: 0x00B283F8
+		// Token: 0x06024AB1 RID: 150193 RVA: 0x00A5A094 File Offset: 0x00A58294
 		[NullableContext(1)]
 		public void RefreshByData(QuickNavigateDynamicData data)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x060302E2 RID: 197346 RVA: 0x00B2A26F File Offset: 0x00B2846F
+		// Token: 0x06024AB2 RID: 150194 RVA: 0x00A5A10B File Offset: 0x00A5830B
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			if (this.NavigateDynamicData != null)
@@ -67,17 +67,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x04019F22 RID: 106274
+		// Token: 0x040145D6 RID: 83414
 		[Nullable(2)]
 		private QuickNavigateDynamicData NavigateDynamicData;
 
-		// Token: 0x0200AA93 RID: 43667
+		// Token: 0x02009445 RID: 37957
 		public static class EComponent
 		{
-			// Token: 0x04033E54 RID: 212564
+			// Token: 0x0402E5DC RID: 189916
 			public const int TogList = 0;
 
-			// Token: 0x04033E55 RID: 212565
+			// Token: 0x0402E5DD RID: 189917
 			public const int TxtList = 1;
 		}
 	}

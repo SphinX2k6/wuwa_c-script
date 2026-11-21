@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727F RID: 29311
+	// Token: 0x020063FE RID: 25598
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TsPureAxisHandle
 	{
-		// Token: 0x06047D8F RID: 294287 RVA: 0x012623E6 File Offset: 0x012605E6
+		// Token: 0x0603E14F RID: 254287 RVA: 0x01202E2A File Offset: 0x0120102A
 		[NullableContext(1)]
 		public void Initialize(TsBasePlayerController playerController)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Controller
 			this.OnInputStat = Stat.Create("TsPureAxisHandle.OnInputAxis", "", "STATGROUP_KuroBattle");
 		}
 
-		// Token: 0x06047D90 RID: 294288 RVA: 0x0126240C File Offset: 0x0126060C
+		// Token: 0x0603E150 RID: 254288 RVA: 0x01202E50 File Offset: 0x01201050
 		public void Reset()
 		{
 			this.PlayerController = null;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D91 RID: 294289 RVA: 0x01262470 File Offset: 0x01260670
+		// Token: 0x0603E151 RID: 254289 RVA: 0x01202EB4 File Offset: 0x012010B4
 		[NullableContext(1)]
 		public void AddAxisBinding(string axisName, Action<string, float, bool> onInputAxis)
 		{
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Controller
 			UKuroInputDelegateLibrary.RegisterAxisBinding(FNameUtil.GetDynamicFName(axisName) ?? FName.NAME_None, this.PlayerController, this.OnAlwaysInputAxisDelegate);
 		}
 
-		// Token: 0x06047D92 RID: 294290 RVA: 0x01262563 File Offset: 0x01260763
+		// Token: 0x0603E152 RID: 254290 RVA: 0x01202FA7 File Offset: 0x012011A7
 		private void OnInputAxis(float value)
 		{
 			this.OnInputAxisCallback(this.AxisName, value, false);
 		}
 
-		// Token: 0x06047D93 RID: 294291 RVA: 0x01262578 File Offset: 0x01260778
+		// Token: 0x0603E153 RID: 254291 RVA: 0x01202FBC File Offset: 0x012011BC
 		private void OnAlwaysInputAxis(float value)
 		{
 			this.OnInputAxisCallback(this.AxisName, value, true);
 		}
 
-		// Token: 0x04025C63 RID: 154723
+		// Token: 0x04020F23 RID: 134947
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly List<string> OptimizeTickAxisName = new List<string>
@@ -95,16 +95,16 @@ namespace CSharpScript.Game.Controller
 			"WheelAxis"
 		};
 
-		// Token: 0x04025C64 RID: 154724
+		// Token: 0x04020F24 RID: 134948
 		private TsBasePlayerController PlayerController;
 
-		// Token: 0x04025C65 RID: 154725
+		// Token: 0x04020F25 RID: 134949
 		private string AxisName;
 
-		// Token: 0x04025C66 RID: 154726
+		// Token: 0x04020F26 RID: 134950
 		private Stat OnInputStat;
 
-		// Token: 0x04025C67 RID: 154727
+		// Token: 0x04020F27 RID: 134951
 		[Nullable(new byte[]
 		{
 			2,
@@ -112,10 +112,10 @@ namespace CSharpScript.Game.Controller
 		})]
 		private Action<string, float, bool> OnInputAxisCallback;
 
-		// Token: 0x04025C68 RID: 154728
+		// Token: 0x04020F28 RID: 134952
 		private FAxisBindingDelegate OnInputAxisDelegate;
 
-		// Token: 0x04025C69 RID: 154729
+		// Token: 0x04020F29 RID: 134953
 		private FAxisBindingDelegate OnAlwaysInputAxisDelegate;
 	}
 }

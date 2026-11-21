@@ -3,10 +3,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E4C RID: 24140
+	// Token: 0x02004E31 RID: 20017
 	public class BattleUiSpecialRoleDataAiMiSi : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D65B RID: 251483 RVA: 0x00ECFA54 File Offset: 0x00ECDC54
+		// Token: 0x060325EB RID: 206315 RVA: 0x00E20FC4 File Offset: 0x00E1F1C4
 		protected override void OnInit()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D65C RID: 251484 RVA: 0x00ECFB1C File Offset: 0x00ECDD1C
+		// Token: 0x060325EC RID: 206316 RVA: 0x00E2108C File Offset: 0x00E1F28C
 		protected override void OnClear()
 		{
 			if (!this.IsAutonomousProxy)
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D65D RID: 251485 RVA: 0x00ECFBAF File Offset: 0x00ECDDAF
+		// Token: 0x060325ED RID: 206317 RVA: 0x00E2111F File Offset: 0x00E1F31F
 		private void OnHudInited()
 		{
 			this.RefreshStrengthItem();
 		}
 
-		// Token: 0x0603D65E RID: 251486 RVA: 0x00ECFBB7 File Offset: 0x00ECDDB7
+		// Token: 0x060325EE RID: 206318 RVA: 0x00E21127 File Offset: 0x00E1F327
 		public override void OnChangeRole(bool isCurEntity)
 		{
 			if (!this.IsAutonomousProxy)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.RefreshStrengthItem();
 		}
 
-		// Token: 0x0603D65F RID: 251487 RVA: 0x00ECFBC8 File Offset: 0x00ECDDC8
+		// Token: 0x060325EF RID: 206319 RVA: 0x00E21138 File Offset: 0x00E1F338
 		private void OnMechanicalTagChanged(int tagId, bool tagExist)
 		{
 			if (!this.IsAutonomousProxy)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.RefreshStrengthItem();
 		}
 
-		// Token: 0x0603D660 RID: 251488 RVA: 0x00ECFBE0 File Offset: 0x00ECDDE0
+		// Token: 0x060325F0 RID: 206320 RVA: 0x00E21150 File Offset: 0x00E1F350
 		private void RefreshStrengthItem()
 		{
 			if (!HudUnitManager.Instance.GetIsInitHud())
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			this.AddStrengthItem();
 		}
 
-		// Token: 0x0603D661 RID: 251489 RVA: 0x00ECFC1B File Offset: 0x00ECDE1B
+		// Token: 0x060325F1 RID: 206321 RVA: 0x00E2118B File Offset: 0x00E1F38B
 		private void AddStrengthItem()
 		{
 			if (this.HasStrengthItem)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			EventSystem.Instance.Emit<EStrengthItemType>(EEventName.AddStrengthItem, EStrengthItemType.StrengthForAimisi);
 		}
 
-		// Token: 0x0603D662 RID: 251490 RVA: 0x00ECFC3E File Offset: 0x00ECDE3E
+		// Token: 0x060325F2 RID: 206322 RVA: 0x00E211AE File Offset: 0x00E1F3AE
 		private void RemoveStrengthItem()
 		{
 			if (!this.HasStrengthItem)
@@ -127,16 +127,16 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			EventSystem.Instance.Emit<EStrengthItemType>(EEventName.RemoveStrengthItem, EStrengthItemType.StrengthForAimisi);
 		}
 
-		// Token: 0x0402009B RID: 131227
+		// Token: 0x0401AB62 RID: 109410
 		private static readonly int MechanicalTag = GameplayTagDefine.EGameplayTagId["角色.AimisiMd10011.状态.主控机甲"];
 
-		// Token: 0x0402009C RID: 131228
+		// Token: 0x0401AB63 RID: 109411
 		private bool IsAutonomousProxy;
 
-		// Token: 0x0402009D RID: 131229
+		// Token: 0x0401AB64 RID: 109412
 		private bool HasStrengthItem;
 
-		// Token: 0x0402009E RID: 131230
+		// Token: 0x0401AB65 RID: 109413
 		private bool HasMechanicalTag;
 	}
 }

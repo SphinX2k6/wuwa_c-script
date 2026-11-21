@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Npc.Logics;
 
-// Token: 0x02003121 RID: 12577
+// Token: 0x0200267C RID: 9852
 [NullableContext(2)]
 [Nullable(0)]
 public class PerformTurn : PerformActionBase
 {
-	// Token: 0x1700256C RID: 9580
-	// (get) Token: 0x0601B06D RID: 110701 RVA: 0x00755F89 File Offset: 0x00754189
+	// Token: 0x17002717 RID: 10007
+	// (get) Token: 0x06018AC8 RID: 101064 RVA: 0x0077BFF5 File Offset: 0x0077A1F5
 	public override bool IsAtomic { get; } = 1;
 
-	// Token: 0x0601B06E RID: 110702 RVA: 0x00755F91 File Offset: 0x00754191
+	// Token: 0x06018AC9 RID: 101065 RVA: 0x0077BFFD File Offset: 0x0077A1FD
 	public PerformTurn() : base(EPerformAction.Turn)
 	{
 	}
 
-	// Token: 0x0601B06F RID: 110703 RVA: 0x00755FA4 File Offset: 0x007541A4
+	// Token: 0x06018ACA RID: 101066 RVA: 0x0077C010 File Offset: 0x0077A210
 	protected override void OnExecute()
 	{
 		if (this.PerformComp.Entity.GetComponent<CharacterActorComponent>() == null)
@@ -39,7 +39,7 @@ public class PerformTurn : PerformActionBase
 		this.HandleTurn(0f);
 	}
 
-	// Token: 0x0601B070 RID: 110704 RVA: 0x00756060 File Offset: 0x00754260
+	// Token: 0x06018ACB RID: 101067 RVA: 0x0077C0CC File Offset: 0x0077A2CC
 	private void HandleTurn(float delta)
 	{
 		this.BlendAnimTimer = null;
@@ -68,7 +68,7 @@ public class PerformTurn : PerformActionBase
 		}
 	}
 
-	// Token: 0x0601B071 RID: 110705 RVA: 0x0075614C File Offset: 0x0075434C
+	// Token: 0x06018ACC RID: 101068 RVA: 0x0077C1B8 File Offset: 0x0077A3B8
 	private void OnTurnEnd()
 	{
 		Entity entity = this.Entity;
@@ -90,7 +90,7 @@ public class PerformTurn : PerformActionBase
 		base.FinishExecute();
 	}
 
-	// Token: 0x0601B072 RID: 110706 RVA: 0x007561DC File Offset: 0x007543DC
+	// Token: 0x06018ACD RID: 101069 RVA: 0x0077C248 File Offset: 0x0077A448
 	protected override void OnReset()
 	{
 		if (this.Entity != null && EventSystem.Instance.HasWithTarget(this.Entity, EEventName.CharTurnEnd, new Action(this.OnTurnEnd)))
@@ -112,7 +112,7 @@ public class PerformTurn : PerformActionBase
 		this.BlendAnimTimer = null;
 	}
 
-	// Token: 0x0601B073 RID: 110707 RVA: 0x00756270 File Offset: 0x00754470
+	// Token: 0x06018ACE RID: 101070 RVA: 0x0077C2DC File Offset: 0x0077A4DC
 	private void StartWaitTurnEnd()
 	{
 		this.Entity = this.PerformComp.Entity;
@@ -123,15 +123,15 @@ public class PerformTurn : PerformActionBase
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0400D229 RID: 53801
+	// Token: 0x0400D64B RID: 54859
 	private const int TURN_MAX_TIME = 3000;
 
-	// Token: 0x0400D22B RID: 53803
+	// Token: 0x0400D64D RID: 54861
 	private Entity Entity;
 
-	// Token: 0x0400D22C RID: 53804
+	// Token: 0x0400D64E RID: 54862
 	private TimerHandle WatchDog;
 
-	// Token: 0x0400D22D RID: 53805
+	// Token: 0x0400D64F RID: 54863
 	private TimerHandle BlendAnimTimer;
 }

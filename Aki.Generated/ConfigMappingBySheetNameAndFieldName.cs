@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000524 RID: 1316
+	// Token: 0x0200053A RID: 1338
 	public class ConfigMappingBySheetNameAndFieldName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001EE3 RID: 7907 RVA: 0x00107C98 File Offset: 0x00105E98
+		// Token: 0x06001F67 RID: 8039 RVA: 0x0010E3EC File Offset: 0x0010C5EC
 		static ConfigMappingBySheetNameAndFieldName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMappingBySheetNameAndFieldName.CreateStaticDefaultValue), new Action(ConfigMappingBySheetNameAndFieldName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001EE4 RID: 7908 RVA: 0x00107CB8 File Offset: 0x00105EB8
+		// Token: 0x06001F68 RID: 8040 RVA: 0x0010E40C File Offset: 0x0010C60C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMappingBySheetNameAndFieldName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001EE5 RID: 7909 RVA: 0x00107D37 File Offset: 0x00105F37
+		// Token: 0x06001F69 RID: 8041 RVA: 0x0010E48B File Offset: 0x0010C68B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMappingBySheetNameAndFieldName.LogPair = null;
 			ConfigMappingBySheetNameAndFieldName.HandleId = 0;
 		}
 
-		// Token: 0x06001EE6 RID: 7910 RVA: 0x00107D45 File Offset: 0x00105F45
+		// Token: 0x06001F6A RID: 8042 RVA: 0x0010E499 File Offset: 0x0010C699
 		public static void Init()
 		{
 			ConfigMappingBySheetNameAndFieldName.HandleId = ConfigCommon.InitDataStatement(ConfigMappingBySheetNameAndFieldName.HandleId, "db_mapping.db", "select BinData from `Mapping` where SheetName=? AND FieldName=?");
 		}
 
-		// Token: 0x06001EE7 RID: 7911 RVA: 0x00107D60 File Offset: 0x00105F60
+		// Token: 0x06001F6B RID: 8043 RVA: 0x0010E4B4 File Offset: 0x0010C6B4
 		[return: Nullable(2)]
 		public static IReadOnlyList<Mapping> GetConfigList(string p0SheetName, string p1FieldName, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040023E0 RID: 9184
+		// Token: 0x0400247A RID: 9338
 		private const string DB = "db_mapping.db";
 
-		// Token: 0x040023E1 RID: 9185
+		// Token: 0x0400247B RID: 9339
 		private const string FILE = "s.数据枚举对应关系.xlsx";
 
-		// Token: 0x040023E2 RID: 9186
+		// Token: 0x0400247C RID: 9340
 		private const string TABLE = "Mapping";
 
-		// Token: 0x040023E3 RID: 9187
+		// Token: 0x0400247D RID: 9341
 		private const string COMMAND = "select BinData from `Mapping` where SheetName=? AND FieldName=?";
 
-		// Token: 0x040023E4 RID: 9188
+		// Token: 0x0400247E RID: 9342
 		private const string KEY_PREFIX = "MappingBySheetNameAndFieldName";
 
-		// Token: 0x040023E5 RID: 9189
+		// Token: 0x0400247F RID: 9343
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040023E6 RID: 9190
+		// Token: 0x04002480 RID: 9344
 		private static int HandleId;
 	}
 }

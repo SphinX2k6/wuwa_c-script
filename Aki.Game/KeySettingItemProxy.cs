@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.KeySetting;
 using CSharpScript.Game.Module.Menu;
 using UnrealEngine;
 
-// Token: 0x02002027 RID: 8231
+// Token: 0x020014FA RID: 5370
 [NullableContext(1)]
 [Nullable(0)]
 public class KeySettingItemProxy
 {
-	// Token: 0x06010219 RID: 66073 RVA: 0x003ED87B File Offset: 0x003EBA7B
+	// Token: 0x0600D681 RID: 54913 RVA: 0x003F9E73 File Offset: 0x003F8073
 	public KeySettingItemProxy(IKeySettingItem item)
 	{
 		this.Item = item;
 	}
 
-	// Token: 0x0601021A RID: 66074 RVA: 0x003ED88C File Offset: 0x003EBA8C
+	// Token: 0x0600D682 RID: 54914 RVA: 0x003F9E84 File Offset: 0x003F8084
 	public void OnStart()
 	{
 		this.Item.GetKeySetToggle().OnStateChange.Add(new Action<EToggleState>(this.OnKeySetButtonClicked));
@@ -31,7 +31,7 @@ public class KeySettingItemProxy
 		KeySettingViewModel.AddOnKeyChangeDelegate(new Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType>(this.OnKeyChange));
 	}
 
-	// Token: 0x0601021B RID: 66075 RVA: 0x003ED918 File Offset: 0x003EBB18
+	// Token: 0x0600D683 RID: 54915 RVA: 0x003F9F10 File Offset: 0x003F8110
 	public void OnBeforeDestroy()
 	{
 		this.Item.GetKeySetToggle().OnStateChange.Remove(new Action<EToggleState>(this.OnKeySetButtonClicked));
@@ -50,7 +50,7 @@ public class KeySettingItemProxy
 		loopSequencePlayer.Clear();
 	}
 
-	// Token: 0x0601021C RID: 66076 RVA: 0x003ED994 File Offset: 0x003EBB94
+	// Token: 0x0600D684 RID: 54916 RVA: 0x003F9F8C File Offset: 0x003F818C
 	public void SetDetailItemVisible(bool bVisible)
 	{
 		UUIItem detailUiItem = this.Item.GetDetailUiItem();
@@ -72,7 +72,7 @@ public class KeySettingItemProxy
 		this.KeySettingRowData.IsExpandDetail = bVisible;
 	}
 
-	// Token: 0x0601021D RID: 66077 RVA: 0x003ED9EE File Offset: 0x003EBBEE
+	// Token: 0x0600D685 RID: 54917 RVA: 0x003F9FE6 File Offset: 0x003F81E6
 	public void Refresh(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 	{
 		this.KeySettingRowData = data;
@@ -84,7 +84,7 @@ public class KeySettingItemProxy
 		this.RefreshDisableButton();
 	}
 
-	// Token: 0x0601021E RID: 66078 RVA: 0x003EDA1C File Offset: 0x003EBC1C
+	// Token: 0x0600D686 RID: 54918 RVA: 0x003FA014 File Offset: 0x003F8214
 	private void RefreshTitleText()
 	{
 		UUIText titleUiText = this.Item.GetTitleUiText();
@@ -97,7 +97,7 @@ public class KeySettingItemProxy
 		LguiUtil.Instance.SetLocalTextNew(titleUiText, settingName, Array.Empty<object>());
 	}
 
-	// Token: 0x0601021F RID: 66079 RVA: 0x003EDA70 File Offset: 0x003EBC70
+	// Token: 0x0600D687 RID: 54919 RVA: 0x003FA068 File Offset: 0x003F8268
 	private unsafe void RefreshKeyNameText()
 	{
 		string buttonTextId = this.KeySettingRowData.ButtonTextId;
@@ -157,7 +157,7 @@ public class KeySettingItemProxy
 		this.Item.GetKeyNameUiText().SetText(currentKeyNameRichText, true);
 	}
 
-	// Token: 0x06010220 RID: 66080 RVA: 0x003EDCA4 File Offset: 0x003EBEA4
+	// Token: 0x0600D688 RID: 54920 RVA: 0x003FA29C File Offset: 0x003F849C
 	private void RefreshDetailText()
 	{
 		if (this.Item.GetDetailUiItem() == null || this.Item.GetDetailUiText() == null || this.Item.GetDetailSprite() == null)
@@ -179,7 +179,7 @@ public class KeySettingItemProxy
 		LguiUtil.Instance.SetLocalTextNew(this.Item.GetDetailUiText(), detailTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x06010221 RID: 66081 RVA: 0x003EDD4C File Offset: 0x003EBF4C
+	// Token: 0x0600D689 RID: 54921 RVA: 0x003FA344 File Offset: 0x003F8544
 	private void RefreshLock()
 	{
 		if (this.Item.GetLockSprite() == null)
@@ -191,7 +191,7 @@ public class KeySettingItemProxy
 		this.Item.GetKeySetToggle().SetSelfInteractive(!isLock);
 	}
 
-	// Token: 0x06010222 RID: 66082 RVA: 0x003EDD98 File Offset: 0x003EBF98
+	// Token: 0x0600D68A RID: 54922 RVA: 0x003FA390 File Offset: 0x003F8590
 	private void RefreshDisableButton()
 	{
 		if (this.KeySettingRowData == null)
@@ -232,7 +232,7 @@ public class KeySettingItemProxy
 		uuiitem.SetUIActive(true);
 	}
 
-	// Token: 0x06010223 RID: 66083 RVA: 0x003EDE35 File Offset: 0x003EC035
+	// Token: 0x0600D68B RID: 54923 RVA: 0x003FA42D File Offset: 0x003F862D
 	private void OnKeySetButtonClicked(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -246,7 +246,7 @@ public class KeySettingItemProxy
 		KeySettingViewModel.WaitKeySetting(this.KeySettingRowData, this.Item);
 	}
 
-	// Token: 0x06010224 RID: 66084 RVA: 0x003EDE58 File Offset: 0x003EC058
+	// Token: 0x0600D68C RID: 54924 RVA: 0x003FA450 File Offset: 0x003F8650
 	private void OnCancelButtonClicked()
 	{
 		if (this.KeySettingRowData == null)
@@ -272,7 +272,7 @@ public class KeySettingItemProxy
 		InputSettings.Instance.SaveKeyMappings();
 	}
 
-	// Token: 0x06010225 RID: 66085 RVA: 0x003EDEDC File Offset: 0x003EC0DC
+	// Token: 0x0600D68D RID: 54925 RVA: 0x003FA4D4 File Offset: 0x003F86D4
 	[NullableContext(2)]
 	private void OnKeySelected(KeySettingRowData data)
 	{
@@ -308,7 +308,7 @@ public class KeySettingItemProxy
 		}
 	}
 
-	// Token: 0x06010226 RID: 66086 RVA: 0x003EDF8D File Offset: 0x003EC18D
+	// Token: 0x0600D68E RID: 54926 RVA: 0x003FA585 File Offset: 0x003F8785
 	private void OnKeyChange(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 	{
 		if (data == this.KeySettingRowData)
@@ -317,17 +317,17 @@ public class KeySettingItemProxy
 		}
 	}
 
-	// Token: 0x04007763 RID: 30563
+	// Token: 0x0400784C RID: 30796
 	[Nullable(2)]
 	private KeySettingRowData KeySettingRowData;
 
-	// Token: 0x04007764 RID: 30564
+	// Token: 0x0400784D RID: 30797
 	private CSharpScript.Game.Module.Menu.EInputControllerType InputControllerType;
 
-	// Token: 0x04007765 RID: 30565
+	// Token: 0x0400784E RID: 30798
 	[Nullable(2)]
 	private LevelSequencePlayer LoopSequencePlayer;
 
-	// Token: 0x04007766 RID: 30566
+	// Token: 0x0400784F RID: 30799
 	private readonly IKeySettingItem Item;
 }

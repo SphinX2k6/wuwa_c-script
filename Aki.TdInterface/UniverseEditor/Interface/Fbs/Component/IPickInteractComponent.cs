@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005736 RID: 22326
+	// Token: 0x02005D3D RID: 23869
 	public struct IPickInteractComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A66D RID: 42605
-		// (get) Token: 0x0602560F RID: 153103 RVA: 0x0052860C File Offset: 0x0052680C
+		// Token: 0x1700AF91 RID: 44945
+		// (get) Token: 0x06027B2F RID: 162607 RVA: 0x0056E798 File Offset: 0x0056C998
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025610 RID: 153104 RVA: 0x00528619 File Offset: 0x00526819
+		// Token: 0x06027B30 RID: 162608 RVA: 0x0056E7A5 File Offset: 0x0056C9A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025611 RID: 153105 RVA: 0x00528620 File Offset: 0x00526820
+		// Token: 0x06027B31 RID: 162609 RVA: 0x0056E7AC File Offset: 0x0056C9AC
 		public static IPickInteractComponent GetRootAsIPickInteractComponent(ByteBuffer _bb)
 		{
 			return IPickInteractComponent.GetRootAsIPickInteractComponent(_bb, default(IPickInteractComponent));
 		}
 
-		// Token: 0x06025612 RID: 153106 RVA: 0x0052863C File Offset: 0x0052683C
+		// Token: 0x06027B32 RID: 162610 RVA: 0x0056E7C8 File Offset: 0x0056C9C8
 		public static IPickInteractComponent GetRootAsIPickInteractComponent(ByteBuffer _bb, IPickInteractComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025613 RID: 153107 RVA: 0x00528659 File Offset: 0x00526859
+		// Token: 0x06027B33 RID: 162611 RVA: 0x0056E7E5 File Offset: 0x0056C9E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025614 RID: 153108 RVA: 0x00528668 File Offset: 0x00526868
+		// Token: 0x06027B34 RID: 162612 RVA: 0x0056E7F4 File Offset: 0x0056C9F4
 		public IPickInteractComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A66E RID: 42606
-		// (get) Token: 0x06025615 RID: 153109 RVA: 0x00528678 File Offset: 0x00526878
+		// Token: 0x1700AF92 RID: 44946
+		// (get) Token: 0x06027B35 RID: 162613 RVA: 0x0056E804 File Offset: 0x0056CA04
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A66F RID: 42607
-		// (get) Token: 0x06025616 RID: 153110 RVA: 0x005286B8 File Offset: 0x005268B8
+		// Token: 0x1700AF93 RID: 44947
+		// (get) Token: 0x06027B36 RID: 162614 RVA: 0x0056E844 File Offset: 0x0056CA44
 		public IChessmanPickInteraction? PickInteractType
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A670 RID: 42608
-		// (get) Token: 0x06025617 RID: 153111 RVA: 0x00528718 File Offset: 0x00526918
+		// Token: 0x1700AF94 RID: 44948
+		// (get) Token: 0x06027B37 RID: 162615 RVA: 0x0056E8A4 File Offset: 0x0056CAA4
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025618 RID: 153112 RVA: 0x00528754 File Offset: 0x00526954
+		// Token: 0x06027B38 RID: 162616 RVA: 0x0056E8E0 File Offset: 0x0056CAE0
 		public static Offset<IPickInteractComponent> CreateIPickInteractComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IChessmanPickInteraction> PickInteractTypeOffset = default(Offset<IChessmanPickInteraction>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPickInteractComponent.EndIPickInteractComponent(builder);
 		}
 
-		// Token: 0x06025619 RID: 153113 RVA: 0x00528778 File Offset: 0x00526978
+		// Token: 0x06027B39 RID: 162617 RVA: 0x0056E904 File Offset: 0x0056CB04
 		public static void StartIPickInteractComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602561A RID: 153114 RVA: 0x00528781 File Offset: 0x00526981
+		// Token: 0x06027B3A RID: 162618 RVA: 0x0056E90D File Offset: 0x0056CB0D
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0602561B RID: 153115 RVA: 0x0052878C File Offset: 0x0052698C
+		// Token: 0x06027B3B RID: 162619 RVA: 0x0056E918 File Offset: 0x0056CB18
 		public static void AddPickInteractType(FlatBufferBuilder builder, Offset<IChessmanPickInteraction> pickInteractTypeOffset)
 		{
 			builder.AddOffset(1, pickInteractTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0602561C RID: 153116 RVA: 0x0052879C File Offset: 0x0052699C
+		// Token: 0x06027B3C RID: 162620 RVA: 0x0056E928 File Offset: 0x0056CB28
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602561D RID: 153117 RVA: 0x005287A7 File Offset: 0x005269A7
+		// Token: 0x06027B3D RID: 162621 RVA: 0x0056E933 File Offset: 0x0056CB33
 		public static Offset<IPickInteractComponent> EndIPickInteractComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IPickInteractComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602561E RID: 153118 RVA: 0x005287B4 File Offset: 0x005269B4
+		// Token: 0x06027B3E RID: 162622 RVA: 0x0056E940 File Offset: 0x0056CB40
 		public IPickInteractComponentT UnPack()
 		{
 			IPickInteractComponentT pickInteractComponentT = new IPickInteractComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pickInteractComponentT;
 		}
 
-		// Token: 0x0602561F RID: 153119 RVA: 0x005287D0 File Offset: 0x005269D0
+		// Token: 0x06027B3F RID: 162623 RVA: 0x0056E95C File Offset: 0x0056CB5C
 		public void UnPackTo(IPickInteractComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025620 RID: 153120 RVA: 0x00528824 File Offset: 0x00526A24
+		// Token: 0x06027B40 RID: 162624 RVA: 0x0056E9B0 File Offset: 0x0056CBB0
 		public static Offset<IPickInteractComponent> Pack(FlatBufferBuilder builder, IPickInteractComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPickInteractComponent.CreateIPickInteractComponent(builder, _o.Disabled, pickInteractTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EBBA RID: 60346
+		// Token: 0x0400F8A5 RID: 63653
 		private Table __p;
 	}
 }

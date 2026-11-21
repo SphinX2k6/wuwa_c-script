@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.ResManager
 {
-	// Token: 0x02004F10 RID: 20240
+	// Token: 0x02003ED9 RID: 16089
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceDiffUpdaterFactory
 	{
-		// Token: 0x06033E63 RID: 212579 RVA: 0x00C29404 File Offset: 0x00C27604
+		// Token: 0x06028CCE RID: 167118 RVA: 0x00B729F4 File Offset: 0x00B70BF4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <CreateCoreUpdaters>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E64 RID: 212580 RVA: 0x00C29440 File Offset: 0x00C27640
+		// Token: 0x06028CCF RID: 167119 RVA: 0x00B72A30 File Offset: 0x00B70C30
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <CreateMapBlockUpdater>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E65 RID: 212581 RVA: 0x00C29494 File Offset: 0x00C27694
+		// Token: 0x06028CD0 RID: 167120 RVA: 0x00B72A84 File Offset: 0x00B70C84
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <CreateVideoUpdater>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E66 RID: 212582 RVA: 0x00C294F8 File Offset: 0x00C276F8
+		// Token: 0x06028CD1 RID: 167121 RVA: 0x00B72AE8 File Offset: 0x00B70CE8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <CreateCompositeUpdater>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E67 RID: 212583 RVA: 0x00C2955C File Offset: 0x00C2775C
+		// Token: 0x06028CD2 RID: 167122 RVA: 0x00B72B4C File Offset: 0x00B70D4C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.ResManager
 			return <CreateRoleVoiceUpdater>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033E68 RID: 212584 RVA: 0x00C295B0 File Offset: 0x00C277B0
+		// Token: 0x06028CD3 RID: 167123 RVA: 0x00B72BA0 File Offset: 0x00B70DA0
 		private static IReadOnlyList<int> FilterLauncherDownloadedVideos(IReadOnlyList<int> videoIds)
 		{
 			HashSet<int> global = LauncherStorageLib.Instance.GetGlobal<HashSet<int>>(ELauncherStorageGlobalKey.UserFinishedVideoList, null);

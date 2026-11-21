@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F3B RID: 16187
+	// Token: 0x02004379 RID: 17273
 	public struct IMonsterMergedHpBarSettings : IFlatbufferObject
 	{
-		// Token: 0x17007092 RID: 28818
-		// (get) Token: 0x06017007 RID: 94215 RVA: 0x003515D2 File Offset: 0x0034F7D2
+		// Token: 0x17007683 RID: 30339
+		// (get) Token: 0x06018669 RID: 99945 RVA: 0x0037AA46 File Offset: 0x00378C46
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017008 RID: 94216 RVA: 0x003515DF File Offset: 0x0034F7DF
+		// Token: 0x0601866A RID: 99946 RVA: 0x0037AA53 File Offset: 0x00378C53
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017009 RID: 94217 RVA: 0x003515E8 File Offset: 0x0034F7E8
+		// Token: 0x0601866B RID: 99947 RVA: 0x0037AA5C File Offset: 0x00378C5C
 		public static IMonsterMergedHpBarSettings GetRootAsIMonsterMergedHpBarSettings(ByteBuffer _bb)
 		{
 			return IMonsterMergedHpBarSettings.GetRootAsIMonsterMergedHpBarSettings(_bb, default(IMonsterMergedHpBarSettings));
 		}
 
-		// Token: 0x0601700A RID: 94218 RVA: 0x00351604 File Offset: 0x0034F804
+		// Token: 0x0601866C RID: 99948 RVA: 0x0037AA78 File Offset: 0x00378C78
 		public static IMonsterMergedHpBarSettings GetRootAsIMonsterMergedHpBarSettings(ByteBuffer _bb, IMonsterMergedHpBarSettings obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601700B RID: 94219 RVA: 0x00351621 File Offset: 0x0034F821
+		// Token: 0x0601866D RID: 99949 RVA: 0x0037AA95 File Offset: 0x00378C95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601700C RID: 94220 RVA: 0x00351630 File Offset: 0x0034F830
+		// Token: 0x0601866E RID: 99950 RVA: 0x0037AAA4 File Offset: 0x00378CA4
 		public IMonsterMergedHpBarSettings __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601700D RID: 94221 RVA: 0x00351640 File Offset: 0x0034F840
+		// Token: 0x0601866F RID: 99951 RVA: 0x0037AAB4 File Offset: 0x00378CB4
 		public long DisplayBuffIds(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetLong(this.__p.__vector(num) + j * 8);
 		}
 
-		// Token: 0x17007093 RID: 28819
-		// (get) Token: 0x0601700E RID: 94222 RVA: 0x00351680 File Offset: 0x0034F880
+		// Token: 0x17007684 RID: 30340
+		// (get) Token: 0x06018670 RID: 99952 RVA: 0x0037AAF4 File Offset: 0x00378CF4
 		public int DisplayBuffIdsLength
 		{
 			get
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601700F RID: 94223 RVA: 0x003516AB File Offset: 0x0034F8AB
+		// Token: 0x06018671 RID: 99953 RVA: 0x0037AB1F File Offset: 0x00378D1F
 		public Span<long> GetDisplayBuffIdsBytes()
 		{
 			return this.__p.__vector_as_span<long>(4, 8);
 		}
 
-		// Token: 0x06017010 RID: 94224 RVA: 0x003516BA File Offset: 0x0034F8BA
+		// Token: 0x06018672 RID: 99954 RVA: 0x0037AB2E File Offset: 0x00378D2E
 		public long[] GetDisplayBuffIdsArray()
 		{
 			return this.__p.__vector_as_array<long>(4);
 		}
 
-		// Token: 0x17007094 RID: 28820
-		// (get) Token: 0x06017011 RID: 94225 RVA: 0x003516C8 File Offset: 0x0034F8C8
+		// Token: 0x17007685 RID: 30341
+		// (get) Token: 0x06018673 RID: 99955 RVA: 0x0037AB3C File Offset: 0x00378D3C
 		public byte NullMask
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017012 RID: 94226 RVA: 0x00351704 File Offset: 0x0034F904
+		// Token: 0x06018674 RID: 99956 RVA: 0x0037AB78 File Offset: 0x00378D78
 		public static Offset<IMonsterMergedHpBarSettings> CreateIMonsterMergedHpBarSettings(FlatBufferBuilder builder, VectorOffset DisplayBuffIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -110,19 +110,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterMergedHpBarSettings.EndIMonsterMergedHpBarSettings(builder);
 		}
 
-		// Token: 0x06017013 RID: 94227 RVA: 0x00351721 File Offset: 0x0034F921
+		// Token: 0x06018675 RID: 99957 RVA: 0x0037AB95 File Offset: 0x00378D95
 		public static void StartIMonsterMergedHpBarSettings(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06017014 RID: 94228 RVA: 0x0035172A File Offset: 0x0034F92A
+		// Token: 0x06018676 RID: 99958 RVA: 0x0037AB9E File Offset: 0x00378D9E
 		public static void AddDisplayBuffIds(FlatBufferBuilder builder, VectorOffset displayBuffIdsOffset)
 		{
 			builder.AddOffset(0, displayBuffIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06017015 RID: 94229 RVA: 0x0035173C File Offset: 0x0034F93C
+		// Token: 0x06018677 RID: 99959 RVA: 0x0037ABB0 File Offset: 0x00378DB0
 		public static VectorOffset CreateDisplayBuffIdsVector(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017016 RID: 94230 RVA: 0x00351773 File Offset: 0x0034F973
+		// Token: 0x06018678 RID: 99960 RVA: 0x0037ABE7 File Offset: 0x00378DE7
 		public static VectorOffset CreateDisplayBuffIdsVectorBlock(FlatBufferBuilder builder, long[] data)
 		{
 			builder.StartVector(8, data.Length, 8);
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017017 RID: 94231 RVA: 0x0035178D File Offset: 0x0034F98D
+		// Token: 0x06018679 RID: 99961 RVA: 0x0037AC01 File Offset: 0x00378E01
 		public static VectorOffset CreateDisplayBuffIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<long> data)
 		{
 			builder.StartVector(8, data.Count, 8);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017018 RID: 94232 RVA: 0x003517AB File Offset: 0x0034F9AB
+		// Token: 0x0601867A RID: 99962 RVA: 0x0037AC1F File Offset: 0x00378E1F
 		public static VectorOffset CreateDisplayBuffIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -157,25 +157,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017019 RID: 94233 RVA: 0x003517C4 File Offset: 0x0034F9C4
+		// Token: 0x0601867B RID: 99963 RVA: 0x0037AC38 File Offset: 0x00378E38
 		public static void StartDisplayBuffIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(8, numElems, 8);
 		}
 
-		// Token: 0x0601701A RID: 94234 RVA: 0x003517CF File Offset: 0x0034F9CF
+		// Token: 0x0601867C RID: 99964 RVA: 0x0037AC43 File Offset: 0x00378E43
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0601701B RID: 94235 RVA: 0x003517DA File Offset: 0x0034F9DA
+		// Token: 0x0601867D RID: 99965 RVA: 0x0037AC4E File Offset: 0x00378E4E
 		public static Offset<IMonsterMergedHpBarSettings> EndIMonsterMergedHpBarSettings(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterMergedHpBarSettings>(builder.EndTable());
 		}
 
-		// Token: 0x0601701C RID: 94236 RVA: 0x003517E8 File Offset: 0x0034F9E8
+		// Token: 0x0601867E RID: 99966 RVA: 0x0037AC5C File Offset: 0x00378E5C
 		public IMonsterMergedHpBarSettingsT UnPack()
 		{
 			IMonsterMergedHpBarSettingsT monsterMergedHpBarSettingsT = new IMonsterMergedHpBarSettingsT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return monsterMergedHpBarSettingsT;
 		}
 
-		// Token: 0x0601701D RID: 94237 RVA: 0x00351804 File Offset: 0x0034FA04
+		// Token: 0x0601867F RID: 99967 RVA: 0x0037AC78 File Offset: 0x00378E78
 		public void UnPackTo(IMonsterMergedHpBarSettingsT _o)
 		{
 			_o.DisplayBuffIds = new List<long>();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601701E RID: 94238 RVA: 0x0035184C File Offset: 0x0034FA4C
+		// Token: 0x06018680 RID: 99968 RVA: 0x0037ACC0 File Offset: 0x00378EC0
 		public static Offset<IMonsterMergedHpBarSettings> Pack(FlatBufferBuilder builder, IMonsterMergedHpBarSettingsT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMonsterMergedHpBarSettings.CreateIMonsterMergedHpBarSettings(builder, displayBuffIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B94B RID: 47435
+		// Token: 0x0400C329 RID: 49961
 		private Table __p;
 	}
 }

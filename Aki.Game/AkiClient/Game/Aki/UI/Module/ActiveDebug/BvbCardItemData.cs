@@ -6,97 +6,97 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 {
-	// Token: 0x020039DB RID: 14811
+	// Token: 0x02003037 RID: 12343
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/UI/Module/ActiveDebug/BvbCardItemData.BvbCardItemData")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 96)]
 	public class BvbCardItemData : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601EFAC RID: 126892 RVA: 0x008A67F2 File Offset: 0x008A49F2
+		// Token: 0x0601D47E RID: 119934 RVA: 0x008EFC38 File Offset: 0x008EDE38
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (BvbCardItemData._ScriptStructPtr != 0) ? BvbCardItemData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/UI/Module/ActiveDebug/BvbCardItemData.BvbCardItemData", ref BvbCardItemData._ScriptStructPtr);
 		}
 
-		// Token: 0x170029AB RID: 10667
-		// (get) Token: 0x0601EFAD RID: 126893 RVA: 0x008A6816 File Offset: 0x008A4A16
-		// (set) Token: 0x0601EFAE RID: 126894 RVA: 0x008A682A File Offset: 0x008A4A2A
+		// Token: 0x17002E86 RID: 11910
+		// (get) Token: 0x0601D47F RID: 119935 RVA: 0x008EFC5C File Offset: 0x008EDE5C
+		// (set) Token: 0x0601D480 RID: 119936 RVA: 0x008EFC70 File Offset: 0x008EDE70
 		public unsafe string CardName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_CardName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_CardName)), value);
 			}
 		}
 
-		// Token: 0x170029AC RID: 10668
-		// (get) Token: 0x0601EFAF RID: 126895 RVA: 0x008A683F File Offset: 0x008A4A3F
-		// (set) Token: 0x0601EFB0 RID: 126896 RVA: 0x008A6853 File Offset: 0x008A4A53
+		// Token: 0x17002E87 RID: 11911
+		// (get) Token: 0x0601D481 RID: 119937 RVA: 0x008EFC85 File Offset: 0x008EDE85
+		// (set) Token: 0x0601D482 RID: 119938 RVA: 0x008EFC99 File Offset: 0x008EDE99
 		public unsafe string Cost
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Cost)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Cost)), value);
 			}
 		}
 
-		// Token: 0x170029AD RID: 10669
-		// (get) Token: 0x0601EFB1 RID: 126897 RVA: 0x008A6868 File Offset: 0x008A4A68
-		// (set) Token: 0x0601EFB2 RID: 126898 RVA: 0x008A687C File Offset: 0x008A4A7C
+		// Token: 0x17002E88 RID: 11912
+		// (get) Token: 0x0601D483 RID: 119939 RVA: 0x008EFCAE File Offset: 0x008EDEAE
+		// (set) Token: 0x0601D484 RID: 119940 RVA: 0x008EFCC2 File Offset: 0x008EDEC2
 		public unsafe string Element
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_2)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Element)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_2)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Element)), value);
 			}
 		}
 
-		// Token: 0x170029AE RID: 10670
-		// (get) Token: 0x0601EFB3 RID: 126899 RVA: 0x008A6891 File Offset: 0x008A4A91
-		// (set) Token: 0x0601EFB4 RID: 126900 RVA: 0x008A68A5 File Offset: 0x008A4AA5
+		// Token: 0x17002E89 RID: 11913
+		// (get) Token: 0x0601D485 RID: 119941 RVA: 0x008EFCD7 File Offset: 0x008EDED7
+		// (set) Token: 0x0601D486 RID: 119942 RVA: 0x008EFCEB File Offset: 0x008EDEEB
 		public unsafe string Power
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Power)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_Power)), value);
 			}
 		}
 
-		// Token: 0x170029AF RID: 10671
-		// (get) Token: 0x0601EFB5 RID: 126901 RVA: 0x008A68BA File Offset: 0x008A4ABA
-		// (set) Token: 0x0601EFB6 RID: 126902 RVA: 0x008A68CE File Offset: 0x008A4ACE
+		// Token: 0x17002E8A RID: 11914
+		// (get) Token: 0x0601D487 RID: 119943 RVA: 0x008EFD00 File Offset: 0x008EDF00
+		// (set) Token: 0x0601D488 RID: 119944 RVA: 0x008EFD14 File Offset: 0x008EDF14
 		public unsafe string CardDesc
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_4)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_CardDesc)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_4)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BvbCardItemData.__PropertyOffset_CardDesc)), value);
 			}
 		}
 
-		// Token: 0x170029B0 RID: 10672
-		// (get) Token: 0x0601EFB7 RID: 126903 RVA: 0x008A68E4 File Offset: 0x008A4AE4
-		// (set) Token: 0x0601EFB8 RID: 126904 RVA: 0x008A6927 File Offset: 0x008A4B27
+		// Token: 0x17002E8B RID: 11915
+		// (get) Token: 0x0601D489 RID: 119945 RVA: 0x008EFD2C File Offset: 0x008EDF2C
+		// (set) Token: 0x0601D48A RID: 119946 RVA: 0x008EFD6F File Offset: 0x008EDF6F
 		public TArray<BvbEffectItemData> EffectList
 		{
 			get
@@ -105,7 +105,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<BvbEffectItemData> result;
 				if ((result = this._EffectList) == null)
 				{
-					result = (this._EffectList = new TArray<BvbEffectItemData>(base.NativePtr + (IntPtr)BvbCardItemData.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._EffectList = new TArray<BvbEffectItemData>(base.NativePtr + (IntPtr)BvbCardItemData.__PropertyOffset_EffectList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -115,76 +115,65 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x0601EFB9 RID: 126905 RVA: 0x008A6935 File Offset: 0x008A4B35
+		// Token: 0x0601D48B RID: 119947 RVA: 0x008EFD7D File Offset: 0x008EDF7D
 		public BvbCardItemData()
 		{
 		}
 
-		// Token: 0x0601EFBA RID: 126906 RVA: 0x008A693D File Offset: 0x008A4B3D
-		public BvbCardItemData(string CardName, string Cost, string Element, string Power, string CardDesc, TArray<BvbEffectItemData> EffectList)
-		{
-			this.CardName = CardName;
-			this.Cost = Cost;
-			this.Element = Element;
-			this.Power = Power;
-			this.CardDesc = CardDesc;
-			this.EffectList = EffectList;
-		}
-
-		// Token: 0x0601EFBB RID: 126907 RVA: 0x008A6972 File Offset: 0x008A4B72
+		// Token: 0x0601D48C RID: 119948 RVA: 0x008EFD85 File Offset: 0x008EDF85
 		protected override IntPtr GetUStructPtr()
 		{
 			return BvbCardItemData.StaticStruct();
 		}
 
-		// Token: 0x0601EFBC RID: 126908 RVA: 0x008A697E File Offset: 0x008A4B7E
+		// Token: 0x0601D48D RID: 119949 RVA: 0x008EFD91 File Offset: 0x008EDF91
 		[NullableContext(2)]
 		public BvbCardItemData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601EFBD RID: 126909 RVA: 0x008A6988 File Offset: 0x008A4B88
+		// Token: 0x0601D48E RID: 119950 RVA: 0x008EFD9B File Offset: 0x008EDF9B
 		public BvbCardItemData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601EFBE RID: 126910 RVA: 0x008A6993 File Offset: 0x008A4B93
+		// Token: 0x0601D48F RID: 119951 RVA: 0x008EFDA6 File Offset: 0x008EDFA6
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new BvbCardItemData(Pointer, false, true);
 		}
 
-		// Token: 0x0601EFBF RID: 126911 RVA: 0x008A699D File Offset: 0x008A4B9D
+		// Token: 0x0601D490 RID: 119952 RVA: 0x008EFDB0 File Offset: 0x008EDFB0
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new BvbCardItemData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400ED3B RID: 60731
+		// Token: 0x0400F6AA RID: 63146
 		public const string __ObjectPath = "/Game/Aki/UI/Module/ActiveDebug/BvbCardItemData.BvbCardItemData";
 
-		// Token: 0x0400ED3C RID: 60732
+		// Token: 0x0400F6AB RID: 63147
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400ED3D RID: 60733
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F6AC RID: 63148
+		internal static int __PropertyOffset_CardName;
 
-		// Token: 0x0400ED3E RID: 60734
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F6AD RID: 63149
+		internal static int __PropertyOffset_Cost;
 
-		// Token: 0x0400ED3F RID: 60735
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F6AE RID: 63150
+		internal static int __PropertyOffset_Element;
 
-		// Token: 0x0400ED40 RID: 60736
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400F6AF RID: 63151
+		internal static int __PropertyOffset_Power;
 
-		// Token: 0x0400ED41 RID: 60737
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400F6B0 RID: 63152
+		internal static int __PropertyOffset_CardDesc;
 
-		// Token: 0x0400ED42 RID: 60738
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400F6B1 RID: 63153
+		internal static int __PropertyOffset_EffectList;
 
-		// Token: 0x0400ED43 RID: 60739
+		// Token: 0x0400F6B2 RID: 63154
 		[Nullable(new byte[]
 		{
 			2,

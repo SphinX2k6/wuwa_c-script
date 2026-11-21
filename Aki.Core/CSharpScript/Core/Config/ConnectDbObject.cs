@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Config
 {
-	// Token: 0x02000164 RID: 356
+	// Token: 0x02000169 RID: 361
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConnectDbObject : IStaticVariableResetter
 	{
-		// Token: 0x06000C3A RID: 3130 RVA: 0x0003A277 File Offset: 0x00038477
+		// Token: 0x06000C99 RID: 3225 RVA: 0x0003AFBB File Offset: 0x000391BB
 		static ConnectDbObject()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ConnectDbObject.CreateStaticDefaultValue), new Action(ConnectDbObject.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C3B RID: 3131 RVA: 0x0003A296 File Offset: 0x00038496
+		// Token: 0x06000C9A RID: 3226 RVA: 0x0003AFDA File Offset: 0x000391DA
 		private static string GetProjectContentDir()
 		{
 			if (string.IsNullOrEmpty(ConnectDbObject.ProjectContentDir))
@@ -25,8 +25,8 @@ namespace CSharpScript.Core.Config
 			return ConnectDbObject.ProjectContentDir;
 		}
 
-		// Token: 0x17000137 RID: 311
-		// (get) Token: 0x06000C3C RID: 3132 RVA: 0x0003A2B3 File Offset: 0x000384B3
+		// Token: 0x1700014A RID: 330
+		// (get) Token: 0x06000C9B RID: 3227 RVA: 0x0003AFF7 File Offset: 0x000391F7
 		public int HandleId
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Core.Config
 			}
 		}
 
-		// Token: 0x06000C3D RID: 3133 RVA: 0x0003A2BC File Offset: 0x000384BC
+		// Token: 0x06000C9C RID: 3228 RVA: 0x0003B000 File Offset: 0x00039200
 		private unsafe int CreateDbConnection(string dbPath, string command)
 		{
 			int num = ConfigStatementLibSync.CreateStatement(dbPath, command);
@@ -65,7 +65,7 @@ namespace CSharpScript.Core.Config
 			return num;
 		}
 
-		// Token: 0x06000C3E RID: 3134 RVA: 0x0003A357 File Offset: 0x00038557
+		// Token: 0x06000C9D RID: 3229 RVA: 0x0003B09B File Offset: 0x0003929B
 		public void DisConnectStatement()
 		{
 			if (this.HandleIdInternal > 0)
@@ -74,7 +74,7 @@ namespace CSharpScript.Core.Config
 			}
 		}
 
-		// Token: 0x06000C3F RID: 3135 RVA: 0x0003A370 File Offset: 0x00038570
+		// Token: 0x06000C9E RID: 3230 RVA: 0x0003B0B4 File Offset: 0x000392B4
 		public void ConnectStatement(CommonDbData dbData)
 		{
 			if (!string.IsNullOrEmpty(dbData.Culture))
@@ -93,23 +93,23 @@ namespace CSharpScript.Core.Config
 			this.HandleIdInternal = this.CreateDbConnection(dbPath2, dbData.Command);
 		}
 
-		// Token: 0x06000C40 RID: 3136 RVA: 0x0003A417 File Offset: 0x00038617
+		// Token: 0x06000C9F RID: 3231 RVA: 0x0003B15B File Offset: 0x0003935B
 		public static void CreateStaticDefaultValue()
 		{
 			ConnectDbObject.ProjectContentDir = null;
 		}
 
-		// Token: 0x06000C41 RID: 3137 RVA: 0x0003A41F File Offset: 0x0003861F
+		// Token: 0x06000CA0 RID: 3232 RVA: 0x0003B163 File Offset: 0x00039363
 		public static void ResetStaticDefaultValue()
 		{
 			ConnectDbObject.ProjectContentDir = null;
 		}
 
-		// Token: 0x04000720 RID: 1824
+		// Token: 0x0400072F RID: 1839
 		[Nullable(2)]
 		private static string ProjectContentDir;
 
-		// Token: 0x04000721 RID: 1825
+		// Token: 0x04000730 RID: 1840
 		private int HandleIdInternal;
 	}
 }

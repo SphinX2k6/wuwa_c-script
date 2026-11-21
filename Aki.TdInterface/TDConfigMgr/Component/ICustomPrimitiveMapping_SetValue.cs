@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200029E RID: 670
+	// Token: 0x020002E3 RID: 739
 	public class ICustomPrimitiveMapping_SetValue
 	{
-		// Token: 0x04000BB5 RID: 2997
-		[Nullable(1)]
+		// Token: 0x04000C9A RID: 3226
 		public string KeyPrefix;
 
-		// Token: 0x04000BB6 RID: 2998
+		// Token: 0x04000C9B RID: 3227
 		public int Index;
 	}
 }

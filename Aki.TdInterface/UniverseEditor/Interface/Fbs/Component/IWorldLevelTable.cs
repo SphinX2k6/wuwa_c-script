@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B98 RID: 23448
+	// Token: 0x020061AE RID: 25006
 	public struct IWorldLevelTable : IFlatbufferObject
 	{
-		// Token: 0x1700B131 RID: 45361
-		// (get) Token: 0x06028245 RID: 164421 RVA: 0x005845F8 File Offset: 0x005827F8
+		// Token: 0x1700BA79 RID: 47737
+		// (get) Token: 0x0602A809 RID: 174089 RVA: 0x005CC088 File Offset: 0x005CA288
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028246 RID: 164422 RVA: 0x00584605 File Offset: 0x00582805
+		// Token: 0x0602A80A RID: 174090 RVA: 0x005CC095 File Offset: 0x005CA295
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028247 RID: 164423 RVA: 0x0058460C File Offset: 0x0058280C
+		// Token: 0x0602A80B RID: 174091 RVA: 0x005CC09C File Offset: 0x005CA29C
 		public static IWorldLevelTable GetRootAsIWorldLevelTable(ByteBuffer _bb)
 		{
 			return IWorldLevelTable.GetRootAsIWorldLevelTable(_bb, default(IWorldLevelTable));
 		}
 
-		// Token: 0x06028248 RID: 164424 RVA: 0x00584628 File Offset: 0x00582828
+		// Token: 0x0602A80C RID: 174092 RVA: 0x005CC0B8 File Offset: 0x005CA2B8
 		public static IWorldLevelTable GetRootAsIWorldLevelTable(ByteBuffer _bb, IWorldLevelTable obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028249 RID: 164425 RVA: 0x00584645 File Offset: 0x00582845
+		// Token: 0x0602A80D RID: 174093 RVA: 0x005CC0D5 File Offset: 0x005CA2D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602824A RID: 164426 RVA: 0x00584654 File Offset: 0x00582854
+		// Token: 0x0602A80E RID: 174094 RVA: 0x005CC0E4 File Offset: 0x005CA2E4
 		public IWorldLevelTable __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B132 RID: 45362
-		// (get) Token: 0x0602824B RID: 164427 RVA: 0x00584664 File Offset: 0x00582864
+		// Token: 0x1700BA7A RID: 47738
+		// (get) Token: 0x0602A80F RID: 174095 RVA: 0x005CC0F4 File Offset: 0x005CA2F4
 		public EWorldLevelBonus Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B133 RID: 45363
-		// (get) Token: 0x0602824C RID: 164428 RVA: 0x005846A0 File Offset: 0x005828A0
+		// Token: 0x1700BA7B RID: 47739
+		// (get) Token: 0x0602A810 RID: 174096 RVA: 0x005CC130 File Offset: 0x005CA330
 		public int WorldLevelBonusId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B134 RID: 45364
-		// (get) Token: 0x0602824D RID: 164429 RVA: 0x005846DC File Offset: 0x005828DC
+		// Token: 0x1700BA7C RID: 47740
+		// (get) Token: 0x0602A811 RID: 174097 RVA: 0x005CC16C File Offset: 0x005CA36C
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602824E RID: 164430 RVA: 0x00584718 File Offset: 0x00582918
+		// Token: 0x0602A812 RID: 174098 RVA: 0x005CC1A8 File Offset: 0x005CA3A8
 		public static Offset<IWorldLevelTable> CreateIWorldLevelTable(FlatBufferBuilder builder, EWorldLevelBonus Type = EWorldLevelBonus.WorldLevelTable, int WorldLevelBonusId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWorldLevelTable.EndIWorldLevelTable(builder);
 		}
 
-		// Token: 0x0602824F RID: 164431 RVA: 0x0058473C File Offset: 0x0058293C
+		// Token: 0x0602A813 RID: 174099 RVA: 0x005CC1CC File Offset: 0x005CA3CC
 		public static void StartIWorldLevelTable(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06028250 RID: 164432 RVA: 0x00584745 File Offset: 0x00582945
+		// Token: 0x0602A814 RID: 174100 RVA: 0x005CC1D5 File Offset: 0x005CA3D5
 		public static void AddType(FlatBufferBuilder builder, EWorldLevelBonus type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028251 RID: 164433 RVA: 0x00584750 File Offset: 0x00582950
+		// Token: 0x0602A815 RID: 174101 RVA: 0x005CC1E0 File Offset: 0x005CA3E0
 		public static void AddWorldLevelBonusId(FlatBufferBuilder builder, int worldLevelBonusId)
 		{
 			builder.AddInt(1, worldLevelBonusId, 0);
 		}
 
-		// Token: 0x06028252 RID: 164434 RVA: 0x0058475B File Offset: 0x0058295B
+		// Token: 0x0602A816 RID: 174102 RVA: 0x005CC1EB File Offset: 0x005CA3EB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06028253 RID: 164435 RVA: 0x00584766 File Offset: 0x00582966
+		// Token: 0x0602A817 RID: 174103 RVA: 0x005CC1F6 File Offset: 0x005CA3F6
 		public static Offset<IWorldLevelTable> EndIWorldLevelTable(FlatBufferBuilder builder)
 		{
 			return new Offset<IWorldLevelTable>(builder.EndTable());
 		}
 
-		// Token: 0x06028254 RID: 164436 RVA: 0x00584774 File Offset: 0x00582974
+		// Token: 0x0602A818 RID: 174104 RVA: 0x005CC204 File Offset: 0x005CA404
 		public IWorldLevelTableT UnPack()
 		{
 			IWorldLevelTableT worldLevelTableT = new IWorldLevelTableT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return worldLevelTableT;
 		}
 
-		// Token: 0x06028255 RID: 164437 RVA: 0x0058478F File Offset: 0x0058298F
+		// Token: 0x0602A819 RID: 174105 RVA: 0x005CC21F File Offset: 0x005CA41F
 		public void UnPackTo(IWorldLevelTableT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06028256 RID: 164438 RVA: 0x005847B8 File Offset: 0x005829B8
+		// Token: 0x0602A81A RID: 174106 RVA: 0x005CC248 File Offset: 0x005CA448
 		public static Offset<IWorldLevelTable> Pack(FlatBufferBuilder builder, IWorldLevelTableT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWorldLevelTable.CreateIWorldLevelTable(builder, _o.Type, _o.WorldLevelBonusId, _o.NullMask);
 		}
 
-		// Token: 0x0400F2FD RID: 62205
+		// Token: 0x04010003 RID: 65539
 		private Table __p;
 	}
 }

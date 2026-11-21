@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590A RID: 22794
+	// Token: 0x020048E3 RID: 18659
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrActivityMainView : ActivitySubViewBase
 	{
-		// Token: 0x17008ADA RID: 35546
-		// (get) Token: 0x06039E1D RID: 237085 RVA: 0x00DBF400 File Offset: 0x00DBD600
+		// Token: 0x17005EA6 RID: 24230
+		// (get) Token: 0x0602ED40 RID: 191808 RVA: 0x00D0E698 File Offset: 0x00D0C898
 		[Nullable(2)]
 		protected new InfrastructureActivityData ActivityBaseData
 		{
@@ -30,7 +29,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E1E RID: 237086 RVA: 0x00DBF410 File Offset: 0x00DBD610
+		// Token: 0x0602ED41 RID: 191809 RVA: 0x00D0E6A8 File Offset: 0x00D0C8A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E1F RID: 237087 RVA: 0x00DBF628 File Offset: 0x00DBD828
+		// Token: 0x0602ED42 RID: 191810 RVA: 0x00D0E8C0 File Offset: 0x00D0CAC0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrActivityMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E20 RID: 237088 RVA: 0x00DBF66C File Offset: 0x00DBD86C
+		// Token: 0x0602ED43 RID: 191811 RVA: 0x00D0E904 File Offset: 0x00D0CB04
 		private UniTask CreateLimitedRewardBtnAsync()
 		{
 			InfrActivityMainView.<CreateLimitedRewardBtnAsync>d__9 <CreateLimitedRewardBtnAsync>d__;
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateLimitedRewardBtnAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E21 RID: 237089 RVA: 0x00DBF6B0 File Offset: 0x00DBD8B0
+		// Token: 0x0602ED44 RID: 191812 RVA: 0x00D0E948 File Offset: 0x00D0CB48
 		private UniTask CreateExchangeBtnAsync()
 		{
 			InfrActivityMainView.<CreateExchangeBtnAsync>d__10 <CreateExchangeBtnAsync>d__;
@@ -106,7 +105,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateExchangeBtnAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E22 RID: 237090 RVA: 0x00DBF6F3 File Offset: 0x00DBD8F3
+		// Token: 0x0602ED45 RID: 191813 RVA: 0x00D0E98B File Offset: 0x00D0CB8B
 		protected override void OnStart()
 		{
 			this.RefreshShopBtn();
@@ -116,7 +115,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshGender();
 		}
 
-		// Token: 0x06039E23 RID: 237091 RVA: 0x00DBF713 File Offset: 0x00DBD913
+		// Token: 0x0602ED46 RID: 191814 RVA: 0x00D0E9AB File Offset: 0x00D0CBAB
 		protected override void OnRefreshView()
 		{
 			this.RefreshShopBtn();
@@ -126,7 +125,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshGender();
 		}
 
-		// Token: 0x06039E24 RID: 237092 RVA: 0x00DBF734 File Offset: 0x00DBD934
+		// Token: 0x0602ED47 RID: 191815 RVA: 0x00D0E9CC File Offset: 0x00D0CBCC
 		private void RefreshLimitRewardBtn()
 		{
 			if (!FunctionModel.Instance.IsOpen(EFunctionType.Infrastructure))
@@ -141,16 +140,26 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.LimitRewardBtn.BindRedDot(ERedDotName.InfrLimitedTask, 0);
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
 			List<InfrastructureLimitTaskData> list = ((activityData != null) ? activityData.GetActivityTaskDataList() : null) ?? new List<InfrastructureLimitTaskData>();
-			int value = list.Count((InfrastructureLimitTaskData item) => item.Status == ActivityTaskState.ActivityTaskTaken);
+			int num = 0;
+			using (List<InfrastructureLimitTaskData>.Enumerator enumerator = list.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.Status == ActivityTaskState.ActivityTaskTaken)
+					{
+						num++;
+					}
+				}
+			}
 			ButtonItem limitRewardBtn = this.LimitRewardBtn;
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-			defaultInterpolatedStringHandler.AppendFormatted<int>(value);
+			defaultInterpolatedStringHandler.AppendFormatted<int>(num);
 			defaultInterpolatedStringHandler.AppendLiteral("/");
 			defaultInterpolatedStringHandler.AppendFormatted<int>(list.Count);
 			limitRewardBtn.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06039E25 RID: 237093 RVA: 0x00DBF80C File Offset: 0x00DBDA0C
+		// Token: 0x0602ED48 RID: 191816 RVA: 0x00D0EAC4 File Offset: 0x00D0CCC4
 		private void RefreshShopBtn()
 		{
 			if (!FunctionModel.Instance.IsOpen(EFunctionType.Infrastructure))
@@ -169,17 +178,29 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.PermanentRewardBtn.BindRedDot(ERedDotName.InfrShop, 0);
 		}
 
-		// Token: 0x06039E26 RID: 237094 RVA: 0x00DBF894 File Offset: 0x00DBDA94
+		// Token: 0x0602ED49 RID: 191817 RVA: 0x00D0EB4C File Offset: 0x00D0CD4C
 		private void RefreshProgress()
 		{
 			InfrastructureConfig instance = InfrastructureConfig.Instance;
 			int fireLevel = InfrastructureModel.Instance.FireLevel;
 			long fireExp = InfrastructureModel.Instance.FireExp;
-			int num = instance.GetAllLevelConfigs().Max((InfrLevel prev) => prev.Level);
-			List<List<bool>> list = new List<List<bool>>();
-			for (int i = 1; i < num; i++)
+			IReadOnlyList<InfrLevel> allLevelConfigs = instance.GetAllLevelConfigs();
+			if (allLevelConfigs.Count == 0)
 			{
-				if (i == num - 1 && fireLevel == num)
+				throw new InvalidOperationException("Sequence contains no elements");
+			}
+			int level = allLevelConfigs[0].Level;
+			for (int i = 1; i < allLevelConfigs.Count; i++)
+			{
+				if (allLevelConfigs[i].Level > level)
+				{
+					level = allLevelConfigs[i].Level;
+				}
+			}
+			List<List<bool>> list = new List<List<bool>>();
+			for (int j = 1; j < level; j++)
+			{
+				if (j == level - 1 && fireLevel == level)
 				{
 					list.Add(new List<bool>
 					{
@@ -191,27 +212,27 @@ namespace CSharpScript.Game.Module.Infrastructure
 				{
 					list.Add(new List<bool>
 					{
-						fireExp >= (long)instance.GetLevelConfigById(i).Value.Exp,
+						fireExp >= (long)instance.GetLevelConfigById(j).Value.Exp,
 						false
 					});
 				}
 			}
 			this.ProgressLayout.RefreshByData(list, null, false);
-			float num2;
-			if (fireLevel == num)
+			float num;
+			if (fireLevel == level)
 			{
-				num2 = 1f;
+				num = 1f;
 			}
 			else
 			{
-				num2 = (float)(fireLevel - 1) / (float)(num - 1) + (float)(fireExp - (long)instance.GetLevelConfigById(fireLevel).Value.Exp) / (float)(instance.GetLevelConfigById(fireLevel + 1).Value.Exp - instance.GetLevelConfigById(fireLevel).Value.Exp);
+				num = (float)(fireLevel - 1) / (float)(level - 1) + (float)(fireExp - (long)instance.GetLevelConfigById(fireLevel).Value.Exp) / (float)(instance.GetLevelConfigById(fireLevel + 1).Value.Exp - instance.GetLevelConfigById(fireLevel).Value.Exp);
 			}
-			base.GetSprite(4).SetFillAmount(num2);
-			base.GetArtText(7).SetText((num2 * 100f).ToString("0"));
-			base.GetArtText(8).SetText((num2 * 100f).ToString("0"));
+			base.GetSprite(4).SetFillAmount(num);
+			base.GetArtText(7).SetText((num * 100f).ToString("0"));
+			base.GetArtText(8).SetText((num * 100f).ToString("0"));
 		}
 
-		// Token: 0x06039E27 RID: 237095 RVA: 0x00DBFA38 File Offset: 0x00DBDC38
+		// Token: 0x0602ED4A RID: 191818 RVA: 0x00D0ED30 File Offset: 0x00D0CF30
 		private void RefreshActivityInfo()
 		{
 			this.CommonInfoPanel.SetBtnText("LongShanStage_Join01", Array.Empty<object>());
@@ -229,7 +250,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			functional.RefreshGeneralPerformance(parameters);
 		}
 
-		// Token: 0x06039E28 RID: 237096 RVA: 0x00DBFABC File Offset: 0x00DBDCBC
+		// Token: 0x0602ED4B RID: 191819 RVA: 0x00D0EDB4 File Offset: 0x00D0CFB4
 		private void RefreshGender()
 		{
 			if (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male)
@@ -240,7 +261,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.SetTextureByPath("/Game/Aki/UI/UIResources/Common/Image/BgCgBig/Activity/Activity30/ActivityInfrastructure/ActivityMain/T_AcivityMainFemale.T_AcivityMainFemale", base.GetTexture(11), null, null);
 		}
 
-		// Token: 0x06039E29 RID: 237097 RVA: 0x00DBFB11 File Offset: 0x00DBDD11
+		// Token: 0x0602ED4C RID: 191820 RVA: 0x00D0EE09 File Offset: 0x00D0D009
 		private void OnConfirmBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -249,7 +270,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			});
 		}
 
-		// Token: 0x06039E2A RID: 237098 RVA: 0x00DBFB42 File Offset: 0x00DBDD42
+		// Token: 0x0602ED4D RID: 191821 RVA: 0x00D0EE3A File Offset: 0x00D0D03A
 		private void OnBtnPermanentRewardClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrastructureShopMainView, new InfrastructureDefine.InfrShopOpenParam
@@ -258,7 +279,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x06039E2B RID: 237099 RVA: 0x00DBFB60 File Offset: 0x00DBDD60
+		// Token: 0x0602ED4E RID: 191822 RVA: 0x00D0EE58 File Offset: 0x00D0D058
 		private void OnBtnLimitRewardClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrLimitTaskMainView, new InfrastructureDefine.InfrLimitTaskOpenParam
@@ -267,16 +288,16 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x0401E30C RID: 123660
+		// Token: 0x04018DA9 RID: 101801
 		protected ActivitySubViewGeneralInfo CommonInfoPanel = new ActivitySubViewGeneralInfo();
 
-		// Token: 0x0401E30D RID: 123661
+		// Token: 0x04018DAA RID: 101802
 		private ButtonItem PermanentRewardBtn = new ButtonItem(null);
 
-		// Token: 0x0401E30E RID: 123662
+		// Token: 0x04018DAB RID: 101803
 		private ButtonItem LimitRewardBtn = new ButtonItem(null);
 
-		// Token: 0x0401E30F RID: 123663
+		// Token: 0x04018DAC RID: 101804
 		[Nullable(new byte[]
 		{
 			2,
@@ -285,44 +306,44 @@ namespace CSharpScript.Game.Module.Infrastructure
 		})]
 		private GenericLayout<InfrActivityProgressItem, List<bool>> ProgressLayout;
 
-		// Token: 0x0200BB71 RID: 47985
+		// Token: 0x0200A581 RID: 42369
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403893E RID: 231742
+			// Token: 0x04033328 RID: 209704
 			public const int CommonActionInfo = 0;
 
-			// Token: 0x0403893F RID: 231743
+			// Token: 0x04033329 RID: 209705
 			public const int BtnLimitReward = 1;
 
-			// Token: 0x04038940 RID: 231744
+			// Token: 0x0403332A RID: 209706
 			public const int BtnPermanentReward = 2;
 
-			// Token: 0x04038941 RID: 231745
+			// Token: 0x0403332B RID: 209707
 			public const int PanelActivated = 3;
 
-			// Token: 0x04038942 RID: 231746
+			// Token: 0x0403332C RID: 209708
 			public const int SpriteProgress = 4;
 
-			// Token: 0x04038943 RID: 231747
+			// Token: 0x0403332D RID: 209709
 			public const int HorizontalLayoutPoint = 5;
 
-			// Token: 0x04038944 RID: 231748
+			// Token: 0x0403332E RID: 209710
 			public const int PanelPoint = 6;
 
-			// Token: 0x04038945 RID: 231749
+			// Token: 0x0403332F RID: 209711
 			public const int ArtTextProgress = 7;
 
-			// Token: 0x04038946 RID: 231750
+			// Token: 0x04033330 RID: 209712
 			public const int ArtTextProgressBg = 8;
 
-			// Token: 0x04038947 RID: 231751
+			// Token: 0x04033331 RID: 209713
 			public const int TextProgressDescription = 9;
 
-			// Token: 0x04038948 RID: 231752
+			// Token: 0x04033332 RID: 209714
 			public const int TextRewardDescription = 10;
 
-			// Token: 0x04038949 RID: 231753
+			// Token: 0x04033333 RID: 209715
 			public const int TextureRole = 11;
 		}
 	}

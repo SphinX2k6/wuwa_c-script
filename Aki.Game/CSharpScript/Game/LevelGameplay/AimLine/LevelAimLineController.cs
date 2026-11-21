@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.AimLine
 {
-	// Token: 0x02006F65 RID: 28517
+	// Token: 0x020060E6 RID: 24806
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class LevelAimLineController : ControllerBase
 	{
-		// Token: 0x060455EA RID: 284138 RVA: 0x0112BF14 File Offset: 0x0112A114
+		// Token: 0x0603B798 RID: 243608 RVA: 0x010D5CF4 File Offset: 0x010D3EF4
 		protected override bool OnInit()
 		{
 			ResourceSystem.Instance.LoadTypeAsync("BP_Miaozhunxian_C", delegate
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455EB RID: 284139 RVA: 0x0112BFA4 File Offset: 0x0112A1A4
+		// Token: 0x0603B799 RID: 243609 RVA: 0x010D5D84 File Offset: 0x010D3F84
 		protected override bool OnClear()
 		{
 			if (this.Actor != null && this.Actor.IsValid())
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455EC RID: 284140 RVA: 0x0112C044 File Offset: 0x0112A244
+		// Token: 0x0603B79A RID: 243610 RVA: 0x010D5E24 File Offset: 0x010D4024
 		[NullableContext(2)]
 		public bool PlayEffect(string effectPath = null)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455ED RID: 284141 RVA: 0x0112C118 File Offset: 0x0112A318
+		// Token: 0x0603B79B RID: 243611 RVA: 0x010D5EF8 File Offset: 0x010D40F8
 		public bool StopEffect()
 		{
 			if (!this.IsPlaying)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455EE RID: 284142 RVA: 0x0112C184 File Offset: 0x0112A384
+		// Token: 0x0603B79C RID: 243612 RVA: 0x010D5F64 File Offset: 0x010D4164
 		public bool UpdatePoints(List<Vector> points, EAimLineType type)
 		{
 			if (points == null || points.Count <= 0)
@@ -140,7 +140,15 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			for (int i = 0; i < points.Count; i++)
 			{
 				points[i].Subtraction(vector, vector2);
-				FSplinePoint value2 = new FSplinePoint((float)i, vector2.ToUeVectorOld(), points[(i == 0) ? i : (i - 1)].ToUeVectorOld(), points[(i == points.Count - 1) ? i : (i + 1)].ToUeVectorOld(), Rotator.ZeroRotator, Vector.OneVector, value);
+				FSplinePoint value2 = new FSplinePoint
+				{
+					InputKey = (float)i,
+					Position = vector2.ToUeVectorOld(),
+					ArriveTangent = points[(i == 0) ? i : (i - 1)].ToUeVectorOld(),
+					LeaveTangent = points[(i == points.Count - 1) ? i : (i + 1)].ToUeVectorOld(),
+					Scale = Vector.OneVector,
+					Type = value
+				};
 				tarray.Add(value2);
 			}
 			this.SplineComp.ClearSplinePoints(true);
@@ -155,7 +163,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455EF RID: 284143 RVA: 0x0112C2C0 File Offset: 0x0112A4C0
+		// Token: 0x0603B79D RID: 243613 RVA: 0x010D60C4 File Offset: 0x010D42C4
 		[NullableContext(2)]
 		private void BeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
@@ -178,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			}
 		}
 
-		// Token: 0x060455F0 RID: 284144 RVA: 0x0112C340 File Offset: 0x0112A540
+		// Token: 0x0603B79E RID: 243614 RVA: 0x010D6144 File Offset: 0x010D4344
 		private void CheckCollision()
 		{
 			this.BulletActor.D_K2_SetActorLocation(this.Actor.D_K2_GetActorLocation(), true, ref WorldGlobal.SweepHitResult, false);
@@ -256,7 +264,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			this.NeedAddTagEntities = new List<EntityHandle>();
 		}
 
-		// Token: 0x060455F1 RID: 284145 RVA: 0x0112C6D8 File Offset: 0x0112A8D8
+		// Token: 0x0603B79F RID: 243615 RVA: 0x010D64DC File Offset: 0x010D46DC
 		private void ClearTagOrMat()
 		{
 			foreach (EntityHandle entityHandle in this.AddTagEntities)
@@ -277,7 +285,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			}
 		}
 
-		// Token: 0x060455F2 RID: 284146 RVA: 0x0112C7A8 File Offset: 0x0112A9A8
+		// Token: 0x0603B7A0 RID: 243616 RVA: 0x010D65AC File Offset: 0x010D47AC
 		private void OnWorldDone()
 		{
 			if (this.Actor == null || !this.Actor.IsValid())
@@ -293,8 +301,8 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			}
 		}
 
-		// Token: 0x17009B61 RID: 39777
-		// (get) Token: 0x060455F3 RID: 284147 RVA: 0x0112C872 File Offset: 0x0112AA72
+		// Token: 0x170070A0 RID: 28832
+		// (get) Token: 0x0603B7A1 RID: 243617 RVA: 0x010D6676 File Offset: 0x010D4876
 		public static LevelAimLineController Instance
 		{
 			get
@@ -303,7 +311,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			}
 		}
 
-		// Token: 0x060455F4 RID: 284148 RVA: 0x0112C879 File Offset: 0x0112AA79
+		// Token: 0x0603B7A2 RID: 243618 RVA: 0x010D667D File Offset: 0x010D487D
 		public static LevelAimLineController GetOrCreateInstance()
 		{
 			if (LevelAimLineController._Instance == null)
@@ -313,7 +321,7 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return LevelAimLineController._Instance;
 		}
 
-		// Token: 0x060455F5 RID: 284149 RVA: 0x0112C88D File Offset: 0x0112AA8D
+		// Token: 0x0603B7A3 RID: 243619 RVA: 0x010D6691 File Offset: 0x010D4891
 		public static bool CreateInstance()
 		{
 			if (LevelAimLineController._Instance != null)
@@ -324,76 +332,76 @@ namespace CSharpScript.Game.LevelGamePlay.AimLine
 			return true;
 		}
 
-		// Token: 0x060455F6 RID: 284150 RVA: 0x0112C8A3 File Offset: 0x0112AAA3
+		// Token: 0x0603B7A4 RID: 243620 RVA: 0x010D66A7 File Offset: 0x010D48A7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060455F7 RID: 284151 RVA: 0x0112C8A5 File Offset: 0x0112AAA5
+		// Token: 0x0603B7A5 RID: 243621 RVA: 0x010D66A9 File Offset: 0x010D48A9
 		public static void ResetStaticDefaultValue()
 		{
 			LevelAimLineController._Instance = null;
 		}
 
-		// Token: 0x060455F8 RID: 284152 RVA: 0x0112C8AD File Offset: 0x0112AAAD
+		// Token: 0x0603B7A6 RID: 243622 RVA: 0x010D66B1 File Offset: 0x010D48B1
 		static LevelAimLineController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelAimLineController.CreateStaticDefaultValue), new Action(LevelAimLineController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024309 RID: 148233
+		// Token: 0x0401F5BE RID: 128446
 		private const int UPDATE_MESH_INTERVAL = 1000;
 
-		// Token: 0x0402430A RID: 148234
+		// Token: 0x0401F5BF RID: 128447
 		private const string DATA_PATH = "/Game/Aki/Effect/MaterialController/ItemMaterial/DA_Fx_ActorItem_Scanning.DA_Fx_ActorItem_Scanning";
 
-		// Token: 0x0402430B RID: 148235
+		// Token: 0x0401F5C0 RID: 128448
 		private readonly FName sightingTag = new FName("Manipulate_Targeted");
 
-		// Token: 0x0402430C RID: 148236
+		// Token: 0x0401F5C1 RID: 128449
 		[Nullable(2)]
 		private BP_Miaozhunxian_C Actor;
 
-		// Token: 0x0402430D RID: 148237
+		// Token: 0x0401F5C2 RID: 128450
 		[Nullable(2)]
 		private USplineComponent SplineComp;
 
-		// Token: 0x0402430E RID: 148238
+		// Token: 0x0401F5C3 RID: 128451
 		private int? InstructionEffect;
 
-		// Token: 0x0402430F RID: 148239
+		// Token: 0x0401F5C4 RID: 128452
 		private bool IsPlaying;
 
-		// Token: 0x04024310 RID: 148240
+		// Token: 0x0401F5C5 RID: 128453
 		private bool IsShowMesh;
 
-		// Token: 0x04024311 RID: 148241
+		// Token: 0x0401F5C6 RID: 128454
 		private double LastTraceTime;
 
-		// Token: 0x04024312 RID: 148242
+		// Token: 0x0401F5C7 RID: 128455
 		[Nullable(2)]
 		private BP_Miaozhunxian_Bullet_C BulletActor;
 
-		// Token: 0x04024313 RID: 148243
+		// Token: 0x0401F5C8 RID: 128456
 		private List<AActor> ModifyMatActors = new List<AActor>();
 
-		// Token: 0x04024314 RID: 148244
+		// Token: 0x0401F5C9 RID: 128457
 		private List<AActor> NeedModifyMatActors = new List<AActor>();
 
-		// Token: 0x04024315 RID: 148245
+		// Token: 0x0401F5CA RID: 128458
 		private readonly Dictionary<AActor, int> ActorMatDataHandleMap = new Dictionary<AActor, int>();
 
-		// Token: 0x04024316 RID: 148246
+		// Token: 0x0401F5CB RID: 128459
 		private List<EntityHandle> AddTagEntities = new List<EntityHandle>();
 
-		// Token: 0x04024317 RID: 148247
+		// Token: 0x0401F5CC RID: 128460
 		private List<EntityHandle> NeedAddTagEntities = new List<EntityHandle>();
 
-		// Token: 0x04024318 RID: 148248
+		// Token: 0x0401F5CD RID: 128461
 		[Nullable(2)]
 		private ItemMaterialControllerActorData MatData;
 
-		// Token: 0x04024319 RID: 148249
+		// Token: 0x0401F5CE RID: 128462
 		[Nullable(2)]
 		private static LevelAimLineController _Instance;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049B2 RID: 18866
+	// Token: 0x02004E6C RID: 20076
 	public struct ICheckCurrentRole : IFlatbufferObject
 	{
-		// Token: 0x1700886A RID: 34922
-		// (get) Token: 0x0601D730 RID: 120624 RVA: 0x004262C0 File Offset: 0x004244C0
+		// Token: 0x17008F2C RID: 36652
+		// (get) Token: 0x0601F16F RID: 127343 RVA: 0x00456A08 File Offset: 0x00454C08
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D731 RID: 120625 RVA: 0x004262CD File Offset: 0x004244CD
+		// Token: 0x0601F170 RID: 127344 RVA: 0x00456A15 File Offset: 0x00454C15
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D732 RID: 120626 RVA: 0x004262D4 File Offset: 0x004244D4
+		// Token: 0x0601F171 RID: 127345 RVA: 0x00456A1C File Offset: 0x00454C1C
 		public static ICheckCurrentRole GetRootAsICheckCurrentRole(ByteBuffer _bb)
 		{
 			return ICheckCurrentRole.GetRootAsICheckCurrentRole(_bb, default(ICheckCurrentRole));
 		}
 
-		// Token: 0x0601D733 RID: 120627 RVA: 0x004262F0 File Offset: 0x004244F0
+		// Token: 0x0601F172 RID: 127346 RVA: 0x00456A38 File Offset: 0x00454C38
 		public static ICheckCurrentRole GetRootAsICheckCurrentRole(ByteBuffer _bb, ICheckCurrentRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D734 RID: 120628 RVA: 0x0042630D File Offset: 0x0042450D
+		// Token: 0x0601F173 RID: 127347 RVA: 0x00456A55 File Offset: 0x00454C55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D735 RID: 120629 RVA: 0x0042631C File Offset: 0x0042451C
+		// Token: 0x0601F174 RID: 127348 RVA: 0x00456A64 File Offset: 0x00454C64
 		public ICheckCurrentRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700886B RID: 34923
-		// (get) Token: 0x0601D736 RID: 120630 RVA: 0x0042632C File Offset: 0x0042452C
+		// Token: 0x17008F2D RID: 36653
+		// (get) Token: 0x0601F175 RID: 127349 RVA: 0x00456A74 File Offset: 0x00454C74
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700886C RID: 34924
-		// (get) Token: 0x0601D737 RID: 120631 RVA: 0x00426368 File Offset: 0x00424568
+		// Token: 0x17008F2E RID: 36654
+		// (get) Token: 0x0601F176 RID: 127350 RVA: 0x00456AB0 File Offset: 0x00454CB0
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700886D RID: 34925
-		// (get) Token: 0x0601D738 RID: 120632 RVA: 0x004263A4 File Offset: 0x004245A4
+		// Token: 0x17008F2F RID: 36655
+		// (get) Token: 0x0601F177 RID: 127351 RVA: 0x00456AEC File Offset: 0x00454CEC
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700886E RID: 34926
-		// (get) Token: 0x0601D739 RID: 120633 RVA: 0x004263E0 File Offset: 0x004245E0
+		// Token: 0x17008F30 RID: 36656
+		// (get) Token: 0x0601F178 RID: 127352 RVA: 0x00456B28 File Offset: 0x00454D28
 		public TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOptionType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D73A RID: 120634 RVA: 0x00426420 File Offset: 0x00424620
+		// Token: 0x0601F179 RID: 127353 RVA: 0x00456B68 File Offset: 0x00454D68
 		public TTable? OnlinePlayerConditionTargetOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -118,19 +118,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601D73B RID: 120635 RVA: 0x00426468 File Offset: 0x00424668
+		// Token: 0x0601F17A RID: 127354 RVA: 0x00456BB0 File Offset: 0x00454DB0
 		public IOnlinePlayerConditionTargetHost OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetHost()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetHost>().Value;
 		}
 
-		// Token: 0x0601D73C RID: 120636 RVA: 0x00426484 File Offset: 0x00424684
+		// Token: 0x0601F17B RID: 127355 RVA: 0x00456BCC File Offset: 0x00454DCC
 		public IOnlinePlayerConditionTargetParticipator OnlinePlayerConditionTargetOptionAsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value;
 		}
 
-		// Token: 0x0601D73D RID: 120637 RVA: 0x0042649F File Offset: 0x0042469F
+		// Token: 0x0601F17C RID: 127356 RVA: 0x00456BE7 File Offset: 0x00454DE7
 		public static Offset<ICheckCurrentRole> CreateICheckCurrentRole(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int RoleId = 0, ECompare Compare = ECompare.Eq, TOnlinePlayerConditionTarget OnlinePlayerConditionTargetOption_type = TOnlinePlayerConditionTarget.NONE, int OnlinePlayerConditionTargetOptionOffset = 0)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCurrentRole.EndICheckCurrentRole(builder);
 		}
 
-		// Token: 0x0601D73E RID: 120638 RVA: 0x004264D3 File Offset: 0x004246D3
+		// Token: 0x0601F17D RID: 127357 RVA: 0x00456C1B File Offset: 0x00454E1B
 		public static void StartICheckCurrentRole(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601D73F RID: 120639 RVA: 0x004264DC File Offset: 0x004246DC
+		// Token: 0x0601F17E RID: 127358 RVA: 0x00456C24 File Offset: 0x00454E24
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D740 RID: 120640 RVA: 0x004264E7 File Offset: 0x004246E7
+		// Token: 0x0601F17F RID: 127359 RVA: 0x00456C2F File Offset: 0x00454E2F
 		public static void AddRoleId(FlatBufferBuilder builder, int roleId)
 		{
 			builder.AddInt(1, roleId, 0);
 		}
 
-		// Token: 0x0601D741 RID: 120641 RVA: 0x004264F2 File Offset: 0x004246F2
+		// Token: 0x0601F180 RID: 127360 RVA: 0x00456C3A File Offset: 0x00454E3A
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601D742 RID: 120642 RVA: 0x004264FD File Offset: 0x004246FD
+		// Token: 0x0601F181 RID: 127361 RVA: 0x00456C45 File Offset: 0x00454E45
 		public static void AddOnlinePlayerConditionTargetOptionType(FlatBufferBuilder builder, TOnlinePlayerConditionTarget onlinePlayerConditionTargetOptionType)
 		{
 			builder.AddByte(3, (byte)onlinePlayerConditionTargetOptionType, 0);
 		}
 
-		// Token: 0x0601D743 RID: 120643 RVA: 0x00426508 File Offset: 0x00424708
+		// Token: 0x0601F182 RID: 127362 RVA: 0x00456C50 File Offset: 0x00454E50
 		public static void AddOnlinePlayerConditionTargetOption(FlatBufferBuilder builder, int onlinePlayerConditionTargetOptionOffset)
 		{
 			builder.AddOffset(4, onlinePlayerConditionTargetOptionOffset, 0);
 		}
 
-		// Token: 0x0601D744 RID: 120644 RVA: 0x00426513 File Offset: 0x00424713
+		// Token: 0x0601F183 RID: 127363 RVA: 0x00456C5B File Offset: 0x00454E5B
 		public static Offset<ICheckCurrentRole> EndICheckCurrentRole(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckCurrentRole>(builder.EndTable());
 		}
 
-		// Token: 0x0601D745 RID: 120645 RVA: 0x00426520 File Offset: 0x00424720
+		// Token: 0x0601F184 RID: 127364 RVA: 0x00456C68 File Offset: 0x00454E68
 		public ICheckCurrentRoleT UnPack()
 		{
 			ICheckCurrentRoleT checkCurrentRoleT = new ICheckCurrentRoleT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkCurrentRoleT;
 		}
 
-		// Token: 0x0601D746 RID: 120646 RVA: 0x0042653C File Offset: 0x0042473C
+		// Token: 0x0601F185 RID: 127365 RVA: 0x00456C84 File Offset: 0x00454E84
 		public void UnPackTo(ICheckCurrentRoleT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.OnlinePlayerConditionTargetOption.Value = ((this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>() != null) ? this.OnlinePlayerConditionTargetOption<IOnlinePlayerConditionTargetParticipator>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0601D747 RID: 120647 RVA: 0x00426604 File Offset: 0x00424804
+		// Token: 0x0601F186 RID: 127366 RVA: 0x00456D4C File Offset: 0x00454F4C
 		public static Offset<ICheckCurrentRole> Pack(FlatBufferBuilder builder, ICheckCurrentRoleT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCurrentRole.CreateICheckCurrentRole(builder, _o.Type, _o.RoleId, _o.Compare, onlinePlayerConditionTargetOption_type, onlinePlayerConditionTargetOptionOffset);
 		}
 
-		// Token: 0x0400D1D6 RID: 53718
+		// Token: 0x0400DCA2 RID: 56482
 		private Table __p;
 	}
 }

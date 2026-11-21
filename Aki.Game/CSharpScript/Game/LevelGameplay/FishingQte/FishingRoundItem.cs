@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E42 RID: 28226
+	// Token: 0x02005FC3 RID: 24515
 	public class FishingRoundItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06044CEE RID: 281838 RVA: 0x010FAB70 File Offset: 0x010F8D70
+		// Token: 0x0603AE7B RID: 241275 RVA: 0x010A50F0 File Offset: 0x010A32F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,19 +24,19 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CEF RID: 281839 RVA: 0x010FABD9 File Offset: 0x010F8DD9
+		// Token: 0x0603AE7C RID: 241276 RVA: 0x010A5159 File Offset: 0x010A3359
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			base.GetSprite(1).SetUIActive(false);
 		}
 
-		// Token: 0x06044CF0 RID: 281840 RVA: 0x010FABF9 File Offset: 0x010F8DF9
+		// Token: 0x0603AE7D RID: 241277 RVA: 0x010A5179 File Offset: 0x010A3379
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 		}
 
-		// Token: 0x06044CF1 RID: 281841 RVA: 0x010FABFC File Offset: 0x010F8DFC
+		// Token: 0x0603AE7E RID: 241278 RVA: 0x010A517C File Offset: 0x010A337C
 		public void ShowIcon(int type)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			});
 		}
 
-		// Token: 0x06044CF2 RID: 281842 RVA: 0x010FAC5F File Offset: 0x010F8E5F
+		// Token: 0x0603AE7F RID: 241279 RVA: 0x010A51DF File Offset: 0x010A33DF
 		public FishingRoundItem()
 		{
 			Dictionary<int, string> dictionary = new Dictionary<int, string>();
@@ -59,21 +59,21 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			base..ctor();
 		}
 
-		// Token: 0x04023CC3 RID: 146627
+		// Token: 0x0401EF78 RID: 126840
 		[Nullable(1)]
 		private Dictionary<int, string> fishingIconPath;
 
-		// Token: 0x04023CC4 RID: 146628
+		// Token: 0x0401EF79 RID: 126841
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CCF7 RID: 52471
+		// Token: 0x0200B8E7 RID: 47335
 		public class EComponents
 		{
-			// Token: 0x0403DCEA RID: 253162
+			// Token: 0x0403910C RID: 233740
 			public const int PanelFish = 0;
 
-			// Token: 0x0403DCEB RID: 253163
+			// Token: 0x0403910D RID: 233741
 			public const int SpriteIcon = 1;
 		}
 	}

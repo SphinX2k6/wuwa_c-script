@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061A0 RID: 24992
+	// Token: 0x0200680B RID: 26635
 	public struct IAssistCharacterNavigationMove : IFlatbufferObject
 	{
-		// Token: 0x1700BA46 RID: 47686
-		// (get) Token: 0x0602B0B8 RID: 176312 RVA: 0x005EFD04 File Offset: 0x005EDF04
+		// Token: 0x1700C3C4 RID: 50116
+		// (get) Token: 0x0602D7E9 RID: 186345 RVA: 0x0063A578 File Offset: 0x00638778
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B0B9 RID: 176313 RVA: 0x005EFD11 File Offset: 0x005EDF11
+		// Token: 0x0602D7EA RID: 186346 RVA: 0x0063A585 File Offset: 0x00638785
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B0BA RID: 176314 RVA: 0x005EFD18 File Offset: 0x005EDF18
+		// Token: 0x0602D7EB RID: 186347 RVA: 0x0063A58C File Offset: 0x0063878C
 		public static IAssistCharacterNavigationMove GetRootAsIAssistCharacterNavigationMove(ByteBuffer _bb)
 		{
 			return IAssistCharacterNavigationMove.GetRootAsIAssistCharacterNavigationMove(_bb, default(IAssistCharacterNavigationMove));
 		}
 
-		// Token: 0x0602B0BB RID: 176315 RVA: 0x005EFD34 File Offset: 0x005EDF34
+		// Token: 0x0602D7EC RID: 186348 RVA: 0x0063A5A8 File Offset: 0x006387A8
 		public static IAssistCharacterNavigationMove GetRootAsIAssistCharacterNavigationMove(ByteBuffer _bb, IAssistCharacterNavigationMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B0BC RID: 176316 RVA: 0x005EFD51 File Offset: 0x005EDF51
+		// Token: 0x0602D7ED RID: 186349 RVA: 0x0063A5C5 File Offset: 0x006387C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B0BD RID: 176317 RVA: 0x005EFD60 File Offset: 0x005EDF60
+		// Token: 0x0602D7EE RID: 186350 RVA: 0x0063A5D4 File Offset: 0x006387D4
 		public IAssistCharacterNavigationMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA47 RID: 47687
-		// (get) Token: 0x0602B0BE RID: 176318 RVA: 0x005EFD70 File Offset: 0x005EDF70
+		// Token: 0x1700C3C5 RID: 50117
+		// (get) Token: 0x0602D7EF RID: 186351 RVA: 0x0063A5E4 File Offset: 0x006387E4
 		public EAssistCharacterMoveType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA48 RID: 47688
-		// (get) Token: 0x0602B0BF RID: 176319 RVA: 0x005EFDAC File Offset: 0x005EDFAC
+		// Token: 0x1700C3C6 RID: 50118
+		// (get) Token: 0x0602D7F0 RID: 186352 RVA: 0x0063A620 File Offset: 0x00638820
 		public IPosA? Destination
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BA49 RID: 47689
-		// (get) Token: 0x0602B0C0 RID: 176320 RVA: 0x005EFE0C File Offset: 0x005EE00C
+		// Token: 0x1700C3C7 RID: 50119
+		// (get) Token: 0x0602D7F1 RID: 186353 RVA: 0x0063A680 File Offset: 0x00638880
 		public EMoveState MoveState
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B0C1 RID: 176321 RVA: 0x005EFE48 File Offset: 0x005EE048
+		// Token: 0x0602D7F2 RID: 186354 RVA: 0x0063A6BC File Offset: 0x006388BC
 		public static Offset<IAssistCharacterNavigationMove> CreateIAssistCharacterNavigationMove(FlatBufferBuilder builder, EAssistCharacterMoveType Type = EAssistCharacterMoveType.Navigation, Offset<IPosA> DestinationOffset = default(Offset<IPosA>), EMoveState MoveState = EMoveState.None)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAssistCharacterNavigationMove.EndIAssistCharacterNavigationMove(builder);
 		}
 
-		// Token: 0x0602B0C2 RID: 176322 RVA: 0x005EFE6C File Offset: 0x005EE06C
+		// Token: 0x0602D7F3 RID: 186355 RVA: 0x0063A6E0 File Offset: 0x006388E0
 		public static void StartIAssistCharacterNavigationMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602B0C3 RID: 176323 RVA: 0x005EFE75 File Offset: 0x005EE075
+		// Token: 0x0602D7F4 RID: 186356 RVA: 0x0063A6E9 File Offset: 0x006388E9
 		public static void AddType(FlatBufferBuilder builder, EAssistCharacterMoveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B0C4 RID: 176324 RVA: 0x005EFE80 File Offset: 0x005EE080
+		// Token: 0x0602D7F5 RID: 186357 RVA: 0x0063A6F4 File Offset: 0x006388F4
 		public static void AddDestination(FlatBufferBuilder builder, Offset<IPosA> destinationOffset)
 		{
 			builder.AddOffset(1, destinationOffset.Value, 0);
 		}
 
-		// Token: 0x0602B0C5 RID: 176325 RVA: 0x005EFE90 File Offset: 0x005EE090
+		// Token: 0x0602D7F6 RID: 186358 RVA: 0x0063A704 File Offset: 0x00638904
 		public static void AddMoveState(FlatBufferBuilder builder, EMoveState moveState)
 		{
 			builder.AddByte(2, (byte)moveState, 0);
 		}
 
-		// Token: 0x0602B0C6 RID: 176326 RVA: 0x005EFE9B File Offset: 0x005EE09B
+		// Token: 0x0602D7F7 RID: 186359 RVA: 0x0063A70F File Offset: 0x0063890F
 		public static Offset<IAssistCharacterNavigationMove> EndIAssistCharacterNavigationMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IAssistCharacterNavigationMove>(builder.EndTable());
 		}
 
-		// Token: 0x0602B0C7 RID: 176327 RVA: 0x005EFEA8 File Offset: 0x005EE0A8
+		// Token: 0x0602D7F8 RID: 186360 RVA: 0x0063A71C File Offset: 0x0063891C
 		public IAssistCharacterNavigationMoveT UnPack()
 		{
 			IAssistCharacterNavigationMoveT assistCharacterNavigationMoveT = new IAssistCharacterNavigationMoveT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return assistCharacterNavigationMoveT;
 		}
 
-		// Token: 0x0602B0C8 RID: 176328 RVA: 0x005EFEC4 File Offset: 0x005EE0C4
+		// Token: 0x0602D7F9 RID: 186361 RVA: 0x0063A738 File Offset: 0x00638938
 		public void UnPackTo(IAssistCharacterNavigationMoveT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.MoveState = this.MoveState;
 		}
 
-		// Token: 0x0602B0C9 RID: 176329 RVA: 0x005EFF18 File Offset: 0x005EE118
+		// Token: 0x0602D7FA RID: 186362 RVA: 0x0063A78C File Offset: 0x0063898C
 		public static Offset<IAssistCharacterNavigationMove> Pack(FlatBufferBuilder builder, IAssistCharacterNavigationMoveT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAssistCharacterNavigationMove.CreateIAssistCharacterNavigationMove(builder, _o.Type, destinationOffset, _o.MoveState);
 		}
 
-		// Token: 0x040106B3 RID: 67251
+		// Token: 0x040114C2 RID: 70850
 		private Table __p;
 	}
 }

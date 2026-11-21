@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068BE RID: 26814
+	// Token: 0x02006F6E RID: 28526
 	public struct IHandInHandInitiator : IFlatbufferObject
 	{
-		// Token: 0x1700C702 RID: 50946
-		// (get) Token: 0x0602EC52 RID: 191570 RVA: 0x006622FA File Offset: 0x006604FA
+		// Token: 0x1700D0FA RID: 53498
+		// (get) Token: 0x060315FE RID: 202238 RVA: 0x006B2387 File Offset: 0x006B0587
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EC53 RID: 191571 RVA: 0x00662307 File Offset: 0x00660507
+		// Token: 0x060315FF RID: 202239 RVA: 0x006B2394 File Offset: 0x006B0594
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EC54 RID: 191572 RVA: 0x00662310 File Offset: 0x00660510
+		// Token: 0x06031600 RID: 202240 RVA: 0x006B239C File Offset: 0x006B059C
 		public static IHandInHandInitiator GetRootAsIHandInHandInitiator(ByteBuffer _bb)
 		{
 			return IHandInHandInitiator.GetRootAsIHandInHandInitiator(_bb, default(IHandInHandInitiator));
 		}
 
-		// Token: 0x0602EC55 RID: 191573 RVA: 0x0066232C File Offset: 0x0066052C
+		// Token: 0x06031601 RID: 202241 RVA: 0x006B23B8 File Offset: 0x006B05B8
 		public static IHandInHandInitiator GetRootAsIHandInHandInitiator(ByteBuffer _bb, IHandInHandInitiator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EC56 RID: 191574 RVA: 0x00662349 File Offset: 0x00660549
+		// Token: 0x06031602 RID: 202242 RVA: 0x006B23D5 File Offset: 0x006B05D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EC57 RID: 191575 RVA: 0x00662358 File Offset: 0x00660558
+		// Token: 0x06031603 RID: 202243 RVA: 0x006B23E4 File Offset: 0x006B05E4
 		public IHandInHandInitiator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C703 RID: 50947
-		// (get) Token: 0x0602EC58 RID: 191576 RVA: 0x00662368 File Offset: 0x00660568
+		// Token: 0x1700D0FB RID: 53499
+		// (get) Token: 0x06031604 RID: 202244 RVA: 0x006B23F4 File Offset: 0x006B05F4
 		public THandInHandInitiator InitiatorType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EC59 RID: 191577 RVA: 0x006623A4 File Offset: 0x006605A4
+		// Token: 0x06031605 RID: 202245 RVA: 0x006B2430 File Offset: 0x006B0630
 		public TTable? Initiator<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602EC5A RID: 191578 RVA: 0x006623E8 File Offset: 0x006605E8
+		// Token: 0x06031606 RID: 202246 RVA: 0x006B2474 File Offset: 0x006B0674
 		public IEntityHandInHandInitiator InitiatorAsIEntityHandInHandInitiator()
 		{
 			return this.Initiator<IEntityHandInHandInitiator>().Value;
 		}
 
-		// Token: 0x0602EC5B RID: 191579 RVA: 0x00662404 File Offset: 0x00660604
+		// Token: 0x06031607 RID: 202247 RVA: 0x006B2490 File Offset: 0x006B0690
 		public IPlayerHandInHandInitiator InitiatorAsIPlayerHandInHandInitiator()
 		{
 			return this.Initiator<IPlayerHandInHandInitiator>().Value;
 		}
 
-		// Token: 0x1700C704 RID: 50948
-		// (get) Token: 0x0602EC5C RID: 191580 RVA: 0x00662420 File Offset: 0x00660620
+		// Token: 0x1700D0FC RID: 53500
+		// (get) Token: 0x06031608 RID: 202248 RVA: 0x006B24AC File Offset: 0x006B06AC
 		public EHandType HandType
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EC5D RID: 191581 RVA: 0x0066245C File Offset: 0x0066065C
+		// Token: 0x06031609 RID: 202249 RVA: 0x006B24E8 File Offset: 0x006B06E8
 		public static Offset<IHandInHandInitiator> CreateIHandInHandInitiator(FlatBufferBuilder builder, THandInHandInitiator Initiator_type = THandInHandInitiator.NONE, int InitiatorOffset = 0, EHandType HandType = EHandType.Left)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHandInHandInitiator.EndIHandInHandInitiator(builder);
 		}
 
-		// Token: 0x0602EC5E RID: 191582 RVA: 0x00662480 File Offset: 0x00660680
+		// Token: 0x0603160A RID: 202250 RVA: 0x006B250C File Offset: 0x006B070C
 		public static void StartIHandInHandInitiator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602EC5F RID: 191583 RVA: 0x00662489 File Offset: 0x00660689
+		// Token: 0x0603160B RID: 202251 RVA: 0x006B2515 File Offset: 0x006B0715
 		public static void AddInitiatorType(FlatBufferBuilder builder, THandInHandInitiator initiatorType)
 		{
 			builder.AddByte(0, (byte)initiatorType, 0);
 		}
 
-		// Token: 0x0602EC60 RID: 191584 RVA: 0x00662494 File Offset: 0x00660694
+		// Token: 0x0603160C RID: 202252 RVA: 0x006B2520 File Offset: 0x006B0720
 		public static void AddInitiator(FlatBufferBuilder builder, int initiatorOffset)
 		{
 			builder.AddOffset(1, initiatorOffset, 0);
 		}
 
-		// Token: 0x0602EC61 RID: 191585 RVA: 0x0066249F File Offset: 0x0066069F
+		// Token: 0x0603160D RID: 202253 RVA: 0x006B252B File Offset: 0x006B072B
 		public static void AddHandType(FlatBufferBuilder builder, EHandType handType)
 		{
 			builder.AddByte(2, (byte)handType, 0);
 		}
 
-		// Token: 0x0602EC62 RID: 191586 RVA: 0x006624AA File Offset: 0x006606AA
+		// Token: 0x0603160E RID: 202254 RVA: 0x006B2536 File Offset: 0x006B0736
 		public static Offset<IHandInHandInitiator> EndIHandInHandInitiator(FlatBufferBuilder builder)
 		{
 			return new Offset<IHandInHandInitiator>(builder.EndTable());
 		}
 
-		// Token: 0x0602EC63 RID: 191587 RVA: 0x006624B8 File Offset: 0x006606B8
+		// Token: 0x0603160F RID: 202255 RVA: 0x006B2544 File Offset: 0x006B0744
 		public IHandInHandInitiatorT UnPack()
 		{
 			IHandInHandInitiatorT handInHandInitiatorT = new IHandInHandInitiatorT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return handInHandInitiatorT;
 		}
 
-		// Token: 0x0602EC64 RID: 191588 RVA: 0x006624D4 File Offset: 0x006606D4
+		// Token: 0x06031610 RID: 202256 RVA: 0x006B2560 File Offset: 0x006B0760
 		public void UnPackTo(IHandInHandInitiatorT _o)
 		{
 			_o.Initiator = new THandInHandInitiatorUnion();
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.HandType = this.HandType;
 		}
 
-		// Token: 0x0602EC65 RID: 191589 RVA: 0x00662588 File Offset: 0x00660788
+		// Token: 0x06031611 RID: 202257 RVA: 0x006B2614 File Offset: 0x006B0814
 		public static Offset<IHandInHandInitiator> Pack(FlatBufferBuilder builder, IHandInHandInitiatorT _o)
 		{
 			if (_o == null)
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IHandInHandInitiator.CreateIHandInHandInitiator(builder, initiator_type, initiatorOffset, _o.HandType);
 		}
 
-		// Token: 0x04011019 RID: 69657
+		// Token: 0x04011E7F RID: 73343
 		private Table __p;
 	}
 }

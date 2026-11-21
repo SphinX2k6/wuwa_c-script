@@ -5,18 +5,18 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002E5D RID: 11869
+// Token: 0x020023AF RID: 9135
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x060194E0 RID: 103648 RVA: 0x00682814 File Offset: 0x00680A14
+	// Token: 0x06016D9A RID: 93594 RVA: 0x006A8BA4 File Offset: 0x006A6DA4
 	static BaseAbilityComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseAbilityComponent.CreateStaticDefaultValue), new Action(BaseAbilityComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060194E1 RID: 103649 RVA: 0x00682834 File Offset: 0x00680A34
+	// Token: 0x06016D9B RID: 93595 RVA: 0x006A8BC4 File Offset: 0x006A6DC4
 	protected override bool OnStart()
 	{
 		this.ActorComponent = base.Entity.GetComponent<BaseActorComponent>();
@@ -35,7 +35,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060194E2 RID: 103650 RVA: 0x006828ED File Offset: 0x00680AED
+	// Token: 0x06016D9C RID: 93596 RVA: 0x006A8C7D File Offset: 0x006A6E7D
 	protected override bool OnEnd()
 	{
 		if (this.GameplayEventTask != null)
@@ -46,7 +46,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060194E3 RID: 103651 RVA: 0x00682925 File Offset: 0x00680B25
+	// Token: 0x06016D9D RID: 93597 RVA: 0x006A8CB5 File Offset: 0x006A6EB5
 	protected override bool OnClear()
 	{
 		if (this.TsAbilityComponentInternal != null)
@@ -57,19 +57,19 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x060194E4 RID: 103652 RVA: 0x00682948 File Offset: 0x00680B48
+	// Token: 0x06016D9E RID: 93598 RVA: 0x006A8CD8 File Offset: 0x006A6ED8
 	protected override void OnTick(float delta)
 	{
 		this.TsAbilityComponentInternal.KuroTickComponentOutside(delta * 0.001f * this.ActorComponent.Owner.CustomTimeDilation);
 	}
 
-	// Token: 0x060194E5 RID: 103653 RVA: 0x0068296D File Offset: 0x00680B6D
+	// Token: 0x06016D9F RID: 93599 RVA: 0x006A8CFD File Offset: 0x006A6EFD
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 	{
 		this.RefreshMeshAnim();
 	}
 
-	// Token: 0x060194E6 RID: 103654 RVA: 0x00682978 File Offset: 0x00680B78
+	// Token: 0x06016DA0 RID: 93600 RVA: 0x006A8D08 File Offset: 0x006A6F08
 	protected void RefreshMeshAnim()
 	{
 		ACharacter acharacter = this.ActorComponent.Owner as ACharacter;
@@ -85,21 +85,21 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060194E7 RID: 103655 RVA: 0x006829CF File Offset: 0x00680BCF
+	// Token: 0x06016DA1 RID: 93601 RVA: 0x006A8D5F File Offset: 0x006A6F5F
 	[NullableContext(2)]
 	protected virtual UBaseAbilitySystemComponent GetAbilitySystemComponent()
 	{
 		return null;
 	}
 
-	// Token: 0x060194E8 RID: 103656 RVA: 0x006829D2 File Offset: 0x00680BD2
+	// Token: 0x06016DA2 RID: 93602 RVA: 0x006A8D62 File Offset: 0x006A6F62
 	public void AddPerformanceTag(string tagName)
 	{
 		this.LastPerformanceTag = tagName;
 		this.TagComponent.AddTag(new int?(GameplayTagUtils.GetTagIdByName(tagName)));
 	}
 
-	// Token: 0x060194E9 RID: 103657 RVA: 0x006829F1 File Offset: 0x00680BF1
+	// Token: 0x06016DA3 RID: 93603 RVA: 0x006A8D81 File Offset: 0x006A6F81
 	public void ClearLastPerformanceTag()
 	{
 		if (!string.IsNullOrEmpty(this.LastPerformanceTag))
@@ -108,27 +108,27 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060194EA RID: 103658 RVA: 0x00682A1C File Offset: 0x00680C1C
+	// Token: 0x06016DA4 RID: 93604 RVA: 0x006A8DAC File Offset: 0x006A6FAC
 	[NullableContext(2)]
 	public void SendGameplayEventToActor(FGameplayTag eventTag, FGameplayEventData payload = null)
 	{
 		UAbilitySystemBlueprintLibrary.SendGameplayEventToActor(this.ActorComponent.Owner, eventTag, payload ?? BaseAbilityComponent._cachedGameplayEventData);
 	}
 
-	// Token: 0x060194EB RID: 103659 RVA: 0x00682A39 File Offset: 0x00680C39
+	// Token: 0x06016DA5 RID: 93605 RVA: 0x006A8DC9 File Offset: 0x006A6FC9
 	public bool TryActivateAbilityByClass(UClassStackOnlyPtr inAbilityToActivate, bool bAllowRemoteActivation = true)
 	{
 		return this.TsAbilityComponentInternal.TryActivateAbilityByClass(inAbilityToActivate, bAllowRemoteActivation);
 	}
 
-	// Token: 0x060194EC RID: 103660 RVA: 0x00682A4D File Offset: 0x00680C4D
+	// Token: 0x06016DA6 RID: 93606 RVA: 0x006A8DDD File Offset: 0x006A6FDD
 	[NullableContext(2)]
 	public UGameplayAbility GetCurrentWaitAndPlayedMontageCorrespondingGa()
 	{
 		return this.TsAbilityComponentInternal.LocalAnimMontageInfo.AnimatingAbility;
 	}
 
-	// Token: 0x060194ED RID: 103661 RVA: 0x00682A60 File Offset: 0x00680C60
+	// Token: 0x06016DA7 RID: 93607 RVA: 0x006A8DF0 File Offset: 0x006A6FF0
 	public FGameplayAbilitySpecHandle GetAbility(UClassStackOnlyPtr ability)
 	{
 		UBaseAbilitySystemComponent tsAbilityComponentInternal = this.TsAbilityComponentInternal;
@@ -136,19 +136,19 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return tsAbilityComponentInternal.GetAbility(tsubclassOf);
 	}
 
-	// Token: 0x060194EE RID: 103662 RVA: 0x00682A81 File Offset: 0x00680C81
+	// Token: 0x06016DA8 RID: 93608 RVA: 0x006A8E11 File Offset: 0x006A7011
 	public void ClearAbility(FGameplayAbilitySpecHandle handle)
 	{
 		this.TsAbilityComponentInternal.RemoveAbility(handle);
 	}
 
-	// Token: 0x060194EF RID: 103663 RVA: 0x00682A90 File Offset: 0x00680C90
+	// Token: 0x06016DA9 RID: 93609 RVA: 0x006A8E20 File Offset: 0x006A7020
 	public int GetAbilityScopeLockCount()
 	{
 		return this.TsAbilityComponentInternal.GetAbilityScopeLockCount();
 	}
 
-	// Token: 0x060194F0 RID: 103664 RVA: 0x00682A9D File Offset: 0x00680C9D
+	// Token: 0x06016DAA RID: 93610 RVA: 0x006A8E2D File Offset: 0x006A702D
 	public void InitClass()
 	{
 		if (BaseAbilityComponent._isClassInitiated)
@@ -159,7 +159,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		BaseAbilityComponent._isClassInitiated = true;
 	}
 
-	// Token: 0x060194F1 RID: 103665 RVA: 0x00682AB7 File Offset: 0x00680CB7
+	// Token: 0x06016DAB RID: 93611 RVA: 0x006A8E47 File Offset: 0x006A7047
 	public UAsyncTaskWaitGameplayEvent CreateGameplayEventTask(Action<FGameplayTag, FGameplayEventData> callback)
 	{
 		UAsyncTaskWaitGameplayEvent uasyncTaskWaitGameplayEvent = UAsyncTaskWaitGameplayEvent.ListenForGameplayEvent(this.TsAbilityComponentInternal);
@@ -167,7 +167,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return uasyncTaskWaitGameplayEvent;
 	}
 
-	// Token: 0x060194F2 RID: 103666 RVA: 0x00682AD0 File Offset: 0x00680CD0
+	// Token: 0x06016DAC RID: 93612 RVA: 0x006A8E60 File Offset: 0x006A7060
 	private unsafe void GameplayEventCallback(FGameplayTag eventTag, FGameplayEventData payload)
 	{
 		int num = eventTag.TagId();
@@ -202,7 +202,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060194F3 RID: 103667 RVA: 0x00682BB8 File Offset: 0x00680DB8
+	// Token: 0x06016DAD RID: 93613 RVA: 0x006A8F48 File Offset: 0x006A7148
 	public unsafe void AddGameplayEventListener(int tagId, TGameplayEventCallback callback)
 	{
 		if (callback == null)
@@ -238,7 +238,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		hashSet.Add(callback);
 	}
 
-	// Token: 0x060194F4 RID: 103668 RVA: 0x00682CC8 File Offset: 0x00680EC8
+	// Token: 0x06016DAE RID: 93614 RVA: 0x006A9058 File Offset: 0x006A7258
 	[return: Nullable(2)]
 	public unsafe IGameplayEventTask AddGameplayEventListenerOnce(int? tagId, TGameplayEventCallback callback)
 	{
@@ -259,7 +259,7 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		return gameplayEventOnceTask;
 	}
 
-	// Token: 0x060194F5 RID: 103669 RVA: 0x00682D68 File Offset: 0x00680F68
+	// Token: 0x06016DAF RID: 93615 RVA: 0x006A90F8 File Offset: 0x006A72F8
 	public void RemoveGameplayEventListener(int tagId, TGameplayEventCallback callback)
 	{
 		HashSet<TGameplayEventCallback> hashSet;
@@ -270,21 +270,21 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 		hashSet.Remove(callback);
 	}
 
-	// Token: 0x060194F6 RID: 103670 RVA: 0x00682D8E File Offset: 0x00680F8E
+	// Token: 0x06016DB0 RID: 93616 RVA: 0x006A911E File Offset: 0x006A731E
 	public static void CreateStaticDefaultValue()
 	{
 		BaseAbilityComponent._cachedGameplayEventData = null;
 		BaseAbilityComponent._isClassInitiated = false;
 	}
 
-	// Token: 0x060194F7 RID: 103671 RVA: 0x00682D9C File Offset: 0x00680F9C
+	// Token: 0x06016DB1 RID: 93617 RVA: 0x006A912C File Offset: 0x006A732C
 	public static void ResetStaticDefaultValue()
 	{
 		BaseAbilityComponent._cachedGameplayEventData = null;
 		BaseAbilityComponent._isClassInitiated = false;
 	}
 
-	// Token: 0x060194F8 RID: 103672 RVA: 0x00682DAC File Offset: 0x00680FAC
+	// Token: 0x06016DB2 RID: 93618 RVA: 0x006A913C File Offset: 0x006A733C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -292,89 +292,114 @@ public class BaseAbilityComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		BaseAbilityComponent baseAbilityComponent = (BaseAbilityComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (baseAbilityComponent.ActorComponent == null)
 		{
-			if (baseAbilityComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("TsAbilityComponentInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
-			if (baseAbilityComponent.TsAbilityComponentInternal == null)
-			{
-				this.TsAbilityComponentInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UBaseAbilitySystemComponent>(this.TsAbilityComponentInternal), "TsAbilityComponentInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (baseAbilityComponent.TsAbilityComponentInternal == null)
 		{
-			if (baseAbilityComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.TsAbilityComponentInternal = null;
 		}
-		if (base.CanResetComponentProperty("LastPerformanceTag"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TsAbilityComponentInternal), "TsAbilityComponentInternal"))
 		{
-			this.LastPerformanceTag = baseAbilityComponent.LastPerformanceTag;
+			return false;
 		}
-		if (base.CanResetComponentProperty("GameplayEventTask"))
+		if (baseAbilityComponent.TagComponent == null)
 		{
-			if (baseAbilityComponent.GameplayEventTask == null)
-			{
-				this.GameplayEventTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAsyncTaskWaitGameplayEvent>(this.GameplayEventTask), "GameplayEventTask"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		return !base.CanResetComponentProperty("GameplayEventCallbacks") || baseAbilityComponent.GameplayEventCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<TGameplayEventCallback>>>(this.GameplayEventCallbacks), "GameplayEventCallbacks");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+		{
+			return false;
+		}
+		this.LastPerformanceTag = baseAbilityComponent.LastPerformanceTag;
+		if (baseAbilityComponent.GameplayEventTask == null)
+		{
+			this.GameplayEventTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameplayEventTask), "GameplayEventTask"))
+		{
+			return false;
+		}
+		return baseAbilityComponent.GameplayEventCallbacks == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameplayEventCallbacks), "GameplayEventCallbacks");
 	}
 
-	// Token: 0x0400BC23 RID: 48163
+	// Token: 0x17002313 RID: 8979
+	// (get) Token: 0x06016DB3 RID: 93619 RVA: 0x006A9236 File Offset: 0x006A7436
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002314 RID: 8980
+	// (get) Token: 0x06016DB4 RID: 93620 RVA: 0x006A9239 File Offset: 0x006A7439
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002315 RID: 8981
+	// (get) Token: 0x06016DB5 RID: 93621 RVA: 0x006A923C File Offset: 0x006A743C
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002316 RID: 8982
+	// (get) Token: 0x06016DB6 RID: 93622 RVA: 0x006A923F File Offset: 0x006A743F
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400BFB7 RID: 49079
 	public const int DEFAULT_SOURCE_SKILL_LEVEL = 1;
 
-	// Token: 0x0400BC24 RID: 48164
+	// Token: 0x0400BFB8 RID: 49080
 	public const int DEFAULT_SOURCE_SKILL_LEVEL_NOT_FOUND = -1;
 
-	// Token: 0x0400BC25 RID: 48165
+	// Token: 0x0400BFB9 RID: 49081
 	[Nullable(2)]
 	private BaseActorComponent ActorComponent;
 
-	// Token: 0x0400BC26 RID: 48166
+	// Token: 0x0400BFBA RID: 49082
 	[Nullable(2)]
 	private UBaseAbilitySystemComponent TsAbilityComponentInternal;
 
-	// Token: 0x0400BC27 RID: 48167
+	// Token: 0x0400BFBB RID: 49083
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400BC28 RID: 48168
+	// Token: 0x0400BFBC RID: 49084
 	[Nullable(2)]
 	private static FGameplayEventData _cachedGameplayEventData;
 
-	// Token: 0x0400BC29 RID: 48169
+	// Token: 0x0400BFBD RID: 49085
 	private string LastPerformanceTag = "";
 
-	// Token: 0x0400BC2A RID: 48170
+	// Token: 0x0400BFBE RID: 49086
 	private static bool _isClassInitiated;
 
-	// Token: 0x0400BC2B RID: 48171
+	// Token: 0x0400BFBF RID: 49087
 	[Nullable(2)]
 	private UAsyncTaskWaitGameplayEvent GameplayEventTask;
 
-	// Token: 0x0400BC2C RID: 48172
+	// Token: 0x0400BFC0 RID: 49088
 	protected readonly Dictionary<int, HashSet<TGameplayEventCallback>> GameplayEventCallbacks = new Dictionary<int, HashSet<TGameplayEventCallback>>();
 }

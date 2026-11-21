@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C73 RID: 3187
+	// Token: 0x02000C63 RID: 3171
 	[NetMessage(EMessageId.PhantomBattleDealCardReplaceResponse)]
 	public sealed class PhantomBattleDealCardReplaceResponse : IMessage<PhantomBattleDealCardReplaceResponse>, IMessage, IEquatable<PhantomBattleDealCardReplaceResponse>, IDeepCloneable<PhantomBattleDealCardReplaceResponse>, IBufferMessage
 	{
-		// Token: 0x0601146A RID: 70762 RVA: 0x0028782D File Offset: 0x00285A2D
+		// Token: 0x0601136A RID: 70506 RVA: 0x00285ABD File Offset: 0x00283CBD
 		[NullableContext(1)]
 		public static PhantomBattleDealCardReplaceResponse Create()
 		{
 			return new PhantomBattleDealCardReplaceResponse();
 		}
 
-		// Token: 0x17003926 RID: 14630
-		// (get) Token: 0x0601146B RID: 70763 RVA: 0x00287834 File Offset: 0x00285A34
+		// Token: 0x170038EF RID: 14575
+		// (get) Token: 0x0601136B RID: 70507 RVA: 0x00285AC4 File Offset: 0x00283CC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003927 RID: 14631
-		// (get) Token: 0x0601146C RID: 70764 RVA: 0x00287837 File Offset: 0x00285A37
+		// Token: 0x170038F0 RID: 14576
+		// (get) Token: 0x0601136C RID: 70508 RVA: 0x00285AC7 File Offset: 0x00283CC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601146D RID: 70765 RVA: 0x0028783E File Offset: 0x00285A3E
+		// Token: 0x0601136D RID: 70509 RVA: 0x00285ACE File Offset: 0x00283CCE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDealCardReplaceResponse()
 		{
 		}
 
-		// Token: 0x0601146E RID: 70766 RVA: 0x00287854 File Offset: 0x00285A54
+		// Token: 0x0601136E RID: 70510 RVA: 0x00285AE4 File Offset: 0x00283CE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDealCardReplaceResponse(PhantomBattleDealCardReplaceResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601146F RID: 70767 RVA: 0x002878A1 File Offset: 0x00285AA1
+		// Token: 0x0601136F RID: 70511 RVA: 0x00285B31 File Offset: 0x00283D31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDealCardReplaceResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new PhantomBattleDealCardReplaceResponse(this);
 		}
 
-		// Token: 0x17003928 RID: 14632
-		// (get) Token: 0x06011470 RID: 70768 RVA: 0x002878A9 File Offset: 0x00285AA9
-		// (set) Token: 0x06011471 RID: 70769 RVA: 0x002878B1 File Offset: 0x00285AB1
+		// Token: 0x170038F1 RID: 14577
+		// (get) Token: 0x06011370 RID: 70512 RVA: 0x00285B39 File Offset: 0x00283D39
+		// (set) Token: 0x06011371 RID: 70513 RVA: 0x00285B41 File Offset: 0x00283D41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003929 RID: 14633
-		// (get) Token: 0x06011472 RID: 70770 RVA: 0x002878BA File Offset: 0x00285ABA
+		// Token: 0x170038F2 RID: 14578
+		// (get) Token: 0x06011372 RID: 70514 RVA: 0x00285B4A File Offset: 0x00283D4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomBattleHandCardInfo> PhantomBattleHandCardInfos
@@ -98,9 +98,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700392A RID: 14634
-		// (get) Token: 0x06011473 RID: 70771 RVA: 0x002878C2 File Offset: 0x00285AC2
-		// (set) Token: 0x06011474 RID: 70772 RVA: 0x002878CA File Offset: 0x00285ACA
+		// Token: 0x170038F3 RID: 14579
+		// (get) Token: 0x06011373 RID: 70515 RVA: 0x00285B52 File Offset: 0x00283D52
+		// (set) Token: 0x06011374 RID: 70516 RVA: 0x00285B5A File Offset: 0x00283D5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurCardLibraryNum
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011475 RID: 70773 RVA: 0x002878D3 File Offset: 0x00285AD3
+		// Token: 0x06011375 RID: 70517 RVA: 0x00285B63 File Offset: 0x00283D63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleDealCardReplaceResponse);
 		}
 
-		// Token: 0x06011476 RID: 70774 RVA: 0x002878E4 File Offset: 0x00285AE4
+		// Token: 0x06011376 RID: 70518 RVA: 0x00285B74 File Offset: 0x00283D74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleDealCardReplaceResponse other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.phantomBattleHandCardInfos_.Equals(other.phantomBattleHandCardInfos_) && this.CurCardLibraryNum == other.CurCardLibraryNum && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06011477 RID: 70775 RVA: 0x00287944 File Offset: 0x00285B44
+		// Token: 0x06011377 RID: 70519 RVA: 0x00285BD4 File Offset: 0x00283DD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011478 RID: 70776 RVA: 0x002879B0 File Offset: 0x00285BB0
+		// Token: 0x06011378 RID: 70520 RVA: 0x00285C40 File Offset: 0x00283E40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06011479 RID: 70777 RVA: 0x002879BD File Offset: 0x00285BBD
+		// Token: 0x06011379 RID: 70521 RVA: 0x00285C4D File Offset: 0x00283E4D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601147A RID: 70778 RVA: 0x002879C8 File Offset: 0x00285BC8
+		// Token: 0x0601137A RID: 70522 RVA: 0x00285C58 File Offset: 0x00283E58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.phantomBattleHandCardInfos_.WriteTo(ref output, PhantomBattleDealCardReplaceResponse._repeated_phantomBattleHandCardInfos_codec);
 			if (this.CurCardLibraryNum != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.CurCardLibraryNum);
 			}
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(72);
 				output.WriteEnum((int)this.ErrorCode);
 			}
+			this.phantomBattleHandCardInfos_.WriteTo(ref output, PhantomBattleDealCardReplaceResponse._repeated_phantomBattleHandCardInfos_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601147B RID: 70779 RVA: 0x00287A34 File Offset: 0x00285C34
+		// Token: 0x0601137B RID: 70523 RVA: 0x00285CC4 File Offset: 0x00283EC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601147C RID: 70780 RVA: 0x00287AA0 File Offset: 0x00285CA0
+		// Token: 0x0601137C RID: 70524 RVA: 0x00285D30 File Offset: 0x00283F30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleDealCardReplaceResponse other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601147D RID: 70781 RVA: 0x00287B01 File Offset: 0x00285D01
+		// Token: 0x0601137D RID: 70525 RVA: 0x00285D91 File Offset: 0x00283F91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601147E RID: 70782 RVA: 0x00287B0C File Offset: 0x00285D0C
+		// Token: 0x0601137E RID: 70526 RVA: 0x00285D9C File Offset: 0x00283F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,53 +254,53 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 32U)
 				{
-					if (num != 88U)
+					if (num != 72U)
 					{
-						if (num != 112U)
+						if (num != 122U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
+							this.phantomBattleHandCardInfos_.AddEntriesFrom(ref input, PhantomBattleDealCardReplaceResponse._repeated_phantomBattleHandCardInfos_codec);
 						}
 					}
 					else
 					{
-						this.CurCardLibraryNum = input.ReadInt32();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.phantomBattleHandCardInfos_.AddEntriesFrom(ref input, PhantomBattleDealCardReplaceResponse._repeated_phantomBattleHandCardInfos_codec);
+					this.CurCardLibraryNum = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x04006D3E RID: 27966
+		// Token: 0x04006D52 RID: 27986
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006D3F RID: 27967
-		public const int ErrorCodeFieldNumber = 14;
+		// Token: 0x04006D53 RID: 27987
+		public const int ErrorCodeFieldNumber = 9;
 
-		// Token: 0x04006D40 RID: 27968
+		// Token: 0x04006D54 RID: 27988
 		private ErrorCode errorCode_;
 
-		// Token: 0x04006D41 RID: 27969
-		public const int PhantomBattleHandCardInfosFieldNumber = 5;
+		// Token: 0x04006D55 RID: 27989
+		public const int PhantomBattleHandCardInfosFieldNumber = 15;
 
-		// Token: 0x04006D42 RID: 27970
-		private static readonly FieldCodec<PhantomBattleHandCardInfo> _repeated_phantomBattleHandCardInfos_codec = FieldCodec.ForMessage<PhantomBattleHandCardInfo>(42U, PhantomBattleHandCardInfo.Parser);
+		// Token: 0x04006D56 RID: 27990
+		private static readonly FieldCodec<PhantomBattleHandCardInfo> _repeated_phantomBattleHandCardInfos_codec = FieldCodec.ForMessage<PhantomBattleHandCardInfo>(122U, PhantomBattleHandCardInfo.Parser);
 
-		// Token: 0x04006D43 RID: 27971
+		// Token: 0x04006D57 RID: 27991
 		private readonly RepeatedField<PhantomBattleHandCardInfo> phantomBattleHandCardInfos_ = new RepeatedField<PhantomBattleHandCardInfo>();
 
-		// Token: 0x04006D44 RID: 27972
-		public const int CurCardLibraryNumFieldNumber = 11;
+		// Token: 0x04006D58 RID: 27992
+		public const int CurCardLibraryNumFieldNumber = 4;
 
-		// Token: 0x04006D45 RID: 27973
+		// Token: 0x04006D59 RID: 27993
 		private int curCardLibraryNum_;
 	}
 }

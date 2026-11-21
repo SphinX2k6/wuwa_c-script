@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DAA RID: 23978
+	// Token: 0x020063E7 RID: 25575
 	public class IEntityDirectionConfigT
 	{
-		// Token: 0x1700B395 RID: 45973
-		// (get) Token: 0x060290B0 RID: 168112 RVA: 0x005A2C77 File Offset: 0x005A0E77
-		// (set) Token: 0x060290B1 RID: 168113 RVA: 0x005A2C7F File Offset: 0x005A0E7F
+		// Token: 0x1700BCFB RID: 48379
+		// (get) Token: 0x0602B73A RID: 177978 RVA: 0x005EB9A7 File Offset: 0x005E9BA7
+		// (set) Token: 0x0602B73B RID: 177979 RVA: 0x005EB9AF File Offset: 0x005E9BAF
 		public int LevelId { get; set; }
 
-		// Token: 0x1700B396 RID: 45974
-		// (get) Token: 0x060290B2 RID: 168114 RVA: 0x005A2C88 File Offset: 0x005A0E88
-		// (set) Token: 0x060290B3 RID: 168115 RVA: 0x005A2C90 File Offset: 0x005A0E90
+		// Token: 0x1700BCFC RID: 48380
+		// (get) Token: 0x0602B73C RID: 177980 RVA: 0x005EB9B8 File Offset: 0x005E9BB8
+		// (set) Token: 0x0602B73D RID: 177981 RVA: 0x005EB9C0 File Offset: 0x005E9BC0
 		public List<IEntityDirectionT> EntityDirectionConfig { get; set; }
 
-		// Token: 0x060290B4 RID: 168116 RVA: 0x005A2C99 File Offset: 0x005A0E99
+		// Token: 0x0602B73E RID: 177982 RVA: 0x005EB9C9 File Offset: 0x005E9BC9
 		public IEntityDirectionConfigT()
 		{
 			this.LevelId = 0;

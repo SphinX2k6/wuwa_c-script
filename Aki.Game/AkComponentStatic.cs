@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003045 RID: 12357
+// Token: 0x0200259B RID: 9627
 internal class AkComponentStatic : IStaticVariableResetter
 {
-	// Token: 0x0601A3CA RID: 107466 RVA: 0x006EAC26 File Offset: 0x006E8E26
+	// Token: 0x06017D46 RID: 97606 RVA: 0x007123DE File Offset: 0x007105DE
 	static AkComponentStatic()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AkComponentStatic.CreateStaticDefaultValue), new Action(AkComponentStatic.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601A3CB RID: 107467 RVA: 0x006EAC45 File Offset: 0x006E8E45
+	// Token: 0x06017D47 RID: 97607 RVA: 0x007123FD File Offset: 0x007105FD
 	public static bool Load()
 	{
 		if (AkComponentStatic.Init)
@@ -23,7 +23,7 @@ internal class AkComponentStatic : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601A3CC RID: 107468 RVA: 0x006EAC6C File Offset: 0x006E8E6C
+	// Token: 0x06017D48 RID: 97608 RVA: 0x00712424 File Offset: 0x00710624
 	public static void CreateStaticDefaultValue()
 	{
 		AkComponentStatic.Init = false;
@@ -37,7 +37,7 @@ internal class AkComponentStatic : IStaticVariableResetter
 		AkComponentStatic.AkMoveStateMap = dictionary;
 	}
 
-	// Token: 0x0601A3CD RID: 107469 RVA: 0x006EACFD File Offset: 0x006E8EFD
+	// Token: 0x06017D49 RID: 97609 RVA: 0x007124B5 File Offset: 0x007106B5
 	public static void ResetStaticDefaultValue()
 	{
 		AkComponentStatic.Init = false;
@@ -45,13 +45,13 @@ internal class AkComponentStatic : IStaticVariableResetter
 		AkComponentStatic.AkMoveStateMap = null;
 	}
 
-	// Token: 0x0400C79F RID: 51103
+	// Token: 0x0400CB79 RID: 52089
 	public static bool Init;
 
-	// Token: 0x0400C7A0 RID: 51104
+	// Token: 0x0400CB7A RID: 52090
 	public static EAkMoveState AkMoveState;
 
-	// Token: 0x0400C7A1 RID: 51105
+	// Token: 0x0400CB7B RID: 52091
 	[Nullable(1)]
 	public static Dictionary<EAkMoveState, int> AkMoveStateMap;
 }

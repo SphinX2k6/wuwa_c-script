@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200065C RID: 1628
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006F9 RID: 1785
 	public class IRangeByTag
 	{
-		// Token: 0x060022D8 RID: 8920 RVA: 0x0005FAC8 File Offset: 0x0005DCC8
+		// Token: 0x060025DE RID: 9694 RVA: 0x000667DC File Offset: 0x000649DC
 		private IRangeByTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022D9 RID: 8921 RVA: 0x0005FB00 File Offset: 0x0005DD00
+		// Token: 0x060025DF RID: 9695 RVA: 0x00066814 File Offset: 0x00064A14
 		public static IRangeByTag Create([Nullable(2)] IRangeByTag instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022DA RID: 8922 RVA: 0x0005FB13 File Offset: 0x0005DD13
+		// Token: 0x060025E0 RID: 9696 RVA: 0x00066827 File Offset: 0x00064A27
 		public static IRangeByTag CreateFromSetValue([Nullable(2)] IRangeByTag_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022DB RID: 8923 RVA: 0x0005FB26 File Offset: 0x0005DD26
+		// Token: 0x060025E1 RID: 9697 RVA: 0x0006683A File Offset: 0x00064A3A
 		public IRangeByTag_SetValue ToSetValue()
 		{
 			return new IRangeByTag_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000941 RID: 2369
-		// (get) Token: 0x060022DC RID: 8924 RVA: 0x0005FB51 File Offset: 0x0005DD51
-		// (set) Token: 0x060022DD RID: 8925 RVA: 0x0005FB7C File Offset: 0x0005DD7C
+		// Token: 0x170009F8 RID: 2552
+		// (get) Token: 0x060025E2 RID: 9698 RVA: 0x00066865 File Offset: 0x00064A65
+		// (set) Token: 0x060025E3 RID: 9699 RVA: 0x00066890 File Offset: 0x00064A90
 		public virtual int Tag
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000942 RID: 2370
-		// (get) Token: 0x060022DE RID: 8926 RVA: 0x0005FB8A File Offset: 0x0005DD8A
-		// (set) Token: 0x060022DF RID: 8927 RVA: 0x0005FBB9 File Offset: 0x0005DDB9
+		// Token: 0x170009F9 RID: 2553
+		// (get) Token: 0x060025E4 RID: 9700 RVA: 0x0006689E File Offset: 0x00064A9E
+		// (set) Token: 0x060025E5 RID: 9701 RVA: 0x000668CD File Offset: 0x00064ACD
 		public virtual float Range
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000943 RID: 2371
-		// (get) Token: 0x060022E0 RID: 8928 RVA: 0x0005FBC8 File Offset: 0x0005DDC8
-		// (set) Token: 0x060022E1 RID: 8929 RVA: 0x0005FC02 File Offset: 0x0005DE02
+		// Token: 0x170009FA RID: 2554
+		// (get) Token: 0x060025E6 RID: 9702 RVA: 0x000668DC File Offset: 0x00064ADC
+		// (set) Token: 0x060025E7 RID: 9703 RVA: 0x00066916 File Offset: 0x00064B16
 		public virtual float? ExitRange
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001833 RID: 6195
+		// Token: 0x04001A25 RID: 6693
 		[Nullable(2)]
 		protected IRangeByTag FbInstance;
 
-		// Token: 0x04001834 RID: 6196
+		// Token: 0x04001A26 RID: 6694
 		[Nullable(2)]
 		protected IRangeByTag_SetValue PocoInterface;
 	}

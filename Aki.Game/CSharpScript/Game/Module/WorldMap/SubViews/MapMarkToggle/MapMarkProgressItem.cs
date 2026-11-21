@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 {
-	// Token: 0x02004802 RID: 18434
+	// Token: 0x02003733 RID: 14131
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 	})]
 	public class MapMarkProgressItem : GridProxyAbstract<IMapMarkProgressItemData>
 	{
-		// Token: 0x06030458 RID: 197720 RVA: 0x00B32868 File Offset: 0x00B30A68
+		// Token: 0x06024C28 RID: 150568 RVA: 0x00A627D0 File Offset: 0x00A609D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030459 RID: 197721 RVA: 0x00B328F4 File Offset: 0x00B30AF4
+		// Token: 0x06024C29 RID: 150569 RVA: 0x00A6285C File Offset: 0x00A60A5C
 		[NullableContext(1)]
 		public override void Refresh(IMapMarkProgressItemData data, bool isSelected, int gridIndex)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			text2.SetText(num.ToString("F0"), true);
 		}
 
-		// Token: 0x0603045A RID: 197722 RVA: 0x00B329A0 File Offset: 0x00B30BA0
+		// Token: 0x06024C2A RID: 150570 RVA: 0x00A62908 File Offset: 0x00A60B08
 		private void SetProgressCallback(float progress)
 		{
 			IMapMarkProgressItemData dataParam = this.DataParam;
@@ -80,20 +80,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MapMarkToggle
 			text.SetText(num.ToString("F0"), true);
 		}
 
-		// Token: 0x04019FB1 RID: 106417
+		// Token: 0x04014665 RID: 83557
 		[Nullable(2)]
 		private IMapMarkProgressItemData DataParam;
 
-		// Token: 0x0200AAD3 RID: 43731
+		// Token: 0x02009484 RID: 38020
 		public static class EChildType
 		{
-			// Token: 0x04033F3A RID: 212794
+			// Token: 0x0402E6BD RID: 190141
 			public const int TextName = 0;
 
-			// Token: 0x04033F3B RID: 212795
+			// Token: 0x0402E6BE RID: 190142
 			public const int TextSettingNum = 1;
 
-			// Token: 0x04033F3C RID: 212796
+			// Token: 0x0402E6BF RID: 190143
 			public const int Slider = 2;
 		}
 	}

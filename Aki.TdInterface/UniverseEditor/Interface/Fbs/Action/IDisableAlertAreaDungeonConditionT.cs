@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065CB RID: 26059
+	// Token: 0x02006C33 RID: 27699
 	public class IDisableAlertAreaDungeonConditionT
 	{
-		// Token: 0x1700C165 RID: 49509
-		// (get) Token: 0x0602D31C RID: 185116 RVA: 0x006320D4 File Offset: 0x006302D4
-		// (set) Token: 0x0602D31D RID: 185117 RVA: 0x006320DC File Offset: 0x006302DC
+		// Token: 0x1700CAF4 RID: 51956
+		// (get) Token: 0x0602FAA0 RID: 195232 RVA: 0x0067E298 File Offset: 0x0067C498
+		// (set) Token: 0x0602FAA1 RID: 195233 RVA: 0x0067E2A0 File Offset: 0x0067C4A0
 		public EDisableAlertAreaCondition Type { get; set; }
 
-		// Token: 0x1700C166 RID: 49510
-		// (get) Token: 0x0602D31E RID: 185118 RVA: 0x006320E5 File Offset: 0x006302E5
-		// (set) Token: 0x0602D31F RID: 185119 RVA: 0x006320ED File Offset: 0x006302ED
+		// Token: 0x1700CAF5 RID: 51957
+		// (get) Token: 0x0602FAA2 RID: 195234 RVA: 0x0067E2A9 File Offset: 0x0067C4A9
+		// (set) Token: 0x0602FAA3 RID: 195235 RVA: 0x0067E2B1 File Offset: 0x0067C4B1
 		public int RelatedDungeonId { get; set; }
 
-		// Token: 0x0602D320 RID: 185120 RVA: 0x006320F6 File Offset: 0x006302F6
+		// Token: 0x0602FAA4 RID: 195236 RVA: 0x0067E2BA File Offset: 0x0067C4BA
 		public IDisableAlertAreaDungeonConditionT()
 		{
 			this.Type = EDisableAlertAreaCondition.DungeonCondition;

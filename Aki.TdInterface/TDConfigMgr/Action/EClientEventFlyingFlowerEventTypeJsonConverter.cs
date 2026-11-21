@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022DC RID: 8924
+	// Token: 0x0200254B RID: 9547
 	public class EClientEventFlyingFlowerEventTypeJsonConverter : JsonConverter<EClientEventFlyingFlowerEventType>
 	{
-		// Token: 0x0600C35E RID: 50014 RVA: 0x001C8BE8 File Offset: 0x001C6DE8
+		// Token: 0x0600CF2D RID: 53037 RVA: 0x001E09F0 File Offset: 0x001DEBF0
 		public override EClientEventFlyingFlowerEventType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EClientEventFlyingFlowerEventTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C35F RID: 50015 RVA: 0x001C8C0C File Offset: 0x001C6E0C
+		// Token: 0x0600CF2E RID: 53038 RVA: 0x001E0A14 File Offset: 0x001DEC14
 		public override void Write(Utf8JsonWriter writer, EClientEventFlyingFlowerEventType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

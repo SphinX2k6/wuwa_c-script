@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045CF RID: 17871
+	// Token: 0x02004A37 RID: 18999
 	public struct ITrapDefenseSpawnMonsterGroup : IFlatbufferObject
 	{
-		// Token: 0x17007F04 RID: 32516
-		// (get) Token: 0x0601B093 RID: 110739 RVA: 0x003DA832 File Offset: 0x003D8A32
+		// Token: 0x17008545 RID: 34117
+		// (get) Token: 0x0601C868 RID: 116840 RVA: 0x00406ACE File Offset: 0x00404CCE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B094 RID: 110740 RVA: 0x003DA83F File Offset: 0x003D8A3F
+		// Token: 0x0601C869 RID: 116841 RVA: 0x00406ADB File Offset: 0x00404CDB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B095 RID: 110741 RVA: 0x003DA848 File Offset: 0x003D8A48
+		// Token: 0x0601C86A RID: 116842 RVA: 0x00406AE4 File Offset: 0x00404CE4
 		public static ITrapDefenseSpawnMonsterGroup GetRootAsITrapDefenseSpawnMonsterGroup(ByteBuffer _bb)
 		{
 			return ITrapDefenseSpawnMonsterGroup.GetRootAsITrapDefenseSpawnMonsterGroup(_bb, default(ITrapDefenseSpawnMonsterGroup));
 		}
 
-		// Token: 0x0601B096 RID: 110742 RVA: 0x003DA864 File Offset: 0x003D8A64
+		// Token: 0x0601C86B RID: 116843 RVA: 0x00406B00 File Offset: 0x00404D00
 		public static ITrapDefenseSpawnMonsterGroup GetRootAsITrapDefenseSpawnMonsterGroup(ByteBuffer _bb, ITrapDefenseSpawnMonsterGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B097 RID: 110743 RVA: 0x003DA881 File Offset: 0x003D8A81
+		// Token: 0x0601C86C RID: 116844 RVA: 0x00406B1D File Offset: 0x00404D1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B098 RID: 110744 RVA: 0x003DA890 File Offset: 0x003D8A90
+		// Token: 0x0601C86D RID: 116845 RVA: 0x00406B2C File Offset: 0x00404D2C
 		public ITrapDefenseSpawnMonsterGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F05 RID: 32517
-		// (get) Token: 0x0601B099 RID: 110745 RVA: 0x003DA8A0 File Offset: 0x003D8AA0
+		// Token: 0x17008546 RID: 34118
+		// (get) Token: 0x0601C86E RID: 116846 RVA: 0x00406B3C File Offset: 0x00404D3C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F06 RID: 32518
-		// (get) Token: 0x0601B09A RID: 110746 RVA: 0x003DA8DC File Offset: 0x003D8ADC
+		// Token: 0x17008547 RID: 34119
+		// (get) Token: 0x0601C86F RID: 116847 RVA: 0x00406B78 File Offset: 0x00404D78
 		public int RepeatTimes
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F07 RID: 32519
-		// (get) Token: 0x0601B09B RID: 110747 RVA: 0x003DA918 File Offset: 0x003D8B18
+		// Token: 0x17008548 RID: 34120
+		// (get) Token: 0x0601C870 RID: 116848 RVA: 0x00406BB4 File Offset: 0x00404DB4
 		public float RepeatDelayTime
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007F08 RID: 32520
-		// (get) Token: 0x0601B09C RID: 110748 RVA: 0x003DA958 File Offset: 0x003D8B58
+		// Token: 0x17008549 RID: 34121
+		// (get) Token: 0x0601C871 RID: 116849 RVA: 0x00406BF4 File Offset: 0x00404DF4
 		public float IntervalTime
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B09D RID: 110749 RVA: 0x003DA999 File Offset: 0x003D8B99
+		// Token: 0x0601C872 RID: 116850 RVA: 0x00406C35 File Offset: 0x00404E35
 		public static Offset<ITrapDefenseSpawnMonsterGroup> CreateITrapDefenseSpawnMonsterGroup(FlatBufferBuilder builder, int Id = 0, int RepeatTimes = 0, float RepeatDelayTime = 0f, float IntervalTime = 0f)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterGroup.EndITrapDefenseSpawnMonsterGroup(builder);
 		}
 
-		// Token: 0x0601B09E RID: 110750 RVA: 0x003DA9C5 File Offset: 0x003D8BC5
+		// Token: 0x0601C873 RID: 116851 RVA: 0x00406C61 File Offset: 0x00404E61
 		public static void StartITrapDefenseSpawnMonsterGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601B09F RID: 110751 RVA: 0x003DA9CE File Offset: 0x003D8BCE
+		// Token: 0x0601C874 RID: 116852 RVA: 0x00406C6A File Offset: 0x00404E6A
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601B0A0 RID: 110752 RVA: 0x003DA9D9 File Offset: 0x003D8BD9
+		// Token: 0x0601C875 RID: 116853 RVA: 0x00406C75 File Offset: 0x00404E75
 		public static void AddRepeatTimes(FlatBufferBuilder builder, int repeatTimes)
 		{
 			builder.AddInt(1, repeatTimes, 0);
 		}
 
-		// Token: 0x0601B0A1 RID: 110753 RVA: 0x003DA9E4 File Offset: 0x003D8BE4
+		// Token: 0x0601C876 RID: 116854 RVA: 0x00406C80 File Offset: 0x00404E80
 		public static void AddRepeatDelayTime(FlatBufferBuilder builder, float repeatDelayTime)
 		{
 			builder.AddFloat(2, repeatDelayTime, 0.0);
 		}
 
-		// Token: 0x0601B0A2 RID: 110754 RVA: 0x003DA9F7 File Offset: 0x003D8BF7
+		// Token: 0x0601C877 RID: 116855 RVA: 0x00406C93 File Offset: 0x00404E93
 		public static void AddIntervalTime(FlatBufferBuilder builder, float intervalTime)
 		{
 			builder.AddFloat(3, intervalTime, 0.0);
 		}
 
-		// Token: 0x0601B0A3 RID: 110755 RVA: 0x003DAA0A File Offset: 0x003D8C0A
+		// Token: 0x0601C878 RID: 116856 RVA: 0x00406CA6 File Offset: 0x00404EA6
 		public static Offset<ITrapDefenseSpawnMonsterGroup> EndITrapDefenseSpawnMonsterGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseSpawnMonsterGroup>(builder.EndTable());
 		}
 
-		// Token: 0x0601B0A4 RID: 110756 RVA: 0x003DAA18 File Offset: 0x003D8C18
+		// Token: 0x0601C879 RID: 116857 RVA: 0x00406CB4 File Offset: 0x00404EB4
 		public ITrapDefenseSpawnMonsterGroupT UnPack()
 		{
 			ITrapDefenseSpawnMonsterGroupT trapDefenseSpawnMonsterGroupT = new ITrapDefenseSpawnMonsterGroupT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return trapDefenseSpawnMonsterGroupT;
 		}
 
-		// Token: 0x0601B0A5 RID: 110757 RVA: 0x003DAA33 File Offset: 0x003D8C33
+		// Token: 0x0601C87A RID: 116858 RVA: 0x00406CCF File Offset: 0x00404ECF
 		public void UnPackTo(ITrapDefenseSpawnMonsterGroupT _o)
 		{
 			_o.Id = this.Id;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.IntervalTime = this.IntervalTime;
 		}
 
-		// Token: 0x0601B0A6 RID: 110758 RVA: 0x003DAA68 File Offset: 0x003D8C68
+		// Token: 0x0601C87B RID: 116859 RVA: 0x00406D04 File Offset: 0x00404F04
 		public static Offset<ITrapDefenseSpawnMonsterGroup> Pack(FlatBufferBuilder builder, ITrapDefenseSpawnMonsterGroupT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterGroup.CreateITrapDefenseSpawnMonsterGroup(builder, _o.Id, _o.RepeatTimes, _o.RepeatDelayTime, _o.IntervalTime);
 		}
 
-		// Token: 0x0400C6A0 RID: 50848
+		// Token: 0x0400D0CF RID: 53455
 		private Table __p;
 	}
 }

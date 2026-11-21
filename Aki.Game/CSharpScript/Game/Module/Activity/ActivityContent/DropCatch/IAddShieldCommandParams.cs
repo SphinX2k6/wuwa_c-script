@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006690 RID: 26256
+	// Token: 0x020055E0 RID: 21984
 	public class IAddShieldCommandParams
 	{
-		// Token: 0x040223A9 RID: 140201
+		// Token: 0x0401CC02 RID: 117762
 		public float Time;
 	}
 }

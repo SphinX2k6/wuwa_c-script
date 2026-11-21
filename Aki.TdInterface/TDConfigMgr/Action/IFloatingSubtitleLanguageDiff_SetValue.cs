@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A78 RID: 6776
+	// Token: 0x02001C0D RID: 7181
 	public class IFloatingSubtitleLanguageDiff_SetValue
 	{
-		// Token: 0x04005987 RID: 22919
+		// Token: 0x04005DEC RID: 24044
 		public EPreprocessOperation Type;
 	}
 }

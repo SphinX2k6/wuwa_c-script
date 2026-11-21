@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006168 RID: 24936
+	// Token: 0x020050E6 RID: 20710
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLootUnlockView : UiViewBase
 	{
-		// Token: 0x170091B8 RID: 37304
-		// (get) Token: 0x0603F07E RID: 258174 RVA: 0x00F3B04C File Offset: 0x00F3924C
+		// Token: 0x1700651A RID: 25882
+		// (get) Token: 0x06033D3E RID: 212286 RVA: 0x00E81F20 File Offset: 0x00E80120
 		[Nullable(2)]
 		private IRoverlikeLootUnlockViewOpenParam Param
 		{
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F07F RID: 258175 RVA: 0x00F3B059 File Offset: 0x00F39259
+		// Token: 0x06033D3F RID: 212287 RVA: 0x00E81F2D File Offset: 0x00E8012D
 		public RoverlikeLootUnlockView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F080 RID: 258176 RVA: 0x00F3B064 File Offset: 0x00F39264
+		// Token: 0x06033D40 RID: 212288 RVA: 0x00E81F38 File Offset: 0x00E80138
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F081 RID: 258177 RVA: 0x00F3B12C File Offset: 0x00F3932C
+		// Token: 0x06033D41 RID: 212289 RVA: 0x00E82000 File Offset: 0x00E80200
 		protected override void OnStart()
 		{
 			IRoverlikeLootUnlockViewOpenParam param = this.Param;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLootLayout();
 		}
 
-		// Token: 0x0603F082 RID: 258178 RVA: 0x00F3B188 File Offset: 0x00F39388
+		// Token: 0x06033D42 RID: 212290 RVA: 0x00E8205C File Offset: 0x00E8025C
 		protected override void OnBeforeDestroy()
 		{
 			Action onClosed = this.OnClosed;
@@ -75,14 +75,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onClosed();
 		}
 
-		// Token: 0x0603F083 RID: 258179 RVA: 0x00F3B1A4 File Offset: 0x00F393A4
+		// Token: 0x06033D43 RID: 212291 RVA: 0x00E82078 File Offset: 0x00E80278
 		private void RefreshLootLayout()
 		{
 			List<RoverlikeLootGainEntry> data = this.BuildLootDataList();
 			this.LootLayout.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x0603F084 RID: 258180 RVA: 0x00F3B1C8 File Offset: 0x00F393C8
+		// Token: 0x06033D44 RID: 212292 RVA: 0x00E8209C File Offset: 0x00E8029C
 		private List<RoverlikeLootGainEntry> BuildLootDataList()
 		{
 			IRoverlikeLootUnlockViewOpenParam param = this.Param;
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list2;
 		}
 
-		// Token: 0x0603F085 RID: 258181 RVA: 0x00F3B244 File Offset: 0x00F39444
+		// Token: 0x06033D45 RID: 212293 RVA: 0x00E82118 File Offset: 0x00E80318
 		private RoverlikeLootItem CreateLootItem()
 		{
 			return new RoverlikeLootItem();
 		}
 
-		// Token: 0x0603F086 RID: 258182 RVA: 0x00F3B24B File Offset: 0x00F3944B
+		// Token: 0x06033D46 RID: 212294 RVA: 0x00E8211F File Offset: 0x00E8031F
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020E10 RID: 134672
+		// Token: 0x0401B73D RID: 112445
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,21 +119,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootItem, RoverlikeLootGainEntry> LootLayout;
 
-		// Token: 0x04020E11 RID: 134673
+		// Token: 0x0401B73E RID: 112446
 		[Nullable(2)]
 		private Action OnClosed;
 
-		// Token: 0x0200C3CC RID: 50124
+		// Token: 0x0200ADB3 RID: 44467
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B159 RID: 242009
+			// Token: 0x04035ABA RID: 219834
 			public const int BtnClose = 0;
 
-			// Token: 0x0403B15A RID: 242010
+			// Token: 0x04035ABB RID: 219835
 			public const int PnlHor = 1;
 
-			// Token: 0x0403B15B RID: 242011
+			// Token: 0x04035ABC RID: 219836
 			public const int LootItem = 2;
 		}
 	}

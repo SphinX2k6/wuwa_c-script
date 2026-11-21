@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB8 RID: 7608
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FCF RID: 8143
 	public class IResumeGiantDeliveryRewardPopup : IResumeSystemRewardPopupType
 	{
-		// Token: 0x0600A2FB RID: 41723 RVA: 0x0017259C File Offset: 0x0017079C
+		// Token: 0x0600AD05 RID: 44293 RVA: 0x00186CC4 File Offset: 0x00184EC4
 		private IResumeGiantDeliveryRewardPopup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2FC RID: 41724 RVA: 0x001725D4 File Offset: 0x001707D4
+		// Token: 0x0600AD06 RID: 44294 RVA: 0x00186CFC File Offset: 0x00184EFC
 		public static IResumeGiantDeliveryRewardPopup Create([Nullable(2)] IResumeGiantDeliveryRewardPopup instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2FD RID: 41725 RVA: 0x001725E7 File Offset: 0x001707E7
+		// Token: 0x0600AD07 RID: 44295 RVA: 0x00186D0F File Offset: 0x00184F0F
 		public static IResumeGiantDeliveryRewardPopup CreateFromSetValue([Nullable(2)] IResumeGiantDeliveryRewardPopup_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2FE RID: 41726 RVA: 0x001725FA File Offset: 0x001707FA
+		// Token: 0x0600AD08 RID: 44296 RVA: 0x00186D22 File Offset: 0x00184F22
 		public new IResumeGiantDeliveryRewardPopup_SetValue ToSetValue()
 		{
 			return new IResumeGiantDeliveryRewardPopup_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003240 RID: 12864
-		// (get) Token: 0x0600A2FF RID: 41727 RVA: 0x0017260D File Offset: 0x0017080D
-		// (set) Token: 0x0600A300 RID: 41728 RVA: 0x00172638 File Offset: 0x00170838
+		// Token: 0x170034DA RID: 13530
+		// (get) Token: 0x0600AD09 RID: 44297 RVA: 0x00186D35 File Offset: 0x00184F35
+		// (set) Token: 0x0600AD0A RID: 44298 RVA: 0x00186D60 File Offset: 0x00184F60
 		public override ESystemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061CD RID: 25037
+		// Token: 0x04006755 RID: 26453
 		[Nullable(2)]
 		protected new IResumeGiantDeliveryRewardPopup FbInstance;
 
-		// Token: 0x040061CE RID: 25038
+		// Token: 0x04006756 RID: 26454
 		[Nullable(2)]
 		protected new IResumeGiantDeliveryRewardPopup_SetValue PocoInterface;
 	}

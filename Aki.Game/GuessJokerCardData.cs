@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200102C RID: 4140
+// Token: 0x020004E0 RID: 1248
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerCardData
 {
-	// Token: 0x06006A41 RID: 27201 RVA: 0x001551B0 File Offset: 0x001533B0
+	// Token: 0x06003DD6 RID: 15830 RVA: 0x0015DAD8 File Offset: 0x0015BCD8
 	public GuessJokerCardData(int id)
 	{
 		this.IdInternal = id;
@@ -17,7 +17,7 @@ public class GuessJokerCardData
 		this.TexturePathInternal = value.TexturePath;
 	}
 
-	// Token: 0x06006A42 RID: 27202 RVA: 0x00155210 File Offset: 0x00153410
+	// Token: 0x06003DD7 RID: 15831 RVA: 0x0015DB38 File Offset: 0x0015BD38
 	public void ChangeBlankValue(int cardId)
 	{
 		if (this.Type != EGuessJokerCardType.Blank || cardId == this.Id || cardId == 0)
@@ -32,7 +32,7 @@ public class GuessJokerCardData
 		this.ChangeConfig = new JokerDeck?(value);
 	}
 
-	// Token: 0x06006A43 RID: 27203 RVA: 0x0015527C File Offset: 0x0015347C
+	// Token: 0x06003DD8 RID: 15832 RVA: 0x0015DBA4 File Offset: 0x0015BDA4
 	public bool IsChangedToJoker()
 	{
 		if (this.Type != EGuessJokerCardType.Blank)
@@ -43,37 +43,37 @@ public class GuessJokerCardData
 		return changeConfig != null && changeConfig.Value.CardType == 1;
 	}
 
-	// Token: 0x06006A44 RID: 27204 RVA: 0x001552B8 File Offset: 0x001534B8
+	// Token: 0x06003DD9 RID: 15833 RVA: 0x0015DBE0 File Offset: 0x0015BDE0
 	public void SetBelongPlayerType(EGuessJokerPlayerType? belongPlayerType)
 	{
 		this.BelongType = belongPlayerType;
 	}
 
-	// Token: 0x06006A45 RID: 27205 RVA: 0x001552C1 File Offset: 0x001534C1
+	// Token: 0x06003DDA RID: 15834 RVA: 0x0015DBE9 File Offset: 0x0015BDE9
 	public EGuessJokerPlayerType? GetBelongPlayerType()
 	{
 		return this.BelongType;
 	}
 
-	// Token: 0x06006A46 RID: 27206 RVA: 0x001552C9 File Offset: 0x001534C9
+	// Token: 0x06003DDB RID: 15835 RVA: 0x0015DBF1 File Offset: 0x0015BDF1
 	public bool IsBlank()
 	{
 		return this.Type == EGuessJokerCardType.Blank;
 	}
 
-	// Token: 0x06006A47 RID: 27207 RVA: 0x001552D4 File Offset: 0x001534D4
+	// Token: 0x06003DDC RID: 15836 RVA: 0x0015DBFC File Offset: 0x0015BDFC
 	public bool IsJoker()
 	{
 		return this.Type == EGuessJokerCardType.Joker;
 	}
 
-	// Token: 0x06006A48 RID: 27208 RVA: 0x001552DF File Offset: 0x001534DF
+	// Token: 0x06003DDD RID: 15837 RVA: 0x0015DC07 File Offset: 0x0015BE07
 	public bool HasChanged()
 	{
 		return this.HasChangedInternal;
 	}
 
-	// Token: 0x06006A49 RID: 27209 RVA: 0x001552E7 File Offset: 0x001534E7
+	// Token: 0x06003DDE RID: 15838 RVA: 0x0015DC0F File Offset: 0x0015BE0F
 	public bool GetChange()
 	{
 		bool isChangedInternal = this.IsChangedInternal;
@@ -81,8 +81,8 @@ public class GuessJokerCardData
 		return isChangedInternal;
 	}
 
-	// Token: 0x17000889 RID: 2185
-	// (get) Token: 0x06006A4A RID: 27210 RVA: 0x001552F6 File Offset: 0x001534F6
+	// Token: 0x170008A9 RID: 2217
+	// (get) Token: 0x06003DDF RID: 15839 RVA: 0x0015DC1E File Offset: 0x0015BE1E
 	public int Id
 	{
 		get
@@ -91,8 +91,8 @@ public class GuessJokerCardData
 		}
 	}
 
-	// Token: 0x1700088A RID: 2186
-	// (get) Token: 0x06006A4B RID: 27211 RVA: 0x001552FE File Offset: 0x001534FE
+	// Token: 0x170008AA RID: 2218
+	// (get) Token: 0x06003DE0 RID: 15840 RVA: 0x0015DC26 File Offset: 0x0015BE26
 	public EGuessJokerCardType Type
 	{
 		get
@@ -101,8 +101,8 @@ public class GuessJokerCardData
 		}
 	}
 
-	// Token: 0x1700088B RID: 2187
-	// (get) Token: 0x06006A4C RID: 27212 RVA: 0x00155306 File Offset: 0x00153506
+	// Token: 0x170008AB RID: 2219
+	// (get) Token: 0x06003DE1 RID: 15841 RVA: 0x0015DC2E File Offset: 0x0015BE2E
 	public int Value
 	{
 		get
@@ -111,8 +111,8 @@ public class GuessJokerCardData
 		}
 	}
 
-	// Token: 0x1700088C RID: 2188
-	// (get) Token: 0x06006A4D RID: 27213 RVA: 0x0015530E File Offset: 0x0015350E
+	// Token: 0x170008AC RID: 2220
+	// (get) Token: 0x06003DE2 RID: 15842 RVA: 0x0015DC36 File Offset: 0x0015BE36
 	public string TexturePath
 	{
 		get
@@ -121,27 +121,27 @@ public class GuessJokerCardData
 		}
 	}
 
-	// Token: 0x040030F6 RID: 12534
+	// Token: 0x0400318F RID: 12687
 	private readonly int IdInternal;
 
-	// Token: 0x040030F7 RID: 12535
+	// Token: 0x04003190 RID: 12688
 	private int ValueInternal;
 
-	// Token: 0x040030F8 RID: 12536
+	// Token: 0x04003191 RID: 12689
 	private string TexturePathInternal = "";
 
-	// Token: 0x040030F9 RID: 12537
+	// Token: 0x04003192 RID: 12690
 	private readonly EGuessJokerCardType TypeInternal;
 
-	// Token: 0x040030FA RID: 12538
+	// Token: 0x04003193 RID: 12691
 	private bool HasChangedInternal;
 
-	// Token: 0x040030FB RID: 12539
+	// Token: 0x04003194 RID: 12692
 	private bool IsChangedInternal;
 
-	// Token: 0x040030FC RID: 12540
+	// Token: 0x04003195 RID: 12693
 	private JokerDeck? ChangeConfig;
 
-	// Token: 0x040030FD RID: 12541
+	// Token: 0x04003196 RID: 12694
 	private EGuessJokerPlayerType? BelongType;
 }

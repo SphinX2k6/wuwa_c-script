@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000520 RID: 1312
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000587 RID: 1415
 	public class IMotorAutoEjectPositionEntityConfig : IMotorAutoEjectConfigBase
 	{
-		// Token: 0x06001A92 RID: 6802 RVA: 0x0004D3F0 File Offset: 0x0004B5F0
+		// Token: 0x06001C8E RID: 7310 RVA: 0x000521AC File Offset: 0x000503AC
 		private IMotorAutoEjectPositionEntityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001A93 RID: 6803 RVA: 0x0004D428 File Offset: 0x0004B628
+		// Token: 0x06001C8F RID: 7311 RVA: 0x000521E4 File Offset: 0x000503E4
 		public static IMotorAutoEjectPositionEntityConfig Create([Nullable(2)] IMotorAutoEjectPositionEntityConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A94 RID: 6804 RVA: 0x0004D43B File Offset: 0x0004B63B
+		// Token: 0x06001C90 RID: 7312 RVA: 0x000521F7 File Offset: 0x000503F7
 		public static IMotorAutoEjectPositionEntityConfig CreateFromSetValue([Nullable(2)] IMotorAutoEjectPositionEntityConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001A95 RID: 6805 RVA: 0x0004D44E File Offset: 0x0004B64E
+		// Token: 0x06001C91 RID: 7313 RVA: 0x0005220A File Offset: 0x0005040A
 		public new IMotorAutoEjectPositionEntityConfig_SetValue ToSetValue()
 		{
 			return new IMotorAutoEjectPositionEntityConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006F8 RID: 1784
-		// (get) Token: 0x06001A96 RID: 6806 RVA: 0x0004D46D File Offset: 0x0004B66D
-		// (set) Token: 0x06001A97 RID: 6807 RVA: 0x0004D498 File Offset: 0x0004B698
+		// Token: 0x1700077B RID: 1915
+		// (get) Token: 0x06001C92 RID: 7314 RVA: 0x00052229 File Offset: 0x00050429
+		// (set) Token: 0x06001C93 RID: 7315 RVA: 0x00052254 File Offset: 0x00050454
 		public override EMotorAutoEjectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006F9 RID: 1785
-		// (get) Token: 0x06001A98 RID: 6808 RVA: 0x0004D4A6 File Offset: 0x0004B6A6
-		// (set) Token: 0x06001A99 RID: 6809 RVA: 0x0004D4D1 File Offset: 0x0004B6D1
+		// Token: 0x1700077C RID: 1916
+		// (get) Token: 0x06001C94 RID: 7316 RVA: 0x00052262 File Offset: 0x00050462
+		// (set) Token: 0x06001C95 RID: 7317 RVA: 0x0005228D File Offset: 0x0005048D
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001334 RID: 4916
+		// Token: 0x0400149E RID: 5278
 		[Nullable(2)]
 		protected new IMotorAutoEjectPositionEntityConfig FbInstance;
 
-		// Token: 0x04001335 RID: 4917
+		// Token: 0x0400149F RID: 5279
 		[Nullable(2)]
 		protected new IMotorAutoEjectPositionEntityConfig_SetValue PocoInterface;
 	}

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Extension;
 
-// Token: 0x0200008F RID: 143
+// Token: 0x02000091 RID: 145
 [NullableContext(1)]
 [Nullable(0)]
 public static class EventArgsUtils
 {
-	// Token: 0x06000464 RID: 1124 RVA: 0x000199BC File Offset: 0x00017BBC
+	// Token: 0x060004A5 RID: 1189 RVA: 0x0001A120 File Offset: 0x00018320
 	public static void CastFail(Type except, Delegate handle, Enum name)
 	{
 		Log instance = Log.Instance;
@@ -23,7 +23,7 @@ public static class EventArgsUtils
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000465 RID: 1125 RVA: 0x00019A28 File Offset: 0x00017C28
+	// Token: 0x060004A6 RID: 1190 RVA: 0x0001A18C File Offset: 0x0001838C
 	public static void CastFail(Type except, Delegate handle, long name)
 	{
 		Log instance = Log.Instance;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200019D RID: 413
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001B4 RID: 436
 	public class IActivateAllCorrectPiece : IJigsawCompleteCondition
 	{
-		// Token: 0x06000646 RID: 1606 RVA: 0x00022968 File Offset: 0x00020B68
+		// Token: 0x0600065C RID: 1628 RVA: 0x000235C8 File Offset: 0x000217C8
 		private IActivateAllCorrectPiece_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000647 RID: 1607 RVA: 0x000229A0 File Offset: 0x00020BA0
+		// Token: 0x0600065D RID: 1629 RVA: 0x00023600 File Offset: 0x00021800
 		public static IActivateAllCorrectPiece Create([Nullable(2)] IActivateAllCorrectPiece instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000648 RID: 1608 RVA: 0x000229B3 File Offset: 0x00020BB3
+		// Token: 0x0600065E RID: 1630 RVA: 0x00023613 File Offset: 0x00021813
 		public static IActivateAllCorrectPiece CreateFromSetValue([Nullable(2)] IActivateAllCorrectPiece_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000649 RID: 1609 RVA: 0x000229C6 File Offset: 0x00020BC6
+		// Token: 0x0600065F RID: 1631 RVA: 0x00023626 File Offset: 0x00021826
 		public new IActivateAllCorrectPiece_SetValue ToSetValue()
 		{
 			return new IActivateAllCorrectPiece_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000215 RID: 533
-		// (get) Token: 0x0600064A RID: 1610 RVA: 0x000229D9 File Offset: 0x00020BD9
-		// (set) Token: 0x0600064B RID: 1611 RVA: 0x00022A04 File Offset: 0x00020C04
+		// Token: 0x1700021D RID: 541
+		// (get) Token: 0x06000660 RID: 1632 RVA: 0x00023639 File Offset: 0x00021839
+		// (set) Token: 0x06000661 RID: 1633 RVA: 0x00023664 File Offset: 0x00021864
 		public override EJigsawCompleteCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040007FD RID: 2045
+		// Token: 0x04000856 RID: 2134
 		[Nullable(2)]
 		protected new IActivateAllCorrectPiece FbInstance;
 
-		// Token: 0x040007FE RID: 2046
+		// Token: 0x04000857 RID: 2135
 		[Nullable(2)]
 		protected new IActivateAllCorrectPiece_SetValue PocoInterface;
 	}

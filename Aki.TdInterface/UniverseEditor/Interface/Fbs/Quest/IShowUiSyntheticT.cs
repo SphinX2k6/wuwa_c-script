@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200412E RID: 16686
+	// Token: 0x0200456F RID: 17775
 	public class IShowUiSyntheticT
 	{
-		// Token: 0x17007638 RID: 30264
-		// (get) Token: 0x0601877C RID: 100220 RVA: 0x003873B8 File Offset: 0x003855B8
-		// (set) Token: 0x0601877D RID: 100221 RVA: 0x003873C0 File Offset: 0x003855C0
+		// Token: 0x17007C3E RID: 31806
+		// (get) Token: 0x06019E1F RID: 106015 RVA: 0x003B13C0 File Offset: 0x003AF5C0
+		// (set) Token: 0x06019E20 RID: 106016 RVA: 0x003B13C8 File Offset: 0x003AF5C8
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x17007639 RID: 30265
-		// (get) Token: 0x0601877E RID: 100222 RVA: 0x003873C9 File Offset: 0x003855C9
-		// (set) Token: 0x0601877F RID: 100223 RVA: 0x003873D1 File Offset: 0x003855D1
+		// Token: 0x17007C3F RID: 31807
+		// (get) Token: 0x06019E21 RID: 106017 RVA: 0x003B13D1 File Offset: 0x003AF5D1
+		// (set) Token: 0x06019E22 RID: 106018 RVA: 0x003B13D9 File Offset: 0x003AF5D9
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700763A RID: 30266
-		// (get) Token: 0x06018780 RID: 100224 RVA: 0x003873DA File Offset: 0x003855DA
-		// (set) Token: 0x06018781 RID: 100225 RVA: 0x003873E2 File Offset: 0x003855E2
+		// Token: 0x17007C40 RID: 31808
+		// (get) Token: 0x06019E23 RID: 106019 RVA: 0x003B13E2 File Offset: 0x003AF5E2
+		// (set) Token: 0x06019E24 RID: 106020 RVA: 0x003B13EA File Offset: 0x003AF5EA
 		public List<int> ProductIds { get; set; }
 
-		// Token: 0x1700763B RID: 30267
-		// (get) Token: 0x06018782 RID: 100226 RVA: 0x003873EB File Offset: 0x003855EB
-		// (set) Token: 0x06018783 RID: 100227 RVA: 0x003873F3 File Offset: 0x003855F3
+		// Token: 0x17007C41 RID: 31809
+		// (get) Token: 0x06019E25 RID: 106021 RVA: 0x003B13F3 File Offset: 0x003AF5F3
+		// (set) Token: 0x06019E26 RID: 106022 RVA: 0x003B13FB File Offset: 0x003AF5FB
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018784 RID: 100228 RVA: 0x003873FC File Offset: 0x003855FC
+		// Token: 0x06019E27 RID: 106023 RVA: 0x003B1404 File Offset: 0x003AF604
 		public IShowUiSyntheticT()
 		{
 			this.Type = EShowUiType.All;

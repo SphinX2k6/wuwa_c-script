@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x02001FA4 RID: 8100
+// Token: 0x02001466 RID: 5222
 public class TWorldLevelToRecommendLevel
 {
-	// Token: 0x17001348 RID: 4936
-	// (get) Token: 0x0600FBA7 RID: 64423 RVA: 0x003D0413 File Offset: 0x003CE613
-	// (set) Token: 0x0600FBA8 RID: 64424 RVA: 0x003D041B File Offset: 0x003CE61B
+	// Token: 0x17001372 RID: 4978
+	// (get) Token: 0x0600CFC9 RID: 53193 RVA: 0x003DC047 File Offset: 0x003DA247
+	// (set) Token: 0x0600CFCA RID: 53194 RVA: 0x003DC04F File Offset: 0x003DA24F
 	public int Item1 { get; set; }
 
-	// Token: 0x17001349 RID: 4937
-	// (get) Token: 0x0600FBA9 RID: 64425 RVA: 0x003D0424 File Offset: 0x003CE624
-	// (set) Token: 0x0600FBAA RID: 64426 RVA: 0x003D042C File Offset: 0x003CE62C
+	// Token: 0x17001373 RID: 4979
+	// (get) Token: 0x0600CFCB RID: 53195 RVA: 0x003DC058 File Offset: 0x003DA258
+	// (set) Token: 0x0600CFCC RID: 53196 RVA: 0x003DC060 File Offset: 0x003DA260
 	public int Item2 { get; set; }
 
-	// Token: 0x0600FBAB RID: 64427 RVA: 0x003D0435 File Offset: 0x003CE635
+	// Token: 0x0600CFCD RID: 53197 RVA: 0x003DC069 File Offset: 0x003DA269
 	public TWorldLevelToRecommendLevel(int item1, int item2)
 	{
 		this.Item1 = item1;

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001CD6 RID: 7382
+// Token: 0x02001198 RID: 4504
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowCollectionTypeItemData
 {
-	// Token: 0x0600DF90 RID: 57232 RVA: 0x00345CD4 File Offset: 0x00343ED4
+	// Token: 0x0600B3AD RID: 45997 RVA: 0x003516FC File Offset: 0x0034F8FC
 	public void AddItemData(MotorcycleArrowCollectionItemData itemData, bool newItem)
 	{
 		this.TotalCount++;
@@ -23,7 +23,7 @@ public class MotorcycleArrowCollectionTypeItemData
 		itemData.Num++;
 	}
 
-	// Token: 0x0600DF91 RID: 57233 RVA: 0x00345D38 File Offset: 0x00343F38
+	// Token: 0x0600B3AE RID: 45998 RVA: 0x00351760 File Offset: 0x0034F960
 	public int GetItemNumWithQuality(int quality)
 	{
 		int result;
@@ -34,21 +34,21 @@ public class MotorcycleArrowCollectionTypeItemData
 		return result;
 	}
 
-	// Token: 0x0600DF92 RID: 57234 RVA: 0x00345D58 File Offset: 0x00343F58
+	// Token: 0x0600B3AF RID: 45999 RVA: 0x00351780 File Offset: 0x0034F980
 	public MotorcycleArrowCollectionTypeItemData(int type)
 	{
 		this.Type = type;
 	}
 
-	// Token: 0x040066DC RID: 26332
+	// Token: 0x040067BB RID: 26555
 	public int Type;
 
-	// Token: 0x040066DD RID: 26333
+	// Token: 0x040067BC RID: 26556
 	public int TotalCount;
 
-	// Token: 0x040066DE RID: 26334
+	// Token: 0x040067BD RID: 26557
 	public Dictionary<int, int> ItemQualityToNumMap = new Dictionary<int, int>();
 
-	// Token: 0x040066DF RID: 26335
+	// Token: 0x040067BE RID: 26558
 	public List<MotorcycleArrowCollectionItemData> ItemList = new List<MotorcycleArrowCollectionItemData>();
 }

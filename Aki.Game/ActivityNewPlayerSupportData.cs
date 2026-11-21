@@ -6,16 +6,18 @@ using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using Google.Protobuf.Collections;
 
-// Token: 0x020013B5 RID: 5045
+// Token: 0x02000869 RID: 2153
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityNewPlayerSupportData : ActivityBaseData
 {
-	// Token: 0x17000BF1 RID: 3057
-	// (get) Token: 0x06008E37 RID: 36407 RVA: 0x001EAD56 File Offset: 0x001E8F56
-	// (set) Token: 0x06008E38 RID: 36408 RVA: 0x001EAD5E File Offset: 0x001E8F5E
+	// Token: 0x17000C11 RID: 3089
+	// (get) Token: 0x060061CC RID: 25036 RVA: 0x001F3846 File Offset: 0x001F1A46
+	// (set) Token: 0x060061CD RID: 25037 RVA: 0x001F384E File Offset: 0x001F1A4E
 	public bool AlreadyStartView
 	{
 		get
@@ -28,8 +30,8 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000BF2 RID: 3058
-	// (get) Token: 0x06008E39 RID: 36409 RVA: 0x001EAD67 File Offset: 0x001E8F67
+	// Token: 0x17000C12 RID: 3090
+	// (get) Token: 0x060061CE RID: 25038 RVA: 0x001F3857 File Offset: 0x001F1A57
 	public bool IsActivityFirstShow
 	{
 		get
@@ -38,8 +40,8 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000BF3 RID: 3059
-	// (get) Token: 0x06008E3A RID: 36410 RVA: 0x001EAD70 File Offset: 0x001E8F70
+	// Token: 0x17000C13 RID: 3091
+	// (get) Token: 0x060061CF RID: 25039 RVA: 0x001F3860 File Offset: 0x001F1A60
 	public int? CurUseTrialRoleId
 	{
 		get
@@ -53,8 +55,8 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17000BF4 RID: 3060
-	// (get) Token: 0x06008E3B RID: 36411 RVA: 0x001EADA0 File Offset: 0x001E8FA0
+	// Token: 0x17000C14 RID: 3092
+	// (get) Token: 0x060061D0 RID: 25040 RVA: 0x001F3890 File Offset: 0x001F1A90
 	[Nullable(2)]
 	public TrialRoleGroupData CurUseTrialRoleData
 	{
@@ -65,13 +67,13 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008E3C RID: 36412 RVA: 0x001EADAD File Offset: 0x001E8FAD
+	// Token: 0x060061D1 RID: 25041 RVA: 0x001F389D File Offset: 0x001F1A9D
 	protected override void OnInit(ActivityData data)
 	{
 		this.IsFirstShow = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityNewPlayerSupportFirstShow, false);
 	}
 
-	// Token: 0x06008E3D RID: 36413 RVA: 0x001EADC0 File Offset: 0x001E8FC0
+	// Token: 0x060061D2 RID: 25042 RVA: 0x001F38B0 File Offset: 0x001F1AB0
 	protected override void PhraseEx(ActivityData data)
 	{
 		NewPlayerSupportActivityData newPlayerSupportActivityData = data.NewPlayerSupportActivityData;
@@ -87,7 +89,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		EventSystem.Instance.Emit(EEventName.OnActivityNewPlayerSupportInfoUpdate);
 	}
 
-	// Token: 0x06008E3E RID: 36414 RVA: 0x001EAE24 File Offset: 0x001E9024
+	// Token: 0x060061D3 RID: 25043 RVA: 0x001F3914 File Offset: 0x001F1B14
 	[NullableContext(2)]
 	private void ParseCurUseTrialRole(int trialRoleId, roleInfo trialRoleInfo)
 	{
@@ -98,7 +100,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		TrialRoleModel.Instance.SetCurUseTrialRole(trialRoleId, trialRoleInfo);
 	}
 
-	// Token: 0x06008E3F RID: 36415 RVA: 0x001EAE3C File Offset: 0x001E903C
+	// Token: 0x060061D4 RID: 25044 RVA: 0x001F392C File Offset: 0x001F1B2C
 	private void ParseTrialRoles(RepeatedField<NewTrialRoleInfo> roleList)
 	{
 		List<ITrialRoleCreateData> list = new List<ITrialRoleCreateData>();
@@ -138,14 +140,14 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		TrialRoleModel.Instance.AddTrialRoles(list);
 	}
 
-	// Token: 0x06008E40 RID: 36416 RVA: 0x001EAF8C File Offset: 0x001E918C
+	// Token: 0x060061D5 RID: 25045 RVA: 0x001F3A7C File Offset: 0x001F1C7C
 	private void ParseTaskInfos(RepeatedField<ConditionTask> tasks)
 	{
 		this.TaskDataList = new List<ActivityNewPlayerSupportTaskData>();
 		this.UpdateTaskData(tasks);
 	}
 
-	// Token: 0x06008E41 RID: 36417 RVA: 0x001EAFA0 File Offset: 0x001E91A0
+	// Token: 0x060061D6 RID: 25046 RVA: 0x001F3A90 File Offset: 0x001F1C90
 	private ActivityNewPlayerSupportTaskData GetOrCreateTaskData(int taskId)
 	{
 		ActivityNewPlayerSupportTaskData activityNewPlayerSupportTaskData = this.GetTaskData(taskId);
@@ -157,20 +159,20 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return activityNewPlayerSupportTaskData;
 	}
 
-	// Token: 0x06008E42 RID: 36418 RVA: 0x001EAFCC File Offset: 0x001E91CC
+	// Token: 0x060061D7 RID: 25047 RVA: 0x001F3ABC File Offset: 0x001F1CBC
 	private int SortTaskData(ActivityNewPlayerSupportTaskData a, ActivityNewPlayerSupportTaskData b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x06008E43 RID: 36419 RVA: 0x001EAFDB File Offset: 0x001E91DB
+	// Token: 0x060061D8 RID: 25048 RVA: 0x001F3ACB File Offset: 0x001F1CCB
 	public List<ActivityNewPlayerSupportTaskData> GetTaskDataList()
 	{
 		this.TaskDataList.Sort(new Comparison<ActivityNewPlayerSupportTaskData>(this.SortTaskData));
 		return this.TaskDataList;
 	}
 
-	// Token: 0x06008E44 RID: 36420 RVA: 0x001EAFFC File Offset: 0x001E91FC
+	// Token: 0x060061D9 RID: 25049 RVA: 0x001F3AEC File Offset: 0x001F1CEC
 	[NullableContext(2)]
 	public ActivityNewPlayerSupportTaskData GetTaskData(int id)
 	{
@@ -184,7 +186,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x06008E45 RID: 36421 RVA: 0x001EB058 File Offset: 0x001E9258
+	// Token: 0x060061DA RID: 25050 RVA: 0x001F3B48 File Offset: 0x001F1D48
 	public List<int> GetCanReceiveTaskIdList()
 	{
 		List<int> list = new List<int>();
@@ -198,27 +200,27 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008E46 RID: 36422 RVA: 0x001EB0C0 File Offset: 0x001E92C0
+	// Token: 0x060061DB RID: 25051 RVA: 0x001F3BB0 File Offset: 0x001F1DB0
 	public List<TrialRoleGroupData> GetTrialRoleList()
 	{
 		return TrialRoleModel.Instance.GetDataListByType(ETrialRoleType.NewbieSupportTrial);
 	}
 
-	// Token: 0x06008E47 RID: 36423 RVA: 0x001EB0CD File Offset: 0x001E92CD
+	// Token: 0x060061DC RID: 25052 RVA: 0x001F3BBD File Offset: 0x001F1DBD
 	[NullableContext(2)]
 	public TrialRoleGroupData GetTrialRoleByGroupId(int groupId)
 	{
 		return TrialRoleModel.Instance.GetDataByGroupId(groupId);
 	}
 
-	// Token: 0x06008E48 RID: 36424 RVA: 0x001EB0DA File Offset: 0x001E92DA
+	// Token: 0x060061DD RID: 25053 RVA: 0x001F3BCA File Offset: 0x001F1DCA
 	[NullableContext(2)]
 	public void UpdateCurUseTrialRole(int trialRoleId, roleInfo trialRoleInfo)
 	{
 		TrialRoleModel.Instance.SetCurUseTrialRole(trialRoleId, trialRoleInfo);
 	}
 
-	// Token: 0x06008E49 RID: 36425 RVA: 0x001EB0E8 File Offset: 0x001E92E8
+	// Token: 0x060061DE RID: 25054 RVA: 0x001F3BD8 File Offset: 0x001F1DD8
 	public void UpdateTaskData(RepeatedField<ConditionTask> taskData)
 	{
 		foreach (ConditionTask conditionTask in taskData)
@@ -227,20 +229,20 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008E4A RID: 36426 RVA: 0x001EB13C File Offset: 0x001E933C
+	// Token: 0x060061DF RID: 25055 RVA: 0x001F3C2C File Offset: 0x001F1E2C
 	[NullableContext(2)]
 	public void UpdateActivatedTrialRole(int trialRoleId, roleInfo trialRoleInfo)
 	{
 		TrialRoleModel.Instance.SetGroupTrialRoleId(trialRoleId, trialRoleInfo);
 	}
 
-	// Token: 0x06008E4B RID: 36427 RVA: 0x001EB14C File Offset: 0x001E934C
+	// Token: 0x060061E0 RID: 25056 RVA: 0x001F3C3C File Offset: 0x001F1E3C
 	public string GetDesc()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.LocalConfig.Value.Desc, null);
 	}
 
-	// Token: 0x06008E4C RID: 36428 RVA: 0x001EB174 File Offset: 0x001E9374
+	// Token: 0x060061E1 RID: 25057 RVA: 0x001F3C64 File Offset: 0x001F1E64
 	public bool HasUnlockTrialRole()
 	{
 		using (List<TrialRoleGroupData>.Enumerator enumerator = this.GetTrialRoleList().GetEnumerator())
@@ -256,7 +258,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008E4D RID: 36429 RVA: 0x001EB1D0 File Offset: 0x001E93D0
+	// Token: 0x060061E2 RID: 25058 RVA: 0x001F3CC0 File Offset: 0x001F1EC0
 	public int? GetFirstUnFinishMainQuestId()
 	{
 		global::Quest firstShowQuestByType = QuestNewModel.Instance.GetFirstShowQuestByType(1);
@@ -267,13 +269,13 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return new int?(firstShowQuestByType.Id);
 	}
 
-	// Token: 0x06008E4E RID: 36430 RVA: 0x001EB200 File Offset: 0x001E9400
+	// Token: 0x060061E3 RID: 25059 RVA: 0x001F3CF0 File Offset: 0x001F1EF0
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.IsHasRewardRedPoint() || this.IsTrialRoleUpgradeRedPoint() || this.IsTrialRoleEntranceRedDot() || this.IsAdventureEntranceRedDot();
 	}
 
-	// Token: 0x06008E4F RID: 36431 RVA: 0x001EB224 File Offset: 0x001E9424
+	// Token: 0x060061E4 RID: 25060 RVA: 0x001F3D14 File Offset: 0x001F1F14
 	public bool IsHasRewardRedPoint()
 	{
 		using (List<ActivityNewPlayerSupportTaskData>.Enumerator enumerator = this.TaskDataList.GetEnumerator())
@@ -289,7 +291,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008E50 RID: 36432 RVA: 0x001EB280 File Offset: 0x001E9480
+	// Token: 0x060061E5 RID: 25061 RVA: 0x001F3D70 File Offset: 0x001F1F70
 	public bool IsTrialRoleUpgradeRedPoint()
 	{
 		using (List<TrialRoleGroupData>.Enumerator enumerator = this.GetTrialRoleList().GetEnumerator())
@@ -305,19 +307,20 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008E51 RID: 36433 RVA: 0x001EB2DC File Offset: 0x001E94DC
+	// Token: 0x060061E6 RID: 25062 RVA: 0x001F3DCC File Offset: 0x001F1FCC
 	public bool IsTrialRoleEntranceRedDot()
 	{
 		return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.NewPlayerSupportTrialRoleEntranceRedDot, false);
 	}
 
-	// Token: 0x06008E52 RID: 36434 RVA: 0x001EB2E9 File Offset: 0x001E94E9
+	// Token: 0x060061E7 RID: 25063 RVA: 0x001F3DDC File Offset: 0x001F1FDC
 	public bool IsAdventureEntranceRedDot()
 	{
-		return !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressAdventureRedDotCheckedInPeriod, false);
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressAdventureRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressAdventureRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressAdventureRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06008E53 RID: 36435 RVA: 0x001EB2F6 File Offset: 0x001E94F6
+	// Token: 0x060061E8 RID: 25064 RVA: 0x001F3E15 File Offset: 0x001F2015
 	public void SaveTrailRoleEntranceRedDot(bool value)
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.NewPlayerSupportTrialRoleEntranceRedDot, value);
@@ -325,7 +328,7 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06008E54 RID: 36436 RVA: 0x001EB32C File Offset: 0x001E952C
+	// Token: 0x060061E9 RID: 25065 RVA: 0x001F3E4C File Offset: 0x001F204C
 	private void CheckIsFirstShow()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityNewPlayerSupportFirstShow, false);
@@ -337,21 +340,21 @@ public class ActivityNewPlayerSupportData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008E55 RID: 36437 RVA: 0x001EB37C File Offset: 0x001E957C
+	// Token: 0x060061EA RID: 25066 RVA: 0x001F3E9C File Offset: 0x001F209C
 	public void RecordActivityFirstShow()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityNewPlayerSupportFirstShow, false);
 	}
 
-	// Token: 0x04003EF7 RID: 16119
+	// Token: 0x04003F8F RID: 16271
 	private List<ActivityNewPlayerSupportTaskData> TaskDataList = new List<ActivityNewPlayerSupportTaskData>();
 
-	// Token: 0x04003EF8 RID: 16120
+	// Token: 0x04003F90 RID: 16272
 	private bool IsFirstShow;
 
-	// Token: 0x04003EF9 RID: 16121
+	// Token: 0x04003F91 RID: 16273
 	private bool IsAlreadyStartView;
 
-	// Token: 0x04003EFA RID: 16122
+	// Token: 0x04003F92 RID: 16274
 	public int HaveFinishCarnivalRole;
 }

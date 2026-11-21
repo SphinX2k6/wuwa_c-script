@@ -14,8 +14,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000078 RID: 120
-	// (get) Token: 0x06000314 RID: 788 RVA: 0x0000E3EB File Offset: 0x0000C5EB
-	// (set) Token: 0x06000315 RID: 789 RVA: 0x0000E3FF File Offset: 0x0000C5FF
+	// (get) Token: 0x06000314 RID: 788 RVA: 0x0000EA73 File Offset: 0x0000CC73
+	// (set) Token: 0x06000315 RID: 789 RVA: 0x0000EA87 File Offset: 0x0000CC87
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKeyTarget
 	{
@@ -30,8 +30,8 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 	}
 
 	// Token: 0x17000079 RID: 121
-	// (get) Token: 0x06000316 RID: 790 RVA: 0x0000E414 File Offset: 0x0000C614
-	// (set) Token: 0x06000317 RID: 791 RVA: 0x0000E428 File Offset: 0x0000C628
+	// (get) Token: 0x06000316 RID: 790 RVA: 0x0000EA9C File Offset: 0x0000CC9C
+	// (set) Token: 0x06000317 RID: 791 RVA: 0x0000EAB0 File Offset: 0x0000CCB0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag Tag
 	{
@@ -46,8 +46,8 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 	}
 
 	// Token: 0x1700007A RID: 122
-	// (get) Token: 0x06000318 RID: 792 RVA: 0x0000E43D File Offset: 0x0000C63D
-	// (set) Token: 0x06000319 RID: 793 RVA: 0x0000E451 File Offset: 0x0000C651
+	// (get) Token: 0x06000318 RID: 792 RVA: 0x0000EAC5 File Offset: 0x0000CCC5
+	// (set) Token: 0x06000319 RID: 793 RVA: 0x0000EAD9 File Offset: 0x0000CCD9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FFloatRange Range
 	{
@@ -61,7 +61,7 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600031A RID: 794 RVA: 0x0000E468 File Offset: 0x0000C668
+	// Token: 0x0600031A RID: 794 RVA: 0x0000EAF0 File Offset: 0x0000CCF0
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -73,32 +73,28 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600031B RID: 795 RVA: 0x0000E4BC File Offset: 0x0000C6BC
+	// Token: 0x0600031B RID: 795 RVA: 0x0000EB44 File Offset: 0x0000CD44
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorTagCount) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorTagCount.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600031C RID: 796 RVA: 0x0000E55C File Offset: 0x0000C75C
+	// Token: 0x0600031C RID: 796 RVA: 0x0000EBFC File Offset: 0x0000CDFC
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -133,7 +129,7 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 		return MathUtils.Instance.InFastUeRange((double)tagCount, this.TsRange);
 	}
 
-	// Token: 0x0600031D RID: 797 RVA: 0x0000E64B File Offset: 0x0000C84B
+	// Token: 0x0600031D RID: 797 RVA: 0x0000ECEB File Offset: 0x0000CEEB
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorTagCount._ClassPtr == IntPtr.Zero)
@@ -143,22 +139,22 @@ public class TsDecoratorTagCount : UBTDecorator_BlueprintBase, IUnrealUObject, I
 		return TsDecoratorTagCount._ClassPtr;
 	}
 
-	// Token: 0x0600031E RID: 798 RVA: 0x0000E670 File Offset: 0x0000C870
+	// Token: 0x0600031E RID: 798 RVA: 0x0000ED10 File Offset: 0x0000CF10
 	public TsDecoratorTagCount() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorTagCount.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600031F RID: 799 RVA: 0x0000E698 File Offset: 0x0000C898
+	// Token: 0x0600031F RID: 799 RVA: 0x0000ED38 File Offset: 0x0000CF38
 	public TsDecoratorTagCount(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorTagCount.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000320 RID: 800 RVA: 0x0000E6CB File Offset: 0x0000C8CB
+	// Token: 0x06000320 RID: 800 RVA: 0x0000ED6B File Offset: 0x0000CF6B
 	protected TsDecoratorTagCount(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000321 RID: 801 RVA: 0x0000E6D4 File Offset: 0x0000C8D4
+	// Token: 0x06000321 RID: 801 RVA: 0x0000ED74 File Offset: 0x0000CF74
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075DA RID: 30170
+	// Token: 0x02007DDF RID: 32223
 	public enum IVisualNovelRoleIntroductionConfigBase_Union : byte
 	{
-		// Token: 0x0401253D RID: 75069
+		// Token: 0x0401357C RID: 79228
 		NONE,
-		// Token: 0x0401253E RID: 75070
+		// Token: 0x0401357D RID: 79229
 		IVisualNovelRoleIntroductionConfigBase,
-		// Token: 0x0401253F RID: 75071
+		// Token: 0x0401357E RID: 79230
 		IVisualNovelRoleIntroductionSolarSchool
 	}
 }

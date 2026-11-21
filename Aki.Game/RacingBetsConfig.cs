@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020026E0 RID: 9952
+// Token: 0x02001BCB RID: 7115
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class RacingBetsConfig : ConfigBase
 {
-	// Token: 0x060146A4 RID: 83620 RVA: 0x0052A340 File Offset: 0x00528540
+	// Token: 0x06011B86 RID: 72582 RVA: 0x0053905C File Offset: 0x0053725C
 	public RacingBetsSeason? GetRacingBetsSeasonConfig(int seasonId)
 	{
 		RacingBetsSeason? config = ConfigRacingBetsSeasonById.GetConfig(seasonId, true);
@@ -26,7 +26,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146A5 RID: 83621 RVA: 0x0052A398 File Offset: 0x00528598
+	// Token: 0x06011B87 RID: 72583 RVA: 0x005390B4 File Offset: 0x005372B4
 	public RacingBetsGroupMatch? GetRacingBetsGroupMatch(int matchId)
 	{
 		RacingBetsGroupMatch? config = ConfigRacingBetsGroupMatchById.GetConfig(matchId, true);
@@ -43,7 +43,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146A6 RID: 83622 RVA: 0x0052A3F0 File Offset: 0x005285F0
+	// Token: 0x06011B88 RID: 72584 RVA: 0x0053910C File Offset: 0x0053730C
 	public RacingBetsLegMatches? GetRacingBetsLegMatches(int id)
 	{
 		RacingBetsLegMatches? config = ConfigRacingBetsLegMatchesById.GetConfig(id, true);
@@ -60,7 +60,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146A7 RID: 83623 RVA: 0x0052A448 File Offset: 0x00528648
+	// Token: 0x06011B89 RID: 72585 RVA: 0x00539164 File Offset: 0x00537364
 	public IReadOnlyList<RacingBetsReward> GetRacingBetsRewardList(int seasonId)
 	{
 		IReadOnlyList<RacingBetsReward> configList = ConfigRacingBetsRewardBySeasonId.GetConfigList(seasonId, true);
@@ -77,7 +77,7 @@ public class RacingBetsConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060146A8 RID: 83624 RVA: 0x0052A494 File Offset: 0x00528694
+	// Token: 0x06011B8A RID: 72586 RVA: 0x005391B0 File Offset: 0x005373B0
 	public RacingBetsReward? GetRacingBetsReward(int id)
 	{
 		RacingBetsReward? config = ConfigRacingBetsRewardById.GetConfig(id, true);
@@ -94,7 +94,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146A9 RID: 83625 RVA: 0x0052A4EC File Offset: 0x005286EC
+	// Token: 0x06011B8B RID: 72587 RVA: 0x00539208 File Offset: 0x00537408
 	public RacingBetsBulletScreen? GetRacingBetsBulletScreen(int bulletScreenId)
 	{
 		RacingBetsBulletScreen? config = ConfigRacingBetsBulletScreenById.GetConfig(bulletScreenId, true);
@@ -111,7 +111,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146AA RID: 83626 RVA: 0x0052A544 File Offset: 0x00528744
+	// Token: 0x06011B8C RID: 72588 RVA: 0x00539260 File Offset: 0x00537460
 	public IReadOnlyList<RacingBetsBulletScreen> GetRacingBetsBulletScreenList(int seasonId)
 	{
 		IReadOnlyList<RacingBetsBulletScreen> configList = ConfigRacingBetsBulletScreenBySeasonId.GetConfigList(seasonId, true);
@@ -128,7 +128,7 @@ public class RacingBetsConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060146AB RID: 83627 RVA: 0x0052A590 File Offset: 0x00528790
+	// Token: 0x06011B8D RID: 72589 RVA: 0x005392AC File Offset: 0x005374AC
 	public IReadOnlyList<RacingBettingGear> GetRacingBettingGearList(int seasonId)
 	{
 		IReadOnlyList<RacingBettingGear> configList = ConfigRacingBettingGearBySeasonId.GetConfigList(seasonId, true);
@@ -145,7 +145,7 @@ public class RacingBetsConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060146AC RID: 83628 RVA: 0x0052A5DC File Offset: 0x005287DC
+	// Token: 0x06011B8E RID: 72590 RVA: 0x005392F8 File Offset: 0x005374F8
 	public IReadOnlyList<RacingBetConversionRate> GetRacingBetConversionRateList(int seasonId)
 	{
 		IReadOnlyList<RacingBetConversionRate> configList = ConfigRacingBetConversionRateBySeasonId.GetConfigList(seasonId, true);
@@ -162,7 +162,7 @@ public class RacingBetsConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060146AD RID: 83629 RVA: 0x0052A628 File Offset: 0x00528828
+	// Token: 0x06011B8F RID: 72591 RVA: 0x00539344 File Offset: 0x00537544
 	public RacingBetMapPoint? GetRacingBetMapPointConfig(int pointId)
 	{
 		RacingBetMapPoint? config = ConfigRacingBetMapPointById.GetConfig(pointId, true);
@@ -179,7 +179,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146AE RID: 83630 RVA: 0x0052A680 File Offset: 0x00528880
+	// Token: 0x06011B90 RID: 72592 RVA: 0x0053939C File Offset: 0x0053759C
 	public IReadOnlyList<RacingBetMapPoint> GetRacingBetMapPointList(int seasonId)
 	{
 		IReadOnlyList<RacingBetMapPoint> configList = ConfigRacingBetMapPointBySeasonId.GetConfigList(seasonId, true);
@@ -196,7 +196,7 @@ public class RacingBetsConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x060146AF RID: 83631 RVA: 0x0052A6CC File Offset: 0x005288CC
+	// Token: 0x06011B91 RID: 72593 RVA: 0x005393E8 File Offset: 0x005375E8
 	public RacingBetRankOpenTime? GetRacingBetRankOpenTime(int legMatchId)
 	{
 		RacingBetRankOpenTime? config = ConfigRacingBetRankOpenTimeById.GetConfig(legMatchId, true);
@@ -213,7 +213,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146B0 RID: 83632 RVA: 0x0052A724 File Offset: 0x00528924
+	// Token: 0x06011B92 RID: 72594 RVA: 0x00539440 File Offset: 0x00537640
 	public DangoBroadcast? GetRacingBetsDangoBroadcast(int dangoId)
 	{
 		DangoBroadcast? config = ConfigDangoBroadcastById.GetConfig(dangoId, true);
@@ -230,7 +230,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146B1 RID: 83633 RVA: 0x0052A77C File Offset: 0x0052897C
+	// Token: 0x06011B93 RID: 72595 RVA: 0x00539498 File Offset: 0x00537698
 	public int GetRacingBetConversionRate(int rank)
 	{
 		RacingBetConversionRate? config = ConfigRacingBetConversionRateById.GetConfig(rank, true);
@@ -247,7 +247,7 @@ public class RacingBetsConfig : ConfigBase
 		return config.Value.ConversionRate;
 	}
 
-	// Token: 0x060146B2 RID: 83634 RVA: 0x0052A7DC File Offset: 0x005289DC
+	// Token: 0x06011B94 RID: 72596 RVA: 0x005394F8 File Offset: 0x005376F8
 	public unsafe int? GetPointIdBySortId(int seasonId, int sortId)
 	{
 		if (!this.SortIdToPointIdCache.ContainsKey(seasonId))
@@ -280,7 +280,7 @@ public class RacingBetsConfig : ConfigBase
 		return new int?(value);
 	}
 
-	// Token: 0x060146B3 RID: 83635 RVA: 0x0052A8F8 File Offset: 0x00528AF8
+	// Token: 0x06011B95 RID: 72597 RVA: 0x00539614 File Offset: 0x00537814
 	public int GetPointTotal(int seasonId)
 	{
 		if (this.PointTotalNum != 0)
@@ -296,13 +296,13 @@ public class RacingBetsConfig : ConfigBase
 		return this.PointTotalNum;
 	}
 
-	// Token: 0x060146B4 RID: 83636 RVA: 0x0052A933 File Offset: 0x00528B33
+	// Token: 0x06011B96 RID: 72598 RVA: 0x0053964F File Offset: 0x0053784F
 	public IReadOnlyList<RacingBetsRuleTextPool> GetRandomRuleTextPool(int seasonId)
 	{
 		return ConfigRacingBetsRuleTextPoolBySeasonId.GetConfigList(seasonId, true);
 	}
 
-	// Token: 0x060146B5 RID: 83637 RVA: 0x0052A93C File Offset: 0x00528B3C
+	// Token: 0x06011B97 RID: 72599 RVA: 0x00539658 File Offset: 0x00537858
 	[NullableContext(1)]
 	public string GetRandomRuleText(int seasonId)
 	{
@@ -315,25 +315,25 @@ public class RacingBetsConfig : ConfigBase
 		return configList[index].RuleText;
 	}
 
-	// Token: 0x060146B6 RID: 83638 RVA: 0x0052A984 File Offset: 0x00528B84
+	// Token: 0x06011B98 RID: 72600 RVA: 0x005396A0 File Offset: 0x005378A0
 	public float GetRuleRate()
 	{
 		return ConfigCommonParamById.GetFloatConfig("RacingBetsBroadcastRuleRate").GetValueOrDefault();
 	}
 
-	// Token: 0x060146B7 RID: 83639 RVA: 0x0052A9A3 File Offset: 0x00528BA3
+	// Token: 0x06011B99 RID: 72601 RVA: 0x005396BF File Offset: 0x005378BF
 	public IReadOnlyList<RacingBetsMatch> GetMatchTableConfigBySeasonId(int seasonId)
 	{
 		return ConfigRacingBetsMatchBySeasonId.GetConfigList(seasonId, true);
 	}
 
-	// Token: 0x060146B8 RID: 83640 RVA: 0x0052A9AC File Offset: 0x00528BAC
+	// Token: 0x06011B9A RID: 72602 RVA: 0x005396C8 File Offset: 0x005378C8
 	public RacingBetsMatch? GetMatchTableConfigById(int id)
 	{
 		return ConfigRacingBetsMatchById.GetConfig(id, true);
 	}
 
-	// Token: 0x060146B9 RID: 83641 RVA: 0x0052A9B8 File Offset: 0x00528BB8
+	// Token: 0x06011B9B RID: 72603 RVA: 0x005396D4 File Offset: 0x005378D4
 	public Dictionary<int, int> GetLegMatchOrganMap(int seasonId, int legMatchId)
 	{
 		RacingBetsLegMatches? racingBetsLegMatches = this.GetRacingBetsLegMatches(legMatchId);
@@ -371,7 +371,7 @@ public class RacingBetsConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x060146BA RID: 83642 RVA: 0x0052AAC8 File Offset: 0x00528CC8
+	// Token: 0x06011B9C RID: 72604 RVA: 0x005397E4 File Offset: 0x005379E4
 	public RacingBetsOrgan? GetOrganConfig(int organId)
 	{
 		RacingBetsOrgan? config = ConfigRacingBetsOrganById.GetConfig(organId, true);
@@ -388,7 +388,7 @@ public class RacingBetsConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060146BB RID: 83643 RVA: 0x0052AB20 File Offset: 0x00528D20
+	// Token: 0x06011B9D RID: 72605 RVA: 0x0053983C File Offset: 0x00537A3C
 	[NullableContext(1)]
 	public List<int> GetDangoIdByType(ERacingBetsDangoType type)
 	{
@@ -405,8 +405,8 @@ public class RacingBetsConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x17001A90 RID: 6800
-	// (get) Token: 0x060146BC RID: 83644 RVA: 0x0052AB88 File Offset: 0x00528D88
+	// Token: 0x17001AC8 RID: 6856
+	// (get) Token: 0x06011B9E RID: 72606 RVA: 0x005398A4 File Offset: 0x00537AA4
 	[Nullable(1)]
 	public static RacingBetsConfig Instance
 	{
@@ -417,7 +417,7 @@ public class RacingBetsConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060146BD RID: 83645 RVA: 0x0052AB8F File Offset: 0x00528D8F
+	// Token: 0x06011B9F RID: 72607 RVA: 0x005398AB File Offset: 0x00537AAB
 	[NullableContext(1)]
 	public static RacingBetsConfig GetOrCreateInstance()
 	{
@@ -428,7 +428,7 @@ public class RacingBetsConfig : ConfigBase
 		return RacingBetsConfig._Instance;
 	}
 
-	// Token: 0x060146BE RID: 83646 RVA: 0x0052ABA3 File Offset: 0x00528DA3
+	// Token: 0x06011BA0 RID: 72608 RVA: 0x005398BF File Offset: 0x00537ABF
 	public static bool CreateInstance()
 	{
 		if (RacingBetsConfig._Instance != null)
@@ -439,30 +439,30 @@ public class RacingBetsConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060146BF RID: 83647 RVA: 0x0052ABB9 File Offset: 0x00528DB9
+	// Token: 0x06011BA1 RID: 72609 RVA: 0x005398D5 File Offset: 0x00537AD5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060146C0 RID: 83648 RVA: 0x0052ABBB File Offset: 0x00528DBB
+	// Token: 0x06011BA2 RID: 72610 RVA: 0x005398D7 File Offset: 0x00537AD7
 	public static void ResetStaticDefaultValue()
 	{
 		RacingBetsConfig._Instance = null;
 	}
 
-	// Token: 0x060146C1 RID: 83649 RVA: 0x0052ABC3 File Offset: 0x00528DC3
+	// Token: 0x06011BA3 RID: 72611 RVA: 0x005398DF File Offset: 0x00537ADF
 	static RacingBetsConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RacingBetsConfig.CreateStaticDefaultValue), new Action(RacingBetsConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009963 RID: 39267
+	// Token: 0x04009ABB RID: 39611
 	[Nullable(1)]
 	private readonly Dictionary<int, Dictionary<int, int>> SortIdToPointIdCache = new Dictionary<int, Dictionary<int, int>>();
 
-	// Token: 0x04009964 RID: 39268
+	// Token: 0x04009ABC RID: 39612
 	private int PointTotalNum;
 
-	// Token: 0x04009965 RID: 39269
+	// Token: 0x04009ABD RID: 39613
 	private static RacingBetsConfig _Instance;
 }

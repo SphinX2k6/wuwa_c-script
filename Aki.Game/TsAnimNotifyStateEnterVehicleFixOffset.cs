@@ -14,27 +14,27 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateEnterVehicleFixOffset.TsAnimNotifyStateEnterVehicleFixOffset_C")]
 public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060012D4 RID: 4820 RVA: 0x00069BFC File Offset: 0x00067DFC
+	// Token: 0x060012DA RID: 4826 RVA: 0x0006B5C4 File Offset: 0x000697C4
 	static TsAnimNotifyStateEnterVehicleFixOffset()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsAnimNotifyStateEnterVehicleFixOffset.CreateStaticDefaultValue), new Action(TsAnimNotifyStateEnterVehicleFixOffset.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060012D5 RID: 4821 RVA: 0x00069CB6 File Offset: 0x00067EB6
+	// Token: 0x060012DB RID: 4827 RVA: 0x0006B67E File Offset: 0x0006987E
 	public static void CreateStaticDefaultValue()
 	{
 		TsAnimNotifyStateEnterVehicleFixOffset.IsInit = false;
 		TsAnimNotifyStateEnterVehicleFixOffset.CachedMap = new Dictionary<AActor, FixOffsetParams>();
 	}
 
-	// Token: 0x060012D6 RID: 4822 RVA: 0x00069CC8 File Offset: 0x00067EC8
+	// Token: 0x060012DC RID: 4828 RVA: 0x0006B690 File Offset: 0x00069890
 	public static void ResetStaticDefaultValue()
 	{
 		TsAnimNotifyStateEnterVehicleFixOffset.IsInit = false;
 		TsAnimNotifyStateEnterVehicleFixOffset.CachedMap = null;
 	}
 
-	// Token: 0x060012D7 RID: 4823 RVA: 0x00069CD8 File Offset: 0x00067ED8
+	// Token: 0x060012DD RID: 4829 RVA: 0x0006B6A0 File Offset: 0x000698A0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -154,7 +154,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return true;
 	}
 
-	// Token: 0x060012D8 RID: 4824 RVA: 0x0006A2A4 File Offset: 0x000684A4
+	// Token: 0x060012DE RID: 4830 RVA: 0x0006BC6C File Offset: 0x00069E6C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
@@ -178,7 +178,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return true;
 	}
 
-	// Token: 0x060012D9 RID: 4825 RVA: 0x0006A314 File Offset: 0x00068514
+	// Token: 0x060012DF RID: 4831 RVA: 0x0006BCDC File Offset: 0x00069EDC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -225,14 +225,14 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return true;
 	}
 
-	// Token: 0x060012DA RID: 4826 RVA: 0x0006A569 File Offset: 0x00068769
+	// Token: 0x060012E0 RID: 4832 RVA: 0x0006BF31 File Offset: 0x0006A131
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
 	{
 		return "进入载具修正初始位置旋转偏差";
 	}
 
-	// Token: 0x060012DB RID: 4827 RVA: 0x0006A570 File Offset: 0x00068770
+	// Token: 0x060012E1 RID: 4833 RVA: 0x0006BF38 File Offset: 0x0006A138
 	private static void InitChannel(CurveChannel channel, UAnimInstance mainAnim, FName curveName, float endDelta, float target)
 	{
 		float mainAnimsCurveValueWithDelta = mainAnim.GetMainAnimsCurveValueWithDelta(curveName, 0f, false, false);
@@ -242,7 +242,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		channel.AddRate = (MathUtils.Instance.IsNearlyZero((double)channel.Range, null) ? 0f : (target / channel.Range));
 	}
 
-	// Token: 0x060012DC RID: 4828 RVA: 0x0006A5E4 File Offset: 0x000687E4
+	// Token: 0x060012E2 RID: 4834 RVA: 0x0006BFAC File Offset: 0x0006A1AC
 	private static float StepApplied(CurveChannel channel, [Nullable(2)] UAnimInstance mainAnim, FName curveName, float target, float currentTime, float totalDuration, bool forceFull)
 	{
 		if (forceFull)
@@ -266,7 +266,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return num;
 	}
 
-	// Token: 0x060012DD RID: 4829 RVA: 0x0006A690 File Offset: 0x00068890
+	// Token: 0x060012E3 RID: 4835 RVA: 0x0006C058 File Offset: 0x0006A258
 	private static void ApplyIncrement(CharacterActorComponent actorComp, FixOffsetParams @params, float currentTime, bool forceFull)
 	{
 		CharacterAnimationComponent component = actorComp.Entity.GetComponent<CharacterAnimationComponent>();
@@ -298,13 +298,13 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		actorComp.SetForbidSettingLocAndRot(true, EForbidSettingLocAndRotReason.RideVehicle);
 	}
 
-	// Token: 0x060012DE RID: 4830 RVA: 0x0006A8AE File Offset: 0x00068AAE
+	// Token: 0x060012E4 RID: 4836 RVA: 0x0006C276 File Offset: 0x0006A476
 	private static string FmtNum(double value)
 	{
 		return value.ToString("F2");
 	}
 
-	// Token: 0x060012DF RID: 4831 RVA: 0x0006A8BC File Offset: 0x00068ABC
+	// Token: 0x060012E5 RID: 4837 RVA: 0x0006C284 File Offset: 0x0006A484
 	private static string FmtVec(Vector v)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(6, 3);
@@ -318,7 +318,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060012E0 RID: 4832 RVA: 0x0006A940 File Offset: 0x00068B40
+	// Token: 0x060012E6 RID: 4838 RVA: 0x0006C308 File Offset: 0x0006A508
 	private static string FmtRot(Rotator r)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 3);
@@ -332,7 +332,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060012E1 RID: 4833 RVA: 0x0006A9C4 File Offset: 0x00068BC4
+	// Token: 0x060012E7 RID: 4839 RVA: 0x0006C38C File Offset: 0x0006A58C
 	private static void Initialize()
 	{
 		if (TsAnimNotifyStateEnterVehicleFixOffset.IsInit)
@@ -343,7 +343,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		TsAnimNotifyStateEnterVehicleFixOffset.IsInit = true;
 	}
 
-	// Token: 0x060012E2 RID: 4834 RVA: 0x0006A9DE File Offset: 0x00068BDE
+	// Token: 0x060012E8 RID: 4840 RVA: 0x0006C3A6 File Offset: 0x0006A5A6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateEnterVehicleFixOffset._ClassPtr == IntPtr.Zero)
@@ -353,22 +353,22 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		return TsAnimNotifyStateEnterVehicleFixOffset._ClassPtr;
 	}
 
-	// Token: 0x060012E3 RID: 4835 RVA: 0x0006AA04 File Offset: 0x00068C04
+	// Token: 0x060012E9 RID: 4841 RVA: 0x0006C3CC File Offset: 0x0006A5CC
 	public TsAnimNotifyStateEnterVehicleFixOffset() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateEnterVehicleFixOffset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060012E4 RID: 4836 RVA: 0x0006AA2C File Offset: 0x00068C2C
+	// Token: 0x060012EA RID: 4842 RVA: 0x0006C3F4 File Offset: 0x0006A5F4
 	public TsAnimNotifyStateEnterVehicleFixOffset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateEnterVehicleFixOffset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060012E5 RID: 4837 RVA: 0x0006AA5F File Offset: 0x00068C5F
+	// Token: 0x060012EB RID: 4843 RVA: 0x0006C427 File Offset: 0x0006A627
 	protected TsAnimNotifyStateEnterVehicleFixOffset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060012E6 RID: 4838 RVA: 0x0006AA68 File Offset: 0x00068C68
+	// Token: 0x060012EC RID: 4844 RVA: 0x0006C430 File Offset: 0x0006A630
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -377,7 +377,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		__Params->__Result = this.K2_NotifyBegin(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060012E7 RID: 4839 RVA: 0x0006AAA4 File Offset: 0x00068CA4
+	// Token: 0x060012ED RID: 4845 RVA: 0x0006C46C File Offset: 0x0006A66C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
@@ -386,7 +386,7 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		__Params->__Result = this.K2_NotifyTick(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x060012E8 RID: 4840 RVA: 0x0006AAE0 File Offset: 0x00068CE0
+	// Token: 0x060012EE RID: 4846 RVA: 0x0006C4A8 File Offset: 0x0006A6A8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -395,20 +395,20 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 		__Params->__Result = this.K2_NotifyEnd(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060012E9 RID: 4841 RVA: 0x0006AB13 File Offset: 0x00068D13
+	// Token: 0x060012EF RID: 4847 RVA: 0x0006C4DB File Offset: 0x0006A6DB
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x04000DEF RID: 3567
+	// Token: 0x04000DF7 RID: 3575
 	private const bool EnableDebugLog = false;
 
-	// Token: 0x04000DF0 RID: 3568
+	// Token: 0x04000DF8 RID: 3576
 	private static bool IsInit = false;
 
-	// Token: 0x04000DF1 RID: 3569
+	// Token: 0x04000DF9 RID: 3577
 	[Nullable(new byte[]
 	{
 		2,
@@ -417,36 +417,36 @@ public class TsAnimNotifyStateEnterVehicleFixOffset : TsAnimNotifyStateBase, ISt
 	})]
 	private static Dictionary<AActor, FixOffsetParams> CachedMap = null;
 
-	// Token: 0x04000DF2 RID: 3570
+	// Token: 0x04000DFA RID: 3578
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000DF3 RID: 3571
+	// Token: 0x04000DFB RID: 3579
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000DF4 RID: 3572
+	// Token: 0x04000DFC RID: 3580
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x04000DF5 RID: 3573
+	// Token: 0x04000DFD RID: 3581
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x04000DF6 RID: 3574
+	// Token: 0x04000DFE RID: 3582
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x04000DF7 RID: 3575
+	// Token: 0x04000DFF RID: 3583
 	[StaticVariableRuleIgnore]
 	private static readonly Rotator TmpRotator1 = Rotator.Create();
 
-	// Token: 0x04000DF8 RID: 3576
+	// Token: 0x04000E00 RID: 3584
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateEnterVehicleFixOffset.TsAnimNotifyStateEnterVehicleFixOffset_C";
 
-	// Token: 0x04000DF9 RID: 3577
+	// Token: 0x04000E01 RID: 3585
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000DFA RID: 3578
+	// Token: 0x04000E02 RID: 3586
 	private static IntPtr _ClassDefaultObjectPtr;
 }

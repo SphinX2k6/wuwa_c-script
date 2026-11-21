@@ -3,41 +3,41 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200014B RID: 331
+// Token: 0x0200014F RID: 335
 [NullableContext(2)]
 [Nullable(0)]
 public class AnsInstanceState
 {
-	// Token: 0x17000345 RID: 837
-	// (get) Token: 0x06001454 RID: 5204 RVA: 0x00071417 File Offset: 0x0006F617
-	// (set) Token: 0x06001455 RID: 5205 RVA: 0x0007141F File Offset: 0x0006F61F
+	// Token: 0x17000367 RID: 871
+	// (get) Token: 0x060014F1 RID: 5361 RVA: 0x000767AF File Offset: 0x000749AF
+	// (set) Token: 0x060014F2 RID: 5362 RVA: 0x000767B7 File Offset: 0x000749B7
 	public bool IsListening { get; set; }
 
-	// Token: 0x17000346 RID: 838
-	// (get) Token: 0x06001456 RID: 5206 RVA: 0x00071428 File Offset: 0x0006F628
-	// (set) Token: 0x06001457 RID: 5207 RVA: 0x00071430 File Offset: 0x0006F630
+	// Token: 0x17000368 RID: 872
+	// (get) Token: 0x060014F3 RID: 5363 RVA: 0x000767C0 File Offset: 0x000749C0
+	// (set) Token: 0x060014F4 RID: 5364 RVA: 0x000767C8 File Offset: 0x000749C8
 	public TsBaseCharacter Owner { get; set; }
 
-	// Token: 0x17000347 RID: 839
-	// (get) Token: 0x06001458 RID: 5208 RVA: 0x00071439 File Offset: 0x0006F639
-	// (set) Token: 0x06001459 RID: 5209 RVA: 0x00071441 File Offset: 0x0006F641
+	// Token: 0x17000369 RID: 873
+	// (get) Token: 0x060014F5 RID: 5365 RVA: 0x000767D1 File Offset: 0x000749D1
+	// (set) Token: 0x060014F6 RID: 5366 RVA: 0x000767D9 File Offset: 0x000749D9
 	public bool IsGameplayOpened { get; set; }
 
-	// Token: 0x17000348 RID: 840
-	// (get) Token: 0x0600145A RID: 5210 RVA: 0x0007144A File Offset: 0x0006F64A
-	// (set) Token: 0x0600145B RID: 5211 RVA: 0x00071452 File Offset: 0x0006F652
+	// Token: 0x1700036A RID: 874
+	// (get) Token: 0x060014F7 RID: 5367 RVA: 0x000767E2 File Offset: 0x000749E2
+	// (set) Token: 0x060014F8 RID: 5368 RVA: 0x000767EA File Offset: 0x000749EA
 	public double? StartServerTimeStamp { get; set; }
 
-	// Token: 0x17000349 RID: 841
-	// (get) Token: 0x0600145C RID: 5212 RVA: 0x0007145B File Offset: 0x0006F65B
-	// (set) Token: 0x0600145D RID: 5213 RVA: 0x00071463 File Offset: 0x0006F663
+	// Token: 0x1700036B RID: 875
+	// (get) Token: 0x060014F9 RID: 5369 RVA: 0x000767F3 File Offset: 0x000749F3
+	// (set) Token: 0x060014FA RID: 5370 RVA: 0x000767FB File Offset: 0x000749FB
 	public TInputHandle<InputDistributeDefine.EActionType> OnActionCallback { get; set; }
 
-	// Token: 0x04000E8E RID: 3726
+	// Token: 0x04000ED1 RID: 3793
 	[Nullable(1)]
 	public List<string> BoundActionNames = new List<string>();
 
-	// Token: 0x04000E8F RID: 3727
+	// Token: 0x04000ED2 RID: 3794
 	[Nullable(1)]
 	public List<int> ExternalInteractIds = new List<int>();
 }

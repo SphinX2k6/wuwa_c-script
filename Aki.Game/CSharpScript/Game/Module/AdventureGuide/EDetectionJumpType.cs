@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005ECA RID: 24266
+	// Token: 0x02004EAF RID: 20143
 	public enum EDetectionJumpType
 	{
-		// Token: 0x04020358 RID: 131928
+		// Token: 0x0401AE1F RID: 110111
 		MapMark,
-		// Token: 0x04020359 RID: 131929
+		// Token: 0x0401AE20 RID: 110112
 		DirectEntrance,
-		// Token: 0x0402035A RID: 131930
+		// Token: 0x0401AE21 RID: 110113
 		MarkThenEntrance
 	}
 }

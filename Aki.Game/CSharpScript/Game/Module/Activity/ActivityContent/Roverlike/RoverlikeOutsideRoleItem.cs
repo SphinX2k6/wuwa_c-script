@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006124 RID: 24868
+	// Token: 0x020050A2 RID: 20642
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeOutsideRoleItem : GridProxyAbstract<RoverlikeOutsideRoleData>
 	{
-		// Token: 0x0603EDFE RID: 257534 RVA: 0x00F2F4A0 File Offset: 0x00F2D6A0
+		// Token: 0x06033AC0 RID: 211648 RVA: 0x00E762B4 File Offset: 0x00E744B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EDFF RID: 257535 RVA: 0x00F2F588 File Offset: 0x00F2D788
+		// Token: 0x06033AC1 RID: 211649 RVA: 0x00E7639C File Offset: 0x00E7459C
 		public override void Refresh(RoverlikeOutsideRoleData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -80,19 +80,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleState(flag ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EE00 RID: 257536 RVA: 0x00F2F669 File Offset: 0x00F2D869
+		// Token: 0x06033AC2 RID: 211650 RVA: 0x00E7647D File Offset: 0x00E7467D
 		public override void Clear()
 		{
 			this.CurrentData = null;
 		}
 
-		// Token: 0x0603EE01 RID: 257537 RVA: 0x00F2F672 File Offset: 0x00F2D872
+		// Token: 0x06033AC3 RID: 211651 RVA: 0x00E76486 File Offset: 0x00E74686
 		public override object GetKey(RoverlikeOutsideRoleData data, int displayIndex)
 		{
 			return data.RoleId;
 		}
 
-		// Token: 0x0603EE02 RID: 257538 RVA: 0x00F2F680 File Offset: 0x00F2D880
+		// Token: 0x06033AC4 RID: 211652 RVA: 0x00E76494 File Offset: 0x00E74694
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			if (this.CurrentData == null)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onClickCb(this.CurrentData, base.GridIndex);
 		}
 
-		// Token: 0x04020D3F RID: 134463
+		// Token: 0x0401B66C RID: 112236
 		[Nullable(new byte[]
 		{
 			2,
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Action<RoverlikeOutsideRoleData, int> OnClickCb;
 
-		// Token: 0x04020D40 RID: 134464
+		// Token: 0x0401B66D RID: 112237
 		[Nullable(new byte[]
 		{
 			2,
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Func<RoverlikeOutsideRoleData, int, bool> IsGridSelected;
 
-		// Token: 0x04020D41 RID: 134465
+		// Token: 0x0401B66E RID: 112238
 		[Nullable(new byte[]
 		{
 			2,
@@ -145,21 +145,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Func<RoverlikeOutsideRoleData, int, bool> GetHasRedDot;
 
-		// Token: 0x04020D42 RID: 134466
+		// Token: 0x0401B66F RID: 112239
 		[Nullable(2)]
 		private RoverlikeOutsideRoleData CurrentData;
 
-		// Token: 0x0200C37F RID: 50047
+		// Token: 0x0200AD67 RID: 44391
 		[NullableContext(0)]
 		private enum EOutsideRoleComponents
 		{
-			// Token: 0x0403AFEE RID: 241646
+			// Token: 0x04035953 RID: 219475
 			TogRole,
-			// Token: 0x0403AFEF RID: 241647
+			// Token: 0x04035954 RID: 219476
 			TexIcon,
-			// Token: 0x0403AFF0 RID: 241648
+			// Token: 0x04035955 RID: 219477
 			PnlLock,
-			// Token: 0x0403AFF1 RID: 241649
+			// Token: 0x04035956 RID: 219478
 			PnlRedDot
 		}
 	}

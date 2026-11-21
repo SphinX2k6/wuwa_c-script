@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D1D RID: 15645
+	// Token: 0x02004134 RID: 16692
 	public class IAtomicProcessBase_UnionUnion
 	{
-		// Token: 0x17006B51 RID: 27473
-		// (get) Token: 0x06015967 RID: 88423 RVA: 0x0031E0E5 File Offset: 0x0031C2E5
-		// (set) Token: 0x06015968 RID: 88424 RVA: 0x0031E0ED File Offset: 0x0031C2ED
+		// Token: 0x1700710B RID: 28939
+		// (get) Token: 0x06016E9F RID: 93855 RVA: 0x0034535D File Offset: 0x0034355D
+		// (set) Token: 0x06016EA0 RID: 93856 RVA: 0x00345365 File Offset: 0x00343565
 		public IAtomicProcessBase_Union Type { get; set; }
 
-		// Token: 0x17006B52 RID: 27474
-		// (get) Token: 0x06015969 RID: 88425 RVA: 0x0031E0F6 File Offset: 0x0031C2F6
-		// (set) Token: 0x0601596A RID: 88426 RVA: 0x0031E0FE File Offset: 0x0031C2FE
+		// Token: 0x1700710C RID: 28940
+		// (get) Token: 0x06016EA1 RID: 93857 RVA: 0x0034536E File Offset: 0x0034356E
+		// (set) Token: 0x06016EA2 RID: 93858 RVA: 0x00345376 File Offset: 0x00343576
 		public object Value { get; set; }
 
-		// Token: 0x0601596B RID: 88427 RVA: 0x0031E107 File Offset: 0x0031C307
+		// Token: 0x06016EA3 RID: 93859 RVA: 0x0034537F File Offset: 0x0034357F
 		public IAtomicProcessBase_UnionUnion()
 		{
 			this.Type = IAtomicProcessBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601596C RID: 88428 RVA: 0x0031E11D File Offset: 0x0031C31D
+		// Token: 0x06016EA4 RID: 93860 RVA: 0x00345395 File Offset: 0x00343595
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601596D RID: 88429 RVA: 0x0031E12F File Offset: 0x0031C32F
+		// Token: 0x06016EA5 RID: 93861 RVA: 0x003453A7 File Offset: 0x003435A7
 		public IAtomicProcessBaseT AsIAtomicProcessBase()
 		{
 			return this.As<IAtomicProcessBaseT>();
 		}
 
-		// Token: 0x0601596E RID: 88430 RVA: 0x0031E137 File Offset: 0x0031C337
+		// Token: 0x06016EA6 RID: 93862 RVA: 0x003453AF File Offset: 0x003435AF
 		public static IAtomicProcessBase_UnionUnion FromIAtomicProcessBase(IAtomicProcessBaseT _iatomicprocessbase)
 		{
 			return new IAtomicProcessBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601596F RID: 88431 RVA: 0x0031E14C File Offset: 0x0031C34C
+		// Token: 0x06016EA7 RID: 93863 RVA: 0x003453C4 File Offset: 0x003435C4
 		public IAtomicProcessStoveCoreFallT AsIAtomicProcessStoveCoreFall()
 		{
 			return this.As<IAtomicProcessStoveCoreFallT>();
 		}
 
-		// Token: 0x06015970 RID: 88432 RVA: 0x0031E154 File Offset: 0x0031C354
+		// Token: 0x06016EA8 RID: 93864 RVA: 0x003453CC File Offset: 0x003435CC
 		public static IAtomicProcessBase_UnionUnion FromIAtomicProcessStoveCoreFall(IAtomicProcessStoveCoreFallT _iatomicprocessstovecorefall)
 		{
 			return new IAtomicProcessBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06015971 RID: 88433 RVA: 0x0031E16C File Offset: 0x0031C36C
+		// Token: 0x06016EA9 RID: 93865 RVA: 0x003453E4 File Offset: 0x003435E4
 		public static int Pack(FlatBufferBuilder builder, IAtomicProcessBase_UnionUnion _o)
 		{
 			IAtomicProcessBase_Union type = _o.Type;

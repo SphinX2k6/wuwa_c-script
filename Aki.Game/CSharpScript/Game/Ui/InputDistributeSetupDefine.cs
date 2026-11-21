@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200467E RID: 18046
+	// Token: 0x020035AF RID: 13743
 	public static class InputDistributeSetupDefine
 	{
-		// Token: 0x04019540 RID: 103744
+		// Token: 0x04013BE7 RID: 80871
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Type[] inputDistributeSetups = new Type[]

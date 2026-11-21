@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001216 RID: 4630
+	// Token: 0x020002A9 RID: 681
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.URayTracingSupport")]
 	public enum URayTracingSupport : byte
 	{
-		// Token: 0x040091FB RID: 37371
+		// Token: 0x04001D2B RID: 7467
 		Supported,
-		// Token: 0x040091FC RID: 37372
+		// Token: 0x04001D2C RID: 7468
 		NotSupportedDxr1_1,
-		// Token: 0x040091FD RID: 37373
+		// Token: 0x04001D2D RID: 7469
 		NotSupportedVideoMemory,
-		// Token: 0x040091FE RID: 37374
+		// Token: 0x04001D2E RID: 7470
 		NotSupportedDevice,
-		// Token: 0x040091FF RID: 37375
+		// Token: 0x04001D2F RID: 7471
 		URayTracingSupport_MAX
 	}
 }

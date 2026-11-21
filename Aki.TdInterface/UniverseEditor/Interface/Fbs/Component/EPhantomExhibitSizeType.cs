@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DEF RID: 19951
+	// Token: 0x020052FC RID: 21244
 	public enum EPhantomExhibitSizeType : byte
 	{
-		// Token: 0x0400DAB3 RID: 55987
+		// Token: 0x0400E61B RID: 58907
 		Small,
-		// Token: 0x0400DAB4 RID: 55988
+		// Token: 0x0400E61C RID: 58908
 		Big,
-		// Token: 0x0400DAB5 RID: 55989
+		// Token: 0x0400E61D RID: 58909
 		Huge
 	}
 }

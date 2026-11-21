@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001173 RID: 4467
+	// Token: 0x020012AB RID: 4779
 	public class ITakePhoto2SequenceCondition_SetValue
 	{
-		// Token: 0x04003CE6 RID: 15590
-		[Nullable(1)]
+		// Token: 0x0400404B RID: 16459
 		public string SequencePath;
 	}
 }

@@ -6,14 +6,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Model
 {
-	// Token: 0x0200452C RID: 17708
+	// Token: 0x02003451 RID: 13393
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldDebugModel : ModelBase
 	{
-		// Token: 0x17007514 RID: 29972
-		// (get) Token: 0x0602DBDB RID: 187355 RVA: 0x00A829C0 File Offset: 0x00A80BC0
-		// (set) Token: 0x0602DBDC RID: 187356 RVA: 0x00A829C8 File Offset: 0x00A80BC8
+		// Token: 0x170047C7 RID: 18375
+		// (get) Token: 0x060222A2 RID: 139938 RVA: 0x009ADBD8 File Offset: 0x009ABDD8
+		// (set) Token: 0x060222A3 RID: 139939 RVA: 0x009ADBE0 File Offset: 0x009ABDE0
 		public bool EnableDebug
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBDD RID: 187357 RVA: 0x00A829D1 File Offset: 0x00A80BD1
+		// Token: 0x060222A4 RID: 139940 RVA: 0x009ADBE9 File Offset: 0x009ABDE9
 		public void AddSummonEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Add(entity);
 		}
 
-		// Token: 0x0602DBDE RID: 187358 RVA: 0x00A829F6 File Offset: 0x00A80BF6
+		// Token: 0x060222A5 RID: 139941 RVA: 0x009ADC0E File Offset: 0x009ABE0E
 		public void AddVisionEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Add(entity);
 		}
 
-		// Token: 0x0602DBDF RID: 187359 RVA: 0x00A82A1B File Offset: 0x00A80C1B
+		// Token: 0x060222A6 RID: 139942 RVA: 0x009ADC33 File Offset: 0x009ABE33
 		public void AddMonsterEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Add(entity);
 		}
 
-		// Token: 0x0602DBE0 RID: 187360 RVA: 0x00A82A40 File Offset: 0x00A80C40
+		// Token: 0x060222A7 RID: 139943 RVA: 0x009ADC58 File Offset: 0x009ABE58
 		public void AddNpcEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Add(entity);
 		}
 
-		// Token: 0x0602DBE1 RID: 187361 RVA: 0x00A82A65 File Offset: 0x00A80C65
+		// Token: 0x060222A8 RID: 139944 RVA: 0x009ADC7D File Offset: 0x009ABE7D
 		public void AddRoleEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Add(entity);
 		}
 
-		// Token: 0x0602DBE2 RID: 187362 RVA: 0x00A82A8A File Offset: 0x00A80C8A
+		// Token: 0x060222A9 RID: 139945 RVA: 0x009ADCA2 File Offset: 0x009ABEA2
 		public void RemoveSummonEntity(EntityHandle entity)
 		{
 			if (!entity)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.World.Model
 			this.AoiTotalSet.Remove(entity);
 		}
 
-		// Token: 0x0602DBE3 RID: 187363 RVA: 0x00A82AB0 File Offset: 0x00A80CB0
+		// Token: 0x060222AA RID: 139946 RVA: 0x009ADCC8 File Offset: 0x009ABEC8
 		public void AddEntity(EEntityType entityType, EntityHandle entity)
 		{
 			if (!entity)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBE4 RID: 187364 RVA: 0x00A82AFC File Offset: 0x00A80CFC
+		// Token: 0x060222AB RID: 139947 RVA: 0x009ADD14 File Offset: 0x009ABF14
 		public void RemoveEntity(EEntityType entityType, EntityHandle handle)
 		{
 			if (!handle)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBE5 RID: 187365 RVA: 0x00A82B94 File Offset: 0x00A80D94
+		// Token: 0x060222AC RID: 139948 RVA: 0x009ADDAC File Offset: 0x009ABFAC
 		protected override bool OnLeaveLevel()
 		{
 			if (!UKuroStaticLibrary.IsEditor(GlobalData.World))
@@ -172,8 +172,8 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x17007515 RID: 29973
-		// (get) Token: 0x0602DBE6 RID: 187366 RVA: 0x00A82BFC File Offset: 0x00A80DFC
+		// Token: 0x170047C8 RID: 18376
+		// (get) Token: 0x060222AD RID: 139949 RVA: 0x009ADE14 File Offset: 0x009AC014
 		public static WorldDebugModel Instance
 		{
 			get
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBE7 RID: 187367 RVA: 0x00A82C03 File Offset: 0x00A80E03
+		// Token: 0x060222AE RID: 139950 RVA: 0x009ADE1B File Offset: 0x009AC01B
 		public static WorldDebugModel GetOrCreateInstance()
 		{
 			if (WorldDebugModel._Instance == null)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.World.Model
 			return WorldDebugModel._Instance;
 		}
 
-		// Token: 0x0602DBE8 RID: 187368 RVA: 0x00A82C17 File Offset: 0x00A80E17
+		// Token: 0x060222AF RID: 139951 RVA: 0x009ADE2F File Offset: 0x009AC02F
 		public static bool CreateInstance()
 		{
 			if (WorldDebugModel._Instance != null)
@@ -203,81 +203,81 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x0602DBE9 RID: 187369 RVA: 0x00A82C2D File Offset: 0x00A80E2D
+		// Token: 0x060222B0 RID: 139952 RVA: 0x009ADE45 File Offset: 0x009AC045
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DBEA RID: 187370 RVA: 0x00A82C2F File Offset: 0x00A80E2F
+		// Token: 0x060222B1 RID: 139953 RVA: 0x009ADE47 File Offset: 0x009AC047
 		public static void ResetStaticDefaultValue()
 		{
 			WorldDebugModel._Instance = null;
 		}
 
-		// Token: 0x0602DBEB RID: 187371 RVA: 0x00A82C37 File Offset: 0x00A80E37
+		// Token: 0x060222B2 RID: 139954 RVA: 0x009ADE4F File Offset: 0x009AC04F
 		static WorldDebugModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WorldDebugModel.CreateStaticDefaultValue), new Action(WorldDebugModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040186B2 RID: 100018
+		// Token: 0x04012CD6 RID: 77014
 		public const int FIGHTING_AOI_WEAPON_MAX_COUNT = 4;
 
-		// Token: 0x040186B3 RID: 100019
+		// Token: 0x04012CD7 RID: 77015
 		public const int FIGHTING_AOI_ROLE_MAX_COUNT = 4;
 
-		// Token: 0x040186B4 RID: 100020
+		// Token: 0x04012CD8 RID: 77016
 		public const int FIGHTING_AOI_SUMMON_MAX_COUNT = 4;
 
-		// Token: 0x040186B5 RID: 100021
+		// Token: 0x04012CD9 RID: 77017
 		public const int FIGHTING_AOI_VISION_MAX_COUNT = 4;
 
-		// Token: 0x040186B6 RID: 100022
+		// Token: 0x04012CDA RID: 77018
 		public const int FIGHTING_AOI_NPC_MONSTER_MAX_COUNT = 50;
 
-		// Token: 0x040186B7 RID: 100023
+		// Token: 0x04012CDB RID: 77019
 		public const int FIGHTING_TOTAL_MAX_COUINT = 97;
 
-		// Token: 0x040186B8 RID: 100024
+		// Token: 0x04012CDC RID: 77020
 		public const int AOI_WEAPON_MAX_COUNT = 6;
 
-		// Token: 0x040186B9 RID: 100025
+		// Token: 0x04012CDD RID: 77021
 		public const int AOI_ROLE_MAX_COUNT = 4;
 
-		// Token: 0x040186BA RID: 100026
+		// Token: 0x04012CDE RID: 77022
 		public const int AOI_SUMMON_MAX_COUNT = 4;
 
-		// Token: 0x040186BB RID: 100027
+		// Token: 0x04012CDF RID: 77023
 		public const int AOI_VISION_MAX_COUNT = 4;
 
-		// Token: 0x040186BC RID: 100028
+		// Token: 0x04012CE0 RID: 77024
 		public const int AOI_NPC_MONSTER_MAX_COUNT = 50;
 
-		// Token: 0x040186BD RID: 100029
+		// Token: 0x04012CE1 RID: 77025
 		public const int TOTAL_MAX_COUINT = 95;
 
-		// Token: 0x040186BE RID: 100030
+		// Token: 0x04012CE2 RID: 77026
 		private bool EnableDebugInternal = true;
 
-		// Token: 0x040186BF RID: 100031
+		// Token: 0x04012CE3 RID: 77027
 		public readonly HashSet<EntityHandle> AoiTotalSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C0 RID: 100032
+		// Token: 0x04012CE4 RID: 77028
 		public readonly HashSet<EntityHandle> AoiSummonSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C1 RID: 100033
+		// Token: 0x04012CE5 RID: 77029
 		public readonly HashSet<EntityHandle> AoiVisionSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C2 RID: 100034
+		// Token: 0x04012CE6 RID: 77030
 		public readonly HashSet<EntityHandle> AoiMonsterSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C3 RID: 100035
+		// Token: 0x04012CE7 RID: 77031
 		public readonly HashSet<EntityHandle> AoiNpcSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C4 RID: 100036
+		// Token: 0x04012CE8 RID: 77032
 		public readonly HashSet<EntityHandle> AoiRoleSet = new HashSet<EntityHandle>();
 
-		// Token: 0x040186C5 RID: 100037
+		// Token: 0x04012CE9 RID: 77033
 		[Nullable(2)]
 		private static WorldDebugModel _Instance;
 	}

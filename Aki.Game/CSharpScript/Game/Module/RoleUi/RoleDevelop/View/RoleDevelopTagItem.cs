@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D58 RID: 19800
+	// Token: 0x02003D21 RID: 15649
 	public class RoleDevelopTagItem : UiPanelBase
 	{
-		// Token: 0x060332A0 RID: 209568 RVA: 0x00BEF424 File Offset: 0x00BED624
+		// Token: 0x0602810A RID: 164106 RVA: 0x00B38558 File Offset: 0x00B36758
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060332A1 RID: 209569 RVA: 0x00BEF490 File Offset: 0x00BED690
+		// Token: 0x0602810B RID: 164107 RVA: 0x00B385C4 File Offset: 0x00B367C4
 		public void RefreshByData(ERoleDevelopHotRoleTag tagType)
 		{
 			if (tagType == ERoleDevelopHotRoleTag.None)
@@ -54,14 +54,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.GetTexture(0).SetColor(FColor.FromHex(RoleDevelopDefine.roleDevelopHotRoleTagColor[tagType]));
 		}
 
-		// Token: 0x0200AECF RID: 44751
-		public static class EComponentType
+		// Token: 0x02009902 RID: 39170
+		private enum EComponentType
 		{
-			// Token: 0x04035188 RID: 217480
-			public const int BgTex = 0;
-
-			// Token: 0x04035189 RID: 217481
-			public const int TagStateTxt = 1;
+			// Token: 0x0402FBB8 RID: 195512
+			BgTex,
+			// Token: 0x0402FBB9 RID: 195513
+			TagStateTxt
 		}
 	}
 }

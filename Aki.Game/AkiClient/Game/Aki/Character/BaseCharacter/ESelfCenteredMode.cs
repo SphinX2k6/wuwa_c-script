@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042CD RID: 17101
+	// Token: 0x02003322 RID: 13090
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ESelfCenteredMode.ESelfCenteredMode")]
 	public enum ESelfCenteredMode : byte
 	{
-		// Token: 0x04017443 RID: 95299
+		// Token: 0x04012120 RID: 74016
 		None,
-		// Token: 0x04017444 RID: 95300
+		// Token: 0x04012121 RID: 74017
 		Blueprint,
-		// Token: 0x04017445 RID: 95301
+		// Token: 0x04012122 RID: 74018
 		Gameplay,
-		// Token: 0x04017446 RID: 95302
+		// Token: 0x04012123 RID: 74019
 		LevelEvent,
-		// Token: 0x04017447 RID: 95303
+		// Token: 0x04012124 RID: 74020
 		GM,
-		// Token: 0x04017448 RID: 95304
+		// Token: 0x04012125 RID: 74021
 		Skill,
-		// Token: 0x04017449 RID: 95305
+		// Token: 0x04012126 RID: 74022
 		ESelfCenteredMode_MAX
 	}
 }

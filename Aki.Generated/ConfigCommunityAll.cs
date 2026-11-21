@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200018D RID: 397
+	// Token: 0x0200019F RID: 415
 	public class ConfigCommunityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000950 RID: 2384 RVA: 0x0008E2B4 File Offset: 0x0008C4B4
+		// Token: 0x060009BC RID: 2492 RVA: 0x000941EC File Offset: 0x000923EC
 		static ConfigCommunityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommunityAll.CreateStaticDefaultValue), new Action(ConfigCommunityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000951 RID: 2385 RVA: 0x0008E2D4 File Offset: 0x0008C4D4
+		// Token: 0x060009BD RID: 2493 RVA: 0x0009420C File Offset: 0x0009240C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommunityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000952 RID: 2386 RVA: 0x0008E353 File Offset: 0x0008C553
+		// Token: 0x060009BE RID: 2494 RVA: 0x0009428B File Offset: 0x0009248B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommunityAll.LogPair = null;
 			ConfigCommunityAll.HandleId = 0;
 		}
 
-		// Token: 0x06000953 RID: 2387 RVA: 0x0008E361 File Offset: 0x0008C561
+		// Token: 0x060009BF RID: 2495 RVA: 0x00094299 File Offset: 0x00092499
 		public static void Init()
 		{
 			ConfigCommunityAll.HandleId = ConfigCommon.InitDataStatement(ConfigCommunityAll.HandleId, "db_platformchannel.db", "select BinData from `Community` where PackageType!=?");
 		}
 
-		// Token: 0x06000954 RID: 2388 RVA: 0x0008E37C File Offset: 0x0008C57C
+		// Token: 0x060009C0 RID: 2496 RVA: 0x000942B4 File Offset: 0x000924B4
 		[NullableContext(2)]
 		public static IReadOnlyList<Community> GetConfigList(int p0PackageType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000ABF RID: 2751
+		// Token: 0x04000B3D RID: 2877
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04000AC0 RID: 2752
+		// Token: 0x04000B3E RID: 2878
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04000AC1 RID: 2753
+		// Token: 0x04000B3F RID: 2879
 		private const string TABLE = "Community";
 
-		// Token: 0x04000AC2 RID: 2754
+		// Token: 0x04000B40 RID: 2880
 		private const string COMMAND = "select BinData from `Community` where PackageType!=?";
 
-		// Token: 0x04000AC3 RID: 2755
+		// Token: 0x04000B41 RID: 2881
 		private const string KEY_PREFIX = "CommunityAll";
 
-		// Token: 0x04000AC4 RID: 2756
+		// Token: 0x04000B42 RID: 2882
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000AC5 RID: 2757
+		// Token: 0x04000B43 RID: 2883
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A5D RID: 2653
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B26 RID: 2854
 	public class IRefreshSingle
 	{
-		// Token: 0x06003D16 RID: 15638 RVA: 0x0009D10D File Offset: 0x0009B30D
+		// Token: 0x06004136 RID: 16694 RVA: 0x000A6585 File Offset: 0x000A4785
 		public static IRefreshSingle Create(IRefreshSingle? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E19 RID: 3609
-		// (get) Token: 0x06003D17 RID: 15639 RVA: 0x0009D12C File Offset: 0x0009B32C
+		// Token: 0x17000EE5 RID: 3813
+		// (get) Token: 0x06004137 RID: 16695 RVA: 0x000A65A4 File Offset: 0x000A47A4
 		public virtual int RefreshInterval
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E1A RID: 3610
-		// (get) Token: 0x06003D18 RID: 15640 RVA: 0x0009D139 File Offset: 0x0009B339
+		// Token: 0x17000EE6 RID: 3814
+		// (get) Token: 0x06004138 RID: 16696 RVA: 0x000A65B1 File Offset: 0x000A47B1
 		public virtual int MaxRefreshTimes
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E1B RID: 3611
-		// (get) Token: 0x06003D19 RID: 15641 RVA: 0x0009D146 File Offset: 0x0009B346
+		// Token: 0x17000EE7 RID: 3815
+		// (get) Token: 0x06004139 RID: 16697 RVA: 0x000A65BE File Offset: 0x000A47BE
 		public virtual bool DelayRefresh
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E1C RID: 3612
-		// (get) Token: 0x06003D1A RID: 15642 RVA: 0x0009D153 File Offset: 0x0009B353
+		// Token: 0x17000EE8 RID: 3816
+		// (get) Token: 0x0600413A RID: 16698 RVA: 0x000A65CB File Offset: 0x000A47CB
 		public virtual ITempleGuid TemplateGuid
 		{
 			get
@@ -68,14 +66,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002208 RID: 8712
+		// Token: 0x0400241F RID: 9247
 		private IRefreshSingle Instance;
 
-		// Token: 0x04002209 RID: 8713
+		// Token: 0x04002420 RID: 9248
 		[Nullable(2)]
 		private ITempleGuid _TemplateGuidCache;
 
-		// Token: 0x0400220A RID: 8714
+		// Token: 0x04002421 RID: 9249
 		private bool _TemplateGuidInited;
 	}
 }

@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FE5 RID: 8165
+// Token: 0x020014B8 RID: 5304
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomStackCountPopupView : UiViewBase
 {
-	// Token: 0x0600FFDF RID: 65503 RVA: 0x003E52E8 File Offset: 0x003E34E8
+	// Token: 0x0600D447 RID: 54343 RVA: 0x003F18E8 File Offset: 0x003EFAE8
 	[NullableContext(1)]
 	public PhantomStackCountPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FFE0 RID: 65504 RVA: 0x003E52F4 File Offset: 0x003E34F4
+	// Token: 0x0600D448 RID: 54344 RVA: 0x003F18F4 File Offset: 0x003EFAF4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -47,7 +47,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FFE1 RID: 65505 RVA: 0x003E5424 File Offset: 0x003E3624
+	// Token: 0x0600D449 RID: 54345 RVA: 0x003F1A24 File Offset: 0x003EFC24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomStackCountPopupView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FFE2 RID: 65506 RVA: 0x003E5468 File Offset: 0x003E3668
+	// Token: 0x0600D44A RID: 54346 RVA: 0x003F1A68 File Offset: 0x003EFC68
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as PhantomStackCountPopupData);
@@ -135,7 +135,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		this.NumberSelect.ChangeValue(num, true);
 	}
 
-	// Token: 0x0600FFE3 RID: 65507 RVA: 0x003E56E5 File Offset: 0x003E38E5
+	// Token: 0x0600D44B RID: 54347 RVA: 0x003F1CE5 File Offset: 0x003EFEE5
 	protected override void OnBeforeDestroy()
 	{
 		NumberSelectComponent numberSelect = this.NumberSelect;
@@ -146,7 +146,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		numberSelect.Destroy(null);
 	}
 
-	// Token: 0x0600FFE4 RID: 65508 RVA: 0x003E56F8 File Offset: 0x003E38F8
+	// Token: 0x0600D44C RID: 54348 RVA: 0x003F1CF8 File Offset: 0x003EFEF8
 	private void RefreshItemGrid(int initSelectedCount)
 	{
 		PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomDataBase(this.ViewData.IncId) as PhantomBattleData;
@@ -180,7 +180,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FFE5 RID: 65509 RVA: 0x003E583C File Offset: 0x003E3A3C
+	// Token: 0x0600D44D RID: 54349 RVA: 0x003F1E3C File Offset: 0x003F003C
 	private void RefreshStackDisplay(int selectedCount)
 	{
 		MediumItemGrid itemGrid = this.ItemGrid;
@@ -197,7 +197,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FFE6 RID: 65510 RVA: 0x003E587C File Offset: 0x003E3A7C
+	// Token: 0x0600D44E RID: 54350 RVA: 0x003F1E7C File Offset: 0x003F007C
 	private void OnClickItemGrid()
 	{
 		if (this.ViewData == null)
@@ -212,13 +212,13 @@ public class PhantomStackCountPopupView : UiViewBase
 		ItemController.Instance.OpenItemTipsByItemUid(this.ViewData.IncId, phantomItemData.GetConfigId(), true, null);
 	}
 
-	// Token: 0x0600FFE7 RID: 65511 RVA: 0x003E58C9 File Offset: 0x003E3AC9
+	// Token: 0x0600D44F RID: 54351 RVA: 0x003F1EC9 File Offset: 0x003F00C9
 	private void OnSelectCountChange(int count)
 	{
 		this.RefreshStackDisplay(count);
 	}
 
-	// Token: 0x0600FFE8 RID: 65512 RVA: 0x003E58D2 File Offset: 0x003E3AD2
+	// Token: 0x0600D450 RID: 54352 RVA: 0x003F1ED2 File Offset: 0x003F00D2
 	private void OnClickCancel(int _)
 	{
 		PhantomStackCountPopupData viewData = this.ViewData;
@@ -233,7 +233,7 @@ public class PhantomStackCountPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FFE9 RID: 65513 RVA: 0x003E58F8 File Offset: 0x003E3AF8
+	// Token: 0x0600D451 RID: 54353 RVA: 0x003F1EF8 File Offset: 0x003F00F8
 	private void OnClickConfirm(int _)
 	{
 		int selectNumber = this.NumberSelect.GetSelectNumber();
@@ -249,53 +249,53 @@ public class PhantomStackCountPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400766B RID: 30315
+	// Token: 0x04007754 RID: 30548
 	private PhantomStackCountPopupData ViewData;
 
-	// Token: 0x0400766C RID: 30316
+	// Token: 0x04007755 RID: 30549
 	private ButtonItem CancelButton;
 
-	// Token: 0x0400766D RID: 30317
+	// Token: 0x04007756 RID: 30550
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x0400766E RID: 30318
+	// Token: 0x04007757 RID: 30551
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x0400766F RID: 30319
+	// Token: 0x04007758 RID: 30552
 	private MediumItemGrid ItemGrid;
 
-	// Token: 0x04007670 RID: 30320
+	// Token: 0x04007759 RID: 30553
 	private int StackCount;
 
-	// Token: 0x04007671 RID: 30321
+	// Token: 0x0400775A RID: 30554
 	private bool CanStack;
 
-	// Token: 0x020085F8 RID: 34296
+	// Token: 0x0200777F RID: 30591
 	[NullableContext(0)]
 	private class EComp
 	{
-		// Token: 0x0402B9A8 RID: 178600
+		// Token: 0x04026CB7 RID: 158903
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402B9A9 RID: 178601
+		// Token: 0x04026CB8 RID: 158904
 		public const int BtnCancel = 1;
 
-		// Token: 0x0402B9AA RID: 178602
+		// Token: 0x04026CB9 RID: 158905
 		public const int BtnConfirm = 2;
 
-		// Token: 0x0402B9AB RID: 178603
+		// Token: 0x04026CBA RID: 158906
 		public const int NumControl = 3;
 
-		// Token: 0x0402B9AC RID: 178604
+		// Token: 0x04026CBB RID: 158907
 		public const int PnlTips = 4;
 
-		// Token: 0x0402B9AD RID: 178605
+		// Token: 0x04026CBC RID: 158908
 		public const int TxtTips = 5;
 
-		// Token: 0x0402B9AE RID: 178606
+		// Token: 0x04026CBD RID: 158909
 		public const int ItemGrid = 6;
 
-		// Token: 0x0402B9AF RID: 178607
+		// Token: 0x04026CBE RID: 158910
 		public const int PnlEchoStack = 7;
 	}
 }

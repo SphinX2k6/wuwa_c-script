@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02001E01 RID: 7681
+// Token: 0x020012C3 RID: 4803
 public class EHandBookEntranceViewDefine
 {
-	// Token: 0x04006C68 RID: 27752
+	// Token: 0x04006D49 RID: 27977
 	public const int TitleItem = 0;
 
-	// Token: 0x04006C69 RID: 27753
+	// Token: 0x04006D4A RID: 27978
 	public const int CollectCountText = 1;
 
-	// Token: 0x04006C6A RID: 27754
+	// Token: 0x04006D4B RID: 27979
 	public const int ScrollView = 2;
 
-	// Token: 0x04006C6B RID: 27755
+	// Token: 0x04006D4C RID: 27980
 	public const int EntranceItem = 3;
 }

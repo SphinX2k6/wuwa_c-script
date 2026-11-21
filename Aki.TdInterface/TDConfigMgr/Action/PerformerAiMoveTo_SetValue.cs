@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FC RID: 8444
+	// Token: 0x0200235D RID: 9053
 	public class PerformerAiMoveTo_SetValue
 	{
-		// Token: 0x04006F43 RID: 28483
-		[Nullable(1)]
+		// Token: 0x04007577 RID: 30071
 		public IPerformerAiMoveConfig Config;
 
-		// Token: 0x04006F44 RID: 28484
+		// Token: 0x04007578 RID: 30072
 		public float? StopDistance;
 	}
 }

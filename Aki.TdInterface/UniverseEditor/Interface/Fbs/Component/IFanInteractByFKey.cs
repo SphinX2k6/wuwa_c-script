@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005231 RID: 21041
+	// Token: 0x02005799 RID: 22425
 	public struct IFanInteractByFKey : IFlatbufferObject
 	{
-		// Token: 0x17009A2E RID: 39470
-		// (get) Token: 0x0602238D RID: 140173 RVA: 0x004BF67D File Offset: 0x004BD87D
+		// Token: 0x1700A22A RID: 41514
+		// (get) Token: 0x06024323 RID: 148259 RVA: 0x004FA141 File Offset: 0x004F8341
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602238E RID: 140174 RVA: 0x004BF68A File Offset: 0x004BD88A
+		// Token: 0x06024324 RID: 148260 RVA: 0x004FA14E File Offset: 0x004F834E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602238F RID: 140175 RVA: 0x004BF694 File Offset: 0x004BD894
+		// Token: 0x06024325 RID: 148261 RVA: 0x004FA158 File Offset: 0x004F8358
 		public static IFanInteractByFKey GetRootAsIFanInteractByFKey(ByteBuffer _bb)
 		{
 			return IFanInteractByFKey.GetRootAsIFanInteractByFKey(_bb, default(IFanInteractByFKey));
 		}
 
-		// Token: 0x06022390 RID: 140176 RVA: 0x004BF6B0 File Offset: 0x004BD8B0
+		// Token: 0x06024326 RID: 148262 RVA: 0x004FA174 File Offset: 0x004F8374
 		public static IFanInteractByFKey GetRootAsIFanInteractByFKey(ByteBuffer _bb, IFanInteractByFKey obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022391 RID: 140177 RVA: 0x004BF6CD File Offset: 0x004BD8CD
+		// Token: 0x06024327 RID: 148263 RVA: 0x004FA191 File Offset: 0x004F8391
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022392 RID: 140178 RVA: 0x004BF6DC File Offset: 0x004BD8DC
+		// Token: 0x06024328 RID: 148264 RVA: 0x004FA1A0 File Offset: 0x004F83A0
 		public IFanInteractByFKey __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A2F RID: 39471
-		// (get) Token: 0x06022393 RID: 140179 RVA: 0x004BF6EC File Offset: 0x004BD8EC
+		// Token: 0x1700A22B RID: 41515
+		// (get) Token: 0x06024329 RID: 148265 RVA: 0x004FA1B0 File Offset: 0x004F83B0
 		public EFanInteractType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A30 RID: 39472
-		// (get) Token: 0x06022394 RID: 140180 RVA: 0x004BF728 File Offset: 0x004BD928
+		// Token: 0x1700A22C RID: 41516
+		// (get) Token: 0x0602432A RID: 148266 RVA: 0x004FA1EC File Offset: 0x004F83EC
 		public string TidInteractOptionText
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022395 RID: 140181 RVA: 0x004BF75F File Offset: 0x004BD95F
+		// Token: 0x0602432B RID: 148267 RVA: 0x004FA223 File Offset: 0x004F8423
 		public Span<byte> GetTidInteractOptionTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06022396 RID: 140182 RVA: 0x004BF76E File Offset: 0x004BD96E
+		// Token: 0x0602432C RID: 148268 RVA: 0x004FA232 File Offset: 0x004F8432
 		public byte[] GetTidInteractOptionTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06022397 RID: 140183 RVA: 0x004BF77C File Offset: 0x004BD97C
+		// Token: 0x0602432D RID: 148269 RVA: 0x004FA240 File Offset: 0x004F8440
 		public static Offset<IFanInteractByFKey> CreateIFanInteractByFKey(FlatBufferBuilder builder, EFanInteractType Type = EFanInteractType.Hit, StringOffset TidInteractOptionTextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFanInteractByFKey.EndIFanInteractByFKey(builder);
 		}
 
-		// Token: 0x06022398 RID: 140184 RVA: 0x004BF799 File Offset: 0x004BD999
+		// Token: 0x0602432E RID: 148270 RVA: 0x004FA25D File Offset: 0x004F845D
 		public static void StartIFanInteractByFKey(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06022399 RID: 140185 RVA: 0x004BF7A2 File Offset: 0x004BD9A2
+		// Token: 0x0602432F RID: 148271 RVA: 0x004FA266 File Offset: 0x004F8466
 		public static void AddType(FlatBufferBuilder builder, EFanInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602239A RID: 140186 RVA: 0x004BF7AD File Offset: 0x004BD9AD
+		// Token: 0x06024330 RID: 148272 RVA: 0x004FA271 File Offset: 0x004F8471
 		public static void AddTidInteractOptionText(FlatBufferBuilder builder, StringOffset tidInteractOptionTextOffset)
 		{
 			builder.AddOffset(1, tidInteractOptionTextOffset.Value, 0);
 		}
 
-		// Token: 0x0602239B RID: 140187 RVA: 0x004BF7BD File Offset: 0x004BD9BD
+		// Token: 0x06024331 RID: 148273 RVA: 0x004FA281 File Offset: 0x004F8481
 		public static Offset<IFanInteractByFKey> EndIFanInteractByFKey(FlatBufferBuilder builder)
 		{
 			return new Offset<IFanInteractByFKey>(builder.EndTable());
 		}
 
-		// Token: 0x0602239C RID: 140188 RVA: 0x004BF7CC File Offset: 0x004BD9CC
+		// Token: 0x06024332 RID: 148274 RVA: 0x004FA290 File Offset: 0x004F8490
 		public IFanInteractByFKeyT UnPack()
 		{
 			IFanInteractByFKeyT fanInteractByFKeyT = new IFanInteractByFKeyT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fanInteractByFKeyT;
 		}
 
-		// Token: 0x0602239D RID: 140189 RVA: 0x004BF7E7 File Offset: 0x004BD9E7
+		// Token: 0x06024333 RID: 148275 RVA: 0x004FA2AB File Offset: 0x004F84AB
 		public void UnPackTo(IFanInteractByFKeyT _o)
 		{
 			_o.Type = this.Type;
 			_o.TidInteractOptionText = this.TidInteractOptionText;
 		}
 
-		// Token: 0x0602239E RID: 140190 RVA: 0x004BF804 File Offset: 0x004BDA04
+		// Token: 0x06024334 RID: 148276 RVA: 0x004FA2C8 File Offset: 0x004F84C8
 		public static Offset<IFanInteractByFKey> Pack(FlatBufferBuilder builder, IFanInteractByFKeyT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFanInteractByFKey.CreateIFanInteractByFKey(builder, _o.Type, tidInteractOptionTextOffset);
 		}
 
-		// Token: 0x0400E377 RID: 58231
+		// Token: 0x0400EF7D RID: 61309
 		private Table __p;
 	}
 }

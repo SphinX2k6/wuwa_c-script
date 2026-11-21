@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200524A RID: 21066
+	// Token: 0x020057B2 RID: 22450
 	public class IFightMusicsSwitchType_UnionUnion
 	{
-		// Token: 0x17009A55 RID: 39509
-		// (get) Token: 0x06022443 RID: 140355 RVA: 0x004C0A0D File Offset: 0x004BEC0D
-		// (set) Token: 0x06022444 RID: 140356 RVA: 0x004C0A15 File Offset: 0x004BEC15
+		// Token: 0x1700A251 RID: 41553
+		// (get) Token: 0x060243D9 RID: 148441 RVA: 0x004FB4D1 File Offset: 0x004F96D1
+		// (set) Token: 0x060243DA RID: 148442 RVA: 0x004FB4D9 File Offset: 0x004F96D9
 		public IFightMusicsSwitchType_Union Type { get; set; }
 
-		// Token: 0x17009A56 RID: 39510
-		// (get) Token: 0x06022445 RID: 140357 RVA: 0x004C0A1E File Offset: 0x004BEC1E
-		// (set) Token: 0x06022446 RID: 140358 RVA: 0x004C0A26 File Offset: 0x004BEC26
+		// Token: 0x1700A252 RID: 41554
+		// (get) Token: 0x060243DB RID: 148443 RVA: 0x004FB4E2 File Offset: 0x004F96E2
+		// (set) Token: 0x060243DC RID: 148444 RVA: 0x004FB4EA File Offset: 0x004F96EA
 		public object Value { get; set; }
 
-		// Token: 0x06022447 RID: 140359 RVA: 0x004C0A2F File Offset: 0x004BEC2F
+		// Token: 0x060243DD RID: 148445 RVA: 0x004FB4F3 File Offset: 0x004F96F3
 		public IFightMusicsSwitchType_UnionUnion()
 		{
 			this.Type = IFightMusicsSwitchType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06022448 RID: 140360 RVA: 0x004C0A45 File Offset: 0x004BEC45
+		// Token: 0x060243DE RID: 148446 RVA: 0x004FB509 File Offset: 0x004F9709
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06022449 RID: 140361 RVA: 0x004C0A57 File Offset: 0x004BEC57
+		// Token: 0x060243DF RID: 148447 RVA: 0x004FB51B File Offset: 0x004F971B
 		public IFightMusicsSwitchTypeT AsIFightMusicsSwitchType()
 		{
 			return this.As<IFightMusicsSwitchTypeT>();
 		}
 
-		// Token: 0x0602244A RID: 140362 RVA: 0x004C0A5F File Offset: 0x004BEC5F
+		// Token: 0x060243E0 RID: 148448 RVA: 0x004FB523 File Offset: 0x004F9723
 		public static IFightMusicsSwitchType_UnionUnion FromIFightMusicsSwitchType(IFightMusicsSwitchTypeT _ifightmusicsswitchtype)
 		{
 			return new IFightMusicsSwitchType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602244B RID: 140363 RVA: 0x004C0A74 File Offset: 0x004BEC74
+		// Token: 0x060243E1 RID: 148449 RVA: 0x004FB538 File Offset: 0x004F9738
 		public IFightMusicsSwitchByTagListT AsIFightMusicsSwitchByTagList()
 		{
 			return this.As<IFightMusicsSwitchByTagListT>();
 		}
 
-		// Token: 0x0602244C RID: 140364 RVA: 0x004C0A7C File Offset: 0x004BEC7C
+		// Token: 0x060243E2 RID: 148450 RVA: 0x004FB540 File Offset: 0x004F9740
 		public static IFightMusicsSwitchType_UnionUnion FromIFightMusicsSwitchByTagList(IFightMusicsSwitchByTagListT _ifightmusicsswitchbytaglist)
 		{
 			return new IFightMusicsSwitchType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602244D RID: 140365 RVA: 0x004C0A94 File Offset: 0x004BEC94
+		// Token: 0x060243E3 RID: 148451 RVA: 0x004FB558 File Offset: 0x004F9758
 		public static int Pack(FlatBufferBuilder builder, IFightMusicsSwitchType_UnionUnion _o)
 		{
 			IFightMusicsSwitchType_Union type = _o.Type;

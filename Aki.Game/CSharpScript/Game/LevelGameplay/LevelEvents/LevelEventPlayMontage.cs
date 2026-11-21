@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B53 RID: 27475
+	// Token: 0x02005CCB RID: 23755
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPlayMontage : LevelEventBase
 	{
-		// Token: 0x060441BD RID: 278973 RVA: 0x010C2883 File Offset: 0x010C0A83
+		// Token: 0x0603A30F RID: 238351 RVA: 0x0106C437 File Offset: 0x0106A637
 		public LevelEventPlayMontage(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441BE RID: 278974 RVA: 0x010C288C File Offset: 0x010C0A8C
+		// Token: 0x0603A310 RID: 238352 RVA: 0x0106C440 File Offset: 0x0106A640
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441BF RID: 278975 RVA: 0x010C2898 File Offset: 0x010C0A98
+		// Token: 0x0603A311 RID: 238353 RVA: 0x0106C44C File Offset: 0x0106A64C
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecutePlayMontageTask();
 		}
 
-		// Token: 0x060441C0 RID: 278976 RVA: 0x010C2AE8 File Offset: 0x010C0CE8
+		// Token: 0x0603A312 RID: 238354 RVA: 0x0106C69C File Offset: 0x0106A89C
 		private unsafe void ExecutePlayMontageTask()
 		{
 			this.EntityHandle = CreatureModel.Instance.GetEntityByPbDataId(this.EntityId);
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			montageManager2.PlayMontage(playMontageParam4);
 		}
 
-		// Token: 0x060441C1 RID: 278977 RVA: 0x010C2EB0 File Offset: 0x010C10B0
+		// Token: 0x0603A313 RID: 238355 RVA: 0x0106CA64 File Offset: 0x0106AC64
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.EntityHandle != handle)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441C2 RID: 278978 RVA: 0x010C2F48 File Offset: 0x010C1148
+		// Token: 0x0603A314 RID: 238356 RVA: 0x0106CAFC File Offset: 0x0106ACFC
 		[NullableContext(2)]
 		private void OnEnd(UAnimMontage montage, bool bInterrupted)
 		{
@@ -260,14 +260,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0402392E RID: 145710
+		// Token: 0x0401EBD0 RID: 125904
 		private int EntityId;
 
-		// Token: 0x0402392F RID: 145711
+		// Token: 0x0401EBD1 RID: 125905
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x04023930 RID: 145712
+		// Token: 0x0401EBD2 RID: 125906
 		[Nullable(2)]
 		private PlayMontage EventParam;
 	}

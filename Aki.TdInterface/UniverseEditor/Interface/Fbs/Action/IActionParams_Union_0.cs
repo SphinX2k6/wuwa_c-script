@@ -2,520 +2,520 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006089 RID: 24713
+	// Token: 0x020066EB RID: 26347
 	public enum IActionParams_Union_0 : byte
 	{
-		// Token: 0x04010263 RID: 66147
+		// Token: 0x04011058 RID: 69720
 		NONE,
-		// Token: 0x04010264 RID: 66148
+		// Token: 0x04011059 RID: 69721
 		IActionParams,
-		// Token: 0x04010265 RID: 66149
+		// Token: 0x0401105A RID: 69722
 		IInvoke,
-		// Token: 0x04010266 RID: 66150
+		// Token: 0x0401105B RID: 69723
 		IInteract,
-		// Token: 0x04010267 RID: 66151
+		// Token: 0x0401105C RID: 69724
 		IFinishCondition,
-		// Token: 0x04010268 RID: 66152
+		// Token: 0x0401105D RID: 69725
 		IGetRewardByInteract,
-		// Token: 0x04010269 RID: 66153
+		// Token: 0x0401105E RID: 69726
 		IWaitUntilLevelSequenceReachMark,
-		// Token: 0x0401026A RID: 66154
+		// Token: 0x0401105F RID: 69727
 		IClearEntityVisibleTag,
-		// Token: 0x0401026B RID: 66155
+		// Token: 0x04011060 RID: 69728
 		ISetEntityPos,
-		// Token: 0x0401026C RID: 66156
+		// Token: 0x04011061 RID: 69729
 		IResetEntityPos,
-		// Token: 0x0401026D RID: 66157
+		// Token: 0x04011062 RID: 69730
 		IServerSetPlayerPos,
-		// Token: 0x0401026E RID: 66158
+		// Token: 0x04011063 RID: 69731
 		IFixTeleControllerPos,
-		// Token: 0x0401026F RID: 66159
+		// Token: 0x04011064 RID: 69732
 		IFixTeleControllerResetPos,
-		// Token: 0x04010270 RID: 66160
+		// Token: 0x04011065 RID: 69733
 		IFixFoundationRelation,
-		// Token: 0x04010271 RID: 66161
+		// Token: 0x04011066 RID: 69734
 		ITraceCurrentQuest,
-		// Token: 0x04010272 RID: 66162
+		// Token: 0x04011067 RID: 69735
 		IFixShowTargetRange,
-		// Token: 0x04010273 RID: 66163
+		// Token: 0x04011068 RID: 69736
 		IFixGetItem,
-		// Token: 0x04010274 RID: 66164
+		// Token: 0x04011069 RID: 69737
 		ILog,
-		// Token: 0x04010275 RID: 66165
+		// Token: 0x0401106A RID: 69738
 		IShowMessage,
-		// Token: 0x04010276 RID: 66166
+		// Token: 0x0401106B RID: 69739
 		IPrompt,
-		// Token: 0x04010277 RID: 66167
+		// Token: 0x0401106C RID: 69740
 		ISendNpcMail,
-		// Token: 0x04010278 RID: 66168
+		// Token: 0x0401106D RID: 69741
 		IAdjustTodTime,
-		// Token: 0x04010279 RID: 66169
+		// Token: 0x0401106E RID: 69742
 		ISetAreaTimeState,
-		// Token: 0x0401027A RID: 66170
+		// Token: 0x0401106F RID: 69743
 		ISetTimeScale,
-		// Token: 0x0401027B RID: 66171
+		// Token: 0x04011070 RID: 69744
 		IJumpTalk,
-		// Token: 0x0401027C RID: 66172
+		// Token: 0x04011071 RID: 69745
 		ISetHeadIconVisible,
-		// Token: 0x0401027D RID: 66173
+		// Token: 0x04011072 RID: 69746
 		IPlayMontage,
-		// Token: 0x0401027E RID: 66174
+		// Token: 0x04011073 RID: 69747
 		IAvgPlayRoleAction,
-		// Token: 0x0401027F RID: 66175
+		// Token: 0x04011074 RID: 69748
 		IAvgMoveRole,
-		// Token: 0x04010280 RID: 66176
+		// Token: 0x04011075 RID: 69749
 		IAvgFocusRole,
-		// Token: 0x04010281 RID: 66177
+		// Token: 0x04011076 RID: 69750
 		IAvgShakeUi,
-		// Token: 0x04010282 RID: 66178
+		// Token: 0x04011077 RID: 69751
 		IDestroyDynamicEntities,
-		// Token: 0x04010283 RID: 66179
+		// Token: 0x04011078 RID: 69752
 		IActorLookAt,
-		// Token: 0x04010284 RID: 66180
+		// Token: 0x04011079 RID: 69753
 		IActorTurnTo,
-		// Token: 0x04010285 RID: 66181
+		// Token: 0x0401107A RID: 69754
 		IShowTalk,
-		// Token: 0x04010286 RID: 66182
+		// Token: 0x0401107B RID: 69755
 		IFinishTalk,
-		// Token: 0x04010287 RID: 66183
+		// Token: 0x0401107C RID: 69756
 		IShowCenterText,
-		// Token: 0x04010288 RID: 66184
+		// Token: 0x0401107D RID: 69757
 		IFinishState,
-		// Token: 0x04010289 RID: 66185
+		// Token: 0x0401107E RID: 69758
 		IChangeState,
-		// Token: 0x0401028A RID: 66186
+		// Token: 0x0401107F RID: 69759
 		IChangeBehaviorState,
-		// Token: 0x0401028B RID: 66187
+		// Token: 0x04011080 RID: 69760
 		ISetBehaviorIsPaused,
-		// Token: 0x0401028C RID: 66188
+		// Token: 0x04011081 RID: 69761
 		IChangeRandomState,
-		// Token: 0x0401028D RID: 66189
+		// Token: 0x04011082 RID: 69762
 		IChangeActorState,
-		// Token: 0x0401028E RID: 66190
+		// Token: 0x04011083 RID: 69763
 		IChangeOtherState,
-		// Token: 0x0401028F RID: 66191
+		// Token: 0x04011084 RID: 69764
 		ISetCameraMode,
-		// Token: 0x04010290 RID: 66192
+		// Token: 0x04011085 RID: 69765
+		IModifySceneUiSubtitle,
+		// Token: 0x04011086 RID: 69766
 		ISetPlotMode,
-		// Token: 0x04010291 RID: 66193
+		// Token: 0x04011087 RID: 69767
 		IPlaySequenceData,
-		// Token: 0x04010292 RID: 66194
+		// Token: 0x04011088 RID: 69768
 		IPlayCustomSequence,
-		// Token: 0x04010293 RID: 66195
+		// Token: 0x04011089 RID: 69769
 		IPlayMovie,
-		// Token: 0x04010294 RID: 66196
+		// Token: 0x0401108A RID: 69770
 		IPlayEffect,
-		// Token: 0x04010295 RID: 66197
+		// Token: 0x0401108B RID: 69771
 		IPlayEffect2,
-		// Token: 0x04010296 RID: 66198
+		// Token: 0x0401108C RID: 69772
 		IPlayCommonEffect,
-		// Token: 0x04010297 RID: 66199
+		// Token: 0x0401108D RID: 69773
 		IPlayScreenEffect,
-		// Token: 0x04010298 RID: 66200
+		// Token: 0x0401108E RID: 69774
 		ISwitchEffectState,
-		// Token: 0x04010299 RID: 66201
+		// Token: 0x0401108F RID: 69775
 		IPlayDissolveEffect,
-		// Token: 0x0401029A RID: 66202
+		// Token: 0x04011090 RID: 69776
 		IPlayMpcEffect,
-		// Token: 0x0401029B RID: 66203
+		// Token: 0x04011091 RID: 69777
 		IRemoveEffect,
-		// Token: 0x0401029C RID: 66204
+		// Token: 0x04011092 RID: 69778
 		IWait,
-		// Token: 0x0401029D RID: 66205
+		// Token: 0x04011093 RID: 69779
 		IMoveToPosA,
-		// Token: 0x0401029E RID: 66206
+		// Token: 0x04011094 RID: 69780
 		ISetMoveSpeed,
-		// Token: 0x0401029F RID: 66207
+		// Token: 0x04011095 RID: 69781
 		ISetPosA,
-		// Token: 0x040102A0 RID: 66208
+		// Token: 0x04011096 RID: 69782
 		IFaceToPos,
-		// Token: 0x040102A1 RID: 66209
+		// Token: 0x04011097 RID: 69783
 		ISpawnChild,
-		// Token: 0x040102A2 RID: 66210
+		// Token: 0x04011098 RID: 69784
 		ISimpleMove,
-		// Token: 0x040102A3 RID: 66211
+		// Token: 0x04011099 RID: 69785
 		ISetNumberVar,
-		// Token: 0x040102A4 RID: 66212
+		// Token: 0x0401109A RID: 69786
 		ISyncVarToActorState,
-		// Token: 0x040102A5 RID: 66213
+		// Token: 0x0401109B RID: 69787
 		IDoCalculate,
-		// Token: 0x040102A6 RID: 66214
+		// Token: 0x0401109C RID: 69788
 		ICallByCondition,
-		// Token: 0x040102A7 RID: 66215
+		// Token: 0x0401109D RID: 69789
 		ICallFunction,
-		// Token: 0x040102A8 RID: 66216
+		// Token: 0x0401109E RID: 69790
 		IAddFlowInteractOption,
-		// Token: 0x040102A9 RID: 66217
+		// Token: 0x0401109F RID: 69791
 		IRemoveFlowInteractOption,
-		// Token: 0x040102AA RID: 66218
+		// Token: 0x040110A0 RID: 69792
 		IChangeInteractOptionText,
-		// Token: 0x040102AB RID: 66219
+		// Token: 0x040110A1 RID: 69793
 		ISpawnEntity,
-		// Token: 0x040102AC RID: 66220
+		// Token: 0x040110A2 RID: 69794
 		IDestroyAllChild,
-		// Token: 0x040102AD RID: 66221
+		// Token: 0x040110A3 RID: 69795
 		IDestroyEntity,
-		// Token: 0x040102AE RID: 66222
+		// Token: 0x040110A4 RID: 69796
 		IPlayFlow,
-		// Token: 0x040102AF RID: 66223
+		// Token: 0x040110A5 RID: 69797
 		IBubbleData,
-		// Token: 0x040102B0 RID: 66224
+		// Token: 0x040110A6 RID: 69798
 		IPlayerLookAt,
-		// Token: 0x040102B1 RID: 66225
+		// Token: 0x040110A7 RID: 69799
 		IEntityLookAt,
-		// Token: 0x040102B2 RID: 66226
+		// Token: 0x040110A8 RID: 69800
 		ICharacterLookAt,
-		// Token: 0x040102B3 RID: 66227
+		// Token: 0x040110A9 RID: 69801
 		IPlayerLookTowards,
-		// Token: 0x040102B4 RID: 66228
+		// Token: 0x040110AA RID: 69802
 		IEntityTurnTo,
-		// Token: 0x040102B5 RID: 66229
+		// Token: 0x040110AB RID: 69803
 		ICameraLookAt,
-		// Token: 0x040102B6 RID: 66230
+		// Token: 0x040110AC RID: 69804
 		IStopCameraLookAt,
-		// Token: 0x040102B7 RID: 66231
+		// Token: 0x040110AD RID: 69805
 		ISetVar,
-		// Token: 0x040102B8 RID: 66232
+		// Token: 0x040110AE RID: 69806
 		ISetActorVar,
-		// Token: 0x040102B9 RID: 66233
+		// Token: 0x040110AF RID: 69807
 		ICalculateVar,
-		// Token: 0x040102BA RID: 66234
+		// Token: 0x040110B0 RID: 69808
 		IRandomVar,
-		// Token: 0x040102BB RID: 66235
+		// Token: 0x040110B1 RID: 69809
 		IGuideTrigger,
-		// Token: 0x040102BC RID: 66236
+		// Token: 0x040110B2 RID: 69810
 		ICompleteGuide,
-		// Token: 0x040102BD RID: 66237
+		// Token: 0x040110B3 RID: 69811
 		IGetItem,
-		// Token: 0x040102BE RID: 66238
+		// Token: 0x040110B4 RID: 69812
 		IDestroyQuestItem,
-		// Token: 0x040102BF RID: 66239
+		// Token: 0x040110B5 RID: 69813
 		IAwakeEntity,
-		// Token: 0x040102C0 RID: 66240
+		// Token: 0x040110B6 RID: 69814
 		ISetEntityVisible,
-		// Token: 0x040102C1 RID: 66241
+		// Token: 0x040110B7 RID: 69815
 		ISetEntityClientVisible,
-		// Token: 0x040102C2 RID: 66242
+		// Token: 0x040110B8 RID: 69816
 		ISetEntityClientVisibleSave,
-		// Token: 0x040102C3 RID: 66243
+		// Token: 0x040110B9 RID: 69817
 		ILockEntity,
-		// Token: 0x040102C4 RID: 66244
+		// Token: 0x040110BA RID: 69818
 		IUnlockEntity,
-		// Token: 0x040102C5 RID: 66245
+		// Token: 0x040110BB RID: 69819
 		ICompleteChildQuest,
-		// Token: 0x040102C6 RID: 66246
+		// Token: 0x040110BC RID: 69820
 		IAcceptCurrentQuest,
-		// Token: 0x040102C7 RID: 66247
+		// Token: 0x040110BD RID: 69821
 		IFinishDoInteract,
-		// Token: 0x040102C8 RID: 66248
+		// Token: 0x040110BE RID: 69822
+		IModifyEntityDecoration,
+		// Token: 0x040110BF RID: 69823
 		IAddBuffToEntity,
-		// Token: 0x040102C9 RID: 66249
+		// Token: 0x040110C0 RID: 69824
 		IAddBuffToPlayer,
-		// Token: 0x040102CA RID: 66250
+		// Token: 0x040110C1 RID: 69825
 		IAddBuffToFollowShooter,
-		// Token: 0x040102CB RID: 66251
+		// Token: 0x040110C2 RID: 69826
 		IOpenSystemBoard,
-		// Token: 0x040102CC RID: 66252
+		// Token: 0x040110C3 RID: 69827
 		IOpenSystemFunction,
-		// Token: 0x040102CD RID: 66253
+		// Token: 0x040110C4 RID: 69828
 		IChangeEntityState,
-		// Token: 0x040102CE RID: 66254
+		// Token: 0x040110C5 RID: 69829
 		IChangeEntityStateDirectly,
-		// Token: 0x040102CF RID: 66255
+		// Token: 0x040110C6 RID: 69830
 		IChangeEntityStateBatchDirectly,
-		// Token: 0x040102D0 RID: 66256
+		// Token: 0x040110C7 RID: 69831
 		IChangeEntityStateLoop,
-		// Token: 0x040102D1 RID: 66257
+		// Token: 0x040110C8 RID: 69832
 		IChangeNpcPerformState,
-		// Token: 0x040102D2 RID: 66258
+		// Token: 0x040110C9 RID: 69833
 		ISetForceLock,
-		// Token: 0x040102D3 RID: 66259
+		// Token: 0x040110CA RID: 69834
 		ISetAreaState,
-		// Token: 0x040102D4 RID: 66260
+		// Token: 0x040110CB RID: 69835
 		ISetWuYinQuState,
-		// Token: 0x040102D5 RID: 66261
+		// Token: 0x040110CC RID: 69836
 		IRemoveBuffFromEntity,
-		// Token: 0x040102D6 RID: 66262
+		// Token: 0x040110CD RID: 69837
 		IRemoveBuffFromPlayer,
-		// Token: 0x040102D7 RID: 66263
+		// Token: 0x040110CE RID: 69838
 		ICollect,
-		// Token: 0x040102D8 RID: 66264
+		// Token: 0x040110CF RID: 69839
 		IDestroy,
-		// Token: 0x040102D9 RID: 66265
+		// Token: 0x040110D0 RID: 69840
 		IDestroySelf,
-		// Token: 0x040102DA RID: 66266
+		// Token: 0x040110D1 RID: 69841
 		ISetPlayerMoveControl,
-		// Token: 0x040102DB RID: 66267
+		// Token: 0x040110D2 RID: 69842
 		IUnlockTeleportTrigger,
-		// Token: 0x040102DC RID: 66268
+		// Token: 0x040110D3 RID: 69843
 		IChangeTeamPosition,
-		// Token: 0x040102DD RID: 66269
+		// Token: 0x040110D4 RID: 69844
 		IClientChangeTeamPosition,
-		// Token: 0x040102DE RID: 66270
+		// Token: 0x040110D5 RID: 69845
 		IClaimLevelPlayReward,
-		// Token: 0x040102DF RID: 66271
+		// Token: 0x040110D6 RID: 69846
 		IClaimDynamicEntityReward,
-		// Token: 0x040102E0 RID: 66272
+		// Token: 0x040110D7 RID: 69847
 		IClearFishingCabinInSaleItems,
-		// Token: 0x040102E1 RID: 66273
+		// Token: 0x040110D8 RID: 69848
 		IAcceptFishingEntrust,
-		// Token: 0x040102E2 RID: 66274
+		// Token: 0x040110D9 RID: 69849
 		IDestroyFishingBoat,
-		// Token: 0x040102E3 RID: 66275
+		// Token: 0x040110DA RID: 69850
 		ITeleportDungeon,
-		// Token: 0x040102E4 RID: 66276
+		// Token: 0x040110DB RID: 69851
 		IStopUiScreenEffect,
-		// Token: 0x040102E5 RID: 66277
+		// Token: 0x040110DC RID: 69852
 		IClaimDungeonReward,
-		// Token: 0x040102E6 RID: 66278
+		// Token: 0x040110DD RID: 69853
 		ISettlementDungeon,
-		// Token: 0x040102E7 RID: 66279
+		// Token: 0x040110DE RID: 69854
 		IExitDungeon,
-		// Token: 0x040102E8 RID: 66280
+		// Token: 0x040110DF RID: 69855
 		IUnlockDungeonEntry,
-		// Token: 0x040102E9 RID: 66281
+		// Token: 0x040110E0 RID: 69856
 		IFinishDungeon,
-		// Token: 0x040102EA RID: 66282
+		// Token: 0x040110E1 RID: 69857
 		ISetReviveRegion,
-		// Token: 0x040102EB RID: 66283
+		// Token: 0x040110E2 RID: 69858
 		IPromptQuestChapterUI,
-		// Token: 0x040102EC RID: 66284
+		// Token: 0x040110E3 RID: 69859
 		IFireBullet,
-		// Token: 0x040102ED RID: 66285
+		// Token: 0x040110E4 RID: 69860
 		IFireBulletEffect,
-		// Token: 0x040102EE RID: 66286
+		// Token: 0x040110E5 RID: 69861
+		ISetAssistCharacterPos,
+		// Token: 0x040110E6 RID: 69862
 		ISetPlayerPos,
-		// Token: 0x040102EF RID: 66287
+		// Token: 0x040110E7 RID: 69863
 		IClientSetPlayerPos,
-		// Token: 0x040102F0 RID: 66288
+		// Token: 0x040110E8 RID: 69864
 		IClientPreEnableSubLevels,
-		// Token: 0x040102F1 RID: 66289
+		// Token: 0x040110E9 RID: 69865
 		IRogueGotoNextFloor,
-		// Token: 0x040102F2 RID: 66290
+		// Token: 0x040110EA RID: 69866
 		IRogueSelectRoom,
-		// Token: 0x040102F3 RID: 66291
+		// Token: 0x040110EB RID: 69867
 		IRogueActivatePortal,
-		// Token: 0x040102F4 RID: 66292
+		// Token: 0x040110EC RID: 69868
 		IRogueReceiveReward,
-		// Token: 0x040102F5 RID: 66293
+		// Token: 0x040110ED RID: 69869
 		IChangeSelfEntityState,
-		// Token: 0x040102F6 RID: 66294
+		// Token: 0x040110EE RID: 69870
 		IInterludeActions,
-		// Token: 0x040102F7 RID: 66295
+		// Token: 0x040110EF RID: 69871
 		IAddBuffToTriggeredEntity,
-		// Token: 0x040102F8 RID: 66296
+		// Token: 0x040110F0 RID: 69872
 		IRemoveBuffToTriggeredEntity,
-		// Token: 0x040102F9 RID: 66297
+		// Token: 0x040110F1 RID: 69873
 		IDetectTrigger,
-		// Token: 0x040102FA RID: 66298
+		// Token: 0x040110F2 RID: 69874
 		IItemFoundationMatch,
-		// Token: 0x040102FB RID: 66299
+		// Token: 0x040110F3 RID: 69875
 		ISetBattleState,
-		// Token: 0x040102FC RID: 66300
+		// Token: 0x040110F4 RID: 69876
 		IExecBattleAction,
-		// Token: 0x040102FD RID: 66301
+		// Token: 0x040110F5 RID: 69877
 		IExecClientMonsterNpcInteract,
-		// Token: 0x040102FE RID: 66302
+		// Token: 0x040110F6 RID: 69878
 		IExecClientBattleAction,
-		// Token: 0x040102FF RID: 66303
+		// Token: 0x040110F7 RID: 69879
 		IWaitBattleCondition,
-		// Token: 0x04010300 RID: 66304
+		// Token: 0x040110F8 RID: 69880
 		IEnableHostility,
-		// Token: 0x04010301 RID: 66305
+		// Token: 0x040110F9 RID: 69881
 		IUnlockSystemItem,
-		// Token: 0x04010302 RID: 66306
+		// Token: 0x040110FA RID: 69882
 		IClientUnlockAchievementSystemItem,
-		// Token: 0x04010303 RID: 66307
+		// Token: 0x040110FB RID: 69883
 		IAddPlayBubble,
-		// Token: 0x04010304 RID: 66308
+		// Token: 0x040110FC RID: 69884
 		IPlayBubble,
-		// Token: 0x04010305 RID: 66309
+		// Token: 0x040110FD RID: 69885
 		IClearPlayBubble,
-		// Token: 0x04010306 RID: 66310
+		// Token: 0x040110FE RID: 69886
 		IMoveWithSpline,
-		// Token: 0x04010307 RID: 66311
+		// Token: 0x040110FF RID: 69887
 		INewMoveWithSpline,
-		// Token: 0x04010308 RID: 66312
+		// Token: 0x04011100 RID: 69888
 		IStopNewMoveWithSpline,
-		// Token: 0x04010309 RID: 66313
+		// Token: 0x04011101 RID: 69889
 		ICharacterMoveToPoint,
-		// Token: 0x0401030A RID: 66314
+		// Token: 0x04011102 RID: 69890
 		IPlayerMoveToPoint,
-		// Token: 0x0401030B RID: 66315
+		// Token: 0x04011103 RID: 69891
 		INpcMoveToPoint,
-		// Token: 0x0401030C RID: 66316
+		// Token: 0x04011104 RID: 69892
 		IToggleScanSplineEffect,
-		// Token: 0x0401030D RID: 66317
+		// Token: 0x04011105 RID: 69893
 		IOpenTraceSpline,
-		// Token: 0x0401030E RID: 66318
+		// Token: 0x04011106 RID: 69894
 		ICloseTraceSpline,
-		// Token: 0x0401030F RID: 66319
+		// Token: 0x04011107 RID: 69895
 		ITraceSpline,
-		// Token: 0x04010310 RID: 66320
+		// Token: 0x04011108 RID: 69896
 		IEnableAI,
-		// Token: 0x04010311 RID: 66321
+		// Token: 0x04011109 RID: 69897
 		IRunActions,
-		// Token: 0x04010312 RID: 66322
+		// Token: 0x0401110A RID: 69898
 		ICommonTip,
-		// Token: 0x04010313 RID: 66323
+		// Token: 0x0401110B RID: 69899
 		ICommonTip2,
-		// Token: 0x04010314 RID: 66324
+		// Token: 0x0401110C RID: 69900
 		IEndCommonTip,
-		// Token: 0x04010315 RID: 66325
+		// Token: 0x0401110D RID: 69901
 		IEnableNearbyTracking,
-		// Token: 0x04010316 RID: 66326
+		// Token: 0x0401110E RID: 69902
 		ISendAiEvent,
-		// Token: 0x04010317 RID: 66327
+		// Token: 0x0401110F RID: 69903
 		IEnableLevelPlay,
-		// Token: 0x04010318 RID: 66328
+		// Token: 0x04011110 RID: 69904
 		IServerForceEnableLevelPlay,
-		// Token: 0x04010319 RID: 66329
+		// Token: 0x04011111 RID: 69905
 		ITeleportDungeonPos,
-		// Token: 0x0401031A RID: 66330
+		// Token: 0x04011112 RID: 69906
 		IFadeInScreen,
-		// Token: 0x0401031B RID: 66331
+		// Token: 0x04011113 RID: 69907
 		IFadeOutScreen,
-		// Token: 0x0401031C RID: 66332
+		// Token: 0x04011114 RID: 69908
 		IStartFlowTemplate,
-		// Token: 0x0401031D RID: 66333
+		// Token: 0x04011115 RID: 69909
 		IEndFlowTemplate,
-		// Token: 0x0401031E RID: 66334
+		// Token: 0x04011116 RID: 69910
 		ICloseFlowTemplate,
-		// Token: 0x0401031F RID: 66335
+		// Token: 0x04011117 RID: 69911
 		IChangeFlowTemplate,
-		// Token: 0x04010320 RID: 66336
+		// Token: 0x04011118 RID: 69912
 		IBeginFlowTemplate,
-		// Token: 0x04010321 RID: 66337
+		// Token: 0x04011119 RID: 69913
 		ISetFlowTemplate,
-		// Token: 0x04010322 RID: 66338
+		// Token: 0x0401111A RID: 69914
 		IHideTargetRange,
-		// Token: 0x04010323 RID: 66339
+		// Token: 0x0401111B RID: 69915
 		IShowTargetRange,
-		// Token: 0x04010324 RID: 66340
+		// Token: 0x0401111C RID: 69916
 		IHideSpecificEntities,
-		// Token: 0x04010325 RID: 66341
+		// Token: 0x0401111D RID: 69917
 		IShowSpecificEntities,
-		// Token: 0x04010326 RID: 66342
+		// Token: 0x0401111E RID: 69918
 		IHideGroup,
-		// Token: 0x04010327 RID: 66343
+		// Token: 0x0401111F RID: 69919
 		IShowHidedGroup,
-		// Token: 0x04010328 RID: 66344
+		// Token: 0x04011120 RID: 69920
 		ISetSubScreenMode,
-		// Token: 0x04010329 RID: 66345
+		// Token: 0x04011121 RID: 69921
 		IToggleDragActorPlay,
-		// Token: 0x0401032A RID: 66346
+		// Token: 0x04011122 RID: 69922
+		IDarkTideSetMapMarkState,
+		// Token: 0x04011123 RID: 69923
 		IManualOccupations,
-		// Token: 0x0401032B RID: 66347
+		// Token: 0x04011124 RID: 69924
 		IForceOccupations,
-		// Token: 0x0401032C RID: 66348
+		// Token: 0x04011125 RID: 69925
 		IChangeFightTeam,
-		// Token: 0x0401032D RID: 66349
+		// Token: 0x04011126 RID: 69926
 		IActiveRange,
-		// Token: 0x0401032E RID: 66350
+		// Token: 0x04011127 RID: 69927
 		IAddTrialCharacter,
-		// Token: 0x0401032F RID: 66351
+		// Token: 0x04011128 RID: 69928
 		IUpdateTrialCharacter,
-		// Token: 0x04010330 RID: 66352
+		// Token: 0x04011129 RID: 69929
 		IRestoreTrialCharacter,
-		// Token: 0x04010331 RID: 66353
+		// Token: 0x0401112A RID: 69930
 		IRemoveTrialCharacter,
-		// Token: 0x04010332 RID: 66354
+		// Token: 0x0401112B RID: 69931
 		IAddGuestCharacter,
-		// Token: 0x04010333 RID: 66355
+		// Token: 0x0401112C RID: 69932
 		IRemoveGuestCharacter,
-		// Token: 0x04010334 RID: 66356
+		// Token: 0x0401112D RID: 69933
 		IDestroyQuest,
-		// Token: 0x04010335 RID: 66357
+		// Token: 0x0401112E RID: 69934
 		ISetCameraAnim,
-		// Token: 0x04010336 RID: 66358
+		// Token: 0x0401112F RID: 69935
 		IChangeTimer,
-		// Token: 0x04010337 RID: 66359
+		// Token: 0x04011130 RID: 69936
 		IToggleTimerPauseState,
-		// Token: 0x04010338 RID: 66360
+		// Token: 0x04011131 RID: 69937
 		IRotatorEntity,
-		// Token: 0x04010339 RID: 66361
+		// Token: 0x04011132 RID: 69938
 		IUnLimitPlayerOperation,
-		// Token: 0x0401033A RID: 66362
+		// Token: 0x04011133 RID: 69939
 		ILimitPlayerOperation,
-		// Token: 0x0401033B RID: 66363
+		// Token: 0x04011134 RID: 69940
 		IEnableSystem,
-		// Token: 0x0401033C RID: 66364
+		// Token: 0x04011135 RID: 69941
 		ILeisureInteract,
-		// Token: 0x0401033D RID: 66365
+		// Token: 0x04011136 RID: 69942
 		INpcLeisureInteract,
-		// Token: 0x0401033E RID: 66366
+		// Token: 0x04011137 RID: 69943
 		IPostAkEvent,
-		// Token: 0x0401033F RID: 66367
+		// Token: 0x04011138 RID: 69944
 		IMoveSceneItem,
-		// Token: 0x04010340 RID: 66368
+		// Token: 0x04011139 RID: 69945
 		IStopSceneItemMove,
-		// Token: 0x04010341 RID: 66369
+		// Token: 0x0401113A RID: 69946
 		IChangeLiftTarget,
-		// Token: 0x04010342 RID: 66370
+		// Token: 0x0401113B RID: 69947
 		IHideByRangeInFlow,
-		// Token: 0x04010343 RID: 66371
+		// Token: 0x0401113C RID: 69948
 		IShowAllHidedGroupInFlow,
-		// Token: 0x04010344 RID: 66372
+		// Token: 0x0401113D RID: 69949
 		IOpenSimpleGameplay,
-		// Token: 0x04010345 RID: 66373
-		ICloseSimpleGameplay,
-		// Token: 0x04010346 RID: 66374
+		// Token: 0x0401113E RID: 69950
+		IToggleRideFlyingCarUiGameplay,
+		// Token: 0x0401113F RID: 69951
 		IChangePhantom,
-		// Token: 0x04010347 RID: 66375
+		// Token: 0x04011140 RID: 69952
 		IRestorePhantom,
-		// Token: 0x04010348 RID: 66376
+		// Token: 0x04011141 RID: 69953
 		ITakePlotPhoto,
-		// Token: 0x04010349 RID: 66377
+		// Token: 0x04011142 RID: 69954
 		IChangeActorTalker,
-		// Token: 0x0401034A RID: 66378
+		// Token: 0x04011143 RID: 69955
 		ISwitchSubLevels,
-		// Token: 0x0401034B RID: 66379
+		// Token: 0x04011144 RID: 69956
 		ISwitchSubLevelsDirectly,
-		// Token: 0x0401034C RID: 66380
+		// Token: 0x04011145 RID: 69957
 		IPreloadSubLevels,
-		// Token: 0x0401034D RID: 66381
+		// Token: 0x04011146 RID: 69958
 		ISwitchPermission,
-		// Token: 0x0401034E RID: 66382
+		// Token: 0x04011147 RID: 69959
 		ISwitchDataLayers,
-		// Token: 0x0401034F RID: 66383
+		// Token: 0x04011148 RID: 69960
 		IActivateResetPoint,
-		// Token: 0x04010350 RID: 66384
+		// Token: 0x04011149 RID: 69961
 		ITeleportToLatestResetPoint,
-		// Token: 0x04010351 RID: 66385
+		// Token: 0x0401114A RID: 69962
 		ISetWeather,
-		// Token: 0x04010352 RID: 66386
+		// Token: 0x0401114B RID: 69963
 		ISetTimeLockState,
-		// Token: 0x04010353 RID: 66387
+		// Token: 0x0401114C RID: 69964
 		ISetWeatherLockState,
-		// Token: 0x04010354 RID: 66388
+		// Token: 0x0401114D RID: 69965
 		IClientSetSeasonState,
-		// Token: 0x04010355 RID: 66389
+		// Token: 0x0401114E RID: 69966
 		IAxisLockScreenConfig,
-		// Token: 0x04010356 RID: 66390
+		// Token: 0x0401114F RID: 69967
 		IAdjustPlayerCamera,
-		// Token: 0x04010357 RID: 66391
+		// Token: 0x04011150 RID: 69968
 		IRestorePlayerCameraAdjustment,
-		// Token: 0x04010358 RID: 66392
+		// Token: 0x04011151 RID: 69969
 		IAdjustPlayerCameraGravity,
-		// Token: 0x04010359 RID: 66393
+		// Token: 0x04011152 RID: 69970
 		IEnterMovieCamera,
-		// Token: 0x0401035A RID: 66394
+		// Token: 0x04011153 RID: 69971
 		IExitMovieCamera,
-		// Token: 0x0401035B RID: 66395
+		// Token: 0x04011154 RID: 69972
 		IResetPlayerCameraFocus,
-		// Token: 0x0401035C RID: 66396
+		// Token: 0x04011155 RID: 69973
 		IUsePhantomSkill,
-		// Token: 0x0401035D RID: 66397
+		// Token: 0x04011156 RID: 69974
 		IChangePhantomFormation,
-		// Token: 0x0401035E RID: 66398
-		IRestorePhantomFormation,
-		// Token: 0x0401035F RID: 66399
-		IEnterOrbitalCamera,
-		// Token: 0x04010360 RID: 66400
-		IExitOrbitalCamera,
-		// Token: 0x04010361 RID: 66401
-		IEnableSplineMoveModel,
-		// Token: 0x04010362 RID: 66402
-		IEnableActor
+		// Token: 0x04011157 RID: 69975
+		IRestorePhantomFormation
 	}
 }

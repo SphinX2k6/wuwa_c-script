@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001033 RID: 4147
+// Token: 0x020004E7 RID: 1255
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A7C RID: 27260 RVA: 0x00156019 File Offset: 0x00154219
+	// Token: 0x06003E11 RID: 15889 RVA: 0x0015E941 File Offset: 0x0015CB41
 	public GuessJokerAiDrawCardTask(JokerGuessDrawCardAction data)
 	{
 		this.CardId = data.DrawCard;
 		this.SkillId = data.PreSkill;
 	}
 
-	// Token: 0x06006A7D RID: 27261 RVA: 0x0015603C File Offset: 0x0015423C
+	// Token: 0x06003E12 RID: 15890 RVA: 0x0015E964 File Offset: 0x0015CB64
 	protected override void OnExecute()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -42,7 +42,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list.ToArray());
 	}
 
-	// Token: 0x06006A7E RID: 27262 RVA: 0x00156150 File Offset: 0x00154350
+	// Token: 0x06003E13 RID: 15891 RVA: 0x0015EA78 File Offset: 0x0015CC78
 	private List<GuessJokerActionBase> GetDrawCardActionsBySkill()
 	{
 		if (this.SkillId == 151001)
@@ -56,7 +56,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		return this.GetDefaultDrawCardActions();
 	}
 
-	// Token: 0x06006A7F RID: 27263 RVA: 0x00156190 File Offset: 0x00154390
+	// Token: 0x06003E14 RID: 15892 RVA: 0x0015EAB8 File Offset: 0x0015CCB8
 	private List<GuessJokerActionBase> GetDefaultDrawCardActions()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -82,7 +82,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		return list;
 	}
 
-	// Token: 0x06006A80 RID: 27264 RVA: 0x00156250 File Offset: 0x00154450
+	// Token: 0x06003E15 RID: 15893 RVA: 0x0015EB78 File Offset: 0x0015CD78
 	private List<GuessJokerActionBase> GetPlayerDrawCardActions()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -109,7 +109,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		return list;
 	}
 
-	// Token: 0x06006A81 RID: 27265 RVA: 0x0015631C File Offset: 0x0015451C
+	// Token: 0x06003E16 RID: 15894 RVA: 0x0015EC44 File Offset: 0x0015CE44
 	private List<GuessJokerActionBase> GetLuhesiDrawCardActions()
 	{
 		int jokerCardId = GuessJokerGamePlayModel.Instance.GetJokerCardId();
@@ -164,7 +164,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		};
 	}
 
-	// Token: 0x06006A82 RID: 27266 RVA: 0x00156484 File Offset: 0x00154684
+	// Token: 0x06003E17 RID: 15895 RVA: 0x0015EDAC File Offset: 0x0015CFAC
 	private List<GuessJokerActionBase> GetDefaultGetCardActions()
 	{
 		List<GuessJokerActionBase> list = new List<GuessJokerActionBase>();
@@ -174,10 +174,7 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		bool flag2 = cardDataById != null && cardDataById.IsBlank();
 		list.Add(new GuessJokerCallbackAction(delegate()
 		{
-			GuessJokerGamePlayModel.Instance.UpdateCardBelongPlayerType(new int[]
-			{
-				this.CardId
-			}, new EGuessJokerPlayerType?(EGuessJokerPlayerType.Ai));
+			GuessJokerGamePlayModel.Instance.UpdateCardBelongPlayerType(new <>z__ReadOnlySingleElementList<int>(this.CardId), new EGuessJokerPlayerType?(EGuessJokerPlayerType.Ai));
 			GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
 			if (instance == null)
 			{
@@ -234,9 +231,9 @@ public class GuessJokerAiDrawCardTask : GuessJokerTaskBase
 		return list;
 	}
 
-	// Token: 0x04003113 RID: 12563
+	// Token: 0x040031AC RID: 12716
 	private readonly int CardId;
 
-	// Token: 0x04003114 RID: 12564
+	// Token: 0x040031AD RID: 12717
 	private readonly int SkillId;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BFD RID: 11261
+// Token: 0x02002178 RID: 8568
 [NullableContext(2)]
 [Nullable(0)]
 public class TowerNormalView : UiViewBase
 {
-	// Token: 0x06017637 RID: 95799 RVA: 0x005F3AAA File Offset: 0x005F1CAA
+	// Token: 0x06015068 RID: 86120 RVA: 0x006205DD File Offset: 0x0061E7DD
 	[NullableContext(1)]
 	public TowerNormalView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017638 RID: 95800 RVA: 0x005F3ABC File Offset: 0x005F1CBC
+	// Token: 0x06015069 RID: 86121 RVA: 0x006205F0 File Offset: 0x0061E7F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 23;
@@ -95,7 +94,7 @@ public class TowerNormalView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017639 RID: 95801 RVA: 0x005F3ED8 File Offset: 0x005F20D8
+	// Token: 0x0601506A RID: 86122 RVA: 0x00620A0C File Offset: 0x0061EC0C
 	private UniTask BackToBattleView()
 	{
 		TowerNormalView.<BackToBattleView>d__12 <BackToBattleView>d__;
@@ -106,19 +105,19 @@ public class TowerNormalView : UiViewBase
 		return <BackToBattleView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601763A RID: 95802 RVA: 0x005F3F1B File Offset: 0x005F211B
+	// Token: 0x0601506B RID: 86123 RVA: 0x00620A4F File Offset: 0x0061EC4F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnTowerRewardReceived, new Action(this.RefreshRewardProgress));
 	}
 
-	// Token: 0x0601763B RID: 95803 RVA: 0x005F3F39 File Offset: 0x005F2139
+	// Token: 0x0601506C RID: 86124 RVA: 0x00620A6D File Offset: 0x0061EC6D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnTowerRewardReceived, new Action(this.RefreshRewardProgress));
 	}
 
-	// Token: 0x0601763C RID: 95804 RVA: 0x005F3F58 File Offset: 0x005F2158
+	// Token: 0x0601506D RID: 86125 RVA: 0x00620A8C File Offset: 0x0061EC8C
 	protected override void OnStart()
 	{
 		int? num = this.OpenParam as int?;
@@ -200,7 +199,7 @@ public class TowerNormalView : UiViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x0601763D RID: 95805 RVA: 0x005F41AF File Offset: 0x005F23AF
+	// Token: 0x0601506E RID: 86126 RVA: 0x00620CE3 File Offset: 0x0061EEE3
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -218,7 +217,7 @@ public class TowerNormalView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601763E RID: 95806 RVA: 0x005F41E0 File Offset: 0x005F23E0
+	// Token: 0x0601506F RID: 86127 RVA: 0x00620D14 File Offset: 0x0061EF14
 	protected override void OnBeforeShow()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.TowerReward, base.GetItem(6), null, 0);
@@ -234,7 +233,7 @@ public class TowerNormalView : UiViewBase
 		EventSystem.Instance.Emit<int>(EEventName.RedDotTowerRewardByDifficulties, 4);
 	}
 
-	// Token: 0x0601763F RID: 95807 RVA: 0x005F42C0 File Offset: 0x005F24C0
+	// Token: 0x06015070 RID: 86128 RVA: 0x00620DF4 File Offset: 0x0061EFF4
 	protected override void OnBeforeDestroy()
 	{
 		InstanceDungeonEntranceController.Instance.RestoreDungeonEntranceEntity();
@@ -257,7 +256,7 @@ public class TowerNormalView : UiViewBase
 		InstanceDungeonEntranceController.Instance.RestoreDungeonEntranceEntity();
 	}
 
-	// Token: 0x06017640 RID: 95808 RVA: 0x005F4324 File Offset: 0x005F2524
+	// Token: 0x06015071 RID: 86129 RVA: 0x00620E58 File Offset: 0x0061F058
 	protected override void OnAfterHide()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.TowerReward, base.GetItem(6), 0);
@@ -267,14 +266,14 @@ public class TowerNormalView : UiViewBase
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.TowerRewardByDifficulties, base.GetItem(22), 4);
 	}
 
-	// Token: 0x06017641 RID: 95809 RVA: 0x005F4399 File Offset: 0x005F2599
+	// Token: 0x06015072 RID: 86130 RVA: 0x00620ECD File Offset: 0x0061F0CD
 	[NullableContext(1)]
 	private TowerAreaItem InitItem()
 	{
 		return new TowerAreaItem();
 	}
 
-	// Token: 0x06017642 RID: 95810 RVA: 0x005F43A0 File Offset: 0x005F25A0
+	// Token: 0x06015073 RID: 86131 RVA: 0x00620ED4 File Offset: 0x0061F0D4
 	private void OnLowRiskChange(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -292,7 +291,7 @@ public class TowerNormalView : UiViewBase
 		this.ChangeDifficulty(1);
 	}
 
-	// Token: 0x06017643 RID: 95811 RVA: 0x005F4408 File Offset: 0x005F2608
+	// Token: 0x06015074 RID: 86132 RVA: 0x00620F3C File Offset: 0x0061F13C
 	private void OnHighRiskChange(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -310,7 +309,7 @@ public class TowerNormalView : UiViewBase
 		this.ChangeDifficulty(2);
 	}
 
-	// Token: 0x06017644 RID: 95812 RVA: 0x005F4470 File Offset: 0x005F2670
+	// Token: 0x06015075 RID: 86133 RVA: 0x00620FA4 File Offset: 0x0061F1A4
 	private void OnOverLockChange(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -328,7 +327,7 @@ public class TowerNormalView : UiViewBase
 		this.ChangeDifficulty(4);
 	}
 
-	// Token: 0x06017645 RID: 95813 RVA: 0x005F44D8 File Offset: 0x005F26D8
+	// Token: 0x06015076 RID: 86134 RVA: 0x0062100C File Offset: 0x0061F20C
 	private void ChangeDifficulty(int difficulty)
 	{
 		TowerModel.Instance.CurrentSelectDifficulties = difficulty;
@@ -338,7 +337,7 @@ public class TowerNormalView : UiViewBase
 		if (this.CurrentDifficulty == 4)
 		{
 			this.AreaLayout.RefreshByData(Array.Empty<int>(), null, false);
-			this.RedAreaLayout.RefreshByData(difficultyAllAreaFirstFloor.ToList<int>(), null, false);
+			this.RedAreaLayout.RefreshByData(difficultyAllAreaFirstFloor, null, false);
 			if (!TowerModel.Instance.CurrentTowerLock)
 			{
 				TowerModel.Instance.SetOverLockHasShow();
@@ -347,14 +346,14 @@ public class TowerNormalView : UiViewBase
 		else
 		{
 			this.RedAreaLayout.RefreshByData(Array.Empty<int>(), null, false);
-			this.AreaLayout.RefreshByData(difficultyAllAreaFirstFloor.ToList<int>(), null, false);
+			this.AreaLayout.RefreshByData(difficultyAllAreaFirstFloor, null, false);
 		}
 		this.RefreshRewardProgress();
 		EventSystem.Instance.Emit(EEventName.RedDotTowerReward);
 		EventSystem.Instance.Emit<int>(EEventName.RedDotTowerRewardByDifficulties, this.CurrentDifficulty);
 	}
 
-	// Token: 0x06017646 RID: 95814 RVA: 0x005F45A4 File Offset: 0x005F27A4
+	// Token: 0x06015077 RID: 86135 RVA: 0x006210CC File Offset: 0x0061F2CC
 	private void OnClickRewardBtn()
 	{
 		TowerModel instance = TowerModel.Instance;
@@ -370,7 +369,7 @@ public class TowerNormalView : UiViewBase
 		});
 	}
 
-	// Token: 0x06017647 RID: 95815 RVA: 0x005F4624 File Offset: 0x005F2824
+	// Token: 0x06015078 RID: 86136 RVA: 0x0062114C File Offset: 0x0061F34C
 	private void OnClickChangeTowerBtn()
 	{
 		if (UiManager.Instance.GetViewByName(EUiViewName.TowerVariationView) != null)
@@ -381,13 +380,13 @@ public class TowerNormalView : UiViewBase
 		UiManager.Instance.OpenViewAsync(EUiViewName.TowerVariationView, null, null);
 	}
 
-	// Token: 0x06017648 RID: 95816 RVA: 0x005F4664 File Offset: 0x005F2864
+	// Token: 0x06015079 RID: 86137 RVA: 0x0062118C File Offset: 0x0061F38C
 	private void OnClickShopBtn()
 	{
 		PayShopController.Instance.OpenPayShopViewWithTab(PayShopDefine.EPayShopTabType.ActivityShop, 0);
 	}
 
-	// Token: 0x06017649 RID: 95817 RVA: 0x005F4674 File Offset: 0x005F2874
+	// Token: 0x0601507A RID: 86138 RVA: 0x0062119C File Offset: 0x0061F39C
 	private void RefreshRewardProgress()
 	{
 		TowerModel instance = TowerModel.Instance;
@@ -431,7 +430,7 @@ public class TowerNormalView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601764A RID: 95818 RVA: 0x005F472C File Offset: 0x005F292C
+	// Token: 0x0601507B RID: 86139 RVA: 0x00621254 File Offset: 0x0061F454
 	private void RefreshTowerLockState()
 	{
 		switch (this.CurrentDifficulty)
@@ -457,10 +456,10 @@ public class TowerNormalView : UiViewBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0400AEFA RID: 44794
+	// Token: 0x0400B2FF RID: 45823
 	private UUIExtendToggle CurrentToggle;
 
-	// Token: 0x0400AEFB RID: 44795
+	// Token: 0x0400B300 RID: 45824
 	[Nullable(new byte[]
 	{
 		2,
@@ -468,7 +467,7 @@ public class TowerNormalView : UiViewBase
 	})]
 	private GenericLayout<TowerAreaItem, int> AreaLayout;
 
-	// Token: 0x0400AEFC RID: 44796
+	// Token: 0x0400B301 RID: 45825
 	[Nullable(new byte[]
 	{
 		2,
@@ -476,73 +475,73 @@ public class TowerNormalView : UiViewBase
 	})]
 	private GenericLayout<TowerAreaItem, int> RedAreaLayout;
 
-	// Token: 0x0400AEFD RID: 44797
+	// Token: 0x0400B302 RID: 45826
 	private bool IsLowRiskClear;
 
-	// Token: 0x0400AEFE RID: 44798
+	// Token: 0x0400B303 RID: 45827
 	private bool IsHighRiskClear;
 
-	// Token: 0x0400AEFF RID: 44799
+	// Token: 0x0400B304 RID: 45828
 	private bool IsVariationRiskClear;
 
-	// Token: 0x0400AF00 RID: 44800
+	// Token: 0x0400B305 RID: 45829
 	private TowerTitleItem TitleItem;
 
-	// Token: 0x0400AF01 RID: 44801
+	// Token: 0x0400B306 RID: 45830
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400AF02 RID: 44802
+	// Token: 0x0400B307 RID: 45831
 	private int CurrentDifficulty = 1;
 
-	// Token: 0x020091C1 RID: 37313
+	// Token: 0x02008404 RID: 33796
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F289 RID: 193161
+		// Token: 0x0402A98A RID: 174474
 		TitleItem,
-		// Token: 0x0402F28A RID: 193162
+		// Token: 0x0402A98B RID: 174475
 		TowerLayout,
-		// Token: 0x0402F28B RID: 193163
+		// Token: 0x0402A98C RID: 174476
 		RewardBtn,
-		// Token: 0x0402F28C RID: 193164
+		// Token: 0x0402A98D RID: 174477
 		ChangeTowerBtn,
-		// Token: 0x0402F28D RID: 193165
+		// Token: 0x0402A98E RID: 174478
 		LowRiskToggle,
-		// Token: 0x0402F28E RID: 193166
+		// Token: 0x0402A98F RID: 174479
 		HighRiskToggle,
-		// Token: 0x0402F28F RID: 193167
+		// Token: 0x0402A990 RID: 174480
 		RedDotItem,
-		// Token: 0x0402F290 RID: 193168
+		// Token: 0x0402A991 RID: 174481
 		LowFinishItem,
-		// Token: 0x0402F291 RID: 193169
+		// Token: 0x0402A992 RID: 174482
 		HighFinishItem,
-		// Token: 0x0402F292 RID: 193170
+		// Token: 0x0402A993 RID: 174483
 		RewardProgressSprite,
-		// Token: 0x0402F293 RID: 193171
+		// Token: 0x0402A994 RID: 174484
 		ShopBtn,
-		// Token: 0x0402F294 RID: 193172
+		// Token: 0x0402A995 RID: 174485
 		LowRiskRedDotItem,
-		// Token: 0x0402F295 RID: 193173
+		// Token: 0x0402A996 RID: 174486
 		HighRiskRedDotItem,
-		// Token: 0x0402F296 RID: 193174
+		// Token: 0x0402A997 RID: 174487
 		VariationRiskRedDotItem,
-		// Token: 0x0402F297 RID: 193175
+		// Token: 0x0402A998 RID: 174488
 		RewardShowItem,
-		// Token: 0x0402F298 RID: 193176
+		// Token: 0x0402A999 RID: 174489
 		RewardDownItem,
-		// Token: 0x0402F299 RID: 193177
+		// Token: 0x0402A99A RID: 174490
 		RewardDownBgItem,
-		// Token: 0x0402F29A RID: 193178
+		// Token: 0x0402A99B RID: 174491
 		RedTowerItem,
-		// Token: 0x0402F29B RID: 193179
+		// Token: 0x0402A99C RID: 174492
 		OverLockToggle,
-		// Token: 0x0402F29C RID: 193180
+		// Token: 0x0402A99D RID: 174493
 		WhiteTowerItem,
-		// Token: 0x0402F29D RID: 193181
+		// Token: 0x0402A99E RID: 174494
 		OverLockFinishItem,
-		// Token: 0x0402F29E RID: 193182
+		// Token: 0x0402A99F RID: 174495
 		OverLockTipsItem,
-		// Token: 0x0402F29F RID: 193183
+		// Token: 0x0402A9A0 RID: 174496
 		OverLockRedDotItem
 	}
 }

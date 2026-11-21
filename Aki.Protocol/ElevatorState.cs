@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200158E RID: 5518
+	// Token: 0x02001600 RID: 5632
 	public enum ElevatorState
 	{
-		// Token: 0x0400A7A7 RID: 42919
+		// Token: 0x0400AC26 RID: 44070
 		[OriginalName("End")]
 		End,
-		// Token: 0x0400A7A8 RID: 42920
+		// Token: 0x0400AC27 RID: 44071
 		[OriginalName("Forward")]
 		Forward,
-		// Token: 0x0400A7A9 RID: 42921
+		// Token: 0x0400AC28 RID: 44072
 		[OriginalName("Reverse")]
 		Reverse
 	}

@@ -5,47 +5,47 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Common.InputView.View
 {
-	// Token: 0x02005B77 RID: 23415
+	// Token: 0x02004B57 RID: 19287
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeckRenameInputView : CommonInputViewBase
 	{
-		// Token: 0x0603B3F7 RID: 242679 RVA: 0x00E20080 File Offset: 0x00E1E280
+		// Token: 0x06030344 RID: 197444 RVA: 0x00D705F4 File Offset: 0x00D6E7F4
 		public DeckRenameInputView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B3F8 RID: 242680 RVA: 0x00E20089 File Offset: 0x00E1E289
+		// Token: 0x06030345 RID: 197445 RVA: 0x00D705FD File Offset: 0x00D6E7FD
 		protected override int GetMinLimit()
 		{
 			return ConfigCommonParamById.GetIntArrayConfig("GroupNameLimit")[0];
 		}
 
-		// Token: 0x0603B3F9 RID: 242681 RVA: 0x00E2009B File Offset: 0x00E1E29B
+		// Token: 0x06030346 RID: 197446 RVA: 0x00D7060F File Offset: 0x00D6E80F
 		protected override int GetMaxLimit()
 		{
 			return ConfigCommonParamById.GetIntArrayConfig("GroupNameLimit")[1];
 		}
 
-		// Token: 0x0603B3FA RID: 242682 RVA: 0x00E200AD File Offset: 0x00E1E2AD
+		// Token: 0x06030347 RID: 197447 RVA: 0x00D70621 File Offset: 0x00D6E821
 		protected override void InitExtraParam()
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603B3FB RID: 242683 RVA: 0x00E200B5 File Offset: 0x00E1E2B5
+		// Token: 0x06030348 RID: 197448 RVA: 0x00D70629 File Offset: 0x00D6E829
 		protected override void RefreshDuplicateName(string inputText)
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x0603B3FC RID: 242684 RVA: 0x00E200BD File Offset: 0x00E1E2BD
+		// Token: 0x06030349 RID: 197449 RVA: 0x00D70631 File Offset: 0x00D6E831
 		protected override bool IsAllowMultiLine()
 		{
 			return false;
 		}
 
-		// Token: 0x0603B3FD RID: 242685 RVA: 0x00E200C0 File Offset: 0x00E1E2C0
+		// Token: 0x0603034A RID: 197450 RVA: 0x00D70634 File Offset: 0x00D6E834
 		private void RefreshUi()
 		{
 			bool flag = this.InputText.Text != this.InputData.InputText;

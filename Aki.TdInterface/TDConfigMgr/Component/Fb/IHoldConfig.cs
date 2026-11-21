@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B2C RID: 2860
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BFA RID: 3066
 	public class IHoldConfig
 	{
-		// Token: 0x06004209 RID: 16905 RVA: 0x000A9554 File Offset: 0x000A7754
+		// Token: 0x06004662 RID: 18018 RVA: 0x000B3618 File Offset: 0x000B1818
 		public static IHoldConfig Create(IHoldConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700116E RID: 4462
-		// (get) Token: 0x0600420A RID: 16906 RVA: 0x000A9573 File Offset: 0x000A7773
+		// Token: 0x17001269 RID: 4713
+		// (get) Token: 0x06004663 RID: 18019 RVA: 0x000B3637 File Offset: 0x000B1837
 		public virtual int HoldSwingFreq
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700116F RID: 4463
-		// (get) Token: 0x0600420B RID: 16907 RVA: 0x000A9580 File Offset: 0x000A7780
+		// Token: 0x1700126A RID: 4714
+		// (get) Token: 0x06004664 RID: 18020 RVA: 0x000B3644 File Offset: 0x000B1844
 		public virtual int HoldAngularVelocity
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001170 RID: 4464
-		// (get) Token: 0x0600420C RID: 16908 RVA: 0x000A958D File Offset: 0x000A778D
+		// Token: 0x1700126B RID: 4715
+		// (get) Token: 0x06004665 RID: 18021 RVA: 0x000B3651 File Offset: 0x000B1851
 		public virtual VectorInfo HoldRotation
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001171 RID: 4465
-		// (get) Token: 0x0600420D RID: 16909 RVA: 0x000A95C1 File Offset: 0x000A77C1
+		// Token: 0x1700126C RID: 4716
+		// (get) Token: 0x06004666 RID: 18022 RVA: 0x000B3685 File Offset: 0x000B1885
 		public virtual VectorInfo HoldOffset
 		{
 			get
@@ -75,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001172 RID: 4466
-		// (get) Token: 0x0600420E RID: 16910 RVA: 0x000A95F5 File Offset: 0x000A77F5
+		// Token: 0x1700126D RID: 4717
+		// (get) Token: 0x06004667 RID: 18023 RVA: 0x000B36B9 File Offset: 0x000B18B9
 		[Nullable(2)]
 		public virtual VectorInfo SecondaryOffset
 		{
@@ -93,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001173 RID: 4467
-		// (get) Token: 0x0600420F RID: 16911 RVA: 0x000A9629 File Offset: 0x000A7829
+		// Token: 0x1700126E RID: 4718
+		// (get) Token: 0x06004668 RID: 18024 RVA: 0x000B36ED File Offset: 0x000B18ED
 		public virtual int HoldSwingRange
 		{
 			get
@@ -103,8 +101,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001174 RID: 4468
-		// (get) Token: 0x06004210 RID: 16912 RVA: 0x000A9636 File Offset: 0x000A7836
+		// Token: 0x1700126F RID: 4719
+		// (get) Token: 0x06004669 RID: 18025 RVA: 0x000B36FA File Offset: 0x000B18FA
 		public virtual string HoldCameraShake
 		{
 			get
@@ -113,8 +111,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001175 RID: 4469
-		// (get) Token: 0x06004211 RID: 16913 RVA: 0x000A9643 File Offset: 0x000A7843
+		// Token: 0x17001270 RID: 4720
+		// (get) Token: 0x0600466A RID: 18026 RVA: 0x000B3707 File Offset: 0x000B1907
 		public virtual string HoldCameraStateTag
 		{
 			get
@@ -123,28 +121,28 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002543 RID: 9539
+		// Token: 0x0400278B RID: 10123
 		private IHoldConfig Instance;
 
-		// Token: 0x04002544 RID: 9540
+		// Token: 0x0400278C RID: 10124
 		[Nullable(2)]
 		private VectorInfo _HoldRotationCache;
 
-		// Token: 0x04002545 RID: 9541
+		// Token: 0x0400278D RID: 10125
 		private bool _HoldRotationInited;
 
-		// Token: 0x04002546 RID: 9542
+		// Token: 0x0400278E RID: 10126
 		[Nullable(2)]
 		private VectorInfo _HoldOffsetCache;
 
-		// Token: 0x04002547 RID: 9543
+		// Token: 0x0400278F RID: 10127
 		private bool _HoldOffsetInited;
 
-		// Token: 0x04002548 RID: 9544
+		// Token: 0x04002790 RID: 10128
 		[Nullable(2)]
 		private VectorInfo _SecondaryOffsetCache;
 
-		// Token: 0x04002549 RID: 9545
+		// Token: 0x04002791 RID: 10129
 		private bool _SecondaryOffsetInited;
 	}
 }

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002808 RID: 10248
+// Token: 0x02001D83 RID: 7555
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevPhantomVisionSuitItemData
 {
-	// Token: 0x17001BC2 RID: 7106
-	// (get) Token: 0x06015064 RID: 86116 RVA: 0x00552D4E File Offset: 0x00550F4E
+	// Token: 0x17001C1A RID: 7194
+	// (get) Token: 0x06012A64 RID: 76388 RVA: 0x0057DB22 File Offset: 0x0057BD22
 	public int Id
 	{
 		get
@@ -17,8 +17,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC3 RID: 7107
-	// (get) Token: 0x06015065 RID: 86117 RVA: 0x00552D56 File Offset: 0x00550F56
+	// Token: 0x17001C1B RID: 7195
+	// (get) Token: 0x06012A65 RID: 76389 RVA: 0x0057DB2A File Offset: 0x0057BD2A
 	public string Name
 	{
 		get
@@ -27,8 +27,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC4 RID: 7108
-	// (get) Token: 0x06015066 RID: 86118 RVA: 0x00552D5E File Offset: 0x00550F5E
+	// Token: 0x17001C1C RID: 7196
+	// (get) Token: 0x06012A66 RID: 76390 RVA: 0x0057DB32 File Offset: 0x0057BD32
 	public int Cost
 	{
 		get
@@ -37,8 +37,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC5 RID: 7109
-	// (get) Token: 0x06015067 RID: 86119 RVA: 0x00552D66 File Offset: 0x00550F66
+	// Token: 0x17001C1D RID: 7197
+	// (get) Token: 0x06012A67 RID: 76391 RVA: 0x0057DB3A File Offset: 0x0057BD3A
 	public string ButtonName
 	{
 		get
@@ -47,8 +47,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC6 RID: 7110
-	// (get) Token: 0x06015068 RID: 86120 RVA: 0x00552D6E File Offset: 0x00550F6E
+	// Token: 0x17001C1E RID: 7198
+	// (get) Token: 0x06012A68 RID: 76392 RVA: 0x0057DB42 File Offset: 0x0057BD42
 	public List<IPhantomMonsterItemData> MonsterDataList
 	{
 		get
@@ -57,8 +57,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC7 RID: 7111
-	// (get) Token: 0x06015069 RID: 86121 RVA: 0x00552D76 File Offset: 0x00550F76
+	// Token: 0x17001C1F RID: 7199
+	// (get) Token: 0x06012A69 RID: 76393 RVA: 0x0057DB4A File Offset: 0x0057BD4A
 	public List<IDropRewardItemData> RewardDataList
 	{
 		get
@@ -67,8 +67,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC8 RID: 7112
-	// (get) Token: 0x0601506A RID: 86122 RVA: 0x00552D7E File Offset: 0x00550F7E
+	// Token: 0x17001C20 RID: 7200
+	// (get) Token: 0x06012A6A RID: 76394 RVA: 0x0057DB52 File Offset: 0x0057BD52
 	public int DungeonId
 	{
 		get
@@ -77,8 +77,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BC9 RID: 7113
-	// (get) Token: 0x0601506B RID: 86123 RVA: 0x00552D86 File Offset: 0x00550F86
+	// Token: 0x17001C21 RID: 7201
+	// (get) Token: 0x06012A6B RID: 76395 RVA: 0x0057DB5A File Offset: 0x0057BD5A
 	public int FetterGroupId
 	{
 		get
@@ -87,8 +87,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BCA RID: 7114
-	// (get) Token: 0x0601506C RID: 86124 RVA: 0x00552D8E File Offset: 0x00550F8E
+	// Token: 0x17001C22 RID: 7202
+	// (get) Token: 0x06012A6C RID: 76396 RVA: 0x0057DB62 File Offset: 0x0057BD62
 	public int RoleId
 	{
 		get
@@ -97,8 +97,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BCB RID: 7115
-	// (get) Token: 0x0601506D RID: 86125 RVA: 0x00552D96 File Offset: 0x00550F96
+	// Token: 0x17001C23 RID: 7203
+	// (get) Token: 0x06012A6D RID: 76397 RVA: 0x0057DB6A File Offset: 0x0057BD6A
 	public List<int> RecommendGroupIds
 	{
 		get
@@ -107,8 +107,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BCC RID: 7116
-	// (get) Token: 0x0601506E RID: 86126 RVA: 0x00552D9E File Offset: 0x00550F9E
+	// Token: 0x17001C24 RID: 7204
+	// (get) Token: 0x06012A6E RID: 76398 RVA: 0x0057DB72 File Offset: 0x0057BD72
 	public EVisionSuitItemType ItemType
 	{
 		get
@@ -117,8 +117,8 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x17001BCD RID: 7117
-	// (get) Token: 0x0601506F RID: 86127 RVA: 0x00552DA6 File Offset: 0x00550FA6
+	// Token: 0x17001C25 RID: 7205
+	// (get) Token: 0x06012A6F RID: 76399 RVA: 0x0057DB7A File Offset: 0x0057BD7A
 	public string TypeIcon
 	{
 		get
@@ -127,7 +127,7 @@ public class RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x06015070 RID: 86128 RVA: 0x00552DAE File Offset: 0x00550FAE
+	// Token: 0x06012A70 RID: 76400 RVA: 0x0057DB82 File Offset: 0x0057BD82
 	public void InitByBaseData(int id, EVisionSuitItemType itemType, string name, int cost, string buttonName, string typeIcon)
 	{
 		this.IdInternal = id;
@@ -138,43 +138,43 @@ public class RoleDevPhantomVisionSuitItemData
 		this.TypeIconInternal = typeIcon;
 	}
 
-	// Token: 0x06015071 RID: 86129 RVA: 0x00552DDD File Offset: 0x00550FDD
+	// Token: 0x06012A71 RID: 76401 RVA: 0x0057DBB1 File Offset: 0x0057BDB1
 	public void SetItemType(EVisionSuitItemType itemType)
 	{
 		this.ItemTypeInternal = itemType;
 	}
 
-	// Token: 0x06015072 RID: 86130 RVA: 0x00552DE6 File Offset: 0x00550FE6
+	// Token: 0x06012A72 RID: 76402 RVA: 0x0057DBBA File Offset: 0x0057BDBA
 	public void SetMonsterDataList(List<IPhantomMonsterItemData> dataList)
 	{
 		this.MonsterDataListInternal = new List<IPhantomMonsterItemData>(dataList);
 	}
 
-	// Token: 0x06015073 RID: 86131 RVA: 0x00552DF4 File Offset: 0x00550FF4
+	// Token: 0x06012A73 RID: 76403 RVA: 0x0057DBC8 File Offset: 0x0057BDC8
 	public void SetRewardDataList(List<IDropRewardItemData> dataList)
 	{
 		this.RewardDataListInternal = new List<IDropRewardItemData>(dataList);
 	}
 
-	// Token: 0x06015074 RID: 86132 RVA: 0x00552E02 File Offset: 0x00551002
+	// Token: 0x06012A74 RID: 76404 RVA: 0x0057DBD6 File Offset: 0x0057BDD6
 	public void AddMonsterDataItem(IPhantomMonsterItemData dataItem)
 	{
 		this.MonsterDataListInternal.Add(dataItem);
 	}
 
-	// Token: 0x06015075 RID: 86133 RVA: 0x00552E10 File Offset: 0x00551010
+	// Token: 0x06012A75 RID: 76405 RVA: 0x0057DBE4 File Offset: 0x0057BDE4
 	public void AddRewardDataItem(IDropRewardItemData dataItem)
 	{
 		this.RewardDataListInternal.Add(dataItem);
 	}
 
-	// Token: 0x06015076 RID: 86134 RVA: 0x00552E1E File Offset: 0x0055101E
+	// Token: 0x06012A76 RID: 76406 RVA: 0x0057DBF2 File Offset: 0x0057BDF2
 	public void SetDungeonId(int dungeonId)
 	{
 		this.DungeonIdInternal = dungeonId;
 	}
 
-	// Token: 0x06015077 RID: 86135 RVA: 0x00552E27 File Offset: 0x00551027
+	// Token: 0x06012A77 RID: 76407 RVA: 0x0057DBFB File Offset: 0x0057BDFB
 	[NullableContext(2)]
 	public void SetFetterGroupInfo(int fetterGroupId, int roleId, List<int> recommendGroupIds = null)
 	{
@@ -183,39 +183,39 @@ public class RoleDevPhantomVisionSuitItemData
 		this.RecommendGroupIdsInternal = (recommendGroupIds ?? new List<int>());
 	}
 
-	// Token: 0x04009E0A RID: 40458
+	// Token: 0x0400A1F3 RID: 41459
 	private int IdInternal;
 
-	// Token: 0x04009E0B RID: 40459
+	// Token: 0x0400A1F4 RID: 41460
 	private string NameInternal = "";
 
-	// Token: 0x04009E0C RID: 40460
+	// Token: 0x0400A1F5 RID: 41461
 	private int CostInternal;
 
-	// Token: 0x04009E0D RID: 40461
+	// Token: 0x0400A1F6 RID: 41462
 	private string ButtonNameInternal = "";
 
-	// Token: 0x04009E0E RID: 40462
+	// Token: 0x0400A1F7 RID: 41463
 	private List<IPhantomMonsterItemData> MonsterDataListInternal = new List<IPhantomMonsterItemData>();
 
-	// Token: 0x04009E0F RID: 40463
+	// Token: 0x0400A1F8 RID: 41464
 	private List<IDropRewardItemData> RewardDataListInternal = new List<IDropRewardItemData>();
 
-	// Token: 0x04009E10 RID: 40464
+	// Token: 0x0400A1F9 RID: 41465
 	private int DungeonIdInternal;
 
-	// Token: 0x04009E11 RID: 40465
+	// Token: 0x0400A1FA RID: 41466
 	private int FetterGroupIdInternal;
 
-	// Token: 0x04009E12 RID: 40466
+	// Token: 0x0400A1FB RID: 41467
 	private int RoleIdInternal;
 
-	// Token: 0x04009E13 RID: 40467
+	// Token: 0x0400A1FC RID: 41468
 	private List<int> RecommendGroupIdsInternal = new List<int>();
 
-	// Token: 0x04009E14 RID: 40468
+	// Token: 0x0400A1FD RID: 41469
 	private EVisionSuitItemType ItemTypeInternal;
 
-	// Token: 0x04009E15 RID: 40469
+	// Token: 0x0400A1FE RID: 41470
 	private string TypeIconInternal = "";
 }

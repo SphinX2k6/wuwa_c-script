@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056E7 RID: 22247
+	// Token: 0x020046BE RID: 18110
 	public interface IKurotatoRoleSkillInfo
 	{
-		// Token: 0x170087BA RID: 34746
-		// (get) Token: 0x06038952 RID: 231762
-		// (set) Token: 0x06038953 RID: 231763
+		// Token: 0x17005B82 RID: 23426
+		// (get) Token: 0x0602D862 RID: 186466
+		// (set) Token: 0x0602D863 RID: 186467
 		int AttrId { get; set; }
 
-		// Token: 0x170087BB RID: 34747
-		// (get) Token: 0x06038954 RID: 231764
-		// (set) Token: 0x06038955 RID: 231765
+		// Token: 0x17005B83 RID: 23427
+		// (get) Token: 0x0602D864 RID: 186468
+		// (set) Token: 0x0602D865 RID: 186469
 		int Value { get; set; }
 
-		// Token: 0x170087BC RID: 34748
-		// (get) Token: 0x06038956 RID: 231766
-		// (set) Token: 0x06038957 RID: 231767
+		// Token: 0x17005B84 RID: 23428
+		// (get) Token: 0x0602D866 RID: 186470
+		// (set) Token: 0x0602D867 RID: 186471
 		bool IsRecommend { get; set; }
 
-		// Token: 0x170087BD RID: 34749
-		// (get) Token: 0x06038958 RID: 231768
-		// (set) Token: 0x06038959 RID: 231769
+		// Token: 0x17005B85 RID: 23429
+		// (get) Token: 0x0602D868 RID: 186472
+		// (set) Token: 0x0602D869 RID: 186473
 		bool? IsAddition { get; set; }
 
-		// Token: 0x170087BE RID: 34750
-		// (get) Token: 0x0603895A RID: 231770
-		// (set) Token: 0x0603895B RID: 231771
+		// Token: 0x17005B86 RID: 23430
+		// (get) Token: 0x0602D86A RID: 186474
+		// (set) Token: 0x0602D86B RID: 186475
 		int? BaseValue { get; set; }
 
-		// Token: 0x170087BF RID: 34751
-		// (get) Token: 0x0603895C RID: 231772
-		// (set) Token: 0x0603895D RID: 231773
+		// Token: 0x17005B87 RID: 23431
+		// (get) Token: 0x0602D86C RID: 186476
+		// (set) Token: 0x0602D86D RID: 186477
 		bool? IsLocked { get; set; }
 
-		// Token: 0x170087C0 RID: 34752
-		// (get) Token: 0x0603895E RID: 231774
-		// (set) Token: 0x0603895F RID: 231775
+		// Token: 0x17005B88 RID: 23432
+		// (get) Token: 0x0602D86E RID: 186478
+		// (set) Token: 0x0602D86F RID: 186479
 		int? LockedValue { get; set; }
 	}
 }

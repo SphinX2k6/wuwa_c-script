@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity
 {
-	// Token: 0x02006892 RID: 26770
+	// Token: 0x020057E2 RID: 22498
 	public enum EDangoBrawlSide
 	{
-		// Token: 0x04022C46 RID: 142406
+		// Token: 0x0401D4A2 RID: 119970
 		Self,
-		// Token: 0x04022C47 RID: 142407
+		// Token: 0x0401D4A3 RID: 119971
 		Opponent
 	}
 }

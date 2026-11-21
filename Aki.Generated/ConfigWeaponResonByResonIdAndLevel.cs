@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A87 RID: 2695
+	// Token: 0x02000B5C RID: 2908
 	public class ConfigWeaponResonByResonIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F3E RID: 16190 RVA: 0x001BFDAC File Offset: 0x001BDFAC
+		// Token: 0x0600443C RID: 17468 RVA: 0x001DF140 File Offset: 0x001DD340
 		static ConfigWeaponResonByResonIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponResonByResonIdAndLevel.CreateStaticDefaultValue), new Action(ConfigWeaponResonByResonIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F3F RID: 16191 RVA: 0x001BFDCC File Offset: 0x001BDFCC
+		// Token: 0x0600443D RID: 17469 RVA: 0x001DF160 File Offset: 0x001DD360
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponResonByResonIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F40 RID: 16192 RVA: 0x001BFE4B File Offset: 0x001BE04B
+		// Token: 0x0600443E RID: 17470 RVA: 0x001DF1DF File Offset: 0x001DD3DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponResonByResonIdAndLevel.LogPair = null;
 			ConfigWeaponResonByResonIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003F41 RID: 16193 RVA: 0x001BFE59 File Offset: 0x001BE059
+		// Token: 0x0600443F RID: 17471 RVA: 0x001DF1ED File Offset: 0x001DD3ED
 		public static void Init()
 		{
 			ConfigWeaponResonByResonIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponResonByResonIdAndLevel.HandleId, "db_weapon.db", "select BinData from `WeaponReson` where ResonId = ? AND Level = ?");
 		}
 
-		// Token: 0x06003F42 RID: 16194 RVA: 0x001BFE74 File Offset: 0x001BE074
+		// Token: 0x06004440 RID: 17472 RVA: 0x001DF208 File Offset: 0x001DD408
 		public static WeaponReson? GetConfig(int p0ResonId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponResonByResonIdAndLevel.HandleId, ConfigWeaponResonByResonIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new WeaponReson?(rootAsWeaponReson);
 		}
 
-		// Token: 0x04004997 RID: 18839
+		// Token: 0x04004F6A RID: 20330
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x04004998 RID: 18840
+		// Token: 0x04004F6B RID: 20331
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x04004999 RID: 18841
+		// Token: 0x04004F6C RID: 20332
 		private const string TABLE = "WeaponReson";
 
-		// Token: 0x0400499A RID: 18842
+		// Token: 0x04004F6D RID: 20333
 		private const string COMMAND = "select BinData from `WeaponReson` where ResonId = ? AND Level = ?";
 
-		// Token: 0x0400499B RID: 18843
+		// Token: 0x04004F6E RID: 20334
 		private const string KEY_PREFIX = "WeaponResonByResonIdAndLevel";
 
-		// Token: 0x0400499C RID: 18844
+		// Token: 0x04004F6F RID: 20335
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400499D RID: 18845
+		// Token: 0x04004F70 RID: 20336
 		private static int HandleId;
 	}
 }

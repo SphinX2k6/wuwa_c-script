@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000559 RID: 1369
+	// Token: 0x0200056F RID: 1391
 	public class ConfigMonsterPropertyGrowthById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002023 RID: 8227 RVA: 0x0010F033 File Offset: 0x0010D233
+		// Token: 0x060020A7 RID: 8359 RVA: 0x00115787 File Offset: 0x00113987
 		static ConfigMonsterPropertyGrowthById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterPropertyGrowthById.CreateStaticDefaultValue), new Action(ConfigMonsterPropertyGrowthById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002024 RID: 8228 RVA: 0x0010F054 File Offset: 0x0010D254
+		// Token: 0x060020A8 RID: 8360 RVA: 0x001157A8 File Offset: 0x001139A8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterPropertyGrowthById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002025 RID: 8229 RVA: 0x0010F0D3 File Offset: 0x0010D2D3
+		// Token: 0x060020A9 RID: 8361 RVA: 0x00115827 File Offset: 0x00113A27
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterPropertyGrowthById.LogPair = null;
 			ConfigMonsterPropertyGrowthById.HandleId = 0;
 		}
 
-		// Token: 0x06002026 RID: 8230 RVA: 0x0010F0E1 File Offset: 0x0010D2E1
+		// Token: 0x060020AA RID: 8362 RVA: 0x00115835 File Offset: 0x00113A35
 		public static void Init()
 		{
 			ConfigMonsterPropertyGrowthById.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterPropertyGrowthById.HandleId, "db_property.db", "select BinData from `MonsterPropertyGrowth` where id=?");
 		}
 
-		// Token: 0x06002027 RID: 8231 RVA: 0x0010F0FC File Offset: 0x0010D2FC
+		// Token: 0x060020AB RID: 8363 RVA: 0x00115850 File Offset: 0x00113A50
 		public static MonsterPropertyGrowth? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonsterPropertyGrowthById.HandleId, ConfigMonsterPropertyGrowthById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonsterPropertyGrowth?(rootAsMonsterPropertyGrowth);
 		}
 
-		// Token: 0x04002553 RID: 9555
+		// Token: 0x040025ED RID: 9709
 		private const string DB = "db_property.db";
 
-		// Token: 0x04002554 RID: 9556
+		// Token: 0x040025EE RID: 9710
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x04002555 RID: 9557
+		// Token: 0x040025EF RID: 9711
 		private const string TABLE = "MonsterPropertyGrowth";
 
-		// Token: 0x04002556 RID: 9558
+		// Token: 0x040025F0 RID: 9712
 		private const string COMMAND = "select BinData from `MonsterPropertyGrowth` where id=?";
 
-		// Token: 0x04002557 RID: 9559
+		// Token: 0x040025F1 RID: 9713
 		private const string KEY_PREFIX = "MonsterPropertyGrowthById";
 
-		// Token: 0x04002558 RID: 9560
+		// Token: 0x040025F2 RID: 9714
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002559 RID: 9561
+		// Token: 0x040025F3 RID: 9715
 		private static int HandleId;
 	}
 }

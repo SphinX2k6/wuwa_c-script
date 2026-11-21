@@ -1,62 +1,62 @@
 ﻿using System;
 
-// Token: 0x0200253F RID: 9535
+// Token: 0x02001A28 RID: 6696
 public enum ESelfChatItemComponent
 {
-	// Token: 0x040090BC RID: 37052
+	// Token: 0x04009216 RID: 37398
 	TxtTime,
-	// Token: 0x040090BD RID: 37053
+	// Token: 0x04009217 RID: 37399
 	TexHeadIcon,
-	// Token: 0x040090BE RID: 37054
+	// Token: 0x04009218 RID: 37400
 	TxtPlayerName,
-	// Token: 0x040090BF RID: 37055
+	// Token: 0x04009219 RID: 37401
 	PhraseChatItem,
-	// Token: 0x040090C0 RID: 37056
+	// Token: 0x0400921A RID: 37402
 	TxtChat,
-	// Token: 0x040090C1 RID: 37057
+	// Token: 0x0400921B RID: 37403
 	ItemError,
-	// Token: 0x040090C2 RID: 37058
+	// Token: 0x0400921C RID: 37404
 	TexChatEmoji,
-	// Token: 0x040090C3 RID: 37059
+	// Token: 0x0400921D RID: 37405
 	InputtingItem,
-	// Token: 0x040090C4 RID: 37060
+	// Token: 0x0400921E RID: 37406
 	BtnChatPic,
-	// Token: 0x040090C5 RID: 37061
+	// Token: 0x0400921F RID: 37407
 	TexChatPic,
-	// Token: 0x040090C6 RID: 37062
+	// Token: 0x04009220 RID: 37408
 	SpriteChatDialog,
-	// Token: 0x040090C7 RID: 37063
+	// Token: 0x04009221 RID: 37409
 	TxtPlayerNameUnDefaultBg,
-	// Token: 0x040090C8 RID: 37064
+	// Token: 0x04009222 RID: 37410
 	PhraseItem,
-	// Token: 0x040090C9 RID: 37065
+	// Token: 0x04009223 RID: 37411
 	PhraseScrollView,
-	// Token: 0x040090CA RID: 37066
+	// Token: 0x04009224 RID: 37412
 	PhraseContentItem,
-	// Token: 0x040090CB RID: 37067
+	// Token: 0x04009225 RID: 37413
 	PhraseTemplateItem,
-	// Token: 0x040090CC RID: 37068
+	// Token: 0x04009226 RID: 37414
 	EmojiItem,
-	// Token: 0x040090CD RID: 37069
+	// Token: 0x04009227 RID: 37415
 	EmojiScrollView,
-	// Token: 0x040090CE RID: 37070
+	// Token: 0x04009228 RID: 37416
 	EmojiContentItem,
-	// Token: 0x040090CF RID: 37071
+	// Token: 0x04009229 RID: 37417
 	EmojiTemplateItem,
-	// Token: 0x040090D0 RID: 37072
+	// Token: 0x0400922A RID: 37418
 	TextOptionAnimItem,
-	// Token: 0x040090D1 RID: 37073
+	// Token: 0x0400922B RID: 37419
 	DynamicItemNode,
-	// Token: 0x040090D2 RID: 37074
+	// Token: 0x0400922C RID: 37420
 	VoiceIcon,
-	// Token: 0x040090D3 RID: 37075
+	// Token: 0x0400922D RID: 37421
 	VoiceTxtLoadingPanel,
-	// Token: 0x040090D4 RID: 37076
+	// Token: 0x0400922E RID: 37422
 	VoiceTxtLoadingIcon,
-	// Token: 0x040090D5 RID: 37077
+	// Token: 0x0400922F RID: 37423
 	VoiceTxt,
-	// Token: 0x040090D6 RID: 37078
+	// Token: 0x04009230 RID: 37424
 	BtnSelf,
-	// Token: 0x040090D7 RID: 37079
+	// Token: 0x04009231 RID: 37425
 	BtnInfo
 }

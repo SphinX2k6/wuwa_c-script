@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BCA RID: 3018
+	// Token: 0x02000C98 RID: 3224
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcDeathInteract
 	{
-		// Token: 0x06004568 RID: 17768 RVA: 0x000AFC9B File Offset: 0x000ADE9B
-		[NullableContext(1)]
+		// Token: 0x060049C1 RID: 18881 RVA: 0x000B9D5F File Offset: 0x000B7F5F
+		[NullableContext(0)]
 		public static INpcDeathInteract Create(INpcDeathInteract? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001391 RID: 5009
-		// (get) Token: 0x06004569 RID: 17769 RVA: 0x000AFCBA File Offset: 0x000ADEBA
+		// Token: 0x1700148C RID: 5260
+		// (get) Token: 0x060049C2 RID: 18882 RVA: 0x000B9D7E File Offset: 0x000B7F7E
 		public virtual IMontageId Montage
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001392 RID: 5010
-		// (get) Token: 0x0600456A RID: 17770 RVA: 0x000AFCEE File Offset: 0x000ADEEE
+		// Token: 0x1700148D RID: 5261
+		// (get) Token: 0x060049C3 RID: 18883 RVA: 0x000B9DB2 File Offset: 0x000B7FB2
 		public virtual string MaterialDa
 		{
 			get
@@ -50,13 +50,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002779 RID: 10105
+		// Token: 0x040029C1 RID: 10689
 		private INpcDeathInteract Instance;
 
-		// Token: 0x0400277A RID: 10106
+		// Token: 0x040029C2 RID: 10690
 		private IMontageId _MontageCache;
 
-		// Token: 0x0400277B RID: 10107
+		// Token: 0x040029C3 RID: 10691
 		private bool _MontageInited;
 	}
 }

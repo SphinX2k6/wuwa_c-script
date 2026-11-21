@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007302 RID: 29442
+	// Token: 0x02007AD7 RID: 31447
 	public class ITalkItemStyleInnerVoiceT
 	{
-		// Token: 0x1700DDC3 RID: 56771
-		// (get) Token: 0x06034FFA RID: 217082 RVA: 0x0072E80E File Offset: 0x0072CA0E
-		// (set) Token: 0x06034FFB RID: 217083 RVA: 0x0072E816 File Offset: 0x0072CA16
+		// Token: 0x1700E9BC RID: 59836
+		// (get) Token: 0x06038300 RID: 230144 RVA: 0x0078FC72 File Offset: 0x0078DE72
+		// (set) Token: 0x06038301 RID: 230145 RVA: 0x0078FC7A File Offset: 0x0078DE7A
 		public ETalkItemStyle Type { get; set; }
 
-		// Token: 0x06034FFC RID: 217084 RVA: 0x0072E81F File Offset: 0x0072CA1F
+		// Token: 0x06038302 RID: 230146 RVA: 0x0078FC83 File Offset: 0x0078DE83
 		public ITalkItemStyleInnerVoiceT()
 		{
 			this.Type = ETalkItemStyle.InnerVoice;

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB6 RID: 28086
+	// Token: 0x02005F35 RID: 24373
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiPlanner
 	{
-		// Token: 0x170099BA RID: 39354
-		// (get) Token: 0x0604487A RID: 280698 RVA: 0x010E67A9 File Offset: 0x010E49A9
+		// Token: 0x17006EBD RID: 28349
+		// (get) Token: 0x0603A9DE RID: 240094 RVA: 0x010909D1 File Offset: 0x0108EBD1
 		public bool WasCanceled
 		{
 			get
@@ -19,14 +19,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604487B RID: 280699 RVA: 0x010E67B1 File Offset: 0x010E49B1
+		// Token: 0x0603A9DF RID: 240095 RVA: 0x010909D9 File Offset: 0x0108EBD9
 		public void SetUp(LevelAi asset, CharacterPlanComponent owner)
 		{
 			this.OwnerComponent = owner;
 			this.StartingPlan = new LevelAiPlan(asset, this.OwnerComponent.WorldState.MakeCopy());
 		}
 
-		// Token: 0x0604487C RID: 280700 RVA: 0x010E67D8 File Offset: 0x010E49D8
+		// Token: 0x0603A9E0 RID: 240096 RVA: 0x01090A00 File Offset: 0x0108EC00
 		public void StartPlanning()
 		{
 			if (this.IsPlanning)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.DoPlanning();
 		}
 
-		// Token: 0x0604487D RID: 280701 RVA: 0x010E6814 File Offset: 0x010E4A14
+		// Token: 0x0603A9E1 RID: 240097 RVA: 0x01090A3C File Offset: 0x0108EC3C
 		public void CancelPlanning()
 		{
 			this.WasCanceledInternal = true;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.IsPlanning = false;
 		}
 
-		// Token: 0x0604487E RID: 280702 RVA: 0x010E682C File Offset: 0x010E4A2C
+		// Token: 0x0603A9E2 RID: 240098 RVA: 0x01090A54 File Offset: 0x0108EC54
 		public void DoPlanning()
 		{
 			if (this.WasCanceledInternal)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.EndPlanning();
 		}
 
-		// Token: 0x0604487F RID: 280703 RVA: 0x010E6884 File Offset: 0x010E4A84
+		// Token: 0x0603A9E3 RID: 240099 RVA: 0x01090AAC File Offset: 0x0108ECAC
 		private void EndPlanning()
 		{
 			this.ClearIntermediateState();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.IsPlanning = false;
 		}
 
-		// Token: 0x06044880 RID: 280704 RVA: 0x010E68B0 File Offset: 0x010E4AB0
+		// Token: 0x0603A9E4 RID: 240100 RVA: 0x01090AD8 File Offset: 0x0108ECD8
 		public void Clear()
 		{
 			this.ClearIntermediateState();
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.FinishedPlan = null;
 		}
 
-		// Token: 0x06044881 RID: 280705 RVA: 0x010E68D1 File Offset: 0x010E4AD1
+		// Token: 0x0603A9E5 RID: 240101 RVA: 0x01090AF9 File Offset: 0x0108ECF9
 		private void ClearIntermediateState()
 		{
 			this.CurrentPlanToExpand = null;
 			this.CurrentPlanStepId.Reset();
 		}
 
-		// Token: 0x06044882 RID: 280706 RVA: 0x010E68E5 File Offset: 0x010E4AE5
+		// Token: 0x0603A9E6 RID: 240102 RVA: 0x01090B0D File Offset: 0x0108ED0D
 		[NullableContext(2)]
 		private LevelAiPlan DeQueueCurrentBestPlan()
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return null;
 		}
 
-		// Token: 0x06044883 RID: 280707 RVA: 0x010E6904 File Offset: 0x010E4B04
+		// Token: 0x0603A9E7 RID: 240103 RVA: 0x01090B2C File Offset: 0x0108ED2C
 		private void MakeExpansionsOfCurrentPlan()
 		{
 			if (!this.CurrentPlanToExpand.FindStepToAddAfter(this.CurrentPlanStepId) || this.CurrentPlanStepId.Equal(LevelAiPlanStepId.None))
@@ -138,19 +138,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.ClearIntermediateState();
 		}
 
-		// Token: 0x06044884 RID: 280708 RVA: 0x010E6A04 File Offset: 0x010E4C04
+		// Token: 0x0603A9E8 RID: 240104 RVA: 0x01090C2C File Offset: 0x0108EE2C
 		private static bool EnterDecorators(LevelAiStandaloneNode node)
 		{
 			return LevelAiPlanner.<EnterDecorators>g__checkCondition|20_0(node.Decorators);
 		}
 
-		// Token: 0x06044885 RID: 280709 RVA: 0x010E6A16 File Offset: 0x010E4C16
+		// Token: 0x0603A9E9 RID: 240105 RVA: 0x01090C3E File Offset: 0x0108EE3E
 		public void SubmitCandidatePlan(LevelAiPlan candidatePlan)
 		{
 			this.Frontier.Push(candidatePlan);
 		}
 
-		// Token: 0x06044887 RID: 280711 RVA: 0x010E6A64 File Offset: 0x010E4C64
+		// Token: 0x0603A9EB RID: 240107 RVA: 0x01090C8C File Offset: 0x0108EE8C
 		[CompilerGenerated]
 		internal static bool <EnterDecorators>g__checkCondition|20_0(List<LevelAiDecorator> decorators)
 		{
@@ -170,35 +170,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x04023A35 RID: 145973
+		// Token: 0x0401ECD7 RID: 126167
 		[Nullable(2)]
 		private CharacterPlanComponent OwnerComponent;
 
-		// Token: 0x04023A36 RID: 145974
+		// Token: 0x0401ECD8 RID: 126168
 		[Nullable(2)]
 		private LevelAiPlan CurrentPlanToExpand;
 
-		// Token: 0x04023A37 RID: 145975
+		// Token: 0x0401ECD9 RID: 126169
 		private readonly LevelAiPlanStepId CurrentPlanStepId = new LevelAiPlanStepId(-1, -1);
 
-		// Token: 0x04023A38 RID: 145976
+		// Token: 0x0401ECDA RID: 126170
 		[Nullable(2)]
 		private LevelAiPlan StartingPlan;
 
-		// Token: 0x04023A39 RID: 145977
+		// Token: 0x0401ECDB RID: 126171
 		[Nullable(2)]
 		private LevelAiPlan FinishedPlan;
 
-		// Token: 0x04023A3A RID: 145978
+		// Token: 0x0401ECDC RID: 126172
 		private bool WasCanceledInternal;
 
-		// Token: 0x04023A3B RID: 145979
+		// Token: 0x0401ECDD RID: 126173
 		private readonly PriorityQueue<LevelAiPlan> Frontier = new PriorityQueue<LevelAiPlan>((LevelAiPlan a, LevelAiPlan b) => a.Cost - b.Cost);
 
-		// Token: 0x04023A3C RID: 145980
+		// Token: 0x0401ECDE RID: 126174
 		private bool IsPlanning;
 
-		// Token: 0x04023A3D RID: 145981
+		// Token: 0x0401ECDF RID: 126175
 		[Nullable(new byte[]
 		{
 			2,

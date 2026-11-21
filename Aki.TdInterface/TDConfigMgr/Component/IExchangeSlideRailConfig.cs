@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000341 RID: 833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000388 RID: 904
 	public class IExchangeSlideRailConfig
 	{
-		// Token: 0x06001076 RID: 4214 RVA: 0x00038FAC File Offset: 0x000371AC
+		// Token: 0x060011A8 RID: 4520 RVA: 0x0003BF78 File Offset: 0x0003A178
 		private IExchangeSlideRailConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001077 RID: 4215 RVA: 0x00038FE4 File Offset: 0x000371E4
+		// Token: 0x060011A9 RID: 4521 RVA: 0x0003BFB0 File Offset: 0x0003A1B0
 		public static IExchangeSlideRailConfig Create([Nullable(2)] IExchangeSlideRailConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001078 RID: 4216 RVA: 0x00038FF7 File Offset: 0x000371F7
+		// Token: 0x060011AA RID: 4522 RVA: 0x0003BFC3 File Offset: 0x0003A1C3
 		public static IExchangeSlideRailConfig CreateFromSetValue([Nullable(2)] IExchangeSlideRailConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001079 RID: 4217 RVA: 0x0003900A File Offset: 0x0003720A
+		// Token: 0x060011AB RID: 4523 RVA: 0x0003BFD6 File Offset: 0x0003A1D6
 		public IExchangeSlideRailConfig_SetValue ToSetValue()
 		{
 			return new IExchangeSlideRailConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004B6 RID: 1206
-		// (get) Token: 0x0600107A RID: 4218 RVA: 0x00039038 File Offset: 0x00037238
-		// (set) Token: 0x0600107B RID: 4219 RVA: 0x00039072 File Offset: 0x00037272
+		// Token: 0x17000504 RID: 1284
+		// (get) Token: 0x060011AC RID: 4524 RVA: 0x0003C004 File Offset: 0x0003A204
+		// (set) Token: 0x060011AD RID: 4525 RVA: 0x0003C03E File Offset: 0x0003A23E
 		public virtual int? MaxExchangeDistance
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004B7 RID: 1207
-		// (get) Token: 0x0600107C RID: 4220 RVA: 0x00039080 File Offset: 0x00037280
-		// (set) Token: 0x0600107D RID: 4221 RVA: 0x000390BA File Offset: 0x000372BA
+		// Token: 0x17000505 RID: 1285
+		// (get) Token: 0x060011AE RID: 4526 RVA: 0x0003C04C File Offset: 0x0003A24C
+		// (set) Token: 0x060011AF RID: 4527 RVA: 0x0003C086 File Offset: 0x0003A286
 		public virtual int? MaxExchangeHigh
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004B8 RID: 1208
-		// (get) Token: 0x0600107E RID: 4222 RVA: 0x000390C8 File Offset: 0x000372C8
-		// (set) Token: 0x0600107F RID: 4223 RVA: 0x0003915B File Offset: 0x0003735B
+		// Token: 0x17000506 RID: 1286
+		// (get) Token: 0x060011B0 RID: 4528 RVA: 0x0003C094 File Offset: 0x0003A294
+		// (set) Token: 0x060011B1 RID: 4529 RVA: 0x0003C127 File Offset: 0x0003A327
 		public virtual List<INextSlideRail> NextRails
 		{
 			get
@@ -148,18 +146,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DD5 RID: 3541
+		// Token: 0x04000EC0 RID: 3776
 		[Nullable(2)]
 		protected IExchangeSlideRailConfig FbInstance;
 
-		// Token: 0x04000DD6 RID: 3542
+		// Token: 0x04000EC1 RID: 3777
 		[Nullable(2)]
 		protected IExchangeSlideRailConfig_SetValue PocoInterface;
 
-		// Token: 0x04000DD7 RID: 3543
+		// Token: 0x04000EC2 RID: 3778
 		private List<INextSlideRail> _NextRailsCache;
 
-		// Token: 0x04000DD8 RID: 3544
+		// Token: 0x04000EC3 RID: 3779
 		private bool _NextRailsInited;
 	}
 }

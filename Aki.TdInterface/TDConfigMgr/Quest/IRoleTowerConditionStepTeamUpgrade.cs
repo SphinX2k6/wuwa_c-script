@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001112 RID: 4370
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001240 RID: 4672
 	public class IRoleTowerConditionStepTeamUpgrade : IRoleTowerConditionStepBase
 	{
-		// Token: 0x060062B2 RID: 25266 RVA: 0x000ED78C File Offset: 0x000EB98C
+		// Token: 0x060068AD RID: 26797 RVA: 0x000FA900 File Offset: 0x000F8B00
 		private IRoleTowerConditionStepTeamUpgrade_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060062B3 RID: 25267 RVA: 0x000ED7C4 File Offset: 0x000EB9C4
+		// Token: 0x060068AE RID: 26798 RVA: 0x000FA938 File Offset: 0x000F8B38
 		public static IRoleTowerConditionStepTeamUpgrade Create([Nullable(2)] IRoleTowerConditionStepTeamUpgrade instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062B4 RID: 25268 RVA: 0x000ED7D7 File Offset: 0x000EB9D7
+		// Token: 0x060068AF RID: 26799 RVA: 0x000FA94B File Offset: 0x000F8B4B
 		public static IRoleTowerConditionStepTeamUpgrade CreateFromSetValue([Nullable(2)] IRoleTowerConditionStepTeamUpgrade_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062B5 RID: 25269 RVA: 0x000ED7EA File Offset: 0x000EB9EA
+		// Token: 0x060068B0 RID: 26800 RVA: 0x000FA95E File Offset: 0x000F8B5E
 		public new IRoleTowerConditionStepTeamUpgrade_SetValue ToSetValue()
 		{
 			return new IRoleTowerConditionStepTeamUpgrade_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002042 RID: 8258
-		// (get) Token: 0x060062B6 RID: 25270 RVA: 0x000ED7FD File Offset: 0x000EB9FD
-		// (set) Token: 0x060062B7 RID: 25271 RVA: 0x000ED828 File Offset: 0x000EBA28
+		// Token: 0x170021F5 RID: 8693
+		// (get) Token: 0x060068B1 RID: 26801 RVA: 0x000FA971 File Offset: 0x000F8B71
+		// (set) Token: 0x060068B2 RID: 26802 RVA: 0x000FA99C File Offset: 0x000F8B9C
 		public override ERoleTowerConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B37 RID: 15159
+		// Token: 0x04003E85 RID: 16005
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepTeamUpgrade FbInstance;
 
-		// Token: 0x04003B38 RID: 15160
+		// Token: 0x04003E86 RID: 16006
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepTeamUpgrade_SetValue PocoInterface;
 	}

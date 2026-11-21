@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DDA RID: 3546
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000ED6 RID: 3798
 	public class TimeScheduleComponent : IComponentBase
 	{
-		// Token: 0x06005071 RID: 20593 RVA: 0x000C6B9C File Offset: 0x000C4D9C
+		// Token: 0x06005596 RID: 21910 RVA: 0x000D23EC File Offset: 0x000D05EC
 		public static TimeScheduleComponent Create(ITimeScheduleComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A7A RID: 6778
-		// (get) Token: 0x06005072 RID: 20594 RVA: 0x000C6BBC File Offset: 0x000C4DBC
+		// Token: 0x17001BE5 RID: 7141
+		// (get) Token: 0x06005597 RID: 21911 RVA: 0x000D240C File Offset: 0x000D060C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A7B RID: 6779
-		// (get) Token: 0x06005073 RID: 20595 RVA: 0x000C6BF4 File Offset: 0x000C4DF4
+		// Token: 0x17001BE6 RID: 7142
+		// (get) Token: 0x06005598 RID: 21912 RVA: 0x000D2444 File Offset: 0x000D0644
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A7C RID: 6780
-		// (get) Token: 0x06005074 RID: 20596 RVA: 0x000C6C0C File Offset: 0x000C4E0C
+		// Token: 0x17001BE7 RID: 7143
+		// (get) Token: 0x06005599 RID: 21913 RVA: 0x000D245C File Offset: 0x000D065C
 		public virtual List<ITimeScheduleConfig> TimeScheduleConfigs
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E31 RID: 11825
+		// Token: 0x040030F7 RID: 12535
 		private ITimeScheduleComponent Instance;
 
-		// Token: 0x04002E32 RID: 11826
+		// Token: 0x040030F8 RID: 12536
 		private List<ITimeScheduleConfig> _TimeScheduleConfigsCache;
 
-		// Token: 0x04002E33 RID: 11827
+		// Token: 0x040030F9 RID: 12537
 		private bool _TimeScheduleConfigsInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AAD RID: 10925
+	// Token: 0x02002DA1 RID: 11681
 	public class IMotorSoarInWindFieldControlType
 	{
-		// Token: 0x0600EFD9 RID: 61401 RVA: 0x0022DABA File Offset: 0x0022BCBA
-		[NullableContext(1)]
+		// Token: 0x0600FE8F RID: 65167 RVA: 0x0024B7C6 File Offset: 0x002499C6
 		public static IMotorSoarInWindFieldControlType Create(IMotorSoarInWindFieldControlType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C41 RID: 19521
-		// (get) Token: 0x0600EFDA RID: 61402 RVA: 0x0022DAD9 File Offset: 0x0022BCD9
+		// Token: 0x17004FFB RID: 20475
+		// (get) Token: 0x0600FE90 RID: 65168 RVA: 0x0024B7E5 File Offset: 0x002499E5
 		public virtual EMotorSoarInWindFieldControlType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083F3 RID: 33779
+		// Token: 0x04008AF7 RID: 35575
 		private IMotorSoarInWindFieldControlType Instance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C64 RID: 7268
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E5D RID: 7773
 	public class INotifyMonsterPlayStandbyTags : ISendBattleStateType
 	{
-		// Token: 0x06009BE5 RID: 39909 RVA: 0x00165C8C File Offset: 0x00163E8C
+		// Token: 0x0600A545 RID: 42309 RVA: 0x00179088 File Offset: 0x00177288
 		private INotifyMonsterPlayStandbyTags_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BE6 RID: 39910 RVA: 0x00165CC4 File Offset: 0x00163EC4
+		// Token: 0x0600A546 RID: 42310 RVA: 0x001790C0 File Offset: 0x001772C0
 		public static INotifyMonsterPlayStandbyTags Create([Nullable(2)] INotifyMonsterPlayStandbyTags instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BE7 RID: 39911 RVA: 0x00165CD7 File Offset: 0x00163ED7
+		// Token: 0x0600A547 RID: 42311 RVA: 0x001790D3 File Offset: 0x001772D3
 		public static INotifyMonsterPlayStandbyTags CreateFromSetValue([Nullable(2)] INotifyMonsterPlayStandbyTags_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BE8 RID: 39912 RVA: 0x00165CEA File Offset: 0x00163EEA
+		// Token: 0x0600A548 RID: 42312 RVA: 0x001790E6 File Offset: 0x001772E6
 		public new INotifyMonsterPlayStandbyTags_SetValue ToSetValue()
 		{
 			return new INotifyMonsterPlayStandbyTags_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030B3 RID: 12467
-		// (get) Token: 0x06009BE9 RID: 39913 RVA: 0x00165D09 File Offset: 0x00163F09
-		// (set) Token: 0x06009BEA RID: 39914 RVA: 0x00165D34 File Offset: 0x00163F34
+		// Token: 0x17003325 RID: 13093
+		// (get) Token: 0x0600A549 RID: 42313 RVA: 0x00179105 File Offset: 0x00177305
+		// (set) Token: 0x0600A54A RID: 42314 RVA: 0x00179130 File Offset: 0x00177330
 		public override ESetBattleStateType Type
 		{
 			get
@@ -84,20 +82,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030B4 RID: 12468
-		// (get) Token: 0x06009BEB RID: 39915 RVA: 0x00165D44 File Offset: 0x00163F44
-		// (set) Token: 0x06009BEC RID: 39916 RVA: 0x00165DD7 File Offset: 0x00163FD7
+		// Token: 0x17003326 RID: 13094
+		// (get) Token: 0x0600A54B RID: 42315 RVA: 0x00179140 File Offset: 0x00177340
+		// (set) Token: 0x0600A54C RID: 42316 RVA: 0x001791D3 File Offset: 0x001773D3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMonsterStandByConfig> StandbyConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -128,7 +126,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -137,23 +135,23 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E9A RID: 24218
+		// Token: 0x040063D4 RID: 25556
 		[Nullable(2)]
 		protected new INotifyMonsterPlayStandbyTags FbInstance;
 
-		// Token: 0x04005E9B RID: 24219
+		// Token: 0x040063D5 RID: 25557
 		[Nullable(2)]
 		protected new INotifyMonsterPlayStandbyTags_SetValue PocoInterface;
 
-		// Token: 0x04005E9C RID: 24220
+		// Token: 0x040063D6 RID: 25558
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMonsterStandByConfig> _StandbyConfigsCache;
 
-		// Token: 0x04005E9D RID: 24221
+		// Token: 0x040063D7 RID: 25559
 		private bool _StandbyConfigsInited;
 	}
 }

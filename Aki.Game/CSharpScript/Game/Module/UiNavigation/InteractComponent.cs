@@ -4,30 +4,30 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200497D RID: 18813
+	// Token: 0x020038F5 RID: 14581
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractComponent : HotKeyComponent
 	{
-		// Token: 0x060310C7 RID: 200903 RVA: 0x00B629CF File Offset: 0x00B60BCF
+		// Token: 0x06025BF7 RID: 154615 RVA: 0x00A9D8CF File Offset: 0x00A9BACF
 		public InteractComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060310C8 RID: 200904 RVA: 0x00B629D8 File Offset: 0x00B60BD8
+		// Token: 0x06025BF8 RID: 154616 RVA: 0x00A9D8D8 File Offset: 0x00A9BAD8
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.InteractClick();
 		}
 
-		// Token: 0x060310C9 RID: 200905 RVA: 0x00B629E4 File Offset: 0x00B60BE4
+		// Token: 0x06025BF9 RID: 154617 RVA: 0x00A9D8E4 File Offset: 0x00A9BAE4
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, focusListener != null, false);
 		}
 
-		// Token: 0x060310CA RID: 200906 RVA: 0x00B62A04 File Offset: 0x00B60C04
+		// Token: 0x06025BFA RID: 154618 RVA: 0x00A9D904 File Offset: 0x00A9BB04
 		protected override void OnRefreshHotKeyText(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.ResetHotKeyDescTextForce();
 		}
 
-		// Token: 0x060310CB RID: 200907 RVA: 0x00B62A40 File Offset: 0x00B60C40
+		// Token: 0x06025BFB RID: 154619 RVA: 0x00A9D940 File Offset: 0x00A9BB40
 		protected override void OnRefreshHotKeyTextId(UiNavigationViewHandle viewHandle)
 		{
 			TsUiNavigationBehaviorListener focusListener = viewHandle.GetFocusListener();

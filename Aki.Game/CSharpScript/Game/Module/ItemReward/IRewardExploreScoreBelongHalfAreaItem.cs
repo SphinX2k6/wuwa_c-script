@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057CE RID: 22478
+	// Token: 0x020047A5 RID: 18341
 	[NullableContext(1)]
 	public interface IRewardExploreScoreBelongHalfAreaItem
 	{
-		// Token: 0x170089AC RID: 35244
-		// (get) Token: 0x06039263 RID: 234083
-		// (set) Token: 0x06039264 RID: 234084
+		// Token: 0x17005D76 RID: 23926
+		// (get) Token: 0x0602E177 RID: 188791
+		// (set) Token: 0x0602E178 RID: 188792
 		string Target { get; set; }
 
-		// Token: 0x170089AD RID: 35245
-		// (get) Token: 0x06039265 RID: 234085
-		// (set) Token: 0x06039266 RID: 234086
+		// Token: 0x17005D77 RID: 23927
+		// (get) Token: 0x0602E179 RID: 188793
+		// (set) Token: 0x0602E17A RID: 188794
 		string DescriptionTextId { get; set; }
 
-		// Token: 0x170089AE RID: 35246
-		// (get) Token: 0x06039267 RID: 234087
-		// (set) Token: 0x06039268 RID: 234088
+		// Token: 0x17005D78 RID: 23928
+		// (get) Token: 0x0602E17B RID: 188795
+		// (set) Token: 0x0602E17C RID: 188796
 		ETeamBelong Belong { get; set; }
 	}
 }

@@ -4,36 +4,36 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006437 RID: 25655
+	// Token: 0x020053B5 RID: 21429
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorDecalLinkQuestViewModel
 	{
-		// Token: 0x04021886 RID: 137350
+		// Token: 0x0401C1B5 RID: 115125
 		public int TaskId;
 
-		// Token: 0x04021887 RID: 137351
+		// Token: 0x0401C1B6 RID: 115126
 		public int IpId;
 
-		// Token: 0x04021888 RID: 137352
+		// Token: 0x0401C1B7 RID: 115127
 		public int ActivityId;
 
-		// Token: 0x04021889 RID: 137353
+		// Token: 0x0401C1B8 RID: 115128
 		public int Current;
 
-		// Token: 0x0402188A RID: 137354
+		// Token: 0x0401C1B9 RID: 115129
 		public int Target = 1;
 
-		// Token: 0x0402188B RID: 137355
+		// Token: 0x0401C1BA RID: 115130
 		public EActivityTaskState Status = EActivityTaskState.Active;
 
-		// Token: 0x0402188C RID: 137356
+		// Token: 0x0401C1BB RID: 115131
 		public string TaskName = "";
 
-		// Token: 0x0402188D RID: 137357
+		// Token: 0x0401C1BC RID: 115132
 		public Dictionary<int, int> RewardInfo = new Dictionary<int, int>();
 
-		// Token: 0x0402188E RID: 137358
+		// Token: 0x0401C1BD RID: 115133
 		public int AccessId;
 	}
 }

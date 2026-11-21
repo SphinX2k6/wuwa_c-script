@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026EC RID: 9964
+	// Token: 0x020029B0 RID: 10672
 	public class IMonsterMoveSplineConfig
 	{
-		// Token: 0x0600DE8C RID: 56972 RVA: 0x00210428 File Offset: 0x0020E628
-		[NullableContext(1)]
+		// Token: 0x0600EC68 RID: 60520 RVA: 0x0022CC68 File Offset: 0x0022AE68
 		public static IMonsterMoveSplineConfig Create(IMonsterMoveSplineConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004276 RID: 17014
-		// (get) Token: 0x0600DE8D RID: 56973 RVA: 0x00210447 File Offset: 0x0020E647
+		// Token: 0x170045B6 RID: 17846
+		// (get) Token: 0x0600EC69 RID: 60521 RVA: 0x0022CC87 File Offset: 0x0022AE87
 		public virtual int TargetEntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004277 RID: 17015
-		// (get) Token: 0x0600DE8E RID: 56974 RVA: 0x00210454 File Offset: 0x0020E654
+		// Token: 0x170045B7 RID: 17847
+		// (get) Token: 0x0600EC6A RID: 60522 RVA: 0x0022CC94 File Offset: 0x0022AE94
 		public virtual int SplineEntityId
 		{
 			get
@@ -41,7 +39,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B88 RID: 31624
+		// Token: 0x170045B8 RID: 17848
+		// (get) Token: 0x0600EC6B RID: 60523 RVA: 0x0022CCA4 File Offset: 0x0022AEA4
+		public virtual bool? IsStrict
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new bool?(this.Instance.IsStrict);
+			}
+		}
+
+		// Token: 0x04008228 RID: 33320
 		private IMonsterMoveSplineConfig Instance;
 	}
 }

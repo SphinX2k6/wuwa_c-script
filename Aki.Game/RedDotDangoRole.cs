@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200337E RID: 13182
+// Token: 0x020028F0 RID: 10480
 public class RedDotDangoRole : RedDotBase
 {
-	// Token: 0x0601CA8B RID: 117387 RVA: 0x00806651 File Offset: 0x00804851
+	// Token: 0x0601A783 RID: 108419 RVA: 0x0082CC15 File Offset: 0x0082AE15
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotDangoDevelop);
 	}
 
-	// Token: 0x0601CA8C RID: 117388 RVA: 0x0080665D File Offset: 0x0080485D
+	// Token: 0x0601A784 RID: 108420 RVA: 0x0082CC21 File Offset: 0x0082AE21
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CA8D RID: 117389 RVA: 0x00806660 File Offset: 0x00804860
+	// Token: 0x0601A785 RID: 108421 RVA: 0x0082CC24 File Offset: 0x0082AE24
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssAddRole, new Action(base.EventCheck));
@@ -26,7 +26,7 @@ public class RedDotDangoRole : RedDotBase
 		EventSystem.Instance.Add(EEventName.RefreshAbyssDevelopRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CA8E RID: 117390 RVA: 0x008066FC File Offset: 0x008048FC
+	// Token: 0x0601A786 RID: 108422 RVA: 0x0082CCC0 File Offset: 0x0082AEC0
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssAddRole, new Action(base.EventCheck));
@@ -36,13 +36,13 @@ public class RedDotDangoRole : RedDotBase
 		EventSystem.Instance.Remove(EEventName.RefreshAbyssDevelopRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CA8F RID: 117391 RVA: 0x00806795 File Offset: 0x00804995
+	// Token: 0x0601A787 RID: 108423 RVA: 0x0082CD59 File Offset: 0x0082AF59
 	protected override bool OnCheck(int uId = 0)
 	{
 		return DangoAbyssModel.Instance.GetDangoRoleRedDot(uId);
 	}
 
-	// Token: 0x0601CA90 RID: 117392 RVA: 0x008067A2 File Offset: 0x008049A2
+	// Token: 0x0601A788 RID: 108424 RVA: 0x0082CD66 File Offset: 0x0082AF66
 	private void OnEventTwoInt(int _1, int _2)
 	{
 		base.EventCheck();

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000659 RID: 1625
+	// Token: 0x020006F6 RID: 1782
 	public class IRandomPoolConfig_SetValue
 	{
-		// Token: 0x04001822 RID: 6178
+		// Token: 0x04001A14 RID: 6676
 		public int Id;
 
-		// Token: 0x04001823 RID: 6179
+		// Token: 0x04001A15 RID: 6677
 		public int Count;
 	}
 }

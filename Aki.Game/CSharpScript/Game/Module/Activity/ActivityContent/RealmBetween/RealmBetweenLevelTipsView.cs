@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006274 RID: 25204
+	// Token: 0x020051F2 RID: 20978
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealmBetweenLevelTipsView : UiViewBase
 	{
-		// Token: 0x0603F73B RID: 259899 RVA: 0x00F56B94 File Offset: 0x00F54D94
+		// Token: 0x060343FC RID: 214012 RVA: 0x00E9DAF0 File Offset: 0x00E9BCF0
 		public RealmBetweenLevelTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F73C RID: 259900 RVA: 0x00F56BCC File Offset: 0x00F54DCC
+		// Token: 0x060343FD RID: 214013 RVA: 0x00E9DB28 File Offset: 0x00E9BD28
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F73D RID: 259901 RVA: 0x00F56C80 File Offset: 0x00F54E80
+		// Token: 0x060343FE RID: 214014 RVA: 0x00E9DBDC File Offset: 0x00E9BDDC
 		protected override void OnStart()
 		{
 			this.OffsetTweenX = new LguiFloatTween();
@@ -80,19 +80,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RefreshLayout(activityRealmBetweenData.MaxTravelLevel);
 		}
 
-		// Token: 0x0603F73E RID: 259902 RVA: 0x00F56DDE File Offset: 0x00F54FDE
+		// Token: 0x060343FF RID: 214015 RVA: 0x00E9DD3A File Offset: 0x00E9BF3A
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603F73F RID: 259903 RVA: 0x00F56DFC File Offset: 0x00F54FFC
+		// Token: 0x06034400 RID: 214016 RVA: 0x00E9DD58 File Offset: 0x00E9BF58
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603F740 RID: 259904 RVA: 0x00F56E1A File Offset: 0x00F5501A
+		// Token: 0x06034401 RID: 214017 RVA: 0x00E9DD76 File Offset: 0x00E9BF76
 		private void OnActivitySequenceEmitEvent(string param)
 		{
 			if (param == "TipsChange")
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F741 RID: 259905 RVA: 0x00F56E30 File Offset: 0x00F55030
+		// Token: 0x06034402 RID: 214018 RVA: 0x00E9DD8C File Offset: 0x00E9BF8C
 		protected override void OnBeforeShow()
 		{
 			this.TickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Refresh), 20f, 1f, null, null, true);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F742 RID: 259906 RVA: 0x00F56F38 File Offset: 0x00F55138
+		// Token: 0x06034403 RID: 214019 RVA: 0x00E9DE94 File Offset: 0x00E9C094
 		protected override void OnAfterShow()
 		{
 			switch (this.TipsType)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F743 RID: 259907 RVA: 0x00F56F82 File Offset: 0x00F55182
+		// Token: 0x06034404 RID: 214020 RVA: 0x00E9DEDE File Offset: 0x00E9C0DE
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTick();
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			offsetTweenX.Destroy();
 		}
 
-		// Token: 0x0603F744 RID: 259908 RVA: 0x00F56F9A File Offset: 0x00F5519A
+		// Token: 0x06034405 RID: 214021 RVA: 0x00E9DEF6 File Offset: 0x00E9C0F6
 		private void UpdateOffsetX(float value)
 		{
 			UUIItem rootUiItem = this.LevelLayout.GetRootUiItem();
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			rootUiItem.SetAnchorOffsetX(value);
 		}
 
-		// Token: 0x0603F745 RID: 259909 RVA: 0x00F56FB2 File Offset: 0x00F551B2
+		// Token: 0x06034406 RID: 214022 RVA: 0x00E9DF0E File Offset: 0x00E9C10E
 		private void OnCompleteOffsetX()
 		{
 			LevelItemGrid layoutItemByIndex = this.LevelLayout.GetLayoutItemByIndex(this.CurLevel);
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			layoutItemByIndex.PlayLevelUpAnim();
 		}
 
-		// Token: 0x0603F746 RID: 259910 RVA: 0x00F56FD0 File Offset: 0x00F551D0
+		// Token: 0x06034407 RID: 214023 RVA: 0x00E9DF2C File Offset: 0x00E9C12C
 		private void RefreshLayout(int maxLevel)
 		{
 			List<int> list = new List<int>();
@@ -202,19 +202,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			rootUiItem.SetAnchorOffsetX(this.GetOffsetX(this.PreLevel));
 		}
 
-		// Token: 0x0603F747 RID: 259911 RVA: 0x00F57030 File Offset: 0x00F55230
+		// Token: 0x06034408 RID: 214024 RVA: 0x00E9DF8C File Offset: 0x00E9C18C
 		private float GetOffsetX(int index)
 		{
 			return -((float)index * (this.LevelItemWidth + this.LevelItemSpacing) + this.LevelItemWidth * 0.5f);
 		}
 
-		// Token: 0x0603F748 RID: 259912 RVA: 0x00F57050 File Offset: 0x00F55250
+		// Token: 0x06034409 RID: 214025 RVA: 0x00E9DFAC File Offset: 0x00E9C1AC
 		private LevelItemGrid OnCreateItem()
 		{
 			return new LevelItemGrid();
 		}
 
-		// Token: 0x0603F749 RID: 259913 RVA: 0x00F57058 File Offset: 0x00F55258
+		// Token: 0x0603440A RID: 214026 RVA: 0x00E9DFB4 File Offset: 0x00E9C1B4
 		private UniTask RunExpAdd()
 		{
 			RealmBetweenLevelTipsView.<RunExpAdd>d__27 <RunExpAdd>d__;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <RunExpAdd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F74A RID: 259914 RVA: 0x00F5709C File Offset: 0x00F5529C
+		// Token: 0x0603440B RID: 214027 RVA: 0x00E9DFF8 File Offset: 0x00E9C1F8
 		private UniTask RunLevelUp()
 		{
 			RealmBetweenLevelTipsView.<RunLevelUp>d__28 <RunLevelUp>d__;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <RunLevelUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F74B RID: 259915 RVA: 0x00F570E0 File Offset: 0x00F552E0
+		// Token: 0x0603440C RID: 214028 RVA: 0x00E9E03C File Offset: 0x00E9C23C
 		protected void Refresh(float delta)
 		{
 			if (this.TickHandle == null || !this.RunBarAnim)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F74C RID: 259916 RVA: 0x00F57154 File Offset: 0x00F55354
+		// Token: 0x0603440D RID: 214029 RVA: 0x00E9E0B0 File Offset: 0x00E9C2B0
 		private UniTask StartBarAnim(float current, float target, float end)
 		{
 			RealmBetweenLevelTipsView.<StartBarAnim>d__38 <StartBarAnim>d__;
@@ -266,14 +266,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <StartBarAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F74D RID: 259917 RVA: 0x00F571AF File Offset: 0x00F553AF
+		// Token: 0x0603440E RID: 214030 RVA: 0x00E9E10B File Offset: 0x00E9C30B
 		private void EndBarAnim()
 		{
 			this.RunBarAnim = false;
 			this.BarAnimPromise.SetResult();
 		}
 
-		// Token: 0x0603F74E RID: 259918 RVA: 0x00F571C3 File Offset: 0x00F553C3
+		// Token: 0x0603440F RID: 214031 RVA: 0x00E9E11F File Offset: 0x00E9C31F
 		private void RemoveTick()
 		{
 			if (this.TickHandle != null)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F74F RID: 259919 RVA: 0x00F571E8 File Offset: 0x00F553E8
+		// Token: 0x06034410 RID: 214032 RVA: 0x00E9E144 File Offset: 0x00E9C344
 		private void RefreshBar(float current, float target)
 		{
 			float fillAmount = MathUtils.Instance.Clamp(current / target, 0f, 1f);
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603F750 RID: 259920 RVA: 0x00F57220 File Offset: 0x00F55420
+		// Token: 0x06034411 RID: 214033 RVA: 0x00E9E17C File Offset: 0x00E9C37C
 		private void RefreshBarAdd(float current, float target)
 		{
 			float fillAmount = MathUtils.Instance.Clamp(current / target, 0f, 1f);
@@ -307,88 +307,88 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603F751 RID: 259921 RVA: 0x00F57257 File Offset: 0x00F55457
+		// Token: 0x06034412 RID: 214034 RVA: 0x00E9E1B3 File Offset: 0x00E9C3B3
 		private void SetExpTextVisible(bool bVisible)
 		{
 			base.GetItem(6).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603F752 RID: 259922 RVA: 0x00F57266 File Offset: 0x00F55466
+		// Token: 0x06034413 RID: 214035 RVA: 0x00E9E1C2 File Offset: 0x00E9C3C2
 		private void SetExpText(int expCount)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "RealmBetweenLevelUpTipsExp_Text", new <>z__ReadOnlySingleElementList<object>(expCount));
 		}
 
-		// Token: 0x0603F753 RID: 259923 RVA: 0x00F57289 File Offset: 0x00F55489
+		// Token: 0x06034414 RID: 214036 RVA: 0x00E9E1E5 File Offset: 0x00E9C3E5
 		private void SetExpMaxText()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "RealmBetweenLevelCanUp_Text", Array.Empty<object>());
 			this.SetExpTextVisible(true);
 		}
 
-		// Token: 0x0402126B RID: 135787
+		// Token: 0x0401BB9A RID: 113562
 		private ETipsType TipsType;
 
-		// Token: 0x0402126C RID: 135788
+		// Token: 0x0401BB9B RID: 113563
 		private int PreLevel;
 
-		// Token: 0x0402126D RID: 135789
+		// Token: 0x0401BB9C RID: 113564
 		private int CurLevel;
 
-		// Token: 0x0402126E RID: 135790
+		// Token: 0x0401BB9D RID: 113565
 		private int PreExpTotalCount;
 
-		// Token: 0x0402126F RID: 135791
+		// Token: 0x0401BB9E RID: 113566
 		private int CurExpTotalCount;
 
-		// Token: 0x04021270 RID: 135792
+		// Token: 0x0401BB9F RID: 113567
 		private int PreLevelTargetExp;
 
-		// Token: 0x04021271 RID: 135793
+		// Token: 0x0401BBA0 RID: 113568
 		private int PreCurExpCount;
 
-		// Token: 0x04021272 RID: 135794
+		// Token: 0x0401BBA1 RID: 113569
 		private int CurExpCount;
 
-		// Token: 0x04021273 RID: 135795
+		// Token: 0x0401BBA2 RID: 113570
 		private int CurTargetExp;
 
-		// Token: 0x04021274 RID: 135796
+		// Token: 0x0401BBA3 RID: 113571
 		private GenericLayout<LevelItemGrid, int> LevelLayout;
 
-		// Token: 0x04021275 RID: 135797
+		// Token: 0x0401BBA4 RID: 113572
 		private float LevelItemWidth;
 
-		// Token: 0x04021276 RID: 135798
+		// Token: 0x0401BBA5 RID: 113573
 		[Nullable(2)]
 		private LguiFloatTween OffsetTweenX;
 
-		// Token: 0x04021277 RID: 135799
+		// Token: 0x0401BBA6 RID: 113574
 		private float LevelItemSpacing;
 
-		// Token: 0x04021278 RID: 135800
+		// Token: 0x0401BBA7 RID: 113575
 		[Nullable(2)]
 		protected TimerHandle TickHandle;
 
-		// Token: 0x04021279 RID: 135801
+		// Token: 0x0401BBA8 RID: 113576
 		protected int BarAnimTime = ConfigCommonParamById.GetIntConfig("TravelExpBarDisplayTime").Value;
 
-		// Token: 0x0402127A RID: 135802
+		// Token: 0x0401BBA9 RID: 113577
 		protected bool RunBarAnim;
 
-		// Token: 0x0402127B RID: 135803
+		// Token: 0x0401BBAA RID: 113578
 		protected float RunBarAnimTime;
 
-		// Token: 0x0402127C RID: 135804
+		// Token: 0x0401BBAB RID: 113579
 		protected float StartValue;
 
-		// Token: 0x0402127D RID: 135805
+		// Token: 0x0401BBAC RID: 113580
 		protected float TargetValue;
 
-		// Token: 0x0402127E RID: 135806
+		// Token: 0x0401BBAD RID: 113581
 		protected float EndValue;
 
-		// Token: 0x0402127F RID: 135807
+		// Token: 0x0401BBAE RID: 113582
 		protected CustomPromise BarAnimPromise = new CustomPromise();
 	}
 }

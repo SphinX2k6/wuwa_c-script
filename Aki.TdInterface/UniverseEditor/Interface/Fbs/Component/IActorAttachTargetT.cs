@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E54 RID: 20052
+	// Token: 0x02005365 RID: 21349
 	public class IActorAttachTargetT
 	{
-		// Token: 0x17008F84 RID: 36740
-		// (get) Token: 0x0601F7AC RID: 128940 RVA: 0x00462AF7 File Offset: 0x00460CF7
-		// (set) Token: 0x0601F7AD RID: 128941 RVA: 0x00462AFF File Offset: 0x00460CFF
+		// Token: 0x170096BD RID: 38589
+		// (get) Token: 0x060213F7 RID: 136183 RVA: 0x00496B0F File Offset: 0x00494D0F
+		// (set) Token: 0x060213F8 RID: 136184 RVA: 0x00496B17 File Offset: 0x00494D17
 		public EAttachType Type { get; set; }
 
-		// Token: 0x17008F85 RID: 36741
-		// (get) Token: 0x0601F7AE RID: 128942 RVA: 0x00462B08 File Offset: 0x00460D08
-		// (set) Token: 0x0601F7AF RID: 128943 RVA: 0x00462B10 File Offset: 0x00460D10
+		// Token: 0x170096BE RID: 38590
+		// (get) Token: 0x060213F9 RID: 136185 RVA: 0x00496B20 File Offset: 0x00494D20
+		// (set) Token: 0x060213FA RID: 136186 RVA: 0x00496B28 File Offset: 0x00494D28
 		public IActorRefT ActorRef { get; set; }
 
-		// Token: 0x0601F7B0 RID: 128944 RVA: 0x00462B19 File Offset: 0x00460D19
+		// Token: 0x060213FB RID: 136187 RVA: 0x00496B31 File Offset: 0x00494D31
 		public IActorAttachTargetT()
 		{
 			this.Type = EAttachType.Actor;

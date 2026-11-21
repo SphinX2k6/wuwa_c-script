@@ -4,24 +4,24 @@ using CSharpScript.Game.Module.PhantomArena.Battle.Model;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x0200523E RID: 21054
+	// Token: 0x0200420E RID: 16910
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleLoadingInfo : IPhantomArenaBattleLoadingInfo
 	{
-		// Token: 0x17008250 RID: 33360
-		// (get) Token: 0x06035C8D RID: 220301 RVA: 0x00CB9FA0 File Offset: 0x00CB81A0
-		// (set) Token: 0x06035C8E RID: 220302 RVA: 0x00CB9FA8 File Offset: 0x00CB81A8
+		// Token: 0x17005610 RID: 22032
+		// (get) Token: 0x0602AB88 RID: 174984 RVA: 0x00C075E0 File Offset: 0x00C057E0
+		// (set) Token: 0x0602AB89 RID: 174985 RVA: 0x00C075E8 File Offset: 0x00C057E8
 		public int Index { get; set; }
 
-		// Token: 0x17008251 RID: 33361
-		// (get) Token: 0x06035C8F RID: 220303 RVA: 0x00CB9FB1 File Offset: 0x00CB81B1
-		// (set) Token: 0x06035C90 RID: 220304 RVA: 0x00CB9FB9 File Offset: 0x00CB81B9
+		// Token: 0x17005611 RID: 22033
+		// (get) Token: 0x0602AB8A RID: 174986 RVA: 0x00C075F1 File Offset: 0x00C057F1
+		// (set) Token: 0x0602AB8B RID: 174987 RVA: 0x00C075F9 File Offset: 0x00C057F9
 		public bool IsMe { get; set; }
 
-		// Token: 0x17008252 RID: 33362
-		// (get) Token: 0x06035C91 RID: 220305 RVA: 0x00CB9FC2 File Offset: 0x00CB81C2
-		// (set) Token: 0x06035C92 RID: 220306 RVA: 0x00CB9FCA File Offset: 0x00CB81CA
+		// Token: 0x17005612 RID: 22034
+		// (get) Token: 0x0602AB8C RID: 174988 RVA: 0x00C07602 File Offset: 0x00C05802
+		// (set) Token: 0x0602AB8D RID: 174989 RVA: 0x00C0760A File Offset: 0x00C0580A
 		public PhantomCardData CardData { get; set; }
 	}
 }

@@ -1,26 +1,26 @@
 ﻿using System;
 using CSharpScript.Core.Common;
 
-// Token: 0x020034C6 RID: 13510
+// Token: 0x02002A3A RID: 10810
 [EnumExtensions]
 public enum ERichTextType
 {
-	// Token: 0x0400E7D0 RID: 59344
+	// Token: 0x0400EC84 RID: 60548
 	[EnumStringMember("PlayerName")]
 	PlayerName,
-	// Token: 0x0400E7D1 RID: 59345
+	// Token: 0x0400EC85 RID: 60549
 	[EnumStringMember("TA")]
 	SexChooseName,
-	// Token: 0x0400E7D2 RID: 59346
+	// Token: 0x0400EC86 RID: 60550
 	[EnumStringMember("SexShowName")]
 	SexShowName,
-	// Token: 0x0400E7D3 RID: 59347
+	// Token: 0x0400EC87 RID: 60551
 	[EnumStringMember("Ipt")]
 	InputType,
-	// Token: 0x0400E7D4 RID: 59348
+	// Token: 0x0400EC88 RID: 60552
 	[EnumStringMember("Sap")]
 	SingularAndPlural,
-	// Token: 0x0400E7D5 RID: 59349
+	// Token: 0x0400EC89 RID: 60553
 	[EnumStringMember("Var")]
 	Var
 }

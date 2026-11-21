@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 {
-	// Token: 0x02006A81 RID: 27265
+	// Token: 0x02005BDE RID: 23518
 	public class SceneInteractPointView : SceneInteractPointViewBase
 	{
-		// Token: 0x06043C35 RID: 277557 RVA: 0x0109606C File Offset: 0x0109426C
+		// Token: 0x06039C83 RID: 236675 RVA: 0x0103A8AC File Offset: 0x01038AAC
 		protected override void OnRegisterComponent()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			}
 		}
 
-		// Token: 0x06043C36 RID: 277558 RVA: 0x01096098 File Offset: 0x01094298
+		// Token: 0x06039C84 RID: 236676 RVA: 0x0103A8D8 File Offset: 0x01038AD8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SceneInteractPointView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -32,37 +32,37 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043C37 RID: 277559 RVA: 0x010960DB File Offset: 0x010942DB
+		// Token: 0x06039C85 RID: 236677 RVA: 0x0103A91B File Offset: 0x01038B1B
 		protected override void OnStart()
 		{
 			this.AddEvents();
 		}
 
-		// Token: 0x06043C38 RID: 277560 RVA: 0x010960E3 File Offset: 0x010942E3
+		// Token: 0x06039C86 RID: 236678 RVA: 0x0103A923 File Offset: 0x01038B23
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x06043C39 RID: 277561 RVA: 0x01096101 File Offset: 0x01094301
+		// Token: 0x06039C87 RID: 236679 RVA: 0x0103A941 File Offset: 0x01038B41
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 		}
 
-		// Token: 0x06043C3A RID: 277562 RVA: 0x0109611F File Offset: 0x0109431F
+		// Token: 0x06039C88 RID: 236680 RVA: 0x0103A95F File Offset: 0x01038B5F
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
 		}
 
-		// Token: 0x06043C3B RID: 277563 RVA: 0x01096127 File Offset: 0x01094327
+		// Token: 0x06039C89 RID: 236681 RVA: 0x0103A967 File Offset: 0x01038B67
 		private void OnMotorcycleStateChanged(bool bDriving)
 		{
 			this.RefreshKeyAction();
 		}
 
-		// Token: 0x06043C3C RID: 277564 RVA: 0x0109612F File Offset: 0x0109432F
+		// Token: 0x06039C8A RID: 236682 RVA: 0x0103A96F File Offset: 0x01038B6F
 		private void RefreshKeyAction()
 		{
 			if (this.KeyItem != null)
@@ -71,22 +71,22 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.View
 			}
 		}
 
-		// Token: 0x04023674 RID: 145012
+		// Token: 0x0401E866 RID: 125030
 		[Nullable(2)]
 		private CombineKeyItem KeyItem;
 
-		// Token: 0x0200CB89 RID: 52105
+		// Token: 0x0200B768 RID: 46952
 		private enum EChildType
 		{
-			// Token: 0x0403D724 RID: 251684
+			// Token: 0x04038B06 RID: 232198
 			CommonItem,
-			// Token: 0x0403D725 RID: 251685
+			// Token: 0x04038B07 RID: 232199
 			InterruptItem,
-			// Token: 0x0403D726 RID: 251686
+			// Token: 0x04038B08 RID: 232200
 			SkillIcon,
-			// Token: 0x0403D727 RID: 251687
+			// Token: 0x04038B09 RID: 232201
 			EffectOnce,
-			// Token: 0x0403D728 RID: 251688
+			// Token: 0x04038B0A RID: 232202
 			KeyItem
 		}
 	}

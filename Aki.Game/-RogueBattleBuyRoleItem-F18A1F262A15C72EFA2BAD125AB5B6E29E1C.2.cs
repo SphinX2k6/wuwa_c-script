@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x02002767 RID: 10087
+// Token: 0x02001C52 RID: 7250
 internal enum <RogueBattleBuyRoleItem>F18A1F262A15C72EFA2BAD125AB5B6E29E1C04CB95E6255458BB03E7065B54C24__ERogueBattleBuyRoleItemDefine
 {
-	// Token: 0x04009B74 RID: 39796
+	// Token: 0x04009CCC RID: 40140
 	ToggleSelf,
-	// Token: 0x04009B75 RID: 39797
+	// Token: 0x04009CCD RID: 40141
 	TextureRoleIcon,
-	// Token: 0x04009B76 RID: 39798
+	// Token: 0x04009CCE RID: 40142
 	ItemNew,
-	// Token: 0x04009B77 RID: 39799
+	// Token: 0x04009CCF RID: 40143
 	FettersLayout,
-	// Token: 0x04009B78 RID: 39800
+	// Token: 0x04009CD0 RID: 40144
 	FetterItem,
-	// Token: 0x04009B79 RID: 39801
+	// Token: 0x04009CD1 RID: 40145
 	StarLayout,
-	// Token: 0x04009B7A RID: 39802
+	// Token: 0x04009CD2 RID: 40146
 	StarItem,
-	// Token: 0x04009B7B RID: 39803
+	// Token: 0x04009CD3 RID: 40147
 	CostPanel,
-	// Token: 0x04009B7C RID: 39804
+	// Token: 0x04009CD4 RID: 40148
 	TexCostItem,
-	// Token: 0x04009B7D RID: 39805
+	// Token: 0x04009CD5 RID: 40149
 	TxtPrice,
-	// Token: 0x04009B7E RID: 39806
+	// Token: 0x04009CD6 RID: 40150
 	TxtDiscount,
-	// Token: 0x04009B7F RID: 39807
+	// Token: 0x04009CD7 RID: 40151
 	PanelDone,
-	// Token: 0x04009B80 RID: 39808
+	// Token: 0x04009CD8 RID: 40152
 	PanelEmpty,
-	// Token: 0x04009B81 RID: 39809
+	// Token: 0x04009CD9 RID: 40153
 	UpgradeItem,
-	// Token: 0x04009B82 RID: 39810
+	// Token: 0x04009CDA RID: 40154
 	ElementItem
 }

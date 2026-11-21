@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006FA RID: 1786
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200079B RID: 1947
 	public class ISpeedEffectConfig
 	{
-		// Token: 0x06002670 RID: 9840 RVA: 0x00066CDC File Offset: 0x00064EDC
+		// Token: 0x06002990 RID: 10640 RVA: 0x0006DD4C File Offset: 0x0006BF4C
 		private ISpeedEffectConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002671 RID: 9841 RVA: 0x00066D14 File Offset: 0x00064F14
+		// Token: 0x06002991 RID: 10641 RVA: 0x0006DD84 File Offset: 0x0006BF84
 		public static ISpeedEffectConfig Create([Nullable(2)] ISpeedEffectConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002672 RID: 9842 RVA: 0x00066D27 File Offset: 0x00064F27
+		// Token: 0x06002992 RID: 10642 RVA: 0x0006DD97 File Offset: 0x0006BF97
 		public static ISpeedEffectConfig CreateFromSetValue([Nullable(2)] ISpeedEffectConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002673 RID: 9843 RVA: 0x00066D3A File Offset: 0x00064F3A
+		// Token: 0x06002993 RID: 10643 RVA: 0x0006DDAA File Offset: 0x0006BFAA
 		public ISpeedEffectConfig_SetValue ToSetValue()
 		{
 			return new ISpeedEffectConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A20 RID: 2592
-		// (get) Token: 0x06002674 RID: 9844 RVA: 0x00066D65 File Offset: 0x00064F65
-		// (set) Token: 0x06002675 RID: 9845 RVA: 0x00066D94 File Offset: 0x00064F94
+		// Token: 0x17000ADE RID: 2782
+		// (get) Token: 0x06002994 RID: 10644 RVA: 0x0006DDD5 File Offset: 0x0006BFD5
+		// (set) Token: 0x06002995 RID: 10645 RVA: 0x0006DE04 File Offset: 0x0006C004
 		public virtual float MinVehicleSpeed
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A21 RID: 2593
-		// (get) Token: 0x06002676 RID: 9846 RVA: 0x00066DA2 File Offset: 0x00064FA2
-		// (set) Token: 0x06002677 RID: 9847 RVA: 0x00066DD1 File Offset: 0x00064FD1
+		// Token: 0x17000ADF RID: 2783
+		// (get) Token: 0x06002996 RID: 10646 RVA: 0x0006DE12 File Offset: 0x0006C012
+		// (set) Token: 0x06002997 RID: 10647 RVA: 0x0006DE41 File Offset: 0x0006C041
 		public virtual float MaxVehicleSpeed
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A22 RID: 2594
-		// (get) Token: 0x06002678 RID: 9848 RVA: 0x00066DDF File Offset: 0x00064FDF
-		// (set) Token: 0x06002679 RID: 9849 RVA: 0x00066E06 File Offset: 0x00065006
+		// Token: 0x17000AE0 RID: 2784
+		// (get) Token: 0x06002998 RID: 10648 RVA: 0x0006DE4F File Offset: 0x0006C04F
+		// (set) Token: 0x06002999 RID: 10649 RVA: 0x0006DE76 File Offset: 0x0006C076
 		public virtual List<long> GameplayCueIds
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A14 RID: 6676
+		// Token: 0x04001C13 RID: 7187
 		[Nullable(2)]
 		protected ISpeedEffectConfig FbInstance;
 
-		// Token: 0x04001A15 RID: 6677
+		// Token: 0x04001C14 RID: 7188
 		[Nullable(2)]
 		protected ISpeedEffectConfig_SetValue PocoInterface;
 	}

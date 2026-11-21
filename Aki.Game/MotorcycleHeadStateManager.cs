@@ -6,19 +6,19 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001CDD RID: 7389
+// Token: 0x0200119F RID: 4511
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleHeadStateManager
 {
-	// Token: 0x0600DFDD RID: 57309 RVA: 0x00346EF4 File Offset: 0x003450F4
+	// Token: 0x0600B3FA RID: 46074 RVA: 0x0035291C File Offset: 0x00350B1C
 	public void Init()
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("MotorArrowDropHeadScaleCurvePath");
 		this.DropHeadStateScaleCurve = ResourceSystem.Instance.Load<UCurveFloat>(stringConfig, "js_undefined");
 	}
 
-	// Token: 0x0600DFDE RID: 57310 RVA: 0x00346F24 File Offset: 0x00345124
+	// Token: 0x0600B3FB RID: 46075 RVA: 0x0035294C File Offset: 0x00350B4C
 	public void UpdateHeadState(Func<UiPanelBase> headStateClass, FKSC_HeadHpContext headInfo, [Nullable(2)] IBuffGateDesc buffGateInfo = null)
 	{
 		UiPanelBase uiPanelBase2;
@@ -73,7 +73,7 @@ public class MotorcycleHeadStateManager
 		}
 	}
 
-	// Token: 0x0600DFDF RID: 57311 RVA: 0x00347044 File Offset: 0x00345244
+	// Token: 0x0600B3FC RID: 46076 RVA: 0x00352A6C File Offset: 0x00350C6C
 	private void SwapBattleBuff()
 	{
 		MotorcycleBattleBuff motorcycleBattleBuff = this.MotorcycleBattleBuff;
@@ -81,7 +81,7 @@ public class MotorcycleHeadStateManager
 		this.MotorcycleBattleBuffUp = motorcycleBattleBuff;
 	}
 
-	// Token: 0x0600DFE0 RID: 57312 RVA: 0x0034706C File Offset: 0x0034526C
+	// Token: 0x0600B3FD RID: 46077 RVA: 0x00352A94 File Offset: 0x00350C94
 	private bool TryPlayBattleBuff(IBuffGateDesc buffGateInfo)
 	{
 		if ((float)Time.Instance.WorldTimeSeconds < this.NextBuffTime)
@@ -109,7 +109,7 @@ public class MotorcycleHeadStateManager
 		return false;
 	}
 
-	// Token: 0x0600DFE1 RID: 57313 RVA: 0x0034712C File Offset: 0x0034532C
+	// Token: 0x0600B3FE RID: 46078 RVA: 0x00352B54 File Offset: 0x00350D54
 	public void CreateMotorcycleBuffItem(IBuffGateDesc buffGateInfo)
 	{
 		if (this.MotorcycleBattleBuff == null)
@@ -125,7 +125,7 @@ public class MotorcycleHeadStateManager
 		}
 	}
 
-	// Token: 0x0600DFE2 RID: 57314 RVA: 0x00347198 File Offset: 0x00345398
+	// Token: 0x0600B3FF RID: 46079 RVA: 0x00352BC0 File Offset: 0x00350DC0
 	public void Tick()
 	{
 		if (this.MotorcycleBattleBuff == null)
@@ -140,7 +140,7 @@ public class MotorcycleHeadStateManager
 		this.MotorcycleBattleBuffUp.Tick();
 	}
 
-	// Token: 0x0600DFE3 RID: 57315 RVA: 0x003471F4 File Offset: 0x003453F4
+	// Token: 0x0600B400 RID: 46080 RVA: 0x00352C1C File Offset: 0x00350E1C
 	public void Clear()
 	{
 		foreach (UiPanelBase uiPanelBase in this.HeadStateMap.Values)
@@ -164,27 +164,27 @@ public class MotorcycleHeadStateManager
 		this.DropHeadStateScaleCurve = null;
 	}
 
-	// Token: 0x04006707 RID: 26375
+	// Token: 0x040067E6 RID: 26598
 	private const int NEXT_BUFF_DURATION = 500;
 
-	// Token: 0x04006708 RID: 26376
+	// Token: 0x040067E7 RID: 26599
 	private readonly Dictionary<int, UiPanelBase> HeadStateMap = new Dictionary<int, UiPanelBase>();
 
-	// Token: 0x04006709 RID: 26377
+	// Token: 0x040067E8 RID: 26600
 	[Nullable(2)]
 	private UCurveFloat DropHeadStateScaleCurve;
 
-	// Token: 0x0400670A RID: 26378
+	// Token: 0x040067E9 RID: 26601
 	private float NextBuffTime;
 
-	// Token: 0x0400670B RID: 26379
+	// Token: 0x040067EA RID: 26602
 	[Nullable(2)]
 	public MotorcycleBattleBuff MotorcycleBattleBuff;
 
-	// Token: 0x0400670C RID: 26380
+	// Token: 0x040067EB RID: 26603
 	[Nullable(2)]
 	public MotorcycleBattleBuff MotorcycleBattleBuffUp;
 
-	// Token: 0x0400670D RID: 26381
+	// Token: 0x040067EC RID: 26604
 	public List<IBuffGateDesc> WaitToShowBattleBuff = new List<IBuffGateDesc>();
 }

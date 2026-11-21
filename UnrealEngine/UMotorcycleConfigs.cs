@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F32 RID: 7986
+	// Token: 0x02000634 RID: 1588
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVehicle.MotorcycleConfigs")]
 	[UnrealStructLayout(1760, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1760)]
 	public class UMotorcycleConfigs : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601E616 RID: 124438 RVA: 0x002D2576 File Offset: 0x002D0776
+		// Token: 0x06008B6F RID: 35695 RVA: 0x000D1D4E File Offset: 0x000CFF4E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMotorcycleConfigs._ClassPtr;
 		}
 
-		// Token: 0x0601E617 RID: 124439 RVA: 0x002D2584 File Offset: 0x002D0784
+		// Token: 0x06008B70 RID: 35696 RVA: 0x000D1D5C File Offset: 0x000CFF5C
 		public UMotorcycleConfigs() : this(BuiltinUtils.AllocNativeUObject(UMotorcycleConfigs.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601E618 RID: 124440 RVA: 0x002D25AC File Offset: 0x002D07AC
+		// Token: 0x06008B71 RID: 35697 RVA: 0x000D1D84 File Offset: 0x000CFF84
 		public UMotorcycleConfigs(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMotorcycleConfigs.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170078CA RID: 30922
-		// (get) Token: 0x0601E619 RID: 124441 RVA: 0x002D25DF File Offset: 0x002D07DF
-		// (set) Token: 0x0601E61A RID: 124442 RVA: 0x002D25EF File Offset: 0x002D07EF
+		// Token: 0x17001A3E RID: 6718
+		// (get) Token: 0x06008B72 RID: 35698 RVA: 0x000D1DB7 File Offset: 0x000CFFB7
+		// (set) Token: 0x06008B73 RID: 35699 RVA: 0x000D1DC7 File Offset: 0x000CFFC7
 		public unsafe float GravityScale
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078CB RID: 30923
-		// (get) Token: 0x0601E61B RID: 124443 RVA: 0x002D2600 File Offset: 0x002D0800
-		// (set) Token: 0x0601E61C RID: 124444 RVA: 0x002D2610 File Offset: 0x002D0810
+		// Token: 0x17001A3F RID: 6719
+		// (get) Token: 0x06008B74 RID: 35700 RVA: 0x000D1DD8 File Offset: 0x000CFFD8
+		// (set) Token: 0x06008B75 RID: 35701 RVA: 0x000D1DE8 File Offset: 0x000CFFE8
 		public unsafe float MotorAirFriction
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078CC RID: 30924
-		// (get) Token: 0x0601E61D RID: 124445 RVA: 0x002D2621 File Offset: 0x002D0821
-		// (set) Token: 0x0601E61E RID: 124446 RVA: 0x002D2635 File Offset: 0x002D0835
+		// Token: 0x17001A40 RID: 6720
+		// (get) Token: 0x06008B76 RID: 35702 RVA: 0x000D1DF9 File Offset: 0x000CFFF9
+		// (set) Token: 0x06008B77 RID: 35703 RVA: 0x000D1E0D File Offset: 0x000D000D
 		public unsafe FVector MotorBodyAngularLengths
 		{
 			get
@@ -74,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078CD RID: 30925
-		// (get) Token: 0x0601E61F RID: 124447 RVA: 0x002D264C File Offset: 0x002D084C
-		// (set) Token: 0x0601E620 RID: 124448 RVA: 0x002D2685 File Offset: 0x002D0885
+		// Token: 0x17001A41 RID: 6721
+		// (get) Token: 0x06008B78 RID: 35704 RVA: 0x000D1E24 File Offset: 0x000D0024
+		// (set) Token: 0x06008B79 RID: 35705 RVA: 0x000D1E5D File Offset: 0x000D005D
 		public FMotorFloatRange MotorBodyAngularRateInHitSpeed
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078CE RID: 30926
-		// (get) Token: 0x0601E621 RID: 124449 RVA: 0x002D26A6 File Offset: 0x002D08A6
-		// (set) Token: 0x0601E622 RID: 124450 RVA: 0x002D26B6 File Offset: 0x002D08B6
+		// Token: 0x17001A42 RID: 6722
+		// (get) Token: 0x06008B7A RID: 35706 RVA: 0x000D1E7E File Offset: 0x000D007E
+		// (set) Token: 0x06008B7B RID: 35707 RVA: 0x000D1E8E File Offset: 0x000D008E
 		public unsafe float HangRotateWeakenWhenTwoWheelOnGroup
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078CF RID: 30927
-		// (get) Token: 0x0601E623 RID: 124451 RVA: 0x002D26C8 File Offset: 0x002D08C8
-		// (set) Token: 0x0601E624 RID: 124452 RVA: 0x002D2701 File Offset: 0x002D0901
+		// Token: 0x17001A43 RID: 6723
+		// (get) Token: 0x06008B7C RID: 35708 RVA: 0x000D1EA0 File Offset: 0x000D00A0
+		// (set) Token: 0x06008B7D RID: 35709 RVA: 0x000D1ED9 File Offset: 0x000D00D9
 		public FMotorHangConfigParams MotorFrontWheelHang
 		{
 			get
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078D0 RID: 30928
-		// (get) Token: 0x0601E625 RID: 124453 RVA: 0x002D2724 File Offset: 0x002D0924
-		// (set) Token: 0x0601E626 RID: 124454 RVA: 0x002D275D File Offset: 0x002D095D
+		// Token: 0x17001A44 RID: 6724
+		// (get) Token: 0x06008B7E RID: 35710 RVA: 0x000D1EFC File Offset: 0x000D00FC
+		// (set) Token: 0x06008B7F RID: 35711 RVA: 0x000D1F35 File Offset: 0x000D0135
 		public FMotorHangConfigParams MotorBackWheelHang
 		{
 			get
@@ -152,72 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078D1 RID: 30929
-		// (get) Token: 0x0601E627 RID: 124455 RVA: 0x002D2780 File Offset: 0x002D0980
-		// (set) Token: 0x0601E628 RID: 124456 RVA: 0x002D27B9 File Offset: 0x002D09B9
-		public FMotorContactPhysParams MotorBodyPhys
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorContactPhysParams result;
-				if ((result = this._MotorBodyPhys) == null)
-				{
-					result = (this._MotorBodyPhys = new FMotorContactPhysParams(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBodyPhys, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorContactPhysParams.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBodyPhys, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D2 RID: 30930
-		// (get) Token: 0x0601E629 RID: 124457 RVA: 0x002D27DC File Offset: 0x002D09DC
-		// (set) Token: 0x0601E62A RID: 124458 RVA: 0x002D2815 File Offset: 0x002D0A15
-		public FMotorContactPhysParams MotorFrontWheelPhys
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorContactPhysParams result;
-				if ((result = this._MotorFrontWheelPhys) == null)
-				{
-					result = (this._MotorFrontWheelPhys = new FMotorContactPhysParams(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorFrontWheelPhys, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorContactPhysParams.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorFrontWheelPhys, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D3 RID: 30931
-		// (get) Token: 0x0601E62B RID: 124459 RVA: 0x002D2838 File Offset: 0x002D0A38
-		// (set) Token: 0x0601E62C RID: 124460 RVA: 0x002D2871 File Offset: 0x002D0A71
-		public FMotorContactPhysParams MotorBackWheelPhys
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorContactPhysParams result;
-				if ((result = this._MotorBackWheelPhys) == null)
-				{
-					result = (this._MotorBackWheelPhys = new FMotorContactPhysParams(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBackWheelPhys, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorContactPhysParams.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBackWheelPhys, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D4 RID: 30932
-		// (get) Token: 0x0601E62D RID: 124461 RVA: 0x002D2894 File Offset: 0x002D0A94
-		// (set) Token: 0x0601E62E RID: 124462 RVA: 0x002D28CD File Offset: 0x002D0ACD
+		// Token: 0x17001A45 RID: 6725
+		// (get) Token: 0x06008B80 RID: 35712 RVA: 0x000D1F58 File Offset: 0x000D0158
+		// (set) Token: 0x06008B81 RID: 35713 RVA: 0x000D1F91 File Offset: 0x000D0191
 		public FMotorAccelConfig MotorAccelConfig
 		{
 			get
@@ -236,253 +173,64 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078D5 RID: 30933
-		// (get) Token: 0x0601E62F RID: 124463 RVA: 0x002D28F0 File Offset: 0x002D0AF0
-		// (set) Token: 0x0601E630 RID: 124464 RVA: 0x002D2929 File Offset: 0x002D0B29
-		public FMotorBoostConfig MotorBoostConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorBoostConfig result;
-				if ((result = this._MotorBoostConfig) == null)
-				{
-					result = (this._MotorBoostConfig = new FMotorBoostConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBoostConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorBoostConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBoostConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D6 RID: 30934
-		// (get) Token: 0x0601E631 RID: 124465 RVA: 0x002D294C File Offset: 0x002D0B4C
-		// (set) Token: 0x0601E632 RID: 124466 RVA: 0x002D2985 File Offset: 0x002D0B85
-		public FMotorBalanceConfig MotorBalanceConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorBalanceConfig result;
-				if ((result = this._MotorBalanceConfig) == null)
-				{
-					result = (this._MotorBalanceConfig = new FMotorBalanceConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBalanceConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorBalanceConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBalanceConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D7 RID: 30935
-		// (get) Token: 0x0601E633 RID: 124467 RVA: 0x002D29A8 File Offset: 0x002D0BA8
-		// (set) Token: 0x0601E634 RID: 124468 RVA: 0x002D29E1 File Offset: 0x002D0BE1
-		public FMotorBrakingTurnConfig MotorBrakingTurnConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorBrakingTurnConfig result;
-				if ((result = this._MotorBrakingTurnConfig) == null)
-				{
-					result = (this._MotorBrakingTurnConfig = new FMotorBrakingTurnConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBrakingTurnConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorBrakingTurnConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorBrakingTurnConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D8 RID: 30936
-		// (get) Token: 0x0601E635 RID: 124469 RVA: 0x002D2A04 File Offset: 0x002D0C04
-		// (set) Token: 0x0601E636 RID: 124470 RVA: 0x002D2A3D File Offset: 0x002D0C3D
-		public FMotorSoarConfig MotorSoarConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorSoarConfig result;
-				if ((result = this._MotorSoarConfig) == null)
-				{
-					result = (this._MotorSoarConfig = new FMotorSoarConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorSoarConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorSoarConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorSoarConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078D9 RID: 30937
-		// (get) Token: 0x0601E637 RID: 124471 RVA: 0x002D2A60 File Offset: 0x002D0C60
-		// (set) Token: 0x0601E638 RID: 124472 RVA: 0x002D2A99 File Offset: 0x002D0C99
-		public FMotorNewDriftConfig MotorNewDriftConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorNewDriftConfig result;
-				if ((result = this._MotorNewDriftConfig) == null)
-				{
-					result = (this._MotorNewDriftConfig = new FMotorNewDriftConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorNewDriftConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorNewDriftConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorNewDriftConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x170078DA RID: 30938
-		// (get) Token: 0x0601E639 RID: 124473 RVA: 0x002D2ABC File Offset: 0x002D0CBC
-		// (set) Token: 0x0601E63A RID: 124474 RVA: 0x002D2AF5 File Offset: 0x002D0CF5
-		public FMotorTurnConfig MotorTurnConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMotorTurnConfig result;
-				if ((result = this._MotorTurnConfig) == null)
-				{
-					result = (this._MotorTurnConfig = new FMotorTurnConfig(base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorTurnConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMotorTurnConfig.StaticStruct(), base.NativePtr + (IntPtr)UMotorcycleConfigs.__PropertyOffset_MotorTurnConfig, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0601E63B RID: 124475 RVA: 0x002D2B16 File Offset: 0x002D0D16
+		// Token: 0x06008B82 RID: 35714 RVA: 0x000D1FB2 File Offset: 0x000D01B2
 		static UMotorcycleConfigs()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroVehicle.MotorcycleConfigs");
 		}
 
-		// Token: 0x0601E63C RID: 124476 RVA: 0x002D2B24 File Offset: 0x002D0D24
+		// Token: 0x06008B83 RID: 35715 RVA: 0x000D1FC0 File Offset: 0x000D01C0
 		protected UMotorcycleConfigs(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010628 RID: 67112
+		// Token: 0x04003C8F RID: 15503
 		public new const string __ObjectPath = "/Script/KuroVehicle.MotorcycleConfigs";
 
-		// Token: 0x04010629 RID: 67113
+		// Token: 0x04003C90 RID: 15504
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401062A RID: 67114
+		// Token: 0x04003C91 RID: 15505
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401062B RID: 67115
+		// Token: 0x04003C92 RID: 15506
 		internal static int __PropertyOffset_GravityScale;
 
-		// Token: 0x0401062C RID: 67116
+		// Token: 0x04003C93 RID: 15507
 		internal static int __PropertyOffset_MotorAirFriction;
 
-		// Token: 0x0401062D RID: 67117
+		// Token: 0x04003C94 RID: 15508
 		internal static int __PropertyOffset_MotorBodyAngularLengths;
 
-		// Token: 0x0401062E RID: 67118
+		// Token: 0x04003C95 RID: 15509
 		internal static int __PropertyOffset_MotorBodyAngularRateInHitSpeed;
 
-		// Token: 0x0401062F RID: 67119
+		// Token: 0x04003C96 RID: 15510
 		[Nullable(2)]
 		private FMotorFloatRange _MotorBodyAngularRateInHitSpeed;
 
-		// Token: 0x04010630 RID: 67120
+		// Token: 0x04003C97 RID: 15511
 		internal static int __PropertyOffset_HangRotateWeakenWhenTwoWheelOnGroup;
 
-		// Token: 0x04010631 RID: 67121
+		// Token: 0x04003C98 RID: 15512
 		internal static int __PropertyOffset_MotorFrontWheelHang;
 
-		// Token: 0x04010632 RID: 67122
+		// Token: 0x04003C99 RID: 15513
 		[Nullable(2)]
 		private FMotorHangConfigParams _MotorFrontWheelHang;
 
-		// Token: 0x04010633 RID: 67123
+		// Token: 0x04003C9A RID: 15514
 		internal static int __PropertyOffset_MotorBackWheelHang;
 
-		// Token: 0x04010634 RID: 67124
+		// Token: 0x04003C9B RID: 15515
 		[Nullable(2)]
 		private FMotorHangConfigParams _MotorBackWheelHang;
 
-		// Token: 0x04010635 RID: 67125
-		internal static int __PropertyOffset_MotorBodyPhys;
-
-		// Token: 0x04010636 RID: 67126
-		[Nullable(2)]
-		private FMotorContactPhysParams _MotorBodyPhys;
-
-		// Token: 0x04010637 RID: 67127
-		internal static int __PropertyOffset_MotorFrontWheelPhys;
-
-		// Token: 0x04010638 RID: 67128
-		[Nullable(2)]
-		private FMotorContactPhysParams _MotorFrontWheelPhys;
-
-		// Token: 0x04010639 RID: 67129
-		internal static int __PropertyOffset_MotorBackWheelPhys;
-
-		// Token: 0x0401063A RID: 67130
-		[Nullable(2)]
-		private FMotorContactPhysParams _MotorBackWheelPhys;
-
-		// Token: 0x0401063B RID: 67131
+		// Token: 0x04003C9C RID: 15516
 		internal static int __PropertyOffset_MotorAccelConfig;
 
-		// Token: 0x0401063C RID: 67132
+		// Token: 0x04003C9D RID: 15517
 		[Nullable(2)]
 		private FMotorAccelConfig _MotorAccelConfig;
-
-		// Token: 0x0401063D RID: 67133
-		internal static int __PropertyOffset_MotorBoostConfig;
-
-		// Token: 0x0401063E RID: 67134
-		[Nullable(2)]
-		private FMotorBoostConfig _MotorBoostConfig;
-
-		// Token: 0x0401063F RID: 67135
-		internal static int __PropertyOffset_MotorBalanceConfig;
-
-		// Token: 0x04010640 RID: 67136
-		[Nullable(2)]
-		private FMotorBalanceConfig _MotorBalanceConfig;
-
-		// Token: 0x04010641 RID: 67137
-		internal static int __PropertyOffset_MotorBrakingTurnConfig;
-
-		// Token: 0x04010642 RID: 67138
-		[Nullable(2)]
-		private FMotorBrakingTurnConfig _MotorBrakingTurnConfig;
-
-		// Token: 0x04010643 RID: 67139
-		internal static int __PropertyOffset_MotorSoarConfig;
-
-		// Token: 0x04010644 RID: 67140
-		[Nullable(2)]
-		private FMotorSoarConfig _MotorSoarConfig;
-
-		// Token: 0x04010645 RID: 67141
-		internal static int __PropertyOffset_MotorNewDriftConfig;
-
-		// Token: 0x04010646 RID: 67142
-		[Nullable(2)]
-		private FMotorNewDriftConfig _MotorNewDriftConfig;
-
-		// Token: 0x04010647 RID: 67143
-		internal static int __PropertyOffset_MotorTurnConfig;
-
-		// Token: 0x04010648 RID: 67144
-		[Nullable(2)]
-		private FMotorTurnConfig _MotorTurnConfig;
 	}
 }

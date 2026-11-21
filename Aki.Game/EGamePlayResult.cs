@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002192 RID: 8594
+// Token: 0x02001676 RID: 5750
 public enum EGamePlayResult
 {
-	// Token: 0x04007F46 RID: 32582
+	// Token: 0x0400808D RID: 32909
 	Success,
-	// Token: 0x04007F47 RID: 32583
+	// Token: 0x0400808E RID: 32910
 	Fail
 }

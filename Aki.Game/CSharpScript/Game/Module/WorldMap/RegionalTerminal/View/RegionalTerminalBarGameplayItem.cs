@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 {
-	// Token: 0x02004855 RID: 18517
+	// Token: 0x02003786 RID: 14214
 	[Nullable(new byte[]
 	{
 		0,
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 	})]
 	public class RegionalTerminalBarGameplayItem : GridProxyAbstract<RegionalTerminalGameplayData>
 	{
-		// Token: 0x06030746 RID: 198470 RVA: 0x00B3FD84 File Offset: 0x00B3DF84
+		// Token: 0x06024F15 RID: 151317 RVA: 0x00A6FFC8 File Offset: 0x00A6E1C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06030747 RID: 198471 RVA: 0x00B3FE90 File Offset: 0x00B3E090
+		// Token: 0x06024F16 RID: 151318 RVA: 0x00A700D4 File Offset: 0x00A6E2D4
 		[NullableContext(1)]
 		public override void Refresh(RegionalTerminalGameplayData data, bool isSelected, int gridIndex)
 		{
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			this.RefreshFunctional();
 		}
 
-		// Token: 0x06030748 RID: 198472 RVA: 0x00B3FF0C File Offset: 0x00B3E10C
+		// Token: 0x06024F17 RID: 151319 RVA: 0x00A70150 File Offset: 0x00A6E350
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x06030749 RID: 198473 RVA: 0x00B3FF14 File Offset: 0x00B3E114
+		// Token: 0x06024F18 RID: 151320 RVA: 0x00A70158 File Offset: 0x00A6E358
 		private void RefreshFunctional()
 		{
 			UUIItem item = base.GetItem(3);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x0603074A RID: 198474 RVA: 0x00B3FF64 File Offset: 0x00B3E164
+		// Token: 0x06024F19 RID: 151321 RVA: 0x00A701A8 File Offset: 0x00A6E3A8
 		private void BindRedDot()
 		{
 			this.UnBindRedDot();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x0603074B RID: 198475 RVA: 0x00B3FFE0 File Offset: 0x00B3E1E0
+		// Token: 0x06024F1A RID: 151322 RVA: 0x00A70224 File Offset: 0x00A6E424
 		private void UnBindRedDot()
 		{
 			if (this.RedDotName != null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x0603074C RID: 198476 RVA: 0x00B40034 File Offset: 0x00B3E234
+		// Token: 0x06024F1B RID: 151323 RVA: 0x00A70278 File Offset: 0x00A6E478
 		private void OnClickButton()
 		{
 			this.Data.BarFunction();
@@ -131,32 +131,32 @@ namespace CSharpScript.Game.Module.WorldMap.RegionalTerminal.View
 			}
 		}
 
-		// Token: 0x0401A08E RID: 106638
+		// Token: 0x04014742 RID: 83778
 		[Nullable(2)]
 		private RegionalTerminalGameplayData Data;
 
-		// Token: 0x0401A08F RID: 106639
+		// Token: 0x04014743 RID: 83779
 		private ERedDotName? RedDotName;
 
-		// Token: 0x0401A090 RID: 106640
+		// Token: 0x04014744 RID: 83780
 		private int RedDotId;
 
-		// Token: 0x0200AB39 RID: 43833
+		// Token: 0x020094E7 RID: 38119
 		public static class EComponents
 		{
-			// Token: 0x0403407C RID: 213116
+			// Token: 0x0402E7F4 RID: 190452
 			public const int Button = 0;
 
-			// Token: 0x0403407D RID: 213117
+			// Token: 0x0402E7F5 RID: 190453
 			public const int TexIcon = 1;
 
-			// Token: 0x0403407E RID: 213118
+			// Token: 0x0402E7F6 RID: 190454
 			public const int ItemLock = 2;
 
-			// Token: 0x0403407F RID: 213119
+			// Token: 0x0402E7F7 RID: 190455
 			public const int ItemPin = 3;
 
-			// Token: 0x04034080 RID: 213120
+			// Token: 0x0402E7F8 RID: 190456
 			public const int ItemRedDot = 4;
 		}
 	}

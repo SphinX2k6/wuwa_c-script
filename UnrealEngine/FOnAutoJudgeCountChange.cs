@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C61 RID: 7265
+	// Token: 0x02000507 RID: 1287
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnAutoJudgeCountChange : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C2F4 RID: 115444 RVA: 0x002989C6 File Offset: 0x00296BC6
+		// Token: 0x060078F0 RID: 30960 RVA: 0x000B139E File Offset: 0x000AF59E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnAutoJudgeCountChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C2F5 RID: 115445 RVA: 0x002989D2 File Offset: 0x00296BD2
+		// Token: 0x060078F1 RID: 30961 RVA: 0x000B13AA File Offset: 0x000AF5AA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnAutoJudgeCountChange._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnAutoJudgeCountChange._FunctionPtr;
 		}
 
-		// Token: 0x0601C2F6 RID: 115446 RVA: 0x002989F5 File Offset: 0x00296BF5
+		// Token: 0x060078F2 RID: 30962 RVA: 0x000B13CD File Offset: 0x000AF5CD
 		public FOnAutoJudgeCountChange()
 		{
 		}
 
-		// Token: 0x0601C2F7 RID: 115447 RVA: 0x002989FD File Offset: 0x00296BFD
+		// Token: 0x060078F3 RID: 30963 RVA: 0x000B13D5 File Offset: 0x000AF5D5
 		[NullableContext(2)]
 		public FOnAutoJudgeCountChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C2F8 RID: 115448 RVA: 0x00298A07 File Offset: 0x00296C07
+		// Token: 0x060078F4 RID: 30964 RVA: 0x000B13DF File Offset: 0x000AF5DF
 		public FOnAutoJudgeCountChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C2F9 RID: 115449 RVA: 0x00298A12 File Offset: 0x00296C12
+		// Token: 0x060078F5 RID: 30965 RVA: 0x000B13EA File Offset: 0x000AF5EA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C2FA RID: 115450 RVA: 0x00298A44 File Offset: 0x00296C44
+		// Token: 0x060078F6 RID: 30966 RVA: 0x000B141C File Offset: 0x000AF61C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int> Callback)
 		{
 			if (FOnAutoJudgeCountChange.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnAutoJudgeCountChange.RegisterId);
 		}
 
-		// Token: 0x0601C2FB RID: 115451 RVA: 0x00298A7E File Offset: 0x00296C7E
+		// Token: 0x060078F7 RID: 30967 RVA: 0x000B1456 File Offset: 0x000AF656
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C2FC RID: 115452 RVA: 0x00298A88 File Offset: 0x00296C88
+		// Token: 0x060078F8 RID: 30968 RVA: 0x000B1460 File Offset: 0x000AF660
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int RemainCount)
 		{
 			FOnAutoJudgeCountChange.__FOnAutoJudgeCountChange_DelegateParams* ptr = stackalloc FOnAutoJudgeCountChange.__FOnAutoJudgeCountChange_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FOnAutoJudgeCountChange.__FOnAutoJudgeCountChange_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C2FD RID: 115453 RVA: 0x00298AC4 File Offset: 0x00296CC4
+		// Token: 0x060078F9 RID: 30969 RVA: 0x000B149C File Offset: 0x000AF69C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnAutoJudgeCountChange.__FOnAutoJudgeCountChange_DelegateParams*)__Parameters)->RemainCount);
 		}
 
-		// Token: 0x0400F2A7 RID: 62119
+		// Token: 0x04003372 RID: 13170
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2A8 RID: 62120
+		// Token: 0x04003373 RID: 13171
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnAutoJudgeCountChange__DelegateSignature";
 
-		// Token: 0x0400F2A9 RID: 62121
+		// Token: 0x04003374 RID: 13172
 		private static int RegisterId;
 
-		// Token: 0x020031F2 RID: 12786
+		// Token: 0x02000C67 RID: 3175
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FOnAutoJudgeCountChange_DelegateParams
+		private ref struct __FOnAutoJudgeCountChange_DelegateParams
 		{
-			// Token: 0x0401704C RID: 94284
+			// Token: 0x04005EC0 RID: 24256
 			[FieldOffset(0)]
 			public int RemainCount;
 		}
 
-		// Token: 0x020031F3 RID: 12787
+		// Token: 0x02000C68 RID: 3176
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401704D RID: 94285
+			// Token: 0x04005EC1 RID: 24257
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

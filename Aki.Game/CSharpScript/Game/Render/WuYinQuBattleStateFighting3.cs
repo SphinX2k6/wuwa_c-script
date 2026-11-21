@@ -4,10 +4,10 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Battle;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004595 RID: 17813
+	// Token: 0x020034BD RID: 13501
 	public class WuYinQuBattleStateFighting3 : WuYinQuBattleStateFighting1
 	{
-		// Token: 0x0602DF00 RID: 188160 RVA: 0x00A900BC File Offset: 0x00A8E2BC
+		// Token: 0x060225EA RID: 140778 RVA: 0x009BC2DC File Offset: 0x009BA4DC
 		[NullableContext(1)]
 		public WuYinQuBattleStateFighting3(WuYinQuBattleActor Owner, EWuYinQuBattleState State, [Nullable(new byte[]
 		{
@@ -17,14 +17,14 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602DF01 RID: 188161 RVA: 0x00A900C7 File Offset: 0x00A8E2C7
+		// Token: 0x060225EB RID: 140779 RVA: 0x009BC2E7 File Offset: 0x009BA4E7
 		[NullableContext(2)]
 		protected override PDA_WuYinQuBattleFightingData_C GetFightingData()
 		{
 			return this.Owner.WuYinQuFightingData.WuYinQuFightingData3;
 		}
 
-		// Token: 0x0602DF02 RID: 188162 RVA: 0x00A900DC File Offset: 0x00A8E2DC
+		// Token: 0x060225EC RID: 140780 RVA: 0x009BC2FC File Offset: 0x009BA4FC
 		protected override void OnEnter(EWuYinQuBattleState? lastState)
 		{
 			base.OnEnter(lastState);
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Render
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "进入战斗阶段3", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DF03 RID: 188163 RVA: 0x00A9011C File Offset: 0x00A8E31C
+		// Token: 0x060225ED RID: 140781 RVA: 0x009BC33C File Offset: 0x009BA53C
 		protected override void OnExit(EWuYinQuBattleState lastState)
 		{
 			base.OnExit(lastState);

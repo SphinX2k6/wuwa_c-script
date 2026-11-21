@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DF9 RID: 7673
+	// Token: 0x0200202C RID: 8236
 	public class ISendBattleEventsForMonsterSummon_SetValue
 	{
-		// Token: 0x04006256 RID: 25174
+		// Token: 0x0400682D RID: 26669
 		public EExecBattleActionType Type;
 
-		// Token: 0x04006257 RID: 25175
-		[Nullable(1)]
+		// Token: 0x0400682E RID: 26670
 		public List<ISendBattleEventsForMonsterSummonConfig> Configs;
 	}
 }

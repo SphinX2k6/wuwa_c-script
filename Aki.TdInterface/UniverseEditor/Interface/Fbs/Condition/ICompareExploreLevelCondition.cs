@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B9E RID: 19358
+	// Token: 0x02005088 RID: 20616
 	public struct ICompareExploreLevelCondition : IFlatbufferObject
 	{
-		// Token: 0x17008C7D RID: 35965
-		// (get) Token: 0x0601E84E RID: 125006 RVA: 0x00445594 File Offset: 0x00443794
+		// Token: 0x17009396 RID: 37782
+		// (get) Token: 0x060203FA RID: 132090 RVA: 0x004780F8 File Offset: 0x004762F8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E84F RID: 125007 RVA: 0x004455A1 File Offset: 0x004437A1
+		// Token: 0x060203FB RID: 132091 RVA: 0x00478105 File Offset: 0x00476305
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E850 RID: 125008 RVA: 0x004455A8 File Offset: 0x004437A8
+		// Token: 0x060203FC RID: 132092 RVA: 0x0047810C File Offset: 0x0047630C
 		public static ICompareExploreLevelCondition GetRootAsICompareExploreLevelCondition(ByteBuffer _bb)
 		{
 			return ICompareExploreLevelCondition.GetRootAsICompareExploreLevelCondition(_bb, default(ICompareExploreLevelCondition));
 		}
 
-		// Token: 0x0601E851 RID: 125009 RVA: 0x004455C4 File Offset: 0x004437C4
+		// Token: 0x060203FD RID: 132093 RVA: 0x00478128 File Offset: 0x00476328
 		public static ICompareExploreLevelCondition GetRootAsICompareExploreLevelCondition(ByteBuffer _bb, ICompareExploreLevelCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E852 RID: 125010 RVA: 0x004455E1 File Offset: 0x004437E1
+		// Token: 0x060203FE RID: 132094 RVA: 0x00478145 File Offset: 0x00476345
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E853 RID: 125011 RVA: 0x004455F0 File Offset: 0x004437F0
+		// Token: 0x060203FF RID: 132095 RVA: 0x00478154 File Offset: 0x00476354
 		public ICompareExploreLevelCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C7E RID: 35966
-		// (get) Token: 0x0601E854 RID: 125012 RVA: 0x00445600 File Offset: 0x00443800
+		// Token: 0x17009397 RID: 37783
+		// (get) Token: 0x06020400 RID: 132096 RVA: 0x00478164 File Offset: 0x00476364
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C7F RID: 35967
-		// (get) Token: 0x0601E855 RID: 125013 RVA: 0x0044563C File Offset: 0x0044383C
+		// Token: 0x17009398 RID: 37784
+		// (get) Token: 0x06020401 RID: 132097 RVA: 0x004781A0 File Offset: 0x004763A0
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C80 RID: 35968
-		// (get) Token: 0x0601E856 RID: 125014 RVA: 0x00445678 File Offset: 0x00443878
+		// Token: 0x17009399 RID: 37785
+		// (get) Token: 0x06020402 RID: 132098 RVA: 0x004781DC File Offset: 0x004763DC
 		public int Level
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E857 RID: 125015 RVA: 0x004456B4 File Offset: 0x004438B4
+		// Token: 0x06020403 RID: 132099 RVA: 0x00478218 File Offset: 0x00476418
 		public static Offset<ICompareExploreLevelCondition> CreateICompareExploreLevelCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECompare Compare = ECompare.Eq, int Level = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareExploreLevelCondition.EndICompareExploreLevelCondition(builder);
 		}
 
-		// Token: 0x0601E858 RID: 125016 RVA: 0x004456D8 File Offset: 0x004438D8
+		// Token: 0x06020404 RID: 132100 RVA: 0x0047823C File Offset: 0x0047643C
 		public static void StartICompareExploreLevelCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E859 RID: 125017 RVA: 0x004456E1 File Offset: 0x004438E1
+		// Token: 0x06020405 RID: 132101 RVA: 0x00478245 File Offset: 0x00476445
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E85A RID: 125018 RVA: 0x004456EC File Offset: 0x004438EC
+		// Token: 0x06020406 RID: 132102 RVA: 0x00478250 File Offset: 0x00476450
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E85B RID: 125019 RVA: 0x004456F7 File Offset: 0x004438F7
+		// Token: 0x06020407 RID: 132103 RVA: 0x0047825B File Offset: 0x0047645B
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(2, level, 0);
 		}
 
-		// Token: 0x0601E85C RID: 125020 RVA: 0x00445702 File Offset: 0x00443902
+		// Token: 0x06020408 RID: 132104 RVA: 0x00478266 File Offset: 0x00476466
 		public static Offset<ICompareExploreLevelCondition> EndICompareExploreLevelCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareExploreLevelCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E85D RID: 125021 RVA: 0x00445710 File Offset: 0x00443910
+		// Token: 0x06020409 RID: 132105 RVA: 0x00478274 File Offset: 0x00476474
 		public ICompareExploreLevelConditionT UnPack()
 		{
 			ICompareExploreLevelConditionT compareExploreLevelConditionT = new ICompareExploreLevelConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareExploreLevelConditionT;
 		}
 
-		// Token: 0x0601E85E RID: 125022 RVA: 0x0044572B File Offset: 0x0044392B
+		// Token: 0x0602040A RID: 132106 RVA: 0x0047828F File Offset: 0x0047648F
 		public void UnPackTo(ICompareExploreLevelConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Level = this.Level;
 		}
 
-		// Token: 0x0601E85F RID: 125023 RVA: 0x00445754 File Offset: 0x00443954
+		// Token: 0x0602040B RID: 132107 RVA: 0x004782B8 File Offset: 0x004764B8
 		public static Offset<ICompareExploreLevelCondition> Pack(FlatBufferBuilder builder, ICompareExploreLevelConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareExploreLevelCondition.CreateICompareExploreLevelCondition(builder, _o.Type, _o.Compare, _o.Level);
 		}
 
-		// Token: 0x0400D479 RID: 54393
+		// Token: 0x0400DF7E RID: 57214
 		private Table __p;
 	}
 }

@@ -6,19 +6,19 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Module.TrapDefense;
 using UnrealEngine;
 
-// Token: 0x02001D2E RID: 7470
+// Token: 0x020011F0 RID: 4592
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefensePlayerMarkView : TrapDefenseMarkView
 {
-	// Token: 0x0600E23F RID: 57919 RVA: 0x0035258C File Offset: 0x0035078C
+	// Token: 0x0600B65C RID: 46684 RVA: 0x0035DFBC File Offset: 0x0035C1BC
 	public TrapDefensePlayerMarkView(int markId, UUISprite playerSight) : base(markId)
 	{
 		this.PlayerSight = playerSight;
 		this.NeedUpdatePositionInner = true;
 	}
 
-	// Token: 0x0600E240 RID: 57920 RVA: 0x003525E2 File Offset: 0x003507E2
+	// Token: 0x0600B65D RID: 46685 RVA: 0x0035E012 File Offset: 0x0035C212
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class TrapDefensePlayerMarkView : TrapDefenseMarkView
 		};
 	}
 
-	// Token: 0x0600E241 RID: 57921 RVA: 0x00352608 File Offset: 0x00350808
+	// Token: 0x0600B65E RID: 46686 RVA: 0x0035E038 File Offset: 0x0035C238
 	public override void UpdatePosition(float scale, Vector2D centerOffset)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -67,7 +67,7 @@ public class TrapDefensePlayerMarkView : TrapDefenseMarkView
 		this.PlayerSight.SetUIRelativeRotation(this.TempSightRotator);
 	}
 
-	// Token: 0x0600E242 RID: 57922 RVA: 0x0035272C File Offset: 0x0035092C
+	// Token: 0x0600B65F RID: 46687 RVA: 0x0035E15C File Offset: 0x0035C35C
 	private float ClampCameraYaw(float desiredYaw)
 	{
 		ECustomCameraMode? cameraMode = CameraModel.Instance.MainModel.CameraMode;
@@ -85,23 +85,23 @@ public class TrapDefensePlayerMarkView : TrapDefenseMarkView
 		return desiredYaw;
 	}
 
-	// Token: 0x040068A7 RID: 26791
+	// Token: 0x04006986 RID: 27014
 	private const float PLAYER_ROTATE_UPDATE_THRESHOLD = 10f;
 
-	// Token: 0x040068A8 RID: 26792
+	// Token: 0x04006987 RID: 27015
 	private FRotator TempSightRotator = new FRotator(0f, 0f, 0f);
 
-	// Token: 0x040068A9 RID: 26793
+	// Token: 0x04006988 RID: 27016
 	private FRotator TempPlayerRotator = new FRotator(0f, 0f, 0f);
 
-	// Token: 0x040068AA RID: 26794
+	// Token: 0x04006989 RID: 27017
 	private readonly UUISprite PlayerSight;
 
-	// Token: 0x02008333 RID: 33587
+	// Token: 0x020074BC RID: 29884
 	[NullableContext(0)]
 	private static class EChildComponentType
 	{
-		// Token: 0x0402AC92 RID: 175250
+		// Token: 0x04025FBA RID: 155578
 		public const int PlayerItem = 0;
 	}
 }

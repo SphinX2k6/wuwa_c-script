@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001F6 RID: 502
+	// Token: 0x02000208 RID: 520
 	public class ConfigDarkCoastDeliveryById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000BC7 RID: 3015 RVA: 0x0009C40B File Offset: 0x0009A60B
+		// Token: 0x06000C33 RID: 3123 RVA: 0x000A2343 File Offset: 0x000A0543
 		static ConfigDarkCoastDeliveryById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDarkCoastDeliveryById.CreateStaticDefaultValue), new Action(ConfigDarkCoastDeliveryById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000BC8 RID: 3016 RVA: 0x0009C42C File Offset: 0x0009A62C
+		// Token: 0x06000C34 RID: 3124 RVA: 0x000A2364 File Offset: 0x000A0564
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDarkCoastDeliveryById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000BC9 RID: 3017 RVA: 0x0009C4AB File Offset: 0x0009A6AB
+		// Token: 0x06000C35 RID: 3125 RVA: 0x000A23E3 File Offset: 0x000A05E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDarkCoastDeliveryById.LogPair = null;
 			ConfigDarkCoastDeliveryById.HandleId = 0;
 		}
 
-		// Token: 0x06000BCA RID: 3018 RVA: 0x0009C4B9 File Offset: 0x0009A6B9
+		// Token: 0x06000C36 RID: 3126 RVA: 0x000A23F1 File Offset: 0x000A05F1
 		public static void Init()
 		{
 			ConfigDarkCoastDeliveryById.HandleId = ConfigCommon.InitDataStatement(ConfigDarkCoastDeliveryById.HandleId, "db_dragon_ball.db", "select BinData from `DarkCoastDelivery` where Id=?");
 		}
 
-		// Token: 0x06000BCB RID: 3019 RVA: 0x0009C4D4 File Offset: 0x0009A6D4
+		// Token: 0x06000C37 RID: 3127 RVA: 0x000A240C File Offset: 0x000A060C
 		public static DarkCoastDelivery? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDarkCoastDeliveryById.HandleId, ConfigDarkCoastDeliveryById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DarkCoastDelivery?(rootAsDarkCoastDelivery);
 		}
 
-		// Token: 0x04000D9E RID: 3486
+		// Token: 0x04000E1C RID: 3612
 		private const string DB = "db_dragon_ball.db";
 
-		// Token: 0x04000D9F RID: 3487
+		// Token: 0x04000E1D RID: 3613
 		private const string FILE = "m.鸣素体.xlsx";
 
-		// Token: 0x04000DA0 RID: 3488
+		// Token: 0x04000E1E RID: 3614
 		private const string TABLE = "DarkCoastDelivery";
 
-		// Token: 0x04000DA1 RID: 3489
+		// Token: 0x04000E1F RID: 3615
 		private const string COMMAND = "select BinData from `DarkCoastDelivery` where Id=?";
 
-		// Token: 0x04000DA2 RID: 3490
+		// Token: 0x04000E20 RID: 3616
 		private const string KEY_PREFIX = "DarkCoastDeliveryById";
 
-		// Token: 0x04000DA3 RID: 3491
+		// Token: 0x04000E21 RID: 3617
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DA4 RID: 3492
+		// Token: 0x04000E22 RID: 3618
 		private static int HandleId;
 	}
 }

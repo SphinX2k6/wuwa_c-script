@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034BB RID: 13499
+// Token: 0x02002A2F RID: 10799
 [NullableContext(1)]
 [Nullable(0)]
 public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 {
-	// Token: 0x170028C3 RID: 10435
-	// (get) Token: 0x0601D661 RID: 120417 RVA: 0x00833C9E File Offset: 0x00831E9E
+	// Token: 0x17002C5B RID: 11355
+	// (get) Token: 0x0601B360 RID: 111456 RVA: 0x0085B146 File Offset: 0x00859346
 	public override string DebugName
 	{
 		get
@@ -18,8 +18,8 @@ public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 		}
 	}
 
-	// Token: 0x170028C4 RID: 10436
-	// (get) Token: 0x0601D662 RID: 120418 RVA: 0x00833CA5 File Offset: 0x00831EA5
+	// Token: 0x17002C5C RID: 11356
+	// (get) Token: 0x0601B361 RID: 111457 RVA: 0x0085B14D File Offset: 0x0085934D
 	public override EFilterType FilterType
 	{
 		get
@@ -28,13 +28,13 @@ public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 		}
 	}
 
-	// Token: 0x0601D663 RID: 120419 RVA: 0x00833CA8 File Offset: 0x00831EA8
+	// Token: 0x0601B362 RID: 111458 RVA: 0x0085B150 File Offset: 0x00859350
 	public BindGroupEntityWhiteFilter()
 	{
 		this.TargetCriteriaInternal = new Func<EntityHandle, bool>(this.TargetCriteriaFunc);
 	}
 
-	// Token: 0x0601D664 RID: 120420 RVA: 0x00833CD0 File Offset: 0x00831ED0
+	// Token: 0x0601B363 RID: 111459 RVA: 0x0085B178 File Offset: 0x00859378
 	private unsafe bool TargetCriteriaFunc(EntityHandle entityHandle)
 	{
 		IReadOnlyList<long> bindGroup = CreatureGroupController.Instance.GetBindGroup(entityHandle.CreatureDataId);
@@ -61,21 +61,21 @@ public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 		return this.WhiteListForBindGroups.Contains(entityHandle.CreatureDataId);
 	}
 
-	// Token: 0x0601D665 RID: 120421 RVA: 0x00833DD8 File Offset: 0x00831FD8
+	// Token: 0x0601B364 RID: 111460 RVA: 0x0085B280 File Offset: 0x00859480
 	public override void Init()
 	{
 		base.Init();
 		EventSystem.Instance.Add<IReadOnlyList<long>>(EEventName.RemoveEntityFromBindGroup, new Action<IReadOnlyList<long>>(this.OnEntityRemovedFromBindGroup));
 	}
 
-	// Token: 0x0601D666 RID: 120422 RVA: 0x00833DFC File Offset: 0x00831FFC
+	// Token: 0x0601B365 RID: 111461 RVA: 0x0085B2A4 File Offset: 0x008594A4
 	public override void Cleanup()
 	{
 		EventSystem.Instance.Remove<IReadOnlyList<long>>(EEventName.RemoveEntityFromBindGroup, new Action<IReadOnlyList<long>>(this.OnEntityRemovedFromBindGroup));
 		base.Cleanup();
 	}
 
-	// Token: 0x0601D667 RID: 120423 RVA: 0x00833E20 File Offset: 0x00832020
+	// Token: 0x0601B366 RID: 111462 RVA: 0x0085B2C8 File Offset: 0x008594C8
 	private unsafe void CleanWhitelist(long creatureDataId)
 	{
 		if (this.WhiteListForBindGroups.Remove(creatureDataId))
@@ -95,7 +95,7 @@ public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 		}
 	}
 
-	// Token: 0x0601D668 RID: 120424 RVA: 0x00833EB8 File Offset: 0x008320B8
+	// Token: 0x0601B367 RID: 111463 RVA: 0x0085B360 File Offset: 0x00859560
 	private void OnEntityRemovedFromBindGroup(IReadOnlyList<long> creatureDataIds)
 	{
 		foreach (long creatureDataId in creatureDataIds)
@@ -104,6 +104,6 @@ public sealed class BindGroupEntityWhiteFilter : EntityToLoadFilter
 		}
 	}
 
-	// Token: 0x0400E7AA RID: 59306
+	// Token: 0x0400EC5E RID: 60510
 	private readonly HashSet<long> WhiteListForBindGroups = new HashSet<long>();
 }

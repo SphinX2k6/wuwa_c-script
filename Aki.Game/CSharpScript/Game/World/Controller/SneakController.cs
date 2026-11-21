@@ -4,13 +4,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x0200453D RID: 17725
+	// Token: 0x02003465 RID: 13413
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SneakController : ControllerBase
 	{
-		// Token: 0x0602DCEB RID: 187627 RVA: 0x00A86C14 File Offset: 0x00A84E14
+		// Token: 0x060223CD RID: 140237 RVA: 0x009B243C File Offset: 0x009B063C
 		public void StartSneaking()
 		{
 			this.InSneakGameplay = true;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Emit(EEventName.SneakStart);
 		}
 
-		// Token: 0x0602DCEC RID: 187628 RVA: 0x00A86C3A File Offset: 0x00A84E3A
+		// Token: 0x060223CE RID: 140238 RVA: 0x009B2462 File Offset: 0x009B0662
 		public void EndSneaking()
 		{
 			this.InSneakGameplay = false;
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Emit(EEventName.SneakEnd);
 		}
 
-		// Token: 0x17007547 RID: 30023
-		// (get) Token: 0x0602DCED RID: 187629 RVA: 0x00A86C60 File Offset: 0x00A84E60
+		// Token: 0x170047FE RID: 18430
+		// (get) Token: 0x060223CF RID: 140239 RVA: 0x009B2488 File Offset: 0x009B0688
 		public bool IsSneaking
 		{
 			get
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCEE RID: 187630 RVA: 0x00A86C68 File Offset: 0x00A84E68
+		// Token: 0x060223D0 RID: 140240 RVA: 0x009B2490 File Offset: 0x009B0690
 		private void AddSneakEvent()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged));
 		}
 
-		// Token: 0x0602DCEF RID: 187631 RVA: 0x00A86C86 File Offset: 0x00A84E86
+		// Token: 0x060223D1 RID: 140241 RVA: 0x009B24AE File Offset: 0x009B06AE
 		private void RemoveSneakEvent()
 		{
 			if (EventSystem.Instance.Has<bool>(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleStateChanged)))
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCF0 RID: 187632 RVA: 0x00A86CC1 File Offset: 0x00A84EC1
+		// Token: 0x060223D2 RID: 140242 RVA: 0x009B24E9 File Offset: 0x009B06E9
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			this.AddOrRemoveSneakBuff(!isInBattleState);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.World.Controller
 			EventSystem.Instance.Emit<bool, long>(EEventName.OnSneakFoundChange, this.SneakState, 0L);
 		}
 
-		// Token: 0x0602DCF1 RID: 187633 RVA: 0x00A86CF8 File Offset: 0x00A84EF8
+		// Token: 0x060223D3 RID: 140243 RVA: 0x009B2520 File Offset: 0x009B0720
 		private void AddOrRemoveSneakBuff(bool isAdd)
 		{
 			CharacterBuffComponent component = Global.BaseCharacter.GetEntityNoBlueprint().GetComponent<CharacterBuffComponent>();
@@ -85,8 +85,8 @@ namespace CSharpScript.Game.World.Controller
 			component.RemoveBuff(70000049L, -1, "SneakController", null, null, null);
 		}
 
-		// Token: 0x17007548 RID: 30024
-		// (get) Token: 0x0602DCF2 RID: 187634 RVA: 0x00A86D80 File Offset: 0x00A84F80
+		// Token: 0x170047FF RID: 18431
+		// (get) Token: 0x060223D4 RID: 140244 RVA: 0x009B25A8 File Offset: 0x009B07A8
 		public static SneakController Instance
 		{
 			get
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCF3 RID: 187635 RVA: 0x00A86D87 File Offset: 0x00A84F87
+		// Token: 0x060223D5 RID: 140245 RVA: 0x009B25AF File Offset: 0x009B07AF
 		public static SneakController GetOrCreateInstance()
 		{
 			if (SneakController._Instance == null)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.World.Controller
 			return SneakController._Instance;
 		}
 
-		// Token: 0x0602DCF4 RID: 187636 RVA: 0x00A86D9B File Offset: 0x00A84F9B
+		// Token: 0x060223D6 RID: 140246 RVA: 0x009B25C3 File Offset: 0x009B07C3
 		public static bool CreateInstance()
 		{
 			if (SneakController._Instance != null)
@@ -116,30 +116,30 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DCF5 RID: 187637 RVA: 0x00A86DB1 File Offset: 0x00A84FB1
+		// Token: 0x060223D7 RID: 140247 RVA: 0x009B25D9 File Offset: 0x009B07D9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DCF6 RID: 187638 RVA: 0x00A86DB3 File Offset: 0x00A84FB3
+		// Token: 0x060223D8 RID: 140248 RVA: 0x009B25DB File Offset: 0x009B07DB
 		public static void ResetStaticDefaultValue()
 		{
 			SneakController._Instance = null;
 		}
 
-		// Token: 0x0602DCF7 RID: 187639 RVA: 0x00A86DBB File Offset: 0x00A84FBB
+		// Token: 0x060223D9 RID: 140249 RVA: 0x009B25E3 File Offset: 0x009B07E3
 		static SneakController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SneakController.CreateStaticDefaultValue), new Action(SneakController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018765 RID: 100197
+		// Token: 0x04012D9F RID: 77215
 		private bool InSneakGameplay;
 
-		// Token: 0x04018766 RID: 100198
+		// Token: 0x04012DA0 RID: 77216
 		private bool SneakState;
 
-		// Token: 0x04018767 RID: 100199
+		// Token: 0x04012DA1 RID: 77217
 		[Nullable(2)]
 		private static SneakController _Instance;
 	}

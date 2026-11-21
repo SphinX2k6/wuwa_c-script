@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C48 RID: 3144
+	// Token: 0x02000D2B RID: 3371
 	public struct ExhibitWeaponTransform : IFlatbufferObject
 	{
-		// Token: 0x17000F9A RID: 3994
-		// (get) Token: 0x06006ADE RID: 27358 RVA: 0x00226E15 File Offset: 0x00225015
+		// Token: 0x17000FF3 RID: 4083
+		// (get) Token: 0x060070E0 RID: 28896 RVA: 0x00246103 File Offset: 0x00244303
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006ADF RID: 27359 RVA: 0x00226E22 File Offset: 0x00225022
+		// Token: 0x060070E1 RID: 28897 RVA: 0x00246110 File Offset: 0x00244310
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006AE0 RID: 27360 RVA: 0x00226E2C File Offset: 0x0022502C
+		// Token: 0x060070E2 RID: 28898 RVA: 0x00246118 File Offset: 0x00244318
 		public static ExhibitWeaponTransform GetRootAsExhibitWeaponTransform(ByteBuffer _bb)
 		{
 			return ExhibitWeaponTransform.GetRootAsExhibitWeaponTransform(_bb, default(ExhibitWeaponTransform));
 		}
 
-		// Token: 0x06006AE1 RID: 27361 RVA: 0x00226E48 File Offset: 0x00225048
+		// Token: 0x060070E3 RID: 28899 RVA: 0x00246134 File Offset: 0x00244334
 		public static ExhibitWeaponTransform GetRootAsExhibitWeaponTransform(ByteBuffer _bb, ExhibitWeaponTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006AE2 RID: 27362 RVA: 0x00226E65 File Offset: 0x00225065
+		// Token: 0x060070E4 RID: 28900 RVA: 0x00246151 File Offset: 0x00244351
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006AE3 RID: 27363 RVA: 0x00226E74 File Offset: 0x00225074
+		// Token: 0x060070E5 RID: 28901 RVA: 0x00246160 File Offset: 0x00244360
 		public ExhibitWeaponTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F9B RID: 3995
-		// (get) Token: 0x06006AE4 RID: 27364 RVA: 0x00226E84 File Offset: 0x00225084
+		// Token: 0x17000FF4 RID: 4084
+		// (get) Token: 0x060070E6 RID: 28902 RVA: 0x00246170 File Offset: 0x00244370
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F9C RID: 3996
-		// (get) Token: 0x06006AE5 RID: 27365 RVA: 0x00226EC0 File Offset: 0x002250C0
+		// Token: 0x17000FF5 RID: 4085
+		// (get) Token: 0x060070E7 RID: 28903 RVA: 0x002461AC File Offset: 0x002443AC
 		public Vector? Location
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F9D RID: 3997
-		// (get) Token: 0x06006AE6 RID: 27366 RVA: 0x00226F20 File Offset: 0x00225120
+		// Token: 0x17000FF6 RID: 4086
+		// (get) Token: 0x060070E8 RID: 28904 RVA: 0x0024620C File Offset: 0x0024440C
 		public Vector? Rotation
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F9E RID: 3998
-		// (get) Token: 0x06006AE7 RID: 27367 RVA: 0x00226F80 File Offset: 0x00225180
+		// Token: 0x17000FF7 RID: 4087
+		// (get) Token: 0x060070E9 RID: 28905 RVA: 0x0024626C File Offset: 0x0024446C
 		public float Size
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F9F RID: 3999
-		// (get) Token: 0x06006AE8 RID: 27368 RVA: 0x00226FC4 File Offset: 0x002251C4
+		// Token: 0x17000FF8 RID: 4088
+		// (get) Token: 0x060070EA RID: 28906 RVA: 0x002462B0 File Offset: 0x002444B0
 		public int RotateTime
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FA0 RID: 4000
-		// (get) Token: 0x06006AE9 RID: 27369 RVA: 0x00227004 File Offset: 0x00225204
+		// Token: 0x17000FF9 RID: 4089
+		// (get) Token: 0x060070EB RID: 28907 RVA: 0x002462F0 File Offset: 0x002444F0
 		public Vector? ScabbardOffset
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FA1 RID: 4001
-		// (get) Token: 0x06006AEA RID: 27370 RVA: 0x00227064 File Offset: 0x00225264
+		// Token: 0x17000FFA RID: 4090
+		// (get) Token: 0x060070EC RID: 28908 RVA: 0x00246350 File Offset: 0x00244550
 		public bool ShowScabbard
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FA2 RID: 4002
-		// (get) Token: 0x06006AEB RID: 27371 RVA: 0x002270A4 File Offset: 0x002252A4
+		// Token: 0x17000FFB RID: 4091
+		// (get) Token: 0x060070ED RID: 28909 RVA: 0x00246390 File Offset: 0x00244590
 		public Vector? AxisRotate
 		{
 			get
@@ -163,8 +163,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FA3 RID: 4003
-		// (get) Token: 0x06006AEC RID: 27372 RVA: 0x00227104 File Offset: 0x00225304
+		// Token: 0x17000FFC RID: 4092
+		// (get) Token: 0x060070EE RID: 28910 RVA: 0x002463F0 File Offset: 0x002445F0
 		public Vector? ScabbardRotationOffset
 		{
 			get
@@ -178,7 +178,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C8D RID: 19597
+		// Token: 0x04005270 RID: 21104
 		private Table __p;
 	}
 }

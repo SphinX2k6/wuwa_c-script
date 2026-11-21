@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020023B3 RID: 9139
+// Token: 0x02001898 RID: 6296
 public class PersonalDefine : IStaticVariableResetter
 {
-	// Token: 0x0601249D RID: 74909 RVA: 0x0048128A File Offset: 0x0047F48A
+	// Token: 0x0600F94F RID: 63823 RVA: 0x0048E772 File Offset: 0x0048C972
 	static PersonalDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PersonalDefine.CreateStaticDefaultValue), new Action(PersonalDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601249E RID: 74910 RVA: 0x004812A9 File Offset: 0x0047F4A9
+	// Token: 0x0600F950 RID: 63824 RVA: 0x0048E791 File Offset: 0x0048C991
 	public static void CreateStaticDefaultValue()
 	{
 		PersonalDefine.playerTitleQualityToColor = new Dictionary<int, string>
@@ -31,23 +31,23 @@ public class PersonalDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601249F RID: 74911 RVA: 0x004812D9 File Offset: 0x0047F4D9
+	// Token: 0x0600F951 RID: 63825 RVA: 0x0048E7C1 File Offset: 0x0048C9C1
 	public static void ResetStaticDefaultValue()
 	{
 		PersonalDefine.playerTitleQualityToColor = null;
 	}
 
-	// Token: 0x040089F7 RID: 35319
+	// Token: 0x04008B3E RID: 35646
 	public const int MAX_SIGN_LENGTH = 40;
 
-	// Token: 0x040089F8 RID: 35320
+	// Token: 0x04008B3F RID: 35647
 	public const int MAX_NAME_LENGTH = 12;
 
-	// Token: 0x040089F9 RID: 35321
+	// Token: 0x04008B40 RID: 35648
 	[Nullable(1)]
 	public const string STOP_AUDIO_EVENT_NAME = "stop_gacha_role_audio";
 
-	// Token: 0x040089FA RID: 35322
+	// Token: 0x04008B41 RID: 35649
 	[Nullable(1)]
 	public static Dictionary<int, string> playerTitleQualityToColor;
 }

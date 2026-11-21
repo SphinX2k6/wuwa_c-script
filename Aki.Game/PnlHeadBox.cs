@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ECD RID: 7885
+// Token: 0x0200138F RID: 5007
 public class PnlHeadBox : UiPanelBase
 {
-	// Token: 0x0600F271 RID: 62065 RVA: 0x003A6F94 File Offset: 0x003A5194
+	// Token: 0x0600C690 RID: 50832 RVA: 0x003B2A94 File Offset: 0x003B0C94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,7 +23,7 @@ public class PnlHeadBox : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F272 RID: 62066 RVA: 0x003A7000 File Offset: 0x003A5200
+	// Token: 0x0600C691 RID: 50833 RVA: 0x003B2B00 File Offset: 0x003B0D00
 	public void RefreshView(int roleId)
 	{
 		base.GetSprite(0).SetUIActive(roleId == 0);

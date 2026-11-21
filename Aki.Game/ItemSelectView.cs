@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018CC RID: 6348
+// Token: 0x02000D85 RID: 3461
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemSelectView : UiViewBase
 {
-	// Token: 0x0600BA3E RID: 47678 RVA: 0x002A2D73 File Offset: 0x002A0F73
+	// Token: 0x06008E27 RID: 36391 RVA: 0x002AD4CB File Offset: 0x002AB6CB
 	public ItemSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600BA3F RID: 47679 RVA: 0x002A2D7C File Offset: 0x002A0F7C
+	// Token: 0x06008E28 RID: 36392 RVA: 0x002AD4D4 File Offset: 0x002AB6D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class ItemSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600BA40 RID: 47680 RVA: 0x002A2E3C File Offset: 0x002A103C
+	// Token: 0x06008E29 RID: 36393 RVA: 0x002AD594 File Offset: 0x002AB794
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemSelectView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ public class ItemSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BA41 RID: 47681 RVA: 0x002A2E80 File Offset: 0x002A1080
+	// Token: 0x06008E2A RID: 36394 RVA: 0x002AD5D8 File Offset: 0x002AB7D8
 	protected override void OnStart()
 	{
 		this.SelectComponent = new CommonItemSelectView<ItemDataBase>(base.GetItem(0));
@@ -55,21 +55,21 @@ public class ItemSelectView : UiViewBase
 		this.FilterEntrance = new FilterEntrance<ItemDataBase>(base.GetItem(4), new TUpdateDataListFunction<ItemDataBase>(this.OnFilterRefresh));
 	}
 
-	// Token: 0x0600BA42 RID: 47682 RVA: 0x002A2EDB File Offset: 0x002A10DB
+	// Token: 0x06008E2B RID: 36395 RVA: 0x002AD633 File Offset: 0x002AB833
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnSelectItem));
 		EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 	}
 
-	// Token: 0x0600BA43 RID: 47683 RVA: 0x002A2F15 File Offset: 0x002A1115
+	// Token: 0x06008E2C RID: 36396 RVA: 0x002AD66D File Offset: 0x002AB86D
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectItemAdd, new Action<int, int>(this.OnSelectItem));
 		EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 	}
 
-	// Token: 0x0600BA44 RID: 47684 RVA: 0x002A2F50 File Offset: 0x002A1150
+	// Token: 0x06008E2D RID: 36397 RVA: 0x002AD6A8 File Offset: 0x002AB8A8
 	protected override void OnBeforeShow()
 	{
 		CommonItemSelectViewOpenViewData<ItemDataBase> commonItemSelectViewOpenViewData = this.OpenParam as CommonItemSelectViewOpenViewData<ItemDataBase>;
@@ -78,14 +78,14 @@ public class ItemSelectView : UiViewBase
 		this.UpdateFilterComponent(commonItemSelectViewOpenViewData.UseWayId, commonItemSelectViewOpenViewData.ItemDataBaseList);
 	}
 
-	// Token: 0x0600BA45 RID: 47685 RVA: 0x002A2FB5 File Offset: 0x002A11B5
+	// Token: 0x06008E2E RID: 36398 RVA: 0x002AD70D File Offset: 0x002AB90D
 	private void OnClickMask()
 	{
 		base.GetItem(3).SetUIActive(false);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600BA46 RID: 47686 RVA: 0x002A2FCC File Offset: 0x002A11CC
+	// Token: 0x06008E2F RID: 36399 RVA: 0x002AD724 File Offset: 0x002AB924
 	private void OnSelectItem(int itemId, int incId)
 	{
 		ItemTipsData tipsDataById = ItemTipsComponentUtilTool.GetTipsDataById(itemId, new int?(incId), null);
@@ -97,13 +97,13 @@ public class ItemSelectView : UiViewBase
 		base.GetItem(3).SetUIActive(true);
 	}
 
-	// Token: 0x0600BA47 RID: 47687 RVA: 0x002A3004 File Offset: 0x002A1204
+	// Token: 0x06008E30 RID: 36400 RVA: 0x002AD75C File Offset: 0x002AB95C
 	private void OnFilterRefresh(List<ItemDataBase> dataList, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.SelectComponent.UpdateByDataList(dataList);
 	}
 
-	// Token: 0x0600BA48 RID: 47688 RVA: 0x002A3014 File Offset: 0x002A1214
+	// Token: 0x06008E31 RID: 36401 RVA: 0x002AD76C File Offset: 0x002AB96C
 	public void UpdateFilterComponent(EFilterSortGroupId useWayId, List<ItemDataBase> list)
 	{
 		bool flag = false;
@@ -140,14 +140,14 @@ public class ItemSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BA49 RID: 47689 RVA: 0x002A30D9 File Offset: 0x002A12D9
+	// Token: 0x06008E32 RID: 36402 RVA: 0x002AD831 File Offset: 0x002ABA31
 	protected override void OnBeforeDestroy()
 	{
 		this.SelectComponent.Destroy(null);
 		this.ItemTipsComponentContentComponent.Destroy(null);
 	}
 
-	// Token: 0x0600BA4A RID: 47690 RVA: 0x002A30F4 File Offset: 0x002A12F4
+	// Token: 0x06008E33 RID: 36403 RVA: 0x002AD84C File Offset: 0x002ABA4C
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		CommonItemSelectViewOpenViewData<ItemDataBase> commonItemSelectViewOpenViewData = this.OpenParam as CommonItemSelectViewOpenViewData<ItemDataBase>;
@@ -174,7 +174,7 @@ public class ItemSelectView : UiViewBase
 		this.SelectComponent.UpdateChangeItemSelectList();
 	}
 
-	// Token: 0x0400545E RID: 21598
+	// Token: 0x04005509 RID: 21769
 	[Nullable(new byte[]
 	{
 		2,
@@ -182,11 +182,11 @@ public class ItemSelectView : UiViewBase
 	})]
 	private CommonItemSelectView<ItemDataBase> SelectComponent;
 
-	// Token: 0x0400545F RID: 21599
+	// Token: 0x0400550A RID: 21770
 	[Nullable(2)]
 	private ItemTipsComponentContentComponent ItemTipsComponentContentComponent;
 
-	// Token: 0x04005460 RID: 21600
+	// Token: 0x0400550B RID: 21771
 	[Nullable(new byte[]
 	{
 		2,
@@ -194,7 +194,7 @@ public class ItemSelectView : UiViewBase
 	})]
 	private SortEntrance<ItemDataBase> SortEntrance;
 
-	// Token: 0x04005461 RID: 21601
+	// Token: 0x0400550C RID: 21772
 	[Nullable(new byte[]
 	{
 		2,
@@ -202,21 +202,21 @@ public class ItemSelectView : UiViewBase
 	})]
 	private FilterEntrance<ItemDataBase> FilterEntrance;
 
-	// Token: 0x02007E53 RID: 32339
+	// Token: 0x02006FDA RID: 28634
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029572 RID: 169330
+		// Token: 0x0402489F RID: 149663
 		Pad,
-		// Token: 0x04029573 RID: 169331
+		// Token: 0x040248A0 RID: 149664
 		TipsPos,
-		// Token: 0x04029574 RID: 169332
+		// Token: 0x040248A1 RID: 149665
 		Mask,
-		// Token: 0x04029575 RID: 169333
+		// Token: 0x040248A2 RID: 149666
 		ItemTips,
-		// Token: 0x04029576 RID: 169334
+		// Token: 0x040248A3 RID: 149667
 		FilterItem,
-		// Token: 0x04029577 RID: 169335
+		// Token: 0x040248A4 RID: 149668
 		SortItem
 	}
 }

@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010DB RID: 4315
+	// Token: 0x02001209 RID: 4617
 	public class IRecallConditionByGroup_SetValue
 	{
-		// Token: 0x04003AB9 RID: 15033
+		// Token: 0x04003E06 RID: 15878
 		public ERecallConditionType Type;
 
-		// Token: 0x04003ABA RID: 15034
+		// Token: 0x04003E07 RID: 15879
 		public ERecallOperation Operation;
 
-		// Token: 0x04003ABB RID: 15035
-		[Nullable(1)]
+		// Token: 0x04003E08 RID: 15880
 		public List<int> GroupIds;
 	}
 }

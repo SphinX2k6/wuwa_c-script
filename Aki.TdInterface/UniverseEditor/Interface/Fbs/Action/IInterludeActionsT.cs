@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069AF RID: 27055
+	// Token: 0x02007062 RID: 28770
 	public class IInterludeActionsT
 	{
-		// Token: 0x1700C8B0 RID: 51376
-		// (get) Token: 0x0602F45D RID: 193629 RVA: 0x006705C8 File Offset: 0x0066E7C8
-		// (set) Token: 0x0602F45E RID: 193630 RVA: 0x006705D0 File Offset: 0x0066E7D0
+		// Token: 0x1700D2B5 RID: 53941
+		// (get) Token: 0x06031E39 RID: 204345 RVA: 0x006C0CCC File Offset: 0x006BEECC
+		// (set) Token: 0x06031E3A RID: 204346 RVA: 0x006C0CD4 File Offset: 0x006BEED4
 		public List<IActionInfoT> InterludeActionList { get; set; }
 
-		// Token: 0x1700C8B1 RID: 51377
-		// (get) Token: 0x0602F45F RID: 193631 RVA: 0x006705D9 File Offset: 0x0066E7D9
-		// (set) Token: 0x0602F460 RID: 193632 RVA: 0x006705E1 File Offset: 0x0066E7E1
+		// Token: 0x1700D2B6 RID: 53942
+		// (get) Token: 0x06031E3B RID: 204347 RVA: 0x006C0CDD File Offset: 0x006BEEDD
+		// (set) Token: 0x06031E3C RID: 204348 RVA: 0x006C0CE5 File Offset: 0x006BEEE5
 		public List<int> DestroyEntityIds { get; set; }
 
-		// Token: 0x1700C8B2 RID: 51378
-		// (get) Token: 0x0602F461 RID: 193633 RVA: 0x006705EA File Offset: 0x0066E7EA
-		// (set) Token: 0x0602F462 RID: 193634 RVA: 0x006705F2 File Offset: 0x0066E7F2
+		// Token: 0x1700D2B7 RID: 53943
+		// (get) Token: 0x06031E3D RID: 204349 RVA: 0x006C0CEE File Offset: 0x006BEEEE
+		// (set) Token: 0x06031E3E RID: 204350 RVA: 0x006C0CF6 File Offset: 0x006BEEF6
 		public bool IsFadeIn { get; set; }
 
-		// Token: 0x1700C8B3 RID: 51379
-		// (get) Token: 0x0602F463 RID: 193635 RVA: 0x006705FB File Offset: 0x0066E7FB
-		// (set) Token: 0x0602F464 RID: 193636 RVA: 0x00670603 File Offset: 0x0066E803
+		// Token: 0x1700D2B8 RID: 53944
+		// (get) Token: 0x06031E3F RID: 204351 RVA: 0x006C0CFF File Offset: 0x006BEEFF
+		// (set) Token: 0x06031E40 RID: 204352 RVA: 0x006C0D07 File Offset: 0x006BEF07
 		public bool IsFadeOut { get; set; }
 
-		// Token: 0x1700C8B4 RID: 51380
-		// (get) Token: 0x0602F465 RID: 193637 RVA: 0x0067060C File Offset: 0x0066E80C
-		// (set) Token: 0x0602F466 RID: 193638 RVA: 0x00670614 File Offset: 0x0066E814
+		// Token: 0x1700D2B9 RID: 53945
+		// (get) Token: 0x06031E41 RID: 204353 RVA: 0x006C0D10 File Offset: 0x006BEF10
+		// (set) Token: 0x06031E42 RID: 204354 RVA: 0x006C0D18 File Offset: 0x006BEF18
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F467 RID: 193639 RVA: 0x0067061D File Offset: 0x0066E81D
+		// Token: 0x06031E43 RID: 204355 RVA: 0x006C0D21 File Offset: 0x006BEF21
 		public IInterludeActionsT()
 		{
 			this.InterludeActionList = null;

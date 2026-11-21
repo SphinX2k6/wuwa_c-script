@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A50 RID: 2640
+	// Token: 0x02000B25 RID: 2853
 	public class ConfigTreasureBoxMarkByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003DF4 RID: 15860 RVA: 0x001B83D8 File Offset: 0x001B65D8
+		// Token: 0x060042F2 RID: 17138 RVA: 0x001D776C File Offset: 0x001D596C
 		static ConfigTreasureBoxMarkByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTreasureBoxMarkByMarkId.CreateStaticDefaultValue), new Action(ConfigTreasureBoxMarkByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003DF5 RID: 15861 RVA: 0x001B83F8 File Offset: 0x001B65F8
+		// Token: 0x060042F3 RID: 17139 RVA: 0x001D778C File Offset: 0x001D598C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTreasureBoxMarkByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003DF6 RID: 15862 RVA: 0x001B8477 File Offset: 0x001B6677
+		// Token: 0x060042F4 RID: 17140 RVA: 0x001D780B File Offset: 0x001D5A0B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTreasureBoxMarkByMarkId.LogPair = null;
 			ConfigTreasureBoxMarkByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06003DF7 RID: 15863 RVA: 0x001B8485 File Offset: 0x001B6685
+		// Token: 0x060042F5 RID: 17141 RVA: 0x001D7819 File Offset: 0x001D5A19
 		public static void Init()
 		{
 			ConfigTreasureBoxMarkByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigTreasureBoxMarkByMarkId.HandleId, "db_map_mark.db", "select BinData from `TreasureBoxMark` where MarkId=?");
 		}
 
-		// Token: 0x06003DF8 RID: 15864 RVA: 0x001B84A0 File Offset: 0x001B66A0
+		// Token: 0x060042F6 RID: 17142 RVA: 0x001D7834 File Offset: 0x001D5A34
 		public static TreasureBoxMark? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTreasureBoxMarkByMarkId.HandleId, ConfigTreasureBoxMarkByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TreasureBoxMark?(rootAsTreasureBoxMark);
 		}
 
-		// Token: 0x04004816 RID: 18454
+		// Token: 0x04004DE9 RID: 19945
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04004817 RID: 18455
+		// Token: 0x04004DEA RID: 19946
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04004818 RID: 18456
+		// Token: 0x04004DEB RID: 19947
 		private const string TABLE = "TreasureBoxMark";
 
-		// Token: 0x04004819 RID: 18457
+		// Token: 0x04004DEC RID: 19948
 		private const string COMMAND = "select BinData from `TreasureBoxMark` where MarkId=?";
 
-		// Token: 0x0400481A RID: 18458
+		// Token: 0x04004DED RID: 19949
 		private const string KEY_PREFIX = "TreasureBoxMarkByMarkId";
 
-		// Token: 0x0400481B RID: 18459
+		// Token: 0x04004DEE RID: 19950
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400481C RID: 18460
+		// Token: 0x04004DEF RID: 19951
 		private static int HandleId;
 	}
 }

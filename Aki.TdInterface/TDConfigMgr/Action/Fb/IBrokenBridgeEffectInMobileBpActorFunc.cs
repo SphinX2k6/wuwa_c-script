@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AE1 RID: 10977
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DD5 RID: 11733
 	public class IBrokenBridgeEffectInMobileBpActorFunc : IBpActorFuncTypeBase
 	{
-		// Token: 0x0600F0A3 RID: 61603 RVA: 0x0022EF00 File Offset: 0x0022D100
+		// Token: 0x0600FF59 RID: 65369 RVA: 0x0024CC0C File Offset: 0x0024AE0C
 		public static IBrokenBridgeEffectInMobileBpActorFunc Create(IBrokenBridgeEffectInMobileBpActorFunc? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CA3 RID: 19619
-		// (get) Token: 0x0600F0A4 RID: 61604 RVA: 0x0022EF1F File Offset: 0x0022D11F
+		// Token: 0x1700505D RID: 20573
+		// (get) Token: 0x0600FF5A RID: 65370 RVA: 0x0024CC2B File Offset: 0x0024AE2B
 		public override EBpActorFuncType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CA4 RID: 19620
-		// (get) Token: 0x0600F0A5 RID: 61605 RVA: 0x0022EF2C File Offset: 0x0022D12C
+		// Token: 0x1700505E RID: 20574
+		// (get) Token: 0x0600FF5B RID: 65371 RVA: 0x0024CC38 File Offset: 0x0024AE38
 		public virtual IActorRef BpActor
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008463 RID: 33891
+		// Token: 0x04008B67 RID: 35687
 		private IBrokenBridgeEffectInMobileBpActorFunc Instance;
 
-		// Token: 0x04008464 RID: 33892
+		// Token: 0x04008B68 RID: 35688
 		[Nullable(2)]
 		private IActorRef _BpActorCache;
 
-		// Token: 0x04008465 RID: 33893
+		// Token: 0x04008B69 RID: 35689
 		private bool _BpActorInited;
 	}
 }

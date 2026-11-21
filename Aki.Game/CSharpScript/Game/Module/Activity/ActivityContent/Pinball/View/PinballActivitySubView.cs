@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 {
-	// Token: 0x020062CD RID: 25293
+	// Token: 0x0200524B RID: 21067
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x1700928F RID: 37519
-		// (get) Token: 0x0603FA55 RID: 260693 RVA: 0x00F65C13 File Offset: 0x00F63E13
+		// Token: 0x170065F1 RID: 26097
+		// (get) Token: 0x06034716 RID: 214806 RVA: 0x00EACB6F File Offset: 0x00EAAD6F
 		protected new PinballActivityData ActivityBaseData
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA56 RID: 260694 RVA: 0x00F65C20 File Offset: 0x00F63E20
+		// Token: 0x06034717 RID: 214807 RVA: 0x00EACB7C File Offset: 0x00EAAD7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FA57 RID: 260695 RVA: 0x00F65D30 File Offset: 0x00F63F30
+		// Token: 0x06034718 RID: 214808 RVA: 0x00EACC8C File Offset: 0x00EAAE8C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			EventSystem.Instance.Add<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(this.OnQuestRedDotStateChange));
 		}
 
-		// Token: 0x0603FA58 RID: 260696 RVA: 0x00F65D94 File Offset: 0x00F63F94
+		// Token: 0x06034719 RID: 214809 RVA: 0x00EACCF0 File Offset: 0x00EAAEF0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			EventSystem.Instance.Remove<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(this.OnQuestRedDotStateChange));
 		}
 
-		// Token: 0x0603FA59 RID: 260697 RVA: 0x00F65DF5 File Offset: 0x00F63FF5
+		// Token: 0x0603471A RID: 214810 RVA: 0x00EACD51 File Offset: 0x00EAAF51
 		private void OnQuestStateChangeHandler(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			this.OnQuestStateChange(questId);
 		}
 
-		// Token: 0x0603FA5A RID: 260698 RVA: 0x00F65E00 File Offset: 0x00F64000
+		// Token: 0x0603471B RID: 214811 RVA: 0x00EACD5C File Offset: 0x00EAAF5C
 		private bool IsPinballRelatedQuest(int questId)
 		{
 			PinballActivityData activityBaseData = this.ActivityBaseData;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return false;
 		}
 
-		// Token: 0x0603FA5B RID: 260699 RVA: 0x00F65E74 File Offset: 0x00F64074
+		// Token: 0x0603471C RID: 214812 RVA: 0x00EACDD0 File Offset: 0x00EAAFD0
 		private void OnQuestStateChange(int questId)
 		{
 			if (this.IsPinballRelatedQuest(questId))
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA5C RID: 260700 RVA: 0x00F65E85 File Offset: 0x00F64085
+		// Token: 0x0603471D RID: 214813 RVA: 0x00EACDE1 File Offset: 0x00EAAFE1
 		private void OnQuestRedDotStateChange(int questId)
 		{
 			if (questId == 0 || this.IsPinballRelatedQuest(questId))
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA5D RID: 260701 RVA: 0x00F65E9C File Offset: 0x00F6409C
+		// Token: 0x0603471E RID: 214814 RVA: 0x00EACDF8 File Offset: 0x00EAAFF8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballActivitySubView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FA5E RID: 260702 RVA: 0x00F65EE0 File Offset: 0x00F640E0
+		// Token: 0x0603471F RID: 214815 RVA: 0x00EACE3C File Offset: 0x00EAB03C
 		private void OnRefreshRedDot(int activityId)
 		{
 			PinballActivityData activityBaseData = this.ActivityBaseData;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0603FA5F RID: 260703 RVA: 0x00F65F27 File Offset: 0x00F64127
+		// Token: 0x06034720 RID: 214816 RVA: 0x00EACE83 File Offset: 0x00EAB083
 		protected override void OnRefreshView()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshRecommendTaskTips();
 		}
 
-		// Token: 0x0603FA60 RID: 260704 RVA: 0x00F65F4C File Offset: 0x00F6414C
+		// Token: 0x06034721 RID: 214817 RVA: 0x00EACEA8 File Offset: 0x00EAB0A8
 		private void RefreshCondition()
 		{
 			ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -178,13 +178,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			functionButton.SetButtonAllowEventBubbleUp(true);
 		}
 
-		// Token: 0x0603FA61 RID: 260705 RVA: 0x00F65FA3 File Offset: 0x00F641A3
+		// Token: 0x06034722 RID: 214818 RVA: 0x00EACEFF File Offset: 0x00EAB0FF
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimeLimitRewardButtonText();
 		}
 
-		// Token: 0x0603FA62 RID: 260706 RVA: 0x00F65FAB File Offset: 0x00F641AB
+		// Token: 0x06034723 RID: 214819 RVA: 0x00EACF07 File Offset: 0x00EAB107
 		private void RefreshRewardButtons()
 		{
 			this.RefreshTimeLimitRewardButtonText();
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603FA63 RID: 260707 RVA: 0x00F65FC0 File Offset: 0x00F641C0
+		// Token: 0x06034724 RID: 214820 RVA: 0x00EACF1C File Offset: 0x00EAB11C
 		private void RefreshTimeLimitRewardButtonText()
 		{
 			bool flag = this.ActivityBaseData.CheckIfInRewardTime();
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			timeLimitRewardButton2.SetText(remainTimeText ?? "");
 		}
 
-		// Token: 0x0603FA64 RID: 260708 RVA: 0x00F66030 File Offset: 0x00F64230
+		// Token: 0x06034725 RID: 214821 RVA: 0x00EACF8C File Offset: 0x00EAB18C
 		private void RefreshPermanentRewardButtonText()
 		{
 			ValueTuple<int, int> permanentTaskProgress = this.ActivityBaseData.GetPermanentTaskProgress();
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			permanentRewardButton.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0603FA65 RID: 260709 RVA: 0x00F66094 File Offset: 0x00F64294
+		// Token: 0x06034726 RID: 214822 RVA: 0x00EACFF0 File Offset: 0x00EAB1F0
 		private void RefreshRedDot()
 		{
 			PinballActivityData activityBaseData = this.ActivityBaseData;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			commonInfoPanel.SetFunctionRedDotVisible(activityBaseData.IsMainHubEntranceHasRedDot());
 		}
 
-		// Token: 0x0603FA66 RID: 260710 RVA: 0x00F6617C File Offset: 0x00F6437C
+		// Token: 0x06034727 RID: 214823 RVA: 0x00EAD0D8 File Offset: 0x00EAB2D8
 		private void OnConfirmBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -308,19 +308,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			});
 		}
 
-		// Token: 0x0603FA67 RID: 260711 RVA: 0x00F6619A File Offset: 0x00F6439A
+		// Token: 0x06034728 RID: 214824 RVA: 0x00EAD0F6 File Offset: 0x00EAB2F6
 		private void OnTimeLimitRewardButtonClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballLimitedRewardView, this.ActivityBaseData, null);
 		}
 
-		// Token: 0x0603FA68 RID: 260712 RVA: 0x00F661B2 File Offset: 0x00F643B2
+		// Token: 0x06034729 RID: 214825 RVA: 0x00EAD10E File Offset: 0x00EAB30E
 		private void OnPermanentRewardButtonClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballPermanentRewardView, this.ActivityBaseData, null);
 		}
 
-		// Token: 0x0603FA69 RID: 260713 RVA: 0x00F661CC File Offset: 0x00F643CC
+		// Token: 0x0603472A RID: 214826 RVA: 0x00EAD128 File Offset: 0x00EAB328
 		private void OnRecommendTaskBtnClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DirectTrainRecommendQuest);
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603FA6A RID: 260714 RVA: 0x00F6620C File Offset: 0x00F6440C
+		// Token: 0x0603472B RID: 214827 RVA: 0x00EAD168 File Offset: 0x00EAB368
 		private void RefreshRecommendTaskTips()
 		{
 			if (this.RecommendQuestTipsSubPanel == null)
@@ -365,35 +365,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View
 			}
 		}
 
-		// Token: 0x0402142A RID: 136234
+		// Token: 0x0401BD59 RID: 114009
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0402142B RID: 136235
+		// Token: 0x0401BD5A RID: 114010
 		private ButtonItem TimeLimitRewardButton;
 
-		// Token: 0x0402142C RID: 136236
+		// Token: 0x0401BD5B RID: 114011
 		private ButtonItem PermanentRewardButton;
 
-		// Token: 0x0402142D RID: 136237
+		// Token: 0x0401BD5C RID: 114012
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-		// Token: 0x0200C4AE RID: 50350
+		// Token: 0x0200AE95 RID: 44693
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403B58B RID: 243083
+			// Token: 0x04035EED RID: 220909
 			CommonActionInfo,
-			// Token: 0x0403B58C RID: 243084
+			// Token: 0x04035EEE RID: 220910
 			LimitRewardButton,
-			// Token: 0x0403B58D RID: 243085
+			// Token: 0x04035EEF RID: 220911
 			RewardButton,
-			// Token: 0x0403B58E RID: 243086
+			// Token: 0x04035EF0 RID: 220912
 			TexPlanetBehind,
-			// Token: 0x0403B58F RID: 243087
+			// Token: 0x04035EF1 RID: 220913
 			TexPlanetMiddle,
-			// Token: 0x0403B590 RID: 243088
+			// Token: 0x04035EF2 RID: 220914
 			TexPlanetFront,
-			// Token: 0x0403B591 RID: 243089
+			// Token: 0x04035EF3 RID: 220915
 			QuestTips
 		}
 	}

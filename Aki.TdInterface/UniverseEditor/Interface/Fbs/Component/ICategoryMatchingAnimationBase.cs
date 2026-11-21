@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F5E RID: 20318
+	// Token: 0x0200548D RID: 21645
 	public struct ICategoryMatchingAnimationBase : IFlatbufferObject
 	{
-		// Token: 0x170092AE RID: 37550
-		// (get) Token: 0x0602037D RID: 131965 RVA: 0x0047BA30 File Offset: 0x00479C30
+		// Token: 0x17009A27 RID: 39463
+		// (get) Token: 0x060220CF RID: 139471 RVA: 0x004B1A20 File Offset: 0x004AFC20
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602037E RID: 131966 RVA: 0x0047BA3D File Offset: 0x00479C3D
+		// Token: 0x060220D0 RID: 139472 RVA: 0x004B1A2D File Offset: 0x004AFC2D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602037F RID: 131967 RVA: 0x0047BA44 File Offset: 0x00479C44
+		// Token: 0x060220D1 RID: 139473 RVA: 0x004B1A34 File Offset: 0x004AFC34
 		public static ICategoryMatchingAnimationBase GetRootAsICategoryMatchingAnimationBase(ByteBuffer _bb)
 		{
 			return ICategoryMatchingAnimationBase.GetRootAsICategoryMatchingAnimationBase(_bb, default(ICategoryMatchingAnimationBase));
 		}
 
-		// Token: 0x06020380 RID: 131968 RVA: 0x0047BA60 File Offset: 0x00479C60
+		// Token: 0x060220D2 RID: 139474 RVA: 0x004B1A50 File Offset: 0x004AFC50
 		public static ICategoryMatchingAnimationBase GetRootAsICategoryMatchingAnimationBase(ByteBuffer _bb, ICategoryMatchingAnimationBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020381 RID: 131969 RVA: 0x0047BA7D File Offset: 0x00479C7D
+		// Token: 0x060220D3 RID: 139475 RVA: 0x004B1A6D File Offset: 0x004AFC6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020382 RID: 131970 RVA: 0x0047BA8C File Offset: 0x00479C8C
+		// Token: 0x060220D4 RID: 139476 RVA: 0x004B1A7C File Offset: 0x004AFC7C
 		public ICategoryMatchingAnimationBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170092AF RID: 37551
-		// (get) Token: 0x06020383 RID: 131971 RVA: 0x0047BA9C File Offset: 0x00479C9C
+		// Token: 0x17009A28 RID: 39464
+		// (get) Token: 0x060220D5 RID: 139477 RVA: 0x004B1A8C File Offset: 0x004AFC8C
 		public IVectorInfo? MatchPos
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092B0 RID: 37552
-		// (get) Token: 0x06020384 RID: 131972 RVA: 0x0047BAFC File Offset: 0x00479CFC
+		// Token: 0x17009A29 RID: 39465
+		// (get) Token: 0x060220D6 RID: 139478 RVA: 0x004B1AEC File Offset: 0x004AFCEC
 		public IVectorInfo? MatchRot
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092B1 RID: 37553
-		// (get) Token: 0x06020385 RID: 131973 RVA: 0x0047BB5C File Offset: 0x00479D5C
+		// Token: 0x17009A2A RID: 39466
+		// (get) Token: 0x060220D7 RID: 139479 RVA: 0x004B1B4C File Offset: 0x004AFD4C
 		public string MatchReferenceKey
 		{
 			get
@@ -93,19 +93,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020386 RID: 131974 RVA: 0x0047BB93 File Offset: 0x00479D93
+		// Token: 0x060220D8 RID: 139480 RVA: 0x004B1B83 File Offset: 0x004AFD83
 		public Span<byte> GetMatchReferenceKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06020387 RID: 131975 RVA: 0x0047BBA2 File Offset: 0x00479DA2
+		// Token: 0x060220D9 RID: 139481 RVA: 0x004B1B92 File Offset: 0x004AFD92
 		public byte[] GetMatchReferenceKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x06020388 RID: 131976 RVA: 0x0047BBB0 File Offset: 0x00479DB0
+		// Token: 0x060220DA RID: 139482 RVA: 0x004B1BA0 File Offset: 0x004AFDA0
 		public static Offset<ICategoryMatchingAnimationBase> CreateICategoryMatchingAnimationBase(FlatBufferBuilder builder, Offset<IVectorInfo> MatchPosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> MatchRotOffset = default(Offset<IVectorInfo>), StringOffset MatchReferenceKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -115,37 +115,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingAnimationBase.EndICategoryMatchingAnimationBase(builder);
 		}
 
-		// Token: 0x06020389 RID: 131977 RVA: 0x0047BBD4 File Offset: 0x00479DD4
+		// Token: 0x060220DB RID: 139483 RVA: 0x004B1BC4 File Offset: 0x004AFDC4
 		public static void StartICategoryMatchingAnimationBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602038A RID: 131978 RVA: 0x0047BBDD File Offset: 0x00479DDD
+		// Token: 0x060220DC RID: 139484 RVA: 0x004B1BCD File Offset: 0x004AFDCD
 		public static void AddMatchPos(FlatBufferBuilder builder, Offset<IVectorInfo> matchPosOffset)
 		{
 			builder.AddOffset(0, matchPosOffset.Value, 0);
 		}
 
-		// Token: 0x0602038B RID: 131979 RVA: 0x0047BBED File Offset: 0x00479DED
+		// Token: 0x060220DD RID: 139485 RVA: 0x004B1BDD File Offset: 0x004AFDDD
 		public static void AddMatchRot(FlatBufferBuilder builder, Offset<IVectorInfo> matchRotOffset)
 		{
 			builder.AddOffset(1, matchRotOffset.Value, 0);
 		}
 
-		// Token: 0x0602038C RID: 131980 RVA: 0x0047BBFD File Offset: 0x00479DFD
+		// Token: 0x060220DE RID: 139486 RVA: 0x004B1BED File Offset: 0x004AFDED
 		public static void AddMatchReferenceKey(FlatBufferBuilder builder, StringOffset matchReferenceKeyOffset)
 		{
 			builder.AddOffset(2, matchReferenceKeyOffset.Value, 0);
 		}
 
-		// Token: 0x0602038D RID: 131981 RVA: 0x0047BC0D File Offset: 0x00479E0D
+		// Token: 0x060220DF RID: 139487 RVA: 0x004B1BFD File Offset: 0x004AFDFD
 		public static Offset<ICategoryMatchingAnimationBase> EndICategoryMatchingAnimationBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ICategoryMatchingAnimationBase>(builder.EndTable());
 		}
 
-		// Token: 0x0602038E RID: 131982 RVA: 0x0047BC1C File Offset: 0x00479E1C
+		// Token: 0x060220E0 RID: 139488 RVA: 0x004B1C0C File Offset: 0x004AFE0C
 		public ICategoryMatchingAnimationBaseT UnPack()
 		{
 			ICategoryMatchingAnimationBaseT categoryMatchingAnimationBaseT = new ICategoryMatchingAnimationBaseT();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return categoryMatchingAnimationBaseT;
 		}
 
-		// Token: 0x0602038F RID: 131983 RVA: 0x0047BC38 File Offset: 0x00479E38
+		// Token: 0x060220E1 RID: 139489 RVA: 0x004B1C28 File Offset: 0x004AFE28
 		public void UnPackTo(ICategoryMatchingAnimationBaseT _o)
 		{
 			_o.MatchPos = ((this.MatchPos != null) ? this.MatchPos.Value.UnPack() : null);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.MatchReferenceKey = this.MatchReferenceKey;
 		}
 
-		// Token: 0x06020390 RID: 131984 RVA: 0x0047BCB0 File Offset: 0x00479EB0
+		// Token: 0x060220E2 RID: 139490 RVA: 0x004B1CA0 File Offset: 0x004AFEA0
 		public static Offset<ICategoryMatchingAnimationBase> Pack(FlatBufferBuilder builder, ICategoryMatchingAnimationBaseT _o)
 		{
 			if (_o == null)
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingAnimationBase.CreateICategoryMatchingAnimationBase(builder, matchPosOffset, matchRotOffset, matchReferenceKeyOffset);
 		}
 
-		// Token: 0x0400DDEE RID: 56814
+		// Token: 0x0400E998 RID: 59800
 		private Table __p;
 	}
 }

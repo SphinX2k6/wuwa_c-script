@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x0200435D RID: 17245
+	// Token: 0x020047BF RID: 18367
 	public struct IPerformerAiConditionDecorator : IFlatbufferObject
 	{
-		// Token: 0x170079B2 RID: 31154
-		// (get) Token: 0x06019924 RID: 104740 RVA: 0x003A91B9 File Offset: 0x003A73B9
+		// Token: 0x17007FE7 RID: 32743
+		// (get) Token: 0x0601B0B2 RID: 110770 RVA: 0x003D4BE1 File Offset: 0x003D2DE1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x06019925 RID: 104741 RVA: 0x003A91C6 File Offset: 0x003A73C6
+		// Token: 0x0601B0B3 RID: 110771 RVA: 0x003D4BEE File Offset: 0x003D2DEE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019926 RID: 104742 RVA: 0x003A91D0 File Offset: 0x003A73D0
+		// Token: 0x0601B0B4 RID: 110772 RVA: 0x003D4BF8 File Offset: 0x003D2DF8
 		public static IPerformerAiConditionDecorator GetRootAsIPerformerAiConditionDecorator(ByteBuffer _bb)
 		{
 			return IPerformerAiConditionDecorator.GetRootAsIPerformerAiConditionDecorator(_bb, default(IPerformerAiConditionDecorator));
 		}
 
-		// Token: 0x06019927 RID: 104743 RVA: 0x003A91EC File Offset: 0x003A73EC
+		// Token: 0x0601B0B5 RID: 110773 RVA: 0x003D4C14 File Offset: 0x003D2E14
 		public static IPerformerAiConditionDecorator GetRootAsIPerformerAiConditionDecorator(ByteBuffer _bb, IPerformerAiConditionDecorator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019928 RID: 104744 RVA: 0x003A9209 File Offset: 0x003A7409
+		// Token: 0x0601B0B6 RID: 110774 RVA: 0x003D4C31 File Offset: 0x003D2E31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019929 RID: 104745 RVA: 0x003A9218 File Offset: 0x003A7418
+		// Token: 0x0601B0B7 RID: 110775 RVA: 0x003D4C40 File Offset: 0x003D2E40
 		public IPerformerAiConditionDecorator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170079B3 RID: 31155
-		// (get) Token: 0x0601992A RID: 104746 RVA: 0x003A9228 File Offset: 0x003A7428
+		// Token: 0x17007FE8 RID: 32744
+		// (get) Token: 0x0601B0B8 RID: 110776 RVA: 0x003D4C50 File Offset: 0x003D2E50
 		public EPerformerAiDecoratorType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x170079B4 RID: 31156
-		// (get) Token: 0x0601992B RID: 104747 RVA: 0x003A9264 File Offset: 0x003A7464
+		// Token: 0x17007FE9 RID: 32745
+		// (get) Token: 0x0601B0B9 RID: 110777 RVA: 0x003D4C8C File Offset: 0x003D2E8C
 		public IConditionGroup? Condition
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x170079B5 RID: 31157
-		// (get) Token: 0x0601992C RID: 104748 RVA: 0x003A92C4 File Offset: 0x003A74C4
+		// Token: 0x17007FEA RID: 32746
+		// (get) Token: 0x0601B0BA RID: 110778 RVA: 0x003D4CEC File Offset: 0x003D2EEC
 		public bool Reverse
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x170079B6 RID: 31158
-		// (get) Token: 0x0601992D RID: 104749 RVA: 0x003A9304 File Offset: 0x003A7504
+		// Token: 0x17007FEB RID: 32747
+		// (get) Token: 0x0601B0BB RID: 110779 RVA: 0x003D4D2C File Offset: 0x003D2F2C
 		public EPerformerAiAbortType AbortType
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x170079B7 RID: 31159
-		// (get) Token: 0x0601992E RID: 104750 RVA: 0x003A9344 File Offset: 0x003A7544
+		// Token: 0x17007FEC RID: 32748
+		// (get) Token: 0x0601B0BC RID: 110780 RVA: 0x003D4D6C File Offset: 0x003D2F6C
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x0601992F RID: 104751 RVA: 0x003A9381 File Offset: 0x003A7581
+		// Token: 0x0601B0BD RID: 110781 RVA: 0x003D4DA9 File Offset: 0x003D2FA9
 		public static Offset<IPerformerAiConditionDecorator> CreateIPerformerAiConditionDecorator(FlatBufferBuilder builder, EPerformerAiDecoratorType Type = EPerformerAiDecoratorType.Condition, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), bool Reverse = false, EPerformerAiAbortType AbortType = EPerformerAiAbortType.None, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiConditionDecorator.EndIPerformerAiConditionDecorator(builder);
 		}
 
-		// Token: 0x06019930 RID: 104752 RVA: 0x003A93B5 File Offset: 0x003A75B5
+		// Token: 0x0601B0BE RID: 110782 RVA: 0x003D4DDD File Offset: 0x003D2FDD
 		public static void StartIPerformerAiConditionDecorator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06019931 RID: 104753 RVA: 0x003A93BE File Offset: 0x003A75BE
+		// Token: 0x0601B0BF RID: 110783 RVA: 0x003D4DE6 File Offset: 0x003D2FE6
 		public static void AddType(FlatBufferBuilder builder, EPerformerAiDecoratorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019932 RID: 104754 RVA: 0x003A93C9 File Offset: 0x003A75C9
+		// Token: 0x0601B0C0 RID: 110784 RVA: 0x003D4DF1 File Offset: 0x003D2FF1
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(1, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06019933 RID: 104755 RVA: 0x003A93D9 File Offset: 0x003A75D9
+		// Token: 0x0601B0C1 RID: 110785 RVA: 0x003D4E01 File Offset: 0x003D3001
 		public static void AddReverse(FlatBufferBuilder builder, bool reverse)
 		{
 			builder.AddBool(2, reverse, false);
 		}
 
-		// Token: 0x06019934 RID: 104756 RVA: 0x003A93E4 File Offset: 0x003A75E4
+		// Token: 0x0601B0C2 RID: 110786 RVA: 0x003D4E0C File Offset: 0x003D300C
 		public static void AddAbortType(FlatBufferBuilder builder, EPerformerAiAbortType abortType)
 		{
 			builder.AddByte(3, (byte)abortType, 0);
 		}
 
-		// Token: 0x06019935 RID: 104757 RVA: 0x003A93EF File Offset: 0x003A75EF
+		// Token: 0x0601B0C3 RID: 110787 RVA: 0x003D4E17 File Offset: 0x003D3017
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06019936 RID: 104758 RVA: 0x003A93FA File Offset: 0x003A75FA
+		// Token: 0x0601B0C4 RID: 110788 RVA: 0x003D4E22 File Offset: 0x003D3022
 		public static Offset<IPerformerAiConditionDecorator> EndIPerformerAiConditionDecorator(FlatBufferBuilder builder)
 		{
 			return new Offset<IPerformerAiConditionDecorator>(builder.EndTable());
 		}
 
-		// Token: 0x06019937 RID: 104759 RVA: 0x003A9408 File Offset: 0x003A7608
+		// Token: 0x0601B0C5 RID: 110789 RVA: 0x003D4E30 File Offset: 0x003D3030
 		public IPerformerAiConditionDecoratorT UnPack()
 		{
 			IPerformerAiConditionDecoratorT performerAiConditionDecoratorT = new IPerformerAiConditionDecoratorT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return performerAiConditionDecoratorT;
 		}
 
-		// Token: 0x06019938 RID: 104760 RVA: 0x003A9424 File Offset: 0x003A7624
+		// Token: 0x0601B0C6 RID: 110790 RVA: 0x003D4E4C File Offset: 0x003D304C
 		public void UnPackTo(IPerformerAiConditionDecoratorT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06019939 RID: 104761 RVA: 0x003A9490 File Offset: 0x003A7690
+		// Token: 0x0601B0C7 RID: 110791 RVA: 0x003D4EB8 File Offset: 0x003D30B8
 		public static Offset<IPerformerAiConditionDecorator> Pack(FlatBufferBuilder builder, IPerformerAiConditionDecoratorT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiConditionDecorator.CreateIPerformerAiConditionDecorator(builder, _o.Type, conditionOffset, _o.Reverse, _o.AbortType, _o.NullMask);
 		}
 
-		// Token: 0x0400C14D RID: 49485
+		// Token: 0x0400CB6B RID: 52075
 		private Table __p;
 	}
 }

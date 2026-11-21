@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070FD RID: 28925
+	// Token: 0x020078C9 RID: 30921
 	public struct IShowTalkFrameEventPosition : IFlatbufferObject
 	{
-		// Token: 0x1700D706 RID: 55046
-		// (get) Token: 0x06033459 RID: 210009 RVA: 0x006E9C3B File Offset: 0x006E7E3B
+		// Token: 0x1700E2E9 RID: 58089
+		// (get) Token: 0x060366FB RID: 222971 RVA: 0x0074A247 File Offset: 0x00748447
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603345A RID: 210010 RVA: 0x006E9C48 File Offset: 0x006E7E48
+		// Token: 0x060366FC RID: 222972 RVA: 0x0074A254 File Offset: 0x00748454
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603345B RID: 210011 RVA: 0x006E9C50 File Offset: 0x006E7E50
+		// Token: 0x060366FD RID: 222973 RVA: 0x0074A25C File Offset: 0x0074845C
 		public static IShowTalkFrameEventPosition GetRootAsIShowTalkFrameEventPosition(ByteBuffer _bb)
 		{
 			return IShowTalkFrameEventPosition.GetRootAsIShowTalkFrameEventPosition(_bb, default(IShowTalkFrameEventPosition));
 		}
 
-		// Token: 0x0603345C RID: 210012 RVA: 0x006E9C6C File Offset: 0x006E7E6C
+		// Token: 0x060366FE RID: 222974 RVA: 0x0074A278 File Offset: 0x00748478
 		public static IShowTalkFrameEventPosition GetRootAsIShowTalkFrameEventPosition(ByteBuffer _bb, IShowTalkFrameEventPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603345D RID: 210013 RVA: 0x006E9C89 File Offset: 0x006E7E89
+		// Token: 0x060366FF RID: 222975 RVA: 0x0074A295 File Offset: 0x00748495
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603345E RID: 210014 RVA: 0x006E9C98 File Offset: 0x006E7E98
+		// Token: 0x06036700 RID: 222976 RVA: 0x0074A2A4 File Offset: 0x007484A4
 		public IShowTalkFrameEventPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D707 RID: 55047
-		// (get) Token: 0x0603345F RID: 210015 RVA: 0x006E9CA8 File Offset: 0x006E7EA8
+		// Token: 0x1700E2EA RID: 58090
+		// (get) Token: 0x06036701 RID: 222977 RVA: 0x0074A2B4 File Offset: 0x007484B4
 		public int TalkItemId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D708 RID: 55048
-		// (get) Token: 0x06033460 RID: 210016 RVA: 0x006E9CE4 File Offset: 0x006E7EE4
+		// Token: 0x1700E2EB RID: 58091
+		// (get) Token: 0x06036702 RID: 222978 RVA: 0x0074A2F0 File Offset: 0x007484F0
 		public int Offset
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033461 RID: 210017 RVA: 0x006E9D20 File Offset: 0x006E7F20
+		// Token: 0x06036703 RID: 222979 RVA: 0x0074A32C File Offset: 0x0074852C
 		public static Offset<IShowTalkFrameEventPosition> CreateIShowTalkFrameEventPosition(FlatBufferBuilder builder, int TalkItemId = 0, int Offset = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowTalkFrameEventPosition.EndIShowTalkFrameEventPosition(builder);
 		}
 
-		// Token: 0x06033462 RID: 210018 RVA: 0x006E9D3D File Offset: 0x006E7F3D
+		// Token: 0x06036704 RID: 222980 RVA: 0x0074A349 File Offset: 0x00748549
 		public static void StartIShowTalkFrameEventPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06033463 RID: 210019 RVA: 0x006E9D46 File Offset: 0x006E7F46
+		// Token: 0x06036705 RID: 222981 RVA: 0x0074A352 File Offset: 0x00748552
 		public static void AddTalkItemId(FlatBufferBuilder builder, int talkItemId)
 		{
 			builder.AddInt(0, talkItemId, 0);
 		}
 
-		// Token: 0x06033464 RID: 210020 RVA: 0x006E9D51 File Offset: 0x006E7F51
+		// Token: 0x06036706 RID: 222982 RVA: 0x0074A35D File Offset: 0x0074855D
 		public static void AddOffset(FlatBufferBuilder builder, int offset)
 		{
 			builder.AddInt(1, offset, 0);
 		}
 
-		// Token: 0x06033465 RID: 210021 RVA: 0x006E9D5C File Offset: 0x006E7F5C
+		// Token: 0x06036707 RID: 222983 RVA: 0x0074A368 File Offset: 0x00748568
 		public static Offset<IShowTalkFrameEventPosition> EndIShowTalkFrameEventPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowTalkFrameEventPosition>(builder.EndTable());
 		}
 
-		// Token: 0x06033466 RID: 210022 RVA: 0x006E9D6C File Offset: 0x006E7F6C
+		// Token: 0x06036708 RID: 222984 RVA: 0x0074A378 File Offset: 0x00748578
 		public IShowTalkFrameEventPositionT UnPack()
 		{
 			IShowTalkFrameEventPositionT showTalkFrameEventPositionT = new IShowTalkFrameEventPositionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return showTalkFrameEventPositionT;
 		}
 
-		// Token: 0x06033467 RID: 210023 RVA: 0x006E9D87 File Offset: 0x006E7F87
+		// Token: 0x06036709 RID: 222985 RVA: 0x0074A393 File Offset: 0x00748593
 		public void UnPackTo(IShowTalkFrameEventPositionT _o)
 		{
 			_o.TalkItemId = this.TalkItemId;
 			_o.Offset = this.Offset;
 		}
 
-		// Token: 0x06033468 RID: 210024 RVA: 0x006E9DA4 File Offset: 0x006E7FA4
+		// Token: 0x0603670A RID: 222986 RVA: 0x0074A3B0 File Offset: 0x007485B0
 		public static Offset<IShowTalkFrameEventPosition> Pack(FlatBufferBuilder builder, IShowTalkFrameEventPositionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IShowTalkFrameEventPosition.CreateIShowTalkFrameEventPosition(builder, _o.TalkItemId, _o.Offset);
 		}
 
-		// Token: 0x04011B8B RID: 72587
+		// Token: 0x04012B79 RID: 76665
 		private Table __p;
 	}
 }

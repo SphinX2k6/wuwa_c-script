@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000871 RID: 2161
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000914 RID: 2324
 	public class ResetEntitiesPosComponent : IComponentBase
 	{
-		// Token: 0x06002FEB RID: 12267 RVA: 0x0007B7B4 File Offset: 0x000799B4
+		// Token: 0x06003327 RID: 13095 RVA: 0x00082C9C File Offset: 0x00080E9C
 		private ResetEntitiesPosComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002FEC RID: 12268 RVA: 0x0007B7EC File Offset: 0x000799EC
+		// Token: 0x06003328 RID: 13096 RVA: 0x00082CD4 File Offset: 0x00080ED4
 		public static ResetEntitiesPosComponent Create([Nullable(2)] ResetEntitiesPosComponent instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FED RID: 12269 RVA: 0x0007B7FF File Offset: 0x000799FF
+		// Token: 0x06003329 RID: 13097 RVA: 0x00082CE7 File Offset: 0x00080EE7
 		public static ResetEntitiesPosComponent CreateFromSetValue([Nullable(2)] ResetEntitiesPosComponent_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002FEE RID: 12270 RVA: 0x0007B812 File Offset: 0x00079A12
+		// Token: 0x0600332A RID: 13098 RVA: 0x00082CFA File Offset: 0x00080EFA
 		public new ResetEntitiesPosComponent_SetValue ToSetValue()
 		{
 			return new ResetEntitiesPosComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CAF RID: 3247
-		// (get) Token: 0x06002FEF RID: 12271 RVA: 0x0007B84C File Offset: 0x00079A4C
-		// (set) Token: 0x06002FF0 RID: 12272 RVA: 0x0007B886 File Offset: 0x00079A86
+		// Token: 0x17000D78 RID: 3448
+		// (get) Token: 0x0600332B RID: 13099 RVA: 0x00082D34 File Offset: 0x00080F34
+		// (set) Token: 0x0600332C RID: 13100 RVA: 0x00082D6E File Offset: 0x00080F6E
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CB0 RID: 3248
-		// (get) Token: 0x06002FF1 RID: 12273 RVA: 0x0007B894 File Offset: 0x00079A94
-		// (set) Token: 0x06002FF2 RID: 12274 RVA: 0x0007B8BE File Offset: 0x00079ABE
+		// Token: 0x17000D79 RID: 3449
+		// (get) Token: 0x0600332D RID: 13101 RVA: 0x00082D7C File Offset: 0x00080F7C
+		// (set) Token: 0x0600332E RID: 13102 RVA: 0x00082DA6 File Offset: 0x00080FA6
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CB1 RID: 3249
-		// (get) Token: 0x06002FF3 RID: 12275 RVA: 0x0007B8CC File Offset: 0x00079ACC
-		// (set) Token: 0x06002FF4 RID: 12276 RVA: 0x0007B8F3 File Offset: 0x00079AF3
+		// Token: 0x17000D7A RID: 3450
+		// (get) Token: 0x0600332F RID: 13103 RVA: 0x00082DB4 File Offset: 0x00080FB4
+		// (set) Token: 0x06003330 RID: 13104 RVA: 0x00082DDB File Offset: 0x00080FDB
 		public virtual ITriggerShape Range
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CB2 RID: 3250
-		// (get) Token: 0x06002FF5 RID: 12277 RVA: 0x0007B901 File Offset: 0x00079B01
-		// (set) Token: 0x06002FF6 RID: 12278 RVA: 0x0007B928 File Offset: 0x00079B28
+		// Token: 0x17000D7B RID: 3451
+		// (get) Token: 0x06003331 RID: 13105 RVA: 0x00082DE9 File Offset: 0x00080FE9
+		// (set) Token: 0x06003332 RID: 13106 RVA: 0x00082E10 File Offset: 0x00081010
 		public virtual List<int> EntityIds
 		{
 			get
@@ -155,11 +153,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F91 RID: 8081
+		// Token: 0x040021A3 RID: 8611
 		[Nullable(2)]
 		protected new ResetEntitiesPosComponent FbInstance;
 
-		// Token: 0x04001F92 RID: 8082
+		// Token: 0x040021A4 RID: 8612
 		[Nullable(2)]
 		protected new ResetEntitiesPosComponent_SetValue PocoInterface;
 	}

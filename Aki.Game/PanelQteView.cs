@@ -8,29 +8,29 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002306 RID: 8966
+// Token: 0x020017EA RID: 6122
 [NullableContext(1)]
 [Nullable(0)]
 public class PanelQteView : UiTickViewBase
 {
-	// Token: 0x06011B30 RID: 72496 RVA: 0x00459ED6 File Offset: 0x004580D6
+	// Token: 0x0600EFCB RID: 61387 RVA: 0x00466CE2 File Offset: 0x00464EE2
 	public PanelQteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011B31 RID: 72497 RVA: 0x00459F05 File Offset: 0x00458105
+	// Token: 0x0600EFCC RID: 61388 RVA: 0x00466D11 File Offset: 0x00464F11
 	protected override void OnRegisterComponent()
 	{
 		this.IsMobile = Info.Instance.IsInTouch();
 	}
 
-	// Token: 0x06011B32 RID: 72498 RVA: 0x00459F17 File Offset: 0x00458117
+	// Token: 0x0600EFCD RID: 61389 RVA: 0x00466D23 File Offset: 0x00464F23
 	protected override void OnAfterShow()
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x06011B33 RID: 72499 RVA: 0x00459F20 File Offset: 0x00458120
+	// Token: 0x0600EFCE RID: 61390 RVA: 0x00466D2C File Offset: 0x00464F2C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
@@ -43,7 +43,7 @@ public class PanelQteView : UiTickViewBase
 		BattleUiModel.Instance.ChildViewData.AddCallback(EBattleUiChild.PanelQTE, new Action(this.OnVisibleChanged));
 	}
 
-	// Token: 0x06011B34 RID: 72500 RVA: 0x00459FC4 File Offset: 0x004581C4
+	// Token: 0x0600EFCF RID: 61391 RVA: 0x00466DD0 File Offset: 0x00464FD0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
@@ -56,32 +56,32 @@ public class PanelQteView : UiTickViewBase
 		BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.PanelQTE, new Action(this.OnVisibleChanged));
 	}
 
-	// Token: 0x06011B35 RID: 72501 RVA: 0x0045A066 File Offset: 0x00458266
+	// Token: 0x0600EFD0 RID: 61392 RVA: 0x00466E72 File Offset: 0x00465072
 	private void OnVisibleChanged()
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x06011B36 RID: 72502 RVA: 0x0045A070 File Offset: 0x00458270
+	// Token: 0x0600EFD1 RID: 61393 RVA: 0x00466E7C File Offset: 0x0046507C
 	protected virtual void RefreshVisible()
 	{
 		bool childVisible = BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.PanelQTE);
 		this.SetActive(childVisible);
 	}
 
-	// Token: 0x06011B37 RID: 72503 RVA: 0x0045A096 File Offset: 0x00458296
+	// Token: 0x0600EFD2 RID: 61394 RVA: 0x00466EA2 File Offset: 0x004650A2
 	private void OnActiveBattleView()
 	{
 		this.IsPause = false;
 	}
 
-	// Token: 0x06011B38 RID: 72504 RVA: 0x0045A09F File Offset: 0x0045829F
+	// Token: 0x0600EFD3 RID: 61395 RVA: 0x00466EAB File Offset: 0x004650AB
 	private void OnDisActiveBattleView()
 	{
 		this.IsPause = true;
 	}
 
-	// Token: 0x06011B39 RID: 72505 RVA: 0x0045A0A8 File Offset: 0x004582A8
+	// Token: 0x0600EFD4 RID: 61396 RVA: 0x00466EB4 File Offset: 0x004650B4
 	private void OnPanelQteEnd(int handleId, bool isQteSuccess)
 	{
 		if ((int)(this.OpenParam ?? 0) != handleId)
@@ -92,23 +92,23 @@ public class PanelQteView : UiTickViewBase
 		this.HandleQteEnd();
 	}
 
-	// Token: 0x06011B3A RID: 72506 RVA: 0x0045A0D0 File Offset: 0x004582D0
+	// Token: 0x0600EFD5 RID: 61397 RVA: 0x00466EDC File Offset: 0x004650DC
 	protected virtual void HandleQteEnd()
 	{
 	}
 
-	// Token: 0x06011B3B RID: 72507 RVA: 0x0045A0D2 File Offset: 0x004582D2
+	// Token: 0x0600EFD6 RID: 61398 RVA: 0x00466EDE File Offset: 0x004650DE
 	private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		this.InputControllerChangeInner();
 	}
 
-	// Token: 0x06011B3C RID: 72508 RVA: 0x0045A0DA File Offset: 0x004582DA
+	// Token: 0x0600EFD7 RID: 61399 RVA: 0x00466EE6 File Offset: 0x004650E6
 	protected virtual void InputControllerChangeInner()
 	{
 	}
 
-	// Token: 0x06011B3D RID: 72509 RVA: 0x0045A0DC File Offset: 0x004582DC
+	// Token: 0x0600EFD8 RID: 61400 RVA: 0x00466EE8 File Offset: 0x004650E8
 	protected override void OnTick(float delta)
 	{
 		if (this.IsPause)
@@ -121,7 +121,7 @@ public class PanelQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011B3E RID: 72510 RVA: 0x0045A104 File Offset: 0x00458304
+	// Token: 0x0600EFD9 RID: 61401 RVA: 0x00466F10 File Offset: 0x00465110
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearCameraShake();
@@ -137,7 +137,7 @@ public class PanelQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011B3F RID: 72511 RVA: 0x0045A168 File Offset: 0x00458368
+	// Token: 0x0600EFDA RID: 61402 RVA: 0x00466F74 File Offset: 0x00465174
 	protected void InitCameraShake(SPanelQte qteConfig)
 	{
 		this.CameraShakeOnInput = qteConfig.CameraShakeOnInput;
@@ -151,17 +151,17 @@ public class PanelQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011B40 RID: 72512 RVA: 0x0045A1B8 File Offset: 0x004583B8
+	// Token: 0x0600EFDB RID: 61403 RVA: 0x00466FC4 File Offset: 0x004651C4
 	protected void PlayCameraShake()
 	{
 		if (this.CameraShakeType != null)
 		{
 			Vector cameraLocation = CameraModel.Instance.MainModel.CameraLocation;
-			CameraController.Instance.PlayWorldCameraShake(this.CameraShakeType, new FVectorDouble?(cameraLocation.ToUeVector(false)), 0f, 500f, 1f, false, "MainCamera");
+			CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(this.CameraShakeType), new FVectorDouble?(cameraLocation.ToUeVector(false)), 0f, 500f, 1f, false, "MainCamera");
 		}
 	}
 
-	// Token: 0x06011B41 RID: 72513 RVA: 0x0045A213 File Offset: 0x00458413
+	// Token: 0x0600EFDC RID: 61404 RVA: 0x00467024 File Offset: 0x00465224
 	protected void ClearCameraShake()
 	{
 		this.CameraShakeOnInput = false;
@@ -173,14 +173,14 @@ public class PanelQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011B42 RID: 72514 RVA: 0x0045A243 File Offset: 0x00458443
+	// Token: 0x0600EFDD RID: 61405 RVA: 0x00467054 File Offset: 0x00465254
 	protected void InitBuff(SPanelQte qteConfig)
 	{
 		this.BuffId = new long?(qteConfig.BuffOnInput);
 		this.BuffCd = Math.Max(qteConfig.BuffCd * (float)TimeUtil.Instance.InverseMillisecond, 1000f);
 	}
 
-	// Token: 0x06011B43 RID: 72515 RVA: 0x0045A280 File Offset: 0x00458480
+	// Token: 0x0600EFDE RID: 61406 RVA: 0x00467090 File Offset: 0x00465290
 	protected void AddBuff()
 	{
 		if (this.BuffId == null || this.BuffId.Value == 0L)
@@ -211,40 +211,40 @@ public class PanelQteView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06011B44 RID: 72516 RVA: 0x0045A344 File Offset: 0x00458544
+	// Token: 0x0600EFDF RID: 61407 RVA: 0x00467154 File Offset: 0x00465354
 	protected void ClearBuff()
 	{
 		this.BuffId = null;
 	}
 
-	// Token: 0x04008644 RID: 34372
+	// Token: 0x04008784 RID: 34692
 	protected bool IsMobile;
 
-	// Token: 0x04008645 RID: 34373
+	// Token: 0x04008785 RID: 34693
 	protected bool IsPause;
 
-	// Token: 0x04008646 RID: 34374
+	// Token: 0x04008786 RID: 34694
 	protected bool IsQteStart = true;
 
-	// Token: 0x04008647 RID: 34375
+	// Token: 0x04008787 RID: 34695
 	protected bool IsQteEnd;
 
-	// Token: 0x04008648 RID: 34376
+	// Token: 0x04008788 RID: 34696
 	protected bool CameraShakeOnInput;
 
-	// Token: 0x04008649 RID: 34377
+	// Token: 0x04008789 RID: 34697
 	protected int LoadCameraShakeHandleId = -1;
 
-	// Token: 0x0400864A RID: 34378
+	// Token: 0x0400878A RID: 34698
 	[Nullable(2)]
 	protected UClass CameraShakeType;
 
-	// Token: 0x0400864B RID: 34379
+	// Token: 0x0400878B RID: 34699
 	protected long? BuffId;
 
-	// Token: 0x0400864C RID: 34380
+	// Token: 0x0400878C RID: 34700
 	protected Number BuffCd = 0;
 
-	// Token: 0x0400864D RID: 34381
+	// Token: 0x0400878D RID: 34701
 	protected Number BuffEnableTime = 0;
 }

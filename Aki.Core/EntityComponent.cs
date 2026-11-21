@@ -2,38 +2,37 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using CSharpScript.Core.Framework;
 
-// Token: 0x0200007E RID: 126
+// Token: 0x02000081 RID: 129
 [NullableContext(1)]
 [Nullable(0)]
-public abstract class EntityComponent : IComponentDependency, IEntityComponentCleaner
+[Obfuscation(Feature = "ClassName")]
+[OverrideFunctionRoot]
+public abstract class EntityComponent : IEntityComponentCleaner
 {
-	// Token: 0x060003A8 RID: 936 RVA: 0x000167B8 File Offset: 0x000149B8
-	public static int GetByType(string typeName)
-	{
-		Func<string, int> componentTypeToIndexHook = EntityComponentConstant.ComponentTypeToIndexHook;
-		if (componentTypeToIndexHook == null)
-		{
-			return -1;
-		}
-		return componentTypeToIndexHook(typeName);
-	}
-
-	// Token: 0x17000088 RID: 136
-	// (get) Token: 0x060003A9 RID: 937 RVA: 0x000167CB File Offset: 0x000149CB
+	// Token: 0x1700008E RID: 142
+	// (get) Token: 0x060003E4 RID: 996 RVA: 0x00017231 File Offset: 0x00015431
 	[Nullable(new byte[]
 	{
 		2,
 		1
 	})]
-	public static Type[] Dependencies { [return: Nullable(new byte[]
+	public virtual Type[] Dependencies
 	{
-		2,
-		1
-	})] get; }
+		[return: Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		get
+		{
+			return null;
+		}
+	}
 
-	// Token: 0x17000089 RID: 137
-	// (get) Token: 0x060003AA RID: 938 RVA: 0x000167D2 File Offset: 0x000149D2
+	// Token: 0x1700008F RID: 143
+	// (get) Token: 0x060003E5 RID: 997 RVA: 0x00017234 File Offset: 0x00015434
 	public bool Valid
 	{
 		get
@@ -42,62 +41,19 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003AB RID: 939 RVA: 0x000167EC File Offset: 0x000149EC
+	// Token: 0x060003E6 RID: 998 RVA: 0x00017250 File Offset: 0x00015450
 	public EntityComponent()
 	{
-		Type type = base.GetType();
-		this.NeedEnableInternal = EntityComponent.IsOverrideMethod(type, "OnEnable", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedDisableInternal = EntityComponent.IsOverrideMethod(type, "OnDisable", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedTickInternal = EntityComponent.IsOverrideMethod(type, "OnTick", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedForceTickInternal = EntityComponent.IsOverrideMethod(type, "OnForceTick", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedAfterTickInternal = EntityComponent.IsOverrideMethod(type, "OnAfterTick", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedForceAfterTickInternal = EntityComponent.IsOverrideMethod(type, "OnForceAfterTick", BindingFlags.Instance | BindingFlags.NonPublic);
-		this.NeedChangeTimeDilationInternal = EntityComponent.IsOverrideMethod(type, "OnChangeTimeDilation", BindingFlags.Instance | BindingFlags.NonPublic);
-		if (Stat.Enable)
-		{
-			string name = base.GetType().Name;
-			Stat[] array;
-			if (EntityComponentConstant.StatMap.ContainsKey(name))
-			{
-				array = EntityComponentConstant.StatMap[name];
-			}
-			else
-			{
-				array = new Stat[10];
-				Stat stat = null;
-				array[0] = stat;
-				array[1] = stat;
-				array[2] = stat;
-				array[3] = stat;
-				array[4] = stat;
-				array[5] = stat;
-				array[6] = stat;
-				array[7] = stat;
-				array[8] = stat;
-				array[9] = stat;
-				EntityComponentConstant.StatMap[name] = array;
-			}
-			this.CreateStat = array[0];
-			this.InitStat = array[1];
-			this.ClearStat = array[2];
-			this.StartStat = array[3];
-			this.EndStat = array[4];
-			this.ActivateStat = array[5];
-			this.StatTick = array[6];
-			this.StatForceTick = array[7];
-			this.StatAfterTick = array[8];
-			this.StatForceAfterTick = array[9];
-		}
+		this.NeedEnable = this.NeedEnableInternal;
+		this.NeedDisable = this.NeedDisableInternal;
+		this.NeedTick = this.NeedTickInternal;
+		this.NeedForceTick = this.NeedForceTickInternal;
+		this.NeedAfterTick = this.NeedAfterTickInternal;
+		this.NeedForceAfterTick = this.NeedForceAfterTickInternal;
+		this.NeedChangeTimeDilation = this.NeedChangeTimeDilationInternal;
 	}
 
-	// Token: 0x060003AC RID: 940 RVA: 0x00016974 File Offset: 0x00014B74
-	private static bool IsOverrideMethod(Type type, string methodName, BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic)
-	{
-		MethodInfo method = type.GetMethod(methodName, flags);
-		return method != null && method.DeclaringType != typeof(EntityComponent);
-	}
-
-	// Token: 0x060003AD RID: 941 RVA: 0x000169AA File Offset: 0x00014BAA
+	// Token: 0x060003E7 RID: 999 RVA: 0x000172D4 File Offset: 0x000154D4
 	private void ClearInternal()
 	{
 		this.DisableHandlesMap.Clear();
@@ -105,8 +61,8 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		this.EntityInternal = null;
 	}
 
-	// Token: 0x1700008A RID: 138
-	// (get) Token: 0x060003AE RID: 942 RVA: 0x000169C5 File Offset: 0x00014BC5
+	// Token: 0x17000090 RID: 144
+	// (get) Token: 0x060003E8 RID: 1000 RVA: 0x000172EF File Offset: 0x000154EF
 	public Entity Entity
 	{
 		get
@@ -115,8 +71,8 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x1700008B RID: 139
-	// (get) Token: 0x060003AF RID: 943 RVA: 0x000169CD File Offset: 0x00014BCD
+	// Token: 0x17000091 RID: 145
+	// (get) Token: 0x060003E9 RID: 1001 RVA: 0x000172F7 File Offset: 0x000154F7
 	public bool Active
 	{
 		get
@@ -126,48 +82,8 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x1700008C RID: 140
-	// (get) Token: 0x060003B0 RID: 944 RVA: 0x000169EB File Offset: 0x00014BEB
-	public bool NeedTick
-	{
-		get
-		{
-			return this.NeedTickInternal;
-		}
-	}
-
-	// Token: 0x1700008D RID: 141
-	// (get) Token: 0x060003B1 RID: 945 RVA: 0x000169F3 File Offset: 0x00014BF3
-	public bool NeedForceTick
-	{
-		get
-		{
-			return this.NeedForceTickInternal;
-		}
-	}
-
-	// Token: 0x1700008E RID: 142
-	// (get) Token: 0x060003B2 RID: 946 RVA: 0x000169FB File Offset: 0x00014BFB
-	public bool NeedAfterTick
-	{
-		get
-		{
-			return this.NeedAfterTickInternal;
-		}
-	}
-
-	// Token: 0x1700008F RID: 143
-	// (get) Token: 0x060003B3 RID: 947 RVA: 0x00016A03 File Offset: 0x00014C03
-	public bool NeedForceAfterTick
-	{
-		get
-		{
-			return this.NeedForceAfterTickInternal;
-		}
-	}
-
-	// Token: 0x17000090 RID: 144
-	// (get) Token: 0x060003B4 RID: 948 RVA: 0x00016A0B File Offset: 0x00014C0B
+	// Token: 0x17000092 RID: 146
+	// (get) Token: 0x060003EA RID: 1002 RVA: 0x00017315 File Offset: 0x00015515
 	public float TimeDilation
 	{
 		get
@@ -176,12 +92,12 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003B5 RID: 949 RVA: 0x00016A18 File Offset: 0x00014C18
-	private unsafe bool Do(Func<bool> handle, string name)
+	// Token: 0x060003EB RID: 1003 RVA: 0x00017324 File Offset: 0x00015524
+	private unsafe bool Do(Func<EntityComponent, bool> handle, string name)
 	{
 		try
 		{
-			if (!handle())
+			if (!handle(this))
 			{
 				Log instance = Log.Instance;
 				ELogModule module = ELogModule.Entity;
@@ -215,93 +131,169 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		return true;
 	}
 
-	// Token: 0x060003B6 RID: 950 RVA: 0x00016BDC File Offset: 0x00014DDC
-	private bool DoWithStat(Func<bool> handle, Stat stat, string name)
+	// Token: 0x060003EC RID: 1004 RVA: 0x000174E8 File Offset: 0x000156E8
+	[NullableContext(2)]
+	private unsafe bool Do<T>([Nullable(new byte[]
 	{
-		return this.Do(handle, name);
+		1,
+		1,
+		2
+	})] Func<EntityComponent, T, bool> handle, [Nullable(1)] string name, T param = default(T))
+	{
+		try
+		{
+			if (!handle(this, param))
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.Entity;
+				ELogAuthor author = ELogAuthor.LCC;
+				string message = "组件生命周期执行失败";
+				<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("name", name);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Id", this.Entity.Id);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("entity", this.Entity.GetType().Name);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("component", base.GetType().Name);
+				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
+				return false;
+			}
+		}
+		catch (Exception ex) when (1)
+		{
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.Entity;
+			ELogAuthor author2 = ELogAuthor.LCC;
+			string message2 = "组件生命周期执行异常";
+			Exception error = ex;
+			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray5<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("name", name);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Id", this.Entity.Id);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("entity", this.Entity.GetType().Name);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("component", base.GetType().Name);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 4) = new ValueTuple<string, object>("error", ex.Message);
+			instance2.ErrorWithStack(module2, author2, message2, error, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 5));
+			return false;
+		}
+		return true;
 	}
 
-	// Token: 0x060003B7 RID: 951 RVA: 0x00016BE8 File Offset: 0x00014DE8
+	// Token: 0x060003ED RID: 1005 RVA: 0x000176AC File Offset: 0x000158AC
 	public bool Create(Entity entity, [Nullable(2)] IEntityArgs args = null)
 	{
 		this.EntityInternal = entity;
-		return this.DoWithStat(() => this.OnCreate(args), this.CreateStat, "Create");
+		if (!this.NeedCreateInternal)
+		{
+			return true;
+		}
+		return this.Do<IEntityArgs>((EntityComponent self, [Nullable(2)] IEntityArgs param) => self.OnCreate(param), "Create", args);
 	}
 
-	// Token: 0x060003B8 RID: 952 RVA: 0x00016C30 File Offset: 0x00014E30
+	// Token: 0x060003EE RID: 1006 RVA: 0x000176EA File Offset: 0x000158EA
 	public bool Respawn(Entity entity, [Nullable(2)] IEntityArgs args = null)
 	{
 		this.EntityInternal = entity;
-		return this.DoWithStat(() => this.OnCreate(args), this.CreateStat, "Create");
+		if (!this.NeedCreateInternal)
+		{
+			return true;
+		}
+		return this.Do<IEntityArgs>((EntityComponent self, [Nullable(2)] IEntityArgs param) => self.OnCreate(param), "Create", args);
 	}
 
-	// Token: 0x060003B9 RID: 953 RVA: 0x00016C75 File Offset: 0x00014E75
+	// Token: 0x060003EF RID: 1007 RVA: 0x00017728 File Offset: 0x00015928
 	public bool RespawnNew(Entity entity)
 	{
 		this.EntityInternal = entity;
 		return true;
 	}
 
-	// Token: 0x060003BA RID: 954 RVA: 0x00016C7F File Offset: 0x00014E7F
+	// Token: 0x060003F0 RID: 1008 RVA: 0x00017732 File Offset: 0x00015932
 	[NullableContext(2)]
 	public bool InitData(IEntityArgs args = null)
 	{
 		return this.OnInitData(args);
 	}
 
-	// Token: 0x060003BB RID: 955 RVA: 0x00016C88 File Offset: 0x00014E88
+	// Token: 0x060003F1 RID: 1009 RVA: 0x0001773B File Offset: 0x0001593B
 	public bool Init()
 	{
-		return this.OnInit();
+		if (!this.NeedInitInternal)
+		{
+			return true;
+		}
+		return this.Do((EntityComponent self) => self.OnInit(), "OnInit");
 	}
 
-	// Token: 0x060003BC RID: 956 RVA: 0x00016C90 File Offset: 0x00014E90
+	// Token: 0x060003F2 RID: 1010 RVA: 0x00017771 File Offset: 0x00015971
 	public bool Deinit()
 	{
-		return this.DoWithStat(new Func<bool>(this.OnDeinit), this.InitStat, "OnDeinit");
+		if (!this.NeedDeinitInternal)
+		{
+			return true;
+		}
+		return this.Do((EntityComponent self) => self.OnDeinit(), "OnDeinit");
 	}
 
-	// Token: 0x060003BD RID: 957 RVA: 0x00016CB0 File Offset: 0x00014EB0
+	// Token: 0x060003F3 RID: 1011 RVA: 0x000177A8 File Offset: 0x000159A8
 	public bool Clear()
 	{
-		bool result = this.DoWithStat(new Func<bool>(this.OnClear), this.ClearStat, "OnClear");
+		if (!this.NeedClearInternal)
+		{
+			this.ClearInternal();
+			return true;
+		}
+		bool result = this.Do((EntityComponent self) => self.OnClear(), "OnClear");
 		this.ClearInternal();
 		return result;
 	}
 
-	// Token: 0x060003BE RID: 958 RVA: 0x00016CD6 File Offset: 0x00014ED6
+	// Token: 0x060003F4 RID: 1012 RVA: 0x000177F5 File Offset: 0x000159F5
 	public bool Start()
 	{
-		return this.DoWithStat(new Func<bool>(this.OnStart), this.StartStat, "OnStart");
+		if (!this.NeedStartInternal)
+		{
+			return true;
+		}
+		return this.Do((EntityComponent self) => self.OnStart(), "OnStart");
 	}
 
-	// Token: 0x060003BF RID: 959 RVA: 0x00016CF6 File Offset: 0x00014EF6
+	// Token: 0x060003F5 RID: 1013 RVA: 0x0001782B File Offset: 0x00015A2B
 	public void Activate()
 	{
-		this.DoWithStat(delegate
+		if (!this.NeedActivateInternal)
 		{
-			this.OnActivate();
+			return;
+		}
+		this.Do(delegate(EntityComponent self)
+		{
+			self.OnActivate();
 			return true;
-		}, this.ActivateStat, "OnActivate");
+		}, "OnActivate");
 	}
 
-	// Token: 0x060003C0 RID: 960 RVA: 0x00016D16 File Offset: 0x00014F16
+	// Token: 0x060003F6 RID: 1014 RVA: 0x00017861 File Offset: 0x00015A61
 	public void PostActivate()
 	{
-		this.DoWithStat(delegate
+		if (!this.NeedPostActivateInternal)
 		{
-			this.OnPostActivate();
+			return;
+		}
+		this.Do(delegate(EntityComponent self)
+		{
+			self.OnPostActivate();
 			return true;
-		}, this.ActivateStat, "OnPostActivate");
+		}, "OnPostActivate");
 	}
 
-	// Token: 0x060003C1 RID: 961 RVA: 0x00016D36 File Offset: 0x00014F36
+	// Token: 0x060003F7 RID: 1015 RVA: 0x00017897 File Offset: 0x00015A97
 	public virtual bool End()
 	{
-		return this.DoWithStat(new Func<bool>(this.OnEnd), this.EndStat, "OnEnd");
+		if (!this.NeedEndInternal)
+		{
+			return true;
+		}
+		return this.Do((EntityComponent self) => self.OnEnd(), "OnEnd");
 	}
 
-	// Token: 0x060003C2 RID: 962 RVA: 0x00016D58 File Offset: 0x00014F58
+	// Token: 0x060003F8 RID: 1016 RVA: 0x000178D0 File Offset: 0x00015AD0
 	public void RefreshEnable(EEntityDisableKey reason)
 	{
 		bool activeInternal = this.ActiveInternal;
@@ -316,28 +308,28 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 		if (this.ActiveInternal)
 		{
-			if (this.NeedEnableInternal)
+			if (this.NeedEnable)
 			{
-				this.Do(delegate
+				this.Do(delegate(EntityComponent self)
 				{
-					this.OnEnable();
+					self.OnEnable();
 					return true;
 				}, "OnEnable");
 				return;
 			}
 		}
-		else if (this.NeedDisableInternal)
+		else if (this.NeedDisable)
 		{
-			string reasonStr = reason.ToString();
-			this.Do(delegate
+			string param2 = reason.ToString();
+			this.Do<string>(delegate(EntityComponent self, [Nullable(2)] string param)
 			{
-				this.OnDisable(reasonStr);
+				self.OnDisable(param);
 				return true;
-			}, "OnDisable");
+			}, "OnDisable", param2);
 		}
 	}
 
-	// Token: 0x060003C3 RID: 963 RVA: 0x00016E28 File Offset: 0x00015028
+	// Token: 0x060003F9 RID: 1017 RVA: 0x000179B4 File Offset: 0x00015BB4
 	public void RefreshEnable(string reason)
 	{
 		bool activeInternal = this.ActiveInternal;
@@ -352,27 +344,27 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 		if (this.ActiveInternal)
 		{
-			if (this.NeedEnableInternal)
+			if (this.NeedEnable)
 			{
-				this.Do(delegate
+				this.Do(delegate(EntityComponent self)
 				{
-					this.OnEnable();
+					self.OnEnable();
 					return true;
 				}, "OnEnable");
 				return;
 			}
 		}
-		else if (this.NeedDisableInternal)
+		else if (this.NeedDisable)
 		{
-			this.Do(delegate
+			this.Do<string>(delegate(EntityComponent self, [Nullable(2)] string param)
 			{
-				this.OnDisable(reason);
+				self.OnDisable(param);
 				return true;
-			}, "OnDisable");
+			}, "OnDisable", reason);
 		}
 	}
 
-	// Token: 0x060003C4 RID: 964 RVA: 0x00016EEC File Offset: 0x000150EC
+	// Token: 0x060003FA RID: 1018 RVA: 0x00017A8C File Offset: 0x00015C8C
 	public unsafe bool Enable(int? handle, string reason)
 	{
 		if (handle != null)
@@ -398,7 +390,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		return false;
 	}
 
-	// Token: 0x060003C5 RID: 965 RVA: 0x00016FDC File Offset: 0x000151DC
+	// Token: 0x060003FB RID: 1019 RVA: 0x00017B7C File Offset: 0x00015D7C
 	public unsafe int Disable(string reason)
 	{
 		if (string.IsNullOrEmpty(reason))
@@ -430,7 +422,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		return num2;
 	}
 
-	// Token: 0x060003C6 RID: 966 RVA: 0x000170D0 File Offset: 0x000152D0
+	// Token: 0x060003FC RID: 1020 RVA: 0x00017C70 File Offset: 0x00015E70
 	public void EnableByKey(EEntityDisableKey key, bool removeAll = true)
 	{
 		int num;
@@ -450,7 +442,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		this.RefreshEnable(key);
 	}
 
-	// Token: 0x060003C7 RID: 967 RVA: 0x0001712C File Offset: 0x0001532C
+	// Token: 0x060003FD RID: 1021 RVA: 0x00017CCC File Offset: 0x00015ECC
 	public void DisableByKey(EEntityDisableKey reasonKey, bool noDuplicate = true)
 	{
 		int num = Math.Max(0, this.DisableKeysMap.GetValueOrDefault(reasonKey, 0));
@@ -462,7 +454,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		this.RefreshEnable(reasonKey);
 	}
 
-	// Token: 0x060003C8 RID: 968 RVA: 0x0001716C File Offset: 0x0001536C
+	// Token: 0x060003FE RID: 1022 RVA: 0x00017D0C File Offset: 0x00015F0C
 	public unsafe void Tick(float delta)
 	{
 		if (!this.Active)
@@ -489,7 +481,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003C9 RID: 969 RVA: 0x00017268 File Offset: 0x00015468
+	// Token: 0x060003FF RID: 1023 RVA: 0x00017E08 File Offset: 0x00016008
 	public unsafe void ForceTick(float delta)
 	{
 		if (!this.Active)
@@ -516,7 +508,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003CA RID: 970 RVA: 0x00017364 File Offset: 0x00015564
+	// Token: 0x06000400 RID: 1024 RVA: 0x00017F04 File Offset: 0x00016104
 	public unsafe void AfterTick(float delta)
 	{
 		if (!this.Active)
@@ -543,7 +535,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003CB RID: 971 RVA: 0x00017460 File Offset: 0x00015660
+	// Token: 0x06000401 RID: 1025 RVA: 0x00018000 File Offset: 0x00016200
 	public unsafe void ForceAfterTick(float delta)
 	{
 		if (!this.Active)
@@ -570,135 +562,152 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		}
 	}
 
-	// Token: 0x060003CC RID: 972 RVA: 0x0001755C File Offset: 0x0001575C
+	// Token: 0x06000402 RID: 1026 RVA: 0x000180FC File Offset: 0x000162FC
 	public void SetTimeDilation(float timeDilation)
 	{
-		if (!this.NeedChangeTimeDilationInternal)
+		if (!this.NeedChangeTimeDilation)
 		{
 			return;
 		}
-		this.Do(delegate
+		this.Do<float>(delegate(EntityComponent self, float param)
 		{
-			this.OnChangeTimeDilation(timeDilation);
+			self.OnChangeTimeDilation(param);
 			return true;
-		}, "OnChangeTimeDilation");
+		}, "OnChangeTimeDilation", timeDilation);
 	}
 
-	// Token: 0x060003CD RID: 973 RVA: 0x0001759E File Offset: 0x0001579E
+	// Token: 0x06000403 RID: 1027 RVA: 0x00018133 File Offset: 0x00016333
 	[NullableContext(2)]
+	[OverrideFunction]
 	protected virtual bool OnCreate(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x060003CE RID: 974 RVA: 0x000175A1 File Offset: 0x000157A1
+	// Token: 0x06000404 RID: 1028 RVA: 0x00018136 File Offset: 0x00016336
 	[NullableContext(2)]
 	protected virtual bool OnInitData(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x060003CF RID: 975 RVA: 0x000175A4 File Offset: 0x000157A4
+	// Token: 0x06000405 RID: 1029 RVA: 0x00018139 File Offset: 0x00016339
+	[OverrideFunction]
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060003D0 RID: 976 RVA: 0x000175A7 File Offset: 0x000157A7
+	// Token: 0x06000406 RID: 1030 RVA: 0x0001813C File Offset: 0x0001633C
+	[OverrideFunction]
 	protected virtual bool OnDeinit()
 	{
 		return true;
 	}
 
-	// Token: 0x060003D1 RID: 977 RVA: 0x000175AA File Offset: 0x000157AA
+	// Token: 0x06000407 RID: 1031 RVA: 0x0001813F File Offset: 0x0001633F
+	[OverrideFunction]
 	protected virtual bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060003D2 RID: 978 RVA: 0x000175AD File Offset: 0x000157AD
+	// Token: 0x06000408 RID: 1032 RVA: 0x00018142 File Offset: 0x00016342
+	[OverrideFunction]
 	protected virtual bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x060003D3 RID: 979 RVA: 0x000175B0 File Offset: 0x000157B0
+	// Token: 0x06000409 RID: 1033 RVA: 0x00018145 File Offset: 0x00016345
+	[OverrideFunction]
 	protected virtual void OnActivate()
 	{
 	}
 
-	// Token: 0x060003D4 RID: 980 RVA: 0x000175B2 File Offset: 0x000157B2
+	// Token: 0x0600040A RID: 1034 RVA: 0x00018147 File Offset: 0x00016347
+	[OverrideFunction]
 	protected virtual void OnPostActivate()
 	{
 	}
 
-	// Token: 0x060003D5 RID: 981 RVA: 0x000175B4 File Offset: 0x000157B4
+	// Token: 0x0600040B RID: 1035 RVA: 0x00018149 File Offset: 0x00016349
+	[OverrideFunction]
 	protected virtual bool OnEnd()
 	{
 		return true;
 	}
 
-	// Token: 0x060003D6 RID: 982 RVA: 0x000175B7 File Offset: 0x000157B7
+	// Token: 0x0600040C RID: 1036 RVA: 0x0001814C File Offset: 0x0001634C
+	[OverrideFunction]
 	protected virtual void OnEnable()
 	{
 	}
 
-	// Token: 0x060003D7 RID: 983 RVA: 0x000175B9 File Offset: 0x000157B9
+	// Token: 0x0600040D RID: 1037 RVA: 0x0001814E File Offset: 0x0001634E
+	[OverrideFunction]
 	protected virtual void OnDisable(string reason)
 	{
 	}
 
-	// Token: 0x060003D8 RID: 984 RVA: 0x000175BB File Offset: 0x000157BB
+	// Token: 0x0600040E RID: 1038 RVA: 0x00018150 File Offset: 0x00016350
+	[OverrideFunction]
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x060003D9 RID: 985 RVA: 0x000175BD File Offset: 0x000157BD
+	// Token: 0x0600040F RID: 1039 RVA: 0x00018152 File Offset: 0x00016352
+	[OverrideFunction]
 	protected virtual void OnForceTick(float delta)
 	{
 	}
 
-	// Token: 0x060003DA RID: 986 RVA: 0x000175BF File Offset: 0x000157BF
+	// Token: 0x06000410 RID: 1040 RVA: 0x00018154 File Offset: 0x00016354
+	[OverrideFunction]
 	protected virtual void OnAfterTick(float delta)
 	{
 	}
 
-	// Token: 0x060003DB RID: 987 RVA: 0x000175C1 File Offset: 0x000157C1
+	// Token: 0x06000411 RID: 1041 RVA: 0x00018156 File Offset: 0x00016356
+	[OverrideFunction]
 	protected virtual void OnForceAfterTick(float delta)
 	{
 	}
 
-	// Token: 0x060003DC RID: 988 RVA: 0x000175C3 File Offset: 0x000157C3
+	// Token: 0x06000412 RID: 1042 RVA: 0x00018158 File Offset: 0x00016358
+	[OverrideFunction]
 	protected virtual void OnChangeTimeDilation(float timeDilation)
 	{
 	}
 
-	// Token: 0x060003DD RID: 989 RVA: 0x000175C5 File Offset: 0x000157C5
+	// Token: 0x06000413 RID: 1043 RVA: 0x0001815A File Offset: 0x0001635A
+	[OverrideFunction]
 	public virtual void OnEntityWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 	}
 
-	// Token: 0x060003DE RID: 990 RVA: 0x000175C7 File Offset: 0x000157C7
+	// Token: 0x06000414 RID: 1044 RVA: 0x0001815C File Offset: 0x0001635C
+	[OverrideFunction]
 	public virtual void OnEntityBudgetTickEnableChange(bool enable)
 	{
 	}
 
-	// Token: 0x060003DF RID: 991 RVA: 0x000175CC File Offset: 0x000157CC
+	// Token: 0x06000415 RID: 1045 RVA: 0x00018160 File Offset: 0x00016360
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(14, 3);
 		defaultInterpolatedStringHandler.AppendLiteral("[object ");
 		defaultInterpolatedStringHandler.AppendFormatted(base.GetType().Name);
 		defaultInterpolatedStringHandler.AppendLiteral("(Id=");
-		Entity entity = this.Entity;
-		defaultInterpolatedStringHandler.AppendFormatted<int?>((entity != null) ? new int?(entity.Id) : null);
+		Entity entityInternal = this.EntityInternal;
+		defaultInterpolatedStringHandler.AppendFormatted<int?>((entityInternal != null) ? new int?(entityInternal.Id) : null);
 		defaultInterpolatedStringHandler.AppendLiteral(")");
 		defaultInterpolatedStringHandler.AppendFormatted(this.Valid ? "" : "(D)");
 		defaultInterpolatedStringHandler.AppendLiteral("]");
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x060003E0 RID: 992 RVA: 0x00017670 File Offset: 0x00015870
+	// Token: 0x06000416 RID: 1046 RVA: 0x00018204 File Offset: 0x00016404
 	public string DumpDisableInfo()
 	{
 		List<string> list = new List<string>();
@@ -721,26 +730,7 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		return string.Join("", list);
 	}
 
-	// Token: 0x060003E1 RID: 993 RVA: 0x0001775C File Offset: 0x0001595C
-	public void AddUnResetProperty(params string[] properties)
-	{
-		if (this.UnResetPropertySet == null)
-		{
-			this.UnResetPropertySet = new HashSet<string>();
-		}
-		foreach (string item in properties)
-		{
-			this.UnResetPropertySet.Add(item);
-		}
-	}
-
-	// Token: 0x060003E2 RID: 994 RVA: 0x0001779D File Offset: 0x0001599D
-	protected bool CanResetComponentProperty(string property)
-	{
-		return this.UnResetPropertySet == null || this.UnResetPropertySet.Count == 0 || !this.UnResetPropertySet.Contains(property);
-	}
-
-	// Token: 0x060003E3 RID: 995 RVA: 0x000177C8 File Offset: 0x000159C8
+	// Token: 0x06000417 RID: 1047 RVA: 0x000182F0 File Offset: 0x000164F0
 	protected unsafe bool CheckClearObject(bool success, string objectName)
 	{
 		if (success)
@@ -758,171 +748,244 @@ public abstract class EntityComponent : IComponentDependency, IEntityComponentCl
 		return false;
 	}
 
-	// Token: 0x060003E4 RID: 996 RVA: 0x00017838 File Offset: 0x00015A38
+	// Token: 0x06000418 RID: 1048 RVA: 0x00018360 File Offset: 0x00016560
 	[NullableContext(2)]
 	public static bool operator !(EntityComponent component)
 	{
 		return component == null || !component.Valid;
 	}
 
-	// Token: 0x060003E5 RID: 997 RVA: 0x00017848 File Offset: 0x00015A48
+	// Token: 0x06000419 RID: 1049 RVA: 0x00018370 File Offset: 0x00016570
 	public virtual bool ClearComponent(EntityComponent componentTemplate)
 	{
-		if (this.CanResetComponentProperty("EntityInternal"))
+		if (componentTemplate.EntityInternal == null)
 		{
-			if (componentTemplate.EntityInternal == null)
-			{
-				this.EntityInternal = null;
-			}
-			else if (!this.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.EntityInternal), "EntityInternal"))
-			{
-				return false;
-			}
+			this.EntityInternal = null;
 		}
-		if (this.CanResetComponentProperty("DisableCount"))
-		{
-			this.DisableCount = componentTemplate.DisableCount;
-		}
-		if (this.CanResetComponentProperty("DisableHandlesMap") && componentTemplate.DisableHandlesMap != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, string>>(this.DisableHandlesMap), "DisableHandlesMap"))
+		else if (!this.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityInternal), "EntityInternal"))
 		{
 			return false;
 		}
-		if (this.CanResetComponentProperty("DisableKeysMap") && componentTemplate.DisableKeysMap != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EEntityDisableKey, int>>(this.DisableKeysMap), "DisableKeysMap"))
+		this.DisableCount = componentTemplate.DisableCount;
+		if (componentTemplate.DisableHandlesMap != null && !this.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableHandlesMap), "DisableHandlesMap"))
 		{
 			return false;
 		}
-		if (this.CanResetComponentProperty("CreateStat") && componentTemplate.CreateStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.CreateStat), "CreateStat"))
+		if (componentTemplate.DisableKeysMap != null && !this.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableKeysMap), "DisableKeysMap"))
 		{
 			return false;
 		}
-		if (this.CanResetComponentProperty("InitStat") && componentTemplate.InitStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.InitStat), "InitStat"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("ClearStat") && componentTemplate.ClearStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ClearStat), "ClearStat"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("StartStat") && componentTemplate.StartStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StartStat), "StartStat"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("EndStat") && componentTemplate.EndStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.EndStat), "EndStat"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("ActivateStat") && componentTemplate.ActivateStat != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.ActivateStat), "ActivateStat"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("StatTick") && componentTemplate.StatTick != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTick), "StatTick"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("StatForceTick") && componentTemplate.StatForceTick != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatForceTick), "StatForceTick"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("StatAfterTick") && componentTemplate.StatAfterTick != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatAfterTick), "StatAfterTick"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("StatForceAfterTick") && componentTemplate.StatForceAfterTick != null && !this.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatForceAfterTick), "StatForceAfterTick"))
-		{
-			return false;
-		}
-		if (this.CanResetComponentProperty("ActiveInternal"))
-		{
-			this.ActiveInternal = componentTemplate.ActiveInternal;
-		}
+		this.ActiveInternal = componentTemplate.ActiveInternal;
 		return true;
 	}
 
-	// Token: 0x04000391 RID: 913
+	// Token: 0x17000093 RID: 147
+	// (get) Token: 0x0600041A RID: 1050 RVA: 0x00018407 File Offset: 0x00016607
+	public virtual bool NeedCreateInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000094 RID: 148
+	// (get) Token: 0x0600041B RID: 1051 RVA: 0x0001840A File Offset: 0x0001660A
+	public virtual bool NeedInitInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000095 RID: 149
+	// (get) Token: 0x0600041C RID: 1052 RVA: 0x0001840D File Offset: 0x0001660D
+	public virtual bool NeedDeinitInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000096 RID: 150
+	// (get) Token: 0x0600041D RID: 1053 RVA: 0x00018410 File Offset: 0x00016610
+	public virtual bool NeedClearInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000097 RID: 151
+	// (get) Token: 0x0600041E RID: 1054 RVA: 0x00018413 File Offset: 0x00016613
+	public virtual bool NeedStartInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000098 RID: 152
+	// (get) Token: 0x0600041F RID: 1055 RVA: 0x00018416 File Offset: 0x00016616
+	public virtual bool NeedActivateInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x17000099 RID: 153
+	// (get) Token: 0x06000420 RID: 1056 RVA: 0x00018419 File Offset: 0x00016619
+	public virtual bool NeedPostActivateInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009A RID: 154
+	// (get) Token: 0x06000421 RID: 1057 RVA: 0x0001841C File Offset: 0x0001661C
+	public virtual bool NeedEndInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009B RID: 155
+	// (get) Token: 0x06000422 RID: 1058 RVA: 0x0001841F File Offset: 0x0001661F
+	public virtual bool NeedEnableInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009C RID: 156
+	// (get) Token: 0x06000423 RID: 1059 RVA: 0x00018422 File Offset: 0x00016622
+	public virtual bool NeedDisableInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009D RID: 157
+	// (get) Token: 0x06000424 RID: 1060 RVA: 0x00018425 File Offset: 0x00016625
+	public virtual bool NeedTickInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009E RID: 158
+	// (get) Token: 0x06000425 RID: 1061 RVA: 0x00018428 File Offset: 0x00016628
+	public virtual bool NeedForceTickInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x1700009F RID: 159
+	// (get) Token: 0x06000426 RID: 1062 RVA: 0x0001842B File Offset: 0x0001662B
+	public virtual bool NeedAfterTickInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x170000A0 RID: 160
+	// (get) Token: 0x06000427 RID: 1063 RVA: 0x0001842E File Offset: 0x0001662E
+	public virtual bool NeedForceAfterTickInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x170000A1 RID: 161
+	// (get) Token: 0x06000428 RID: 1064 RVA: 0x00018431 File Offset: 0x00016631
+	public virtual bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x170000A2 RID: 162
+	// (get) Token: 0x06000429 RID: 1065 RVA: 0x00018434 File Offset: 0x00016634
+	public virtual bool NeedEntityWasRecentlyRenderedOnScreenChangeInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x170000A3 RID: 163
+	// (get) Token: 0x0600042A RID: 1066 RVA: 0x00018437 File Offset: 0x00016637
+	public virtual bool NeedEntityBudgetTickEnableChangeInternal
+	{
+		get
+		{
+			return false;
+		}
+	}
+
+	// Token: 0x040003AA RID: 938
 	public const int DISABLE_REASON_LENGTH_LIMIT = 4;
 
-	// Token: 0x04000392 RID: 914
-	[Nullable(new byte[]
-	{
-		2,
-		1
-	})]
-	public HashSet<string> UnResetPropertySet;
-
-	// Token: 0x04000393 RID: 915
+	// Token: 0x040003AB RID: 939
 	[Nullable(2)]
 	private Entity EntityInternal;
 
-	// Token: 0x04000394 RID: 916
+	// Token: 0x040003AC RID: 940
 	private int DisableCount;
 
-	// Token: 0x04000395 RID: 917
+	// Token: 0x040003AD RID: 941
 	private readonly Dictionary<int, string> DisableHandlesMap = new Dictionary<int, string>();
 
-	// Token: 0x04000396 RID: 918
+	// Token: 0x040003AE RID: 942
 	private readonly Dictionary<EEntityDisableKey, int> DisableKeysMap = new Dictionary<EEntityDisableKey, int>();
 
-	// Token: 0x04000397 RID: 919
-	[Nullable(2)]
-	private readonly Stat CreateStat;
+	// Token: 0x040003AF RID: 943
+	public readonly bool NeedEnable;
 
-	// Token: 0x04000398 RID: 920
-	[Nullable(2)]
-	private readonly Stat InitStat;
+	// Token: 0x040003B0 RID: 944
+	public readonly bool NeedDisable;
 
-	// Token: 0x04000399 RID: 921
-	[Nullable(2)]
-	private readonly Stat ClearStat;
+	// Token: 0x040003B1 RID: 945
+	public readonly bool NeedTick;
 
-	// Token: 0x0400039A RID: 922
-	[Nullable(2)]
-	private readonly Stat StartStat;
+	// Token: 0x040003B2 RID: 946
+	public readonly bool NeedForceTick;
 
-	// Token: 0x0400039B RID: 923
-	[Nullable(2)]
-	private readonly Stat EndStat;
+	// Token: 0x040003B3 RID: 947
+	public readonly bool NeedAfterTick;
 
-	// Token: 0x0400039C RID: 924
-	[Nullable(2)]
-	private readonly Stat ActivateStat;
+	// Token: 0x040003B4 RID: 948
+	public readonly bool NeedForceAfterTick;
 
-	// Token: 0x0400039D RID: 925
-	[Nullable(2)]
-	private readonly Stat StatTick;
+	// Token: 0x040003B5 RID: 949
+	public readonly bool NeedChangeTimeDilation;
 
-	// Token: 0x0400039E RID: 926
-	[Nullable(2)]
-	private readonly Stat StatForceTick;
-
-	// Token: 0x0400039F RID: 927
-	[Nullable(2)]
-	private readonly Stat StatAfterTick;
-
-	// Token: 0x040003A0 RID: 928
-	[Nullable(2)]
-	private readonly Stat StatForceAfterTick;
-
-	// Token: 0x040003A1 RID: 929
+	// Token: 0x040003B6 RID: 950
 	private bool ActiveInternal = true;
-
-	// Token: 0x040003A2 RID: 930
-	private readonly bool NeedEnableInternal;
-
-	// Token: 0x040003A3 RID: 931
-	private readonly bool NeedDisableInternal;
-
-	// Token: 0x040003A4 RID: 932
-	private readonly bool NeedTickInternal;
-
-	// Token: 0x040003A5 RID: 933
-	private readonly bool NeedForceTickInternal;
-
-	// Token: 0x040003A6 RID: 934
-	private readonly bool NeedAfterTickInternal;
-
-	// Token: 0x040003A7 RID: 935
-	private readonly bool NeedForceAfterTickInternal;
-
-	// Token: 0x040003A8 RID: 936
-	private readonly bool NeedChangeTimeDilationInternal;
 }

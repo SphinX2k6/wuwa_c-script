@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E45 RID: 28229
+	// Token: 0x02005FC6 RID: 24518
 	public class FishingQteRingBgSingleItem : UiPanelBase
 	{
-		// Token: 0x06044CFC RID: 281852 RVA: 0x010FAEA0 File Offset: 0x010F90A0
+		// Token: 0x0603AE89 RID: 241289 RVA: 0x010A5420 File Offset: 0x010A3620
 		public FishingQteRingBgSingleItem(int StartIndex, int EndIndex, bool IsWholeRing)
 		{
 			this.StartIndex = StartIndex;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.IsWholeRing = IsWholeRing;
 		}
 
-		// Token: 0x06044CFD RID: 281853 RVA: 0x010FAEC0 File Offset: 0x010F90C0
+		// Token: 0x0603AE8A RID: 241290 RVA: 0x010A5440 File Offset: 0x010A3640
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CFE RID: 281854 RVA: 0x010FAF6B File Offset: 0x010F916B
+		// Token: 0x0603AE8B RID: 241291 RVA: 0x010A54EB File Offset: 0x010A36EB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.Init();
 		}
 
-		// Token: 0x06044CFF RID: 281855 RVA: 0x010FAF84 File Offset: 0x010F9184
+		// Token: 0x0603AE8C RID: 241292 RVA: 0x010A5504 File Offset: 0x010A3704
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06044D00 RID: 281856 RVA: 0x010FAFA0 File Offset: 0x010F91A0
+		// Token: 0x0603AE8D RID: 241293 RVA: 0x010A5520 File Offset: 0x010A3720
 		private void Init()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -63,9 +63,9 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			FRotator frotator = Rotator.Create(0f, (float)(-(float)num), 0f).ToUeRotator();
 			texture.SetUIRelativeRotation(frotator);
 			texture2.SetUIRelativeRotation(frotator);
-			int num2 = FishingQteDefine.calculateCellSize(this.StartIndex, this.EndIndex) / 36;
-			texture.SetFillAmount((float)num2);
-			texture2.SetFillAmount((float)num2);
+			float fillAmount = (float)FishingQteDefine.calculateCellSize(this.StartIndex, this.EndIndex) / 36f;
+			texture.SetFillAmount(fillAmount);
+			texture2.SetFillAmount(fillAmount);
 			UUIItem item = base.GetItem(2);
 			UUIItem item2 = base.GetItem(3);
 			if (this.IsWholeRing)
@@ -79,15 +79,15 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			uuiitem.SetUIRelativeRotation(frotator2);
 			item.SetUIActive(true);
 			item.SetAsLastHierarchy();
-			int num3 = this.EndIndex * 10;
+			int num2 = this.EndIndex * 10;
 			UUIItem uuiitem2 = item2;
-			frotator2 = Rotator.Create(0f, (float)(-(float)num3) - 0.5f, 0f).ToUeRotator();
+			frotator2 = Rotator.Create(0f, (float)(-(float)num2) - 0.5f, 0f).ToUeRotator();
 			uuiitem2.SetUIRelativeRotation(frotator2);
 			item2.SetUIActive(true);
 			item2.SetAsLastHierarchy();
 		}
 
-		// Token: 0x06044D01 RID: 281857 RVA: 0x010FB0C0 File Offset: 0x010F92C0
+		// Token: 0x0603AE8E RID: 241294 RVA: 0x010A5644 File Offset: 0x010A3844
 		[NullableContext(1)]
 		public void PlayAnim(string sequenceName)
 		{
@@ -100,32 +100,32 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.LevelSequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 		}
 
-		// Token: 0x04023CC8 RID: 146632
+		// Token: 0x0401EF7D RID: 126845
 		protected int StartIndex;
 
-		// Token: 0x04023CC9 RID: 146633
+		// Token: 0x0401EF7E RID: 126846
 		protected int EndIndex;
 
-		// Token: 0x04023CCA RID: 146634
+		// Token: 0x0401EF7F RID: 126847
 		protected bool IsWholeRing;
 
-		// Token: 0x04023CCB RID: 146635
+		// Token: 0x0401EF80 RID: 126848
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CCFD RID: 52477
+		// Token: 0x0200B8ED RID: 47341
 		private class EComponents
 		{
-			// Token: 0x0403DCF8 RID: 253176
+			// Token: 0x0403911A RID: 233754
 			public const int TexBg = 0;
 
-			// Token: 0x0403DCF9 RID: 253177
+			// Token: 0x0403911B RID: 233755
 			public const int TexBgRed = 1;
 
-			// Token: 0x0403DCFA RID: 253178
+			// Token: 0x0403911C RID: 233756
 			public const int PanelLine1 = 2;
 
-			// Token: 0x0403DCFB RID: 253179
+			// Token: 0x0403911D RID: 233757
 			public const int PanelLine2 = 3;
 		}
 	}

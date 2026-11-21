@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002377 RID: 9079
+	// Token: 0x02002600 RID: 9728
 	public static class ELongPressInteractStyleExtensions
 	{
-		// Token: 0x0600C616 RID: 50710 RVA: 0x001D04D4 File Offset: 0x001CE6D4
+		// Token: 0x0600D25A RID: 53850 RVA: 0x001E94A8 File Offset: 0x001E76A8
 		public static string ToEnumString(this ELongPressInteractStyle value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C617 RID: 50711 RVA: 0x001D0528 File Offset: 0x001CE728
+		// Token: 0x0600D25B RID: 53851 RVA: 0x001E94FC File Offset: 0x001E76FC
 		public static ELongPressInteractStyle FromString(string name)
 		{
 			ELongPressInteractStyle result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C618 RID: 50712 RVA: 0x001D0554 File Offset: 0x001CE754
+		// Token: 0x0600D25C RID: 53852 RVA: 0x001E9528 File Offset: 0x001E7728
 		public static bool TryFromString(string name, out ELongPressInteractStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C619 RID: 50713 RVA: 0x001D05BC File Offset: 0x001CE7BC
+		// Token: 0x0600D25D RID: 53853 RVA: 0x001E9590 File Offset: 0x001E7790
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C61A RID: 50714 RVA: 0x001D05E4 File Offset: 0x001CE7E4
+		// Token: 0x0600D25E RID: 53854 RVA: 0x001E95B8 File Offset: 0x001E77B8
 		public static ELongPressInteractStyle[] GetValues()
 		{
 			return new ELongPressInteractStyle[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C61B RID: 50715 RVA: 0x001D05F7 File Offset: 0x001CE7F7
+		// Token: 0x0600D25F RID: 53855 RVA: 0x001E95CB File Offset: 0x001E77CB
 		public static string[] GetNames()
 		{
 			return new string[]

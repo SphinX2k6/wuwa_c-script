@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000347 RID: 839
+	// Token: 0x0200035C RID: 860
 	public class ConfigFoleySynthConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013AF RID: 5039 RVA: 0x000C8B24 File Offset: 0x000C6D24
+		// Token: 0x0600142D RID: 5165 RVA: 0x000CF030 File Offset: 0x000CD230
 		static ConfigFoleySynthConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFoleySynthConfigById.CreateStaticDefaultValue), new Action(ConfigFoleySynthConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013B0 RID: 5040 RVA: 0x000C8B44 File Offset: 0x000C6D44
+		// Token: 0x0600142E RID: 5166 RVA: 0x000CF050 File Offset: 0x000CD250
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFoleySynthConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013B1 RID: 5041 RVA: 0x000C8BC3 File Offset: 0x000C6DC3
+		// Token: 0x0600142F RID: 5167 RVA: 0x000CF0CF File Offset: 0x000CD2CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFoleySynthConfigById.LogPair = null;
 			ConfigFoleySynthConfigById.HandleId = 0;
 		}
 
-		// Token: 0x060013B2 RID: 5042 RVA: 0x000C8BD1 File Offset: 0x000C6DD1
+		// Token: 0x06001430 RID: 5168 RVA: 0x000CF0DD File Offset: 0x000CD2DD
 		public static void Init()
 		{
 			ConfigFoleySynthConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigFoleySynthConfigById.HandleId, "db_entity_audio.db", "select BinData from `FoleySynthConfig` where Id=?");
 		}
 
-		// Token: 0x060013B3 RID: 5043 RVA: 0x000C8BEC File Offset: 0x000C6DEC
+		// Token: 0x06001431 RID: 5169 RVA: 0x000CF0F8 File Offset: 0x000CD2F8
 		public static FoleySynthConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFoleySynthConfigById.HandleId, ConfigFoleySynthConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FoleySynthConfig?(rootAsFoleySynthConfig);
 		}
 
-		// Token: 0x040016D5 RID: 5845
+		// Token: 0x04001768 RID: 5992
 		private const string DB = "db_entity_audio.db";
 
-		// Token: 0x040016D6 RID: 5846
+		// Token: 0x04001769 RID: 5993
 		private const string FILE = "y.音频组件配置.xlsx";
 
-		// Token: 0x040016D7 RID: 5847
+		// Token: 0x0400176A RID: 5994
 		private const string TABLE = "FoleySynthConfig";
 
-		// Token: 0x040016D8 RID: 5848
+		// Token: 0x0400176B RID: 5995
 		private const string COMMAND = "select BinData from `FoleySynthConfig` where Id=?";
 
-		// Token: 0x040016D9 RID: 5849
+		// Token: 0x0400176C RID: 5996
 		private const string KEY_PREFIX = "FoleySynthConfigById";
 
-		// Token: 0x040016DA RID: 5850
+		// Token: 0x0400176D RID: 5997
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040016DB RID: 5851
+		// Token: 0x0400176E RID: 5998
 		private static int HandleId;
 	}
 }

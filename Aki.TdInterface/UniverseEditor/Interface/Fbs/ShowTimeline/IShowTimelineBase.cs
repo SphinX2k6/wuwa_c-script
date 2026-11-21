@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BA7 RID: 15271
+	// Token: 0x02003FAF RID: 16303
 	public struct IShowTimelineBase : IFlatbufferObject
 	{
-		// Token: 0x170068AF RID: 26799
-		// (get) Token: 0x06014EE9 RID: 85737 RVA: 0x00309426 File Offset: 0x00307626
+		// Token: 0x17006E4E RID: 28238
+		// (get) Token: 0x060163B3 RID: 91059 RVA: 0x0032F9BE File Offset: 0x0032DBBE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014EEA RID: 85738 RVA: 0x00309433 File Offset: 0x00307633
+		// Token: 0x060163B4 RID: 91060 RVA: 0x0032F9CB File Offset: 0x0032DBCB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014EEB RID: 85739 RVA: 0x0030943C File Offset: 0x0030763C
+		// Token: 0x060163B5 RID: 91061 RVA: 0x0032F9D4 File Offset: 0x0032DBD4
 		public static IShowTimelineBase GetRootAsIShowTimelineBase(ByteBuffer _bb)
 		{
 			return IShowTimelineBase.GetRootAsIShowTimelineBase(_bb, default(IShowTimelineBase));
 		}
 
-		// Token: 0x06014EEC RID: 85740 RVA: 0x00309458 File Offset: 0x00307658
+		// Token: 0x060163B6 RID: 91062 RVA: 0x0032F9F0 File Offset: 0x0032DBF0
 		public static IShowTimelineBase GetRootAsIShowTimelineBase(ByteBuffer _bb, IShowTimelineBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014EED RID: 85741 RVA: 0x00309475 File Offset: 0x00307675
+		// Token: 0x060163B7 RID: 91063 RVA: 0x0032FA0D File Offset: 0x0032DC0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014EEE RID: 85742 RVA: 0x00309484 File Offset: 0x00307684
+		// Token: 0x060163B8 RID: 91064 RVA: 0x0032FA1C File Offset: 0x0032DC1C
 		public IShowTimelineBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170068B0 RID: 26800
-		// (get) Token: 0x06014EEF RID: 85743 RVA: 0x00309494 File Offset: 0x00307694
+		// Token: 0x17006E4F RID: 28239
+		// (get) Token: 0x060163B9 RID: 91065 RVA: 0x0032FA2C File Offset: 0x0032DC2C
 		public EShowTimelineType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x06014EF0 RID: 85744 RVA: 0x003094D0 File Offset: 0x003076D0
+		// Token: 0x060163BA RID: 91066 RVA: 0x0032FA68 File Offset: 0x0032DC68
 		public static Offset<IShowTimelineBase> CreateIShowTimelineBase(FlatBufferBuilder builder, EShowTimelineType Type = EShowTimelineType.Checkpoint)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineBase.EndIShowTimelineBase(builder);
 		}
 
-		// Token: 0x06014EF1 RID: 85745 RVA: 0x003094E6 File Offset: 0x003076E6
+		// Token: 0x060163BB RID: 91067 RVA: 0x0032FA7E File Offset: 0x0032DC7E
 		public static void StartIShowTimelineBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06014EF2 RID: 85746 RVA: 0x003094EF File Offset: 0x003076EF
+		// Token: 0x060163BC RID: 91068 RVA: 0x0032FA87 File Offset: 0x0032DC87
 		public static void AddType(FlatBufferBuilder builder, EShowTimelineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014EF3 RID: 85747 RVA: 0x003094FA File Offset: 0x003076FA
+		// Token: 0x060163BD RID: 91069 RVA: 0x0032FA92 File Offset: 0x0032DC92
 		public static Offset<IShowTimelineBase> EndIShowTimelineBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowTimelineBase>(builder.EndTable());
 		}
 
-		// Token: 0x06014EF4 RID: 85748 RVA: 0x00309508 File Offset: 0x00307708
+		// Token: 0x060163BE RID: 91070 RVA: 0x0032FAA0 File Offset: 0x0032DCA0
 		public IShowTimelineBaseT UnPack()
 		{
 			IShowTimelineBaseT showTimelineBaseT = new IShowTimelineBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return showTimelineBaseT;
 		}
 
-		// Token: 0x06014EF5 RID: 85749 RVA: 0x00309523 File Offset: 0x00307723
+		// Token: 0x060163BF RID: 91071 RVA: 0x0032FABB File Offset: 0x0032DCBB
 		public void UnPackTo(IShowTimelineBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06014EF6 RID: 85750 RVA: 0x00309534 File Offset: 0x00307734
+		// Token: 0x060163C0 RID: 91072 RVA: 0x0032FACC File Offset: 0x0032DCCC
 		public static Offset<IShowTimelineBase> Pack(FlatBufferBuilder builder, IShowTimelineBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineBase.CreateIShowTimelineBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400B11E RID: 45342
+		// Token: 0x0400BA9B RID: 47771
 		private Table __p;
 	}
 }

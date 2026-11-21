@@ -8,7 +8,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Fight.Struct
 {
-	// Token: 0x02003F67 RID: 16231
+	// Token: 0x02003208 RID: 12808
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 32)]
@@ -16,32 +16,32 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 	[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 32)]
 	public struct SGravityHookLockInfo : IEqualityOperators<SGravityHookLockInfo, SGravityHookLockInfo, bool>, IEquatable<SGravityHookLockInfo>, IUnrealScriptStruct
 	{
-		// Token: 0x060295D7 RID: 169431 RVA: 0x009C2783 File Offset: 0x009C0983
+		// Token: 0x0601FE5F RID: 130655 RVA: 0x0093889E File Offset: 0x00936A9E
 		public SGravityHookLockInfo(bool IsValid, FVectorDouble Location)
 		{
 			this.IsValid = IsValid;
 			this.Location = Location;
 		}
 
-		// Token: 0x060295D8 RID: 169432 RVA: 0x009C2793 File Offset: 0x009C0993
+		// Token: 0x0601FE60 RID: 130656 RVA: 0x009388AE File Offset: 0x00936AAE
 		public static bool operator ==(SGravityHookLockInfo left, SGravityHookLockInfo right)
 		{
 			return left.IsValid == right.IsValid && left.Location == right.Location;
 		}
 
-		// Token: 0x060295D9 RID: 169433 RVA: 0x009C27B6 File Offset: 0x009C09B6
+		// Token: 0x0601FE61 RID: 130657 RVA: 0x009388D1 File Offset: 0x00936AD1
 		public static bool operator !=(SGravityHookLockInfo left, SGravityHookLockInfo right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x060295DA RID: 169434 RVA: 0x009C27C2 File Offset: 0x009C09C2
+		// Token: 0x0601FE62 RID: 130658 RVA: 0x009388DD File Offset: 0x00936ADD
 		public bool Equals(SGravityHookLockInfo other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060295DB RID: 169435 RVA: 0x009C27D0 File Offset: 0x009C09D0
+		// Token: 0x0601FE63 RID: 130659 RVA: 0x009388EC File Offset: 0x00936AEC
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -53,30 +53,30 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 			return false;
 		}
 
-		// Token: 0x060295DC RID: 169436 RVA: 0x009C27F5 File Offset: 0x009C09F5
+		// Token: 0x0601FE64 RID: 130660 RVA: 0x00938911 File Offset: 0x00936B11
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<bool, FVectorDouble>(this.IsValid, this.Location);
 		}
 
-		// Token: 0x060295DD RID: 169437 RVA: 0x009C2808 File Offset: 0x009C0A08
+		// Token: 0x0601FE65 RID: 130661 RVA: 0x00938924 File Offset: 0x00936B24
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SGravityHookLockInfo._ScriptStructPtr != 0) ? SGravityHookLockInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/Struct/SGravityHookLockInfo.SGravityHookLockInfo", ref SGravityHookLockInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x04015323 RID: 86819
+		// Token: 0x04011217 RID: 70167
 		[FieldOffset(0)]
 		public bool IsValid;
 
-		// Token: 0x04015324 RID: 86820
+		// Token: 0x04011218 RID: 70168
 		[FieldOffset(8)]
 		public FVectorDouble Location;
 
-		// Token: 0x04015325 RID: 86821
+		// Token: 0x04011219 RID: 70169
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/Struct/SGravityHookLockInfo.SGravityHookLockInfo";
 
-		// Token: 0x04015326 RID: 86822
+		// Token: 0x0401121A RID: 70170
 		private static IntPtr _ScriptStructPtr;
 	}
 }

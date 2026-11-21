@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A86 RID: 27270
+	// Token: 0x020071AB RID: 29099
 	public class IMechStuntT
 	{
-		// Token: 0x1700CA79 RID: 51833
-		// (get) Token: 0x0602FCAE RID: 195758 RVA: 0x00681049 File Offset: 0x0067F249
-		// (set) Token: 0x0602FCAF RID: 195759 RVA: 0x00681051 File Offset: 0x0067F251
+		// Token: 0x1700D529 RID: 54569
+		// (get) Token: 0x060329EA RID: 207338 RVA: 0x006D7309 File Offset: 0x006D5509
+		// (set) Token: 0x060329EB RID: 207339 RVA: 0x006D7311 File Offset: 0x006D5511
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700CA7A RID: 51834
-		// (get) Token: 0x0602FCB0 RID: 195760 RVA: 0x0068105A File Offset: 0x0067F25A
-		// (set) Token: 0x0602FCB1 RID: 195761 RVA: 0x00681062 File Offset: 0x0067F262
+		// Token: 0x1700D52A RID: 54570
+		// (get) Token: 0x060329EC RID: 207340 RVA: 0x006D731A File Offset: 0x006D551A
+		// (set) Token: 0x060329ED RID: 207341 RVA: 0x006D7322 File Offset: 0x006D5522
 		public TMechStuntConfigUnion StuntConfig { get; set; }
 
-		// Token: 0x1700CA7B RID: 51835
-		// (get) Token: 0x0602FCB2 RID: 195762 RVA: 0x0068106B File Offset: 0x0067F26B
-		// (set) Token: 0x0602FCB3 RID: 195763 RVA: 0x00681073 File Offset: 0x0067F273
+		// Token: 0x1700D52B RID: 54571
+		// (get) Token: 0x060329EE RID: 207342 RVA: 0x006D732B File Offset: 0x006D552B
+		// (set) Token: 0x060329EF RID: 207343 RVA: 0x006D7333 File Offset: 0x006D5533
 		public IVectorInfoT TargetPos { get; set; }
 
-		// Token: 0x1700CA7C RID: 51836
-		// (get) Token: 0x0602FCB4 RID: 195764 RVA: 0x0068107C File Offset: 0x0067F27C
-		// (set) Token: 0x0602FCB5 RID: 195765 RVA: 0x00681084 File Offset: 0x0067F284
+		// Token: 0x1700D52C RID: 54572
+		// (get) Token: 0x060329F0 RID: 207344 RVA: 0x006D733C File Offset: 0x006D553C
+		// (set) Token: 0x060329F1 RID: 207345 RVA: 0x006D7344 File Offset: 0x006D5544
 		public bool CanInterrupt { get; set; }
 
-		// Token: 0x1700CA7D RID: 51837
-		// (get) Token: 0x0602FCB6 RID: 195766 RVA: 0x0068108D File Offset: 0x0067F28D
-		// (set) Token: 0x0602FCB7 RID: 195767 RVA: 0x00681095 File Offset: 0x0067F295
+		// Token: 0x1700D52D RID: 54573
+		// (get) Token: 0x060329F2 RID: 207346 RVA: 0x006D734D File Offset: 0x006D554D
+		// (set) Token: 0x060329F3 RID: 207347 RVA: 0x006D7355 File Offset: 0x006D5555
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602FCB8 RID: 195768 RVA: 0x0068109E File Offset: 0x0067F29E
+		// Token: 0x060329F4 RID: 207348 RVA: 0x006D735E File Offset: 0x006D555E
 		public IMechStuntT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

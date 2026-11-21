@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 {
-	// Token: 0x02005EAE RID: 24238
+	// Token: 0x02004E93 RID: 20115
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class AiWeaponModel : ModelBase
 	{
-		// Token: 0x0603DAB0 RID: 252592 RVA: 0x00EE473E File Offset: 0x00EE293E
+		// Token: 0x06032A40 RID: 207424 RVA: 0x00E35C8A File Offset: 0x00E33E8A
 		protected override bool OnInit()
 		{
 			this.NetController = new AiWeaponNet();
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return true;
 		}
 
-		// Token: 0x0603DAB1 RID: 252593 RVA: 0x00EE475E File Offset: 0x00EE295E
+		// Token: 0x06032A41 RID: 207425 RVA: 0x00E35CAA File Offset: 0x00E33EAA
 		protected override bool OnClear()
 		{
 			AiWeaponNet netController = this.NetController;
@@ -35,21 +35,21 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return true;
 		}
 
-		// Token: 0x0603DAB2 RID: 252594 RVA: 0x00EE4779 File Offset: 0x00EE2979
+		// Token: 0x06032A42 RID: 207426 RVA: 0x00E35CC5 File Offset: 0x00E33EC5
 		[NullableContext(2)]
 		public SAiWeaponSocket GetStaticWeaponConfig(int weaponId)
 		{
 			return DataTableUtil.GetDataTableRowFromName<SAiWeaponSocket>(EDataTable.AiWeaponSocket, weaponId.ToString());
 		}
 
-		// Token: 0x0603DAB3 RID: 252595 RVA: 0x00EE4788 File Offset: 0x00EE2988
+		// Token: 0x06032A43 RID: 207427 RVA: 0x00E35CD4 File Offset: 0x00E33ED4
 		[NullableContext(2)]
 		public SWeaponSocketItem GetStaticWeaponModelConfigs(int weaponId, int key)
 		{
 			return DataTableUtil.LoadAiWeaponSocketConfigs(weaponId.ToString(), key);
 		}
 
-		// Token: 0x0603DAB4 RID: 252596 RVA: 0x00EE4798 File Offset: 0x00EE2998
+		// Token: 0x06032A44 RID: 207428 RVA: 0x00E35CE4 File Offset: 0x00E33EE4
 		[return: Nullable(2)]
 		public unsafe SWeaponSocketItem GetWeaponConfigByConfigId(int weaponConfigId, Entity ai)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return staticWeaponModelConfigs;
 		}
 
-		// Token: 0x0603DAB5 RID: 252597 RVA: 0x00EE482C File Offset: 0x00EE2A2C
+		// Token: 0x06032A45 RID: 207429 RVA: 0x00E35D78 File Offset: 0x00E33F78
 		public bool HasWeaponConfig(Entity weaponEntity, Entity ai)
 		{
 			WeaponComponent component = TdUtils.GetComponent<WeaponComponent>(weaponEntity.GetComponent<CreatureDataComponent>().GetPbEntityInitData().ComponentsData, EConfigComponent.WeaponComponent);
@@ -101,8 +101,8 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return this.WeaponHasModel.TryGetValue(component.WeaponId, out hashSet2) && hashSet2.Contains(pbModelConfig.ModelId);
 		}
 
-		// Token: 0x17008EB0 RID: 36528
-		// (get) Token: 0x0603DAB6 RID: 252598 RVA: 0x00EE4964 File Offset: 0x00EE2B64
+		// Token: 0x17006282 RID: 25218
+		// (get) Token: 0x06032A46 RID: 207430 RVA: 0x00E35EB0 File Offset: 0x00E340B0
 		[Nullable(2)]
 		public AiWeaponNet Net
 		{
@@ -113,8 +113,8 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			}
 		}
 
-		// Token: 0x17008EB1 RID: 36529
-		// (get) Token: 0x0603DAB7 RID: 252599 RVA: 0x00EE496C File Offset: 0x00EE2B6C
+		// Token: 0x17006283 RID: 25219
+		// (get) Token: 0x06032A47 RID: 207431 RVA: 0x00E35EB8 File Offset: 0x00E340B8
 		public static AiWeaponModel Instance
 		{
 			get
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			}
 		}
 
-		// Token: 0x0603DAB8 RID: 252600 RVA: 0x00EE4973 File Offset: 0x00EE2B73
+		// Token: 0x06032A48 RID: 207432 RVA: 0x00E35EBF File Offset: 0x00E340BF
 		public static AiWeaponModel GetOrCreateInstance()
 		{
 			if (AiWeaponModel._Instance == null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return AiWeaponModel._Instance;
 		}
 
-		// Token: 0x0603DAB9 RID: 252601 RVA: 0x00EE4987 File Offset: 0x00EE2B87
+		// Token: 0x06032A49 RID: 207433 RVA: 0x00E35ED3 File Offset: 0x00E340D3
 		public static bool CreateInstance()
 		{
 			if (AiWeaponModel._Instance != null)
@@ -144,34 +144,34 @@ namespace CSharpScript.Game.Module.AiInteraction.AiWeapon
 			return true;
 		}
 
-		// Token: 0x0603DABA RID: 252602 RVA: 0x00EE499D File Offset: 0x00EE2B9D
+		// Token: 0x06032A4A RID: 207434 RVA: 0x00E35EE9 File Offset: 0x00E340E9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DABB RID: 252603 RVA: 0x00EE499F File Offset: 0x00EE2B9F
+		// Token: 0x06032A4B RID: 207435 RVA: 0x00E35EEB File Offset: 0x00E340EB
 		public static void ResetStaticDefaultValue()
 		{
 			AiWeaponModel._Instance = null;
 		}
 
-		// Token: 0x0603DABC RID: 252604 RVA: 0x00EE49A7 File Offset: 0x00EE2BA7
+		// Token: 0x06032A4C RID: 207436 RVA: 0x00E35EF3 File Offset: 0x00E340F3
 		static AiWeaponModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AiWeaponModel.CreateStaticDefaultValue), new Action(AiWeaponModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040202AF RID: 131759
+		// Token: 0x0401AD76 RID: 109942
 		[Nullable(2)]
 		private AiWeaponNet NetController;
 
-		// Token: 0x040202B0 RID: 131760
+		// Token: 0x0401AD77 RID: 109943
 		private readonly Dictionary<int, HashSet<int>> WeaponHasModel = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x040202B1 RID: 131761
+		// Token: 0x0401AD78 RID: 109944
 		private bool WeaponDataHasInit;
 
-		// Token: 0x040202B2 RID: 131762
+		// Token: 0x0401AD79 RID: 109945
 		[Nullable(2)]
 		private static AiWeaponModel _Instance;
 	}

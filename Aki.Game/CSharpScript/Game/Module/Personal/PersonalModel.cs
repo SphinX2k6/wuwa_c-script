@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
+using CSharpScript.Game.Module.LinkedItem;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.Personal
 {
-	// Token: 0x020052EB RID: 21227
+	// Token: 0x020042BB RID: 17083
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class PersonalModel : ModelBase
 	{
-		// Token: 0x060364B8 RID: 222392 RVA: 0x00CD7BA4 File Offset: 0x00CD5DA4
+		// Token: 0x0602B3B3 RID: 177075 RVA: 0x00C252C8 File Offset: 0x00C234C8
 		protected override bool OnInit()
 		{
 			if (this.PersonalInfoData == null)
@@ -26,7 +28,7 @@ namespace CSharpScript.Game.Module.Personal
 			return true;
 		}
 
-		// Token: 0x060364B9 RID: 222393 RVA: 0x00CD7BBC File Offset: 0x00CD5DBC
+		// Token: 0x0602B3B4 RID: 177076 RVA: 0x00C252E0 File Offset: 0x00C234E0
 		public void InitPlayerHeadData(int[] playerHeadIds)
 		{
 			this.PlayerHeadDataMap.Clear();
@@ -44,7 +46,7 @@ namespace CSharpScript.Game.Module.Personal
 			this.UpdatePlayerHeadData(playerHeadIds);
 		}
 
-		// Token: 0x060364BA RID: 222394 RVA: 0x00CD7C3C File Offset: 0x00CD5E3C
+		// Token: 0x0602B3B5 RID: 177077 RVA: 0x00C25360 File Offset: 0x00C23560
 		private void InitMainRoleSkinToHeadDataMap()
 		{
 			this.HeadDataToMainRoleSkinMap.Clear();
@@ -63,7 +65,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364BB RID: 222395 RVA: 0x00CD7CEC File Offset: 0x00CD5EEC
+		// Token: 0x0602B3B6 RID: 177078 RVA: 0x00C25410 File Offset: 0x00C23610
 		public void UpdatePlayerHeadData(int[] playerHeadIds)
 		{
 			foreach (int playerHeadId in playerHeadIds)
@@ -72,7 +74,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364BC RID: 222396 RVA: 0x00CD7D14 File Offset: 0x00CD5F14
+		// Token: 0x0602B3B7 RID: 177079 RVA: 0x00C25438 File Offset: 0x00C23638
 		public void UnLockPlayerHeadData(int playerHeadId)
 		{
 			PlayerHeadData playerHeadData = this.GetPlayerHeadData(playerHeadId, true);
@@ -83,7 +85,7 @@ namespace CSharpScript.Game.Module.Personal
 			playerHeadData.Lock = false;
 		}
 
-		// Token: 0x060364BD RID: 222397 RVA: 0x00CD7D35 File Offset: 0x00CD5F35
+		// Token: 0x0602B3B8 RID: 177080 RVA: 0x00C25459 File Offset: 0x00C23659
 		protected override bool OnClear()
 		{
 			this.PersonalInfoData = null;
@@ -91,15 +93,15 @@ namespace CSharpScript.Game.Module.Personal
 			return true;
 		}
 
-		// Token: 0x060364BE RID: 222398 RVA: 0x00CD7D4C File Offset: 0x00CD5F4C
+		// Token: 0x0602B3B9 RID: 177081 RVA: 0x00C25470 File Offset: 0x00C23670
 		[NullableContext(2)]
 		public PersonalInfoData GetPersonalInfoData()
 		{
 			return this.PersonalInfoData;
 		}
 
-		// Token: 0x060364BF RID: 222399 RVA: 0x00CD7D54 File Offset: 0x00CD5F54
-		public void SetRoleShowList(List<Aki.Protocol.RoleShowEntry> roleShowEntry)
+		// Token: 0x0602B3BA RID: 177082 RVA: 0x00C25478 File Offset: 0x00C23678
+		public void SetRoleShowList(IReadOnlyList<Aki.Protocol.RoleShowEntry> roleShowEntry)
 		{
 			this.PersonalInfoData.RoleShowList = new List<global::RoleShowEntry>();
 			int count = roleShowEntry.Count;
@@ -110,7 +112,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364C0 RID: 222400 RVA: 0x00CD7DB0 File Offset: 0x00CD5FB0
+		// Token: 0x0602B3BB RID: 177083 RVA: 0x00C254D4 File Offset: 0x00C236D4
 		public void UpdateRoleShowList(int[] roleIdList)
 		{
 			this.PersonalInfoData.RoleShowList = new List<global::RoleShowEntry>();
@@ -128,32 +130,32 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit(EEventName.OnRoleShowListChange);
 		}
 
-		// Token: 0x060364C1 RID: 222401 RVA: 0x00CD7E29 File Offset: 0x00CD6029
+		// Token: 0x0602B3BC RID: 177084 RVA: 0x00C2554D File Offset: 0x00C2374D
 		public List<global::RoleShowEntry> GetRoleShowList()
 		{
 			return this.PersonalInfoData.RoleShowList;
 		}
 
-		// Token: 0x060364C2 RID: 222402 RVA: 0x00CD7E36 File Offset: 0x00CD6036
+		// Token: 0x0602B3BD RID: 177085 RVA: 0x00C2555A File Offset: 0x00C2375A
 		public void SetCardShowList(List<int> cardShowList)
 		{
 			this.PersonalInfoData.CardShowList = cardShowList;
 		}
 
-		// Token: 0x060364C3 RID: 222403 RVA: 0x00CD7E44 File Offset: 0x00CD6044
+		// Token: 0x0602B3BE RID: 177086 RVA: 0x00C25568 File Offset: 0x00C23768
 		public List<int> GetCardShowList()
 		{
 			return this.PersonalInfoData.CardShowList;
 		}
 
-		// Token: 0x060364C4 RID: 222404 RVA: 0x00CD7E51 File Offset: 0x00CD6051
+		// Token: 0x0602B3BF RID: 177087 RVA: 0x00C25575 File Offset: 0x00C23775
 		public void SetCurCardId(int cardId)
 		{
 			this.PersonalInfoData.CurCardId = new int?(cardId);
 			EventSystem.Instance.Emit(EEventName.OnCardChange);
 		}
 
-		// Token: 0x060364C5 RID: 222405 RVA: 0x00CD7E74 File Offset: 0x00CD6074
+		// Token: 0x0602B3C0 RID: 177088 RVA: 0x00C25598 File Offset: 0x00C23798
 		public int GetCurCardId()
 		{
 			if (this.PersonalInfoData.CurCardId != null)
@@ -168,33 +170,33 @@ namespace CSharpScript.Game.Module.Personal
 			return FriendConfig.Instance.GetDefaultBackgroundCardId();
 		}
 
-		// Token: 0x060364C6 RID: 222406 RVA: 0x00CD7ED0 File Offset: 0x00CD60D0
+		// Token: 0x0602B3C1 RID: 177089 RVA: 0x00C255F4 File Offset: 0x00C237F4
 		public void SetBirthday(int birthday)
 		{
 			this.PersonalInfoData.Birthday = birthday;
 			EventSystem.Instance.Emit(EEventName.OnBirthChange);
 		}
 
-		// Token: 0x060364C7 RID: 222407 RVA: 0x00CD7EEE File Offset: 0x00CD60EE
+		// Token: 0x0602B3C2 RID: 177090 RVA: 0x00C25612 File Offset: 0x00C23812
 		public void SetBirthdayDisplay(bool display)
 		{
 			this.PersonalInfoData.IsBirthdayDisplay = display;
 			EventSystem.Instance.Emit(EEventName.OnBirthDisplayChange);
 		}
 
-		// Token: 0x060364C8 RID: 222408 RVA: 0x00CD7F0C File Offset: 0x00CD610C
+		// Token: 0x0602B3C3 RID: 177091 RVA: 0x00C25630 File Offset: 0x00C23830
 		public void SetName(string name)
 		{
 			this.PersonalInfoData.Name = name;
 		}
 
-		// Token: 0x060364C9 RID: 222409 RVA: 0x00CD7F1A File Offset: 0x00CD611A
+		// Token: 0x0602B3C4 RID: 177092 RVA: 0x00C2563E File Offset: 0x00C2383E
 		public void SetPlayerId(int uid)
 		{
 			this.PersonalInfoData.PlayerId = uid;
 		}
 
-		// Token: 0x060364CA RID: 222410 RVA: 0x00CD7F28 File Offset: 0x00CD6128
+		// Token: 0x0602B3C5 RID: 177093 RVA: 0x00C2564C File Offset: 0x00C2384C
 		public void SetModifyNameInfo(long lastModifyNameTime, string modifyName)
 		{
 			this.PersonalInfoData.LastModifyNameTime = (int)MathUtils.Instance.LongToBigInt(lastModifyNameTime);
@@ -202,19 +204,19 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit(EEventName.OnModifyNameStateChange);
 		}
 
-		// Token: 0x060364CB RID: 222411 RVA: 0x00CD7F5D File Offset: 0x00CD615D
+		// Token: 0x0602B3C6 RID: 177094 RVA: 0x00C25681 File Offset: 0x00C23881
 		public int GetBirthday()
 		{
 			return this.PersonalInfoData.Birthday;
 		}
 
-		// Token: 0x060364CC RID: 222412 RVA: 0x00CD7F6A File Offset: 0x00CD616A
+		// Token: 0x0602B3C7 RID: 177095 RVA: 0x00C2568E File Offset: 0x00C2388E
 		public bool GetBirthdayDisplay()
 		{
 			return this.PersonalInfoData.IsBirthdayDisplay;
 		}
 
-		// Token: 0x060364CD RID: 222413 RVA: 0x00CD7F77 File Offset: 0x00CD6177
+		// Token: 0x0602B3C8 RID: 177096 RVA: 0x00C2569B File Offset: 0x00C2389B
 		public void SetSignature(string sign)
 		{
 			this.PersonalInfoData.Signature = sign;
@@ -222,13 +224,13 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit(EEventName.OnSignChange);
 		}
 
-		// Token: 0x060364CE RID: 222414 RVA: 0x00CD7FA1 File Offset: 0x00CD61A1
+		// Token: 0x0602B3C9 RID: 177097 RVA: 0x00C256C5 File Offset: 0x00C238C5
 		public string GetSignature()
 		{
 			return this.PersonalInfoData.Signature;
 		}
 
-		// Token: 0x060364CF RID: 222415 RVA: 0x00CD7FAE File Offset: 0x00CD61AE
+		// Token: 0x0602B3CA RID: 177098 RVA: 0x00C256D2 File Offset: 0x00C238D2
 		public void SetHeadPhotoId(int headPhotoId)
 		{
 			this.PersonalInfoData.HeadPhotoId = new int?(headPhotoId);
@@ -236,7 +238,7 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit<int>(EEventName.OnHeadIconChange, headPhotoId);
 		}
 
-		// Token: 0x060364D0 RID: 222416 RVA: 0x00CD7FE0 File Offset: 0x00CD61E0
+		// Token: 0x0602B3CB RID: 177099 RVA: 0x00C25704 File Offset: 0x00C23904
 		public int GetHeadPhotoId()
 		{
 			if (this.PersonalInfoData.HeadPhotoId == null)
@@ -247,14 +249,14 @@ namespace CSharpScript.Game.Module.Personal
 			return this.PersonalInfoData.HeadPhotoId.Value;
 		}
 
-		// Token: 0x060364D1 RID: 222417 RVA: 0x00CD8027 File Offset: 0x00CD6227
+		// Token: 0x0602B3CC RID: 177100 RVA: 0x00C2574B File Offset: 0x00C2394B
 		[NullableContext(2)]
 		public string GetThirdUserId()
 		{
 			return this.PersonalInfoData.ThirdUserId;
 		}
 
-		// Token: 0x060364D2 RID: 222418 RVA: 0x00CD8034 File Offset: 0x00CD6234
+		// Token: 0x0602B3CD RID: 177101 RVA: 0x00C25758 File Offset: 0x00C23958
 		public void SetCardUnlockList(CardShowEntry[] cardShowEntryList)
 		{
 			this.InitCardDataList();
@@ -279,7 +281,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364D3 RID: 222419 RVA: 0x00CD80B0 File Offset: 0x00CD62B0
+		// Token: 0x0602B3CE RID: 177102 RVA: 0x00C257D4 File Offset: 0x00C239D4
 		private void InitCardDataList()
 		{
 			this.PersonalInfoData.CardDataList = new List<PersonalCardData>();
@@ -289,7 +291,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364D4 RID: 222420 RVA: 0x00CD8124 File Offset: 0x00CD6324
+		// Token: 0x0602B3CF RID: 177103 RVA: 0x00C25848 File Offset: 0x00C23A48
 		[NullableContext(2)]
 		private PersonalCardData GetCardDataById(int cardId)
 		{
@@ -303,7 +305,7 @@ namespace CSharpScript.Game.Module.Personal
 			return null;
 		}
 
-		// Token: 0x060364D5 RID: 222421 RVA: 0x00CD8188 File Offset: 0x00CD6388
+		// Token: 0x0602B3D0 RID: 177104 RVA: 0x00C258AC File Offset: 0x00C23AAC
 		public void UpdateCardUnlockList(int cardId, bool isRead)
 		{
 			int count = this.PersonalInfoData.CardDataList.Count;
@@ -320,7 +322,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364D6 RID: 222422 RVA: 0x00CD81F8 File Offset: 0x00CD63F8
+		// Token: 0x0602B3D1 RID: 177105 RVA: 0x00C2591C File Offset: 0x00C23B1C
 		public void AddCardUnlockList(int cardId, bool isRead)
 		{
 			PersonalCardData cardDataById = this.GetCardDataById(cardId);
@@ -338,13 +340,13 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit(EEventName.OnPersonalCardRefreshRedDot);
 		}
 
-		// Token: 0x060364D7 RID: 222423 RVA: 0x00CD8255 File Offset: 0x00CD6455
+		// Token: 0x0602B3D2 RID: 177106 RVA: 0x00C25979 File Offset: 0x00C23B79
 		public List<PersonalCardData> GetCardDataList()
 		{
 			return this.PersonalInfoData.CardDataList;
 		}
 
-		// Token: 0x060364D8 RID: 222424 RVA: 0x00CD8264 File Offset: 0x00CD6464
+		// Token: 0x0602B3D3 RID: 177107 RVA: 0x00C25988 File Offset: 0x00C23B88
 		public bool GetPersonalCardRedDotState()
 		{
 			foreach (PersonalCardData personalCardData in this.PersonalInfoData.CardDataList)
@@ -357,14 +359,15 @@ namespace CSharpScript.Game.Module.Personal
 			return false;
 		}
 
-		// Token: 0x060364D9 RID: 222425 RVA: 0x00CD82CC File Offset: 0x00CD64CC
+		// Token: 0x0602B3D4 RID: 177108 RVA: 0x00C259F0 File Offset: 0x00C23BF0
 		public bool GetPersonalTitleRedDotState()
 		{
 			if (!FunctionModel.Instance.IsOpen(10082))
 			{
 				return false;
 			}
-			if (LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.PlayerTitleUnlockRedDot, true))
+			ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.PlayerTitleUnlockRedDot, EClientStorageSystemIdType.PlayerTitleUnlockRedDot, true);
+			if ((ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PlayerTitleUnlockRedDot) as ServerStorageBoolean).Get().GetValueOrDefault(true))
 			{
 				return true;
 			}
@@ -387,7 +390,7 @@ namespace CSharpScript.Game.Module.Personal
 			return false;
 		}
 
-		// Token: 0x060364DA RID: 222426 RVA: 0x00CD8388 File Offset: 0x00CD6588
+		// Token: 0x0602B3D5 RID: 177109 RVA: 0x00C25AD0 File Offset: 0x00C23CD0
 		public EModifyNameState GetPersonalModifyNameState()
 		{
 			if (this.PersonalInfoData.ModifyName != "")
@@ -407,37 +410,42 @@ namespace CSharpScript.Game.Module.Personal
 			return EModifyNameState.UnModifiable;
 		}
 
-		// Token: 0x060364DB RID: 222427 RVA: 0x00CD8432 File Offset: 0x00CD6632
+		// Token: 0x0602B3D6 RID: 177110 RVA: 0x00C25B7A File Offset: 0x00C23D7A
 		public void SetLevel(int level)
 		{
 			this.PersonalInfoData.Level = level;
 		}
 
-		// Token: 0x060364DC RID: 222428 RVA: 0x00CD8440 File Offset: 0x00CD6640
+		// Token: 0x0602B3D7 RID: 177111 RVA: 0x00C25B88 File Offset: 0x00C23D88
 		public void SetWorldLevel(int worldLevel)
 		{
 			this.PersonalInfoData.WorldLevel = worldLevel;
 		}
 
-		// Token: 0x060364DD RID: 222429 RVA: 0x00CD8450 File Offset: 0x00CD6650
+		// Token: 0x0602B3D8 RID: 177112 RVA: 0x00C25B98 File Offset: 0x00C23D98
 		public bool CheckCanShowPersonalTip()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("IndividualizationReddotConditionGroup");
-			return LevelGeneralController.Instance.CheckCondition(intConfig.ToString(), null, true, Array.Empty<object>()) && LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ShowPersonalTip, true);
+			if (!LevelGeneralController.Instance.CheckCondition(intConfig.ToString(), null, true, Array.Empty<object>()))
+			{
+				return false;
+			}
+			ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ShowPersonalTip, EClientStorageSystemIdType.ShowPersonalTip, true);
+			return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ShowPersonalTip) as ServerStorageBoolean).Get().GetValueOrDefault(true);
 		}
 
-		// Token: 0x060364DE RID: 222430 RVA: 0x00CD8492 File Offset: 0x00CD6692
+		// Token: 0x0602B3D9 RID: 177113 RVA: 0x00C25BFC File Offset: 0x00C23DFC
 		public void SetPersonalTipState(bool state)
 		{
 			if (this.CheckCanShowPersonalTip() == state)
 			{
 				return;
 			}
-			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ShowPersonalTip, state);
+			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ShowPersonalTip) as ServerStorageBoolean).Set(new bool?(state));
 			EventSystem.Instance.Emit(EEventName.OnPersonalTipStateSet);
 		}
 
-		// Token: 0x060364DF RID: 222431 RVA: 0x00CD84B8 File Offset: 0x00CD66B8
+		// Token: 0x0602B3DA RID: 177114 RVA: 0x00C25C34 File Offset: 0x00C23E34
 		[NullableContext(2)]
 		public PlayerHeadData GetPlayerHeadData(int playerHeadId, bool needLog = true)
 		{
@@ -455,7 +463,7 @@ namespace CSharpScript.Game.Module.Personal
 			return playerHeadData;
 		}
 
-		// Token: 0x060364E0 RID: 222432 RVA: 0x00CD850C File Offset: 0x00CD670C
+		// Token: 0x0602B3DB RID: 177115 RVA: 0x00C25C88 File Offset: 0x00C23E88
 		public List<PlayerHeadData> GetPlayerShowHeadDataList()
 		{
 			List<PlayerHeadData> list = new List<PlayerHeadData>();
@@ -465,7 +473,7 @@ namespace CSharpScript.Game.Module.Personal
 			{
 				PlayerHeadData value = keyValuePair.Value;
 				int num;
-				if (!this.HeadDataToMainRoleSkinMap.TryGetValue(value.Id, out num) || (curSelectMainRoleId != null && curSelectMainRoleId.Value == num))
+				if (!LinkedItemConfig.Instance.ShouldHide(value.Id, !value.Lock) && (!this.HeadDataToMainRoleSkinMap.TryGetValue(value.Id, out num) || (curSelectMainRoleId != null && curSelectMainRoleId.Value == num)))
 				{
 					int gender = value.Config.Gender;
 					if (gender == -1 || gender == sex)
@@ -478,7 +486,7 @@ namespace CSharpScript.Game.Module.Personal
 			return list;
 		}
 
-		// Token: 0x060364E1 RID: 222433 RVA: 0x00CD85DC File Offset: 0x00CD67DC
+		// Token: 0x0602B3DC RID: 177116 RVA: 0x00C25D78 File Offset: 0x00C23F78
 		private int SortPlayerHeadList(PlayerHeadData playerHeadA, PlayerHeadData playerHeadB)
 		{
 			int num = (playerHeadA.Lock > false) ? 1 : 0;
@@ -494,7 +502,7 @@ namespace CSharpScript.Game.Module.Personal
 			return playerHeadB.Config.Id - playerHeadA.Config.Id;
 		}
 
-		// Token: 0x060364E2 RID: 222434 RVA: 0x00CD8660 File Offset: 0x00CD6860
+		// Token: 0x0602B3DD RID: 177117 RVA: 0x00C25DFC File Offset: 0x00C23FFC
 		public int GetUnlockHeadNum()
 		{
 			int num = 0;
@@ -511,19 +519,19 @@ namespace CSharpScript.Game.Module.Personal
 			return num;
 		}
 
-		// Token: 0x060364E3 RID: 222435 RVA: 0x00CD86BC File Offset: 0x00CD68BC
+		// Token: 0x0602B3DE RID: 177118 RVA: 0x00C25E58 File Offset: 0x00C24058
 		public void SetSex(int sex)
 		{
 			this.PersonalInfoData.Sex = sex;
 		}
 
-		// Token: 0x060364E4 RID: 222436 RVA: 0x00CD86CA File Offset: 0x00CD68CA
+		// Token: 0x0602B3DF RID: 177119 RVA: 0x00C25E66 File Offset: 0x00C24066
 		public int GetSex()
 		{
 			return this.PersonalInfoData.Sex;
 		}
 
-		// Token: 0x060364E5 RID: 222437 RVA: 0x00CD86D8 File Offset: 0x00CD68D8
+		// Token: 0x0602B3E0 RID: 177120 RVA: 0x00C25E74 File Offset: 0x00C24074
 		public void InitPlayerTitleData(PlayerTitleInfo[] playerTitleInfoList, PlayerTitleLimitInfo[] playerTitleLimitInfoList = null)
 		{
 			this.PlayerTitleDataMap.Clear();
@@ -568,11 +576,11 @@ namespace CSharpScript.Game.Module.Personal
 					}
 				}
 			}
-			this.PersonalInfoData.PlayerTitleDataList = this.PlayerTitleDataMap.Values.ToList<PersonalPlayerTitleData>();
+			this.PersonalInfoData.PlayerTitleDataList = new List<PersonalPlayerTitleData>(this.PlayerTitleDataMap.Values);
 			EventSystem.Instance.Emit(EEventName.OnPlayerTitleRefreshRedDot);
 		}
 
-		// Token: 0x060364E6 RID: 222438 RVA: 0x00CD886C File Offset: 0x00CD6A6C
+		// Token: 0x0602B3E1 RID: 177121 RVA: 0x00C26008 File Offset: 0x00C24208
 		public void SetDressedPlayerTitle(int playerTitleId, int? starLevel = null)
 		{
 			this.PersonalInfoData.CurPlayerTitleId = new int?(playerTitleId);
@@ -596,7 +604,7 @@ namespace CSharpScript.Game.Module.Personal
 			EventSystem.Instance.Emit(EEventName.OnPlayerTitleChange);
 		}
 
-		// Token: 0x060364E7 RID: 222439 RVA: 0x00CD8918 File Offset: 0x00CD6B18
+		// Token: 0x0602B3E2 RID: 177122 RVA: 0x00C260B4 File Offset: 0x00C242B4
 		public void UpdateUnDressedPlayerTitleList(PlayerTitleInfo[] playerTitleInfoList)
 		{
 			foreach (PlayerTitleInfo playerTitleInfo in playerTitleInfoList)
@@ -636,7 +644,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364E8 RID: 222440 RVA: 0x00CD8A3C File Offset: 0x00CD6C3C
+		// Token: 0x0602B3E3 RID: 177123 RVA: 0x00C261D8 File Offset: 0x00C243D8
 		[NullableContext(2)]
 		public PersonalPlayerTitleData GetDressedPlayerTitleData()
 		{
@@ -655,7 +663,7 @@ namespace CSharpScript.Game.Module.Personal
 			return result;
 		}
 
-		// Token: 0x060364E9 RID: 222441 RVA: 0x00CD8AA0 File Offset: 0x00CD6CA0
+		// Token: 0x0602B3E4 RID: 177124 RVA: 0x00C2623C File Offset: 0x00C2443C
 		public int GetDressedPlayerTitleId()
 		{
 			if (this.PersonalInfoData.CurPlayerTitleId != null)
@@ -676,7 +684,7 @@ namespace CSharpScript.Game.Module.Personal
 			return 0;
 		}
 
-		// Token: 0x060364EA RID: 222442 RVA: 0x00CD8B20 File Offset: 0x00CD6D20
+		// Token: 0x0602B3E5 RID: 177125 RVA: 0x00C262BC File Offset: 0x00C244BC
 		public int GetDressedPlayerTitleLevel()
 		{
 			if (this.PersonalInfoData.CurPlayerTitleLevel != null)
@@ -691,7 +699,7 @@ namespace CSharpScript.Game.Module.Personal
 			return 0;
 		}
 
-		// Token: 0x060364EB RID: 222443 RVA: 0x00CD8B74 File Offset: 0x00CD6D74
+		// Token: 0x0602B3E6 RID: 177126 RVA: 0x00C26310 File Offset: 0x00C24510
 		[NullableContext(2)]
 		public PersonalPlayerTitleData GetPlayerTitleData(int playerTitleId)
 		{
@@ -700,7 +708,7 @@ namespace CSharpScript.Game.Module.Personal
 			return result;
 		}
 
-		// Token: 0x060364EC RID: 222444 RVA: 0x00CD8B94 File Offset: 0x00CD6D94
+		// Token: 0x0602B3E7 RID: 177127 RVA: 0x00C26330 File Offset: 0x00C24530
 		public int GetPlayerTitleStarLevel(int playerTitleId)
 		{
 			PersonalPlayerTitleData personalPlayerTitleData;
@@ -718,12 +726,17 @@ namespace CSharpScript.Game.Module.Personal
 			return personalPlayerTitleData.StarLevel.GetValueOrDefault();
 		}
 
-		// Token: 0x060364ED RID: 222445 RVA: 0x00CD8BEC File Offset: 0x00CD6DEC
+		// Token: 0x0602B3E8 RID: 177128 RVA: 0x00C26388 File Offset: 0x00C24588
 		public List<PersonalPlayerTitleData> GetPlayerTitleList()
 		{
-			List<PersonalPlayerTitleData> list = (from playerTitleData in this.PlayerTitleDataMap.Values
-			where !playerTitleData.IsExpired()
-			select playerTitleData).ToList<PersonalPlayerTitleData>();
+			List<PersonalPlayerTitleData> list = new List<PersonalPlayerTitleData>();
+			foreach (PersonalPlayerTitleData personalPlayerTitleData in this.PlayerTitleDataMap.Values)
+			{
+				if (!personalPlayerTitleData.IsExpired())
+				{
+					list.Add(personalPlayerTitleData);
+				}
+			}
 			list.Sort(delegate(PersonalPlayerTitleData playerTitleDataA, PersonalPlayerTitleData playerTitleDataB)
 			{
 				bool flag = playerTitleDataA.IsEffective();
@@ -747,7 +760,7 @@ namespace CSharpScript.Game.Module.Personal
 			return list;
 		}
 
-		// Token: 0x060364EE RID: 222446 RVA: 0x00CD8C54 File Offset: 0x00CD6E54
+		// Token: 0x0602B3E9 RID: 177129 RVA: 0x00C26414 File Offset: 0x00C24614
 		public int GetUnlockTitleDataCount()
 		{
 			int num = 0;
@@ -764,7 +777,7 @@ namespace CSharpScript.Game.Module.Personal
 			return num;
 		}
 
-		// Token: 0x060364EF RID: 222447 RVA: 0x00CD8CB0 File Offset: 0x00CD6EB0
+		// Token: 0x0602B3EA RID: 177130 RVA: 0x00C26470 File Offset: 0x00C24670
 		public string GetPlayerTitleInfoString(int playerTitleId, int playerTitleStarLevel, bool isNeedLineBreaks = false)
 		{
 			PlayerTitle? config = ConfigPlayerTitleById.GetConfig(playerTitleId, true);
@@ -806,8 +819,8 @@ namespace CSharpScript.Game.Module.Personal
 			return result;
 		}
 
-		// Token: 0x1700830D RID: 33549
-		// (get) Token: 0x060364F0 RID: 222448 RVA: 0x00CD8E0D File Offset: 0x00CD700D
+		// Token: 0x170056CD RID: 22221
+		// (get) Token: 0x0602B3EB RID: 177131 RVA: 0x00C265CD File Offset: 0x00C247CD
 		public static PersonalModel Instance
 		{
 			get
@@ -816,7 +829,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364F1 RID: 222449 RVA: 0x00CD8E14 File Offset: 0x00CD7014
+		// Token: 0x0602B3EC RID: 177132 RVA: 0x00C265D4 File Offset: 0x00C247D4
 		public static PersonalModel GetOrCreateInstance()
 		{
 			if (PersonalModel._Instance == null)
@@ -826,7 +839,7 @@ namespace CSharpScript.Game.Module.Personal
 			return PersonalModel._Instance;
 		}
 
-		// Token: 0x060364F2 RID: 222450 RVA: 0x00CD8E28 File Offset: 0x00CD7028
+		// Token: 0x0602B3ED RID: 177133 RVA: 0x00C265E8 File Offset: 0x00C247E8
 		public static bool CreateInstance()
 		{
 			if (PersonalModel._Instance != null)
@@ -837,44 +850,44 @@ namespace CSharpScript.Game.Module.Personal
 			return true;
 		}
 
-		// Token: 0x060364F3 RID: 222451 RVA: 0x00CD8E3E File Offset: 0x00CD703E
+		// Token: 0x0602B3EE RID: 177134 RVA: 0x00C265FE File Offset: 0x00C247FE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060364F4 RID: 222452 RVA: 0x00CD8E40 File Offset: 0x00CD7040
+		// Token: 0x0602B3EF RID: 177135 RVA: 0x00C26600 File Offset: 0x00C24800
 		public static void ResetStaticDefaultValue()
 		{
 			PersonalModel._Instance = null;
 		}
 
-		// Token: 0x060364F5 RID: 222453 RVA: 0x00CD8E48 File Offset: 0x00CD7048
+		// Token: 0x0602B3F0 RID: 177136 RVA: 0x00C26608 File Offset: 0x00C24808
 		static PersonalModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PersonalModel.CreateStaticDefaultValue), new Action(PersonalModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CB1A RID: 117530
+		// Token: 0x0401754F RID: 95567
 		[Nullable(2)]
 		public PersonalInfoData UiCachePersonalData;
 
-		// Token: 0x0401CB1B RID: 117531
+		// Token: 0x04017550 RID: 95568
 		[Nullable(2)]
 		private PersonalInfoData PersonalInfoData;
 
-		// Token: 0x0401CB1C RID: 117532
+		// Token: 0x04017551 RID: 95569
 		private readonly Dictionary<int, PlayerHeadData> PlayerHeadDataMap = new Dictionary<int, PlayerHeadData>();
 
-		// Token: 0x0401CB1D RID: 117533
+		// Token: 0x04017552 RID: 95570
 		private readonly Dictionary<int, int> HeadDataToMainRoleSkinMap = new Dictionary<int, int>();
 
-		// Token: 0x0401CB1E RID: 117534
+		// Token: 0x04017553 RID: 95571
 		private readonly Dictionary<int, PersonalPlayerTitleData> PlayerTitleDataMap = new Dictionary<int, PersonalPlayerTitleData>();
 
-		// Token: 0x0401CB1F RID: 117535
+		// Token: 0x04017554 RID: 95572
 		public List<PersonalPlayerTitleData> CurrentNewUnLockTitleArray = new List<PersonalPlayerTitleData>();
 
-		// Token: 0x0401CB20 RID: 117536
+		// Token: 0x04017555 RID: 95573
 		[Nullable(2)]
 		private static PersonalModel _Instance;
 	}

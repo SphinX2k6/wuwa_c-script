@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005936 RID: 22838
+	// Token: 0x0200490F RID: 18703
 	public enum EHonamiStoryMainButtonFunctionType
 	{
-		// Token: 0x0401E3EB RID: 123883
+		// Token: 0x04018E88 RID: 102024
 		Technology = 1,
-		// Token: 0x0401E3EC RID: 123884
+		// Token: 0x04018E89 RID: 102025
 		Prepare,
-		// Token: 0x0401E3ED RID: 123885
+		// Token: 0x04018E8A RID: 102026
 		Shop,
-		// Token: 0x0401E3EE RID: 123886
+		// Token: 0x04018E8B RID: 102027
 		MascotCollect,
-		// Token: 0x0401E3EF RID: 123887
+		// Token: 0x04018E8C RID: 102028
 		ItemCollect,
-		// Token: 0x0401E3F0 RID: 123888
+		// Token: 0x04018E8D RID: 102029
 		ScoreReward,
-		// Token: 0x0401E3F1 RID: 123889
+		// Token: 0x04018E8E RID: 102030
 		LimitTask
 	}
 }

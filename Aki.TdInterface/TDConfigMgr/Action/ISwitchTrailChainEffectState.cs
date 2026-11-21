@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F0B RID: 7947
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002144 RID: 8516
 	public class ISwitchTrailChainEffectState : ISwitchEffectStateEffectBase
 	{
-		// Token: 0x0600A9F6 RID: 43510 RVA: 0x0017EEB4 File Offset: 0x0017D0B4
+		// Token: 0x0600B4C8 RID: 46280 RVA: 0x00194EAC File Offset: 0x001930AC
 		private ISwitchTrailChainEffectState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9F7 RID: 43511 RVA: 0x0017EEEC File Offset: 0x0017D0EC
+		// Token: 0x0600B4C9 RID: 46281 RVA: 0x00194EE4 File Offset: 0x001930E4
 		public static ISwitchTrailChainEffectState Create([Nullable(2)] ISwitchTrailChainEffectState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9F8 RID: 43512 RVA: 0x0017EEFF File Offset: 0x0017D0FF
+		// Token: 0x0600B4CA RID: 46282 RVA: 0x00194EF7 File Offset: 0x001930F7
 		public static ISwitchTrailChainEffectState CreateFromSetValue([Nullable(2)] ISwitchTrailChainEffectState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9F9 RID: 43513 RVA: 0x0017EF12 File Offset: 0x0017D112
+		// Token: 0x0600B4CB RID: 46283 RVA: 0x00194F0A File Offset: 0x0019310A
 		public new ISwitchTrailChainEffectState_SetValue ToSetValue()
 		{
 			return new ISwitchTrailChainEffectState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033C2 RID: 13250
-		// (get) Token: 0x0600A9FA RID: 43514 RVA: 0x0017EF3D File Offset: 0x0017D13D
-		// (set) Token: 0x0600A9FB RID: 43515 RVA: 0x0017EF68 File Offset: 0x0017D168
+		// Token: 0x1700368D RID: 13965
+		// (get) Token: 0x0600B4CC RID: 46284 RVA: 0x00194F35 File Offset: 0x00193135
+		// (set) Token: 0x0600B4CD RID: 46285 RVA: 0x00194F60 File Offset: 0x00193160
 		public override ESwitchEffectStateEffectType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033C3 RID: 13251
-		// (get) Token: 0x0600A9FC RID: 43516 RVA: 0x0017EF76 File Offset: 0x0017D176
-		// (set) Token: 0x0600A9FD RID: 43517 RVA: 0x0017EFA1 File Offset: 0x0017D1A1
+		// Token: 0x1700368E RID: 13966
+		// (get) Token: 0x0600B4CE RID: 46286 RVA: 0x00194F6E File Offset: 0x0019316E
+		// (set) Token: 0x0600B4CF RID: 46287 RVA: 0x00194F99 File Offset: 0x00193199
 		public virtual int Count
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033C4 RID: 13252
-		// (get) Token: 0x0600A9FE RID: 43518 RVA: 0x0017EFAF File Offset: 0x0017D1AF
-		// (set) Token: 0x0600A9FF RID: 43519 RVA: 0x0017EFD6 File Offset: 0x0017D1D6
+		// Token: 0x1700368F RID: 13967
+		// (get) Token: 0x0600B4D0 RID: 46288 RVA: 0x00194FA7 File Offset: 0x001931A7
+		// (set) Token: 0x0600B4D1 RID: 46289 RVA: 0x00194FCE File Offset: 0x001931CE
 		public virtual IBasePos2 Pos
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006505 RID: 25861
+		// Token: 0x04006AF4 RID: 27380
 		[Nullable(2)]
 		protected new ISwitchTrailChainEffectState FbInstance;
 
-		// Token: 0x04006506 RID: 25862
+		// Token: 0x04006AF5 RID: 27381
 		[Nullable(2)]
 		protected new ISwitchTrailChainEffectState_SetValue PocoInterface;
 	}

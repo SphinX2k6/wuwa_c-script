@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002423 RID: 9251
+// Token: 0x02001908 RID: 6408
 public class PhantomSortStruct
 {
-	// Token: 0x04008BDF RID: 35807
+	// Token: 0x04008D26 RID: 36134
 	public int PhantomPropId;
 
-	// Token: 0x04008BE0 RID: 35808
+	// Token: 0x04008D27 RID: 36135
 	public int Value;
 
-	// Token: 0x04008BE1 RID: 35809
+	// Token: 0x04008D28 RID: 36136
 	public bool IfPercentage;
 }

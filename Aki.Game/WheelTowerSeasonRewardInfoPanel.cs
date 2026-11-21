@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015D6 RID: 5590
+// Token: 0x02000A8E RID: 2702
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 {
-	// Token: 0x06009E32 RID: 40498 RVA: 0x002272C4 File Offset: 0x002254C4
+	// Token: 0x06007210 RID: 29200 RVA: 0x00231074 File Offset: 0x0022F274
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -50,7 +50,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E33 RID: 40499 RVA: 0x00227434 File Offset: 0x00225634
+	// Token: 0x06007211 RID: 29201 RVA: 0x002311E4 File Offset: 0x0022F3E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerSeasonRewardInfoPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009E34 RID: 40500 RVA: 0x00227478 File Offset: 0x00225678
+	// Token: 0x06007212 RID: 29202 RVA: 0x00231228 File Offset: 0x0022F428
 	public void RefreshDataList(List<IWheelTowerSeasonScoreData> dataList)
 	{
 		this.DataList = dataList;
@@ -78,7 +78,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		this.Refresh(dataList[num]);
 	}
 
-	// Token: 0x06009E35 RID: 40501 RVA: 0x002274CC File Offset: 0x002256CC
+	// Token: 0x06007213 RID: 29203 RVA: 0x0023127C File Offset: 0x0022F47C
 	private void Refresh(IWheelTowerSeasonScoreData data)
 	{
 		List<TItem> dropPackagePreviewItemList = RewardConfig.Instance.GetDropPackagePreviewItemList(data.DropId);
@@ -123,7 +123,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		uuiitem2.SetUIActive(this.DataList != null && this.CurIndex < this.DataList.Count - 1);
 	}
 
-	// Token: 0x06009E36 RID: 40502 RVA: 0x00227604 File Offset: 0x00225804
+	// Token: 0x06007214 RID: 29204 RVA: 0x002313B4 File Offset: 0x0022F5B4
 	private void OnClickLook()
 	{
 		if (this.RewardItem == null)
@@ -147,10 +147,10 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		}
 		int itemId = this.RewardItem.Value.ItemData.ItemId;
 		this.ReportRewardPreviewEvent(0, itemId, 0);
-		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(itemId, true, null, false);
 	}
 
-	// Token: 0x06009E37 RID: 40503 RVA: 0x002276A8 File Offset: 0x002258A8
+	// Token: 0x06007215 RID: 29205 RVA: 0x00231458 File Offset: 0x0022F658
 	private void ReportRewardPreviewEvent(int goodsId = 0, int itemId = 0, int skinId = 0)
 	{
 		NewTowerRewardPreviewEvent newTowerRewardPreviewEvent = new NewTowerRewardPreviewEvent();
@@ -160,7 +160,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		LogReportController.Instance.LogReport(newTowerRewardPreviewEvent);
 	}
 
-	// Token: 0x06009E38 RID: 40504 RVA: 0x002276DC File Offset: 0x002258DC
+	// Token: 0x06007216 RID: 29206 RVA: 0x0023148C File Offset: 0x0022F68C
 	private void OnClickLeft()
 	{
 		if (this.DataList == null || this.DataList.Count == 0)
@@ -176,7 +176,7 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		this.Refresh(this.DataList[this.CurIndex]);
 	}
 
-	// Token: 0x06009E39 RID: 40505 RVA: 0x00227750 File Offset: 0x00225950
+	// Token: 0x06007217 RID: 29207 RVA: 0x00231500 File Offset: 0x0022F700
 	private void OnClickRight()
 	{
 		if (this.DataList == null || this.DataList.Count == 0)
@@ -192,11 +192,11 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 		this.Refresh(this.DataList[this.CurIndex]);
 	}
 
-	// Token: 0x0400465C RID: 18012
+	// Token: 0x04004702 RID: 18178
 	[Nullable(2)]
 	public Action PlaySwitchTween;
 
-	// Token: 0x0400465D RID: 18013
+	// Token: 0x04004703 RID: 18179
 	[Nullable(new byte[]
 	{
 		2,
@@ -204,19 +204,19 @@ public class WheelTowerSeasonRewardInfoPanel : UiPanelBase
 	})]
 	private List<IWheelTowerSeasonScoreData> DataList;
 
-	// Token: 0x0400465E RID: 18014
+	// Token: 0x04004704 RID: 18180
 	[Nullable(2)]
 	private WheelTowerSeasonRewardInfoItem RewardInfoItem;
 
-	// Token: 0x0400465F RID: 18015
+	// Token: 0x04004705 RID: 18181
 	private TItem? RewardItem;
 
-	// Token: 0x04004660 RID: 18016
+	// Token: 0x04004706 RID: 18182
 	private int MotorPreviewId;
 
-	// Token: 0x04004661 RID: 18017
+	// Token: 0x04004707 RID: 18183
 	private int WeaponPreviewId;
 
-	// Token: 0x04004662 RID: 18018
+	// Token: 0x04004708 RID: 18184
 	private int CurIndex;
 }

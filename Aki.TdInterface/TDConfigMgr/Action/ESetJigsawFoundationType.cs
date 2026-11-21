@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001698 RID: 5784
+	// Token: 0x02001811 RID: 6161
 	[EnumExtensions]
 	public enum ESetJigsawFoundationType
 	{
-		// Token: 0x04004D83 RID: 19843
+		// Token: 0x0400519A RID: 20890
 		SetPieceState
 	}
 }

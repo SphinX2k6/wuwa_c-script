@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using Aki.Config;
@@ -15,27 +14,27 @@ using CSharpScript.Launcher.NetworkDetection;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020034E2 RID: 13538
+// Token: 0x02002A56 RID: 10838
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LogController : ControllerBase
 {
-	// Token: 0x0601DA58 RID: 121432 RVA: 0x0084C06E File Offset: 0x0084A26E
+	// Token: 0x0601B762 RID: 112482 RVA: 0x0087427A File Offset: 0x0087247A
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.OutputDebugInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OutputDebugInfoNotify));
 		return true;
 	}
 
-	// Token: 0x0601DA59 RID: 121433 RVA: 0x0084C08D File Offset: 0x0084A28D
+	// Token: 0x0601B763 RID: 112483 RVA: 0x00874299 File Offset: 0x00872499
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.OutputDebugInfoNotify);
 		return true;
 	}
 
-	// Token: 0x0601DA5A RID: 121434 RVA: 0x0084C0A0 File Offset: 0x0084A2A0
+	// Token: 0x0601B764 RID: 112484 RVA: 0x008742AC File Offset: 0x008724AC
 	private void LogReportFramingHandle(float _)
 	{
 		int framingLogNum = this.FramingLogNum;
@@ -67,7 +66,7 @@ public class LogController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA5B RID: 121435 RVA: 0x0084C148 File Offset: 0x0084A348
+	// Token: 0x0601B765 RID: 112485 RVA: 0x00874354 File Offset: 0x00872554
 	private void PushLogDataInFramingQueue(CommonLogData logData)
 	{
 		if (this.LogReportFramingTimer == -1)
@@ -81,7 +80,7 @@ public class LogController : ControllerBase
 		this.LogReportFramingQueue.Add(logData);
 	}
 
-	// Token: 0x0601DA5C RID: 121436 RVA: 0x0084C199 File Offset: 0x0084A399
+	// Token: 0x0601B766 RID: 112486 RVA: 0x008743A5 File Offset: 0x008725A5
 	public void LogBattleStartPush(BattleStartLogData logData, bool isFraming = false)
 	{
 		if (isFraming)
@@ -92,7 +91,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA5D RID: 121437 RVA: 0x0084C1B1 File Offset: 0x0084A3B1
+	// Token: 0x0601B767 RID: 112487 RVA: 0x008743BD File Offset: 0x008725BD
 	public void LogBattleEndPush(BattleEndLogData logData, bool isFraming = false)
 	{
 		if (isFraming)
@@ -103,7 +102,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA5E RID: 121438 RVA: 0x0084C1C9 File Offset: 0x0084A3C9
+	// Token: 0x0601B768 RID: 112488 RVA: 0x008743D5 File Offset: 0x008725D5
 	public void LogSingleCharacterStatusPush(RoleStateRecord logData, bool isFraming = false)
 	{
 		if (isFraming)
@@ -114,7 +113,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA5F RID: 121439 RVA: 0x0084C1E1 File Offset: 0x0084A3E1
+	// Token: 0x0601B769 RID: 112489 RVA: 0x008743ED File Offset: 0x008725ED
 	public void LogSingleMonsterStatusPush(MonsterStateRecord logData, bool isFraming = false)
 	{
 		if (isFraming)
@@ -125,7 +124,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA60 RID: 121440 RVA: 0x0084C1FC File Offset: 0x0084A3FC
+	// Token: 0x0601B76A RID: 112490 RVA: 0x00874408 File Offset: 0x00872608
 	public void LogCharacterDeathPush(int roleId, int result, bool isFraming = false)
 	{
 		DeathRecord deathRecord = new DeathRecord();
@@ -155,7 +154,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(deathRecord);
 	}
 
-	// Token: 0x0601DA61 RID: 121441 RVA: 0x0084C2DA File Offset: 0x0084A4DA
+	// Token: 0x0601B76B RID: 112491 RVA: 0x008744E6 File Offset: 0x008726E6
 	public void LogRoleSkillReportPush(RoleSkillReportLog reportData, List<RoleSkillRecord> data, bool isFraming = false)
 	{
 		reportData.s_reports = JsonSerializer.Serialize<List<RoleSkillRecord>>(data, null);
@@ -167,7 +166,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(reportData);
 	}
 
-	// Token: 0x0601DA62 RID: 121442 RVA: 0x0084C2FF File Offset: 0x0084A4FF
+	// Token: 0x0601B76C RID: 112492 RVA: 0x0087450B File Offset: 0x0087270B
 	public void LogMonsterSkillReportPush(MonsterSkillReportLog reportData, List<MonsterSkillRecord> data, bool isFraming = false)
 	{
 		reportData.s_reports = JsonSerializer.Serialize<List<MonsterSkillRecord>>(data, null);
@@ -179,10 +178,10 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(reportData);
 	}
 
-	// Token: 0x0601DA63 RID: 121443 RVA: 0x0084C324 File Offset: 0x0084A524
+	// Token: 0x0601B76D RID: 112493 RVA: 0x00874530 File Offset: 0x00872730
 	public void LogDoubleBallReport(ReactionLogRecord reportData, Dictionary<string, ReactionRecord> data, bool isFraming = false)
 	{
-		reportData.s_reports = JsonSerializer.Serialize<List<ReactionRecord>>(data.Values.ToList<ReactionRecord>(), null);
+		reportData.s_reports = JsonSerializer.Serialize<List<ReactionRecord>>(new List<ReactionRecord>(data.Values), null);
 		if (isFraming)
 		{
 			this.PushLogDataInFramingQueue(reportData);
@@ -191,7 +190,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(reportData);
 	}
 
-	// Token: 0x0601DA64 RID: 121444 RVA: 0x0084C354 File Offset: 0x0084A554
+	// Token: 0x0601B76E RID: 112494 RVA: 0x00874560 File Offset: 0x00872760
 	public void LogTriggerBuffDamagePush(IBuffRecord buffRecord)
 	{
 		TriggerBuffDamageRecord triggerBuffDamageRecord = new TriggerBuffDamageRecord();
@@ -205,37 +204,37 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(triggerBuffDamageRecord);
 	}
 
-	// Token: 0x0601DA65 RID: 121445 RVA: 0x0084C418 File Offset: 0x0084A618
+	// Token: 0x0601B76F RID: 112495 RVA: 0x00874624 File Offset: 0x00872824
 	public void LogElevatorUsedPush(ElevatorUsedRecord logData)
 	{
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA66 RID: 121446 RVA: 0x0084C425 File Offset: 0x0084A625
+	// Token: 0x0601B770 RID: 112496 RVA: 0x00874631 File Offset: 0x00872831
 	public void LogInstFightStartPush(InstFightStartRecord logData)
 	{
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA67 RID: 121447 RVA: 0x0084C432 File Offset: 0x0084A632
+	// Token: 0x0601B771 RID: 112497 RVA: 0x0087463E File Offset: 0x0087283E
 	public void LogInstFightEndPush(InstFightEndRecord logData)
 	{
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA68 RID: 121448 RVA: 0x0084C43F File Offset: 0x0084A63F
+	// Token: 0x0601B772 RID: 112498 RVA: 0x0087464B File Offset: 0x0087284B
 	public void LogRoleDevPush(RoleDevLogEvent logData)
 	{
 		LogReportController.Instance.LogReport(logData);
 	}
 
-	// Token: 0x0601DA69 RID: 121449 RVA: 0x0084C44C File Offset: 0x0084A64C
+	// Token: 0x0601B773 RID: 112499 RVA: 0x00874658 File Offset: 0x00872858
 	public void SetCurrentUploadLogId(string logId)
 	{
 		this.CustomServiceLogId = logId;
 	}
 
-	// Token: 0x0601DA6A RID: 121450 RVA: 0x0084C458 File Offset: 0x0084A658
+	// Token: 0x0601B774 RID: 112500 RVA: 0x00874664 File Offset: 0x00872864
 	public void LogCustomServiceReport(ESendState result)
 	{
 		CustomServiceLogEvent customServiceLogEvent = new CustomServiceLogEvent();
@@ -244,7 +243,7 @@ public class LogController : ControllerBase
 		LogReportController.Instance.LogReport(customServiceLogEvent);
 	}
 
-	// Token: 0x0601DA6B RID: 121451 RVA: 0x0084C494 File Offset: 0x0084A694
+	// Token: 0x0601B775 RID: 112501 RVA: 0x008746A0 File Offset: 0x008728A0
 	public List<SkillButtonDebugInfo> GetSkillButtonDebugInfo()
 	{
 		List<SkillButtonDebugInfo> list = new List<SkillButtonDebugInfo>();
@@ -275,7 +274,7 @@ public class LogController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0601DA6C RID: 121452 RVA: 0x0084C60C File Offset: 0x0084A80C
+	// Token: 0x0601B776 RID: 112502 RVA: 0x00874818 File Offset: 0x00872A18
 	public string OutputDebugInfo(bool log = true)
 	{
 		InstanceDungeon? instanceDungeon;
@@ -284,18 +283,7 @@ public class LogController : ControllerBase
 			Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy.X.ToString("F2"),
 			Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy.Y.ToString("F2"),
 			Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy.Z.ToString("F2")
-		}), GameModeModel.Instance.IsMulti, OnlineModel.Instance.GetAllWorldTeamPlayer(), (from buff in FormationDataController.Instance.GetPlayerEntity(CreatureModel.Instance.GetPlayerId()).GetComponent<PlayerBuffComponent>().GetAllBuffs()
-		select buff.Id.ToString()).ToArray<string>(), CharacterGasDebugComponent.GetFormationAttributeDebugStrings().Replace("\n", ",").Replace(" ", ""), SceneTeamModel.Instance.GetTeamItems(false).Select(delegate(SceneTeamItem formationIn)
-		{
-			global::FormationRoleInfo formationRoleInfo = new global::FormationRoleInfo();
-			EntityHandle entityHandle2 = formationIn.EntityHandle;
-			formationRoleInfo.EntityHandleId = ((entityHandle2 != null) ? new int?(entityHandle2.Id) : null);
-			formationRoleInfo.ConfigId = formationIn.GetConfigId;
-			formationRoleInfo.IsMyRole = formationIn.IsMyRole();
-			formationRoleInfo.IsControl = formationIn.IsControl();
-			formationRoleInfo.IsDead = formationIn.IsDead();
-			return formationRoleInfo;
-		}).ToArray<global::FormationRoleInfo>(), this.GetSkillButtonDebugInfo()), null);
+		}), GameModeModel.Instance.IsMulti, OnlineModel.Instance.GetAllWorldTeamPlayer(), LogController.GetPlayerBuffIds(), CharacterGasDebugComponent.GetFormationAttributeDebugStrings().Replace("\n", ",").Replace(" ", ""), LogController.GetFormationRoleInfos(), this.GetSkillButtonDebugInfo()), null);
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
 		foreach (EntityHandle entityHandle in CreatureModel.Instance.GetAllEntities())
 		{
@@ -327,26 +315,7 @@ public class LogController : ControllerBase
 				defaultInterpolatedStringHandler.AppendLiteral("], IsInFighting: ");
 				defaultInterpolatedStringHandler.AppendFormatted<bool?>((component4 != null) ? new bool?(component4.IsInFighting) : null);
 				defaultInterpolatedStringHandler.AppendLiteral("\nBuff信息: ");
-				string separator = "|";
-				IEnumerable<string> enumerable;
-				if (baseBuffComponent == null)
-				{
-					enumerable = null;
-				}
-				else
-				{
-					enumerable = baseBuffComponent.GetAllBuffs().Select(delegate(IActiveBuff buff)
-					{
-						DefaultInterpolatedStringHandler defaultInterpolatedStringHandler2 = new DefaultInterpolatedStringHandler(2, 3);
-						defaultInterpolatedStringHandler2.AppendFormatted<long>(buff.Id);
-						defaultInterpolatedStringHandler2.AppendLiteral(" ");
-						defaultInterpolatedStringHandler2.AppendFormatted<int>(buff.Handle);
-						defaultInterpolatedStringHandler2.AppendLiteral(" ");
-						defaultInterpolatedStringHandler2.AppendFormatted<int>(buff.StackCount);
-						return defaultInterpolatedStringHandler2.ToStringAndClear() + (buff.IsActive() ? "" : "(非激活)");
-					}).ToList<string>();
-				}
-				defaultInterpolatedStringHandler.AppendFormatted(string.Join(separator, enumerable ?? new List<string>()));
+				defaultInterpolatedStringHandler.AppendFormatted(string.Join("|", LogController.GetBuffInfoTexts(baseBuffComponent)));
 				defaultInterpolatedStringHandler.AppendLiteral("\n属性信息: ");
 				defaultInterpolatedStringHandler.AppendFormatted((component3 != null) ? component3.GetDebugString() : null);
 				defaultInterpolatedStringHandler.AppendLiteral("\nTag信息: ");
@@ -366,14 +335,72 @@ public class LogController : ControllerBase
 		return text;
 	}
 
-	// Token: 0x0601DA6D RID: 121453 RVA: 0x0084CB1C File Offset: 0x0084AD1C
+	// Token: 0x0601B777 RID: 112503 RVA: 0x00874C80 File Offset: 0x00872E80
+	private static string[] GetPlayerBuffIds()
+	{
+		IActiveBuff[] allBuffs = FormationDataController.Instance.GetPlayerEntity(CreatureModel.Instance.GetPlayerId()).GetComponent<PlayerBuffComponent>().GetAllBuffs();
+		string[] array = new string[allBuffs.Length];
+		for (int i = 0; i < allBuffs.Length; i++)
+		{
+			array[i] = allBuffs[i].Id.ToString();
+		}
+		return array;
+	}
+
+	// Token: 0x0601B778 RID: 112504 RVA: 0x00874CD8 File Offset: 0x00872ED8
+	private static List<global::FormationRoleInfo> GetFormationRoleInfos()
+	{
+		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
+		List<global::FormationRoleInfo> list = new List<global::FormationRoleInfo>(teamItems.Count);
+		for (int i = 0; i < teamItems.Count; i++)
+		{
+			SceneTeamItem sceneTeamItem = teamItems[i];
+			List<global::FormationRoleInfo> list2 = list;
+			global::FormationRoleInfo formationRoleInfo = new global::FormationRoleInfo();
+			EntityHandle entityHandle = sceneTeamItem.EntityHandle;
+			formationRoleInfo.EntityHandleId = ((entityHandle != null) ? new int?(entityHandle.Id) : null);
+			formationRoleInfo.ConfigId = sceneTeamItem.GetConfigId;
+			formationRoleInfo.IsMyRole = sceneTeamItem.IsMyRole();
+			formationRoleInfo.IsControl = sceneTeamItem.IsControl();
+			formationRoleInfo.IsDead = sceneTeamItem.IsDead();
+			list2.Add(formationRoleInfo);
+		}
+		return list;
+	}
+
+	// Token: 0x0601B779 RID: 112505 RVA: 0x00874D78 File Offset: 0x00872F78
+	private static string[] GetBuffInfoTexts([Nullable(2)] BaseBuffComponent buffComp)
+	{
+		IActiveBuff[] array = (buffComp != null) ? buffComp.GetAllBuffs() : null;
+		if (array == null)
+		{
+			return Array.Empty<string>();
+		}
+		string[] array2 = new string[array.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			IActiveBuff activeBuff = array[i];
+			string[] array3 = array2;
+			int num = i;
+			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
+			defaultInterpolatedStringHandler.AppendFormatted<long>(activeBuff.Id);
+			defaultInterpolatedStringHandler.AppendLiteral(" ");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(activeBuff.Handle);
+			defaultInterpolatedStringHandler.AppendLiteral(" ");
+			defaultInterpolatedStringHandler.AppendFormatted<int>(activeBuff.StackCount);
+			array3[num] = defaultInterpolatedStringHandler.ToStringAndClear() + (activeBuff.IsActive() ? "" : "(非激活)");
+		}
+		return array2;
+	}
+
+	// Token: 0x0601B77A RID: 112506 RVA: 0x00874E22 File Offset: 0x00873022
 	[NullableContext(2)]
 	private void OutputDebugInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		this.RequestOutputDebugInfo();
 	}
 
-	// Token: 0x0601DA6E RID: 121454 RVA: 0x0084CB24 File Offset: 0x0084AD24
+	// Token: 0x0601B77B RID: 112507 RVA: 0x00874E2C File Offset: 0x0087302C
 	public void RequestOutputDebugInfo()
 	{
 		if (!LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.EnterGameRet))
@@ -392,8 +419,8 @@ public class LogController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x170028E7 RID: 10471
-	// (get) Token: 0x0601DA6F RID: 121455 RVA: 0x0084CB83 File Offset: 0x0084AD83
+	// Token: 0x17002C7F RID: 11391
+	// (get) Token: 0x0601B77C RID: 112508 RVA: 0x00874E8B File Offset: 0x0087308B
 	public static LogController Instance
 	{
 		get
@@ -402,7 +429,7 @@ public class LogController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DA70 RID: 121456 RVA: 0x0084CB8A File Offset: 0x0084AD8A
+	// Token: 0x0601B77D RID: 112509 RVA: 0x00874E92 File Offset: 0x00873092
 	public static LogController GetOrCreateInstance()
 	{
 		if (LogController._Instance == null)
@@ -412,7 +439,7 @@ public class LogController : ControllerBase
 		return LogController._Instance;
 	}
 
-	// Token: 0x0601DA71 RID: 121457 RVA: 0x0084CB9E File Offset: 0x0084AD9E
+	// Token: 0x0601B77E RID: 112510 RVA: 0x00874EA6 File Offset: 0x008730A6
 	public static bool CreateInstance()
 	{
 		if (LogController._Instance != null)
@@ -423,45 +450,45 @@ public class LogController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DA72 RID: 121458 RVA: 0x0084CBB4 File Offset: 0x0084ADB4
+	// Token: 0x0601B77F RID: 112511 RVA: 0x00874EBC File Offset: 0x008730BC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DA73 RID: 121459 RVA: 0x0084CBB6 File Offset: 0x0084ADB6
+	// Token: 0x0601B780 RID: 112512 RVA: 0x00874EBE File Offset: 0x008730BE
 	public static void ResetStaticDefaultValue()
 	{
 		LogController._Instance = null;
 	}
 
-	// Token: 0x0601DA74 RID: 121460 RVA: 0x0084CBBE File Offset: 0x0084ADBE
+	// Token: 0x0601B781 RID: 112513 RVA: 0x00874EC6 File Offset: 0x008730C6
 	static LogController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LogController.CreateStaticDefaultValue), new Action(LogController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E8A8 RID: 59560
+	// Token: 0x0400ED5F RID: 60767
 	private const bool LOG_SWITCH = false;
 
-	// Token: 0x0400E8A9 RID: 59561
+	// Token: 0x0400ED60 RID: 60768
 	private const int FRAMING_LOG_NUM = 20;
 
-	// Token: 0x0400E8AA RID: 59562
+	// Token: 0x0400ED61 RID: 60769
 	private int LogReportFramingTimer = -1;
 
-	// Token: 0x0400E8AB RID: 59563
+	// Token: 0x0400ED62 RID: 60770
 	private readonly List<CommonLogData> LogReportFramingQueue = new List<CommonLogData>();
 
-	// Token: 0x0400E8AC RID: 59564
+	// Token: 0x0400ED63 RID: 60771
 	private readonly int FramingLogNum = 20;
 
-	// Token: 0x0400E8AD RID: 59565
+	// Token: 0x0400ED64 RID: 60772
 	private readonly Stat LogOnBattleEndFramingReport = Stat.Create("LogOnBattleEnd_Framing", "", "");
 
-	// Token: 0x0400E8AE RID: 59566
+	// Token: 0x0400ED65 RID: 60773
 	private string CustomServiceLogId = "";
 
-	// Token: 0x0400E8AF RID: 59567
+	// Token: 0x0400ED66 RID: 60774
 	[Nullable(2)]
 	private static LogController _Instance;
 }

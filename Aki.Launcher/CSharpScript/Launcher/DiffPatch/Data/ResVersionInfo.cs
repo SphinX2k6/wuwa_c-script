@@ -7,12 +7,12 @@ using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x0200022B RID: 555
+	// Token: 0x02000230 RID: 560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ResVersionInfo
 	{
-		// Token: 0x06000E24 RID: 3620 RVA: 0x000550E0 File Offset: 0x000532E0
+		// Token: 0x06000E65 RID: 3685 RVA: 0x00057BE8 File Offset: 0x00055DE8
 		public ResVersionInfo(string packageVersion, string remoteVersion, Dictionary<string, string> remoteManifestHashMap)
 		{
 			this.PackageVersion = packageVersion;
@@ -20,7 +20,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			this.RemoteManifestHashMap = remoteManifestHashMap;
 		}
 
-		// Token: 0x06000E25 RID: 3621 RVA: 0x00055130 File Offset: 0x00053330
+		// Token: 0x06000E66 RID: 3686 RVA: 0x00057C38 File Offset: 0x00055E38
 		public unsafe virtual void Init()
 		{
 			this.VersionRecord = LauncherStorageLib.Instance.GetDeviceSavedString(this.GetVersionRecordKey(), "");
@@ -44,8 +44,8 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 		}
 
-		// Token: 0x17000151 RID: 337
-		// (get) Token: 0x06000E26 RID: 3622 RVA: 0x00055310 File Offset: 0x00053510
+		// Token: 0x17000157 RID: 343
+		// (get) Token: 0x06000E67 RID: 3687 RVA: 0x00057E18 File Offset: 0x00056018
 		public bool NeedRevertVersion
 		{
 			get
@@ -54,14 +54,14 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x06000E27 RID: 3623 RVA: 0x00055318 File Offset: 0x00053518
+		// Token: 0x06000E68 RID: 3688 RVA: 0x00057E20 File Offset: 0x00056020
 		public string GetPackageVersion()
 		{
 			return this.PackageVersion;
 		}
 
-		// Token: 0x17000152 RID: 338
-		// (get) Token: 0x06000E28 RID: 3624 RVA: 0x00055320 File Offset: 0x00053520
+		// Token: 0x17000158 RID: 344
+		// (get) Token: 0x06000E69 RID: 3689 RVA: 0x00057E28 File Offset: 0x00056028
 		public string LatestVersion
 		{
 			get
@@ -70,8 +70,8 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x17000153 RID: 339
-		// (get) Token: 0x06000E29 RID: 3625 RVA: 0x00055328 File Offset: 0x00053528
+		// Token: 0x17000159 RID: 345
+		// (get) Token: 0x06000E6A RID: 3690 RVA: 0x00057E30 File Offset: 0x00056030
 		public string CurrentVersion
 		{
 			get
@@ -80,8 +80,8 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x17000154 RID: 340
-		// (get) Token: 0x06000E2A RID: 3626 RVA: 0x00055330 File Offset: 0x00053530
+		// Token: 0x1700015A RID: 346
+		// (get) Token: 0x06000E6B RID: 3691 RVA: 0x00057E38 File Offset: 0x00056038
 		public string RecordVersion
 		{
 			get
@@ -90,8 +90,8 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x17000155 RID: 341
-		// (get) Token: 0x06000E2B RID: 3627 RVA: 0x00055338 File Offset: 0x00053538
+		// Token: 0x1700015B RID: 347
+		// (get) Token: 0x06000E6C RID: 3692 RVA: 0x00057E40 File Offset: 0x00056040
 		public string RecordPackageVersion
 		{
 			get
@@ -100,14 +100,14 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x06000E2C RID: 3628 RVA: 0x00055340 File Offset: 0x00053540
+		// Token: 0x06000E6D RID: 3693 RVA: 0x00057E48 File Offset: 0x00056048
 		public void SetPackageVersionRecord(string version)
 		{
 			this.PackageVersionRecord = version;
 		}
 
-		// Token: 0x17000156 RID: 342
-		// (get) Token: 0x06000E2D RID: 3629 RVA: 0x0005534C File Offset: 0x0005354C
+		// Token: 0x1700015C RID: 348
+		// (get) Token: 0x06000E6E RID: 3694 RVA: 0x00057E54 File Offset: 0x00056054
 		public virtual string ManifestHash
 		{
 			get
@@ -122,8 +122,8 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x17000157 RID: 343
-		// (get) Token: 0x06000E2E RID: 3630 RVA: 0x00055378 File Offset: 0x00053578
+		// Token: 0x1700015D RID: 349
+		// (get) Token: 0x06000E6F RID: 3695 RVA: 0x00057E80 File Offset: 0x00056080
 		public string RevertManifestHash
 		{
 			get
@@ -138,31 +138,31 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x06000E2F RID: 3631 RVA: 0x000553A3 File Offset: 0x000535A3
+		// Token: 0x06000E70 RID: 3696 RVA: 0x00057EAB File Offset: 0x000560AB
 		public string GetMountFileName()
 		{
 			return "Mount" + this.GetResType() + ".txt";
 		}
 
-		// Token: 0x06000E30 RID: 3632 RVA: 0x000553BA File Offset: 0x000535BA
+		// Token: 0x06000E71 RID: 3697 RVA: 0x00057EC2 File Offset: 0x000560C2
 		public virtual string GetManifestFileName()
 		{
 			return "Manifest" + this.GetResType();
 		}
 
-		// Token: 0x06000E31 RID: 3633 RVA: 0x000553CC File Offset: 0x000535CC
+		// Token: 0x06000E72 RID: 3698 RVA: 0x00057ED4 File Offset: 0x000560D4
 		protected virtual string GetVersionRecordKey()
 		{
 			return "Version_" + this.GetResType();
 		}
 
-		// Token: 0x06000E32 RID: 3634 RVA: 0x000553DE File Offset: 0x000535DE
+		// Token: 0x06000E73 RID: 3699 RVA: 0x00057EE6 File Offset: 0x000560E6
 		public virtual bool HasContentOnRemote()
 		{
 			return this.PackageVersion != this.RemoteVersion || this.ManifestHash.Length > 0;
 		}
 
-		// Token: 0x06000E33 RID: 3635 RVA: 0x00055404 File Offset: 0x00053604
+		// Token: 0x06000E74 RID: 3700 RVA: 0x00057F0C File Offset: 0x0005610C
 		public unsafe virtual bool UpdateVersionRecord()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -184,19 +184,19 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return true;
 		}
 
-		// Token: 0x06000E34 RID: 3636 RVA: 0x000554A2 File Offset: 0x000536A2
+		// Token: 0x06000E75 RID: 3701 RVA: 0x00057FAA File Offset: 0x000561AA
 		public virtual bool RecordUse(bool bUse)
 		{
 			return true;
 		}
 
-		// Token: 0x06000E35 RID: 3637 RVA: 0x000554A5 File Offset: 0x000536A5
+		// Token: 0x06000E76 RID: 3702 RVA: 0x00057FAD File Offset: 0x000561AD
 		public int GetMountOrder()
 		{
 			return this.MountOrder;
 		}
 
-		// Token: 0x06000E36 RID: 3638 RVA: 0x000554B0 File Offset: 0x000536B0
+		// Token: 0x06000E77 RID: 3703 RVA: 0x00057FB8 File Offset: 0x000561B8
 		public virtual bool ClearVersionRecord()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -219,60 +219,60 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return true;
 		}
 
-		// Token: 0x06000E37 RID: 3639 RVA: 0x00055530 File Offset: 0x00053730
+		// Token: 0x06000E78 RID: 3704 RVA: 0x00058038 File Offset: 0x00056238
 		protected virtual bool ClearUseRecord()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E38 RID: 3640 RVA: 0x00055533 File Offset: 0x00053733
+		// Token: 0x06000E79 RID: 3705 RVA: 0x0005803B File Offset: 0x0005623B
 		public virtual bool IsLangRes()
 		{
 			return false;
 		}
 
-		// Token: 0x06000E39 RID: 3641 RVA: 0x00055536 File Offset: 0x00053736
+		// Token: 0x06000E7A RID: 3706 RVA: 0x0005803E File Offset: 0x0005623E
 		public virtual void ForceUpdate()
 		{
 		}
 
-		// Token: 0x06000E3A RID: 3642 RVA: 0x00055538 File Offset: 0x00053738
+		// Token: 0x06000E7B RID: 3707 RVA: 0x00058040 File Offset: 0x00056240
 		public virtual bool SkipUpdate()
 		{
 			return false;
 		}
 
-		// Token: 0x06000E3B RID: 3643 RVA: 0x0005553B File Offset: 0x0005373B
+		// Token: 0x06000E7C RID: 3708 RVA: 0x00058043 File Offset: 0x00056243
 		public virtual bool NeedRecordMount()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E3C RID: 3644
+		// Token: 0x06000E7D RID: 3709
 		public abstract string GetResType();
 
-		// Token: 0x040008ED RID: 2285
+		// Token: 0x0400092F RID: 2351
 		protected string VersionRecord = "";
 
-		// Token: 0x040008EE RID: 2286
+		// Token: 0x04000930 RID: 2352
 		protected string PackageVersionRecord = "";
 
-		// Token: 0x040008EF RID: 2287
+		// Token: 0x04000931 RID: 2353
 		protected string LocalCurrentVersion = "";
 
-		// Token: 0x040008F0 RID: 2288
+		// Token: 0x04000932 RID: 2354
 		protected bool NeedRevert;
 
-		// Token: 0x040008F1 RID: 2289
+		// Token: 0x04000933 RID: 2355
 		private int MountOrder = 4;
 
-		// Token: 0x040008F2 RID: 2290
+		// Token: 0x04000934 RID: 2356
 		protected readonly string PackageVersion;
 
-		// Token: 0x040008F3 RID: 2291
+		// Token: 0x04000935 RID: 2357
 		protected readonly string RemoteVersion;
 
-		// Token: 0x040008F4 RID: 2292
+		// Token: 0x04000936 RID: 2358
 		protected readonly Dictionary<string, string> RemoteManifestHashMap;
 	}
 }

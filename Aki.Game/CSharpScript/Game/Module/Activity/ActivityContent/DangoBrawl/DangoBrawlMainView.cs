@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006824 RID: 26660
+	// Token: 0x02005774 RID: 22388
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlMainView : UiViewBase
 	{
-		// Token: 0x1700973E RID: 38718
-		// (get) Token: 0x0604286E RID: 272494 RVA: 0x0102A89C File Offset: 0x01028A9C
+		// Token: 0x17006A7F RID: 27263
+		// (get) Token: 0x060373C2 RID: 226242 RVA: 0x00F6BDD8 File Offset: 0x00F69FD8
 		private ActivityDangoBrawlData ActivityData
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x1700973F RID: 38719
-		// (get) Token: 0x0604286F RID: 272495 RVA: 0x0102A8A8 File Offset: 0x01028AA8
+		// Token: 0x17006A80 RID: 27264
+		// (get) Token: 0x060373C3 RID: 226243 RVA: 0x00F6BDE4 File Offset: 0x00F69FE4
 		private DangoBrawlOutGameData OutGameData
 		{
 			get
@@ -35,12 +35,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042870 RID: 272496 RVA: 0x0102A8B5 File Offset: 0x01028AB5
+		// Token: 0x060373C4 RID: 226244 RVA: 0x00F6BDF1 File Offset: 0x00F69FF1
 		public DangoBrawlMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042871 RID: 272497 RVA: 0x0102A8C0 File Offset: 0x01028AC0
+		// Token: 0x060373C5 RID: 226245 RVA: 0x00F6BDFC File Offset: 0x00F69FFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042872 RID: 272498 RVA: 0x0102AB1C File Offset: 0x01028D1C
+		// Token: 0x060373C6 RID: 226246 RVA: 0x00F6C058 File Offset: 0x00F6A258
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042873 RID: 272499 RVA: 0x0102AB5F File Offset: 0x01028D5F
+		// Token: 0x060373C7 RID: 226247 RVA: 0x00F6C09B File Offset: 0x00F6A29B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x06042874 RID: 272500 RVA: 0x0102AB7D File Offset: 0x01028D7D
+		// Token: 0x060373C8 RID: 226248 RVA: 0x00F6C0B9 File Offset: 0x00F6A2B9
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x06042875 RID: 272501 RVA: 0x0102AB9B File Offset: 0x01028D9B
+		// Token: 0x060373C9 RID: 226249 RVA: 0x00F6C0D7 File Offset: 0x00F6A2D7
 		protected override void OnBeforeShow()
 		{
 			if (this.ActivityData.HasFirstOpenPageRedDot())
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06042876 RID: 272502 RVA: 0x0102ABD0 File Offset: 0x01028DD0
+		// Token: 0x060373CA RID: 226250 RVA: 0x00F6C10C File Offset: 0x00F6A30C
 		private void RefreshModeBtn()
 		{
 			if (this.ActivityData == null)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042877 RID: 272503 RVA: 0x0102ACF0 File Offset: 0x01028EF0
+		// Token: 0x060373CB RID: 226251 RVA: 0x00F6C22C File Offset: 0x00F6A42C
 		private void RefreshBottomBtn()
 		{
 			if (this.ActivityData == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			roleButton.SetButtonState();
 		}
 
-		// Token: 0x06042878 RID: 272504 RVA: 0x0102ADB4 File Offset: 0x01028FB4
+		// Token: 0x060373CC RID: 226252 RVA: 0x00F6C2F0 File Offset: 0x00F6A4F0
 		private void RefreshArchiveItem()
 		{
 			bool flag = this.OutGameData.HasSaveData();
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			captionItem3.SetCaptionChangeColor(flag);
 		}
 
-		// Token: 0x06042879 RID: 272505 RVA: 0x0102AE10 File Offset: 0x01029010
+		// Token: 0x060373CD RID: 226253 RVA: 0x00F6C34C File Offset: 0x00F6A54C
 		private void RefreshRedDot()
 		{
 			DangoBrawlMainButtonItem shopButton = this.ShopButton;
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item2.SetUIActive(this.ActivityData.HasNewLevelRedDot(new bool?(true)));
 		}
 
-		// Token: 0x0604287A RID: 272506 RVA: 0x0102AEE0 File Offset: 0x010290E0
+		// Token: 0x060373CE RID: 226254 RVA: 0x00F6C41C File Offset: 0x00F6A61C
 		private void CheckReadSave(Action enterLevelFunc)
 		{
 			DangoBrawlSaveData saveData = this.OutGameData.GetSaveData();
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			enterLevelFunc();
 		}
 
-		// Token: 0x0604287B RID: 272507 RVA: 0x0102AFD8 File Offset: 0x010291D8
+		// Token: 0x060373CF RID: 226255 RVA: 0x00F6C514 File Offset: 0x00F6A714
 		private void OnRedDotRefresh(int activityId)
 		{
 			if (this.ActivityData == null || activityId != this.ActivityData.Id)
@@ -312,43 +312,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0604287C RID: 272508 RVA: 0x0102AFFD File Offset: 0x010291FD
+		// Token: 0x060373D0 RID: 226256 RVA: 0x00F6C539 File Offset: 0x00F6A739
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(652);
 		}
 
-		// Token: 0x0604287D RID: 272509 RVA: 0x0102B00E File Offset: 0x0102920E
+		// Token: 0x060373D1 RID: 226257 RVA: 0x00F6C54A File Offset: 0x00F6A74A
 		private void OnArchiveBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(678);
 		}
 
-		// Token: 0x0604287E RID: 272510 RVA: 0x0102B01F File Offset: 0x0102921F
+		// Token: 0x060373D2 RID: 226258 RVA: 0x00F6C55B File Offset: 0x00F6A75B
 		private void OnShopBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlShopView, null, null);
 		}
 
-		// Token: 0x0604287F RID: 272511 RVA: 0x0102B032 File Offset: 0x01029232
+		// Token: 0x060373D3 RID: 226259 RVA: 0x00F6C56E File Offset: 0x00F6A76E
 		private void OnTaskRewardBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlRewardsView, null, null);
 		}
 
-		// Token: 0x06042880 RID: 272512 RVA: 0x0102B045 File Offset: 0x01029245
+		// Token: 0x060373D4 RID: 226260 RVA: 0x00F6C581 File Offset: 0x00F6A781
 		private void OnRoleBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlRoleHandBookView, null, null);
 		}
 
-		// Token: 0x06042881 RID: 272513 RVA: 0x0102B058 File Offset: 0x01029258
+		// Token: 0x060373D5 RID: 226261 RVA: 0x00F6C594 File Offset: 0x00F6A794
 		private void OnHandBookBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlHandBookView, null, null);
 		}
 
-		// Token: 0x06042882 RID: 272514 RVA: 0x0102B06B File Offset: 0x0102926B
+		// Token: 0x060373D6 RID: 226262 RVA: 0x00F6C5A7 File Offset: 0x00F6A7A7
 		private void OnStoryModeBtnClick()
 		{
 			this.CheckReadSave(delegate
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			});
 		}
 
-		// Token: 0x06042883 RID: 272515 RVA: 0x0102B094 File Offset: 0x01029294
+		// Token: 0x060373D7 RID: 226263 RVA: 0x00F6C5D0 File Offset: 0x00F6A7D0
 		private void OnAdventureModeBtnClick()
 		{
 			if (!this.OutGameData.IsAllNormalLevelPassed())
@@ -377,63 +377,63 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			});
 		}
 
-		// Token: 0x06042884 RID: 272516 RVA: 0x0102B0E8 File Offset: 0x010292E8
+		// Token: 0x060373D8 RID: 226264 RVA: 0x00F6C624 File Offset: 0x00F6A824
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022A9E RID: 141982
+		// Token: 0x0401D2FB RID: 119547
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022A9F RID: 141983
+		// Token: 0x0401D2FC RID: 119548
 		[Nullable(2)]
 		private DangoBrawlMainButtonItem ShopButton;
 
-		// Token: 0x04022AA0 RID: 141984
+		// Token: 0x0401D2FD RID: 119549
 		[Nullable(2)]
 		private DangoBrawlMainButtonItem TaskRewardButton;
 
-		// Token: 0x04022AA1 RID: 141985
+		// Token: 0x0401D2FE RID: 119550
 		[Nullable(2)]
 		private DangoBrawlFuncButtonItem HandBookButton;
 
-		// Token: 0x04022AA2 RID: 141986
+		// Token: 0x0401D2FF RID: 119551
 		[Nullable(2)]
 		private DangoBrawlFuncButtonItem RoleButton;
 
-		// Token: 0x0200C9C2 RID: 51650
+		// Token: 0x0200B38E RID: 45966
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CF39 RID: 249657
+			// Token: 0x04037823 RID: 227363
 			ItemCaption,
-			// Token: 0x0403CF3A RID: 249658
+			// Token: 0x04037824 RID: 227364
 			StoryModeBtn,
-			// Token: 0x0403CF3B RID: 249659
+			// Token: 0x04037825 RID: 227365
 			StoryProgressNum,
-			// Token: 0x0403CF3C RID: 249660
+			// Token: 0x04037826 RID: 227366
 			SprStoryFinish,
-			// Token: 0x0403CF3D RID: 249661
+			// Token: 0x04037827 RID: 227367
 			AdventureModeBtn,
-			// Token: 0x0403CF3E RID: 249662
+			// Token: 0x04037828 RID: 227368
 			AdventureProgressNum,
-			// Token: 0x0403CF3F RID: 249663
+			// Token: 0x04037829 RID: 227369
 			SprAdventureFinish,
-			// Token: 0x0403CF40 RID: 249664
+			// Token: 0x0403782A RID: 227370
 			AdventureUnlockItem,
-			// Token: 0x0403CF41 RID: 249665
+			// Token: 0x0403782B RID: 227371
 			ShopBtn,
-			// Token: 0x0403CF42 RID: 249666
+			// Token: 0x0403782C RID: 227372
 			TaskRewardBtn,
-			// Token: 0x0403CF43 RID: 249667
+			// Token: 0x0403782D RID: 227373
 			HandBookBtn,
-			// Token: 0x0403CF44 RID: 249668
+			// Token: 0x0403782E RID: 227374
 			RoleBtn,
-			// Token: 0x0403CF45 RID: 249669
+			// Token: 0x0403782F RID: 227375
 			AdventureRedItem,
-			// Token: 0x0403CF46 RID: 249670
+			// Token: 0x04037830 RID: 227376
 			NormalRedItem
 		}
 	}

@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020008A1 RID: 2209
+	// Token: 0x02000890 RID: 2192
 	public sealed class KurotatoLevelInfo : IMessage<KurotatoLevelInfo>, IMessage, IEquatable<KurotatoLevelInfo>, IDeepCloneable<KurotatoLevelInfo>, IBufferMessage
 	{
-		// Token: 0x0600C444 RID: 50244 RVA: 0x001D16D1 File Offset: 0x001CF8D1
+		// Token: 0x0600C328 RID: 49960 RVA: 0x001CF3ED File Offset: 0x001CD5ED
 		[NullableContext(1)]
 		public static KurotatoLevelInfo Create()
 		{
 			return new KurotatoLevelInfo();
 		}
 
-		// Token: 0x170027AD RID: 10157
-		// (get) Token: 0x0600C445 RID: 50245 RVA: 0x001D16D8 File Offset: 0x001CF8D8
+		// Token: 0x1700276E RID: 10094
+		// (get) Token: 0x0600C329 RID: 49961 RVA: 0x001CF3F4 File Offset: 0x001CD5F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<KurotatoLevelInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027AE RID: 10158
-		// (get) Token: 0x0600C446 RID: 50246 RVA: 0x001D16DF File Offset: 0x001CF8DF
+		// Token: 0x1700276F RID: 10095
+		// (get) Token: 0x0600C32A RID: 49962 RVA: 0x001CF3FB File Offset: 0x001CD5FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027AF RID: 10159
-		// (get) Token: 0x0600C447 RID: 50247 RVA: 0x001D16E2 File Offset: 0x001CF8E2
+		// Token: 0x17002770 RID: 10096
+		// (get) Token: 0x0600C32B RID: 49963 RVA: 0x001CF3FE File Offset: 0x001CD5FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C448 RID: 50248 RVA: 0x001D16E9 File Offset: 0x001CF8E9
+		// Token: 0x0600C32C RID: 49964 RVA: 0x001CF405 File Offset: 0x001CD605
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoLevelInfo()
 		{
 		}
 
-		// Token: 0x0600C449 RID: 50249 RVA: 0x001D16F4 File Offset: 0x001CF8F4
+		// Token: 0x0600C32D RID: 49965 RVA: 0x001CF410 File Offset: 0x001CD610
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoLevelInfo(KurotatoLevelInfo other) : this()
@@ -74,7 +74,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C44A RID: 50250 RVA: 0x001D1780 File Offset: 0x001CF980
+		// Token: 0x0600C32E RID: 49966 RVA: 0x001CF49C File Offset: 0x001CD69C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoLevelInfo Clone()
@@ -82,9 +82,9 @@ namespace Aki.Protocol
 			return new KurotatoLevelInfo(this);
 		}
 
-		// Token: 0x170027B0 RID: 10160
-		// (get) Token: 0x0600C44B RID: 50251 RVA: 0x001D1788 File Offset: 0x001CF988
-		// (set) Token: 0x0600C44C RID: 50252 RVA: 0x001D1790 File Offset: 0x001CF990
+		// Token: 0x17002771 RID: 10097
+		// (get) Token: 0x0600C32F RID: 49967 RVA: 0x001CF4A4 File Offset: 0x001CD6A4
+		// (set) Token: 0x0600C330 RID: 49968 RVA: 0x001CF4AC File Offset: 0x001CD6AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelId
@@ -99,9 +99,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027B1 RID: 10161
-		// (get) Token: 0x0600C44D RID: 50253 RVA: 0x001D1799 File Offset: 0x001CF999
-		// (set) Token: 0x0600C44E RID: 50254 RVA: 0x001D17A1 File Offset: 0x001CF9A1
+		// Token: 0x17002772 RID: 10098
+		// (get) Token: 0x0600C331 RID: 49969 RVA: 0x001CF4B5 File Offset: 0x001CD6B5
+		// (set) Token: 0x0600C332 RID: 49970 RVA: 0x001CF4BD File Offset: 0x001CD6BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsUnlock
@@ -116,9 +116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027B2 RID: 10162
-		// (get) Token: 0x0600C44F RID: 50255 RVA: 0x001D17AA File Offset: 0x001CF9AA
-		// (set) Token: 0x0600C450 RID: 50256 RVA: 0x001D17B2 File Offset: 0x001CF9B2
+		// Token: 0x17002773 RID: 10099
+		// (get) Token: 0x0600C333 RID: 49971 RVA: 0x001CF4C6 File Offset: 0x001CD6C6
+		// (set) Token: 0x0600C334 RID: 49972 RVA: 0x001CF4CE File Offset: 0x001CD6CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long UnlockTime
@@ -133,9 +133,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027B3 RID: 10163
-		// (get) Token: 0x0600C451 RID: 50257 RVA: 0x001D17BB File Offset: 0x001CF9BB
-		// (set) Token: 0x0600C452 RID: 50258 RVA: 0x001D17C3 File Offset: 0x001CF9C3
+		// Token: 0x17002774 RID: 10100
+		// (get) Token: 0x0600C335 RID: 49973 RVA: 0x001CF4D7 File Offset: 0x001CD6D7
+		// (set) Token: 0x0600C336 RID: 49974 RVA: 0x001CF4DF File Offset: 0x001CD6DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsFinished
@@ -150,9 +150,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027B4 RID: 10164
-		// (get) Token: 0x0600C453 RID: 50259 RVA: 0x001D17CC File Offset: 0x001CF9CC
-		// (set) Token: 0x0600C454 RID: 50260 RVA: 0x001D17D4 File Offset: 0x001CF9D4
+		// Token: 0x17002775 RID: 10101
+		// (get) Token: 0x0600C337 RID: 49975 RVA: 0x001CF4E8 File Offset: 0x001CD6E8
+		// (set) Token: 0x0600C338 RID: 49976 RVA: 0x001CF4F0 File Offset: 0x001CD6F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoEndlessLevelInfo EndlessLevelInfo
@@ -167,9 +167,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170027B5 RID: 10165
-		// (get) Token: 0x0600C455 RID: 50261 RVA: 0x001D17DD File Offset: 0x001CF9DD
-		// (set) Token: 0x0600C456 RID: 50262 RVA: 0x001D17E5 File Offset: 0x001CF9E5
+		// Token: 0x17002776 RID: 10102
+		// (get) Token: 0x0600C339 RID: 49977 RVA: 0x001CF4F9 File Offset: 0x001CD6F9
+		// (set) Token: 0x0600C33A RID: 49978 RVA: 0x001CF501 File Offset: 0x001CD701
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoInstInfo InstData
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C457 RID: 50263 RVA: 0x001D17EE File Offset: 0x001CF9EE
+		// Token: 0x0600C33B RID: 49979 RVA: 0x001CF50A File Offset: 0x001CD70A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoLevelInfo);
 		}
 
-		// Token: 0x0600C458 RID: 50264 RVA: 0x001D17FC File Offset: 0x001CF9FC
+		// Token: 0x0600C33C RID: 49980 RVA: 0x001CF518 File Offset: 0x001CD718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoLevelInfo other)
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelId == other.LevelId && this.IsUnlock == other.IsUnlock && this.UnlockTime == other.UnlockTime && this.IsFinished == other.IsFinished && object.Equals(this.EndlessLevelInfo, other.EndlessLevelInfo) && object.Equals(this.InstData, other.InstData) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C459 RID: 50265 RVA: 0x001D1890 File Offset: 0x001CFA90
+		// Token: 0x0600C33D RID: 49981 RVA: 0x001CF5AC File Offset: 0x001CD7AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -237,7 +237,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C45A RID: 50266 RVA: 0x001D1946 File Offset: 0x001CFB46
+		// Token: 0x0600C33E RID: 49982 RVA: 0x001CF662 File Offset: 0x001CD862
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C45B RID: 50267 RVA: 0x001D1953 File Offset: 0x001CFB53
+		// Token: 0x0600C33F RID: 49983 RVA: 0x001CF66F File Offset: 0x001CD86F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C45C RID: 50268 RVA: 0x001D195C File Offset: 0x001CFB5C
+		// Token: 0x0600C340 RID: 49984 RVA: 0x001CF678 File Offset: 0x001CD878
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C45D RID: 50269 RVA: 0x001D1A24 File Offset: 0x001CFC24
+		// Token: 0x0600C341 RID: 49985 RVA: 0x001CF740 File Offset: 0x001CD940
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -331,7 +331,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C45E RID: 50270 RVA: 0x001D1AC4 File Offset: 0x001CFCC4
+		// Token: 0x0600C342 RID: 49986 RVA: 0x001CF7E0 File Offset: 0x001CD9E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoLevelInfo other)
@@ -375,7 +375,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C45F RID: 50271 RVA: 0x001D1B94 File Offset: 0x001CFD94
+		// Token: 0x0600C343 RID: 49987 RVA: 0x001CF8B0 File Offset: 0x001CDAB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -383,7 +383,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C460 RID: 50272 RVA: 0x001D1BA0 File Offset: 0x001CFDA0
+		// Token: 0x0600C344 RID: 49988 RVA: 0x001CF8BC File Offset: 0x001CDABC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -443,46 +443,46 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040054AD RID: 21677
+		// Token: 0x040054B4 RID: 21684
 		private static readonly MessageParser<KurotatoLevelInfo> _parser = new MessageParser<KurotatoLevelInfo>(() => new KurotatoLevelInfo());
 
-		// Token: 0x040054AE RID: 21678
+		// Token: 0x040054B5 RID: 21685
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040054AF RID: 21679
+		// Token: 0x040054B6 RID: 21686
 		public const int LevelIdFieldNumber = 1;
 
-		// Token: 0x040054B0 RID: 21680
+		// Token: 0x040054B7 RID: 21687
 		private int levelId_;
 
-		// Token: 0x040054B1 RID: 21681
+		// Token: 0x040054B8 RID: 21688
 		public const int IsUnlockFieldNumber = 2;
 
-		// Token: 0x040054B2 RID: 21682
+		// Token: 0x040054B9 RID: 21689
 		private bool isUnlock_;
 
-		// Token: 0x040054B3 RID: 21683
+		// Token: 0x040054BA RID: 21690
 		public const int UnlockTimeFieldNumber = 3;
 
-		// Token: 0x040054B4 RID: 21684
+		// Token: 0x040054BB RID: 21691
 		private long unlockTime_;
 
-		// Token: 0x040054B5 RID: 21685
+		// Token: 0x040054BC RID: 21692
 		public const int IsFinishedFieldNumber = 4;
 
-		// Token: 0x040054B6 RID: 21686
+		// Token: 0x040054BD RID: 21693
 		private bool isFinished_;
 
-		// Token: 0x040054B7 RID: 21687
+		// Token: 0x040054BE RID: 21694
 		public const int EndlessLevelInfoFieldNumber = 5;
 
-		// Token: 0x040054B8 RID: 21688
+		// Token: 0x040054BF RID: 21695
 		private KurotatoEndlessLevelInfo endlessLevelInfo_;
 
-		// Token: 0x040054B9 RID: 21689
+		// Token: 0x040054C0 RID: 21696
 		public const int InstDataFieldNumber = 8;
 
-		// Token: 0x040054BA RID: 21690
+		// Token: 0x040054C1 RID: 21697
 		private KurotatoInstInfo instData_;
 	}
 }

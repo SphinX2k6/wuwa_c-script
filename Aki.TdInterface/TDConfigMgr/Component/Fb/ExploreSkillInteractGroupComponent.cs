@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CCA RID: 3274
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DAE RID: 3502
 	public class ExploreSkillInteractGroupComponent : IComponentBase
 	{
-		// Token: 0x06004ADF RID: 19167 RVA: 0x000BB5A5 File Offset: 0x000B97A5
+		// Token: 0x06004F9A RID: 20378 RVA: 0x000C61DD File Offset: 0x000C43DD
 		public static ExploreSkillInteractGroupComponent Create(IExploreSkillInteractGroupComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001708 RID: 5896
-		// (get) Token: 0x06004AE0 RID: 19168 RVA: 0x000BB5C4 File Offset: 0x000B97C4
+		// Token: 0x17001839 RID: 6201
+		// (get) Token: 0x06004F9B RID: 20379 RVA: 0x000C61FC File Offset: 0x000C43FC
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001709 RID: 5897
-		// (get) Token: 0x06004AE1 RID: 19169 RVA: 0x000BB5FC File Offset: 0x000B97FC
+		// Token: 0x1700183A RID: 6202
+		// (get) Token: 0x06004F9C RID: 20380 RVA: 0x000C6234 File Offset: 0x000C4434
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700170A RID: 5898
-		// (get) Token: 0x06004AE2 RID: 19170 RVA: 0x000BB614 File Offset: 0x000B9814
+		// Token: 0x1700183B RID: 6203
+		// (get) Token: 0x06004F9D RID: 20381 RVA: 0x000C624C File Offset: 0x000C444C
 		public virtual List<IExploreSkillInteract> ExploreSkillInteractList
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002ADD RID: 10973
+		// Token: 0x04002D63 RID: 11619
 		private IExploreSkillInteractGroupComponent Instance;
 
-		// Token: 0x04002ADE RID: 10974
+		// Token: 0x04002D64 RID: 11620
 		private List<IExploreSkillInteract> _ExploreSkillInteractListCache;
 
-		// Token: 0x04002ADF RID: 10975
+		// Token: 0x04002D65 RID: 11621
 		private bool _ExploreSkillInteractListInited;
 	}
 }

@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E1C RID: 19996
+	// Token: 0x02003DE5 RID: 15845
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RogueRoleSelectionItemGrid : LoopScrollMediumItemGrid<RoleDataBase>
 	{
-		// Token: 0x0603393C RID: 211260 RVA: 0x00C0F6A8 File Offset: 0x00C0D8A8
+		// Token: 0x060287A7 RID: 165799 RVA: 0x00B58BE0 File Offset: 0x00B56DE0
 		protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 		{
 			int dataId = data.GetDataId();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x0603393D RID: 211261 RVA: 0x00C0F788 File Offset: 0x00C0D988
+		// Token: 0x060287A8 RID: 165800 RVA: 0x00B58CC0 File Offset: 0x00B56EC0
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603393E RID: 211262 RVA: 0x00C0F7C0 File Offset: 0x00C0D9C0
+		// Token: 0x060287A9 RID: 165801 RVA: 0x00B58CF8 File Offset: 0x00B56EF8
 		public void SetAddLevelComponent(int addLevel, int maxLevel, bool isShow)
 		{
 			int num = Math.Max((this.Data as RoleDataBase).GetLevelData().GetLevel(), addLevel);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetComponentVisible(component, isShow);
 		}
 
-		// Token: 0x0603393F RID: 211263 RVA: 0x00C0F80E File Offset: 0x00C0DA0E
+		// Token: 0x060287AA RID: 165802 RVA: 0x00B58D46 File Offset: 0x00B56F46
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, true);

@@ -5,42 +5,42 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B12 RID: 19218
+	// Token: 0x02003ABA RID: 15034
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TowerDefenseEventMonsterModel : TowerDefenseEventEntityModel, ITowerDefenseEventMonsterInfo, ITowerDefenseEventCombatInfo, ITowerDefenseEventConfigInfo
 	{
-		// Token: 0x17007B35 RID: 31541
-		// (get) Token: 0x06031C57 RID: 203863 RVA: 0x00B8E196 File Offset: 0x00B8C396
-		// (set) Token: 0x06031C58 RID: 203864 RVA: 0x00B8E19E File Offset: 0x00B8C39E
+		// Token: 0x17004EE2 RID: 20194
+		// (get) Token: 0x060269E7 RID: 158183 RVA: 0x00AD2202 File Offset: 0x00AD0402
+		// (set) Token: 0x060269E8 RID: 158184 RVA: 0x00AD220A File Offset: 0x00AD040A
 		public int ConfigId { get; set; }
 
-		// Token: 0x17007B36 RID: 31542
-		// (get) Token: 0x06031C59 RID: 203865 RVA: 0x00B8E1A7 File Offset: 0x00B8C3A7
-		// (set) Token: 0x06031C5A RID: 203866 RVA: 0x00B8E1AF File Offset: 0x00B8C3AF
+		// Token: 0x17004EE3 RID: 20195
+		// (get) Token: 0x060269E9 RID: 158185 RVA: 0x00AD2213 File Offset: 0x00AD0413
+		// (set) Token: 0x060269EA RID: 158186 RVA: 0x00AD221B File Offset: 0x00AD041B
 		public ETowerDefenseEventMonsterDeathType DeathType { get; set; }
 
-		// Token: 0x17007B37 RID: 31543
-		// (get) Token: 0x06031C5B RID: 203867 RVA: 0x00B8E1B8 File Offset: 0x00B8C3B8
-		// (set) Token: 0x06031C5C RID: 203868 RVA: 0x00B8E1C0 File Offset: 0x00B8C3C0
+		// Token: 0x17004EE4 RID: 20196
+		// (get) Token: 0x060269EB RID: 158187 RVA: 0x00AD2224 File Offset: 0x00AD0424
+		// (set) Token: 0x060269EC RID: 158188 RVA: 0x00AD222C File Offset: 0x00AD042C
 		public int BuffRadius { get; set; }
 
-		// Token: 0x17007B38 RID: 31544
-		// (get) Token: 0x06031C5D RID: 203869 RVA: 0x00B8E1C9 File Offset: 0x00B8C3C9
-		// (set) Token: 0x06031C5E RID: 203870 RVA: 0x00B8E1D1 File Offset: 0x00B8C3D1
+		// Token: 0x17004EE5 RID: 20197
+		// (get) Token: 0x060269ED RID: 158189 RVA: 0x00AD2235 File Offset: 0x00AD0435
+		// (set) Token: 0x060269EE RID: 158190 RVA: 0x00AD223D File Offset: 0x00AD043D
 		public List<int> BuffIds { get; set; }
 
-		// Token: 0x17007B39 RID: 31545
-		// (get) Token: 0x06031C5F RID: 203871 RVA: 0x00B8E1DA File Offset: 0x00B8C3DA
-		// (set) Token: 0x06031C60 RID: 203872 RVA: 0x00B8E1E2 File Offset: 0x00B8C3E2
+		// Token: 0x17004EE6 RID: 20198
+		// (get) Token: 0x060269EF RID: 158191 RVA: 0x00AD2246 File Offset: 0x00AD0446
+		// (set) Token: 0x060269F0 RID: 158192 RVA: 0x00AD224E File Offset: 0x00AD044E
 		public List<int> SpawnIds { get; set; }
 
-		// Token: 0x17007B3A RID: 31546
-		// (get) Token: 0x06031C61 RID: 203873 RVA: 0x00B8E1EB File Offset: 0x00B8C3EB
-		// (set) Token: 0x06031C62 RID: 203874 RVA: 0x00B8E1F3 File Offset: 0x00B8C3F3
+		// Token: 0x17004EE7 RID: 20199
+		// (get) Token: 0x060269F1 RID: 158193 RVA: 0x00AD2257 File Offset: 0x00AD0457
+		// (set) Token: 0x060269F2 RID: 158194 RVA: 0x00AD225F File Offset: 0x00AD045F
 		public int PolluteRadius { get; set; }
 
-		// Token: 0x06031C63 RID: 203875 RVA: 0x00B8E1FC File Offset: 0x00B8C3FC
+		// Token: 0x060269F3 RID: 158195 RVA: 0x00AD2268 File Offset: 0x00AD0468
 		[NullableContext(1)]
 		public static TowerDefenseEventMonsterModel InitFromConfigId(int configId)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventMonsterModel;
 		}
 
-		// Token: 0x06031C64 RID: 203876 RVA: 0x00B8E220 File Offset: 0x00B8C420
+		// Token: 0x060269F4 RID: 158196 RVA: 0x00AD228C File Offset: 0x00AD048C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public new static ITowerDefenseEventCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventMonsterModel;
 		}
 
-		// Token: 0x06031C65 RID: 203877 RVA: 0x00B8E27A File Offset: 0x00B8C47A
+		// Token: 0x060269F5 RID: 158197 RVA: 0x00AD22E6 File Offset: 0x00AD04E6
 		public new static void Clear()
 		{
 			TowerDefenseEventMonsterModel.MonsterPool.Clear();
 		}
 
-		// Token: 0x06031C66 RID: 203878 RVA: 0x00B8E288 File Offset: 0x00B8C488
+		// Token: 0x060269F6 RID: 158198 RVA: 0x00AD22F4 File Offset: 0x00AD04F4
 		[NullableContext(1)]
 		protected override void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			this.PolluteRadius = 0;
 		}
 
-		// Token: 0x06031C67 RID: 203879 RVA: 0x00B8E2E4 File Offset: 0x00B8C4E4
+		// Token: 0x060269F7 RID: 158199 RVA: 0x00AD2350 File Offset: 0x00AD0550
 		[NullableContext(1)]
 		public override void Update(ITowerDefenseEventCombatInfo other)
 		{
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			this.PolluteRadius = 0;
 		}
 
-		// Token: 0x06031C68 RID: 203880 RVA: 0x00B8E375 File Offset: 0x00B8C575
+		// Token: 0x060269F8 RID: 158200 RVA: 0x00AD23E1 File Offset: 0x00AD05E1
 		public override void Reset()
 		{
 			base.Reset();
@@ -124,14 +124,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			this.PolluteRadius = 0;
 		}
 
-		// Token: 0x06031C69 RID: 203881 RVA: 0x00B8E3A7 File Offset: 0x00B8C5A7
+		// Token: 0x060269F9 RID: 158201 RVA: 0x00AD2413 File Offset: 0x00AD0613
 		public override void Release()
 		{
 			this.Reset();
 			TowerDefenseEventMonsterModel.MonsterPool.Put(this);
 		}
 
-		// Token: 0x06031C6A RID: 203882 RVA: 0x00B8E3BB File Offset: 0x00B8C5BB
+		// Token: 0x060269FA RID: 158202 RVA: 0x00AD2427 File Offset: 0x00AD0627
 		[NullableContext(1)]
 		public new ITowerDefenseEventCombatInfo Clone()
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventMonsterModel;
 		}
 
-		// Token: 0x0401A91A RID: 108826
+		// Token: 0x0401526C RID: 86636
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Pool<TowerDefenseEventMonsterModel> MonsterPool = new Pool<TowerDefenseEventMonsterModel>(100, () => new TowerDefenseEventMonsterModel(), null);

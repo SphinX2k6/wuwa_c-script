@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022E8 RID: 8936
+	// Token: 0x02002559 RID: 9561
 	public class EClientSetSeasonStateTypeJsonConverter : JsonConverter<EClientSetSeasonStateType>
 	{
-		// Token: 0x0600C394 RID: 50068 RVA: 0x001C9260 File Offset: 0x001C7460
+		// Token: 0x0600CF6C RID: 53100 RVA: 0x001E1188 File Offset: 0x001DF388
 		public override EClientSetSeasonStateType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EClientSetSeasonStateTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C395 RID: 50069 RVA: 0x001C9284 File Offset: 0x001C7484
+		// Token: 0x0600CF6D RID: 53101 RVA: 0x001E11AC File Offset: 0x001DF3AC
 		public override void Write(Utf8JsonWriter writer, EClientSetSeasonStateType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

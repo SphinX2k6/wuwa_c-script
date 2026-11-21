@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ECA RID: 3786
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FE0 RID: 4064
 	public class IAreaQuestTracking
 	{
-		// Token: 0x06005396 RID: 21398 RVA: 0x000CD97C File Offset: 0x000CBB7C
+		// Token: 0x06005912 RID: 22802 RVA: 0x000D9B24 File Offset: 0x000D7D24
 		private IAreaQuestTracking_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005397 RID: 21399 RVA: 0x000CD9B4 File Offset: 0x000CBBB4
+		// Token: 0x06005913 RID: 22803 RVA: 0x000D9B5C File Offset: 0x000D7D5C
 		public static IAreaQuestTracking Create([Nullable(2)] IAreaQuestTracking instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005398 RID: 21400 RVA: 0x000CD9C7 File Offset: 0x000CBBC7
+		// Token: 0x06005914 RID: 22804 RVA: 0x000D9B6F File Offset: 0x000D7D6F
 		public static IAreaQuestTracking CreateFromSetValue([Nullable(2)] IAreaQuestTracking_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005399 RID: 21401 RVA: 0x000CD9DA File Offset: 0x000CBBDA
+		// Token: 0x06005915 RID: 22805 RVA: 0x000D9B82 File Offset: 0x000D7D82
 		public IAreaQuestTracking_SetValue ToSetValue()
 		{
 			return new IAreaQuestTracking_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C1B RID: 7195
-		// (get) Token: 0x0600539A RID: 21402 RVA: 0x000CDA05 File Offset: 0x000CBC05
-		// (set) Token: 0x0600539B RID: 21403 RVA: 0x000CDA30 File Offset: 0x000CBC30
+		// Token: 0x17001DB3 RID: 7603
+		// (get) Token: 0x06005916 RID: 22806 RVA: 0x000D9BAD File Offset: 0x000D7DAD
+		// (set) Token: 0x06005917 RID: 22807 RVA: 0x000D9BD8 File Offset: 0x000D7DD8
 		public virtual int QuestId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C1C RID: 7196
-		// (get) Token: 0x0600539C RID: 21404 RVA: 0x000CDA3E File Offset: 0x000CBC3E
-		// (set) Token: 0x0600539D RID: 21405 RVA: 0x000CDA69 File Offset: 0x000CBC69
+		// Token: 0x17001DB4 RID: 7604
+		// (get) Token: 0x06005918 RID: 22808 RVA: 0x000D9BE6 File Offset: 0x000D7DE6
+		// (set) Token: 0x06005919 RID: 22809 RVA: 0x000D9C11 File Offset: 0x000D7E11
 		public virtual int NodeId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C1D RID: 7197
-		// (get) Token: 0x0600539E RID: 21406 RVA: 0x000CDA77 File Offset: 0x000CBC77
-		// (set) Token: 0x0600539F RID: 21407 RVA: 0x000CDA9E File Offset: 0x000CBC9E
+		// Token: 0x17001DB5 RID: 7605
+		// (get) Token: 0x0600591A RID: 22810 RVA: 0x000D9C1F File Offset: 0x000D7E1F
+		// (set) Token: 0x0600591B RID: 22811 RVA: 0x000D9C46 File Offset: 0x000D7E46
 		public virtual List<int> AreaIds
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032A1 RID: 12961
+		// Token: 0x040035AE RID: 13742
 		[Nullable(2)]
 		protected IAreaQuestTracking FbInstance;
 
-		// Token: 0x040032A2 RID: 12962
+		// Token: 0x040035AF RID: 13743
 		[Nullable(2)]
 		protected IAreaQuestTracking_SetValue PocoInterface;
 	}

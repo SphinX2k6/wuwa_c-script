@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D3C RID: 3388
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E36 RID: 3638
 	public class ITriggeredConfig
 	{
-		// Token: 0x06004D42 RID: 19778 RVA: 0x000C03E2 File Offset: 0x000BE5E2
+		// Token: 0x0600525E RID: 21086 RVA: 0x000CBB26 File Offset: 0x000C9D26
 		public static ITriggeredConfig Create(ITriggeredConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001887 RID: 6279
-		// (get) Token: 0x06004D43 RID: 19779 RVA: 0x000C0401 File Offset: 0x000BE601
+		// Token: 0x170019ED RID: 6637
+		// (get) Token: 0x0600525F RID: 21087 RVA: 0x000CBB45 File Offset: 0x000C9D45
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001888 RID: 6280
-		// (get) Token: 0x06004D44 RID: 19780 RVA: 0x000C0438 File Offset: 0x000BE638
+		// Token: 0x170019EE RID: 6638
+		// (get) Token: 0x06005260 RID: 21088 RVA: 0x000CBB7C File Offset: 0x000C9D7C
 		public virtual int? MaxTriggerTimes
 		{
 			get
@@ -57,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001889 RID: 6281
-		// (get) Token: 0x06004D45 RID: 19781 RVA: 0x000C0470 File Offset: 0x000BE670
+		// Token: 0x170019EF RID: 6639
+		// (get) Token: 0x06005261 RID: 21089 RVA: 0x000CBBB4 File Offset: 0x000C9DB4
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700188A RID: 6282
-		// (get) Token: 0x06004D46 RID: 19782 RVA: 0x000C04DC File Offset: 0x000BE6DC
+		// Token: 0x170019F0 RID: 6640
+		// (get) Token: 0x06005262 RID: 21090 RVA: 0x000CBC20 File Offset: 0x000C9E20
 		public virtual bool? OnlineDisableTip
 		{
 			get
@@ -92,20 +90,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C4B RID: 11339
+		// Token: 0x04002F0B RID: 12043
 		private ITriggeredConfig Instance;
 
-		// Token: 0x04002C4C RID: 11340
+		// Token: 0x04002F0C RID: 12044
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002C4D RID: 11341
+		// Token: 0x04002F0D RID: 12045
 		private bool _ConditionInited;
 
-		// Token: 0x04002C4E RID: 11342
+		// Token: 0x04002F0E RID: 12046
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002C4F RID: 11343
+		// Token: 0x04002F0F RID: 12047
 		private bool _ActionsInited;
 	}
 }

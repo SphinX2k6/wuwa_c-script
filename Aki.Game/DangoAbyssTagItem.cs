@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A5E RID: 6750
+// Token: 0x02000F1D RID: 3869
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class DangoAbyssTagItem : GridProxyAbstract<DangoAbyssDefine.DangoAbyssTagData>
 {
-	// Token: 0x0600C6C6 RID: 50886 RVA: 0x002D3AF0 File Offset: 0x002D1CF0
+	// Token: 0x06009AD6 RID: 39638 RVA: 0x002DEBEC File Offset: 0x002DCDEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,7 +30,7 @@ public class DangoAbyssTagItem : GridProxyAbstract<DangoAbyssDefine.DangoAbyssTa
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C6C7 RID: 50887 RVA: 0x002D3B7C File Offset: 0x002D1D7C
+	// Token: 0x06009AD7 RID: 39639 RVA: 0x002DEC78 File Offset: 0x002DCE78
 	[NullableContext(1)]
 	public override void Refresh(DangoAbyssDefine.DangoAbyssTagData data, bool isSelected, int gridIndex)
 	{
@@ -42,17 +42,17 @@ public class DangoAbyssTagItem : GridProxyAbstract<DangoAbyssDefine.DangoAbyssTa
 		base.GetText(2).SetText(formatAttributeValueByTagId, true);
 	}
 
-	// Token: 0x04005B95 RID: 23445
+	// Token: 0x04005C64 RID: 23652
 	public bool GetValueByTips;
 
-	// Token: 0x02007FAD RID: 32685
+	// Token: 0x0200713C RID: 28988
 	private enum EComponent
 	{
-		// Token: 0x04029B01 RID: 170753
+		// Token: 0x04024E3E RID: 151102
 		SpriteBg,
-		// Token: 0x04029B02 RID: 170754
+		// Token: 0x04024E3F RID: 151103
 		NameText,
-		// Token: 0x04029B03 RID: 170755
+		// Token: 0x04024E40 RID: 151104
 		DescText
 	}
 }

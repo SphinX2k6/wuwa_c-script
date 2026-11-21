@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B48 RID: 2888
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C16 RID: 3094
 	public class IRenderTrajectoryConfig
 	{
-		// Token: 0x06004288 RID: 17032 RVA: 0x000AA0CD File Offset: 0x000A82CD
+		// Token: 0x060046E1 RID: 18145 RVA: 0x000B4191 File Offset: 0x000B2391
 		public static IRenderTrajectoryConfig Create(IRenderTrajectoryConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011B5 RID: 4533
-		// (get) Token: 0x06004289 RID: 17033 RVA: 0x000AA0EC File Offset: 0x000A82EC
+		// Token: 0x170012B0 RID: 4784
+		// (get) Token: 0x060046E2 RID: 18146 RVA: 0x000B41B0 File Offset: 0x000B23B0
 		public virtual float Time
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011B6 RID: 4534
-		// (get) Token: 0x0600428A RID: 17034 RVA: 0x000AA0F9 File Offset: 0x000A82F9
+		// Token: 0x170012B1 RID: 4785
+		// (get) Token: 0x060046E3 RID: 18147 RVA: 0x000B41BD File Offset: 0x000B23BD
 		public virtual string Effect
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002579 RID: 9593
+		// Token: 0x040027C1 RID: 10177
 		private IRenderTrajectoryConfig Instance;
 	}
 }

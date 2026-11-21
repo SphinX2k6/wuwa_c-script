@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000185 RID: 389
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200019C RID: 412
 	public class Graph3dComponent : IComponentBase
 	{
-		// Token: 0x06000570 RID: 1392 RVA: 0x000207A0 File Offset: 0x0001E9A0
+		// Token: 0x06000584 RID: 1412 RVA: 0x0002137C File Offset: 0x0001F57C
 		private Graph3dComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000571 RID: 1393 RVA: 0x000207D8 File Offset: 0x0001E9D8
+		// Token: 0x06000585 RID: 1413 RVA: 0x000213B4 File Offset: 0x0001F5B4
 		public static Graph3dComponent Create([Nullable(2)] Graph3dComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000572 RID: 1394 RVA: 0x000207EB File Offset: 0x0001E9EB
+		// Token: 0x06000586 RID: 1414 RVA: 0x000213C7 File Offset: 0x0001F5C7
 		public static Graph3dComponent CreateFromSetValue([Nullable(2)] Graph3dComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000573 RID: 1395 RVA: 0x000207FE File Offset: 0x0001E9FE
+		// Token: 0x06000587 RID: 1415 RVA: 0x000213DA File Offset: 0x0001F5DA
 		public new Graph3dComponent_SetValue ToSetValue()
 		{
 			return new Graph3dComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001CE RID: 462
-		// (get) Token: 0x06000574 RID: 1396 RVA: 0x0002082C File Offset: 0x0001EA2C
-		// (set) Token: 0x06000575 RID: 1397 RVA: 0x00020866 File Offset: 0x0001EA66
+		// Token: 0x170001D5 RID: 469
+		// (get) Token: 0x06000588 RID: 1416 RVA: 0x00021408 File Offset: 0x0001F608
+		// (set) Token: 0x06000589 RID: 1417 RVA: 0x00021442 File Offset: 0x0001F642
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001CF RID: 463
-		// (get) Token: 0x06000576 RID: 1398 RVA: 0x00020874 File Offset: 0x0001EA74
-		// (set) Token: 0x06000577 RID: 1399 RVA: 0x0002089E File Offset: 0x0001EA9E
+		// Token: 0x170001D6 RID: 470
+		// (get) Token: 0x0600058A RID: 1418 RVA: 0x00021450 File Offset: 0x0001F650
+		// (set) Token: 0x0600058B RID: 1419 RVA: 0x0002147A File Offset: 0x0001F67A
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001D0 RID: 464
-		// (get) Token: 0x06000578 RID: 1400 RVA: 0x000208AC File Offset: 0x0001EAAC
-		// (set) Token: 0x06000579 RID: 1401 RVA: 0x0002090D File Offset: 0x0001EB0D
+		// Token: 0x170001D7 RID: 471
+		// (get) Token: 0x0600058C RID: 1420 RVA: 0x00021488 File Offset: 0x0001F688
+		// (set) Token: 0x0600058D RID: 1421 RVA: 0x000214E9 File Offset: 0x0001F6E9
 		public virtual IGraph3dNormal GraphConfig
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400076A RID: 1898
+		// Token: 0x040007C0 RID: 1984
 		[Nullable(2)]
 		protected new Graph3dComponent FbInstance;
 
-		// Token: 0x0400076B RID: 1899
+		// Token: 0x040007C1 RID: 1985
 		[Nullable(2)]
 		protected new Graph3dComponent_SetValue PocoInterface;
 
-		// Token: 0x0400076C RID: 1900
+		// Token: 0x040007C2 RID: 1986
 		private IGraph3dNormal _GraphConfigCache;
 
-		// Token: 0x0400076D RID: 1901
+		// Token: 0x040007C3 RID: 1987
 		private bool _GraphConfigInited;
 	}
 }

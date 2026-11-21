@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200202C RID: 8236
+// Token: 0x020014FF RID: 5375
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<KeySettingRowData>
 {
-	// Token: 0x060102A0 RID: 66208 RVA: 0x003F0148 File Offset: 0x003EE348
+	// Token: 0x0600D708 RID: 55048 RVA: 0x003FC740 File Offset: 0x003FA940
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		};
 	}
 
-	// Token: 0x060102A1 RID: 66209 RVA: 0x003F01A4 File Offset: 0x003EE3A4
+	// Token: 0x0600D709 RID: 55049 RVA: 0x003FC79C File Offset: 0x003FA99C
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -37,7 +37,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		this.SetActive(true);
 	}
 
-	// Token: 0x060102A2 RID: 66210 RVA: 0x003F0208 File Offset: 0x003EE408
+	// Token: 0x0600D70A RID: 55050 RVA: 0x003FC800 File Offset: 0x003FAA00
 	protected override void OnBeforeDestroy()
 	{
 		this.KeySettingRowData = null;
@@ -52,7 +52,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		}
 	}
 
-	// Token: 0x060102A3 RID: 66211 RVA: 0x003F027C File Offset: 0x003EE47C
+	// Token: 0x0600D70B RID: 55051 RVA: 0x003FC874 File Offset: 0x003FAA74
 	public UniTask Init(UUIItem actor)
 	{
 		CommonKeySettingRowContainerItem.<Init>d__7 <Init>d__;
@@ -64,7 +64,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060102A4 RID: 66212 RVA: 0x003F02C8 File Offset: 0x003EE4C8
+	// Token: 0x0600D70C RID: 55052 RVA: 0x003FC8C0 File Offset: 0x003FAAC0
 	public void Update(KeySettingRowData data, int index)
 	{
 		this.KeySettingRowData = data;
@@ -98,12 +98,12 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		this.SetToggleState(data.IsExpandDetail);
 	}
 
-	// Token: 0x060102A5 RID: 66213 RVA: 0x003F0372 File Offset: 0x003EE572
+	// Token: 0x0600D70D RID: 55053 RVA: 0x003FC96A File Offset: 0x003FAB6A
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x060102A6 RID: 66214 RVA: 0x003F0374 File Offset: 0x003EE574
+	// Token: 0x0600D70E RID: 55054 RVA: 0x003FC96C File Offset: 0x003FAB6C
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(KeySettingRowData data)
 	{
@@ -119,7 +119,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		return base.GetItem(2).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x060102A7 RID: 66215 RVA: 0x003F03B8 File Offset: 0x003EE5B8
+	// Token: 0x0600D70F RID: 55055 RVA: 0x003FC9B0 File Offset: 0x003FABB0
 	private UniTask NewKeySettingRowKeyItem()
 	{
 		CommonKeySettingRowContainerItem.<NewKeySettingRowKeyItem>d__11 <NewKeySettingRowKeyItem>d__;
@@ -130,7 +130,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		return <NewKeySettingRowKeyItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060102A8 RID: 66216 RVA: 0x003F03FC File Offset: 0x003EE5FC
+	// Token: 0x0600D710 RID: 55056 RVA: 0x003FC9F4 File Offset: 0x003FABF4
 	private UniTask NewKeySettingRowTypeItem()
 	{
 		CommonKeySettingRowContainerItem.<NewKeySettingRowTypeItem>d__12 <NewKeySettingRowTypeItem>d__;
@@ -141,7 +141,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		return <NewKeySettingRowTypeItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060102A9 RID: 66217 RVA: 0x003F043F File Offset: 0x003EE63F
+	// Token: 0x0600D711 RID: 55057 RVA: 0x003FCA37 File Offset: 0x003FAC37
 	private void SetToggleState(bool bChecked)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -152,7 +152,7 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		extendToggle.SetToggleState(bChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060102AA RID: 66218 RVA: 0x003F045D File Offset: 0x003EE65D
+	// Token: 0x0600D712 RID: 55058 RVA: 0x003FCA55 File Offset: 0x003FAC55
 	private void OnStateChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_UnChecked)
@@ -177,41 +177,41 @@ public class CommonKeySettingRowContainerItem : UiPanelBase, IDynamicScrollItem<
 		}
 	}
 
-	// Token: 0x060102AB RID: 66219 RVA: 0x003F0485 File Offset: 0x003EE685
+	// Token: 0x0600D713 RID: 55059 RVA: 0x003FCA7D File Offset: 0x003FAC7D
 	private void OnHover()
 	{
 		KeySettingViewModel.HoverKey(this.KeySettingRowData);
 	}
 
-	// Token: 0x060102AC RID: 66220 RVA: 0x003F0492 File Offset: 0x003EE692
+	// Token: 0x0600D714 RID: 55060 RVA: 0x003FCA8A File Offset: 0x003FAC8A
 	private void OnUnHover()
 	{
 		KeySettingViewModel.UnHoverKey(this.KeySettingRowData);
 	}
 
-	// Token: 0x04007782 RID: 30594
+	// Token: 0x0400786B RID: 30827
 	[Nullable(2)]
 	public KeySettingRowData KeySettingRowData;
 
-	// Token: 0x04007783 RID: 30595
+	// Token: 0x0400786C RID: 30828
 	[Nullable(2)]
 	private CommonKeySettingRowKeyItem KeySettingRowKeyItem;
 
-	// Token: 0x04007784 RID: 30596
+	// Token: 0x0400786D RID: 30829
 	[Nullable(2)]
 	private CommonKeySettingRowTypeItem KeySettingRowTypeItem;
 
-	// Token: 0x02008625 RID: 34341
+	// Token: 0x020077AC RID: 30636
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402BA74 RID: 178804
+		// Token: 0x04026D83 RID: 159107
 		public const int Toggle = 0;
 
-		// Token: 0x0402BA75 RID: 178805
+		// Token: 0x04026D84 RID: 159108
 		public const int KeyTypeItem = 1;
 
-		// Token: 0x0402BA76 RID: 178806
+		// Token: 0x04026D85 RID: 159109
 		public const int KeySettingItem = 2;
 	}
 }

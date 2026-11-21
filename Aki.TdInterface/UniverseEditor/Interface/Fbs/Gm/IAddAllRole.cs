@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004633 RID: 17971
+	// Token: 0x02004A9B RID: 19099
 	public struct IAddAllRole : IFlatbufferObject
 	{
-		// Token: 0x17007F87 RID: 32647
-		// (get) Token: 0x0601B375 RID: 111477 RVA: 0x003DFEF5 File Offset: 0x003DE0F5
+		// Token: 0x170085C8 RID: 34248
+		// (get) Token: 0x0601CB4A RID: 117578 RVA: 0x0040C191 File Offset: 0x0040A391
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B376 RID: 111478 RVA: 0x003DFF02 File Offset: 0x003DE102
+		// Token: 0x0601CB4B RID: 117579 RVA: 0x0040C19E File Offset: 0x0040A39E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B377 RID: 111479 RVA: 0x003DFF0C File Offset: 0x003DE10C
+		// Token: 0x0601CB4C RID: 117580 RVA: 0x0040C1A8 File Offset: 0x0040A3A8
 		public static IAddAllRole GetRootAsIAddAllRole(ByteBuffer _bb)
 		{
 			return IAddAllRole.GetRootAsIAddAllRole(_bb, default(IAddAllRole));
 		}
 
-		// Token: 0x0601B378 RID: 111480 RVA: 0x003DFF28 File Offset: 0x003DE128
+		// Token: 0x0601CB4D RID: 117581 RVA: 0x0040C1C4 File Offset: 0x0040A3C4
 		public static IAddAllRole GetRootAsIAddAllRole(ByteBuffer _bb, IAddAllRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B379 RID: 111481 RVA: 0x003DFF45 File Offset: 0x003DE145
+		// Token: 0x0601CB4E RID: 117582 RVA: 0x0040C1E1 File Offset: 0x0040A3E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B37A RID: 111482 RVA: 0x003DFF54 File Offset: 0x003DE154
+		// Token: 0x0601CB4F RID: 117583 RVA: 0x0040C1F0 File Offset: 0x0040A3F0
 		public IAddAllRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007F88 RID: 32648
-		// (get) Token: 0x0601B37B RID: 111483 RVA: 0x003DFF64 File Offset: 0x003DE164
+		// Token: 0x170085C9 RID: 34249
+		// (get) Token: 0x0601CB50 RID: 117584 RVA: 0x0040C200 File Offset: 0x0040A400
 		public EGmCommand Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B37C RID: 111484 RVA: 0x003DFFA0 File Offset: 0x003DE1A0
+		// Token: 0x0601CB51 RID: 117585 RVA: 0x0040C23C File Offset: 0x0040A43C
 		public static Offset<IAddAllRole> CreateIAddAllRole(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IAddAllRole.EndIAddAllRole(builder);
 		}
 
-		// Token: 0x0601B37D RID: 111485 RVA: 0x003DFFB6 File Offset: 0x003DE1B6
+		// Token: 0x0601CB52 RID: 117586 RVA: 0x0040C252 File Offset: 0x0040A452
 		public static void StartIAddAllRole(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601B37E RID: 111486 RVA: 0x003DFFBF File Offset: 0x003DE1BF
+		// Token: 0x0601CB53 RID: 117587 RVA: 0x0040C25B File Offset: 0x0040A45B
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B37F RID: 111487 RVA: 0x003DFFCA File Offset: 0x003DE1CA
+		// Token: 0x0601CB54 RID: 117588 RVA: 0x0040C266 File Offset: 0x0040A466
 		public static Offset<IAddAllRole> EndIAddAllRole(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddAllRole>(builder.EndTable());
 		}
 
-		// Token: 0x0601B380 RID: 111488 RVA: 0x003DFFD8 File Offset: 0x003DE1D8
+		// Token: 0x0601CB55 RID: 117589 RVA: 0x0040C274 File Offset: 0x0040A474
 		public IAddAllRoleT UnPack()
 		{
 			IAddAllRoleT addAllRoleT = new IAddAllRoleT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return addAllRoleT;
 		}
 
-		// Token: 0x0601B381 RID: 111489 RVA: 0x003DFFF3 File Offset: 0x003DE1F3
+		// Token: 0x0601CB56 RID: 117590 RVA: 0x0040C28F File Offset: 0x0040A48F
 		public void UnPackTo(IAddAllRoleT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601B382 RID: 111490 RVA: 0x003E0004 File Offset: 0x003DE204
+		// Token: 0x0601CB57 RID: 117591 RVA: 0x0040C2A0 File Offset: 0x0040A4A0
 		public static Offset<IAddAllRole> Pack(FlatBufferBuilder builder, IAddAllRoleT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IAddAllRole.CreateIAddAllRole(builder, _o.Type);
 		}
 
-		// Token: 0x0400C7AA RID: 51114
+		// Token: 0x0400D1D9 RID: 53721
 		private Table __p;
 	}
 }

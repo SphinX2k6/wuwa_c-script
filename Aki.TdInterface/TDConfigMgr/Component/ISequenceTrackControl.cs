@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C0 RID: 1728
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000761 RID: 1889
 	public class ISequenceTrackControl : ITimelineTrackControlData
 	{
-		// Token: 0x06002524 RID: 9508 RVA: 0x000643F0 File Offset: 0x000625F0
+		// Token: 0x06002844 RID: 10308 RVA: 0x0006B460 File Offset: 0x00069660
 		private ISequenceTrackControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002525 RID: 9509 RVA: 0x00064428 File Offset: 0x00062628
+		// Token: 0x06002845 RID: 10309 RVA: 0x0006B498 File Offset: 0x00069698
 		public static ISequenceTrackControl Create([Nullable(2)] ISequenceTrackControl instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002526 RID: 9510 RVA: 0x0006443B File Offset: 0x0006263B
+		// Token: 0x06002846 RID: 10310 RVA: 0x0006B4AB File Offset: 0x000696AB
 		public static ISequenceTrackControl CreateFromSetValue([Nullable(2)] ISequenceTrackControl_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002527 RID: 9511 RVA: 0x0006444E File Offset: 0x0006264E
+		// Token: 0x06002847 RID: 10311 RVA: 0x0006B4BE File Offset: 0x000696BE
 		public new ISequenceTrackControl_SetValue ToSetValue()
 		{
 			return new ISequenceTrackControl_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009D1 RID: 2513
-		// (get) Token: 0x06002528 RID: 9512 RVA: 0x00064479 File Offset: 0x00062679
-		// (set) Token: 0x06002529 RID: 9513 RVA: 0x000644A4 File Offset: 0x000626A4
+		// Token: 0x17000A8F RID: 2703
+		// (get) Token: 0x06002848 RID: 10312 RVA: 0x0006B4E9 File Offset: 0x000696E9
+		// (set) Token: 0x06002849 RID: 10313 RVA: 0x0006B514 File Offset: 0x00069714
 		public override ETrackControlMode Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009D2 RID: 2514
-		// (get) Token: 0x0600252A RID: 9514 RVA: 0x000644B2 File Offset: 0x000626B2
-		// (set) Token: 0x0600252B RID: 9515 RVA: 0x000644DD File Offset: 0x000626DD
+		// Token: 0x17000A90 RID: 2704
+		// (get) Token: 0x0600284A RID: 10314 RVA: 0x0006B522 File Offset: 0x00069722
+		// (set) Token: 0x0600284B RID: 10315 RVA: 0x0006B54D File Offset: 0x0006974D
 		public virtual string Sequence
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009D3 RID: 2515
-		// (get) Token: 0x0600252C RID: 9516 RVA: 0x000644EC File Offset: 0x000626EC
-		// (set) Token: 0x0600252D RID: 9517 RVA: 0x0006457F File Offset: 0x0006277F
+		// Token: 0x17000A91 RID: 2705
+		// (get) Token: 0x0600284C RID: 10316 RVA: 0x0006B55C File Offset: 0x0006975C
+		// (set) Token: 0x0600284D RID: 10317 RVA: 0x0006B5EF File Offset: 0x000697EF
 		public virtual List<ISequenceTrackControlPoint> ControlPoints
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001969 RID: 6505
+		// Token: 0x04001B68 RID: 7016
 		[Nullable(2)]
 		protected new ISequenceTrackControl FbInstance;
 
-		// Token: 0x0400196A RID: 6506
+		// Token: 0x04001B69 RID: 7017
 		[Nullable(2)]
 		protected new ISequenceTrackControl_SetValue PocoInterface;
 
-		// Token: 0x0400196B RID: 6507
+		// Token: 0x04001B6A RID: 7018
 		private List<ISequenceTrackControlPoint> _ControlPointsCache;
 
-		// Token: 0x0400196C RID: 6508
+		// Token: 0x04001B6B RID: 7019
 		private bool _ControlPointsInited;
 	}
 }

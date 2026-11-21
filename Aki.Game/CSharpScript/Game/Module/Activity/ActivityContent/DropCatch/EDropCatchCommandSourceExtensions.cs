@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066D4 RID: 26324
+	// Token: 0x02005624 RID: 22052
 	public static class EDropCatchCommandSourceExtensions
 	{
-		// Token: 0x06041D0D RID: 269581 RVA: 0x00FF67F0 File Offset: 0x00FF49F0
+		// Token: 0x06036859 RID: 223321 RVA: 0x00F37BF4 File Offset: 0x00F35DF4
 		public static string ToEnumString(this EDropCatchCommandSource value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041D0E RID: 269582 RVA: 0x00FF6818 File Offset: 0x00FF4A18
+		// Token: 0x0603685A RID: 223322 RVA: 0x00F37C1C File Offset: 0x00F35E1C
 		public static EDropCatchCommandSource FromString(string name)
 		{
 			EDropCatchCommandSource result;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041D0F RID: 269583 RVA: 0x00FF6841 File Offset: 0x00FF4A41
+		// Token: 0x0603685B RID: 223323 RVA: 0x00F37C45 File Offset: 0x00F35E45
 		public static bool TryFromString(string name, out EDropCatchCommandSource value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return false;
 		}
 
-		// Token: 0x06041D10 RID: 269584 RVA: 0x00FF6866 File Offset: 0x00FF4A66
+		// Token: 0x0603685C RID: 223324 RVA: 0x00F37C6A File Offset: 0x00F35E6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041D11 RID: 269585 RVA: 0x00FF6876 File Offset: 0x00FF4A76
+		// Token: 0x0603685D RID: 223325 RVA: 0x00F37C7A File Offset: 0x00F35E7A
 		public static EDropCatchCommandSource[] GetValues()
 		{
 			return new EDropCatchCommandSource[1];
 		}
 
-		// Token: 0x06041D12 RID: 269586 RVA: 0x00FF687E File Offset: 0x00FF4A7E
+		// Token: 0x0603685E RID: 223326 RVA: 0x00F37C82 File Offset: 0x00F35E82
 		public static string[] GetNames()
 		{
 			return new string[]

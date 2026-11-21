@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F5 RID: 1269
+	// Token: 0x02000556 RID: 1366
 	public class IMeshNpcModel_SetValue
 	{
-		// Token: 0x040012E5 RID: 4837
+		// Token: 0x04001445 RID: 5189
 		public ENpcModelType Type;
 
-		// Token: 0x040012E6 RID: 4838
-		[Nullable(1)]
+		// Token: 0x04001446 RID: 5190
 		public string Mesh;
 	}
 }

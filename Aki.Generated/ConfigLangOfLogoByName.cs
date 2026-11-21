@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004C7 RID: 1223
+	// Token: 0x020004DD RID: 1245
 	public class ConfigLangOfLogoByName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CB5 RID: 7349 RVA: 0x000FB6B1 File Offset: 0x000F98B1
+		// Token: 0x06001D39 RID: 7481 RVA: 0x00101E05 File Offset: 0x00100005
 		static ConfigLangOfLogoByName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLangOfLogoByName.CreateStaticDefaultValue), new Action(ConfigLangOfLogoByName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CB6 RID: 7350 RVA: 0x000FB6D0 File Offset: 0x000F98D0
+		// Token: 0x06001D3A RID: 7482 RVA: 0x00101E24 File Offset: 0x00100024
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLangOfLogoByName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CB7 RID: 7351 RVA: 0x000FB74F File Offset: 0x000F994F
+		// Token: 0x06001D3B RID: 7483 RVA: 0x00101EA3 File Offset: 0x001000A3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLangOfLogoByName.LogPair = null;
 			ConfigLangOfLogoByName.HandleId = 0;
 		}
 
-		// Token: 0x06001CB8 RID: 7352 RVA: 0x000FB75D File Offset: 0x000F995D
+		// Token: 0x06001D3C RID: 7484 RVA: 0x00101EB1 File Offset: 0x001000B1
 		public static void Init()
 		{
 			ConfigLangOfLogoByName.HandleId = ConfigCommon.InitDataStatement(ConfigLangOfLogoByName.HandleId, "db_langoflogo.db", "select BinData from `LangOfLogo` where Name=?");
 		}
 
-		// Token: 0x06001CB9 RID: 7353 RVA: 0x000FB778 File Offset: 0x000F9978
+		// Token: 0x06001D3D RID: 7485 RVA: 0x00101ECC File Offset: 0x001000CC
 		public static LangOfLogo? GetConfig(string p0Name, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLangOfLogoByName.HandleId, ConfigLangOfLogoByName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new LangOfLogo?(rootAsLangOfLogo);
 		}
 
-		// Token: 0x04002155 RID: 8533
+		// Token: 0x040021EF RID: 8687
 		private const string DB = "db_langoflogo.db";
 
-		// Token: 0x04002156 RID: 8534
+		// Token: 0x040021F0 RID: 8688
 		private const string FILE = "l.Logo多语言表.xlsx";
 
-		// Token: 0x04002157 RID: 8535
+		// Token: 0x040021F1 RID: 8689
 		private const string TABLE = "LangOfLogo";
 
-		// Token: 0x04002158 RID: 8536
+		// Token: 0x040021F2 RID: 8690
 		private const string COMMAND = "select BinData from `LangOfLogo` where Name=?";
 
-		// Token: 0x04002159 RID: 8537
+		// Token: 0x040021F3 RID: 8691
 		private const string KEY_PREFIX = "LangOfLogoByName";
 
-		// Token: 0x0400215A RID: 8538
+		// Token: 0x040021F4 RID: 8692
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400215B RID: 8539
+		// Token: 0x040021F5 RID: 8693
 		private static int HandleId;
 	}
 }

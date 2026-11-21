@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A46 RID: 23110
+	// Token: 0x02006053 RID: 24659
 	public struct ITeleCtrlTriggerConfig : IFlatbufferObject
 	{
-		// Token: 0x1700ADD9 RID: 44505
-		// (get) Token: 0x060274C4 RID: 160964 RVA: 0x005685A2 File Offset: 0x005667A2
+		// Token: 0x1700B711 RID: 46865
+		// (get) Token: 0x06029A3C RID: 170556 RVA: 0x005AF5AE File Offset: 0x005AD7AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060274C5 RID: 160965 RVA: 0x005685AF File Offset: 0x005667AF
+		// Token: 0x06029A3D RID: 170557 RVA: 0x005AF5BB File Offset: 0x005AD7BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060274C6 RID: 160966 RVA: 0x005685B8 File Offset: 0x005667B8
+		// Token: 0x06029A3E RID: 170558 RVA: 0x005AF5C4 File Offset: 0x005AD7C4
 		public static ITeleCtrlTriggerConfig GetRootAsITeleCtrlTriggerConfig(ByteBuffer _bb)
 		{
 			return ITeleCtrlTriggerConfig.GetRootAsITeleCtrlTriggerConfig(_bb, default(ITeleCtrlTriggerConfig));
 		}
 
-		// Token: 0x060274C7 RID: 160967 RVA: 0x005685D4 File Offset: 0x005667D4
+		// Token: 0x06029A3F RID: 170559 RVA: 0x005AF5E0 File Offset: 0x005AD7E0
 		public static ITeleCtrlTriggerConfig GetRootAsITeleCtrlTriggerConfig(ByteBuffer _bb, ITeleCtrlTriggerConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060274C8 RID: 160968 RVA: 0x005685F1 File Offset: 0x005667F1
+		// Token: 0x06029A40 RID: 170560 RVA: 0x005AF5FD File Offset: 0x005AD7FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060274C9 RID: 160969 RVA: 0x00568600 File Offset: 0x00566800
+		// Token: 0x06029A41 RID: 170561 RVA: 0x005AF60C File Offset: 0x005AD80C
 		public ITeleCtrlTriggerConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ADDA RID: 44506
-		// (get) Token: 0x060274CA RID: 160970 RVA: 0x00568610 File Offset: 0x00566810
+		// Token: 0x1700B712 RID: 46866
+		// (get) Token: 0x06029A42 RID: 170562 RVA: 0x005AF61C File Offset: 0x005AD81C
 		public ETeleCtrlTriggerType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060274CB RID: 160971 RVA: 0x0056864C File Offset: 0x0056684C
+		// Token: 0x06029A43 RID: 170563 RVA: 0x005AF658 File Offset: 0x005AD858
 		public static Offset<ITeleCtrlTriggerConfig> CreateITeleCtrlTriggerConfig(FlatBufferBuilder builder, ETeleCtrlTriggerType Type = ETeleCtrlTriggerType.MechascoutJavelin)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITeleCtrlTriggerConfig.EndITeleCtrlTriggerConfig(builder);
 		}
 
-		// Token: 0x060274CC RID: 160972 RVA: 0x00568662 File Offset: 0x00566862
+		// Token: 0x06029A44 RID: 170564 RVA: 0x005AF66E File Offset: 0x005AD86E
 		public static void StartITeleCtrlTriggerConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060274CD RID: 160973 RVA: 0x0056866B File Offset: 0x0056686B
+		// Token: 0x06029A45 RID: 170565 RVA: 0x005AF677 File Offset: 0x005AD877
 		public static void AddType(FlatBufferBuilder builder, ETeleCtrlTriggerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060274CE RID: 160974 RVA: 0x00568676 File Offset: 0x00566876
+		// Token: 0x06029A46 RID: 170566 RVA: 0x005AF682 File Offset: 0x005AD882
 		public static Offset<ITeleCtrlTriggerConfig> EndITeleCtrlTriggerConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleCtrlTriggerConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060274CF RID: 160975 RVA: 0x00568684 File Offset: 0x00566884
+		// Token: 0x06029A47 RID: 170567 RVA: 0x005AF690 File Offset: 0x005AD890
 		public ITeleCtrlTriggerConfigT UnPack()
 		{
 			ITeleCtrlTriggerConfigT teleCtrlTriggerConfigT = new ITeleCtrlTriggerConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return teleCtrlTriggerConfigT;
 		}
 
-		// Token: 0x060274D0 RID: 160976 RVA: 0x0056869F File Offset: 0x0056689F
+		// Token: 0x06029A48 RID: 170568 RVA: 0x005AF6AB File Offset: 0x005AD8AB
 		public void UnPackTo(ITeleCtrlTriggerConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060274D1 RID: 160977 RVA: 0x005686B0 File Offset: 0x005668B0
+		// Token: 0x06029A49 RID: 170569 RVA: 0x005AF6BC File Offset: 0x005AD8BC
 		public static Offset<ITeleCtrlTriggerConfig> Pack(FlatBufferBuilder builder, ITeleCtrlTriggerConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITeleCtrlTriggerConfig.CreateITeleCtrlTriggerConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400F0C6 RID: 61638
+		// Token: 0x0400FDBD RID: 64957
 		private Table __p;
 	}
 }

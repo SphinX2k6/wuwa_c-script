@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x020001F1 RID: 497
+// Token: 0x020001F5 RID: 501
 public static class CameraAutoControllerConstants
 {
-	// Token: 0x04001307 RID: 4871
+	// Token: 0x0400134A RID: 4938
 	public const bool IsDebug = false;
 }

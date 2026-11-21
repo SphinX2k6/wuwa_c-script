@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.RoleUi;
@@ -9,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C04 RID: 7172
+// Token: 0x020010C3 RID: 4291
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -20,27 +19,27 @@ using UnrealEngine;
 })]
 public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataProvider, FormationContextValidator, ISlotPresenter>
 {
-	// Token: 0x0600D646 RID: 54854 RVA: 0x00318CD0 File Offset: 0x00316ED0
+	// Token: 0x0600AA59 RID: 43609 RVA: 0x00323FC0 File Offset: 0x003221C0
 	protected FormationFlavorViewBase(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x170011A6 RID: 4518
-	// (get) Token: 0x0600D647 RID: 54855 RVA: 0x00318D3F File Offset: 0x00316F3F
+	// Token: 0x170011CB RID: 4555
+	// (get) Token: 0x0600AA5A RID: 43610 RVA: 0x0032402F File Offset: 0x0032222F
 	protected override FormationDataProvider Provider { get; } = new FormationDataProvider();
 
-	// Token: 0x170011A7 RID: 4519
-	// (get) Token: 0x0600D648 RID: 54856 RVA: 0x00318D47 File Offset: 0x00316F47
+	// Token: 0x170011CC RID: 4556
+	// (get) Token: 0x0600AA5B RID: 43611 RVA: 0x00324037 File Offset: 0x00322237
 	protected override FormationContextValidator Validator { get; } = new FormationContextValidator();
 
-	// Token: 0x170011A8 RID: 4520
-	// (get) Token: 0x0600D649 RID: 54857
+	// Token: 0x170011CD RID: 4557
+	// (get) Token: 0x0600AA5C RID: 43612
 	protected abstract FormationActionKeys FormationActionKeys { get; }
 
-	// Token: 0x0600D64A RID: 54858
+	// Token: 0x0600AA5D RID: 43613
 	protected abstract UniTask CreateAllSlotsAsync();
 
-	// Token: 0x0600D64B RID: 54859 RVA: 0x00318D50 File Offset: 0x00316F50
+	// Token: 0x0600AA5E RID: 43614 RVA: 0x00324040 File Offset: 0x00322240
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FormationFlavorViewBase.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -51,7 +50,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D64C RID: 54860 RVA: 0x00318D94 File Offset: 0x00316F94
+	// Token: 0x0600AA5F RID: 43615 RVA: 0x00324084 File Offset: 0x00322284
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
 		FormationFlavorViewBase.<OnHandlePostLoadSceneAsync>d__26 <OnHandlePostLoadSceneAsync>d__;
@@ -63,7 +62,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D64D RID: 54861 RVA: 0x00318DE0 File Offset: 0x00316FE0
+	// Token: 0x0600AA60 RID: 43616 RVA: 0x003240D0 File Offset: 0x003222D0
 	protected override void OnBeforeShow()
 	{
 		this.Presenter.ActivateDragData();
@@ -112,7 +111,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.RefreshFormationSwitchToggleState();
 	}
 
-	// Token: 0x0600D64E RID: 54862 RVA: 0x00318ED4 File Offset: 0x003170D4
+	// Token: 0x0600AA61 RID: 43617 RVA: 0x003241C4 File Offset: 0x003223C4
 	protected override void OnStart()
 	{
 		RoleModel.Instance.StartGamePlayRoleEdit(ESkillBranchCacheType.Normal);
@@ -121,14 +120,14 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.TabCloseSequencePlayer = new LevelSequencePlayer(item);
 	}
 
-	// Token: 0x0600D64F RID: 54863 RVA: 0x00318F16 File Offset: 0x00317116
+	// Token: 0x0600AA62 RID: 43618 RVA: 0x00324206 File Offset: 0x00322406
 	protected override void OnAfterShow()
 	{
 		FormationModel.Instance.SetViewSwitching(false);
 		this.ReportSwitchLog();
 	}
 
-	// Token: 0x0600D650 RID: 54864 RVA: 0x00318F2C File Offset: 0x0031712C
+	// Token: 0x0600AA63 RID: 43619 RVA: 0x0032421C File Offset: 0x0032241C
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle formationSwitchToggle = this.FormationSwitchToggle;
@@ -168,7 +167,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.TabCloseSequencePlayer = null;
 	}
 
-	// Token: 0x0600D651 RID: 54865 RVA: 0x00318FFC File Offset: 0x003171FC
+	// Token: 0x0600AA64 RID: 43620 RVA: 0x003242EC File Offset: 0x003224EC
 	[NullableContext(2)]
 	protected override void OnRefreshRoleView(int[] needRefreshPosition = null)
 	{
@@ -180,7 +179,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.RefreshAllRoleView(this.EditFormationId, needRefreshPosition);
 	}
 
-	// Token: 0x0600D652 RID: 54866 RVA: 0x0031901C File Offset: 0x0031721C
+	// Token: 0x0600AA65 RID: 43621 RVA: 0x0032430C File Offset: 0x0032250C
 	[NullableContext(2)]
 	protected override void RefreshAllRoleView(int formationId, int[] needRefreshPosition = null)
 	{
@@ -205,7 +204,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D653 RID: 54867 RVA: 0x00319090 File Offset: 0x00317290
+	// Token: 0x0600AA66 RID: 43622 RVA: 0x00324380 File Offset: 0x00322580
 	[NullableContext(0)]
 	protected virtual UniTask<long?> RefreshAllRoleViewAsync(int formationId, [Nullable(2)] int[] needRefreshPosition = null)
 	{
@@ -219,7 +218,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <RefreshAllRoleViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D654 RID: 54868 RVA: 0x003190E4 File Offset: 0x003172E4
+	// Token: 0x0600AA67 RID: 43623 RVA: 0x003243D4 File Offset: 0x003225D4
 	protected override void RefreshRoleView(int formationId, int position)
 	{
 		IRoleSlotDisplayData roleSlotDisplayData = this.Provider.BuildSlotDisplayData(formationId, position);
@@ -231,7 +230,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.Presenter.Refresh(position, roleSlotDisplayData);
 	}
 
-	// Token: 0x0600D655 RID: 54869 RVA: 0x00319124 File Offset: 0x00317324
+	// Token: 0x0600AA68 RID: 43624 RVA: 0x00324414 File Offset: 0x00322614
 	protected override void RefreshConfirmButton()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -241,18 +240,28 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		FormationModel instance = FormationModel.Instance;
 		int editFormationId = this.EditFormationId;
 		int? currentFormationId = instance.CurrentFormationId;
-		bool flag2;
-		bool flag = flag2 = !(editFormationId == currentFormationId.GetValueOrDefault() & currentFormationId != null);
+		bool flag = !(editFormationId == currentFormationId.GetValueOrDefault() & currentFormationId != null);
+		bool flag2 = flag;
 		if (flag2 && !this.CanUseSpecialTrailRole)
 		{
-			flag2 = !instance.GetEditingRoleIdList(this.EditFormationId).Any((int id) => RoleUtils.IsSpecialTrialRole(id));
+			int[] editingRoleIdList = instance.GetEditingRoleIdList(this.EditFormationId);
+			bool flag3 = false;
+			for (int i = 0; i < editingRoleIdList.Length; i++)
+			{
+				if (RoleUtils.IsSpecialTrialRole(editingRoleIdList[i]))
+				{
+					flag3 = true;
+					break;
+				}
+			}
+			flag2 = !flag3;
 		}
 		base.GetButton(this.Keys.Confirm).SetSelfInteractive(flag2);
 		string textTableId = flag ? "EditBattleTeamFight" : "EditBattleTeamFighting";
 		LguiUtil.Instance.SetLocalText(base.GetText(this.Keys.ConfirmText), textTableId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600D656 RID: 54870 RVA: 0x003191ED File Offset: 0x003173ED
+	// Token: 0x0600AA69 RID: 43625 RVA: 0x003244E7 File Offset: 0x003226E7
 	protected override void OnClickConfirm()
 	{
 		if (this.WaitingClose)
@@ -267,7 +276,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.ShowLoading();
 	}
 
-	// Token: 0x0600D657 RID: 54871 RVA: 0x00319210 File Offset: 0x00317410
+	// Token: 0x0600AA6A RID: 43626 RVA: 0x00324508 File Offset: 0x00322708
 	protected override void OnClickClose()
 	{
 		if (this.WaitingClose)
@@ -284,7 +293,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.ShowLoading();
 	}
 
-	// Token: 0x0600D658 RID: 54872 RVA: 0x00319260 File Offset: 0x00317460
+	// Token: 0x0600AA6B RID: 43627 RVA: 0x00324558 File Offset: 0x00322758
 	protected override void OnClickQuickSelect()
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -315,7 +324,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		base.SetCloseButtonVisible(false);
 	}
 
-	// Token: 0x0600D659 RID: 54873 RVA: 0x00319374 File Offset: 0x00317574
+	// Token: 0x0600AA6C RID: 43628 RVA: 0x0032466C File Offset: 0x0032286C
 	private void OnQuickSelectHideFinished()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.RoleRootView);
@@ -331,7 +340,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D65A RID: 54874 RVA: 0x003193D8 File Offset: 0x003175D8
+	// Token: 0x0600AA6D RID: 43629 RVA: 0x003246D0 File Offset: 0x003228D0
 	protected void OnClickPresetForm()
 	{
 		if (this.WaitingClose || UiManager.Instance.IsViewOpen(EUiViewName.FormationEditView))
@@ -363,14 +372,14 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		});
 	}
 
-	// Token: 0x0600D65B RID: 54875 RVA: 0x00319493 File Offset: 0x00317693
+	// Token: 0x0600AA6E RID: 43630 RVA: 0x0032478B File Offset: 0x0032298B
 	private void SetFormationEditViewOpen(bool isOpen)
 	{
 		this.IsFormationEditViewOpen = isOpen;
 		this.RefreshFormationEditViewVisibility();
 	}
 
-	// Token: 0x0600D65C RID: 54876 RVA: 0x003194A4 File Offset: 0x003176A4
+	// Token: 0x0600AA6F RID: 43631 RVA: 0x0032479C File Offset: 0x0032299C
 	private void RefreshFormationEditViewVisibility()
 	{
 		bool flag = !this.IsFormationEditViewOpen;
@@ -381,7 +390,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.OnFormationEditViewOpenChanged(this.IsFormationEditViewOpen);
 	}
 
-	// Token: 0x0600D65D RID: 54877 RVA: 0x0031952C File Offset: 0x0031772C
+	// Token: 0x0600AA70 RID: 43632 RVA: 0x00324824 File Offset: 0x00322A24
 	protected void SetTabVisible(bool visible)
 	{
 		if (this.IsTabVisible == visible)
@@ -407,7 +416,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		tabCloseSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x0600D65E RID: 54878 RVA: 0x0031958C File Offset: 0x0031778C
+	// Token: 0x0600AA71 RID: 43633 RVA: 0x00324884 File Offset: 0x00322A84
 	protected void PlayTabStartSequence()
 	{
 		UUIItem item = base.GetItem(this.Keys.Tab);
@@ -434,12 +443,12 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		tabStartSequencePlayer2.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600D65F RID: 54879 RVA: 0x00319618 File Offset: 0x00317818
+	// Token: 0x0600AA72 RID: 43634 RVA: 0x00324910 File Offset: 0x00322B10
 	protected virtual void OnFormationEditViewOpenChanged(bool isOpen)
 	{
 	}
 
-	// Token: 0x0600D660 RID: 54880 RVA: 0x0031961A File Offset: 0x0031781A
+	// Token: 0x0600AA73 RID: 43635 RVA: 0x00324912 File Offset: 0x00322B12
 	private void OnFormationEditViewClosed()
 	{
 		if (!base.IsDestroyOrDestroying)
@@ -448,7 +457,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D661 RID: 54881 RVA: 0x0031962B File Offset: 0x0031782B
+	// Token: 0x0600AA74 RID: 43636 RVA: 0x00324923 File Offset: 0x00322B23
 	private void OnFormationEditViewConfirm()
 	{
 		if (!base.IsDestroyOrDestroying)
@@ -457,7 +466,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D662 RID: 54882 RVA: 0x0031963B File Offset: 0x0031783B
+	// Token: 0x0600AA75 RID: 43637 RVA: 0x00324933 File Offset: 0x00322B33
 	private void OnEditViewRenameFormation(int formationId)
 	{
 		if (this.EditFormationId == formationId)
@@ -471,7 +480,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D663 RID: 54883 RVA: 0x0031965C File Offset: 0x0031785C
+	// Token: 0x0600AA76 RID: 43638 RVA: 0x00324954 File Offset: 0x00322B54
 	protected void OnClickEditFormName()
 	{
 		if (this.WaitingClose)
@@ -493,7 +502,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		});
 	}
 
-	// Token: 0x0600D664 RID: 54884 RVA: 0x003196A8 File Offset: 0x003178A8
+	// Token: 0x0600AA77 RID: 43639 RVA: 0x003249A0 File Offset: 0x00322BA0
 	private bool OnEditViewSwitchFormation(int formationId)
 	{
 		if (this.WaitingClose)
@@ -521,7 +530,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return true;
 	}
 
-	// Token: 0x0600D665 RID: 54885 RVA: 0x0031972C File Offset: 0x0031792C
+	// Token: 0x0600AA78 RID: 43640 RVA: 0x00324A24 File Offset: 0x00322C24
 	protected UniTask RequestOnConfirm()
 	{
 		FormationFlavorViewBase.<RequestOnConfirm>d__51 <RequestOnConfirm>d__;
@@ -532,7 +541,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <RequestOnConfirm>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D666 RID: 54886 RVA: 0x00319770 File Offset: 0x00317970
+	// Token: 0x0600AA79 RID: 43641 RVA: 0x00324A68 File Offset: 0x00322C68
 	protected UniTask RequestOnClose()
 	{
 		FormationFlavorViewBase.<RequestOnClose>d__52 <RequestOnClose>d__;
@@ -543,7 +552,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <RequestOnClose>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D667 RID: 54887 RVA: 0x003197B4 File Offset: 0x003179B4
+	// Token: 0x0600AA7A RID: 43642 RVA: 0x00324AAC File Offset: 0x00322CAC
 	protected void ShowLoading()
 	{
 		if (this.DelayLoadingTimer == null)
@@ -565,7 +574,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D668 RID: 54888 RVA: 0x00319834 File Offset: 0x00317A34
+	// Token: 0x0600AA7B RID: 43643 RVA: 0x00324B2C File Offset: 0x00322D2C
 	protected UniTask WaitEntityAddBeforeClose()
 	{
 		FormationFlavorViewBase.<WaitEntityAddBeforeClose>d__54 <WaitEntityAddBeforeClose>d__;
@@ -576,7 +585,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <WaitEntityAddBeforeClose>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D669 RID: 54889 RVA: 0x00319877 File Offset: 0x00317A77
+	// Token: 0x0600AA7C RID: 43644 RVA: 0x00324B6F File Offset: 0x00322D6F
 	protected void CloseFormationView()
 	{
 		if (this.IsResetToBattle)
@@ -587,7 +596,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D66A RID: 54890 RVA: 0x00319894 File Offset: 0x00317A94
+	// Token: 0x0600AA7D RID: 43645 RVA: 0x00324B8C File Offset: 0x00322D8C
 	protected override bool IsAllowClose()
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -613,19 +622,22 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 		if (!this.CanUseSpecialTrailRole)
 		{
-			if (editingRoleIdList.Any((int id) => RoleUtils.IsSpecialTrialRole(id)))
+			for (int j = 0; j < editingRoleIdList.Length; j++)
 			{
-				return false;
+				if (RoleUtils.IsSpecialTrialRole(editingRoleIdList[j]))
+				{
+					return false;
+				}
 			}
 		}
 		return true;
 	}
 
-	// Token: 0x170011A9 RID: 4521
-	// (get) Token: 0x0600D66B RID: 54891 RVA: 0x00319943 File Offset: 0x00317B43
+	// Token: 0x170011CE RID: 4558
+	// (get) Token: 0x0600AA7E RID: 43646 RVA: 0x00324C31 File Offset: 0x00322E31
 	protected virtual EUiViewName RoleSelectViewName { get; } = EUiViewName.TeamRoleSelectView;
 
-	// Token: 0x0600D66C RID: 54892 RVA: 0x0031994C File Offset: 0x00317B4C
+	// Token: 0x0600AA7F RID: 43647 RVA: 0x00324C3C File Offset: 0x00322E3C
 	protected override void OnAddRoleButtonClicked(int position)
 	{
 		if (this.WaitingClose)
@@ -647,7 +659,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		base.SetCloseButtonVisible(false);
 	}
 
-	// Token: 0x0600D66D RID: 54893 RVA: 0x003199CC File Offset: 0x00317BCC
+	// Token: 0x0600AA80 RID: 43648 RVA: 0x00324CBC File Offset: 0x00322EBC
 	private int NormalizeEmptySlotPosition(int position)
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -665,7 +677,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return position;
 	}
 
-	// Token: 0x0600D66E RID: 54894 RVA: 0x00319A1C File Offset: 0x00317C1C
+	// Token: 0x0600AA81 RID: 43649 RVA: 0x00324D0C File Offset: 0x00322F0C
 	protected override TeamRoleSelectViewData GetRoleSelectViewData()
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -686,7 +698,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return teamRoleSelectViewData;
 	}
 
-	// Token: 0x0600D66F RID: 54895 RVA: 0x00319B14 File Offset: 0x00317D14
+	// Token: 0x0600AA82 RID: 43650 RVA: 0x00324E04 File Offset: 0x00323004
 	protected unsafe override void OnEnsureFormation(int roleId)
 	{
 		base.SetCloseButtonVisible(true);
@@ -737,7 +749,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		instance.SetEditingRoleId(this.EditFormationId, editingRolePosition, editingRoleId, true);
 	}
 
-	// Token: 0x0600D670 RID: 54896 RVA: 0x00319CE4 File Offset: 0x00317EE4
+	// Token: 0x0600AA83 RID: 43651 RVA: 0x00324FD4 File Offset: 0x003231D4
 	protected override void OnQuickSelectConfirm(int[] roleIdList)
 	{
 		base.SetCloseButtonVisible(true);
@@ -751,14 +763,14 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.PrepareQuickSelectLog(this.EditFormationId);
 	}
 
-	// Token: 0x0600D671 RID: 54897 RVA: 0x00319D38 File Offset: 0x00317F38
+	// Token: 0x0600AA84 RID: 43652 RVA: 0x00325028 File Offset: 0x00323228
 	protected override bool IsCurrentTab(int formationId)
 	{
 		int? currentFormationId = FormationModel.Instance.CurrentFormationId;
 		return formationId == currentFormationId.GetValueOrDefault() & currentFormationId != null;
 	}
 
-	// Token: 0x0600D672 RID: 54898 RVA: 0x00319D64 File Offset: 0x00317F64
+	// Token: 0x0600AA85 RID: 43653 RVA: 0x00325054 File Offset: 0x00323254
 	private void RefreshTeamBattleTips()
 	{
 		int maxFormationId = FormationConfig.Instance.GetMaxFormationId();
@@ -776,7 +788,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		}
 	}
 
-	// Token: 0x0600D673 RID: 54899 RVA: 0x00319DB0 File Offset: 0x00317FB0
+	// Token: 0x0600AA86 RID: 43654 RVA: 0x003250A0 File Offset: 0x003232A0
 	private void CreateFormationSwitchToggle()
 	{
 		int? descToggleItem = this.Keys.DescToggleItem;
@@ -804,7 +816,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		uuiitem.SetUIActive(false);
 	}
 
-	// Token: 0x0600D674 RID: 54900 RVA: 0x00319E34 File Offset: 0x00318034
+	// Token: 0x0600AA87 RID: 43655 RVA: 0x00325124 File Offset: 0x00323324
 	private void RefreshFormationSwitchToggleState()
 	{
 		EToggleState state = this.IsFormation3DView() ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked;
@@ -816,13 +828,13 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		formationSwitchToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600D675 RID: 54901 RVA: 0x00319E63 File Offset: 0x00318063
+	// Token: 0x0600AA88 RID: 43656 RVA: 0x00325153 File Offset: 0x00323353
 	private bool IsFormation3DView()
 	{
 		return this.ViewInfo.Name == EUiViewName.Formation3DView;
 	}
 
-	// Token: 0x0600D676 RID: 54902 RVA: 0x00319E7C File Offset: 0x0031807C
+	// Token: 0x0600AA89 RID: 43657 RVA: 0x0032516C File Offset: 0x0032336C
 	private void OnFormationSwitchToggleStateChange(EToggleState state)
 	{
 		if (this.WaitingClose || FormationModel.Instance.IsViewSwitching() || state == EToggleState.ETT_UnDetermined)
@@ -838,13 +850,13 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.SwitchFormationView(flag);
 	}
 
-	// Token: 0x0600D677 RID: 54903 RVA: 0x00319EBE File Offset: 0x003180BE
+	// Token: 0x0600AA8A RID: 43658 RVA: 0x003251AE File Offset: 0x003233AE
 	private void SwitchFormationView(bool use3DView)
 	{
 		this.SwitchFormationViewAsync(use3DView);
 	}
 
-	// Token: 0x0600D678 RID: 54904 RVA: 0x00319EC8 File Offset: 0x003180C8
+	// Token: 0x0600AA8B RID: 43659 RVA: 0x003251B8 File Offset: 0x003233B8
 	private UniTask SwitchFormationViewAsync(bool use3DView)
 	{
 		FormationFlavorViewBase.<SwitchFormationViewAsync>d__72 <SwitchFormationViewAsync>d__;
@@ -856,7 +868,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <SwitchFormationViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D679 RID: 54905 RVA: 0x00319F14 File Offset: 0x00318114
+	// Token: 0x0600AA8C RID: 43660 RVA: 0x00325204 File Offset: 0x00323404
 	private void ReportSwitchLog()
 	{
 		Team3DSwitchLogData openLogData = this.OpenLogData;
@@ -869,13 +881,13 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		this.ReportFormationLogAsync(openLogData, this.InitialRoleLoadPromise);
 	}
 
-	// Token: 0x0600D67A RID: 54906 RVA: 0x00319F5C File Offset: 0x0031815C
+	// Token: 0x0600AA8D RID: 43661 RVA: 0x0032524C File Offset: 0x0032344C
 	private void PrepareQuickSelectLog(int formationId)
 	{
 		this.QuickSelectLogData = this.CreateFormationLogData(3, formationId);
 	}
 
-	// Token: 0x0600D67B RID: 54907 RVA: 0x00319F6C File Offset: 0x0031816C
+	// Token: 0x0600AA8E RID: 43662 RVA: 0x0032525C File Offset: 0x0032345C
 	private Team3DSwitchLogData CreateFormationLogData(int type, int formationId)
 	{
 		Team3DSwitchLogData team3DSwitchLogData = new Team3DSwitchLogData();
@@ -894,7 +906,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return team3DSwitchLogData;
 	}
 
-	// Token: 0x0600D67C RID: 54908 RVA: 0x00319FD0 File Offset: 0x003181D0
+	// Token: 0x0600AA8F RID: 43663 RVA: 0x003252C0 File Offset: 0x003234C0
 	[NullableContext(0)]
 	private UniTask<long?> WaitRoleLoadAsync(UniTask<long?> roleLoadPromise)
 	{
@@ -906,7 +918,7 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <WaitRoleLoadAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D67D RID: 54909 RVA: 0x0031A014 File Offset: 0x00318214
+	// Token: 0x0600AA90 RID: 43664 RVA: 0x00325304 File Offset: 0x00323504
 	[NullableContext(0)]
 	private UniTask ReportFormationLogAsync([Nullable(1)] Team3DSwitchLogData logData, UniTask<long?> roleLoadPromise)
 	{
@@ -920,56 +932,56 @@ public abstract class FormationFlavorViewBase : FormationViewBase<FormationDataP
 		return <ReportFormationLogAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04006211 RID: 25105
+	// Token: 0x040062E3 RID: 25315
 	protected int GoBattleFormationId = -1;
 
-	// Token: 0x04006212 RID: 25106
+	// Token: 0x040062E4 RID: 25316
 	protected bool IsResetToBattle = true;
 
-	// Token: 0x04006213 RID: 25107
+	// Token: 0x040062E5 RID: 25317
 	[Nullable(2)]
 	protected TimerHandle DelayLoadingTimer;
 
-	// Token: 0x04006214 RID: 25108
+	// Token: 0x040062E6 RID: 25318
 	[Nullable(2)]
 	protected TimerHandle AutoCloseTimer;
 
-	// Token: 0x04006215 RID: 25109
+	// Token: 0x040062E7 RID: 25319
 	[Nullable(2)]
 	private UUIExtendToggle FormationSwitchToggle;
 
-	// Token: 0x04006216 RID: 25110
+	// Token: 0x040062E8 RID: 25320
 	private bool HasHandledInitial3dRoleViewAsync;
 
-	// Token: 0x04006217 RID: 25111
+	// Token: 0x040062E9 RID: 25321
 	private bool HasRefreshedRoleViewBeforeShowAsync;
 
-	// Token: 0x04006218 RID: 25112
+	// Token: 0x040062EA RID: 25322
 	private bool IsFormationEditViewOpen;
 
-	// Token: 0x04006219 RID: 25113
+	// Token: 0x040062EB RID: 25323
 	[Nullable(2)]
 	private LevelSequencePlayer TabStartSequencePlayer;
 
-	// Token: 0x0400621A RID: 25114
+	// Token: 0x040062EC RID: 25324
 	[Nullable(2)]
 	private LevelSequencePlayer TabCloseSequencePlayer;
 
-	// Token: 0x0400621B RID: 25115
+	// Token: 0x040062ED RID: 25325
 	private bool IsTabVisible = true;
 
-	// Token: 0x0400621C RID: 25116
+	// Token: 0x040062EE RID: 25326
 	private long ViewOpenStartTimeMs = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
-	// Token: 0x0400621D RID: 25117
+	// Token: 0x040062EF RID: 25327
 	[Nullable(2)]
 	private Team3DSwitchLogData OpenLogData;
 
-	// Token: 0x0400621E RID: 25118
+	// Token: 0x040062F0 RID: 25328
 	[Nullable(0)]
 	private UniTask<long?> InitialRoleLoadPromise = UniTask.FromResult<long?>(new long?(0L));
 
-	// Token: 0x0400621F RID: 25119
+	// Token: 0x040062F1 RID: 25329
 	[Nullable(2)]
 	private Team3DSwitchLogData QuickSelectLogData;
 }

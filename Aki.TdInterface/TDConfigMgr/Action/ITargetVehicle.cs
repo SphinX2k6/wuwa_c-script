@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F8E RID: 8078
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021CB RID: 8651
 	public class ITargetVehicle
 	{
-		// Token: 0x0600B1AE RID: 45486 RVA: 0x0019E7B8 File Offset: 0x0019C9B8
+		// Token: 0x0600BC92 RID: 48274 RVA: 0x001B484C File Offset: 0x001B2A4C
 		private ITargetVehicle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1AF RID: 45487 RVA: 0x0019E7F0 File Offset: 0x0019C9F0
+		// Token: 0x0600BC93 RID: 48275 RVA: 0x001B4884 File Offset: 0x001B2A84
 		public static ITargetVehicle Create([Nullable(2)] ITargetVehicle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1B0 RID: 45488 RVA: 0x0019E803 File Offset: 0x0019CA03
+		// Token: 0x0600BC94 RID: 48276 RVA: 0x001B4897 File Offset: 0x001B2A97
 		public static ITargetVehicle CreateFromSetValue([Nullable(2)] ITargetVehicle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1B1 RID: 45489 RVA: 0x0019E816 File Offset: 0x0019CA16
+		// Token: 0x0600BC95 RID: 48277 RVA: 0x001B48AA File Offset: 0x001B2AAA
 		public ITargetVehicle_SetValue ToSetValue()
 		{
 			return new ITargetVehicle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036DA RID: 14042
-		// (get) Token: 0x0600B1B2 RID: 45490 RVA: 0x0019E829 File Offset: 0x0019CA29
-		// (set) Token: 0x0600B1B3 RID: 45491 RVA: 0x0019E854 File Offset: 0x0019CA54
+		// Token: 0x170039A8 RID: 14760
+		// (get) Token: 0x0600BC96 RID: 48278 RVA: 0x001B48BD File Offset: 0x001B2ABD
+		// (set) Token: 0x0600BC97 RID: 48279 RVA: 0x001B48E8 File Offset: 0x001B2AE8
 		public virtual ETargetVehicle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B67 RID: 27495
+		// Token: 0x04007155 RID: 29013
 		[Nullable(2)]
 		protected ITargetVehicle FbInstance;
 
-		// Token: 0x04006B68 RID: 27496
+		// Token: 0x04007156 RID: 29014
 		[Nullable(2)]
 		protected ITargetVehicle_SetValue PocoInterface;
 	}

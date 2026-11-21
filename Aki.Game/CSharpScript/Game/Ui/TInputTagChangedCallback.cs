@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200467C RID: 18044
-	// (Invoke) Token: 0x0602E912 RID: 190738
+	// Token: 0x020035AD RID: 13741
+	// (Invoke) Token: 0x0602305C RID: 143452
 	public delegate void TInputTagChangedCallback(string tagName, bool tagExist);
 }

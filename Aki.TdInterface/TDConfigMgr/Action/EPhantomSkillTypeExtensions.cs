@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023BF RID: 9151
+	// Token: 0x02002654 RID: 9812
 	public static class EPhantomSkillTypeExtensions
 	{
-		// Token: 0x0600C75A RID: 51034 RVA: 0x001D2F6C File Offset: 0x001D116C
+		// Token: 0x0600D3D4 RID: 54228 RVA: 0x001EC604 File Offset: 0x001EA804
 		public static string ToEnumString(this EPhantomSkillType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C75B RID: 51035 RVA: 0x001D2FA4 File Offset: 0x001D11A4
+		// Token: 0x0600D3D5 RID: 54229 RVA: 0x001EC63C File Offset: 0x001EA83C
 		public static EPhantomSkillType FromString(string name)
 		{
 			EPhantomSkillType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C75C RID: 51036 RVA: 0x001D2FCD File Offset: 0x001D11CD
+		// Token: 0x0600D3D6 RID: 54230 RVA: 0x001EC665 File Offset: 0x001EA865
 		public static bool TryFromString(string name, out EPhantomSkillType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C75D RID: 51037 RVA: 0x001D3006 File Offset: 0x001D1206
+		// Token: 0x0600D3D7 RID: 54231 RVA: 0x001EC69E File Offset: 0x001EA89E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C75E RID: 51038 RVA: 0x001D301E File Offset: 0x001D121E
+		// Token: 0x0600D3D8 RID: 54232 RVA: 0x001EC6B6 File Offset: 0x001EA8B6
 		public static EPhantomSkillType[] GetValues()
 		{
 			return new EPhantomSkillType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C75F RID: 51039 RVA: 0x001D302A File Offset: 0x001D122A
+		// Token: 0x0600D3D9 RID: 54233 RVA: 0x001EC6C2 File Offset: 0x001EA8C2
 		public static string[] GetNames()
 		{
 			return new string[]

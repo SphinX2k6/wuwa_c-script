@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023DD RID: 9181
+// Token: 0x020018C2 RID: 6338
 public class PersonalPlayerTitleMiniPreView : UiPanelBase
 {
-	// Token: 0x060125AD RID: 75181 RVA: 0x00485F00 File Offset: 0x00484100
+	// Token: 0x0600FA5F RID: 64095 RVA: 0x0049340C File Offset: 0x0049160C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class PersonalPlayerTitleMiniPreView : UiPanelBase
 		};
 	}
 
-	// Token: 0x060125AE RID: 75182 RVA: 0x00485F88 File Offset: 0x00484188
+	// Token: 0x0600FA60 RID: 64096 RVA: 0x00493494 File Offset: 0x00491694
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalPlayerTitleMiniPreView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ public class PersonalPlayerTitleMiniPreView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060125AF RID: 75183 RVA: 0x00485FCC File Offset: 0x004841CC
+	// Token: 0x0600FA61 RID: 64097 RVA: 0x004934D8 File Offset: 0x004916D8
 	[NullableContext(1)]
 	public void RefreshView(PersonalPlayerTitleData data)
 	{
@@ -46,22 +46,22 @@ public class PersonalPlayerTitleMiniPreView : UiPanelBase
 		this.PlayerTitleItem.Refresh(new int?(data.PlayerTitleId), data.StarLevel, new int?(sex));
 	}
 
-	// Token: 0x04008ADA RID: 35546
+	// Token: 0x04008C21 RID: 35873
 	[Nullable(2)]
 	private PlayerTitleItem PlayerTitleItem;
 
-	// Token: 0x02008980 RID: 35200
+	// Token: 0x02007B09 RID: 31497
 	private enum EComponent
 	{
-		// Token: 0x0402CAE8 RID: 183016
+		// Token: 0x04027E03 RID: 163331
 		PnlSatate,
-		// Token: 0x0402CAE9 RID: 183017
+		// Token: 0x04027E04 RID: 163332
 		ItemCard,
-		// Token: 0x0402CAEA RID: 183018
+		// Token: 0x04027E05 RID: 163333
 		ItemUsed,
-		// Token: 0x0402CAEB RID: 183019
+		// Token: 0x04027E06 RID: 163334
 		ItemLock,
-		// Token: 0x0402CAEC RID: 183020
+		// Token: 0x04027E07 RID: 163335
 		PersonalTitleItem
 	}
 }

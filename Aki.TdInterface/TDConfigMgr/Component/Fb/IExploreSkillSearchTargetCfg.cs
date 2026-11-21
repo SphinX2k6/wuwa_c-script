@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CC4 RID: 3268
+	// Token: 0x02000DA8 RID: 3496
 	public class IExploreSkillSearchTargetCfg
 	{
-		// Token: 0x06004ABA RID: 19130 RVA: 0x000BAF79 File Offset: 0x000B9179
-		[NullableContext(1)]
+		// Token: 0x06004F75 RID: 20341 RVA: 0x000C5BB1 File Offset: 0x000C3DB1
 		public static IExploreSkillSearchTargetCfg Create(IExploreSkillSearchTargetCfg? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016EF RID: 5871
-		// (get) Token: 0x06004ABB RID: 19131 RVA: 0x000BAF98 File Offset: 0x000B9198
+		// Token: 0x17001820 RID: 6176
+		// (get) Token: 0x06004F76 RID: 20342 RVA: 0x000C5BD0 File Offset: 0x000C3DD0
 		public virtual EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AB9 RID: 10937
+		// Token: 0x04002D3F RID: 11583
 		private IExploreSkillSearchTargetCfg Instance;
 	}
 }

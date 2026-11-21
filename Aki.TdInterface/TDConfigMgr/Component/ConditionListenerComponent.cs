@@ -6,11 +6,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000048 RID: 72
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class ConditionListenerComponent : IComponentBase
 	{
-		// Token: 0x06000264 RID: 612 RVA: 0x000195C0 File Offset: 0x000177C0
+		// Token: 0x06000268 RID: 616 RVA: 0x00019F34 File Offset: 0x00018134
 		private ConditionListenerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000265 RID: 613 RVA: 0x000195F8 File Offset: 0x000177F8
+		// Token: 0x06000269 RID: 617 RVA: 0x00019F6C File Offset: 0x0001816C
 		public static ConditionListenerComponent Create([Nullable(2)] ConditionListenerComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000266 RID: 614 RVA: 0x0001960B File Offset: 0x0001780B
+		// Token: 0x0600026A RID: 618 RVA: 0x00019F7F File Offset: 0x0001817F
 		public static ConditionListenerComponent CreateFromSetValue([Nullable(2)] ConditionListenerComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000267 RID: 615 RVA: 0x0001961E File Offset: 0x0001781E
+		// Token: 0x0600026B RID: 619 RVA: 0x00019F92 File Offset: 0x00018192
 		public new ConditionListenerComponent_SetValue ToSetValue()
 		{
 			return new ConditionListenerComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000D8 RID: 216
-		// (get) Token: 0x06000268 RID: 616 RVA: 0x0001964C File Offset: 0x0001784C
-		// (set) Token: 0x06000269 RID: 617 RVA: 0x00019686 File Offset: 0x00017886
+		// Token: 0x170000DA RID: 218
+		// (get) Token: 0x0600026C RID: 620 RVA: 0x00019FC0 File Offset: 0x000181C0
+		// (set) Token: 0x0600026D RID: 621 RVA: 0x00019FFA File Offset: 0x000181FA
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D9 RID: 217
-		// (get) Token: 0x0600026A RID: 618 RVA: 0x00019694 File Offset: 0x00017894
-		// (set) Token: 0x0600026B RID: 619 RVA: 0x000196BE File Offset: 0x000178BE
+		// Token: 0x170000DB RID: 219
+		// (get) Token: 0x0600026E RID: 622 RVA: 0x0001A008 File Offset: 0x00018208
+		// (set) Token: 0x0600026F RID: 623 RVA: 0x0001A032 File Offset: 0x00018232
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000DA RID: 218
-		// (get) Token: 0x0600026C RID: 620 RVA: 0x000196CC File Offset: 0x000178CC
-		// (set) Token: 0x0600026D RID: 621 RVA: 0x0001975F File Offset: 0x0001795F
+		// Token: 0x170000DC RID: 220
+		// (get) Token: 0x06000270 RID: 624 RVA: 0x0001A040 File Offset: 0x00018240
+		// (set) Token: 0x06000271 RID: 625 RVA: 0x0001A0D3 File Offset: 0x000182D3
 		public virtual List<ICondtionListener> Listeners
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000181 RID: 385
+		// Token: 0x04000186 RID: 390
 		[Nullable(2)]
 		protected new ConditionListenerComponent FbInstance;
 
-		// Token: 0x04000182 RID: 386
+		// Token: 0x04000187 RID: 391
 		[Nullable(2)]
 		protected new ConditionListenerComponent_SetValue PocoInterface;
 
-		// Token: 0x04000183 RID: 387
+		// Token: 0x04000188 RID: 392
 		private List<ICondtionListener> _ListenersCache;
 
-		// Token: 0x04000184 RID: 388
+		// Token: 0x04000189 RID: 393
 		private bool _ListenersInited;
 	}
 }

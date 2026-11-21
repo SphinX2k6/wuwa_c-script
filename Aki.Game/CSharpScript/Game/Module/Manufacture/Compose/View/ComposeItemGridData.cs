@@ -4,14 +4,14 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005669 RID: 22121
+	// Token: 0x0200463F RID: 17983
 	public class ComposeItemGridData
 	{
-		// Token: 0x0401D962 RID: 121186
+		// Token: 0x040183ED RID: 99309
 		[Nullable(1)]
 		public IBaseItemData ItemData;
 
-		// Token: 0x0401D963 RID: 121187
+		// Token: 0x040183EE RID: 99310
 		[Nullable(new byte[]
 		{
 			2,
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		public Action<MediumItemGridExtendCallback> OnToggleStateChanged;
 
-		// Token: 0x0401D964 RID: 121188
+		// Token: 0x040183EF RID: 99311
 		[Nullable(2)]
 		public Func<int, bool> IsSelectedProvider;
 	}

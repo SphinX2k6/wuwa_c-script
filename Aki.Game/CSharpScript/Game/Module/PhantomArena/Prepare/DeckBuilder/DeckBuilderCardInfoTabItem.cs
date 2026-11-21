@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x0200518C RID: 20876
+	// Token: 0x0200415C RID: 16732
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class DeckBuilderCardInfoTabItem : GridProxyAbstract<DeckBuilderCardInfoTabItemData>
 	{
-		// Token: 0x06035648 RID: 218696 RVA: 0x00CA5860 File Offset: 0x00CA3A60
+		// Token: 0x0602A543 RID: 173379 RVA: 0x00BF2E14 File Offset: 0x00BF1014
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035649 RID: 218697 RVA: 0x00CA58C7 File Offset: 0x00CA3AC7
+		// Token: 0x0602A544 RID: 173380 RVA: 0x00BF2E7B File Offset: 0x00BF107B
 		private void OnItemToggleStateChange(EToggleState toggleState)
 		{
 			if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_Checked)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			}
 		}
 
-		// Token: 0x0603564A RID: 218698 RVA: 0x00CA58F8 File Offset: 0x00CA3AF8
+		// Token: 0x0602A545 RID: 173381 RVA: 0x00BF2EAC File Offset: 0x00BF10AC
 		[NullableContext(1)]
 		public override void Refresh(DeckBuilderCardInfoTabItemData data, bool isSelected, int gridIndex)
 		{
@@ -50,29 +50,29 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.TabNameTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603564B RID: 218699 RVA: 0x00CA591D File Offset: 0x00CA3B1D
+		// Token: 0x0602A546 RID: 173382 RVA: 0x00BF2ED1 File Offset: 0x00BF10D1
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x0603564C RID: 218700 RVA: 0x00CA5930 File Offset: 0x00CA3B30
+		// Token: 0x0602A547 RID: 173383 RVA: 0x00BF2EE4 File Offset: 0x00BF10E4
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x0401C600 RID: 116224
+		// Token: 0x04017035 RID: 94261
 		[Nullable(2)]
 		private DeckBuilderCardInfoTabItemData Data;
 
-		// Token: 0x0200B300 RID: 45824
+		// Token: 0x02009D39 RID: 40249
 		private static class EComponents
 		{
-			// Token: 0x040363FF RID: 222207
+			// Token: 0x04030E54 RID: 200276
 			public const int ItemToggle = 0;
 
-			// Token: 0x04036400 RID: 222208
+			// Token: 0x04030E55 RID: 200277
 			public const int NameText = 1;
 		}
 	}

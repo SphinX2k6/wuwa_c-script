@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056FC RID: 22268
+	// Token: 0x020046D3 RID: 18131
 	public class KurotatoCardTip : IKurotatoCardTip
 	{
-		// Token: 0x1700881F RID: 34847
-		// (get) Token: 0x06038A26 RID: 231974 RVA: 0x00D70783 File Offset: 0x00D6E983
-		// (set) Token: 0x06038A27 RID: 231975 RVA: 0x00D7078B File Offset: 0x00D6E98B
+		// Token: 0x17005BE7 RID: 23527
+		// (get) Token: 0x0602D936 RID: 186678 RVA: 0x00CBED6B File Offset: 0x00CBCF6B
+		// (set) Token: 0x0602D937 RID: 186679 RVA: 0x00CBED73 File Offset: 0x00CBCF73
 		public EKurotatoCardType CardType { get; set; }
 
-		// Token: 0x17008820 RID: 34848
-		// (get) Token: 0x06038A28 RID: 231976 RVA: 0x00D70794 File Offset: 0x00D6E994
-		// (set) Token: 0x06038A29 RID: 231977 RVA: 0x00D7079C File Offset: 0x00D6E99C
+		// Token: 0x17005BE8 RID: 23528
+		// (get) Token: 0x0602D938 RID: 186680 RVA: 0x00CBED7C File Offset: 0x00CBCF7C
+		// (set) Token: 0x0602D939 RID: 186681 RVA: 0x00CBED84 File Offset: 0x00CBCF84
 		public int SelectId { get; set; }
 
-		// Token: 0x17008821 RID: 34849
-		// (get) Token: 0x06038A2A RID: 231978 RVA: 0x00D707A5 File Offset: 0x00D6E9A5
-		// (set) Token: 0x06038A2B RID: 231979 RVA: 0x00D707AD File Offset: 0x00D6E9AD
+		// Token: 0x17005BE9 RID: 23529
+		// (get) Token: 0x0602D93A RID: 186682 RVA: 0x00CBED8D File Offset: 0x00CBCF8D
+		// (set) Token: 0x0602D93B RID: 186683 RVA: 0x00CBED95 File Offset: 0x00CBCF95
 		public bool? IsConfigId { get; set; }
 	}
 }

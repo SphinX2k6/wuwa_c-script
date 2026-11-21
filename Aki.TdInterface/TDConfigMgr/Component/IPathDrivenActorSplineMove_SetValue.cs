@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005DF RID: 1503
+	// Token: 0x02000670 RID: 1648
 	public class IPathDrivenActorSplineMove_SetValue
 	{
-		// Token: 0x04001663 RID: 5731
+		// Token: 0x0400183A RID: 6202
 		public EPathDrivenActorMoveType Type;
 
-		// Token: 0x04001664 RID: 5732
-		[Nullable(1)]
+		// Token: 0x0400183B RID: 6203
 		public List<int> SplineEntityIds;
 
-		// Token: 0x04001665 RID: 5733
+		// Token: 0x0400183C RID: 6204
 		public bool? IsRandomSpline;
 
-		// Token: 0x04001666 RID: 5734
+		// Token: 0x0400183D RID: 6205
 		public bool? IsChainedSpline;
 
-		// Token: 0x04001667 RID: 5735
+		// Token: 0x0400183E RID: 6206
 		public bool? IsLoop;
 
-		// Token: 0x04001668 RID: 5736
+		// Token: 0x0400183F RID: 6207
 		public bool? IsFollowSplineDir;
 	}
 }

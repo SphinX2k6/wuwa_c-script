@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A7C RID: 19068
+	// Token: 0x02004F42 RID: 20290
 	public class ICheckInRangeConditionT
 	{
-		// Token: 0x17008A1E RID: 35358
-		// (get) Token: 0x0601DE44 RID: 122436 RVA: 0x00432D30 File Offset: 0x00430F30
-		// (set) Token: 0x0601DE45 RID: 122437 RVA: 0x00432D38 File Offset: 0x00430F38
+		// Token: 0x170090FA RID: 37114
+		// (get) Token: 0x0601F8E7 RID: 129255 RVA: 0x00463EBC File Offset: 0x004620BC
+		// (set) Token: 0x0601F8E8 RID: 129256 RVA: 0x00463EC4 File Offset: 0x004620C4
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A1F RID: 35359
-		// (get) Token: 0x0601DE46 RID: 122438 RVA: 0x00432D41 File Offset: 0x00430F41
-		// (set) Token: 0x0601DE47 RID: 122439 RVA: 0x00432D49 File Offset: 0x00430F49
+		// Token: 0x170090FB RID: 37115
+		// (get) Token: 0x0601F8E9 RID: 129257 RVA: 0x00463ECD File Offset: 0x004620CD
+		// (set) Token: 0x0601F8EA RID: 129258 RVA: 0x00463ED5 File Offset: 0x004620D5
 		public List<int> RangeEntities { get; set; }
 
-		// Token: 0x17008A20 RID: 35360
-		// (get) Token: 0x0601DE48 RID: 122440 RVA: 0x00432D52 File Offset: 0x00430F52
-		// (set) Token: 0x0601DE49 RID: 122441 RVA: 0x00432D5A File Offset: 0x00430F5A
+		// Token: 0x170090FC RID: 37116
+		// (get) Token: 0x0601F8EB RID: 129259 RVA: 0x00463EDE File Offset: 0x004620DE
+		// (set) Token: 0x0601F8EC RID: 129260 RVA: 0x00463EE6 File Offset: 0x004620E6
 		public bool InRange { get; set; }
 
-		// Token: 0x17008A21 RID: 35361
-		// (get) Token: 0x0601DE4A RID: 122442 RVA: 0x00432D63 File Offset: 0x00430F63
-		// (set) Token: 0x0601DE4B RID: 122443 RVA: 0x00432D6B File Offset: 0x00430F6B
+		// Token: 0x170090FD RID: 37117
+		// (get) Token: 0x0601F8ED RID: 129261 RVA: 0x00463EEF File Offset: 0x004620EF
+		// (set) Token: 0x0601F8EE RID: 129262 RVA: 0x00463EF7 File Offset: 0x004620F7
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601DE4C RID: 122444 RVA: 0x00432D74 File Offset: 0x00430F74
+		// Token: 0x0601F8EF RID: 129263 RVA: 0x00463F00 File Offset: 0x00462100
 		public ICheckInRangeConditionT()
 		{
 			this.Type = ECondition.CompareVar;

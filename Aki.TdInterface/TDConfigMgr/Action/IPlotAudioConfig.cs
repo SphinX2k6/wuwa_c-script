@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D26 RID: 7462
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F37 RID: 7991
 	public class IPlotAudioConfig
 	{
-		// Token: 0x0600A025 RID: 40997 RVA: 0x0016D844 File Offset: 0x0016BA44
+		// Token: 0x0600AA11 RID: 43537 RVA: 0x00181C68 File Offset: 0x0017FE68
 		private IPlotAudioConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A026 RID: 40998 RVA: 0x0016D87C File Offset: 0x0016BA7C
+		// Token: 0x0600AA12 RID: 43538 RVA: 0x00181CA0 File Offset: 0x0017FEA0
 		public static IPlotAudioConfig Create([Nullable(2)] IPlotAudioConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A027 RID: 40999 RVA: 0x0016D88F File Offset: 0x0016BA8F
+		// Token: 0x0600AA13 RID: 43539 RVA: 0x00181CB3 File Offset: 0x0017FEB3
 		public static IPlotAudioConfig CreateFromSetValue([Nullable(2)] IPlotAudioConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A028 RID: 41000 RVA: 0x0016D8A2 File Offset: 0x0016BAA2
+		// Token: 0x0600AA14 RID: 43540 RVA: 0x00181CC6 File Offset: 0x0017FEC6
 		public IPlotAudioConfig_SetValue ToSetValue()
 		{
 			return new IPlotAudioConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031B0 RID: 12720
-		// (get) Token: 0x0600A029 RID: 41001 RVA: 0x0016D8B8 File Offset: 0x0016BAB8
-		// (set) Token: 0x0600A02A RID: 41002 RVA: 0x0016D919 File Offset: 0x0016BB19
+		// Token: 0x17003444 RID: 13380
+		// (get) Token: 0x0600AA15 RID: 43541 RVA: 0x00181CDC File Offset: 0x0017FEDC
+		// (set) Token: 0x0600AA16 RID: 43542 RVA: 0x00181D3D File Offset: 0x0017FF3D
 		[Nullable(2)]
 		public virtual IPlotVoiceFadeOutOnInterrupt VoiceFadeOutOnInterrupt
 		{
@@ -92,18 +90,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400608F RID: 24719
+		// Token: 0x0400660B RID: 26123
 		[Nullable(2)]
 		protected IPlotAudioConfig FbInstance;
 
-		// Token: 0x04006090 RID: 24720
+		// Token: 0x0400660C RID: 26124
 		[Nullable(2)]
 		protected IPlotAudioConfig_SetValue PocoInterface;
 
-		// Token: 0x04006091 RID: 24721
+		// Token: 0x0400660D RID: 26125
 		private IPlotVoiceFadeOutOnInterrupt _VoiceFadeOutOnInterruptCache;
 
-		// Token: 0x04006092 RID: 24722
+		// Token: 0x0400660E RID: 26126
 		private bool _VoiceFadeOutOnInterruptInited;
 	}
 }

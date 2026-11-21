@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ADC RID: 10972
+	// Token: 0x02002DD0 RID: 11728
 	public class ISceneActorMusicLightsEvent : ISceneActorEvent
 	{
-		// Token: 0x0600F091 RID: 61585 RVA: 0x0022ED3E File Offset: 0x0022CF3E
-		[NullableContext(1)]
+		// Token: 0x0600FF47 RID: 65351 RVA: 0x0024CA4A File Offset: 0x0024AC4A
 		public static ISceneActorMusicLightsEvent Create(ISceneActorMusicLightsEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C9B RID: 19611
-		// (get) Token: 0x0600F092 RID: 61586 RVA: 0x0022ED5D File Offset: 0x0022CF5D
+		// Token: 0x17005055 RID: 20565
+		// (get) Token: 0x0600FF48 RID: 65352 RVA: 0x0024CA69 File Offset: 0x0024AC69
 		public override ESceneActorEventType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008456 RID: 33878
+		// Token: 0x04008B5A RID: 35674
 		private ISceneActorMusicLightsEvent Instance;
 	}
 }

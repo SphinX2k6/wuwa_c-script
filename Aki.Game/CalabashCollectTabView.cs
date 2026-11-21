@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Kpose.Blueprint;
@@ -8,18 +7,19 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Module.FilterSort.Sort.SortEntrance;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001743 RID: 5955
+// Token: 0x02000BFC RID: 3068
 [NullableContext(2)]
 [Nullable(0)]
 public class CalabashCollectTabView : UiTabViewBase
 {
-	// Token: 0x0600AC45 RID: 44101 RVA: 0x00269D6C File Offset: 0x00267F6C
+	// Token: 0x0600802C RID: 32812 RVA: 0x002741A8 File Offset: 0x002723A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,19 +42,19 @@ public class CalabashCollectTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AC46 RID: 44102 RVA: 0x00269E9C File Offset: 0x0026809C
+	// Token: 0x0600802D RID: 32813 RVA: 0x002742D8 File Offset: 0x002724D8
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ChangeCalabashCollectSimplyState, new Action(this.OnSimplyStateChange));
 	}
 
-	// Token: 0x0600AC47 RID: 44103 RVA: 0x00269EBA File Offset: 0x002680BA
+	// Token: 0x0600802E RID: 32814 RVA: 0x002742F6 File Offset: 0x002724F6
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ChangeCalabashCollectSimplyState, new Action(this.OnSimplyStateChange));
 	}
 
-	// Token: 0x0600AC48 RID: 44104 RVA: 0x00269ED8 File Offset: 0x002680D8
+	// Token: 0x0600802F RID: 32815 RVA: 0x00274314 File Offset: 0x00272514
 	private void OnSimplyStateChange()
 	{
 		if (CalabashModel.Instance.GetIfSimpleState())
@@ -65,7 +65,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.DetailItem.PlayDetailHideSequence();
 	}
 
-	// Token: 0x0600AC49 RID: 44105 RVA: 0x00269EFD File Offset: 0x002680FD
+	// Token: 0x06008030 RID: 32816 RVA: 0x00274339 File Offset: 0x00272539
 	private void OnBackButtonClick()
 	{
 		if (this.IsOnlyShow)
@@ -76,7 +76,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.QuitInternalView();
 	}
 
-	// Token: 0x0600AC4A RID: 44106 RVA: 0x00269F20 File Offset: 0x00268120
+	// Token: 0x06008031 RID: 32817 RVA: 0x0027435C File Offset: 0x0027255C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CalabashCollectTabView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AC4B RID: 44107 RVA: 0x00269F63 File Offset: 0x00268163
+	// Token: 0x06008032 RID: 32818 RVA: 0x0027439F File Offset: 0x0027259F
 	protected override void OnStart()
 	{
 		if (this.IsOnlyShow)
@@ -96,20 +96,20 @@ public class CalabashCollectTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC4C RID: 44108 RVA: 0x00269F74 File Offset: 0x00268174
+	// Token: 0x06008033 RID: 32819 RVA: 0x002743B0 File Offset: 0x002725B0
 	protected override void OnBeforeShow()
 	{
-		this.FilterEntrance.UpdateData(EFilterSortGroupId.CalabashCollect, CalabashModel.Instance.GetCalabashDevelopRewardSortData().ToList<CalabashDevelopRewardData>(), Array.Empty<object>());
+		this.FilterEntrance.UpdateData(EFilterSortGroupId.CalabashCollect, new List<CalabashDevelopRewardData>(CalabashModel.Instance.GetCalabashDevelopRewardSortData()), Array.Empty<object>());
 		int uniqueIdByGroupId = this.FilterEntrance.GetUniqueIdByGroupId(EFilterSortGroupId.CalabashCollect);
 		this.SortEntrance.SetFilterUniqueId(uniqueIdByGroupId);
-		this.SortEntrance.UpdateData(EFilterSortGroupId.CalabashCollect, CalabashModel.Instance.GetCalabashDevelopRewardSortData().ToList<CalabashDevelopRewardData>(), Array.Empty<object>());
+		this.SortEntrance.UpdateData(EFilterSortGroupId.CalabashCollect, new List<CalabashDevelopRewardData>(CalabashModel.Instance.GetCalabashDevelopRewardSortData()), Array.Empty<object>());
 		int uniqueIdByGroupId2 = this.SortEntrance.GetUniqueIdByGroupId(EFilterSortGroupId.CalabashCollect);
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 		this.DetailItem.RefreshDetailState();
 		base.GetButton(9).RootUIComp.Get().SetUIActive(this.IsInternal);
 	}
 
-	// Token: 0x0600AC4D RID: 44109 RVA: 0x0026A022 File Offset: 0x00268222
+	// Token: 0x06008034 RID: 32820 RVA: 0x0027445E File Offset: 0x0027265E
 	protected override void OnBeforeHide()
 	{
 		this.WaitToSelectMonsterId = this.CurrentSelectedMonsterId;
@@ -117,14 +117,14 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.CancelSelect();
 	}
 
-	// Token: 0x0600AC4E RID: 44110 RVA: 0x0026A042 File Offset: 0x00268242
+	// Token: 0x06008035 RID: 32821 RVA: 0x0027447E File Offset: 0x0027267E
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyVision();
 		this.LoadingItem.Destroy(null);
 	}
 
-	// Token: 0x0600AC4F RID: 44111 RVA: 0x0026A056 File Offset: 0x00268256
+	// Token: 0x06008036 RID: 32822 RVA: 0x00274492 File Offset: 0x00272692
 	[NullableContext(1)]
 	private CalabashCollectGridItem CreateProxy()
 	{
@@ -135,26 +135,26 @@ public class CalabashCollectTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AC50 RID: 44112 RVA: 0x0026A081 File Offset: 0x00268281
+	// Token: 0x06008037 RID: 32823 RVA: 0x002744BD File Offset: 0x002726BD
 	private void OnToggleClick(int gridIndex)
 	{
 		this.LoopScroll.SelectGridProxy(gridIndex, false);
 		this.OnPhantomSelectChange();
 	}
 
-	// Token: 0x0600AC51 RID: 44113 RVA: 0x0026A096 File Offset: 0x00268296
+	// Token: 0x06008038 RID: 32824 RVA: 0x002744D2 File Offset: 0x002726D2
 	private bool CanToggleChange(int gridIndex)
 	{
 		LoopScrollView<CalabashCollectGridItem, CalabashDevelopRewardData> loopScroll = this.LoopScroll;
 		return loopScroll == null || loopScroll.GetSelectedGridIndex() != gridIndex;
 	}
 
-	// Token: 0x0600AC52 RID: 44114 RVA: 0x0026A0B0 File Offset: 0x002682B0
+	// Token: 0x06008039 RID: 32825 RVA: 0x002744EC File Offset: 0x002726EC
 	[NullableContext(1)]
 	private void UpdateDataList(List<CalabashDevelopRewardData> list, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.DataList = list.ToArray();
-		this.LoopScroll.RefreshByData(this.DataList.ToList<CalabashDevelopRewardData>(), false, new Action(this.AfterLoopScrollRefresh), true);
+		this.LoopScroll.RefreshByData(this.DataList, false, new Action(this.AfterLoopScrollRefresh), true);
 		if (this.DataList.Length == 0)
 		{
 			return;
@@ -165,7 +165,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC53 RID: 44115 RVA: 0x0026A118 File Offset: 0x00268318
+	// Token: 0x0600803A RID: 32826 RVA: 0x00274550 File Offset: 0x00272750
 	private void AfterLoopScrollRefresh()
 	{
 		int toSelectId = 0;
@@ -197,7 +197,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.OnPhantomSelectChange();
 	}
 
-	// Token: 0x0600AC54 RID: 44116 RVA: 0x0026A200 File Offset: 0x00268400
+	// Token: 0x0600803B RID: 32827 RVA: 0x00274638 File Offset: 0x00272838
 	private void OnPhantomSelectChange()
 	{
 		int selectedGridIndex = this.LoopScroll.GetSelectedGridIndex();
@@ -222,13 +222,13 @@ public class CalabashCollectTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC55 RID: 44117 RVA: 0x0026A2AF File Offset: 0x002684AF
+	// Token: 0x0600803C RID: 32828 RVA: 0x002746E7 File Offset: 0x002728E7
 	private void EnterInternalView()
 	{
 		this.EnterInternalView(false);
 	}
 
-	// Token: 0x0600AC56 RID: 44118 RVA: 0x0026A2B8 File Offset: 0x002684B8
+	// Token: 0x0600803D RID: 32829 RVA: 0x002746F0 File Offset: 0x002728F0
 	private void EnterInternalView(bool skipUiAnim)
 	{
 		if (this.IsInternal)
@@ -242,22 +242,27 @@ public class CalabashCollectTabView : UiTabViewBase
 		{
 			levelSequencePlayer.PlayLevelSequenceByName("Enter", true, null, skipUiAnim);
 		}
-		UiCamera uiCamera = UiCameraManager.Get();
-		UiCameraControlRotationComponent rotationComponent = uiCamera.GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraBlendComponent blendComponent = orCreateCamera.GetUiCameraComponent<UiCameraBlendComponent>();
 		CalabashDevelopReward? calabashDevelopRewardByMonsterId = CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(this.CurrentSelectedMonsterId);
 		MonsterBodyTypeConfig? bodyTypeConfig = MonsterInfoConfig.Instance.GetMonsterBodyTypeConfig(calabashDevelopRewardByMonsterId.Value.MonsterBodyType);
 		ResourceSystem.Instance.LoadAsync<UCurveFloat>(bodyTypeConfig.Value.MoveForwardCurvePath, delegate([Nullable(2)] UCurveFloat curve, string _)
 		{
 			if (curve != null)
 			{
-				rotationComponent.DoMoveForward((float)bodyTypeConfig.Value.MoveForwardDistance, (float)bodyTypeConfig.Value.MoveForwardDuration, curve);
+				UiCameraBlendComponent blendComponent = blendComponent;
+				if (blendComponent == null)
+				{
+					return;
+				}
+				blendComponent.DoMoveForward((float)bodyTypeConfig.Value.MoveForwardDistance, (float)bodyTypeConfig.Value.MoveForwardDuration, curve);
 			}
 		}, 100, this.MemoryTag);
 		this.VisionCameraInputItem.CanPitchInput = true;
 		EventSystem.Instance.Emit(EEventName.CalabashEnterInternalView);
 	}
 
-	// Token: 0x0600AC57 RID: 44119 RVA: 0x0026A3AE File Offset: 0x002685AE
+	// Token: 0x0600803E RID: 32830 RVA: 0x002747EB File Offset: 0x002729EB
 	private void StopPlayingUiTabSequence()
 	{
 		UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -269,7 +274,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		levelSequencePlayer.StopPlayingSequence(false, true);
 	}
 
-	// Token: 0x0600AC58 RID: 44120 RVA: 0x0026A3CE File Offset: 0x002685CE
+	// Token: 0x0600803F RID: 32831 RVA: 0x0027480B File Offset: 0x00272A0B
 	private void ChangeMonsterSkin(int monsterSkinId, bool isLock)
 	{
 		this.DetailItem.UpdateSkinInfo(monsterSkinId);
@@ -282,7 +287,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC59 RID: 44121 RVA: 0x0026A3FC File Offset: 0x002685FC
+	// Token: 0x06008040 RID: 32832 RVA: 0x00274838 File Offset: 0x00272A38
 	private void QuitInternalView()
 	{
 		if (!this.IsInternal)
@@ -296,8 +301,9 @@ public class CalabashCollectTabView : UiTabViewBase
 		{
 			levelSequencePlayer.PlayLevelSequenceByName("Back", true, null, false);
 		}
-		UiCamera uiCamera = UiCameraManager.Get();
-		UiCameraControlRotationComponent rotationComponent = uiCamera.GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCamera orCreateCamera = UiCameraModel.Instance.GetOrCreateCamera();
+		UiCameraLogicComponent logicComponent = orCreateCamera.GetUiCameraComponent<UiCameraLogicComponent>();
+		UiCameraBlendComponent blendComponent = orCreateCamera.GetUiCameraComponent<UiCameraBlendComponent>();
 		CalabashDevelopReward? calabashDevelopRewardByMonsterId = CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(this.CurrentSelectedMonsterId);
 		MonsterBodyTypeConfig? bodyTypeConfig = MonsterInfoConfig.Instance.GetMonsterBodyTypeConfig(calabashDevelopRewardByMonsterId.Value.MonsterBodyType);
 		ResourceSystem.Instance.LoadAsync<UCurveFloat>(bodyTypeConfig.Value.MoveForwardCurvePath, delegate([Nullable(2)] UCurveFloat curve, string _)
@@ -307,9 +313,22 @@ public class CalabashCollectTabView : UiTabViewBase
 				BP_KposeBase_C handBookVision = UiSceneManager.Instance.GetHandBookVision();
 				if (handBookVision != null && handBookVision.IsValid())
 				{
-					rotationComponent.SetArmLength((float)handBookVision.CameraArmLength);
-					rotationComponent.SetArmRotationByDefaultCamera();
-					rotationComponent.StartFade((float)bodyTypeConfig.Value.MoveForwardDuration, curve, true, true, true, true);
+					UiCameraLogicComponent logicComponent = logicComponent;
+					if (logicComponent != null)
+					{
+						logicComponent.SetArmLength((float)handBookVision.CameraArmLength);
+					}
+					UiCameraLogicComponent logicComponent2 = logicComponent;
+					if (logicComponent2 != null)
+					{
+						logicComponent2.SetArmRotationByDefaultCamera();
+					}
+					UiCameraBlendComponent blendComponent = blendComponent;
+					if (blendComponent == null)
+					{
+						return;
+					}
+					blendComponent.StartFade((float)bodyTypeConfig.Value.MoveForwardDuration, curve, true, true, true, true);
 				}
 			}
 		}, 100, this.MemoryTag);
@@ -317,7 +336,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		EventSystem.Instance.Emit(EEventName.CalabashQuitInternalView);
 	}
 
-	// Token: 0x0600AC5A RID: 44122 RVA: 0x0026A4F4 File Offset: 0x002686F4
+	// Token: 0x06008041 RID: 32833 RVA: 0x00274940 File Offset: 0x00272B40
 	private void LoadVision()
 	{
 		if (this.BpHandle != -1 || UiSceneManager.Instance.GetHandBookVision() != null)
@@ -334,7 +353,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x0600AC5B RID: 44123 RVA: 0x0026A5AC File Offset: 0x002687AC
+	// Token: 0x06008042 RID: 32834 RVA: 0x002749F8 File Offset: 0x00272BF8
 	[NullableContext(1)]
 	private void SetVisionInfo(int monsterId, UClass csClass)
 	{
@@ -373,10 +392,10 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.MeshStreamTaskId = MeshStreamController.Instance.AddMeshStreamTask(meshStreamTaskContext);
 	}
 
-	// Token: 0x0600AC5C RID: 44124 RVA: 0x0026A6D4 File Offset: 0x002688D4
+	// Token: 0x06008043 RID: 32835 RVA: 0x00274B20 File Offset: 0x00272D20
 	private void OnLoadFinish(int monsterId)
 	{
-		UiCameraControlRotationComponent uiCameraComponent = UiCameraManager.Get().GetUiCameraComponent<UiCameraControlRotationComponent>();
+		UiCameraLogicComponent uiCameraComponent = UiCameraModel.Instance.GetOrCreateCamera().GetUiCameraComponent<UiCameraLogicComponent>();
 		BP_KposeBase_C handBookVision = UiSceneManager.Instance.GetHandBookVision();
 		if (handBookVision == null)
 		{
@@ -389,8 +408,11 @@ public class CalabashCollectTabView : UiTabViewBase
 			return;
 		}
 		CalabashDevelopReward? calabashDevelopRewardByMonsterId = CalabashConfig.Instance.GetCalabashDevelopRewardByMonsterId(monsterId);
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(calabashDevelopRewardByMonsterId.Value.HandBookCamera, false, false, "1001", false, null, null);
-		uiCameraComponent.SetArmLength((float)handBookVision.CameraArmLength);
+		UiCameraModel.Instance.PushCameraHandleByHandleName(calabashDevelopRewardByMonsterId.Value.HandBookCamera, false, false, "1001", false, null);
+		if (uiCameraComponent != null)
+		{
+			uiCameraComponent.SetArmLength((float)handBookVision.CameraArmLength);
+		}
 		UiSceneManager.Instance.ShowHandBookVision();
 		if (handBookVision != null)
 		{
@@ -404,7 +426,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		loadingItem.SetLoadingActive(false);
 	}
 
-	// Token: 0x0600AC5D RID: 44125 RVA: 0x0026A7B0 File Offset: 0x002689B0
+	// Token: 0x06008044 RID: 32836 RVA: 0x00274BF8 File Offset: 0x00272DF8
 	private void DestroyVision()
 	{
 		if (this.BpHandle != -1)
@@ -423,7 +445,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AC5E RID: 44126 RVA: 0x0026A814 File Offset: 0x00268A14
+	// Token: 0x06008045 RID: 32837 RVA: 0x00274C5C File Offset: 0x00272E5C
 	private void InitScheduleText()
 	{
 		int calabashAllSchedule = CalabashModel.Instance.GetCalabashAllSchedule();
@@ -435,7 +457,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		}));
 	}
 
-	// Token: 0x0600AC5F RID: 44127 RVA: 0x0026A86A File Offset: 0x00268A6A
+	// Token: 0x06008046 RID: 32838 RVA: 0x00274CB2 File Offset: 0x00272EB2
 	private void CancelSelect()
 	{
 		this.CurrentSelectedMonsterId = 0;
@@ -447,7 +469,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		this.DestroyVision();
 	}
 
-	// Token: 0x0600AC60 RID: 44128 RVA: 0x0026A88B File Offset: 0x00268A8B
+	// Token: 0x06008047 RID: 32839 RVA: 0x00274CD3 File Offset: 0x00272ED3
 	private void SetEmptyState(bool isSkin, bool isEmpty)
 	{
 		UUIItem item = base.GetItem(6);
@@ -463,7 +485,7 @@ public class CalabashCollectTabView : UiTabViewBase
 		item2.SetUIActive(isSkin && isEmpty);
 	}
 
-	// Token: 0x04004E23 RID: 20003
+	// Token: 0x04004ECC RID: 20172
 	[Nullable(new byte[]
 	{
 		2,
@@ -471,7 +493,7 @@ public class CalabashCollectTabView : UiTabViewBase
 	})]
 	private FilterEntrance<CalabashDevelopRewardData> FilterEntrance;
 
-	// Token: 0x04004E24 RID: 20004
+	// Token: 0x04004ECD RID: 20173
 	[Nullable(new byte[]
 	{
 		2,
@@ -479,10 +501,10 @@ public class CalabashCollectTabView : UiTabViewBase
 	})]
 	private SortEntrance<CalabashDevelopRewardData> SortEntrance;
 
-	// Token: 0x04004E25 RID: 20005
+	// Token: 0x04004ECE RID: 20174
 	private CalabashCollectDetailItem DetailItem;
 
-	// Token: 0x04004E26 RID: 20006
+	// Token: 0x04004ECF RID: 20175
 	[Nullable(new byte[]
 	{
 		2,
@@ -491,7 +513,7 @@ public class CalabashCollectTabView : UiTabViewBase
 	})]
 	private LoopScrollView<CalabashCollectGridItem, CalabashDevelopRewardData> LoopScroll;
 
-	// Token: 0x04004E27 RID: 20007
+	// Token: 0x04004ED0 RID: 20176
 	[Nullable(new byte[]
 	{
 		2,
@@ -499,61 +521,61 @@ public class CalabashCollectTabView : UiTabViewBase
 	})]
 	private CalabashDevelopRewardData[] DataList;
 
-	// Token: 0x04004E28 RID: 20008
+	// Token: 0x04004ED1 RID: 20177
 	private VisionCameraInputItem VisionCameraInputItem;
 
-	// Token: 0x04004E29 RID: 20009
+	// Token: 0x04004ED2 RID: 20178
 	private RoleModelLoadingItem LoadingItem;
 
-	// Token: 0x04004E2A RID: 20010
+	// Token: 0x04004ED3 RID: 20179
 	private int WaitToSelectMonsterId;
 
-	// Token: 0x04004E2B RID: 20011
+	// Token: 0x04004ED4 RID: 20180
 	private int CurrentSelectedMonsterId;
 
-	// Token: 0x04004E2C RID: 20012
+	// Token: 0x04004ED5 RID: 20181
 	private int BpHandle = -1;
 
-	// Token: 0x04004E2D RID: 20013
+	// Token: 0x04004ED6 RID: 20182
 	private int MeshStreamTaskId = -1;
 
-	// Token: 0x04004E2E RID: 20014
+	// Token: 0x04004ED7 RID: 20183
 	private bool IsInternal;
 
-	// Token: 0x04004E2F RID: 20015
+	// Token: 0x04004ED8 RID: 20184
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04004E30 RID: 20016
+	// Token: 0x04004ED9 RID: 20185
 	private int ShowMonsterId;
 
-	// Token: 0x04004E31 RID: 20017
+	// Token: 0x04004EDA RID: 20186
 	private bool IsOnlyShow;
 
-	// Token: 0x02007D2C RID: 32044
+	// Token: 0x02006EB2 RID: 28338
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x04028FE1 RID: 167905
+		// Token: 0x0402430B RID: 148235
 		LoopScroll,
-		// Token: 0x04028FE2 RID: 167906
+		// Token: 0x0402430C RID: 148236
 		LoopScrollItem,
-		// Token: 0x04028FE3 RID: 167907
+		// Token: 0x0402430D RID: 148237
 		FilterEntrance,
-		// Token: 0x04028FE4 RID: 167908
+		// Token: 0x0402430E RID: 148238
 		SortEntrance,
-		// Token: 0x04028FE5 RID: 167909
+		// Token: 0x0402430F RID: 148239
 		DetailItem,
-		// Token: 0x04028FE6 RID: 167910
+		// Token: 0x04024310 RID: 148240
 		ScheduleText,
-		// Token: 0x04028FE7 RID: 167911
+		// Token: 0x04024311 RID: 148241
 		EmptyItem,
-		// Token: 0x04028FE8 RID: 167912
+		// Token: 0x04024312 RID: 148242
 		DragItem,
-		// Token: 0x04028FE9 RID: 167913
+		// Token: 0x04024313 RID: 148243
 		LeftItem,
-		// Token: 0x04028FEA RID: 167914
+		// Token: 0x04024314 RID: 148244
 		BackButton,
-		// Token: 0x04028FEB RID: 167915
+		// Token: 0x04024315 RID: 148245
 		EmptySkinItem
 	}
 }

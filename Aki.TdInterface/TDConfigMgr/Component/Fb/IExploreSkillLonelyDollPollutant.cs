@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CB3 RID: 3251
+	// Token: 0x02000D95 RID: 3477
 	public class IExploreSkillLonelyDollPollutant : IExploreSkillInteractType
 	{
-		// Token: 0x06004A63 RID: 19043 RVA: 0x000BA2F5 File Offset: 0x000B84F5
-		[NullableContext(1)]
+		// Token: 0x06004F11 RID: 20241 RVA: 0x000C4D05 File Offset: 0x000C2F05
 		public static IExploreSkillLonelyDollPollutant Create(IExploreSkillLonelyDollPollutant? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016BA RID: 5818
-		// (get) Token: 0x06004A64 RID: 19044 RVA: 0x000BA314 File Offset: 0x000B8514
+		// Token: 0x170017E2 RID: 6114
+		// (get) Token: 0x06004F12 RID: 20242 RVA: 0x000C4D24 File Offset: 0x000C2F24
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A72 RID: 10866
+		// Token: 0x04002CEC RID: 11500
 		private IExploreSkillLonelyDollPollutant Instance;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200019E RID: 414
+	// Token: 0x020001B5 RID: 437
 	public class IActivateAllCorrectPiece_SetValue
 	{
-		// Token: 0x040007FF RID: 2047
+		// Token: 0x04000858 RID: 2136
 		public EJigsawCompleteCondition Type;
 	}
 }

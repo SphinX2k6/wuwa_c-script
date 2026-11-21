@@ -10,54 +10,54 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001509 RID: 5385
+// Token: 0x020009C1 RID: 2497
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivitySpring25Controller : ActivityControllerBase
 {
-	// Token: 0x060099AD RID: 39341 RVA: 0x00214168 File Offset: 0x00212368
+	// Token: 0x06006D8B RID: 28043 RVA: 0x0021DF20 File Offset: 0x0021C120
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060099AE RID: 39342 RVA: 0x0021416A File Offset: 0x0021236A
+	// Token: 0x06006D8C RID: 28044 RVA: 0x0021DF22 File Offset: 0x0021C122
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_SpringAGuide";
 	}
 
-	// Token: 0x060099AF RID: 39343 RVA: 0x00214171 File Offset: 0x00212371
+	// Token: 0x06006D8D RID: 28045 RVA: 0x0021DF29 File Offset: 0x0021C129
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySpring25SubView();
 	}
 
-	// Token: 0x060099B0 RID: 39344 RVA: 0x00214178 File Offset: 0x00212378
+	// Token: 0x06006D8E RID: 28046 RVA: 0x0021DF30 File Offset: 0x0021C130
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return Spring25Model.Instance.ActivityData;
 	}
 
-	// Token: 0x060099B1 RID: 39345 RVA: 0x00214184 File Offset: 0x00212384
+	// Token: 0x06006D8F RID: 28047 RVA: 0x0021DF3C File Offset: 0x0021C13C
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.Spring25MainView) || UiManager.Instance.IsViewOpen(EUiViewName.Spring25InfoView) || UiManager.Instance.IsViewOpen(EUiViewName.Spring25DialogueView) || UiManager.Instance.IsViewOpen(EUiViewName.Spring25EnvelopeView) || UiManager.Instance.IsViewOpen(EUiViewName.Spring25LetterListView);
 	}
 
-	// Token: 0x060099B2 RID: 39346 RVA: 0x002141E6 File Offset: 0x002123E6
+	// Token: 0x06006D90 RID: 28048 RVA: 0x0021DF9E File Offset: 0x0021C19E
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.HandleOnCloseRewardView));
 	}
 
-	// Token: 0x060099B3 RID: 39347 RVA: 0x00214204 File Offset: 0x00212404
+	// Token: 0x06006D91 RID: 28049 RVA: 0x0021DFBC File Offset: 0x0021C1BC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.HandleOnCloseRewardView));
 	}
 
-	// Token: 0x060099B4 RID: 39348 RVA: 0x00214224 File Offset: 0x00212424
+	// Token: 0x06006D92 RID: 28050 RVA: 0x0021DFDC File Offset: 0x0021C1DC
 	[NullableContext(0)]
 	public UniTask<bool> RequestSpringSignDrawRoleRequest()
 	{
@@ -68,7 +68,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <RequestSpringSignDrawRoleRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099B5 RID: 39349 RVA: 0x00214260 File Offset: 0x00212460
+	// Token: 0x06006D93 RID: 28051 RVA: 0x0021E018 File Offset: 0x0021C218
 	public UniTask RequestSpringSignDrawRewardRequest(int id)
 	{
 		ActivitySpring25Controller.<RequestSpringSignDrawRewardRequest>d__9 <RequestSpringSignDrawRewardRequest>d__;
@@ -79,7 +79,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <RequestSpringSignDrawRewardRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099B6 RID: 39350 RVA: 0x002142A4 File Offset: 0x002124A4
+	// Token: 0x06006D94 RID: 28052 RVA: 0x0021E05C File Offset: 0x0021C25C
 	private UniTask RequestSpringSignSkinRewardRequest()
 	{
 		ActivitySpring25Controller.<RequestSpringSignSkinRewardRequest>d__10 <RequestSpringSignSkinRewardRequest>d__;
@@ -89,7 +89,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <RequestSpringSignSkinRewardRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099B7 RID: 39351 RVA: 0x002142E0 File Offset: 0x002124E0
+	// Token: 0x06006D95 RID: 28053 RVA: 0x0021E098 File Offset: 0x0021C298
 	private UniTask RequestSpringSignPhotoRewardRequest()
 	{
 		ActivitySpring25Controller.<RequestSpringSignPhotoRewardRequest>d__11 <RequestSpringSignPhotoRewardRequest>d__;
@@ -99,13 +99,13 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <RequestSpringSignPhotoRewardRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099B8 RID: 39352 RVA: 0x0021431B File Offset: 0x0021251B
+	// Token: 0x06006D96 RID: 28054 RVA: 0x0021E0D3 File Offset: 0x0021C2D3
 	public void HandleConfirmClickInActivitySubView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.Spring25MainView, Spring25Model.Instance.BuildMainViewData(false), null);
 	}
 
-	// Token: 0x060099B9 RID: 39353 RVA: 0x00214338 File Offset: 0x00212538
+	// Token: 0x06006D97 RID: 28055 RVA: 0x0021E0F0 File Offset: 0x0021C2F0
 	public UniTask HandleInviteClickInMainView()
 	{
 		ActivitySpring25Controller.<HandleInviteClickInMainView>d__13 <HandleInviteClickInMainView>d__;
@@ -116,13 +116,13 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <HandleInviteClickInMainView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099BA RID: 39354 RVA: 0x0021437B File Offset: 0x0021257B
+	// Token: 0x06006D98 RID: 28056 RVA: 0x0021E133 File Offset: 0x0021C333
 	public void HandleGiftClickInMainView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.Spring25InfoView, Spring25Model.Instance.BuildInfoViewData(), null);
 	}
 
-	// Token: 0x060099BB RID: 39355 RVA: 0x00214398 File Offset: 0x00212598
+	// Token: 0x06006D99 RID: 28057 RVA: 0x0021E150 File Offset: 0x0021C350
 	public void HandleLetterClickInMainView()
 	{
 		if (Spring25Model.Instance.IsLetterListViewAvailable)
@@ -134,13 +134,13 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("SpringMessage_1", Array.Empty<object>());
 	}
 
-	// Token: 0x060099BC RID: 39356 RVA: 0x002143EA File Offset: 0x002125EA
+	// Token: 0x06006D9A RID: 28058 RVA: 0x0021E1A2 File Offset: 0x0021C3A2
 	public void HandleResetCurrentSignId()
 	{
 		Spring25Model.Instance.ResetCurrentSignId();
 	}
 
-	// Token: 0x060099BD RID: 39357 RVA: 0x002143F8 File Offset: 0x002125F8
+	// Token: 0x06006D9B RID: 28059 RVA: 0x0021E1B0 File Offset: 0x0021C3B0
 	public void HandleOpenOpeningDialogViewInMainView()
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.Spring25FirstEnter, false);
@@ -148,20 +148,20 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.Spring25DialogueView, param, null);
 	}
 
-	// Token: 0x060099BE RID: 39358 RVA: 0x0021442A File Offset: 0x0021262A
+	// Token: 0x06006D9C RID: 28060 RVA: 0x0021E1E2 File Offset: 0x0021C3E2
 	public void HandleLetterClickInLetterListView(int signId)
 	{
 		Spring25Model.Instance.TrySetCurrentLetterSignId(signId);
 	}
 
-	// Token: 0x060099BF RID: 39359 RVA: 0x00214438 File Offset: 0x00212638
+	// Token: 0x06006D9D RID: 28061 RVA: 0x0021E1F0 File Offset: 0x0021C3F0
 	public void HandleHelpClick()
 	{
 		int helpId = Spring25Model.Instance.HelpId;
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x060099C0 RID: 39360 RVA: 0x0021445B File Offset: 0x0021265B
+	// Token: 0x06006D9E RID: 28062 RVA: 0x0021E213 File Offset: 0x0021C413
 	public void HandleConfirmClickInDialogueView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.Spring25DialogueView, null);
@@ -171,7 +171,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060099C1 RID: 39361 RVA: 0x00214494 File Offset: 0x00212694
+	// Token: 0x06006D9F RID: 28063 RVA: 0x0021E24C File Offset: 0x0021C44C
 	public unsafe void HandleOpenSkinPreview()
 	{
 		RoleSkinData roleSkinData = RoleSkinModel.Instance.GetRoleSkinData(81011102);
@@ -189,7 +189,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		instance.OpenBuyRoleSkinPreviewDetailViewByRoleSkinData(list);
 	}
 
-	// Token: 0x060099C2 RID: 39362 RVA: 0x002144E1 File Offset: 0x002126E1
+	// Token: 0x06006DA0 RID: 28064 RVA: 0x0021E299 File Offset: 0x0021C499
 	public void HandleRequestRewardSkin()
 	{
 		if (Spring25Model.Instance.IsSkinRewarded)
@@ -199,7 +199,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		this.RequestSpringSignSkinRewardRequest();
 	}
 
-	// Token: 0x060099C3 RID: 39363 RVA: 0x002144F8 File Offset: 0x002126F8
+	// Token: 0x06006DA1 RID: 28065 RVA: 0x0021E2B0 File Offset: 0x0021C4B0
 	public void HandleWhenUnlockAnimEnd()
 	{
 		Spring25DialogueViewData spring25DialogueViewData = Spring25Model.Instance.BuildDialogueViewData();
@@ -209,7 +209,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060099C4 RID: 39364 RVA: 0x00214524 File Offset: 0x00212724
+	// Token: 0x06006DA2 RID: 28066 RVA: 0x0021E2DC File Offset: 0x0021C4DC
 	public UniTask HandleTryOpenShareViewAsync()
 	{
 		ActivitySpring25Controller.<HandleTryOpenShareViewAsync>d__24 <HandleTryOpenShareViewAsync>d__;
@@ -220,7 +220,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return <HandleTryOpenShareViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060099C5 RID: 39365 RVA: 0x00214567 File Offset: 0x00212767
+	// Token: 0x06006DA3 RID: 28067 RVA: 0x0021E31F File Offset: 0x0021C51F
 	private void HandleOnCloseRewardView()
 	{
 		CustomPromise waitForRewardClosePromise = this.WaitForRewardClosePromise;
@@ -231,8 +231,8 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		waitForRewardClosePromise.SetResult();
 	}
 
-	// Token: 0x17000D30 RID: 3376
-	// (get) Token: 0x060099C6 RID: 39366 RVA: 0x00214579 File Offset: 0x00212779
+	// Token: 0x17000D51 RID: 3409
+	// (get) Token: 0x06006DA4 RID: 28068 RVA: 0x0021E331 File Offset: 0x0021C531
 	public static ActivitySpring25Controller Instance
 	{
 		get
@@ -241,7 +241,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060099C7 RID: 39367 RVA: 0x00214580 File Offset: 0x00212780
+	// Token: 0x06006DA5 RID: 28069 RVA: 0x0021E338 File Offset: 0x0021C538
 	public static ActivitySpring25Controller GetOrCreateInstance()
 	{
 		if (ActivitySpring25Controller._Instance == null)
@@ -251,7 +251,7 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return ActivitySpring25Controller._Instance;
 	}
 
-	// Token: 0x060099C8 RID: 39368 RVA: 0x00214594 File Offset: 0x00212794
+	// Token: 0x06006DA6 RID: 28070 RVA: 0x0021E34C File Offset: 0x0021C54C
 	public static bool CreateInstance()
 	{
 		if (ActivitySpring25Controller._Instance != null)
@@ -262,28 +262,28 @@ public class ActivitySpring25Controller : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060099C9 RID: 39369 RVA: 0x002145AA File Offset: 0x002127AA
+	// Token: 0x06006DA7 RID: 28071 RVA: 0x0021E362 File Offset: 0x0021C562
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060099CA RID: 39370 RVA: 0x002145AC File Offset: 0x002127AC
+	// Token: 0x06006DA8 RID: 28072 RVA: 0x0021E364 File Offset: 0x0021C564
 	public static void ResetStaticDefaultValue()
 	{
 		ActivitySpring25Controller._Instance = null;
 	}
 
-	// Token: 0x060099CB RID: 39371 RVA: 0x002145B4 File Offset: 0x002127B4
+	// Token: 0x06006DA9 RID: 28073 RVA: 0x0021E36C File Offset: 0x0021C56C
 	static ActivitySpring25Controller()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivitySpring25Controller.CreateStaticDefaultValue), new Action(ActivitySpring25Controller.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400437A RID: 17274
+	// Token: 0x04004420 RID: 17440
 	[Nullable(2)]
 	private CustomPromise WaitForRewardClosePromise;
 
-	// Token: 0x0400437B RID: 17275
+	// Token: 0x04004421 RID: 17441
 	[Nullable(2)]
 	private static ActivitySpring25Controller _Instance;
 }

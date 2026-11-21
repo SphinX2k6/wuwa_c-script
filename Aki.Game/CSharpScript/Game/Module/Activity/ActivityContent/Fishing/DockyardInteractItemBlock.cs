@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A7 RID: 26023
+	// Token: 0x02005525 RID: 21797
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardInteractItemBlock : UiPanelBase
 	{
-		// Token: 0x060413EF RID: 267247 RVA: 0x00FCF3C4 File Offset: 0x00FCD5C4
+		// Token: 0x060360B4 RID: 221364 RVA: 0x00F163C8 File Offset: 0x00F145C8
 		public DockyardInteractItemBlock(int itemId, IPanelPos startPos, int rotateType, float gridWidth)
 		{
 			this.ItemId = itemId;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.GridWidth = gridWidth;
 		}
 
-		// Token: 0x060413F0 RID: 267248 RVA: 0x00FCF434 File Offset: 0x00FCD634
+		// Token: 0x060360B5 RID: 221365 RVA: 0x00F16438 File Offset: 0x00F14638
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ParentModel = (this.OpenParam as DockyardInteractPanelModel);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060413F1 RID: 267249 RVA: 0x00FCF4D0 File Offset: 0x00FCD6D0
+		// Token: 0x060360B6 RID: 221366 RVA: 0x00F164D4 File Offset: 0x00F146D4
 		private void InitDrag()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(2);
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			draggable.OnPointerBeginDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnDragBegin));
 		}
 
-		// Token: 0x060413F2 RID: 267250 RVA: 0x00FCF528 File Offset: 0x00FCD728
+		// Token: 0x060360B7 RID: 221367 RVA: 0x00F1652C File Offset: 0x00F1472C
 		private void OnPointerUp(ULGUIPointerEventData eventData)
 		{
 			if (this.ItemData != null)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413F3 RID: 267251 RVA: 0x00FCF54E File Offset: 0x00FCD74E
+		// Token: 0x060360B8 RID: 221368 RVA: 0x00F16552 File Offset: 0x00F14752
 		private void OnDragBegin(ULGUIPointerEventData eventData)
 		{
 			if (this.ItemData != null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413F4 RID: 267252 RVA: 0x00FCF574 File Offset: 0x00FCD774
+		// Token: 0x060360B9 RID: 221369 RVA: 0x00F16578 File Offset: 0x00F14778
 		private void InitValidData()
 		{
 			FishingItem? fishingItemConfig = FishingConfig.Instance.GetFishingItemConfig(this.ItemId);
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413F5 RID: 267253 RVA: 0x00FCF6F8 File Offset: 0x00FCD8F8
+		// Token: 0x060360BA RID: 221370 RVA: 0x00F166FC File Offset: 0x00F148FC
 		private UniTask InitTexture()
 		{
 			DockyardInteractItemBlock.<InitTexture>d__16 <InitTexture>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060413F6 RID: 267254 RVA: 0x00FCF73C File Offset: 0x00FCD93C
+		// Token: 0x060360BB RID: 221371 RVA: 0x00F16740 File Offset: 0x00F14940
 		private void InitTargetId()
 		{
 			List<List<int>> list = DockyardPanelUtil.RotateOriginalPosData(this.ValidDoublyList, (FishingItemRotate)this.RotateType);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413F7 RID: 267255 RVA: 0x00FCF7D0 File Offset: 0x00FCD9D0
+		// Token: 0x060360BC RID: 221372 RVA: 0x00F167D4 File Offset: 0x00F149D4
 		private void RefreshFinish()
 		{
 			List<List<int>> list = new List<List<int>>();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060413F8 RID: 267256 RVA: 0x00FCF8A4 File Offset: 0x00FCDAA4
+		// Token: 0x060360BD RID: 221373 RVA: 0x00F168A8 File Offset: 0x00F14AA8
 		private void InitTextureTransform(UUITexture texture)
 		{
 			float width = (float)this.ValidDoublyList[0].Count * this.GridWidth;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			texture.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x060413F9 RID: 267257 RVA: 0x00FCF940 File Offset: 0x00FCDB40
+		// Token: 0x060360BE RID: 221374 RVA: 0x00F16944 File Offset: 0x00F14B44
 		private void InitRootItemTransform()
 		{
 			float inX = (float)(this.ValidStartPos.ColIndex + this.StartPos.ColIndex) * this.GridWidth;
@@ -202,13 +202,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			rootItem.SetAnchorOffset(new FVector2D(inX, -num));
 		}
 
-		// Token: 0x060413FA RID: 267258 RVA: 0x00FCF9A5 File Offset: 0x00FCDBA5
+		// Token: 0x060360BF RID: 221375 RVA: 0x00F169A9 File Offset: 0x00F14BA9
 		private void InitOther()
 		{
 			this.ChangeTextureActive(false);
 		}
 
-		// Token: 0x060413FB RID: 267259 RVA: 0x00FCF9B0 File Offset: 0x00FCDBB0
+		// Token: 0x060360C0 RID: 221376 RVA: 0x00F169B4 File Offset: 0x00F14BB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DockyardInteractItemBlock.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060413FC RID: 267260 RVA: 0x00FCF9F3 File Offset: 0x00FCDBF3
+		// Token: 0x060360C1 RID: 221377 RVA: 0x00F169F7 File Offset: 0x00F14BF7
 		private void ChangeTextureActive(bool realTextureActive)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			texture2.SetUIActive(!realTextureActive);
 		}
 
-		// Token: 0x060413FD RID: 267261 RVA: 0x00FCFA1D File Offset: 0x00FCDC1D
+		// Token: 0x060360C2 RID: 221378 RVA: 0x00F16A21 File Offset: 0x00F14C21
 		public void SetItemData(DockyardItemBlockOriginalData itemData)
 		{
 			this.ItemData = itemData;
@@ -243,58 +243,58 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ChangeTextureActive(itemData != null);
 		}
 
-		// Token: 0x060413FE RID: 267262 RVA: 0x00FCFA36 File Offset: 0x00FCDC36
+		// Token: 0x060360C3 RID: 221379 RVA: 0x00F16A3A File Offset: 0x00F14C3A
 		public bool CheckIsTarget(int itemId, int rowIndex, int colIndex, int rotateType)
 		{
 			return this.ItemId == itemId && rowIndex == this.StartPos.RowIndex && colIndex == this.StartPos.ColIndex && rotateType == this.RotateType;
 		}
 
-		// Token: 0x04021F75 RID: 139125
+		// Token: 0x0401C8A6 RID: 116902
 		private List<List<int>> ValidDoublyList = new List<List<int>>();
 
-		// Token: 0x04021F76 RID: 139126
+		// Token: 0x0401C8A7 RID: 116903
 		public readonly IPanelPos ValidStartPos = new PanelPos
 		{
 			RowIndex = -1,
 			ColIndex = -1
 		};
 
-		// Token: 0x04021F77 RID: 139127
+		// Token: 0x0401C8A8 RID: 116904
 		private DockyardInteractPanelModel ParentModel;
 
-		// Token: 0x04021F78 RID: 139128
+		// Token: 0x0401C8A9 RID: 116905
 		public DockyardItemBlockOriginalData ItemData;
 
-		// Token: 0x04021F79 RID: 139129
+		// Token: 0x0401C8AA RID: 116906
 		private readonly IPanelPos ShapeLength = new PanelPos
 		{
 			RowIndex = -1,
 			ColIndex = -1
 		};
 
-		// Token: 0x04021F7A RID: 139130
+		// Token: 0x0401C8AB RID: 116907
 		public int ItemId;
 
-		// Token: 0x04021F7B RID: 139131
+		// Token: 0x0401C8AC RID: 116908
 		public IPanelPos StartPos;
 
-		// Token: 0x04021F7C RID: 139132
+		// Token: 0x0401C8AD RID: 116909
 		public readonly int RotateType;
 
-		// Token: 0x04021F7D RID: 139133
+		// Token: 0x0401C8AE RID: 116910
 		protected float GridWidth;
 
-		// Token: 0x0200C7A2 RID: 51106
+		// Token: 0x0200B187 RID: 45447
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C4EB RID: 247019
+			// Token: 0x04036E3C RID: 224828
 			public const int Texture = 0;
 
-			// Token: 0x0403C4EC RID: 247020
+			// Token: 0x04036E3D RID: 224829
 			public const int RealTexture = 1;
 
-			// Token: 0x0403C4ED RID: 247021
+			// Token: 0x04036E3E RID: 224830
 			public const int DraggableItem = 2;
 		}
 	}

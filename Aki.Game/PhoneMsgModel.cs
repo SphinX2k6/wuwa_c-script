@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -18,13 +17,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002503 RID: 9475
+// Token: 0x020019EA RID: 6634
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PhoneMsgModel : ModelBase
 {
-	// Token: 0x060130CE RID: 78030 RVA: 0x004B7950 File Offset: 0x004B5B50
+	// Token: 0x0601058D RID: 66957 RVA: 0x004C55DC File Offset: 0x004C37DC
 	public string GetEmptyTexturePath()
 	{
 		if (string.IsNullOrEmpty(this.EmptyTexturePath))
@@ -34,8 +33,8 @@ public class PhoneMsgModel : ModelBase
 		return this.EmptyTexturePath;
 	}
 
-	// Token: 0x170018CE RID: 6350
-	// (get) Token: 0x060130CF RID: 78031 RVA: 0x004B797A File Offset: 0x004B5B7A
+	// Token: 0x17001908 RID: 6408
+	// (get) Token: 0x0601058E RID: 66958 RVA: 0x004C5606 File Offset: 0x004C3806
 	public bool IsUsingDefaultChatBg
 	{
 		get
@@ -44,8 +43,8 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x170018CF RID: 6351
-	// (get) Token: 0x060130D0 RID: 78032 RVA: 0x004B7988 File Offset: 0x004B5B88
+	// Token: 0x17001909 RID: 6409
+	// (get) Token: 0x0601058F RID: 66959 RVA: 0x004C5614 File Offset: 0x004C3814
 	public HashSet<int> SelectedFilterIdSet
 	{
 		get
@@ -62,13 +61,13 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130D1 RID: 78033 RVA: 0x004B7A1C File Offset: 0x004B5C1C
+	// Token: 0x06010590 RID: 66960 RVA: 0x004C56A8 File Offset: 0x004C38A8
 	public bool IsDefaultTheme(int id)
 	{
 		return id == 80891001;
 	}
 
-	// Token: 0x060130D2 RID: 78034 RVA: 0x004B7A28 File Offset: 0x004B5C28
+	// Token: 0x06010591 RID: 66961 RVA: 0x004C56B4 File Offset: 0x004C38B4
 	public void InitFilterSets()
 	{
 		this.AllFilterTypeSetDict.Clear();
@@ -97,7 +96,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130D3 RID: 78035 RVA: 0x004B7B6C File Offset: 0x004B5D6C
+	// Token: 0x06010592 RID: 66962 RVA: 0x004C57F8 File Offset: 0x004C39F8
 	public void SetSelectedFilterIdSet(HashSet<int> filterIds)
 	{
 		foreach (HashSet<int> hashSet in this.SelectedFilterSetDict.Values)
@@ -123,7 +122,7 @@ public class PhoneMsgModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnPhoneMsgFilterChanged);
 	}
 
-	// Token: 0x060130D4 RID: 78036 RVA: 0x004B7CC0 File Offset: 0x004B5EC0
+	// Token: 0x06010593 RID: 66963 RVA: 0x004C594C File Offset: 0x004C3B4C
 	public void ClearSelectedFilterIdSet()
 	{
 		foreach (HashSet<int> hashSet in this.SelectedFilterSetDict.Values)
@@ -134,7 +133,7 @@ public class PhoneMsgModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnPhoneMsgFilterChanged);
 	}
 
-	// Token: 0x060130D5 RID: 78037 RVA: 0x004B7D30 File Offset: 0x004B5F30
+	// Token: 0x06010594 RID: 66964 RVA: 0x004C59BC File Offset: 0x004C3BBC
 	private int GetContentFilterId(EChatMsgType chatMsgType)
 	{
 		if (chatMsgType == EChatMsgType.Task)
@@ -148,7 +147,7 @@ public class PhoneMsgModel : ModelBase
 		return 3002;
 	}
 
-	// Token: 0x060130D6 RID: 78038 RVA: 0x004B7D50 File Offset: 0x004B5F50
+	// Token: 0x06010595 RID: 66965 RVA: 0x004C59DC File Offset: 0x004C3BDC
 	private bool IsIdPassFilter(int id)
 	{
 		int num = -1;
@@ -168,7 +167,7 @@ public class PhoneMsgModel : ModelBase
 		return num != -1 && (!this.SelectedFilterSetDict.TryGetValue(num, out hashSet) || hashSet.Count == 0 || hashSet.Contains(id));
 	}
 
-	// Token: 0x060130D7 RID: 78039 RVA: 0x004B7E00 File Offset: 0x004B6000
+	// Token: 0x06010596 RID: 66966 RVA: 0x004C5A8C File Offset: 0x004C3C8C
 	public bool IsThisMessageCanShow(int shortMsgId)
 	{
 		ShortMessage? phoneMsgConfig = PhoneMsgConfig.Instance.GetPhoneMsgConfig(shortMsgId);
@@ -180,7 +179,7 @@ public class PhoneMsgModel : ModelBase
 		return this.IsIdPassFilter(contentFilterId);
 	}
 
-	// Token: 0x060130D8 RID: 78040 RVA: 0x004B7E44 File Offset: 0x004B6044
+	// Token: 0x06010597 RID: 66967 RVA: 0x004C5AD0 File Offset: 0x004C3CD0
 	public bool IsThisChatPartnerCanShow(int chatPartnerId)
 	{
 		ChatPartner? chatPartnerConfig = PhoneMsgConfig.Instance.GetChatPartnerConfig(chatPartnerId);
@@ -225,7 +224,7 @@ public class PhoneMsgModel : ModelBase
 		return flag2 && flag3;
 	}
 
-	// Token: 0x060130D9 RID: 78041 RVA: 0x004B7F40 File Offset: 0x004B6140
+	// Token: 0x06010598 RID: 66968 RVA: 0x004C5BCC File Offset: 0x004C3DCC
 	protected override bool OnInit()
 	{
 		IReadOnlyList<PhoneTipShowList> configList = ConfigPhoneTipShowListAll.GetConfigList(true);
@@ -249,7 +248,7 @@ public class PhoneMsgModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060130DA RID: 78042 RVA: 0x004B7FF8 File Offset: 0x004B61F8
+	// Token: 0x06010599 RID: 66969 RVA: 0x004C5C84 File Offset: 0x004C3E84
 	public void InitChatShow(int dialogId, int bgId, int themeId, int charmId, List<int> unLockDialogIds, List<int> unLockBgIds, List<int> unLockThemeIds, List<int> unLockCharmIds)
 	{
 		this.CurrentUsingChatDialogId = dialogId;
@@ -264,7 +263,7 @@ public class PhoneMsgModel : ModelBase
 		this.InitServerRedDotSetAndLocalRedDotCache();
 	}
 
-	// Token: 0x060130DB RID: 78043 RVA: 0x004B8050 File Offset: 0x004B6250
+	// Token: 0x0601059A RID: 66970 RVA: 0x004C5CDC File Offset: 0x004C3EDC
 	public void InitServerRedDotSetAndLocalRedDotCache()
 	{
 		this.ServerRedDotSet = (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.PhoneMsgChatShowRedDot) as ServerStorageSet);
@@ -286,7 +285,7 @@ public class PhoneMsgModel : ModelBase
 		this.CleanInvalidChatShowRedDot();
 	}
 
-	// Token: 0x060130DC RID: 78044 RVA: 0x004B8148 File Offset: 0x004B6348
+	// Token: 0x0601059B RID: 66971 RVA: 0x004C5DD4 File Offset: 0x004C3FD4
 	private void CleanInvalidChatShowRedDot()
 	{
 		HashSet<int> hashSet;
@@ -316,13 +315,13 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130DD RID: 78045 RVA: 0x004B82A0 File Offset: 0x004B64A0
+	// Token: 0x0601059C RID: 66972 RVA: 0x004C5F2C File Offset: 0x004C412C
 	private int EncodePhoneMsgRedDot(EPhoneMsgServerRedDotType type, int id)
 	{
 		return (int)(id * 10 + type);
 	}
 
-	// Token: 0x060130DE RID: 78046 RVA: 0x004B82A8 File Offset: 0x004B64A8
+	// Token: 0x0601059D RID: 66973 RVA: 0x004C5F34 File Offset: 0x004C4134
 	private void AddPhoneMsgRedDot(EPhoneMsgServerRedDotType type, int id)
 	{
 		if (this.LocalRedDotCache == null)
@@ -343,7 +342,7 @@ public class PhoneMsgModel : ModelBase
 		serverRedDotSet.Add(value);
 	}
 
-	// Token: 0x060130DF RID: 78047 RVA: 0x004B8314 File Offset: 0x004B6514
+	// Token: 0x0601059E RID: 66974 RVA: 0x004C5FA0 File Offset: 0x004C41A0
 	private void RemovePhoneMsgRedDot(EPhoneMsgServerRedDotType type, int id)
 	{
 		if (this.LocalRedDotCache == null)
@@ -364,20 +363,20 @@ public class PhoneMsgModel : ModelBase
 		serverRedDotSet.Remove(value);
 	}
 
-	// Token: 0x060130E0 RID: 78048 RVA: 0x004B835C File Offset: 0x004B655C
+	// Token: 0x0601059F RID: 66975 RVA: 0x004C5FE8 File Offset: 0x004C41E8
 	public void AddVoiceRedDot(int id)
 	{
 		this.AddPhoneMsgRedDot(EPhoneMsgServerRedDotType.VoiceOnce, id);
 	}
 
-	// Token: 0x060130E1 RID: 78049 RVA: 0x004B8368 File Offset: 0x004B6568
+	// Token: 0x060105A0 RID: 66976 RVA: 0x004C5FF4 File Offset: 0x004C41F4
 	public bool TryGetVoiceRedDot(int id)
 	{
 		HashSet<int> hashSet;
 		return this.LocalRedDotCache != null && this.LocalRedDotCache.TryGetValue(EPhoneMsgServerRedDotType.VoiceOnce, out hashSet) && hashSet.Contains(id);
 	}
 
-	// Token: 0x060130E2 RID: 78050 RVA: 0x004B8398 File Offset: 0x004B6598
+	// Token: 0x060105A1 RID: 66977 RVA: 0x004C6024 File Offset: 0x004C4224
 	public bool CheckIsInWhiteList()
 	{
 		if (BattleUiControl.Instance.GetMainViewName() != EUiViewName.BattleView)
@@ -415,8 +414,8 @@ public class PhoneMsgModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060130E3 RID: 78051 RVA: 0x004B8474 File Offset: 0x004B6674
-	public void SetUnLockChatDialogIds(List<int> unLockIds)
+	// Token: 0x060105A2 RID: 66978 RVA: 0x004C6100 File Offset: 0x004C4300
+	public void SetUnLockChatDialogIds(IEnumerable<int> unLockIds)
 	{
 		foreach (int item in unLockIds)
 		{
@@ -424,8 +423,8 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130E4 RID: 78052 RVA: 0x004B84C8 File Offset: 0x004B66C8
-	public void SetUnLockChatBgIds(List<int> unLockIds)
+	// Token: 0x060105A3 RID: 66979 RVA: 0x004C6150 File Offset: 0x004C4350
+	public void SetUnLockChatBgIds(IEnumerable<int> unLockIds)
 	{
 		foreach (int item in unLockIds)
 		{
@@ -433,8 +432,8 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130E5 RID: 78053 RVA: 0x004B851C File Offset: 0x004B671C
-	public void SetUnLockChatThemeIds(List<int> unLockIds)
+	// Token: 0x060105A4 RID: 66980 RVA: 0x004C61A0 File Offset: 0x004C43A0
+	public void SetUnLockChatThemeIds(IEnumerable<int> unLockIds)
 	{
 		foreach (int item in unLockIds)
 		{
@@ -442,8 +441,8 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130E6 RID: 78054 RVA: 0x004B8570 File Offset: 0x004B6770
-	public void SetUnLockChatCharmIds(List<int> unLockIds)
+	// Token: 0x060105A5 RID: 66981 RVA: 0x004C61F0 File Offset: 0x004C43F0
+	public void SetUnLockChatCharmIds(IEnumerable<int> unLockIds)
 	{
 		foreach (int item in unLockIds)
 		{
@@ -451,13 +450,13 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130E7 RID: 78055 RVA: 0x004B85C4 File Offset: 0x004B67C4
+	// Token: 0x060105A6 RID: 66982 RVA: 0x004C6240 File Offset: 0x004C4440
 	public void OnPhoneMsgDialogAndBgAddNotify(ShortMessageItemUpdateNotify message)
 	{
 		RepeatedField<int> bubbleIds = message.BubbleIds;
 		if (bubbleIds != null && bubbleIds.Count > 0)
 		{
-			this.SetUnLockChatDialogIds(bubbleIds.ToList<int>());
+			this.SetUnLockChatDialogIds(bubbleIds);
 			foreach (int id in bubbleIds)
 			{
 				this.AddPhoneMsgRedDot(EPhoneMsgServerRedDotType.Decoration, id);
@@ -466,7 +465,7 @@ public class PhoneMsgModel : ModelBase
 		RepeatedField<int> chatBgIds = message.ChatBgIds;
 		if (chatBgIds != null && chatBgIds.Count > 0)
 		{
-			this.SetUnLockChatBgIds(chatBgIds.ToList<int>());
+			this.SetUnLockChatBgIds(chatBgIds);
 			foreach (int id2 in chatBgIds)
 			{
 				this.AddPhoneMsgRedDot(EPhoneMsgServerRedDotType.Decoration, id2);
@@ -475,7 +474,7 @@ public class PhoneMsgModel : ModelBase
 		RepeatedField<int> chatThemeIds = message.ChatThemeIds;
 		if (chatThemeIds != null && chatThemeIds.Count > 0)
 		{
-			this.SetUnLockChatThemeIds(chatThemeIds.ToList<int>());
+			this.SetUnLockChatThemeIds(chatThemeIds);
 			foreach (int id3 in chatThemeIds)
 			{
 				this.AddPhoneMsgRedDot(EPhoneMsgServerRedDotType.Decoration, id3);
@@ -484,7 +483,7 @@ public class PhoneMsgModel : ModelBase
 		RepeatedField<int> chatCharmIds = message.ChatCharmIds;
 		if (chatCharmIds != null && chatCharmIds.Count > 0)
 		{
-			this.SetUnLockChatCharmIds(chatCharmIds.ToList<int>());
+			this.SetUnLockChatCharmIds(chatCharmIds);
 			foreach (int id4 in chatCharmIds)
 			{
 				this.AddPhoneMsgRedDot(EPhoneMsgServerRedDotType.Decoration, id4);
@@ -494,41 +493,41 @@ public class PhoneMsgModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.PhoneMsgDialogBgThemeCharmRedDotUpdate);
 	}
 
-	// Token: 0x060130E8 RID: 78056 RVA: 0x004B8770 File Offset: 0x004B6970
+	// Token: 0x060105A7 RID: 66983 RVA: 0x004C63D8 File Offset: 0x004C45D8
 	public bool IsChatDialogUnlocked(int dialogId)
 	{
 		return this.UnlockedDialogIds.Contains(dialogId);
 	}
 
-	// Token: 0x060130E9 RID: 78057 RVA: 0x004B877E File Offset: 0x004B697E
+	// Token: 0x060105A8 RID: 66984 RVA: 0x004C63E6 File Offset: 0x004C45E6
 	public bool IsChatBgUnlocked(int bgId)
 	{
 		return this.UnlockedBgIds.Contains(bgId);
 	}
 
-	// Token: 0x060130EA RID: 78058 RVA: 0x004B878C File Offset: 0x004B698C
+	// Token: 0x060105A9 RID: 66985 RVA: 0x004C63F4 File Offset: 0x004C45F4
 	public bool IsChatThemeUnlocked(int themeId)
 	{
 		return this.UnlockedThemeIds.Contains(themeId);
 	}
 
-	// Token: 0x060130EB RID: 78059 RVA: 0x004B879A File Offset: 0x004B699A
+	// Token: 0x060105AA RID: 66986 RVA: 0x004C6402 File Offset: 0x004C4602
 	public bool IsChatCharmUnlocked(int charmId)
 	{
 		return this.UnlockedCharmIds.Contains(charmId);
 	}
 
-	// Token: 0x060130EC RID: 78060 RVA: 0x004B87A8 File Offset: 0x004B69A8
+	// Token: 0x060105AB RID: 66987 RVA: 0x004C6410 File Offset: 0x004C4610
 	public bool IsDefaultChatBg(int id)
 	{
 		return id == 80820001;
 	}
 
-	// Token: 0x060130ED RID: 78061 RVA: 0x004B87B4 File Offset: 0x004B69B4
+	// Token: 0x060105AC RID: 66988 RVA: 0x004C641C File Offset: 0x004C461C
 	public void OnPhoneMsgUpdateNotify(ShortMessageUpdateNotify message)
 	{
 		ChangeReason reason = message.Reason;
-		this.AddMessages(message.Adds.ToList<ShortMessageInfo>(), new ChangeReason?(reason), true, true);
+		this.AddMessages(message.Adds, new ChangeReason?(reason), true, true);
 		RepeatedField<int> removes = message.Removes;
 		int count = removes.Count;
 		for (int i = 0; i < count; i++)
@@ -565,8 +564,8 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130EE RID: 78062 RVA: 0x004B88E4 File Offset: 0x004B6AE4
-	public void AddMessages(List<ShortMessageInfo> dataList, ChangeReason? reason = null, bool isNeedShowTips = true, bool isNeedSetLatestShortMsgTime = true)
+	// Token: 0x060105AD RID: 66989 RVA: 0x004C6548 File Offset: 0x004C4748
+	public void AddMessages(IReadOnlyList<ShortMessageInfo> dataList, ChangeReason? reason = null, bool isNeedShowTips = true, bool isNeedSetLatestShortMsgTime = true)
 	{
 		bool flag = isNeedShowTips;
 		long num = 0L;
@@ -654,14 +653,14 @@ public class PhoneMsgModel : ModelBase
 		this.SortChatPartnerAndMessages();
 	}
 
-	// Token: 0x060130EF RID: 78063 RVA: 0x004B8B7C File Offset: 0x004B6D7C
+	// Token: 0x060105AE RID: 66990 RVA: 0x004C67E0 File Offset: 0x004C49E0
 	public void SortChatPartnerAndMessages()
 	{
 		this.SortAllMessages();
 		this.SortChatPartnerList();
 	}
 
-	// Token: 0x060130F0 RID: 78064 RVA: 0x004B8B8C File Offset: 0x004B6D8C
+	// Token: 0x060105AF RID: 66991 RVA: 0x004C67F0 File Offset: 0x004C49F0
 	public void SortAllMessages()
 	{
 		if (this.ChatPartnerId2ShortMessagesIdsDict.Count <= 1)
@@ -751,7 +750,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130F1 RID: 78065 RVA: 0x004B8D4C File Offset: 0x004B6F4C
+	// Token: 0x060105B0 RID: 66992 RVA: 0x004C69B0 File Offset: 0x004C4BB0
 	public void SortChatPartnerList()
 	{
 		this.UnreceivedPartnerList = new List<int>();
@@ -789,7 +788,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130F2 RID: 78066 RVA: 0x004B8E74 File Offset: 0x004B7074
+	// Token: 0x060105B1 RID: 66993 RVA: 0x004C6AD8 File Offset: 0x004C4CD8
 	private bool IsPartnerHasUnreadMsg(int chatPartnerId)
 	{
 		List<PhoneMsgShortMsgData> allPhoneMsgShortMsgDataByChatPartnerId = this.GetAllPhoneMsgShortMsgDataByChatPartnerId(chatPartnerId);
@@ -807,7 +806,7 @@ public class PhoneMsgModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060130F3 RID: 78067 RVA: 0x004B8EB0 File Offset: 0x004B70B0
+	// Token: 0x060105B2 RID: 66994 RVA: 0x004C6B14 File Offset: 0x004C4D14
 	public void SortReceivedPartnerList()
 	{
 		if (this.ReceivedUnreadPartnerList != null && this.ReceivedUnreadPartnerList.Count > 0)
@@ -820,7 +819,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130F4 RID: 78068 RVA: 0x004B8F18 File Offset: 0x004B7118
+	// Token: 0x060105B3 RID: 66995 RVA: 0x004C6B7C File Offset: 0x004C4D7C
 	private int ComparePartnerByUnlockTime(int a, int b)
 	{
 		List<int> list = this.ChatPartnerId2ShortMessagesIdsDict[a];
@@ -847,13 +846,13 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x060130F5 RID: 78069 RVA: 0x004B8F93 File Offset: 0x004B7193
+	// Token: 0x060105B4 RID: 66996 RVA: 0x004C6BF7 File Offset: 0x004C4DF7
 	public List<int> GetAllChatPartnerIds()
 	{
 		return this.ChatPartnerIdList;
 	}
 
-	// Token: 0x060130F6 RID: 78070 RVA: 0x004B8F9C File Offset: 0x004B719C
+	// Token: 0x060105B5 RID: 66997 RVA: 0x004C6C00 File Offset: 0x004C4E00
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -884,7 +883,7 @@ public class PhoneMsgModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x060130F7 RID: 78071 RVA: 0x004B900C File Offset: 0x004B720C
+	// Token: 0x060105B6 RID: 66998 RVA: 0x004C6C70 File Offset: 0x004C4E70
 	[NullableContext(2)]
 	public PhoneMsgShortMsgData GetPhoneMsgShortMsgDataByShortMsgId(int shortMsgId)
 	{
@@ -896,7 +895,7 @@ public class PhoneMsgModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060130F8 RID: 78072 RVA: 0x004B902C File Offset: 0x004B722C
+	// Token: 0x060105B7 RID: 66999 RVA: 0x004C6C90 File Offset: 0x004C4E90
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -963,7 +962,8 @@ public class PhoneMsgModel : ModelBase
 								{
 									if (type == EPhoneMessageType.Attachment)
 									{
-										item2 = (TextConfig.Instance.GetMultiText("ChatBubble_Content_Attachment", Array.Empty<string>()) ?? "");
+										PhoneMessageAttachment? config = ConfigPhoneMessageAttachmentById.GetConfig(((ITalkItemPhoneMessageAttachment)talkItemPhoneMessage.MessageType).AttachmentId, true);
+										item2 = ((((config != null) ? config.GetValueOrDefault().Type : null) == "CoordinateTeleport") ? (TextConfig.Instance.GetMultiText("PhoneSystem_MapCoordinates", Array.Empty<string>()) ?? "") : (TextConfig.Instance.GetMultiText("ChatBubble_Content_Attachment", Array.Empty<string>()) ?? ""));
 									}
 								}
 								else
@@ -998,14 +998,14 @@ public class PhoneMsgModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060130F9 RID: 78073 RVA: 0x004B92F0 File Offset: 0x004B74F0
+	// Token: 0x060105B8 RID: 67000 RVA: 0x004C6FB8 File Offset: 0x004C51B8
 	public bool IsShortMsgRead(int shortMsgId)
 	{
 		PhoneMsgShortMsgData phoneMsgShortMsgDataByShortMsgId = this.GetPhoneMsgShortMsgDataByShortMsgId(shortMsgId);
 		return phoneMsgShortMsgDataByShortMsgId != null && phoneMsgShortMsgDataByShortMsgId.IsRead;
 	}
 
-	// Token: 0x060130FA RID: 78074 RVA: 0x004B9310 File Offset: 0x004B7510
+	// Token: 0x060105B9 RID: 67001 RVA: 0x004C6FD8 File Offset: 0x004C51D8
 	public bool IsSomeOneHasUnReadMsg(int chatPartnerId)
 	{
 		List<PhoneMsgShortMsgData> allPhoneMsgShortMsgDataByChatPartnerId = this.GetAllPhoneMsgShortMsgDataByChatPartnerId(chatPartnerId);
@@ -1024,7 +1024,7 @@ public class PhoneMsgModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060130FB RID: 78075 RVA: 0x004B9350 File Offset: 0x004B7550
+	// Token: 0x060105BA RID: 67002 RVA: 0x004C7018 File Offset: 0x004C5218
 	public bool IsSomeOneHasUnReceivedMsg(int chatPartnerId)
 	{
 		List<PhoneMsgShortMsgData> allPhoneMsgShortMsgDataByChatPartnerId = this.GetAllPhoneMsgShortMsgDataByChatPartnerId(chatPartnerId);
@@ -1045,7 +1045,7 @@ public class PhoneMsgModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060130FC RID: 78076 RVA: 0x004B93C0 File Offset: 0x004B75C0
+	// Token: 0x060105BB RID: 67003 RVA: 0x004C7088 File Offset: 0x004C5288
 	public bool IsAllPhoneMsgRead()
 	{
 		foreach (KeyValuePair<int, PhoneMsgShortMsgData> keyValuePair in this.Id2ShortMessagesDict)
@@ -1058,7 +1058,7 @@ public class PhoneMsgModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060130FD RID: 78077 RVA: 0x004B9424 File Offset: 0x004B7624
+	// Token: 0x060105BC RID: 67004 RVA: 0x004C70EC File Offset: 0x004C52EC
 	public bool IsHasUnReceivedMsg()
 	{
 		foreach (KeyValuePair<int, PhoneMsgShortMsgData> keyValuePair in this.Id2ShortMessagesDict)
@@ -1073,13 +1073,13 @@ public class PhoneMsgModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060130FE RID: 78078 RVA: 0x004B94B8 File Offset: 0x004B76B8
+	// Token: 0x060105BD RID: 67005 RVA: 0x004C7180 File Offset: 0x004C5380
 	public bool IsPhoneMsgUnlock(int shortMsgId)
 	{
 		return this.Id2ShortMessagesDict.ContainsKey(shortMsgId);
 	}
 
-	// Token: 0x060130FF RID: 78079 RVA: 0x004B94C8 File Offset: 0x004B76C8
+	// Token: 0x060105BE RID: 67006 RVA: 0x004C7190 File Offset: 0x004C5390
 	public void SetShortMsgOptionData(int shortMsgId, int chatIndex, int optIndex)
 	{
 		PhoneMsgShortMsgData phoneMsgShortMsgDataByShortMsgId = this.GetPhoneMsgShortMsgDataByShortMsgId(shortMsgId);
@@ -1090,14 +1090,14 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013100 RID: 78080 RVA: 0x004B9500 File Offset: 0x004B7700
+	// Token: 0x060105BF RID: 67007 RVA: 0x004C71C8 File Offset: 0x004C53C8
 	public bool GetShortMsgHasAnySelectedOption(int shortMsgId)
 	{
 		PhoneMsgShortMsgData phoneMsgShortMsgDataByShortMsgId = this.GetPhoneMsgShortMsgDataByShortMsgId(shortMsgId);
 		return phoneMsgShortMsgDataByShortMsgId != null && phoneMsgShortMsgDataByShortMsgId.SelectedOptionsDict.Count > 0;
 	}
 
-	// Token: 0x06013101 RID: 78081 RVA: 0x004B9528 File Offset: 0x004B7728
+	// Token: 0x060105C0 RID: 67008 RVA: 0x004C71F0 File Offset: 0x004C53F0
 	public void SetShortMsgRewardData(int shortMsgId, bool isReceived)
 	{
 		PhoneMsgShortMsgData phoneMsgShortMsgDataByShortMsgId = this.GetPhoneMsgShortMsgDataByShortMsgId(shortMsgId);
@@ -1107,7 +1107,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013102 RID: 78082 RVA: 0x004B9548 File Offset: 0x004B7748
+	// Token: 0x060105C1 RID: 67009 RVA: 0x004C7210 File Offset: 0x004C5410
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1124,7 +1124,7 @@ public class PhoneMsgModel : ModelBase
 		return <CreateShortMessageDisplayDataByShortMsgId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013103 RID: 78083 RVA: 0x004B9594 File Offset: 0x004B7794
+	// Token: 0x060105C2 RID: 67010 RVA: 0x004C725C File Offset: 0x004C545C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1141,7 +1141,7 @@ public class PhoneMsgModel : ModelBase
 		return <CreateShortMessageDisplayData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013104 RID: 78084 RVA: 0x004B95E0 File Offset: 0x004B77E0
+	// Token: 0x060105C3 RID: 67011 RVA: 0x004C72A8 File Offset: 0x004C54A8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1159,7 +1159,7 @@ public class PhoneMsgModel : ModelBase
 		return <GetLastChatTextByShortMsgId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013105 RID: 78085 RVA: 0x004B9634 File Offset: 0x004B7834
+	// Token: 0x060105C4 RID: 67012 RVA: 0x004C72FC File Offset: 0x004C54FC
 	public string GetLastChatTextByDisplayData(ShortMessageDisplayData displayData, EGetLastChatTextType type = EGetLastChatTextType.FromReadIndex)
 	{
 		List<PhoneMsgChatData> chatDataList = displayData.ChatDataList;
@@ -1220,7 +1220,7 @@ public class PhoneMsgModel : ModelBase
 		return text;
 	}
 
-	// Token: 0x06013106 RID: 78086 RVA: 0x004B9740 File Offset: 0x004B7940
+	// Token: 0x060105C5 RID: 67013 RVA: 0x004C7408 File Offset: 0x004C5608
 	private string GetTalkText(PhoneMsgChatData lastChatData, ShortMessageDisplayData displayData)
 	{
 		string result = "";
@@ -1250,7 +1250,19 @@ public class PhoneMsgModel : ModelBase
 			case EChatMsgType.Attachment:
 			{
 				PhoneMessageAttachment? config = ConfigPhoneMessageAttachmentById.GetConfig(lastChatData.ContentNum, true);
-				result = ((((config != null) ? config.GetValueOrDefault().Type : null) == "InformationView") ? (TextConfig.Instance.GetMultiText("ChatBubble_Content_Information", Array.Empty<string>()) ?? "") : (TextConfig.Instance.GetMultiText("ChatBubble_Content_Attachment", Array.Empty<string>()) ?? ""));
+				string a = (config != null) ? config.GetValueOrDefault().Type : null;
+				if (a == "InformationView")
+				{
+					result = (TextConfig.Instance.GetMultiText("ChatBubble_Content_Information", Array.Empty<string>()) ?? "");
+				}
+				else if (a == "CoordinateTeleport")
+				{
+					result = (TextConfig.Instance.GetMultiText("PhoneSystem_MapCoordinates", Array.Empty<string>()) ?? "");
+				}
+				else
+				{
+					result = (TextConfig.Instance.GetMultiText("ChatBubble_Content_Attachment", Array.Empty<string>()) ?? "");
+				}
 				break;
 			}
 			default:
@@ -1277,7 +1289,7 @@ public class PhoneMsgModel : ModelBase
 		return firstMsgDataByShortMsgId.Value.Item3;
 	}
 
-	// Token: 0x06013107 RID: 78087 RVA: 0x004B9910 File Offset: 0x004B7B10
+	// Token: 0x060105C6 RID: 67014 RVA: 0x004C7614 File Offset: 0x004C5814
 	private UniTask LoadDurationForShowTalkAsync(ShowTalk showTalkAction)
 	{
 		PhoneMsgModel.<LoadDurationForShowTalkAsync>d__89 <LoadDurationForShowTalkAsync>d__;
@@ -1289,7 +1301,7 @@ public class PhoneMsgModel : ModelBase
 		return <LoadDurationForShowTalkAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013108 RID: 78088 RVA: 0x004B995C File Offset: 0x004B7B5C
+	// Token: 0x060105C7 RID: 67015 RVA: 0x004C7660 File Offset: 0x004C5860
 	private UniTask LoadDurationForTalkItemAsync(ITalkItem talkItem)
 	{
 		PhoneMsgModel.<LoadDurationForTalkItemAsync>d__90 <LoadDurationForTalkItemAsync>d__;
@@ -1301,14 +1313,14 @@ public class PhoneMsgModel : ModelBase
 		return <LoadDurationForTalkItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013109 RID: 78089 RVA: 0x004B99A8 File Offset: 0x004B7BA8
+	// Token: 0x060105C8 RID: 67016 RVA: 0x004C76AC File Offset: 0x004C58AC
 	private void ProcessSetPlotMode(SetPlotMode setPlotModeAction, ShortMessageDisplayData displayData)
 	{
 		IPhoneMessageConfig phoneMessageConfig = setPlotModeAction.PhoneMessageConfig;
 		displayData.IsJumpToFirstOption = (phoneMessageConfig != null && phoneMessageConfig.IsJumpToFirstOption.GetValueOrDefault());
 	}
 
-	// Token: 0x0601310A RID: 78090 RVA: 0x004B99D8 File Offset: 0x004B7BD8
+	// Token: 0x060105C9 RID: 67017 RVA: 0x004C76DC File Offset: 0x004C58DC
 	private void ProcessShowTalk(ShowTalk showTalkAction, ShortMessage msgConfig, ShortMessageDisplayData displayData, int startTalkItemIndex = 0)
 	{
 		List<ITalkItem> talkItems = showTalkAction.TalkItems;
@@ -1324,7 +1336,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601310B RID: 78091 RVA: 0x004B9A1C File Offset: 0x004B7C1C
+	// Token: 0x060105CA RID: 67018 RVA: 0x004C7720 File Offset: 0x004C5920
 	private int ProcessTalkItem(ShowTalk showTalkAction, ShortMessage msgConfig, ShortMessageDisplayData displayData, int startTalkItemIndex = 0)
 	{
 		List<ITalkItem> talkItems = showTalkAction.TalkItems;
@@ -1407,7 +1419,7 @@ public class PhoneMsgModel : ModelBase
 		return startTalkItemIndex + 1;
 	}
 
-	// Token: 0x0601310C RID: 78092 RVA: 0x004B9BB0 File Offset: 0x004B7DB0
+	// Token: 0x060105CB RID: 67019 RVA: 0x004C78B4 File Offset: 0x004C5AB4
 	private unsafe int ProcessTalkItemOptions(List<ITalkItem> talkItems, int inTalkItemIndex, ShortMessageDisplayData displayData)
 	{
 		List<ITalkOption> options = talkItems[inTalkItemIndex].Options;
@@ -1455,7 +1467,7 @@ public class PhoneMsgModel : ModelBase
 		return -1;
 	}
 
-	// Token: 0x0601310D RID: 78093 RVA: 0x004B9D04 File Offset: 0x004B7F04
+	// Token: 0x060105CC RID: 67020 RVA: 0x004C7A08 File Offset: 0x004C5C08
 	private void ProcessFinalSystemTips(ShortMessage msgConfig, ShortMessageDisplayData displayData)
 	{
 		PhoneMsgChatData phoneMsgChatData = this.CreateFinalSystemTips(msgConfig, displayData);
@@ -1465,7 +1477,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601310E RID: 78094 RVA: 0x004B9D2C File Offset: 0x004B7F2C
+	// Token: 0x060105CD RID: 67021 RVA: 0x004C7A30 File Offset: 0x004C5C30
 	private int ProcessJumpTalkAction(ActionInfo action, ShortMessageDisplayData displayData)
 	{
 		JumpTalk jumpTalk = (JumpTalk)action.Params;
@@ -1483,7 +1495,7 @@ public class PhoneMsgModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601310F RID: 78095 RVA: 0x004B9D94 File Offset: 0x004B7F94
+	// Token: 0x060105CE RID: 67022 RVA: 0x004C7A98 File Offset: 0x004C5C98
 	public void ProcessAfterAnswer(ShortMessageDisplayData displayData, int talkItemIndex)
 	{
 		if (talkItemIndex < 0)
@@ -1512,19 +1524,19 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013110 RID: 78096 RVA: 0x004B9E10 File Offset: 0x004B8010
+	// Token: 0x060105CF RID: 67023 RVA: 0x004C7B14 File Offset: 0x004C5D14
 	private bool IsSystemTipMessage(ITalkItem talkItem)
 	{
 		return talkItem.Type.GetValueOrDefault() == ETalkItemType.PhoneMessage && ((ITalkItemPhoneMessage)talkItem).MessageType.Type == EPhoneMessageType.SystemTip;
 	}
 
-	// Token: 0x06013111 RID: 78097 RVA: 0x004B9E44 File Offset: 0x004B8044
+	// Token: 0x060105D0 RID: 67024 RVA: 0x004C7B48 File Offset: 0x004C5D48
 	private bool IsOption(ITalkItem talkItem)
 	{
 		return talkItem.Type.GetValueOrDefault() == ETalkItemType.Option || talkItem.Type.GetValueOrDefault() == ETalkItemType.SystemOption;
 	}
 
-	// Token: 0x06013112 RID: 78098 RVA: 0x004B9E78 File Offset: 0x004B8078
+	// Token: 0x060105D1 RID: 67025 RVA: 0x004C7B7C File Offset: 0x004C5D7C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1547,7 +1559,7 @@ public class PhoneMsgModel : ModelBase
 		return new ValueTuple<string, string>(item, headIconAsset);
 	}
 
-	// Token: 0x06013113 RID: 78099 RVA: 0x004B9F04 File Offset: 0x004B8104
+	// Token: 0x060105D2 RID: 67026 RVA: 0x004C7C08 File Offset: 0x004C5E08
 	private void FillChatDataContent(PhoneMsgChatData chatData, ITalkItem talkItem, bool bOption = false)
 	{
 		if (bOption)
@@ -1572,7 +1584,7 @@ public class PhoneMsgModel : ModelBase
 		chatData.SetScrollWaitTime((int)talkItemPhoneMessage.OtherIsTypingDuration.GetValueOrDefault());
 	}
 
-	// Token: 0x06013114 RID: 78100 RVA: 0x004B9F80 File Offset: 0x004B8180
+	// Token: 0x060105D3 RID: 67027 RVA: 0x004C7C84 File Offset: 0x004C5E84
 	private void FillOptionChatData(PhoneMsgChatData chatData, ITalkItem talkItem)
 	{
 		List<ITalkOption> options = talkItem.Options;
@@ -1599,7 +1611,7 @@ public class PhoneMsgModel : ModelBase
 		chatData.ContentType = echatMsgType.Value;
 	}
 
-	// Token: 0x06013115 RID: 78101 RVA: 0x004BA028 File Offset: 0x004B8228
+	// Token: 0x060105D4 RID: 67028 RVA: 0x004C7D2C File Offset: 0x004C5F2C
 	private void FillTalkChatData(PhoneMsgChatData chatData, ITalkItem talkItem)
 	{
 		ITalkItemDialog talkItemDialog = (ITalkItemDialog)talkItem;
@@ -1608,7 +1620,7 @@ public class PhoneMsgModel : ModelBase
 		this.SetDialogChatData(chatData, talkItemDialog);
 	}
 
-	// Token: 0x06013116 RID: 78102 RVA: 0x004BA084 File Offset: 0x004B8284
+	// Token: 0x060105D5 RID: 67029 RVA: 0x004C7D88 File Offset: 0x004C5F88
 	private void FillPhoneMessageChatData(PhoneMsgChatData chatData, ITalkItem talkItem)
 	{
 		ITalkItemPhoneMessage talkItemPhoneMessage = (ITalkItemPhoneMessage)talkItem;
@@ -1629,7 +1641,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013117 RID: 78103 RVA: 0x004BA0F0 File Offset: 0x004B82F0
+	// Token: 0x060105D6 RID: 67030 RVA: 0x004C7DF4 File Offset: 0x004C5FF4
 	public PhoneMsgChatData CreateOtherPhoneMsgChatData(ITalkItem talkItem)
 	{
 		PhoneMsgChatData phoneMsgChatData = new PhoneMsgChatData(EPhoneMsgContentType.Other);
@@ -1641,7 +1653,7 @@ public class PhoneMsgModel : ModelBase
 		return phoneMsgChatData;
 	}
 
-	// Token: 0x06013118 RID: 78104 RVA: 0x004BA13C File Offset: 0x004B833C
+	// Token: 0x060105D7 RID: 67031 RVA: 0x004C7E40 File Offset: 0x004C6040
 	[return: Nullable(2)]
 	public PhoneMsgChatData CreateSelfPhoneMsgChatData(ITalkItem talkItem, bool bOption = false)
 	{
@@ -1663,7 +1675,7 @@ public class PhoneMsgModel : ModelBase
 		return phoneMsgChatData;
 	}
 
-	// Token: 0x06013119 RID: 78105 RVA: 0x004BA1D0 File Offset: 0x004B83D0
+	// Token: 0x060105D8 RID: 67032 RVA: 0x004C7ED4 File Offset: 0x004C60D4
 	[return: Nullable(2)]
 	public PhoneMsgChatData CreateSystemTipChatData(ITalkItemPhoneMessage talkMsgItem)
 	{
@@ -1681,7 +1693,7 @@ public class PhoneMsgModel : ModelBase
 		return phoneMsgChatData;
 	}
 
-	// Token: 0x0601311A RID: 78106 RVA: 0x004BA22A File Offset: 0x004B842A
+	// Token: 0x060105D9 RID: 67033 RVA: 0x004C7F2E File Offset: 0x004C612E
 	public void SetDialogChatData(PhoneMsgChatData targetChatData, ITalkItemDialog talkItem)
 	{
 		targetChatData.ContentType = EChatMsgType.Text;
@@ -1691,7 +1703,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601311B RID: 78107 RVA: 0x004BA25C File Offset: 0x004B845C
+	// Token: 0x060105DA RID: 67034 RVA: 0x004C7F60 File Offset: 0x004C6160
 	public void SetEmojiChatData(PhoneMsgChatData targetChatData, ITalkItemPhoneMessage talkMsgItem)
 	{
 		if (talkMsgItem.MessageType.Type != EPhoneMessageType.Emoji)
@@ -1703,7 +1715,7 @@ public class PhoneMsgModel : ModelBase
 		targetChatData.ContentNum = talkItemPhoneMessageEmoji.EmojiId;
 	}
 
-	// Token: 0x0601311C RID: 78108 RVA: 0x004BA298 File Offset: 0x004B8498
+	// Token: 0x060105DB RID: 67035 RVA: 0x004C7F9C File Offset: 0x004C619C
 	public void SetAttachmentChatData(PhoneMsgChatData targetChatData, ITalkItemPhoneMessage talkMsgItem)
 	{
 		if (talkMsgItem.MessageType.Type != EPhoneMessageType.Attachment)
@@ -1715,7 +1727,7 @@ public class PhoneMsgModel : ModelBase
 		targetChatData.ContentNum = talkItemPhoneMessageAttachment.AttachmentId;
 	}
 
-	// Token: 0x0601311D RID: 78109 RVA: 0x004BA2D4 File Offset: 0x004B84D4
+	// Token: 0x060105DC RID: 67036 RVA: 0x004C7FD8 File Offset: 0x004C61D8
 	public void SetVoiceChatData(PhoneMsgChatData targetChatData, ITalkItemPhoneMessage talkMsgItem)
 	{
 		if (talkMsgItem.MessageType.Type != EPhoneMessageType.Voice)
@@ -1735,7 +1747,7 @@ public class PhoneMsgModel : ModelBase
 		targetChatData.IsAutoPlay = talkItemPhoneMessageVoice.AutoPlay.GetValueOrDefault();
 	}
 
-	// Token: 0x0601311E RID: 78110 RVA: 0x004BA368 File Offset: 0x004B8568
+	// Token: 0x060105DD RID: 67037 RVA: 0x004C806C File Offset: 0x004C626C
 	[return: Nullable(2)]
 	private PhoneMsgChatData CreateFinalSystemTips(ShortMessage msgConfig, ShortMessageDisplayData displayData)
 	{
@@ -1762,6 +1774,14 @@ public class PhoneMsgModel : ModelBase
 			phoneMsgChatData.DropId = msgConfig.DropId;
 			phoneMsgChatData.IsFinish = displayData.IsReceivedReward;
 			break;
+		case 11:
+			phoneMsgChatData.ContentType = EChatMsgType.Activity;
+			phoneMsgChatData.ActivityId = msgConfig.ActivityId;
+			break;
+		case 12:
+			phoneMsgChatData.ContentType = EChatMsgType.ActivityMainView;
+			phoneMsgChatData.ActivityId = msgConfig.ActivityId;
+			break;
 		}
 		int whichChat = msgConfig.WhichChat;
 		ChatPartner? chatPartnerConfigNew = this.GetChatPartnerConfigNew(whichChat);
@@ -1780,19 +1800,19 @@ public class PhoneMsgModel : ModelBase
 		return phoneMsgChatData;
 	}
 
-	// Token: 0x0601311F RID: 78111 RVA: 0x004BA493 File Offset: 0x004B8693
+	// Token: 0x060105DE RID: 67038 RVA: 0x004C81E3 File Offset: 0x004C63E3
 	public int CoverServerProgressToReadIndex(int progress)
 	{
 		return progress - 1;
 	}
 
-	// Token: 0x06013120 RID: 78112 RVA: 0x004BA498 File Offset: 0x004B8698
+	// Token: 0x060105DF RID: 67039 RVA: 0x004C81E8 File Offset: 0x004C63E8
 	public int CoverReadIndexToServerProgress(int readIndex)
 	{
 		return readIndex + 1;
 	}
 
-	// Token: 0x06013121 RID: 78113 RVA: 0x004BA4A0 File Offset: 0x004B86A0
+	// Token: 0x060105E0 RID: 67040 RVA: 0x004C81F0 File Offset: 0x004C63F0
 	public string GetEmojiTexturePathByEmojiId(int emojiId)
 	{
 		ChatExpression? expressionConfig = ChatConfig.Instance.GetExpressionConfig(emojiId);
@@ -1809,34 +1829,34 @@ public class PhoneMsgModel : ModelBase
 		return expressionConfig.Value.ExpressionTexturePath ?? "";
 	}
 
-	// Token: 0x06013122 RID: 78114 RVA: 0x004BA544 File Offset: 0x004B8744
+	// Token: 0x060105E1 RID: 67041 RVA: 0x004C8294 File Offset: 0x004C6494
 	public bool IsChatShowHasRedDotById(int id)
 	{
 		HashSet<int> hashSet;
 		return this.LocalRedDotCache != null && this.LocalRedDotCache.TryGetValue(EPhoneMsgServerRedDotType.Decoration, out hashSet) && hashSet.Contains(id);
 	}
 
-	// Token: 0x06013123 RID: 78115 RVA: 0x004BA572 File Offset: 0x004B8772
+	// Token: 0x060105E2 RID: 67042 RVA: 0x004C82C2 File Offset: 0x004C64C2
 	public bool IsChatShowHasRedDot()
 	{
 		return this.HasRedDotByType(EPhoneMsgServerRedDotType.Decoration);
 	}
 
-	// Token: 0x06013124 RID: 78116 RVA: 0x004BA57C File Offset: 0x004B877C
+	// Token: 0x060105E3 RID: 67043 RVA: 0x004C82CC File Offset: 0x004C64CC
 	private bool HasRedDotByType(EPhoneMsgServerRedDotType type)
 	{
 		HashSet<int> hashSet;
 		return this.LocalRedDotCache != null && this.LocalRedDotCache.TryGetValue(type, out hashSet) && hashSet.Count > 0;
 	}
 
-	// Token: 0x06013125 RID: 78117 RVA: 0x004BA5AC File Offset: 0x004B87AC
+	// Token: 0x060105E4 RID: 67044 RVA: 0x004C82FC File Offset: 0x004C64FC
 	public void RemoveChatShowRedDotById(int id)
 	{
 		this.RemovePhoneMsgRedDot(EPhoneMsgServerRedDotType.Decoration, id);
 		EventSystem.Instance.Emit(EEventName.PhoneMsgDialogBgThemeCharmRedDotUpdate);
 	}
 
-	// Token: 0x06013126 RID: 78118 RVA: 0x004BA5C8 File Offset: 0x004B87C8
+	// Token: 0x060105E5 RID: 67045 RVA: 0x004C8318 File Offset: 0x004C6518
 	public void SetLastOpenBigPanelTime(double time)
 	{
 		long num = (long)(time / 1000.0);
@@ -1852,7 +1872,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013127 RID: 78119 RVA: 0x004BA608 File Offset: 0x004B8808
+	// Token: 0x060105E6 RID: 67046 RVA: 0x004C8358 File Offset: 0x004C6558
 	public void SetLatestShortMsgTime(long time)
 	{
 		if (time > this.LatestShortMsgTime)
@@ -1861,20 +1881,20 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013128 RID: 78120 RVA: 0x004BA61A File Offset: 0x004B881A
+	// Token: 0x060105E7 RID: 67047 RVA: 0x004C836A File Offset: 0x004C656A
 	public bool IsHasPhoneMsgUnReview()
 	{
 		return this.LatestShortMsgTime > this.LastOpenBigPanelTime;
 	}
 
-	// Token: 0x06013129 RID: 78121 RVA: 0x004BA62A File Offset: 0x004B882A
+	// Token: 0x060105E8 RID: 67048 RVA: 0x004C837A File Offset: 0x004C657A
 	public ChatPartner? GetChatPartnerConfigNew(int partnerId)
 	{
 		return PhoneMsgConfig.Instance.GetChatPartnerConfig(partnerId);
 	}
 
-	// Token: 0x170018D0 RID: 6352
-	// (get) Token: 0x0601312A RID: 78122 RVA: 0x004BA637 File Offset: 0x004B8837
+	// Token: 0x1700190A RID: 6410
+	// (get) Token: 0x060105E9 RID: 67049 RVA: 0x004C8387 File Offset: 0x004C6587
 	public static PhoneMsgModel Instance
 	{
 		get
@@ -1883,7 +1903,7 @@ public class PhoneMsgModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601312B RID: 78123 RVA: 0x004BA63E File Offset: 0x004B883E
+	// Token: 0x060105EA RID: 67050 RVA: 0x004C838E File Offset: 0x004C658E
 	public static PhoneMsgModel GetOrCreateInstance()
 	{
 		if (PhoneMsgModel._Instance == null)
@@ -1893,7 +1913,7 @@ public class PhoneMsgModel : ModelBase
 		return PhoneMsgModel._Instance;
 	}
 
-	// Token: 0x0601312C RID: 78124 RVA: 0x004BA652 File Offset: 0x004B8852
+	// Token: 0x060105EB RID: 67051 RVA: 0x004C83A2 File Offset: 0x004C65A2
 	public static bool CreateInstance()
 	{
 		if (PhoneMsgModel._Instance != null)
@@ -1904,57 +1924,57 @@ public class PhoneMsgModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601312D RID: 78125 RVA: 0x004BA668 File Offset: 0x004B8868
+	// Token: 0x060105EC RID: 67052 RVA: 0x004C83B8 File Offset: 0x004C65B8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601312E RID: 78126 RVA: 0x004BA66A File Offset: 0x004B886A
+	// Token: 0x060105ED RID: 67053 RVA: 0x004C83BA File Offset: 0x004C65BA
 	public static void ResetStaticDefaultValue()
 	{
 		PhoneMsgModel._Instance = null;
 	}
 
-	// Token: 0x0601312F RID: 78127 RVA: 0x004BA672 File Offset: 0x004B8872
+	// Token: 0x060105EE RID: 67054 RVA: 0x004C83C2 File Offset: 0x004C65C2
 	static PhoneMsgModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhoneMsgModel.CreateStaticDefaultValue), new Action(PhoneMsgModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008F76 RID: 36726
+	// Token: 0x040090C0 RID: 37056
 	public HashSet<EDungeonSubType> NormalDungeonSet = new HashSet<EDungeonSubType>();
 
-	// Token: 0x04008F77 RID: 36727
+	// Token: 0x040090C1 RID: 37057
 	public bool IsPhoneChatShowInitDone;
 
-	// Token: 0x04008F78 RID: 36728
+	// Token: 0x040090C2 RID: 37058
 	public int CurrentUsingChatDialogId;
 
-	// Token: 0x04008F79 RID: 36729
+	// Token: 0x040090C3 RID: 37059
 	public int CurrentUsingChatBgId;
 
-	// Token: 0x04008F7A RID: 36730
+	// Token: 0x040090C4 RID: 37060
 	public int CurrentUsingChatThemeId;
 
-	// Token: 0x04008F7B RID: 36731
+	// Token: 0x040090C5 RID: 37061
 	public int CurrentUsingChatCharmId;
 
-	// Token: 0x04008F7C RID: 36732
+	// Token: 0x040090C6 RID: 37062
 	private string EmptyTexturePath = "";
 
-	// Token: 0x04008F7D RID: 36733
+	// Token: 0x040090C7 RID: 37063
 	private readonly HashSet<int> UnlockedDialogIds = new HashSet<int>();
 
-	// Token: 0x04008F7E RID: 36734
+	// Token: 0x040090C8 RID: 37064
 	private readonly HashSet<int> UnlockedBgIds = new HashSet<int>();
 
-	// Token: 0x04008F7F RID: 36735
+	// Token: 0x040090C9 RID: 37065
 	private readonly HashSet<int> UnlockedThemeIds = new HashSet<int>();
 
-	// Token: 0x04008F80 RID: 36736
+	// Token: 0x040090CA RID: 37066
 	private readonly HashSet<int> UnlockedCharmIds = new HashSet<int>();
 
-	// Token: 0x04008F81 RID: 36737
+	// Token: 0x040090CB RID: 37067
 	[Nullable(new byte[]
 	{
 		2,
@@ -1962,66 +1982,66 @@ public class PhoneMsgModel : ModelBase
 	})]
 	private Dictionary<EPhoneMsgServerRedDotType, HashSet<int>> LocalRedDotCache;
 
-	// Token: 0x04008F82 RID: 36738
+	// Token: 0x040090CC RID: 37068
 	[Nullable(2)]
 	private ServerStorageSet ServerRedDotSet;
 
-	// Token: 0x04008F83 RID: 36739
+	// Token: 0x040090CD RID: 37069
 	public List<int> CurrentToBeNotifiedMsgArray = new List<int>();
 
-	// Token: 0x04008F84 RID: 36740
+	// Token: 0x040090CE RID: 37070
 	public List<int> CurrentToBeNotifiedMsgInSmallHeadQueue = new List<int>();
 
-	// Token: 0x04008F85 RID: 36741
+	// Token: 0x040090CF RID: 37071
 	public int CurrentShowingMsgIdInSmallHead;
 
-	// Token: 0x04008F86 RID: 36742
+	// Token: 0x040090D0 RID: 37072
 	public List<PhoneMsgInputTimeData> MsgInputTimeList = new List<PhoneMsgInputTimeData>();
 
-	// Token: 0x04008F87 RID: 36743
+	// Token: 0x040090D1 RID: 37073
 	private readonly Dictionary<int, float> AudioDurationMap = new Dictionary<int, float>();
 
-	// Token: 0x04008F88 RID: 36744
+	// Token: 0x040090D2 RID: 37074
 	private Dictionary<int, HashSet<int>> AllFilterTypeSetDict = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x04008F89 RID: 36745
+	// Token: 0x040090D3 RID: 37075
 	private Dictionary<int, HashSet<int>> SelectedFilterSetDict = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x04008F8A RID: 36746
+	// Token: 0x040090D4 RID: 37076
 	private HashSet<int> SelectedFilterIdSet_Internal = new HashSet<int>();
 
-	// Token: 0x04008F8B RID: 36747
+	// Token: 0x040090D5 RID: 37077
 	public List<int> ChatPartnerIdList = new List<int>();
 
-	// Token: 0x04008F8C RID: 36748
+	// Token: 0x040090D6 RID: 37078
 	public Dictionary<int, List<int>> ChatPartnerId2ShortMessagesIdsDict = new Dictionary<int, List<int>>();
 
-	// Token: 0x04008F8D RID: 36749
+	// Token: 0x040090D7 RID: 37079
 	public Dictionary<int, PhoneMsgShortMsgData> Id2ShortMessagesDict = new Dictionary<int, PhoneMsgShortMsgData>();
 
-	// Token: 0x04008F8E RID: 36750
+	// Token: 0x040090D8 RID: 37080
 	[Nullable(2)]
 	private List<int> UnreceivedPartnerList;
 
-	// Token: 0x04008F8F RID: 36751
+	// Token: 0x040090D9 RID: 37081
 	[Nullable(2)]
 	private List<int> ReceivedUnreadPartnerList;
 
-	// Token: 0x04008F90 RID: 36752
+	// Token: 0x040090DA RID: 37082
 	[Nullable(2)]
 	private List<int> ReceivedReadPartnerList;
 
-	// Token: 0x04008F91 RID: 36753
+	// Token: 0x040090DB RID: 37083
 	private long LastOpenBigPanelTime;
 
-	// Token: 0x04008F92 RID: 36754
+	// Token: 0x040090DC RID: 37084
 	[Nullable(2)]
 	private ServerStorageLong LastOpenBigPanelTimeStorage;
 
-	// Token: 0x04008F93 RID: 36755
+	// Token: 0x040090DD RID: 37085
 	private long LatestShortMsgTime;
 
-	// Token: 0x04008F94 RID: 36756
+	// Token: 0x040090DE RID: 37086
 	[Nullable(2)]
 	private static PhoneMsgModel _Instance;
 }

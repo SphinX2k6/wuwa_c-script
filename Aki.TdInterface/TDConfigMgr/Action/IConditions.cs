@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200192C RID: 6444
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AB5 RID: 6837
 	public class IConditions
 	{
-		// Token: 0x06008A29 RID: 35369 RVA: 0x00145A04 File Offset: 0x00143C04
+		// Token: 0x06009155 RID: 37205 RVA: 0x00155344 File Offset: 0x00153544
 		private IConditions_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A2A RID: 35370 RVA: 0x00145A3C File Offset: 0x00143C3C
+		// Token: 0x06009156 RID: 37206 RVA: 0x0015537C File Offset: 0x0015357C
 		public static IConditions Create([Nullable(2)] IConditions instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A2B RID: 35371 RVA: 0x00145A4F File Offset: 0x00143C4F
+		// Token: 0x06009157 RID: 37207 RVA: 0x0015538F File Offset: 0x0015358F
 		public static IConditions CreateFromSetValue([Nullable(2)] IConditions_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A2C RID: 35372 RVA: 0x00145A62 File Offset: 0x00143C62
+		// Token: 0x06009158 RID: 37208 RVA: 0x001553A2 File Offset: 0x001535A2
 		public IConditions_SetValue ToSetValue()
 		{
 			return new IConditions_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CA7 RID: 11431
-		// (get) Token: 0x06008A2D RID: 35373 RVA: 0x00145A81 File Offset: 0x00143C81
-		// (set) Token: 0x06008A2E RID: 35374 RVA: 0x00145AAC File Offset: 0x00143CAC
+		// Token: 0x17002EA7 RID: 11943
+		// (get) Token: 0x06009159 RID: 37209 RVA: 0x001553C1 File Offset: 0x001535C1
+		// (set) Token: 0x0600915A RID: 37210 RVA: 0x001553EC File Offset: 0x001535EC
 		public virtual string LogicOpType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CA8 RID: 11432
-		// (get) Token: 0x06008A2F RID: 35375 RVA: 0x00145ABC File Offset: 0x00143CBC
-		// (set) Token: 0x06008A30 RID: 35376 RVA: 0x00145B4F File Offset: 0x00143D4F
+		// Token: 0x17002EA8 RID: 11944
+		// (get) Token: 0x0600915B RID: 37211 RVA: 0x001553FC File Offset: 0x001535FC
+		// (set) Token: 0x0600915C RID: 37212 RVA: 0x0015548F File Offset: 0x0015368F
 		public virtual List<ICondition> Conditions
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400566A RID: 22122
+		// Token: 0x04005ABA RID: 23226
 		[Nullable(2)]
 		protected IConditions FbInstance;
 
-		// Token: 0x0400566B RID: 22123
+		// Token: 0x04005ABB RID: 23227
 		[Nullable(2)]
 		protected IConditions_SetValue PocoInterface;
 
-		// Token: 0x0400566C RID: 22124
+		// Token: 0x04005ABC RID: 23228
 		private List<ICondition> _ConditionsCache;
 
-		// Token: 0x0400566D RID: 22125
+		// Token: 0x04005ABD RID: 23229
 		private bool _ConditionsInited;
 	}
 }

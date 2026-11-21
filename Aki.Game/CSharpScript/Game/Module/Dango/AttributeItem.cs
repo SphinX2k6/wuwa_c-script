@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Dango
 {
-	// Token: 0x02005AE4 RID: 23268
+	// Token: 0x02004AC5 RID: 19141
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Dango
 	})]
 	internal class AttributeItem : GridProxyAbstract<AttributeItemData>
 	{
-		// Token: 0x0603AE9E RID: 241310 RVA: 0x00E0BEDC File Offset: 0x00E0A0DC
+		// Token: 0x0602FE10 RID: 196112 RVA: 0x00D5CBC0 File Offset: 0x00D5ADC0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Dango
 			};
 		}
 
-		// Token: 0x0603AE9F RID: 241311 RVA: 0x00E0BF38 File Offset: 0x00E0A138
+		// Token: 0x0602FE11 RID: 196113 RVA: 0x00D5CC1C File Offset: 0x00D5AE1C
 		[NullableContext(1)]
 		public override void Refresh(AttributeItemData data, bool isSelected, int gridIndex)
 		{
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Dango
 			base.SetTextureByPath(skillCastTypeIconPath, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0200BD3C RID: 48444
+		// Token: 0x0200A744 RID: 42820
 		private enum EAttributeItemComponent
 		{
-			// Token: 0x04039128 RID: 233768
+			// Token: 0x04033AF2 RID: 211698
 			SpriteBg,
-			// Token: 0x04039129 RID: 233769
+			// Token: 0x04033AF3 RID: 211699
 			NameText,
-			// Token: 0x0403912A RID: 233770
+			// Token: 0x04033AF4 RID: 211700
 			Texture
 		}
 	}

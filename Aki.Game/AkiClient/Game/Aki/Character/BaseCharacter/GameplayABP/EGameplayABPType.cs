@@ -4,34 +4,34 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.GameplayABP
 {
-	// Token: 0x02004399 RID: 17305
+	// Token: 0x020033B9 RID: 13241
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/GameplayABP/EGameplayABPType.EGameplayABPType")]
 	public enum EGameplayABPType : byte
 	{
-		// Token: 0x04017A5F RID: 96863
+		// Token: 0x040125DA RID: 75226
 		None,
-		// Token: 0x04017A60 RID: 96864
+		// Token: 0x040125DB RID: 75227
 		Motor,
-		// Token: 0x04017A61 RID: 96865
+		// Token: 0x040125DC RID: 75228
 		Poker,
-		// Token: 0x04017A62 RID: 96866
+		// Token: 0x040125DD RID: 75229
 		ThunderBird,
-		// Token: 0x04017A63 RID: 96867
+		// Token: 0x040125DE RID: 75230
 		SlopeSlide,
-		// Token: 0x04017A64 RID: 96868
+		// Token: 0x040125DF RID: 75231
 		SwordRiding,
-		// Token: 0x04017A65 RID: 96869
+		// Token: 0x040125E0 RID: 75232
 		AssistedWalk,
-		// Token: 0x04017A66 RID: 96870
+		// Token: 0x040125E1 RID: 75233
 		RideHorse,
-		// Token: 0x04017A67 RID: 96871
+		// Token: 0x040125E2 RID: 75234
 		Selfie,
-		// Token: 0x04017A68 RID: 96872
+		// Token: 0x040125E3 RID: 75235
 		Totter,
-		// Token: 0x04017A69 RID: 96873
+		// Token: 0x040125E4 RID: 75236
 		Ecology,
-		// Token: 0x04017A6A RID: 96874
+		// Token: 0x040125E5 RID: 75237
 		EGameplayABPType_MAX
 	}
 }

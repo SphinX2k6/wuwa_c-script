@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002ECA RID: 11978
+// Token: 0x0200241D RID: 9245
 public enum ERoleDeathReason
 {
-	// Token: 0x0400BF5C RID: 48988
+	// Token: 0x0400C2F7 RID: 49911
 	Other,
-	// Token: 0x0400BF5D RID: 48989
+	// Token: 0x0400C2F8 RID: 49912
 	MonsterHurt,
-	// Token: 0x0400BF5E RID: 48990
+	// Token: 0x0400C2F9 RID: 49913
 	Fall,
-	// Token: 0x0400BF5F RID: 48991
+	// Token: 0x0400C2FA RID: 49914
 	Drown
 }

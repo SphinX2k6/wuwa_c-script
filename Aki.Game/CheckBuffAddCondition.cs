@@ -1,47 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game;
 
-// Token: 0x020017D0 RID: 6096
+// Token: 0x02000C89 RID: 3209
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckBuffAddCondition : BaseCheckCondition
 {
-	// Token: 0x0600B23B RID: 45627 RVA: 0x0028472A File Offset: 0x0028292A
+	// Token: 0x06008624 RID: 34340 RVA: 0x0028EDF3 File Offset: 0x0028CFF3
 	public CheckBuffAddCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
 		this.SuccessType = EComboTeachingSuccessCondition.AddBuff;
 	}
 
-	// Token: 0x17000EF7 RID: 3831
-	// (get) Token: 0x0600B23C RID: 45628 RVA: 0x00284750 File Offset: 0x00282950
-	// (set) Token: 0x0600B23D RID: 45629 RVA: 0x00284758 File Offset: 0x00282958
+	// Token: 0x17000F1A RID: 3866
+	// (get) Token: 0x06008625 RID: 34341 RVA: 0x0028EE19 File Offset: 0x0028D019
+	// (set) Token: 0x06008626 RID: 34342 RVA: 0x0028EE21 File Offset: 0x0028D021
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000EF8 RID: 3832
-	// (get) Token: 0x0600B23E RID: 45630 RVA: 0x00284761 File Offset: 0x00282961
-	// (set) Token: 0x0600B23F RID: 45631 RVA: 0x00284769 File Offset: 0x00282969
+	// Token: 0x17000F1B RID: 3867
+	// (get) Token: 0x06008627 RID: 34343 RVA: 0x0028EE2A File Offset: 0x0028D02A
+	// (set) Token: 0x06008628 RID: 34344 RVA: 0x0028EE32 File Offset: 0x0028D032
 	protected override EComboTeachingSuccessCondition SuccessType { get; set; } = EComboTeachingSuccessCondition.AddBuff;
 
-	// Token: 0x0600B240 RID: 45632 RVA: 0x00284774 File Offset: 0x00282974
+	// Token: 0x06008629 RID: 34345 RVA: 0x0028EE3C File Offset: 0x0028D03C
 	public override bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo paramex = null)
 	{
 		if (this.SuccessParamsArray == null)
 		{
 			return false;
 		}
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		Entity entity = EntitySystem.Instance.Get(entityIdNoBlueprint);
-		CharacterBuffComponent characterBuffComponent = (entity != null) ? entity.GetComponent<CharacterBuffComponent>() : null;
-		if (characterBuffComponent == null)
+		CharacterBuffComponent playerComponent = BaseCheckCondition.GetPlayerComponent<CharacterBuffComponent>();
+		if (playerComponent == null)
 		{
 			return false;
 		}
 		foreach (List<string> list in this.SuccessParamsArray)
 		{
-			if (characterBuffComponent.GetBuffTotalStackById(long.Parse(list[0]), false) > 0)
+			if (playerComponent.GetBuffTotalStackById(long.Parse(list[0]), false) > 0)
 			{
 				return true;
 			}

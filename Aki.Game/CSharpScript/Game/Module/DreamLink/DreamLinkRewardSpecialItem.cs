@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005ABF RID: 23231
+	// Token: 0x02004A9B RID: 19099
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DreamLinkRewardSpecialItem : UiPanelBase
 	{
-		// Token: 0x0603AD67 RID: 240999 RVA: 0x00E056A5 File Offset: 0x00E038A5
+		// Token: 0x0602FCB3 RID: 195763 RVA: 0x00D55C6E File Offset: 0x00D53E6E
 		public DreamLinkRewardSpecialItem(DreamLinkRewardData rewardData)
 		{
 			this.RewardData = rewardData;
 		}
 
-		// Token: 0x0603AD68 RID: 241000 RVA: 0x00E056B4 File Offset: 0x00E038B4
+		// Token: 0x0602FCB4 RID: 195764 RVA: 0x00D55C80 File Offset: 0x00D53E80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,32 +43,32 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AD69 RID: 241001 RVA: 0x00E057A1 File Offset: 0x00E039A1
+		// Token: 0x0602FCB5 RID: 195765 RVA: 0x00D55D6D File Offset: 0x00D53F6D
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<DreamLinkRewardSmallGrid, IDreamLinkRewardGridData>(base.GetScrollViewWithScrollbar(4), new Func<DreamLinkRewardSmallGrid>(this.InitGridItem), null, false, null);
 		}
 
-		// Token: 0x0603AD6A RID: 241002 RVA: 0x00E057C4 File Offset: 0x00E039C4
+		// Token: 0x0602FCB6 RID: 195766 RVA: 0x00D55D90 File Offset: 0x00D53F90
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603AD6B RID: 241003 RVA: 0x00E057CC File Offset: 0x00E039CC
+		// Token: 0x0602FCB7 RID: 195767 RVA: 0x00D55D98 File Offset: 0x00D53F98
 		private DreamLinkRewardSmallGrid InitGridItem()
 		{
 			return new DreamLinkRewardSmallGrid();
 		}
 
-		// Token: 0x0603AD6C RID: 241004 RVA: 0x00E057D3 File Offset: 0x00E039D3
+		// Token: 0x0602FCB8 RID: 195768 RVA: 0x00D55D9F File Offset: 0x00D53F9F
 		public void Refresh()
 		{
 			this.RefreshProgress();
 			this.RefreshReward();
 		}
 
-		// Token: 0x0603AD6D RID: 241005 RVA: 0x00E057E4 File Offset: 0x00E039E4
+		// Token: 0x0602FCB9 RID: 195769 RVA: 0x00D55DB0 File Offset: 0x00D53FB0
 		private void RefreshProgress()
 		{
 			int current = this.RewardData.Current;
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetSprite(3).SetFillAmount((float)current / (float)target);
 		}
 
-		// Token: 0x0603AD6E RID: 241006 RVA: 0x00E05854 File Offset: 0x00E03A54
+		// Token: 0x0602FCBA RID: 195770 RVA: 0x00D55E20 File Offset: 0x00D54020
 		private void RefreshReward()
 		{
 			RogueLimitTimeReward? limitTimeRewardConfig = DreamLinkConfig.Instance.GetLimitTimeRewardConfig(this.RewardData.Id);
@@ -104,16 +103,16 @@ namespace CSharpScript.Game.Module.DreamLink
 					ReceiveDelegate = new Action(this.OnReceiveDelegate)
 				};
 			}
-			this.RewardScrollView.RefreshByData(array.ToList<IDreamLinkRewardGridData>(), null, false);
+			this.RewardScrollView.RefreshByData(array, null, false);
 		}
 
-		// Token: 0x0603AD6F RID: 241007 RVA: 0x00E0591E File Offset: 0x00E03B1E
+		// Token: 0x0602FCBB RID: 195771 RVA: 0x00D55EE5 File Offset: 0x00D540E5
 		private void OnReceiveDelegate()
 		{
 			DreamLinkController.Instance.LimitTimeRewardRequest(this.RewardData.Id);
 		}
 
-		// Token: 0x0401EB3D RID: 125757
+		// Token: 0x040195E4 RID: 103908
 		[Nullable(new byte[]
 		{
 			2,
@@ -122,29 +121,29 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		protected GenericScrollViewNew<DreamLinkRewardSmallGrid, IDreamLinkRewardGridData> RewardScrollView;
 
-		// Token: 0x0401EB3E RID: 125758
+		// Token: 0x040195E5 RID: 103909
 		protected DreamLinkRewardData RewardData;
 
-		// Token: 0x0200BD11 RID: 48401
+		// Token: 0x0200A719 RID: 42777
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403905A RID: 233562
+			// Token: 0x04033A24 RID: 211492
 			public const int Panel = 0;
 
-			// Token: 0x0403905B RID: 233563
+			// Token: 0x04033A25 RID: 211493
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403905C RID: 233564
+			// Token: 0x04033A26 RID: 211494
 			public const int TxtProgress = 2;
 
-			// Token: 0x0403905D RID: 233565
+			// Token: 0x04033A27 RID: 211495
 			public const int SpriteProgress = 3;
 
-			// Token: 0x0403905E RID: 233566
+			// Token: 0x04033A28 RID: 211496
 			public const int RewardLayout = 4;
 
-			// Token: 0x0403905F RID: 233567
+			// Token: 0x04033A29 RID: 211497
 			public const int RewardItem = 5;
 		}
 	}

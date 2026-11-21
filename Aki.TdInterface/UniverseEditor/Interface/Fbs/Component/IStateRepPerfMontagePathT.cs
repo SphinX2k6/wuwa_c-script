@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059BA RID: 22970
+	// Token: 0x02005FC7 RID: 24519
 	public class IStateRepPerfMontagePathT
 	{
-		// Token: 0x1700AC5E RID: 44126
-		// (get) Token: 0x06026EBD RID: 159421 RVA: 0x0055ADAC File Offset: 0x00558FAC
-		// (set) Token: 0x06026EBE RID: 159422 RVA: 0x0055ADB4 File Offset: 0x00558FB4
+		// Token: 0x1700B592 RID: 46482
+		// (get) Token: 0x06029427 RID: 168999 RVA: 0x005A1A18 File Offset: 0x0059FC18
+		// (set) Token: 0x06029428 RID: 169000 RVA: 0x005A1A20 File Offset: 0x0059FC20
 		public EStateRepPerfType Type { get; set; }
 
-		// Token: 0x1700AC5F RID: 44127
-		// (get) Token: 0x06026EBF RID: 159423 RVA: 0x0055ADBD File Offset: 0x00558FBD
-		// (set) Token: 0x06026EC0 RID: 159424 RVA: 0x0055ADC5 File Offset: 0x00558FC5
+		// Token: 0x1700B593 RID: 46483
+		// (get) Token: 0x06029429 RID: 169001 RVA: 0x005A1A29 File Offset: 0x0059FC29
+		// (set) Token: 0x0602942A RID: 169002 RVA: 0x005A1A31 File Offset: 0x0059FC31
 		public string MontagePath { get; set; }
 
-		// Token: 0x1700AC60 RID: 44128
-		// (get) Token: 0x06026EC1 RID: 159425 RVA: 0x0055ADCE File Offset: 0x00558FCE
-		// (set) Token: 0x06026EC2 RID: 159426 RVA: 0x0055ADD6 File Offset: 0x00558FD6
+		// Token: 0x1700B594 RID: 46484
+		// (get) Token: 0x0602942B RID: 169003 RVA: 0x005A1A3A File Offset: 0x0059FC3A
+		// (set) Token: 0x0602942C RID: 169004 RVA: 0x005A1A42 File Offset: 0x0059FC42
 		public string MontageName { get; set; }
 
-		// Token: 0x06026EC3 RID: 159427 RVA: 0x0055ADDF File Offset: 0x00558FDF
+		// Token: 0x0602942D RID: 169005 RVA: 0x005A1A4B File Offset: 0x0059FC4B
 		public IStateRepPerfMontagePathT()
 		{
 			this.Type = EStateRepPerfType.SkillId;

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042AB RID: 17067
+	// Token: 0x02004707 RID: 18183
 	public class IWordArtResourceTypeT
 	{
-		// Token: 0x17007923 RID: 31011
-		// (get) Token: 0x060194A3 RID: 103587 RVA: 0x003A18E6 File Offset: 0x0039FAE6
-		// (set) Token: 0x060194A4 RID: 103588 RVA: 0x003A18EE File Offset: 0x0039FAEE
+		// Token: 0x17007F54 RID: 32596
+		// (get) Token: 0x0601AC0F RID: 109583 RVA: 0x003CCFBE File Offset: 0x003CB1BE
+		// (set) Token: 0x0601AC10 RID: 109584 RVA: 0x003CCFC6 File Offset: 0x003CB1C6
 		public EWordArtResourceType Type { get; set; }
 
-		// Token: 0x060194A5 RID: 103589 RVA: 0x003A18F7 File Offset: 0x0039FAF7
+		// Token: 0x0601AC11 RID: 109585 RVA: 0x003CCFCF File Offset: 0x003CB1CF
 		public IWordArtResourceTypeT()
 		{
 			this.Type = EWordArtResourceType.Default;

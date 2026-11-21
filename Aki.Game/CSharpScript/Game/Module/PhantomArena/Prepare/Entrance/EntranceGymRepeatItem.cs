@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200515D RID: 20829
+	// Token: 0x0200412D RID: 16685
 	public class EntranceGymRepeatItem : GymItemBase
 	{
-		// Token: 0x060353FB RID: 218107 RVA: 0x00C9BDD8 File Offset: 0x00C99FD8
+		// Token: 0x0602A2F7 RID: 172791 RVA: 0x00BE92D8 File Offset: 0x00BE74D8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x060353FC RID: 218108 RVA: 0x00C9BF35 File Offset: 0x00C9A135
+		// Token: 0x0602A2F8 RID: 172792 RVA: 0x00BE9435 File Offset: 0x00BE7635
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			base.GetButton(0).FocusListenerDelegate.Bind(new Action(base.OnFocus));
 		}
 
-		// Token: 0x060353FD RID: 218109 RVA: 0x00C9BF65 File Offset: 0x00C9A165
+		// Token: 0x0602A2F9 RID: 172793 RVA: 0x00BE9465 File Offset: 0x00BE7665
 		protected override void OnBeforeShow()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.Refresh();
 		}
 
-		// Token: 0x060353FE RID: 218110 RVA: 0x00C9BFA4 File Offset: 0x00C9A1A4
+		// Token: 0x0602A2FA RID: 172794 RVA: 0x00BE94A4 File Offset: 0x00BE76A4
 		public override void Refresh()
 		{
 			if (this.Level < 0)
@@ -71,52 +71,52 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x060353FF RID: 218111 RVA: 0x00C9C0C2 File Offset: 0x00C9A2C2
+		// Token: 0x0602A2FB RID: 172795 RVA: 0x00BE95C2 File Offset: 0x00BE77C2
 		public override void RefreshRedDot()
 		{
 			base.GetItem(12).SetUIActive(base.GetRedDotState());
 		}
 
-		// Token: 0x0200B2BD RID: 45757
+		// Token: 0x02009CF6 RID: 40182
 		private class EComponentRepeat
 		{
-			// Token: 0x0403626B RID: 221803
+			// Token: 0x04030CC0 RID: 199872
 			public const int BtnLevel = 0;
 
-			// Token: 0x0403626C RID: 221804
+			// Token: 0x04030CC1 RID: 199873
 			public const int TextName = 1;
 
-			// Token: 0x0403626D RID: 221805
+			// Token: 0x04030CC2 RID: 199874
 			public const int LayoutStar = 2;
 
-			// Token: 0x0403626E RID: 221806
+			// Token: 0x04030CC3 RID: 199875
 			public const int ItemStar = 3;
 
-			// Token: 0x0403626F RID: 221807
+			// Token: 0x04030CC4 RID: 199876
 			public const int SpriteBg = 4;
 
-			// Token: 0x04036270 RID: 221808
+			// Token: 0x04030CC5 RID: 199877
 			public const int TextureBgLock = 5;
 
-			// Token: 0x04036271 RID: 221809
+			// Token: 0x04030CC6 RID: 199878
 			public const int IconMain = 6;
 
-			// Token: 0x04036272 RID: 221810
+			// Token: 0x04030CC7 RID: 199879
 			public const int SpriteLock = 7;
 
-			// Token: 0x04036273 RID: 221811
+			// Token: 0x04030CC8 RID: 199880
 			public const int SpriteLight = 8;
 
-			// Token: 0x04036274 RID: 221812
+			// Token: 0x04030CC9 RID: 199881
 			public const int SpriteGray = 9;
 
-			// Token: 0x04036275 RID: 221813
+			// Token: 0x04030CCA RID: 199882
 			public const int SpriteRoman = 10;
 
-			// Token: 0x04036276 RID: 221814
+			// Token: 0x04030CCB RID: 199883
 			public const int TextNameLock = 11;
 
-			// Token: 0x04036277 RID: 221815
+			// Token: 0x04030CCC RID: 199884
 			public const int ItemRedDot = 12;
 		}
 	}

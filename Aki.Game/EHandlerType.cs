@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020017BA RID: 6074
+// Token: 0x02000C73 RID: 3187
 public enum EHandlerType
 {
-	// Token: 0x04005079 RID: 20601
+	// Token: 0x04005123 RID: 20771
 	Static,
-	// Token: 0x0400507A RID: 20602
+	// Token: 0x04005124 RID: 20772
 	Component
 }

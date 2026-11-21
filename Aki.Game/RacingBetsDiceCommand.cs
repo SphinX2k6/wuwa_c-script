@@ -12,13 +12,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020026D4 RID: 9940
+// Token: 0x02001BBF RID: 7103
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDiceCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A6D RID: 6765
-	// (get) Token: 0x06014622 RID: 83490 RVA: 0x005277A2 File Offset: 0x005259A2
+	// Token: 0x17001AA5 RID: 6821
+	// (get) Token: 0x06011B04 RID: 72452 RVA: 0x005364DA File Offset: 0x005346DA
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -27,7 +27,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014623 RID: 83491 RVA: 0x005277A8 File Offset: 0x005259A8
+	// Token: 0x06011B05 RID: 72453 RVA: 0x005364E0 File Offset: 0x005346E0
 	public void Init(int round, List<DangoIdToDiceNum> dangoDiceList)
 	{
 		this.Round = round;
@@ -36,7 +36,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		this.DiceCamera = (UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("DiceCamera").Value, ECollectActorType.UI) as ACineCameraActor);
 	}
 
-	// Token: 0x06014624 RID: 83492 RVA: 0x0052780C File Offset: 0x00525A0C
+	// Token: 0x06011B06 RID: 72454 RVA: 0x00536544 File Offset: 0x00534744
 	public override UniTask OnExecute()
 	{
 		RacingBetsDiceCommand.<OnExecute>d__12 <OnExecute>d__;
@@ -47,7 +47,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014625 RID: 83493 RVA: 0x00527850 File Offset: 0x00525A50
+	// Token: 0x06011B07 RID: 72455 RVA: 0x00536588 File Offset: 0x00534788
 	private void InitDiceParameter(List<DangoIdToDiceNum> dangoDiceList)
 	{
 		this.ProcessName = FNameUtil.GetDynamicFName("Ani_Process").Value;
@@ -107,7 +107,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x06014626 RID: 83494 RVA: 0x00527B04 File Offset: 0x00525D04
+	// Token: 0x06011B08 RID: 72456 RVA: 0x0053683C File Offset: 0x00534A3C
 	private UniTask PlayDiceOrderAnim()
 	{
 		RacingBetsDiceCommand.<PlayDiceOrderAnim>d__14 <PlayDiceOrderAnim>d__;
@@ -118,7 +118,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return <PlayDiceOrderAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014627 RID: 83495 RVA: 0x00527B48 File Offset: 0x00525D48
+	// Token: 0x06011B09 RID: 72457 RVA: 0x00536880 File Offset: 0x00534A80
 	private UniTask PlayFreeCameraBlend()
 	{
 		RacingBetsDiceCommand.<PlayFreeCameraBlend>d__15 <PlayFreeCameraBlend>d__;
@@ -129,7 +129,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return <PlayFreeCameraBlend>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014628 RID: 83496 RVA: 0x00527B8C File Offset: 0x00525D8C
+	// Token: 0x06011B0A RID: 72458 RVA: 0x005368C4 File Offset: 0x00534AC4
 	private UniTask PlayDiceAnim()
 	{
 		RacingBetsDiceCommand.<PlayDiceAnim>d__16 <PlayDiceAnim>d__;
@@ -140,13 +140,13 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return <PlayDiceAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014629 RID: 83497 RVA: 0x00527BCF File Offset: 0x00525DCF
+	// Token: 0x06011B0B RID: 72459 RVA: 0x00536907 File Offset: 0x00534B07
 	public override string LogInfo()
 	{
 		return "RacingBetsDiceCommand";
 	}
 
-	// Token: 0x0601462A RID: 83498 RVA: 0x00527BD8 File Offset: 0x00525DD8
+	// Token: 0x06011B0C RID: 72460 RVA: 0x00536910 File Offset: 0x00534B10
 	private FLinearColor? ParseLineColorString(string colorString)
 	{
 		Match match = this.DiceColorRegex.Match(colorString);
@@ -161,7 +161,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return new FLinearColor?(new FLinearColor(r, g, b, a));
 	}
 
-	// Token: 0x0601462B RID: 83499 RVA: 0x00527C74 File Offset: 0x00525E74
+	// Token: 0x06011B0D RID: 72461 RVA: 0x005369AC File Offset: 0x00534BAC
 	private float GetDynamicFov(UCineCameraComponent cameraComponent)
 	{
 		float sensorAspectRatio = cameraComponent.Filmback.SensorAspectRatio;
@@ -174,7 +174,7 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return this.GetDynamicVerticalFieldOfView(fieldOfView, sensorAspectRatio);
 	}
 
-	// Token: 0x0601462C RID: 83500 RVA: 0x00527CBC File Offset: 0x00525EBC
+	// Token: 0x06011B0E RID: 72462 RVA: 0x005369F4 File Offset: 0x00534BF4
 	private float GetDynamicVerticalFieldOfView(float fov, float aspectRatio)
 	{
 		Vector2D viewportSize = UiLayer.Instance.GetViewportSize();
@@ -183,33 +183,33 @@ public class RacingBetsDiceCommand : RacingBetsCommandBase
 		return MathCommon.RadianToDegree((float)(Math.Atan((double)aspectRatio / num2 * Math.Tan((double)(num / 2f))) * 2.0));
 	}
 
-	// Token: 0x04009920 RID: 39200
+	// Token: 0x04009A78 RID: 39544
 	private int Round;
 
-	// Token: 0x04009921 RID: 39201
+	// Token: 0x04009A79 RID: 39545
 	private List<DangoIdToDiceNum> DangoDiceList;
 
-	// Token: 0x04009922 RID: 39202
+	// Token: 0x04009A7A RID: 39546
 	[Nullable(2)]
 	private UMaterialParameterCollection DiceMaterialParameterCollection;
 
-	// Token: 0x04009923 RID: 39203
+	// Token: 0x04009A7B RID: 39547
 	[Nullable(2)]
 	private BP_DiceOL_C DiceOutlineBp;
 
-	// Token: 0x04009924 RID: 39204
+	// Token: 0x04009A7C RID: 39548
 	[Nullable(2)]
 	private ACineCameraActor DiceCamera;
 
-	// Token: 0x04009925 RID: 39205
+	// Token: 0x04009A7D RID: 39549
 	private FName ProcessName;
 
-	// Token: 0x04009926 RID: 39206
+	// Token: 0x04009A7E RID: 39550
 	protected readonly global::Vector Location = global::Vector.Create();
 
-	// Token: 0x04009927 RID: 39207
+	// Token: 0x04009A7F RID: 39551
 	protected readonly global::Rotator Rotator = global::Rotator.Create();
 
-	// Token: 0x04009928 RID: 39208
+	// Token: 0x04009A80 RID: 39552
 	private readonly Regex DiceColorRegex = new Regex("R=([\\d.]+),G=([\\d.]+),B=([\\d.]+),A=([\\d.]+)");
 }

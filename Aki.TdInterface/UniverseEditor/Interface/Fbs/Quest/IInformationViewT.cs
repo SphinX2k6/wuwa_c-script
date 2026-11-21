@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EA6 RID: 16038
+	// Token: 0x020042E4 RID: 17124
 	public class IInformationViewT
 	{
-		// Token: 0x17006F57 RID: 28503
-		// (get) Token: 0x06016A5C RID: 92764 RVA: 0x0034547C File Offset: 0x0034367C
-		// (set) Token: 0x06016A5D RID: 92765 RVA: 0x00345484 File Offset: 0x00343684
+		// Token: 0x17007544 RID: 30020
+		// (get) Token: 0x060180A9 RID: 98473 RVA: 0x0036E404 File Offset: 0x0036C604
+		// (set) Token: 0x060180AA RID: 98474 RVA: 0x0036E40C File Offset: 0x0036C60C
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x17006F58 RID: 28504
-		// (get) Token: 0x06016A5E RID: 92766 RVA: 0x0034548D File Offset: 0x0034368D
-		// (set) Token: 0x06016A5F RID: 92767 RVA: 0x00345495 File Offset: 0x00343695
+		// Token: 0x17007545 RID: 30021
+		// (get) Token: 0x060180AB RID: 98475 RVA: 0x0036E415 File Offset: 0x0036C615
+		// (set) Token: 0x060180AC RID: 98476 RVA: 0x0036E41D File Offset: 0x0036C61D
 		public int InformationViewId { get; set; }
 
-		// Token: 0x06016A60 RID: 92768 RVA: 0x0034549E File Offset: 0x0034369E
+		// Token: 0x060180AD RID: 98477 RVA: 0x0036E426 File Offset: 0x0036C626
 		public IInformationViewT()
 		{
 			this.Type = EShowUiType.All;

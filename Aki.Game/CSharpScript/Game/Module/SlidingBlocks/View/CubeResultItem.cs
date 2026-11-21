@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B8F RID: 19343
+	// Token: 0x02003B39 RID: 15161
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CubeResultItem : UiPanelBase
 	{
-		// Token: 0x06032207 RID: 205319 RVA: 0x00BA4F89 File Offset: 0x00BA3189
+		// Token: 0x06026F97 RID: 159639 RVA: 0x00AE90D5 File Offset: 0x00AE72D5
 		public CubeResultItem(int score, bool isNewRecord, List<TItem> rewardList)
 		{
 			this.Score = score;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.RewardList = rewardList;
 		}
 
-		// Token: 0x06032208 RID: 205320 RVA: 0x00BA4FB4 File Offset: 0x00BA31B4
+		// Token: 0x06026F98 RID: 159640 RVA: 0x00AE9100 File Offset: 0x00AE7300
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032209 RID: 205321 RVA: 0x00BA5108 File Offset: 0x00BA3308
+		// Token: 0x06026F99 RID: 159641 RVA: 0x00AE9254 File Offset: 0x00AE7454
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CubeResultItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603220A RID: 205322 RVA: 0x00BA514C File Offset: 0x00BA334C
+		// Token: 0x06026F9A RID: 159642 RVA: 0x00AE9298 File Offset: 0x00AE7498
 		private UniTask InitRewardItem(ETetrisPlayMode playMode)
 		{
 			CubeResultItem.<InitRewardItem>d__10 <InitRewardItem>d__;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitRewardItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603220B RID: 205323 RVA: 0x00BA5197 File Offset: 0x00BA3397
+		// Token: 0x06026F9B RID: 159643 RVA: 0x00AE92E3 File Offset: 0x00AE74E3
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603220C RID: 205324 RVA: 0x00BA51A0 File Offset: 0x00BA33A0
+		// Token: 0x06026F9C RID: 159644 RVA: 0x00AE92EC File Offset: 0x00AE74EC
 		private UniTask InitTargetItem()
 		{
 			CubeResultItem.<InitTargetItem>d__12 <InitTargetItem>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <InitTargetItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603220D RID: 205325 RVA: 0x00BA51E4 File Offset: 0x00BA33E4
+		// Token: 0x06026F9D RID: 159645 RVA: 0x00AE9330 File Offset: 0x00AE7530
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			CubeResultItem.<OnShowAsyncImplementImplement>d__13 <OnShowAsyncImplementImplement>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603220E RID: 205326 RVA: 0x00BA5227 File Offset: 0x00BA3427
+		// Token: 0x06026F9E RID: 159646 RVA: 0x00AE9373 File Offset: 0x00AE7573
 		protected override void OnAfterShow()
 		{
 			if (SlidingBlocksModel.Instance.GameData.PlayMode == ETetrisPlayMode.Endless)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x0401AB44 RID: 109380
+		// Token: 0x04015498 RID: 87192
 		[Nullable(new byte[]
 		{
 			2,
@@ -130,43 +130,43 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0401AB45 RID: 109381
+		// Token: 0x04015499 RID: 87193
 		private readonly List<SettlementTargetItem> TargetItems = new List<SettlementTargetItem>();
 
-		// Token: 0x0401AB46 RID: 109382
+		// Token: 0x0401549A RID: 87194
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401AB47 RID: 109383
+		// Token: 0x0401549B RID: 87195
 		public readonly int Score;
 
-		// Token: 0x0401AB48 RID: 109384
+		// Token: 0x0401549C RID: 87196
 		public readonly bool IsNewRecord;
 
-		// Token: 0x0401AB49 RID: 109385
+		// Token: 0x0401549D RID: 87197
 		public readonly List<TItem> RewardList;
 
-		// Token: 0x0200AD93 RID: 44435
+		// Token: 0x020097B2 RID: 38834
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x04034B7B RID: 215931
+			// Token: 0x0402F522 RID: 193826
 			ScoreText,
-			// Token: 0x04034B7C RID: 215932
+			// Token: 0x0402F523 RID: 193827
 			NewRecordText,
-			// Token: 0x04034B7D RID: 215933
+			// Token: 0x0402F524 RID: 193828
 			TargetItemNode,
-			// Token: 0x04034B7E RID: 215934
+			// Token: 0x0402F525 RID: 193829
 			TargetItem,
-			// Token: 0x04034B7F RID: 215935
+			// Token: 0x0402F526 RID: 193830
 			RewardItemNode,
-			// Token: 0x04034B80 RID: 215936
+			// Token: 0x0402F527 RID: 193831
 			RewardItem,
-			// Token: 0x04034B81 RID: 215937
+			// Token: 0x0402F528 RID: 193832
 			PanelTop,
-			// Token: 0x04034B82 RID: 215938
+			// Token: 0x0402F529 RID: 193833
 			PanelNone,
-			// Token: 0x04034B83 RID: 215939
+			// Token: 0x0402F52A RID: 193834
 			PanelBg
 		}
 	}

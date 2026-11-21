@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Battle;
 using CSharpScript.Game.Module.GameMainView.Data;
 using CSharpScript.Game.Module.SkillButtonUi;
 
-// Token: 0x02001D3F RID: 7487
+// Token: 0x02001201 RID: 4609
 [NullableContext(2)]
 [Nullable(0)]
 public class TrapDefenseBattleSkillData : BattleSkillDataBase
 {
-	// Token: 0x0600E313 RID: 58131 RVA: 0x00355ED4 File Offset: 0x003540D4
+	// Token: 0x0600B730 RID: 46896 RVA: 0x00361904 File Offset: 0x0035FB04
 	protected override void OnInitData()
 	{
 		this.Config = this.GetSkillDataConfig(base.GetActionName());
@@ -32,13 +32,13 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		}
 	}
 
-	// Token: 0x0600E314 RID: 58132 RVA: 0x00355F45 File Offset: 0x00354145
+	// Token: 0x0600B731 RID: 46897 RVA: 0x00361975 File Offset: 0x0035FB75
 	protected virtual void InitSkill()
 	{
 		this.RefreshSkillTexturePath();
 	}
 
-	// Token: 0x0600E315 RID: 58133 RVA: 0x00355F50 File Offset: 0x00354150
+	// Token: 0x0600B732 RID: 46898 RVA: 0x00361980 File Offset: 0x0035FB80
 	[NullableContext(1)]
 	protected SkillGameplayButton? GetSkillDataConfig(string actionName)
 	{
@@ -57,7 +57,7 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return null;
 	}
 
-	// Token: 0x0600E316 RID: 58134 RVA: 0x00355FA4 File Offset: 0x003541A4
+	// Token: 0x0600B733 RID: 46899 RVA: 0x003619D4 File Offset: 0x0035FBD4
 	protected virtual void RefreshSkillTexturePath()
 	{
 		if (this.Config == null)
@@ -67,13 +67,13 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		this.SkillTexturePath = this.Config.Value.SkillIcon;
 	}
 
-	// Token: 0x0600E317 RID: 58135 RVA: 0x00355FD8 File Offset: 0x003541D8
+	// Token: 0x0600B734 RID: 46900 RVA: 0x00361A08 File Offset: 0x0035FC08
 	public override string GetSkillTexturePath()
 	{
 		return this.SkillTexturePath;
 	}
 
-	// Token: 0x0600E318 RID: 58136 RVA: 0x00355FE0 File Offset: 0x003541E0
+	// Token: 0x0600B735 RID: 46901 RVA: 0x00361A10 File Offset: 0x0035FC10
 	public override void RefreshLongPressTime()
 	{
 		if (this.Config == null)
@@ -83,13 +83,13 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		this.LongPressTime = (float)this.Config.Value.LongPressTime / 1000f;
 	}
 
-	// Token: 0x0600E319 RID: 58137 RVA: 0x0035601B File Offset: 0x0035421B
+	// Token: 0x0600B736 RID: 46902 RVA: 0x00361A4B File Offset: 0x0035FC4B
 	public override double GetLongPressTime()
 	{
 		return (double)this.LongPressTime;
 	}
 
-	// Token: 0x0600E31A RID: 58138 RVA: 0x00356024 File Offset: 0x00354224
+	// Token: 0x0600B737 RID: 46903 RVA: 0x00361A54 File Offset: 0x0035FC54
 	public override bool? GetIsLongPressControlCamera()
 	{
 		if (this.Config == null)
@@ -99,7 +99,7 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return new bool?(this.Config.Value.IsLongPressControlCamera);
 	}
 
-	// Token: 0x0600E31B RID: 58139 RVA: 0x00356060 File Offset: 0x00354260
+	// Token: 0x0600B738 RID: 46904 RVA: 0x00361A90 File Offset: 0x0035FC90
 	public override EInputAction GetActionType()
 	{
 		if (this.Config == null)
@@ -109,7 +109,7 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return (EInputAction)((byte)this.Config.Value.ButtonType);
 	}
 
-	// Token: 0x0600E31C RID: 58140 RVA: 0x0035609C File Offset: 0x0035429C
+	// Token: 0x0600B739 RID: 46905 RVA: 0x00361ACC File Offset: 0x0035FCCC
 	public override ESkillButtonType GetButtonType()
 	{
 		if (this.Config == null)
@@ -119,25 +119,25 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return (ESkillButtonType)this.Config.Value.ButtonType;
 	}
 
-	// Token: 0x0600E31D RID: 58141 RVA: 0x003560CB File Offset: 0x003542CB
+	// Token: 0x0600B73A RID: 46906 RVA: 0x00361AFB File Offset: 0x0035FCFB
 	public override bool IsEnable()
 	{
 		return this.IsEnableInternal;
 	}
 
-	// Token: 0x0600E31E RID: 58142 RVA: 0x003560D3 File Offset: 0x003542D3
+	// Token: 0x0600B73B RID: 46907 RVA: 0x00361B03 File Offset: 0x0035FD03
 	public void SetEnable(bool enable)
 	{
 		this.IsEnableInternal = enable;
 	}
 
-	// Token: 0x0600E31F RID: 58143 RVA: 0x003560DC File Offset: 0x003542DC
+	// Token: 0x0600B73C RID: 46908 RVA: 0x00361B0C File Offset: 0x0035FD0C
 	public void SetVisible(bool visible)
 	{
 		this.IsVisibleInternal = visible;
 	}
 
-	// Token: 0x0600E320 RID: 58144 RVA: 0x003560E8 File Offset: 0x003542E8
+	// Token: 0x0600B73D RID: 46909 RVA: 0x00361B18 File Offset: 0x0035FD18
 	public virtual void RefreshSkillCd()
 	{
 		if (this.CharacterSkillCdComponent != null)
@@ -152,13 +152,13 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		this.IsEnableInternal = true;
 	}
 
-	// Token: 0x0600E321 RID: 58145 RVA: 0x0035611F File Offset: 0x0035431F
+	// Token: 0x0600B73E RID: 46910 RVA: 0x00361B4F File Offset: 0x0035FD4F
 	public void SetIsBuilding(bool isBuilding)
 	{
 		this.IsBuilding = isBuilding;
 	}
 
-	// Token: 0x0600E322 RID: 58146 RVA: 0x00356128 File Offset: 0x00354328
+	// Token: 0x0600B73F RID: 46911 RVA: 0x00361B58 File Offset: 0x0035FD58
 	public override bool IsCdVisible()
 	{
 		if (this.IsBuilding)
@@ -174,7 +174,7 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return auxiliaryById != null && auxiliaryById.GetValueOrDefault().CDSkill == 1;
 	}
 
-	// Token: 0x0600E323 RID: 58147 RVA: 0x00356180 File Offset: 0x00354380
+	// Token: 0x0600B740 RID: 46912 RVA: 0x00361BB0 File Offset: 0x0035FDB0
 	public override string GetSkillIconName()
 	{
 		if (this.Config == null)
@@ -188,27 +188,27 @@ public class TrapDefenseBattleSkillData : BattleSkillDataBase
 		return this.Config.Value.Name;
 	}
 
-	// Token: 0x040068DF RID: 26847
+	// Token: 0x040069BE RID: 27070
 	protected float LongPressTime;
 
-	// Token: 0x040068E0 RID: 26848
+	// Token: 0x040069BF RID: 27071
 	protected SkillGameplayButton? Config;
 
-	// Token: 0x040068E1 RID: 26849
+	// Token: 0x040069C0 RID: 27072
 	protected EntityHandle EntityHandle;
 
-	// Token: 0x040068E2 RID: 26850
+	// Token: 0x040069C1 RID: 27073
 	protected BaseTagComponent GameplayTagComponent;
 
-	// Token: 0x040068E3 RID: 26851
+	// Token: 0x040069C2 RID: 27074
 	protected CharacterSkillCdComponent CharacterSkillCdComponent;
 
-	// Token: 0x040068E4 RID: 26852
+	// Token: 0x040069C3 RID: 27075
 	protected string SkillTexturePath;
 
-	// Token: 0x040068E5 RID: 26853
+	// Token: 0x040069C4 RID: 27076
 	protected bool IsEnableInternal = true;
 
-	// Token: 0x040068E6 RID: 26854
+	// Token: 0x040069C5 RID: 27077
 	private bool IsBuilding;
 }

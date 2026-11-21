@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A21 RID: 18977
+	// Token: 0x020039C9 RID: 14793
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBdData
 	{
-		// Token: 0x06031450 RID: 201808 RVA: 0x00B6D191 File Offset: 0x00B6B391
+		// Token: 0x060261E0 RID: 156128 RVA: 0x00AB118D File Offset: 0x00AAF38D
 		public static TrapDefenseBdData Create(TrapDefenseBd config)
 		{
 			TrapDefenseBdData trapDefenseBdData = new TrapDefenseBdData(config.Id);
@@ -19,14 +19,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseBdData;
 		}
 
-		// Token: 0x06031451 RID: 201809 RVA: 0x00B6D1AC File Offset: 0x00B6B3AC
+		// Token: 0x060261E1 RID: 156129 RVA: 0x00AB11A8 File Offset: 0x00AAF3A8
 		private TrapDefenseBdData(int id)
 		{
 			this.Id = id;
 			this.SumProgress = 1;
 		}
 
-		// Token: 0x06031452 RID: 201810 RVA: 0x00B6D1D8 File Offset: 0x00B6B3D8
+		// Token: 0x060261E2 RID: 156130 RVA: 0x00AB11D4 File Offset: 0x00AAF3D4
 		private void Init()
 		{
 			foreach (TrapDefenseBdGroup config in TrapDefenseConfig.Instance.GetBdGroupListByBdId(this.Id))
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SumProgress = this.Config.GoldBuffCount;
 		}
 
-		// Token: 0x06031453 RID: 201811 RVA: 0x00B6D260 File Offset: 0x00B6B460
+		// Token: 0x060261E3 RID: 156131 RVA: 0x00AB125C File Offset: 0x00AAF45C
 		public bool IsActive()
 		{
 			using (List<TrapDefenseBdBuffData>.Enumerator enumerator = this.BdBuffDataList.GetEnumerator())
@@ -54,26 +54,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x06031454 RID: 201812 RVA: 0x00B6D2BC File Offset: 0x00B6B4BC
+		// Token: 0x060261E4 RID: 156132 RVA: 0x00AB12B8 File Offset: 0x00AAF4B8
 		public void SetUnlock(bool unlock)
 		{
 			this.IsUnlock = unlock;
 		}
 
-		// Token: 0x06031455 RID: 201813 RVA: 0x00B6D2C5 File Offset: 0x00B6B4C5
+		// Token: 0x060261E5 RID: 156133 RVA: 0x00AB12C1 File Offset: 0x00AAF4C1
 		public bool IsUnlockInTheUi()
 		{
 			TrapDefenseBdSumViewModel viewModelBdSum = TrapDefenseModel.Instance.ViewModelBdSum;
 			return (viewModelBdSum != null && viewModelBdSum.IsInstance) || this.IsUnlock;
 		}
 
-		// Token: 0x06031456 RID: 201814 RVA: 0x00B6D2E7 File Offset: 0x00B6B4E7
+		// Token: 0x060261E6 RID: 156134 RVA: 0x00AB12E3 File Offset: 0x00AAF4E3
 		public List<TrapDefenseBdBuffData> GetGoldQualityBuffDataList()
 		{
 			return this.GetQualityBuffDataList(ETrapDefenseBdBuffQuality.Gold);
 		}
 
-		// Token: 0x06031457 RID: 201815 RVA: 0x00B6D2F0 File Offset: 0x00B6B4F0
+		// Token: 0x060261E7 RID: 156135 RVA: 0x00AB12EC File Offset: 0x00AAF4EC
 		public List<TrapDefenseBdBuffData> GetQualityBuffDataList(ETrapDefenseBdBuffQuality quality)
 		{
 			List<TrapDefenseBdBuffData> list = new List<TrapDefenseBdBuffData>();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x06031458 RID: 201816 RVA: 0x00B6D358 File Offset: 0x00B6B558
+		// Token: 0x060261E8 RID: 156136 RVA: 0x00AB1354 File Offset: 0x00AAF554
 		public int GetCurrentActiveProgressNum()
 		{
 			int num = 0;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return num;
 		}
 
-		// Token: 0x06031459 RID: 201817 RVA: 0x00B6D3B0 File Offset: 0x00B6B5B0
+		// Token: 0x060261E9 RID: 156137 RVA: 0x00AB13AC File Offset: 0x00AAF5AC
 		public List<ITrapDefenseBdProgressInfo> GetBdProgressInfoList()
 		{
 			List<ITrapDefenseBdProgressInfo> list = new List<ITrapDefenseBdProgressInfo>();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x0603145A RID: 201818 RVA: 0x00B6D425 File Offset: 0x00B6B625
+		// Token: 0x060261EA RID: 156138 RVA: 0x00AB1421 File Offset: 0x00AAF621
 		[NullableContext(0)]
 		public ValueTuple<int, ETrapDefenseResKey> GetBdProgressArrowPos(int activeNum)
 		{
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<int, ETrapDefenseResKey>(this.Config.GoldBuffCount, ETrapDefenseResKey.BdProgressArrowQualityGold);
 		}
 
-		// Token: 0x0603145B RID: 201819 RVA: 0x00B6D460 File Offset: 0x00B6B660
+		// Token: 0x060261EB RID: 156139 RVA: 0x00AB145C File Offset: 0x00AAF65C
 		public ETrapDefenseBdBuffQuality GetCurActiveQualityPool()
 		{
 			int currentActiveProgressNum = this.GetCurrentActiveProgressNum();
@@ -145,14 +145,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return ETrapDefenseBdBuffQuality.Gold;
 		}
 
-		// Token: 0x0603145C RID: 201820 RVA: 0x00B6D495 File Offset: 0x00B6B695
+		// Token: 0x060261EC RID: 156140 RVA: 0x00AB1491 File Offset: 0x00AAF691
 		[NullableContext(2)]
 		public void SetPreAddedBuff(TrapDefenseBdBuffData buff = null)
 		{
 			this.PreAddedBdBuffData = buff;
 		}
 
-		// Token: 0x0603145D RID: 201821 RVA: 0x00B6D4A0 File Offset: 0x00B6B6A0
+		// Token: 0x060261ED RID: 156141 RVA: 0x00AB149C File Offset: 0x00AAF69C
 		[NullableContext(0)]
 		public ValueTuple<bool, ETrapDefenseBdBuffQuality> PreAddedBuffIsActiveNewQuality(int preAdd = -1)
 		{
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<bool, ETrapDefenseBdBuffQuality>(false, ETrapDefenseBdBuffQuality.Gold);
 		}
 
-		// Token: 0x0603145E RID: 201822 RVA: 0x00B6D536 File Offset: 0x00B6B736
+		// Token: 0x060261EE RID: 156142 RVA: 0x00AB1532 File Offset: 0x00AAF732
 		public int GetSumProgressForStageMode(int addNum = 0)
 		{
 			if (this.GetCurrentActiveProgressNum() + addNum >= this.Config.PurpleBuffCount)
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.Config.PurpleBuffCount;
 		}
 
-		// Token: 0x0603145F RID: 201823 RVA: 0x00B6D564 File Offset: 0x00B6B764
+		// Token: 0x060261EF RID: 156143 RVA: 0x00AB1560 File Offset: 0x00AAF760
 		public bool IsZeroBdType()
 		{
 			return this.Config.Id == 0;
 		}
 
-		// Token: 0x06031460 RID: 201824 RVA: 0x00B6D574 File Offset: 0x00B6B774
+		// Token: 0x060261F0 RID: 156144 RVA: 0x00AB1570 File Offset: 0x00AAF770
 		public string GetShowActorLabelStr()
 		{
 			int id = this.Id;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06031461 RID: 201825 RVA: 0x00B6D648 File Offset: 0x00B6B848
+		// Token: 0x060261F1 RID: 156145 RVA: 0x00AB1644 File Offset: 0x00AAF844
 		public IReadOnlyList<TrapDefenseBdBuffData> GetBdBuffShowListForSumView()
 		{
 			TrapDefenseBdSumViewModel viewModelBdSum = TrapDefenseModel.Instance.ViewModelBdSum;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return bdBuffDataList;
 		}
 
-		// Token: 0x06031462 RID: 201826 RVA: 0x00B6D6F4 File Offset: 0x00B6B8F4
+		// Token: 0x060261F2 RID: 156146 RVA: 0x00AB16F0 File Offset: 0x00AAF8F0
 		public int SortBdBuffQuality(TrapDefenseBdBuffData a, TrapDefenseBdBuffData b)
 		{
 			int quality = a.Config.Quality;
@@ -257,26 +257,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return b.Id - a.Id;
 		}
 
-		// Token: 0x0401A56E RID: 107886
+		// Token: 0x04014EC5 RID: 85701
 		public int Id;
 
-		// Token: 0x0401A56F RID: 107887
+		// Token: 0x04014EC6 RID: 85702
 		public TrapDefenseBd Config;
 
-		// Token: 0x0401A570 RID: 107888
+		// Token: 0x04014EC7 RID: 85703
 		public int SumProgress;
 
-		// Token: 0x0401A571 RID: 107889
+		// Token: 0x04014EC8 RID: 85704
 		public readonly List<TrapDefenseBdBuffData> BdBuffDataList = new List<TrapDefenseBdBuffData>();
 
-		// Token: 0x0401A572 RID: 107890
+		// Token: 0x04014EC9 RID: 85705
 		public readonly Dictionary<int, TrapDefenseBdBuffData> BdBuffDataMap = new Dictionary<int, TrapDefenseBdBuffData>();
 
-		// Token: 0x0401A573 RID: 107891
+		// Token: 0x04014ECA RID: 85706
 		[Nullable(2)]
 		public TrapDefenseBdBuffData PreAddedBdBuffData;
 
-		// Token: 0x0401A574 RID: 107892
+		// Token: 0x04014ECB RID: 85707
 		public bool IsUnlock;
 	}
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F81 RID: 28545
+	// Token: 0x02006102 RID: 24834
 	public class LevelFlowDeadEyeMode : LevelFlowActionBase
 	{
-		// Token: 0x060456D7 RID: 284375 RVA: 0x01137314 File Offset: 0x01135514
+		// Token: 0x0603B885 RID: 243845 RVA: 0x010E1118 File Offset: 0x010DF318
 		[NullableContext(1)]
 		public LevelFlowDeadEyeMode Init(DeadEyeModeParams params_)
 		{
@@ -15,13 +15,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456D8 RID: 284376 RVA: 0x0113731E File Offset: 0x0113551E
+		// Token: 0x0603B886 RID: 243846 RVA: 0x010E1122 File Offset: 0x010DF322
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnDeadEyeModeFinish, new Action(this.OnDeadEyeModeFinish));
 		}
 
-		// Token: 0x060456D9 RID: 284377 RVA: 0x0113733C File Offset: 0x0113553C
+		// Token: 0x0603B887 RID: 243847 RVA: 0x010E1140 File Offset: 0x010DF340
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.LevelFlow.Action
 			DeadEyeModeController.Instance.EnterDeadEyeModeWithoutEntity(this.Params);
 		}
 
-		// Token: 0x060456DA RID: 284378 RVA: 0x01137389 File Offset: 0x01135589
+		// Token: 0x0603B888 RID: 243848 RVA: 0x010E118D File Offset: 0x010DF38D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnDeadEyeModeFinish, new Action(this.OnDeadEyeModeFinish));
 		}
 
-		// Token: 0x060456DB RID: 284379 RVA: 0x011373A7 File Offset: 0x011355A7
+		// Token: 0x0603B889 RID: 243849 RVA: 0x010E11AB File Offset: 0x010DF3AB
 		private void OnDeadEyeModeFinish()
 		{
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243B0 RID: 148400
+		// Token: 0x0401F665 RID: 128613
 		[Nullable(2)]
 		private DeadEyeModeParams Params;
 	}

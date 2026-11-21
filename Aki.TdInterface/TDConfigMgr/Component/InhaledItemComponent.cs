@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200054A RID: 1354
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005B1 RID: 1457
 	public class InhaledItemComponent : IComponentBase
 	{
-		// Token: 0x06001BB0 RID: 7088 RVA: 0x0004FDC8 File Offset: 0x0004DFC8
+		// Token: 0x06001DAC RID: 7596 RVA: 0x00054B84 File Offset: 0x00052D84
 		private InhaledItemComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BB1 RID: 7089 RVA: 0x0004FE00 File Offset: 0x0004E000
+		// Token: 0x06001DAD RID: 7597 RVA: 0x00054BBC File Offset: 0x00052DBC
 		public static InhaledItemComponent Create([Nullable(2)] InhaledItemComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BB2 RID: 7090 RVA: 0x0004FE13 File Offset: 0x0004E013
+		// Token: 0x06001DAE RID: 7598 RVA: 0x00054BCF File Offset: 0x00052DCF
 		public static InhaledItemComponent CreateFromSetValue([Nullable(2)] InhaledItemComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BB3 RID: 7091 RVA: 0x0004FE28 File Offset: 0x0004E028
+		// Token: 0x06001DAF RID: 7599 RVA: 0x00054BE4 File Offset: 0x00052DE4
 		public new InhaledItemComponent_SetValue ToSetValue()
 		{
 			return new InhaledItemComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000748 RID: 1864
-		// (get) Token: 0x06001BB4 RID: 7092 RVA: 0x0004FE84 File Offset: 0x0004E084
-		// (set) Token: 0x06001BB5 RID: 7093 RVA: 0x0004FEBE File Offset: 0x0004E0BE
+		// Token: 0x170007CB RID: 1995
+		// (get) Token: 0x06001DB0 RID: 7600 RVA: 0x00054C40 File Offset: 0x00052E40
+		// (set) Token: 0x06001DB1 RID: 7601 RVA: 0x00054C7A File Offset: 0x00052E7A
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000749 RID: 1865
-		// (get) Token: 0x06001BB6 RID: 7094 RVA: 0x0004FECC File Offset: 0x0004E0CC
-		// (set) Token: 0x06001BB7 RID: 7095 RVA: 0x0004FEF6 File Offset: 0x0004E0F6
+		// Token: 0x170007CC RID: 1996
+		// (get) Token: 0x06001DB2 RID: 7602 RVA: 0x00054C88 File Offset: 0x00052E88
+		// (set) Token: 0x06001DB3 RID: 7603 RVA: 0x00054CB2 File Offset: 0x00052EB2
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700074A RID: 1866
-		// (get) Token: 0x06001BB8 RID: 7096 RVA: 0x0004FF04 File Offset: 0x0004E104
-		// (set) Token: 0x06001BB9 RID: 7097 RVA: 0x0004FF2F File Offset: 0x0004E12F
+		// Token: 0x170007CD RID: 1997
+		// (get) Token: 0x06001DB4 RID: 7604 RVA: 0x00054CC0 File Offset: 0x00052EC0
+		// (set) Token: 0x06001DB5 RID: 7605 RVA: 0x00054CEB File Offset: 0x00052EEB
 		public virtual int InhaledStrength
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700074B RID: 1867
-		// (get) Token: 0x06001BBA RID: 7098 RVA: 0x0004FF40 File Offset: 0x0004E140
-		// (set) Token: 0x06001BBB RID: 7099 RVA: 0x0004FF7A File Offset: 0x0004E17A
+		// Token: 0x170007CE RID: 1998
+		// (get) Token: 0x06001DB6 RID: 7606 RVA: 0x00054CFC File Offset: 0x00052EFC
+		// (set) Token: 0x06001DB7 RID: 7607 RVA: 0x00054D36 File Offset: 0x00052F36
 		public virtual int? InhaledInterruptionRecoveryTime
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700074C RID: 1868
-		// (get) Token: 0x06001BBC RID: 7100 RVA: 0x0004FF88 File Offset: 0x0004E188
-		// (set) Token: 0x06001BBD RID: 7101 RVA: 0x0004FFE9 File Offset: 0x0004E1E9
+		// Token: 0x170007CF RID: 1999
+		// (get) Token: 0x06001DB8 RID: 7608 RVA: 0x00054D44 File Offset: 0x00052F44
+		// (set) Token: 0x06001DB9 RID: 7609 RVA: 0x00054DA5 File Offset: 0x00052FA5
 		public virtual IInhaledPerformance InhaledPerformance
 		{
 			get
@@ -184,9 +182,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700074D RID: 1869
-		// (get) Token: 0x06001BBE RID: 7102 RVA: 0x0004FFFE File Offset: 0x0004E1FE
-		// (set) Token: 0x06001BBF RID: 7103 RVA: 0x00050025 File Offset: 0x0004E225
+		// Token: 0x170007D0 RID: 2000
+		// (get) Token: 0x06001DBA RID: 7610 RVA: 0x00054DBA File Offset: 0x00052FBA
+		// (set) Token: 0x06001DBB RID: 7611 RVA: 0x00054DE1 File Offset: 0x00052FE1
 		public virtual IInhaledPerResultType InhaledPerResult
 		{
 			get
@@ -208,18 +206,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013E4 RID: 5092
+		// Token: 0x0400154E RID: 5454
 		[Nullable(2)]
 		protected new InhaledItemComponent FbInstance;
 
-		// Token: 0x040013E5 RID: 5093
+		// Token: 0x0400154F RID: 5455
 		[Nullable(2)]
 		protected new InhaledItemComponent_SetValue PocoInterface;
 
-		// Token: 0x040013E6 RID: 5094
+		// Token: 0x04001550 RID: 5456
 		private IInhaledPerformance _InhaledPerformanceCache;
 
-		// Token: 0x040013E7 RID: 5095
+		// Token: 0x04001551 RID: 5457
 		private bool _InhaledPerformanceInited;
 	}
 }

@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.Scalability
 {
-	// Token: 0x02003DD0 RID: 15824
+	// Token: 0x0200310B RID: 12555
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Effect/Scalability/EEffectScalabilityType.EEffectScalabilityType")]
 	public enum EEffectScalabilityType : byte
 	{
-		// Token: 0x04013E9E RID: 81566
+		// Token: 0x04010510 RID: 66832
 		None,
-		// Token: 0x04013E9F RID: 81567
+		// Token: 0x04010511 RID: 66833
 		Pad,
-		// Token: 0x04013EA0 RID: 81568
+		// Token: 0x04010512 RID: 66834
 		Desktop,
-		// Token: 0x04013EA1 RID: 81569
+		// Token: 0x04010513 RID: 66835
 		EEffectScalabilityType_MAX
 	}
 }

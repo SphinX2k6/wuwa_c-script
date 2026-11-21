@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015EF RID: 5615
+	// Token: 0x02001750 RID: 5968
 	[EnumExtensions]
 	public enum EGroupAiCommunicateType
 	{
-		// Token: 0x04004AF6 RID: 19190
+		// Token: 0x04004EB9 RID: 20153
 		AddTag,
-		// Token: 0x04004AF7 RID: 19191
+		// Token: 0x04004EBA RID: 20154
 		RemoveTag
 	}
 }

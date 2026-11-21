@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x02006348 RID: 25416
+	// Token: 0x020052C6 RID: 21190
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemSyncMonsterGridView : PinballItemView, ISyncGridProxy<IPinballItemSyncMonsterGridViewData>, ISyncGridProxy
 	{
-		// Token: 0x17009317 RID: 37655
-		// (get) Token: 0x0603FF47 RID: 261959 RVA: 0x00F79BF3 File Offset: 0x00F77DF3
-		// (set) Token: 0x0603FF48 RID: 261960 RVA: 0x00F79BFB File Offset: 0x00F77DFB
+		// Token: 0x17006679 RID: 26233
+		// (get) Token: 0x06034C08 RID: 216072 RVA: 0x00EC0B53 File Offset: 0x00EBED53
+		// (set) Token: 0x06034C09 RID: 216073 RVA: 0x00EC0B5B File Offset: 0x00EBED5B
 		public int GridIndex { get; set; }
 
-		// Token: 0x0603FF49 RID: 261961 RVA: 0x00F79C04 File Offset: 0x00F77E04
+		// Token: 0x06034C0A RID: 216074 RVA: 0x00EC0B64 File Offset: 0x00EBED64
 		protected override void OnStart()
 		{
 			base.OnStart();
 			base.GetItemToggle().bLockStateOnSelect = true;
 		}
 
-		// Token: 0x0603FF4A RID: 261962 RVA: 0x00F79C18 File Offset: 0x00F77E18
+		// Token: 0x06034C0B RID: 216075 RVA: 0x00EC0B78 File Offset: 0x00EBED78
 		public void Refresh(IPinballItemSyncMonsterGridViewData data)
 		{
 			IPinballItemDataMonster itemData = data.ItemData;
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.ApplyWithTask(itemData);
 		}
 
-		// Token: 0x0603FF4B RID: 261963 RVA: 0x00F79C41 File Offset: 0x00F77E41
+		// Token: 0x06034C0C RID: 216076 RVA: 0x00EC0BA1 File Offset: 0x00EBEDA1
 		void ISyncGridProxy.Refresh(object data)
 		{
 			this.Refresh((IPinballItemSyncMonsterGridViewData)data);
 		}
 
-		// Token: 0x0603FF4C RID: 261964 RVA: 0x00F79C4F File Offset: 0x00F77E4F
+		// Token: 0x06034C0D RID: 216077 RVA: 0x00EC0BAF File Offset: 0x00EBEDAF
 		void ISyncGridProxy.CreateByActor(AActor actor)
 		{
 			base.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0603FF4D RID: 261965 RVA: 0x00F79C59 File Offset: 0x00F77E59
+		// Token: 0x06034C0E RID: 216078 RVA: 0x00EC0BB9 File Offset: 0x00EBEDB9
 		void ISyncGridProxy.CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603FF4E RID: 261966 RVA: 0x00F79C64 File Offset: 0x00F77E64
+		// Token: 0x06034C0F RID: 216079 RVA: 0x00EC0BC4 File Offset: 0x00EBEDC4
 		private void ApplyWithTask(IPinballItemDataMonster data)
 		{
 			PinballItemSyncMonsterGridView.<>c__DisplayClass10_0 CS$<>8__locals1 = new PinballItemSyncMonsterGridView.<>c__DisplayClass10_0();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FF4F RID: 261967 RVA: 0x00F79CAC File Offset: 0x00F77EAC
+		// Token: 0x06034C10 RID: 216080 RVA: 0x00EC0C0C File Offset: 0x00EBEE0C
 		public void RefreshToggleState(bool bJumpToEnd)
 		{
 			if (this.SyncGridData == null)
@@ -85,12 +85,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			itemToggle.SetToggleState(state, false, false, bJumpToEnd);
 		}
 
-		// Token: 0x0603FF50 RID: 261968 RVA: 0x00F79CE9 File Offset: 0x00F77EE9
+		// Token: 0x06034C11 RID: 216081 RVA: 0x00EC0C49 File Offset: 0x00EBEE49
 		public void Clear()
 		{
 		}
 
-		// Token: 0x040215A5 RID: 136613
+		// Token: 0x0401BED4 RID: 114388
 		[Nullable(2)]
 		private IPinballItemSyncMonsterGridViewData SyncGridData;
 	}

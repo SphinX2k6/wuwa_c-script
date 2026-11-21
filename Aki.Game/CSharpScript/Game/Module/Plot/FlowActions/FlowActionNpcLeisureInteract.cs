@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C3 RID: 20675
+	// Token: 0x02004093 RID: 16531
 	public class FlowActionNpcLeisureInteract : FlowActionBase
 	{
-		// Token: 0x06034EF6 RID: 216822 RVA: 0x00C89B64 File Offset: 0x00C87D64
+		// Token: 0x06029DEF RID: 171503 RVA: 0x00BD6E4C File Offset: 0x00BD504C
 		protected override void OnExecute()
 		{
 			NpcLeisureInteract npcLeisureInteract = this.ActionInfo.Params as NpcLeisureInteract;

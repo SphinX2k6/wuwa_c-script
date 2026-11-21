@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060E9 RID: 24809
+	// Token: 0x02005067 RID: 20583
 	public enum ERoverlikeItemClassify
 	{
-		// Token: 0x04020CA5 RID: 134309
+		// Token: 0x0401B5D2 RID: 112082
 		Preview = 1,
-		// Token: 0x04020CA6 RID: 134310
+		// Token: 0x0401B5D3 RID: 112083
 		Item
 	}
 }

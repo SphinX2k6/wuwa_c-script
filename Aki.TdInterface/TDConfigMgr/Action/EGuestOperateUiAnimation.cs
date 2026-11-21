@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015F0 RID: 5616
+	// Token: 0x02001751 RID: 5969
 	[EnumExtensions]
 	public enum EGuestOperateUiAnimation
 	{
-		// Token: 0x04004AF9 RID: 19193
+		// Token: 0x04004EBC RID: 20156
 		Play,
-		// Token: 0x04004AFA RID: 19194
+		// Token: 0x04004EBD RID: 20157
 		Stop
 	}
 }

@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003849 RID: 14409
+// Token: 0x02002DC2 RID: 11714
 public class __TsAnimNotifyResetCollisionSize_SubClassMissingExportProxy : __TsAnimNotifyResetCollisionSize_InheritProxy
 {
-	// Token: 0x0601E90C RID: 125196 RVA: 0x00892694 File Offset: 0x00890894
+	// Token: 0x0601C605 RID: 116229 RVA: 0x008B8A90 File Offset: 0x008B6C90
 	[NullableContext(1)]
 	protected __TsAnimNotifyResetCollisionSize_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyResetCollisionSize.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E90D RID: 125197 RVA: 0x008926C7 File Offset: 0x008908C7
+	// Token: 0x0601C606 RID: 116230 RVA: 0x008B8AC3 File Offset: 0x008B6CC3
 	protected __TsAnimNotifyResetCollisionSize_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

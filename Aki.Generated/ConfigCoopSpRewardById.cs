@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001A6 RID: 422
+	// Token: 0x020001B8 RID: 440
 	public class ConfigCoopSpRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060009E7 RID: 2535 RVA: 0x000917F0 File Offset: 0x0008F9F0
+		// Token: 0x06000A53 RID: 2643 RVA: 0x00097728 File Offset: 0x00095928
 		static ConfigCoopSpRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCoopSpRewardById.CreateStaticDefaultValue), new Action(ConfigCoopSpRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060009E8 RID: 2536 RVA: 0x00091810 File Offset: 0x0008FA10
+		// Token: 0x06000A54 RID: 2644 RVA: 0x00097748 File Offset: 0x00095948
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCoopSpRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060009E9 RID: 2537 RVA: 0x0009188F File Offset: 0x0008FA8F
+		// Token: 0x06000A55 RID: 2645 RVA: 0x000977C7 File Offset: 0x000959C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCoopSpRewardById.LogPair = null;
 			ConfigCoopSpRewardById.HandleId = 0;
 		}
 
-		// Token: 0x060009EA RID: 2538 RVA: 0x0009189D File Offset: 0x0008FA9D
+		// Token: 0x06000A56 RID: 2646 RVA: 0x000977D5 File Offset: 0x000959D5
 		public static void Init()
 		{
 			ConfigCoopSpRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigCoopSpRewardById.HandleId, "db_cooprolelevel.db", "select BinData from `CoopSpReward` where Id=?");
 		}
 
-		// Token: 0x060009EB RID: 2539 RVA: 0x000918B8 File Offset: 0x0008FAB8
+		// Token: 0x06000A57 RID: 2647 RVA: 0x000977F0 File Offset: 0x000959F0
 		public static CoopSpReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCoopSpRewardById.HandleId, ConfigCoopSpRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CoopSpReward?(rootAsCoopSpReward);
 		}
 
-		// Token: 0x04000B6E RID: 2926
+		// Token: 0x04000BEC RID: 3052
 		private const string DB = "db_cooprolelevel.db";
 
-		// Token: 0x04000B6F RID: 2927
+		// Token: 0x04000BED RID: 3053
 		private const string FILE = "c.3.2coop活动.xlsx";
 
-		// Token: 0x04000B70 RID: 2928
+		// Token: 0x04000BEE RID: 3054
 		private const string TABLE = "CoopSpReward";
 
-		// Token: 0x04000B71 RID: 2929
+		// Token: 0x04000BEF RID: 3055
 		private const string COMMAND = "select BinData from `CoopSpReward` where Id=?";
 
-		// Token: 0x04000B72 RID: 2930
+		// Token: 0x04000BF0 RID: 3056
 		private const string KEY_PREFIX = "CoopSpRewardById";
 
-		// Token: 0x04000B73 RID: 2931
+		// Token: 0x04000BF1 RID: 3057
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B74 RID: 2932
+		// Token: 0x04000BF2 RID: 3058
 		private static int HandleId;
 	}
 }

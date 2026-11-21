@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C5 RID: 10693
+// Token: 0x02001F40 RID: 8000
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerReviewItem : GridProxyAbstract<ShipTowerReviewItemData>
 {
-	// Token: 0x06016299 RID: 90777 RVA: 0x0059AF70 File Offset: 0x00599170
+	// Token: 0x06013C9F RID: 81055 RVA: 0x005C5F28 File Offset: 0x005C4128
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class ShipTowerReviewItem : GridProxyAbstract<ShipTowerReviewItemData>
 		};
 	}
 
-	// Token: 0x0601629A RID: 90778 RVA: 0x0059B00C File Offset: 0x0059920C
+	// Token: 0x06013CA0 RID: 81056 RVA: 0x005C5FC4 File Offset: 0x005C41C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerReviewItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -40,13 +40,13 @@ public class ShipTowerReviewItem : GridProxyAbstract<ShipTowerReviewItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601629B RID: 90779 RVA: 0x0059B04F File Offset: 0x0059924F
+	// Token: 0x06013CA1 RID: 81057 RVA: 0x005C6007 File Offset: 0x005C4207
 	public override void Refresh(ShipTowerReviewItemData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x0601629C RID: 90780 RVA: 0x0059B058 File Offset: 0x00599258
+	// Token: 0x06013CA2 RID: 81058 RVA: 0x005C6010 File Offset: 0x005C4210
 	public void Refresh(ShipTowerReviewItemData data)
 	{
 		this.ItemData = data;
@@ -97,10 +97,10 @@ public class ShipTowerReviewItem : GridProxyAbstract<ShipTowerReviewItemData>
 		}
 	}
 
-	// Token: 0x0400A511 RID: 42257
+	// Token: 0x0400A8FB RID: 43259
 	private ShipTowerReviewItemData ItemData;
 
-	// Token: 0x0400A512 RID: 42258
+	// Token: 0x0400A8FC RID: 43260
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,26 +108,26 @@ public class ShipTowerReviewItem : GridProxyAbstract<ShipTowerReviewItemData>
 	})]
 	public Action<ShipTowerReviewItemData> ClickCallBack;
 
-	// Token: 0x02008FE5 RID: 36837
+	// Token: 0x0200822C RID: 33324
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E991 RID: 190865
+		// Token: 0x0402A089 RID: 172169
 		public const int TxtName = 0;
 
-		// Token: 0x0402E992 RID: 190866
+		// Token: 0x0402A08A RID: 172170
 		public const int TxtScore = 1;
 
-		// Token: 0x0402E993 RID: 190867
+		// Token: 0x0402A08B RID: 172171
 		public const int TextureGrade = 2;
 
-		// Token: 0x0402E994 RID: 190868
+		// Token: 0x0402A08C RID: 172172
 		public const int LevelNumText = 3;
 
-		// Token: 0x0402E995 RID: 190869
+		// Token: 0x0402A08D RID: 172173
 		public const int QuickPassItem = 4;
 
-		// Token: 0x0402E996 RID: 190870
+		// Token: 0x0402A08E RID: 172174
 		public const int SpriteEndless = 5;
 	}
 }

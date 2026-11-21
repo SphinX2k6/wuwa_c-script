@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C85 RID: 7301
+	// Token: 0x02001E8A RID: 7818
 	public class InterludeActions_SetValue
 	{
-		// Token: 0x04005EEF RID: 24303
+		// Token: 0x04006442 RID: 25666
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> InterludeActionList;
 
-		// Token: 0x04005EF0 RID: 24304
+		// Token: 0x04006443 RID: 25667
 		[Nullable(2)]
 		public List<int> DestroyEntityIds;
 
-		// Token: 0x04005EF1 RID: 24305
+		// Token: 0x04006444 RID: 25668
 		public bool IsFadeIn;
 
-		// Token: 0x04005EF2 RID: 24306
+		// Token: 0x04006445 RID: 25669
 		public bool IsFadeOut;
 	}
 }

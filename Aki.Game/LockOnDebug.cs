@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030DF RID: 12511
+// Token: 0x02002637 RID: 9783
 [NullableContext(1)]
 [Nullable(0)]
 public class LockOnDebug : IStaticVariableResetter
 {
-	// Token: 0x0601ACAC RID: 109740 RVA: 0x0073A817 File Offset: 0x00738A17
+	// Token: 0x060186C8 RID: 100040 RVA: 0x00760253 File Offset: 0x0075E453
 	static LockOnDebug()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LockOnDebug.CreateStaticDefaultValue), new Action(LockOnDebug.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170024D2 RID: 9426
-	// (get) Token: 0x0601ACAD RID: 109741 RVA: 0x0073A836 File Offset: 0x00738A36
+	// Token: 0x1700265C RID: 9820
+	// (get) Token: 0x060186C9 RID: 100041 RVA: 0x00760272 File Offset: 0x0075E472
 	private static Dictionary<LockOnInfo, LockOnDebugData> LockOnDataMap
 	{
 		get
@@ -23,13 +23,13 @@ public class LockOnDebug : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601ACAE RID: 109742 RVA: 0x0073A83D File Offset: 0x00738A3D
+	// Token: 0x060186CA RID: 100042 RVA: 0x00760279 File Offset: 0x0075E479
 	public static void Clear()
 	{
 		LockOnDebug.LockOnDataMap.Clear();
 	}
 
-	// Token: 0x0601ACAF RID: 109743 RVA: 0x0073A84C File Offset: 0x00738A4C
+	// Token: 0x060186CB RID: 100043 RVA: 0x00760288 File Offset: 0x0075E488
 	public static void Push(LockOnInfo info)
 	{
 		if (!LockOnDebug.IsShowDebugLine)
@@ -40,7 +40,7 @@ public class LockOnDebug : IStaticVariableResetter
 		LockOnDebug.LockOnDataMap[info] = value;
 	}
 
-	// Token: 0x0601ACB0 RID: 109744 RVA: 0x0073A874 File Offset: 0x00738A74
+	// Token: 0x060186CC RID: 100044 RVA: 0x007602B0 File Offset: 0x0075E4B0
 	public static void SetDebugString(LockOnInfo info, float angle, float distance, Vector moveDir, [Nullable(2)] Vector actualDir)
 	{
 		if (!LockOnDebug.IsShowDebugLine)
@@ -67,7 +67,7 @@ public class LockOnDebug : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601ACB1 RID: 109745 RVA: 0x0073A900 File Offset: 0x00738B00
+	// Token: 0x060186CD RID: 100045 RVA: 0x0076033C File Offset: 0x0075E53C
 	public static void SetDebugArrow(LockOnInfo info, EColorType colorType)
 	{
 		if (!LockOnDebug.IsShowDebugLine)
@@ -81,13 +81,13 @@ public class LockOnDebug : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601ACB2 RID: 109746 RVA: 0x0073A92B File Offset: 0x00738B2B
+	// Token: 0x060186CE RID: 100046 RVA: 0x00760367 File Offset: 0x0075E567
 	private static string FormatNumber(double value)
 	{
 		return value.ToString("F2");
 	}
 
-	// Token: 0x0601ACB3 RID: 109747 RVA: 0x0073A93C File Offset: 0x00738B3C
+	// Token: 0x060186CF RID: 100047 RVA: 0x00760378 File Offset: 0x0075E578
 	private static string FormatVector(Vector vec)
 	{
 		return string.Concat(new string[]
@@ -101,7 +101,7 @@ public class LockOnDebug : IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601ACB4 RID: 109748 RVA: 0x0073A998 File Offset: 0x00738B98
+	// Token: 0x060186D0 RID: 100048 RVA: 0x007603D4 File Offset: 0x0075E5D4
 	public static void Tick(Entity me)
 	{
 		if (!LockOnDebug.IsShowDebugLine)
@@ -132,33 +132,33 @@ public class LockOnDebug : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601ACB5 RID: 109749 RVA: 0x0073AA70 File Offset: 0x00738C70
+	// Token: 0x060186D1 RID: 100049 RVA: 0x007604AC File Offset: 0x0075E6AC
 	public static void CreateStaticDefaultValue()
 	{
 		LockOnDebug.IsShowDebugLine = false;
 		LockOnDebug._lockOnDataMap = new Dictionary<LockOnInfo, LockOnDebugData>();
 	}
 
-	// Token: 0x0601ACB6 RID: 109750 RVA: 0x0073AA82 File Offset: 0x00738C82
+	// Token: 0x060186D2 RID: 100050 RVA: 0x007604BE File Offset: 0x0075E6BE
 	public static void ResetStaticDefaultValue()
 	{
 		LockOnDebug.IsShowDebugLine = false;
 		LockOnDebug._lockOnDataMap = null;
 	}
 
-	// Token: 0x0400CEEF RID: 52975
+	// Token: 0x0400D2DF RID: 53983
 	public const float ARROW_SIZE = 15f;
 
-	// Token: 0x0400CEF0 RID: 52976
+	// Token: 0x0400D2E0 RID: 53984
 	public const double DEBUG_TEXT_FALLBACK_Z_OFFSET = 120.0;
 
-	// Token: 0x0400CEF1 RID: 52977
+	// Token: 0x0400D2E1 RID: 53985
 	public const double DEBUG_TEXT_EXTRA_Z_OFFSET = 50.0;
 
-	// Token: 0x0400CEF2 RID: 52978
+	// Token: 0x0400D2E2 RID: 53986
 	public static bool IsShowDebugLine;
 
-	// Token: 0x0400CEF3 RID: 52979
+	// Token: 0x0400D2E3 RID: 53987
 	[Nullable(new byte[]
 	{
 		2,

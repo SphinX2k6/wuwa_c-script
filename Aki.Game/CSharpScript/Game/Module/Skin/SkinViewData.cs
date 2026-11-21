@@ -3,62 +3,62 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Skin
 {
-	// Token: 0x02004BE1 RID: 19425
+	// Token: 0x02003B8D RID: 15245
 	public class SkinViewData : ISkinViewData
 	{
-		// Token: 0x17007C5A RID: 31834
-		// (get) Token: 0x0603238D RID: 205709 RVA: 0x00BAAFC3 File Offset: 0x00BA91C3
-		// (set) Token: 0x0603238E RID: 205710 RVA: 0x00BAAFCB File Offset: 0x00BA91CB
+		// Token: 0x17005004 RID: 20484
+		// (get) Token: 0x0602711E RID: 160030 RVA: 0x00AEF293 File Offset: 0x00AED493
+		// (set) Token: 0x0602711F RID: 160031 RVA: 0x00AEF29B File Offset: 0x00AED49B
 		public int RoleId { get; set; }
 
-		// Token: 0x17007C5B RID: 31835
-		// (get) Token: 0x0603238F RID: 205711 RVA: 0x00BAAFD4 File Offset: 0x00BA91D4
-		// (set) Token: 0x06032390 RID: 205712 RVA: 0x00BAAFDC File Offset: 0x00BA91DC
+		// Token: 0x17005005 RID: 20485
+		// (get) Token: 0x06027120 RID: 160032 RVA: 0x00AEF2A4 File Offset: 0x00AED4A4
+		// (set) Token: 0x06027121 RID: 160033 RVA: 0x00AEF2AC File Offset: 0x00AED4AC
 		public int WeaponId { get; set; }
 
-		// Token: 0x17007C5C RID: 31836
-		// (get) Token: 0x06032391 RID: 205713 RVA: 0x00BAAFE5 File Offset: 0x00BA91E5
-		// (set) Token: 0x06032392 RID: 205714 RVA: 0x00BAAFED File Offset: 0x00BA91ED
+		// Token: 0x17005006 RID: 20486
+		// (get) Token: 0x06027122 RID: 160034 RVA: 0x00AEF2B5 File Offset: 0x00AED4B5
+		// (set) Token: 0x06027123 RID: 160035 RVA: 0x00AEF2BD File Offset: 0x00AED4BD
 		public EUiTabViewName TabViewName { get; set; }
 
-		// Token: 0x17007C5D RID: 31837
-		// (get) Token: 0x06032393 RID: 205715 RVA: 0x00BAAFF6 File Offset: 0x00BA91F6
-		// (set) Token: 0x06032394 RID: 205716 RVA: 0x00BAAFFE File Offset: 0x00BA91FE
+		// Token: 0x17005007 RID: 20487
+		// (get) Token: 0x06027124 RID: 160036 RVA: 0x00AEF2C6 File Offset: 0x00AED4C6
+		// (set) Token: 0x06027125 RID: 160037 RVA: 0x00AEF2CE File Offset: 0x00AED4CE
 		public bool NeedLoadRole { get; set; }
 
-		// Token: 0x17007C5E RID: 31838
-		// (get) Token: 0x06032395 RID: 205717 RVA: 0x00BAB007 File Offset: 0x00BA9207
-		// (set) Token: 0x06032396 RID: 205718 RVA: 0x00BAB00F File Offset: 0x00BA920F
+		// Token: 0x17005008 RID: 20488
+		// (get) Token: 0x06027126 RID: 160038 RVA: 0x00AEF2D7 File Offset: 0x00AED4D7
+		// (set) Token: 0x06027127 RID: 160039 RVA: 0x00AEF2DF File Offset: 0x00AED4DF
 		public int? FlySkinId { get; set; }
 
-		// Token: 0x17007C5F RID: 31839
-		// (get) Token: 0x06032397 RID: 205719 RVA: 0x00BAB018 File Offset: 0x00BA9218
-		// (set) Token: 0x06032398 RID: 205720 RVA: 0x00BAB020 File Offset: 0x00BA9220
+		// Token: 0x17005009 RID: 20489
+		// (get) Token: 0x06027128 RID: 160040 RVA: 0x00AEF2E8 File Offset: 0x00AED4E8
+		// (set) Token: 0x06027129 RID: 160041 RVA: 0x00AEF2F0 File Offset: 0x00AED4F0
 		public EFlySkinTab? FlySkinTab { get; set; }
 
-		// Token: 0x17007C60 RID: 31840
-		// (get) Token: 0x06032399 RID: 205721 RVA: 0x00BAB029 File Offset: 0x00BA9229
-		// (set) Token: 0x0603239A RID: 205722 RVA: 0x00BAB031 File Offset: 0x00BA9231
+		// Token: 0x1700500A RID: 20490
+		// (get) Token: 0x0602712A RID: 160042 RVA: 0x00AEF2F9 File Offset: 0x00AED4F9
+		// (set) Token: 0x0602712B RID: 160043 RVA: 0x00AEF301 File Offset: 0x00AED501
 		public int? CalabashSkinId { get; set; }
 
-		// Token: 0x17007C61 RID: 31841
-		// (get) Token: 0x0603239B RID: 205723 RVA: 0x00BAB03A File Offset: 0x00BA923A
-		// (set) Token: 0x0603239C RID: 205724 RVA: 0x00BAB042 File Offset: 0x00BA9242
+		// Token: 0x1700500B RID: 20491
+		// (get) Token: 0x0602712C RID: 160044 RVA: 0x00AEF30A File Offset: 0x00AED50A
+		// (set) Token: 0x0602712D RID: 160045 RVA: 0x00AEF312 File Offset: 0x00AED512
 		public int? SelectRoleSkinId { get; set; }
 
-		// Token: 0x17007C62 RID: 31842
-		// (get) Token: 0x0603239D RID: 205725 RVA: 0x00BAB04B File Offset: 0x00BA924B
-		// (set) Token: 0x0603239E RID: 205726 RVA: 0x00BAB053 File Offset: 0x00BA9253
+		// Token: 0x1700500C RID: 20492
+		// (get) Token: 0x0602712E RID: 160046 RVA: 0x00AEF31B File Offset: 0x00AED51B
+		// (set) Token: 0x0602712F RID: 160047 RVA: 0x00AEF323 File Offset: 0x00AED523
 		public int? OrnamentSkinId { get; set; }
 
-		// Token: 0x17007C63 RID: 31843
-		// (get) Token: 0x0603239F RID: 205727 RVA: 0x00BAB05C File Offset: 0x00BA925C
-		// (set) Token: 0x060323A0 RID: 205728 RVA: 0x00BAB064 File Offset: 0x00BA9264
+		// Token: 0x1700500D RID: 20493
+		// (get) Token: 0x06027130 RID: 160048 RVA: 0x00AEF32C File Offset: 0x00AED52C
+		// (set) Token: 0x06027131 RID: 160049 RVA: 0x00AEF334 File Offset: 0x00AED534
 		public int? OrnamentId { get; set; }
 
-		// Token: 0x17007C64 RID: 31844
-		// (get) Token: 0x060323A1 RID: 205729 RVA: 0x00BAB06D File Offset: 0x00BA926D
-		// (set) Token: 0x060323A2 RID: 205730 RVA: 0x00BAB075 File Offset: 0x00BA9275
+		// Token: 0x1700500E RID: 20494
+		// (get) Token: 0x06027132 RID: 160050 RVA: 0x00AEF33D File Offset: 0x00AED53D
+		// (set) Token: 0x06027133 RID: 160051 RVA: 0x00AEF345 File Offset: 0x00AED545
 		public bool? SkipOrnamentCameraBlend { get; set; }
 	}
 }

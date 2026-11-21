@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD3 RID: 7379
+	// Token: 0x02001EDA RID: 7898
 	public class IPerformerAiMoveToPlayer_SetValue
 	{
-		// Token: 0x04005FBD RID: 24509
+		// Token: 0x04006519 RID: 25881
 		public EPerformerAiMoveToType Type;
 	}
 }

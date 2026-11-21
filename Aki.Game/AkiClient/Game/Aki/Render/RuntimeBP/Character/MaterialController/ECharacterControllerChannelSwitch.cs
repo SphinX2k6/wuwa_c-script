@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 {
-	// Token: 0x02003E10 RID: 15888
+	// Token: 0x02003128 RID: 12584
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/MaterialController/ECharacterControllerChannelSwitch.ECharacterControllerChannelSwitch")]
 	public enum ECharacterControllerChannelSwitch : byte
 	{
-		// Token: 0x0401428A RID: 82570
+		// Token: 0x04010735 RID: 67381
 		RGB,
-		// Token: 0x0401428B RID: 82571
+		// Token: 0x04010736 RID: 67382
 		R,
-		// Token: 0x0401428C RID: 82572
+		// Token: 0x04010737 RID: 67383
 		G,
-		// Token: 0x0401428D RID: 82573
+		// Token: 0x04010738 RID: 67384
 		B,
-		// Token: 0x0401428E RID: 82574
+		// Token: 0x04010739 RID: 67385
 		A,
-		// Token: 0x0401428F RID: 82575
+		// Token: 0x0401073A RID: 67386
 		ECharacterControllerChannelSwitch_MAX
 	}
 }

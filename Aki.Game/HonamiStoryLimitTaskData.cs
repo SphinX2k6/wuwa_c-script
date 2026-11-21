@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02001E6F RID: 7791
+// Token: 0x02001331 RID: 4913
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryLimitTaskData
 {
-	// Token: 0x0600ED5E RID: 60766 RVA: 0x00388A5E File Offset: 0x00386C5E
+	// Token: 0x0600C17D RID: 49533 RVA: 0x0039466A File Offset: 0x0039286A
 	public HonamiStoryLimitTaskData(int configId)
 	{
 		this.ConfigId = configId;
 	}
 
-	// Token: 0x0600ED5F RID: 60767 RVA: 0x00388A7B File Offset: 0x00386C7B
+	// Token: 0x0600C17E RID: 49534 RVA: 0x00394687 File Offset: 0x00392887
 	private HonamiStoryLimitTask? GetConfig()
 	{
 		return HonamiStoryConfig.Instance.GetHonamiStoryLimitTaskConfig(this.ConfigId);
 	}
 
-	// Token: 0x0600ED60 RID: 60768 RVA: 0x00388A8D File Offset: 0x00386C8D
+	// Token: 0x0600C17F RID: 49535 RVA: 0x00394699 File Offset: 0x00392899
 	public void UpdateData(ConditionTask data)
 	{
 		this.StatusInternal = TaskStateResolver.TaskState[(ActivityTaskState)data.Status];
@@ -28,14 +28,14 @@ public class HonamiStoryLimitTaskData
 		this.Target = data.Target;
 	}
 
-	// Token: 0x0600ED61 RID: 60769 RVA: 0x00388ABD File Offset: 0x00386CBD
+	// Token: 0x0600C180 RID: 49536 RVA: 0x003946C9 File Offset: 0x003928C9
 	public void UpdateState(EActivityTaskState state)
 	{
 		this.StatusInternal = state;
 	}
 
-	// Token: 0x170012AB RID: 4779
-	// (get) Token: 0x0600ED62 RID: 60770 RVA: 0x00388AC8 File Offset: 0x00386CC8
+	// Token: 0x170012D5 RID: 4821
+	// (get) Token: 0x0600C181 RID: 49537 RVA: 0x003946D4 File Offset: 0x003928D4
 	public int Id
 	{
 		get
@@ -44,8 +44,8 @@ public class HonamiStoryLimitTaskData
 		}
 	}
 
-	// Token: 0x170012AC RID: 4780
-	// (get) Token: 0x0600ED63 RID: 60771 RVA: 0x00388AEC File Offset: 0x00386CEC
+	// Token: 0x170012D6 RID: 4822
+	// (get) Token: 0x0600C182 RID: 49538 RVA: 0x003946F8 File Offset: 0x003928F8
 	public int DropId
 	{
 		get
@@ -54,8 +54,8 @@ public class HonamiStoryLimitTaskData
 		}
 	}
 
-	// Token: 0x170012AD RID: 4781
-	// (get) Token: 0x0600ED64 RID: 60772 RVA: 0x00388B10 File Offset: 0x00386D10
+	// Token: 0x170012D7 RID: 4823
+	// (get) Token: 0x0600C183 RID: 49539 RVA: 0x0039471C File Offset: 0x0039291C
 	public int JumpId
 	{
 		get
@@ -64,8 +64,8 @@ public class HonamiStoryLimitTaskData
 		}
 	}
 
-	// Token: 0x170012AE RID: 4782
-	// (get) Token: 0x0600ED65 RID: 60773 RVA: 0x00388B33 File Offset: 0x00386D33
+	// Token: 0x170012D8 RID: 4824
+	// (get) Token: 0x0600C184 RID: 49540 RVA: 0x0039473F File Offset: 0x0039293F
 	public EActivityTaskState Status
 	{
 		get
@@ -74,8 +74,8 @@ public class HonamiStoryLimitTaskData
 		}
 	}
 
-	// Token: 0x170012AF RID: 4783
-	// (get) Token: 0x0600ED66 RID: 60774 RVA: 0x00388B3C File Offset: 0x00386D3C
+	// Token: 0x170012D9 RID: 4825
+	// (get) Token: 0x0600C185 RID: 49541 RVA: 0x00394748 File Offset: 0x00392948
 	public string TaskName
 	{
 		get
@@ -84,15 +84,15 @@ public class HonamiStoryLimitTaskData
 		}
 	}
 
-	// Token: 0x04006E31 RID: 28209
+	// Token: 0x04006F12 RID: 28434
 	public int ConfigId;
 
-	// Token: 0x04006E32 RID: 28210
+	// Token: 0x04006F13 RID: 28435
 	private EActivityTaskState StatusInternal = EActivityTaskState.Active;
 
-	// Token: 0x04006E33 RID: 28211
+	// Token: 0x04006F14 RID: 28436
 	public int Current;
 
-	// Token: 0x04006E34 RID: 28212
+	// Token: 0x04006F15 RID: 28437
 	public int Target = 1;
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002436 RID: 9270
+	// Token: 0x020026D7 RID: 9943
 	public class ESubScreenInitPresetJsonConverter : JsonConverter<ESubScreenInitPreset>
 	{
-		// Token: 0x0600C973 RID: 51571 RVA: 0x001D7F8C File Offset: 0x001D618C
+		// Token: 0x0600D623 RID: 54819 RVA: 0x001F1E54 File Offset: 0x001F0054
 		public override ESubScreenInitPreset Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESubScreenInitPresetExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C974 RID: 51572 RVA: 0x001D7FB0 File Offset: 0x001D61B0
+		// Token: 0x0600D624 RID: 54820 RVA: 0x001F1E78 File Offset: 0x001F0078
 		public override void Write(Utf8JsonWriter writer, ESubScreenInitPreset value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005341 RID: 21313
+	// Token: 0x02004311 RID: 17169
 	internal enum <RogueTaskItem>F2CA67486810301B155D5BAE36B63D06BC0B9C53885E2ADC7224AB1CC0CC1CE31__EComponents
 	{
-		// Token: 0x0401CCF6 RID: 118006
+		// Token: 0x0401772C RID: 96044
 		JumpBtn,
-		// Token: 0x0401CCF7 RID: 118007
+		// Token: 0x0401772D RID: 96045
 		GetBtn,
-		// Token: 0x0401CCF8 RID: 118008
+		// Token: 0x0401772E RID: 96046
 		DoingText,
-		// Token: 0x0401CCF9 RID: 118009
+		// Token: 0x0401772F RID: 96047
 		FinishItem,
-		// Token: 0x0401CCFA RID: 118010
+		// Token: 0x04017730 RID: 96048
 		TxtName,
-		// Token: 0x0401CCFB RID: 118011
+		// Token: 0x04017731 RID: 96049
 		ProgressText,
-		// Token: 0x0401CCFC RID: 118012
+		// Token: 0x04017732 RID: 96050
 		RewardScroll
 	}
 }

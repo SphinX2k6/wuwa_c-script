@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Common
 {
-	// Token: 0x02006F1A RID: 28442
+	// Token: 0x0200609B RID: 24731
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonMarkItem : UiPanelBase
 	{
-		// Token: 0x0604537D RID: 283517 RVA: 0x01120520 File Offset: 0x0111E720
+		// Token: 0x0603B52B RID: 242987 RVA: 0x010CA4C0 File Offset: 0x010C86C0
 		[NullableContext(2)]
 		public CommonMarkItem(in FVectorDouble targetPosition, Vector2D center = null)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 		}
 
-		// Token: 0x0604537E RID: 283518 RVA: 0x01120617 File Offset: 0x0111E817
+		// Token: 0x0603B52C RID: 242988 RVA: 0x010CA5B7 File Offset: 0x010C87B7
 		public Vector2D GetScreenPositionWithoutClamp([Nullable(2)] Vector2D inVector = null)
 		{
 			if (inVector != null)
@@ -34,29 +34,29 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return this.ScreenPositionWithoutClamp;
 		}
 
-		// Token: 0x0604537F RID: 283519 RVA: 0x01120630 File Offset: 0x0111E830
+		// Token: 0x0603B52D RID: 242989 RVA: 0x010CA5D0 File Offset: 0x010C87D0
 		protected bool IsInRange()
 		{
 			return this.InRange;
 		}
 
-		// Token: 0x06045380 RID: 283520 RVA: 0x01120638 File Offset: 0x0111E838
+		// Token: 0x0603B52E RID: 242990 RVA: 0x010CA5D8 File Offset: 0x010C87D8
 		protected virtual void InRangeStateChanged(bool bInRange, bool bFirst = false)
 		{
 		}
 
-		// Token: 0x06045381 RID: 283521 RVA: 0x0112063A File Offset: 0x0111E83A
+		// Token: 0x0603B52F RID: 242991 RVA: 0x010CA5DA File Offset: 0x010C87DA
 		protected virtual void OnScreenPositionChanged(bool bInRange)
 		{
 		}
 
-		// Token: 0x06045382 RID: 283522 RVA: 0x0112063C File Offset: 0x0111E83C
+		// Token: 0x0603B530 RID: 242992 RVA: 0x010CA5DC File Offset: 0x010C87DC
 		public virtual void OnTick(float delta)
 		{
 			this.UpdatePositionAndRotation();
 		}
 
-		// Token: 0x06045383 RID: 283523 RVA: 0x01120644 File Offset: 0x0111E844
+		// Token: 0x0603B531 RID: 242993 RVA: 0x010CA5E4 File Offset: 0x010C87E4
 		protected void UpdatePositionAndRotation()
 		{
 			FVectorDouble targetPosition = this.TargetPosition;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			}
 		}
 
-		// Token: 0x06045384 RID: 283524 RVA: 0x011207C8 File Offset: 0x0111E9C8
+		// Token: 0x0603B532 RID: 242994 RVA: 0x010CA768 File Offset: 0x010C8968
 		protected virtual bool ClampToEllipse(Vector2D vector, bool inFront)
 		{
 			double x = vector.X;
@@ -109,37 +109,37 @@ namespace CSharpScript.Game.LevelGamePlay.Common
 			return false;
 		}
 
-		// Token: 0x04024153 RID: 147795
+		// Token: 0x0401F408 RID: 128008
 		protected FVector2D ScreenPositionRef = new FVector2D(0f, 0f);
 
-		// Token: 0x04024154 RID: 147796
+		// Token: 0x0401F409 RID: 128009
 		protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x04024155 RID: 147797
+		// Token: 0x0401F40A RID: 128010
 		protected readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-		// Token: 0x04024156 RID: 147798
+		// Token: 0x0401F40B RID: 128011
 		private readonly Vector2D ScreenPositionWithoutClamp = Vector2D.Create();
 
-		// Token: 0x04024157 RID: 147799
+		// Token: 0x0401F40C RID: 128012
 		protected readonly Vector2D PointTransport = Vector2D.Create(1.0, -1.0);
 
-		// Token: 0x04024158 RID: 147800
+		// Token: 0x0401F40D RID: 128013
 		private bool LastInRange;
 
-		// Token: 0x04024159 RID: 147801
+		// Token: 0x0401F40E RID: 128014
 		protected bool InRange;
 
-		// Token: 0x0402415A RID: 147802
+		// Token: 0x0401F40F RID: 128015
 		private readonly float LimitA;
 
-		// Token: 0x0402415B RID: 147803
+		// Token: 0x0401F410 RID: 128016
 		private readonly float LimitB;
 
-		// Token: 0x0402415C RID: 147804
+		// Token: 0x0401F411 RID: 128017
 		protected FVectorDouble TargetPosition;
 
-		// Token: 0x0402415D RID: 147805
+		// Token: 0x0401F412 RID: 128018
 		protected readonly Vector2D Center;
 	}
 }

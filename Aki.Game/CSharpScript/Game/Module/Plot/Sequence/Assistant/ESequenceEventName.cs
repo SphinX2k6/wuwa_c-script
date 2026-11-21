@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005038 RID: 20536
+	// Token: 0x02004005 RID: 16389
 	public enum ESequenceEventName
 	{
-		// Token: 0x0401C026 RID: 114726
+		// Token: 0x04016A31 RID: 92721
 		UpdateSeqSubtitle,
-		// Token: 0x0401C027 RID: 114727
+		// Token: 0x04016A32 RID: 92722
 		HandlePlotOptionSelected,
-		// Token: 0x0401C028 RID: 114728
+		// Token: 0x04016A33 RID: 92723
 		HandleSeqSubtitleEnd,
-		// Token: 0x0401C029 RID: 114729
+		// Token: 0x04016A34 RID: 92724
 		HandleSubSequenceStop,
-		// Token: 0x0401C02A RID: 114730
+		// Token: 0x04016A35 RID: 92725
 		HandleIndependentSeqAudio
 	}
 }

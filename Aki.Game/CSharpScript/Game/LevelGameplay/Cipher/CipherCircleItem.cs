@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Cipher
 {
-	// Token: 0x02006F34 RID: 28468
+	// Token: 0x020060B5 RID: 24757
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CipherCircleItem : AutoAttachExhibitionItemAbstract
 	{
-		// Token: 0x0604541C RID: 283676 RVA: 0x01122AF7 File Offset: 0x01120CF7
+		// Token: 0x0603B5CA RID: 243146 RVA: 0x010CCAA3 File Offset: 0x010CACA3
 		public CipherCircleItem(AActor uiItem) : base(uiItem)
 		{
 		}
 
-		// Token: 0x0604541D RID: 283677 RVA: 0x01122B30 File Offset: 0x01120D30
+		// Token: 0x0603B5CB RID: 243147 RVA: 0x010CCADC File Offset: 0x010CACDC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			};
 		}
 
-		// Token: 0x0604541E RID: 283678 RVA: 0x01122B54 File Offset: 0x01120D54
+		// Token: 0x0603B5CC RID: 243148 RVA: 0x010CCB00 File Offset: 0x010CAD00
 		public override void RefreshItem(int showItemIndex)
 		{
 			this.CurrentNumber = new int?(this.Data[base.GetShowItemIndex()]);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			base.GetText(0).SetText(this.CurrentNumber.Value.ToString(), true);
 		}
 
-		// Token: 0x0604541F RID: 283679 RVA: 0x01122BA8 File Offset: 0x01120DA8
+		// Token: 0x0603B5CD RID: 243149 RVA: 0x010CCB54 File Offset: 0x010CAD54
 		public override void OnSelect()
 		{
 			base.OnSelect();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			this.ItemSelectedCallback(this.CurrentNumber.Value);
 		}
 
-		// Token: 0x06045420 RID: 283680 RVA: 0x01122C02 File Offset: 0x01120E02
+		// Token: 0x0603B5CE RID: 243150 RVA: 0x010CCBAE File Offset: 0x010CADAE
 		public override void OnUnSelect()
 		{
 			base.OnUnSelect();
@@ -56,20 +56,20 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			base.GetText(0).useChangeColor = true;
 		}
 
-		// Token: 0x06045421 RID: 283681 RVA: 0x01122C29 File Offset: 0x01120E29
+		// Token: 0x0603B5CF RID: 243151 RVA: 0x010CCBD5 File Offset: 0x010CADD5
 		public override void SetData(object param)
 		{
 			this.Data = (param as int[]);
 		}
 
-		// Token: 0x06045422 RID: 283682 RVA: 0x01122C37 File Offset: 0x01120E37
+		// Token: 0x0603B5D0 RID: 243152 RVA: 0x010CCBE3 File Offset: 0x010CADE3
 		public void InitItem(int ownerId, Action<int> cb)
 		{
 			this.OwnerId = ownerId;
 			this.ItemSelectedCallback = cb;
 		}
 
-		// Token: 0x06045423 RID: 283683 RVA: 0x01122C48 File Offset: 0x01120E48
+		// Token: 0x0603B5D1 RID: 243153 RVA: 0x010CCBF4 File Offset: 0x010CADF4
 		public void HandleConfirm(bool result)
 		{
 			FColor color = this.WrongColor;
@@ -80,49 +80,49 @@ namespace CSharpScript.Game.LevelGamePlay.Cipher
 			base.GetText(0).SetColor(color);
 		}
 
-		// Token: 0x06045424 RID: 283684 RVA: 0x01122C73 File Offset: 0x01120E73
+		// Token: 0x0603B5D2 RID: 243154 RVA: 0x010CCC1F File Offset: 0x010CAE1F
 		public int? GetNumber()
 		{
 			return this.CurrentNumber;
 		}
 
-		// Token: 0x040241BF RID: 147903
+		// Token: 0x0401F474 RID: 128116
 		private const string WRONG_COLOR = "BB5C58";
 
-		// Token: 0x040241C0 RID: 147904
+		// Token: 0x0401F475 RID: 128117
 		private const string RIGHT_COLOR = "F6D03F";
 
-		// Token: 0x040241C1 RID: 147905
+		// Token: 0x0401F476 RID: 128118
 		private const string NORMAL_COLOR = "FFFFFF";
 
-		// Token: 0x040241C2 RID: 147906
+		// Token: 0x0401F477 RID: 128119
 		private int OwnerId;
 
-		// Token: 0x040241C3 RID: 147907
+		// Token: 0x0401F478 RID: 128120
 		private int? CurrentNumber;
 
-		// Token: 0x040241C4 RID: 147908
+		// Token: 0x0401F479 RID: 128121
 		[Nullable(2)]
 		private int[] Data;
 
-		// Token: 0x040241C5 RID: 147909
+		// Token: 0x0401F47A RID: 128122
 		private readonly FColor WrongColor = FColor.FromHex("BB5C58");
 
-		// Token: 0x040241C6 RID: 147910
+		// Token: 0x0401F47B RID: 128123
 		private readonly FColor RightColor = FColor.FromHex("F6D03F");
 
-		// Token: 0x040241C7 RID: 147911
+		// Token: 0x0401F47C RID: 128124
 		private readonly FColor NormalColor = FColor.FromHex("FFFFFF");
 
-		// Token: 0x040241C8 RID: 147912
+		// Token: 0x0401F47D RID: 128125
 		[Nullable(2)]
 		private Action<int> ItemSelectedCallback;
 
-		// Token: 0x0200CD75 RID: 52597
+		// Token: 0x0200B967 RID: 47463
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403DEA6 RID: 253606
+			// Token: 0x040392D5 RID: 234197
 			public const int TextNum = 0;
 		}
 	}

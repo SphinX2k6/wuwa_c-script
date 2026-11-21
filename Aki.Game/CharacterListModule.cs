@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001308 RID: 4872
+// Token: 0x020007BC RID: 1980
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterListModule<[Nullable(0)] T> : UiPanelBase where T : GridProxyAbstract<CharacterData>
 {
-	// Token: 0x06008705 RID: 34565 RVA: 0x001CD212 File Offset: 0x001CB412
+	// Token: 0x06005AA0 RID: 23200 RVA: 0x001D607E File Offset: 0x001D427E
 	public CharacterListModule(Func<T> func)
 	{
 		this.InitCharacterItemFunc = func;
 	}
 
-	// Token: 0x06008706 RID: 34566 RVA: 0x001CD221 File Offset: 0x001CB421
+	// Token: 0x06005AA1 RID: 23201 RVA: 0x001D608D File Offset: 0x001D428D
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ public class CharacterListModule<[Nullable(0)] T> : UiPanelBase where T : GridPr
 		};
 	}
 
-	// Token: 0x06008707 RID: 34567 RVA: 0x001CD25A File Offset: 0x001CB45A
+	// Token: 0x06005AA2 RID: 23202 RVA: 0x001D60C6 File Offset: 0x001D42C6
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<T, CharacterData>(base.GetLayoutBase(0), new Func<T>(this.InitCharacterItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06008708 RID: 34568 RVA: 0x001CD290 File Offset: 0x001CB490
+	// Token: 0x06005AA3 RID: 23203 RVA: 0x001D60FC File Offset: 0x001D42FC
 	public UniTask RefreshByDataAsync(IReadOnlyList<CharacterData> dataList)
 	{
 		CharacterListModule<T>.<RefreshByDataAsync>d__6 <RefreshByDataAsync>d__;
@@ -46,19 +46,19 @@ public class CharacterListModule<[Nullable(0)] T> : UiPanelBase where T : GridPr
 		return <RefreshByDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008709 RID: 34569 RVA: 0x001CD2DB File Offset: 0x001CB4DB
+	// Token: 0x06005AA4 RID: 23204 RVA: 0x001D6147 File Offset: 0x001D4347
 	private T InitCharacterItem()
 	{
 		return this.InitCharacterItemFunc();
 	}
 
-	// Token: 0x0600870A RID: 34570 RVA: 0x001CD2E8 File Offset: 0x001CB4E8
+	// Token: 0x06005AA5 RID: 23205 RVA: 0x001D6154 File Offset: 0x001D4354
 	public List<T> GetItemList()
 	{
 		return this.Layout.GetLayoutItemList();
 	}
 
-	// Token: 0x04003C54 RID: 15444
+	// Token: 0x04003CEC RID: 15596
 	[Nullable(new byte[]
 	{
 		2,
@@ -67,17 +67,17 @@ public class CharacterListModule<[Nullable(0)] T> : UiPanelBase where T : GridPr
 	})]
 	private GenericLayout<T, CharacterData> Layout;
 
-	// Token: 0x04003C55 RID: 15445
+	// Token: 0x04003CED RID: 15597
 	private readonly Func<T> InitCharacterItemFunc;
 
-	// Token: 0x02007946 RID: 31046
+	// Token: 0x02006AD0 RID: 27344
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F1E RID: 163614
+		// Token: 0x0402324B RID: 143947
 		public const int CharacterList = 0;
 
-		// Token: 0x04027F1F RID: 163615
+		// Token: 0x0402324C RID: 143948
 		public const int CharacterItem = 1;
 	}
 }

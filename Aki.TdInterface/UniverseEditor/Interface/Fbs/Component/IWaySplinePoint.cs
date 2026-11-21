@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B5C RID: 23388
+	// Token: 0x02006172 RID: 24946
 	public struct IWaySplinePoint : IFlatbufferObject
 	{
-		// Token: 0x1700B0B0 RID: 45232
-		// (get) Token: 0x06028043 RID: 163907 RVA: 0x00580715 File Offset: 0x0057E915
+		// Token: 0x1700B9F8 RID: 47608
+		// (get) Token: 0x0602A607 RID: 173575 RVA: 0x005C81A5 File Offset: 0x005C63A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028044 RID: 163908 RVA: 0x00580722 File Offset: 0x0057E922
+		// Token: 0x0602A608 RID: 173576 RVA: 0x005C81B2 File Offset: 0x005C63B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028045 RID: 163909 RVA: 0x0058072C File Offset: 0x0057E92C
+		// Token: 0x0602A609 RID: 173577 RVA: 0x005C81BC File Offset: 0x005C63BC
 		public static IWaySplinePoint GetRootAsIWaySplinePoint(ByteBuffer _bb)
 		{
 			return IWaySplinePoint.GetRootAsIWaySplinePoint(_bb, default(IWaySplinePoint));
 		}
 
-		// Token: 0x06028046 RID: 163910 RVA: 0x00580748 File Offset: 0x0057E948
+		// Token: 0x0602A60A RID: 173578 RVA: 0x005C81D8 File Offset: 0x005C63D8
 		public static IWaySplinePoint GetRootAsIWaySplinePoint(ByteBuffer _bb, IWaySplinePoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028047 RID: 163911 RVA: 0x00580765 File Offset: 0x0057E965
+		// Token: 0x0602A60B RID: 173579 RVA: 0x005C81F5 File Offset: 0x005C63F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028048 RID: 163912 RVA: 0x00580774 File Offset: 0x0057E974
+		// Token: 0x0602A60C RID: 173580 RVA: 0x005C8204 File Offset: 0x005C6404
 		public IWaySplinePoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0B1 RID: 45233
-		// (get) Token: 0x06028049 RID: 163913 RVA: 0x00580784 File Offset: 0x0057E984
+		// Token: 0x1700B9F9 RID: 47609
+		// (get) Token: 0x0602A60D RID: 173581 RVA: 0x005C8214 File Offset: 0x005C6414
 		public IVectorInfo? Position
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0B2 RID: 45234
-		// (get) Token: 0x0602804A RID: 163914 RVA: 0x005807E4 File Offset: 0x0057E9E4
+		// Token: 0x1700B9FA RID: 47610
+		// (get) Token: 0x0602A60E RID: 173582 RVA: 0x005C8274 File Offset: 0x005C6474
 		public IVectorInfo? ArriveTangent
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0B3 RID: 45235
-		// (get) Token: 0x0602804B RID: 163915 RVA: 0x00580844 File Offset: 0x0057EA44
+		// Token: 0x1700B9FB RID: 47611
+		// (get) Token: 0x0602A60F RID: 173583 RVA: 0x005C82D4 File Offset: 0x005C64D4
 		public IVectorInfo? LeaveTangent
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0B4 RID: 45236
-		// (get) Token: 0x0602804C RID: 163916 RVA: 0x005808A4 File Offset: 0x0057EAA4
+		// Token: 0x1700B9FC RID: 47612
+		// (get) Token: 0x0602A610 RID: 173584 RVA: 0x005C8334 File Offset: 0x005C6534
 		public ESplineLine LineType
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0B5 RID: 45237
-		// (get) Token: 0x0602804D RID: 163917 RVA: 0x005808E4 File Offset: 0x0057EAE4
+		// Token: 0x1700B9FD RID: 47613
+		// (get) Token: 0x0602A611 RID: 173585 RVA: 0x005C8374 File Offset: 0x005C6574
 		public IVectorInfo? Rotation
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B0B6 RID: 45238
-		// (get) Token: 0x0602804E RID: 163918 RVA: 0x00580944 File Offset: 0x0057EB44
+		// Token: 0x1700B9FE RID: 47614
+		// (get) Token: 0x0602A612 RID: 173586 RVA: 0x005C83D4 File Offset: 0x005C65D4
 		public TWaySplinePointType PointTypeType
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602804F RID: 163919 RVA: 0x00580984 File Offset: 0x0057EB84
+		// Token: 0x0602A613 RID: 173587 RVA: 0x005C8414 File Offset: 0x005C6614
 		public TTable? PointType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(16);
@@ -149,19 +149,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06028050 RID: 163920 RVA: 0x005809CC File Offset: 0x0057EBCC
+		// Token: 0x0602A614 RID: 173588 RVA: 0x005C845C File Offset: 0x005C665C
 		public IWaySplineCommonPoint PointTypeAsIWaySplineCommonPoint()
 		{
 			return this.PointType<IWaySplineCommonPoint>().Value;
 		}
 
-		// Token: 0x06028051 RID: 163921 RVA: 0x005809E8 File Offset: 0x0057EBE8
+		// Token: 0x0602A615 RID: 173589 RVA: 0x005C8478 File Offset: 0x005C6678
 		public IWaySplineStartPoint PointTypeAsIWaySplineStartPoint()
 		{
 			return this.PointType<IWaySplineStartPoint>().Value;
 		}
 
-		// Token: 0x06028052 RID: 163922 RVA: 0x00580A04 File Offset: 0x0057EC04
+		// Token: 0x0602A616 RID: 173590 RVA: 0x005C8494 File Offset: 0x005C6694
 		public static Offset<IWaySplinePoint> CreateIWaySplinePoint(FlatBufferBuilder builder, Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> ArriveTangentOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> LeaveTangentOffset = default(Offset<IVectorInfo>), ESplineLine LineType = ESplineLine.Linear, Offset<IVectorInfo> RotationOffset = default(Offset<IVectorInfo>), TWaySplinePointType PointType_type = TWaySplinePointType.NONE, int PointTypeOffset = 0)
 		{
 			builder.StartTable(7);
@@ -175,61 +175,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplinePoint.EndIWaySplinePoint(builder);
 		}
 
-		// Token: 0x06028053 RID: 163923 RVA: 0x00580A53 File Offset: 0x0057EC53
+		// Token: 0x0602A617 RID: 173591 RVA: 0x005C84E3 File Offset: 0x005C66E3
 		public static void StartIWaySplinePoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06028054 RID: 163924 RVA: 0x00580A5C File Offset: 0x0057EC5C
+		// Token: 0x0602A618 RID: 173592 RVA: 0x005C84EC File Offset: 0x005C66EC
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(0, positionOffset.Value, 0);
 		}
 
-		// Token: 0x06028055 RID: 163925 RVA: 0x00580A6C File Offset: 0x0057EC6C
+		// Token: 0x0602A619 RID: 173593 RVA: 0x005C84FC File Offset: 0x005C66FC
 		public static void AddArriveTangent(FlatBufferBuilder builder, Offset<IVectorInfo> arriveTangentOffset)
 		{
 			builder.AddOffset(1, arriveTangentOffset.Value, 0);
 		}
 
-		// Token: 0x06028056 RID: 163926 RVA: 0x00580A7C File Offset: 0x0057EC7C
+		// Token: 0x0602A61A RID: 173594 RVA: 0x005C850C File Offset: 0x005C670C
 		public static void AddLeaveTangent(FlatBufferBuilder builder, Offset<IVectorInfo> leaveTangentOffset)
 		{
 			builder.AddOffset(2, leaveTangentOffset.Value, 0);
 		}
 
-		// Token: 0x06028057 RID: 163927 RVA: 0x00580A8C File Offset: 0x0057EC8C
+		// Token: 0x0602A61B RID: 173595 RVA: 0x005C851C File Offset: 0x005C671C
 		public static void AddLineType(FlatBufferBuilder builder, ESplineLine lineType)
 		{
 			builder.AddByte(3, (byte)lineType, 0);
 		}
 
-		// Token: 0x06028058 RID: 163928 RVA: 0x00580A97 File Offset: 0x0057EC97
+		// Token: 0x0602A61C RID: 173596 RVA: 0x005C8527 File Offset: 0x005C6727
 		public static void AddRotation(FlatBufferBuilder builder, Offset<IVectorInfo> rotationOffset)
 		{
 			builder.AddOffset(4, rotationOffset.Value, 0);
 		}
 
-		// Token: 0x06028059 RID: 163929 RVA: 0x00580AA7 File Offset: 0x0057ECA7
+		// Token: 0x0602A61D RID: 173597 RVA: 0x005C8537 File Offset: 0x005C6737
 		public static void AddPointTypeType(FlatBufferBuilder builder, TWaySplinePointType pointTypeType)
 		{
 			builder.AddByte(5, (byte)pointTypeType, 0);
 		}
 
-		// Token: 0x0602805A RID: 163930 RVA: 0x00580AB2 File Offset: 0x0057ECB2
+		// Token: 0x0602A61E RID: 173598 RVA: 0x005C8542 File Offset: 0x005C6742
 		public static void AddPointType(FlatBufferBuilder builder, int pointTypeOffset)
 		{
 			builder.AddOffset(6, pointTypeOffset, 0);
 		}
 
-		// Token: 0x0602805B RID: 163931 RVA: 0x00580ABD File Offset: 0x0057ECBD
+		// Token: 0x0602A61F RID: 173599 RVA: 0x005C854D File Offset: 0x005C674D
 		public static Offset<IWaySplinePoint> EndIWaySplinePoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IWaySplinePoint>(builder.EndTable());
 		}
 
-		// Token: 0x0602805C RID: 163932 RVA: 0x00580ACC File Offset: 0x0057ECCC
+		// Token: 0x0602A620 RID: 173600 RVA: 0x005C855C File Offset: 0x005C675C
 		public IWaySplinePointT UnPack()
 		{
 			IWaySplinePointT waySplinePointT = new IWaySplinePointT();
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return waySplinePointT;
 		}
 
-		// Token: 0x0602805D RID: 163933 RVA: 0x00580AE8 File Offset: 0x0057ECE8
+		// Token: 0x0602A621 RID: 173601 RVA: 0x005C8578 File Offset: 0x005C6778
 		public void UnPackTo(IWaySplinePointT _o)
 		{
 			_o.Position = ((this.Position != null) ? this.Position.Value.UnPack() : null);
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.PointType.Value = ((this.PointType<IWaySplineStartPoint>() != null) ? this.PointType<IWaySplineStartPoint>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602805E RID: 163934 RVA: 0x00580C58 File Offset: 0x0057EE58
+		// Token: 0x0602A622 RID: 173602 RVA: 0x005C86E8 File Offset: 0x005C68E8
 		public static Offset<IWaySplinePoint> Pack(FlatBufferBuilder builder, IWaySplinePointT _o)
 		{
 			if (_o == null)
@@ -276,7 +276,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplinePoint.CreateIWaySplinePoint(builder, positionOffset, arriveTangentOffset, leaveTangentOffset, _o.LineType, rotationOffset, pointType_type, pointTypeOffset);
 		}
 
-		// Token: 0x0400F2A3 RID: 62115
+		// Token: 0x0400FFA9 RID: 65449
 		private Table __p;
 	}
 }

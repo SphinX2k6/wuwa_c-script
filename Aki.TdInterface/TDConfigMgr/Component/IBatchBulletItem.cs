@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001ED RID: 493
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000216 RID: 534
 	public class IBatchBulletItem
 	{
-		// Token: 0x0600080C RID: 2060 RVA: 0x00026154 File Offset: 0x00024354
+		// Token: 0x0600088C RID: 2188 RVA: 0x00027AA8 File Offset: 0x00025CA8
 		private IBatchBulletItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600080D RID: 2061 RVA: 0x0002618C File Offset: 0x0002438C
+		// Token: 0x0600088D RID: 2189 RVA: 0x00027AE0 File Offset: 0x00025CE0
 		public static IBatchBulletItem Create([Nullable(2)] IBatchBulletItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600080E RID: 2062 RVA: 0x0002619F File Offset: 0x0002439F
+		// Token: 0x0600088E RID: 2190 RVA: 0x00027AF3 File Offset: 0x00025CF3
 		public static IBatchBulletItem CreateFromSetValue([Nullable(2)] IBatchBulletItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600080F RID: 2063 RVA: 0x000261B2 File Offset: 0x000243B2
+		// Token: 0x0600088F RID: 2191 RVA: 0x00027B06 File Offset: 0x00025D06
 		public IBatchBulletItem_SetValue ToSetValue()
 		{
 			return new IBatchBulletItem_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000280 RID: 640
-		// (get) Token: 0x06000810 RID: 2064 RVA: 0x000261D1 File Offset: 0x000243D1
-		// (set) Token: 0x06000811 RID: 2065 RVA: 0x000261FC File Offset: 0x000243FC
+		// Token: 0x170002A2 RID: 674
+		// (get) Token: 0x06000890 RID: 2192 RVA: 0x00027B25 File Offset: 0x00025D25
+		// (set) Token: 0x06000891 RID: 2193 RVA: 0x00027B50 File Offset: 0x00025D50
 		public virtual int Time
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000281 RID: 641
-		// (get) Token: 0x06000812 RID: 2066 RVA: 0x0002620C File Offset: 0x0002440C
-		// (set) Token: 0x06000813 RID: 2067 RVA: 0x0002629F File Offset: 0x0002449F
+		// Token: 0x170002A3 RID: 675
+		// (get) Token: 0x06000892 RID: 2194 RVA: 0x00027B60 File Offset: 0x00025D60
+		// (set) Token: 0x06000893 RID: 2195 RVA: 0x00027BF3 File Offset: 0x00025DF3
 		public virtual List<IBatchBulletCaster> CasterList
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008F2 RID: 2290
+		// Token: 0x04000983 RID: 2435
 		[Nullable(2)]
 		protected IBatchBulletItem FbInstance;
 
-		// Token: 0x040008F3 RID: 2291
+		// Token: 0x04000984 RID: 2436
 		[Nullable(2)]
 		protected IBatchBulletItem_SetValue PocoInterface;
 
-		// Token: 0x040008F4 RID: 2292
+		// Token: 0x04000985 RID: 2437
 		private List<IBatchBulletCaster> _CasterListCache;
 
-		// Token: 0x040008F5 RID: 2293
+		// Token: 0x04000986 RID: 2438
 		private bool _CasterListInited;
 	}
 }

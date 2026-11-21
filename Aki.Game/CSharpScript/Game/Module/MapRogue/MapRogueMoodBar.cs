@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005605 RID: 22021
+	// Token: 0x020045DB RID: 17883
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueMoodBar : UiPanelBase
 	{
-		// Token: 0x060380C0 RID: 229568 RVA: 0x00D46098 File Offset: 0x00D44298
+		// Token: 0x0602CFBE RID: 184254 RVA: 0x00C93DE0 File Offset: 0x00C91FE0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060380C1 RID: 229569 RVA: 0x00D46185 File Offset: 0x00D44385
+		// Token: 0x0602CFBF RID: 184255 RVA: 0x00C93ECD File Offset: 0x00C920CD
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayerInstance = new LevelSequencePlayer(this.RootItem);
 			base.GetItem(1).SetUIActive(false);
 		}
 
-		// Token: 0x060380C2 RID: 229570 RVA: 0x00D461A8 File Offset: 0x00D443A8
+		// Token: 0x0602CFC0 RID: 184256 RVA: 0x00C93EF0 File Offset: 0x00C920F0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRogueMoodBar.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380C3 RID: 229571 RVA: 0x00D461EC File Offset: 0x00D443EC
+		// Token: 0x0602CFC1 RID: 184257 RVA: 0x00C93F34 File Offset: 0x00C92134
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			MapRogueMoodBar.<OnShowAsyncImplementImplement>d__9 <OnShowAsyncImplementImplement>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380C4 RID: 229572 RVA: 0x00D46230 File Offset: 0x00D44430
+		// Token: 0x0602CFC2 RID: 184258 RVA: 0x00C93F78 File Offset: 0x00C92178
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			MapRogueMoodBar.<OnHideAsyncImplementImplement>d__10 <OnHideAsyncImplementImplement>d__;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380C5 RID: 229573 RVA: 0x00D46274 File Offset: 0x00D44474
+		// Token: 0x0602CFC3 RID: 184259 RVA: 0x00C93FBC File Offset: 0x00C921BC
 		public void SetMoodRuleId(int ruleId)
 		{
 			RogueResMoodRule? moodRuleById = MapRogueConfig.Instance.GetMoodRuleById(ruleId);
@@ -95,14 +95,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.LevelSequencePlayerInstance.PlayLevelSequenceByName("LightRed", false, null, false);
 		}
 
-		// Token: 0x060380C6 RID: 229574 RVA: 0x00D462E7 File Offset: 0x00D444E7
+		// Token: 0x0602CFC4 RID: 184260 RVA: 0x00C9402F File Offset: 0x00C9222F
 		public void SetLimit(int min, int max)
 		{
 			this.PanelBarL.SetLimit(min);
 			this.PanelBarR.SetLimit(max);
 		}
 
-		// Token: 0x060380C7 RID: 229575 RVA: 0x00D46304 File Offset: 0x00D44504
+		// Token: 0x0602CFC5 RID: 184261 RVA: 0x00C9404C File Offset: 0x00C9224C
 		public void SetCurrentValue(int value)
 		{
 			base.GetText(6).SetText(value.ToString(), true);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.PanelBarR.SetCurrentValue(value);
 		}
 
-		// Token: 0x060380C8 RID: 229576 RVA: 0x00D46360 File Offset: 0x00D44560
+		// Token: 0x0602CFC6 RID: 184262 RVA: 0x00C940A8 File Offset: 0x00C922A8
 		public void ShowPreviewValue(int changeValue, int curValue)
 		{
 			MapRogueMoodBar.<>c__DisplayClass14_0 CS$<>8__locals1 = new MapRogueMoodBar.<>c__DisplayClass14_0();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060380C9 RID: 229577 RVA: 0x00D463B4 File Offset: 0x00D445B4
+		// Token: 0x0602CFC7 RID: 184263 RVA: 0x00C940FC File Offset: 0x00C922FC
 		public void ClosePreviewValue()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -149,13 +149,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.PanelBarR.ClosePreviewValue();
 		}
 
-		// Token: 0x060380CA RID: 229578 RVA: 0x00D46401 File Offset: 0x00D44601
+		// Token: 0x0602CFC8 RID: 184264 RVA: 0x00C94149 File Offset: 0x00C92349
 		private void OnClickBtnInfo()
 		{
 			HelpController.Instance.OpenHelpById(262);
 		}
 
-		// Token: 0x060380CB RID: 229579 RVA: 0x00D46414 File Offset: 0x00D44614
+		// Token: 0x0602CFC9 RID: 184265 RVA: 0x00C9415C File Offset: 0x00C9235C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -179,24 +179,24 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0401D757 RID: 120663
+		// Token: 0x040181E2 RID: 98786
 		private const string POSITIVE_TEXTURE_PATH = "/Game/Aki/UI/UIResources/UiRogue/Image/RogueView/T_RogueIconPositive.T_RogueIconPositive";
 
-		// Token: 0x0401D758 RID: 120664
+		// Token: 0x040181E3 RID: 98787
 		private const string NEGATIVE_TEXTURE_PATH = "/Game/Aki/UI/UIResources/UiRogue/Image/RogueView/T_RogueIconNegative.T_RogueIconNegative";
 
-		// Token: 0x0401D759 RID: 120665
+		// Token: 0x040181E4 RID: 98788
 		private const int MOOD_HELP_ID = 262;
 
-		// Token: 0x0401D75A RID: 120666
+		// Token: 0x040181E5 RID: 98789
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayerInstance;
 
-		// Token: 0x0401D75B RID: 120667
+		// Token: 0x040181E6 RID: 98790
 		[Nullable(2)]
 		protected PanelBar PanelBarL;
 
-		// Token: 0x0401D75C RID: 120668
+		// Token: 0x040181E7 RID: 98791
 		[Nullable(2)]
 		protected PanelBar PanelBarR;
 	}

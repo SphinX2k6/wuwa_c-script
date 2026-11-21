@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001B31 RID: 6961
+	// Token: 0x020004CD RID: 1229
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroLevelSequenceActor")]
 	[UnrealStructLayout(1232, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1232)]
 	public class AKuroLevelSequenceActor : ALevelSequenceActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601A477 RID: 107639 RVA: 0x0026C6CC File Offset: 0x0026A8CC
+		// Token: 0x0600727A RID: 29306 RVA: 0x000A8514 File Offset: 0x000A6714
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroLevelSequenceActor._ClassPtr;
 		}
 
-		// Token: 0x0601A478 RID: 107640 RVA: 0x0026C6D8 File Offset: 0x0026A8D8
+		// Token: 0x0600727B RID: 29307 RVA: 0x000A8520 File Offset: 0x000A6720
 		public AKuroLevelSequenceActor() : this(BuiltinUtils.AllocNativeUObject(AKuroLevelSequenceActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601A479 RID: 107641 RVA: 0x0026C700 File Offset: 0x0026A900
+		// Token: 0x0600727C RID: 29308 RVA: 0x000A8548 File Offset: 0x000A6748
 		[NullableContext(1)]
 		public AKuroLevelSequenceActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroLevelSequenceActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170069AE RID: 27054
-		// (get) Token: 0x0601A47A RID: 107642 RVA: 0x0026C733 File Offset: 0x0026A933
-		// (set) Token: 0x0601A47B RID: 107643 RVA: 0x0026C747 File Offset: 0x0026A947
+		// Token: 0x1700168F RID: 5775
+		// (get) Token: 0x0600727D RID: 29309 RVA: 0x000A857B File Offset: 0x000A677B
+		// (set) Token: 0x0600727E RID: 29310 RVA: 0x000A858F File Offset: 0x000A678F
 		public unsafe FName Key
 		{
 			get
@@ -43,28 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601A47C RID: 107644 RVA: 0x0026C75C File Offset: 0x0026A95C
+		// Token: 0x0600727F RID: 29311 RVA: 0x000A85A4 File Offset: 0x000A67A4
 		static AKuroLevelSequenceActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroLevelSequenceActor");
 		}
 
-		// Token: 0x0601A47D RID: 107645 RVA: 0x0026C76A File Offset: 0x0026A96A
+		// Token: 0x06007280 RID: 29312 RVA: 0x000A85B2 File Offset: 0x000A67B2
 		protected AKuroLevelSequenceActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400E42E RID: 58414
+		// Token: 0x04003150 RID: 12624
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroLevelSequenceActor";
 
-		// Token: 0x0400E42F RID: 58415
+		// Token: 0x04003151 RID: 12625
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400E430 RID: 58416
+		// Token: 0x04003152 RID: 12626
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400E431 RID: 58417
+		// Token: 0x04003153 RID: 12627
 		internal static int __PropertyOffset_Key;
 	}
 }

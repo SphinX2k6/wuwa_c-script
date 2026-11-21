@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011A5 RID: 4517
+	// Token: 0x020012DB RID: 4827
 	public struct WorldLevel : IFlatbufferObject
 	{
-		// Token: 0x17003E6B RID: 15979
-		// (get) Token: 0x0600E92A RID: 59690 RVA: 0x003457CB File Offset: 0x003439CB
+		// Token: 0x170041D0 RID: 16848
+		// (get) Token: 0x0600F69B RID: 63131 RVA: 0x00370457 File Offset: 0x0036E657
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E92B RID: 59691 RVA: 0x003457D8 File Offset: 0x003439D8
+		// Token: 0x0600F69C RID: 63132 RVA: 0x00370464 File Offset: 0x0036E664
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E92C RID: 59692 RVA: 0x003457E0 File Offset: 0x003439E0
+		// Token: 0x0600F69D RID: 63133 RVA: 0x0037046C File Offset: 0x0036E66C
 		public static WorldLevel GetRootAsWorldLevel(ByteBuffer _bb)
 		{
 			return WorldLevel.GetRootAsWorldLevel(_bb, default(WorldLevel));
 		}
 
-		// Token: 0x0600E92D RID: 59693 RVA: 0x003457FC File Offset: 0x003439FC
+		// Token: 0x0600F69E RID: 63134 RVA: 0x00370488 File Offset: 0x0036E688
 		public static WorldLevel GetRootAsWorldLevel(ByteBuffer _bb, WorldLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E92E RID: 59694 RVA: 0x00345819 File Offset: 0x00343A19
+		// Token: 0x0600F69F RID: 63135 RVA: 0x003704A5 File Offset: 0x0036E6A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E92F RID: 59695 RVA: 0x00345828 File Offset: 0x00343A28
+		// Token: 0x0600F6A0 RID: 63136 RVA: 0x003704B4 File Offset: 0x0036E6B4
 		public WorldLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E6C RID: 15980
-		// (get) Token: 0x0600E930 RID: 59696 RVA: 0x00345838 File Offset: 0x00343A38
+		// Token: 0x170041D1 RID: 16849
+		// (get) Token: 0x0600F6A1 RID: 63137 RVA: 0x003704C4 File Offset: 0x0036E6C4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E6D RID: 15981
-		// (get) Token: 0x0600E931 RID: 59697 RVA: 0x00345874 File Offset: 0x00343A74
+		// Token: 0x170041D2 RID: 16850
+		// (get) Token: 0x0600F6A2 RID: 63138 RVA: 0x00370500 File Offset: 0x0036E700
 		public int PlayerLevelMax
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E6E RID: 15982
-		// (get) Token: 0x0600E932 RID: 59698 RVA: 0x003458B0 File Offset: 0x00343AB0
+		// Token: 0x170041D3 RID: 16851
+		// (get) Token: 0x0600F6A3 RID: 63139 RVA: 0x0037053C File Offset: 0x0036E73C
 		public int ConditionGroupId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E6F RID: 15983
-		// (get) Token: 0x0600E933 RID: 59699 RVA: 0x003458EC File Offset: 0x00343AEC
+		// Token: 0x170041D4 RID: 16852
+		// (get) Token: 0x0600F6A4 RID: 63140 RVA: 0x00370578 File Offset: 0x0036E778
 		public int AiTeamLevelId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E70 RID: 15984
-		// (get) Token: 0x0600E934 RID: 59700 RVA: 0x0034592C File Offset: 0x00343B2C
+		// Token: 0x170041D5 RID: 16853
+		// (get) Token: 0x0600F6A5 RID: 63141 RVA: 0x003705B8 File Offset: 0x0036E7B8
 		public int TrainingLevel
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052F1 RID: 21233
+		// Token: 0x04005934 RID: 22836
 		private Table __p;
 	}
 }

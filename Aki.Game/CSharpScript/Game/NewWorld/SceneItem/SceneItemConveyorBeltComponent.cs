@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007174 RID: 29044
+	// Token: 0x02006228 RID: 25128
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemConveyorBeltComponent : EntityComponent
 	{
-		// Token: 0x06046EC1 RID: 290497 RVA: 0x011E94E0 File Offset: 0x011E76E0
+		// Token: 0x0603C72F RID: 247599 RVA: 0x011447DC File Offset: 0x011429DC
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EC2 RID: 290498 RVA: 0x011E9568 File Offset: 0x011E7768
+		// Token: 0x0603C730 RID: 247600 RVA: 0x01144864 File Offset: 0x01142A64
 		protected override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EC3 RID: 290499 RVA: 0x011E95D0 File Offset: 0x011E77D0
+		// Token: 0x0603C731 RID: 247601 RVA: 0x011448CC File Offset: 0x01142ACC
 		protected override bool OnClear()
 		{
 			if (this.RangeComp != null)
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EC4 RID: 290500 RVA: 0x011E961F File Offset: 0x011E781F
+		// Token: 0x0603C732 RID: 247602 RVA: 0x0114491B File Offset: 0x01142B1B
 		protected override void OnForceTick(float delta)
 		{
 			this.ForceTickInternal(delta);
 		}
 
-		// Token: 0x06046EC5 RID: 290501 RVA: 0x011E9628 File Offset: 0x011E7828
+		// Token: 0x0603C733 RID: 247603 RVA: 0x01144924 File Offset: 0x01142B24
 		private void ForceTickInternal(float deltaSeconds)
 		{
 			if (!this.NeedTickFlag)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EC6 RID: 290502 RVA: 0x011E99AC File Offset: 0x011E7BAC
+		// Token: 0x0603C734 RID: 247604 RVA: 0x01144CA8 File Offset: 0x01142EA8
 		protected override void OnActivate()
 		{
 			if (!Info.Instance.EnableForceTick && base.Active)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EC7 RID: 290503 RVA: 0x011E99D9 File Offset: 0x011E7BD9
+		// Token: 0x0603C735 RID: 247605 RVA: 0x01144CD5 File Offset: 0x01142ED5
 		protected override void OnEnable()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EC8 RID: 290504 RVA: 0x011E9A12 File Offset: 0x011E7C12
+		// Token: 0x0603C736 RID: 247606 RVA: 0x01144D0E File Offset: 0x01142F0E
 		protected override bool OnEnd()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EC9 RID: 290505 RVA: 0x011E9A2C File Offset: 0x011E7C2C
+		// Token: 0x0603C737 RID: 247607 RVA: 0x01144D28 File Offset: 0x01142F28
 		protected override void OnDisable(string reason)
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ECA RID: 290506 RVA: 0x011E9A48 File Offset: 0x011E7C48
+		// Token: 0x0603C738 RID: 247608 RVA: 0x01144D44 File Offset: 0x01142F44
 		private void OnEntityOverlap(bool isEnter, EntityHandle handle)
 		{
 			WorldEntity entity = handle.Entity;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CheckTickFlag();
 		}
 
-		// Token: 0x06046ECB RID: 290507 RVA: 0x011E9BD4 File Offset: 0x011E7DD4
+		// Token: 0x0603C739 RID: 247609 RVA: 0x01144ED0 File Offset: 0x011430D0
 		private void CheckTickFlag()
 		{
 			this.NeedTickFlag = (this.ActorOnConvey.Count > 0 || this.IsPlayerOnConvey || this.CharacterOnConvey.Count > 0);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ECC RID: 290508 RVA: 0x011E9C24 File Offset: 0x011E7E24
+		// Token: 0x0603C73A RID: 247610 RVA: 0x01144F20 File Offset: 0x01143120
 		private void ChangeConfig()
 		{
 			this.ActiveConfig = null;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ECD RID: 290509 RVA: 0x011E9CE0 File Offset: 0x011E7EE0
+		// Token: 0x0603C73B RID: 247611 RVA: 0x01144FDC File Offset: 0x011431DC
 		private void ResetMoveVector()
 		{
 			this.ChangeConfig();
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ECE RID: 290510 RVA: 0x011E9E09 File Offset: 0x011E8009
+		// Token: 0x0603C73C RID: 247612 RVA: 0x01145105 File Offset: 0x01143305
 		private void OnUpdateState(int stateId, bool isReady)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.常态"] || stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"])
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ECF RID: 290511 RVA: 0x011E9E38 File Offset: 0x011E8038
+		// Token: 0x0603C73D RID: 247613 RVA: 0x01145134 File Offset: 0x01143334
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -327,107 +327,147 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemConveyorBeltComponent sceneItemConveyorBeltComponent = (SceneItemConveyorBeltComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActiveConfig"))
+			if (sceneItemConveyorBeltComponent.ActiveConfig == null)
 			{
-				if (sceneItemConveyorBeltComponent.ActiveConfig == null)
-				{
-					this.ActiveConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IConveyorBeltState>(this.ActiveConfig), "ActiveConfig"))
-				{
-					return false;
-				}
+				this.ActiveConfig = null;
 			}
-			if (base.CanResetComponentProperty("StateGroup"))
-			{
-				if (sceneItemConveyorBeltComponent.StateGroup == null)
-				{
-					this.StateGroup = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IConveyorBeltState>>(this.StateGroup), "StateGroup"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RangeComp"))
-			{
-				if (sceneItemConveyorBeltComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PlayerMoveComp"))
-			{
-				if (sceneItemConveyorBeltComponent.PlayerMoveComp == null)
-				{
-					this.PlayerMoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.PlayerMoveComp), "PlayerMoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PlayerUnifiedStateComp"))
-			{
-				if (sceneItemConveyorBeltComponent.PlayerUnifiedStateComp == null)
-				{
-					this.PlayerUnifiedStateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.PlayerUnifiedStateComp), "PlayerUnifiedStateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorOnConvey") && sceneItemConveyorBeltComponent.ActorOnConvey != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<BaseActorComponent>>(this.ActorOnConvey), "ActorOnConvey"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActiveConfig), "ActiveConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CharacterOnConvey") && sceneItemConveyorBeltComponent.CharacterOnConvey != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<BaseMoveComponent, int>>(this.CharacterOnConvey), "CharacterOnConvey"))
+			if (sceneItemConveyorBeltComponent.StateGroup == null)
+			{
+				this.StateGroup = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateGroup), "StateGroup"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsPlayerOnConvey"))
+			if (sceneItemConveyorBeltComponent.RangeComp == null)
 			{
-				this.IsPlayerOnConvey = sceneItemConveyorBeltComponent.IsPlayerOnConvey;
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("NeedTickFlag"))
-			{
-				this.NeedTickFlag = sceneItemConveyorBeltComponent.NeedTickFlag;
-			}
-			if (base.CanResetComponentProperty("MoveVector") && sceneItemConveyorBeltComponent.MoveVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MoveVector), "MoveVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MoveSpeed"))
+			if (sceneItemConveyorBeltComponent.PlayerMoveComp == null)
 			{
-				this.MoveSpeed = sceneItemConveyorBeltComponent.MoveSpeed;
+				this.PlayerMoveComp = null;
 			}
-			if (base.CanResetComponentProperty("VelocityAdditionHandler"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerMoveComp), "PlayerMoveComp"))
 			{
-				this.VelocityAdditionHandler = sceneItemConveyorBeltComponent.VelocityAdditionHandler;
+				return false;
 			}
-			if (base.CanResetComponentProperty("FixedDeltaTime"))
+			if (sceneItemConveyorBeltComponent.PlayerUnifiedStateComp == null)
 			{
-				this.FixedDeltaTime = sceneItemConveyorBeltComponent.FixedDeltaTime;
+				this.PlayerUnifiedStateComp = null;
 			}
-			return (!base.CanResetComponentProperty("TempVector") || sceneItemConveyorBeltComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector")) && (!base.CanResetComponentProperty("TempLocation") || sceneItemConveyorBeltComponent.TempLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempLocation), "TempLocation"));
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerUnifiedStateComp), "PlayerUnifiedStateComp"))
+			{
+				return false;
+			}
+			if (sceneItemConveyorBeltComponent.ActorOnConvey != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorOnConvey), "ActorOnConvey"))
+			{
+				return false;
+			}
+			if (sceneItemConveyorBeltComponent.CharacterOnConvey != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterOnConvey), "CharacterOnConvey"))
+			{
+				return false;
+			}
+			this.IsPlayerOnConvey = sceneItemConveyorBeltComponent.IsPlayerOnConvey;
+			this.NeedTickFlag = sceneItemConveyorBeltComponent.NeedTickFlag;
+			if (sceneItemConveyorBeltComponent.MoveVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveVector), "MoveVector"))
+			{
+				return false;
+			}
+			this.MoveSpeed = sceneItemConveyorBeltComponent.MoveSpeed;
+			this.VelocityAdditionHandler = sceneItemConveyorBeltComponent.VelocityAdditionHandler;
+			this.FixedDeltaTime = sceneItemConveyorBeltComponent.FixedDeltaTime;
+			return (sceneItemConveyorBeltComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector")) && (sceneItemConveyorBeltComponent.TempLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempLocation), "TempLocation"));
 		}
 
-		// Token: 0x040253E5 RID: 152549
+		// Token: 0x1700722D RID: 29229
+		// (get) Token: 0x0603C73E RID: 247614 RVA: 0x01145311 File Offset: 0x01143511
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700722E RID: 29230
+		// (get) Token: 0x0603C73F RID: 247615 RVA: 0x01145314 File Offset: 0x01143514
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700722F RID: 29231
+		// (get) Token: 0x0603C740 RID: 247616 RVA: 0x01145317 File Offset: 0x01143517
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007230 RID: 29232
+		// (get) Token: 0x0603C741 RID: 247617 RVA: 0x0114531A File Offset: 0x0114351A
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007231 RID: 29233
+		// (get) Token: 0x0603C742 RID: 247618 RVA: 0x0114531D File Offset: 0x0114351D
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007232 RID: 29234
+		// (get) Token: 0x0603C743 RID: 247619 RVA: 0x01145320 File Offset: 0x01143520
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007233 RID: 29235
+		// (get) Token: 0x0603C744 RID: 247620 RVA: 0x01145323 File Offset: 0x01143523
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402004C RID: 131148
 		private const float NORMALIZE = 0.01f;
 
-		// Token: 0x040253E6 RID: 152550
+		// Token: 0x0402004D RID: 131149
 		private const float DELTATIMECHANGEVALUE = 10f;
 
-		// Token: 0x040253E7 RID: 152551
+		// Token: 0x0402004E RID: 131150
 		[Nullable(2)]
 		private IConveyorBeltState ActiveConfig;
 
-		// Token: 0x040253E8 RID: 152552
+		// Token: 0x0402004F RID: 131151
 		[Nullable(new byte[]
 		{
 			2,
@@ -435,46 +475,46 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<IConveyorBeltState> StateGroup;
 
-		// Token: 0x040253E9 RID: 152553
+		// Token: 0x04020050 RID: 131152
 		[Nullable(2)]
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x040253EA RID: 152554
+		// Token: 0x04020051 RID: 131153
 		[Nullable(2)]
 		private CharacterMoveComponent PlayerMoveComp;
 
-		// Token: 0x040253EB RID: 152555
+		// Token: 0x04020052 RID: 131154
 		[Nullable(2)]
 		private BaseUnifiedStateComponent PlayerUnifiedStateComp;
 
-		// Token: 0x040253EC RID: 152556
+		// Token: 0x04020053 RID: 131155
 		private readonly List<BaseActorComponent> ActorOnConvey = new List<BaseActorComponent>();
 
-		// Token: 0x040253ED RID: 152557
+		// Token: 0x04020054 RID: 131156
 		private readonly Dictionary<BaseMoveComponent, int> CharacterOnConvey = new Dictionary<BaseMoveComponent, int>();
 
-		// Token: 0x040253EE RID: 152558
+		// Token: 0x04020055 RID: 131157
 		private bool IsPlayerOnConvey;
 
-		// Token: 0x040253EF RID: 152559
+		// Token: 0x04020056 RID: 131158
 		private bool NeedTickFlag;
 
-		// Token: 0x040253F0 RID: 152560
+		// Token: 0x04020057 RID: 131159
 		private readonly global::Vector MoveVector = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040253F1 RID: 152561
+		// Token: 0x04020058 RID: 131160
 		private float MoveSpeed;
 
-		// Token: 0x040253F2 RID: 152562
+		// Token: 0x04020059 RID: 131161
 		private int VelocityAdditionHandler;
 
-		// Token: 0x040253F3 RID: 152563
+		// Token: 0x0402005A RID: 131162
 		private float FixedDeltaTime;
 
-		// Token: 0x040253F4 RID: 152564
+		// Token: 0x0402005B RID: 131163
 		private readonly global::Vector TempVector = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x040253F5 RID: 152565
+		// Token: 0x0402005C RID: 131164
 		private readonly global::Vector TempLocation = global::Vector.Create(0.0, 0.0, 0.0);
 	}
 }

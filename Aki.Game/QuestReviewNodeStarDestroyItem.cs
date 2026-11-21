@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02002685 RID: 9861
+// Token: 0x02001B70 RID: 7024
 public class QuestReviewNodeStarDestroyItem : QuestReviewNodeItemBase
 {
-	// Token: 0x06014350 RID: 82768 RVA: 0x0051AC28 File Offset: 0x00518E28
+	// Token: 0x06011832 RID: 71730 RVA: 0x00529960 File Offset: 0x00527B60
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -23,7 +23,7 @@ public class QuestReviewNodeStarDestroyItem : QuestReviewNodeItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014351 RID: 82769 RVA: 0x0051ACB4 File Offset: 0x00518EB4
+	// Token: 0x06011833 RID: 71731 RVA: 0x005299EC File Offset: 0x00527BEC
 	[NullableContext(1)]
 	public override void Refresh(IQuestReviewNodeParam param)
 	{
@@ -39,16 +39,16 @@ public class QuestReviewNodeStarDestroyItem : QuestReviewNodeItemBase
 		base.GetSprite(0).SetStretchRight((float)num);
 	}
 
-	// Token: 0x02008CD6 RID: 36054
+	// Token: 0x02007E5F RID: 32351
 	private class ENodeStarDestroyComponentDefine
 	{
-		// Token: 0x0402DB3A RID: 187194
+		// Token: 0x04028E51 RID: 167505
 		public const int SpriteLineHorizontal = 0;
 
-		// Token: 0x0402DB3B RID: 187195
+		// Token: 0x04028E52 RID: 167506
 		public const int SpriteStartPoint = 1;
 
-		// Token: 0x0402DB3C RID: 187196
+		// Token: 0x04028E53 RID: 167507
 		public const int ItemAnimRound = 2;
 	}
 }

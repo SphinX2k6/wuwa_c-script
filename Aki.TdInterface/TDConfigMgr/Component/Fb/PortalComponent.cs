@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D00 RID: 3328
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DF8 RID: 3576
 	public class PortalComponent : IComponentBase
 	{
-		// Token: 0x06004BF9 RID: 19449 RVA: 0x000BD7CB File Offset: 0x000BB9CB
+		// Token: 0x06005107 RID: 20743 RVA: 0x000C8CFB File Offset: 0x000C6EFB
 		public static PortalComponent Create(IPortalComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017B6 RID: 6070
-		// (get) Token: 0x06004BFA RID: 19450 RVA: 0x000BD7EC File Offset: 0x000BB9EC
+		// Token: 0x17001912 RID: 6418
+		// (get) Token: 0x06005108 RID: 20744 RVA: 0x000C8D1C File Offset: 0x000C6F1C
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017B7 RID: 6071
-		// (get) Token: 0x06004BFB RID: 19451 RVA: 0x000BD824 File Offset: 0x000BBA24
+		// Token: 0x17001913 RID: 6419
+		// (get) Token: 0x06005109 RID: 20745 RVA: 0x000C8D54 File Offset: 0x000C6F54
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017B8 RID: 6072
-		// (get) Token: 0x06004BFC RID: 19452 RVA: 0x000BD83A File Offset: 0x000BBA3A
+		// Token: 0x17001914 RID: 6420
+		// (get) Token: 0x0600510A RID: 20746 RVA: 0x000C8D6A File Offset: 0x000C6F6A
 		public virtual IPortalMode Config
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B6F RID: 11119
+		// Token: 0x04002E29 RID: 11817
 		private IPortalComponent Instance;
 
-		// Token: 0x04002B70 RID: 11120
+		// Token: 0x04002E2A RID: 11818
 		private IPortalMode _ConfigCache;
 
-		// Token: 0x04002B71 RID: 11121
+		// Token: 0x04002E2B RID: 11819
 		private bool _ConfigInited;
 	}
 }

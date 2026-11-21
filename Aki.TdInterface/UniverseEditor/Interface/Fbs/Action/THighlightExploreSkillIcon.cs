@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076EF RID: 30447
+	// Token: 0x02007F03 RID: 32515
 	public enum THighlightExploreSkillIcon : byte
 	{
-		// Token: 0x04012791 RID: 75665
+		// Token: 0x040137EF RID: 79855
 		NONE,
-		// Token: 0x04012792 RID: 75666
+		// Token: 0x040137F0 RID: 79856
 		IHideHighlightExploreSkillIcon,
-		// Token: 0x04012793 RID: 75667
+		// Token: 0x040137F1 RID: 79857
 		IShowHighlightExploreSkillIcon,
-		// Token: 0x04012794 RID: 75668
+		// Token: 0x040137F2 RID: 79858
 		IToggleAndHighlightItem
 	}
 }

@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011C2 RID: 4546
+// Token: 0x02000676 RID: 1654
 [NullableContext(2)]
 [Nullable(0)]
 public class CelebrationAwardSubView : ActivitySubViewBase
 {
-	// Token: 0x06007903 RID: 30979 RVA: 0x00196F08 File Offset: 0x00195108
+	// Token: 0x06004C9A RID: 19610 RVA: 0x0019FBB8 File Offset: 0x0019DDB8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -61,13 +61,13 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007904 RID: 30980 RVA: 0x0019713F File Offset: 0x0019533F
+	// Token: 0x06004C9B RID: 19611 RVA: 0x0019FDEF File Offset: 0x0019DFEF
 	protected override void OnSetData()
 	{
 		this.ActivityTimePointRewardData = (this.ActivityBaseData as ActivityTimePointRewardData);
 	}
 
-	// Token: 0x06007905 RID: 30981 RVA: 0x00197154 File Offset: 0x00195354
+	// Token: 0x06004C9C RID: 19612 RVA: 0x0019FE04 File Offset: 0x0019E004
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CelebrationAwardSubView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -78,19 +78,19 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007906 RID: 30982 RVA: 0x00197197 File Offset: 0x00195397
+	// Token: 0x06004C9D RID: 19613 RVA: 0x0019FE47 File Offset: 0x0019E047
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06007907 RID: 30983 RVA: 0x001971B5 File Offset: 0x001953B5
+	// Token: 0x06004C9E RID: 19614 RVA: 0x0019FE65 File Offset: 0x0019E065
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06007908 RID: 30984 RVA: 0x001971D4 File Offset: 0x001953D4
+	// Token: 0x06004C9F RID: 19615 RVA: 0x0019FE84 File Offset: 0x0019E084
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityTimePointRewardData.LocalConfig;
@@ -111,7 +111,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		this.RefreshRewardState();
 	}
 
-	// Token: 0x06007909 RID: 30985 RVA: 0x001972A2 File Offset: 0x001954A2
+	// Token: 0x06004CA0 RID: 19616 RVA: 0x0019FF52 File Offset: 0x0019E152
 	protected override void OnBeforeShow()
 	{
 		if (this.HaveShowStart)
@@ -123,7 +123,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		this.HaveShowStart = true;
 	}
 
-	// Token: 0x0600790A RID: 30986 RVA: 0x001972CC File Offset: 0x001954CC
+	// Token: 0x06004CA1 RID: 19617 RVA: 0x0019FF7C File Offset: 0x0019E17C
 	private void RefreshRewardItem()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -154,7 +154,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		this.RewardGirdB.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 	}
 
-	// Token: 0x0600790B RID: 30987 RVA: 0x00197478 File Offset: 0x00195678
+	// Token: 0x06004CA2 RID: 19618 RVA: 0x001A0128 File Offset: 0x0019E328
 	private void RefreshRewardState()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -189,7 +189,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600790C RID: 30988 RVA: 0x0019758C File Offset: 0x0019578C
+	// Token: 0x06004CA3 RID: 19619 RVA: 0x001A023C File Offset: 0x0019E43C
 	private void OnClickRewardAllBtn()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -200,14 +200,14 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		ActivityTimePointRewardController.Instance.GetRewardById(this.ActivityTimePointRewardData.Id, rewardDataList[0].Id);
 	}
 
-	// Token: 0x0600790D RID: 30989 RVA: 0x001975D6 File Offset: 0x001957D6
+	// Token: 0x06004CA4 RID: 19620 RVA: 0x001A0286 File Offset: 0x0019E486
 	[NullableContext(1)]
 	private void OnRewardItemClick(MediumItemGridExtendCallback callbackParameter)
 	{
-		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null, false);
 	}
 
-	// Token: 0x0600790E RID: 30990 RVA: 0x001975FC File Offset: 0x001957FC
+	// Token: 0x06004CA5 RID: 19621 RVA: 0x001A02AC File Offset: 0x0019E4AC
 	private void SetTimeText(double leftTime)
 	{
 		double num = leftTime * TimeUtil.Instance.Millisecond;
@@ -294,7 +294,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		instance4.SetLocalTextNew(text4, textStringId4, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 	}
 
-	// Token: 0x0600790F RID: 30991 RVA: 0x001978D2 File Offset: 0x00195AD2
+	// Token: 0x06004CA6 RID: 19622 RVA: 0x001A0582 File Offset: 0x0019E782
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.ActivityBaseData.Id != id)
@@ -305,7 +305,7 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		this.RefreshRewardState();
 	}
 
-	// Token: 0x06007910 RID: 30992 RVA: 0x001978F0 File Offset: 0x00195AF0
+	// Token: 0x06004CA7 RID: 19623 RVA: 0x001A05A0 File Offset: 0x0019E7A0
 	private void RefreshTimeTitle()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(this.ActivityTimePointRewardData, null);
@@ -318,72 +318,72 @@ public class CelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007911 RID: 30993 RVA: 0x00197936 File Offset: 0x00195B36
+	// Token: 0x06004CA8 RID: 19624 RVA: 0x001A05E6 File Offset: 0x0019E7E6
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshRewardState();
 		this.RefreshTimeTitle();
 	}
 
-	// Token: 0x040037A6 RID: 14246
+	// Token: 0x0400383F RID: 14399
 	protected ActivityTimePointRewardData ActivityTimePointRewardData;
 
-	// Token: 0x040037A7 RID: 14247
+	// Token: 0x04003840 RID: 14400
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x040037A8 RID: 14248
+	// Token: 0x04003841 RID: 14401
 	private SmallItemGrid RewardGirdA;
 
-	// Token: 0x040037A9 RID: 14249
+	// Token: 0x04003842 RID: 14402
 	private SmallItemGrid RewardGirdB;
 
-	// Token: 0x040037AA RID: 14250
+	// Token: 0x04003843 RID: 14403
 	private bool IsFirstPlayIdle;
 
-	// Token: 0x040037AB RID: 14251
+	// Token: 0x04003844 RID: 14404
 	private bool HaveShowStart;
 
-	// Token: 0x020077AE RID: 30638
+	// Token: 0x02006939 RID: 26937
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402774B RID: 161611
+		// Token: 0x04022A7D RID: 141949
 		public const int TitleItem = 0;
 
-		// Token: 0x0402774C RID: 161612
+		// Token: 0x04022A7E RID: 141950
 		public const int RewardBtnA = 1;
 
-		// Token: 0x0402774D RID: 161613
+		// Token: 0x04022A7F RID: 141951
 		public const int RewardBtnB = 2;
 
-		// Token: 0x0402774E RID: 161614
+		// Token: 0x04022A80 RID: 141952
 		public const int DesText = 3;
 
-		// Token: 0x0402774F RID: 161615
+		// Token: 0x04022A81 RID: 141953
 		public const int TimeText = 4;
 
-		// Token: 0x04027750 RID: 161616
+		// Token: 0x04022A82 RID: 141954
 		public const int AllTimeText = 5;
 
-		// Token: 0x04027751 RID: 161617
+		// Token: 0x04022A83 RID: 141955
 		public const int GetItem = 6;
 
-		// Token: 0x04027752 RID: 161618
+		// Token: 0x04022A84 RID: 141956
 		public const int GetBtn = 7;
 
-		// Token: 0x04027753 RID: 161619
+		// Token: 0x04022A85 RID: 141957
 		public const int GetText = 8;
 
-		// Token: 0x04027754 RID: 161620
+		// Token: 0x04022A86 RID: 141958
 		public const int RewardItemA = 9;
 
-		// Token: 0x04027755 RID: 161621
+		// Token: 0x04022A87 RID: 141959
 		public const int RewardItemB = 10;
 
-		// Token: 0x04027756 RID: 161622
+		// Token: 0x04022A88 RID: 141960
 		public const int BgSpine = 11;
 
-		// Token: 0x04027757 RID: 161623
+		// Token: 0x04022A89 RID: 141961
 		public const int GetItemSpine = 12;
 	}
 }

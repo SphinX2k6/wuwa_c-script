@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x0200106E RID: 4206
+// Token: 0x02000522 RID: 1314
 internal enum <GuessJokerCheckItem>FD4D948961265D7D7A6492307A56765ACF966F0395AC34BAB3DCA4A1892E0A271__EComponentDefine
 {
-	// Token: 0x0400324B RID: 12875
+	// Token: 0x040032E4 RID: 13028
 	CheckItem
 }

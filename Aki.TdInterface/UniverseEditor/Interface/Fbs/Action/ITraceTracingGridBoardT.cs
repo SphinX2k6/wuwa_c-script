@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200742E RID: 29742
+	// Token: 0x02007C21 RID: 31777
 	public class ITraceTracingGridBoardT
 	{
-		// Token: 0x1700E1D7 RID: 57815
-		// (get) Token: 0x0603608E RID: 221326 RVA: 0x007599DF File Offset: 0x00757BDF
-		// (set) Token: 0x0603608F RID: 221327 RVA: 0x007599E7 File Offset: 0x00757BE7
+		// Token: 0x1700EDF4 RID: 60916
+		// (get) Token: 0x06039477 RID: 234615 RVA: 0x007BC70B File Offset: 0x007BA90B
+		// (set) Token: 0x06039478 RID: 234616 RVA: 0x007BC713 File Offset: 0x007BA913
 		public List<ETraceTracingGridType> Grids { get; set; }
 
-		// Token: 0x1700E1D8 RID: 57816
-		// (get) Token: 0x06036090 RID: 221328 RVA: 0x007599F0 File Offset: 0x00757BF0
-		// (set) Token: 0x06036091 RID: 221329 RVA: 0x007599F8 File Offset: 0x00757BF8
+		// Token: 0x1700EDF5 RID: 60917
+		// (get) Token: 0x06039479 RID: 234617 RVA: 0x007BC71C File Offset: 0x007BA91C
+		// (set) Token: 0x0603947A RID: 234618 RVA: 0x007BC724 File Offset: 0x007BA924
 		public IVector2T BoardSize { get; set; }
 
-		// Token: 0x06036092 RID: 221330 RVA: 0x00759A01 File Offset: 0x00757C01
+		// Token: 0x0603947B RID: 234619 RVA: 0x007BC72D File Offset: 0x007BA92D
 		public ITraceTracingGridBoardT()
 		{
 			this.Grids = null;

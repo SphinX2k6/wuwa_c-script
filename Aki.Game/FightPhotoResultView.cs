@@ -5,16 +5,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025B0 RID: 9648
+// Token: 0x02001A9B RID: 6811
 public class FightPhotoResultView : UiViewBase
 {
-	// Token: 0x060138EC RID: 80108 RVA: 0x004E3233 File Offset: 0x004E1433
+	// Token: 0x06010DCC RID: 69068 RVA: 0x004F1E33 File Offset: 0x004F0033
 	[NullableContext(1)]
 	public FightPhotoResultView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060138ED RID: 80109 RVA: 0x004E323C File Offset: 0x004E143C
+	// Token: 0x06010DCD RID: 69069 RVA: 0x004F1E3C File Offset: 0x004F003C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ public class FightPhotoResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x060138EE RID: 80110 RVA: 0x004E3440 File Offset: 0x004E1640
+	// Token: 0x06010DCE RID: 69070 RVA: 0x004F2040 File Offset: 0x004F0240
 	protected override void OnStart()
 	{
 		List<UTexture2D> savedFightPhotos = PhotographController.Instance.GetSavedFightPhotos();
@@ -88,7 +88,7 @@ public class FightPhotoResultView : UiViewBase
 		}
 	}
 
-	// Token: 0x060138EF RID: 80111 RVA: 0x004E35B4 File Offset: 0x004E17B4
+	// Token: 0x06010DCF RID: 69071 RVA: 0x004F21B4 File Offset: 0x004F03B4
 	[NullableContext(1)]
 	private void SetTextureWithAutoFit(UUITexture uiTexture, UTexture2D texture)
 	{
@@ -119,25 +119,25 @@ public class FightPhotoResultView : UiViewBase
 		uiTexture.SetUVRect(uvrect);
 	}
 
-	// Token: 0x060138F0 RID: 80112 RVA: 0x004E368A File Offset: 0x004E188A
+	// Token: 0x06010DD0 RID: 69072 RVA: 0x004F228A File Offset: 0x004F048A
 	protected override void OnBeforeDestroy()
 	{
 		PhotographController.Instance.ClearAllSavedFightPhotos();
 	}
 
-	// Token: 0x060138F1 RID: 80113 RVA: 0x004E3696 File Offset: 0x004E1896
+	// Token: 0x06010DD1 RID: 69073 RVA: 0x004F2296 File Offset: 0x004F0496
 	private void OnCloseBtnClicked()
 	{
 		PhotographController.Instance.CloseFightPhotographMode();
 	}
 
-	// Token: 0x060138F2 RID: 80114 RVA: 0x004E36A2 File Offset: 0x004E18A2
+	// Token: 0x06010DD2 RID: 69074 RVA: 0x004F22A2 File Offset: 0x004F04A2
 	private void OnContinueBtnClicked()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060138F3 RID: 80115 RVA: 0x004E36AB File Offset: 0x004E18AB
+	// Token: 0x06010DD3 RID: 69075 RVA: 0x004F22AB File Offset: 0x004F04AB
 	protected override void OnAfterPlayStartSequence()
 	{
 		UiNavigationModel instance = UiNavigationModel.Instance;
@@ -148,13 +148,13 @@ public class FightPhotoResultView : UiViewBase
 		instance.RepeatMove();
 	}
 
-	// Token: 0x060138F4 RID: 80116 RVA: 0x004E36BC File Offset: 0x004E18BC
+	// Token: 0x06010DD4 RID: 69076 RVA: 0x004F22BC File Offset: 0x004F04BC
 	private void OnBackBtnClicked()
 	{
 		FightPhotoController.Instance.LeaveInstanceDungeon(true);
 	}
 
-	// Token: 0x060138F5 RID: 80117 RVA: 0x004E36CC File Offset: 0x004E18CC
+	// Token: 0x06010DD5 RID: 69077 RVA: 0x004F22CC File Offset: 0x004F04CC
 	private void OnLevelSelectBtnClicked()
 	{
 		FightPhotoActivityData activityData = FightPhotoController.Instance.GetActivityData();
@@ -173,42 +173,42 @@ public class FightPhotoResultView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.FightPhotoMainView, activityData, null);
 	}
 
-	// Token: 0x02008BB0 RID: 35760
+	// Token: 0x02007D38 RID: 32056
 	private enum EComponents
 	{
-		// Token: 0x0402D564 RID: 185700
+		// Token: 0x04028879 RID: 166009
 		BtnClose,
-		// Token: 0x0402D565 RID: 185701
+		// Token: 0x0402887A RID: 166010
 		ItemPhotoSingleShowPanel,
-		// Token: 0x0402D566 RID: 185702
+		// Token: 0x0402887B RID: 166011
 		TextureBigPhoto1,
-		// Token: 0x0402D567 RID: 185703
+		// Token: 0x0402887C RID: 166012
 		TextureBigPhoto2,
-		// Token: 0x0402D568 RID: 185704
+		// Token: 0x0402887D RID: 166013
 		TextureBigPhoto3,
-		// Token: 0x0402D569 RID: 185705
+		// Token: 0x0402887E RID: 166014
 		TextTitle,
-		// Token: 0x0402D56A RID: 185706
+		// Token: 0x0402887F RID: 166015
 		TextureSmallPhoto1,
-		// Token: 0x0402D56B RID: 185707
+		// Token: 0x04028880 RID: 166016
 		TextureSmallPhoto2,
-		// Token: 0x0402D56C RID: 185708
+		// Token: 0x04028881 RID: 166017
 		TextureSmallPhoto3,
-		// Token: 0x0402D56D RID: 185709
+		// Token: 0x04028882 RID: 166018
 		TextureRoleHead,
-		// Token: 0x0402D56E RID: 185710
+		// Token: 0x04028883 RID: 166019
 		TextDialogue,
-		// Token: 0x0402D56F RID: 185711
+		// Token: 0x04028884 RID: 166020
 		BtnContinue,
-		// Token: 0x0402D570 RID: 185712
+		// Token: 0x04028885 RID: 166021
 		BtnBack,
-		// Token: 0x0402D571 RID: 185713
+		// Token: 0x04028886 RID: 166022
 		ItemPhotoAllShowPanel,
-		// Token: 0x0402D572 RID: 185714
+		// Token: 0x04028887 RID: 166023
 		ItemSuccessPanel,
-		// Token: 0x0402D573 RID: 185715
+		// Token: 0x04028888 RID: 166024
 		BtnLevelSelect,
-		// Token: 0x0402D574 RID: 185716
+		// Token: 0x04028889 RID: 166025
 		TextBtn
 	}
 }

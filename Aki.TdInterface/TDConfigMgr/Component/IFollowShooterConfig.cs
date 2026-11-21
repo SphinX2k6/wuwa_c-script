@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003AA RID: 938
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003F3 RID: 1011
 	public class IFollowShooterConfig
 	{
-		// Token: 0x060012B9 RID: 4793 RVA: 0x0003D940 File Offset: 0x0003BB40
+		// Token: 0x060013FF RID: 5119 RVA: 0x00040C78 File Offset: 0x0003EE78
 		private IFollowShooterConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012BA RID: 4794 RVA: 0x0003D978 File Offset: 0x0003BB78
+		// Token: 0x06001400 RID: 5120 RVA: 0x00040CB0 File Offset: 0x0003EEB0
 		public static IFollowShooterConfig Create([Nullable(2)] IFollowShooterConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012BB RID: 4795 RVA: 0x0003D98B File Offset: 0x0003BB8B
+		// Token: 0x06001401 RID: 5121 RVA: 0x00040CC3 File Offset: 0x0003EEC3
 		public static IFollowShooterConfig CreateFromSetValue([Nullable(2)] IFollowShooterConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012BC RID: 4796 RVA: 0x0003D99E File Offset: 0x0003BB9E
+		// Token: 0x06001402 RID: 5122 RVA: 0x00040CD6 File Offset: 0x0003EED6
 		public IFollowShooterConfig_SetValue ToSetValue()
 		{
 			return new IFollowShooterConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700053B RID: 1339
-		// (get) Token: 0x060012BD RID: 4797 RVA: 0x0003D9B1 File Offset: 0x0003BBB1
-		// (set) Token: 0x060012BE RID: 4798 RVA: 0x0003D9DC File Offset: 0x0003BBDC
+		// Token: 0x17000590 RID: 1424
+		// (get) Token: 0x06001403 RID: 5123 RVA: 0x00040CE9 File Offset: 0x0003EEE9
+		// (set) Token: 0x06001404 RID: 5124 RVA: 0x00040D14 File Offset: 0x0003EF14
 		public virtual EFollowShooterType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F0A RID: 3850
+		// Token: 0x04001002 RID: 4098
 		[Nullable(2)]
 		protected IFollowShooterConfig FbInstance;
 
-		// Token: 0x04000F0B RID: 3851
+		// Token: 0x04001003 RID: 4099
 		[Nullable(2)]
 		protected IFollowShooterConfig_SetValue PocoInterface;
 	}

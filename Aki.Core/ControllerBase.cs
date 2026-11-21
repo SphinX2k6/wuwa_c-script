@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Framework;
 
-// Token: 0x020000A0 RID: 160
+// Token: 0x020000A2 RID: 162
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class ControllerBase
 {
-	// Token: 0x1700009F RID: 159
-	// (get) Token: 0x060004BE RID: 1214 RVA: 0x0001B15C File Offset: 0x0001935C
+	// Token: 0x170000B1 RID: 177
+	// (get) Token: 0x060004FF RID: 1279 RVA: 0x0001B844 File Offset: 0x00019A44
 	protected virtual bool IsTickEvenPausedInternal
 	{
 		get
@@ -17,8 +17,8 @@ public abstract class ControllerBase
 		}
 	}
 
-	// Token: 0x170000A0 RID: 160
-	// (get) Token: 0x060004BF RID: 1215 RVA: 0x0001B15F File Offset: 0x0001935F
+	// Token: 0x170000B2 RID: 178
+	// (get) Token: 0x06000500 RID: 1280 RVA: 0x0001B847 File Offset: 0x00019A47
 	public bool IsTickEvenPaused
 	{
 		get
@@ -27,38 +27,38 @@ public abstract class ControllerBase
 		}
 	}
 
-	// Token: 0x060004C0 RID: 1216 RVA: 0x0001B167 File Offset: 0x00019367
+	// Token: 0x06000501 RID: 1281 RVA: 0x0001B84F File Offset: 0x00019A4F
 	public void SetControllerManager(IControllerManagerBase manager)
 	{
 		this.Manager = manager;
 	}
 
-	// Token: 0x060004C1 RID: 1217 RVA: 0x0001B170 File Offset: 0x00019370
+	// Token: 0x06000502 RID: 1282 RVA: 0x0001B858 File Offset: 0x00019A58
 	public virtual bool Init()
 	{
 		return this.OnInit();
 	}
 
-	// Token: 0x060004C2 RID: 1218 RVA: 0x0001B178 File Offset: 0x00019378
+	// Token: 0x06000503 RID: 1283 RVA: 0x0001B860 File Offset: 0x00019A60
 	public virtual bool Clear()
 	{
 		this.IsClear = true;
 		return this.OnClear();
 	}
 
-	// Token: 0x060004C3 RID: 1219 RVA: 0x0001B187 File Offset: 0x00019387
+	// Token: 0x06000504 RID: 1284 RVA: 0x0001B86F File Offset: 0x00019A6F
 	protected void PauseTick()
 	{
 		this.CanTick = false;
 	}
 
-	// Token: 0x060004C4 RID: 1220 RVA: 0x0001B190 File Offset: 0x00019390
+	// Token: 0x06000505 RID: 1285 RVA: 0x0001B878 File Offset: 0x00019A78
 	protected void ResumeTick()
 	{
 		this.CanTick = true;
 	}
 
-	// Token: 0x060004C5 RID: 1221 RVA: 0x0001B199 File Offset: 0x00019399
+	// Token: 0x06000506 RID: 1286 RVA: 0x0001B881 File Offset: 0x00019A81
 	protected void InitTickOptimize(int tickInterval = 1, int tickIntervalInFight = 1)
 	{
 		this.TickInterval = tickInterval;
@@ -66,9 +66,9 @@ public abstract class ControllerBase
 		this.DefaultTickSetting = false;
 	}
 
-	// Token: 0x170000A1 RID: 161
-	// (get) Token: 0x060004C6 RID: 1222 RVA: 0x0001B1B0 File Offset: 0x000193B0
-	// (set) Token: 0x060004C7 RID: 1223 RVA: 0x0001B1B8 File Offset: 0x000193B8
+	// Token: 0x170000B3 RID: 179
+	// (get) Token: 0x06000507 RID: 1287 RVA: 0x0001B898 File Offset: 0x00019A98
+	// (set) Token: 0x06000508 RID: 1288 RVA: 0x0001B8A0 File Offset: 0x00019AA0
 	private bool CanTick
 	{
 		get
@@ -87,7 +87,7 @@ public abstract class ControllerBase
 		}
 	}
 
-	// Token: 0x060004C8 RID: 1224 RVA: 0x0001B1E4 File Offset: 0x000193E4
+	// Token: 0x06000509 RID: 1289 RVA: 0x0001B8CC File Offset: 0x00019ACC
 	public bool CheckTick(bool inFight, float deltaTime)
 	{
 		if (this.DefaultTickSetting)
@@ -128,7 +128,7 @@ public abstract class ControllerBase
 		return true;
 	}
 
-	// Token: 0x060004C9 RID: 1225 RVA: 0x0001B280 File Offset: 0x00019480
+	// Token: 0x0600050A RID: 1290 RVA: 0x0001B968 File Offset: 0x00019B68
 	public unsafe void Tick(float delta)
 	{
 		if (this.IsClear)
@@ -174,7 +174,7 @@ public abstract class ControllerBase
 		}
 	}
 
-	// Token: 0x060004CA RID: 1226 RVA: 0x0001B3C0 File Offset: 0x000195C0
+	// Token: 0x0600050B RID: 1291 RVA: 0x0001BAA8 File Offset: 0x00019CA8
 	public void AfterTick(float delta)
 	{
 		if (this.IsClear)
@@ -184,7 +184,7 @@ public abstract class ControllerBase
 		this.OnAfterTick(delta);
 	}
 
-	// Token: 0x060004CB RID: 1227 RVA: 0x0001B3D2 File Offset: 0x000195D2
+	// Token: 0x0600050C RID: 1292 RVA: 0x0001BABA File Offset: 0x00019CBA
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -196,53 +196,53 @@ public abstract class ControllerBase
 		return this.OnPreload();
 	}
 
-	// Token: 0x060004CC RID: 1228 RVA: 0x0001B3DA File Offset: 0x000195DA
+	// Token: 0x0600050D RID: 1293 RVA: 0x0001BAC2 File Offset: 0x00019CC2
 	public bool LeaveLevel()
 	{
 		return this.OnLeaveLevel();
 	}
 
-	// Token: 0x060004CD RID: 1229 RVA: 0x0001B3E2 File Offset: 0x000195E2
+	// Token: 0x0600050E RID: 1294 RVA: 0x0001BACA File Offset: 0x00019CCA
 	public bool ChangeMode()
 	{
 		return this.OnChangeMode();
 	}
 
-	// Token: 0x060004CE RID: 1230 RVA: 0x0001B3EA File Offset: 0x000195EA
+	// Token: 0x0600050F RID: 1295 RVA: 0x0001BAD2 File Offset: 0x00019CD2
 	public void SetPerformanceStateObject(string name, string desc = "", string group = "")
 	{
 		this.PerformanceState = Stat.CreateNoFlameGraph(name, desc, group);
 	}
 
-	// Token: 0x060004CF RID: 1231 RVA: 0x0001B3FA File Offset: 0x000195FA
+	// Token: 0x06000510 RID: 1296 RVA: 0x0001BAE2 File Offset: 0x00019CE2
 	public Stat GetPerformanceStateObject()
 	{
 		return this.OnGetPerformanceStateObject();
 	}
 
-	// Token: 0x060004D0 RID: 1232 RVA: 0x0001B402 File Offset: 0x00019602
+	// Token: 0x06000511 RID: 1297 RVA: 0x0001BAEA File Offset: 0x00019CEA
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060004D1 RID: 1233 RVA: 0x0001B405 File Offset: 0x00019605
+	// Token: 0x06000512 RID: 1298 RVA: 0x0001BAED File Offset: 0x00019CED
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x060004D2 RID: 1234 RVA: 0x0001B407 File Offset: 0x00019607
+	// Token: 0x06000513 RID: 1299 RVA: 0x0001BAEF File Offset: 0x00019CEF
 	protected virtual void OnAfterTick(float delta)
 	{
 	}
 
-	// Token: 0x060004D3 RID: 1235 RVA: 0x0001B409 File Offset: 0x00019609
+	// Token: 0x06000514 RID: 1300 RVA: 0x0001BAF1 File Offset: 0x00019CF1
 	protected virtual bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060004D4 RID: 1236 RVA: 0x0001B40C File Offset: 0x0001960C
+	// Token: 0x06000515 RID: 1301 RVA: 0x0001BAF4 File Offset: 0x00019CF4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -254,48 +254,48 @@ public abstract class ControllerBase
 		return null;
 	}
 
-	// Token: 0x060004D5 RID: 1237 RVA: 0x0001B422 File Offset: 0x00019622
+	// Token: 0x06000516 RID: 1302 RVA: 0x0001BB0A File Offset: 0x00019D0A
 	protected virtual bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x060004D6 RID: 1238 RVA: 0x0001B425 File Offset: 0x00019625
+	// Token: 0x06000517 RID: 1303 RVA: 0x0001BB0D File Offset: 0x00019D0D
 	protected virtual Stat OnGetPerformanceStateObject()
 	{
 		return this.PerformanceState;
 	}
 
-	// Token: 0x060004D7 RID: 1239 RVA: 0x0001B42D File Offset: 0x0001962D
+	// Token: 0x06000518 RID: 1304 RVA: 0x0001BB15 File Offset: 0x00019D15
 	protected virtual bool OnChangeMode()
 	{
 		return true;
 	}
 
-	// Token: 0x04000419 RID: 1049
+	// Token: 0x04000427 RID: 1063
 	protected IControllerManagerBase Manager;
 
-	// Token: 0x0400041A RID: 1050
+	// Token: 0x04000428 RID: 1064
 	protected Stat PerformanceState;
 
-	// Token: 0x0400041B RID: 1051
+	// Token: 0x04000429 RID: 1065
 	private bool IsClear;
 
-	// Token: 0x0400041C RID: 1052
+	// Token: 0x0400042A RID: 1066
 	private bool DefaultTickSetting = true;
 
-	// Token: 0x0400041D RID: 1053
+	// Token: 0x0400042B RID: 1067
 	private bool CanTickInternal = true;
 
-	// Token: 0x0400041E RID: 1054
+	// Token: 0x0400042C RID: 1068
 	protected int TickIntervalInFight = 1;
 
-	// Token: 0x0400041F RID: 1055
+	// Token: 0x0400042D RID: 1069
 	protected int TickInterval = 1;
 
-	// Token: 0x04000420 RID: 1056
+	// Token: 0x0400042E RID: 1070
 	private int CurrentTickInterval;
 
-	// Token: 0x04000421 RID: 1057
+	// Token: 0x0400042F RID: 1071
 	private float CurrentTickDeltaTime;
 }

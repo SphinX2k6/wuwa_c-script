@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.Ui;
@@ -11,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006054 RID: 24660
+	// Token: 0x02004FD2 RID: 20434
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorWeaponExhibitView : UiViewBase
 	{
-		// Token: 0x0603E656 RID: 255574 RVA: 0x00F11F68 File Offset: 0x00F10168
+		// Token: 0x0603331A RID: 209690 RVA: 0x00E58D2C File Offset: 0x00E56F2C
 		public SpringManorWeaponExhibitView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E657 RID: 255575 RVA: 0x00F11FBC File Offset: 0x00F101BC
+		// Token: 0x0603331B RID: 209691 RVA: 0x00E58D80 File Offset: 0x00E56F80
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E658 RID: 255576 RVA: 0x00F12104 File Offset: 0x00F10304
+		// Token: 0x0603331C RID: 209692 RVA: 0x00E58EC8 File Offset: 0x00E570C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorWeaponExhibitView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -56,16 +57,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E659 RID: 255577 RVA: 0x00F12147 File Offset: 0x00F10347
+		// Token: 0x0603331D RID: 209693 RVA: 0x00E58F0B File Offset: 0x00E5710B
 		protected override void OnBeforeShow()
 		{
 			this.RefreshWeaponList();
 		}
 
-		// Token: 0x0603E65A RID: 255578 RVA: 0x00F1214F File Offset: 0x00F1034F
+		// Token: 0x0603331E RID: 209694 RVA: 0x00E58F13 File Offset: 0x00E57113
 		protected override void OnBeforeDestroy()
 		{
-			UiCameraAnimationManager.Instance.EnablePlayerActor();
+			UiCameraModel.Instance.EnablePlayerActor();
 			FilterSortEntrance<int> filterSortComponent = this.FilterSortComponent;
 			if (filterSortComponent != null)
 			{
@@ -74,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ResetAllExhibitActiveState();
 		}
 
-		// Token: 0x0603E65B RID: 255579 RVA: 0x00F12174 File Offset: 0x00F10374
+		// Token: 0x0603331F RID: 209695 RVA: 0x00E58F38 File Offset: 0x00E57138
 		private void SelectFirstWeaponSlot()
 		{
 			if (this.WeaponTogList.Count > 0)
@@ -93,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x0603E65C RID: 255580 RVA: 0x00F121E4 File Offset: 0x00F103E4
+		// Token: 0x06033320 RID: 209696 RVA: 0x00E58FA8 File Offset: 0x00E571A8
 		private UniTask CreateWeaponTogsAsync()
 		{
 			SpringManorWeaponExhibitView.<CreateWeaponTogsAsync>d__17 <CreateWeaponTogsAsync>d__;
@@ -104,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <CreateWeaponTogsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E65D RID: 255581 RVA: 0x00F12228 File Offset: 0x00F10428
+		// Token: 0x06033321 RID: 209697 RVA: 0x00E58FEC File Offset: 0x00E571EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -121,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <CreateToggleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E65E RID: 255582 RVA: 0x00F12274 File Offset: 0x00F10474
+		// Token: 0x06033322 RID: 209698 RVA: 0x00E59038 File Offset: 0x00E57238
 		private void InitWeaponScrollView()
 		{
 			UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(6);
@@ -134,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.WeaponScrollView = new LoopScrollView<SpringManorWeaponExhibitGrid, SpringManorWeaponExhibitItem>(loopScrollViewComponent, auibaseActor, new Func<SpringManorWeaponExhibitGrid>(this.CreateWeaponGrid), false);
 		}
 
-		// Token: 0x0603E65F RID: 255583 RVA: 0x00F122C4 File Offset: 0x00F104C4
+		// Token: 0x06033323 RID: 209699 RVA: 0x00E59088 File Offset: 0x00E57288
 		private void InitFilterSortEntrance()
 		{
 			UUIItem item = base.GetItem(9);
@@ -145,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.FilterSortComponent = new FilterSortEntrance<int>(item, new TUpdateDataListFunction<int>(this.OnFilterSortRefresh));
 		}
 
-		// Token: 0x0603E660 RID: 255584 RVA: 0x00F122F6 File Offset: 0x00F104F6
+		// Token: 0x06033324 RID: 209700 RVA: 0x00E590BA File Offset: 0x00E572BA
 		private SpringManorWeaponExhibitGrid CreateWeaponGrid()
 		{
 			SpringManorWeaponExhibitGrid springManorWeaponExhibitGrid = new SpringManorWeaponExhibitGrid();
@@ -153,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return springManorWeaponExhibitGrid;
 		}
 
-		// Token: 0x0603E661 RID: 255585 RVA: 0x00F12310 File Offset: 0x00F10510
+		// Token: 0x06033325 RID: 209701 RVA: 0x00E590D4 File Offset: 0x00E572D4
 		private UniTask InitCaptionAsync()
 		{
 			SpringManorWeaponExhibitView.<InitCaptionAsync>d__22 <InitCaptionAsync>d__;
@@ -164,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <InitCaptionAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E662 RID: 255586 RVA: 0x00F12354 File Offset: 0x00F10554
+		// Token: 0x06033326 RID: 209702 RVA: 0x00E59118 File Offset: 0x00E57318
 		private List<int> CreateWeaponItemViewDataList(List<WeaponItemData> sourceList)
 		{
 			List<int> list = new List<int>();
@@ -188,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list;
 		}
 
-		// Token: 0x0603E663 RID: 255587 RVA: 0x00F12404 File Offset: 0x00F10604
+		// Token: 0x06033327 RID: 209703 RVA: 0x00E591C8 File Offset: 0x00E573C8
 		private void RefreshWeaponList()
 		{
 			List<WeaponItemData> weaponItemDataList = InventoryModel.Instance.GetWeaponItemDataList();
@@ -196,7 +197,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.FilterSortComponent.UpdateData(EFilterSortGroupId.SpringManorWeaponExhibit, dataList, Array.Empty<object>());
 		}
 
-		// Token: 0x0603E664 RID: 255588 RVA: 0x00F12438 File Offset: 0x00F10638
+		// Token: 0x06033328 RID: 209704 RVA: 0x00E591FC File Offset: 0x00E573FC
 		private List<SpringManorWeaponExhibitItem> SortPlacedWeaponFirst(List<SpringManorWeaponExhibitItem> dataList)
 		{
 			Dictionary<int, int> assignedOrder = new Dictionary<int, int>();
@@ -236,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list3;
 		}
 
-		// Token: 0x0603E665 RID: 255589 RVA: 0x00F12528 File Offset: 0x00F10728
+		// Token: 0x06033329 RID: 209705 RVA: 0x00E592EC File Offset: 0x00E574EC
 		private void ApplyWeaponList(List<SpringManorWeaponExhibitItem> dataList)
 		{
 			this.WeaponViewDataList = this.SortPlacedWeaponFirst(dataList);
@@ -249,7 +250,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshWeaponGridDataSource();
 		}
 
-		// Token: 0x0603E666 RID: 255590 RVA: 0x00F12570 File Offset: 0x00F10770
+		// Token: 0x0603332A RID: 209706 RVA: 0x00E59334 File Offset: 0x00E57534
 		private void OnFilterSortRefresh(List<int> list, bool isOutSideChange, EFilterSortType operationType)
 		{
 			List<int> list2 = list ?? new List<int>();
@@ -261,7 +262,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ApplyWeaponList(list3);
 		}
 
-		// Token: 0x0603E667 RID: 255591 RVA: 0x00F125E0 File Offset: 0x00F107E0
+		// Token: 0x0603332B RID: 209707 RVA: 0x00E593A4 File Offset: 0x00E575A4
 		private void RefreshToggleSelectState(int selectIndex)
 		{
 			if (this.WeaponTogList.Count == 0)
@@ -281,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E668 RID: 255592 RVA: 0x00F1264A File Offset: 0x00F1084A
+		// Token: 0x0603332C RID: 209708 RVA: 0x00E5940E File Offset: 0x00E5760E
 		private void OnWeaponGridSelected(int configId, int gridIndex)
 		{
 			this.SelectedConfigId = new int?(configId);
@@ -290,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.OnClickBtnPut();
 		}
 
-		// Token: 0x0603E669 RID: 255593 RVA: 0x00F12678 File Offset: 0x00F10878
+		// Token: 0x0603332D RID: 209709 RVA: 0x00E5943C File Offset: 0x00E5763C
 		private void RefreshOperationButtonState()
 		{
 			bool flag = this.SelectedToggleIndex >= 0 && this.SelectedToggleIndex < this.WeaponTogList.Count;
@@ -317,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			button.SetSelfInteractive(selfInteractive);
 		}
 
-		// Token: 0x0603E66A RID: 255594 RVA: 0x00F126EC File Offset: 0x00F108EC
+		// Token: 0x0603332E RID: 209710 RVA: 0x00E594B0 File Offset: 0x00E576B0
 		private void ScrollWeaponListToItemId(int itemId)
 		{
 			int num = this.WeaponViewDataList.FindIndex((SpringManorWeaponExhibitItem weaponData) => weaponData.ConfigId == itemId);
@@ -331,7 +332,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.OnWeaponGridSelected(this.SelectedConfigId.Value, num);
 		}
 
-		// Token: 0x0603E66B RID: 255595 RVA: 0x00F1276C File Offset: 0x00F1096C
+		// Token: 0x0603332F RID: 209711 RVA: 0x00E59530 File Offset: 0x00E57730
 		private void RefreshWeaponGridDataSource()
 		{
 			this.UpdateWeaponSelectState();
@@ -354,7 +355,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E66C RID: 255596 RVA: 0x00F127F0 File Offset: 0x00F109F0
+		// Token: 0x06033330 RID: 209712 RVA: 0x00E595B4 File Offset: 0x00E577B4
 		private void UpdateWeaponSelectState()
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -372,7 +373,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E66D RID: 255597 RVA: 0x00F128A4 File Offset: 0x00F10AA4
+		// Token: 0x06033331 RID: 209713 RVA: 0x00E59668 File Offset: 0x00E57868
 		[NullableContext(2)]
 		private SceneItemExhibitComponent GetExhibitComponent(int pbDataId)
 		{
@@ -397,7 +398,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return component;
 		}
 
-		// Token: 0x0603E66E RID: 255598 RVA: 0x00F1291C File Offset: 0x00F10B1C
+		// Token: 0x06033332 RID: 209714 RVA: 0x00E596E0 File Offset: 0x00E578E0
 		private bool RefreshSceneItemExhibit(int pbDataId, int weaponGuid)
 		{
 			SceneItemExhibitComponent exhibitComponent = this.GetExhibitComponent(pbDataId);
@@ -416,7 +417,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return true;
 		}
 
-		// Token: 0x0603E66F RID: 255599 RVA: 0x00F1294C File Offset: 0x00F10B4C
+		// Token: 0x06033333 RID: 209715 RVA: 0x00E59710 File Offset: 0x00E57910
 		private void ResetExhibitToOrigin()
 		{
 			if (this.ExhibitPbDataIdList == null)
@@ -431,7 +432,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E670 RID: 255600 RVA: 0x00F1299C File Offset: 0x00F10B9C
+		// Token: 0x06033334 RID: 209716 RVA: 0x00E59760 File Offset: 0x00E57960
 		private void UpdateExhibitActiveState(int? previousIndex, int currentIndex)
 		{
 			if (this.ExhibitPbDataIdList == null)
@@ -469,7 +470,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E671 RID: 255601 RVA: 0x00F12A50 File Offset: 0x00F10C50
+		// Token: 0x06033335 RID: 209717 RVA: 0x00E59814 File Offset: 0x00E57A14
 		private void ResetAllExhibitActiveState()
 		{
 			if (this.ExhibitPbDataIdList == null)
@@ -486,7 +487,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E672 RID: 255602 RVA: 0x00F12AB8 File Offset: 0x00F10CB8
+		// Token: 0x06033336 RID: 209718 RVA: 0x00E5987C File Offset: 0x00E57A7C
 		private bool IsWeaponAssignmentsModified()
 		{
 			if (this.ExhibitPbDataIdList == null)
@@ -504,7 +505,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return false;
 		}
 
-		// Token: 0x0603E673 RID: 255603 RVA: 0x00F12B04 File Offset: 0x00F10D04
+		// Token: 0x06033337 RID: 209719 RVA: 0x00E598C8 File Offset: 0x00E57AC8
 		private void OnClickBtnPut()
 		{
 			if (this.SelectedToggleIndex < 0)
@@ -553,7 +554,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x0603E674 RID: 255604 RVA: 0x00F12C74 File Offset: 0x00F10E74
+		// Token: 0x06033338 RID: 209720 RVA: 0x00E59A38 File Offset: 0x00E57C38
 		private void OnClickBtnRemove()
 		{
 			if (this.SelectedToggleIndex < 0 || this.SelectedToggleIndex >= this.WeaponTogList.Count)
@@ -581,7 +582,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x0603E675 RID: 255605 RVA: 0x00F12D38 File Offset: 0x00F10F38
+		// Token: 0x06033339 RID: 209721 RVA: 0x00E59AFC File Offset: 0x00E57CFC
 		private List<EntityItemBundleInfo> BuildWeaponBundleInfos()
 		{
 			List<EntityItemBundleInfo> list = new List<EntityItemBundleInfo>();
@@ -608,7 +609,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return list;
 		}
 
-		// Token: 0x0603E676 RID: 255606 RVA: 0x00F12DD8 File Offset: 0x00F10FD8
+		// Token: 0x0603333A RID: 209722 RVA: 0x00E59B9C File Offset: 0x00E57D9C
 		private void OnClickCloseBtn()
 		{
 			if (!this.IsWeaponAssignmentsModified())
@@ -632,7 +633,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603E677 RID: 255607 RVA: 0x00F12E44 File Offset: 0x00F11044
+		// Token: 0x0603333B RID: 209723 RVA: 0x00E59C08 File Offset: 0x00E57E08
 		private void SwitchWeaponSlot(int targetIndex)
 		{
 			this.RefreshToggleSelectState(targetIndex);
@@ -653,7 +654,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshOperationButtonState();
 		}
 
-		// Token: 0x0603E678 RID: 255608 RVA: 0x00F12E98 File Offset: 0x00F11098
+		// Token: 0x0603333C RID: 209724 RVA: 0x00E59C5C File Offset: 0x00E57E5C
 		private void OnWeaponToggleSelected(int index)
 		{
 			int selectedToggleIndex = this.SelectedToggleIndex;
@@ -666,13 +667,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.UpdateExhibitActiveState(new int?(selectedToggleIndex), index);
 		}
 
-		// Token: 0x040209A5 RID: 133541
+		// Token: 0x0401B2D2 RID: 111314
 		private const int MIN_DISPLAY_WEAPON_QUALITY = 4;
 
-		// Token: 0x040209A6 RID: 133542
+		// Token: 0x0401B2D3 RID: 111315
 		private List<SpringManorWeaponSlotToggle> WeaponTogList = new List<SpringManorWeaponSlotToggle>();
 
-		// Token: 0x040209A7 RID: 133543
+		// Token: 0x0401B2D4 RID: 111316
 		[Nullable(new byte[]
 		{
 			2,
@@ -681,30 +682,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private LoopScrollView<SpringManorWeaponExhibitGrid, SpringManorWeaponExhibitItem> WeaponScrollView;
 
-		// Token: 0x040209A8 RID: 133544
+		// Token: 0x0401B2D5 RID: 111317
 		private List<SpringManorWeaponExhibitItem> WeaponViewDataList = new List<SpringManorWeaponExhibitItem>();
 
-		// Token: 0x040209A9 RID: 133545
+		// Token: 0x0401B2D6 RID: 111318
 		private readonly Dictionary<int, SpringManorWeaponExhibitItem> WeaponItemLookup = new Dictionary<int, SpringManorWeaponExhibitItem>();
 
-		// Token: 0x040209AA RID: 133546
+		// Token: 0x0401B2D7 RID: 111319
 		[Nullable(2)]
 		private FilterSortEntrance<int> FilterSortComponent;
 
-		// Token: 0x040209AB RID: 133547
+		// Token: 0x0401B2D8 RID: 111320
 		private List<int> WeaponSlotAssignments = new List<int>();
 
-		// Token: 0x040209AC RID: 133548
+		// Token: 0x0401B2D9 RID: 111321
 		private int SelectedToggleIndex = -1;
 
-		// Token: 0x040209AD RID: 133549
+		// Token: 0x0401B2DA RID: 111322
 		private int? SelectedConfigId;
 
-		// Token: 0x040209AE RID: 133550
+		// Token: 0x0401B2DB RID: 111323
 		[Nullable(2)]
 		private List<int> ExhibitPbDataIdList;
 
-		// Token: 0x040209AF RID: 133551
+		// Token: 0x0401B2DC RID: 111324
 		private List<int> OriginWeaponIdList = new List<int>();
 	}
 }

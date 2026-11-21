@@ -6,53 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000C5F RID: 3167
+	// Token: 0x0200021F RID: 543
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.InputSettings")]
 	[UnrealStructLayout(360, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 360)]
 	public class UInputSettings : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600A099 RID: 41113 RVA: 0x000E423C File Offset: 0x000E243C
+		// Token: 0x060024CB RID: 9419 RVA: 0x00034FEC File Offset: 0x000331EC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UInputSettings._ClassPtr;
 		}
 
-		// Token: 0x0600A09A RID: 41114 RVA: 0x000E4248 File Offset: 0x000E2448
+		// Token: 0x060024CC RID: 9420 RVA: 0x00034FF8 File Offset: 0x000331F8
 		public UInputSettings() : this(BuiltinUtils.AllocNativeUObject(UInputSettings.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600A09B RID: 41115 RVA: 0x000E4270 File Offset: 0x000E2470
+		// Token: 0x060024CD RID: 9421 RVA: 0x00035020 File Offset: 0x00033220
 		public UInputSettings(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UInputSettings.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700263E RID: 9790
-		// (get) Token: 0x0600A09C RID: 41116 RVA: 0x000E42A4 File Offset: 0x000E24A4
-		// (set) Token: 0x0600A09D RID: 41117 RVA: 0x000E42DD File Offset: 0x000E24DD
-		public TArray<FInputAxisConfigEntry> AxisConfig
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FInputAxisConfigEntry> result;
-				if ((result = this._AxisConfig) == null)
-				{
-					result = (this._AxisConfig = new TArray<FInputAxisConfigEntry>(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_AxisConfig, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.AxisConfig.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700263F RID: 9791
-		// (get) Token: 0x0600A09E RID: 41118 RVA: 0x000E42EB File Offset: 0x000E24EB
-		// (set) Token: 0x0600A09F RID: 41119 RVA: 0x000E4304 File Offset: 0x000E2504
+		// Token: 0x17000523 RID: 1315
+		// (get) Token: 0x060024CE RID: 9422 RVA: 0x00035053 File Offset: 0x00033253
+		// (set) Token: 0x060024CF RID: 9423 RVA: 0x0003506C File Offset: 0x0003326C
 		public unsafe bool bAltEnterTogglesFullscreen
 		{
 			get
@@ -65,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002640 RID: 9792
-		// (get) Token: 0x0600A0A0 RID: 41120 RVA: 0x000E4334 File Offset: 0x000E2534
-		// (set) Token: 0x0600A0A1 RID: 41121 RVA: 0x000E434D File Offset: 0x000E254D
+		// Token: 0x17000524 RID: 1316
+		// (get) Token: 0x060024D0 RID: 9424 RVA: 0x0003509C File Offset: 0x0003329C
+		// (set) Token: 0x060024D1 RID: 9425 RVA: 0x000350B5 File Offset: 0x000332B5
 		public unsafe bool bF11TogglesFullscreen
 		{
 			get
@@ -80,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002641 RID: 9793
-		// (get) Token: 0x0600A0A2 RID: 41122 RVA: 0x000E437D File Offset: 0x000E257D
-		// (set) Token: 0x0600A0A3 RID: 41123 RVA: 0x000E4396 File Offset: 0x000E2596
+		// Token: 0x17000525 RID: 1317
+		// (get) Token: 0x060024D2 RID: 9426 RVA: 0x000350E5 File Offset: 0x000332E5
+		// (set) Token: 0x060024D3 RID: 9427 RVA: 0x000350FE File Offset: 0x000332FE
 		public unsafe bool bUseMouseForTouch
 		{
 			get
@@ -95,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002642 RID: 9794
-		// (get) Token: 0x0600A0A4 RID: 41124 RVA: 0x000E43C6 File Offset: 0x000E25C6
-		// (set) Token: 0x0600A0A5 RID: 41125 RVA: 0x000E43DF File Offset: 0x000E25DF
+		// Token: 0x17000526 RID: 1318
+		// (get) Token: 0x060024D4 RID: 9428 RVA: 0x0003512E File Offset: 0x0003332E
+		// (set) Token: 0x060024D5 RID: 9429 RVA: 0x00035147 File Offset: 0x00033347
 		public unsafe bool bEnableMouseSmoothing
 		{
 			get
@@ -110,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002643 RID: 9795
-		// (get) Token: 0x0600A0A6 RID: 41126 RVA: 0x000E440F File Offset: 0x000E260F
-		// (set) Token: 0x0600A0A7 RID: 41127 RVA: 0x000E4428 File Offset: 0x000E2628
+		// Token: 0x17000527 RID: 1319
+		// (get) Token: 0x060024D6 RID: 9430 RVA: 0x00035177 File Offset: 0x00033377
+		// (set) Token: 0x060024D7 RID: 9431 RVA: 0x00035190 File Offset: 0x00033390
 		public unsafe bool bEnableFOVScaling
 		{
 			get
@@ -125,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002644 RID: 9796
-		// (get) Token: 0x0600A0A8 RID: 41128 RVA: 0x000E4458 File Offset: 0x000E2658
-		// (set) Token: 0x0600A0A9 RID: 41129 RVA: 0x000E4471 File Offset: 0x000E2671
+		// Token: 0x17000528 RID: 1320
+		// (get) Token: 0x060024D8 RID: 9432 RVA: 0x000351C0 File Offset: 0x000333C0
+		// (set) Token: 0x060024D9 RID: 9433 RVA: 0x000351D9 File Offset: 0x000333D9
 		public unsafe bool bCaptureMouseOnLaunch
 		{
 			get
@@ -140,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002645 RID: 9797
-		// (get) Token: 0x0600A0AA RID: 41130 RVA: 0x000E44A1 File Offset: 0x000E26A1
-		// (set) Token: 0x0600A0AB RID: 41131 RVA: 0x000E44BA File Offset: 0x000E26BA
+		// Token: 0x17000529 RID: 1321
+		// (get) Token: 0x060024DA RID: 9434 RVA: 0x00035209 File Offset: 0x00033409
+		// (set) Token: 0x060024DB RID: 9435 RVA: 0x00035222 File Offset: 0x00033422
 		public unsafe bool bDefaultViewportMouseLock_DEPRECATED
 		{
 			get
@@ -155,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002646 RID: 9798
-		// (get) Token: 0x0600A0AC RID: 41132 RVA: 0x000E44EA File Offset: 0x000E26EA
-		// (set) Token: 0x0600A0AD RID: 41133 RVA: 0x000E4503 File Offset: 0x000E2703
+		// Token: 0x1700052A RID: 1322
+		// (get) Token: 0x060024DC RID: 9436 RVA: 0x00035252 File Offset: 0x00033452
+		// (set) Token: 0x060024DD RID: 9437 RVA: 0x0003526B File Offset: 0x0003346B
 		public unsafe bool bAlwaysShowTouchInterface
 		{
 			get
@@ -170,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002647 RID: 9799
-		// (get) Token: 0x0600A0AE RID: 41134 RVA: 0x000E4533 File Offset: 0x000E2733
-		// (set) Token: 0x0600A0AF RID: 41135 RVA: 0x000E454C File Offset: 0x000E274C
+		// Token: 0x1700052B RID: 1323
+		// (get) Token: 0x060024DE RID: 9438 RVA: 0x0003529B File Offset: 0x0003349B
+		// (set) Token: 0x060024DF RID: 9439 RVA: 0x000352B4 File Offset: 0x000334B4
 		public unsafe bool bShowConsoleOnFourFingerTap
 		{
 			get
@@ -185,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002648 RID: 9800
-		// (get) Token: 0x0600A0B0 RID: 41136 RVA: 0x000E457C File Offset: 0x000E277C
-		// (set) Token: 0x0600A0B1 RID: 41137 RVA: 0x000E4595 File Offset: 0x000E2795
+		// Token: 0x1700052C RID: 1324
+		// (get) Token: 0x060024E0 RID: 9440 RVA: 0x000352E4 File Offset: 0x000334E4
+		// (set) Token: 0x060024E1 RID: 9441 RVA: 0x000352FD File Offset: 0x000334FD
 		public unsafe bool bEnableGestureRecognizer
 		{
 			get
@@ -200,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002649 RID: 9801
-		// (get) Token: 0x0600A0B2 RID: 41138 RVA: 0x000E45C5 File Offset: 0x000E27C5
-		// (set) Token: 0x0600A0B3 RID: 41139 RVA: 0x000E45D5 File Offset: 0x000E27D5
+		// Token: 0x1700052D RID: 1325
+		// (get) Token: 0x060024E2 RID: 9442 RVA: 0x0003532D File Offset: 0x0003352D
+		// (set) Token: 0x060024E3 RID: 9443 RVA: 0x0003533D File Offset: 0x0003353D
 		public unsafe bool bUseAutocorrect
 		{
 			get
@@ -215,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700264A RID: 9802
-		// (get) Token: 0x0600A0B4 RID: 41140 RVA: 0x000E45E8 File Offset: 0x000E27E8
-		// (set) Token: 0x0600A0B5 RID: 41141 RVA: 0x000E4621 File Offset: 0x000E2821
+		// Token: 0x1700052E RID: 1326
+		// (get) Token: 0x060024E4 RID: 9444 RVA: 0x00035350 File Offset: 0x00033550
+		// (set) Token: 0x060024E5 RID: 9445 RVA: 0x00035389 File Offset: 0x00033589
 		public TArray<string> ExcludedAutocorrectOS
 		{
 			get
@@ -236,9 +215,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700264B RID: 9803
-		// (get) Token: 0x0600A0B6 RID: 41142 RVA: 0x000E4630 File Offset: 0x000E2830
-		// (set) Token: 0x0600A0B7 RID: 41143 RVA: 0x000E4669 File Offset: 0x000E2869
+		// Token: 0x1700052F RID: 1327
+		// (get) Token: 0x060024E6 RID: 9446 RVA: 0x00035398 File Offset: 0x00033598
+		// (set) Token: 0x060024E7 RID: 9447 RVA: 0x000353D1 File Offset: 0x000335D1
 		public TArray<string> ExcludedAutocorrectCultures
 		{
 			get
@@ -257,9 +236,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700264C RID: 9804
-		// (get) Token: 0x0600A0B8 RID: 41144 RVA: 0x000E4678 File Offset: 0x000E2878
-		// (set) Token: 0x0600A0B9 RID: 41145 RVA: 0x000E46B1 File Offset: 0x000E28B1
+		// Token: 0x17000530 RID: 1328
+		// (get) Token: 0x060024E8 RID: 9448 RVA: 0x000353E0 File Offset: 0x000335E0
+		// (set) Token: 0x060024E9 RID: 9449 RVA: 0x00035419 File Offset: 0x00033619
 		public TArray<string> ExcludedAutocorrectDeviceModels
 		{
 			get
@@ -278,39 +257,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700264D RID: 9805
-		// (get) Token: 0x0600A0BA RID: 41146 RVA: 0x000E46BF File Offset: 0x000E28BF
-		// (set) Token: 0x0600A0BB RID: 41147 RVA: 0x000E46CF File Offset: 0x000E28CF
-		public unsafe EMouseCaptureMode DefaultViewportMouseCaptureMode
-		{
-			get
-			{
-				return (EMouseCaptureMode)(*(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultViewportMouseCaptureMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultViewportMouseCaptureMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700264E RID: 9806
-		// (get) Token: 0x0600A0BC RID: 41148 RVA: 0x000E46E0 File Offset: 0x000E28E0
-		// (set) Token: 0x0600A0BD RID: 41149 RVA: 0x000E46F0 File Offset: 0x000E28F0
-		public unsafe EMouseLockMode DefaultViewportMouseLockMode
-		{
-			get
-			{
-				return (EMouseLockMode)(*(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultViewportMouseLockMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultViewportMouseLockMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700264F RID: 9807
-		// (get) Token: 0x0600A0BE RID: 41150 RVA: 0x000E4701 File Offset: 0x000E2901
-		// (set) Token: 0x0600A0BF RID: 41151 RVA: 0x000E4711 File Offset: 0x000E2911
+		// Token: 0x17000531 RID: 1329
+		// (get) Token: 0x060024EA RID: 9450 RVA: 0x00035427 File Offset: 0x00033627
+		// (set) Token: 0x060024EB RID: 9451 RVA: 0x00035437 File Offset: 0x00033637
 		public unsafe float FOVScale
 		{
 			get
@@ -323,9 +272,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002650 RID: 9808
-		// (get) Token: 0x0600A0C0 RID: 41152 RVA: 0x000E4722 File Offset: 0x000E2922
-		// (set) Token: 0x0600A0C1 RID: 41153 RVA: 0x000E4732 File Offset: 0x000E2932
+		// Token: 0x17000532 RID: 1330
+		// (get) Token: 0x060024EC RID: 9452 RVA: 0x00035448 File Offset: 0x00033648
+		// (set) Token: 0x060024ED RID: 9453 RVA: 0x00035458 File Offset: 0x00033658
 		public unsafe float DoubleClickTime
 		{
 			get
@@ -338,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002651 RID: 9809
-		// (get) Token: 0x0600A0C2 RID: 41154 RVA: 0x000E4744 File Offset: 0x000E2944
-		// (set) Token: 0x0600A0C3 RID: 41155 RVA: 0x000E477D File Offset: 0x000E297D
+		// Token: 0x17000533 RID: 1331
+		// (get) Token: 0x060024EE RID: 9454 RVA: 0x0003546C File Offset: 0x0003366C
+		// (set) Token: 0x060024EF RID: 9455 RVA: 0x000354A5 File Offset: 0x000336A5
 		public TArray<FInputActionKeyMapping> ActionMappings
 		{
 			get
@@ -359,9 +308,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002652 RID: 9810
-		// (get) Token: 0x0600A0C4 RID: 41156 RVA: 0x000E478C File Offset: 0x000E298C
-		// (set) Token: 0x0600A0C5 RID: 41157 RVA: 0x000E47C5 File Offset: 0x000E29C5
+		// Token: 0x17000534 RID: 1332
+		// (get) Token: 0x060024F0 RID: 9456 RVA: 0x000354B4 File Offset: 0x000336B4
+		// (set) Token: 0x060024F1 RID: 9457 RVA: 0x000354ED File Offset: 0x000336ED
 		public TArray<FInputAxisKeyMapping> AxisMappings
 		{
 			get
@@ -380,60 +329,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002653 RID: 9811
-		// (get) Token: 0x0600A0C6 RID: 41158 RVA: 0x000E47D4 File Offset: 0x000E29D4
-		// (set) Token: 0x0600A0C7 RID: 41159 RVA: 0x000E480D File Offset: 0x000E2A0D
-		public TArray<FInputActionSpeechMapping> SpeechMappings
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FInputActionSpeechMapping> result;
-				if ((result = this._SpeechMappings) == null)
-				{
-					result = (this._SpeechMappings = new TArray<FInputActionSpeechMapping>(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_SpeechMappings, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.SpeechMappings.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002654 RID: 9812
-		// (get) Token: 0x0600A0C8 RID: 41160 RVA: 0x000E481B File Offset: 0x000E2A1B
-		// (set) Token: 0x0600A0C9 RID: 41161 RVA: 0x000E4830 File Offset: 0x000E2A30
-		public TSoftClassPtr<UPlayerInput> DefaultPlayerInputClass
-		{
-			get
-			{
-				return new TSoftClassPtr<UPlayerInput>(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultPlayerInputClass, this);
-			}
-			set
-			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultPlayerInputClass, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
-			}
-		}
-
-		// Token: 0x17002655 RID: 9813
-		// (get) Token: 0x0600A0CA RID: 41162 RVA: 0x000E4855 File Offset: 0x000E2A55
-		// (set) Token: 0x0600A0CB RID: 41163 RVA: 0x000E486A File Offset: 0x000E2A6A
-		public TSoftClassPtr<UInputComponent> DefaultInputComponentClass
-		{
-			get
-			{
-				return new TSoftClassPtr<UInputComponent>(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultInputComponentClass, this);
-			}
-			set
-			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)UInputSettings.__PropertyOffset_DefaultInputComponentClass, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
-			}
-		}
-
-		// Token: 0x17002656 RID: 9814
-		// (get) Token: 0x0600A0CC RID: 41164 RVA: 0x000E4890 File Offset: 0x000E2A90
-		// (set) Token: 0x0600A0CD RID: 41165 RVA: 0x000E48C9 File Offset: 0x000E2AC9
+		// Token: 0x17000535 RID: 1333
+		// (get) Token: 0x060024F2 RID: 9458 RVA: 0x000354FC File Offset: 0x000336FC
+		// (set) Token: 0x060024F3 RID: 9459 RVA: 0x00035535 File Offset: 0x00033735
 		public FSoftObjectPath DefaultTouchInterface
 		{
 			get
@@ -452,9 +350,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002657 RID: 9815
-		// (get) Token: 0x0600A0CE RID: 41166 RVA: 0x000E48EC File Offset: 0x000E2AEC
-		// (set) Token: 0x0600A0CF RID: 41167 RVA: 0x000E4925 File Offset: 0x000E2B25
+		// Token: 0x17000536 RID: 1334
+		// (get) Token: 0x060024F4 RID: 9460 RVA: 0x00035558 File Offset: 0x00033758
+		// (set) Token: 0x060024F5 RID: 9461 RVA: 0x00035591 File Offset: 0x00033791
 		public FKey ConsoleKey_DEPRECATED
 		{
 			get
@@ -473,9 +371,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002658 RID: 9816
-		// (get) Token: 0x0600A0D0 RID: 41168 RVA: 0x000E4948 File Offset: 0x000E2B48
-		// (set) Token: 0x0600A0D1 RID: 41169 RVA: 0x000E4981 File Offset: 0x000E2B81
+		// Token: 0x17000537 RID: 1335
+		// (get) Token: 0x060024F6 RID: 9462 RVA: 0x000355B4 File Offset: 0x000337B4
+		// (set) Token: 0x060024F7 RID: 9463 RVA: 0x000355ED File Offset: 0x000337ED
 		public TArray<FKey> ConsoleKeys
 		{
 			get
@@ -494,23 +392,23 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600A0D2 RID: 41170
+		// Token: 0x060024F8 RID: 9464
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetGameIsFakingTouchEvents(bool bIsFaking);
 
-		// Token: 0x0600A0D3 RID: 41171 RVA: 0x000E498F File Offset: 0x000E2B8F
+		// Token: 0x060024F9 RID: 9465 RVA: 0x000355FB File Offset: 0x000337FB
 		public void SaveKeyMappingsNotSort()
 		{
 			UInputSettings.__SaveKeyMappingsNotSort_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600A0D4 RID: 41172 RVA: 0x000E499C File Offset: 0x000E2B9C
+		// Token: 0x060024FA RID: 9466 RVA: 0x00035608 File Offset: 0x00033808
 		public void SaveKeyMappings()
 		{
 			UInputSettings.__SaveKeyMappings_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600A0D5 RID: 41173 RVA: 0x000E49A9 File Offset: 0x000E2BA9
+		// Token: 0x060024FB RID: 9467 RVA: 0x00035615 File Offset: 0x00033815
 		public void RemoveAxisMappings([Nullable(new byte[]
 		{
 			2,
@@ -520,14 +418,14 @@ namespace UnrealEngine
 			UInputSettings.__RemoveAxisMappings_Internal(base.NativePtr, (KeyMappings ?? new TArray<FInputAxisKeyMapping>()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0D6 RID: 41174 RVA: 0x000E49C7 File Offset: 0x000E2BC7
+		// Token: 0x060024FC RID: 9468 RVA: 0x00035633 File Offset: 0x00033833
 		[NullableContext(2)]
 		public void RemoveAxisMapping(in FInputAxisKeyMapping KeyMapping, bool bForceRebuildKeymaps = true)
 		{
 			UInputSettings.__RemoveAxisMapping_Internal(base.NativePtr, (KeyMapping ?? new FInputAxisKeyMapping()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0D7 RID: 41175 RVA: 0x000E49E5 File Offset: 0x000E2BE5
+		// Token: 0x060024FD RID: 9469 RVA: 0x00035651 File Offset: 0x00033851
 		public void RemoveActionMappings([Nullable(new byte[]
 		{
 			2,
@@ -537,34 +435,34 @@ namespace UnrealEngine
 			UInputSettings.__RemoveActionMappings_Internal(base.NativePtr, (KeyMappings ?? new TArray<FInputActionKeyMapping>()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0D8 RID: 41176 RVA: 0x000E4A03 File Offset: 0x000E2C03
+		// Token: 0x060024FE RID: 9470 RVA: 0x0003566F File Offset: 0x0003386F
 		[NullableContext(2)]
 		public void RemoveActionMapping(in FInputActionKeyMapping KeyMapping, bool bForceRebuildKeymaps = true)
 		{
 			UInputSettings.__RemoveActionMapping_Internal(base.NativePtr, (KeyMapping ?? new FInputActionKeyMapping()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0D9 RID: 41177 RVA: 0x000E4A21 File Offset: 0x000E2C21
+		// Token: 0x060024FF RID: 9471 RVA: 0x0003568D File Offset: 0x0003388D
 		public FName GetKeyboardPrimaryLangId()
 		{
 			return UInputSettings.__GetKeyboardPrimaryLangId_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600A0DA RID: 41178 RVA: 0x000E4A2E File Offset: 0x000E2C2E
+		// Token: 0x06002500 RID: 9472 RVA: 0x0003569A File Offset: 0x0003389A
 		[NullableContext(2)]
 		public static UInputSettings GetInputSettings()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UInputSettings>(UInputSettings.__GetInputSettings_Internal());
 		}
 
-		// Token: 0x0600A0DB RID: 41179 RVA: 0x000E4A3A File Offset: 0x000E2C3A
+		// Token: 0x06002501 RID: 9473 RVA: 0x000356A6 File Offset: 0x000338A6
 		[NullableContext(2)]
 		public void GetAxisNames(ref TArray<FName> AxisNames)
 		{
 			UInputSettings.__GetAxisNames_Internal(base.NativePtr, (AxisNames ?? new TArray<FName>()).NativePtr);
 		}
 
-		// Token: 0x0600A0DC RID: 41180 RVA: 0x000E4A57 File Offset: 0x000E2C57
+		// Token: 0x06002502 RID: 9474 RVA: 0x000356C3 File Offset: 0x000338C3
 		public void GetAxisMappingByName(FName InAxisName, [Nullable(new byte[]
 		{
 			2,
@@ -574,14 +472,14 @@ namespace UnrealEngine
 			UInputSettings.__GetAxisMappingByName_Internal(base.NativePtr, InAxisName, (OutMappings ?? new TArray<FInputAxisKeyMapping>()).NativePtr);
 		}
 
-		// Token: 0x0600A0DD RID: 41181 RVA: 0x000E4A75 File Offset: 0x000E2C75
+		// Token: 0x06002503 RID: 9475 RVA: 0x000356E1 File Offset: 0x000338E1
 		[NullableContext(2)]
 		public void GetActionNames(ref TArray<FName> ActionNames)
 		{
 			UInputSettings.__GetActionNames_Internal(base.NativePtr, (ActionNames ?? new TArray<FName>()).NativePtr);
 		}
 
-		// Token: 0x0600A0DE RID: 41182 RVA: 0x000E4A92 File Offset: 0x000E2C92
+		// Token: 0x06002504 RID: 9476 RVA: 0x000356FE File Offset: 0x000338FE
 		public void GetActionMappingByName(FName InActionName, [Nullable(new byte[]
 		{
 			2,
@@ -591,13 +489,13 @@ namespace UnrealEngine
 			UInputSettings.__GetActionMappingByName_Internal(base.NativePtr, InActionName, (OutMappings ?? new TArray<FInputActionKeyMapping>()).NativePtr);
 		}
 
-		// Token: 0x0600A0DF RID: 41183 RVA: 0x000E4AB0 File Offset: 0x000E2CB0
+		// Token: 0x06002505 RID: 9477 RVA: 0x0003571C File Offset: 0x0003391C
 		public void ForceRebuildKeymaps()
 		{
 			UInputSettings.__ForceRebuildKeymaps_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600A0E0 RID: 41184 RVA: 0x000E4ABD File Offset: 0x000E2CBD
+		// Token: 0x06002506 RID: 9478 RVA: 0x00035729 File Offset: 0x00033929
 		public void AddAxisMappings([Nullable(new byte[]
 		{
 			2,
@@ -607,14 +505,14 @@ namespace UnrealEngine
 			UInputSettings.__AddAxisMappings_Internal(base.NativePtr, (KeyMappings ?? new TArray<FInputAxisKeyMapping>()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0E1 RID: 41185 RVA: 0x000E4ADB File Offset: 0x000E2CDB
+		// Token: 0x06002507 RID: 9479 RVA: 0x00035747 File Offset: 0x00033947
 		[NullableContext(2)]
 		public void AddAxisMapping(in FInputAxisKeyMapping KeyMapping, bool bForceRebuildKeymaps = true)
 		{
 			UInputSettings.__AddAxisMapping_Internal(base.NativePtr, (KeyMapping ?? new FInputAxisKeyMapping()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0E2 RID: 41186 RVA: 0x000E4AF9 File Offset: 0x000E2CF9
+		// Token: 0x06002508 RID: 9480 RVA: 0x00035765 File Offset: 0x00033965
 		public void AddActionMappings([Nullable(new byte[]
 		{
 			2,
@@ -624,179 +522,168 @@ namespace UnrealEngine
 			UInputSettings.__AddActionMappings_Internal(base.NativePtr, (KeyMappings ?? new TArray<FInputActionKeyMapping>()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0E3 RID: 41187 RVA: 0x000E4B17 File Offset: 0x000E2D17
+		// Token: 0x06002509 RID: 9481 RVA: 0x00035783 File Offset: 0x00033983
 		[NullableContext(2)]
 		public void AddActionMapping(in FInputActionKeyMapping KeyMapping, bool bForceRebuildKeymaps = true)
 		{
 			UInputSettings.__AddActionMapping_Internal(base.NativePtr, (KeyMapping ?? new FInputActionKeyMapping()).NativePtr, bForceRebuildKeymaps);
 		}
 
-		// Token: 0x0600A0E4 RID: 41188
+		// Token: 0x0600250A RID: 9482
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SaveKeyMappingsNotSort_Internal(IntPtr @this);
 
-		// Token: 0x0600A0E5 RID: 41189
+		// Token: 0x0600250B RID: 9483
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SaveKeyMappings_Internal(IntPtr @this);
 
-		// Token: 0x0600A0E6 RID: 41190
+		// Token: 0x0600250C RID: 9484
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveAxisMappings_Internal(IntPtr @this, IntPtr KeyMappings, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0E7 RID: 41191
+		// Token: 0x0600250D RID: 9485
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveAxisMapping_Internal(IntPtr @this, IntPtr KeyMapping, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0E8 RID: 41192
+		// Token: 0x0600250E RID: 9486
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveActionMappings_Internal(IntPtr @this, IntPtr KeyMappings, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0E9 RID: 41193
+		// Token: 0x0600250F RID: 9487
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveActionMapping_Internal(IntPtr @this, IntPtr KeyMapping, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0EA RID: 41194
+		// Token: 0x06002510 RID: 9488
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FName __GetKeyboardPrimaryLangId_Internal(IntPtr @this);
 
-		// Token: 0x0600A0EB RID: 41195
+		// Token: 0x06002511 RID: 9489
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetInputSettings_Internal();
 
-		// Token: 0x0600A0EC RID: 41196
+		// Token: 0x06002512 RID: 9490
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAxisNames_Internal(IntPtr @this, IntPtr AxisNames);
 
-		// Token: 0x0600A0ED RID: 41197
+		// Token: 0x06002513 RID: 9491
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAxisMappingByName_Internal(IntPtr @this, FName InAxisName, IntPtr OutMappings);
 
-		// Token: 0x0600A0EE RID: 41198
+		// Token: 0x06002514 RID: 9492
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetActionNames_Internal(IntPtr @this, IntPtr ActionNames);
 
-		// Token: 0x0600A0EF RID: 41199
+		// Token: 0x06002515 RID: 9493
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetActionMappingByName_Internal(IntPtr @this, FName InActionName, IntPtr OutMappings);
 
-		// Token: 0x0600A0F0 RID: 41200
+		// Token: 0x06002516 RID: 9494
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ForceRebuildKeymaps_Internal(IntPtr @this);
 
-		// Token: 0x0600A0F1 RID: 41201
+		// Token: 0x06002517 RID: 9495
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddAxisMappings_Internal(IntPtr @this, IntPtr KeyMappings, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0F2 RID: 41202
+		// Token: 0x06002518 RID: 9496
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddAxisMapping_Internal(IntPtr @this, IntPtr KeyMapping, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0F3 RID: 41203
+		// Token: 0x06002519 RID: 9497
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddActionMappings_Internal(IntPtr @this, IntPtr KeyMappings, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0F4 RID: 41204
+		// Token: 0x0600251A RID: 9498
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddActionMapping_Internal(IntPtr @this, IntPtr KeyMapping, bool bForceRebuildKeymaps);
 
-		// Token: 0x0600A0F5 RID: 41205 RVA: 0x000E4B35 File Offset: 0x000E2D35
+		// Token: 0x0600251B RID: 9499 RVA: 0x000357A1 File Offset: 0x000339A1
 		static UInputSettings()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.InputSettings");
 		}
 
-		// Token: 0x0600A0F6 RID: 41206 RVA: 0x000E4B43 File Offset: 0x000E2D43
+		// Token: 0x0600251C RID: 9500 RVA: 0x000357AF File Offset: 0x000339AF
 		protected UInputSettings(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005849 RID: 22601
+		// Token: 0x04000DDA RID: 3546
 		public new const string __ObjectPath = "/Script/Engine.InputSettings";
 
-		// Token: 0x0400584A RID: 22602
+		// Token: 0x04000DDB RID: 3547
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400584B RID: 22603
+		// Token: 0x04000DDC RID: 3548
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400584C RID: 22604
-		internal static int __PropertyOffset_AxisConfig;
-
-		// Token: 0x0400584D RID: 22605
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FInputAxisConfigEntry> _AxisConfig;
-
-		// Token: 0x0400584E RID: 22606
+		// Token: 0x04000DDD RID: 3549
 		internal static int __PropertyOffset_bAltEnterTogglesFullscreen;
 
-		// Token: 0x0400584F RID: 22607
+		// Token: 0x04000DDE RID: 3550
 		internal static byte __PropertyMask_bAltEnterTogglesFullscreen;
 
-		// Token: 0x04005850 RID: 22608
+		// Token: 0x04000DDF RID: 3551
 		internal static int __PropertyOffset_bF11TogglesFullscreen;
 
-		// Token: 0x04005851 RID: 22609
+		// Token: 0x04000DE0 RID: 3552
 		internal static byte __PropertyMask_bF11TogglesFullscreen;
 
-		// Token: 0x04005852 RID: 22610
+		// Token: 0x04000DE1 RID: 3553
 		internal static int __PropertyOffset_bUseMouseForTouch;
 
-		// Token: 0x04005853 RID: 22611
+		// Token: 0x04000DE2 RID: 3554
 		internal static byte __PropertyMask_bUseMouseForTouch;
 
-		// Token: 0x04005854 RID: 22612
+		// Token: 0x04000DE3 RID: 3555
 		internal static int __PropertyOffset_bEnableMouseSmoothing;
 
-		// Token: 0x04005855 RID: 22613
+		// Token: 0x04000DE4 RID: 3556
 		internal static byte __PropertyMask_bEnableMouseSmoothing;
 
-		// Token: 0x04005856 RID: 22614
+		// Token: 0x04000DE5 RID: 3557
 		internal static int __PropertyOffset_bEnableFOVScaling;
 
-		// Token: 0x04005857 RID: 22615
+		// Token: 0x04000DE6 RID: 3558
 		internal static byte __PropertyMask_bEnableFOVScaling;
 
-		// Token: 0x04005858 RID: 22616
+		// Token: 0x04000DE7 RID: 3559
 		internal static int __PropertyOffset_bCaptureMouseOnLaunch;
 
-		// Token: 0x04005859 RID: 22617
+		// Token: 0x04000DE8 RID: 3560
 		internal static byte __PropertyMask_bCaptureMouseOnLaunch;
 
-		// Token: 0x0400585A RID: 22618
+		// Token: 0x04000DE9 RID: 3561
 		internal static int __PropertyOffset_bDefaultViewportMouseLock_DEPRECATED;
 
-		// Token: 0x0400585B RID: 22619
+		// Token: 0x04000DEA RID: 3562
 		internal static byte __PropertyMask_bDefaultViewportMouseLock_DEPRECATED;
 
-		// Token: 0x0400585C RID: 22620
+		// Token: 0x04000DEB RID: 3563
 		internal static int __PropertyOffset_bAlwaysShowTouchInterface;
 
-		// Token: 0x0400585D RID: 22621
+		// Token: 0x04000DEC RID: 3564
 		internal static byte __PropertyMask_bAlwaysShowTouchInterface;
 
-		// Token: 0x0400585E RID: 22622
+		// Token: 0x04000DED RID: 3565
 		internal static int __PropertyOffset_bShowConsoleOnFourFingerTap;
 
-		// Token: 0x0400585F RID: 22623
+		// Token: 0x04000DEE RID: 3566
 		internal static byte __PropertyMask_bShowConsoleOnFourFingerTap;
 
-		// Token: 0x04005860 RID: 22624
+		// Token: 0x04000DEF RID: 3567
 		internal static int __PropertyOffset_bEnableGestureRecognizer;
 
-		// Token: 0x04005861 RID: 22625
+		// Token: 0x04000DF0 RID: 3568
 		internal static byte __PropertyMask_bEnableGestureRecognizer;
 
-		// Token: 0x04005862 RID: 22626
+		// Token: 0x04000DF1 RID: 3569
 		internal static int __PropertyOffset_bUseAutocorrect;
 
-		// Token: 0x04005863 RID: 22627
+		// Token: 0x04000DF2 RID: 3570
 		internal static int __PropertyOffset_ExcludedAutocorrectOS;
 
-		// Token: 0x04005864 RID: 22628
+		// Token: 0x04000DF3 RID: 3571
 		[Nullable(new byte[]
 		{
 			2,
@@ -804,10 +691,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _ExcludedAutocorrectOS;
 
-		// Token: 0x04005865 RID: 22629
+		// Token: 0x04000DF4 RID: 3572
 		internal static int __PropertyOffset_ExcludedAutocorrectCultures;
 
-		// Token: 0x04005866 RID: 22630
+		// Token: 0x04000DF5 RID: 3573
 		[Nullable(new byte[]
 		{
 			2,
@@ -815,10 +702,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _ExcludedAutocorrectCultures;
 
-		// Token: 0x04005867 RID: 22631
+		// Token: 0x04000DF6 RID: 3574
 		internal static int __PropertyOffset_ExcludedAutocorrectDeviceModels;
 
-		// Token: 0x04005868 RID: 22632
+		// Token: 0x04000DF7 RID: 3575
 		[Nullable(new byte[]
 		{
 			2,
@@ -826,22 +713,16 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _ExcludedAutocorrectDeviceModels;
 
-		// Token: 0x04005869 RID: 22633
-		internal static int __PropertyOffset_DefaultViewportMouseCaptureMode;
-
-		// Token: 0x0400586A RID: 22634
-		internal static int __PropertyOffset_DefaultViewportMouseLockMode;
-
-		// Token: 0x0400586B RID: 22635
+		// Token: 0x04000DF8 RID: 3576
 		internal static int __PropertyOffset_FOVScale;
 
-		// Token: 0x0400586C RID: 22636
+		// Token: 0x04000DF9 RID: 3577
 		internal static int __PropertyOffset_DoubleClickTime;
 
-		// Token: 0x0400586D RID: 22637
+		// Token: 0x04000DFA RID: 3578
 		internal static int __PropertyOffset_ActionMappings;
 
-		// Token: 0x0400586E RID: 22638
+		// Token: 0x04000DFB RID: 3579
 		[Nullable(new byte[]
 		{
 			2,
@@ -849,10 +730,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FInputActionKeyMapping> _ActionMappings;
 
-		// Token: 0x0400586F RID: 22639
+		// Token: 0x04000DFC RID: 3580
 		internal static int __PropertyOffset_AxisMappings;
 
-		// Token: 0x04005870 RID: 22640
+		// Token: 0x04000DFD RID: 3581
 		[Nullable(new byte[]
 		{
 			2,
@@ -860,41 +741,24 @@ namespace UnrealEngine
 		})]
 		private TArray<FInputAxisKeyMapping> _AxisMappings;
 
-		// Token: 0x04005871 RID: 22641
-		internal static int __PropertyOffset_SpeechMappings;
-
-		// Token: 0x04005872 RID: 22642
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FInputActionSpeechMapping> _SpeechMappings;
-
-		// Token: 0x04005873 RID: 22643
-		internal static int __PropertyOffset_DefaultPlayerInputClass;
-
-		// Token: 0x04005874 RID: 22644
-		internal static int __PropertyOffset_DefaultInputComponentClass;
-
-		// Token: 0x04005875 RID: 22645
+		// Token: 0x04000DFE RID: 3582
 		internal static int __PropertyOffset_DefaultTouchInterface;
 
-		// Token: 0x04005876 RID: 22646
+		// Token: 0x04000DFF RID: 3583
 		[Nullable(2)]
 		private FSoftObjectPath _DefaultTouchInterface;
 
-		// Token: 0x04005877 RID: 22647
+		// Token: 0x04000E00 RID: 3584
 		internal static int __PropertyOffset_ConsoleKey_DEPRECATED;
 
-		// Token: 0x04005878 RID: 22648
+		// Token: 0x04000E01 RID: 3585
 		[Nullable(2)]
 		private FKey _ConsoleKey_DEPRECATED;
 
-		// Token: 0x04005879 RID: 22649
+		// Token: 0x04000E02 RID: 3586
 		internal static int __PropertyOffset_ConsoleKeys;
 
-		// Token: 0x0400587A RID: 22650
+		// Token: 0x04000E03 RID: 3587
 		[Nullable(new byte[]
 		{
 			2,

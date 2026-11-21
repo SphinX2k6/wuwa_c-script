@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 {
-	// Token: 0x02006EDA RID: 28378
+	// Token: 0x0200605A RID: 24666
 	internal class ShowcaseInspectGrid : UiPanelBase
 	{
-		// Token: 0x06045212 RID: 283154 RVA: 0x011186E0 File Offset: 0x011168E0
+		// Token: 0x0603B3BB RID: 242619 RVA: 0x010C2470 File Offset: 0x010C0670
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06045213 RID: 283155 RVA: 0x01118765 File Offset: 0x01116965
+		// Token: 0x0603B3BC RID: 242620 RVA: 0x010C24F5 File Offset: 0x010C06F5
 		protected override void OnStart()
 		{
 			this.InitTransform();
 		}
 
-		// Token: 0x06045214 RID: 283156 RVA: 0x01118770 File Offset: 0x01116970
+		// Token: 0x0603B3BD RID: 242621 RVA: 0x010C2500 File Offset: 0x010C0700
 		public void InitTransform()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -57,14 +57,14 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			rootItem2.SetUIWorldLocation(fvector);
 		}
 
-		// Token: 0x06045215 RID: 283157 RVA: 0x011187D7 File Offset: 0x011169D7
+		// Token: 0x0603B3BE RID: 242622 RVA: 0x010C2567 File Offset: 0x010C0767
 		[NullableContext(1)]
 		public void SetDollItemInfo(DollItemInfo dollItemInfo)
 		{
 			this.DollItemInfo = dollItemInfo;
 		}
 
-		// Token: 0x06045216 RID: 283158 RVA: 0x011187E0 File Offset: 0x011169E0
+		// Token: 0x0603B3BF RID: 242623 RVA: 0x010C2570 File Offset: 0x010C0770
 		private void OnPreview()
 		{
 			if (this.DollItemInfo != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 			}
 		}
 
-		// Token: 0x04023FF2 RID: 147442
+		// Token: 0x0401F2A5 RID: 127653
 		[Nullable(2)]
 		private DollItemInfo DollItemInfo;
 	}

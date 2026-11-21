@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200467A RID: 18042
+	// Token: 0x020035AB RID: 13739
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class InputCallback<[Nullable(2)] T>
 	{
-		// Token: 0x0602E8FE RID: 190718 RVA: 0x00AC74D4 File Offset: 0x00AC56D4
+		// Token: 0x06023048 RID: 143432 RVA: 0x009F5034 File Offset: 0x009F3234
 		public InputCallback(string name)
 		{
 			this.InputIdentification = new InputIdentification(name);
 		}
 
-		// Token: 0x0602E8FF RID: 190719 RVA: 0x00AC750C File Offset: 0x00AC570C
+		// Token: 0x06023049 RID: 143433 RVA: 0x009F506C File Offset: 0x009F326C
 		public void Call(T value)
 		{
 			this.IsCalling = true;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Ui
 			this.IsCalling = false;
 		}
 
-		// Token: 0x0602E900 RID: 190720 RVA: 0x00AC7588 File Offset: 0x00AC5788
+		// Token: 0x0602304A RID: 143434 RVA: 0x009F50E8 File Offset: 0x009F32E8
 		public void Add(TInputHandle<T> callback)
 		{
 			if (this.IsCalling)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Ui
 			this.CallbackList.Add(callback);
 		}
 
-		// Token: 0x0602E901 RID: 190721 RVA: 0x00AC75AC File Offset: 0x00AC57AC
+		// Token: 0x0602304B RID: 143435 RVA: 0x009F510C File Offset: 0x009F330C
 		private void TryAddAllPendingCallback()
 		{
 			if (this.PendingAddCallbackList.Count <= 0)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Ui
 			this.PendingAddCallbackList.Clear();
 		}
 
-		// Token: 0x0602E902 RID: 190722 RVA: 0x00AC7620 File Offset: 0x00AC5820
+		// Token: 0x0602304C RID: 143436 RVA: 0x009F5180 File Offset: 0x009F3380
 		public void Remove(TInputHandle<T> callback)
 		{
 			if (this.IsCalling)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Ui
 			this.CallbackList.RemoveAt(num);
 		}
 
-		// Token: 0x0602E903 RID: 190723 RVA: 0x00AC7660 File Offset: 0x00AC5860
+		// Token: 0x0602304D RID: 143437 RVA: 0x009F51C0 File Offset: 0x009F33C0
 		private void TryRemoveAllPendingCallback()
 		{
 			if (this.PendingRemoveCallbackList.Count <= 0)
@@ -87,33 +87,33 @@ namespace CSharpScript.Game.Ui
 			this.PendingRemoveCallbackList.Clear();
 		}
 
-		// Token: 0x0602E904 RID: 190724 RVA: 0x00AC76E4 File Offset: 0x00AC58E4
+		// Token: 0x0602304E RID: 143438 RVA: 0x009F5244 File Offset: 0x009F3444
 		public void Clear()
 		{
 			this.InputIdentification = null;
 			this.CallbackList.Clear();
 		}
 
-		// Token: 0x0602E905 RID: 190725 RVA: 0x00AC76F8 File Offset: 0x00AC58F8
+		// Token: 0x0602304F RID: 143439 RVA: 0x009F5258 File Offset: 0x009F3458
 		public int Length()
 		{
 			return this.CallbackList.Count;
 		}
 
-		// Token: 0x04019525 RID: 103717
+		// Token: 0x04013BCC RID: 80844
 		[Nullable(2)]
 		private InputIdentification InputIdentification;
 
-		// Token: 0x04019526 RID: 103718
+		// Token: 0x04013BCD RID: 80845
 		private readonly List<TInputHandle<T>> CallbackList = new List<TInputHandle<T>>();
 
-		// Token: 0x04019527 RID: 103719
+		// Token: 0x04013BCE RID: 80846
 		private readonly List<TInputHandle<T>> PendingAddCallbackList = new List<TInputHandle<T>>();
 
-		// Token: 0x04019528 RID: 103720
+		// Token: 0x04013BCF RID: 80847
 		private readonly List<TInputHandle<T>> PendingRemoveCallbackList = new List<TInputHandle<T>>();
 
-		// Token: 0x04019529 RID: 103721
+		// Token: 0x04013BD0 RID: 80848
 		private bool IsCalling;
 	}
 }

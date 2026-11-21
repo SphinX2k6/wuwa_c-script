@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008B7 RID: 2231
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200095A RID: 2394
 	public class TargetGearGroupComponent : IComponentBase
 	{
-		// Token: 0x06003221 RID: 12833 RVA: 0x000808E0 File Offset: 0x0007EAE0
+		// Token: 0x0600355D RID: 13661 RVA: 0x00087DC8 File Offset: 0x00085FC8
 		private TargetGearGroupComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003222 RID: 12834 RVA: 0x00080918 File Offset: 0x0007EB18
+		// Token: 0x0600355E RID: 13662 RVA: 0x00087E00 File Offset: 0x00086000
 		public static TargetGearGroupComponent Create([Nullable(2)] TargetGearGroupComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003223 RID: 12835 RVA: 0x0008092B File Offset: 0x0007EB2B
+		// Token: 0x0600355F RID: 13663 RVA: 0x00087E13 File Offset: 0x00086013
 		public static TargetGearGroupComponent CreateFromSetValue([Nullable(2)] TargetGearGroupComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003224 RID: 12836 RVA: 0x0008093E File Offset: 0x0007EB3E
+		// Token: 0x06003560 RID: 13664 RVA: 0x00087E26 File Offset: 0x00086026
 		public new TargetGearGroupComponent_SetValue ToSetValue()
 		{
 			return new TargetGearGroupComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D61 RID: 3425
-		// (get) Token: 0x06003225 RID: 12837 RVA: 0x00080978 File Offset: 0x0007EB78
-		// (set) Token: 0x06003226 RID: 12838 RVA: 0x000809B2 File Offset: 0x0007EBB2
+		// Token: 0x17000E2A RID: 3626
+		// (get) Token: 0x06003561 RID: 13665 RVA: 0x00087E60 File Offset: 0x00086060
+		// (set) Token: 0x06003562 RID: 13666 RVA: 0x00087E9A File Offset: 0x0008609A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D62 RID: 3426
-		// (get) Token: 0x06003227 RID: 12839 RVA: 0x000809C0 File Offset: 0x0007EBC0
-		// (set) Token: 0x06003228 RID: 12840 RVA: 0x000809EA File Offset: 0x0007EBEA
+		// Token: 0x17000E2B RID: 3627
+		// (get) Token: 0x06003563 RID: 13667 RVA: 0x00087EA8 File Offset: 0x000860A8
+		// (set) Token: 0x06003564 RID: 13668 RVA: 0x00087ED2 File Offset: 0x000860D2
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D63 RID: 3427
-		// (get) Token: 0x06003229 RID: 12841 RVA: 0x000809F8 File Offset: 0x0007EBF8
-		// (set) Token: 0x0600322A RID: 12842 RVA: 0x00080A23 File Offset: 0x0007EC23
+		// Token: 0x17000E2C RID: 3628
+		// (get) Token: 0x06003565 RID: 13669 RVA: 0x00087EE0 File Offset: 0x000860E0
+		// (set) Token: 0x06003566 RID: 13670 RVA: 0x00087F0B File Offset: 0x0008610B
 		public virtual string Type
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D64 RID: 3428
-		// (get) Token: 0x0600322B RID: 12843 RVA: 0x00080A34 File Offset: 0x0007EC34
-		// (set) Token: 0x0600322C RID: 12844 RVA: 0x00080AC7 File Offset: 0x0007ECC7
+		// Token: 0x17000E2D RID: 3629
+		// (get) Token: 0x06003567 RID: 13671 RVA: 0x00087F1C File Offset: 0x0008611C
+		// (set) Token: 0x06003568 RID: 13672 RVA: 0x00087FAF File Offset: 0x000861AF
 		public virtual List<ITargetGearGroupConfig> GroupConfigs
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040020DD RID: 8413
+		// Token: 0x040022EF RID: 8943
 		[Nullable(2)]
 		protected new TargetGearGroupComponent FbInstance;
 
-		// Token: 0x040020DE RID: 8414
+		// Token: 0x040022F0 RID: 8944
 		[Nullable(2)]
 		protected new TargetGearGroupComponent_SetValue PocoInterface;
 
-		// Token: 0x040020DF RID: 8415
+		// Token: 0x040022F1 RID: 8945
 		private List<ITargetGearGroupConfig> _GroupConfigsCache;
 
-		// Token: 0x040020E0 RID: 8416
+		// Token: 0x040022F2 RID: 8946
 		private bool _GroupConfigsInited;
 	}
 }

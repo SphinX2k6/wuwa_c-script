@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 {
-	// Token: 0x020048BB RID: 18619
+	// Token: 0x02003832 RID: 14386
 	public class DestroyState : VehicleStateBase
 	{
-		// Token: 0x06030A8A RID: 199306 RVA: 0x00B4C2EA File Offset: 0x00B4A4EA
+		// Token: 0x060255B6 RID: 153014 RVA: 0x00A870F2 File Offset: 0x00A852F2
 		[NullableContext(1)]
 		public DestroyState(VehicleSmBlackBoard blackBoard) : base(EVehicleStateType.Destroy, blackBoard)
 		{
 		}
 
-		// Token: 0x06030A8B RID: 199307 RVA: 0x00B4C2F4 File Offset: 0x00B4A4F4
+		// Token: 0x060255B7 RID: 153015 RVA: 0x00A870FC File Offset: 0x00A852FC
 		[NullableContext(2)]
 		protected override void OnEnter(EVehicleStateType lastState, string reason = null)
 		{

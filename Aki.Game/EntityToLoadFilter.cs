@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034BD RID: 13501
+// Token: 0x02002A31 RID: 10801
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,8 +11,8 @@ using CSharpScript.Game.Common.Event;
 })]
 public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 {
-	// Token: 0x170028C9 RID: 10441
-	// (get) Token: 0x0601D66F RID: 120431 RVA: 0x00833F00 File Offset: 0x00832100
+	// Token: 0x17002C61 RID: 11361
+	// (get) Token: 0x0601B36E RID: 111470 RVA: 0x0085B3A8 File Offset: 0x008595A8
 	public override string DebugName
 	{
 		get
@@ -21,8 +21,8 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		}
 	}
 
-	// Token: 0x170028CA RID: 10442
-	// (get) Token: 0x0601D670 RID: 120432 RVA: 0x00833F07 File Offset: 0x00832107
+	// Token: 0x17002C62 RID: 11362
+	// (get) Token: 0x0601B36F RID: 111471 RVA: 0x0085B3AF File Offset: 0x008595AF
 	public string MaxLoadingDebugName
 	{
 		get
@@ -31,8 +31,8 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		}
 	}
 
-	// Token: 0x170028CB RID: 10443
-	// (get) Token: 0x0601D671 RID: 120433 RVA: 0x00833F0F File Offset: 0x0083210F
+	// Token: 0x17002C63 RID: 11363
+	// (get) Token: 0x0601B370 RID: 111472 RVA: 0x0085B3B7 File Offset: 0x008595B7
 	public string LoadingIntervalDebugName
 	{
 		get
@@ -41,9 +41,9 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		}
 	}
 
-	// Token: 0x170028CC RID: 10444
-	// (get) Token: 0x0601D672 RID: 120434 RVA: 0x00833F17 File Offset: 0x00832117
-	// (set) Token: 0x0601D673 RID: 120435 RVA: 0x00833F1F File Offset: 0x0083211F
+	// Token: 0x17002C64 RID: 11364
+	// (get) Token: 0x0601B371 RID: 111473 RVA: 0x0085B3BF File Offset: 0x008595BF
+	// (set) Token: 0x0601B372 RID: 111474 RVA: 0x0085B3C7 File Offset: 0x008595C7
 	public long MaxLoadingCount
 	{
 		get
@@ -60,9 +60,9 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		}
 	}
 
-	// Token: 0x170028CD RID: 10445
-	// (get) Token: 0x0601D674 RID: 120436 RVA: 0x00833F42 File Offset: 0x00832142
-	// (set) Token: 0x0601D675 RID: 120437 RVA: 0x00833F4A File Offset: 0x0083214A
+	// Token: 0x17002C65 RID: 11365
+	// (get) Token: 0x0601B373 RID: 111475 RVA: 0x0085B3EA File Offset: 0x008595EA
+	// (set) Token: 0x0601B374 RID: 111476 RVA: 0x0085B3F2 File Offset: 0x008595F2
 	public long LoadingInterval
 	{
 		get
@@ -79,21 +79,21 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		}
 	}
 
-	// Token: 0x0601D676 RID: 120438 RVA: 0x00833F6D File Offset: 0x0083216D
+	// Token: 0x0601B375 RID: 111477 RVA: 0x0085B415 File Offset: 0x00859615
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Emit<EntityToLoadFilter>(EEventName.EntityToLoadFilterCreated, this);
 		return true;
 	}
 
-	// Token: 0x0601D677 RID: 120439 RVA: 0x00833F81 File Offset: 0x00832181
+	// Token: 0x0601B376 RID: 111478 RVA: 0x0085B429 File Offset: 0x00859629
 	protected override bool OnCleanup()
 	{
 		EventSystem.Instance.Emit<EntityToLoadFilter>(EEventName.EntityToLoadFilterDestroyed, this);
 		return true;
 	}
 
-	// Token: 0x0601D678 RID: 120440 RVA: 0x00833F95 File Offset: 0x00832195
+	// Token: 0x0601B377 RID: 111479 RVA: 0x0085B43D File Offset: 0x0085963D
 	public static EntityToLoadFilter Create()
 	{
 		EntityToLoadFilter entityToLoadFilter = new EntityToLoadFilter();
@@ -101,15 +101,15 @@ public class EntityToLoadFilter : Filter<EntityHandle>, IEntityToLoadParam
 		return entityToLoadFilter;
 	}
 
-	// Token: 0x0400E7AB RID: 59307
+	// Token: 0x0400EC5F RID: 60511
 	public const long MAX_LOADING_ENTITY_COUNT = 4L;
 
-	// Token: 0x0400E7AC RID: 59308
+	// Token: 0x0400EC60 RID: 60512
 	public const long LOADING_INTERVAL = 0L;
 
-	// Token: 0x0400E7AD RID: 59309
+	// Token: 0x0400EC61 RID: 60513
 	private long MaxLoadingCountInternal = 4L;
 
-	// Token: 0x0400E7AE RID: 59310
+	// Token: 0x0400EC62 RID: 60514
 	private long LoadingIntervalInternal;
 }

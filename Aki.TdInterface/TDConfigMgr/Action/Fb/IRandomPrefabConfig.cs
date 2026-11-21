@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002925 RID: 10533
+	// Token: 0x02002C01 RID: 11265
 	public class IRandomPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600E9C6 RID: 59846 RVA: 0x002242D4 File Offset: 0x002224D4
-		[NullableContext(1)]
+		// Token: 0x0600F818 RID: 63512 RVA: 0x0024162C File Offset: 0x0023F82C
 		public static IRandomPrefabConfig Create(IRandomPrefabConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700493E RID: 18750
-		// (get) Token: 0x0600E9C7 RID: 59847 RVA: 0x002242F3 File Offset: 0x002224F3
+		// Token: 0x17004CC4 RID: 19652
+		// (get) Token: 0x0600F819 RID: 63513 RVA: 0x0024164B File Offset: 0x0023F84B
 		public override ECreatePrefabType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700493F RID: 18751
-		// (get) Token: 0x0600E9C8 RID: 59848 RVA: 0x00224300 File Offset: 0x00222500
+		// Token: 0x17004CC5 RID: 19653
+		// (get) Token: 0x0600F81A RID: 63514 RVA: 0x00241658 File Offset: 0x0023F858
 		public virtual int RandomPrefabId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080F7 RID: 33015
+		// Token: 0x040087C5 RID: 34757
 		private IRandomPrefabConfig Instance;
 	}
 }

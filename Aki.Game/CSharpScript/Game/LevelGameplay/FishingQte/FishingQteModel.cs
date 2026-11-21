@@ -1,40 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E33 RID: 28211
+	// Token: 0x02005FB4 RID: 24500
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class FishingQteModel : ModelBase
 	{
-		// Token: 0x17009A2A RID: 39466
-		// (get) Token: 0x06044C49 RID: 281673 RVA: 0x010F7CDB File Offset: 0x010F5EDB
+		// Token: 0x17006F3F RID: 28479
+		// (get) Token: 0x0603ADD7 RID: 241111 RVA: 0x010A23AF File Offset: 0x010A05AF
 		[Nullable(2)]
 		public IFishingQteConfig GameConfig
 		{
 			[NullableContext(2)]
 			get
 			{
-				if (PublicUtil.Instance.UseDbConfig())
-				{
-					return this.GameDbConfigProxy;
-				}
-				return this.GameJsonConfig;
+				return this.GameDbConfigProxy;
 			}
 		}
 
-		// Token: 0x06044C4A RID: 281674 RVA: 0x010F7CF8 File Offset: 0x010F5EF8
+		// Token: 0x0603ADD8 RID: 241112 RVA: 0x010A23B8 File Offset: 0x010A05B8
 		[NullableContext(0)]
 		public UniTask<bool> GameplayStart(int pbEntityId, long creatureDataId)
 		{
@@ -48,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return <GameplayStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044C4B RID: 281675 RVA: 0x010F7D4C File Offset: 0x010F5F4C
+		// Token: 0x0603ADD9 RID: 241113 RVA: 0x010A240C File Offset: 0x010A060C
 		public bool GameplayStartByTempFishPoint(long creatureDataId)
 		{
 			TempFishingPointData tempFishingPointDataByCreatureDataId = FishingModel.Instance.GetTempFishingPointDataByCreatureDataId(creatureDataId);
@@ -80,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return this.InitialGameInfo(tempFishingPointDataByCreatureDataId.CurrentCount);
 		}
 
-		// Token: 0x06044C4C RID: 281676 RVA: 0x010F7E08 File Offset: 0x010F6008
+		// Token: 0x0603ADDA RID: 241114 RVA: 0x010A24C8 File Offset: 0x010A06C8
 		private unsafe bool InitialGameInfo(int maxRound)
 		{
 			this.InitTechEffect();
@@ -93,8 +86,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			EArrowDirection arrowDirection = this.GameConfig.IsAnticlockwise ? EArrowDirection.Anticlockwise : EArrowDirection.Clockwise;
 			this.GameInfo.CreateRingInfo(arrowDirection);
 			this.GameInfo.MaxRound = maxRound;
-			IntArray[] invalidArea = this.GameConfig.InvalidArea;
-			this.GameInfo.GetRingInfo().IsWholeRing = (invalidArea.Length == 0);
+			List<List<int>> invalidArea = this.GameConfig.InvalidArea;
+			this.GameInfo.GetRingInfo().IsWholeRing = (invalidArea.Count == 0);
 			this.AccumulatePerfectCombo = 0;
 			this.TempGetDataMap.Clear();
 			this.TempGetDataTagMap.Clear();
@@ -111,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return true;
 		}
 
-		// Token: 0x06044C4D RID: 281677 RVA: 0x010F7F3C File Offset: 0x010F613C
+		// Token: 0x0603ADDB RID: 241115 RVA: 0x010A2600 File Offset: 0x010A0800
 		private void InitTechEffect()
 		{
 			this.FishingQteAutoFactor = 1f;
@@ -145,59 +138,19 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044C4E RID: 281678 RVA: 0x010F8094 File Offset: 0x010F6294
+		// Token: 0x0603ADDC RID: 241116 RVA: 0x010A2758 File Offset: 0x010A0958
 		private void InitialConfig()
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			this.GameDbConfig = FishingConfig.Instance.GetFishingQteConfig(this.CurrentGameplayId);
+			if (this.GameDbConfig != null)
 			{
-				this.GameDbConfig = FishingConfig.Instance.GetFishingQteConfig(this.CurrentGameplayId);
-				if (this.GameDbConfig != null)
-				{
-					this.GameDbConfigProxy = new FishingQteConfigDbProxy(this.GameDbConfig.Value);
-					return;
-				}
-				this.GameDbConfigProxy = null;
+				this.GameDbConfigProxy = new FishingQteConfigDbProxy(this.GameDbConfig.Value);
 				return;
 			}
-			else
-			{
-				string text = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/FishingRouletteConfig.json";
-				if (text == null)
-				{
-					Log.Instance.Error(ELogModule.LevelPlay, ELogAuthor.YYZ, "[FishingQte] 捕鱼转盘玩法找不到Json数据配置", default(ReadOnlySpan<ValueTuple<string, object>>));
-					return;
-				}
-				string configPath = PublicUtil.Instance.GetConfigPath(text);
-				string text2 = "";
-				UKuroStaticLibrary.LoadFileToString(ref text2, configPath);
-				List<IFishingQteConfig> list = Json.Decode<List<IFishingQteConfig>>(text2, null);
-				if (list != null)
-				{
-					IFishingQteConfig fishingQteConfig = list.Find((IFishingQteConfig value) => value.Id == this.CurrentGameplayId);
-					this.GameJsonConfig = fishingQteConfig;
-					this.GameJsonConfig.CursorSpeed = this.StringToListValue(fishingQteConfig.CursorSpeed.Cast<object>().ToString());
-					this.GameJsonConfig.RouletteRotateSpeed = this.StringToListValue(fishingQteConfig.RouletteRotateSpeed.Cast<object>().ToString());
-					this.GameJsonConfig.PerfectAppearRate = this.StringToListValue(fishingQteConfig.PerfectAppearRate.Cast<object>().ToString());
-				}
-				return;
-			}
+			this.GameDbConfigProxy = null;
 		}
 
-		// Token: 0x06044C4F RID: 281679 RVA: 0x010F81C4 File Offset: 0x010F63C4
-		private Dictionary<int, int> StringToListValue(string stringValue)
-		{
-			string[] array = stringValue.Replace("[", "").Replace("]", "").Split(',', StringSplitOptions.None);
-			Dictionary<int, int> dictionary = new Dictionary<int, int>();
-			string[] array2 = array;
-			for (int i = 0; i < array2.Length; i++)
-			{
-				string[] array3 = array2[i].Split(':', StringSplitOptions.None);
-				dictionary[int.Parse(array3[0])] = int.Parse(array3[1]);
-			}
-			return dictionary;
-		}
-
-		// Token: 0x06044C50 RID: 281680 RVA: 0x010F8230 File Offset: 0x010F6430
+		// Token: 0x0603ADDD RID: 241117 RVA: 0x010A27A8 File Offset: 0x010A09A8
 		public void EnterNextRound()
 		{
 			this.GameInfo.CurrentRound = Math.Min(this.GameInfo.CurrentRound + 1, this.GameInfo.MaxRound);
@@ -209,8 +162,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.GameInfo.SetGameStage(EFishingQteStage.End);
 		}
 
-		// Token: 0x17009A2B RID: 39467
-		// (get) Token: 0x06044C51 RID: 281681 RVA: 0x010F82A8 File Offset: 0x010F64A8
+		// Token: 0x17006F40 RID: 28480
+		// (get) Token: 0x0603ADDE RID: 241118 RVA: 0x010A2820 File Offset: 0x010A0A20
 		public float ScoreUp
 		{
 			get
@@ -219,8 +172,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x17009A2C RID: 39468
-		// (get) Token: 0x06044C52 RID: 281682 RVA: 0x010F82BD File Offset: 0x010F64BD
+		// Token: 0x17006F41 RID: 28481
+		// (get) Token: 0x0603ADDF RID: 241119 RVA: 0x010A2835 File Offset: 0x010A0A35
 		public float HitAreaScore
 		{
 			get
@@ -229,8 +182,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x17009A2D RID: 39469
-		// (get) Token: 0x06044C53 RID: 281683 RVA: 0x010F82D2 File Offset: 0x010F64D2
+		// Token: 0x17006F42 RID: 28482
+		// (get) Token: 0x0603ADE0 RID: 241120 RVA: 0x010A284A File Offset: 0x010A0A4A
 		public float PerfectScore
 		{
 			get
@@ -239,9 +192,9 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x17009A2E RID: 39470
-		// (get) Token: 0x06044C55 RID: 281685 RVA: 0x010F82F6 File Offset: 0x010F64F6
-		// (set) Token: 0x06044C54 RID: 281684 RVA: 0x010F82E7 File Offset: 0x010F64E7
+		// Token: 0x17006F43 RID: 28483
+		// (get) Token: 0x0603ADE2 RID: 241122 RVA: 0x010A286E File Offset: 0x010A0A6E
+		// (set) Token: 0x0603ADE1 RID: 241121 RVA: 0x010A285F File Offset: 0x010A0A5F
 		private int AccumulatePerfectCombo
 		{
 			get
@@ -255,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044C56 RID: 281686 RVA: 0x010F8300 File Offset: 0x010F6500
+		// Token: 0x0603ADE3 RID: 241123 RVA: 0x010A2878 File Offset: 0x010A0A78
 		public void OnQteOn()
 		{
 			this.GameInfo.CurrentScore += this.HitAreaScore;
@@ -263,7 +216,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.AccumulatePerfectCombo = accumulatePerfectCombo + 1;
 		}
 
-		// Token: 0x06044C57 RID: 281687 RVA: 0x010F8338 File Offset: 0x010F6538
+		// Token: 0x0603ADE4 RID: 241124 RVA: 0x010A28B0 File Offset: 0x010A0AB0
 		public void OnPerfectOn()
 		{
 			this.GameInfo.CurrentScore += this.PerfectScore;
@@ -271,14 +224,14 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.AccumulatePerfectCombo = accumulatePerfectCombo + 1;
 		}
 
-		// Token: 0x06044C58 RID: 281688 RVA: 0x010F836D File Offset: 0x010F656D
+		// Token: 0x0603ADE5 RID: 241125 RVA: 0x010A28E5 File Offset: 0x010A0AE5
 		public void OnMissOn()
 		{
 			this.GameInfo.CurrentScore = Math.Max(0f, this.GameInfo.CurrentScore - (float)this.GameConfig.MistakeScore);
 			this.AccumulatePerfectCombo = 0;
 		}
 
-		// Token: 0x06044C59 RID: 281689 RVA: 0x010F83A4 File Offset: 0x010F65A4
+		// Token: 0x0603ADE6 RID: 241126 RVA: 0x010A291C File Offset: 0x010A0B1C
 		private void RefreshAccumulatePerfectCombo()
 		{
 			int accumulatePerfectCombo = this.AccumulatePerfectCombo;
@@ -287,10 +240,10 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.GameInfo.PerfectAppearRate = (float)this.RefreshInfoByKey(accumulatePerfectCombo, this.GameConfig.PerfectAppearRate);
 		}
 
-		// Token: 0x06044C5A RID: 281690 RVA: 0x010F8414 File Offset: 0x010F6614
+		// Token: 0x0603ADE7 RID: 241127 RVA: 0x010A298C File Offset: 0x010A0B8C
 		private int RefreshInfoByKey(int currentKey, Dictionary<int, int> keyValueMap)
 		{
-			List<KeyValuePair<int, int>> list = keyValueMap.ToList<KeyValuePair<int, int>>();
+			List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>(keyValueMap);
 			for (int i = 0; i < list.Count; i++)
 			{
 				int key = list[i].Key;
@@ -308,8 +261,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return 0;
 		}
 
-		// Token: 0x06044C5B RID: 281691 RVA: 0x010F8488 File Offset: 0x010F6688
-		public void SetTempGetDataListFromServer(List<FishingItemInfo> dataList, EFishingQteGetItemTagType tagType)
+		// Token: 0x0603ADE8 RID: 241128 RVA: 0x010A2A00 File Offset: 0x010A0C00
+		public void SetTempGetDataListFromServer(IEnumerable<FishingItemInfo> dataList, EFishingQteGetItemTagType tagType)
 		{
 			foreach (FishingItemInfo fishingItemInfo in dataList)
 			{
@@ -320,17 +273,17 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044C5C RID: 281692 RVA: 0x010F8508 File Offset: 0x010F6708
+		// Token: 0x0603ADE9 RID: 241129 RVA: 0x010A2A78 File Offset: 0x010A0C78
 		public List<DockyardItemBlockOriginalData> GetTempGetDataList()
 		{
-			List<DockyardItemBlockOriginalData> result = this.TempGetDataMap.Values.ToList<DockyardItemBlockOriginalData>();
+			List<DockyardItemBlockOriginalData> result = new List<DockyardItemBlockOriginalData>(this.TempGetDataMap.Values);
 			this.TempGetDataMap.Clear();
 			this.TempGetDataTagMap.Clear();
 			this.TempGetDataList.Clear();
 			return result;
 		}
 
-		// Token: 0x06044C5D RID: 281693 RVA: 0x010F853B File Offset: 0x010F673B
+		// Token: 0x0603ADEA RID: 241130 RVA: 0x010A2AAB File Offset: 0x010A0CAB
 		[NullableContext(2)]
 		public DockyardItemBlockOriginalData ShiftTempGetData()
 		{
@@ -343,13 +296,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return result;
 		}
 
-		// Token: 0x06044C5E RID: 281694 RVA: 0x010F8564 File Offset: 0x010F6764
+		// Token: 0x0603ADEB RID: 241131 RVA: 0x010A2AD4 File Offset: 0x010A0CD4
 		public bool IsTempGetDataEmpty()
 		{
 			return this.TempGetDataList.Count == 0;
 		}
 
-		// Token: 0x06044C5F RID: 281695 RVA: 0x010F8574 File Offset: 0x010F6774
+		// Token: 0x0603ADEC RID: 241132 RVA: 0x010A2AE4 File Offset: 0x010A0CE4
 		public EFishingQteGetItemTagType GetTempGetDataTag(int incId)
 		{
 			EFishingQteGetItemTagType result;
@@ -360,8 +313,8 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return EFishingQteGetItemTagType.None;
 		}
 
-		// Token: 0x17009A2F RID: 39471
-		// (get) Token: 0x06044C60 RID: 281696 RVA: 0x010F8594 File Offset: 0x010F6794
+		// Token: 0x17006F44 RID: 28484
+		// (get) Token: 0x0603ADED RID: 241133 RVA: 0x010A2B04 File Offset: 0x010A0D04
 		public static FishingQteModel Instance
 		{
 			get
@@ -370,7 +323,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044C61 RID: 281697 RVA: 0x010F859B File Offset: 0x010F679B
+		// Token: 0x0603ADEE RID: 241134 RVA: 0x010A2B0B File Offset: 0x010A0D0B
 		public static FishingQteModel GetOrCreateInstance()
 		{
 			if (FishingQteModel._Instance == null)
@@ -380,7 +333,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return FishingQteModel._Instance;
 		}
 
-		// Token: 0x06044C62 RID: 281698 RVA: 0x010F85AF File Offset: 0x010F67AF
+		// Token: 0x0603ADEF RID: 241135 RVA: 0x010A2B1F File Offset: 0x010A0D1F
 		public static bool CreateInstance()
 		{
 			if (FishingQteModel._Instance != null)
@@ -391,74 +344,74 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return true;
 		}
 
-		// Token: 0x06044C63 RID: 281699 RVA: 0x010F85C5 File Offset: 0x010F67C5
+		// Token: 0x0603ADF0 RID: 241136 RVA: 0x010A2B35 File Offset: 0x010A0D35
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044C64 RID: 281700 RVA: 0x010F85C7 File Offset: 0x010F67C7
+		// Token: 0x0603ADF1 RID: 241137 RVA: 0x010A2B37 File Offset: 0x010A0D37
 		public static void ResetStaticDefaultValue()
 		{
 			FishingQteModel._Instance = null;
 		}
 
-		// Token: 0x06044C65 RID: 281701 RVA: 0x010F85CF File Offset: 0x010F67CF
+		// Token: 0x0603ADF2 RID: 241138 RVA: 0x010A2B3F File Offset: 0x010A0D3F
 		static FishingQteModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FishingQteModel.CreateStaticDefaultValue), new Action(FishingQteModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023C67 RID: 146535
+		// Token: 0x0401EF1C RID: 126748
 		private const float PERCENT_CONVERT = 0.01f;
 
-		// Token: 0x04023C68 RID: 146536
+		// Token: 0x0401EF1D RID: 126749
 		private int CurrentGameplayId;
 
-		// Token: 0x04023C69 RID: 146537
+		// Token: 0x0401EF1E RID: 126750
 		public int CurrentFishingPointConfigId;
 
-		// Token: 0x04023C6A RID: 146538
+		// Token: 0x0401EF1F RID: 126751
 		public long CurrentFishingPointCreatureDataId;
 
-		// Token: 0x04023C6B RID: 146539
+		// Token: 0x0401EF20 RID: 126752
 		public EFishingPointType CurrentInteractType;
 
-		// Token: 0x04023C6C RID: 146540
+		// Token: 0x0401EF21 RID: 126753
 		public FishingQteGameInfo GameInfo;
 
-		// Token: 0x04023C6D RID: 146541
+		// Token: 0x0401EF22 RID: 126754
 		private FishingQteConfig? GameDbConfig;
 
-		// Token: 0x04023C6E RID: 146542
+		// Token: 0x0401EF23 RID: 126755
 		[Nullable(2)]
 		private FishingQteConfigDbProxy GameDbConfigProxy;
 
-		// Token: 0x04023C6F RID: 146543
+		// Token: 0x0401EF24 RID: 126756
 		[Nullable(2)]
 		private IFishingQteConfig GameJsonConfig;
 
-		// Token: 0x04023C70 RID: 146544
+		// Token: 0x0401EF25 RID: 126757
 		public EFishingIconType CurrentFishingIconType;
 
-		// Token: 0x04023C71 RID: 146545
+		// Token: 0x0401EF26 RID: 126758
 		private float FishingQteOnFactor = 1f;
 
-		// Token: 0x04023C72 RID: 146546
+		// Token: 0x0401EF27 RID: 126759
 		private float FishingQteAutoFactor = 1f;
 
-		// Token: 0x04023C73 RID: 146547
+		// Token: 0x0401EF28 RID: 126760
 		private int AccumulatePerfectComboInternal;
 
-		// Token: 0x04023C74 RID: 146548
+		// Token: 0x0401EF29 RID: 126761
 		private Dictionary<int, DockyardItemBlockOriginalData> TempGetDataMap = new Dictionary<int, DockyardItemBlockOriginalData>();
 
-		// Token: 0x04023C75 RID: 146549
+		// Token: 0x0401EF2A RID: 126762
 		private Dictionary<int, EFishingQteGetItemTagType> TempGetDataTagMap = new Dictionary<int, EFishingQteGetItemTagType>();
 
-		// Token: 0x04023C76 RID: 146550
+		// Token: 0x0401EF2B RID: 126763
 		private List<DockyardItemBlockOriginalData> TempGetDataList = new List<DockyardItemBlockOriginalData>();
 
-		// Token: 0x04023C77 RID: 146551
+		// Token: 0x0401EF2C RID: 126764
 		[Nullable(2)]
 		private static FishingQteModel _Instance;
 	}

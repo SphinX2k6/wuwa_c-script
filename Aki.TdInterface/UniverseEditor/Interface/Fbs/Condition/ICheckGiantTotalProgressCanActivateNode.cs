@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A3C RID: 19004
+	// Token: 0x02004EFF RID: 20223
 	public struct ICheckGiantTotalProgressCanActivateNode : IFlatbufferObject
 	{
-		// Token: 0x17008995 RID: 35221
-		// (get) Token: 0x0601DC0C RID: 121868 RVA: 0x0042F2A0 File Offset: 0x0042D4A0
+		// Token: 0x1700906A RID: 36970
+		// (get) Token: 0x0601F695 RID: 128661 RVA: 0x00460198 File Offset: 0x0045E398
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC0D RID: 121869 RVA: 0x0042F2AD File Offset: 0x0042D4AD
+		// Token: 0x0601F696 RID: 128662 RVA: 0x004601A5 File Offset: 0x0045E3A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DC0E RID: 121870 RVA: 0x0042F2B4 File Offset: 0x0042D4B4
+		// Token: 0x0601F697 RID: 128663 RVA: 0x004601AC File Offset: 0x0045E3AC
 		public static ICheckGiantTotalProgressCanActivateNode GetRootAsICheckGiantTotalProgressCanActivateNode(ByteBuffer _bb)
 		{
 			return ICheckGiantTotalProgressCanActivateNode.GetRootAsICheckGiantTotalProgressCanActivateNode(_bb, default(ICheckGiantTotalProgressCanActivateNode));
 		}
 
-		// Token: 0x0601DC0F RID: 121871 RVA: 0x0042F2D0 File Offset: 0x0042D4D0
+		// Token: 0x0601F698 RID: 128664 RVA: 0x004601C8 File Offset: 0x0045E3C8
 		public static ICheckGiantTotalProgressCanActivateNode GetRootAsICheckGiantTotalProgressCanActivateNode(ByteBuffer _bb, ICheckGiantTotalProgressCanActivateNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DC10 RID: 121872 RVA: 0x0042F2ED File Offset: 0x0042D4ED
+		// Token: 0x0601F699 RID: 128665 RVA: 0x004601E5 File Offset: 0x0045E3E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DC11 RID: 121873 RVA: 0x0042F2FC File Offset: 0x0042D4FC
+		// Token: 0x0601F69A RID: 128666 RVA: 0x004601F4 File Offset: 0x0045E3F4
 		public ICheckGiantTotalProgressCanActivateNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008996 RID: 35222
-		// (get) Token: 0x0601DC12 RID: 121874 RVA: 0x0042F30C File Offset: 0x0042D50C
+		// Token: 0x1700906B RID: 36971
+		// (get) Token: 0x0601F69B RID: 128667 RVA: 0x00460204 File Offset: 0x0045E404
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008997 RID: 35223
-		// (get) Token: 0x0601DC13 RID: 121875 RVA: 0x0042F348 File Offset: 0x0042D548
+		// Token: 0x1700906C RID: 36972
+		// (get) Token: 0x0601F69C RID: 128668 RVA: 0x00460240 File Offset: 0x0045E440
 		public bool HasActivateNode
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DC14 RID: 121876 RVA: 0x0042F387 File Offset: 0x0042D587
+		// Token: 0x0601F69D RID: 128669 RVA: 0x0046027F File Offset: 0x0045E47F
 		public static Offset<ICheckGiantTotalProgressCanActivateNode> CreateICheckGiantTotalProgressCanActivateNode(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool HasActivateNode = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGiantTotalProgressCanActivateNode.EndICheckGiantTotalProgressCanActivateNode(builder);
 		}
 
-		// Token: 0x0601DC15 RID: 121877 RVA: 0x0042F3A4 File Offset: 0x0042D5A4
+		// Token: 0x0601F69E RID: 128670 RVA: 0x0046029C File Offset: 0x0045E49C
 		public static void StartICheckGiantTotalProgressCanActivateNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DC16 RID: 121878 RVA: 0x0042F3AD File Offset: 0x0042D5AD
+		// Token: 0x0601F69F RID: 128671 RVA: 0x004602A5 File Offset: 0x0045E4A5
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DC17 RID: 121879 RVA: 0x0042F3B8 File Offset: 0x0042D5B8
+		// Token: 0x0601F6A0 RID: 128672 RVA: 0x004602B0 File Offset: 0x0045E4B0
 		public static void AddHasActivateNode(FlatBufferBuilder builder, bool hasActivateNode)
 		{
 			builder.AddBool(1, hasActivateNode, false);
 		}
 
-		// Token: 0x0601DC18 RID: 121880 RVA: 0x0042F3C3 File Offset: 0x0042D5C3
+		// Token: 0x0601F6A1 RID: 128673 RVA: 0x004602BB File Offset: 0x0045E4BB
 		public static Offset<ICheckGiantTotalProgressCanActivateNode> EndICheckGiantTotalProgressCanActivateNode(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckGiantTotalProgressCanActivateNode>(builder.EndTable());
 		}
 
-		// Token: 0x0601DC19 RID: 121881 RVA: 0x0042F3D0 File Offset: 0x0042D5D0
+		// Token: 0x0601F6A2 RID: 128674 RVA: 0x004602C8 File Offset: 0x0045E4C8
 		public ICheckGiantTotalProgressCanActivateNodeT UnPack()
 		{
 			ICheckGiantTotalProgressCanActivateNodeT checkGiantTotalProgressCanActivateNodeT = new ICheckGiantTotalProgressCanActivateNodeT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkGiantTotalProgressCanActivateNodeT;
 		}
 
-		// Token: 0x0601DC1A RID: 121882 RVA: 0x0042F3EB File Offset: 0x0042D5EB
+		// Token: 0x0601F6A3 RID: 128675 RVA: 0x004602E3 File Offset: 0x0045E4E3
 		public void UnPackTo(ICheckGiantTotalProgressCanActivateNodeT _o)
 		{
 			_o.Type = this.Type;
 			_o.HasActivateNode = this.HasActivateNode;
 		}
 
-		// Token: 0x0601DC1B RID: 121883 RVA: 0x0042F408 File Offset: 0x0042D608
+		// Token: 0x0601F6A4 RID: 128676 RVA: 0x00460300 File Offset: 0x0045E500
 		public static Offset<ICheckGiantTotalProgressCanActivateNode> Pack(FlatBufferBuilder builder, ICheckGiantTotalProgressCanActivateNodeT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckGiantTotalProgressCanActivateNode.CreateICheckGiantTotalProgressCanActivateNode(builder, _o.Type, _o.HasActivateNode);
 		}
 
-		// Token: 0x0400D292 RID: 53906
+		// Token: 0x0400DD69 RID: 56681
 		private Table __p;
 	}
 }

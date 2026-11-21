@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006428 RID: 25640
+	// Token: 0x020053A6 RID: 21414
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightLevelDetailViewModel
 	{
-		// Token: 0x0604077D RID: 264061 RVA: 0x00F99C00 File Offset: 0x00F97E00
+		// Token: 0x0603543E RID: 218174 RVA: 0x00EE0BA0 File Offset: 0x00EDEDA0
 		public MotorFightLevelDetailViewModel(MotorFightActivityData ActivityData, MotorFightLevelData LevelData)
 		{
 			this.ActivityData = ActivityData;
@@ -16,17 +16,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.SelectedRoleId = ActivityData.GetLevelUsedRole(LevelData.Id);
 		}
 
-		// Token: 0x1700947A RID: 38010
-		// (get) Token: 0x0604077E RID: 264062 RVA: 0x00F99C28 File Offset: 0x00F97E28
-		// (set) Token: 0x0604077F RID: 264063 RVA: 0x00F99C30 File Offset: 0x00F97E30
+		// Token: 0x170067DC RID: 26588
+		// (get) Token: 0x0603543F RID: 218175 RVA: 0x00EE0BC8 File Offset: 0x00EDEDC8
+		// (set) Token: 0x06035440 RID: 218176 RVA: 0x00EE0BD0 File Offset: 0x00EDEDD0
 		public MotorFightActivityData ActivityData { get; set; }
 
-		// Token: 0x1700947B RID: 38011
-		// (get) Token: 0x06040780 RID: 264064 RVA: 0x00F99C39 File Offset: 0x00F97E39
-		// (set) Token: 0x06040781 RID: 264065 RVA: 0x00F99C41 File Offset: 0x00F97E41
+		// Token: 0x170067DD RID: 26589
+		// (get) Token: 0x06035441 RID: 218177 RVA: 0x00EE0BD9 File Offset: 0x00EDEDD9
+		// (set) Token: 0x06035442 RID: 218178 RVA: 0x00EE0BE1 File Offset: 0x00EDEDE1
 		public MotorFightLevelData LevelData { get; set; }
 
-		// Token: 0x04021841 RID: 137281
+		// Token: 0x0401C170 RID: 115056
 		public int SelectedRoleId;
 	}
 }

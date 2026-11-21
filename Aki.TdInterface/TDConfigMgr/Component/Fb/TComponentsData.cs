@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E4C RID: 3660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F5D RID: 3933
 	public class TComponentsData
 	{
-		// Token: 0x060052A6 RID: 21158 RVA: 0x000CB5CE File Offset: 0x000C97CE
+		// Token: 0x06005822 RID: 22562 RVA: 0x000D7782 File Offset: 0x000D5982
 		public static TComponentsData Create(TComponentsData? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BCB RID: 7115
-		// (get) Token: 0x060052A7 RID: 21159 RVA: 0x000CB5F0 File Offset: 0x000C97F0
+		// Token: 0x17001D63 RID: 7523
+		// (get) Token: 0x06005823 RID: 22563 RVA: 0x000D77A4 File Offset: 0x000D59A4
 		public virtual List<TComponentData> Items
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002FA3 RID: 12195
+		// Token: 0x0400329A RID: 12954
 		private TComponentsData Instance;
 
-		// Token: 0x04002FA4 RID: 12196
+		// Token: 0x0400329B RID: 12955
 		private List<TComponentData> _ItemsCache;
 
-		// Token: 0x04002FA5 RID: 12197
+		// Token: 0x0400329C RID: 12956
 		private bool _ItemsInited;
 	}
 }

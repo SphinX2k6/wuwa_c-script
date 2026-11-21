@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE4 RID: 19172
+	// Token: 0x02003A8C RID: 14988
 	public class TrapDefenseBuildingGangsInfoView : UiViewBase
 	{
-		// Token: 0x06031AB7 RID: 203447 RVA: 0x00B87B7E File Offset: 0x00B85D7E
+		// Token: 0x06026847 RID: 157767 RVA: 0x00ACBB32 File Offset: 0x00AC9D32
 		[NullableContext(1)]
 		public TrapDefenseBuildingGangsInfoView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031AB8 RID: 203448 RVA: 0x00B87B88 File Offset: 0x00B85D88
+		// Token: 0x06026848 RID: 157768 RVA: 0x00ACBB3C File Offset: 0x00AC9D3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031AB9 RID: 203449 RVA: 0x00B87C70 File Offset: 0x00B85E70
+		// Token: 0x06026849 RID: 157769 RVA: 0x00ACBC24 File Offset: 0x00AC9E24
 		protected override void OnStart()
 		{
 			int key = (int)this.OpenParam;
@@ -55,25 +55,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), valueOrDefault.Config.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x06031ABA RID: 203450 RVA: 0x00B87D07 File Offset: 0x00B85F07
+		// Token: 0x0602684A RID: 157770 RVA: 0x00ACBCBB File Offset: 0x00AC9EBB
 		private void OnClickedMask()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200AC76 RID: 44150
+		// Token: 0x02009696 RID: 38550
 		internal class EMainDefine
 		{
-			// Token: 0x04034699 RID: 214681
+			// Token: 0x0402F04A RID: 192586
 			public const int BtnMask = 0;
 
-			// Token: 0x0403469A RID: 214682
+			// Token: 0x0402F04B RID: 192587
 			public const int Icon = 1;
 
-			// Token: 0x0403469B RID: 214683
+			// Token: 0x0402F04C RID: 192588
 			public const int Title = 2;
 
-			// Token: 0x0403469C RID: 214684
+			// Token: 0x0402F04D RID: 192589
 			public const int Desc = 3;
 		}
 	}

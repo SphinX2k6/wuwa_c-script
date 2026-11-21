@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200169B RID: 5787
+	// Token: 0x02001814 RID: 6164
 	[EnumExtensions]
 	public enum ESetSpineAnimation
 	{
-		// Token: 0x04004D8A RID: 19850
+		// Token: 0x040051A1 RID: 20897
 		Play
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005252 RID: 21074
+	// Token: 0x020057BA RID: 22458
 	public enum IFillType_Union : byte
 	{
-		// Token: 0x0400E3A0 RID: 58272
+		// Token: 0x0400EFA6 RID: 61350
 		NONE,
-		// Token: 0x0400E3A1 RID: 58273
+		// Token: 0x0400EFA7 RID: 61351
 		IFillType,
-		// Token: 0x0400E3A2 RID: 58274
+		// Token: 0x0400EFA8 RID: 61352
 		IFixedFill,
-		// Token: 0x0400E3A3 RID: 58275
+		// Token: 0x0400EFA9 RID: 61353
 		IDirectionFill
 	}
 }

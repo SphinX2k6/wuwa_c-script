@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006392 RID: 25490
+	// Token: 0x02006A03 RID: 27139
 	public class IClientDisableModulePlayerOperationT
 	{
-		// Token: 0x1700BE10 RID: 48656
-		// (get) Token: 0x0602C19F RID: 180639 RVA: 0x0060ED74 File Offset: 0x0060CF74
-		// (set) Token: 0x0602C1A0 RID: 180640 RVA: 0x0060ED7C File Offset: 0x0060CF7C
+		// Token: 0x1700C794 RID: 51092
+		// (get) Token: 0x0602E901 RID: 190721 RVA: 0x00659DAC File Offset: 0x00657FAC
+		// (set) Token: 0x0602E902 RID: 190722 RVA: 0x00659DB4 File Offset: 0x00657FB4
 		public EPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700BE11 RID: 48657
-		// (get) Token: 0x0602C1A1 RID: 180641 RVA: 0x0060ED85 File Offset: 0x0060CF85
-		// (set) Token: 0x0602C1A2 RID: 180642 RVA: 0x0060ED8D File Offset: 0x0060CF8D
+		// Token: 0x1700C795 RID: 51093
+		// (get) Token: 0x0602E903 RID: 190723 RVA: 0x00659DBD File Offset: 0x00657FBD
+		// (set) Token: 0x0602E904 RID: 190724 RVA: 0x00659DC5 File Offset: 0x00657FC5
 		public TMoveOperationUnion MoveOption { get; set; }
 
-		// Token: 0x1700BE12 RID: 48658
-		// (get) Token: 0x0602C1A3 RID: 180643 RVA: 0x0060ED96 File Offset: 0x0060CF96
-		// (set) Token: 0x0602C1A4 RID: 180644 RVA: 0x0060ED9E File Offset: 0x0060CF9E
+		// Token: 0x1700C796 RID: 51094
+		// (get) Token: 0x0602E905 RID: 190725 RVA: 0x00659DCE File Offset: 0x00657FCE
+		// (set) Token: 0x0602E906 RID: 190726 RVA: 0x00659DD6 File Offset: 0x00657FD6
 		public TSkillOperationUnion SkillOption { get; set; }
 
-		// Token: 0x1700BE13 RID: 48659
-		// (get) Token: 0x0602C1A5 RID: 180645 RVA: 0x0060EDA7 File Offset: 0x0060CFA7
-		// (set) Token: 0x0602C1A6 RID: 180646 RVA: 0x0060EDAF File Offset: 0x0060CFAF
+		// Token: 0x1700C797 RID: 51095
+		// (get) Token: 0x0602E907 RID: 190727 RVA: 0x00659DDF File Offset: 0x00657FDF
+		// (set) Token: 0x0602E908 RID: 190728 RVA: 0x00659DE7 File Offset: 0x00657FE7
 		public TCameraOperationUnion CameraOption { get; set; }
 
-		// Token: 0x1700BE14 RID: 48660
-		// (get) Token: 0x0602C1A7 RID: 180647 RVA: 0x0060EDB8 File Offset: 0x0060CFB8
-		// (set) Token: 0x0602C1A8 RID: 180648 RVA: 0x0060EDC0 File Offset: 0x0060CFC0
+		// Token: 0x1700C798 RID: 51096
+		// (get) Token: 0x0602E909 RID: 190729 RVA: 0x00659DF0 File Offset: 0x00657FF0
+		// (set) Token: 0x0602E90A RID: 190730 RVA: 0x00659DF8 File Offset: 0x00657FF8
 		public TUiOperationUnion UiOption { get; set; }
 
-		// Token: 0x1700BE15 RID: 48661
-		// (get) Token: 0x0602C1A9 RID: 180649 RVA: 0x0060EDC9 File Offset: 0x0060CFC9
-		// (set) Token: 0x0602C1AA RID: 180650 RVA: 0x0060EDD1 File Offset: 0x0060CFD1
+		// Token: 0x1700C799 RID: 51097
+		// (get) Token: 0x0602E90B RID: 190731 RVA: 0x00659E01 File Offset: 0x00658001
+		// (set) Token: 0x0602E90C RID: 190732 RVA: 0x00659E09 File Offset: 0x00658009
 		public TSceneInteractionOperationUnion SceneInteractionOption { get; set; }
 
-		// Token: 0x0602C1AB RID: 180651 RVA: 0x0060EDDA File Offset: 0x0060CFDA
+		// Token: 0x0602E90D RID: 190733 RVA: 0x00659E12 File Offset: 0x00658012
 		public IClientDisableModulePlayerOperationT()
 		{
 			this.Type = EPlayerOperationType.EnableAll;

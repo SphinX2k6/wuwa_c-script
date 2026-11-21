@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054FB RID: 21755
+	// Token: 0x020044CE RID: 17614
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TeleportMarkItem : ConfigMarkItem
 	{
-		// Token: 0x17008587 RID: 34183
-		// (get) Token: 0x0603793B RID: 227643 RVA: 0x00D32584 File Offset: 0x00D30784
+		// Token: 0x17005922 RID: 22818
+		// (get) Token: 0x0602C80A RID: 182282 RVA: 0x00C8054C File Offset: 0x00C7E74C
 		public override bool IsFogUnlock
 		{
 			get
 			{
-				if (this.MarkConfig.Value.ObjectType == 6)
+				if (base.MarkConfig.Value.ObjectType == 6)
 				{
 					return !this.IsLocked || base.IsFogUnlock;
 				}
@@ -29,64 +29,64 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603793C RID: 227644 RVA: 0x00D325BE File Offset: 0x00D307BE
+		// Token: 0x0602C80B RID: 182283 RVA: 0x00C80589 File Offset: 0x00C7E789
 		public TeleportMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 		}
 
-		// Token: 0x0603793D RID: 227645 RVA: 0x00D325D4 File Offset: 0x00D307D4
+		// Token: 0x0602C80C RID: 182284 RVA: 0x00C8059F File Offset: 0x00C7E79F
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.TeleportMarkItemView;
 		}
 
-		// Token: 0x0603793E RID: 227646 RVA: 0x00D325D8 File Offset: 0x00D307D8
+		// Token: 0x0602C80D RID: 182285 RVA: 0x00C805A3 File Offset: 0x00C7E7A3
 		[PreserveBaseOverrides]
 		protected new virtual TeleportMarkItemView CreateView()
 		{
 			return new TeleportMarkItemView(this);
 		}
 
-		// Token: 0x17008588 RID: 34184
-		// (get) Token: 0x0603793F RID: 227647 RVA: 0x00D325E0 File Offset: 0x00D307E0
-		// (set) Token: 0x06037940 RID: 227648 RVA: 0x00D3261C File Offset: 0x00D3081C
+		// Token: 0x17005923 RID: 22819
+		// (get) Token: 0x0602C80E RID: 182286 RVA: 0x00C805AC File Offset: 0x00C7E7AC
+		// (set) Token: 0x0602C80F RID: 182287 RVA: 0x00C805EE File Offset: 0x00C7E7EE
 		public override string IconPath
 		{
 			get
 			{
 				if (!this.IsLocked)
 				{
-					return this.MarkConfig.Value.UnlockMarkPic;
+					return base.MarkConfig.Value.UnlockMarkPic;
 				}
-				return this.MarkConfig.Value.LockMarkPic;
+				return base.MarkConfig.Value.LockMarkPic;
 			}
 			set
 			{
 			}
 		}
 
-		// Token: 0x17008589 RID: 34185
-		// (get) Token: 0x06037941 RID: 227649 RVA: 0x00D32620 File Offset: 0x00D30820
+		// Token: 0x17005924 RID: 22820
+		// (get) Token: 0x0602C810 RID: 182288 RVA: 0x00C805F0 File Offset: 0x00C7E7F0
 		public bool IsActivity
 		{
 			get
 			{
-				return this.MarkConfig.Value.ObjectType == 13;
+				return base.MarkConfig.Value.ObjectType == 13;
 			}
 		}
 
-		// Token: 0x1700858A RID: 34186
-		// (get) Token: 0x06037942 RID: 227650 RVA: 0x00D32648 File Offset: 0x00D30848
+		// Token: 0x17005925 RID: 22821
+		// (get) Token: 0x0602C811 RID: 182289 RVA: 0x00C8061C File Offset: 0x00C7E81C
 		public bool IsDungeonEntrance
 		{
 			get
 			{
-				return this.MarkConfig.Value.RelativeType == 2 || InstanceDungeonEntranceConfig.Instance.CheckMarkIdLinkDungeonEntrance(base.MarkConfigId);
+				return base.MarkConfig.Value.RelativeType == 2 || InstanceDungeonEntranceConfig.Instance.CheckMarkIdLinkDungeonEntrance(base.MarkConfigId);
 			}
 		}
 
-		// Token: 0x1700858B RID: 34187
-		// (get) Token: 0x06037943 RID: 227651 RVA: 0x00D3267D File Offset: 0x00D3087D
+		// Token: 0x17005926 RID: 22822
+		// (get) Token: 0x0602C812 RID: 182290 RVA: 0x00C80654 File Offset: 0x00C7E854
 		public bool IsTowerEntrance
 		{
 			get
@@ -95,8 +95,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x1700858C RID: 34188
-		// (get) Token: 0x06037944 RID: 227652 RVA: 0x00D3268F File Offset: 0x00D3088F
+		// Token: 0x17005927 RID: 22823
+		// (get) Token: 0x0602C813 RID: 182291 RVA: 0x00C80666 File Offset: 0x00C7E866
 		public bool IsRoguelike
 		{
 			get
@@ -105,8 +105,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x1700858D RID: 34189
-		// (get) Token: 0x06037945 RID: 227653 RVA: 0x00D326A4 File Offset: 0x00D308A4
+		// Token: 0x17005928 RID: 22824
+		// (get) Token: 0x0602C814 RID: 182292 RVA: 0x00C80678 File Offset: 0x00C7E878
 		public bool IsWeeklyRogue
 		{
 			get
@@ -116,8 +116,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x1700858E RID: 34190
-		// (get) Token: 0x06037946 RID: 227654 RVA: 0x00D326E0 File Offset: 0x00D308E0
+		// Token: 0x17005929 RID: 22825
+		// (get) Token: 0x0602C815 RID: 182293 RVA: 0x00C806B4 File Offset: 0x00C7E8B4
 		public bool IsRogueRes
 		{
 			get
@@ -126,8 +126,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x1700858F RID: 34191
-		// (get) Token: 0x06037947 RID: 227655 RVA: 0x00D326F2 File Offset: 0x00D308F2
+		// Token: 0x1700592A RID: 22826
+		// (get) Token: 0x0602C816 RID: 182294 RVA: 0x00C806C6 File Offset: 0x00C7E8C6
 		public bool IsShipTowerEntrance
 		{
 			get
@@ -136,8 +136,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008590 RID: 34192
-		// (get) Token: 0x06037948 RID: 227656 RVA: 0x00D32704 File Offset: 0x00D30904
+		// Token: 0x1700592B RID: 22827
+		// (get) Token: 0x0602C817 RID: 182295 RVA: 0x00C806D8 File Offset: 0x00C7E8D8
 		public bool IsWheelTowerEntrance
 		{
 			get
@@ -146,19 +146,19 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037949 RID: 227657 RVA: 0x00D32718 File Offset: 0x00D30918
+		// Token: 0x0602C818 RID: 182296 RVA: 0x00C806EC File Offset: 0x00C7E8EC
 		public override bool IsMultiMap()
 		{
-			return this.MarkConfig.Value.MultiMapFloorId != 0;
+			return base.MarkConfig.Value.MultiMapFloorId != 0;
 		}
 
-		// Token: 0x0603794A RID: 227658 RVA: 0x00D3273C File Offset: 0x00D3093C
+		// Token: 0x0602C819 RID: 182297 RVA: 0x00C80714 File Offset: 0x00C7E914
 		public override int GetMultiMapId()
 		{
-			return this.MarkConfig.Value.MultiMapFloorId;
+			return base.MarkConfig.Value.MultiMapFloorId;
 		}
 
-		// Token: 0x0603794B RID: 227659 RVA: 0x00D3275C File Offset: 0x00D3095C
+		// Token: 0x0602C81A RID: 182298 RVA: 0x00C80738 File Offset: 0x00C7E938
 		public override ESecondaryPanel GetSecondaryUiType()
 		{
 			if (this.IsActivity)
@@ -196,11 +196,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return ESecondaryPanel.InstanceDungeonEntrancePanel;
 		}
 
-		// Token: 0x0401D3FC RID: 119804
-		[Nullable(2)]
-		public TeleportMarkItemView InnerView;
-
-		// Token: 0x0401D3FD RID: 119805
+		// Token: 0x04017E83 RID: 97923
 		public bool IsDirty;
 	}
 }

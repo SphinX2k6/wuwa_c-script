@@ -6,50 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DDD RID: 7645
+	// Token: 0x02000579 RID: 1401
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Entity_AssistMachine")]
 	[UnrealStructLayout(1384, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1384)]
 	public class AKSC_Entity_AssistMachine : AKSC_Entity, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D37D RID: 119677 RVA: 0x002B2620 File Offset: 0x002B0820
+		// Token: 0x06007F82 RID: 32642 RVA: 0x000BCA4C File Offset: 0x000BAC4C
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_Entity_AssistMachine._ClassPtr;
 		}
 
-		// Token: 0x0601D37E RID: 119678 RVA: 0x002B262C File Offset: 0x002B082C
+		// Token: 0x06007F83 RID: 32643 RVA: 0x000BCA58 File Offset: 0x000BAC58
 		public AKSC_Entity_AssistMachine() : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity_AssistMachine.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D37F RID: 119679 RVA: 0x002B2654 File Offset: 0x002B0854
+		// Token: 0x06007F84 RID: 32644 RVA: 0x000BCA80 File Offset: 0x000BAC80
 		public AKSC_Entity_AssistMachine(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity_AssistMachine.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170075FB RID: 30203
-		// (get) Token: 0x0601D380 RID: 119680 RVA: 0x002B2687 File Offset: 0x002B0887
-		// (set) Token: 0x0601D381 RID: 119681 RVA: 0x002B269B File Offset: 0x002B089B
-		[Nullable(2)]
-		public unsafe UKSC_DA_Entity_AssistMachine DaEntity_AssistMachine_
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_DA_Entity_AssistMachine>(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity_AssistMachine.__PropertyOffset_DaEntity_AssistMachine_);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AKSC_Entity_AssistMachine.__PropertyOffset_DaEntity_AssistMachine_, value);
-			}
-		}
-
-		// Token: 0x170075FC RID: 30204
-		// (get) Token: 0x0601D382 RID: 119682 RVA: 0x002B26B0 File Offset: 0x002B08B0
-		// (set) Token: 0x0601D383 RID: 119683 RVA: 0x002B26C0 File Offset: 0x002B08C0
+		// Token: 0x170018D1 RID: 6353
+		// (get) Token: 0x06007F85 RID: 32645 RVA: 0x000BCAB3 File Offset: 0x000BACB3
+		// (set) Token: 0x06007F86 RID: 32646 RVA: 0x000BCAC3 File Offset: 0x000BACC3
 		public unsafe int ListenCDSkillIndex
 		{
 			get
@@ -62,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075FD RID: 30205
-		// (get) Token: 0x0601D384 RID: 119684 RVA: 0x002B26D4 File Offset: 0x002B08D4
-		// (set) Token: 0x0601D385 RID: 119685 RVA: 0x002B270D File Offset: 0x002B090D
+		// Token: 0x170018D2 RID: 6354
+		// (get) Token: 0x06007F87 RID: 32647 RVA: 0x000BCAD4 File Offset: 0x000BACD4
+		// (set) Token: 0x06007F88 RID: 32648 RVA: 0x000BCB0D File Offset: 0x000BAD0D
 		public FOnSkillCD OnSkillCD
 		{
 			get
@@ -83,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075FE RID: 30206
-		// (get) Token: 0x0601D386 RID: 119686 RVA: 0x002B272E File Offset: 0x002B092E
-		// (set) Token: 0x0601D387 RID: 119687 RVA: 0x002B273E File Offset: 0x002B093E
+		// Token: 0x170018D3 RID: 6355
+		// (get) Token: 0x06007F89 RID: 32649 RVA: 0x000BCB2E File Offset: 0x000BAD2E
+		// (set) Token: 0x06007F8A RID: 32650 RVA: 0x000BCB3E File Offset: 0x000BAD3E
 		public unsafe int ListenSkillReadyIndex
 		{
 			get
@@ -98,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170075FF RID: 30207
-		// (get) Token: 0x0601D388 RID: 119688 RVA: 0x002B2750 File Offset: 0x002B0950
-		// (set) Token: 0x0601D389 RID: 119689 RVA: 0x002B2789 File Offset: 0x002B0989
+		// Token: 0x170018D4 RID: 6356
+		// (get) Token: 0x06007F8B RID: 32651 RVA: 0x000BCB50 File Offset: 0x000BAD50
+		// (set) Token: 0x06007F8C RID: 32652 RVA: 0x000BCB89 File Offset: 0x000BAD89
 		public FOnSkillReady OnSkillReady
 		{
 			get
@@ -119,7 +101,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D38A RID: 119690 RVA: 0x002B27AC File Offset: 0x002B09AC
+		// Token: 0x06007F8D RID: 32653 RVA: 0x000BCBAC File Offset: 0x000BADAC
 		public unsafe void SetSkillAutoCast(in int SkillIndex, EKSC_SkillAutoCast AutoCast)
 		{
 			fixed (int* ptr = &SkillIndex)
@@ -129,7 +111,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D38B RID: 119691 RVA: 0x002B27D0 File Offset: 0x002B09D0
+		// Token: 0x06007F8E RID: 32654 RVA: 0x000BCBD0 File Offset: 0x000BADD0
 		public unsafe void D_Fire(in FTransformDouble D_FireTrans, int SkillIndex)
 		{
 			ref FTransformDouble ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)79] + 15UL & 18446744073709551600UL);
@@ -137,60 +119,57 @@ namespace UnrealEngine
 			AKSC_Entity_AssistMachine.__D_Fire_Internal(base.NativePtr, ptr, SkillIndex);
 		}
 
-		// Token: 0x0601D38C RID: 119692
+		// Token: 0x06007F8F RID: 32655
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSkillAutoCast_Internal(IntPtr @this, in int SkillIndex, EKSC_SkillAutoCast AutoCast);
 
-		// Token: 0x0601D38D RID: 119693
+		// Token: 0x06007F90 RID: 32656
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_Fire_Internal(IntPtr @this, in FTransformDouble D_FireTrans, int SkillIndex);
 
-		// Token: 0x0601D38E RID: 119694 RVA: 0x002B2806 File Offset: 0x002B0A06
+		// Token: 0x06007F91 RID: 32657 RVA: 0x000BCC06 File Offset: 0x000BAE06
 		static AKSC_Entity_AssistMachine()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Entity_AssistMachine");
 		}
 
-		// Token: 0x0601D38F RID: 119695 RVA: 0x002B2814 File Offset: 0x002B0A14
+		// Token: 0x06007F92 RID: 32658 RVA: 0x000BCC14 File Offset: 0x000BAE14
 		protected AKSC_Entity_AssistMachine(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FDAE RID: 64942
+		// Token: 0x040037AE RID: 14254
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Entity_AssistMachine";
 
-		// Token: 0x0400FDAF RID: 64943
+		// Token: 0x040037AF RID: 14255
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FDB0 RID: 64944
+		// Token: 0x040037B0 RID: 14256
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FDB1 RID: 64945
+		// Token: 0x040037B1 RID: 14257
 		public static IntPtr __OnSkillReady__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0400FDB2 RID: 64946
+		// Token: 0x040037B2 RID: 14258
 		public static IntPtr __OnSkillCD__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x0400FDB3 RID: 64947
-		internal static int __PropertyOffset_DaEntity_AssistMachine_;
-
-		// Token: 0x0400FDB4 RID: 64948
+		// Token: 0x040037B3 RID: 14259
 		internal static int __PropertyOffset_ListenCDSkillIndex;
 
-		// Token: 0x0400FDB5 RID: 64949
+		// Token: 0x040037B4 RID: 14260
 		internal static int __PropertyOffset_OnSkillCD;
 
-		// Token: 0x0400FDB6 RID: 64950
+		// Token: 0x040037B5 RID: 14261
 		[Nullable(2)]
 		private FOnSkillCD _OnSkillCD;
 
-		// Token: 0x0400FDB7 RID: 64951
+		// Token: 0x040037B6 RID: 14262
 		internal static int __PropertyOffset_ListenSkillReadyIndex;
 
-		// Token: 0x0400FDB8 RID: 64952
+		// Token: 0x040037B7 RID: 14263
 		internal static int __PropertyOffset_OnSkillReady;
 
-		// Token: 0x0400FDB9 RID: 64953
+		// Token: 0x040037B8 RID: 14264
 		[Nullable(2)]
 		private FOnSkillReady _OnSkillReady;
 	}

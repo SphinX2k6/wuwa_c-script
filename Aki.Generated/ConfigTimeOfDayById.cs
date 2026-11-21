@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009E2 RID: 2530
+	// Token: 0x02000AB7 RID: 2743
 	public class ConfigTimeOfDayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B60 RID: 15200 RVA: 0x001A9875 File Offset: 0x001A7A75
+		// Token: 0x0600405E RID: 16478 RVA: 0x001C8C09 File Offset: 0x001C6E09
 		static ConfigTimeOfDayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTimeOfDayById.CreateStaticDefaultValue), new Action(ConfigTimeOfDayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B61 RID: 15201 RVA: 0x001A9894 File Offset: 0x001A7A94
+		// Token: 0x0600405F RID: 16479 RVA: 0x001C8C28 File Offset: 0x001C6E28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTimeOfDayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B62 RID: 15202 RVA: 0x001A9913 File Offset: 0x001A7B13
+		// Token: 0x06004060 RID: 16480 RVA: 0x001C8CA7 File Offset: 0x001C6EA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTimeOfDayById.LogPair = null;
 			ConfigTimeOfDayById.HandleId = 0;
 		}
 
-		// Token: 0x06003B63 RID: 15203 RVA: 0x001A9921 File Offset: 0x001A7B21
+		// Token: 0x06004061 RID: 16481 RVA: 0x001C8CB5 File Offset: 0x001C6EB5
 		public static void Init()
 		{
 			ConfigTimeOfDayById.HandleId = ConfigCommon.InitDataStatement(ConfigTimeOfDayById.HandleId, "db_time_of_day.db", "select BinData from `TimeOfDay` where Id = ?");
 		}
 
-		// Token: 0x06003B64 RID: 15204 RVA: 0x001A993C File Offset: 0x001A7B3C
+		// Token: 0x06004062 RID: 16482 RVA: 0x001C8CD0 File Offset: 0x001C6ED0
 		public static TimeOfDay? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTimeOfDayById.HandleId, ConfigTimeOfDayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TimeOfDay?(rootAsTimeOfDay);
 		}
 
-		// Token: 0x04004514 RID: 17684
+		// Token: 0x04004AE7 RID: 19175
 		private const string DB = "db_time_of_day.db";
 
-		// Token: 0x04004515 RID: 17685
+		// Token: 0x04004AE8 RID: 19176
 		private const string FILE = "s.时间系统.xlsx";
 
-		// Token: 0x04004516 RID: 17686
+		// Token: 0x04004AE9 RID: 19177
 		private const string TABLE = "TimeOfDay";
 
-		// Token: 0x04004517 RID: 17687
+		// Token: 0x04004AEA RID: 19178
 		private const string COMMAND = "select BinData from `TimeOfDay` where Id = ?";
 
-		// Token: 0x04004518 RID: 17688
+		// Token: 0x04004AEB RID: 19179
 		private const string KEY_PREFIX = "TimeOfDayById";
 
-		// Token: 0x04004519 RID: 17689
+		// Token: 0x04004AEC RID: 19180
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400451A RID: 17690
+		// Token: 0x04004AED RID: 19181
 		private static int HandleId;
 	}
 }

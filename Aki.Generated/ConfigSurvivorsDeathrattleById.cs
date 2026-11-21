@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000999 RID: 2457
+	// Token: 0x02000A6E RID: 2670
 	public class ConfigSurvivorsDeathrattleById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060039AA RID: 14762 RVA: 0x0019FAC0 File Offset: 0x0019DCC0
+		// Token: 0x06003EA8 RID: 16040 RVA: 0x001BEE54 File Offset: 0x001BD054
 		static ConfigSurvivorsDeathrattleById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSurvivorsDeathrattleById.CreateStaticDefaultValue), new Action(ConfigSurvivorsDeathrattleById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060039AB RID: 14763 RVA: 0x0019FAE0 File Offset: 0x0019DCE0
+		// Token: 0x06003EA9 RID: 16041 RVA: 0x001BEE74 File Offset: 0x001BD074
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSurvivorsDeathrattleById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060039AC RID: 14764 RVA: 0x0019FB5F File Offset: 0x0019DD5F
+		// Token: 0x06003EAA RID: 16042 RVA: 0x001BEEF3 File Offset: 0x001BD0F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSurvivorsDeathrattleById.LogPair = null;
 			ConfigSurvivorsDeathrattleById.HandleId = 0;
 		}
 
-		// Token: 0x060039AD RID: 14765 RVA: 0x0019FB6D File Offset: 0x0019DD6D
+		// Token: 0x06003EAB RID: 16043 RVA: 0x001BEF01 File Offset: 0x001BD101
 		public static void Init()
 		{
 			ConfigSurvivorsDeathrattleById.HandleId = ConfigCommon.InitDataStatement(ConfigSurvivorsDeathrattleById.HandleId, "db_survivors.db", "select BinData from `SurvivorsDeathrattle` where Id=?");
 		}
 
-		// Token: 0x060039AE RID: 14766 RVA: 0x0019FB88 File Offset: 0x0019DD88
+		// Token: 0x06003EAC RID: 16044 RVA: 0x001BEF1C File Offset: 0x001BD11C
 		public static SurvivorsDeathrattle? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSurvivorsDeathrattleById.HandleId, ConfigSurvivorsDeathrattleById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SurvivorsDeathrattle?(rootAsSurvivorsDeathrattle);
 		}
 
-		// Token: 0x04004315 RID: 17173
+		// Token: 0x040048E8 RID: 18664
 		private const string DB = "db_survivors.db";
 
-		// Token: 0x04004316 RID: 17174
+		// Token: 0x040048E9 RID: 18665
 		private const string FILE = "x.幸存者_怪物.xlsx";
 
-		// Token: 0x04004317 RID: 17175
+		// Token: 0x040048EA RID: 18666
 		private const string TABLE = "SurvivorsDeathrattle";
 
-		// Token: 0x04004318 RID: 17176
+		// Token: 0x040048EB RID: 18667
 		private const string COMMAND = "select BinData from `SurvivorsDeathrattle` where Id=?";
 
-		// Token: 0x04004319 RID: 17177
+		// Token: 0x040048EC RID: 18668
 		private const string KEY_PREFIX = "SurvivorsDeathrattleById";
 
-		// Token: 0x0400431A RID: 17178
+		// Token: 0x040048ED RID: 18669
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400431B RID: 17179
+		// Token: 0x040048EE RID: 18670
 		private static int HandleId;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C93 RID: 27795
+	// Token: 0x02005E0D RID: 24077
 	public class LevelConditionCheckFishingEntrustState : LevelConditionBase
 	{
-		// Token: 0x060445B6 RID: 279990 RVA: 0x010DB4B4 File Offset: 0x010D96B4
+		// Token: 0x0603A710 RID: 239376 RVA: 0x01085460 File Offset: 0x01083660
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return efishingEntrustState == (EFishingEntrustState)num;
 		}
 
-		// Token: 0x040239CA RID: 145866
+		// Token: 0x0401EC6C RID: 126060
 		private const int NONE_OR_FINISHED = -1;
 	}
 }

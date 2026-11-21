@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200129C RID: 4764
+	// Token: 0x020013E2 RID: 5090
 	public static class ETakePhoto2TargetTypeExtensions
 	{
-		// Token: 0x06006B65 RID: 27493 RVA: 0x00102070 File Offset: 0x00100270
+		// Token: 0x060071D3 RID: 29139 RVA: 0x00110038 File Offset: 0x0010E238
 		public static string ToEnumString(this ETakePhoto2TargetType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B66 RID: 27494 RVA: 0x001020C4 File Offset: 0x001002C4
+		// Token: 0x060071D4 RID: 29140 RVA: 0x0011008C File Offset: 0x0010E28C
 		public static ETakePhoto2TargetType FromString(string name)
 		{
 			ETakePhoto2TargetType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B67 RID: 27495 RVA: 0x001020F0 File Offset: 0x001002F0
+		// Token: 0x060071D5 RID: 29141 RVA: 0x001100B8 File Offset: 0x0010E2B8
 		public static bool TryFromString(string name, out ETakePhoto2TargetType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B68 RID: 27496 RVA: 0x00102158 File Offset: 0x00100358
+		// Token: 0x060071D6 RID: 29142 RVA: 0x00110120 File Offset: 0x0010E320
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B69 RID: 27497 RVA: 0x00102180 File Offset: 0x00100380
+		// Token: 0x060071D7 RID: 29143 RVA: 0x00110148 File Offset: 0x0010E348
 		public static ETakePhoto2TargetType[] GetValues()
 		{
 			return new ETakePhoto2TargetType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B6A RID: 27498 RVA: 0x00102193 File Offset: 0x00100393
+		// Token: 0x060071D8 RID: 29144 RVA: 0x0011015B File Offset: 0x0010E35B
 		public static string[] GetNames()
 		{
 			return new string[]

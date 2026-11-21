@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000944 RID: 2372
+	// Token: 0x020009F3 RID: 2547
 	public static class EFanGearTypeExtensions
 	{
-		// Token: 0x06003563 RID: 13667 RVA: 0x0008B734 File Offset: 0x00089934
+		// Token: 0x060038D8 RID: 14552 RVA: 0x000933EC File Offset: 0x000915EC
 		public static string ToEnumString(this EFanGearType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003564 RID: 13668 RVA: 0x0008B76C File Offset: 0x0008996C
+		// Token: 0x060038D9 RID: 14553 RVA: 0x00093424 File Offset: 0x00091624
 		public static EFanGearType FromString(string name)
 		{
 			EFanGearType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003565 RID: 13669 RVA: 0x0008B795 File Offset: 0x00089995
+		// Token: 0x060038DA RID: 14554 RVA: 0x0009344D File Offset: 0x0009164D
 		public static bool TryFromString(string name, out EFanGearType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003566 RID: 13670 RVA: 0x0008B7CE File Offset: 0x000899CE
+		// Token: 0x060038DB RID: 14555 RVA: 0x00093486 File Offset: 0x00091686
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003567 RID: 13671 RVA: 0x0008B7E6 File Offset: 0x000899E6
+		// Token: 0x060038DC RID: 14556 RVA: 0x0009349E File Offset: 0x0009169E
 		public static EFanGearType[] GetValues()
 		{
 			return new EFanGearType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003568 RID: 13672 RVA: 0x0008B7F2 File Offset: 0x000899F2
+		// Token: 0x060038DD RID: 14557 RVA: 0x000934AA File Offset: 0x000916AA
 		public static string[] GetNames()
 		{
 			return new string[]

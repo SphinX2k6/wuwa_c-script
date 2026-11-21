@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005032 RID: 20530
+	// Token: 0x02003FFF RID: 16383
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RenderAssistant : SeqBaseAssistant
 	{
-		// Token: 0x060348BC RID: 215228 RVA: 0x00C654B8 File Offset: 0x00C636B8
+		// Token: 0x06029779 RID: 169849 RVA: 0x00BB17E0 File Offset: 0x00BAF9E0
 		public override void PreAllPlay(Action<bool> callback = null)
 		{
 			this.IsEnableMobileKuroSpotlightsShadow = UKismetSystemLibrary.GetConsoleVariableFloatValue("r.Mobile.EnableKuroSpotlightsShadow");
@@ -84,19 +84,21 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348BD RID: 215229 RVA: 0x00C656D8 File Offset: 0x00C638D8
+		// Token: 0x0602977A RID: 169850 RVA: 0x00BB1A00 File Offset: 0x00BAFC00
 		public override void PreEachPlay()
 		{
 			this.IsEachSet = true;
+			this.PreStream.Collect();
 		}
 
-		// Token: 0x060348BE RID: 215230 RVA: 0x00C656E1 File Offset: 0x00C638E1
+		// Token: 0x0602977B RID: 169851 RVA: 0x00BB1A14 File Offset: 0x00BAFC14
 		public override void EachStop()
 		{
 			this.IsEachSet = false;
+			this.PreStream.Release();
 		}
 
-		// Token: 0x060348BF RID: 215231 RVA: 0x00C656EC File Offset: 0x00C638EC
+		// Token: 0x0602977C RID: 169852 RVA: 0x00BB1A28 File Offset: 0x00BAFC28
 		public override void AllStop(Action<bool> callback = null)
 		{
 			RenderUtil.OpenToonSceneShadow();
@@ -140,6 +142,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 				UPerfSightHelper.PostEvent(819, UKuroSequencePerformanceManager.GetPerformanceMode().ToString());
 			}
 			this.ReleaseSeqStreamingData();
+			this.PreStream.Release();
 			if (this.IsMuteMetalFxDevice)
 			{
 				this.IsMuteMetalFxDevice = false;
@@ -148,7 +151,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.IsAllSet = false;
 		}
 
-		// Token: 0x060348C0 RID: 215232 RVA: 0x00C6588D File Offset: 0x00C63A8D
+		// Token: 0x0602977D RID: 169853 RVA: 0x00BB1BD4 File Offset: 0x00BAFDD4
 		public override void End()
 		{
 			if (this.IsEachSet)
@@ -161,7 +164,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348C1 RID: 215233 RVA: 0x00C658AC File Offset: 0x00C63AAC
+		// Token: 0x0602977E RID: 169854 RVA: 0x00BB1BF3 File Offset: 0x00BAFDF3
+		public void TickPreStream()
+		{
+			this.PreStream.Tick();
+		}
+
+		// Token: 0x0602977F RID: 169855 RVA: 0x00BB1C00 File Offset: 0x00BAFE00
 		public bool CheckSeqStreamingData()
 		{
 			bool result = true;
@@ -188,7 +197,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return result;
 		}
 
-		// Token: 0x060348C2 RID: 215234 RVA: 0x00C659A8 File Offset: 0x00C63BA8
+		// Token: 0x06029780 RID: 169856 RVA: 0x00BB1CFC File Offset: 0x00BAFEFC
 		public void ReleaseSeqStreamingData()
 		{
 			if (!SequenceRenderSettings.GetTexureStreamingEnable((EGameQualitySettingLevel)((GameSettingsManager.Instance.GetCurrentValue(EFunction.IMAGEQUALITY, true, true) != null) ? GameSettingsManager.Instance.GetCurrentValue(EFunction.IMAGEQUALITY, true, true).Value : 2)))
@@ -210,7 +219,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348C3 RID: 215235 RVA: 0x00C65A97 File Offset: 0x00C63C97
+		// Token: 0x06029781 RID: 169857 RVA: 0x00BB1DEB File Offset: 0x00BAFFEB
 		public void SetMotionBlurState(bool isEnable)
 		{
 			if (isEnable)
@@ -221,26 +230,30 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlurQuality 0", null);
 		}
 
-		// Token: 0x060348C4 RID: 215236 RVA: 0x00C65ABD File Offset: 0x00C63CBD
+		// Token: 0x06029782 RID: 169858 RVA: 0x00BB1E11 File Offset: 0x00BB0011
 		public override void CmdShadowUpdate()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CacheMode3CacheUpdateIntervalsOverride 0,0,0", null);
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Shadow.CSMMode3EnableUpdateIntervalOverride 1", null);
 		}
 
-		// Token: 0x0401BFFF RID: 114687
+		// Token: 0x04016A09 RID: 92681
 		private bool IsEachSet;
 
-		// Token: 0x0401C000 RID: 114688
+		// Token: 0x04016A0A RID: 92682
 		private bool IsAllSet;
 
-		// Token: 0x0401C001 RID: 114689
+		// Token: 0x04016A0B RID: 92683
 		private readonly FName EyesLightName = new FName("LightDisableSwitch");
 
-		// Token: 0x0401C002 RID: 114690
+		// Token: 0x04016A0C RID: 92684
 		private float IsEnableMobileKuroSpotlightsShadow;
 
-		// Token: 0x0401C003 RID: 114691
+		// Token: 0x04016A0D RID: 92685
 		private bool IsMuteMetalFxDevice;
+
+		// Token: 0x04016A0E RID: 92686
+		[Nullable(1)]
+		private readonly PreStreamScheduler PreStream = new PreStreamScheduler();
 	}
 }

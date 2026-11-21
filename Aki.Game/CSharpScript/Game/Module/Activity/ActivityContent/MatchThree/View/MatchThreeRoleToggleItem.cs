@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x020064A4 RID: 25764
+	// Token: 0x02005422 RID: 21538
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 	})]
 	public class MatchThreeRoleToggleItem : GridProxyAbstract<MatchThreeRoleToggleData>
 	{
-		// Token: 0x06040B28 RID: 265000 RVA: 0x00FA9D3C File Offset: 0x00FA7F3C
+		// Token: 0x060357EC RID: 219116 RVA: 0x00EF0D84 File Offset: 0x00EEEF84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040B29 RID: 265001 RVA: 0x00FA9E24 File Offset: 0x00FA8024
+		// Token: 0x060357ED RID: 219117 RVA: 0x00EF0E6C File Offset: 0x00EEF06C
 		public void SetClickCallback(Action<int, int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x06040B2A RID: 265002 RVA: 0x00FA9E30 File Offset: 0x00FA8030
+		// Token: 0x060357EE RID: 219118 RVA: 0x00EF0E78 File Offset: 0x00EEF078
 		public override void Refresh(MatchThreeRoleToggleData data, bool isSelected, int gridIndex)
 		{
 			this.RoleData = data;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040B2B RID: 265003 RVA: 0x00FA9EBB File Offset: 0x00FA80BB
+		// Token: 0x060357EF RID: 219119 RVA: 0x00EF0F03 File Offset: 0x00EEF103
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06040B2C RID: 265004 RVA: 0x00FA9ED2 File Offset: 0x00FA80D2
+		// Token: 0x060357F0 RID: 219120 RVA: 0x00EF0F1A File Offset: 0x00EEF11A
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06040B2D RID: 265005 RVA: 0x00FA9EEC File Offset: 0x00FA80EC
+		// Token: 0x060357F1 RID: 219121 RVA: 0x00EF0F34 File Offset: 0x00EEF134
 		private void RefreshLockState(bool isUnlocked)
 		{
 			UUIItem item = base.GetItem(2);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040B2E RID: 265006 RVA: 0x00FA9F24 File Offset: 0x00FA8124
+		// Token: 0x060357F2 RID: 219122 RVA: 0x00EF0F6C File Offset: 0x00EEF16C
 		private UniTask RefreshRoleHeadIcon(MatchThreeRole roleConfig)
 		{
 			MatchThreeRoleToggleItem.<RefreshRoleHeadIcon>d__8 <RefreshRoleHeadIcon>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <RefreshRoleHeadIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040B2F RID: 265007 RVA: 0x00FA9F6F File Offset: 0x00FA816F
+		// Token: 0x060357F3 RID: 219123 RVA: 0x00EF0FB7 File Offset: 0x00EEF1B7
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.RoleData == null)
@@ -137,11 +137,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			clickCallback(this.RoleData.RoleId, base.GridIndex);
 		}
 
-		// Token: 0x04021AB2 RID: 137906
+		// Token: 0x0401C3E3 RID: 115683
 		[Nullable(2)]
 		private MatchThreeRoleToggleData RoleData;
 
-		// Token: 0x04021AB3 RID: 137907
+		// Token: 0x0401C3E4 RID: 115684
 		[Nullable(2)]
 		private Action<int, int> ClickCallback;
 	}

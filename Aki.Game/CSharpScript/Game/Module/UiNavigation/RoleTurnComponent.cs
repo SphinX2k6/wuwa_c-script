@@ -4,15 +4,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049BD RID: 18877
+	// Token: 0x02003937 RID: 14647
 	public class RoleTurnComponent : RoleInteractComponentBase
 	{
-		// Token: 0x060311C2 RID: 201154 RVA: 0x00B64CA9 File Offset: 0x00B62EA9
+		// Token: 0x06025CF8 RID: 154872 RVA: 0x00A9FBF9 File Offset: 0x00A9DDF9
 		public RoleTurnComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311C3 RID: 201155 RVA: 0x00B64CB2 File Offset: 0x00B62EB2
+		// Token: 0x06025CF9 RID: 154873 RVA: 0x00A9FC02 File Offset: 0x00A9DE02
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{

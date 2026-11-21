@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BF2 RID: 3058
+	// Token: 0x02000CD4 RID: 3284
 	public struct DirectTrainHighlight : IFlatbufferObject
 	{
-		// Token: 0x17000CBF RID: 3263
-		// (get) Token: 0x06006276 RID: 25206 RVA: 0x00213EF9 File Offset: 0x002120F9
+		// Token: 0x17000D0A RID: 3338
+		// (get) Token: 0x06006854 RID: 26708 RVA: 0x002335EF File Offset: 0x002317EF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006277 RID: 25207 RVA: 0x00213F06 File Offset: 0x00212106
+		// Token: 0x06006855 RID: 26709 RVA: 0x002335FC File Offset: 0x002317FC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006278 RID: 25208 RVA: 0x00213F10 File Offset: 0x00212110
+		// Token: 0x06006856 RID: 26710 RVA: 0x00233604 File Offset: 0x00231804
 		public static DirectTrainHighlight GetRootAsDirectTrainHighlight(ByteBuffer _bb)
 		{
 			return DirectTrainHighlight.GetRootAsDirectTrainHighlight(_bb, default(DirectTrainHighlight));
 		}
 
-		// Token: 0x06006279 RID: 25209 RVA: 0x00213F2C File Offset: 0x0021212C
+		// Token: 0x06006857 RID: 26711 RVA: 0x00233620 File Offset: 0x00231820
 		public static DirectTrainHighlight GetRootAsDirectTrainHighlight(ByteBuffer _bb, DirectTrainHighlight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600627A RID: 25210 RVA: 0x00213F49 File Offset: 0x00212149
+		// Token: 0x06006858 RID: 26712 RVA: 0x0023363D File Offset: 0x0023183D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600627B RID: 25211 RVA: 0x00213F58 File Offset: 0x00212158
+		// Token: 0x06006859 RID: 26713 RVA: 0x0023364C File Offset: 0x0023184C
 		public DirectTrainHighlight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000CC0 RID: 3264
-		// (get) Token: 0x0600627C RID: 25212 RVA: 0x00213F68 File Offset: 0x00212168
+		// Token: 0x17000D0B RID: 3339
+		// (get) Token: 0x0600685A RID: 26714 RVA: 0x0023365C File Offset: 0x0023185C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000CC1 RID: 3265
-		// (get) Token: 0x0600627D RID: 25213 RVA: 0x00213FA4 File Offset: 0x002121A4
+		// Token: 0x17000D0C RID: 3340
+		// (get) Token: 0x0600685B RID: 26715 RVA: 0x00233698 File Offset: 0x00231898
 		public string TabTitle
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600627E RID: 25214 RVA: 0x00213FDB File Offset: 0x002121DB
+		// Token: 0x0600685C RID: 26716 RVA: 0x002336CF File Offset: 0x002318CF
 		public Span<byte> GetTabTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600627F RID: 25215 RVA: 0x00213FEA File Offset: 0x002121EA
+		// Token: 0x0600685D RID: 26717 RVA: 0x002336DE File Offset: 0x002318DE
 		public byte[] GetTabTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000CC2 RID: 3266
-		// (get) Token: 0x06006280 RID: 25216 RVA: 0x00214004 File Offset: 0x00212204
+		// Token: 0x17000D0D RID: 3341
+		// (get) Token: 0x0600685E RID: 26718 RVA: 0x002336F8 File Offset: 0x002318F8
 		public string FeatureDesc
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006281 RID: 25217 RVA: 0x0021403B File Offset: 0x0021223B
+		// Token: 0x0600685F RID: 26719 RVA: 0x0023372F File Offset: 0x0023192F
 		public Span<byte> GetFeatureDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006282 RID: 25218 RVA: 0x0021404A File Offset: 0x0021224A
+		// Token: 0x06006860 RID: 26720 RVA: 0x0023373E File Offset: 0x0023193E
 		public byte[] GetFeatureDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004C1F RID: 19487
+		// Token: 0x04005201 RID: 20993
 		private Table __p;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F0 RID: 25584
+	// Token: 0x0200536E RID: 21358
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourPlayerMarkItem : UiPanelBase
 	{
-		// Token: 0x060405A0 RID: 263584 RVA: 0x00F9098C File Offset: 0x00F8EB8C
+		// Token: 0x06035261 RID: 217697 RVA: 0x00ED7974 File Offset: 0x00ED5B74
 		public void UpdatePosition(float scale, Vector2D centerOffset)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x060405A1 RID: 263585 RVA: 0x00F90A60 File Offset: 0x00F8EC60
+		// Token: 0x06035262 RID: 217698 RVA: 0x00ED7A48 File Offset: 0x00ED5C48
 		public void UpdateOthersPosition(float scale, Vector2D centerOffset)
 		{
 			if (this.PlayerId == 0)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.SetAnchorOffset(vector2D2, null);
 		}
 
-		// Token: 0x060405A2 RID: 263586 RVA: 0x00F90AF8 File Offset: 0x00F8ECF8
+		// Token: 0x06035263 RID: 217699 RVA: 0x00ED7AE0 File Offset: 0x00ED5CE0
 		public void SetAnchorOffset(Vector2D value, [Nullable(new byte[]
 		{
 			2,
@@ -86,16 +86,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x04021794 RID: 137108
+		// Token: 0x0401C0C3 RID: 114883
 		private const int PLAYER_ROTATE_UPDATE_THRESHOLD = 10;
 
-		// Token: 0x04021795 RID: 137109
+		// Token: 0x0401C0C4 RID: 114884
 		public int PlayerId;
 
-		// Token: 0x04021796 RID: 137110
+		// Token: 0x0401C0C5 RID: 114885
 		private readonly Vector2D CurrentAnchorOffset = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x04021797 RID: 137111
+		// Token: 0x0401C0C6 RID: 114886
 		private FRotator TempPlayerRotator = new FRotator(0f, 0f, 0f);
 	}
 }

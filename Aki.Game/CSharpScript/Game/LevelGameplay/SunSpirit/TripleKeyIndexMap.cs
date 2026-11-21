@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069F2 RID: 27122
+	// Token: 0x02005B4F RID: 23375
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 	})]
 	public class TripleKeyIndexMap<[Nullable(2)] TK1, [Nullable(2)] TK2, [Nullable(2)] TK3, [Nullable(2)] TV> : Dictionary<TK1, Dictionary<TK2, Dictionary<TK3, TV>>>
 	{
-		// Token: 0x0604378D RID: 276365 RVA: 0x0107E744 File Offset: 0x0107C944
+		// Token: 0x060397D6 RID: 235478 RVA: 0x01022DF8 File Offset: 0x01020FF8
 		[return: Nullable(2)]
 		public TV GetVal(TK1 key1, TK2 key2, TK3 key3)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return default(TV);
 		}
 
-		// Token: 0x0604378E RID: 276366 RVA: 0x0107E780 File Offset: 0x0107C980
+		// Token: 0x060397D7 RID: 235479 RVA: 0x01022E34 File Offset: 0x01021034
 		public void SetVal(TK1 key1, TK2 key2, TK3 key3, TV val)
 		{
 			Dictionary<TK2, Dictionary<TK3, TV>> dictionary;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			dictionary2[key3] = val;
 		}
 
-		// Token: 0x0604378F RID: 276367 RVA: 0x0107E7C8 File Offset: 0x0107C9C8
+		// Token: 0x060397D8 RID: 235480 RVA: 0x01022E7C File Offset: 0x0102107C
 		public void DelVal(TK1 key1, TK2 key2, TK3 key3)
 		{
 			Dictionary<TK2, Dictionary<TK3, TV>> dictionary;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043790 RID: 276368 RVA: 0x0107E818 File Offset: 0x0107CA18
+		// Token: 0x060397D9 RID: 235481 RVA: 0x01022ECC File Offset: 0x010210CC
 		public bool HasVal(TK1 key1, TK2 key2, TK3 key3)
 		{
 			Dictionary<TK2, Dictionary<TK3, TV>> dictionary;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return base.TryGetValue(key1, out dictionary) && dictionary.TryGetValue(key2, out dictionary2) && dictionary2.ContainsKey(key3);
 		}
 
-		// Token: 0x06043791 RID: 276369 RVA: 0x0107E844 File Offset: 0x0107CA44
+		// Token: 0x060397DA RID: 235482 RVA: 0x01022EF8 File Offset: 0x010210F8
 		[return: Nullable(new byte[]
 		{
 			2,

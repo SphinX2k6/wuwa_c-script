@@ -3,50 +3,50 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200629A RID: 25242
+	// Token: 0x0200690B RID: 26891
 	public class ICameraParamsT
 	{
-		// Token: 0x1700BC64 RID: 48228
-		// (get) Token: 0x0602B9C1 RID: 178625 RVA: 0x00600F2E File Offset: 0x005FF12E
-		// (set) Token: 0x0602B9C2 RID: 178626 RVA: 0x00600F36 File Offset: 0x005FF136
+		// Token: 0x1700C5EC RID: 50668
+		// (get) Token: 0x0602E122 RID: 188706 RVA: 0x0064BD36 File Offset: 0x00649F36
+		// (set) Token: 0x0602E123 RID: 188707 RVA: 0x0064BD3E File Offset: 0x00649F3E
 		public float Aperture { get; set; }
 
-		// Token: 0x1700BC65 RID: 48229
-		// (get) Token: 0x0602B9C3 RID: 178627 RVA: 0x00600F3F File Offset: 0x005FF13F
-		// (set) Token: 0x0602B9C4 RID: 178628 RVA: 0x00600F47 File Offset: 0x005FF147
+		// Token: 0x1700C5ED RID: 50669
+		// (get) Token: 0x0602E124 RID: 188708 RVA: 0x0064BD47 File Offset: 0x00649F47
+		// (set) Token: 0x0602E125 RID: 188709 RVA: 0x0064BD4F File Offset: 0x00649F4F
 		public float FocalLength { get; set; }
 
-		// Token: 0x1700BC66 RID: 48230
-		// (get) Token: 0x0602B9C5 RID: 178629 RVA: 0x00600F50 File Offset: 0x005FF150
-		// (set) Token: 0x0602B9C6 RID: 178630 RVA: 0x00600F58 File Offset: 0x005FF158
+		// Token: 0x1700C5EE RID: 50670
+		// (get) Token: 0x0602E126 RID: 188710 RVA: 0x0064BD58 File Offset: 0x00649F58
+		// (set) Token: 0x0602E127 RID: 188711 RVA: 0x0064BD60 File Offset: 0x00649F60
 		public float FocusDistance { get; set; }
 
-		// Token: 0x1700BC67 RID: 48231
-		// (get) Token: 0x0602B9C7 RID: 178631 RVA: 0x00600F61 File Offset: 0x005FF161
-		// (set) Token: 0x0602B9C8 RID: 178632 RVA: 0x00600F69 File Offset: 0x005FF169
+		// Token: 0x1700C5EF RID: 50671
+		// (get) Token: 0x0602E128 RID: 188712 RVA: 0x0064BD69 File Offset: 0x00649F69
+		// (set) Token: 0x0602E129 RID: 188713 RVA: 0x0064BD71 File Offset: 0x00649F71
 		public float FocalRegion { get; set; }
 
-		// Token: 0x1700BC68 RID: 48232
-		// (get) Token: 0x0602B9C9 RID: 178633 RVA: 0x00600F72 File Offset: 0x005FF172
-		// (set) Token: 0x0602B9CA RID: 178634 RVA: 0x00600F7A File Offset: 0x005FF17A
+		// Token: 0x1700C5F0 RID: 50672
+		// (get) Token: 0x0602E12A RID: 188714 RVA: 0x0064BD7A File Offset: 0x00649F7A
+		// (set) Token: 0x0602E12B RID: 188715 RVA: 0x0064BD82 File Offset: 0x00649F82
 		public float Fov { get; set; }
 
-		// Token: 0x1700BC69 RID: 48233
-		// (get) Token: 0x0602B9CB RID: 178635 RVA: 0x00600F83 File Offset: 0x005FF183
-		// (set) Token: 0x0602B9CC RID: 178636 RVA: 0x00600F8B File Offset: 0x005FF18B
+		// Token: 0x1700C5F1 RID: 50673
+		// (get) Token: 0x0602E12C RID: 188716 RVA: 0x0064BD8B File Offset: 0x00649F8B
+		// (set) Token: 0x0602E12D RID: 188717 RVA: 0x0064BD93 File Offset: 0x00649F93
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x1700BC6A RID: 48234
-		// (get) Token: 0x0602B9CD RID: 178637 RVA: 0x00600F94 File Offset: 0x005FF194
-		// (set) Token: 0x0602B9CE RID: 178638 RVA: 0x00600F9C File Offset: 0x005FF19C
+		// Token: 0x1700C5F2 RID: 50674
+		// (get) Token: 0x0602E12E RID: 188718 RVA: 0x0064BD9C File Offset: 0x00649F9C
+		// (set) Token: 0x0602E12F RID: 188719 RVA: 0x0064BDA4 File Offset: 0x00649FA4
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x1700BC6B RID: 48235
-		// (get) Token: 0x0602B9CF RID: 178639 RVA: 0x00600FA5 File Offset: 0x005FF1A5
-		// (set) Token: 0x0602B9D0 RID: 178640 RVA: 0x00600FAD File Offset: 0x005FF1AD
+		// Token: 0x1700C5F3 RID: 50675
+		// (get) Token: 0x0602E130 RID: 188720 RVA: 0x0064BDAD File Offset: 0x00649FAD
+		// (set) Token: 0x0602E131 RID: 188721 RVA: 0x0064BDB5 File Offset: 0x00649FB5
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B9D1 RID: 178641 RVA: 0x00600FB8 File Offset: 0x005FF1B8
+		// Token: 0x0602E132 RID: 188722 RVA: 0x0064BDC0 File Offset: 0x00649FC0
 		public ICameraParamsT()
 		{
 			this.Aperture = 0f;

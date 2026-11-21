@@ -1,28 +1,28 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033CF RID: 13263
+// Token: 0x02002941 RID: 10561
 public class RedDotMotorcycleLevelTab : RedDotBase
 {
-	// Token: 0x0601CBF7 RID: 117751 RVA: 0x00809341 File Offset: 0x00807541
+	// Token: 0x0601A8EF RID: 108783 RVA: 0x0082F905 File Offset: 0x0082DB05
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CBF8 RID: 117752 RVA: 0x00809344 File Offset: 0x00807544
+	// Token: 0x0601A8F0 RID: 108784 RVA: 0x0082F908 File Offset: 0x0082DB08
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBF9 RID: 117753 RVA: 0x00809362 File Offset: 0x00807562
+	// Token: 0x0601A8F1 RID: 108785 RVA: 0x0082F926 File Offset: 0x0082DB26
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBFA RID: 117754 RVA: 0x00809380 File Offset: 0x00807580
+	// Token: 0x0601A8F2 RID: 108786 RVA: 0x0082F944 File Offset: 0x0082DB44
 	protected override bool OnCheck(int uId = 0)
 	{
 		return MotorcycleDevelopModel.Instance.RedDotHasLevelUpReward();

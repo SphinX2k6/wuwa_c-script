@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C87 RID: 3207
+	// Token: 0x02000D6B RID: 3435
 	public struct FishingPosition : IFlatbufferObject
 	{
-		// Token: 0x170011AA RID: 4522
-		// (get) Token: 0x06007000 RID: 28672 RVA: 0x00232CE9 File Offset: 0x00230EE9
+		// Token: 0x17001207 RID: 4615
+		// (get) Token: 0x0600760B RID: 30219 RVA: 0x00251E59 File Offset: 0x00250059
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007001 RID: 28673 RVA: 0x00232CF6 File Offset: 0x00230EF6
+		// Token: 0x0600760C RID: 30220 RVA: 0x00251E66 File Offset: 0x00250066
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007002 RID: 28674 RVA: 0x00232D00 File Offset: 0x00230F00
+		// Token: 0x0600760D RID: 30221 RVA: 0x00251E70 File Offset: 0x00250070
 		public static FishingPosition GetRootAsFishingPosition(ByteBuffer _bb)
 		{
 			return FishingPosition.GetRootAsFishingPosition(_bb, default(FishingPosition));
 		}
 
-		// Token: 0x06007003 RID: 28675 RVA: 0x00232D1C File Offset: 0x00230F1C
+		// Token: 0x0600760E RID: 30222 RVA: 0x00251E8C File Offset: 0x0025008C
 		public static FishingPosition GetRootAsFishingPosition(ByteBuffer _bb, FishingPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007004 RID: 28676 RVA: 0x00232D39 File Offset: 0x00230F39
+		// Token: 0x0600760F RID: 30223 RVA: 0x00251EA9 File Offset: 0x002500A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007005 RID: 28677 RVA: 0x00232D48 File Offset: 0x00230F48
+		// Token: 0x06007610 RID: 30224 RVA: 0x00251EB8 File Offset: 0x002500B8
 		public FishingPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170011AB RID: 4523
-		// (get) Token: 0x06007006 RID: 28678 RVA: 0x00232D58 File Offset: 0x00230F58
+		// Token: 0x17001208 RID: 4616
+		// (get) Token: 0x06007611 RID: 30225 RVA: 0x00251EC8 File Offset: 0x002500C8
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007007 RID: 28679 RVA: 0x00232D94 File Offset: 0x00230F94
+		// Token: 0x06007612 RID: 30226 RVA: 0x00251F04 File Offset: 0x00250104
 		public int Position(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170011AC RID: 4524
-		// (get) Token: 0x06007008 RID: 28680 RVA: 0x00232DD4 File Offset: 0x00230FD4
+		// Token: 0x17001209 RID: 4617
+		// (get) Token: 0x06007613 RID: 30227 RVA: 0x00251F44 File Offset: 0x00250144
 		public int PositionLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007009 RID: 28681 RVA: 0x00232DFF File Offset: 0x00230FFF
+		// Token: 0x06007614 RID: 30228 RVA: 0x00251F6F File Offset: 0x0025016F
 		public Span<int> GetPositionBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600700A RID: 28682 RVA: 0x00232E0E File Offset: 0x0023100E
+		// Token: 0x06007615 RID: 30229 RVA: 0x00251F7E File Offset: 0x0025017E
 		public int[] GetPositionArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600700B RID: 28683 RVA: 0x00232E28 File Offset: 0x00231028
+		// Token: 0x06007616 RID: 30230 RVA: 0x00251F98 File Offset: 0x00250198
 		public int Rotation(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170011AD RID: 4525
-		// (get) Token: 0x0600700C RID: 28684 RVA: 0x00232E68 File Offset: 0x00231068
+		// Token: 0x1700120A RID: 4618
+		// (get) Token: 0x06007617 RID: 30231 RVA: 0x00251FD8 File Offset: 0x002501D8
 		public int RotationLength
 		{
 			get
@@ -128,55 +128,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600700D RID: 28685 RVA: 0x00232E93 File Offset: 0x00231093
+		// Token: 0x06007618 RID: 30232 RVA: 0x00252003 File Offset: 0x00250203
 		public Span<int> GetRotationBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600700E RID: 28686 RVA: 0x00232EA2 File Offset: 0x002310A2
+		// Token: 0x06007619 RID: 30233 RVA: 0x00252012 File Offset: 0x00250212
 		public int[] GetRotationArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600700F RID: 28687 RVA: 0x00232EBC File Offset: 0x002310BC
+		// Token: 0x0600761A RID: 30234 RVA: 0x00252029 File Offset: 0x00250229
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PositionIter()或GetPositionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Position()
+		public int[] Position()
 		{
-			FishingPosition fishingPosition = this;
-			return fishingPosition.GetPositionArray() ?? Array.Empty<int>();
+			return this.GetPositionArray();
 		}
 
-		// Token: 0x06007010 RID: 28688 RVA: 0x00232EE0 File Offset: 0x002310E0
+		// Token: 0x0600761B RID: 30235 RVA: 0x00252031 File Offset: 0x00250231
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PositionIter()
+		public IEnumerable<int> PositionIter()
 		{
 			FishingPosition.<PositionIter>d__21 <PositionIter>d__ = new FishingPosition.<PositionIter>d__21(-2);
 			<PositionIter>d__.<>3__<>4__this = this;
 			return <PositionIter>d__;
 		}
 
-		// Token: 0x06007011 RID: 28689 RVA: 0x00232EF8 File Offset: 0x002310F8
+		// Token: 0x0600761C RID: 30236 RVA: 0x00252046 File Offset: 0x00250246
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RotationIter()或GetRotationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Rotation()
+		public int[] Rotation()
 		{
-			FishingPosition fishingPosition = this;
-			return fishingPosition.GetRotationArray() ?? Array.Empty<int>();
+			return this.GetRotationArray();
 		}
 
-		// Token: 0x06007012 RID: 28690 RVA: 0x00232F1C File Offset: 0x0023111C
+		// Token: 0x0600761D RID: 30237 RVA: 0x0025204E File Offset: 0x0025024E
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RotationIter()
+		public IEnumerable<int> RotationIter()
 		{
 			FishingPosition.<RotationIter>d__23 <RotationIter>d__ = new FishingPosition.<RotationIter>d__23(-2);
 			<RotationIter>d__.<>3__<>4__this = this;
 			return <RotationIter>d__;
 		}
 
-		// Token: 0x04004CD9 RID: 19673
+		// Token: 0x040052BD RID: 21181
 		private Table __p;
 	}
 }

@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005089 RID: 20617
+	// Token: 0x020055EE RID: 21998
 	public static class IDestructibleItemVerify
 	{
-		// Token: 0x06021166 RID: 135526 RVA: 0x00498F3C File Offset: 0x0049713C
+		// Token: 0x060230BA RID: 143546 RVA: 0x004D2EC8 File Offset: 0x004D10C8
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false))
@@ -119,38 +119,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007AD3 RID: 31443
+		// Token: 0x0200832D RID: 33581
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040134D2 RID: 79058
+			// Token: 0x04014550 RID: 83280
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x040134D3 RID: 79059
+			// Token: 0x04014551 RID: 83281
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040134D4 RID: 79060
+			// Token: 0x04014552 RID: 83282
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040134D5 RID: 79061
+			// Token: 0x04014553 RID: 83283
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040134D6 RID: 79062
+			// Token: 0x04014554 RID: 83284
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x040134D7 RID: 79063
+			// Token: 0x04014555 RID: 83285
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x040134D8 RID: 79064
+			// Token: 0x04014556 RID: 83286
 			public static VerifyTableAction <6>__Verify;
 
-			// Token: 0x040134D9 RID: 79065
+			// Token: 0x04014557 RID: 83287
 			public static VerifyTableAction <7>__Verify;
 
-			// Token: 0x040134DA RID: 79066
+			// Token: 0x04014558 RID: 83288
 			public static VerifyTableAction <8>__Verify;
 
-			// Token: 0x040134DB RID: 79067
+			// Token: 0x04014559 RID: 83289
 			public static VerifyTableAction <9>__Verify;
 		}
 	}

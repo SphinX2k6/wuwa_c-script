@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000239 RID: 569
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000260 RID: 608
 	public class ICheckGearHit
 	{
-		// Token: 0x06000A1A RID: 2586 RVA: 0x0002AAFC File Offset: 0x00028CFC
+		// Token: 0x06000A8E RID: 2702 RVA: 0x0002C2BC File Offset: 0x0002A4BC
 		private ICheckGearHit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A1B RID: 2587 RVA: 0x0002AB34 File Offset: 0x00028D34
+		// Token: 0x06000A8F RID: 2703 RVA: 0x0002C2F4 File Offset: 0x0002A4F4
 		public static ICheckGearHit Create([Nullable(2)] ICheckGearHit instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A1C RID: 2588 RVA: 0x0002AB47 File Offset: 0x00028D47
+		// Token: 0x06000A90 RID: 2704 RVA: 0x0002C307 File Offset: 0x0002A507
 		public static ICheckGearHit CreateFromSetValue([Nullable(2)] ICheckGearHit_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A1D RID: 2589 RVA: 0x0002AB5A File Offset: 0x00028D5A
+		// Token: 0x06000A91 RID: 2705 RVA: 0x0002C31A File Offset: 0x0002A51A
 		public ICheckGearHit_SetValue ToSetValue()
 		{
 			return new ICheckGearHit_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000315 RID: 789
-		// (get) Token: 0x06000A1E RID: 2590 RVA: 0x0002AB85 File Offset: 0x00028D85
-		// (set) Token: 0x06000A1F RID: 2591 RVA: 0x0002ABB0 File Offset: 0x00028DB0
+		// Token: 0x17000334 RID: 820
+		// (get) Token: 0x06000A92 RID: 2706 RVA: 0x0002C345 File Offset: 0x0002A545
+		// (set) Token: 0x06000A93 RID: 2707 RVA: 0x0002C370 File Offset: 0x0002A570
 		public virtual int HitIndex
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000316 RID: 790
-		// (get) Token: 0x06000A20 RID: 2592 RVA: 0x0002ABBE File Offset: 0x00028DBE
-		// (set) Token: 0x06000A21 RID: 2593 RVA: 0x0002ABE5 File Offset: 0x00028DE5
+		// Token: 0x17000335 RID: 821
+		// (get) Token: 0x06000A94 RID: 2708 RVA: 0x0002C37E File Offset: 0x0002A57E
+		// (set) Token: 0x06000A95 RID: 2709 RVA: 0x0002C3A5 File Offset: 0x0002A5A5
 		public virtual List<int> AffectIndex
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000317 RID: 791
-		// (get) Token: 0x06000A22 RID: 2594 RVA: 0x0002ABF3 File Offset: 0x00028DF3
-		// (set) Token: 0x06000A23 RID: 2595 RVA: 0x0002AC1E File Offset: 0x00028E1E
+		// Token: 0x17000336 RID: 822
+		// (get) Token: 0x06000A96 RID: 2710 RVA: 0x0002C3B3 File Offset: 0x0002A5B3
+		// (set) Token: 0x06000A97 RID: 2711 RVA: 0x0002C3DE File Offset: 0x0002A5DE
 		public virtual EGearHitAffectType AffectType
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A35 RID: 2613
+		// Token: 0x04000ABF RID: 2751
 		[Nullable(2)]
 		protected ICheckGearHit FbInstance;
 
-		// Token: 0x04000A36 RID: 2614
+		// Token: 0x04000AC0 RID: 2752
 		[Nullable(2)]
 		protected ICheckGearHit_SetValue PocoInterface;
 	}

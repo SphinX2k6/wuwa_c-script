@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004452 RID: 17490
+	// Token: 0x020048BA RID: 18618
 	public struct IDaemonHackCodeMatrix : IFlatbufferObject
 	{
-		// Token: 0x17007B46 RID: 31558
-		// (get) Token: 0x0601A082 RID: 106626 RVA: 0x003B863F File Offset: 0x003B683F
+		// Token: 0x17008185 RID: 33157
+		// (get) Token: 0x0601B853 RID: 112723 RVA: 0x003E484B File Offset: 0x003E2A4B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A083 RID: 106627 RVA: 0x003B864C File Offset: 0x003B684C
+		// Token: 0x0601B854 RID: 112724 RVA: 0x003E4858 File Offset: 0x003E2A58
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A084 RID: 106628 RVA: 0x003B8654 File Offset: 0x003B6854
+		// Token: 0x0601B855 RID: 112725 RVA: 0x003E4860 File Offset: 0x003E2A60
 		public static IDaemonHackCodeMatrix GetRootAsIDaemonHackCodeMatrix(ByteBuffer _bb)
 		{
 			return IDaemonHackCodeMatrix.GetRootAsIDaemonHackCodeMatrix(_bb, default(IDaemonHackCodeMatrix));
 		}
 
-		// Token: 0x0601A085 RID: 106629 RVA: 0x003B8670 File Offset: 0x003B6870
+		// Token: 0x0601B856 RID: 112726 RVA: 0x003E487C File Offset: 0x003E2A7C
 		public static IDaemonHackCodeMatrix GetRootAsIDaemonHackCodeMatrix(ByteBuffer _bb, IDaemonHackCodeMatrix obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A086 RID: 106630 RVA: 0x003B868D File Offset: 0x003B688D
+		// Token: 0x0601B857 RID: 112727 RVA: 0x003E4899 File Offset: 0x003E2A99
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A087 RID: 106631 RVA: 0x003B869C File Offset: 0x003B689C
+		// Token: 0x0601B858 RID: 112728 RVA: 0x003E48A8 File Offset: 0x003E2AA8
 		public IDaemonHackCodeMatrix __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B47 RID: 31559
-		// (get) Token: 0x0601A088 RID: 106632 RVA: 0x003B86AC File Offset: 0x003B68AC
+		// Token: 0x17008186 RID: 33158
+		// (get) Token: 0x0601B859 RID: 112729 RVA: 0x003E48B8 File Offset: 0x003E2AB8
 		public int MatrixSize
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A089 RID: 106633 RVA: 0x003B86E8 File Offset: 0x003B68E8
+		// Token: 0x0601B85A RID: 112730 RVA: 0x003E48F4 File Offset: 0x003E2AF4
 		public IDaemonHackPresetCode? PresetCodes(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IDaemonHackPresetCode?(default(IDaemonHackPresetCode).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007B48 RID: 31560
-		// (get) Token: 0x0601A08A RID: 106634 RVA: 0x003B8748 File Offset: 0x003B6948
+		// Token: 0x17008187 RID: 33159
+		// (get) Token: 0x0601B85B RID: 112731 RVA: 0x003E4954 File Offset: 0x003E2B54
 		public int PresetCodesLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A08B RID: 106635 RVA: 0x003B8773 File Offset: 0x003B6973
+		// Token: 0x0601B85C RID: 112732 RVA: 0x003E497F File Offset: 0x003E2B7F
 		public static Offset<IDaemonHackCodeMatrix> CreateIDaemonHackCodeMatrix(FlatBufferBuilder builder, int MatrixSize = 0, VectorOffset PresetCodesOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDaemonHackCodeMatrix.EndIDaemonHackCodeMatrix(builder);
 		}
 
-		// Token: 0x0601A08C RID: 106636 RVA: 0x003B8790 File Offset: 0x003B6990
+		// Token: 0x0601B85D RID: 112733 RVA: 0x003E499C File Offset: 0x003E2B9C
 		public static void StartIDaemonHackCodeMatrix(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601A08D RID: 106637 RVA: 0x003B8799 File Offset: 0x003B6999
+		// Token: 0x0601B85E RID: 112734 RVA: 0x003E49A5 File Offset: 0x003E2BA5
 		public static void AddMatrixSize(FlatBufferBuilder builder, int matrixSize)
 		{
 			builder.AddInt(0, matrixSize, 0);
 		}
 
-		// Token: 0x0601A08E RID: 106638 RVA: 0x003B87A4 File Offset: 0x003B69A4
+		// Token: 0x0601B85F RID: 112735 RVA: 0x003E49B0 File Offset: 0x003E2BB0
 		public static void AddPresetCodes(FlatBufferBuilder builder, VectorOffset presetCodesOffset)
 		{
 			builder.AddOffset(1, presetCodesOffset.Value, 0);
 		}
 
-		// Token: 0x0601A08F RID: 106639 RVA: 0x003B87B4 File Offset: 0x003B69B4
+		// Token: 0x0601B860 RID: 112736 RVA: 0x003E49C0 File Offset: 0x003E2BC0
 		public static VectorOffset CreatePresetCodesVector(FlatBufferBuilder builder, Offset<IDaemonHackPresetCode>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A090 RID: 106640 RVA: 0x003B87F4 File Offset: 0x003B69F4
+		// Token: 0x0601B861 RID: 112737 RVA: 0x003E4A00 File Offset: 0x003E2C00
 		public static VectorOffset CreatePresetCodesVectorBlock(FlatBufferBuilder builder, Offset<IDaemonHackPresetCode>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A091 RID: 106641 RVA: 0x003B880E File Offset: 0x003B6A0E
+		// Token: 0x0601B862 RID: 112738 RVA: 0x003E4A1A File Offset: 0x003E2C1A
 		public static VectorOffset CreatePresetCodesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDaemonHackPresetCode>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A092 RID: 106642 RVA: 0x003B882C File Offset: 0x003B6A2C
+		// Token: 0x0601B863 RID: 112739 RVA: 0x003E4A38 File Offset: 0x003E2C38
 		public static VectorOffset CreatePresetCodesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A093 RID: 106643 RVA: 0x003B8845 File Offset: 0x003B6A45
+		// Token: 0x0601B864 RID: 112740 RVA: 0x003E4A51 File Offset: 0x003E2C51
 		public static void StartPresetCodesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A094 RID: 106644 RVA: 0x003B8850 File Offset: 0x003B6A50
+		// Token: 0x0601B865 RID: 112741 RVA: 0x003E4A5C File Offset: 0x003E2C5C
 		public static Offset<IDaemonHackCodeMatrix> EndIDaemonHackCodeMatrix(FlatBufferBuilder builder)
 		{
 			return new Offset<IDaemonHackCodeMatrix>(builder.EndTable());
 		}
 
-		// Token: 0x0601A095 RID: 106645 RVA: 0x003B8860 File Offset: 0x003B6A60
+		// Token: 0x0601B866 RID: 112742 RVA: 0x003E4A6C File Offset: 0x003E2C6C
 		public IDaemonHackCodeMatrixT UnPack()
 		{
 			IDaemonHackCodeMatrixT daemonHackCodeMatrixT = new IDaemonHackCodeMatrixT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return daemonHackCodeMatrixT;
 		}
 
-		// Token: 0x0601A096 RID: 106646 RVA: 0x003B887C File Offset: 0x003B6A7C
+		// Token: 0x0601B867 RID: 112743 RVA: 0x003E4A88 File Offset: 0x003E2C88
 		public void UnPackTo(IDaemonHackCodeMatrixT _o)
 		{
 			_o.MatrixSize = this.MatrixSize;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A097 RID: 106647 RVA: 0x003B88E8 File Offset: 0x003B6AE8
+		// Token: 0x0601B868 RID: 112744 RVA: 0x003E4AF4 File Offset: 0x003E2CF4
 		public static Offset<IDaemonHackCodeMatrix> Pack(FlatBufferBuilder builder, IDaemonHackCodeMatrixT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDaemonHackCodeMatrix.CreateIDaemonHackCodeMatrix(builder, _o.MatrixSize, presetCodesOffset);
 		}
 
-		// Token: 0x0400C427 RID: 50215
+		// Token: 0x0400CE55 RID: 52821
 		private Table __p;
 	}
 }

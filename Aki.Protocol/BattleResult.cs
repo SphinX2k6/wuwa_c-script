@@ -3,19 +3,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015B8 RID: 5560
+	// Token: 0x0200162A RID: 5674
 	public enum BattleResult
 	{
-		// Token: 0x0400BC87 RID: 48263
+		// Token: 0x0400C17A RID: 49530
 		[OriginalName("AllKill")]
 		AllKill,
-		// Token: 0x0400BC88 RID: 48264
+		// Token: 0x0400C17B RID: 49531
 		[OriginalName("Death")]
 		Death,
-		// Token: 0x0400BC89 RID: 48265
+		// Token: 0x0400C17C RID: 49532
 		[OriginalName("Run")]
 		Run,
-		// Token: 0x0400BC8A RID: 48266
+		// Token: 0x0400C17D RID: 49533
 		[OriginalName("Kill")]
 		Kill
 	}

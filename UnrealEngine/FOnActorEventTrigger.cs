@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EE0 RID: 7904
+	// Token: 0x020005F0 RID: 1520
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnActorEventTrigger : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E0E5 RID: 123109 RVA: 0x002C9AEF File Offset: 0x002C7CEF
+		// Token: 0x0600874B RID: 34635 RVA: 0x000CAED5 File Offset: 0x000C90D5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnActorEventTrigger.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E0E6 RID: 123110 RVA: 0x002C9AFB File Offset: 0x002C7CFB
+		// Token: 0x0600874C RID: 34636 RVA: 0x000CAEE1 File Offset: 0x000C90E1
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnActorEventTrigger._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnActorEventTrigger._FunctionPtr;
 		}
 
-		// Token: 0x0601E0E7 RID: 123111 RVA: 0x002C9B1E File Offset: 0x002C7D1E
+		// Token: 0x0600874D RID: 34637 RVA: 0x000CAF04 File Offset: 0x000C9104
 		public FOnActorEventTrigger()
 		{
 		}
 
-		// Token: 0x0601E0E8 RID: 123112 RVA: 0x002C9B26 File Offset: 0x002C7D26
+		// Token: 0x0600874E RID: 34638 RVA: 0x000CAF0C File Offset: 0x000C910C
 		[NullableContext(2)]
 		public FOnActorEventTrigger(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E0E9 RID: 123113 RVA: 0x002C9B30 File Offset: 0x002C7D30
+		// Token: 0x0600874F RID: 34639 RVA: 0x000CAF16 File Offset: 0x000C9116
 		public FOnActorEventTrigger(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E0EA RID: 123114 RVA: 0x002C9B3B File Offset: 0x002C7D3B
+		// Token: 0x06008750 RID: 34640 RVA: 0x000CAF21 File Offset: 0x000C9121
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<AActor, bool>) ?? ((Action<AActor, bool>)Delegate.CreateDelegate(typeof(Action<AActor, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E0EB RID: 123115 RVA: 0x002C9B6D File Offset: 0x002C7D6D
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06008751 RID: 34641 RVA: 0x000CAF53 File Offset: 0x000C9153
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnActorEventTrigger.RegisterId);
 		}
 
-		// Token: 0x0601E0EC RID: 123116 RVA: 0x002C9BA7 File Offset: 0x002C7DA7
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06008752 RID: 34642 RVA: 0x000CAF8D File Offset: 0x000C918D
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601E0ED RID: 123117 RVA: 0x002C9BB0 File Offset: 0x002C7DB0
+		// Token: 0x06008753 RID: 34643 RVA: 0x000CAF98 File Offset: 0x000C9198
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(AActor Actor, bool bContent)
 		{
 			FOnActorEventTrigger.__FOnActorEventTrigger_DelegateParams* ptr = stackalloc FOnActorEventTrigger.__FOnActorEventTrigger_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnActorEventTrigger.__FOnActorEventTrigger_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E0EE RID: 123118 RVA: 0x002C9C04 File Offset: 0x002C7E04
+		// Token: 0x06008754 RID: 34644 RVA: 0x000CAFEC File Offset: 0x000C91EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AActor, bool> action = target as Action<AActor, bool>;
@@ -109,35 +105,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FOnActorEventTrigger.__FOnActorEventTrigger_DelegateParams*)__Parameters)->bContent);
 		}
 
-		// Token: 0x040103FA RID: 66554
+		// Token: 0x04003ADB RID: 15067
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040103FB RID: 66555
+		// Token: 0x04003ADC RID: 15068
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnActorEventTrigger__DelegateSignature";
 
-		// Token: 0x040103FC RID: 66556
+		// Token: 0x04003ADD RID: 15069
 		private static int RegisterId;
 
-		// Token: 0x020033A8 RID: 13224
+		// Token: 0x02000DFB RID: 3579
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnActorEventTrigger_DelegateParams
+		private ref struct __FOnActorEventTrigger_DelegateParams
 		{
-			// Token: 0x0401735C RID: 95068
+			// Token: 0x0400618E RID: 24974
 			[FieldOffset(0)]
 			public IntPtr Actor;
 
-			// Token: 0x0401735D RID: 95069
+			// Token: 0x0400618F RID: 24975
 			[FieldOffset(8)]
 			public bool bContent;
 		}
 
-		// Token: 0x020033A9 RID: 13225
+		// Token: 0x02000DFC RID: 3580
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401735E RID: 95070
+			// Token: 0x04006190 RID: 24976
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

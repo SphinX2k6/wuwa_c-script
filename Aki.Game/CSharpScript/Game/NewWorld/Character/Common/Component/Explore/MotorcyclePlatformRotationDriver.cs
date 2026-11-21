@@ -5,12 +5,12 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x02007126 RID: 28966
+	// Token: 0x02006354 RID: 25428
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcyclePlatformRotationDriver : IClear
 	{
-		// Token: 0x06046BB7 RID: 289719 RVA: 0x011D1D78 File Offset: 0x011CFF78
+		// Token: 0x0603DA05 RID: 252421 RVA: 0x011DA8D8 File Offset: 0x011D8AD8
 		public bool Begin(MotorcycleExploreComponent exploreComp, GrapplingHookPointComponent hook)
 		{
 			this.End();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046BB8 RID: 289720 RVA: 0x011D1E30 File Offset: 0x011D0030
+		// Token: 0x0603DA06 RID: 252422 RVA: 0x011DA990 File Offset: 0x011D8B90
 		private void CaptureMotorAnchor()
 		{
 			if (this.PlatformActorComp == null || this.MotorActorComp == null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.InitialMotorRoll = actorRotationProxy2.Roll;
 		}
 
-		// Token: 0x06046BB9 RID: 289721 RVA: 0x011D1F08 File Offset: 0x011D0108
+		// Token: 0x0603DA07 RID: 252423 RVA: 0x011DAA68 File Offset: 0x011D8C68
 		public void Tick(float deltaMs)
 		{
 			if (!this.IsActive)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.SyncMotorToPlatform(num);
 		}
 
-		// Token: 0x06046BBA RID: 289722 RVA: 0x011D1FD8 File Offset: 0x011D01D8
+		// Token: 0x0603DA08 RID: 252424 RVA: 0x011DAB38 File Offset: 0x011D8D38
 		private float RInterpYawTo(float currentYaw, float targetYaw, float deltaMs)
 		{
 			float num = Rotator.NormalizeAxis(targetYaw - currentYaw);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return Rotator.NormalizeAxis((float)((double)currentYaw + (double)num * num3));
 		}
 
-		// Token: 0x06046BBB RID: 289723 RVA: 0x011D2034 File Offset: 0x011D0234
+		// Token: 0x0603DA09 RID: 252425 RVA: 0x011DAB94 File Offset: 0x011D8D94
 		private void SyncMotorToPlatform(float platformYaw)
 		{
 			if (this.PlatformActorComp == null || this.MotorActorComp == null)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.MotorActorComp.SetActorLocationAndRotation(this.TmpVector.ToUeVector(false), this.TmpRotator.ToUeRotator(), MotorcyclePlatformRotationDriver.LOG_CONTEXT, false, null);
 		}
 
-		// Token: 0x06046BBC RID: 289724 RVA: 0x011D2136 File Offset: 0x011D0336
+		// Token: 0x0603DA0A RID: 252426 RVA: 0x011DAC96 File Offset: 0x011D8E96
 		public void End()
 		{
 			this.IsActive = false;
@@ -130,52 +130,52 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.MotorActorComp = null;
 		}
 
-		// Token: 0x06046BBD RID: 289725 RVA: 0x011D214D File Offset: 0x011D034D
+		// Token: 0x0603DA0B RID: 252427 RVA: 0x011DACAD File Offset: 0x011D8EAD
 		public bool ClearObject()
 		{
 			this.End();
 			return true;
 		}
 
-		// Token: 0x04025226 RID: 152102
+		// Token: 0x04020B06 RID: 133894
 		private static readonly string LOG_CONTEXT = "MotorcyclePlatformRotationDriver";
 
-		// Token: 0x04025227 RID: 152103
+		// Token: 0x04020B07 RID: 133895
 		private const float PLATFORM_YAW_ALIGNED_EPSILON = 0.01f;
 
-		// Token: 0x04025228 RID: 152104
+		// Token: 0x04020B08 RID: 133896
 		private bool IsActive;
 
-		// Token: 0x04025229 RID: 152105
+		// Token: 0x04020B09 RID: 133897
 		[Nullable(2)]
 		private BaseActorComponent PlatformActorComp;
 
-		// Token: 0x0402522A RID: 152106
+		// Token: 0x04020B0A RID: 133898
 		[Nullable(2)]
 		private BaseActorComponent MotorActorComp;
 
-		// Token: 0x0402522B RID: 152107
+		// Token: 0x04020B0B RID: 133899
 		private float InitialMotorYawOffset;
 
-		// Token: 0x0402522C RID: 152108
+		// Token: 0x04020B0C RID: 133900
 		private double MotorLocalX;
 
-		// Token: 0x0402522D RID: 152109
+		// Token: 0x04020B0D RID: 133901
 		private double MotorLocalY;
 
-		// Token: 0x0402522E RID: 152110
+		// Token: 0x04020B0E RID: 133902
 		private float InitialMotorPitch;
 
-		// Token: 0x0402522F RID: 152111
+		// Token: 0x04020B0F RID: 133903
 		private float InitialMotorRoll;
 
-		// Token: 0x04025230 RID: 152112
+		// Token: 0x04020B10 RID: 133904
 		private float PlatformYawInterpSpeed;
 
-		// Token: 0x04025231 RID: 152113
+		// Token: 0x04020B11 RID: 133905
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x04025232 RID: 152114
+		// Token: 0x04020B12 RID: 133906
 		private readonly Rotator TmpRotator = Rotator.Create();
 	}
 }

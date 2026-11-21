@@ -5,10 +5,10 @@ using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 using CSharpScript.Game;
 using UnrealEngine;
 
-// Token: 0x020025A4 RID: 9636
+// Token: 0x02001A8F RID: 6799
 public static class PhotoModeCollisionHelper
 {
-	// Token: 0x06013844 RID: 79940 RVA: 0x004E03F4 File Offset: 0x004DE5F4
+	// Token: 0x06010D26 RID: 68902 RVA: 0x004EEF28 File Offset: 0x004ED128
 	[NullableContext(2)]
 	public unsafe static bool IsModeCollisionBlocked(PhotoCameraType mode, out string tips)
 	{
@@ -74,7 +74,7 @@ public static class PhotoModeCollisionHelper
 		return false;
 	}
 
-	// Token: 0x04009353 RID: 37715
+	// Token: 0x040094AB RID: 38059
 	[Nullable(1)]
 	private const string COLLISION_DEBUG_KEY = "PhotoModeCollision";
 }

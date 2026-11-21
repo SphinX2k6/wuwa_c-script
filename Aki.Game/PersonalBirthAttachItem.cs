@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.AutoAttach;
 using CSharpScript.Game.Module.Personal;
 using UnrealEngine;
 
-// Token: 0x020023C3 RID: 9155
+// Token: 0x020018A8 RID: 6312
 [NullableContext(2)]
 [Nullable(0)]
 public class PersonalBirthAttachItem : AutoAttachItem<int>
 {
-	// Token: 0x060124E3 RID: 74979 RVA: 0x00482354 File Offset: 0x00480554
+	// Token: 0x0600F995 RID: 63893 RVA: 0x0048F853 File Offset: 0x0048DA53
 	public PersonalBirthAttachItem(AActor uiItem = null) : base(uiItem)
 	{
 	}
 
-	// Token: 0x060124E4 RID: 74980 RVA: 0x00482383 File Offset: 0x00480583
+	// Token: 0x0600F996 RID: 63894 RVA: 0x0048F882 File Offset: 0x0048DA82
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,20 +24,20 @@ public class PersonalBirthAttachItem : AutoAttachItem<int>
 		};
 	}
 
-	// Token: 0x060124E5 RID: 74981 RVA: 0x004823A6 File Offset: 0x004805A6
+	// Token: 0x0600F997 RID: 63895 RVA: 0x0048F8A5 File Offset: 0x0048DAA5
 	protected override void OnBeforeDestroy()
 	{
 		this.Num = null;
 	}
 
-	// Token: 0x060124E6 RID: 74982 RVA: 0x004823B4 File Offset: 0x004805B4
+	// Token: 0x0600F998 RID: 63896 RVA: 0x0048F8B3 File Offset: 0x0048DAB3
 	protected override void OnRefreshItem(int data)
 	{
 		this.Num = new int?(data);
 		base.GetText(0).SetText(PersonalConfig.Instance.GetBirthLocalText(data, this.DateType), true);
 	}
 
-	// Token: 0x060124E7 RID: 74983 RVA: 0x004823E0 File Offset: 0x004805E0
+	// Token: 0x0600F999 RID: 63897 RVA: 0x0048F8E0 File Offset: 0x0048DAE0
 	protected override void OnMoveItem()
 	{
 		float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -49,14 +49,14 @@ public class PersonalBirthAttachItem : AutoAttachItem<int>
 		base.GetText(0).SetAlpha((float)num);
 	}
 
-	// Token: 0x060124E8 RID: 74984 RVA: 0x00482462 File Offset: 0x00480662
+	// Token: 0x0600F99A RID: 63898 RVA: 0x0048F962 File Offset: 0x0048DB62
 	[NullableContext(1)]
 	public void BindOnSelected(Action<int> onSelected)
 	{
 		this.OnSelectedCallback = onSelected;
 	}
 
-	// Token: 0x060124E9 RID: 74985 RVA: 0x0048246B File Offset: 0x0048066B
+	// Token: 0x0600F99B RID: 63899 RVA: 0x0048F96B File Offset: 0x0048DB6B
 	public override void OnSelect()
 	{
 		if (this.OnSelectedCallback != null)
@@ -65,26 +65,26 @@ public class PersonalBirthAttachItem : AutoAttachItem<int>
 		}
 	}
 
-	// Token: 0x060124EA RID: 74986 RVA: 0x0048248B File Offset: 0x0048068B
+	// Token: 0x0600F99C RID: 63900 RVA: 0x0048F98B File Offset: 0x0048DB8B
 	protected override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x060124EB RID: 74987 RVA: 0x0048248D File Offset: 0x0048068D
+	// Token: 0x0600F99D RID: 63901 RVA: 0x0048F98D File Offset: 0x0048DB8D
 	public void SetDateType(EBirthDateType dateType)
 	{
 		this.DateType = dateType;
 	}
 
-	// Token: 0x04008A47 RID: 35399
+	// Token: 0x04008B8E RID: 35726
 	private FVector Scale = new FVector(0f, 0f, 0f);
 
-	// Token: 0x04008A48 RID: 35400
+	// Token: 0x04008B8F RID: 35727
 	private int? Num = new int?(0);
 
-	// Token: 0x04008A49 RID: 35401
+	// Token: 0x04008B90 RID: 35728
 	private Action<int> OnSelectedCallback;
 
-	// Token: 0x04008A4A RID: 35402
+	// Token: 0x04008B91 RID: 35729
 	private EBirthDateType DateType;
 }

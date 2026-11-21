@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001A21 RID: 6689
+// Token: 0x02000EE0 RID: 3808
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssDangoCircleQualityItem : UiPanelBase
 {
-	// Token: 0x0600C4D9 RID: 50393 RVA: 0x002CA21C File Offset: 0x002C841C
+	// Token: 0x060098E9 RID: 39145 RVA: 0x002D5334 File Offset: 0x002D3534
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -39,7 +39,7 @@ public class AbyssDangoCircleQualityItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C4DA RID: 50394 RVA: 0x002CA370 File Offset: 0x002C8570
+	// Token: 0x060098EA RID: 39146 RVA: 0x002D5488 File Offset: 0x002D3688
 	protected override void OnStart()
 	{
 		this.SpriteList.Add(base.GetSprite(0));
@@ -60,7 +60,7 @@ public class AbyssDangoCircleQualityItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C4DB RID: 50395 RVA: 0x002CA464 File Offset: 0x002C8664
+	// Token: 0x060098EB RID: 39147 RVA: 0x002D557C File Offset: 0x002D377C
 	public void RefreshData(DangoCircleQualityData data)
 	{
 		foreach (UUISprite uuisprite in this.SpriteList)
@@ -80,7 +80,7 @@ public class AbyssDangoCircleQualityItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C4DC RID: 50396 RVA: 0x002CA51C File Offset: 0x002C871C
+	// Token: 0x060098EC RID: 39148 RVA: 0x002D5634 File Offset: 0x002D3834
 	private void RefreshMiddleSprite(int configId)
 	{
 		if (configId == 0)
@@ -94,7 +94,7 @@ public class AbyssDangoCircleQualityItem : UiPanelBase
 		this.SetSpriteByPath(((abyssQualityById != null) ? abyssQualityById.GetValueOrDefault().AbyssCoreItemFormationBg : null) ?? "", this.QualitySpriteMap[0], false, null, null);
 	}
 
-	// Token: 0x0600C4DD RID: 50397 RVA: 0x002CA5BC File Offset: 0x002C87BC
+	// Token: 0x060098ED RID: 39149 RVA: 0x002D56D4 File Offset: 0x002D38D4
 	private void RefreshOtherSprite(int index, int configId)
 	{
 		UUISprite uuisprite;
@@ -115,41 +115,41 @@ public class AbyssDangoCircleQualityItem : UiPanelBase
 		uuisprite.SetColor(color);
 	}
 
-	// Token: 0x04005ABD RID: 23229
+	// Token: 0x04005B8C RID: 23436
 	private readonly Dictionary<int, UUISprite> QualitySpriteMap = new Dictionary<int, UUISprite>();
 
-	// Token: 0x04005ABE RID: 23230
+	// Token: 0x04005B8D RID: 23437
 	private readonly List<UUISprite> SpriteList = new List<UUISprite>();
 
-	// Token: 0x02007F66 RID: 32614
+	// Token: 0x020070F5 RID: 28917
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029975 RID: 170357
+		// Token: 0x04024CB2 RID: 150706
 		public const int MiddleSprite = 0;
 
-		// Token: 0x04029976 RID: 170358
+		// Token: 0x04024CB3 RID: 150707
 		public const int TopSprite = 1;
 
-		// Token: 0x04029977 RID: 170359
+		// Token: 0x04024CB4 RID: 150708
 		public const int LeftTopSprite = 2;
 
-		// Token: 0x04029978 RID: 170360
+		// Token: 0x04024CB5 RID: 150709
 		public const int LeftSprite = 3;
 
-		// Token: 0x04029979 RID: 170361
+		// Token: 0x04024CB6 RID: 150710
 		public const int LeftBottomSprite = 4;
 
-		// Token: 0x0402997A RID: 170362
+		// Token: 0x04024CB7 RID: 150711
 		public const int BottomSprite = 5;
 
-		// Token: 0x0402997B RID: 170363
+		// Token: 0x04024CB8 RID: 150712
 		public const int RightBottomSprite = 6;
 
-		// Token: 0x0402997C RID: 170364
+		// Token: 0x04024CB9 RID: 150713
 		public const int RightSprite = 7;
 
-		// Token: 0x0402997D RID: 170365
+		// Token: 0x04024CBA RID: 150714
 		public const int RightTopSprite = 8;
 	}
 }

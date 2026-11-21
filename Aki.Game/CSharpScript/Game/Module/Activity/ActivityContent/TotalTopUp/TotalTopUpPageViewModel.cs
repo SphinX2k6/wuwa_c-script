@@ -9,13 +9,13 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F99 RID: 24473
+	// Token: 0x02004F80 RID: 20352
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPageViewModel
 	{
-		// Token: 0x17008FEA RID: 36842
-		// (get) Token: 0x0603E135 RID: 254261 RVA: 0x00EFCD5A File Offset: 0x00EFAF5A
+		// Token: 0x170063BC RID: 25532
+		// (get) Token: 0x060330CF RID: 209103 RVA: 0x00E4EA12 File Offset: 0x00E4CC12
 		public IReadOnlyList<TotalTopUpRotation> RotationList
 		{
 			get
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E136 RID: 254262 RVA: 0x00EFCD62 File Offset: 0x00EFAF62
+		// Token: 0x060330D0 RID: 209104 RVA: 0x00E4EA1A File Offset: 0x00E4CC1A
 		public bool HasRotation(int rewardId)
 		{
 			return this.RotationConfigMap.ContainsKey(rewardId);
 		}
 
-		// Token: 0x0603E137 RID: 254263 RVA: 0x00EFCD70 File Offset: 0x00EFAF70
+		// Token: 0x060330D1 RID: 209105 RVA: 0x00E4EA28 File Offset: 0x00E4CC28
 		public TotalTopUpRotation? GetRotation(int rewardId)
 		{
 			TotalTopUpRotation value;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return null;
 		}
 
-		// Token: 0x0603E138 RID: 254264 RVA: 0x00EFCDA0 File Offset: 0x00EFAFA0
+		// Token: 0x060330D2 RID: 209106 RVA: 0x00E4EA58 File Offset: 0x00E4CC58
 		[NullableContext(2)]
 		public TotalTopUpPageRewardViewModel GetRewardViewModel(int rewardId)
 		{
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return null;
 		}
 
-		// Token: 0x17008FEB RID: 36843
-		// (get) Token: 0x0603E139 RID: 254265 RVA: 0x00EFCDFC File Offset: 0x00EFAFFC
+		// Token: 0x170063BD RID: 25533
+		// (get) Token: 0x060330D3 RID: 209107 RVA: 0x00E4EAB4 File Offset: 0x00E4CCB4
 		public int CurrentScore
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E13A RID: 254266 RVA: 0x00EFCE14 File Offset: 0x00EFB014
+		// Token: 0x060330D4 RID: 209108 RVA: 0x00E4EACC File Offset: 0x00E4CCCC
 		public int GetRewardScore(int rewardId)
 		{
 			TotalTopUpRewardData totalTopUpRewardData;
@@ -81,8 +81,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return 0;
 		}
 
-		// Token: 0x17008FEC RID: 36844
-		// (get) Token: 0x0603E13B RID: 254267 RVA: 0x00EFCE46 File Offset: 0x00EFB046
+		// Token: 0x170063BE RID: 25534
+		// (get) Token: 0x060330D5 RID: 209109 RVA: 0x00E4EAFE File Offset: 0x00E4CCFE
 		public int NextScore
 		{
 			get
@@ -96,8 +96,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x17008FED RID: 36845
-		// (get) Token: 0x0603E13C RID: 254268 RVA: 0x00EFCE60 File Offset: 0x00EFB060
+		// Token: 0x170063BF RID: 25535
+		// (get) Token: 0x060330D6 RID: 209110 RVA: 0x00E4EB18 File Offset: 0x00E4CD18
 		public float ProgressPercent
 		{
 			get
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E13D RID: 254269 RVA: 0x00EFCE98 File Offset: 0x00EFB098
+		// Token: 0x060330D7 RID: 209111 RVA: 0x00E4EB50 File Offset: 0x00E4CD50
 		public unsafe void InitData(TotalTopUpData actData, int activityId)
 		{
 			TotalTopUpUtil.Debug("初始化数据", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.LoadRotationConfig(activityId);
 		}
 
-		// Token: 0x0603E13E RID: 254270 RVA: 0x00EFD000 File Offset: 0x00EFB200
+		// Token: 0x060330D8 RID: 209112 RVA: 0x00E4ECB8 File Offset: 0x00E4CEB8
 		private unsafe void LoadRotationConfig(int activityId)
 		{
 			this.RotationConfigList.Clear();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.RotationConfigList.Sort((TotalTopUpRotation a, TotalTopUpRotation b) => b.Sort - a.Sort);
 		}
 
-		// Token: 0x0603E13F RID: 254271 RVA: 0x00EFD248 File Offset: 0x00EFB448
+		// Token: 0x060330D9 RID: 209113 RVA: 0x00E4EF00 File Offset: 0x00E4D100
 		public void Claim(TotalTopUpPageRewardViewModel rewardViewModel)
 		{
 			if (rewardViewModel.State != ETotalTopUpRewardState.CanClaim)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			TotalTopUpController.Instance.RequestClaim(rewardViewModel.RewardConfigId, null);
 		}
 
-		// Token: 0x0603E140 RID: 254272 RVA: 0x00EFD2B0 File Offset: 0x00EFB4B0
+		// Token: 0x060330DA RID: 209114 RVA: 0x00E4EF68 File Offset: 0x00E4D168
 		private void DoSpecialClaim(TotalTopUpPageRewardViewModel rewardViewModel)
 		{
 			ETotalTopUpClaimFunction claimFunction = rewardViewModel.ClaimFunction;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			TotalTopUpUtil.Error(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0603E141 RID: 254273 RVA: 0x00EFD318 File Offset: 0x00EFB518
+		// Token: 0x060330DB RID: 209115 RVA: 0x00E4EFD0 File Offset: 0x00E4D1D0
 		public void Preview(TotalTopUpPageRewardViewModel rewardViewModel)
 		{
 			TotalTopUpReward? rewardConfigById = TotalTopUpConfig.Instance.GetRewardConfigById(rewardViewModel.RewardConfigId);
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 			if (rewardViewModel.PreviewFunction == ETotalTopUpPreviewFunction.None)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(rewardViewModel.RewardItemId, false, null);
+				ItemController.Instance.OpenItemTipsByItemId(rewardViewModel.RewardItemId, false, null, false);
 				return;
 			}
 			ITotalTopUpPreviewViewParam param = new TotalTopUpPreviewViewParam
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			UiManager.Instance.OpenView(EUiViewName.TotalTopUpPreviewView, param, null);
 		}
 
-		// Token: 0x0603E142 RID: 254274 RVA: 0x00EFD464 File Offset: 0x00EFB664
+		// Token: 0x060330DC RID: 209116 RVA: 0x00E4F11C File Offset: 0x00E4D31C
 		public void GotoStore()
 		{
 			TotalTopUpPageViewModel.<>c__DisplayClass22_0 CS$<>8__locals1 = new TotalTopUpPageViewModel.<>c__DisplayClass22_0();
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			CS$<>8__locals1.<GotoStore>g__GotoStoreAfterRequest|0().Forget();
 		}
 
-		// Token: 0x0603E143 RID: 254275 RVA: 0x00EFD4C0 File Offset: 0x00EFB6C0
+		// Token: 0x060330DD RID: 209117 RVA: 0x00E4F178 File Offset: 0x00E4D378
 		private static bool CheckWeekCardAvail()
 		{
 			WeekCardModel instance = WeekCardModel.Instance;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return weekCardViewModel != null && weekCardViewModel.IsBuyOpen() && !weekCardViewModel.IsBuy() && TotalTopUpController.Instance.GetGoodsScore(weekCardViewModel.GetPayShopGoodsId().GetValueOrDefault()) > 0;
 		}
 
-		// Token: 0x0603E144 RID: 254276 RVA: 0x00EFD510 File Offset: 0x00EFB710
+		// Token: 0x060330DE RID: 209118 RVA: 0x00E4F1C8 File Offset: 0x00E4D3C8
 		private unsafe bool CheckGiftPackAvail()
 		{
 			List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData(PayShopDefine.EPayShopTabType.GiftBag, 1, true);
@@ -318,20 +318,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return false;
 		}
 
-		// Token: 0x040206B9 RID: 132793
+		// Token: 0x0401B18B RID: 110987
 		[Nullable(2)]
 		public TotalTopUpData ActData;
 
-		// Token: 0x040206BA RID: 132794
+		// Token: 0x0401B18C RID: 110988
 		public readonly List<TotalTopUpPageRewardViewModel> RewardViewModels = new List<TotalTopUpPageRewardViewModel>();
 
-		// Token: 0x040206BB RID: 132795
+		// Token: 0x0401B18D RID: 110989
 		private readonly List<TotalTopUpRotation> RotationConfigList = new List<TotalTopUpRotation>();
 
-		// Token: 0x040206BC RID: 132796
+		// Token: 0x0401B18E RID: 110990
 		private readonly Dictionary<int, TotalTopUpRotation> RotationConfigMap = new Dictionary<int, TotalTopUpRotation>();
 
-		// Token: 0x040206BD RID: 132797
+		// Token: 0x0401B18F RID: 110991
 		private bool RequestScoreInfoInProgress;
 	}
 }

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B55 RID: 27477
+	// Token: 0x0200729B RID: 29339
 	public class IMoveSceneItemT
 	{
-		// Token: 0x1700CC27 RID: 52263
-		// (get) Token: 0x060303B5 RID: 197557 RVA: 0x0068DD11 File Offset: 0x0068BF11
-		// (set) Token: 0x060303B6 RID: 197558 RVA: 0x0068DD19 File Offset: 0x0068BF19
+		// Token: 0x1700D70C RID: 55052
+		// (get) Token: 0x0603320C RID: 209420 RVA: 0x006E62CD File Offset: 0x006E44CD
+		// (set) Token: 0x0603320D RID: 209421 RVA: 0x006E62D5 File Offset: 0x006E44D5
 		public int EntityId { get; set; }
 
-		// Token: 0x1700CC28 RID: 52264
-		// (get) Token: 0x060303B7 RID: 197559 RVA: 0x0068DD22 File Offset: 0x0068BF22
-		// (set) Token: 0x060303B8 RID: 197560 RVA: 0x0068DD2A File Offset: 0x0068BF2A
+		// Token: 0x1700D70D RID: 55053
+		// (get) Token: 0x0603320E RID: 209422 RVA: 0x006E62DE File Offset: 0x006E44DE
+		// (set) Token: 0x0603320F RID: 209423 RVA: 0x006E62E6 File Offset: 0x006E44E6
 		public bool StopBeforeMove { get; set; }
 
-		// Token: 0x1700CC29 RID: 52265
-		// (get) Token: 0x060303B9 RID: 197561 RVA: 0x0068DD33 File Offset: 0x0068BF33
-		// (set) Token: 0x060303BA RID: 197562 RVA: 0x0068DD3B File Offset: 0x0068BF3B
+		// Token: 0x1700D70E RID: 55054
+		// (get) Token: 0x06033210 RID: 209424 RVA: 0x006E62EF File Offset: 0x006E44EF
+		// (set) Token: 0x06033211 RID: 209425 RVA: 0x006E62F7 File Offset: 0x006E44F7
 		public TMoveSceneItemUnion MoveConfig { get; set; }
 
-		// Token: 0x1700CC2A RID: 52266
-		// (get) Token: 0x060303BB RID: 197563 RVA: 0x0068DD44 File Offset: 0x0068BF44
-		// (set) Token: 0x060303BC RID: 197564 RVA: 0x0068DD4C File Offset: 0x0068BF4C
+		// Token: 0x1700D70F RID: 55055
+		// (get) Token: 0x06033212 RID: 209426 RVA: 0x006E6300 File Offset: 0x006E4500
+		// (set) Token: 0x06033213 RID: 209427 RVA: 0x006E6308 File Offset: 0x006E4508
 		public bool BypassClientResponse { get; set; }
 
-		// Token: 0x1700CC2B RID: 52267
-		// (get) Token: 0x060303BD RID: 197565 RVA: 0x0068DD55 File Offset: 0x0068BF55
-		// (set) Token: 0x060303BE RID: 197566 RVA: 0x0068DD5D File Offset: 0x0068BF5D
+		// Token: 0x1700D710 RID: 55056
+		// (get) Token: 0x06033214 RID: 209428 RVA: 0x006E6311 File Offset: 0x006E4511
+		// (set) Token: 0x06033215 RID: 209429 RVA: 0x006E6319 File Offset: 0x006E4519
 		public byte NullMask { get; set; }
 
-		// Token: 0x060303BF RID: 197567 RVA: 0x0068DD66 File Offset: 0x0068BF66
+		// Token: 0x06033216 RID: 209430 RVA: 0x006E6322 File Offset: 0x006E4522
 		public IMoveSceneItemT()
 		{
 			this.EntityId = 0;

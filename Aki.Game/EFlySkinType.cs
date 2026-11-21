@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002A47 RID: 10823
+// Token: 0x02001FC2 RID: 8130
 public enum EFlySkinType
 {
-	// Token: 0x0400A761 RID: 42849
+	// Token: 0x0400AB65 RID: 43877
 	SoarWing,
-	// Token: 0x0400A762 RID: 42850
+	// Token: 0x0400AB66 RID: 43878
 	Paragliding
 }

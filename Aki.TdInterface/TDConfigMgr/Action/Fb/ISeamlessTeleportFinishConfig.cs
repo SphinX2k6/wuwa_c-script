@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026A3 RID: 9891
+	// Token: 0x02002966 RID: 10598
 	public class ISeamlessTeleportFinishConfig
 	{
-		// Token: 0x0600DD5C RID: 56668 RVA: 0x0020E29E File Offset: 0x0020C49E
-		[NullableContext(1)]
+		// Token: 0x0600EB33 RID: 60211 RVA: 0x0022AA3E File Offset: 0x00228C3E
 		public static ISeamlessTeleportFinishConfig Create(ISeamlessTeleportFinishConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041D8 RID: 16856
-		// (get) Token: 0x0600DD5D RID: 56669 RVA: 0x0020E2C0 File Offset: 0x0020C4C0
+		// Token: 0x17004515 RID: 17685
+		// (get) Token: 0x0600EB34 RID: 60212 RVA: 0x0022AA60 File Offset: 0x00228C60
 		public virtual bool? IsNotStopScreenEffect
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041D9 RID: 16857
-		// (get) Token: 0x0600DD5E RID: 56670 RVA: 0x0020E2F8 File Offset: 0x0020C4F8
+		// Token: 0x17004516 RID: 17686
+		// (get) Token: 0x0600EB35 RID: 60213 RVA: 0x0022AA98 File Offset: 0x00228C98
 		public virtual int? EffectExtraState
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AF3 RID: 31475
+		// Token: 0x04008190 RID: 33168
 		private ISeamlessTeleportFinishConfig Instance;
 	}
 }

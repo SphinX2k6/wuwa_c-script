@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Controller
 {
-	// Token: 0x0200558F RID: 21903
+	// Token: 0x02004565 RID: 17765
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class LineTraceSaver
 	{
-		// Token: 0x06037D09 RID: 228617 RVA: 0x00D39A2C File Offset: 0x00D37C2C
+		// Token: 0x0602CC07 RID: 183303 RVA: 0x00C876F4 File Offset: 0x00C858F4
 		protected void InitTrackInfo()
 		{
 			this.LineTrace = new UTraceLineElement();
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Map.Controller
 			this.LineTrace.SetTraceTypeQuery(KuroTraceTypeQuery.IkGround);
 		}
 
-		// Token: 0x06037D0A RID: 228618 RVA: 0x00D39A7C File Offset: 0x00D37C7C
+		// Token: 0x0602CC08 RID: 183304 RVA: 0x00C87744 File Offset: 0x00C85944
 		public Vector GetMarkPosition(double x, double y)
 		{
 			if (this.LineTrace == null)
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Map.Controller
 			return result;
 		}
 
-		// Token: 0x06037D0B RID: 228619 RVA: 0x00D39B38 File Offset: 0x00D37D38
+		// Token: 0x0602CC09 RID: 183305 RVA: 0x00C87800 File Offset: 0x00C85A00
 		public void OnClear()
 		{
 			this.LineTrace = null;
 		}
 
-		// Token: 0x0401D564 RID: 120164
+		// Token: 0x04017FEF RID: 98287
 		private UTraceLineElement LineTrace;
 	}
 }

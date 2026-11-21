@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001901 RID: 6401
+// Token: 0x02000DBA RID: 3514
 public class MediumItemGridBuffIconComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BBB5 RID: 48053 RVA: 0x002A9028 File Offset: 0x002A7228
+	// Token: 0x06008F9F RID: 36767 RVA: 0x002B3784 File Offset: 0x002B1984
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,14 +20,14 @@ public class MediumItemGridBuffIconComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBB6 RID: 48054 RVA: 0x002A9070 File Offset: 0x002A7270
+	// Token: 0x06008FA0 RID: 36768 RVA: 0x002B37CC File Offset: 0x002B19CC
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemType";
 	}
 
-	// Token: 0x0600BBB7 RID: 48055 RVA: 0x002A9078 File Offset: 0x002A7278
+	// Token: 0x06008FA1 RID: 36769 RVA: 0x002B37D4 File Offset: 0x002B19D4
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -70,10 +70,10 @@ public class MediumItemGridBuffIconComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E7B RID: 32379
+	// Token: 0x02007002 RID: 28674
 	private class EChildType
 	{
-		// Token: 0x04029637 RID: 169527
+		// Token: 0x04024963 RID: 149859
 		public const int BuffTypeSprite = 0;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001923 RID: 6435
+	// Token: 0x02001AAC RID: 6828
 	public class ICommonTipPrepareCountdown_SetValue
 	{
-		// Token: 0x04005655 RID: 22101
+		// Token: 0x04005AA5 RID: 23205
 		public ECommonTipType Type;
 	}
 }

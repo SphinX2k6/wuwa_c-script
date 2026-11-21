@@ -4,44 +4,44 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FEC RID: 8172
+	// Token: 0x02000651 RID: 1617
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EPointerEventType")]
 	public enum EPointerEventType : byte
 	{
-		// Token: 0x04010BBF RID: 68543
+		// Token: 0x04003DD8 RID: 15832
 		Click,
-		// Token: 0x04010BC0 RID: 68544
+		// Token: 0x04003DD9 RID: 15833
 		Enter,
-		// Token: 0x04010BC1 RID: 68545
+		// Token: 0x04003DDA RID: 15834
 		Exit,
-		// Token: 0x04010BC2 RID: 68546
+		// Token: 0x04003DDB RID: 15835
 		Down,
-		// Token: 0x04010BC3 RID: 68547
+		// Token: 0x04003DDC RID: 15836
 		Up,
-		// Token: 0x04010BC4 RID: 68548
+		// Token: 0x04003DDD RID: 15837
 		BeginDrag,
-		// Token: 0x04010BC5 RID: 68549
+		// Token: 0x04003DDE RID: 15838
 		Drag,
-		// Token: 0x04010BC6 RID: 68550
+		// Token: 0x04003DDF RID: 15839
 		EndDrag,
-		// Token: 0x04010BC7 RID: 68551
+		// Token: 0x04003DE0 RID: 15840
 		Scroll,
-		// Token: 0x04010BC8 RID: 68552
+		// Token: 0x04003DE1 RID: 15841
 		DragEnter_DEPRECATED,
-		// Token: 0x04010BC9 RID: 68553
+		// Token: 0x04003DE2 RID: 15842
 		DragExit_DEPRECATED,
-		// Token: 0x04010BCA RID: 68554
+		// Token: 0x04003DE3 RID: 15843
 		DragDrop,
-		// Token: 0x04010BCB RID: 68555
+		// Token: 0x04003DE4 RID: 15844
 		Select,
-		// Token: 0x04010BCC RID: 68556
+		// Token: 0x04003DE5 RID: 15845
 		Deselect,
-		// Token: 0x04010BCD RID: 68557
+		// Token: 0x04003DE6 RID: 15846
 		Navigate,
-		// Token: 0x04010BCE RID: 68558
+		// Token: 0x04003DE7 RID: 15847
 		Simulation,
-		// Token: 0x04010BCF RID: 68559
+		// Token: 0x04003DE8 RID: 15848
 		EPointerEventType_MAX
 	}
 }

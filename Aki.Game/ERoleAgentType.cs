@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020028D1 RID: 10449
+// Token: 0x02001E4C RID: 7756
 public enum ERoleAgentType
 {
-	// Token: 0x0400A091 RID: 41105
+	// Token: 0x0400A47A RID: 42106
 	Normal,
-	// Token: 0x0400A092 RID: 41106
+	// Token: 0x0400A47B RID: 42107
 	Preview,
-	// Token: 0x0400A093 RID: 41107
+	// Token: 0x0400A47C RID: 42108
 	RoleNewJoin
 }

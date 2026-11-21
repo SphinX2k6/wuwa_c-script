@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Motor
 {
-	// Token: 0x02004BF0 RID: 19440
+	// Token: 0x02003BA1 RID: 15265
 	public class MotorSkinRecommendView : UiTabViewBase
 	{
-		// Token: 0x06032450 RID: 205904 RVA: 0x00BADF5F File Offset: 0x00BAC15F
+		// Token: 0x060271F4 RID: 160244 RVA: 0x00AF24DF File Offset: 0x00AF06DF
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			};
 		}
 
-		// Token: 0x06032451 RID: 205905 RVA: 0x00BADF84 File Offset: 0x00BAC184
+		// Token: 0x060271F5 RID: 160245 RVA: 0x00AF2504 File Offset: 0x00AF0704
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorSkinRecommendView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -32,26 +32,26 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032452 RID: 205906 RVA: 0x00BADFC7 File Offset: 0x00BAC1C7
+		// Token: 0x060271F6 RID: 160246 RVA: 0x00AF2547 File Offset: 0x00AF0747
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnRefreshGoods));
 		}
 
-		// Token: 0x06032453 RID: 205907 RVA: 0x00BADFE5 File Offset: 0x00BAC1E5
+		// Token: 0x060271F7 RID: 160247 RVA: 0x00AF2565 File Offset: 0x00AF0765
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnRefreshGoods));
 		}
 
-		// Token: 0x06032454 RID: 205908 RVA: 0x00BAE003 File Offset: 0x00BAC203
+		// Token: 0x060271F8 RID: 160248 RVA: 0x00AF2583 File Offset: 0x00AF0783
 		[NullableContext(1)]
 		private void OnRefreshGoods(PayItemSuccess _)
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x06032455 RID: 205909 RVA: 0x00BAE00C File Offset: 0x00BAC20C
+		// Token: 0x060271F9 RID: 160249 RVA: 0x00AF258C File Offset: 0x00AF078C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
@@ -59,24 +59,24 @@ namespace CSharpScript.Game.Module.Skin.Tab.Motor
 			((tabBehavior != null) ? tabBehavior.GetLevelSequencePlayer() : null).PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06032456 RID: 205910 RVA: 0x00BAE046 File Offset: 0x00BAC246
+		// Token: 0x060271FA RID: 160250 RVA: 0x00AF25C6 File Offset: 0x00AF07C6
 		private void RefreshView()
 		{
 			this.MotorSkinItemContent.Refresh(this.RecommendData.Id);
 		}
 
-		// Token: 0x0401ABD7 RID: 109527
+		// Token: 0x04015532 RID: 87346
 		[Nullable(2)]
 		private MotorSkinItemContent MotorSkinItemContent;
 
-		// Token: 0x0401ABD8 RID: 109528
+		// Token: 0x04015533 RID: 87347
 		[Nullable(2)]
 		private PayShopRecommendData RecommendData;
 
-		// Token: 0x0200ADE8 RID: 44520
+		// Token: 0x02009807 RID: 38919
 		private enum EComponent
 		{
-			// Token: 0x04034D16 RID: 216342
+			// Token: 0x0402F6BD RID: 194237
 			Content
 		}
 	}

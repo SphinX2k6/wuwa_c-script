@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005975 RID: 22901
+	// Token: 0x02005F82 RID: 24450
 	public class ISpecialNpcPerformType_UnionUnion
 	{
-		// Token: 0x1700ABD7 RID: 43991
-		// (get) Token: 0x06026C33 RID: 158771 RVA: 0x00556139 File Offset: 0x00554339
-		// (set) Token: 0x06026C34 RID: 158772 RVA: 0x00556141 File Offset: 0x00554341
+		// Token: 0x1700B50B RID: 46347
+		// (get) Token: 0x0602919D RID: 168349 RVA: 0x0059CDA5 File Offset: 0x0059AFA5
+		// (set) Token: 0x0602919E RID: 168350 RVA: 0x0059CDAD File Offset: 0x0059AFAD
 		public ISpecialNpcPerformType_Union Type { get; set; }
 
-		// Token: 0x1700ABD8 RID: 43992
-		// (get) Token: 0x06026C35 RID: 158773 RVA: 0x0055614A File Offset: 0x0055434A
-		// (set) Token: 0x06026C36 RID: 158774 RVA: 0x00556152 File Offset: 0x00554352
+		// Token: 0x1700B50C RID: 46348
+		// (get) Token: 0x0602919F RID: 168351 RVA: 0x0059CDB6 File Offset: 0x0059AFB6
+		// (set) Token: 0x060291A0 RID: 168352 RVA: 0x0059CDBE File Offset: 0x0059AFBE
 		public object Value { get; set; }
 
-		// Token: 0x06026C37 RID: 158775 RVA: 0x0055615B File Offset: 0x0055435B
+		// Token: 0x060291A1 RID: 168353 RVA: 0x0059CDC7 File Offset: 0x0059AFC7
 		public ISpecialNpcPerformType_UnionUnion()
 		{
 			this.Type = ISpecialNpcPerformType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026C38 RID: 158776 RVA: 0x00556171 File Offset: 0x00554371
+		// Token: 0x060291A2 RID: 168354 RVA: 0x0059CDDD File Offset: 0x0059AFDD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026C39 RID: 158777 RVA: 0x00556183 File Offset: 0x00554383
+		// Token: 0x060291A3 RID: 168355 RVA: 0x0059CDEF File Offset: 0x0059AFEF
 		public ISpecialNpcPerformTypeT AsISpecialNpcPerformType()
 		{
 			return this.As<ISpecialNpcPerformTypeT>();
 		}
 
-		// Token: 0x06026C3A RID: 158778 RVA: 0x0055618B File Offset: 0x0055438B
+		// Token: 0x060291A4 RID: 168356 RVA: 0x0059CDF7 File Offset: 0x0059AFF7
 		public static ISpecialNpcPerformType_UnionUnion FromISpecialNpcPerformType(ISpecialNpcPerformTypeT _ispecialnpcperformtype)
 		{
 			return new ISpecialNpcPerformType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026C3B RID: 158779 RVA: 0x005561A0 File Offset: 0x005543A0
+		// Token: 0x060291A5 RID: 168357 RVA: 0x0059CE0C File Offset: 0x0059B00C
 		public IBaseRoleNpcPerformT AsIBaseRoleNpcPerform()
 		{
 			return this.As<IBaseRoleNpcPerformT>();
 		}
 
-		// Token: 0x06026C3C RID: 158780 RVA: 0x005561A8 File Offset: 0x005543A8
+		// Token: 0x060291A6 RID: 168358 RVA: 0x0059CE14 File Offset: 0x0059B014
 		public static ISpecialNpcPerformType_UnionUnion FromIBaseRoleNpcPerform(IBaseRoleNpcPerformT _ibaserolenpcperform)
 		{
 			return new ISpecialNpcPerformType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026C3D RID: 158781 RVA: 0x005561C0 File Offset: 0x005543C0
+		// Token: 0x060291A7 RID: 168359 RVA: 0x0059CE2C File Offset: 0x0059B02C
 		public static int Pack(FlatBufferBuilder builder, ISpecialNpcPerformType_UnionUnion _o)
 		{
 			ISpecialNpcPerformType_Union type = _o.Type;

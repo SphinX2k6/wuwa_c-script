@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002BD9 RID: 11225
+// Token: 0x02002154 RID: 8532
 public class TowerDetailMonster
 {
-	// Token: 0x0400AE78 RID: 44664
+	// Token: 0x0400B27D RID: 45693
 	public int MonsterId;
 
-	// Token: 0x0400AE79 RID: 44665
+	// Token: 0x0400B27E RID: 45694
 	public int ShowLevel;
 }

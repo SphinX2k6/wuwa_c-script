@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200720C RID: 29196
+	// Token: 0x020079E1 RID: 31201
 	public class ISubScreenInitData_UnionUnion
 	{
-		// Token: 0x1700D8C4 RID: 55492
-		// (get) Token: 0x06033C8E RID: 212110 RVA: 0x006F83C9 File Offset: 0x006F65C9
-		// (set) Token: 0x06033C8F RID: 212111 RVA: 0x006F83D1 File Offset: 0x006F65D1
+		// Token: 0x1700E4BD RID: 58557
+		// (get) Token: 0x06036F90 RID: 225168 RVA: 0x00759729 File Offset: 0x00757929
+		// (set) Token: 0x06036F91 RID: 225169 RVA: 0x00759731 File Offset: 0x00757931
 		public ISubScreenInitData_Union Type { get; set; }
 
-		// Token: 0x1700D8C5 RID: 55493
-		// (get) Token: 0x06033C90 RID: 212112 RVA: 0x006F83DA File Offset: 0x006F65DA
-		// (set) Token: 0x06033C91 RID: 212113 RVA: 0x006F83E2 File Offset: 0x006F65E2
+		// Token: 0x1700E4BE RID: 58558
+		// (get) Token: 0x06036F92 RID: 225170 RVA: 0x0075973A File Offset: 0x0075793A
+		// (set) Token: 0x06036F93 RID: 225171 RVA: 0x00759742 File Offset: 0x00757942
 		public object Value { get; set; }
 
-		// Token: 0x06033C92 RID: 212114 RVA: 0x006F83EB File Offset: 0x006F65EB
+		// Token: 0x06036F94 RID: 225172 RVA: 0x0075974B File Offset: 0x0075794B
 		public ISubScreenInitData_UnionUnion()
 		{
 			this.Type = ISubScreenInitData_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06033C93 RID: 212115 RVA: 0x006F8401 File Offset: 0x006F6601
+		// Token: 0x06036F95 RID: 225173 RVA: 0x00759761 File Offset: 0x00757961
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06033C94 RID: 212116 RVA: 0x006F8413 File Offset: 0x006F6613
+		// Token: 0x06036F96 RID: 225174 RVA: 0x00759773 File Offset: 0x00757973
 		public ISubScreenInitDataT AsISubScreenInitData()
 		{
 			return this.As<ISubScreenInitDataT>();
 		}
 
-		// Token: 0x06033C95 RID: 212117 RVA: 0x006F841B File Offset: 0x006F661B
+		// Token: 0x06036F97 RID: 225175 RVA: 0x0075977B File Offset: 0x0075797B
 		public static ISubScreenInitData_UnionUnion FromISubScreenInitData(ISubScreenInitDataT _isubscreeninitdata)
 		{
 			return new ISubScreenInitData_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033C96 RID: 212118 RVA: 0x006F8430 File Offset: 0x006F6630
+		// Token: 0x06036F98 RID: 225176 RVA: 0x00759790 File Offset: 0x00757990
 		public ISubScreenPresetInitDataT AsISubScreenPresetInitData()
 		{
 			return this.As<ISubScreenPresetInitDataT>();
 		}
 
-		// Token: 0x06033C97 RID: 212119 RVA: 0x006F8438 File Offset: 0x006F6638
+		// Token: 0x06036F99 RID: 225177 RVA: 0x00759798 File Offset: 0x00757998
 		public static ISubScreenInitData_UnionUnion FromISubScreenPresetInitData(ISubScreenPresetInitDataT _isubscreenpresetinitdata)
 		{
 			return new ISubScreenInitData_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033C98 RID: 212120 RVA: 0x006F844D File Offset: 0x006F664D
+		// Token: 0x06036F9A RID: 225178 RVA: 0x007597AD File Offset: 0x007579AD
 		public ISubScreenCustomInitDataT AsISubScreenCustomInitData()
 		{
 			return this.As<ISubScreenCustomInitDataT>();
 		}
 
-		// Token: 0x06033C99 RID: 212121 RVA: 0x006F8455 File Offset: 0x006F6655
+		// Token: 0x06036F9B RID: 225179 RVA: 0x007597B5 File Offset: 0x007579B5
 		public static ISubScreenInitData_UnionUnion FromISubScreenCustomInitData(ISubScreenCustomInitDataT _isubscreencustominitdata)
 		{
 			return new ISubScreenInitData_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06033C9A RID: 212122 RVA: 0x006F846C File Offset: 0x006F666C
+		// Token: 0x06036F9C RID: 225180 RVA: 0x007597CC File Offset: 0x007579CC
 		public static int Pack(FlatBufferBuilder builder, ISubScreenInitData_UnionUnion _o)
 		{
 			switch (_o.Type)

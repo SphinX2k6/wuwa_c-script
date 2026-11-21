@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002211 RID: 8721
+	// Token: 0x0200247C RID: 9340
 	public class SlideRailEnd_SetValue
 	{
-		// Token: 0x04007226 RID: 29222
-		[Nullable(1)]
+		// Token: 0x04007870 RID: 30832
 		public ISlideRailEndType EndTarget;
 	}
 }

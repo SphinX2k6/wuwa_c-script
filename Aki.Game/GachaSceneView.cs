@@ -1,73 +1,73 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001CA3 RID: 7331
+// Token: 0x02001162 RID: 4450
 public class GachaSceneView : UiTickViewBase
 {
-	// Token: 0x0600DD5E RID: 56670 RVA: 0x0033C7AC File Offset: 0x0033A9AC
+	// Token: 0x0600B174 RID: 45428 RVA: 0x00347BF8 File Offset: 0x00345DF8
 	[NullableContext(1)]
 	public GachaSceneView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DD5F RID: 56671 RVA: 0x0033C7B5 File Offset: 0x0033A9B5
+	// Token: 0x0600B175 RID: 45429 RVA: 0x00347C01 File Offset: 0x00345E01
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.CloseGachaSceneView, new Action(this.CloseViewEvent));
 		this.AfterAddEventListener();
 	}
 
-	// Token: 0x0600DD60 RID: 56672 RVA: 0x0033C7D9 File Offset: 0x0033A9D9
+	// Token: 0x0600B176 RID: 45430 RVA: 0x00347C25 File Offset: 0x00345E25
 	protected virtual void AfterAddEventListener()
 	{
 	}
 
-	// Token: 0x0600DD61 RID: 56673 RVA: 0x0033C7DB File Offset: 0x0033A9DB
+	// Token: 0x0600B177 RID: 45431 RVA: 0x00347C27 File Offset: 0x00345E27
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.CloseGachaSceneView, new Action(this.CloseViewEvent));
 		this.AfterRemoveEventListener();
 	}
 
-	// Token: 0x0600DD62 RID: 56674 RVA: 0x0033C7FF File Offset: 0x0033A9FF
+	// Token: 0x0600B178 RID: 45432 RVA: 0x00347C4B File Offset: 0x00345E4B
 	protected virtual void AfterRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600DD63 RID: 56675 RVA: 0x0033C801 File Offset: 0x0033AA01
+	// Token: 0x0600B179 RID: 45433 RVA: 0x00347C4D File Offset: 0x00345E4D
 	protected void CloseViewEvent()
 	{
 		this.BindCloseUiScene();
 	}
 
-	// Token: 0x0600DD64 RID: 56676 RVA: 0x0033C809 File Offset: 0x0033AA09
+	// Token: 0x0600B17A RID: 45434 RVA: 0x00347C55 File Offset: 0x00345E55
 	protected override void OnBeforeShow()
 	{
 		this.OnAfterOpenUiScene();
 	}
 
-	// Token: 0x0600DD65 RID: 56677 RVA: 0x0033C811 File Offset: 0x0033AA11
+	// Token: 0x0600B17B RID: 45435 RVA: 0x00347C5D File Offset: 0x00345E5D
 	protected virtual void OnAfterOpenUiScene()
 	{
 	}
 
-	// Token: 0x0600DD66 RID: 56678 RVA: 0x0033C813 File Offset: 0x0033AA13
+	// Token: 0x0600B17C RID: 45436 RVA: 0x00347C5F File Offset: 0x00345E5F
 	protected override void OnStart()
 	{
 		GachaModel.Instance.CanCloseView = false;
 		this.OnAfterInitComponentsData();
 	}
 
-	// Token: 0x0600DD67 RID: 56679 RVA: 0x0033C826 File Offset: 0x0033AA26
+	// Token: 0x0600B17D RID: 45437 RVA: 0x00347C72 File Offset: 0x00345E72
 	private void BindCloseUiScene()
 	{
 		this.AfterCloseUiScene(true);
 	}
 
-	// Token: 0x0600DD68 RID: 56680 RVA: 0x0033C830 File Offset: 0x0033AA30
+	// Token: 0x0600B17E RID: 45438 RVA: 0x00347C7C File Offset: 0x00345E7C
 	private void AfterCloseUiScene(bool ret)
 	{
 		if (!ret)
@@ -83,29 +83,29 @@ public class GachaSceneView : UiTickViewBase
 		EventSystem.Instance.Emit(EEventName.AfterCloseGachaScene);
 	}
 
-	// Token: 0x0600DD69 RID: 56681 RVA: 0x0033C880 File Offset: 0x0033AA80
+	// Token: 0x0600B17F RID: 45439 RVA: 0x00347CCC File Offset: 0x00345ECC
 	protected virtual void OnAfterCloseUiScene()
 	{
 	}
 
-	// Token: 0x0600DD6A RID: 56682 RVA: 0x0033C882 File Offset: 0x0033AA82
+	// Token: 0x0600B180 RID: 45440 RVA: 0x00347CCE File Offset: 0x00345ECE
 	protected virtual void OnBeforeDestroyImplementImplement()
 	{
 	}
 
-	// Token: 0x0600DD6B RID: 56683 RVA: 0x0033C884 File Offset: 0x0033AA84
+	// Token: 0x0600B181 RID: 45441 RVA: 0x00347CD0 File Offset: 0x00345ED0
 	protected override void OnBeforeDestroyImplement()
 	{
 		GachaModel.Instance.CanCloseView = true;
 		this.OnBeforeDestroyImplementImplement();
 	}
 
-	// Token: 0x0600DD6C RID: 56684 RVA: 0x0033C897 File Offset: 0x0033AA97
+	// Token: 0x0600B182 RID: 45442 RVA: 0x00347CE3 File Offset: 0x00345EE3
 	protected virtual void OnAfterInitComponentsData()
 	{
 	}
 
-	// Token: 0x04006598 RID: 26008
+	// Token: 0x04006669 RID: 26217
 	[Nullable(2)]
 	protected UiCameraHandleData UiCameraHandleData;
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA5 RID: 19877
+	// Token: 0x02003D6E RID: 15726
 	public enum ETalentTreeNodeState
 	{
-		// Token: 0x0401B457 RID: 111703
+		// Token: 0x04015E2A RID: 89642
 		Lock = -1,
-		// Token: 0x0401B458 RID: 111704
+		// Token: 0x04015E2B RID: 89643
 		Unlock,
-		// Token: 0x0401B459 RID: 111705
+		// Token: 0x04015E2C RID: 89644
 		Active
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004351 RID: 17233
+	// Token: 0x020047B3 RID: 18355
 	public enum EPerformerAiAbortType : byte
 	{
-		// Token: 0x0400C135 RID: 49461
+		// Token: 0x0400CB53 RID: 52051
 		None,
-		// Token: 0x0400C136 RID: 49462
+		// Token: 0x0400CB54 RID: 52052
 		LowerPriority,
-		// Token: 0x0400C137 RID: 49463
+		// Token: 0x0400CB55 RID: 52053
 		Self,
-		// Token: 0x0400C138 RID: 49464
+		// Token: 0x0400CB56 RID: 52054
 		Both
 	}
 }

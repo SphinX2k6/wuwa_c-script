@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000873 RID: 2163
+	// Token: 0x0200088F RID: 2191
 	public class ConfigRogueWeeklyCycleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060032C4 RID: 12996 RVA: 0x0017876F File Offset: 0x0017696F
+		// Token: 0x0600336C RID: 13164 RVA: 0x0017FA57 File Offset: 0x0017DC57
 		static ConfigRogueWeeklyCycleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueWeeklyCycleAll.CreateStaticDefaultValue), new Action(ConfigRogueWeeklyCycleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060032C5 RID: 12997 RVA: 0x00178790 File Offset: 0x00176990
+		// Token: 0x0600336D RID: 13165 RVA: 0x0017FA78 File Offset: 0x0017DC78
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueWeeklyCycleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060032C6 RID: 12998 RVA: 0x0017880F File Offset: 0x00176A0F
+		// Token: 0x0600336E RID: 13166 RVA: 0x0017FAF7 File Offset: 0x0017DCF7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueWeeklyCycleAll.LogPair = null;
 			ConfigRogueWeeklyCycleAll.HandleId = 0;
 		}
 
-		// Token: 0x060032C7 RID: 12999 RVA: 0x0017881D File Offset: 0x00176A1D
+		// Token: 0x0600336F RID: 13167 RVA: 0x0017FB05 File Offset: 0x0017DD05
 		public static void Init()
 		{
 			ConfigRogueWeeklyCycleAll.HandleId = ConfigCommon.InitDataStatement(ConfigRogueWeeklyCycleAll.HandleId, "db_weeklyrogue.db", "select BinData from `RogueWeeklyCycle`");
 		}
 
-		// Token: 0x060032C8 RID: 13000 RVA: 0x00178838 File Offset: 0x00176A38
+		// Token: 0x06003370 RID: 13168 RVA: 0x0017FB20 File Offset: 0x0017DD20
 		[NullableContext(2)]
 		public static IReadOnlyList<RogueWeeklyCycle> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003B0B RID: 15115
+		// Token: 0x04003BCF RID: 15311
 		private const string DB = "db_weeklyrogue.db";
 
-		// Token: 0x04003B0C RID: 15116
+		// Token: 0x04003BD0 RID: 15312
 		private const string FILE = "r.肉鸽周常.xlsx";
 
-		// Token: 0x04003B0D RID: 15117
+		// Token: 0x04003BD1 RID: 15313
 		private const string TABLE = "RogueWeeklyCycle";
 
-		// Token: 0x04003B0E RID: 15118
+		// Token: 0x04003BD2 RID: 15314
 		private const string COMMAND = "select BinData from `RogueWeeklyCycle`";
 
-		// Token: 0x04003B0F RID: 15119
+		// Token: 0x04003BD3 RID: 15315
 		private const string KEY_PREFIX = "RogueWeeklyCycleAll";
 
-		// Token: 0x04003B10 RID: 15120
+		// Token: 0x04003BD4 RID: 15316
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B11 RID: 15121
+		// Token: 0x04003BD5 RID: 15317
 		private static int HandleId;
 	}
 }

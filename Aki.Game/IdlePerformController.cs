@@ -5,21 +5,21 @@ using Aki.Protocol;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001F6E RID: 8046
+// Token: 0x02001430 RID: 5168
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 [TickController(0)]
 public class IdlePerformController : ControllerBase
 {
-	// Token: 0x0600F997 RID: 63895 RVA: 0x003C7D90 File Offset: 0x003C5F90
+	// Token: 0x0600CDB6 RID: 52662 RVA: 0x003D387C File Offset: 0x003D1A7C
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 		return base.OnInit();
 	}
 
-	// Token: 0x0600F998 RID: 63896 RVA: 0x003C7DB4 File Offset: 0x003C5FB4
+	// Token: 0x0600CDB7 RID: 52663 RVA: 0x003D38A0 File Offset: 0x003D1AA0
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -28,7 +28,7 @@ public class IdlePerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F999 RID: 63897 RVA: 0x003C7DE8 File Offset: 0x003C5FE8
+	// Token: 0x0600CDB8 RID: 52664 RVA: 0x003D38D4 File Offset: 0x003D1AD4
 	protected override void OnTick(float delta)
 	{
 		EntityHandle currentPlayerHandle = this.CurrentPlayerHandle;
@@ -48,7 +48,7 @@ public class IdlePerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600F99A RID: 63898 RVA: 0x003C7E58 File Offset: 0x003C6058
+	// Token: 0x0600CDB9 RID: 52665 RVA: 0x003D3944 File Offset: 0x003D1B44
 	public void ClearIdle()
 	{
 		Log.Instance.Info(ELogModule.Controller, ELogAuthor.ZJL, "[IdlePerform] 外部主动清空闲置时长", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -60,7 +60,7 @@ public class IdlePerformController : ControllerBase
 		instance.ResetIdleTime();
 	}
 
-	// Token: 0x0600F99B RID: 63899 RVA: 0x003C7E94 File Offset: 0x003C6094
+	// Token: 0x0600CDBA RID: 52666 RVA: 0x003D3980 File Offset: 0x003D1B80
 	[NullableContext(2)]
 	private void UnbindPlayerEvents(EntityHandle handle)
 	{
@@ -79,7 +79,7 @@ public class IdlePerformController : ControllerBase
 		EventSystem.Instance.RemoveWithTarget<global::ECharMoveState, global::ECharMoveState>(entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnUnifiedMoveStateChanged));
 	}
 
-	// Token: 0x0600F99C RID: 63900 RVA: 0x003C7F20 File Offset: 0x003C6120
+	// Token: 0x0600CDBB RID: 52667 RVA: 0x003D3A0C File Offset: 0x003D1C0C
 	private void BindPlayerEvents(EntityHandle handle)
 	{
 		WorldEntity entity = handle.Entity;
@@ -89,7 +89,7 @@ public class IdlePerformController : ControllerBase
 		EventSystem.Instance.AddWithTarget<global::ECharMoveState, global::ECharMoveState>(entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnUnifiedMoveStateChanged));
 	}
 
-	// Token: 0x0600F99D RID: 63901 RVA: 0x003C7FA4 File Offset: 0x003C61A4
+	// Token: 0x0600CDBC RID: 52668 RVA: 0x003D3A90 File Offset: 0x003D1C90
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		this.UnbindPlayerEvents(this.CurrentPlayerHandle);
@@ -118,7 +118,7 @@ public class IdlePerformController : ControllerBase
 		instance2.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600F99E RID: 63902 RVA: 0x003C8050 File Offset: 0x003C6250
+	// Token: 0x0600CDBD RID: 52669 RVA: 0x003D3B3C File Offset: 0x003D1D3C
 	private unsafe void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle removedEntity)
 	{
 		EntityHandle currentPlayerHandle = this.CurrentPlayerHandle;
@@ -143,7 +143,7 @@ public class IdlePerformController : ControllerBase
 		instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600F99F RID: 63903 RVA: 0x003C80F9 File Offset: 0x003C62F9
+	// Token: 0x0600CDBE RID: 52670 RVA: 0x003D3BE5 File Offset: 0x003D1DE5
 	private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		IdlePerformModel instance = IdlePerformModel.Instance;
@@ -154,7 +154,7 @@ public class IdlePerformController : ControllerBase
 		instance.ResetIdleTime();
 	}
 
-	// Token: 0x0600F9A0 RID: 63904 RVA: 0x003C810A File Offset: 0x003C630A
+	// Token: 0x0600CDBF RID: 52671 RVA: 0x003D3BF6 File Offset: 0x003D1DF6
 	private void OnBeHit(global::HitInformation hitData, HitContext _)
 	{
 		IdlePerformModel instance = IdlePerformModel.Instance;
@@ -165,7 +165,7 @@ public class IdlePerformController : ControllerBase
 		instance.ResetIdleTime();
 	}
 
-	// Token: 0x0600F9A1 RID: 63905 RVA: 0x003C811B File Offset: 0x003C631B
+	// Token: 0x0600CDC0 RID: 52672 RVA: 0x003D3C07 File Offset: 0x003D1E07
 	private void OnUnifiedMoveStateChanged(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 	{
 		if (!this.StopIdleMoveStates.Contains(newMoveState))
@@ -179,8 +179,8 @@ public class IdlePerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x17001339 RID: 4921
-	// (get) Token: 0x0600F9A2 RID: 63906 RVA: 0x003C813A File Offset: 0x003C633A
+	// Token: 0x17001363 RID: 4963
+	// (get) Token: 0x0600CDC1 RID: 52673 RVA: 0x003D3C26 File Offset: 0x003D1E26
 	public static IdlePerformController Instance
 	{
 		get
@@ -189,7 +189,7 @@ public class IdlePerformController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600F9A3 RID: 63907 RVA: 0x003C8141 File Offset: 0x003C6341
+	// Token: 0x0600CDC2 RID: 52674 RVA: 0x003D3C2D File Offset: 0x003D1E2D
 	public static IdlePerformController GetOrCreateInstance()
 	{
 		if (IdlePerformController._Instance == null)
@@ -199,7 +199,7 @@ public class IdlePerformController : ControllerBase
 		return IdlePerformController._Instance;
 	}
 
-	// Token: 0x0600F9A4 RID: 63908 RVA: 0x003C8155 File Offset: 0x003C6355
+	// Token: 0x0600CDC3 RID: 52675 RVA: 0x003D3C41 File Offset: 0x003D1E41
 	public static bool CreateInstance()
 	{
 		if (IdlePerformController._Instance != null)
@@ -210,28 +210,28 @@ public class IdlePerformController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F9A5 RID: 63909 RVA: 0x003C816B File Offset: 0x003C636B
+	// Token: 0x0600CDC4 RID: 52676 RVA: 0x003D3C57 File Offset: 0x003D1E57
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F9A6 RID: 63910 RVA: 0x003C816D File Offset: 0x003C636D
+	// Token: 0x0600CDC5 RID: 52677 RVA: 0x003D3C59 File Offset: 0x003D1E59
 	public static void ResetStaticDefaultValue()
 	{
 		IdlePerformController._Instance = null;
 	}
 
-	// Token: 0x0600F9A7 RID: 63911 RVA: 0x003C8175 File Offset: 0x003C6375
+	// Token: 0x0600CDC6 RID: 52678 RVA: 0x003D3C61 File Offset: 0x003D1E61
 	static IdlePerformController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(IdlePerformController.CreateStaticDefaultValue), new Action(IdlePerformController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007458 RID: 29784
+	// Token: 0x04007539 RID: 30009
 	[Nullable(2)]
 	private EntityHandle CurrentPlayerHandle;
 
-	// Token: 0x04007459 RID: 29785
+	// Token: 0x0400753A RID: 30010
 	private readonly HashSet<global::ECharMoveState> StopIdleMoveStates = new HashSet<global::ECharMoveState>
 	{
 		global::ECharMoveState.Stand,
@@ -241,7 +241,7 @@ public class IdlePerformController : ControllerBase
 		global::ECharMoveState.SprintStop
 	};
 
-	// Token: 0x0400745A RID: 29786
+	// Token: 0x0400753B RID: 30011
 	[Nullable(2)]
 	private static IdlePerformController _Instance;
 }

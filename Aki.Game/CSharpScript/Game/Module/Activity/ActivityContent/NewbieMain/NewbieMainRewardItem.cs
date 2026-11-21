@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006387 RID: 25479
+	// Token: 0x02005305 RID: 21253
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 	})]
 	public class NewbieMainRewardItem : GridProxyAbstract<NewbieMainRewardItemData>
 	{
-		// Token: 0x0604011A RID: 262426 RVA: 0x00F80678 File Offset: 0x00F7E878
+		// Token: 0x06034DDB RID: 216539 RVA: 0x00EC75DC File Offset: 0x00EC57DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604011B RID: 262427 RVA: 0x00F80724 File Offset: 0x00F7E924
+		// Token: 0x06034DDC RID: 216540 RVA: 0x00EC7688 File Offset: 0x00EC5888
 		protected override void OnStart()
 		{
 			this.RewardGrid = new SmallItemGrid();
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.RewardGrid.CreateThenShowByActor(base.GetItem(2).GetOwner(), null);
 		}
 
-		// Token: 0x0604011C RID: 262428 RVA: 0x00F80795 File Offset: 0x00F7E995
+		// Token: 0x06034DDD RID: 216541 RVA: 0x00EC76F9 File Offset: 0x00EC58F9
 		public void SetClickCallback(Action<NewbieMainRewardItemData> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0604011D RID: 262429 RVA: 0x00F807A0 File Offset: 0x00F7E9A0
+		// Token: 0x06034DDE RID: 216542 RVA: 0x00EC7704 File Offset: 0x00EC5904
 		public override void Refresh(NewbieMainRewardItemData data, bool isSelected, int gridIndex)
 		{
 			this.RewardData = data;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0604011E RID: 262430 RVA: 0x00F80800 File Offset: 0x00F7EA00
+		// Token: 0x06034DDF RID: 216543 RVA: 0x00EC7764 File Offset: 0x00EC5964
 		private void RefreshRewardGrid(NewbieMainRewardItemData data)
 		{
 			if (this.RewardGrid == null || data.PreviewReward == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.RewardGrid.ApplyPropSmallItemGrid(parameters);
 		}
 
-		// Token: 0x0604011F RID: 262431 RVA: 0x00F808CE File Offset: 0x00F7EACE
+		// Token: 0x06034DE0 RID: 216544 RVA: 0x00EC7832 File Offset: 0x00EC5A32
 		private void OnClickGrid()
 		{
 			if (this.RewardData != null)
@@ -118,15 +118,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x0402163B RID: 136763
+		// Token: 0x0401BF6A RID: 114538
 		[Nullable(2)]
 		private NewbieMainRewardItemData RewardData;
 
-		// Token: 0x0402163C RID: 136764
+		// Token: 0x0401BF6B RID: 114539
 		[Nullable(2)]
 		private SmallItemGrid RewardGrid;
 
-		// Token: 0x0402163D RID: 136765
+		// Token: 0x0401BF6C RID: 114540
 		[Nullable(new byte[]
 		{
 			2,
@@ -134,20 +134,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 		})]
 		private Action<NewbieMainRewardItemData> ClickCallback;
 
-		// Token: 0x0200C597 RID: 50583
+		// Token: 0x0200AF7E RID: 44926
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BA59 RID: 244313
+			// Token: 0x040363BB RID: 222139
 			public const int BarItem = 0;
 
-			// Token: 0x0403BA5A RID: 244314
+			// Token: 0x040363BC RID: 222140
 			public const int BarSprite = 1;
 
-			// Token: 0x0403BA5B RID: 244315
+			// Token: 0x040363BD RID: 222141
 			public const int RewardGridItem = 2;
 
-			// Token: 0x0403BA5C RID: 244316
+			// Token: 0x040363BE RID: 222142
 			public const int NeedCountText = 3;
 		}
 	}

@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using UnrealEngine;
 
-// Token: 0x02001A94 RID: 6804
+// Token: 0x02000F53 RID: 3923
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class ExploreLevelPreviewItem : GridProxyAbstract<CountryExploreLevelRewardData>
 {
-	// Token: 0x0600C8ED RID: 51437 RVA: 0x002DD228 File Offset: 0x002DB428
+	// Token: 0x06009CFE RID: 40190 RVA: 0x002E835C File Offset: 0x002E655C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -41,19 +41,19 @@ public class ExploreLevelPreviewItem : GridProxyAbstract<CountryExploreLevelRewa
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C8EE RID: 51438 RVA: 0x002DD336 File Offset: 0x002DB536
+	// Token: 0x06009CFF RID: 40191 RVA: 0x002E846A File Offset: 0x002E666A
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollView<CommonItemSmallItemGrid>(base.GetScrollViewWithScrollbar(4), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CommonItemSmallItemGrid>(this.OnCreateRewardItemGrid), null);
 	}
 
-	// Token: 0x0600C8EF RID: 51439 RVA: 0x002DD357 File Offset: 0x002DB557
+	// Token: 0x06009D00 RID: 40192 RVA: 0x002E848B File Offset: 0x002E668B
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardScrollView = null;
 	}
 
-	// Token: 0x0600C8F0 RID: 51440 RVA: 0x002DD360 File Offset: 0x002DB560
+	// Token: 0x06009D01 RID: 40193 RVA: 0x002E8494 File Offset: 0x002E6694
 	public override void Refresh(CountryExploreLevelRewardData data, bool isSelected, int gridIndex)
 	{
 		Dictionary<int, int> dropItemNumMap = data.GetDropItemNumMap();
@@ -93,7 +93,7 @@ public class ExploreLevelPreviewItem : GridProxyAbstract<CountryExploreLevelRewa
 		base.GetSprite(5).SetUIActive(data.IsShowUnlockSprite());
 	}
 
-	// Token: 0x0600C8F1 RID: 51441 RVA: 0x002DD4E8 File Offset: 0x002DB6E8
+	// Token: 0x06009D02 RID: 40194 RVA: 0x002E861C File Offset: 0x002E681C
 	private ILayoutItem<CommonItemSmallItemGrid> OnCreateRewardItemGrid(object rawData, UUIItem uiItem, int index)
 	{
 		ValueTuple<int, int> valueTuple = (ValueTuple<int, int>)rawData;
@@ -107,7 +107,7 @@ public class ExploreLevelPreviewItem : GridProxyAbstract<CountryExploreLevelRewa
 		};
 	}
 
-	// Token: 0x04005C88 RID: 23688
+	// Token: 0x04005D57 RID: 23895
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,23 +115,23 @@ public class ExploreLevelPreviewItem : GridProxyAbstract<CountryExploreLevelRewa
 	})]
 	private GenericScrollView<CommonItemSmallItemGrid> RewardScrollView;
 
-	// Token: 0x02007FF2 RID: 32754
+	// Token: 0x02007181 RID: 29057
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029C58 RID: 171096
+		// Token: 0x04024F92 RID: 151442
 		ExploreLevelTexture,
-		// Token: 0x04029C59 RID: 171097
+		// Token: 0x04024F93 RID: 151443
 		DoneSprite,
-		// Token: 0x04029C5A RID: 171098
+		// Token: 0x04024F94 RID: 151444
 		NotDoneText,
-		// Token: 0x04029C5B RID: 171099
+		// Token: 0x04024F95 RID: 151445
 		ExploreLevelNameText,
-		// Token: 0x04029C5C RID: 171100
+		// Token: 0x04024F96 RID: 151446
 		RewardScrollViewWithScrollBar,
-		// Token: 0x04029C5D RID: 171101
+		// Token: 0x04024F97 RID: 151447
 		SpecialSprite,
-		// Token: 0x04029C5E RID: 171102
+		// Token: 0x04024F98 RID: 151448
 		TipsText
 	}
 }

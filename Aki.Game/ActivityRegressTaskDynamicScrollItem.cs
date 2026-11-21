@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014AD RID: 5293
+// Token: 0x02000961 RID: 2401
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollItem<ActivityRegressTaskDynamicData>
 {
-	// Token: 0x060095E7 RID: 38375 RVA: 0x00205398 File Offset: 0x00203598
+	// Token: 0x0600697C RID: 27004 RVA: 0x0020E300 File Offset: 0x0020C500
 	public UniTask Init(UUIItem actor)
 	{
 		ActivityRegressTaskDynamicScrollItem.<Init>d__3 <Init>d__;
@@ -24,7 +24,7 @@ public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollI
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060095E8 RID: 38376 RVA: 0x002053E3 File Offset: 0x002035E3
+	// Token: 0x0600697D RID: 27005 RVA: 0x0020E34B File Offset: 0x0020C54B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollI
 		};
 	}
 
-	// Token: 0x060095E9 RID: 38377 RVA: 0x0020541C File Offset: 0x0020361C
+	// Token: 0x0600697E RID: 27006 RVA: 0x0020E384 File Offset: 0x0020C584
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressTaskDynamicScrollItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollI
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060095EA RID: 38378 RVA: 0x0020545F File Offset: 0x0020365F
+	// Token: 0x0600697F RID: 27007 RVA: 0x0020E3C7 File Offset: 0x0020C5C7
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(ActivityRegressTaskDynamicData data)
 	{
@@ -60,13 +60,13 @@ public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollI
 		return null;
 	}
 
-	// Token: 0x060095EB RID: 38379 RVA: 0x00205483 File Offset: 0x00203683
+	// Token: 0x06006980 RID: 27008 RVA: 0x0020E3EB File Offset: 0x0020C5EB
 	private AUIBaseActor GetItemActor(int key)
 	{
 		return (AUIBaseActor)base.GetItem(key).GetOwner();
 	}
 
-	// Token: 0x060095EC RID: 38380 RVA: 0x00205498 File Offset: 0x00203698
+	// Token: 0x06006981 RID: 27009 RVA: 0x0020E400 File Offset: 0x0020C600
 	public void Update(ActivityRegressTaskDynamicData data, int index)
 	{
 		bool flag = data.ItemType == ERegressTaskDynamicItemType.Title;
@@ -84,28 +84,28 @@ public class ActivityRegressTaskDynamicScrollItem : UiPanelBase, IDynamicScrollI
 		}
 	}
 
-	// Token: 0x060095ED RID: 38381 RVA: 0x002054FE File Offset: 0x002036FE
+	// Token: 0x06006982 RID: 27010 RVA: 0x0020E466 File Offset: 0x0020C666
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0400423E RID: 16958
+	// Token: 0x040042D6 RID: 17110
 	[Nullable(2)]
 	private ActivityRegressTaskScrollItemPanel ScrollItem;
 
-	// Token: 0x0400423F RID: 16959
+	// Token: 0x040042D7 RID: 17111
 	[Nullable(2)]
 	private ActivityRegressTaskTitlePanel TitleItem;
 
-	// Token: 0x02007AE1 RID: 31457
+	// Token: 0x02006C65 RID: 27749
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040286BF RID: 165567
+		// Token: 0x040239D9 RID: 145881
 		public const int ScrollItem = 0;
 
-		// Token: 0x040286C0 RID: 165568
+		// Token: 0x040239DA RID: 145882
 		public const int TitlePanel = 1;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200028A RID: 650
+	// Token: 0x0200029E RID: 670
 	public class ConfigExchangeRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F41 RID: 3905 RVA: 0x000AFBC8 File Offset: 0x000ADDC8
+		// Token: 0x06000FB9 RID: 4025 RVA: 0x000B5E8C File Offset: 0x000B408C
 		static ConfigExchangeRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExchangeRewardById.CreateStaticDefaultValue), new Action(ConfigExchangeRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F42 RID: 3906 RVA: 0x000AFBE8 File Offset: 0x000ADDE8
+		// Token: 0x06000FBA RID: 4026 RVA: 0x000B5EAC File Offset: 0x000B40AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExchangeRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F43 RID: 3907 RVA: 0x000AFC67 File Offset: 0x000ADE67
+		// Token: 0x06000FBB RID: 4027 RVA: 0x000B5F2B File Offset: 0x000B412B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExchangeRewardById.LogPair = null;
 			ConfigExchangeRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06000F44 RID: 3908 RVA: 0x000AFC75 File Offset: 0x000ADE75
+		// Token: 0x06000FBC RID: 4028 RVA: 0x000B5F39 File Offset: 0x000B4139
 		public static void Init()
 		{
 			ConfigExchangeRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigExchangeRewardById.HandleId, "db_exchangereward.db", "select BinData from `ExchangeReward` where Id=?");
 		}
 
-		// Token: 0x06000F45 RID: 3909 RVA: 0x000AFC90 File Offset: 0x000ADE90
+		// Token: 0x06000FBD RID: 4029 RVA: 0x000B5F54 File Offset: 0x000B4154
 		public static ExchangeReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExchangeRewardById.HandleId, ConfigExchangeRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExchangeReward?(rootAsExchangeReward);
 		}
 
-		// Token: 0x040011AA RID: 4522
+		// Token: 0x04001236 RID: 4662
 		private const string DB = "db_exchangereward.db";
 
-		// Token: 0x040011AB RID: 4523
+		// Token: 0x04001237 RID: 4663
 		private const string FILE = "d.兑换奖励配置.xlsx";
 
-		// Token: 0x040011AC RID: 4524
+		// Token: 0x04001238 RID: 4664
 		private const string TABLE = "ExchangeReward";
 
-		// Token: 0x040011AD RID: 4525
+		// Token: 0x04001239 RID: 4665
 		private const string COMMAND = "select BinData from `ExchangeReward` where Id=?";
 
-		// Token: 0x040011AE RID: 4526
+		// Token: 0x0400123A RID: 4666
 		private const string KEY_PREFIX = "ExchangeRewardById";
 
-		// Token: 0x040011AF RID: 4527
+		// Token: 0x0400123B RID: 4667
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040011B0 RID: 4528
+		// Token: 0x0400123C RID: 4668
 		private static int HandleId;
 	}
 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D9F RID: 28063
+	// Token: 0x0200751A RID: 29978
 	public class IPreloadSubLevelsT
 	{
-		// Token: 0x1700D153 RID: 53587
-		// (get) Token: 0x06031939 RID: 203065 RVA: 0x006B80A7 File Offset: 0x006B62A7
-		// (set) Token: 0x0603193A RID: 203066 RVA: 0x006B80AF File Offset: 0x006B62AF
+		// Token: 0x1700DC9B RID: 56475
+		// (get) Token: 0x06034935 RID: 215349 RVA: 0x0071378F File Offset: 0x0071198F
+		// (set) Token: 0x06034936 RID: 215350 RVA: 0x00713797 File Offset: 0x00711997
 		public ESwitchSubLevelsType Type { get; set; }
 
-		// Token: 0x1700D154 RID: 53588
-		// (get) Token: 0x0603193B RID: 203067 RVA: 0x006B80B8 File Offset: 0x006B62B8
-		// (set) Token: 0x0603193C RID: 203068 RVA: 0x006B80C0 File Offset: 0x006B62C0
+		// Token: 0x1700DC9C RID: 56476
+		// (get) Token: 0x06034937 RID: 215351 RVA: 0x007137A0 File Offset: 0x007119A0
+		// (set) Token: 0x06034938 RID: 215352 RVA: 0x007137A8 File Offset: 0x007119A8
 		public List<string> PreloadLevels { get; set; }
 
-		// Token: 0x0603193D RID: 203069 RVA: 0x006B80C9 File Offset: 0x006B62C9
+		// Token: 0x06034939 RID: 215353 RVA: 0x007137B1 File Offset: 0x007119B1
 		public IPreloadSubLevelsT()
 		{
 			this.Type = ESwitchSubLevelsType.Directly;

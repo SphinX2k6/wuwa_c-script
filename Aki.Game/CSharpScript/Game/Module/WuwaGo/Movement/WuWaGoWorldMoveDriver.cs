@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Movement
 {
-	// Token: 0x02004730 RID: 18224
+	// Token: 0x02003661 RID: 13921
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoWorldMoveDriver : IWuWaGoTimeStopParticipant
 	{
-		// Token: 0x170076FB RID: 30459
-		// (get) Token: 0x0602F9E6 RID: 195046 RVA: 0x00B08157 File Offset: 0x00B06357
-		// (set) Token: 0x0602F9E7 RID: 195047 RVA: 0x00B0815F File Offset: 0x00B0635F
+		// Token: 0x170049B7 RID: 18871
+		// (get) Token: 0x060241B0 RID: 147888 RVA: 0x00A38013 File Offset: 0x00A36213
+		// (set) Token: 0x060241B1 RID: 147889 RVA: 0x00A3801B File Offset: 0x00A3621B
 		public bool PausedByTimeStop { get; set; }
 
-		// Token: 0x0602F9E8 RID: 195048 RVA: 0x00B08168 File Offset: 0x00B06368
+		// Token: 0x060241B2 RID: 147890 RVA: 0x00A38024 File Offset: 0x00A36224
 		public WuWaGoWorldMoveDriver(IWuWaGoWorldMoveDriverOptions options)
 		{
 			this.Options = options;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			this.TimeoutMs = (float)Math.Max(val, (timeoutMs != null) ? ((double)timeoutMs.GetValueOrDefault()) : (num4 * 1.5 + (double)this.SettleDurationMs));
 		}
 
-		// Token: 0x0602F9E9 RID: 195049 RVA: 0x00B0844C File Offset: 0x00B0664C
+		// Token: 0x060241B3 RID: 147891 RVA: 0x00A38308 File Offset: 0x00A36508
 		[NullableContext(0)]
 		public UniTask<bool> Run()
 		{
@@ -66,27 +66,27 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return <Run>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F9EA RID: 195050 RVA: 0x00B0848F File Offset: 0x00B0668F
+		// Token: 0x060241B4 RID: 147892 RVA: 0x00A3834B File Offset: 0x00A3654B
 		public void PauseByTimeStop()
 		{
 			WuWaGoTimeStop.PauseTimerHandle(this.TickHandle);
 			WuWaGoTimeStop.PauseTimerHandle(this.TimeoutHandle);
 		}
 
-		// Token: 0x0602F9EB RID: 195051 RVA: 0x00B084A7 File Offset: 0x00B066A7
+		// Token: 0x060241B5 RID: 147893 RVA: 0x00A38363 File Offset: 0x00A36563
 		public void ResumeByTimeStop()
 		{
 			WuWaGoTimeStop.ResumeTimerHandle(this.TickHandle);
 			WuWaGoTimeStop.ResumeTimerHandle(this.TimeoutHandle);
 		}
 
-		// Token: 0x0602F9EC RID: 195052 RVA: 0x00B084BF File Offset: 0x00B066BF
+		// Token: 0x060241B6 RID: 147894 RVA: 0x00A3837B File Offset: 0x00A3657B
 		public void CancelByTimeStop(string reason)
 		{
 			this.Finish(false, false);
 		}
 
-		// Token: 0x0602F9ED RID: 195053 RVA: 0x00B084CC File Offset: 0x00B066CC
+		// Token: 0x060241B7 RID: 147895 RVA: 0x00A38388 File Offset: 0x00A36588
 		private void CacheRuntimeTargets()
 		{
 			this.RuntimeTargets.Clear();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x0602F9EE RID: 195054 RVA: 0x00B0866C File Offset: 0x00B0686C
+		// Token: 0x060241B8 RID: 147896 RVA: 0x00A38528 File Offset: 0x00A36728
 		private void OnTick(float delta)
 		{
 			Func<bool> shouldAbort = this.Options.ShouldAbort;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			this.TickSettling();
 		}
 
-		// Token: 0x0602F9EF RID: 195055 RVA: 0x00B086C8 File Offset: 0x00B068C8
+		// Token: 0x060241B9 RID: 147897 RVA: 0x00A38584 File Offset: 0x00A36784
 		private void TickRunning()
 		{
 			this.RunningDirection.Set(this.ToWorldPosition.X - this.CurrentAnchor.X, this.ToWorldPosition.Y - this.CurrentAnchor.Y, this.ToWorldPosition.Z - this.CurrentAnchor.Z);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			onRunning(this.RunningDirection);
 		}
 
-		// Token: 0x0602F9F0 RID: 195056 RVA: 0x00B08841 File Offset: 0x00B06A41
+		// Token: 0x060241BA RID: 147898 RVA: 0x00A386FD File Offset: 0x00A368FD
 		private void EnterSettle()
 		{
 			this.Phase = WuWaGoWorldMoveDriver.EWorldMovePhase.Settling;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			onEnterSettle();
 		}
 
-		// Token: 0x0602F9F1 RID: 195057 RVA: 0x00B08870 File Offset: 0x00B06A70
+		// Token: 0x060241BB RID: 147899 RVA: 0x00A3872C File Offset: 0x00A3692C
 		private void TickSettling()
 		{
 			if (this.SettleDurationMs <= 0)
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x0602F9F2 RID: 195058 RVA: 0x00B088F0 File Offset: 0x00B06AF0
+		// Token: 0x060241BC RID: 147900 RVA: 0x00A387AC File Offset: 0x00A369AC
 		private void OnTimeout(float delta)
 		{
 			Func<bool> shouldAbort = this.Options.ShouldAbort;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			this.Finish(flag, flag);
 		}
 
-		// Token: 0x0602F9F3 RID: 195059 RVA: 0x00B08920 File Offset: 0x00B06B20
+		// Token: 0x060241BD RID: 147901 RVA: 0x00A387DC File Offset: 0x00A369DC
 		private void ApplyAlpha(float alpha)
 		{
 			foreach (WuWaGoWorldMoveDriver.IMoveTargetRuntime moveTargetRuntime in this.RuntimeTargets)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x0602F9F4 RID: 195060 RVA: 0x00B08A04 File Offset: 0x00B06C04
+		// Token: 0x060241BE RID: 147902 RVA: 0x00A388C0 File Offset: 0x00A36AC0
 		private bool HasAnyValidTarget()
 		{
 			return this.RuntimeTargets.Find(delegate(WuWaGoWorldMoveDriver.IMoveTargetRuntime target)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}) != null;
 		}
 
-		// Token: 0x0602F9F5 RID: 195061 RVA: 0x00B08A34 File Offset: 0x00B06C34
+		// Token: 0x060241BF RID: 147903 RVA: 0x00A388F0 File Offset: 0x00A36AF0
 		private void Finish(bool applyFinalAlpha = true, bool completed = true)
 		{
 			if (this.Resolved)
@@ -310,161 +310,161 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			this.Done.SetResult(completed);
 		}
 
-		// Token: 0x04019B60 RID: 105312
+		// Token: 0x04014210 RID: 82448
 		private const int DEFAULT_ARRIVE_TOLERANCE = 5;
 
-		// Token: 0x04019B61 RID: 105313
+		// Token: 0x04014211 RID: 82449
 		private const int DEFAULT_DURATION_MS = 300;
 
-		// Token: 0x04019B62 RID: 105314
+		// Token: 0x04014212 RID: 82450
 		private const int DEFAULT_TICK_INTERVAL_MS = 20;
 
-		// Token: 0x04019B63 RID: 105315
+		// Token: 0x04014213 RID: 82451
 		private const int DEFAULT_SETTLE_DURATION_MS = 60;
 
-		// Token: 0x04019B64 RID: 105316
+		// Token: 0x04014214 RID: 82452
 		private const float DEFAULT_SAFE_TIMEOUT_RATIO = 1.5f;
 
-		// Token: 0x04019B65 RID: 105317
+		// Token: 0x04014215 RID: 82453
 		private const float DEFAULT_EARLY_STOP_STEP_RATIO = 1f;
 
-		// Token: 0x04019B67 RID: 105319
+		// Token: 0x04014217 RID: 82455
 		private readonly CustomPromise<bool> Done = new CustomPromise<bool>();
 
-		// Token: 0x04019B68 RID: 105320
+		// Token: 0x04014218 RID: 82456
 		private readonly List<WuWaGoWorldMoveDriver.IMoveTargetRuntime> RuntimeTargets = new List<WuWaGoWorldMoveDriver.IMoveTargetRuntime>();
 
-		// Token: 0x04019B69 RID: 105321
+		// Token: 0x04014219 RID: 82457
 		private readonly Vector FromWorldPosition = Vector.Create();
 
-		// Token: 0x04019B6A RID: 105322
+		// Token: 0x0401421A RID: 82458
 		private readonly Vector ToWorldPosition = Vector.Create();
 
-		// Token: 0x04019B6B RID: 105323
+		// Token: 0x0401421B RID: 82459
 		private readonly Vector WorldDelta = Vector.Create();
 
-		// Token: 0x04019B6C RID: 105324
+		// Token: 0x0401421C RID: 82460
 		private readonly Vector RunningDirection = Vector.Create();
 
-		// Token: 0x04019B6D RID: 105325
+		// Token: 0x0401421D RID: 82461
 		private readonly Vector CurrentAnchor = Vector.Create();
 
-		// Token: 0x04019B6E RID: 105326
+		// Token: 0x0401421E RID: 82462
 		private readonly Vector InterpLocation = Vector.Create();
 
-		// Token: 0x04019B6F RID: 105327
+		// Token: 0x0401421F RID: 82463
 		private readonly int TickIntervalMs;
 
-		// Token: 0x04019B70 RID: 105328
+		// Token: 0x04014220 RID: 82464
 		private readonly float TickDeltaSeconds;
 
-		// Token: 0x04019B71 RID: 105329
+		// Token: 0x04014221 RID: 82465
 		private readonly int SettleDurationMs;
 
-		// Token: 0x04019B72 RID: 105330
+		// Token: 0x04014222 RID: 82466
 		private readonly float ArriveTolerance;
 
-		// Token: 0x04019B73 RID: 105331
+		// Token: 0x04014223 RID: 82467
 		private readonly float OneStepLen;
 
-		// Token: 0x04019B74 RID: 105332
+		// Token: 0x04014224 RID: 82468
 		private readonly float TimeoutMs;
 
-		// Token: 0x04019B75 RID: 105333
+		// Token: 0x04014225 RID: 82469
 		private readonly float Speed;
 
-		// Token: 0x04019B76 RID: 105334
+		// Token: 0x04014226 RID: 82470
 		private readonly double Distance;
 
-		// Token: 0x04019B77 RID: 105335
+		// Token: 0x04014227 RID: 82471
 		private WuWaGoWorldMoveDriver.EWorldMovePhase Phase;
 
-		// Token: 0x04019B78 RID: 105336
+		// Token: 0x04014228 RID: 82472
 		private int SettleElapsedMs;
 
-		// Token: 0x04019B79 RID: 105337
+		// Token: 0x04014229 RID: 82473
 		private double RunningAlpha;
 
-		// Token: 0x04019B7A RID: 105338
+		// Token: 0x0401422A RID: 82474
 		[Nullable(2)]
 		private TimerHandle TickHandle;
 
-		// Token: 0x04019B7B RID: 105339
+		// Token: 0x0401422B RID: 82475
 		[Nullable(2)]
 		private TimerHandle TimeoutHandle;
 
-		// Token: 0x04019B7C RID: 105340
+		// Token: 0x0401422C RID: 82476
 		[Nullable(2)]
 		private Action UnregisterTimeStop;
 
-		// Token: 0x04019B7D RID: 105341
+		// Token: 0x0401422D RID: 82477
 		private bool Resolved;
 
-		// Token: 0x04019B7E RID: 105342
+		// Token: 0x0401422E RID: 82478
 		private readonly IWuWaGoWorldMoveDriverOptions Options;
 
-		// Token: 0x0200A993 RID: 43411
+		// Token: 0x0200934D RID: 37709
 		[NullableContext(0)]
 		private enum EWorldMovePhase
 		{
-			// Token: 0x040339D9 RID: 211417
+			// Token: 0x0402E171 RID: 188785
 			Running,
-			// Token: 0x040339DA RID: 211418
+			// Token: 0x0402E172 RID: 188786
 			Settling
 		}
 
-		// Token: 0x0200A994 RID: 43412
+		// Token: 0x0200934E RID: 37710
 		private interface IMoveTargetRuntime
 		{
-			// Token: 0x1700A157 RID: 41303
-			// (get) Token: 0x0604D717 RID: 317207
+			// Token: 0x170078ED RID: 30957
+			// (get) Token: 0x06043C3A RID: 277562
 			[Nullable(2)]
 			WuWaGoBaseUnit Unit { [NullableContext(2)] get; }
 
-			// Token: 0x1700A158 RID: 41304
-			// (get) Token: 0x0604D718 RID: 317208
+			// Token: 0x170078EE RID: 30958
+			// (get) Token: 0x06043C3B RID: 277563
 			[Nullable(2)]
 			AActor Actor { [NullableContext(2)] get; }
 
-			// Token: 0x1700A159 RID: 41305
-			// (get) Token: 0x0604D719 RID: 317209
+			// Token: 0x170078EF RID: 30959
+			// (get) Token: 0x06043C3C RID: 277564
 			Vector StartLocation { get; }
 
-			// Token: 0x1700A15A RID: 41306
-			// (get) Token: 0x0604D71A RID: 317210
+			// Token: 0x170078F0 RID: 30960
+			// (get) Token: 0x06043C3D RID: 277565
 			Vector TargetLocation { get; }
 		}
 
-		// Token: 0x0200A995 RID: 43413
+		// Token: 0x0200934F RID: 37711
 		[Nullable(0)]
 		[RequiredMember]
 		private class MoveTargetRuntime : WuWaGoWorldMoveDriver.IMoveTargetRuntime
 		{
-			// Token: 0x1700A15B RID: 41307
-			// (get) Token: 0x0604D71B RID: 317211 RVA: 0x01460EAA File Offset: 0x0145F0AA
-			// (set) Token: 0x0604D71C RID: 317212 RVA: 0x01460EB2 File Offset: 0x0145F0B2
+			// Token: 0x170078F1 RID: 30961
+			// (get) Token: 0x06043C3E RID: 277566 RVA: 0x0140F486 File Offset: 0x0140D686
+			// (set) Token: 0x06043C3F RID: 277567 RVA: 0x0140F48E File Offset: 0x0140D68E
 			[Nullable(2)]
 			public WuWaGoBaseUnit Unit { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-			// Token: 0x1700A15C RID: 41308
-			// (get) Token: 0x0604D71D RID: 317213 RVA: 0x01460EBB File Offset: 0x0145F0BB
-			// (set) Token: 0x0604D71E RID: 317214 RVA: 0x01460EC3 File Offset: 0x0145F0C3
+			// Token: 0x170078F2 RID: 30962
+			// (get) Token: 0x06043C40 RID: 277568 RVA: 0x0140F497 File Offset: 0x0140D697
+			// (set) Token: 0x06043C41 RID: 277569 RVA: 0x0140F49F File Offset: 0x0140D69F
 			[Nullable(2)]
 			public AActor Actor { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-			// Token: 0x1700A15D RID: 41309
-			// (get) Token: 0x0604D71F RID: 317215 RVA: 0x01460ECC File Offset: 0x0145F0CC
-			// (set) Token: 0x0604D720 RID: 317216 RVA: 0x01460ED4 File Offset: 0x0145F0D4
+			// Token: 0x170078F3 RID: 30963
+			// (get) Token: 0x06043C42 RID: 277570 RVA: 0x0140F4A8 File Offset: 0x0140D6A8
+			// (set) Token: 0x06043C43 RID: 277571 RVA: 0x0140F4B0 File Offset: 0x0140D6B0
 			[RequiredMember]
 			public Vector StartLocation { get; set; }
 
-			// Token: 0x1700A15E RID: 41310
-			// (get) Token: 0x0604D721 RID: 317217 RVA: 0x01460EDD File Offset: 0x0145F0DD
-			// (set) Token: 0x0604D722 RID: 317218 RVA: 0x01460EE5 File Offset: 0x0145F0E5
+			// Token: 0x170078F4 RID: 30964
+			// (get) Token: 0x06043C44 RID: 277572 RVA: 0x0140F4B9 File Offset: 0x0140D6B9
+			// (set) Token: 0x06043C45 RID: 277573 RVA: 0x0140F4C1 File Offset: 0x0140D6C1
 			[RequiredMember]
 			public Vector TargetLocation { get; set; }
 
-			// Token: 0x0604D723 RID: 317219 RVA: 0x01460EEE File Offset: 0x0145F0EE
+			// Token: 0x06043C46 RID: 277574 RVA: 0x0140F4CA File Offset: 0x0140D6CA
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public MoveTargetRuntime()

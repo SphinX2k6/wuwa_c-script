@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002662 RID: 9826
+// Token: 0x02001B4D RID: 6989
 public class QuestItemData
 {
-	// Token: 0x060141C5 RID: 82373 RVA: 0x0051308F File Offset: 0x0051128F
+	// Token: 0x060116A7 RID: 71335 RVA: 0x00521D47 File Offset: 0x0051FF47
 	public QuestItemData(int questId, int questType)
 	{
 		this.QuestId = questId;
 		this.QuestType = questType;
 	}
 
-	// Token: 0x04009793 RID: 38803
+	// Token: 0x040098EB RID: 39147
 	public readonly int QuestId;
 
-	// Token: 0x04009794 RID: 38804
+	// Token: 0x040098EC RID: 39148
 	public readonly int QuestType;
 }

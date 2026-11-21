@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007AC RID: 1964
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200084F RID: 2127
 	public class ITurntableControlType
 	{
-		// Token: 0x06002A98 RID: 10904 RVA: 0x0006FA54 File Offset: 0x0006DC54
+		// Token: 0x06002DC8 RID: 11720 RVA: 0x00076DB8 File Offset: 0x00074FB8
 		private ITurntableControlType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A99 RID: 10905 RVA: 0x0006FA8C File Offset: 0x0006DC8C
+		// Token: 0x06002DC9 RID: 11721 RVA: 0x00076DF0 File Offset: 0x00074FF0
 		public static ITurntableControlType Create([Nullable(2)] ITurntableControlType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A9A RID: 10906 RVA: 0x0006FA9F File Offset: 0x0006DC9F
+		// Token: 0x06002DCA RID: 11722 RVA: 0x00076E03 File Offset: 0x00075003
 		public static ITurntableControlType CreateFromSetValue([Nullable(2)] ITurntableControlType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A9B RID: 10907 RVA: 0x0006FAB2 File Offset: 0x0006DCB2
+		// Token: 0x06002DCB RID: 11723 RVA: 0x00076E16 File Offset: 0x00075016
 		public ITurntableControlType_SetValue ToSetValue()
 		{
 			return new ITurntableControlType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B2C RID: 2860
-		// (get) Token: 0x06002A9C RID: 10908 RVA: 0x0006FAD1 File Offset: 0x0006DCD1
-		// (set) Token: 0x06002A9D RID: 10909 RVA: 0x0006FAFC File Offset: 0x0006DCFC
+		// Token: 0x17000BEF RID: 3055
+		// (get) Token: 0x06002DCC RID: 11724 RVA: 0x00076E35 File Offset: 0x00075035
+		// (set) Token: 0x06002DCD RID: 11725 RVA: 0x00076E60 File Offset: 0x00075060
 		public virtual EControllerType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B2D RID: 2861
-		// (get) Token: 0x06002A9E RID: 10910 RVA: 0x0006FB0A File Offset: 0x0006DD0A
-		// (set) Token: 0x06002A9F RID: 10911 RVA: 0x0006FB35 File Offset: 0x0006DD35
+		// Token: 0x17000BF0 RID: 3056
+		// (get) Token: 0x06002DCE RID: 11726 RVA: 0x00076E6E File Offset: 0x0007506E
+		// (set) Token: 0x06002DCF RID: 11727 RVA: 0x00076E99 File Offset: 0x00075099
 		public virtual int RotationSpeed
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C6A RID: 7274
+		// Token: 0x04001E76 RID: 7798
 		[Nullable(2)]
 		protected ITurntableControlType FbInstance;
 
-		// Token: 0x04001C6B RID: 7275
+		// Token: 0x04001E77 RID: 7799
 		[Nullable(2)]
 		protected ITurntableControlType_SetValue PocoInterface;
 	}

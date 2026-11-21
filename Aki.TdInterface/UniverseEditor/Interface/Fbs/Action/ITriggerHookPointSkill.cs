@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007484 RID: 29828
+	// Token: 0x02007C77 RID: 31863
 	public struct ITriggerHookPointSkill : IFlatbufferObject
 	{
-		// Token: 0x1700E26F RID: 57967
-		// (get) Token: 0x06036348 RID: 222024 RVA: 0x0075E9F4 File Offset: 0x0075CBF4
+		// Token: 0x1700EE8C RID: 61068
+		// (get) Token: 0x06039731 RID: 235313 RVA: 0x007C1720 File Offset: 0x007BF920
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036349 RID: 222025 RVA: 0x0075EA01 File Offset: 0x0075CC01
+		// Token: 0x06039732 RID: 235314 RVA: 0x007C172D File Offset: 0x007BF92D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603634A RID: 222026 RVA: 0x0075EA08 File Offset: 0x0075CC08
+		// Token: 0x06039733 RID: 235315 RVA: 0x007C1734 File Offset: 0x007BF934
 		public static ITriggerHookPointSkill GetRootAsITriggerHookPointSkill(ByteBuffer _bb)
 		{
 			return ITriggerHookPointSkill.GetRootAsITriggerHookPointSkill(_bb, default(ITriggerHookPointSkill));
 		}
 
-		// Token: 0x0603634B RID: 222027 RVA: 0x0075EA24 File Offset: 0x0075CC24
+		// Token: 0x06039734 RID: 235316 RVA: 0x007C1750 File Offset: 0x007BF950
 		public static ITriggerHookPointSkill GetRootAsITriggerHookPointSkill(ByteBuffer _bb, ITriggerHookPointSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603634C RID: 222028 RVA: 0x0075EA41 File Offset: 0x0075CC41
+		// Token: 0x06039735 RID: 235317 RVA: 0x007C176D File Offset: 0x007BF96D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603634D RID: 222029 RVA: 0x0075EA50 File Offset: 0x0075CC50
+		// Token: 0x06039736 RID: 235318 RVA: 0x007C177C File Offset: 0x007BF97C
 		public ITriggerHookPointSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E270 RID: 57968
-		// (get) Token: 0x0603634E RID: 222030 RVA: 0x0075EA60 File Offset: 0x0075CC60
+		// Token: 0x1700EE8D RID: 61069
+		// (get) Token: 0x06039737 RID: 235319 RVA: 0x007C178C File Offset: 0x007BF98C
 		public EExecClientBattleActionType Type
 		{
 			get
@@ -62,9 +62,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E271 RID: 57969
-		// (get) Token: 0x0603634F RID: 222031 RVA: 0x0075EA9C File Offset: 0x0075CC9C
-		public int HookEntityId
+		// Token: 0x1700EE8E RID: 61070
+		// (get) Token: 0x06039738 RID: 235320 RVA: 0x007C17C8 File Offset: 0x007BF9C8
+		public int AssistCharacterId
 		{
 			get
 			{
@@ -77,13 +77,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E272 RID: 57970
-		// (get) Token: 0x06036350 RID: 222032 RVA: 0x0075EAD8 File Offset: 0x0075CCD8
-		public EHookTriggerType SpecTriggerType
+		// Token: 0x1700EE8F RID: 61071
+		// (get) Token: 0x06039739 RID: 235321 RVA: 0x007C1804 File Offset: 0x007BFA04
+		public int HookEntityId
 		{
 			get
 			{
 				int num = this.__p.__offset(8);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700EE90 RID: 61072
+		// (get) Token: 0x0603973A RID: 235322 RVA: 0x007C1840 File Offset: 0x007BFA40
+		public EHookTriggerType SpecTriggerType
+		{
+			get
+			{
+				int num = this.__p.__offset(10);
 				if (num == 0)
 				{
 					return EHookTriggerType.Motor;
@@ -92,13 +107,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E273 RID: 57971
-		// (get) Token: 0x06036351 RID: 222033 RVA: 0x0075EB14 File Offset: 0x0075CD14
+		// Token: 0x1700EE91 RID: 61073
+		// (get) Token: 0x0603973B RID: 235323 RVA: 0x007C1880 File Offset: 0x007BFA80
 		public byte NullMask
 		{
 			get
 			{
-				int num = this.__p.__offset(10);
+				int num = this.__p.__offset(12);
 				if (num == 0)
 				{
 					return 0;
@@ -107,54 +122,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036352 RID: 222034 RVA: 0x0075EB51 File Offset: 0x0075CD51
-		public static Offset<ITriggerHookPointSkill> CreateITriggerHookPointSkill(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int HookEntityId = 0, EHookTriggerType SpecTriggerType = EHookTriggerType.Motor, byte NullMask = 0)
+		// Token: 0x0603973C RID: 235324 RVA: 0x007C18BD File Offset: 0x007BFABD
+		public static Offset<ITriggerHookPointSkill> CreateITriggerHookPointSkill(FlatBufferBuilder builder, EExecClientBattleActionType Type = EExecClientBattleActionType.SendTagEventToControlCharacter, int AssistCharacterId = 0, int HookEntityId = 0, EHookTriggerType SpecTriggerType = EHookTriggerType.Motor, byte NullMask = 0)
 		{
-			builder.StartTable(4);
+			builder.StartTable(5);
 			ITriggerHookPointSkill.AddHookEntityId(builder, HookEntityId);
+			ITriggerHookPointSkill.AddAssistCharacterId(builder, AssistCharacterId);
 			ITriggerHookPointSkill.AddNullMask(builder, NullMask);
 			ITriggerHookPointSkill.AddSpecTriggerType(builder, SpecTriggerType);
 			ITriggerHookPointSkill.AddType(builder, Type);
 			return ITriggerHookPointSkill.EndITriggerHookPointSkill(builder);
 		}
 
-		// Token: 0x06036353 RID: 222035 RVA: 0x0075EB7D File Offset: 0x0075CD7D
+		// Token: 0x0603973D RID: 235325 RVA: 0x007C18F1 File Offset: 0x007BFAF1
 		public static void StartITriggerHookPointSkill(FlatBufferBuilder builder)
 		{
-			builder.StartTable(4);
+			builder.StartTable(5);
 		}
 
-		// Token: 0x06036354 RID: 222036 RVA: 0x0075EB86 File Offset: 0x0075CD86
+		// Token: 0x0603973E RID: 235326 RVA: 0x007C18FA File Offset: 0x007BFAFA
 		public static void AddType(FlatBufferBuilder builder, EExecClientBattleActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036355 RID: 222037 RVA: 0x0075EB91 File Offset: 0x0075CD91
+		// Token: 0x0603973F RID: 235327 RVA: 0x007C1905 File Offset: 0x007BFB05
+		public static void AddAssistCharacterId(FlatBufferBuilder builder, int assistCharacterId)
+		{
+			builder.AddInt(1, assistCharacterId, 0);
+		}
+
+		// Token: 0x06039740 RID: 235328 RVA: 0x007C1910 File Offset: 0x007BFB10
 		public static void AddHookEntityId(FlatBufferBuilder builder, int hookEntityId)
 		{
-			builder.AddInt(1, hookEntityId, 0);
+			builder.AddInt(2, hookEntityId, 0);
 		}
 
-		// Token: 0x06036356 RID: 222038 RVA: 0x0075EB9C File Offset: 0x0075CD9C
+		// Token: 0x06039741 RID: 235329 RVA: 0x007C191B File Offset: 0x007BFB1B
 		public static void AddSpecTriggerType(FlatBufferBuilder builder, EHookTriggerType specTriggerType)
 		{
-			builder.AddByte(2, (byte)specTriggerType, 0);
+			builder.AddByte(3, (byte)specTriggerType, 0);
 		}
 
-		// Token: 0x06036357 RID: 222039 RVA: 0x0075EBA7 File Offset: 0x0075CDA7
+		// Token: 0x06039742 RID: 235330 RVA: 0x007C1926 File Offset: 0x007BFB26
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(3, nullMask, 0);
+			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06036358 RID: 222040 RVA: 0x0075EBB2 File Offset: 0x0075CDB2
+		// Token: 0x06039743 RID: 235331 RVA: 0x007C1931 File Offset: 0x007BFB31
 		public static Offset<ITriggerHookPointSkill> EndITriggerHookPointSkill(FlatBufferBuilder builder)
 		{
 			return new Offset<ITriggerHookPointSkill>(builder.EndTable());
 		}
 
-		// Token: 0x06036359 RID: 222041 RVA: 0x0075EBC0 File Offset: 0x0075CDC0
+		// Token: 0x06039744 RID: 235332 RVA: 0x007C1940 File Offset: 0x007BFB40
 		public ITriggerHookPointSkillT UnPack()
 		{
 			ITriggerHookPointSkillT triggerHookPointSkillT = new ITriggerHookPointSkillT();
@@ -162,26 +184,27 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return triggerHookPointSkillT;
 		}
 
-		// Token: 0x0603635A RID: 222042 RVA: 0x0075EBDB File Offset: 0x0075CDDB
+		// Token: 0x06039745 RID: 235333 RVA: 0x007C195B File Offset: 0x007BFB5B
 		public void UnPackTo(ITriggerHookPointSkillT _o)
 		{
 			_o.Type = this.Type;
+			_o.AssistCharacterId = this.AssistCharacterId;
 			_o.HookEntityId = this.HookEntityId;
 			_o.SpecTriggerType = this.SpecTriggerType;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603635B RID: 222043 RVA: 0x0075EC10 File Offset: 0x0075CE10
+		// Token: 0x06039746 RID: 235334 RVA: 0x007C199C File Offset: 0x007BFB9C
 		public static Offset<ITriggerHookPointSkill> Pack(FlatBufferBuilder builder, ITriggerHookPointSkillT _o)
 		{
 			if (_o == null)
 			{
 				return default(Offset<ITriggerHookPointSkill>);
 			}
-			return ITriggerHookPointSkill.CreateITriggerHookPointSkill(builder, _o.Type, _o.HookEntityId, _o.SpecTriggerType, _o.NullMask);
+			return ITriggerHookPointSkill.CreateITriggerHookPointSkill(builder, _o.Type, _o.AssistCharacterId, _o.HookEntityId, _o.SpecTriggerType, _o.NullMask);
 		}
 
-		// Token: 0x04012319 RID: 74521
+		// Token: 0x04013340 RID: 78656
 		private Table __p;
 	}
 }

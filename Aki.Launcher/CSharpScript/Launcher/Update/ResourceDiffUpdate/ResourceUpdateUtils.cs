@@ -4,11 +4,26 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 {
-	// Token: 0x020000A4 RID: 164
+	// Token: 0x020000A7 RID: 167
+	[NullableContext(1)]
+	[Nullable(0)]
 	public class ResourceUpdateUtils
 	{
-		// Token: 0x060005A6 RID: 1446 RVA: 0x00032EF0 File Offset: 0x000310F0
-		[NullableContext(1)]
+		// Token: 0x060005BD RID: 1469 RVA: 0x00034558 File Offset: 0x00032758
+		internal static string FormatLogList<[Nullable(2)] T>([Nullable(new byte[]
+		{
+			2,
+			1
+		})] IEnumerable<T> values)
+		{
+			if (values != null)
+			{
+				return "[" + string.Join<T>(",", values) + "]";
+			}
+			return "null";
+		}
+
+		// Token: 0x060005BE RID: 1470 RVA: 0x00034580 File Offset: 0x00032780
 		public static HashSet<int> ParseMp4FinishQuestFlagToSet([Nullable(2)] List<uint> flags)
 		{
 			HashSet<int> hashSet = new HashSet<int>();

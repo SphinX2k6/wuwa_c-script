@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002393 RID: 9107
+	// Token: 0x0200261C RID: 9756
 	public static class EMotorParkourPhaseExtensions
 	{
-		// Token: 0x0600C694 RID: 50836 RVA: 0x001D1570 File Offset: 0x001CF770
+		// Token: 0x0600D2D8 RID: 53976 RVA: 0x001EA544 File Offset: 0x001E8744
 		public static string ToEnumString(this EMotorParkourPhase value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C695 RID: 50837 RVA: 0x001D15B8 File Offset: 0x001CF7B8
+		// Token: 0x0600D2D9 RID: 53977 RVA: 0x001EA58C File Offset: 0x001E878C
 		public static EMotorParkourPhase FromString(string name)
 		{
 			EMotorParkourPhase result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C696 RID: 50838 RVA: 0x001D15E4 File Offset: 0x001CF7E4
+		// Token: 0x0600D2DA RID: 53978 RVA: 0x001EA5B8 File Offset: 0x001E87B8
 		public static bool TryFromString(string name, out EMotorParkourPhase value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C697 RID: 50839 RVA: 0x001D163A File Offset: 0x001CF83A
+		// Token: 0x0600D2DB RID: 53979 RVA: 0x001EA60E File Offset: 0x001E880E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C698 RID: 50840 RVA: 0x001D165A File Offset: 0x001CF85A
+		// Token: 0x0600D2DC RID: 53980 RVA: 0x001EA62E File Offset: 0x001E882E
 		public static EMotorParkourPhase[] GetValues()
 		{
 			return new EMotorParkourPhase[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C699 RID: 50841 RVA: 0x001D166A File Offset: 0x001CF86A
+		// Token: 0x0600D2DD RID: 53981 RVA: 0x001EA63E File Offset: 0x001E883E
 		public static string[] GetNames()
 		{
 			return new string[]

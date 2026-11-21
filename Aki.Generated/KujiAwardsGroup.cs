@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D93 RID: 3475
+	// Token: 0x02000E78 RID: 3704
 	public struct KujiAwardsGroup : IFlatbufferObject
 	{
-		// Token: 0x17001B01 RID: 6913
-		// (get) Token: 0x06008861 RID: 34913 RVA: 0x0026B1CC File Offset: 0x002693CC
+		// Token: 0x17001B65 RID: 7013
+		// (get) Token: 0x06008E7D RID: 36477 RVA: 0x00289EF0 File Offset: 0x002880F0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008862 RID: 34914 RVA: 0x0026B1D9 File Offset: 0x002693D9
+		// Token: 0x06008E7E RID: 36478 RVA: 0x00289EFD File Offset: 0x002880FD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008863 RID: 34915 RVA: 0x0026B1E0 File Offset: 0x002693E0
+		// Token: 0x06008E7F RID: 36479 RVA: 0x00289F04 File Offset: 0x00288104
 		public static KujiAwardsGroup GetRootAsKujiAwardsGroup(ByteBuffer _bb)
 		{
 			return KujiAwardsGroup.GetRootAsKujiAwardsGroup(_bb, default(KujiAwardsGroup));
 		}
 
-		// Token: 0x06008864 RID: 34916 RVA: 0x0026B1FC File Offset: 0x002693FC
+		// Token: 0x06008E80 RID: 36480 RVA: 0x00289F20 File Offset: 0x00288120
 		public static KujiAwardsGroup GetRootAsKujiAwardsGroup(ByteBuffer _bb, KujiAwardsGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008865 RID: 34917 RVA: 0x0026B219 File Offset: 0x00269419
+		// Token: 0x06008E81 RID: 36481 RVA: 0x00289F3D File Offset: 0x0028813D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008866 RID: 34918 RVA: 0x0026B228 File Offset: 0x00269428
+		// Token: 0x06008E82 RID: 36482 RVA: 0x00289F4C File Offset: 0x0028814C
 		public KujiAwardsGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001B02 RID: 6914
-		// (get) Token: 0x06008867 RID: 34919 RVA: 0x0026B238 File Offset: 0x00269438
+		// Token: 0x17001B66 RID: 7014
+		// (get) Token: 0x06008E83 RID: 36483 RVA: 0x00289F5C File Offset: 0x0028815C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B03 RID: 6915
-		// (get) Token: 0x06008868 RID: 34920 RVA: 0x0026B274 File Offset: 0x00269474
+		// Token: 0x17001B67 RID: 7015
+		// (get) Token: 0x06008E84 RID: 36484 RVA: 0x00289F98 File Offset: 0x00288198
 		public int KujiId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B04 RID: 6916
-		// (get) Token: 0x06008869 RID: 34921 RVA: 0x0026B2B0 File Offset: 0x002694B0
+		// Token: 0x17001B68 RID: 7016
+		// (get) Token: 0x06008E85 RID: 36485 RVA: 0x00289FD4 File Offset: 0x002881D4
 		public int Amount
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B05 RID: 6917
-		// (get) Token: 0x0600886A RID: 34922 RVA: 0x0026B2EC File Offset: 0x002694EC
+		// Token: 0x17001B69 RID: 7017
+		// (get) Token: 0x06008E86 RID: 36486 RVA: 0x0028A010 File Offset: 0x00288210
 		public int RewardId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001B06 RID: 6918
-		// (get) Token: 0x0600886B RID: 34923 RVA: 0x0026B32C File Offset: 0x0026952C
+		// Token: 0x17001B6A RID: 7018
+		// (get) Token: 0x06008E87 RID: 36487 RVA: 0x0028A050 File Offset: 0x00288250
 		public int Rank
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E20 RID: 20000
+		// Token: 0x04005405 RID: 21509
 		private Table __p;
 	}
 }

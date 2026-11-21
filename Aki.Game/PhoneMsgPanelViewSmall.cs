@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200251A RID: 9498
+// Token: 0x02001A01 RID: 6657
 [NullableContext(2)]
 [Nullable(0)]
 public class PhoneMsgPanelViewSmall : UiViewBase
 {
-	// Token: 0x0601317D RID: 78205 RVA: 0x004BBDC2 File Offset: 0x004B9FC2
+	// Token: 0x0601063B RID: 67131 RVA: 0x004C9AA4 File Offset: 0x004C7CA4
 	[NullableContext(1)]
 	public PhoneMsgPanelViewSmall(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601317E RID: 78206 RVA: 0x004BBDEC File Offset: 0x004B9FEC
+	// Token: 0x0601063C RID: 67132 RVA: 0x004C9AD0 File Offset: 0x004C7CD0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		};
 	}
 
-	// Token: 0x0601317F RID: 78207 RVA: 0x004BBF04 File Offset: 0x004BA104
+	// Token: 0x0601063D RID: 67133 RVA: 0x004C9BE8 File Offset: 0x004C7DE8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhoneMsgPanelViewSmall.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013180 RID: 78208 RVA: 0x004BBF48 File Offset: 0x004BA148
+	// Token: 0x0601063E RID: 67134 RVA: 0x004C9C2C File Offset: 0x004C7E2C
 	private UniTask LoadChatDataAsync()
 	{
 		PhoneMsgPanelViewSmall.<LoadChatDataAsync>d__15 <LoadChatDataAsync>d__;
@@ -64,38 +64,38 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		return <LoadChatDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013181 RID: 78209 RVA: 0x004BBF8B File Offset: 0x004BA18B
+	// Token: 0x0601063F RID: 67135 RVA: 0x004C9C6F File Offset: 0x004C7E6F
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06013182 RID: 78210 RVA: 0x004BBF8D File Offset: 0x004BA18D
+	// Token: 0x06010640 RID: 67136 RVA: 0x004C9C71 File Offset: 0x004C7E71
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshChatShow));
 	}
 
-	// Token: 0x06013183 RID: 78211 RVA: 0x004BBFAB File Offset: 0x004BA1AB
+	// Token: 0x06010641 RID: 67137 RVA: 0x004C9C8F File Offset: 0x004C7E8F
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshChatShow));
 	}
 
-	// Token: 0x06013184 RID: 78212 RVA: 0x004BBFC9 File Offset: 0x004BA1C9
+	// Token: 0x06010642 RID: 67138 RVA: 0x004C9CAD File Offset: 0x004C7EAD
 	protected override void OnBeforeShow()
 	{
 		GameSettingsDeviceRender.Instance.TemporaryDisableFrameGeneration("PhoneMsgPanelViewSmall");
 		this.RefreshChatShow();
 	}
 
-	// Token: 0x06013185 RID: 78213 RVA: 0x004BBFE0 File Offset: 0x004BA1E0
+	// Token: 0x06010643 RID: 67139 RVA: 0x004C9CC4 File Offset: 0x004C7EC4
 	private void RefreshChatShow()
 	{
 		this.RefreshByTheme(PhoneMsgModel.Instance.CurrentUsingChatThemeId);
 		this.SetSpineByCharmId(PhoneMsgModel.Instance.CurrentUsingChatCharmId);
 	}
 
-	// Token: 0x06013186 RID: 78214 RVA: 0x004BC004 File Offset: 0x004BA204
+	// Token: 0x06010644 RID: 67140 RVA: 0x004C9CE8 File Offset: 0x004C7EE8
 	public void SetSpineByCharmId(int charmId)
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(charmId);
@@ -156,7 +156,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		}
 	}
 
-	// Token: 0x06013187 RID: 78215 RVA: 0x004BC0D8 File Offset: 0x004BA2D8
+	// Token: 0x06010645 RID: 67141 RVA: 0x004C9DBC File Offset: 0x004C7FBC
 	[NullableContext(1)]
 	private UniTask CreateCharmAndPlayAsync(string spinepre, UUIItem petItem, int charmId)
 	{
@@ -171,7 +171,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		return <CreateCharmAndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013188 RID: 78216 RVA: 0x004BC134 File Offset: 0x004BA334
+	// Token: 0x06010646 RID: 67142 RVA: 0x004C9E18 File Offset: 0x004C8018
 	private void RefreshByTheme(int themeId)
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(themeId);
@@ -231,7 +231,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		texture3.SetUIActive(!flag);
 	}
 
-	// Token: 0x06013189 RID: 78217 RVA: 0x004BC2AC File Offset: 0x004BA4AC
+	// Token: 0x06010647 RID: 67143 RVA: 0x004C9F90 File Offset: 0x004C8190
 	[NullableContext(1)]
 	private UniTask CreateTitle1AndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -245,13 +245,13 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		return <CreateTitle1AndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601318A RID: 78218 RVA: 0x004BC2FF File Offset: 0x004BA4FF
+	// Token: 0x06010648 RID: 67144 RVA: 0x004C9FE3 File Offset: 0x004C81E3
 	protected override void OnAfterHide()
 	{
 		GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("PhoneMsgPanelViewSmall");
 	}
 
-	// Token: 0x0601318B RID: 78219 RVA: 0x004BC310 File Offset: 0x004BA510
+	// Token: 0x06010649 RID: 67145 RVA: 0x004C9FF4 File Offset: 0x004C81F4
 	[NullableContext(1)]
 	private void PlayLevelSequenceByName(string sequenceName)
 	{
@@ -268,7 +268,7 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		seqPlayer2.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x0601318C RID: 78220 RVA: 0x004BC350 File Offset: 0x004BA550
+	// Token: 0x0601064A RID: 67146 RVA: 0x004CA034 File Offset: 0x004C8234
 	protected override void OnBeforeDestroy()
 	{
 		PhoneSystemCharm charmPanel = this.CharmPanel;
@@ -291,69 +291,69 @@ public class PhoneMsgPanelViewSmall : UiViewBase
 		this.title1SeqPlayer = null;
 	}
 
-	// Token: 0x0601318D RID: 78221 RVA: 0x004BC3A6 File Offset: 0x004BA5A6
+	// Token: 0x0601064B RID: 67147 RVA: 0x004CA08A File Offset: 0x004C828A
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009026 RID: 36902
+	// Token: 0x0400917B RID: 37243
 	private PhoneMsgPanelViewData MsgData;
 
-	// Token: 0x04009027 RID: 36903
+	// Token: 0x0400917C RID: 37244
 	private PhoneSystemChatPanel ChatPanel;
 
-	// Token: 0x04009028 RID: 36904
+	// Token: 0x0400917D RID: 37245
 	private PhoneMsgTipViewA PopTipViewA;
 
-	// Token: 0x04009029 RID: 36905
+	// Token: 0x0400917E RID: 37246
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x0400902A RID: 36906
+	// Token: 0x0400917F RID: 37247
 	private PhoneSystemCharm CharmPanel;
 
-	// Token: 0x0400902B RID: 36907
+	// Token: 0x04009180 RID: 37248
 	private string charmPrepath = "";
 
-	// Token: 0x0400902C RID: 36908
+	// Token: 0x04009181 RID: 37249
 	private UiPanelBase title1pre;
 
-	// Token: 0x0400902D RID: 36909
+	// Token: 0x04009182 RID: 37250
 	private UiPanelBase rightchatpre;
 
-	// Token: 0x0400902E RID: 36910
+	// Token: 0x04009183 RID: 37251
 	[Nullable(1)]
 	private string title1prepath = "";
 
-	// Token: 0x0400902F RID: 36911
+	// Token: 0x04009184 RID: 37252
 	private string rightchatprepath = "";
 
-	// Token: 0x04009030 RID: 36912
+	// Token: 0x04009185 RID: 37253
 	private LevelSequencePlayer title1SeqPlayer;
 
-	// Token: 0x02008AA5 RID: 35493
+	// Token: 0x02007C2C RID: 31788
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D05E RID: 184414
+		// Token: 0x04028372 RID: 164722
 		BtnMask,
-		// Token: 0x0402D05F RID: 184415
+		// Token: 0x04028373 RID: 164723
 		BtnClose,
-		// Token: 0x0402D060 RID: 184416
+		// Token: 0x04028374 RID: 164724
 		PanelPhoneSystemChatPanel,
-		// Token: 0x0402D061 RID: 184417
+		// Token: 0x04028375 RID: 164725
 		ItemPopA,
-		// Token: 0x0402D062 RID: 184418
+		// Token: 0x04028376 RID: 164726
 		TexModelT,
-		// Token: 0x0402D063 RID: 184419
+		// Token: 0x04028377 RID: 164727
 		TxtTitle,
-		// Token: 0x0402D064 RID: 184420
+		// Token: 0x04028378 RID: 164728
 		PnlContentSkinTitle,
-		// Token: 0x0402D065 RID: 184421
+		// Token: 0x04028379 RID: 164729
 		TexSkinBg,
-		// Token: 0x0402D066 RID: 184422
+		// Token: 0x0402837A RID: 164730
 		TexSkinBgTopic,
-		// Token: 0x0402D067 RID: 184423
+		// Token: 0x0402837B RID: 164731
 		PnlPetContent
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000284 RID: 644
+	// Token: 0x02000298 RID: 664
 	public class ConfigEntrustRoleAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F1D RID: 3869 RVA: 0x000AEECD File Offset: 0x000AD0CD
+		// Token: 0x06000F95 RID: 3989 RVA: 0x000B5191 File Offset: 0x000B3391
 		static ConfigEntrustRoleAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntrustRoleAll.CreateStaticDefaultValue), new Action(ConfigEntrustRoleAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F1E RID: 3870 RVA: 0x000AEEEC File Offset: 0x000AD0EC
+		// Token: 0x06000F96 RID: 3990 RVA: 0x000B51B0 File Offset: 0x000B33B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntrustRoleAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F1F RID: 3871 RVA: 0x000AEF6B File Offset: 0x000AD16B
+		// Token: 0x06000F97 RID: 3991 RVA: 0x000B522F File Offset: 0x000B342F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntrustRoleAll.LogPair = null;
 			ConfigEntrustRoleAll.HandleId = 0;
 		}
 
-		// Token: 0x06000F20 RID: 3872 RVA: 0x000AEF79 File Offset: 0x000AD179
+		// Token: 0x06000F98 RID: 3992 RVA: 0x000B523D File Offset: 0x000B343D
 		public static void Init()
 		{
 			ConfigEntrustRoleAll.HandleId = ConfigCommon.InitDataStatement(ConfigEntrustRoleAll.HandleId, "db_moonchasing.db", "select BinData from `EntrustRole`");
 		}
 
-		// Token: 0x06000F21 RID: 3873 RVA: 0x000AEF94 File Offset: 0x000AD194
+		// Token: 0x06000F99 RID: 3993 RVA: 0x000B5258 File Offset: 0x000B3458
 		[NullableContext(2)]
 		public static IReadOnlyList<EntrustRole> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001180 RID: 4480
+		// Token: 0x0400120C RID: 4620
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04001181 RID: 4481
+		// Token: 0x0400120D RID: 4621
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x04001182 RID: 4482
+		// Token: 0x0400120E RID: 4622
 		private const string TABLE = "EntrustRole";
 
-		// Token: 0x04001183 RID: 4483
+		// Token: 0x0400120F RID: 4623
 		private const string COMMAND = "select BinData from `EntrustRole`";
 
-		// Token: 0x04001184 RID: 4484
+		// Token: 0x04001210 RID: 4624
 		private const string KEY_PREFIX = "EntrustRoleAll";
 
-		// Token: 0x04001185 RID: 4485
+		// Token: 0x04001211 RID: 4625
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001186 RID: 4486
+		// Token: 0x04001212 RID: 4626
 		private static int HandleId;
 	}
 }

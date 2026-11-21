@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067AE RID: 26542
+	// Token: 0x020056FE RID: 22270
 	public class DangoBrawlCombineViewListItemData
 	{
-		// Token: 0x0402285E RID: 141406
+		// Token: 0x0401D0BB RID: 118971
 		public DangoBrawlCombineRowData RowData;
 
-		// Token: 0x0402285F RID: 141407
+		// Token: 0x0401D0BC RID: 118972
 		public bool AllowCombine;
 	}
 }

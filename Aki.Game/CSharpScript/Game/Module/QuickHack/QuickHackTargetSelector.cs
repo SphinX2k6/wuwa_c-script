@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F83 RID: 20355
+	// Token: 0x02003F4C RID: 16204
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class QuickHackTargetSelector
 	{
-		// Token: 0x060341F5 RID: 213493 RVA: 0x00C3B4EB File Offset: 0x00C396EB
+		// Token: 0x06029063 RID: 168035 RVA: 0x00B84C97 File Offset: 0x00B82E97
 		public virtual void Init(int selectRange, int selectScreenRadius)
 		{
 			this.SelectRange = selectRange;
@@ -22,26 +22,26 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.ScreenRadiusSquared = selectScreenRadius * selectScreenRadius;
 		}
 
-		// Token: 0x060341F6 RID: 213494 RVA: 0x00C3B50D File Offset: 0x00C3970D
+		// Token: 0x06029064 RID: 168036 RVA: 0x00B84CB9 File Offset: 0x00B82EB9
 		public virtual void Clear()
 		{
 		}
 
-		// Token: 0x060341F7 RID: 213495 RVA: 0x00C3B50F File Offset: 0x00C3970F
+		// Token: 0x06029065 RID: 168037 RVA: 0x00B84CBB File Offset: 0x00B82EBB
 		public virtual void OnExecuteExtraEffect(EQuickHackSkillExtraEffect type)
 		{
 		}
 
-		// Token: 0x060341F8 RID: 213496
+		// Token: 0x06029066 RID: 168038
 		public abstract bool UpdateTargetInfo(float delta);
 
-		// Token: 0x060341F9 RID: 213497
+		// Token: 0x06029067 RID: 168039
 		public abstract IQuickHackLockTargetInfo GetLockTargetInfo();
 
-		// Token: 0x060341FA RID: 213498
+		// Token: 0x06029068 RID: 168040
 		public abstract IQuickHackOnScreenTargetInfo GetOnScreenTargetInfo();
 
-		// Token: 0x060341FB RID: 213499 RVA: 0x00C3B514 File Offset: 0x00C39714
+		// Token: 0x06029069 RID: 168041 RVA: 0x00B84CC0 File Offset: 0x00B82EC0
 		protected bool ProjectWorldToScreen(FVectorDouble worldLocation, Vector2D outScreenPosition, float extend = 0.1f)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.QuickHack
 			return true;
 		}
 
-		// Token: 0x0401BB6B RID: 113515
+		// Token: 0x04016540 RID: 91456
 		protected int SelectRange;
 
-		// Token: 0x0401BB6C RID: 113516
+		// Token: 0x04016541 RID: 91457
 		protected int ScreenRadiusSquared;
 
-		// Token: 0x0401BB6D RID: 113517
+		// Token: 0x04016542 RID: 91458
 		private FVector2D RefScreenPosition;
 	}
 }

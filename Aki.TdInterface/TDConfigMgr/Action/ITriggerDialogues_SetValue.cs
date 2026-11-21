@@ -4,20 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FFB RID: 8187
+	// Token: 0x02002242 RID: 8770
 	public class ITriggerDialogues_SetValue
 	{
-		// Token: 0x04006C8D RID: 27789
+		// Token: 0x0400728F RID: 29327
 		public EInteractEffectType Type;
 
-		// Token: 0x04006C8E RID: 27790
+		// Token: 0x04007290 RID: 29328
 		public float? DelayTime;
 
-		// Token: 0x04006C8F RID: 27791
-		[Nullable(1)]
+		// Token: 0x04007291 RID: 29329
 		public List<string> Talks;
 
-		// Token: 0x04006C90 RID: 27792
+		// Token: 0x04007292 RID: 29330
 		[Nullable(2)]
 		public IFocusObject FocusObject;
 	}

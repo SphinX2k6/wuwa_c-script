@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200009B RID: 155
+// Token: 0x0200009D RID: 157
 [NullableContext(1)]
 [Nullable(0)]
 internal static class EventHandleListExtensions
 {
-	// Token: 0x0600048D RID: 1165 RVA: 0x0001A738 File Offset: 0x00018938
+	// Token: 0x060004CE RID: 1230 RVA: 0x0001AE9C File Offset: 0x0001909C
 	public static int IndexOfHandle(this List<EventHandleEntry> handles, Delegate handle)
 	{
 		ArgumentNullException.ThrowIfNull(handle, "handle");
@@ -21,13 +21,13 @@ internal static class EventHandleListExtensions
 		return -1;
 	}
 
-	// Token: 0x0600048E RID: 1166 RVA: 0x0001A778 File Offset: 0x00018978
+	// Token: 0x060004CF RID: 1231 RVA: 0x0001AEDC File Offset: 0x000190DC
 	public static bool ContainsHandle(this List<EventHandleEntry> handles, Delegate handle)
 	{
 		return handles.IndexOfHandle(handle) >= 0;
 	}
 
-	// Token: 0x0600048F RID: 1167 RVA: 0x0001A788 File Offset: 0x00018988
+	// Token: 0x060004D0 RID: 1232 RVA: 0x0001AEEC File Offset: 0x000190EC
 	public static bool RemoveHandle(this List<EventHandleEntry> handles, Delegate handle)
 	{
 		int num = handles.IndexOfHandle(handle);

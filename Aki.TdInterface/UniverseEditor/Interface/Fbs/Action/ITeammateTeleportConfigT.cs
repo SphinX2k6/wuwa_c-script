@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200736B RID: 29547
+	// Token: 0x02007B4C RID: 31564
 	public class ITeammateTeleportConfigT
 	{
-		// Token: 0x1700E056 RID: 57430
-		// (get) Token: 0x06035A0E RID: 219662 RVA: 0x0074D83E File Offset: 0x0074BA3E
-		// (set) Token: 0x06035A0F RID: 219663 RVA: 0x0074D846 File Offset: 0x0074BA46
+		// Token: 0x1700EC61 RID: 60513
+		// (get) Token: 0x06038D87 RID: 232839 RVA: 0x007AFA7A File Offset: 0x007ADC7A
+		// (set) Token: 0x06038D88 RID: 232840 RVA: 0x007AFA82 File Offset: 0x007ADC82
 		public ETeammateTeleportType Type { get; set; }
 
-		// Token: 0x06035A10 RID: 219664 RVA: 0x0074D84F File Offset: 0x0074BA4F
+		// Token: 0x06038D89 RID: 232841 RVA: 0x007AFA8B File Offset: 0x007ADC8B
 		public ITeammateTeleportConfigT()
 		{
 			this.Type = ETeammateTeleportType.TelePortAfterTimeOut;

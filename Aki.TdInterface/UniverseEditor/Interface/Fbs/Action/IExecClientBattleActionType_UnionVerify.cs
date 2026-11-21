@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200670D RID: 26381
+	// Token: 0x02006D8D RID: 28045
 	public static class IExecClientBattleActionType_UnionVerify
 	{
-		// Token: 0x0602DE2C RID: 187948 RVA: 0x00646484 File Offset: 0x00644684
+		// Token: 0x06030672 RID: 198258 RVA: 0x00693BB8 File Offset: 0x00691DB8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -44,6 +44,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 11:
 				result = IAssistCharacterStopMoveToPointVerify.Verify(verifier, tablePos);
+				break;
+			case 12:
+				result = IMechExecuteVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

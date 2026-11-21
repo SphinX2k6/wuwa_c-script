@@ -4,33 +4,33 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Season
 {
-	// Token: 0x02004C81 RID: 19585
+	// Token: 0x02003C32 RID: 15410
 	[NullableContext(2)]
 	public interface ISeasonSwitchJob
 	{
-		// Token: 0x17007CDD RID: 31965
-		// (get) Token: 0x060329CD RID: 207309
-		// (set) Token: 0x060329CE RID: 207310
+		// Token: 0x17005087 RID: 20615
+		// (get) Token: 0x06027780 RID: 161664
+		// (set) Token: 0x06027781 RID: 161665
 		ESeason TargetSeason { get; set; }
 
-		// Token: 0x17007CDE RID: 31966
-		// (get) Token: 0x060329CF RID: 207311
-		// (set) Token: 0x060329D0 RID: 207312
+		// Token: 0x17005088 RID: 20616
+		// (get) Token: 0x06027782 RID: 161666
+		// (set) Token: 0x06027783 RID: 161667
 		double TargetValue { get; set; }
 
-		// Token: 0x17007CDF RID: 31967
-		// (get) Token: 0x060329D1 RID: 207313
-		// (set) Token: 0x060329D2 RID: 207314
+		// Token: 0x17005089 RID: 20617
+		// (get) Token: 0x06027784 RID: 161668
+		// (set) Token: 0x06027785 RID: 161669
 		double Speed { get; set; }
 
-		// Token: 0x17007CE0 RID: 31968
-		// (get) Token: 0x060329D3 RID: 207315
-		// (set) Token: 0x060329D4 RID: 207316
+		// Token: 0x1700508A RID: 20618
+		// (get) Token: 0x06027786 RID: 161670
+		// (set) Token: 0x06027787 RID: 161671
 		double RemainDistance { get; set; }
 
-		// Token: 0x17007CE1 RID: 31969
-		// (get) Token: 0x060329D5 RID: 207317
-		// (set) Token: 0x060329D6 RID: 207318
+		// Token: 0x1700508B RID: 20619
+		// (get) Token: 0x06027788 RID: 161672
+		// (set) Token: 0x06027789 RID: 161673
 		TSeasonSwitchCallback OnComplete { get; set; }
 	}
 }

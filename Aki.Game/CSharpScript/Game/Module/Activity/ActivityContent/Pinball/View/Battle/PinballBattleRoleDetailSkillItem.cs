@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006379 RID: 25465
+	// Token: 0x020052F7 RID: 21239
 	public class PinballBattleRoleDetailSkillItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060400D7 RID: 262359 RVA: 0x00F7F9E0 File Offset: 0x00F7DBE0
+		// Token: 0x06034D98 RID: 216472 RVA: 0x00EC6944 File Offset: 0x00EC4B44
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060400D8 RID: 262360 RVA: 0x00F7FA6A File Offset: 0x00F7DC6A
+		// Token: 0x06034D99 RID: 216473 RVA: 0x00EC69CE File Offset: 0x00EC4BCE
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x060400D9 RID: 262361 RVA: 0x00F7FA74 File Offset: 0x00F7DC74
+		// Token: 0x06034D9A RID: 216474 RVA: 0x00EC69D8 File Offset: 0x00EC4BD8
 		public void Refresh(int data)
 		{
 			PinballSkillDisplayConfig? pinballSkillDisplayConfigById = PinballConfig.Instance.GetPinballSkillDisplayConfigById(data);
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), pinballSkillDisplayConfigById.Value.Desc, pinballSkillDisplayConfigById.Value.ValueList());
 		}
 
-		// Token: 0x0200C594 RID: 50580
+		// Token: 0x0200AF7B RID: 44923
 		private enum EPinballBattleRoleDetailSkillItemComp
 		{
-			// Token: 0x0403BA4E RID: 244302
+			// Token: 0x040363B0 RID: 222128
 			NameText,
-			// Token: 0x0403BA4F RID: 244303
+			// Token: 0x040363B1 RID: 222129
 			DescriptionText,
-			// Token: 0x0403BA50 RID: 244304
+			// Token: 0x040363B2 RID: 222130
 			SpriteIcon
 		}
 	}

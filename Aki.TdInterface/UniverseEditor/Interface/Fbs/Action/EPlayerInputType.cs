@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FD2 RID: 24530
+	// Token: 0x0200662A RID: 26154
 	public enum EPlayerInputType : byte
 	{
-		// Token: 0x0400FF44 RID: 65348
+		// Token: 0x04010D0D RID: 68877
 		None,
-		// Token: 0x0400FF45 RID: 65349
+		// Token: 0x04010D0E RID: 68878
 		Member_0,
-		// Token: 0x0400FF46 RID: 65350
+		// Token: 0x04010D0F RID: 68879
 		Member_1,
-		// Token: 0x0400FF47 RID: 65351
+		// Token: 0x04010D10 RID: 68880
 		Member_2,
-		// Token: 0x0400FF48 RID: 65352
+		// Token: 0x04010D11 RID: 68881
 		Member_3,
-		// Token: 0x0400FF49 RID: 65353
+		// Token: 0x04010D12 RID: 68882
 		Member_4,
-		// Token: 0x0400FF4A RID: 65354
+		// Token: 0x04010D13 RID: 68883
 		Member_5,
-		// Token: 0x0400FF4B RID: 65355
+		// Token: 0x04010D14 RID: 68884
 		Member_6
 	}
 }

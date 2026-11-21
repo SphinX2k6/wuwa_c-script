@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200287E RID: 10366
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B54 RID: 11092
 	public class OpenSimpleGameplay : ActionParams
 	{
-		// Token: 0x0600E5A6 RID: 58790 RVA: 0x0021C22F File Offset: 0x0021A42F
+		// Token: 0x0600F3D7 RID: 62423 RVA: 0x00239183 File Offset: 0x00237383
 		public static OpenSimpleGameplay Create(IOpenSimpleGameplay? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700466C RID: 18028
-		// (get) Token: 0x0600E5A7 RID: 58791 RVA: 0x0021C24E File Offset: 0x0021A44E
+		// Token: 0x170049DD RID: 18909
+		// (get) Token: 0x0600F3D8 RID: 62424 RVA: 0x002391A2 File Offset: 0x002373A2
 		public virtual IUiGame GameplayConfig
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700466D RID: 18029
-		// (get) Token: 0x0600E5A8 RID: 58792 RVA: 0x0021C27D File Offset: 0x0021A47D
+		// Token: 0x170049DE RID: 18910
+		// (get) Token: 0x0600F3D9 RID: 62425 RVA: 0x002391D1 File Offset: 0x002373D1
 		[Nullable(2)]
 		public virtual string FinishSendSelfEvent
 		{
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700466E RID: 18030
-		// (get) Token: 0x0600E5A9 RID: 58793 RVA: 0x0021C28A File Offset: 0x0021A48A
+		// Token: 0x170049DF RID: 18911
+		// (get) Token: 0x0600F3DA RID: 62426 RVA: 0x002391DE File Offset: 0x002373DE
 		[Nullable(2)]
 		public virtual string FailSendSelfEvent
 		{
@@ -62,13 +60,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EFE RID: 32510
+		// Token: 0x040085BE RID: 34238
 		private IOpenSimpleGameplay Instance;
 
-		// Token: 0x04007EFF RID: 32511
+		// Token: 0x040085BF RID: 34239
 		private IUiGame _GameplayConfigCache;
 
-		// Token: 0x04007F00 RID: 32512
+		// Token: 0x040085C0 RID: 34240
 		private bool _GameplayConfigInited;
 	}
 }

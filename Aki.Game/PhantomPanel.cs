@@ -5,19 +5,19 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BCC RID: 7116
+// Token: 0x0200108B RID: 4235
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomPanel : UiPanelBase
 {
-	// Token: 0x0600D435 RID: 54325 RVA: 0x0030D49B File Offset: 0x0030B69B
+	// Token: 0x0600A847 RID: 43079 RVA: 0x0031860F File Offset: 0x0031680F
 	[NullableContext(1)]
 	public PhantomPanel(UUIItem attachedItem)
 	{
 		this.AttachedUiItem = attachedItem;
 	}
 
-	// Token: 0x0600D436 RID: 54326 RVA: 0x0030D4AC File Offset: 0x0030B6AC
+	// Token: 0x0600A848 RID: 43080 RVA: 0x00318620 File Offset: 0x00316820
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -46,7 +46,7 @@ public class PhantomPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D437 RID: 54327 RVA: 0x0030D5E0 File Offset: 0x0030B7E0
+	// Token: 0x0600A849 RID: 43081 RVA: 0x00318754 File Offset: 0x00316954
 	protected override void OnBeforeDestroy()
 	{
 		this.PlayerId = 0;
@@ -67,14 +67,14 @@ public class PhantomPanel : UiPanelBase
 		this.LastIconPath = null;
 	}
 
-	// Token: 0x0600D438 RID: 54328 RVA: 0x0030D63D File Offset: 0x0030B83D
+	// Token: 0x0600A84A RID: 43082 RVA: 0x003187B1 File Offset: 0x003169B1
 	protected override void OnStart()
 	{
 		this.LoopSeqPlayer = new LevelSequencePlayer(base.GetItem(19));
 		this.IconSeqPlayer = new LevelSequencePlayer(this.AttachedUiItem);
 	}
 
-	// Token: 0x0600D439 RID: 54329 RVA: 0x0030D664 File Offset: 0x0030B864
+	// Token: 0x0600A84B RID: 43083 RVA: 0x003187D8 File Offset: 0x003169D8
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -96,19 +96,19 @@ public class PhantomPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600D43A RID: 54330 RVA: 0x0030D699 File Offset: 0x0030B899
+	// Token: 0x0600A84C RID: 43084 RVA: 0x0031880D File Offset: 0x00316A0D
 	private void OnClick()
 	{
 		TowerDefenseController.Instance.TryOpenPhantomViewByPlayerIdAndRoleId(this.PlayerId, this.RoleCfgId);
 	}
 
-	// Token: 0x0600D43B RID: 54331 RVA: 0x0030D6B1 File Offset: 0x0030B8B1
+	// Token: 0x0600A84D RID: 43085 RVA: 0x00318825 File Offset: 0x00316A25
 	public void SetRedDotActive(bool value)
 	{
 		base.GetItem(21).SetUIActive(value);
 	}
 
-	// Token: 0x0600D43C RID: 54332 RVA: 0x0030D6C4 File Offset: 0x0030B8C4
+	// Token: 0x0600A84E RID: 43086 RVA: 0x00318838 File Offset: 0x00316A38
 	public void SetIcon(string path = null, bool isSelf = true)
 	{
 		UUISprite sprite = base.GetSprite(22);
@@ -155,48 +155,48 @@ public class PhantomPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D43D RID: 54333 RVA: 0x0030D7E5 File Offset: 0x0030B9E5
+	// Token: 0x0600A84F RID: 43087 RVA: 0x00318959 File Offset: 0x00316B59
 	public void SetRelativeUiActive(bool active)
 	{
 		base.GetItem(19).SetUIActive(active);
 	}
 
-	// Token: 0x040060FE RID: 24830
+	// Token: 0x040061CD RID: 25037
 	public int PlayerId;
 
-	// Token: 0x040060FF RID: 24831
+	// Token: 0x040061CE RID: 25038
 	public int RoleCfgId;
 
-	// Token: 0x04006100 RID: 24832
+	// Token: 0x040061CF RID: 25039
 	private readonly UUIItem AttachedUiItem;
 
-	// Token: 0x04006101 RID: 24833
+	// Token: 0x040061D0 RID: 25040
 	private LevelSequencePlayer LoopSeqPlayer;
 
-	// Token: 0x04006102 RID: 24834
+	// Token: 0x040061D1 RID: 25041
 	private LevelSequencePlayer IconSeqPlayer;
 
-	// Token: 0x04006103 RID: 24835
+	// Token: 0x040061D2 RID: 25042
 	private string LastIconPath;
 
-	// Token: 0x04006104 RID: 24836
+	// Token: 0x040061D3 RID: 25043
 	private bool IsLoopPlaying;
 
-	// Token: 0x02008187 RID: 33159
+	// Token: 0x02007315 RID: 29461
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A439 RID: 173113
+		// Token: 0x0402576D RID: 153453
 		VisionPanel = 19,
-		// Token: 0x0402A43A RID: 173114
+		// Token: 0x0402576E RID: 153454
 		VisionButton,
-		// Token: 0x0402A43B RID: 173115
+		// Token: 0x0402576F RID: 153455
 		RedDotItem,
-		// Token: 0x0402A43C RID: 173116
+		// Token: 0x04025770 RID: 153456
 		AddSprite,
-		// Token: 0x0402A43D RID: 173117
+		// Token: 0x04025771 RID: 153457
 		WaitingSprite,
-		// Token: 0x0402A43E RID: 173118
+		// Token: 0x04025772 RID: 153458
 		IconTexture
 	}
 }

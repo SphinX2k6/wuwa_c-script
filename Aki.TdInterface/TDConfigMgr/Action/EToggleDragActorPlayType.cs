@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016DE RID: 5854
+	// Token: 0x02001859 RID: 6233
 	[EnumExtensions]
 	public enum EToggleDragActorPlayType
 	{
-		// Token: 0x04004F2C RID: 20268
+		// Token: 0x04005356 RID: 21334
 		Enable,
-		// Token: 0x04004F2D RID: 20269
+		// Token: 0x04005357 RID: 21335
 		Disable
 	}
 }

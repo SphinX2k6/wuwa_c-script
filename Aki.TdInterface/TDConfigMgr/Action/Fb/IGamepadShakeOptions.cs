@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200291E RID: 10526
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BFA RID: 11258
 	public class IGamepadShakeOptions
 	{
-		// Token: 0x0600E99E RID: 59806 RVA: 0x00223DAE File Offset: 0x00221FAE
+		// Token: 0x0600F7F0 RID: 63472 RVA: 0x00241106 File Offset: 0x0023F306
 		public static IGamepadShakeOptions Create(IGamepadShakeOptions? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004924 RID: 18724
-		// (get) Token: 0x0600E99F RID: 59807 RVA: 0x00223DCD File Offset: 0x00221FCD
+		// Token: 0x17004CAA RID: 19626
+		// (get) Token: 0x0600F7F1 RID: 63473 RVA: 0x00241125 File Offset: 0x0023F325
 		public virtual string KuroForceFeedbackEffect
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004925 RID: 18725
-		// (get) Token: 0x0600E9A0 RID: 59808 RVA: 0x00223DDA File Offset: 0x00221FDA
+		// Token: 0x17004CAB RID: 19627
+		// (get) Token: 0x0600F7F2 RID: 63474 RVA: 0x00241132 File Offset: 0x0023F332
 		public virtual IGamepadShakeConfig GamepadShakeConfig
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080E8 RID: 33000
+		// Token: 0x040087B6 RID: 34742
 		private IGamepadShakeOptions Instance;
 
-		// Token: 0x040080E9 RID: 33001
+		// Token: 0x040087B7 RID: 34743
 		private IGamepadShakeConfig _GamepadShakeConfigCache;
 
-		// Token: 0x040080EA RID: 33002
+		// Token: 0x040087B8 RID: 34744
 		private bool _GamepadShakeConfigInited;
 	}
 }

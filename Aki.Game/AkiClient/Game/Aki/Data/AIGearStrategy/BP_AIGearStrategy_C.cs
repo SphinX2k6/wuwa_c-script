@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.AIGearStrategy
 {
-	// Token: 0x02003FC1 RID: 16321
+	// Token: 0x02003246 RID: 12870
 	[UnrealObjectPath("/Game/Aki/Data/AIGearStrategy/BP_AiGearStrategy.BP_AIGearStrategy_C")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 100)]
 	public class BP_AIGearStrategy_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029CA1 RID: 171169 RVA: 0x009CC802 File Offset: 0x009CAA02
+		// Token: 0x0602028F RID: 131727 RVA: 0x0093EA65 File Offset: 0x0093CC65
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_AIGearStrategy_C._ClassPtr == IntPtr.Zero)
@@ -22,120 +22,120 @@ namespace AkiClient.Game.Aki.Data.AIGearStrategy
 			return BP_AIGearStrategy_C._ClassPtr;
 		}
 
-		// Token: 0x06029CA2 RID: 171170 RVA: 0x009CC828 File Offset: 0x009CAA28
+		// Token: 0x06020290 RID: 131728 RVA: 0x0093EA8C File Offset: 0x0093CC8C
 		public BP_AIGearStrategy_C() : this(BuiltinUtils.AllocNativeUObject(BP_AIGearStrategy_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029CA3 RID: 171171 RVA: 0x009CC850 File Offset: 0x009CAA50
+		// Token: 0x06020291 RID: 131729 RVA: 0x0093EAB4 File Offset: 0x0093CCB4
 		[NullableContext(1)]
 		public BP_AIGearStrategy_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_AIGearStrategy_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006547 RID: 25927
-		// (get) Token: 0x06029CA4 RID: 171172 RVA: 0x009CC883 File Offset: 0x009CAA83
-		// (set) Token: 0x06029CA5 RID: 171173 RVA: 0x009CC893 File Offset: 0x009CAA93
+		// Token: 0x17003D9E RID: 15774
+		// (get) Token: 0x06020292 RID: 131730 RVA: 0x0093EAE7 File Offset: 0x0093CCE7
+		// (set) Token: 0x06020293 RID: 131731 RVA: 0x0093EAF7 File Offset: 0x0093CCF7
 		public unsafe float LostWeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_LostWeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_LostWeight) = value;
 			}
 		}
 
-		// Token: 0x17006548 RID: 25928
-		// (get) Token: 0x06029CA6 RID: 171174 RVA: 0x009CC8A4 File Offset: 0x009CAAA4
-		// (set) Token: 0x06029CA7 RID: 171175 RVA: 0x009CC8B4 File Offset: 0x009CAAB4
+		// Token: 0x17003D9F RID: 15775
+		// (get) Token: 0x06020294 RID: 131732 RVA: 0x0093EB08 File Offset: 0x0093CD08
+		// (set) Token: 0x06020295 RID: 131733 RVA: 0x0093EB18 File Offset: 0x0093CD18
 		public unsafe float RoundDecay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_RoundDecay);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_RoundDecay) = value;
 			}
 		}
 
-		// Token: 0x17006549 RID: 25929
-		// (get) Token: 0x06029CA8 RID: 171176 RVA: 0x009CC8C5 File Offset: 0x009CAAC5
-		// (set) Token: 0x06029CA9 RID: 171177 RVA: 0x009CC8D5 File Offset: 0x009CAAD5
+		// Token: 0x17003DA0 RID: 15776
+		// (get) Token: 0x06020296 RID: 131734 RVA: 0x0093EB29 File Offset: 0x0093CD29
+		// (set) Token: 0x06020297 RID: 131735 RVA: 0x0093EB39 File Offset: 0x0093CD39
 		public unsafe int IterationCount
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_IterationCount);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_IterationCount) = value;
 			}
 		}
 
-		// Token: 0x1700654A RID: 25930
-		// (get) Token: 0x06029CAA RID: 171178 RVA: 0x009CC8E6 File Offset: 0x009CAAE6
-		// (set) Token: 0x06029CAB RID: 171179 RVA: 0x009CC8F6 File Offset: 0x009CAAF6
+		// Token: 0x17003DA1 RID: 15777
+		// (get) Token: 0x06020298 RID: 131736 RVA: 0x0093EB4A File Offset: 0x0093CD4A
+		// (set) Token: 0x06020299 RID: 131737 RVA: 0x0093EB5A File Offset: 0x0093CD5A
 		public unsafe int PlayerIterationCount
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_PlayerIterationCount);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_PlayerIterationCount) = value;
 			}
 		}
 
-		// Token: 0x1700654B RID: 25931
-		// (get) Token: 0x06029CAC RID: 171180 RVA: 0x009CC907 File Offset: 0x009CAB07
-		// (set) Token: 0x06029CAD RID: 171181 RVA: 0x009CC917 File Offset: 0x009CAB17
+		// Token: 0x17003DA2 RID: 15778
+		// (get) Token: 0x0602029A RID: 131738 RVA: 0x0093EB6B File Offset: 0x0093CD6B
+		// (set) Token: 0x0602029B RID: 131739 RVA: 0x0093EB7B File Offset: 0x0093CD7B
 		public unsafe float IterationDecay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_IterationDecay);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_AIGearStrategy_C.__PropertyOffset_IterationDecay) = value;
 			}
 		}
 
-		// Token: 0x06029CAE RID: 171182 RVA: 0x009CC928 File Offset: 0x009CAB28
+		// Token: 0x0602029C RID: 131740 RVA: 0x0093EB8C File Offset: 0x0093CD8C
 		protected BP_AIGearStrategy_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015756 RID: 87894
+		// Token: 0x040114E7 RID: 70887
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/AIGearStrategy/BP_AiGearStrategy.BP_AIGearStrategy_C";
 
-		// Token: 0x04015757 RID: 87895
+		// Token: 0x040114E8 RID: 70888
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015758 RID: 87896
+		// Token: 0x040114E9 RID: 70889
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015759 RID: 87897
-		internal static int __PropertyOffset_0;
+		// Token: 0x040114EA RID: 70890
+		internal static int __PropertyOffset_LostWeight;
 
-		// Token: 0x0401575A RID: 87898
-		internal static int __PropertyOffset_1;
+		// Token: 0x040114EB RID: 70891
+		internal static int __PropertyOffset_RoundDecay;
 
-		// Token: 0x0401575B RID: 87899
-		internal static int __PropertyOffset_2;
+		// Token: 0x040114EC RID: 70892
+		internal static int __PropertyOffset_IterationCount;
 
-		// Token: 0x0401575C RID: 87900
-		internal static int __PropertyOffset_3;
+		// Token: 0x040114ED RID: 70893
+		internal static int __PropertyOffset_PlayerIterationCount;
 
-		// Token: 0x0401575D RID: 87901
-		internal static int __PropertyOffset_4;
+		// Token: 0x040114EE RID: 70894
+		internal static int __PropertyOffset_IterationDecay;
 	}
 }

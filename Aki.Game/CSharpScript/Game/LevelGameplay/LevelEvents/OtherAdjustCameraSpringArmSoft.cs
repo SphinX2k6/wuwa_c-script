@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF2 RID: 27378
+	// Token: 0x02005C6A RID: 23658
 	public class OtherAdjustCameraSpringArmSoft
 	{
-		// Token: 0x1700997E RID: 39294
-		// (get) Token: 0x06043FE7 RID: 278503 RVA: 0x010AEA8B File Offset: 0x010ACC8B
-		// (set) Token: 0x06043FE8 RID: 278504 RVA: 0x010AEA93 File Offset: 0x010ACC93
+		// Token: 0x17006E81 RID: 28289
+		// (get) Token: 0x0603A139 RID: 237881 RVA: 0x01058307 File Offset: 0x01056507
+		// (set) Token: 0x0603A13A RID: 237882 RVA: 0x0105830F File Offset: 0x0105650F
 		public float? MinInterpolationSpeed { get; set; }
 
-		// Token: 0x1700997F RID: 39295
-		// (get) Token: 0x06043FE9 RID: 278505 RVA: 0x010AEA9C File Offset: 0x010ACC9C
-		// (set) Token: 0x06043FEA RID: 278506 RVA: 0x010AEAA4 File Offset: 0x010ACCA4
+		// Token: 0x17006E82 RID: 28290
+		// (get) Token: 0x0603A13B RID: 237883 RVA: 0x01058318 File Offset: 0x01056518
+		// (set) Token: 0x0603A13C RID: 237884 RVA: 0x01058320 File Offset: 0x01056520
 		public float? MaxInterpolationSpeed { get; set; }
 
-		// Token: 0x17009980 RID: 39296
-		// (get) Token: 0x06043FEB RID: 278507 RVA: 0x010AEAAD File Offset: 0x010ACCAD
-		// (set) Token: 0x06043FEC RID: 278508 RVA: 0x010AEAB5 File Offset: 0x010ACCB5
+		// Token: 0x17006E83 RID: 28291
+		// (get) Token: 0x0603A13D RID: 237885 RVA: 0x01058329 File Offset: 0x01056529
+		// (set) Token: 0x0603A13E RID: 237886 RVA: 0x01058331 File Offset: 0x01056531
 		public float? OffsetDistance1 { get; set; }
 
-		// Token: 0x17009981 RID: 39297
-		// (get) Token: 0x06043FED RID: 278509 RVA: 0x010AEABE File Offset: 0x010ACCBE
-		// (set) Token: 0x06043FEE RID: 278510 RVA: 0x010AEAC6 File Offset: 0x010ACCC6
+		// Token: 0x17006E84 RID: 28292
+		// (get) Token: 0x0603A13F RID: 237887 RVA: 0x0105833A File Offset: 0x0105653A
+		// (set) Token: 0x0603A140 RID: 237888 RVA: 0x01058342 File Offset: 0x01056542
 		public float? OffsetDistance2 { get; set; }
 	}
 }

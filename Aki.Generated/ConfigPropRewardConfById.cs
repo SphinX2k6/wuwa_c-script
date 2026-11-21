@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000766 RID: 1894
+	// Token: 0x02000780 RID: 1920
 	public class ConfigPropRewardConfById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C75 RID: 11381 RVA: 0x001548B0 File Offset: 0x00152AB0
+		// Token: 0x06002D11 RID: 11537 RVA: 0x0015B7BC File Offset: 0x001599BC
 		static ConfigPropRewardConfById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPropRewardConfById.CreateStaticDefaultValue), new Action(ConfigPropRewardConfById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C76 RID: 11382 RVA: 0x001548D0 File Offset: 0x00152AD0
+		// Token: 0x06002D12 RID: 11538 RVA: 0x0015B7DC File Offset: 0x001599DC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPropRewardConfById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C77 RID: 11383 RVA: 0x0015494F File Offset: 0x00152B4F
+		// Token: 0x06002D13 RID: 11539 RVA: 0x0015B85B File Offset: 0x00159A5B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPropRewardConfById.LogPair = null;
 			ConfigPropRewardConfById.HandleId = 0;
 		}
 
-		// Token: 0x06002C78 RID: 11384 RVA: 0x0015495D File Offset: 0x00152B5D
+		// Token: 0x06002D14 RID: 11540 RVA: 0x0015B869 File Offset: 0x00159A69
 		public static void Init()
 		{
 			ConfigPropRewardConfById.HandleId = ConfigCommon.InitDataStatement(ConfigPropRewardConfById.HandleId, "db_itemattributereward.db", "select BinData from `PropRewardConf` where Id=?");
 		}
 
-		// Token: 0x06002C79 RID: 11385 RVA: 0x00154978 File Offset: 0x00152B78
+		// Token: 0x06002D15 RID: 11541 RVA: 0x0015B884 File Offset: 0x00159A84
 		public static PropRewardConf? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPropRewardConfById.HandleId, ConfigPropRewardConfById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PropRewardConf?(rootAsPropRewardConf);
 		}
 
-		// Token: 0x040033B0 RID: 13232
+		// Token: 0x04003466 RID: 13414
 		private const string DB = "db_itemattributereward.db";
 
-		// Token: 0x040033B1 RID: 13233
+		// Token: 0x04003467 RID: 13415
 		private const string FILE = "s.属性奖励.xlsx";
 
-		// Token: 0x040033B2 RID: 13234
+		// Token: 0x04003468 RID: 13416
 		private const string TABLE = "PropRewardConf";
 
-		// Token: 0x040033B3 RID: 13235
+		// Token: 0x04003469 RID: 13417
 		private const string COMMAND = "select BinData from `PropRewardConf` where Id=?";
 
-		// Token: 0x040033B4 RID: 13236
+		// Token: 0x0400346A RID: 13418
 		private const string KEY_PREFIX = "PropRewardConfById";
 
-		// Token: 0x040033B5 RID: 13237
+		// Token: 0x0400346B RID: 13419
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033B6 RID: 13238
+		// Token: 0x0400346C RID: 13420
 		private static int HandleId;
 	}
 }

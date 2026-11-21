@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A04 RID: 2564
+	// Token: 0x02000AD9 RID: 2777
 	public class ConfigTowerQuickPassByNum : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C2C RID: 15404 RVA: 0x001AE024 File Offset: 0x001AC224
+		// Token: 0x0600412A RID: 16682 RVA: 0x001CD3B8 File Offset: 0x001CB5B8
 		static ConfigTowerQuickPassByNum()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTowerQuickPassByNum.CreateStaticDefaultValue), new Action(ConfigTowerQuickPassByNum.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C2D RID: 15405 RVA: 0x001AE044 File Offset: 0x001AC244
+		// Token: 0x0600412B RID: 16683 RVA: 0x001CD3D8 File Offset: 0x001CB5D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTowerQuickPassByNum.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C2E RID: 15406 RVA: 0x001AE0C3 File Offset: 0x001AC2C3
+		// Token: 0x0600412C RID: 16684 RVA: 0x001CD457 File Offset: 0x001CB657
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTowerQuickPassByNum.LogPair = null;
 			ConfigTowerQuickPassByNum.HandleId = 0;
 		}
 
-		// Token: 0x06003C2F RID: 15407 RVA: 0x001AE0D1 File Offset: 0x001AC2D1
+		// Token: 0x0600412D RID: 16685 RVA: 0x001CD465 File Offset: 0x001CB665
 		public static void Init()
 		{
 			ConfigTowerQuickPassByNum.HandleId = ConfigCommon.InitDataStatement(ConfigTowerQuickPassByNum.HandleId, "db_tower.db", "select BinData from `TowerQuickPass` where Num = ?");
 		}
 
-		// Token: 0x06003C30 RID: 15408 RVA: 0x001AE0EC File Offset: 0x001AC2EC
+		// Token: 0x0600412E RID: 16686 RVA: 0x001CD480 File Offset: 0x001CB680
 		public static TowerQuickPass? GetConfig(int p0Num, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTowerQuickPassByNum.HandleId, ConfigTowerQuickPassByNum.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TowerQuickPass?(rootAsTowerQuickPass);
 		}
 
-		// Token: 0x04004602 RID: 17922
+		// Token: 0x04004BD5 RID: 19413
 		private const string DB = "db_tower.db";
 
-		// Token: 0x04004603 RID: 17923
+		// Token: 0x04004BD6 RID: 19414
 		private const string FILE = "p.爬塔新.xlsx";
 
-		// Token: 0x04004604 RID: 17924
+		// Token: 0x04004BD7 RID: 19415
 		private const string TABLE = "TowerQuickPass";
 
-		// Token: 0x04004605 RID: 17925
+		// Token: 0x04004BD8 RID: 19416
 		private const string COMMAND = "select BinData from `TowerQuickPass` where Num = ?";
 
-		// Token: 0x04004606 RID: 17926
+		// Token: 0x04004BD9 RID: 19417
 		private const string KEY_PREFIX = "TowerQuickPassByNum";
 
-		// Token: 0x04004607 RID: 17927
+		// Token: 0x04004BDA RID: 19418
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004608 RID: 17928
+		// Token: 0x04004BDB RID: 19419
 		private static int HandleId;
 	}
 }

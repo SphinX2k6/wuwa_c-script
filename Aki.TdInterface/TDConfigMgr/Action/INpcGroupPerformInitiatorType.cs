@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C6A RID: 7274
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E63 RID: 7779
 	public class INpcGroupPerformInitiatorType
 	{
-		// Token: 0x06009C03 RID: 39939 RVA: 0x0016608C File Offset: 0x0016428C
+		// Token: 0x0600A563 RID: 42339 RVA: 0x00179488 File Offset: 0x00177688
 		private INpcGroupPerformInitiatorType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C04 RID: 39940 RVA: 0x001660C4 File Offset: 0x001642C4
+		// Token: 0x0600A564 RID: 42340 RVA: 0x001794C0 File Offset: 0x001776C0
 		public static INpcGroupPerformInitiatorType Create([Nullable(2)] INpcGroupPerformInitiatorType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C05 RID: 39941 RVA: 0x001660D7 File Offset: 0x001642D7
+		// Token: 0x0600A565 RID: 42341 RVA: 0x001794D3 File Offset: 0x001776D3
 		public static INpcGroupPerformInitiatorType CreateFromSetValue([Nullable(2)] INpcGroupPerformInitiatorType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C06 RID: 39942 RVA: 0x001660EA File Offset: 0x001642EA
+		// Token: 0x0600A566 RID: 42342 RVA: 0x001794E6 File Offset: 0x001776E6
 		public INpcGroupPerformInitiatorType_SetValue ToSetValue()
 		{
 			return new INpcGroupPerformInitiatorType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030B9 RID: 12473
-		// (get) Token: 0x06009C07 RID: 39943 RVA: 0x001660FD File Offset: 0x001642FD
-		// (set) Token: 0x06009C08 RID: 39944 RVA: 0x00166128 File Offset: 0x00164328
+		// Token: 0x1700332B RID: 13099
+		// (get) Token: 0x0600A567 RID: 42343 RVA: 0x001794F9 File Offset: 0x001776F9
+		// (set) Token: 0x0600A568 RID: 42344 RVA: 0x00179524 File Offset: 0x00177724
 		public virtual ENpcGroupPerformInitiatorType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EAC RID: 24236
+		// Token: 0x040063E6 RID: 25574
 		[Nullable(2)]
 		protected INpcGroupPerformInitiatorType FbInstance;
 
-		// Token: 0x04005EAD RID: 24237
+		// Token: 0x040063E7 RID: 25575
 		[Nullable(2)]
 		protected INpcGroupPerformInitiatorType_SetValue PocoInterface;
 	}

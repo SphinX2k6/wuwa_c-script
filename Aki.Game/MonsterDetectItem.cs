@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001696 RID: 5782
+// Token: 0x02000B4E RID: 2894
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,13 +16,13 @@ using UnrealEngine;
 })]
 public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 {
-	// Token: 0x0600A513 RID: 42259 RVA: 0x0024D503 File Offset: 0x0024B703
+	// Token: 0x060078F3 RID: 30963 RVA: 0x00257887 File Offset: 0x00255A87
 	public void BindCallback(Action<int, UUIExtendToggle> onSelectedCallback)
 	{
 		this.OnSelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x0600A514 RID: 42260 RVA: 0x0024D50C File Offset: 0x0024B70C
+	// Token: 0x060078F4 RID: 30964 RVA: 0x00257890 File Offset: 0x00255A90
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -40,7 +40,7 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A515 RID: 42261 RVA: 0x0024D5B8 File Offset: 0x0024B7B8
+	// Token: 0x060078F5 RID: 30965 RVA: 0x0025793C File Offset: 0x00255B3C
 	protected override void OnStart()
 	{
 		this.ExtendToggle = base.GetExtendToggle(0);
@@ -65,7 +65,7 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		});
 	}
 
-	// Token: 0x0600A516 RID: 42262 RVA: 0x0024D636 File Offset: 0x0024B836
+	// Token: 0x060078F6 RID: 30966 RVA: 0x002579BA File Offset: 0x00255BBA
 	protected override void OnBeforeDestroy()
 	{
 		this.ExtendToggle.OnStateChange.Clear();
@@ -73,7 +73,7 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		this.ExtendToggle.OnPostAudioStateEvent.Unbind();
 	}
 
-	// Token: 0x0600A517 RID: 42263 RVA: 0x0024D668 File Offset: 0x0024B868
+	// Token: 0x060078F7 RID: 30967 RVA: 0x002579EC File Offset: 0x00255BEC
 	public override void Refresh(MonsterDetectionRecord data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -104,19 +104,19 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		}
 	}
 
-	// Token: 0x0600A518 RID: 42264 RVA: 0x0024D774 File Offset: 0x0024B974
+	// Token: 0x060078F8 RID: 30968 RVA: 0x00257AF8 File Offset: 0x00255CF8
 	public override void OnSelected(bool fireEvent)
 	{
 		this.Selected(true, true);
 	}
 
-	// Token: 0x0600A519 RID: 42265 RVA: 0x0024D77E File Offset: 0x0024B97E
+	// Token: 0x060078F9 RID: 30969 RVA: 0x00257B02 File Offset: 0x00255D02
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.Selected(false, true);
 	}
 
-	// Token: 0x0600A51A RID: 42266 RVA: 0x0024D788 File Offset: 0x0024B988
+	// Token: 0x060078FA RID: 30970 RVA: 0x00257B0C File Offset: 0x00255D0C
 	private void OnCallback()
 	{
 		if (this.OnSelectedCallback != null)
@@ -125,7 +125,7 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		}
 	}
 
-	// Token: 0x0600A51B RID: 42267 RVA: 0x0024D7C1 File Offset: 0x0024B9C1
+	// Token: 0x060078FB RID: 30971 RVA: 0x00257B45 File Offset: 0x00255D45
 	private void Selected(bool bSelected, bool fire = true)
 	{
 		if (bSelected)
@@ -136,21 +136,21 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 		this.ExtendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600A51C RID: 42268 RVA: 0x0024D7E8 File Offset: 0x0024B9E8
+	// Token: 0x060078FC RID: 30972 RVA: 0x00257B6C File Offset: 0x00255D6C
 	public UUIItem GetToggleItem()
 	{
 		return base.GetExtendToggle(0).RootUIComp.Get();
 	}
 
-	// Token: 0x04004AAF RID: 19119
+	// Token: 0x04004B56 RID: 19286
 	[Nullable(2)]
 	private MonsterDetectionRecord Data;
 
-	// Token: 0x04004AB0 RID: 19120
+	// Token: 0x04004B57 RID: 19287
 	[Nullable(2)]
 	private UUIExtendToggle ExtendToggle;
 
-	// Token: 0x04004AB1 RID: 19121
+	// Token: 0x04004B58 RID: 19288
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,17 +158,17 @@ public class MonsterDetectItem : GridProxyAbstract<MonsterDetectionRecord>
 	})]
 	private Action<int, UUIExtendToggle> OnSelectedCallback;
 
-	// Token: 0x02007C73 RID: 31859
+	// Token: 0x02006DF8 RID: 28152
 	[NullableContext(0)]
 	private enum EDetectItemNodeDefine
 	{
-		// Token: 0x04028D48 RID: 167240
+		// Token: 0x04024071 RID: 147569
 		MonsterToggle,
-		// Token: 0x04028D49 RID: 167241
+		// Token: 0x04024072 RID: 147570
 		NameText,
-		// Token: 0x04028D4A RID: 167242
+		// Token: 0x04024073 RID: 147571
 		UnknownItem,
-		// Token: 0x04028D4B RID: 167243
+		// Token: 0x04024074 RID: 147572
 		MonsterTexture
 	}
 }

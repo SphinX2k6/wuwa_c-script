@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200038F RID: 911
+	// Token: 0x020003A5 RID: 933
 	public class ConfigGiantAnimationRegisterById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001560 RID: 5472 RVA: 0x000D2748 File Offset: 0x000D0948
+		// Token: 0x060015E4 RID: 5604 RVA: 0x000D8E9C File Offset: 0x000D709C
 		static ConfigGiantAnimationRegisterById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGiantAnimationRegisterById.CreateStaticDefaultValue), new Action(ConfigGiantAnimationRegisterById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001561 RID: 5473 RVA: 0x000D2768 File Offset: 0x000D0968
+		// Token: 0x060015E5 RID: 5605 RVA: 0x000D8EBC File Offset: 0x000D70BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGiantAnimationRegisterById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001562 RID: 5474 RVA: 0x000D27E7 File Offset: 0x000D09E7
+		// Token: 0x060015E6 RID: 5606 RVA: 0x000D8F3B File Offset: 0x000D713B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGiantAnimationRegisterById.LogPair = null;
 			ConfigGiantAnimationRegisterById.HandleId = 0;
 		}
 
-		// Token: 0x06001563 RID: 5475 RVA: 0x000D27F5 File Offset: 0x000D09F5
+		// Token: 0x060015E7 RID: 5607 RVA: 0x000D8F49 File Offset: 0x000D7149
 		public static void Init()
 		{
 			ConfigGiantAnimationRegisterById.HandleId = ConfigCommon.InitDataStatement(ConfigGiantAnimationRegisterById.HandleId, "db_giantanimationregister.db", "select BinData from `GiantAnimationRegister` where Id=?");
 		}
 
-		// Token: 0x06001564 RID: 5476 RVA: 0x000D2810 File Offset: 0x000D0A10
+		// Token: 0x060015E8 RID: 5608 RVA: 0x000D8F64 File Offset: 0x000D7164
 		public static GiantAnimationRegister? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGiantAnimationRegisterById.HandleId, ConfigGiantAnimationRegisterById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GiantAnimationRegister?(rootAsGiantAnimationRegister);
 		}
 
-		// Token: 0x040018CD RID: 6349
+		// Token: 0x04001967 RID: 6503
 		private const string DB = "db_giantanimationregister.db";
 
-		// Token: 0x040018CE RID: 6350
+		// Token: 0x04001968 RID: 6504
 		private const string FILE = "k.可视化编辑/c.Csv/j.巨人动画注册/*.csv*";
 
-		// Token: 0x040018CF RID: 6351
+		// Token: 0x04001969 RID: 6505
 		private const string TABLE = "GiantAnimationRegister";
 
-		// Token: 0x040018D0 RID: 6352
+		// Token: 0x0400196A RID: 6506
 		private const string COMMAND = "select BinData from `GiantAnimationRegister` where Id=?";
 
-		// Token: 0x040018D1 RID: 6353
+		// Token: 0x0400196B RID: 6507
 		private const string KEY_PREFIX = "GiantAnimationRegisterById";
 
-		// Token: 0x040018D2 RID: 6354
+		// Token: 0x0400196C RID: 6508
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040018D3 RID: 6355
+		// Token: 0x0400196D RID: 6509
 		private static int HandleId;
 	}
 }

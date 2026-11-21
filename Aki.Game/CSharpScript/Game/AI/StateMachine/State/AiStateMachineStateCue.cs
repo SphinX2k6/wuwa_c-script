@@ -7,18 +7,18 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x0200732A RID: 29482
+	// Token: 0x020064AD RID: 25773
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AiStateMachineStateCue : AiStateMachineState
 	{
-		// Token: 0x060485BF RID: 296383 RVA: 0x0129CBEC File Offset: 0x0129ADEC
+		// Token: 0x0603EA0C RID: 256524 RVA: 0x0123F66C File Offset: 0x0123D86C
 		[NullableContext(1)]
 		public AiStateMachineStateCue(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485C0 RID: 296384 RVA: 0x0129CC04 File Offset: 0x0129AE04
+		// Token: 0x0603EA0D RID: 256525 RVA: 0x0123F684 File Offset: 0x0123D884
 		[NullableContext(1)]
 		protected unsafe override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485C1 RID: 296385 RVA: 0x0129CE3C File Offset: 0x0129B03C
+		// Token: 0x0603EA0E RID: 256526 RVA: 0x0123F8BC File Offset: 0x0123DABC
 		public override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
 			this.CueList = new List<int>();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485C2 RID: 296386 RVA: 0x0129CF30 File Offset: 0x0129B130
+		// Token: 0x0603EA0F RID: 256527 RVA: 0x0123F9B0 File Offset: 0x0123DBB0
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
 			if (this.HideOnLoading && this.Loading)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			this.CueList = new List<int>();
 		}
 
-		// Token: 0x060485C3 RID: 296387 RVA: 0x0129CFD4 File Offset: 0x0129B1D4
+		// Token: 0x0603EA10 RID: 256528 RVA: 0x0123FA54 File Offset: 0x0123DC54
 		private void OnLoadCompleted(long cueConfigId)
 		{
 			if (!this.Node.Activated)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485C4 RID: 296388 RVA: 0x0129D048 File Offset: 0x0129B248
+		// Token: 0x0603EA11 RID: 256529 RVA: 0x0123FAC8 File Offset: 0x0123DCC8
 		protected override void OnClear()
 		{
 			if (this.CueList != null && this.CueList.Count > 0)
@@ -143,39 +143,39 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485C5 RID: 296389 RVA: 0x0129D0C8 File Offset: 0x0129B2C8
+		// Token: 0x0603EA12 RID: 256530 RVA: 0x0123FB48 File Offset: 0x0123DD48
 		[NullableContext(1)]
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026425 RID: 156709
+		// Token: 0x04021712 RID: 136978
 		private List<long> CueIds;
 
-		// Token: 0x04026426 RID: 156710
+		// Token: 0x04021713 RID: 136979
 		private bool HideOnLoading;
 
-		// Token: 0x04026427 RID: 156711
+		// Token: 0x04021714 RID: 136980
 		public int ConfigReplaceTagId;
 
-		// Token: 0x04026428 RID: 156712
+		// Token: 0x04021715 RID: 136981
 		[Nullable(1)]
 		public string ConfigReplaceTagName = "";
 
-		// Token: 0x04026429 RID: 156713
+		// Token: 0x04021716 RID: 136982
 		private IStateRepPerfBase ReplaceConfig;
 
-		// Token: 0x0402642A RID: 156714
+		// Token: 0x04021717 RID: 136983
 		private List<int> CueList;
 
-		// Token: 0x0402642B RID: 156715
+		// Token: 0x04021718 RID: 136984
 		private int LoadFinishCount;
 
-		// Token: 0x0402642C RID: 156716
+		// Token: 0x04021719 RID: 136985
 		private bool Loading;
 
-		// Token: 0x0402642D RID: 156717
+		// Token: 0x0402171A RID: 136986
 		private int? DisableHandle;
 	}
 }

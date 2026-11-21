@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.CreatureTools;
 using AkiClient.Game.Aki.Data.Fight.UI;
 using UnrealEngine;
 
-// Token: 0x020022FB RID: 8955
+// Token: 0x020017DF RID: 6111
 [NullableContext(2)]
 [Nullable(0)]
 public class PanelQteContext
 {
-	// Token: 0x06011AB6 RID: 72374 RVA: 0x004574E8 File Offset: 0x004556E8
+	// Token: 0x0600EF4E RID: 61262 RVA: 0x004641C8 File Offset: 0x004623C8
 	public Entity GetSourceEntity()
 	{
 		if (this.IsInitSourceEntity)
@@ -49,42 +49,42 @@ public class PanelQteContext
 		}
 	}
 
-	// Token: 0x040085F8 RID: 34296
+	// Token: 0x04008736 RID: 34614
 	public EPanelQteSource? Source;
 
-	// Token: 0x040085F9 RID: 34297
+	// Token: 0x04008737 RID: 34615
 	public int QteId;
 
-	// Token: 0x040085FA RID: 34298
+	// Token: 0x04008738 RID: 34616
 	public int QteHandleId;
 
-	// Token: 0x040085FB RID: 34299
+	// Token: 0x04008739 RID: 34617
 	public USkeletalMeshComponent SourceMeshComp;
 
-	// Token: 0x040085FC RID: 34300
+	// Token: 0x0400873A RID: 34618
 	public long? SourceBuffId;
 
-	// Token: 0x040085FD RID: 34301
+	// Token: 0x0400873B RID: 34619
 	public int SourceBuffHandleId;
 
-	// Token: 0x040085FE RID: 34302
+	// Token: 0x0400873C RID: 34620
 	public AActor SourceActor;
 
-	// Token: 0x040085FF RID: 34303
+	// Token: 0x0400873D RID: 34621
 	public bool IsInitSourceEntity;
 
-	// Token: 0x04008600 RID: 34304
+	// Token: 0x0400873E RID: 34622
 	public EntityHandle SourceEntityHandle;
 
-	// Token: 0x04008601 RID: 34305
+	// Token: 0x0400873F RID: 34623
 	public SPanelQte Config;
 
-	// Token: 0x04008602 RID: 34306
+	// Token: 0x04008740 RID: 34624
 	public long? PreMessageId;
 
-	// Token: 0x04008603 RID: 34307
+	// Token: 0x04008741 RID: 34625
 	public bool Success;
 
-	// Token: 0x04008604 RID: 34308
+	// Token: 0x04008742 RID: 34626
 	public int BuffIndex = -1;
 }

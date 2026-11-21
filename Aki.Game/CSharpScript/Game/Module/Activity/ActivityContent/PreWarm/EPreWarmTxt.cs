@@ -3,23 +3,23 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B9 RID: 25273
+	// Token: 0x02005237 RID: 21047
 	[EnumExtensions]
 	public enum EPreWarmTxt
 	{
-		// Token: 0x040213D5 RID: 136149
+		// Token: 0x0401BD04 RID: 113924
 		[EnumStringMember("RestoreFrequency_Reward_0")]
 		RewardTxtUnFinish,
-		// Token: 0x040213D6 RID: 136150
+		// Token: 0x0401BD05 RID: 113925
 		[EnumStringMember("RestoreFrequency_Reward_1")]
 		RewardTxtFinished,
-		// Token: 0x040213D7 RID: 136151
+		// Token: 0x0401BD06 RID: 113926
 		[EnumStringMember("RestoreFrequency_Unlock_0")]
 		BtnLockTimeTxt,
-		// Token: 0x040213D8 RID: 136152
+		// Token: 0x0401BD07 RID: 113927
 		[EnumStringMember("RestoreFrequency_Unlock_1")]
 		BtnLockQuestTxt,
-		// Token: 0x040213D9 RID: 136153
+		// Token: 0x0401BD08 RID: 113928
 		[EnumStringMember("RestoreFrequency_Title_0")]
 		TitleUnlock
 	}

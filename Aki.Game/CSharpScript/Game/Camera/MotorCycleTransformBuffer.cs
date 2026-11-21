@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C9 RID: 29385
+	// Token: 0x0200644B RID: 25675
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorCycleTransformBuffer : IPlayerTransformBuffer
 	{
-		// Token: 0x0604817E RID: 295294 RVA: 0x0127CAB1 File Offset: 0x0127ACB1
+		// Token: 0x0603E581 RID: 255361 RVA: 0x0121F5AD File Offset: 0x0121D7AD
 		public void Init(FightCameraLogicComponent camera)
 		{
 			this.Camera = camera;
 		}
 
-		// Token: 0x0604817F RID: 295295 RVA: 0x0127CABC File Offset: 0x0127ACBC
+		// Token: 0x0603E582 RID: 255362 RVA: 0x0121F5B8 File Offset: 0x0121D7B8
 		public bool IsValid()
 		{
 			FightCameraLogicComponent camera = this.Camera;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Camera
 			return (baseVehiclePerformComponent != null && baseVehiclePerformComponent.Valid && baseVehiclePerformComponent.VehicleType == EVehicleType.Motorcycle) || this.IsCurrentBufferPlayerLocation() || this.IsCurrentBufferPlayerSocket();
 		}
 
-		// Token: 0x06048180 RID: 295296 RVA: 0x0127CB00 File Offset: 0x0127AD00
+		// Token: 0x0603E583 RID: 255363 RVA: 0x0121F5FC File Offset: 0x0121D7FC
 		public bool IsNeedBufferPlayerLocation()
 		{
 			return this.Camera != null && this.Camera.LastFrameAttachToVehicle != this.Camera.AttachToVehicle;
 		}
 
-		// Token: 0x06048181 RID: 295297 RVA: 0x0127CB28 File Offset: 0x0127AD28
+		// Token: 0x0603E584 RID: 255364 RVA: 0x0121F624 File Offset: 0x0121D824
 		private bool IsNeedBufferPlayerSocket()
 		{
 			if (this.Camera != null)
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Camera
 			return false;
 		}
 
-		// Token: 0x06048182 RID: 295298 RVA: 0x0127CB79 File Offset: 0x0127AD79
+		// Token: 0x0603E585 RID: 255365 RVA: 0x0121F675 File Offset: 0x0121D875
 		private bool IsCurrentBufferPlayerLocation()
 		{
 			return this.IsStartPlayerLocationBuffer || this.IsNeedBufferPlayerLocation();
 		}
 
-		// Token: 0x06048183 RID: 295299 RVA: 0x0127CB8B File Offset: 0x0127AD8B
+		// Token: 0x0603E586 RID: 255366 RVA: 0x0121F687 File Offset: 0x0121D887
 		private bool IsCurrentBufferPlayerSocket()
 		{
 			return this.IsStartPlayerSocketBuffer || this.IsNeedBufferPlayerSocket();
 		}
 
-		// Token: 0x06048184 RID: 295300 RVA: 0x0127CB9D File Offset: 0x0127AD9D
+		// Token: 0x0603E587 RID: 255367 RVA: 0x0121F699 File Offset: 0x0121D899
 		public void BufferPlayerLocation(float second, Vector outPlayerLocation)
 		{
 			if (this.IsCurrentBufferPlayerLocation() && this.BufferPlayerLocationInternal(second, outPlayerLocation))
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048185 RID: 295301 RVA: 0x0127CBC4 File Offset: 0x0127ADC4
+		// Token: 0x0603E588 RID: 255368 RVA: 0x0121F6C0 File Offset: 0x0121D8C0
 		private bool BufferPlayerLocationInternal(float second, Vector outPlayerLocation)
 		{
 			if (this.Camera == null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x06048186 RID: 295302 RVA: 0x0127CD48 File Offset: 0x0127AF48
+		// Token: 0x0603E589 RID: 255369 RVA: 0x0121F844 File Offset: 0x0121DA44
 		private void BufferPlayerSocket(float second, Vector outPlayerLocation)
 		{
 			if (this.Camera != null)
@@ -141,13 +141,13 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048187 RID: 295303 RVA: 0x0127CE6E File Offset: 0x0127B06E
+		// Token: 0x0603E58A RID: 255370 RVA: 0x0121F96A File Offset: 0x0121DB6A
 		public void StopBufferPlayerLocation()
 		{
 			this.IsStartPlayerLocationBuffer = false;
 		}
 
-		// Token: 0x06048188 RID: 295304 RVA: 0x0127CE77 File Offset: 0x0127B077
+		// Token: 0x0603E58B RID: 255371 RVA: 0x0121F973 File Offset: 0x0121DB73
 		private float GetLerpTime()
 		{
 			if (this.Camera.ContainsAnyTag(MotorCycleTransformBuffer.LerpTimeTagList, false) && this.Camera.Fading)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Camera
 			return 1f;
 		}
 
-		// Token: 0x06048189 RID: 295305 RVA: 0x0127CEAA File Offset: 0x0127B0AA
+		// Token: 0x0603E58C RID: 255372 RVA: 0x0121F9A6 File Offset: 0x0121DBA6
 		private float GetPlayerSocketBufferTime()
 		{
 			if (this.Camera.ContainsAnyTag(MotorCycleTransformBuffer.LerpTimeTagList, false) && this.Camera.Fading)
@@ -167,54 +167,54 @@ namespace CSharpScript.Game.Camera
 			return 0.5f;
 		}
 
-		// Token: 0x0402609F RID: 155807
+		// Token: 0x04021382 RID: 136066
 		private const int MOTORCYCLE_BUFFER_OUT_TIME = 1;
 
-		// Token: 0x040260A0 RID: 155808
+		// Token: 0x04021383 RID: 136067
 		private const float PLAYER_SOCKET_BUFFER_TIME = 0.5f;
 
-		// Token: 0x040260A1 RID: 155809
+		// Token: 0x04021384 RID: 136068
 		[StaticVariableRuleIgnore]
 		private static readonly int[] LerpTimeTagList = new int[]
 		{
 			GameplayTagDefine.EGameplayTagId["功能.第一人称.隐藏头部"]
 		};
 
-		// Token: 0x040260A2 RID: 155810
+		// Token: 0x04021385 RID: 136069
 		[Nullable(2)]
 		public FightCameraLogicComponent Camera;
 
-		// Token: 0x040260A3 RID: 155811
+		// Token: 0x04021386 RID: 136070
 		private bool IsStartPlayerLocationBuffer;
 
-		// Token: 0x040260A4 RID: 155812
+		// Token: 0x04021387 RID: 136071
 		private float PlayerLocationBufferTime;
 
-		// Token: 0x040260A5 RID: 155813
+		// Token: 0x04021388 RID: 136072
 		private float PlayerLocationBufferDistance;
 
-		// Token: 0x040260A6 RID: 155814
+		// Token: 0x04021389 RID: 136073
 		private readonly Vector PlayerLocationBufferStartLocation = Vector.Create();
 
-		// Token: 0x040260A7 RID: 155815
+		// Token: 0x0402138A RID: 136074
 		private readonly Vector PlayerLocationBufferStartLocationDirect = Vector.Create();
 
-		// Token: 0x040260A8 RID: 155816
+		// Token: 0x0402138B RID: 136075
 		private FName BufferStartSocket = FNameUtil.EMPTY;
 
-		// Token: 0x040260A9 RID: 155817
+		// Token: 0x0402138C RID: 136076
 		private FName BufferEndSocket = FNameUtil.EMPTY;
 
-		// Token: 0x040260AA RID: 155818
+		// Token: 0x0402138D RID: 136077
 		private bool IsStartPlayerSocketBuffer;
 
-		// Token: 0x040260AB RID: 155819
+		// Token: 0x0402138E RID: 136078
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x040260AC RID: 155820
+		// Token: 0x0402138F RID: 136079
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x040260AD RID: 155821
+		// Token: 0x04021390 RID: 136080
 		private readonly Vector TempVector3 = Vector.Create();
 	}
 }

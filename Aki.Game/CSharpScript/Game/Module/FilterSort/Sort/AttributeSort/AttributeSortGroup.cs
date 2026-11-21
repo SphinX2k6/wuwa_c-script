@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 {
-	// Token: 0x02005B3D RID: 23357
+	// Token: 0x02004B1E RID: 19230
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttributeSortGroup : UiPanelBase
 	{
-		// Token: 0x0603B231 RID: 242225 RVA: 0x00E19E8D File Offset: 0x00E1808D
+		// Token: 0x060301A3 RID: 197027 RVA: 0x00D6ABA5 File Offset: 0x00D68DA5
 		public AttributeSortGroup(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B232 RID: 242226 RVA: 0x00E19EB4 File Offset: 0x00E180B4
+		// Token: 0x060301A4 RID: 197028 RVA: 0x00D6ABCC File Offset: 0x00D68DCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B233 RID: 242227 RVA: 0x00E19F3E File Offset: 0x00E1813E
+		// Token: 0x060301A5 RID: 197029 RVA: 0x00D6AC56 File Offset: 0x00D68E56
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayoutNew<SortItem>(base.GetLayoutBase(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<SortItem>(this.InitSortItem), base.GetItem(2));
 		}
 
-		// Token: 0x0603B234 RID: 242228 RVA: 0x00E19F68 File Offset: 0x00E18168
+		// Token: 0x060301A6 RID: 197030 RVA: 0x00D6AC80 File Offset: 0x00D68E80
 		private ILayoutItem<SortItem> InitSortItem(object tempRuleId, UUIItem uiItem, int index)
 		{
 			int num = (int)tempRuleId;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			};
 		}
 
-		// Token: 0x0603B235 RID: 242229 RVA: 0x00E19FD7 File Offset: 0x00E181D7
+		// Token: 0x060301A7 RID: 197031 RVA: 0x00D6ACEF File Offset: 0x00D68EEF
 		private void SortItemToggleEvent(EToggleState state, int ruleId, string name)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -75,18 +75,18 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.SetTitle();
 		}
 
-		// Token: 0x0603B236 RID: 242230 RVA: 0x00E1A00C File Offset: 0x00E1820C
+		// Token: 0x060301A8 RID: 197032 RVA: 0x00D6AD24 File Offset: 0x00D68F24
 		private bool CanExecuteChange()
 		{
 			return this.LimitNum == 0 || this.TempSelectMap.Count < this.LimitNum;
 		}
 
-		// Token: 0x0603B237 RID: 242231 RVA: 0x00E1A02B File Offset: 0x00E1822B
+		// Token: 0x060301A9 RID: 197033 RVA: 0x00D6AD43 File Offset: 0x00D68F43
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603B238 RID: 242232 RVA: 0x00E1A030 File Offset: 0x00E18230
+		// Token: 0x060301AA RID: 197034 RVA: 0x00D6AD48 File Offset: 0x00D68F48
 		private int FindSortIndex(int ruleId)
 		{
 			int num = 0;
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			return -1;
 		}
 
-		// Token: 0x0603B239 RID: 242233 RVA: 0x00E1A090 File Offset: 0x00E18290
+		// Token: 0x060301AB RID: 197035 RVA: 0x00D6ADA8 File Offset: 0x00D68FA8
 		private void CancelSortIndex(int ruleId)
 		{
 			this.Layout.GetLayoutItemByKey(ruleId).RefreshIndex(0);
 		}
 
-		// Token: 0x0603B23A RID: 242234 RVA: 0x00E1A0AC File Offset: 0x00E182AC
+		// Token: 0x060301AC RID: 197036 RVA: 0x00D6ADC4 File Offset: 0x00D68FC4
 		private void RefreshSortIndex()
 		{
 			int num = 0;
@@ -121,14 +121,14 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			}
 		}
 
-		// Token: 0x0603B23B RID: 242235 RVA: 0x00E1A11C File Offset: 0x00E1831C
+		// Token: 0x060301AD RID: 197037 RVA: 0x00D6AE34 File Offset: 0x00D69034
 		private void InitConfigId()
 		{
 			SortResultData sortResultData = SortModel.Instance.GetSortResultData(this.UniqueId);
 			this.ConfigId = sortResultData.ConfigId;
 		}
 
-		// Token: 0x0603B23C RID: 242236 RVA: 0x00E1A148 File Offset: 0x00E18348
+		// Token: 0x060301AE RID: 197038 RVA: 0x00D6AE60 File Offset: 0x00D69060
 		private void InitTempSelectList()
 		{
 			Dictionary<int, string> selectAttributeSort = SortModel.Instance.GetSortResultData(this.UniqueId).GetSelectAttributeSort();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			}
 		}
 
-		// Token: 0x0603B23D RID: 242237 RVA: 0x00E1A1C4 File Offset: 0x00E183C4
+		// Token: 0x060301AF RID: 197039 RVA: 0x00D6AEDC File Offset: 0x00D690DC
 		private void InitSort()
 		{
 			Sort value = SortConfig.Instance.GetSortConfig(this.ConfigId).Value;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.Layout.RebuildLayoutByDataNew<int>(value.AttributeSortList(), null);
 		}
 
-		// Token: 0x0603B23E RID: 242238 RVA: 0x00E1A220 File Offset: 0x00E18420
+		// Token: 0x060301B0 RID: 197040 RVA: 0x00D6AF38 File Offset: 0x00D69138
 		private void SetTitle()
 		{
 			UUIText text = base.GetText(0);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			}));
 		}
 
-		// Token: 0x0603B23F RID: 242239 RVA: 0x00E1A28F File Offset: 0x00E1848F
+		// Token: 0x060301B1 RID: 197041 RVA: 0x00D6AFA7 File Offset: 0x00D691A7
 		public void Init(int uniqueId)
 		{
 			this.UniqueId = uniqueId;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.SetTitle();
 		}
 
-		// Token: 0x0603B240 RID: 242240 RVA: 0x00E1A2B0 File Offset: 0x00E184B0
+		// Token: 0x060301B2 RID: 197042 RVA: 0x00D6AFC8 File Offset: 0x00D691C8
 		public void Reset()
 		{
 			this.TempSelectMap.Clear();
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.SetTitle();
 		}
 
-		// Token: 0x0603B241 RID: 242241 RVA: 0x00E1A334 File Offset: 0x00E18534
+		// Token: 0x060301B3 RID: 197043 RVA: 0x00D6B04C File Offset: 0x00D6924C
 		public Dictionary<int, string> GetTempSelectMap()
 		{
 			return this.TempSelectMap;
 		}
 
-		// Token: 0x0401ED32 RID: 126258
+		// Token: 0x040197EE RID: 104430
 		[Nullable(new byte[]
 		{
 			2,
@@ -203,30 +203,30 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 		})]
 		private GenericLayoutNew<SortItem> Layout;
 
-		// Token: 0x0401ED33 RID: 126259
+		// Token: 0x040197EF RID: 104431
 		private readonly Dictionary<int, string> TempSelectMap = new Dictionary<int, string>();
 
-		// Token: 0x0401ED34 RID: 126260
+		// Token: 0x040197F0 RID: 104432
 		private int ConfigId;
 
-		// Token: 0x0401ED35 RID: 126261
+		// Token: 0x040197F1 RID: 104433
 		private int UniqueId;
 
-		// Token: 0x0401ED36 RID: 126262
+		// Token: 0x040197F2 RID: 104434
 		private ESortDataType DataType = ESortDataType.Role;
 
-		// Token: 0x0401ED37 RID: 126263
+		// Token: 0x040197F3 RID: 104435
 		private int LimitNum;
 
-		// Token: 0x0200BD71 RID: 48497
+		// Token: 0x0200A77A RID: 42874
 		[NullableContext(0)]
 		private enum ECompDefine
 		{
-			// Token: 0x0403924A RID: 234058
+			// Token: 0x04033C16 RID: 211990
 			Title,
-			// Token: 0x0403924B RID: 234059
+			// Token: 0x04033C17 RID: 211991
 			Layout,
-			// Token: 0x0403924C RID: 234060
+			// Token: 0x04033C18 RID: 211992
 			LayoutItem
 		}
 	}

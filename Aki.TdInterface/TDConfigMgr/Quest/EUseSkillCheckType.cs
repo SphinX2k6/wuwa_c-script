@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EAD RID: 3757
+	// Token: 0x02000FC3 RID: 4035
 	[EnumExtensions]
 	public enum EUseSkillCheckType
 	{
-		// Token: 0x04003222 RID: 12834
+		// Token: 0x0400352F RID: 13615
 		[EnumStringMember("CheckBySkillGenre")]
 		CheckSkillGenre,
-		// Token: 0x04003223 RID: 12835
+		// Token: 0x04003530 RID: 13616
 		[EnumStringMember("CheckBySkillId")]
 		CheckSkillId,
-		// Token: 0x04003224 RID: 12836
+		// Token: 0x04003531 RID: 13617
 		CheckVisionSummonId,
-		// Token: 0x04003225 RID: 12837
+		// Token: 0x04003532 RID: 13618
 		CheckVisionShowId,
-		// Token: 0x04003226 RID: 12838
+		// Token: 0x04003533 RID: 13619
 		CheckFollowShooterSkillId
 	}
 }

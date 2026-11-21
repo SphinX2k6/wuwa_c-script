@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A60 RID: 27232
+	// Token: 0x02007182 RID: 29058
 	public class ILookAtTargetT
 	{
-		// Token: 0x1700CA07 RID: 51719
-		// (get) Token: 0x0602FB0C RID: 195340 RVA: 0x0067D8A7 File Offset: 0x0067BAA7
-		// (set) Token: 0x0602FB0D RID: 195341 RVA: 0x0067D8AF File Offset: 0x0067BAAF
+		// Token: 0x1700D4B2 RID: 54450
+		// (get) Token: 0x06032832 RID: 206898 RVA: 0x006D3967 File Offset: 0x006D1B67
+		// (set) Token: 0x06032833 RID: 206899 RVA: 0x006D396F File Offset: 0x006D1B6F
 		public EDefaultLookAtType Type { get; set; }
 
-		// Token: 0x1700CA08 RID: 51720
-		// (get) Token: 0x0602FB0E RID: 195342 RVA: 0x0067D8B8 File Offset: 0x0067BAB8
-		// (set) Token: 0x0602FB0F RID: 195343 RVA: 0x0067D8C0 File Offset: 0x0067BAC0
+		// Token: 0x1700D4B3 RID: 54451
+		// (get) Token: 0x06032834 RID: 206900 RVA: 0x006D3978 File Offset: 0x006D1B78
+		// (set) Token: 0x06032835 RID: 206901 RVA: 0x006D3980 File Offset: 0x006D1B80
 		public List<INpcLookAtConfigT> LookAtConfigs { get; set; }
 
-		// Token: 0x0602FB10 RID: 195344 RVA: 0x0067D8C9 File Offset: 0x0067BAC9
+		// Token: 0x06032836 RID: 206902 RVA: 0x006D3989 File Offset: 0x006D1B89
 		public ILookAtTargetT()
 		{
 			this.Type = EDefaultLookAtType.LookAtBubbleEntity;

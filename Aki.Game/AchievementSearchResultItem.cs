@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F32 RID: 3890
+// Token: 0x020003E7 RID: 999
 [NullableContext(2)]
 [Nullable(0)]
 public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<AchievementSearchData>
 {
-	// Token: 0x060062B4 RID: 25268 RVA: 0x001352FC File Offset: 0x001334FC
+	// Token: 0x0600364C RID: 13900 RVA: 0x0013DC24 File Offset: 0x0013BE24
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -26,7 +26,7 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060062B5 RID: 25269 RVA: 0x00135348 File Offset: 0x00133548
+	// Token: 0x0600364D RID: 13901 RVA: 0x0013DC70 File Offset: 0x0013BE70
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -40,7 +40,7 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060062B6 RID: 25270 RVA: 0x001353B4 File Offset: 0x001335B4
+	// Token: 0x0600364E RID: 13902 RVA: 0x0013DCDC File Offset: 0x0013BEDC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AchievementSearchResultItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060062B7 RID: 25271 RVA: 0x001353F7 File Offset: 0x001335F7
+	// Token: 0x0600364F RID: 13903 RVA: 0x0013DD1F File Offset: 0x0013BF1F
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(AchievementSearchData data)
@@ -67,7 +67,7 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		return null;
 	}
 
-	// Token: 0x060062B8 RID: 25272 RVA: 0x00135430 File Offset: 0x00133630
+	// Token: 0x06003650 RID: 13904 RVA: 0x0013DD58 File Offset: 0x0013BF58
 	[NullableContext(1)]
 	public void Update(AchievementSearchData data, int index)
 	{
@@ -87,13 +87,13 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		}
 	}
 
-	// Token: 0x060062B9 RID: 25273 RVA: 0x001354A2 File Offset: 0x001336A2
+	// Token: 0x06003651 RID: 13905 RVA: 0x0013DDCA File Offset: 0x0013BFCA
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x060062BA RID: 25274 RVA: 0x001354AB File Offset: 0x001336AB
+	// Token: 0x06003652 RID: 13906 RVA: 0x0013DDD3 File Offset: 0x0013BFD3
 	protected override void OnBeforeDestroy()
 	{
 		if (this.DescItem != null)
@@ -110,15 +110,15 @@ public class AchievementSearchResultItem : UiPanelBase, IDynamicScrollItem<Achie
 		}
 	}
 
-	// Token: 0x04002CC5 RID: 11461
+	// Token: 0x04002D5E RID: 11614
 	protected AchievementSearchData Data;
 
-	// Token: 0x04002CC6 RID: 11462
+	// Token: 0x04002D5F RID: 11615
 	private AchievementSearchDescItem DescItem;
 
-	// Token: 0x04002CC7 RID: 11463
+	// Token: 0x04002D60 RID: 11616
 	private AchievementDataItem ContentItem;
 
-	// Token: 0x04002CC8 RID: 11464
+	// Token: 0x04002D61 RID: 11617
 	private Vector2D VectorValue;
 }

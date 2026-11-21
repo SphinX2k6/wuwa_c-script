@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C6 RID: 5318
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200161F RID: 5663
 	public class ChangeActorTalker : ActionParams
 	{
-		// Token: 0x0600791E RID: 31006 RVA: 0x001221EC File Offset: 0x001203EC
+		// Token: 0x06007FEB RID: 32747 RVA: 0x00130E38 File Offset: 0x0012F038
 		private ChangeActorTalker_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600791F RID: 31007 RVA: 0x00122224 File Offset: 0x00120424
+		// Token: 0x06007FEC RID: 32748 RVA: 0x00130E70 File Offset: 0x0012F070
 		public static ChangeActorTalker Create([Nullable(2)] ChangeActorTalker instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007920 RID: 31008 RVA: 0x00122237 File Offset: 0x00120437
+		// Token: 0x06007FED RID: 32749 RVA: 0x00130E83 File Offset: 0x0012F083
 		public static ChangeActorTalker CreateFromSetValue([Nullable(2)] ChangeActorTalker_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007921 RID: 31009 RVA: 0x0012224A File Offset: 0x0012044A
+		// Token: 0x06007FEE RID: 32750 RVA: 0x00130E96 File Offset: 0x0012F096
 		public ChangeActorTalker_SetValue ToSetValue()
 		{
 			return new ChangeActorTalker_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700289C RID: 10396
-		// (get) Token: 0x06007922 RID: 31010 RVA: 0x00122269 File Offset: 0x00120469
-		// (set) Token: 0x06007923 RID: 31011 RVA: 0x00122294 File Offset: 0x00120494
+		// Token: 0x17002A86 RID: 10886
+		// (get) Token: 0x06007FEF RID: 32751 RVA: 0x00130EB5 File Offset: 0x0012F0B5
+		// (set) Token: 0x06007FF0 RID: 32752 RVA: 0x00130EE0 File Offset: 0x0012F0E0
 		public virtual int ActorIndex
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700289D RID: 10397
-		// (get) Token: 0x06007924 RID: 31012 RVA: 0x001222A2 File Offset: 0x001204A2
-		// (set) Token: 0x06007925 RID: 31013 RVA: 0x001222CD File Offset: 0x001204CD
+		// Token: 0x17002A87 RID: 10887
+		// (get) Token: 0x06007FF1 RID: 32753 RVA: 0x00130EEE File Offset: 0x0012F0EE
+		// (set) Token: 0x06007FF2 RID: 32754 RVA: 0x00130F19 File Offset: 0x0012F119
 		public virtual int Talker
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004655 RID: 18005
+		// Token: 0x040049F0 RID: 18928
 		[Nullable(2)]
 		protected new ChangeActorTalker FbInstance;
 
-		// Token: 0x04004656 RID: 18006
+		// Token: 0x040049F1 RID: 18929
 		[Nullable(2)]
 		protected ChangeActorTalker_SetValue PocoInterface;
 	}

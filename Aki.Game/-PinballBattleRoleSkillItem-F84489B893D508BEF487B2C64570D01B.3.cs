@@ -1,42 +1,42 @@
 ﻿using System;
 
-// Token: 0x02001CF3 RID: 7411
+// Token: 0x020011B5 RID: 4533
 internal enum <PinballBattleRoleSkillItem>F84489B893D508BEF487B2C64570D01B6752BE307C8FE69A23023DDF42E28A491__EComp
 {
-	// Token: 0x04006788 RID: 26504
+	// Token: 0x04006867 RID: 26727
 	TexRoleHead,
-	// Token: 0x04006789 RID: 26505
+	// Token: 0x04006868 RID: 26728
 	BtnSkill,
-	// Token: 0x0400678A RID: 26506
+	// Token: 0x04006869 RID: 26729
 	BgDead,
-	// Token: 0x0400678B RID: 26507
+	// Token: 0x0400686A RID: 26730
 	IconDead,
-	// Token: 0x0400678C RID: 26508
+	// Token: 0x0400686B RID: 26731
 	BgNormal,
-	// Token: 0x0400678D RID: 26509
+	// Token: 0x0400686C RID: 26732
 	IconNormal,
-	// Token: 0x0400678E RID: 26510
+	// Token: 0x0400686D RID: 26733
 	BgCharge,
-	// Token: 0x0400678F RID: 26511
+	// Token: 0x0400686E RID: 26734
 	IconCharge,
-	// Token: 0x04006790 RID: 26512
+	// Token: 0x0400686F RID: 26735
 	BuffLayout,
-	// Token: 0x04006791 RID: 26513
+	// Token: 0x04006870 RID: 26736
 	BuffItem,
-	// Token: 0x04006792 RID: 26514
+	// Token: 0x04006871 RID: 26737
 	BuffMore,
-	// Token: 0x04006793 RID: 26515
+	// Token: 0x04006872 RID: 26738
 	HpBar,
-	// Token: 0x04006794 RID: 26516
+	// Token: 0x04006873 RID: 26739
 	ChargeBar,
-	// Token: 0x04006795 RID: 26517
+	// Token: 0x04006874 RID: 26740
 	EmptyPanel,
-	// Token: 0x04006796 RID: 26518
+	// Token: 0x04006875 RID: 26741
 	ActivePanel,
-	// Token: 0x04006797 RID: 26519
+	// Token: 0x04006876 RID: 26742
 	TexHpBar,
-	// Token: 0x04006798 RID: 26520
+	// Token: 0x04006877 RID: 26743
 	SprSkillIconNor,
-	// Token: 0x04006799 RID: 26521
+	// Token: 0x04006878 RID: 26744
 	SprSkillIconCharge
 }

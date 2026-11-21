@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x0200131C RID: 4892
+// Token: 0x020007D0 RID: 2000
 public class CharacterData
 {
-	// Token: 0x17000B8B RID: 2955
-	// (get) Token: 0x060087BF RID: 34751 RVA: 0x001CF957 File Offset: 0x001CDB57
+	// Token: 0x17000BAB RID: 2987
+	// (get) Token: 0x06005B5A RID: 23386 RVA: 0x001D87C3 File Offset: 0x001D69C3
 	public int Id { get; }
 
-	// Token: 0x060087C0 RID: 34752 RVA: 0x001CF95F File Offset: 0x001CDB5F
+	// Token: 0x06005B5B RID: 23387 RVA: 0x001D87CB File Offset: 0x001D69CB
 	public CharacterData(int id)
 	{
 		this.Id = id;
 		this.MaxValueInternal = BusinessConfig.Instance.GetRoleCharacterMax();
 	}
 
-	// Token: 0x060087C1 RID: 34753 RVA: 0x001CF97E File Offset: 0x001CDB7E
+	// Token: 0x06005B5C RID: 23388 RVA: 0x001D87EA File Offset: 0x001D69EA
 	public void SetCurrentValue(int value)
 	{
 		this.ValueInterval = value - this.CurrentValueInternal;
 		this.CurrentValueInternal = value;
 	}
 
-	// Token: 0x17000B8C RID: 2956
-	// (get) Token: 0x060087C2 RID: 34754 RVA: 0x001CF995 File Offset: 0x001CDB95
+	// Token: 0x17000BAC RID: 2988
+	// (get) Token: 0x06005B5D RID: 23389 RVA: 0x001D8801 File Offset: 0x001D6A01
 	public int CurrentValue
 	{
 		get
@@ -31,14 +31,14 @@ public class CharacterData
 		}
 	}
 
-	// Token: 0x060087C3 RID: 34755 RVA: 0x001CF99D File Offset: 0x001CDB9D
+	// Token: 0x06005B5E RID: 23390 RVA: 0x001D8809 File Offset: 0x001D6A09
 	public void SetMaxValue(int value)
 	{
 		this.MaxValueInternal = value;
 	}
 
-	// Token: 0x17000B8D RID: 2957
-	// (get) Token: 0x060087C4 RID: 34756 RVA: 0x001CF9A6 File Offset: 0x001CDBA6
+	// Token: 0x17000BAD RID: 2989
+	// (get) Token: 0x06005B5F RID: 23391 RVA: 0x001D8812 File Offset: 0x001D6A12
 	public int MaxValue
 	{
 		get
@@ -47,14 +47,14 @@ public class CharacterData
 		}
 	}
 
-	// Token: 0x060087C5 RID: 34757 RVA: 0x001CF9AE File Offset: 0x001CDBAE
+	// Token: 0x06005B60 RID: 23392 RVA: 0x001D881A File Offset: 0x001D6A1A
 	public void SetUseScoreName(bool value)
 	{
 		this.UseScoreNameInternal = value;
 	}
 
-	// Token: 0x17000B8E RID: 2958
-	// (get) Token: 0x060087C6 RID: 34758 RVA: 0x001CF9B7 File Offset: 0x001CDBB7
+	// Token: 0x17000BAE RID: 2990
+	// (get) Token: 0x06005B61 RID: 23393 RVA: 0x001D8823 File Offset: 0x001D6A23
 	public bool UseScoreName
 	{
 		get
@@ -63,15 +63,15 @@ public class CharacterData
 		}
 	}
 
-	// Token: 0x04003C86 RID: 15494
+	// Token: 0x04003D1E RID: 15646
 	private int CurrentValueInternal;
 
-	// Token: 0x04003C87 RID: 15495
+	// Token: 0x04003D1F RID: 15647
 	private int MaxValueInternal;
 
-	// Token: 0x04003C88 RID: 15496
+	// Token: 0x04003D20 RID: 15648
 	public int ValueInterval;
 
-	// Token: 0x04003C89 RID: 15497
+	// Token: 0x04003D21 RID: 15649
 	private bool UseScoreNameInternal;
 }

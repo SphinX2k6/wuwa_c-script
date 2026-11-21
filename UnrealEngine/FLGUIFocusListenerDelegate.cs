@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002079 RID: 8313
+	// Token: 0x0200069A RID: 1690
 	public sealed class FLGUIFocusListenerDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F5B7 RID: 128439 RVA: 0x002E93A2 File Offset: 0x002E75A2
+		// Token: 0x060091A4 RID: 37284 RVA: 0x000DB3B1 File Offset: 0x000D95B1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIFocusListenerDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F5B8 RID: 128440 RVA: 0x002E93AE File Offset: 0x002E75AE
+		// Token: 0x060091A5 RID: 37285 RVA: 0x000DB3BD File Offset: 0x000D95BD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIFocusListenerDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FLGUIFocusListenerDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F5B9 RID: 128441 RVA: 0x002E93D1 File Offset: 0x002E75D1
+		// Token: 0x060091A6 RID: 37286 RVA: 0x000DB3E0 File Offset: 0x000D95E0
 		public FLGUIFocusListenerDelegate()
 		{
 		}
 
-		// Token: 0x0601F5BA RID: 128442 RVA: 0x002E93D9 File Offset: 0x002E75D9
+		// Token: 0x060091A7 RID: 37287 RVA: 0x000DB3E8 File Offset: 0x000D95E8
 		[NullableContext(2)]
 		public FLGUIFocusListenerDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F5BB RID: 128443 RVA: 0x002E93E3 File Offset: 0x002E75E3
+		// Token: 0x060091A8 RID: 37288 RVA: 0x000DB3F2 File Offset: 0x000D95F2
 		public FLGUIFocusListenerDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F5BC RID: 128444 RVA: 0x002E93EE File Offset: 0x002E75EE
+		// Token: 0x060091A9 RID: 37289 RVA: 0x000DB3FD File Offset: 0x000D95FD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F5BD RID: 128445 RVA: 0x002E9420 File Offset: 0x002E7620
+		// Token: 0x060091AA RID: 37290 RVA: 0x000DB42F File Offset: 0x000D962F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FLGUIFocusListenerDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIFocusListenerDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F5BE RID: 128446 RVA: 0x002E945A File Offset: 0x002E765A
+		// Token: 0x060091AB RID: 37291 RVA: 0x000DB469 File Offset: 0x000D9669
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x0601F5BF RID: 128447 RVA: 0x002E9468 File Offset: 0x002E7668
+		// Token: 0x060091AC RID: 37292 RVA: 0x000DB474 File Offset: 0x000D9674
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04010F14 RID: 69396
+		// Token: 0x04003F7B RID: 16251
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F15 RID: 69397
+		// Token: 0x04003F7C RID: 16252
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIFocusListenerDelegate__DelegateSignature";
 
-		// Token: 0x04010F16 RID: 69398
+		// Token: 0x04003F7D RID: 16253
 		private static int RegisterId;
 
-		// Token: 0x02003480 RID: 13440
+		// Token: 0x02000EC3 RID: 3779
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401746C RID: 95340
+			// Token: 0x0400627B RID: 25211
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

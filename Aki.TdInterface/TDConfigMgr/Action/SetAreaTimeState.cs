@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002199 RID: 8601
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002402 RID: 9218
 	public class SetAreaTimeState : ActionParams
 	{
-		// Token: 0x0600BCEC RID: 48364 RVA: 0x001B34A0 File Offset: 0x001B16A0
+		// Token: 0x0600C89C RID: 51356 RVA: 0x001CA998 File Offset: 0x001C8B98
 		private SetAreaTimeState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCED RID: 48365 RVA: 0x001B34D8 File Offset: 0x001B16D8
+		// Token: 0x0600C89D RID: 51357 RVA: 0x001CA9D0 File Offset: 0x001C8BD0
 		public static SetAreaTimeState Create([Nullable(2)] SetAreaTimeState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCEE RID: 48366 RVA: 0x001B34EB File Offset: 0x001B16EB
+		// Token: 0x0600C89E RID: 51358 RVA: 0x001CA9E3 File Offset: 0x001C8BE3
 		public static SetAreaTimeState CreateFromSetValue([Nullable(2)] SetAreaTimeState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCEF RID: 48367 RVA: 0x001B34FE File Offset: 0x001B16FE
+		// Token: 0x0600C89F RID: 51359 RVA: 0x001CA9F6 File Offset: 0x001C8BF6
 		public SetAreaTimeState_SetValue ToSetValue()
 		{
 			return new SetAreaTimeState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003971 RID: 14705
-		// (get) Token: 0x0600BCF0 RID: 48368 RVA: 0x001B3511 File Offset: 0x001B1711
-		// (set) Token: 0x0600BCF1 RID: 48369 RVA: 0x001B3538 File Offset: 0x001B1738
+		// Token: 0x17003C63 RID: 15459
+		// (get) Token: 0x0600C8A0 RID: 51360 RVA: 0x001CAA09 File Offset: 0x001C8C09
+		// (set) Token: 0x0600C8A1 RID: 51361 RVA: 0x001CAA30 File Offset: 0x001C8C30
 		public virtual ISetAreaTimeBase SetAreaTimeConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070C4 RID: 28868
+		// Token: 0x04007706 RID: 30470
 		[Nullable(2)]
 		protected new SetAreaTimeState FbInstance;
 
-		// Token: 0x040070C5 RID: 28869
+		// Token: 0x04007707 RID: 30471
 		[Nullable(2)]
 		protected SetAreaTimeState_SetValue PocoInterface;
 	}

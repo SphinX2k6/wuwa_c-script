@@ -5,19 +5,19 @@ using System.Text.Json;
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x02000108 RID: 264
+	// Token: 0x0200010C RID: 268
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SoPathConfig
 	{
-		// Token: 0x06000881 RID: 2177 RVA: 0x0003EA54 File Offset: 0x0003CC54
+		// Token: 0x060008B5 RID: 2229 RVA: 0x00040DF4 File Offset: 0x0003EFF4
 		private SoPathConfig(SoVersion soVer)
 		{
 			this.SoVer = soVer;
 		}
 
-		// Token: 0x170000E8 RID: 232
-		// (get) Token: 0x06000882 RID: 2178 RVA: 0x0003EA63 File Offset: 0x0003CC63
+		// Token: 0x170000EE RID: 238
+		// (get) Token: 0x060008B6 RID: 2230 RVA: 0x00040E03 File Offset: 0x0003F003
 		public int CurVerNum
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Launcher.SoPatch
 			}
 		}
 
-		// Token: 0x170000E9 RID: 233
-		// (get) Token: 0x06000883 RID: 2179 RVA: 0x0003EA70 File Offset: 0x0003CC70
+		// Token: 0x170000EF RID: 239
+		// (get) Token: 0x060008B7 RID: 2231 RVA: 0x00040E10 File Offset: 0x0003F010
 		public bool IsValid
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Launcher.SoPatch
 			}
 		}
 
-		// Token: 0x170000EA RID: 234
-		// (get) Token: 0x06000884 RID: 2180 RVA: 0x0003EA83 File Offset: 0x0003CC83
+		// Token: 0x170000F0 RID: 240
+		// (get) Token: 0x060008B8 RID: 2232 RVA: 0x00040E23 File Offset: 0x0003F023
 		public int UpdateTime
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Launcher.SoPatch
 			}
 		}
 
-		// Token: 0x06000885 RID: 2181 RVA: 0x0003EA90 File Offset: 0x0003CC90
+		// Token: 0x060008B9 RID: 2233 RVA: 0x00040E30 File Offset: 0x0003F030
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -112,7 +112,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return new ValueTuple<int, string, Dictionary<int, SoEnableInfo>>(-1, "", dictionary);
 		}
 
-		// Token: 0x06000886 RID: 2182 RVA: 0x0003ECD4 File Offset: 0x0003CED4
+		// Token: 0x060008BA RID: 2234 RVA: 0x00041074 File Offset: 0x0003F274
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -173,7 +173,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return new ValueTuple<int, string>(-1, "");
 		}
 
-		// Token: 0x06000887 RID: 2183 RVA: 0x0003EF2C File Offset: 0x0003D12C
+		// Token: 0x060008BB RID: 2235 RVA: 0x000412CC File Offset: 0x0003F4CC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -194,7 +194,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return new ValueTuple<int, string, string>(versionInfo.PatchInfo.Size, versionInfo.PatchInfo.Name, versionInfo.PatchInfo.Hash);
 		}
 
-		// Token: 0x06000888 RID: 2184 RVA: 0x0003EFA4 File Offset: 0x0003D1A4
+		// Token: 0x060008BC RID: 2236 RVA: 0x00041344 File Offset: 0x0003F544
 		public static SoPathConfig Parse(string appParallel, string jsonStr)
 		{
 			SoVersion soVersion = new SoVersion();
@@ -312,7 +312,7 @@ namespace CSharpScript.Launcher.SoPatch
 			return result;
 		}
 
-		// Token: 0x040004DB RID: 1243
+		// Token: 0x04000516 RID: 1302
 		private readonly SoVersion SoVer;
 	}
 }

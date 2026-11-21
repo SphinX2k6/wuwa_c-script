@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045DC RID: 17884
+	// Token: 0x02003505 RID: 13573
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCharacterTriggerEffect
 	{
-		// Token: 0x0602E1DC RID: 188892 RVA: 0x00AA3AE0 File Offset: 0x00AA1CE0
+		// Token: 0x060228D0 RID: 141520 RVA: 0x009D01BC File Offset: 0x009CE3BC
 		public void Start(TsBaseCharacter owner)
 		{
 			if (!owner.IsValid())
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1DD RID: 188893 RVA: 0x00AA3B38 File Offset: 0x00AA1D38
+		// Token: 0x060228D1 RID: 141521 RVA: 0x009D0214 File Offset: 0x009CE414
 		public void Enable()
 		{
 			if (!this.IsReady)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1DE RID: 188894 RVA: 0x00AA3BAC File Offset: 0x00AA1DAC
+		// Token: 0x060228D2 RID: 141522 RVA: 0x009D0288 File Offset: 0x009CE488
 		public void Disable()
 		{
 			if (!this.IsEnabled)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1DF RID: 188895 RVA: 0x00AA3C30 File Offset: 0x00AA1E30
+		// Token: 0x060228D3 RID: 141523 RVA: 0x009D030C File Offset: 0x009CE50C
 		public void Tick()
 		{
 			if (!this.IsEnabled || this.Owner == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Render
 			this.CacheData = this.Data;
 		}
 
-		// Token: 0x0602E1E0 RID: 188896 RVA: 0x00AA3CA8 File Offset: 0x00AA1EA8
+		// Token: 0x060228D4 RID: 141524 RVA: 0x009D0384 File Offset: 0x009CE584
 		private bool CheckPlayInBushEffect()
 		{
 			if (!this.IsReady)
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Render
 			return this.VelocityHistory.GetMaxVelocityDirection(direction) > 500.0;
 		}
 
-		// Token: 0x0602E1E1 RID: 188897 RVA: 0x00AA3D28 File Offset: 0x00AA1F28
+		// Token: 0x060228D5 RID: 141525 RVA: 0x009D0404 File Offset: 0x009CE604
 		private bool IsBushInteractionEffectEnabled()
 		{
 			return UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.InteractionEffect.EnableBushInteractionEffect") > 0;
 		}
 
-		// Token: 0x0602E1E2 RID: 188898 RVA: 0x00AA3D38 File Offset: 0x00AA1F38
+		// Token: 0x060228D6 RID: 141526 RVA: 0x009D0414 File Offset: 0x009CE614
 		private void PlayBushEffect()
 		{
 			if (!this.IsReady)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Render
 			this.BushEffectHandle = 0;
 		}
 
-		// Token: 0x0602E1E3 RID: 188899 RVA: 0x00AA46A4 File Offset: 0x00AA28A4
+		// Token: 0x060228D7 RID: 141527 RVA: 0x009D0D80 File Offset: 0x009CEF80
 		private unsafe void PlayOverlapTriggerEffect()
 		{
 			if (!this.IsReady)
@@ -455,69 +455,69 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018B92 RID: 101266
+		// Token: 0x040131D0 RID: 78288
 		private const float DELAY_OUT_BUSH_EFFECT = 1000f;
 
-		// Token: 0x04018B93 RID: 101267
+		// Token: 0x040131D1 RID: 78289
 		private const string BUSH_WALK_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_HideOnBush_Loop.DA_Fx_HideOnBush_Loop";
 
-		// Token: 0x04018B94 RID: 101268
+		// Token: 0x040131D2 RID: 78290
 		private const string BUSH_OUT_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_HideOnBush_Out.DA_Fx_HideOnBush_Out";
 
-		// Token: 0x04018B95 RID: 101269
+		// Token: 0x040131D3 RID: 78291
 		private const string BUSH_IN_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_HideOnBush_RushIn.DA_Fx_HideOnBush_RushIn";
 
-		// Token: 0x04018B96 RID: 101270
+		// Token: 0x040131D4 RID: 78292
 		private const string BUSH_OUT_EFFCT_INDEX1 = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_HideOnBush_Out_Index1.DA_Fx_HideOnBush_Out_Index1";
 
-		// Token: 0x04018B97 RID: 101271
+		// Token: 0x040131D5 RID: 78293
 		private const string BUSH_IN_EFFCT_INDEX1 = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_HideOnBush_RushIn_Index1.DA_Fx_HideOnBush_RushIn_Index1";
 
-		// Token: 0x04018B98 RID: 101272
+		// Token: 0x040131D6 RID: 78294
 		private const string SOARING_TREE_EFFCT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_SoaringTreeOut.DA_Fx_SoaringTreeOut";
 
-		// Token: 0x04018B99 RID: 101273
+		// Token: 0x040131D7 RID: 78295
 		private const string SOARING_TREE_EFFCT_SPECIAL = "/Game/Aki/Effect/DataAsset/Niagara/Common/Interaction/DA_Fx_SoaringTreeOutSpecialFoliage.DA_Fx_SoaringTreeOutSpecialFoliage";
 
-		// Token: 0x04018B9A RID: 101274
+		// Token: 0x040131D8 RID: 78296
 		private const string CVAR_ENABLE_BUSH_INTERACTION_EFFECT = "r.Kuro.InteractionEffect.EnableBushInteractionEffect";
 
-		// Token: 0x04018B9B RID: 101275
+		// Token: 0x040131D9 RID: 78297
 		[Nullable(2)]
 		public TsBaseCharacter Owner;
 
-		// Token: 0x04018B9C RID: 101276
+		// Token: 0x040131DA RID: 78298
 		[Nullable(2)]
 		public CharacterUnifiedStateComponent OwnerStateComponent;
 
-		// Token: 0x04018B9D RID: 101277
+		// Token: 0x040131DB RID: 78299
 		[Nullable(2)]
 		public PlayerGameplayCueComponent CueComponent;
 
-		// Token: 0x04018B9E RID: 101278
+		// Token: 0x040131DC RID: 78300
 		[Nullable(2)]
 		public FKuroEnviInteractionData Data;
 
-		// Token: 0x04018B9F RID: 101279
+		// Token: 0x040131DD RID: 78301
 		[Nullable(2)]
 		public FKuroEnviInteractionData CacheData;
 
-		// Token: 0x04018BA0 RID: 101280
+		// Token: 0x040131DE RID: 78302
 		public bool IsReady;
 
-		// Token: 0x04018BA1 RID: 101281
+		// Token: 0x040131DF RID: 78303
 		protected int BushEffectHandle;
 
-		// Token: 0x04018BA2 RID: 101282
+		// Token: 0x040131E0 RID: 78304
 		protected FVectorDouble CurrentVelocity = new FVectorDouble();
 
-		// Token: 0x04018BA3 RID: 101283
+		// Token: 0x040131E1 RID: 78305
 		protected FTransformDouble EmptyUeTransform = new FTransformDouble();
 
-		// Token: 0x04018BA4 RID: 101284
+		// Token: 0x040131E2 RID: 78306
 		protected VelocityHistoryCache VelocityHistory = new VelocityHistoryCache();
 
-		// Token: 0x04018BA5 RID: 101285
+		// Token: 0x040131E3 RID: 78307
 		public bool IsEnabled;
 	}
 }

@@ -13,18 +13,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001266 RID: 4710
+// Token: 0x0200071A RID: 1818
 [NullableContext(2)]
 [Nullable(0)]
 public class FarmGoldInstanceEntranceView : UiViewBase
 {
-	// Token: 0x0600802F RID: 32815 RVA: 0x001B1C39 File Offset: 0x001AFE39
+	// Token: 0x060053C6 RID: 21446 RVA: 0x001BA909 File Offset: 0x001B8B09
 	[NullableContext(1)]
 	public FarmGoldInstanceEntranceView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008030 RID: 32816 RVA: 0x001B1C4C File Offset: 0x001AFE4C
+	// Token: 0x060053C7 RID: 21447 RVA: 0x001BA91C File Offset: 0x001B8B1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +57,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06008031 RID: 32817 RVA: 0x001B1E38 File Offset: 0x001B0038
+	// Token: 0x060053C8 RID: 21448 RVA: 0x001BAB08 File Offset: 0x001B8D08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FarmGoldInstanceEntranceView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008032 RID: 32818 RVA: 0x001B1E7B File Offset: 0x001B007B
+	// Token: 0x060053C9 RID: 21449 RVA: 0x001BAB4B File Offset: 0x001B8D4B
 	[NullableContext(1)]
 	private FarmGoldInstanceTabItem InitTabItem()
 	{
@@ -77,7 +77,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		return farmGoldInstanceTabItem;
 	}
 
-	// Token: 0x06008033 RID: 32819 RVA: 0x001B1E94 File Offset: 0x001B0094
+	// Token: 0x060053CA RID: 21450 RVA: 0x001BAB64 File Offset: 0x001B8D64
 	[NullableContext(1)]
 	private void OnClickTabItem(FarmGoldLevelData data, int index)
 	{
@@ -92,7 +92,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		FarmGoldController.Instance.RequestSetDifficulty(this.ActivityData.Id, data.GetInstId(), data.GetSelectDifficult());
 	}
 
-	// Token: 0x06008034 RID: 32820 RVA: 0x001B1EEC File Offset: 0x001B00EC
+	// Token: 0x060053CB RID: 21451 RVA: 0x001BABBC File Offset: 0x001B8DBC
 	protected override void OnStart()
 	{
 		this.InitCaptionItem();
@@ -102,7 +102,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x06008035 RID: 32821 RVA: 0x001B1F20 File Offset: 0x001B0120
+	// Token: 0x060053CC RID: 21452 RVA: 0x001BABF0 File Offset: 0x001B8DF0
 	private void OnClickGoBtn()
 	{
 		FarmGoldLevelData levelDataByIndex = this.ActivityData.GetLevelDataByIndex(this.SelectLevelIndex);
@@ -113,7 +113,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		FarmGoldController.Instance.HandleDoubleConfirmSoloEnterDungeon(levelDataByIndex);
 	}
 
-	// Token: 0x06008036 RID: 32822 RVA: 0x001B1F50 File Offset: 0x001B0150
+	// Token: 0x060053CD RID: 21453 RVA: 0x001BAC20 File Offset: 0x001B8E20
 	private void InitCaptionItem()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -148,7 +148,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		this.CaptionItem.SetHomeBtnShowState(!GameModeController.Instance.IsInInstance());
 	}
 
-	// Token: 0x06008037 RID: 32823 RVA: 0x001B204C File Offset: 0x001B024C
+	// Token: 0x060053CE RID: 21454 RVA: 0x001BAD1C File Offset: 0x001B8F1C
 	private void OnClickBtnClose()
 	{
 		if (FarmGoldController.Instance.IfLeaveInstanceDungeonWhenMainViewClose)
@@ -160,7 +160,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008038 RID: 32824 RVA: 0x001B2078 File Offset: 0x001B0278
+	// Token: 0x060053CF RID: 21455 RVA: 0x001BAD48 File Offset: 0x001B8F48
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -178,7 +178,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		});
 	}
 
-	// Token: 0x06008039 RID: 32825 RVA: 0x001B20AC File Offset: 0x001B02AC
+	// Token: 0x060053D0 RID: 21456 RVA: 0x001BAD7C File Offset: 0x001B8F7C
 	private void InitTabLayout()
 	{
 		this.SelectLevelIndex = FarmGoldController.Instance.InitLevelIndex;
@@ -194,7 +194,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600803A RID: 32826 RVA: 0x001B2128 File Offset: 0x001B0328
+	// Token: 0x060053D1 RID: 21457 RVA: 0x001BADF8 File Offset: 0x001B8FF8
 	private void RefreshRightView()
 	{
 		FarmGoldLevelData levelDataByIndex = this.ActivityData.GetLevelDataByIndex(this.SelectLevelIndex);
@@ -212,28 +212,28 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		this.RefreshLockItem();
 	}
 
-	// Token: 0x0600803B RID: 32827 RVA: 0x001B21B4 File Offset: 0x001B03B4
+	// Token: 0x060053D2 RID: 21458 RVA: 0x001BAE84 File Offset: 0x001B9084
 	private void RefreshRecommendLevel()
 	{
 		int levelRecommendLevelByIndex = this.ActivityData.GetLevelRecommendLevelByIndex(this.SelectLevelIndex);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(16), "RecommendLevel", new <>z__ReadOnlySingleElementList<object>(levelRecommendLevelByIndex));
 	}
 
-	// Token: 0x0600803C RID: 32828 RVA: 0x001B21F5 File Offset: 0x001B03F5
+	// Token: 0x060053D3 RID: 21459 RVA: 0x001BAEC5 File Offset: 0x001B90C5
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		EventSystem.Instance.Add(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600803D RID: 32829 RVA: 0x001B222F File Offset: 0x001B042F
+	// Token: 0x060053D4 RID: 21460 RVA: 0x001BAEFF File Offset: 0x001B90FF
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600803E RID: 32830 RVA: 0x001B226C File Offset: 0x001B046C
+	// Token: 0x060053D5 RID: 21461 RVA: 0x001BAF3C File Offset: 0x001B913C
 	private void OnRefreshCommonActivityRedDot(int activityId)
 	{
 		if (activityId == this.ActivityData.Id)
@@ -243,7 +243,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600803F RID: 32831 RVA: 0x001B22A4 File Offset: 0x001B04A4
+	// Token: 0x060053D6 RID: 21462 RVA: 0x001BAF74 File Offset: 0x001B9174
 	private void OnRefreshInstancedRecommendLevel()
 	{
 		this.RefreshRecommendLevel();
@@ -251,7 +251,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		this.DropDownItem.RefreshLevelData(levelDataByIndex);
 	}
 
-	// Token: 0x06008040 RID: 32832 RVA: 0x001B22D8 File Offset: 0x001B04D8
+	// Token: 0x060053D7 RID: 21463 RVA: 0x001BAFA8 File Offset: 0x001B91A8
 	private void RefreshLockItem()
 	{
 		bool levelLockStateByIndex = this.ActivityData.GetLevelLockStateByIndex(this.SelectLevelIndex);
@@ -265,10 +265,10 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003A35 RID: 14901
+	// Token: 0x04003ACD RID: 15053
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003A36 RID: 14902
+	// Token: 0x04003ACE RID: 15054
 	[Nullable(new byte[]
 	{
 		2,
@@ -277,7 +277,7 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 	})]
 	private LoopScrollView<FarmGoldInstanceTabItem, FarmGoldLevelData> TabScrollView;
 
-	// Token: 0x04003A37 RID: 14903
+	// Token: 0x04003ACF RID: 15055
 	[Nullable(new byte[]
 	{
 		2,
@@ -285,63 +285,63 @@ public class FarmGoldInstanceEntranceView : UiViewBase
 	})]
 	private GenericLayout<FarmGoldRecommandTagItem, FarmGoldRecommendTag> TagLayout;
 
-	// Token: 0x04003A38 RID: 14904
+	// Token: 0x04003AD0 RID: 15056
 	private FarmGoldDropDownRoot DropDownItem;
 
-	// Token: 0x04003A39 RID: 14905
+	// Token: 0x04003AD1 RID: 15057
 	private FarmGoldInstanceEntranceScoreItem ScoreItem;
 
-	// Token: 0x04003A3A RID: 14906
+	// Token: 0x04003AD2 RID: 15058
 	private FarmGoldData ActivityData;
 
-	// Token: 0x04003A3B RID: 14907
+	// Token: 0x04003AD3 RID: 15059
 	private int SelectLevelIndex = -1;
 
-	// Token: 0x0200787A RID: 30842
+	// Token: 0x02006A05 RID: 27141
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04027B1E RID: 162590
+		// Token: 0x04022E4F RID: 142927
 		CaptionItem,
-		// Token: 0x04027B1F RID: 162591
+		// Token: 0x04022E50 RID: 142928
 		TabScroll,
-		// Token: 0x04027B20 RID: 162592
+		// Token: 0x04022E51 RID: 142929
 		RewardItem,
-		// Token: 0x04027B21 RID: 162593
+		// Token: 0x04022E52 RID: 142930
 		LockItem,
-		// Token: 0x04027B22 RID: 162594
+		// Token: 0x04022E53 RID: 142931
 		LockText,
-		// Token: 0x04027B23 RID: 162595
+		// Token: 0x04022E54 RID: 142932
 		InstanceNameText,
-		// Token: 0x04027B24 RID: 162596
+		// Token: 0x04022E55 RID: 142933
 		TextContent,
-		// Token: 0x04027B25 RID: 162597
+		// Token: 0x04022E56 RID: 142934
 		InstanceDescText,
-		// Token: 0x04027B26 RID: 162598
+		// Token: 0x04022E57 RID: 142935
 		RecommendTagRoot,
-		// Token: 0x04027B27 RID: 162599
+		// Token: 0x04022E58 RID: 142936
 		RecommendTagLayout,
-		// Token: 0x04027B28 RID: 162600
+		// Token: 0x04022E59 RID: 142937
 		RecommendTagItem,
-		// Token: 0x04027B29 RID: 162601
+		// Token: 0x04022E5A RID: 142938
 		BuffItem,
-		// Token: 0x04027B2A RID: 162602
+		// Token: 0x04022E5B RID: 142939
 		BuffText,
-		// Token: 0x04027B2B RID: 162603
+		// Token: 0x04022E5C RID: 142940
 		BottomItem,
-		// Token: 0x04027B2C RID: 162604
+		// Token: 0x04022E5D RID: 142941
 		DropDownItem,
-		// Token: 0x04027B2D RID: 162605
+		// Token: 0x04022E5E RID: 142942
 		TipsItem,
-		// Token: 0x04027B2E RID: 162606
+		// Token: 0x04022E5F RID: 142943
 		TipsText,
-		// Token: 0x04027B2F RID: 162607
+		// Token: 0x04022E60 RID: 142944
 		BtnRoot,
-		// Token: 0x04027B30 RID: 162608
+		// Token: 0x04022E61 RID: 142945
 		MutipleGoBtn,
-		// Token: 0x04027B31 RID: 162609
+		// Token: 0x04022E62 RID: 142946
 		SingleGoBtn,
-		// Token: 0x04027B32 RID: 162610
+		// Token: 0x04022E63 RID: 142947
 		TabItem
 	}
 }

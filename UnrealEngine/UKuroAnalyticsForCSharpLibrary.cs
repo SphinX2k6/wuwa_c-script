@@ -6,29 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015E6 RID: 5606
+	// Token: 0x020002D6 RID: 726
 	[UnrealObjectPath("/Script/KRDataAnalyticsPlugin.KuroAnalyticsForCSharpLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroAnalyticsForCSharpLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601439C RID: 82844 RVA: 0x001DB322 File Offset: 0x001D9522
+		// Token: 0x06004E9D RID: 20125 RVA: 0x0006DD56 File Offset: 0x0006BF56
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroAnalyticsForCSharpLibrary._ClassPtr;
 		}
 
-		// Token: 0x0601439D RID: 82845 RVA: 0x001DB330 File Offset: 0x001D9530
+		// Token: 0x06004E9E RID: 20126 RVA: 0x0006DD64 File Offset: 0x0006BF64
 		public UKuroAnalyticsForCSharpLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroAnalyticsForCSharpLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601439E RID: 82846 RVA: 0x001DB358 File Offset: 0x001D9558
+		// Token: 0x06004E9F RID: 20127 RVA: 0x0006DD8C File Offset: 0x0006BF8C
 		[NullableContext(1)]
 		public UKuroAnalyticsForCSharpLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroAnalyticsForCSharpLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601439F RID: 82847 RVA: 0x001DB38C File Offset: 0x001D958C
+		// Token: 0x06004EA0 RID: 20128 RVA: 0x0006DDC0 File Offset: 0x0006BFC0
 		[NullableContext(1)]
 		public unsafe static bool Track(string EventName, string Properties, int Index = 0)
 		{
@@ -40,33 +40,33 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x060143A0 RID: 82848
+		// Token: 0x06004EA1 RID: 20129
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Flush(int Index = 0);
 
-		// Token: 0x060143A1 RID: 82849
+		// Token: 0x06004EA2 RID: 20130
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Track_Internal(in FString EventName, in FString Properties, int Index);
 
-		// Token: 0x060143A2 RID: 82850 RVA: 0x001DB3C3 File Offset: 0x001D95C3
+		// Token: 0x06004EA3 RID: 20131 RVA: 0x0006DDF7 File Offset: 0x0006BFF7
 		static UKuroAnalyticsForCSharpLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KRDataAnalyticsPlugin.KuroAnalyticsForCSharpLibrary");
 		}
 
-		// Token: 0x060143A3 RID: 82851 RVA: 0x001DB3D1 File Offset: 0x001D95D1
+		// Token: 0x06004EA4 RID: 20132 RVA: 0x0006DE05 File Offset: 0x0006C005
 		protected UKuroAnalyticsForCSharpLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400AFDC RID: 45020
+		// Token: 0x04001F6F RID: 8047
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KRDataAnalyticsPlugin.KuroAnalyticsForCSharpLibrary";
 
-		// Token: 0x0400AFDD RID: 45021
+		// Token: 0x04001F70 RID: 8048
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400AFDE RID: 45022
+		// Token: 0x04001F71 RID: 8049
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

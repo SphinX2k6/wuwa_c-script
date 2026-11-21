@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AEA RID: 2794
+	// Token: 0x02000BB5 RID: 2997
 	public class IEntityGroupFailureCondition
 	{
-		// Token: 0x06004057 RID: 16471 RVA: 0x000A443A File Offset: 0x000A263A
-		[NullableContext(1)]
+		// Token: 0x06004486 RID: 17542 RVA: 0x000ADA6E File Offset: 0x000ABC6E
 		public static IEntityGroupFailureCondition Create(IEntityGroupFailureCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001040 RID: 4160
-		// (get) Token: 0x06004058 RID: 16472 RVA: 0x000A4459 File Offset: 0x000A2659
+		// Token: 0x17001117 RID: 4375
+		// (get) Token: 0x06004487 RID: 17543 RVA: 0x000ADA8D File Offset: 0x000ABC8D
 		public virtual EEntityGroupFailureCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023D7 RID: 9175
+		// Token: 0x040025F4 RID: 9716
 		private IEntityGroupFailureCondition Instance;
 	}
 }

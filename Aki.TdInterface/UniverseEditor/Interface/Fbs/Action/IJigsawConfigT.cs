@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069CD RID: 27085
+	// Token: 0x0200707D RID: 28797
 	public class IJigsawConfigT
 	{
-		// Token: 0x1700C8F9 RID: 51449
-		// (get) Token: 0x0602F581 RID: 193921 RVA: 0x00672AB7 File Offset: 0x00670CB7
-		// (set) Token: 0x0602F582 RID: 193922 RVA: 0x00672ABF File Offset: 0x00670CBF
+		// Token: 0x1700D2F9 RID: 54009
+		// (get) Token: 0x06031F41 RID: 204609 RVA: 0x006C2E0F File Offset: 0x006C100F
+		// (set) Token: 0x06031F42 RID: 204610 RVA: 0x006C2E17 File Offset: 0x006C1017
 		public int Row { get; set; }
 
-		// Token: 0x1700C8FA RID: 51450
-		// (get) Token: 0x0602F583 RID: 193923 RVA: 0x00672AC8 File Offset: 0x00670CC8
-		// (set) Token: 0x0602F584 RID: 193924 RVA: 0x00672AD0 File Offset: 0x00670CD0
+		// Token: 0x1700D2FA RID: 54010
+		// (get) Token: 0x06031F43 RID: 204611 RVA: 0x006C2E20 File Offset: 0x006C1020
+		// (set) Token: 0x06031F44 RID: 204612 RVA: 0x006C2E28 File Offset: 0x006C1028
 		public int Column { get; set; }
 
-		// Token: 0x1700C8FB RID: 51451
-		// (get) Token: 0x0602F585 RID: 193925 RVA: 0x00672AD9 File Offset: 0x00670CD9
-		// (set) Token: 0x0602F586 RID: 193926 RVA: 0x00672AE1 File Offset: 0x00670CE1
+		// Token: 0x1700D2FB RID: 54011
+		// (get) Token: 0x06031F45 RID: 204613 RVA: 0x006C2E31 File Offset: 0x006C1031
+		// (set) Token: 0x06031F46 RID: 204614 RVA: 0x006C2E39 File Offset: 0x006C1039
 		public int Size { get; set; }
 
-		// Token: 0x1700C8FC RID: 51452
-		// (get) Token: 0x0602F587 RID: 193927 RVA: 0x00672AEA File Offset: 0x00670CEA
-		// (set) Token: 0x0602F588 RID: 193928 RVA: 0x00672AF2 File Offset: 0x00670CF2
+		// Token: 0x1700D2FC RID: 54012
+		// (get) Token: 0x06031F47 RID: 204615 RVA: 0x006C2E42 File Offset: 0x006C1042
+		// (set) Token: 0x06031F48 RID: 204616 RVA: 0x006C2E4A File Offset: 0x006C104A
 		public EJigsawShape Shape { get; set; }
 
-		// Token: 0x1700C8FD RID: 51453
-		// (get) Token: 0x0602F589 RID: 193929 RVA: 0x00672AFB File Offset: 0x00670CFB
-		// (set) Token: 0x0602F58A RID: 193930 RVA: 0x00672B03 File Offset: 0x00670D03
+		// Token: 0x1700D2FD RID: 54013
+		// (get) Token: 0x06031F49 RID: 204617 RVA: 0x006C2E53 File Offset: 0x006C1053
+		// (set) Token: 0x06031F4A RID: 204618 RVA: 0x006C2E5B File Offset: 0x006C105B
 		public List<IJigsawPieceT> Pieces { get; set; }
 
-		// Token: 0x1700C8FE RID: 51454
-		// (get) Token: 0x0602F58B RID: 193931 RVA: 0x00672B0C File Offset: 0x00670D0C
-		// (set) Token: 0x0602F58C RID: 193932 RVA: 0x00672B14 File Offset: 0x00670D14
+		// Token: 0x1700D2FE RID: 54014
+		// (get) Token: 0x06031F4B RID: 204619 RVA: 0x006C2E64 File Offset: 0x006C1064
+		// (set) Token: 0x06031F4C RID: 204620 RVA: 0x006C2E6C File Offset: 0x006C106C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F58D RID: 193933 RVA: 0x00672B1D File Offset: 0x00670D1D
+		// Token: 0x06031F4D RID: 204621 RVA: 0x006C2E75 File Offset: 0x006C1075
 		public IJigsawConfigT()
 		{
 			this.Row = 0;

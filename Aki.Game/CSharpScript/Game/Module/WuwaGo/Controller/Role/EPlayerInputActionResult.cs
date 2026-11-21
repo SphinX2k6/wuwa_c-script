@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 {
-	// Token: 0x02004757 RID: 18263
+	// Token: 0x02003688 RID: 13960
 	internal enum EPlayerInputActionResult
 	{
-		// Token: 0x04019C25 RID: 105509
+		// Token: 0x040142D5 RID: 82645
 		Invalid,
-		// Token: 0x04019C26 RID: 105510
+		// Token: 0x040142D6 RID: 82646
 		Valid,
-		// Token: 0x04019C27 RID: 105511
+		// Token: 0x040142D7 RID: 82647
 		Finish
 	}
 }

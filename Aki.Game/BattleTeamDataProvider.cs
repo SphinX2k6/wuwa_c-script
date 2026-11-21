@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.InstanceDungeon.Define;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BE8 RID: 7144
+// Token: 0x020010A7 RID: 4263
 public class BattleTeamDataProvider : IFormationProvider
 {
-	// Token: 0x0600D4B7 RID: 54455 RVA: 0x0030F184 File Offset: 0x0030D384
+	// Token: 0x0600A8C9 RID: 43209 RVA: 0x0031A2F8 File Offset: 0x003184F8
 	[NullableContext(1)]
 	public IRoleSlotDisplayData BuildSlotDisplayData(int position)
 	{
@@ -94,7 +94,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		};
 	}
 
-	// Token: 0x0600D4B8 RID: 54456 RVA: 0x0030F410 File Offset: 0x0030D610
+	// Token: 0x0600A8CA RID: 43210 RVA: 0x0031A584 File Offset: 0x00318784
 	[NullableContext(1)]
 	private IRoleSlotDisplayData BuildEmptySlotDto()
 	{
@@ -117,7 +117,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		return roleSlotDisplayData;
 	}
 
-	// Token: 0x0600D4B9 RID: 54457 RVA: 0x0030F4AC File Offset: 0x0030D6AC
+	// Token: 0x0600A8CB RID: 43211 RVA: 0x0031A620 File Offset: 0x00318820
 	[NullableContext(2)]
 	private IRoleSlotDisplayData.SkillBranchData BuildSkillBranchDto(int configId, int position, int playerId)
 	{
@@ -145,7 +145,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		};
 	}
 
-	// Token: 0x0600D4BA RID: 54458 RVA: 0x0030F5A8 File Offset: 0x0030D7A8
+	// Token: 0x0600A8CC RID: 43212 RVA: 0x0031A71C File Offset: 0x0031891C
 	[return: TupleElementNames(new string[]
 	{
 		"IsMulti",
@@ -174,7 +174,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		return new ValueTuple<bool, int>(false, 0);
 	}
 
-	// Token: 0x0600D4BB RID: 54459 RVA: 0x0030F64C File Offset: 0x0030D84C
+	// Token: 0x0600A8CD RID: 43213 RVA: 0x0031A7C0 File Offset: 0x003189C0
 	[NullableContext(2)]
 	public global::Vector GetRoleSkinOffset(int skinId)
 	{
@@ -187,7 +187,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		return global::Vector.Create(roleSkinData.GetRoleSkinConfig().FormationOffset);
 	}
 
-	// Token: 0x0600D4BC RID: 54460 RVA: 0x0030F684 File Offset: 0x0030D884
+	// Token: 0x0600A8CE RID: 43214 RVA: 0x0031A7F8 File Offset: 0x003189F8
 	public int ResolveSafePlayerId(int? slotPlayerId)
 	{
 		int value = PlayerInfoModel.Instance.GetId().Value;
@@ -203,7 +203,7 @@ public class BattleTeamDataProvider : IFormationProvider
 		return value;
 	}
 
-	// Token: 0x0600D4BD RID: 54461 RVA: 0x0030F6D4 File Offset: 0x0030D8D4
+	// Token: 0x0600A8CF RID: 43215 RVA: 0x0031A848 File Offset: 0x00318A48
 	public bool IsCurrentDungeonDangoAbyss()
 	{
 		BattleTeamModel instance = BattleTeamModel.Instance;
@@ -211,14 +211,14 @@ public class BattleTeamDataProvider : IFormationProvider
 		return instanceDungeon != null && instanceDungeon.Value.InstSubType == 33;
 	}
 
-	// Token: 0x0600D4BE RID: 54462 RVA: 0x0030F71E File Offset: 0x0030D91E
+	// Token: 0x0600A8D0 RID: 43216 RVA: 0x0031A892 File Offset: 0x00318A92
 	public bool IsDangoInMatch()
 	{
 		DangoAbyssModel instance = DangoAbyssModel.Instance;
 		return instance != null && instance.CheckIsInMatch();
 	}
 
-	// Token: 0x0600D4BF RID: 54463 RVA: 0x0030F730 File Offset: 0x0030D930
+	// Token: 0x0600A8D1 RID: 43217 RVA: 0x0031A8A4 File Offset: 0x00318AA4
 	public bool ResolveSpecialTrialDeadState(int roleId)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)roleId, new GetTeamItemOptions
@@ -235,6 +235,6 @@ public class BattleTeamDataProvider : IFormationProvider
 		return ((roleAttributeData != null) ? roleAttributeData.GetAttrValueById(3) : 0) <= 0;
 	}
 
-	// Token: 0x0400617B RID: 24955
+	// Token: 0x0400624A RID: 25162
 	private const int HEALTH_ID_FOR_TRIAL = 3;
 }

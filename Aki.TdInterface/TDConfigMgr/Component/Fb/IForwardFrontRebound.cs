@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C86 RID: 3206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D68 RID: 3432
 	public class IForwardFrontRebound : IReboundType
 	{
-		// Token: 0x0600495F RID: 18783 RVA: 0x000B7F99 File Offset: 0x000B6199
+		// Token: 0x06004E0D RID: 19981 RVA: 0x000C29A9 File Offset: 0x000C0BA9
 		public static IForwardFrontRebound Create(IForwardFrontRebound? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001610 RID: 5648
-		// (get) Token: 0x06004960 RID: 18784 RVA: 0x000B7FB8 File Offset: 0x000B61B8
+		// Token: 0x17001738 RID: 5944
+		// (get) Token: 0x06004E0E RID: 19982 RVA: 0x000C29C8 File Offset: 0x000C0BC8
 		public override EReboundOptionType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001611 RID: 5649
-		// (get) Token: 0x06004961 RID: 18785 RVA: 0x000B7FC5 File Offset: 0x000B61C5
+		// Token: 0x17001739 RID: 5945
+		// (get) Token: 0x06004E0F RID: 19983 RVA: 0x000C29D5 File Offset: 0x000C0BD5
 		public virtual VectorInfo ReboundPoint
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029D9 RID: 10713
+		// Token: 0x04002C53 RID: 11347
 		private IForwardFrontRebound Instance;
 
-		// Token: 0x040029DA RID: 10714
+		// Token: 0x04002C54 RID: 11348
 		[Nullable(2)]
 		private VectorInfo _ReboundPointCache;
 
-		// Token: 0x040029DB RID: 10715
+		// Token: 0x04002C55 RID: 11349
 		private bool _ReboundPointInited;
 	}
 }

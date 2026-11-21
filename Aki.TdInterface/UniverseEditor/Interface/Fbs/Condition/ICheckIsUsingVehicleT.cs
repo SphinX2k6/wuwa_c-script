@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AA9 RID: 19113
+	// Token: 0x02004F78 RID: 20344
 	public class ICheckIsUsingVehicleT
 	{
-		// Token: 0x17008A86 RID: 35462
-		// (get) Token: 0x0601DFE8 RID: 122856 RVA: 0x00435E5E File Offset: 0x0043405E
-		// (set) Token: 0x0601DFE9 RID: 122857 RVA: 0x00435E66 File Offset: 0x00434066
+		// Token: 0x17009173 RID: 37235
+		// (get) Token: 0x0601FAD1 RID: 129745 RVA: 0x0046767E File Offset: 0x0046587E
+		// (set) Token: 0x0601FAD2 RID: 129746 RVA: 0x00467686 File Offset: 0x00465886
 		public EVehicleConditionType Type { get; set; }
 
-		// Token: 0x17008A87 RID: 35463
-		// (get) Token: 0x0601DFEA RID: 122858 RVA: 0x00435E6F File Offset: 0x0043406F
-		// (set) Token: 0x0601DFEB RID: 122859 RVA: 0x00435E77 File Offset: 0x00434077
+		// Token: 0x17009174 RID: 37236
+		// (get) Token: 0x0601FAD3 RID: 129747 RVA: 0x0046768F File Offset: 0x0046588F
+		// (set) Token: 0x0601FAD4 RID: 129748 RVA: 0x00467697 File Offset: 0x00465897
 		public int TargetVehicle { get; set; }
 
-		// Token: 0x17008A88 RID: 35464
-		// (get) Token: 0x0601DFEC RID: 122860 RVA: 0x00435E80 File Offset: 0x00434080
-		// (set) Token: 0x0601DFED RID: 122861 RVA: 0x00435E88 File Offset: 0x00434088
+		// Token: 0x17009175 RID: 37237
+		// (get) Token: 0x0601FAD5 RID: 129749 RVA: 0x004676A0 File Offset: 0x004658A0
+		// (set) Token: 0x0601FAD6 RID: 129750 RVA: 0x004676A8 File Offset: 0x004658A8
 		public EVehicleSeat Seat { get; set; }
 
-		// Token: 0x17008A89 RID: 35465
-		// (get) Token: 0x0601DFEE RID: 122862 RVA: 0x00435E91 File Offset: 0x00434091
-		// (set) Token: 0x0601DFEF RID: 122863 RVA: 0x00435E99 File Offset: 0x00434099
+		// Token: 0x17009176 RID: 37238
+		// (get) Token: 0x0601FAD7 RID: 129751 RVA: 0x004676B1 File Offset: 0x004658B1
+		// (set) Token: 0x0601FAD8 RID: 129752 RVA: 0x004676B9 File Offset: 0x004658B9
 		public bool CheckIsBeingUsed { get; set; }
 
-		// Token: 0x17008A8A RID: 35466
-		// (get) Token: 0x0601DFF0 RID: 122864 RVA: 0x00435EA2 File Offset: 0x004340A2
-		// (set) Token: 0x0601DFF1 RID: 122865 RVA: 0x00435EAA File Offset: 0x004340AA
+		// Token: 0x17009177 RID: 37239
+		// (get) Token: 0x0601FAD9 RID: 129753 RVA: 0x004676C2 File Offset: 0x004658C2
+		// (set) Token: 0x0601FADA RID: 129754 RVA: 0x004676CA File Offset: 0x004658CA
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601DFF2 RID: 122866 RVA: 0x00435EB3 File Offset: 0x004340B3
+		// Token: 0x0601FADB RID: 129755 RVA: 0x004676D3 File Offset: 0x004658D3
 		public ICheckIsUsingVehicleT()
 		{
 			this.Type = EVehicleConditionType.UsingVehicle;

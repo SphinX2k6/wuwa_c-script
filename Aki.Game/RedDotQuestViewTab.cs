@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003404 RID: 13316
+// Token: 0x02002976 RID: 10614
 public class RedDotQuestViewTab : RedDotBase
 {
-	// Token: 0x0601CCFA RID: 118010 RVA: 0x0080B064 File Offset: 0x00809264
+	// Token: 0x0601A9F2 RID: 109042 RVA: 0x00831628 File Offset: 0x0082F828
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCFB RID: 118011 RVA: 0x0080B082 File Offset: 0x00809282
+	// Token: 0x0601A9F3 RID: 109043 RVA: 0x00831646 File Offset: 0x0082F846
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnQuestRedDotStateChange, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCFC RID: 118012 RVA: 0x0080B0A0 File Offset: 0x008092A0
+	// Token: 0x0601A9F4 RID: 109044 RVA: 0x00831664 File Offset: 0x0082F864
 	protected unsafe override bool OnCheck(int uId = 0)
 	{
 		foreach (QuestType questType in QuestNewConfig.Instance.GetQuesTypesByMainType(uId))
@@ -46,13 +46,13 @@ public class RedDotQuestViewTab : RedDotBase
 		return false;
 	}
 
-	// Token: 0x0601CCFD RID: 118013 RVA: 0x0080B1DC File Offset: 0x008093DC
+	// Token: 0x0601A9F5 RID: 109045 RVA: 0x008317A0 File Offset: 0x0082F9A0
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CCFE RID: 118014 RVA: 0x0080B1DF File Offset: 0x008093DF
+	// Token: 0x0601A9F6 RID: 109046 RVA: 0x008317A3 File Offset: 0x0082F9A3
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;

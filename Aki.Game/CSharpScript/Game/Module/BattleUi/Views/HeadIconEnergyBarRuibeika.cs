@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D3B RID: 23867
+	// Token: 0x02004D1D RID: 19741
 	public class HeadIconEnergyBarRuibeika : HeadIconEnergyBarBase
 	{
-		// Token: 0x0603C884 RID: 247940 RVA: 0x00E85CEC File Offset: 0x00E83EEC
+		// Token: 0x060317DD RID: 202717 RVA: 0x00DD648C File Offset: 0x00DD468C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C885 RID: 247941 RVA: 0x00E85DFC File Offset: 0x00E83FFC
+		// Token: 0x060317DE RID: 202718 RVA: 0x00DD659C File Offset: 0x00DD479C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			HeadIconEnergyBarRuibeika.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C886 RID: 247942 RVA: 0x00E85E40 File Offset: 0x00E84040
+		// Token: 0x060317DF RID: 202719 RVA: 0x00DD65E0 File Offset: 0x00DD47E0
 		[NullableContext(1)]
 		private void InitDotItems(List<SpecialEnergyBarRuibeikaDot> arr, int org, int parent)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C887 RID: 247943 RVA: 0x00E85ED8 File Offset: 0x00E840D8
+		// Token: 0x060317E0 RID: 202720 RVA: 0x00DD6678 File Offset: 0x00DD4878
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetState(this.GetCurrentStateByTag(), true);
 		}
 
-		// Token: 0x0603C888 RID: 247944 RVA: 0x00E85F43 File Offset: 0x00E84143
+		// Token: 0x060317E1 RID: 202721 RVA: 0x00DD66E3 File Offset: 0x00DD48E3
 		protected override void OnBeforeShow()
 		{
 			this.CurState = this.GetCurrentStateByTag();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true, true);
 		}
 
-		// Token: 0x0603C889 RID: 247945 RVA: 0x00E85F60 File Offset: 0x00E84160
+		// Token: 0x060317E2 RID: 202722 RVA: 0x00DD6700 File Offset: 0x00DD4900
 		private HeadIconEnergyBarRuibeika.EState GetCurrentStateByTag()
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return HeadIconEnergyBarRuibeika.EState.StateRifle;
 		}
 
-		// Token: 0x0603C88A RID: 247946 RVA: 0x00E85FA8 File Offset: 0x00E841A8
+		// Token: 0x060317E3 RID: 202723 RVA: 0x00DD6748 File Offset: 0x00DD4948
 		private int GetCurrentColorAnim()
 		{
 			if (this.CurState != HeadIconEnergyBarRuibeika.EState.StateGun)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return 4;
 		}
 
-		// Token: 0x0603C88B RID: 247947 RVA: 0x00E85FB8 File Offset: 0x00E841B8
+		// Token: 0x060317E4 RID: 202724 RVA: 0x00DD6758 File Offset: 0x00DD4958
 		private void PlayCurrentColorAnim()
 		{
 			int currentColorAnim = this.GetCurrentColorAnim();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(currentColorAnim);
 		}
 
-		// Token: 0x0603C88C RID: 247948 RVA: 0x00E85FE1 File Offset: 0x00E841E1
+		// Token: 0x060317E5 RID: 202725 RVA: 0x00DD6781 File Offset: 0x00DD4981
 		private void SetState(HeadIconEnergyBarRuibeika.EState state, bool force = false)
 		{
 			if (this.CurState == state && !force)
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(true, true);
 		}
 
-		// Token: 0x0603C88D RID: 247949 RVA: 0x00E85FFF File Offset: 0x00E841FF
+		// Token: 0x060317E6 RID: 202726 RVA: 0x00DD679F File Offset: 0x00DD499F
 		protected override void OnBarPercentChanged()
 		{
 			this.RefreshBarPercent(false, false);
 		}
 
-		// Token: 0x0603C88E RID: 247950 RVA: 0x00E8600C File Offset: 0x00E8420C
+		// Token: 0x060317E7 RID: 202727 RVA: 0x00DD67AC File Offset: 0x00DD49AC
 		private void RefreshBarPercent(bool bForce = false, bool forceColor = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsFull = flag;
 		}
 
-		// Token: 0x0603C891 RID: 247953 RVA: 0x00E860ED File Offset: 0x00E842ED
+		// Token: 0x060317EA RID: 202730 RVA: 0x00DD688D File Offset: 0x00DD4A8D
 		[NullableContext(1)]
 		[CompilerGenerated]
 		private BaseTagComponent.TTagSwitchedCallback <OnStart>g__onStateChanged|8_0(HeadIconEnergyBarRuibeika.EState state)
@@ -171,49 +171,49 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401F897 RID: 129175
+		// Token: 0x0401A350 RID: 107344
 		private HeadIconEnergyBarRuibeika.EState CurState;
 
-		// Token: 0x0401F898 RID: 129176
+		// Token: 0x0401A351 RID: 107345
 		private bool IsFull;
 
-		// Token: 0x0401F899 RID: 129177
+		// Token: 0x0401A352 RID: 107346
 		[Nullable(1)]
 		private readonly List<SpecialEnergyBarRuibeikaDot> C1DotItems = new List<SpecialEnergyBarRuibeikaDot>();
 
-		// Token: 0x0200BFD6 RID: 49110
+		// Token: 0x0200A9DC RID: 43484
 		private enum EState
 		{
-			// Token: 0x04039E06 RID: 237062
+			// Token: 0x040347C8 RID: 214984
 			StateGun,
-			// Token: 0x04039E07 RID: 237063
+			// Token: 0x040347C9 RID: 214985
 			StateRifle,
-			// Token: 0x04039E08 RID: 237064
+			// Token: 0x040347CA RID: 214986
 			StateUlt
 		}
 
-		// Token: 0x0200BFD7 RID: 49111
+		// Token: 0x0200A9DD RID: 43485
 		private class EChildType
 		{
-			// Token: 0x04039E09 RID: 237065
+			// Token: 0x040347CB RID: 214987
 			public const int PnlBarC1 = 0;
 
-			// Token: 0x04039E0A RID: 237066
+			// Token: 0x040347CC RID: 214988
 			public const int PnlItemC1 = 1;
 
-			// Token: 0x04039E0B RID: 237067
+			// Token: 0x040347CD RID: 214989
 			public const int FullCtrl = 2;
 
-			// Token: 0x04039E0C RID: 237068
+			// Token: 0x040347CE RID: 214990
 			public const int AniRed = 3;
 
-			// Token: 0x04039E0D RID: 237069
+			// Token: 0x040347CF RID: 214991
 			public const int AniGreen = 4;
 
-			// Token: 0x04039E0E RID: 237070
+			// Token: 0x040347D0 RID: 214992
 			public const int AniR2G = 5;
 
-			// Token: 0x04039E0F RID: 237071
+			// Token: 0x040347D1 RID: 214993
 			public const int AniG2R = 6;
 		}
 	}

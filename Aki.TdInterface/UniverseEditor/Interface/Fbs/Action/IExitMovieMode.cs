@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006726 RID: 26406
+	// Token: 0x02006DA6 RID: 28070
 	public struct IExitMovieMode : IFlatbufferObject
 	{
-		// Token: 0x1700C41F RID: 50207
-		// (get) Token: 0x0602DEEC RID: 188140 RVA: 0x00647852 File Offset: 0x00645A52
+		// Token: 0x1700CDD5 RID: 52693
+		// (get) Token: 0x06030732 RID: 198450 RVA: 0x00694F96 File Offset: 0x00693196
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DEED RID: 188141 RVA: 0x0064785F File Offset: 0x00645A5F
+		// Token: 0x06030733 RID: 198451 RVA: 0x00694FA3 File Offset: 0x006931A3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DEEE RID: 188142 RVA: 0x00647868 File Offset: 0x00645A68
+		// Token: 0x06030734 RID: 198452 RVA: 0x00694FAC File Offset: 0x006931AC
 		public static IExitMovieMode GetRootAsIExitMovieMode(ByteBuffer _bb)
 		{
 			return IExitMovieMode.GetRootAsIExitMovieMode(_bb, default(IExitMovieMode));
 		}
 
-		// Token: 0x0602DEEF RID: 188143 RVA: 0x00647884 File Offset: 0x00645A84
+		// Token: 0x06030735 RID: 198453 RVA: 0x00694FC8 File Offset: 0x006931C8
 		public static IExitMovieMode GetRootAsIExitMovieMode(ByteBuffer _bb, IExitMovieMode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DEF0 RID: 188144 RVA: 0x006478A1 File Offset: 0x00645AA1
+		// Token: 0x06030736 RID: 198454 RVA: 0x00694FE5 File Offset: 0x006931E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DEF1 RID: 188145 RVA: 0x006478B0 File Offset: 0x00645AB0
+		// Token: 0x06030737 RID: 198455 RVA: 0x00694FF4 File Offset: 0x006931F4
 		public IExitMovieMode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C420 RID: 50208
-		// (get) Token: 0x0602DEF2 RID: 188146 RVA: 0x006478C0 File Offset: 0x00645AC0
+		// Token: 0x1700CDD6 RID: 52694
+		// (get) Token: 0x06030738 RID: 198456 RVA: 0x00695004 File Offset: 0x00693204
 		public float BorderAnimDuration
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C421 RID: 50209
-		// (get) Token: 0x0602DEF3 RID: 188147 RVA: 0x00647900 File Offset: 0x00645B00
+		// Token: 0x1700CDD7 RID: 52695
+		// (get) Token: 0x06030739 RID: 198457 RVA: 0x00695044 File Offset: 0x00693244
 		public TEnterMovieModeDurationType DurationTypeType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DEF4 RID: 188148 RVA: 0x0064793C File Offset: 0x00645B3C
+		// Token: 0x0603073A RID: 198458 RVA: 0x00695080 File Offset: 0x00693280
 		public TTable? DurationType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,20 +88,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DEF5 RID: 188149 RVA: 0x00647980 File Offset: 0x00645B80
+		// Token: 0x0603073B RID: 198459 RVA: 0x006950C4 File Offset: 0x006932C4
 		public IWaitMovieModeBorderAnimFinished DurationTypeAsIWaitMovieModeBorderAnimFinished()
 		{
 			return this.DurationType<IWaitMovieModeBorderAnimFinished>().Value;
 		}
 
-		// Token: 0x0602DEF6 RID: 188150 RVA: 0x0064799C File Offset: 0x00645B9C
+		// Token: 0x0603073C RID: 198460 RVA: 0x006950E0 File Offset: 0x006932E0
 		public IWaitMovieModeFixedTime DurationTypeAsIWaitMovieModeFixedTime()
 		{
 			return this.DurationType<IWaitMovieModeFixedTime>().Value;
 		}
 
-		// Token: 0x1700C422 RID: 50210
-		// (get) Token: 0x0602DEF7 RID: 188151 RVA: 0x006479B8 File Offset: 0x00645BB8
+		// Token: 0x1700CDD8 RID: 52696
+		// (get) Token: 0x0603073D RID: 198461 RVA: 0x006950FC File Offset: 0x006932FC
 		public IMovieModeFadeOutMaskConfig? FadeOutMaskConfig
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C423 RID: 50211
-		// (get) Token: 0x0602DEF8 RID: 188152 RVA: 0x00647A18 File Offset: 0x00645C18
+		// Token: 0x1700CDD9 RID: 52697
+		// (get) Token: 0x0603073E RID: 198462 RVA: 0x0069515C File Offset: 0x0069335C
 		public byte NullMask
 		{
 			get
@@ -130,7 +130,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DEF9 RID: 188153 RVA: 0x00647A55 File Offset: 0x00645C55
+		// Token: 0x0603073F RID: 198463 RVA: 0x00695199 File Offset: 0x00693399
 		public static Offset<IExitMovieMode> CreateIExitMovieMode(FlatBufferBuilder builder, float BorderAnimDuration = 0f, TEnterMovieModeDurationType DurationType_type = TEnterMovieModeDurationType.NONE, int DurationTypeOffset = 0, Offset<IMovieModeFadeOutMaskConfig> FadeOutMaskConfigOffset = default(Offset<IMovieModeFadeOutMaskConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -142,49 +142,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExitMovieMode.EndIExitMovieMode(builder);
 		}
 
-		// Token: 0x0602DEFA RID: 188154 RVA: 0x00647A89 File Offset: 0x00645C89
+		// Token: 0x06030740 RID: 198464 RVA: 0x006951CD File Offset: 0x006933CD
 		public static void StartIExitMovieMode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602DEFB RID: 188155 RVA: 0x00647A92 File Offset: 0x00645C92
+		// Token: 0x06030741 RID: 198465 RVA: 0x006951D6 File Offset: 0x006933D6
 		public static void AddBorderAnimDuration(FlatBufferBuilder builder, float borderAnimDuration)
 		{
 			builder.AddFloat(0, borderAnimDuration, 0.0);
 		}
 
-		// Token: 0x0602DEFC RID: 188156 RVA: 0x00647AA5 File Offset: 0x00645CA5
+		// Token: 0x06030742 RID: 198466 RVA: 0x006951E9 File Offset: 0x006933E9
 		public static void AddDurationTypeType(FlatBufferBuilder builder, TEnterMovieModeDurationType durationTypeType)
 		{
 			builder.AddByte(1, (byte)durationTypeType, 0);
 		}
 
-		// Token: 0x0602DEFD RID: 188157 RVA: 0x00647AB0 File Offset: 0x00645CB0
+		// Token: 0x06030743 RID: 198467 RVA: 0x006951F4 File Offset: 0x006933F4
 		public static void AddDurationType(FlatBufferBuilder builder, int durationTypeOffset)
 		{
 			builder.AddOffset(2, durationTypeOffset, 0);
 		}
 
-		// Token: 0x0602DEFE RID: 188158 RVA: 0x00647ABB File Offset: 0x00645CBB
+		// Token: 0x06030744 RID: 198468 RVA: 0x006951FF File Offset: 0x006933FF
 		public static void AddFadeOutMaskConfig(FlatBufferBuilder builder, Offset<IMovieModeFadeOutMaskConfig> fadeOutMaskConfigOffset)
 		{
 			builder.AddOffset(3, fadeOutMaskConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602DEFF RID: 188159 RVA: 0x00647ACB File Offset: 0x00645CCB
+		// Token: 0x06030745 RID: 198469 RVA: 0x0069520F File Offset: 0x0069340F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602DF00 RID: 188160 RVA: 0x00647AD6 File Offset: 0x00645CD6
+		// Token: 0x06030746 RID: 198470 RVA: 0x0069521A File Offset: 0x0069341A
 		public static Offset<IExitMovieMode> EndIExitMovieMode(FlatBufferBuilder builder)
 		{
 			return new Offset<IExitMovieMode>(builder.EndTable());
 		}
 
-		// Token: 0x0602DF01 RID: 188161 RVA: 0x00647AE4 File Offset: 0x00645CE4
+		// Token: 0x06030747 RID: 198471 RVA: 0x00695228 File Offset: 0x00693428
 		public IExitMovieModeT UnPack()
 		{
 			IExitMovieModeT exitMovieModeT = new IExitMovieModeT();
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return exitMovieModeT;
 		}
 
-		// Token: 0x0602DF02 RID: 188162 RVA: 0x00647B00 File Offset: 0x00645D00
+		// Token: 0x06030748 RID: 198472 RVA: 0x00695244 File Offset: 0x00693444
 		public void UnPackTo(IExitMovieModeT _o)
 		{
 			_o.BorderAnimDuration = this.BorderAnimDuration;
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602DF03 RID: 188163 RVA: 0x00647BF0 File Offset: 0x00645DF0
+		// Token: 0x06030749 RID: 198473 RVA: 0x00695334 File Offset: 0x00693534
 		public static Offset<IExitMovieMode> Pack(FlatBufferBuilder builder, IExitMovieModeT _o)
 		{
 			if (_o == null)
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExitMovieMode.CreateIExitMovieMode(builder, _o.BorderAnimDuration, durationType_type, durationTypeOffset, fadeOutMaskConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010E0B RID: 69131
+		// Token: 0x04011C3D RID: 72765
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A04 RID: 23044
+	// Token: 0x02006011 RID: 24593
 	public struct ISunSpiritGearPerformToGearRelativePos : IFlatbufferObject
 	{
-		// Token: 0x1700AD21 RID: 44321
-		// (get) Token: 0x060271BE RID: 160190 RVA: 0x0056142B File Offset: 0x0055F62B
+		// Token: 0x1700B659 RID: 46681
+		// (get) Token: 0x06029736 RID: 169782 RVA: 0x005A83EF File Offset: 0x005A65EF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060271BF RID: 160191 RVA: 0x00561438 File Offset: 0x0055F638
+		// Token: 0x06029737 RID: 169783 RVA: 0x005A83FC File Offset: 0x005A65FC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060271C0 RID: 160192 RVA: 0x00561440 File Offset: 0x0055F640
+		// Token: 0x06029738 RID: 169784 RVA: 0x005A8404 File Offset: 0x005A6604
 		public static ISunSpiritGearPerformToGearRelativePos GetRootAsISunSpiritGearPerformToGearRelativePos(ByteBuffer _bb)
 		{
 			return ISunSpiritGearPerformToGearRelativePos.GetRootAsISunSpiritGearPerformToGearRelativePos(_bb, default(ISunSpiritGearPerformToGearRelativePos));
 		}
 
-		// Token: 0x060271C1 RID: 160193 RVA: 0x0056145C File Offset: 0x0055F65C
+		// Token: 0x06029739 RID: 169785 RVA: 0x005A8420 File Offset: 0x005A6620
 		public static ISunSpiritGearPerformToGearRelativePos GetRootAsISunSpiritGearPerformToGearRelativePos(ByteBuffer _bb, ISunSpiritGearPerformToGearRelativePos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060271C2 RID: 160194 RVA: 0x00561479 File Offset: 0x0055F679
+		// Token: 0x0602973A RID: 169786 RVA: 0x005A843D File Offset: 0x005A663D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060271C3 RID: 160195 RVA: 0x00561488 File Offset: 0x0055F688
+		// Token: 0x0602973B RID: 169787 RVA: 0x005A844C File Offset: 0x005A664C
 		public ISunSpiritGearPerformToGearRelativePos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AD22 RID: 44322
-		// (get) Token: 0x060271C4 RID: 160196 RVA: 0x00561498 File Offset: 0x0055F698
+		// Token: 0x1700B65A RID: 46682
+		// (get) Token: 0x0602973C RID: 169788 RVA: 0x005A845C File Offset: 0x005A665C
 		public ESunSpiritGearPerformType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060271C5 RID: 160197 RVA: 0x005614D4 File Offset: 0x0055F6D4
+		// Token: 0x0602973D RID: 169789 RVA: 0x005A8498 File Offset: 0x005A6698
 		public static Offset<ISunSpiritGearPerformToGearRelativePos> CreateISunSpiritGearPerformToGearRelativePos(FlatBufferBuilder builder, ESunSpiritGearPerformType Type = ESunSpiritGearPerformType.ToGearRelativePos)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISunSpiritGearPerformToGearRelativePos.EndISunSpiritGearPerformToGearRelativePos(builder);
 		}
 
-		// Token: 0x060271C6 RID: 160198 RVA: 0x005614EA File Offset: 0x0055F6EA
+		// Token: 0x0602973E RID: 169790 RVA: 0x005A84AE File Offset: 0x005A66AE
 		public static void StartISunSpiritGearPerformToGearRelativePos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060271C7 RID: 160199 RVA: 0x005614F3 File Offset: 0x0055F6F3
+		// Token: 0x0602973F RID: 169791 RVA: 0x005A84B7 File Offset: 0x005A66B7
 		public static void AddType(FlatBufferBuilder builder, ESunSpiritGearPerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060271C8 RID: 160200 RVA: 0x005614FE File Offset: 0x0055F6FE
+		// Token: 0x06029740 RID: 169792 RVA: 0x005A84C2 File Offset: 0x005A66C2
 		public static Offset<ISunSpiritGearPerformToGearRelativePos> EndISunSpiritGearPerformToGearRelativePos(FlatBufferBuilder builder)
 		{
 			return new Offset<ISunSpiritGearPerformToGearRelativePos>(builder.EndTable());
 		}
 
-		// Token: 0x060271C9 RID: 160201 RVA: 0x0056150C File Offset: 0x0055F70C
+		// Token: 0x06029741 RID: 169793 RVA: 0x005A84D0 File Offset: 0x005A66D0
 		public ISunSpiritGearPerformToGearRelativePosT UnPack()
 		{
 			ISunSpiritGearPerformToGearRelativePosT sunSpiritGearPerformToGearRelativePosT = new ISunSpiritGearPerformToGearRelativePosT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sunSpiritGearPerformToGearRelativePosT;
 		}
 
-		// Token: 0x060271CA RID: 160202 RVA: 0x00561527 File Offset: 0x0055F727
+		// Token: 0x06029742 RID: 169794 RVA: 0x005A84EB File Offset: 0x005A66EB
 		public void UnPackTo(ISunSpiritGearPerformToGearRelativePosT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060271CB RID: 160203 RVA: 0x00561538 File Offset: 0x0055F738
+		// Token: 0x06029743 RID: 169795 RVA: 0x005A84FC File Offset: 0x005A66FC
 		public static Offset<ISunSpiritGearPerformToGearRelativePos> Pack(FlatBufferBuilder builder, ISunSpiritGearPerformToGearRelativePosT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISunSpiritGearPerformToGearRelativePos.CreateISunSpiritGearPerformToGearRelativePos(builder, _o.Type);
 		}
 
-		// Token: 0x0400F047 RID: 61511
+		// Token: 0x0400FD3E RID: 64830
 		private Table __p;
 	}
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020027DB RID: 10203
+// Token: 0x02001D56 RID: 7510
 public enum ERoleDevTabType
 {
-	// Token: 0x04009DB8 RID: 40376
+	// Token: 0x0400A1A1 RID: 41377
 	Role,
-	// Token: 0x04009DB9 RID: 40377
+	// Token: 0x0400A1A2 RID: 41378
 	Weapon,
-	// Token: 0x04009DBA RID: 40378
+	// Token: 0x0400A1A3 RID: 41379
 	Phantom,
-	// Token: 0x04009DBB RID: 40379
+	// Token: 0x0400A1A4 RID: 41380
 	Skill
 }

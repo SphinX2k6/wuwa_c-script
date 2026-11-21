@@ -4,83 +4,83 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055AB RID: 21931
+	// Token: 0x02004581 RID: 17793
 	[NullableContext(1)]
 	public interface IGameInfoInitData
 	{
-		// Token: 0x17008694 RID: 34452
-		// (get) Token: 0x06037E2B RID: 228907
-		// (set) Token: 0x06037E2C RID: 228908
+		// Token: 0x17005A5B RID: 23131
+		// (get) Token: 0x0602CD29 RID: 183593
+		// (set) Token: 0x0602CD2A RID: 183594
 		int InstanceId { get; set; }
 
-		// Token: 0x17008695 RID: 34453
-		// (get) Token: 0x06037E2D RID: 228909
-		// (set) Token: 0x06037E2E RID: 228910
+		// Token: 0x17005A5C RID: 23132
+		// (get) Token: 0x0602CD2B RID: 183595
+		// (set) Token: 0x0602CD2C RID: 183596
 		int RandomSeed { get; set; }
 
-		// Token: 0x17008696 RID: 34454
-		// (get) Token: 0x06037E2F RID: 228911
-		// (set) Token: 0x06037E30 RID: 228912
+		// Token: 0x17005A5D RID: 23133
+		// (get) Token: 0x0602CD2D RID: 183597
+		// (set) Token: 0x0602CD2E RID: 183598
 		int MoodMin { get; set; }
 
-		// Token: 0x17008697 RID: 34455
-		// (get) Token: 0x06037E31 RID: 228913
-		// (set) Token: 0x06037E32 RID: 228914
+		// Token: 0x17005A5E RID: 23134
+		// (get) Token: 0x0602CD2F RID: 183599
+		// (set) Token: 0x0602CD30 RID: 183600
 		int MoodMax { get; set; }
 
-		// Token: 0x17008698 RID: 34456
-		// (get) Token: 0x06037E33 RID: 228915
-		// (set) Token: 0x06037E34 RID: 228916
+		// Token: 0x17005A5F RID: 23135
+		// (get) Token: 0x0602CD31 RID: 183601
+		// (set) Token: 0x0602CD32 RID: 183602
 		int InitMood { get; set; }
 
-		// Token: 0x17008699 RID: 34457
-		// (get) Token: 0x06037E35 RID: 228917
-		// (set) Token: 0x06037E36 RID: 228918
+		// Token: 0x17005A60 RID: 23136
+		// (get) Token: 0x0602CD33 RID: 183603
+		// (set) Token: 0x0602CD34 RID: 183604
 		List<MapGridData> MapGrids { get; set; }
 
-		// Token: 0x1700869A RID: 34458
-		// (get) Token: 0x06037E37 RID: 228919
-		// (set) Token: 0x06037E38 RID: 228920
+		// Token: 0x17005A61 RID: 23137
+		// (get) Token: 0x0602CD35 RID: 183605
+		// (set) Token: 0x0602CD36 RID: 183606
 		int MapWidth { get; set; }
 
-		// Token: 0x1700869B RID: 34459
-		// (get) Token: 0x06037E39 RID: 228921
-		// (set) Token: 0x06037E3A RID: 228922
+		// Token: 0x17005A62 RID: 23138
+		// (get) Token: 0x0602CD37 RID: 183607
+		// (set) Token: 0x0602CD38 RID: 183608
 		int MapHeight { get; set; }
 
-		// Token: 0x1700869C RID: 34460
-		// (get) Token: 0x06037E3B RID: 228923
-		// (set) Token: 0x06037E3C RID: 228924
+		// Token: 0x17005A63 RID: 23139
+		// (get) Token: 0x0602CD39 RID: 183609
+		// (set) Token: 0x0602CD3A RID: 183610
 		int PlayerGridIndex { get; set; }
 
-		// Token: 0x1700869D RID: 34461
-		// (get) Token: 0x06037E3D RID: 228925
-		// (set) Token: 0x06037E3E RID: 228926
+		// Token: 0x17005A64 RID: 23140
+		// (get) Token: 0x0602CD3B RID: 183611
+		// (set) Token: 0x0602CD3C RID: 183612
 		int TeamLv { get; set; }
 
-		// Token: 0x1700869E RID: 34462
-		// (get) Token: 0x06037E3F RID: 228927
-		// (set) Token: 0x06037E40 RID: 228928
+		// Token: 0x17005A65 RID: 23141
+		// (get) Token: 0x0602CD3D RID: 183613
+		// (set) Token: 0x0602CD3E RID: 183614
 		bool InBattle { get; set; }
 
-		// Token: 0x1700869F RID: 34463
-		// (get) Token: 0x06037E41 RID: 228929
-		// (set) Token: 0x06037E42 RID: 228930
+		// Token: 0x17005A66 RID: 23142
+		// (get) Token: 0x0602CD3F RID: 183615
+		// (set) Token: 0x0602CD40 RID: 183616
 		int CurrencyItemId { get; set; }
 
-		// Token: 0x170086A0 RID: 34464
-		// (get) Token: 0x06037E43 RID: 228931
-		// (set) Token: 0x06037E44 RID: 228932
+		// Token: 0x17005A67 RID: 23143
+		// (get) Token: 0x0602CD41 RID: 183617
+		// (set) Token: 0x0602CD42 RID: 183618
 		int MoodRuleId { get; set; }
 
-		// Token: 0x170086A1 RID: 34465
-		// (get) Token: 0x06037E45 RID: 228933
-		// (set) Token: 0x06037E46 RID: 228934
+		// Token: 0x17005A68 RID: 23144
+		// (get) Token: 0x0602CD43 RID: 183619
+		// (set) Token: 0x0602CD44 RID: 183620
 		int RoleMaxStar { get; set; }
 
-		// Token: 0x170086A2 RID: 34466
-		// (get) Token: 0x06037E47 RID: 228935
-		// (set) Token: 0x06037E48 RID: 228936
+		// Token: 0x17005A69 RID: 23145
+		// (get) Token: 0x0602CD45 RID: 183621
+		// (set) Token: 0x0602CD46 RID: 183622
 		int RoleLevel { get; set; }
 	}
 }

@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001059 RID: 4185
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001187 RID: 4487
 	public class IPositionRollbackConfig
 	{
-		// Token: 0x06005DC2 RID: 24002 RVA: 0x000E2DF4 File Offset: 0x000E0FF4
+		// Token: 0x060063B4 RID: 25524 RVA: 0x000EFDC8 File Offset: 0x000EDFC8
 		private IPositionRollbackConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DC3 RID: 24003 RVA: 0x000E2E2C File Offset: 0x000E102C
+		// Token: 0x060063B5 RID: 25525 RVA: 0x000EFE00 File Offset: 0x000EE000
 		public static IPositionRollbackConfig Create([Nullable(2)] IPositionRollbackConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DC4 RID: 24004 RVA: 0x000E2E3F File Offset: 0x000E103F
+		// Token: 0x060063B6 RID: 25526 RVA: 0x000EFE13 File Offset: 0x000EE013
 		public static IPositionRollbackConfig CreateFromSetValue([Nullable(2)] IPositionRollbackConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DC5 RID: 24005 RVA: 0x000E2E52 File Offset: 0x000E1052
+		// Token: 0x060063B7 RID: 25527 RVA: 0x000EFE26 File Offset: 0x000EE026
 		public IPositionRollbackConfig_SetValue ToSetValue()
 		{
 			return new IPositionRollbackConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EDD RID: 7901
-		// (get) Token: 0x06005DC6 RID: 24006 RVA: 0x000E2E80 File Offset: 0x000E1080
-		// (set) Token: 0x06005DC7 RID: 24007 RVA: 0x000E2EE1 File Offset: 0x000E10E1
+		// Token: 0x1700208C RID: 8332
+		// (get) Token: 0x060063B8 RID: 25528 RVA: 0x000EFE54 File Offset: 0x000EE054
+		// (set) Token: 0x060063B9 RID: 25529 RVA: 0x000EFEB5 File Offset: 0x000EE0B5
 		public virtual VectorInfo CheckPoint
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EDE RID: 7902
-		// (get) Token: 0x06005DC8 RID: 24008 RVA: 0x000E2EF6 File Offset: 0x000E10F6
-		// (set) Token: 0x06005DC9 RID: 24009 RVA: 0x000E2F21 File Offset: 0x000E1121
+		// Token: 0x1700208D RID: 8333
+		// (get) Token: 0x060063BA RID: 25530 RVA: 0x000EFECA File Offset: 0x000EE0CA
+		// (set) Token: 0x060063BB RID: 25531 RVA: 0x000EFEF5 File Offset: 0x000EE0F5
 		public virtual int CheckRange
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EDF RID: 7903
-		// (get) Token: 0x06005DCA RID: 24010 RVA: 0x000E2F30 File Offset: 0x000E1130
-		// (set) Token: 0x06005DCB RID: 24011 RVA: 0x000E2F91 File Offset: 0x000E1191
+		// Token: 0x1700208E RID: 8334
+		// (get) Token: 0x060063BC RID: 25532 RVA: 0x000EFF04 File Offset: 0x000EE104
+		// (set) Token: 0x060063BD RID: 25533 RVA: 0x000EFF65 File Offset: 0x000EE165
 		public virtual Aki.TDConfigMgr.Action.PosA Position
 		{
 			get
@@ -146,24 +144,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003872 RID: 14450
+		// Token: 0x04003BBA RID: 15290
 		[Nullable(2)]
 		protected IPositionRollbackConfig FbInstance;
 
-		// Token: 0x04003873 RID: 14451
+		// Token: 0x04003BBB RID: 15291
 		[Nullable(2)]
 		protected IPositionRollbackConfig_SetValue PocoInterface;
 
-		// Token: 0x04003874 RID: 14452
+		// Token: 0x04003BBC RID: 15292
 		private VectorInfo _CheckPointCache;
 
-		// Token: 0x04003875 RID: 14453
+		// Token: 0x04003BBD RID: 15293
 		private bool _CheckPointInited;
 
-		// Token: 0x04003876 RID: 14454
+		// Token: 0x04003BBE RID: 15294
 		private Aki.TDConfigMgr.Action.PosA _PositionCache;
 
-		// Token: 0x04003877 RID: 14455
+		// Token: 0x04003BBF RID: 15295
 		private bool _PositionInited;
 	}
 }

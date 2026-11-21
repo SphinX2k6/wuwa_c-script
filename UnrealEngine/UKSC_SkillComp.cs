@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E3F RID: 7743
+	// Token: 0x02000592 RID: 1426
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_SkillComp")]
 	[UnrealStructLayout(2120, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2120)]
 	public class UKSC_SkillComp : UKSC_CompBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D80B RID: 120843 RVA: 0x002B8EF5 File Offset: 0x002B70F5
+		// Token: 0x06008113 RID: 33043 RVA: 0x000BE7F5 File Offset: 0x000BC9F5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_SkillComp._ClassPtr;
 		}
 
-		// Token: 0x0601D80C RID: 120844 RVA: 0x002B8F04 File Offset: 0x002B7104
+		// Token: 0x06008114 RID: 33044 RVA: 0x000BE804 File Offset: 0x000BCA04
 		public UKSC_SkillComp() : this(BuiltinUtils.AllocNativeUObject(UKSC_SkillComp.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D80D RID: 120845 RVA: 0x002B8F2C File Offset: 0x002B712C
+		// Token: 0x06008115 RID: 33045 RVA: 0x000BE82C File Offset: 0x000BCA2C
 		public UKSC_SkillComp(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_SkillComp.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170076DD RID: 30429
-		// (get) Token: 0x0601D80E RID: 120846 RVA: 0x002B8F5F File Offset: 0x002B715F
-		// (set) Token: 0x0601D80F RID: 120847 RVA: 0x002B8F73 File Offset: 0x002B7173
+		// Token: 0x17001923 RID: 6435
+		// (get) Token: 0x06008116 RID: 33046 RVA: 0x000BE85F File Offset: 0x000BCA5F
+		// (set) Token: 0x06008117 RID: 33047 RVA: 0x000BE873 File Offset: 0x000BCA73
 		[Nullable(2)]
 		public unsafe UKSC_AttrSet AttrSet_
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076DE RID: 30430
-		// (get) Token: 0x0601D810 RID: 120848 RVA: 0x002B8F88 File Offset: 0x002B7188
-		// (set) Token: 0x0601D811 RID: 120849 RVA: 0x002B8FC1 File Offset: 0x002B71C1
+		// Token: 0x17001924 RID: 6436
+		// (get) Token: 0x06008118 RID: 33048 RVA: 0x000BE888 File Offset: 0x000BCA88
+		// (set) Token: 0x06008119 RID: 33049 RVA: 0x000BE8C1 File Offset: 0x000BCAC1
 		public TMap<UKSC_DA_Skill, UKSC_Skill> SkillMap
 		{
 			get
@@ -68,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076DF RID: 30431
-		// (get) Token: 0x0601D812 RID: 120850 RVA: 0x002B8FD0 File Offset: 0x002B71D0
-		// (set) Token: 0x0601D813 RID: 120851 RVA: 0x002B9009 File Offset: 0x002B7209
+		// Token: 0x17001925 RID: 6437
+		// (get) Token: 0x0600811A RID: 33050 RVA: 0x000BE8D0 File Offset: 0x000BCAD0
+		// (set) Token: 0x0600811B RID: 33051 RVA: 0x000BE909 File Offset: 0x000BCB09
 		public TArray<UKSC_Skill> Skills_
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076E0 RID: 30432
-		// (get) Token: 0x0601D814 RID: 120852 RVA: 0x002B9018 File Offset: 0x002B7218
-		// (set) Token: 0x0601D815 RID: 120853 RVA: 0x002B9051 File Offset: 0x002B7251
+		// Token: 0x17001926 RID: 6438
+		// (get) Token: 0x0600811C RID: 33052 RVA: 0x000BE918 File Offset: 0x000BCB18
+		// (set) Token: 0x0600811D RID: 33053 RVA: 0x000BE951 File Offset: 0x000BCB51
 		public TSet<UKSC_Skill> ToActiveSkills_
 		{
 			get
@@ -110,195 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076E1 RID: 30433
-		// (get) Token: 0x0601D816 RID: 120854 RVA: 0x002B9060 File Offset: 0x002B7260
-		// (set) Token: 0x0601D817 RID: 120855 RVA: 0x002B9099 File Offset: 0x002B7299
-		public TMap<UKSC_Bullet, UKSC_Skill> Bullets_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UKSC_Bullet, UKSC_Skill> result;
-				if ((result = this._Bullets_) == null)
-				{
-					result = (this._Bullets_ = new TMap<UKSC_Bullet, UKSC_Skill>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_Bullets_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Bullets_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E2 RID: 30434
-		// (get) Token: 0x0601D818 RID: 120856 RVA: 0x002B90A8 File Offset: 0x002B72A8
-		// (set) Token: 0x0601D819 RID: 120857 RVA: 0x002B90E1 File Offset: 0x002B72E1
-		public TArray<UKSC_Bullet> ToRemoveBullets_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UKSC_Bullet> result;
-				if ((result = this._ToRemoveBullets_) == null)
-				{
-					result = (this._ToRemoveBullets_ = new TArray<UKSC_Bullet>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_ToRemoveBullets_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ToRemoveBullets_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E3 RID: 30435
-		// (get) Token: 0x0601D81A RID: 120858 RVA: 0x002B90F0 File Offset: 0x002B72F0
-		// (set) Token: 0x0601D81B RID: 120859 RVA: 0x002B9129 File Offset: 0x002B7329
-		public TMap<UKSC_DA_Buff, UKSC_Buff> Buffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UKSC_DA_Buff, UKSC_Buff> result;
-				if ((result = this._Buffs_) == null)
-				{
-					result = (this._Buffs_ = new TMap<UKSC_DA_Buff, UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_Buffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Buffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E4 RID: 30436
-		// (get) Token: 0x0601D81C RID: 120860 RVA: 0x002B9138 File Offset: 0x002B7338
-		// (set) Token: 0x0601D81D RID: 120861 RVA: 0x002B9171 File Offset: 0x002B7371
-		public TMap<UKSC_DA_Buff, UKSC_Buff> ToAddBuffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UKSC_DA_Buff, UKSC_Buff> result;
-				if ((result = this._ToAddBuffs_) == null)
-				{
-					result = (this._ToAddBuffs_ = new TMap<UKSC_DA_Buff, UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_ToAddBuffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ToAddBuffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E5 RID: 30437
-		// (get) Token: 0x0601D81E RID: 120862 RVA: 0x002B9180 File Offset: 0x002B7380
-		// (set) Token: 0x0601D81F RID: 120863 RVA: 0x002B91B9 File Offset: 0x002B73B9
-		public TMap<UKSC_DA_Buff, UKSC_Buff> ToRemoveBuffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UKSC_DA_Buff, UKSC_Buff> result;
-				if ((result = this._ToRemoveBuffs_) == null)
-				{
-					result = (this._ToRemoveBuffs_ = new TMap<UKSC_DA_Buff, UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_ToRemoveBuffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ToRemoveBuffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E6 RID: 30438
-		// (get) Token: 0x0601D820 RID: 120864 RVA: 0x002B91C8 File Offset: 0x002B73C8
-		// (set) Token: 0x0601D821 RID: 120865 RVA: 0x002B9201 File Offset: 0x002B7401
-		public TMap<UKSC_DA_Buff, UKSC_Buff> UnEndRemoveBuffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<UKSC_DA_Buff, UKSC_Buff> result;
-				if ((result = this._UnEndRemoveBuffs_) == null)
-				{
-					result = (this._UnEndRemoveBuffs_ = new TMap<UKSC_DA_Buff, UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_UnEndRemoveBuffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.UnEndRemoveBuffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E7 RID: 30439
-		// (get) Token: 0x0601D822 RID: 120866 RVA: 0x002B9210 File Offset: 0x002B7410
-		// (set) Token: 0x0601D823 RID: 120867 RVA: 0x002B9249 File Offset: 0x002B7449
-		public TArray<UKSC_Buff> InstantBuffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UKSC_Buff> result;
-				if ((result = this._InstantBuffs_) == null)
-				{
-					result = (this._InstantBuffs_ = new TArray<UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_InstantBuffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.InstantBuffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E8 RID: 30440
-		// (get) Token: 0x0601D824 RID: 120868 RVA: 0x002B9258 File Offset: 0x002B7458
-		// (set) Token: 0x0601D825 RID: 120869 RVA: 0x002B9291 File Offset: 0x002B7491
-		public TArray<UKSC_Buff> ToAddInstantBuffs_
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UKSC_Buff> result;
-				if ((result = this._ToAddInstantBuffs_) == null)
-				{
-					result = (this._ToAddInstantBuffs_ = new TArray<UKSC_Buff>(base.NativePtr + (IntPtr)UKSC_SkillComp.__PropertyOffset_ToAddInstantBuffs_, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ToAddInstantBuffs_.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076E9 RID: 30441
-		// (get) Token: 0x0601D826 RID: 120870 RVA: 0x002B929F File Offset: 0x002B749F
-		// (set) Token: 0x0601D827 RID: 120871 RVA: 0x002B92B3 File Offset: 0x002B74B3
-		[Nullable(2)]
-		public unsafe UKSC_DA_SkillComp DA_SkillComp
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKSC_DA_SkillComp>(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_SkillComp.__PropertyOffset_DA_SkillComp);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKSC_SkillComp.__PropertyOffset_DA_SkillComp, value);
-			}
-		}
-
-		// Token: 0x170076EA RID: 30442
-		// (get) Token: 0x0601D828 RID: 120872 RVA: 0x002B92C8 File Offset: 0x002B74C8
-		// (set) Token: 0x0601D829 RID: 120873 RVA: 0x002B9301 File Offset: 0x002B7501
+		// Token: 0x17001927 RID: 6439
+		// (get) Token: 0x0600811E RID: 33054 RVA: 0x000BE960 File Offset: 0x000BCB60
+		// (set) Token: 0x0600811F RID: 33055 RVA: 0x000BE999 File Offset: 0x000BCB99
 		public FOnKSCBuffChange OnKSCBuffChange
 		{
 			get
@@ -317,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076EB RID: 30443
-		// (get) Token: 0x0601D82A RID: 120874 RVA: 0x002B9324 File Offset: 0x002B7524
-		// (set) Token: 0x0601D82B RID: 120875 RVA: 0x002B935D File Offset: 0x002B755D
+		// Token: 0x17001928 RID: 6440
+		// (get) Token: 0x06008120 RID: 33056 RVA: 0x000BE9BC File Offset: 0x000BCBBC
+		// (set) Token: 0x06008121 RID: 33057 RVA: 0x000BE9F5 File Offset: 0x000BCBF5
 		public TSet<UObject> StopCastSkill
 		{
 			get
@@ -338,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076EC RID: 30444
-		// (get) Token: 0x0601D82C RID: 120876 RVA: 0x002B936C File Offset: 0x002B756C
-		// (set) Token: 0x0601D82D RID: 120877 RVA: 0x002B93A5 File Offset: 0x002B75A5
+		// Token: 0x17001929 RID: 6441
+		// (get) Token: 0x06008122 RID: 33058 RVA: 0x000BEA04 File Offset: 0x000BCC04
+		// (set) Token: 0x06008123 RID: 33059 RVA: 0x000BEA3D File Offset: 0x000BCC3D
 		public TMap<UObject, FGameplayTagContainer> InvisibleTagMap
 		{
 			get
@@ -359,9 +173,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076ED RID: 30445
-		// (get) Token: 0x0601D82E RID: 120878 RVA: 0x002B93B4 File Offset: 0x002B75B4
-		// (set) Token: 0x0601D82F RID: 120879 RVA: 0x002B93ED File Offset: 0x002B75ED
+		// Token: 0x1700192A RID: 6442
+		// (get) Token: 0x06008124 RID: 33060 RVA: 0x000BEA4C File Offset: 0x000BCC4C
+		// (set) Token: 0x06008125 RID: 33061 RVA: 0x000BEA85 File Offset: 0x000BCC85
 		public TSet<UObject> UnattackableSet
 		{
 			get
@@ -380,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076EE RID: 30446
-		// (get) Token: 0x0601D830 RID: 120880 RVA: 0x002B93FC File Offset: 0x002B75FC
-		// (set) Token: 0x0601D831 RID: 120881 RVA: 0x002B9435 File Offset: 0x002B7635
+		// Token: 0x1700192B RID: 6443
+		// (get) Token: 0x06008126 RID: 33062 RVA: 0x000BEA94 File Offset: 0x000BCC94
+		// (set) Token: 0x06008127 RID: 33063 RVA: 0x000BEACD File Offset: 0x000BCCCD
 		public TMap<UObject, FGameplayTagContainer> ImmuneBuffMap
 		{
 			get
@@ -401,13 +215,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D832 RID: 120882 RVA: 0x002B9443 File Offset: 0x002B7643
+		// Token: 0x06008128 RID: 33064 RVA: 0x000BEADB File Offset: 0x000BCCDB
 		public float GetSkillCollDown()
 		{
 			return UKSC_SkillComp.__GetSkillCollDown_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D833 RID: 120883 RVA: 0x002B9450 File Offset: 0x002B7650
+		// Token: 0x06008129 RID: 33065 RVA: 0x000BEAE8 File Offset: 0x000BCCE8
 		public void GetAllBuffs([Nullable(new byte[]
 		{
 			2,
@@ -417,7 +231,7 @@ namespace UnrealEngine
 			UKSC_SkillComp.__GetAllBuffs_Internal(base.NativePtr, (OutBuffs ?? new TMap<UKSC_DA_Buff, int>()).NativeMapPtr);
 		}
 
-		// Token: 0x0601D834 RID: 120884 RVA: 0x002B946D File Offset: 0x002B766D
+		// Token: 0x0600812A RID: 33066 RVA: 0x000BEB05 File Offset: 0x000BCD05
 		public void Debug_GetAllBuffInfo([Nullable(new byte[]
 		{
 			2,
@@ -427,45 +241,45 @@ namespace UnrealEngine
 			UKSC_SkillComp.__Debug_GetAllBuffInfo_Internal(base.NativePtr, (OutBuffs ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x0601D835 RID: 120885
+		// Token: 0x0600812B RID: 33067
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSkillCollDown_Internal(IntPtr @this);
 
-		// Token: 0x0601D836 RID: 120886
+		// Token: 0x0600812C RID: 33068
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAllBuffs_Internal(IntPtr @this, IntPtr OutBuffs);
 
-		// Token: 0x0601D837 RID: 120887
+		// Token: 0x0600812D RID: 33069
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Debug_GetAllBuffInfo_Internal(IntPtr @this, IntPtr OutBuffs);
 
-		// Token: 0x0601D838 RID: 120888 RVA: 0x002B948A File Offset: 0x002B768A
+		// Token: 0x0600812E RID: 33070 RVA: 0x000BEB22 File Offset: 0x000BCD22
 		static UKSC_SkillComp()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_SkillComp");
 		}
 
-		// Token: 0x0601D839 RID: 120889 RVA: 0x002B9498 File Offset: 0x002B7698
+		// Token: 0x0600812F RID: 33071 RVA: 0x000BEB30 File Offset: 0x000BCD30
 		protected UKSC_SkillComp(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FFDA RID: 65498
+		// Token: 0x04003853 RID: 14419
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_SkillComp";
 
-		// Token: 0x0400FFDB RID: 65499
+		// Token: 0x04003854 RID: 14420
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FFDC RID: 65500
+		// Token: 0x04003855 RID: 14421
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FFDD RID: 65501
+		// Token: 0x04003856 RID: 14422
 		internal static int __PropertyOffset_AttrSet_;
 
-		// Token: 0x0400FFDE RID: 65502
+		// Token: 0x04003857 RID: 14423
 		internal static int __PropertyOffset_SkillMap;
 
-		// Token: 0x0400FFDF RID: 65503
+		// Token: 0x04003858 RID: 14424
 		[Nullable(new byte[]
 		{
 			2,
@@ -474,10 +288,10 @@ namespace UnrealEngine
 		})]
 		private TMap<UKSC_DA_Skill, UKSC_Skill> _SkillMap;
 
-		// Token: 0x0400FFE0 RID: 65504
+		// Token: 0x04003859 RID: 14425
 		internal static int __PropertyOffset_Skills_;
 
-		// Token: 0x0400FFE1 RID: 65505
+		// Token: 0x0400385A RID: 14426
 		[Nullable(new byte[]
 		{
 			2,
@@ -485,10 +299,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UKSC_Skill> _Skills_;
 
-		// Token: 0x0400FFE2 RID: 65506
+		// Token: 0x0400385B RID: 14427
 		internal static int __PropertyOffset_ToActiveSkills_;
 
-		// Token: 0x0400FFE3 RID: 65507
+		// Token: 0x0400385C RID: 14428
 		[Nullable(new byte[]
 		{
 			2,
@@ -496,113 +310,17 @@ namespace UnrealEngine
 		})]
 		private TSet<UKSC_Skill> _ToActiveSkills_;
 
-		// Token: 0x0400FFE4 RID: 65508
-		internal static int __PropertyOffset_Bullets_;
-
-		// Token: 0x0400FFE5 RID: 65509
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UKSC_Bullet, UKSC_Skill> _Bullets_;
-
-		// Token: 0x0400FFE6 RID: 65510
-		internal static int __PropertyOffset_ToRemoveBullets_;
-
-		// Token: 0x0400FFE7 RID: 65511
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UKSC_Bullet> _ToRemoveBullets_;
-
-		// Token: 0x0400FFE8 RID: 65512
-		internal static int __PropertyOffset_Buffs_;
-
-		// Token: 0x0400FFE9 RID: 65513
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UKSC_DA_Buff, UKSC_Buff> _Buffs_;
-
-		// Token: 0x0400FFEA RID: 65514
-		internal static int __PropertyOffset_ToAddBuffs_;
-
-		// Token: 0x0400FFEB RID: 65515
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UKSC_DA_Buff, UKSC_Buff> _ToAddBuffs_;
-
-		// Token: 0x0400FFEC RID: 65516
-		internal static int __PropertyOffset_ToRemoveBuffs_;
-
-		// Token: 0x0400FFED RID: 65517
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UKSC_DA_Buff, UKSC_Buff> _ToRemoveBuffs_;
-
-		// Token: 0x0400FFEE RID: 65518
-		internal static int __PropertyOffset_UnEndRemoveBuffs_;
-
-		// Token: 0x0400FFEF RID: 65519
-		[Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		private TMap<UKSC_DA_Buff, UKSC_Buff> _UnEndRemoveBuffs_;
-
-		// Token: 0x0400FFF0 RID: 65520
-		internal static int __PropertyOffset_InstantBuffs_;
-
-		// Token: 0x0400FFF1 RID: 65521
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UKSC_Buff> _InstantBuffs_;
-
-		// Token: 0x0400FFF2 RID: 65522
-		internal static int __PropertyOffset_ToAddInstantBuffs_;
-
-		// Token: 0x0400FFF3 RID: 65523
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UKSC_Buff> _ToAddInstantBuffs_;
-
-		// Token: 0x0400FFF4 RID: 65524
-		internal static int __PropertyOffset_DA_SkillComp;
-
-		// Token: 0x0400FFF5 RID: 65525
+		// Token: 0x0400385D RID: 14429
 		internal static int __PropertyOffset_OnKSCBuffChange;
 
-		// Token: 0x0400FFF6 RID: 65526
+		// Token: 0x0400385E RID: 14430
 		[Nullable(2)]
 		private FOnKSCBuffChange _OnKSCBuffChange;
 
-		// Token: 0x0400FFF7 RID: 65527
+		// Token: 0x0400385F RID: 14431
 		internal static int __PropertyOffset_StopCastSkill;
 
-		// Token: 0x0400FFF8 RID: 65528
+		// Token: 0x04003860 RID: 14432
 		[Nullable(new byte[]
 		{
 			2,
@@ -610,10 +328,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UObject> _StopCastSkill;
 
-		// Token: 0x0400FFF9 RID: 65529
+		// Token: 0x04003861 RID: 14433
 		internal static int __PropertyOffset_InvisibleTagMap;
 
-		// Token: 0x0400FFFA RID: 65530
+		// Token: 0x04003862 RID: 14434
 		[Nullable(new byte[]
 		{
 			2,
@@ -622,10 +340,10 @@ namespace UnrealEngine
 		})]
 		private TMap<UObject, FGameplayTagContainer> _InvisibleTagMap;
 
-		// Token: 0x0400FFFB RID: 65531
+		// Token: 0x04003863 RID: 14435
 		internal static int __PropertyOffset_UnattackableSet;
 
-		// Token: 0x0400FFFC RID: 65532
+		// Token: 0x04003864 RID: 14436
 		[Nullable(new byte[]
 		{
 			2,
@@ -633,10 +351,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UObject> _UnattackableSet;
 
-		// Token: 0x0400FFFD RID: 65533
+		// Token: 0x04003865 RID: 14437
 		internal static int __PropertyOffset_ImmuneBuffMap;
 
-		// Token: 0x0400FFFE RID: 65534
+		// Token: 0x04003866 RID: 14438
 		[Nullable(new byte[]
 		{
 			2,

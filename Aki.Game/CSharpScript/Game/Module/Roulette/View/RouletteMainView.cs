@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004CA0 RID: 19616
+	// Token: 0x02003C51 RID: 15441
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RouletteMainView : UiTickViewBase
 	{
-		// Token: 0x17007D0C RID: 32012
-		// (get) Token: 0x06032B20 RID: 207648 RVA: 0x00BD433A File Offset: 0x00BD253A
+		// Token: 0x170050B6 RID: 20662
+		// (get) Token: 0x060278D4 RID: 162004 RVA: 0x00B190D2 File Offset: 0x00B172D2
 		private RouletteComponentMain RouletteComponent
 		{
 			get
@@ -29,12 +29,12 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B21 RID: 207649 RVA: 0x00BD4347 File Offset: 0x00BD2547
+		// Token: 0x060278D5 RID: 162005 RVA: 0x00B190DF File Offset: 0x00B172DF
 		public RouletteMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032B22 RID: 207650 RVA: 0x00BD4350 File Offset: 0x00BD2550
+		// Token: 0x060278D6 RID: 162006 RVA: 0x00B190E8 File Offset: 0x00B172E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			if (this.OpenParam == null)
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B23 RID: 207651 RVA: 0x00BD454C File Offset: 0x00BD274C
+		// Token: 0x060278D7 RID: 162007 RVA: 0x00B192E4 File Offset: 0x00B174E4
 		protected override void OnBeforeCreate()
 		{
 			UiInteractLogReport.RecordRouletteOpen();
 		}
 
-		// Token: 0x06032B24 RID: 207652 RVA: 0x00BD4554 File Offset: 0x00BD2754
+		// Token: 0x060278D8 RID: 162008 RVA: 0x00B192EC File Offset: 0x00B174EC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RouletteMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032B25 RID: 207653 RVA: 0x00BD4598 File Offset: 0x00BD2798
+		// Token: 0x060278D9 RID: 162009 RVA: 0x00B19330 File Offset: 0x00B17530
 		protected override void OnStart()
 		{
 			this.ViewProxy.Start();
@@ -136,14 +136,14 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ViewProxy.AddEventListenerByStart();
 		}
 
-		// Token: 0x06032B26 RID: 207654 RVA: 0x00BD469A File Offset: 0x00BD289A
+		// Token: 0x060278DA RID: 162010 RVA: 0x00B19432 File Offset: 0x00B17632
 		protected override void OnBeforeShow()
 		{
 			this.ViewProxy.BeforeShow();
 			RenderModuleController.Instance.GlobalTimeDilation = 0.1f;
 		}
 
-		// Token: 0x06032B27 RID: 207655 RVA: 0x00BD46B6 File Offset: 0x00BD28B6
+		// Token: 0x060278DB RID: 162011 RVA: 0x00B1944E File Offset: 0x00B1764E
 		private void BlockOperation()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.ExploreRoulette, new EBattleUiChild[]
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			EventSystem.Instance.Emit<bool>(EEventName.OnRouletteViewVisibleChanged, true);
 		}
 
-		// Token: 0x06032B28 RID: 207656 RVA: 0x00BD46E8 File Offset: 0x00BD28E8
+		// Token: 0x060278DC RID: 162012 RVA: 0x00B19480 File Offset: 0x00B17680
 		protected override void OnBeforeDestroy()
 		{
 			this.ViewProxy.RemoveEventListenerByStart();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B29 RID: 207657 RVA: 0x00BD4721 File Offset: 0x00BD2921
+		// Token: 0x060278DD RID: 162013 RVA: 0x00B194B9 File Offset: 0x00B176B9
 		protected override void OnAfterDestroy()
 		{
 			RenderModuleController.Instance.GlobalTimeDilation = 1f;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			UiInteractLogReport.RecordRouletteClose();
 		}
 
-		// Token: 0x06032B2A RID: 207658 RVA: 0x00BD473D File Offset: 0x00BD293D
+		// Token: 0x060278DE RID: 162014 RVA: 0x00B194D5 File Offset: 0x00B176D5
 		private void FreeOperation()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.ExploreRoulette, new EBattleUiChild[]
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			EventSystem.Instance.Emit<bool>(EEventName.OnRouletteViewVisibleChanged, false);
 		}
 
-		// Token: 0x06032B2B RID: 207659 RVA: 0x00BD4770 File Offset: 0x00BD2970
+		// Token: 0x060278DF RID: 162015 RVA: 0x00B19508 File Offset: 0x00B17708
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.InputControllerMainTypeChange));
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ViewProxy.AddEventListener();
 		}
 
-		// Token: 0x06032B2C RID: 207660 RVA: 0x00BD481C File Offset: 0x00BD2A1C
+		// Token: 0x060278E0 RID: 162016 RVA: 0x00B195B4 File Offset: 0x00B177B4
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.InputControllerMainTypeChange));
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ViewProxy.RemoveEventListener();
 		}
 
-		// Token: 0x06032B2D RID: 207661 RVA: 0x00BD48C7 File Offset: 0x00BD2AC7
+		// Token: 0x060278E1 RID: 162017 RVA: 0x00B1965F File Offset: 0x00B1785F
 		public void CloseSelf(bool emitSelectOn = true)
 		{
 			if (emitSelectOn)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06032B2E RID: 207662 RVA: 0x00BD48E0 File Offset: 0x00BD2AE0
+		// Token: 0x060278E2 RID: 162018 RVA: 0x00B19678 File Offset: 0x00B17878
 		protected override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RouletteComponent.Refresh(item, item2);
 		}
 
-		// Token: 0x06032B2F RID: 207663 RVA: 0x00BD4923 File Offset: 0x00BD2B23
+		// Token: 0x060278E3 RID: 162019 RVA: 0x00B196BB File Offset: 0x00B178BB
 		private void SetRouletteParam()
 		{
 			this.SetRouletteInputType();
@@ -241,25 +241,25 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RouletteComponent.SetAllGridToggleSelfInteractive(false);
 		}
 
-		// Token: 0x06032B30 RID: 207664 RVA: 0x00BD4943 File Offset: 0x00BD2B43
+		// Token: 0x060278E4 RID: 162020 RVA: 0x00B196DB File Offset: 0x00B178DB
 		private void SetRouletteType()
 		{
 			this.RouletteComponent.RefreshRouletteType();
 		}
 
-		// Token: 0x06032B31 RID: 207665 RVA: 0x00BD4950 File Offset: 0x00BD2B50
+		// Token: 0x060278E5 RID: 162021 RVA: 0x00B196E8 File Offset: 0x00B178E8
 		private void SetRoulettePlatformType()
 		{
 			this.RouletteComponent.RefreshRoulettePlatformType();
 		}
 
-		// Token: 0x06032B32 RID: 207666 RVA: 0x00BD495D File Offset: 0x00BD2B5D
+		// Token: 0x060278E6 RID: 162022 RVA: 0x00B196F5 File Offset: 0x00B178F5
 		private void SetRouletteInputType()
 		{
 			this.RouletteComponent.RefreshRouletteInputType();
 		}
 
-		// Token: 0x06032B33 RID: 207667 RVA: 0x00BD496C File Offset: 0x00BD2B6C
+		// Token: 0x060278E7 RID: 162023 RVA: 0x00B19704 File Offset: 0x00B17904
 		private void RefreshRouletteType()
 		{
 			if (Info.Instance.OperationType == EOperationType.Desktop)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B34 RID: 207668 RVA: 0x00BD49F0 File Offset: 0x00BD2BF0
+		// Token: 0x060278E8 RID: 162024 RVA: 0x00B19788 File Offset: 0x00B17988
 		private void OnRouletteTypeSwitch(EToggleState toggleState)
 		{
 			if (!this.ViewProxy.CanSwitchType)
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RouletteComponent.Refresh(new int?(item), new int?(item2));
 		}
 
-		// Token: 0x06032B35 RID: 207669 RVA: 0x00BD4A54 File Offset: 0x00BD2C54
+		// Token: 0x060278E9 RID: 162025 RVA: 0x00B197EC File Offset: 0x00B179EC
 		private void InputControllerMainTypeChange(EInputControllerMainType eInputControllerMainType, EInputControllerMainType inputControllerMainType)
 		{
 			Log instance = Log.Instance;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.CloseSelf(false);
 		}
 
-		// Token: 0x06032B36 RID: 207670 RVA: 0x00BD4A9D File Offset: 0x00BD2C9D
+		// Token: 0x060278EA RID: 162026 RVA: 0x00B19835 File Offset: 0x00B17A35
 		private void OnCheckDisableInput(IReadOnlyList<InputDistributeTag> inputDistributeTags)
 		{
 			if (!InputDistributeModel.Instance.IsTagMatchAnyCurrentInputTag("UiInputRoot.ShortcutKeyTag", false))
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B37 RID: 207671 RVA: 0x00BD4AB8 File Offset: 0x00BD2CB8
+		// Token: 0x060278EB RID: 162027 RVA: 0x00B19850 File Offset: 0x00B17A50
 		private void SetTips()
 		{
 			string actionName = this.ViewProxy.GetActionName();
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			LguiUtil.Instance.SetLocalTextNew(text, "Text_ToolsClosePC_Text", new <>z__ReadOnlySingleElementList<object>(RouletteModel.Instance.GetRouletteKeyRichText(actionName)));
 		}
 
-		// Token: 0x06032B38 RID: 207672 RVA: 0x00BD4B09 File Offset: 0x00BD2D09
+		// Token: 0x060278EC RID: 162028 RVA: 0x00B198A1 File Offset: 0x00B17AA1
 		private void OnInputRouletteAction(string name, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType == InputDistributeDefine.EActionType.Release)
@@ -326,28 +326,28 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B39 RID: 207673 RVA: 0x00BD4B18 File Offset: 0x00BD2D18
+		// Token: 0x060278ED RID: 162029 RVA: 0x00B198B0 File Offset: 0x00B17AB0
 		private void OnOpenRouletteSetView()
 		{
 			RouletteController.Instance.OpenAssemblyView(this.ViewProxy.RouletteType, null, null, null, false);
 			this.CloseSelf(false);
 		}
 
-		// Token: 0x06032B3A RID: 207674 RVA: 0x00BD4B5E File Offset: 0x00BD2D5E
+		// Token: 0x060278EE RID: 162030 RVA: 0x00B198F6 File Offset: 0x00B17AF6
 		private void OnRouletteSwitchToggleComponentEmit()
 		{
 			this.OnRouletteTypeSwitch(EToggleState.ETT_UnChecked);
 		}
 
-		// Token: 0x0401AFDC RID: 110556
+		// Token: 0x0401593D RID: 88381
 		[Nullable(2)]
 		private RouletteInputBase InputManager;
 
-		// Token: 0x0401AFDD RID: 110557
+		// Token: 0x0401593E RID: 88382
 		[Nullable(2)]
 		public UUIItem RouletteUiItem;
 
-		// Token: 0x0401AFDE RID: 110558
+		// Token: 0x0401593F RID: 88383
 		private RouletteMainViewProxyBase ViewProxy;
 	}
 }

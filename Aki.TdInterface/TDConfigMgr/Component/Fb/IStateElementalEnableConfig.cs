@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E24 RID: 3620
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F20 RID: 3872
 	public class IStateElementalEnableConfig
 	{
-		// Token: 0x060051E2 RID: 20962 RVA: 0x000C9CF0 File Offset: 0x000C7EF0
+		// Token: 0x06005709 RID: 22281 RVA: 0x000D55B8 File Offset: 0x000D37B8
 		public static IStateElementalEnableConfig Create(IStateElementalEnableConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B57 RID: 6999
-		// (get) Token: 0x060051E3 RID: 20963 RVA: 0x000C9D0F File Offset: 0x000C7F0F
+		// Token: 0x17001CC4 RID: 7364
+		// (get) Token: 0x0600570A RID: 22282 RVA: 0x000D55D7 File Offset: 0x000D37D7
 		public virtual string State
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B58 RID: 7000
-		// (get) Token: 0x060051E4 RID: 20964 RVA: 0x000C9D1C File Offset: 0x000C7F1C
+		// Token: 0x17001CC5 RID: 7365
+		// (get) Token: 0x0600570B RID: 22283 RVA: 0x000D55E4 File Offset: 0x000D37E4
 		public virtual bool ElementalEnable
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F29 RID: 12073
+		// Token: 0x040031F1 RID: 12785
 		private IStateElementalEnableConfig Instance;
 	}
 }

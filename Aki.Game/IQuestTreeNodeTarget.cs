@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002691 RID: 9873
+// Token: 0x02001B7C RID: 7036
 [NullableContext(2)]
 public interface IQuestTreeNodeTarget
 {
-	// Token: 0x17001A19 RID: 6681
-	// (get) Token: 0x060143D2 RID: 82898
-	// (set) Token: 0x060143D3 RID: 82899
+	// Token: 0x17001A51 RID: 6737
+	// (get) Token: 0x060118B4 RID: 71860
+	// (set) Token: 0x060118B5 RID: 71861
 	EQuestTreeNodeTargetType Type { get; set; }
 
-	// Token: 0x17001A1A RID: 6682
-	// (get) Token: 0x060143D4 RID: 82900
-	// (set) Token: 0x060143D5 RID: 82901
+	// Token: 0x17001A52 RID: 6738
+	// (get) Token: 0x060118B6 RID: 71862
+	// (set) Token: 0x060118B7 RID: 71863
 	string Text { get; set; }
 
-	// Token: 0x17001A1B RID: 6683
-	// (get) Token: 0x060143D6 RID: 82902
-	// (set) Token: 0x060143D7 RID: 82903
+	// Token: 0x17001A53 RID: 6739
+	// (get) Token: 0x060118B8 RID: 71864
+	// (set) Token: 0x060118B9 RID: 71865
 	string TextKey { get; set; }
 
-	// Token: 0x17001A1C RID: 6684
-	// (get) Token: 0x060143D8 RID: 82904
-	// (set) Token: 0x060143D9 RID: 82905
+	// Token: 0x17001A54 RID: 6740
+	// (get) Token: 0x060118BA RID: 71866
+	// (set) Token: 0x060118BB RID: 71867
 	[Nullable(new byte[]
 	{
 		2,
@@ -39,23 +39,23 @@ public interface IQuestTreeNodeTarget
 		1
 	})] set; }
 
-	// Token: 0x17001A1D RID: 6685
-	// (get) Token: 0x060143DA RID: 82906
-	// (set) Token: 0x060143DB RID: 82907
+	// Token: 0x17001A55 RID: 6741
+	// (get) Token: 0x060118BC RID: 71868
+	// (set) Token: 0x060118BD RID: 71869
 	bool? IsFinished { get; set; }
 
-	// Token: 0x17001A1E RID: 6686
-	// (get) Token: 0x060143DC RID: 82908
-	// (set) Token: 0x060143DD RID: 82909
+	// Token: 0x17001A56 RID: 6742
+	// (get) Token: 0x060118BE RID: 71870
+	// (set) Token: 0x060118BF RID: 71871
 	int? HelpId { get; set; }
 
-	// Token: 0x17001A1F RID: 6687
-	// (get) Token: 0x060143DE RID: 82910
-	// (set) Token: 0x060143DF RID: 82911
+	// Token: 0x17001A57 RID: 6743
+	// (get) Token: 0x060118C0 RID: 71872
+	// (set) Token: 0x060118C1 RID: 71873
 	int? GotoId { get; set; }
 
-	// Token: 0x17001A20 RID: 6688
-	// (get) Token: 0x060143E0 RID: 82912
-	// (set) Token: 0x060143E1 RID: 82913
+	// Token: 0x17001A58 RID: 6744
+	// (get) Token: 0x060118C2 RID: 71874
+	// (set) Token: 0x060118C3 RID: 71875
 	Action OnGoto { get; set; }
 }

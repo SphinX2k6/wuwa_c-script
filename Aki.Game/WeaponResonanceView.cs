@@ -11,12 +11,12 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CFF RID: 11519
+// Token: 0x02002259 RID: 8793
 [NullableContext(2)]
 [Nullable(0)]
 public class WeaponResonanceView : UiTabViewBase
 {
-	// Token: 0x0601834F RID: 99151 RVA: 0x00628C40 File Offset: 0x00626E40
+	// Token: 0x06015BF0 RID: 89072 RVA: 0x0064EC08 File Offset: 0x0064CE08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -54,7 +54,7 @@ public class WeaponResonanceView : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06018350 RID: 99152 RVA: 0x00628E3C File Offset: 0x0062703C
+	// Token: 0x06015BF1 RID: 89073 RVA: 0x0064EE04 File Offset: 0x0064D004
 	protected override void OnStart()
 	{
 		this.WeaponIncId = (int)this.ExtraParams;
@@ -77,19 +77,19 @@ public class WeaponResonanceView : UiTabViewBase
 		this.InitMoney();
 	}
 
-	// Token: 0x06018351 RID: 99153 RVA: 0x00628ED9 File Offset: 0x006270D9
+	// Token: 0x06015BF2 RID: 89074 RVA: 0x0064EEA1 File Offset: 0x0064D0A1
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeaponResonanceSuccess, new Action<int, int>(this.ResonanceSuccess));
 	}
 
-	// Token: 0x06018352 RID: 99154 RVA: 0x00628EF7 File Offset: 0x006270F7
+	// Token: 0x06015BF3 RID: 89075 RVA: 0x0064EEBF File Offset: 0x0064D0BF
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeaponResonanceSuccess, new Action<int, int>(this.ResonanceSuccess));
 	}
 
-	// Token: 0x06018353 RID: 99155 RVA: 0x00628F18 File Offset: 0x00627118
+	// Token: 0x06015BF4 RID: 89076 RVA: 0x0064EEE0 File Offset: 0x0064D0E0
 	private void ResonanceSuccess(int incId, int lastLevel)
 	{
 		if (incId != this.WeaponIncId)
@@ -118,7 +118,7 @@ public class WeaponResonanceView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponResonanceSuccessView, param, null);
 	}
 
-	// Token: 0x06018354 RID: 99156 RVA: 0x00628FCC File Offset: 0x006271CC
+	// Token: 0x06015BF5 RID: 89077 RVA: 0x0064EF94 File Offset: 0x0064D194
 	private void InitSingleItemSelect()
 	{
 		this.SingleItemSelect = new SingleItemSelect();
@@ -129,27 +129,27 @@ public class WeaponResonanceView : UiTabViewBase
 		this.SingleItemSelect.SetItemSelectChangeCallBack(new Action<ISelectedData>(this.OnItemSelectChange));
 	}
 
-	// Token: 0x06018355 RID: 99157 RVA: 0x0062903E File Offset: 0x0062723E
+	// Token: 0x06015BF6 RID: 89078 RVA: 0x0064F006 File Offset: 0x0064D206
 	[NullableContext(1)]
 	private List<ItemDataBase> GetItemList()
 	{
 		return WeaponModel.Instance.GetResonanceMaterialList(this.WeaponIncId);
 	}
 
-	// Token: 0x06018356 RID: 99158 RVA: 0x00629050 File Offset: 0x00627250
+	// Token: 0x06015BF7 RID: 89079 RVA: 0x0064F018 File Offset: 0x0064D218
 	[NullableContext(1)]
 	private void OnItemSelectChange(ISelectedData currentSelectItem)
 	{
 		this.RefreshLevel();
 	}
 
-	// Token: 0x06018357 RID: 99159 RVA: 0x00629058 File Offset: 0x00627258
+	// Token: 0x06015BF8 RID: 89080 RVA: 0x0064F020 File Offset: 0x0064D220
 	private void InitMoney()
 	{
 		base.SetItemIcon(base.GetTexture(7), 2, null, null);
 	}
 
-	// Token: 0x06018358 RID: 99160 RVA: 0x00629080 File Offset: 0x00627280
+	// Token: 0x06015BF9 RID: 89081 RVA: 0x0064F048 File Offset: 0x0064D248
 	private void RefreshMoney(int startLevel, int endLevel)
 	{
 		int num = 0;
@@ -164,7 +164,7 @@ public class WeaponResonanceView : UiTabViewBase
 		base.GetText(8).useChangeColor = !this.IsMoneyEnough;
 	}
 
-	// Token: 0x06018359 RID: 99161 RVA: 0x0062911C File Offset: 0x0062731C
+	// Token: 0x06015BFA RID: 89082 RVA: 0x0064F0E4 File Offset: 0x0064D2E4
 	private void RefreshLevel()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
@@ -213,7 +213,7 @@ public class WeaponResonanceView : UiTabViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), value.Desc, array);
 	}
 
-	// Token: 0x0601835A RID: 99162 RVA: 0x006292CC File Offset: 0x006274CC
+	// Token: 0x06015BFB RID: 89083 RVA: 0x0064F294 File Offset: 0x0064D494
 	protected override void OnBeforeShow()
 	{
 		WeaponModel.Instance.SetCurSelectViewName(EWeaponViewName.WeaponResonanceView);
@@ -221,7 +221,7 @@ public class WeaponResonanceView : UiTabViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x0601835B RID: 99163 RVA: 0x006292E8 File Offset: 0x006274E8
+	// Token: 0x06015BFC RID: 89084 RVA: 0x0064F2B0 File Offset: 0x0064D4B0
 	private void RefreshSelectedList()
 	{
 		if (this.AutoPlaceItem || this.SingleItemSelect == null)
@@ -247,14 +247,14 @@ public class WeaponResonanceView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601835C RID: 99164 RVA: 0x0062935C File Offset: 0x0062755C
+	// Token: 0x06015BFD RID: 89085 RVA: 0x0064F324 File Offset: 0x0064D524
 	public void Refresh()
 	{
 		this.RefreshName();
 		this.RefreshLevel();
 	}
 
-	// Token: 0x0601835D RID: 99165 RVA: 0x0062936C File Offset: 0x0062756C
+	// Token: 0x06015BFE RID: 89086 RVA: 0x0064F334 File Offset: 0x0064D534
 	public void RefreshName()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
@@ -271,7 +271,7 @@ public class WeaponResonanceView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601835E RID: 99166 RVA: 0x00629434 File Offset: 0x00627634
+	// Token: 0x06015BFF RID: 89087 RVA: 0x0064F3FC File Offset: 0x0064D5FC
 	private int GetArrivedLevel()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
@@ -290,7 +290,7 @@ public class WeaponResonanceView : UiTabViewBase
 		return resonLevelLimit;
 	}
 
-	// Token: 0x0601835F RID: 99167 RVA: 0x006294B8 File Offset: 0x006276B8
+	// Token: 0x06015C00 RID: 89088 RVA: 0x0064F480 File Offset: 0x0064D680
 	private void ResonanceClick(int _)
 	{
 		ISelectedData materialData = this.GetCurrentSelectedConsumeData();
@@ -364,24 +364,29 @@ public class WeaponResonanceView : UiTabViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06018360 RID: 99168 RVA: 0x0062969C File Offset: 0x0062789C
+	// Token: 0x06015C01 RID: 89089 RVA: 0x0064F664 File Offset: 0x0064D864
 	private ISelectedData GetCurrentSelectedConsumeData()
 	{
-		if (this.AutoPlaceItem)
+		if (!this.AutoPlaceItem)
 		{
-			int num = this.GetCurrentResonanceConfig().AlternativeConsume()[0];
-			SelectedData selectedData = new SelectedData();
-			selectedData.ItemId = num;
-			selectedData.IncId = 0;
-			InventoryModel instance = InventoryModel.Instance;
-			selectedData.Count = ((instance != null) ? instance.GetCommonItemCount(num, 0) : 0);
-			selectedData.SelectedCount = 1;
-			return selectedData;
+			return this.SingleItemSelect.GetCurrentSelectedData();
 		}
-		return this.SingleItemSelect.GetCurrentSelectedData();
+		int[] array = this.GetCurrentResonanceConfig().AlternativeConsume();
+		if (array.Length == 0)
+		{
+			return null;
+		}
+		int num = array[0];
+		SelectedData selectedData = new SelectedData();
+		selectedData.ItemId = num;
+		selectedData.IncId = 0;
+		InventoryModel instance = InventoryModel.Instance;
+		selectedData.Count = ((instance != null) ? instance.GetCommonItemCount(num, 0) : 0);
+		selectedData.SelectedCount = 1;
+		return selectedData;
 	}
 
-	// Token: 0x06018361 RID: 99169 RVA: 0x00629704 File Offset: 0x00627904
+	// Token: 0x06015C02 RID: 89090 RVA: 0x0064F6D4 File Offset: 0x0064D8D4
 	private WeaponReson GetCurrentResonanceConfig()
 	{
 		WeaponInstance weaponDataByIncId = WeaponModel.Instance.GetWeaponDataByIncId(this.WeaponIncId);
@@ -389,10 +394,15 @@ public class WeaponResonanceView : UiTabViewBase
 		return WeaponConfig.Instance.GetWeaponResonanceConfig(value.ResonId, weaponDataByIncId.GetResonanceLevel()).Value;
 	}
 
-	// Token: 0x06018362 RID: 99170 RVA: 0x00629750 File Offset: 0x00627950
+	// Token: 0x06015C03 RID: 89091 RVA: 0x0064F720 File Offset: 0x0064D920
 	private void RefreshAlternativeConsumeItem()
 	{
-		int consumeId = this.GetCurrentSelectedConsumeData().ItemId;
+		ISelectedData currentSelectedConsumeData = this.GetCurrentSelectedConsumeData();
+		if (currentSelectedConsumeData == null)
+		{
+			return;
+		}
+		int consumeId = currentSelectedConsumeData.ItemId;
 		PropMediumItemGrid propMediumItemGrid = new PropMediumItemGrid
 		{
 			ItemConfigId = new int?(consumeId)
@@ -412,65 +422,65 @@ public class WeaponResonanceView : UiTabViewBase
 		this.ItemGridAlternativeConsume.BindOnCanExecuteChange((object _1, bool _2, EToggleState _3) => false);
 		this.ItemGridAlternativeConsume.BindOnExtendToggleClicked(delegate(MediumItemGridExtendCallback _)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(consumeId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(consumeId, true, null, false);
 		});
 	}
 
-	// Token: 0x0400B3F5 RID: 46069
+	// Token: 0x0400B76A RID: 46954
 	private bool IsMoneyEnough;
 
-	// Token: 0x0400B3F6 RID: 46070
+	// Token: 0x0400B76B RID: 46955
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x0400B3F7 RID: 46071
+	// Token: 0x0400B76C RID: 46956
 	private SingleItemSelect SingleItemSelect;
 
-	// Token: 0x0400B3F8 RID: 46072
+	// Token: 0x0400B76D RID: 46957
 	private int WeaponIncId;
 
-	// Token: 0x0400B3F9 RID: 46073
+	// Token: 0x0400B76E RID: 46958
 	private SkeletalObserverHandle WeaponObserver;
 
-	// Token: 0x0400B3FA RID: 46074
+	// Token: 0x0400B76F RID: 46959
 	private SkeletalObserverHandle WeaponScabbardObserver;
 
-	// Token: 0x0400B3FB RID: 46075
+	// Token: 0x0400B770 RID: 46960
 	private bool AutoPlaceItem;
 
-	// Token: 0x0400B3FC RID: 46076
+	// Token: 0x0400B771 RID: 46961
 	private MediumItemGrid ItemGridAlternativeConsume;
 
-	// Token: 0x02009296 RID: 37526
+	// Token: 0x020084BE RID: 33982
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402F64B RID: 194123
+		// Token: 0x0402ACD5 RID: 175317
 		ResonanceLevelText,
-		// Token: 0x0402F64C RID: 194124
+		// Token: 0x0402ACD6 RID: 175318
 		NextLevelText,
-		// Token: 0x0402F64D RID: 194125
+		// Token: 0x0402ACD7 RID: 175319
 		CurrentEffectText,
-		// Token: 0x0402F64E RID: 194126
+		// Token: 0x0402ACD8 RID: 175320
 		ArrowItem,
-		// Token: 0x0402F64F RID: 194127
+		// Token: 0x0402ACD9 RID: 175321
 		ConsumeRootItem,
-		// Token: 0x0402F650 RID: 194128
+		// Token: 0x0402ACDA RID: 175322
 		CostItem,
-		// Token: 0x0402F651 RID: 194129
+		// Token: 0x0402ACDB RID: 175323
 		ConfirmButtonItem,
-		// Token: 0x0402F652 RID: 194130
+		// Token: 0x0402ACDC RID: 175324
 		MoneyTexture,
-		// Token: 0x0402F653 RID: 194131
+		// Token: 0x0402ACDD RID: 175325
 		MoneyText,
-		// Token: 0x0402F654 RID: 194132
+		// Token: 0x0402ACDE RID: 175326
 		MaxItem,
-		// Token: 0x0402F655 RID: 194133
+		// Token: 0x0402ACDF RID: 175327
 		TipTextItem,
-		// Token: 0x0402F656 RID: 194134
+		// Token: 0x0402ACE0 RID: 175328
 		ConsumeItem,
-		// Token: 0x0402F657 RID: 194135
+		// Token: 0x0402ACE1 RID: 175329
 		WeaponNameText,
-		// Token: 0x0402F658 RID: 194136
+		// Token: 0x0402ACE2 RID: 175330
 		SkillNameText
 	}
 }

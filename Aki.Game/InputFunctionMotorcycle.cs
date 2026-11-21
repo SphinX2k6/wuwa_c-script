@@ -10,12 +10,12 @@ using CSharpScript.Game;
 using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 
-// Token: 0x020030B4 RID: 12468
+// Token: 0x0200260C RID: 9740
 [NullableContext(2)]
 [Nullable(0)]
 public static class InputFunctionMotorcycle
 {
-	// Token: 0x0601AB64 RID: 109412 RVA: 0x00732300 File Offset: 0x00730500
+	// Token: 0x06018573 RID: 99699 RVA: 0x00757C6C File Offset: 0x00755E6C
 	private static SInputCommand VisionSkill1Function(float time, bool isForce = false)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -91,7 +91,7 @@ public static class InputFunctionMotorcycle
 		return null;
 	}
 
-	// Token: 0x0601AB65 RID: 109413 RVA: 0x007324F4 File Offset: 0x007306F4
+	// Token: 0x06018574 RID: 99700 RVA: 0x00757E60 File Offset: 0x00756060
 	public static SInputCommand MotorcycleVisionSkill1OnPress(float time)
 	{
 		if (Info.Instance.IsInTouch())
@@ -101,7 +101,7 @@ public static class InputFunctionMotorcycle
 		return InputFunctionMotorcycle.VisionSkill1Function(time, false);
 	}
 
-	// Token: 0x0601AB66 RID: 109414 RVA: 0x0073250B File Offset: 0x0073070B
+	// Token: 0x06018575 RID: 99701 RVA: 0x00757E77 File Offset: 0x00756077
 	public static SInputCommand MotorcycleVisionSkill1OnRelease(float time)
 	{
 		if (!Info.Instance.IsInTouch())
@@ -115,7 +115,7 @@ public static class InputFunctionMotorcycle
 		return InputFunctionMotorcycle.VisionSkill1Function(time, false);
 	}
 
-	// Token: 0x0601AB67 RID: 109415 RVA: 0x0073252C File Offset: 0x0073072C
+	// Token: 0x06018576 RID: 99702 RVA: 0x00757E98 File Offset: 0x00756098
 	public static int? GetVisionSkill1SkillId(bool isForce = false)
 	{
 		SInputCommand sinputCommand = InputFunctionMotorcycle.VisionSkill1Function(0f, isForce);
@@ -126,7 +126,7 @@ public static class InputFunctionMotorcycle
 		return null;
 	}
 
-	// Token: 0x0400CE51 RID: 52817
+	// Token: 0x0400D23D RID: 53821
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly HashSet<int> PullCollectionMutexSkillIds = new HashSet<int>

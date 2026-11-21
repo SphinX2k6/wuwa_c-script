@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C18 RID: 23576
+	// Token: 0x02004BF8 RID: 19448
 	public class BossPilingSubView : ActivitySubViewBase
 	{
-		// Token: 0x0603B926 RID: 244006 RVA: 0x00E35144 File Offset: 0x00E33344
+		// Token: 0x06030871 RID: 198769 RVA: 0x00D854A0 File Offset: 0x00D836A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B927 RID: 244007 RVA: 0x00E351B0 File Offset: 0x00E333B0
+		// Token: 0x06030872 RID: 198770 RVA: 0x00D8550C File Offset: 0x00D8370C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B928 RID: 244008 RVA: 0x00E351F4 File Offset: 0x00E333F4
+		// Token: 0x06030873 RID: 198771 RVA: 0x00D85550 File Offset: 0x00D83750
 		protected override void OnRefreshView()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityBaseData.Id);
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			btnReward2.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0603B929 RID: 244009 RVA: 0x00E352D5 File Offset: 0x00E334D5
+		// Token: 0x06030874 RID: 198772 RVA: 0x00D85631 File Offset: 0x00D83831
 		protected override void OnBeforeHide()
 		{
 			this.BtnReward.UnBindRedDot();
 		}
 
-		// Token: 0x0603B92A RID: 244010 RVA: 0x00E352E2 File Offset: 0x00E334E2
+		// Token: 0x06030875 RID: 198773 RVA: 0x00D8563E File Offset: 0x00D8383E
 		private void OnClickedReward(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.BossPilingTaskView, null, null);
 		}
 
-		// Token: 0x0603B92B RID: 244011 RVA: 0x00E352F5 File Offset: 0x00E334F5
+		// Token: 0x06030876 RID: 198774 RVA: 0x00D85651 File Offset: 0x00D83851
 		[NullableContext(2)]
 		private void OnClickedConfirm(ActivityBaseData _)
 		{
@@ -93,20 +93,20 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			});
 		}
 
-		// Token: 0x0401F04D RID: 127053
+		// Token: 0x04019AFE RID: 105214
 		[Nullable(1)]
 		protected ButtonItem BtnReward;
 
-		// Token: 0x0401F04E RID: 127054
+		// Token: 0x04019AFF RID: 105215
 		[Nullable(1)]
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0200BE03 RID: 48643
+		// Token: 0x0200A80B RID: 43019
 		private enum EDefine
 		{
-			// Token: 0x040394B3 RID: 234675
+			// Token: 0x04033E76 RID: 212598
 			CommonActivityInfoItem,
-			// Token: 0x040394B4 RID: 234676
+			// Token: 0x04033E77 RID: 212599
 			BtnCircle
 		}
 	}

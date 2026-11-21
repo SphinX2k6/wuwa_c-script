@@ -11,7 +11,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiLevelVarEvent
 {
-	// Token: 0x06000D93 RID: 3475 RVA: 0x0004B2EC File Offset: 0x000494EC
+	// Token: 0x06000D99 RID: 3481 RVA: 0x0004BE88 File Offset: 0x0004A088
 	public void AddLevelVarEvent(SAiLevelVar levelVar, UKuroBooleanEventBinder boolEventBinder)
 	{
 		switch (levelVar.VarSource)
@@ -56,7 +56,7 @@ public class AiLevelVarEvent
 		}
 	}
 
-	// Token: 0x06000D94 RID: 3476 RVA: 0x0004B408 File Offset: 0x00049608
+	// Token: 0x06000D9A RID: 3482 RVA: 0x0004BFA4 File Offset: 0x0004A1A4
 	public void AddLevelVarEvent(SAiLevelVar levelVar, UKuroIntEventBinder intEventBinder)
 	{
 		switch (levelVar.VarSource)
@@ -101,7 +101,7 @@ public class AiLevelVarEvent
 		}
 	}
 
-	// Token: 0x06000D95 RID: 3477 RVA: 0x0004B524 File Offset: 0x00049724
+	// Token: 0x06000D9B RID: 3483 RVA: 0x0004C0C0 File Offset: 0x0004A2C0
 	public bool RemoveLevelVarEvent(UKuroBooleanEventBinder boolEventBinder)
 	{
 		int num = 0;
@@ -160,7 +160,7 @@ public class AiLevelVarEvent
 		return false;
 	}
 
-	// Token: 0x06000D96 RID: 3478 RVA: 0x0004B73C File Offset: 0x0004993C
+	// Token: 0x06000D9C RID: 3484 RVA: 0x0004C2D8 File Offset: 0x0004A4D8
 	public bool RemoveLevelVarEvent(UKuroIntEventBinder intEventBinder)
 	{
 		int num = 0;
@@ -219,7 +219,7 @@ public class AiLevelVarEvent
 		return false;
 	}
 
-	// Token: 0x06000D97 RID: 3479 RVA: 0x0004B954 File Offset: 0x00049B54
+	// Token: 0x06000D9D RID: 3485 RVA: 0x0004C4F0 File Offset: 0x0004A6F0
 	private void OnReceiveTreeVar(long treeId)
 	{
 		foreach (TreeVarEventPair treeVarEventPair in this.TreeVarEventPairs)
@@ -232,7 +232,7 @@ public class AiLevelVarEvent
 		}
 	}
 
-	// Token: 0x06000D98 RID: 3480 RVA: 0x0004B9C4 File Offset: 0x00049BC4
+	// Token: 0x06000D9E RID: 3486 RVA: 0x0004C560 File Offset: 0x0004A760
 	private void OnReceivePlayerVar(IReadOnlyDictionary<string, VarDefinePb> varInfos)
 	{
 		foreach (PlayerVarEventPair playerVarEventPair in this.PlayerVarEventPairs)
@@ -241,7 +241,7 @@ public class AiLevelVarEvent
 		}
 	}
 
-	// Token: 0x06000D99 RID: 3481 RVA: 0x0004BA14 File Offset: 0x00049C14
+	// Token: 0x06000D9F RID: 3487 RVA: 0x0004C5B0 File Offset: 0x0004A7B0
 	public void Clear()
 	{
 		foreach (EntityVarEventPair entityVarEventPair in this.EntityVarEventPairs)
@@ -269,12 +269,12 @@ public class AiLevelVarEvent
 		}
 	}
 
-	// Token: 0x04000AE9 RID: 2793
+	// Token: 0x04000AF1 RID: 2801
 	private readonly List<EntityVarEventPair> EntityVarEventPairs = new List<EntityVarEventPair>();
 
-	// Token: 0x04000AEA RID: 2794
+	// Token: 0x04000AF2 RID: 2802
 	private readonly List<TreeVarEventPair> TreeVarEventPairs = new List<TreeVarEventPair>();
 
-	// Token: 0x04000AEB RID: 2795
+	// Token: 0x04000AF3 RID: 2803
 	private readonly List<PlayerVarEventPair> PlayerVarEventPairs = new List<PlayerVarEventPair>();
 }

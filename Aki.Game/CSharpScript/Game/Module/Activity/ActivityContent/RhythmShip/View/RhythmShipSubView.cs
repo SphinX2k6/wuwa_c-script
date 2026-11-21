@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006258 RID: 25176
+	// Token: 0x020051D6 RID: 20950
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RhythmShipSubView : ActivitySubViewBase
 	{
-		// Token: 0x1700925A RID: 37466
-		// (get) Token: 0x0603F683 RID: 259715 RVA: 0x00F541A9 File Offset: 0x00F523A9
+		// Token: 0x170065BC RID: 26044
+		// (get) Token: 0x06034344 RID: 213828 RVA: 0x00E9B105 File Offset: 0x00E99305
 		protected new RhythmShipData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F684 RID: 259716 RVA: 0x00F541B8 File Offset: 0x00F523B8
+		// Token: 0x06034345 RID: 213829 RVA: 0x00E9B114 File Offset: 0x00E99314
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F685 RID: 259717 RVA: 0x00F54344 File Offset: 0x00F52544
+		// Token: 0x06034346 RID: 213830 RVA: 0x00E9B2A0 File Offset: 0x00E994A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipSubView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F686 RID: 259718 RVA: 0x00F54387 File Offset: 0x00F52587
+		// Token: 0x06034347 RID: 213831 RVA: 0x00E9B2E3 File Offset: 0x00E994E3
 		protected override void OnStart()
 		{
 			this.RefreshTitle();
@@ -72,21 +72,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshBottomTimeText();
 		}
 
-		// Token: 0x0603F687 RID: 259719 RVA: 0x00F543A7 File Offset: 0x00F525A7
+		// Token: 0x06034348 RID: 213832 RVA: 0x00E9B303 File Offset: 0x00E99503
 		protected override void OnBeforeShow()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RhythmShipTask, base.GetItem(10), null, 0);
 			RedDotController.Instance.BindRedDot(ERedDotName.RhythmShipTimeLimitTask, base.GetItem(9), null, 0);
 		}
 
-		// Token: 0x0603F688 RID: 259720 RVA: 0x00F543DB File Offset: 0x00F525DB
+		// Token: 0x06034349 RID: 213833 RVA: 0x00E9B337 File Offset: 0x00E99537
 		protected override void OnBeforeHide()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RhythmShipTask, base.GetItem(10), 0);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RhythmShipTimeLimitTask, base.GetItem(9), 0);
 		}
 
-		// Token: 0x0603F689 RID: 259721 RVA: 0x00F5440D File Offset: 0x00F5260D
+		// Token: 0x0603434A RID: 213834 RVA: 0x00E9B369 File Offset: 0x00E99569
 		protected override void OnRefreshView()
 		{
 			base.GetText(8).SetText(RhythmShipModel.Instance.GetTaskProgressString(0), true);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshRecommendQuestTips();
 		}
 
-		// Token: 0x0603F68A RID: 259722 RVA: 0x00F5444C File Offset: 0x00F5264C
+		// Token: 0x0603434B RID: 213835 RVA: 0x00E9B3A8 File Offset: 0x00E995A8
 		private void RefreshTitle()
 		{
 			string title = this.ActivityBaseData.GetTitle();
@@ -104,14 +104,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshTimeTitle();
 		}
 
-		// Token: 0x0603F68B RID: 259723 RVA: 0x00F54488 File Offset: 0x00F52688
+		// Token: 0x0603434C RID: 213836 RVA: 0x00E9B3E4 File Offset: 0x00E995E4
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimeTitle();
 			this.RefreshBottomTimeText();
 		}
 
-		// Token: 0x0603F68C RID: 259724 RVA: 0x00F54498 File Offset: 0x00F52698
+		// Token: 0x0603434D RID: 213837 RVA: 0x00E9B3F4 File Offset: 0x00E995F4
 		private void RefreshTimeTitle()
 		{
 			RhythmShipData activityBaseData = this.ActivityBaseData;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x0603F68D RID: 259725 RVA: 0x00F54508 File Offset: 0x00F52708
+		// Token: 0x0603434E RID: 213838 RVA: 0x00E9B464 File Offset: 0x00E99664
 		private void RefreshBottomTimeText()
 		{
 			bool uiactive = this.ActivityBaseData.CheckIfInLimitTime();
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetText(13).SetText(remainTimeText ?? "", true);
 		}
 
-		// Token: 0x0603F68E RID: 259726 RVA: 0x00F54564 File Offset: 0x00F52764
+		// Token: 0x0603434F RID: 213839 RVA: 0x00E9B4C0 File Offset: 0x00E996C0
 		private void RefreshDescription()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.DescriptionComponent.SetContentByTextId(desc, Array.Empty<string>());
 		}
 
-		// Token: 0x0603F68F RID: 259727 RVA: 0x00F545DC File Offset: 0x00F527DC
+		// Token: 0x06034350 RID: 213840 RVA: 0x00E9B538 File Offset: 0x00E99738
 		private void RefreshRewardList()
 		{
 			List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RewardListComponent.RefreshItemLayout(previewReward, null);
 		}
 
-		// Token: 0x0603F690 RID: 259728 RVA: 0x00F5461C File Offset: 0x00F5281C
+		// Token: 0x06034351 RID: 213841 RVA: 0x00E9B578 File Offset: 0x00E99778
 		private void RefreshBottom()
 		{
 			RhythmShipData activityBaseData = this.ActivityBaseData;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.BottomComponent.SetFunctionRedDotVisible(activityBaseData.GetGotoRhythmShipBtnRedDotActive());
 		}
 
-		// Token: 0x0603F691 RID: 259729 RVA: 0x00F546A7 File Offset: 0x00F528A7
+		// Token: 0x06034352 RID: 213842 RVA: 0x00E9B603 File Offset: 0x00E99803
 		private void OnGotoBtnClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -202,19 +202,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			});
 		}
 
-		// Token: 0x0603F692 RID: 259730 RVA: 0x00F546C5 File Offset: 0x00F528C5
+		// Token: 0x06034353 RID: 213843 RVA: 0x00E9B621 File Offset: 0x00E99821
 		private void OnClickTaskBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipTaskView, null, null);
 		}
 
-		// Token: 0x0603F693 RID: 259731 RVA: 0x00F546D8 File Offset: 0x00F528D8
+		// Token: 0x06034354 RID: 213844 RVA: 0x00E9B634 File Offset: 0x00E99834
 		private void OnClickTaskLimitBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipLimitTaskView, null, null);
 		}
 
-		// Token: 0x0603F694 RID: 259732 RVA: 0x00F546EC File Offset: 0x00F528EC
+		// Token: 0x06034355 RID: 213845 RVA: 0x00E9B648 File Offset: 0x00E99848
 		private void OnRecommendBtnClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.DirectTrainRecommendQuest);
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603F695 RID: 259733 RVA: 0x00F5472C File Offset: 0x00F5292C
+		// Token: 0x06034356 RID: 213846 RVA: 0x00E9B688 File Offset: 0x00E99888
 		private void RefreshRecommendQuestTips()
 		{
 			bool flag = !this.ActivityBaseData.IsRecommendQuestFinish();
@@ -238,13 +238,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x040211F1 RID: 135665
+		// Token: 0x0401BB20 RID: 113440
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x040211F2 RID: 135666
+		// Token: 0x0401BB21 RID: 113441
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x040211F3 RID: 135667
+		// Token: 0x0401BB22 RID: 113442
 		[Nullable(new byte[]
 		{
 			2,
@@ -252,10 +252,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x040211F4 RID: 135668
+		// Token: 0x0401BB23 RID: 113443
 		private ActivityFunctionalTypeA BottomComponent;
 
-		// Token: 0x040211F5 RID: 135669
+		// Token: 0x0401BB24 RID: 113444
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 	}
 }

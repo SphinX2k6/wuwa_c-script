@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200748A RID: 29834
+	// Token: 0x02007C7D RID: 31869
 	public struct ITriggerSpecificScanEffect : IFlatbufferObject
 	{
-		// Token: 0x1700E27D RID: 57981
-		// (get) Token: 0x0603637C RID: 222076 RVA: 0x0075EF0A File Offset: 0x0075D10A
+		// Token: 0x1700EE9C RID: 61084
+		// (get) Token: 0x06039769 RID: 235369 RVA: 0x007C1CC6 File Offset: 0x007BFEC6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603637D RID: 222077 RVA: 0x0075EF17 File Offset: 0x0075D117
+		// Token: 0x0603976A RID: 235370 RVA: 0x007C1CD3 File Offset: 0x007BFED3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603637E RID: 222078 RVA: 0x0075EF20 File Offset: 0x0075D120
+		// Token: 0x0603976B RID: 235371 RVA: 0x007C1CDC File Offset: 0x007BFEDC
 		public static ITriggerSpecificScanEffect GetRootAsITriggerSpecificScanEffect(ByteBuffer _bb)
 		{
 			return ITriggerSpecificScanEffect.GetRootAsITriggerSpecificScanEffect(_bb, default(ITriggerSpecificScanEffect));
 		}
 
-		// Token: 0x0603637F RID: 222079 RVA: 0x0075EF3C File Offset: 0x0075D13C
+		// Token: 0x0603976C RID: 235372 RVA: 0x007C1CF8 File Offset: 0x007BFEF8
 		public static ITriggerSpecificScanEffect GetRootAsITriggerSpecificScanEffect(ByteBuffer _bb, ITriggerSpecificScanEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036380 RID: 222080 RVA: 0x0075EF59 File Offset: 0x0075D159
+		// Token: 0x0603976D RID: 235373 RVA: 0x007C1D15 File Offset: 0x007BFF15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036381 RID: 222081 RVA: 0x0075EF68 File Offset: 0x0075D168
+		// Token: 0x0603976E RID: 235374 RVA: 0x007C1D24 File Offset: 0x007BFF24
 		public ITriggerSpecificScanEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E27E RID: 57982
-		// (get) Token: 0x06036382 RID: 222082 RVA: 0x0075EF78 File Offset: 0x0075D178
+		// Token: 0x1700EE9D RID: 61085
+		// (get) Token: 0x0603976F RID: 235375 RVA: 0x007C1D34 File Offset: 0x007BFF34
 		public TSpecificScanEffect ScanEffectType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036383 RID: 222083 RVA: 0x0075EFB4 File Offset: 0x0075D1B4
+		// Token: 0x06039770 RID: 235376 RVA: 0x007C1D70 File Offset: 0x007BFF70
 		public TTable? ScanEffect<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036384 RID: 222084 RVA: 0x0075EFF8 File Offset: 0x0075D1F8
+		// Token: 0x06039771 RID: 235377 RVA: 0x007C1DB4 File Offset: 0x007BFFB4
 		public IChargeSlashScanEffect ScanEffectAsIChargeSlashScanEffect()
 		{
 			return this.ScanEffect<IChargeSlashScanEffect>().Value;
 		}
 
-		// Token: 0x06036385 RID: 222085 RVA: 0x0075F014 File Offset: 0x0075D214
+		// Token: 0x06039772 RID: 235378 RVA: 0x007C1DD0 File Offset: 0x007BFFD0
 		public IFlyingFeatherScanEffect ScanEffectAsIFlyingFeatherScanEffect()
 		{
 			return this.ScanEffect<IFlyingFeatherScanEffect>().Value;
 		}
 
-		// Token: 0x06036386 RID: 222086 RVA: 0x0075F02F File Offset: 0x0075D22F
+		// Token: 0x06039773 RID: 235379 RVA: 0x007C1DEB File Offset: 0x007BFFEB
 		public static Offset<ITriggerSpecificScanEffect> CreateITriggerSpecificScanEffect(FlatBufferBuilder builder, TSpecificScanEffect ScanEffect_type = TSpecificScanEffect.NONE, int ScanEffectOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITriggerSpecificScanEffect.EndITriggerSpecificScanEffect(builder);
 		}
 
-		// Token: 0x06036387 RID: 222087 RVA: 0x0075F04C File Offset: 0x0075D24C
+		// Token: 0x06039774 RID: 235380 RVA: 0x007C1E08 File Offset: 0x007C0008
 		public static void StartITriggerSpecificScanEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036388 RID: 222088 RVA: 0x0075F055 File Offset: 0x0075D255
+		// Token: 0x06039775 RID: 235381 RVA: 0x007C1E11 File Offset: 0x007C0011
 		public static void AddScanEffectType(FlatBufferBuilder builder, TSpecificScanEffect scanEffectType)
 		{
 			builder.AddByte(0, (byte)scanEffectType, 0);
 		}
 
-		// Token: 0x06036389 RID: 222089 RVA: 0x0075F060 File Offset: 0x0075D260
+		// Token: 0x06039776 RID: 235382 RVA: 0x007C1E1C File Offset: 0x007C001C
 		public static void AddScanEffect(FlatBufferBuilder builder, int scanEffectOffset)
 		{
 			builder.AddOffset(1, scanEffectOffset, 0);
 		}
 
-		// Token: 0x0603638A RID: 222090 RVA: 0x0075F06B File Offset: 0x0075D26B
+		// Token: 0x06039777 RID: 235383 RVA: 0x007C1E27 File Offset: 0x007C0027
 		public static Offset<ITriggerSpecificScanEffect> EndITriggerSpecificScanEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<ITriggerSpecificScanEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0603638B RID: 222091 RVA: 0x0075F078 File Offset: 0x0075D278
+		// Token: 0x06039778 RID: 235384 RVA: 0x007C1E34 File Offset: 0x007C0034
 		public ITriggerSpecificScanEffectT UnPack()
 		{
 			ITriggerSpecificScanEffectT triggerSpecificScanEffectT = new ITriggerSpecificScanEffectT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return triggerSpecificScanEffectT;
 		}
 
-		// Token: 0x0603638C RID: 222092 RVA: 0x0075F094 File Offset: 0x0075D294
+		// Token: 0x06039779 RID: 235385 RVA: 0x007C1E50 File Offset: 0x007C0050
 		public void UnPackTo(ITriggerSpecificScanEffectT _o)
 		{
 			_o.ScanEffect = new TSpecificScanEffectUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.ScanEffect.Value = ((this.ScanEffect<IFlyingFeatherScanEffect>() != null) ? this.ScanEffect<IFlyingFeatherScanEffect>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0603638D RID: 222093 RVA: 0x0075F138 File Offset: 0x0075D338
+		// Token: 0x0603977A RID: 235386 RVA: 0x007C1EF4 File Offset: 0x007C00F4
 		public static Offset<ITriggerSpecificScanEffect> Pack(FlatBufferBuilder builder, ITriggerSpecificScanEffectT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITriggerSpecificScanEffect.CreateITriggerSpecificScanEffect(builder, scanEffect_type, scanEffectOffset);
 		}
 
-		// Token: 0x04012321 RID: 74529
+		// Token: 0x04013349 RID: 78665
 		private Table __p;
 	}
 }

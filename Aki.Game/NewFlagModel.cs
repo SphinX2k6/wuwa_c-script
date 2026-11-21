@@ -7,41 +7,41 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x020022D1 RID: 8913
+// Token: 0x020017B5 RID: 6069
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class NewFlagModel : ModelBase
 {
-	// Token: 0x06011800 RID: 71680 RVA: 0x0044A897 File Offset: 0x00448A97
+	// Token: 0x0600EC97 RID: 60567 RVA: 0x004575A2 File Offset: 0x004557A2
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
 		return true;
 	}
 
-	// Token: 0x06011801 RID: 71681 RVA: 0x0044A8A0 File Offset: 0x00448AA0
+	// Token: 0x0600EC98 RID: 60568 RVA: 0x004575AB File Offset: 0x004557AB
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
 		return true;
 	}
 
-	// Token: 0x06011802 RID: 71682 RVA: 0x0044A8A9 File Offset: 0x00448AA9
+	// Token: 0x0600EC99 RID: 60569 RVA: 0x004575B4 File Offset: 0x004557B4
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetPlayerBasicInfo, new Action(this.LoadNewFlagConfig));
 		EventSystem.Instance.Add(EEventName.LogOut, new Action(this.ClearNewFlag));
 	}
 
-	// Token: 0x06011803 RID: 71683 RVA: 0x0044A8E3 File Offset: 0x00448AE3
+	// Token: 0x0600EC9A RID: 60570 RVA: 0x004575EE File Offset: 0x004557EE
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGetPlayerBasicInfo, new Action(this.LoadNewFlagConfig));
 		EventSystem.Instance.Remove(EEventName.LogOut, new Action(this.ClearNewFlag));
 	}
 
-	// Token: 0x06011804 RID: 71684 RVA: 0x0044A920 File Offset: 0x00448B20
+	// Token: 0x0600EC9B RID: 60571 RVA: 0x00457628 File Offset: 0x00455828
 	public void LoadNewFlagConfig()
 	{
 		foreach (ELocalStoragePlayerKey key in this.NewFlagLocalStoragePlayerKeyList)
@@ -54,7 +54,7 @@ public class NewFlagModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnLoadedNewFlagConfig);
 	}
 
-	// Token: 0x06011805 RID: 71685 RVA: 0x0044A9B0 File Offset: 0x00448BB0
+	// Token: 0x0600EC9C RID: 60572 RVA: 0x004576B8 File Offset: 0x004558B8
 	public void ClearNewFlag()
 	{
 		this.NewFlagMap.Clear();
@@ -62,7 +62,7 @@ public class NewFlagModel : ModelBase
 		this.FlagDirtyMap.Clear();
 	}
 
-	// Token: 0x06011806 RID: 71686 RVA: 0x0044A9D4 File Offset: 0x00448BD4
+	// Token: 0x0600EC9D RID: 60573 RVA: 0x004576DC File Offset: 0x004558DC
 	public bool SaveNewFlagConfig(ELocalStoragePlayerKey key)
 	{
 		HashSet<int> collection;
@@ -86,7 +86,7 @@ public class NewFlagModel : ModelBase
 		return LocalStorage.SetPlayer<List<int>>(key, this.TempArray);
 	}
 
-	// Token: 0x06011807 RID: 71687 RVA: 0x0044AA4C File Offset: 0x00448C4C
+	// Token: 0x0600EC9E RID: 60574 RVA: 0x00457754 File Offset: 0x00455954
 	public bool AddNewFlag(ELocalStoragePlayerKey key, int value)
 	{
 		HashSet<int> hashSet;
@@ -107,7 +107,7 @@ public class NewFlagModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06011808 RID: 71688 RVA: 0x0044AAAC File Offset: 0x00448CAC
+	// Token: 0x0600EC9F RID: 60575 RVA: 0x004577B4 File Offset: 0x004559B4
 	public bool RemoveNewFlag(ELocalStoragePlayerKey key, int value)
 	{
 		HashSet<int> hashSet;
@@ -127,7 +127,7 @@ public class NewFlagModel : ModelBase
 		return flag;
 	}
 
-	// Token: 0x06011809 RID: 71689 RVA: 0x0044AB1C File Offset: 0x00448D1C
+	// Token: 0x0600ECA0 RID: 60576 RVA: 0x00457824 File Offset: 0x00455A24
 	public bool HasNewFlag(ELocalStoragePlayerKey key, int value)
 	{
 		EClientStorageSystemIdType key2;
@@ -139,7 +139,7 @@ public class NewFlagModel : ModelBase
 		return this.NewFlagMap.TryGetValue(key, out hashSet) && hashSet.Contains(value);
 	}
 
-	// Token: 0x0601180A RID: 71690 RVA: 0x0044AB6C File Offset: 0x00448D6C
+	// Token: 0x0600ECA1 RID: 60577 RVA: 0x00457874 File Offset: 0x00455A74
 	[NullableContext(2)]
 	[Obsolete("该接口仅为条件检测使用，之后条件检测修改获取数据方式后，该接口废除，不让外部获取")]
 	public HashSet<int> GetNewFlagSet(ELocalStoragePlayerKey key)
@@ -149,8 +149,8 @@ public class NewFlagModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x17001649 RID: 5705
-	// (get) Token: 0x0601180B RID: 71691 RVA: 0x0044AB89 File Offset: 0x00448D89
+	// Token: 0x17001680 RID: 5760
+	// (get) Token: 0x0600ECA2 RID: 60578 RVA: 0x00457891 File Offset: 0x00455A91
 	public static NewFlagModel Instance
 	{
 		get
@@ -159,7 +159,7 @@ public class NewFlagModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601180C RID: 71692 RVA: 0x0044AB90 File Offset: 0x00448D90
+	// Token: 0x0600ECA3 RID: 60579 RVA: 0x00457898 File Offset: 0x00455A98
 	public static NewFlagModel GetOrCreateInstance()
 	{
 		if (NewFlagModel._Instance == null)
@@ -169,7 +169,7 @@ public class NewFlagModel : ModelBase
 		return NewFlagModel._Instance;
 	}
 
-	// Token: 0x0601180D RID: 71693 RVA: 0x0044ABA4 File Offset: 0x00448DA4
+	// Token: 0x0600ECA4 RID: 60580 RVA: 0x004578AC File Offset: 0x00455AAC
 	public static bool CreateInstance()
 	{
 		if (NewFlagModel._Instance != null)
@@ -180,33 +180,33 @@ public class NewFlagModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601180E RID: 71694 RVA: 0x0044ABBA File Offset: 0x00448DBA
+	// Token: 0x0600ECA5 RID: 60581 RVA: 0x004578C2 File Offset: 0x00455AC2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601180F RID: 71695 RVA: 0x0044ABBC File Offset: 0x00448DBC
+	// Token: 0x0600ECA6 RID: 60582 RVA: 0x004578C4 File Offset: 0x00455AC4
 	public static void ResetStaticDefaultValue()
 	{
 		NewFlagModel._Instance = null;
 	}
 
-	// Token: 0x06011810 RID: 71696 RVA: 0x0044ABC4 File Offset: 0x00448DC4
+	// Token: 0x0600ECA7 RID: 60583 RVA: 0x004578CC File Offset: 0x00455ACC
 	static NewFlagModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NewFlagModel.CreateStaticDefaultValue), new Action(NewFlagModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040084DA RID: 34010
+	// Token: 0x04008618 RID: 34328
 	private readonly Dictionary<ELocalStoragePlayerKey, HashSet<int>> NewFlagMap = new Dictionary<ELocalStoragePlayerKey, HashSet<int>>();
 
-	// Token: 0x040084DB RID: 34011
+	// Token: 0x04008619 RID: 34329
 	private readonly List<int> TempArray = new List<int>();
 
-	// Token: 0x040084DC RID: 34012
+	// Token: 0x0400861A RID: 34330
 	private readonly Dictionary<ELocalStoragePlayerKey, bool> FlagDirtyMap = new Dictionary<ELocalStoragePlayerKey, bool>();
 
-	// Token: 0x040084DD RID: 34013
+	// Token: 0x0400861B RID: 34331
 	private List<ELocalStoragePlayerKey> NewFlagLocalStoragePlayerKeyList = new List<ELocalStoragePlayerKey>
 	{
 		ELocalStoragePlayerKey.ComposeLevelKey,
@@ -235,7 +235,7 @@ public class NewFlagModel : ModelBase
 		ELocalStoragePlayerKey.CalabashSkinRedDot
 	};
 
-	// Token: 0x040084DE RID: 34014
+	// Token: 0x0400861C RID: 34332
 	private readonly Dictionary<ELocalStoragePlayerKey, EClientStorageSystemIdType> localToServerStorageKey = new Dictionary<ELocalStoragePlayerKey, EClientStorageSystemIdType>
 	{
 		{
@@ -260,7 +260,7 @@ public class NewFlagModel : ModelBase
 		}
 	};
 
-	// Token: 0x040084DF RID: 34015
+	// Token: 0x0400861D RID: 34333
 	[Nullable(2)]
 	private static NewFlagModel _Instance;
 }

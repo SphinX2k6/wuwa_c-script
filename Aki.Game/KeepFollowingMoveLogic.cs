@@ -14,12 +14,12 @@ using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x020030FF RID: 12543
+// Token: 0x02002657 RID: 9815
 [NullableContext(1)]
 [Nullable(0)]
 public class KeepFollowingMoveLogic
 {
-	// Token: 0x0601AE3F RID: 110143 RVA: 0x007481C4 File Offset: 0x007463C4
+	// Token: 0x06018867 RID: 100455 RVA: 0x0076D8B0 File Offset: 0x0076BAB0
 	public void Init(Entity entity)
 	{
 		this.Entity = entity;
@@ -35,7 +35,7 @@ public class KeepFollowingMoveLogic
 		this.CapsuleHeight = (this.ActorComp.ScaledHalfHeight - this.ActorComp.ScaledRadius) * 2f;
 	}
 
-	// Token: 0x0601AE40 RID: 110144 RVA: 0x00748290 File Offset: 0x00746490
+	// Token: 0x06018868 RID: 100456 RVA: 0x0076D97C File Offset: 0x0076BB7C
 	public void UpdateMove(float deltaSeconds)
 	{
 		if (!this.InFollowingState)
@@ -67,7 +67,7 @@ public class KeepFollowingMoveLogic
 		this.UpdateFollowingState(deltaSeconds);
 	}
 
-	// Token: 0x0601AE41 RID: 110145 RVA: 0x0074830C File Offset: 0x0074650C
+	// Token: 0x06018869 RID: 100457 RVA: 0x0076D9F8 File Offset: 0x0076BBF8
 	private bool CheckLeaderState()
 	{
 		if (this.FollowingParams == null)
@@ -86,13 +86,13 @@ public class KeepFollowingMoveLogic
 		return true;
 	}
 
-	// Token: 0x0601AE42 RID: 110146 RVA: 0x00748373 File Offset: 0x00746573
+	// Token: 0x0601886A RID: 100458 RVA: 0x0076DA5F File Offset: 0x0076BC5F
 	public bool IsMoving()
 	{
 		return this.InFollowingState;
 	}
 
-	// Token: 0x0601AE43 RID: 110147 RVA: 0x0074837B File Offset: 0x0074657B
+	// Token: 0x0601886B RID: 100459 RVA: 0x0076DA67 File Offset: 0x0076BC67
 	public void MoveEnd(ELevelEventState result)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -107,9 +107,11 @@ public class KeepFollowingMoveLogic
 		obj2(result);
 	}
 
-	// Token: 0x0601AE44 RID: 110148 RVA: 0x007483A8 File Offset: 0x007465A8
+	// Token: 0x0601886C RID: 100460 RVA: 0x0076DA94 File Offset: 0x0076BC94
 	public void StopMove()
 	{
+		this.RestoreFreeFollowingNavEdgeProtection();
+		this.ClearFreeFollowingSafeNavLocation();
 		if (this.IsFollowSitting)
 		{
 			this.StopFollowingMove(true);
@@ -131,6 +133,7 @@ public class KeepFollowingMoveLogic
 		this.InFollowingState = false;
 		this.FollowingParams = null;
 		this.FreeFollowingRuntime.Clear();
+		this.ClearFreeFollowingTargetCache();
 		this.ForceStopFollowSit();
 		this.StopFollowingMove(true);
 		this.StopRotatingToTarget(true);
@@ -138,16 +141,17 @@ public class KeepFollowingMoveLogic
 		this.ReleaseAllSplineAsset();
 	}
 
-	// Token: 0x0601AE45 RID: 110149 RVA: 0x00748442 File Offset: 0x00746642
+	// Token: 0x0601886D RID: 100461 RVA: 0x0076DB40 File Offset: 0x0076BD40
 	public void Dispose()
 	{
 		this.ForceStopFollowSit();
 		this.StopMove();
 	}
 
-	// Token: 0x0601AE46 RID: 110150 RVA: 0x00748450 File Offset: 0x00746650
+	// Token: 0x0601886E RID: 100462 RVA: 0x0076DB50 File Offset: 0x0076BD50
 	public unsafe void StartKeepFollowing(KeepFollowingParams parameters)
 	{
+		this.RestoreFreeFollowingNavEdgeProtection();
 		this.ForceStopFollowSit();
 		BaseMoveComponent moveComp = this.MoveComp;
 		if (moveComp != null)
@@ -159,10 +163,13 @@ public class KeepFollowingMoveLogic
 		this.InSplineDistanceClampMode = false;
 		this.IllegalDuration = 0f;
 		this.ObstacleDuration = 0f;
+		this.FreeFollowingObstacleDuration = 0f;
 		this.StandDuration = 0f;
 		this.IsStandState = false;
 		this.IsFollowSitting = false;
 		this.FollowSitChairId = 0;
+		this.ClearFreeFollowingTargetCache();
+		this.ClearFreeFollowingSafeNavLocation();
 		this.LastTeleportLocation.Reset();
 		this.InitOffsetLocationList();
 		FreeFollowingParams freeFollowing = parameters.MoveParams.FreeFollowing;
@@ -216,6 +223,7 @@ public class KeepFollowingMoveLogic
 				instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
 			}
 		}
+		this.UpdateFreeFollowingNavEdgeProtection();
 		if (this.ActorComp != null)
 		{
 			CharacterActorComponent actorComp2 = this.ActorComp;
@@ -231,7 +239,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE47 RID: 110151 RVA: 0x0074876C File Offset: 0x0074696C
+	// Token: 0x0601886F RID: 100463 RVA: 0x0076DE90 File Offset: 0x0076C090
 	public unsafe void StartKeepFollowingWithDataAssetPath(CharacterActorComponent leader, string daPath, EHandType? handType = null, bool followingOnce = false, [Nullable(2)] Action<ELevelEventState> onFinish = null, [TupleElementNames(new string[]
 	{
 		"X",
@@ -257,7 +265,7 @@ public class KeepFollowingMoveLogic
 		this.StartKeepFollowingWithDataAsset(leader, bp_KeepFollowingConfig_C, handType, followingOnce, onFinish, walkOffset);
 	}
 
-	// Token: 0x0601AE48 RID: 110152 RVA: 0x00748820 File Offset: 0x00746A20
+	// Token: 0x06018870 RID: 100464 RVA: 0x0076DF44 File Offset: 0x0076C144
 	public void StartKeepFollowingWithDataAsset(CharacterActorComponent leader, BP_KeepFollowingConfig_C da, EHandType? handType = null, bool followingOnce = false, [Nullable(2)] Action<ELevelEventState> onFinish = null, [TupleElementNames(new string[]
 	{
 		"X",
@@ -275,7 +283,7 @@ public class KeepFollowingMoveLogic
 		this.StartKeepFollowing(keepFollowingParams);
 	}
 
-	// Token: 0x0601AE49 RID: 110153 RVA: 0x0074887C File Offset: 0x00746A7C
+	// Token: 0x06018871 RID: 100465 RVA: 0x0076DFA0 File Offset: 0x0076C1A0
 	private void SetTurnToTarget(global::Vector target, global::Vector faceLoc, float rotSpeed, string context, bool ignoreDir = false, [Nullable(2)] Func<bool> stopCondition = null)
 	{
 		if (this.IsRotatingToTarget)
@@ -325,7 +333,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE4A RID: 110154 RVA: 0x00748A68 File Offset: 0x00746C68
+	// Token: 0x06018872 RID: 100466 RVA: 0x0076E18C File Offset: 0x0076C38C
 	private void KeepRotatingToTarget(float deltaSeconds)
 	{
 		if (this.ActorComp == null)
@@ -375,7 +383,7 @@ public class KeepFollowingMoveLogic
 		this.ActorComp.SetOverrideTurnSpeed(new float?(this.TurnSpeed));
 	}
 
-	// Token: 0x0601AE4B RID: 110155 RVA: 0x00748BE4 File Offset: 0x00746DE4
+	// Token: 0x06018873 RID: 100467 RVA: 0x0076E308 File Offset: 0x0076C508
 	private void StopRotatingToTarget(bool clear = true)
 	{
 		this.LastRotateToTargetTimeMs = Time.Instance.Now;
@@ -398,9 +406,9 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x17002517 RID: 9495
-	// (get) Token: 0x0601AE4C RID: 110156 RVA: 0x00748C92 File Offset: 0x00746E92
-	// (set) Token: 0x0601AE4D RID: 110157 RVA: 0x00748C9C File Offset: 0x00746E9C
+	// Token: 0x170026AC RID: 9900
+	// (get) Token: 0x06018874 RID: 100468 RVA: 0x0076E3B6 File Offset: 0x0076C5B6
+	// (set) Token: 0x06018875 RID: 100469 RVA: 0x0076E3C0 File Offset: 0x0076C5C0
 	private bool IsKeepingMove
 	{
 		get
@@ -432,7 +440,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE4E RID: 110158 RVA: 0x00748D1C File Offset: 0x00746F1C
+	// Token: 0x06018876 RID: 100470 RVA: 0x0076E440 File Offset: 0x0076C640
 	private void RecordLeaderMoveState(global::ECharMoveState? leaderMoveState)
 	{
 		if (leaderMoveState != null)
@@ -453,7 +461,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE4F RID: 110159 RVA: 0x00748D64 File Offset: 0x00746F64
+	// Token: 0x06018877 RID: 100471 RVA: 0x0076E488 File Offset: 0x0076C688
 	private void UpdateFollowingState(float delta)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -462,6 +470,7 @@ public class KeepFollowingMoveLogic
 		{
 			return;
 		}
+		this.UpdateFreeFollowingNavEdgeProtection();
 		float rotatorSpeed = followingParams.RotatorParams.RotatorSpeed;
 		bool flag = this.IsFreeFollowingActive();
 		BaseUnifiedStateComponent component = characterActorComponent.Entity.GetComponent<BaseUnifiedStateComponent>();
@@ -582,17 +591,20 @@ public class KeepFollowingMoveLogic
 		AiControllerLibrary.TurnToDirect(this.ActorComp, this.TempVector4, rotatorSpeed, false, 0f);
 	}
 
-	// Token: 0x0601AE50 RID: 110160 RVA: 0x00749250 File Offset: 0x00747450
+	// Token: 0x06018878 RID: 100472 RVA: 0x0076E97C File Offset: 0x0076CB7C
 	private void UpdateFreeFollowingState(float delta, CharacterActorComponent leader, global::ECharMoveState? leaderMoveState, float rotSpeed)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
 		FreeFollowingParams freeFollowing = followingParams.MoveParams.FreeFollowing;
 		this.FreeFollowingRuntime.Update((double)delta, leader, this.ActorComp, leaderMoveState, this.LeaderMoveState == global::ECharMoveState.Walk, (double)followingParams.MoveParams.CompensateDistance, (double)followingParams.MoveParams.ToleranceDistance, (double)followingParams.MoveParams.IllegalDistance, freeFollowing);
-		if (this.FreeFollowingRuntime.ShouldHoldPosition())
+		bool flag = this.FreeFollowingRuntime.ShouldHoldPosition();
+		bool flag2 = flag && freeFollowing.EnableNavMeshPath && this.TryUseFreeFollowingSafeNavLocation();
+		if (flag && !flag2)
 		{
+			this.ClearFreeFollowingTargetCache();
 			if (freeFollowing.DebugDraw)
 			{
-				this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, null);
+				this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, null, null);
 			}
 			this.StopFollowingMove(true);
 			if (followingParams.FollowingOnce && !this.FreeFollowingRuntime.IsWalkTemporaryPauseActive())
@@ -601,25 +613,39 @@ public class KeepFollowingMoveLogic
 			}
 			return;
 		}
-		if (!this.GetTargetFollowingPosition(this.TempVector, leader))
+		if (flag2)
 		{
+			this.TempVector.DeepCopy(this.FreeFollowingTargetCacheResolved ? this.FreeFollowingTargetCacheLocation : this.FreeFollowingLastSafeNavLocation);
+		}
+		else if (!this.ResolveFreeFollowingTarget(this.TempVector, leader, freeFollowing))
+		{
+			if (this.FreeFollowingTargetCacheResolved)
+			{
+				this.TempVector.DeepCopy(this.FreeFollowingTargetCacheLocation);
+				if (this.CheckFreeFollowingFallbackTeleport(delta, this.TempVector, leader))
+				{
+					this.StopFollowingMove(true);
+					return;
+				}
+			}
 			if (freeFollowing.DebugDraw)
 			{
-				this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, null);
+				this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, this.FreeFollowingTargetCacheResolved ? this.FreeFollowingTargetCacheLocation : null, this.FreeFollowingTargetCacheResolved ? this.FreeFollowingTargetCacheMoveLocation : null);
 			}
 			this.StopFollowingMove(true);
 			return;
 		}
-		bool flag = this.FreeFollowingRuntime.TryStopAtTarget(leader, this.ActorComp, this.TempVector, (double)followingParams.MoveParams.ToleranceDistance, freeFollowing);
+		flag2 = this.FreeFollowingTargetCacheUseSafeNavLocation;
+		bool flag3 = !flag2 && this.FreeFollowingRuntime.TryStopAtTarget(leader, this.ActorComp, this.TempVector, (double)followingParams.MoveParams.ToleranceDistance, freeFollowing);
 		if (freeFollowing.DebugDraw)
 		{
-			this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, this.TempVector);
-			if (flag && this.FreeFollowingRuntime.IsWalkTemporaryPauseActive())
+			this.DebugDrawFreeFollowing(leader, leaderMoveState, freeFollowing, this.TempVector, this.FreeFollowingTargetCacheMoveLocation);
+			if (flag3 && this.FreeFollowingRuntime.IsWalkTemporaryPauseActive())
 			{
 				this.FreeFollowingDebugHelper.LogWalkTemporaryPause(this.FreeFollowingRuntime);
 			}
 		}
-		if (flag)
+		if (flag3)
 		{
 			this.StopFollowingMove(true);
 			if (followingParams.FollowingOnce && !this.FreeFollowingRuntime.IsWalkTemporaryPauseActive())
@@ -630,36 +656,29 @@ public class KeepFollowingMoveLogic
 		}
 		this.TempVector3.DeepCopy(this.ActorComp.ActorLocationProxy);
 		GravityUtils.Instance.AddZnInGravityForActor(this.ActorComp, this.TempVector3, (double)(-(double)this.ActorComp.ScaledHalfHeight));
-		this.TempVector4.DeepCopy(this.TempVector);
+		this.TempVector4.DeepCopy(this.FreeFollowingTargetCacheMoveLocation);
 		this.TempVector4.SubtractionEqual(this.TempVector3);
-		double distSquared2dForActor = GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.TempVector, this.TempVector3);
-		float num = (float)Math.Sqrt(distSquared2dForActor);
-		float dist = Math.Min(num, followingParams.MoveParams.CompensateDistance);
+		float num = (float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.TempVector, this.TempVector3));
+		float num2 = flag2 ? ((float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.FreeFollowingTargetCacheMoveLocation, this.TempVector3))) : num;
+		float dist = Math.Min(num2, followingParams.MoveParams.CompensateDistance);
 		if (this.CheckTimeOutTeleport(delta, num, this.TempVector, leader.ActorRotationProxy))
 		{
 			this.StopFollowingMove(true);
 			return;
 		}
-		if (distSquared2dForActor > (double)followingParams.MoveParams.CompensateDistanceSquared)
+		float num3 = (float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.ActorComp.LastActorLocation));
+		float speed = (float)(followingParams.MoveParams.FollowingSpeedRange.Item1 * 0.30000001192092896);
+		if (this.CheckFreeFollowingObstacle(delta, this.TempVector, leader.ActorRotationProxy, num3 / delta, speed))
 		{
-			float num2 = (float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.ActorComp.LastActorLocation));
-			float speed = (float)(followingParams.MoveParams.FollowingSpeedRange.Item1 * 0.30000001192092896);
-			if (this.CheckObstacleTeleport(delta, this.TempVector, leader.ActorRotationProxy, num2 / delta, speed))
-			{
-				this.StopFollowingMove(true);
-				return;
-			}
+			this.StopFollowingMove(true);
+			return;
 		}
-		else
-		{
-			this.ObstacleDuration = 0f;
-		}
-		float leaderSpeed = this.FreeFollowingRuntime.LeaderIsMoving ? ((float)this.FreeFollowingRuntime.FilteredLeaderSpeed) : 0f;
-		this.UpdateFollowingMove(delta, leaderSpeed, dist, num, leaderMoveState);
+		float leaderSpeed = flag2 ? 0f : (this.FreeFollowingRuntime.LeaderIsMoving ? ((float)this.FreeFollowingRuntime.FilteredLeaderSpeed) : 0f);
+		this.UpdateFollowingMove(delta, leaderSpeed, dist, num2, leaderMoveState);
 		AiControllerLibrary.TurnToDirect(this.ActorComp, this.TempVector4, rotSpeed, false, 0f);
 	}
 
-	// Token: 0x0601AE51 RID: 110161 RVA: 0x0074952A File Offset: 0x0074772A
+	// Token: 0x06018879 RID: 100473 RVA: 0x0076ED1A File Offset: 0x0076CF1A
 	private void ResetStandState()
 	{
 		if (this.IsStandState)
@@ -669,7 +688,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE52 RID: 110162 RVA: 0x00749548 File Offset: 0x00747748
+	// Token: 0x0601887A RID: 100474 RVA: 0x0076ED38 File Offset: 0x0076CF38
 	private void UpdateFollowingMove(float deltaSeconds, float leaderSpeed, float dist, float allDist, global::ECharMoveState? leaderMoveState)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -694,6 +713,11 @@ public class KeepFollowingMoveLogic
 		float num2 = flag2 ? 0f : ((allDist > followingParams.MoveParams.KeepStandDistanceWithTarget) ? followingParams.MoveParams.KeepStandDistanceWithTarget : 0f);
 		bool flag3 = flag2 && followingParams.MoveParams.UseStandardSpeed;
 		float num3 = this.GetFollowerMoveSpeed(deltaSeconds, leaderSpeed, dist, allDist - num2, flag3);
+		bool flag4 = flag2 && !this.FreeFollowingRuntime.UseWalkFollowingRules && this.FreeFollowingRuntime.FollowerRadius <= this.FreeFollowingRuntime.ActiveStartFollowingRadius;
+		if (flag4)
+		{
+			num3 = Math.Min(num3, followingParams.MoveParams.StandardRunSpeed + followingParams.MoveParams.RunSprintDivideFloat);
+		}
 		global::ECharMoveState echarMoveState = this.GetFollowerMoveState(num3, this.FollowerMoveState);
 		KeepFollowingParams followingParams2 = this.FollowingParams;
 		if (followingParams2 != null)
@@ -718,6 +742,10 @@ public class KeepFollowingMoveLogic
 		{
 			num3 = this.GetStandardMoveSpeedByState(echarMoveState, num3, true);
 		}
+		if (flag4)
+		{
+			num3 = Math.Min(num3, followingParams.MoveParams.StandardRunSpeed + followingParams.MoveParams.RunSprintDivideFloat);
+		}
 		BaseUnifiedStateComponent unifiedComp = this.UnifiedComp;
 		if (unifiedComp != null)
 		{
@@ -731,12 +759,12 @@ public class KeepFollowingMoveLogic
 		}
 		this.MoveComp.SetMaxSpeed(num3);
 		this.TempVector4.Normalize(9.99999993922529E-09);
-		this.ActorComp.SetInputDirect(this.TempVector4, false);
+		this.ActorComp.SetInputDirect(this.TempVector4, false, EInputDirectSpace.World);
 		this.LastFollowerSpeed = num3;
 		this.RecordLeaderMoveState(leaderMoveState);
 	}
 
-	// Token: 0x0601AE53 RID: 110163 RVA: 0x00749764 File Offset: 0x00747964
+	// Token: 0x0601887B RID: 100475 RVA: 0x0076EFCC File Offset: 0x0076D1CC
 	private global::ECharMoveState GetFollowerMoveState(float speed, global::ECharMoveState currentState)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -765,7 +793,7 @@ public class KeepFollowingMoveLogic
 		return global::ECharMoveState.Run;
 	}
 
-	// Token: 0x0601AE54 RID: 110164 RVA: 0x007497F8 File Offset: 0x007479F8
+	// Token: 0x0601887C RID: 100476 RVA: 0x0076F060 File Offset: 0x0076D260
 	private float GetStandardMoveSpeedByState(global::ECharMoveState state, float speed, bool allowSpeedFloat = false)
 	{
 		FollowingMoveParams moveParams = this.FollowingParams.MoveParams;
@@ -781,7 +809,7 @@ public class KeepFollowingMoveLogic
 		return speed;
 	}
 
-	// Token: 0x0601AE55 RID: 110165 RVA: 0x007498D0 File Offset: 0x00747AD0
+	// Token: 0x0601887D RID: 100477 RVA: 0x0076F138 File Offset: 0x0076D338
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -825,7 +853,7 @@ public class KeepFollowingMoveLogic
 		return new ValueTuple<float, global::ECharMoveState>(item, item2);
 	}
 
-	// Token: 0x0601AE56 RID: 110166 RVA: 0x007499A8 File Offset: 0x00747BA8
+	// Token: 0x0601887E RID: 100478 RVA: 0x0076F210 File Offset: 0x0076D410
 	private float GetFollowerMoveSpeed(float delta, float leaderSpeed, float dist, float allDist, bool allowStandardSpeedFloat = false)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -855,9 +883,10 @@ public class KeepFollowingMoveLogic
 		return Math.Min(num3, val);
 	}
 
-	// Token: 0x0601AE57 RID: 110167 RVA: 0x00749B2C File Offset: 0x00747D2C
+	// Token: 0x0601887F RID: 100479 RVA: 0x0076F394 File Offset: 0x0076D594
 	private void StopFollowingMove(bool stand = true)
 	{
+		this.FreeFollowingObstacleDuration = 0f;
 		bool flag = this.IsFreeFollowingActive();
 		if (flag && this.IsRotatingToTarget)
 		{
@@ -887,7 +916,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE58 RID: 110168 RVA: 0x00749BB8 File Offset: 0x00747DB8
+	// Token: 0x06018880 RID: 100480 RVA: 0x0076F42B File Offset: 0x0076D62B
 	private bool IsFreeFollowingActive()
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -899,13 +928,237 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE59 RID: 110169 RVA: 0x00749BF2 File Offset: 0x00747DF2
+	// Token: 0x06018881 RID: 100481 RVA: 0x0076F468 File Offset: 0x0076D668
+	private void UpdateFreeFollowingNavEdgeProtection()
+	{
+		BaseMoveComponent moveComp = this.MoveComp;
+		UCharacterMovementComponent ucharacterMovementComponent = (moveComp != null) ? moveComp.CharacterMovement : null;
+		if (ucharacterMovementComponent == null)
+		{
+			return;
+		}
+		bool flag;
+		if (this.IsFreeFollowingActive())
+		{
+			KeepFollowingParams followingParams = this.FollowingParams;
+			flag = (followingParams != null && followingParams.MoveParams.FreeFollowing.EnableNavMeshPath);
+		}
+		else
+		{
+			flag = false;
+		}
+		if (!flag)
+		{
+			this.RestoreFreeFollowingNavEdgeProtection();
+			return;
+		}
+		if (!this.FreeFollowingNavEdgeProtectionActive)
+		{
+			this.FreeFollowingCanWalkOffLedgesNav = ucharacterMovementComponent.bKuroCanWalkOffLedgesNav;
+			this.FreeFollowingNavEdgeProtectionActive = true;
+		}
+		ucharacterMovementComponent.bKuroCanWalkOffLedgesNav = false;
+	}
+
+	// Token: 0x06018882 RID: 100482 RVA: 0x0076F4E0 File Offset: 0x0076D6E0
+	private void RestoreFreeFollowingNavEdgeProtection()
+	{
+		if (!this.FreeFollowingNavEdgeProtectionActive)
+		{
+			return;
+		}
+		BaseMoveComponent moveComp = this.MoveComp;
+		UCharacterMovementComponent ucharacterMovementComponent = (moveComp != null) ? moveComp.CharacterMovement : null;
+		if (ucharacterMovementComponent != null)
+		{
+			ucharacterMovementComponent.bKuroCanWalkOffLedgesNav = this.FreeFollowingCanWalkOffLedgesNav;
+		}
+		this.FreeFollowingNavEdgeProtectionActive = false;
+	}
+
+	// Token: 0x06018883 RID: 100483 RVA: 0x0076F520 File Offset: 0x0076D720
+	private void ClearFreeFollowingTargetCache()
+	{
+		this.FreeFollowingTargetCacheValid = false;
+		this.FreeFollowingTargetCacheResolved = false;
+		this.FreeFollowingTargetCacheReachable = true;
+		this.FreeFollowingTargetCacheUseSafeNavLocation = false;
+		this.FreeFollowingTargetCacheTimeMs = 0.0;
+		this.FreeFollowingTargetCacheLocation.Reset();
+		this.FreeFollowingTargetCacheMoveLocation.Reset();
+		this.FreeFollowingTargetCacheHasNavPath = false;
+		this.FreeFollowingNavPathPoints.Clear();
+		this.FreeFollowingTargetCacheRuntimeState = EFreeFollowingState.Stable;
+		this.FreeFollowingTargetCacheSide = EFreeFollowingSide.Right;
+		this.FreeFollowingTargetCacheUseWalkRules = false;
+	}
+
+	// Token: 0x06018884 RID: 100484 RVA: 0x0076F595 File Offset: 0x0076D795
+	private void ClearFreeFollowingSafeNavLocation()
+	{
+		this.FreeFollowingLastSafeNavLocationValid = false;
+		this.FreeFollowingLastSafeNavLocation.Reset();
+		this.FreeFollowingTargetCacheUseSafeNavLocation = false;
+	}
+
+	// Token: 0x06018885 RID: 100485 RVA: 0x0076F5B0 File Offset: 0x0076D7B0
+	private bool ShouldRefreshFreeFollowingTarget()
+	{
+		if (!this.FreeFollowingTargetCacheValid)
+		{
+			return true;
+		}
+		double num = Time.Instance.Now - this.FreeFollowingTargetCacheTimeMs;
+		if (num < 100.0)
+		{
+			return false;
+		}
+		if (!this.FreeFollowingTargetCacheResolved || !this.FreeFollowingTargetCacheReachable)
+		{
+			return num >= 500.0;
+		}
+		return this.FreeFollowingTargetCacheRuntimeState != this.FreeFollowingRuntime.State || this.FreeFollowingTargetCacheSide != this.FreeFollowingRuntime.CurrentSide || this.FreeFollowingTargetCacheUseWalkRules != this.FreeFollowingRuntime.UseWalkFollowingRules || (this.FreeFollowingTargetCacheHasNavPath && GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.FreeFollowingTargetCacheMoveLocation) <= 2500.0) || GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.FreeFollowingTargetCacheLocation) <= 10000.0 || num >= 150.0;
+	}
+
+	// Token: 0x06018886 RID: 100486 RVA: 0x0076F6B8 File Offset: 0x0076D8B8
+	private bool ResolveFreeFollowingTarget(global::Vector output, CharacterActorComponent leader, FreeFollowingParams freeFollowing)
+	{
+		if (!this.ShouldRefreshFreeFollowingTarget())
+		{
+			if (this.FreeFollowingTargetCacheResolved)
+			{
+				output.DeepCopy(this.FreeFollowingTargetCacheLocation);
+			}
+			return this.FreeFollowingTargetCacheResolved && this.FreeFollowingTargetCacheReachable;
+		}
+		double now = Time.Instance.Now;
+		this.FreeFollowingTargetCacheValid = true;
+		this.FreeFollowingTargetCacheTimeMs = now;
+		this.FreeFollowingTargetCacheRuntimeState = this.FreeFollowingRuntime.State;
+		this.FreeFollowingTargetCacheSide = this.FreeFollowingRuntime.CurrentSide;
+		this.FreeFollowingTargetCacheUseWalkRules = this.FreeFollowingRuntime.UseWalkFollowingRules;
+		this.FreeFollowingTargetCacheHasNavPath = false;
+		this.FreeFollowingNavPathPoints.Clear();
+		bool targetFollowingPosition = this.GetTargetFollowingPosition(output, leader);
+		this.FreeFollowingTargetCacheResolved = targetFollowingPosition;
+		if (!targetFollowingPosition)
+		{
+			this.FreeFollowingTargetCacheReachable = false;
+			return false;
+		}
+		this.FreeFollowingTargetCacheLocation.DeepCopy(output);
+		this.FreeFollowingTargetCacheMoveLocation.DeepCopy(output);
+		double allDist = Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, output));
+		this.FreeFollowingTargetCacheReachable = this.ResolveFreeFollowingNavMeshMoveTarget(output, allDist, freeFollowing);
+		return this.FreeFollowingTargetCacheReachable;
+	}
+
+	// Token: 0x06018887 RID: 100487 RVA: 0x0076F7BC File Offset: 0x0076D9BC
+	private bool ResolveFreeFollowingNavMeshMoveTarget(global::Vector target, double allDist, FreeFollowingParams freeFollowing)
+	{
+		this.FreeFollowingTargetCacheUseSafeNavLocation = false;
+		if (!freeFollowing.EnableNavMeshPath || allDist <= 100.0)
+		{
+			return true;
+		}
+		Entity entity = this.Entity;
+		UObject uobject;
+		if (entity == null)
+		{
+			uobject = null;
+		}
+		else
+		{
+			CharacterAiComponent component = entity.GetComponent<CharacterAiComponent>();
+			uobject = ((component != null) ? component.TsAiController : null);
+		}
+		if (!AiControllerLibrary.NavigationFindPath(uobject ?? GlobalData.World, this.ActorComp.ActorLocationProxy.ToUeVector(false), target.ToUeVector(false), this.FreeFollowingNavPathPoints, new bool?(true), new bool?(true)) || this.FreeFollowingNavPathPoints.Count < 2)
+		{
+			this.FreeFollowingNavPathPoints.Clear();
+			return this.TryUseFreeFollowingSafeNavLocation();
+		}
+		this.UpdateFreeFollowingSafeNavLocation();
+		this.FreeFollowingTargetCacheHasNavPath = true;
+		this.FreeFollowingTargetCacheMoveLocation.DeepCopy(this.FreeFollowingNavPathPoints[1]);
+		return true;
+	}
+
+	// Token: 0x06018888 RID: 100488 RVA: 0x0076F884 File Offset: 0x0076DA84
+	private bool TryUseFreeFollowingSafeNavLocation()
+	{
+		this.FreeFollowingTargetCacheUseSafeNavLocation = false;
+		if (this.FreeFollowingLastSafeNavLocationValid && GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.FreeFollowingLastSafeNavLocation) <= 1.0)
+		{
+			return false;
+		}
+		BaseMoveComponent moveComp = this.MoveComp;
+		UCharacterMovementComponent ucharacterMovementComponent = (moveComp != null) ? moveComp.CharacterMovement : null;
+		FVector fvector = this.ActorComp.ActorLocationProxy.ToUeVectorOld();
+		if (ucharacterMovementComponent != null && ucharacterMovementComponent.KuroFindNavFloor(fvector, ref this.FreeFollowingSafeNavLocation))
+		{
+			this.TempVector5.FromUeVector(this.FreeFollowingSafeNavLocation);
+			if (GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, this.TempVector5) <= 1.0)
+			{
+				this.UpdateFreeFollowingSafeNavLocation();
+				return false;
+			}
+		}
+		if (!this.FreeFollowingLastSafeNavLocationValid)
+		{
+			return false;
+		}
+		this.FreeFollowingTargetCacheMoveLocation.DeepCopy(this.FreeFollowingLastSafeNavLocation);
+		this.FreeFollowingTargetCacheUseSafeNavLocation = true;
+		return true;
+	}
+
+	// Token: 0x06018889 RID: 100489 RVA: 0x0076F970 File Offset: 0x0076DB70
+	private void UpdateFreeFollowingSafeNavLocation()
+	{
+		this.FreeFollowingLastSafeNavLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
+		GravityUtils.Instance.AddZnInGravityForActor(this.ActorComp, this.FreeFollowingLastSafeNavLocation, (double)(-(double)this.ActorComp.ScaledHalfHeight));
+		this.FreeFollowingLastSafeNavLocationValid = true;
+	}
+
+	// Token: 0x0601888A RID: 100490 RVA: 0x0076F9C0 File Offset: 0x0076DBC0
+	private bool CheckFreeFollowingObstacle(float delta, global::Vector target, global::Rotator rotator, float curSpeed, float speed)
+	{
+		KeepFollowingParams followingParams = this.FollowingParams;
+		if (followingParams == null || followingParams.MoveParams.ObstacleTime == 0f)
+		{
+			this.FreeFollowingObstacleDuration = 0f;
+			return false;
+		}
+		if (!this.IsKeepingMove || curSpeed >= speed)
+		{
+			this.FreeFollowingObstacleDuration = 0f;
+			return false;
+		}
+		this.FreeFollowingObstacleDuration += delta * 1000f;
+		if (this.FreeFollowingObstacleDuration <= followingParams.MoveParams.ObstacleTime)
+		{
+			return false;
+		}
+		this.FreeFollowingObstacleDuration = 0f;
+		if (this.FreeFollowingTargetCacheUseSafeNavLocation)
+		{
+			return false;
+		}
+		if (this.FreeFollowingRuntime.FollowerRadius <= this.FreeFollowingRuntime.ActiveStartFollowingRadius)
+		{
+			this.FreeFollowingRuntime.AcceptCurrentPositionAsReached();
+			return true;
+		}
+		return this.TeleportToLeader(target, rotator, "跟随模式,自由跟随被阻挡传送");
+	}
+
+	// Token: 0x0601888B RID: 100491 RVA: 0x0076FA86 File Offset: 0x0076DC86
 	private bool ShouldBypassFreeFollowingDelay(global::ECharMoveState? leaderMoveState = null)
 	{
 		return this.IsFreeFollowingActive() && (leaderMoveState.GetValueOrDefault() == global::ECharMoveState.Sprint || this.FreeFollowingRuntime.State > EFreeFollowingState.Stable);
 	}
 
-	// Token: 0x0601AE5A RID: 110170 RVA: 0x00749C18 File Offset: 0x00747E18
+	// Token: 0x0601888C RID: 100492 RVA: 0x0076FAAC File Offset: 0x0076DCAC
 	private void StopMoveTurnToForward(CharacterActorComponent leader, float rotSpeed, string context, bool? stand = null)
 	{
 		if (this.IsFreeFollowingActive())
@@ -943,7 +1196,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE5B RID: 110171 RVA: 0x00749D20 File Offset: 0x00747F20
+	// Token: 0x0601888D RID: 100493 RVA: 0x0076FBB4 File Offset: 0x0076DDB4
 	[NullableContext(0)]
 	private ValueTuple<float, float, float> UpdateDistanceRange(float allDist)
 	{
@@ -973,7 +1226,7 @@ public class KeepFollowingMoveLogic
 		return new ValueTuple<float, float, float>(num, num2, num3);
 	}
 
-	// Token: 0x0601AE5C RID: 110172 RVA: 0x00749DE8 File Offset: 0x00747FE8
+	// Token: 0x0601888E RID: 100494 RVA: 0x0076FC7C File Offset: 0x0076DE7C
 	private bool CheckTimeOutTeleport(float delta, float distance, global::Vector target, global::Rotator rotator)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -997,7 +1250,14 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE5D RID: 110173 RVA: 0x00749E6C File Offset: 0x0074806C
+	// Token: 0x0601888F RID: 100495 RVA: 0x0076FD00 File Offset: 0x0076DF00
+	private bool CheckFreeFollowingFallbackTeleport(float delta, global::Vector target, CharacterActorComponent leader)
+	{
+		float distance = (float)Math.Sqrt(GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, target));
+		return this.CheckTimeOutTeleport(delta, distance, target, leader.ActorRotationProxy);
+	}
+
+	// Token: 0x06018890 RID: 100496 RVA: 0x0076FD40 File Offset: 0x0076DF40
 	private bool CheckObstacleTeleport(float delta, global::Vector target, global::Rotator rotator, float curSpeed, float speed)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -1022,7 +1282,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE5E RID: 110174 RVA: 0x00749EEC File Offset: 0x007480EC
+	// Token: 0x06018891 RID: 100497 RVA: 0x0076FDC0 File Offset: 0x0076DFC0
 	private bool CheckStandDuration(float delta, float curSpeed, float leaderSpeed, float speed)
 	{
 		if (curSpeed < speed || leaderSpeed < speed)
@@ -1043,7 +1303,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE5F RID: 110175 RVA: 0x00749F50 File Offset: 0x00748150
+	// Token: 0x06018892 RID: 100498 RVA: 0x0076FE24 File Offset: 0x0076E024
 	private bool TeleportToLeader(global::Vector target, global::Rotator rotator, string context)
 	{
 		if (this.LastTeleportLocation.Equals(target, 9.999999747378752E-05))
@@ -1092,7 +1352,7 @@ public class KeepFollowingMoveLogic
 		return true;
 	}
 
-	// Token: 0x0601AE60 RID: 110176 RVA: 0x0074A0B8 File Offset: 0x007482B8
+	// Token: 0x06018893 RID: 100499 RVA: 0x0076FF8C File Offset: 0x0076E18C
 	private void MoveCompensate(global::Vector direction, float maxCompensate, float allDist, float range, string context, bool modelBuffer = false)
 	{
 		float num = allDist;
@@ -1130,7 +1390,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE61 RID: 110177 RVA: 0x0074A1A0 File Offset: 0x007483A0
+	// Token: 0x06018894 RID: 100500 RVA: 0x00770074 File Offset: 0x0076E274
 	private bool CheckLocationWillInScreen(global::Vector floorLocation)
 	{
 		APlayerController playerController = Global.PlayerController;
@@ -1153,7 +1413,7 @@ public class KeepFollowingMoveLogic
 		return this.IsLocationInScreen(playerController, this.FallbackTeleportScreenCheckVector);
 	}
 
-	// Token: 0x0601AE62 RID: 110178 RVA: 0x0074A24C File Offset: 0x0074844C
+	// Token: 0x06018895 RID: 100501 RVA: 0x00770120 File Offset: 0x0076E320
 	private bool IsLocationInScreen(APlayerController playerController, global::Vector location)
 	{
 		FVector2D fvector2D = new FVector2D();
@@ -1168,7 +1428,7 @@ public class KeepFollowingMoveLogic
 		return fvector2D.X >= 0f && fvector2D.X <= (float)num && fvector2D.Y >= 0f && fvector2D.Y <= (float)num2;
 	}
 
-	// Token: 0x0601AE63 RID: 110179 RVA: 0x0074A2B8 File Offset: 0x007484B8
+	// Token: 0x06018896 RID: 100502 RVA: 0x0077018C File Offset: 0x0076E38C
 	private bool GetFallbackTeleportLocation(CharacterActorComponent leader, global::Vector output)
 	{
 		CameraModelInstance mainModel = CameraModel.Instance.MainModel;
@@ -1238,7 +1498,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE64 RID: 110180 RVA: 0x0074A58C File Offset: 0x0074878C
+	// Token: 0x06018897 RID: 100503 RVA: 0x00770460 File Offset: 0x0076E660
 	private bool GetRandomOffsetLocation(bool isWalk, global::Vector output)
 	{
 		if (isWalk)
@@ -1261,7 +1521,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE65 RID: 110181 RVA: 0x0074A5F0 File Offset: 0x007487F0
+	// Token: 0x06018898 RID: 100504 RVA: 0x007704C4 File Offset: 0x0076E6C4
 	private void UpdateWalkOffsetLocationList(int index)
 	{
 		if (this.WalkOffsetLocationList.Count <= 0)
@@ -1278,7 +1538,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE66 RID: 110182 RVA: 0x0074A66C File Offset: 0x0074886C
+	// Token: 0x06018899 RID: 100505 RVA: 0x00770540 File Offset: 0x0076E740
 	private void UpdateRunOffsetLocationList(int index)
 	{
 		if (this.RunOffsetLocationList.Count <= 0)
@@ -1295,7 +1555,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE67 RID: 110183 RVA: 0x0074A6E8 File Offset: 0x007488E8
+	// Token: 0x0601889A RID: 100506 RVA: 0x007705BC File Offset: 0x0076E7BC
 	private void InitOffsetLocationList()
 	{
 		this.WalkOffsetLocationList.Clear();
@@ -1328,7 +1588,7 @@ public class KeepFollowingMoveLogic
 		this.UpdateRunOffsetLocationList(0);
 	}
 
-	// Token: 0x0601AE68 RID: 110184 RVA: 0x0074A80C File Offset: 0x00748A0C
+	// Token: 0x0601889B RID: 100507 RVA: 0x007706E0 File Offset: 0x0076E8E0
 	public bool GetTargetFollowingPosition(global::Vector output, CharacterActorComponent leader)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -1389,7 +1649,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE69 RID: 110185 RVA: 0x0074AA4C File Offset: 0x00748C4C
+	// Token: 0x0601889C RID: 100508 RVA: 0x00770920 File Offset: 0x0076EB20
 	private bool TryValidateFollowingPoint(global::Vector output, global::Vector candidate, UTraceSphereElement element, float remainingRadius, float obstacleHeight)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -1413,7 +1673,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE6A RID: 110186 RVA: 0x0074AAE4 File Offset: 0x00748CE4
+	// Token: 0x0601889D RID: 100509 RVA: 0x007709B8 File Offset: 0x0076EBB8
 	private bool TryFindLegalFreeFollowingPoint(global::Vector output, CharacterActorComponent leader, UTraceSphereElement element, float remainingRadius, float obstacleHeight, FreeFollowingParams freeFollowing)
 	{
 		bool debugDraw = freeFollowing.DebugDraw;
@@ -1447,7 +1707,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE6B RID: 110187 RVA: 0x0074AB98 File Offset: 0x00748D98
+	// Token: 0x0601889E RID: 100510 RVA: 0x00770A6C File Offset: 0x0076EC6C
 	private bool TryFindLegalFreeFollowingPointOnCurrentSide(global::Vector output, CharacterActorComponent leader, UTraceSphereElement element, float remainingRadius, float obstacleHeight, FreeFollowingParams freeFollowing)
 	{
 		bool debugDraw = freeFollowing.DebugDraw;
@@ -1487,7 +1747,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE6C RID: 110188 RVA: 0x0074AC7C File Offset: 0x00748E7C
+	// Token: 0x0601889F RID: 100511 RVA: 0x00770B50 File Offset: 0x0076ED50
 	private bool TryFindLegalFollowingByDirectionList(global::Vector output, CharacterActorComponent leader, UTraceSphereElement element, global::Vector baseOffset, float remainingRadius, float obstacleHeight)
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -1517,7 +1777,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE6D RID: 110189 RVA: 0x0074AD80 File Offset: 0x00748F80
+	// Token: 0x060188A0 RID: 100512 RVA: 0x00770C54 File Offset: 0x0076EE54
 	private bool TryFindLegalFollowingBySplineDistanceList(global::Vector output, UTraceSphereElement element, global::Vector targetPoint, float remainingRadius, float obstacleHeight)
 	{
 		double maxSplineDistanceRange = (double)this.SplineDistanceParams.MaxSplineDistanceRange;
@@ -1572,7 +1832,7 @@ public class KeepFollowingMoveLogic
 		return true;
 	}
 
-	// Token: 0x0601AE6E RID: 110190 RVA: 0x0074AF14 File Offset: 0x00749114
+	// Token: 0x060188A1 RID: 100513 RVA: 0x00770DE8 File Offset: 0x0076EFE8
 	[NullableContext(2)]
 	public USplineComponent LoadSplineAsset(int splineId)
 	{
@@ -1596,7 +1856,7 @@ public class KeepFollowingMoveLogic
 		return usplineComponent;
 	}
 
-	// Token: 0x0601AE6F RID: 110191 RVA: 0x0074AF94 File Offset: 0x00749194
+	// Token: 0x060188A2 RID: 100514 RVA: 0x00770E68 File Offset: 0x0076F068
 	private void ReleaseAllSplineAsset()
 	{
 		foreach (KeyValuePair<int, USplineComponent> keyValuePair in this.LoadSplineMap)
@@ -1606,7 +1866,7 @@ public class KeepFollowingMoveLogic
 		this.LoadSplineMap.Clear();
 	}
 
-	// Token: 0x0601AE70 RID: 110192 RVA: 0x0074B00C File Offset: 0x0074920C
+	// Token: 0x060188A3 RID: 100515 RVA: 0x00770EE0 File Offset: 0x0076F0E0
 	private void GetNearestLocationOnSpline(float deltaSeconds, USplineComponent splineAsset, CharacterActorComponent actor, global::Vector outNearest)
 	{
 		FVectorDouble fvectorDouble = actor.ActorLocationProxy.ToUeVector(false);
@@ -1619,7 +1879,7 @@ public class KeepFollowingMoveLogic
 		outNearest.FromUeVector(fvectorDouble);
 	}
 
-	// Token: 0x0601AE71 RID: 110193 RVA: 0x0074B0E8 File Offset: 0x007492E8
+	// Token: 0x060188A4 RID: 100516 RVA: 0x00770FBC File Offset: 0x0076F1BC
 	private void ApplySplineDistanceLimit(float deltaSeconds)
 	{
 		if (this.ActorComp != null)
@@ -1678,7 +1938,7 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0601AE72 RID: 110194 RVA: 0x0074B2A0 File Offset: 0x007494A0
+	// Token: 0x060188A5 RID: 100517 RVA: 0x00771174 File Offset: 0x0076F374
 	private void SetSplineEndLocation(float deltaSeconds, USplineComponent splineAsset)
 	{
 		this.ActorComp.ClearInput(false, true);
@@ -1695,13 +1955,13 @@ public class KeepFollowingMoveLogic
 		this.ActorComp.FixBornLocation("拉回样条终点修正", true, this.SplineNearestLeaderLocation, false, true, true);
 	}
 
-	// Token: 0x0601AE73 RID: 110195 RVA: 0x0074B34C File Offset: 0x0074954C
+	// Token: 0x060188A6 RID: 100518 RVA: 0x00771220 File Offset: 0x0076F420
 	public void SetSplineDistanceParam(SplineDistanceParams param)
 	{
 		this.SplineDistanceParams = param;
 	}
 
-	// Token: 0x0601AE74 RID: 110196 RVA: 0x0074B355 File Offset: 0x00749555
+	// Token: 0x060188A7 RID: 100519 RVA: 0x00771229 File Offset: 0x0076F429
 	private void ClearSplineDistanceClampMode()
 	{
 		this.InSplineDistanceClampMode = false;
@@ -1710,7 +1970,7 @@ public class KeepFollowingMoveLogic
 		this.LastSplineDistance = 0f;
 	}
 
-	// Token: 0x0601AE75 RID: 110197 RVA: 0x0074B37C File Offset: 0x0074957C
+	// Token: 0x060188A8 RID: 100520 RVA: 0x00771250 File Offset: 0x0076F450
 	private static bool DetectFloor(CharacterActorComponent actor, UTraceSphereElement element, global::Vector output, float height, float remainingRadius)
 	{
 		KeepFollowingMoveLogic.TmpVector.DeepCopy(output);
@@ -1731,7 +1991,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE76 RID: 110198 RVA: 0x0074B444 File Offset: 0x00749644
+	// Token: 0x060188A9 RID: 100521 RVA: 0x00771318 File Offset: 0x0076F518
 	private static bool DetectObstacle(CharacterActorComponent actor, UTraceSphereElement element, global::Vector ground, float height)
 	{
 		KeepFollowingMoveLogic.TmpVector.DeepCopy(ground);
@@ -1743,7 +2003,7 @@ public class KeepFollowingMoveLogic
 		return TraceElementCommon.Instance.ShapeTrace(actor.Actor.CapsuleComponent, element, "KeepFollowing", "KeepFollowing");
 	}
 
-	// Token: 0x0601AE77 RID: 110199 RVA: 0x0074B4D8 File Offset: 0x007496D8
+	// Token: 0x060188AA RID: 100522 RVA: 0x007713AC File Offset: 0x0076F5AC
 	private static bool ExtraDetectObstacle(CharacterActorComponent actor, UTraceSphereElement element, global::Vector ground, float height, CharacterActorComponent leader)
 	{
 		KeepFollowingMoveLogic.TmpVector.DeepCopy(leader.ActorLocationProxy);
@@ -1755,7 +2015,7 @@ public class KeepFollowingMoveLogic
 		return TraceElementCommon.Instance.ShapeTrace(actor.Actor.CapsuleComponent, element, "KeepFollowing", "KeepFollowing");
 	}
 
-	// Token: 0x0601AE78 RID: 110200 RVA: 0x0074B574 File Offset: 0x00749774
+	// Token: 0x060188AB RID: 100523 RVA: 0x00771448 File Offset: 0x0076F648
 	private static bool ExtraDetectObstacleFromStart(CharacterActorComponent actor, UTraceSphereElement element, global::Vector ground, float height, global::Vector start)
 	{
 		KeepFollowingMoveLogic.TmpVector.DeepCopy(start);
@@ -1767,7 +2027,7 @@ public class KeepFollowingMoveLogic
 		return TraceElementCommon.Instance.ShapeTrace(actor.Actor.CapsuleComponent, element, "KeepFollowing", "KeepFollowing");
 	}
 
-	// Token: 0x0601AE79 RID: 110201 RVA: 0x0074B5FC File Offset: 0x007497FC
+	// Token: 0x060188AC RID: 100524 RVA: 0x007714D0 File Offset: 0x0076F6D0
 	public static KeepFollowingParams GetKeepFollowingParams(CharacterActorComponent leader, BP_KeepFollowingConfig_C da, EHandType? handType = null)
 	{
 		KeepFollowingParams keepFollowingParams = new KeepFollowingParams(leader, handType);
@@ -1775,7 +2035,7 @@ public class KeepFollowingMoveLogic
 		return keepFollowingParams;
 	}
 
-	// Token: 0x0601AE7A RID: 110202 RVA: 0x0074B60C File Offset: 0x0074980C
+	// Token: 0x060188AD RID: 100525 RVA: 0x007714E0 File Offset: 0x0076F6E0
 	public static void CalculateFollowingPosition(global::Vector output, global::Vector offset, CharacterActorComponent leader)
 	{
 		KeepFollowingMoveLogic.TmpVector.FromConfigVector(offset);
@@ -1787,19 +2047,23 @@ public class KeepFollowingMoveLogic
 		output.DeepCopy(KeepFollowingMoveLogic.TmpVector);
 	}
 
-	// Token: 0x0601AE7B RID: 110203 RVA: 0x0074B670 File Offset: 0x00749870
+	// Token: 0x060188AE RID: 100526 RVA: 0x00771544 File Offset: 0x0076F744
 	private static void DrawDebugSphere(global::Vector point, FLinearColor? color = null, float? duration = null)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, point.ToUeVector(false), 20f, 10, new FLinearColor?(color ?? ColorUtils.LinearCyan), duration.GetValueOrDefault(), 0f);
 	}
 
-	// Token: 0x0601AE7C RID: 110204 RVA: 0x0074B6C0 File Offset: 0x007498C0
-	private void DebugDrawFreeFollowing(CharacterActorComponent leader, global::ECharMoveState? leaderMoveState, FreeFollowingParams freeFollowing, [Nullable(2)] global::Vector selectedTarget = null)
+	// Token: 0x060188AF RID: 100527 RVA: 0x00771594 File Offset: 0x0076F794
+	private void DebugDrawFreeFollowing(CharacterActorComponent leader, global::ECharMoveState? leaderMoveState, FreeFollowingParams freeFollowing, [Nullable(2)] global::Vector selectedTarget = null, [Nullable(2)] global::Vector moveTarget = null)
 	{
 		this.FreeFollowingDebugHelper.Draw(this.FreeFollowingRuntime, leader, this.ActorComp, leaderMoveState, this.FollowerMoveState, (double)this.LastFollowerSpeed, freeFollowing, selectedTarget);
+		if (moveTarget != null)
+		{
+			KeepFollowingMoveLogic.DrawDebugSphere(moveTarget, new FLinearColor?(ColorUtils.LinearGreen), null);
+		}
 	}
 
-	// Token: 0x0601AE7D RID: 110205 RVA: 0x0074B6F8 File Offset: 0x007498F8
+	// Token: 0x060188B0 RID: 100528 RVA: 0x007715E8 File Offset: 0x0076F7E8
 	private bool CheckFollowSitDown()
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -1837,7 +2101,7 @@ public class KeepFollowingMoveLogic
 		return false;
 	}
 
-	// Token: 0x0601AE7E RID: 110206 RVA: 0x0074B7CC File Offset: 0x007499CC
+	// Token: 0x060188B1 RID: 100529 RVA: 0x007716BC File Offset: 0x0076F8BC
 	private int FindNearestChair(global::Vector center, float radius, [Nullable(2)] Entity leaderChair)
 	{
 		if (leaderChair != null)
@@ -1879,7 +2143,7 @@ public class KeepFollowingMoveLogic
 		return result;
 	}
 
-	// Token: 0x0601AE7F RID: 110207 RVA: 0x0074B8D8 File Offset: 0x00749AD8
+	// Token: 0x060188B2 RID: 100530 RVA: 0x007717C8 File Offset: 0x0076F9C8
 	private int FindSiblingChair(Entity leaderChair, global::Vector leaderLoc)
 	{
 		CreatureDataComponent component = leaderChair.GetComponent<CreatureDataComponent>();
@@ -1890,10 +2154,14 @@ public class KeepFollowingMoveLogic
 		int pbDataId = component.GetPbDataId();
 		List<int> list = new List<int>();
 		int mapId = GameModeModel.Instance.MapConfig.MapId;
-		IEntityOwnerInfo entityOwner = CreatureModel.Instance.GetEntityOwner(mapId, pbDataId, true);
-		if (entityOwner != null && entityOwner.Type == EEntityOwnerType.Entity)
+		IEntityOwnerEntity entityOwnerEntity = CreatureModel.Instance.GetChildEntityOwner(mapId, pbDataId);
+		if (entityOwnerEntity == null)
 		{
-			int entityId = ((IEntityOwnerEntity)entityOwner).EntityId;
+			entityOwnerEntity = (CreatureModel.Instance.GetEntityOwner(mapId, pbDataId, EEntityOwnerType.Entity) as IEntityOwnerEntity);
+		}
+		if (entityOwnerEntity != null)
+		{
+			int entityId = entityOwnerEntity.EntityId;
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(entityId), null);
 			if (completeEntityData != null)
 			{
@@ -1946,7 +2214,7 @@ public class KeepFollowingMoveLogic
 		return result;
 	}
 
-	// Token: 0x0601AE80 RID: 110208 RVA: 0x0074BACC File Offset: 0x00749CCC
+	// Token: 0x060188B3 RID: 100531 RVA: 0x007719C4 File Offset: 0x0076FBC4
 	private void StartFollowSitOnChair(int chairPbDataId)
 	{
 		Entity entity = this.Entity;
@@ -1975,7 +2243,7 @@ public class KeepFollowingMoveLogic
 		npcSitOnChairComponent2.StartNpcSitOnChair(npcSitOnChairParams);
 	}
 
-	// Token: 0x0601AE81 RID: 110209 RVA: 0x0074BB78 File Offset: 0x00749D78
+	// Token: 0x060188B4 RID: 100532 RVA: 0x00771A70 File Offset: 0x0076FC70
 	private bool CheckFollowSitInterrupt()
 	{
 		KeepFollowingParams followingParams = this.FollowingParams;
@@ -2007,14 +2275,14 @@ public class KeepFollowingMoveLogic
 		return GravityUtils.Instance.GetDistSquared2dForActor(this.ActorComp, this.ActorComp.ActorLocationProxy, characterActorComponent.ActorLocationProxy) > (double)this.FollowingParams.MoveParams.FollowSitExitDistanceSquared;
 	}
 
-	// Token: 0x0601AE82 RID: 110210 RVA: 0x0074BC4B File Offset: 0x00749E4B
+	// Token: 0x060188B5 RID: 100533 RVA: 0x00771B43 File Offset: 0x0076FD43
 	private void OnFollowSitFinish()
 	{
 		this.IsFollowSitting = false;
 		this.FollowSitChairId = 0;
 	}
 
-	// Token: 0x0601AE83 RID: 110211 RVA: 0x0074BC5B File Offset: 0x00749E5B
+	// Token: 0x060188B6 RID: 100534 RVA: 0x00771B53 File Offset: 0x0076FD53
 	private void ForceStopFollowSit()
 	{
 		if (this.IsFollowSitting)
@@ -2029,144 +2297,198 @@ public class KeepFollowingMoveLogic
 		}
 	}
 
-	// Token: 0x0400D090 RID: 53392
+	// Token: 0x0400D48C RID: 54412
 	private readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x0400D091 RID: 53393
+	// Token: 0x0400D48D RID: 54413
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400D092 RID: 53394
+	// Token: 0x0400D48E RID: 54414
 	private readonly global::Vector TempVector3 = global::Vector.Create();
 
-	// Token: 0x0400D093 RID: 53395
+	// Token: 0x0400D48F RID: 54415
 	private readonly global::Vector TempVector4 = global::Vector.Create();
 
-	// Token: 0x0400D094 RID: 53396
+	// Token: 0x0400D490 RID: 54416
 	private readonly global::Vector TempVector5 = global::Vector.Create();
 
-	// Token: 0x0400D095 RID: 53397
+	// Token: 0x0400D491 RID: 54417
 	private readonly global::Vector FallbackTeleportScreenCheckVector = global::Vector.Create();
 
-	// Token: 0x0400D096 RID: 53398
+	// Token: 0x0400D492 RID: 54418
 	private readonly global::Vector CacheVector = global::Vector.Create();
 
-	// Token: 0x0400D097 RID: 53399
+	// Token: 0x0400D493 RID: 54419
 	private readonly global::Vector CacheVector2 = global::Vector.Create();
 
-	// Token: 0x0400D098 RID: 53400
+	// Token: 0x0400D494 RID: 54420
 	private readonly FreeFollowingRuntime FreeFollowingRuntime = new FreeFollowingRuntime();
 
-	// Token: 0x0400D099 RID: 53401
+	// Token: 0x0400D495 RID: 54421
 	private readonly FreeFollowingDebug FreeFollowingDebugHelper = new FreeFollowingDebug();
 
-	// Token: 0x0400D09A RID: 53402
+	// Token: 0x0400D496 RID: 54422
+	private readonly global::Vector FreeFollowingTargetCacheLocation = global::Vector.Create();
+
+	// Token: 0x0400D497 RID: 54423
+	private readonly global::Vector FreeFollowingTargetCacheMoveLocation = global::Vector.Create();
+
+	// Token: 0x0400D498 RID: 54424
+	private readonly List<global::Vector> FreeFollowingNavPathPoints = new List<global::Vector>();
+
+	// Token: 0x0400D499 RID: 54425
+	private readonly global::Vector FreeFollowingLastSafeNavLocation = global::Vector.Create();
+
+	// Token: 0x0400D49A RID: 54426
+	private FVector FreeFollowingSafeNavLocation = new FVector();
+
+	// Token: 0x0400D49B RID: 54427
+	private bool FreeFollowingLastSafeNavLocationValid;
+
+	// Token: 0x0400D49C RID: 54428
+	private bool FreeFollowingTargetCacheUseSafeNavLocation;
+
+	// Token: 0x0400D49D RID: 54429
+	private bool FreeFollowingTargetCacheHasNavPath;
+
+	// Token: 0x0400D49E RID: 54430
+	private bool FreeFollowingTargetCacheValid;
+
+	// Token: 0x0400D49F RID: 54431
+	private bool FreeFollowingTargetCacheResolved;
+
+	// Token: 0x0400D4A0 RID: 54432
+	private bool FreeFollowingTargetCacheReachable = true;
+
+	// Token: 0x0400D4A1 RID: 54433
+	private double FreeFollowingTargetCacheTimeMs;
+
+	// Token: 0x0400D4A2 RID: 54434
+	private EFreeFollowingState FreeFollowingTargetCacheRuntimeState;
+
+	// Token: 0x0400D4A3 RID: 54435
+	private EFreeFollowingSide FreeFollowingTargetCacheSide = EFreeFollowingSide.Right;
+
+	// Token: 0x0400D4A4 RID: 54436
+	private bool FreeFollowingTargetCacheUseWalkRules;
+
+	// Token: 0x0400D4A5 RID: 54437
+	private float FreeFollowingObstacleDuration;
+
+	// Token: 0x0400D4A6 RID: 54438
+	private bool FreeFollowingNavEdgeProtectionActive;
+
+	// Token: 0x0400D4A7 RID: 54439
+	private bool FreeFollowingCanWalkOffLedgesNav = true;
+
+	// Token: 0x0400D4A8 RID: 54440
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x0400D09B RID: 53403
+	// Token: 0x0400D4A9 RID: 54441
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D09C RID: 53404
+	// Token: 0x0400D4AA RID: 54442
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400D09D RID: 53405
+	// Token: 0x0400D4AB RID: 54443
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D09E RID: 53406
+	// Token: 0x0400D4AC RID: 54444
 	[Nullable(2)]
 	private BaseUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400D09F RID: 53407
+	// Token: 0x0400D4AD RID: 54445
 	private bool InFollowingState;
 
-	// Token: 0x0400D0A0 RID: 53408
+	// Token: 0x0400D4AE RID: 54446
 	[Nullable(2)]
 	private KeepFollowingParams FollowingParams;
 
-	// Token: 0x0400D0A1 RID: 53409
+	// Token: 0x0400D4AF RID: 54447
 	private bool SetExitFollowing;
 
-	// Token: 0x0400D0A2 RID: 53410
+	// Token: 0x0400D4B0 RID: 54448
 	private bool IsAutonomous;
 
-	// Token: 0x0400D0A3 RID: 53411
+	// Token: 0x0400D4B1 RID: 54449
 	public float CapsuleHeight;
 
-	// Token: 0x0400D0A4 RID: 53412
+	// Token: 0x0400D4B2 RID: 54450
 	private bool IsFollowSitting;
 
-	// Token: 0x0400D0A5 RID: 53413
+	// Token: 0x0400D4B3 RID: 54451
 	private int FollowSitChairId;
 
-	// Token: 0x0400D0A6 RID: 53414
+	// Token: 0x0400D4B4 RID: 54452
 	private List<EntityHandle> FollowSitSearchHandles = new List<EntityHandle>();
 
-	// Token: 0x0400D0A7 RID: 53415
+	// Token: 0x0400D4B5 RID: 54453
 	private bool IsRotatingToTarget;
 
-	// Token: 0x0400D0A8 RID: 53416
+	// Token: 0x0400D4B6 RID: 54454
 	private float TurnSpeed;
 
-	// Token: 0x0400D0A9 RID: 53417
+	// Token: 0x0400D4B7 RID: 54455
 	private int IsClockwiseRotator;
 
-	// Token: 0x0400D0AA RID: 53418
+	// Token: 0x0400D4B8 RID: 54456
 	private readonly global::Vector TurnToTarget = global::Vector.Create();
 
-	// Token: 0x0400D0AB RID: 53419
+	// Token: 0x0400D4B9 RID: 54457
 	[Nullable(2)]
 	private Func<bool> CheckStopTurnToTarget;
 
-	// Token: 0x0400D0AC RID: 53420
+	// Token: 0x0400D4BA RID: 54458
 	[Nullable(2)]
 	private TimerHandle RotatingStandDelay;
 
-	// Token: 0x0400D0AD RID: 53421
+	// Token: 0x0400D4BB RID: 54459
 	private double LastRotateToTargetTimeMs;
 
-	// Token: 0x0400D0AE RID: 53422
+	// Token: 0x0400D4BC RID: 54460
 	private bool IsKeepingMoveInternal;
 
-	// Token: 0x0400D0AF RID: 53423
+	// Token: 0x0400D4BD RID: 54461
 	private float MoveDelayTimeMs;
 
-	// Token: 0x0400D0B0 RID: 53424
+	// Token: 0x0400D4BE RID: 54462
 	private float LastFollowerSpeed;
 
-	// Token: 0x0400D0B1 RID: 53425
+	// Token: 0x0400D4BF RID: 54463
 	private global::ECharMoveState FollowerMoveState = global::ECharMoveState.Walk;
 
-	// Token: 0x0400D0B2 RID: 53426
+	// Token: 0x0400D4C0 RID: 54464
 	private global::ECharMoveState LeaderMoveState = global::ECharMoveState.Walk;
 
-	// Token: 0x0400D0B3 RID: 53427
+	// Token: 0x0400D4C1 RID: 54465
 	private float IllegalDuration;
 
-	// Token: 0x0400D0B4 RID: 53428
+	// Token: 0x0400D4C2 RID: 54466
 	private float ObstacleDuration;
 
-	// Token: 0x0400D0B5 RID: 53429
+	// Token: 0x0400D4C3 RID: 54467
 	private float StandDuration;
 
-	// Token: 0x0400D0B6 RID: 53430
+	// Token: 0x0400D4C4 RID: 54468
 	private EMoveDistanceRange LastRange;
 
-	// Token: 0x0400D0B7 RID: 53431
+	// Token: 0x0400D4C5 RID: 54469
 	private global::ECharMoveState ChangeMoveState = global::ECharMoveState.Walk;
 
-	// Token: 0x0400D0B8 RID: 53432
+	// Token: 0x0400D4C6 RID: 54470
 	private float ChangeMoveStateDelayTimeMs;
 
-	// Token: 0x0400D0B9 RID: 53433
+	// Token: 0x0400D4C7 RID: 54471
 	private readonly global::Vector LastTeleportLocation = global::Vector.Create();
 
-	// Token: 0x0400D0BA RID: 53434
+	// Token: 0x0400D4C8 RID: 54472
 	private bool IsStandState;
 
-	// Token: 0x0400D0BB RID: 53435
+	// Token: 0x0400D4C9 RID: 54473
 	[TupleElementNames(new string[]
 	{
 		"X",
@@ -2179,7 +2501,7 @@ public class KeepFollowingMoveLogic
 	})]
 	private readonly List<ValueTuple<double, double>> WalkOffsetLocationList = new List<ValueTuple<double, double>>();
 
-	// Token: 0x0400D0BC RID: 53436
+	// Token: 0x0400D4CA RID: 54474
 	[TupleElementNames(new string[]
 	{
 		"X",
@@ -2192,42 +2514,42 @@ public class KeepFollowingMoveLogic
 	})]
 	private readonly List<ValueTuple<double, double>> RunOffsetLocationList = new List<ValueTuple<double, double>>();
 
-	// Token: 0x0400D0BD RID: 53437
+	// Token: 0x0400D4CB RID: 54475
 	private int WalkOffsetLocationIndex;
 
-	// Token: 0x0400D0BE RID: 53438
+	// Token: 0x0400D4CC RID: 54476
 	private int RunOffsetLocationIndex;
 
-	// Token: 0x0400D0BF RID: 53439
+	// Token: 0x0400D4CD RID: 54477
 	private float WalkOffsetDistance;
 
-	// Token: 0x0400D0C0 RID: 53440
+	// Token: 0x0400D4CE RID: 54478
 	private float RunOffsetDistance;
 
-	// Token: 0x0400D0C1 RID: 53441
+	// Token: 0x0400D4CF RID: 54479
 	private readonly Dictionary<int, USplineComponent> LoadSplineMap = new Dictionary<int, USplineComponent>();
 
-	// Token: 0x0400D0C2 RID: 53442
+	// Token: 0x0400D4D0 RID: 54480
 	private bool InSplineDistanceClampMode;
 
-	// Token: 0x0400D0C3 RID: 53443
+	// Token: 0x0400D4D1 RID: 54481
 	[Nullable(2)]
 	private SplineDistanceParams SplineDistanceParams;
 
-	// Token: 0x0400D0C4 RID: 53444
+	// Token: 0x0400D4D2 RID: 54482
 	private readonly global::Vector SplineNearestLeaderLocation = global::Vector.Create();
 
-	// Token: 0x0400D0C5 RID: 53445
+	// Token: 0x0400D4D3 RID: 54483
 	private float CurSplineDistance;
 
-	// Token: 0x0400D0C6 RID: 53446
+	// Token: 0x0400D4D4 RID: 54484
 	private float LastSplineDistance;
 
-	// Token: 0x0400D0C7 RID: 53447
+	// Token: 0x0400D4D5 RID: 54485
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400D0C8 RID: 53448
+	// Token: 0x0400D4D6 RID: 54486
 	[StaticVariableRuleIgnore]
 	private static readonly global::Transform TmpTransform = global::Transform.Create();
 }

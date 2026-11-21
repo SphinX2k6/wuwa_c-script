@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200208E RID: 8334
+	// Token: 0x020022D9 RID: 8921
 	public class IVisualNovelPerformancePlayScreenEffect_SetValue
 	{
-		// Token: 0x04006E03 RID: 28163
+		// Token: 0x04007410 RID: 29712
 		public EVisualNovelPerformanceType Type;
 
-		// Token: 0x04006E04 RID: 28164
+		// Token: 0x04007411 RID: 29713
 		public float? StartTime;
 
-		// Token: 0x04006E05 RID: 28165
-		[Nullable(1)]
-		public string ScreenEffectDa;
-
-		// Token: 0x04006E06 RID: 28166
-		public float? DestroyCountdown;
+		// Token: 0x04007412 RID: 29714
+		public IVisualNovelPlayScreenEffectConfigBase EffectConfig;
 	}
 }

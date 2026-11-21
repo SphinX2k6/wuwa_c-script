@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C4D RID: 3149
+	// Token: 0x02000D26 RID: 3366
 	public class ILevelAiCycleLooply : ILevelAiCycleModeType
 	{
-		// Token: 0x06004815 RID: 18453 RVA: 0x000B547D File Offset: 0x000B367D
-		[NullableContext(1)]
+		// Token: 0x06004C9A RID: 19610 RVA: 0x000BFA71 File Offset: 0x000BDC71
 		public static ILevelAiCycleLooply Create(ILevelAiCycleLooply? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001538 RID: 5432
-		// (get) Token: 0x06004816 RID: 18454 RVA: 0x000B549C File Offset: 0x000B369C
+		// Token: 0x17001649 RID: 5705
+		// (get) Token: 0x06004C9B RID: 19611 RVA: 0x000BFA90 File Offset: 0x000BDC90
 		public override ELevelAiCycleMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001539 RID: 5433
-		// (get) Token: 0x06004817 RID: 18455 RVA: 0x000B54A9 File Offset: 0x000B36A9
+		// Token: 0x1700164A RID: 5706
+		// (get) Token: 0x06004C9C RID: 19612 RVA: 0x000BFA9D File Offset: 0x000BDC9D
 		public virtual bool IsCircle
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002908 RID: 10504
+		// Token: 0x04002B69 RID: 11113
 		private ILevelAiCycleLooply Instance;
 	}
 }

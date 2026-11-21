@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052AA RID: 21162
+	// Token: 0x02005815 RID: 22549
 	public class IFollowTrackComponentT
 	{
-		// Token: 0x17009B31 RID: 39729
-		// (get) Token: 0x06022809 RID: 141321 RVA: 0x004C8775 File Offset: 0x004C6975
-		// (set) Token: 0x0602280A RID: 141322 RVA: 0x004C877D File Offset: 0x004C697D
+		// Token: 0x1700A33A RID: 41786
+		// (get) Token: 0x060247CD RID: 149453 RVA: 0x00503871 File Offset: 0x00501A71
+		// (set) Token: 0x060247CE RID: 149454 RVA: 0x00503879 File Offset: 0x00501A79
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009B32 RID: 39730
-		// (get) Token: 0x0602280B RID: 141323 RVA: 0x004C8786 File Offset: 0x004C6986
-		// (set) Token: 0x0602280C RID: 141324 RVA: 0x004C878E File Offset: 0x004C698E
+		// Token: 0x1700A33B RID: 41787
+		// (get) Token: 0x060247CF RID: 149455 RVA: 0x00503882 File Offset: 0x00501A82
+		// (set) Token: 0x060247D0 RID: 149456 RVA: 0x0050388A File Offset: 0x00501A8A
 		public float Range { get; set; }
 
-		// Token: 0x17009B33 RID: 39731
-		// (get) Token: 0x0602280D RID: 141325 RVA: 0x004C8797 File Offset: 0x004C6997
-		// (set) Token: 0x0602280E RID: 141326 RVA: 0x004C879F File Offset: 0x004C699F
+		// Token: 0x1700A33C RID: 41788
+		// (get) Token: 0x060247D1 RID: 149457 RVA: 0x00503893 File Offset: 0x00501A93
+		// (set) Token: 0x060247D2 RID: 149458 RVA: 0x0050389B File Offset: 0x00501A9B
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x17009B34 RID: 39732
-		// (get) Token: 0x0602280F RID: 141327 RVA: 0x004C87A8 File Offset: 0x004C69A8
-		// (set) Token: 0x06022810 RID: 141328 RVA: 0x004C87B0 File Offset: 0x004C69B0
+		// Token: 0x1700A33D RID: 41789
+		// (get) Token: 0x060247D3 RID: 149459 RVA: 0x005038A4 File Offset: 0x00501AA4
+		// (set) Token: 0x060247D4 RID: 149460 RVA: 0x005038AC File Offset: 0x00501AAC
 		public TFollowTrackEndOptionUnion EndType { get; set; }
 
-		// Token: 0x17009B35 RID: 39733
-		// (get) Token: 0x06022811 RID: 141329 RVA: 0x004C87B9 File Offset: 0x004C69B9
-		// (set) Token: 0x06022812 RID: 141330 RVA: 0x004C87C1 File Offset: 0x004C69C1
+		// Token: 0x1700A33E RID: 41790
+		// (get) Token: 0x060247D5 RID: 149461 RVA: 0x005038B5 File Offset: 0x00501AB5
+		// (set) Token: 0x060247D6 RID: 149462 RVA: 0x005038BD File Offset: 0x00501ABD
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022813 RID: 141331 RVA: 0x004C87CA File Offset: 0x004C69CA
+		// Token: 0x060247D7 RID: 149463 RVA: 0x005038C6 File Offset: 0x00501AC6
 		public IFollowTrackComponentT()
 		{
 			this.Disabled = false;

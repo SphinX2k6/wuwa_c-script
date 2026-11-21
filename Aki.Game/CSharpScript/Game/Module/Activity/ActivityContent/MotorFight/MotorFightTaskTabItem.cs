@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200641E RID: 25630
+	// Token: 0x0200539C RID: 21404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightTaskTabItem : GridProxyAbstract<MotorFightTaskTab>
 	{
-		// Token: 0x0604073C RID: 263996 RVA: 0x00F98978 File Offset: 0x00F96B78
+		// Token: 0x060353FD RID: 218109 RVA: 0x00EDF918 File Offset: 0x00EDDB18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604073D RID: 263997 RVA: 0x00F98A40 File Offset: 0x00F96C40
+		// Token: 0x060353FE RID: 218110 RVA: 0x00EDF9E0 File Offset: 0x00EDDBE0
 		public override void Refresh(MotorFightTaskTab data, bool isSelected, int gridIndex)
 		{
 			this.Data = new MotorFightTaskTab?(data);
@@ -50,59 +50,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0604073E RID: 263998 RVA: 0x00F98A9C File Offset: 0x00F96C9C
+		// Token: 0x060353FF RID: 218111 RVA: 0x00EDFA3C File Offset: 0x00EDDC3C
 		private void OnToggleClick(EToggleState _)
 		{
 			this.OnToggleClickCallBack(this.Data.Value.Id);
 		}
 
-		// Token: 0x0604073F RID: 263999 RVA: 0x00F98AC7 File Offset: 0x00F96CC7
+		// Token: 0x06035400 RID: 218112 RVA: 0x00EDFA67 File Offset: 0x00EDDC67
 		public override object GetKey(MotorFightTaskTab data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x06040740 RID: 264000 RVA: 0x00F98AD8 File Offset: 0x00F96CD8
+		// Token: 0x06035401 RID: 218113 RVA: 0x00EDFA78 File Offset: 0x00EDDC78
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06040741 RID: 264001 RVA: 0x00F98AFE File Offset: 0x00F96CFE
+		// Token: 0x06035402 RID: 218114 RVA: 0x00EDFA9E File Offset: 0x00EDDC9E
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06040742 RID: 264002 RVA: 0x00F98B07 File Offset: 0x00F96D07
+		// Token: 0x06035403 RID: 218115 RVA: 0x00EDFAA7 File Offset: 0x00EDDCA7
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x04021826 RID: 137254
+		// Token: 0x0401C155 RID: 115029
 		private MotorFightTaskTab? Data;
 
-		// Token: 0x04021827 RID: 137255
+		// Token: 0x0401C156 RID: 115030
 		public MotorFightActivityData ActivityData;
 
-		// Token: 0x04021828 RID: 137256
+		// Token: 0x0401C157 RID: 115031
 		public Action<int> OnToggleClickCallBack = delegate(int tabId)
 		{
 		};
 
-		// Token: 0x0200C649 RID: 50761
+		// Token: 0x0200B030 RID: 45104
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BDD7 RID: 245207
+			// Token: 0x04036734 RID: 223028
 			public const int ToggleRoot = 0;
 
-			// Token: 0x0403BDD8 RID: 245208
+			// Token: 0x04036735 RID: 223029
 			public const int TextTabName = 1;
 
-			// Token: 0x0403BDD9 RID: 245209
+			// Token: 0x04036736 RID: 223030
 			public const int ItemRedDot = 2;
 		}
 	}

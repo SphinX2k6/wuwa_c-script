@@ -8,20 +8,20 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x0200310F RID: 12559
+// Token: 0x0200266A RID: 9834
 [NullableContext(1)]
 [Nullable(0)]
-public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, IComponentDependency
+public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter
 {
-	// Token: 0x0601AFA6 RID: 110502 RVA: 0x00751FF0 File Offset: 0x007501F0
+	// Token: 0x060189F6 RID: 100854 RVA: 0x007781C0 File Offset: 0x007763C0
 	static NpcMoveComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NpcMoveComponent.CreateStaticDefaultValue), new Action(NpcMoveComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700254B RID: 9547
-	// (get) Token: 0x0601AFA7 RID: 110503 RVA: 0x0075207A File Offset: 0x0075027A
-	public static Type[] Dependencies
+	// Token: 0x170026EA RID: 9962
+	// (get) Token: 0x060189F7 RID: 100855 RVA: 0x0077824A File Offset: 0x0077644A
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -32,9 +32,9 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x1700254C RID: 9548
-	// (get) Token: 0x0601AFA8 RID: 110504 RVA: 0x0075208F File Offset: 0x0075028F
-	// (set) Token: 0x0601AFA9 RID: 110505 RVA: 0x00752098 File Offset: 0x00750298
+	// Token: 0x170026EB RID: 9963
+	// (get) Token: 0x060189F8 RID: 100856 RVA: 0x0077825F File Offset: 0x0077645F
+	// (set) Token: 0x060189F9 RID: 100857 RVA: 0x00778268 File Offset: 0x00776468
 	public bool IsTurning
 	{
 		get
@@ -57,7 +57,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFAA RID: 110506 RVA: 0x007520E8 File Offset: 0x007502E8
+	// Token: 0x060189FA RID: 100858 RVA: 0x007782B8 File Offset: 0x007764B8
 	public override void SetMaxSpeed(float newSpeed)
 	{
 		if (this.OverrideMaxSpeed > 0f)
@@ -79,7 +79,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		this.CharacterMovement.MaxWalkSpeed = num2;
 	}
 
-	// Token: 0x0601AFAB RID: 110507 RVA: 0x0075215B File Offset: 0x0075035B
+	// Token: 0x060189FB RID: 100859 RVA: 0x0077832B File Offset: 0x0077652B
 	protected override bool OnClear()
 	{
 		this.ResetVehicleFacing();
@@ -96,13 +96,13 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		return true;
 	}
 
-	// Token: 0x0601AFAC RID: 110508 RVA: 0x00752195 File Offset: 0x00750395
+	// Token: 0x060189FC RID: 100860 RVA: 0x00778365 File Offset: 0x00776565
 	protected override bool OnInit()
 	{
 		return base.OnInit();
 	}
 
-	// Token: 0x0601AFAD RID: 110509 RVA: 0x007521A0 File Offset: 0x007503A0
+	// Token: 0x060189FD RID: 100861 RVA: 0x00778370 File Offset: 0x00776570
 	protected override bool OnStart()
 	{
 		this.AccelerationLerpCurve = ResourceSystem.Instance.GetLoadedAsset<UCurveFloat>("/Game/Aki/Character/Role/Common/Data/Curves/CT_MoveFAcceleration.CT_MoveFAcceleration");
@@ -149,7 +149,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		return true;
 	}
 
-	// Token: 0x0601AFAE RID: 110510 RVA: 0x007523BC File Offset: 0x007505BC
+	// Token: 0x060189FE RID: 100862 RVA: 0x0077858C File Offset: 0x0077678C
 	protected override bool OnEnd()
 	{
 		this.ResetVehicleFacing();
@@ -165,7 +165,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		return true;
 	}
 
-	// Token: 0x0601AFAF RID: 110511 RVA: 0x0075248C File Offset: 0x0075068C
+	// Token: 0x060189FF RID: 100863 RVA: 0x0077865C File Offset: 0x0077685C
 	protected void OnPositionStateChanged(global::ECharPositionState oldPositionState, global::ECharPositionState newPositionState)
 	{
 		if (oldPositionState == global::ECharPositionState.Air)
@@ -207,7 +207,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFB0 RID: 110512 RVA: 0x00752598 File Offset: 0x00750798
+	// Token: 0x06018A00 RID: 100864 RVA: 0x00778768 File Offset: 0x00776968
 	protected override void OnActivate()
 	{
 		base.OnMoveStateChange(global::ECharMoveState.Stand, global::ECharMoveState.Run);
@@ -257,7 +257,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFB1 RID: 110513 RVA: 0x0075269C File Offset: 0x0075089C
+	// Token: 0x06018A01 RID: 100865 RVA: 0x0077886C File Offset: 0x00776A6C
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -354,7 +354,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		this.HasMoveInput = false;
 	}
 
-	// Token: 0x0601AFB2 RID: 110514 RVA: 0x007528BC File Offset: 0x00750ABC
+	// Token: 0x06018A02 RID: 100866 RVA: 0x00778A8C File Offset: 0x00776C8C
 	protected override void InitCreatureProperty()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -364,7 +364,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		this.CharacterMovement.GoThroughPriority = this.CreatureProperty.穿透优先级;
 	}
 
-	// Token: 0x0601AFB3 RID: 110515 RVA: 0x00752924 File Offset: 0x00750B24
+	// Token: 0x06018A03 RID: 100867 RVA: 0x00778AF4 File Offset: 0x00776CF4
 	public unsafe override void GetAndConsumeAddMove(float deltaSeconds, global::Vector outVector, global::Rotator outRotator)
 	{
 		outVector.Reset();
@@ -436,7 +436,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		outVector.AdditionEqual(BaseMoveComponent.VelocityAdditionDestination);
 	}
 
-	// Token: 0x0601AFB4 RID: 110516 RVA: 0x00752C00 File Offset: 0x00750E00
+	// Token: 0x06018A04 RID: 100868 RVA: 0x00778DD0 File Offset: 0x00776FD0
 	protected void UpdateMovementInput(FVectorDouble inputDirect)
 	{
 		if (!base.CanApplyInputMovement())
@@ -463,7 +463,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFB5 RID: 110517 RVA: 0x00752CA0 File Offset: 0x00750EA0
+	// Token: 0x06018A05 RID: 100869 RVA: 0x00778E70 File Offset: 0x00777070
 	protected void UpdateFacing()
 	{
 		if (!base.CanUpdateMovingRotation())
@@ -487,8 +487,8 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		base.UpdateGroundedRotation();
 	}
 
-	// Token: 0x1700254D RID: 9549
-	// (get) Token: 0x0601AFB6 RID: 110518 RVA: 0x00752D50 File Offset: 0x00750F50
+	// Token: 0x170026EC RID: 9964
+	// (get) Token: 0x06018A06 RID: 100870 RVA: 0x00778F20 File Offset: 0x00777120
 	public bool EnableAdditiveTurn
 	{
 		get
@@ -498,8 +498,8 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x1700254E RID: 9550
-	// (get) Token: 0x0601AFB7 RID: 110519 RVA: 0x00752D80 File Offset: 0x00750F80
+	// Token: 0x170026ED RID: 9965
+	// (get) Token: 0x06018A07 RID: 100871 RVA: 0x00778F50 File Offset: 0x00777150
 	public float TurnYawRate
 	{
 		get
@@ -513,7 +513,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFB8 RID: 110520 RVA: 0x00752DC4 File Offset: 0x00750FC4
+	// Token: 0x06018A08 RID: 100872 RVA: 0x00778F94 File Offset: 0x00777194
 	private void UpdateVehicleFacing()
 	{
 		float maxOffset = this.CurrentMovementRotationSetting.GetMaxOffset();
@@ -569,7 +569,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		base.UpdateGroundedRotation();
 	}
 
-	// Token: 0x0601AFB9 RID: 110521 RVA: 0x007530C8 File Offset: 0x007512C8
+	// Token: 0x06018A09 RID: 100873 RVA: 0x00779298 File Offset: 0x00777498
 	private void CalculateVehicleTurnSteps(float currentAnimationYaw, float actorControlRemainingYaw, float visualRemainingYaw, float visualMaximumTurnStep, float actorMaximumTurnStep, float maximumAnimationYaw, bool shouldUseFullActorTurnStep)
 	{
 		float num = Math.Min(actorMaximumTurnStep, Math.Abs(actorControlRemainingYaw));
@@ -590,13 +590,13 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		this.VehicleNextAnimationYaw = vehicleNextAnimationYaw;
 	}
 
-	// Token: 0x0601AFBA RID: 110522 RVA: 0x007531C2 File Offset: 0x007513C2
+	// Token: 0x06018A0A RID: 100874 RVA: 0x00779392 File Offset: 0x00777592
 	private void ResetVehicleFacing()
 	{
 		this.VehicleAnimationYaw = 0f;
 	}
 
-	// Token: 0x0601AFBB RID: 110523 RVA: 0x007531D0 File Offset: 0x007513D0
+	// Token: 0x06018A0B RID: 100875 RVA: 0x007793A0 File Offset: 0x007775A0
 	private void DebugVehicleFacing(float animationYawAfter)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -612,7 +612,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		}
 	}
 
-	// Token: 0x0601AFBC RID: 110524 RVA: 0x00753278 File Offset: 0x00751478
+	// Token: 0x06018A0C RID: 100876 RVA: 0x00779448 File Offset: 0x00777648
 	private void DrawVehicleFacingArrow(global::Vector direction, global::Vector origin, FLinearColor color, float length)
 	{
 		this.VehicleDebugArrowEnd.DeepCopy(direction);
@@ -621,14 +621,14 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		UKismetSystemLibrary.D_DrawDebugArrow(this.ActorComp.Actor, origin.ToUeVector(false), this.VehicleDebugArrowEnd.ToUeVector(false), 35f, color, 0f, 4f);
 	}
 
-	// Token: 0x0601AFBD RID: 110525 RVA: 0x007532E0 File Offset: 0x007514E0
+	// Token: 0x06018A0D RID: 100877 RVA: 0x007794B0 File Offset: 0x007776B0
 	public new static void CreateStaticDefaultValue()
 	{
 		BaseMoveComponent.CreateStaticDefaultValue();
 		NpcMoveComponent.DebugRotation = false;
 	}
 
-	// Token: 0x0601AFBE RID: 110526 RVA: 0x007532ED File Offset: 0x007514ED
+	// Token: 0x06018A0E RID: 100878 RVA: 0x007794BD File Offset: 0x007776BD
 	public new static void ResetStaticDefaultValue()
 	{
 		BaseMoveComponent.ResetStaticDefaultValue();
@@ -636,7 +636,7 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 		BaseMoveComponent.BaseMoveInheritCurveInternal = null;
 	}
 
-	// Token: 0x0601AFBF RID: 110527 RVA: 0x00753300 File Offset: 0x00751500
+	// Token: 0x06018A0F RID: 100879 RVA: 0x007794D0 File Offset: 0x007776D0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -644,142 +644,184 @@ public class NpcMoveComponent : BaseMoveComponent, IStaticVariableResetter, ICom
 			return false;
 		}
 		NpcMoveComponent npcMoveComponent = (NpcMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CanResponseInputTasks") && npcMoveComponent.CanResponseInputTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.CanResponseInputTasks), "CanResponseInputTasks"))
+		if (npcMoveComponent.CanResponseInputTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CanResponseInputTasks), "CanResponseInputTasks"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedDeltaYaw"))
-		{
-			this.CachedDeltaYaw = npcMoveComponent.CachedDeltaYaw;
-		}
-		if (base.CanResetComponentProperty("IsTurningInternal"))
-		{
-			this.IsTurningInternal = npcMoveComponent.IsTurningInternal;
-		}
-		if (base.CanResetComponentProperty("AirInertiaHandler"))
-		{
-			this.AirInertiaHandler = npcMoveComponent.AirInertiaHandler;
-		}
-		if (base.CanResetComponentProperty("VehicleAnimationYaw"))
-		{
-			this.VehicleAnimationYaw = npcMoveComponent.VehicleAnimationYaw;
-		}
-		if (base.CanResetComponentProperty("VehicleTargetRotation") && npcMoveComponent.VehicleTargetRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.VehicleTargetRotation), "VehicleTargetRotation"))
+		this.CachedDeltaYaw = npcMoveComponent.CachedDeltaYaw;
+		this.IsTurningInternal = npcMoveComponent.IsTurningInternal;
+		this.AirInertiaHandler = npcMoveComponent.AirInertiaHandler;
+		this.VehicleAnimationYaw = npcMoveComponent.VehicleAnimationYaw;
+		if (npcMoveComponent.VehicleTargetRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleTargetRotation), "VehicleTargetRotation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VehicleActorStepRotation") && npcMoveComponent.VehicleActorStepRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.VehicleActorStepRotation), "VehicleActorStepRotation"))
+		if (npcMoveComponent.VehicleActorStepRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleActorStepRotation), "VehicleActorStepRotation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VehicleActorTurnDirection") && npcMoveComponent.VehicleActorTurnDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VehicleActorTurnDirection), "VehicleActorTurnDirection"))
+		if (npcMoveComponent.VehicleActorTurnDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleActorTurnDirection), "VehicleActorTurnDirection"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VehicleActorTurnStep"))
-		{
-			this.VehicleActorTurnStep = npcMoveComponent.VehicleActorTurnStep;
-		}
-		if (base.CanResetComponentProperty("VehicleNextAnimationYaw"))
-		{
-			this.VehicleNextAnimationYaw = npcMoveComponent.VehicleNextAnimationYaw;
-		}
-		return (!base.CanResetComponentProperty("VehicleDebugDirection") || npcMoveComponent.VehicleDebugDirection == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VehicleDebugDirection), "VehicleDebugDirection")) && (!base.CanResetComponentProperty("VehicleDebugArrowEnd") || npcMoveComponent.VehicleDebugArrowEnd == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VehicleDebugArrowEnd), "VehicleDebugArrowEnd")) && (!base.CanResetComponentProperty("VehicleDebugAnimationRotation") || npcMoveComponent.VehicleDebugAnimationRotation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.VehicleDebugAnimationRotation), "VehicleDebugAnimationRotation"));
+		this.VehicleActorTurnStep = npcMoveComponent.VehicleActorTurnStep;
+		this.VehicleNextAnimationYaw = npcMoveComponent.VehicleNextAnimationYaw;
+		return (npcMoveComponent.VehicleDebugDirection == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleDebugDirection), "VehicleDebugDirection")) && (npcMoveComponent.VehicleDebugArrowEnd == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleDebugArrowEnd), "VehicleDebugArrowEnd")) && (npcMoveComponent.VehicleDebugAnimationRotation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleDebugAnimationRotation), "VehicleDebugAnimationRotation"));
 	}
 
-	// Token: 0x0400D1BB RID: 53691
+	// Token: 0x170026EE RID: 9966
+	// (get) Token: 0x06018A10 RID: 100880 RVA: 0x00779626 File Offset: 0x00777826
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026EF RID: 9967
+	// (get) Token: 0x06018A11 RID: 100881 RVA: 0x00779629 File Offset: 0x00777829
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F0 RID: 9968
+	// (get) Token: 0x06018A12 RID: 100882 RVA: 0x0077962C File Offset: 0x0077782C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F1 RID: 9969
+	// (get) Token: 0x06018A13 RID: 100883 RVA: 0x0077962F File Offset: 0x0077782F
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F2 RID: 9970
+	// (get) Token: 0x06018A14 RID: 100884 RVA: 0x00779632 File Offset: 0x00777832
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F3 RID: 9971
+	// (get) Token: 0x06018A15 RID: 100885 RVA: 0x00779635 File Offset: 0x00777835
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D5DC RID: 54748
 	private const int MIN_MOVE_SPEED = 20;
 
-	// Token: 0x0400D1BC RID: 53692
+	// Token: 0x0400D5DD RID: 54749
 	private const int MAX_IN_WATER_SPEED = 800;
 
-	// Token: 0x0400D1BD RID: 53693
+	// Token: 0x0400D5DE RID: 54750
 	private const float BASE_MOVE_INHERIT_TIME = 1.5f;
 
-	// Token: 0x0400D1BE RID: 53694
+	// Token: 0x0400D5DF RID: 54751
 	private const float VEHICLE_SHARED_TURN_SPEED_RATIO = 0.5f;
 
-	// Token: 0x0400D1BF RID: 53695
+	// Token: 0x0400D5E0 RID: 54752
 	private const float VEHICLE_TURN_EPSILON = 1E-06f;
 
-	// Token: 0x0400D1C0 RID: 53696
+	// Token: 0x0400D5E1 RID: 54753
 	private const float VEHICLE_TURN_COMPLETE_TOLERANCE = 0.1f;
 
-	// Token: 0x0400D1C1 RID: 53697
+	// Token: 0x0400D5E2 RID: 54754
 	private const float VEHICLE_DEBUG_ACTOR_ARROW_LENGTH = 200f;
 
-	// Token: 0x0400D1C2 RID: 53698
+	// Token: 0x0400D5E3 RID: 54755
 	private const float VEHICLE_DEBUG_VISUAL_ARROW_LENGTH = 250f;
 
-	// Token: 0x0400D1C3 RID: 53699
+	// Token: 0x0400D5E4 RID: 54756
 	private const float VEHICLE_DEBUG_TARGET_ARROW_LENGTH = 300f;
 
-	// Token: 0x0400D1C4 RID: 53700
+	// Token: 0x0400D5E5 RID: 54757
 	private const float VEHICLE_DEBUG_ARROW_SIZE = 35f;
 
-	// Token: 0x0400D1C5 RID: 53701
+	// Token: 0x0400D5E6 RID: 54758
 	private const float VEHICLE_DEBUG_ARROW_DURATION = 0f;
 
-	// Token: 0x0400D1C6 RID: 53702
+	// Token: 0x0400D5E7 RID: 54759
 	private const float VEHICLE_DEBUG_ARROW_THICKNESS = 4f;
 
-	// Token: 0x0400D1C7 RID: 53703
+	// Token: 0x0400D5E8 RID: 54760
 	private static readonly FLinearColor VEHICLE_DEBUG_ACTOR_COLOR = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x0400D1C8 RID: 53704
+	// Token: 0x0400D5E9 RID: 54761
 	private static readonly FLinearColor VEHICLE_DEBUG_VISUAL_COLOR = new FLinearColor(1f, 1f, 0f, 1f);
 
-	// Token: 0x0400D1C9 RID: 53705
+	// Token: 0x0400D5EA RID: 54762
 	private static readonly FLinearColor VEHICLE_DEBUG_TARGET_COLOR = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x0400D1CA RID: 53706
+	// Token: 0x0400D5EB RID: 54763
 	private const int PER_TEN_THOUSAND = 10000;
 
-	// Token: 0x0400D1CB RID: 53707
+	// Token: 0x0400D5EC RID: 54764
 	private const string ACC_LERP_CURVE_PATH = "/Game/Aki/Character/Role/Common/Data/Curves/CT_MoveFAcceleration.CT_MoveFAcceleration";
 
-	// Token: 0x0400D1CC RID: 53708
+	// Token: 0x0400D5ED RID: 54765
 	private const string BASE_MOVE_INHERIT_CURVE_PATH = "/Game/Aki/Character/BaseCharacter/Curves/CURVE_HorizontalVelocity.CURVE_HorizontalVelocity";
 
-	// Token: 0x0400D1CD RID: 53709
+	// Token: 0x0400D5EE RID: 54766
 	protected readonly List<ITagTask> CanResponseInputTasks = new List<ITagTask>();
 
-	// Token: 0x0400D1CE RID: 53710
+	// Token: 0x0400D5EF RID: 54767
 	protected float CachedDeltaYaw;
 
-	// Token: 0x0400D1CF RID: 53711
+	// Token: 0x0400D5F0 RID: 54768
 	protected bool IsTurningInternal;
 
-	// Token: 0x0400D1D0 RID: 53712
+	// Token: 0x0400D5F1 RID: 54769
 	public static bool DebugRotation = false;
 
-	// Token: 0x0400D1D1 RID: 53713
+	// Token: 0x0400D5F2 RID: 54770
 	protected int AirInertiaHandler;
 
-	// Token: 0x0400D1D2 RID: 53714
+	// Token: 0x0400D5F3 RID: 54771
 	private float VehicleAnimationYaw;
 
-	// Token: 0x0400D1D3 RID: 53715
+	// Token: 0x0400D5F4 RID: 54772
 	private readonly global::Rotator VehicleTargetRotation = global::Rotator.Create();
 
-	// Token: 0x0400D1D4 RID: 53716
+	// Token: 0x0400D5F5 RID: 54773
 	private readonly global::Rotator VehicleActorStepRotation = global::Rotator.Create();
 
-	// Token: 0x0400D1D5 RID: 53717
+	// Token: 0x0400D5F6 RID: 54774
 	private readonly global::Vector VehicleActorTurnDirection = global::Vector.Create();
 
-	// Token: 0x0400D1D6 RID: 53718
+	// Token: 0x0400D5F7 RID: 54775
 	private float VehicleActorTurnStep;
 
-	// Token: 0x0400D1D7 RID: 53719
+	// Token: 0x0400D5F8 RID: 54776
 	private float VehicleNextAnimationYaw;
 
-	// Token: 0x0400D1D8 RID: 53720
+	// Token: 0x0400D5F9 RID: 54777
 	private readonly global::Vector VehicleDebugDirection = global::Vector.Create();
 
-	// Token: 0x0400D1D9 RID: 53721
+	// Token: 0x0400D5FA RID: 54778
 	private readonly global::Vector VehicleDebugArrowEnd = global::Vector.Create();
 
-	// Token: 0x0400D1DA RID: 53722
+	// Token: 0x0400D5FB RID: 54779
 	private readonly global::Rotator VehicleDebugAnimationRotation = global::Rotator.Create();
 }

@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CAA RID: 3242
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000D8C RID: 3468
 	public class IMatchTargetChargingDevice : IProgressBarControl
 	{
-		// Token: 0x06004A31 RID: 18993 RVA: 0x000B9CE6 File Offset: 0x000B7EE6
-		[NullableContext(1)]
+		// Token: 0x06004EDF RID: 20191 RVA: 0x000C46F6 File Offset: 0x000C28F6
 		public static IMatchTargetChargingDevice Create(IMatchTargetChargingDevice? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700169A RID: 5786
-		// (get) Token: 0x06004A32 RID: 18994 RVA: 0x000B9D05 File Offset: 0x000B7F05
+		// Token: 0x170017C2 RID: 6082
+		// (get) Token: 0x06004EE0 RID: 20192 RVA: 0x000C4715 File Offset: 0x000C2915
 		public override EProgressBarControlType Type
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700169B RID: 5787
-		// (get) Token: 0x06004A33 RID: 18995 RVA: 0x000B9D12 File Offset: 0x000B7F12
+		// Token: 0x170017C3 RID: 6083
+		// (get) Token: 0x06004EE1 RID: 20193 RVA: 0x000C4722 File Offset: 0x000C2922
 		public override int MaxValue
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700169C RID: 5788
-		// (get) Token: 0x06004A34 RID: 18996 RVA: 0x000B9D1F File Offset: 0x000B7F1F
+		// Token: 0x170017C4 RID: 6084
+		// (get) Token: 0x06004EE2 RID: 20194 RVA: 0x000C472F File Offset: 0x000C292F
 		public override int InitValue
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700169D RID: 5789
-		// (get) Token: 0x06004A35 RID: 18997 RVA: 0x000B9D2C File Offset: 0x000B7F2C
+		// Token: 0x170017C5 RID: 6085
+		// (get) Token: 0x06004EE3 RID: 20195 RVA: 0x000C473C File Offset: 0x000C293C
 		public override int? ProgressPerformanceAttribute
 		{
 			get
@@ -68,12 +65,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700169E RID: 5790
-		// (get) Token: 0x06004A36 RID: 18998 RVA: 0x000B9D62 File Offset: 0x000B7F62
-		[Nullable(1)]
+		// Token: 0x170017C6 RID: 6086
+		// (get) Token: 0x06004EE4 RID: 20196 RVA: 0x000C4772 File Offset: 0x000C2972
 		public virtual IEntityMatch Match
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._MatchInited)
@@ -86,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700169F RID: 5791
-		// (get) Token: 0x06004A37 RID: 18999 RVA: 0x000B9D96 File Offset: 0x000B7F96
+		// Token: 0x170017C7 RID: 6087
+		// (get) Token: 0x06004EE5 RID: 20197 RVA: 0x000C47A6 File Offset: 0x000C29A6
 		public virtual int IncreaseSpeed
 		{
 			get
@@ -96,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A0 RID: 5792
-		// (get) Token: 0x06004A38 RID: 19000 RVA: 0x000B9DA3 File Offset: 0x000B7FA3
+		// Token: 0x170017C8 RID: 6088
+		// (get) Token: 0x06004EE6 RID: 20198 RVA: 0x000C47B3 File Offset: 0x000C29B3
 		public virtual int DecreaseSpeed
 		{
 			get
@@ -106,8 +101,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A1 RID: 5793
-		// (get) Token: 0x06004A39 RID: 19001 RVA: 0x000B9DB0 File Offset: 0x000B7FB0
+		// Token: 0x170017C9 RID: 6089
+		// (get) Token: 0x06004EE7 RID: 20199 RVA: 0x000C47C0 File Offset: 0x000C29C0
 		public virtual bool? RayCastCheck
 		{
 			get
@@ -120,10 +115,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016A2 RID: 5794
-		// (get) Token: 0x06004A3A RID: 19002 RVA: 0x000B9DE6 File Offset: 0x000B7FE6
+		// Token: 0x170017CA RID: 6090
+		// (get) Token: 0x06004EE8 RID: 20200 RVA: 0x000C47F6 File Offset: 0x000C29F6
+		[Nullable(2)]
 		public virtual VectorInfo RayCastCenter
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._RayCastCenterInited)
@@ -136,19 +133,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A53 RID: 10835
+		// Token: 0x04002CCD RID: 11469
 		private IMatchTargetChargingDevice Instance;
 
-		// Token: 0x04002A54 RID: 10836
+		// Token: 0x04002CCE RID: 11470
+		[Nullable(2)]
 		private IEntityMatch _MatchCache;
 
-		// Token: 0x04002A55 RID: 10837
+		// Token: 0x04002CCF RID: 11471
 		private bool _MatchInited;
 
-		// Token: 0x04002A56 RID: 10838
+		// Token: 0x04002CD0 RID: 11472
+		[Nullable(2)]
 		private VectorInfo _RayCastCenterCache;
 
-		// Token: 0x04002A57 RID: 10839
+		// Token: 0x04002CD1 RID: 11473
 		private bool _RayCastCenterInited;
 	}
 }

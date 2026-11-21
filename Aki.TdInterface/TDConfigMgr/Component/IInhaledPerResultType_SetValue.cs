@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000463 RID: 1123
+	// Token: 0x020004BC RID: 1212
 	public class IInhaledPerResultType_SetValue
 	{
-		// Token: 0x04001139 RID: 4409
+		// Token: 0x0400125B RID: 4699
 		public EInhaledPerResultType Type;
 	}
 }

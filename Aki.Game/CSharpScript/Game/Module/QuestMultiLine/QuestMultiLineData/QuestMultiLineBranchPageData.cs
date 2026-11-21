@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 {
-	// Token: 0x02004FCE RID: 20430
+	// Token: 0x02003F97 RID: 16279
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineBranchPageData
 	{
-		// Token: 0x06034453 RID: 214099 RVA: 0x00C46734 File Offset: 0x00C44934
+		// Token: 0x060292C1 RID: 168641 RVA: 0x00B8FEEC File Offset: 0x00B8E0EC
 		public QuestMultiLineBranchPageData(OneQuestBranchPageInfo branchPageInfo)
 		{
 			this.Config = QuestMultiLineConfig.GetBranchPageConfigById(branchPageInfo.Id);
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F8A RID: 32650
-		// (get) Token: 0x06034454 RID: 214100 RVA: 0x00C467C0 File Offset: 0x00C449C0
+		// Token: 0x1700533A RID: 21306
+		// (get) Token: 0x060292C2 RID: 168642 RVA: 0x00B8FF78 File Offset: 0x00B8E178
 		public int Id
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F8B RID: 32651
-		// (get) Token: 0x06034455 RID: 214101 RVA: 0x00C467E0 File Offset: 0x00C449E0
+		// Token: 0x1700533B RID: 21307
+		// (get) Token: 0x060292C3 RID: 168643 RVA: 0x00B8FF98 File Offset: 0x00B8E198
 		public int[] Branch
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F8C RID: 32652
-		// (get) Token: 0x06034456 RID: 214102 RVA: 0x00C46800 File Offset: 0x00C44A00
+		// Token: 0x1700533C RID: 21308
+		// (get) Token: 0x060292C4 RID: 168644 RVA: 0x00B8FFB8 File Offset: 0x00B8E1B8
 		public Aki.Config.IntVector2D[] QuestNodes
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F8D RID: 32653
-		// (get) Token: 0x06034457 RID: 214103 RVA: 0x00C46820 File Offset: 0x00C44A20
+		// Token: 0x1700533D RID: 21309
+		// (get) Token: 0x060292C5 RID: 168645 RVA: 0x00B8FFD8 File Offset: 0x00B8E1D8
 		[Nullable(new byte[]
 		{
 			2,
@@ -82,10 +82,10 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x0401BCE6 RID: 113894
+		// Token: 0x040166BB RID: 91835
 		private readonly QuestBranchPageConfig? Config;
 
-		// Token: 0x0401BCE7 RID: 113895
+		// Token: 0x040166BC RID: 91836
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,37 +7,37 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x02002C25 RID: 11301
+// Token: 0x020021A0 RID: 8608
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class TutorialController : UiControllerBase
 {
-	// Token: 0x060178BE RID: 96446 RVA: 0x005FCA34 File Offset: 0x005FAC34
+	// Token: 0x060152F0 RID: 86768 RVA: 0x00629458 File Offset: 0x00627658
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x060178BF RID: 96447 RVA: 0x005FCA52 File Offset: 0x005FAC52
+	// Token: 0x060152F1 RID: 86769 RVA: 0x00629476 File Offset: 0x00627676
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x060178C0 RID: 96448 RVA: 0x005FCA70 File Offset: 0x005FAC70
+	// Token: 0x060152F2 RID: 86770 RVA: 0x00629494 File Offset: 0x00627694
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TutorialUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTutorialUnlockedIdsNotify));
 	}
 
-	// Token: 0x060178C1 RID: 96449 RVA: 0x005FCA8E File Offset: 0x005FAC8E
+	// Token: 0x060152F3 RID: 86771 RVA: 0x006294B2 File Offset: 0x006276B2
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TutorialUnlockNotify);
 	}
 
-	// Token: 0x060178C2 RID: 96450 RVA: 0x005FCAA0 File Offset: 0x005FACA0
+	// Token: 0x060152F4 RID: 86772 RVA: 0x006294C4 File Offset: 0x006276C4
 	public void OpenExclusiveTutorial(EExclusiveTutorialType type)
 	{
 		TutorialViewParam param = new TutorialViewParam
@@ -48,7 +47,7 @@ public class TutorialController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.TutorialPopView, param, null);
 	}
 
-	// Token: 0x060178C3 RID: 96451 RVA: 0x005FCAD0 File Offset: 0x005FACD0
+	// Token: 0x060152F5 RID: 86773 RVA: 0x006294F4 File Offset: 0x006276F4
 	[NullableContext(2)]
 	private void OnTutorialUnlockedIdsNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -58,7 +57,7 @@ public class TutorialController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060178C4 RID: 96452 RVA: 0x005FCB28 File Offset: 0x005FAD28
+	// Token: 0x060152F6 RID: 86774 RVA: 0x0062954C File Offset: 0x0062774C
 	private void OnDataDone()
 	{
 		TutorialModel.Instance.InitDefaultUnlockTutorials();
@@ -80,37 +79,37 @@ public class TutorialController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060178C5 RID: 96453 RVA: 0x005FCB75 File Offset: 0x005FAD75
+	// Token: 0x060152F7 RID: 86775 RVA: 0x00629599 File Offset: 0x00627799
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.TutorialView, new Func<EUiViewName, object, bool>(this.CanOpenView), "TutorialController.CanOpenView");
 	}
 
-	// Token: 0x060178C6 RID: 96454 RVA: 0x005FCB97 File Offset: 0x005FAD97
+	// Token: 0x060152F8 RID: 86776 RVA: 0x006295BB File Offset: 0x006277BB
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.TutorialView, new Func<EUiViewName, object, bool>(this.CanOpenView));
 	}
 
-	// Token: 0x060178C7 RID: 96455 RVA: 0x005FCBB4 File Offset: 0x005FADB4
+	// Token: 0x060152F9 RID: 86777 RVA: 0x006295D8 File Offset: 0x006277D8
 	public void OnTutorialTipExistChanged(bool isExist)
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.OnTutorialTipExistChanged, isExist);
 	}
 
-	// Token: 0x060178C8 RID: 96456 RVA: 0x005FCBC8 File Offset: 0x005FADC8
+	// Token: 0x060152FA RID: 86778 RVA: 0x006295EC File Offset: 0x006277EC
 	private bool CanOpenView(EUiViewName viewName, object param)
 	{
 		return FunctionModel.Instance.IsOpen(10022) && (!UiManager.Instance.IsViewOpen(EUiViewName.GuideTutorialTipsView) || UiManager.Instance.IsViewOpen(EUiViewName.FunctionView) || GuideModel.Instance.HaveCurrentTutorial());
 	}
 
-	// Token: 0x060178C9 RID: 96457 RVA: 0x005FCC19 File Offset: 0x005FAE19
+	// Token: 0x060152FB RID: 86779 RVA: 0x0062963D File Offset: 0x0062783D
 	public void OpenTutorialView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.TutorialView, null, null);
 	}
 
-	// Token: 0x060178CA RID: 96458 RVA: 0x005FCC2C File Offset: 0x005FAE2C
+	// Token: 0x060152FC RID: 86780 RVA: 0x00629650 File Offset: 0x00627850
 	public void GmUnlockOneTutorial(int tutorialId)
 	{
 		TutorialUnlockRequest tutorialUnlockRequest = TutorialUnlockRequest.Create();
@@ -130,7 +129,7 @@ public class TutorialController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060178CB RID: 96459 RVA: 0x005FCC78 File Offset: 0x005FAE78
+	// Token: 0x060152FD RID: 86781 RVA: 0x0062969C File Offset: 0x0062789C
 	public void RemoveRedDotTutorialId(int tutorialId)
 	{
 		TutorialModel.Instance.RemoveRedDotTutorialId(tutorialId);
@@ -149,7 +148,7 @@ public class TutorialController : UiControllerBase
 		this.SendGetAwardRequest(tutorialId);
 	}
 
-	// Token: 0x060178CC RID: 96460 RVA: 0x005FCCFC File Offset: 0x005FAEFC
+	// Token: 0x060152FE RID: 86782 RVA: 0x00629720 File Offset: 0x00627920
 	private void SendGetAwardRequest(int tutorialId)
 	{
 		if (!TutorialConfig.Instance.HasUnlockReward(tutorialId))
@@ -169,7 +168,14 @@ public class TutorialController : UiControllerBase
 			{
 				return;
 			}
-			int num = tutorialReceiveResponse.ItemMap.Keys.First<int>();
+			int num = 0;
+			using (IEnumerator<int> enumerator = tutorialReceiveResponse.ItemMap.Keys.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					num = enumerator.Current;
+				}
+			}
 			int num2 = tutorialReceiveResponse.ItemMap[num];
 			List<ValueTuple<int, int>> rewardList = TutorialModel.Instance.RewardList;
 			if (rewardList.Count > 0)
@@ -190,7 +196,7 @@ public class TutorialController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060178CD RID: 96461 RVA: 0x005FCD54 File Offset: 0x005FAF54
+	// Token: 0x060152FF RID: 86783 RVA: 0x00629778 File Offset: 0x00627978
 	public void TryOpenAwardUiViewPending()
 	{
 		if (TutorialModel.Instance.RewardList.Count > 0)
@@ -200,7 +206,7 @@ public class TutorialController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060178CE RID: 96462 RVA: 0x005FCD8C File Offset: 0x005FAF8C
+	// Token: 0x06015300 RID: 86784 RVA: 0x006297B0 File Offset: 0x006279B0
 	[NullableContext(2)]
 	public void TryUnlockAndOpenTutorialTip(int tutorialId, Action<bool> finishCallback = null)
 	{
@@ -331,8 +337,8 @@ public class TutorialController : UiControllerBase
 		finishCallback4(false);
 	}
 
-	// Token: 0x17001FB5 RID: 8117
-	// (get) Token: 0x060178CF RID: 96463 RVA: 0x005FD066 File Offset: 0x005FB266
+	// Token: 0x1700200D RID: 8205
+	// (get) Token: 0x06015301 RID: 86785 RVA: 0x00629A8A File Offset: 0x00627C8A
 	public static TutorialController Instance
 	{
 		get
@@ -341,7 +347,7 @@ public class TutorialController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060178D0 RID: 96464 RVA: 0x005FD06D File Offset: 0x005FB26D
+	// Token: 0x06015302 RID: 86786 RVA: 0x00629A91 File Offset: 0x00627C91
 	public static TutorialController GetOrCreateInstance()
 	{
 		if (TutorialController._Instance == null)
@@ -351,7 +357,7 @@ public class TutorialController : UiControllerBase
 		return TutorialController._Instance;
 	}
 
-	// Token: 0x060178D1 RID: 96465 RVA: 0x005FD081 File Offset: 0x005FB281
+	// Token: 0x06015303 RID: 86787 RVA: 0x00629AA5 File Offset: 0x00627CA5
 	public static bool CreateInstance()
 	{
 		if (TutorialController._Instance != null)
@@ -362,24 +368,24 @@ public class TutorialController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060178D2 RID: 96466 RVA: 0x005FD097 File Offset: 0x005FB297
+	// Token: 0x06015304 RID: 86788 RVA: 0x00629ABB File Offset: 0x00627CBB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060178D3 RID: 96467 RVA: 0x005FD099 File Offset: 0x005FB299
+	// Token: 0x06015305 RID: 86789 RVA: 0x00629ABD File Offset: 0x00627CBD
 	public static void ResetStaticDefaultValue()
 	{
 		TutorialController._Instance = null;
 	}
 
-	// Token: 0x060178D4 RID: 96468 RVA: 0x005FD0A1 File Offset: 0x005FB2A1
+	// Token: 0x06015306 RID: 86790 RVA: 0x00629AC5 File Offset: 0x00627CC5
 	static TutorialController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TutorialController.CreateStaticDefaultValue), new Action(TutorialController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AFA4 RID: 44964
+	// Token: 0x0400B3A9 RID: 45993
 	[Nullable(2)]
 	private static TutorialController _Instance;
 }

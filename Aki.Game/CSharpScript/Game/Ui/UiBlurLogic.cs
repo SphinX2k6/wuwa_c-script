@@ -5,12 +5,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200462E RID: 17966
+	// Token: 0x02003558 RID: 13656
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiBlurLogic : Singleton
 	{
-		// Token: 0x0602E471 RID: 189553 RVA: 0x00AB2C88 File Offset: 0x00AB0E88
+		// Token: 0x06022B84 RID: 142212 RVA: 0x009DFA18 File Offset: 0x009DDC18
 		[NullableContext(2)]
 		private void SetGlobalBlurIndex(UUIItem uiItem)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Ui
 			ULGUIBPLibrary.SetGlobalBlurUIItem(uuiitem, uiItem.GetWorld());
 		}
 
-		// Token: 0x0602E472 RID: 189554 RVA: 0x00AB2D00 File Offset: 0x00AB0F00
+		// Token: 0x06022B85 RID: 142213 RVA: 0x009DFA90 File Offset: 0x009DDC90
 		private UUIItem GetRootItem(UiViewBase view)
 		{
 			IPopViewWithCustomUiBlurItem popViewWithCustomUiBlurItem = view as IPopViewWithCustomUiBlurItem;
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Ui
 			return view.GetBlurRootItem();
 		}
 
-		// Token: 0x0602E473 RID: 189555 RVA: 0x00AB2D38 File Offset: 0x00AB0F38
+		// Token: 0x06022B86 RID: 142214 RVA: 0x009DFAC8 File Offset: 0x009DDCC8
 		public void SetNormalUiRenderAfterBlur(UiViewBase view)
 		{
 			this.SetGlobalBlurIndex(this.GetRootItem(view));
 		}
 
-		// Token: 0x0602E474 RID: 189556 RVA: 0x00AB2D48 File Offset: 0x00AB0F48
+		// Token: 0x06022B87 RID: 142215 RVA: 0x009DFAD8 File Offset: 0x009DDCD8
 		public void ResumeTopUiRenderAfterBlur()
 		{
 			UiViewBase topView = UiModel.Instance.GetTopView(ELayerType.Pop);
@@ -78,8 +78,8 @@ namespace CSharpScript.Game.Ui
 			ULGUIBPLibrary.ResetGlobalBlurUIItem(GlobalData.GameInstance.GetWorld());
 		}
 
-		// Token: 0x170075E3 RID: 30179
-		// (get) Token: 0x0602E475 RID: 189557 RVA: 0x00AB2DB2 File Offset: 0x00AB0FB2
+		// Token: 0x1700489D RID: 18589
+		// (get) Token: 0x06022B88 RID: 142216 RVA: 0x009DFB42 File Offset: 0x009DDD42
 		public static UiBlurLogic Instance
 		{
 			get
@@ -93,12 +93,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E476 RID: 189558 RVA: 0x00AB2DD5 File Offset: 0x00AB0FD5
+		// Token: 0x06022B89 RID: 142217 RVA: 0x009DFB65 File Offset: 0x009DDD65
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E477 RID: 189559 RVA: 0x00AB2DD7 File Offset: 0x00AB0FD7
+		// Token: 0x06022B8A RID: 142218 RVA: 0x009DFB67 File Offset: 0x009DDD67
 		public static void ResetStaticDefaultValue()
 		{
 			UiBlurLogic instance = UiBlurLogic._instance;
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Ui
 			UiBlurLogic._instance = null;
 		}
 
-		// Token: 0x0602E478 RID: 189560 RVA: 0x00AB2DF0 File Offset: 0x00AB0FF0
+		// Token: 0x06022B8B RID: 142219 RVA: 0x009DFB80 File Offset: 0x009DDD80
 		static UiBlurLogic()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiBlurLogic.CreateStaticDefaultValue), new Action(UiBlurLogic.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018D67 RID: 101735
+		// Token: 0x040133B4 RID: 78772
 		[Nullable(2)]
 		private static UiBlurLogic _instance;
 	}

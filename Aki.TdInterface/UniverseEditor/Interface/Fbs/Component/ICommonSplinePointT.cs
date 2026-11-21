@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FD4 RID: 20436
+	// Token: 0x02005533 RID: 21811
 	public class ICommonSplinePointT
 	{
-		// Token: 0x1700940A RID: 37898
-		// (get) Token: 0x060208C9 RID: 133321 RVA: 0x00486D1F File Offset: 0x00484F1F
-		// (set) Token: 0x060208CA RID: 133322 RVA: 0x00486D27 File Offset: 0x00484F27
+		// Token: 0x17009BEB RID: 39915
+		// (get) Token: 0x060227E5 RID: 141285 RVA: 0x004C06DF File Offset: 0x004BE8DF
+		// (set) Token: 0x060227E6 RID: 141286 RVA: 0x004C06E7 File Offset: 0x004BE8E7
 		public IVectorInfoT Position { get; set; }
 
-		// Token: 0x1700940B RID: 37899
-		// (get) Token: 0x060208CB RID: 133323 RVA: 0x00486D30 File Offset: 0x00484F30
-		// (set) Token: 0x060208CC RID: 133324 RVA: 0x00486D38 File Offset: 0x00484F38
+		// Token: 0x17009BEC RID: 39916
+		// (get) Token: 0x060227E7 RID: 141287 RVA: 0x004C06F0 File Offset: 0x004BE8F0
+		// (set) Token: 0x060227E8 RID: 141288 RVA: 0x004C06F8 File Offset: 0x004BE8F8
 		public IVectorInfoT ArriveTangent { get; set; }
 
-		// Token: 0x1700940C RID: 37900
-		// (get) Token: 0x060208CD RID: 133325 RVA: 0x00486D41 File Offset: 0x00484F41
-		// (set) Token: 0x060208CE RID: 133326 RVA: 0x00486D49 File Offset: 0x00484F49
+		// Token: 0x17009BED RID: 39917
+		// (get) Token: 0x060227E9 RID: 141289 RVA: 0x004C0701 File Offset: 0x004BE901
+		// (set) Token: 0x060227EA RID: 141290 RVA: 0x004C0709 File Offset: 0x004BE909
 		public IVectorInfoT LeaveTangent { get; set; }
 
-		// Token: 0x1700940D RID: 37901
-		// (get) Token: 0x060208CF RID: 133327 RVA: 0x00486D52 File Offset: 0x00484F52
-		// (set) Token: 0x060208D0 RID: 133328 RVA: 0x00486D5A File Offset: 0x00484F5A
+		// Token: 0x17009BEE RID: 39918
+		// (get) Token: 0x060227EB RID: 141291 RVA: 0x004C0712 File Offset: 0x004BE912
+		// (set) Token: 0x060227EC RID: 141292 RVA: 0x004C071A File Offset: 0x004BE91A
 		public ESplineLine LineType { get; set; }
 
-		// Token: 0x1700940E RID: 37902
-		// (get) Token: 0x060208D1 RID: 133329 RVA: 0x00486D63 File Offset: 0x00484F63
-		// (set) Token: 0x060208D2 RID: 133330 RVA: 0x00486D6B File Offset: 0x00484F6B
+		// Token: 0x17009BEF RID: 39919
+		// (get) Token: 0x060227ED RID: 141293 RVA: 0x004C0723 File Offset: 0x004BE923
+		// (set) Token: 0x060227EE RID: 141294 RVA: 0x004C072B File Offset: 0x004BE92B
 		public IVectorInfoT Rotation { get; set; }
 
-		// Token: 0x060208D3 RID: 133331 RVA: 0x00486D74 File Offset: 0x00484F74
+		// Token: 0x060227EF RID: 141295 RVA: 0x004C0734 File Offset: 0x004BE934
 		public ICommonSplinePointT()
 		{
 			this.Position = null;

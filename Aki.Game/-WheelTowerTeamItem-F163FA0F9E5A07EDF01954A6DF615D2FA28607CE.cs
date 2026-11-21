@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020015CB RID: 5579
+// Token: 0x02000A83 RID: 2691
 internal enum <WheelTowerTeamItem>F163FA0F9E5A07EDF01954A6DF615D2FA28607CE970CC9DE3DD6D7E235606ED4F__EWheelTowerTeamItemComponent
 {
-	// Token: 0x0400462C RID: 17964
+	// Token: 0x040046D2 RID: 18130
 	Button,
-	// Token: 0x0400462D RID: 17965
+	// Token: 0x040046D3 RID: 18131
 	RoleLayout,
-	// Token: 0x0400462E RID: 17966
+	// Token: 0x040046D4 RID: 18132
 	RoleTemplate,
-	// Token: 0x0400462F RID: 17967
+	// Token: 0x040046D5 RID: 18133
 	Warning,
-	// Token: 0x04004630 RID: 17968
+	// Token: 0x040046D6 RID: 18134
 	BtnInfo
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B5D RID: 2909
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C2B RID: 3115
 	public class IItemLockingConfig
 	{
-		// Token: 0x06004303 RID: 17155 RVA: 0x000AAEDF File Offset: 0x000A90DF
+		// Token: 0x0600475C RID: 18268 RVA: 0x000B4FA3 File Offset: 0x000B31A3
 		public static IItemLockingConfig Create(IItemLockingConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001206 RID: 4614
-		// (get) Token: 0x06004304 RID: 17156 RVA: 0x000AAEFE File Offset: 0x000A90FE
+		// Token: 0x17001301 RID: 4865
+		// (get) Token: 0x0600475D RID: 18269 RVA: 0x000B4FC2 File Offset: 0x000B31C2
 		public virtual string EffectPath
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001207 RID: 4615
-		// (get) Token: 0x06004305 RID: 17157 RVA: 0x000AAF0C File Offset: 0x000A910C
+		// Token: 0x17001302 RID: 4866
+		// (get) Token: 0x0600475E RID: 18270 RVA: 0x000B4FD0 File Offset: 0x000B31D0
 		public virtual ETeleControlLockingPerform? TeleControlPerform
 		{
 			get
@@ -46,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025CE RID: 9678
+		// Token: 0x04002816 RID: 10262
 		private IItemLockingConfig Instance;
 	}
 }

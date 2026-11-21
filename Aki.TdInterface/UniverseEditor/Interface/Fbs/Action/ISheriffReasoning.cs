@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070C4 RID: 28868
+	// Token: 0x02007890 RID: 30864
 	public struct ISheriffReasoning : IFlatbufferObject
 	{
-		// Token: 0x1700D673 RID: 54899
-		// (get) Token: 0x06033214 RID: 209428 RVA: 0x006E50EE File Offset: 0x006E32EE
+		// Token: 0x1700E256 RID: 57942
+		// (get) Token: 0x060364B6 RID: 222390 RVA: 0x007456FA File Offset: 0x007438FA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033215 RID: 209429 RVA: 0x006E50FB File Offset: 0x006E32FB
+		// Token: 0x060364B7 RID: 222391 RVA: 0x00745707 File Offset: 0x00743907
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033216 RID: 209430 RVA: 0x006E5104 File Offset: 0x006E3304
+		// Token: 0x060364B8 RID: 222392 RVA: 0x00745710 File Offset: 0x00743910
 		public static ISheriffReasoning GetRootAsISheriffReasoning(ByteBuffer _bb)
 		{
 			return ISheriffReasoning.GetRootAsISheriffReasoning(_bb, default(ISheriffReasoning));
 		}
 
-		// Token: 0x06033217 RID: 209431 RVA: 0x006E5120 File Offset: 0x006E3320
+		// Token: 0x060364B9 RID: 222393 RVA: 0x0074572C File Offset: 0x0074392C
 		public static ISheriffReasoning GetRootAsISheriffReasoning(ByteBuffer _bb, ISheriffReasoning obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033218 RID: 209432 RVA: 0x006E513D File Offset: 0x006E333D
+		// Token: 0x060364BA RID: 222394 RVA: 0x00745749 File Offset: 0x00743949
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033219 RID: 209433 RVA: 0x006E514C File Offset: 0x006E334C
+		// Token: 0x060364BB RID: 222395 RVA: 0x00745758 File Offset: 0x00743958
 		public ISheriffReasoning __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D674 RID: 54900
-		// (get) Token: 0x0603321A RID: 209434 RVA: 0x006E515C File Offset: 0x006E335C
+		// Token: 0x1700E257 RID: 57943
+		// (get) Token: 0x060364BC RID: 222396 RVA: 0x00745768 File Offset: 0x00743968
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D675 RID: 54901
-		// (get) Token: 0x0603321B RID: 209435 RVA: 0x006E5198 File Offset: 0x006E3398
+		// Token: 0x1700E258 RID: 57944
+		// (get) Token: 0x060364BD RID: 222397 RVA: 0x007457A4 File Offset: 0x007439A4
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603321C RID: 209436 RVA: 0x006E51D4 File Offset: 0x006E33D4
+		// Token: 0x060364BE RID: 222398 RVA: 0x007457E0 File Offset: 0x007439E0
 		public static Offset<ISheriffReasoning> CreateISheriffReasoning(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISheriffReasoning.EndISheriffReasoning(builder);
 		}
 
-		// Token: 0x0603321D RID: 209437 RVA: 0x006E51F1 File Offset: 0x006E33F1
+		// Token: 0x060364BF RID: 222399 RVA: 0x007457FD File Offset: 0x007439FD
 		public static void StartISheriffReasoning(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603321E RID: 209438 RVA: 0x006E51FA File Offset: 0x006E33FA
+		// Token: 0x060364C0 RID: 222400 RVA: 0x00745806 File Offset: 0x00743A06
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603321F RID: 209439 RVA: 0x006E5205 File Offset: 0x006E3405
+		// Token: 0x060364C1 RID: 222401 RVA: 0x00745811 File Offset: 0x00743A11
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06033220 RID: 209440 RVA: 0x006E5210 File Offset: 0x006E3410
+		// Token: 0x060364C2 RID: 222402 RVA: 0x0074581C File Offset: 0x00743A1C
 		public static Offset<ISheriffReasoning> EndISheriffReasoning(FlatBufferBuilder builder)
 		{
 			return new Offset<ISheriffReasoning>(builder.EndTable());
 		}
 
-		// Token: 0x06033221 RID: 209441 RVA: 0x006E5220 File Offset: 0x006E3420
+		// Token: 0x060364C3 RID: 222403 RVA: 0x0074582C File Offset: 0x00743A2C
 		public ISheriffReasoningT UnPack()
 		{
 			ISheriffReasoningT sheriffReasoningT = new ISheriffReasoningT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sheriffReasoningT;
 		}
 
-		// Token: 0x06033222 RID: 209442 RVA: 0x006E523B File Offset: 0x006E343B
+		// Token: 0x060364C4 RID: 222404 RVA: 0x00745847 File Offset: 0x00743A47
 		public void UnPackTo(ISheriffReasoningT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06033223 RID: 209443 RVA: 0x006E5258 File Offset: 0x006E3458
+		// Token: 0x060364C5 RID: 222405 RVA: 0x00745864 File Offset: 0x00743A64
 		public static Offset<ISheriffReasoning> Pack(FlatBufferBuilder builder, ISheriffReasoningT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISheriffReasoning.CreateISheriffReasoning(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x04011B33 RID: 72499
+		// Token: 0x04012B21 RID: 76577
 		private Table __p;
 	}
 }

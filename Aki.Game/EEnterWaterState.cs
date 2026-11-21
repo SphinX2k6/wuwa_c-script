@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200308D RID: 12429
+// Token: 0x020025E4 RID: 9700
 internal enum EEnterWaterState
 {
-	// Token: 0x0400CC18 RID: 52248
+	// Token: 0x0400CFFB RID: 53243
 	None,
-	// Token: 0x0400CC19 RID: 52249
+	// Token: 0x0400CFFC RID: 53244
 	Air,
-	// Token: 0x0400CC1A RID: 52250
+	// Token: 0x0400CFFD RID: 53245
 	Climb,
-	// Token: 0x0400CC1B RID: 52251
+	// Token: 0x0400CFFE RID: 53246
 	Ground
 }

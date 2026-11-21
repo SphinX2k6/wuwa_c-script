@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A1D RID: 23069
+	// Token: 0x0200602A RID: 24618
 	public class ISystemModuleDataSyncDataT
 	{
-		// Token: 0x1700AD6D RID: 44397
-		// (get) Token: 0x060272E9 RID: 160489 RVA: 0x00563CC6 File Offset: 0x00561EC6
-		// (set) Token: 0x060272EA RID: 160490 RVA: 0x00563CCE File Offset: 0x00561ECE
+		// Token: 0x1700B6A5 RID: 46757
+		// (get) Token: 0x06029861 RID: 170081 RVA: 0x005AAC8A File Offset: 0x005A8E8A
+		// (set) Token: 0x06029862 RID: 170082 RVA: 0x005AAC92 File Offset: 0x005A8E92
 		public ESyncDataSystemType Type { get; set; }
 
-		// Token: 0x060272EB RID: 160491 RVA: 0x00563CD7 File Offset: 0x00561ED7
+		// Token: 0x06029863 RID: 170083 RVA: 0x005AAC9B File Offset: 0x005A8E9B
 		public ISystemModuleDataSyncDataT()
 		{
 			this.Type = ESyncDataSystemType.MotorRacing;

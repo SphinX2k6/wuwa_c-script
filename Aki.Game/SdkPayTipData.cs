@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002968 RID: 10600
+// Token: 0x02001EE3 RID: 7907
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkPayTipData
 {
-	// Token: 0x06015E7F RID: 89727 RVA: 0x0058690F File Offset: 0x00584B0F
+	// Token: 0x06013883 RID: 80003 RVA: 0x005B1913 File Offset: 0x005AFB13
 	public static SdkPayTipData Create(string payStateSpritePath, string payResultTextId, string payContentTextId, int countDownTime, string countDownTextId)
 	{
 		return new SdkPayTipData
@@ -19,18 +19,18 @@ public class SdkPayTipData
 		};
 	}
 
-	// Token: 0x0400A30C RID: 41740
+	// Token: 0x0400A6F6 RID: 42742
 	public string PayStateSpritePath = "";
 
-	// Token: 0x0400A30D RID: 41741
+	// Token: 0x0400A6F7 RID: 42743
 	public string PayResultTextId = "";
 
-	// Token: 0x0400A30E RID: 41742
+	// Token: 0x0400A6F8 RID: 42744
 	public string PayContentTextId = "";
 
-	// Token: 0x0400A30F RID: 41743
+	// Token: 0x0400A6F9 RID: 42745
 	public int CountDownTime;
 
-	// Token: 0x0400A310 RID: 41744
+	// Token: 0x0400A6FA RID: 42746
 	public string CountDownTextId = "";
 }

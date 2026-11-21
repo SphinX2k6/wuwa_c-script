@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002796 RID: 10134
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A68 RID: 10856
 	public class IHideSpecifyDataLayers : IHideGroupType
 	{
-		// Token: 0x0600E192 RID: 57746 RVA: 0x00215618 File Offset: 0x00213818
+		// Token: 0x0600EFB0 RID: 61360 RVA: 0x002323AC File Offset: 0x002305AC
 		public static IHideSpecifyDataLayers Create(IHideSpecifyDataLayers? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004428 RID: 17448
-		// (get) Token: 0x0600E193 RID: 57747 RVA: 0x00215637 File Offset: 0x00213837
+		// Token: 0x1700478E RID: 18318
+		// (get) Token: 0x0600EFB1 RID: 61361 RVA: 0x002323CB File Offset: 0x002305CB
 		public override EHideType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004429 RID: 17449
-		// (get) Token: 0x0600E194 RID: 57748 RVA: 0x00215644 File Offset: 0x00213844
+		// Token: 0x1700478F RID: 18319
+		// (get) Token: 0x0600EFB2 RID: 61362 RVA: 0x002323D8 File Offset: 0x002305D8
 		public virtual List<int> DataLayers
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D16 RID: 32022
+		// Token: 0x040083CC RID: 33740
 		private IHideSpecifyDataLayers Instance;
 
-		// Token: 0x04007D17 RID: 32023
+		// Token: 0x040083CD RID: 33741
 		private List<int> _DataLayersCache;
 
-		// Token: 0x04007D18 RID: 32024
+		// Token: 0x040083CE RID: 33742
 		private bool _DataLayersInited;
 	}
 }

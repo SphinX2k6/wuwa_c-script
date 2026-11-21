@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200542C RID: 21548
+	// Token: 0x0200440F RID: 17423
 	public class OperationPreferencesView : UiViewBase
 	{
-		// Token: 0x060370B1 RID: 225457 RVA: 0x00D0B4A5 File Offset: 0x00D096A5
+		// Token: 0x0602BFFA RID: 180218 RVA: 0x00C5A8C5 File Offset: 0x00C58AC5
 		[NullableContext(1)]
 		public OperationPreferencesView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060370B2 RID: 225458 RVA: 0x00D0B4B0 File Offset: 0x00D096B0
+		// Token: 0x0602BFFB RID: 180219 RVA: 0x00C5A8D0 File Offset: 0x00C58AD0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x060370B3 RID: 225459 RVA: 0x00D0B530 File Offset: 0x00D09730
+		// Token: 0x0602BFFC RID: 180220 RVA: 0x00C5A950 File Offset: 0x00C58B50
 		protected override void OnStart()
 		{
 			MenuModel instance = MenuModel.Instance;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x060370B4 RID: 225460 RVA: 0x00D0B580 File Offset: 0x00D09780
+		// Token: 0x0602BFFD RID: 180221 RVA: 0x00C5A9A0 File Offset: 0x00C58BA0
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060370B5 RID: 225461 RVA: 0x00D0B58C File Offset: 0x00D0978C
+		// Token: 0x0602BFFE RID: 180222 RVA: 0x00C5A9AC File Offset: 0x00C58BAC
 		private void OnSwitchClick(EToggleState state)
 		{
 			bool value = state == EToggleState.ETT_Checked;

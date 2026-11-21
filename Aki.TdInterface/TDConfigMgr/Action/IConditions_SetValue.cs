@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200192D RID: 6445
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AB6 RID: 6838
 	public class IConditions_SetValue
 	{
-		// Token: 0x0400566E RID: 22126
+		// Token: 0x04005ABE RID: 23230
 		public string LogicOpType;
 
-		// Token: 0x0400566F RID: 22127
+		// Token: 0x04005ABF RID: 23231
 		public List<ICondition> Conditions;
 	}
 }

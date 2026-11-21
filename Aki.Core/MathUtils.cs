@@ -11,45 +11,45 @@ using UnrealEngine;
 [Nullable(0)]
 public class MathUtils : Singleton
 {
-	// Token: 0x06000778 RID: 1912 RVA: 0x000288F0 File Offset: 0x00026AF0
+	// Token: 0x060007B2 RID: 1970 RVA: 0x00028C28 File Offset: 0x00026E28
 	public bool IsNearlyEqual(double a, double b, double? tolerance = null)
 	{
 		double valueOrDefault = tolerance.GetValueOrDefault(1E-08);
 		return Math.Abs(a - b) <= valueOrDefault;
 	}
 
-	// Token: 0x06000779 RID: 1913 RVA: 0x0002891C File Offset: 0x00026B1C
+	// Token: 0x060007B3 RID: 1971 RVA: 0x00028C54 File Offset: 0x00026E54
 	public bool IsNearlyZero(double value, double? tolerance = null)
 	{
 		double valueOrDefault = tolerance.GetValueOrDefault(1E-08);
 		return Math.Abs(value) <= valueOrDefault;
 	}
 
-	// Token: 0x0600077A RID: 1914 RVA: 0x00028946 File Offset: 0x00026B46
+	// Token: 0x060007B4 RID: 1972 RVA: 0x00028C7E File Offset: 0x00026E7E
 	public bool IsAngleNearEqual(double a, double b, double tolerance = 9.999999747378752E-05)
 	{
 		return Math.Abs(this.WrapAngle(a - b)) <= tolerance;
 	}
 
-	// Token: 0x0600077B RID: 1915 RVA: 0x0002895C File Offset: 0x00026B5C
+	// Token: 0x060007B5 RID: 1973 RVA: 0x00028C94 File Offset: 0x00026E94
 	public double Clamp(double currentValue, double min, double max)
 	{
 		return MathCommon.Clamp(currentValue, min, max);
 	}
 
-	// Token: 0x0600077C RID: 1916 RVA: 0x00028966 File Offset: 0x00026B66
+	// Token: 0x060007B6 RID: 1974 RVA: 0x00028C9E File Offset: 0x00026E9E
 	public float Clamp(float currentValue, float min, float max)
 	{
 		return MathCommon.Clamp(currentValue, min, max);
 	}
 
-	// Token: 0x0600077D RID: 1917 RVA: 0x00028970 File Offset: 0x00026B70
+	// Token: 0x060007B7 RID: 1975 RVA: 0x00028CA8 File Offset: 0x00026EA8
 	public int Clamp(int currentValue, int min, int max)
 	{
 		return MathCommon.Clamp(currentValue, min, max);
 	}
 
-	// Token: 0x0600077E RID: 1918 RVA: 0x0002897C File Offset: 0x00026B7C
+	// Token: 0x060007B8 RID: 1976 RVA: 0x00028CB4 File Offset: 0x00026EB4
 	public float GetRangePct(float min, float max, float value)
 	{
 		float num = max - min;
@@ -60,7 +60,7 @@ public class MathUtils : Singleton
 		return (value - min) / num;
 	}
 
-	// Token: 0x0600077F RID: 1919 RVA: 0x000289B0 File Offset: 0x00026BB0
+	// Token: 0x060007B9 RID: 1977 RVA: 0x00028CE8 File Offset: 0x00026EE8
 	public double GetRangePct(double min, double max, double value)
 	{
 		double num = max - min;
@@ -71,40 +71,40 @@ public class MathUtils : Singleton
 		return (value - min) / num;
 	}
 
-	// Token: 0x06000780 RID: 1920 RVA: 0x000289E4 File Offset: 0x00026BE4
+	// Token: 0x060007BA RID: 1978 RVA: 0x00028D1C File Offset: 0x00026F1C
 	public double RangeClamp(double value, double inRangeA, double inRangeB, double outRangeA, double outRangeB)
 	{
 		double alpha = this.Clamp(this.GetRangePct(inRangeA, inRangeB, value), 0.0, 1.0);
 		return this.Lerp(outRangeA, outRangeB, alpha);
 	}
 
-	// Token: 0x06000781 RID: 1921 RVA: 0x00028A20 File Offset: 0x00026C20
+	// Token: 0x060007BB RID: 1979 RVA: 0x00028D58 File Offset: 0x00026F58
 	public float RangeClamp(float value, float inRangeA, float inRangeB, float outRangeA, float outRangeB)
 	{
 		float alpha = this.Clamp(this.GetRangePct(inRangeA, inRangeB, value), 0f, 1f);
 		return this.Lerp(outRangeA, outRangeB, alpha);
 	}
 
-	// Token: 0x06000782 RID: 1922 RVA: 0x00028A52 File Offset: 0x00026C52
+	// Token: 0x060007BC RID: 1980 RVA: 0x00028D8A File Offset: 0x00026F8A
 	public double Lerp(double from, double to, double alpha)
 	{
 		return from * (1.0 - alpha) + to * alpha;
 	}
 
-	// Token: 0x06000783 RID: 1923 RVA: 0x00028A65 File Offset: 0x00026C65
+	// Token: 0x060007BD RID: 1981 RVA: 0x00028D9D File Offset: 0x00026F9D
 	public float Lerp(float from, float to, float alpha)
 	{
 		return from * (1f - alpha) + to * alpha;
 	}
 
-	// Token: 0x06000784 RID: 1924 RVA: 0x00028A74 File Offset: 0x00026C74
+	// Token: 0x060007BE RID: 1982 RVA: 0x00028DAC File Offset: 0x00026FAC
 	public double InverseLerp(double value, double min, double max)
 	{
 		double val = (value - min) / (max - min);
 		return Math.Max(0.0, Math.Min(1.0, val));
 	}
 
-	// Token: 0x06000785 RID: 1925 RVA: 0x00028AA8 File Offset: 0x00026CA8
+	// Token: 0x060007BF RID: 1983 RVA: 0x00028DE0 File Offset: 0x00026FE0
 	public double LerpCubic(double p0, double t0, double p1, double t1, double alpha)
 	{
 		double num = alpha * alpha;
@@ -112,14 +112,14 @@ public class MathUtils : Singleton
 		return (2.0 * num2 - 3.0 * num + 1.0) * p0 + (num2 - 2.0 * num + alpha) * t0 + (num2 - num) * t1 + (-2.0 * num2 + 3.0 * num) * p1;
 	}
 
-	// Token: 0x06000786 RID: 1926 RVA: 0x00028B18 File Offset: 0x00026D18
+	// Token: 0x060007C0 RID: 1984 RVA: 0x00028E50 File Offset: 0x00027050
 	public double LerpSin(double from, double to, double alpha)
 	{
 		double num = Math.Sin(alpha * 3.141592653589793 / 2.0);
 		return from * (1.0 - num) + to * num;
 	}
 
-	// Token: 0x06000787 RID: 1927 RVA: 0x00028B54 File Offset: 0x00026D54
+	// Token: 0x060007C1 RID: 1985 RVA: 0x00028E8C File Offset: 0x0002708C
 	public void LerpVectorOld(FVector from, FVector to, float alpha, ref FVector refVector)
 	{
 		float alpha2 = this.Clamp(alpha, 0f, 1f);
@@ -128,7 +128,7 @@ public class MathUtils : Singleton
 		refVector.Z = this.Lerp(from.Z, to.Z, alpha2);
 	}
 
-	// Token: 0x06000788 RID: 1928 RVA: 0x00028BC4 File Offset: 0x00026DC4
+	// Token: 0x060007C2 RID: 1986 RVA: 0x00028EFC File Offset: 0x000270FC
 	public void LerpVector(FVectorDouble from, FVectorDouble to, float alpha, ref FVectorDouble refVector)
 	{
 		float num = this.Clamp(alpha, 0f, 1f);
@@ -137,7 +137,7 @@ public class MathUtils : Singleton
 		refVector.Z = this.Lerp(from.Z, to.Z, (double)num);
 	}
 
-	// Token: 0x06000789 RID: 1929 RVA: 0x00028C34 File Offset: 0x00026E34
+	// Token: 0x060007C3 RID: 1987 RVA: 0x00028F6C File Offset: 0x0002716C
 	public void LerpDirect2dByMaxAngle(global::Vector from, global::Vector to, double zAngleScale, double maxAngle, bool invertYaw, global::Vector @out)
 	{
 		double angleByVector2D = this.GetAngleByVector2D(from);
@@ -171,7 +171,7 @@ public class MathUtils : Singleton
 		@out.Y = Math.Sin(num6 * 0.01745329238474369) * num8;
 	}
 
-	// Token: 0x0600078A RID: 1930 RVA: 0x00028D70 File Offset: 0x00026F70
+	// Token: 0x060007C4 RID: 1988 RVA: 0x000290A8 File Offset: 0x000272A8
 	public double InterpTo(double from, double to, double deltaTime, double interpSpeed)
 	{
 		double num = to - from;
@@ -182,7 +182,7 @@ public class MathUtils : Singleton
 		return from + num * this.Clamp(deltaTime * interpSpeed, 0.0, 1.0);
 	}
 
-	// Token: 0x0600078B RID: 1931 RVA: 0x00028DB4 File Offset: 0x00026FB4
+	// Token: 0x060007C5 RID: 1989 RVA: 0x000290EC File Offset: 0x000272EC
 	public double InterpConstantTo(double from, double to, double deltaTime, double interpSpeed)
 	{
 		double num = to - from;
@@ -194,7 +194,7 @@ public class MathUtils : Singleton
 		return from + this.Clamp(num, -num2, num2);
 	}
 
-	// Token: 0x0600078C RID: 1932 RVA: 0x00028DEC File Offset: 0x00026FEC
+	// Token: 0x060007C6 RID: 1990 RVA: 0x00029124 File Offset: 0x00027324
 	public float InterpConstantTo(float from, float to, float deltaTime, float interpSpeed)
 	{
 		float num = to - from;
@@ -206,7 +206,7 @@ public class MathUtils : Singleton
 		return from + this.Clamp(num, -num2, num2);
 	}
 
-	// Token: 0x0600078D RID: 1933 RVA: 0x00028E20 File Offset: 0x00027020
+	// Token: 0x060007C7 RID: 1991 RVA: 0x00029158 File Offset: 0x00027358
 	public void VectorInterpTo(global::Vector from, global::Vector to, double deltaTime, double interpSpeed, global::Vector outResult)
 	{
 		to.Subtraction(from, this.TempVector);
@@ -214,7 +214,7 @@ public class MathUtils : Singleton
 		this.TempVector.Addition(from, outResult);
 	}
 
-	// Token: 0x0600078E RID: 1934 RVA: 0x00028E74 File Offset: 0x00027074
+	// Token: 0x060007C8 RID: 1992 RVA: 0x000291AC File Offset: 0x000273AC
 	public void RotatorInterpTo(Rotator from, Rotator to, double deltaTime, double interpSpeed, Rotator res)
 	{
 		if (interpSpeed <= 0.0)
@@ -236,7 +236,7 @@ public class MathUtils : Singleton
 		MathCommon.VectorNormalizeRotator(res);
 	}
 
-	// Token: 0x0600078F RID: 1935 RVA: 0x00028F9C File Offset: 0x0002719C
+	// Token: 0x060007C9 RID: 1993 RVA: 0x000292D4 File Offset: 0x000274D4
 	public float RotatorAxisInterpTo(float from, float to, float deltaTime, float interpSpeed)
 	{
 		if (interpSpeed <= 0f)
@@ -250,7 +250,7 @@ public class MathUtils : Singleton
 		return MathCommon.WrapAngle(num2);
 	}
 
-	// Token: 0x06000790 RID: 1936 RVA: 0x00028FDC File Offset: 0x000271DC
+	// Token: 0x060007CA RID: 1994 RVA: 0x00029314 File Offset: 0x00027514
 	public double RotatorAxisInterpTo(double from, double to, double deltaTime, double interpSpeed)
 	{
 		if (interpSpeed <= 0.0)
@@ -264,7 +264,8 @@ public class MathUtils : Singleton
 		return MathCommon.WrapAngle(num2);
 	}
 
-	// Token: 0x06000791 RID: 1937 RVA: 0x00029024 File Offset: 0x00027224
+	// Token: 0x060007CB RID: 1995 RVA: 0x0002935C File Offset: 0x0002755C
+	[Obsolete("请改用 RotatorInterpConstantTo(FRotator, FRotator, float, float, out FRotator)")]
 	public void RotatorInterpConstantTo(Rotator from, Rotator to, float deltaTime, float interpSpeed, Rotator res)
 	{
 		if (deltaTime <= 0f || interpSpeed <= 0f)
@@ -286,7 +287,7 @@ public class MathUtils : Singleton
 		MathCommon.VectorNormalizeRotator(res);
 	}
 
-	// Token: 0x06000792 RID: 1938 RVA: 0x0002911C File Offset: 0x0002731C
+	// Token: 0x060007CC RID: 1996 RVA: 0x00029454 File Offset: 0x00027654
 	public void RotatorInterpConstantToAvoid(Rotator from, Rotator to, float avoidYaw, float deltaTime, float interpSpeed, Rotator res)
 	{
 		if (deltaTime <= 0f || interpSpeed <= 0f)
@@ -308,19 +309,19 @@ public class MathUtils : Singleton
 		MathCommon.VectorNormalizeRotator(res);
 	}
 
-	// Token: 0x06000793 RID: 1939 RVA: 0x00029215 File Offset: 0x00027415
+	// Token: 0x060007CD RID: 1997 RVA: 0x0002954D File Offset: 0x0002774D
 	public float GetRandomFloatNumber(float min, float max)
 	{
 		return (float)((double)min + (double)(max - min) * this.Random.NextDouble());
 	}
 
-	// Token: 0x06000794 RID: 1940 RVA: 0x0002922B File Offset: 0x0002742B
+	// Token: 0x060007CE RID: 1998 RVA: 0x00029563 File Offset: 0x00027763
 	public double GetRandomDoubleNumber(double min, double max)
 	{
 		return min + (max - min) * this.Random.NextDouble();
 	}
 
-	// Token: 0x06000795 RID: 1941 RVA: 0x00029240 File Offset: 0x00027440
+	// Token: 0x060007CF RID: 1999 RVA: 0x00029578 File Offset: 0x00027778
 	public FVector GetRandomVector(float min, float max)
 	{
 		return new FVector
@@ -331,7 +332,7 @@ public class MathUtils : Singleton
 		};
 	}
 
-	// Token: 0x06000796 RID: 1942 RVA: 0x00029284 File Offset: 0x00027484
+	// Token: 0x060007D0 RID: 2000 RVA: 0x000295BC File Offset: 0x000277BC
 	public FVectorDouble GetRandomVector(double min, double max)
 	{
 		return new FVectorDouble
@@ -342,7 +343,7 @@ public class MathUtils : Singleton
 		};
 	}
 
-	// Token: 0x06000797 RID: 1943 RVA: 0x000292C8 File Offset: 0x000274C8
+	// Token: 0x060007D1 RID: 2001 RVA: 0x00029600 File Offset: 0x00027800
 	public FVector2D GetRandomVector2d(float min, float max)
 	{
 		return new FVector2D
@@ -352,35 +353,39 @@ public class MathUtils : Singleton
 		};
 	}
 
-	// Token: 0x06000798 RID: 1944 RVA: 0x000292FC File Offset: 0x000274FC
+	// Token: 0x060007D2 RID: 2002 RVA: 0x00029634 File Offset: 0x00027834
 	public double GetAngleByVector2D(IVector vector)
 	{
-		float num = 0f;
+		double num = 0.0;
 		if (vector is FVector)
 		{
 			FVector fvector = (FVector)vector;
 			this.TempVector.FromUeVector(fvector);
-			num = (float)this.TempVector.HeadingAngle();
+			num = this.TempVector.HeadingAngle();
+		}
+		else if (vector is FVectorDouble)
+		{
+			num = ((FVectorDouble)vector).HeadingAngle();
 		}
 		else
 		{
 			global::Vector vector2 = vector as global::Vector;
 			if (vector2 != null)
 			{
-				num = (float)vector2.HeadingAngle();
+				num = vector2.HeadingAngle();
 			}
 		}
-		return (double)(num * 57.29578f);
+		return num * 57.295780181884766;
 	}
 
-	// Token: 0x06000799 RID: 1945 RVA: 0x00029354 File Offset: 0x00027554
+	// Token: 0x060007D3 RID: 2003 RVA: 0x000296AC File Offset: 0x000278AC
 	public FVector GetUeVector2dByAngle(double angle)
 	{
 		double num = angle * 0.01745329238474369;
 		return new FVector((float)Math.Cos(num), (float)Math.Sin(num), 0f);
 	}
 
-	// Token: 0x0600079A RID: 1946 RVA: 0x00029388 File Offset: 0x00027588
+	// Token: 0x060007D4 RID: 2004 RVA: 0x000296E0 File Offset: 0x000278E0
 	public void GetVector2dByAngle(double angle, global::Vector refVector)
 	{
 		double num = angle * 0.01745329238474369;
@@ -388,19 +393,19 @@ public class MathUtils : Singleton
 		refVector.Y = Math.Sin(num);
 	}
 
-	// Token: 0x0600079B RID: 1947 RVA: 0x000293B9 File Offset: 0x000275B9
+	// Token: 0x060007D5 RID: 2005 RVA: 0x00029711 File Offset: 0x00027911
 	public bool InRange(double value, FloatRange range)
 	{
 		return value >= (double)range.Min && value <= (double)range.Max;
 	}
 
-	// Token: 0x0600079C RID: 1948 RVA: 0x000293D6 File Offset: 0x000275D6
+	// Token: 0x060007D6 RID: 2006 RVA: 0x0002972E File Offset: 0x0002792E
 	public bool InRangeArray(double value, double[] range)
 	{
 		return value >= range[0] && value <= range[1];
 	}
 
-	// Token: 0x0600079D RID: 1949 RVA: 0x000293EC File Offset: 0x000275EC
+	// Token: 0x060007D7 RID: 2007 RVA: 0x00029744 File Offset: 0x00027944
 	public bool InRangeAngle(double value, FloatRange range)
 	{
 		double num = value;
@@ -415,7 +420,7 @@ public class MathUtils : Singleton
 		return this.InRange(num, range);
 	}
 
-	// Token: 0x0600079E RID: 1950 RVA: 0x0002944C File Offset: 0x0002764C
+	// Token: 0x060007D8 RID: 2008 RVA: 0x000297A4 File Offset: 0x000279A4
 	public bool InRangeAngleArray(double value, double[] range)
 	{
 		double num = value;
@@ -430,7 +435,7 @@ public class MathUtils : Singleton
 		return this.InRangeArray(num, range);
 	}
 
-	// Token: 0x0600079F RID: 1951 RVA: 0x000294A0 File Offset: 0x000276A0
+	// Token: 0x060007D9 RID: 2009 RVA: 0x000297F8 File Offset: 0x000279F8
 	public bool InUeRange(double value, FFloatRange range)
 	{
 		if (!((range.LowerBound.Type == ERangeBoundTypes.Exclusive) ? (value > (double)range.LowerBound.Value) : (value >= (double)range.LowerBound.Value)))
@@ -444,7 +449,7 @@ public class MathUtils : Singleton
 		return value < (double)range.UpperBound.Value;
 	}
 
-	// Token: 0x060007A0 RID: 1952 RVA: 0x00029528 File Offset: 0x00027728
+	// Token: 0x060007DA RID: 2010 RVA: 0x00029880 File Offset: 0x00027A80
 	public bool InFastUeRange(double value, FastUeFloatRange range)
 	{
 		if (!((range.LowerBoundType == ERangeBoundTypes.Exclusive) ? (value > range.LowerBoundValue) : (value >= range.LowerBoundValue)))
@@ -458,7 +463,7 @@ public class MathUtils : Singleton
 		return value < range.UpperBoundValue;
 	}
 
-	// Token: 0x060007A1 RID: 1953 RVA: 0x00029578 File Offset: 0x00027778
+	// Token: 0x060007DB RID: 2011 RVA: 0x000298D0 File Offset: 0x00027AD0
 	public bool InUeRangeAngle(double value, FFloatRange range)
 	{
 		double num = value;
@@ -473,7 +478,7 @@ public class MathUtils : Singleton
 		return this.InUeRange(num, range);
 	}
 
-	// Token: 0x060007A2 RID: 1954 RVA: 0x000295E0 File Offset: 0x000277E0
+	// Token: 0x060007DC RID: 2012 RVA: 0x00029938 File Offset: 0x00027B38
 	public bool InFastUeRangeAngle(double value, FastUeFloatRange range)
 	{
 		double num = value;
@@ -488,7 +493,8 @@ public class MathUtils : Singleton
 		return this.InFastUeRange(num, range);
 	}
 
-	// Token: 0x060007A3 RID: 1955 RVA: 0x0002963C File Offset: 0x0002783C
+	// Token: 0x060007DD RID: 2013 RVA: 0x00029994 File Offset: 0x00027B94
+	[Obsolete("请改用 LocationInRangeArray(FVectorDouble, FRotator, FVectorDouble, ...)")]
 	public bool LocationInRangeArray(global::Vector transformLocation, Rotator transformRotator, global::Vector location, double radius, double[] distanceRange, double[] angleRange, double[] heightRange)
 	{
 		this.InverseTransformPositionNoScale(transformLocation, transformRotator, location, this.TempVector);
@@ -506,7 +512,7 @@ public class MathUtils : Singleton
 		return this.InRangeAngleArray(angleByVector2D, angleRange);
 	}
 
-	// Token: 0x060007A4 RID: 1956 RVA: 0x000296A4 File Offset: 0x000278A4
+	// Token: 0x060007DE RID: 2014 RVA: 0x000299FC File Offset: 0x00027BFC
 	public bool LocationInUeRange(global::Vector transformLocation, Rotator transformRotator, global::Vector location, double radius, FFloatRange distanceRange, FFloatRange angleRange, FFloatRange heightRange)
 	{
 		this.InverseTransformPositionNoScale(transformLocation, transformRotator, location, this.TempVector);
@@ -524,7 +530,8 @@ public class MathUtils : Singleton
 		return this.InUeRangeAngle(angleByVector2D, angleRange);
 	}
 
-	// Token: 0x060007A5 RID: 1957 RVA: 0x0002970C File Offset: 0x0002790C
+	// Token: 0x060007DF RID: 2015 RVA: 0x00029A64 File Offset: 0x00027C64
+	[Obsolete("请改用 LocationInFastUeRange(FVectorDouble, FRotator, FVectorDouble, ...)")]
 	public bool LocationInFastUeRange(global::Vector transformLocation, Rotator transformRotator, global::Vector location, double radius, FastUeFloatRange distanceRange, FastUeFloatRange angleRange, FastUeFloatRange heightRange)
 	{
 		this.InverseTransformPositionNoScale(transformLocation, transformRotator, location, this.TempVector);
@@ -542,41 +549,41 @@ public class MathUtils : Singleton
 		return this.InFastUeRangeAngle(angleByVector2D, angleRange);
 	}
 
-	// Token: 0x060007A6 RID: 1958 RVA: 0x00029784 File Offset: 0x00027984
+	// Token: 0x060007E0 RID: 2016 RVA: 0x00029ADC File Offset: 0x00027CDC
 	public float GetFloatPointFloor(float value, int digits = 0)
 	{
 		float num = (float)Math.Pow(10.0, (double)digits);
 		return (float)Math.Floor((double)(value * num)) / num;
 	}
 
-	// Token: 0x060007A7 RID: 1959 RVA: 0x000297B0 File Offset: 0x000279B0
+	// Token: 0x060007E1 RID: 2017 RVA: 0x00029B08 File Offset: 0x00027D08
 	public double GetFloatPointFloor(double value, int digits = 0)
 	{
 		double num = Math.Pow(10.0, (double)digits);
 		return Math.Floor(value * num) / num;
 	}
 
-	// Token: 0x060007A8 RID: 1960 RVA: 0x000297D8 File Offset: 0x000279D8
+	// Token: 0x060007E2 RID: 2018 RVA: 0x00029B30 File Offset: 0x00027D30
 	public double GetFloatPointCeil(double value, int digits = 0)
 	{
 		double num = Math.Pow(10.0, (double)digits);
 		return Math.Ceiling(value * num) / num;
 	}
 
-	// Token: 0x060007A9 RID: 1961 RVA: 0x00029800 File Offset: 0x00027A00
+	// Token: 0x060007E3 RID: 2019 RVA: 0x00029B58 File Offset: 0x00027D58
 	public double GetRoundToNDecimalPlaces(double value, int n)
 	{
 		double num = Math.Pow(10.0, (double)n);
 		return Math.Round(value * num) / num;
 	}
 
-	// Token: 0x060007AA RID: 1962 RVA: 0x00029828 File Offset: 0x00027A28
+	// Token: 0x060007E4 RID: 2020 RVA: 0x00029B80 File Offset: 0x00027D80
 	public global::Vector RoundVector(global::Vector inVector, int digits)
 	{
 		return global::Vector.Create(this.GetRoundToNDecimalPlaces(inVector.X, digits), this.GetRoundToNDecimalPlaces(inVector.Y, digits), this.GetRoundToNDecimalPlaces(inVector.Z, digits));
 	}
 
-	// Token: 0x060007AB RID: 1963 RVA: 0x00029858 File Offset: 0x00027A58
+	// Token: 0x060007E5 RID: 2021 RVA: 0x00029BB0 File Offset: 0x00027DB0
 	public string GetFloatPointFloorString(double value, int digits = 0)
 	{
 		double floatPointFloor = this.GetFloatPointFloor(value, digits);
@@ -586,7 +593,7 @@ public class MathUtils : Singleton
 		return floatPointFloor.ToString(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x060007AC RID: 1964 RVA: 0x00029899 File Offset: 0x00027A99
+	// Token: 0x060007E6 RID: 2022 RVA: 0x00029BF1 File Offset: 0x00027DF1
 	public double SafeDivide(double a, double b)
 	{
 		if (b == 0.0)
@@ -596,42 +603,42 @@ public class MathUtils : Singleton
 		return a / b;
 	}
 
-	// Token: 0x060007AD RID: 1965 RVA: 0x000298B4 File Offset: 0x00027AB4
+	// Token: 0x060007E7 RID: 2023 RVA: 0x00029C0C File Offset: 0x00027E0C
 	[Obsolete("直接强转即可")]
 	public long LongToBigInt(int value)
 	{
 		return (long)value;
 	}
 
-	// Token: 0x060007AE RID: 1966 RVA: 0x000298B8 File Offset: 0x00027AB8
+	// Token: 0x060007E8 RID: 2024 RVA: 0x00029C10 File Offset: 0x00027E10
 	[Obsolete("直接使用即可")]
 	public long LongToBigInt(long value)
 	{
 		return value;
 	}
 
-	// Token: 0x060007AF RID: 1967 RVA: 0x000298BB File Offset: 0x00027ABB
+	// Token: 0x060007E9 RID: 2025 RVA: 0x00029C13 File Offset: 0x00027E13
 	[Obsolete("直接使用即可")]
 	public long LongToNumber(long value)
 	{
 		return value;
 	}
 
-	// Token: 0x060007B0 RID: 1968 RVA: 0x000298BE File Offset: 0x00027ABE
+	// Token: 0x060007EA RID: 2026 RVA: 0x00029C16 File Offset: 0x00027E16
 	[Obsolete("直接使用即可")]
 	public long NumberToLong(long value)
 	{
 		return value;
 	}
 
-	// Token: 0x060007B1 RID: 1969 RVA: 0x000298C1 File Offset: 0x00027AC1
+	// Token: 0x060007EB RID: 2027 RVA: 0x00029C19 File Offset: 0x00027E19
 	[Obsolete("直接使用即可")]
 	public long BigIntToLong(long value)
 	{
 		return value;
 	}
 
-	// Token: 0x060007B2 RID: 1970 RVA: 0x000298C4 File Offset: 0x00027AC4
+	// Token: 0x060007EC RID: 2028 RVA: 0x00029C1C File Offset: 0x00027E1C
 	public Number? StringToNumber(string s)
 	{
 		if (string.IsNullOrWhiteSpace(s))
@@ -652,7 +659,7 @@ public class MathUtils : Singleton
 		return null;
 	}
 
-	// Token: 0x060007B3 RID: 1971 RVA: 0x00029928 File Offset: 0x00027B28
+	// Token: 0x060007ED RID: 2029 RVA: 0x00029C80 File Offset: 0x00027E80
 	public double GetRandomRange(double min, double max)
 	{
 		double num = max - min;
@@ -660,7 +667,7 @@ public class MathUtils : Singleton
 		return min + num2 * num;
 	}
 
-	// Token: 0x060007B4 RID: 1972 RVA: 0x0002994C File Offset: 0x00027B4C
+	// Token: 0x060007EE RID: 2030 RVA: 0x00029CA4 File Offset: 0x00027EA4
 	[NullableContext(2)]
 	public T GetRandomItem<T>([Nullable(1)] IReadOnlyList<T> array)
 	{
@@ -672,14 +679,14 @@ public class MathUtils : Singleton
 		return array[index];
 	}
 
-	// Token: 0x060007B5 RID: 1973 RVA: 0x0002998C File Offset: 0x00027B8C
+	// Token: 0x060007EF RID: 2031 RVA: 0x00029CE4 File Offset: 0x00027EE4
 	public double BlendEaseIn(double from, double to, float alpha, double exp)
 	{
 		double num = this.Lerp(0.0, 1.0, Math.Pow((double)alpha, exp));
 		return from + (to - from) * num;
 	}
 
-	// Token: 0x060007B6 RID: 1974 RVA: 0x000299C2 File Offset: 0x00027BC2
+	// Token: 0x060007F0 RID: 2032 RVA: 0x00029D1A File Offset: 0x00027F1A
 	public double StandardizingPitch(double pitch)
 	{
 		if (pitch > 180.0)
@@ -693,19 +700,20 @@ public class MathUtils : Singleton
 		return pitch;
 	}
 
-	// Token: 0x060007B7 RID: 1975 RVA: 0x000299F5 File Offset: 0x00027BF5
+	// Token: 0x060007F1 RID: 2033 RVA: 0x00029D4D File Offset: 0x00027F4D
 	public float WrapAngle(float angle)
 	{
 		return MathCommon.WrapAngle(angle);
 	}
 
-	// Token: 0x060007B8 RID: 1976 RVA: 0x000299FD File Offset: 0x00027BFD
+	// Token: 0x060007F2 RID: 2034 RVA: 0x00029D55 File Offset: 0x00027F55
 	public double WrapAngle(double angle)
 	{
 		return MathCommon.WrapAngle(angle);
 	}
 
-	// Token: 0x060007B9 RID: 1977 RVA: 0x00029A08 File Offset: 0x00027C08
+	// Token: 0x060007F3 RID: 2035 RVA: 0x00029D60 File Offset: 0x00027F60
+	[Obsolete("请改用 GetAngleByVectorDot(FVectorDouble, FVectorDouble)")]
 	public double GetAngleByVectorDot(IVector inA, IVector inB)
 	{
 		double num = Math.Sqrt(inA.X * inA.X + inA.Y * inA.Y + inA.Z * inA.Z);
@@ -713,7 +721,7 @@ public class MathUtils : Singleton
 		return Math.Acos(MathCommon.Clamp(this.DotProduct(inA, inB) / (num * num2), -1.0, 1.0)) * 57.295780181884766;
 	}
 
-	// Token: 0x060007BA RID: 1978 RVA: 0x00029AA8 File Offset: 0x00027CA8
+	// Token: 0x060007F4 RID: 2036 RVA: 0x00029E00 File Offset: 0x00028000
 	public double SignedAngleDeg(IVector inA, IVector inB, bool yDown = false)
 	{
 		double y = inA.X * inB.Y - inA.Y * inB.X;
@@ -726,7 +734,7 @@ public class MathUtils : Singleton
 		return num;
 	}
 
-	// Token: 0x060007BB RID: 1979 RVA: 0x00029B04 File Offset: 0x00027D04
+	// Token: 0x060007F5 RID: 2037 RVA: 0x00029E5C File Offset: 0x0002805C
 	public double SignedAngleOnPlaneDeg(IVector inA, IVector inB, IVector inN)
 	{
 		double num = Math.Sqrt(inN.X * inN.X + inN.Y * inN.Y + inN.Z * inN.Z);
@@ -752,13 +760,13 @@ public class MathUtils : Singleton
 		return Math.Atan2(num2 * num13 + num3 * num14 + num4 * num15, x) * 57.295780181884766;
 	}
 
-	// Token: 0x060007BC RID: 1980 RVA: 0x00029C50 File Offset: 0x00027E50
+	// Token: 0x060007F6 RID: 2038 RVA: 0x00029FA8 File Offset: 0x000281A8
 	public double DotProduct(IVector inA, IVector inB)
 	{
 		return inA.X * inB.X + inA.Y * inB.Y + inA.Z * inB.Z;
 	}
 
-	// Token: 0x060007BD RID: 1981 RVA: 0x00029C7C File Offset: 0x00027E7C
+	// Token: 0x060007F7 RID: 2039 RVA: 0x00029FD4 File Offset: 0x000281D4
 	public void ComposeRotator(Rotator a, Rotator b, object @out)
 	{
 		Quat inQ = a.Quaternion(null);
@@ -777,7 +785,8 @@ public class MathUtils : Singleton
 		}
 	}
 
-	// Token: 0x060007BE RID: 1982 RVA: 0x00029CD0 File Offset: 0x00027ED0
+	// Token: 0x060007F8 RID: 2040 RVA: 0x0002A028 File Offset: 0x00028228
+	[Obsolete("请改用 VectorToRotator(FVectorDouble)")]
 	public IRotator VectorToRotator(IVector inA, IRotator @out)
 	{
 		@out.Yaw = (float)(Math.Atan2(inA.Y, inA.X) * 57.295780181884766);
@@ -786,7 +795,7 @@ public class MathUtils : Singleton
 		return @out;
 	}
 
-	// Token: 0x060007BF RID: 1983 RVA: 0x00029D48 File Offset: 0x00027F48
+	// Token: 0x060007F9 RID: 2041 RVA: 0x0002A0A0 File Offset: 0x000282A0
 	public IVector RotatorToVector(IRotator inA, IVector @out)
 	{
 		double degVal = (double)MathCommon.WrapAngle(inA.Pitch);
@@ -803,7 +812,7 @@ public class MathUtils : Singleton
 		return @out;
 	}
 
-	// Token: 0x060007C0 RID: 1984 RVA: 0x00029DB4 File Offset: 0x00027FB4
+	// Token: 0x060007FA RID: 2042 RVA: 0x0002A10C File Offset: 0x0002830C
 	public double Bisection(TCheck<double> check, double left, double right, double limit)
 	{
 		double num = left;
@@ -823,13 +832,13 @@ public class MathUtils : Singleton
 		return num;
 	}
 
-	// Token: 0x060007C1 RID: 1985 RVA: 0x00029DEF File Offset: 0x00027FEF
+	// Token: 0x060007FB RID: 2043 RVA: 0x0002A147 File Offset: 0x00028347
 	public double Square(double v)
 	{
 		return v * v;
 	}
 
-	// Token: 0x060007C2 RID: 1986 RVA: 0x00029DF4 File Offset: 0x00027FF4
+	// Token: 0x060007FC RID: 2044 RVA: 0x0002A14C File Offset: 0x0002834C
 	public void TransformPosition(global::Vector translation, Rotator rotation, global::Vector scale3D, global::Vector v, global::Vector @out)
 	{
 		scale3D.Multiply(v, @out);
@@ -837,14 +846,41 @@ public class MathUtils : Singleton
 		translation.Addition(@out, @out);
 	}
 
-	// Token: 0x060007C3 RID: 1987 RVA: 0x00029E1C File Offset: 0x0002801C
+	// Token: 0x060007FD RID: 2045 RVA: 0x0002A174 File Offset: 0x00028374
+	public void TransformPosition(FVectorDouble translation, FRotator rotation, FVectorDouble scale3D, FVectorDouble v, out FVectorDouble @out)
+	{
+		FQuat fquat = rotation.Quaternion();
+		FVectorDouble fvectorDouble = scale3D * v;
+		FVector fvector = fvectorDouble;
+		FVector fvector2 = fquat.RotateVector(fvector);
+		FVectorDouble fvectorDouble2 = new FVectorDouble(ref fvector2);
+		@out = fvectorDouble2 + translation;
+	}
+
+	// Token: 0x060007FE RID: 2046 RVA: 0x0002A1C0 File Offset: 0x000283C0
+	public void LookRotationUpFirst(FVectorDouble forward, FVectorDouble up, out FQuat @out)
+	{
+		FVector fvector = forward;
+		FVector fvector2 = up;
+		@out = UKuroAnimMathLibrary.LookQuat_UpFirst(fvector, fvector2);
+	}
+
+	// Token: 0x060007FF RID: 2047 RVA: 0x0002A1EC File Offset: 0x000283EC
+	public void LookRotationForwardFirst(FVectorDouble forward, FVectorDouble up, out FQuat @out)
+	{
+		FVector fvector = forward;
+		FVector fvector2 = up;
+		@out = UKuroAnimMathLibrary.LookQuat_ForwardFirst(fvector, fvector2);
+	}
+
+	// Token: 0x06000800 RID: 2048 RVA: 0x0002A218 File Offset: 0x00028418
 	public void TransformPositionNoScale(global::Vector translation, Rotator rotation, global::Vector v, global::Vector @out)
 	{
 		rotation.Quaternion(null).RotateVector(v, @out);
 		translation.Addition(@out, @out);
 	}
 
-	// Token: 0x060007C4 RID: 1988 RVA: 0x00029E38 File Offset: 0x00028038
+	// Token: 0x06000801 RID: 2049 RVA: 0x0002A234 File Offset: 0x00028434
 	public void InverseTransformPosition(global::Vector translation, Rotator rotation, global::Vector scale3D, global::Vector v, global::Vector @out)
 	{
 		v.Subtraction(translation, @out);
@@ -854,7 +890,19 @@ public class MathUtils : Singleton
 		scale3D.Multiply(@out, @out);
 	}
 
-	// Token: 0x060007C5 RID: 1989 RVA: 0x00029E88 File Offset: 0x00028088
+	// Token: 0x06000802 RID: 2050 RVA: 0x0002A284 File Offset: 0x00028484
+	public void InverseTransformPosition(FVectorDouble translation, FRotator rotation, FVectorDouble scale3D, FVectorDouble v, out FVectorDouble @out)
+	{
+		FQuat fquat = rotation.Quaternion().Inverse();
+		FVectorDouble fvectorDouble = v - translation;
+		FVector fvector = fvectorDouble;
+		FVector fvector2 = fquat.RotateVector(fvector);
+		FVectorDouble fvectorDouble2 = new FVectorDouble(ref fvector2);
+		@out = scale3D * fvectorDouble2;
+	}
+
+	// Token: 0x06000803 RID: 2051 RVA: 0x0002A2D6 File Offset: 0x000284D6
+	[Obsolete("请改用 InverseTransformPositionNoScale(FVectorDouble, FRotator, FVectorDouble, out FVectorDouble)")]
 	public void InverseTransformPositionNoScale(global::Vector translation, Rotator rotation, global::Vector v, global::Vector @out)
 	{
 		v.Subtraction(translation, @out);
@@ -863,7 +911,7 @@ public class MathUtils : Singleton
 		this.TmpQuat.RotateVector(@out, @out);
 	}
 
-	// Token: 0x060007C6 RID: 1990 RVA: 0x00029EC4 File Offset: 0x000280C4
+	// Token: 0x06000804 RID: 2052 RVA: 0x0002A310 File Offset: 0x00028510
 	private double[][] GetRotArray()
 	{
 		if (this.RotArray == null)
@@ -877,7 +925,7 @@ public class MathUtils : Singleton
 		return this.RotArray;
 	}
 
-	// Token: 0x060007C7 RID: 1991 RVA: 0x00029F18 File Offset: 0x00028118
+	// Token: 0x06000805 RID: 2053 RVA: 0x0002A364 File Offset: 0x00028564
 	private double[] GetTmpArray()
 	{
 		if (this.TmpArray == null)
@@ -888,7 +936,7 @@ public class MathUtils : Singleton
 		return this.TmpArray;
 	}
 
-	// Token: 0x060007C8 RID: 1992 RVA: 0x00029F44 File Offset: 0x00028144
+	// Token: 0x06000806 RID: 2054 RVA: 0x0002A390 File Offset: 0x00028590
 	public void LookRotation(global::Vector forward, global::Vector right, global::Vector up, Quat @out)
 	{
 		double num = forward.X + right.Y + up.Z;
@@ -937,7 +985,7 @@ public class MathUtils : Singleton
 		@out.Normalize(1E-06f);
 	}
 
-	// Token: 0x060007C9 RID: 1993 RVA: 0x0002A144 File Offset: 0x00028344
+	// Token: 0x06000807 RID: 2055 RVA: 0x0002A590 File Offset: 0x00028790
 	public void LookRotationUpFirst(global::Vector forward, global::Vector up, [Nullable(2)] object @out)
 	{
 		global::Vector tempVector = this.TempVector;
@@ -962,7 +1010,8 @@ public class MathUtils : Singleton
 		}
 	}
 
-	// Token: 0x060007CA RID: 1994 RVA: 0x0002A1DC File Offset: 0x000283DC
+	// Token: 0x06000808 RID: 2056 RVA: 0x0002A628 File Offset: 0x00028828
+	[Obsolete("请改用 LookRotationForwardFirst(FVectorDouble, FVectorDouble, out FRotator)")]
 	public void LookRotationForwardFirst(global::Vector forward, global::Vector up, object @out)
 	{
 		global::Vector tempVector = this.TempVector;
@@ -987,13 +1036,13 @@ public class MathUtils : Singleton
 		}
 	}
 
-	// Token: 0x060007CB RID: 1995 RVA: 0x0002A273 File Offset: 0x00028473
+	// Token: 0x06000809 RID: 2057 RVA: 0x0002A6BF File Offset: 0x000288BF
 	public double GetCubicValue(double t)
 	{
 		return (-2.0 * t + 3.0) * t * t;
 	}
 
-	// Token: 0x060007CC RID: 1996 RVA: 0x0002A290 File Offset: 0x00028490
+	// Token: 0x0600080A RID: 2058 RVA: 0x0002A6DC File Offset: 0x000288DC
 	public string DecimalToBinary(int inDecimal)
 	{
 		int i = inDecimal;
@@ -1025,44 +1074,44 @@ public class MathUtils : Singleton
 		return text;
 	}
 
-	// Token: 0x060007CD RID: 1997 RVA: 0x0002A319 File Offset: 0x00028519
+	// Token: 0x0600080B RID: 2059 RVA: 0x0002A765 File Offset: 0x00028965
 	public double GetObliqueTriangleAngle(double a, double b, double c)
 	{
 		return Math.Acos((a * a + b * b - c * c) / (2.0 * a * b));
 	}
 
-	// Token: 0x060007CE RID: 1998 RVA: 0x0002A33C File Offset: 0x0002853C
+	// Token: 0x0600080C RID: 2060 RVA: 0x0002A788 File Offset: 0x00028988
 	public double GetTriangleCircumradius(double a, double b, double c)
 	{
 		double num = (a + b + c) / 2.0;
 		return a * b * c / (4.0 * Math.Sqrt(num * (num - a) * (num - b) * (num - c)));
 	}
 
-	// Token: 0x060007CF RID: 1999 RVA: 0x0002A37B File Offset: 0x0002857B
+	// Token: 0x0600080D RID: 2061 RVA: 0x0002A7C7 File Offset: 0x000289C7
 	public double VerticalFovToHorizontally(double verticalFov, double aspectRatio)
 	{
 		return Math.Atan(Math.Tan(verticalFov / 2.0 * 0.01745329238474369) * aspectRatio) * 2.0 * 57.295780181884766;
 	}
 
-	// Token: 0x060007D0 RID: 2000 RVA: 0x0002A3B2 File Offset: 0x000285B2
+	// Token: 0x0600080E RID: 2062 RVA: 0x0002A7FE File Offset: 0x000289FE
 	public double HorizontalFovToVertically(double horizontalFov, double aspectRatio)
 	{
 		return Math.Atan(Math.Tan(horizontalFov / 2.0 * 0.01745329238474369) / aspectRatio) * 2.0 * 57.295780181884766;
 	}
 
-	// Token: 0x060007D1 RID: 2001 RVA: 0x0002A3E9 File Offset: 0x000285E9
+	// Token: 0x0600080F RID: 2063 RVA: 0x0002A835 File Offset: 0x00028A35
 	public bool IsValidNumber(double num)
 	{
 		return !double.IsNaN(num) && double.IsFinite(num);
 	}
 
-	// Token: 0x060007D2 RID: 2002 RVA: 0x0002A400 File Offset: 0x00028600
+	// Token: 0x06000810 RID: 2064 RVA: 0x0002A84C File Offset: 0x00028A4C
 	public bool IsValidNumbers(double x, double y, double z, int maxAbs = 100000000)
 	{
 		return !double.IsNaN(x) && !double.IsNaN(y) && !double.IsNaN(z) && double.IsFinite(x) && double.IsFinite(y) && double.IsFinite(z) && (Math.Abs(x) < (double)maxAbs || Math.Abs(x) == double.MaxValue) && (Math.Abs(y) < (double)maxAbs || Math.Abs(y) == double.MaxValue) && (Math.Abs(z) < (double)maxAbs || Math.Abs(z) == double.MaxValue);
 	}
 
-	// Token: 0x060007D3 RID: 2003 RVA: 0x0002A498 File Offset: 0x00028698
+	// Token: 0x06000811 RID: 2065 RVA: 0x0002A8E4 File Offset: 0x00028AE4
 	[NullableContext(2)]
 	public bool IsValidVector(IVector vector, int maxAbs = 100000000)
 	{
@@ -1076,7 +1125,7 @@ public class MathUtils : Singleton
 		return !double.IsNaN(x) && !double.IsNaN(y) && !double.IsNaN(z) && double.IsFinite(x) && double.IsFinite(y) && double.IsFinite(z) && (Math.Abs(x) < (double)maxAbs || Math.Abs(x) == double.MaxValue) && (Math.Abs(y) < (double)maxAbs || Math.Abs(y) == double.MaxValue) && (Math.Abs(z) < (double)maxAbs || Math.Abs(z) == double.MaxValue);
 	}
 
-	// Token: 0x060007D4 RID: 2004 RVA: 0x0002A548 File Offset: 0x00028748
+	// Token: 0x06000812 RID: 2066 RVA: 0x0002A994 File Offset: 0x00028B94
 	[NullableContext(2)]
 	public bool IsValidRotator(IRotator rotator, int maxAbs = 100000000)
 	{
@@ -1090,7 +1139,7 @@ public class MathUtils : Singleton
 		return !double.IsNaN(num) && !double.IsNaN(num2) && !double.IsNaN(num3) && double.IsFinite(num) && double.IsFinite(num2) && double.IsFinite(num3) && (Math.Abs(num) < (double)maxAbs || Math.Abs(num) == double.MaxValue) && (Math.Abs(num2) < (double)maxAbs || Math.Abs(num2) == double.MaxValue) && (Math.Abs(num3) < (double)maxAbs || Math.Abs(num3) == double.MaxValue);
 	}
 
-	// Token: 0x060007D5 RID: 2005 RVA: 0x0002A5FC File Offset: 0x000287FC
+	// Token: 0x06000813 RID: 2067 RVA: 0x0002AA48 File Offset: 0x00028C48
 	[NullableContext(2)]
 	public bool IsValidQuat(IQuat quat, int maxAbs = 100000000)
 	{
@@ -1105,7 +1154,7 @@ public class MathUtils : Singleton
 		return !double.IsNaN(x) && !double.IsNaN(y) && !double.IsNaN(z) && !double.IsNaN(w) && double.IsFinite(x) && double.IsFinite(y) && double.IsFinite(z) && double.IsFinite(w) && (Math.Abs(x) < (double)maxAbs || Math.Abs(x) == double.MaxValue) && (Math.Abs(y) < (double)maxAbs || Math.Abs(y) == double.MaxValue) && (Math.Abs(z) < (double)maxAbs || Math.Abs(z) == double.MaxValue) && (Math.Abs(w) < (double)maxAbs || Math.Abs(w) == double.MaxValue);
 	}
 
-	// Token: 0x060007D6 RID: 2006 RVA: 0x0002A6E0 File Offset: 0x000288E0
+	// Token: 0x06000814 RID: 2068 RVA: 0x0002AB2C File Offset: 0x00028D2C
 	public bool LinePlaneIntersectionOriginNormal(global::Vector lineStart, global::Vector lineEnd, global::Vector planeOrigin, global::Vector planeNormal, global::Vector outIntersection)
 	{
 		lineEnd.Subtraction(lineStart, this.TempVector);
@@ -1127,7 +1176,7 @@ public class MathUtils : Singleton
 		return true;
 	}
 
-	// Token: 0x060007D7 RID: 2007 RVA: 0x0002A78C File Offset: 0x0002898C
+	// Token: 0x06000815 RID: 2069 RVA: 0x0002ABD8 File Offset: 0x00028DD8
 	public bool IsLocationInsideCone(global::Vector coneLocation, global::Vector coneDirection, double coneHeight, double coneRadius, global::Vector point)
 	{
 		point.Subtraction(coneLocation, this.TempVector);
@@ -1142,7 +1191,7 @@ public class MathUtils : Singleton
 		return this.TempVector2.SizeSquared() <= num2 * num2;
 	}
 
-	// Token: 0x060007D8 RID: 2008 RVA: 0x0002A808 File Offset: 0x00028A08
+	// Token: 0x06000816 RID: 2070 RVA: 0x0002AC54 File Offset: 0x00028E54
 	public double SegmentToSegmentDistance(global::Vector p1, global::Vector q1, global::Vector p2, global::Vector q2)
 	{
 		q1.Subtraction(p1, this.SegTempD1);
@@ -1202,7 +1251,7 @@ public class MathUtils : Singleton
 		return global::Vector.Dist(this.SegTempC1, this.SegTempC2);
 	}
 
-	// Token: 0x060007D9 RID: 2009 RVA: 0x0002AA50 File Offset: 0x00028C50
+	// Token: 0x06000817 RID: 2071 RVA: 0x0002AE9C File Offset: 0x0002909C
 	public void SqInterpToVector(global::Vector from, global::Vector to, float maxAngle, global::Vector @out)
 	{
 		float num = (float)(Math.Acos(from.DotProduct(to)) * 57.295780181884766);
@@ -1216,7 +1265,7 @@ public class MathUtils : Singleton
 		this.TmpQuat.RotateVector(from, @out);
 	}
 
-	// Token: 0x060007DA RID: 2010 RVA: 0x0002AAB6 File Offset: 0x00028CB6
+	// Token: 0x06000818 RID: 2072 RVA: 0x0002AF02 File Offset: 0x00029102
 	public void SqLerpVector(global::Vector from, global::Vector to, float alpha, global::Vector @out)
 	{
 		Quat.FindBetween(from, to, this.TmpQuat);
@@ -1224,7 +1273,7 @@ public class MathUtils : Singleton
 		this.TmpQuat.RotateVector(from, @out);
 	}
 
-	// Token: 0x060007DB RID: 2011 RVA: 0x0002AAEC File Offset: 0x00028CEC
+	// Token: 0x06000819 RID: 2073 RVA: 0x0002AF38 File Offset: 0x00029138
 	public double ClampAngle(double angleDeg, double minAngleDeg, double maxAngleDeg)
 	{
 		double num = Rotator.ClampAxis(maxAngleDeg - minAngleDeg) * 0.5;
@@ -1241,14 +1290,14 @@ public class MathUtils : Singleton
 		return Rotator.NormalizeAxis(angleDeg);
 	}
 
-	// Token: 0x060007DC RID: 2012 RVA: 0x0002AB40 File Offset: 0x00028D40
+	// Token: 0x0600081A RID: 2074 RVA: 0x0002AF8C File Offset: 0x0002918C
 	public void CheckNanObject(object obj, ref bool outHasNan, [Nullable(new byte[]
 	{
 		2,
 		1
 	})] ref List<string> outPaths, int maxDepth = 100)
 	{
-		MathUtils.<>c__DisplayClass138_0 CS$<>8__locals1;
+		MathUtils.<>c__DisplayClass142_0 CS$<>8__locals1;
 		CS$<>8__locals1.maxDepth = maxDepth;
 		CS$<>8__locals1.<>4__this = this;
 		outHasNan = false;
@@ -1262,12 +1311,12 @@ public class MathUtils : Singleton
 		CS$<>8__locals1.hasNan = false;
 		CS$<>8__locals1.paths = new List<string>();
 		CS$<>8__locals1.currentPath = new List<string>();
-		this.<CheckNanObject>g__Traverse|138_0(obj, 0, ref CS$<>8__locals1);
+		this.<CheckNanObject>g__Traverse|142_0(obj, 0, ref CS$<>8__locals1);
 		outHasNan = CS$<>8__locals1.hasNan;
 		outPaths = CS$<>8__locals1.paths;
 	}
 
-	// Token: 0x060007DD RID: 2013 RVA: 0x0002ABCC File Offset: 0x00028DCC
+	// Token: 0x0600081B RID: 2075 RVA: 0x0002B018 File Offset: 0x00029218
 	public T[] Shuffle<[Nullable(2)] T>(T[] array)
 	{
 		for (int i = array.Length - 1; i > 0; i--)
@@ -1283,7 +1332,7 @@ public class MathUtils : Singleton
 		return array;
 	}
 
-	// Token: 0x060007DE RID: 2014 RVA: 0x0002AC30 File Offset: 0x00028E30
+	// Token: 0x0600081C RID: 2076 RVA: 0x0002B07C File Offset: 0x0002927C
 	public FBox BoxUnion(FBox a, FVector b)
 	{
 		if (a.IsValid != 0)
@@ -1300,7 +1349,7 @@ public class MathUtils : Singleton
 		return a;
 	}
 
-	// Token: 0x060007DF RID: 2015 RVA: 0x0002AD00 File Offset: 0x00028F00
+	// Token: 0x0600081D RID: 2077 RVA: 0x0002B14C File Offset: 0x0002934C
 	public FBoxSphereBounds BoxSphereBoundsUnion(FBoxSphereBounds a, FBoxSphereBounds b)
 	{
 		FBox a2 = new FBox();
@@ -1321,13 +1370,13 @@ public class MathUtils : Singleton
 		return fboxSphereBounds;
 	}
 
-	// Token: 0x060007E0 RID: 2016 RVA: 0x0002AE38 File Offset: 0x00029038
+	// Token: 0x0600081E RID: 2078 RVA: 0x0002B284 File Offset: 0x00029484
 	public bool IsInSideBox(FBox box, FVector point)
 	{
 		return point.X > box.Min.X && point.X < box.Max.X && point.Y > box.Min.Y && point.Y < box.Max.Y && point.Z > box.Min.Z && point.Z < box.Max.Z;
 	}
 
-	// Token: 0x060007E1 RID: 2017 RVA: 0x0002AEBC File Offset: 0x000290BC
+	// Token: 0x0600081F RID: 2079 RVA: 0x0002B308 File Offset: 0x00029508
 	public FBox BoxSphereBoundsGetBox(FBoxSphereBounds bounds)
 	{
 		FVector fvector = bounds.Origin - bounds.BoxExtent;
@@ -1335,19 +1384,19 @@ public class MathUtils : Singleton
 		return new FBox(ref fvector, ref fvector2);
 	}
 
-	// Token: 0x060007E2 RID: 2018 RVA: 0x0002AEFC File Offset: 0x000290FC
+	// Token: 0x06000820 RID: 2080 RVA: 0x0002B348 File Offset: 0x00029548
 	public bool IsInsideSphere(FVector center, double radius, FVector point, double tolerance = 9.999999747378752E-05)
 	{
 		return (double)(center - point).SizeSquared() <= Math.Pow(radius + tolerance, 2.0);
 	}
 
-	// Token: 0x060007E3 RID: 2019 RVA: 0x0002AF32 File Offset: 0x00029132
+	// Token: 0x06000821 RID: 2081 RVA: 0x0002B37E File Offset: 0x0002957E
 	public bool IsInsideBoxSphereBounds(FBoxSphereBounds bounds, FVector point)
 	{
 		return this.IsInsideSphere(bounds.Origin, (double)bounds.SphereRadius, point, 9.999999747378752E-05) && this.IsInSideBox(this.BoxSphereBoundsGetBox(bounds), point);
 	}
 
-	// Token: 0x060007E4 RID: 2020 RVA: 0x0002AF63 File Offset: 0x00029163
+	// Token: 0x06000822 RID: 2082 RVA: 0x0002B3AF File Offset: 0x000295AF
 	public bool IsAngleInRange(double angle, double left, double right)
 	{
 		if (left <= right)
@@ -1357,7 +1406,7 @@ public class MathUtils : Singleton
 		return angle >= left || angle <= right;
 	}
 
-	// Token: 0x060007E5 RID: 2021 RVA: 0x0002AF84 File Offset: 0x00029184
+	// Token: 0x06000823 RID: 2083 RVA: 0x0002B3D0 File Offset: 0x000295D0
 	public double NormalizeDeg180(double a)
 	{
 		double num = a % 360.0;
@@ -1372,19 +1421,19 @@ public class MathUtils : Singleton
 		return num;
 	}
 
-	// Token: 0x060007E6 RID: 2022 RVA: 0x0002AFD0 File Offset: 0x000291D0
+	// Token: 0x06000824 RID: 2084 RVA: 0x0002B41C File Offset: 0x0002961C
 	public double VectorDistanceSquared(IVector v1, IVector v2)
 	{
 		return Math.Pow(v2.X - v1.X, 2.0) + Math.Pow(v2.Y - v1.Y, 2.0) + Math.Pow(v2.Z - v1.Z, 2.0);
 	}
 
-	// Token: 0x060007E7 RID: 2023 RVA: 0x0002B030 File Offset: 0x00029230
+	// Token: 0x06000825 RID: 2085 RVA: 0x0002B47C File Offset: 0x0002967C
 	public double VectorDistance(IVector v1, IVector v2)
 	{
 		return Math.Sqrt(this.VectorDistanceSquared(v1, v2));
 	}
 
-	// Token: 0x060007E8 RID: 2024 RVA: 0x0002B040 File Offset: 0x00029240
+	// Token: 0x06000826 RID: 2086 RVA: 0x0002B48C File Offset: 0x0002968C
 	private global::Vector GetTmpVector()
 	{
 		global::Vector vector = null;
@@ -1404,14 +1453,14 @@ public class MathUtils : Singleton
 		return vector;
 	}
 
-	// Token: 0x060007E9 RID: 2025 RVA: 0x0002B0A1 File Offset: 0x000292A1
+	// Token: 0x06000827 RID: 2087 RVA: 0x0002B4ED File Offset: 0x000296ED
 	private void PutTmpVector(global::Vector tmpVec)
 	{
 		tmpVec.Reset();
 		this.TmpVectorCache.Add(tmpVec);
 	}
 
-	// Token: 0x060007EA RID: 2026 RVA: 0x0002B0B8 File Offset: 0x000292B8
+	// Token: 0x06000828 RID: 2088 RVA: 0x0002B504 File Offset: 0x00029704
 	private Rotator GetTmpRotator()
 	{
 		Rotator rotator = null;
@@ -1431,14 +1480,14 @@ public class MathUtils : Singleton
 		return rotator;
 	}
 
-	// Token: 0x060007EB RID: 2027 RVA: 0x0002B119 File Offset: 0x00029319
+	// Token: 0x06000829 RID: 2089 RVA: 0x0002B565 File Offset: 0x00029765
 	private void PutTmpRotator(Rotator tmpRot)
 	{
 		tmpRot.Reset();
 		this.TmpRotatorCache.Add(tmpRot);
 	}
 
-	// Token: 0x060007EC RID: 2028 RVA: 0x0002B130 File Offset: 0x00029330
+	// Token: 0x0600082A RID: 2090 RVA: 0x0002B57C File Offset: 0x0002977C
 	public void ExecWithTmpVectorAndRotator(int vectorNum, int rotatorNum, Action<List<global::Vector>, List<Rotator>> func)
 	{
 		List<global::Vector> list = new List<global::Vector>();
@@ -1462,7 +1511,7 @@ public class MathUtils : Singleton
 		}
 	}
 
-	// Token: 0x060007ED RID: 2029 RVA: 0x0002B1C0 File Offset: 0x000293C0
+	// Token: 0x0600082B RID: 2091 RVA: 0x0002B60C File Offset: 0x0002980C
 	public Vector2D GetSpiralGrid(int testIndex, int totalN)
 	{
 		int num = testIndex;
@@ -1528,7 +1577,7 @@ public class MathUtils : Singleton
 		return new Vector2D((double)num6, (double)num7);
 	}
 
-	// Token: 0x060007EE RID: 2030 RVA: 0x0002B2A0 File Offset: 0x000294A0
+	// Token: 0x0600082C RID: 2092 RVA: 0x0002B6EC File Offset: 0x000298EC
 	public Vector2D GetSequentialGrid(int testIndex, int totalN = 25, int xMax = 5)
 	{
 		int num = testIndex % totalN;
@@ -1539,7 +1588,7 @@ public class MathUtils : Singleton
 		return new Vector2D((double)(num % xMax), (double)((int)Math.Floor((double)num / (double)xMax)));
 	}
 
-	// Token: 0x060007EF RID: 2031 RVA: 0x0002B2D0 File Offset: 0x000294D0
+	// Token: 0x0600082D RID: 2093 RVA: 0x0002B71C File Offset: 0x0002991C
 	public int[] GenerateUniqueRandomNumbers(int min = 0, int max = 30)
 	{
 		if (min > max)
@@ -1568,7 +1617,7 @@ public class MathUtils : Singleton
 		return list.ToArray();
 	}
 
-	// Token: 0x060007F0 RID: 2032 RVA: 0x0002B364 File Offset: 0x00029564
+	// Token: 0x0600082E RID: 2094 RVA: 0x0002B7B0 File Offset: 0x000299B0
 	public global::Vector GetGravityPointOfPoints(global::Vector[] points)
 	{
 		if (points.Length == 0)
@@ -1588,7 +1637,7 @@ public class MathUtils : Singleton
 		return vector;
 	}
 
-	// Token: 0x060007F1 RID: 2033 RVA: 0x0002B438 File Offset: 0x00029638
+	// Token: 0x0600082F RID: 2095 RVA: 0x0002B884 File Offset: 0x00029A84
 	public global::Vector GetCenterOfPoints(global::Vector[] points)
 	{
 		this.TempVector.DeepCopy(points[0]);
@@ -1607,7 +1656,7 @@ public class MathUtils : Singleton
 		return global::Vector.Create((tempVector.X + tempVector2.X) / 2.0, (tempVector.Y + tempVector2.Y) / 2.0, (tempVector.Z + tempVector2.Z) / 2.0);
 	}
 
-	// Token: 0x060007F2 RID: 2034 RVA: 0x0002B55C File Offset: 0x0002975C
+	// Token: 0x06000830 RID: 2096 RVA: 0x0002B9A8 File Offset: 0x00029BA8
 	public global::Vector GetNextPointWithDistance(global::Vector p0, global::Vector p1, double distance)
 	{
 		global::Vector vector = global::Vector.Create(p0);
@@ -1617,20 +1666,114 @@ public class MathUtils : Singleton
 		return vector.AdditionEqual(tempVector.MultiplyEqual(distance));
 	}
 
-	// Token: 0x060007F3 RID: 2035 RVA: 0x0002B5A1 File Offset: 0x000297A1
+	// Token: 0x06000831 RID: 2097 RVA: 0x0002B9ED File Offset: 0x00029BED
 	public double ClampedAsin(double d)
 	{
 		return Math.Asin(MathCommon.Clamp(d, -1.0, 1.0));
 	}
 
-	// Token: 0x060007F4 RID: 2036 RVA: 0x0002B5C0 File Offset: 0x000297C0
+	// Token: 0x06000832 RID: 2098 RVA: 0x0002BA0C File Offset: 0x00029C0C
 	public double ClampedAcos(double d)
 	{
 		return Math.Acos(MathCommon.Clamp(d, -1.0, 1.0));
 	}
 
-	// Token: 0x170000EA RID: 234
-	// (get) Token: 0x060007F5 RID: 2037 RVA: 0x0002B5DF File Offset: 0x000297DF
+	// Token: 0x06000833 RID: 2099 RVA: 0x0002BA2C File Offset: 0x00029C2C
+	public bool LocationInFastUeRange(FVectorDouble transformLocation, FRotator transformRotator, FVectorDouble location, double radius, FastUeFloatRange distanceRange, FastUeFloatRange angleRange, FastUeFloatRange heightRange)
+	{
+		FQuat fquat = transformRotator.Quaternion().Inverse();
+		FVectorDouble fvectorDouble = location - transformLocation;
+		FVector fvector = fvectorDouble;
+		FVector fvector2 = fquat.RotateVector(fvector);
+		double value = (double)fvector2.Z;
+		if (!this.InFastUeRange(value, heightRange))
+		{
+			return false;
+		}
+		double value2 = Math.Max(1E-08, (double)fvector2.Size2D() - radius);
+		if (!this.InFastUeRange(value2, distanceRange))
+		{
+			return false;
+		}
+		double angleByVector2D = this.GetAngleByVector2D(fvector2);
+		return this.InFastUeRangeAngle(angleByVector2D, angleRange);
+	}
+
+	// Token: 0x06000834 RID: 2100 RVA: 0x0002BABC File Offset: 0x00029CBC
+	public bool LocationInRangeArray(FVectorDouble transformLocation, FRotator transformRotator, FVectorDouble location, double radius, double[] distanceRange, double[] angleRange, double[] heightRange)
+	{
+		FQuat fquat = transformRotator.Quaternion().Inverse();
+		FVectorDouble fvectorDouble = location - transformLocation;
+		FVector fvector = fvectorDouble;
+		FVector fvector2 = fquat.RotateVector(fvector);
+		double value = (double)fvector2.Z;
+		if (!this.InRangeArray(value, heightRange))
+		{
+			return false;
+		}
+		double value2 = (double)fvector2.Size2D() - radius;
+		if (!this.InRangeArray(value2, distanceRange))
+		{
+			return false;
+		}
+		double angleByVector2D = this.GetAngleByVector2D(fvector2);
+		return this.InRangeAngleArray(angleByVector2D, angleRange);
+	}
+
+	// Token: 0x06000835 RID: 2101 RVA: 0x0002BB40 File Offset: 0x00029D40
+	public double GetAngleByVectorDot(FVectorDouble inA, FVectorDouble inB)
+	{
+		double num = Math.Sqrt(inA.X * inA.X + inA.Y * inA.Y + inA.Z * inA.Z);
+		double num2 = Math.Sqrt(inB.X * inB.X + inB.Y * inB.Y + inB.Z * inB.Z);
+		return Math.Acos(MathCommon.Clamp((inA.X * inB.X + inA.Y * inB.Y + inA.Z * inB.Z) / (num * num2), -1.0, 1.0)) * 57.295780181884766;
+	}
+
+	// Token: 0x06000836 RID: 2102 RVA: 0x0002BC00 File Offset: 0x00029E00
+	public FRotator VectorToRotator(FVectorDouble inA)
+	{
+		return new FRotator((float)(Math.Atan2(inA.Z, Math.Sqrt(inA.X * inA.X + inA.Y * inA.Y)) * 57.295780181884766), (float)(Math.Atan2(inA.Y, inA.X) * 57.295780181884766), 0f);
+	}
+
+	// Token: 0x06000837 RID: 2103 RVA: 0x0002BC6C File Offset: 0x00029E6C
+	public void InverseTransformPositionNoScale(FVectorDouble translation, FRotator rotation, FVectorDouble v, out FVectorDouble @out)
+	{
+		FQuat fquat = rotation.Quaternion().Inverse();
+		FVectorDouble fvectorDouble = v - translation;
+		FVector fvector = fvectorDouble;
+		FVector fvector2 = fquat.RotateVector(fvector);
+		@out = fvector2;
+	}
+
+	// Token: 0x06000838 RID: 2104 RVA: 0x0002BCB4 File Offset: 0x00029EB4
+	public void LookRotationForwardFirst(FVectorDouble forward, FVectorDouble up, out FRotator @out)
+	{
+		FVector fvector = forward;
+		FVector fvector2 = up;
+		@out = UKuroAnimMathLibrary.LookRotation_ForwardFirst(fvector, fvector2);
+	}
+
+	// Token: 0x06000839 RID: 2105 RVA: 0x0002BCE0 File Offset: 0x00029EE0
+	public void RotatorInterpConstantTo(FRotator from, FRotator to, float deltaTime, float interpSpeed, out FRotator res)
+	{
+		if (deltaTime <= 0f || interpSpeed <= 0f)
+		{
+			res = from;
+			return;
+		}
+		float num = interpSpeed * deltaTime;
+		res = MathUtils.WrapRotator(new FRotator(to.Pitch - from.Pitch, to.Yaw - from.Yaw, to.Roll - from.Roll));
+		res = new FRotator(this.Clamp(res.Pitch, -num, num) + from.Pitch, this.Clamp(res.Yaw, -num, num) + from.Yaw, this.Clamp(res.Roll, -num, num) + from.Roll);
+		res = MathUtils.WrapRotator(res);
+	}
+
+	// Token: 0x0600083A RID: 2106 RVA: 0x0002BDA8 File Offset: 0x00029FA8
+	private static FRotator WrapRotator(FRotator rotator)
+	{
+		return new FRotator(MathCommon.WrapAngle(rotator.Pitch), MathCommon.WrapAngle(rotator.Yaw), MathCommon.WrapAngle(rotator.Roll));
+	}
+
+	// Token: 0x170000FC RID: 252
+	// (get) Token: 0x0600083B RID: 2107 RVA: 0x0002BDD0 File Offset: 0x00029FD0
 	public static MathUtils Instance
 	{
 		get
@@ -1644,12 +1787,12 @@ public class MathUtils : Singleton
 		}
 	}
 
-	// Token: 0x060007F6 RID: 2038 RVA: 0x0002B602 File Offset: 0x00029802
+	// Token: 0x0600083C RID: 2108 RVA: 0x0002BDF3 File Offset: 0x00029FF3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060007F7 RID: 2039 RVA: 0x0002B604 File Offset: 0x00029804
+	// Token: 0x0600083D RID: 2109 RVA: 0x0002BDF5 File Offset: 0x00029FF5
 	public static void ResetStaticDefaultValue()
 	{
 		MathUtils instance = MathUtils._instance;
@@ -1660,16 +1803,16 @@ public class MathUtils : Singleton
 		MathUtils._instance = null;
 	}
 
-	// Token: 0x060007F8 RID: 2040 RVA: 0x0002B61D File Offset: 0x0002981D
+	// Token: 0x0600083E RID: 2110 RVA: 0x0002BE0E File Offset: 0x0002A00E
 	static MathUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MathUtils.CreateStaticDefaultValue), new Action(MathUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060007FA RID: 2042 RVA: 0x0002B77C File Offset: 0x0002997C
+	// Token: 0x06000840 RID: 2112 RVA: 0x0002BF70 File Offset: 0x0002A170
 	[NullableContext(2)]
 	[CompilerGenerated]
-	private void <CheckNanObject>g__Traverse|138_0(object value, int depth, ref MathUtils.<>c__DisplayClass138_0 A_3)
+	private void <CheckNanObject>g__Traverse|142_0(object value, int depth, ref MathUtils.<>c__DisplayClass142_0 A_3)
 	{
 		if (depth >= A_3.maxDepth)
 		{
@@ -1749,7 +1892,7 @@ public class MathUtils : Singleton
 			for (int j = 0; j < array.Length; j++)
 			{
 				A_3.currentPath.Add("[" + string.Join<int>(",", array2) + "]");
-				this.<CheckNanObject>g__Traverse|138_0(array.GetValue(array2), depth + 1, ref A_3);
+				this.<CheckNanObject>g__Traverse|142_0(array.GetValue(array2), depth + 1, ref A_3);
 				A_3.currentPath.RemoveAt(A_3.currentPath.Count - 1);
 				for (int k = array2.Length - 1; k >= 0; k--)
 				{
@@ -1772,93 +1915,93 @@ public class MathUtils : Singleton
 		foreach (FieldInfo fieldInfo in fields)
 		{
 			A_3.currentPath.Add(fieldInfo.Name);
-			this.<CheckNanObject>g__Traverse|138_0(fieldInfo.GetValue(value), depth + 1, ref A_3);
+			this.<CheckNanObject>g__Traverse|142_0(fieldInfo.GetValue(value), depth + 1, ref A_3);
 			A_3.currentPath.RemoveAt(A_3.currentPath.Count - 1);
 		}
 	}
 
-	// Token: 0x040005D5 RID: 1493
+	// Token: 0x040005E0 RID: 1504
 	public const int PI_DEG = 180;
 
-	// Token: 0x040005D6 RID: 1494
+	// Token: 0x040005E1 RID: 1505
 	public const int PI_DEG_DOUBLE = 360;
 
-	// Token: 0x040005D7 RID: 1495
+	// Token: 0x040005E2 RID: 1506
 	public const long intBit = 32L;
 
-	// Token: 0x040005D8 RID: 1496
+	// Token: 0x040005E3 RID: 1507
 	public const int INT_BIT = 32;
 
-	// Token: 0x040005D9 RID: 1497
+	// Token: 0x040005E4 RID: 1508
 	private const int MAX_INVALID_NUMBER = 999999999;
 
-	// Token: 0x040005DA RID: 1498
+	// Token: 0x040005E5 RID: 1509
 	public const double MaxFloat = 3.402823466E+38;
 
-	// Token: 0x040005DB RID: 1499
+	// Token: 0x040005E6 RID: 1510
 	public const int Int32Max = 2147483647;
 
-	// Token: 0x040005DC RID: 1500
+	// Token: 0x040005E7 RID: 1511
 	public const int Int16Max = 32767;
 
-	// Token: 0x040005DD RID: 1501
+	// Token: 0x040005E8 RID: 1512
 	public const double SmallNumber = 1E-08;
 
-	// Token: 0x040005DE RID: 1502
+	// Token: 0x040005E9 RID: 1513
 	public const double KindaSmallNumber = 0.0001;
 
-	// Token: 0x040005DF RID: 1503
+	// Token: 0x040005EA RID: 1514
 	public const double LargeNumber = 1E+50;
 
-	// Token: 0x040005E0 RID: 1504
+	// Token: 0x040005EB RID: 1515
 	public const float MillisecondToSecond = 0.001f;
 
-	// Token: 0x040005E1 RID: 1505
+	// Token: 0x040005EC RID: 1516
 	public const int SecondToMillisecond = 1000;
 
-	// Token: 0x040005E2 RID: 1506
+	// Token: 0x040005ED RID: 1517
 	public const int CircumradiusRatio = 4;
 
-	// Token: 0x040005E3 RID: 1507
+	// Token: 0x040005EE RID: 1518
 	public const float RadToDeg = 57.29578f;
 
-	// Token: 0x040005E4 RID: 1508
+	// Token: 0x040005EF RID: 1519
 	public const float DegToRad = 0.017453292f;
 
-	// Token: 0x040005E5 RID: 1509
+	// Token: 0x040005F0 RID: 1520
 	public readonly FTransform DefaultTransform = new FTransform();
 
-	// Token: 0x040005E6 RID: 1510
+	// Token: 0x040005F1 RID: 1521
 	public readonly FTransformDouble DefaultTransformDouble = new FTransformDouble();
 
-	// Token: 0x040005E7 RID: 1511
+	// Token: 0x040005F2 RID: 1522
 	public readonly Transform DefaultTransformProxy = Transform.Create();
 
-	// Token: 0x040005E8 RID: 1512
+	// Token: 0x040005F3 RID: 1523
 	public readonly Random Random = new Random();
 
-	// Token: 0x040005E9 RID: 1513
+	// Token: 0x040005F4 RID: 1524
 	private readonly global::Vector TempVector = global::Vector.Create();
 
-	// Token: 0x040005EA RID: 1514
+	// Token: 0x040005F5 RID: 1525
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x040005EB RID: 1515
+	// Token: 0x040005F6 RID: 1526
 	private readonly global::Vector TempVector3 = global::Vector.Create();
 
-	// Token: 0x040005EC RID: 1516
+	// Token: 0x040005F7 RID: 1527
 	public global::Vector CommonTempVector = global::Vector.Create();
 
-	// Token: 0x040005ED RID: 1517
+	// Token: 0x040005F8 RID: 1528
 	public global::Vector CommonTempVector2 = global::Vector.Create();
 
-	// Token: 0x040005EE RID: 1518
+	// Token: 0x040005F9 RID: 1529
 	public Rotator CommonTempRotator = Rotator.Create();
 
-	// Token: 0x040005EF RID: 1519
+	// Token: 0x040005FA RID: 1530
 	public Quat CommonTempQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x040005F0 RID: 1520
+	// Token: 0x040005FB RID: 1531
 	[Nullable(new byte[]
 	{
 		2,
@@ -1866,44 +2009,44 @@ public class MathUtils : Singleton
 	})]
 	private double[][] RotArray;
 
-	// Token: 0x040005F1 RID: 1521
+	// Token: 0x040005FC RID: 1532
 	[Nullable(2)]
 	private double[] TmpArray;
 
-	// Token: 0x040005F2 RID: 1522
+	// Token: 0x040005FD RID: 1533
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x040005F3 RID: 1523
+	// Token: 0x040005FE RID: 1534
 	private readonly global::Vector SegTempD1 = global::Vector.Create();
 
-	// Token: 0x040005F4 RID: 1524
+	// Token: 0x040005FF RID: 1535
 	private readonly global::Vector SegTempD2 = global::Vector.Create();
 
-	// Token: 0x040005F5 RID: 1525
+	// Token: 0x04000600 RID: 1536
 	private readonly global::Vector SegTempR = global::Vector.Create();
 
-	// Token: 0x040005F6 RID: 1526
+	// Token: 0x04000601 RID: 1537
 	private readonly global::Vector SegTempC1 = global::Vector.Create();
 
-	// Token: 0x040005F7 RID: 1527
+	// Token: 0x04000602 RID: 1538
 	private readonly global::Vector SegTempC2 = global::Vector.Create();
 
-	// Token: 0x040005F8 RID: 1528
+	// Token: 0x04000603 RID: 1539
 	public int MaxCheckTime = 1;
 
-	// Token: 0x040005F9 RID: 1529
+	// Token: 0x04000604 RID: 1540
 	private int NanCheckCount;
 
-	// Token: 0x040005FA RID: 1530
+	// Token: 0x04000605 RID: 1541
 	private readonly Dictionary<Type, FieldInfo[]> NanInstanceFieldCache = new Dictionary<Type, FieldInfo[]>();
 
-	// Token: 0x040005FB RID: 1531
+	// Token: 0x04000606 RID: 1542
 	private readonly List<global::Vector> TmpVectorCache = new List<global::Vector>();
 
-	// Token: 0x040005FC RID: 1532
+	// Token: 0x04000607 RID: 1543
 	private readonly List<Rotator> TmpRotatorCache = new List<Rotator>();
 
-	// Token: 0x040005FD RID: 1533
+	// Token: 0x04000608 RID: 1544
 	[Nullable(2)]
 	private static MathUtils _instance;
 }

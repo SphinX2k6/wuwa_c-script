@@ -11,20 +11,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 {
-	// Token: 0x020045F0 RID: 17904
+	// Token: 0x02003519 RID: 13593
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ScreenEffectModel : ModelBase
 	{
-		// Token: 0x0602E2D2 RID: 189138 RVA: 0x00AACADD File Offset: 0x00AAACDD
+		// Token: 0x060229C7 RID: 141767 RVA: 0x009D9279 File Offset: 0x009D7479
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 			return true;
 		}
 
-		// Token: 0x0602E2D3 RID: 189139 RVA: 0x00AACAFC File Offset: 0x00AAACFC
+		// Token: 0x060229C8 RID: 141768 RVA: 0x009D9298 File Offset: 0x009D7498
 		[NullableContext(2)]
 		public int PlayScreenEffect([Nullable(1)] string path, string memoryTag = null, CustomPromise playedPromise = null)
 		{
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return num;
 		}
 
-		// Token: 0x0602E2D4 RID: 189140 RVA: 0x00AACBA4 File Offset: 0x00AAADA4
+		// Token: 0x060229C9 RID: 141769 RVA: 0x009D9340 File Offset: 0x009D7540
 		public unsafe void PlayScreenEffectForce(string path, [Nullable(2)] string memoryTag = null)
 		{
 			ScreenEffectModel.ScreenEffectHandle screenEffectHandle;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.PlayScreenEffect(path, memoryTag, null);
 		}
 
-		// Token: 0x0602E2D5 RID: 189141 RVA: 0x00AACC7C File Offset: 0x00AAAE7C
+		// Token: 0x060229CA RID: 141770 RVA: 0x009D9418 File Offset: 0x009D7618
 		private void FlushPlayedPromises(ScreenEffectModel.ScreenEffectHandle handle)
 		{
 			if (handle.PlayedPromises.Count == 0)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2D6 RID: 189142 RVA: 0x00AACCE8 File Offset: 0x00AAAEE8
+		// Token: 0x060229CB RID: 141771 RVA: 0x009D9484 File Offset: 0x009D7684
 		private int LoadAndPlayScreenEffect(string path, [Nullable(2)] string memoryTag = null)
 		{
 			return ResourceSystem.Instance.LoadAsync<EffectScreenPlayData_C>(path, delegate([Nullable(2)] EffectScreenPlayData_C resObj, string _)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}, ResourceSystem.EResourceLoadPriority.Ui, memoryTag ?? "js_undefined");
 		}
 
-		// Token: 0x0602E2D7 RID: 189143 RVA: 0x00AACD34 File Offset: 0x00AAAF34
+		// Token: 0x060229CC RID: 141772 RVA: 0x009D94D0 File Offset: 0x009D76D0
 		public void EndScreenEffectByPath(string path)
 		{
 			ScreenEffectModel.ScreenEffectHandle screenEffectHandle;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.ClearEffect(screenEffectHandle);
 		}
 
-		// Token: 0x0602E2D8 RID: 189144 RVA: 0x00AACDAC File Offset: 0x00AAAFAC
+		// Token: 0x060229CD RID: 141773 RVA: 0x009D9548 File Offset: 0x009D7748
 		public int? ChangeScreenEffectState(string path, int state, bool playIfAbsent = false)
 		{
 			ScreenEffectModel.ScreenEffectHandle screenEffectHandle;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return null;
 		}
 
-		// Token: 0x0602E2D9 RID: 189145 RVA: 0x00AACE50 File Offset: 0x00AAB050
+		// Token: 0x060229CE RID: 141774 RVA: 0x009D95EC File Offset: 0x009D77EC
 		private UniTask ChangeScreenEffectStateAfterPlayed(CustomPromise playedPromise, int handleId, string path, int state)
 		{
 			ScreenEffectModel.<ChangeScreenEffectStateAfterPlayed>d__15 <ChangeScreenEffectStateAfterPlayed>d__;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return <ChangeScreenEffectStateAfterPlayed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E2DA RID: 189146 RVA: 0x00AACEB4 File Offset: 0x00AAB0B4
+		// Token: 0x060229CF RID: 141775 RVA: 0x009D9650 File Offset: 0x009D7850
 		public void EndScreenEffect(int handleId)
 		{
 			ScreenEffectModel.ScreenEffectHandle screenEffectHandle;
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2DB RID: 189147 RVA: 0x00AACF24 File Offset: 0x00AAB124
+		// Token: 0x060229D0 RID: 141776 RVA: 0x009D96C0 File Offset: 0x009D78C0
 		public bool TrySetScreenEffectAlpha(int handleId, float alpha)
 		{
 			ScreenEffectModel.ScreenEffectHandle screenEffectHandle;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return true;
 		}
 
-		// Token: 0x0602E2DC RID: 189148 RVA: 0x00AACF9B File Offset: 0x00AAB19B
+		// Token: 0x060229D1 RID: 141777 RVA: 0x009D9737 File Offset: 0x009D7937
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return true;
 		}
 
-		// Token: 0x0602E2DD RID: 189149 RVA: 0x00AACFC8 File Offset: 0x00AAB1C8
+		// Token: 0x060229D2 RID: 141778 RVA: 0x009D9764 File Offset: 0x009D7964
 		private void ClearAllEffect()
 		{
 			foreach (ScreenEffectModel.ScreenEffectHandle handle in this.PathToHandleMap.Values)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.HandleMap.Clear();
 		}
 
-		// Token: 0x0602E2DE RID: 189150 RVA: 0x00AAD038 File Offset: 0x00AAB238
+		// Token: 0x060229D3 RID: 141779 RVA: 0x009D97D4 File Offset: 0x009D79D4
 		private void ClearEffect(ScreenEffectModel.ScreenEffectHandle handle)
 		{
 			foreach (int key in handle.HandleIds)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.ReleaseHandle(handle);
 		}
 
-		// Token: 0x0602E2DF RID: 189151 RVA: 0x00AAD100 File Offset: 0x00AAB300
+		// Token: 0x060229D4 RID: 141780 RVA: 0x009D989C File Offset: 0x009D7A9C
 		public void SetFightRootInited(bool isInit)
 		{
 			if (this.FightRootInited == isInit)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2E0 RID: 189152 RVA: 0x00AAD19C File Offset: 0x00AAB39C
+		// Token: 0x060229D5 RID: 141781 RVA: 0x009D9938 File Offset: 0x009D7B38
 		public void SetGeneralRootInited(bool isInit)
 		{
 			if (this.GeneralRootInited == isInit)
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2E1 RID: 189153 RVA: 0x00AAD238 File Offset: 0x00AAB438
+		// Token: 0x060229D6 RID: 141782 RVA: 0x009D99D4 File Offset: 0x009D7BD4
 		public void SetCoverLoadingRootInited(bool isInit)
 		{
 			if (this.CoverLoadingRootInited == isInit)
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2E2 RID: 189154 RVA: 0x00AAD2D4 File Offset: 0x00AAB4D4
+		// Token: 0x060229D7 RID: 141783 RVA: 0x009D9A70 File Offset: 0x009D7C70
 		public ScreenEffectModel.ScreenEffectHandle GetHandle()
 		{
 			ScreenEffectModel.ScreenEffectHandle result;
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return new ScreenEffectModel.ScreenEffectHandle();
 		}
 
-		// Token: 0x0602E2E3 RID: 189155 RVA: 0x00AAD2F8 File Offset: 0x00AAB4F8
+		// Token: 0x060229D8 RID: 141784 RVA: 0x009D9A94 File Offset: 0x009D7C94
 		public void ReleaseHandle(ScreenEffectModel.ScreenEffectHandle target)
 		{
 			if (this.HandlePool.Contains(target))
@@ -404,14 +404,14 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.HandlePool.Add(target);
 		}
 
-		// Token: 0x0602E2E4 RID: 189156 RVA: 0x00AAD33C File Offset: 0x00AAB53C
+		// Token: 0x060229D9 RID: 141785 RVA: 0x009D9AD8 File Offset: 0x009D7CD8
 		private void OnWorldDone()
 		{
 			this.LoadScreenEffectRoot();
 			this.LoadCoverLoadingRoot();
 		}
 
-		// Token: 0x0602E2E5 RID: 189157 RVA: 0x00AAD34C File Offset: 0x00AAB54C
+		// Token: 0x060229DA RID: 141786 RVA: 0x009D9AE8 File Offset: 0x009D7CE8
 		private void LoadScreenEffectRoot()
 		{
 			AUIContainerActor auicontainerActor = null;
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.SetGeneralRootInited(true);
 		}
 
-		// Token: 0x0602E2E6 RID: 189158 RVA: 0x00AAD470 File Offset: 0x00AAB670
+		// Token: 0x060229DB RID: 141787 RVA: 0x009D9C0C File Offset: 0x009D7E0C
 		[NullableContext(2)]
 		private void OnScreenEffectGeneralRootDestroyed(AActor _)
 		{
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.SetGeneralRootInited(false);
 		}
 
-		// Token: 0x0602E2E7 RID: 189159 RVA: 0x00AAD4B4 File Offset: 0x00AAB6B4
+		// Token: 0x060229DC RID: 141788 RVA: 0x009D9C50 File Offset: 0x009D7E50
 		public bool GetIsGeneralScreenEffectActive()
 		{
 			using (Dictionary<string, ScreenEffectModel.ScreenEffectHandle>.ValueCollection.Enumerator enumerator = this.PathToHandleMap.Values.GetEnumerator())
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return false;
 		}
 
-		// Token: 0x0602E2E8 RID: 189160 RVA: 0x00AAD514 File Offset: 0x00AAB714
+		// Token: 0x060229DD RID: 141789 RVA: 0x009D9CB0 File Offset: 0x009D7EB0
 		private void LoadCoverLoadingRoot()
 		{
 			AUIContainerActor auicontainerActor = null;
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.SetCoverLoadingRootInited(true);
 		}
 
-		// Token: 0x0602E2E9 RID: 189161 RVA: 0x00AAD63C File Offset: 0x00AAB83C
+		// Token: 0x060229DE RID: 141790 RVA: 0x009D9DD8 File Offset: 0x009D7FD8
 		[NullableContext(2)]
 		private void OnScreenEffectCoverLoadingRootDestroyed(AActor _)
 		{
@@ -533,8 +533,8 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			this.SetCoverLoadingRootInited(false);
 		}
 
-		// Token: 0x170075AF RID: 30127
-		// (get) Token: 0x0602E2EA RID: 189162 RVA: 0x00AAD680 File Offset: 0x00AAB880
+		// Token: 0x17004867 RID: 18535
+		// (get) Token: 0x060229DF RID: 141791 RVA: 0x009D9E1C File Offset: 0x009D801C
 		public static ScreenEffectModel Instance
 		{
 			get
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			}
 		}
 
-		// Token: 0x0602E2EB RID: 189163 RVA: 0x00AAD687 File Offset: 0x00AAB887
+		// Token: 0x060229E0 RID: 141792 RVA: 0x009D9E23 File Offset: 0x009D8023
 		public static ScreenEffectModel GetOrCreateInstance()
 		{
 			if (ScreenEffectModel._Instance == null)
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return ScreenEffectModel._Instance;
 		}
 
-		// Token: 0x0602E2EC RID: 189164 RVA: 0x00AAD69B File Offset: 0x00AAB89B
+		// Token: 0x060229E1 RID: 141793 RVA: 0x009D9E37 File Offset: 0x009D8037
 		public static bool CreateInstance()
 		{
 			if (ScreenEffectModel._Instance != null)
@@ -564,81 +564,81 @@ namespace CSharpScript.Game.Render.Effect.ScreenEffectSystem
 			return true;
 		}
 
-		// Token: 0x0602E2ED RID: 189165 RVA: 0x00AAD6B1 File Offset: 0x00AAB8B1
+		// Token: 0x060229E2 RID: 141794 RVA: 0x009D9E4D File Offset: 0x009D804D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E2EE RID: 189166 RVA: 0x00AAD6B3 File Offset: 0x00AAB8B3
+		// Token: 0x060229E3 RID: 141795 RVA: 0x009D9E4F File Offset: 0x009D804F
 		public static void ResetStaticDefaultValue()
 		{
 			ScreenEffectModel._Instance = null;
 		}
 
-		// Token: 0x0602E2EF RID: 189167 RVA: 0x00AAD6BB File Offset: 0x00AAB8BB
+		// Token: 0x060229E4 RID: 141796 RVA: 0x009D9E57 File Offset: 0x009D8057
 		static ScreenEffectModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ScreenEffectModel.CreateStaticDefaultValue), new Action(ScreenEffectModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018C77 RID: 101495
+		// Token: 0x040132B6 RID: 78518
 		public int HandleIdGenerator = 1;
 
-		// Token: 0x04018C78 RID: 101496
+		// Token: 0x040132B7 RID: 78519
 		public Dictionary<int, ScreenEffectModel.ScreenEffectHandle> HandleMap = new Dictionary<int, ScreenEffectModel.ScreenEffectHandle>();
 
-		// Token: 0x04018C79 RID: 101497
+		// Token: 0x040132B8 RID: 78520
 		public Dictionary<string, ScreenEffectModel.ScreenEffectHandle> PathToHandleMap = new Dictionary<string, ScreenEffectModel.ScreenEffectHandle>();
 
-		// Token: 0x04018C7A RID: 101498
+		// Token: 0x040132B9 RID: 78521
 		public List<ScreenEffectModel.ScreenEffectHandle> HandlePool = new List<ScreenEffectModel.ScreenEffectHandle>();
 
-		// Token: 0x04018C7B RID: 101499
+		// Token: 0x040132BA RID: 78522
 		public bool FightRootInited;
 
-		// Token: 0x04018C7C RID: 101500
+		// Token: 0x040132BB RID: 78523
 		public bool GeneralRootInited;
 
-		// Token: 0x04018C7D RID: 101501
+		// Token: 0x040132BC RID: 78524
 		public bool CoverLoadingRootInited;
 
-		// Token: 0x04018C7E RID: 101502
+		// Token: 0x040132BD RID: 78525
 		[Nullable(2)]
 		private AUIContainerActor ScreenEffectGeneralRoot;
 
-		// Token: 0x04018C7F RID: 101503
+		// Token: 0x040132BE RID: 78526
 		[Nullable(2)]
 		private AUIContainerActor ScreenEffectCoverLoadingRoot;
 
-		// Token: 0x04018C80 RID: 101504
+		// Token: 0x040132BF RID: 78527
 		[Nullable(2)]
 		private static ScreenEffectModel _Instance;
 
-		// Token: 0x0200A83E RID: 43070
+		// Token: 0x020091F6 RID: 37366
 		[Nullable(0)]
 		public class ScreenEffectHandle
 		{
-			// Token: 0x04033383 RID: 209795
+			// Token: 0x0402DB11 RID: 187153
 			public HashSet<int> HandleIds = new HashSet<int>();
 
-			// Token: 0x04033384 RID: 209796
+			// Token: 0x0402DB12 RID: 187154
 			[Nullable(2)]
 			public string Path;
 
-			// Token: 0x04033385 RID: 209797
+			// Token: 0x0402DB13 RID: 187155
 			[Nullable(2)]
 			public EffectScreenPlayData_C EffectData;
 
-			// Token: 0x04033386 RID: 209798
+			// Token: 0x0402DB14 RID: 187156
 			public int LoadResId = -1;
 
-			// Token: 0x04033387 RID: 209799
+			// Token: 0x0402DB15 RID: 187157
 			public bool WaitingRootInit;
 
-			// Token: 0x04033388 RID: 209800
+			// Token: 0x0402DB16 RID: 187158
 			public E_SE_RootType RootType;
 
-			// Token: 0x04033389 RID: 209801
+			// Token: 0x0402DB17 RID: 187159
 			public List<CustomPromise> PlayedPromises = new List<CustomPromise>();
 		}
 	}

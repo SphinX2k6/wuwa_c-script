@@ -1,29 +1,29 @@
 ﻿using System;
 
-// Token: 0x020012DE RID: 4830
+// Token: 0x02000792 RID: 1938
 public class ETravelMapTaskItemDefine
 {
-	// Token: 0x04003BBA RID: 15290
+	// Token: 0x04003C52 RID: 15442
 	public const int TxtName = 0;
 
-	// Token: 0x04003BBB RID: 15291
+	// Token: 0x04003C53 RID: 15443
 	public const int TxtProgress = 1;
 
-	// Token: 0x04003BBC RID: 15292
+	// Token: 0x04003C54 RID: 15444
 	public const int RewardLayout = 2;
 
-	// Token: 0x04003BBD RID: 15293
+	// Token: 0x04003C55 RID: 15445
 	public const int RewardItem = 3;
 
-	// Token: 0x04003BBE RID: 15294
+	// Token: 0x04003C56 RID: 15446
 	public const int Button = 4;
 
-	// Token: 0x04003BBF RID: 15295
+	// Token: 0x04003C57 RID: 15447
 	public const int FinishedItem = 5;
 
-	// Token: 0x04003BC0 RID: 15296
+	// Token: 0x04003C58 RID: 15448
 	public const int ItemGoing = 6;
 
-	// Token: 0x04003BC1 RID: 15297
+	// Token: 0x04003C59 RID: 15449
 	public const int ButtonReward = 7;
 }

@@ -6,13 +6,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.RoleUi;
 using Google.Protobuf.Collections;
 
-// Token: 0x020028E7 RID: 10471
+// Token: 0x02001E62 RID: 7778
 [NullableContext(2)]
 [Nullable(0)]
 public class TrialRoleGroupData
 {
-	// Token: 0x17001D01 RID: 7425
-	// (get) Token: 0x060159D9 RID: 88537 RVA: 0x005749CC File Offset: 0x00572BCC
+	// Token: 0x17001D5B RID: 7515
+	// (get) Token: 0x060133DD RID: 78813 RVA: 0x0059F894 File Offset: 0x0059DA94
 	public int RealRoleId
 	{
 		get
@@ -25,8 +25,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D02 RID: 7426
-	// (get) Token: 0x060159DA RID: 88538 RVA: 0x005749F8 File Offset: 0x00572BF8
+	// Token: 0x17001D5C RID: 7516
+	// (get) Token: 0x060133DE RID: 78814 RVA: 0x0059F8C0 File Offset: 0x0059DAC0
 	public int TrialRoleId
 	{
 		get
@@ -39,8 +39,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D03 RID: 7427
-	// (get) Token: 0x060159DB RID: 88539 RVA: 0x00574A24 File Offset: 0x00572C24
+	// Token: 0x17001D5D RID: 7517
+	// (get) Token: 0x060133DF RID: 78815 RVA: 0x0059F8EC File Offset: 0x0059DAEC
 	public int TrialRoleGroupId
 	{
 		get
@@ -53,8 +53,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D04 RID: 7428
-	// (get) Token: 0x060159DC RID: 88540 RVA: 0x00574A4F File Offset: 0x00572C4F
+	// Token: 0x17001D5E RID: 7518
+	// (get) Token: 0x060133E0 RID: 78816 RVA: 0x0059F917 File Offset: 0x0059DB17
 	public ETrialRoleStatus Status
 	{
 		get
@@ -63,8 +63,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D05 RID: 7429
-	// (get) Token: 0x060159DD RID: 88541 RVA: 0x00574A57 File Offset: 0x00572C57
+	// Token: 0x17001D5F RID: 7519
+	// (get) Token: 0x060133E1 RID: 78817 RVA: 0x0059F91F File Offset: 0x0059DB1F
 	public TrialRoleInfo TrialRoleConfig
 	{
 		get
@@ -73,8 +73,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D06 RID: 7430
-	// (get) Token: 0x060159DE RID: 88542 RVA: 0x00574A64 File Offset: 0x00572C64
+	// Token: 0x17001D60 RID: 7520
+	// (get) Token: 0x060133E2 RID: 78818 RVA: 0x0059F92C File Offset: 0x0059DB2C
 	public RoleSpecialRobotData TrialRoleData
 	{
 		get
@@ -83,8 +83,8 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x17001D07 RID: 7431
-	// (get) Token: 0x060159DF RID: 88543 RVA: 0x00574A6C File Offset: 0x00572C6C
+	// Token: 0x17001D61 RID: 7521
+	// (get) Token: 0x060133E3 RID: 78819 RVA: 0x0059F934 File Offset: 0x0059DB34
 	public ETrialRoleType TrialRoleType
 	{
 		get
@@ -93,7 +93,7 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x060159E0 RID: 88544 RVA: 0x00574A8C File Offset: 0x00572C8C
+	// Token: 0x060133E4 RID: 78820 RVA: 0x0059F954 File Offset: 0x0059DB54
 	public TrialRoleGroupData(int trialRoleId)
 	{
 		TrialRoleConfig instance = CSharpScript.Game.Module.RoleUi.TrialRoleConfig.Instance;
@@ -112,7 +112,7 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x060159E1 RID: 88545 RVA: 0x00574B2C File Offset: 0x00572D2C
+	// Token: 0x060133E5 RID: 78821 RVA: 0x0059F9F4 File Offset: 0x0059DBF4
 	public void SetIsUnlocked(bool isUnlocked)
 	{
 		this.StatusInternal = (isUnlocked ? ETrialRoleStatus.Unlocked : ETrialRoleStatus.Locked);
@@ -142,7 +142,7 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x060159E2 RID: 88546 RVA: 0x00574BDB File Offset: 0x00572DDB
+	// Token: 0x060133E6 RID: 78822 RVA: 0x0059FAA3 File Offset: 0x0059DCA3
 	public void SetIsVisibleInFormation(bool isVisible)
 	{
 		if (this.ActivatedRoleDataInternal == null)
@@ -153,7 +153,7 @@ public class TrialRoleGroupData
 		this.ActivatedRoleDataInternal.SetIsVisibleInFormation(isVisible);
 	}
 
-	// Token: 0x060159E3 RID: 88547 RVA: 0x00574BFE File Offset: 0x00572DFE
+	// Token: 0x060133E7 RID: 78823 RVA: 0x0059FAC6 File Offset: 0x0059DCC6
 	public void SetIsVisibleInRoleSystem(bool isVisible)
 	{
 		RoleSpecialRobotData activatedRoleDataInternal = this.ActivatedRoleDataInternal;
@@ -164,7 +164,7 @@ public class TrialRoleGroupData
 		activatedRoleDataInternal.SetIsVisibleInRoleSystem(isVisible);
 	}
 
-	// Token: 0x060159E4 RID: 88548 RVA: 0x00574C14 File Offset: 0x00572E14
+	// Token: 0x060133E8 RID: 78824 RVA: 0x0059FADC File Offset: 0x0059DCDC
 	public void SetActivatedTrialRoleId(int trialRoleId)
 	{
 		RoleSpecialRobotData activatedRoleDataInternal = this.ActivatedRoleDataInternal;
@@ -179,25 +179,25 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x060159E5 RID: 88549 RVA: 0x00574C80 File Offset: 0x00572E80
+	// Token: 0x060133E9 RID: 78825 RVA: 0x0059FB48 File Offset: 0x0059DD48
 	public bool IsLocked()
 	{
 		return this.StatusInternal == ETrialRoleStatus.Locked;
 	}
 
-	// Token: 0x060159E6 RID: 88550 RVA: 0x00574C8B File Offset: 0x00572E8B
+	// Token: 0x060133EA RID: 78826 RVA: 0x0059FB53 File Offset: 0x0059DD53
 	public bool IsUnlocked()
 	{
 		return this.StatusInternal == ETrialRoleStatus.Unlocked;
 	}
 
-	// Token: 0x060159E7 RID: 88551 RVA: 0x00574C96 File Offset: 0x00572E96
+	// Token: 0x060133EB RID: 78827 RVA: 0x0059FB5E File Offset: 0x0059DD5E
 	public bool CanUpgrade()
 	{
 		return this.IsUnlocked() && this.IsReachUpgradeCondition();
 	}
 
-	// Token: 0x060159E8 RID: 88552 RVA: 0x00574CA8 File Offset: 0x00572EA8
+	// Token: 0x060133EC RID: 78828 RVA: 0x0059FB70 File Offset: 0x0059DD70
 	public int GetCurWorldLevel()
 	{
 		if (this.ActivatedRoleConfigInternal == null)
@@ -207,7 +207,7 @@ public class TrialRoleGroupData
 		return this.ActivatedRoleConfigInternal.GetValueOrDefault().WorldLevel;
 	}
 
-	// Token: 0x060159E9 RID: 88553 RVA: 0x00574CD4 File Offset: 0x00572ED4
+	// Token: 0x060133ED RID: 78829 RVA: 0x0059FB9C File Offset: 0x0059DD9C
 	public int GetNextWorldLevel()
 	{
 		if (this.TrialRoleGroupConfigs == null)
@@ -230,13 +230,13 @@ public class TrialRoleGroupData
 		return -1;
 	}
 
-	// Token: 0x060159EA RID: 88554 RVA: 0x00574D53 File Offset: 0x00572F53
+	// Token: 0x060133EE RID: 78830 RVA: 0x0059FC1B File Offset: 0x0059DE1B
 	public bool IsMaxLevel()
 	{
 		return this.GetNextWorldLevel() < 0;
 	}
 
-	// Token: 0x060159EB RID: 88555 RVA: 0x00574D60 File Offset: 0x00572F60
+	// Token: 0x060133EF RID: 78831 RVA: 0x0059FC28 File Offset: 0x0059DE28
 	public bool IsReachUpgradeCondition()
 	{
 		if (this.IsMaxLevel())
@@ -247,7 +247,7 @@ public class TrialRoleGroupData
 		return nextWorldLevel >= 0 && WorldLevelModel.Instance.OriginWorldLevel >= nextWorldLevel;
 	}
 
-	// Token: 0x060159EC RID: 88556 RVA: 0x00574D94 File Offset: 0x00572F94
+	// Token: 0x060133F0 RID: 78832 RVA: 0x0059FC5C File Offset: 0x0059DE5C
 	public int GetPreviewTrialRoleId()
 	{
 		if (this.IsUnlocked())
@@ -270,7 +270,7 @@ public class TrialRoleGroupData
 		return result;
 	}
 
-	// Token: 0x060159ED RID: 88557 RVA: 0x00574E20 File Offset: 0x00573020
+	// Token: 0x060133F1 RID: 78833 RVA: 0x0059FCE8 File Offset: 0x0059DEE8
 	[NullableContext(1)]
 	public void SetActivatedRoleAttr(RepeatedField<ArrayIntInt> baseAttr, RepeatedField<ArrayIntInt> addAttr)
 	{
@@ -291,18 +291,18 @@ public class TrialRoleGroupData
 		}
 	}
 
-	// Token: 0x0400A0D0 RID: 41168
+	// Token: 0x0400A4BA RID: 42170
 	private TrialRoleInfo? ActivatedRoleConfigInternal;
 
-	// Token: 0x0400A0D1 RID: 41169
+	// Token: 0x0400A4BB RID: 42171
 	private RoleSpecialRobotData ActivatedRoleDataInternal;
 
-	// Token: 0x0400A0D2 RID: 41170
+	// Token: 0x0400A4BC RID: 42172
 	private ETrialRoleStatus StatusInternal;
 
-	// Token: 0x0400A0D3 RID: 41171
+	// Token: 0x0400A4BD RID: 42173
 	private readonly List<TrialRoleInfo> TrialRoleGroupConfigs;
 
-	// Token: 0x0400A0D4 RID: 41172
+	// Token: 0x0400A4BE RID: 42174
 	private bool? VisibleInFormationHandle;
 }

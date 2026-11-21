@@ -7,14 +7,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006476 RID: 25718
+	// Token: 0x020053F4 RID: 21492
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BuildingMapMoveComponent
 	{
-		// Token: 0x1700949D RID: 38045
-		// (get) Token: 0x060409D8 RID: 264664 RVA: 0x00FA3F40 File Offset: 0x00FA2140
-		// (set) Token: 0x060409D9 RID: 264665 RVA: 0x00FA3F48 File Offset: 0x00FA2148
+		// Token: 0x170067FF RID: 26623
+		// (get) Token: 0x06035699 RID: 218777 RVA: 0x00EEAEBC File Offset: 0x00EE90BC
+		// (set) Token: 0x0603569A RID: 218778 RVA: 0x00EEAEC4 File Offset: 0x00EE90C4
 		public double MapScale
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x1700949E RID: 38046
-		// (get) Token: 0x060409DA RID: 264666 RVA: 0x00FA3F51 File Offset: 0x00FA2151
+		// Token: 0x17006800 RID: 26624
+		// (get) Token: 0x0603569B RID: 218779 RVA: 0x00EEAECD File Offset: 0x00EE90CD
 		public bool IsInDrag
 		{
 			get
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x060409DB RID: 264667 RVA: 0x00FA3F5C File Offset: 0x00FA215C
+		// Token: 0x0603569C RID: 218780 RVA: 0x00EEAED8 File Offset: 0x00EE90D8
 		public BuildingMapMoveComponent(UUIDraggableComponent draggable, bool bindDrag = true, bool bindScroll = true, bool bindEndDrag = false)
 		{
 			this.MapItem = draggable.GetRootComponent();
@@ -51,10 +51,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 				else
 				{
 					draggable.OnPointerUpCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerUp));
+					draggable.OnPointerCancelCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerUp));
 				}
 				draggable.OnPointerDragCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerDragCallBack));
 				draggable.OnPointerDownCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerDown));
-				draggable.OnPointerCancelCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerUp));
 			}
 			if (bindScroll)
 			{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.InitData();
 		}
 
-		// Token: 0x060409DC RID: 264668 RVA: 0x00FA41C5 File Offset: 0x00FA23C5
+		// Token: 0x0603569D RID: 218781 RVA: 0x00EEB141 File Offset: 0x00EE9341
 		private void InitData()
 		{
 			this.InitPosTweener();
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.UpdateMoveSafeArea();
 		}
 
-		// Token: 0x060409DD RID: 264669 RVA: 0x00FA41EB File Offset: 0x00FA23EB
+		// Token: 0x0603569E RID: 218782 RVA: 0x00EEB167 File Offset: 0x00EE9367
 		private void InitPosTweener()
 		{
 			this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenVector2SetterDynamic>(new Action<FVector2D>(this.OnTweenUpdate));
 		}
 
-		// Token: 0x060409DE RID: 264670 RVA: 0x00FA4204 File Offset: 0x00FA2404
+		// Token: 0x0603569F RID: 218783 RVA: 0x00EEB180 File Offset: 0x00EE9380
 		private void InitScaleTweener()
 		{
 			this.ScaleDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenVector3SetterDynamic>(new Action<FVector>(this.OnScaleTweenUpdate));
 		}
 
-		// Token: 0x060409DF RID: 264671 RVA: 0x00FA4220 File Offset: 0x00FA2420
+		// Token: 0x060356A0 RID: 218784 RVA: 0x00EEB19C File Offset: 0x00EE939C
 		private unsafe void InitViewportSize()
 		{
 			this.ViewportSize.X = (double)UiLayer.Instance.UiRootItem.GetWidth();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x060409E0 RID: 264672 RVA: 0x00FA4368 File Offset: 0x00FA2568
+		// Token: 0x060356A1 RID: 218785 RVA: 0x00EEB2E4 File Offset: 0x00EE94E4
 		protected virtual void UpdateMoveDangerousArea()
 		{
 			double num = (double)this.MapItem.GetWidth() * this.MapScaleInternal;
@@ -123,11 +123,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveDangerousArea.MaxY = num4;
 		}
 
-		// Token: 0x060409E1 RID: 264673 RVA: 0x00FA4444 File Offset: 0x00FA2644
+		// Token: 0x060356A2 RID: 218786 RVA: 0x00EEB3C0 File Offset: 0x00EE95C0
 		protected virtual void UpdateMoveSafeArea()
 		{
-			double num = ((double)this.MapItem.GetWidth() - this.MapMoveRebound.X * 2.0) * this.MapScaleInternal;
-			double num2 = ((double)this.MapItem.GetHeight() - this.MapMoveRebound.Y * 2.0) * this.MapScaleInternal;
+			double num = (double)this.MapItem.GetWidth() * this.MapScaleInternal - this.MapMoveRebound.X * 2.0;
+			double num2 = (double)this.MapItem.GetHeight() * this.MapScaleInternal - this.MapMoveRebound.Y * 2.0;
 			num = ((num < this.ViewportSize.X) ? this.ViewportSize.X : num);
 			num2 = ((num2 < this.ViewportSize.Y) ? this.ViewportSize.Y : num2);
 			double num3 = Math.Abs(num - this.ViewportSize.X) / 2.0;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveSafeArea.MaxY = num4;
 		}
 
-		// Token: 0x060409E2 RID: 264674 RVA: 0x00FA454C File Offset: 0x00FA274C
+		// Token: 0x060356A3 RID: 218787 RVA: 0x00EEB4C8 File Offset: 0x00EE96C8
 		private void InitScaleSafeArea()
 		{
 			this.SetScaleSafeArea(0.5, 2.0);
@@ -146,21 +146,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MapMoveRebound.Y = 300.0;
 		}
 
-		// Token: 0x060409E3 RID: 264675 RVA: 0x00FA459C File Offset: 0x00FA279C
+		// Token: 0x060356A4 RID: 218788 RVA: 0x00EEB518 File Offset: 0x00EE9718
 		private void ClampByMoveSafeArea(Vector2D vector2D)
 		{
 			vector2D.X = MathUtils.Instance.Clamp(vector2D.X, this.MoveSafeArea.MinX, this.MoveSafeArea.MaxX);
 			vector2D.Y = MathUtils.Instance.Clamp(vector2D.Y, this.MoveSafeArea.MinY, this.MoveSafeArea.MaxY);
 		}
 
-		// Token: 0x060409E4 RID: 264676 RVA: 0x00FA4604 File Offset: 0x00FA2804
+		// Token: 0x060356A5 RID: 218789 RVA: 0x00EEB580 File Offset: 0x00EE9780
 		private void ClampByMoveDangerousArea(Vector2D vector2D)
 		{
 			vector2D.X = MathUtils.Instance.Clamp(vector2D.X, this.MoveDangerousArea.MinX, this.MoveDangerousArea.MaxX);
 			vector2D.Y = MathUtils.Instance.Clamp(vector2D.Y, this.MoveDangerousArea.MinY, this.MoveDangerousArea.MaxY);
 		}
 
-		// Token: 0x060409E5 RID: 264677 RVA: 0x00FA466C File Offset: 0x00FA286C
+		// Token: 0x060356A6 RID: 218790 RVA: 0x00EEB5E8 File Offset: 0x00EE97E8
 		[NullableContext(2)]
 		public void SetScale(double scale, ESetScaleSource source, Vector2D targetPos = null)
 		{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			changeScaleCallback(source);
 		}
 
-		// Token: 0x060409E6 RID: 264678 RVA: 0x00FA4734 File Offset: 0x00FA2934
+		// Token: 0x060356A7 RID: 218791 RVA: 0x00EEB6B0 File Offset: 0x00EE98B0
 		private Vector2D GetRealPosition(double newScale, double oldScale, ESetScaleSource source, [Nullable(2)] Vector2D targetPos = null)
 		{
 			Vector2D vector2D = Vector2D.Create(this.MapItem.GetAnchorOffset());
@@ -211,8 +211,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			return vector2D.MultiplyEqual(newScale / oldScale);
 		}
 
-		// Token: 0x060409E7 RID: 264679 RVA: 0x00FA4808 File Offset: 0x00FA2A08
+		// Token: 0x060356A8 RID: 218792 RVA: 0x00EEB784 File Offset: 0x00EE9984
 		private Vector2D GetMousePosConverToLgui(double mousePosX, double mousePosY)
+		{
+			Vector2D mousePosInLgui = this.GetMousePosInLgui(mousePosX, mousePosY);
+			mousePosInLgui.X = MathCommon.Clamp(mousePosInLgui.X, 0.0, this.ViewportSize.X);
+			mousePosInLgui.Y = MathCommon.Clamp(mousePosInLgui.Y, 0.0, this.ViewportSize.Y);
+			return mousePosInLgui;
+		}
+
+		// Token: 0x060356A9 RID: 218793 RVA: 0x00EEB7E4 File Offset: 0x00EE99E4
+		private Vector2D GetMousePosInLgui(double mousePosX, double mousePosY)
 		{
 			ULGUICanvasScaler canvasScaler = UiLayer.Instance.UiRootItem.GetCanvasScaler();
 			if (canvasScaler == null)
@@ -224,12 +233,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			FVector2D fvector2D = vector2D.ToUeVector2D(false);
 			FVector2D fvector2D2 = ulguicanvasScaler.ConvertPositionFromViewportToLGUICanvas(fvector2D);
 			vector2D.FromUeVector2D(fvector2D2);
-			vector2D.X = MathCommon.Clamp(vector2D.X, 0.0, this.ViewportSize.X);
-			vector2D.Y = MathCommon.Clamp(vector2D.Y, 0.0, this.ViewportSize.Y);
 			return vector2D;
 		}
 
-		// Token: 0x060409E8 RID: 264680 RVA: 0x00FA48A0 File Offset: 0x00FA2AA0
+		// Token: 0x060356AA RID: 218794 RVA: 0x00EEB830 File Offset: 0x00EE9A30
 		[NullableContext(2)]
 		private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -238,6 +245,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 				return;
 			}
 			this.KillPosTweener();
+			this.IsDragging = true;
 			FVector pointerPosition = eventData.pointerPosition;
 			Vector2D mousePosConverToLgui = this.GetMousePosConverToLgui((double)pointerPosition.X, (double)pointerPosition.Y);
 			this.LastDragPos.DeepCopy(mousePosConverToLgui);
@@ -249,7 +257,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			pointerBeginDragExtraCallBack(eventData);
 		}
 
-		// Token: 0x060409E9 RID: 264681 RVA: 0x00FA48F8 File Offset: 0x00FA2AF8
+		// Token: 0x060356AB RID: 218795 RVA: 0x00EEB88C File Offset: 0x00EE9A8C
 		[NullableContext(2)]
 		private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -277,13 +285,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveToTargetPos(this.TempVector2D, EClampType.ClampToDangerousArea);
 		}
 
-		// Token: 0x060409EA RID: 264682 RVA: 0x00FA4A1B File Offset: 0x00FA2C1B
+		// Token: 0x060356AC RID: 218796 RVA: 0x00EEB9AF File Offset: 0x00EE9BAF
 		public void EmitPointerDown()
 		{
-			this.PointerDownTime = Time.Instance.NowSeconds;
+			this.BeginPointerInteraction();
 		}
 
-		// Token: 0x060409EB RID: 264683 RVA: 0x00FA4A2D File Offset: 0x00FA2C2D
+		// Token: 0x060356AD RID: 218797 RVA: 0x00EEB9B7 File Offset: 0x00EE9BB7
 		[NullableContext(2)]
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
@@ -291,16 +299,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			{
 				return;
 			}
-			this.IsDragging = true;
-			this.PointerDownTime = Time.Instance.NowSeconds;
+			this.BeginPointerInteraction();
 		}
 
-		// Token: 0x060409EC RID: 264684 RVA: 0x00FA4A60 File Offset: 0x00FA2C60
+		// Token: 0x060356AE RID: 218798 RVA: 0x00EEB9DC File Offset: 0x00EE9BDC
 		[NullableContext(2)]
 		private void OnPointerUp(ULGUIPointerEventData eventData)
 		{
 			if (this.IsInMultiTouch)
 			{
+				this.IsDragging = false;
+				this.PointerDeltaPos.Reset();
 				return;
 			}
 			this.IsDragging = false;
@@ -321,7 +330,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			pointerUpExtraCallBack(eventData);
 		}
 
-		// Token: 0x060409ED RID: 264685 RVA: 0x00FA4AD0 File Offset: 0x00FA2CD0
+		// Token: 0x060356AF RID: 218799 RVA: 0x00EEBA60 File Offset: 0x00EE9C60
 		[NullableContext(2)]
 		private void OnPointerScrollCallback(ULGUIPointerEventData eventData)
 		{
@@ -336,27 +345,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.SetScale(this.MapScaleInternal + num, ESetScaleSource.PointerScroll, null);
 		}
 
-		// Token: 0x060409EE RID: 264686 RVA: 0x00FA4B24 File Offset: 0x00FA2D24
+		// Token: 0x060356B0 RID: 218800 RVA: 0x00EEBAB4 File Offset: 0x00EE9CB4
 		private void OnTweenUpdate(FVector2D targetPos)
 		{
 			this.MapItem.SetAnchorOffset(targetPos);
+			Action mapMovedCallback = this.MapMovedCallback;
+			if (mapMovedCallback == null)
+			{
+				return;
+			}
+			mapMovedCallback();
 		}
 
-		// Token: 0x060409EF RID: 264687 RVA: 0x00FA4B32 File Offset: 0x00FA2D32
+		// Token: 0x060356B1 RID: 218801 RVA: 0x00EEBAD2 File Offset: 0x00EE9CD2
 		private void OnScaleTweenUpdate(FVector targetScale)
 		{
 			this.ScaleTempPos.Set((double)targetScale.Y, (double)targetScale.Z);
 			this.SetScale((double)targetScale.X, ESetScaleSource.Tween, this.ScaleTempPos);
 		}
 
-		// Token: 0x060409F0 RID: 264688 RVA: 0x00FA4B64 File Offset: 0x00FA2D64
+		// Token: 0x060356B2 RID: 218802 RVA: 0x00EEBB04 File Offset: 0x00EE9D04
 		private bool CheckPointInScope(FVector mousePos)
 		{
-			Vector2D mousePosConverToLgui = this.GetMousePosConverToLgui((double)mousePos.X, (double)mousePos.Y);
-			return mousePosConverToLgui.X >= 0.0 && mousePosConverToLgui.X <= this.ViewportSize.X && mousePosConverToLgui.Y >= 0.0 && mousePosConverToLgui.Y <= this.ViewportSize.Y;
+			Vector2D mousePosInLgui = this.GetMousePosInLgui((double)mousePos.X, (double)mousePos.Y);
+			return mousePosInLgui.X >= 0.0 && mousePosInLgui.X <= this.ViewportSize.X && mousePosInLgui.Y >= 0.0 && mousePosInLgui.Y <= this.ViewportSize.Y;
 		}
 
-		// Token: 0x060409F1 RID: 264689 RVA: 0x00FA4BD4 File Offset: 0x00FA2DD4
+		// Token: 0x060356B3 RID: 218803 RVA: 0x00EEBB73 File Offset: 0x00EE9D73
+		private void BeginPointerInteraction()
+		{
+			this.IsDragging = false;
+			this.PointerDownTime = Time.Instance.NowSeconds;
+			this.PointerDeltaPos.Reset();
+			this.KillPosTweener();
+		}
+
+		// Token: 0x060356B4 RID: 218804 RVA: 0x00EEBBA0 File Offset: 0x00EE9DA0
 		private void HandleDragInertia()
 		{
 			double num = Time.Instance.NowSeconds - this.PointerDownTime;
@@ -378,17 +402,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveToTargetPosWithTween(targetPos, LTweenEase.OutQuad, 0.800000011920929);
 		}
 
-		// Token: 0x060409F2 RID: 264690 RVA: 0x00FA4CAE File Offset: 0x00FA2EAE
+		// Token: 0x060356B5 RID: 218805 RVA: 0x00EEBC7A File Offset: 0x00EE9E7A
 		private void KillPosTweener()
 		{
 			if (this.PosTweener != null)
 			{
 				this.PosTweener.Kill(false);
 				this.PosTweener = null;
+				this.IsTweening = false;
 			}
 		}
 
-		// Token: 0x060409F3 RID: 264691 RVA: 0x00FA4CCB File Offset: 0x00FA2ECB
+		// Token: 0x060356B6 RID: 218806 RVA: 0x00EEBC9E File Offset: 0x00EE9E9E
 		private void KillScaleTweener()
 		{
 			if (this.ScaleTweener != null)
@@ -398,7 +423,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x060409F4 RID: 264692 RVA: 0x00FA4CE8 File Offset: 0x00FA2EE8
+		// Token: 0x060356B7 RID: 218807 RVA: 0x00EEBCBC File Offset: 0x00EE9EBC
 		private void MoveToTargetPosWithTween(Vector2D targetPos, LTweenEase tweenEase = LTweenEase.Linear, double tweenTime = 2.0)
 		{
 			this.ClampByMoveSafeArea(targetPos);
@@ -411,7 +436,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			});
 		}
 
-		// Token: 0x060409F5 RID: 264693 RVA: 0x00FA4D55 File Offset: 0x00FA2F55
+		// Token: 0x060356B8 RID: 218808 RVA: 0x00EEBD29 File Offset: 0x00EE9F29
 		private void MoveToTargetPos(Vector2D targetPos, EClampType clampType = EClampType.ClampToSafeArea)
 		{
 			if (clampType == EClampType.ClampToSafeArea)
@@ -423,9 +448,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 				this.ClampByMoveDangerousArea(targetPos);
 			}
 			this.MapItem.SetAnchorOffset(targetPos.ToUeVector2D(false));
+			Action mapMovedCallback = this.MapMovedCallback;
+			if (mapMovedCallback == null)
+			{
+				return;
+			}
+			mapMovedCallback();
 		}
 
-		// Token: 0x060409F6 RID: 264694 RVA: 0x00FA4D80 File Offset: 0x00FA2F80
+		// Token: 0x060356B9 RID: 218809 RVA: 0x00EEBD64 File Offset: 0x00EE9F64
 		public void MoveToTarget(double[] offsetXY, LTweenEase tweenEase = LTweenEase.Linear, double tweenTime = 2.0, [Nullable(2)] Action callback = null)
 		{
 			this.TempVector2D.Reset();
@@ -450,7 +481,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x060409F7 RID: 264695 RVA: 0x00FA4E04 File Offset: 0x00FA3004
+		// Token: 0x060356BA RID: 218810 RVA: 0x00EEBDE8 File Offset: 0x00EE9FE8
 		public void ScaleToTarget(double scale, float[] offset, LTweenEase tweenEase = LTweenEase.Linear, float tweenTime = 2f, ETweenScaleType tweenScaleType = ETweenScaleType.Normal, [Nullable(2)] Action callback = null)
 		{
 			double targetScale = scale;
@@ -482,7 +513,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x060409F8 RID: 264696 RVA: 0x00FA4E94 File Offset: 0x00FA3094
+		// Token: 0x060356BB RID: 218811 RVA: 0x00EEBE78 File Offset: 0x00EEA078
 		private void ScaleToTargetScaleWithTween(double targetScale, float[] offset, LTweenEase tweenEase = LTweenEase.Linear, float tweenTime = 2f)
 		{
 			this.IsTweening = true;
@@ -497,7 +528,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			});
 		}
 
-		// Token: 0x060409F9 RID: 264697 RVA: 0x00FA4F50 File Offset: 0x00FA3150
+		// Token: 0x060356BC RID: 218812 RVA: 0x00EEBF34 File Offset: 0x00EEA134
 		private Vector2D GetCursorPoint()
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -510,7 +541,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			return this.TempVector2D;
 		}
 
-		// Token: 0x060409FA RID: 264698 RVA: 0x00FA4F94 File Offset: 0x00FA3194
+		// Token: 0x060356BD RID: 218813 RVA: 0x00EEBF78 File Offset: 0x00EEA178
 		private void OnGamepadMoveOverScreen(double overOffsetX, double overOffsetY)
 		{
 			this.TempVector2D.FromUeVector2D(this.MapItem.GetAnchorOffset());
@@ -519,26 +550,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveToTargetPos(this.TempVector2D, EClampType.ClampToDangerousArea);
 		}
 
-		// Token: 0x060409FB RID: 264699 RVA: 0x00FA4FF9 File Offset: 0x00FA31F9
+		// Token: 0x060356BE RID: 218814 RVA: 0x00EEBFDD File Offset: 0x00EEA1DD
 		public void LongPressScroll(float value)
 		{
 			this.InteractCenterPoint.Reset();
 			this.SetScale(this.MapScaleInternal + (double)value, ESetScaleSource.LongPress, null);
 		}
 
-		// Token: 0x060409FC RID: 264700 RVA: 0x00FA5017 File Offset: 0x00FA3217
+		// Token: 0x060356BF RID: 218815 RVA: 0x00EEBFFB File Offset: 0x00EEA1FB
 		public void SliderScroll(float value)
 		{
 			this.SetScale((double)value, ESetScaleSource.Slider, null);
 		}
 
-		// Token: 0x060409FD RID: 264701 RVA: 0x00FA5023 File Offset: 0x00FA3223
+		// Token: 0x060356C0 RID: 218816 RVA: 0x00EEC007 File Offset: 0x00EEA207
 		public void SetChangeScaleCallback(Action<ESetScaleSource> callback)
 		{
 			this.ChangeScaleCallback = callback;
 		}
 
-		// Token: 0x060409FE RID: 264702 RVA: 0x00FA502C File Offset: 0x00FA322C
+		// Token: 0x060356C1 RID: 218817 RVA: 0x00EEC010 File Offset: 0x00EEA210
 		public unsafe void SetScaleSafeArea(double min, double max)
 		{
 			if (min > max)
@@ -571,36 +602,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
 		}
 
-		// Token: 0x060409FF RID: 264703 RVA: 0x00FA51E9 File Offset: 0x00FA33E9
+		// Token: 0x060356C2 RID: 218818 RVA: 0x00EEC1CD File Offset: 0x00EEA3CD
 		public void SetMapMoveRebound(float x, float y)
 		{
 			this.MapMoveRebound.X = (double)x;
 			this.MapMoveRebound.Y = (double)y;
+			this.UpdateMoveDangerousArea();
+			this.UpdateMoveSafeArea();
 		}
 
-		// Token: 0x06040A00 RID: 264704 RVA: 0x00FA5205 File Offset: 0x00FA3405
+		// Token: 0x060356C3 RID: 218819 RVA: 0x00EEC1F5 File Offset: 0x00EEA3F5
 		public void Destroy()
 		{
+			this.IsDragging = false;
 			this.KillPosTweener();
 			this.KillScaleTweener();
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<FVector2D>(this.OnTweenUpdate));
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<FVector>(this.OnScaleTweenUpdate));
 		}
 
-		// Token: 0x06040A01 RID: 264705 RVA: 0x00FA5235 File Offset: 0x00FA3435
+		// Token: 0x060356C4 RID: 218820 RVA: 0x00EEC22C File Offset: 0x00EEA42C
 		public void AddGamepadEvent()
 		{
 			EventSystem.Instance.Add<double, double>(EEventName.GamepadMoveOverScreen, new Action<double, double>(this.OnGamepadMoveOverScreen));
 		}
 
-		// Token: 0x06040A02 RID: 264706 RVA: 0x00FA5253 File Offset: 0x00FA3453
+		// Token: 0x060356C5 RID: 218821 RVA: 0x00EEC24A File Offset: 0x00EEA44A
 		public void RemoveGamepadEvent()
 		{
 			EventSystem.Instance.Remove(EEventName.GamepadMoveOverScreen, new Action<double, double>(this.OnGamepadMoveOverScreen));
 		}
 
-		// Token: 0x1700949F RID: 38047
-		// (get) Token: 0x06040A03 RID: 264707 RVA: 0x00FA5271 File Offset: 0x00FA3471
+		// Token: 0x17006801 RID: 26625
+		// (get) Token: 0x060356C6 RID: 218822 RVA: 0x00EEC268 File Offset: 0x00EEA468
 		public bool IsInTouch
 		{
 			get
@@ -609,8 +643,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x170094A0 RID: 38048
-		// (get) Token: 0x06040A04 RID: 264708 RVA: 0x00FA5281 File Offset: 0x00FA3481
+		// Token: 0x17006802 RID: 26626
+		// (get) Token: 0x060356C7 RID: 218823 RVA: 0x00EEC278 File Offset: 0x00EEA478
 		public bool IsInMultiTouch
 		{
 			get
@@ -619,7 +653,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x06040A05 RID: 264709 RVA: 0x00FA5294 File Offset: 0x00FA3494
+		// Token: 0x060356C8 RID: 218824 RVA: 0x00EEC288 File Offset: 0x00EEA488
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 		{
 			InputDistributeDefine.ETouchType touchType = touchData.TouchType;
@@ -636,7 +670,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.TouchTrigger(false, touchData);
 		}
 
-		// Token: 0x06040A06 RID: 264710 RVA: 0x00FA52C8 File Offset: 0x00FA34C8
+		// Token: 0x060356C9 RID: 218825 RVA: 0x00EEC2BC File Offset: 0x00EEA4BC
 		private void TouchTrigger(bool bTouchPress, InputDistributeDefine.ITouchData touchData)
 		{
 			int touchId = touchData.TouchId;
@@ -663,7 +697,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}
 		}
 
-		// Token: 0x06040A07 RID: 264711 RVA: 0x00FA53B0 File Offset: 0x00FA35B0
+		// Token: 0x060356CA RID: 218826 RVA: 0x00EEC3A4 File Offset: 0x00EEA5A4
 		private void TouchChangeMapScale()
 		{
 			if (!this.IsInMultiTouch)
@@ -680,7 +714,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.SetScale(this.MapScaleInternal + (double)item2, ESetScaleSource.MultiTouch, null);
 		}
 
-		// Token: 0x06040A08 RID: 264712 RVA: 0x00FA53F4 File Offset: 0x00FA35F4
+		// Token: 0x060356CB RID: 218827 RVA: 0x00EEC3E8 File Offset: 0x00EEA5E8
 		public void BindTouch()
 		{
 			InputDistributeController.Instance.BindTouches(new int[]
@@ -690,7 +724,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06040A09 RID: 264713 RVA: 0x00FA5416 File Offset: 0x00FA3616
+		// Token: 0x060356CC RID: 218828 RVA: 0x00EEC40A File Offset: 0x00EEA60A
 		public void UnbindTouch()
 		{
 			InputDistributeController.Instance.UnBindTouches(new <>z__ReadOnlyArray<int>(new int[]
@@ -700,37 +734,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x06040A0A RID: 264714 RVA: 0x00FA543D File Offset: 0x00FA363D
+		// Token: 0x060356CD RID: 218829 RVA: 0x00EEC431 File Offset: 0x00EEA631
 		public UUIItem GetMapItem()
 		{
 			return this.MapItem;
 		}
 
-		// Token: 0x06040A0B RID: 264715 RVA: 0x00FA5445 File Offset: 0x00FA3645
+		// Token: 0x060356CE RID: 218830 RVA: 0x00EEC439 File Offset: 0x00EEA639
 		public void SwitchOnMove(bool bOn)
 		{
 			this.CanMove = bOn;
 		}
 
-		// Token: 0x06040A0C RID: 264716 RVA: 0x00FA5450 File Offset: 0x00FA3650
-		public void AddMoveListener(bool bOn = true)
+		// Token: 0x060356CF RID: 218831 RVA: 0x00EEC442 File Offset: 0x00EEA642
+		public void SwitchOnCheckMask(bool bOn)
+		{
+			this.CheckMask = bOn;
+		}
+
+		// Token: 0x060356D0 RID: 218832 RVA: 0x00EEC44C File Offset: 0x00EEA64C
+		public void AddMoveListener(bool bOn = true, bool bCheckMask = false)
 		{
 			this.SwitchOnMove(bOn);
+			this.SwitchOnCheckMask(bCheckMask);
 			EventSystem.Instance.Add<float>(EEventName.MapDragMoveForward, new Action<float>(this.OnMoveForward));
 			EventSystem.Instance.Add<float>(EEventName.MapDragMoveRight, new Action<float>(this.OnMoveRight));
 		}
 
-		// Token: 0x06040A0D RID: 264717 RVA: 0x00FA549C File Offset: 0x00FA369C
+		// Token: 0x060356D1 RID: 218833 RVA: 0x00EEC49F File Offset: 0x00EEA69F
 		public void RemoveMoveListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MapDragMoveForward, new Action<float>(this.OnMoveForward));
 			EventSystem.Instance.Remove(EEventName.MapDragMoveRight, new Action<float>(this.OnMoveRight));
 		}
 
-		// Token: 0x06040A0E RID: 264718 RVA: 0x00FA54D6 File Offset: 0x00FA36D6
+		// Token: 0x060356D2 RID: 218834 RVA: 0x00EEC4DC File Offset: 0x00EEA6DC
 		private void OnMoveForward(float delta)
 		{
 			if (!this.CanMove)
+			{
+				return;
+			}
+			if (this.CheckMask && UiLayer.Instance.IsInMask())
 			{
 				return;
 			}
@@ -738,10 +783,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.IsMoveForwardDirty = true;
 		}
 
-		// Token: 0x06040A0F RID: 264719 RVA: 0x00FA5505 File Offset: 0x00FA3705
+		// Token: 0x060356D3 RID: 218835 RVA: 0x00EEC52C File Offset: 0x00EEA72C
 		private void OnMoveRight(float delta)
 		{
 			if (!this.CanMove)
+			{
+				return;
+			}
+			if (this.CheckMask && UiLayer.Instance.IsInMask())
 			{
 				return;
 			}
@@ -749,7 +798,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.IsMoveRightDirty = true;
 		}
 
-		// Token: 0x06040A10 RID: 264720 RVA: 0x00FA5534 File Offset: 0x00FA3734
+		// Token: 0x060356D4 RID: 218836 RVA: 0x00EEC57C File Offset: 0x00EEA77C
 		public void TickMove()
 		{
 			if (!this.IsMoveForwardDirty && !this.IsMoveRightDirty)
@@ -770,7 +819,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			this.MoveToTargetPos(this.TempMoveVector2D, EClampType.ClampToSafeArea);
 		}
 
-		// Token: 0x06040A11 RID: 264721 RVA: 0x00FA55BC File Offset: 0x00FA37BC
+		// Token: 0x060356D5 RID: 218837 RVA: 0x00EEC604 File Offset: 0x00EEA804
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -784,66 +833,72 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			return new ValueTuple<double, double>(item, item2);
 		}
 
-		// Token: 0x04021978 RID: 137592
+		// Token: 0x0401C2A7 RID: 115367
 		private double PointerDownTime;
 
-		// Token: 0x04021979 RID: 137593
+		// Token: 0x0401C2A8 RID: 115368
 		protected bool IsDragging;
 
-		// Token: 0x0402197A RID: 137594
+		// Token: 0x0401C2A9 RID: 115369
 		protected bool IsTweening;
 
-		// Token: 0x0402197B RID: 137595
+		// Token: 0x0401C2AA RID: 115370
 		[Nullable(2)]
 		private ULTweener PosTweener;
 
-		// Token: 0x0402197C RID: 137596
+		// Token: 0x0401C2AB RID: 115371
 		[Nullable(2)]
 		private FLTweenVector2SetterDynamic Delegate;
 
-		// Token: 0x0402197D RID: 137597
+		// Token: 0x0401C2AC RID: 115372
 		[Nullable(2)]
 		private ULTweener ScaleTweener;
 
-		// Token: 0x0402197E RID: 137598
+		// Token: 0x0401C2AD RID: 115373
 		[Nullable(2)]
 		private FLTweenVector3SetterDynamic ScaleDelegate;
 
-		// Token: 0x0402197F RID: 137599
+		// Token: 0x0401C2AE RID: 115374
 		private readonly Vector2D ScaleTempPos = Vector2D.Create();
 
-		// Token: 0x04021980 RID: 137600
+		// Token: 0x0401C2AF RID: 115375
 		private readonly Vector ScaleTempStartVector = Vector.Create();
 
-		// Token: 0x04021981 RID: 137601
+		// Token: 0x0401C2B0 RID: 115376
 		private readonly Vector ScaleTempEndVector = Vector.Create();
 
-		// Token: 0x04021982 RID: 137602
+		// Token: 0x0401C2B1 RID: 115377
 		private readonly Vector2D LastDragPos = Vector2D.Create();
 
-		// Token: 0x04021983 RID: 137603
+		// Token: 0x0401C2B2 RID: 115378
 		private readonly Vector2D PointerDeltaPos = Vector2D.Create();
 
-		// Token: 0x04021984 RID: 137604
+		// Token: 0x0401C2B3 RID: 115379
 		public readonly double ScaleStep = 0.05000000074505806;
 
-		// Token: 0x04021985 RID: 137605
+		// Token: 0x0401C2B4 RID: 115380
 		public readonly IScaleArea MapScaleSafeArea = new ScaleArea
 		{
 			Min = 0.0,
 			Max = 0.0
 		};
 
-		// Token: 0x04021986 RID: 137606
+		// Token: 0x0401C2B5 RID: 115381
 		private double MapScaleInternal = 1.0;
 
-		// Token: 0x04021987 RID: 137607
+		// Token: 0x0401C2B6 RID: 115382
+		private const float TWEEN_TIME = 2f;
+
+		// Token: 0x0401C2B7 RID: 115383
+		private const float DRAG_TWEEN_TIME = 0.8f;
+
+		// Token: 0x0401C2B8 RID: 115384
 		private readonly Vector2D ViewportSize = Vector2D.Create();
 
-		// Token: 0x04021988 RID: 137608
+		// Token: 0x0401C2B9 RID: 115385
 		private readonly Vector2D MapMoveRebound = Vector2D.Create();
 
-		// Token: 0x04021989 RID: 137609
+		// Token: 0x0401C2BA RID: 115386
 		protected readonly IMoveArea MoveSafeArea = new MoveArea
 		{
 			MinX = 0.0,
@@ -852,7 +907,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			MaxY = 0.0
 		};
 
-		// Token: 0x0402198A RID: 137610
+		// Token: 0x0401C2BB RID: 115387
 		protected readonly IMoveArea MoveDangerousArea = new MoveArea
 		{
 			MinX = 0.0,
@@ -861,26 +916,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 			MaxY = 0.0
 		};
 
-		// Token: 0x0402198B RID: 137611
+		// Token: 0x0401C2BC RID: 115388
 		private readonly Vector2D InteractCenterPoint = Vector2D.Create();
 
-		// Token: 0x0402198C RID: 137612
+		// Token: 0x0401C2BD RID: 115389
 		private readonly UUIItem MapItem;
 
-		// Token: 0x0402198D RID: 137613
+		// Token: 0x0401C2BE RID: 115390
 		private readonly Vector2D TempVector2D = Vector2D.Create();
 
-		// Token: 0x0402198E RID: 137614
+		// Token: 0x0401C2BF RID: 115391
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0402198F RID: 137615
+		// Token: 0x0401C2C0 RID: 115392
 		private double SizeInterval = 1.0;
 
-		// Token: 0x04021990 RID: 137616
+		// Token: 0x0401C2C1 RID: 115393
 		[Nullable(2)]
 		private Action<ESetScaleSource> ChangeScaleCallback;
 
-		// Token: 0x04021991 RID: 137617
+		// Token: 0x0401C2C2 RID: 115394
 		[Nullable(new byte[]
 		{
 			2,
@@ -888,7 +943,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 		})]
 		public Action<ULGUIPointerEventData> PointerBeginDragExtraCallBack;
 
-		// Token: 0x04021992 RID: 137618
+		// Token: 0x0401C2C3 RID: 115395
 		[Nullable(new byte[]
 		{
 			2,
@@ -896,37 +951,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 		})]
 		public Action<ULGUIPointerEventData> PointerUpExtraCallBack;
 
-		// Token: 0x04021993 RID: 137619
+		// Token: 0x0401C2C4 RID: 115396
+		[Nullable(2)]
+		public Action MapMovedCallback;
+
+		// Token: 0x0401C2C5 RID: 115397
 		private readonly Vector2D TempTouchVector2D = Vector2D.Create();
 
-		// Token: 0x04021994 RID: 137620
+		// Token: 0x0401C2C6 RID: 115398
 		private readonly Dictionary<int, InputDistributeDefine.ITouchData> TouchMap = new Dictionary<int, InputDistributeDefine.ITouchData>();
 
-		// Token: 0x04021995 RID: 137621
+		// Token: 0x0401C2C7 RID: 115399
 		public float MoveSpeed = 1f;
 
-		// Token: 0x04021996 RID: 137622
+		// Token: 0x0401C2C8 RID: 115400
 		private readonly Vector2D ForwardVector = new Vector2D();
 
-		// Token: 0x04021997 RID: 137623
+		// Token: 0x0401C2C9 RID: 115401
 		private readonly Vector2D RightVector = new Vector2D();
 
-		// Token: 0x04021998 RID: 137624
+		// Token: 0x0401C2CA RID: 115402
 		private readonly Vector2D TempMoveVector2D = Vector2D.Create();
 
-		// Token: 0x04021999 RID: 137625
+		// Token: 0x0401C2CB RID: 115403
 		private bool IsMoveForwardDirty;
 
-		// Token: 0x0402199A RID: 137626
+		// Token: 0x0401C2CC RID: 115404
 		private bool IsMoveRightDirty;
 
-		// Token: 0x0402199B RID: 137627
+		// Token: 0x0401C2CD RID: 115405
 		private bool CanMove;
 
-		// Token: 0x0402199C RID: 137628
-		private const float TWEEN_TIME = 2f;
-
-		// Token: 0x0402199D RID: 137629
-		private const float DRAG_TWEEN_TIME = 0.8f;
+		// Token: 0x0401C2CE RID: 115406
+		private bool CheckMask;
 	}
 }

@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x02001F01 RID: 7937
+// Token: 0x020013C3 RID: 5059
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryShopGridItem : ActivityGrid
 {
-	// Token: 0x0600F464 RID: 62564 RVA: 0x003AF4FA File Offset: 0x003AD6FA
+	// Token: 0x0600C883 RID: 51331 RVA: 0x003BAFEE File Offset: 0x003B91EE
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -17,7 +17,7 @@ public class HonamiStoryShopGridItem : ActivityGrid
 		base.SetRedDotState(false);
 	}
 
-	// Token: 0x0600F465 RID: 62565 RVA: 0x003AF51C File Offset: 0x003AD71C
+	// Token: 0x0600C884 RID: 51332 RVA: 0x003BB010 File Offset: 0x003B9210
 	public override void Refresh(IPayShopUnionData data, bool isSelected, int gridIndex)
 	{
 		PayShopGoods payShopGoods = data as PayShopGoods;
@@ -48,7 +48,7 @@ public class HonamiStoryShopGridItem : ActivityGrid
 		base.SetExchangeExtraData(payShopExchangeExtraData);
 	}
 
-	// Token: 0x0600F466 RID: 62566 RVA: 0x003AF5D1 File Offset: 0x003AD7D1
+	// Token: 0x0600C885 RID: 51333 RVA: 0x003BB0C5 File Offset: 0x003B92C5
 	private void ClearNewFlagState(PayShopItem item, PayShopGoods data)
 	{
 		base.SetRedDotState(false);

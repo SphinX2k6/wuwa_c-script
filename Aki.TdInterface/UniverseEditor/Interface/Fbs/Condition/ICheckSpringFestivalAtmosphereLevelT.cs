@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B2A RID: 19242
+	// Token: 0x02005011 RID: 20497
 	public class ICheckSpringFestivalAtmosphereLevelT
 	{
-		// Token: 0x17008B99 RID: 35737
-		// (get) Token: 0x0601E46A RID: 124010 RVA: 0x0043E4CC File Offset: 0x0043C6CC
-		// (set) Token: 0x0601E46B RID: 124011 RVA: 0x0043E4D4 File Offset: 0x0043C6D4
+		// Token: 0x170092A9 RID: 37545
+		// (get) Token: 0x0601FFF5 RID: 131061 RVA: 0x00470C78 File Offset: 0x0046EE78
+		// (set) Token: 0x0601FFF6 RID: 131062 RVA: 0x00470C80 File Offset: 0x0046EE80
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x17008B9A RID: 35738
-		// (get) Token: 0x0601E46C RID: 124012 RVA: 0x0043E4DD File Offset: 0x0043C6DD
-		// (set) Token: 0x0601E46D RID: 124013 RVA: 0x0043E4E5 File Offset: 0x0043C6E5
+		// Token: 0x170092AA RID: 37546
+		// (get) Token: 0x0601FFF7 RID: 131063 RVA: 0x00470C89 File Offset: 0x0046EE89
+		// (set) Token: 0x0601FFF8 RID: 131064 RVA: 0x00470C91 File Offset: 0x0046EE91
 		public int AtmosphereLevel { get; set; }
 
-		// Token: 0x0601E46E RID: 124014 RVA: 0x0043E4EE File Offset: 0x0043C6EE
+		// Token: 0x0601FFF9 RID: 131065 RVA: 0x00470C9A File Offset: 0x0046EE9A
 		public ICheckSpringFestivalAtmosphereLevelT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

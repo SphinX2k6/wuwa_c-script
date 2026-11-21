@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001570 RID: 5488
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016CE RID: 5838
 	public class DollGrabItemDelivery : ActionParams
 	{
-		// Token: 0x06007BE3 RID: 31715 RVA: 0x0012A328 File Offset: 0x00128528
+		// Token: 0x060082C1 RID: 33473 RVA: 0x001393D4 File Offset: 0x001375D4
 		private DollGrabItemDelivery_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007BE4 RID: 31716 RVA: 0x0012A360 File Offset: 0x00128560
+		// Token: 0x060082C2 RID: 33474 RVA: 0x0013940C File Offset: 0x0013760C
 		public static DollGrabItemDelivery Create([Nullable(2)] DollGrabItemDelivery instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BE5 RID: 31717 RVA: 0x0012A373 File Offset: 0x00128573
+		// Token: 0x060082C3 RID: 33475 RVA: 0x0013941F File Offset: 0x0013761F
 		public static DollGrabItemDelivery CreateFromSetValue([Nullable(2)] DollGrabItemDelivery_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BE6 RID: 31718 RVA: 0x0012A386 File Offset: 0x00128586
+		// Token: 0x060082C4 RID: 33476 RVA: 0x00139432 File Offset: 0x00137632
 		public DollGrabItemDelivery_SetValue ToSetValue()
 		{
 			return new DollGrabItemDelivery_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002905 RID: 10501
-		// (get) Token: 0x06007BE7 RID: 31719 RVA: 0x0012A399 File Offset: 0x00128599
-		// (set) Token: 0x06007BE8 RID: 31720 RVA: 0x0012A3C4 File Offset: 0x001285C4
+		// Token: 0x17002AF0 RID: 10992
+		// (get) Token: 0x060082C5 RID: 33477 RVA: 0x00139445 File Offset: 0x00137645
+		// (set) Token: 0x060082C6 RID: 33478 RVA: 0x00139470 File Offset: 0x00137670
 		public virtual int ShowcaseId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400474D RID: 18253
+		// Token: 0x04004AED RID: 19181
 		[Nullable(2)]
 		protected new DollGrabItemDelivery FbInstance;
 
-		// Token: 0x0400474E RID: 18254
+		// Token: 0x04004AEE RID: 19182
 		[Nullable(2)]
 		protected DollGrabItemDelivery_SetValue PocoInterface;
 	}

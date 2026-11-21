@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002924 RID: 10532
+	// Token: 0x02002C00 RID: 11264
 	public class IPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600E9C2 RID: 59842 RVA: 0x00224293 File Offset: 0x00222493
-		[NullableContext(1)]
+		// Token: 0x0600F814 RID: 63508 RVA: 0x002415EB File Offset: 0x0023F7EB
 		public static IPrefabConfig Create(IPrefabConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700493C RID: 18748
-		// (get) Token: 0x0600E9C3 RID: 59843 RVA: 0x002242B2 File Offset: 0x002224B2
+		// Token: 0x17004CC2 RID: 19650
+		// (get) Token: 0x0600F815 RID: 63509 RVA: 0x0024160A File Offset: 0x0023F80A
 		public override ECreatePrefabType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700493D RID: 18749
-		// (get) Token: 0x0600E9C4 RID: 59844 RVA: 0x002242BF File Offset: 0x002224BF
+		// Token: 0x17004CC3 RID: 19651
+		// (get) Token: 0x0600F816 RID: 63510 RVA: 0x00241617 File Offset: 0x0023F817
 		public virtual int PrefabId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080F6 RID: 33014
+		// Token: 0x040087C4 RID: 34756
 		private IPrefabConfig Instance;
 	}
 }

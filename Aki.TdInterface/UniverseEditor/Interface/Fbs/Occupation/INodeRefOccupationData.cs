@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043A4 RID: 17316
+	// Token: 0x02004806 RID: 18438
 	public struct INodeRefOccupationData : IFlatbufferObject
 	{
-		// Token: 0x17007A62 RID: 31330
-		// (get) Token: 0x06019C63 RID: 105571 RVA: 0x003B09B9 File Offset: 0x003AEBB9
+		// Token: 0x17008097 RID: 32919
+		// (get) Token: 0x0601B3F1 RID: 111601 RVA: 0x003DC3E1 File Offset: 0x003DA5E1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C64 RID: 105572 RVA: 0x003B09C6 File Offset: 0x003AEBC6
+		// Token: 0x0601B3F2 RID: 111602 RVA: 0x003DC3EE File Offset: 0x003DA5EE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019C65 RID: 105573 RVA: 0x003B09D0 File Offset: 0x003AEBD0
+		// Token: 0x0601B3F3 RID: 111603 RVA: 0x003DC3F8 File Offset: 0x003DA5F8
 		public static INodeRefOccupationData GetRootAsINodeRefOccupationData(ByteBuffer _bb)
 		{
 			return INodeRefOccupationData.GetRootAsINodeRefOccupationData(_bb, default(INodeRefOccupationData));
 		}
 
-		// Token: 0x06019C66 RID: 105574 RVA: 0x003B09EC File Offset: 0x003AEBEC
+		// Token: 0x0601B3F4 RID: 111604 RVA: 0x003DC414 File Offset: 0x003DA614
 		public static INodeRefOccupationData GetRootAsINodeRefOccupationData(ByteBuffer _bb, INodeRefOccupationData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019C67 RID: 105575 RVA: 0x003B0A09 File Offset: 0x003AEC09
+		// Token: 0x0601B3F5 RID: 111605 RVA: 0x003DC431 File Offset: 0x003DA631
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019C68 RID: 105576 RVA: 0x003B0A18 File Offset: 0x003AEC18
+		// Token: 0x0601B3F6 RID: 111606 RVA: 0x003DC440 File Offset: 0x003DA640
 		public INodeRefOccupationData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007A63 RID: 31331
-		// (get) Token: 0x06019C69 RID: 105577 RVA: 0x003B0A28 File Offset: 0x003AEC28
+		// Token: 0x17008098 RID: 32920
+		// (get) Token: 0x0601B3F7 RID: 111607 RVA: 0x003DC450 File Offset: 0x003DA650
 		public TNodeRefTiming NodeRefTiming
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x17007A64 RID: 31332
-		// (get) Token: 0x06019C6A RID: 105578 RVA: 0x003B0A64 File Offset: 0x003AEC64
+		// Token: 0x17008099 RID: 32921
+		// (get) Token: 0x0601B3F8 RID: 111608 RVA: 0x003DC48C File Offset: 0x003DA68C
 		public TRefType RefType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x17007A65 RID: 31333
-		// (get) Token: 0x06019C6B RID: 105579 RVA: 0x003B0AA0 File Offset: 0x003AECA0
+		// Token: 0x1700809A RID: 32922
+		// (get) Token: 0x0601B3F9 RID: 111609 RVA: 0x003DC4C8 File Offset: 0x003DA6C8
 		public TRefSourceData RefSourceType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C6C RID: 105580 RVA: 0x003B0ADC File Offset: 0x003AECDC
+		// Token: 0x0601B3FA RID: 111610 RVA: 0x003DC504 File Offset: 0x003DA704
 		public TTable? RefSource<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,26 +103,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06019C6D RID: 105581 RVA: 0x003B0B24 File Offset: 0x003AED24
+		// Token: 0x0601B3FB RID: 111611 RVA: 0x003DC54C File Offset: 0x003DA74C
 		public IAwakeEntityRefSource RefSourceAsIAwakeEntityRefSource()
 		{
 			return this.RefSource<IAwakeEntityRefSource>().Value;
 		}
 
-		// Token: 0x06019C6E RID: 105582 RVA: 0x003B0B40 File Offset: 0x003AED40
+		// Token: 0x0601B3FC RID: 111612 RVA: 0x003DC568 File Offset: 0x003DA768
 		public IDestroyEntityRefSource RefSourceAsIDestroyEntityRefSource()
 		{
 			return this.RefSource<IDestroyEntityRefSource>().Value;
 		}
 
-		// Token: 0x06019C6F RID: 105583 RVA: 0x003B0B5C File Offset: 0x003AED5C
+		// Token: 0x0601B3FD RID: 111613 RVA: 0x003DC584 File Offset: 0x003DA784
 		public IManualOccupationRefSource RefSourceAsIManualOccupationRefSource()
 		{
 			return this.RefSource<IManualOccupationRefSource>().Value;
 		}
 
-		// Token: 0x17007A66 RID: 31334
-		// (get) Token: 0x06019C70 RID: 105584 RVA: 0x003B0B78 File Offset: 0x003AED78
+		// Token: 0x1700809B RID: 32923
+		// (get) Token: 0x0601B3FE RID: 111614 RVA: 0x003DC5A0 File Offset: 0x003DA7A0
 		public string Occupation
 		{
 			get
@@ -136,20 +136,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C71 RID: 105585 RVA: 0x003B0BB0 File Offset: 0x003AEDB0
+		// Token: 0x0601B3FF RID: 111615 RVA: 0x003DC5D8 File Offset: 0x003DA7D8
 		public Span<byte> GetOccupationBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06019C72 RID: 105586 RVA: 0x003B0BC0 File Offset: 0x003AEDC0
+		// Token: 0x0601B400 RID: 111616 RVA: 0x003DC5E8 File Offset: 0x003DA7E8
 		public byte[] GetOccupationArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x17007A67 RID: 31335
-		// (get) Token: 0x06019C73 RID: 105587 RVA: 0x003B0BD0 File Offset: 0x003AEDD0
+		// Token: 0x1700809C RID: 32924
+		// (get) Token: 0x0601B401 RID: 111617 RVA: 0x003DC5F8 File Offset: 0x003DA7F8
 		public byte NullMask
 		{
 			get
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C74 RID: 105588 RVA: 0x003B0C0D File Offset: 0x003AEE0D
+		// Token: 0x0601B402 RID: 111618 RVA: 0x003DC635 File Offset: 0x003DA835
 		public static Offset<INodeRefOccupationData> CreateINodeRefOccupationData(FlatBufferBuilder builder, TNodeRefTiming NodeRefTiming = TNodeRefTiming.Enter, TRefType RefType = TRefType.Release, TRefSourceData RefSource_type = TRefSourceData.NONE, int RefSourceOffset = 0, StringOffset OccupationOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -176,55 +176,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return INodeRefOccupationData.EndINodeRefOccupationData(builder);
 		}
 
-		// Token: 0x06019C75 RID: 105589 RVA: 0x003B0C49 File Offset: 0x003AEE49
+		// Token: 0x0601B403 RID: 111619 RVA: 0x003DC671 File Offset: 0x003DA871
 		public static void StartINodeRefOccupationData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06019C76 RID: 105590 RVA: 0x003B0C52 File Offset: 0x003AEE52
+		// Token: 0x0601B404 RID: 111620 RVA: 0x003DC67A File Offset: 0x003DA87A
 		public static void AddNodeRefTiming(FlatBufferBuilder builder, TNodeRefTiming nodeRefTiming)
 		{
 			builder.AddByte(0, (byte)nodeRefTiming, 0);
 		}
 
-		// Token: 0x06019C77 RID: 105591 RVA: 0x003B0C5D File Offset: 0x003AEE5D
+		// Token: 0x0601B405 RID: 111621 RVA: 0x003DC685 File Offset: 0x003DA885
 		public static void AddRefType(FlatBufferBuilder builder, TRefType refType)
 		{
 			builder.AddByte(1, (byte)refType, 0);
 		}
 
-		// Token: 0x06019C78 RID: 105592 RVA: 0x003B0C68 File Offset: 0x003AEE68
+		// Token: 0x0601B406 RID: 111622 RVA: 0x003DC690 File Offset: 0x003DA890
 		public static void AddRefSourceType(FlatBufferBuilder builder, TRefSourceData refSourceType)
 		{
 			builder.AddByte(2, (byte)refSourceType, 0);
 		}
 
-		// Token: 0x06019C79 RID: 105593 RVA: 0x003B0C73 File Offset: 0x003AEE73
+		// Token: 0x0601B407 RID: 111623 RVA: 0x003DC69B File Offset: 0x003DA89B
 		public static void AddRefSource(FlatBufferBuilder builder, int refSourceOffset)
 		{
 			builder.AddOffset(3, refSourceOffset, 0);
 		}
 
-		// Token: 0x06019C7A RID: 105594 RVA: 0x003B0C7E File Offset: 0x003AEE7E
+		// Token: 0x0601B408 RID: 111624 RVA: 0x003DC6A6 File Offset: 0x003DA8A6
 		public static void AddOccupation(FlatBufferBuilder builder, StringOffset occupationOffset)
 		{
 			builder.AddOffset(4, occupationOffset.Value, 0);
 		}
 
-		// Token: 0x06019C7B RID: 105595 RVA: 0x003B0C8E File Offset: 0x003AEE8E
+		// Token: 0x0601B409 RID: 111625 RVA: 0x003DC6B6 File Offset: 0x003DA8B6
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06019C7C RID: 105596 RVA: 0x003B0C99 File Offset: 0x003AEE99
+		// Token: 0x0601B40A RID: 111626 RVA: 0x003DC6C1 File Offset: 0x003DA8C1
 		public static Offset<INodeRefOccupationData> EndINodeRefOccupationData(FlatBufferBuilder builder)
 		{
 			return new Offset<INodeRefOccupationData>(builder.EndTable());
 		}
 
-		// Token: 0x06019C7D RID: 105597 RVA: 0x003B0CA8 File Offset: 0x003AEEA8
+		// Token: 0x0601B40B RID: 111627 RVA: 0x003DC6D0 File Offset: 0x003DA8D0
 		public INodeRefOccupationDataT UnPack()
 		{
 			INodeRefOccupationDataT nodeRefOccupationDataT = new INodeRefOccupationDataT();
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return nodeRefOccupationDataT;
 		}
 
-		// Token: 0x06019C7E RID: 105598 RVA: 0x003B0CC4 File Offset: 0x003AEEC4
+		// Token: 0x0601B40C RID: 111628 RVA: 0x003DC6EC File Offset: 0x003DA8EC
 		public void UnPackTo(INodeRefOccupationDataT _o)
 		{
 			_o.NodeRefTiming = this.NodeRefTiming;
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06019C7F RID: 105599 RVA: 0x003B0DE4 File Offset: 0x003AEFE4
+		// Token: 0x0601B40D RID: 111629 RVA: 0x003DC80C File Offset: 0x003DAA0C
 		public static Offset<INodeRefOccupationData> Pack(FlatBufferBuilder builder, INodeRefOccupationDataT _o)
 		{
 			if (_o == null)
@@ -268,7 +268,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return INodeRefOccupationData.CreateINodeRefOccupationData(builder, _o.NodeRefTiming, _o.RefType, refSource_type, refSourceOffset, occupationOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400C1D7 RID: 49623
+		// Token: 0x0400CBF6 RID: 52214
 		private Table __p;
 	}
 }

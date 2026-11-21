@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001441 RID: 5185
+// Token: 0x020008F5 RID: 2293
 public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x0600926C RID: 37484 RVA: 0x001F5ADC File Offset: 0x001F3CDC
+	// Token: 0x06006601 RID: 26113 RVA: 0x001FE618 File Offset: 0x001FC818
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubView
 		};
 	}
 
-	// Token: 0x0600926D RID: 37485 RVA: 0x001F5C0C File Offset: 0x001F3E0C
+	// Token: 0x06006602 RID: 26114 RVA: 0x001FE748 File Offset: 0x001FC948
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -95,14 +95,14 @@ public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubView
 		}));
 	}
 
-	// Token: 0x0600926E RID: 37486 RVA: 0x001F5EF9 File Offset: 0x001F40F9
+	// Token: 0x06006603 RID: 26115 RVA: 0x001FEA35 File Offset: 0x001FCC35
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid OnInitItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600926F RID: 37487 RVA: 0x001F5F00 File Offset: 0x001F4100
+	// Token: 0x06006604 RID: 26116 RVA: 0x001FEA3C File Offset: 0x001FCC3C
 	private void OnClickJumpToQuestBtn()
 	{
 		if (this.TargetQuestId == 0)
@@ -112,7 +112,7 @@ public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubView
 		UiManager.Instance.OpenView(EUiViewName.QuestView, this.TargetQuestId, null);
 	}
 
-	// Token: 0x06009270 RID: 37488 RVA: 0x001F5F26 File Offset: 0x001F4126
+	// Token: 0x06006605 RID: 26117 RVA: 0x001FEA62 File Offset: 0x001FCC62
 	private void OnClickJumpToActivityBtn()
 	{
 		if (this.TargetActivityId == 0)
@@ -125,7 +125,7 @@ public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubView
 		});
 	}
 
-	// Token: 0x040040DF RID: 16607
+	// Token: 0x04004177 RID: 16759
 	[Nullable(new byte[]
 	{
 		2,
@@ -133,46 +133,46 @@ public class ActivityRegressNewVersionMainQuestView : ActivityRegressMainSubView
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x040040E0 RID: 16608
+	// Token: 0x04004178 RID: 16760
 	private bool IsFinishRecommendQuest;
 
-	// Token: 0x040040E1 RID: 16609
+	// Token: 0x04004179 RID: 16761
 	private int TargetQuestId;
 
-	// Token: 0x040040E2 RID: 16610
+	// Token: 0x0400417A RID: 16762
 	private int TargetActivityId;
 
-	// Token: 0x02007A6F RID: 31343
+	// Token: 0x02006BF3 RID: 27635
 	private class EComponents
 	{
-		// Token: 0x0402848E RID: 165006
+		// Token: 0x040237A8 RID: 145320
 		public const int QuestTitleText = 0;
 
-		// Token: 0x0402848F RID: 165007
+		// Token: 0x040237A9 RID: 145321
 		public const int QuestSubTitleText = 1;
 
-		// Token: 0x04028490 RID: 165008
+		// Token: 0x040237AA RID: 145322
 		public const int QuestDesText = 2;
 
-		// Token: 0x04028491 RID: 165009
+		// Token: 0x040237AB RID: 145323
 		public const int RewardScrollView = 3;
 
-		// Token: 0x04028492 RID: 165010
+		// Token: 0x040237AC RID: 145324
 		public const int CurrentQuestSubTitleText = 4;
 
-		// Token: 0x04028493 RID: 165011
+		// Token: 0x040237AD RID: 145325
 		public const int JumpToQuestViewBtn = 5;
 
-		// Token: 0x04028494 RID: 165012
+		// Token: 0x040237AE RID: 145326
 		public const int JumpToActivityBtn = 6;
 
-		// Token: 0x04028495 RID: 165013
+		// Token: 0x040237AF RID: 145327
 		public const int JumpToQuestViewBtnText = 7;
 
-		// Token: 0x04028496 RID: 165014
+		// Token: 0x040237B0 RID: 145328
 		public const int DownItem = 8;
 
-		// Token: 0x04028497 RID: 165015
+		// Token: 0x040237B1 RID: 145329
 		public const int BgTexture = 9;
 	}
 }

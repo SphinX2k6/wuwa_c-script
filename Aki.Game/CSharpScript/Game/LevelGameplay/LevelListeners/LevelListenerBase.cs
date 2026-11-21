@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE7 RID: 27367
+	// Token: 0x02005C5F RID: 23647
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelListenerBase
 	{
-		// Token: 0x1700997D RID: 39293
-		// (get) Token: 0x06043FB0 RID: 278448 RVA: 0x010ACE5A File Offset: 0x010AB05A
+		// Token: 0x17006E80 RID: 28288
+		// (get) Token: 0x0603A102 RID: 237826 RVA: 0x010566D6 File Offset: 0x010548D6
 		public bool IsListening
 		{
 			get
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043FB1 RID: 278449 RVA: 0x010ACE62 File Offset: 0x010AB062
+		// Token: 0x0603A103 RID: 237827 RVA: 0x010566DE File Offset: 0x010548DE
 		[NullableContext(1)]
 		public void Listen(object listeningInfo, TListenerCallbackFunc callback, GeneralContext context, params object[] otherParams)
 		{
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.OnListen(listeningInfo, callback, context, otherParams);
 		}
 
-		// Token: 0x06043FB2 RID: 278450 RVA: 0x010ACE94 File Offset: 0x010AB094
+		// Token: 0x0603A104 RID: 237828 RVA: 0x01056710 File Offset: 0x01054910
 		[NullableContext(1)]
 		protected virtual void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
 		}
 
-		// Token: 0x06043FB3 RID: 278451 RVA: 0x010ACE96 File Offset: 0x010AB096
+		// Token: 0x0603A105 RID: 237829 RVA: 0x01056712 File Offset: 0x01054912
 		public void UnListen()
 		{
 			if (!this.IsListeningInternal)
@@ -53,21 +53,21 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.Context = null;
 		}
 
-		// Token: 0x06043FB4 RID: 278452 RVA: 0x010ACEC3 File Offset: 0x010AB0C3
+		// Token: 0x0603A106 RID: 237830 RVA: 0x0105673F File Offset: 0x0105493F
 		protected virtual void OnUnListen()
 		{
 		}
 
-		// Token: 0x0402386F RID: 145519
+		// Token: 0x0401EB11 RID: 125713
 		protected object ListeningInfo;
 
-		// Token: 0x04023870 RID: 145520
+		// Token: 0x0401EB12 RID: 125714
 		protected TListenerCallbackFunc Callback;
 
-		// Token: 0x04023871 RID: 145521
+		// Token: 0x0401EB13 RID: 125715
 		protected GeneralContext Context;
 
-		// Token: 0x04023872 RID: 145522
+		// Token: 0x0401EB14 RID: 125716
 		protected bool IsListeningInternal;
 	}
 }

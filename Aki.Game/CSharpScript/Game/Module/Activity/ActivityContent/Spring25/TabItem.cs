@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A3 RID: 24739
+	// Token: 0x02005021 RID: 20513
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,12 +18,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 	})]
 	public class TabItem : GridProxyAbstract<Spring25LetterListTabData>
 	{
-		// Token: 0x1700909B RID: 37019
-		// (get) Token: 0x0603E895 RID: 256149 RVA: 0x00F1D5E3 File Offset: 0x00F1B7E3
-		// (set) Token: 0x0603E896 RID: 256150 RVA: 0x00F1D5EB File Offset: 0x00F1B7EB
+		// Token: 0x170063FD RID: 25597
+		// (get) Token: 0x06033559 RID: 210265 RVA: 0x00E643A7 File Offset: 0x00E625A7
+		// (set) Token: 0x0603355A RID: 210266 RVA: 0x00E643AF File Offset: 0x00E625AF
 		private Spring25LetterListTabData DataCache { get; set; }
 
-		// Token: 0x0603E897 RID: 256151 RVA: 0x00F1D5F4 File Offset: 0x00F1B7F4
+		// Token: 0x0603355B RID: 210267 RVA: 0x00E643B8 File Offset: 0x00E625B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E898 RID: 256152 RVA: 0x00F1D6DC File Offset: 0x00F1B8DC
+		// Token: 0x0603355C RID: 210268 RVA: 0x00E644A0 File Offset: 0x00E626A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TabItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E899 RID: 256153 RVA: 0x00F1D71F File Offset: 0x00F1B91F
+		// Token: 0x0603355D RID: 210269 RVA: 0x00E644E3 File Offset: 0x00E626E3
 		protected override void OnBeforeDestroy()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			extendToggle.CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x0603E89A RID: 256154 RVA: 0x00F1D738 File Offset: 0x00F1B938
+		// Token: 0x0603355E RID: 210270 RVA: 0x00E644FC File Offset: 0x00E626FC
 		public override void Refresh(Spring25LetterListTabData data, bool isSelected, int gridIndex)
 		{
 			this.DataCache = data;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			item.SetUIActive(data.IsNew);
 		}
 
-		// Token: 0x0603E89B RID: 256155 RVA: 0x00F1D7C0 File Offset: 0x00F1B9C0
+		// Token: 0x0603355F RID: 210271 RVA: 0x00E64584 File Offset: 0x00E62784
 		private void HandleClickTab(EToggleState toggleState)
 		{
 			if (this.DataCache == null)
@@ -101,26 +101,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			ActivitySpring25Controller.Instance.HandleLetterClickInLetterListView(this.DataCache.SignId);
 		}
 
-		// Token: 0x0603E89C RID: 256156 RVA: 0x00F1D7E0 File Offset: 0x00F1B9E0
+		// Token: 0x06033560 RID: 210272 RVA: 0x00E645A4 File Offset: 0x00E627A4
 		private bool HandleCanExecuteChange()
 		{
 			return this.DataCache != null && !this.DataCache.IsChosen;
 		}
 
-		// Token: 0x0200C301 RID: 49921
+		// Token: 0x0200ACEC RID: 44268
 		[NullableContext(0)]
 		private class ETabComponent
 		{
-			// Token: 0x0403AE22 RID: 241186
+			// Token: 0x0403578A RID: 219018
 			public const int RootToggle = 0;
 
-			// Token: 0x0403AE23 RID: 241187
+			// Token: 0x0403578B RID: 219019
 			public const int HeadTexture = 1;
 
-			// Token: 0x0403AE24 RID: 241188
+			// Token: 0x0403578C RID: 219020
 			public const int DescriptionText = 2;
 
-			// Token: 0x0403AE25 RID: 241189
+			// Token: 0x0403578D RID: 219021
 			public const int NewItem = 3;
 		}
 	}

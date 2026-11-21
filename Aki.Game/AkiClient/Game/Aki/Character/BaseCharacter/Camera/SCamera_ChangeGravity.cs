@@ -7,200 +7,188 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043CA RID: 17354
+	// Token: 0x020033E5 RID: 13285
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/SCamera_ChangeGravity.SCamera_ChangeGravity")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 37)]
 	public class SCamera_ChangeGravity : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CECA RID: 184010 RVA: 0x00A2C5D4 File Offset: 0x00A2A7D4
+		// Token: 0x06021ACC RID: 137932 RVA: 0x00966CD7 File Offset: 0x00964ED7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SCamera_ChangeGravity._ScriptStructPtr != 0) ? SCamera_ChangeGravity._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/SCamera_ChangeGravity.SCamera_ChangeGravity", ref SCamera_ChangeGravity._ScriptStructPtr);
 		}
 
-		// Token: 0x17007197 RID: 29079
-		// (get) Token: 0x0602CECB RID: 184011 RVA: 0x00A2C5F8 File Offset: 0x00A2A7F8
-		// (set) Token: 0x0602CECC RID: 184012 RVA: 0x00A2C60C File Offset: 0x00A2A80C
+		// Token: 0x17004597 RID: 17815
+		// (get) Token: 0x06021ACD RID: 137933 RVA: 0x00966CFB File Offset: 0x00964EFB
+		// (set) Token: 0x06021ACE RID: 137934 RVA: 0x00966D0F File Offset: 0x00964F0F
 		public unsafe TEnumAsByte<ECameraGravityMode> GravityMode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_GravityMode);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_GravityMode) = value;
 			}
 		}
 
-		// Token: 0x17007198 RID: 29080
-		// (get) Token: 0x0602CECD RID: 184013 RVA: 0x00A2C621 File Offset: 0x00A2A821
-		// (set) Token: 0x0602CECE RID: 184014 RVA: 0x00A2C635 File Offset: 0x00A2A835
+		// Token: 0x17004598 RID: 17816
+		// (get) Token: 0x06021ACF RID: 137935 RVA: 0x00966D24 File Offset: 0x00964F24
+		// (set) Token: 0x06021AD0 RID: 137936 RVA: 0x00966D38 File Offset: 0x00964F38
 		public unsafe FVector TargetGravity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_TargetGravity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_TargetGravity) = value;
 			}
 		}
 
-		// Token: 0x17007199 RID: 29081
-		// (get) Token: 0x0602CECF RID: 184015 RVA: 0x00A2C64A File Offset: 0x00A2A84A
-		// (set) Token: 0x0602CED0 RID: 184016 RVA: 0x00A2C65E File Offset: 0x00A2A85E
+		// Token: 0x17004599 RID: 17817
+		// (get) Token: 0x06021AD1 RID: 137937 RVA: 0x00966D4D File Offset: 0x00964F4D
+		// (set) Token: 0x06021AD2 RID: 137938 RVA: 0x00966D61 File Offset: 0x00964F61
 		public unsafe TEnumAsByte<ECameraGravityLerpMode> LerpMode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpMode);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpMode) = value;
 			}
 		}
 
-		// Token: 0x1700719A RID: 29082
-		// (get) Token: 0x0602CED1 RID: 184017 RVA: 0x00A2C673 File Offset: 0x00A2A873
-		// (set) Token: 0x0602CED2 RID: 184018 RVA: 0x00A2C683 File Offset: 0x00A2A883
+		// Token: 0x1700459A RID: 17818
+		// (get) Token: 0x06021AD3 RID: 137939 RVA: 0x00966D76 File Offset: 0x00964F76
+		// (set) Token: 0x06021AD4 RID: 137940 RVA: 0x00966D86 File Offset: 0x00964F86
 		public unsafe float LerpTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpTime) = value;
 			}
 		}
 
-		// Token: 0x1700719B RID: 29083
-		// (get) Token: 0x0602CED3 RID: 184019 RVA: 0x00A2C694 File Offset: 0x00A2A894
-		// (set) Token: 0x0602CED4 RID: 184020 RVA: 0x00A2C6A8 File Offset: 0x00A2A8A8
+		// Token: 0x1700459B RID: 17819
+		// (get) Token: 0x06021AD5 RID: 137941 RVA: 0x00966D97 File Offset: 0x00964F97
+		// (set) Token: 0x06021AD6 RID: 137942 RVA: 0x00966DAB File Offset: 0x00964FAB
 		[Nullable(2)]
 		public unsafe UCurveFloat LerpTimeCurve
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SCamera_ChangeGravity.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SCamera_ChangeGravity.__PropertyOffset_LerpTimeCurve);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SCamera_ChangeGravity.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SCamera_ChangeGravity.__PropertyOffset_LerpTimeCurve, value);
 			}
 		}
 
-		// Token: 0x1700719C RID: 29084
-		// (get) Token: 0x0602CED5 RID: 184021 RVA: 0x00A2C6BD File Offset: 0x00A2A8BD
-		// (set) Token: 0x0602CED6 RID: 184022 RVA: 0x00A2C6CD File Offset: 0x00A2A8CD
+		// Token: 0x1700459C RID: 17820
+		// (get) Token: 0x06021AD7 RID: 137943 RVA: 0x00966DC0 File Offset: 0x00964FC0
+		// (set) Token: 0x06021AD8 RID: 137944 RVA: 0x00966DD0 File Offset: 0x00964FD0
 		public unsafe float LerpAngleVelocity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpAngleVelocity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpAngleVelocity) = value;
 			}
 		}
 
-		// Token: 0x1700719D RID: 29085
-		// (get) Token: 0x0602CED7 RID: 184023 RVA: 0x00A2C6DE File Offset: 0x00A2A8DE
-		// (set) Token: 0x0602CED8 RID: 184024 RVA: 0x00A2C6EE File Offset: 0x00A2A8EE
+		// Token: 0x1700459D RID: 17821
+		// (get) Token: 0x06021AD9 RID: 137945 RVA: 0x00966DE1 File Offset: 0x00964FE1
+		// (set) Token: 0x06021ADA RID: 137946 RVA: 0x00966DF1 File Offset: 0x00964FF1
 		public unsafe bool LerpAngleWhenFinish
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpAngleWhenFinish) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SCamera_ChangeGravity.__PropertyOffset_LerpAngleWhenFinish) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CED9 RID: 184025 RVA: 0x00A2C6FF File Offset: 0x00A2A8FF
+		// Token: 0x06021ADB RID: 137947 RVA: 0x00966E02 File Offset: 0x00965002
 		public SCamera_ChangeGravity()
 		{
 		}
 
-		// Token: 0x0602CEDA RID: 184026 RVA: 0x00A2C707 File Offset: 0x00A2A907
-		public SCamera_ChangeGravity(TEnumAsByte<ECameraGravityMode> GravityMode, FVector TargetGravity, TEnumAsByte<ECameraGravityLerpMode> LerpMode, float LerpTime, [Nullable(1)] UCurveFloat LerpTimeCurve, float LerpAngleVelocity, bool LerpAngleWhenFinish)
-		{
-			this.GravityMode = GravityMode;
-			this.TargetGravity = TargetGravity;
-			this.LerpMode = LerpMode;
-			this.LerpTime = LerpTime;
-			this.LerpTimeCurve = LerpTimeCurve;
-			this.LerpAngleVelocity = LerpAngleVelocity;
-			this.LerpAngleWhenFinish = LerpAngleWhenFinish;
-		}
-
-		// Token: 0x0602CEDB RID: 184027 RVA: 0x00A2C744 File Offset: 0x00A2A944
+		// Token: 0x06021ADC RID: 137948 RVA: 0x00966E0A File Offset: 0x0096500A
 		protected override IntPtr GetUStructPtr()
 		{
 			return SCamera_ChangeGravity.StaticStruct();
 		}
 
-		// Token: 0x0602CEDC RID: 184028 RVA: 0x00A2C750 File Offset: 0x00A2A950
+		// Token: 0x06021ADD RID: 137949 RVA: 0x00966E16 File Offset: 0x00965016
 		[NullableContext(2)]
 		public SCamera_ChangeGravity(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CEDD RID: 184029 RVA: 0x00A2C75A File Offset: 0x00A2A95A
+		// Token: 0x06021ADE RID: 137950 RVA: 0x00966E20 File Offset: 0x00965020
 		public SCamera_ChangeGravity(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CEDE RID: 184030 RVA: 0x00A2C765 File Offset: 0x00A2A965
+		// Token: 0x06021ADF RID: 137951 RVA: 0x00966E2B File Offset: 0x0096502B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SCamera_ChangeGravity(Pointer, false, true);
 		}
 
-		// Token: 0x0602CEDF RID: 184031 RVA: 0x00A2C76F File Offset: 0x00A2A96F
+		// Token: 0x06021AE0 RID: 137952 RVA: 0x00966E35 File Offset: 0x00965035
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SCamera_ChangeGravity(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017D6D RID: 97645
+		// Token: 0x040128D5 RID: 75989
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/SCamera_ChangeGravity.SCamera_ChangeGravity";
 
-		// Token: 0x04017D6E RID: 97646
+		// Token: 0x040128D6 RID: 75990
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017D6F RID: 97647
-		internal static int __PropertyOffset_0;
+		// Token: 0x040128D7 RID: 75991
+		internal static int __PropertyOffset_GravityMode;
 
-		// Token: 0x04017D70 RID: 97648
-		internal static int __PropertyOffset_1;
+		// Token: 0x040128D8 RID: 75992
+		internal static int __PropertyOffset_TargetGravity;
 
-		// Token: 0x04017D71 RID: 97649
-		internal static int __PropertyOffset_2;
+		// Token: 0x040128D9 RID: 75993
+		internal static int __PropertyOffset_LerpMode;
 
-		// Token: 0x04017D72 RID: 97650
-		internal static int __PropertyOffset_3;
+		// Token: 0x040128DA RID: 75994
+		internal static int __PropertyOffset_LerpTime;
 
-		// Token: 0x04017D73 RID: 97651
-		internal static int __PropertyOffset_4;
+		// Token: 0x040128DB RID: 75995
+		internal static int __PropertyOffset_LerpTimeCurve;
 
-		// Token: 0x04017D74 RID: 97652
-		internal static int __PropertyOffset_5;
+		// Token: 0x040128DC RID: 75996
+		internal static int __PropertyOffset_LerpAngleVelocity;
 
-		// Token: 0x04017D75 RID: 97653
-		internal static int __PropertyOffset_6;
+		// Token: 0x040128DD RID: 75997
+		internal static int __PropertyOffset_LerpAngleWhenFinish;
 	}
 }

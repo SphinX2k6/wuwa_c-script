@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007385 RID: 29573
+	// Token: 0x02007B6C RID: 31596
 	public struct ITeleportToAndEnterFishingBoat : IFlatbufferObject
 	{
-		// Token: 0x1700E089 RID: 57481
-		// (get) Token: 0x06035AE9 RID: 219881 RVA: 0x0074F268 File Offset: 0x0074D468
+		// Token: 0x1700EC99 RID: 60569
+		// (get) Token: 0x06038E84 RID: 233092 RVA: 0x007B17A8 File Offset: 0x007AF9A8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035AEA RID: 219882 RVA: 0x0074F275 File Offset: 0x0074D475
+		// Token: 0x06038E85 RID: 233093 RVA: 0x007B17B5 File Offset: 0x007AF9B5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035AEB RID: 219883 RVA: 0x0074F27C File Offset: 0x0074D47C
+		// Token: 0x06038E86 RID: 233094 RVA: 0x007B17BC File Offset: 0x007AF9BC
 		public static ITeleportToAndEnterFishingBoat GetRootAsITeleportToAndEnterFishingBoat(ByteBuffer _bb)
 		{
 			return ITeleportToAndEnterFishingBoat.GetRootAsITeleportToAndEnterFishingBoat(_bb, default(ITeleportToAndEnterFishingBoat));
 		}
 
-		// Token: 0x06035AEC RID: 219884 RVA: 0x0074F298 File Offset: 0x0074D498
+		// Token: 0x06038E87 RID: 233095 RVA: 0x007B17D8 File Offset: 0x007AF9D8
 		public static ITeleportToAndEnterFishingBoat GetRootAsITeleportToAndEnterFishingBoat(ByteBuffer _bb, ITeleportToAndEnterFishingBoat obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035AED RID: 219885 RVA: 0x0074F2B5 File Offset: 0x0074D4B5
+		// Token: 0x06038E88 RID: 233096 RVA: 0x007B17F5 File Offset: 0x007AF9F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035AEE RID: 219886 RVA: 0x0074F2C4 File Offset: 0x0074D4C4
+		// Token: 0x06038E89 RID: 233097 RVA: 0x007B1804 File Offset: 0x007AFA04
 		public ITeleportToAndEnterFishingBoat __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E08A RID: 57482
-		// (get) Token: 0x06035AEF RID: 219887 RVA: 0x0074F2D4 File Offset: 0x0074D4D4
+		// Token: 0x1700EC9A RID: 60570
+		// (get) Token: 0x06038E8A RID: 233098 RVA: 0x007B1814 File Offset: 0x007AFA14
 		public EVehicleType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035AF0 RID: 219888 RVA: 0x0074F310 File Offset: 0x0074D510
+		// Token: 0x06038E8B RID: 233099 RVA: 0x007B1850 File Offset: 0x007AFA50
 		public static Offset<ITeleportToAndEnterFishingBoat> CreateITeleportToAndEnterFishingBoat(FlatBufferBuilder builder, EVehicleType Type = EVehicleType.Gongduola)
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportToAndEnterFishingBoat.EndITeleportToAndEnterFishingBoat(builder);
 		}
 
-		// Token: 0x06035AF1 RID: 219889 RVA: 0x0074F326 File Offset: 0x0074D526
+		// Token: 0x06038E8C RID: 233100 RVA: 0x007B1866 File Offset: 0x007AFA66
 		public static void StartITeleportToAndEnterFishingBoat(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06035AF2 RID: 219890 RVA: 0x0074F32F File Offset: 0x0074D52F
+		// Token: 0x06038E8D RID: 233101 RVA: 0x007B186F File Offset: 0x007AFA6F
 		public static void AddType(FlatBufferBuilder builder, EVehicleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035AF3 RID: 219891 RVA: 0x0074F33A File Offset: 0x0074D53A
+		// Token: 0x06038E8E RID: 233102 RVA: 0x007B187A File Offset: 0x007AFA7A
 		public static Offset<ITeleportToAndEnterFishingBoat> EndITeleportToAndEnterFishingBoat(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportToAndEnterFishingBoat>(builder.EndTable());
 		}
 
-		// Token: 0x06035AF4 RID: 219892 RVA: 0x0074F348 File Offset: 0x0074D548
+		// Token: 0x06038E8F RID: 233103 RVA: 0x007B1888 File Offset: 0x007AFA88
 		public ITeleportToAndEnterFishingBoatT UnPack()
 		{
 			ITeleportToAndEnterFishingBoatT teleportToAndEnterFishingBoatT = new ITeleportToAndEnterFishingBoatT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportToAndEnterFishingBoatT;
 		}
 
-		// Token: 0x06035AF5 RID: 219893 RVA: 0x0074F363 File Offset: 0x0074D563
+		// Token: 0x06038E90 RID: 233104 RVA: 0x007B18A3 File Offset: 0x007AFAA3
 		public void UnPackTo(ITeleportToAndEnterFishingBoatT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06035AF6 RID: 219894 RVA: 0x0074F374 File Offset: 0x0074D574
+		// Token: 0x06038E91 RID: 233105 RVA: 0x007B18B4 File Offset: 0x007AFAB4
 		public static Offset<ITeleportToAndEnterFishingBoat> Pack(FlatBufferBuilder builder, ITeleportToAndEnterFishingBoatT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportToAndEnterFishingBoat.CreateITeleportToAndEnterFishingBoat(builder, _o.Type);
 		}
 
-		// Token: 0x040121A2 RID: 74146
+		// Token: 0x040131BB RID: 78267
 		private Table __p;
 	}
 }

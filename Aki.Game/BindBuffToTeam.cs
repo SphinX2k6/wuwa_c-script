@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002EF4 RID: 12020
+// Token: 0x02002447 RID: 9287
 [NullableContext(1)]
 [Nullable(0)]
 public class BindBuffToTeam : BuffEffect
 {
-	// Token: 0x06019AE4 RID: 105188 RVA: 0x006AEB14 File Offset: 0x006ACD14
+	// Token: 0x060173EF RID: 95215 RVA: 0x006D4E00 File Offset: 0x006D3000
 	public BindBuffToTeam(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AE5 RID: 105189 RVA: 0x006AEB50 File Offset: 0x006ACD50
+	// Token: 0x060173F0 RID: 95216 RVA: 0x006D4E3C File Offset: 0x006D303C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -24,10 +23,11 @@ public class BindBuffToTeam : BuffEffect
 		{
 			this.BuffIds[i] = long.Parse(array[i]);
 		}
-		this.OnlyMyRole = (int.Parse(extraEffectParameters_.ElementAtOrDefault(1) ?? "0") == 1);
+		string[] array2 = extraEffectParameters_;
+		this.OnlyMyRole = (int.Parse(((array2.Length > 1) ? array2[1] : null) ?? "0") == 1);
 	}
 
-	// Token: 0x06019AE6 RID: 105190 RVA: 0x006AEBBC File Offset: 0x006ACDBC
+	// Token: 0x060173F1 RID: 95217 RVA: 0x006D4EB0 File Offset: 0x006D30B0
 	public unsafe override void OnCreated()
 	{
 		Log instance = Log.Instance;
@@ -62,7 +62,7 @@ public class BindBuffToTeam : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AE7 RID: 105191 RVA: 0x006AED5C File Offset: 0x006ACF5C
+	// Token: 0x060173F2 RID: 95218 RVA: 0x006D5050 File Offset: 0x006D3250
 	public unsafe override void OnRemoved(bool bPremature)
 	{
 		Log instance = Log.Instance;
@@ -110,14 +110,14 @@ public class BindBuffToTeam : BuffEffect
 		this.TeamCreatureDataIds = Array.Empty<long>();
 	}
 
-	// Token: 0x06019AE8 RID: 105192 RVA: 0x006AEF1F File Offset: 0x006AD11F
+	// Token: 0x060173F3 RID: 95219 RVA: 0x006D5213 File Offset: 0x006D3413
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019AE9 RID: 105193 RVA: 0x006AEF24 File Offset: 0x006AD124
+	// Token: 0x060173F4 RID: 95220 RVA: 0x006D5218 File Offset: 0x006D3418
 	private void OnChangeTeam()
 	{
 		if (base.PendingBuff == null)
@@ -135,7 +135,7 @@ public class BindBuffToTeam : BuffEffect
 		this.TeamCreatureDataIds = array;
 	}
 
-	// Token: 0x06019AEA RID: 105194 RVA: 0x006AEF8C File Offset: 0x006AD18C
+	// Token: 0x060173F5 RID: 95221 RVA: 0x006D5280 File Offset: 0x006D3480
 	private unsafe void AddNewMembers(List<EntityHandle> handles)
 	{
 		for (int i = 0; i < handles.Count; i++)
@@ -163,7 +163,7 @@ public class BindBuffToTeam : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AEB RID: 105195 RVA: 0x006AF0B4 File Offset: 0x006AD2B4
+	// Token: 0x060173F6 RID: 95222 RVA: 0x006D53A8 File Offset: 0x006D35A8
 	private unsafe void RemoveOldMembers(long[] newCreatureDataIds)
 	{
 		for (int i = 0; i < this.TeamCreatureDataIds.Length; i++)
@@ -206,25 +206,25 @@ public class BindBuffToTeam : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AEC RID: 105196 RVA: 0x006AF20C File Offset: 0x006AD40C
+	// Token: 0x060173F7 RID: 95223 RVA: 0x006D5500 File Offset: 0x006D3700
 	public override string GetDebugEffectString()
 	{
 		string str = this.OnlyMyRole ? "小队" : "全队";
 		return "为" + str + "绑定buff" + string.Join<long>("、", this.BuffIds);
 	}
 
-	// Token: 0x0400C0AA RID: 49322
+	// Token: 0x0400C44B RID: 50251
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C0AB RID: 49323
+	// Token: 0x0400C44C RID: 50252
 	private long[] TeamCreatureDataIds = Array.Empty<long>();
 
-	// Token: 0x0400C0AC RID: 49324
+	// Token: 0x0400C44D RID: 50253
 	private string AddReason = "BindBuffToTeam";
 
-	// Token: 0x0400C0AD RID: 49325
+	// Token: 0x0400C44E RID: 50254
 	private string RemoveReason = "BindBuffToTeam";
 
-	// Token: 0x0400C0AE RID: 49326
+	// Token: 0x0400C44F RID: 50255
 	private bool OnlyMyRole;
 }

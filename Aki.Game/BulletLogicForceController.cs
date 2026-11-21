@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DD1 RID: 11729
+// Token: 0x0200232B RID: 9003
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,14 +13,14 @@ using UnrealEngine;
 })]
 public class BulletLogicForceController : BulletLogicController<LogicDataForce, object>, IStaticVariableResetter
 {
-	// Token: 0x06018A1A RID: 100890 RVA: 0x0064CC50 File Offset: 0x0064AE50
+	// Token: 0x060162C2 RID: 90818 RVA: 0x00672A34 File Offset: 0x00670C34
 	static BulletLogicForceController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletLogicForceController.CreateStaticDefaultValue), new Action(BulletLogicForceController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170021BB RID: 8635
-	// (get) Token: 0x06018A1B RID: 100891 RVA: 0x0064CC6F File Offset: 0x0064AE6F
+	// Token: 0x17002217 RID: 8727
+	// (get) Token: 0x060162C3 RID: 90819 RVA: 0x00672A53 File Offset: 0x00670C53
 	private static Dictionary<int, int> LastVelocityAdditionHandler
 	{
 		get
@@ -29,8 +29,8 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		}
 	}
 
-	// Token: 0x170021BC RID: 8636
-	// (get) Token: 0x06018A1C RID: 100892 RVA: 0x0064CC76 File Offset: 0x0064AE76
+	// Token: 0x17002218 RID: 8728
+	// (get) Token: 0x060162C4 RID: 90820 RVA: 0x00672A5A File Offset: 0x00670C5A
 	private static Dictionary<int, int> LastGravityAdditionHandler
 	{
 		get
@@ -39,7 +39,7 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		}
 	}
 
-	// Token: 0x06018A1D RID: 100893 RVA: 0x0064CC80 File Offset: 0x0064AE80
+	// Token: 0x060162C5 RID: 90821 RVA: 0x00672A64 File Offset: 0x00670C64
 	public BulletLogicForceController(LogicDataForce bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.Parameter = bulletLogicBase;
@@ -54,13 +54,13 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		this.ImmuneStopDuration = this.LogicController.ImmuneStopDuration;
 	}
 
-	// Token: 0x06018A1E RID: 100894 RVA: 0x0064CD48 File Offset: 0x0064AF48
+	// Token: 0x060162C6 RID: 90822 RVA: 0x00672B2C File Offset: 0x00670D2C
 	public override void OnInit()
 	{
 		this.InitForce();
 	}
 
-	// Token: 0x06018A1F RID: 100895 RVA: 0x0064CD50 File Offset: 0x0064AF50
+	// Token: 0x060162C7 RID: 90823 RVA: 0x00672B34 File Offset: 0x00670D34
 	private void InitForce()
 	{
 		if (!this.ConstantForce)
@@ -79,14 +79,14 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		this.ConstantForceVector.MultiplyEqual((double)this.Parameter.ForceBase);
 	}
 
-	// Token: 0x06018A20 RID: 100896 RVA: 0x0064CDF8 File Offset: 0x0064AFF8
+	// Token: 0x060162C8 RID: 90824 RVA: 0x00672BDC File Offset: 0x00670DDC
 	protected override void Update(float deltaTime)
 	{
 		base.Update(deltaTime);
 		this.BulletLogicPhysicalForce();
 	}
 
-	// Token: 0x06018A21 RID: 100897 RVA: 0x0064CE07 File Offset: 0x0064B007
+	// Token: 0x060162C9 RID: 90825 RVA: 0x00672BEB File Offset: 0x00670DEB
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -96,7 +96,7 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		}
 	}
 
-	// Token: 0x06018A22 RID: 100898 RVA: 0x0064CE1C File Offset: 0x0064B01C
+	// Token: 0x060162CA RID: 90826 RVA: 0x00672C00 File Offset: 0x00670E00
 	private void BulletLogicPhysicalForce()
 	{
 		List<int> tagIds = GameplayTagUtils.ConvertFromUeContainer(this.LogicController.WorkHaveTag);
@@ -135,7 +135,7 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		}
 	}
 
-	// Token: 0x06018A23 RID: 100899 RVA: 0x0064CF7C File Offset: 0x0064B17C
+	// Token: 0x060162CB RID: 90827 RVA: 0x00672D60 File Offset: 0x00670F60
 	private void PhysicalForce(Entity character)
 	{
 		CharacterMoveComponent component = character.GetComponent<CharacterMoveComponent>();
@@ -173,7 +173,7 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		}
 	}
 
-	// Token: 0x06018A24 RID: 100900 RVA: 0x0064D158 File Offset: 0x0064B358
+	// Token: 0x060162CC RID: 90828 RVA: 0x00672F3C File Offset: 0x0067113C
 	private void TowardsConstantForce(Entity character)
 	{
 		CharacterUnifiedStateComponent component = character.GetComponent<CharacterUnifiedStateComponent>();
@@ -299,86 +299,86 @@ public class BulletLogicForceController : BulletLogicController<LogicDataForce, 
 		this.VelocityAdditionHandlerMap[character] = value;
 	}
 
-	// Token: 0x06018A25 RID: 100901 RVA: 0x0064D5EA File Offset: 0x0064B7EA
+	// Token: 0x060162CD RID: 90829 RVA: 0x006733CE File Offset: 0x006715CE
 	public static void CreateStaticDefaultValue()
 	{
 		BulletLogicForceController._lastVelocityAdditionHandler = new Dictionary<int, int>();
 		BulletLogicForceController._lastGravityAdditionHandler = new Dictionary<int, int>();
 	}
 
-	// Token: 0x06018A26 RID: 100902 RVA: 0x0064D600 File Offset: 0x0064B800
+	// Token: 0x060162CE RID: 90830 RVA: 0x006733E4 File Offset: 0x006715E4
 	public static void ResetStaticDefaultValue()
 	{
 		BulletLogicForceController._lastVelocityAdditionHandler = null;
 		BulletLogicForceController._lastGravityAdditionHandler = null;
 	}
 
-	// Token: 0x0400B75D RID: 46941
+	// Token: 0x0400BAD8 RID: 47832
 	private const float WEIGHT_COEFFICIENT = 14f;
 
-	// Token: 0x0400B75E RID: 46942
+	// Token: 0x0400BAD9 RID: 47833
 	private const float TOLERANCE = 1E-05f;
 
-	// Token: 0x0400B75F RID: 46943
+	// Token: 0x0400BADA RID: 47834
 	private const float FORCE_DAMPING_RATIO = 0.5f;
 
-	// Token: 0x0400B760 RID: 46944
+	// Token: 0x0400BADB RID: 47835
 	private const float MOVE_TIME = 0.1f;
 
-	// Token: 0x0400B761 RID: 46945
+	// Token: 0x0400BADC RID: 47836
 	private const float FORCE_RATIO = 5000f;
 
-	// Token: 0x0400B762 RID: 46946
+	// Token: 0x0400BADD RID: 47837
 	private const float MIN_WEIGHT = 50f;
 
-	// Token: 0x0400B763 RID: 46947
+	// Token: 0x0400BADE RID: 47838
 	private const float LENGTH_CONVERSION = 100f;
 
-	// Token: 0x0400B764 RID: 46948
+	// Token: 0x0400BADF RID: 47839
 	private readonly LogicDataForce Parameter;
 
-	// Token: 0x0400B765 RID: 46949
+	// Token: 0x0400BAE0 RID: 47840
 	private readonly BulletInfo BulletInfo;
 
-	// Token: 0x0400B766 RID: 46950
+	// Token: 0x0400BAE1 RID: 47841
 	private readonly BulletActorComponent BulletActorComp;
 
-	// Token: 0x0400B767 RID: 46951
+	// Token: 0x0400BAE2 RID: 47842
 	private readonly Dictionary<Entity, int> VelocityAdditionHandlerMap;
 
-	// Token: 0x0400B768 RID: 46952
+	// Token: 0x0400BAE3 RID: 47843
 	[Nullable(2)]
 	private static Dictionary<int, int> _lastVelocityAdditionHandler;
 
-	// Token: 0x0400B769 RID: 46953
+	// Token: 0x0400BAE4 RID: 47844
 	[Nullable(2)]
 	private static Dictionary<int, int> _lastGravityAdditionHandler;
 
-	// Token: 0x0400B76A RID: 46954
+	// Token: 0x0400BAE5 RID: 47845
 	private readonly Dictionary<Entity, int> GravityAdditionHandlerMap;
 
-	// Token: 0x0400B76B RID: 46955
+	// Token: 0x0400BAE6 RID: 47846
 	private readonly bool ConstantForce;
 
-	// Token: 0x0400B76C RID: 46956
+	// Token: 0x0400BAE7 RID: 47847
 	[Nullable(2)]
 	private Vector ConstantForceVector;
 
-	// Token: 0x0400B76D RID: 46957
+	// Token: 0x0400BAE8 RID: 47848
 	private readonly bool IsLaunching;
 
-	// Token: 0x0400B76E RID: 46958
+	// Token: 0x0400BAE9 RID: 47849
 	private readonly bool NeedCheckTag;
 
-	// Token: 0x0400B76F RID: 46959
+	// Token: 0x0400BAEA RID: 47850
 	private HashSet<Entity> InAreaButNotGlidingEntity = new HashSet<Entity>();
 
-	// Token: 0x0400B770 RID: 46960
+	// Token: 0x0400BAEB RID: 47851
 	private HashSet<Entity> InAreaButNotGlidingEntity2 = new HashSet<Entity>();
 
-	// Token: 0x0400B771 RID: 46961
+	// Token: 0x0400BAEC RID: 47852
 	private readonly Vector UpForce = Vector.Create();
 
-	// Token: 0x0400B772 RID: 46962
+	// Token: 0x0400BAED RID: 47853
 	private readonly float ImmuneStopDuration;
 }

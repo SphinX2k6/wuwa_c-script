@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010CB RID: 4299
+	// Token: 0x020011C6 RID: 4550
 	public struct Skybox : IFlatbufferObject
 	{
-		// Token: 0x17003732 RID: 14130
-		// (get) Token: 0x0600D650 RID: 54864 RVA: 0x0031A77D File Offset: 0x0031897D
+		// Token: 0x17003843 RID: 14403
+		// (get) Token: 0x0600DE2D RID: 56877 RVA: 0x00339752 File Offset: 0x00337952
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D651 RID: 54865 RVA: 0x0031A78A File Offset: 0x0031898A
+		// Token: 0x0600DE2E RID: 56878 RVA: 0x0033975F File Offset: 0x0033795F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D652 RID: 54866 RVA: 0x0031A794 File Offset: 0x00318994
+		// Token: 0x0600DE2F RID: 56879 RVA: 0x00339768 File Offset: 0x00337968
 		public static Skybox GetRootAsSkybox(ByteBuffer _bb)
 		{
 			return Skybox.GetRootAsSkybox(_bb, default(Skybox));
 		}
 
-		// Token: 0x0600D653 RID: 54867 RVA: 0x0031A7B0 File Offset: 0x003189B0
+		// Token: 0x0600DE30 RID: 56880 RVA: 0x00339784 File Offset: 0x00337984
 		public static Skybox GetRootAsSkybox(ByteBuffer _bb, Skybox obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D654 RID: 54868 RVA: 0x0031A7CD File Offset: 0x003189CD
+		// Token: 0x0600DE31 RID: 56881 RVA: 0x003397A1 File Offset: 0x003379A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D655 RID: 54869 RVA: 0x0031A7DC File Offset: 0x003189DC
+		// Token: 0x0600DE32 RID: 56882 RVA: 0x003397B0 File Offset: 0x003379B0
 		public Skybox __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003733 RID: 14131
-		// (get) Token: 0x0600D656 RID: 54870 RVA: 0x0031A7EC File Offset: 0x003189EC
+		// Token: 0x17003844 RID: 14404
+		// (get) Token: 0x0600DE33 RID: 56883 RVA: 0x003397C0 File Offset: 0x003379C0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003734 RID: 14132
-		// (get) Token: 0x0600D657 RID: 54871 RVA: 0x0031A828 File Offset: 0x00318A28
+		// Token: 0x17003845 RID: 14405
+		// (get) Token: 0x0600DE34 RID: 56884 RVA: 0x003397FC File Offset: 0x003379FC
 		public string Name
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D658 RID: 54872 RVA: 0x0031A85F File Offset: 0x00318A5F
+		// Token: 0x0600DE35 RID: 56885 RVA: 0x00339833 File Offset: 0x00337A33
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D659 RID: 54873 RVA: 0x0031A86E File Offset: 0x00318A6E
+		// Token: 0x0600DE36 RID: 56886 RVA: 0x00339842 File Offset: 0x00337A42
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003735 RID: 14133
-		// (get) Token: 0x0600D65A RID: 54874 RVA: 0x0031A888 File Offset: 0x00318A88
+		// Token: 0x17003846 RID: 14406
+		// (get) Token: 0x0600DE37 RID: 56887 RVA: 0x0033985C File Offset: 0x00337A5C
 		public string StaticSkybox
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D65B RID: 54875 RVA: 0x0031A8BF File Offset: 0x00318ABF
+		// Token: 0x0600DE38 RID: 56888 RVA: 0x00339893 File Offset: 0x00337A93
 		public Span<byte> GetStaticSkyboxBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600D65C RID: 54876 RVA: 0x0031A8CE File Offset: 0x00318ACE
+		// Token: 0x0600DE39 RID: 56889 RVA: 0x003398A2 File Offset: 0x00337AA2
 		public byte[] GetStaticSkyboxArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003736 RID: 14134
-		// (get) Token: 0x0600D65D RID: 54877 RVA: 0x0031A8E8 File Offset: 0x00318AE8
+		// Token: 0x17003847 RID: 14407
+		// (get) Token: 0x0600DE3A RID: 56890 RVA: 0x003398BC File Offset: 0x00337ABC
 		public string DynamicSkybox
 		{
 			get
@@ -131,19 +131,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D65E RID: 54878 RVA: 0x0031A920 File Offset: 0x00318B20
+		// Token: 0x0600DE3B RID: 56891 RVA: 0x003398F4 File Offset: 0x00337AF4
 		public Span<byte> GetDynamicSkyboxBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D65F RID: 54879 RVA: 0x0031A930 File Offset: 0x00318B30
+		// Token: 0x0600DE3C RID: 56892 RVA: 0x00339904 File Offset: 0x00337B04
 		public byte[] GetDynamicSkyboxArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040051FD RID: 20989
+		// Token: 0x040057FC RID: 22524
 		private Table __p;
 	}
 }

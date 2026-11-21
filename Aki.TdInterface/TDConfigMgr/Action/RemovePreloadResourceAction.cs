@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002152 RID: 8530
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023B3 RID: 9139
 	public class RemovePreloadResourceAction : ActionParams
 	{
-		// Token: 0x0600BBBA RID: 48058 RVA: 0x001B143C File Offset: 0x001AF63C
+		// Token: 0x0600C748 RID: 51016 RVA: 0x001C85F0 File Offset: 0x001C67F0
 		private RemovePreloadResourceAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBBB RID: 48059 RVA: 0x001B1474 File Offset: 0x001AF674
+		// Token: 0x0600C749 RID: 51017 RVA: 0x001C8628 File Offset: 0x001C6828
 		public static RemovePreloadResourceAction Create([Nullable(2)] RemovePreloadResourceAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBBC RID: 48060 RVA: 0x001B1487 File Offset: 0x001AF687
+		// Token: 0x0600C74A RID: 51018 RVA: 0x001C863B File Offset: 0x001C683B
 		public static RemovePreloadResourceAction CreateFromSetValue([Nullable(2)] RemovePreloadResourceAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBBD RID: 48061 RVA: 0x001B149A File Offset: 0x001AF69A
+		// Token: 0x0600C74B RID: 51019 RVA: 0x001C864E File Offset: 0x001C684E
 		public RemovePreloadResourceAction_SetValue ToSetValue()
 		{
 			return new RemovePreloadResourceAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700393F RID: 14655
-		// (get) Token: 0x0600BBBE RID: 48062 RVA: 0x001B14AD File Offset: 0x001AF6AD
-		// (set) Token: 0x0600BBBF RID: 48063 RVA: 0x001B14D4 File Offset: 0x001AF6D4
+		// Token: 0x17003C2C RID: 15404
+		// (get) Token: 0x0600C74C RID: 51020 RVA: 0x001C8661 File Offset: 0x001C6861
+		// (set) Token: 0x0600C74D RID: 51021 RVA: 0x001C8688 File Offset: 0x001C6888
 		public virtual IRemovePreloadResourceCharacterType RemovePreloadResourceObjectType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007037 RID: 28727
+		// Token: 0x0400766C RID: 30316
 		[Nullable(2)]
 		protected new RemovePreloadResourceAction FbInstance;
 
-		// Token: 0x04007038 RID: 28728
+		// Token: 0x0400766D RID: 30317
 		[Nullable(2)]
 		protected RemovePreloadResourceAction_SetValue PocoInterface;
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Common.Event;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIItem
 {
-	// Token: 0x02006A53 RID: 27219
+	// Token: 0x02005BB0 RID: 23472
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LinkingEmptyToggle : UiPanelBase
 	{
-		// Token: 0x06043B11 RID: 277265 RVA: 0x01090447 File Offset: 0x0108E647
+		// Token: 0x06039B5F RID: 236383 RVA: 0x01034C6B File Offset: 0x01032E6B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,28 +22,28 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			};
 		}
 
-		// Token: 0x06043B12 RID: 277266 RVA: 0x0109046A File Offset: 0x0108E66A
+		// Token: 0x06039B60 RID: 236384 RVA: 0x01034C8E File Offset: 0x01032E8E
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<bool, IReadOnlyList<int>>(EEventName.OnSignalDeviceLinkingCheck, new Action<bool, IReadOnlyList<int>>(this.OnSignalDeviceLinkingCheck));
 			EventSystem.Instance.Add(EEventName.OnSignalDeviceReset, new Action(this.OnSignalDeviceReset));
 		}
 
-		// Token: 0x06043B13 RID: 277267 RVA: 0x010904A4 File Offset: 0x0108E6A4
+		// Token: 0x06039B61 RID: 236385 RVA: 0x01034CC8 File Offset: 0x01032EC8
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSignalDeviceLinkingCheck, new Action<bool, IReadOnlyList<int>>(this.OnSignalDeviceLinkingCheck));
 			EventSystem.Instance.Remove(EEventName.OnSignalDeviceReset, new Action(this.OnSignalDeviceReset));
 		}
 
-		// Token: 0x06043B14 RID: 277268 RVA: 0x010904DE File Offset: 0x0108E6DE
+		// Token: 0x06039B62 RID: 236386 RVA: 0x01034D02 File Offset: 0x01032F02
 		public void InitData(int index)
 		{
 			this.Index = index;
 			base.GetExtendToggle(0).OnHover.Add(new Action(this.OnToggleHover));
 		}
 
-		// Token: 0x06043B15 RID: 277269 RVA: 0x01090504 File Offset: 0x0108E704
+		// Token: 0x06039B63 RID: 236387 RVA: 0x01034D28 File Offset: 0x01032F28
 		public void SetDotData(UUIItem item, EPieceColorType color)
 		{
 			this.LinkingDotItem = new LinkingDotItem();
@@ -55,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.LongPress.Initialize(base.GetExtendToggle(0), null, new Action(this.OnTogglePress), new Action(this.OnToggleRelease), new Action(this.OnToggleCancel));
 		}
 
-		// Token: 0x06043B16 RID: 277270 RVA: 0x01090598 File Offset: 0x0108E798
+		// Token: 0x06039B64 RID: 236388 RVA: 0x01034DBC File Offset: 0x01032FBC
 		public void SetLineData(UUIItem item, LinkingLineItem itemClass, ENeighborType neighborType, int from, bool isFromDot)
 		{
 			this.LinkingLineItem = itemClass;
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			this.IsFromDot = isFromDot;
 		}
 
-		// Token: 0x06043B17 RID: 277271 RVA: 0x010905D0 File Offset: 0x0108E7D0
+		// Token: 0x06039B65 RID: 236389 RVA: 0x01034DF4 File Offset: 0x01032FF4
 		public void ResetStraightLineData(UUIItem item, LinkingLineItem itemClass, int to)
 		{
 			this.LinkingLineItem.Destroy(null);
@@ -97,21 +96,21 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		}
 
-		// Token: 0x06043B18 RID: 277272 RVA: 0x010906C9 File Offset: 0x0108E8C9
+		// Token: 0x06039B66 RID: 236390 RVA: 0x01034EED File Offset: 0x010330ED
 		public void ClearLineData()
 		{
 			this.LinkingLineItem.Destroy(null);
 			this.LinkingLineItem = null;
 		}
 
-		// Token: 0x06043B19 RID: 277273 RVA: 0x010906E0 File Offset: 0x0108E8E0
+		// Token: 0x06039B67 RID: 236391 RVA: 0x01034F04 File Offset: 0x01033104
 		public void SetLineHalf()
 		{
 			ENeighborType lineHalf = SignalDeviceModel.Instance.NeighboringType(this.FromIndex, this.Index);
 			this.LinkingLineItem.SetLineHalf(lineHalf);
 		}
 
-		// Token: 0x06043B1A RID: 277274 RVA: 0x01090710 File Offset: 0x0108E910
+		// Token: 0x06039B68 RID: 236392 RVA: 0x01034F34 File Offset: 0x01033134
 		public void ResetCornerLineData(UUIItem item, LinkingLineItem itemClass, int from, int to, bool isToDot)
 		{
 			this.LinkingLineItem.Destroy(null);
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		}
 
-		// Token: 0x06043B1B RID: 277275 RVA: 0x01090800 File Offset: 0x0108EA00
+		// Token: 0x06039B69 RID: 236393 RVA: 0x01035024 File Offset: 0x01033224
 		private void OnToggleHover()
 		{
 			if (SignalDeviceModel.Instance.CurrentColor > EPieceColorType.White)
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			SignalDeviceController.Instance.OnHovering(this.Index);
 		}
 
-		// Token: 0x06043B1C RID: 277276 RVA: 0x01090850 File Offset: 0x0108EA50
+		// Token: 0x06039B6A RID: 236394 RVA: 0x01035074 File Offset: 0x01033274
 		private void OnTogglePress()
 		{
 			this.LinkingDotItem.OnPressed(true);
@@ -176,22 +175,31 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		}
 
-		// Token: 0x06043B1D RID: 277277 RVA: 0x0109089F File Offset: 0x0108EA9F
+		// Token: 0x06039B6B RID: 236395 RVA: 0x010350C3 File Offset: 0x010332C3
 		private void OnToggleRelease()
 		{
 			SignalDeviceController.Instance.CheckLinking(this.Index);
 		}
 
-		// Token: 0x06043B1E RID: 277278 RVA: 0x010908B1 File Offset: 0x0108EAB1
+		// Token: 0x06039B6C RID: 236396 RVA: 0x010350D5 File Offset: 0x010332D5
 		private void OnToggleCancel()
 		{
 			SignalDeviceController.Instance.CheckLinking(this.Index);
 		}
 
-		// Token: 0x06043B1F RID: 277279 RVA: 0x010908C4 File Offset: 0x0108EAC4
+		// Token: 0x06039B6D RID: 236397 RVA: 0x010350E8 File Offset: 0x010332E8
 		private void OnSignalDeviceLinkingCheck(bool isSuccess, IReadOnlyList<int> indexArray)
 		{
-			if (isSuccess && indexArray.Contains(this.Index))
+			bool flag = false;
+			for (int i = 0; i < indexArray.Count; i++)
+			{
+				if (indexArray[i] == this.Index)
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (isSuccess && flag)
 			{
 				LinkingDotItem linkingDotItem = this.LinkingDotItem;
 				if (linkingDotItem != null)
@@ -205,7 +213,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 				}
 				base.GetExtendToggle(0).SetEnable(false);
 			}
-			if (!isSuccess && indexArray.Contains(this.Index))
+			if (!isSuccess && flag)
 			{
 				LinkingDotItem linkingDotItem3 = this.LinkingDotItem;
 				if (linkingDotItem3 != null)
@@ -226,7 +234,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			}
 		}
 
-		// Token: 0x06043B20 RID: 277280 RVA: 0x0109095C File Offset: 0x0108EB5C
+		// Token: 0x06039B6E RID: 236398 RVA: 0x01035190 File Offset: 0x01033390
 		private void OnSignalDeviceReset()
 		{
 			base.GetExtendToggle(0).SetEnable(true);
@@ -248,7 +256,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			linkingLineItem.Destroy(null);
 		}
 
-		// Token: 0x06043B21 RID: 277281 RVA: 0x010909AC File Offset: 0x0108EBAC
+		// Token: 0x06039B6F RID: 236399 RVA: 0x010351E0 File Offset: 0x010333E0
 		public void SetDotRay(bool isActive, ENeighborType neighborType = ENeighborType.None)
 		{
 			LinkingDotItem linkingDotItem = this.LinkingDotItem;
@@ -259,35 +267,35 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl.SiganalDeviceUIIte
 			linkingDotItem.RotateLine(isActive, neighborType);
 		}
 
-		// Token: 0x04023589 RID: 144777
+		// Token: 0x0401E77B RID: 124795
 		private int Index = -1;
 
-		// Token: 0x0402358A RID: 144778
+		// Token: 0x0401E77C RID: 124796
 		public int FromIndex = -1;
 
-		// Token: 0x0402358B RID: 144779
+		// Token: 0x0401E77D RID: 124797
 		public bool IsFromDot;
 
-		// Token: 0x0402358C RID: 144780
+		// Token: 0x0401E77E RID: 124798
 		private EPieceColorType Color;
 
-		// Token: 0x0402358D RID: 144781
+		// Token: 0x0401E77F RID: 124799
 		[Nullable(2)]
 		private LongPressButtonItem LongPress;
 
-		// Token: 0x0402358E RID: 144782
+		// Token: 0x0401E780 RID: 124800
 		[Nullable(2)]
 		private LinkingDotItem LinkingDotItem;
 
-		// Token: 0x0402358F RID: 144783
+		// Token: 0x0401E781 RID: 124801
 		[Nullable(2)]
 		private LinkingLineItem LinkingLineItem;
 
-		// Token: 0x0200CB7D RID: 52093
+		// Token: 0x0200B75C RID: 46940
 		[NullableContext(0)]
 		public enum EComponents
 		{
-			// Token: 0x0403D6EF RID: 251631
+			// Token: 0x04038AD1 RID: 232145
 			UiItem_LinkEmpty
 		}
 	}

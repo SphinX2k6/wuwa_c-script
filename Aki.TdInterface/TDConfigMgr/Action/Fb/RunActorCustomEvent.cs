@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A39 RID: 10809
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D26 RID: 11558
 	public class RunActorCustomEvent : ActionParams
 	{
-		// Token: 0x0600EE0F RID: 60943 RVA: 0x0022ADB9 File Offset: 0x00228FB9
+		// Token: 0x0600FCA7 RID: 64679 RVA: 0x0024876D File Offset: 0x0024696D
 		public static RunActorCustomEvent Create(IRunActorCustomEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B5F RID: 19295
-		// (get) Token: 0x0600EE10 RID: 60944 RVA: 0x0022ADD8 File Offset: 0x00228FD8
+		// Token: 0x17004F09 RID: 20233
+		// (get) Token: 0x0600FCA8 RID: 64680 RVA: 0x0024878C File Offset: 0x0024698C
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B60 RID: 19296
-		// (get) Token: 0x0600EE11 RID: 60945 RVA: 0x0022AE0C File Offset: 0x0022900C
+		// Token: 0x17004F0A RID: 20234
+		// (get) Token: 0x0600FCA9 RID: 64681 RVA: 0x002487C0 File Offset: 0x002469C0
 		public virtual string EventName
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008303 RID: 33539
+		// Token: 0x040089F6 RID: 35318
 		private IRunActorCustomEvent Instance;
 
-		// Token: 0x04008304 RID: 33540
+		// Token: 0x040089F7 RID: 35319
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x04008305 RID: 33541
+		// Token: 0x040089F8 RID: 35320
 		private bool _ActorRefInited;
 	}
 }

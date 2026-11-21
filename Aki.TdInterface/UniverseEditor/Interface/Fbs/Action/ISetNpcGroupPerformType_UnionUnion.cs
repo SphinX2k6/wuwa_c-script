@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007035 RID: 28725
+	// Token: 0x020077FE RID: 30718
 	public class ISetNpcGroupPerformType_UnionUnion
 	{
-		// Token: 0x1700D54B RID: 54603
-		// (get) Token: 0x06032D02 RID: 208130 RVA: 0x006DAB91 File Offset: 0x006D8D91
-		// (set) Token: 0x06032D03 RID: 208131 RVA: 0x006DAB99 File Offset: 0x006D8D99
+		// Token: 0x1700E11F RID: 57631
+		// (get) Token: 0x06035F69 RID: 221033 RVA: 0x0073A831 File Offset: 0x00738A31
+		// (set) Token: 0x06035F6A RID: 221034 RVA: 0x0073A839 File Offset: 0x00738A39
 		public ISetNpcGroupPerformType_Union Type { get; set; }
 
-		// Token: 0x1700D54C RID: 54604
-		// (get) Token: 0x06032D04 RID: 208132 RVA: 0x006DABA2 File Offset: 0x006D8DA2
-		// (set) Token: 0x06032D05 RID: 208133 RVA: 0x006DABAA File Offset: 0x006D8DAA
+		// Token: 0x1700E120 RID: 57632
+		// (get) Token: 0x06035F6B RID: 221035 RVA: 0x0073A842 File Offset: 0x00738A42
+		// (set) Token: 0x06035F6C RID: 221036 RVA: 0x0073A84A File Offset: 0x00738A4A
 		public object Value { get; set; }
 
-		// Token: 0x06032D06 RID: 208134 RVA: 0x006DABB3 File Offset: 0x006D8DB3
+		// Token: 0x06035F6D RID: 221037 RVA: 0x0073A853 File Offset: 0x00738A53
 		public ISetNpcGroupPerformType_UnionUnion()
 		{
 			this.Type = ISetNpcGroupPerformType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032D07 RID: 208135 RVA: 0x006DABC9 File Offset: 0x006D8DC9
+		// Token: 0x06035F6E RID: 221038 RVA: 0x0073A869 File Offset: 0x00738A69
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032D08 RID: 208136 RVA: 0x006DABDB File Offset: 0x006D8DDB
+		// Token: 0x06035F6F RID: 221039 RVA: 0x0073A87B File Offset: 0x00738A7B
 		public ISetNpcGroupPerformTypeT AsISetNpcGroupPerformType()
 		{
 			return this.As<ISetNpcGroupPerformTypeT>();
 		}
 
-		// Token: 0x06032D09 RID: 208137 RVA: 0x006DABE3 File Offset: 0x006D8DE3
+		// Token: 0x06035F70 RID: 221040 RVA: 0x0073A883 File Offset: 0x00738A83
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcGroupPerformType(ISetNpcGroupPerformTypeT _isetnpcgroupperformtype)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D0A RID: 208138 RVA: 0x006DABF8 File Offset: 0x006D8DF8
+		// Token: 0x06035F71 RID: 221041 RVA: 0x0073A898 File Offset: 0x00738A98
 		public ISetNpcHandInHandPerformT AsISetNpcHandInHandPerform()
 		{
 			return this.As<ISetNpcHandInHandPerformT>();
 		}
 
-		// Token: 0x06032D0B RID: 208139 RVA: 0x006DAC00 File Offset: 0x006D8E00
+		// Token: 0x06035F72 RID: 221042 RVA: 0x0073A8A0 File Offset: 0x00738AA0
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcHandInHandPerform(ISetNpcHandInHandPerformT _isetnpchandinhandperform)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D0C RID: 208140 RVA: 0x006DAC15 File Offset: 0x006D8E15
+		// Token: 0x06035F73 RID: 221043 RVA: 0x0073A8B5 File Offset: 0x00738AB5
 		public ISetNpcHighFivePerformT AsISetNpcHighFivePerform()
 		{
 			return this.As<ISetNpcHighFivePerformT>();
 		}
 
-		// Token: 0x06032D0D RID: 208141 RVA: 0x006DAC1D File Offset: 0x006D8E1D
+		// Token: 0x06035F74 RID: 221044 RVA: 0x0073A8BD File Offset: 0x00738ABD
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcHighFivePerform(ISetNpcHighFivePerformT _isetnpchighfiveperform)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D0E RID: 208142 RVA: 0x006DAC32 File Offset: 0x006D8E32
+		// Token: 0x06035F75 RID: 221045 RVA: 0x0073A8D2 File Offset: 0x00738AD2
 		public ISetNpcHuggingBearPerformT AsISetNpcHuggingBearPerform()
 		{
 			return this.As<ISetNpcHuggingBearPerformT>();
 		}
 
-		// Token: 0x06032D0F RID: 208143 RVA: 0x006DAC3A File Offset: 0x006D8E3A
+		// Token: 0x06035F76 RID: 221046 RVA: 0x0073A8DA File Offset: 0x00738ADA
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcHuggingBearPerform(ISetNpcHuggingBearPerformT _isetnpchuggingbearperform)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D10 RID: 208144 RVA: 0x006DAC4F File Offset: 0x006D8E4F
+		// Token: 0x06035F77 RID: 221047 RVA: 0x0073A8EF File Offset: 0x00738AEF
 		public ISetNpcTwoPersonPerformT AsISetNpcTwoPersonPerform()
 		{
 			return this.As<ISetNpcTwoPersonPerformT>();
 		}
 
-		// Token: 0x06032D11 RID: 208145 RVA: 0x006DAC57 File Offset: 0x006D8E57
+		// Token: 0x06035F78 RID: 221048 RVA: 0x0073A8F7 File Offset: 0x00738AF7
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcTwoPersonPerform(ISetNpcTwoPersonPerformT _isetnpctwopersonperform)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D12 RID: 208146 RVA: 0x006DAC6C File Offset: 0x006D8E6C
+		// Token: 0x06035F79 RID: 221049 RVA: 0x0073A90C File Offset: 0x00738B0C
 		public ISetNpcSupportedWalkingPerformT AsISetNpcSupportedWalkingPerform()
 		{
 			return this.As<ISetNpcSupportedWalkingPerformT>();
 		}
 
-		// Token: 0x06032D13 RID: 208147 RVA: 0x006DAC74 File Offset: 0x006D8E74
+		// Token: 0x06035F7A RID: 221050 RVA: 0x0073A914 File Offset: 0x00738B14
 		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcSupportedWalkingPerform(ISetNpcSupportedWalkingPerformT _isetnpcsupportedwalkingperform)
 		{
 			return new ISetNpcGroupPerformType_UnionUnion
@@ -125,7 +125,23 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032D14 RID: 208148 RVA: 0x006DAC8C File Offset: 0x006D8E8C
+		// Token: 0x06035F7B RID: 221051 RVA: 0x0073A929 File Offset: 0x00738B29
+		public ISetNpcSequencePerformT AsISetNpcSequencePerform()
+		{
+			return this.As<ISetNpcSequencePerformT>();
+		}
+
+		// Token: 0x06035F7C RID: 221052 RVA: 0x0073A931 File Offset: 0x00738B31
+		public static ISetNpcGroupPerformType_UnionUnion FromISetNpcSequencePerform(ISetNpcSequencePerformT _isetnpcsequenceperform)
+		{
+			return new ISetNpcGroupPerformType_UnionUnion
+			{
+				Type = ISetNpcGroupPerformType_Union.ISetNpcSequencePerform,
+				Value = _isetnpcsequenceperform
+			};
+		}
+
+		// Token: 0x06035F7D RID: 221053 RVA: 0x0073A948 File Offset: 0x00738B48
 		public static int Pack(FlatBufferBuilder builder, ISetNpcGroupPerformType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -142,6 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return ISetNpcTwoPersonPerform.Pack(builder, _o.AsISetNpcTwoPersonPerform()).Value;
 			case ISetNpcGroupPerformType_Union.ISetNpcSupportedWalkingPerform:
 				return ISetNpcSupportedWalkingPerform.Pack(builder, _o.AsISetNpcSupportedWalkingPerform()).Value;
+			case ISetNpcGroupPerformType_Union.ISetNpcSequencePerform:
+				return ISetNpcSequencePerform.Pack(builder, _o.AsISetNpcSequencePerform()).Value;
 			default:
 				return 0;
 			}

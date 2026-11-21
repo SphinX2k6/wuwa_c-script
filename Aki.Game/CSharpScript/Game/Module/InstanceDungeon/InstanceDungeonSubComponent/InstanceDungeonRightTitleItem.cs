@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A8 RID: 22696
+	// Token: 0x02004880 RID: 18560
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonRightTitleItem : UiPanelBase
 	{
-		// Token: 0x06039BBC RID: 236476 RVA: 0x00DB8708 File Offset: 0x00DB6908
+		// Token: 0x0602EADF RID: 191199 RVA: 0x00D07620 File Offset: 0x00D05820
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BBD RID: 236477 RVA: 0x00DB8792 File Offset: 0x00DB6992
+		// Token: 0x0602EAE0 RID: 191200 RVA: 0x00D076AA File Offset: 0x00D058AA
 		public void RefreshItem(string name, string desc, List<int> element)
 		{
 			this.SetActive(true);
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.UpdateInstanceDungeonRecommendElementItem(element);
 		}
 
-		// Token: 0x06039BBE RID: 236478 RVA: 0x00DB87BC File Offset: 0x00DB69BC
+		// Token: 0x0602EAE1 RID: 191201 RVA: 0x00D076D4 File Offset: 0x00D058D4
 		public void RefreshName(string name)
 		{
 			base.GetText(0).SetText(name, true);
 		}
 
-		// Token: 0x06039BBF RID: 236479 RVA: 0x00DB87CC File Offset: 0x00DB69CC
+		// Token: 0x0602EAE2 RID: 191202 RVA: 0x00D076E4 File Offset: 0x00D058E4
 		public void RefreshDesc(string desc)
 		{
 			base.GetText(1).SetText(desc, true);
 		}
 
-		// Token: 0x06039BC0 RID: 236480 RVA: 0x00DB87DC File Offset: 0x00DB69DC
+		// Token: 0x0602EAE3 RID: 191203 RVA: 0x00D076F4 File Offset: 0x00D058F4
 		[NullableContext(2)]
 		public void UpdateInstanceDungeonRecommendElementItem(List<int> element)
 		{
@@ -95,19 +95,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x0401E276 RID: 123510
+		// Token: 0x04018D13 RID: 101651
 		[Nullable(2)]
 		private InstanceDungeonRecommendElementItem InstanceDungeonRecommendElementItem;
 
-		// Token: 0x0200BB0F RID: 47887
+		// Token: 0x0200A528 RID: 42280
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04038824 RID: 231460
+			// Token: 0x04033225 RID: 209445
 			TextInstanceName,
-			// Token: 0x04038825 RID: 231461
+			// Token: 0x04033226 RID: 209446
 			TextInstanceDesc,
-			// Token: 0x04038826 RID: 231462
+			// Token: 0x04033227 RID: 209447
 			ElementItem
 		}
 	}

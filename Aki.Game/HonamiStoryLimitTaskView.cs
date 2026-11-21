@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001ED1 RID: 7889
+// Token: 0x02001393 RID: 5011
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryLimitTaskView : UiViewBase
 {
-	// Token: 0x0600F288 RID: 62088 RVA: 0x003A7881 File Offset: 0x003A5A81
+	// Token: 0x0600C6A7 RID: 50855 RVA: 0x003B3382 File Offset: 0x003B1582
 	public HonamiStoryLimitTaskView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x0600F289 RID: 62089 RVA: 0x003A788C File Offset: 0x003A5A8C
+	// Token: 0x0600C6A8 RID: 50856 RVA: 0x003B338C File Offset: 0x003B158C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -37,7 +37,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F28A RID: 62090 RVA: 0x003A7938 File Offset: 0x003A5B38
+	// Token: 0x0600C6A9 RID: 50857 RVA: 0x003B3438 File Offset: 0x003B1638
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryLimitTaskView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F28B RID: 62091 RVA: 0x003A797B File Offset: 0x003A5B7B
+	// Token: 0x0600C6AA RID: 50858 RVA: 0x003B347B File Offset: 0x003B167B
 	private HonamiStoryLimitTaskItem CreateTaskItem()
 	{
 		return new HonamiStoryLimitTaskItem
@@ -57,7 +57,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600F28C RID: 62092 RVA: 0x003A7994 File Offset: 0x003A5B94
+	// Token: 0x0600C6AB RID: 50859 RVA: 0x003B3494 File Offset: 0x003B1694
 	private void RefreshTaskScroll()
 	{
 		new UiAsyncTask("RefreshProgress", delegate()
@@ -71,7 +71,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x0600F28D RID: 62093 RVA: 0x003A79B4 File Offset: 0x003A5BB4
+	// Token: 0x0600C6AC RID: 50860 RVA: 0x003B34B4 File Offset: 0x003B16B4
 	private UniTask RefreshTaskScrollAsync()
 	{
 		HonamiStoryLimitTaskView.<RefreshTaskScrollAsync>d__10 <RefreshTaskScrollAsync>d__;
@@ -82,7 +82,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		return <RefreshTaskScrollAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F28E RID: 62094 RVA: 0x003A79F7 File Offset: 0x003A5BF7
+	// Token: 0x0600C6AD RID: 50861 RVA: 0x003B34F7 File Offset: 0x003B16F7
 	private void RefreshProgressItem()
 	{
 		new UiAsyncTask("RefreshProgress", delegate()
@@ -96,7 +96,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x0600F28F RID: 62095 RVA: 0x003A7A18 File Offset: 0x003A5C18
+	// Token: 0x0600C6AE RID: 50862 RVA: 0x003B3518 File Offset: 0x003B1718
 	private UniTask RefreshProgressItemAsync()
 	{
 		HonamiStoryLimitTaskView.<RefreshProgressItemAsync>d__12 <RefreshProgressItemAsync>d__;
@@ -107,7 +107,7 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		return <RefreshProgressItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F290 RID: 62096 RVA: 0x003A7A5C File Offset: 0x003A5C5C
+	// Token: 0x0600C6AF RID: 50863 RVA: 0x003B355C File Offset: 0x003B175C
 	private void OnClickGetTaskReward(int taskId)
 	{
 		List<int> finishedLimitTaskIds = this.ActivityData.GetFinishedLimitTaskIds();
@@ -118,49 +118,49 @@ public class HonamiStoryLimitTaskView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600F291 RID: 62097 RVA: 0x003A7A8C File Offset: 0x003A5C8C
+	// Token: 0x0600C6B0 RID: 50864 RVA: 0x003B358C File Offset: 0x003B178C
 	private void OnClickGetProgressReward()
 	{
 		List<int> finishedScoreRewardIds = this.ActivityData.GetFinishedScoreRewardIds();
 		HonamiStoryController.Instance.SendHonamiStoryScoreRewardRequest(finishedScoreRewardIds, new Action(this.RefreshProgressItem));
 	}
 
-	// Token: 0x0600F292 RID: 62098 RVA: 0x003A7ABC File Offset: 0x003A5CBC
+	// Token: 0x0600C6B1 RID: 50865 RVA: 0x003B35BC File Offset: 0x003B17BC
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(431);
 	}
 
-	// Token: 0x0600F293 RID: 62099 RVA: 0x003A7ACD File Offset: 0x003A5CCD
+	// Token: 0x0600C6B2 RID: 50866 RVA: 0x003B35CD File Offset: 0x003B17CD
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400705C RID: 28764
+	// Token: 0x0400713D RID: 28989
 	[Nullable(2)]
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x0400705D RID: 28765
+	// Token: 0x0400713E RID: 28990
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400705E RID: 28766
+	// Token: 0x0400713F RID: 28991
 	private HonamiStoryLimitTaskProItem ProgressItem;
 
-	// Token: 0x0400705F RID: 28767
+	// Token: 0x04007140 RID: 28992
 	private GenericScrollViewNew<HonamiStoryLimitTaskItem, HonamiStoryLimitTaskData> RewardScroll;
 
-	// Token: 0x020084B2 RID: 33970
+	// Token: 0x02007637 RID: 30263
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B30B RID: 176907
+		// Token: 0x0402662F RID: 157231
 		CaptionItem,
-		// Token: 0x0402B30C RID: 176908
+		// Token: 0x04026630 RID: 157232
 		RewardItemScroll,
-		// Token: 0x0402B30D RID: 176909
+		// Token: 0x04026631 RID: 157233
 		PnlQuestItem,
-		// Token: 0x0402B30E RID: 176910
+		// Token: 0x04026632 RID: 157234
 		PnlBottomReward
 	}
 }

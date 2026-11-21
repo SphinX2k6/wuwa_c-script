@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042A2 RID: 17058
+	// Token: 0x020046FE RID: 18174
 	public class IWordArtDefaultResourceTypeT
 	{
-		// Token: 0x17007919 RID: 31001
-		// (get) Token: 0x0601946F RID: 103535 RVA: 0x003A149E File Offset: 0x0039F69E
-		// (set) Token: 0x06019470 RID: 103536 RVA: 0x003A14A6 File Offset: 0x0039F6A6
+		// Token: 0x17007F4A RID: 32586
+		// (get) Token: 0x0601ABDB RID: 109531 RVA: 0x003CCB76 File Offset: 0x003CAD76
+		// (set) Token: 0x0601ABDC RID: 109532 RVA: 0x003CCB7E File Offset: 0x003CAD7E
 		public EWordArtResourceType Type { get; set; }
 
-		// Token: 0x1700791A RID: 31002
-		// (get) Token: 0x06019471 RID: 103537 RVA: 0x003A14AF File Offset: 0x0039F6AF
-		// (set) Token: 0x06019472 RID: 103538 RVA: 0x003A14B7 File Offset: 0x0039F6B7
+		// Token: 0x17007F4B RID: 32587
+		// (get) Token: 0x0601ABDD RID: 109533 RVA: 0x003CCB87 File Offset: 0x003CAD87
+		// (set) Token: 0x0601ABDE RID: 109534 RVA: 0x003CCB8F File Offset: 0x003CAD8F
 		public float Scale { get; set; }
 
-		// Token: 0x1700791B RID: 31003
-		// (get) Token: 0x06019473 RID: 103539 RVA: 0x003A14C0 File Offset: 0x0039F6C0
-		// (set) Token: 0x06019474 RID: 103540 RVA: 0x003A14C8 File Offset: 0x0039F6C8
+		// Token: 0x17007F4C RID: 32588
+		// (get) Token: 0x0601ABDF RID: 109535 RVA: 0x003CCB98 File Offset: 0x003CAD98
+		// (set) Token: 0x0601ABE0 RID: 109536 RVA: 0x003CCBA0 File Offset: 0x003CADA0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06019475 RID: 103541 RVA: 0x003A14D1 File Offset: 0x0039F6D1
+		// Token: 0x0601ABE1 RID: 109537 RVA: 0x003CCBA9 File Offset: 0x003CADA9
 		public IWordArtDefaultResourceTypeT()
 		{
 			this.Type = EWordArtResourceType.Default;

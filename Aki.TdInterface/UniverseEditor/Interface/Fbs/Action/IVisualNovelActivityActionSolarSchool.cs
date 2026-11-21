@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007556 RID: 30038
+	// Token: 0x02007D4C RID: 32076
 	public struct IVisualNovelActivityActionSolarSchool : IFlatbufferObject
 	{
-		// Token: 0x1700E3E1 RID: 58337
-		// (get) Token: 0x06036A64 RID: 223844 RVA: 0x0076C412 File Offset: 0x0076A612
+		// Token: 0x1700F00B RID: 61451
+		// (get) Token: 0x06039E7A RID: 237178 RVA: 0x007CF6BA File Offset: 0x007CD8BA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036A65 RID: 223845 RVA: 0x0076C41F File Offset: 0x0076A61F
+		// Token: 0x06039E7B RID: 237179 RVA: 0x007CF6C7 File Offset: 0x007CD8C7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036A66 RID: 223846 RVA: 0x0076C428 File Offset: 0x0076A628
+		// Token: 0x06039E7C RID: 237180 RVA: 0x007CF6D0 File Offset: 0x007CD8D0
 		public static IVisualNovelActivityActionSolarSchool GetRootAsIVisualNovelActivityActionSolarSchool(ByteBuffer _bb)
 		{
 			return IVisualNovelActivityActionSolarSchool.GetRootAsIVisualNovelActivityActionSolarSchool(_bb, default(IVisualNovelActivityActionSolarSchool));
 		}
 
-		// Token: 0x06036A67 RID: 223847 RVA: 0x0076C444 File Offset: 0x0076A644
+		// Token: 0x06039E7D RID: 237181 RVA: 0x007CF6EC File Offset: 0x007CD8EC
 		public static IVisualNovelActivityActionSolarSchool GetRootAsIVisualNovelActivityActionSolarSchool(ByteBuffer _bb, IVisualNovelActivityActionSolarSchool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036A68 RID: 223848 RVA: 0x0076C461 File Offset: 0x0076A661
+		// Token: 0x06039E7E RID: 237182 RVA: 0x007CF709 File Offset: 0x007CD909
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036A69 RID: 223849 RVA: 0x0076C470 File Offset: 0x0076A670
+		// Token: 0x06039E7F RID: 237183 RVA: 0x007CF718 File Offset: 0x007CD918
 		public IVisualNovelActivityActionSolarSchool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E3E2 RID: 58338
-		// (get) Token: 0x06036A6A RID: 223850 RVA: 0x0076C480 File Offset: 0x0076A680
+		// Token: 0x1700F00C RID: 61452
+		// (get) Token: 0x06039E80 RID: 237184 RVA: 0x007CF728 File Offset: 0x007CD928
 		public EVisualNovelSubType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E3E3 RID: 58339
-		// (get) Token: 0x06036A6B RID: 223851 RVA: 0x0076C4BC File Offset: 0x0076A6BC
+		// Token: 0x1700F00D RID: 61453
+		// (get) Token: 0x06039E81 RID: 237185 RVA: 0x007CF764 File Offset: 0x007CD964
 		public int SolarSchoolActionId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036A6C RID: 223852 RVA: 0x0076C4F8 File Offset: 0x0076A6F8
+		// Token: 0x06039E82 RID: 237186 RVA: 0x007CF7A0 File Offset: 0x007CD9A0
 		public static Offset<IVisualNovelActivityActionSolarSchool> CreateIVisualNovelActivityActionSolarSchool(FlatBufferBuilder builder, EVisualNovelSubType Type = EVisualNovelSubType.SolarSchool, int SolarSchoolActionId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelActivityActionSolarSchool.EndIVisualNovelActivityActionSolarSchool(builder);
 		}
 
-		// Token: 0x06036A6D RID: 223853 RVA: 0x0076C515 File Offset: 0x0076A715
+		// Token: 0x06039E83 RID: 237187 RVA: 0x007CF7BD File Offset: 0x007CD9BD
 		public static void StartIVisualNovelActivityActionSolarSchool(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06036A6E RID: 223854 RVA: 0x0076C51E File Offset: 0x0076A71E
+		// Token: 0x06039E84 RID: 237188 RVA: 0x007CF7C6 File Offset: 0x007CD9C6
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036A6F RID: 223855 RVA: 0x0076C529 File Offset: 0x0076A729
+		// Token: 0x06039E85 RID: 237189 RVA: 0x007CF7D1 File Offset: 0x007CD9D1
 		public static void AddSolarSchoolActionId(FlatBufferBuilder builder, int solarSchoolActionId)
 		{
 			builder.AddInt(1, solarSchoolActionId, 0);
 		}
 
-		// Token: 0x06036A70 RID: 223856 RVA: 0x0076C534 File Offset: 0x0076A734
+		// Token: 0x06039E86 RID: 237190 RVA: 0x007CF7DC File Offset: 0x007CD9DC
 		public static Offset<IVisualNovelActivityActionSolarSchool> EndIVisualNovelActivityActionSolarSchool(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelActivityActionSolarSchool>(builder.EndTable());
 		}
 
-		// Token: 0x06036A71 RID: 223857 RVA: 0x0076C544 File Offset: 0x0076A744
+		// Token: 0x06039E87 RID: 237191 RVA: 0x007CF7EC File Offset: 0x007CD9EC
 		public IVisualNovelActivityActionSolarSchoolT UnPack()
 		{
 			IVisualNovelActivityActionSolarSchoolT visualNovelActivityActionSolarSchoolT = new IVisualNovelActivityActionSolarSchoolT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelActivityActionSolarSchoolT;
 		}
 
-		// Token: 0x06036A72 RID: 223858 RVA: 0x0076C55F File Offset: 0x0076A75F
+		// Token: 0x06039E88 RID: 237192 RVA: 0x007CF807 File Offset: 0x007CDA07
 		public void UnPackTo(IVisualNovelActivityActionSolarSchoolT _o)
 		{
 			_o.Type = this.Type;
 			_o.SolarSchoolActionId = this.SolarSchoolActionId;
 		}
 
-		// Token: 0x06036A73 RID: 223859 RVA: 0x0076C57C File Offset: 0x0076A77C
+		// Token: 0x06039E89 RID: 237193 RVA: 0x007CF824 File Offset: 0x007CDA24
 		public static Offset<IVisualNovelActivityActionSolarSchool> Pack(FlatBufferBuilder builder, IVisualNovelActivityActionSolarSchoolT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelActivityActionSolarSchool.CreateIVisualNovelActivityActionSolarSchool(builder, _o.Type, _o.SolarSchoolActionId);
 		}
 
-		// Token: 0x04012450 RID: 74832
+		// Token: 0x04013481 RID: 78977
 		private Table __p;
 	}
 }

@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005439 RID: 21561
+	// Token: 0x0200441C RID: 17436
 	public class VoiceLanguageSelectToggle : LanguageToggleBase
 	{
-		// Token: 0x06037105 RID: 225541 RVA: 0x00D0CEFB File Offset: 0x00D0B0FB
+		// Token: 0x0602C04E RID: 180302 RVA: 0x00C5C31B File Offset: 0x00C5A51B
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 		}
 
-		// Token: 0x06037106 RID: 225542 RVA: 0x00D0CF04 File Offset: 0x00D0B104
+		// Token: 0x0602C04F RID: 180303 RVA: 0x00C5C324 File Offset: 0x00C5A524
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			text.SetText("", true);
 		}
 
-		// Token: 0x0401D0D4 RID: 118996
+		// Token: 0x04017B6D RID: 97133
 		[Nullable(2)]
 		public LanguageUpdater Updater;
 	}

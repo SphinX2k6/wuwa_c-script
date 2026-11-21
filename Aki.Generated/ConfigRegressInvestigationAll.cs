@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007D2 RID: 2002
+	// Token: 0x020007EE RID: 2030
 	public class ConfigRegressInvestigationAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EFE RID: 12030 RVA: 0x00162DEB File Offset: 0x00160FEB
+		// Token: 0x06002FA6 RID: 12198 RVA: 0x0016A0D3 File Offset: 0x001682D3
 		static ConfigRegressInvestigationAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressInvestigationAll.CreateStaticDefaultValue), new Action(ConfigRegressInvestigationAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EFF RID: 12031 RVA: 0x00162E0C File Offset: 0x0016100C
+		// Token: 0x06002FA7 RID: 12199 RVA: 0x0016A0F4 File Offset: 0x001682F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressInvestigationAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F00 RID: 12032 RVA: 0x00162E8B File Offset: 0x0016108B
+		// Token: 0x06002FA8 RID: 12200 RVA: 0x0016A173 File Offset: 0x00168373
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressInvestigationAll.LogPair = null;
 			ConfigRegressInvestigationAll.HandleId = 0;
 		}
 
-		// Token: 0x06002F01 RID: 12033 RVA: 0x00162E99 File Offset: 0x00161099
+		// Token: 0x06002FA9 RID: 12201 RVA: 0x0016A181 File Offset: 0x00168381
 		public static void Init()
 		{
 			ConfigRegressInvestigationAll.HandleId = ConfigCommon.InitDataStatement(ConfigRegressInvestigationAll.HandleId, "db_regressactivity.db", "select BinData from `RegressInvestigation`");
 		}
 
-		// Token: 0x06002F02 RID: 12034 RVA: 0x00162EB4 File Offset: 0x001610B4
+		// Token: 0x06002FAA RID: 12202 RVA: 0x0016A19C File Offset: 0x0016839C
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressInvestigation> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040036A4 RID: 13988
+		// Token: 0x04003768 RID: 14184
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036A5 RID: 13989
+		// Token: 0x04003769 RID: 14185
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036A6 RID: 13990
+		// Token: 0x0400376A RID: 14186
 		private const string TABLE = "RegressInvestigation";
 
-		// Token: 0x040036A7 RID: 13991
+		// Token: 0x0400376B RID: 14187
 		private const string COMMAND = "select BinData from `RegressInvestigation`";
 
-		// Token: 0x040036A8 RID: 13992
+		// Token: 0x0400376C RID: 14188
 		private const string KEY_PREFIX = "RegressInvestigationAll";
 
-		// Token: 0x040036A9 RID: 13993
+		// Token: 0x0400376D RID: 14189
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036AA RID: 13994
+		// Token: 0x0400376E RID: 14190
 		private static int HandleId;
 	}
 }

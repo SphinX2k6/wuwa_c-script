@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E4 RID: 21220
+	// Token: 0x020042B4 RID: 17076
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ReserveCardOperation : NpcAiOperation
 	{
-		// Token: 0x17008306 RID: 33542
-		// (get) Token: 0x06036492 RID: 222354 RVA: 0x00CD7786 File Offset: 0x00CD5986
-		// (set) Token: 0x06036493 RID: 222355 RVA: 0x00CD778E File Offset: 0x00CD598E
+		// Token: 0x170056C6 RID: 22214
+		// (get) Token: 0x0602B38D RID: 177037 RVA: 0x00C24EAA File Offset: 0x00C230AA
+		// (set) Token: 0x0602B38E RID: 177038 RVA: 0x00C24EB2 File Offset: 0x00C230B2
 		public NpcPhantomBattleReserveCardInfo Info { get; private set; }
 
-		// Token: 0x06036494 RID: 222356 RVA: 0x00CD7797 File Offset: 0x00CD5997
+		// Token: 0x0602B38F RID: 177039 RVA: 0x00C24EBB File Offset: 0x00C230BB
 		public ReserveCardOperation(NpcPhantomBattleReserveCardInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036495 RID: 222357 RVA: 0x00CD77A8 File Offset: 0x00CD59A8
+		// Token: 0x0602B390 RID: 177040 RVA: 0x00C24ECC File Offset: 0x00C230CC
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			ReserveCardOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

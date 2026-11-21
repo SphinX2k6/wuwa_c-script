@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Google.Protobuf;
 
-// Token: 0x020032B7 RID: 12983
+// Token: 0x02002828 RID: 10280
 public class BattleSetting : IStaticVariableResetter
 {
-	// Token: 0x0601C20C RID: 115212 RVA: 0x007D4916 File Offset: 0x007D2B16
+	// Token: 0x06019E4D RID: 106061 RVA: 0x007FBA12 File Offset: 0x007F9C12
 	static BattleSetting()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattleSetting.CreateStaticDefaultValue), new Action(BattleSetting.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170026D9 RID: 9945
-	// (get) Token: 0x0601C20D RID: 115213 RVA: 0x007D4935 File Offset: 0x007D2B35
+	// Token: 0x170029C6 RID: 10694
+	// (get) Token: 0x06019E4E RID: 106062 RVA: 0x007FBA31 File Offset: 0x007F9C31
 	[Nullable(1)]
 	private static Dictionary<BattleModule, bool> moduleNetworkState
 	{
@@ -25,7 +25,7 @@ public class BattleSetting : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601C20E RID: 115214 RVA: 0x007D493C File Offset: 0x007D2B3C
+	// Token: 0x06019E4F RID: 106063 RVA: 0x007FBA38 File Offset: 0x007F9C38
 	public static void RequestSetModuleNetworkState(BattleModule module, bool isClientControl)
 	{
 		SwitchBattleModeRequest switchBattleModeRequest = SwitchBattleModeRequest.Create();
@@ -38,32 +38,32 @@ public class BattleSetting : IStaticVariableResetter
 		}, 0);
 	}
 
-	// Token: 0x0601C20F RID: 115215 RVA: 0x007D498C File Offset: 0x007D2B8C
+	// Token: 0x06019E50 RID: 106064 RVA: 0x007FBA88 File Offset: 0x007F9C88
 	public static bool IsModuleClientControl(BattleModule module)
 	{
 		bool flag;
 		return !BattleSetting.moduleNetworkState.TryGetValue(module, out flag) || flag;
 	}
 
-	// Token: 0x0601C210 RID: 115216 RVA: 0x007D49AB File Offset: 0x007D2BAB
+	// Token: 0x06019E51 RID: 106065 RVA: 0x007FBAA7 File Offset: 0x007F9CA7
 	public static void ReceiveSetModuleNetworkState(BattleModule module, bool isClientControl)
 	{
 		BattleSetting.moduleNetworkState[module] = isClientControl;
 	}
 
-	// Token: 0x0601C211 RID: 115217 RVA: 0x007D49B9 File Offset: 0x007D2BB9
+	// Token: 0x06019E52 RID: 106066 RVA: 0x007FBAB5 File Offset: 0x007F9CB5
 	public static void CreateStaticDefaultValue()
 	{
 		BattleSetting._moduleNetworkState = new Dictionary<BattleModule, bool>();
 	}
 
-	// Token: 0x0601C212 RID: 115218 RVA: 0x007D49C5 File Offset: 0x007D2BC5
+	// Token: 0x06019E53 RID: 106067 RVA: 0x007FBAC1 File Offset: 0x007F9CC1
 	public static void ResetStaticDefaultValue()
 	{
 		BattleSetting._moduleNetworkState = null;
 	}
 
-	// Token: 0x0400DE94 RID: 56980
+	// Token: 0x0400E33A RID: 58170
 	[Nullable(2)]
 	private static Dictionary<BattleModule, bool> _moduleNetworkState;
 }

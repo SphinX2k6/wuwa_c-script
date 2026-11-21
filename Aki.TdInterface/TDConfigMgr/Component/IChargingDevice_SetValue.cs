@@ -2,25 +2,25 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000238 RID: 568
+	// Token: 0x0200025F RID: 607
 	public class IChargingDevice_SetValue
 	{
-		// Token: 0x04000A2F RID: 2607
+		// Token: 0x04000AB9 RID: 2745
 		public EProgressBarControlType Type;
 
-		// Token: 0x04000A30 RID: 2608
+		// Token: 0x04000ABA RID: 2746
 		public int MaxValue;
 
-		// Token: 0x04000A31 RID: 2609
+		// Token: 0x04000ABB RID: 2747
 		public int InitValue;
 
-		// Token: 0x04000A32 RID: 2610
+		// Token: 0x04000ABC RID: 2748
 		public int? ProgressPerformanceAttribute;
 
-		// Token: 0x04000A33 RID: 2611
+		// Token: 0x04000ABD RID: 2749
 		public int IncreaseSpeed;
 
-		// Token: 0x04000A34 RID: 2612
+		// Token: 0x04000ABE RID: 2750
 		public int HitExtraValue;
 	}
 }

@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000116 RID: 278
+	// Token: 0x02000127 RID: 295
 	[EnumExtensions]
 	public enum EPickInteraction
 	{
-		// Token: 0x040005B2 RID: 1458
+		// Token: 0x040005EF RID: 1519
 		ChessmanInteract
 	}
 }

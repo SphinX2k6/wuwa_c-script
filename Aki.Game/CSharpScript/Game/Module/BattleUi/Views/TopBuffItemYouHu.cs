@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E44 RID: 24132
+	// Token: 0x02004E29 RID: 20009
 	public class TopBuffItemYouHu : TopBuffItem
 	{
-		// Token: 0x0603D5C9 RID: 251337 RVA: 0x00ECB11C File Offset: 0x00EC931C
+		// Token: 0x06032559 RID: 206169 RVA: 0x00E1C688 File Offset: 0x00E1A888
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D5CA RID: 251338 RVA: 0x00ECB164 File Offset: 0x00EC9364
+		// Token: 0x0603255A RID: 206170 RVA: 0x00E1C6D0 File Offset: 0x00E1A8D0
 		public void RefreshByTag(int tagId)
 		{
 			if (this.TagId == tagId)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIcon(resourcePath);
 		}
 
-		// Token: 0x0603D5CB RID: 251339 RVA: 0x00ECB1A5 File Offset: 0x00EC93A5
+		// Token: 0x0603255B RID: 206171 RVA: 0x00E1C711 File Offset: 0x00E1A911
 		[NullableContext(2)]
 		public void SetIcon(string iconPath)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 103, "js_undefined");
 		}
 
-		// Token: 0x0603D5CC RID: 251340 RVA: 0x00ECB1E1 File Offset: 0x00EC93E1
+		// Token: 0x0603255C RID: 206172 RVA: 0x00E1C74D File Offset: 0x00E1A94D
 		protected override void OnBeforeDestroyImplement()
 		{
 			base.OnBeforeDestroyImplement();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D5CE RID: 251342 RVA: 0x00ECB214 File Offset: 0x00EC9414
+		// Token: 0x0603255E RID: 206174 RVA: 0x00E1C780 File Offset: 0x00E1A980
 		// Note: this type is marked as 'beforefieldinit'.
 		static TopBuffItemYouHu()
 		{
@@ -91,21 +91,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			TopBuffItemYouHu.Tag2IconMap = dictionary;
 		}
 
-		// Token: 0x04020017 RID: 131095
+		// Token: 0x0401AADE RID: 109278
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, string> Tag2IconMap;
 
-		// Token: 0x04020018 RID: 131096
+		// Token: 0x0401AADF RID: 109279
 		private int TagId;
 
-		// Token: 0x04020019 RID: 131097
+		// Token: 0x0401AAE0 RID: 109280
 		private int LoadIconId;
 
-		// Token: 0x0200C1C3 RID: 49603
+		// Token: 0x0200ABD2 RID: 43986
 		private enum EChildType
 		{
-			// Token: 0x0403A8DF RID: 239839
+			// Token: 0x040352D1 RID: 217809
 			IconTexture
 		}
 	}

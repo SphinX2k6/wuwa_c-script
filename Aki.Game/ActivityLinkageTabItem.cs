@@ -7,7 +7,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020010C3 RID: 4291
+// Token: 0x02000577 RID: 1399
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 {
-	// Token: 0x06006FD2 RID: 28626 RVA: 0x0016C734 File Offset: 0x0016A934
+	// Token: 0x06004368 RID: 17256 RVA: 0x001750F0 File Offset: 0x001732F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -41,13 +41,13 @@ public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06006FD3 RID: 28627 RVA: 0x0016C81C File Offset: 0x0016AA1C
+	// Token: 0x06004369 RID: 17257 RVA: 0x001751D8 File Offset: 0x001733D8
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshRedDot));
 	}
 
-	// Token: 0x06006FD4 RID: 28628 RVA: 0x0016C83C File Offset: 0x0016AA3C
+	// Token: 0x0600436A RID: 17258 RVA: 0x001751F8 File Offset: 0x001733F8
 	public override void Refresh(ActivityLinkageTabData tabData, bool isSelected, int gridIndex)
 	{
 		this.TabData = tabData;
@@ -61,7 +61,7 @@ public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 		this.RefreshRedDot(0);
 	}
 
-	// Token: 0x06006FD5 RID: 28629 RVA: 0x0016C8BC File Offset: 0x0016AABC
+	// Token: 0x0600436B RID: 17259 RVA: 0x00175278 File Offset: 0x00173478
 	public void RefreshRedDot(int i = 0)
 	{
 		ActivityLinkageTabData tabData = this.TabData;
@@ -74,13 +74,13 @@ public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006FD6 RID: 28630 RVA: 0x0016C8F1 File Offset: 0x0016AAF1
+	// Token: 0x0600436C RID: 17260 RVA: 0x001752AD File Offset: 0x001734AD
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new <>f__AnonymousDelegate2<int>(this.RefreshRedDot));
 	}
 
-	// Token: 0x06006FD7 RID: 28631 RVA: 0x0016C90F File Offset: 0x0016AB0F
+	// Token: 0x0600436D RID: 17261 RVA: 0x001752CB File Offset: 0x001734CB
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null)
@@ -89,36 +89,36 @@ public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 		}
 	}
 
-	// Token: 0x06006FD8 RID: 28632 RVA: 0x0016C930 File Offset: 0x0016AB30
+	// Token: 0x0600436E RID: 17262 RVA: 0x001752EC File Offset: 0x001734EC
 	public void SetToggleCallBack(Action<int, ActivityLinkageTabData> callBack)
 	{
 		this.OnToggleCallBack = callBack;
 	}
 
-	// Token: 0x06006FD9 RID: 28633 RVA: 0x0016C93C File Offset: 0x0016AB3C
+	// Token: 0x0600436F RID: 17263 RVA: 0x001752F8 File Offset: 0x001734F8
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x06006FDA RID: 28634 RVA: 0x0016C962 File Offset: 0x0016AB62
+	// Token: 0x06004370 RID: 17264 RVA: 0x0017531E File Offset: 0x0017351E
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x06006FDB RID: 28635 RVA: 0x0016C96B File Offset: 0x0016AB6B
+	// Token: 0x06004371 RID: 17265 RVA: 0x00175327 File Offset: 0x00173527
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x040033ED RID: 13293
+	// Token: 0x04003486 RID: 13446
 	[Nullable(2)]
 	private ActivityLinkageTabData TabData;
 
-	// Token: 0x040033EE RID: 13294
+	// Token: 0x04003487 RID: 13447
 	[Nullable(new byte[]
 	{
 		2,
@@ -126,20 +126,20 @@ public class ActivityLinkageTabItem : GridProxyAbstract<ActivityLinkageTabData>
 	})]
 	protected Action<int, ActivityLinkageTabData> OnToggleCallBack;
 
-	// Token: 0x02007692 RID: 30354
+	// Token: 0x02006826 RID: 26662
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402720A RID: 160266
+		// Token: 0x04022553 RID: 140627
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402720B RID: 160267
+		// Token: 0x04022554 RID: 140628
 		public const int TextureImage = 1;
 
-		// Token: 0x0402720C RID: 160268
+		// Token: 0x04022555 RID: 140629
 		public const int TextTabName = 2;
 
-		// Token: 0x0402720D RID: 160269
+		// Token: 0x04022556 RID: 140630
 		public const int ItemRedDot = 3;
 	}
 }

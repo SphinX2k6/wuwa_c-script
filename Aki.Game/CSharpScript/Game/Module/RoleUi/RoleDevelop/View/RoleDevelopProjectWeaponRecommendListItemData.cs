@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D4D RID: 19789
+	// Token: 0x02003D16 RID: 15638
 	public class RoleDevelopProjectWeaponRecommendListItemData : IRoleDevelopProjectWeaponRecommendListItemData
 	{
-		// Token: 0x17007E5B RID: 32347
-		// (get) Token: 0x0603320E RID: 209422 RVA: 0x00BEBFF0 File Offset: 0x00BEA1F0
-		// (set) Token: 0x0603320F RID: 209423 RVA: 0x00BEBFF8 File Offset: 0x00BEA1F8
+		// Token: 0x1700520B RID: 21003
+		// (get) Token: 0x06028071 RID: 163953 RVA: 0x00B35364 File Offset: 0x00B33564
+		// (set) Token: 0x06028072 RID: 163954 RVA: 0x00B3536C File Offset: 0x00B3356C
 		public int DevelopRoleId { get; set; }
 
-		// Token: 0x17007E5C RID: 32348
-		// (get) Token: 0x06033210 RID: 209424 RVA: 0x00BEC001 File Offset: 0x00BEA201
-		// (set) Token: 0x06033211 RID: 209425 RVA: 0x00BEC009 File Offset: 0x00BEA209
+		// Token: 0x1700520C RID: 21004
+		// (get) Token: 0x06028073 RID: 163955 RVA: 0x00B35375 File Offset: 0x00B33575
+		// (set) Token: 0x06028074 RID: 163956 RVA: 0x00B3537D File Offset: 0x00B3357D
 		public int RecommendWeaponId { get; set; }
 
-		// Token: 0x17007E5D RID: 32349
-		// (get) Token: 0x06033212 RID: 209426 RVA: 0x00BEC012 File Offset: 0x00BEA212
-		// (set) Token: 0x06033213 RID: 209427 RVA: 0x00BEC01A File Offset: 0x00BEA21A
+		// Token: 0x1700520D RID: 21005
+		// (get) Token: 0x06028075 RID: 163957 RVA: 0x00B35386 File Offset: 0x00B33586
+		// (set) Token: 0x06028076 RID: 163958 RVA: 0x00B3538E File Offset: 0x00B3358E
 		public int? LogRoleId { get; set; }
 
-		// Token: 0x17007E5E RID: 32350
-		// (get) Token: 0x06033214 RID: 209428 RVA: 0x00BEC023 File Offset: 0x00BEA223
-		// (set) Token: 0x06033215 RID: 209429 RVA: 0x00BEC02B File Offset: 0x00BEA22B
+		// Token: 0x1700520E RID: 21006
+		// (get) Token: 0x06028077 RID: 163959 RVA: 0x00B35397 File Offset: 0x00B33597
+		// (set) Token: 0x06028078 RID: 163960 RVA: 0x00B3539F File Offset: 0x00B3359F
 		public ERoleDevelopCategoryType? LogMainPage { get; set; }
 
-		// Token: 0x17007E5F RID: 32351
-		// (get) Token: 0x06033216 RID: 209430 RVA: 0x00BEC034 File Offset: 0x00BEA234
-		// (set) Token: 0x06033217 RID: 209431 RVA: 0x00BEC03C File Offset: 0x00BEA23C
+		// Token: 0x1700520F RID: 21007
+		// (get) Token: 0x06028079 RID: 163961 RVA: 0x00B353A8 File Offset: 0x00B335A8
+		// (set) Token: 0x0602807A RID: 163962 RVA: 0x00B353B0 File Offset: 0x00B335B0
 		public ERoleDevelopLogSubPage? LogSubPage { get; set; }
 	}
 }

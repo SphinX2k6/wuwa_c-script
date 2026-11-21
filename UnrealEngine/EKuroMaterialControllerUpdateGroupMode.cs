@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A91 RID: 2705
+	// Token: 0x020001E5 RID: 485
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EKuroMaterialControllerUpdateGroupMode")]
 	public enum EKuroMaterialControllerUpdateGroupMode : byte
 	{
-		// Token: 0x04004878 RID: 18552
+		// Token: 0x04000C00 RID: 3072
 		Default,
-		// Token: 0x04004879 RID: 18553
+		// Token: 0x04000C01 RID: 3073
 		CharMesh,
-		// Token: 0x0400487A RID: 18554
+		// Token: 0x04000C02 RID: 3074
 		Custom,
-		// Token: 0x0400487B RID: 18555
+		// Token: 0x04000C03 RID: 3075
 		EKuroMaterialControllerUpdateGroupMode_MAX
 	}
 }

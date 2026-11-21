@@ -9,23 +9,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB4 RID: 23732
+	// Token: 0x02004C96 RID: 19606
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleChildViewPanel : UiPanelBase
 	{
-		// Token: 0x0603BF53 RID: 245587 RVA: 0x00E54C8D File Offset: 0x00E52E8D
+		// Token: 0x06030EA6 RID: 200358 RVA: 0x00DA5335 File Offset: 0x00DA3535
 		public virtual UniTask InitializeAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0603BF54 RID: 245588 RVA: 0x00E54C94 File Offset: 0x00E52E94
+		// Token: 0x06030EA7 RID: 200359 RVA: 0x00DA533C File Offset: 0x00DA353C
 		public virtual void InitializeTemp()
 		{
 		}
 
-		// Token: 0x0603BF55 RID: 245589 RVA: 0x00E54C98 File Offset: 0x00E52E98
+		// Token: 0x06030EA8 RID: 200360 RVA: 0x00DA5340 File Offset: 0x00DA3540
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleChildViewPanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF56 RID: 245590 RVA: 0x00E54CDB File Offset: 0x00E52EDB
+		// Token: 0x06030EA9 RID: 200361 RVA: 0x00DA5383 File Offset: 0x00DA3583
 		public void ShowBattleChildViewPanel()
 		{
 			if (!this.CheckBattleChildViewPanelShowCondition())
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF57 RID: 245591 RVA: 0x00E54D0F File Offset: 0x00E52F0F
+		// Token: 0x06030EAA RID: 200362 RVA: 0x00DA53B7 File Offset: 0x00DA35B7
 		public void HideBattleChildViewPanel()
 		{
 			this.IsEnable = false;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF58 RID: 245592 RVA: 0x00E54D3C File Offset: 0x00E52F3C
+		// Token: 0x06030EAB RID: 200363 RVA: 0x00DA53E4 File Offset: 0x00DA35E4
 		public virtual void Reset()
 		{
 			this.SetVisibleInner(EBattleUiVisibleReason.Default, false);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF59 RID: 245593 RVA: 0x00E54D90 File Offset: 0x00E52F90
+		// Token: 0x06030EAC RID: 200364 RVA: 0x00DA5438 File Offset: 0x00DA3638
 		public override void SetActive(bool visibility)
 		{
 			if (this.Visible != visibility)
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetActive(visibility);
 		}
 
-		// Token: 0x0603BF5A RID: 245594 RVA: 0x00E54DCA File Offset: 0x00E52FCA
+		// Token: 0x06030EAD RID: 200365 RVA: 0x00DA5472 File Offset: 0x00DA3672
 		public bool GetVisible()
 		{
 			return this.Visible;
 		}
 
-		// Token: 0x0603BF5B RID: 245595 RVA: 0x00E54DD4 File Offset: 0x00E52FD4
+		// Token: 0x06030EAE RID: 200366 RVA: 0x00DA547C File Offset: 0x00DA367C
 		protected void SetVisible(EBattleUiVisibleReason visibleReason, bool bVisible)
 		{
 			bool visible = this.Visible;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603BF5C RID: 245596 RVA: 0x00E54DF8 File Offset: 0x00E52FF8
+		// Token: 0x06030EAF RID: 200367 RVA: 0x00DA54A0 File Offset: 0x00DA36A0
 		private void OnBattleUiChildVisibleChanged()
 		{
 			bool visible = this.Visible;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CheckVisibleChange(visible);
 		}
 
-		// Token: 0x0603BF5D RID: 245597 RVA: 0x00E54E2C File Offset: 0x00E5302C
+		// Token: 0x06030EB0 RID: 200368 RVA: 0x00DA54D4 File Offset: 0x00DA36D4
 		private void CheckVisibleChange(bool oldVisible)
 		{
 			if (!this.IsEnable)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnHideBattleChildViewPanel();
 		}
 
-		// Token: 0x0603BF5E RID: 245598 RVA: 0x00E54E65 File Offset: 0x00E53065
+		// Token: 0x06030EB1 RID: 200369 RVA: 0x00DA550D File Offset: 0x00DA370D
 		private void SetVisibleInner(EBattleUiVisibleReason visibleReason, bool bVisible)
 		{
 			if (this.ChildType == EBattleUiChild.Common)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Visible = this.ChildViewData.SetChildVisible(visibleReason, this.ChildType, bVisible, false, 0);
 		}
 
-		// Token: 0x0603BF5F RID: 245599 RVA: 0x00E54E8B File Offset: 0x00E5308B
+		// Token: 0x06030EB2 RID: 200370 RVA: 0x00DA5533 File Offset: 0x00DA3733
 		private void CheckFirstShow()
 		{
 			if (this.IsShowOnce)
@@ -155,37 +155,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnShowBattleChildViewPanel(true);
 		}
 
-		// Token: 0x0603BF60 RID: 245600 RVA: 0x00E54EAB File Offset: 0x00E530AB
+		// Token: 0x06030EB3 RID: 200371 RVA: 0x00DA5553 File Offset: 0x00DA3753
 		protected virtual void OnShowBattleChildViewPanel(bool isFirst)
 		{
 		}
 
-		// Token: 0x0603BF61 RID: 245601 RVA: 0x00E54EAD File Offset: 0x00E530AD
+		// Token: 0x06030EB4 RID: 200372 RVA: 0x00DA5555 File Offset: 0x00DA3755
 		protected virtual void OnHideBattleChildViewPanel()
 		{
 		}
 
-		// Token: 0x0603BF62 RID: 245602 RVA: 0x00E54EAF File Offset: 0x00E530AF
+		// Token: 0x06030EB5 RID: 200373 RVA: 0x00DA5557 File Offset: 0x00DA3757
 		public virtual void OnTickBattleChildViewPanel(float delta)
 		{
 		}
 
-		// Token: 0x0603BF63 RID: 245603 RVA: 0x00E54EB1 File Offset: 0x00E530B1
+		// Token: 0x06030EB6 RID: 200374 RVA: 0x00DA5559 File Offset: 0x00DA3759
 		public virtual void OnAfterTickBattleChildViewPanel(float delta)
 		{
 		}
 
-		// Token: 0x0603BF64 RID: 245604 RVA: 0x00E54EB3 File Offset: 0x00E530B3
+		// Token: 0x06030EB7 RID: 200375 RVA: 0x00DA555B File Offset: 0x00DA375B
 		protected virtual void AddEvents()
 		{
 		}
 
-		// Token: 0x0603BF65 RID: 245605 RVA: 0x00E54EB5 File Offset: 0x00E530B5
+		// Token: 0x06030EB8 RID: 200376 RVA: 0x00DA555D File Offset: 0x00DA375D
 		protected virtual void RemoveEvents()
 		{
 		}
 
-		// Token: 0x0603BF66 RID: 245606 RVA: 0x00E54EB8 File Offset: 0x00E530B8
+		// Token: 0x06030EB9 RID: 200377 RVA: 0x00DA5560 File Offset: 0x00DA3760
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewStaticChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF67 RID: 245607 RVA: 0x00E54F0C File Offset: 0x00E5310C
+		// Token: 0x06030EBA RID: 200378 RVA: 0x00DA55B4 File Offset: 0x00DA37B4
 		private void ResetAllStaticChildView()
 		{
 			foreach (BattleChildView battleChildView in this.StaticChildViewList)
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StaticChildViewList.Clear();
 		}
 
-		// Token: 0x0603BF68 RID: 245608 RVA: 0x00E54F70 File Offset: 0x00E53170
+		// Token: 0x06030EBB RID: 200379 RVA: 0x00DA5618 File Offset: 0x00DA3818
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewDynamicChildViewByResourceId>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF69 RID: 245609 RVA: 0x00E54FCC File Offset: 0x00E531CC
+		// Token: 0x06030EBC RID: 200380 RVA: 0x00DA5674 File Offset: 0x00DA3874
 		protected unsafe T NewDynamicChildViewByResourceIdWithCallback<[Nullable(0)] T>(UUIItem parentItem, string resourceId, bool bFromPool = false, [Nullable(new byte[]
 		{
 			2,
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return battleChildView;
 		}
 
-		// Token: 0x0603BF6A RID: 245610 RVA: 0x00E55094 File Offset: 0x00E53294
+		// Token: 0x06030EBD RID: 200381 RVA: 0x00DA573C File Offset: 0x00DA393C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -287,13 +287,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewDynamicChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BF6B RID: 245611 RVA: 0x00E550DF File Offset: 0x00E532DF
+		// Token: 0x06030EBE RID: 200382 RVA: 0x00DA5787 File Offset: 0x00DA3987
 		protected EOperationType GetOperationType()
 		{
 			return Info.Instance.OperationType;
 		}
 
-		// Token: 0x0603BF6C RID: 245612 RVA: 0x00E550EC File Offset: 0x00E532EC
+		// Token: 0x06030EBF RID: 200383 RVA: 0x00DA5794 File Offset: 0x00DA3994
 		protected void ListenForTagSignificantChanged(EntityHandle handle, int gameplayTag, BaseTagComponent.TTagSwitchedCallback callback)
 		{
 			BaseTagComponent component = handle.Entity.GetComponent<BaseTagComponent>();
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagSignificantChangedTaskList.Add(item);
 		}
 
-		// Token: 0x0603BF6D RID: 245613 RVA: 0x00E55124 File Offset: 0x00E53324
+		// Token: 0x06030EC0 RID: 200384 RVA: 0x00DA57CC File Offset: 0x00DA39CC
 		protected void ClearAllTagSignificantChangedCallback()
 		{
 			foreach (ITagTask tagTask in this.TagSignificantChangedTaskList)
@@ -315,33 +315,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagSignificantChangedTaskList.Clear();
 		}
 
-		// Token: 0x0603BF6E RID: 245614 RVA: 0x00E55180 File Offset: 0x00E53380
+		// Token: 0x06030EC1 RID: 200385 RVA: 0x00DA5828 File Offset: 0x00DA3A28
 		protected bool ContainsTag(EntityHandle handle, int gameplayTag)
 		{
 			BaseTagComponent component = handle.Entity.GetComponent<BaseTagComponent>();
 			return component != null && component.HasTag(gameplayTag);
 		}
 
-		// Token: 0x0603BF6F RID: 245615 RVA: 0x00E551A5 File Offset: 0x00E533A5
+		// Token: 0x06030EC2 RID: 200386 RVA: 0x00DA584D File Offset: 0x00DA3A4D
 		[NullableContext(2)]
 		public new UUIItem GetItem(int index)
 		{
 			return base.GetItem(index);
 		}
 
-		// Token: 0x0603BF70 RID: 245616 RVA: 0x00E551AE File Offset: 0x00E533AE
+		// Token: 0x06030EC3 RID: 200387 RVA: 0x00DA5856 File Offset: 0x00DA3A56
 		[NullableContext(2)]
 		public virtual AActor GetUiActorForGuide()
 		{
 			return null;
 		}
 
-		// Token: 0x0603BF71 RID: 245617 RVA: 0x00E551B1 File Offset: 0x00E533B1
+		// Token: 0x06030EC4 RID: 200388 RVA: 0x00DA5859 File Offset: 0x00DA3A59
 		public virtual void OnSeamlessTravelFinish()
 		{
 		}
 
-		// Token: 0x0603BF72 RID: 245618 RVA: 0x00E551B3 File Offset: 0x00E533B3
+		// Token: 0x06030EC5 RID: 200389 RVA: 0x00DA585B File Offset: 0x00DA3A5B
 		public void RefreshPureMode(bool isOpen)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -352,25 +352,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetAlpha(!isOpen);
 		}
 
-		// Token: 0x0603BF73 RID: 245619 RVA: 0x00E551CA File Offset: 0x00E533CA
+		// Token: 0x06030EC6 RID: 200390 RVA: 0x00DA5872 File Offset: 0x00DA3A72
 		public bool IsChildType(EBattleUiChild childType)
 		{
 			return this.ChildType == childType;
 		}
 
-		// Token: 0x0603BF74 RID: 245620 RVA: 0x00E551D5 File Offset: 0x00E533D5
+		// Token: 0x06030EC7 RID: 200391 RVA: 0x00DA587D File Offset: 0x00DA3A7D
 		public bool CheckBattleChildViewPanelShowCondition()
 		{
 			return this.OnCheckBattleChildViewPanelShowCondition();
 		}
 
-		// Token: 0x0603BF75 RID: 245621 RVA: 0x00E551DD File Offset: 0x00E533DD
+		// Token: 0x06030EC8 RID: 200392 RVA: 0x00DA5885 File Offset: 0x00DA3A85
 		protected virtual bool OnCheckBattleChildViewPanelShowCondition()
 		{
 			return true;
 		}
 
-		// Token: 0x0603BF76 RID: 245622 RVA: 0x00E551E0 File Offset: 0x00E533E0
+		// Token: 0x06030EC9 RID: 200393 RVA: 0x00DA5888 File Offset: 0x00DA3A88
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -382,26 +382,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0401F4AD RID: 128173
+		// Token: 0x04019F66 RID: 106342
 		private readonly List<BattleChildView> StaticChildViewList = new List<BattleChildView>();
 
-		// Token: 0x0401F4AE RID: 128174
+		// Token: 0x04019F67 RID: 106343
 		private readonly List<ITagTask> TagSignificantChangedTaskList = new List<ITagTask>();
 
-		// Token: 0x0401F4AF RID: 128175
+		// Token: 0x04019F68 RID: 106344
 		[Nullable(2)]
 		protected BattleUiChildViewData ChildViewData;
 
-		// Token: 0x0401F4B0 RID: 128176
+		// Token: 0x04019F69 RID: 106345
 		protected EBattleUiChild ChildType;
 
-		// Token: 0x0401F4B1 RID: 128177
+		// Token: 0x04019F6A RID: 106346
 		protected bool Visible;
 
-		// Token: 0x0401F4B2 RID: 128178
+		// Token: 0x04019F6B RID: 106347
 		protected bool IsEnable;
 
-		// Token: 0x0401F4B3 RID: 128179
+		// Token: 0x04019F6C RID: 106348
 		protected bool IsShowOnce;
 	}
 }

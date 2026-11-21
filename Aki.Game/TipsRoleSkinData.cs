@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x020018E3 RID: 6371
+// Token: 0x02000D9C RID: 3484
 public class TipsRoleSkinData : TipsMaterialData
 {
-	// Token: 0x0600BAB8 RID: 47800 RVA: 0x002A4C60 File Offset: 0x002A2E60
+	// Token: 0x06008EA1 RID: 36513 RVA: 0x002AF3DC File Offset: 0x002AD5DC
 	[NullableContext(1)]
 	public TipsRoleSkinData(ItemTipsParam data) : base(data)
 	{

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002118 RID: 8472
+	// Token: 0x020006E3 RID: 1763
 	public sealed class FTsGameRichTextDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FE0F RID: 130575 RVA: 0x002F6D6E File Offset: 0x002F4F6E
+		// Token: 0x060095B4 RID: 38324 RVA: 0x000E208F File Offset: 0x000E028F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FTsGameRichTextDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FE10 RID: 130576 RVA: 0x002F6D7A File Offset: 0x002F4F7A
+		// Token: 0x060095B5 RID: 38325 RVA: 0x000E209B File Offset: 0x000E029B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FTsGameRichTextDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FTsGameRichTextDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601FE11 RID: 130577 RVA: 0x002F6D9D File Offset: 0x002F4F9D
+		// Token: 0x060095B6 RID: 38326 RVA: 0x000E20BE File Offset: 0x000E02BE
 		public FTsGameRichTextDelegate()
 		{
 		}
 
-		// Token: 0x0601FE12 RID: 130578 RVA: 0x002F6DA5 File Offset: 0x002F4FA5
+		// Token: 0x060095B7 RID: 38327 RVA: 0x000E20C6 File Offset: 0x000E02C6
 		[NullableContext(2)]
 		public FTsGameRichTextDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FE13 RID: 130579 RVA: 0x002F6DAF File Offset: 0x002F4FAF
+		// Token: 0x060095B8 RID: 38328 RVA: 0x000E20D0 File Offset: 0x000E02D0
 		public FTsGameRichTextDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FE14 RID: 130580 RVA: 0x002F6DBA File Offset: 0x002F4FBA
+		// Token: 0x060095B9 RID: 38329 RVA: 0x000E20DB File Offset: 0x000E02DB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, TArray<string>, string>) ?? ((Func<string, TArray<string>, string>)Delegate.CreateDelegate(typeof(Func<string, TArray<string>, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FE15 RID: 130581 RVA: 0x002F6DEC File Offset: 0x002F4FEC
+		// Token: 0x060095BA RID: 38330 RVA: 0x000E210D File Offset: 0x000E030D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<string, TArray<string>, string> Callback)
 		{
 			if (FTsGameRichTextDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FTsGameRichTextDelegate.RegisterId);
 		}
 
-		// Token: 0x0601FE16 RID: 130582 RVA: 0x002F6E28 File Offset: 0x002F5028
+		// Token: 0x060095BB RID: 38331 RVA: 0x000E2148 File Offset: 0x000E0348
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe string Execute(string RichTextType, [Nullable(new byte[]
 		{
 			2,
@@ -88,10 +86,9 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601FE17 RID: 130583 RVA: 0x002F6EA4 File Offset: 0x002F50A4
+		// Token: 0x060095BC RID: 38332 RVA: 0x000E21C4 File Offset: 0x000E03C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, TArray<string>, string> func = target as Func<string, TArray<string>, string>;
@@ -105,39 +102,39 @@ namespace UnrealEngine
 			FString.CopyFrom((void*)(&((FTsGameRichTextDelegate.__FTsGameRichTextDelegate_DelegateParams*)__Parameters)->__Result), src);
 		}
 
-		// Token: 0x040112D5 RID: 70357
+		// Token: 0x04004126 RID: 16678
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040112D6 RID: 70358
+		// Token: 0x04004127 RID: 16679
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.TsGameRichTextDelegate__DelegateSignature";
 
-		// Token: 0x040112D7 RID: 70359
+		// Token: 0x04004128 RID: 16680
 		private static int RegisterId;
 
-		// Token: 0x020034EB RID: 13547
+		// Token: 0x02000F12 RID: 3858
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __FTsGameRichTextDelegate_DelegateParams
+		private ref struct __FTsGameRichTextDelegate_DelegateParams
 		{
-			// Token: 0x04017509 RID: 95497
+			// Token: 0x040062DF RID: 25311
 			[FieldOffset(0)]
 			public FString RichTextType;
 
-			// Token: 0x0401750A RID: 95498
+			// Token: 0x040062E0 RID: 25312
 			[FieldOffset(16)]
 			public byte Params;
 
-			// Token: 0x0401750B RID: 95499
+			// Token: 0x040062E1 RID: 25313
 			[FieldOffset(32)]
 			public FString __Result;
 		}
 
-		// Token: 0x020034EC RID: 13548
+		// Token: 0x02000F13 RID: 3859
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401750C RID: 95500
+			// Token: 0x040062E2 RID: 25314
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

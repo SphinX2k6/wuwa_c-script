@@ -4,19 +4,19 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200136C RID: 4972
+// Token: 0x02000820 RID: 2080
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityMoraleController : ActivityControllerBase
 {
-	// Token: 0x06008AA1 RID: 35489 RVA: 0x001DA021 File Offset: 0x001D8221
+	// Token: 0x06005E3C RID: 24124 RVA: 0x001E2E7D File Offset: 0x001E107D
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008AA2 RID: 35490 RVA: 0x001DA024 File Offset: 0x001D8224
+	// Token: 0x06005E3D RID: 24125 RVA: 0x001E2E80 File Offset: 0x001E1080
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		if (!data.GetPreGuideQuestFinishState())
@@ -28,43 +28,43 @@ public class ActivityMoraleController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.MoraleAreaSumView, null, null);
 	}
 
-	// Token: 0x06008AA3 RID: 35491 RVA: 0x001DA068 File Offset: 0x001D8268
+	// Token: 0x06005E3E RID: 24126 RVA: 0x001E2EC4 File Offset: 0x001E10C4
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_MoraleMain";
 	}
 
-	// Token: 0x06008AA4 RID: 35492 RVA: 0x001DA06F File Offset: 0x001D826F
+	// Token: 0x06005E3F RID: 24127 RVA: 0x001E2ECB File Offset: 0x001E10CB
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewMorale();
 	}
 
-	// Token: 0x06008AA5 RID: 35493 RVA: 0x001DA076 File Offset: 0x001D8276
+	// Token: 0x06005E40 RID: 24128 RVA: 0x001E2ED2 File Offset: 0x001E10D2
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.Data = new ActivityMoraleData();
 		return this.Data;
 	}
 
-	// Token: 0x06008AA6 RID: 35494 RVA: 0x001DA089 File Offset: 0x001D8289
+	// Token: 0x06005E41 RID: 24129 RVA: 0x001E2EE5 File Offset: 0x001E10E5
 	protected override void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06008AA7 RID: 35495 RVA: 0x001DA08B File Offset: 0x001D828B
+	// Token: 0x06005E42 RID: 24130 RVA: 0x001E2EE7 File Offset: 0x001E10E7
 	protected override void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06008AA8 RID: 35496 RVA: 0x001DA08D File Offset: 0x001D828D
+	// Token: 0x06005E43 RID: 24131 RVA: 0x001E2EE9 File Offset: 0x001E10E9
 	[NullableContext(2)]
 	private ActivityMoraleController GetController()
 	{
 		return ActivityManager.GetActivityController(ActivityType.MoraleActivity) as ActivityMoraleController;
 	}
 
-	// Token: 0x06008AA9 RID: 35497 RVA: 0x001DA09B File Offset: 0x001D829B
+	// Token: 0x06005E44 RID: 24132 RVA: 0x001E2EF7 File Offset: 0x001E10F7
 	[NullableContext(2)]
 	public ActivityMoraleData GetData()
 	{
@@ -76,7 +76,7 @@ public class ActivityMoraleController : ActivityControllerBase
 		return controller.Data;
 	}
 
-	// Token: 0x06008AAA RID: 35498 RVA: 0x001DA0B0 File Offset: 0x001D82B0
+	// Token: 0x06005E45 RID: 24133 RVA: 0x001E2F0C File Offset: 0x001E110C
 	public void RefreshActivityRedDot()
 	{
 		ActivityMoraleData data = this.GetData();
@@ -87,8 +87,8 @@ public class ActivityMoraleController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000BC2 RID: 3010
-	// (get) Token: 0x06008AAB RID: 35499 RVA: 0x001DA0FD File Offset: 0x001D82FD
+	// Token: 0x17000BE2 RID: 3042
+	// (get) Token: 0x06005E46 RID: 24134 RVA: 0x001E2F59 File Offset: 0x001E1159
 	public static ActivityMoraleController Instance
 	{
 		get
@@ -97,7 +97,7 @@ public class ActivityMoraleController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008AAC RID: 35500 RVA: 0x001DA104 File Offset: 0x001D8304
+	// Token: 0x06005E47 RID: 24135 RVA: 0x001E2F60 File Offset: 0x001E1160
 	public static ActivityMoraleController GetOrCreateInstance()
 	{
 		if (ActivityMoraleController._Instance == null)
@@ -107,7 +107,7 @@ public class ActivityMoraleController : ActivityControllerBase
 		return ActivityMoraleController._Instance;
 	}
 
-	// Token: 0x06008AAD RID: 35501 RVA: 0x001DA118 File Offset: 0x001D8318
+	// Token: 0x06005E48 RID: 24136 RVA: 0x001E2F74 File Offset: 0x001E1174
 	public static bool CreateInstance()
 	{
 		if (ActivityMoraleController._Instance != null)
@@ -118,28 +118,28 @@ public class ActivityMoraleController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008AAE RID: 35502 RVA: 0x001DA12E File Offset: 0x001D832E
+	// Token: 0x06005E49 RID: 24137 RVA: 0x001E2F8A File Offset: 0x001E118A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008AAF RID: 35503 RVA: 0x001DA130 File Offset: 0x001D8330
+	// Token: 0x06005E4A RID: 24138 RVA: 0x001E2F8C File Offset: 0x001E118C
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityMoraleController._Instance = null;
 	}
 
-	// Token: 0x06008AB0 RID: 35504 RVA: 0x001DA138 File Offset: 0x001D8338
+	// Token: 0x06005E4B RID: 24139 RVA: 0x001E2F94 File Offset: 0x001E1194
 	static ActivityMoraleController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityMoraleController.CreateStaticDefaultValue), new Action(ActivityMoraleController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003DBF RID: 15807
+	// Token: 0x04003E57 RID: 15959
 	[Nullable(2)]
 	public ActivityMoraleData Data;
 
-	// Token: 0x04003DC0 RID: 15808
+	// Token: 0x04003E58 RID: 15960
 	[Nullable(2)]
 	private static ActivityMoraleController _Instance;
 }

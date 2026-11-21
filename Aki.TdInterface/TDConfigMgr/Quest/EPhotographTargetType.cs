@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E78 RID: 3704
+	// Token: 0x02000F8B RID: 3979
 	public enum EPhotographTargetType
 	{
-		// Token: 0x040030D7 RID: 12503
+		// Token: 0x040033D9 RID: 13273
 		Player,
-		// Token: 0x040030D8 RID: 12504
+		// Token: 0x040033DA RID: 13274
 		RolesOnScene
 	}
 }

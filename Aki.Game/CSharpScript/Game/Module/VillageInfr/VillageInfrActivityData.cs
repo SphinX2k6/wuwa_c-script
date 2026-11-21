@@ -6,28 +6,28 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004868 RID: 18536
+	// Token: 0x020037DF RID: 14303
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrActivityData : ActivityBaseData
 	{
-		// Token: 0x0603085B RID: 198747 RVA: 0x00B44579 File Offset: 0x00B42779
+		// Token: 0x06025387 RID: 152455 RVA: 0x00A7F315 File Offset: 0x00A7D515
 		protected override void OnInit(ActivityData data)
 		{
 		}
 
-		// Token: 0x0603085C RID: 198748 RVA: 0x00B4457B File Offset: 0x00B4277B
+		// Token: 0x06025388 RID: 152456 RVA: 0x00A7F317 File Offset: 0x00A7D517
 		protected override void PhraseEx(ActivityData data)
 		{
 		}
 
-		// Token: 0x0603085D RID: 198749 RVA: 0x00B4457D File Offset: 0x00B4277D
+		// Token: 0x06025389 RID: 152457 RVA: 0x00A7F319 File Offset: 0x00A7D519
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.CheckRedDot();
 		}
 
-		// Token: 0x0603085E RID: 198750 RVA: 0x00B44588 File Offset: 0x00B42788
+		// Token: 0x0602538A RID: 152458 RVA: 0x00A7F324 File Offset: 0x00A7D524
 		public bool CheckRedDot()
 		{
 			if (!base.IsUnLock())
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return instance.HasTreeCanLevelUp() || instance.GetCanVillageLevelUp() || instance.HasScoreReward() || instance.GetTaskRedDot();
 		}
 
-		// Token: 0x0603085F RID: 198751 RVA: 0x00B445C8 File Offset: 0x00B427C8
+		// Token: 0x0602538B RID: 152459 RVA: 0x00A7F364 File Offset: 0x00A7D564
 		protected override bool GetExDataFinishShowState()
 		{
 			VillageInfrModel instance = VillageInfrModel.Instance;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return !flag3;
 		}
 
-		// Token: 0x06030860 RID: 198752 RVA: 0x00B446EC File Offset: 0x00B428EC
+		// Token: 0x0602538C RID: 152460 RVA: 0x00A7F488 File Offset: 0x00A7D688
 		public override ERedDotName? GetExternalButtonRedPointName()
 		{
 			return new ERedDotName?(ERedDotName.VillageInfr);

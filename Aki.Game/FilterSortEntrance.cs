@@ -6,19 +6,19 @@ using CSharpScript.Game.Module.FilterSort.Sort.SortEntrance;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001830 RID: 6192
+// Token: 0x02000CE9 RID: 3305
 [NullableContext(1)]
 [Nullable(0)]
 public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 {
-	// Token: 0x0600B587 RID: 46471 RVA: 0x0028FCE7 File Offset: 0x0028DEE7
+	// Token: 0x06008972 RID: 35186 RVA: 0x0029A407 File Offset: 0x00298607
 	public FilterSortEntrance(UUIItem uiItem, TUpdateDataListFunction<T> updateList)
 	{
 		this.UpdateList = updateList;
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B588 RID: 46472 RVA: 0x0028FD04 File Offset: 0x0028DF04
+	// Token: 0x06008973 RID: 35187 RVA: 0x0029A424 File Offset: 0x00298624
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,14 +32,14 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B589 RID: 46473 RVA: 0x0028FD6D File Offset: 0x0028DF6D
+	// Token: 0x06008974 RID: 35188 RVA: 0x0029A48D File Offset: 0x0029868D
 	protected override void OnStart()
 	{
 		this.FilterEntrance = new FilterEntrance<T>(base.GetItem(0), this.UpdateList);
 		this.SortEntrance = new SortEntrance<T>(base.GetItem(1), this.UpdateList);
 	}
 
-	// Token: 0x0600B58A RID: 46474 RVA: 0x0028FDA0 File Offset: 0x0028DFA0
+	// Token: 0x06008975 RID: 35189 RVA: 0x0029A4C0 File Offset: 0x002986C0
 	public void UpdateData(EFilterSortGroupId groupId, List<T> dataList, params object[] parameters)
 	{
 		this.FilterEntrance.UpdateData(groupId, dataList, parameters);
@@ -50,7 +50,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 	}
 
-	// Token: 0x0600B58B RID: 46475 RVA: 0x0028FDFC File Offset: 0x0028DFFC
+	// Token: 0x06008976 RID: 35190 RVA: 0x0029A51C File Offset: 0x0029871C
 	public void UpdateDataWithConfig(EFilterSortGroupId groupId, EFilterSortConfigId saveConfigId, List<T> dataList)
 	{
 		this.FilterEntrance.UpdateDataWithConfig(groupId, saveConfigId, dataList, "", Array.Empty<object>());
@@ -61,7 +61,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 	}
 
-	// Token: 0x0600B58C RID: 46476 RVA: 0x0028FE6C File Offset: 0x0028E06C
+	// Token: 0x06008977 RID: 35191 RVA: 0x0029A58C File Offset: 0x0029878C
 	public void ClearData(EFilterSortGroupId groupId)
 	{
 		int uniqueIdByGroupId = this.FilterEntrance.GetUniqueIdByGroupId(groupId);
@@ -69,7 +69,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		this.SortEntrance.DeleteUniqueIdByGroupId(groupId);
 	}
 
-	// Token: 0x0600B58D RID: 46477 RVA: 0x0028FE9D File Offset: 0x0028E09D
+	// Token: 0x06008978 RID: 35192 RVA: 0x0029A5BD File Offset: 0x002987BD
 	[NullableContext(2)]
 	public UUIItem GetFilterToggleItem()
 	{
@@ -81,7 +81,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		return filterEntrance.GetFilterToggleItem();
 	}
 
-	// Token: 0x0600B58E RID: 46478 RVA: 0x0028FEB0 File Offset: 0x0028E0B0
+	// Token: 0x06008979 RID: 35193 RVA: 0x0029A5D0 File Offset: 0x002987D0
 	protected override void OnBeforeDestroy()
 	{
 		SortEntrance<T> sortEntrance = this.SortEntrance;
@@ -92,7 +92,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x04005251 RID: 21073
+	// Token: 0x040052FC RID: 21244
 	[Nullable(new byte[]
 	{
 		2,
@@ -100,7 +100,7 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 	})]
 	private FilterEntrance<T> FilterEntrance;
 
-	// Token: 0x04005252 RID: 21074
+	// Token: 0x040052FD RID: 21245
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,16 +108,16 @@ public class FilterSortEntrance<[Nullable(2)] T> : UiPanelBase
 	})]
 	private SortEntrance<T> SortEntrance;
 
-	// Token: 0x04005253 RID: 21075
+	// Token: 0x040052FE RID: 21246
 	protected TUpdateDataListFunction<T> UpdateList;
 
-	// Token: 0x02007E13 RID: 32275
+	// Token: 0x02006F99 RID: 28569
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x04029424 RID: 168996
+		// Token: 0x0402474F RID: 149327
 		FilterItem,
-		// Token: 0x04029425 RID: 168997
+		// Token: 0x04024750 RID: 149328
 		SortItem
 	}
 }

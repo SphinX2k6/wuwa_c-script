@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005344 RID: 21316
+	// Token: 0x020058CA RID: 22730
 	public struct IGroupAiMonsterMemberActionTagAttach : IFlatbufferObject
 	{
-		// Token: 0x17009C93 RID: 40083
-		// (get) Token: 0x06022DBC RID: 142780 RVA: 0x004D449E File Offset: 0x004D269E
+		// Token: 0x1700A4CB RID: 42187
+		// (get) Token: 0x06024E70 RID: 151152 RVA: 0x00511372 File Offset: 0x0050F572
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022DBD RID: 142781 RVA: 0x004D44AB File Offset: 0x004D26AB
+		// Token: 0x06024E71 RID: 151153 RVA: 0x0051137F File Offset: 0x0050F57F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022DBE RID: 142782 RVA: 0x004D44B4 File Offset: 0x004D26B4
+		// Token: 0x06024E72 RID: 151154 RVA: 0x00511388 File Offset: 0x0050F588
 		public static IGroupAiMonsterMemberActionTagAttach GetRootAsIGroupAiMonsterMemberActionTagAttach(ByteBuffer _bb)
 		{
 			return IGroupAiMonsterMemberActionTagAttach.GetRootAsIGroupAiMonsterMemberActionTagAttach(_bb, default(IGroupAiMonsterMemberActionTagAttach));
 		}
 
-		// Token: 0x06022DBF RID: 142783 RVA: 0x004D44D0 File Offset: 0x004D26D0
+		// Token: 0x06024E73 RID: 151155 RVA: 0x005113A4 File Offset: 0x0050F5A4
 		public static IGroupAiMonsterMemberActionTagAttach GetRootAsIGroupAiMonsterMemberActionTagAttach(ByteBuffer _bb, IGroupAiMonsterMemberActionTagAttach obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022DC0 RID: 142784 RVA: 0x004D44ED File Offset: 0x004D26ED
+		// Token: 0x06024E74 RID: 151156 RVA: 0x005113C1 File Offset: 0x0050F5C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022DC1 RID: 142785 RVA: 0x004D44FC File Offset: 0x004D26FC
+		// Token: 0x06024E75 RID: 151157 RVA: 0x005113D0 File Offset: 0x0050F5D0
 		public IGroupAiMonsterMemberActionTagAttach __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C94 RID: 40084
-		// (get) Token: 0x06022DC2 RID: 142786 RVA: 0x004D450C File Offset: 0x004D270C
+		// Token: 0x1700A4CC RID: 42188
+		// (get) Token: 0x06024E76 RID: 151158 RVA: 0x005113E0 File Offset: 0x0050F5E0
 		public string ActionTag
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022DC3 RID: 142787 RVA: 0x004D4543 File Offset: 0x004D2743
+		// Token: 0x06024E77 RID: 151159 RVA: 0x00511417 File Offset: 0x0050F617
 		public Span<byte> GetActionTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06022DC4 RID: 142788 RVA: 0x004D4552 File Offset: 0x004D2752
+		// Token: 0x06024E78 RID: 151160 RVA: 0x00511426 File Offset: 0x0050F626
 		public byte[] GetActionTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009C95 RID: 40085
-		// (get) Token: 0x06022DC5 RID: 142789 RVA: 0x004D4560 File Offset: 0x004D2760
+		// Token: 0x1700A4CD RID: 42189
+		// (get) Token: 0x06024E79 RID: 151161 RVA: 0x00511434 File Offset: 0x0050F634
 		public int AttachEntityId
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C96 RID: 40086
-		// (get) Token: 0x06022DC6 RID: 142790 RVA: 0x004D459C File Offset: 0x004D279C
+		// Token: 0x1700A4CE RID: 42190
+		// (get) Token: 0x06024E7A RID: 151162 RVA: 0x00511470 File Offset: 0x0050F670
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022DC7 RID: 142791 RVA: 0x004D45D8 File Offset: 0x004D27D8
+		// Token: 0x06024E7B RID: 151163 RVA: 0x005114AC File Offset: 0x0050F6AC
 		public static Offset<IGroupAiMonsterMemberActionTagAttach> CreateIGroupAiMonsterMemberActionTagAttach(FlatBufferBuilder builder, StringOffset ActionTagOffset = default(StringOffset), int AttachEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiMonsterMemberActionTagAttach.EndIGroupAiMonsterMemberActionTagAttach(builder);
 		}
 
-		// Token: 0x06022DC8 RID: 142792 RVA: 0x004D45FC File Offset: 0x004D27FC
+		// Token: 0x06024E7C RID: 151164 RVA: 0x005114D0 File Offset: 0x0050F6D0
 		public static void StartIGroupAiMonsterMemberActionTagAttach(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06022DC9 RID: 142793 RVA: 0x004D4605 File Offset: 0x004D2805
+		// Token: 0x06024E7D RID: 151165 RVA: 0x005114D9 File Offset: 0x0050F6D9
 		public static void AddActionTag(FlatBufferBuilder builder, StringOffset actionTagOffset)
 		{
 			builder.AddOffset(0, actionTagOffset.Value, 0);
 		}
 
-		// Token: 0x06022DCA RID: 142794 RVA: 0x004D4615 File Offset: 0x004D2815
+		// Token: 0x06024E7E RID: 151166 RVA: 0x005114E9 File Offset: 0x0050F6E9
 		public static void AddAttachEntityId(FlatBufferBuilder builder, int attachEntityId)
 		{
 			builder.AddInt(1, attachEntityId, 0);
 		}
 
-		// Token: 0x06022DCB RID: 142795 RVA: 0x004D4620 File Offset: 0x004D2820
+		// Token: 0x06024E7F RID: 151167 RVA: 0x005114F4 File Offset: 0x0050F6F4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06022DCC RID: 142796 RVA: 0x004D462B File Offset: 0x004D282B
+		// Token: 0x06024E80 RID: 151168 RVA: 0x005114FF File Offset: 0x0050F6FF
 		public static Offset<IGroupAiMonsterMemberActionTagAttach> EndIGroupAiMonsterMemberActionTagAttach(FlatBufferBuilder builder)
 		{
 			return new Offset<IGroupAiMonsterMemberActionTagAttach>(builder.EndTable());
 		}
 
-		// Token: 0x06022DCD RID: 142797 RVA: 0x004D4638 File Offset: 0x004D2838
+		// Token: 0x06024E81 RID: 151169 RVA: 0x0051150C File Offset: 0x0050F70C
 		public IGroupAiMonsterMemberActionTagAttachT UnPack()
 		{
 			IGroupAiMonsterMemberActionTagAttachT groupAiMonsterMemberActionTagAttachT = new IGroupAiMonsterMemberActionTagAttachT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return groupAiMonsterMemberActionTagAttachT;
 		}
 
-		// Token: 0x06022DCE RID: 142798 RVA: 0x004D4653 File Offset: 0x004D2853
+		// Token: 0x06024E82 RID: 151170 RVA: 0x00511527 File Offset: 0x0050F727
 		public void UnPackTo(IGroupAiMonsterMemberActionTagAttachT _o)
 		{
 			_o.ActionTag = this.ActionTag;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022DCF RID: 142799 RVA: 0x004D467C File Offset: 0x004D287C
+		// Token: 0x06024E83 RID: 151171 RVA: 0x00511550 File Offset: 0x0050F750
 		public static Offset<IGroupAiMonsterMemberActionTagAttach> Pack(FlatBufferBuilder builder, IGroupAiMonsterMemberActionTagAttachT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiMonsterMemberActionTagAttach.CreateIGroupAiMonsterMemberActionTagAttach(builder, actionTagOffset, _o.AttachEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400E510 RID: 58640
+		// Token: 0x0400F140 RID: 61760
 		private Table __p;
 	}
 }

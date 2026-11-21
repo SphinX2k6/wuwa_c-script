@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F9 RID: 25593
+	// Token: 0x02005377 RID: 21367
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourBattleView : UiTickViewBase
 	{
-		// Token: 0x060405D8 RID: 263640 RVA: 0x00F91ABF File Offset: 0x00F8FCBF
+		// Token: 0x06035299 RID: 217753 RVA: 0x00ED8A9F File Offset: 0x00ED6C9F
 		public MotorParkourBattleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060405D9 RID: 263641 RVA: 0x00F91AC8 File Offset: 0x00F8FCC8
+		// Token: 0x0603529A RID: 217754 RVA: 0x00ED8AA8 File Offset: 0x00ED6CA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060405DA RID: 263642 RVA: 0x00F91B52 File Offset: 0x00F8FD52
+		// Token: 0x0603529B RID: 217755 RVA: 0x00ED8B32 File Offset: 0x00ED6D32
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, float>(EEventName.MotorParkourFinishLap, new Action<int, float>(this.OnMotorParkourFinishLap));
 		}
 
-		// Token: 0x060405DB RID: 263643 RVA: 0x00F91B70 File Offset: 0x00F8FD70
+		// Token: 0x0603529C RID: 217756 RVA: 0x00ED8B50 File Offset: 0x00ED6D50
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, float>(EEventName.MotorParkourFinishLap, new Action<int, float>(this.OnMotorParkourFinishLap));
 		}
 
-		// Token: 0x060405DC RID: 263644 RVA: 0x00F91B90 File Offset: 0x00F8FD90
+		// Token: 0x0603529D RID: 217757 RVA: 0x00ED8B70 File Offset: 0x00ED6D70
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorParkourBattleView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -61,14 +61,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060405DD RID: 263645 RVA: 0x00F91BD3 File Offset: 0x00F8FDD3
+		// Token: 0x0603529E RID: 217758 RVA: 0x00ED8BB3 File Offset: 0x00ED6DB3
 		protected override void OnTick(float delta)
 		{
 			this.MissionPanel.OnTickBattleChildViewPanel(delta);
 			this.MapItem.UpdatePlayerPosition();
 		}
 
-		// Token: 0x060405DE RID: 263646 RVA: 0x00F91BEC File Offset: 0x00F8FDEC
+		// Token: 0x0603529F RID: 217759 RVA: 0x00ED8BCC File Offset: 0x00ED6DCC
 		protected override void OnBeforeDestroy()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.DriveMotorcycle, new List<EBattleUiChild>
@@ -78,36 +78,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.MissionPanel.Reset();
 		}
 
-		// Token: 0x060405DF RID: 263647 RVA: 0x00F91C1C File Offset: 0x00F8FE1C
+		// Token: 0x060352A0 RID: 217760 RVA: 0x00ED8BFC File Offset: 0x00ED6DFC
 		private void OnMotorParkourFinishLap(int lap, float time)
 		{
 			List<MotorParkourRankData> lapRankList = this.LevelData.GetLapRankList(lap, time);
 			this.RankPanel.RefreshRankList(lapRankList);
 		}
 
-		// Token: 0x040217A6 RID: 137126
+		// Token: 0x0401C0D5 RID: 114901
 		private MotorParkourLevelData LevelData;
 
-		// Token: 0x040217A7 RID: 137127
+		// Token: 0x0401C0D6 RID: 114902
 		private MotorParkourMapItem MapItem;
 
-		// Token: 0x040217A8 RID: 137128
+		// Token: 0x0401C0D7 RID: 114903
 		private MissionPanel MissionPanel;
 
-		// Token: 0x040217A9 RID: 137129
+		// Token: 0x0401C0D8 RID: 114904
 		private MotorParkourRankPanel RankPanel;
 
-		// Token: 0x0200C617 RID: 50711
+		// Token: 0x0200AFFE RID: 45054
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BCDD RID: 244957
+			// Token: 0x0403663C RID: 222780
 			public const int ItemMap = 0;
 
-			// Token: 0x0403BCDE RID: 244958
+			// Token: 0x0403663D RID: 222781
 			public const int ItemMissionPanel = 1;
 
-			// Token: 0x0403BCDF RID: 244959
+			// Token: 0x0403663E RID: 222782
 			public const int ItemRankPanel = 2;
 		}
 	}

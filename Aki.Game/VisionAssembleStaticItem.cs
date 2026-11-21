@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002493 RID: 9363
+// Token: 0x0200197A RID: 6522
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionAssembleStaticItem : UiPanelBase
 {
-	// Token: 0x06012CD9 RID: 77017 RVA: 0x004A41A8 File Offset: 0x004A23A8
+	// Token: 0x0601019A RID: 65946 RVA: 0x004B1C98 File Offset: 0x004AFE98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,13 +29,13 @@ public class VisionAssembleStaticItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012CDA RID: 77018 RVA: 0x004A4267 File Offset: 0x004A2467
+	// Token: 0x0601019B RID: 65947 RVA: 0x004B1D57 File Offset: 0x004AFF57
 	public void BindClickCallBack(Action callBack)
 	{
 		this.OnClickCallBack = callBack;
 	}
 
-	// Token: 0x06012CDB RID: 77019 RVA: 0x004A4270 File Offset: 0x004A2470
+	// Token: 0x0601019C RID: 65948 RVA: 0x004B1D60 File Offset: 0x004AFF60
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action onClickCallBack = this.OnClickCallBack;
@@ -46,7 +46,7 @@ public class VisionAssembleStaticItem : UiPanelBase
 		onClickCallBack();
 	}
 
-	// Token: 0x06012CDC RID: 77020 RVA: 0x004A4284 File Offset: 0x004A2484
+	// Token: 0x0601019D RID: 65949 RVA: 0x004B1D74 File Offset: 0x004AFF74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionAssembleStaticItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ public class VisionAssembleStaticItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012CDD RID: 77021 RVA: 0x004A42C8 File Offset: 0x004A24C8
+	// Token: 0x0601019E RID: 65950 RVA: 0x004B1DB8 File Offset: 0x004AFFB8
 	public void RefreshSelectState(bool state, bool compareMode)
 	{
 		if (compareMode)
@@ -70,7 +70,7 @@ public class VisionAssembleStaticItem : UiPanelBase
 		base.GetExtendToggle(0).SetSelfInteractive(true);
 	}
 
-	// Token: 0x06012CDE RID: 77022 RVA: 0x004A431C File Offset: 0x004A251C
+	// Token: 0x0601019F RID: 65951 RVA: 0x004B1E0C File Offset: 0x004B000C
 	public void Refresh(int roleId)
 	{
 		foreach (VisionAssembleItem visionAssembleItem in this.AssembleItemList)
@@ -91,10 +91,10 @@ public class VisionAssembleStaticItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008D90 RID: 36240
+	// Token: 0x04008ED9 RID: 36569
 	private readonly List<VisionAssembleItem> AssembleItemList = new List<VisionAssembleItem>();
 
-	// Token: 0x04008D91 RID: 36241
+	// Token: 0x04008EDA RID: 36570
 	[Nullable(2)]
 	private Action OnClickCallBack;
 }

@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F62 RID: 8034
+// Token: 0x02001424 RID: 5156
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleStrengthItem : StrengthItemBase
 {
-	// Token: 0x0600F8D4 RID: 63700 RVA: 0x003C430F File Offset: 0x003C250F
+	// Token: 0x0600CCF3 RID: 52467 RVA: 0x003CFDFB File Offset: 0x003CDFFB
 	protected override string GetResourceId()
 	{
 		return "UiItem_EnergyRide";
 	}
 
-	// Token: 0x0600F8D5 RID: 63701 RVA: 0x003C4318 File Offset: 0x003C2518
+	// Token: 0x0600CCF4 RID: 52468 RVA: 0x003CFE04 File Offset: 0x003CE004
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -52,7 +52,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F8D6 RID: 63702 RVA: 0x003C44B0 File Offset: 0x003C26B0
+	// Token: 0x0600CCF5 RID: 52469 RVA: 0x003CFF9C File Offset: 0x003CE19C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleStrengthItem.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F8D7 RID: 63703 RVA: 0x003C44F4 File Offset: 0x003C26F4
+	// Token: 0x0600CCF6 RID: 52470 RVA: 0x003CFFE0 File Offset: 0x003CE1E0
 	protected override void OnStart()
 	{
 		for (int i = 0; i < 3; i++)
@@ -84,7 +84,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.RefreshStrengthPercent(true);
 	}
 
-	// Token: 0x0600F8D8 RID: 63704 RVA: 0x003C45B4 File Offset: 0x003C27B4
+	// Token: 0x0600CCF7 RID: 52471 RVA: 0x003D00A0 File Offset: 0x003CE2A0
 	protected override UniTask OnBeforeHideAsync()
 	{
 		MotorcycleStrengthItem.<OnBeforeHideAsync>d__24 <OnBeforeHideAsync>d__;
@@ -95,7 +95,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F8D9 RID: 63705 RVA: 0x003C45F7 File Offset: 0x003C27F7
+	// Token: 0x0600CCF8 RID: 52472 RVA: 0x003D00E3 File Offset: 0x003CE2E3
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyCloseAnimTimer();
@@ -103,7 +103,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F8DA RID: 63706 RVA: 0x003C460C File Offset: 0x003C280C
+	// Token: 0x0600CCF9 RID: 52473 RVA: 0x003D00F8 File Offset: 0x003CE2F8
 	protected override void OnAddEvents()
 	{
 		FormationAttributeController.Instance.AddValueListener(EFormationAttributeId.MotorcycleStrength, new TValueListener(this.OnStrengthChanged), null);
@@ -113,7 +113,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 	}
 
-	// Token: 0x0600F8DB RID: 63707 RVA: 0x003C46A0 File Offset: 0x003C28A0
+	// Token: 0x0600CCFA RID: 52474 RVA: 0x003D018C File Offset: 0x003CE38C
 	protected override void OnRemoveEvents()
 	{
 		FormationAttributeController.Instance.RemoveValueListener(EFormationAttributeId.MotorcycleStrength, new TValueListener(this.OnStrengthChanged));
@@ -123,7 +123,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		EventSystem.Instance.Remove<bool>(EEventName.BattleUiMotorcycleStateChanged, new Action<bool>(this.OnMotorcycleStateChanged));
 	}
 
-	// Token: 0x0600F8DC RID: 63708 RVA: 0x003C4734 File Offset: 0x003C2934
+	// Token: 0x0600CCFB RID: 52475 RVA: 0x003D0220 File Offset: 0x003CE420
 	protected override void OnAddEntityEvents()
 	{
 		if (this.RoleData == null)
@@ -140,7 +140,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		base.ListenForTagAddOrRemove(gameplayTagComponent, new int?(GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.功能开关.隐藏氮气条"]), new Action<int, bool>(this.OnHideTagChanged));
 	}
 
-	// Token: 0x0600F8DD RID: 63709 RVA: 0x003C47D0 File Offset: 0x003C29D0
+	// Token: 0x0600CCFC RID: 52476 RVA: 0x003D02BC File Offset: 0x003CE4BC
 	protected override void OnRefreshRoleData()
 	{
 		if (this.RoleData == null)
@@ -157,19 +157,19 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600F8DE RID: 63710 RVA: 0x003C4876 File Offset: 0x003C2A76
+	// Token: 0x0600CCFD RID: 52477 RVA: 0x003D0362 File Offset: 0x003CE562
 	private void OnStrengthChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F8DF RID: 63711 RVA: 0x003C487F File Offset: 0x003C2A7F
+	// Token: 0x0600CCFE RID: 52478 RVA: 0x003D036B File Offset: 0x003CE56B
 	private void OnStrengthMaxChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 	{
 		this.RefreshStrengthPercent(false);
 	}
 
-	// Token: 0x0600F8E0 RID: 63712 RVA: 0x003C4888 File Offset: 0x003C2A88
+	// Token: 0x0600CCFF RID: 52479 RVA: 0x003D0374 File Offset: 0x003CE574
 	private void OnMotorcycleTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsDriving != tagExists)
@@ -179,7 +179,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8E1 RID: 63713 RVA: 0x003C48A0 File Offset: 0x003C2AA0
+	// Token: 0x0600CD00 RID: 52480 RVA: 0x003D038C File Offset: 0x003CE58C
 	private void OnLockTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsLock != tagExists)
@@ -190,7 +190,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8E2 RID: 63714 RVA: 0x003C48BE File Offset: 0x003C2ABE
+	// Token: 0x0600CD01 RID: 52481 RVA: 0x003D03AA File Offset: 0x003CE5AA
 	private void OnHideTagChanged(int tagId, bool tagExists)
 	{
 		if (this.IsHideTag != tagExists)
@@ -200,7 +200,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8E3 RID: 63715 RVA: 0x003C48D8 File Offset: 0x003C2AD8
+	// Token: 0x0600CD02 RID: 52482 RVA: 0x003D03C4 File Offset: 0x003CE5C4
 	private UUIItem AddSingleStrengthItem(bool isFirst = false)
 	{
 		UUIItem item = base.GetItem(3);
@@ -218,7 +218,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		return uuiitem;
 	}
 
-	// Token: 0x0600F8E4 RID: 63716 RVA: 0x003C4930 File Offset: 0x003C2B30
+	// Token: 0x0600CD03 RID: 52483 RVA: 0x003D041C File Offset: 0x003CE61C
 	private void RefreshStrengthPercent(bool bForce = false)
 	{
 		float value = FormationAttributeController.Instance.GetValue(EFormationAttributeId.MotorcycleStrength);
@@ -241,7 +241,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.RefreshStrengthState(bForce);
 	}
 
-	// Token: 0x0600F8E5 RID: 63717 RVA: 0x003C49A0 File Offset: 0x003C2BA0
+	// Token: 0x0600CD04 RID: 52484 RVA: 0x003D048C File Offset: 0x003CE68C
 	private void RefreshSingleStrengthItemVisible(float maxStrength)
 	{
 		int num = (int)Math.Floor((double)(maxStrength / this.SingleStrengthValue));
@@ -261,7 +261,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.RefreshSingleStrengthItemRotation();
 	}
 
-	// Token: 0x0600F8E6 RID: 63718 RVA: 0x003C4A0C File Offset: 0x003C2C0C
+	// Token: 0x0600CD05 RID: 52485 RVA: 0x003D04F8 File Offset: 0x003CE6F8
 	private void RefreshSingleStrengthItemRotation()
 	{
 		int num = (int)Math.Floor((double)(this.MaxStrengthCurrentValue / this.SingleStrengthValue));
@@ -284,7 +284,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8E7 RID: 63719 RVA: 0x003C4AA4 File Offset: 0x003C2CA4
+	// Token: 0x0600CD06 RID: 52486 RVA: 0x003D0590 File Offset: 0x003CE790
 	private void RefreshStrengthState(bool bForce = false)
 	{
 		float strengthCurrentValue = this.StrengthCurrentValue;
@@ -299,7 +299,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8E8 RID: 63720 RVA: 0x003C4AF8 File Offset: 0x003C2CF8
+	// Token: 0x0600CD07 RID: 52487 RVA: 0x003D05E4 File Offset: 0x003CE7E4
 	private void SetNormal(bool bNormal, bool bForce = false)
 	{
 		if (this.IsNormalState == bNormal && !bForce)
@@ -319,13 +319,13 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 	}
 
-	// Token: 0x0600F8E9 RID: 63721 RVA: 0x003C4B59 File Offset: 0x003C2D59
+	// Token: 0x0600CD08 RID: 52488 RVA: 0x003D0645 File Offset: 0x003CE845
 	protected override void OnEnableByHighPriority(bool b)
 	{
 		this.RefreshVisible();
 	}
 
-	// Token: 0x0600F8EA RID: 63722 RVA: 0x003C4B64 File Offset: 0x003C2D64
+	// Token: 0x0600CD09 RID: 52489 RVA: 0x003D0650 File Offset: 0x003CE850
 	private void RefreshVisible()
 	{
 		bool flag = !this.IsHideTag && (this.IsLock || (this.IsDriving && !this.IsFullState)) && this.EnableByHighPriority;
@@ -350,7 +350,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8EB RID: 63723 RVA: 0x003C4C09 File Offset: 0x003C2E09
+	// Token: 0x0600CD0A RID: 52490 RVA: 0x003D06F5 File Offset: 0x003CE8F5
 	private void RefreshLockState()
 	{
 		UUIItem item = base.GetItem(6);
@@ -361,7 +361,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		item.SetUIActive(this.IsLock);
 	}
 
-	// Token: 0x0600F8EC RID: 63724 RVA: 0x003C4C22 File Offset: 0x003C2E22
+	// Token: 0x0600CD0B RID: 52491 RVA: 0x003D070E File Offset: 0x003CE90E
 	private void DestroyCloseAnimTimer()
 	{
 		if (this.CloseAnimTimer != null)
@@ -376,13 +376,13 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8ED RID: 63725 RVA: 0x003C4C5E File Offset: 0x003C2E5E
+	// Token: 0x0600CD0C RID: 52492 RVA: 0x003D074A File Offset: 0x003CE94A
 	public override void Tick(float delta)
 	{
 		this.RefreshAutoMoving(false);
 	}
 
-	// Token: 0x0600F8EE RID: 63726 RVA: 0x003C4C67 File Offset: 0x003C2E67
+	// Token: 0x0600CD0D RID: 52493 RVA: 0x003D0753 File Offset: 0x003CE953
 	private void AutoMovingSettingChanged(bool enable)
 	{
 		this.RefreshAutoMovingSetting(false);
@@ -390,14 +390,14 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.RefreshAutoMoving(false);
 	}
 
-	// Token: 0x0600F8EF RID: 63727 RVA: 0x003C4C7D File Offset: 0x003C2E7D
+	// Token: 0x0600CD0E RID: 52494 RVA: 0x003D0769 File Offset: 0x003CE969
 	private void OnMotorcycleStateChanged(bool bEnable)
 	{
 		this.RefreshAutoMovingTag();
 		this.RefreshAutoMoving(false);
 	}
 
-	// Token: 0x0600F8F0 RID: 63728 RVA: 0x003C4C8C File Offset: 0x003C2E8C
+	// Token: 0x0600CD0F RID: 52495 RVA: 0x003D0778 File Offset: 0x003CE978
 	private void RefreshAutoMovingSetting(bool isStart = false)
 	{
 		BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;
@@ -413,7 +413,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8F1 RID: 63729 RVA: 0x003C4CF8 File Offset: 0x003C2EF8
+	// Token: 0x0600CD10 RID: 52496 RVA: 0x003D07E4 File Offset: 0x003CE9E4
 	private void RefreshAutoMovingTag()
 	{
 		this.MotorcycleEntityHandle = null;
@@ -441,7 +441,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.ListenForMotorcycleTagAddOrRemove(this.MotorcycleTagComponent, new int?(MotorcycleStrengthItem.autoNitrogenTagId), new Action<int, bool>(this.OnAutoNitrogenTagChange));
 	}
 
-	// Token: 0x0600F8F2 RID: 63730 RVA: 0x003C4DE8 File Offset: 0x003C2FE8
+	// Token: 0x0600CD11 RID: 52497 RVA: 0x003D08D4 File Offset: 0x003CEAD4
 	protected void ListenForMotorcycleTagAddOrRemove(BaseTagComponent tagComponent, int? tagId, Action<int, bool> callback)
 	{
 		ITagTask tagTask = tagComponent.ListenForTagAddOrRemove(tagId, new BaseTagComponent.TTagSwitchedCallback(callback.Invoke), null);
@@ -451,7 +451,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8F3 RID: 63731 RVA: 0x003C4E1C File Offset: 0x003C301C
+	// Token: 0x0600CD12 RID: 52498 RVA: 0x003D0908 File Offset: 0x003CEB08
 	protected void ClearMotorcycleTagTask()
 	{
 		foreach (ITagTask tagTask in this.MotorcycleTagTaskList)
@@ -461,21 +461,21 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.MotorcycleTagTaskList.Clear();
 	}
 
-	// Token: 0x0600F8F4 RID: 63732 RVA: 0x003C4E78 File Offset: 0x003C3078
+	// Token: 0x0600CD13 RID: 52499 RVA: 0x003D0964 File Offset: 0x003CEB64
 	private void OnAutoAcceleratorTagChange(int tagId, bool tagExists)
 	{
 		this.HasAutoAcceleratorTag = tagExists;
 		this.RefreshAutoMoving(false);
 	}
 
-	// Token: 0x0600F8F5 RID: 63733 RVA: 0x003C4E88 File Offset: 0x003C3088
+	// Token: 0x0600CD14 RID: 52500 RVA: 0x003D0974 File Offset: 0x003CEB74
 	private void OnAutoNitrogenTagChange(int tagId, bool tagExists)
 	{
 		this.HasAutoNitrogenTag = tagExists;
 		this.RefreshAutoMoving(false);
 	}
 
-	// Token: 0x0600F8F6 RID: 63734 RVA: 0x003C4E98 File Offset: 0x003C3098
+	// Token: 0x0600CD15 RID: 52501 RVA: 0x003D0984 File Offset: 0x003CEB84
 	private void RefreshAutoMoving(bool isStart = false)
 	{
 		if (!this.AutoAcceleratorSettingEnable && !this.AutoNitrogenSettingEnable)
@@ -539,7 +539,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.SetAutoMovingState(EMotorcycleAutoMovingState.None, 0f, isStart);
 	}
 
-	// Token: 0x0600F8F7 RID: 63735 RVA: 0x003C4F90 File Offset: 0x003C3190
+	// Token: 0x0600CD16 RID: 52502 RVA: 0x003D0A7C File Offset: 0x003CEC7C
 	private void SetAutoMovingState(EMotorcycleAutoMovingState state, float percent = 0f, bool isStart = false)
 	{
 		if (this.AutoMovingItem == null)
@@ -590,7 +590,7 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		}
 	}
 
-	// Token: 0x0600F8F8 RID: 63736 RVA: 0x003C5045 File Offset: 0x003C3245
+	// Token: 0x0600CD17 RID: 52503 RVA: 0x003D0B31 File Offset: 0x003CED31
 	private void DestroyAutoMoving()
 	{
 		this.ClearMotorcycleTagTask();
@@ -598,96 +598,96 @@ public class MotorcycleStrengthItem : StrengthItemBase
 		this.MotorcycleTagComponent = null;
 	}
 
-	// Token: 0x040073E4 RID: 29668
+	// Token: 0x040074C5 RID: 29893
 	private const int CLOSE_ANIM_TIME = 250;
 
-	// Token: 0x040073E5 RID: 29669
+	// Token: 0x040074C6 RID: 29894
 	private const int PRELOAD_SINGLE_STRENGTH_ITEM_COUNT = 3;
 
-	// Token: 0x040073E6 RID: 29670
+	// Token: 0x040074C7 RID: 29895
 	private static readonly int autoAcceleratorTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.油门维持"];
 
-	// Token: 0x040073E7 RID: 29671
+	// Token: 0x040074C8 RID: 29896
 	private static readonly int autoNitrogenTagId = GameplayTagDefine.EGameplayTagId["载具.摩托.移动.氮气维持"];
 
-	// Token: 0x040073E8 RID: 29672
+	// Token: 0x040074C9 RID: 29897
 	private bool IsNormalState = true;
 
-	// Token: 0x040073E9 RID: 29673
+	// Token: 0x040074CA RID: 29898
 	private bool IsFullState = true;
 
-	// Token: 0x040073EA RID: 29674
+	// Token: 0x040074CB RID: 29899
 	private bool IsDriving;
 
-	// Token: 0x040073EB RID: 29675
+	// Token: 0x040074CC RID: 29900
 	private bool IsLock;
 
-	// Token: 0x040073EC RID: 29676
+	// Token: 0x040074CD RID: 29901
 	private bool IsHideTag;
 
-	// Token: 0x040073ED RID: 29677
+	// Token: 0x040074CE RID: 29902
 	private float LowEndurancePercent;
 
-	// Token: 0x040073EE RID: 29678
+	// Token: 0x040074CF RID: 29903
 	private float SingleStrengthValue;
 
-	// Token: 0x040073EF RID: 29679
+	// Token: 0x040074D0 RID: 29904
 	private int MaxSingleStrengthItemCount = 1;
 
-	// Token: 0x040073F0 RID: 29680
+	// Token: 0x040074D1 RID: 29905
 	private readonly List<UUIItem> StrengthSingleLineActorList = new List<UUIItem>();
 
-	// Token: 0x040073F1 RID: 29681
+	// Token: 0x040074D2 RID: 29906
 	private float StrengthCurrentValue;
 
-	// Token: 0x040073F2 RID: 29682
+	// Token: 0x040074D3 RID: 29907
 	private float MaxStrengthCurrentValue;
 
-	// Token: 0x040073F3 RID: 29683
+	// Token: 0x040074D4 RID: 29908
 	private FRotator RotationCache = new FRotator(0f, 0f, 0f);
 
-	// Token: 0x040073F4 RID: 29684
+	// Token: 0x040074D5 RID: 29909
 	private bool CurBarVisible;
 
-	// Token: 0x040073F5 RID: 29685
+	// Token: 0x040074D6 RID: 29910
 	[Nullable(2)]
 	private TimerHandle CloseAnimTimer;
 
-	// Token: 0x040073F6 RID: 29686
+	// Token: 0x040074D7 RID: 29911
 	[Nullable(2)]
 	private CustomPromise CloseAnimPromise;
 
-	// Token: 0x040073F7 RID: 29687
+	// Token: 0x040074D8 RID: 29912
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CloseAnimTimerStat = Stat.Create("MotorcycleStrengthCloseAnim", "", "");
 
-	// Token: 0x040073F8 RID: 29688
+	// Token: 0x040074D9 RID: 29913
 	private bool AutoAcceleratorSettingEnable;
 
-	// Token: 0x040073F9 RID: 29689
+	// Token: 0x040074DA RID: 29914
 	private bool AutoNitrogenSettingEnable;
 
-	// Token: 0x040073FA RID: 29690
+	// Token: 0x040074DB RID: 29915
 	[Nullable(2)]
 	private MotorcycleAutoMovingItem AutoMovingItem;
 
-	// Token: 0x040073FB RID: 29691
+	// Token: 0x040074DC RID: 29916
 	private EMotorcycleAutoMovingState AutoMovingState;
 
-	// Token: 0x040073FC RID: 29692
+	// Token: 0x040074DD RID: 29917
 	[Nullable(2)]
 	private EntityHandle MotorcycleEntityHandle;
 
-	// Token: 0x040073FD RID: 29693
+	// Token: 0x040074DE RID: 29918
 	[Nullable(2)]
 	private BaseTagComponent MotorcycleTagComponent;
 
-	// Token: 0x040073FE RID: 29694
+	// Token: 0x040074DF RID: 29919
 	private bool HasAutoAcceleratorTag;
 
-	// Token: 0x040073FF RID: 29695
+	// Token: 0x040074E0 RID: 29920
 	private bool HasAutoNitrogenTag;
 
-	// Token: 0x04007400 RID: 29696
+	// Token: 0x040074E1 RID: 29921
 	protected readonly List<ITagTask> MotorcycleTagTaskList = new List<ITagTask>();
 }

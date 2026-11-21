@@ -6,7 +6,7 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001017 RID: 4119
+// Token: 0x020004CB RID: 1227
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,14 +15,14 @@ using UnrealEngine;
 })]
 public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridInfo>
 {
-	// Token: 0x060069BB RID: 27067 RVA: 0x00152748 File Offset: 0x00150948
+	// Token: 0x06003D50 RID: 15696 RVA: 0x0015B070 File Offset: 0x00159270
 	[NullableContext(1)]
 	public GolemHackingMatrixCodeButton(GolemHackingGameProxy proxy)
 	{
 		this.Proxy = proxy;
 	}
 
-	// Token: 0x060069BC RID: 27068 RVA: 0x00152758 File Offset: 0x00150958
+	// Token: 0x06003D51 RID: 15697 RVA: 0x0015B080 File Offset: 0x00159280
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -53,7 +53,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060069BD RID: 27069 RVA: 0x001528A4 File Offset: 0x00150AA4
+	// Token: 0x06003D52 RID: 15698 RVA: 0x0015B1CC File Offset: 0x001593CC
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -104,7 +104,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		}
 	}
 
-	// Token: 0x060069BE RID: 27070 RVA: 0x001529D4 File Offset: 0x00150BD4
+	// Token: 0x06003D53 RID: 15699 RVA: 0x0015B2FC File Offset: 0x001594FC
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -160,7 +160,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		}
 	}
 
-	// Token: 0x060069BF RID: 27071 RVA: 0x00152AB8 File Offset: 0x00150CB8
+	// Token: 0x06003D54 RID: 15700 RVA: 0x0015B3E0 File Offset: 0x001595E0
 	[NullableContext(1)]
 	public override void Refresh(GolemHackingGridInfo data, bool isSelected, int gridIndex)
 	{
@@ -209,7 +209,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		this.UpdateState();
 	}
 
-	// Token: 0x060069C0 RID: 27072 RVA: 0x00152BE8 File Offset: 0x00150DE8
+	// Token: 0x06003D55 RID: 15701 RVA: 0x0015B510 File Offset: 0x00159710
 	public void UpdateState()
 	{
 		UUIItem item = base.GetItem(1);
@@ -234,7 +234,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		text.SetText(this.CurData.Code, true);
 	}
 
-	// Token: 0x060069C1 RID: 27073 RVA: 0x00152C5D File Offset: 0x00150E5D
+	// Token: 0x06003D56 RID: 15702 RVA: 0x0015B585 File Offset: 0x00159785
 	[NullableContext(1)]
 	public void OnCodeHover(string value)
 	{
@@ -246,7 +246,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		sprite.SetUIActive(this.CurData.Code == value);
 	}
 
-	// Token: 0x060069C2 RID: 27074 RVA: 0x00152C81 File Offset: 0x00150E81
+	// Token: 0x06003D57 RID: 15703 RVA: 0x0015B5A9 File Offset: 0x001597A9
 	public void OnCodeUnHover()
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -257,7 +257,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		sprite.SetUIActive(false);
 	}
 
-	// Token: 0x060069C3 RID: 27075 RVA: 0x00152C95 File Offset: 0x00150E95
+	// Token: 0x06003D58 RID: 15704 RVA: 0x0015B5BD File Offset: 0x001597BD
 	public void UpdateBtnActiveState()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -268,7 +268,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		button.SetSelfInteractive(this.Proxy.CheckMatrixBtnSelfInteractive(this.CurData.Index));
 	}
 
-	// Token: 0x060069C4 RID: 27076 RVA: 0x00152CBE File Offset: 0x00150EBE
+	// Token: 0x06003D59 RID: 15705 RVA: 0x0015B5E6 File Offset: 0x001597E6
 	public void SetHoverFakeVisibility(bool visible)
 	{
 		UUISprite sprite = base.GetSprite(6);
@@ -279,7 +279,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		sprite.SetUIActive(visible && !this.CurData.IsUsed);
 	}
 
-	// Token: 0x060069C5 RID: 27077 RVA: 0x00152CE8 File Offset: 0x00150EE8
+	// Token: 0x06003D5A RID: 15706 RVA: 0x0015B610 File Offset: 0x00159810
 	private void OnClicked()
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -314,7 +314,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onClickedCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069C6 RID: 27078 RVA: 0x00152DAC File Offset: 0x00150FAC
+	// Token: 0x06003D5B RID: 15707 RVA: 0x0015B6D4 File Offset: 0x001598D4
 	private void OnHovered()
 	{
 		Action<int> onHoverCallback = this.OnHoverCallback;
@@ -325,7 +325,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069C7 RID: 27079 RVA: 0x00152DC9 File Offset: 0x00150FC9
+	// Token: 0x06003D5C RID: 15708 RVA: 0x0015B6F1 File Offset: 0x001598F1
 	private void OnUnHovered()
 	{
 		Action<int> onUnHoverCallback = this.OnUnHoverCallback;
@@ -336,7 +336,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onUnHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069C8 RID: 27080 RVA: 0x00152DE6 File Offset: 0x00150FE6
+	// Token: 0x06003D5D RID: 15709 RVA: 0x0015B70E File Offset: 0x0015990E
 	private void OnMobilePointDown()
 	{
 		this.Proxy.IsMatrixPressing = true;
@@ -349,7 +349,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069C9 RID: 27081 RVA: 0x00152E24 File Offset: 0x00151024
+	// Token: 0x06003D5E RID: 15710 RVA: 0x0015B74C File Offset: 0x0015994C
 	private void OnMobilePointUp()
 	{
 		this.Proxy.IsMatrixPressing = false;
@@ -361,7 +361,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onUnHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069CA RID: 27082 RVA: 0x00152E4D File Offset: 0x0015104D
+	// Token: 0x06003D5F RID: 15711 RVA: 0x0015B775 File Offset: 0x00159975
 	private void OnMobilePointCancel()
 	{
 		this.Proxy.IsMatrixPressing = false;
@@ -373,7 +373,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onUnHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069CB RID: 27083 RVA: 0x00152E76 File Offset: 0x00151076
+	// Token: 0x06003D60 RID: 15712 RVA: 0x0015B79E File Offset: 0x0015999E
 	private void OnMobilePointEnter()
 	{
 		if (!this.Proxy.IsMatrixPressing)
@@ -388,7 +388,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069CC RID: 27084 RVA: 0x00152EA1 File Offset: 0x001510A1
+	// Token: 0x06003D61 RID: 15713 RVA: 0x0015B7C9 File Offset: 0x001599C9
 	private void OnMobilePointExit()
 	{
 		if (!this.Proxy.IsMatrixPressing)
@@ -403,7 +403,7 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		onUnHoverCallback(this.CurData.Index);
 	}
 
-	// Token: 0x060069CD RID: 27085 RVA: 0x00152ECC File Offset: 0x001510CC
+	// Token: 0x06003D62 RID: 15714 RVA: 0x0015B7F4 File Offset: 0x001599F4
 	public UUIItem GetFirstUiItemWithNavListener()
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -435,46 +435,46 @@ public class GolemHackingMatrixCodeButton : GridProxyAbstract<GolemHackingGridIn
 		return null;
 	}
 
-	// Token: 0x040030C2 RID: 12482
+	// Token: 0x0400315B RID: 12635
 	[Nullable(1)]
 	public GolemHackingGridInfo CurData;
 
-	// Token: 0x040030C3 RID: 12483
+	// Token: 0x0400315C RID: 12636
 	public Action<int> OnHoverCallback;
 
-	// Token: 0x040030C4 RID: 12484
+	// Token: 0x0400315D RID: 12637
 	public Action<int> OnUnHoverCallback;
 
-	// Token: 0x040030C5 RID: 12485
+	// Token: 0x0400315E RID: 12638
 	public Action<int> OnClickedCallback;
 
-	// Token: 0x040030C6 RID: 12486
+	// Token: 0x0400315F RID: 12639
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040030C7 RID: 12487
+	// Token: 0x04003160 RID: 12640
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040030C8 RID: 12488
+	// Token: 0x04003161 RID: 12641
 	[Nullable(1)]
 	protected GolemHackingGameProxy Proxy;
 
-	// Token: 0x02007612 RID: 30226
+	// Token: 0x020067A6 RID: 26534
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402701F RID: 159775
+		// Token: 0x0402236A RID: 140138
 		Btn,
-		// Token: 0x04027020 RID: 159776
+		// Token: 0x0402236B RID: 140139
 		PanelHolder,
-		// Token: 0x04027021 RID: 159777
+		// Token: 0x0402236C RID: 140140
 		PanelBtnContent,
-		// Token: 0x04027022 RID: 159778
+		// Token: 0x0402236D RID: 140141
 		SpriteMatrixBg,
-		// Token: 0x04027023 RID: 159779
+		// Token: 0x0402236E RID: 140142
 		SpriteTipsFrame,
-		// Token: 0x04027024 RID: 159780
+		// Token: 0x0402236F RID: 140143
 		TxtCode,
-		// Token: 0x04027025 RID: 159781
+		// Token: 0x04022370 RID: 140144
 		SpriteFakeHover
 	}
 }

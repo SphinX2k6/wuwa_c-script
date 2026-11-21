@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200128F RID: 4751
+	// Token: 0x020013CF RID: 5071
 	public class ESkillTypeJsonConverter : JsonConverter<ESkillType>
 	{
-		// Token: 0x06006B2C RID: 27436 RVA: 0x00101434 File Offset: 0x000FF634
+		// Token: 0x0600717F RID: 29055 RVA: 0x0010F130 File Offset: 0x0010D330
 		public override ESkillType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ESkillTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B2D RID: 27437 RVA: 0x00101458 File Offset: 0x000FF658
+		// Token: 0x06007180 RID: 29056 RVA: 0x0010F154 File Offset: 0x0010D354
 		public override void Write(Utf8JsonWriter writer, ESkillType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8F RID: 23951
+	// Token: 0x02004D71 RID: 19825
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StepMotionArtTextController : StepControllerBase
 	{
-		// Token: 0x0603CC90 RID: 248976 RVA: 0x00E9829F File Offset: 0x00E9649F
+		// Token: 0x06031BEC RID: 203756 RVA: 0x00DE8AE7 File Offset: 0x00DE6CE7
 		public StepMotionArtTextController(UUIItem uiParent)
 		{
 		}
 
-		// Token: 0x17008E65 RID: 36453
-		// (get) Token: 0x0603CC91 RID: 248977 RVA: 0x00E982B5 File Offset: 0x00E964B5
+		// Token: 0x17006237 RID: 25143
+		// (get) Token: 0x06031BED RID: 203757 RVA: 0x00DE8AFD File Offset: 0x00DE6CFD
 		public override bool Enable
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC92 RID: 248978 RVA: 0x00E982C0 File Offset: 0x00E964C0
+		// Token: 0x06031BEE RID: 203758 RVA: 0x00DE8B08 File Offset: 0x00DE6D08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CC93 RID: 248979 RVA: 0x00E9834C File Offset: 0x00E9654C
+		// Token: 0x06031BEF RID: 203759 RVA: 0x00DE8B94 File Offset: 0x00DE6D94
 		protected override UniTask OnBeforeStartAsync()
 		{
 			StepMotionArtTextController.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC94 RID: 248980 RVA: 0x00E98390 File Offset: 0x00E96590
+		// Token: 0x06031BF0 RID: 203760 RVA: 0x00DE8BD8 File Offset: 0x00DE6DD8
 		protected override void OnAfterHide()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			artText.SetText(this.LerpTargetVarValue.ToString(CultureInfo.InvariantCulture));
 		}
 
-		// Token: 0x0603CC95 RID: 248981 RVA: 0x00E983DC File Offset: 0x00E965DC
+		// Token: 0x06031BF1 RID: 203761 RVA: 0x00DE8C24 File Offset: 0x00DE6E24
 		public override bool CheckTextVisible()
 		{
 			return !this.IsTextEmpty;
 		}
 
-		// Token: 0x0603CC96 RID: 248982 RVA: 0x00E983E8 File Offset: 0x00E965E8
+		// Token: 0x06031BF2 RID: 203762 RVA: 0x00DE8C30 File Offset: 0x00DE6E30
 		public override void OnTick(float delta)
 		{
 			if (!this.Enable || this.VarRef == null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastTickLerpTargetVarValue = this.LerpTargetVarValue;
 		}
 
-		// Token: 0x0603CC97 RID: 248983 RVA: 0x00E984E8 File Offset: 0x00E966E8
+		// Token: 0x06031BF3 RID: 203763 RVA: 0x00DE8D30 File Offset: 0x00DE6F30
 		[NullableContext(2)]
 		public override UniTask OnConfigRefresh(IMissionItemViewShowData showData, MissionViewStepTextInfoBase config)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnConfigRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC98 RID: 248984 RVA: 0x00E9853C File Offset: 0x00E9673C
+		// Token: 0x06031BF4 RID: 203764 RVA: 0x00DE8D84 File Offset: 0x00DE6F84
 		[NullableContext(0)]
 		private UniTask<bool> CheckArtTextNeedMotion()
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CheckArtTextNeedMotion>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC99 RID: 248985 RVA: 0x00E98580 File Offset: 0x00E96780
+		// Token: 0x06031BF5 RID: 203765 RVA: 0x00DE8DC8 File Offset: 0x00DE6FC8
 		public UniTask StartShow(BehaviorTreeViewShowData showData, string tidTitle, VarRef varRef, float artTextScale, UUIItem parent)
 		{
 			StepMotionArtTextController.<StartShow>d__25 <StartShow>d__;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <StartShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC9A RID: 248986 RVA: 0x00E985F0 File Offset: 0x00E967F0
+		// Token: 0x06031BF6 RID: 203766 RVA: 0x00DE8E38 File Offset: 0x00DE7038
 		public UniTask EndShow()
 		{
 			StepMotionArtTextController.<EndShow>d__26 <EndShow>d__;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <EndShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC9B RID: 248987 RVA: 0x00E98634 File Offset: 0x00E96834
+		// Token: 0x06031BF7 RID: 203767 RVA: 0x00DE8E7C File Offset: 0x00DE707C
 		private void UpdateData(VarRef varRef, bool onlyUpdateTarget)
 		{
 			this.VarRef = varRef;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LerpTargetVarValue = num;
 		}
 
-		// Token: 0x0603CC9C RID: 248988 RVA: 0x00E9868C File Offset: 0x00E9688C
+		// Token: 0x06031BF8 RID: 203768 RVA: 0x00DE8ED4 File Offset: 0x00DE70D4
 		private void UpdateLerpTarget()
 		{
 			this.LerpStartVarValue = this.LerpCurrentVarValue;
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LerpRemainTime = 0.5f;
 		}
 
-		// Token: 0x0603CC9D RID: 248989 RVA: 0x00E986E4 File Offset: 0x00E968E4
+		// Token: 0x06031BF9 RID: 203769 RVA: 0x00DE8F2C File Offset: 0x00DE712C
 		private bool CheckShowDataChanged(BehaviorTreeViewShowData showData, string tidTitle, [Nullable(2)] VarRef varRef)
 		{
 			return this.Config == null || this.ShowData == null || this.ShowData.Id != showData.Id || this.Config.TidTitle != tidTitle || ((this.VarRef == null || varRef == null) && this.VarRef != varRef) || !LevelGamePlayUtils.CheckVarRefSame(this.VarRef, varRef);
 		}
 
-		// Token: 0x0603CC9E RID: 248990 RVA: 0x00E98750 File Offset: 0x00E96950
+		// Token: 0x06031BFA RID: 203770 RVA: 0x00DE8F98 File Offset: 0x00DE7198
 		public bool UpdateDescribeText(float artTextScale)
 		{
 			string text = (this.Config != null) ? this.Config.TidTitle : string.Empty;
@@ -237,60 +237,60 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0401FAA3 RID: 129699
+		// Token: 0x0401A55B RID: 107867
 		private const string SCORE = "Score";
 
-		// Token: 0x0401FAA4 RID: 129700
+		// Token: 0x0401A55C RID: 107868
 		private const float LERP_TIME = 0.5f;
 
-		// Token: 0x0401FAA5 RID: 129701
+		// Token: 0x0401A55D RID: 107869
 		private bool IsStartShowing;
 
-		// Token: 0x0401FAA6 RID: 129702
+		// Token: 0x0401A55E RID: 107870
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FAA7 RID: 129703
+		// Token: 0x0401A55F RID: 107871
 		[Nullable(2)]
 		private VarRef VarRef;
 
-		// Token: 0x0401FAA8 RID: 129704
+		// Token: 0x0401A560 RID: 107872
 		[Nullable(2)]
 		private GeneralLogicTreeContext Context;
 
-		// Token: 0x0401FAA9 RID: 129705
+		// Token: 0x0401A561 RID: 107873
 		private bool IsCreated;
 
-		// Token: 0x0401FAAA RID: 129706
+		// Token: 0x0401A562 RID: 107874
 		private bool IsTextEmpty = true;
 
-		// Token: 0x0401FAAB RID: 129707
+		// Token: 0x0401A563 RID: 107875
 		private float LerpStartVarValue;
 
-		// Token: 0x0401FAAC RID: 129708
+		// Token: 0x0401A564 RID: 107876
 		private float LerpCurrentVarValue;
 
-		// Token: 0x0401FAAD RID: 129709
+		// Token: 0x0401A565 RID: 107877
 		private float LastTickLerpTargetVarValue;
 
-		// Token: 0x0401FAAE RID: 129710
+		// Token: 0x0401A566 RID: 107878
 		private float LerpTargetVarValue;
 
-		// Token: 0x0401FAAF RID: 129711
+		// Token: 0x0401A567 RID: 107879
 		private float LerpRemainTime;
 
-		// Token: 0x0401FAB0 RID: 129712
+		// Token: 0x0401A568 RID: 107880
 		public UUIItem UiParent = uiParent;
 
-		// Token: 0x0200C044 RID: 49220
+		// Token: 0x0200AA4A RID: 43594
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x0403A05E RID: 237662
+			// Token: 0x04034A21 RID: 215585
 			StepDescribeText,
-			// Token: 0x0403A05F RID: 237663
+			// Token: 0x04034A22 RID: 215586
 			ArtText,
-			// Token: 0x0403A060 RID: 237664
+			// Token: 0x04034A23 RID: 215587
 			ArtTextNode
 		}
 	}

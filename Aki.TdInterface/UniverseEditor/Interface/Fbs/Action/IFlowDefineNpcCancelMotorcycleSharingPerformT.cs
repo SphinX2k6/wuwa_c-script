@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067F9 RID: 26617
+	// Token: 0x02006E79 RID: 28281
 	public class IFlowDefineNpcCancelMotorcycleSharingPerformT
 	{
-		// Token: 0x1700C594 RID: 50580
-		// (get) Token: 0x0602E595 RID: 189845 RVA: 0x006539E3 File Offset: 0x00651BE3
-		// (set) Token: 0x0602E596 RID: 189846 RVA: 0x006539EB File Offset: 0x00651BEB
+		// Token: 0x1700CF4A RID: 53066
+		// (get) Token: 0x06030DDB RID: 200155 RVA: 0x006A1127 File Offset: 0x0069F327
+		// (set) Token: 0x06030DDC RID: 200156 RVA: 0x006A112F File Offset: 0x0069F32F
 		public ENpcGroupPerformType Type { get; set; }
 
-		// Token: 0x1700C595 RID: 50581
-		// (get) Token: 0x0602E597 RID: 189847 RVA: 0x006539F4 File Offset: 0x00651BF4
-		// (set) Token: 0x0602E598 RID: 189848 RVA: 0x006539FC File Offset: 0x00651BFC
+		// Token: 0x1700CF4B RID: 53067
+		// (get) Token: 0x06030DDD RID: 200157 RVA: 0x006A1138 File Offset: 0x0069F338
+		// (set) Token: 0x06030DDE RID: 200158 RVA: 0x006A1140 File Offset: 0x0069F340
 		public string Key { get; set; }
 
-		// Token: 0x0602E599 RID: 189849 RVA: 0x00653A05 File Offset: 0x00651C05
+		// Token: 0x06030DDF RID: 200159 RVA: 0x006A1149 File Offset: 0x0069F349
 		public IFlowDefineNpcCancelMotorcycleSharingPerformT()
 		{
 			this.Type = ENpcGroupPerformType.HandInHand;

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D8F RID: 19855
+	// Token: 0x02003D58 RID: 15704
 	[NullableContext(2)]
 	public interface IRoguelikeRandomEventOpenParam
 	{
-		// Token: 0x17007E8A RID: 32394
-		// (get) Token: 0x060334EE RID: 210158
-		// (set) Token: 0x060334EF RID: 210159
+		// Token: 0x1700523A RID: 21050
+		// (get) Token: 0x0602835B RID: 164699
+		// (set) Token: 0x0602835C RID: 164700
 		int BindId { get; set; }
 
-		// Token: 0x17007E8B RID: 32395
-		// (get) Token: 0x060334F0 RID: 210160
-		// (set) Token: 0x060334F1 RID: 210161
+		// Token: 0x1700523B RID: 21051
+		// (get) Token: 0x0602835D RID: 164701
+		// (set) Token: 0x0602835E RID: 164702
 		Action<int> SelectCallback { get; set; }
 	}
 }

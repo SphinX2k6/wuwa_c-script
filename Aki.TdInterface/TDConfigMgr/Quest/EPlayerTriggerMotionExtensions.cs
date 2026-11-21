@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200126A RID: 4714
+	// Token: 0x020013AA RID: 5034
 	public static class EPlayerTriggerMotionExtensions
 	{
-		// Token: 0x06006A84 RID: 27268 RVA: 0x000FF3A8 File Offset: 0x000FD5A8
+		// Token: 0x060070D7 RID: 28887 RVA: 0x0010CFD4 File Offset: 0x0010B1D4
 		public static string ToEnumString(this EPlayerTriggerMotion value)
 		{
 			string result;
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A85 RID: 27269 RVA: 0x000FF444 File Offset: 0x000FD644
+		// Token: 0x060070D8 RID: 28888 RVA: 0x0010D070 File Offset: 0x0010B270
 		public static EPlayerTriggerMotion FromString(string name)
 		{
 			EPlayerTriggerMotion result;
@@ -59,7 +59,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006A86 RID: 27270 RVA: 0x000FF470 File Offset: 0x000FD670
+		// Token: 0x060070D9 RID: 28889 RVA: 0x0010D09C File Offset: 0x0010B29C
 		public static bool TryFromString(string name, out EPlayerTriggerMotion value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -161,7 +161,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006A87 RID: 27271 RVA: 0x000FF5D4 File Offset: 0x000FD7D4
+		// Token: 0x060070DA RID: 28890 RVA: 0x0010D200 File Offset: 0x0010B400
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -179,7 +179,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A88 RID: 27272 RVA: 0x000FF639 File Offset: 0x000FD839
+		// Token: 0x060070DB RID: 28891 RVA: 0x0010D265 File Offset: 0x0010B465
 		public static EPlayerTriggerMotion[] GetValues()
 		{
 			return new EPlayerTriggerMotion[]
@@ -197,7 +197,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006A89 RID: 27273 RVA: 0x000FF650 File Offset: 0x000FD850
+		// Token: 0x060070DC RID: 28892 RVA: 0x0010D27C File Offset: 0x0010B47C
 		public static string[] GetNames()
 		{
 			return new string[]

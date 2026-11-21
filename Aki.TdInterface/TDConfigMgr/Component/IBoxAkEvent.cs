@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001FD RID: 509
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000226 RID: 550
 	public class IBoxAkEvent : IAkEventTypeConfig
 	{
-		// Token: 0x06000866 RID: 2150 RVA: 0x00026BFC File Offset: 0x00024DFC
+		// Token: 0x060008E6 RID: 2278 RVA: 0x00028550 File Offset: 0x00026750
 		private IBoxAkEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000867 RID: 2151 RVA: 0x00026C34 File Offset: 0x00024E34
+		// Token: 0x060008E7 RID: 2279 RVA: 0x00028588 File Offset: 0x00026788
 		public static IBoxAkEvent Create([Nullable(2)] IBoxAkEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000868 RID: 2152 RVA: 0x00026C47 File Offset: 0x00024E47
+		// Token: 0x060008E8 RID: 2280 RVA: 0x0002859B File Offset: 0x0002679B
 		public static IBoxAkEvent CreateFromSetValue([Nullable(2)] IBoxAkEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000869 RID: 2153 RVA: 0x00026C5A File Offset: 0x00024E5A
+		// Token: 0x060008E9 RID: 2281 RVA: 0x000285AE File Offset: 0x000267AE
 		public new IBoxAkEvent_SetValue ToSetValue()
 		{
 			return new IBoxAkEvent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000295 RID: 661
-		// (get) Token: 0x0600086A RID: 2154 RVA: 0x00026C85 File Offset: 0x00024E85
-		// (set) Token: 0x0600086B RID: 2155 RVA: 0x00026CB0 File Offset: 0x00024EB0
+		// Token: 0x170002B7 RID: 695
+		// (get) Token: 0x060008EA RID: 2282 RVA: 0x000285D9 File Offset: 0x000267D9
+		// (set) Token: 0x060008EB RID: 2283 RVA: 0x00028604 File Offset: 0x00026804
 		public override EAkEventType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000296 RID: 662
-		// (get) Token: 0x0600086C RID: 2156 RVA: 0x00026CBE File Offset: 0x00024EBE
-		// (set) Token: 0x0600086D RID: 2157 RVA: 0x00026CE9 File Offset: 0x00024EE9
+		// Token: 0x170002B8 RID: 696
+		// (get) Token: 0x060008EC RID: 2284 RVA: 0x00028612 File Offset: 0x00026812
+		// (set) Token: 0x060008ED RID: 2285 RVA: 0x0002863D File Offset: 0x0002683D
 		public virtual EAudioType AudioType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000297 RID: 663
-		// (get) Token: 0x0600086E RID: 2158 RVA: 0x00026CF7 File Offset: 0x00024EF7
-		// (set) Token: 0x0600086F RID: 2159 RVA: 0x00026D22 File Offset: 0x00024F22
+		// Token: 0x170002B9 RID: 697
+		// (get) Token: 0x060008EE RID: 2286 RVA: 0x0002864B File Offset: 0x0002684B
+		// (set) Token: 0x060008EF RID: 2287 RVA: 0x00028676 File Offset: 0x00026876
 		public virtual int Priority
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400091F RID: 2335
+		// Token: 0x040009B0 RID: 2480
 		[Nullable(2)]
 		protected new IBoxAkEvent FbInstance;
 
-		// Token: 0x04000920 RID: 2336
+		// Token: 0x040009B1 RID: 2481
 		[Nullable(2)]
 		protected new IBoxAkEvent_SetValue PocoInterface;
 	}

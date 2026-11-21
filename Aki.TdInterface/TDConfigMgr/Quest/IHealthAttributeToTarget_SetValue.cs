@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FB6 RID: 4022
+	// Token: 0x020010E2 RID: 4322
 	public class IHealthAttributeToTarget_SetValue
 	{
-		// Token: 0x0400361E RID: 13854
+		// Token: 0x04003953 RID: 14675
 		public EAttributeToTarget Type;
 
-		// Token: 0x0400361F RID: 13855
+		// Token: 0x04003954 RID: 14676
 		public float Min;
 
-		// Token: 0x04003620 RID: 13856
+		// Token: 0x04003955 RID: 14677
 		public float Max;
 
-		// Token: 0x04003621 RID: 13857
+		// Token: 0x04003956 RID: 14678
 		public bool? ZeroHealthOnDeath;
 	}
 }

@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006421 RID: 25633
+	// Token: 0x0200539F RID: 21407
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorFightActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x17009479 RID: 38009
-		// (get) Token: 0x0604074A RID: 264010 RVA: 0x00F98CD7 File Offset: 0x00F96ED7
+		// Token: 0x170067DB RID: 26587
+		// (get) Token: 0x0603540B RID: 218123 RVA: 0x00EDFC77 File Offset: 0x00EDDE77
 		protected new MotorFightActivityData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x0604074B RID: 264011 RVA: 0x00F98CE4 File Offset: 0x00F96EE4
+		// Token: 0x0603540C RID: 218124 RVA: 0x00EDFC84 File Offset: 0x00EDDE84
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604074C RID: 264012 RVA: 0x00F98D70 File Offset: 0x00F96F70
+		// Token: 0x0603540D RID: 218125 RVA: 0x00EDFD10 File Offset: 0x00EDDF10
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightActivitySubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604074D RID: 264013 RVA: 0x00F98DB4 File Offset: 0x00F96FB4
+		// Token: 0x0603540E RID: 218126 RVA: 0x00EDFD54 File Offset: 0x00EDDF54
 		protected override void OnRefreshView()
 		{
 			this.CommonInfoPanel.SetFunctionRedDotVisible(this.ActivityBaseData.RedPointShowState);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			rewardBtn2.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x0604074E RID: 264014 RVA: 0x00F98E54 File Offset: 0x00F97054
+		// Token: 0x0603540F RID: 218127 RVA: 0x00EDFDF4 File Offset: 0x00EDDFF4
 		[NullableContext(1)]
 		private void OnConfirmBtnClick(ActivityBaseData _)
 		{
@@ -98,29 +98,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			});
 		}
 
-		// Token: 0x0604074F RID: 264015 RVA: 0x00F98E72 File Offset: 0x00F97072
+		// Token: 0x06035410 RID: 218128 RVA: 0x00EDFE12 File Offset: 0x00EDE012
 		private void OnRewardBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightRewardView, this.ActivityBaseData, null);
 		}
 
-		// Token: 0x0402182B RID: 137259
+		// Token: 0x0401C15A RID: 115034
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x0402182C RID: 137260
+		// Token: 0x0401C15B RID: 115035
 		private ButtonItem RewardBtn;
 
-		// Token: 0x0200C64E RID: 50766
+		// Token: 0x0200B035 RID: 45109
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BDE3 RID: 245219
+			// Token: 0x04036740 RID: 223040
 			public const int CommonActionInfo = 0;
 
-			// Token: 0x0403BDE4 RID: 245220
+			// Token: 0x04036741 RID: 223041
 			public const int ItemRewardBtn = 1;
 
-			// Token: 0x0403BDE5 RID: 245221
+			// Token: 0x04036742 RID: 223042
 			public const int TextureBg = 2;
 		}
 	}

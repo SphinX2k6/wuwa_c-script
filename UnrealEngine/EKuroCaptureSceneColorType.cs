@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002687 RID: 9863
+	// Token: 0x020007BF RID: 1983
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Renderer.EKuroCaptureSceneColorType")]
 	public enum EKuroCaptureSceneColorType : byte
 	{
-		// Token: 0x04013AF8 RID: 80632
+		// Token: 0x040049D8 RID: 18904
 		KCSCT_Default,
-		// Token: 0x04013AF9 RID: 80633
+		// Token: 0x040049D9 RID: 18905
 		KCSCT_ShouAnRen,
-		// Token: 0x04013AFA RID: 80634
+		// Token: 0x040049DA RID: 18906
 		KCSCT_Chun,
-		// Token: 0x04013AFB RID: 80635
+		// Token: 0x040049DB RID: 18907
 		KCSCT_Tideng,
-		// Token: 0x04013AFC RID: 80636
+		// Token: 0x040049DC RID: 18908
 		KCSCT_MAX
 	}
 }

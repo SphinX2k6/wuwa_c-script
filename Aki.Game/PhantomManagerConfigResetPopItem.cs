@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002431 RID: 9265
+// Token: 0x02001916 RID: 6422
 public class PhantomManagerConfigResetPopItem : UiViewBase
 {
-	// Token: 0x06012947 RID: 76103 RVA: 0x00494CFE File Offset: 0x00492EFE
+	// Token: 0x0600FDFD RID: 65021 RVA: 0x004A22CA File Offset: 0x004A04CA
 	[NullableContext(1)]
 	public PhantomManagerConfigResetPopItem(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012948 RID: 76104 RVA: 0x00494D08 File Offset: 0x00492F08
+	// Token: 0x0600FDFE RID: 65022 RVA: 0x004A22D4 File Offset: 0x004A04D4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -46,34 +46,34 @@ public class PhantomManagerConfigResetPopItem : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012949 RID: 76105 RVA: 0x00494E59 File Offset: 0x00493059
+	// Token: 0x0600FDFF RID: 65023 RVA: 0x004A2425 File Offset: 0x004A0625
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(2).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		this.OnSuccessCb = (this.OpenParam as Action);
 	}
 
-	// Token: 0x0601294A RID: 76106 RVA: 0x00494E7D File Offset: 0x0049307D
+	// Token: 0x0600FE00 RID: 65024 RVA: 0x004A2449 File Offset: 0x004A0649
 	private void OnClickedReset1(EToggleState state)
 	{
 		base.GetExtendToggle(3).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		this.CurrentSelectId = 0;
 	}
 
-	// Token: 0x0601294B RID: 76107 RVA: 0x00494E97 File Offset: 0x00493097
+	// Token: 0x0600FE01 RID: 65025 RVA: 0x004A2463 File Offset: 0x004A0663
 	private void OnClickedReset2(EToggleState state)
 	{
 		base.GetExtendToggle(2).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		this.CurrentSelectId = 1;
 	}
 
-	// Token: 0x0601294C RID: 76108 RVA: 0x00494EB1 File Offset: 0x004930B1
+	// Token: 0x0600FE02 RID: 65026 RVA: 0x004A247D File Offset: 0x004A067D
 	private void OnClickedCancel()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601294D RID: 76109 RVA: 0x00494EBA File Offset: 0x004930BA
+	// Token: 0x0600FE03 RID: 65027 RVA: 0x004A2486 File Offset: 0x004A0686
 	private void OnClickedConfirm()
 	{
 		PhantomBattleModel.Instance.GetPhantomConfigData().ResetAllFetterOpen(this.CurrentSelectId == 1).ContinueWith(delegate(bool value)
@@ -91,23 +91,23 @@ public class PhantomManagerConfigResetPopItem : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x04008C03 RID: 35843
+	// Token: 0x04008D4A RID: 36170
 	private int CurrentSelectId;
 
-	// Token: 0x04008C04 RID: 35844
+	// Token: 0x04008D4B RID: 36171
 	[Nullable(2)]
 	private Action OnSuccessCb;
 
-	// Token: 0x020089B3 RID: 35251
+	// Token: 0x02007B3A RID: 31546
 	private enum EDefine
 	{
-		// Token: 0x0402CBE8 RID: 183272
+		// Token: 0x04027EFE RID: 163582
 		BtnCancel,
-		// Token: 0x0402CBE9 RID: 183273
+		// Token: 0x04027EFF RID: 163583
 		BtnConfirm,
-		// Token: 0x0402CBEA RID: 183274
+		// Token: 0x04027F00 RID: 163584
 		ResetToggle1,
-		// Token: 0x0402CBEB RID: 183275
+		// Token: 0x04027F01 RID: 163585
 		ResetToggle2
 	}
 }

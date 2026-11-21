@@ -2,19 +2,19 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DCB RID: 11723
+// Token: 0x02002325 RID: 8997
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletLogicController<[Nullable(0)] T, TParam> : BulletLogicControllerBase where T : UKuroBpDataAsset
 {
-	// Token: 0x06018A01 RID: 100865 RVA: 0x0064BF02 File Offset: 0x0064A102
+	// Token: 0x060162A9 RID: 90793 RVA: 0x00671CE6 File Offset: 0x0066FEE6
 	[NullableContext(1)]
 	protected BulletLogicController(T logicController, Entity bullet) : base(bullet)
 	{
 		this.LogicController = logicController;
 	}
 
-	// Token: 0x06018A02 RID: 100866 RVA: 0x0064BF14 File Offset: 0x0064A114
+	// Token: 0x060162AA RID: 90794 RVA: 0x00671CF8 File Offset: 0x0066FEF8
 	public override void BulletLogicActionFromBase(object param = null)
 	{
 		TParam param2;
@@ -30,12 +30,12 @@ public class BulletLogicController<[Nullable(0)] T, TParam> : BulletLogicControl
 		this.BulletLogicAction(param2);
 	}
 
-	// Token: 0x06018A03 RID: 100867 RVA: 0x0064BF44 File Offset: 0x0064A144
+	// Token: 0x060162AB RID: 90795 RVA: 0x00671D28 File Offset: 0x0066FF28
 	public virtual void BulletLogicAction(TParam param = default(TParam))
 	{
 	}
 
-	// Token: 0x06018A04 RID: 100868 RVA: 0x0064BF48 File Offset: 0x0064A148
+	// Token: 0x060162AC RID: 90796 RVA: 0x00671D2C File Offset: 0x0066FF2C
 	public override void BulletLogicActionOnHitObstaclesFromBase(object param = null)
 	{
 		TParam param2;
@@ -51,12 +51,12 @@ public class BulletLogicController<[Nullable(0)] T, TParam> : BulletLogicControl
 		this.BulletLogicActionOnHitObstacles(param2);
 	}
 
-	// Token: 0x06018A05 RID: 100869 RVA: 0x0064BF78 File Offset: 0x0064A178
+	// Token: 0x060162AD RID: 90797 RVA: 0x00671D5C File Offset: 0x0066FF5C
 	public virtual void BulletLogicActionOnHitObstacles(TParam param = default(TParam))
 	{
 	}
 
-	// Token: 0x0400B74F RID: 46927
+	// Token: 0x0400BACA RID: 47818
 	[Nullable(1)]
 	protected T LogicController;
 }

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000BA RID: 186
+// Token: 0x020000BC RID: 188
 [NullableContext(1)]
 public interface ILoadModeHandler
 {
-	// Token: 0x060005D4 RID: 1492
+	// Token: 0x06000615 RID: 1557
 	void EnterMode(UObject worldContext);
 
-	// Token: 0x060005D5 RID: 1493
+	// Token: 0x06000616 RID: 1558
 	void ExitMode(UObject worldContext);
 }

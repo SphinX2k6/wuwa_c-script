@@ -4,13 +4,13 @@ using CSharpScript.Game.Module.PhantomArena.Battle.View;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x02005241 RID: 21057
+	// Token: 0x02004211 RID: 16913
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRoundOverCheck
 	{
-		// Token: 0x17008253 RID: 33363
-		// (get) Token: 0x06035C9D RID: 220317 RVA: 0x00CBA0D6 File Offset: 0x00CB82D6
+		// Token: 0x17005613 RID: 22035
+		// (get) Token: 0x0602AB98 RID: 175000 RVA: 0x00C07716 File Offset: 0x00C05916
 		public bool HasAnyOperation
 		{
 			get
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			}
 		}
 
-		// Token: 0x06035C9E RID: 220318 RVA: 0x00CBA0E0 File Offset: 0x00CB82E0
+		// Token: 0x0602AB99 RID: 175001 RVA: 0x00C07720 File Offset: 0x00C05920
 		public PhantomArenaRoundOverCheck(PhantomArenaBattleProxy proxy)
 		{
 			this.Proxy = proxy;
@@ -27,12 +27,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			this.DelayTime = phantomArenaRoundOverCheck * 1000;
 		}
 
-		// Token: 0x17008254 RID: 33364
-		// (get) Token: 0x06035C9F RID: 220319 RVA: 0x00CBA119 File Offset: 0x00CB8319
-		// (set) Token: 0x06035CA0 RID: 220320 RVA: 0x00CBA121 File Offset: 0x00CB8321
+		// Token: 0x17005614 RID: 22036
+		// (get) Token: 0x0602AB9A RID: 175002 RVA: 0x00C07759 File Offset: 0x00C05959
+		// (set) Token: 0x0602AB9B RID: 175003 RVA: 0x00C07761 File Offset: 0x00C05961
 		private protected PhantomArenaBattleProxy Proxy { protected get; private set; }
 
-		// Token: 0x06035CA1 RID: 220321 RVA: 0x00CBA12A File Offset: 0x00CB832A
+		// Token: 0x0602AB9C RID: 175004 RVA: 0x00C0776A File Offset: 0x00C0596A
 		private void RemoveTimer()
 		{
 			if (this.TimerHandle != null)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			}
 		}
 
-		// Token: 0x06035CA2 RID: 220322 RVA: 0x00CBA14C File Offset: 0x00CB834C
+		// Token: 0x0602AB9D RID: 175005 RVA: 0x00C0778C File Offset: 0x00C0598C
 		private void AddTimer()
 		{
 			this.HasAnyOperationInternal = true;
@@ -61,33 +61,33 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "PhantomArenaRoundOverCheck检测无操作条件不满足", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06035CA3 RID: 220323 RVA: 0x00CBA1E2 File Offset: 0x00CB83E2
+		// Token: 0x0602AB9E RID: 175006 RVA: 0x00C07822 File Offset: 0x00C05A22
 		public void StartCheck()
 		{
 			this.AddTimer();
 		}
 
-		// Token: 0x06035CA4 RID: 220324 RVA: 0x00CBA1EA File Offset: 0x00CB83EA
+		// Token: 0x0602AB9F RID: 175007 RVA: 0x00C0782A File Offset: 0x00C05A2A
 		public void RepeatCheck()
 		{
 			this.RemoveTimer();
 			this.AddTimer();
 		}
 
-		// Token: 0x06035CA5 RID: 220325 RVA: 0x00CBA1F8 File Offset: 0x00CB83F8
+		// Token: 0x0602ABA0 RID: 175008 RVA: 0x00C07838 File Offset: 0x00C05A38
 		public void Clear()
 		{
 			this.HasAnyOperationInternal = false;
 			this.RemoveTimer();
 		}
 
-		// Token: 0x0401C856 RID: 116822
+		// Token: 0x0401728B RID: 94859
 		protected bool HasAnyOperationInternal = true;
 
-		// Token: 0x0401C857 RID: 116823
+		// Token: 0x0401728C RID: 94860
 		protected int DelayTime;
 
-		// Token: 0x0401C858 RID: 116824
+		// Token: 0x0401728D RID: 94861
 		protected TimerHandle TimerHandle;
 	}
 }

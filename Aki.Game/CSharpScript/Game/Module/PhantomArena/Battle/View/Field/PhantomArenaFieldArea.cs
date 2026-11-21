@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 {
-	// Token: 0x02005260 RID: 21088
+	// Token: 0x02004230 RID: 16944
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaFieldArea : UiPanelBase
 	{
-		// Token: 0x06035E8C RID: 220812 RVA: 0x00CC1B5C File Offset: 0x00CBFD5C
+		// Token: 0x0602AD87 RID: 175495 RVA: 0x00C0F1EC File Offset: 0x00C0D3EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			};
 		}
 
-		// Token: 0x06035E8D RID: 220813 RVA: 0x00CC1C24 File Offset: 0x00CBFE24
+		// Token: 0x0602AD88 RID: 175496 RVA: 0x00C0F2B4 File Offset: 0x00C0D4B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaFieldArea.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,26 +41,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E8E RID: 220814 RVA: 0x00CC1C67 File Offset: 0x00CBFE67
+		// Token: 0x0602AD89 RID: 175497 RVA: 0x00C0F2F7 File Offset: 0x00C0D4F7
 		private void FieldPointerEnter(PhantomArenaFieldData fieldData, UUIItem attachItem)
 		{
 			this.ViewProxy.FieldPointerEnter(fieldData, attachItem, false);
 		}
 
-		// Token: 0x06035E8F RID: 220815 RVA: 0x00CC1C77 File Offset: 0x00CBFE77
+		// Token: 0x0602AD8A RID: 175498 RVA: 0x00C0F307 File Offset: 0x00C0D507
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEndEvent));
 		}
 
-		// Token: 0x06035E90 RID: 220816 RVA: 0x00CC1CA1 File Offset: 0x00CBFEA1
+		// Token: 0x0602AD8B RID: 175499 RVA: 0x00C0F331 File Offset: 0x00C0D531
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035E91 RID: 220817 RVA: 0x00CC1CAE File Offset: 0x00CBFEAE
+		// Token: 0x0602AD8C RID: 175500 RVA: 0x00C0F33E File Offset: 0x00C0D53E
 		private void OnSequenceEndEvent(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			}
 		}
 
-		// Token: 0x06035E92 RID: 220818 RVA: 0x00CC1CCC File Offset: 0x00CBFECC
+		// Token: 0x0602AD8D RID: 175501 RVA: 0x00C0F35C File Offset: 0x00C0D55C
 		private void RefreshNiagaraState()
 		{
 			if (this.FieldData.CardData != null)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			}
 		}
 
-		// Token: 0x06035E93 RID: 220819 RVA: 0x00CC1D48 File Offset: 0x00CBFF48
+		// Token: 0x0602AD8E RID: 175502 RVA: 0x00C0F3D8 File Offset: 0x00C0D5D8
 		private UniTask RefreshTexState()
 		{
 			PhantomArenaFieldArea.<RefreshTexState>d__12 <RefreshTexState>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshTexState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E94 RID: 220820 RVA: 0x00CC1D8C File Offset: 0x00CBFF8C
+		// Token: 0x0602AD8F RID: 175503 RVA: 0x00C0F41C File Offset: 0x00C0D61C
 		private UniTask PlayReleaseSequence()
 		{
 			PhantomArenaFieldArea.<PlayReleaseSequence>d__13 <PlayReleaseSequence>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <PlayReleaseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E95 RID: 220821 RVA: 0x00CC1DD0 File Offset: 0x00CBFFD0
+		// Token: 0x0602AD90 RID: 175504 RVA: 0x00C0F460 File Offset: 0x00C0D660
 		public UniTask Refresh(PhantomArenaFieldData filedData)
 		{
 			PhantomArenaFieldArea.<Refresh>d__14 <Refresh>d__;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E96 RID: 220822 RVA: 0x00CC1E1C File Offset: 0x00CC001C
+		// Token: 0x0602AD91 RID: 175505 RVA: 0x00C0F4AC File Offset: 0x00C0D6AC
 		public UniTask RefreshSelf()
 		{
 			PhantomArenaFieldArea.<RefreshSelf>d__15 <RefreshSelf>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshSelf>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E97 RID: 220823 RVA: 0x00CC1E60 File Offset: 0x00CC0060
+		// Token: 0x0602AD92 RID: 175506 RVA: 0x00C0F4F0 File Offset: 0x00C0D6F0
 		public UniTask TriggerSkill()
 		{
 			PhantomArenaFieldArea.<TriggerSkill>d__16 <TriggerSkill>d__;
@@ -143,19 +143,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <TriggerSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E98 RID: 220824 RVA: 0x00CC1EA3 File Offset: 0x00CC00A3
+		// Token: 0x0602AD93 RID: 175507 RVA: 0x00C0F533 File Offset: 0x00C0D733
 		public void ResetSkillTrigger()
 		{
 			this.FieldItem.ResetSkill();
 		}
 
-		// Token: 0x06035E99 RID: 220825 RVA: 0x00CC1EB0 File Offset: 0x00CC00B0
+		// Token: 0x0602AD94 RID: 175508 RVA: 0x00C0F540 File Offset: 0x00C0D740
 		public void RegisterViewProxy(PhantomArenaBattleProxy proxy)
 		{
 			this.ViewProxy = proxy;
 		}
 
-		// Token: 0x06035E9A RID: 220826 RVA: 0x00CC1EBC File Offset: 0x00CC00BC
+		// Token: 0x0602AD95 RID: 175509 RVA: 0x00C0F54C File Offset: 0x00C0D74C
 		public void SwitchFieldState(bool active)
 		{
 			if (this.FieldData.CardData != null && active)
@@ -167,44 +167,44 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			this.Sequence.PlaySequence("Close", false, null);
 		}
 
-		// Token: 0x0401C8F1 RID: 116977
+		// Token: 0x04017326 RID: 95014
 		public PhantomArenaBattleProxy ViewProxy;
 
-		// Token: 0x0401C8F2 RID: 116978
+		// Token: 0x04017327 RID: 95015
 		protected PhantomArenaFieldItem FieldItem;
 
-		// Token: 0x0401C8F3 RID: 116979
+		// Token: 0x04017328 RID: 95016
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C8F4 RID: 116980
+		// Token: 0x04017329 RID: 95017
 		protected PhantomArenaFieldData FieldData;
 
-		// Token: 0x0200B43A RID: 46138
+		// Token: 0x02009E72 RID: 40562
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040369B5 RID: 223669
+			// Token: 0x04031408 RID: 201736
 			public const int FieldItem = 0;
 
-			// Token: 0x040369B6 RID: 223670
+			// Token: 0x04031409 RID: 201737
 			public const int SkillName = 1;
 
-			// Token: 0x040369B7 RID: 223671
+			// Token: 0x0403140A RID: 201738
 			public const int NiagaraLight = 2;
 
-			// Token: 0x040369B8 RID: 223672
+			// Token: 0x0403140B RID: 201739
 			public const int NiagaraRelease = 3;
 
-			// Token: 0x040369B9 RID: 223673
+			// Token: 0x0403140C RID: 201740
 			public const int TextRelease = 4;
 
-			// Token: 0x040369BA RID: 223674
+			// Token: 0x0403140D RID: 201741
 			public const int TexBg = 5;
 
-			// Token: 0x040369BB RID: 223675
+			// Token: 0x0403140E RID: 201742
 			public const int TexIcon = 6;
 
-			// Token: 0x040369BC RID: 223676
+			// Token: 0x0403140F RID: 201743
 			public const int TexSmoke = 7;
 		}
 	}

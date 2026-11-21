@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004875 RID: 18549
+	// Token: 0x020037EC RID: 14316
 	internal class ChatItem : UiPanelBase
 	{
-		// Token: 0x060308AD RID: 198829 RVA: 0x00B45E7C File Offset: 0x00B4407C
+		// Token: 0x060253D9 RID: 152537 RVA: 0x00A80C18 File Offset: 0x00A7EE18
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x060308AE RID: 198830 RVA: 0x00B45EB5 File Offset: 0x00B440B5
+		// Token: 0x060253DA RID: 152538 RVA: 0x00A80C51 File Offset: 0x00A7EE51
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060308AF RID: 198831 RVA: 0x00B45EC8 File Offset: 0x00B440C8
+		// Token: 0x060253DB RID: 152539 RVA: 0x00A80C64 File Offset: 0x00A7EE64
 		[NullableContext(1)]
 		public void Refresh(IVillageInfrChat data)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetText(1).ShowTextNew(data.Chat);
 		}
 
-		// Token: 0x060308B0 RID: 198832 RVA: 0x00B45F04 File Offset: 0x00B44104
+		// Token: 0x060253DC RID: 152540 RVA: 0x00A80CA0 File Offset: 0x00A7EEA0
 		public void SetShow(bool visible, bool needAnimation = true)
 		{
 			this.RootItem.SetUIActive(visible);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x0401A132 RID: 106802
+		// Token: 0x040149A5 RID: 84389
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 	}

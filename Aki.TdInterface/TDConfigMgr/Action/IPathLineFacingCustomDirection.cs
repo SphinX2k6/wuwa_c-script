@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CC4 RID: 7364
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ECB RID: 7883
 	public class IPathLineFacingCustomDirection : IPathLineFacingType
 	{
-		// Token: 0x06009E15 RID: 40469 RVA: 0x00169B50 File Offset: 0x00167D50
+		// Token: 0x0600A7C3 RID: 42947 RVA: 0x0017D7B0 File Offset: 0x0017B9B0
 		private IPathLineFacingCustomDirection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E16 RID: 40470 RVA: 0x00169B88 File Offset: 0x00167D88
+		// Token: 0x0600A7C4 RID: 42948 RVA: 0x0017D7E8 File Offset: 0x0017B9E8
 		public static IPathLineFacingCustomDirection Create([Nullable(2)] IPathLineFacingCustomDirection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E17 RID: 40471 RVA: 0x00169B9B File Offset: 0x00167D9B
+		// Token: 0x0600A7C5 RID: 42949 RVA: 0x0017D7FB File Offset: 0x0017B9FB
 		public static IPathLineFacingCustomDirection CreateFromSetValue([Nullable(2)] IPathLineFacingCustomDirection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E18 RID: 40472 RVA: 0x00169BAE File Offset: 0x00167DAE
+		// Token: 0x0600A7C6 RID: 42950 RVA: 0x0017D80E File Offset: 0x0017BA0E
 		public new IPathLineFacingCustomDirection_SetValue ToSetValue()
 		{
 			return new IPathLineFacingCustomDirection_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700313B RID: 12603
-		// (get) Token: 0x06009E19 RID: 40473 RVA: 0x00169BCD File Offset: 0x00167DCD
-		// (set) Token: 0x06009E1A RID: 40474 RVA: 0x00169BF8 File Offset: 0x00167DF8
+		// Token: 0x170033BF RID: 13247
+		// (get) Token: 0x0600A7C7 RID: 42951 RVA: 0x0017D82D File Offset: 0x0017BA2D
+		// (set) Token: 0x0600A7C8 RID: 42952 RVA: 0x0017D858 File Offset: 0x0017BA58
 		public override EPathLineFacingType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700313C RID: 12604
-		// (get) Token: 0x06009E1B RID: 40475 RVA: 0x00169C06 File Offset: 0x00167E06
-		// (set) Token: 0x06009E1C RID: 40476 RVA: 0x00169C35 File Offset: 0x00167E35
+		// Token: 0x170033C0 RID: 13248
+		// (get) Token: 0x0600A7C9 RID: 42953 RVA: 0x0017D866 File Offset: 0x0017BA66
+		// (set) Token: 0x0600A7CA RID: 42954 RVA: 0x0017D895 File Offset: 0x0017BA95
 		public virtual float Yaw
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F98 RID: 24472
+		// Token: 0x040064F4 RID: 25844
 		[Nullable(2)]
 		protected new IPathLineFacingCustomDirection FbInstance;
 
-		// Token: 0x04005F99 RID: 24473
+		// Token: 0x040064F5 RID: 25845
 		[Nullable(2)]
 		protected new IPathLineFacingCustomDirection_SetValue PocoInterface;
 	}

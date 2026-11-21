@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200488D RID: 18573
+	// Token: 0x02004CF2 RID: 19698
 	public class INodeBreakPointT
 	{
-		// Token: 0x170086B5 RID: 34485
-		// (get) Token: 0x0601CFAE RID: 118702 RVA: 0x00418532 File Offset: 0x00416732
-		// (set) Token: 0x0601CFAF RID: 118703 RVA: 0x0041853A File Offset: 0x0041673A
+		// Token: 0x17008CFD RID: 36093
+		// (get) Token: 0x0601E79B RID: 124827 RVA: 0x00444CCE File Offset: 0x00442ECE
+		// (set) Token: 0x0601E79C RID: 124828 RVA: 0x00444CD6 File Offset: 0x00442ED6
 		public bool Before { get; set; }
 
-		// Token: 0x170086B6 RID: 34486
-		// (get) Token: 0x0601CFB0 RID: 118704 RVA: 0x00418543 File Offset: 0x00416743
-		// (set) Token: 0x0601CFB1 RID: 118705 RVA: 0x0041854B File Offset: 0x0041674B
+		// Token: 0x17008CFE RID: 36094
+		// (get) Token: 0x0601E79D RID: 124829 RVA: 0x00444CDF File Offset: 0x00442EDF
+		// (set) Token: 0x0601E79E RID: 124830 RVA: 0x00444CE7 File Offset: 0x00442EE7
 		public bool After { get; set; }
 
-		// Token: 0x170086B7 RID: 34487
-		// (get) Token: 0x0601CFB2 RID: 118706 RVA: 0x00418554 File Offset: 0x00416754
-		// (set) Token: 0x0601CFB3 RID: 118707 RVA: 0x0041855C File Offset: 0x0041675C
+		// Token: 0x17008CFF RID: 36095
+		// (get) Token: 0x0601E79F RID: 124831 RVA: 0x00444CF0 File Offset: 0x00442EF0
+		// (set) Token: 0x0601E7A0 RID: 124832 RVA: 0x00444CF8 File Offset: 0x00442EF8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601CFB4 RID: 118708 RVA: 0x00418565 File Offset: 0x00416765
+		// Token: 0x0601E7A1 RID: 124833 RVA: 0x00444D01 File Offset: 0x00442F01
 		public INodeBreakPointT()
 		{
 			this.Before = false;

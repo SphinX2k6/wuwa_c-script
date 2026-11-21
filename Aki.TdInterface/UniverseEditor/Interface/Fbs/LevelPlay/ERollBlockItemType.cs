@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004430 RID: 17456
+	// Token: 0x02004898 RID: 18584
 	public enum ERollBlockItemType : byte
 	{
-		// Token: 0x0400C3F1 RID: 50161
+		// Token: 0x0400CE1F RID: 52767
 		BreakableObstacle,
-		// Token: 0x0400C3F2 RID: 50162
+		// Token: 0x0400CE20 RID: 52768
 		QuantumObstacle,
-		// Token: 0x0400C3F3 RID: 50163
+		// Token: 0x0400CE21 RID: 52769
 		LaserEmitter
 	}
 }

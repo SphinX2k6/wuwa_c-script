@@ -4,75 +4,75 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200697D RID: 27005
+	// Token: 0x02005AD9 RID: 23257
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpawnDestructibleActorWithTrackCapability
 	{
-		// Token: 0x1700982B RID: 38955
-		// (get) Token: 0x06043366 RID: 275302 RVA: 0x0106259B File Offset: 0x0106079B
-		// (set) Token: 0x06043367 RID: 275303 RVA: 0x010625A3 File Offset: 0x010607A3
+		// Token: 0x17006D0B RID: 27915
+		// (get) Token: 0x0603939E RID: 234398 RVA: 0x01006803 File Offset: 0x01004A03
+		// (set) Token: 0x0603939F RID: 234399 RVA: 0x0100680B File Offset: 0x01004A0B
 		public string KuroDestructibleAsset { get; set; }
 
-		// Token: 0x1700982C RID: 38956
-		// (get) Token: 0x06043368 RID: 275304 RVA: 0x010625AC File Offset: 0x010607AC
-		// (set) Token: 0x06043369 RID: 275305 RVA: 0x010625B4 File Offset: 0x010607B4
+		// Token: 0x17006D0C RID: 27916
+		// (get) Token: 0x060393A0 RID: 234400 RVA: 0x01006814 File Offset: 0x01004A14
+		// (set) Token: 0x060393A1 RID: 234401 RVA: 0x0100681C File Offset: 0x01004A1C
 		public string KuroDestructibleDestructionAsset { get; set; }
 
-		// Token: 0x1700982D RID: 38957
-		// (get) Token: 0x0604336A RID: 275306 RVA: 0x010625BD File Offset: 0x010607BD
-		// (set) Token: 0x0604336B RID: 275307 RVA: 0x010625C5 File Offset: 0x010607C5
+		// Token: 0x17006D0D RID: 27917
+		// (get) Token: 0x060393A2 RID: 234402 RVA: 0x01006825 File Offset: 0x01004A25
+		// (set) Token: 0x060393A3 RID: 234403 RVA: 0x0100682D File Offset: 0x01004A2D
 		public FTransformDouble StartTransform { get; set; }
 
-		// Token: 0x1700982E RID: 38958
-		// (get) Token: 0x0604336C RID: 275308 RVA: 0x010625CE File Offset: 0x010607CE
-		// (set) Token: 0x0604336D RID: 275309 RVA: 0x010625D6 File Offset: 0x010607D6
+		// Token: 0x17006D0E RID: 27918
+		// (get) Token: 0x060393A4 RID: 234404 RVA: 0x01006836 File Offset: 0x01004A36
+		// (set) Token: 0x060393A5 RID: 234405 RVA: 0x0100683E File Offset: 0x01004A3E
 		public float TrackSpeed { get; set; }
 
-		// Token: 0x1700982F RID: 38959
-		// (get) Token: 0x0604336E RID: 275310 RVA: 0x010625DF File Offset: 0x010607DF
-		// (set) Token: 0x0604336F RID: 275311 RVA: 0x010625E7 File Offset: 0x010607E7
+		// Token: 0x17006D0F RID: 27919
+		// (get) Token: 0x060393A6 RID: 234406 RVA: 0x01006847 File Offset: 0x01004A47
+		// (set) Token: 0x060393A7 RID: 234407 RVA: 0x0100684F File Offset: 0x01004A4F
 		public ETrackMethod TrackMethod { get; set; }
 
-		// Token: 0x17009830 RID: 38960
-		// (get) Token: 0x06043370 RID: 275312 RVA: 0x010625F0 File Offset: 0x010607F0
-		// (set) Token: 0x06043371 RID: 275313 RVA: 0x010625F8 File Offset: 0x010607F8
+		// Token: 0x17006D10 RID: 27920
+		// (get) Token: 0x060393A8 RID: 234408 RVA: 0x01006858 File Offset: 0x01004A58
+		// (set) Token: 0x060393A9 RID: 234409 RVA: 0x01006860 File Offset: 0x01004A60
 		public float TrackPredictionFactor { get; set; }
 
-		// Token: 0x17009831 RID: 38961
-		// (get) Token: 0x06043372 RID: 275314 RVA: 0x01062601 File Offset: 0x01060801
-		// (set) Token: 0x06043373 RID: 275315 RVA: 0x01062609 File Offset: 0x01060809
+		// Token: 0x17006D11 RID: 27921
+		// (get) Token: 0x060393AA RID: 234410 RVA: 0x01006869 File Offset: 0x01004A69
+		// (set) Token: 0x060393AB RID: 234411 RVA: 0x01006871 File Offset: 0x01004A71
 		public float StopTrackTargetDistance { get; set; }
 
-		// Token: 0x17009832 RID: 38962
-		// (get) Token: 0x06043374 RID: 275316 RVA: 0x01062612 File Offset: 0x01060812
-		// (set) Token: 0x06043375 RID: 275317 RVA: 0x0106261A File Offset: 0x0106081A
+		// Token: 0x17006D12 RID: 27922
+		// (get) Token: 0x060393AC RID: 234412 RVA: 0x0100687A File Offset: 0x01004A7A
+		// (set) Token: 0x060393AD RID: 234413 RVA: 0x01006882 File Offset: 0x01004A82
 		[Nullable(2)]
 		public APawn TargetToTrack { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17009833 RID: 38963
-		// (get) Token: 0x06043376 RID: 275318 RVA: 0x01062623 File Offset: 0x01060823
-		// (set) Token: 0x06043377 RID: 275319 RVA: 0x0106262B File Offset: 0x0106082B
+		// Token: 0x17006D13 RID: 27923
+		// (get) Token: 0x060393AE RID: 234414 RVA: 0x0100688B File Offset: 0x01004A8B
+		// (set) Token: 0x060393AF RID: 234415 RVA: 0x01006893 File Offset: 0x01004A93
 		public FTransform ModelTransform { get; set; }
 
-		// Token: 0x17009834 RID: 38964
-		// (get) Token: 0x06043378 RID: 275320 RVA: 0x01062634 File Offset: 0x01060834
-		// (set) Token: 0x06043379 RID: 275321 RVA: 0x0106263C File Offset: 0x0106083C
+		// Token: 0x17006D14 RID: 27924
+		// (get) Token: 0x060393B0 RID: 234416 RVA: 0x0100689C File Offset: 0x01004A9C
+		// (set) Token: 0x060393B1 RID: 234417 RVA: 0x010068A4 File Offset: 0x01004AA4
 		public IFauxPhysicsRotateParam RotateParam { get; set; }
 
-		// Token: 0x17009835 RID: 38965
-		// (get) Token: 0x0604337A RID: 275322 RVA: 0x01062645 File Offset: 0x01060845
-		// (set) Token: 0x0604337B RID: 275323 RVA: 0x0106264D File Offset: 0x0106084D
+		// Token: 0x17006D15 RID: 27925
+		// (get) Token: 0x060393B2 RID: 234418 RVA: 0x010068AD File Offset: 0x01004AAD
+		// (set) Token: 0x060393B3 RID: 234419 RVA: 0x010068B5 File Offset: 0x01004AB5
 		public int DamageAmount { get; set; }
 
-		// Token: 0x17009836 RID: 38966
-		// (get) Token: 0x0604337C RID: 275324 RVA: 0x01062656 File Offset: 0x01060856
-		// (set) Token: 0x0604337D RID: 275325 RVA: 0x0106265E File Offset: 0x0106085E
+		// Token: 0x17006D16 RID: 27926
+		// (get) Token: 0x060393B4 RID: 234420 RVA: 0x010068BE File Offset: 0x01004ABE
+		// (set) Token: 0x060393B5 RID: 234421 RVA: 0x010068C6 File Offset: 0x01004AC6
 		public int? HitBuff { get; set; }
 
-		// Token: 0x17009837 RID: 38967
-		// (get) Token: 0x0604337E RID: 275326 RVA: 0x01062667 File Offset: 0x01060867
-		// (set) Token: 0x0604337F RID: 275327 RVA: 0x0106266F File Offset: 0x0106086F
+		// Token: 0x17006D17 RID: 27927
+		// (get) Token: 0x060393B6 RID: 234422 RVA: 0x010068CF File Offset: 0x01004ACF
+		// (set) Token: 0x060393B7 RID: 234423 RVA: 0x010068D7 File Offset: 0x01004AD7
 		public int? RevertMaxHp { get; set; }
 	}
 }

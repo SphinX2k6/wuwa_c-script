@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005EC1 RID: 24257
+	// Token: 0x02006504 RID: 25860
 	public class ICommonBtNodeBase_UnionUnion
 	{
-		// Token: 0x1700B53F RID: 46399
-		// (get) Token: 0x06029997 RID: 170391 RVA: 0x005B4D5A File Offset: 0x005B2F5A
-		// (set) Token: 0x06029998 RID: 170392 RVA: 0x005B4D62 File Offset: 0x005B2F62
+		// Token: 0x1700BEAA RID: 48810
+		// (get) Token: 0x0602C04B RID: 180299 RVA: 0x005FE23E File Offset: 0x005FC43E
+		// (set) Token: 0x0602C04C RID: 180300 RVA: 0x005FE246 File Offset: 0x005FC446
 		public ICommonBtNodeBase_Union Type { get; set; }
 
-		// Token: 0x1700B540 RID: 46400
-		// (get) Token: 0x06029999 RID: 170393 RVA: 0x005B4D6B File Offset: 0x005B2F6B
-		// (set) Token: 0x0602999A RID: 170394 RVA: 0x005B4D73 File Offset: 0x005B2F73
+		// Token: 0x1700BEAB RID: 48811
+		// (get) Token: 0x0602C04D RID: 180301 RVA: 0x005FE24F File Offset: 0x005FC44F
+		// (set) Token: 0x0602C04E RID: 180302 RVA: 0x005FE257 File Offset: 0x005FC457
 		public object Value { get; set; }
 
-		// Token: 0x0602999B RID: 170395 RVA: 0x005B4D7C File Offset: 0x005B2F7C
+		// Token: 0x0602C04F RID: 180303 RVA: 0x005FE260 File Offset: 0x005FC460
 		public ICommonBtNodeBase_UnionUnion()
 		{
 			this.Type = ICommonBtNodeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602999C RID: 170396 RVA: 0x005B4D92 File Offset: 0x005B2F92
+		// Token: 0x0602C050 RID: 180304 RVA: 0x005FE276 File Offset: 0x005FC476
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602999D RID: 170397 RVA: 0x005B4DA4 File Offset: 0x005B2FA4
+		// Token: 0x0602C051 RID: 180305 RVA: 0x005FE288 File Offset: 0x005FC488
 		public ICommonBtNodeBaseT AsICommonBtNodeBase()
 		{
 			return this.As<ICommonBtNodeBaseT>();
 		}
 
-		// Token: 0x0602999E RID: 170398 RVA: 0x005B4DAC File Offset: 0x005B2FAC
+		// Token: 0x0602C052 RID: 180306 RVA: 0x005FE290 File Offset: 0x005FC490
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtNodeBase(ICommonBtNodeBaseT _icommonbtnodebase)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x0602999F RID: 170399 RVA: 0x005B4DC1 File Offset: 0x005B2FC1
+		// Token: 0x0602C053 RID: 180307 RVA: 0x005FE2A5 File Offset: 0x005FC4A5
 		public ICommonBtStartT AsICommonBtStart()
 		{
 			return this.As<ICommonBtStartT>();
 		}
 
-		// Token: 0x060299A0 RID: 170400 RVA: 0x005B4DC9 File Offset: 0x005B2FC9
+		// Token: 0x0602C054 RID: 180308 RVA: 0x005FE2AD File Offset: 0x005FC4AD
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtStart(ICommonBtStartT _icommonbtstart)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x060299A1 RID: 170401 RVA: 0x005B4DDE File Offset: 0x005B2FDE
+		// Token: 0x0602C055 RID: 180309 RVA: 0x005FE2C2 File Offset: 0x005FC4C2
 		public ICommonBtSequenceT AsICommonBtSequence()
 		{
 			return this.As<ICommonBtSequenceT>();
 		}
 
-		// Token: 0x060299A2 RID: 170402 RVA: 0x005B4DE6 File Offset: 0x005B2FE6
+		// Token: 0x0602C056 RID: 180310 RVA: 0x005FE2CA File Offset: 0x005FC4CA
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtSequence(ICommonBtSequenceT _icommonbtsequence)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x060299A3 RID: 170403 RVA: 0x005B4DFB File Offset: 0x005B2FFB
+		// Token: 0x0602C057 RID: 180311 RVA: 0x005FE2DF File Offset: 0x005FC4DF
 		public ICommonBtSelectorT AsICommonBtSelector()
 		{
 			return this.As<ICommonBtSelectorT>();
 		}
 
-		// Token: 0x060299A4 RID: 170404 RVA: 0x005B4E03 File Offset: 0x005B3003
+		// Token: 0x0602C058 RID: 180312 RVA: 0x005FE2E7 File Offset: 0x005FC4E7
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtSelector(ICommonBtSelectorT _icommonbtselector)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x060299A5 RID: 170405 RVA: 0x005B4E18 File Offset: 0x005B3018
+		// Token: 0x0602C059 RID: 180313 RVA: 0x005FE2FC File Offset: 0x005FC4FC
 		public ICommonBtTaskT AsICommonBtTask()
 		{
 			return this.As<ICommonBtTaskT>();
 		}
 
-		// Token: 0x060299A6 RID: 170406 RVA: 0x005B4E20 File Offset: 0x005B3020
+		// Token: 0x0602C05A RID: 180314 RVA: 0x005FE304 File Offset: 0x005FC504
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtTask(ICommonBtTaskT _icommonbttask)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x060299A7 RID: 170407 RVA: 0x005B4E35 File Offset: 0x005B3035
+		// Token: 0x0602C05B RID: 180315 RVA: 0x005FE319 File Offset: 0x005FC519
 		public ICommonBtProbabilityT AsICommonBtProbability()
 		{
 			return this.As<ICommonBtProbabilityT>();
 		}
 
-		// Token: 0x060299A8 RID: 170408 RVA: 0x005B4E3D File Offset: 0x005B303D
+		// Token: 0x0602C05C RID: 180316 RVA: 0x005FE321 File Offset: 0x005FC521
 		public static ICommonBtNodeBase_UnionUnion FromICommonBtProbability(ICommonBtProbabilityT _icommonbtprobability)
 		{
 			return new ICommonBtNodeBase_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			};
 		}
 
-		// Token: 0x060299A9 RID: 170409 RVA: 0x005B4E54 File Offset: 0x005B3054
+		// Token: 0x0602C05D RID: 180317 RVA: 0x005FE338 File Offset: 0x005FC538
 		public static int Pack(FlatBufferBuilder builder, ICommonBtNodeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

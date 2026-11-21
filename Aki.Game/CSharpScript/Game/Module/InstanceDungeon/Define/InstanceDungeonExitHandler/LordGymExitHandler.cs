@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F2 RID: 22770
+	// Token: 0x020048CA RID: 18634
 	public class LordGymExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D1A RID: 236826 RVA: 0x00DBBBB4 File Offset: 0x00DB9DB4
+		// Token: 0x0602EC3D RID: 191549 RVA: 0x00D0AB18 File Offset: 0x00D08D18
 		public override bool Checker()
 		{
 			return LordGymController.Instance.IsInLordGymDungeon();
 		}
 
-		// Token: 0x06039D1B RID: 236827 RVA: 0x00DBBBC0 File Offset: 0x00DB9DC0
+		// Token: 0x0602EC3E RID: 191550 RVA: 0x00D0AB24 File Offset: 0x00D08D24
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06039D1C RID: 236828 RVA: 0x00DBBC50 File Offset: 0x00DB9E50
+		// Token: 0x0602EC3F RID: 191551 RVA: 0x00D0ABB4 File Offset: 0x00D08DB4
 		private void OpenDifficultySelectViewOnLeave()
 		{
 			ELordGymVersion? curLordGymVersion = this.GetCurLordGymVersion();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			UiManager.Instance.OpenView(difficultyViewInfo.Value.ViewName, param, null);
 		}
 
-		// Token: 0x06039D1D RID: 236829 RVA: 0x00DBBCEC File Offset: 0x00DB9EEC
+		// Token: 0x0602EC40 RID: 191552 RVA: 0x00D0AC50 File Offset: 0x00D08E50
 		private LordGymDifficultyViewInfo? GetDifficultyViewInfo(ELordGymVersion version)
 		{
 			switch (version)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			}
 		}
 
-		// Token: 0x06039D1E RID: 236830 RVA: 0x00DBBDBC File Offset: 0x00DB9FBC
+		// Token: 0x0602EC41 RID: 191553 RVA: 0x00D0AD20 File Offset: 0x00D08F20
 		private int GetCurLordGymEntranceId()
 		{
 			int currentChallengeLordGymId = LordGymModel.Instance.CurrentChallengeLordGymId;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return LordGymModel.Instance.EntranceEntityId;
 		}
 
-		// Token: 0x06039D1F RID: 236831 RVA: 0x00DBBDF4 File Offset: 0x00DB9FF4
+		// Token: 0x0602EC42 RID: 191554 RVA: 0x00D0AD58 File Offset: 0x00D08F58
 		private EConfirmBoxConfigId GetExitConfirmBoxId()
 		{
 			ELordGymVersion? curLordGymVersion = this.GetCurLordGymVersion();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return EConfirmBoxConfigId.LordGymExitConfirm;
 		}
 
-		// Token: 0x06039D20 RID: 236832 RVA: 0x00DBBE50 File Offset: 0x00DBA050
+		// Token: 0x0602EC43 RID: 191555 RVA: 0x00D0ADB4 File Offset: 0x00D08FB4
 		private ELordGymVersion? GetCurLordGymVersion()
 		{
 			int currentChallengeLordGymId = LordGymModel.Instance.CurrentChallengeLordGymId;

@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061DC RID: 25052
+	// Token: 0x0200515A RID: 20826
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoadBookPhantomTaskView : UiViewBase
 	{
-		// Token: 0x0603F409 RID: 259081 RVA: 0x00F489C0 File Offset: 0x00F46BC0
+		// Token: 0x060340CA RID: 213194 RVA: 0x00E8F918 File Offset: 0x00E8DB18
 		public RoadBookPhantomTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F40A RID: 259082 RVA: 0x00F489CC File Offset: 0x00F46BCC
+		// Token: 0x060340CB RID: 213195 RVA: 0x00E8F924 File Offset: 0x00E8DB24
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603F40B RID: 259083 RVA: 0x00F48A34 File Offset: 0x00F46C34
+		// Token: 0x060340CC RID: 213196 RVA: 0x00E8F98C File Offset: 0x00E8DB8C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoadBookPhantomTaskView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F40C RID: 259084 RVA: 0x00F48A78 File Offset: 0x00F46C78
+		// Token: 0x060340CD RID: 213197 RVA: 0x00E8F9D0 File Offset: 0x00E8DBD0
 		protected override void OnBeforeShow()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in this.ActivityBaseData.PhantomDataMap)
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F40D RID: 259085 RVA: 0x00F48AF0 File Offset: 0x00F46CF0
+		// Token: 0x060340CE RID: 213198 RVA: 0x00E8FA48 File Offset: 0x00E8DC48
 		private PhantomCardItem OnCreateItem()
 		{
 			return new PhantomCardItem(this.ActivityBaseData);
 		}
 
-		// Token: 0x0603F40E RID: 259086 RVA: 0x00F48B00 File Offset: 0x00F46D00
+		// Token: 0x060340CF RID: 213199 RVA: 0x00E8FA58 File Offset: 0x00E8DC58
 		protected UniTask Refresh()
 		{
 			RoadBookPhantomTaskView.<Refresh>d__9 <Refresh>d__;
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			return <Refresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F40F RID: 259087 RVA: 0x00F48B44 File Offset: 0x00F46D44
+		// Token: 0x060340D0 RID: 213200 RVA: 0x00E8FA9C File Offset: 0x00E8DC9C
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(this.ActivityBaseData.LocalConfig.Value.HelpId);
 		}
 
-		// Token: 0x0603F410 RID: 259088 RVA: 0x00F48B74 File Offset: 0x00F46D74
+		// Token: 0x060340D1 RID: 213201 RVA: 0x00E8FACC File Offset: 0x00E8DCCC
 		private void ScrollToCenter(int index)
 		{
 			UUIItem item = this.AreaLayoutList.GetItemByIndex(Math.Max(index, 0));
@@ -108,18 +108,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x04020FAE RID: 135086
+		// Token: 0x0401B8DD RID: 112861
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x04020FAF RID: 135087
+		// Token: 0x0401B8DE RID: 112862
 		private ActivityRoadBookData ActivityBaseData;
 
-		// Token: 0x04020FB0 RID: 135088
+		// Token: 0x0401B8DF RID: 112863
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04020FB1 RID: 135089
+		// Token: 0x0401B8E0 RID: 112864
 		private GenericScrollViewNew<PhantomCardItem, int> AreaLayoutList;
 	}
 }

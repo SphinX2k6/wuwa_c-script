@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 {
-	// Token: 0x02006DE7 RID: 28135
+	// Token: 0x02005F66 RID: 24422
 	public class AstrologyDotView : UiPanelBase
 	{
-		// Token: 0x06044A2B RID: 281131 RVA: 0x010F0472 File Offset: 0x010EE672
+		// Token: 0x0603AB8F RID: 240527 RVA: 0x0109A6BE File Offset: 0x010988BE
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,14 +19,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			};
 		}
 
-		// Token: 0x06044A2C RID: 281132 RVA: 0x010F04AB File Offset: 0x010EE6AB
+		// Token: 0x0603AB90 RID: 240528 RVA: 0x0109A6F7 File Offset: 0x010988F7
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.SequenceEnd));
 		}
 
-		// Token: 0x06044A2D RID: 281133 RVA: 0x010F04D5 File Offset: 0x010EE6D5
+		// Token: 0x0603AB91 RID: 240529 RVA: 0x0109A721 File Offset: 0x01098921
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06044A2E RID: 281134 RVA: 0x010F04EF File Offset: 0x010EE6EF
+		// Token: 0x0603AB92 RID: 240530 RVA: 0x0109A73B File Offset: 0x0109893B
 		[NullableContext(1)]
 		private void SequenceEnd(string sequenceName)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			}
 		}
 
-		// Token: 0x06044A2F RID: 281135 RVA: 0x010F0508 File Offset: 0x010EE708
+		// Token: 0x0603AB93 RID: 240531 RVA: 0x0109A754 File Offset: 0x01098954
 		public void SetDotActive(bool isActive, int? pointTagId = null)
 		{
 			if (isActive == this.IsActive)
@@ -67,36 +67,36 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View.Astrology
 			this.SequencePlayer.PlaySequencePurely("Close", false, false);
 		}
 
-		// Token: 0x06044A30 RID: 281136 RVA: 0x010F057B File Offset: 0x010EE77B
+		// Token: 0x0603AB94 RID: 240532 RVA: 0x0109A7C7 File Offset: 0x010989C7
 		public void SetChecked(bool isChecked)
 		{
 			base.GetItem(0).SetUIActive(!isChecked);
 			base.GetItem(1).SetUIActive(isChecked);
 		}
 
-		// Token: 0x06044A31 RID: 281137 RVA: 0x010F059A File Offset: 0x010EE79A
+		// Token: 0x0603AB95 RID: 240533 RVA: 0x0109A7E6 File Offset: 0x010989E6
 		public int? GetPointTagId()
 		{
 			return this.PointTagId;
 		}
 
-		// Token: 0x04023B3F RID: 146239
+		// Token: 0x0401EDE1 RID: 126433
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023B40 RID: 146240
+		// Token: 0x0401EDE2 RID: 126434
 		private bool IsActive;
 
-		// Token: 0x04023B41 RID: 146241
+		// Token: 0x0401EDE3 RID: 126435
 		private int? PointTagId;
 
-		// Token: 0x0200CCBC RID: 52412
+		// Token: 0x0200B8AC RID: 47276
 		private class EComponentType
 		{
-			// Token: 0x0403DBFD RID: 252925
+			// Token: 0x0403901F RID: 233503
 			public const int YellowItem = 0;
 
-			// Token: 0x0403DBFE RID: 252926
+			// Token: 0x04039020 RID: 233504
 			public const int WhiteItem = 1;
 		}
 	}

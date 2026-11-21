@@ -11,37 +11,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E1D RID: 19997
+	// Token: 0x02003DE6 RID: 15846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSelectRoleGrid : UiPanelBase, IDynamicScrollItem<RoguelikeSelectRoleData>
 	{
-		// Token: 0x06033941 RID: 211265 RVA: 0x00C0F820 File Offset: 0x00C0DA20
+		// Token: 0x060287AC RID: 165804 RVA: 0x00B58D58 File Offset: 0x00B56F58
 		public RoguelikeSelectRoleGrid(RoguelikeSelectRoleData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06033942 RID: 211266 RVA: 0x00C0F83A File Offset: 0x00C0DA3A
+		// Token: 0x060287AD RID: 165805 RVA: 0x00B58D72 File Offset: 0x00B56F72
 		public void BindSelectRoleCallBack(Action<RoleDataBase, int> selectCallback)
 		{
 			this.SelectRoleCallBack = selectCallback;
 		}
 
-		// Token: 0x06033943 RID: 211267 RVA: 0x00C0F843 File Offset: 0x00C0DA43
+		// Token: 0x060287AE RID: 165806 RVA: 0x00B58D7B File Offset: 0x00B56F7B
 		public AUIBaseActor GetUsingItem(RoguelikeSelectRoleData data)
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x06033944 RID: 211268 RVA: 0x00C0F855 File Offset: 0x00C0DA55
+		// Token: 0x060287AF RID: 165807 RVA: 0x00B58D8D File Offset: 0x00B56F8D
 		public void Update(RoguelikeSelectRoleData data, int index)
 		{
 			this.Data = data;
 			this.RefreshData().AsTask();
 		}
 
-		// Token: 0x06033945 RID: 211269 RVA: 0x00C0F86C File Offset: 0x00C0DA6C
+		// Token: 0x060287B0 RID: 165808 RVA: 0x00B58DA4 File Offset: 0x00B56FA4
 		public UniTask Init(UUIItem actor)
 		{
 			RoguelikeSelectRoleGrid.<Init>d__9 <Init>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033946 RID: 211270 RVA: 0x00C0F8B8 File Offset: 0x00C0DAB8
+		// Token: 0x060287B1 RID: 165809 RVA: 0x00B58DF0 File Offset: 0x00B56FF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033947 RID: 211271 RVA: 0x00C0F944 File Offset: 0x00C0DB44
+		// Token: 0x060287B2 RID: 165810 RVA: 0x00B58E7C File Offset: 0x00B5707C
 		public UniTask RefreshData()
 		{
 			RoguelikeSelectRoleGrid.<RefreshData>d__12 <RefreshData>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RefreshData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033948 RID: 211272 RVA: 0x00C0F988 File Offset: 0x00C0DB88
+		// Token: 0x060287B3 RID: 165811 RVA: 0x00B58EC0 File Offset: 0x00B570C0
 		private void SelectRole(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_UnChecked)
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033949 RID: 211273 RVA: 0x00C0FA50 File Offset: 0x00C0DC50
+		// Token: 0x060287B4 RID: 165812 RVA: 0x00B58F88 File Offset: 0x00B57188
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x0603394B RID: 211275 RVA: 0x00C0FA64 File Offset: 0x00C0DC64
+		// Token: 0x060287B6 RID: 165814 RVA: 0x00B58F9C File Offset: 0x00B5719C
 		[CompilerGenerated]
 		private void <RefreshData>g__UpdateFunc|12_0(RogueRoleSelectionItemGrid item, RoleDataBase data)
 		{
@@ -154,34 +154,34 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B5BA RID: 112058
+		// Token: 0x04015F8D RID: 89997
 		public List<RogueRoleSelectionItemGrid> RoleItemList = new List<RogueRoleSelectionItemGrid>();
 
-		// Token: 0x0401B5BB RID: 112059
+		// Token: 0x04015F8E RID: 89998
 		[StaticVariableRuleIgnore]
 		public static RogueRoleSelectionItemGrid CurSelectRoleItem;
 
-		// Token: 0x0401B5BC RID: 112060
+		// Token: 0x04015F8F RID: 89999
 		[StaticVariableRuleIgnore]
 		public static int CurSelectRoleId;
 
-		// Token: 0x0401B5BD RID: 112061
+		// Token: 0x04015F90 RID: 90000
 		public RoguelikeSelectRoleData Data;
 
-		// Token: 0x0401B5BE RID: 112062
+		// Token: 0x04015F91 RID: 90001
 		private Action<RoleDataBase, int> SelectRoleCallBack;
 
-		// Token: 0x0200AFBC RID: 44988
+		// Token: 0x020099EE RID: 39406
 		[NullableContext(0)]
 		private class ERoguelikeSelectRoleGridDefine
 		{
-			// Token: 0x04035593 RID: 218515
+			// Token: 0x0402FFC3 RID: 196547
 			public const int TxtTitle = 0;
 
-			// Token: 0x04035594 RID: 218516
+			// Token: 0x0402FFC4 RID: 196548
 			public const int ItemContainer = 1;
 
-			// Token: 0x04035595 RID: 218517
+			// Token: 0x0402FFC5 RID: 196549
 			public const int RoleItem = 2;
 		}
 	}

@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005912 RID: 22802
+	// Token: 0x020048EB RID: 18667
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureMainView : UiTickViewBase
 	{
-		// Token: 0x06039E6C RID: 237164 RVA: 0x00DC10C8 File Offset: 0x00DBF2C8
+		// Token: 0x0602ED8F RID: 191887 RVA: 0x00D103C8 File Offset: 0x00D0E5C8
 		public InfrastructureMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039E6D RID: 237165 RVA: 0x00DC1134 File Offset: 0x00DBF334
+		// Token: 0x0602ED90 RID: 191888 RVA: 0x00D10434 File Offset: 0x00D0E634
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E6E RID: 237166 RVA: 0x00DC1480 File Offset: 0x00DBF680
+		// Token: 0x0602ED91 RID: 191889 RVA: 0x00D10780 File Offset: 0x00D0E980
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<float>(EEventName.InfrastructureFireExpAdd, new Action<float>(this.OnFireExpAdd));
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnViewportSizeChanged));
 		}
 
-		// Token: 0x06039E6F RID: 237167 RVA: 0x00DC14FC File Offset: 0x00DBF6FC
+		// Token: 0x0602ED92 RID: 191890 RVA: 0x00D107FC File Offset: 0x00D0E9FC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.InfrastructureFireExpAdd, new Action<float>(this.OnFireExpAdd));
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnViewportSizeChanged));
 		}
 
-		// Token: 0x06039E70 RID: 237168 RVA: 0x00DC1578 File Offset: 0x00DBF778
+		// Token: 0x0602ED93 RID: 191891 RVA: 0x00D10878 File Offset: 0x00D0EA78
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureMainView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E71 RID: 237169 RVA: 0x00DC15BC File Offset: 0x00DBF7BC
+		// Token: 0x0602ED94 RID: 191892 RVA: 0x00D108BC File Offset: 0x00D0EABC
 		private UniTask CreateCaption()
 		{
 			InfrastructureMainView.<CreateCaption>d__17 <CreateCaption>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E72 RID: 237170 RVA: 0x00DC1600 File Offset: 0x00DBF800
+		// Token: 0x0602ED95 RID: 191893 RVA: 0x00D10900 File Offset: 0x00D0EB00
 		private UniTask CreateMissionItemLayout()
 		{
 			InfrastructureMainView.<CreateMissionItemLayout>d__18 <CreateMissionItemLayout>d__;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateMissionItemLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E73 RID: 237171 RVA: 0x00DC1644 File Offset: 0x00DBF844
+		// Token: 0x0602ED96 RID: 191894 RVA: 0x00D10944 File Offset: 0x00D0EB44
 		private UniTask CreateBuildTargetPanelAsync()
 		{
 			InfrastructureMainView.<CreateBuildTargetPanelAsync>d__19 <CreateBuildTargetPanelAsync>d__;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateBuildTargetPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E74 RID: 237172 RVA: 0x00DC1688 File Offset: 0x00DBF888
+		// Token: 0x0602ED97 RID: 191895 RVA: 0x00D10988 File Offset: 0x00D0EB88
 		private UniTask CreateFireExpPanel()
 		{
 			InfrastructureMainView.<CreateFireExpPanel>d__20 <CreateFireExpPanel>d__;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateFireExpPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E75 RID: 237173 RVA: 0x00DC16CC File Offset: 0x00DBF8CC
+		// Token: 0x0602ED98 RID: 191896 RVA: 0x00D109CC File Offset: 0x00D0EBCC
 		private UniTask RefreshCaption()
 		{
 			InfrastructureMainView.<RefreshCaption>d__21 <RefreshCaption>d__;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RefreshCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E76 RID: 237174 RVA: 0x00DC1710 File Offset: 0x00DBF910
+		// Token: 0x0602ED99 RID: 191897 RVA: 0x00D10A10 File Offset: 0x00D0EC10
 		private UniTask CreateLimitedRewardBtnAsync()
 		{
 			InfrastructureMainView.<CreateLimitedRewardBtnAsync>d__22 <CreateLimitedRewardBtnAsync>d__;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateLimitedRewardBtnAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E77 RID: 237175 RVA: 0x00DC1754 File Offset: 0x00DBF954
+		// Token: 0x0602ED9A RID: 191898 RVA: 0x00D10A54 File Offset: 0x00D0EC54
 		private UniTask CreateExchangeBtnAsync()
 		{
 			InfrastructureMainView.<CreateExchangeBtnAsync>d__23 <CreateExchangeBtnAsync>d__;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateExchangeBtnAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E78 RID: 237176 RVA: 0x00DC1798 File Offset: 0x00DBF998
+		// Token: 0x0602ED9B RID: 191899 RVA: 0x00D10A98 File Offset: 0x00D0EC98
 		private UniTask CreateArchiveBtnAsync()
 		{
 			InfrastructureMainView.<CreateArchiveBtnAsync>d__24 <CreateArchiveBtnAsync>d__;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <CreateArchiveBtnAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E79 RID: 237177 RVA: 0x00DC17DC File Offset: 0x00DBF9DC
+		// Token: 0x0602ED9C RID: 191900 RVA: 0x00D10ADC File Offset: 0x00D0ECDC
 		private UniTask LoadMaterialAsync()
 		{
 			InfrastructureMainView.<LoadMaterialAsync>d__25 <LoadMaterialAsync>d__;
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <LoadMaterialAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E7A RID: 237178 RVA: 0x00DC181F File Offset: 0x00DBFA1F
+		// Token: 0x0602ED9D RID: 191901 RVA: 0x00D10B1F File Offset: 0x00D0ED1F
 		private void CancelLoad()
 		{
 			if (this.HandleId != -1)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E7B RID: 237179 RVA: 0x00DC1841 File Offset: 0x00DBFA41
+		// Token: 0x0602ED9E RID: 191902 RVA: 0x00D10B41 File Offset: 0x00D0ED41
 		protected override void OnStart()
 		{
 			this.RefreshParam();
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshArchiveBtn();
 		}
 
-		// Token: 0x06039E7C RID: 237180 RVA: 0x00DC1864 File Offset: 0x00DBFA64
+		// Token: 0x0602ED9F RID: 191903 RVA: 0x00D10B64 File Offset: 0x00D0ED64
 		private void RefreshViewportSize()
 		{
 			float width = UiLayer.Instance.UiRootItem.GetWidth();
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			texture.SetWidth(width);
 		}
 
-		// Token: 0x06039E7D RID: 237181 RVA: 0x00DC18E0 File Offset: 0x00DBFAE0
+		// Token: 0x0602EDA0 RID: 191904 RVA: 0x00D10BE0 File Offset: 0x00D0EDE0
 		protected override void OnBeforeShow()
 		{
 			this.RefreshMission();
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshViewportSize();
 		}
 
-		// Token: 0x06039E7E RID: 237182 RVA: 0x00DC193C File Offset: 0x00DBFB3C
+		// Token: 0x0602EDA1 RID: 191905 RVA: 0x00D10C3C File Offset: 0x00D0EE3C
 		protected override void OnAfterShow()
 		{
 			InfrastructureModel.Instance.CloseLoadingPanel();
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E7F RID: 237183 RVA: 0x00DC19AF File Offset: 0x00DBFBAF
+		// Token: 0x0602EDA2 RID: 191906 RVA: 0x00D10CAF File Offset: 0x00D0EEAF
 		protected override void OnBeforeDestroy()
 		{
 			MediaPlayer mediaPlayer = this.MediaPlayer;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.CancelLoad();
 		}
 
-		// Token: 0x06039E80 RID: 237184 RVA: 0x00DC19D0 File Offset: 0x00DBFBD0
+		// Token: 0x0602EDA3 RID: 191907 RVA: 0x00D10CD0 File Offset: 0x00D0EED0
 		private void RefreshParam()
 		{
 			InfrastructureDefine.IInfrMainViewOpenParam infrMainViewOpenParam = this.OpenParam as InfrastructureDefine.IInfrMainViewOpenParam;
@@ -303,14 +303,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.NeedFocusBuildQuest = (infrMainViewOpenParam2 != null && infrMainViewOpenParam2.NeedFocusBuildQuest);
 		}
 
-		// Token: 0x06039E81 RID: 237185 RVA: 0x00DC1A27 File Offset: 0x00DBFC27
+		// Token: 0x0602EDA4 RID: 191908 RVA: 0x00D10D27 File Offset: 0x00D0EF27
 		private void RefreshSequence()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(base.GetItem(18));
 			this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x06039E82 RID: 237186 RVA: 0x00DC1A54 File Offset: 0x00DBFC54
+		// Token: 0x0602EDA5 RID: 191909 RVA: 0x00D10D54 File Offset: 0x00D0EF54
 		private void RefreshMission()
 		{
 			InfrastructureModel instance = InfrastructureModel.Instance;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetItem(22).SetUIActive(flag || flag3);
 		}
 
-		// Token: 0x06039E83 RID: 237187 RVA: 0x00DC1B50 File Offset: 0x00DBFD50
+		// Token: 0x0602EDA6 RID: 191910 RVA: 0x00D10E50 File Offset: 0x00D0F050
 		private void RefreshBuildProgress()
 		{
 			int fireLevel = InfrastructureModel.Instance.FireLevel;
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetSprite(11).SetFillAmount(num);
 		}
 
-		// Token: 0x06039E84 RID: 237188 RVA: 0x00DC1CB8 File Offset: 0x00DBFEB8
+		// Token: 0x0602EDA7 RID: 191911 RVA: 0x00D10FB8 File Offset: 0x00D0F1B8
 		private void RefreshLimitTask()
 		{
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.LimitedRewardBtn.BindRedDot(ERedDotName.InfrLimitedTask, 0);
 		}
 
-		// Token: 0x06039E85 RID: 237189 RVA: 0x00DC1DD4 File Offset: 0x00DBFFD4
+		// Token: 0x0602EDA8 RID: 191912 RVA: 0x00D110D4 File Offset: 0x00D0F2D4
 		private void RefreshShopBtn()
 		{
 			InfrastructureModel instance = InfrastructureModel.Instance;
@@ -422,13 +422,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ExchangeBtn.BindRedDot(ERedDotName.InfrShop, 0);
 		}
 
-		// Token: 0x06039E86 RID: 237190 RVA: 0x00DC1E3B File Offset: 0x00DC003B
+		// Token: 0x0602EDA9 RID: 191913 RVA: 0x00D1113B File Offset: 0x00D0F33B
 		private void RefreshArchiveBtn()
 		{
 			this.ArchiveBtn.BindRedDot(ERedDotName.InfrArchive, 0);
 		}
 
-		// Token: 0x06039E87 RID: 237191 RVA: 0x00DC1E4E File Offset: 0x00DC004E
+		// Token: 0x0602EDAA RID: 191914 RVA: 0x00D1114E File Offset: 0x00D0F34E
 		private void RefreshFireExp()
 		{
 			this.FireExpPanel.SetOnClickHelpCb(delegate
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			});
 		}
 
-		// Token: 0x06039E88 RID: 237192 RVA: 0x00DC1E7A File Offset: 0x00DC007A
+		// Token: 0x0602EDAB RID: 191915 RVA: 0x00D1117A File Offset: 0x00D0F37A
 		private void OnLimitedRewardClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrLimitTaskMainView, new InfrastructureDefine.InfrLimitTaskOpenParam
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x06039E89 RID: 237193 RVA: 0x00DC1E98 File Offset: 0x00DC0098
+		// Token: 0x0602EDAC RID: 191916 RVA: 0x00D11198 File Offset: 0x00D0F398
 		private void OnExchangeClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrastructureShopMainView, new InfrastructureDefine.InfrShopOpenParam
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x06039E8A RID: 237194 RVA: 0x00DC1EB6 File Offset: 0x00DC00B6
+		// Token: 0x0602EDAD RID: 191917 RVA: 0x00D111B6 File Offset: 0x00D0F3B6
 		private void OnArchiveClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrArchiveMainView, new InfrastructureDefine.InfrArchiveOpenParam
@@ -465,19 +465,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}, null);
 		}
 
-		// Token: 0x06039E8B RID: 237195 RVA: 0x00DC1ED4 File Offset: 0x00DC00D4
+		// Token: 0x0602EDAE RID: 191918 RVA: 0x00D111D4 File Offset: 0x00D0F3D4
 		private void OnFireExpAdd(float expAdded)
 		{
 			this.FireExpPanel.UpdateExp();
 		}
 
-		// Token: 0x06039E8C RID: 237196 RVA: 0x00DC1EE2 File Offset: 0x00DC00E2
+		// Token: 0x0602EDAF RID: 191919 RVA: 0x00D111E2 File Offset: 0x00D0F3E2
 		private void OnTerminalClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrRoadNetworkMainView, null, null);
 		}
 
-		// Token: 0x06039E8D RID: 237197 RVA: 0x00DC1EF5 File Offset: 0x00DC00F5
+		// Token: 0x0602EDB0 RID: 191920 RVA: 0x00D111F5 File Offset: 0x00D0F3F5
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Refresh" || sequenceName == "Completed")
@@ -486,19 +486,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E8E RID: 237198 RVA: 0x00DC1F31 File Offset: 0x00DC0131
+		// Token: 0x0602EDB1 RID: 191921 RVA: 0x00D11231 File Offset: 0x00D0F431
 		private void OnExchangeBtnRefresh(int goodsId, PayShopDefine.EPayShopTabType payShopId, int tabId)
 		{
 			this.RefreshShopBtn();
 		}
 
-		// Token: 0x06039E8F RID: 237199 RVA: 0x00DC1F39 File Offset: 0x00DC0139
+		// Token: 0x0602EDB2 RID: 191922 RVA: 0x00D11239 File Offset: 0x00D0F439
 		private void OnActivityTaskDataUpdate()
 		{
 			this.RefreshLimitTask();
 		}
 
-		// Token: 0x06039E90 RID: 237200 RVA: 0x00DC1F44 File Offset: 0x00DC0144
+		// Token: 0x0602EDB3 RID: 191923 RVA: 0x00D11244 File Offset: 0x00D0F444
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -531,116 +531,116 @@ namespace CSharpScript.Game.Module.Infrastructure
 			};
 		}
 
-		// Token: 0x06039E91 RID: 237201 RVA: 0x00DC1FA9 File Offset: 0x00DC01A9
+		// Token: 0x0602EDB4 RID: 191924 RVA: 0x00D112A9 File Offset: 0x00D0F4A9
 		private void OnViewportSizeChanged()
 		{
 			this.RefreshViewportSize();
 		}
 
-		// Token: 0x0401E323 RID: 123683
+		// Token: 0x04018DC0 RID: 101824
 		private readonly PopupCaptionItem ItemCaption = new PopupCaptionItem(null);
 
-		// Token: 0x0401E324 RID: 123684
+		// Token: 0x04018DC1 RID: 101825
 		private readonly InfrastructureMissionPanel MissionPanel = new InfrastructureMissionPanel();
 
-		// Token: 0x0401E325 RID: 123685
+		// Token: 0x04018DC2 RID: 101826
 		private readonly InfrastructureMissionPanel BuildTargetPanel = new InfrastructureMissionPanel();
 
-		// Token: 0x0401E326 RID: 123686
+		// Token: 0x04018DC3 RID: 101827
 		private readonly InfrastructureFireExpPanel FireExpPanel = new InfrastructureFireExpPanel();
 
-		// Token: 0x0401E327 RID: 123687
+		// Token: 0x04018DC4 RID: 101828
 		private readonly ButtonItem LimitedRewardBtn = new ButtonItem(null);
 
-		// Token: 0x0401E328 RID: 123688
+		// Token: 0x04018DC5 RID: 101829
 		private readonly ButtonItem ExchangeBtn = new ButtonItem(null);
 
-		// Token: 0x0401E329 RID: 123689
+		// Token: 0x04018DC6 RID: 101830
 		private readonly ButtonItem ArchiveBtn = new ButtonItem(null);
 
-		// Token: 0x0401E32A RID: 123690
+		// Token: 0x04018DC7 RID: 101831
 		private bool NeedPlayBuildSuccessSeq;
 
-		// Token: 0x0401E32B RID: 123691
+		// Token: 0x04018DC8 RID: 101832
 		private bool NeedFocusBuildQuest;
 
-		// Token: 0x0401E32C RID: 123692
+		// Token: 0x04018DC9 RID: 101833
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401E32D RID: 123693
+		// Token: 0x04018DCA RID: 101834
 		private MediaPlayer MediaPlayer;
 
-		// Token: 0x0401E32E RID: 123694
+		// Token: 0x04018DCB RID: 101835
 		private int HandleId = -1;
 
-		// Token: 0x0200BB83 RID: 48003
+		// Token: 0x0200A593 RID: 42387
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040389A5 RID: 231845
+			// Token: 0x0403338D RID: 209805
 			public const int ItemCaption = 0;
 
-			// Token: 0x040389A6 RID: 231846
+			// Token: 0x0403338E RID: 209806
 			public const int PanelMissionVertical = 1;
 
-			// Token: 0x040389A7 RID: 231847
+			// Token: 0x0403338F RID: 209807
 			public const int PanelMission = 2;
 
-			// Token: 0x040389A8 RID: 231848
+			// Token: 0x04033390 RID: 209808
 			public const int BtnLimitedReward = 3;
 
-			// Token: 0x040389A9 RID: 231849
+			// Token: 0x04033391 RID: 209809
 			public const int BtnExchange = 4;
 
-			// Token: 0x040389AA RID: 231850
+			// Token: 0x04033392 RID: 209810
 			public const int BtnArchive = 5;
 
-			// Token: 0x040389AB RID: 231851
+			// Token: 0x04033393 RID: 209811
 			public const int PanelTimeTips = 6;
 
-			// Token: 0x040389AC RID: 231852
+			// Token: 0x04033394 RID: 209812
 			public const int TextTimeTips = 7;
 
-			// Token: 0x040389AD RID: 231853
+			// Token: 0x04033395 RID: 209813
 			public const int TextMainName = 8;
 
-			// Token: 0x040389AE RID: 231854
+			// Token: 0x04033396 RID: 209814
 			public const int PanelBuildProgress = 9;
 
-			// Token: 0x040389AF RID: 231855
+			// Token: 0x04033397 RID: 209815
 			public const int TextBuildProgress = 10;
 
-			// Token: 0x040389B0 RID: 231856
+			// Token: 0x04033398 RID: 209816
 			public const int SpriteBuildProgressBar = 11;
 
-			// Token: 0x040389B1 RID: 231857
+			// Token: 0x04033399 RID: 209817
 			public const int TextBuildProgressPercent = 12;
 
-			// Token: 0x040389B2 RID: 231858
+			// Token: 0x0403339A RID: 209818
 			public const int PanelBuildDone = 13;
 
-			// Token: 0x040389B3 RID: 231859
+			// Token: 0x0403339B RID: 209819
 			public const int TextBuildDoneTime = 14;
 
-			// Token: 0x040389B4 RID: 231860
+			// Token: 0x0403339C RID: 209820
 			public const int FireExpPanel = 15;
 
-			// Token: 0x040389B5 RID: 231861
+			// Token: 0x0403339D RID: 209821
 			public const int BtnTerminal = 16;
 
-			// Token: 0x040389B6 RID: 231862
+			// Token: 0x0403339E RID: 209822
 			public const int PanelArtText = 17;
 
-			// Token: 0x040389B7 RID: 231863
+			// Token: 0x0403339F RID: 209823
 			public const int PanelProgressAnim = 18;
 
-			// Token: 0x040389B8 RID: 231864
+			// Token: 0x040333A0 RID: 209824
 			public const int PanelBuildTarget = 20;
 
-			// Token: 0x040389B9 RID: 231865
+			// Token: 0x040333A1 RID: 209825
 			public const int CG = 21;
 
-			// Token: 0x040389BA RID: 231866
+			// Token: 0x040333A2 RID: 209826
 			public const int PanelLineFrame = 22;
 		}
 	}

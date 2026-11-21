@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x0200574C RID: 22348
+	// Token: 0x02004723 RID: 18211
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoTabMainView : UiViewBase
 	{
-		// Token: 0x06038CDE RID: 232670 RVA: 0x00D7D81C File Offset: 0x00D7BA1C
+		// Token: 0x0602DBEE RID: 187374 RVA: 0x00CCC0D8 File Offset: 0x00CCA2D8
 		public KurotatoTabMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038CDF RID: 232671 RVA: 0x00D7D830 File Offset: 0x00D7BA30
+		// Token: 0x0602DBEF RID: 187375 RVA: 0x00CCC0EC File Offset: 0x00CCA2EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CE0 RID: 232672 RVA: 0x00D7D8BC File Offset: 0x00D7BABC
+		// Token: 0x0602DBF0 RID: 187376 RVA: 0x00CCC178 File Offset: 0x00CCA378
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoTabMainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CE1 RID: 232673 RVA: 0x00D7D900 File Offset: 0x00D7BB00
+		// Token: 0x0602DBF1 RID: 187377 RVA: 0x00CCC1BC File Offset: 0x00CCA3BC
 		private UniTask CreateCaptionItem()
 		{
 			KurotatoTabMainView.<CreateCaptionItem>d__11 <CreateCaptionItem>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateCaptionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CE2 RID: 232674 RVA: 0x00D7D944 File Offset: 0x00D7BB44
+		// Token: 0x0602DBF2 RID: 187378 RVA: 0x00CCC200 File Offset: 0x00CCA400
 		private UniTask CreateArchiveButton()
 		{
 			KurotatoTabMainView.<CreateArchiveButton>d__12 <CreateArchiveButton>d__;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateArchiveButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CE3 RID: 232675 RVA: 0x00D7D987 File Offset: 0x00D7BB87
+		// Token: 0x0602DBF3 RID: 187379 RVA: 0x00CCC243 File Offset: 0x00CCA443
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new KurotatoTabItem();
 		}
 
-		// Token: 0x06038CE4 RID: 232676 RVA: 0x00D7D990 File Offset: 0x00D7BB90
+		// Token: 0x0602DBF4 RID: 187380 RVA: 0x00CCC24C File Offset: 0x00CCA44C
 		private void ToggleCallBack(int index)
 		{
 			this.CurrentTabIndex = index;
@@ -85,14 +85,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.TabViewComponent.ToggleCallBack(tabData, tabData.ViewName, tabItemByIndex, currentSaveInstInfo, null);
 		}
 
-		// Token: 0x06038CE5 RID: 232677 RVA: 0x00D7D9E4 File Offset: 0x00D7BBE4
+		// Token: 0x0602DBF5 RID: 187381 RVA: 0x00CCC2A0 File Offset: 0x00CCA4A0
 		private CommonTabData GetCommonData(int index)
 		{
 			TabData tabData = this.TabDataList[index];
 			return new CommonTabData(UiResourceConfig.Instance.GetResourcePath(tabData.IconResourceId), new CommonTabTitleData(tabData.TitleId, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06038CE6 RID: 232678 RVA: 0x00D7DA24 File Offset: 0x00D7BC24
+		// Token: 0x0602DBF6 RID: 187382 RVA: 0x00CCC2E0 File Offset: 0x00CCA4E0
 		protected override void OnBeforeShow()
 		{
 			bool flag = this.SaveParam != null && this.SaveParam.InstInfos.Count > 1;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			tabComponent.SelectToggleByIndex(0, true);
 		}
 
-		// Token: 0x06038CE7 RID: 232679 RVA: 0x00D7DA7D File Offset: 0x00D7BC7D
+		// Token: 0x0602DBF7 RID: 187383 RVA: 0x00CCC339 File Offset: 0x00CCA539
 		private void RefreshArchiveButtonText()
 		{
 			ButtonItem archiveButton = this.ArchiveButton;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			archiveButton.SetLocalTextNew((this.CurrentSaveIndex == 0) ? "Kurotato_Save_Old" : "Kurotato_Save_New", Array.Empty<object>());
 		}
 
-		// Token: 0x06038CE8 RID: 232680 RVA: 0x00D7DAA8 File Offset: 0x00D7BCA8
+		// Token: 0x0602DBF8 RID: 187384 RVA: 0x00CCC364 File Offset: 0x00CCA564
 		[NullableContext(2)]
 		private KurotatoInstInfo GetCurrentSaveInstInfo()
 		{
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return this.SaveParam.InstInfos[this.CurrentSaveIndex];
 		}
 
-		// Token: 0x06038CE9 RID: 232681 RVA: 0x00D7DACA File Offset: 0x00D7BCCA
+		// Token: 0x0602DBF9 RID: 187385 RVA: 0x00CCC386 File Offset: 0x00CCA586
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038CEA RID: 232682 RVA: 0x00D7DAD3 File Offset: 0x00D7BCD3
+		// Token: 0x0602DBFA RID: 187386 RVA: 0x00CCC38F File Offset: 0x00CCA58F
 		private void OnBtnArchiveClick()
 		{
 			if (this.SaveParam == null)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ToggleCallBack(this.CurrentTabIndex);
 		}
 
-		// Token: 0x06038CEB RID: 232683 RVA: 0x00D7DB00 File Offset: 0x00D7BD00
+		// Token: 0x0602DBFB RID: 187387 RVA: 0x00CCC3BC File Offset: 0x00CCA5BC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -189,10 +189,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			};
 		}
 
-		// Token: 0x0401DCAB RID: 122027
+		// Token: 0x04018741 RID: 100161
 		private List<TabData> TabDataList = new List<TabData>();
 
-		// Token: 0x0401DCAC RID: 122028
+		// Token: 0x04018742 RID: 100162
 		[Nullable(new byte[]
 		{
 			2,
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401DCAD RID: 122029
+		// Token: 0x04018743 RID: 100163
 		[Nullable(new byte[]
 		{
 			2,
@@ -208,29 +208,29 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		protected TabViewComponent<TabData> TabViewComponent;
 
-		// Token: 0x0401DCAE RID: 122030
+		// Token: 0x04018744 RID: 100164
 		[Nullable(2)]
 		private IKurotatoSaveViewOpenParam SaveParam;
 
-		// Token: 0x0401DCAF RID: 122031
+		// Token: 0x04018745 RID: 100165
 		private int CurrentSaveIndex;
 
-		// Token: 0x0401DCB0 RID: 122032
+		// Token: 0x04018746 RID: 100166
 		private int CurrentTabIndex;
 
-		// Token: 0x0401DCB1 RID: 122033
+		// Token: 0x04018747 RID: 100167
 		[Nullable(2)]
 		private ButtonItem ArchiveButton;
 
-		// Token: 0x0200B93E RID: 47422
+		// Token: 0x0200A35D RID: 41821
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04038073 RID: 229491
+			// Token: 0x04032A7D RID: 207485
 			CaptionList,
-			// Token: 0x04038074 RID: 229492
+			// Token: 0x04032A7E RID: 207486
 			Content,
-			// Token: 0x04038075 RID: 229493
+			// Token: 0x04032A7F RID: 207487
 			BtnArchive
 		}
 	}

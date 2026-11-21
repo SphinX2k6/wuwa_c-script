@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.RoleUi.RoleBreach;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x0200567A RID: 22138
+	// Token: 0x02004650 RID: 18000
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposePopupMediumItemGrid : CostMediumItemGrid
 	{
-		// Token: 0x06038569 RID: 230761 RVA: 0x00D5ED70 File Offset: 0x00D5CF70
+		// Token: 0x0602D466 RID: 185446 RVA: 0x00CACEC0 File Offset: 0x00CAB0C0
 		protected override void OnRefresh(ISelectedData data, bool isSelected, int gridIndex)
 		{
 			if (data.ItemId == 2)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			base.OnRefresh(data, isSelected, gridIndex);
 		}
 
-		// Token: 0x0603856A RID: 230762 RVA: 0x00D5ED8C File Offset: 0x00D5CF8C
+		// Token: 0x0602D467 RID: 185447 RVA: 0x00CACEDC File Offset: 0x00CAB0DC
 		private void RefreshCoinItem(ISelectedData data)
 		{
 			int itemId = data.ItemId;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			base.Apply<PropMediumItemGrid>(propMediumItemGrid);
 		}
 
-		// Token: 0x0401D9C0 RID: 121280
+		// Token: 0x0401844B RID: 99403
 		public bool UseSelectedCoin = true;
 	}
 }

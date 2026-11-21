@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001553 RID: 5459
+// Token: 0x02000A0B RID: 2571
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityQuestTipsItem : UiPanelBase
 {
-	// Token: 0x06009C4B RID: 40011 RVA: 0x0021CFA8 File Offset: 0x0021B1A8
+	// Token: 0x06007029 RID: 28713 RVA: 0x00226D58 File Offset: 0x00224F58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -31,25 +31,25 @@ public class ActivityQuestTipsItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009C4C RID: 40012 RVA: 0x0021D04E File Offset: 0x0021B24E
+	// Token: 0x0600702A RID: 28714 RVA: 0x00226DFE File Offset: 0x00224FFE
 	public void SetContentByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x06009C4D RID: 40013 RVA: 0x0021D063 File Offset: 0x0021B263
+	// Token: 0x0600702B RID: 28715 RVA: 0x00226E13 File Offset: 0x00225013
 	public void SetContentByText(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x06009C4E RID: 40014 RVA: 0x0021D073 File Offset: 0x0021B273
+	// Token: 0x0600702C RID: 28716 RVA: 0x00226E23 File Offset: 0x00225023
 	public void SetContentVisible(bool bVisible)
 	{
 		base.GetText(0).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009C4F RID: 40015 RVA: 0x0021D082 File Offset: 0x0021B282
+	// Token: 0x0600702D RID: 28717 RVA: 0x00226E32 File Offset: 0x00225032
 	private void ButtonClick()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -60,30 +60,30 @@ public class ActivityQuestTipsItem : UiPanelBase
 		buttonFunction();
 	}
 
-	// Token: 0x06009C50 RID: 40016 RVA: 0x0021D094 File Offset: 0x0021B294
+	// Token: 0x0600702E RID: 28718 RVA: 0x00226E44 File Offset: 0x00225044
 	public void SetRewardButtonVisible(bool state)
 	{
 		base.GetItem(1).SetUIActive(state);
 	}
 
-	// Token: 0x06009C51 RID: 40017 RVA: 0x0021D0A3 File Offset: 0x0021B2A3
+	// Token: 0x0600702F RID: 28719 RVA: 0x00226E53 File Offset: 0x00225053
 	public void SetRewardButtonFunction(Action buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x0400447C RID: 17532
+	// Token: 0x04004522 RID: 17698
 	[Nullable(2)]
 	private Action ButtonFunction;
 
-	// Token: 0x02007B93 RID: 31635
+	// Token: 0x02006D1E RID: 27934
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040289E6 RID: 166374
+		// Token: 0x04023D21 RID: 146721
 		public const int TxtTips = 0;
 
-		// Token: 0x040289E7 RID: 166375
+		// Token: 0x04023D22 RID: 146722
 		public const int ButtonGo = 1;
 	}
 }

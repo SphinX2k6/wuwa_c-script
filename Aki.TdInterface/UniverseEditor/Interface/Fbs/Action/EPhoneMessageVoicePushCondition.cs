@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FCD RID: 24525
+	// Token: 0x02006624 RID: 26148
 	public enum EPhoneMessageVoicePushCondition : byte
 	{
-		// Token: 0x0400FF30 RID: 65328
+		// Token: 0x04010CF6 RID: 68854
 		PlayVoice,
-		// Token: 0x0400FF31 RID: 65329
+		// Token: 0x04010CF7 RID: 68855
 		FinishVoice
 	}
 }

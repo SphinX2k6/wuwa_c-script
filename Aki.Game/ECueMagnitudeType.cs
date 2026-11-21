@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002FC6 RID: 12230
+// Token: 0x0200251A RID: 9498
 public enum ECueMagnitudeType
 {
-	// Token: 0x0400C430 RID: 50224
+	// Token: 0x0400C7D9 RID: 51161
 	NoMag,
-	// Token: 0x0400C431 RID: 50225
+	// Token: 0x0400C7DA RID: 51162
 	Attribute,
-	// Token: 0x0400C432 RID: 50226
+	// Token: 0x0400C7DB RID: 51163
 	Tag,
-	// Token: 0x0400C433 RID: 50227
+	// Token: 0x0400C7DC RID: 51164
 	Level,
-	// Token: 0x0400C434 RID: 50228
+	// Token: 0x0400C7DD RID: 51165
 	RemainDuration,
-	// Token: 0x0400C435 RID: 50229
+	// Token: 0x0400C7DE RID: 51166
 	CameraPitch,
-	// Token: 0x0400C436 RID: 50230
+	// Token: 0x0400C7DF RID: 51167
 	ExistFlowTime
 }

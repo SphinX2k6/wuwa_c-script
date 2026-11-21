@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002557 RID: 9559
+// Token: 0x02001A42 RID: 6722
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoCharacterPanel : PhotoDetailPanelBase
 {
-	// Token: 0x06013466 RID: 78950 RVA: 0x004CB520 File Offset: 0x004C9720
+	// Token: 0x06010946 RID: 67910 RVA: 0x004DA0A0 File Offset: 0x004D82A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,8 +36,8 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x170018E1 RID: 6369
-	// (get) Token: 0x06013467 RID: 78951 RVA: 0x004CB65A File Offset: 0x004C985A
+	// Token: 0x1700191A RID: 6426
+	// (get) Token: 0x06010947 RID: 67911 RVA: 0x004DA1DA File Offset: 0x004D83DA
 	protected override int TabLockPanelIndex
 	{
 		get
@@ -46,8 +46,8 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x170018E2 RID: 6370
-	// (get) Token: 0x06013468 RID: 78952 RVA: 0x004CB65E File Offset: 0x004C985E
+	// Token: 0x1700191B RID: 6427
+	// (get) Token: 0x06010948 RID: 67912 RVA: 0x004DA1DE File Offset: 0x004D83DE
 	protected override int SubTabLockPanelIndex
 	{
 		get
@@ -56,7 +56,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x06013469 RID: 78953 RVA: 0x004CB664 File Offset: 0x004C9864
+	// Token: 0x06010949 RID: 67913 RVA: 0x004DA1E4 File Offset: 0x004D83E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoCharacterPanel.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601346A RID: 78954 RVA: 0x004CB6A8 File Offset: 0x004C98A8
+	// Token: 0x0601094A RID: 67914 RVA: 0x004DA228 File Offset: 0x004D8428
 	protected override void OnStart()
 	{
 		this.LastMotionSelectMode = this.GetMotionSelectMode();
@@ -79,14 +79,14 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601346B RID: 78955 RVA: 0x004CB746 File Offset: 0x004C9946
+	// Token: 0x0601094B RID: 67915 RVA: 0x004DA2C6 File Offset: 0x004D84C6
 	private void CacheRoleInfo()
 	{
 		this.Gender = (int)PlayerInfoModel.Instance.GetPlayerGender();
 		this.TryRefreshRoleInfo(SceneTeamModel.Instance.GetCurrentEntity);
 	}
 
-	// Token: 0x0601346C RID: 78956 RVA: 0x004CB769 File Offset: 0x004C9969
+	// Token: 0x0601094C RID: 67916 RVA: 0x004DA2E9 File Offset: 0x004D84E9
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (!this.TryRefreshRoleInfo(newEntity))
@@ -96,7 +96,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.RefreshSubTabContent(this.CurrentSubTabType);
 	}
 
-	// Token: 0x0601346D RID: 78957 RVA: 0x004CB784 File Offset: 0x004C9984
+	// Token: 0x0601094D RID: 67917 RVA: 0x004DA304 File Offset: 0x004D8504
 	[NullableContext(2)]
 	private bool TryRefreshRoleInfo(EntityHandle handle)
 	{
@@ -105,7 +105,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return flag || flag2;
 	}
 
-	// Token: 0x0601346E RID: 78958 RVA: 0x004CB7A4 File Offset: 0x004C99A4
+	// Token: 0x0601094E RID: 67918 RVA: 0x004DA324 File Offset: 0x004D8524
 	[NullableContext(2)]
 	private bool TryRefreshSkinId(EntityHandle handle)
 	{
@@ -134,7 +134,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return true;
 	}
 
-	// Token: 0x0601346F RID: 78959 RVA: 0x004CB7F0 File Offset: 0x004C99F0
+	// Token: 0x0601094F RID: 67919 RVA: 0x004DA370 File Offset: 0x004D8570
 	[NullableContext(2)]
 	private bool TryRefreshMorphType(EntityHandle handle)
 	{
@@ -167,7 +167,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return true;
 	}
 
-	// Token: 0x06013470 RID: 78960 RVA: 0x004CB864 File Offset: 0x004C9A64
+	// Token: 0x06010950 RID: 67920 RVA: 0x004DA3E4 File Offset: 0x004D85E4
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 	{
 		int id = entity.Id;
@@ -184,7 +184,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.RefreshSubTabContent(this.CurrentSubTabType);
 	}
 
-	// Token: 0x06013471 RID: 78961 RVA: 0x004CB8D0 File Offset: 0x004C9AD0
+	// Token: 0x06010951 RID: 67921 RVA: 0x004DA450 File Offset: 0x004D8650
 	private EPhotoMotionSelectMode GetMotionSelectMode()
 	{
 		PhotoMode? photoModeConfigByType = PhotographConfig.Instance.GetPhotoModeConfigByType((int)this.ViewModel.CurrentMode);
@@ -195,7 +195,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return (EPhotoMotionSelectMode)photoModeConfigByType.Value.MotionSelectMode;
 	}
 
-	// Token: 0x06013472 RID: 78962 RVA: 0x004CB910 File Offset: 0x004C9B10
+	// Token: 0x06010952 RID: 67922 RVA: 0x004DA490 File Offset: 0x004D8690
 	private UniTask RefreshSubTabList()
 	{
 		PhotoCharacterPanel.<RefreshSubTabList>d__30 <RefreshSubTabList>d__;
@@ -206,7 +206,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return <RefreshSubTabList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013473 RID: 78963 RVA: 0x004CB954 File Offset: 0x004C9B54
+	// Token: 0x06010953 RID: 67923 RVA: 0x004DA4D4 File Offset: 0x004D86D4
 	private void RefreshSubTabContent(EPhotoCharacterSubTabType subTabType)
 	{
 		this.CurrentSubTabType = subTabType;
@@ -227,7 +227,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x06013474 RID: 78964 RVA: 0x004CB9A8 File Offset: 0x004C9BA8
+	// Token: 0x06010954 RID: 67924 RVA: 0x004DA528 File Offset: 0x004D8728
 	protected override void RefreshContentVisible()
 	{
 		EPhotoMotionSelectMode motionSelectMode = this.GetMotionSelectMode();
@@ -247,7 +247,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		loopScrollViewComponent.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06013475 RID: 78965 RVA: 0x004CBA10 File Offset: 0x004C9C10
+	// Token: 0x06010955 RID: 67925 RVA: 0x004DA590 File Offset: 0x004D8790
 	private UniTask RefreshMontageList()
 	{
 		PhotoCharacterPanel.<RefreshMontageList>d__33 <RefreshMontageList>d__;
@@ -258,7 +258,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return <RefreshMontageList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013476 RID: 78966 RVA: 0x004CBA54 File Offset: 0x004C9C54
+	// Token: 0x06010956 RID: 67926 RVA: 0x004DA5D4 File Offset: 0x004D87D4
 	private List<PhotoMontageItemData> BuildMontageDataList()
 	{
 		List<PhotoMontageItemData> list = new List<PhotoMontageItemData>
@@ -282,7 +282,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return list;
 	}
 
-	// Token: 0x06013477 RID: 78967 RVA: 0x004CBB08 File Offset: 0x004C9D08
+	// Token: 0x06010957 RID: 67927 RVA: 0x004DA688 File Offset: 0x004D8888
 	private void SelectPlayingMontage()
 	{
 		int montageId = PhotographModel.Instance.MontageId;
@@ -312,7 +312,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		montageScroll2.SelectGridProxy(0, false);
 	}
 
-	// Token: 0x06013478 RID: 78968 RVA: 0x004CBB70 File Offset: 0x004C9D70
+	// Token: 0x06010958 RID: 67928 RVA: 0x004DA6F0 File Offset: 0x004D88F0
 	private UniTask RefreshSelfieList(EPhotoCharacterSubTabType subTabType)
 	{
 		PhotoCharacterPanel.<RefreshSelfieList>d__36 <RefreshSelfieList>d__;
@@ -324,34 +324,32 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		return <RefreshSelfieList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013479 RID: 78969 RVA: 0x004CBBBC File Offset: 0x004C9DBC
+	// Token: 0x06010959 RID: 67929 RVA: 0x004DA73C File Offset: 0x004D893C
 	private List<PhotoSelfieItemData> BuildSelfieDataList(EPhotoCharacterSubTabType subTabType)
 	{
 		List<PhotoSelfieItemData> list = new List<PhotoSelfieItemData>();
 		if (subTabType == EPhotoCharacterSubTabType.Motion)
 		{
-			List<PhotoSelfieMontage> photoSelfieMontageListByGender = PhotographConfig.Instance.GetPhotoSelfieMontageListByGender(this.Gender);
-			photoSelfieMontageListByGender.Sort((PhotoSelfieMontage a, PhotoSelfieMontage b) => a.SortId - b.SortId);
-			using (List<PhotoSelfieMontage>.Enumerator enumerator = photoSelfieMontageListByGender.GetEnumerator())
+			using (List<PhotoSelfieMontage>.Enumerator enumerator = PhotographConfig.Instance.GetPhotoSelfieMontageListByGender(this.Gender).GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
 					PhotoSelfieMontage cfg = enumerator.Current;
 					list.Add(PhotoSelfieItemData.FromMotion(cfg));
 				}
-				return list;
+				goto IL_96;
 			}
 		}
-		List<PhotoExpression> photoExpressionListByGender = PhotographConfig.Instance.GetPhotoExpressionListByGender(this.Gender);
-		photoExpressionListByGender.Sort((PhotoExpression a, PhotoExpression b) => a.SortId - b.SortId);
-		foreach (PhotoExpression cfg2 in photoExpressionListByGender)
+		foreach (PhotoExpression cfg2 in PhotographConfig.Instance.GetPhotoExpressionListByGender(this.Gender))
 		{
 			list.Add(PhotoSelfieItemData.FromExpression(cfg2));
 		}
+		IL_96:
+		list.Sort();
 		return list;
 	}
 
-	// Token: 0x0601347A RID: 78970 RVA: 0x004CBCC8 File Offset: 0x004C9EC8
+	// Token: 0x0601095A RID: 67930 RVA: 0x004DA804 File Offset: 0x004D8A04
 	private void SelectCurrentSelfie(bool isMotion)
 	{
 		int num = isMotion ? this.CurrentSelfieMotionId : this.CurrentExpressionId;
@@ -391,7 +389,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.RecordSelfieId(isMotion, this.SelfieDataList[num2].Id);
 	}
 
-	// Token: 0x0601347B RID: 78971 RVA: 0x004CBD69 File Offset: 0x004C9F69
+	// Token: 0x0601095B RID: 67931 RVA: 0x004DA8A5 File Offset: 0x004D8AA5
 	private void RecordSelfieId(bool isMotion, int id)
 	{
 		if (isMotion)
@@ -404,7 +402,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.ViewModel.CurrentExpressionId = id;
 	}
 
-	// Token: 0x0601347C RID: 78972 RVA: 0x004CBD95 File Offset: 0x004C9F95
+	// Token: 0x0601095C RID: 67932 RVA: 0x004DA8D1 File Offset: 0x004D8AD1
 	private void RefreshPlayPanel()
 	{
 		UUIItem item = base.GetItem(4);
@@ -415,7 +413,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0601347D RID: 78973 RVA: 0x004CBDAC File Offset: 0x004C9FAC
+	// Token: 0x0601095D RID: 67933 RVA: 0x004DA8E8 File Offset: 0x004D8AE8
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -427,7 +425,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601347E RID: 78974 RVA: 0x004CBE44 File Offset: 0x004CA044
+	// Token: 0x0601095E RID: 67934 RVA: 0x004DA980 File Offset: 0x004D8B80
 	private PhotoMontageItem CreateMontageItem()
 	{
 		return new PhotoMontageItem
@@ -436,7 +434,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x0601347F RID: 78975 RVA: 0x004CBE5D File Offset: 0x004CA05D
+	// Token: 0x0601095F RID: 67935 RVA: 0x004DA999 File Offset: 0x004D8B99
 	private PhotoSelfieItem CreateSelfieItem()
 	{
 		return new PhotoSelfieItem
@@ -445,7 +443,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x06013480 RID: 78976 RVA: 0x004CBE78 File Offset: 0x004CA078
+	// Token: 0x06010960 RID: 67936 RVA: 0x004DA9B4 File Offset: 0x004D8BB4
 	private void OnSubTabClick(PhotoSubTab data, bool playSwitchAnim = true)
 	{
 		PhotoSubTabPanel subTabPanel = this.SubTabPanel;
@@ -458,7 +456,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.RefreshSubTabContent(this.CurrentSubTabType);
 	}
 
-	// Token: 0x06013481 RID: 78977 RVA: 0x004CBECC File Offset: 0x004CA0CC
+	// Token: 0x06010961 RID: 67937 RVA: 0x004DAA08 File Offset: 0x004D8C08
 	private void OnMontageClick(int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.MontageDataList.Count)
@@ -489,7 +487,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		PhotographController.Instance.PlayPhotoMontage(getCurrentEntity, photoMontageItemData.Id);
 	}
 
-	// Token: 0x06013482 RID: 78978 RVA: 0x004CBF68 File Offset: 0x004CA168
+	// Token: 0x06010962 RID: 67938 RVA: 0x004DAAA4 File Offset: 0x004D8CA4
 	private void OnSelfieClick(int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.SelfieDataList.Count)
@@ -511,7 +509,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		PhotographController.Instance.PlaySelfieMontage(photoSelfieItemData.MontageConfigDtId, photoSelfieItemData.MontageType);
 	}
 
-	// Token: 0x06013483 RID: 78979 RVA: 0x004CBFEC File Offset: 0x004CA1EC
+	// Token: 0x06010963 RID: 67939 RVA: 0x004DAB28 File Offset: 0x004D8D28
 	private void OnPhotographOptionChanged(EPhotoSetupValueType valueType, float value)
 	{
 		if (valueType != EPhotoSetupValueType.MeshVisible)
@@ -525,7 +523,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.SelectPlayingMontage();
 	}
 
-	// Token: 0x06013484 RID: 78980 RVA: 0x004CC010 File Offset: 0x004CA210
+	// Token: 0x06010964 RID: 67940 RVA: 0x004DAB4C File Offset: 0x004D8D4C
 	private void OnModeChanged(PhotoCameraType mode)
 	{
 		this.TryRefreshRoleInfo(SceneTeamModel.Instance.GetCurrentEntity);
@@ -541,23 +539,23 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 		this.RefreshSubTabContent(this.CurrentSubTabType);
 	}
 
-	// Token: 0x04009172 RID: 37234
+	// Token: 0x040092CB RID: 37579
 	private EPhotoCharacterSubTabType CurrentSubTabType = EPhotoCharacterSubTabType.Motion;
 
-	// Token: 0x04009173 RID: 37235
+	// Token: 0x040092CC RID: 37580
 	private EPhotoMotionSelectMode LastMotionSelectMode;
 
-	// Token: 0x04009174 RID: 37236
+	// Token: 0x040092CD RID: 37581
 	private int CurrentSelfieMotionId;
 
-	// Token: 0x04009175 RID: 37237
+	// Token: 0x040092CE RID: 37582
 	private int CurrentExpressionId;
 
-	// Token: 0x04009176 RID: 37238
+	// Token: 0x040092CF RID: 37583
 	[Nullable(2)]
 	private PhotoSubTabPanel SubTabPanel;
 
-	// Token: 0x04009177 RID: 37239
+	// Token: 0x040092D0 RID: 37584
 	[Nullable(new byte[]
 	{
 		2,
@@ -566,7 +564,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 	})]
 	private LoopScrollView<PhotoMontageItem, PhotoMontageItemData> MontageScroll;
 
-	// Token: 0x04009178 RID: 37240
+	// Token: 0x040092D1 RID: 37585
 	[Nullable(new byte[]
 	{
 		2,
@@ -575,22 +573,22 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 	})]
 	private LoopScrollView<PhotoSelfieItem, PhotoSelfieItemData> SelfieScroll;
 
-	// Token: 0x04009179 RID: 37241
+	// Token: 0x040092D2 RID: 37586
 	private int SkinId;
 
-	// Token: 0x0400917A RID: 37242
+	// Token: 0x040092D3 RID: 37587
 	private EMorphType MorphType;
 
-	// Token: 0x0400917B RID: 37243
+	// Token: 0x040092D4 RID: 37588
 	private int Gender;
 
-	// Token: 0x0400917C RID: 37244
+	// Token: 0x040092D5 RID: 37589
 	private List<PhotoMontageItemData> MontageDataList = new List<PhotoMontageItemData>();
 
-	// Token: 0x0400917D RID: 37245
+	// Token: 0x040092D6 RID: 37590
 	private List<PhotoSelfieItemData> SelfieDataList = new List<PhotoSelfieItemData>();
 
-	// Token: 0x0400917E RID: 37246
+	// Token: 0x040092D7 RID: 37591
 	[Nullable(new byte[]
 	{
 		2,
@@ -598,7 +596,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 	})]
 	private List<PhotoMontageItemData> CachedMontageDataList;
 
-	// Token: 0x0400917F RID: 37247
+	// Token: 0x040092D8 RID: 37592
 	[Nullable(new byte[]
 	{
 		2,
@@ -606,7 +604,7 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 	})]
 	private List<PhotoSelfieItemData> CachedSelfieMotionDataList;
 
-	// Token: 0x04009180 RID: 37248
+	// Token: 0x040092D9 RID: 37593
 	[Nullable(new byte[]
 	{
 		2,
@@ -614,35 +612,35 @@ public class PhotoCharacterPanel : PhotoDetailPanelBase
 	})]
 	private List<PhotoSelfieItemData> CachedExpressionDataList;
 
-	// Token: 0x02008B1E RID: 35614
+	// Token: 0x02007CA4 RID: 31908
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D2AE RID: 185006
+		// Token: 0x040285BD RID: 165309
 		SubTabMenu,
-		// Token: 0x0402D2AF RID: 185007
+		// Token: 0x040285BE RID: 165310
 		LayoutMontagePanel,
-		// Token: 0x0402D2B0 RID: 185008
+		// Token: 0x040285BF RID: 165311
 		LoopScrollMontage,
-		// Token: 0x0402D2B1 RID: 185009
+		// Token: 0x040285C0 RID: 165312
 		ItemMontageTemplate,
-		// Token: 0x0402D2B2 RID: 185010
+		// Token: 0x040285C1 RID: 165313
 		ItemPlayPanel,
-		// Token: 0x0402D2B3 RID: 185011
+		// Token: 0x040285C2 RID: 165314
 		TogglePauseAnim,
-		// Token: 0x0402D2B4 RID: 185012
+		// Token: 0x040285C3 RID: 165315
 		TextActionCtrl,
-		// Token: 0x0402D2B5 RID: 185013
+		// Token: 0x040285C4 RID: 165316
 		LoopScrollSelfie,
-		// Token: 0x0402D2B6 RID: 185014
+		// Token: 0x040285C5 RID: 165317
 		ItemSelfieTemplate,
-		// Token: 0x0402D2B7 RID: 185015
+		// Token: 0x040285C6 RID: 165318
 		ItemTabLockPanel,
-		// Token: 0x0402D2B8 RID: 185016
+		// Token: 0x040285C7 RID: 165319
 		TextTabLockTips,
-		// Token: 0x0402D2B9 RID: 185017
+		// Token: 0x040285C8 RID: 165320
 		ItemSubTabLockPanel,
-		// Token: 0x0402D2BA RID: 185018
+		// Token: 0x040285C9 RID: 165321
 		TextSubTabLockTips
 	}
 }

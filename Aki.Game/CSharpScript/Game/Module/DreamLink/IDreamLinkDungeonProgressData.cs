@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A97 RID: 23191
+	// Token: 0x02004A73 RID: 19059
 	public interface IDreamLinkDungeonProgressData
 	{
-		// Token: 0x17008C02 RID: 35842
-		// (get) Token: 0x0603AC0B RID: 240651
-		// (set) Token: 0x0603AC0C RID: 240652
+		// Token: 0x17005FD0 RID: 24528
+		// (get) Token: 0x0602FB54 RID: 195412
+		// (set) Token: 0x0602FB55 RID: 195413
 		double BlueProgress { get; set; }
 
-		// Token: 0x17008C03 RID: 35843
-		// (get) Token: 0x0603AC0D RID: 240653
-		// (set) Token: 0x0603AC0E RID: 240654
+		// Token: 0x17005FD1 RID: 24529
+		// (get) Token: 0x0602FB56 RID: 195414
+		// (set) Token: 0x0602FB57 RID: 195415
 		double RedProgress { get; set; }
 	}
 }

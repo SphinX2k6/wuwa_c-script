@@ -2,26 +2,26 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053A4 RID: 21412
+	// Token: 0x0200592A RID: 22826
 	public enum IHitLogicType_Union : byte
 	{
-		// Token: 0x0400E58E RID: 58766
+		// Token: 0x0400F1BE RID: 61886
 		NONE,
-		// Token: 0x0400E58F RID: 58767
+		// Token: 0x0400F1BF RID: 61887
 		IHitLogicType,
-		// Token: 0x0400E590 RID: 58768
+		// Token: 0x0400F1C0 RID: 61888
 		IHitLogicChangeNextState,
-		// Token: 0x0400E591 RID: 58769
+		// Token: 0x0400F1C1 RID: 61889
 		IHitLogicChangeLockState,
-		// Token: 0x0400E592 RID: 58770
+		// Token: 0x0400F1C2 RID: 61890
 		IHitLogicChangeCountDownState,
-		// Token: 0x0400E593 RID: 58771
+		// Token: 0x0400F1C3 RID: 61891
 		IHitLogicChangeNextAndLockTargetState,
-		// Token: 0x0400E594 RID: 58772
+		// Token: 0x0400F1C4 RID: 61892
 		IHitLogicChangeTargetState,
-		// Token: 0x0400E595 RID: 58773
+		// Token: 0x0400F1C5 RID: 61893
 		IHitLogicChangeByPartHit,
-		// Token: 0x0400E596 RID: 58774
+		// Token: 0x0400F1C6 RID: 61894
 		IHitLogicActionByHitType
 	}
 }

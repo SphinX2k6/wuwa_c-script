@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001874 RID: 6260
+// Token: 0x02000D2D RID: 3373
 [NullableContext(1)]
 [Nullable(0)]
 public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 {
-	// Token: 0x0600B7B9 RID: 47033 RVA: 0x00299470 File Offset: 0x00297670
+	// Token: 0x06008BA2 RID: 35746 RVA: 0x002A3B88 File Offset: 0x002A1D88
 	private int SortConfigIdAscending(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -28,7 +28,7 @@ public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 		return id - id2;
 	}
 
-	// Token: 0x0600B7BA RID: 47034 RVA: 0x002994A4 File Offset: 0x002976A4
+	// Token: 0x06008BA3 RID: 35747 RVA: 0x002A3BBC File Offset: 0x002A1DBC
 	private int SortConfigId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -49,7 +49,7 @@ public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 		return (assemblyGridData2.Id - id) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B7BB RID: 47035 RVA: 0x002994E0 File Offset: 0x002976E0
+	// Token: 0x06008BA4 RID: 35748 RVA: 0x002A3BF8 File Offset: 0x002A1DF8
 	private int SortSortIndex(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -71,7 +71,7 @@ public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 		return (sortId - sortId2) * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B7BC RID: 47036 RVA: 0x0029951C File Offset: 0x0029771C
+	// Token: 0x06008BA5 RID: 35749 RVA: 0x002A3C34 File Offset: 0x002A1E34
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -105,7 +105,7 @@ public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 		return num * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B7BD RID: 47037 RVA: 0x00299580 File Offset: 0x00297780
+	// Token: 0x06008BA6 RID: 35750 RVA: 0x002A3C98 File Offset: 0x002A1E98
 	private int SortCount(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -140,7 +140,7 @@ public class AssemblyGridSort : CommonSort<EAssemblyGridSortWayType>
 		return num * (isAscending ? -1 : 1);
 	}
 
-	// Token: 0x0600B7BE RID: 47038 RVA: 0x002995E4 File Offset: 0x002977E4
+	// Token: 0x06008BA7 RID: 35751 RVA: 0x002A3CFC File Offset: 0x002A1EFC
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EAssemblyGridSortWayType.ConfigId, new TSortResult(this.SortConfigId));

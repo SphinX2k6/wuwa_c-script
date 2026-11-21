@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,19 +10,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.Consume
 {
-	// Token: 0x02005B85 RID: 23429
+	// Token: 0x02004B65 RID: 19301
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonConditionFilterComponent : UiNavigationView
 	{
-		// Token: 0x0603B477 RID: 242807 RVA: 0x00E20FCC File Offset: 0x00E1F1CC
+		// Token: 0x060303C4 RID: 197572 RVA: 0x00D71540 File Offset: 0x00D6F740
 		public CommonConditionFilterComponent(UUIItem uiItem, TCommonConditionFilterFunction conditionFunction)
 		{
 			this.ConditionFunction = conditionFunction;
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B478 RID: 242808 RVA: 0x00E20FE8 File Offset: 0x00E1F1E8
+		// Token: 0x060303C5 RID: 197573 RVA: 0x00D7155C File Offset: 0x00D6F75C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -46,14 +45,14 @@ namespace CSharpScript.Game.Module.Common.Consume
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B479 RID: 242809 RVA: 0x00E210B0 File Offset: 0x00E1F2B0
+		// Token: 0x060303C6 RID: 197574 RVA: 0x00D71624 File Offset: 0x00D6F824
 		private void MaskClick()
 		{
 			UiLayer.Instance.SetShowMaskLayer("CommonConditionFilterComponent", true);
 			this.LevelSequencePlayer.PlayLevelSequenceByName("hide", false, null, false);
 		}
 
-		// Token: 0x0603B47A RID: 242810 RVA: 0x00E210E8 File Offset: 0x00E1F2E8
+		// Token: 0x060303C7 RID: 197575 RVA: 0x00D7165C File Offset: 0x00D6F85C
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayoutNew<CommonConditionFilterItem>(base.GetVerticalLayout(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CommonConditionFilterItem>(this.InitItem), null);
@@ -61,14 +60,14 @@ namespace CSharpScript.Game.Module.Common.Consume
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.SequenceFinishEvent), false);
 		}
 
-		// Token: 0x0603B47B RID: 242811 RVA: 0x00E21140 File Offset: 0x00E1F340
+		// Token: 0x060303C8 RID: 197576 RVA: 0x00D716B4 File Offset: 0x00D6F8B4
 		public void RefreshQualityList(IReadOnlyList<QualityInfo> data)
 		{
-			this.Layout.RebuildLayoutByDataNew<QualityInfo>(data.ToArray<QualityInfo>(), null);
+			this.Layout.RebuildLayoutByDataNew<QualityInfo>(data, null);
 			this.Layout.GetLayoutItemByKey(0).SetToggleState(true, true);
 		}
 
-		// Token: 0x0603B47C RID: 242812 RVA: 0x00E2117F File Offset: 0x00E1F37F
+		// Token: 0x060303C9 RID: 197577 RVA: 0x00D716EE File Offset: 0x00D6F8EE
 		private void SequenceFinishEvent(string sequenceName)
 		{
 			if (sequenceName == "hide")
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			}
 		}
 
-		// Token: 0x0603B47D RID: 242813 RVA: 0x00E211A8 File Offset: 0x00E1F3A8
+		// Token: 0x060303CA RID: 197578 RVA: 0x00D71714 File Offset: 0x00D6F914
 		private ILayoutItem<CommonConditionFilterItem> InitItem(object qualityInfo, UUIItem uiItem, int index)
 		{
 			CommonConditionFilterItem commonConditionFilterItem = new CommonConditionFilterItem(uiItem, (QualityInfo)qualityInfo);
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			};
 		}
 
-		// Token: 0x0603B47E RID: 242814 RVA: 0x00E211EC File Offset: 0x00E1F3EC
+		// Token: 0x060303CB RID: 197579 RVA: 0x00D71758 File Offset: 0x00D6F958
 		private void ToggleFunction(int qualityId, string text)
 		{
 			this.ResetComponent();
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			}
 		}
 
-		// Token: 0x0603B47F RID: 242815 RVA: 0x00E21210 File Offset: 0x00E1F410
+		// Token: 0x060303CC RID: 197580 RVA: 0x00D7177C File Offset: 0x00D6F97C
 		protected void ResetComponent()
 		{
 			foreach (CommonConditionFilterItem commonConditionFilterItem in this.Layout.GetLayoutItemMap().Values)
@@ -110,7 +109,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			}
 		}
 
-		// Token: 0x0603B480 RID: 242816 RVA: 0x00E2126C File Offset: 0x00E1F46C
+		// Token: 0x060303CD RID: 197581 RVA: 0x00D717D8 File Offset: 0x00D6F9D8
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Layout != null)
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			}
 		}
 
-		// Token: 0x0603B481 RID: 242817 RVA: 0x00E21288 File Offset: 0x00E1F488
+		// Token: 0x060303CE RID: 197582 RVA: 0x00D717F4 File Offset: 0x00D6F9F4
 		public void UpdateComponent(int qualityId)
 		{
 			this.SetActive(true);
@@ -134,7 +133,7 @@ namespace CSharpScript.Game.Module.Common.Consume
 			this.LevelSequencePlayer.PlayLevelSequenceByName("show", false, null, false);
 		}
 
-		// Token: 0x0401EE6D RID: 126573
+		// Token: 0x0401991E RID: 104734
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,24 +141,24 @@ namespace CSharpScript.Game.Module.Common.Consume
 		})]
 		protected GenericLayoutNew<CommonConditionFilterItem> Layout;
 
-		// Token: 0x0401EE6E RID: 126574
+		// Token: 0x0401991F RID: 104735
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401EE6F RID: 126575
+		// Token: 0x04019920 RID: 104736
 		protected TCommonConditionFilterFunction ConditionFunction;
 
-		// Token: 0x0200BD91 RID: 48529
+		// Token: 0x0200A79B RID: 42907
 		[NullableContext(0)]
 		private class ECommonConditionFilterComponent
 		{
-			// Token: 0x040392D1 RID: 234193
+			// Token: 0x04033C9F RID: 212127
 			public const int MaskButton = 0;
 
-			// Token: 0x040392D2 RID: 234194
+			// Token: 0x04033CA0 RID: 212128
 			public const int ConditionViewItem = 1;
 
-			// Token: 0x040392D3 RID: 234195
+			// Token: 0x04033CA1 RID: 212129
 			public const int Layout = 2;
 		}
 	}

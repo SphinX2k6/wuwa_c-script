@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036D8 RID: 14040
+// Token: 0x02002C4D RID: 11341
 public class __TsTaskUseSkill_InheritProxy : TsTaskUseSkill
 {
-	// Token: 0x0601E3D5 RID: 123861 RVA: 0x00885DE8 File Offset: 0x00883FE8
+	// Token: 0x0601C0EB RID: 114923 RVA: 0x008AD670 File Offset: 0x008AB870
 	[NullableContext(1)]
 	public __TsTaskUseSkill_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskUseSkill.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E3D6 RID: 123862 RVA: 0x00885E1B File Offset: 0x0088401B
+	// Token: 0x0601C0EC RID: 114924 RVA: 0x008AD6A3 File Offset: 0x008AB8A3
 	protected __TsTaskUseSkill_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E3D7 RID: 123863 RVA: 0x00885E24 File Offset: 0x00884024
+	// Token: 0x0601C0ED RID: 114925 RVA: 0x008AD6AC File Offset: 0x008AB8AC
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -25,7 +25,7 @@ public class __TsTaskUseSkill_InheritProxy : TsTaskUseSkill
 		base.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E3D8 RID: 123864 RVA: 0x00885E54 File Offset: 0x00884054
+	// Token: 0x0601C0EE RID: 114926 RVA: 0x008AD6DC File Offset: 0x008AB8DC
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

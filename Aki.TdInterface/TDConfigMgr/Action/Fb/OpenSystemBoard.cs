@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200266B RID: 9835
+	// Token: 0x0200292A RID: 10538
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class OpenSystemBoard : ActionParams
 	{
-		// Token: 0x0600DC5A RID: 56410 RVA: 0x0020C670 File Offset: 0x0020A870
-		[NullableContext(1)]
+		// Token: 0x0600EA26 RID: 59942 RVA: 0x00228D81 File Offset: 0x00226F81
+		[NullableContext(0)]
 		public static OpenSystemBoard Create(IOpenSystemBoard? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004146 RID: 16710
-		// (get) Token: 0x0600DC5B RID: 56411 RVA: 0x0020C68F File Offset: 0x0020A88F
+		// Token: 0x17004480 RID: 17536
+		// (get) Token: 0x0600EA27 RID: 59943 RVA: 0x00228DA0 File Offset: 0x00226FA0
 		public virtual ESystemType SystemType
 		{
 			get
@@ -35,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004147 RID: 16711
-		// (get) Token: 0x0600DC5C RID: 56412 RVA: 0x0020C69C File Offset: 0x0020A89C
+		// Token: 0x17004481 RID: 17537
+		// (get) Token: 0x0600EA28 RID: 59944 RVA: 0x00228DAD File Offset: 0x00226FAD
 		public virtual int BoardId
 		{
 			get
@@ -45,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004148 RID: 16712
-		// (get) Token: 0x0600DC5D RID: 56413 RVA: 0x0020C6A9 File Offset: 0x0020A8A9
+		// Token: 0x17004482 RID: 17538
+		// (get) Token: 0x0600EA29 RID: 59945 RVA: 0x00228DBA File Offset: 0x00226FBA
 		public virtual string ActionMontage
 		{
 			get
@@ -55,19 +55,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004149 RID: 16713
-		// (get) Token: 0x0600DC5E RID: 56414 RVA: 0x0020C6B6 File Offset: 0x0020A8B6
+		// Token: 0x17004483 RID: 17539
+		// (get) Token: 0x0600EA2A RID: 59946 RVA: 0x00228DC7 File Offset: 0x00226FC7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<VarRef> InputVars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -85,8 +85,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414A RID: 16714
-		// (get) Token: 0x0600DC5F RID: 56415 RVA: 0x0020C6F6 File Offset: 0x0020A8F6
+		// Token: 0x17004484 RID: 17540
+		// (get) Token: 0x0600EA2B RID: 59947 RVA: 0x00228E07 File Offset: 0x00227007
 		public virtual string UiCameraName
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414B RID: 16715
-		// (get) Token: 0x0600DC60 RID: 56416 RVA: 0x0020C703 File Offset: 0x0020A903
+		// Token: 0x17004485 RID: 17541
+		// (get) Token: 0x0600EA2C RID: 59948 RVA: 0x00228E14 File Offset: 0x00227014
 		public virtual IPhotographConfig PhotographConfig
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414C RID: 16716
-		// (get) Token: 0x0600DC61 RID: 56417 RVA: 0x0020C737 File Offset: 0x0020A937
+		// Token: 0x17004486 RID: 17542
+		// (get) Token: 0x0600EA2D RID: 59949 RVA: 0x00228E48 File Offset: 0x00227048
 		public virtual IInformationViewConfig InformationViewConfig
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414D RID: 16717
-		// (get) Token: 0x0600DC62 RID: 56418 RVA: 0x0020C76C File Offset: 0x0020A96C
+		// Token: 0x17004487 RID: 17543
+		// (get) Token: 0x0600EA2E RID: 59950 RVA: 0x00228E7C File Offset: 0x0022707C
 		public virtual int? GramophoneId
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414E RID: 16718
-		// (get) Token: 0x0600DC63 RID: 56419 RVA: 0x0020C7A4 File Offset: 0x0020A9A4
+		// Token: 0x17004488 RID: 17544
+		// (get) Token: 0x0600EA2F RID: 59951 RVA: 0x00228EB4 File Offset: 0x002270B4
 		public virtual bool? SetMapMusic
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700414F RID: 16719
-		// (get) Token: 0x0600DC64 RID: 56420 RVA: 0x0020C7DC File Offset: 0x0020A9DC
+		// Token: 0x17004489 RID: 17545
+		// (get) Token: 0x0600EA30 RID: 59952 RVA: 0x00228EEC File Offset: 0x002270EC
 		public virtual bool? FadeInScreenWhenClose
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004150 RID: 16720
-		// (get) Token: 0x0600DC65 RID: 56421 RVA: 0x0020C814 File Offset: 0x0020AA14
+		// Token: 0x1700448A RID: 17546
+		// (get) Token: 0x0600EA31 RID: 59953 RVA: 0x00228F24 File Offset: 0x00227124
 		public virtual ESyncOpenSystemBoardFinishTiming? SyncOpenSystemBoardFinishTiming
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004151 RID: 16721
-		// (get) Token: 0x0600DC66 RID: 56422 RVA: 0x0020C84C File Offset: 0x0020AA4C
+		// Token: 0x1700448B RID: 17547
+		// (get) Token: 0x0600EA32 RID: 59954 RVA: 0x00228F5C File Offset: 0x0022715C
 		public virtual List<int> Seats
 		{
 			get
@@ -208,8 +208,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004152 RID: 16722
-		// (get) Token: 0x0600DC67 RID: 56423 RVA: 0x0020C8C4 File Offset: 0x0020AAC4
+		// Token: 0x1700448C RID: 17548
+		// (get) Token: 0x0600EA33 RID: 59955 RVA: 0x00228FD4 File Offset: 0x002271D4
 		public virtual int? PlotReviewJumpTipsNodeId
 		{
 			get
@@ -222,8 +222,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004153 RID: 16723
-		// (get) Token: 0x0600DC68 RID: 56424 RVA: 0x0020C8FC File Offset: 0x0020AAFC
+		// Token: 0x1700448D RID: 17549
+		// (get) Token: 0x0600EA34 RID: 59956 RVA: 0x0022900C File Offset: 0x0022720C
 		public virtual bool? WaitLoading
 		{
 			get
@@ -236,8 +236,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004154 RID: 16724
-		// (get) Token: 0x0600DC69 RID: 56425 RVA: 0x0020C936 File Offset: 0x0020AB36
+		// Token: 0x1700448E RID: 17550
+		// (get) Token: 0x0600EA35 RID: 59957 RVA: 0x00229046 File Offset: 0x00227246
 		public virtual ITransitionPopupConfig TransitionPopupConfig
 		{
 			get
@@ -252,8 +252,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004155 RID: 16725
-		// (get) Token: 0x0600DC6A RID: 56426 RVA: 0x0020C96C File Offset: 0x0020AB6C
+		// Token: 0x1700448F RID: 17551
+		// (get) Token: 0x0600EA36 RID: 59958 RVA: 0x0022907C File Offset: 0x0022727C
 		public virtual int? FightPreparationEntityId
 		{
 			get
@@ -266,8 +266,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004156 RID: 16726
-		// (get) Token: 0x0600DC6B RID: 56427 RVA: 0x0020C9A6 File Offset: 0x0020ABA6
+		// Token: 0x17004490 RID: 17552
+		// (get) Token: 0x0600EA37 RID: 59959 RVA: 0x002290B6 File Offset: 0x002272B6
 		public virtual string FightPreparationUiCamera
 		{
 			get
@@ -276,12 +276,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004157 RID: 16727
-		// (get) Token: 0x0600DC6C RID: 56428 RVA: 0x0020C9B3 File Offset: 0x0020ABB3
-		[Nullable(1)]
+		// Token: 0x17004491 RID: 17553
+		// (get) Token: 0x0600EA38 RID: 59960 RVA: 0x002290C3 File Offset: 0x002272C3
+		[Nullable(0)]
 		public virtual IInfrActivityBuildStageOption InfrActivityBuildStage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._InfrActivityBuildStageInited)
@@ -294,8 +294,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004158 RID: 16728
-		// (get) Token: 0x0600DC6D RID: 56429 RVA: 0x0020C9E2 File Offset: 0x0020ABE2
+		// Token: 0x17004492 RID: 17554
+		// (get) Token: 0x0600EA39 RID: 59961 RVA: 0x002290F2 File Offset: 0x002272F2
 		public virtual IMapConfig MapConfig
 		{
 			get
@@ -310,8 +310,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004159 RID: 16729
-		// (get) Token: 0x0600DC6E RID: 56430 RVA: 0x0020CA18 File Offset: 0x0020AC18
+		// Token: 0x17004493 RID: 17555
+		// (get) Token: 0x0600EA3A RID: 59962 RVA: 0x00229128 File Offset: 0x00227328
 		public virtual int? TargetPhantomExhibitEntity
 		{
 			get
@@ -324,8 +324,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415A RID: 16730
-		// (get) Token: 0x0600DC6F RID: 56431 RVA: 0x0020CA54 File Offset: 0x0020AC54
+		// Token: 0x17004494 RID: 17556
+		// (get) Token: 0x0600EA3B RID: 59963 RVA: 0x00229164 File Offset: 0x00227364
 		public virtual List<int> TargetWeaponExhibitEntities
 		{
 			get
@@ -349,8 +349,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415B RID: 16731
-		// (get) Token: 0x0600DC70 RID: 56432 RVA: 0x0020CAD0 File Offset: 0x0020ACD0
+		// Token: 0x17004495 RID: 17557
+		// (get) Token: 0x0600EA3C RID: 59964 RVA: 0x002291E0 File Offset: 0x002273E0
 		public virtual bool? BlockAutoOpenUiAfterDungeon
 		{
 			get
@@ -363,8 +363,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415C RID: 16732
-		// (get) Token: 0x0600DC71 RID: 56433 RVA: 0x0020CB0C File Offset: 0x0020AD0C
+		// Token: 0x17004496 RID: 17558
+		// (get) Token: 0x0600EA3D RID: 59965 RVA: 0x0022921C File Offset: 0x0022741C
 		public virtual int? GuessJokerLevel
 		{
 			get
@@ -377,8 +377,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415D RID: 16733
-		// (get) Token: 0x0600DC72 RID: 56434 RVA: 0x0020CB46 File Offset: 0x0020AD46
+		// Token: 0x17004497 RID: 17559
+		// (get) Token: 0x0600EA3E RID: 59966 RVA: 0x00229256 File Offset: 0x00227456
 		public virtual IPictureCaptionConfig PictureCaptionConfig
 		{
 			get
@@ -393,8 +393,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415E RID: 16734
-		// (get) Token: 0x0600DC73 RID: 56435 RVA: 0x0020CB7C File Offset: 0x0020AD7C
+		// Token: 0x17004498 RID: 17560
+		// (get) Token: 0x0600EA3F RID: 59967 RVA: 0x0022928C File Offset: 0x0022748C
 		public virtual int? TetrisBoardGameEntity
 		{
 			get
@@ -407,12 +407,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700415F RID: 16735
-		// (get) Token: 0x0600DC74 RID: 56436 RVA: 0x0020CBB6 File Offset: 0x0020ADB6
-		[Nullable(1)]
+		// Token: 0x17004499 RID: 17561
+		// (get) Token: 0x0600EA40 RID: 59968 RVA: 0x002292C6 File Offset: 0x002274C6
+		[Nullable(0)]
 		public virtual IVillageInfrBuildOption VillageInfrBuildStage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._VillageInfrBuildStageInited)
@@ -425,8 +425,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004160 RID: 16736
-		// (get) Token: 0x0600DC75 RID: 56437 RVA: 0x0020CBE5 File Offset: 0x0020ADE5
+		// Token: 0x1700449A RID: 17562
+		// (get) Token: 0x0600EA41 RID: 59969 RVA: 0x002292F5 File Offset: 0x002274F5
 		public virtual string VillageInfrDeliveryUiCamera
 		{
 			get
@@ -435,8 +435,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004161 RID: 16737
-		// (get) Token: 0x0600DC76 RID: 56438 RVA: 0x0020CBF2 File Offset: 0x0020ADF2
+		// Token: 0x1700449B RID: 17563
+		// (get) Token: 0x0600EA42 RID: 59970 RVA: 0x00229302 File Offset: 0x00227502
 		public virtual IQuestBranchConfig QuestBranchConfig
 		{
 			get
@@ -451,8 +451,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004162 RID: 16738
-		// (get) Token: 0x0600DC77 RID: 56439 RVA: 0x0020CC26 File Offset: 0x0020AE26
+		// Token: 0x1700449C RID: 17564
+		// (get) Token: 0x0600EA43 RID: 59971 RVA: 0x00229336 File Offset: 0x00227536
 		public virtual IWriteLetterConfig WriteLetterConfig
 		{
 			get
@@ -467,8 +467,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004163 RID: 16739
-		// (get) Token: 0x0600DC78 RID: 56440 RVA: 0x0020CC5C File Offset: 0x0020AE5C
+		// Token: 0x1700449D RID: 17565
+		// (get) Token: 0x0600EA44 RID: 59972 RVA: 0x0022936C File Offset: 0x0022756C
 		public virtual int? DollGrabShowcaseEntityId
 		{
 			get
@@ -481,19 +481,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004164 RID: 16740
-		// (get) Token: 0x0600DC79 RID: 56441 RVA: 0x0020CC98 File Offset: 0x0020AE98
+		// Token: 0x1700449E RID: 17566
+		// (get) Token: 0x0600EA45 RID: 59973 RVA: 0x002293A8 File Offset: 0x002275A8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> MechascoutMindSpaceTextKeys
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -516,8 +516,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004165 RID: 16741
-		// (get) Token: 0x0600DC7A RID: 56442 RVA: 0x0020CD11 File Offset: 0x0020AF11
+		// Token: 0x1700449F RID: 17567
+		// (get) Token: 0x0600EA46 RID: 59974 RVA: 0x00229421 File Offset: 0x00227621
 		public virtual IDeliverItemProbeCollectiblesConfig DeliverItemProbeCollectiblesConfig
 		{
 			get
@@ -532,103 +532,103 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A77 RID: 31351
+		// Token: 0x0400810E RID: 33038
 		private IOpenSystemBoard Instance;
 
-		// Token: 0x04007A78 RID: 31352
+		// Token: 0x0400810F RID: 33039
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<VarRef> _InputVarsCache;
 
-		// Token: 0x04007A79 RID: 31353
+		// Token: 0x04008110 RID: 33040
 		private bool _InputVarsInited;
 
-		// Token: 0x04007A7A RID: 31354
+		// Token: 0x04008111 RID: 33041
 		private IPhotographConfig _PhotographConfigCache;
 
-		// Token: 0x04007A7B RID: 31355
+		// Token: 0x04008112 RID: 33042
 		private bool _PhotographConfigInited;
 
-		// Token: 0x04007A7C RID: 31356
+		// Token: 0x04008113 RID: 33043
 		private IInformationViewConfig _InformationViewConfigCache;
 
-		// Token: 0x04007A7D RID: 31357
+		// Token: 0x04008114 RID: 33044
 		private bool _InformationViewConfigInited;
 
-		// Token: 0x04007A7E RID: 31358
+		// Token: 0x04008115 RID: 33045
 		private List<int> _SeatsCache;
 
-		// Token: 0x04007A7F RID: 31359
+		// Token: 0x04008116 RID: 33046
 		private bool _SeatsInited;
 
-		// Token: 0x04007A80 RID: 31360
+		// Token: 0x04008117 RID: 33047
 		private ITransitionPopupConfig _TransitionPopupConfigCache;
 
-		// Token: 0x04007A81 RID: 31361
+		// Token: 0x04008118 RID: 33048
 		private bool _TransitionPopupConfigInited;
 
-		// Token: 0x04007A82 RID: 31362
-		[Nullable(1)]
+		// Token: 0x04008119 RID: 33049
+		[Nullable(0)]
 		private IInfrActivityBuildStageOption _InfrActivityBuildStageCache;
 
-		// Token: 0x04007A83 RID: 31363
+		// Token: 0x0400811A RID: 33050
 		private bool _InfrActivityBuildStageInited;
 
-		// Token: 0x04007A84 RID: 31364
+		// Token: 0x0400811B RID: 33051
 		private IMapConfig _MapConfigCache;
 
-		// Token: 0x04007A85 RID: 31365
+		// Token: 0x0400811C RID: 33052
 		private bool _MapConfigInited;
 
-		// Token: 0x04007A86 RID: 31366
+		// Token: 0x0400811D RID: 33053
 		private List<int> _TargetWeaponExhibitEntitiesCache;
 
-		// Token: 0x04007A87 RID: 31367
+		// Token: 0x0400811E RID: 33054
 		private bool _TargetWeaponExhibitEntitiesInited;
 
-		// Token: 0x04007A88 RID: 31368
+		// Token: 0x0400811F RID: 33055
 		private IPictureCaptionConfig _PictureCaptionConfigCache;
 
-		// Token: 0x04007A89 RID: 31369
+		// Token: 0x04008120 RID: 33056
 		private bool _PictureCaptionConfigInited;
 
-		// Token: 0x04007A8A RID: 31370
-		[Nullable(1)]
+		// Token: 0x04008121 RID: 33057
+		[Nullable(0)]
 		private IVillageInfrBuildOption _VillageInfrBuildStageCache;
 
-		// Token: 0x04007A8B RID: 31371
+		// Token: 0x04008122 RID: 33058
 		private bool _VillageInfrBuildStageInited;
 
-		// Token: 0x04007A8C RID: 31372
+		// Token: 0x04008123 RID: 33059
 		private IQuestBranchConfig _QuestBranchConfigCache;
 
-		// Token: 0x04007A8D RID: 31373
+		// Token: 0x04008124 RID: 33060
 		private bool _QuestBranchConfigInited;
 
-		// Token: 0x04007A8E RID: 31374
+		// Token: 0x04008125 RID: 33061
 		private IWriteLetterConfig _WriteLetterConfigCache;
 
-		// Token: 0x04007A8F RID: 31375
+		// Token: 0x04008126 RID: 33062
 		private bool _WriteLetterConfigInited;
 
-		// Token: 0x04007A90 RID: 31376
+		// Token: 0x04008127 RID: 33063
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _MechascoutMindSpaceTextKeysCache;
 
-		// Token: 0x04007A91 RID: 31377
+		// Token: 0x04008128 RID: 33064
 		private bool _MechascoutMindSpaceTextKeysInited;
 
-		// Token: 0x04007A92 RID: 31378
+		// Token: 0x04008129 RID: 33065
 		private IDeliverItemProbeCollectiblesConfig _DeliverItemProbeCollectiblesConfigCache;
 
-		// Token: 0x04007A93 RID: 31379
+		// Token: 0x0400812A RID: 33066
 		private bool _DeliverItemProbeCollectiblesConfigInited;
 	}
 }

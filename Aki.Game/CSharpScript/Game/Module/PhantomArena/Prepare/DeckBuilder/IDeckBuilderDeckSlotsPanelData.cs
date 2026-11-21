@@ -4,28 +4,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005197 RID: 20887
+	// Token: 0x02004167 RID: 16743
 	[NullableContext(1)]
 	public interface IDeckBuilderDeckSlotsPanelData
 	{
-		// Token: 0x17008163 RID: 33123
-		// (get) Token: 0x060356AF RID: 218799
-		// (set) Token: 0x060356B0 RID: 218800
+		// Token: 0x17005523 RID: 21795
+		// (get) Token: 0x0602A5AA RID: 173482
+		// (set) Token: 0x0602A5AB RID: 173483
 		DeckInfo DeckInfo { get; set; }
 
-		// Token: 0x17008164 RID: 33124
-		// (get) Token: 0x060356B1 RID: 218801
-		// (set) Token: 0x060356B2 RID: 218802
+		// Token: 0x17005524 RID: 21796
+		// (get) Token: 0x0602A5AC RID: 173484
+		// (set) Token: 0x0602A5AD RID: 173485
 		float? SlotLongPressStartTime { get; set; }
 
-		// Token: 0x17008165 RID: 33125
-		// (get) Token: 0x060356B3 RID: 218803
-		// (set) Token: 0x060356B4 RID: 218804
+		// Token: 0x17005525 RID: 21797
+		// (get) Token: 0x0602A5AE RID: 173486
+		// (set) Token: 0x0602A5AF RID: 173487
 		float? SlotLongPressEndTime { get; set; }
 
-		// Token: 0x17008166 RID: 33126
-		// (get) Token: 0x060356B5 RID: 218805
-		// (set) Token: 0x060356B6 RID: 218806
+		// Token: 0x17005526 RID: 21798
+		// (get) Token: 0x0602A5B0 RID: 173488
+		// (set) Token: 0x0602A5B1 RID: 173489
 		[Nullable(new byte[]
 		{
 			2,
@@ -41,9 +41,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008167 RID: 33127
-		// (get) Token: 0x060356B7 RID: 218807
-		// (set) Token: 0x060356B8 RID: 218808
+		// Token: 0x17005527 RID: 21799
+		// (get) Token: 0x0602A5B2 RID: 173490
+		// (set) Token: 0x0602A5B3 RID: 173491
 		[Nullable(new byte[]
 		{
 			2,
@@ -59,15 +59,15 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008168 RID: 33128
-		// (get) Token: 0x060356B9 RID: 218809
-		// (set) Token: 0x060356BA RID: 218810
+		// Token: 0x17005528 RID: 21800
+		// (get) Token: 0x0602A5B4 RID: 173492
+		// (set) Token: 0x0602A5B5 RID: 173493
 		[Nullable(2)]
 		Action OnSlotItemLongPressEnd { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008169 RID: 33129
-		// (get) Token: 0x060356BB RID: 218811
-		// (set) Token: 0x060356BC RID: 218812
+		// Token: 0x17005529 RID: 21801
+		// (get) Token: 0x0602A5B6 RID: 173494
+		// (set) Token: 0x0602A5B7 RID: 173495
 		[Nullable(new byte[]
 		{
 			2,
@@ -83,14 +83,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700816A RID: 33130
-		// (get) Token: 0x060356BD RID: 218813
-		// (set) Token: 0x060356BE RID: 218814
+		// Token: 0x1700552A RID: 21802
+		// (get) Token: 0x0602A5B8 RID: 173496
+		// (set) Token: 0x0602A5B9 RID: 173497
 		Func<DeckBuilderCardSlotItem, bool> CanCoreSlotItemToggleChange { get; set; }
 
-		// Token: 0x1700816B RID: 33131
-		// (get) Token: 0x060356BF RID: 218815
-		// (set) Token: 0x060356C0 RID: 218816
+		// Token: 0x1700552B RID: 21803
+		// (get) Token: 0x0602A5BA RID: 173498
+		// (set) Token: 0x0602A5BB RID: 173499
 		[Nullable(new byte[]
 		{
 			2,
@@ -106,9 +106,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700816C RID: 33132
-		// (get) Token: 0x060356C1 RID: 218817
-		// (set) Token: 0x060356C2 RID: 218818
+		// Token: 0x1700552C RID: 21804
+		// (get) Token: 0x0602A5BC RID: 173500
+		// (set) Token: 0x0602A5BD RID: 173501
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,9 +124,9 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700816D RID: 33133
-		// (get) Token: 0x060356C3 RID: 218819
-		// (set) Token: 0x060356C4 RID: 218820
+		// Token: 0x1700552D RID: 21805
+		// (get) Token: 0x0602A5BE RID: 173502
+		// (set) Token: 0x0602A5BF RID: 173503
 		[Nullable(new byte[]
 		{
 			2,
@@ -142,14 +142,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x1700816E RID: 33134
-		// (get) Token: 0x060356C5 RID: 218821
-		// (set) Token: 0x060356C6 RID: 218822
+		// Token: 0x1700552E RID: 21806
+		// (get) Token: 0x0602A5C0 RID: 173504
+		// (set) Token: 0x0602A5C1 RID: 173505
 		Func<DeckBuilderCardSlotItem, bool> CanNormalSlotItemToggleChange { get; set; }
 
-		// Token: 0x1700816F RID: 33135
-		// (get) Token: 0x060356C7 RID: 218823
-		// (set) Token: 0x060356C8 RID: 218824
+		// Token: 0x1700552F RID: 21807
+		// (get) Token: 0x0602A5C2 RID: 173506
+		// (set) Token: 0x0602A5C3 RID: 173507
 		[Nullable(new byte[]
 		{
 			2,
@@ -165,14 +165,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008170 RID: 33136
-		// (get) Token: 0x060356C9 RID: 218825
-		// (set) Token: 0x060356CA RID: 218826
+		// Token: 0x17005530 RID: 21808
+		// (get) Token: 0x0602A5C4 RID: 173508
+		// (set) Token: 0x0602A5C5 RID: 173509
 		Func<DeckBuilderCardSlotItem, bool> CanFieldSlotItemToggleChange { get; set; }
 
-		// Token: 0x17008171 RID: 33137
-		// (get) Token: 0x060356CB RID: 218827
-		// (set) Token: 0x060356CC RID: 218828
+		// Token: 0x17005531 RID: 21809
+		// (get) Token: 0x0602A5C6 RID: 173510
+		// (set) Token: 0x0602A5C7 RID: 173511
 		[Nullable(new byte[]
 		{
 			2,
@@ -188,41 +188,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			1
 		})] set; }
 
-		// Token: 0x17008172 RID: 33138
-		// (get) Token: 0x060356CD RID: 218829
-		// (set) Token: 0x060356CE RID: 218830
+		// Token: 0x17005532 RID: 21810
+		// (get) Token: 0x0602A5C8 RID: 173512
+		// (set) Token: 0x0602A5C9 RID: 173513
 		[Nullable(2)]
 		Action<int> OnSlotCardPointEnterCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008173 RID: 33139
-		// (get) Token: 0x060356CF RID: 218831
-		// (set) Token: 0x060356D0 RID: 218832
+		// Token: 0x17005533 RID: 21811
+		// (get) Token: 0x0602A5CA RID: 173514
+		// (set) Token: 0x0602A5CB RID: 173515
 		[Nullable(2)]
 		Action OnSlotCardPointExitCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008174 RID: 33140
-		// (get) Token: 0x060356D1 RID: 218833
-		// (set) Token: 0x060356D2 RID: 218834
+		// Token: 0x17005534 RID: 21812
+		// (get) Token: 0x0602A5CC RID: 173516
+		// (set) Token: 0x0602A5CD RID: 173517
 		CardSlotSortContext SortContext { get; set; }
 
-		// Token: 0x17008175 RID: 33141
-		// (get) Token: 0x060356D3 RID: 218835
-		// (set) Token: 0x060356D4 RID: 218836
+		// Token: 0x17005535 RID: 21813
+		// (get) Token: 0x0602A5CE RID: 173518
+		// (set) Token: 0x0602A5CF RID: 173519
 		bool ShowLocked { get; set; }
 
-		// Token: 0x17008176 RID: 33142
-		// (get) Token: 0x060356D5 RID: 218837
-		// (set) Token: 0x060356D6 RID: 218838
+		// Token: 0x17005536 RID: 21814
+		// (get) Token: 0x0602A5D0 RID: 173520
+		// (set) Token: 0x0602A5D1 RID: 173521
 		bool ShowOutlook { get; set; }
 
-		// Token: 0x17008177 RID: 33143
-		// (get) Token: 0x060356D7 RID: 218839
-		// (set) Token: 0x060356D8 RID: 218840
+		// Token: 0x17005537 RID: 21815
+		// (get) Token: 0x0602A5D2 RID: 173522
+		// (set) Token: 0x0602A5D3 RID: 173523
 		bool IsNeedFieldCard { get; set; }
 
-		// Token: 0x17008178 RID: 33144
-		// (get) Token: 0x060356D9 RID: 218841
-		// (set) Token: 0x060356DA RID: 218842
+		// Token: 0x17005538 RID: 21816
+		// (get) Token: 0x0602A5D4 RID: 173524
+		// (set) Token: 0x0602A5D5 RID: 173525
 		bool IsNeedRequestCheckCardSkillUnlock { get; set; }
 	}
 }

@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019E1 RID: 6625
+// Token: 0x02000EA0 RID: 3744
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsConfirmBoxView : UiViewBase
 {
-	// Token: 0x0600C197 RID: 49559 RVA: 0x002BB380 File Offset: 0x002B9580
+	// Token: 0x060095A4 RID: 38308 RVA: 0x002C6358 File Offset: 0x002C4558
 	public RacingBetsConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C198 RID: 49560 RVA: 0x002BB3A0 File Offset: 0x002B95A0
+	// Token: 0x060095A5 RID: 38309 RVA: 0x002C6378 File Offset: 0x002C4578
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -53,7 +53,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C199 RID: 49561 RVA: 0x002BB530 File Offset: 0x002B9730
+	// Token: 0x060095A6 RID: 38310 RVA: 0x002C6508 File Offset: 0x002C4708
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsConfirmBoxView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C19A RID: 49562 RVA: 0x002BB574 File Offset: 0x002B9774
+	// Token: 0x060095A7 RID: 38311 RVA: 0x002C654C File Offset: 0x002C474C
 	protected override void OnStart()
 	{
 		UiViewBase attachView = (this.OpenParam as ConfirmBoxDataNew).AttachView;
@@ -80,7 +80,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C19B RID: 49563 RVA: 0x002BB5CC File Offset: 0x002B97CC
+	// Token: 0x060095A8 RID: 38312 RVA: 0x002C65A4 File Offset: 0x002C47A4
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -153,7 +153,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C19C RID: 49564 RVA: 0x002BB709 File Offset: 0x002B9909
+	// Token: 0x060095A9 RID: 38313 RVA: 0x002C66E1 File Offset: 0x002C48E1
 	protected override void OnAfterShow()
 	{
 		Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -164,7 +164,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		afterShowFunction();
 	}
 
-	// Token: 0x0600C19D RID: 49565 RVA: 0x002BB720 File Offset: 0x002B9920
+	// Token: 0x060095AA RID: 38314 RVA: 0x002C66F8 File Offset: 0x002C48F8
 	protected override void OnBeforeHide()
 	{
 		if (this.LastHide)
@@ -183,7 +183,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C19E RID: 49566 RVA: 0x002BB744 File Offset: 0x002B9944
+	// Token: 0x060095AB RID: 38315 RVA: 0x002C671C File Offset: 0x002C491C
 	protected override void OnBeforeDestroy()
 	{
 		this.ResetButtonList();
@@ -215,14 +215,14 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		overPowerCurrencyItem.Destroy(null);
 	}
 
-	// Token: 0x0600C19F RID: 49567 RVA: 0x002BB7C7 File Offset: 0x002B99C7
+	// Token: 0x060095AC RID: 38316 RVA: 0x002C679F File Offset: 0x002C499F
 	protected void OnClose()
 	{
 		this.SelectedIndex = -1;
 		this.ConfirmBoxButtonClick();
 	}
 
-	// Token: 0x0600C1A0 RID: 49568 RVA: 0x002BB7D8 File Offset: 0x002B99D8
+	// Token: 0x060095AD RID: 38317 RVA: 0x002C67B0 File Offset: 0x002C49B0
 	protected void ConfirmBoxButtonClick()
 	{
 		ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -250,7 +250,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C1A1 RID: 49569 RVA: 0x002BB848 File Offset: 0x002B9A48
+	// Token: 0x060095AE RID: 38318 RVA: 0x002C6820 File Offset: 0x002C4A20
 	private void HandleSelectedIndexWhenClose()
 	{
 		if (this.SelectedIndex != -1)
@@ -265,7 +265,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		this.SelectedIndex = 0;
 	}
 
-	// Token: 0x0600C1A2 RID: 49570 RVA: 0x002BB894 File Offset: 0x002B9A94
+	// Token: 0x060095AF RID: 38319 RVA: 0x002C686C File Offset: 0x002C4A6C
 	protected UniTask InitButton()
 	{
 		RacingBetsConfirmBoxView.<InitButton>d__19 <InitButton>d__;
@@ -276,7 +276,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		return <InitButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C1A3 RID: 49571 RVA: 0x002BB8D8 File Offset: 0x002B9AD8
+	// Token: 0x060095B0 RID: 38320 RVA: 0x002C68B0 File Offset: 0x002C4AB0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -295,7 +295,7 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C1A4 RID: 49572 RVA: 0x002BB934 File Offset: 0x002B9B34
+	// Token: 0x060095B1 RID: 38321 RVA: 0x002C690C File Offset: 0x002C4B0C
 	private void ResetButtonList()
 	{
 		int i = 0;
@@ -308,62 +308,62 @@ public class RacingBetsConfirmBoxView : UiViewBase
 		this.ButtonList = new ConfirmBoxButton[0];
 	}
 
-	// Token: 0x0600C1A5 RID: 49573 RVA: 0x002BB970 File Offset: 0x002B9B70
+	// Token: 0x060095B2 RID: 38322 RVA: 0x002C6948 File Offset: 0x002C4B48
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005935 RID: 22837
+	// Token: 0x04005A04 RID: 23044
 	protected ConfirmBoxButton[] ButtonList = Array.Empty<ConfirmBoxButton>();
 
-	// Token: 0x04005936 RID: 22838
+	// Token: 0x04005A05 RID: 23045
 	protected ConfirmBox? Config;
 
-	// Token: 0x04005937 RID: 22839
+	// Token: 0x04005A06 RID: 23046
 	[Nullable(2)]
 	protected ConfirmBoxDataNew ConfirmBoxData;
 
-	// Token: 0x04005938 RID: 22840
+	// Token: 0x04005A07 RID: 23047
 	protected int SelectedIndex;
 
-	// Token: 0x04005939 RID: 22841
+	// Token: 0x04005A08 RID: 23048
 	protected readonly List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-	// Token: 0x0400593A RID: 22842
+	// Token: 0x04005A09 RID: 23049
 	[Nullable(2)]
 	private PowerCurrencyItem PowerCurrencyItem;
 
-	// Token: 0x0400593B RID: 22843
+	// Token: 0x04005A0A RID: 23050
 	[Nullable(2)]
 	private PowerCurrencyItem OverPowerCurrencyItem;
 
-	// Token: 0x02007F11 RID: 32529
+	// Token: 0x020070A0 RID: 28832
 	[NullableContext(0)]
 	private class EConfirmBoxViewDefine
 	{
-		// Token: 0x04029827 RID: 170023
+		// Token: 0x04024B64 RID: 150372
 		public const int ButtonClose = 0;
 
-		// Token: 0x04029828 RID: 170024
+		// Token: 0x04024B65 RID: 150373
 		public const int ButtonCancel = 1;
 
-		// Token: 0x04029829 RID: 170025
+		// Token: 0x04024B66 RID: 150374
 		public const int ButtonConfirm = 2;
 
-		// Token: 0x0402982A RID: 170026
+		// Token: 0x04024B67 RID: 150375
 		public const int ContentText = 3;
 
-		// Token: 0x0402982B RID: 170027
+		// Token: 0x04024B68 RID: 150376
 		public const int ContentText2 = 4;
 
-		// Token: 0x0402982C RID: 170028
+		// Token: 0x04024B69 RID: 150377
 		public const int TitleText = 5;
 
-		// Token: 0x0402982D RID: 170029
+		// Token: 0x04024B6A RID: 150378
 		public const int BtnMask = 6;
 
-		// Token: 0x0402982E RID: 170030
+		// Token: 0x04024B6B RID: 150379
 		public const int ItemBtnRoot = 7;
 	}
 }

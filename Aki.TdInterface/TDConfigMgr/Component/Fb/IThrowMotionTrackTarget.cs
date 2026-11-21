@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B4A RID: 2890
+	// Token: 0x02000C18 RID: 3096
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IThrowMotionTrackTarget : IThrowMotion
 	{
-		// Token: 0x06004296 RID: 17046 RVA: 0x000AA1C4 File Offset: 0x000A83C4
-		[NullableContext(1)]
+		// Token: 0x060046EF RID: 18159 RVA: 0x000B4288 File Offset: 0x000B2488
+		[NullableContext(0)]
 		public static IThrowMotionTrackTarget Create(IThrowMotionTrackTarget? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011BF RID: 4543
-		// (get) Token: 0x06004297 RID: 17047 RVA: 0x000AA1E3 File Offset: 0x000A83E3
+		// Token: 0x170012BA RID: 4794
+		// (get) Token: 0x060046F0 RID: 18160 RVA: 0x000B42A7 File Offset: 0x000B24A7
 		public override EThrowMotion Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011C0 RID: 4544
-		// (get) Token: 0x06004298 RID: 17048 RVA: 0x000AA1F0 File Offset: 0x000A83F0
+		// Token: 0x170012BB RID: 4795
+		// (get) Token: 0x060046F1 RID: 18161 RVA: 0x000B42B4 File Offset: 0x000B24B4
 		public virtual float Velocity
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011C1 RID: 4545
-		// (get) Token: 0x06004299 RID: 17049 RVA: 0x000AA1FD File Offset: 0x000A83FD
+		// Token: 0x170012BC RID: 4796
+		// (get) Token: 0x060046F2 RID: 18162 RVA: 0x000B42C1 File Offset: 0x000B24C1
 		public virtual string VelocityCurve
 		{
 			get
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011C2 RID: 4546
-		// (get) Token: 0x0600429A RID: 17050 RVA: 0x000AA20A File Offset: 0x000A840A
+		// Token: 0x170012BD RID: 4797
+		// (get) Token: 0x060046F3 RID: 18163 RVA: 0x000B42CE File Offset: 0x000B24CE
 		public virtual VectorInfo VelocityOffset
 		{
 			get
@@ -70,8 +70,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011C3 RID: 4547
-		// (get) Token: 0x0600429B RID: 17051 RVA: 0x000AA23E File Offset: 0x000A843E
+		// Token: 0x170012BE RID: 4798
+		// (get) Token: 0x060046F4 RID: 18164 RVA: 0x000B4302 File Offset: 0x000B2502
 		public virtual float AngularVelocity
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011C4 RID: 4548
-		// (get) Token: 0x0600429C RID: 17052 RVA: 0x000AA24B File Offset: 0x000A844B
+		// Token: 0x170012BF RID: 4799
+		// (get) Token: 0x060046F5 RID: 18165 RVA: 0x000B430F File Offset: 0x000B250F
 		public virtual string AngularVelocityCurve
 		{
 			get
@@ -90,13 +90,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400257D RID: 9597
+		// Token: 0x040027C5 RID: 10181
 		private IThrowMotionTrackTarget Instance;
 
-		// Token: 0x0400257E RID: 9598
+		// Token: 0x040027C6 RID: 10182
 		private VectorInfo _VelocityOffsetCache;
 
-		// Token: 0x0400257F RID: 9599
+		// Token: 0x040027C7 RID: 10183
 		private bool _VelocityOffsetInited;
 	}
 }

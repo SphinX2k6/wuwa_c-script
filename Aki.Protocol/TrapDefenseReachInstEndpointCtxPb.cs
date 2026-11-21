@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200143A RID: 5178
+	// Token: 0x020014AD RID: 5293
 	public sealed class TrapDefenseReachInstEndpointCtxPb : IMessage<TrapDefenseReachInstEndpointCtxPb>, IMessage, IEquatable<TrapDefenseReachInstEndpointCtxPb>, IDeepCloneable<TrapDefenseReachInstEndpointCtxPb>, IBufferMessage
 	{
-		// Token: 0x0601B6DE RID: 112350 RVA: 0x003F8A75 File Offset: 0x003F6C75
+		// Token: 0x0601C169 RID: 115049 RVA: 0x00413D49 File Offset: 0x00411F49
 		[NullableContext(1)]
 		public static TrapDefenseReachInstEndpointCtxPb Create()
 		{
 			return new TrapDefenseReachInstEndpointCtxPb();
 		}
 
-		// Token: 0x17005C7C RID: 23676
-		// (get) Token: 0x0601B6DF RID: 112351 RVA: 0x003F8A7C File Offset: 0x003F6C7C
+		// Token: 0x17005F11 RID: 24337
+		// (get) Token: 0x0601C16A RID: 115050 RVA: 0x00413D50 File Offset: 0x00411F50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005C7D RID: 23677
-		// (get) Token: 0x0601B6E0 RID: 112352 RVA: 0x003F8A7F File Offset: 0x003F6C7F
+		// Token: 0x17005F12 RID: 24338
+		// (get) Token: 0x0601C16B RID: 115051 RVA: 0x00413D53 File Offset: 0x00411F53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B6E1 RID: 112353 RVA: 0x003F8A86 File Offset: 0x003F6C86
+		// Token: 0x0601C16C RID: 115052 RVA: 0x00413D5A File Offset: 0x00411F5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseReachInstEndpointCtxPb()
 		{
 		}
 
-		// Token: 0x0601B6E2 RID: 112354 RVA: 0x003F8A8E File Offset: 0x003F6C8E
+		// Token: 0x0601C16D RID: 115053 RVA: 0x00413D62 File Offset: 0x00411F62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseReachInstEndpointCtxPb(TrapDefenseReachInstEndpointCtxPb other) : this()
@@ -56,7 +56,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B6E3 RID: 112355 RVA: 0x003F8AA7 File Offset: 0x003F6CA7
+		// Token: 0x0601C16E RID: 115054 RVA: 0x00413D7B File Offset: 0x00411F7B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseReachInstEndpointCtxPb Clone()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			return new TrapDefenseReachInstEndpointCtxPb(this);
 		}
 
-		// Token: 0x0601B6E4 RID: 112356 RVA: 0x003F8AAF File Offset: 0x003F6CAF
+		// Token: 0x0601C16F RID: 115055 RVA: 0x00413D83 File Offset: 0x00411F83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrapDefenseReachInstEndpointCtxPb);
 		}
 
-		// Token: 0x0601B6E5 RID: 112357 RVA: 0x003F8ABD File Offset: 0x003F6CBD
+		// Token: 0x0601C170 RID: 115056 RVA: 0x00413D91 File Offset: 0x00411F91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrapDefenseReachInstEndpointCtxPb other)
@@ -80,7 +80,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x0601B6E6 RID: 112358 RVA: 0x003F8ADC File Offset: 0x003F6CDC
+		// Token: 0x0601C171 RID: 115057 RVA: 0x00413DB0 File Offset: 0x00411FB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -93,7 +93,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B6E7 RID: 112359 RVA: 0x003F8B02 File Offset: 0x003F6D02
+		// Token: 0x0601C172 RID: 115058 RVA: 0x00413DD6 File Offset: 0x00411FD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B6E8 RID: 112360 RVA: 0x003F8B0F File Offset: 0x003F6D0F
+		// Token: 0x0601C173 RID: 115059 RVA: 0x00413DE3 File Offset: 0x00411FE3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B6E9 RID: 112361 RVA: 0x003F8B18 File Offset: 0x003F6D18
+		// Token: 0x0601C174 RID: 115060 RVA: 0x00413DEC File Offset: 0x00411FEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B6EA RID: 112362 RVA: 0x003F8B30 File Offset: 0x003F6D30
+		// Token: 0x0601C175 RID: 115061 RVA: 0x00413E04 File Offset: 0x00412004
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B6EB RID: 112363 RVA: 0x003F8B56 File Offset: 0x003F6D56
+		// Token: 0x0601C176 RID: 115062 RVA: 0x00413E2A File Offset: 0x0041202A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrapDefenseReachInstEndpointCtxPb other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B6EC RID: 112364 RVA: 0x003F8B73 File Offset: 0x003F6D73
+		// Token: 0x0601C177 RID: 115063 RVA: 0x00413E47 File Offset: 0x00412047
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B6ED RID: 112365 RVA: 0x003F8B7C File Offset: 0x003F6D7C
+		// Token: 0x0601C178 RID: 115064 RVA: 0x00413E50 File Offset: 0x00412050
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009E49 RID: 40521
+		// Token: 0x0400A290 RID: 41616
 		private UnknownFieldSet _unknownFields;
 	}
 }

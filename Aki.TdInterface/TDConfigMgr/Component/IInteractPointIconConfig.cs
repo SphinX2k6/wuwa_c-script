@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000489 RID: 1161
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004E2 RID: 1250
 	public class IInteractPointIconConfig
 	{
-		// Token: 0x0600175A RID: 5978 RVA: 0x00046D94 File Offset: 0x00044F94
+		// Token: 0x060018F4 RID: 6388 RVA: 0x0004AADC File Offset: 0x00048CDC
 		private IInteractPointIconConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600175B RID: 5979 RVA: 0x00046DCC File Offset: 0x00044FCC
+		// Token: 0x060018F5 RID: 6389 RVA: 0x0004AB14 File Offset: 0x00048D14
 		public static IInteractPointIconConfig Create([Nullable(2)] IInteractPointIconConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600175C RID: 5980 RVA: 0x00046DDF File Offset: 0x00044FDF
+		// Token: 0x060018F6 RID: 6390 RVA: 0x0004AB27 File Offset: 0x00048D27
 		public static IInteractPointIconConfig CreateFromSetValue([Nullable(2)] IInteractPointIconConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600175D RID: 5981 RVA: 0x00046DF2 File Offset: 0x00044FF2
+		// Token: 0x060018F7 RID: 6391 RVA: 0x0004AB3A File Offset: 0x00048D3A
 		public IInteractPointIconConfig_SetValue ToSetValue()
 		{
 			return new IInteractPointIconConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700063E RID: 1598
-		// (get) Token: 0x0600175E RID: 5982 RVA: 0x00046E11 File Offset: 0x00045011
-		// (set) Token: 0x0600175F RID: 5983 RVA: 0x00046E40 File Offset: 0x00045040
+		// Token: 0x170006A5 RID: 1701
+		// (get) Token: 0x060018F8 RID: 6392 RVA: 0x0004AB59 File Offset: 0x00048D59
+		// (set) Token: 0x060018F9 RID: 6393 RVA: 0x0004AB88 File Offset: 0x00048D88
 		public virtual float MaxShowDistance
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700063F RID: 1599
-		// (get) Token: 0x06001760 RID: 5984 RVA: 0x00046E50 File Offset: 0x00045050
-		// (set) Token: 0x06001761 RID: 5985 RVA: 0x00046EB1 File Offset: 0x000450B1
+		// Token: 0x170006A6 RID: 1702
+		// (get) Token: 0x060018FA RID: 6394 RVA: 0x0004AB98 File Offset: 0x00048D98
+		// (set) Token: 0x060018FB RID: 6395 RVA: 0x0004ABF9 File Offset: 0x00048DF9
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001185 RID: 4485
+		// Token: 0x040012A7 RID: 4775
 		[Nullable(2)]
 		protected IInteractPointIconConfig FbInstance;
 
-		// Token: 0x04001186 RID: 4486
+		// Token: 0x040012A8 RID: 4776
 		[Nullable(2)]
 		protected IInteractPointIconConfig_SetValue PocoInterface;
 
-		// Token: 0x04001187 RID: 4487
+		// Token: 0x040012A9 RID: 4777
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04001188 RID: 4488
+		// Token: 0x040012AA RID: 4778
 		private bool _OffsetInited;
 	}
 }

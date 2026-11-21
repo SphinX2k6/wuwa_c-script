@@ -9,10 +9,10 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B6 RID: 20662
+	// Token: 0x02004086 RID: 16518
 	public class FlowActionDestroyEntity : FlowActionServerAction
 	{
-		// Token: 0x06034EC7 RID: 216775 RVA: 0x00C88F40 File Offset: 0x00C87140
+		// Token: 0x06029DC0 RID: 171456 RVA: 0x00BD6228 File Offset: 0x00BD4428
 		protected unsafe override void OnExecute()
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.Task = WaitEntityTask.CreateWithPbDataId("FlowActionDestroyEntity.OnExecute", destroyEntity.EntityIds, new Action<bool?>(this.OnEntityReady), 20000, true, false);
 		}
 
-		// Token: 0x06034EC8 RID: 216776 RVA: 0x00C890E4 File Offset: 0x00C872E4
+		// Token: 0x06029DC1 RID: 171457 RVA: 0x00BD63CC File Offset: 0x00BD45CC
 		private void OnEntityReady(bool? result)
 		{
 			this.Task = null;
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EC9 RID: 216777 RVA: 0x00C89298 File Offset: 0x00C87498
+		// Token: 0x06029DC2 RID: 171458 RVA: 0x00BD6580 File Offset: 0x00BD4780
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034ECA RID: 216778 RVA: 0x00C892A0 File Offset: 0x00C874A0
+		// Token: 0x06029DC3 RID: 171459 RVA: 0x00BD6588 File Offset: 0x00BD4788
 		protected override void OnInterruptExecute()
 		{
 			WaitEntityTask task = this.Task;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034ECB RID: 216779 RVA: 0x00C892C4 File Offset: 0x00C874C4
+		// Token: 0x06029DC4 RID: 171460 RVA: 0x00BD65AC File Offset: 0x00BD47AC
 		[NullableContext(1)]
 		protected override void OnRollback(ActionRecord actionRecord, FlowContext context)
 		{
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x0401C307 RID: 115463
+		// Token: 0x04016D38 RID: 93496
 		[Nullable(2)]
 		public WaitEntityTask Task;
 	}

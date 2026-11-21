@@ -2,11 +2,11 @@
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02003507 RID: 13575
+// Token: 0x02002A7C RID: 10876
 public class GameModePromise
 {
-	// Token: 0x17002903 RID: 10499
-	// (get) Token: 0x0601DC54 RID: 121940 RVA: 0x00857A0B File Offset: 0x00855C0B
+	// Token: 0x17002C9C RID: 11420
+	// (get) Token: 0x0601B96E RID: 113006 RVA: 0x0087FFD5 File Offset: 0x0087E1D5
 	public UniTask<bool> Promise
 	{
 		get
@@ -19,7 +19,7 @@ public class GameModePromise
 		}
 	}
 
-	// Token: 0x0601DC55 RID: 121941 RVA: 0x00857A2C File Offset: 0x00855C2C
+	// Token: 0x0601B96F RID: 113007 RVA: 0x0087FFF8 File Offset: 0x0087E1F8
 	public void SetResult(bool value)
 	{
 		this.HasResult = true;
@@ -33,13 +33,13 @@ public class GameModePromise
 		this.promiseSource.TrySetResult(value);
 	}
 
-	// Token: 0x0400E990 RID: 59792
+	// Token: 0x0400EE4B RID: 61003
 	[Nullable(1)]
 	private readonly AkiUniTask<bool> promiseSource = new AkiUniTask<bool>();
 
-	// Token: 0x0400E991 RID: 59793
+	// Token: 0x0400EE4C RID: 61004
 	private bool HasResult;
 
-	// Token: 0x0400E992 RID: 59794
+	// Token: 0x0400EE4D RID: 61005
 	private bool Result;
 }

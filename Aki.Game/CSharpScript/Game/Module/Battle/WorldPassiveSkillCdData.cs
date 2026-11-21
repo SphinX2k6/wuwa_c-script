@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C61 RID: 23649
+	// Token: 0x02004C41 RID: 19521
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldPassiveSkillCdData
 	{
-		// Token: 0x0603BC7C RID: 244860 RVA: 0x00E4709A File Offset: 0x00E4529A
+		// Token: 0x06030BC7 RID: 199623 RVA: 0x00D9747A File Offset: 0x00D9567A
 		public void Clear()
 		{
 			this.EntitySkillCdMap.Clear();
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.OffRoleSkillCdMap.Clear();
 		}
 
-		// Token: 0x0603BC7D RID: 244861 RVA: 0x00E470C0 File Offset: 0x00E452C0
+		// Token: 0x06030BC8 RID: 199624 RVA: 0x00D974A0 File Offset: 0x00D956A0
 		public PassiveSkillCdInfo InitPassiveSkillCd(Entity entity, in PassiveSkill passiveSkill)
 		{
 			PassiveSkill passiveSkill2 = passiveSkill;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Battle
 			return this.InitSkillCdCommon(entity, id, cdtime, passiveSkill2.IsShareAllCdSkill, new float?(num));
 		}
 
-		// Token: 0x0603BC7E RID: 244862 RVA: 0x00E47130 File Offset: 0x00E45330
+		// Token: 0x06030BC9 RID: 199625 RVA: 0x00D97510 File Offset: 0x00D95710
 		public PassiveSkillCdInfo InitSkillCdCommon(Entity entity, long skillId, float skillCd, bool isShareAllCdSkill, float? threshold = null)
 		{
 			int id = entity.Id;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Battle
 			return passiveSkillCdInfo;
 		}
 
-		// Token: 0x0603BC7F RID: 244863 RVA: 0x00E4725C File Offset: 0x00E4545C
+		// Token: 0x06030BCA RID: 199626 RVA: 0x00D9763C File Offset: 0x00D9583C
 		public void RemoveEntity(Entity entity)
 		{
 			int id = entity.Id;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC80 RID: 244864 RVA: 0x00E47344 File Offset: 0x00E45544
+		// Token: 0x06030BCB RID: 199627 RVA: 0x00D97724 File Offset: 0x00D95924
 		public void HandlePassiveSkillNotify(PassiveSkillNotify notify)
 		{
 			double serverTimeStamp = Time.Instance.ServerTimeStamp;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC81 RID: 244865 RVA: 0x00E474AC File Offset: 0x00E456AC
+		// Token: 0x06030BCC RID: 199628 RVA: 0x00D9788C File Offset: 0x00D95A8C
 		[return: TupleElementNames(new string[]
 		{
 			"entityId",
@@ -193,13 +193,13 @@ namespace CSharpScript.Game.Module.Battle
 			return new ValueTuple<int?, PassiveSkillCdData>(null, null);
 		}
 
-		// Token: 0x0401F211 RID: 127505
+		// Token: 0x04019CC2 RID: 105666
 		public readonly Dictionary<int, PassiveSkillCdData> EntitySkillCdMap = new Dictionary<int, PassiveSkillCdData>();
 
-		// Token: 0x0401F212 RID: 127506
+		// Token: 0x04019CC3 RID: 105667
 		public readonly PassiveSkillCdData AllShareSkillCdData = new PassiveSkillCdData();
 
-		// Token: 0x0401F213 RID: 127507
+		// Token: 0x04019CC4 RID: 105668
 		public readonly Dictionary<int, PassiveSkillCdData> OffRoleSkillCdMap = new Dictionary<int, PassiveSkillCdData>();
 	}
 }

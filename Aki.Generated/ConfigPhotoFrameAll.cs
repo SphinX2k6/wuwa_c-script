@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006DA RID: 1754
+	// Token: 0x020006F2 RID: 1778
 	public class ConfigPhotoFrameAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600292C RID: 10540 RVA: 0x001421C0 File Offset: 0x001403C0
+		// Token: 0x060029BC RID: 10684 RVA: 0x00148C3C File Offset: 0x00146E3C
 		static ConfigPhotoFrameAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoFrameAll.CreateStaticDefaultValue), new Action(ConfigPhotoFrameAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600292D RID: 10541 RVA: 0x001421E0 File Offset: 0x001403E0
+		// Token: 0x060029BD RID: 10685 RVA: 0x00148C5C File Offset: 0x00146E5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoFrameAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600292E RID: 10542 RVA: 0x0014225F File Offset: 0x0014045F
+		// Token: 0x060029BE RID: 10686 RVA: 0x00148CDB File Offset: 0x00146EDB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoFrameAll.LogPair = null;
 			ConfigPhotoFrameAll.HandleId = 0;
 		}
 
-		// Token: 0x0600292F RID: 10543 RVA: 0x0014226D File Offset: 0x0014046D
+		// Token: 0x060029BF RID: 10687 RVA: 0x00148CE9 File Offset: 0x00146EE9
 		public static void Init()
 		{
 			ConfigPhotoFrameAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoFrameAll.HandleId, "db_photonew.db", "select BinData from `PhotoFrame`");
 		}
 
-		// Token: 0x06002930 RID: 10544 RVA: 0x00142288 File Offset: 0x00140488
+		// Token: 0x060029C0 RID: 10688 RVA: 0x00148D04 File Offset: 0x00146F04
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoFrame> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002FDC RID: 12252
+		// Token: 0x04003084 RID: 12420
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04002FDD RID: 12253
+		// Token: 0x04003085 RID: 12421
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04002FDE RID: 12254
+		// Token: 0x04003086 RID: 12422
 		private const string TABLE = "PhotoFrame";
 
-		// Token: 0x04002FDF RID: 12255
+		// Token: 0x04003087 RID: 12423
 		private const string COMMAND = "select BinData from `PhotoFrame`";
 
-		// Token: 0x04002FE0 RID: 12256
+		// Token: 0x04003088 RID: 12424
 		private const string KEY_PREFIX = "PhotoFrameAll";
 
-		// Token: 0x04002FE1 RID: 12257
+		// Token: 0x04003089 RID: 12425
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002FE2 RID: 12258
+		// Token: 0x0400308A RID: 12426
 		private static int HandleId;
 	}
 }

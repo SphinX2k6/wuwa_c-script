@@ -4,21 +4,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F8 RID: 25848
+	// Token: 0x02005476 RID: 21622
 	public class ResultKeeper : ISolvedSequencesConsumer
 	{
-		// Token: 0x17009501 RID: 38145
-		// (get) Token: 0x06040E48 RID: 265800 RVA: 0x00FBA3EB File Offset: 0x00FB85EB
-		// (set) Token: 0x06040E49 RID: 265801 RVA: 0x00FBA3F3 File Offset: 0x00FB85F3
+		// Token: 0x17006863 RID: 26723
+		// (get) Token: 0x06035B0C RID: 219916 RVA: 0x00F0141B File Offset: 0x00EFF61B
+		// (set) Token: 0x06035B0D RID: 219917 RVA: 0x00F01423 File Offset: 0x00EFF623
 		public int Score { get; private set; }
 
-		// Token: 0x06040E4A RID: 265802 RVA: 0x00FBA3FC File Offset: 0x00FB85FC
+		// Token: 0x06035B0E RID: 219918 RVA: 0x00F0142C File Offset: 0x00EFF62C
 		public int ClearedCountOf(EPieceType type)
 		{
 			return this.ClearedCounts.GetValueOrDefault(type, 0);
 		}
 
-		// Token: 0x06040E4B RID: 265803 RVA: 0x00FBA40C File Offset: 0x00FB860C
+		// Token: 0x06035B0F RID: 219919 RVA: 0x00F0143C File Offset: 0x00EFF63C
 		[NullableContext(1)]
 		public void OnSequencesSolved(SolvedData solved)
 		{
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E4C RID: 265804 RVA: 0x00FBA46B File Offset: 0x00FB866B
+		// Token: 0x06035B10 RID: 219920 RVA: 0x00F0149B File Offset: 0x00EFF69B
 		public void Reset()
 		{
 			this.Score = 0;
 			this.ClearedCounts.Clear();
 		}
 
-		// Token: 0x04021D38 RID: 138552
+		// Token: 0x0401C669 RID: 116329
 		[Nullable(1)]
 		private readonly Dictionary<EPieceType, int> ClearedCounts = new Dictionary<EPieceType, int>();
 	}

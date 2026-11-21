@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BB2 RID: 7090
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D99 RID: 7577
 	public class ILookAtPerformOverlapMontageConfig
 	{
-		// Token: 0x060097D1 RID: 38865 RVA: 0x0015E168 File Offset: 0x0015C368
+		// Token: 0x0600A0D5 RID: 41173 RVA: 0x00170C28 File Offset: 0x0016EE28
 		private ILookAtPerformOverlapMontageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060097D2 RID: 38866 RVA: 0x0015E1A0 File Offset: 0x0015C3A0
+		// Token: 0x0600A0D6 RID: 41174 RVA: 0x00170C60 File Offset: 0x0016EE60
 		public static ILookAtPerformOverlapMontageConfig Create([Nullable(2)] ILookAtPerformOverlapMontageConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097D3 RID: 38867 RVA: 0x0015E1B3 File Offset: 0x0015C3B3
+		// Token: 0x0600A0D7 RID: 41175 RVA: 0x00170C73 File Offset: 0x0016EE73
 		public static ILookAtPerformOverlapMontageConfig CreateFromSetValue([Nullable(2)] ILookAtPerformOverlapMontageConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097D4 RID: 38868 RVA: 0x0015E1C6 File Offset: 0x0015C3C6
+		// Token: 0x0600A0D8 RID: 41176 RVA: 0x00170C86 File Offset: 0x0016EE86
 		public ILookAtPerformOverlapMontageConfig_SetValue ToSetValue()
 		{
 			return new ILookAtPerformOverlapMontageConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FB4 RID: 12212
-		// (get) Token: 0x060097D5 RID: 38869 RVA: 0x0015E1E8 File Offset: 0x0015C3E8
-		// (set) Token: 0x060097D6 RID: 38870 RVA: 0x0015E222 File Offset: 0x0015C422
+		// Token: 0x17003213 RID: 12819
+		// (get) Token: 0x0600A0D9 RID: 41177 RVA: 0x00170CA8 File Offset: 0x0016EEA8
+		// (set) Token: 0x0600A0DA RID: 41178 RVA: 0x00170CE2 File Offset: 0x0016EEE2
 		public virtual float? OverlapMontageLoopDuration
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FB5 RID: 12213
-		// (get) Token: 0x060097D7 RID: 38871 RVA: 0x0015E230 File Offset: 0x0015C430
-		// (set) Token: 0x060097D8 RID: 38872 RVA: 0x0015E26A File Offset: 0x0015C46A
+		// Token: 0x17003214 RID: 12820
+		// (get) Token: 0x0600A0DB RID: 41179 RVA: 0x00170CF0 File Offset: 0x0016EEF0
+		// (set) Token: 0x0600A0DC RID: 41180 RVA: 0x00170D2A File Offset: 0x0016EF2A
 		public virtual int? OverlapMontageRepeatTimes
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005CA5 RID: 23717
+		// Token: 0x040061BA RID: 25018
 		[Nullable(2)]
 		protected ILookAtPerformOverlapMontageConfig FbInstance;
 
-		// Token: 0x04005CA6 RID: 23718
+		// Token: 0x040061BB RID: 25019
 		[Nullable(2)]
 		protected ILookAtPerformOverlapMontageConfig_SetValue PocoInterface;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000E3 RID: 227
+	// Token: 0x020000EC RID: 236
 	public enum EMonsterShowOnDeathType
 	{
-		// Token: 0x040004DA RID: 1242
+		// Token: 0x04000502 RID: 1282
 		Effect
 	}
 }

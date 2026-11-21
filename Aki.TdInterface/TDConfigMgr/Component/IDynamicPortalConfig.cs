@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002E9 RID: 745
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000330 RID: 816
 	public class IDynamicPortalConfig
 	{
-		// Token: 0x06000E4F RID: 3663 RVA: 0x00034070 File Offset: 0x00032270
+		// Token: 0x06000F7F RID: 3967 RVA: 0x00036FA4 File Offset: 0x000351A4
 		private IDynamicPortalConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E50 RID: 3664 RVA: 0x000340A8 File Offset: 0x000322A8
+		// Token: 0x06000F80 RID: 3968 RVA: 0x00036FDC File Offset: 0x000351DC
 		public static IDynamicPortalConfig Create([Nullable(2)] IDynamicPortalConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E51 RID: 3665 RVA: 0x000340BB File Offset: 0x000322BB
+		// Token: 0x06000F81 RID: 3969 RVA: 0x00036FEF File Offset: 0x000351EF
 		public static IDynamicPortalConfig CreateFromSetValue([Nullable(2)] IDynamicPortalConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E52 RID: 3666 RVA: 0x000340CE File Offset: 0x000322CE
+		// Token: 0x06000F82 RID: 3970 RVA: 0x00037002 File Offset: 0x00035202
 		public IDynamicPortalConfig_SetValue ToSetValue()
 		{
 			return new IDynamicPortalConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000427 RID: 1063
-		// (get) Token: 0x06000E53 RID: 3667 RVA: 0x000340ED File Offset: 0x000322ED
-		// (set) Token: 0x06000E54 RID: 3668 RVA: 0x00034118 File Offset: 0x00032318
+		// Token: 0x17000474 RID: 1140
+		// (get) Token: 0x06000F83 RID: 3971 RVA: 0x00037021 File Offset: 0x00035221
+		// (set) Token: 0x06000F84 RID: 3972 RVA: 0x0003704C File Offset: 0x0003524C
 		public virtual EPortalModel PortalModel
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000428 RID: 1064
-		// (get) Token: 0x06000E55 RID: 3669 RVA: 0x00034126 File Offset: 0x00032326
-		// (set) Token: 0x06000E56 RID: 3670 RVA: 0x00034151 File Offset: 0x00032351
+		// Token: 0x17000475 RID: 1141
+		// (get) Token: 0x06000F85 RID: 3973 RVA: 0x0003705A File Offset: 0x0003525A
+		// (set) Token: 0x06000F86 RID: 3974 RVA: 0x00037085 File Offset: 0x00035285
 		public virtual string TemplateId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CB0 RID: 3248
+		// Token: 0x04000D9A RID: 3482
 		[Nullable(2)]
 		protected IDynamicPortalConfig FbInstance;
 
-		// Token: 0x04000CB1 RID: 3249
+		// Token: 0x04000D9B RID: 3483
 		[Nullable(2)]
 		protected IDynamicPortalConfig_SetValue PocoInterface;
 	}

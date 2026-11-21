@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001FEE RID: 8174
+// Token: 0x020014C1 RID: 5313
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonExchangeData : UiPopViewData, IViewOpenParamMultipleView
 {
-	// Token: 0x17001367 RID: 4967
-	// (get) Token: 0x06010031 RID: 65585 RVA: 0x003E6D9B File Offset: 0x003E4F9B
-	// (set) Token: 0x06010032 RID: 65586 RVA: 0x003E6DA3 File Offset: 0x003E4FA3
+	// Token: 0x17001394 RID: 5012
+	// (get) Token: 0x0600D499 RID: 54425 RVA: 0x003F3393 File Offset: 0x003F1593
+	// (set) Token: 0x0600D49A RID: 54426 RVA: 0x003F339B File Offset: 0x003F159B
 	public bool IsMultipleView { get; set; } = true;
 
-	// Token: 0x06010033 RID: 65587 RVA: 0x003E6DAC File Offset: 0x003E4FAC
+	// Token: 0x0600D49B RID: 54427 RVA: 0x003F33A4 File Offset: 0x003F15A4
 	public void InitBySrcAndDestItemId(int srcItemId, int destItemId, int? srcItemCount = null, int? destItemCount = null)
 	{
 		this.SrcExchangeUnitData.SetDataByItemId(srcItemId, srcItemCount);
 		this.DestExchangeUnitData.SetDataByItemId(destItemId, destItemCount);
 	}
 
-	// Token: 0x06010034 RID: 65588 RVA: 0x003E6DCC File Offset: 0x003E4FCC
+	// Token: 0x0600D49C RID: 54428 RVA: 0x003F33C4 File Offset: 0x003F15C4
 	public void InitByItemId(int itemId)
 	{
 		ItemExchangeContent value = ItemExchangeConfig.Instance.GetFirstExChangeConfigList(itemId).Value;
@@ -47,53 +47,53 @@ public class CommonExchangeData : UiPopViewData, IViewOpenParamMultipleView
 		this.DestExchangeUnitData.SetDataByItemId(value.ItemId, null);
 	}
 
-	// Token: 0x06010035 RID: 65589 RVA: 0x003E6EB0 File Offset: 0x003E50B0
+	// Token: 0x0600D49D RID: 54429 RVA: 0x003F34A8 File Offset: 0x003F16A8
 	public string GetSrcName()
 	{
 		return this.SrcExchangeUnitData.Name;
 	}
 
-	// Token: 0x06010036 RID: 65590 RVA: 0x003E6EBD File Offset: 0x003E50BD
+	// Token: 0x0600D49E RID: 54430 RVA: 0x003F34B5 File Offset: 0x003F16B5
 	public int GetSrcItemId()
 	{
 		return this.SrcExchangeUnitData.ItemId;
 	}
 
-	// Token: 0x06010037 RID: 65591 RVA: 0x003E6ECA File Offset: 0x003E50CA
+	// Token: 0x0600D49F RID: 54431 RVA: 0x003F34C2 File Offset: 0x003F16C2
 	public int GetSrcTotalCount()
 	{
 		return this.SrcExchangeUnitData.TotalCount;
 	}
 
-	// Token: 0x06010038 RID: 65592 RVA: 0x003E6ED7 File Offset: 0x003E50D7
+	// Token: 0x0600D4A0 RID: 54432 RVA: 0x003F34CF File Offset: 0x003F16CF
 	public string GetDestName()
 	{
 		return this.DestExchangeUnitData.Name;
 	}
 
-	// Token: 0x06010039 RID: 65593 RVA: 0x003E6EE4 File Offset: 0x003E50E4
+	// Token: 0x0600D4A1 RID: 54433 RVA: 0x003F34DC File Offset: 0x003F16DC
 	public int GetDestItemId()
 	{
 		return this.DestExchangeUnitData.ItemId;
 	}
 
-	// Token: 0x0400768B RID: 30347
+	// Token: 0x04007774 RID: 30580
 	private readonly ExchangeUnitData SrcExchangeUnitData = new ExchangeUnitData();
 
-	// Token: 0x0400768C RID: 30348
+	// Token: 0x04007775 RID: 30581
 	private readonly ExchangeUnitData DestExchangeUnitData = new ExchangeUnitData();
 
-	// Token: 0x0400768D RID: 30349
+	// Token: 0x04007776 RID: 30582
 	[Nullable(2)]
 	public Action CancelCallBack;
 
-	// Token: 0x0400768E RID: 30350
+	// Token: 0x04007777 RID: 30583
 	public bool ConfirmNoClose;
 
-	// Token: 0x0400768F RID: 30351
+	// Token: 0x04007778 RID: 30584
 	public bool ShowPayGold;
 
-	// Token: 0x04007690 RID: 30352
+	// Token: 0x04007779 RID: 30585
 	[Nullable(2)]
 	public Action<int, int> ConfirmCallBack;
 }

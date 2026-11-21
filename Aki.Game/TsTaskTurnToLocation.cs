@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTurnToLocation.TsTaskTurnToLocation_C")]
 public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000222 RID: 546
-	// (get) Token: 0x06000BAB RID: 2987 RVA: 0x0003A6C3 File Offset: 0x000388C3
-	// (set) Token: 0x06000BAC RID: 2988 RVA: 0x0003A6D7 File Offset: 0x000388D7
+	// Token: 0x17000225 RID: 549
+	// (get) Token: 0x06000BB1 RID: 2993 RVA: 0x0003B8FB File Offset: 0x00039AFB
+	// (set) Token: 0x06000BB2 RID: 2994 RVA: 0x0003B90F File Offset: 0x00039B0F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string LocationKey
 	{
@@ -31,9 +31,9 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x17000223 RID: 547
-	// (get) Token: 0x06000BAD RID: 2989 RVA: 0x0003A6EC File Offset: 0x000388EC
-	// (set) Token: 0x06000BAE RID: 2990 RVA: 0x0003A700 File Offset: 0x00038900
+	// Token: 0x17000226 RID: 550
+	// (get) Token: 0x06000BB3 RID: 2995 RVA: 0x0003B924 File Offset: 0x00039B24
+	// (set) Token: 0x06000BB4 RID: 2996 RVA: 0x0003B938 File Offset: 0x00039B38
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string DirectionKey
 	{
@@ -47,9 +47,9 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x17000224 RID: 548
-	// (get) Token: 0x06000BAF RID: 2991 RVA: 0x0003A715 File Offset: 0x00038915
-	// (set) Token: 0x06000BB0 RID: 2992 RVA: 0x0003A725 File Offset: 0x00038925
+	// Token: 0x17000227 RID: 551
+	// (get) Token: 0x06000BB5 RID: 2997 RVA: 0x0003B94D File Offset: 0x00039B4D
+	// (set) Token: 0x06000BB6 RID: 2998 RVA: 0x0003B95D File Offset: 0x00039B5D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Continuously
 	{
@@ -63,9 +63,9 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x17000225 RID: 549
-	// (get) Token: 0x06000BB1 RID: 2993 RVA: 0x0003A736 File Offset: 0x00038936
-	// (set) Token: 0x06000BB2 RID: 2994 RVA: 0x0003A746 File Offset: 0x00038946
+	// Token: 0x17000228 RID: 552
+	// (get) Token: 0x06000BB7 RID: 2999 RVA: 0x0003B96E File Offset: 0x00039B6E
+	// (set) Token: 0x06000BB8 RID: 3000 RVA: 0x0003B97E File Offset: 0x00039B7E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float TurnSpeed
 	{
@@ -79,7 +79,7 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x06000BB3 RID: 2995 RVA: 0x0003A758 File Offset: 0x00038958
+	// Token: 0x06000BB9 RID: 3001 RVA: 0x0003B990 File Offset: 0x00039B90
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -97,31 +97,28 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		}
 	}
 
-	// Token: 0x06000BB4 RID: 2996 RVA: 0x0003A7E4 File Offset: 0x000389E4
+	// Token: 0x06000BBA RID: 3002 RVA: 0x0003BA1C File Offset: 0x00039C1C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskTurnToLocation) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskTurnToLocation.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000BB5 RID: 2997 RVA: 0x0003A884 File Offset: 0x00038A84
+	// Token: 0x06000BBB RID: 3003 RVA: 0x0003BAD4 File Offset: 0x00039CD4
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -206,7 +203,7 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000BB6 RID: 2998 RVA: 0x0003AAFD File Offset: 0x00038CFD
+	// Token: 0x06000BBC RID: 3004 RVA: 0x0003BD4D File Offset: 0x00039F4D
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskTurnToLocation._ClassPtr == IntPtr.Zero)
@@ -216,22 +213,22 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		return TsTaskTurnToLocation._ClassPtr;
 	}
 
-	// Token: 0x06000BB7 RID: 2999 RVA: 0x0003AB24 File Offset: 0x00038D24
+	// Token: 0x06000BBD RID: 3005 RVA: 0x0003BD74 File Offset: 0x00039F74
 	public TsTaskTurnToLocation() : this(BuiltinUtils.AllocNativeUObject(TsTaskTurnToLocation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000BB8 RID: 3000 RVA: 0x0003AB4C File Offset: 0x00038D4C
+	// Token: 0x06000BBE RID: 3006 RVA: 0x0003BD9C File Offset: 0x00039F9C
 	public TsTaskTurnToLocation(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTurnToLocation.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000BB9 RID: 3001 RVA: 0x0003AB7F File Offset: 0x00038D7F
+	// Token: 0x06000BBF RID: 3007 RVA: 0x0003BDCF File Offset: 0x00039FCF
 	protected TsTaskTurnToLocation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000BBA RID: 3002 RVA: 0x0003ABA0 File Offset: 0x00038DA0
+	// Token: 0x06000BC0 RID: 3008 RVA: 0x0003BDF0 File Offset: 0x00039FF0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -240,62 +237,62 @@ public class TsTaskTurnToLocation : TsTaskAbortImmediatelyBase, IUnrealUObject, 
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x0400092B RID: 2347
+	// Token: 0x04000933 RID: 2355
 	private const string CURRENT_PLAYER = "_currentPlayer";
 
-	// Token: 0x0400092C RID: 2348
+	// Token: 0x04000934 RID: 2356
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400092D RID: 2349
+	// Token: 0x04000935 RID: 2357
 	private string TsLocationKey = "";
 
-	// Token: 0x0400092E RID: 2350
+	// Token: 0x04000936 RID: 2358
 	private string TsDirectionKey = "";
 
-	// Token: 0x0400092F RID: 2351
+	// Token: 0x04000937 RID: 2359
 	private float TsTurnSpeed;
 
-	// Token: 0x04000930 RID: 2352
+	// Token: 0x04000938 RID: 2360
 	public bool TsContinuously;
 
-	// Token: 0x04000931 RID: 2353
+	// Token: 0x04000939 RID: 2361
 	[Nullable(2)]
 	public global::Vector TmpVector;
 
-	// Token: 0x04000932 RID: 2354
+	// Token: 0x0400093A RID: 2362
 	[Nullable(2)]
 	public global::Vector TmpVector2;
 
-	// Token: 0x04000933 RID: 2355
+	// Token: 0x0400093B RID: 2363
 	[Nullable(2)]
 	public global::Vector TmpVector3;
 
-	// Token: 0x04000934 RID: 2356
+	// Token: 0x0400093C RID: 2364
 	[Nullable(2)]
 	public global::Rotator TmpRotator;
 
-	// Token: 0x04000935 RID: 2357
+	// Token: 0x0400093D RID: 2365
 	[Nullable(2)]
 	public global::Rotator TmpRotator2;
 
-	// Token: 0x04000936 RID: 2358
+	// Token: 0x0400093E RID: 2366
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskTurnToLocation.TsTaskTurnToLocation_C";
 
-	// Token: 0x04000937 RID: 2359
+	// Token: 0x0400093F RID: 2367
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000938 RID: 2360
+	// Token: 0x04000940 RID: 2368
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000939 RID: 2361
+	// Token: 0x04000941 RID: 2369
 	private static int __PropertyOffset_LocationKey;
 
-	// Token: 0x0400093A RID: 2362
+	// Token: 0x04000942 RID: 2370
 	private static int __PropertyOffset_DirectionKey;
 
-	// Token: 0x0400093B RID: 2363
+	// Token: 0x04000943 RID: 2371
 	private static int __PropertyOffset_Continuously;
 
-	// Token: 0x0400093C RID: 2364
+	// Token: 0x04000944 RID: 2372
 	private static int __PropertyOffset_TurnSpeed;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000859 RID: 2137
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008FC RID: 2300
 	public class ProceduralMaterialComponent : IComponentBase
 	{
-		// Token: 0x06002F2B RID: 12075 RVA: 0x00079C7C File Offset: 0x00077E7C
+		// Token: 0x06003267 RID: 12903 RVA: 0x00081164 File Offset: 0x0007F364
 		private ProceduralMaterialComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F2C RID: 12076 RVA: 0x00079CB4 File Offset: 0x00077EB4
+		// Token: 0x06003268 RID: 12904 RVA: 0x0008119C File Offset: 0x0007F39C
 		public static ProceduralMaterialComponent Create([Nullable(2)] ProceduralMaterialComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F2D RID: 12077 RVA: 0x00079CC7 File Offset: 0x00077EC7
+		// Token: 0x06003269 RID: 12905 RVA: 0x000811AF File Offset: 0x0007F3AF
 		public static ProceduralMaterialComponent CreateFromSetValue([Nullable(2)] ProceduralMaterialComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F2E RID: 12078 RVA: 0x00079CDA File Offset: 0x00077EDA
+		// Token: 0x0600326A RID: 12906 RVA: 0x000811C2 File Offset: 0x0007F3C2
 		public new ProceduralMaterialComponent_SetValue ToSetValue()
 		{
 			return new ProceduralMaterialComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C73 RID: 3187
-		// (get) Token: 0x06002F2F RID: 12079 RVA: 0x00079D08 File Offset: 0x00077F08
-		// (set) Token: 0x06002F30 RID: 12080 RVA: 0x00079D42 File Offset: 0x00077F42
+		// Token: 0x17000D3C RID: 3388
+		// (get) Token: 0x0600326B RID: 12907 RVA: 0x000811F0 File Offset: 0x0007F3F0
+		// (set) Token: 0x0600326C RID: 12908 RVA: 0x0008122A File Offset: 0x0007F42A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C74 RID: 3188
-		// (get) Token: 0x06002F31 RID: 12081 RVA: 0x00079D50 File Offset: 0x00077F50
-		// (set) Token: 0x06002F32 RID: 12082 RVA: 0x00079D7A File Offset: 0x00077F7A
+		// Token: 0x17000D3D RID: 3389
+		// (get) Token: 0x0600326D RID: 12909 RVA: 0x00081238 File Offset: 0x0007F438
+		// (set) Token: 0x0600326E RID: 12910 RVA: 0x00081262 File Offset: 0x0007F462
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C75 RID: 3189
-		// (get) Token: 0x06002F33 RID: 12083 RVA: 0x00079D88 File Offset: 0x00077F88
-		// (set) Token: 0x06002F34 RID: 12084 RVA: 0x00079E1B File Offset: 0x0007801B
+		// Token: 0x17000D3E RID: 3390
+		// (get) Token: 0x0600326F RID: 12911 RVA: 0x00081270 File Offset: 0x0007F470
+		// (set) Token: 0x06003270 RID: 12912 RVA: 0x00081303 File Offset: 0x0007F503
 		public virtual List<ICustomPrimitiveDataConfig> ProceduralMaterialConfigs
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F23 RID: 7971
+		// Token: 0x04002135 RID: 8501
 		[Nullable(2)]
 		protected new ProceduralMaterialComponent FbInstance;
 
-		// Token: 0x04001F24 RID: 7972
+		// Token: 0x04002136 RID: 8502
 		[Nullable(2)]
 		protected new ProceduralMaterialComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F25 RID: 7973
+		// Token: 0x04002137 RID: 8503
 		private List<ICustomPrimitiveDataConfig> _ProceduralMaterialConfigsCache;
 
-		// Token: 0x04001F26 RID: 7974
+		// Token: 0x04002138 RID: 8504
 		private bool _ProceduralMaterialConfigsInited;
 	}
 }

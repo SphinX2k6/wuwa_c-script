@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EA6 RID: 20134
+	// Token: 0x020053CF RID: 21455
 	public static class IAnimalComponentVerify
 	{
-		// Token: 0x0601FB3B RID: 129851 RVA: 0x0046A0D8 File Offset: 0x004682D8
+		// Token: 0x0602183C RID: 137276 RVA: 0x0049F540 File Offset: 0x0049D740
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false))
@@ -26,7 +26,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 					{
 						verifyAction2 = (IAnimalComponentVerify.<>O.<1>__Verify = new VerifyTableAction(IAnimalEmotionBubbleEntryVerify.Verify));
 					}
-					if (verifier.VerifyVectorOfTables(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyField(tablePos, 22, 1UL, 1UL, false))
+					if (verifier.VerifyVectorOfTables(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyVectorOfData(tablePos, 22, 1UL, false) && verifier.VerifyField(tablePos, 24, 1UL, 1UL, false))
 					{
 						return verifier.VerifyTableEnd(tablePos);
 					}
@@ -35,14 +35,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007A7F RID: 31359
+		// Token: 0x020082D3 RID: 33491
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401344F RID: 78927
+			// Token: 0x040144C2 RID: 83138
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013450 RID: 78928
+			// Token: 0x040144C3 RID: 83139
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

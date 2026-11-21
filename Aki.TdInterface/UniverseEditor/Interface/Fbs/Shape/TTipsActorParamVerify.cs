@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C7E RID: 15486
+	// Token: 0x02004090 RID: 16528
 	public static class TTipsActorParamVerify
 	{
-		// Token: 0x0601571C RID: 87836 RVA: 0x003193D0 File Offset: 0x003175D0
+		// Token: 0x06016C54 RID: 93268 RVA: 0x00340624 File Offset: 0x0033E824
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -43,25 +43,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 				result = ILaserTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 11:
-				result = ISectorTipsActorVerify.Verify(verifier, tablePos);
+				result = INoiseBubbleTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 12:
-				result = ISphereTipsActorVerify.Verify(verifier, tablePos);
+				result = ISectorTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 13:
-				result = ISplineEffectTipsActorVerify.Verify(verifier, tablePos);
+				result = ISphereTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 14:
-				result = ISplineTipsActorVerify.Verify(verifier, tablePos);
+				result = ISplineEffectTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 15:
-				result = ISpotlightTipsActorVerify.Verify(verifier, tablePos);
+				result = ISplineTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 16:
-				result = ITargetPointTipsActorVerify.Verify(verifier, tablePos);
+				result = ISpotlightTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			case 17:
+				result = ITargetPointTipsActorVerify.Verify(verifier, tablePos);
+				break;
+			case 18:
 				result = ITrackTipsActorVerify.Verify(verifier, tablePos);
+				break;
+			case 19:
+				result = ITurntableConnectorTipsActorVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

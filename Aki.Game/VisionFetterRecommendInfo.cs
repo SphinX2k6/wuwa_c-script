@@ -5,43 +5,43 @@ using Aki.Config;
 using Aki.Protocol;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200244E RID: 9294
+// Token: 0x02001933 RID: 6451
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionFetterRecommendInfo
 {
-	// Token: 0x06012A37 RID: 76343 RVA: 0x004990DD File Offset: 0x004972DD
+	// Token: 0x0600FEEE RID: 65262 RVA: 0x004A66E5 File Offset: 0x004A48E5
 	public VisionFetterRecommendInfo()
 	{
 		this.CountList = new List<IVisionFetterCount>();
 		this.CostCombinations = new List<ICostCombinationData>();
 	}
 
-	// Token: 0x06012A38 RID: 76344 RVA: 0x00499106 File Offset: 0x00497306
+	// Token: 0x0600FEEF RID: 65263 RVA: 0x004A670E File Offset: 0x004A490E
 	public int GetRecommendFetterGroupId()
 	{
 		return this.FetterGroupId;
 	}
 
-	// Token: 0x06012A39 RID: 76345 RVA: 0x0049910E File Offset: 0x0049730E
+	// Token: 0x0600FEF0 RID: 65264 RVA: 0x004A6716 File Offset: 0x004A4916
 	public int GetSpecialFetterSubGroupId()
 	{
 		return this.FetterGroupSubId;
 	}
 
-	// Token: 0x06012A3A RID: 76346 RVA: 0x00499116 File Offset: 0x00497316
+	// Token: 0x0600FEF1 RID: 65265 RVA: 0x004A671E File Offset: 0x004A491E
 	public int GetPlanId()
 	{
 		return VisionFetterRecommendInfo.EncodePlanId(this.FetterGroupId, this.FetterGroupSubId);
 	}
 
-	// Token: 0x06012A3B RID: 76347 RVA: 0x00499129 File Offset: 0x00497329
+	// Token: 0x0600FEF2 RID: 65266 RVA: 0x004A6731 File Offset: 0x004A4931
 	public int GetUsage()
 	{
 		return this.Usage;
 	}
 
-	// Token: 0x06012A3C RID: 76348 RVA: 0x00499134 File Offset: 0x00497334
+	// Token: 0x0600FEF3 RID: 65267 RVA: 0x004A673C File Offset: 0x004A493C
 	public string GetUsageText()
 	{
 		double num = (double)(this.Usage - this.Usage % 10) / 100.0;
@@ -52,31 +52,31 @@ public class VisionFetterRecommendInfo
 		return "";
 	}
 
-	// Token: 0x06012A3D RID: 76349 RVA: 0x00499181 File Offset: 0x00497381
+	// Token: 0x0600FEF4 RID: 65268 RVA: 0x004A6789 File Offset: 0x004A4989
 	public List<IVisionFetterCount> GetFetterCountList()
 	{
 		return this.CountList;
 	}
 
-	// Token: 0x06012A3E RID: 76350 RVA: 0x00499189 File Offset: 0x00497389
+	// Token: 0x0600FEF5 RID: 65269 RVA: 0x004A6791 File Offset: 0x004A4991
 	public EFetterGroupType GetFetterType()
 	{
 		return this.FetterGroupType;
 	}
 
-	// Token: 0x06012A3F RID: 76351 RVA: 0x00499191 File Offset: 0x00497391
+	// Token: 0x0600FEF6 RID: 65270 RVA: 0x004A6799 File Offset: 0x004A4999
 	public List<ICostCombinationData> GetCostCombinations()
 	{
 		return this.CostCombinations;
 	}
 
-	// Token: 0x06012A40 RID: 76352 RVA: 0x00499199 File Offset: 0x00497399
+	// Token: 0x0600FEF7 RID: 65271 RVA: 0x004A67A1 File Offset: 0x004A49A1
 	public List<global::MainPhantomRecommendInfo> GetMainPhantomList()
 	{
 		return this.MainPhantomList;
 	}
 
-	// Token: 0x06012A41 RID: 76353 RVA: 0x004991A4 File Offset: 0x004973A4
+	// Token: 0x0600FEF8 RID: 65272 RVA: 0x004A67AC File Offset: 0x004A49AC
 	public void Phrase(PhantomFetterRecommendInfo data)
 	{
 		this.PhraseIdAndCount(data);
@@ -86,7 +86,7 @@ public class VisionFetterRecommendInfo
 		this.PhraseMainPhantoms(data);
 	}
 
-	// Token: 0x06012A42 RID: 76354 RVA: 0x004991F0 File Offset: 0x004973F0
+	// Token: 0x0600FEF9 RID: 65273 RVA: 0x004A67F8 File Offset: 0x004A49F8
 	private void PhraseMainPhantoms(PhantomFetterRecommendInfo data)
 	{
 		this.MainPhantomList.Clear();
@@ -104,7 +104,7 @@ public class VisionFetterRecommendInfo
 		this.MainPhantomList.Sort((global::MainPhantomRecommendInfo a, global::MainPhantomRecommendInfo b) => b.GetUsage() - a.GetUsage());
 	}
 
-	// Token: 0x06012A43 RID: 76355 RVA: 0x00499294 File Offset: 0x00497494
+	// Token: 0x0600FEFA RID: 65274 RVA: 0x004A689C File Offset: 0x004A4A9C
 	private void PhraseCostCombinations(PhantomFetterRecommendInfo data)
 	{
 		this.CostCombinations = new List<ICostCombinationData>();
@@ -125,7 +125,7 @@ public class VisionFetterRecommendInfo
 		}
 	}
 
-	// Token: 0x06012A44 RID: 76356 RVA: 0x0049932C File Offset: 0x0049752C
+	// Token: 0x0600FEFB RID: 65275 RVA: 0x004A6934 File Offset: 0x004A4B34
 	public static List<int> DecodeCostId(int costId)
 	{
 		List<int> list = new List<int>();
@@ -140,7 +140,7 @@ public class VisionFetterRecommendInfo
 		return list;
 	}
 
-	// Token: 0x06012A45 RID: 76357 RVA: 0x00499362 File Offset: 0x00497562
+	// Token: 0x0600FEFC RID: 65276 RVA: 0x004A696A File Offset: 0x004A4B6A
 	public static int EncodePlanId(int fetterGroupId, int fetterGroupSubId)
 	{
 		if (fetterGroupSubId <= 0)
@@ -150,7 +150,7 @@ public class VisionFetterRecommendInfo
 		return fetterGroupId << 16 | (fetterGroupSubId & 65535);
 	}
 
-	// Token: 0x06012A46 RID: 76358 RVA: 0x00499378 File Offset: 0x00497578
+	// Token: 0x0600FEFD RID: 65277 RVA: 0x004A6980 File Offset: 0x004A4B80
 	private unsafe void PhraseIdAndCount(PhantomFetterRecommendInfo data)
 	{
 		this.CountList = new List<IVisionFetterCount>();
@@ -201,7 +201,7 @@ public class VisionFetterRecommendInfo
 		this.FetterGroupSubId = ((num != null) ? num2.GetValueOrDefault() : 0);
 	}
 
-	// Token: 0x06012A47 RID: 76359 RVA: 0x00499538 File Offset: 0x00497738
+	// Token: 0x0600FEFE RID: 65278 RVA: 0x004A6B40 File Offset: 0x004A4D40
 	public List<int> BuildFetterList()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -223,7 +223,7 @@ public class VisionFetterRecommendInfo
 		return list;
 	}
 
-	// Token: 0x06012A48 RID: 76360 RVA: 0x004995C4 File Offset: 0x004977C4
+	// Token: 0x0600FEFF RID: 65279 RVA: 0x004A6BCC File Offset: 0x004A4DCC
 	public List<IVisionNewRecommendFetterItemData> BuildFetterItemDataList()
 	{
 		Dictionary<int, IVisionNewRecommendFetterItemData> dictionary = new Dictionary<int, IVisionNewRecommendFetterItemData>();
@@ -258,36 +258,36 @@ public class VisionFetterRecommendInfo
 		return list;
 	}
 
-	// Token: 0x04008C69 RID: 35945
+	// Token: 0x04008DB0 RID: 36272
 	private const int COST_BITS = 4;
 
-	// Token: 0x04008C6A RID: 35946
+	// Token: 0x04008DB1 RID: 36273
 	private const int COST_MASK = 15;
 
-	// Token: 0x04008C6B RID: 35947
+	// Token: 0x04008DB2 RID: 36274
 	private const int PLAN_ID_GROUP_SHIFT = 16;
 
-	// Token: 0x04008C6C RID: 35948
+	// Token: 0x04008DB3 RID: 36275
 	private const int PLAN_ID_SUB_MASK = 65535;
 
-	// Token: 0x04008C6D RID: 35949
+	// Token: 0x04008DB4 RID: 36276
 	private int FetterGroupId;
 
-	// Token: 0x04008C6E RID: 35950
+	// Token: 0x04008DB5 RID: 36277
 	private int FetterGroupSubId;
 
-	// Token: 0x04008C6F RID: 35951
+	// Token: 0x04008DB6 RID: 36278
 	private int Usage;
 
-	// Token: 0x04008C70 RID: 35952
+	// Token: 0x04008DB7 RID: 36279
 	private EFetterGroupType FetterGroupType;
 
-	// Token: 0x04008C71 RID: 35953
+	// Token: 0x04008DB8 RID: 36280
 	private List<IVisionFetterCount> CountList;
 
-	// Token: 0x04008C72 RID: 35954
+	// Token: 0x04008DB9 RID: 36281
 	private List<ICostCombinationData> CostCombinations;
 
-	// Token: 0x04008C73 RID: 35955
+	// Token: 0x04008DBA RID: 36282
 	private readonly List<global::MainPhantomRecommendInfo> MainPhantomList = new List<global::MainPhantomRecommendInfo>();
 }

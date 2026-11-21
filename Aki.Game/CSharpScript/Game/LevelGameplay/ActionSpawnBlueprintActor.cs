@@ -4,19 +4,19 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200697A RID: 27002
+	// Token: 0x02005AD6 RID: 23254
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActionSpawnBlueprintActor : ActionParams
 	{
-		// Token: 0x06043362 RID: 275298 RVA: 0x01062574 File Offset: 0x01060774
+		// Token: 0x0603939A RID: 234394 RVA: 0x010067DC File Offset: 0x010049DC
 		public ActionSpawnBlueprintActor(ISpawnDestructibleStoneTrackTargetWhileRotate spawnBlueprintParam)
 		{
 			this.SpawnBlueprintParam = spawnBlueprintParam;
 		}
 
-		// Token: 0x1700982A RID: 38954
-		// (get) Token: 0x06043363 RID: 275299 RVA: 0x01062583 File Offset: 0x01060783
+		// Token: 0x17006D0A RID: 27914
+		// (get) Token: 0x0603939B RID: 234395 RVA: 0x010067EB File Offset: 0x010049EB
 		public ISpawnDestructibleStoneTrackTargetWhileRotate SpawnBlueprintParam { get; }
 	}
 }

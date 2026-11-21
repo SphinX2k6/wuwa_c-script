@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002387 RID: 9095
+	// Token: 0x02002610 RID: 9744
 	public static class EMonsterNpcInteractTypeExtensions
 	{
-		// Token: 0x0600C65E RID: 50782 RVA: 0x001D0E8C File Offset: 0x001CF08C
+		// Token: 0x0600D2A2 RID: 53922 RVA: 0x001E9E60 File Offset: 0x001E8060
 		public static string ToEnumString(this EMonsterNpcInteractType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C65F RID: 50783 RVA: 0x001D0EB4 File Offset: 0x001CF0B4
+		// Token: 0x0600D2A3 RID: 53923 RVA: 0x001E9E88 File Offset: 0x001E8088
 		public static EMonsterNpcInteractType FromString(string name)
 		{
 			EMonsterNpcInteractType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C660 RID: 50784 RVA: 0x001D0EDD File Offset: 0x001CF0DD
+		// Token: 0x0600D2A4 RID: 53924 RVA: 0x001E9EB1 File Offset: 0x001E80B1
 		public static bool TryFromString(string name, out EMonsterNpcInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C661 RID: 50785 RVA: 0x001D0F02 File Offset: 0x001CF102
+		// Token: 0x0600D2A5 RID: 53925 RVA: 0x001E9ED6 File Offset: 0x001E80D6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C662 RID: 50786 RVA: 0x001D0F12 File Offset: 0x001CF112
+		// Token: 0x0600D2A6 RID: 53926 RVA: 0x001E9EE6 File Offset: 0x001E80E6
 		public static EMonsterNpcInteractType[] GetValues()
 		{
 			return new EMonsterNpcInteractType[1];
 		}
 
-		// Token: 0x0600C663 RID: 50787 RVA: 0x001D0F1A File Offset: 0x001CF11A
+		// Token: 0x0600D2A7 RID: 53927 RVA: 0x001E9EEE File Offset: 0x001E80EE
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02001B76 RID: 7030
+// Token: 0x02001035 RID: 4149
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchShopView : UiViewBase
 {
-	// Token: 0x0600D11B RID: 53531 RVA: 0x002FD50C File Offset: 0x002FB70C
+	// Token: 0x0600A52C RID: 42284 RVA: 0x003085E4 File Offset: 0x003067E4
 	public FloroRanchShopView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D11C RID: 53532 RVA: 0x002FD568 File Offset: 0x002FB768
+	// Token: 0x0600A52D RID: 42285 RVA: 0x00308640 File Offset: 0x00306840
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 35;
@@ -114,7 +114,7 @@ public class FloroRanchShopView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D11D RID: 53533 RVA: 0x002FDAD4 File Offset: 0x002FBCD4
+	// Token: 0x0600A52E RID: 42286 RVA: 0x00308BAC File Offset: 0x00306DAC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchShopView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -125,7 +125,7 @@ public class FloroRanchShopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D11E RID: 53534 RVA: 0x002FDB18 File Offset: 0x002FBD18
+	// Token: 0x0600A52F RID: 42287 RVA: 0x00308BF0 File Offset: 0x00306DF0
 	protected override void OnStart()
 	{
 		this.ActivityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -143,7 +143,7 @@ public class FloroRanchShopView : UiViewBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D11F RID: 53535 RVA: 0x002FDB98 File Offset: 0x002FBD98
+	// Token: 0x0600A530 RID: 42288 RVA: 0x00308C70 File Offset: 0x00306E70
 	protected override void OnBeforeShow()
 	{
 		this.RefreshGoodsView(true);
@@ -161,7 +161,7 @@ public class FloroRanchShopView : UiViewBase
 		this.UiBlur.SetEnableUiBlur(true);
 	}
 
-	// Token: 0x0600D120 RID: 53536 RVA: 0x002FDBF8 File Offset: 0x002FBDF8
+	// Token: 0x0600A531 RID: 42289 RVA: 0x00308CD0 File Offset: 0x00306ED0
 	protected override void OnBeforeHide()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.FloroRanchGamePlayView);
@@ -172,13 +172,13 @@ public class FloroRanchShopView : UiViewBase
 		this.UiBlur.SetEnableUiBlur(false);
 	}
 
-	// Token: 0x0600D121 RID: 53537 RVA: 0x002FDC30 File Offset: 0x002FBE30
+	// Token: 0x0600A532 RID: 42290 RVA: 0x00308D08 File Offset: 0x00306F08
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(18));
 	}
 
-	// Token: 0x0600D122 RID: 53538 RVA: 0x002FDC44 File Offset: 0x002FBE44
+	// Token: 0x0600A533 RID: 42291 RVA: 0x00308D1C File Offset: 0x00306F1C
 	private FloroRanchGoodsItem CreateGoodsItem()
 	{
 		FloroRanchGoodsItem floroRanchGoodsItem = new FloroRanchGoodsItem();
@@ -187,7 +187,7 @@ public class FloroRanchShopView : UiViewBase
 		return floroRanchGoodsItem;
 	}
 
-	// Token: 0x0600D123 RID: 53539 RVA: 0x002FDC78 File Offset: 0x002FBE78
+	// Token: 0x0600A534 RID: 42292 RVA: 0x00308D50 File Offset: 0x00306F50
 	private UniTask CreateToyItem(int point)
 	{
 		FloroRanchShopView.<CreateToyItem>d__20 <CreateToyItem>d__;
@@ -199,14 +199,14 @@ public class FloroRanchShopView : UiViewBase
 		return <CreateToyItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D124 RID: 53540 RVA: 0x002FDCC3 File Offset: 0x002FBEC3
+	// Token: 0x0600A535 RID: 42293 RVA: 0x00308D9B File Offset: 0x00306F9B
 	private void InitUiBlur()
 	{
 		this.UiBlur = UE.NewObject<TsUiBlur>(this.RootActor, null, EObjectFlags.RF_NoFlags);
 		this.UiBlur.SetEnableUiBlur(false);
 	}
 
-	// Token: 0x0600D125 RID: 53541 RVA: 0x002FDCE4 File Offset: 0x002FBEE4
+	// Token: 0x0600A536 RID: 42294 RVA: 0x00308DBC File Offset: 0x00306FBC
 	private void RefreshGoodsView(bool resetToFirst)
 	{
 		FloroRanchCurrencyData diamondData = FloroRanchGamePlayModel.Instance.DiamondData;
@@ -263,7 +263,7 @@ public class FloroRanchShopView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D126 RID: 53542 RVA: 0x002FDEDC File Offset: 0x002FC0DC
+	// Token: 0x0600A537 RID: 42295 RVA: 0x00308FB4 File Offset: 0x003071B4
 	private void RefreshGoodsTip()
 	{
 		if (this.CurSelectGoods == null)
@@ -419,7 +419,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D127 RID: 53543 RVA: 0x002FE2F4 File Offset: 0x002FC4F4
+	// Token: 0x0600A538 RID: 42296 RVA: 0x003093CC File Offset: 0x003075CC
 	private void ShowAllToy()
 	{
 		int enableToyCount = FloroRanchGamePlayModel.Instance.EnableToyCount;
@@ -436,7 +436,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D128 RID: 53544 RVA: 0x002FE338 File Offset: 0x002FC538
+	// Token: 0x0600A539 RID: 42297 RVA: 0x00309410 File Offset: 0x00307610
 	private void ShowToy(int point)
 	{
 		FloroRanchToyGridItem floroRanchToyGridItem;
@@ -447,7 +447,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D129 RID: 53545 RVA: 0x002FE368 File Offset: 0x002FC568
+	// Token: 0x0600A53A RID: 42298 RVA: 0x00309440 File Offset: 0x00307640
 	private void HideToy(int point)
 	{
 		FloroRanchToyGridItem floroRanchToyGridItem;
@@ -457,26 +457,26 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D12A RID: 53546 RVA: 0x002FE38C File Offset: 0x002FC58C
+	// Token: 0x0600A53B RID: 42299 RVA: 0x00309464 File Offset: 0x00307664
 	private void SetToyListActive(bool isActive)
 	{
 		base.GetItem(27).SetAlpha(isActive > false);
 	}
 
-	// Token: 0x0600D12B RID: 53547 RVA: 0x002FE3A0 File Offset: 0x002FC5A0
+	// Token: 0x0600A53C RID: 42300 RVA: 0x00309478 File Offset: 0x00307678
 	private void ToySellCallback(int point)
 	{
 		this.HideToy(point);
 		this.RefreshGoodsView(false);
 	}
 
-	// Token: 0x0600D12C RID: 53548 RVA: 0x002FE3B0 File Offset: 0x002FC5B0
+	// Token: 0x0600A53D RID: 42301 RVA: 0x00309488 File Offset: 0x00307688
 	private void OnClickGoodItem(FloroRanchShopItemDataBase data)
 	{
 		this.SelectGoodsData(data);
 	}
 
-	// Token: 0x0600D12D RID: 53549 RVA: 0x002FE3B9 File Offset: 0x002FC5B9
+	// Token: 0x0600A53E RID: 42302 RVA: 0x00309491 File Offset: 0x00307691
 	private void SelectGoodsData(FloroRanchShopItemDataBase data)
 	{
 		if (this.CurSelectGoods != null)
@@ -491,7 +491,7 @@ public class FloroRanchShopView : UiViewBase
 		this.RefreshGoodsTip();
 	}
 
-	// Token: 0x0600D12E RID: 53550 RVA: 0x002FE3F4 File Offset: 0x002FC5F4
+	// Token: 0x0600A53F RID: 42303 RVA: 0x003094CC File Offset: 0x003076CC
 	private void RefreshGoodsItemToggleState(bool isSelected, int incId)
 	{
 		FloroRanchGoodsItem floroRanchGoodsItem = this.GoodsItemList.Find(delegate(FloroRanchGoodsItem item)
@@ -505,7 +505,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D12F RID: 53551 RVA: 0x002FE430 File Offset: 0x002FC630
+	// Token: 0x0600A540 RID: 42304 RVA: 0x00309508 File Offset: 0x00307708
 	private void OnClickToyItem(int point)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchShopTipView, new FloroRanchShopTipViewParam
@@ -521,7 +521,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D130 RID: 53552 RVA: 0x002FE4A0 File Offset: 0x002FC6A0
+	// Token: 0x0600A541 RID: 42305 RVA: 0x00309578 File Offset: 0x00307778
 	private void OnClickBuyButton()
 	{
 		if (this.CurSelectGoods == null)
@@ -572,7 +572,7 @@ public class FloroRanchShopView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D131 RID: 53553 RVA: 0x002FE5D0 File Offset: 0x002FC7D0
+	// Token: 0x0600A542 RID: 42306 RVA: 0x003096A8 File Offset: 0x003078A8
 	private void OnClickRefreshButton()
 	{
 		if (!this.ShopData.AllowedRefresh)
@@ -600,7 +600,7 @@ public class FloroRanchShopView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D132 RID: 53554 RVA: 0x002FE67C File Offset: 0x002FC87C
+	// Token: 0x0600A543 RID: 42307 RVA: 0x00309754 File Offset: 0x00307954
 	private void SendCloseTaskRequest()
 	{
 		if (this.ShopData != null)
@@ -613,13 +613,13 @@ public class FloroRanchShopView : UiViewBase
 		Log.Instance.Error(ELogModule.FloroRanchGamePlay, ELogAuthor.LRC, "商店数据为空！ 无法发送关闭任务请求", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600D133 RID: 53555 RVA: 0x002FE6DF File Offset: 0x002FC8DF
+	// Token: 0x0600A544 RID: 42308 RVA: 0x003097B7 File Offset: 0x003079B7
 	private void OnClickHideButton()
 	{
 		FloroRanchGamePlayModel.Instance.HideRecordView();
 	}
 
-	// Token: 0x0600D134 RID: 53556 RVA: 0x002FE6EB File Offset: 0x002FC8EB
+	// Token: 0x0600A545 RID: 42309 RVA: 0x003097C3 File Offset: 0x003079C3
 	private void OnClickCloseButton()
 	{
 		this.SendCloseTaskRequest();
@@ -632,7 +632,7 @@ public class FloroRanchShopView : UiViewBase
 		closeCallback();
 	}
 
-	// Token: 0x0600D135 RID: 53557 RVA: 0x002FE70C File Offset: 0x002FC90C
+	// Token: 0x0600A546 RID: 42310 RVA: 0x003097E4 File Offset: 0x003079E4
 	public void InitShopItemDataList(FloroRanchShop shopData)
 	{
 		this.ShopData = shopData;
@@ -649,7 +649,7 @@ public class FloroRanchShopView : UiViewBase
 		this.ActivityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
 	}
 
-	// Token: 0x0600D136 RID: 53558 RVA: 0x002FE790 File Offset: 0x002FC990
+	// Token: 0x0600A547 RID: 42311 RVA: 0x00309868 File Offset: 0x00307A68
 	private void UpdateSelectionAfterDataChange(bool resetToFirst)
 	{
 		FloroRanchShopView.<>c__DisplayClass40_0 CS$<>8__locals1 = new FloroRanchShopView.<>c__DisplayClass40_0();
@@ -679,7 +679,7 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D137 RID: 53559 RVA: 0x002FE84C File Offset: 0x002FCA4C
+	// Token: 0x0600A548 RID: 42312 RVA: 0x00309924 File Offset: 0x00307B24
 	private FloroRanchShopItemDataBase CreateShopItem(FloroRanchShopItem item)
 	{
 		switch (item.Type)
@@ -703,37 +703,37 @@ public class FloroRanchShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005FF9 RID: 24569
+	// Token: 0x040060C8 RID: 24776
 	private FloroRanchCurrencyItem ItemCost;
 
-	// Token: 0x04005FFA RID: 24570
+	// Token: 0x040060C9 RID: 24777
 	private GenericScrollViewNew<FloroRanchGoodsItem, FloroRanchShopItemDataBase> GoodsScrollView;
 
-	// Token: 0x04005FFB RID: 24571
+	// Token: 0x040060CA RID: 24778
 	private FloroRanchShop ShopData;
 
-	// Token: 0x04005FFC RID: 24572
+	// Token: 0x040060CB RID: 24779
 	private global::FloroRanchActivityData ActivityData;
 
-	// Token: 0x04005FFD RID: 24573
+	// Token: 0x040060CC RID: 24780
 	private readonly List<FloroRanchGoodsItem> GoodsItemList = new List<FloroRanchGoodsItem>();
 
-	// Token: 0x04005FFE RID: 24574
+	// Token: 0x040060CD RID: 24781
 	private FloroRanchShopItemDataBase CurSelectGoods;
 
-	// Token: 0x04005FFF RID: 24575
+	// Token: 0x040060CE RID: 24782
 	private readonly Dictionary<int, FloroRanchToyGridItem> ToyItemMap = new Dictionary<int, FloroRanchToyGridItem>();
 
-	// Token: 0x04006000 RID: 24576
+	// Token: 0x040060CF RID: 24783
 	private Action CloseCallback;
 
-	// Token: 0x04006001 RID: 24577
+	// Token: 0x040060D0 RID: 24784
 	private UUIInturnAnimController AnimController;
 
-	// Token: 0x04006002 RID: 24578
+	// Token: 0x040060D1 RID: 24785
 	private TsUiBlur UiBlur;
 
-	// Token: 0x04006003 RID: 24579
+	// Token: 0x040060D2 RID: 24786
 	private readonly string[] TypeTextId = new string[]
 	{
 		"Farm_CardType1",
@@ -741,116 +741,116 @@ public class FloroRanchShopView : UiViewBase
 		"Farm_CardType2"
 	};
 
-	// Token: 0x04006004 RID: 24580
+	// Token: 0x040060D3 RID: 24787
 	public readonly List<FloroRanchShopItemDataBase> ShopItemDataList = new List<FloroRanchShopItemDataBase>();
 
-	// Token: 0x020080F2 RID: 33010
+	// Token: 0x02007280 RID: 29312
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A124 RID: 172324
+		// Token: 0x04025458 RID: 152664
 		public const int CloseButton = 0;
 
-		// Token: 0x0402A125 RID: 172325
+		// Token: 0x04025459 RID: 152665
 		public const int RefreshButton = 1;
 
-		// Token: 0x0402A126 RID: 172326
+		// Token: 0x0402545A RID: 152666
 		public const int RefreshTexture = 2;
 
-		// Token: 0x0402A127 RID: 172327
+		// Token: 0x0402545B RID: 152667
 		public const int RefreshPrice = 3;
 
-		// Token: 0x0402A128 RID: 172328
+		// Token: 0x0402545C RID: 152668
 		public const int RefreshButtonText = 4;
 
-		// Token: 0x0402A129 RID: 172329
+		// Token: 0x0402545D RID: 152669
 		public const int GoodsScrollView = 5;
 
-		// Token: 0x0402A12A RID: 172330
+		// Token: 0x0402545E RID: 152670
 		public const int GoodsItem = 6;
 
-		// Token: 0x0402A12B RID: 172331
+		// Token: 0x0402545F RID: 152671
 		public const int HideButton = 7;
 
-		// Token: 0x0402A12C RID: 172332
+		// Token: 0x04025460 RID: 152672
 		public const int ItemCost = 8;
 
-		// Token: 0x0402A12D RID: 172333
+		// Token: 0x04025461 RID: 152673
 		public const int GoodsTipItem = 9;
 
-		// Token: 0x0402A12E RID: 172334
+		// Token: 0x04025462 RID: 152674
 		public const int GoodsName = 10;
 
-		// Token: 0x0402A12F RID: 172335
+		// Token: 0x04025463 RID: 152675
 		public const int GoodsTexture = 11;
 
-		// Token: 0x0402A130 RID: 172336
+		// Token: 0x04025464 RID: 152676
 		public const int GoodsType = 12;
 
-		// Token: 0x0402A131 RID: 172337
+		// Token: 0x04025465 RID: 152677
 		public const int GoodsRaceItem = 13;
 
-		// Token: 0x0402A132 RID: 172338
+		// Token: 0x04025466 RID: 152678
 		public const int GoodsRaceTexture = 14;
 
-		// Token: 0x0402A133 RID: 172339
+		// Token: 0x04025467 RID: 152679
 		public const int GoodsRaceName = 15;
 
-		// Token: 0x0402A134 RID: 172340
+		// Token: 0x04025468 RID: 152680
 		public const int EarnTexture = 16;
 
-		// Token: 0x0402A135 RID: 172341
+		// Token: 0x04025469 RID: 152681
 		public const int EarnCount = 17;
 
-		// Token: 0x0402A136 RID: 172342
+		// Token: 0x0402546A RID: 152682
 		public const int GoodsDesc = 18;
 
-		// Token: 0x0402A137 RID: 172343
+		// Token: 0x0402546B RID: 152683
 		public const int QualityTexture = 19;
 
-		// Token: 0x0402A138 RID: 172344
+		// Token: 0x0402546C RID: 152684
 		public const int QualityBTexture = 20;
 
-		// Token: 0x0402A139 RID: 172345
+		// Token: 0x0402546D RID: 152685
 		public const int SoldItem = 21;
 
-		// Token: 0x0402A13A RID: 172346
+		// Token: 0x0402546E RID: 152686
 		public const int BuyButton = 22;
 
-		// Token: 0x0402A13B RID: 172347
+		// Token: 0x0402546F RID: 152687
 		public const int BuyButtonText = 23;
 
-		// Token: 0x0402A13C RID: 172348
+		// Token: 0x04025470 RID: 152688
 		public const int BuyTexture = 24;
 
-		// Token: 0x0402A13D RID: 172349
+		// Token: 0x04025471 RID: 152689
 		public const int BuyCount = 25;
 
-		// Token: 0x0402A13E RID: 172350
+		// Token: 0x04025472 RID: 152690
 		public const int ItemHidePanel = 26;
 
-		// Token: 0x0402A13F RID: 172351
+		// Token: 0x04025473 RID: 152691
 		public const int ToyLayout = 27;
 
-		// Token: 0x0402A140 RID: 172352
+		// Token: 0x04025474 RID: 152692
 		public const int ToyItemTemplate = 28;
 
-		// Token: 0x0402A141 RID: 172353
+		// Token: 0x04025475 RID: 152693
 		public const int RefreshTimePanel = 29;
 
-		// Token: 0x0402A142 RID: 172354
+		// Token: 0x04025476 RID: 152694
 		public const int RefreshTimeText = 30;
 
-		// Token: 0x0402A143 RID: 172355
+		// Token: 0x04025477 RID: 152695
 		public const int ToyRaceItem = 31;
 
-		// Token: 0x0402A144 RID: 172356
+		// Token: 0x04025478 RID: 152696
 		public const int ToyRaceIcon = 32;
 
-		// Token: 0x0402A145 RID: 172357
+		// Token: 0x04025479 RID: 152697
 		public const int ItemPhantomIcon = 33;
 
-		// Token: 0x0402A146 RID: 172358
+		// Token: 0x0402547A RID: 152698
 		public const int RecommendSprite = 34;
 	}
 }

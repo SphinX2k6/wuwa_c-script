@@ -4,13 +4,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034E7 RID: 13543
+// Token: 0x02002A5B RID: 10843
 [NullableContext(1)]
 [Nullable(0)]
 public class SubLevel
 {
-	// Token: 0x170028EB RID: 10475
-	// (get) Token: 0x0601DAD2 RID: 121554 RVA: 0x00850056 File Offset: 0x0084E256
+	// Token: 0x17002C83 RID: 11395
+	// (get) Token: 0x0601B7E0 RID: 112608 RVA: 0x008783CE File Offset: 0x008765CE
 	public bool LoadVisibleParam
 	{
 		get
@@ -19,8 +19,8 @@ public class SubLevel
 		}
 	}
 
-	// Token: 0x170028EC RID: 10476
-	// (get) Token: 0x0601DAD3 RID: 121555 RVA: 0x00850068 File Offset: 0x0084E268
+	// Token: 0x17002C84 RID: 11396
+	// (get) Token: 0x0601B7E1 RID: 112609 RVA: 0x008783E0 File Offset: 0x008765E0
 	public bool IsVisible
 	{
 		get
@@ -34,7 +34,7 @@ public class SubLevel
 		}
 	}
 
-	// Token: 0x0601DAD4 RID: 121556 RVA: 0x0085008C File Offset: 0x0084E28C
+	// Token: 0x0601B7E2 RID: 112610 RVA: 0x00878404 File Offset: 0x00876604
 	public SubLevel(string path, bool visibleAfterLoad)
 	{
 		this.Path = path;
@@ -46,7 +46,7 @@ public class SubLevel
 		}
 	}
 
-	// Token: 0x0601DAD5 RID: 121557 RVA: 0x008500F4 File Offset: 0x0084E2F4
+	// Token: 0x0601B7E3 RID: 112611 RVA: 0x0087846C File Offset: 0x0087666C
 	public void Dispose()
 	{
 		if (this.SetLevelVisiblePromise != null && this.SetLevelVisiblePromise.IsPending)
@@ -63,7 +63,7 @@ public class SubLevel
 		DelegateUtils.ReleaseManualReleaseDelegate(new Action<int>(this.SetLevelVisibleFinished));
 	}
 
-	// Token: 0x0601DAD6 RID: 121558 RVA: 0x0085015C File Offset: 0x0084E35C
+	// Token: 0x0601B7E4 RID: 112612 RVA: 0x008784D4 File Offset: 0x008766D4
 	[NullableContext(2)]
 	public UniTask OnLevelLoad(ULevelStreaming level)
 	{
@@ -76,7 +76,7 @@ public class SubLevel
 		return <OnLevelLoad>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DAD7 RID: 121559 RVA: 0x008501A8 File Offset: 0x0084E3A8
+	// Token: 0x0601B7E5 RID: 112613 RVA: 0x00878520 File Offset: 0x00876720
 	public UniTask SetLevelVisible(bool bVisible, string reason, bool bWaitingLoading = true)
 	{
 		SubLevel.<SetLevelVisible>d__14 <SetLevelVisible>d__;
@@ -90,7 +90,7 @@ public class SubLevel
 		return <SetLevelVisible>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DAD8 RID: 121560 RVA: 0x00850204 File Offset: 0x0084E404
+	// Token: 0x0601B7E6 RID: 112614 RVA: 0x0087857C File Offset: 0x0087677C
 	private UniTask SetLevelVisibleWithBeginPlay(ULevelStreaming level, bool bVisible, string reason)
 	{
 		SubLevel.<SetLevelVisibleWithBeginPlay>d__20 <SetLevelVisibleWithBeginPlay>d__;
@@ -103,7 +103,7 @@ public class SubLevel
 		return <SetLevelVisibleWithBeginPlay>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DAD9 RID: 121561 RVA: 0x00850258 File Offset: 0x0084E458
+	// Token: 0x0601B7E7 RID: 112615 RVA: 0x008785D0 File Offset: 0x008767D0
 	private UniTask SetLevelVisibleNoBeginPlay(bool bVisible, string reason)
 	{
 		SubLevel.<SetLevelVisibleNoBeginPlay>d__21 <SetLevelVisibleNoBeginPlay>d__;
@@ -116,7 +116,7 @@ public class SubLevel
 		return <SetLevelVisibleNoBeginPlay>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DADA RID: 121562 RVA: 0x008502AB File Offset: 0x0084E4AB
+	// Token: 0x0601B7E8 RID: 112616 RVA: 0x00878623 File Offset: 0x00876823
 	private void SetLevelVisibleFinished(int linkId)
 	{
 		if (linkId != this.LinkId)
@@ -131,41 +131,41 @@ public class SubLevel
 		setLevelVisiblePromise.SetResult(true);
 	}
 
-	// Token: 0x0400E8D0 RID: 59600
+	// Token: 0x0400ED87 RID: 60807
 	public ELoadLevelType LoadState;
 
-	// Token: 0x0400E8D1 RID: 59601
+	// Token: 0x0400ED88 RID: 60808
 	[Nullable(2)]
 	public ULevelStreaming Level;
 
-	// Token: 0x0400E8D2 RID: 59602
+	// Token: 0x0400ED89 RID: 60809
 	public int LinkId;
 
-	// Token: 0x0400E8D3 RID: 59603
+	// Token: 0x0400ED8A RID: 60810
 	public int UnLoadLinkId;
 
-	// Token: 0x0400E8D4 RID: 59604
+	// Token: 0x0400ED8B RID: 60811
 	public readonly bool DependOnBeginPlayLogic;
 
-	// Token: 0x0400E8D5 RID: 59605
+	// Token: 0x0400ED8C RID: 60812
 	public readonly GameModePromise LoadPromise = new GameModePromise();
 
-	// Token: 0x0400E8D6 RID: 59606
+	// Token: 0x0400ED8D RID: 60813
 	public readonly GameModePromise UnLoadPromise = new GameModePromise();
 
-	// Token: 0x0400E8D7 RID: 59607
+	// Token: 0x0400ED8E RID: 60814
 	private bool InnerVisible;
 
-	// Token: 0x0400E8D8 RID: 59608
+	// Token: 0x0400ED8F RID: 60815
 	public readonly string Path;
 
-	// Token: 0x0400E8D9 RID: 59609
+	// Token: 0x0400ED90 RID: 60816
 	public readonly bool VisibleAfterLoad;
 
-	// Token: 0x0400E8DA RID: 59610
+	// Token: 0x0400ED91 RID: 60817
 	[Nullable(2)]
 	private CustomPromise<bool> SetLevelVisiblePromise;
 
-	// Token: 0x0400E8DB RID: 59611
+	// Token: 0x0400ED92 RID: 60818
 	private FSetVisibleFinishDelegate FinishDelegate;
 }

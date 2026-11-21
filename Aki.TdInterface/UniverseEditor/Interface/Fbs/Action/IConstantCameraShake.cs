@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064C5 RID: 25797
+	// Token: 0x02006B30 RID: 27440
 	public struct IConstantCameraShake : IFlatbufferObject
 	{
-		// Token: 0x1700BFF8 RID: 49144
-		// (get) Token: 0x0602CBEC RID: 183276 RVA: 0x006268CB File Offset: 0x00624ACB
+		// Token: 0x1700C985 RID: 51589
+		// (get) Token: 0x0602F370 RID: 193392 RVA: 0x006729F3 File Offset: 0x00670BF3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CBED RID: 183277 RVA: 0x006268D8 File Offset: 0x00624AD8
+		// Token: 0x0602F371 RID: 193393 RVA: 0x00672A00 File Offset: 0x00670C00
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CBEE RID: 183278 RVA: 0x006268E0 File Offset: 0x00624AE0
+		// Token: 0x0602F372 RID: 193394 RVA: 0x00672A08 File Offset: 0x00670C08
 		public static IConstantCameraShake GetRootAsIConstantCameraShake(ByteBuffer _bb)
 		{
 			return IConstantCameraShake.GetRootAsIConstantCameraShake(_bb, default(IConstantCameraShake));
 		}
 
-		// Token: 0x0602CBEF RID: 183279 RVA: 0x006268FC File Offset: 0x00624AFC
+		// Token: 0x0602F373 RID: 193395 RVA: 0x00672A24 File Offset: 0x00670C24
 		public static IConstantCameraShake GetRootAsIConstantCameraShake(ByteBuffer _bb, IConstantCameraShake obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CBF0 RID: 183280 RVA: 0x00626919 File Offset: 0x00624B19
+		// Token: 0x0602F374 RID: 193396 RVA: 0x00672A41 File Offset: 0x00670C41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CBF1 RID: 183281 RVA: 0x00626928 File Offset: 0x00624B28
+		// Token: 0x0602F375 RID: 193397 RVA: 0x00672A50 File Offset: 0x00670C50
 		public IConstantCameraShake __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BFF9 RID: 49145
-		// (get) Token: 0x0602CBF2 RID: 183282 RVA: 0x00626938 File Offset: 0x00624B38
+		// Token: 0x1700C986 RID: 51590
+		// (get) Token: 0x0602F376 RID: 193398 RVA: 0x00672A60 File Offset: 0x00670C60
 		public ECameraShakeType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CBF3 RID: 183283 RVA: 0x00626974 File Offset: 0x00624B74
+		// Token: 0x0602F377 RID: 193399 RVA: 0x00672A9C File Offset: 0x00670C9C
 		public static Offset<IConstantCameraShake> CreateIConstantCameraShake(FlatBufferBuilder builder, ECameraShakeType Type = ECameraShakeType.Constant)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IConstantCameraShake.EndIConstantCameraShake(builder);
 		}
 
-		// Token: 0x0602CBF4 RID: 183284 RVA: 0x0062698A File Offset: 0x00624B8A
+		// Token: 0x0602F378 RID: 193400 RVA: 0x00672AB2 File Offset: 0x00670CB2
 		public static void StartIConstantCameraShake(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CBF5 RID: 183285 RVA: 0x00626993 File Offset: 0x00624B93
+		// Token: 0x0602F379 RID: 193401 RVA: 0x00672ABB File Offset: 0x00670CBB
 		public static void AddType(FlatBufferBuilder builder, ECameraShakeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CBF6 RID: 183286 RVA: 0x0062699E File Offset: 0x00624B9E
+		// Token: 0x0602F37A RID: 193402 RVA: 0x00672AC6 File Offset: 0x00670CC6
 		public static Offset<IConstantCameraShake> EndIConstantCameraShake(FlatBufferBuilder builder)
 		{
 			return new Offset<IConstantCameraShake>(builder.EndTable());
 		}
 
-		// Token: 0x0602CBF7 RID: 183287 RVA: 0x006269AC File Offset: 0x00624BAC
+		// Token: 0x0602F37B RID: 193403 RVA: 0x00672AD4 File Offset: 0x00670CD4
 		public IConstantCameraShakeT UnPack()
 		{
 			IConstantCameraShakeT constantCameraShakeT = new IConstantCameraShakeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return constantCameraShakeT;
 		}
 
-		// Token: 0x0602CBF8 RID: 183288 RVA: 0x006269C7 File Offset: 0x00624BC7
+		// Token: 0x0602F37C RID: 193404 RVA: 0x00672AEF File Offset: 0x00670CEF
 		public void UnPackTo(IConstantCameraShakeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CBF9 RID: 183289 RVA: 0x006269D8 File Offset: 0x00624BD8
+		// Token: 0x0602F37D RID: 193405 RVA: 0x00672B00 File Offset: 0x00670D00
 		public static Offset<IConstantCameraShake> Pack(FlatBufferBuilder builder, IConstantCameraShakeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IConstantCameraShake.CreateIConstantCameraShake(builder, _o.Type);
 		}
 
-		// Token: 0x04010AFA RID: 68346
+		// Token: 0x04011910 RID: 71952
 		private Table __p;
 	}
 }

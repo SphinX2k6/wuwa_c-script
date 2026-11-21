@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Menu;
 
 namespace CSharpScript.Game.Module.KeySetting
 {
-	// Token: 0x020057A7 RID: 22439
+	// Token: 0x0200477E RID: 18302
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class KeySettingDefine
 	{
-		// Token: 0x0603903A RID: 233530 RVA: 0x00D8D5E8 File Offset: 0x00D8B7E8
+		// Token: 0x0602DF4A RID: 188234 RVA: 0x00CDC3A4 File Offset: 0x00CDA5A4
 		// Note: this type is marked as 'beforefieldinit'.
 		static KeySettingDefine()
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.KeySetting
 			KeySettingDefine.keySettingDeviceInfoRecord = dictionary;
 		}
 
-		// Token: 0x0401DDF1 RID: 122353
+		// Token: 0x04018887 RID: 100487
 		[StaticVariableRuleIgnore]
 		public static readonly EKeySettingExclusiveType[] menuKeySettingExclusiveTypeList = new EKeySettingExclusiveType[]
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.KeySetting
 			EKeySettingExclusiveType.Motor
 		};
 
-		// Token: 0x0401DDF2 RID: 122354
+		// Token: 0x04018888 RID: 100488
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EKeySettingDeviceType, IKeySettingDeviceInfo> keySettingDeviceInfoRecord;
 	}

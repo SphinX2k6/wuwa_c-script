@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02002E8B RID: 11915
+// Token: 0x020023DD RID: 9181
 public enum ECalculationPolicyType
 {
-	// Token: 0x0400BDAB RID: 48555
+	// Token: 0x0400C142 RID: 49474
 	AdvancedMultiplyMagnitude1 = -1,
-	// Token: 0x0400BDAC RID: 48556
+	// Token: 0x0400C143 RID: 49475
 	AddValue,
-	// Token: 0x0400BDAD RID: 48557
+	// Token: 0x0400C144 RID: 49476
 	AddRate,
-	// Token: 0x0400BDAE RID: 48558
+	// Token: 0x0400C145 RID: 49477
 	AddFromAttr,
-	// Token: 0x0400BDAF RID: 48559
+	// Token: 0x0400C146 RID: 49478
 	OverrideValue,
-	// Token: 0x0400BDB0 RID: 48560
+	// Token: 0x0400C147 RID: 49479
 	OverrideFromAttr,
-	// Token: 0x0400BDB1 RID: 48561
+	// Token: 0x0400C148 RID: 49480
 	AddTimeScaledValue,
-	// Token: 0x0400BDB2 RID: 48562
+	// Token: 0x0400C149 RID: 49481
 	AddTimeScaledRate,
-	// Token: 0x0400BDB3 RID: 48563
+	// Token: 0x0400C14A RID: 49482
 	AddFromAttrRate = 9
 }

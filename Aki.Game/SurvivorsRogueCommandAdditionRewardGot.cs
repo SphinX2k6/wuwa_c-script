@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AD7 RID: 10967
+// Token: 0x02002053 RID: 8275
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandAdditionRewardGot : SurvivorsRogueCommandBaseObtain
 {
-	// Token: 0x06016D36 RID: 93494 RVA: 0x005CBC90 File Offset: 0x005C9E90
+	// Token: 0x06014767 RID: 83815 RVA: 0x005F87E4 File Offset: 0x005F69E4
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(28, 1);
@@ -18,12 +18,12 @@ public class SurvivorsRogueCommandAdditionRewardGot : SurvivorsRogueCommandBaseO
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016D37 RID: 93495 RVA: 0x005CBCDD File Offset: 0x005C9EDD
+	// Token: 0x06014768 RID: 83816 RVA: 0x005F8831 File Offset: 0x005F6A31
 	public SurvivorsRogueCommandAdditionRewardGot(ESurvivorsRogueCommandType type) : base(type)
 	{
 	}
 
-	// Token: 0x06016D38 RID: 93496 RVA: 0x005CBCE8 File Offset: 0x005C9EE8
+	// Token: 0x06014769 RID: 83817 RVA: 0x005F883C File Offset: 0x005F6A3C
 	protected override void OnBindView()
 	{
 		if (base.ObtainViewProxy == null)
@@ -75,13 +75,13 @@ public class SurvivorsRogueCommandAdditionRewardGot : SurvivorsRogueCommandBaseO
 		}
 	}
 
-	// Token: 0x06016D39 RID: 93497 RVA: 0x005CBE1C File Offset: 0x005CA01C
+	// Token: 0x0601476A RID: 83818 RVA: 0x005F8970 File Offset: 0x005F6B70
 	private SurvivorsOption GetSurvivorsOption()
 	{
 		return this.Data.RoleOrWeaponUpView.SurvivorsOption;
 	}
 
-	// Token: 0x06016D3A RID: 93498 RVA: 0x005CBE30 File Offset: 0x005CA030
+	// Token: 0x0601476B RID: 83819 RVA: 0x005F8984 File Offset: 0x005F6B84
 	[NullableContext(2)]
 	public override ISurvivorsObtainViewInfo GetViewInfo()
 	{

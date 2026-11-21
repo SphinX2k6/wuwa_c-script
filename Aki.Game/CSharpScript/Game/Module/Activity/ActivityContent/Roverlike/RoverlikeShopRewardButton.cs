@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006115 RID: 24853
+	// Token: 0x02005093 RID: 20627
 	public class RoverlikeShopRewardButton : RoverlikeRewardButton
 	{
-		// Token: 0x0603ED7B RID: 257403 RVA: 0x00F2D73D File Offset: 0x00F2B93D
+		// Token: 0x06033A3D RID: 211517 RVA: 0x00E74551 File Offset: 0x00E72751
 		protected override void OnStart()
 		{
 			this.ClickCallback = delegate()
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603ED7C RID: 257404 RVA: 0x00F2D764 File Offset: 0x00F2B964
+		// Token: 0x06033A3E RID: 211518 RVA: 0x00E74578 File Offset: 0x00E72778
 		public void BindRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotRoverlikeShopRewardBtn, base.GetItem(2), null, 0);
 		}
 
-		// Token: 0x0603ED7D RID: 257405 RVA: 0x00F2D77E File Offset: 0x00F2B97E
+		// Token: 0x06033A3F RID: 211519 RVA: 0x00E74592 File Offset: 0x00E72792
 		public void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotRoverlikeShopRewardBtn, base.GetItem(2), 0);

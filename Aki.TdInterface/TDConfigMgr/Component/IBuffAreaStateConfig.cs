@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000201 RID: 513
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200022A RID: 554
 	public class IBuffAreaStateConfig
 	{
-		// Token: 0x0600087C RID: 2172 RVA: 0x00026EB0 File Offset: 0x000250B0
+		// Token: 0x060008FC RID: 2300 RVA: 0x00028804 File Offset: 0x00026A04
 		private IBuffAreaStateConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600087D RID: 2173 RVA: 0x00026EE8 File Offset: 0x000250E8
+		// Token: 0x060008FD RID: 2301 RVA: 0x0002883C File Offset: 0x00026A3C
 		public static IBuffAreaStateConfig Create([Nullable(2)] IBuffAreaStateConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600087E RID: 2174 RVA: 0x00026EFB File Offset: 0x000250FB
+		// Token: 0x060008FE RID: 2302 RVA: 0x0002884F File Offset: 0x00026A4F
 		public static IBuffAreaStateConfig CreateFromSetValue([Nullable(2)] IBuffAreaStateConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600087F RID: 2175 RVA: 0x00026F0E File Offset: 0x0002510E
+		// Token: 0x060008FF RID: 2303 RVA: 0x00028862 File Offset: 0x00026A62
 		public IBuffAreaStateConfig_SetValue ToSetValue()
 		{
 			return new IBuffAreaStateConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700029A RID: 666
-		// (get) Token: 0x06000880 RID: 2176 RVA: 0x00026F39 File Offset: 0x00025139
-		// (set) Token: 0x06000881 RID: 2177 RVA: 0x00026F64 File Offset: 0x00025164
+		// Token: 0x170002BC RID: 700
+		// (get) Token: 0x06000900 RID: 2304 RVA: 0x0002888D File Offset: 0x00026A8D
+		// (set) Token: 0x06000901 RID: 2305 RVA: 0x000288B8 File Offset: 0x00026AB8
 		public virtual string State
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700029B RID: 667
-		// (get) Token: 0x06000882 RID: 2178 RVA: 0x00026F72 File Offset: 0x00025172
-		// (set) Token: 0x06000883 RID: 2179 RVA: 0x00026F99 File Offset: 0x00025199
+		// Token: 0x170002BD RID: 701
+		// (get) Token: 0x06000902 RID: 2306 RVA: 0x000288C6 File Offset: 0x00026AC6
+		// (set) Token: 0x06000903 RID: 2307 RVA: 0x000288ED File Offset: 0x00026AED
 		public virtual List<long> BuffIds
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700029C RID: 668
-		// (get) Token: 0x06000884 RID: 2180 RVA: 0x00026FA8 File Offset: 0x000251A8
-		// (set) Token: 0x06000885 RID: 2181 RVA: 0x00027009 File Offset: 0x00025209
+		// Token: 0x170002BE RID: 702
+		// (get) Token: 0x06000904 RID: 2308 RVA: 0x000288FC File Offset: 0x00026AFC
+		// (set) Token: 0x06000905 RID: 2309 RVA: 0x0002895D File Offset: 0x00026B5D
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400092A RID: 2346
+		// Token: 0x040009BB RID: 2491
 		[Nullable(2)]
 		protected IBuffAreaStateConfig FbInstance;
 
-		// Token: 0x0400092B RID: 2347
+		// Token: 0x040009BC RID: 2492
 		[Nullable(2)]
 		protected IBuffAreaStateConfig_SetValue PocoInterface;
 
-		// Token: 0x0400092C RID: 2348
+		// Token: 0x040009BD RID: 2493
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x0400092D RID: 2349
+		// Token: 0x040009BE RID: 2494
 		private bool _ConditionInited;
 	}
 }

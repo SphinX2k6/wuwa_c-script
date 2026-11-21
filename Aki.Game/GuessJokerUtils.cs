@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
-using CSharpScript.Game.Module.UiCameraAnimation;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001060 RID: 4192
+// Token: 0x02000514 RID: 1300
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerUtils
 {
-	// Token: 0x06006BC3 RID: 27587 RVA: 0x0015AFCF File Offset: 0x001591CF
+	// Token: 0x06003F58 RID: 16216 RVA: 0x00163917 File Offset: 0x00161B17
 	public static EGuessJokerPlayerType ServerPlayerTransToClient(JokerGuessActor playerType)
 	{
 		if (playerType != JokerGuessActor.Who)
@@ -22,13 +22,13 @@ public class GuessJokerUtils
 		return EGuessJokerPlayerType.Me;
 	}
 
-	// Token: 0x06006BC4 RID: 27588 RVA: 0x0015AFD7 File Offset: 0x001591D7
+	// Token: 0x06003F59 RID: 16217 RVA: 0x0016391F File Offset: 0x00161B1F
 	public static bool ServerUseSkillTransToClient(JokerGuessSkillOp useSkill)
 	{
 		return useSkill == JokerGuessSkillOp.Use;
 	}
 
-	// Token: 0x06006BC5 RID: 27589 RVA: 0x0015AFE0 File Offset: 0x001591E0
+	// Token: 0x06003F5A RID: 16218 RVA: 0x00163928 File Offset: 0x00161B28
 	public static void LogCardsGlobalIndex(GuessJokerCardItem[] cardItems, string logType = "")
 	{
 		List<int> list = new List<int>();
@@ -44,7 +44,7 @@ public class GuessJokerUtils
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06006BC6 RID: 27590 RVA: 0x0015B04C File Offset: 0x0015924C
+	// Token: 0x06003F5B RID: 16219 RVA: 0x00163994 File Offset: 0x00161B94
 	public static void LogCardsIdList(GuessJokerCardItem[] cardItems, string logType = "")
 	{
 		List<int> list = new List<int>();
@@ -60,7 +60,7 @@ public class GuessJokerUtils
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06006BC7 RID: 27591 RVA: 0x0015B0BC File Offset: 0x001592BC
+	// Token: 0x06003F5C RID: 16220 RVA: 0x00163A04 File Offset: 0x00161C04
 	public static ICardLayoutInfo[] CalculateCardLayoutInfo(int cardCount, ECardPositionType postionType)
 	{
 		ICardPositionConfig cardPositionConfig = GuessJokerDefine.GetCardPositionConfig(postionType);
@@ -115,7 +115,7 @@ public class GuessJokerUtils
 		return list.ToArray();
 	}
 
-	// Token: 0x06006BC8 RID: 27592 RVA: 0x0015B244 File Offset: 0x00159444
+	// Token: 0x06003F5D RID: 16221 RVA: 0x00163B8C File Offset: 0x00161D8C
 	public static GuessJokerPlotConfig? GetPlotConfig(EGuessJokerPlayerType playerType, EGuessJokerPlotTiming timing, int? extraParam = null)
 	{
 		GuessJokerAIPlotConfig? jokerAiPlotConfig = GuessJokerConfig.Instance.GetJokerAiPlotConfig(playerType, timing, extraParam.GetValueOrDefault());
@@ -158,7 +158,7 @@ public class GuessJokerUtils
 		return GuessJokerConfig.Instance.GetJokerPlotConfig(plotId);
 	}
 
-	// Token: 0x06006BC9 RID: 27593 RVA: 0x0015B36C File Offset: 0x0015956C
+	// Token: 0x06003F5E RID: 16222 RVA: 0x00163CB4 File Offset: 0x00161EB4
 	public static EPokerStateType CalculateNpcState(ENpcPokerChangeTimingType changeTiming, int relatedCardId = 0)
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -260,7 +260,7 @@ public class GuessJokerUtils
 		return result;
 	}
 
-	// Token: 0x06006BCA RID: 27594 RVA: 0x0015B4D4 File Offset: 0x001596D4
+	// Token: 0x06003F5F RID: 16223 RVA: 0x00163E1C File Offset: 0x0016201C
 	public static EGuessJokerPlotTiming GetPlayerGetCardState(int relatedCardId)
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -294,7 +294,7 @@ public class GuessJokerUtils
 		return EGuessJokerPlotTiming.GetCardNormal;
 	}
 
-	// Token: 0x06006BCB RID: 27595 RVA: 0x0015B54B File Offset: 0x0015974B
+	// Token: 0x06003F60 RID: 16224 RVA: 0x00163E93 File Offset: 0x00162093
 	public static EGuessJokerPlayerType GetOtherPlayerType(EGuessJokerPlayerType playerType)
 	{
 		if (playerType != EGuessJokerPlayerType.Ai)
@@ -304,11 +304,11 @@ public class GuessJokerUtils
 		return EGuessJokerPlayerType.Me;
 	}
 
-	// Token: 0x06006BCC RID: 27596 RVA: 0x0015B554 File Offset: 0x00159754
+	// Token: 0x06003F61 RID: 16225 RVA: 0x00163E9C File Offset: 0x0016209C
 	[NullableContext(2)]
 	public static string GetCameraNameByCameraId(int cameraId)
 	{
-		UiCameraMapping? uiCameraMappingConfigById = UiCameraAnimationConfig.Instance.GetUiCameraMappingConfigById(cameraId);
+		UiCameraMapping? uiCameraMappingConfigById = UiCameraConfig.Instance.GetUiCameraMappingConfigById(cameraId);
 		if (uiCameraMappingConfigById == null)
 		{
 			return null;
@@ -316,11 +316,11 @@ public class GuessJokerUtils
 		return uiCameraMappingConfigById.Value.ViewName;
 	}
 
-	// Token: 0x06006BCD RID: 27597 RVA: 0x0015B588 File Offset: 0x00159788
+	// Token: 0x06003F62 RID: 16226 RVA: 0x00163ED0 File Offset: 0x001620D0
 	[NullableContext(2)]
 	public static string GetCameraSettingNameByCameraId(int cameraId)
 	{
-		UiCameraMapping? uiCameraMappingConfigById = UiCameraAnimationConfig.Instance.GetUiCameraMappingConfigById(cameraId);
+		UiCameraMapping? uiCameraMappingConfigById = UiCameraConfig.Instance.GetUiCameraMappingConfigById(cameraId);
 		if (uiCameraMappingConfigById == null)
 		{
 			return null;
@@ -328,7 +328,7 @@ public class GuessJokerUtils
 		return uiCameraMappingConfigById.Value.DefaultUiCameraSettingsName;
 	}
 
-	// Token: 0x06006BCE RID: 27598 RVA: 0x0015B5BC File Offset: 0x001597BC
+	// Token: 0x06003F63 RID: 16227 RVA: 0x00163F04 File Offset: 0x00162104
 	public static int GetJokerParamConfig(string key)
 	{
 		GuessJokerParam? jokerParam = GuessJokerConfig.Instance.GetJokerParam(key);

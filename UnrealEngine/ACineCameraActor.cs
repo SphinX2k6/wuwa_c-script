@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000477 RID: 1143
+	// Token: 0x020000E7 RID: 231
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CinematicCamera.CineCameraActor")]
-	[UnrealStructLayout(3792, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3792)]
+	[UnrealStructLayout(3840, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3840)]
 	public class ACineCameraActor : ACameraActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06003D34 RID: 15668 RVA: 0x0005C0C4 File Offset: 0x0005A2C4
+		// Token: 0x06001028 RID: 4136 RVA: 0x00019CCB File Offset: 0x00017ECB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ACineCameraActor._ClassPtr;
 		}
 
-		// Token: 0x06003D35 RID: 15669 RVA: 0x0005C0D0 File Offset: 0x0005A2D0
+		// Token: 0x06001029 RID: 4137 RVA: 0x00019CD8 File Offset: 0x00017ED8
 		public ACineCameraActor() : this(BuiltinUtils.AllocNativeUObject(ACineCameraActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06003D36 RID: 15670 RVA: 0x0005C0F8 File Offset: 0x0005A2F8
+		// Token: 0x0600102A RID: 4138 RVA: 0x00019D00 File Offset: 0x00017F00
 		public ACineCameraActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ACineCameraActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17000EDE RID: 3806
-		// (get) Token: 0x06003D37 RID: 15671 RVA: 0x0005C12C File Offset: 0x0005A32C
-		// (set) Token: 0x06003D38 RID: 15672 RVA: 0x0005C165 File Offset: 0x0005A365
+		// Token: 0x17000181 RID: 385
+		// (get) Token: 0x0600102B RID: 4139 RVA: 0x00019D34 File Offset: 0x00017F34
+		// (set) Token: 0x0600102C RID: 4140 RVA: 0x00019D6D File Offset: 0x00017F6D
 		public FCameraLookatTrackingSettings LookatTrackingSettings
 		{
 			get
@@ -50,41 +50,41 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06003D39 RID: 15673 RVA: 0x0005C186 File Offset: 0x0005A386
+		// Token: 0x0600102D RID: 4141 RVA: 0x00019D8E File Offset: 0x00017F8E
 		[NullableContext(2)]
 		public UCineCameraComponent GetCineCameraComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCineCameraComponent>(ACineCameraActor.__GetCineCameraComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06003D3A RID: 15674
+		// Token: 0x0600102E RID: 4142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCineCameraComponent_Internal(IntPtr @this);
 
-		// Token: 0x06003D3B RID: 15675 RVA: 0x0005C198 File Offset: 0x0005A398
+		// Token: 0x0600102F RID: 4143 RVA: 0x00019DA0 File Offset: 0x00017FA0
 		static ACineCameraActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CinematicCamera.CineCameraActor");
 		}
 
-		// Token: 0x06003D3C RID: 15676 RVA: 0x0005C1A6 File Offset: 0x0005A3A6
+		// Token: 0x06001030 RID: 4144 RVA: 0x00019DAE File Offset: 0x00017FAE
 		protected ACineCameraActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04001CB4 RID: 7348
+		// Token: 0x040003C5 RID: 965
 		public new const string __ObjectPath = "/Script/CinematicCamera.CineCameraActor";
 
-		// Token: 0x04001CB5 RID: 7349
+		// Token: 0x040003C6 RID: 966
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04001CB6 RID: 7350
+		// Token: 0x040003C7 RID: 967
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04001CB7 RID: 7351
+		// Token: 0x040003C8 RID: 968
 		internal static int __PropertyOffset_LookatTrackingSettings;
 
-		// Token: 0x04001CB8 RID: 7352
+		// Token: 0x040003C9 RID: 969
 		[Nullable(2)]
 		private FCameraLookatTrackingSettings _LookatTrackingSettings;
 	}

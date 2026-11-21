@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020025FC RID: 9724
+// Token: 0x02001AE7 RID: 6887
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class PowerItem : GridProxyAbstract<PowerItemInfo>
 {
-	// Token: 0x06013C9F RID: 81055 RVA: 0x004F6790 File Offset: 0x004F4990
+	// Token: 0x06011181 RID: 70017 RVA: 0x00505524 File Offset: 0x00503724
 	public PowerItem(UUIItem uiItem)
 	{
 		this.CreateThenShowByActor(uiItem.GetOwner());
 	}
 
-	// Token: 0x06013CA0 RID: 81056 RVA: 0x004F67A4 File Offset: 0x004F49A4
+	// Token: 0x06011182 RID: 70018 RVA: 0x00505538 File Offset: 0x00503738
 	public override void Refresh(PowerItemInfo data, bool isSelected, int gridIndex)
 	{
 		this.ItemInfo = data;
@@ -35,13 +35,13 @@ public class PowerItem : GridProxyAbstract<PowerItemInfo>
 		base.SetItemIcon(base.GetTexture(3), data.ItemId, null, null);
 	}
 
-	// Token: 0x06013CA1 RID: 81057 RVA: 0x004F6838 File Offset: 0x004F4A38
+	// Token: 0x06011183 RID: 70019 RVA: 0x005055CC File Offset: 0x005037CC
 	public void SetClickCallback(Action<PowerItemInfo> toggleFunction)
 	{
 		this.ClickCallback = toggleFunction;
 	}
 
-	// Token: 0x06013CA2 RID: 81058 RVA: 0x004F6844 File Offset: 0x004F4A44
+	// Token: 0x06011184 RID: 70020 RVA: 0x005055D8 File Offset: 0x005037D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -80,7 +80,7 @@ public class PowerItem : GridProxyAbstract<PowerItemInfo>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06013CA3 RID: 81059 RVA: 0x004F6A16 File Offset: 0x004F4C16
+	// Token: 0x06011185 RID: 70021 RVA: 0x005057AA File Offset: 0x005039AA
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -94,20 +94,20 @@ public class PowerItem : GridProxyAbstract<PowerItemInfo>
 		}
 	}
 
-	// Token: 0x06013CA4 RID: 81060 RVA: 0x004F6A32 File Offset: 0x004F4C32
+	// Token: 0x06011186 RID: 70022 RVA: 0x005057C6 File Offset: 0x005039C6
 	public void SetIntoToggleGroup(UUIItem group)
 	{
 		base.GetExtendToggle(0).SetToggleGroup(group.GetOwner());
 	}
 
-	// Token: 0x0400951B RID: 38171
+	// Token: 0x04009672 RID: 38514
 	[StaticVariableRuleIgnore]
 	private static readonly FColor CoinNotEnoughColor = FColor.FromHex("9D2437FF");
 
-	// Token: 0x0400951C RID: 38172
+	// Token: 0x04009673 RID: 38515
 	private PowerItemInfo ItemInfo;
 
-	// Token: 0x0400951D RID: 38173
+	// Token: 0x04009674 RID: 38516
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,31 +115,31 @@ public class PowerItem : GridProxyAbstract<PowerItemInfo>
 	})]
 	private Action<PowerItemInfo> ClickCallback;
 
-	// Token: 0x02008C2E RID: 35886
+	// Token: 0x02007DB7 RID: 32183
 	[NullableContext(0)]
 	private enum EPowerItem
 	{
-		// Token: 0x0402D821 RID: 186401
+		// Token: 0x04028B39 RID: 166713
 		Item1,
-		// Token: 0x0402D822 RID: 186402
+		// Token: 0x04028B3A RID: 166714
 		Item2,
-		// Token: 0x0402D823 RID: 186403
+		// Token: 0x04028B3B RID: 166715
 		Item3,
-		// Token: 0x0402D824 RID: 186404
+		// Token: 0x04028B3C RID: 166716
 		ImageIcon,
-		// Token: 0x0402D825 RID: 186405
+		// Token: 0x04028B3D RID: 166717
 		ImageQuality,
-		// Token: 0x0402D826 RID: 186406
+		// Token: 0x04028B3E RID: 166718
 		Lock,
-		// Token: 0x0402D827 RID: 186407
+		// Token: 0x04028B3F RID: 166719
 		IconRole,
-		// Token: 0x0402D828 RID: 186408
+		// Token: 0x04028B40 RID: 166720
 		ImageRoleBg,
-		// Token: 0x0402D829 RID: 186409
+		// Token: 0x04028B41 RID: 166721
 		TextLevel,
-		// Token: 0x0402D82A RID: 186410
+		// Token: 0x04028B42 RID: 166722
 		Stage,
-		// Token: 0x0402D82B RID: 186411
+		// Token: 0x04028B43 RID: 166723
 		TextNumber
 	}
 }

@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018EB RID: 6379
+// Token: 0x02000DA4 RID: 3492
 [NullableContext(1)]
 [Nullable(0)]
 public class ItemTipsWithButtonComponent : UiPanelBase
 {
-	// Token: 0x0600BAEA RID: 47850 RVA: 0x002A5224 File Offset: 0x002A3424
+	// Token: 0x06008ED3 RID: 36563 RVA: 0x002AF984 File Offset: 0x002ADB84
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -43,7 +43,7 @@ public class ItemTipsWithButtonComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BAEB RID: 47851 RVA: 0x002A5350 File Offset: 0x002A3550
+	// Token: 0x06008ED4 RID: 36564 RVA: 0x002AFAB0 File Offset: 0x002ADCB0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ItemTipsWithButtonComponent.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,26 +54,32 @@ public class ItemTipsWithButtonComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BAEC RID: 47852 RVA: 0x002A5393 File Offset: 0x002A3593
+	// Token: 0x06008ED5 RID: 36565 RVA: 0x002AFAF3 File Offset: 0x002ADCF3
 	protected override void OnStart()
 	{
 		this.ButtonLayout = new GenericLayout<LayoutButtonItem, ButtonItemData>(base.GetHorizontalLayout(1), this.InitGridItem, base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600BAED RID: 47853 RVA: 0x002A53C0 File Offset: 0x002A35C0
+	// Token: 0x06008ED6 RID: 36566 RVA: 0x002AFB20 File Offset: 0x002ADD20
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemTipsComponentContentComponent.Destroy(null);
 		this.ButtonLayout.ClearChildren();
 	}
 
-	// Token: 0x0600BAEE RID: 47854 RVA: 0x002A53D9 File Offset: 0x002A35D9
+	// Token: 0x06008ED7 RID: 36567 RVA: 0x002AFB39 File Offset: 0x002ADD39
 	public void RefreshTips(ItemTipsData tipsData)
 	{
 		this.ItemTipsComponentContentComponent.Refresh(tipsData);
 	}
 
-	// Token: 0x0600BAEF RID: 47855 RVA: 0x002A53E8 File Offset: 0x002A35E8
+	// Token: 0x06008ED8 RID: 36568 RVA: 0x002AFB47 File Offset: 0x002ADD47
+	public void SetTipsNumShow(bool isShow)
+	{
+		this.ItemTipsComponentContentComponent.SetTipsNumShow(isShow);
+	}
+
+	// Token: 0x06008ED9 RID: 36569 RVA: 0x002AFB58 File Offset: 0x002ADD58
 	public void RefreshButton(List<IButtonInfo> buttonData)
 	{
 		this.ReloadFinishState = new CustomPromise();
@@ -102,94 +108,94 @@ public class ItemTipsWithButtonComponent : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600BAF0 RID: 47856 RVA: 0x002A5498 File Offset: 0x002A3698
+	// Token: 0x06008EDA RID: 36570 RVA: 0x002AFC08 File Offset: 0x002ADE08
 	public void ClearButtonList()
 	{
 		this.ButtonLayout.RefreshByData(new List<ButtonItemData>(), null, false);
 	}
 
-	// Token: 0x0600BAF1 RID: 47857 RVA: 0x002A54AC File Offset: 0x002A36AC
+	// Token: 0x06008EDB RID: 36571 RVA: 0x002AFC1C File Offset: 0x002ADE1C
 	public UniTask SetButtonTextByIndex(int index, string text, [Nullable(new byte[]
 	{
 		2,
 		1
 	})] string[] textParams = null)
 	{
-		ItemTipsWithButtonComponent.<SetButtonTextByIndex>d__13 <SetButtonTextByIndex>d__;
+		ItemTipsWithButtonComponent.<SetButtonTextByIndex>d__14 <SetButtonTextByIndex>d__;
 		<SetButtonTextByIndex>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SetButtonTextByIndex>d__.<>4__this = this;
 		<SetButtonTextByIndex>d__.index = index;
 		<SetButtonTextByIndex>d__.text = text;
 		<SetButtonTextByIndex>d__.textParams = textParams;
 		<SetButtonTextByIndex>d__.<>1__state = -1;
-		<SetButtonTextByIndex>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonTextByIndex>d__13>(ref <SetButtonTextByIndex>d__);
+		<SetButtonTextByIndex>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonTextByIndex>d__14>(ref <SetButtonTextByIndex>d__);
 		return <SetButtonTextByIndex>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BAF2 RID: 47858 RVA: 0x002A5508 File Offset: 0x002A3708
+	// Token: 0x06008EDC RID: 36572 RVA: 0x002AFC78 File Offset: 0x002ADE78
 	public UniTask SetButtonEnableByIndex(int index, bool bEnable)
 	{
-		ItemTipsWithButtonComponent.<SetButtonEnableByIndex>d__14 <SetButtonEnableByIndex>d__;
+		ItemTipsWithButtonComponent.<SetButtonEnableByIndex>d__15 <SetButtonEnableByIndex>d__;
 		<SetButtonEnableByIndex>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SetButtonEnableByIndex>d__.<>4__this = this;
 		<SetButtonEnableByIndex>d__.index = index;
 		<SetButtonEnableByIndex>d__.bEnable = bEnable;
 		<SetButtonEnableByIndex>d__.<>1__state = -1;
-		<SetButtonEnableByIndex>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonEnableByIndex>d__14>(ref <SetButtonEnableByIndex>d__);
+		<SetButtonEnableByIndex>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonEnableByIndex>d__15>(ref <SetButtonEnableByIndex>d__);
 		return <SetButtonEnableByIndex>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BAF3 RID: 47859 RVA: 0x002A555C File Offset: 0x002A375C
+	// Token: 0x06008EDD RID: 36573 RVA: 0x002AFCCC File Offset: 0x002ADECC
 	public void SetButtonPanelVisible(bool isVisible)
 	{
 		base.GetHorizontalLayout(1).RootUIComp.Get().SetUIActive(isVisible);
 	}
 
-	// Token: 0x0600BAF4 RID: 47860 RVA: 0x002A5584 File Offset: 0x002A3784
+	// Token: 0x06008EDE RID: 36574 RVA: 0x002AFCF4 File Offset: 0x002ADEF4
 	public UniTask SetButtonRedDotVisible(int index, bool bVisible)
 	{
-		ItemTipsWithButtonComponent.<SetButtonRedDotVisible>d__16 <SetButtonRedDotVisible>d__;
+		ItemTipsWithButtonComponent.<SetButtonRedDotVisible>d__17 <SetButtonRedDotVisible>d__;
 		<SetButtonRedDotVisible>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SetButtonRedDotVisible>d__.<>4__this = this;
 		<SetButtonRedDotVisible>d__.index = index;
 		<SetButtonRedDotVisible>d__.bVisible = bVisible;
 		<SetButtonRedDotVisible>d__.<>1__state = -1;
-		<SetButtonRedDotVisible>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonRedDotVisible>d__16>(ref <SetButtonRedDotVisible>d__);
+		<SetButtonRedDotVisible>d__.<>t__builder.Start<ItemTipsWithButtonComponent.<SetButtonRedDotVisible>d__17>(ref <SetButtonRedDotVisible>d__);
 		return <SetButtonRedDotVisible>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BAF5 RID: 47861 RVA: 0x002A55D7 File Offset: 0x002A37D7
+	// Token: 0x06008EDF RID: 36575 RVA: 0x002AFD47 File Offset: 0x002ADF47
 	public void SetVisible(bool isShow)
 	{
 		this.SetActive(isShow);
 	}
 
-	// Token: 0x0600BAF6 RID: 47862 RVA: 0x002A55E0 File Offset: 0x002A37E0
+	// Token: 0x06008EE0 RID: 36576 RVA: 0x002AFD50 File Offset: 0x002ADF50
 	public void SetTipsComponentLockButton(bool isShow)
 	{
 		this.ItemTipsComponentContentComponent.SetTipsComponentLockButton(isShow);
 	}
 
-	// Token: 0x0600BAF7 RID: 47863 RVA: 0x002A55EE File Offset: 0x002A37EE
+	// Token: 0x06008EE1 RID: 36577 RVA: 0x002AFD5E File Offset: 0x002ADF5E
 	[NullableContext(2)]
 	public void SetLockStateData(IItemTipsLockStateData data = null)
 	{
 		this.LockState.UpdateData(data);
 	}
 
-	// Token: 0x0600BAF8 RID: 47864 RVA: 0x002A55FC File Offset: 0x002A37FC
+	// Token: 0x06008EE2 RID: 36578 RVA: 0x002AFD6C File Offset: 0x002ADF6C
 	public void SetLockStateVisible(bool isShow = false)
 	{
 		this.LockState.SetActive(isShow);
 	}
 
-	// Token: 0x0600BAF9 RID: 47865 RVA: 0x002A560A File Offset: 0x002A380A
+	// Token: 0x06008EE3 RID: 36579 RVA: 0x002AFD7A File Offset: 0x002ADF7A
 	public void SetPreviewVisible(bool isPreview = false)
 	{
 		base.GetItem(4).SetUIActive(isPreview);
 	}
 
-	// Token: 0x0600BAFA RID: 47866 RVA: 0x002A561C File Offset: 0x002A381C
+	// Token: 0x06008EE4 RID: 36580 RVA: 0x002AFD8C File Offset: 0x002ADF8C
 	private void OnClickPreview()
 	{
 		ESkipName tipsPreviewType = this.ItemTipsComponentContentComponent.GetTipsPreviewType();
@@ -200,11 +206,11 @@ public class ItemTipsWithButtonComponent : UiPanelBase
 		});
 	}
 
-	// Token: 0x040054EC RID: 21740
+	// Token: 0x04005597 RID: 21911
 	[Nullable(2)]
 	private ItemTipsComponentContentComponent ItemTipsComponentContentComponent;
 
-	// Token: 0x040054ED RID: 21741
+	// Token: 0x04005598 RID: 21912
 	[Nullable(new byte[]
 	{
 		2,
@@ -213,32 +219,32 @@ public class ItemTipsWithButtonComponent : UiPanelBase
 	})]
 	private GenericLayout<LayoutButtonItem, ButtonItemData> ButtonLayout;
 
-	// Token: 0x040054EE RID: 21742
+	// Token: 0x04005599 RID: 21913
 	[Nullable(2)]
 	private CustomPromise ReloadFinishState;
 
-	// Token: 0x040054EF RID: 21743
+	// Token: 0x0400559A RID: 21914
 	[Nullable(2)]
 	private ItemTipsLockState LockState;
 
-	// Token: 0x040054F0 RID: 21744
+	// Token: 0x0400559B RID: 21915
 	private readonly Func<LayoutButtonItem> InitGridItem = () => new LayoutButtonItem();
 
-	// Token: 0x02007E5A RID: 32346
+	// Token: 0x02006FE1 RID: 28641
 	[NullableContext(0)]
 	private enum EItemTipsWithButtonNode
 	{
-		// Token: 0x0402958A RID: 169354
+		// Token: 0x040248B7 RID: 149687
 		TipsItem,
-		// Token: 0x0402958B RID: 169355
+		// Token: 0x040248B8 RID: 149688
 		PanelBtn,
-		// Token: 0x0402958C RID: 169356
+		// Token: 0x040248B9 RID: 149689
 		Button,
-		// Token: 0x0402958D RID: 169357
+		// Token: 0x040248BA RID: 149690
 		LockState,
-		// Token: 0x0402958E RID: 169358
+		// Token: 0x040248BB RID: 149691
 		PanelPreview,
-		// Token: 0x0402958F RID: 169359
+		// Token: 0x040248BC RID: 149692
 		BtnPreview
 	}
 }

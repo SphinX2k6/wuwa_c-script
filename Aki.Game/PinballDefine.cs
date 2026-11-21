@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020013EB RID: 5099
+// Token: 0x0200089F RID: 2207
 public class PinballDefine : IStaticVariableResetter
 {
-	// Token: 0x0600902A RID: 36906 RVA: 0x001F296B File Offset: 0x001F0B6B
+	// Token: 0x060063BF RID: 25535 RVA: 0x001FB4A7 File Offset: 0x001F96A7
 	static PinballDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballDefine.CreateStaticDefaultValue), new Action(PinballDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600902B RID: 36907 RVA: 0x001F298A File Offset: 0x001F0B8A
+	// Token: 0x060063C0 RID: 25536 RVA: 0x001FB4C6 File Offset: 0x001F96C6
 	public static void CreateStaticDefaultValue()
 	{
 		PinballDefine.pinballRankTopIconResourceKeys = new string[]
@@ -22,48 +22,48 @@ public class PinballDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600902C RID: 36908 RVA: 0x001F29B7 File Offset: 0x001F0BB7
+	// Token: 0x060063C1 RID: 25537 RVA: 0x001FB4F3 File Offset: 0x001F96F3
 	public static void ResetStaticDefaultValue()
 	{
 		PinballDefine.pinballRankTopIconResourceKeys = null;
 	}
 
-	// Token: 0x04003FAA RID: 16298
+	// Token: 0x04004042 RID: 16450
 	[Nullable(1)]
 	public const string WEAPON_CANNOT_EQUIP_ICON_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/OutSide/SP_IconTitle02.SP_IconTitle02";
 
-	// Token: 0x04003FAB RID: 16299
+	// Token: 0x04004043 RID: 16451
 	public const int PINBALL_ACTIVITY_CACHE_KEY3_ROLE = 0;
 
-	// Token: 0x04003FAC RID: 16300
+	// Token: 0x04004044 RID: 16452
 	public const int PINBALL_ACTIVITY_CACHE_KEY2_ROLE_RED_DOT = 0;
 
-	// Token: 0x04003FAD RID: 16301
+	// Token: 0x04004045 RID: 16453
 	public const int PINBALL_ROLE_MULTIPLE_LEVEL_UP_TIMES = 10;
 
-	// Token: 0x04003FAE RID: 16302
+	// Token: 0x04004046 RID: 16454
 	public const int PINBALL_DEFAULT_TIPS_DURATION = 2000;
 
-	// Token: 0x04003FAF RID: 16303
+	// Token: 0x04004047 RID: 16455
 	public const int PINBALL_CURRENCY_ITEM_ID = 89500002;
 
-	// Token: 0x04003FB0 RID: 16304
+	// Token: 0x04004048 RID: 16456
 	public const int PINBALL_FORMATION_MAX_SIZE = 3;
 
-	// Token: 0x04003FB1 RID: 16305
+	// Token: 0x04004049 RID: 16457
 	[Nullable(1)]
 	public const string PINBALL_ITEMBASE_NUMBER_RESID = "SP_ComItemNum0";
 
-	// Token: 0x04003FB2 RID: 16306
+	// Token: 0x0400404A RID: 16458
 	public const int PINBALL_MAIN_LEVEL_HELP = 555;
 
-	// Token: 0x04003FB3 RID: 16307
+	// Token: 0x0400404B RID: 16459
 	public const int PINBALL_DAILY_LEVEL_HELP = 556;
 
-	// Token: 0x04003FB4 RID: 16308
+	// Token: 0x0400404C RID: 16460
 	public const int PINBALL_TOWER_LEVEL_HELP = 557;
 
-	// Token: 0x04003FB5 RID: 16309
+	// Token: 0x0400404D RID: 16461
 	[Nullable(new byte[]
 	{
 		2,

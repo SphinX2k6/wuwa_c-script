@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D7C RID: 3452
+	// Token: 0x02000E78 RID: 3704
 	public class IQteType
 	{
-		// Token: 0x06004E8C RID: 20108 RVA: 0x000C2DF5 File Offset: 0x000C0FF5
-		[NullableContext(1)]
+		// Token: 0x060053B1 RID: 21425 RVA: 0x000CE645 File Offset: 0x000CC845
 		public static IQteType Create(IQteType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001951 RID: 6481
-		// (get) Token: 0x06004E8D RID: 20109 RVA: 0x000C2E14 File Offset: 0x000C1014
+		// Token: 0x17001ABC RID: 6844
+		// (get) Token: 0x060053B2 RID: 21426 RVA: 0x000CE664 File Offset: 0x000CC864
 		public virtual EQteType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001952 RID: 6482
-		// (get) Token: 0x06004E8E RID: 20110 RVA: 0x000C2E21 File Offset: 0x000C1021
+		// Token: 0x17001ABD RID: 6845
+		// (get) Token: 0x060053B3 RID: 21427 RVA: 0x000CE671 File Offset: 0x000CC871
 		public virtual int QteId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D17 RID: 11543
+		// Token: 0x04002FDD RID: 12253
 		private IQteType Instance;
 	}
 }

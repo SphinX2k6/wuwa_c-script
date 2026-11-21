@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200725A RID: 29274
+	// Token: 0x02007A2F RID: 31279
 	public class ISwitchEffectStateT
 	{
-		// Token: 0x1700D937 RID: 55607
-		// (get) Token: 0x06033EEA RID: 212714 RVA: 0x006FC2D7 File Offset: 0x006FA4D7
-		// (set) Token: 0x06033EEB RID: 212715 RVA: 0x006FC2DF File Offset: 0x006FA4DF
+		// Token: 0x1700E530 RID: 58672
+		// (get) Token: 0x060371EC RID: 225772 RVA: 0x0075D637 File Offset: 0x0075B837
+		// (set) Token: 0x060371ED RID: 225773 RVA: 0x0075D63F File Offset: 0x0075B83F
 		public EEffectType Type { get; set; }
 
-		// Token: 0x1700D938 RID: 55608
-		// (get) Token: 0x06033EEC RID: 212716 RVA: 0x006FC2E8 File Offset: 0x006FA4E8
-		// (set) Token: 0x06033EED RID: 212717 RVA: 0x006FC2F0 File Offset: 0x006FA4F0
+		// Token: 0x1700E531 RID: 58673
+		// (get) Token: 0x060371EE RID: 225774 RVA: 0x0075D648 File Offset: 0x0075B848
+		// (set) Token: 0x060371EF RID: 225775 RVA: 0x0075D650 File Offset: 0x0075B850
 		public string Path { get; set; }
 
-		// Token: 0x1700D939 RID: 55609
-		// (get) Token: 0x06033EEE RID: 212718 RVA: 0x006FC2F9 File Offset: 0x006FA4F9
-		// (set) Token: 0x06033EEF RID: 212719 RVA: 0x006FC301 File Offset: 0x006FA501
+		// Token: 0x1700E532 RID: 58674
+		// (get) Token: 0x060371F0 RID: 225776 RVA: 0x0075D659 File Offset: 0x0075B859
+		// (set) Token: 0x060371F1 RID: 225777 RVA: 0x0075D661 File Offset: 0x0075B861
 		public TSwitchEffectStateEffectTypeUnion EffectType { get; set; }
 
-		// Token: 0x1700D93A RID: 55610
-		// (get) Token: 0x06033EF0 RID: 212720 RVA: 0x006FC30A File Offset: 0x006FA50A
-		// (set) Token: 0x06033EF1 RID: 212721 RVA: 0x006FC312 File Offset: 0x006FA512
+		// Token: 0x1700E533 RID: 58675
+		// (get) Token: 0x060371F2 RID: 225778 RVA: 0x0075D66A File Offset: 0x0075B86A
+		// (set) Token: 0x060371F3 RID: 225779 RVA: 0x0075D672 File Offset: 0x0075B872
 		public int TargetStateIndex { get; set; }
 
-		// Token: 0x06033EF2 RID: 212722 RVA: 0x006FC31B File Offset: 0x006FA51B
+		// Token: 0x060371F4 RID: 225780 RVA: 0x0075D67B File Offset: 0x0075B87B
 		public ISwitchEffectStateT()
 		{
 			this.Type = EEffectType.Effect;

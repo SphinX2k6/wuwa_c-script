@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.Plot.FlowActions;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x02005091 RID: 20625
+	// Token: 0x02004061 RID: 16481
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowAction
 	{
-		// Token: 0x06034D6D RID: 216429 RVA: 0x00C7FB1C File Offset: 0x00C7DD1C
+		// Token: 0x06029C66 RID: 171110 RVA: 0x00BCD0CC File Offset: 0x00BCB2CC
 		public void Init(EAction type, Func<FlowActionBase> actionFactory, bool isAutoFinished = false)
 		{
 			this.Type = type;
@@ -22,7 +21,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.ActionInstanceList.Push(element);
 		}
 
-		// Token: 0x06034D6E RID: 216430 RVA: 0x00C7FB5C File Offset: 0x00C7DD5C
+		// Token: 0x06029C67 RID: 171111 RVA: 0x00BCD10C File Offset: 0x00BCB30C
 		private FlowActionBase CreateAction()
 		{
 			FlowActionBase flowActionBase = this.ActionFactory();
@@ -30,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return flowActionBase;
 		}
 
-		// Token: 0x06034D6F RID: 216431 RVA: 0x00C7FB75 File Offset: 0x00C7DD75
+		// Token: 0x06029C68 RID: 171112 RVA: 0x00BCD125 File Offset: 0x00BCB325
 		public FlowActionBase GetAction()
 		{
 			FlowActionBase actionInner = this.GetActionInner();
@@ -38,12 +37,12 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return actionInner;
 		}
 
-		// Token: 0x06034D70 RID: 216432 RVA: 0x00C7FB84 File Offset: 0x00C7DD84
+		// Token: 0x06029C69 RID: 171113 RVA: 0x00BCD134 File Offset: 0x00BCB334
 		private FlowActionBase GetActionInner()
 		{
 			if (this.IsAutoFinish)
 			{
-				return this.ActionInstanceList.Last<FlowActionBase>();
+				return this.ActionInstanceList.Peek();
 			}
 			if (this.ActionInstanceList.Size <= 0)
 			{
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return this.ActionInstanceList.Pop();
 		}
 
-		// Token: 0x06034D71 RID: 216433 RVA: 0x00C7FBBA File Offset: 0x00C7DDBA
+		// Token: 0x06029C6A RID: 171114 RVA: 0x00BCD16A File Offset: 0x00BCB36A
 		public void RecycleAction(FlowActionBase action)
 		{
 			action.Owner = null;
@@ -63,10 +62,10 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.ActionInstanceList.Push(action);
 		}
 
-		// Token: 0x0401C26A RID: 115306
+		// Token: 0x04016C99 RID: 93337
 		public EAction Type;
 
-		// Token: 0x0401C26B RID: 115307
+		// Token: 0x04016C9A RID: 93338
 		[Nullable(new byte[]
 		{
 			2,
@@ -74,10 +73,10 @@ namespace CSharpScript.Game.Module.Plot.Flow
 		})]
 		public Func<FlowActionBase> ActionFactory;
 
-		// Token: 0x0401C26C RID: 115308
+		// Token: 0x04016C9B RID: 93339
 		public bool IsAutoFinish;
 
-		// Token: 0x0401C26D RID: 115309
+		// Token: 0x04016C9C RID: 93340
 		[Nullable(new byte[]
 		{
 			2,

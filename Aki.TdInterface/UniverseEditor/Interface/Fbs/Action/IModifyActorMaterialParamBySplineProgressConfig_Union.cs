@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AAF RID: 27311
+	// Token: 0x020071DA RID: 29146
 	public enum IModifyActorMaterialParamBySplineProgressConfig_Union : byte
 	{
-		// Token: 0x040112EB RID: 70379
+		// Token: 0x040121EC RID: 74220
 		NONE,
-		// Token: 0x040112EC RID: 70380
+		// Token: 0x040121ED RID: 74221
 		IModifyActorMaterialParamBySplineProgressConfig,
-		// Token: 0x040112ED RID: 70381
+		// Token: 0x040121EE RID: 74222
 		IModifyActorMaterialParamBySplineProgressEnterSpline,
-		// Token: 0x040112EE RID: 70382
+		// Token: 0x040121EF RID: 74223
 		IModifyActorMaterialParamBySplineProgressExitSpline
 	}
 }

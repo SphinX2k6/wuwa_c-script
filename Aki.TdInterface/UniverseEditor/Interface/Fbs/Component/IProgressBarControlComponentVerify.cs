@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A1 RID: 22433
+	// Token: 0x02005DA8 RID: 23976
 	public static class IProgressBarControlComponentVerify
 	{
-		// Token: 0x06025A2B RID: 154155 RVA: 0x005310C0 File Offset: 0x0052F2C0
+		// Token: 0x06027F4B RID: 163659 RVA: 0x0057724C File Offset: 0x0057544C
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false))
@@ -64,20 +64,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007BE9 RID: 31721
+		// Token: 0x02008457 RID: 33879
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040136AF RID: 79535
+			// Token: 0x0401474F RID: 83791
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x040136B0 RID: 79536
+			// Token: 0x04014750 RID: 83792
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040136B1 RID: 79537
+			// Token: 0x04014751 RID: 83793
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040136B2 RID: 79538
+			// Token: 0x04014752 RID: 83794
 			public static VerifyUnionAction <3>__Verify;
 		}
 	}

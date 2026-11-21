@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025FA RID: 9722
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028BA RID: 10426
 	public class FaceToPos : ActionParams
 	{
-		// Token: 0x0600DA6C RID: 55916 RVA: 0x00208CA1 File Offset: 0x00206EA1
+		// Token: 0x0600E839 RID: 59449 RVA: 0x002253F5 File Offset: 0x002235F5
 		public static FaceToPos Create(IFaceToPos? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700403A RID: 16442
-		// (get) Token: 0x0600DA6D RID: 55917 RVA: 0x00208CC0 File Offset: 0x00206EC0
+		// Token: 0x17004373 RID: 17267
+		// (get) Token: 0x0600E83A RID: 59450 RVA: 0x00225414 File Offset: 0x00223614
 		public virtual VectorInfo Pos
 		{
 			get
@@ -39,14 +37,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007946 RID: 31046
+		// Token: 0x04007FE0 RID: 32736
 		private IFaceToPos Instance;
 
-		// Token: 0x04007947 RID: 31047
+		// Token: 0x04007FE1 RID: 32737
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007948 RID: 31048
+		// Token: 0x04007FE2 RID: 32738
 		private bool _PosInited;
 	}
 }

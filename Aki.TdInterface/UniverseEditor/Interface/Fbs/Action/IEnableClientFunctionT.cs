@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006655 RID: 26197
+	// Token: 0x02006CC6 RID: 27846
 	public class IEnableClientFunctionT
 	{
-		// Token: 0x1700C2A1 RID: 49825
-		// (get) Token: 0x0602D815 RID: 186389 RVA: 0x0063B43E File Offset: 0x0063963E
-		// (set) Token: 0x0602D816 RID: 186390 RVA: 0x0063B446 File Offset: 0x00639646
+		// Token: 0x1700CC3F RID: 52287
+		// (get) Token: 0x0602FFE6 RID: 196582 RVA: 0x00687FA6 File Offset: 0x006861A6
+		// (set) Token: 0x0602FFE7 RID: 196583 RVA: 0x00687FAE File Offset: 0x006861AE
 		public EEnableClientFunctionType Type { get; set; }
 
-		// Token: 0x0602D817 RID: 186391 RVA: 0x0063B44F File Offset: 0x0063964F
+		// Token: 0x0602FFE8 RID: 196584 RVA: 0x00687FB7 File Offset: 0x006861B7
 		public IEnableClientFunctionT()
 		{
 			this.Type = EEnableClientFunctionType.HealthBarDisplay;

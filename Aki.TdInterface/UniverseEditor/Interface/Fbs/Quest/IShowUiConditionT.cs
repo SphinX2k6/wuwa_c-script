@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004122 RID: 16674
+	// Token: 0x02004563 RID: 17763
 	public class IShowUiConditionT
 	{
-		// Token: 0x17007613 RID: 30227
-		// (get) Token: 0x060186C2 RID: 100034 RVA: 0x00385D81 File Offset: 0x00383F81
-		// (set) Token: 0x060186C3 RID: 100035 RVA: 0x00385D89 File Offset: 0x00383F89
+		// Token: 0x17007C19 RID: 31769
+		// (get) Token: 0x06019D65 RID: 105829 RVA: 0x003AFD89 File Offset: 0x003ADF89
+		// (set) Token: 0x06019D66 RID: 105830 RVA: 0x003AFD91 File Offset: 0x003ADF91
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17007614 RID: 30228
-		// (get) Token: 0x060186C4 RID: 100036 RVA: 0x00385D92 File Offset: 0x00383F92
-		// (set) Token: 0x060186C5 RID: 100037 RVA: 0x00385D9A File Offset: 0x00383F9A
+		// Token: 0x17007C1A RID: 31770
+		// (get) Token: 0x06019D67 RID: 105831 RVA: 0x003AFD9A File Offset: 0x003ADF9A
+		// (set) Token: 0x06019D68 RID: 105832 RVA: 0x003AFDA2 File Offset: 0x003ADFA2
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17007615 RID: 30229
-		// (get) Token: 0x060186C6 RID: 100038 RVA: 0x00385DA3 File Offset: 0x00383FA3
-		// (set) Token: 0x060186C7 RID: 100039 RVA: 0x00385DAB File Offset: 0x00383FAB
+		// Token: 0x17007C1B RID: 31771
+		// (get) Token: 0x06019D69 RID: 105833 RVA: 0x003AFDAB File Offset: 0x003ADFAB
+		// (set) Token: 0x06019D6A RID: 105834 RVA: 0x003AFDB3 File Offset: 0x003ADFB3
 		public TShowUiUnion UiType { get; set; }
 
-		// Token: 0x17007616 RID: 30230
-		// (get) Token: 0x060186C8 RID: 100040 RVA: 0x00385DB4 File Offset: 0x00383FB4
-		// (set) Token: 0x060186C9 RID: 100041 RVA: 0x00385DBC File Offset: 0x00383FBC
+		// Token: 0x17007C1C RID: 31772
+		// (get) Token: 0x06019D6B RID: 105835 RVA: 0x003AFDBC File Offset: 0x003ADFBC
+		// (set) Token: 0x06019D6C RID: 105836 RVA: 0x003AFDC4 File Offset: 0x003ADFC4
 		public bool KeepUiOpen { get; set; }
 
-		// Token: 0x17007617 RID: 30231
-		// (get) Token: 0x060186CA RID: 100042 RVA: 0x00385DC5 File Offset: 0x00383FC5
-		// (set) Token: 0x060186CB RID: 100043 RVA: 0x00385DCD File Offset: 0x00383FCD
+		// Token: 0x17007C1D RID: 31773
+		// (get) Token: 0x06019D6D RID: 105837 RVA: 0x003AFDCD File Offset: 0x003ADFCD
+		// (set) Token: 0x06019D6E RID: 105838 RVA: 0x003AFDD5 File Offset: 0x003ADFD5
 		public byte NullMask { get; set; }
 
-		// Token: 0x060186CC RID: 100044 RVA: 0x00385DD6 File Offset: 0x00383FD6
+		// Token: 0x06019D6F RID: 105839 RVA: 0x003AFDDE File Offset: 0x003ADFDE
 		public IShowUiConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

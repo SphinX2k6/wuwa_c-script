@@ -4,65 +4,65 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FF6 RID: 16374
+	// Token: 0x02004437 RID: 17463
 	public class IQuestMonsterPointT
 	{
-		// Token: 0x17007301 RID: 29441
-		// (get) Token: 0x060179B8 RID: 96696 RVA: 0x00367F99 File Offset: 0x00366199
-		// (set) Token: 0x060179B9 RID: 96697 RVA: 0x00367FA1 File Offset: 0x003661A1
+		// Token: 0x17007903 RID: 30979
+		// (get) Token: 0x06019051 RID: 102481 RVA: 0x00391D8D File Offset: 0x0038FF8D
+		// (set) Token: 0x06019052 RID: 102482 RVA: 0x00391D95 File Offset: 0x0038FF95
 		public EStatisticsEventType Type { get; set; }
 
-		// Token: 0x17007302 RID: 29442
-		// (get) Token: 0x060179BA RID: 96698 RVA: 0x00367FAA File Offset: 0x003661AA
-		// (set) Token: 0x060179BB RID: 96699 RVA: 0x00367FB2 File Offset: 0x003661B2
+		// Token: 0x17007904 RID: 30980
+		// (get) Token: 0x06019053 RID: 102483 RVA: 0x00391D9E File Offset: 0x0038FF9E
+		// (set) Token: 0x06019054 RID: 102484 RVA: 0x00391DA6 File Offset: 0x0038FFA6
 		public TVarRefUnion Var { get; set; }
 
-		// Token: 0x17007303 RID: 29443
-		// (get) Token: 0x060179BC RID: 96700 RVA: 0x00367FBB File Offset: 0x003661BB
-		// (set) Token: 0x060179BD RID: 96701 RVA: 0x00367FC3 File Offset: 0x003661C3
+		// Token: 0x17007905 RID: 30981
+		// (get) Token: 0x06019055 RID: 102485 RVA: 0x00391DAF File Offset: 0x0038FFAF
+		// (set) Token: 0x06019056 RID: 102486 RVA: 0x00391DB7 File Offset: 0x0038FFB7
 		public EElementCategory DamageElementType { get; set; }
 
-		// Token: 0x17007304 RID: 29444
-		// (get) Token: 0x060179BE RID: 96702 RVA: 0x00367FCC File Offset: 0x003661CC
-		// (set) Token: 0x060179BF RID: 96703 RVA: 0x00367FD4 File Offset: 0x003661D4
+		// Token: 0x17007906 RID: 30982
+		// (get) Token: 0x06019057 RID: 102487 RVA: 0x00391DC0 File Offset: 0x0038FFC0
+		// (set) Token: 0x06019058 RID: 102488 RVA: 0x00391DC8 File Offset: 0x0038FFC8
 		public ESkillCategory SkillCategory { get; set; }
 
-		// Token: 0x17007305 RID: 29445
-		// (get) Token: 0x060179C0 RID: 96704 RVA: 0x00367FDD File Offset: 0x003661DD
-		// (set) Token: 0x060179C1 RID: 96705 RVA: 0x00367FE5 File Offset: 0x003661E5
+		// Token: 0x17007907 RID: 30983
+		// (get) Token: 0x06019059 RID: 102489 RVA: 0x00391DD1 File Offset: 0x0038FFD1
+		// (set) Token: 0x0601905A RID: 102490 RVA: 0x00391DD9 File Offset: 0x0038FFD9
 		public List<int> KillByEntities { get; set; }
 
-		// Token: 0x17007306 RID: 29446
-		// (get) Token: 0x060179C2 RID: 96706 RVA: 0x00367FEE File Offset: 0x003661EE
-		// (set) Token: 0x060179C3 RID: 96707 RVA: 0x00367FF6 File Offset: 0x003661F6
+		// Token: 0x17007908 RID: 30984
+		// (get) Token: 0x0601905B RID: 102491 RVA: 0x00391DE2 File Offset: 0x0038FFE2
+		// (set) Token: 0x0601905C RID: 102492 RVA: 0x00391DEA File Offset: 0x0038FFEA
 		public bool KilledByAny { get; set; }
 
-		// Token: 0x17007307 RID: 29447
-		// (get) Token: 0x060179C4 RID: 96708 RVA: 0x00367FFF File Offset: 0x003661FF
-		// (set) Token: 0x060179C5 RID: 96709 RVA: 0x00368007 File Offset: 0x00366207
+		// Token: 0x17007909 RID: 30985
+		// (get) Token: 0x0601905D RID: 102493 RVA: 0x00391DF3 File Offset: 0x0038FFF3
+		// (set) Token: 0x0601905E RID: 102494 RVA: 0x00391DFB File Offset: 0x0038FFFB
 		public List<IMonsterPointTypeConfigT> TypeConfigs { get; set; }
 
-		// Token: 0x17007308 RID: 29448
-		// (get) Token: 0x060179C6 RID: 96710 RVA: 0x00368010 File Offset: 0x00366210
-		// (set) Token: 0x060179C7 RID: 96711 RVA: 0x00368018 File Offset: 0x00366218
+		// Token: 0x1700790A RID: 30986
+		// (get) Token: 0x0601905F RID: 102495 RVA: 0x00391E04 File Offset: 0x00390004
+		// (set) Token: 0x06019060 RID: 102496 RVA: 0x00391E0C File Offset: 0x0039000C
 		public List<IMonsterPointEntityConfigT> EntityConfigs { get; set; }
 
-		// Token: 0x17007309 RID: 29449
-		// (get) Token: 0x060179C8 RID: 96712 RVA: 0x00368021 File Offset: 0x00366221
-		// (set) Token: 0x060179C9 RID: 96713 RVA: 0x00368029 File Offset: 0x00366229
+		// Token: 0x1700790B RID: 30987
+		// (get) Token: 0x06019061 RID: 102497 RVA: 0x00391E15 File Offset: 0x00390015
+		// (set) Token: 0x06019062 RID: 102498 RVA: 0x00391E1D File Offset: 0x0039001D
 		public bool OnlyCountThisTreeAwakeEntities { get; set; }
 
-		// Token: 0x1700730A RID: 29450
-		// (get) Token: 0x060179CA RID: 96714 RVA: 0x00368032 File Offset: 0x00366232
-		// (set) Token: 0x060179CB RID: 96715 RVA: 0x0036803A File Offset: 0x0036623A
+		// Token: 0x1700790C RID: 30988
+		// (get) Token: 0x06019063 RID: 102499 RVA: 0x00391E26 File Offset: 0x00390026
+		// (set) Token: 0x06019064 RID: 102500 RVA: 0x00391E2E File Offset: 0x0039002E
 		public IBindCrossSceneSyncKillMonsterT BindCrossSceneSyncKillMonster { get; set; }
 
-		// Token: 0x1700730B RID: 29451
-		// (get) Token: 0x060179CC RID: 96716 RVA: 0x00368043 File Offset: 0x00366243
-		// (set) Token: 0x060179CD RID: 96717 RVA: 0x0036804B File Offset: 0x0036624B
+		// Token: 0x1700790D RID: 30989
+		// (get) Token: 0x06019065 RID: 102501 RVA: 0x00391E37 File Offset: 0x00390037
+		// (set) Token: 0x06019066 RID: 102502 RVA: 0x00391E3F File Offset: 0x0039003F
 		public byte NullMask { get; set; }
 
-		// Token: 0x060179CE RID: 96718 RVA: 0x00368054 File Offset: 0x00366254
+		// Token: 0x06019067 RID: 102503 RVA: 0x00391E48 File Offset: 0x00390048
 		public IQuestMonsterPointT()
 		{
 			this.Type = EStatisticsEventType.Collect;

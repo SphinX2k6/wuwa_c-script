@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200637D RID: 25469
+	// Token: 0x020069EE RID: 27118
 	public class IClaimDynamicTrafficRewardT
 	{
-		// Token: 0x1700BDEE RID: 48622
-		// (get) Token: 0x0602C0E2 RID: 180450 RVA: 0x0060D4DE File Offset: 0x0060B6DE
-		// (set) Token: 0x0602C0E3 RID: 180451 RVA: 0x0060D4E6 File Offset: 0x0060B6E6
+		// Token: 0x1700C776 RID: 51062
+		// (get) Token: 0x0602E84C RID: 190540 RVA: 0x00658632 File Offset: 0x00656832
+		// (set) Token: 0x0602E84D RID: 190541 RVA: 0x0065863A File Offset: 0x0065683A
 		public EDynamicEntityRewardType Type { get; set; }
 
-		// Token: 0x0602C0E4 RID: 180452 RVA: 0x0060D4EF File Offset: 0x0060B6EF
+		// Token: 0x0602E84E RID: 190542 RVA: 0x00658643 File Offset: 0x00656843
 		public IClaimDynamicTrafficRewardT()
 		{
 			this.Type = EDynamicEntityRewardType.Traffic;

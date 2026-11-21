@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001569 RID: 5481
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016C7 RID: 5831
 	public class DestroySummonedEntities : ActionParams
 	{
-		// Token: 0x06007BC3 RID: 31683 RVA: 0x00129FD0 File Offset: 0x001281D0
+		// Token: 0x060082A1 RID: 33441 RVA: 0x0013907C File Offset: 0x0013727C
 		private DestroySummonedEntities_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007BC4 RID: 31684 RVA: 0x0012A008 File Offset: 0x00128208
+		// Token: 0x060082A2 RID: 33442 RVA: 0x001390B4 File Offset: 0x001372B4
 		public static DestroySummonedEntities Create([Nullable(2)] DestroySummonedEntities instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BC5 RID: 31685 RVA: 0x0012A01B File Offset: 0x0012821B
+		// Token: 0x060082A3 RID: 33443 RVA: 0x001390C7 File Offset: 0x001372C7
 		public static DestroySummonedEntities CreateFromSetValue([Nullable(2)] DestroySummonedEntities_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007BC6 RID: 31686 RVA: 0x0012A02E File Offset: 0x0012822E
+		// Token: 0x060082A4 RID: 33444 RVA: 0x001390DA File Offset: 0x001372DA
 		public DestroySummonedEntities_SetValue ToSetValue()
 		{
 			return new DestroySummonedEntities_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028FF RID: 10495
-		// (get) Token: 0x06007BC7 RID: 31687 RVA: 0x0012A044 File Offset: 0x00128244
-		// (set) Token: 0x06007BC8 RID: 31688 RVA: 0x0012A0A5 File Offset: 0x001282A5
+		// Token: 0x17002AEA RID: 10986
+		// (get) Token: 0x060082A5 RID: 33445 RVA: 0x001390F0 File Offset: 0x001372F0
+		// (set) Token: 0x060082A6 RID: 33446 RVA: 0x00139151 File Offset: 0x00137351
 		public virtual IDestroySummonedVehicle DestroyEntitiesConfig
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400473E RID: 18238
+		// Token: 0x04004ADE RID: 19166
 		[Nullable(2)]
 		protected new DestroySummonedEntities FbInstance;
 
-		// Token: 0x0400473F RID: 18239
+		// Token: 0x04004ADF RID: 19167
 		[Nullable(2)]
 		protected DestroySummonedEntities_SetValue PocoInterface;
 
-		// Token: 0x04004740 RID: 18240
+		// Token: 0x04004AE0 RID: 19168
 		private IDestroySummonedVehicle _DestroyEntitiesConfigCache;
 
-		// Token: 0x04004741 RID: 18241
+		// Token: 0x04004AE1 RID: 19169
 		private bool _DestroyEntitiesConfigInited;
 	}
 }

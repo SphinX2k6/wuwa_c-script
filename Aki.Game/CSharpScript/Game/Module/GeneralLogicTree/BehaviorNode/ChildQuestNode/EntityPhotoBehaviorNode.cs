@@ -5,24 +5,24 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D1 RID: 22993
+	// Token: 0x020049AA RID: 18858
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntityPhotoBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A49A RID: 238746 RVA: 0x00DDC6AD File Offset: 0x00DDA8AD
+		// Token: 0x0602F3C1 RID: 193473 RVA: 0x00D2BE8D File Offset: 0x00D2A08D
 		public EntityPhotoBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A49B RID: 238747 RVA: 0x00DDC6C1 File Offset: 0x00DDA8C1
+		// Token: 0x0602F3C2 RID: 193474 RVA: 0x00D2BEA1 File Offset: 0x00D2A0A1
 		public bool IsOverrideConfig()
 		{
 			return this.OverrideConfig != null;
 		}
 
-		// Token: 0x17008B9A RID: 35738
-		// (get) Token: 0x0603A49C RID: 238748 RVA: 0x00DDC6CC File Offset: 0x00DDA8CC
+		// Token: 0x17005F67 RID: 24423
+		// (get) Token: 0x0602F3C3 RID: 193475 RVA: 0x00D2BEAC File Offset: 0x00D2A0AC
 		public unsafe int RangeEntity
 		{
 			get
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A49D RID: 238749 RVA: 0x00DDC7B8 File Offset: 0x00DDA9B8
+		// Token: 0x0602F3C4 RID: 193476 RVA: 0x00D2BF98 File Offset: 0x00D2A198
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return false;
 		}
 
-		// Token: 0x0603A49E RID: 238750 RVA: 0x00DDC82A File Offset: 0x00DDAA2A
+		// Token: 0x0602F3C5 RID: 193477 RVA: 0x00D2C00A File Offset: 0x00D2A20A
 		public void UseSubmitNode()
 		{
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A49F RID: 238751 RVA: 0x00DDC834 File Offset: 0x00DDAA34
+		// Token: 0x0602F3C6 RID: 193478 RVA: 0x00D2C014 File Offset: 0x00D2A214
 		public int? GetDungeonId()
 		{
 			Blackboard blackboard = this.Blackboard;
@@ -113,17 +113,17 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return new int?(blackboard.DungeonId);
 		}
 
-		// Token: 0x0401E635 RID: 124469
+		// Token: 0x040190D4 RID: 102612
 		public ITakePhotoPosCondition TakePlace;
 
-		// Token: 0x0401E636 RID: 124470
+		// Token: 0x040190D5 RID: 102613
 		public ITakePhotoTimeCondition TakeTime;
 
-		// Token: 0x0401E637 RID: 124471
+		// Token: 0x040190D6 RID: 102614
 		[Nullable(1)]
 		public List<IPhotoTarget> TakeTargetArray = new List<IPhotoTarget>();
 
-		// Token: 0x0401E638 RID: 124472
+		// Token: 0x040190D7 RID: 102615
 		public ITakePhoto2Condition OverrideConfig;
 	}
 }

@@ -2,26 +2,26 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020017C0 RID: 6080
+// Token: 0x02000C79 RID: 3193
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ComboTeachingConfig : ConfigBase
 {
-	// Token: 0x0600B18A RID: 45450 RVA: 0x00282FA7 File Offset: 0x002811A7
+	// Token: 0x06008572 RID: 34162 RVA: 0x0028D53F File Offset: 0x0028B73F
 	public ComboTeaching? GetComboTeachingConfig(int comboId)
 	{
 		return ConfigComboTeachingById.GetConfig(comboId, true);
 	}
 
-	// Token: 0x0600B18B RID: 45451 RVA: 0x00282FB0 File Offset: 0x002811B0
+	// Token: 0x06008573 RID: 34163 RVA: 0x0028D548 File Offset: 0x0028B748
 	public ComboTeachingCondition? GetComboTeachingConditionConfig(int comboConditionId)
 	{
 		return ConfigComboTeachingConditionById.GetConfig(comboConditionId, true);
 	}
 
-	// Token: 0x17000EBD RID: 3773
-	// (get) Token: 0x0600B18C RID: 45452 RVA: 0x00282FB9 File Offset: 0x002811B9
+	// Token: 0x17000EE0 RID: 3808
+	// (get) Token: 0x06008574 RID: 34164 RVA: 0x0028D551 File Offset: 0x0028B751
 	public static ComboTeachingConfig Instance
 	{
 		get
@@ -30,7 +30,7 @@ public class ComboTeachingConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B18D RID: 45453 RVA: 0x00282FC0 File Offset: 0x002811C0
+	// Token: 0x06008575 RID: 34165 RVA: 0x0028D558 File Offset: 0x0028B758
 	public static ComboTeachingConfig GetOrCreateInstance()
 	{
 		if (ComboTeachingConfig._Instance == null)
@@ -40,7 +40,7 @@ public class ComboTeachingConfig : ConfigBase
 		return ComboTeachingConfig._Instance;
 	}
 
-	// Token: 0x0600B18E RID: 45454 RVA: 0x00282FD4 File Offset: 0x002811D4
+	// Token: 0x06008576 RID: 34166 RVA: 0x0028D56C File Offset: 0x0028B76C
 	public static bool CreateInstance()
 	{
 		if (ComboTeachingConfig._Instance != null)
@@ -51,24 +51,24 @@ public class ComboTeachingConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B18F RID: 45455 RVA: 0x00282FEA File Offset: 0x002811EA
+	// Token: 0x06008577 RID: 34167 RVA: 0x0028D582 File Offset: 0x0028B782
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B190 RID: 45456 RVA: 0x00282FEC File Offset: 0x002811EC
+	// Token: 0x06008578 RID: 34168 RVA: 0x0028D584 File Offset: 0x0028B784
 	public static void ResetStaticDefaultValue()
 	{
 		ComboTeachingConfig._Instance = null;
 	}
 
-	// Token: 0x0600B191 RID: 45457 RVA: 0x00282FF4 File Offset: 0x002811F4
+	// Token: 0x06008579 RID: 34169 RVA: 0x0028D58C File Offset: 0x0028B78C
 	static ComboTeachingConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ComboTeachingConfig.CreateStaticDefaultValue), new Action(ComboTeachingConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400508B RID: 20619
+	// Token: 0x04005135 RID: 20789
 	[Nullable(2)]
 	private static ComboTeachingConfig _Instance;
 }

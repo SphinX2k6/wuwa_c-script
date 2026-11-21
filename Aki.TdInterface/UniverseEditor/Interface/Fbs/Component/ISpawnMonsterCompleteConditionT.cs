@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005948 RID: 22856
+	// Token: 0x02005F55 RID: 24405
 	public class ISpawnMonsterCompleteConditionT
 	{
-		// Token: 0x1700AB8A RID: 43914
-		// (get) Token: 0x06026AD0 RID: 158416 RVA: 0x005536FE File Offset: 0x005518FE
-		// (set) Token: 0x06026AD1 RID: 158417 RVA: 0x00553706 File Offset: 0x00551906
+		// Token: 0x1700B4BE RID: 46270
+		// (get) Token: 0x0602903A RID: 167994 RVA: 0x0059A36A File Offset: 0x0059856A
+		// (set) Token: 0x0602903B RID: 167995 RVA: 0x0059A372 File Offset: 0x00598572
 		public ESpawnMonsterCompleteCondition Type { get; set; }
 
-		// Token: 0x06026AD2 RID: 158418 RVA: 0x0055370F File Offset: 0x0055190F
+		// Token: 0x0602903C RID: 167996 RVA: 0x0059A37B File Offset: 0x0059857B
 		public ISpawnMonsterCompleteConditionT()
 		{
 			this.Type = ESpawnMonsterCompleteCondition.AllKill;

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -10,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x02005541 RID: 21825
+	// Token: 0x02004513 RID: 17683
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +17,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class TreasureBoxDetectorItemRangeHandle : MarkItemComponentHandle<MarkDetectorRangeImageComponent>
 	{
-		// Token: 0x06037B36 RID: 228150 RVA: 0x00D37CE9 File Offset: 0x00D35EE9
+		// Token: 0x0602CA06 RID: 182790 RVA: 0x00C857F0 File Offset: 0x00C839F0
 		public TreasureBoxDetectorItemRangeHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B37 RID: 228151 RVA: 0x00D37CF4 File Offset: 0x00D35EF4
+		// Token: 0x0602CA07 RID: 182791 RVA: 0x00C857FC File Offset: 0x00C839FC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -40,13 +38,17 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B38 RID: 228152 RVA: 0x00D37D37 File Offset: 0x00D35F37
+		// Token: 0x0602CA08 RID: 182792 RVA: 0x00C8583F File Offset: 0x00C83A3F
 		protected override MarkDetectorRangeImageComponent GetOrCreateComponent()
 		{
 			if (this.ComponentInternal == null)
 			{
 				this.LoadComponentAsync().ContinueWith(delegate(MarkDetectorRangeImageComponent _)
 				{
+					if (this.ComponentInternal == null)
+					{
+						return;
+					}
 					MarkDetectorRangeImageComponent componentInternal = this.ComponentInternal;
 					Vector2D vector2D = Vector2D.Create(this.Context.MarkItem.UiPosition.X, this.Context.MarkItem.UiPosition.Y);
 					UUIItem rootItem = componentInternal.GetRootItem();
@@ -68,16 +70,10 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037B39 RID: 228153 RVA: 0x00D37D5F File Offset: 0x00D35F5F
-		protected override void OnSetVisible(bool active)
-		{
-			this.Context.MarkItemEntity.ViewLifeCircle.SetChildViewVisibility(EMarkViewComponentType.Range, active);
-		}
-
-		// Token: 0x06037B3A RID: 228154 RVA: 0x00D37D78 File Offset: 0x00D35F78
+		// Token: 0x0602CA09 RID: 182793 RVA: 0x00C85868 File Offset: 0x00C83A68
 		public void UpdateRangeScale()
 		{
-			if (this.Context.MarkItemEntity.ViewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Range, false))
+			if (base.Visible)
 			{
 				MarkDetectorRangeImageComponent orCreateComponent = this.GetOrCreateComponent();
 				orCreateComponent.SetRangeScale(1.0, 1.0, 1.0);
@@ -91,22 +87,22 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			}
 		}
 
-		// Token: 0x06037B3B RID: 228155 RVA: 0x00D37E0C File Offset: 0x00D3600C
+		// Token: 0x0602CA0A RID: 182794 RVA: 0x00C858EC File Offset: 0x00C83AEC
 		protected override void OnApplyModified()
 		{
-			MarkViewLifeCircleComponent viewLifeCircle = this.Context.MarkItemEntity.ViewLifeCircle;
-			if (viewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Range))
+			if (!base.VisibleDirty)
 			{
-				MarkDetectorRangeImageComponent orCreateComponent = this.GetOrCreateComponent();
-				if (!this.IsComponentValid(orCreateComponent))
-				{
-					return;
-				}
-				bool active = viewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Range, false);
-				viewLifeCircle.SetChildViewVisibleClean(EMarkViewComponentType.Range);
-				this.UpdateRangeScale();
-				MarkItemComponentHandle<MarkDetectorRangeImageComponent>.SetComponentActive(orCreateComponent, active);
+				return;
 			}
+			MarkDetectorRangeImageComponent orCreateComponent = this.GetOrCreateComponent();
+			if (!this.IsComponentValid(orCreateComponent))
+			{
+				return;
+			}
+			bool visible = base.Visible;
+			base.CleanVisibleDirty();
+			this.UpdateRangeScale();
+			MarkItemComponentHandle<MarkDetectorRangeImageComponent>.SetComponentActive(orCreateComponent, visible);
 		}
 	}
 }

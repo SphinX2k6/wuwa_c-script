@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x0200435B RID: 17243
+	// Token: 0x020047BD RID: 18365
 	public class IPerformerAiBtTreeT
 	{
-		// Token: 0x170079AF RID: 31151
-		// (get) Token: 0x0601991C RID: 104732 RVA: 0x003A9106 File Offset: 0x003A7306
-		// (set) Token: 0x0601991D RID: 104733 RVA: 0x003A910E File Offset: 0x003A730E
+		// Token: 0x17007FE4 RID: 32740
+		// (get) Token: 0x0601B0AA RID: 110762 RVA: 0x003D4B2E File Offset: 0x003D2D2E
+		// (set) Token: 0x0601B0AB RID: 110763 RVA: 0x003D4B36 File Offset: 0x003D2D36
 		public IPerformerAiStartT Root { get; set; }
 
-		// Token: 0x170079B0 RID: 31152
-		// (get) Token: 0x0601991E RID: 104734 RVA: 0x003A9117 File Offset: 0x003A7317
-		// (set) Token: 0x0601991F RID: 104735 RVA: 0x003A911F File Offset: 0x003A731F
+		// Token: 0x17007FE5 RID: 32741
+		// (get) Token: 0x0601B0AC RID: 110764 RVA: 0x003D4B3F File Offset: 0x003D2D3F
+		// (set) Token: 0x0601B0AD RID: 110765 RVA: 0x003D4B47 File Offset: 0x003D2D47
 		public List<int> _StSelectedNodeIds { get; set; }
 
-		// Token: 0x170079B1 RID: 31153
-		// (get) Token: 0x06019920 RID: 104736 RVA: 0x003A9128 File Offset: 0x003A7328
-		// (set) Token: 0x06019921 RID: 104737 RVA: 0x003A9130 File Offset: 0x003A7330
+		// Token: 0x17007FE6 RID: 32742
+		// (get) Token: 0x0601B0AE RID: 110766 RVA: 0x003D4B50 File Offset: 0x003D2D50
+		// (set) Token: 0x0601B0AF RID: 110767 RVA: 0x003D4B58 File Offset: 0x003D2D58
 		public byte NullMask { get; set; }
 
-		// Token: 0x06019922 RID: 104738 RVA: 0x003A9139 File Offset: 0x003A7339
+		// Token: 0x0601B0B0 RID: 110768 RVA: 0x003D4B61 File Offset: 0x003D2D61
 		public IPerformerAiBtTreeT()
 		{
 			this.Root = null;

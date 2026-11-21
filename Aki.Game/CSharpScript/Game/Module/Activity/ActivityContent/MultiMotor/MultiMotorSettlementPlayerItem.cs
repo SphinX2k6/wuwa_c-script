@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x0200639F RID: 25503
+	// Token: 0x0200531D RID: 21277
 	public class MultiMotorSettlementPlayerItem : UiPanelBase
 	{
-		// Token: 0x06040244 RID: 262724 RVA: 0x00F873B8 File Offset: 0x00F855B8
+		// Token: 0x06034F05 RID: 216837 RVA: 0x00ECE2F0 File Offset: 0x00ECC4F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040245 RID: 262725 RVA: 0x00F8758C File Offset: 0x00F8578C
+		// Token: 0x06034F06 RID: 216838 RVA: 0x00ECE4C4 File Offset: 0x00ECC6C4
 		[NullableContext(2)]
 		public void RefreshItemByData(OnlineMotorSettleInfo data)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshChampionInfo(data);
 		}
 
-		// Token: 0x06040246 RID: 262726 RVA: 0x00F875FA File Offset: 0x00F857FA
+		// Token: 0x06034F07 RID: 216839 RVA: 0x00ECE532 File Offset: 0x00ECC732
 		protected virtual void ShowNoPlayerState()
 		{
 			UUIItem item = base.GetItem(10);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06040247 RID: 262727 RVA: 0x00F87623 File Offset: 0x00F85823
+		// Token: 0x06034F08 RID: 216840 RVA: 0x00ECE55B File Offset: 0x00ECC75B
 		protected virtual void ShowHavePlayerState()
 		{
 			UUIItem item = base.GetItem(10);
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			item2.SetUIActive(true);
 		}
 
-		// Token: 0x06040248 RID: 262728 RVA: 0x00F8764C File Offset: 0x00F8584C
+		// Token: 0x06034F09 RID: 216841 RVA: 0x00ECE584 File Offset: 0x00ECC784
 		[NullableContext(1)]
 		protected virtual void RefreshChampionInfo(OnlineMotorSettleInfo data)
 		{
 		}
 
-		// Token: 0x06040249 RID: 262729 RVA: 0x00F87650 File Offset: 0x00F85850
+		// Token: 0x06034F0A RID: 216842 RVA: 0x00ECE588 File Offset: 0x00ECC788
 		[NullableContext(1)]
 		protected virtual void RefreshTag(OnlineMotorSettleInfo data)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetText(2).SetUIActive(false);
 		}
 
-		// Token: 0x0604024A RID: 262730 RVA: 0x00F87788 File Offset: 0x00F85988
+		// Token: 0x06034F0B RID: 216843 RVA: 0x00ECE6C0 File Offset: 0x00ECC8C0
 		protected virtual void RefreshRoleTexture(int skinId)
 		{
 			RoleSkin? roleSkinConfig = SkinConfig.Instance.GetRoleSkinConfig(skinId);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.SetTextureByPath(roleSkinConfig.Value.FormationRoleCard, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0604024B RID: 262731 RVA: 0x00F877D4 File Offset: 0x00F859D4
+		// Token: 0x06034F0C RID: 216844 RVA: 0x00ECE70C File Offset: 0x00ECC90C
 		protected virtual void RefreshTime(int time, bool isFinish)
 		{
 			if (time <= 0 || !isFinish)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text.SetText(remainTimeDataFormat, true);
 		}
 
-		// Token: 0x0604024C RID: 262732 RVA: 0x00F8784C File Offset: 0x00F85A4C
+		// Token: 0x06034F0D RID: 216845 RVA: 0x00ECE784 File Offset: 0x00ECC984
 		protected void RefreshPlayerInfo(int playerId)
 		{
 			OnlineTeamData currentTeamListById = OnlineModel.Instance.GetCurrentTeamListById(playerId);
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshIsFriend(flag, isFriend, hasApplied);
 		}
 
-		// Token: 0x0604024D RID: 262733 RVA: 0x00F8791C File Offset: 0x00F85B1C
+		// Token: 0x06034F0E RID: 216846 RVA: 0x00ECE854 File Offset: 0x00ECCA54
 		protected void RefreshIsFriend(bool isSelf, bool isFriend, bool hasApplied)
 		{
 			bool flag = isSelf || isFriend;
@@ -227,50 +227,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetButton(6).RootUIComp.Get().SetUIActive(!flag && !hasApplied);
 		}
 
-		// Token: 0x0604024E RID: 262734 RVA: 0x00F87962 File Offset: 0x00F85B62
+		// Token: 0x06034F0F RID: 216847 RVA: 0x00ECE89A File Offset: 0x00ECCA9A
 		protected virtual void OnClickAddFriendBtn()
 		{
 			FriendController.Instance.RequestFriendApplyAddSend(this.PlayerId, FriendApplyWay.RecentlyTeam);
 			this.RefreshIsFriend(false, false, true);
 		}
 
-		// Token: 0x040216B8 RID: 136888
+		// Token: 0x0401BFE7 RID: 114663
 		public int PlayerId;
 
-		// Token: 0x0200C5BC RID: 50620
+		// Token: 0x0200AFA3 RID: 44963
 		protected class EPlayerComponents
 		{
-			// Token: 0x0403BB32 RID: 244530
+			// Token: 0x04036491 RID: 222353
 			public const int RoleTexture = 0;
 
-			// Token: 0x0403BB33 RID: 244531
+			// Token: 0x04036492 RID: 222354
 			public const int TagText = 1;
 
-			// Token: 0x0403BB34 RID: 244532
+			// Token: 0x04036493 RID: 222355
 			public const int Tag2Text = 2;
 
-			// Token: 0x0403BB35 RID: 244533
+			// Token: 0x04036494 RID: 222356
 			public const int TimeText = 3;
 
-			// Token: 0x0403BB36 RID: 244534
+			// Token: 0x04036495 RID: 222357
 			public const int OnlineNumberSprite = 4;
 
-			// Token: 0x0403BB37 RID: 244535
+			// Token: 0x04036496 RID: 222358
 			public const int PlayerNameText = 5;
 
-			// Token: 0x0403BB38 RID: 244536
+			// Token: 0x04036497 RID: 222359
 			public const int AddFriendBtn = 6;
 
-			// Token: 0x0403BB39 RID: 244537
+			// Token: 0x04036498 RID: 222360
 			public const int HaveApplyItem = 7;
 
-			// Token: 0x0403BB3A RID: 244538
+			// Token: 0x04036499 RID: 222361
 			public const int FailItem = 8;
 
-			// Token: 0x0403BB3B RID: 244539
+			// Token: 0x0403649A RID: 222362
 			public const int HavePlayerItem = 9;
 
-			// Token: 0x0403BB3C RID: 244540
+			// Token: 0x0403649B RID: 222363
 			public const int NoPlayerItem = 10;
 		}
 	}

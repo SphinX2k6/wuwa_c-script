@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001FDE RID: 8158
+// Token: 0x020014B1 RID: 5297
 public enum EPhantomManageViewData
 {
-	// Token: 0x04007651 RID: 30289
+	// Token: 0x0400773A RID: 30522
 	SelectSet,
-	// Token: 0x04007652 RID: 30290
+	// Token: 0x0400773B RID: 30523
 	ItemDataList
 }

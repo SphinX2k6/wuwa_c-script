@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E34 RID: 7732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002067 RID: 8295
 	public class ISetNpcHighFivePerform : ISetNpcGroupPerformType
 	{
-		// Token: 0x0600A563 RID: 42339 RVA: 0x00176A80 File Offset: 0x00174C80
+		// Token: 0x0600B00B RID: 45067 RVA: 0x0018C488 File Offset: 0x0018A688
 		private ISetNpcHighFivePerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A564 RID: 42340 RVA: 0x00176AB8 File Offset: 0x00174CB8
+		// Token: 0x0600B00C RID: 45068 RVA: 0x0018C4C0 File Offset: 0x0018A6C0
 		public static ISetNpcHighFivePerform Create([Nullable(2)] ISetNpcHighFivePerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A565 RID: 42341 RVA: 0x00176ACB File Offset: 0x00174CCB
+		// Token: 0x0600B00D RID: 45069 RVA: 0x0018C4D3 File Offset: 0x0018A6D3
 		public static ISetNpcHighFivePerform CreateFromSetValue([Nullable(2)] ISetNpcHighFivePerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A566 RID: 42342 RVA: 0x00176ADE File Offset: 0x00174CDE
+		// Token: 0x0600B00E RID: 45070 RVA: 0x0018C4E6 File Offset: 0x0018A6E6
 		public new ISetNpcHighFivePerform_SetValue ToSetValue()
 		{
 			return new ISetNpcHighFivePerform_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032BA RID: 12986
-		// (get) Token: 0x0600A567 RID: 42343 RVA: 0x00176B15 File Offset: 0x00174D15
-		// (set) Token: 0x0600A568 RID: 42344 RVA: 0x00176B40 File Offset: 0x00174D40
+		// Token: 0x17003579 RID: 13689
+		// (get) Token: 0x0600B00F RID: 45071 RVA: 0x0018C51D File Offset: 0x0018A71D
+		// (set) Token: 0x0600B010 RID: 45072 RVA: 0x0018C548 File Offset: 0x0018A748
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032BB RID: 12987
-		// (get) Token: 0x0600A569 RID: 42345 RVA: 0x00176B50 File Offset: 0x00174D50
-		// (set) Token: 0x0600A56A RID: 42346 RVA: 0x00176BB1 File Offset: 0x00174DB1
+		// Token: 0x1700357A RID: 13690
+		// (get) Token: 0x0600B011 RID: 45073 RVA: 0x0018C558 File Offset: 0x0018A758
+		// (set) Token: 0x0600B012 RID: 45074 RVA: 0x0018C5B9 File Offset: 0x0018A7B9
 		public virtual IPlayerInitiator Initiator
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032BC RID: 12988
-		// (get) Token: 0x0600A56B RID: 42347 RVA: 0x00176BC6 File Offset: 0x00174DC6
-		// (set) Token: 0x0600A56C RID: 42348 RVA: 0x00176BF1 File Offset: 0x00174DF1
+		// Token: 0x1700357B RID: 13691
+		// (get) Token: 0x0600B013 RID: 45075 RVA: 0x0018C5CE File Offset: 0x0018A7CE
+		// (set) Token: 0x0600B014 RID: 45076 RVA: 0x0018C5F9 File Offset: 0x0018A7F9
 		public virtual int Target
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032BD RID: 12989
-		// (get) Token: 0x0600A56D RID: 42349 RVA: 0x00176BFF File Offset: 0x00174DFF
-		// (set) Token: 0x0600A56E RID: 42350 RVA: 0x00176C2A File Offset: 0x00174E2A
+		// Token: 0x1700357C RID: 13692
+		// (get) Token: 0x0600B015 RID: 45077 RVA: 0x0018C607 File Offset: 0x0018A807
+		// (set) Token: 0x0600B016 RID: 45078 RVA: 0x0018C632 File Offset: 0x0018A832
 		public virtual ENpcGroupPerformNpcType NpcType
 		{
 			get
@@ -161,18 +159,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062E5 RID: 25317
+		// Token: 0x040068BC RID: 26812
 		[Nullable(2)]
 		protected new ISetNpcHighFivePerform FbInstance;
 
-		// Token: 0x040062E6 RID: 25318
+		// Token: 0x040068BD RID: 26813
 		[Nullable(2)]
 		protected new ISetNpcHighFivePerform_SetValue PocoInterface;
 
-		// Token: 0x040062E7 RID: 25319
+		// Token: 0x040068BE RID: 26814
 		private IPlayerInitiator _InitiatorCache;
 
-		// Token: 0x040062E8 RID: 25320
+		// Token: 0x040068BF RID: 26815
 		private bool _InitiatorInited;
 	}
 }

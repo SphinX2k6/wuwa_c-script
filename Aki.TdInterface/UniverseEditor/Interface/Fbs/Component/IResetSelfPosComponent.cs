@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005861 RID: 22625
+	// Token: 0x02005E6E RID: 24174
 	public struct IResetSelfPosComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A921 RID: 43297
-		// (get) Token: 0x06026194 RID: 156052 RVA: 0x00540B8A File Offset: 0x0053ED8A
+		// Token: 0x1700B251 RID: 45649
+		// (get) Token: 0x060286F6 RID: 165622 RVA: 0x005876D6 File Offset: 0x005858D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026195 RID: 156053 RVA: 0x00540B97 File Offset: 0x0053ED97
+		// Token: 0x060286F7 RID: 165623 RVA: 0x005876E3 File Offset: 0x005858E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026196 RID: 156054 RVA: 0x00540BA0 File Offset: 0x0053EDA0
+		// Token: 0x060286F8 RID: 165624 RVA: 0x005876EC File Offset: 0x005858EC
 		public static IResetSelfPosComponent GetRootAsIResetSelfPosComponent(ByteBuffer _bb)
 		{
 			return IResetSelfPosComponent.GetRootAsIResetSelfPosComponent(_bb, default(IResetSelfPosComponent));
 		}
 
-		// Token: 0x06026197 RID: 156055 RVA: 0x00540BBC File Offset: 0x0053EDBC
+		// Token: 0x060286F9 RID: 165625 RVA: 0x00587708 File Offset: 0x00585908
 		public static IResetSelfPosComponent GetRootAsIResetSelfPosComponent(ByteBuffer _bb, IResetSelfPosComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026198 RID: 156056 RVA: 0x00540BD9 File Offset: 0x0053EDD9
+		// Token: 0x060286FA RID: 165626 RVA: 0x00587725 File Offset: 0x00585925
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026199 RID: 156057 RVA: 0x00540BE8 File Offset: 0x0053EDE8
+		// Token: 0x060286FB RID: 165627 RVA: 0x00587734 File Offset: 0x00585934
 		public IResetSelfPosComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A922 RID: 43298
-		// (get) Token: 0x0602619A RID: 156058 RVA: 0x00540BF8 File Offset: 0x0053EDF8
+		// Token: 0x1700B252 RID: 45650
+		// (get) Token: 0x060286FC RID: 165628 RVA: 0x00587744 File Offset: 0x00585944
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A923 RID: 43299
-		// (get) Token: 0x0602619B RID: 156059 RVA: 0x00540C38 File Offset: 0x0053EE38
+		// Token: 0x1700B253 RID: 45651
+		// (get) Token: 0x060286FD RID: 165629 RVA: 0x00587784 File Offset: 0x00585984
 		public float ResetRadius
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A924 RID: 43300
-		// (get) Token: 0x0602619C RID: 156060 RVA: 0x00540C78 File Offset: 0x0053EE78
+		// Token: 0x1700B254 RID: 45652
+		// (get) Token: 0x060286FE RID: 165630 RVA: 0x005877C4 File Offset: 0x005859C4
 		public bool IsDisableResetPosAfterThrow
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A925 RID: 43301
-		// (get) Token: 0x0602619D RID: 156061 RVA: 0x00540CB8 File Offset: 0x0053EEB8
+		// Token: 0x1700B255 RID: 45653
+		// (get) Token: 0x060286FF RID: 165631 RVA: 0x00587804 File Offset: 0x00585A04
 		public bool IsResetPosAfterThrow
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A926 RID: 43302
-		// (get) Token: 0x0602619E RID: 156062 RVA: 0x00540CF8 File Offset: 0x0053EEF8
+		// Token: 0x1700B256 RID: 45654
+		// (get) Token: 0x06028700 RID: 165632 RVA: 0x00587844 File Offset: 0x00585A44
 		public float ResetPosDelayTime
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A927 RID: 43303
-		// (get) Token: 0x0602619F RID: 156063 RVA: 0x00540D3C File Offset: 0x0053EF3C
+		// Token: 0x1700B257 RID: 45655
+		// (get) Token: 0x06028701 RID: 165633 RVA: 0x00587888 File Offset: 0x00585A88
 		public byte NullMask
 		{
 			get
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060261A0 RID: 156064 RVA: 0x00540D79 File Offset: 0x0053EF79
+		// Token: 0x06028702 RID: 165634 RVA: 0x005878C5 File Offset: 0x00585AC5
 		public static Offset<IResetSelfPosComponent> CreateIResetSelfPosComponent(FlatBufferBuilder builder, bool Disabled = false, float ResetRadius = 0f, bool IsDisableResetPosAfterThrow = false, bool IsResetPosAfterThrow = false, float ResetPosDelayTime = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -138,55 +138,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IResetSelfPosComponent.EndIResetSelfPosComponent(builder);
 		}
 
-		// Token: 0x060261A1 RID: 156065 RVA: 0x00540DB5 File Offset: 0x0053EFB5
+		// Token: 0x06028703 RID: 165635 RVA: 0x00587901 File Offset: 0x00585B01
 		public static void StartIResetSelfPosComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060261A2 RID: 156066 RVA: 0x00540DBE File Offset: 0x0053EFBE
+		// Token: 0x06028704 RID: 165636 RVA: 0x0058790A File Offset: 0x00585B0A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060261A3 RID: 156067 RVA: 0x00540DC9 File Offset: 0x0053EFC9
+		// Token: 0x06028705 RID: 165637 RVA: 0x00587915 File Offset: 0x00585B15
 		public static void AddResetRadius(FlatBufferBuilder builder, float resetRadius)
 		{
 			builder.AddFloat(1, resetRadius, 0.0);
 		}
 
-		// Token: 0x060261A4 RID: 156068 RVA: 0x00540DDC File Offset: 0x0053EFDC
+		// Token: 0x06028706 RID: 165638 RVA: 0x00587928 File Offset: 0x00585B28
 		public static void AddIsDisableResetPosAfterThrow(FlatBufferBuilder builder, bool isDisableResetPosAfterThrow)
 		{
 			builder.AddBool(2, isDisableResetPosAfterThrow, false);
 		}
 
-		// Token: 0x060261A5 RID: 156069 RVA: 0x00540DE7 File Offset: 0x0053EFE7
+		// Token: 0x06028707 RID: 165639 RVA: 0x00587933 File Offset: 0x00585B33
 		public static void AddIsResetPosAfterThrow(FlatBufferBuilder builder, bool isResetPosAfterThrow)
 		{
 			builder.AddBool(3, isResetPosAfterThrow, false);
 		}
 
-		// Token: 0x060261A6 RID: 156070 RVA: 0x00540DF2 File Offset: 0x0053EFF2
+		// Token: 0x06028708 RID: 165640 RVA: 0x0058793E File Offset: 0x00585B3E
 		public static void AddResetPosDelayTime(FlatBufferBuilder builder, float resetPosDelayTime)
 		{
 			builder.AddFloat(4, resetPosDelayTime, 0.0);
 		}
 
-		// Token: 0x060261A7 RID: 156071 RVA: 0x00540E05 File Offset: 0x0053F005
+		// Token: 0x06028709 RID: 165641 RVA: 0x00587951 File Offset: 0x00585B51
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060261A8 RID: 156072 RVA: 0x00540E10 File Offset: 0x0053F010
+		// Token: 0x0602870A RID: 165642 RVA: 0x0058795C File Offset: 0x00585B5C
 		public static Offset<IResetSelfPosComponent> EndIResetSelfPosComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IResetSelfPosComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060261A9 RID: 156073 RVA: 0x00540E20 File Offset: 0x0053F020
+		// Token: 0x0602870B RID: 165643 RVA: 0x0058796C File Offset: 0x00585B6C
 		public IResetSelfPosComponentT UnPack()
 		{
 			IResetSelfPosComponentT resetSelfPosComponentT = new IResetSelfPosComponentT();
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return resetSelfPosComponentT;
 		}
 
-		// Token: 0x060261AA RID: 156074 RVA: 0x00540E3C File Offset: 0x0053F03C
+		// Token: 0x0602870C RID: 165644 RVA: 0x00587988 File Offset: 0x00585B88
 		public void UnPackTo(IResetSelfPosComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060261AB RID: 156075 RVA: 0x00540E94 File Offset: 0x0053F094
+		// Token: 0x0602870D RID: 165645 RVA: 0x005879E0 File Offset: 0x00585BE0
 		public static Offset<IResetSelfPosComponent> Pack(FlatBufferBuilder builder, IResetSelfPosComponentT _o)
 		{
 			if (_o == null)
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IResetSelfPosComponent.CreateIResetSelfPosComponent(builder, _o.Disabled, _o.ResetRadius, _o.IsDisableResetPosAfterThrow, _o.IsResetPosAfterThrow, _o.ResetPosDelayTime, _o.NullMask);
 		}
 
-		// Token: 0x0400ED96 RID: 60822
+		// Token: 0x0400FA89 RID: 64137
 		private Table __p;
 	}
 }

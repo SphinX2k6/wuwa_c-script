@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200114F RID: 4431
+// Token: 0x02000603 RID: 1539
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSelectItemInfo>
 {
-	// Token: 0x06007448 RID: 29768 RVA: 0x0017C020 File Offset: 0x0017A220
+	// Token: 0x060047DF RID: 18399 RVA: 0x00184B6C File Offset: 0x00182D6C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -32,13 +32,13 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007449 RID: 29769 RVA: 0x0017C0CB File Offset: 0x0017A2CB
+	// Token: 0x060047E0 RID: 18400 RVA: 0x00184C17 File Offset: 0x00182E17
 	protected override void OnStart()
 	{
 		this.DeTermLayout = new GenericLayout<DeTermItem, int>(base.GetGridLayout(2), new Func<DeTermItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x0600744A RID: 29770 RVA: 0x0017C0F0 File Offset: 0x0017A2F0
+	// Token: 0x060047E1 RID: 18401 RVA: 0x00184C3C File Offset: 0x00182E3C
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerDeTermSelectItemInfo data, bool isSelected, int gridIndex)
 	{
@@ -79,7 +79,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		}, false);
 	}
 
-	// Token: 0x0600744B RID: 29771 RVA: 0x0017C172 File Offset: 0x0017A372
+	// Token: 0x060047E2 RID: 18402 RVA: 0x00184CBE File Offset: 0x00182EBE
 	[NullableContext(1)]
 	private DeTermItem InitItem()
 	{
@@ -90,7 +90,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		};
 	}
 
-	// Token: 0x0600744C RID: 29772 RVA: 0x0017C1A0 File Offset: 0x0017A3A0
+	// Token: 0x060047E3 RID: 18403 RVA: 0x00184CEC File Offset: 0x00182EEC
 	private void OnClickToggleCallBack(int deTerm, UUIExtendToggle toggle)
 	{
 		UUIExtendToggle currentToggle = this.CurrentToggle;
@@ -139,7 +139,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		onChangeSelectDeTerm(deTerm);
 	}
 
-	// Token: 0x0600744D RID: 29773 RVA: 0x0017C2A2 File Offset: 0x0017A4A2
+	// Token: 0x060047E4 RID: 18404 RVA: 0x00184DEE File Offset: 0x00182FEE
 	private bool CanClickCallBack()
 	{
 		bool flag = !this.IsNecessary;
@@ -150,7 +150,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		return flag;
 	}
 
-	// Token: 0x0600744E RID: 29774 RVA: 0x0017C2C4 File Offset: 0x0017A4C4
+	// Token: 0x060047E5 RID: 18405 RVA: 0x00184E10 File Offset: 0x00183010
 	public void PlayPositionSequence(int deTerm)
 	{
 		foreach (DeTermItem deTermItem in this.DeTermLayout.GetLayoutItemList())
@@ -162,7 +162,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		}
 	}
 
-	// Token: 0x0600744F RID: 29775 RVA: 0x0017C324 File Offset: 0x0017A524
+	// Token: 0x060047E6 RID: 18406 RVA: 0x00184E70 File Offset: 0x00183070
 	private void RefreshItemColor()
 	{
 		foreach (DeTermItem deTermItem in this.DeTermLayout.GetLayoutItemList())
@@ -173,7 +173,7 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		}
 	}
 
-	// Token: 0x06007450 RID: 29776 RVA: 0x0017C3AC File Offset: 0x0017A5AC
+	// Token: 0x060047E7 RID: 18407 RVA: 0x00184EF8 File Offset: 0x001830F8
 	public void ClearSelect()
 	{
 		this.CurrentToggle = null;
@@ -181,10 +181,10 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 		this.RefreshItemColor();
 	}
 
-	// Token: 0x0400358E RID: 13710
+	// Token: 0x04003627 RID: 13863
 	private Action<int> OnChangeSelectDeTerm;
 
-	// Token: 0x0400358F RID: 13711
+	// Token: 0x04003628 RID: 13864
 	[Nullable(new byte[]
 	{
 		2,
@@ -192,29 +192,29 @@ public class BabelTowerDeTermSelectItem : GridProxyAbstract<IBabelTowerDeTermSel
 	})]
 	private GenericLayout<DeTermItem, int> DeTermLayout;
 
-	// Token: 0x04003590 RID: 13712
+	// Token: 0x04003629 RID: 13865
 	private UUIExtendToggle CurrentToggle;
 
-	// Token: 0x04003591 RID: 13713
+	// Token: 0x0400362A RID: 13866
 	private bool IsNecessary;
 
-	// Token: 0x04003592 RID: 13714
+	// Token: 0x0400362B RID: 13867
 	private int CurrentDeTermId;
 
-	// Token: 0x02007700 RID: 30464
+	// Token: 0x0200688F RID: 26767
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027423 RID: 160803
+		// Token: 0x04022764 RID: 141156
 		public const int BgSprite = 0;
 
-		// Token: 0x04027424 RID: 160804
+		// Token: 0x04022765 RID: 141157
 		public const int NecessaryItem = 1;
 
-		// Token: 0x04027425 RID: 160805
+		// Token: 0x04022766 RID: 141158
 		public const int DeTermScrollView = 2;
 
-		// Token: 0x04027426 RID: 160806
+		// Token: 0x04022767 RID: 141159
 		public const int DeTermItem = 3;
 	}
 }

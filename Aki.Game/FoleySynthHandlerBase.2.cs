@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200301E RID: 12318
+// Token: 0x02002574 RID: 9588
 [NullableContext(1)]
 [Nullable(0)]
 public class FoleySynthHandlerBase<[Nullable(0)] T> : FoleySynthHandlerBase where T : FoleySynthModelConfig
 {
-	// Token: 0x0601A173 RID: 106867 RVA: 0x006D75BF File Offset: 0x006D57BF
+	// Token: 0x06017ABB RID: 96955 RVA: 0x006FF4C7 File Offset: 0x006FD6C7
 	[NullableContext(2)]
 	public FoleySynthHandlerBase(CharacterActorComponent actorComp, CharacterAkComponent akComp, int recordCount) : base(actorComp, akComp, recordCount)
 	{
 	}
 
-	// Token: 0x0601A174 RID: 106868 RVA: 0x006D75D8 File Offset: 0x006D57D8
+	// Token: 0x06017ABC RID: 96956 RVA: 0x006FF4E0 File Offset: 0x006FD6E0
 	public virtual void Init(IReadOnlyList<T> configs)
 	{
 		this.OnInit(configs);
@@ -40,12 +40,12 @@ public class FoleySynthHandlerBase<[Nullable(0)] T> : FoleySynthHandlerBase wher
 		}
 	}
 
-	// Token: 0x0601A175 RID: 106869 RVA: 0x006D76A4 File Offset: 0x006D58A4
+	// Token: 0x06017ABD RID: 96957 RVA: 0x006FF5AC File Offset: 0x006FD7AC
 	protected virtual void OnInit(IReadOnlyList<T> config)
 	{
 	}
 
-	// Token: 0x0601A176 RID: 106870 RVA: 0x006D76A8 File Offset: 0x006D58A8
+	// Token: 0x06017ABE RID: 96958 RVA: 0x006FF5B0 File Offset: 0x006FD7B0
 	protected override void PreCacheBoneLocation()
 	{
 		for (int i = 0; i < this.FoleySynthModelConfigs.Count; i++)
@@ -58,7 +58,7 @@ public class FoleySynthHandlerBase<[Nullable(0)] T> : FoleySynthHandlerBase wher
 		}
 	}
 
-	// Token: 0x0601A177 RID: 106871 RVA: 0x006D771C File Offset: 0x006D591C
+	// Token: 0x06017ABF RID: 96959 RVA: 0x006FF624 File Offset: 0x006FD824
 	protected override void CalBoneRecord(float deltaTime)
 	{
 		this.RecordIndex = (this.RecordIndex + 1) % base.RecordCount;
@@ -85,6 +85,6 @@ public class FoleySynthHandlerBase<[Nullable(0)] T> : FoleySynthHandlerBase wher
 		}
 	}
 
-	// Token: 0x0400C5D6 RID: 50646
+	// Token: 0x0400C9A3 RID: 51619
 	protected readonly List<T> FoleySynthModelConfigs = new List<T>();
 }

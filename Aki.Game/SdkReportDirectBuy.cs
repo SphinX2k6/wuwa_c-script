@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E39 RID: 3641
+// Token: 0x020002EE RID: 750
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkReportDirectBuy : SdkReportData, IStaticVariableResetter
 {
-	// Token: 0x0600578F RID: 22415 RVA: 0x000FC4E9 File Offset: 0x000FA6E9
+	// Token: 0x06002B1F RID: 11039 RVA: 0x00103D3D File Offset: 0x00101F3D
 	public SdkReportDirectBuy([Nullable(new byte[]
 	{
 		2,
@@ -18,14 +18,14 @@ public class SdkReportDirectBuy : SdkReportData, IStaticVariableResetter
 	{
 	}
 
-	// Token: 0x06005790 RID: 22416 RVA: 0x000FC4F2 File Offset: 0x000FA6F2
+	// Token: 0x06002B20 RID: 11040 RVA: 0x00103D46 File Offset: 0x00101F46
 	static SdkReportDirectBuy()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SdkReportDirectBuy.CreateStaticDefaultValue), new Action(SdkReportDirectBuy.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17000654 RID: 1620
-	// (get) Token: 0x06005791 RID: 22417 RVA: 0x000FC511 File Offset: 0x000FA711
+	// Token: 0x17000678 RID: 1656
+	// (get) Token: 0x06002B21 RID: 11041 RVA: 0x00103D65 File Offset: 0x00101F65
 	private static IReadOnlyDictionary<int, string> GlobalReportMap
 	{
 		get
@@ -34,13 +34,13 @@ public class SdkReportDirectBuy : SdkReportData, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005792 RID: 22418 RVA: 0x000FC518 File Offset: 0x000FA718
+	// Token: 0x06002B22 RID: 11042 RVA: 0x00103D6C File Offset: 0x00101F6C
 	public static bool IfNeedReport(int payId)
 	{
 		return payId == 42 || payId == 43 || payId == 44 || payId == 45;
 	}
 
-	// Token: 0x06005793 RID: 22419 RVA: 0x000FC531 File Offset: 0x000FA731
+	// Token: 0x06002B23 RID: 11043 RVA: 0x00103D85 File Offset: 0x00101F85
 	public override string GetEventName()
 	{
 		if (this.IfGlobalSdk)
@@ -50,7 +50,7 @@ public class SdkReportDirectBuy : SdkReportData, IStaticVariableResetter
 		return "";
 	}
 
-	// Token: 0x06005794 RID: 22420 RVA: 0x000FC556 File Offset: 0x000FA756
+	// Token: 0x06002B24 RID: 11044 RVA: 0x00103DAA File Offset: 0x00101FAA
 	public static void CreateStaticDefaultValue()
 	{
 		SdkReportDirectBuy._globalReportMap = new Dictionary<int, string>
@@ -74,16 +74,16 @@ public class SdkReportDirectBuy : SdkReportData, IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06005795 RID: 22421 RVA: 0x000FC596 File Offset: 0x000FA796
+	// Token: 0x06002B25 RID: 11045 RVA: 0x00103DEA File Offset: 0x00101FEA
 	public static void ResetStaticDefaultValue()
 	{
 		SdkReportDirectBuy._globalReportMap = null;
 	}
 
-	// Token: 0x0400286B RID: 10347
+	// Token: 0x04002904 RID: 10500
 	public int PayItemId;
 
-	// Token: 0x0400286C RID: 10348
+	// Token: 0x04002905 RID: 10501
 	[Nullable(new byte[]
 	{
 		2,

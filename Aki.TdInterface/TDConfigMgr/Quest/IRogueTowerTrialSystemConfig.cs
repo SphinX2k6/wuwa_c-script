@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010FA RID: 4346
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001228 RID: 4648
 	public class IRogueTowerTrialSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x0600624E RID: 25166 RVA: 0x000ECDC8 File Offset: 0x000EAFC8
+		// Token: 0x06006849 RID: 26697 RVA: 0x000F9F3C File Offset: 0x000F813C
 		private IRogueTowerTrialSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600624F RID: 25167 RVA: 0x000ECE00 File Offset: 0x000EB000
+		// Token: 0x0600684A RID: 26698 RVA: 0x000F9F74 File Offset: 0x000F8174
 		public static IRogueTowerTrialSystemConfig Create([Nullable(2)] IRogueTowerTrialSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006250 RID: 25168 RVA: 0x000ECE13 File Offset: 0x000EB013
+		// Token: 0x0600684B RID: 26699 RVA: 0x000F9F87 File Offset: 0x000F8187
 		public static IRogueTowerTrialSystemConfig CreateFromSetValue([Nullable(2)] IRogueTowerTrialSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006251 RID: 25169 RVA: 0x000ECE26 File Offset: 0x000EB026
+		// Token: 0x0600684C RID: 26700 RVA: 0x000F9F9A File Offset: 0x000F819A
 		public new IRogueTowerTrialSystemConfig_SetValue ToSetValue()
 		{
 			return new IRogueTowerTrialSystemConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002034 RID: 8244
-		// (get) Token: 0x06006252 RID: 25170 RVA: 0x000ECE45 File Offset: 0x000EB045
-		// (set) Token: 0x06006253 RID: 25171 RVA: 0x000ECE70 File Offset: 0x000EB070
+		// Token: 0x170021E7 RID: 8679
+		// (get) Token: 0x0600684D RID: 26701 RVA: 0x000F9FB9 File Offset: 0x000F81B9
+		// (set) Token: 0x0600684E RID: 26702 RVA: 0x000F9FE4 File Offset: 0x000F81E4
 		public override EEnableSystemType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002035 RID: 8245
-		// (get) Token: 0x06006254 RID: 25172 RVA: 0x000ECE80 File Offset: 0x000EB080
-		// (set) Token: 0x06006255 RID: 25173 RVA: 0x000ECF13 File Offset: 0x000EB113
+		// Token: 0x170021E8 RID: 8680
+		// (get) Token: 0x0600684F RID: 26703 RVA: 0x000F9FF4 File Offset: 0x000F81F4
+		// (set) Token: 0x06006850 RID: 26704 RVA: 0x000FA087 File Offset: 0x000F8287
 		public virtual List<IRogueTowerTrialSystemVar> Vars
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B0F RID: 15119
+		// Token: 0x04003E5D RID: 15965
 		[Nullable(2)]
 		protected new IRogueTowerTrialSystemConfig FbInstance;
 
-		// Token: 0x04003B10 RID: 15120
+		// Token: 0x04003E5E RID: 15966
 		[Nullable(2)]
 		protected new IRogueTowerTrialSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x04003B11 RID: 15121
+		// Token: 0x04003E5F RID: 15967
 		private List<IRogueTowerTrialSystemVar> _VarsCache;
 
-		// Token: 0x04003B12 RID: 15122
+		// Token: 0x04003E60 RID: 15968
 		private bool _VarsInited;
 	}
 }

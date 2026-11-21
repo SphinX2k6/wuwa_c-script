@@ -5,16 +5,16 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200204A RID: 8266
+// Token: 0x0200151D RID: 5405
 public class KingShipResultView : UiViewBase
 {
-	// Token: 0x060103D0 RID: 66512 RVA: 0x003F612E File Offset: 0x003F432E
+	// Token: 0x0600D838 RID: 55352 RVA: 0x00402726 File Offset: 0x00400926
 	[NullableContext(1)]
 	public KingShipResultView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060103D1 RID: 66513 RVA: 0x003F6138 File Offset: 0x003F4338
+	// Token: 0x0600D839 RID: 55353 RVA: 0x00402730 File Offset: 0x00400930
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class KingShipResultView : UiViewBase
 		};
 	}
 
-	// Token: 0x060103D2 RID: 66514 RVA: 0x003F6228 File Offset: 0x003F4428
+	// Token: 0x0600D83A RID: 55354 RVA: 0x00402820 File Offset: 0x00400A20
 	protected override void OnStart()
 	{
 		IKingShipResultViewData kingShipResultViewData = (IKingShipResultViewData)this.OpenParam;
@@ -50,7 +50,7 @@ public class KingShipResultView : UiViewBase
 		base.GetText(1).SetText(configTextByKey3, true);
 	}
 
-	// Token: 0x060103D3 RID: 66515 RVA: 0x003F62FC File Offset: 0x003F44FC
+	// Token: 0x0600D83B RID: 55355 RVA: 0x004028F4 File Offset: 0x00400AF4
 	private void OnClickMaskBtn()
 	{
 		if (this.IsSuccess)
@@ -69,7 +69,7 @@ public class KingShipResultView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060103D4 RID: 66516 RVA: 0x003F6367 File Offset: 0x003F4567
+	// Token: 0x0600D83C RID: 55356 RVA: 0x0040295F File Offset: 0x00400B5F
 	private void OnClickCloseBtn()
 	{
 		if (this.IsSuccess)
@@ -79,37 +79,37 @@ public class KingShipResultView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04007821 RID: 30753
+	// Token: 0x0400790A RID: 30986
 	private bool IsSuccess;
 
-	// Token: 0x04007822 RID: 30754
+	// Token: 0x0400790B RID: 30987
 	private int ReignsId;
 
-	// Token: 0x04007823 RID: 30755
+	// Token: 0x0400790C RID: 30988
 	private int NextReignsId;
 
-	// Token: 0x02008643 RID: 34371
+	// Token: 0x020077CA RID: 30666
 	private class EComponentDefine
 	{
-		// Token: 0x0402BB25 RID: 178981
+		// Token: 0x04026E34 RID: 159284
 		public const int TitleText = 0;
 
-		// Token: 0x0402BB26 RID: 178982
+		// Token: 0x04026E35 RID: 159285
 		public const int MainTitleText = 1;
 
-		// Token: 0x0402BB27 RID: 178983
+		// Token: 0x04026E36 RID: 159286
 		public const int StaticText = 2;
 
-		// Token: 0x0402BB28 RID: 178984
+		// Token: 0x04026E37 RID: 159287
 		public const int DesText = 3;
 
-		// Token: 0x0402BB29 RID: 178985
+		// Token: 0x04026E38 RID: 159288
 		public const int Static2Text = 4;
 
-		// Token: 0x0402BB2A RID: 178986
+		// Token: 0x04026E39 RID: 159289
 		public const int MaskBtn = 5;
 
-		// Token: 0x0402BB2B RID: 178987
+		// Token: 0x04026E3A RID: 159290
 		public const int CloseBtn = 6;
 	}
 }

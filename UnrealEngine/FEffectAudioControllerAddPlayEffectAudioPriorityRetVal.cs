@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001895 RID: 6293
+	// Token: 0x020003B8 RID: 952
 	public sealed class FEffectAudioControllerAddPlayEffectAudioPriorityRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060172C7 RID: 94919 RVA: 0x0021C9D7 File Offset: 0x0021ABD7
+		// Token: 0x06005D72 RID: 23922 RVA: 0x00083E73 File Offset: 0x00082073
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x060172C8 RID: 94920 RVA: 0x0021C9E3 File Offset: 0x0021ABE3
+		// Token: 0x06005D73 RID: 23923 RVA: 0x00083E7F File Offset: 0x0008207F
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectAudioControllerAddPlayEffectAudioPriorityRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectAudioControllerAddPlayEffectAudioPriorityRetVal._FunctionPtr;
 		}
 
-		// Token: 0x060172C9 RID: 94921 RVA: 0x0021CA06 File Offset: 0x0021AC06
+		// Token: 0x06005D74 RID: 23924 RVA: 0x00083EA2 File Offset: 0x000820A2
 		public FEffectAudioControllerAddPlayEffectAudioPriorityRetVal()
 		{
 		}
 
-		// Token: 0x060172CA RID: 94922 RVA: 0x0021CA0E File Offset: 0x0021AC0E
+		// Token: 0x06005D75 RID: 23925 RVA: 0x00083EAA File Offset: 0x000820AA
 		[NullableContext(2)]
 		public FEffectAudioControllerAddPlayEffectAudioPriorityRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060172CB RID: 94923 RVA: 0x0021CA18 File Offset: 0x0021AC18
+		// Token: 0x06005D76 RID: 23926 RVA: 0x00083EB4 File Offset: 0x000820B4
 		public FEffectAudioControllerAddPlayEffectAudioPriorityRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060172CC RID: 94924 RVA: 0x0021CA23 File Offset: 0x0021AC23
+		// Token: 0x06005D77 RID: 23927 RVA: 0x00083EBF File Offset: 0x000820BF
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<UEffectModelAudio, AActor, int, int, int>) ?? ((Func<UEffectModelAudio, AActor, int, int, int>)Delegate.CreateDelegate(typeof(Func<UEffectModelAudio, AActor, int, int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060172CD RID: 94925 RVA: 0x0021CA55 File Offset: 0x0021AC55
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06005D78 RID: 23928 RVA: 0x00083EF1 File Offset: 0x000820F1
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.RegisterId);
 		}
 
-		// Token: 0x060172CE RID: 94926 RVA: 0x0021CA90 File Offset: 0x0021AC90
+		// Token: 0x06005D79 RID: 23929 RVA: 0x00083F2C File Offset: 0x0008212C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int Execute(UEffectModelAudio EffectModel, AActor EffectActor, int EffectType, int Priority)
 		{
 			FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.__FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams* ptr = stackalloc FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.__FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.__FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams) & -16L;
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x060172CF RID: 94927 RVA: 0x0021CB08 File Offset: 0x0021AD08
+		// Token: 0x06005D7A RID: 23930 RVA: 0x00083FA4 File Offset: 0x000821A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<UEffectModelAudio, AActor, int, int, int> func = target as Func<UEffectModelAudio, AActor, int, int, int>;
@@ -102,47 +99,47 @@ namespace UnrealEngine
 			((FEffectAudioControllerAddPlayEffectAudioPriorityRetVal.__FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0400C925 RID: 51493
+		// Token: 0x040026F4 RID: 9972
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C926 RID: 51494
+		// Token: 0x040026F5 RID: 9973
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectAudioControllerAddPlayEffectAudioPriorityRetVal__DelegateSignature";
 
-		// Token: 0x0400C927 RID: 51495
+		// Token: 0x040026F6 RID: 9974
 		private static int RegisterId;
 
-		// Token: 0x02002F97 RID: 12183
+		// Token: 0x02000ABA RID: 2746
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams
+		private ref struct __FEffectAudioControllerAddPlayEffectAudioPriorityRetVal_DelegateParams
 		{
-			// Token: 0x04016B64 RID: 93028
+			// Token: 0x04005B21 RID: 23329
 			[FieldOffset(0)]
 			public IntPtr EffectModel;
 
-			// Token: 0x04016B65 RID: 93029
+			// Token: 0x04005B22 RID: 23330
 			[FieldOffset(8)]
 			public IntPtr EffectActor;
 
-			// Token: 0x04016B66 RID: 93030
+			// Token: 0x04005B23 RID: 23331
 			[FieldOffset(16)]
 			public int EffectType;
 
-			// Token: 0x04016B67 RID: 93031
+			// Token: 0x04005B24 RID: 23332
 			[FieldOffset(20)]
 			public int Priority;
 
-			// Token: 0x04016B68 RID: 93032
+			// Token: 0x04005B25 RID: 23333
 			[FieldOffset(24)]
 			public int __Result;
 		}
 
-		// Token: 0x02002F98 RID: 12184
+		// Token: 0x02000ABB RID: 2747
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B69 RID: 93033
+			// Token: 0x04005B26 RID: 23334
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

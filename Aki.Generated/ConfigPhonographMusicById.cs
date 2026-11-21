@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C5 RID: 1733
+	// Token: 0x020006DD RID: 1757
 	public class ConfigPhonographMusicById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060028AE RID: 10414 RVA: 0x0013F7C7 File Offset: 0x0013D9C7
+		// Token: 0x0600293E RID: 10558 RVA: 0x00146243 File Offset: 0x00144443
 		static ConfigPhonographMusicById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhonographMusicById.CreateStaticDefaultValue), new Action(ConfigPhonographMusicById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060028AF RID: 10415 RVA: 0x0013F7E8 File Offset: 0x0013D9E8
+		// Token: 0x0600293F RID: 10559 RVA: 0x00146264 File Offset: 0x00144464
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhonographMusicById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060028B0 RID: 10416 RVA: 0x0013F867 File Offset: 0x0013DA67
+		// Token: 0x06002940 RID: 10560 RVA: 0x001462E3 File Offset: 0x001444E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhonographMusicById.LogPair = null;
 			ConfigPhonographMusicById.HandleId = 0;
 		}
 
-		// Token: 0x060028B1 RID: 10417 RVA: 0x0013F875 File Offset: 0x0013DA75
+		// Token: 0x06002941 RID: 10561 RVA: 0x001462F1 File Offset: 0x001444F1
 		public static void Init()
 		{
 			ConfigPhonographMusicById.HandleId = ConfigCommon.InitDataStatement(ConfigPhonographMusicById.HandleId, "db_phonograph.db", "select BinData from `PhonographMusic` where Id=?");
 		}
 
-		// Token: 0x060028B2 RID: 10418 RVA: 0x0013F890 File Offset: 0x0013DA90
+		// Token: 0x06002942 RID: 10562 RVA: 0x0014630C File Offset: 0x0014450C
 		public static PhonographMusic? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhonographMusicById.HandleId, ConfigPhonographMusicById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhonographMusic?(rootAsPhonographMusic);
 		}
 
-		// Token: 0x04002F49 RID: 12105
+		// Token: 0x04002FF1 RID: 12273
 		private const string DB = "db_phonograph.db";
 
-		// Token: 0x04002F4A RID: 12106
+		// Token: 0x04002FF2 RID: 12274
 		private const string FILE = "l.留声机.xlsx";
 
-		// Token: 0x04002F4B RID: 12107
+		// Token: 0x04002FF3 RID: 12275
 		private const string TABLE = "PhonographMusic";
 
-		// Token: 0x04002F4C RID: 12108
+		// Token: 0x04002FF4 RID: 12276
 		private const string COMMAND = "select BinData from `PhonographMusic` where Id=?";
 
-		// Token: 0x04002F4D RID: 12109
+		// Token: 0x04002FF5 RID: 12277
 		private const string KEY_PREFIX = "PhonographMusicById";
 
-		// Token: 0x04002F4E RID: 12110
+		// Token: 0x04002FF6 RID: 12278
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F4F RID: 12111
+		// Token: 0x04002FF7 RID: 12279
 		private static int HandleId;
 	}
 }

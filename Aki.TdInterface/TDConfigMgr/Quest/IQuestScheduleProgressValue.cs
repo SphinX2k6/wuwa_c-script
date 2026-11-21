@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010AD RID: 4269
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011DB RID: 4571
 	public class IQuestScheduleProgressValue : IQuestScheduleType
 	{
-		// Token: 0x06006052 RID: 24658 RVA: 0x000E8F54 File Offset: 0x000E7154
+		// Token: 0x0600664B RID: 26187 RVA: 0x000F6074 File Offset: 0x000F4274
 		private IQuestScheduleProgressValue_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006053 RID: 24659 RVA: 0x000E8F8C File Offset: 0x000E718C
+		// Token: 0x0600664C RID: 26188 RVA: 0x000F60AC File Offset: 0x000F42AC
 		public static IQuestScheduleProgressValue Create([Nullable(2)] IQuestScheduleProgressValue instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006054 RID: 24660 RVA: 0x000E8F9F File Offset: 0x000E719F
+		// Token: 0x0600664D RID: 26189 RVA: 0x000F60BF File Offset: 0x000F42BF
 		public static IQuestScheduleProgressValue CreateFromSetValue([Nullable(2)] IQuestScheduleProgressValue_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006055 RID: 24661 RVA: 0x000E8FB2 File Offset: 0x000E71B2
+		// Token: 0x0600664E RID: 26190 RVA: 0x000F60D2 File Offset: 0x000F42D2
 		public new IQuestScheduleProgressValue_SetValue ToSetValue()
 		{
 			return new IQuestScheduleProgressValue_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FA9 RID: 8105
-		// (get) Token: 0x06006056 RID: 24662 RVA: 0x000E8FD1 File Offset: 0x000E71D1
-		// (set) Token: 0x06006057 RID: 24663 RVA: 0x000E8FFC File Offset: 0x000E71FC
+		// Token: 0x1700215B RID: 8539
+		// (get) Token: 0x0600664F RID: 26191 RVA: 0x000F60F1 File Offset: 0x000F42F1
+		// (set) Token: 0x06006650 RID: 26192 RVA: 0x000F611C File Offset: 0x000F431C
 		public override EQuestScheduleType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FAA RID: 8106
-		// (get) Token: 0x06006058 RID: 24664 RVA: 0x000E900A File Offset: 0x000E720A
-		// (set) Token: 0x06006059 RID: 24665 RVA: 0x000E9035 File Offset: 0x000E7235
+		// Token: 0x1700215C RID: 8540
+		// (get) Token: 0x06006651 RID: 26193 RVA: 0x000F612A File Offset: 0x000F432A
+		// (set) Token: 0x06006652 RID: 26194 RVA: 0x000F6155 File Offset: 0x000F4355
 		public virtual int TargetProgressEntity
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A10 RID: 14864
+		// Token: 0x04003D5D RID: 15709
 		[Nullable(2)]
 		protected new IQuestScheduleProgressValue FbInstance;
 
-		// Token: 0x04003A11 RID: 14865
+		// Token: 0x04003D5E RID: 15710
 		[Nullable(2)]
 		protected new IQuestScheduleProgressValue_SetValue PocoInterface;
 	}

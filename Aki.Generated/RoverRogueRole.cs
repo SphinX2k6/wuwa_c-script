@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001084 RID: 4228
+	// Token: 0x0200117F RID: 4479
 	public struct RoverRogueRole : IFlatbufferObject
 	{
-		// Token: 0x170034A1 RID: 13473
-		// (get) Token: 0x0600CEC4 RID: 52932 RVA: 0x003083BC File Offset: 0x003065BC
+		// Token: 0x170035AE RID: 13742
+		// (get) Token: 0x0600D697 RID: 54935 RVA: 0x00327A2C File Offset: 0x00325C2C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CEC5 RID: 52933 RVA: 0x003083C9 File Offset: 0x003065C9
+		// Token: 0x0600D698 RID: 54936 RVA: 0x00327A39 File Offset: 0x00325C39
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CEC6 RID: 52934 RVA: 0x003083D0 File Offset: 0x003065D0
+		// Token: 0x0600D699 RID: 54937 RVA: 0x00327A40 File Offset: 0x00325C40
 		public static RoverRogueRole GetRootAsRoverRogueRole(ByteBuffer _bb)
 		{
 			return RoverRogueRole.GetRootAsRoverRogueRole(_bb, default(RoverRogueRole));
 		}
 
-		// Token: 0x0600CEC7 RID: 52935 RVA: 0x003083EC File Offset: 0x003065EC
+		// Token: 0x0600D69A RID: 54938 RVA: 0x00327A5C File Offset: 0x00325C5C
 		public static RoverRogueRole GetRootAsRoverRogueRole(ByteBuffer _bb, RoverRogueRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CEC8 RID: 52936 RVA: 0x00308409 File Offset: 0x00306609
+		// Token: 0x0600D69B RID: 54939 RVA: 0x00327A79 File Offset: 0x00325C79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CEC9 RID: 52937 RVA: 0x00308418 File Offset: 0x00306618
+		// Token: 0x0600D69C RID: 54940 RVA: 0x00327A88 File Offset: 0x00325C88
 		public RoverRogueRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170034A2 RID: 13474
-		// (get) Token: 0x0600CECA RID: 52938 RVA: 0x00308428 File Offset: 0x00306628
+		// Token: 0x170035AF RID: 13743
+		// (get) Token: 0x0600D69D RID: 54941 RVA: 0x00327A98 File Offset: 0x00325C98
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034A3 RID: 13475
-		// (get) Token: 0x0600CECB RID: 52939 RVA: 0x00308464 File Offset: 0x00306664
+		// Token: 0x170035B0 RID: 13744
+		// (get) Token: 0x0600D69E RID: 54942 RVA: 0x00327AD4 File Offset: 0x00325CD4
 		public int ActivityId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034A4 RID: 13476
-		// (get) Token: 0x0600CECC RID: 52940 RVA: 0x003084A0 File Offset: 0x003066A0
+		// Token: 0x170035B1 RID: 13745
+		// (get) Token: 0x0600D69F RID: 54943 RVA: 0x00327B10 File Offset: 0x00325D10
 		public string RoleIcon
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CECD RID: 52941 RVA: 0x003084D7 File Offset: 0x003066D7
+		// Token: 0x0600D6A0 RID: 54944 RVA: 0x00327B47 File Offset: 0x00325D47
 		public Span<byte> GetRoleIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600CECE RID: 52942 RVA: 0x003084E6 File Offset: 0x003066E6
+		// Token: 0x0600D6A1 RID: 54945 RVA: 0x00327B56 File Offset: 0x00325D56
 		public byte[] GetRoleIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170034A5 RID: 13477
-		// (get) Token: 0x0600CECF RID: 52943 RVA: 0x00308500 File Offset: 0x00306700
+		// Token: 0x170035B2 RID: 13746
+		// (get) Token: 0x0600D6A2 RID: 54946 RVA: 0x00327B70 File Offset: 0x00325D70
 		public string Stand
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CED0 RID: 52944 RVA: 0x00308538 File Offset: 0x00306738
+		// Token: 0x0600D6A3 RID: 54947 RVA: 0x00327BA8 File Offset: 0x00325DA8
 		public Span<byte> GetStandBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600CED1 RID: 52945 RVA: 0x00308548 File Offset: 0x00306748
+		// Token: 0x0600D6A4 RID: 54948 RVA: 0x00327BB8 File Offset: 0x00325DB8
 		public byte[] GetStandArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600CED2 RID: 52946 RVA: 0x00308560 File Offset: 0x00306760
+		// Token: 0x0600D6A5 RID: 54949 RVA: 0x00327BD0 File Offset: 0x00325DD0
 		public string Stands(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -145,8 +145,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170034A6 RID: 13478
-		// (get) Token: 0x0600CED3 RID: 52947 RVA: 0x0030859C File Offset: 0x0030679C
+		// Token: 0x170035B3 RID: 13747
+		// (get) Token: 0x0600D6A6 RID: 54950 RVA: 0x00327C0C File Offset: 0x00325E0C
 		public int StandsLength
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170034A7 RID: 13479
-		// (get) Token: 0x0600CED4 RID: 52948 RVA: 0x003085C8 File Offset: 0x003067C8
+		// Token: 0x170035B4 RID: 13748
+		// (get) Token: 0x0600D6A7 RID: 54951 RVA: 0x00327C38 File Offset: 0x00325E38
 		public int RoleSkinId
 		{
 			get
@@ -175,24 +175,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CED5 RID: 52949 RVA: 0x00308605 File Offset: 0x00306805
+		// Token: 0x0600D6A8 RID: 54952 RVA: 0x00327C75 File Offset: 0x00325E75
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用StandsIter()或GetStandsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Stands()
+		public string[] Stands()
 		{
 			return this.StandsIter().ToArray<string>();
 		}
 
-		// Token: 0x0600CED6 RID: 52950 RVA: 0x00308612 File Offset: 0x00306812
+		// Token: 0x0600D6A9 RID: 54953 RVA: 0x00327C82 File Offset: 0x00325E82
 		[NullableContext(1)]
-		public readonly IEnumerable<string> StandsIter()
+		public IEnumerable<string> StandsIter()
 		{
 			RoverRogueRole.<StandsIter>d__26 <StandsIter>d__ = new RoverRogueRole.<StandsIter>d__26(-2);
 			<StandsIter>d__.<>3__<>4__this = this;
 			return <StandsIter>d__;
 		}
 
-		// Token: 0x04005190 RID: 20880
+		// Token: 0x0400578F RID: 22415
 		private Table __p;
 	}
 }

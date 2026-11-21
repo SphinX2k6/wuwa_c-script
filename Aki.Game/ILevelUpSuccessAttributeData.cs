@@ -2,53 +2,53 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200288C RID: 10380
+// Token: 0x02001E07 RID: 7687
 [NullableContext(2)]
 public interface ILevelUpSuccessAttributeData
 {
-	// Token: 0x17001CAB RID: 7339
-	// (get) Token: 0x060155DA RID: 87514
-	// (set) Token: 0x060155DB RID: 87515
+	// Token: 0x17001D03 RID: 7427
+	// (get) Token: 0x06012FD8 RID: 77784
+	// (set) Token: 0x06012FD9 RID: 77785
 	string Title { get; set; }
 
-	// Token: 0x17001CAC RID: 7340
-	// (get) Token: 0x060155DC RID: 87516
-	// (set) Token: 0x060155DD RID: 87517
+	// Token: 0x17001D04 RID: 7428
+	// (get) Token: 0x06012FDA RID: 77786
+	// (set) Token: 0x06012FDB RID: 77787
 	string AudioId { get; set; }
 
-	// Token: 0x17001CAD RID: 7341
-	// (get) Token: 0x060155DE RID: 87518
-	// (set) Token: 0x060155DF RID: 87519
+	// Token: 0x17001D05 RID: 7429
+	// (get) Token: 0x06012FDC RID: 77788
+	// (set) Token: 0x06012FDD RID: 77789
 	ILevelInfo LevelInfo { get; set; }
 
-	// Token: 0x17001CAE RID: 7342
-	// (get) Token: 0x060155E0 RID: 87520
-	// (set) Token: 0x060155E1 RID: 87521
+	// Token: 0x17001D06 RID: 7430
+	// (get) Token: 0x06012FDE RID: 77790
+	// (set) Token: 0x06012FDF RID: 77791
 	[Nullable(1)]
 	List<IAttributeInfo> AttributeInfo { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17001CAF RID: 7343
-	// (get) Token: 0x060155E2 RID: 87522
-	// (set) Token: 0x060155E3 RID: 87523
+	// Token: 0x17001D07 RID: 7431
+	// (get) Token: 0x06012FE0 RID: 77792
+	// (set) Token: 0x06012FE1 RID: 77793
 	bool? IsShowArrow { get; set; }
 
-	// Token: 0x17001CB0 RID: 7344
-	// (get) Token: 0x060155E4 RID: 87524
-	// (set) Token: 0x060155E5 RID: 87525
+	// Token: 0x17001D08 RID: 7432
+	// (get) Token: 0x06012FE2 RID: 77794
+	// (set) Token: 0x06012FE3 RID: 77795
 	string ClickText { get; set; }
 
-	// Token: 0x17001CB1 RID: 7345
-	// (get) Token: 0x060155E6 RID: 87526
-	// (set) Token: 0x060155E7 RID: 87527
+	// Token: 0x17001D09 RID: 7433
+	// (get) Token: 0x06012FE4 RID: 77796
+	// (set) Token: 0x06012FE5 RID: 77797
 	Action ClickFunction { get; set; }
 
-	// Token: 0x17001CB2 RID: 7346
-	// (get) Token: 0x060155E8 RID: 87528
-	// (set) Token: 0x060155E9 RID: 87529
+	// Token: 0x17001D0A RID: 7434
+	// (get) Token: 0x06012FE6 RID: 77798
+	// (set) Token: 0x06012FE7 RID: 77799
 	bool? WiderScrollView { get; set; }
 
-	// Token: 0x17001CB3 RID: 7347
-	// (get) Token: 0x060155EA RID: 87530
-	// (set) Token: 0x060155EB RID: 87531
+	// Token: 0x17001D0B RID: 7435
+	// (get) Token: 0x06012FE8 RID: 77800
+	// (set) Token: 0x06012FE9 RID: 77801
 	IStrengthUpgradeData StrengthUpgradeData { get; set; }
 }

@@ -12,7 +12,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Track_Internal(string eventName, string properties, int index = 0);
 
-		// Token: 0x06000200 RID: 512 RVA: 0x0000B27E File Offset: 0x0000947E
+		// Token: 0x06000200 RID: 512 RVA: 0x0000B2B6 File Offset: 0x000094B6
 		public static bool Track(string eventName, string properties, int index = 0)
 		{
 			return FThinkingAnalyticsForCSharp.Track_Internal(eventName, properties, index);
@@ -22,7 +22,7 @@ namespace CSharpScript.Typing
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Flush_Internal(int index = 0);
 
-		// Token: 0x06000202 RID: 514 RVA: 0x0000B288 File Offset: 0x00009488
+		// Token: 0x06000202 RID: 514 RVA: 0x0000B2C0 File Offset: 0x000094C0
 		public static void Flush(int index = 0)
 		{
 			FThinkingAnalyticsForCSharp.Flush_Internal(index);

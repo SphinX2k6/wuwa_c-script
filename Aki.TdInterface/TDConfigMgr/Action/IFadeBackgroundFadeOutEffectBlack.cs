@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A49 RID: 6729
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BDE RID: 7134
 	[JsonConverter(typeof(IFadeBackgroundFadeOutEffectBlackConverter))]
 	public class IFadeBackgroundFadeOutEffectBlack : IFadeBackgroundFadeOutEffectTypeBase
 	{
-		// Token: 0x0600900A RID: 36874 RVA: 0x0014FF00 File Offset: 0x0014E100
+		// Token: 0x06009774 RID: 38772 RVA: 0x0015FE2C File Offset: 0x0015E02C
 		private IFadeBackgroundFadeOutEffectBlack_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600900B RID: 36875 RVA: 0x0014FF38 File Offset: 0x0014E138
+		// Token: 0x06009775 RID: 38773 RVA: 0x0015FE64 File Offset: 0x0015E064
 		public static IFadeBackgroundFadeOutEffectBlack Create([Nullable(2)] IFadeBackgroundFadeOutEffectBlack instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600900C RID: 36876 RVA: 0x0014FF4B File Offset: 0x0014E14B
+		// Token: 0x06009776 RID: 38774 RVA: 0x0015FE77 File Offset: 0x0015E077
 		public static IFadeBackgroundFadeOutEffectBlack CreateFromSetValue([Nullable(2)] IFadeBackgroundFadeOutEffectBlack_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600900D RID: 36877 RVA: 0x0014FF5E File Offset: 0x0014E15E
+		// Token: 0x06009777 RID: 38775 RVA: 0x0015FE8A File Offset: 0x0015E08A
 		public new IFadeBackgroundFadeOutEffectBlack_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundFadeOutEffectBlack_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DED RID: 11757
-		// (get) Token: 0x0600900E RID: 36878 RVA: 0x0014FF95 File Offset: 0x0014E195
-		// (set) Token: 0x0600900F RID: 36879 RVA: 0x0014FFC0 File Offset: 0x0014E1C0
+		// Token: 0x17002FFA RID: 12282
+		// (get) Token: 0x06009778 RID: 38776 RVA: 0x0015FEC1 File Offset: 0x0015E0C1
+		// (set) Token: 0x06009779 RID: 38777 RVA: 0x0015FEEC File Offset: 0x0015E0EC
 		public override EFadeBackgroundFadeOutEffectType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DEE RID: 11758
-		// (get) Token: 0x06009010 RID: 36880 RVA: 0x0014FFCE File Offset: 0x0014E1CE
-		// (set) Token: 0x06009011 RID: 36881 RVA: 0x0014FFF9 File Offset: 0x0014E1F9
+		// Token: 0x17002FFB RID: 12283
+		// (get) Token: 0x0600977A RID: 38778 RVA: 0x0015FEFA File Offset: 0x0015E0FA
+		// (set) Token: 0x0600977B RID: 38779 RVA: 0x0015FF25 File Offset: 0x0015E125
 		public virtual EFadeInScreenShowType FadeColor
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DEF RID: 11759
-		// (get) Token: 0x06009012 RID: 36882 RVA: 0x00150008 File Offset: 0x0014E208
-		// (set) Token: 0x06009013 RID: 36883 RVA: 0x00150042 File Offset: 0x0014E242
+		// Token: 0x17002FFC RID: 12284
+		// (get) Token: 0x0600977C RID: 38780 RVA: 0x0015FF34 File Offset: 0x0015E134
+		// (set) Token: 0x0600977D RID: 38781 RVA: 0x0015FF6E File Offset: 0x0015E16E
 		public virtual float? FadeInTime
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DF0 RID: 11760
-		// (get) Token: 0x06009014 RID: 36884 RVA: 0x00150050 File Offset: 0x0014E250
-		// (set) Token: 0x06009015 RID: 36885 RVA: 0x0015008A File Offset: 0x0014E28A
+		// Token: 0x17002FFD RID: 12285
+		// (get) Token: 0x0600977E RID: 38782 RVA: 0x0015FF7C File Offset: 0x0015E17C
+		// (set) Token: 0x0600977F RID: 38783 RVA: 0x0015FFB6 File Offset: 0x0015E1B6
 		public virtual float? FadeOutTime
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040058FE RID: 22782
+		// Token: 0x04005D63 RID: 23907
 		[Nullable(2)]
 		protected new IFadeBackgroundFadeOutEffectBlack FbInstance;
 
-		// Token: 0x040058FF RID: 22783
+		// Token: 0x04005D64 RID: 23908
 		[Nullable(2)]
 		protected new IFadeBackgroundFadeOutEffectBlack_SetValue PocoInterface;
 	}

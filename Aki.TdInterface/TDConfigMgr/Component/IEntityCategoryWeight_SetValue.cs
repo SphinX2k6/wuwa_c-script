@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000318 RID: 792
+	// Token: 0x0200035F RID: 863
 	public class IEntityCategoryWeight_SetValue
 	{
-		// Token: 0x04000D54 RID: 3412
-		[Nullable(1)]
+		// Token: 0x04000E3F RID: 3647
 		public IStaticEntitiyMatch EntitiyMatch;
 
-		// Token: 0x04000D55 RID: 3413
+		// Token: 0x04000E40 RID: 3648
 		public int Weight;
 	}
 }

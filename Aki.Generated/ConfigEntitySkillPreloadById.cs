@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000280 RID: 640
+	// Token: 0x02000294 RID: 660
 	public class ConfigEntitySkillPreloadById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F05 RID: 3845 RVA: 0x000AE553 File Offset: 0x000AC753
+		// Token: 0x06000F7D RID: 3965 RVA: 0x000B4817 File Offset: 0x000B2A17
 		static ConfigEntitySkillPreloadById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntitySkillPreloadById.CreateStaticDefaultValue), new Action(ConfigEntitySkillPreloadById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F06 RID: 3846 RVA: 0x000AE574 File Offset: 0x000AC774
+		// Token: 0x06000F7E RID: 3966 RVA: 0x000B4838 File Offset: 0x000B2A38
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntitySkillPreloadById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F07 RID: 3847 RVA: 0x000AE5F3 File Offset: 0x000AC7F3
+		// Token: 0x06000F7F RID: 3967 RVA: 0x000B48B7 File Offset: 0x000B2AB7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntitySkillPreloadById.LogPair = null;
 			ConfigEntitySkillPreloadById.HandleId = 0;
 		}
 
-		// Token: 0x06000F08 RID: 3848 RVA: 0x000AE601 File Offset: 0x000AC801
+		// Token: 0x06000F80 RID: 3968 RVA: 0x000B48C5 File Offset: 0x000B2AC5
 		public static void Init()
 		{
 			ConfigEntitySkillPreloadById.HandleId = ConfigCommon.InitDataStatement(ConfigEntitySkillPreloadById.HandleId, "db_entity_skill_preload.db", "select BinData from `EntitySkillPreload` where Id=?");
 		}
 
-		// Token: 0x06000F09 RID: 3849 RVA: 0x000AE61C File Offset: 0x000AC81C
+		// Token: 0x06000F81 RID: 3969 RVA: 0x000B48E0 File Offset: 0x000B2AE0
 		public static EntitySkillPreload? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntitySkillPreloadById.HandleId, ConfigEntitySkillPreloadById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EntitySkillPreload?(rootAsEntitySkillPreload);
 		}
 
-		// Token: 0x04001164 RID: 4452
+		// Token: 0x040011F0 RID: 4592
 		private const string DB = "db_entity_skill_preload.db";
 
-		// Token: 0x04001165 RID: 4453
+		// Token: 0x040011F1 RID: 4593
 		private const string FILE = "Preload/EntitySkillPreload.csv";
 
-		// Token: 0x04001166 RID: 4454
+		// Token: 0x040011F2 RID: 4594
 		private const string TABLE = "EntitySkillPreload";
 
-		// Token: 0x04001167 RID: 4455
+		// Token: 0x040011F3 RID: 4595
 		private const string COMMAND = "select BinData from `EntitySkillPreload` where Id=?";
 
-		// Token: 0x04001168 RID: 4456
+		// Token: 0x040011F4 RID: 4596
 		private const string KEY_PREFIX = "EntitySkillPreloadById";
 
-		// Token: 0x04001169 RID: 4457
+		// Token: 0x040011F5 RID: 4597
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400116A RID: 4458
+		// Token: 0x040011F6 RID: 4598
 		private static int HandleId;
 	}
 }

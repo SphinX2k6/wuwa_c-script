@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200769B RID: 30363
+	// Token: 0x02007EA6 RID: 32422
 	public struct TCsvTeleportTransitionData : IFlatbufferObject
 	{
-		// Token: 0x1700E5FE RID: 58878
-		// (get) Token: 0x060373EE RID: 226286 RVA: 0x0077C978 File Offset: 0x0077AB78
+		// Token: 0x1700F23A RID: 62010
+		// (get) Token: 0x0603A891 RID: 239761 RVA: 0x007E0ACC File Offset: 0x007DECCC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060373EF RID: 226287 RVA: 0x0077C985 File Offset: 0x0077AB85
+		// Token: 0x0603A892 RID: 239762 RVA: 0x007E0AD9 File Offset: 0x007DECD9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060373F0 RID: 226288 RVA: 0x0077C98C File Offset: 0x0077AB8C
+		// Token: 0x0603A893 RID: 239763 RVA: 0x007E0AE0 File Offset: 0x007DECE0
 		public static TCsvTeleportTransitionData GetRootAsTCsvTeleportTransitionData(ByteBuffer _bb)
 		{
 			return TCsvTeleportTransitionData.GetRootAsTCsvTeleportTransitionData(_bb, default(TCsvTeleportTransitionData));
 		}
 
-		// Token: 0x060373F1 RID: 226289 RVA: 0x0077C9A8 File Offset: 0x0077ABA8
+		// Token: 0x0603A894 RID: 239764 RVA: 0x007E0AFC File Offset: 0x007DECFC
 		public static TCsvTeleportTransitionData GetRootAsTCsvTeleportTransitionData(ByteBuffer _bb, TCsvTeleportTransitionData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060373F2 RID: 226290 RVA: 0x0077C9C5 File Offset: 0x0077ABC5
+		// Token: 0x0603A895 RID: 239765 RVA: 0x007E0B19 File Offset: 0x007DED19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060373F3 RID: 226291 RVA: 0x0077C9D4 File Offset: 0x0077ABD4
+		// Token: 0x0603A896 RID: 239766 RVA: 0x007E0B28 File Offset: 0x007DED28
 		public TCsvTeleportTransitionData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E5FF RID: 58879
-		// (get) Token: 0x060373F4 RID: 226292 RVA: 0x0077C9E4 File Offset: 0x0077ABE4
+		// Token: 0x1700F23B RID: 62011
+		// (get) Token: 0x0603A897 RID: 239767 RVA: 0x007E0B38 File Offset: 0x007DED38
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E600 RID: 58880
-		// (get) Token: 0x060373F5 RID: 226293 RVA: 0x0077CA20 File Offset: 0x0077AC20
+		// Token: 0x1700F23C RID: 62012
+		// (get) Token: 0x0603A898 RID: 239768 RVA: 0x007E0B74 File Offset: 0x007DED74
 		public ITeleportTransitionType_Union DataType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060373F6 RID: 226294 RVA: 0x0077CA5C File Offset: 0x0077AC5C
+		// Token: 0x0603A899 RID: 239769 RVA: 0x007E0BB0 File Offset: 0x007DEDB0
 		public TTable? Data<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,79 +88,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060373F7 RID: 226295 RVA: 0x0077CAA0 File Offset: 0x0077ACA0
+		// Token: 0x0603A89A RID: 239770 RVA: 0x007E0BF4 File Offset: 0x007DEDF4
 		public ITeleportTransitionType DataAsITeleportTransitionType()
 		{
 			return this.Data<ITeleportTransitionType>().Value;
 		}
 
-		// Token: 0x060373F8 RID: 226296 RVA: 0x0077CABC File Offset: 0x0077ACBC
+		// Token: 0x0603A89B RID: 239771 RVA: 0x007E0C10 File Offset: 0x007DEE10
 		public ITeleportTransitionWithMp4 DataAsITeleportTransitionWithMp4()
 		{
 			return this.Data<ITeleportTransitionWithMp4>().Value;
 		}
 
-		// Token: 0x060373F9 RID: 226297 RVA: 0x0077CAD8 File Offset: 0x0077ACD8
+		// Token: 0x0603A89C RID: 239772 RVA: 0x007E0C2C File Offset: 0x007DEE2C
 		public ITeleportTransitionWithEffect DataAsITeleportTransitionWithEffect()
 		{
 			return this.Data<ITeleportTransitionWithEffect>().Value;
 		}
 
-		// Token: 0x060373FA RID: 226298 RVA: 0x0077CAF4 File Offset: 0x0077ACF4
+		// Token: 0x0603A89D RID: 239773 RVA: 0x007E0C48 File Offset: 0x007DEE48
 		public ITeleportTransitionWithCenterText DataAsITeleportTransitionWithCenterText()
 		{
 			return this.Data<ITeleportTransitionWithCenterText>().Value;
 		}
 
-		// Token: 0x060373FB RID: 226299 RVA: 0x0077CB10 File Offset: 0x0077AD10
+		// Token: 0x0603A89E RID: 239774 RVA: 0x007E0C64 File Offset: 0x007DEE64
 		public ITeleportTransitionWithFadeInScreen DataAsITeleportTransitionWithFadeInScreen()
 		{
 			return this.Data<ITeleportTransitionWithFadeInScreen>().Value;
 		}
 
-		// Token: 0x060373FC RID: 226300 RVA: 0x0077CB2C File Offset: 0x0077AD2C
+		// Token: 0x0603A89F RID: 239775 RVA: 0x007E0C80 File Offset: 0x007DEE80
 		public ITeleportTransitionInDigitalScreen DataAsITeleportTransitionInDigitalScreen()
 		{
 			return this.Data<ITeleportTransitionInDigitalScreen>().Value;
 		}
 
-		// Token: 0x060373FD RID: 226301 RVA: 0x0077CB48 File Offset: 0x0077AD48
+		// Token: 0x0603A8A0 RID: 239776 RVA: 0x007E0C9C File Offset: 0x007DEE9C
 		public ITeleportTransitionWithCustomLoading DataAsITeleportTransitionWithCustomLoading()
 		{
 			return this.Data<ITeleportTransitionWithCustomLoading>().Value;
 		}
 
-		// Token: 0x060373FE RID: 226302 RVA: 0x0077CB64 File Offset: 0x0077AD64
+		// Token: 0x0603A8A1 RID: 239777 RVA: 0x007E0CB8 File Offset: 0x007DEEB8
 		public ITeleportTransitionWithSpecialCustomLoading DataAsITeleportTransitionWithSpecialCustomLoading()
 		{
 			return this.Data<ITeleportTransitionWithSpecialCustomLoading>().Value;
 		}
 
-		// Token: 0x060373FF RID: 226303 RVA: 0x0077CB80 File Offset: 0x0077AD80
+		// Token: 0x0603A8A2 RID: 239778 RVA: 0x007E0CD4 File Offset: 0x007DEED4
 		public ITeleportTransitionWithPlayFlow DataAsITeleportTransitionWithPlayFlow()
 		{
 			return this.Data<ITeleportTransitionWithPlayFlow>().Value;
 		}
 
-		// Token: 0x06037400 RID: 226304 RVA: 0x0077CB9C File Offset: 0x0077AD9C
+		// Token: 0x0603A8A3 RID: 239779 RVA: 0x007E0CF0 File Offset: 0x007DEEF0
 		public ITeleportTransitionWithCustomScreen DataAsITeleportTransitionWithCustomScreen()
 		{
 			return this.Data<ITeleportTransitionWithCustomScreen>().Value;
 		}
 
-		// Token: 0x06037401 RID: 226305 RVA: 0x0077CBB8 File Offset: 0x0077ADB8
+		// Token: 0x0603A8A4 RID: 239780 RVA: 0x007E0D0C File Offset: 0x007DEF0C
 		public ITeleportTransitionInSeamlessType DataAsITeleportTransitionInSeamlessType()
 		{
 			return this.Data<ITeleportTransitionInSeamlessType>().Value;
 		}
 
-		// Token: 0x06037402 RID: 226306 RVA: 0x0077CBD4 File Offset: 0x0077ADD4
+		// Token: 0x0603A8A5 RID: 239781 RVA: 0x007E0D28 File Offset: 0x007DEF28
 		public ITeleportTransitionWithCharacterDisplay DataAsITeleportTransitionWithCharacterDisplay()
 		{
 			return this.Data<ITeleportTransitionWithCharacterDisplay>().Value;
 		}
 
-		// Token: 0x06037403 RID: 226307 RVA: 0x0077CBEF File Offset: 0x0077ADEF
+		// Token: 0x0603A8A6 RID: 239782 RVA: 0x007E0D43 File Offset: 0x007DEF43
 		public static Offset<TCsvTeleportTransitionData> CreateTCsvTeleportTransitionData(FlatBufferBuilder builder, int Id = 0, ITeleportTransitionType_Union Data_type = ITeleportTransitionType_Union.NONE, int DataOffset = 0)
 		{
 			builder.StartTable(3);
@@ -170,37 +170,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return TCsvTeleportTransitionData.EndTCsvTeleportTransitionData(builder);
 		}
 
-		// Token: 0x06037404 RID: 226308 RVA: 0x0077CC13 File Offset: 0x0077AE13
+		// Token: 0x0603A8A7 RID: 239783 RVA: 0x007E0D67 File Offset: 0x007DEF67
 		public static void StartTCsvTeleportTransitionData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06037405 RID: 226309 RVA: 0x0077CC1C File Offset: 0x0077AE1C
+		// Token: 0x0603A8A8 RID: 239784 RVA: 0x007E0D70 File Offset: 0x007DEF70
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x06037406 RID: 226310 RVA: 0x0077CC27 File Offset: 0x0077AE27
+		// Token: 0x0603A8A9 RID: 239785 RVA: 0x007E0D7B File Offset: 0x007DEF7B
 		public static void AddDataType(FlatBufferBuilder builder, ITeleportTransitionType_Union dataType)
 		{
 			builder.AddByte(1, (byte)dataType, 0);
 		}
 
-		// Token: 0x06037407 RID: 226311 RVA: 0x0077CC32 File Offset: 0x0077AE32
+		// Token: 0x0603A8AA RID: 239786 RVA: 0x007E0D86 File Offset: 0x007DEF86
 		public static void AddData(FlatBufferBuilder builder, int dataOffset)
 		{
 			builder.AddOffset(2, dataOffset, 0);
 		}
 
-		// Token: 0x06037408 RID: 226312 RVA: 0x0077CC3D File Offset: 0x0077AE3D
+		// Token: 0x0603A8AB RID: 239787 RVA: 0x007E0D91 File Offset: 0x007DEF91
 		public static Offset<TCsvTeleportTransitionData> EndTCsvTeleportTransitionData(FlatBufferBuilder builder)
 		{
 			return new Offset<TCsvTeleportTransitionData>(builder.EndTable());
 		}
 
-		// Token: 0x06037409 RID: 226313 RVA: 0x0077CC4C File Offset: 0x0077AE4C
+		// Token: 0x0603A8AC RID: 239788 RVA: 0x007E0DA0 File Offset: 0x007DEFA0
 		public TCsvTeleportTransitionDataT UnPack()
 		{
 			TCsvTeleportTransitionDataT tcsvTeleportTransitionDataT = new TCsvTeleportTransitionDataT();
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return tcsvTeleportTransitionDataT;
 		}
 
-		// Token: 0x0603740A RID: 226314 RVA: 0x0077CC68 File Offset: 0x0077AE68
+		// Token: 0x0603A8AD RID: 239789 RVA: 0x007E0DBC File Offset: 0x007DEFBC
 		public void UnPackTo(TCsvTeleportTransitionDataT _o)
 		{
 			_o.Id = this.Id;
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603740B RID: 226315 RVA: 0x0077CF78 File Offset: 0x0077B178
+		// Token: 0x0603A8AE RID: 239790 RVA: 0x007E10CC File Offset: 0x007DF2CC
 		public static Offset<TCsvTeleportTransitionData> Pack(FlatBufferBuilder builder, TCsvTeleportTransitionDataT _o)
 		{
 			if (_o == null)
@@ -269,7 +269,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return TCsvTeleportTransitionData.CreateTCsvTeleportTransitionData(builder, _o.Id, data_type, dataOffset);
 		}
 
-		// Token: 0x040126C7 RID: 75463
+		// Token: 0x04013710 RID: 79632
 		private Table __p;
 	}
 }

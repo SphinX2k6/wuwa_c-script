@@ -1,38 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
 using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018EA RID: 6378
+	// Token: 0x020003F1 RID: 1009
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroLevelPlayFlowerPollutionComponent")]
 	[UnrealStructLayout(640, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 640)]
 	public class UKuroLevelPlayFlowerPollutionComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017A64 RID: 96868 RVA: 0x0022A8FA File Offset: 0x00228AFA
+		// Token: 0x0600633D RID: 25405 RVA: 0x0008DE70 File Offset: 0x0008C070
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroLevelPlayFlowerPollutionComponent._ClassPtr;
 		}
 
-		// Token: 0x06017A65 RID: 96869 RVA: 0x0022A908 File Offset: 0x00228B08
+		// Token: 0x0600633E RID: 25406 RVA: 0x0008DE7C File Offset: 0x0008C07C
 		public UKuroLevelPlayFlowerPollutionComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroLevelPlayFlowerPollutionComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017A66 RID: 96870 RVA: 0x0022A930 File Offset: 0x00228B30
+		// Token: 0x0600633F RID: 25407 RVA: 0x0008DEA4 File Offset: 0x0008C0A4
 		public UKuroLevelPlayFlowerPollutionComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroLevelPlayFlowerPollutionComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005F4F RID: 24399
-		// (get) Token: 0x06017A67 RID: 96871 RVA: 0x0022A964 File Offset: 0x00228B64
-		// (set) Token: 0x06017A68 RID: 96872 RVA: 0x0022A99D File Offset: 0x00228B9D
+		// Token: 0x170013FC RID: 5116
+		// (get) Token: 0x06006340 RID: 25408 RVA: 0x0008DED8 File Offset: 0x0008C0D8
+		// (set) Token: 0x06006341 RID: 25409 RVA: 0x0008DF11 File Offset: 0x0008C111
 		public TArray<int> ObstaclePbDataIds
 		{
 			get
@@ -51,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F50 RID: 24400
-		// (get) Token: 0x06017A69 RID: 96873 RVA: 0x0022A9AC File Offset: 0x00228BAC
-		// (set) Token: 0x06017A6A RID: 96874 RVA: 0x0022A9E5 File Offset: 0x00228BE5
+		// Token: 0x170013FD RID: 5117
+		// (get) Token: 0x06006342 RID: 25410 RVA: 0x0008DF20 File Offset: 0x0008C120
+		// (set) Token: 0x06006343 RID: 25411 RVA: 0x0008DF59 File Offset: 0x0008C159
 		public TMap<int, FKuroLevelPlayPointLight> PointLights
 		{
 			get
@@ -72,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F51 RID: 24401
-		// (get) Token: 0x06017A6B RID: 96875 RVA: 0x0022A9F4 File Offset: 0x00228BF4
-		// (set) Token: 0x06017A6C RID: 96876 RVA: 0x0022AA2D File Offset: 0x00228C2D
+		// Token: 0x170013FE RID: 5118
+		// (get) Token: 0x06006344 RID: 25412 RVA: 0x0008DF68 File Offset: 0x0008C168
+		// (set) Token: 0x06006345 RID: 25413 RVA: 0x0008DFA1 File Offset: 0x0008C1A1
 		public TMap<int, bool> SplineValues
 		{
 			get
@@ -93,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F52 RID: 24402
-		// (get) Token: 0x06017A6D RID: 96877 RVA: 0x0022AA3B File Offset: 0x00228C3B
-		// (set) Token: 0x06017A6E RID: 96878 RVA: 0x0022AA55 File Offset: 0x00228C55
+		// Token: 0x170013FF RID: 5119
+		// (get) Token: 0x06006346 RID: 25414 RVA: 0x0008DFAF File Offset: 0x0008C1AF
+		// (set) Token: 0x06006347 RID: 25415 RVA: 0x0008DFC9 File Offset: 0x0008C1C9
 		[Nullable(2)]
 		public unsafe IKuroRenderingStampConsumer Consumer
 		{
@@ -111,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F53 RID: 24403
-		// (get) Token: 0x06017A6F RID: 96879 RVA: 0x0022AA7B File Offset: 0x00228C7B
-		// (set) Token: 0x06017A70 RID: 96880 RVA: 0x0022AA8F File Offset: 0x00228C8F
+		// Token: 0x17001400 RID: 5120
+		// (get) Token: 0x06006348 RID: 25416 RVA: 0x0008DFEF File Offset: 0x0008C1EF
+		// (set) Token: 0x06006349 RID: 25417 RVA: 0x0008E003 File Offset: 0x0008C203
 		[Nullable(2)]
 		public unsafe UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset CircularPackingAlongSplinePrimaryDataAsset
 		{
@@ -129,9 +128,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F54 RID: 24404
-		// (get) Token: 0x06017A71 RID: 96881 RVA: 0x0022AAA4 File Offset: 0x00228CA4
-		// (set) Token: 0x06017A72 RID: 96882 RVA: 0x0022AADD File Offset: 0x00228CDD
+		// Token: 0x17001401 RID: 5121
+		// (get) Token: 0x0600634A RID: 25418 RVA: 0x0008E018 File Offset: 0x0008C218
+		// (set) Token: 0x0600634B RID: 25419 RVA: 0x0008E051 File Offset: 0x0008C251
 		public FLightUpPointLightSignature OnLightUpPointLight
 		{
 			get
@@ -150,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F55 RID: 24405
-		// (get) Token: 0x06017A73 RID: 96883 RVA: 0x0022AB00 File Offset: 0x00228D00
-		// (set) Token: 0x06017A74 RID: 96884 RVA: 0x0022AB39 File Offset: 0x00228D39
+		// Token: 0x17001402 RID: 5122
+		// (get) Token: 0x0600634C RID: 25420 RVA: 0x0008E074 File Offset: 0x0008C274
+		// (set) Token: 0x0600634D RID: 25421 RVA: 0x0008E0AD File Offset: 0x0008C2AD
 		public FSplinePollutionStateChangedSignature OnSplinePollutionStateChanged
 		{
 			get
@@ -171,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F56 RID: 24406
-		// (get) Token: 0x06017A75 RID: 96885 RVA: 0x0022AB5A File Offset: 0x00228D5A
-		// (set) Token: 0x06017A76 RID: 96886 RVA: 0x0022AB6A File Offset: 0x00228D6A
+		// Token: 0x17001403 RID: 5123
+		// (get) Token: 0x0600634E RID: 25422 RVA: 0x0008E0CE File Offset: 0x0008C2CE
+		// (set) Token: 0x0600634F RID: 25423 RVA: 0x0008E0DE File Offset: 0x0008C2DE
 		public unsafe float MaxFlowerRadius
 		{
 			get
@@ -186,27 +185,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F57 RID: 24407
-		// (get) Token: 0x06017A77 RID: 96887 RVA: 0x0022AB7B File Offset: 0x00228D7B
-		// (set) Token: 0x06017A78 RID: 96888 RVA: 0x0022AB8F File Offset: 0x00228D8F
-		[Nullable(2)]
-		public unsafe UKuroCircleStampData CachedCircleData
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroCircleStampData>(base.NativePtr / (IntPtr)sizeof(void*) + UKuroLevelPlayFlowerPollutionComponent.__PropertyOffset_CachedCircleData);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKuroLevelPlayFlowerPollutionComponent.__PropertyOffset_CachedCircleData, value);
-			}
-		}
-
-		// Token: 0x17005F58 RID: 24408
-		// (get) Token: 0x06017A79 RID: 96889 RVA: 0x0022ABA4 File Offset: 0x00228DA4
-		// (set) Token: 0x06017A7A RID: 96890 RVA: 0x0022ABB8 File Offset: 0x00228DB8
+		// Token: 0x17001404 RID: 5124
+		// (get) Token: 0x06006350 RID: 25424 RVA: 0x0008E0EF File Offset: 0x0008C2EF
+		// (set) Token: 0x06006351 RID: 25425 RVA: 0x0008E103 File Offset: 0x0008C303
 		[Nullable(2)]
 		public unsafe UGamePartition FlowerPartition
 		{
@@ -222,100 +203,57 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F59 RID: 24409
-		// (get) Token: 0x06017A7B RID: 96891 RVA: 0x0022ABD0 File Offset: 0x00228DD0
-		// (set) Token: 0x06017A7C RID: 96892 RVA: 0x0022AC09 File Offset: 0x00228E09
-		public TArray<FKuroLevelPlayFlower> Flowers
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKuroLevelPlayFlower> result;
-				if ((result = this._Flowers) == null)
-				{
-					result = (this._Flowers = new TArray<FKuroLevelPlayFlower>(base.NativePtr + (IntPtr)UKuroLevelPlayFlowerPollutionComponent.__PropertyOffset_Flowers, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Flowers.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x06017A7D RID: 96893 RVA: 0x0022AC17 File Offset: 0x00228E17
+		// Token: 0x06006352 RID: 25426 RVA: 0x0008E118 File Offset: 0x0008C318
 		public void Update()
 		{
 			UKuroLevelPlayFlowerPollutionComponent.__Update_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017A7E RID: 96894 RVA: 0x0022AC24 File Offset: 0x00228E24
-		[NullableContext(2)]
-		public virtual bool PredictFlowerPollutionAtPosition(in FKuroLevelPlayFlower Flower, in FVectorDouble Position)
-		{
-			return UKuroLevelPlayFlowerPollutionComponent.__PredictFlowerPollutionAtPosition_Internal(base.NativePtr, (Flower ?? new FKuroLevelPlayFlower()).NativePtr, Position);
-		}
-
-		// Token: 0x06017A7F RID: 96895 RVA: 0x0022AC42 File Offset: 0x00228E42
-		[NullableContext(2)]
-		protected virtual bool PredictFlowerPollutionAtPosition_Implementation(in FKuroLevelPlayFlower Flower, in FVectorDouble Position)
-		{
-			return UKuroLevelPlayFlowerPollutionComponent.__PredictFlowerPollutionAtPosition_Implementation_Internal(base.NativePtr, (Flower ?? new FKuroLevelPlayFlower()).NativePtr, Position);
-		}
-
-		// Token: 0x06017A80 RID: 96896 RVA: 0x0022AC60 File Offset: 0x00228E60
+		// Token: 0x06006353 RID: 25427 RVA: 0x0008E125 File Offset: 0x0008C325
 		public bool IsPositionPolluted(double QueryRadius, in FVectorDouble Position)
 		{
 			return UKuroLevelPlayFlowerPollutionComponent.__IsPositionPolluted_Internal(base.NativePtr, QueryRadius, Position);
 		}
 
-		// Token: 0x06017A81 RID: 96897
+		// Token: 0x06006354 RID: 25428
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Update_Internal(IntPtr @this);
 
-		// Token: 0x06017A82 RID: 96898
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __PredictFlowerPollutionAtPosition_Internal(IntPtr @this, IntPtr Flower, in FVectorDouble Position);
-
-		// Token: 0x06017A83 RID: 96899
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __PredictFlowerPollutionAtPosition_Implementation_Internal(IntPtr @this, IntPtr Flower, in FVectorDouble Position);
-
-		// Token: 0x06017A84 RID: 96900
+		// Token: 0x06006355 RID: 25429
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPositionPolluted_Internal(IntPtr @this, double QueryRadius, in FVectorDouble Position);
 
-		// Token: 0x06017A85 RID: 96901 RVA: 0x0022AC6F File Offset: 0x00228E6F
+		// Token: 0x06006356 RID: 25430 RVA: 0x0008E134 File Offset: 0x0008C334
 		static UKuroLevelPlayFlowerPollutionComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroLevelPlayFlowerPollutionComponent");
 		}
 
-		// Token: 0x06017A86 RID: 96902 RVA: 0x0022AC7D File Offset: 0x00228E7D
+		// Token: 0x06006357 RID: 25431 RVA: 0x0008E142 File Offset: 0x0008C342
 		protected UKuroLevelPlayFlowerPollutionComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CD8A RID: 52618
+		// Token: 0x040029F4 RID: 10740
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroLevelPlayFlowerPollutionComponent";
 
-		// Token: 0x0400CD8B RID: 52619
+		// Token: 0x040029F5 RID: 10741
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CD8C RID: 52620
+		// Token: 0x040029F6 RID: 10742
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CD8D RID: 52621
+		// Token: 0x040029F7 RID: 10743
 		internal static int __PropertyOffset_ObstaclePbDataIds;
 
-		// Token: 0x0400CD8E RID: 52622
+		// Token: 0x040029F8 RID: 10744
 		[Nullable(2)]
 		private TArray<int> _ObstaclePbDataIds;
 
-		// Token: 0x0400CD8F RID: 52623
+		// Token: 0x040029F9 RID: 10745
 		internal static int __PropertyOffset_PointLights;
 
-		// Token: 0x0400CD90 RID: 52624
+		// Token: 0x040029FA RID: 10746
 		[Nullable(new byte[]
 		{
 			2,
@@ -323,70 +261,37 @@ namespace UnrealEngine
 		})]
 		private TMap<int, FKuroLevelPlayPointLight> _PointLights;
 
-		// Token: 0x0400CD91 RID: 52625
+		// Token: 0x040029FB RID: 10747
 		internal static int __PropertyOffset_SplineValues;
 
-		// Token: 0x0400CD92 RID: 52626
+		// Token: 0x040029FC RID: 10748
 		[Nullable(2)]
 		private TMap<int, bool> _SplineValues;
 
-		// Token: 0x0400CD93 RID: 52627
+		// Token: 0x040029FD RID: 10749
 		internal static int __PropertyOffset_Consumer;
 
-		// Token: 0x0400CD94 RID: 52628
+		// Token: 0x040029FE RID: 10750
 		internal static int __PropertyOffset_CircularPackingAlongSplinePrimaryDataAsset;
 
-		// Token: 0x0400CD95 RID: 52629
+		// Token: 0x040029FF RID: 10751
 		internal static int __PropertyOffset_OnLightUpPointLight;
 
-		// Token: 0x0400CD96 RID: 52630
+		// Token: 0x04002A00 RID: 10752
 		[Nullable(2)]
 		private FLightUpPointLightSignature _OnLightUpPointLight;
 
-		// Token: 0x0400CD97 RID: 52631
+		// Token: 0x04002A01 RID: 10753
 		internal static int __PropertyOffset_OnSplinePollutionStateChanged;
 
-		// Token: 0x0400CD98 RID: 52632
+		// Token: 0x04002A02 RID: 10754
 		[Nullable(2)]
 		private FSplinePollutionStateChangedSignature _OnSplinePollutionStateChanged;
 
-		// Token: 0x0400CD99 RID: 52633
+		// Token: 0x04002A03 RID: 10755
 		internal static int __PropertyOffset_MaxFlowerRadius;
 
-		// Token: 0x0400CD9A RID: 52634
-		internal static int __PropertyOffset_CachedCircleData;
-
-		// Token: 0x0400CD9B RID: 52635
+		// Token: 0x04002A04 RID: 10756
 		internal static int __PropertyOffset_FlowerPartition;
-
-		// Token: 0x0400CD9C RID: 52636
-		internal static int __PropertyOffset_Flowers;
-
-		// Token: 0x0400CD9D RID: 52637
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKuroLevelPlayFlower> _Flowers;
-
-		// Token: 0x02002FD3 RID: 12243
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 88)]
-		protected ref struct __PredictFlowerPollutionAtPosition_FunctionParams
-		{
-			// Token: 0x04016BC1 RID: 93121
-			[FieldOffset(0)]
-			public byte Flower;
-
-			// Token: 0x04016BC2 RID: 93122
-			[FieldOffset(56)]
-			public FVectorDouble Position;
-
-			// Token: 0x04016BC3 RID: 93123
-			[FieldOffset(80)]
-			public bool __Result;
-		}
 	}
 }

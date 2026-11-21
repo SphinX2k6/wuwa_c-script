@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 {
-	// Token: 0x02006F2A RID: 28458
+	// Token: 0x020060AB RID: 24747
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntityRunAction : EntityMoveAction
 	{
-		// Token: 0x060453D9 RID: 283609 RVA: 0x01122168 File Offset: 0x01120368
+		// Token: 0x0603B587 RID: 243079 RVA: 0x010CC114 File Offset: 0x010CA314
 		protected override void OnExecuteAction()
 		{
 			BaseActorComponent moveActorComp = base.GetMoveActorComp();
@@ -21,12 +21,12 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			this.MoveDirection.Normalize(9.99999993922529E-09);
 		}
 
-		// Token: 0x060453DA RID: 283610 RVA: 0x011221B3 File Offset: 0x011203B3
+		// Token: 0x0603B588 RID: 243080 RVA: 0x010CC15F File Offset: 0x010CA35F
 		protected override void OnInterruptAction()
 		{
 		}
 
-		// Token: 0x060453DB RID: 283611 RVA: 0x011221B8 File Offset: 0x011203B8
+		// Token: 0x0603B589 RID: 243081 RVA: 0x010CC164 File Offset: 0x010CA364
 		public override void TickAction(float delta)
 		{
 			BaseActorComponent moveActorComp = base.GetMoveActorComp();
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			moveActorComp.SetActorLocation(this.TempVector.ToUeVector(false), "EntityRunAction", false);
 		}
 
-		// Token: 0x0402419C RID: 147868
+		// Token: 0x0401F451 RID: 128081
 		private readonly Vector MoveDirection = Vector.Create();
 
-		// Token: 0x0402419D RID: 147869
+		// Token: 0x0401F452 RID: 128082
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x0402419E RID: 147870
+		// Token: 0x0401F453 RID: 128083
 		private readonly Rotator TempRotator = Rotator.Create();
 	}
 }

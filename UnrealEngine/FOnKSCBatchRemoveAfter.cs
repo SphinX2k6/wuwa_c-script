@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E65 RID: 7781
+	// Token: 0x02000598 RID: 1432
 	public sealed class FOnKSCBatchRemoveAfter : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DA73 RID: 121459 RVA: 0x002BC7F0 File Offset: 0x002BA9F0
+		// Token: 0x060081DD RID: 33245 RVA: 0x000BFACC File Offset: 0x000BDCCC
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnKSCBatchRemoveAfter.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DA74 RID: 121460 RVA: 0x002BC7FC File Offset: 0x002BA9FC
+		// Token: 0x060081DE RID: 33246 RVA: 0x000BFAD8 File Offset: 0x000BDCD8
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnKSCBatchRemoveAfter._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnKSCBatchRemoveAfter._FunctionPtr;
 		}
 
-		// Token: 0x0601DA75 RID: 121461 RVA: 0x002BC81F File Offset: 0x002BAA1F
+		// Token: 0x060081DF RID: 33247 RVA: 0x000BFAFB File Offset: 0x000BDCFB
 		public FOnKSCBatchRemoveAfter()
 		{
 		}
 
-		// Token: 0x0601DA76 RID: 121462 RVA: 0x002BC827 File Offset: 0x002BAA27
+		// Token: 0x060081E0 RID: 33248 RVA: 0x000BFB03 File Offset: 0x000BDD03
 		[NullableContext(2)]
 		public FOnKSCBatchRemoveAfter(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DA77 RID: 121463 RVA: 0x002BC831 File Offset: 0x002BAA31
+		// Token: 0x060081E1 RID: 33249 RVA: 0x000BFB0D File Offset: 0x000BDD0D
 		public FOnKSCBatchRemoveAfter(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DA78 RID: 121464 RVA: 0x002BC83C File Offset: 0x002BAA3C
+		// Token: 0x060081E2 RID: 33250 RVA: 0x000BFB18 File Offset: 0x000BDD18
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate) ?? ((FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DA79 RID: 121465 RVA: 0x002BC86E File Offset: 0x002BAA6E
+		// Token: 0x060081E3 RID: 33251 RVA: 0x000BFB4A File Offset: 0x000BDD4A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate Callback)
 		{
 			if (FOnKSCBatchRemoveAfter.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnKSCBatchRemoveAfter.RegisterId);
 		}
 
-		// Token: 0x0601DA7A RID: 121466 RVA: 0x002BC8A8 File Offset: 0x002BAAA8
+		// Token: 0x060081E4 RID: 33252 RVA: 0x000BFB84 File Offset: 0x000BDD84
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute([Nullable(new byte[]
 		{
 			2,
@@ -90,10 +88,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnKSCBatchRemoveAfter._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601DA7B RID: 121467 RVA: 0x002BC918 File Offset: 0x002BAB18
+		// Token: 0x060081E5 RID: 33253 RVA: 0x000BFBF4 File Offset: 0x000BDDF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate fonKSCBatchRemoveAfter_ScriptDelegate = target as FOnKSCBatchRemoveAfter.FOnKSCBatchRemoveAfter_ScriptDelegate;
@@ -109,39 +106,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010112 RID: 65810
+		// Token: 0x040038A7 RID: 14503
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010113 RID: 65811
+		// Token: 0x040038A8 RID: 14504
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.OnKSCBatchRemoveAfter__DelegateSignature";
 
-		// Token: 0x04010114 RID: 65812
+		// Token: 0x040038A9 RID: 14505
 		private static int RegisterId;
 
-		// Token: 0x020032B0 RID: 12976
-		// (Invoke) Token: 0x06028592 RID: 165266
+		// Token: 0x02000D0F RID: 3343
+		// (Invoke) Token: 0x0600BF03 RID: 48899
 		public delegate void FOnKSCBatchRemoveAfter_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<FKSC_RemoveContext> RemoveContext);
 
-		// Token: 0x020032B1 RID: 12977
+		// Token: 0x02000D10 RID: 3344
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnKSCBatchRemoveAfter_DelegateParams
+		private ref struct __FOnKSCBatchRemoveAfter_DelegateParams
 		{
-			// Token: 0x04017154 RID: 94548
+			// Token: 0x04005FA0 RID: 24480
 			[FieldOffset(0)]
 			public byte RemoveContext;
 		}
 
-		// Token: 0x020032B2 RID: 12978
+		// Token: 0x02000D11 RID: 3345
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017155 RID: 94549
+			// Token: 0x04005FA1 RID: 24481
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

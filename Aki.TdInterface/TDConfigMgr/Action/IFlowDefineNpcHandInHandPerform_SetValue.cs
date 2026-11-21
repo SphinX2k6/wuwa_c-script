@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A8A RID: 6794
+	// Token: 0x02001C1F RID: 7199
 	public class IFlowDefineNpcHandInHandPerform_SetValue
 	{
-		// Token: 0x040059B6 RID: 22966
+		// Token: 0x04005E1B RID: 24091
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040059B7 RID: 22967
-		[Nullable(1)]
+		// Token: 0x04005E1C RID: 24092
 		public string Key;
 	}
 }

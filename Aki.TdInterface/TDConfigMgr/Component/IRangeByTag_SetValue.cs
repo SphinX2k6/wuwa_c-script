@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200065D RID: 1629
+	// Token: 0x020006FA RID: 1786
 	public class IRangeByTag_SetValue
 	{
-		// Token: 0x04001835 RID: 6197
+		// Token: 0x04001A27 RID: 6695
 		public int Tag;
 
-		// Token: 0x04001836 RID: 6198
+		// Token: 0x04001A28 RID: 6696
 		public float Range;
 
-		// Token: 0x04001837 RID: 6199
+		// Token: 0x04001A29 RID: 6697
 		public float? ExitRange;
 	}
 }

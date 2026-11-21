@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200684F RID: 26703
+	// Token: 0x02006ED5 RID: 28373
 	public struct IFoldable : IFlatbufferObject
 	{
-		// Token: 0x1700C655 RID: 50773
-		// (get) Token: 0x0602E8E7 RID: 190695 RVA: 0x0065A06E File Offset: 0x0065826E
+		// Token: 0x1700D019 RID: 53273
+		// (get) Token: 0x0603116F RID: 201071 RVA: 0x006A7FAE File Offset: 0x006A61AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E8E8 RID: 190696 RVA: 0x0065A07B File Offset: 0x0065827B
+		// Token: 0x06031170 RID: 201072 RVA: 0x006A7FBB File Offset: 0x006A61BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E8E9 RID: 190697 RVA: 0x0065A084 File Offset: 0x00658284
+		// Token: 0x06031171 RID: 201073 RVA: 0x006A7FC4 File Offset: 0x006A61C4
 		public static IFoldable GetRootAsIFoldable(ByteBuffer _bb)
 		{
 			return IFoldable.GetRootAsIFoldable(_bb, default(IFoldable));
 		}
 
-		// Token: 0x0602E8EA RID: 190698 RVA: 0x0065A0A0 File Offset: 0x006582A0
+		// Token: 0x06031172 RID: 201074 RVA: 0x006A7FE0 File Offset: 0x006A61E0
 		public static IFoldable GetRootAsIFoldable(ByteBuffer _bb, IFoldable obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E8EB RID: 190699 RVA: 0x0065A0BD File Offset: 0x006582BD
+		// Token: 0x06031173 RID: 201075 RVA: 0x006A7FFD File Offset: 0x006A61FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E8EC RID: 190700 RVA: 0x0065A0CC File Offset: 0x006582CC
+		// Token: 0x06031174 RID: 201076 RVA: 0x006A800C File Offset: 0x006A620C
 		public IFoldable __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C656 RID: 50774
-		// (get) Token: 0x0602E8ED RID: 190701 RVA: 0x0065A0DC File Offset: 0x006582DC
+		// Token: 0x1700D01A RID: 53274
+		// (get) Token: 0x06031175 RID: 201077 RVA: 0x006A801C File Offset: 0x006A621C
 		public bool _Folded
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C657 RID: 50775
-		// (get) Token: 0x0602E8EE RID: 190702 RVA: 0x0065A11C File Offset: 0x0065831C
+		// Token: 0x1700D01B RID: 53275
+		// (get) Token: 0x06031176 RID: 201078 RVA: 0x006A805C File Offset: 0x006A625C
 		public byte NullMask
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E8EF RID: 190703 RVA: 0x0065A158 File Offset: 0x00658358
+		// Token: 0x06031177 RID: 201079 RVA: 0x006A8098 File Offset: 0x006A6298
 		public static Offset<IFoldable> CreateIFoldable(FlatBufferBuilder builder, bool _folded = false, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoldable.EndIFoldable(builder);
 		}
 
-		// Token: 0x0602E8F0 RID: 190704 RVA: 0x0065A175 File Offset: 0x00658375
+		// Token: 0x06031178 RID: 201080 RVA: 0x006A80B5 File Offset: 0x006A62B5
 		public static void StartIFoldable(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E8F1 RID: 190705 RVA: 0x0065A17E File Offset: 0x0065837E
+		// Token: 0x06031179 RID: 201081 RVA: 0x006A80BE File Offset: 0x006A62BE
 		public static void Add_Folded(FlatBufferBuilder builder, bool _Folded)
 		{
 			builder.AddBool(0, _Folded, false);
 		}
 
-		// Token: 0x0602E8F2 RID: 190706 RVA: 0x0065A189 File Offset: 0x00658389
+		// Token: 0x0603117A RID: 201082 RVA: 0x006A80C9 File Offset: 0x006A62C9
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0602E8F3 RID: 190707 RVA: 0x0065A194 File Offset: 0x00658394
+		// Token: 0x0603117B RID: 201083 RVA: 0x006A80D4 File Offset: 0x006A62D4
 		public static Offset<IFoldable> EndIFoldable(FlatBufferBuilder builder)
 		{
 			return new Offset<IFoldable>(builder.EndTable());
 		}
 
-		// Token: 0x0602E8F4 RID: 190708 RVA: 0x0065A1A4 File Offset: 0x006583A4
+		// Token: 0x0603117C RID: 201084 RVA: 0x006A80E4 File Offset: 0x006A62E4
 		public IFoldableT UnPack()
 		{
 			IFoldableT foldableT = new IFoldableT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return foldableT;
 		}
 
-		// Token: 0x0602E8F5 RID: 190709 RVA: 0x0065A1BF File Offset: 0x006583BF
+		// Token: 0x0603117D RID: 201085 RVA: 0x006A80FF File Offset: 0x006A62FF
 		public void UnPackTo(IFoldableT _o)
 		{
 			_o._Folded = this._Folded;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602E8F6 RID: 190710 RVA: 0x0065A1DC File Offset: 0x006583DC
+		// Token: 0x0603117E RID: 201086 RVA: 0x006A811C File Offset: 0x006A631C
 		public static Offset<IFoldable> Pack(FlatBufferBuilder builder, IFoldableT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFoldable.CreateIFoldable(builder, _o._Folded, _o.NullMask);
 		}
 
-		// Token: 0x04010F9A RID: 69530
+		// Token: 0x04011DD4 RID: 73172
 		private Table __p;
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02000E0D RID: 3597
+// Token: 0x020002C0 RID: 704
 public class AndroidGlobalProductContentPriceData
 {
-	// Token: 0x040027A5 RID: 10149
+	// Token: 0x04002836 RID: 10294
 	public int key;
 
-	// Token: 0x040027A6 RID: 10150
+	// Token: 0x04002837 RID: 10295
 	public float value;
 }

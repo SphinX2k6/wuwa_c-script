@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CF6 RID: 15606
+	// Token: 0x0200410D RID: 16653
 	public class IAddTimeConfigT
 	{
-		// Token: 0x17006AFF RID: 27391
-		// (get) Token: 0x06015805 RID: 88069 RVA: 0x0031B27E File Offset: 0x0031947E
-		// (set) Token: 0x06015806 RID: 88070 RVA: 0x0031B286 File Offset: 0x00319486
+		// Token: 0x170070B9 RID: 28857
+		// (get) Token: 0x06016D3D RID: 93501 RVA: 0x003424F6 File Offset: 0x003406F6
+		// (set) Token: 0x06016D3E RID: 93502 RVA: 0x003424FE File Offset: 0x003406FE
 		public IKillMonsterT MonsterConfig { get; set; }
 
-		// Token: 0x17006B00 RID: 27392
-		// (get) Token: 0x06015807 RID: 88071 RVA: 0x0031B28F File Offset: 0x0031948F
-		// (set) Token: 0x06015808 RID: 88072 RVA: 0x0031B297 File Offset: 0x00319497
+		// Token: 0x170070BA RID: 28858
+		// (get) Token: 0x06016D3F RID: 93503 RVA: 0x00342507 File Offset: 0x00340707
+		// (set) Token: 0x06016D40 RID: 93504 RVA: 0x0034250F File Offset: 0x0034070F
 		public List<IAddTimeStateConditionT> StateConfig { get; set; }
 
-		// Token: 0x17006B01 RID: 27393
-		// (get) Token: 0x06015809 RID: 88073 RVA: 0x0031B2A0 File Offset: 0x003194A0
-		// (set) Token: 0x0601580A RID: 88074 RVA: 0x0031B2A8 File Offset: 0x003194A8
+		// Token: 0x170070BB RID: 28859
+		// (get) Token: 0x06016D41 RID: 93505 RVA: 0x00342518 File Offset: 0x00340718
+		// (set) Token: 0x06016D42 RID: 93506 RVA: 0x00342520 File Offset: 0x00340720
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601580B RID: 88075 RVA: 0x0031B2B1 File Offset: 0x003194B1
+		// Token: 0x06016D43 RID: 93507 RVA: 0x00342529 File Offset: 0x00340729
 		public IAddTimeConfigT()
 		{
 			this.MonsterConfig = null;

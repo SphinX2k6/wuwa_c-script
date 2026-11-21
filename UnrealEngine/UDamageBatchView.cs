@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200187C RID: 6268
+	// Token: 0x020003A5 RID: 933
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplayUI.DamageBatchView")]
 	[UnrealStructLayout(320, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 320)]
 	public class UDamageBatchView : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601713D RID: 94525 RVA: 0x0021A26F File Offset: 0x0021846F
+		// Token: 0x06005C42 RID: 23618 RVA: 0x0008204A File Offset: 0x0008024A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UDamageBatchView._ClassPtr;
 		}
 
-		// Token: 0x0601713E RID: 94526 RVA: 0x0021A27C File Offset: 0x0021847C
+		// Token: 0x06005C43 RID: 23619 RVA: 0x00082058 File Offset: 0x00080258
 		public UDamageBatchView() : this(BuiltinUtils.AllocNativeUObject(UDamageBatchView.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601713F RID: 94527 RVA: 0x0021A2A4 File Offset: 0x002184A4
+		// Token: 0x06005C44 RID: 23620 RVA: 0x00082080 File Offset: 0x00080280
 		public UDamageBatchView(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UDamageBatchView.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005CCC RID: 23756
-		// (get) Token: 0x06017140 RID: 94528 RVA: 0x0021A2D7 File Offset: 0x002184D7
-		// (set) Token: 0x06017141 RID: 94529 RVA: 0x0021A2EB File Offset: 0x002184EB
+		// Token: 0x1700122B RID: 4651
+		// (get) Token: 0x06005C45 RID: 23621 RVA: 0x000820B3 File Offset: 0x000802B3
+		// (set) Token: 0x06005C46 RID: 23622 RVA: 0x000820C7 File Offset: 0x000802C7
 		[Nullable(2)]
 		public unsafe AUIBaseActor RootActor
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CCD RID: 23757
-		// (get) Token: 0x06017142 RID: 94530 RVA: 0x0021A300 File Offset: 0x00218500
-		// (set) Token: 0x06017143 RID: 94531 RVA: 0x0021A339 File Offset: 0x00218539
+		// Token: 0x1700122C RID: 4652
+		// (get) Token: 0x06005C47 RID: 23623 RVA: 0x000820DC File Offset: 0x000802DC
+		// (set) Token: 0x06005C48 RID: 23624 RVA: 0x00082115 File Offset: 0x00080315
 		public TArray<UUIText> TextList
 		{
 			get
@@ -68,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CCE RID: 23758
-		// (get) Token: 0x06017144 RID: 94532 RVA: 0x0021A348 File Offset: 0x00218548
-		// (set) Token: 0x06017145 RID: 94533 RVA: 0x0021A381 File Offset: 0x00218581
+		// Token: 0x1700122D RID: 4653
+		// (get) Token: 0x06005C49 RID: 23625 RVA: 0x00082124 File Offset: 0x00080324
+		// (set) Token: 0x06005C4A RID: 23626 RVA: 0x0008215D File Offset: 0x0008035D
 		public TArray<UUITextAdditionalUVModifier> TextUvModifierList
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CCF RID: 23759
-		// (get) Token: 0x06017146 RID: 94534 RVA: 0x0021A38F File Offset: 0x0021858F
-		// (set) Token: 0x06017147 RID: 94535 RVA: 0x0021A3A3 File Offset: 0x002185A3
+		// Token: 0x1700122E RID: 4654
+		// (get) Token: 0x06005C4B RID: 23627 RVA: 0x0008216B File Offset: 0x0008036B
+		// (set) Token: 0x06005C4C RID: 23628 RVA: 0x0008217F File Offset: 0x0008037F
 		[Nullable(2)]
 		public unsafe UUIDynamicBatchMesh DynamicBatch
 		{
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CD0 RID: 23760
-		// (get) Token: 0x06017148 RID: 94536 RVA: 0x0021A3B8 File Offset: 0x002185B8
-		// (set) Token: 0x06017149 RID: 94537 RVA: 0x0021A3CC File Offset: 0x002185CC
+		// Token: 0x1700122F RID: 4655
+		// (get) Token: 0x06005C4D RID: 23629 RVA: 0x00082194 File Offset: 0x00080394
+		// (set) Token: 0x06005C4E RID: 23630 RVA: 0x000821A8 File Offset: 0x000803A8
 		[Nullable(2)]
 		public unsafe UUIItem AnchorItem
 		{
@@ -125,30 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CD1 RID: 23761
-		// (get) Token: 0x0601714A RID: 94538 RVA: 0x0021A3E4 File Offset: 0x002185E4
-		// (set) Token: 0x0601714B RID: 94539 RVA: 0x0021A41D File Offset: 0x0021861D
-		public TArray<USimpleDamageView> UnusedSimpleDamageViewList
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<USimpleDamageView> result;
-				if ((result = this._UnusedSimpleDamageViewList) == null)
-				{
-					result = (this._UnusedSimpleDamageViewList = new TArray<USimpleDamageView>(base.NativePtr + (IntPtr)UDamageBatchView.__PropertyOffset_UnusedSimpleDamageViewList, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.UnusedSimpleDamageViewList.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17005CD2 RID: 23762
-		// (get) Token: 0x0601714C RID: 94540 RVA: 0x0021A42C File Offset: 0x0021862C
-		// (set) Token: 0x0601714D RID: 94541 RVA: 0x0021A465 File Offset: 0x00218665
+		// Token: 0x17001230 RID: 4656
+		// (get) Token: 0x06005C4F RID: 23631 RVA: 0x000821C0 File Offset: 0x000803C0
+		// (set) Token: 0x06005C50 RID: 23632 RVA: 0x000821F9 File Offset: 0x000803F9
 		public TArray<USimpleDamageViewInfo> UnusedSimpleDamageViewInfoList
 		{
 			get
@@ -167,9 +146,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CD3 RID: 23763
-		// (get) Token: 0x0601714E RID: 94542 RVA: 0x0021A474 File Offset: 0x00218674
-		// (set) Token: 0x0601714F RID: 94543 RVA: 0x0021A4AD File Offset: 0x002186AD
+		// Token: 0x17001231 RID: 4657
+		// (get) Token: 0x06005C51 RID: 23633 RVA: 0x00082208 File Offset: 0x00080408
+		// (set) Token: 0x06005C52 RID: 23634 RVA: 0x00082241 File Offset: 0x00080441
 		public TArray<USimpleDamageViewInfo> SimpleDamageViewInfoList
 		{
 			get
@@ -188,9 +167,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005CD4 RID: 23764
-		// (get) Token: 0x06017150 RID: 94544 RVA: 0x0021A4BB File Offset: 0x002186BB
-		// (set) Token: 0x06017151 RID: 94545 RVA: 0x0021A4CF File Offset: 0x002186CF
+		// Token: 0x17001232 RID: 4658
+		// (get) Token: 0x06005C53 RID: 23635 RVA: 0x0008224F File Offset: 0x0008044F
+		// (set) Token: 0x06005C54 RID: 23636 RVA: 0x00082263 File Offset: 0x00080463
 		[Nullable(2)]
 		public unsafe USimpleDamageViewInfo PendingBakeViewInfo
 		{
@@ -206,43 +185,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017152 RID: 94546 RVA: 0x0021A4E4 File Offset: 0x002186E4
+		// Token: 0x06005C55 RID: 23637 RVA: 0x00082278 File Offset: 0x00080478
 		public void OnPendingTextGeometryReady()
 		{
 			UDamageBatchView.__OnPendingTextGeometryReady_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017153 RID: 94547
+		// Token: 0x06005C56 RID: 23638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPendingTextGeometryReady_Internal(IntPtr @this);
 
-		// Token: 0x06017154 RID: 94548 RVA: 0x0021A4F1 File Offset: 0x002186F1
+		// Token: 0x06005C57 RID: 23639 RVA: 0x00082285 File Offset: 0x00080485
 		static UDamageBatchView()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplayUI.DamageBatchView");
 		}
 
-		// Token: 0x06017155 RID: 94549 RVA: 0x0021A4FF File Offset: 0x002186FF
+		// Token: 0x06005C58 RID: 23640 RVA: 0x00082293 File Offset: 0x00080493
 		protected UDamageBatchView(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C858 RID: 51288
+		// Token: 0x0400266E RID: 9838
 		public new const string __ObjectPath = "/Script/KuroGameplayUI.DamageBatchView";
 
-		// Token: 0x0400C859 RID: 51289
+		// Token: 0x0400266F RID: 9839
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C85A RID: 51290
+		// Token: 0x04002670 RID: 9840
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C85B RID: 51291
+		// Token: 0x04002671 RID: 9841
 		internal static int __PropertyOffset_RootActor;
 
-		// Token: 0x0400C85C RID: 51292
+		// Token: 0x04002672 RID: 9842
 		internal static int __PropertyOffset_TextList;
 
-		// Token: 0x0400C85D RID: 51293
+		// Token: 0x04002673 RID: 9843
 		[Nullable(new byte[]
 		{
 			2,
@@ -250,10 +229,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UUIText> _TextList;
 
-		// Token: 0x0400C85E RID: 51294
+		// Token: 0x04002674 RID: 9844
 		internal static int __PropertyOffset_TextUvModifierList;
 
-		// Token: 0x0400C85F RID: 51295
+		// Token: 0x04002675 RID: 9845
 		[Nullable(new byte[]
 		{
 			2,
@@ -261,27 +240,16 @@ namespace UnrealEngine
 		})]
 		private TArray<UUITextAdditionalUVModifier> _TextUvModifierList;
 
-		// Token: 0x0400C860 RID: 51296
+		// Token: 0x04002676 RID: 9846
 		internal static int __PropertyOffset_DynamicBatch;
 
-		// Token: 0x0400C861 RID: 51297
+		// Token: 0x04002677 RID: 9847
 		internal static int __PropertyOffset_AnchorItem;
 
-		// Token: 0x0400C862 RID: 51298
-		internal static int __PropertyOffset_UnusedSimpleDamageViewList;
-
-		// Token: 0x0400C863 RID: 51299
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<USimpleDamageView> _UnusedSimpleDamageViewList;
-
-		// Token: 0x0400C864 RID: 51300
+		// Token: 0x04002678 RID: 9848
 		internal static int __PropertyOffset_UnusedSimpleDamageViewInfoList;
 
-		// Token: 0x0400C865 RID: 51301
+		// Token: 0x04002679 RID: 9849
 		[Nullable(new byte[]
 		{
 			2,
@@ -289,10 +257,10 @@ namespace UnrealEngine
 		})]
 		private TArray<USimpleDamageViewInfo> _UnusedSimpleDamageViewInfoList;
 
-		// Token: 0x0400C866 RID: 51302
+		// Token: 0x0400267A RID: 9850
 		internal static int __PropertyOffset_SimpleDamageViewInfoList;
 
-		// Token: 0x0400C867 RID: 51303
+		// Token: 0x0400267B RID: 9851
 		[Nullable(new byte[]
 		{
 			2,
@@ -300,7 +268,7 @@ namespace UnrealEngine
 		})]
 		private TArray<USimpleDamageViewInfo> _SimpleDamageViewInfoList;
 
-		// Token: 0x0400C868 RID: 51304
+		// Token: 0x0400267C RID: 9852
 		internal static int __PropertyOffset_PendingBakeViewInfo;
 	}
 }

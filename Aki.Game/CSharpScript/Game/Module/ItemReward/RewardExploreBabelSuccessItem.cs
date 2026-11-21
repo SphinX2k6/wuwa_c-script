@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057FA RID: 22522
+	// Token: 0x020047D1 RID: 18385
 	public class RewardExploreBabelSuccessItem : UiPanelBase
 	{
-		// Token: 0x0603942F RID: 234543 RVA: 0x00D94008 File Offset: 0x00D92208
+		// Token: 0x0602E343 RID: 189251 RVA: 0x00CE2E50 File Offset: 0x00CE1050
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -30,20 +30,20 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039430 RID: 234544 RVA: 0x00D940B3 File Offset: 0x00D922B3
+		// Token: 0x0602E344 RID: 189252 RVA: 0x00CE2EFB File Offset: 0x00CE10FB
 		protected override void OnStart()
 		{
 			this.BuffItemLayout = new GenericLayout<RewardExploreBabelSuccessItem.BabelTowerUnlockBuffItem, IBabelTowerBuffItemData>(base.GetHorizontalLayout(3), new Func<RewardExploreBabelSuccessItem.BabelTowerUnlockBuffItem>(this.CreateBuffItem), null, false, true);
 		}
 
-		// Token: 0x06039431 RID: 234545 RVA: 0x00D940D6 File Offset: 0x00D922D6
+		// Token: 0x0602E345 RID: 189253 RVA: 0x00CE2F1E File Offset: 0x00CE111E
 		[NullableContext(1)]
 		private RewardExploreBabelSuccessItem.BabelTowerUnlockBuffItem CreateBuffItem()
 		{
 			return new RewardExploreBabelSuccessItem.BabelTowerUnlockBuffItem();
 		}
 
-		// Token: 0x06039432 RID: 234546 RVA: 0x00D940E0 File Offset: 0x00D922E0
+		// Token: 0x0602E346 RID: 189254 RVA: 0x00CE2F28 File Offset: 0x00CE1128
 		[NullableContext(1)]
 		public void Refresh(IBabelTowerSuccessData data)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			buffItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0401DF30 RID: 122672
+		// Token: 0x040189C7 RID: 100807
 		[Nullable(new byte[]
 		{
 			2,
@@ -109,23 +109,23 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private GenericLayout<RewardExploreBabelSuccessItem.BabelTowerUnlockBuffItem, IBabelTowerBuffItemData> BuffItemLayout;
 
-		// Token: 0x0200B9ED RID: 47597
+		// Token: 0x0200A403 RID: 41987
 		private class ESuccessItemComponent
 		{
-			// Token: 0x04038360 RID: 230240
+			// Token: 0x04032D4D RID: 208205
 			public const int StarNumText = 0;
 
-			// Token: 0x04038361 RID: 230241
+			// Token: 0x04032D4E RID: 208206
 			public const int TipText = 1;
 
-			// Token: 0x04038362 RID: 230242
+			// Token: 0x04032D4F RID: 208207
 			public const int UnlockParentItem = 2;
 
-			// Token: 0x04038363 RID: 230243
+			// Token: 0x04032D50 RID: 208208
 			public const int BuffItemLayout = 3;
 		}
 
-		// Token: 0x0200B9EE RID: 47598
+		// Token: 0x0200A404 RID: 41988
 		[Nullable(new byte[]
 		{
 			0,
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		public class BabelTowerUnlockBuffItem : GridProxyAbstract<IBabelTowerBuffItemData>
 		{
-			// Token: 0x0604F6FD RID: 325373 RVA: 0x01542BAC File Offset: 0x01540DAC
+			// Token: 0x06045C89 RID: 285833 RVA: 0x014FBEF4 File Offset: 0x014FA0F4
 			protected unsafe override void OnRegisterComponent()
 			{
 				int num = 6;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				this.BtnBindInfo = list2;
 			}
 
-			// Token: 0x0604F6FE RID: 325374 RVA: 0x01542CD8 File Offset: 0x01540ED8
+			// Token: 0x06045C8A RID: 285834 RVA: 0x014FC020 File Offset: 0x014FA220
 			[NullableContext(1)]
 			public override void Refresh(IBabelTowerBuffItemData data, bool isSelected, int gridIndex)
 			{
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				base.SetTextureByPath(texture, base.GetTexture(0), null, null);
 			}
 
-			// Token: 0x0604F6FF RID: 325375 RVA: 0x01542DB8 File Offset: 0x01540FB8
+			// Token: 0x06045C8B RID: 285835 RVA: 0x014FC100 File Offset: 0x014FA300
 			private void OnItemButtonClick()
 			{
 				BabelTowerItemInfoViewInfo param = new BabelTowerItemInfoViewInfo
@@ -205,29 +205,29 @@ namespace CSharpScript.Game.Module.ItemReward
 				UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 			}
 
-			// Token: 0x04038364 RID: 230244
+			// Token: 0x04032D51 RID: 208209
 			[Nullable(2)]
 			private IBabelTowerBuffItemData Data;
 
-			// Token: 0x0200D16B RID: 53611
+			// Token: 0x0200BD49 RID: 48457
 			private class EUnlockBuffItemComponent
 			{
-				// Token: 0x0403ED94 RID: 257428
+				// Token: 0x0403A1DC RID: 238044
 				public const int IconTexture = 0;
 
-				// Token: 0x0403ED95 RID: 257429
+				// Token: 0x0403A1DD RID: 238045
 				public const int NameText = 1;
 
-				// Token: 0x0403ED96 RID: 257430
+				// Token: 0x0403A1DE RID: 238046
 				public const int ItemButton = 2;
 
-				// Token: 0x0403ED97 RID: 257431
+				// Token: 0x0403A1DF RID: 238047
 				public const int BuffBgItem = 3;
 
-				// Token: 0x0403ED98 RID: 257432
+				// Token: 0x0403A1E0 RID: 238048
 				public const int DeTermBgItem = 4;
 
-				// Token: 0x0403ED99 RID: 257433
+				// Token: 0x0403A1E1 RID: 238049
 				public const int CommonBgItem = 5;
 			}
 		}

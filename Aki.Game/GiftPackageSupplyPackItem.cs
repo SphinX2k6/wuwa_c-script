@@ -11,12 +11,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200239C RID: 9116
+// Token: 0x02001881 RID: 6273
 [NullableContext(1)]
 [Nullable(0)]
 public class GiftPackageSupplyPackItem : UiPanelBase
 {
-	// Token: 0x060123B4 RID: 74676 RVA: 0x0047DBF0 File Offset: 0x0047BDF0
+	// Token: 0x0600F866 RID: 63590 RVA: 0x0048B030 File Offset: 0x00489230
 	public GiftPackageSupplyPackItem(int packId, UUIItem uiItem, PayShopGoods goods)
 	{
 		this.PackId = packId;
@@ -24,7 +24,7 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		base.CreateThenShowByResourceIdAsync("UiItem_GiftPackageSupplyPack", uiItem, false).Forget();
 	}
 
-	// Token: 0x060123B5 RID: 74677 RVA: 0x0047DC24 File Offset: 0x0047BE24
+	// Token: 0x0600F867 RID: 63591 RVA: 0x0048B064 File Offset: 0x00489264
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -50,14 +50,14 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060123B6 RID: 74678 RVA: 0x0047DD53 File Offset: 0x0047BF53
+	// Token: 0x0600F868 RID: 63592 RVA: 0x0048B193 File Offset: 0x00489393
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollView<GiftPackageItem>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<GiftPackageItem>(this.InitItem), null);
 		this.Refresh();
 	}
 
-	// Token: 0x060123B7 RID: 74679 RVA: 0x0047DD7C File Offset: 0x0047BF7C
+	// Token: 0x0600F869 RID: 63593 RVA: 0x0048B1BC File Offset: 0x004893BC
 	public void Refresh()
 	{
 		if (base.InAsyncLoading())
@@ -100,7 +100,7 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		this.RefreshTimeItemShowState();
 	}
 
-	// Token: 0x060123B8 RID: 74680 RVA: 0x0047DED4 File Offset: 0x0047C0D4
+	// Token: 0x0600F86A RID: 63594 RVA: 0x0048B314 File Offset: 0x00489514
 	private ILayoutItem<GiftPackageItem> InitItem(object data, UUIItem uiItem, int index)
 	{
 		GiftPackageItem giftPackageItem = new GiftPackageItem();
@@ -117,18 +117,18 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060123B9 RID: 74681 RVA: 0x0047DF35 File Offset: 0x0047C135
+	// Token: 0x0600F86B RID: 63595 RVA: 0x0048B375 File Offset: 0x00489575
 	private void RefreshTitle()
 	{
 	}
 
-	// Token: 0x060123BA RID: 74682 RVA: 0x0047DF37 File Offset: 0x0047C137
+	// Token: 0x0600F86C RID: 63596 RVA: 0x0048B377 File Offset: 0x00489577
 	private void RefreshTimeItemShowState()
 	{
 		base.GetItem(6).SetUIActive(this.LeftBuyShowState || this.LeftTimeShowState);
 	}
 
-	// Token: 0x060123BB RID: 74683 RVA: 0x0047DF58 File Offset: 0x0047C158
+	// Token: 0x0600F86D RID: 63597 RVA: 0x0048B398 File Offset: 0x00489598
 	private void RefreshLeftTimeText()
 	{
 		base.GetText(2).SetUIActive(false);
@@ -149,7 +149,7 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		this.LeftBuyShowState = (exchangeViewShopTipsText != "");
 	}
 
-	// Token: 0x060123BC RID: 74684 RVA: 0x0047DFE4 File Offset: 0x0047C1E4
+	// Token: 0x0600F86E RID: 63598 RVA: 0x0048B424 File Offset: 0x00489624
 	protected void SetEndTime()
 	{
 		ValueTuple<EPayCountTimeType, CommonDefine.IPayShowCountDownRemainTime, double> countDownData = this.Goods.GetCountDownData();
@@ -203,25 +203,25 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060123BD RID: 74685 RVA: 0x0047E133 File Offset: 0x0047C333
+	// Token: 0x0600F86F RID: 63599 RVA: 0x0048B573 File Offset: 0x00489773
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x040089BB RID: 35259
+	// Token: 0x04008B02 RID: 35586
 	private const string COLOR = "FED12E";
 
-	// Token: 0x040089BC RID: 35260
+	// Token: 0x04008B03 RID: 35587
 	private bool LeftBuyShowState;
 
-	// Token: 0x040089BD RID: 35261
+	// Token: 0x04008B04 RID: 35588
 	private bool LeftTimeShowState;
 
-	// Token: 0x040089BE RID: 35262
+	// Token: 0x04008B05 RID: 35589
 	[Nullable(2)]
 	private readonly PayShopGoods Goods;
 
-	// Token: 0x040089BF RID: 35263
+	// Token: 0x04008B06 RID: 35590
 	[Nullable(new byte[]
 	{
 		2,
@@ -229,38 +229,38 @@ public class GiftPackageSupplyPackItem : UiPanelBase
 	})]
 	private GenericScrollView<GiftPackageItem> ScrollView;
 
-	// Token: 0x040089C0 RID: 35264
+	// Token: 0x04008B07 RID: 35591
 	private List<int[]> RewardList = new List<int[]>();
 
-	// Token: 0x040089C1 RID: 35265
+	// Token: 0x04008B08 RID: 35592
 	private int PackId;
 
-	// Token: 0x02008940 RID: 35136
+	// Token: 0x02007ACB RID: 31435
 	[NullableContext(0)]
 	private class EGiftPackageSupplyPackItem
 	{
-		// Token: 0x0402C9E7 RID: 182759
+		// Token: 0x04027D04 RID: 163076
 		public const int ScrollView = 0;
 
-		// Token: 0x0402C9E8 RID: 182760
+		// Token: 0x04027D05 RID: 163077
 		public const int GiftItem = 1;
 
-		// Token: 0x0402C9E9 RID: 182761
+		// Token: 0x04027D06 RID: 163078
 		public const int LeftTimeText = 2;
 
-		// Token: 0x0402C9EA RID: 182762
+		// Token: 0x04027D07 RID: 163079
 		public const int EndTimeItem = 3;
 
-		// Token: 0x0402C9EB RID: 182763
+		// Token: 0x04027D08 RID: 163080
 		public const int DownItemText = 4;
 
-		// Token: 0x0402C9EC RID: 182764
+		// Token: 0x04027D09 RID: 163081
 		public const int EndTimeText = 5;
 
-		// Token: 0x0402C9ED RID: 182765
+		// Token: 0x04027D0A RID: 163082
 		public const int TitleItem = 6;
 
-		// Token: 0x0402C9EE RID: 182766
+		// Token: 0x04027D0B RID: 163083
 		public const int LeftLimitText = 7;
 	}
 }

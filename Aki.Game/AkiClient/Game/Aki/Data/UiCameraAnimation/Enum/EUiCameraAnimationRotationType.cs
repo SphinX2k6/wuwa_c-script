@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.UiCameraAnimation.Enum
 {
-	// Token: 0x02003E93 RID: 16019
+	// Token: 0x0200316A RID: 12650
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/UiCameraAnimation/Enum/EUiCameraAnimationRotationType.EUiCameraAnimationRotationType")]
 	public enum EUiCameraAnimationRotationType : byte
 	{
-		// Token: 0x04014A3E RID: 84542
+		// Token: 0x04010ABF RID: 68287
 		WorldRotation,
-		// Token: 0x04014A3F RID: 84543
+		// Token: 0x04010AC0 RID: 68288
 		CurrentCameraRotation,
-		// Token: 0x04014A40 RID: 84544
+		// Token: 0x04010AC1 RID: 68289
 		TargetRotation,
-		// Token: 0x04014A41 RID: 84545
+		// Token: 0x04010AC2 RID: 68290
 		TargetForwardRotation,
-		// Token: 0x04014A42 RID: 84546
+		// Token: 0x04010AC3 RID: 68291
 		EUiCameraAnimationRotationType_MAX
 	}
 }

@@ -8,14 +8,14 @@ using CSharpScript.Game.NewWorld.Common.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007224 RID: 29220
+	// Token: 0x020062D9 RID: 25305
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemPropertyComponent : EntityComponent
 	{
-		// Token: 0x17009E31 RID: 40497
-		// (get) Token: 0x06047980 RID: 293248 RVA: 0x0124C8D2 File Offset: 0x0124AAD2
-		// (set) Token: 0x06047981 RID: 293249 RVA: 0x0124C8DC File Offset: 0x0124AADC
+		// Token: 0x170073D0 RID: 29648
+		// (get) Token: 0x0603D2C9 RID: 250569 RVA: 0x011A58EE File Offset: 0x011A3AEE
+		// (set) Token: 0x0603D2CA RID: 250570 RVA: 0x011A58F8 File Offset: 0x011A3AF8
 		public bool IsMoving
 		{
 			get
@@ -60,8 +60,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E32 RID: 40498
-		// (get) Token: 0x06047982 RID: 293250 RVA: 0x0124C994 File Offset: 0x0124AB94
+		// Token: 0x170073D1 RID: 29649
+		// (get) Token: 0x0603D2CB RID: 250571 RVA: 0x011A59B0 File Offset: 0x011A3BB0
 		public bool IsLocked
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047983 RID: 293251 RVA: 0x0124C99C File Offset: 0x0124AB9C
+		// Token: 0x0603D2CC RID: 250572 RVA: 0x011A59B8 File Offset: 0x011A3BB8
 		protected override bool OnInitData(IEntityArgs Args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047984 RID: 293252 RVA: 0x0124C9D8 File Offset: 0x0124ABD8
+		// Token: 0x0603D2CD RID: 250573 RVA: 0x011A59F4 File Offset: 0x011A3BF4
 		protected override bool OnStart()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047985 RID: 293253 RVA: 0x0124CAE0 File Offset: 0x0124ACE0
+		// Token: 0x0603D2CE RID: 250574 RVA: 0x011A5AFC File Offset: 0x011A3CFC
 		protected override bool OnEnd()
 		{
 			if (this.LockTagListener != null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047986 RID: 293254 RVA: 0x0124CB5C File Offset: 0x0124AD5C
+		// Token: 0x0603D2CF RID: 250575 RVA: 0x011A5B78 File Offset: 0x011A3D78
 		private void HandleInitProperty()
 		{
 			if (this.LockConfig == null)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047987 RID: 293255 RVA: 0x0124CC84 File Offset: 0x0124AE84
+		// Token: 0x0603D2D0 RID: 250576 RVA: 0x011A5CA0 File Offset: 0x011A3EA0
 		private void HandleLockPropertyUpdate(int tagId, bool tagExist)
 		{
 			if (tagId != GameplayTagDefine.EGameplayTagId["关卡.Common.属性.锁定"])
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047988 RID: 293256 RVA: 0x0124CCE0 File Offset: 0x0124AEE0
+		// Token: 0x0603D2D1 RID: 250577 RVA: 0x011A5CFC File Offset: 0x011A3EFC
 		private void HandleSlashBeAimTagUpdate(int tagId, bool tagExist)
 		{
 			if (tagId != GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.古英雄铠.斩击预备"])
@@ -255,19 +255,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.Emit<Entity, bool>(EEventName.OnEntityBeSlashAim, base.Entity, tagExist);
 		}
 
-		// Token: 0x06047989 RID: 293257 RVA: 0x0124CE10 File Offset: 0x0124B010
+		// Token: 0x0603D2D2 RID: 250578 RVA: 0x011A5E2C File Offset: 0x011A402C
 		private void OnSceneItemStateChange(int stateTagId, bool isReady)
 		{
 			this.OnStateChange(stateTagId);
 		}
 
-		// Token: 0x0604798A RID: 293258 RVA: 0x0124CE19 File Offset: 0x0124B019
+		// Token: 0x0603D2D3 RID: 250579 RVA: 0x011A5E35 File Offset: 0x011A4035
 		private void OnSceneItemStatePreChange(int stateTagId)
 		{
 			this.OnStateChange(stateTagId);
 		}
 
-		// Token: 0x0604798B RID: 293259 RVA: 0x0124CE24 File Offset: 0x0124B024
+		// Token: 0x0603D2D4 RID: 250580 RVA: 0x011A5E40 File Offset: 0x011A4040
 		private void OnStateChange(int stateTagId)
 		{
 			int num;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604798C RID: 293260 RVA: 0x0124CEA0 File Offset: 0x0124B0A0
+		// Token: 0x0603D2D5 RID: 250581 RVA: 0x011A5EBC File Offset: 0x011A40BC
 		public void SetIsBeingTargeted(bool value)
 		{
 			if (value)
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604798D RID: 293261 RVA: 0x0124CF28 File Offset: 0x0124B128
+		// Token: 0x0603D2D6 RID: 250582 RVA: 0x011A5F44 File Offset: 0x011A4144
 		private void HandleInitAttribute()
 		{
 			if (this.AttributeIdSet != null && this.TagComponent != null)
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.IsAttributeInit = true;
 		}
 
-		// Token: 0x0604798E RID: 293262 RVA: 0x0124CFAC File Offset: 0x0124B1AC
+		// Token: 0x0603D2D7 RID: 250583 RVA: 0x011A5FC8 File Offset: 0x011A41C8
 		public void HandleAttributeChanged(int attributeId, bool isAdd)
 		{
 			if (this.AttributeIdSet == null)
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604798F RID: 293263 RVA: 0x0124D028 File Offset: 0x0124B228
+		// Token: 0x0603D2D8 RID: 250584 RVA: 0x011A6044 File Offset: 0x011A4244
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -372,96 +372,83 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemPropertyComponent sceneItemPropertyComponent = (SceneItemPropertyComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (sceneItemPropertyComponent.TagComponent == null)
 			{
-				if (sceneItemPropertyComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("StateComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				if (sceneItemPropertyComponent.StateComponent == null)
-				{
-					this.StateComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComponent), "StateComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LockConfig"))
+			if (sceneItemPropertyComponent.StateComponent == null)
 			{
-				if (sceneItemPropertyComponent.LockConfig == null)
-				{
-					this.LockConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ILockConfig>(this.LockConfig), "LockConfig"))
-				{
-					return false;
-				}
+				this.StateComponent = null;
 			}
-			if (base.CanResetComponentProperty("LockTypeTagId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComponent), "StateComponent"))
 			{
-				this.LockTypeTagId = sceneItemPropertyComponent.LockTypeTagId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LockTagListener"))
+			if (sceneItemPropertyComponent.LockConfig == null)
 			{
-				if (sceneItemPropertyComponent.LockTagListener == null)
-				{
-					this.LockTagListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.LockTagListener), "LockTagListener"))
-				{
-					return false;
-				}
+				this.LockConfig = null;
 			}
-			if (base.CanResetComponentProperty("SlashBeAimTagListener"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockConfig), "LockConfig"))
 			{
-				if (sceneItemPropertyComponent.SlashBeAimTagListener == null)
-				{
-					this.SlashBeAimTagListener = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.SlashBeAimTagListener), "SlashBeAimTagListener"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurSlashBeAimTagId"))
+			this.LockTypeTagId = sceneItemPropertyComponent.LockTypeTagId;
+			if (sceneItemPropertyComponent.LockTagListener == null)
 			{
-				this.CurSlashBeAimTagId = sceneItemPropertyComponent.CurSlashBeAimTagId;
+				this.LockTagListener = null;
 			}
-			if (base.CanResetComponentProperty("Locked"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockTagListener), "LockTagListener"))
 			{
-				this.Locked = sceneItemPropertyComponent.Locked;
+				return false;
 			}
-			if (base.CanResetComponentProperty("Moving"))
+			if (sceneItemPropertyComponent.SlashBeAimTagListener == null)
 			{
-				this.Moving = sceneItemPropertyComponent.Moving;
+				this.SlashBeAimTagListener = null;
 			}
-			if (base.CanResetComponentProperty("AttributeIdSet"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlashBeAimTagListener), "SlashBeAimTagListener"))
 			{
-				if (sceneItemPropertyComponent.AttributeIdSet == null)
-				{
-					this.AttributeIdSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.AttributeIdSet), "AttributeIdSet"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsAttributeInit"))
+			this.CurSlashBeAimTagId = sceneItemPropertyComponent.CurSlashBeAimTagId;
+			this.Locked = sceneItemPropertyComponent.Locked;
+			this.Moving = sceneItemPropertyComponent.Moving;
+			if (sceneItemPropertyComponent.AttributeIdSet == null)
 			{
-				this.IsAttributeInit = sceneItemPropertyComponent.IsAttributeInit;
+				this.AttributeIdSet = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.AttributeIdSet), "AttributeIdSet"))
+			{
+				return false;
+			}
+			this.IsAttributeInit = sceneItemPropertyComponent.IsAttributeInit;
 			return true;
 		}
 
-		// Token: 0x04025AA6 RID: 154278
+		// Token: 0x170073D2 RID: 29650
+		// (get) Token: 0x0603D2D9 RID: 250585 RVA: 0x011A61A2 File Offset: 0x011A43A2
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073D3 RID: 29651
+		// (get) Token: 0x0603D2DA RID: 250586 RVA: 0x011A61A5 File Offset: 0x011A43A5
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020715 RID: 132885
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, int> StateToSlashLockTag = new Dictionary<int, int>
@@ -476,37 +463,37 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		};
 
-		// Token: 0x04025AA7 RID: 154279
+		// Token: 0x04020716 RID: 132886
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025AA8 RID: 154280
+		// Token: 0x04020717 RID: 132887
 		private SceneItemStateComponent StateComponent;
 
-		// Token: 0x04025AA9 RID: 154281
+		// Token: 0x04020718 RID: 132888
 		private ILockConfig LockConfig;
 
-		// Token: 0x04025AAA RID: 154282
+		// Token: 0x04020719 RID: 132889
 		private int LockTypeTagId;
 
-		// Token: 0x04025AAB RID: 154283
+		// Token: 0x0402071A RID: 132890
 		private ITagTask LockTagListener;
 
-		// Token: 0x04025AAC RID: 154284
+		// Token: 0x0402071B RID: 132891
 		private ITagTask SlashBeAimTagListener;
 
-		// Token: 0x04025AAD RID: 154285
+		// Token: 0x0402071C RID: 132892
 		private int CurSlashBeAimTagId;
 
-		// Token: 0x04025AAE RID: 154286
+		// Token: 0x0402071D RID: 132893
 		private bool Locked;
 
-		// Token: 0x04025AAF RID: 154287
+		// Token: 0x0402071E RID: 132894
 		private bool Moving;
 
-		// Token: 0x04025AB0 RID: 154288
+		// Token: 0x0402071F RID: 132895
 		public HashSet<int> AttributeIdSet;
 
-		// Token: 0x04025AB1 RID: 154289
+		// Token: 0x04020720 RID: 132896
 		private bool IsAttributeInit;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CA0 RID: 27808
+	// Token: 0x02007416 RID: 29718
 	public class IPhoneBoardTypeBase_UnionUnion
 	{
-		// Token: 0x1700CF11 RID: 53009
-		// (get) Token: 0x06031011 RID: 200721 RVA: 0x006A6F75 File Offset: 0x006A5175
-		// (set) Token: 0x06031012 RID: 200722 RVA: 0x006A6F7D File Offset: 0x006A517D
+		// Token: 0x1700DA4E RID: 55886
+		// (get) Token: 0x06033FE8 RID: 212968 RVA: 0x007021A9 File Offset: 0x007003A9
+		// (set) Token: 0x06033FE9 RID: 212969 RVA: 0x007021B1 File Offset: 0x007003B1
 		public IPhoneBoardTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700CF12 RID: 53010
-		// (get) Token: 0x06031013 RID: 200723 RVA: 0x006A6F86 File Offset: 0x006A5186
-		// (set) Token: 0x06031014 RID: 200724 RVA: 0x006A6F8E File Offset: 0x006A518E
+		// Token: 0x1700DA4F RID: 55887
+		// (get) Token: 0x06033FEA RID: 212970 RVA: 0x007021BA File Offset: 0x007003BA
+		// (set) Token: 0x06033FEB RID: 212971 RVA: 0x007021C2 File Offset: 0x007003C2
 		public object Value { get; set; }
 
-		// Token: 0x06031015 RID: 200725 RVA: 0x006A6F97 File Offset: 0x006A5197
+		// Token: 0x06033FEC RID: 212972 RVA: 0x007021CB File Offset: 0x007003CB
 		public IPhoneBoardTypeBase_UnionUnion()
 		{
 			this.Type = IPhoneBoardTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06031016 RID: 200726 RVA: 0x006A6FAD File Offset: 0x006A51AD
+		// Token: 0x06033FED RID: 212973 RVA: 0x007021E1 File Offset: 0x007003E1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06031017 RID: 200727 RVA: 0x006A6FBF File Offset: 0x006A51BF
+		// Token: 0x06033FEE RID: 212974 RVA: 0x007021F3 File Offset: 0x007003F3
 		public IPhoneBoardTypeBaseT AsIPhoneBoardTypeBase()
 		{
 			return this.As<IPhoneBoardTypeBaseT>();
 		}
 
-		// Token: 0x06031018 RID: 200728 RVA: 0x006A6FC7 File Offset: 0x006A51C7
+		// Token: 0x06033FEF RID: 212975 RVA: 0x007021FB File Offset: 0x007003FB
 		public static IPhoneBoardTypeBase_UnionUnion FromIPhoneBoardTypeBase(IPhoneBoardTypeBaseT _iphoneboardtypebase)
 		{
 			return new IPhoneBoardTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06031019 RID: 200729 RVA: 0x006A6FDC File Offset: 0x006A51DC
+		// Token: 0x06033FF0 RID: 212976 RVA: 0x00702210 File Offset: 0x00700410
 		public IMessageBoardT AsIMessageBoard()
 		{
 			return this.As<IMessageBoardT>();
 		}
 
-		// Token: 0x0603101A RID: 200730 RVA: 0x006A6FE4 File Offset: 0x006A51E4
+		// Token: 0x06033FF1 RID: 212977 RVA: 0x00702218 File Offset: 0x00700418
 		public static IPhoneBoardTypeBase_UnionUnion FromIMessageBoard(IMessageBoardT _imessageboard)
 		{
 			return new IPhoneBoardTypeBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603101B RID: 200731 RVA: 0x006A6FFC File Offset: 0x006A51FC
+		// Token: 0x06033FF2 RID: 212978 RVA: 0x00702230 File Offset: 0x00700430
 		public static int Pack(FlatBufferBuilder builder, IPhoneBoardTypeBase_UnionUnion _o)
 		{
 			IPhoneBoardTypeBase_Union type = _o.Type;

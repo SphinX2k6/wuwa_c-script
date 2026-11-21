@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using AkiClient.Game.Aki.Character.Vehicle.Motor.Diy.HeadLight.Common.Component;
@@ -21,14 +20,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003461 RID: 13409
+// Token: 0x020029D5 RID: 10709
 [UClass("/Game/Aki/TypeScript/Game/Render/Character/Manager/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Character/Manager/CharRenderingComponent.CharRenderingComponent_C")]
 public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170027D1 RID: 10193
-	// (get) Token: 0x0601CFBC RID: 118716 RVA: 0x00813C03 File Offset: 0x00811E03
-	// (set) Token: 0x0601CFBD RID: 118717 RVA: 0x00813C17 File Offset: 0x00811E17
+	// Token: 0x17002B6C RID: 11116
+	// (get) Token: 0x0601ACBA RID: 109754 RVA: 0x0083A618 File Offset: 0x00838818
+	// (set) Token: 0x0601ACBB RID: 109755 RVA: 0x0083A62C File Offset: 0x0083882C
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PDA_InteractionPlayerConfig_C InteractionConfig
@@ -45,9 +44,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D2 RID: 10194
-	// (get) Token: 0x0601CFBE RID: 118718 RVA: 0x00813C2C File Offset: 0x00811E2C
-	// (set) Token: 0x0601CFBF RID: 118719 RVA: 0x00813C40 File Offset: 0x00811E40
+	// Token: 0x17002B6D RID: 11117
+	// (get) Token: 0x0601ACBC RID: 109756 RVA: 0x0083A641 File Offset: 0x00838841
+	// (set) Token: 0x0601ACBD RID: 109757 RVA: 0x0083A655 File Offset: 0x00838855
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PDA_DecalShadowConfig_C DecalShadowConfig
@@ -64,9 +63,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D3 RID: 10195
-	// (get) Token: 0x0601CFC0 RID: 118720 RVA: 0x00813C55 File Offset: 0x00811E55
-	// (set) Token: 0x0601CFC1 RID: 118721 RVA: 0x00813C65 File Offset: 0x00811E65
+	// Token: 0x17002B6E RID: 11118
+	// (get) Token: 0x0601ACBE RID: 109758 RVA: 0x0083A66A File Offset: 0x0083886A
+	// (set) Token: 0x0601ACBF RID: 109759 RVA: 0x0083A67A File Offset: 0x0083887A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool MonsterUseBodyEffect
 	{
@@ -80,9 +79,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D4 RID: 10196
-	// (get) Token: 0x0601CFC2 RID: 118722 RVA: 0x00813C76 File Offset: 0x00811E76
-	// (set) Token: 0x0601CFC3 RID: 118723 RVA: 0x00813C86 File Offset: 0x00811E86
+	// Token: 0x17002B6F RID: 11119
+	// (get) Token: 0x0601ACC0 RID: 109760 RVA: 0x0083A68B File Offset: 0x0083888B
+	// (set) Token: 0x0601ACC1 RID: 109761 RVA: 0x0083A69B File Offset: 0x0083889B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseProxy
 	{
@@ -96,8 +95,8 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D5 RID: 10197
-	// (get) Token: 0x0601CFC4 RID: 118724 RVA: 0x00813C98 File Offset: 0x00811E98
+	// Token: 0x17002B70 RID: 11120
+	// (get) Token: 0x0601ACC2 RID: 109762 RVA: 0x0083A6AC File Offset: 0x008388AC
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<UMaterialInterface> ProxyMaterialsOverride
@@ -115,9 +114,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D6 RID: 10198
-	// (get) Token: 0x0601CFC5 RID: 118725 RVA: 0x00813CD1 File Offset: 0x00811ED1
-	// (set) Token: 0x0601CFC6 RID: 118726 RVA: 0x00813CE1 File Offset: 0x00811EE1
+	// Token: 0x17002B71 RID: 11121
+	// (get) Token: 0x0601ACC3 RID: 109763 RVA: 0x0083A6E5 File Offset: 0x008388E5
+	// (set) Token: 0x0601ACC4 RID: 109764 RVA: 0x0083A6F5 File Offset: 0x008388F5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ProxyRenderInMainPass
 	{
@@ -131,9 +130,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D7 RID: 10199
-	// (get) Token: 0x0601CFC7 RID: 118727 RVA: 0x00813CF2 File Offset: 0x00811EF2
-	// (set) Token: 0x0601CFC8 RID: 118728 RVA: 0x00813D02 File Offset: 0x00811F02
+	// Token: 0x17002B72 RID: 11122
+	// (get) Token: 0x0601ACC5 RID: 109765 RVA: 0x0083A706 File Offset: 0x00838906
+	// (set) Token: 0x0601ACC6 RID: 109766 RVA: 0x0083A716 File Offset: 0x00838916
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ProxyRenderShadow
 	{
@@ -147,9 +146,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D8 RID: 10200
-	// (get) Token: 0x0601CFC9 RID: 118729 RVA: 0x00813D13 File Offset: 0x00811F13
-	// (set) Token: 0x0601CFCA RID: 118730 RVA: 0x00813D23 File Offset: 0x00811F23
+	// Token: 0x17002B73 RID: 11123
+	// (get) Token: 0x0601ACC7 RID: 109767 RVA: 0x0083A727 File Offset: 0x00838927
+	// (set) Token: 0x0601ACC8 RID: 109768 RVA: 0x0083A737 File Offset: 0x00838937
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ProxyRenderTrail
 	{
@@ -163,9 +162,9 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027D9 RID: 10201
-	// (get) Token: 0x0601CFCB RID: 118731 RVA: 0x00813D34 File Offset: 0x00811F34
-	// (set) Token: 0x0601CFCC RID: 118732 RVA: 0x00813D44 File Offset: 0x00811F44
+	// Token: 0x17002B74 RID: 11124
+	// (get) Token: 0x0601ACC9 RID: 109769 RVA: 0x0083A748 File Offset: 0x00838948
+	// (set) Token: 0x0601ACCA RID: 109770 RVA: 0x0083A758 File Offset: 0x00838958
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float DitherRemap
 	{
@@ -179,44 +178,40 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFCD RID: 118733 RVA: 0x00813D55 File Offset: 0x00811F55
+	// Token: 0x0601ACCB RID: 109771 RVA: 0x0083A769 File Offset: 0x00838969
 	private void PreBodyInfoRuntimeInitEvent(FName bodyName)
 	{
 		this.PreBodyInfoRuntimeInit(bodyName);
 	}
 
-	// Token: 0x0601CFCE RID: 118734 RVA: 0x00813D5E File Offset: 0x00811F5E
+	// Token: 0x0601ACCC RID: 109772 RVA: 0x0083A772 File Offset: 0x00838972
 	private void PostBodyInfoRuntimeInitEvent(FName bodyName)
 	{
 		this.PostBodyInfoRuntimeInit(bodyName);
 	}
 
-	// Token: 0x0601CFCF RID: 118735 RVA: 0x00813D68 File Offset: 0x00811F68
+	// Token: 0x0601ACCD RID: 109773 RVA: 0x0083A77C File Offset: 0x0083897C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float QuickInitAndAddData(UObject data, [Nullable(2)] ASkeletalMeshActor meshActor = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("QuickInitAndAddData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__QuickInitAndAddData_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("QuickInitAndAddData"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__QuickInitAndAddData_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddData_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->meshActor) = ((meshActor != null) ? meshActor.NativePtr : ((IntPtr)0));
+			return this.QuickInitAndAddData_Implementation(data, meshActor);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__QuickInitAndAddData_FunctionParams* ptr = stackalloc CharRenderingComponent.__QuickInitAndAddData_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddData_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->meshActor) = ((meshActor != null) ? meshActor.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFD0 RID: 118736 RVA: 0x00813E08 File Offset: 0x00812008
+	// Token: 0x0601ACCE RID: 109774 RVA: 0x0083A834 File Offset: 0x00838A34
 	[NullableContext(1)]
 	protected float QuickInitAndAddData_Implementation(UObject data, [Nullable(2)] ASkeletalMeshActor meshActor = null)
 	{
@@ -234,32 +229,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)num;
 	}
 
-	// Token: 0x0601CFD1 RID: 118737 RVA: 0x00813E5C File Offset: 0x0081205C
+	// Token: 0x0601ACCF RID: 109775 RVA: 0x0083A888 File Offset: 0x00838A88
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float QuickInitAndAddDataWithMeshComponent(UObject data, [Nullable(2)] UMeshComponent meshComponent = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("QuickInitAndAddDataWithMeshComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("QuickInitAndAddDataWithMeshComponent"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->meshComponent) = ((meshComponent != null) ? meshComponent.NativePtr : ((IntPtr)0));
+			return this.QuickInitAndAddDataWithMeshComponent_Implementation(data, meshComponent);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams* ptr = stackalloc CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->meshComponent) = ((meshComponent != null) ? meshComponent.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFD2 RID: 118738 RVA: 0x00813EFC File Offset: 0x008120FC
+	// Token: 0x0601ACD0 RID: 109776 RVA: 0x0083A940 File Offset: 0x00838B40
 	[NullableContext(1)]
 	protected float QuickInitAndAddDataWithMeshComponent_Implementation(UObject data, [Nullable(2)] UMeshComponent meshComponent = null)
 	{
@@ -277,32 +268,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)num;
 	}
 
-	// Token: 0x0601CFD3 RID: 118739 RVA: 0x00813F4C File Offset: 0x0081214C
+	// Token: 0x0601ACD1 RID: 109777 RVA: 0x0083A990 File Offset: 0x00838B90
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float QuickInitAndAddDataGroup(UObject data, [Nullable(2)] ASkeletalMeshActor meshActor = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("QuickInitAndAddDataGroup"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("QuickInitAndAddDataGroup"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->meshActor) = ((meshActor != null) ? meshActor.NativePtr : ((IntPtr)0));
+			return this.QuickInitAndAddDataGroup_Implementation(data, meshActor);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams* ptr = stackalloc CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->meshActor) = ((meshActor != null) ? meshActor.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFD4 RID: 118740 RVA: 0x00813FEC File Offset: 0x008121EC
+	// Token: 0x0601ACD2 RID: 109778 RVA: 0x0083AA48 File Offset: 0x00838C48
 	[NullableContext(1)]
 	protected float QuickInitAndAddDataGroup_Implementation(UObject data, [Nullable(2)] ASkeletalMeshActor meshActor = null)
 	{
@@ -320,32 +307,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)num;
 	}
 
-	// Token: 0x0601CFD5 RID: 118741 RVA: 0x00814040 File Offset: 0x00812240
+	// Token: 0x0601ACD3 RID: 109779 RVA: 0x0083AA9C File Offset: 0x00838C9C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float QuickInitAndAddDataGroupWithMeshComponent(UObject data, [Nullable(2)] UMeshComponent meshComponent = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("QuickInitAndAddDataGroupWithMeshComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("QuickInitAndAddDataGroupWithMeshComponent"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->meshComponent) = ((meshComponent != null) ? meshComponent.NativePtr : ((IntPtr)0));
+			return this.QuickInitAndAddDataGroupWithMeshComponent_Implementation(data, meshComponent);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams* ptr = stackalloc CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->meshComponent) = ((meshComponent != null) ? meshComponent.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFD6 RID: 118742 RVA: 0x008140E0 File Offset: 0x008122E0
+	// Token: 0x0601ACD4 RID: 109780 RVA: 0x0083AB54 File Offset: 0x00838D54
 	[NullableContext(1)]
 	protected float QuickInitAndAddDataGroupWithMeshComponent_Implementation(UObject data, [Nullable(2)] UMeshComponent meshComponent = null)
 	{
@@ -363,28 +346,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)num;
 	}
 
-	// Token: 0x0601CFD7 RID: 118743 RVA: 0x00814130 File Offset: 0x00812330
+	// Token: 0x0601ACD5 RID: 109781 RVA: 0x0083ABA4 File Offset: 0x00838DA4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void Init(ECharacterRenderingType renderType)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Init"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__Init_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Init"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__Init_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__Init_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->renderType) = (byte)renderType;
+			this.Init_Implementation(renderType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__Init_FunctionParams* ptr = stackalloc CharRenderingComponent.__Init_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__Init_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->renderType) = (byte)renderType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFD8 RID: 118744 RVA: 0x008141A8 File Offset: 0x008123A8
+	// Token: 0x0601ACD6 RID: 109782 RVA: 0x0083AC34 File Offset: 0x00838E34
 	protected unsafe void Init_Implementation(ECharacterRenderingType renderType)
 	{
 		if (!this.IsValid())
@@ -471,7 +451,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFD9 RID: 118745 RVA: 0x008143FC File Offset: 0x008125FC
+	// Token: 0x0601ACD7 RID: 109783 RVA: 0x0083AE88 File Offset: 0x00839088
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private unsafe CharRenderBase AddRenderCompDynamic(CharRenderBase comp)
@@ -526,29 +506,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return comp;
 	}
 
-	// Token: 0x0601CFDA RID: 118746 RVA: 0x008145A0 File Offset: 0x008127A0
+	// Token: 0x0601ACD8 RID: 109784 RVA: 0x0083B02C File Offset: 0x0083922C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetLogicOwner(AActor owner)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetLogicOwner"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetLogicOwner_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetLogicOwner"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetLogicOwner_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetLogicOwner_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->owner) = ((owner != null) ? owner.NativePtr : ((IntPtr)0));
+			this.SetLogicOwner_Implementation(owner);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetLogicOwner_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetLogicOwner_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetLogicOwner_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->owner) = ((owner != null) ? owner.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFDB RID: 118747 RVA: 0x00814624 File Offset: 0x00812824
+	// Token: 0x0601ACD9 RID: 109785 RVA: 0x0083B0C6 File Offset: 0x008392C6
 	[NullableContext(2)]
 	protected void SetLogicOwner_Implementation(AActor owner)
 	{
@@ -559,30 +536,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFDC RID: 118748 RVA: 0x0081464C File Offset: 0x0081284C
+	// Token: 0x0601ACDA RID: 109786 RVA: 0x0083B0EC File Offset: 0x008392EC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddComponent(string skelName, UMeshComponent skeletalComp)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddComponent"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddComponent_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
-			*(&ptr2->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+			this.AddComponent_Implementation(skelName, skeletalComp);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddComponent_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		*(&ptr->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFDD RID: 118749 RVA: 0x008146E0 File Offset: 0x008128E0
+	// Token: 0x0601ACDB RID: 109787 RVA: 0x0083B194 File Offset: 0x00839394
 	[NullableContext(1)]
 	protected void AddComponent_Implementation(string skelName, UMeshComponent skeletalComp)
 	{
@@ -593,59 +567,53 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponentInner(skelName, skeletalComp, false);
 	}
 
-	// Token: 0x0601CFDE RID: 118750 RVA: 0x0081471C File Offset: 0x0081291C
+	// Token: 0x0601ACDC RID: 109788 RVA: 0x0083B1D0 File Offset: 0x008393D0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddComponentWithEmptyMaterial(string skelName, UMeshComponent skeletalComp)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddComponentWithEmptyMaterial"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddComponentWithEmptyMaterial"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
-			*(&ptr2->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+			this.AddComponentWithEmptyMaterial_Implementation(skelName, skeletalComp);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		*(&ptr->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFDF RID: 118751 RVA: 0x008147AD File Offset: 0x008129AD
+	// Token: 0x0601ACDD RID: 109789 RVA: 0x0083B278 File Offset: 0x00839478
 	[NullableContext(1)]
 	protected void AddComponentWithEmptyMaterial_Implementation(string skelName, UMeshComponent skeletalComp)
 	{
 		this.AddComponentInner(skelName, skeletalComp, true);
 	}
 
-	// Token: 0x0601CFE0 RID: 118752 RVA: 0x008147B8 File Offset: 0x008129B8
+	// Token: 0x0601ACDE RID: 109790 RVA: 0x0083B284 File Offset: 0x00839484
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveComponent(string skelName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveComponent"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveComponent_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
+			this.RemoveComponent_Implementation(skelName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveComponent_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFE1 RID: 118753 RVA: 0x00814834 File Offset: 0x00812A34
+	// Token: 0x0601ACDF RID: 109791 RVA: 0x0083B318 File Offset: 0x00839518
 	[NullableContext(1)]
 	protected void RemoveComponent_Implementation(string skelName)
 	{
@@ -656,30 +624,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.RemoveComponentInner(skelName);
 	}
 
-	// Token: 0x0601CFE2 RID: 118754 RVA: 0x0081486C File Offset: 0x00812A6C
+	// Token: 0x0601ACE0 RID: 109792 RVA: 0x0083B350 File Offset: 0x00839550
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddComponentByCase(ECharacterControllerCaseType caseType, UMeshComponent skeletalComp)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddComponentByCase"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddComponentByCase_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddComponentByCase"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddComponentByCase_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddComponentByCase_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->caseType) = (byte)caseType;
-			*(&ptr2->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+			this.AddComponentByCase_Implementation(caseType, skeletalComp);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddComponentByCase_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddComponentByCase_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddComponentByCase_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->caseType) = (byte)caseType;
+		*(&ptr->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFE3 RID: 118755 RVA: 0x008148FC File Offset: 0x00812AFC
+	// Token: 0x0601ACE1 RID: 109793 RVA: 0x0083B3F4 File Offset: 0x008395F4
 	[NullableContext(2)]
 	protected void AddComponentByCase_Implementation(ECharacterControllerCaseType caseType, UMeshComponent skeletalComp)
 	{
@@ -700,28 +665,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFE4 RID: 118756 RVA: 0x00814950 File Offset: 0x00812B50
+	// Token: 0x0601ACE2 RID: 109794 RVA: 0x0083B448 File Offset: 0x00839648
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveComponentByCase(ECharacterControllerCaseType caseType)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveComponentByCase"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveComponentByCase_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveComponentByCase"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveComponentByCase_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponentByCase_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->caseType) = (byte)caseType;
+			this.RemoveComponentByCase_Implementation(caseType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveComponentByCase_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveComponentByCase_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponentByCase_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->caseType) = (byte)caseType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFE5 RID: 118757 RVA: 0x008149C8 File Offset: 0x00812BC8
+	// Token: 0x0601ACE3 RID: 109795 RVA: 0x0083B4D8 File Offset: 0x008396D8
 	protected void RemoveComponentByCase_Implementation(ECharacterControllerCaseType caseType)
 	{
 		string text = RenderConfig.MaterialControlAllCaseArray[(int)caseType];
@@ -731,7 +693,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFE6 RID: 118758 RVA: 0x008149E8 File Offset: 0x00812BE8
+	// Token: 0x0601ACE4 RID: 109796 RVA: 0x0083B4F8 File Offset: 0x008396F8
 	[NullableContext(1)]
 	public void AddComponentInner(string skelName, UMeshComponent skeletalComp, bool useEmptyMaterial)
 	{
@@ -766,31 +728,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponentForDecalShadow(skelName, skeletalComp);
 	}
 
-	// Token: 0x0601CFE7 RID: 118759 RVA: 0x00814A80 File Offset: 0x00812C80
+	// Token: 0x0601ACE5 RID: 109797 RVA: 0x0083B590 File Offset: 0x00839790
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddComponentInnerV2(string skelName, UMeshComponent skeletalComp, bool useEmptyMaterial)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddComponentInnerV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddComponentInnerV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddComponentInnerV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddComponentInnerV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddComponentInnerV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
-			*(&ptr2->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
-			ptr2->useEmptyMaterial = useEmptyMaterial;
+			this.AddComponentInnerV2_Implementation(skelName, skeletalComp, useEmptyMaterial);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddComponentInnerV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddComponentInnerV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddComponentInnerV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		*(&ptr->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+		ptr->useEmptyMaterial = useEmptyMaterial;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFE8 RID: 118760 RVA: 0x00814B18 File Offset: 0x00812D18
+	// Token: 0x0601ACE6 RID: 109798 RVA: 0x0083B640 File Offset: 0x00839840
 	[NullableContext(1)]
 	protected void AddComponentInnerV2_Implementation(string skelName, UMeshComponent skeletalComp, bool useEmptyMaterial)
 	{
@@ -802,7 +761,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFE9 RID: 118761 RVA: 0x00814B4C File Offset: 0x00812D4C
+	// Token: 0x0601ACE7 RID: 109799 RVA: 0x0083B674 File Offset: 0x00839874
 	[NullableContext(1)]
 	public void RemoveComponentInner(string skelName)
 	{
@@ -831,29 +790,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.RemoveComponentFromDecalShadow(skelName);
 	}
 
-	// Token: 0x0601CFEA RID: 118762 RVA: 0x00814BD0 File Offset: 0x00812DD0
+	// Token: 0x0601ACE8 RID: 109800 RVA: 0x0083B6F8 File Offset: 0x008398F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveComponentInnerV2(string skelName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveComponentInnerV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveComponentInnerV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
+			this.RemoveComponentInnerV2_Implementation(skelName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFEB RID: 118763 RVA: 0x00814C4C File Offset: 0x00812E4C
+	// Token: 0x0601ACE9 RID: 109801 RVA: 0x0083B78C File Offset: 0x0083998C
 	[NullableContext(1)]
 	protected void RemoveComponentInnerV2_Implementation(string skelName)
 	{
@@ -864,32 +820,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFEC RID: 118764 RVA: 0x00814C74 File Offset: 0x00812E74
+	// Token: 0x0601ACEA RID: 109802 RVA: 0x0083B7B4 File Offset: 0x008399B4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	[return: Nullable(2)]
 	public unsafe virtual USkeletalMeshComponent GetSkeletalMeshComponent(string skelName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetSkeletalMeshComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetSkeletalMeshComponent"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->skelName), skelName);
+			return this.GetSkeletalMeshComponent_Implementation(skelName);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->skelName), skelName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601CFED RID: 118765 RVA: 0x00814CFC File Offset: 0x00812EFC
+	// Token: 0x0601ACEB RID: 109803 RVA: 0x0083B854 File Offset: 0x00839A54
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	protected USkeletalMeshComponent GetSkeletalMeshComponent_Implementation(string skelName)
@@ -918,31 +870,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return null;
 	}
 
-	// Token: 0x0601CFEE RID: 118766 RVA: 0x00814D6C File Offset: 0x00812F6C
+	// Token: 0x0601ACEC RID: 109804 RVA: 0x0083B8C4 File Offset: 0x00839AC4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual FName GetSkeletalMeshComponentBodyName(USkeletalMeshComponent skeletalComp)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetSkeletalMeshComponentBodyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetSkeletalMeshComponentBodyName"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+			return this.GetSkeletalMeshComponentBodyName_Implementation(skeletalComp);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		FName _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->skeletalComp) = ((skeletalComp != null) ? skeletalComp.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		FName _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFEF RID: 118767 RVA: 0x00814DF8 File Offset: 0x00812FF8
+	// Token: 0x0601ACED RID: 109805 RVA: 0x0083B964 File Offset: 0x00839B64
 	[NullableContext(1)]
 	protected FName GetSkeletalMeshComponentBodyName_Implementation(USkeletalMeshComponent skeletalComp)
 	{
@@ -957,85 +905,74 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return FName.NAME_None;
 	}
 
-	// Token: 0x0601CFF0 RID: 118768 RVA: 0x00814E2C File Offset: 0x0081302C
+	// Token: 0x0601ACEE RID: 109806 RVA: 0x0083B998 File Offset: 0x00839B98
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool CheckInit()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("CheckInit"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__CheckInit_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("CheckInit"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__CheckInit_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__CheckInit_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.CheckInit_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__CheckInit_FunctionParams* ptr = stackalloc CharRenderingComponent.__CheckInit_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__CheckInit_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFF1 RID: 118769 RVA: 0x00814EA1 File Offset: 0x008130A1
+	// Token: 0x0601ACEF RID: 109807 RVA: 0x0083BA22 File Offset: 0x00839C22
 	protected bool CheckInit_Implementation()
 	{
 		return this.IsInit;
 	}
 
-	// Token: 0x0601CFF2 RID: 118770 RVA: 0x00814EAC File Offset: 0x008130AC
+	// Token: 0x0601ACF0 RID: 109808 RVA: 0x0083BA2C File Offset: 0x00839C2C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDebug(bool value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDebug"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetDebug_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDebug"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetDebug_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetDebug_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->value = value;
+			this.SetDebug_Implementation(value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetDebug_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetDebug_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetDebug_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFF3 RID: 118771 RVA: 0x00814F22 File Offset: 0x00813122
+	// Token: 0x0601ACF1 RID: 109809 RVA: 0x0083BAB8 File Offset: 0x00839CB8
 	protected void SetDebug_Implementation(bool value)
 	{
 		this.IsDebug = value;
 	}
 
-	// Token: 0x0601CFF4 RID: 118772 RVA: 0x00814F2C File Offset: 0x0081312C
+	// Token: 0x0601ACF2 RID: 109810 RVA: 0x0083BAC4 File Offset: 0x00839CC4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual PD_MaterialDebug_C GetDebugInfo()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDebugInfo"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetDebugInfo_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDebugInfo"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetDebugInfo_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetDebugInfo_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetDebugInfo_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		PD_MaterialDebug_C orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<PD_MaterialDebug_C>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetDebugInfo_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetDebugInfo_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetDebugInfo_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		PD_MaterialDebug_C orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<PD_MaterialDebug_C>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601CFF5 RID: 118773 RVA: 0x00814FA8 File Offset: 0x008131A8
+	// Token: 0x0601ACF3 RID: 109811 RVA: 0x0083BB54 File Offset: 0x00839D54
 	[NullableContext(2)]
 	protected PD_MaterialDebug_C GetDebugInfo_Implementation()
 	{
@@ -1053,7 +990,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return null;
 	}
 
-	// Token: 0x0601CFF6 RID: 118774 RVA: 0x00814FE5 File Offset: 0x008131E5
+	// Token: 0x0601ACF4 RID: 109812 RVA: 0x0083BB91 File Offset: 0x00839D91
 	[NullableContext(2)]
 	public CharRenderBase GetComponent(int componentId)
 	{
@@ -1064,34 +1001,31 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return null;
 	}
 
-	// Token: 0x0601CFF7 RID: 118775 RVA: 0x0081500B File Offset: 0x0081320B
+	// Token: 0x0601ACF5 RID: 109813 RVA: 0x0083BBB7 File Offset: 0x00839DB7
 	public void Tick(float delta)
 	{
 		this.Update(delta);
 	}
 
-	// Token: 0x0601CFF8 RID: 118776 RVA: 0x00815014 File Offset: 0x00813214
+	// Token: 0x0601ACF6 RID: 109814 RVA: 0x0083BBC0 File Offset: 0x00839DC0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveEndPlay(EEndPlayReason endPlayReason)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveEndPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UActorComponent.__ReceiveEndPlay_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveEndPlay"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UActorComponent.__ReceiveEndPlay_FunctionParams*)ptr + 15L / (long)sizeof(UActorComponent.__ReceiveEndPlay_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(byte*)(&ptr2->EndPlayReason) = (byte)endPlayReason;
+			this.ReceiveEndPlay_Implementation(endPlayReason);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UActorComponent.__ReceiveEndPlay_FunctionParams* ptr = stackalloc UActorComponent.__ReceiveEndPlay_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UActorComponent.__ReceiveEndPlay_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(byte*)(&ptr->EndPlayReason) = (byte)endPlayReason;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601CFF9 RID: 118777 RVA: 0x0081508D File Offset: 0x0081328D
+	// Token: 0x0601ACF7 RID: 109815 RVA: 0x0083BC4F File Offset: 0x00839E4F
 	protected virtual void ReceiveEndPlay_Implementation(EEndPlayReason endPlayReason)
 	{
 		if (endPlayReason != EEndPlayReason.EndPlayInEditor)
@@ -1100,13 +1034,13 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601CFFA RID: 118778 RVA: 0x00815099 File Offset: 0x00813299
+	// Token: 0x0601ACF8 RID: 109816 RVA: 0x0083BC5B File Offset: 0x00839E5B
 	public float GetDeltaTime()
 	{
 		return this.DeltaTime;
 	}
 
-	// Token: 0x0601CFFB RID: 118779 RVA: 0x008150A4 File Offset: 0x008132A4
+	// Token: 0x0601ACF9 RID: 109817 RVA: 0x0083BC64 File Offset: 0x00839E64
 	[NullableContext(1)]
 	public float GetTimeDilation(LogicalTimeDilationOut outVal)
 	{
@@ -1137,37 +1071,33 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return num;
 	}
 
-	// Token: 0x0601CFFC RID: 118780 RVA: 0x00815144 File Offset: 0x00813344
+	// Token: 0x0601ACFA RID: 109818 RVA: 0x0083BD04 File Offset: 0x00839F04
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool GetInWater(float depthThreshold = 2f)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetInWater"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetInWater_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetInWater"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetInWater_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetInWater_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->depthThreshold = depthThreshold;
+			return this.GetInWater_Implementation(depthThreshold);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetInWater_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetInWater_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetInWater_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->depthThreshold = depthThreshold;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601CFFD RID: 118781 RVA: 0x008151C0 File Offset: 0x008133C0
+	// Token: 0x0601ACFB RID: 109819 RVA: 0x0083BD96 File Offset: 0x00839F96
 	protected bool GetInWater_Implementation(float depthThreshold = 2f)
 	{
 		CharSceneInteraction charSceneInteraction = this.GetComponent(5) as CharSceneInteraction;
 		return charSceneInteraction != null && charSceneInteraction.GetInWater(depthThreshold);
 	}
 
-	// Token: 0x0601CFFE RID: 118782 RVA: 0x008151DC File Offset: 0x008133DC
+	// Token: 0x0601ACFC RID: 109820 RVA: 0x0083BDB0 File Offset: 0x00839FB0
 	public float GetWaterHitLocationZ()
 	{
 		CharSceneInteraction charSceneInteraction = this.GetComponent(5) as CharSceneInteraction;
@@ -1178,36 +1108,32 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return 0f;
 	}
 
-	// Token: 0x0601CFFF RID: 118783 RVA: 0x00815208 File Offset: 0x00813408
+	// Token: 0x0601ACFD RID: 109821 RVA: 0x0083BDDC File Offset: 0x00839FDC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool GetInAudioShr()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetInAudioShr"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetInAudioShr_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetInAudioShr"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetInAudioShr_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetInAudioShr_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetInAudioShr_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetInAudioShr_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetInAudioShr_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetInAudioShr_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D000 RID: 118784 RVA: 0x00815280 File Offset: 0x00813480
+	// Token: 0x0601ACFE RID: 109822 RVA: 0x0083BE68 File Offset: 0x0083A068
 	protected bool GetInAudioShr_Implementation()
 	{
 		CharSceneInteraction charSceneInteraction = this.GetComponent(5) as CharSceneInteraction;
 		return charSceneInteraction != null && charSceneInteraction.GetInAudioShr();
 	}
 
-	// Token: 0x0601D001 RID: 118785 RVA: 0x008152A8 File Offset: 0x008134A8
+	// Token: 0x0601ACFF RID: 109823 RVA: 0x0083BE90 File Offset: 0x0083A090
 	public FName GetAudioShrTag()
 	{
 		CharSceneInteraction charSceneInteraction = this.GetComponent(5) as CharSceneInteraction;
@@ -1218,33 +1144,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return charSceneInteraction.GetAudioShrTag();
 	}
 
-	// Token: 0x0601D002 RID: 118786 RVA: 0x008152D1 File Offset: 0x008134D1
+	// Token: 0x0601AD00 RID: 109824 RVA: 0x0083BEB9 File Offset: 0x0083A0B9
 	public ECharacterRenderingType? GetRenderType()
 	{
 		return this.RenderType;
 	}
 
-	// Token: 0x0601D003 RID: 118787 RVA: 0x008152DC File Offset: 0x008134DC
+	// Token: 0x0601AD01 RID: 109825 RVA: 0x0083BEC4 File Offset: 0x0083A0C4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ResetAllRenderingState()
+	public virtual void ResetAllRenderingState()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ResetAllRenderingState"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ResetAllRenderingState"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ResetAllRenderingState_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D004 RID: 118788 RVA: 0x0081534C File Offset: 0x0081354C
+	// Token: 0x0601AD02 RID: 109826 RVA: 0x0083BF20 File Offset: 0x0083A120
 	protected void ResetAllRenderingState_Implementation()
 	{
 		foreach (CharRenderBase charRenderBase in this.AllRenderComps)
@@ -1266,7 +1186,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		allMaterialControlRuntimeDataGroupMap.Clear();
 	}
 
-	// Token: 0x0601D005 RID: 118789 RVA: 0x00815408 File Offset: 0x00813608
+	// Token: 0x0601AD03 RID: 109827 RVA: 0x0083BFDC File Offset: 0x0083A1DC
 	public void PreBodyInfoRuntimeInit(FName bodyName)
 	{
 		foreach (CharRenderBase charRenderBase in this.AllRenderComps)
@@ -1278,7 +1198,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D006 RID: 118790 RVA: 0x00815464 File Offset: 0x00813664
+	// Token: 0x0601AD04 RID: 109828 RVA: 0x0083C038 File Offset: 0x0083A238
 	public void PostBodyInfoRuntimeInit(FName bodyName)
 	{
 		foreach (CharRenderBase charRenderBase in this.AllRenderComps)
@@ -1290,7 +1210,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D007 RID: 118791 RVA: 0x008154C0 File Offset: 0x008136C0
+	// Token: 0x0601AD05 RID: 109829 RVA: 0x0083C094 File Offset: 0x0083A294
 	public void ResetAllRenderingStateForDebug()
 	{
 		CharMaterialController charMaterialController = this.GetComponent(2) as CharMaterialController;
@@ -1301,63 +1221,55 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D008 RID: 118792 RVA: 0x008154F8 File Offset: 0x008136F8
+	// Token: 0x0601AD06 RID: 109830 RVA: 0x0083C0CC File Offset: 0x0083A2CC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual int AddMaterialControllerDataGroup(UObject data)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddMaterialControllerDataGroup"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddMaterialControllerDataGroup"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+			return this.AddMaterialControllerDataGroup_Implementation(data);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		int _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		int _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D009 RID: 118793 RVA: 0x00815582 File Offset: 0x00813782
+	// Token: 0x0601AD07 RID: 109831 RVA: 0x0083C16C File Offset: 0x0083A36C
 	[NullableContext(2)]
 	protected int AddMaterialControllerDataGroup_Implementation(UObject data)
 	{
 		return (int)this.AddMaterialControllerDataGroupWithAnimObject(data, null);
 	}
 
-	// Token: 0x0601D00A RID: 118794 RVA: 0x00815590 File Offset: 0x00813790
+	// Token: 0x0601AD08 RID: 109832 RVA: 0x0083C178 File Offset: 0x0083A378
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float AddMaterialControllerDataGroupWithAnimObject(UObject data, USkeletalMeshComponent animObject = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddMaterialControllerDataGroupWithAnimObject"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddMaterialControllerDataGroupWithAnimObject"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->animObject) = ((animObject != null) ? animObject.NativePtr : ((IntPtr)0));
+			return this.AddMaterialControllerDataGroupWithAnimObject_Implementation(data, animObject);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->animObject) = ((animObject != null) ? animObject.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D00B RID: 118795 RVA: 0x00815630 File Offset: 0x00813830
+	// Token: 0x0601AD09 RID: 109833 RVA: 0x0083C230 File Offset: 0x0083A430
 	[NullableContext(2)]
 	protected unsafe float AddMaterialControllerDataGroupWithAnimObject_Implementation(UObject data, USkeletalMeshComponent animObject = null)
 	{
@@ -1401,7 +1313,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)num2;
 	}
 
-	// Token: 0x0601D00C RID: 118796 RVA: 0x00815754 File Offset: 0x00813954
+	// Token: 0x0601AD0A RID: 109834 RVA: 0x0083C354 File Offset: 0x0083A554
 	public void CleanOriginEffect()
 	{
 		CharMaterialControllerV2 charMaterialControllerV = this.GetComponent(14) as CharMaterialControllerV2;
@@ -1411,28 +1323,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D00D RID: 118797 RVA: 0x00815778 File Offset: 0x00813978
+	// Token: 0x0601AD0B RID: 109835 RVA: 0x0083C378 File Offset: 0x0083A578
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveMaterialControllerDataGroup(int handle)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveMaterialControllerDataGroup"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveMaterialControllerDataGroup"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->handle = handle;
+			this.RemoveMaterialControllerDataGroup_Implementation(handle);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->handle = handle;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D00E RID: 118798 RVA: 0x008157F0 File Offset: 0x008139F0
+	// Token: 0x0601AD0C RID: 109836 RVA: 0x0083C404 File Offset: 0x0083A604
 	protected void RemoveMaterialControllerDataGroup_Implementation(int handle)
 	{
 		CharMaterialControlRuntimeDataGroup charMaterialControlRuntimeDataGroup;
@@ -1442,28 +1351,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D00F RID: 118799 RVA: 0x00815814 File Offset: 0x00813A14
+	// Token: 0x0601AD0D RID: 109837 RVA: 0x0083C428 File Offset: 0x0083A628
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveMaterialControllerDataGroupWithEnding(int handle)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveMaterialControllerDataGroupWithEnding"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveMaterialControllerDataGroupWithEnding"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->handle = handle;
+			this.RemoveMaterialControllerDataGroupWithEnding_Implementation(handle);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->handle = handle;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D010 RID: 118800 RVA: 0x0081588C File Offset: 0x00813A8C
+	// Token: 0x0601AD0E RID: 109838 RVA: 0x0083C4B4 File Offset: 0x0083A6B4
 	protected void RemoveMaterialControllerDataGroupWithEnding_Implementation(int handle)
 	{
 		CharMaterialControlRuntimeDataGroup charMaterialControlRuntimeDataGroup;
@@ -1473,28 +1379,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D011 RID: 118801 RVA: 0x008158AF File Offset: 0x00813AAF
+	// Token: 0x0601AD0F RID: 109839 RVA: 0x0083C4D7 File Offset: 0x0083A6D7
 	[NullableContext(2)]
 	public AActor GetCachedOwner()
 	{
 		return this.CachedOwner;
 	}
 
-	// Token: 0x0601D012 RID: 118802 RVA: 0x008158B7 File Offset: 0x00813AB7
+	// Token: 0x0601AD10 RID: 109840 RVA: 0x0083C4DF File Offset: 0x0083A6DF
 	[NullableContext(1)]
 	public string GetCachedOwnerName()
 	{
 		return this.CachedOwnerName;
 	}
 
-	// Token: 0x0601D013 RID: 118803 RVA: 0x008158BF File Offset: 0x00813ABF
+	// Token: 0x0601AD11 RID: 109841 RVA: 0x0083C4E7 File Offset: 0x0083A6E7
 	[NullableContext(2)]
 	public Entity GetCachedOwnerEntity()
 	{
 		return this.CachedOwnerEntity;
 	}
 
-	// Token: 0x0601D014 RID: 118804 RVA: 0x008158C8 File Offset: 0x00813AC8
+	// Token: 0x0601AD12 RID: 109842 RVA: 0x0083C4F0 File Offset: 0x0083A6F0
 	[NullableContext(2)]
 	private int AddMaterialControllerDataInner(PD_CharacterControllerData_C data, UObject userData = null, USkeletalMeshComponent animObject = null)
 	{
@@ -1529,12 +1435,12 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return num;
 	}
 
-	// Token: 0x0601D015 RID: 118805 RVA: 0x0081593D File Offset: 0x00813B3D
+	// Token: 0x0601AD13 RID: 109843 RVA: 0x0083C565 File Offset: 0x0083A765
 	public void OnRemoveMaterialController(int handle)
 	{
 	}
 
-	// Token: 0x0601D016 RID: 118806 RVA: 0x00815940 File Offset: 0x00813B40
+	// Token: 0x0601AD14 RID: 109844 RVA: 0x0083C568 File Offset: 0x0083A768
 	[NullableContext(2)]
 	private int AddMaterialControllerDataInnerV2([Nullable(1)] PD_CharacterControllerData_C data, UObject userData = null, USkeletalMeshComponent animObject = null)
 	{
@@ -1546,7 +1452,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return charMaterialControllerV.AddMaterialControllerData(data, userData, animObject);
 	}
 
-	// Token: 0x0601D017 RID: 118807 RVA: 0x0081596C File Offset: 0x00813B6C
+	// Token: 0x0601AD15 RID: 109845 RVA: 0x0083C594 File Offset: 0x0083A794
 	[NullableContext(2)]
 	public int AddMaterialControllerDataWithUserData(UObject data, UObject userData)
 	{
@@ -1554,33 +1460,29 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return this.AddMaterialControllerDataInner(data2, userData, null);
 	}
 
-	// Token: 0x0601D018 RID: 118808 RVA: 0x0081598C File Offset: 0x00813B8C
+	// Token: 0x0601AD16 RID: 109846 RVA: 0x0083C5B4 File Offset: 0x0083A7B4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float AddMaterialControllerDataWithAnimObject(UObject data, USkeletalMeshComponent animObject, UObject userData = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddMaterialControllerDataWithAnimObject"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddMaterialControllerDataWithAnimObject"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
-			*(&ptr2->animObject) = ((animObject != null) ? animObject.NativePtr : ((IntPtr)0));
-			*(&ptr2->userData) = ((userData != null) ? userData.NativePtr : ((IntPtr)0));
+			return this.AddMaterialControllerDataWithAnimObject_Implementation(data, animObject, userData);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		*(&ptr->animObject) = ((animObject != null) ? animObject.NativePtr : ((IntPtr)0));
+		*(&ptr->userData) = ((userData != null) ? userData.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D019 RID: 118809 RVA: 0x00815A40 File Offset: 0x00813C40
+	// Token: 0x0601AD17 RID: 109847 RVA: 0x0083C680 File Offset: 0x0083A880
 	[NullableContext(2)]
 	protected float AddMaterialControllerDataWithAnimObject_Implementation(UObject data, USkeletalMeshComponent animObject, UObject userData = null)
 	{
@@ -1588,31 +1490,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return (float)this.AddMaterialControllerDataInner(data2, userData, animObject);
 	}
 
-	// Token: 0x0601D01A RID: 118810 RVA: 0x00815A60 File Offset: 0x00813C60
+	// Token: 0x0601AD18 RID: 109848 RVA: 0x0083C6A0 File Offset: 0x0083A8A0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual int AddMaterialControllerData(UObject data)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddMaterialControllerData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddMaterialControllerData_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddMaterialControllerData"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddMaterialControllerData_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerData_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+			return this.AddMaterialControllerData_Implementation(data);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		int _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddMaterialControllerData_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddMaterialControllerData_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddMaterialControllerData_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->data) = ((data != null) ? data.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		int _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D01B RID: 118811 RVA: 0x00815AEC File Offset: 0x00813CEC
+	// Token: 0x0601AD19 RID: 109849 RVA: 0x0083C740 File Offset: 0x0083A940
 	[NullableContext(2)]
 	protected int AddMaterialControllerData_Implementation(UObject data)
 	{
@@ -1620,28 +1518,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return this.AddMaterialControllerDataInner(data2, null, null);
 	}
 
-	// Token: 0x0601D01C RID: 118812 RVA: 0x00815B0C File Offset: 0x00813D0C
+	// Token: 0x0601AD1A RID: 109850 RVA: 0x0083C760 File Offset: 0x0083A960
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveMaterialControllerData(int handle)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveMaterialControllerData"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveMaterialControllerData"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->handle = handle;
+			this.RemoveMaterialControllerData_Implementation(handle);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->handle = handle;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D01D RID: 118813 RVA: 0x00815B84 File Offset: 0x00813D84
+	// Token: 0x0601AD1B RID: 109851 RVA: 0x0083C7EC File Offset: 0x0083A9EC
 	protected void RemoveMaterialControllerData_Implementation(int handle)
 	{
 		if (this.UseMaterialContainerV2)
@@ -1666,7 +1561,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D01E RID: 118814 RVA: 0x00815BD0 File Offset: 0x00813DD0
+	// Token: 0x0601AD1C RID: 109852 RVA: 0x0083C838 File Offset: 0x0083AA38
 	public void RemoveAllUnloopedEffects()
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -1677,7 +1572,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.RemoveAllUnloopedEffects();
 	}
 
-	// Token: 0x0601D01F RID: 118815 RVA: 0x00815BF8 File Offset: 0x00813DF8
+	// Token: 0x0601AD1D RID: 109853 RVA: 0x0083C860 File Offset: 0x0083AA60
 	public void UpdateMaterialEffectsOnly()
 	{
 		if (this.UseMaterialContainerV2)
@@ -1691,29 +1586,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D020 RID: 118816 RVA: 0x00815C28 File Offset: 0x00813E28
+	// Token: 0x0601AD1E RID: 109854 RVA: 0x0083C890 File Offset: 0x0083AA90
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetEffectPause(int handle, bool paused)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetEffectPause"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetEffectPause_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetEffectPause"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetEffectPause_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetEffectPause_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->handle = handle;
-			ptr2->paused = paused;
+			this.SetEffectPause_Implementation(handle, paused);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetEffectPause_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetEffectPause_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetEffectPause_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->handle = handle;
+		ptr->paused = paused;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D021 RID: 118817 RVA: 0x00815CA8 File Offset: 0x00813EA8
+	// Token: 0x0601AD1F RID: 109855 RVA: 0x0083C924 File Offset: 0x0083AB24
 	protected void SetEffectPause_Implementation(int handle, bool paused)
 	{
 		if (this.UseMaterialContainerV2)
@@ -1727,28 +1619,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D022 RID: 118818 RVA: 0x00815CD8 File Offset: 0x00813ED8
+	// Token: 0x0601AD20 RID: 109856 RVA: 0x0083C954 File Offset: 0x0083AB54
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveMaterialControllerDataWithEnding(int handle)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveMaterialControllerDataWithEnding"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveMaterialControllerDataWithEnding"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->handle = handle;
+			this.RemoveMaterialControllerDataWithEnding_Implementation(handle);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->handle = handle;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D023 RID: 118819 RVA: 0x00815D50 File Offset: 0x00813F50
+	// Token: 0x0601AD21 RID: 109857 RVA: 0x0083C9E0 File Offset: 0x0083ABE0
 	protected void RemoveMaterialControllerDataWithEnding_Implementation(int handle)
 	{
 		if (this.UseMaterialContainerV2)
@@ -1773,7 +1662,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D024 RID: 118820 RVA: 0x00815D9C File Offset: 0x00813F9C
+	// Token: 0x0601AD22 RID: 109858 RVA: 0x0083CA2C File Offset: 0x0083AC2C
 	public unsafe void UpdateNpcDitherComponent()
 	{
 		if (!this.IsInit)
@@ -1806,29 +1695,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDitherEffect.UpdateNpcDitherComponent();
 	}
 
-	// Token: 0x0601D025 RID: 118821 RVA: 0x00815E88 File Offset: 0x00814088
+	// Token: 0x0601AD23 RID: 109859 RVA: 0x0083CB18 File Offset: 0x0083AD18
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDitherEffect(float ditherRate, ECharacterDitherType ditherType)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDitherEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetDitherEffect_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDitherEffect"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetDitherEffect_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetDitherEffect_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->ditherRate = ditherRate;
-			*(&ptr2->ditherType) = (byte)ditherType;
+			this.SetDitherEffect_Implementation(ditherRate, ditherType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetDitherEffect_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetDitherEffect_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetDitherEffect_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->ditherRate = ditherRate;
+		*(&ptr->ditherType) = (byte)ditherType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D026 RID: 118822 RVA: 0x00815F08 File Offset: 0x00814108
+	// Token: 0x0601AD24 RID: 109860 RVA: 0x0083CBB0 File Offset: 0x0083ADB0
 	protected void SetDitherEffect_Implementation(float ditherRate, ECharacterDitherType ditherType)
 	{
 		CharDitherEffect charDitherEffect = this.GetComponent(3) as CharDitherEffect;
@@ -1863,55 +1749,46 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D027 RID: 118823 RVA: 0x00815FE8 File Offset: 0x008141E8
+	// Token: 0x0601AD25 RID: 109861 RVA: 0x0083CC90 File Offset: 0x0083AE90
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDisableFightDither(bool disable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDisableFightDither"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetDisableFightDither_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDisableFightDither"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetDisableFightDither_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetDisableFightDither_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->disable = disable;
+			this.SetDisableFightDither_Implementation(disable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetDisableFightDither_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetDisableFightDither_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetDisableFightDither_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->disable = disable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D028 RID: 118824 RVA: 0x0081605E File Offset: 0x0081425E
+	// Token: 0x0601AD26 RID: 109862 RVA: 0x0083CD1C File Offset: 0x0083AF1C
 	protected void SetDisableFightDither_Implementation(bool disable)
 	{
 		this.DisableFightDither = disable;
 		this.SetDitherEffect(this.FightDitherRateCache, ECharacterDitherType.Fight);
 	}
 
-	// Token: 0x0601D029 RID: 118825 RVA: 0x00816074 File Offset: 0x00814274
+	// Token: 0x0601AD27 RID: 109863 RVA: 0x0083CD34 File Offset: 0x0083AF34
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void SetDitherApplyAll()
+	public virtual void SetDitherApplyAll()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDitherApplyAll"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDitherApplyAll"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.SetDitherApplyAll_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D02A RID: 118826 RVA: 0x008160E4 File Offset: 0x008142E4
+	// Token: 0x0601AD28 RID: 109864 RVA: 0x0083CD90 File Offset: 0x0083AF90
 	protected void SetDitherApplyAll_Implementation()
 	{
 		CharDitherEffect charDitherEffect = this.GetComponent(3) as CharDitherEffect;
@@ -1919,30 +1796,24 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		{
 			return;
 		}
-		charDitherEffect.SetDitherMask(new List<EKuroCharMeshPart>(), false);
+		charDitherEffect.SetDitherMask(Array.Empty<EKuroCharMeshPart>(), false);
 	}
 
-	// Token: 0x0601D02B RID: 118827 RVA: 0x00816110 File Offset: 0x00814310
+	// Token: 0x0601AD29 RID: 109865 RVA: 0x0083CDBC File Offset: 0x0083AFBC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void SetDitherApplyHeadsOnly()
+	public virtual void SetDitherApplyHeadsOnly()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDitherApplyHeadsOnly"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDitherApplyHeadsOnly"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.SetDitherApplyHeadsOnly_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D02C RID: 118828 RVA: 0x00816180 File Offset: 0x00814380
+	// Token: 0x0601AD2A RID: 109866 RVA: 0x0083CE18 File Offset: 0x0083B018
 	protected void SetDitherApplyHeadsOnly_Implementation()
 	{
 		CharDitherEffect charDitherEffect = this.GetComponent(3) as CharDitherEffect;
@@ -1950,31 +1821,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		{
 			return;
 		}
-		charDitherEffect.SetDitherMask(RenderConfig.MeshPartsHeadArray.ToList<EKuroCharMeshPart>(), true);
+		charDitherEffect.SetDitherMask(RenderConfig.MeshPartsHeadArray, true);
 	}
 
-	// Token: 0x0601D02D RID: 118829 RVA: 0x008161B0 File Offset: 0x008143B0
+	// Token: 0x0601AD2B RID: 109867 RVA: 0x0083CE44 File Offset: 0x0083B044
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDitherUseHeadMaskHideEffect(bool enable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDitherUseHeadMaskHideEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDitherUseHeadMaskHideEffect"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->enable = enable;
+			this.SetDitherUseHeadMaskHideEffect_Implementation(enable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->enable = enable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D02E RID: 118830 RVA: 0x00816228 File Offset: 0x00814428
+	// Token: 0x0601AD2C RID: 109868 RVA: 0x0083CED0 File Offset: 0x0083B0D0
 	protected void SetDitherUseHeadMaskHideEffect_Implementation(bool enable)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -1985,27 +1853,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.EnableTickGetHeadPosInAllMeshes(enable);
 	}
 
-	// Token: 0x0601D02F RID: 118831 RVA: 0x00816250 File Offset: 0x00814450
+	// Token: 0x0601AD2D RID: 109869 RVA: 0x0083CEF8 File Offset: 0x0083B0F8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void TempRemoveDither()
+	public virtual void TempRemoveDither()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TempRemoveDither"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TempRemoveDither"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.TempRemoveDither_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D030 RID: 118832 RVA: 0x008162C0 File Offset: 0x008144C0
+	// Token: 0x0601AD2E RID: 109870 RVA: 0x0083CF54 File Offset: 0x0083B154
 	protected void TempRemoveDither_Implementation()
 	{
 		CharDitherEffect charDitherEffect = this.GetComponent(3) as CharDitherEffect;
@@ -2016,27 +1878,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDitherEffect.TempRemoveDither();
 	}
 
-	// Token: 0x0601D031 RID: 118833 RVA: 0x008162E4 File Offset: 0x008144E4
+	// Token: 0x0601AD2F RID: 109871 RVA: 0x0083CF78 File Offset: 0x0083B178
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void TempRecoverDither()
+	public virtual void TempRecoverDither()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TempRecoverDither"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TempRecoverDither"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.TempRecoverDither_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D032 RID: 118834 RVA: 0x00816354 File Offset: 0x00814554
+	// Token: 0x0601AD30 RID: 109872 RVA: 0x0083CFD4 File Offset: 0x0083B1D4
 	protected void TempRecoverDither_Implementation()
 	{
 		CharDitherEffect charDitherEffect = this.GetComponent(3) as CharDitherEffect;
@@ -2047,11 +1903,15 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDitherEffect.TempRecoverDither();
 	}
 
-	// Token: 0x0601D033 RID: 118835 RVA: 0x00816378 File Offset: 0x00814578
+	// Token: 0x0601AD31 RID: 109873 RVA: 0x0083CFF8 File Offset: 0x0083B1F8
 	public void RegisterBodyEffect(int handle)
 	{
+		if (!this.IsInit)
+		{
+			return;
+		}
 		CharBodyEffect charBodyEffect = this.GetComponent(9) as CharBodyEffect;
-		if (this.IsInit && charBodyEffect == null)
+		if (charBodyEffect == null)
 		{
 			charBodyEffect = (this.AddRenderCompDynamic(new CharBodyEffect()) as CharBodyEffect);
 			if (charBodyEffect == null)
@@ -2062,7 +1922,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charBodyEffect.RegisterEffect(handle);
 	}
 
-	// Token: 0x0601D034 RID: 118836 RVA: 0x008163BC File Offset: 0x008145BC
+	// Token: 0x0601AD32 RID: 109874 RVA: 0x0083D03C File Offset: 0x0083B23C
 	public void UnregisterBodyEffect(int handle)
 	{
 		CharBodyEffect charBodyEffect = this.GetComponent(9) as CharBodyEffect;
@@ -2073,7 +1933,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charBodyEffect.UnregisterEffect(handle);
 	}
 
-	// Token: 0x0601D035 RID: 118837 RVA: 0x008163E4 File Offset: 0x008145E4
+	// Token: 0x0601AD33 RID: 109875 RVA: 0x0083D064 File Offset: 0x0083B264
 	protected void SetBodyEffectOpacity(float opacity)
 	{
 		CharBodyEffect charBodyEffect = this.GetComponent(9) as CharBodyEffect;
@@ -2084,29 +1944,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charBodyEffect.SetOpacity(opacity, ECharBodyEffectOpacityType.Default);
 	}
 
-	// Token: 0x0601D036 RID: 118838 RVA: 0x0081640C File Offset: 0x0081460C
+	// Token: 0x0601AD34 RID: 109876 RVA: 0x0083D08C File Offset: 0x0083B28C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetOpacityConsiderVisibility()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetOpacityConsiderVisibility"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetOpacityConsiderVisibility"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetOpacityConsiderVisibility_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams* ptr = stackalloc CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D037 RID: 118839 RVA: 0x00816484 File Offset: 0x00814684
+	// Token: 0x0601AD35 RID: 109877 RVA: 0x0083D118 File Offset: 0x0083B318
 	protected float GetOpacityConsiderVisibility_Implementation()
 	{
 		CharBodyEffect charBodyEffect = this.GetComponent(9) as CharBodyEffect;
@@ -2117,7 +1973,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return charBodyEffect.GetOpacityConsiderVisibility();
 	}
 
-	// Token: 0x0601D038 RID: 118840 RVA: 0x008164B0 File Offset: 0x008146B0
+	// Token: 0x0601AD36 RID: 109878 RVA: 0x0083D144 File Offset: 0x0083B344
 	[NullableContext(2)]
 	public void AddInteraction(PDA_InteractionPlayerConfig_C data, float updateInternalScale = 1f)
 	{
@@ -2143,7 +1999,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D039 RID: 118841 RVA: 0x00816540 File Offset: 0x00814740
+	// Token: 0x0601AD37 RID: 109879 RVA: 0x0083D1D4 File Offset: 0x0083B3D4
 	public void RemoveInteraction()
 	{
 		CharSceneInteraction charSceneInteraction = this.GetComponent(5) as CharSceneInteraction;
@@ -2158,7 +2014,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D03A RID: 118842 RVA: 0x0081657B File Offset: 0x0081477B
+	// Token: 0x0601AD38 RID: 109880 RVA: 0x0083D20F File Offset: 0x0083B40F
 	[NullableContext(2)]
 	public void AddMotorExtraCompInner(PD_MotorExtraComponentData_C data)
 	{
@@ -2174,7 +2030,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		motorExtraComp.AddAllMotorExtraComponent_Func(data, base.GetOwner());
 	}
 
-	// Token: 0x0601D03B RID: 118843 RVA: 0x008165B4 File Offset: 0x008147B4
+	// Token: 0x0601AD39 RID: 109881 RVA: 0x0083D248 File Offset: 0x0083B448
 	[NullableContext(2)]
 	public void AddMotorExtraComp(UObject data)
 	{
@@ -2182,7 +2038,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddMotorExtraCompInner(data2);
 	}
 
-	// Token: 0x0601D03C RID: 118844 RVA: 0x008165CF File Offset: 0x008147CF
+	// Token: 0x0601AD3A RID: 109882 RVA: 0x0083D263 File Offset: 0x0083B463
 	public void RemoveMotorExtraComp()
 	{
 		if (this.MotorExtraComp != null && this.MotorExtraComp.IsValid())
@@ -2191,33 +2047,30 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D03D RID: 118845 RVA: 0x008165F4 File Offset: 0x008147F4
+	// Token: 0x0601AD3B RID: 109883 RVA: 0x0083D288 File Offset: 0x0083B488
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMaterialPropertyFloat(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, string propertyName, float value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMaterialPropertyFloat"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMaterialPropertyFloat"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->bodyType) = (byte)bodyType;
-			ptr2->sectionIndex = sectionIndex;
-			*(&ptr2->slotType) = (byte)slotType;
-			FString.CopyFrom((void*)(&ptr2->propertyName), propertyName);
-			ptr2->value = value;
+			this.SetMaterialPropertyFloat_Implementation(bodyType, sectionIndex, slotType, propertyName, value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->bodyType) = (byte)bodyType;
+		ptr->sectionIndex = sectionIndex;
+		*(&ptr->slotType) = (byte)slotType;
+		FString.CopyFrom((void*)(&ptr->propertyName), propertyName);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D03E RID: 118846 RVA: 0x00816694 File Offset: 0x00814894
+	// Token: 0x0601AD3C RID: 109884 RVA: 0x0083D344 File Offset: 0x0083B544
 	[NullableContext(1)]
 	protected void SetMaterialPropertyFloat_Implementation(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, string propertyName, float value)
 	{
@@ -2229,33 +2082,30 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charPropertyModifier.SetPropertyFloat(bodyType, (int)sectionIndex, slotType, FNameUtil.GetDynamicFName(propertyName), value);
 	}
 
-	// Token: 0x0601D03F RID: 118847 RVA: 0x008166C8 File Offset: 0x008148C8
+	// Token: 0x0601AD3D RID: 109885 RVA: 0x0083D378 File Offset: 0x0083B578
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMaterialPropertyColor(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, string propertyName, FLinearColor value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMaterialPropertyColor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMaterialPropertyColor"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->bodyType) = (byte)bodyType;
-			ptr2->sectionIndex = sectionIndex;
-			*(&ptr2->slotType) = (byte)slotType;
-			FString.CopyFrom((void*)(&ptr2->propertyName), propertyName);
-			ptr2->value = value;
+			this.SetMaterialPropertyColor_Implementation(bodyType, sectionIndex, slotType, propertyName, value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->bodyType) = (byte)bodyType;
+		ptr->sectionIndex = sectionIndex;
+		*(&ptr->slotType) = (byte)slotType;
+		FString.CopyFrom((void*)(&ptr->propertyName), propertyName);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D040 RID: 118848 RVA: 0x00816768 File Offset: 0x00814968
+	// Token: 0x0601AD3E RID: 109886 RVA: 0x0083D434 File Offset: 0x0083B634
 	[NullableContext(1)]
 	protected void SetMaterialPropertyColor_Implementation(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, string propertyName, FLinearColor value)
 	{
@@ -2267,32 +2117,29 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charPropertyModifier.SetPropertyColor(bodyType, (int)sectionIndex, slotType, FNameUtil.GetDynamicFName(propertyName), value);
 	}
 
-	// Token: 0x0601D041 RID: 118849 RVA: 0x0081679C File Offset: 0x0081499C
+	// Token: 0x0601AD3F RID: 109887 RVA: 0x0083D468 File Offset: 0x0083B668
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMaterialPropertyFloatV2(FName name, float value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMaterialPropertyFloatV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMaterialPropertyFloatV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->name = name;
-			ptr2->value = value;
-			*(&ptr2->bodyType) = (byte)bodyType;
-			*(&ptr2->slotType) = (byte)slotType;
-			*(&ptr2->meshPart) = (byte)meshPart;
+			this.SetMaterialPropertyFloatV2_Implementation(name, value, bodyType, slotType, meshPart);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->name = name;
+		ptr->value = value;
+		*(&ptr->bodyType) = (byte)bodyType;
+		*(&ptr->slotType) = (byte)slotType;
+		*(&ptr->meshPart) = (byte)meshPart;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D042 RID: 118850 RVA: 0x00816838 File Offset: 0x00814A38
+	// Token: 0x0601AD40 RID: 109888 RVA: 0x0083D520 File Offset: 0x0083B720
 	protected void SetMaterialPropertyFloatV2_Implementation(FName name, float value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -2303,31 +2150,28 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.SetFloatUpdateParamPermanent(name, value, bodyType, slotType, new EKuroCharMeshPart?(meshPart));
 	}
 
-	// Token: 0x0601D043 RID: 118851 RVA: 0x0081686C File Offset: 0x00814A6C
+	// Token: 0x0601AD41 RID: 109889 RVA: 0x0083D554 File Offset: 0x0083B754
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void AddFloatUpdateParamPermanentByIndexV2(FName name, float value, FName bodyName, float materialIndex)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddFloatUpdateParamPermanentByIndexV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddFloatUpdateParamPermanentByIndexV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->name = name;
-			ptr2->value = value;
-			ptr2->bodyName = bodyName;
-			ptr2->materialIndex = materialIndex;
+			this.AddFloatUpdateParamPermanentByIndexV2_Implementation(name, value, bodyName, materialIndex);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->name = name;
+		ptr->value = value;
+		ptr->bodyName = bodyName;
+		ptr->materialIndex = materialIndex;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D044 RID: 118852 RVA: 0x008168F8 File Offset: 0x00814AF8
+	// Token: 0x0601AD42 RID: 109890 RVA: 0x0083D5FC File Offset: 0x0083B7FC
 	protected void AddFloatUpdateParamPermanentByIndexV2_Implementation(FName name, float value, FName bodyName, float materialIndex)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -2338,32 +2182,29 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.AddFloatUpdateParamPermanentByIndex(name, value, bodyName, (int)materialIndex);
 	}
 
-	// Token: 0x0601D045 RID: 118853 RVA: 0x00816924 File Offset: 0x00814B24
+	// Token: 0x0601AD43 RID: 109891 RVA: 0x0083D628 File Offset: 0x0083B828
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMaterialPropertyColorV2(FName name, FLinearColor value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMaterialPropertyColorV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMaterialPropertyColorV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->name = name;
-			ptr2->value = value;
-			*(&ptr2->bodyType) = (byte)bodyType;
-			*(&ptr2->slotType) = (byte)slotType;
-			*(&ptr2->meshPart) = (byte)meshPart;
+			this.SetMaterialPropertyColorV2_Implementation(name, value, bodyType, slotType, meshPart);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->name = name;
+		ptr->value = value;
+		*(&ptr->bodyType) = (byte)bodyType;
+		*(&ptr->slotType) = (byte)slotType;
+		*(&ptr->meshPart) = (byte)meshPart;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D046 RID: 118854 RVA: 0x008169C0 File Offset: 0x00814BC0
+	// Token: 0x0601AD44 RID: 109892 RVA: 0x0083D6E0 File Offset: 0x0083B8E0
 	protected void SetMaterialPropertyColorV2_Implementation(FName name, FLinearColor value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -2374,32 +2215,29 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.SetColorUpdateParamPermanent(name, value, bodyType, slotType, new EKuroCharMeshPart?(meshPart));
 	}
 
-	// Token: 0x0601D047 RID: 118855 RVA: 0x008169F4 File Offset: 0x00814BF4
+	// Token: 0x0601AD45 RID: 109893 RVA: 0x0083D714 File Offset: 0x0083B914
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMaterialReplaceV2(UMaterialInterface material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMaterialReplaceV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMaterialReplaceV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->material) = ((material != null) ? material.NativePtr : ((IntPtr)0));
-			*(&ptr2->bodyType) = (byte)bodyType;
-			*(&ptr2->slotType) = (byte)slotType;
-			*(&ptr2->meshPart) = (byte)meshPart;
+			this.SetMaterialReplaceV2_Implementation(material, bodyType, slotType, meshPart);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->material) = ((material != null) ? material.NativePtr : ((IntPtr)0));
+		*(&ptr->bodyType) = (byte)bodyType;
+		*(&ptr->slotType) = (byte)slotType;
+		*(&ptr->meshPart) = (byte)meshPart;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D048 RID: 118856 RVA: 0x00816A94 File Offset: 0x00814C94
+	// Token: 0x0601AD46 RID: 109894 RVA: 0x0083D7D0 File Offset: 0x0083B9D0
 	[NullableContext(1)]
 	protected void SetMaterialReplaceV2_Implementation(UMaterialInterface material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
@@ -2411,7 +2249,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.SetExternalMaterialReplace(material, bodyType, slotType, new EKuroCharMeshPart?(meshPart));
 	}
 
-	// Token: 0x0601D049 RID: 118857 RVA: 0x00816AC4 File Offset: 0x00814CC4
+	// Token: 0x0601AD47 RID: 109895 RVA: 0x0083D800 File Offset: 0x0083BA00
 	[NullableContext(1)]
 	public void SetMaterialReplaceV2ByIndex(UMaterialInterface material, FName bodyName, int materialIndex)
 	{
@@ -2423,30 +2261,27 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.SetExternalMaterialReplaceByIndex(material, bodyName, materialIndex);
 	}
 
-	// Token: 0x0601D04A RID: 118858 RVA: 0x00816AEC File Offset: 0x00814CEC
+	// Token: 0x0601AD48 RID: 109896 RVA: 0x0083D828 File Offset: 0x0083BA28
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void RemoveExternalMaterialReplaceV2(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveExternalMaterialReplaceV2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveExternalMaterialReplaceV2"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->bodyType) = (byte)bodyType;
-			*(&ptr2->slotType) = (byte)slotType;
-			*(&ptr2->meshPart) = (byte)meshPart;
+			this.RemoveExternalMaterialReplaceV2_Implementation(bodyType, slotType, meshPart);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams* ptr = stackalloc CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->bodyType) = (byte)bodyType;
+		*(&ptr->slotType) = (byte)slotType;
+		*(&ptr->meshPart) = (byte)meshPart;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D04B RID: 118859 RVA: 0x00816B78 File Offset: 0x00814D78
+	// Token: 0x0601AD49 RID: 109897 RVA: 0x0083D8CC File Offset: 0x0083BACC
 	protected void RemoveExternalMaterialReplaceV2_Implementation(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -2457,7 +2292,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.RemoveExternalMaterialReplace(bodyType, slotType, new EKuroCharMeshPart?(meshPart));
 	}
 
-	// Token: 0x0601D04C RID: 118860 RVA: 0x00816BA8 File Offset: 0x00814DA8
+	// Token: 0x0601AD4A RID: 109898 RVA: 0x0083D8FC File Offset: 0x0083BAFC
 	public void RemoveExternalMaterialReplaceV2ByIndex(FName bodyName, int materialIndex)
 	{
 		CharMaterialContainerV2 charMaterialContainerV = this.GetComponent(13) as CharMaterialContainerV2;
@@ -2468,28 +2303,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charMaterialContainerV.RemoveExternalMaterialReplaceByIndex(bodyName, materialIndex);
 	}
 
-	// Token: 0x0601D04D RID: 118861 RVA: 0x00816BD0 File Offset: 0x00814DD0
+	// Token: 0x0601AD4B RID: 109899 RVA: 0x0083D924 File Offset: 0x0083BB24
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetStarScarEnergy(float value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetStarScarEnergy"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetStarScarEnergy_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetStarScarEnergy"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetStarScarEnergy_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetStarScarEnergy_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->value = value;
+			this.SetStarScarEnergy_Implementation(value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetStarScarEnergy_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetStarScarEnergy_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetStarScarEnergy_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D04E RID: 118862 RVA: 0x00816C48 File Offset: 0x00814E48
+	// Token: 0x0601AD4C RID: 109900 RVA: 0x0083D9B0 File Offset: 0x0083BBB0
 	protected void SetStarScarEnergy_Implementation(float value)
 	{
 		if (this.UseMaterialContainerV2)
@@ -2514,7 +2346,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D04F RID: 118863 RVA: 0x00816CA0 File Offset: 0x00814EA0
+	// Token: 0x0601AD4D RID: 109901 RVA: 0x0083DA08 File Offset: 0x0083BC08
 	public void SetNoWater(bool value)
 	{
 		if (this.UseMaterialContainerV2)
@@ -2539,54 +2371,48 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D050 RID: 118864 RVA: 0x00816CE8 File Offset: 0x00814EE8
+	// Token: 0x0601AD4E RID: 109902 RVA: 0x0083DA50 File Offset: 0x0083BC50
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetCapsuleDither(float value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetCapsuleDither"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetCapsuleDither_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetCapsuleDither"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetCapsuleDither_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetCapsuleDither_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->value = value;
+			this.SetCapsuleDither_Implementation(value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetCapsuleDither_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetCapsuleDither_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetCapsuleDither_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D051 RID: 118865 RVA: 0x00816D5E File Offset: 0x00814F5E
+	// Token: 0x0601AD4F RID: 109903 RVA: 0x0083DADC File Offset: 0x0083BCDC
 	protected void SetCapsuleDither_Implementation(float value)
 	{
 	}
 
-	// Token: 0x0601D052 RID: 118866 RVA: 0x00816D60 File Offset: 0x00814F60
+	// Token: 0x0601AD50 RID: 109904 RVA: 0x0083DAE0 File Offset: 0x0083BCE0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDecalShadowEnabled(bool enable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDecalShadowEnabled"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDecalShadowEnabled"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->enable = enable;
+			this.SetDecalShadowEnabled_Implementation(enable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->enable = enable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D053 RID: 118867 RVA: 0x00816DD8 File Offset: 0x00814FD8
+	// Token: 0x0601AD51 RID: 109905 RVA: 0x0083DB6C File Offset: 0x0083BD6C
 	protected void SetDecalShadowEnabled_Implementation(bool enable)
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2602,7 +2428,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.DisableDecalShadow();
 	}
 
-	// Token: 0x0601D054 RID: 118868 RVA: 0x00816E08 File Offset: 0x00815008
+	// Token: 0x0601AD52 RID: 109906 RVA: 0x0083DB9C File Offset: 0x0083BD9C
 	public void SetRealTimeShadowEnabled(bool enable)
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2618,27 +2444,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.DisableRealTimeShadow();
 	}
 
-	// Token: 0x0601D055 RID: 118869 RVA: 0x00816E38 File Offset: 0x00815038
+	// Token: 0x0601AD53 RID: 109907 RVA: 0x0083DBCC File Offset: 0x0083BDCC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DisableAllShadowByDecalShadowComponent()
+	public virtual void DisableAllShadowByDecalShadowComponent()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DisableAllShadowByDecalShadowComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DisableAllShadowByDecalShadowComponent"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DisableAllShadowByDecalShadowComponent_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D056 RID: 118870 RVA: 0x00816EA8 File Offset: 0x008150A8
+	// Token: 0x0601AD54 RID: 109908 RVA: 0x0083DC28 File Offset: 0x0083BE28
 	protected void DisableAllShadowByDecalShadowComponent_Implementation()
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2649,7 +2469,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.DisableAllShadow();
 	}
 
-	// Token: 0x0601D057 RID: 118871 RVA: 0x00816ED0 File Offset: 0x008150D0
+	// Token: 0x0601AD55 RID: 109909 RVA: 0x0083DC50 File Offset: 0x0083BE50
 	[NullableContext(1)]
 	protected void AddComponentForDecalShadow(string name, UPrimitiveComponent comp)
 	{
@@ -2661,7 +2481,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.AddPrimitiveComponent(name, comp);
 	}
 
-	// Token: 0x0601D058 RID: 118872 RVA: 0x00816EF8 File Offset: 0x008150F8
+	// Token: 0x0601AD56 RID: 109910 RVA: 0x0083DC78 File Offset: 0x0083BE78
 	[NullableContext(1)]
 	protected void RemoveComponentFromDecalShadow(string name)
 	{
@@ -2673,7 +2493,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.RemovePrimitiveComponent(name);
 	}
 
-	// Token: 0x0601D059 RID: 118873 RVA: 0x00816F20 File Offset: 0x00815120
+	// Token: 0x0601AD57 RID: 109911 RVA: 0x0083DCA0 File Offset: 0x0083BEA0
 	protected void SetDecalShadowOpacity(float opacity)
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2684,7 +2504,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.SetDecalShadowOpacity(opacity);
 	}
 
-	// Token: 0x0601D05A RID: 118874 RVA: 0x00816F48 File Offset: 0x00815148
+	// Token: 0x0601AD58 RID: 109912 RVA: 0x0083DCC8 File Offset: 0x0083BEC8
 	protected void SetRealTimeShadowOpacity(float opacity)
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2695,28 +2515,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.SetRealTimeShadowOpacity(opacity);
 	}
 
-	// Token: 0x0601D05B RID: 118875 RVA: 0x00816F70 File Offset: 0x00815170
+	// Token: 0x0601AD59 RID: 109913 RVA: 0x0083DCF0 File Offset: 0x0083BEF0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetShouldCastShadow(bool castShadow)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetShouldCastShadow"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetShouldCastShadow_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetShouldCastShadow"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetShouldCastShadow_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetShouldCastShadow_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->castShadow = castShadow;
+			this.SetShouldCastShadow_Implementation(castShadow);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetShouldCastShadow_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetShouldCastShadow_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetShouldCastShadow_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->castShadow = castShadow;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D05C RID: 118876 RVA: 0x00816FE8 File Offset: 0x008151E8
+	// Token: 0x0601AD5A RID: 109914 RVA: 0x0083DD7C File Offset: 0x0083BF7C
 	protected void SetShouldCastShadow_Implementation(bool castShadow)
 	{
 		CharDecalShadow charDecalShadow = this.GetComponent(10) as CharDecalShadow;
@@ -2727,7 +2544,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		charDecalShadow.SetShouldCastShadow(castShadow);
 	}
 
-	// Token: 0x0601D05D RID: 118877 RVA: 0x00817010 File Offset: 0x00815210
+	// Token: 0x0601AD5B RID: 109915 RVA: 0x0083DDA4 File Offset: 0x0083BFA4
 	public void Update(float delta)
 	{
 		if (!this.CanUpdate)
@@ -2775,7 +2592,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		base.UpdateHitMesh(delta);
 	}
 
-	// Token: 0x0601D05E RID: 118878 RVA: 0x00817160 File Offset: 0x00815360
+	// Token: 0x0601AD5C RID: 109916 RVA: 0x0083DEF4 File Offset: 0x0083C0F4
 	public unsafe void DataGroupAfterUpdate(float delta)
 	{
 		foreach (int num in this.AllMaterialControlRuntimeDataGroupMap.Keys)
@@ -2808,29 +2625,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D05F RID: 118879 RVA: 0x008172B8 File Offset: 0x008154B8
+	// Token: 0x0601AD5D RID: 109917 RVA: 0x0083E04C File Offset: 0x0083C24C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetEffectProgress(float progress, int handleId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetEffectProgress"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetEffectProgress_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetEffectProgress"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetEffectProgress_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetEffectProgress_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->progress = progress;
-			ptr2->handleId = handleId;
+			this.SetEffectProgress_Implementation(progress, handleId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetEffectProgress_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetEffectProgress_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetEffectProgress_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->progress = progress;
+		ptr->handleId = handleId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D060 RID: 118880 RVA: 0x00817338 File Offset: 0x00815538
+	// Token: 0x0601AD5E RID: 109918 RVA: 0x0083E0E0 File Offset: 0x0083C2E0
 	protected void SetEffectProgress_Implementation(float progress, int handleId)
 	{
 		if (this.UseMaterialContainerV2)
@@ -2855,29 +2669,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D061 RID: 118881 RVA: 0x00817384 File Offset: 0x00815584
+	// Token: 0x0601AD5F RID: 109919 RVA: 0x0083E12C File Offset: 0x0083C32C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetEffectGroupProgress(float progress, int groupHandleId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetEffectGroupProgress"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__SetEffectGroupProgress_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetEffectGroupProgress"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__SetEffectGroupProgress_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__SetEffectGroupProgress_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->progress = progress;
-			ptr2->groupHandleId = groupHandleId;
+			this.SetEffectGroupProgress_Implementation(progress, groupHandleId);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__SetEffectGroupProgress_FunctionParams* ptr = stackalloc CharRenderingComponent.__SetEffectGroupProgress_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__SetEffectGroupProgress_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->progress = progress;
+		ptr->groupHandleId = groupHandleId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D062 RID: 118882 RVA: 0x00817404 File Offset: 0x00815604
+	// Token: 0x0601AD60 RID: 109920 RVA: 0x0083E1C0 File Offset: 0x0083C3C0
 	protected void SetEffectGroupProgress_Implementation(float progress, int groupHandleId)
 	{
 		CharMaterialControlRuntimeDataGroup charMaterialControlRuntimeDataGroup;
@@ -2887,27 +2698,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D063 RID: 118883 RVA: 0x00817428 File Offset: 0x00815628
+	// Token: 0x0601AD61 RID: 109921 RVA: 0x0083E1E4 File Offset: 0x0083C3E4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void RefreshMaterialController()
+	public virtual void RefreshMaterialController()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RefreshMaterialController"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RefreshMaterialController"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RefreshMaterialController_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D064 RID: 118884 RVA: 0x00817498 File Offset: 0x00815698
+	// Token: 0x0601AD62 RID: 109922 RVA: 0x0083E240 File Offset: 0x0083C440
 	protected void RefreshMaterialController_Implementation()
 	{
 		if (this.UseMaterialContainerV2)
@@ -2921,7 +2726,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D065 RID: 118885 RVA: 0x008174C8 File Offset: 0x008156C8
+	// Token: 0x0601AD63 RID: 109923 RVA: 0x0083E270 File Offset: 0x0083C470
 	public bool IsMaterialControllerDataValid(int handleId)
 	{
 		if (this.UseMaterialContainerV2)
@@ -2933,27 +2738,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return charMaterialController != null && charMaterialController.GetRuntimeMaterialControllerValid(handleId);
 	}
 
-	// Token: 0x0601D066 RID: 118886 RVA: 0x00817514 File Offset: 0x00815714
+	// Token: 0x0601AD64 RID: 109924 RVA: 0x0083E2BC File Offset: 0x0083C4BC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void Destroy()
+	public virtual void Destroy()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Destroy"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Destroy"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.Destroy_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D067 RID: 118887 RVA: 0x00817584 File Offset: 0x00815784
+	// Token: 0x0601AD65 RID: 109925 RVA: 0x0083E318 File Offset: 0x0083C518
 	protected void Destroy_Implementation()
 	{
 		if (!this.IsInit)
@@ -2986,27 +2785,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D068 RID: 118888 RVA: 0x00817680 File Offset: 0x00815880
+	// Token: 0x0601AD66 RID: 109926 RVA: 0x0083E414 File Offset: 0x0083C614
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void OnFinalizedLevelSequence()
+	public virtual void OnFinalizedLevelSequence()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnFinalizedLevelSequence"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnFinalizedLevelSequence"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnFinalizedLevelSequence_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D069 RID: 118889 RVA: 0x008176F0 File Offset: 0x008158F0
+	// Token: 0x0601AD67 RID: 109927 RVA: 0x0083E470 File Offset: 0x0083C670
 	protected void OnFinalizedLevelSequence_Implementation()
 	{
 		foreach (int handle in this.SequenceHandleIds)
@@ -3022,7 +2815,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		mesh.ExposeToCinematicsCustomLightYaw = 0f;
 	}
 
-	// Token: 0x0601D06A RID: 118890 RVA: 0x00817794 File Offset: 0x00815994
+	// Token: 0x0601AD68 RID: 109928 RVA: 0x0083E514 File Offset: 0x0083C714
 	[NullableContext(1)]
 	private CharRenderBase[] GetRenderComps()
 	{
@@ -3030,7 +2823,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return RenderUtil.GetRenderComps(this.RenderType.Value, this.UseMaterialContainerV2, this.MonsterUseBodyEffect);
 	}
 
-	// Token: 0x0601D06B RID: 118891 RVA: 0x008177C0 File Offset: 0x008159C0
+	// Token: 0x0601AD69 RID: 109929 RVA: 0x0083E540 File Offset: 0x0083C740
 	private unsafe void InvokeStart()
 	{
 		if (!this.IsStartInvoke)
@@ -3095,7 +2888,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D06C RID: 118892 RVA: 0x008179D4 File Offset: 0x00815BD4
+	// Token: 0x0601AD6A RID: 109930 RVA: 0x0083E754 File Offset: 0x0083C954
 	[NullableContext(1)]
 	private void AddProxy(USkeletalMeshComponent comp)
 	{
@@ -3127,29 +2920,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D06D RID: 118893 RVA: 0x00817ADC File Offset: 0x00815CDC
+	// Token: 0x0601AD6B RID: 109931 RVA: 0x0083E85C File Offset: 0x0083CA5C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool ShouldTickAfterGoDown()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ShouldTickAfterGoDown"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ShouldTickAfterGoDown"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.ShouldTickAfterGoDown_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams* ptr = stackalloc CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D06E RID: 118894 RVA: 0x00817B54 File Offset: 0x00815D54
+	// Token: 0x0601AD6C RID: 109932 RVA: 0x0083E8E8 File Offset: 0x0083CAE8
 	protected bool ShouldTickAfterGoDown_Implementation()
 	{
 		if (this.UseMaterialContainerV2)
@@ -3163,8 +2952,8 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return false;
 	}
 
-	// Token: 0x170027DA RID: 10202
-	// (get) Token: 0x0601D06F RID: 118895 RVA: 0x00817B84 File Offset: 0x00815D84
+	// Token: 0x17002B75 RID: 11125
+	// (get) Token: 0x0601AD6D RID: 109933 RVA: 0x0083E918 File Offset: 0x0083CB18
 	private bool IsInDebugMode
 	{
 		get
@@ -3181,8 +2970,8 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x170027DB RID: 10203
-	// (get) Token: 0x0601D070 RID: 118896 RVA: 0x00817C11 File Offset: 0x00815E11
+	// Token: 0x17002B76 RID: 11126
+	// (get) Token: 0x0601AD6E RID: 109934 RVA: 0x0083E9A5 File Offset: 0x0083CBA5
 	private bool IsRecord
 	{
 		get
@@ -3195,54 +2984,45 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D071 RID: 118897 RVA: 0x00817C44 File Offset: 0x00815E44
+	// Token: 0x0601AD6F RID: 109935 RVA: 0x0083E9D8 File Offset: 0x0083CBD8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), CharRenderingComponent.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D072 RID: 118898 RVA: 0x00817CB4 File Offset: 0x00815EB4
+	// Token: 0x0601AD70 RID: 109936 RVA: 0x0083EA31 File Offset: 0x0083CC31
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		base.SetComponentTickEnabled(this.IsRecord);
 	}
 
-	// Token: 0x0601D073 RID: 118899 RVA: 0x00817CC4 File Offset: 0x00815EC4
+	// Token: 0x0601AD71 RID: 109937 RVA: 0x0083EA40 File Offset: 0x0083CC40
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UActorComponent.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UActorComponent.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(UActorComponent.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UActorComponent.__ReceiveTick_FunctionParams* ptr = stackalloc UActorComponent.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UActorComponent.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D074 RID: 118900 RVA: 0x00817D3A File Offset: 0x00815F3A
+	// Token: 0x0601AD72 RID: 109938 RVA: 0x0083EACC File Offset: 0x0083CCCC
 	protected virtual void ReceiveTick_Implementation(float deltaSeconds)
 	{
 		if (this.IsRecord)
@@ -3251,28 +3031,25 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}
 	}
 
-	// Token: 0x0601D075 RID: 118901 RVA: 0x00817D4C File Offset: 0x00815F4C
+	// Token: 0x0601AD73 RID: 109939 RVA: 0x0083EAE0 File Offset: 0x0083CCE0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ReceiveSeqTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveSeqTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		CharRenderingComponent.__ReceiveSeqTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(CharRenderingComponent) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveSeqTick"), CharRenderingComponent.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((CharRenderingComponent.__ReceiveSeqTick_FunctionParams*)ptr + 15L / (long)sizeof(CharRenderingComponent.__ReceiveSeqTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->deltaSeconds = deltaSeconds;
+			this.ReceiveSeqTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		CharRenderingComponent.__ReceiveSeqTick_FunctionParams* ptr = stackalloc CharRenderingComponent.__ReceiveSeqTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(CharRenderingComponent.__ReceiveSeqTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->deltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D076 RID: 118902 RVA: 0x00817DC2 File Offset: 0x00815FC2
+	// Token: 0x0601AD74 RID: 109940 RVA: 0x0083EB6C File Offset: 0x0083CD6C
 	protected void ReceiveSeqTick_Implementation(float deltaSeconds)
 	{
 		if (Info.Instance.IsGameRunning())
@@ -3282,7 +3059,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.Update(deltaSeconds);
 	}
 
-	// Token: 0x0601D077 RID: 118903 RVA: 0x00817DD8 File Offset: 0x00815FD8
+	// Token: 0x0601AD75 RID: 109941 RVA: 0x0083EB84 File Offset: 0x0083CD84
 	[NullableContext(1)]
 	public void AddHitMeshInfoByPath(string dataPath, FName? hitPart, Vector impactPoint, Rotator hitRotator)
 	{
@@ -3301,13 +3078,13 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601D078 RID: 118904 RVA: 0x00817E36 File Offset: 0x00816036
+	// Token: 0x0601AD76 RID: 109942 RVA: 0x0083EBE2 File Offset: 0x0083CDE2
 	static CharRenderingComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharRenderingComponent.CreateStaticDefaultValue), new Action(CharRenderingComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D079 RID: 118905 RVA: 0x00817E55 File Offset: 0x00816055
+	// Token: 0x0601AD77 RID: 109943 RVA: 0x0083EC01 File Offset: 0x0083CE01
 	public static void CreateStaticDefaultValue()
 	{
 		CharRenderingComponent.GlobalDisableDitherEffect = false;
@@ -3324,7 +3101,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		CharRenderingComponent.DisableForDebug = false;
 	}
 
-	// Token: 0x0601D07A RID: 118906 RVA: 0x00817E91 File Offset: 0x00816091
+	// Token: 0x0601AD78 RID: 109944 RVA: 0x0083EC3D File Offset: 0x0083CE3D
 	public static void ResetStaticDefaultValue()
 	{
 		CharRenderingComponent.GlobalDisableDitherEffect = false;
@@ -3333,7 +3110,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		CharRenderingComponent.DisableForDebug = false;
 	}
 
-	// Token: 0x0601D07B RID: 118907 RVA: 0x00817EAB File Offset: 0x008160AB
+	// Token: 0x0601AD79 RID: 109945 RVA: 0x0083EC57 File Offset: 0x0083CE57
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (CharRenderingComponent._ClassPtr == IntPtr.Zero)
@@ -3343,23 +3120,23 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		return CharRenderingComponent._ClassPtr;
 	}
 
-	// Token: 0x0601D07C RID: 118908 RVA: 0x00817ED0 File Offset: 0x008160D0
+	// Token: 0x0601AD7A RID: 109946 RVA: 0x0083EC7C File Offset: 0x0083CE7C
 	public CharRenderingComponent() : this(BuiltinUtils.AllocNativeUObject(CharRenderingComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D07D RID: 118909 RVA: 0x00817EF8 File Offset: 0x008160F8
+	// Token: 0x0601AD7B RID: 109947 RVA: 0x0083ECA4 File Offset: 0x0083CEA4
 	[NullableContext(1)]
 	public CharRenderingComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(CharRenderingComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D07E RID: 118910 RVA: 0x00817F2B File Offset: 0x0081612B
+	// Token: 0x0601AD7C RID: 109948 RVA: 0x0083ECD7 File Offset: 0x0083CED7
 	protected CharRenderingComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D07F RID: 118911 RVA: 0x00817F58 File Offset: 0x00816158
+	// Token: 0x0601AD7D RID: 109949 RVA: 0x0083ED04 File Offset: 0x0083CF04
 	protected unsafe virtual void __CPPCALL_QuickInitAndAddData_Implementation(CharRenderingComponent.__QuickInitAndAddData_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3367,7 +3144,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.QuickInitAndAddData_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D080 RID: 118912 RVA: 0x00817F8C File Offset: 0x0081618C
+	// Token: 0x0601AD7E RID: 109950 RVA: 0x0083ED38 File Offset: 0x0083CF38
 	protected unsafe virtual void __CPPCALL_QuickInitAndAddDataWithMeshComponent_Implementation(CharRenderingComponent.__QuickInitAndAddDataWithMeshComponent_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3375,7 +3152,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.QuickInitAndAddDataWithMeshComponent_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D081 RID: 118913 RVA: 0x00817FC0 File Offset: 0x008161C0
+	// Token: 0x0601AD7F RID: 109951 RVA: 0x0083ED6C File Offset: 0x0083CF6C
 	protected unsafe virtual void __CPPCALL_QuickInitAndAddDataGroup_Implementation(CharRenderingComponent.__QuickInitAndAddDataGroup_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3383,7 +3160,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.QuickInitAndAddDataGroup_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D082 RID: 118914 RVA: 0x00817FF4 File Offset: 0x008161F4
+	// Token: 0x0601AD80 RID: 109952 RVA: 0x0083EDA0 File Offset: 0x0083CFA0
 	protected unsafe virtual void __CPPCALL_QuickInitAndAddDataGroupWithMeshComponent_Implementation(CharRenderingComponent.__QuickInitAndAddDataGroupWithMeshComponent_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3391,21 +3168,21 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.QuickInitAndAddDataGroupWithMeshComponent_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D083 RID: 118915 RVA: 0x00818028 File Offset: 0x00816228
+	// Token: 0x0601AD81 RID: 109953 RVA: 0x0083EDD4 File Offset: 0x0083CFD4
 	protected unsafe virtual void __CPPCALL_Init_Implementation(CharRenderingComponent.__Init_FunctionParams* __Params)
 	{
 		ECharacterRenderingType renderType = (ECharacterRenderingType)__Params->renderType;
 		this.Init_Implementation(renderType);
 	}
 
-	// Token: 0x0601D084 RID: 118916 RVA: 0x00818044 File Offset: 0x00816244
+	// Token: 0x0601AD82 RID: 109954 RVA: 0x0083EDF0 File Offset: 0x0083CFF0
 	protected unsafe virtual void __CPPCALL_SetLogicOwner_Implementation(CharRenderingComponent.__SetLogicOwner_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->owner);
 		this.SetLogicOwner_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D085 RID: 118917 RVA: 0x00818064 File Offset: 0x00816264
+	// Token: 0x0601AD83 RID: 109955 RVA: 0x0083EE10 File Offset: 0x0083D010
 	protected unsafe virtual void __CPPCALL_AddComponent_Implementation(CharRenderingComponent.__AddComponent_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
@@ -3413,7 +3190,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponent_Implementation(skelName, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D086 RID: 118918 RVA: 0x00818094 File Offset: 0x00816294
+	// Token: 0x0601AD84 RID: 109956 RVA: 0x0083EE40 File Offset: 0x0083D040
 	protected unsafe virtual void __CPPCALL_AddComponentWithEmptyMaterial_Implementation(CharRenderingComponent.__AddComponentWithEmptyMaterial_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
@@ -3421,14 +3198,14 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponentWithEmptyMaterial_Implementation(skelName, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D087 RID: 118919 RVA: 0x008180C4 File Offset: 0x008162C4
+	// Token: 0x0601AD85 RID: 109957 RVA: 0x0083EE70 File Offset: 0x0083D070
 	protected unsafe virtual void __CPPCALL_RemoveComponent_Implementation(CharRenderingComponent.__RemoveComponent_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
 		this.RemoveComponent_Implementation(skelName);
 	}
 
-	// Token: 0x0601D088 RID: 118920 RVA: 0x008180E8 File Offset: 0x008162E8
+	// Token: 0x0601AD86 RID: 109958 RVA: 0x0083EE94 File Offset: 0x0083D094
 	protected unsafe virtual void __CPPCALL_AddComponentByCase_Implementation(CharRenderingComponent.__AddComponentByCase_FunctionParams* __Params)
 	{
 		ECharacterControllerCaseType caseType = (ECharacterControllerCaseType)__Params->caseType;
@@ -3436,14 +3213,14 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponentByCase_Implementation(caseType, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D089 RID: 118921 RVA: 0x00818110 File Offset: 0x00816310
+	// Token: 0x0601AD87 RID: 109959 RVA: 0x0083EEBC File Offset: 0x0083D0BC
 	protected unsafe virtual void __CPPCALL_RemoveComponentByCase_Implementation(CharRenderingComponent.__RemoveComponentByCase_FunctionParams* __Params)
 	{
 		ECharacterControllerCaseType caseType = (ECharacterControllerCaseType)__Params->caseType;
 		this.RemoveComponentByCase_Implementation(caseType);
 	}
 
-	// Token: 0x0601D08A RID: 118922 RVA: 0x0081812C File Offset: 0x0081632C
+	// Token: 0x0601AD88 RID: 109960 RVA: 0x0083EED8 File Offset: 0x0083D0D8
 	protected unsafe virtual void __CPPCALL_AddComponentInnerV2_Implementation(CharRenderingComponent.__AddComponentInnerV2_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
@@ -3451,14 +3228,14 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.AddComponentInnerV2_Implementation(skelName, orCreateUObjectByNativePointer, __Params->useEmptyMaterial);
 	}
 
-	// Token: 0x0601D08B RID: 118923 RVA: 0x00818160 File Offset: 0x00816360
+	// Token: 0x0601AD89 RID: 109961 RVA: 0x0083EF0C File Offset: 0x0083D10C
 	protected unsafe virtual void __CPPCALL_RemoveComponentInnerV2_Implementation(CharRenderingComponent.__RemoveComponentInnerV2_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
 		this.RemoveComponentInnerV2_Implementation(skelName);
 	}
 
-	// Token: 0x0601D08C RID: 118924 RVA: 0x00818184 File Offset: 0x00816384
+	// Token: 0x0601AD8A RID: 109962 RVA: 0x0083EF30 File Offset: 0x0083D130
 	protected unsafe virtual void __CPPCALL_GetSkeletalMeshComponent_Implementation(CharRenderingComponent.__GetSkeletalMeshComponent_FunctionParams* __Params)
 	{
 		string skelName = FString.ToString((void*)(&__Params->skelName));
@@ -3467,26 +3244,26 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		ptr = ((skeletalMeshComponent_Implementation != null) ? skeletalMeshComponent_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D08D RID: 118925 RVA: 0x008181BC File Offset: 0x008163BC
+	// Token: 0x0601AD8B RID: 109963 RVA: 0x0083EF68 File Offset: 0x0083D168
 	protected unsafe virtual void __CPPCALL_GetSkeletalMeshComponentBodyName_Implementation(CharRenderingComponent.__GetSkeletalMeshComponentBodyName_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->skeletalComp);
 		__Params->__Result = this.GetSkeletalMeshComponentBodyName_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D08E RID: 118926 RVA: 0x008181E2 File Offset: 0x008163E2
+	// Token: 0x0601AD8C RID: 109964 RVA: 0x0083EF8E File Offset: 0x0083D18E
 	protected unsafe virtual void __CPPCALL_CheckInit_Implementation(CharRenderingComponent.__CheckInit_FunctionParams* __Params)
 	{
 		__Params->__Result = this.CheckInit_Implementation();
 	}
 
-	// Token: 0x0601D08F RID: 118927 RVA: 0x008181F0 File Offset: 0x008163F0
+	// Token: 0x0601AD8D RID: 109965 RVA: 0x0083EF9C File Offset: 0x0083D19C
 	protected unsafe virtual void __CPPCALL_SetDebug_Implementation(CharRenderingComponent.__SetDebug_FunctionParams* __Params)
 	{
 		this.SetDebug_Implementation(__Params->value);
 	}
 
-	// Token: 0x0601D090 RID: 118928 RVA: 0x008181FE File Offset: 0x008163FE
+	// Token: 0x0601AD8E RID: 109966 RVA: 0x0083EFAA File Offset: 0x0083D1AA
 	protected unsafe virtual void __CPPCALL_GetDebugInfo_Implementation(CharRenderingComponent.__GetDebugInfo_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3494,39 +3271,39 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		ptr = ((debugInfo_Implementation != null) ? debugInfo_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D091 RID: 118929 RVA: 0x0081821C File Offset: 0x0081641C
+	// Token: 0x0601AD8F RID: 109967 RVA: 0x0083EFC8 File Offset: 0x0083D1C8
 	protected unsafe virtual void __CPPCALL_ReceiveEndPlay_Implementation(UActorComponent.__ReceiveEndPlay_FunctionParams* __Params)
 	{
 		EEndPlayReason endPlayReason = __Params->EndPlayReason;
 		this.ReceiveEndPlay_Implementation(endPlayReason);
 	}
 
-	// Token: 0x0601D092 RID: 118930 RVA: 0x0081823C File Offset: 0x0081643C
+	// Token: 0x0601AD90 RID: 109968 RVA: 0x0083EFE8 File Offset: 0x0083D1E8
 	protected unsafe virtual void __CPPCALL_GetInWater_Implementation(CharRenderingComponent.__GetInWater_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetInWater_Implementation(__Params->depthThreshold);
 	}
 
-	// Token: 0x0601D093 RID: 118931 RVA: 0x00818250 File Offset: 0x00816450
+	// Token: 0x0601AD91 RID: 109969 RVA: 0x0083EFFC File Offset: 0x0083D1FC
 	protected unsafe virtual void __CPPCALL_GetInAudioShr_Implementation(CharRenderingComponent.__GetInAudioShr_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetInAudioShr_Implementation();
 	}
 
-	// Token: 0x0601D094 RID: 118932 RVA: 0x0081825E File Offset: 0x0081645E
+	// Token: 0x0601AD92 RID: 109970 RVA: 0x0083F00A File Offset: 0x0083D20A
 	protected virtual void __CPPCALL_ResetAllRenderingState_Implementation()
 	{
 		this.ResetAllRenderingState_Implementation();
 	}
 
-	// Token: 0x0601D095 RID: 118933 RVA: 0x00818268 File Offset: 0x00816468
+	// Token: 0x0601AD93 RID: 109971 RVA: 0x0083F014 File Offset: 0x0083D214
 	protected unsafe virtual void __CPPCALL_AddMaterialControllerDataGroup_Implementation(CharRenderingComponent.__AddMaterialControllerDataGroup_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
 		__Params->__Result = this.AddMaterialControllerDataGroup_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D096 RID: 118934 RVA: 0x00818290 File Offset: 0x00816490
+	// Token: 0x0601AD94 RID: 109972 RVA: 0x0083F03C File Offset: 0x0083D23C
 	protected unsafe virtual void __CPPCALL_AddMaterialControllerDataGroupWithAnimObject_Implementation(CharRenderingComponent.__AddMaterialControllerDataGroupWithAnimObject_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3534,19 +3311,19 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.AddMaterialControllerDataGroupWithAnimObject_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D097 RID: 118935 RVA: 0x008182C3 File Offset: 0x008164C3
+	// Token: 0x0601AD95 RID: 109973 RVA: 0x0083F06F File Offset: 0x0083D26F
 	protected unsafe virtual void __CPPCALL_RemoveMaterialControllerDataGroup_Implementation(CharRenderingComponent.__RemoveMaterialControllerDataGroup_FunctionParams* __Params)
 	{
 		this.RemoveMaterialControllerDataGroup_Implementation(__Params->handle);
 	}
 
-	// Token: 0x0601D098 RID: 118936 RVA: 0x008182D1 File Offset: 0x008164D1
+	// Token: 0x0601AD96 RID: 109974 RVA: 0x0083F07D File Offset: 0x0083D27D
 	protected unsafe virtual void __CPPCALL_RemoveMaterialControllerDataGroupWithEnding_Implementation(CharRenderingComponent.__RemoveMaterialControllerDataGroupWithEnding_FunctionParams* __Params)
 	{
 		this.RemoveMaterialControllerDataGroupWithEnding_Implementation(__Params->handle);
 	}
 
-	// Token: 0x0601D099 RID: 118937 RVA: 0x008182E0 File Offset: 0x008164E0
+	// Token: 0x0601AD97 RID: 109975 RVA: 0x0083F08C File Offset: 0x0083D28C
 	protected unsafe virtual void __CPPCALL_AddMaterialControllerDataWithAnimObject_Implementation(CharRenderingComponent.__AddMaterialControllerDataWithAnimObject_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
@@ -3555,81 +3332,81 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		__Params->__Result = this.AddMaterialControllerDataWithAnimObject_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3);
 	}
 
-	// Token: 0x0601D09A RID: 118938 RVA: 0x00818320 File Offset: 0x00816520
+	// Token: 0x0601AD98 RID: 109976 RVA: 0x0083F0CC File Offset: 0x0083D2CC
 	protected unsafe virtual void __CPPCALL_AddMaterialControllerData_Implementation(CharRenderingComponent.__AddMaterialControllerData_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->data);
 		__Params->__Result = this.AddMaterialControllerData_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D09B RID: 118939 RVA: 0x00818346 File Offset: 0x00816546
+	// Token: 0x0601AD99 RID: 109977 RVA: 0x0083F0F2 File Offset: 0x0083D2F2
 	protected unsafe virtual void __CPPCALL_RemoveMaterialControllerData_Implementation(CharRenderingComponent.__RemoveMaterialControllerData_FunctionParams* __Params)
 	{
 		this.RemoveMaterialControllerData_Implementation(__Params->handle);
 	}
 
-	// Token: 0x0601D09C RID: 118940 RVA: 0x00818354 File Offset: 0x00816554
+	// Token: 0x0601AD9A RID: 109978 RVA: 0x0083F100 File Offset: 0x0083D300
 	protected unsafe virtual void __CPPCALL_SetEffectPause_Implementation(CharRenderingComponent.__SetEffectPause_FunctionParams* __Params)
 	{
 		this.SetEffectPause_Implementation(__Params->handle, __Params->paused);
 	}
 
-	// Token: 0x0601D09D RID: 118941 RVA: 0x00818368 File Offset: 0x00816568
+	// Token: 0x0601AD9B RID: 109979 RVA: 0x0083F114 File Offset: 0x0083D314
 	protected unsafe virtual void __CPPCALL_RemoveMaterialControllerDataWithEnding_Implementation(CharRenderingComponent.__RemoveMaterialControllerDataWithEnding_FunctionParams* __Params)
 	{
 		this.RemoveMaterialControllerDataWithEnding_Implementation(__Params->handle);
 	}
 
-	// Token: 0x0601D09E RID: 118942 RVA: 0x00818378 File Offset: 0x00816578
+	// Token: 0x0601AD9C RID: 109980 RVA: 0x0083F124 File Offset: 0x0083D324
 	protected unsafe virtual void __CPPCALL_SetDitherEffect_Implementation(CharRenderingComponent.__SetDitherEffect_FunctionParams* __Params)
 	{
 		ECharacterDitherType ditherType = (ECharacterDitherType)__Params->ditherType;
 		this.SetDitherEffect_Implementation(__Params->ditherRate, ditherType);
 	}
 
-	// Token: 0x0601D09F RID: 118943 RVA: 0x00818399 File Offset: 0x00816599
+	// Token: 0x0601AD9D RID: 109981 RVA: 0x0083F145 File Offset: 0x0083D345
 	protected unsafe virtual void __CPPCALL_SetDisableFightDither_Implementation(CharRenderingComponent.__SetDisableFightDither_FunctionParams* __Params)
 	{
 		this.SetDisableFightDither_Implementation(__Params->disable);
 	}
 
-	// Token: 0x0601D0A0 RID: 118944 RVA: 0x008183A7 File Offset: 0x008165A7
+	// Token: 0x0601AD9E RID: 109982 RVA: 0x0083F153 File Offset: 0x0083D353
 	protected virtual void __CPPCALL_SetDitherApplyAll_Implementation()
 	{
 		this.SetDitherApplyAll_Implementation();
 	}
 
-	// Token: 0x0601D0A1 RID: 118945 RVA: 0x008183AF File Offset: 0x008165AF
+	// Token: 0x0601AD9F RID: 109983 RVA: 0x0083F15B File Offset: 0x0083D35B
 	protected virtual void __CPPCALL_SetDitherApplyHeadsOnly_Implementation()
 	{
 		this.SetDitherApplyHeadsOnly_Implementation();
 	}
 
-	// Token: 0x0601D0A2 RID: 118946 RVA: 0x008183B7 File Offset: 0x008165B7
+	// Token: 0x0601ADA0 RID: 109984 RVA: 0x0083F163 File Offset: 0x0083D363
 	protected unsafe virtual void __CPPCALL_SetDitherUseHeadMaskHideEffect_Implementation(CharRenderingComponent.__SetDitherUseHeadMaskHideEffect_FunctionParams* __Params)
 	{
 		this.SetDitherUseHeadMaskHideEffect_Implementation(__Params->enable);
 	}
 
-	// Token: 0x0601D0A3 RID: 118947 RVA: 0x008183C5 File Offset: 0x008165C5
+	// Token: 0x0601ADA1 RID: 109985 RVA: 0x0083F171 File Offset: 0x0083D371
 	protected virtual void __CPPCALL_TempRemoveDither_Implementation()
 	{
 		this.TempRemoveDither_Implementation();
 	}
 
-	// Token: 0x0601D0A4 RID: 118948 RVA: 0x008183CD File Offset: 0x008165CD
+	// Token: 0x0601ADA2 RID: 109986 RVA: 0x0083F179 File Offset: 0x0083D379
 	protected virtual void __CPPCALL_TempRecoverDither_Implementation()
 	{
 		this.TempRecoverDither_Implementation();
 	}
 
-	// Token: 0x0601D0A5 RID: 118949 RVA: 0x008183D5 File Offset: 0x008165D5
+	// Token: 0x0601ADA3 RID: 109987 RVA: 0x0083F181 File Offset: 0x0083D381
 	protected unsafe virtual void __CPPCALL_GetOpacityConsiderVisibility_Implementation(CharRenderingComponent.__GetOpacityConsiderVisibility_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetOpacityConsiderVisibility_Implementation();
 	}
 
-	// Token: 0x0601D0A6 RID: 118950 RVA: 0x008183E4 File Offset: 0x008165E4
+	// Token: 0x0601ADA4 RID: 109988 RVA: 0x0083F190 File Offset: 0x0083D390
 	protected unsafe virtual void __CPPCALL_SetMaterialPropertyFloat_Implementation(CharRenderingComponent.__SetMaterialPropertyFloat_FunctionParams* __Params)
 	{
 		ECharacterBodySpecifiedType bodyType = (ECharacterBodySpecifiedType)__Params->bodyType;
@@ -3638,7 +3415,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.SetMaterialPropertyFloat_Implementation(bodyType, __Params->sectionIndex, slotType, propertyName, __Params->value);
 	}
 
-	// Token: 0x0601D0A7 RID: 118951 RVA: 0x00818424 File Offset: 0x00816624
+	// Token: 0x0601ADA5 RID: 109989 RVA: 0x0083F1D0 File Offset: 0x0083D3D0
 	protected unsafe virtual void __CPPCALL_SetMaterialPropertyColor_Implementation(CharRenderingComponent.__SetMaterialPropertyColor_FunctionParams* __Params)
 	{
 		ECharacterBodySpecifiedType bodyType = (ECharacterBodySpecifiedType)__Params->bodyType;
@@ -3647,7 +3424,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.SetMaterialPropertyColor_Implementation(bodyType, __Params->sectionIndex, slotType, propertyName, __Params->value);
 	}
 
-	// Token: 0x0601D0A8 RID: 118952 RVA: 0x00818464 File Offset: 0x00816664
+	// Token: 0x0601ADA6 RID: 109990 RVA: 0x0083F210 File Offset: 0x0083D410
 	protected unsafe virtual void __CPPCALL_SetMaterialPropertyFloatV2_Implementation(CharRenderingComponent.__SetMaterialPropertyFloatV2_FunctionParams* __Params)
 	{
 		EKuroCharBodySpecifiedType bodyType = (EKuroCharBodySpecifiedType)__Params->bodyType;
@@ -3656,13 +3433,13 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.SetMaterialPropertyFloatV2_Implementation(__Params->name, __Params->value, bodyType, slotType, meshPart);
 	}
 
-	// Token: 0x0601D0A9 RID: 118953 RVA: 0x0081849B File Offset: 0x0081669B
+	// Token: 0x0601ADA7 RID: 109991 RVA: 0x0083F247 File Offset: 0x0083D447
 	protected unsafe virtual void __CPPCALL_AddFloatUpdateParamPermanentByIndexV2_Implementation(CharRenderingComponent.__AddFloatUpdateParamPermanentByIndexV2_FunctionParams* __Params)
 	{
 		this.AddFloatUpdateParamPermanentByIndexV2_Implementation(__Params->name, __Params->value, __Params->bodyName, __Params->materialIndex);
 	}
 
-	// Token: 0x0601D0AA RID: 118954 RVA: 0x008184BC File Offset: 0x008166BC
+	// Token: 0x0601ADA8 RID: 109992 RVA: 0x0083F268 File Offset: 0x0083D468
 	protected unsafe virtual void __CPPCALL_SetMaterialPropertyColorV2_Implementation(CharRenderingComponent.__SetMaterialPropertyColorV2_FunctionParams* __Params)
 	{
 		EKuroCharBodySpecifiedType bodyType = (EKuroCharBodySpecifiedType)__Params->bodyType;
@@ -3671,7 +3448,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.SetMaterialPropertyColorV2_Implementation(__Params->name, __Params->value, bodyType, slotType, meshPart);
 	}
 
-	// Token: 0x0601D0AB RID: 118955 RVA: 0x008184F4 File Offset: 0x008166F4
+	// Token: 0x0601ADA9 RID: 109993 RVA: 0x0083F2A0 File Offset: 0x0083D4A0
 	protected unsafe virtual void __CPPCALL_SetMaterialReplaceV2_Implementation(CharRenderingComponent.__SetMaterialReplaceV2_FunctionParams* __Params)
 	{
 		UMaterialInterface orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInterface>(__Params->material);
@@ -3681,7 +3458,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.SetMaterialReplaceV2_Implementation(orCreateUObjectByNativePointer, bodyType, slotType, meshPart);
 	}
 
-	// Token: 0x0601D0AC RID: 118956 RVA: 0x0081852C File Offset: 0x0081672C
+	// Token: 0x0601ADAA RID: 109994 RVA: 0x0083F2D8 File Offset: 0x0083D4D8
 	protected unsafe virtual void __CPPCALL_RemoveExternalMaterialReplaceV2_Implementation(CharRenderingComponent.__RemoveExternalMaterialReplaceV2_FunctionParams* __Params)
 	{
 		EKuroCharBodySpecifiedType bodyType = (EKuroCharBodySpecifiedType)__Params->bodyType;
@@ -3690,94 +3467,94 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 		this.RemoveExternalMaterialReplaceV2_Implementation(bodyType, slotType, meshPart);
 	}
 
-	// Token: 0x0601D0AD RID: 118957 RVA: 0x00818557 File Offset: 0x00816757
+	// Token: 0x0601ADAB RID: 109995 RVA: 0x0083F303 File Offset: 0x0083D503
 	protected unsafe virtual void __CPPCALL_SetStarScarEnergy_Implementation(CharRenderingComponent.__SetStarScarEnergy_FunctionParams* __Params)
 	{
 		this.SetStarScarEnergy_Implementation(__Params->value);
 	}
 
-	// Token: 0x0601D0AE RID: 118958 RVA: 0x00818565 File Offset: 0x00816765
+	// Token: 0x0601ADAC RID: 109996 RVA: 0x0083F311 File Offset: 0x0083D511
 	protected unsafe virtual void __CPPCALL_SetCapsuleDither_Implementation(CharRenderingComponent.__SetCapsuleDither_FunctionParams* __Params)
 	{
 		this.SetCapsuleDither_Implementation(__Params->value);
 	}
 
-	// Token: 0x0601D0AF RID: 118959 RVA: 0x00818573 File Offset: 0x00816773
+	// Token: 0x0601ADAD RID: 109997 RVA: 0x0083F31F File Offset: 0x0083D51F
 	protected unsafe virtual void __CPPCALL_SetDecalShadowEnabled_Implementation(CharRenderingComponent.__SetDecalShadowEnabled_FunctionParams* __Params)
 	{
 		this.SetDecalShadowEnabled_Implementation(__Params->enable);
 	}
 
-	// Token: 0x0601D0B0 RID: 118960 RVA: 0x00818581 File Offset: 0x00816781
+	// Token: 0x0601ADAE RID: 109998 RVA: 0x0083F32D File Offset: 0x0083D52D
 	protected virtual void __CPPCALL_DisableAllShadowByDecalShadowComponent_Implementation()
 	{
 		this.DisableAllShadowByDecalShadowComponent_Implementation();
 	}
 
-	// Token: 0x0601D0B1 RID: 118961 RVA: 0x00818589 File Offset: 0x00816789
+	// Token: 0x0601ADAF RID: 109999 RVA: 0x0083F335 File Offset: 0x0083D535
 	protected unsafe virtual void __CPPCALL_SetShouldCastShadow_Implementation(CharRenderingComponent.__SetShouldCastShadow_FunctionParams* __Params)
 	{
 		this.SetShouldCastShadow_Implementation(__Params->castShadow);
 	}
 
-	// Token: 0x0601D0B2 RID: 118962 RVA: 0x00818597 File Offset: 0x00816797
+	// Token: 0x0601ADB0 RID: 110000 RVA: 0x0083F343 File Offset: 0x0083D543
 	protected unsafe virtual void __CPPCALL_SetEffectProgress_Implementation(CharRenderingComponent.__SetEffectProgress_FunctionParams* __Params)
 	{
 		this.SetEffectProgress_Implementation(__Params->progress, __Params->handleId);
 	}
 
-	// Token: 0x0601D0B3 RID: 118963 RVA: 0x008185AB File Offset: 0x008167AB
+	// Token: 0x0601ADB1 RID: 110001 RVA: 0x0083F357 File Offset: 0x0083D557
 	protected unsafe virtual void __CPPCALL_SetEffectGroupProgress_Implementation(CharRenderingComponent.__SetEffectGroupProgress_FunctionParams* __Params)
 	{
 		this.SetEffectGroupProgress_Implementation(__Params->progress, __Params->groupHandleId);
 	}
 
-	// Token: 0x0601D0B4 RID: 118964 RVA: 0x008185BF File Offset: 0x008167BF
+	// Token: 0x0601ADB2 RID: 110002 RVA: 0x0083F36B File Offset: 0x0083D56B
 	protected virtual void __CPPCALL_RefreshMaterialController_Implementation()
 	{
 		this.RefreshMaterialController_Implementation();
 	}
 
-	// Token: 0x0601D0B5 RID: 118965 RVA: 0x008185C7 File Offset: 0x008167C7
+	// Token: 0x0601ADB3 RID: 110003 RVA: 0x0083F373 File Offset: 0x0083D573
 	protected virtual void __CPPCALL_Destroy_Implementation()
 	{
 		this.Destroy_Implementation();
 	}
 
-	// Token: 0x0601D0B6 RID: 118966 RVA: 0x008185CF File Offset: 0x008167CF
+	// Token: 0x0601ADB4 RID: 110004 RVA: 0x0083F37B File Offset: 0x0083D57B
 	protected virtual void __CPPCALL_OnFinalizedLevelSequence_Implementation()
 	{
 		this.OnFinalizedLevelSequence_Implementation();
 	}
 
-	// Token: 0x0601D0B7 RID: 118967 RVA: 0x008185D7 File Offset: 0x008167D7
+	// Token: 0x0601ADB5 RID: 110005 RVA: 0x0083F383 File Offset: 0x0083D583
 	protected unsafe virtual void __CPPCALL_ShouldTickAfterGoDown_Implementation(CharRenderingComponent.__ShouldTickAfterGoDown_FunctionParams* __Params)
 	{
 		__Params->__Result = this.ShouldTickAfterGoDown_Implementation();
 	}
 
-	// Token: 0x0601D0B8 RID: 118968 RVA: 0x008185E5 File Offset: 0x008167E5
+	// Token: 0x0601ADB6 RID: 110006 RVA: 0x0083F391 File Offset: 0x0083D591
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601D0B9 RID: 118969 RVA: 0x008185ED File Offset: 0x008167ED
+	// Token: 0x0601ADB7 RID: 110007 RVA: 0x0083F399 File Offset: 0x0083D599
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(UActorComponent.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x0601D0BA RID: 118970 RVA: 0x008185FB File Offset: 0x008167FB
+	// Token: 0x0601ADB8 RID: 110008 RVA: 0x0083F3A7 File Offset: 0x0083D5A7
 	protected unsafe virtual void __CPPCALL_ReceiveSeqTick_Implementation(CharRenderingComponent.__ReceiveSeqTick_FunctionParams* __Params)
 	{
 		this.ReceiveSeqTick_Implementation(__Params->deltaSeconds);
 	}
 
-	// Token: 0x0400E474 RID: 58484
+	// Token: 0x0400E925 RID: 59685
 	public ECharacterRenderingType? RenderType;
 
-	// Token: 0x0400E475 RID: 58485
+	// Token: 0x0400E926 RID: 59686
 	[Nullable(new byte[]
 	{
 		2,
@@ -3785,7 +3562,7 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 	})]
 	public List<CharRenderBase> AllRenderComps;
 
-	// Token: 0x0400E476 RID: 58486
+	// Token: 0x0400E927 RID: 59687
 	[Nullable(new byte[]
 	{
 		2,
@@ -3793,19 +3570,19 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 	})]
 	public Dictionary<int, CharRenderBase> AllRenderCompsMap;
 
-	// Token: 0x0400E477 RID: 58487
+	// Token: 0x0400E928 RID: 59688
 	public bool IsInit;
 
-	// Token: 0x0400E478 RID: 58488
+	// Token: 0x0400E929 RID: 59689
 	public bool IsStartInvoke;
 
-	// Token: 0x0400E479 RID: 58489
+	// Token: 0x0400E92A RID: 59690
 	public float DeltaTime;
 
-	// Token: 0x0400E47A RID: 58490
+	// Token: 0x0400E92B RID: 59691
 	public bool IsOnMobile;
 
-	// Token: 0x0400E47B RID: 58491
+	// Token: 0x0400E92C RID: 59692
 	[Nullable(new byte[]
 	{
 		2,
@@ -3813,115 +3590,115 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 	})]
 	public Dictionary<int, CharMaterialControlRuntimeDataGroup> AllMaterialControlRuntimeDataGroupMap;
 
-	// Token: 0x0400E47C RID: 58492
+	// Token: 0x0400E92D RID: 59693
 	public int IndexCount;
 
-	// Token: 0x0400E47D RID: 58493
+	// Token: 0x0400E92E RID: 59694
 	[Nullable(2)]
 	private List<int> TempRemoveList;
 
-	// Token: 0x0400E47E RID: 58494
+	// Token: 0x0400E92F RID: 59695
 	[Nullable(2)]
 	private List<int> SequenceHandleIds;
 
-	// Token: 0x0400E47F RID: 58495
+	// Token: 0x0400E930 RID: 59696
 	private bool IsDebug;
 
-	// Token: 0x0400E480 RID: 58496
+	// Token: 0x0400E931 RID: 59697
 	[Nullable(2)]
 	private AActor CachedOwner;
 
-	// Token: 0x0400E481 RID: 58497
+	// Token: 0x0400E932 RID: 59698
 	[Nullable(1)]
 	private string CachedOwnerName = "";
 
-	// Token: 0x0400E482 RID: 58498
+	// Token: 0x0400E933 RID: 59699
 	[Nullable(2)]
 	private Entity CachedOwnerEntity;
 
-	// Token: 0x0400E483 RID: 58499
+	// Token: 0x0400E934 RID: 59700
 	[Nullable(2)]
 	protected AActor LogicOwner;
 
-	// Token: 0x0400E484 RID: 58500
+	// Token: 0x0400E935 RID: 59701
 	protected bool IsLogicOwnerTsEffectActor;
 
-	// Token: 0x0400E485 RID: 58501
+	// Token: 0x0400E936 RID: 59702
 	public bool IsUiUpdate;
 
-	// Token: 0x0400E486 RID: 58502
+	// Token: 0x0400E937 RID: 59703
 	public bool UseMaterialContainerV2 = true;
 
-	// Token: 0x0400E487 RID: 58503
+	// Token: 0x0400E938 RID: 59704
 	public bool CanUpdate = true;
 
-	// Token: 0x0400E488 RID: 58504
+	// Token: 0x0400E939 RID: 59705
 	[Nullable(1)]
 	public static int[] MotionVelocitySquared;
 
-	// Token: 0x0400E489 RID: 58505
+	// Token: 0x0400E93A RID: 59706
 	[Nullable(1)]
 	public static EMaterialShadingRate[] MotionMeshShadingRate;
 
-	// Token: 0x0400E48A RID: 58506
+	// Token: 0x0400E93B RID: 59707
 	public static bool DisableForDebug;
 
-	// Token: 0x0400E48B RID: 58507
+	// Token: 0x0400E93C RID: 59708
 	[Nullable(2)]
 	private USkeletalMeshComponent Proxy;
 
-	// Token: 0x0400E48C RID: 58508
+	// Token: 0x0400E93D RID: 59709
 	[Nullable(2)]
 	private BP_MotorExtraComponent_C MotorExtraComp;
 
-	// Token: 0x0400E48D RID: 58509
+	// Token: 0x0400E93E RID: 59710
 	private bool DisableFightDither;
 
-	// Token: 0x0400E48E RID: 58510
+	// Token: 0x0400E93F RID: 59711
 	private float FightDitherRateCache = 1f;
 
-	// Token: 0x0400E48F RID: 58511
+	// Token: 0x0400E940 RID: 59712
 	public static bool GlobalDisableDitherEffect;
 
-	// Token: 0x0400E490 RID: 58512
+	// Token: 0x0400E941 RID: 59713
 	protected bool OnRoleGoDownFinishEventAdded;
 
-	// Token: 0x0400E491 RID: 58513
+	// Token: 0x0400E942 RID: 59714
 	[Nullable(2)]
 	protected Action RemoveInteractionOnRoleGoDownFinish;
 
-	// Token: 0x0400E492 RID: 58514
+	// Token: 0x0400E943 RID: 59715
 	private bool? IsInDebugModeInternal;
 
-	// Token: 0x0400E493 RID: 58515
+	// Token: 0x0400E944 RID: 59716
 	private bool? IsRecordInternal;
 
-	// Token: 0x0400E494 RID: 58516
+	// Token: 0x0400E945 RID: 59717
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Character/Manager/CharRenderingComponent.CharRenderingComponent_C";
 
-	// Token: 0x0400E495 RID: 58517
+	// Token: 0x0400E946 RID: 59718
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E496 RID: 58518
+	// Token: 0x0400E947 RID: 59719
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E497 RID: 58519
+	// Token: 0x0400E948 RID: 59720
 	private static int __PropertyOffset_InteractionConfig;
 
-	// Token: 0x0400E498 RID: 58520
+	// Token: 0x0400E949 RID: 59721
 	private static int __PropertyOffset_DecalShadowConfig;
 
-	// Token: 0x0400E499 RID: 58521
+	// Token: 0x0400E94A RID: 59722
 	private static int __PropertyOffset_MonsterUseBodyEffect;
 
-	// Token: 0x0400E49A RID: 58522
+	// Token: 0x0400E94B RID: 59723
 	private static int __PropertyOffset_UseProxy;
 
-	// Token: 0x0400E49B RID: 58523
+	// Token: 0x0400E94C RID: 59724
 	private static int __PropertyOffset_ProxyMaterialsOverride;
 
-	// Token: 0x0400E49C RID: 58524
+	// Token: 0x0400E94D RID: 59725
 	[Nullable(new byte[]
 	{
 		2,
@@ -3929,698 +3706,698 @@ public class CharRenderingComponent : UKuroCharRenderingComponent, IStaticVariab
 	})]
 	private TArray<UMaterialInterface> _ProxyMaterialsOverride;
 
-	// Token: 0x0400E49D RID: 58525
+	// Token: 0x0400E94E RID: 59726
 	private static int __PropertyOffset_ProxyRenderInMainPass;
 
-	// Token: 0x0400E49E RID: 58526
+	// Token: 0x0400E94F RID: 59727
 	private static int __PropertyOffset_ProxyRenderShadow;
 
-	// Token: 0x0400E49F RID: 58527
+	// Token: 0x0400E950 RID: 59728
 	private static int __PropertyOffset_ProxyRenderTrail;
 
-	// Token: 0x0400E4A0 RID: 58528
+	// Token: 0x0400E951 RID: 59729
 	private static int __PropertyOffset_DitherRemap;
 
-	// Token: 0x020097C1 RID: 38849
+	// Token: 0x020089E4 RID: 35300
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __QuickInitAndAddData_FunctionParams
 	{
-		// Token: 0x0403077E RID: 198526
+		// Token: 0x0402BE0B RID: 179723
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x0403077F RID: 198527
+		// Token: 0x0402BE0C RID: 179724
 		[FieldOffset(8)]
 		public IntPtr meshActor;
 
-		// Token: 0x04030780 RID: 198528
+		// Token: 0x0402BE0D RID: 179725
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020097C2 RID: 38850
+	// Token: 0x020089E5 RID: 35301
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __QuickInitAndAddDataWithMeshComponent_FunctionParams
 	{
-		// Token: 0x04030781 RID: 198529
+		// Token: 0x0402BE0E RID: 179726
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x04030782 RID: 198530
+		// Token: 0x0402BE0F RID: 179727
 		[FieldOffset(8)]
 		public IntPtr meshComponent;
 
-		// Token: 0x04030783 RID: 198531
+		// Token: 0x0402BE10 RID: 179728
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020097C3 RID: 38851
+	// Token: 0x020089E6 RID: 35302
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __QuickInitAndAddDataGroup_FunctionParams
 	{
-		// Token: 0x04030784 RID: 198532
+		// Token: 0x0402BE11 RID: 179729
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x04030785 RID: 198533
+		// Token: 0x0402BE12 RID: 179730
 		[FieldOffset(8)]
 		public IntPtr meshActor;
 
-		// Token: 0x04030786 RID: 198534
+		// Token: 0x0402BE13 RID: 179731
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020097C4 RID: 38852
+	// Token: 0x020089E7 RID: 35303
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __QuickInitAndAddDataGroupWithMeshComponent_FunctionParams
 	{
-		// Token: 0x04030787 RID: 198535
+		// Token: 0x0402BE14 RID: 179732
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x04030788 RID: 198536
+		// Token: 0x0402BE15 RID: 179733
 		[FieldOffset(8)]
 		public IntPtr meshComponent;
 
-		// Token: 0x04030789 RID: 198537
+		// Token: 0x0402BE16 RID: 179734
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020097C5 RID: 38853
+	// Token: 0x020089E8 RID: 35304
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __Init_FunctionParams
 	{
-		// Token: 0x0403078A RID: 198538
+		// Token: 0x0402BE17 RID: 179735
 		[FieldOffset(0)]
 		public byte renderType;
 	}
 
-	// Token: 0x020097C6 RID: 38854
+	// Token: 0x020089E9 RID: 35305
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetLogicOwner_FunctionParams
 	{
-		// Token: 0x0403078B RID: 198539
+		// Token: 0x0402BE18 RID: 179736
 		[FieldOffset(0)]
 		public IntPtr owner;
 	}
 
-	// Token: 0x020097C7 RID: 38855
+	// Token: 0x020089EA RID: 35306
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AddComponent_FunctionParams
 	{
-		// Token: 0x0403078C RID: 198540
+		// Token: 0x0402BE19 RID: 179737
 		[FieldOffset(0)]
 		public FString skelName;
 
-		// Token: 0x0403078D RID: 198541
+		// Token: 0x0402BE1A RID: 179738
 		[FieldOffset(16)]
 		public IntPtr skeletalComp;
 	}
 
-	// Token: 0x020097C8 RID: 38856
+	// Token: 0x020089EB RID: 35307
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AddComponentWithEmptyMaterial_FunctionParams
 	{
-		// Token: 0x0403078E RID: 198542
+		// Token: 0x0402BE1B RID: 179739
 		[FieldOffset(0)]
 		public FString skelName;
 
-		// Token: 0x0403078F RID: 198543
+		// Token: 0x0402BE1C RID: 179740
 		[FieldOffset(16)]
 		public IntPtr skeletalComp;
 	}
 
-	// Token: 0x020097C9 RID: 38857
+	// Token: 0x020089EC RID: 35308
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveComponent_FunctionParams
 	{
-		// Token: 0x04030790 RID: 198544
+		// Token: 0x0402BE1D RID: 179741
 		[FieldOffset(0)]
 		public FString skelName;
 	}
 
-	// Token: 0x020097CA RID: 38858
+	// Token: 0x020089ED RID: 35309
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddComponentByCase_FunctionParams
 	{
-		// Token: 0x04030791 RID: 198545
+		// Token: 0x0402BE1E RID: 179742
 		[FieldOffset(0)]
 		public byte caseType;
 
-		// Token: 0x04030792 RID: 198546
+		// Token: 0x0402BE1F RID: 179743
 		[FieldOffset(8)]
 		public IntPtr skeletalComp;
 	}
 
-	// Token: 0x020097CB RID: 38859
+	// Token: 0x020089EE RID: 35310
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __RemoveComponentByCase_FunctionParams
 	{
-		// Token: 0x04030793 RID: 198547
+		// Token: 0x0402BE20 RID: 179744
 		[FieldOffset(0)]
 		public byte caseType;
 	}
 
-	// Token: 0x020097CC RID: 38860
+	// Token: 0x020089EF RID: 35311
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AddComponentInnerV2_FunctionParams
 	{
-		// Token: 0x04030794 RID: 198548
+		// Token: 0x0402BE21 RID: 179745
 		[FieldOffset(0)]
 		public FString skelName;
 
-		// Token: 0x04030795 RID: 198549
+		// Token: 0x0402BE22 RID: 179746
 		[FieldOffset(16)]
 		public IntPtr skeletalComp;
 
-		// Token: 0x04030796 RID: 198550
+		// Token: 0x0402BE23 RID: 179747
 		[FieldOffset(24)]
 		public bool useEmptyMaterial;
 	}
 
-	// Token: 0x020097CD RID: 38861
+	// Token: 0x020089F0 RID: 35312
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveComponentInnerV2_FunctionParams
 	{
-		// Token: 0x04030797 RID: 198551
+		// Token: 0x0402BE24 RID: 179748
 		[FieldOffset(0)]
 		public FString skelName;
 	}
 
-	// Token: 0x020097CE RID: 38862
+	// Token: 0x020089F1 RID: 35313
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSkeletalMeshComponent_FunctionParams
 	{
-		// Token: 0x04030798 RID: 198552
+		// Token: 0x0402BE25 RID: 179749
 		[FieldOffset(0)]
 		public FString skelName;
 
-		// Token: 0x04030799 RID: 198553
+		// Token: 0x0402BE26 RID: 179750
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020097CF RID: 38863
+	// Token: 0x020089F2 RID: 35314
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSkeletalMeshComponentBodyName_FunctionParams
 	{
-		// Token: 0x0403079A RID: 198554
+		// Token: 0x0402BE27 RID: 179751
 		[FieldOffset(0)]
 		public IntPtr skeletalComp;
 
-		// Token: 0x0403079B RID: 198555
+		// Token: 0x0402BE28 RID: 179752
 		[FieldOffset(8)]
 		public FName __Result;
 	}
 
-	// Token: 0x020097D0 RID: 38864
+	// Token: 0x020089F3 RID: 35315
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __CheckInit_FunctionParams
 	{
-		// Token: 0x0403079C RID: 198556
+		// Token: 0x0402BE29 RID: 179753
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097D1 RID: 38865
+	// Token: 0x020089F4 RID: 35316
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetDebug_FunctionParams
 	{
-		// Token: 0x0403079D RID: 198557
+		// Token: 0x0402BE2A RID: 179754
 		[FieldOffset(0)]
 		public bool value;
 	}
 
-	// Token: 0x020097D2 RID: 38866
+	// Token: 0x020089F5 RID: 35317
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetDebugInfo_FunctionParams
 	{
-		// Token: 0x0403079E RID: 198558
+		// Token: 0x0402BE2B RID: 179755
 		[FieldOffset(0)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020097D3 RID: 38867
+	// Token: 0x020089F6 RID: 35318
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GetInWater_FunctionParams
 	{
-		// Token: 0x0403079F RID: 198559
+		// Token: 0x0402BE2C RID: 179756
 		[FieldOffset(0)]
 		public float depthThreshold;
 
-		// Token: 0x040307A0 RID: 198560
+		// Token: 0x0402BE2D RID: 179757
 		[FieldOffset(4)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097D4 RID: 38868
+	// Token: 0x020089F7 RID: 35319
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __GetInAudioShr_FunctionParams
 	{
-		// Token: 0x040307A1 RID: 198561
+		// Token: 0x0402BE2E RID: 179758
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097D5 RID: 38869
+	// Token: 0x020089F8 RID: 35320
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddMaterialControllerDataGroup_FunctionParams
 	{
-		// Token: 0x040307A2 RID: 198562
+		// Token: 0x0402BE2F RID: 179759
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x040307A3 RID: 198563
+		// Token: 0x0402BE30 RID: 179760
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x020097D6 RID: 38870
+	// Token: 0x020089F9 RID: 35321
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __AddMaterialControllerDataGroupWithAnimObject_FunctionParams
 	{
-		// Token: 0x040307A4 RID: 198564
+		// Token: 0x0402BE31 RID: 179761
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x040307A5 RID: 198565
+		// Token: 0x0402BE32 RID: 179762
 		[FieldOffset(8)]
 		public IntPtr animObject;
 
-		// Token: 0x040307A6 RID: 198566
+		// Token: 0x0402BE33 RID: 179763
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x020097D7 RID: 38871
+	// Token: 0x020089FA RID: 35322
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __RemoveMaterialControllerDataGroup_FunctionParams
 	{
-		// Token: 0x040307A7 RID: 198567
+		// Token: 0x0402BE34 RID: 179764
 		[FieldOffset(0)]
 		public int handle;
 	}
 
-	// Token: 0x020097D8 RID: 38872
+	// Token: 0x020089FB RID: 35323
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __RemoveMaterialControllerDataGroupWithEnding_FunctionParams
 	{
-		// Token: 0x040307A8 RID: 198568
+		// Token: 0x0402BE35 RID: 179765
 		[FieldOffset(0)]
 		public int handle;
 	}
 
-	// Token: 0x020097D9 RID: 38873
+	// Token: 0x020089FC RID: 35324
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AddMaterialControllerDataWithAnimObject_FunctionParams
 	{
-		// Token: 0x040307A9 RID: 198569
+		// Token: 0x0402BE36 RID: 179766
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x040307AA RID: 198570
+		// Token: 0x0402BE37 RID: 179767
 		[FieldOffset(8)]
 		public IntPtr animObject;
 
-		// Token: 0x040307AB RID: 198571
+		// Token: 0x0402BE38 RID: 179768
 		[FieldOffset(16)]
 		public IntPtr userData;
 
-		// Token: 0x040307AC RID: 198572
+		// Token: 0x0402BE39 RID: 179769
 		[FieldOffset(24)]
 		public float __Result;
 	}
 
-	// Token: 0x020097DA RID: 38874
+	// Token: 0x020089FD RID: 35325
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddMaterialControllerData_FunctionParams
 	{
-		// Token: 0x040307AD RID: 198573
+		// Token: 0x0402BE3A RID: 179770
 		[FieldOffset(0)]
 		public IntPtr data;
 
-		// Token: 0x040307AE RID: 198574
+		// Token: 0x0402BE3B RID: 179771
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x020097DB RID: 38875
+	// Token: 0x020089FE RID: 35326
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __RemoveMaterialControllerData_FunctionParams
 	{
-		// Token: 0x040307AF RID: 198575
+		// Token: 0x0402BE3C RID: 179772
 		[FieldOffset(0)]
 		public int handle;
 	}
 
-	// Token: 0x020097DC RID: 38876
+	// Token: 0x020089FF RID: 35327
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetEffectPause_FunctionParams
 	{
-		// Token: 0x040307B0 RID: 198576
+		// Token: 0x0402BE3D RID: 179773
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040307B1 RID: 198577
+		// Token: 0x0402BE3E RID: 179774
 		[FieldOffset(4)]
 		public bool paused;
 	}
 
-	// Token: 0x020097DD RID: 38877
+	// Token: 0x02008A00 RID: 35328
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __RemoveMaterialControllerDataWithEnding_FunctionParams
 	{
-		// Token: 0x040307B2 RID: 198578
+		// Token: 0x0402BE3F RID: 179775
 		[FieldOffset(0)]
 		public int handle;
 	}
 
-	// Token: 0x020097DE RID: 38878
+	// Token: 0x02008A01 RID: 35329
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetDitherEffect_FunctionParams
 	{
-		// Token: 0x040307B3 RID: 198579
+		// Token: 0x0402BE40 RID: 179776
 		[FieldOffset(0)]
 		public float ditherRate;
 
-		// Token: 0x040307B4 RID: 198580
+		// Token: 0x0402BE41 RID: 179777
 		[FieldOffset(4)]
 		public byte ditherType;
 	}
 
-	// Token: 0x020097DF RID: 38879
+	// Token: 0x02008A02 RID: 35330
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetDisableFightDither_FunctionParams
 	{
-		// Token: 0x040307B5 RID: 198581
+		// Token: 0x0402BE42 RID: 179778
 		[FieldOffset(0)]
 		public bool disable;
 	}
 
-	// Token: 0x020097E0 RID: 38880
+	// Token: 0x02008A03 RID: 35331
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetDitherUseHeadMaskHideEffect_FunctionParams
 	{
-		// Token: 0x040307B6 RID: 198582
+		// Token: 0x0402BE43 RID: 179779
 		[FieldOffset(0)]
 		public bool enable;
 	}
 
-	// Token: 0x020097E1 RID: 38881
+	// Token: 0x02008A04 RID: 35332
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __GetOpacityConsiderVisibility_FunctionParams
 	{
-		// Token: 0x040307B7 RID: 198583
+		// Token: 0x0402BE44 RID: 179780
 		[FieldOffset(0)]
 		public float __Result;
 	}
 
-	// Token: 0x020097E2 RID: 38882
+	// Token: 0x02008A05 RID: 35333
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetMaterialPropertyFloat_FunctionParams
 	{
-		// Token: 0x040307B8 RID: 198584
+		// Token: 0x0402BE45 RID: 179781
 		[FieldOffset(0)]
 		public byte bodyType;
 
-		// Token: 0x040307B9 RID: 198585
+		// Token: 0x0402BE46 RID: 179782
 		[FieldOffset(4)]
 		public float sectionIndex;
 
-		// Token: 0x040307BA RID: 198586
+		// Token: 0x0402BE47 RID: 179783
 		[FieldOffset(8)]
 		public byte slotType;
 
-		// Token: 0x040307BB RID: 198587
+		// Token: 0x0402BE48 RID: 179784
 		[FieldOffset(16)]
 		public FString propertyName;
 
-		// Token: 0x040307BC RID: 198588
+		// Token: 0x0402BE49 RID: 179785
 		[FieldOffset(32)]
 		public float value;
 	}
 
-	// Token: 0x020097E3 RID: 38883
+	// Token: 0x02008A06 RID: 35334
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetMaterialPropertyColor_FunctionParams
 	{
-		// Token: 0x040307BD RID: 198589
+		// Token: 0x0402BE4A RID: 179786
 		[FieldOffset(0)]
 		public byte bodyType;
 
-		// Token: 0x040307BE RID: 198590
+		// Token: 0x0402BE4B RID: 179787
 		[FieldOffset(4)]
 		public float sectionIndex;
 
-		// Token: 0x040307BF RID: 198591
+		// Token: 0x0402BE4C RID: 179788
 		[FieldOffset(8)]
 		public byte slotType;
 
-		// Token: 0x040307C0 RID: 198592
+		// Token: 0x0402BE4D RID: 179789
 		[FieldOffset(16)]
 		public FString propertyName;
 
-		// Token: 0x040307C1 RID: 198593
+		// Token: 0x0402BE4E RID: 179790
 		[FieldOffset(32)]
 		public FLinearColor value;
 	}
 
-	// Token: 0x020097E4 RID: 38884
+	// Token: 0x02008A07 RID: 35335
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 20)]
 	protected ref struct __SetMaterialPropertyFloatV2_FunctionParams
 	{
-		// Token: 0x040307C2 RID: 198594
+		// Token: 0x0402BE4F RID: 179791
 		[FieldOffset(0)]
 		public FName name;
 
-		// Token: 0x040307C3 RID: 198595
+		// Token: 0x0402BE50 RID: 179792
 		[FieldOffset(12)]
 		public float value;
 
-		// Token: 0x040307C4 RID: 198596
+		// Token: 0x0402BE51 RID: 179793
 		[FieldOffset(16)]
 		public byte bodyType;
 
-		// Token: 0x040307C5 RID: 198597
+		// Token: 0x0402BE52 RID: 179794
 		[FieldOffset(17)]
 		public byte slotType;
 
-		// Token: 0x040307C6 RID: 198598
+		// Token: 0x0402BE53 RID: 179795
 		[FieldOffset(18)]
 		public byte meshPart;
 	}
 
-	// Token: 0x020097E5 RID: 38885
+	// Token: 0x02008A08 RID: 35336
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AddFloatUpdateParamPermanentByIndexV2_FunctionParams
 	{
-		// Token: 0x040307C7 RID: 198599
+		// Token: 0x0402BE54 RID: 179796
 		[FieldOffset(0)]
 		public FName name;
 
-		// Token: 0x040307C8 RID: 198600
+		// Token: 0x0402BE55 RID: 179797
 		[FieldOffset(12)]
 		public float value;
 
-		// Token: 0x040307C9 RID: 198601
+		// Token: 0x0402BE56 RID: 179798
 		[FieldOffset(16)]
 		public FName bodyName;
 
-		// Token: 0x040307CA RID: 198602
+		// Token: 0x0402BE57 RID: 179799
 		[FieldOffset(28)]
 		public float materialIndex;
 	}
 
-	// Token: 0x020097E6 RID: 38886
+	// Token: 0x02008A09 RID: 35337
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetMaterialPropertyColorV2_FunctionParams
 	{
-		// Token: 0x040307CB RID: 198603
+		// Token: 0x0402BE58 RID: 179800
 		[FieldOffset(0)]
 		public FName name;
 
-		// Token: 0x040307CC RID: 198604
+		// Token: 0x0402BE59 RID: 179801
 		[FieldOffset(12)]
 		public FLinearColor value;
 
-		// Token: 0x040307CD RID: 198605
+		// Token: 0x0402BE5A RID: 179802
 		[FieldOffset(28)]
 		public byte bodyType;
 
-		// Token: 0x040307CE RID: 198606
+		// Token: 0x0402BE5B RID: 179803
 		[FieldOffset(29)]
 		public byte slotType;
 
-		// Token: 0x040307CF RID: 198607
+		// Token: 0x0402BE5C RID: 179804
 		[FieldOffset(30)]
 		public byte meshPart;
 	}
 
-	// Token: 0x020097E7 RID: 38887
+	// Token: 0x02008A0A RID: 35338
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetMaterialReplaceV2_FunctionParams
 	{
-		// Token: 0x040307D0 RID: 198608
+		// Token: 0x0402BE5D RID: 179805
 		[FieldOffset(0)]
 		public IntPtr material;
 
-		// Token: 0x040307D1 RID: 198609
+		// Token: 0x0402BE5E RID: 179806
 		[FieldOffset(8)]
 		public byte bodyType;
 
-		// Token: 0x040307D2 RID: 198610
+		// Token: 0x0402BE5F RID: 179807
 		[FieldOffset(9)]
 		public byte slotType;
 
-		// Token: 0x040307D3 RID: 198611
+		// Token: 0x0402BE60 RID: 179808
 		[FieldOffset(10)]
 		public byte meshPart;
 	}
 
-	// Token: 0x020097E8 RID: 38888
+	// Token: 0x02008A0B RID: 35339
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 3)]
 	protected ref struct __RemoveExternalMaterialReplaceV2_FunctionParams
 	{
-		// Token: 0x040307D4 RID: 198612
+		// Token: 0x0402BE61 RID: 179809
 		[FieldOffset(0)]
 		public byte bodyType;
 
-		// Token: 0x040307D5 RID: 198613
+		// Token: 0x0402BE62 RID: 179810
 		[FieldOffset(1)]
 		public byte slotType;
 
-		// Token: 0x040307D6 RID: 198614
+		// Token: 0x0402BE63 RID: 179811
 		[FieldOffset(2)]
 		public byte meshPart;
 	}
 
-	// Token: 0x020097E9 RID: 38889
+	// Token: 0x02008A0C RID: 35340
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __SetStarScarEnergy_FunctionParams
 	{
-		// Token: 0x040307D7 RID: 198615
+		// Token: 0x0402BE64 RID: 179812
 		[FieldOffset(0)]
 		public float value;
 	}
 
-	// Token: 0x020097EA RID: 38890
+	// Token: 0x02008A0D RID: 35341
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __SetCapsuleDither_FunctionParams
 	{
-		// Token: 0x040307D8 RID: 198616
+		// Token: 0x0402BE65 RID: 179813
 		[FieldOffset(0)]
 		public float value;
 	}
 
-	// Token: 0x020097EB RID: 38891
+	// Token: 0x02008A0E RID: 35342
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetDecalShadowEnabled_FunctionParams
 	{
-		// Token: 0x040307D9 RID: 198617
+		// Token: 0x0402BE66 RID: 179814
 		[FieldOffset(0)]
 		public bool enable;
 	}
 
-	// Token: 0x020097EC RID: 38892
+	// Token: 0x02008A0F RID: 35343
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetShouldCastShadow_FunctionParams
 	{
-		// Token: 0x040307DA RID: 198618
+		// Token: 0x0402BE67 RID: 179815
 		[FieldOffset(0)]
 		public bool castShadow;
 	}
 
-	// Token: 0x020097ED RID: 38893
+	// Token: 0x02008A10 RID: 35344
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetEffectProgress_FunctionParams
 	{
-		// Token: 0x040307DB RID: 198619
+		// Token: 0x0402BE68 RID: 179816
 		[FieldOffset(0)]
 		public float progress;
 
-		// Token: 0x040307DC RID: 198620
+		// Token: 0x0402BE69 RID: 179817
 		[FieldOffset(4)]
 		public int handleId;
 	}
 
-	// Token: 0x020097EE RID: 38894
+	// Token: 0x02008A11 RID: 35345
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetEffectGroupProgress_FunctionParams
 	{
-		// Token: 0x040307DD RID: 198621
+		// Token: 0x0402BE6A RID: 179818
 		[FieldOffset(0)]
 		public float progress;
 
-		// Token: 0x040307DE RID: 198622
+		// Token: 0x0402BE6B RID: 179819
 		[FieldOffset(4)]
 		public int groupHandleId;
 	}
 
-	// Token: 0x020097EF RID: 38895
+	// Token: 0x02008A12 RID: 35346
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __ShouldTickAfterGoDown_FunctionParams
 	{
-		// Token: 0x040307DF RID: 198623
+		// Token: 0x0402BE6C RID: 179820
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097F0 RID: 38896
+	// Token: 0x02008A13 RID: 35347
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __ReceiveSeqTick_FunctionParams
 	{
-		// Token: 0x040307E0 RID: 198624
+		// Token: 0x0402BE6D RID: 179821
 		[FieldOffset(0)]
 		public float deltaSeconds;
 	}

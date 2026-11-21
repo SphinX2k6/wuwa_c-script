@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200676E RID: 26478
+	// Token: 0x02006DEE RID: 28142
 	public struct IFadeBackgroundFadeOutEffectBlack : IFlatbufferObject
 	{
-		// Token: 0x1700C487 RID: 50311
-		// (get) Token: 0x0602E0F9 RID: 188665 RVA: 0x0064B1E1 File Offset: 0x006493E1
+		// Token: 0x1700CE3D RID: 52797
+		// (get) Token: 0x0603093F RID: 198975 RVA: 0x00698925 File Offset: 0x00696B25
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E0FA RID: 188666 RVA: 0x0064B1EE File Offset: 0x006493EE
+		// Token: 0x06030940 RID: 198976 RVA: 0x00698932 File Offset: 0x00696B32
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E0FB RID: 188667 RVA: 0x0064B1F8 File Offset: 0x006493F8
+		// Token: 0x06030941 RID: 198977 RVA: 0x0069893C File Offset: 0x00696B3C
 		public static IFadeBackgroundFadeOutEffectBlack GetRootAsIFadeBackgroundFadeOutEffectBlack(ByteBuffer _bb)
 		{
 			return IFadeBackgroundFadeOutEffectBlack.GetRootAsIFadeBackgroundFadeOutEffectBlack(_bb, default(IFadeBackgroundFadeOutEffectBlack));
 		}
 
-		// Token: 0x0602E0FC RID: 188668 RVA: 0x0064B214 File Offset: 0x00649414
+		// Token: 0x06030942 RID: 198978 RVA: 0x00698958 File Offset: 0x00696B58
 		public static IFadeBackgroundFadeOutEffectBlack GetRootAsIFadeBackgroundFadeOutEffectBlack(ByteBuffer _bb, IFadeBackgroundFadeOutEffectBlack obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E0FD RID: 188669 RVA: 0x0064B231 File Offset: 0x00649431
+		// Token: 0x06030943 RID: 198979 RVA: 0x00698975 File Offset: 0x00696B75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E0FE RID: 188670 RVA: 0x0064B240 File Offset: 0x00649440
+		// Token: 0x06030944 RID: 198980 RVA: 0x00698984 File Offset: 0x00696B84
 		public IFadeBackgroundFadeOutEffectBlack __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C488 RID: 50312
-		// (get) Token: 0x0602E0FF RID: 188671 RVA: 0x0064B250 File Offset: 0x00649450
+		// Token: 0x1700CE3E RID: 52798
+		// (get) Token: 0x06030945 RID: 198981 RVA: 0x00698994 File Offset: 0x00696B94
 		public EFadeBackgroundFadeOutEffectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C489 RID: 50313
-		// (get) Token: 0x0602E100 RID: 188672 RVA: 0x0064B28C File Offset: 0x0064948C
+		// Token: 0x1700CE3F RID: 52799
+		// (get) Token: 0x06030946 RID: 198982 RVA: 0x006989D0 File Offset: 0x00696BD0
 		public EFadeInScreenShowType FadeColor
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C48A RID: 50314
-		// (get) Token: 0x0602E101 RID: 188673 RVA: 0x0064B2C8 File Offset: 0x006494C8
+		// Token: 0x1700CE40 RID: 52800
+		// (get) Token: 0x06030947 RID: 198983 RVA: 0x00698A0C File Offset: 0x00696C0C
 		public float FadeInTime
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C48B RID: 50315
-		// (get) Token: 0x0602E102 RID: 188674 RVA: 0x0064B308 File Offset: 0x00649508
+		// Token: 0x1700CE41 RID: 52801
+		// (get) Token: 0x06030948 RID: 198984 RVA: 0x00698A4C File Offset: 0x00696C4C
 		public float FadeOutTime
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C48C RID: 50316
-		// (get) Token: 0x0602E103 RID: 188675 RVA: 0x0064B34C File Offset: 0x0064954C
+		// Token: 0x1700CE42 RID: 52802
+		// (get) Token: 0x06030949 RID: 198985 RVA: 0x00698A90 File Offset: 0x00696C90
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E104 RID: 188676 RVA: 0x0064B389 File Offset: 0x00649589
+		// Token: 0x0603094A RID: 198986 RVA: 0x00698ACD File Offset: 0x00696CCD
 		public static Offset<IFadeBackgroundFadeOutEffectBlack> CreateIFadeBackgroundFadeOutEffectBlack(FlatBufferBuilder builder, EFadeBackgroundFadeOutEffectType Type = EFadeBackgroundFadeOutEffectType.Black, EFadeInScreenShowType FadeColor = EFadeInScreenShowType.White, float FadeInTime = 0f, float FadeOutTime = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundFadeOutEffectBlack.EndIFadeBackgroundFadeOutEffectBlack(builder);
 		}
 
-		// Token: 0x0602E105 RID: 188677 RVA: 0x0064B3BD File Offset: 0x006495BD
+		// Token: 0x0603094B RID: 198987 RVA: 0x00698B01 File Offset: 0x00696D01
 		public static void StartIFadeBackgroundFadeOutEffectBlack(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602E106 RID: 188678 RVA: 0x0064B3C6 File Offset: 0x006495C6
+		// Token: 0x0603094C RID: 198988 RVA: 0x00698B0A File Offset: 0x00696D0A
 		public static void AddType(FlatBufferBuilder builder, EFadeBackgroundFadeOutEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E107 RID: 188679 RVA: 0x0064B3D1 File Offset: 0x006495D1
+		// Token: 0x0603094D RID: 198989 RVA: 0x00698B15 File Offset: 0x00696D15
 		public static void AddFadeColor(FlatBufferBuilder builder, EFadeInScreenShowType fadeColor)
 		{
 			builder.AddByte(1, (byte)fadeColor, 0);
 		}
 
-		// Token: 0x0602E108 RID: 188680 RVA: 0x0064B3DC File Offset: 0x006495DC
+		// Token: 0x0603094E RID: 198990 RVA: 0x00698B20 File Offset: 0x00696D20
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(2, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0602E109 RID: 188681 RVA: 0x0064B3EF File Offset: 0x006495EF
+		// Token: 0x0603094F RID: 198991 RVA: 0x00698B33 File Offset: 0x00696D33
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(3, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0602E10A RID: 188682 RVA: 0x0064B402 File Offset: 0x00649602
+		// Token: 0x06030950 RID: 198992 RVA: 0x00698B46 File Offset: 0x00696D46
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602E10B RID: 188683 RVA: 0x0064B40D File Offset: 0x0064960D
+		// Token: 0x06030951 RID: 198993 RVA: 0x00698B51 File Offset: 0x00696D51
 		public static Offset<IFadeBackgroundFadeOutEffectBlack> EndIFadeBackgroundFadeOutEffectBlack(FlatBufferBuilder builder)
 		{
 			return new Offset<IFadeBackgroundFadeOutEffectBlack>(builder.EndTable());
 		}
 
-		// Token: 0x0602E10C RID: 188684 RVA: 0x0064B41C File Offset: 0x0064961C
+		// Token: 0x06030952 RID: 198994 RVA: 0x00698B60 File Offset: 0x00696D60
 		public IFadeBackgroundFadeOutEffectBlackT UnPack()
 		{
 			IFadeBackgroundFadeOutEffectBlackT fadeBackgroundFadeOutEffectBlackT = new IFadeBackgroundFadeOutEffectBlackT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fadeBackgroundFadeOutEffectBlackT;
 		}
 
-		// Token: 0x0602E10D RID: 188685 RVA: 0x0064B437 File Offset: 0x00649637
+		// Token: 0x06030953 RID: 198995 RVA: 0x00698B7B File Offset: 0x00696D7B
 		public void UnPackTo(IFadeBackgroundFadeOutEffectBlackT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602E10E RID: 188686 RVA: 0x0064B478 File Offset: 0x00649678
+		// Token: 0x06030954 RID: 198996 RVA: 0x00698BBC File Offset: 0x00696DBC
 		public static Offset<IFadeBackgroundFadeOutEffectBlack> Pack(FlatBufferBuilder builder, IFadeBackgroundFadeOutEffectBlackT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundFadeOutEffectBlack.CreateIFadeBackgroundFadeOutEffectBlack(builder, _o.Type, _o.FadeColor, _o.FadeInTime, _o.FadeOutTime, _o.NullMask);
 		}
 
-		// Token: 0x04010E64 RID: 69220
+		// Token: 0x04011C96 RID: 72854
 		private Table __p;
 	}
 }

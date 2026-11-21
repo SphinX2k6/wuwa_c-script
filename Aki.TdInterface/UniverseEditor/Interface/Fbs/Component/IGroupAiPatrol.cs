@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005347 RID: 21319
+	// Token: 0x020058CD RID: 22733
 	public struct IGroupAiPatrol : IFlatbufferObject
 	{
-		// Token: 0x17009C9A RID: 40090
-		// (get) Token: 0x06022DD8 RID: 142808 RVA: 0x004D4756 File Offset: 0x004D2956
+		// Token: 0x1700A4D2 RID: 42194
+		// (get) Token: 0x06024E8C RID: 151180 RVA: 0x0051162A File Offset: 0x0050F82A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022DD9 RID: 142809 RVA: 0x004D4763 File Offset: 0x004D2963
+		// Token: 0x06024E8D RID: 151181 RVA: 0x00511637 File Offset: 0x0050F837
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022DDA RID: 142810 RVA: 0x004D476C File Offset: 0x004D296C
+		// Token: 0x06024E8E RID: 151182 RVA: 0x00511640 File Offset: 0x0050F840
 		public static IGroupAiPatrol GetRootAsIGroupAiPatrol(ByteBuffer _bb)
 		{
 			return IGroupAiPatrol.GetRootAsIGroupAiPatrol(_bb, default(IGroupAiPatrol));
 		}
 
-		// Token: 0x06022DDB RID: 142811 RVA: 0x004D4788 File Offset: 0x004D2988
+		// Token: 0x06024E8F RID: 151183 RVA: 0x0051165C File Offset: 0x0050F85C
 		public static IGroupAiPatrol GetRootAsIGroupAiPatrol(ByteBuffer _bb, IGroupAiPatrol obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022DDC RID: 142812 RVA: 0x004D47A5 File Offset: 0x004D29A5
+		// Token: 0x06024E90 RID: 151184 RVA: 0x00511679 File Offset: 0x0050F879
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022DDD RID: 142813 RVA: 0x004D47B4 File Offset: 0x004D29B4
+		// Token: 0x06024E91 RID: 151185 RVA: 0x00511688 File Offset: 0x0050F888
 		public IGroupAiPatrol __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C9B RID: 40091
-		// (get) Token: 0x06022DDE RID: 142814 RVA: 0x004D47C4 File Offset: 0x004D29C4
+		// Token: 0x1700A4D3 RID: 42195
+		// (get) Token: 0x06024E92 RID: 151186 RVA: 0x00511698 File Offset: 0x0050F898
 		public EGroupAiMode Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C9C RID: 40092
-		// (get) Token: 0x06022DDF RID: 142815 RVA: 0x004D4800 File Offset: 0x004D2A00
+		// Token: 0x1700A4D4 RID: 42196
+		// (get) Token: 0x06024E93 RID: 151187 RVA: 0x005116D4 File Offset: 0x0050F8D4
 		public int Leader
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C9D RID: 40093
-		// (get) Token: 0x06022DE0 RID: 142816 RVA: 0x004D483C File Offset: 0x004D2A3C
+		// Token: 0x1700A4D5 RID: 42197
+		// (get) Token: 0x06024E94 RID: 151188 RVA: 0x00511710 File Offset: 0x0050F910
 		public int SplineEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C9E RID: 40094
-		// (get) Token: 0x06022DE1 RID: 142817 RVA: 0x004D4878 File Offset: 0x004D2A78
+		// Token: 0x1700A4D6 RID: 42198
+		// (get) Token: 0x06024E95 RID: 151189 RVA: 0x0051174C File Offset: 0x0050F94C
 		public int PlayerPlaceholderEntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009C9F RID: 40095
-		// (get) Token: 0x06022DE2 RID: 142818 RVA: 0x004D48B8 File Offset: 0x004D2AB8
+		// Token: 0x1700A4D7 RID: 42199
+		// (get) Token: 0x06024E96 RID: 151190 RVA: 0x0051178C File Offset: 0x0050F98C
 		public EGroupAiFormationBasis FormationBasis
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009CA0 RID: 40096
-		// (get) Token: 0x06022DE3 RID: 142819 RVA: 0x004D48F8 File Offset: 0x004D2AF8
+		// Token: 0x1700A4D8 RID: 42200
+		// (get) Token: 0x06024E97 RID: 151191 RVA: 0x005117CC File Offset: 0x0050F9CC
 		public bool IsPreciseFormation
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009CA1 RID: 40097
-		// (get) Token: 0x06022DE4 RID: 142820 RVA: 0x004D4938 File Offset: 0x004D2B38
+		// Token: 0x1700A4D9 RID: 42201
+		// (get) Token: 0x06024E98 RID: 151192 RVA: 0x0051180C File Offset: 0x0050FA0C
 		public IGroupAiEcologyGameplayAbp? EcologyGameplayAbp
 		{
 			get
@@ -148,8 +148,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009CA2 RID: 40098
-		// (get) Token: 0x06022DE5 RID: 142821 RVA: 0x004D498C File Offset: 0x004D2B8C
+		// Token: 0x1700A4DA RID: 42202
+		// (get) Token: 0x06024E99 RID: 151193 RVA: 0x00511860 File Offset: 0x0050FA60
 		public byte NullMask
 		{
 			get
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022DE6 RID: 142822 RVA: 0x004D49CC File Offset: 0x004D2BCC
+		// Token: 0x06024E9A RID: 151194 RVA: 0x005118A0 File Offset: 0x0050FAA0
 		public static Offset<IGroupAiPatrol> CreateIGroupAiPatrol(FlatBufferBuilder builder, EGroupAiMode Type = EGroupAiMode.Default, int Leader = 0, int SplineEntityId = 0, int PlayerPlaceholderEntityId = 0, EGroupAiFormationBasis FormationBasis = EGroupAiFormationBasis.Spline, bool IsPreciseFormation = false, IGroupAiEcologyGameplayAbpT EcologyGameplayAbp = null, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -178,67 +178,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiPatrol.EndIGroupAiPatrol(builder);
 		}
 
-		// Token: 0x06022DE7 RID: 142823 RVA: 0x004D4A29 File Offset: 0x004D2C29
+		// Token: 0x06024E9B RID: 151195 RVA: 0x005118FD File Offset: 0x0050FAFD
 		public static void StartIGroupAiPatrol(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06022DE8 RID: 142824 RVA: 0x004D4A32 File Offset: 0x004D2C32
+		// Token: 0x06024E9C RID: 151196 RVA: 0x00511906 File Offset: 0x0050FB06
 		public static void AddType(FlatBufferBuilder builder, EGroupAiMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06022DE9 RID: 142825 RVA: 0x004D4A3D File Offset: 0x004D2C3D
+		// Token: 0x06024E9D RID: 151197 RVA: 0x00511911 File Offset: 0x0050FB11
 		public static void AddLeader(FlatBufferBuilder builder, int leader)
 		{
 			builder.AddInt(1, leader, 0);
 		}
 
-		// Token: 0x06022DEA RID: 142826 RVA: 0x004D4A48 File Offset: 0x004D2C48
+		// Token: 0x06024E9E RID: 151198 RVA: 0x0051191C File Offset: 0x0050FB1C
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(2, splineEntityId, 0);
 		}
 
-		// Token: 0x06022DEB RID: 142827 RVA: 0x004D4A53 File Offset: 0x004D2C53
+		// Token: 0x06024E9F RID: 151199 RVA: 0x00511927 File Offset: 0x0050FB27
 		public static void AddPlayerPlaceholderEntityId(FlatBufferBuilder builder, int playerPlaceholderEntityId)
 		{
 			builder.AddInt(3, playerPlaceholderEntityId, 0);
 		}
 
-		// Token: 0x06022DEC RID: 142828 RVA: 0x004D4A5E File Offset: 0x004D2C5E
+		// Token: 0x06024EA0 RID: 151200 RVA: 0x00511932 File Offset: 0x0050FB32
 		public static void AddFormationBasis(FlatBufferBuilder builder, EGroupAiFormationBasis formationBasis)
 		{
 			builder.AddByte(4, (byte)formationBasis, 0);
 		}
 
-		// Token: 0x06022DED RID: 142829 RVA: 0x004D4A69 File Offset: 0x004D2C69
+		// Token: 0x06024EA1 RID: 151201 RVA: 0x0051193D File Offset: 0x0050FB3D
 		public static void AddIsPreciseFormation(FlatBufferBuilder builder, bool isPreciseFormation)
 		{
 			builder.AddBool(5, isPreciseFormation, false);
 		}
 
-		// Token: 0x06022DEE RID: 142830 RVA: 0x004D4A74 File Offset: 0x004D2C74
+		// Token: 0x06024EA2 RID: 151202 RVA: 0x00511948 File Offset: 0x0050FB48
 		public static void AddEcologyGameplayAbp(FlatBufferBuilder builder, Offset<IGroupAiEcologyGameplayAbp> ecologyGameplayAbpOffset)
 		{
 			builder.AddStruct(6, ecologyGameplayAbpOffset.Value, 0);
 		}
 
-		// Token: 0x06022DEF RID: 142831 RVA: 0x004D4A84 File Offset: 0x004D2C84
+		// Token: 0x06024EA3 RID: 151203 RVA: 0x00511958 File Offset: 0x0050FB58
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06022DF0 RID: 142832 RVA: 0x004D4A8F File Offset: 0x004D2C8F
+		// Token: 0x06024EA4 RID: 151204 RVA: 0x00511963 File Offset: 0x0050FB63
 		public static Offset<IGroupAiPatrol> EndIGroupAiPatrol(FlatBufferBuilder builder)
 		{
 			return new Offset<IGroupAiPatrol>(builder.EndTable());
 		}
 
-		// Token: 0x06022DF1 RID: 142833 RVA: 0x004D4A9C File Offset: 0x004D2C9C
+		// Token: 0x06024EA5 RID: 151205 RVA: 0x00511970 File Offset: 0x0050FB70
 		public IGroupAiPatrolT UnPack()
 		{
 			IGroupAiPatrolT groupAiPatrolT = new IGroupAiPatrolT();
@@ -246,7 +246,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return groupAiPatrolT;
 		}
 
-		// Token: 0x06022DF2 RID: 142834 RVA: 0x004D4AB8 File Offset: 0x004D2CB8
+		// Token: 0x06024EA6 RID: 151206 RVA: 0x0051198C File Offset: 0x0050FB8C
 		public void UnPackTo(IGroupAiPatrolT _o)
 		{
 			_o.Type = this.Type;
@@ -259,7 +259,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022DF3 RID: 142835 RVA: 0x004D4B48 File Offset: 0x004D2D48
+		// Token: 0x06024EA7 RID: 151207 RVA: 0x00511A1C File Offset: 0x0050FC1C
 		public static Offset<IGroupAiPatrol> Pack(FlatBufferBuilder builder, IGroupAiPatrolT _o)
 		{
 			if (_o == null)
@@ -269,7 +269,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiPatrol.CreateIGroupAiPatrol(builder, _o.Type, _o.Leader, _o.SplineEntityId, _o.PlayerPlaceholderEntityId, _o.FormationBasis, _o.IsPreciseFormation, _o.EcologyGameplayAbp, _o.NullMask);
 		}
 
-		// Token: 0x0400E514 RID: 58644
+		// Token: 0x0400F144 RID: 61764
 		private Table __p;
 	}
 }

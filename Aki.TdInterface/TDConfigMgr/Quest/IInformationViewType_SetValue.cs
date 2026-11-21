@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FC4 RID: 4036
+	// Token: 0x020010F0 RID: 4336
 	public class IInformationViewType_SetValue
 	{
-		// Token: 0x04003640 RID: 13888
+		// Token: 0x04003975 RID: 14709
 		public EInformationViewType Type;
 	}
 }

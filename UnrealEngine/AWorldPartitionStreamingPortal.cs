@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001287 RID: 4743
+	// Token: 0x020002B1 RID: 689
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.WorldPartitionStreamingPortal")]
 	[UnrealStructLayout(1136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1136)]
 	public class AWorldPartitionStreamingPortal : ATriggerSphere, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060115EB RID: 71147 RVA: 0x00197FA5 File Offset: 0x001961A5
+		// Token: 0x06004A95 RID: 19093 RVA: 0x0006865D File Offset: 0x0006685D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AWorldPartitionStreamingPortal._ClassPtr;
 		}
 
-		// Token: 0x060115EC RID: 71148 RVA: 0x00197FB4 File Offset: 0x001961B4
+		// Token: 0x06004A96 RID: 19094 RVA: 0x0006866C File Offset: 0x0006686C
 		public AWorldPartitionStreamingPortal() : this(BuiltinUtils.AllocNativeUObject(AWorldPartitionStreamingPortal.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060115ED RID: 71149 RVA: 0x00197FDC File Offset: 0x001961DC
+		// Token: 0x06004A97 RID: 19095 RVA: 0x00068694 File Offset: 0x00066894
 		public AWorldPartitionStreamingPortal(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AWorldPartitionStreamingPortal.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170043AE RID: 17326
-		// (get) Token: 0x060115EE RID: 71150 RVA: 0x0019800F File Offset: 0x0019620F
-		// (set) Token: 0x060115EF RID: 71151 RVA: 0x00198023 File Offset: 0x00196223
+		// Token: 0x17000E00 RID: 3584
+		// (get) Token: 0x06004A98 RID: 19096 RVA: 0x000686C7 File Offset: 0x000668C7
+		// (set) Token: 0x06004A99 RID: 19097 RVA: 0x000686DB File Offset: 0x000668DB
 		[Nullable(2)]
 		public unsafe UWorldPartitionStreamingSourceComponent StreamingSourceComponent
 		{
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170043AF RID: 17327
-		// (get) Token: 0x060115F0 RID: 71152 RVA: 0x00198038 File Offset: 0x00196238
-		// (set) Token: 0x060115F1 RID: 71153 RVA: 0x0019804D File Offset: 0x0019624D
+		// Token: 0x17000E01 RID: 3585
+		// (get) Token: 0x06004A9A RID: 19098 RVA: 0x000686F0 File Offset: 0x000668F0
+		// (set) Token: 0x06004A9B RID: 19099 RVA: 0x00068705 File Offset: 0x00066905
 		public TSoftObjectPtr<AActor> Target
 		{
 			get
@@ -63,16 +63,15 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060115F2 RID: 71154 RVA: 0x00198072 File Offset: 0x00196272
+		// Token: 0x06004A9C RID: 19100 RVA: 0x0006872A File Offset: 0x0006692A
 		[NullableContext(2)]
 		public void SetTargetStreamingSourceComponent(UWorldPartitionStreamingSourceComponent InComponent)
 		{
 			AWorldPartitionStreamingPortal.__SetTargetStreamingSourceComponent_Internal(base.NativePtr, (InComponent != null) ? InComponent.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060115F3 RID: 71155 RVA: 0x00198090 File Offset: 0x00196290
+		// Token: 0x06004A9D RID: 19101 RVA: 0x00068748 File Offset: 0x00066948
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTarget(TSoftObjectPtr<AActor> InTarget)
 		{
 			AWorldPartitionStreamingPortal.__SetTarget_FunctionParams* ptr = stackalloc AWorldPartitionStreamingPortal.__SetTarget_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(AWorldPartitionStreamingPortal.__SetTarget_FunctionParams) & -16L;
@@ -81,150 +80,149 @@ namespace UnrealEngine
 			{
 				FSoftObjectPtr.NativeCopy(&ptr->InTarget, InTarget.NativePtr, 1);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AWorldPartitionStreamingPortal.__SetTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AWorldPartitionStreamingPortal.__SetTarget_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(AWorldPartitionStreamingPortal.__SetTarget_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060115F4 RID: 71156 RVA: 0x001980FD File Offset: 0x001962FD
+		// Token: 0x06004A9E RID: 19102 RVA: 0x000687B4 File Offset: 0x000669B4
 		public virtual void OnStateChanged()
 		{
 			AWorldPartitionStreamingPortal.__OnStateChanged_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060115F5 RID: 71157 RVA: 0x0019810A File Offset: 0x0019630A
+		// Token: 0x06004A9F RID: 19103 RVA: 0x000687C1 File Offset: 0x000669C1
 		protected virtual void OnStateChanged_Implementation()
 		{
 			AWorldPartitionStreamingPortal.__OnStateChanged_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060115F6 RID: 71158 RVA: 0x00198117 File Offset: 0x00196317
+		// Token: 0x06004AA0 RID: 19104 RVA: 0x000687CE File Offset: 0x000669CE
 		public virtual bool IsStreamingAllowed()
 		{
 			return AWorldPartitionStreamingPortal.__IsStreamingAllowed_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060115F7 RID: 71159 RVA: 0x00198124 File Offset: 0x00196324
+		// Token: 0x06004AA1 RID: 19105 RVA: 0x000687DB File Offset: 0x000669DB
 		protected virtual bool IsStreamingAllowed_Implementation()
 		{
 			return AWorldPartitionStreamingPortal.__IsStreamingAllowed_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060115F8 RID: 71160 RVA: 0x00198131 File Offset: 0x00196331
+		// Token: 0x06004AA2 RID: 19106 RVA: 0x000687E8 File Offset: 0x000669E8
 		[NullableContext(2)]
 		public UWorldPartitionStreamingSourceComponent GetTargetStreamingSourceComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UWorldPartitionStreamingSourceComponent>(AWorldPartitionStreamingPortal.__GetTargetStreamingSourceComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x060115F9 RID: 71161 RVA: 0x00198144 File Offset: 0x00196344
+		// Token: 0x06004AA3 RID: 19107 RVA: 0x000687FC File Offset: 0x000669FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSoftObjectPtr<AActor> GetTarget()
 		{
 			AWorldPartitionStreamingPortal.__GetTarget_FunctionParams* ptr = stackalloc AWorldPartitionStreamingPortal.__GetTarget_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(AWorldPartitionStreamingPortal.__GetTarget_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(AWorldPartitionStreamingPortal.__GetTarget_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AWorldPartitionStreamingPortal.__GetTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AWorldPartitionStreamingPortal.__GetTarget_NativeFunctionPtr, (void*)ptr);
 			TSoftObjectPtr<AActor> result = new TSoftObjectPtr<AActor>(&ptr->__Result, false, true);
 			UnrealReflectionUtils.DestroyStruct(AWorldPartitionStreamingPortal.__GetTarget_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060115FA RID: 71162 RVA: 0x001981A3 File Offset: 0x001963A3
+		// Token: 0x06004AA4 RID: 19108 RVA: 0x0006885A File Offset: 0x00066A5A
 		[NullableContext(2)]
 		public UWorldPartitionStreamingSourceComponent GetStreamingSourceComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UWorldPartitionStreamingSourceComponent>(AWorldPartitionStreamingPortal.__GetStreamingSourceComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x060115FB RID: 71163
+		// Token: 0x06004AA5 RID: 19109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTargetStreamingSourceComponent_Internal(IntPtr @this, IntPtr InComponent);
 
-		// Token: 0x060115FC RID: 71164
+		// Token: 0x06004AA6 RID: 19110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnStateChanged_Internal(IntPtr @this);
 
-		// Token: 0x060115FD RID: 71165
+		// Token: 0x06004AA7 RID: 19111
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnStateChanged_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x060115FE RID: 71166
+		// Token: 0x06004AA8 RID: 19112
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingAllowed_Internal(IntPtr @this);
 
-		// Token: 0x060115FF RID: 71167
+		// Token: 0x06004AA9 RID: 19113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsStreamingAllowed_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x06011600 RID: 71168
+		// Token: 0x06004AAA RID: 19114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTargetStreamingSourceComponent_Internal(IntPtr @this);
 
-		// Token: 0x06011601 RID: 71169
+		// Token: 0x06004AAB RID: 19115
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetStreamingSourceComponent_Internal(IntPtr @this);
 
-		// Token: 0x06011602 RID: 71170 RVA: 0x001981B5 File Offset: 0x001963B5
+		// Token: 0x06004AAC RID: 19116 RVA: 0x0006886C File Offset: 0x00066A6C
 		static AWorldPartitionStreamingPortal()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.WorldPartitionStreamingPortal");
 		}
 
-		// Token: 0x06011603 RID: 71171 RVA: 0x001981C3 File Offset: 0x001963C3
+		// Token: 0x06004AAD RID: 19117 RVA: 0x0006887A File Offset: 0x00066A7A
 		protected AWorldPartitionStreamingPortal(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040094C1 RID: 38081
+		// Token: 0x04001D6E RID: 7534
 		public new const string __ObjectPath = "/Script/Engine.WorldPartitionStreamingPortal";
 
-		// Token: 0x040094C2 RID: 38082
+		// Token: 0x04001D6F RID: 7535
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040094C3 RID: 38083
+		// Token: 0x04001D70 RID: 7536
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040094C4 RID: 38084
+		// Token: 0x04001D71 RID: 7537
 		internal static int __PropertyOffset_StreamingSourceComponent;
 
-		// Token: 0x040094C5 RID: 38085
+		// Token: 0x04001D72 RID: 7538
 		internal static int __PropertyOffset_Target;
 
-		// Token: 0x040094C6 RID: 38086
+		// Token: 0x04001D73 RID: 7539
 		private static IntPtr __SetTarget_NativeFunctionPtr;
 
-		// Token: 0x040094C7 RID: 38087
+		// Token: 0x04001D74 RID: 7540
 		private static IntPtr __GetTarget_NativeFunctionPtr;
 
-		// Token: 0x02002E16 RID: 11798
+		// Token: 0x020009F6 RID: 2550
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __SetTarget_FunctionParams
 		{
-			// Token: 0x0401689B RID: 92315
+			// Token: 0x0400599B RID: 22939
 			[FieldOffset(0)]
 			public byte InTarget;
 		}
 
-		// Token: 0x02002E17 RID: 11799
+		// Token: 0x020009F7 RID: 2551
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsStreamingAllowed_FunctionParams
 		{
-			// Token: 0x0401689C RID: 92316
+			// Token: 0x0400599C RID: 22940
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002E18 RID: 11800
+		// Token: 0x020009F8 RID: 2552
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __GetTarget_FunctionParams
 		{
-			// Token: 0x0401689D RID: 92317
+			// Token: 0x0400599D RID: 22941
 			[FieldOffset(0)]
 			public byte __Result;
 		}

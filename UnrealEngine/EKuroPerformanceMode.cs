@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A81 RID: 6785
+	// Token: 0x020004AA RID: 1194
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.EKuroPerformanceMode")]
 	public enum EKuroPerformanceMode
 	{
-		// Token: 0x0400D9DD RID: 55773
+		// Token: 0x04002FB7 RID: 12215
 		EPM_OutPerformanceMode,
-		// Token: 0x0400D9DE RID: 55774
+		// Token: 0x04002FB8 RID: 12216
 		EPM_InPerformanceMode,
-		// Token: 0x0400D9DF RID: 55775
+		// Token: 0x04002FB9 RID: 12217
 		EPM_MAX
 	}
 }

@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi.RoleBreach;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x0200287C RID: 10364
+// Token: 0x02001DF7 RID: 7671
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleBreakPreviewViewModel
 {
-	// Token: 0x0601552D RID: 87341 RVA: 0x005625F6 File Offset: 0x005607F6
+	// Token: 0x06012F2B RID: 77611 RVA: 0x0058D352 File Offset: 0x0058B552
 	public void Dispose()
 	{
 		this.ChosenLevelCore = -1;
@@ -19,9 +19,9 @@ public class RoleBreakPreviewViewModel
 		this.UnbindCostContentItem();
 	}
 
-	// Token: 0x17001C76 RID: 7286
-	// (get) Token: 0x0601552E RID: 87342 RVA: 0x0056260B File Offset: 0x0056080B
-	// (set) Token: 0x0601552F RID: 87343 RVA: 0x00562613 File Offset: 0x00560813
+	// Token: 0x17001CCE RID: 7374
+	// (get) Token: 0x06012F2C RID: 77612 RVA: 0x0058D367 File Offset: 0x0058B567
+	// (set) Token: 0x06012F2D RID: 77613 RVA: 0x0058D36F File Offset: 0x0058B56F
 	public RoleDataBase CachedRoleInstance
 	{
 		get
@@ -38,9 +38,9 @@ public class RoleBreakPreviewViewModel
 		}
 	}
 
-	// Token: 0x17001C77 RID: 7287
-	// (get) Token: 0x06015530 RID: 87344 RVA: 0x00562628 File Offset: 0x00560828
-	// (set) Token: 0x06015531 RID: 87345 RVA: 0x00562630 File Offset: 0x00560830
+	// Token: 0x17001CCF RID: 7375
+	// (get) Token: 0x06012F2E RID: 77614 RVA: 0x0058D384 File Offset: 0x0058B584
+	// (set) Token: 0x06012F2F RID: 77615 RVA: 0x0058D38C File Offset: 0x0058B58C
 	public int ChosenLevel
 	{
 		get
@@ -65,21 +65,21 @@ public class RoleBreakPreviewViewModel
 		}
 	}
 
-	// Token: 0x06015532 RID: 87346 RVA: 0x0056267D File Offset: 0x0056087D
+	// Token: 0x06012F30 RID: 77616 RVA: 0x0058D3D9 File Offset: 0x0058B5D9
 	public LevelLayoutGrid CreateLevelLayoutGrid()
 	{
 		return new LevelLayoutGrid(this);
 	}
 
-	// Token: 0x06015533 RID: 87347 RVA: 0x00562688 File Offset: 0x00560888
+	// Token: 0x06012F31 RID: 77617 RVA: 0x0058D3E4 File Offset: 0x0058B5E4
 	private void ExtendToggleClickedCallback(MediumItemGridExtendCallback callbackParam)
 	{
 		ISelectedData selectedData = callbackParam.Data as ISelectedData;
-		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null, false);
 		callbackParam.MediumItemGrid.SetSelected(true, true);
 	}
 
-	// Token: 0x06015534 RID: 87348 RVA: 0x005626C0 File Offset: 0x005608C0
+	// Token: 0x06012F32 RID: 77618 RVA: 0x0058D41D File Offset: 0x0058B61D
 	public CostMediumItemGrid CreateItemLayoutGrid()
 	{
 		CostMediumItemGrid costMediumItemGrid = new CostMediumItemGrid();
@@ -87,13 +87,13 @@ public class RoleBreakPreviewViewModel
 		return costMediumItemGrid;
 	}
 
-	// Token: 0x06015535 RID: 87349 RVA: 0x005626D9 File Offset: 0x005608D9
+	// Token: 0x06012F33 RID: 77619 RVA: 0x0058D436 File Offset: 0x0058B636
 	public void BindView(RoleBreakPreviewView view)
 	{
 		this.CachedViewContextCore = new RoleBreakPreviewContext(this, view);
 	}
 
-	// Token: 0x06015536 RID: 87350 RVA: 0x005626E8 File Offset: 0x005608E8
+	// Token: 0x06012F34 RID: 77620 RVA: 0x0058D445 File Offset: 0x0058B645
 	public void UnbindView()
 	{
 		RoleBreakPreviewContext cachedViewContextCore = this.CachedViewContextCore;
@@ -104,13 +104,13 @@ public class RoleBreakPreviewViewModel
 		this.CachedViewContextCore = null;
 	}
 
-	// Token: 0x06015537 RID: 87351 RVA: 0x00562702 File Offset: 0x00560902
+	// Token: 0x06012F35 RID: 77621 RVA: 0x0058D45F File Offset: 0x0058B65F
 	public void BindCostContentItem(CostContentItem item)
 	{
 		this.CachedCostContentItemContextCore = new CostContentItemContext(this, item);
 	}
 
-	// Token: 0x06015538 RID: 87352 RVA: 0x00562711 File Offset: 0x00560911
+	// Token: 0x06012F36 RID: 77622 RVA: 0x0058D46E File Offset: 0x0058B66E
 	public void UnbindCostContentItem()
 	{
 		CostContentItemContext cachedCostContentItemContextCore = this.CachedCostContentItemContextCore;
@@ -121,21 +121,21 @@ public class RoleBreakPreviewViewModel
 		this.CachedCostContentItemContextCore = null;
 	}
 
-	// Token: 0x06015539 RID: 87353 RVA: 0x0056272C File Offset: 0x0056092C
+	// Token: 0x06012F37 RID: 77623 RVA: 0x0058D488 File Offset: 0x0058B688
 	public void HandleViewOnStart()
 	{
 		int breachLevel = this.CachedRoleInstance.GetLevelData().GetBreachLevel();
 		this.ChosenLevel = breachLevel + 1;
 	}
 
-	// Token: 0x0601553A RID: 87354 RVA: 0x00562754 File Offset: 0x00560954
+	// Token: 0x06012F38 RID: 77624 RVA: 0x0058D4B0 File Offset: 0x0058B6B0
 	public void HandleCostContentItemOnStart()
 	{
 		RoleLevelData levelData = this.CachedRoleInstance.GetLevelData();
 		this.CachedCostContentItemContextCore.ChosenLevel = levelData.GetBreachLevel();
 	}
 
-	// Token: 0x0601553B RID: 87355 RVA: 0x0056277E File Offset: 0x0056097E
+	// Token: 0x06012F39 RID: 77625 RVA: 0x0058D4DA File Offset: 0x0058B6DA
 	[NullableContext(0)]
 	public void HandleViewClosePromise(UniTask<bool> booleanPromise)
 	{
@@ -145,25 +145,25 @@ public class RoleBreakPreviewViewModel
 		}).Forget();
 	}
 
-	// Token: 0x0601553C RID: 87356 RVA: 0x00562797 File Offset: 0x00560997
+	// Token: 0x06012F3A RID: 77626 RVA: 0x0058D4F3 File Offset: 0x0058B6F3
 	public void HandleItemOnClickToggle(int gridIndex)
 	{
 		this.ChosenLevel = gridIndex + 1;
 	}
 
-	// Token: 0x0601553D RID: 87357 RVA: 0x005627A2 File Offset: 0x005609A2
+	// Token: 0x06012F3B RID: 77627 RVA: 0x0058D4FE File Offset: 0x0058B6FE
 	public void HandleClickLeft()
 	{
 		this.ChosenLevel--;
 	}
 
-	// Token: 0x0601553E RID: 87358 RVA: 0x005627B2 File Offset: 0x005609B2
+	// Token: 0x06012F3C RID: 77628 RVA: 0x0058D50E File Offset: 0x0058B70E
 	public void HandleClickRight()
 	{
 		this.ChosenLevel++;
 	}
 
-	// Token: 0x0601553F RID: 87359 RVA: 0x005627C4 File Offset: 0x005609C4
+	// Token: 0x06012F3D RID: 77629 RVA: 0x0058D520 File Offset: 0x0058B720
 	public ILevelLayoutGridData[] BuildLevelLayoutData(int chosenBreakLevel)
 	{
 		List<ILevelLayoutGridData> list = new List<ILevelLayoutGridData>();
@@ -182,7 +182,7 @@ public class RoleBreakPreviewViewModel
 		return list.ToArray();
 	}
 
-	// Token: 0x06015540 RID: 87360 RVA: 0x00562830 File Offset: 0x00560A30
+	// Token: 0x06012F3E RID: 77630 RVA: 0x0058D58C File Offset: 0x0058B78C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -210,7 +210,7 @@ public class RoleBreakPreviewViewModel
 		return list.ToArray();
 	}
 
-	// Token: 0x06015541 RID: 87361 RVA: 0x00562914 File Offset: 0x00560B14
+	// Token: 0x06012F3F RID: 77631 RVA: 0x0058D670 File Offset: 0x0058B870
 	[NullableContext(2)]
 	public ICostContentItemData BuildCostContentItemData(int chosenLevel)
 	{
@@ -231,18 +231,18 @@ public class RoleBreakPreviewViewModel
 		};
 	}
 
-	// Token: 0x04009F57 RID: 40791
+	// Token: 0x0400A340 RID: 41792
 	[Nullable(2)]
 	private RoleBreakPreviewContext CachedViewContextCore;
 
-	// Token: 0x04009F58 RID: 40792
+	// Token: 0x0400A341 RID: 41793
 	[Nullable(2)]
 	private CostContentItemContext CachedCostContentItemContextCore;
 
-	// Token: 0x04009F59 RID: 40793
+	// Token: 0x0400A342 RID: 41794
 	[Nullable(2)]
 	private RoleDataBase CachedRoleInstanceCore;
 
-	// Token: 0x04009F5A RID: 40794
+	// Token: 0x0400A343 RID: 41795
 	private int ChosenLevelCore = -1;
 }

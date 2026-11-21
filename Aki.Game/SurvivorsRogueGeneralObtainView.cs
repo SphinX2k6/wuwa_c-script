@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B77 RID: 11127
+// Token: 0x020020F3 RID: 8435
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueCommandView
 {
-	// Token: 0x060170AD RID: 94381 RVA: 0x005D9BE5 File Offset: 0x005D7DE5
+	// Token: 0x06014ADE RID: 84702 RVA: 0x00606755 File Offset: 0x00604955
 	public SurvivorsRogueGeneralObtainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x17001EC0 RID: 7872
-	// (get) Token: 0x060170AE RID: 94382 RVA: 0x005D9BEE File Offset: 0x005D7DEE
+	// Token: 0x17001F18 RID: 7960
+	// (get) Token: 0x06014ADF RID: 84703 RVA: 0x0060675E File Offset: 0x0060495E
 	SurvivorsRogueCommandBase ISurvivorsRogueCommandView.Command
 	{
 		get
@@ -29,8 +29,8 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		}
 	}
 
-	// Token: 0x17001EC1 RID: 7873
-	// (get) Token: 0x060170AF RID: 94383 RVA: 0x005D9BF6 File Offset: 0x005D7DF6
+	// Token: 0x17001F19 RID: 7961
+	// (get) Token: 0x06014AE0 RID: 84704 RVA: 0x00606766 File Offset: 0x00604966
 	int ISurvivorsRogueCommandView.CommandIncId
 	{
 		get
@@ -39,7 +39,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		}
 	}
 
-	// Token: 0x060170B0 RID: 94384 RVA: 0x005D9C00 File Offset: 0x005D7E00
+	// Token: 0x06014AE1 RID: 84705 RVA: 0x00606770 File Offset: 0x00604970
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -56,13 +56,13 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		};
 	}
 
-	// Token: 0x060170B1 RID: 94385 RVA: 0x005D9CA9 File Offset: 0x005D7EA9
+	// Token: 0x06014AE2 RID: 84706 RVA: 0x00606819 File Offset: 0x00604A19
 	public void CloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060170B2 RID: 94386 RVA: 0x005D9CB4 File Offset: 0x005D7EB4
+	// Token: 0x06014AE3 RID: 84707 RVA: 0x00606824 File Offset: 0x00604A24
 	private void OnClickBtnConfirm()
 	{
 		if (this.ViewInfo == null)
@@ -96,7 +96,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		this.Command.Execute();
 	}
 
-	// Token: 0x060170B3 RID: 94387 RVA: 0x005D9D68 File Offset: 0x005D7F68
+	// Token: 0x06014AE4 RID: 84708 RVA: 0x006068D8 File Offset: 0x00604AD8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueGeneralObtainView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -107,13 +107,13 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060170B4 RID: 94388 RVA: 0x005D9DAB File Offset: 0x005D7FAB
+	// Token: 0x06014AE5 RID: 84709 RVA: 0x0060691B File Offset: 0x00604B1B
 	protected override void OnBeforeCreate()
 	{
 		EventSystem.Instance.Add(EEventName.SurvivorsRebindCommandView, new Action<int>(this.OnSurvivorsRebindCommandView));
 	}
 
-	// Token: 0x060170B5 RID: 94389 RVA: 0x005D9DC9 File Offset: 0x005D7FC9
+	// Token: 0x06014AE6 RID: 84710 RVA: 0x00606939 File Offset: 0x00604B39
 	protected override void OnAddEventListener()
 	{
 		if (!EventSystem.Instance.Has(EEventName.SurvivorsRebindCommandView, new Action<int>(this.OnSurvivorsRebindCommandView)))
@@ -122,13 +122,13 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		}
 	}
 
-	// Token: 0x060170B6 RID: 94390 RVA: 0x005D9E04 File Offset: 0x005D8004
+	// Token: 0x06014AE7 RID: 84711 RVA: 0x00606974 File Offset: 0x00604B74
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SurvivorsRebindCommandView, new Action<int>(this.OnSurvivorsRebindCommandView));
 	}
 
-	// Token: 0x060170B7 RID: 94391 RVA: 0x005D9E22 File Offset: 0x005D8022
+	// Token: 0x06014AE8 RID: 84712 RVA: 0x00606992 File Offset: 0x00604B92
 	protected override void OnBeforeDestroy()
 	{
 		SurvivorsRogueCommandBaseObtain command = this.Command;
@@ -139,7 +139,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		command.BindView(null);
 	}
 
-	// Token: 0x060170B8 RID: 94392 RVA: 0x005D9E35 File Offset: 0x005D8035
+	// Token: 0x06014AE9 RID: 84713 RVA: 0x006069A5 File Offset: 0x00604BA5
 	private void SeqStartFinished(string s)
 	{
 		Action onSeqStartFinished = this.OnSeqStartFinished;
@@ -150,7 +150,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		onSeqStartFinished();
 	}
 
-	// Token: 0x060170B9 RID: 94393 RVA: 0x005D9E47 File Offset: 0x005D8047
+	// Token: 0x06014AEA RID: 84714 RVA: 0x006069B7 File Offset: 0x00604BB7
 	private SurvivorsRogueCardObtainItem CreateCardItem()
 	{
 		SurvivorsRogueCardObtainItem survivorsRogueCardObtainItem = new SurvivorsRogueCardObtainItem();
@@ -159,7 +159,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		return survivorsRogueCardObtainItem;
 	}
 
-	// Token: 0x060170BA RID: 94394 RVA: 0x005D9E74 File Offset: 0x005D8074
+	// Token: 0x06014AEB RID: 84715 RVA: 0x006069E4 File Offset: 0x00604BE4
 	private void OnStateChangeCallback(ISurvivorsRogueCardBase data, EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -181,7 +181,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		onGoodsSelected(this.SelectIncId, true);
 	}
 
-	// Token: 0x060170BB RID: 94395 RVA: 0x005D9ED8 File Offset: 0x005D80D8
+	// Token: 0x06014AEC RID: 84716 RVA: 0x00606A48 File Offset: 0x00604C48
 	private void DeselectLast()
 	{
 		if (this.SelectIncId != 0)
@@ -200,7 +200,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		this.SelectIncId = 0;
 	}
 
-	// Token: 0x060170BC RID: 94396 RVA: 0x005D9F30 File Offset: 0x005D8130
+	// Token: 0x06014AED RID: 84717 RVA: 0x00606AA0 File Offset: 0x00604CA0
 	private bool OnCanExecuteChangeCallback(ISurvivorsRogueCardBase data, EToggleState state)
 	{
 		if (this.ViewInfo == null)
@@ -215,13 +215,13 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		return state != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x060170BD RID: 94397 RVA: 0x005D9F6C File Offset: 0x005D816C
+	// Token: 0x06014AEE RID: 84718 RVA: 0x00606ADC File Offset: 0x00604CDC
 	private void SetConfirmButtonInteract(bool bInteractive)
 	{
 		base.GetButton(3).SetSelfInteractive(bInteractive);
 	}
 
-	// Token: 0x060170BE RID: 94398 RVA: 0x005D9F7C File Offset: 0x005D817C
+	// Token: 0x06014AEF RID: 84719 RVA: 0x00606AEC File Offset: 0x00604CEC
 	private void OnSurvivorsRebindCommandView(int commandId)
 	{
 		SurvivorsRogueCommandBase commandByIncId = SurvivorsRogueModel.Instance.CommandQueue.GetCommandByIncId(commandId);
@@ -248,7 +248,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		}
 	}
 
-	// Token: 0x060170BF RID: 94399 RVA: 0x005DA02C File Offset: 0x005D822C
+	// Token: 0x06014AF0 RID: 84720 RVA: 0x00606B9C File Offset: 0x00604D9C
 	public void Refresh()
 	{
 		UiAsyncTask task = new UiAsyncTask("SurvivorsRogueGeneralObtainView.Refresh", delegate()
@@ -263,14 +263,14 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060170C0 RID: 94400 RVA: 0x005DA059 File Offset: 0x005D8259
+	// Token: 0x06014AF1 RID: 84721 RVA: 0x00606BC9 File Offset: 0x00604DC9
 	[NullableContext(2)]
 	public SurvivorsRogueRoleStatePanel GetRoleStatePanel()
 	{
 		return this.BaseItem.RoleStatePanel;
 	}
 
-	// Token: 0x060170C1 RID: 94401 RVA: 0x005DA068 File Offset: 0x005D8268
+	// Token: 0x06014AF2 RID: 84722 RVA: 0x00606BD8 File Offset: 0x00604DD8
 	private UniTask RefreshAsync()
 	{
 		SurvivorsRogueGeneralObtainView.<RefreshAsync>d__30 <RefreshAsync>d__;
@@ -281,7 +281,7 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060170C2 RID: 94402 RVA: 0x005DA0AC File Offset: 0x005D82AC
+	// Token: 0x06014AF3 RID: 84723 RVA: 0x00606C1C File Offset: 0x00604E1C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -309,13 +309,13 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 		return null;
 	}
 
-	// Token: 0x0400AC6E RID: 44142
+	// Token: 0x0400B074 RID: 45172
 	public int CommandIncId;
 
-	// Token: 0x0400AC6F RID: 44143
+	// Token: 0x0400B075 RID: 45173
 	public SurvivorsRogueCommandBaseObtain Command;
 
-	// Token: 0x0400AC70 RID: 44144
+	// Token: 0x0400B076 RID: 45174
 	[Nullable(new byte[]
 	{
 		2,
@@ -324,22 +324,22 @@ public class SurvivorsRogueGeneralObtainView : UiViewBase, ISurvivorsRogueComman
 	})]
 	protected GenericLayout<SurvivorsRogueCardObtainItem, GoodsDetail> CardList;
 
-	// Token: 0x0400AC71 RID: 44145
+	// Token: 0x0400B077 RID: 45175
 	[Nullable(2)]
 	private SurvivorsRogueViewBase BaseItem;
 
-	// Token: 0x0400AC72 RID: 44146
+	// Token: 0x0400B078 RID: 45176
 	[Nullable(2)]
 	private new ISurvivorsObtainViewInfo ViewInfo;
 
-	// Token: 0x0400AC73 RID: 44147
+	// Token: 0x0400B079 RID: 45177
 	private int SelectIncId;
 
-	// Token: 0x0400AC74 RID: 44148
+	// Token: 0x0400B07A RID: 45178
 	[Nullable(2)]
 	public Action<int, bool> OnGoodsSelected;
 
-	// Token: 0x0400AC75 RID: 44149
+	// Token: 0x0400B07B RID: 45179
 	[Nullable(2)]
 	public Action OnSeqStartFinished;
 }

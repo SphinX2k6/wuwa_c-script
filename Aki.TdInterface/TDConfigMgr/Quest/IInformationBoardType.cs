@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FB9 RID: 4025
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010E5 RID: 4325
 	public class IInformationBoardType
 	{
-		// Token: 0x060059BC RID: 22972 RVA: 0x000DA844 File Offset: 0x000D8A44
+		// Token: 0x06005F9A RID: 24474 RVA: 0x000E73D0 File Offset: 0x000E55D0
 		private IInformationBoardType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060059BD RID: 22973 RVA: 0x000DA87C File Offset: 0x000D8A7C
+		// Token: 0x06005F9B RID: 24475 RVA: 0x000E7408 File Offset: 0x000E5608
 		public static IInformationBoardType Create([Nullable(2)] IInformationBoardType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059BE RID: 22974 RVA: 0x000DA88F File Offset: 0x000D8A8F
+		// Token: 0x06005F9C RID: 24476 RVA: 0x000E741B File Offset: 0x000E561B
 		public static IInformationBoardType CreateFromSetValue([Nullable(2)] IInformationBoardType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059BF RID: 22975 RVA: 0x000DA8A2 File Offset: 0x000D8AA2
+		// Token: 0x06005F9D RID: 24477 RVA: 0x000E742E File Offset: 0x000E562E
 		public IInformationBoardType_SetValue ToSetValue()
 		{
 			return new IInformationBoardType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DCA RID: 7626
-		// (get) Token: 0x060059C0 RID: 22976 RVA: 0x000DA8B5 File Offset: 0x000D8AB5
-		// (set) Token: 0x060059C1 RID: 22977 RVA: 0x000DA8E0 File Offset: 0x000D8AE0
+		// Token: 0x17001F72 RID: 8050
+		// (get) Token: 0x06005F9E RID: 24478 RVA: 0x000E7441 File Offset: 0x000E5641
+		// (set) Token: 0x06005F9F RID: 24479 RVA: 0x000E746C File Offset: 0x000E566C
 		public virtual EInformationBoardType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003627 RID: 13863
+		// Token: 0x0400395C RID: 14684
 		[Nullable(2)]
 		protected IInformationBoardType FbInstance;
 
-		// Token: 0x04003628 RID: 13864
+		// Token: 0x0400395D RID: 14685
 		[Nullable(2)]
 		protected IInformationBoardType_SetValue PocoInterface;
 	}

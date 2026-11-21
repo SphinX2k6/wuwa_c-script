@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -18,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE9 RID: 24297
+	// Token: 0x02004ED0 RID: 20176
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SilentAreaView : UiTabViewBase
 	{
-		// Token: 0x0603DBE8 RID: 252904 RVA: 0x00EEC3E4 File Offset: 0x00EEA5E4
+		// Token: 0x06032B83 RID: 207747 RVA: 0x00E3E084 File Offset: 0x00E3C284
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -84,13 +83,13 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DBE9 RID: 252905 RVA: 0x00EEC72E File Offset: 0x00EEA92E
+		// Token: 0x06032B84 RID: 207748 RVA: 0x00E3E3CE File Offset: 0x00E3C5CE
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.AdventureHelpBtn, 18);
 		}
 
-		// Token: 0x0603DBEA RID: 252906 RVA: 0x00EEC744 File Offset: 0x00EEA944
+		// Token: 0x06032B85 RID: 207749 RVA: 0x00E3E3E4 File Offset: 0x00E3C5E4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SilentAreaView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DBEB RID: 252907 RVA: 0x00EEC788 File Offset: 0x00EEA988
+		// Token: 0x06032B86 RID: 207750 RVA: 0x00E3E428 File Offset: 0x00E3C628
 		protected override void OnStart()
 		{
 			this.DetectLoopScroll = new LoopScrollView<SilentAreaItem, ISilentAreaDetectionDynamicData>(base.GetLoopScrollViewComponent(10), base.GetItem(20).GetOwner() as AUIBaseActor, delegate()
@@ -127,11 +126,11 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			if (num != null)
 			{
 				AdventureGuideModel.Instance.SetCurDetectingSilentAreaConfId(num.Value);
-				list = AdventureGuideController.Instance.GetShowSilentAreasList(null, new int?(num.Value)).ToList<ISilentAreaDetectionDynamicData>();
+				list = new List<ISilentAreaDetectionDynamicData>(AdventureGuideController.Instance.GetShowSilentAreasList(null, new int?(num.Value)));
 			}
 			else
 			{
-				list = AdventureGuideController.Instance.GetShowSilentAreasList(new int?(0), null).ToList<ISilentAreaDetectionDynamicData>();
+				list = new List<ISilentAreaDetectionDynamicData>(AdventureGuideController.Instance.GetShowSilentAreasList(new int?(0), null));
 			}
 			list.Sort((ISilentAreaDetectionDynamicData a, ISilentAreaDetectionDynamicData b) => a.SilentAreaDetectionData.Conf.Id - b.SilentAreaDetectionData.Conf.Id);
 			AdventureGuideModel.Instance.CurrentSilentId = (num ?? list[0].SilentAreaDetectionData.Conf.Id);
@@ -140,7 +139,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.JumpToTarget(AdventureGuideModel.Instance.CurrentSilentId);
 		}
 
-		// Token: 0x0603DBEC RID: 252908 RVA: 0x00EEC988 File Offset: 0x00EEAB88
+		// Token: 0x06032B87 RID: 207751 RVA: 0x00E3E628 File Offset: 0x00E3C828
 		[NullableContext(1)]
 		private ILayoutItem<CommonItemSmallItemGrid> OnRewardLayoutUpdater(object tempData, UUIItem uiItem, int index)
 		{
@@ -156,7 +155,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			};
 		}
 
-		// Token: 0x0603DBED RID: 252909 RVA: 0x00EEC9E8 File Offset: 0x00EEABE8
+		// Token: 0x06032B88 RID: 207752 RVA: 0x00E3E688 File Offset: 0x00E3C888
 		protected override void OnBeforeDestroy()
 		{
 			if (this.RewardLayout != null)
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBEE RID: 252910 RVA: 0x00EECA44 File Offset: 0x00EEAC44
+		// Token: 0x06032B89 RID: 207753 RVA: 0x00E3E6E4 File Offset: 0x00E3C8E4
 		[NullableContext(1)]
 		private unsafe void RefreshByDetectingId(int id, UUIExtendToggle toggle)
 		{
@@ -287,7 +286,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.BuildRewardList(silentAreaDetectData.Conf.ShowReward);
 		}
 
-		// Token: 0x0603DBEF RID: 252911 RVA: 0x00EECE68 File Offset: 0x00EEB068
+		// Token: 0x06032B8A RID: 207754 RVA: 0x00E3EB08 File Offset: 0x00E3CD08
 		public void BuildRewardList(int dropId)
 		{
 			Dictionary<int, int> dropShowInfo = AdventureGuideConfig.Instance.GetDropShowInfo(dropId);
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.RewardLayout.RefreshByData<RewardTuple>(list, null);
 		}
 
-		// Token: 0x0603DBF0 RID: 252912 RVA: 0x00EECF0C File Offset: 0x00EEB10C
+		// Token: 0x06032B8B RID: 207755 RVA: 0x00E3EBAC File Offset: 0x00E3CDAC
 		private void OnBoPianMapLinkClick()
 		{
 			UiManager.Instance.ResetToBattleView(delegate(bool _)
@@ -320,7 +319,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			});
 		}
 
-		// Token: 0x0603DBF1 RID: 252913 RVA: 0x00EECF38 File Offset: 0x00EEB138
+		// Token: 0x06032B8C RID: 207756 RVA: 0x00E3EBD8 File Offset: 0x00E3CDD8
 		private void OnDetectClickFunction()
 		{
 			Log.Instance.Info(ELogModule.AdventureGuide, ELogAuthor.LJQ, "点击无音区探测按钮 SilentAreaView", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -334,7 +333,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			AdventureGuideController.Instance.RequestForDetection(DetectionType.SilentArea, silentAreaDetectData.Conf.LevelPlayList(), this.CurShowingSilentAreaId);
 		}
 
-		// Token: 0x0603DBF2 RID: 252914 RVA: 0x00EECFC0 File Offset: 0x00EEB1C0
+		// Token: 0x06032B8D RID: 207757 RVA: 0x00E3EC60 File Offset: 0x00E3CE60
 		public void JumpToTarget(int target)
 		{
 			int num = 0;
@@ -351,10 +350,10 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0402043F RID: 132159
+		// Token: 0x0401AF11 RID: 110353
 		private const int SILENT_HELP = 18;
 
-		// Token: 0x04020440 RID: 132160
+		// Token: 0x0401AF12 RID: 110354
 		[Nullable(new byte[]
 		{
 			2,
@@ -362,19 +361,19 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericScrollView<CommonItemSmallItemGrid> RewardLayout;
 
-		// Token: 0x04020441 RID: 132161
+		// Token: 0x0401AF13 RID: 110355
 		private CommonCurrencyItem BoPianViewerItem;
 
-		// Token: 0x04020442 RID: 132162
+		// Token: 0x0401AF14 RID: 110356
 		private int CurShowingSilentAreaId;
 
-		// Token: 0x04020443 RID: 132163
+		// Token: 0x0401AF15 RID: 110357
 		private UUIInteractionGroup InteractionComp;
 
-		// Token: 0x04020444 RID: 132164
+		// Token: 0x0401AF16 RID: 110358
 		private UUIExtendToggle CurrentResultToggle;
 
-		// Token: 0x04020445 RID: 132165
+		// Token: 0x0401AF17 RID: 110359
 		[Nullable(new byte[]
 		{
 			2,
@@ -383,7 +382,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private LoopScrollView<SilentAreaItem, ISilentAreaDetectionDynamicData> DetectLoopScroll;
 
-		// Token: 0x04020446 RID: 132166
+		// Token: 0x0401AF18 RID: 110360
 		[Nullable(new byte[]
 		{
 			2,

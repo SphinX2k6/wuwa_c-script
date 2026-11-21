@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001257 RID: 4695
+	// Token: 0x02001397 RID: 5015
 	public class EMechaTrackScoreDetectionTypeJsonConverter : JsonConverter<EMechaTrackScoreDetectionType>
 	{
-		// Token: 0x06006A30 RID: 27184 RVA: 0x000FE940 File Offset: 0x000FCB40
+		// Token: 0x06007083 RID: 28803 RVA: 0x0010C56C File Offset: 0x0010A76C
 		public override EMechaTrackScoreDetectionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EMechaTrackScoreDetectionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006A31 RID: 27185 RVA: 0x000FE964 File Offset: 0x000FCB64
+		// Token: 0x06007084 RID: 28804 RVA: 0x0010C590 File Offset: 0x0010A790
 		public override void Write(Utf8JsonWriter writer, EMechaTrackScoreDetectionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

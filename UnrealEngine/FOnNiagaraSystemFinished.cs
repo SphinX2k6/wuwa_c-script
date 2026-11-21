@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200260B RID: 9739
+	// Token: 0x020007AB RID: 1963
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnNiagaraSystemFinished : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060243B4 RID: 148404 RVA: 0x0035A3E1 File Offset: 0x003585E1
+		// Token: 0x0600AAB7 RID: 43703 RVA: 0x000FBBFA File Offset: 0x000F9DFA
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnNiagaraSystemFinished.StaticFunctionPtr();
 		}
 
-		// Token: 0x060243B5 RID: 148405 RVA: 0x0035A3ED File Offset: 0x003585ED
+		// Token: 0x0600AAB8 RID: 43704 RVA: 0x000FBC06 File Offset: 0x000F9E06
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnNiagaraSystemFinished._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnNiagaraSystemFinished._FunctionPtr;
 		}
 
-		// Token: 0x060243B6 RID: 148406 RVA: 0x0035A410 File Offset: 0x00358610
+		// Token: 0x0600AAB9 RID: 43705 RVA: 0x000FBC29 File Offset: 0x000F9E29
 		public FOnNiagaraSystemFinished()
 		{
 		}
 
-		// Token: 0x060243B7 RID: 148407 RVA: 0x0035A418 File Offset: 0x00358618
+		// Token: 0x0600AABA RID: 43706 RVA: 0x000FBC31 File Offset: 0x000F9E31
 		[NullableContext(2)]
 		public FOnNiagaraSystemFinished(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060243B8 RID: 148408 RVA: 0x0035A422 File Offset: 0x00358622
+		// Token: 0x0600AABB RID: 43707 RVA: 0x000FBC3B File Offset: 0x000F9E3B
 		public FOnNiagaraSystemFinished(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060243B9 RID: 148409 RVA: 0x0035A42D File Offset: 0x0035862D
+		// Token: 0x0600AABC RID: 43708 RVA: 0x000FBC46 File Offset: 0x000F9E46
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UNiagaraComponent>) ?? ((Action<UNiagaraComponent>)Delegate.CreateDelegate(typeof(Action<UNiagaraComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060243BA RID: 148410 RVA: 0x0035A45F File Offset: 0x0035865F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600AABD RID: 43709 RVA: 0x000FBC78 File Offset: 0x000F9E78
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnNiagaraSystemFinished.RegisterId);
 		}
 
-		// Token: 0x060243BB RID: 148411 RVA: 0x0035A499 File Offset: 0x00358699
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600AABE RID: 43710 RVA: 0x000FBCB2 File Offset: 0x000F9EB2
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060243BC RID: 148412 RVA: 0x0035A4A4 File Offset: 0x003586A4
+		// Token: 0x0600AABF RID: 43711 RVA: 0x000FBCBC File Offset: 0x000F9EBC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UNiagaraComponent PSystem)
 		{
 			FOnNiagaraSystemFinished.__FOnNiagaraSystemFinished_DelegateParams* ptr = stackalloc FOnNiagaraSystemFinished.__FOnNiagaraSystemFinished_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnNiagaraSystemFinished.__FOnNiagaraSystemFinished_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060243BD RID: 148413 RVA: 0x0035A4F0 File Offset: 0x003586F0
+		// Token: 0x0600AAC0 RID: 43712 RVA: 0x000FBD08 File Offset: 0x000F9F08
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UNiagaraComponent> action = target as Action<UNiagaraComponent>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0401370D RID: 79629
+		// Token: 0x0400491C RID: 18716
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401370E RID: 79630
+		// Token: 0x0400491D RID: 18717
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Niagara.OnNiagaraSystemFinished__DelegateSignature";
 
-		// Token: 0x0401370F RID: 79631
+		// Token: 0x0400491E RID: 18718
 		private static int RegisterId;
 
-		// Token: 0x02003677 RID: 13943
+		// Token: 0x02000F60 RID: 3936
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnNiagaraSystemFinished_DelegateParams
+		private ref struct __FOnNiagaraSystemFinished_DelegateParams
 		{
-			// Token: 0x0401774E RID: 96078
+			// Token: 0x04006336 RID: 25398
 			[FieldOffset(0)]
 			public IntPtr PSystem;
 		}
 
-		// Token: 0x02003678 RID: 13944
+		// Token: 0x02000F61 RID: 3937
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401774F RID: 96079
+			// Token: 0x04006337 RID: 25399
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

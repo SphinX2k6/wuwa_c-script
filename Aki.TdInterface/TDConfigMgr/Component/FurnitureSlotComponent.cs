@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200017D RID: 381
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000194 RID: 404
 	public class FurnitureSlotComponent : IComponentBase
 	{
-		// Token: 0x06000530 RID: 1328 RVA: 0x0001FEDC File Offset: 0x0001E0DC
+		// Token: 0x06000544 RID: 1348 RVA: 0x00020AB8 File Offset: 0x0001ECB8
 		private FurnitureSlotComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000531 RID: 1329 RVA: 0x0001FF14 File Offset: 0x0001E114
+		// Token: 0x06000545 RID: 1349 RVA: 0x00020AF0 File Offset: 0x0001ECF0
 		public static FurnitureSlotComponent Create([Nullable(2)] FurnitureSlotComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000532 RID: 1330 RVA: 0x0001FF27 File Offset: 0x0001E127
+		// Token: 0x06000546 RID: 1350 RVA: 0x00020B03 File Offset: 0x0001ED03
 		public static FurnitureSlotComponent CreateFromSetValue([Nullable(2)] FurnitureSlotComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000533 RID: 1331 RVA: 0x0001FF3A File Offset: 0x0001E13A
+		// Token: 0x06000547 RID: 1351 RVA: 0x00020B16 File Offset: 0x0001ED16
 		public new FurnitureSlotComponent_SetValue ToSetValue()
 		{
 			return new FurnitureSlotComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170001BA RID: 442
-		// (get) Token: 0x06000534 RID: 1332 RVA: 0x0001FF74 File Offset: 0x0001E174
-		// (set) Token: 0x06000535 RID: 1333 RVA: 0x0001FFAE File Offset: 0x0001E1AE
+		// Token: 0x170001C1 RID: 449
+		// (get) Token: 0x06000548 RID: 1352 RVA: 0x00020B50 File Offset: 0x0001ED50
+		// (set) Token: 0x06000549 RID: 1353 RVA: 0x00020B8A File Offset: 0x0001ED8A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001BB RID: 443
-		// (get) Token: 0x06000536 RID: 1334 RVA: 0x0001FFBC File Offset: 0x0001E1BC
-		// (set) Token: 0x06000537 RID: 1335 RVA: 0x0001FFE6 File Offset: 0x0001E1E6
+		// Token: 0x170001C2 RID: 450
+		// (get) Token: 0x0600054A RID: 1354 RVA: 0x00020B98 File Offset: 0x0001ED98
+		// (set) Token: 0x0600054B RID: 1355 RVA: 0x00020BC2 File Offset: 0x0001EDC2
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001BC RID: 444
-		// (get) Token: 0x06000538 RID: 1336 RVA: 0x0001FFF4 File Offset: 0x0001E1F4
-		// (set) Token: 0x06000539 RID: 1337 RVA: 0x00020087 File Offset: 0x0001E287
+		// Token: 0x170001C3 RID: 451
+		// (get) Token: 0x0600054C RID: 1356 RVA: 0x00020BD0 File Offset: 0x0001EDD0
+		// (set) Token: 0x0600054D RID: 1357 RVA: 0x00020C63 File Offset: 0x0001EE63
 		public virtual List<IFurnitureSlot> Slots
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001BD RID: 445
-		// (get) Token: 0x0600053A RID: 1338 RVA: 0x0002009C File Offset: 0x0001E29C
-		// (set) Token: 0x0600053B RID: 1339 RVA: 0x000200FD File Offset: 0x0001E2FD
+		// Token: 0x170001C4 RID: 452
+		// (get) Token: 0x0600054E RID: 1358 RVA: 0x00020C78 File Offset: 0x0001EE78
+		// (set) Token: 0x0600054F RID: 1359 RVA: 0x00020CD9 File Offset: 0x0001EED9
 		[Nullable(2)]
 		public virtual IFurnitureCamera FurnitureCamera
 		{
@@ -177,24 +175,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000746 RID: 1862
+		// Token: 0x0400079C RID: 1948
 		[Nullable(2)]
 		protected new FurnitureSlotComponent FbInstance;
 
-		// Token: 0x04000747 RID: 1863
+		// Token: 0x0400079D RID: 1949
 		[Nullable(2)]
 		protected new FurnitureSlotComponent_SetValue PocoInterface;
 
-		// Token: 0x04000748 RID: 1864
+		// Token: 0x0400079E RID: 1950
 		private List<IFurnitureSlot> _SlotsCache;
 
-		// Token: 0x04000749 RID: 1865
+		// Token: 0x0400079F RID: 1951
 		private bool _SlotsInited;
 
-		// Token: 0x0400074A RID: 1866
+		// Token: 0x040007A0 RID: 1952
 		private IFurnitureCamera _FurnitureCameraCache;
 
-		// Token: 0x0400074B RID: 1867
+		// Token: 0x040007A1 RID: 1953
 		private bool _FurnitureCameraInited;
 	}
 }

@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FB4 RID: 4020
+// Token: 0x02000469 RID: 1129
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneSlotItemInfo : ISceneSlotItemInfo
 {
-	// Token: 0x17000842 RID: 2114
-	// (get) Token: 0x060066FE RID: 26366 RVA: 0x00145DEE File Offset: 0x00143FEE
-	// (set) Token: 0x060066FF RID: 26367 RVA: 0x00145DF6 File Offset: 0x00143FF6
+	// Token: 0x17000864 RID: 2148
+	// (get) Token: 0x06003A96 RID: 14998 RVA: 0x0014E6B2 File Offset: 0x0014C8B2
+	// (set) Token: 0x06003A97 RID: 14999 RVA: 0x0014E6BA File Offset: 0x0014C8BA
 	public int SlotEntityId { get; set; }
 
-	// Token: 0x17000843 RID: 2115
-	// (get) Token: 0x06006700 RID: 26368 RVA: 0x00145DFF File Offset: 0x00143FFF
-	// (set) Token: 0x06006701 RID: 26369 RVA: 0x00145E07 File Offset: 0x00144007
+	// Token: 0x17000865 RID: 2149
+	// (get) Token: 0x06003A98 RID: 15000 RVA: 0x0014E6C3 File Offset: 0x0014C8C3
+	// (set) Token: 0x06003A99 RID: 15001 RVA: 0x0014E6CB File Offset: 0x0014C8CB
 	[Nullable(2)]
 	public FurnitureSceneItemBase RootFurnitureSceneItem { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000844 RID: 2116
-	// (get) Token: 0x06006702 RID: 26370 RVA: 0x00145E10 File Offset: 0x00144010
-	// (set) Token: 0x06006703 RID: 26371 RVA: 0x00145E18 File Offset: 0x00144018
+	// Token: 0x17000866 RID: 2150
+	// (get) Token: 0x06003A9A RID: 15002 RVA: 0x0014E6D4 File Offset: 0x0014C8D4
+	// (set) Token: 0x06003A9B RID: 15003 RVA: 0x0014E6DC File Offset: 0x0014C8DC
 	public Dictionary<int, FurnitureSceneItemBase> SubFurnitureSceneItemMap { get; set; } = new Dictionary<int, FurnitureSceneItemBase>();
 }

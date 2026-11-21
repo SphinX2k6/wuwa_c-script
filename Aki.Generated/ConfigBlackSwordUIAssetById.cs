@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000100 RID: 256
+	// Token: 0x0200010F RID: 271
 	public class ConfigBlackSwordUIAssetById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000601 RID: 1537 RVA: 0x0007B9CB File Offset: 0x00079BCB
+		// Token: 0x0600065B RID: 1627 RVA: 0x0008132F File Offset: 0x0007F52F
 		static ConfigBlackSwordUIAssetById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBlackSwordUIAssetById.CreateStaticDefaultValue), new Action(ConfigBlackSwordUIAssetById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000602 RID: 1538 RVA: 0x0007B9EC File Offset: 0x00079BEC
+		// Token: 0x0600065C RID: 1628 RVA: 0x00081350 File Offset: 0x0007F550
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBlackSwordUIAssetById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000603 RID: 1539 RVA: 0x0007BA6B File Offset: 0x00079C6B
+		// Token: 0x0600065D RID: 1629 RVA: 0x000813CF File Offset: 0x0007F5CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBlackSwordUIAssetById.LogPair = null;
 			ConfigBlackSwordUIAssetById.HandleId = 0;
 		}
 
-		// Token: 0x06000604 RID: 1540 RVA: 0x0007BA79 File Offset: 0x00079C79
+		// Token: 0x0600065E RID: 1630 RVA: 0x000813DD File Offset: 0x0007F5DD
 		public static void Init()
 		{
 			ConfigBlackSwordUIAssetById.HandleId = ConfigCommon.InitDataStatement(ConfigBlackSwordUIAssetById.HandleId, "db_blackswordchallenge.db", "select BinData from `BlackSwordUIAsset` where Id=?");
 		}
 
-		// Token: 0x06000605 RID: 1541 RVA: 0x0007BA94 File Offset: 0x00079C94
+		// Token: 0x0600065F RID: 1631 RVA: 0x000813F8 File Offset: 0x0007F5F8
 		public static BlackSwordUIAsset? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBlackSwordUIAssetById.HandleId, ConfigBlackSwordUIAssetById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BlackSwordUIAsset?(rootAsBlackSwordUIAsset);
 		}
 
-		// Token: 0x040006E4 RID: 1764
+		// Token: 0x0400074D RID: 1869
 		private const string DB = "db_blackswordchallenge.db";
 
-		// Token: 0x040006E5 RID: 1765
+		// Token: 0x0400074E RID: 1870
 		private const string FILE = "h.黑剑挑战.xlsx";
 
-		// Token: 0x040006E6 RID: 1766
+		// Token: 0x0400074F RID: 1871
 		private const string TABLE = "BlackSwordUIAsset";
 
-		// Token: 0x040006E7 RID: 1767
+		// Token: 0x04000750 RID: 1872
 		private const string COMMAND = "select BinData from `BlackSwordUIAsset` where Id=?";
 
-		// Token: 0x040006E8 RID: 1768
+		// Token: 0x04000751 RID: 1873
 		private const string KEY_PREFIX = "BlackSwordUIAssetById";
 
-		// Token: 0x040006E9 RID: 1769
+		// Token: 0x04000752 RID: 1874
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040006EA RID: 1770
+		// Token: 0x04000753 RID: 1875
 		private static int HandleId;
 	}
 }

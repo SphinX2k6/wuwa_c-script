@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002051 RID: 8273
+// Token: 0x02001524 RID: 5412
 public class KurotatoTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x06010423 RID: 66595 RVA: 0x003F7031 File Offset: 0x003F5231
+	// Token: 0x0600D88A RID: 55434 RVA: 0x00403529 File Offset: 0x00401729
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{

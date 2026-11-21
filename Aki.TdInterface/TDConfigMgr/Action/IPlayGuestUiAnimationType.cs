@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D14 RID: 7444
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F25 RID: 7973
 	public class IPlayGuestUiAnimationType
 	{
-		// Token: 0x06009FB3 RID: 40883 RVA: 0x0016CA80 File Offset: 0x0016AC80
+		// Token: 0x0600A99F RID: 43423 RVA: 0x00180EA4 File Offset: 0x0017F0A4
 		private IPlayGuestUiAnimationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009FB4 RID: 40884 RVA: 0x0016CAB8 File Offset: 0x0016ACB8
+		// Token: 0x0600A9A0 RID: 43424 RVA: 0x00180EDC File Offset: 0x0017F0DC
 		public static IPlayGuestUiAnimationType Create([Nullable(2)] IPlayGuestUiAnimationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FB5 RID: 40885 RVA: 0x0016CACB File Offset: 0x0016ACCB
+		// Token: 0x0600A9A1 RID: 43425 RVA: 0x00180EEF File Offset: 0x0017F0EF
 		public static IPlayGuestUiAnimationType CreateFromSetValue([Nullable(2)] IPlayGuestUiAnimationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009FB6 RID: 40886 RVA: 0x0016CADE File Offset: 0x0016ACDE
+		// Token: 0x0600A9A2 RID: 43426 RVA: 0x00180F02 File Offset: 0x0017F102
 		public IPlayGuestUiAnimationType_SetValue ToSetValue()
 		{
 			return new IPlayGuestUiAnimationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003192 RID: 12690
-		// (get) Token: 0x06009FB7 RID: 40887 RVA: 0x0016CAF1 File Offset: 0x0016ACF1
-		// (set) Token: 0x06009FB8 RID: 40888 RVA: 0x0016CB1C File Offset: 0x0016AD1C
+		// Token: 0x17003426 RID: 13350
+		// (get) Token: 0x0600A9A3 RID: 43427 RVA: 0x00180F15 File Offset: 0x0017F115
+		// (set) Token: 0x0600A9A4 RID: 43428 RVA: 0x00180F40 File Offset: 0x0017F140
 		public virtual EGuestUiAnimationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006059 RID: 24665
+		// Token: 0x040065D5 RID: 26069
 		[Nullable(2)]
 		protected IPlayGuestUiAnimationType FbInstance;
 
-		// Token: 0x0400605A RID: 24666
+		// Token: 0x040065D6 RID: 26070
 		[Nullable(2)]
 		protected IPlayGuestUiAnimationType_SetValue PocoInterface;
 	}

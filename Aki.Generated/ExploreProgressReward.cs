@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C4E RID: 3150
+	// Token: 0x02000D31 RID: 3377
 	public struct ExploreProgressReward : IFlatbufferObject
 	{
-		// Token: 0x17000FD1 RID: 4049
-		// (get) Token: 0x06006B65 RID: 27493 RVA: 0x00228302 File Offset: 0x00226502
+		// Token: 0x1700102A RID: 4138
+		// (get) Token: 0x06007167 RID: 29031 RVA: 0x002475AE File Offset: 0x002457AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B66 RID: 27494 RVA: 0x0022830F File Offset: 0x0022650F
+		// Token: 0x06007168 RID: 29032 RVA: 0x002475BB File Offset: 0x002457BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006B67 RID: 27495 RVA: 0x00228318 File Offset: 0x00226518
+		// Token: 0x06007169 RID: 29033 RVA: 0x002475C4 File Offset: 0x002457C4
 		public static ExploreProgressReward GetRootAsExploreProgressReward(ByteBuffer _bb)
 		{
 			return ExploreProgressReward.GetRootAsExploreProgressReward(_bb, default(ExploreProgressReward));
 		}
 
-		// Token: 0x06006B68 RID: 27496 RVA: 0x00228334 File Offset: 0x00226534
+		// Token: 0x0600716A RID: 29034 RVA: 0x002475E0 File Offset: 0x002457E0
 		public static ExploreProgressReward GetRootAsExploreProgressReward(ByteBuffer _bb, ExploreProgressReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006B69 RID: 27497 RVA: 0x00228351 File Offset: 0x00226551
+		// Token: 0x0600716B RID: 29035 RVA: 0x002475FD File Offset: 0x002457FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006B6A RID: 27498 RVA: 0x00228360 File Offset: 0x00226560
+		// Token: 0x0600716C RID: 29036 RVA: 0x0024760C File Offset: 0x0024580C
 		public ExploreProgressReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000FD2 RID: 4050
-		// (get) Token: 0x06006B6B RID: 27499 RVA: 0x00228370 File Offset: 0x00226570
+		// Token: 0x1700102B RID: 4139
+		// (get) Token: 0x0600716D RID: 29037 RVA: 0x0024761C File Offset: 0x0024581C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FD3 RID: 4051
-		// (get) Token: 0x06006B6C RID: 27500 RVA: 0x002283AC File Offset: 0x002265AC
+		// Token: 0x1700102C RID: 4140
+		// (get) Token: 0x0600716E RID: 29038 RVA: 0x00247658 File Offset: 0x00245858
 		public int Area
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FD4 RID: 4052
-		// (get) Token: 0x06006B6D RID: 27501 RVA: 0x002283E8 File Offset: 0x002265E8
+		// Token: 0x1700102D RID: 4141
+		// (get) Token: 0x0600716F RID: 29039 RVA: 0x00247694 File Offset: 0x00245894
 		public int StepId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FD5 RID: 4053
-		// (get) Token: 0x06006B6E RID: 27502 RVA: 0x00228424 File Offset: 0x00226624
+		// Token: 0x1700102E RID: 4142
+		// (get) Token: 0x06007170 RID: 29040 RVA: 0x002476D0 File Offset: 0x002458D0
 		public int DropReward
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FD6 RID: 4054
-		// (get) Token: 0x06006B6F RID: 27503 RVA: 0x00228464 File Offset: 0x00226664
+		// Token: 0x1700102F RID: 4143
+		// (get) Token: 0x06007171 RID: 29041 RVA: 0x00247710 File Offset: 0x00245910
 		public int NeedExploreProgress
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C95 RID: 19605
+		// Token: 0x04005278 RID: 21112
 		private Table __p;
 	}
 }

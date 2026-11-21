@@ -6,19 +6,19 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.World.Define
 {
-	// Token: 0x02004535 RID: 17717
+	// Token: 0x0200345D RID: 13405
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WaitEntityPreloadTask
 	{
-		// Token: 0x0602DC67 RID: 187495 RVA: 0x00A84550 File Offset: 0x00A82750
+		// Token: 0x06022344 RID: 140100 RVA: 0x009AFA40 File Offset: 0x009ADC40
 		public WaitEntityPreloadTask(EntityHandle handle, Action<EWaitEntityPreloadResult> callBack)
 		{
 			this.Handle = handle;
 			this.CallBack = callBack;
 		}
 
-		// Token: 0x0602DC68 RID: 187496 RVA: 0x00A84588 File Offset: 0x00A82788
+		// Token: 0x06022345 RID: 140101 RVA: 0x009AFA78 File Offset: 0x009ADC78
 		public unsafe void Init()
 		{
 			this.CreatureData = this.Handle.Entity.GetComponent<CreatureDataComponent>();
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.World.Define
 			this.DoCallback();
 		}
 
-		// Token: 0x1700753D RID: 30013
-		// (get) Token: 0x0602DC69 RID: 187497 RVA: 0x00A8461C File Offset: 0x00A8281C
+		// Token: 0x170047F4 RID: 18420
+		// (get) Token: 0x06022346 RID: 140102 RVA: 0x009AFB0C File Offset: 0x009ADD0C
 		private int Count
 		{
 			get
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x0602DC6A RID: 187498 RVA: 0x00A84641 File Offset: 0x00A82841
+		// Token: 0x06022347 RID: 140103 RVA: 0x009AFB31 File Offset: 0x009ADD31
 		public void Clear()
 		{
 			this.Handle = null;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.World.Define
 			this.CallBack = null;
 		}
 
-		// Token: 0x0602DC6B RID: 187499 RVA: 0x00A8467C File Offset: 0x00A8287C
+		// Token: 0x06022348 RID: 140104 RVA: 0x009AFB6C File Offset: 0x009ADD6C
 		private void FilterEntity()
 		{
 			foreach (long num in new List<long>(this.CreatureDataIdMap.Keys))
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x0602DC6C RID: 187500 RVA: 0x00A84838 File Offset: 0x00A82A38
+		// Token: 0x06022349 RID: 140105 RVA: 0x009AFD28 File Offset: 0x009ADF28
 		private void DoCallback()
 		{
 			EventSystem.Instance.Remove<EntityHandle>(EEventName.PreloadEntityFinished, new Action<EntityHandle>(this.OnPreloadEntityFinished));
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.World.Define
 			this.Clear();
 		}
 
-		// Token: 0x0602DC6D RID: 187501 RVA: 0x00A848A4 File Offset: 0x00A82AA4
+		// Token: 0x0602234A RID: 140106 RVA: 0x009AFD94 File Offset: 0x009ADF94
 		private string GetDoNotPreloadEntityString()
 		{
 			string text = "";
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.World.Define
 			return text;
 		}
 
-		// Token: 0x0602DC6E RID: 187502 RVA: 0x00A84A5C File Offset: 0x00A82C5C
+		// Token: 0x0602234B RID: 140107 RVA: 0x009AFF4C File Offset: 0x009AE14C
 		private void OnPreloadEntityFinished(EntityHandle handle)
 		{
 			if ((this.Result & EWaitEntityPreloadResult.Finished) != EWaitEntityPreloadResult.None)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.World.Define
 			this.DoCallback();
 		}
 
-		// Token: 0x0602DC6F RID: 187503 RVA: 0x00A84B00 File Offset: 0x00A82D00
+		// Token: 0x0602234C RID: 140108 RVA: 0x009AFFF0 File Offset: 0x009AE1F0
 		private unsafe void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if ((this.Result & EWaitEntityPreloadResult.Finished) != EWaitEntityPreloadResult.None)
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.World.Define
 			this.DoCallback();
 		}
 
-		// Token: 0x0602DC70 RID: 187504 RVA: 0x00A84DD7 File Offset: 0x00A82FD7
+		// Token: 0x0602234D RID: 140109 RVA: 0x009B02C7 File Offset: 0x009AE4C7
 		public static WaitEntityPreloadTask Create(EntityHandle handle, Action<EWaitEntityPreloadResult> callBack)
 		{
 			WaitEntityPreloadTask waitEntityPreloadTask = new WaitEntityPreloadTask(handle, callBack);
@@ -297,35 +297,35 @@ namespace CSharpScript.Game.World.Define
 			return waitEntityPreloadTask;
 		}
 
-		// Token: 0x04018721 RID: 100129
+		// Token: 0x04012D54 RID: 77140
 		[Nullable(2)]
 		private EntityHandle Handle;
 
-		// Token: 0x04018722 RID: 100130
+		// Token: 0x04012D55 RID: 77141
 		[Nullable(2)]
 		private Action<EWaitEntityPreloadResult> CallBack;
 
-		// Token: 0x04018723 RID: 100131
+		// Token: 0x04012D56 RID: 77142
 		private EWaitEntityPreloadResult Result;
 
-		// Token: 0x04018724 RID: 100132
+		// Token: 0x04012D57 RID: 77143
 		[Nullable(2)]
 		private CreatureDataComponent CreatureData;
 
-		// Token: 0x04018725 RID: 100133
+		// Token: 0x04012D58 RID: 77144
 		private readonly Dictionary<long, EWaitPreloadId> CreatureDataIdMap = new Dictionary<long, EWaitPreloadId>();
 
-		// Token: 0x04018726 RID: 100134
+		// Token: 0x04012D59 RID: 77145
 		private readonly Dictionary<int, EWaitPreloadId> PbDataIdMap = new Dictionary<int, EWaitPreloadId>();
 
-		// Token: 0x04018727 RID: 100135
+		// Token: 0x04012D5A RID: 77146
 		private readonly Dictionary<int, EWaitPreloadId> EntityIdMap = new Dictionary<int, EWaitPreloadId>();
 
-		// Token: 0x04018728 RID: 100136
+		// Token: 0x04012D5B RID: 77147
 		[Nullable(2)]
 		private string WaitEntityString;
 
-		// Token: 0x04018729 RID: 100137
+		// Token: 0x04012D5C RID: 77148
 		private const int WAIT_TIME = 60000;
 	}
 }

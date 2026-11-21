@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A27 RID: 10791
+	// Token: 0x02002D14 RID: 11540
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBvbRecycleBoardCard : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDCF RID: 60879 RVA: 0x0022A772 File Offset: 0x00228972
-		[NullableContext(1)]
+		// Token: 0x0600FC67 RID: 64615 RVA: 0x00248126 File Offset: 0x00246326
+		[NullableContext(0)]
 		public static IBvbRecycleBoardCard Create(IBvbRecycleBoardCard? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B43 RID: 19267
-		// (get) Token: 0x0600EDD0 RID: 60880 RVA: 0x0022A791 File Offset: 0x00228991
+		// Token: 0x17004EED RID: 20205
+		// (get) Token: 0x0600FC68 RID: 64616 RVA: 0x00248145 File Offset: 0x00246345
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B44 RID: 19268
-		// (get) Token: 0x0600EDD1 RID: 60881 RVA: 0x0022A7A0 File Offset: 0x002289A0
+		// Token: 0x17004EEE RID: 20206
+		// (get) Token: 0x0600FC69 RID: 64617 RVA: 0x00248154 File Offset: 0x00246354
 		public virtual int? BoardPosIndex
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B45 RID: 19269
-		// (get) Token: 0x0600EDD2 RID: 60882 RVA: 0x0022A7D8 File Offset: 0x002289D8
+		// Token: 0x17004EEF RID: 20207
+		// (get) Token: 0x0600FC6A RID: 64618 RVA: 0x0024818C File Offset: 0x0024638C
 		public virtual List<int> BoardPosIndexList
 		{
 			get
@@ -73,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082E3 RID: 33507
+		// Token: 0x040089D6 RID: 35286
 		private IBvbRecycleBoardCard Instance;
 
-		// Token: 0x040082E4 RID: 33508
+		// Token: 0x040089D7 RID: 35287
 		private List<int> _BoardPosIndexListCache;
 
-		// Token: 0x040082E5 RID: 33509
+		// Token: 0x040089D8 RID: 35288
 		private bool _BoardPosIndexListInited;
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055FA RID: 22010
+	// Token: 0x020045D0 RID: 17872
 	public enum EStepType
 	{
-		// Token: 0x0401D715 RID: 120597
+		// Token: 0x040181A0 RID: 98720
 		None,
-		// Token: 0x0401D716 RID: 120598
+		// Token: 0x040181A1 RID: 98721
 		Desc,
-		// Token: 0x0401D717 RID: 120599
+		// Token: 0x040181A2 RID: 98722
 		Choose,
-		// Token: 0x0401D718 RID: 120600
+		// Token: 0x040181A3 RID: 98723
 		ChooseEffect,
-		// Token: 0x0401D719 RID: 120601
+		// Token: 0x040181A4 RID: 98724
 		Ending
 	}
 }

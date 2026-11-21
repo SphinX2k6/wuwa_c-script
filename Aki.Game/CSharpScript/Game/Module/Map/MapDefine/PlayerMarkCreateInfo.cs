@@ -3,32 +3,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005584 RID: 21892
+	// Token: 0x0200455A RID: 17754
 	public class PlayerMarkCreateInfo : MarkCreateInfo
 	{
-		// Token: 0x06037CC6 RID: 228550 RVA: 0x00D3953F File Offset: 0x00D3773F
-		public PlayerMarkCreateInfo(int playerId, int playerIndex, FVector position, int mapId, EMapGravityDirection gravity = EMapGravityDirection.Down) : base(EMarkCreateType.PlayerMark)
+		// Token: 0x0602CBC4 RID: 183236 RVA: 0x00C8721F File Offset: 0x00C8541F
+		public PlayerMarkCreateInfo(int playerId, int playerIndex, FVector position, int mapId) : base(EMarkCreateType.PlayerMark)
 		{
 			this.PlayerId = playerId;
 			this.PlayerIndex = playerIndex;
 			this.Position = position;
 			this.MapId = mapId;
-			this.Gravity = gravity;
 		}
 
-		// Token: 0x0401D544 RID: 120132
+		// Token: 0x04017FD0 RID: 98256
 		public int PlayerId;
 
-		// Token: 0x0401D545 RID: 120133
+		// Token: 0x04017FD1 RID: 98257
 		public int PlayerIndex;
 
-		// Token: 0x0401D546 RID: 120134
+		// Token: 0x04017FD2 RID: 98258
 		public FVector Position;
 
-		// Token: 0x0401D547 RID: 120135
+		// Token: 0x04017FD3 RID: 98259
 		public int MapId;
-
-		// Token: 0x0401D548 RID: 120136
-		public EMapGravityDirection Gravity;
 	}
 }

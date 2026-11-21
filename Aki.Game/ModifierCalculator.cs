@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F73 RID: 12147
+// Token: 0x020024C7 RID: 9415
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class ModifierCalculator : SnapModifyBuffEffect
 {
-	// Token: 0x06019D16 RID: 105750 RVA: 0x006BC0EC File Offset: 0x006BA2EC
+	// Token: 0x06017628 RID: 95784 RVA: 0x006E29D8 File Offset: 0x006E0BD8
 	protected ModifierCalculator(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019D17 RID: 105751 RVA: 0x006BC10E File Offset: 0x006BA30E
+	// Token: 0x06017629 RID: 95785 RVA: 0x006E29FA File Offset: 0x006E0BFA
 	private float GetAttrValueWithThreshold(SnapshotPayload snapshots, EAttributeType attrId, EAttributeRefType attributeType, ESnapAttributeSourceType targetType)
 	{
 		if (this.AttributeThreshold > 0f)
@@ -22,7 +22,7 @@ public abstract class ModifierCalculator : SnapModifyBuffEffect
 		return base.GetAttrValue(snapshots, attrId, attributeType, targetType);
 	}
 
-	// Token: 0x06019D18 RID: 105752 RVA: 0x006BC148 File Offset: 0x006BA348
+	// Token: 0x0601762A RID: 95786 RVA: 0x006E2A34 File Offset: 0x006E0C34
 	protected float CalculateValue(SnapshotPayload snapshots)
 	{
 		float num = this.RefParam1;
@@ -76,30 +76,30 @@ public abstract class ModifierCalculator : SnapModifyBuffEffect
 		return num6;
 	}
 
-	// Token: 0x0400C2DE RID: 49886
+	// Token: 0x0400C687 RID: 50823
 	public ESnapCalculateType CalculationPolicy;
 
-	// Token: 0x0400C2DF RID: 49887
+	// Token: 0x0400C688 RID: 50824
 	public EAttributeType RefAttrId;
 
-	// Token: 0x0400C2E0 RID: 49888
+	// Token: 0x0400C689 RID: 50825
 	public EAttributeRefType RefValueType;
 
-	// Token: 0x0400C2E1 RID: 49889
+	// Token: 0x0400C68A RID: 50826
 	public long[] StackParam = new long[0];
 
-	// Token: 0x0400C2E2 RID: 49890
+	// Token: 0x0400C68B RID: 50827
 	public ESnapAttributeSourceType RefTargetType = ESnapAttributeSourceType.Attacker;
 
-	// Token: 0x0400C2E3 RID: 49891
+	// Token: 0x0400C68C RID: 50828
 	public float AttributeThreshold;
 
-	// Token: 0x0400C2E4 RID: 49892
+	// Token: 0x0400C68D RID: 50829
 	public float ModifierMax;
 
-	// Token: 0x0400C2E5 RID: 49893
+	// Token: 0x0400C68E RID: 50830
 	public float RefParam1;
 
-	// Token: 0x0400C2E6 RID: 49894
+	// Token: 0x0400C68F RID: 50831
 	public float RefParam2;
 }

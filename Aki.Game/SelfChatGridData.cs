@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002540 RID: 9536
+// Token: 0x02001A29 RID: 6697
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,19 +11,19 @@ using System.Runtime.CompilerServices;
 })]
 public class SelfChatGridData : MultiTemplateGridDataBase<PhoneMsgChatData, PhoneMsgSelfChatItem>
 {
-	// Token: 0x060132A1 RID: 78497 RVA: 0x004C21F6 File Offset: 0x004C03F6
+	// Token: 0x06010774 RID: 67444 RVA: 0x004D07FA File Offset: 0x004CE9FA
 	public SelfChatGridData(PhoneMsgChatData data)
 	{
 		base.Data = data;
 	}
 
-	// Token: 0x060132A2 RID: 78498 RVA: 0x004C2205 File Offset: 0x004C0405
+	// Token: 0x06010775 RID: 67445 RVA: 0x004D0809 File Offset: 0x004CEA09
 	public override int GetTemplateIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x060132A3 RID: 78499 RVA: 0x004C2208 File Offset: 0x004C0408
+	// Token: 0x06010776 RID: 67446 RVA: 0x004D080C File Offset: 0x004CEA0C
 	public override PhoneMsgSelfChatItem CreateProxy()
 	{
 		return new PhoneMsgSelfChatItem
@@ -33,11 +33,11 @@ public class SelfChatGridData : MultiTemplateGridDataBase<PhoneMsgChatData, Phon
 		};
 	}
 
-	// Token: 0x040090D8 RID: 37080
+	// Token: 0x04009232 RID: 37426
 	[Nullable(2)]
 	public Action<int, int> OnOptionItemClickDelegate;
 
-	// Token: 0x040090D9 RID: 37081
+	// Token: 0x04009233 RID: 37427
 	[Nullable(2)]
 	public Action<int> OnItemClickDelegate;
 }

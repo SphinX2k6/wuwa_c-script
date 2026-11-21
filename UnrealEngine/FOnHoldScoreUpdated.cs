@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C69 RID: 7273
+	// Token: 0x0200050F RID: 1295
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnHoldScoreUpdated : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C344 RID: 115524 RVA: 0x002993C0 File Offset: 0x002975C0
+		// Token: 0x06007940 RID: 31040 RVA: 0x000B1D98 File Offset: 0x000AFF98
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnHoldScoreUpdated.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C345 RID: 115525 RVA: 0x002993CC File Offset: 0x002975CC
+		// Token: 0x06007941 RID: 31041 RVA: 0x000B1DA4 File Offset: 0x000AFFA4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnHoldScoreUpdated._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnHoldScoreUpdated._FunctionPtr;
 		}
 
-		// Token: 0x0601C346 RID: 115526 RVA: 0x002993EF File Offset: 0x002975EF
+		// Token: 0x06007942 RID: 31042 RVA: 0x000B1DC7 File Offset: 0x000AFFC7
 		public FOnHoldScoreUpdated()
 		{
 		}
 
-		// Token: 0x0601C347 RID: 115527 RVA: 0x002993F7 File Offset: 0x002975F7
+		// Token: 0x06007943 RID: 31043 RVA: 0x000B1DCF File Offset: 0x000AFFCF
 		[NullableContext(2)]
 		public FOnHoldScoreUpdated(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C348 RID: 115528 RVA: 0x00299401 File Offset: 0x00297601
+		// Token: 0x06007944 RID: 31044 RVA: 0x000B1DD9 File Offset: 0x000AFFD9
 		public FOnHoldScoreUpdated(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C349 RID: 115529 RVA: 0x0029940C File Offset: 0x0029760C
+		// Token: 0x06007945 RID: 31045 RVA: 0x000B1DE4 File Offset: 0x000AFFE4
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C34A RID: 115530 RVA: 0x0029943E File Offset: 0x0029763E
+		// Token: 0x06007946 RID: 31046 RVA: 0x000B1E16 File Offset: 0x000B0016
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FOnHoldScoreUpdated.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnHoldScoreUpdated.RegisterId);
 		}
 
-		// Token: 0x0601C34B RID: 115531 RVA: 0x00299478 File Offset: 0x00297678
+		// Token: 0x06007947 RID: 31047 RVA: 0x000B1E50 File Offset: 0x000B0050
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C34C RID: 115532 RVA: 0x00299484 File Offset: 0x00297684
+		// Token: 0x06007948 RID: 31048 RVA: 0x000B1E5C File Offset: 0x000B005C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int ScoreGained, int CurrentBeat)
 		{
 			FOnHoldScoreUpdated.__FOnHoldScoreUpdated_DelegateParams* ptr = stackalloc FOnHoldScoreUpdated.__FOnHoldScoreUpdated_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnHoldScoreUpdated.__FOnHoldScoreUpdated_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C34D RID: 115533 RVA: 0x002994C8 File Offset: 0x002976C8
+		// Token: 0x06007949 RID: 31049 RVA: 0x000B1EA0 File Offset: 0x000B00A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FOnHoldScoreUpdated.__FOnHoldScoreUpdated_DelegateParams*)__Parameters)->ScoreGained, ((FOnHoldScoreUpdated.__FOnHoldScoreUpdated_DelegateParams*)__Parameters)->CurrentBeat);
 		}
 
-		// Token: 0x0400F2BF RID: 62143
+		// Token: 0x0400338A RID: 13194
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2C0 RID: 62144
+		// Token: 0x0400338B RID: 13195
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnHoldScoreUpdated__DelegateSignature";
 
-		// Token: 0x0400F2C1 RID: 62145
+		// Token: 0x0400338C RID: 13196
 		private static int RegisterId;
 
-		// Token: 0x02003200 RID: 12800
+		// Token: 0x02000C75 RID: 3189
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnHoldScoreUpdated_DelegateParams
+		private ref struct __FOnHoldScoreUpdated_DelegateParams
 		{
-			// Token: 0x0401705D RID: 94301
+			// Token: 0x04005ED1 RID: 24273
 			[FieldOffset(0)]
 			public int ScoreGained;
 
-			// Token: 0x0401705E RID: 94302
+			// Token: 0x04005ED2 RID: 24274
 			[FieldOffset(4)]
 			public int CurrentBeat;
 		}
 
-		// Token: 0x02003201 RID: 12801
+		// Token: 0x02000C76 RID: 3190
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401705F RID: 94303
+			// Token: 0x04005ED3 RID: 24275
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F13 RID: 24339
+	// Token: 0x02006556 RID: 25942
 	public enum EAkEventMap : byte
 	{
-		// Token: 0x0400FBF4 RID: 64500
+		// Token: 0x04010967 RID: 67943
 		PlayMapMusic
 	}
 }

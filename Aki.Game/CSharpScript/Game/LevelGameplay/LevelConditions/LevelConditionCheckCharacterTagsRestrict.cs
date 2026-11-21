@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C5E RID: 27742
+	// Token: 0x02005DD8 RID: 24024
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckCharacterTagsRestrict : LevelConditionBase, IStaticVariableResetter
 	{
-		// Token: 0x06044538 RID: 279864 RVA: 0x010D7A45 File Offset: 0x010D5C45
+		// Token: 0x0603A692 RID: 239250 RVA: 0x010819DD File Offset: 0x0107FBDD
 		static LevelConditionCheckCharacterTagsRestrict()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelConditionCheckCharacterTagsRestrict.CreateStaticDefaultValue), new Action(LevelConditionCheckCharacterTagsRestrict.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044539 RID: 279865 RVA: 0x010D7A64 File Offset: 0x010D5C64
+		// Token: 0x0603A693 RID: 239251 RVA: 0x010819FC File Offset: 0x0107FBFC
 		public static void CreateStaticDefaultValue()
 		{
 			LevelConditionCheckCharacterTagsRestrict.RegisteredCallbacks = new Dictionary<TTagChangedCallback, List<int>>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			LevelConditionCheckCharacterTagsRestrict.SubscribedEntity = null;
 		}
 
-		// Token: 0x0604453A RID: 279866 RVA: 0x010D7A80 File Offset: 0x010D5C80
+		// Token: 0x0603A694 RID: 239252 RVA: 0x01081A18 File Offset: 0x0107FC18
 		public static void ResetStaticDefaultValue()
 		{
 			LevelConditionCheckCharacterTagsRestrict.RegisteredCallbacks = null;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			LevelConditionCheckCharacterTagsRestrict.SubscribedEntity = null;
 		}
 
-		// Token: 0x0604453B RID: 279867 RVA: 0x010D7A94 File Offset: 0x010D5C94
+		// Token: 0x0603A695 RID: 239253 RVA: 0x01081A2C File Offset: 0x0107FC2C
 		private static List<string> ParseTagNames([Nullable(2)] string raw)
 		{
 			if (string.IsNullOrEmpty(raw))
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return raw.TrimStart('[').TrimEnd(']').Split(',', StringSplitOptions.None).ToList<string>();
 		}
 
-		// Token: 0x0604453C RID: 279868 RVA: 0x010D7AC0 File Offset: 0x010D5CC0
+		// Token: 0x0603A696 RID: 239254 RVA: 0x01081A58 File Offset: 0x0107FC58
 		public static List<string> GetTagNames(Condition inConditionInfo)
 		{
 			List<string> list = new List<string>();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return list;
 		}
 
-		// Token: 0x0604453D RID: 279869 RVA: 0x010D7AF8 File Offset: 0x010D5CF8
+		// Token: 0x0603A697 RID: 239255 RVA: 0x01081A90 File Offset: 0x0107FC90
 		private static BaseTagComponent.TTagSwitchedCallback GetWrapper(TTagChangedCallback callback)
 		{
 			BaseTagComponent.TTagSwitchedCallback ttagSwitchedCallback;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return ttagSwitchedCallback;
 		}
 
-		// Token: 0x0604453E RID: 279870 RVA: 0x010D7B48 File Offset: 0x010D5D48
+		// Token: 0x0603A698 RID: 239256 RVA: 0x01081AE0 File Offset: 0x0107FCE0
 		public static void RegisterEvents(Condition inConditionInfo, TTagChangedCallback callback)
 		{
 			if (LevelConditionCheckCharacterTagsRestrict.RegisteredCallbacks.Count == 0)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			LevelConditionCheckCharacterTagsRestrict.SubscribeCallback(callback, list);
 		}
 
-		// Token: 0x0604453F RID: 279871 RVA: 0x010D7C14 File Offset: 0x010D5E14
+		// Token: 0x0603A699 RID: 239257 RVA: 0x01081BAC File Offset: 0x0107FDAC
 		public static void UnRegisterEvents(Condition inConditionInfo, TTagChangedCallback callback)
 		{
 			if (!LevelConditionCheckCharacterTagsRestrict.RegisteredCallbacks.Remove(callback))
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044540 RID: 279872 RVA: 0x010D7CD0 File Offset: 0x010D5ED0
+		// Token: 0x0603A69A RID: 239258 RVA: 0x01081C68 File Offset: 0x0107FE68
 		private static void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			foreach (KeyValuePair<TTagChangedCallback, List<int>> keyValuePair in LevelConditionCheckCharacterTagsRestrict.RegisteredCallbacks)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044541 RID: 279873 RVA: 0x010D7D94 File Offset: 0x010D5F94
+		// Token: 0x0603A69B RID: 239259 RVA: 0x01081D2C File Offset: 0x0107FF2C
 		private static void SubscribeCallback(TTagChangedCallback callback, List<int> tagIds)
 		{
 			WorldEntity subscribedEntity = LevelConditionCheckCharacterTagsRestrict.SubscribedEntity;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044542 RID: 279874 RVA: 0x010D7E04 File Offset: 0x010D6004
+		// Token: 0x0603A69C RID: 239260 RVA: 0x01081D9C File Offset: 0x0107FF9C
 		private static void UnsubscribeCallback(TTagChangedCallback callback, List<int> tagIds)
 		{
 			WorldEntity subscribedEntity = LevelConditionCheckCharacterTagsRestrict.SubscribedEntity;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x06044543 RID: 279875 RVA: 0x010D7E70 File Offset: 0x010D6070
+		// Token: 0x0603A69D RID: 239261 RVA: 0x01081E08 File Offset: 0x01080008
 		private List<int> ParseTagIds([Nullable(2)] string raw)
 		{
 			List<int> list = new List<int>();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return list;
 		}
 
-		// Token: 0x06044544 RID: 279876 RVA: 0x010D7ED0 File Offset: 0x010D60D0
+		// Token: 0x0603A69E RID: 239262 RVA: 0x01081E68 File Offset: 0x01080068
 		private TagIdRule GetRule(Condition inConditionInfo)
 		{
 			TagIdRule tagIdRule;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return tagIdRule;
 		}
 
-		// Token: 0x06044545 RID: 279877 RVA: 0x010D7F44 File Offset: 0x010D6144
+		// Token: 0x0603A69F RID: 239263 RVA: 0x01081EDC File Offset: 0x010800DC
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			LevelConditionCheckCharacterTagsRestrict.<>c__DisplayClass17_0 CS$<>8__locals1 = new LevelConditionCheckCharacterTagsRestrict.<>c__DisplayClass17_0();
@@ -246,35 +246,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			bool flag2 = false;
 			if (rule.RequireTags.Count > 0)
 			{
-				flag = rule.RequireTags.All((int tagId) => CS$<>8__locals1.tagComp.HasTag(tagId));
+				flag = rule.RequireTags.TrueForAll((int tagId) => CS$<>8__locals1.tagComp.HasTag(tagId));
 			}
 			if (rule.BanTags.Count > 0)
 			{
-				flag2 = rule.BanTags.Any((int tagId) => CS$<>8__locals1.tagComp.HasTag(tagId));
+				flag2 = rule.BanTags.Exists((int tagId) => CS$<>8__locals1.tagComp.HasTag(tagId));
 			}
 			rule.LastReached = (flag2 || !flag);
 			bool lastReached = rule.LastReached;
 			return rule.LastReached;
 		}
 
-		// Token: 0x040239B0 RID: 145840
+		// Token: 0x0401EC52 RID: 126034
 		private readonly Dictionary<int, TagIdRule> RuleCache = new Dictionary<int, TagIdRule>();
 
-		// Token: 0x040239B1 RID: 145841
+		// Token: 0x0401EC53 RID: 126035
 		private static Dictionary<TTagChangedCallback, List<int>> RegisteredCallbacks;
 
-		// Token: 0x040239B2 RID: 145842
+		// Token: 0x0401EC54 RID: 126036
 		private static Dictionary<TTagChangedCallback, BaseTagComponent.TTagSwitchedCallback> CallbackWrappers;
 
-		// Token: 0x040239B3 RID: 145843
+		// Token: 0x0401EC55 RID: 126037
 		[Nullable(2)]
 		private static WorldEntity SubscribedEntity;
 
-		// Token: 0x0200CC9D RID: 52381
+		// Token: 0x0200B88D RID: 47245
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403DB78 RID: 252792
+			// Token: 0x04038F9A RID: 233370
 			[Nullable(new byte[]
 			{
 				0,

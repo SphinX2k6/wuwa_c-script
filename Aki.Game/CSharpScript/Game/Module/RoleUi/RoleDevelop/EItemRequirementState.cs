@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D28 RID: 19752
+	// Token: 0x02003CE1 RID: 15585
 	public enum EItemRequirementState
 	{
-		// Token: 0x0401B226 RID: 111142
+		// Token: 0x04015BC0 RID: 89024
 		Satisfied,
-		// Token: 0x0401B227 RID: 111143
+		// Token: 0x04015BC1 RID: 89025
 		Supplement,
-		// Token: 0x0401B228 RID: 111144
+		// Token: 0x04015BC2 RID: 89026
 		NotSatisfied
 	}
 }

@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006119 RID: 24857
+	// Token: 0x02005097 RID: 20631
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class RoverlikeMultiUseGridProxyAbstract<[Nullable(2)] TData> : UiPanelBase, IGridProxy<TData>, ISyncGridProxy<TData>, ISyncGridProxy
 	{
-		// Token: 0x17009183 RID: 37251
-		// (get) Token: 0x0603ED96 RID: 257430 RVA: 0x00F2E128 File Offset: 0x00F2C328
-		// (set) Token: 0x0603ED97 RID: 257431 RVA: 0x00F2E130 File Offset: 0x00F2C330
+		// Token: 0x170064E5 RID: 25829
+		// (get) Token: 0x06033A58 RID: 211544 RVA: 0x00E74F3C File Offset: 0x00E7313C
+		// (set) Token: 0x06033A59 RID: 211545 RVA: 0x00E74F44 File Offset: 0x00E73144
 		public int GridIndex { get; set; }
 
-		// Token: 0x17009184 RID: 37252
-		// (get) Token: 0x0603ED98 RID: 257432 RVA: 0x00F2E139 File Offset: 0x00F2C339
-		// (set) Token: 0x0603ED99 RID: 257433 RVA: 0x00F2E141 File Offset: 0x00F2C341
+		// Token: 0x170064E6 RID: 25830
+		// (get) Token: 0x06033A5A RID: 211546 RVA: 0x00E74F4D File Offset: 0x00E7314D
+		// (set) Token: 0x06033A5B RID: 211547 RVA: 0x00E74F55 File Offset: 0x00E73155
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x17009185 RID: 37253
-		// (get) Token: 0x0603ED9A RID: 257434 RVA: 0x00F2E14A File Offset: 0x00F2C34A
-		// (set) Token: 0x0603ED9B RID: 257435 RVA: 0x00F2E152 File Offset: 0x00F2C352
+		// Token: 0x170064E7 RID: 25831
+		// (get) Token: 0x06033A5C RID: 211548 RVA: 0x00E74F5E File Offset: 0x00E7315E
+		// (set) Token: 0x06033A5D RID: 211549 RVA: 0x00E74F66 File Offset: 0x00E73166
 		[Nullable(new byte[]
 		{
 			2,
@@ -57,18 +57,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED9C RID: 257436 RVA: 0x00F2E160 File Offset: 0x00F2C360
+		// Token: 0x06033A5E RID: 211550 RVA: 0x00E74F74 File Offset: 0x00E73174
 		public virtual void Refresh(TData data, bool isSelected, int gridIndex)
 		{
 		}
 
-		// Token: 0x0603ED9D RID: 257437 RVA: 0x00F2E162 File Offset: 0x00F2C362
+		// Token: 0x06033A5F RID: 211551 RVA: 0x00E74F76 File Offset: 0x00E73176
 		public virtual void Refresh(TData data)
 		{
 			this.Refresh(data, false, this.GridIndex);
 		}
 
-		// Token: 0x0603ED9E RID: 257438 RVA: 0x00F2E174 File Offset: 0x00F2C374
+		// Token: 0x06033A60 RID: 211552 RVA: 0x00E74F88 File Offset: 0x00E73188
 		void ISyncGridProxy.Refresh(object data)
 		{
 			if (data is TData)
@@ -78,40 +78,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED9F RID: 257439 RVA: 0x00F2E197 File Offset: 0x00F2C397
+		// Token: 0x06033A61 RID: 211553 RVA: 0x00E74FAB File Offset: 0x00E731AB
 		public virtual void Clear()
 		{
 		}
 
-		// Token: 0x0603EDA0 RID: 257440 RVA: 0x00F2E199 File Offset: 0x00F2C399
+		// Token: 0x06033A62 RID: 211554 RVA: 0x00E74FAD File Offset: 0x00E731AD
 		public virtual void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603EDA1 RID: 257441 RVA: 0x00F2E19B File Offset: 0x00F2C39B
+		// Token: 0x06033A63 RID: 211555 RVA: 0x00E74FAF File Offset: 0x00E731AF
 		public virtual void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0603EDA2 RID: 257442 RVA: 0x00F2E19D File Offset: 0x00F2C39D
+		// Token: 0x06033A64 RID: 211556 RVA: 0x00E74FB1 File Offset: 0x00E731B1
 		public void CreateByActor(AActor actor)
 		{
 			base.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0603EDA3 RID: 257443 RVA: 0x00F2E1A7 File Offset: 0x00F2C3A7
+		// Token: 0x06033A65 RID: 211557 RVA: 0x00E74FBB File Offset: 0x00E731BB
 		public virtual void CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603EDA4 RID: 257444 RVA: 0x00F2E1B1 File Offset: 0x00F2C3B1
+		// Token: 0x06033A66 RID: 211558 RVA: 0x00E74FC5 File Offset: 0x00E731C5
 		public virtual object GetKey(TData data, int displayIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x04020D22 RID: 134434
+		// Token: 0x0401B64F RID: 112207
 		[Nullable(new byte[]
 		{
 			2,

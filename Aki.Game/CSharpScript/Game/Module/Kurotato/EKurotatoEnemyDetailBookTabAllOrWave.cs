@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005707 RID: 22279
+	// Token: 0x020046DE RID: 18142
 	public enum EKurotatoEnemyDetailBookTabAllOrWave
 	{
-		// Token: 0x0401DBC5 RID: 121797
+		// Token: 0x0401865B RID: 99931
 		All,
-		// Token: 0x0401DBC6 RID: 121798
+		// Token: 0x0401865C RID: 99932
 		Wave
 	}
 }

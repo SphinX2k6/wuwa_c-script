@@ -5,35 +5,35 @@ using CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay.Handlers;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 {
-	// Token: 0x02006BBF RID: 27583
+	// Token: 0x02005D38 RID: 23864
 	public class SimpleGameplayHandlerRegistry : IStaticVariableResetter
 	{
-		// Token: 0x06044352 RID: 279378 RVA: 0x010D0297 File Offset: 0x010CE497
+		// Token: 0x0603A4AA RID: 238762 RVA: 0x0107A1EB File Offset: 0x010783EB
 		private static void RegisterAllGenerated()
 		{
 			SimpleGameplayHandlerRegistry.Open.Register(new DragActorOpenHandler());
 		}
 
-		// Token: 0x06044353 RID: 279379 RVA: 0x010D02A8 File Offset: 0x010CE4A8
+		// Token: 0x0603A4AB RID: 238763 RVA: 0x0107A1FC File Offset: 0x010783FC
 		static SimpleGameplayHandlerRegistry()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SimpleGameplayHandlerRegistry.CreateStaticDefaultValue), new Action(SimpleGameplayHandlerRegistry.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044354 RID: 279380 RVA: 0x010D02C7 File Offset: 0x010CE4C7
+		// Token: 0x0603A4AC RID: 238764 RVA: 0x0107A21B File Offset: 0x0107841B
 		public static void CreateStaticDefaultValue()
 		{
 			SimpleGameplayHandlerRegistry.Open = new SimpleGameplayHandlerMap<ISimpleGameplayOpenHandler>();
 			SimpleGameplayHandlerRegistry.RegisterAllGenerated();
 		}
 
-		// Token: 0x06044355 RID: 279381 RVA: 0x010D02D8 File Offset: 0x010CE4D8
+		// Token: 0x0603A4AD RID: 238765 RVA: 0x0107A22C File Offset: 0x0107842C
 		public static void ResetStaticDefaultValue()
 		{
 			SimpleGameplayHandlerRegistry.Open = null;
 		}
 
-		// Token: 0x06044356 RID: 279382 RVA: 0x010D02E0 File Offset: 0x010CE4E0
+		// Token: 0x0603A4AE RID: 238766 RVA: 0x0107A234 File Offset: 0x01078434
 		[NullableContext(1)]
 		public static void RegisterOpen<[Nullable(0)] TConfig>(ISimpleGameplayOpenHandler<TConfig> handler) where TConfig : IUiGame
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 			open.Register(handler);
 		}
 
-		// Token: 0x04023985 RID: 145797
+		// Token: 0x0401EC27 RID: 125991
 		[Nullable(new byte[]
 		{
 			2,

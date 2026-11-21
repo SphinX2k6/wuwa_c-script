@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C9 RID: 5065
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001520 RID: 5408
 	public class IWalkingPatternCondition : IQuestCondition
 	{
-		// Token: 0x060073A9 RID: 29609 RVA: 0x001157B2 File Offset: 0x001139B2
+		// Token: 0x06007A6A RID: 31338 RVA: 0x00124196 File Offset: 0x00122396
 		public static IWalkingPatternCondition Create(IWalkingPatternCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025EA RID: 9706
-		// (get) Token: 0x060073AA RID: 29610 RVA: 0x001157D1 File Offset: 0x001139D1
+		// Token: 0x170027CC RID: 10188
+		// (get) Token: 0x06007A6B RID: 31339 RVA: 0x001241B5 File Offset: 0x001223B5
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025EB RID: 9707
-		// (get) Token: 0x060073AB RID: 29611 RVA: 0x001157DE File Offset: 0x001139DE
+		// Token: 0x170027CD RID: 10189
+		// (get) Token: 0x06007A6C RID: 31340 RVA: 0x001241C2 File Offset: 0x001223C2
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025EC RID: 9708
-		// (get) Token: 0x060073AC RID: 29612 RVA: 0x00115812 File Offset: 0x00113A12
+		// Token: 0x170027CE RID: 10190
+		// (get) Token: 0x06007A6D RID: 31341 RVA: 0x001241F6 File Offset: 0x001223F6
 		public virtual int SplineEntityId
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025ED RID: 9709
-		// (get) Token: 0x060073AD RID: 29613 RVA: 0x0011581F File Offset: 0x00113A1F
+		// Token: 0x170027CF RID: 10191
+		// (get) Token: 0x06007A6E RID: 31342 RVA: 0x00124203 File Offset: 0x00122403
 		public virtual int EndEntityId
 		{
 			get
@@ -72,8 +70,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025EE RID: 9710
-		// (get) Token: 0x060073AE RID: 29614 RVA: 0x0011582C File Offset: 0x00113A2C
+		// Token: 0x170027D0 RID: 10192
+		// (get) Token: 0x06007A6F RID: 31343 RVA: 0x00124210 File Offset: 0x00122410
 		public virtual VarRef ScoreVar
 		{
 			get
@@ -88,20 +86,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042F7 RID: 17143
+		// Token: 0x04004688 RID: 18056
 		private IWalkingPatternCondition Instance;
 
-		// Token: 0x040042F8 RID: 17144
+		// Token: 0x04004689 RID: 18057
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042F9 RID: 17145
+		// Token: 0x0400468A RID: 18058
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042FA RID: 17146
+		// Token: 0x0400468B RID: 18059
 		private VarRef _ScoreVarCache;
 
-		// Token: 0x040042FB RID: 17147
+		// Token: 0x0400468C RID: 18060
 		private bool _ScoreVarInited;
 	}
 }

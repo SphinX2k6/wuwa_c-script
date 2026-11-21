@@ -2,48 +2,48 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C93 RID: 11411
+// Token: 0x020021EC RID: 8684
 [NullableContext(2)]
 [Nullable(0)]
 public class MaterialHandle : IMaterialHandle
 {
-	// Token: 0x1700202A RID: 8234
-	// (get) Token: 0x06017D98 RID: 97688 RVA: 0x00610B8C File Offset: 0x0060ED8C
-	// (set) Token: 0x06017D99 RID: 97689 RVA: 0x00610B94 File Offset: 0x0060ED94
+	// Token: 0x1700207B RID: 8315
+	// (get) Token: 0x0601560C RID: 87564 RVA: 0x0063672C File Offset: 0x0063492C
+	// (set) Token: 0x0601560D RID: 87565 RVA: 0x00636734 File Offset: 0x00634934
 	public string EffectId { get; set; }
 
-	// Token: 0x1700202B RID: 8235
-	// (get) Token: 0x06017D9A RID: 97690 RVA: 0x00610B9D File Offset: 0x0060ED9D
-	// (set) Token: 0x06017D9B RID: 97691 RVA: 0x00610BA5 File Offset: 0x0060EDA5
+	// Token: 0x1700207C RID: 8316
+	// (get) Token: 0x0601560E RID: 87566 RVA: 0x0063673D File Offset: 0x0063493D
+	// (set) Token: 0x0601560F RID: 87567 RVA: 0x00636745 File Offset: 0x00634945
 	public string EffectPath { get; set; }
 
-	// Token: 0x1700202C RID: 8236
-	// (get) Token: 0x06017D9C RID: 97692 RVA: 0x00610BAE File Offset: 0x0060EDAE
-	// (set) Token: 0x06017D9D RID: 97693 RVA: 0x00610BB6 File Offset: 0x0060EDB6
+	// Token: 0x1700207D RID: 8317
+	// (get) Token: 0x06015610 RID: 87568 RVA: 0x0063674E File Offset: 0x0063494E
+	// (set) Token: 0x06015611 RID: 87569 RVA: 0x00636756 File Offset: 0x00634956
 	public int HandleId { get; set; }
 
-	// Token: 0x1700202D RID: 8237
-	// (get) Token: 0x06017D9E RID: 97694 RVA: 0x00610BBF File Offset: 0x0060EDBF
-	// (set) Token: 0x06017D9F RID: 97695 RVA: 0x00610BC7 File Offset: 0x0060EDC7
+	// Token: 0x1700207E RID: 8318
+	// (get) Token: 0x06015612 RID: 87570 RVA: 0x0063675F File Offset: 0x0063495F
+	// (set) Token: 0x06015613 RID: 87571 RVA: 0x00636767 File Offset: 0x00634967
 	public int RenderingId { get; set; }
 
-	// Token: 0x1700202E RID: 8238
-	// (get) Token: 0x06017DA0 RID: 97696 RVA: 0x00610BD0 File Offset: 0x0060EDD0
-	// (set) Token: 0x06017DA1 RID: 97697 RVA: 0x00610BD8 File Offset: 0x0060EDD8
+	// Token: 0x1700207F RID: 8319
+	// (get) Token: 0x06015614 RID: 87572 RVA: 0x00636770 File Offset: 0x00634970
+	// (set) Token: 0x06015615 RID: 87573 RVA: 0x00636778 File Offset: 0x00634978
 	public UObject MaterialAssetData { get; set; }
 
-	// Token: 0x1700202F RID: 8239
-	// (get) Token: 0x06017DA2 RID: 97698 RVA: 0x00610BE1 File Offset: 0x0060EDE1
-	// (set) Token: 0x06017DA3 RID: 97699 RVA: 0x00610BE9 File Offset: 0x0060EDE9
+	// Token: 0x17002080 RID: 8320
+	// (get) Token: 0x06015616 RID: 87574 RVA: 0x00636781 File Offset: 0x00634981
+	// (set) Token: 0x06015617 RID: 87575 RVA: 0x00636789 File Offset: 0x00634989
 	public bool? WithAnimObject { get; set; }
 
-	// Token: 0x17002030 RID: 8240
-	// (get) Token: 0x06017DA4 RID: 97700 RVA: 0x00610BF2 File Offset: 0x0060EDF2
-	// (set) Token: 0x06017DA5 RID: 97701 RVA: 0x00610BFA File Offset: 0x0060EDFA
+	// Token: 0x17002081 RID: 8321
+	// (get) Token: 0x06015618 RID: 87576 RVA: 0x00636792 File Offset: 0x00634992
+	// (set) Token: 0x06015619 RID: 87577 RVA: 0x0063679A File Offset: 0x0063499A
 	public USkeletalMeshComponent AnimMeshComp { get; set; }
 
-	// Token: 0x17002031 RID: 8241
-	// (get) Token: 0x06017DA6 RID: 97702 RVA: 0x00610C03 File Offset: 0x0060EE03
-	// (set) Token: 0x06017DA7 RID: 97703 RVA: 0x00610C0B File Offset: 0x0060EE0B
+	// Token: 0x17002082 RID: 8322
+	// (get) Token: 0x0601561A RID: 87578 RVA: 0x006367A3 File Offset: 0x006349A3
+	// (set) Token: 0x0601561B RID: 87579 RVA: 0x006367AB File Offset: 0x006349AB
 	public bool? IsGroup { get; set; }
 }

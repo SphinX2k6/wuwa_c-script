@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200165E RID: 5726
+// Token: 0x02000B16 RID: 2838
 [NullableContext(2)]
 [Nullable(0)]
 public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 {
-	// Token: 0x0600A172 RID: 41330 RVA: 0x0023A260 File Offset: 0x00238460
+	// Token: 0x06007550 RID: 30032 RVA: 0x002440FC File Offset: 0x002422FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,25 +28,25 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x0600A173 RID: 41331 RVA: 0x0023A312 File Offset: 0x00238512
+	// Token: 0x06007551 RID: 30033 RVA: 0x002441AE File Offset: 0x002423AE
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshConfirmButtonRedPoint));
 	}
 
-	// Token: 0x0600A174 RID: 41332 RVA: 0x0023A330 File Offset: 0x00238530
+	// Token: 0x06007552 RID: 30034 RVA: 0x002441CC File Offset: 0x002423CC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.RefreshConfirmButtonRedPoint));
 	}
 
-	// Token: 0x0600A175 RID: 41333 RVA: 0x0023A34E File Offset: 0x0023854E
+	// Token: 0x06007553 RID: 30035 RVA: 0x002441EA File Offset: 0x002423EA
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as WuWuLogisticsActivityData);
 	}
 
-	// Token: 0x0600A176 RID: 41334 RVA: 0x0023A364 File Offset: 0x00238564
+	// Token: 0x06007554 RID: 30036 RVA: 0x00244200 File Offset: 0x00242400
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WuWuLogisticsActivitySubView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A177 RID: 41335 RVA: 0x0023A3A8 File Offset: 0x002385A8
+	// Token: 0x06007555 RID: 30037 RVA: 0x00244244 File Offset: 0x00242444
 	protected override void OnStart()
 	{
 		ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -85,7 +85,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		this.RefreshDisabledBar();
 	}
 
-	// Token: 0x0600A178 RID: 41336 RVA: 0x0023A44A File Offset: 0x0023864A
+	// Token: 0x06007556 RID: 30038 RVA: 0x002442E6 File Offset: 0x002424E6
 	protected override void OnRefreshView()
 	{
 		this.RefreshRewardComponent();
@@ -95,20 +95,20 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		this.RefreshDisabledBar();
 	}
 
-	// Token: 0x0600A179 RID: 41337 RVA: 0x0023A46B File Offset: 0x0023866B
+	// Token: 0x06007557 RID: 30039 RVA: 0x00244307 File Offset: 0x00242507
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600A17A RID: 41338 RVA: 0x0023A473 File Offset: 0x00238673
+	// Token: 0x06007558 RID: 30040 RVA: 0x0024430F File Offset: 0x0024250F
 	protected void InitButtonState()
 	{
 		this.ConfirmQuick = new ButtonItem(base.GetButton(6).RootUIComp);
 		this.ConfirmQuick.SetFunction(new Action<int>(this.OnClickedForwardButton));
 	}
 
-	// Token: 0x0600A17B RID: 41339 RVA: 0x0023A4A8 File Offset: 0x002386A8
+	// Token: 0x06007559 RID: 30041 RVA: 0x00244344 File Offset: 0x00242544
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -120,7 +120,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A17C RID: 41340 RVA: 0x0023A4D8 File Offset: 0x002386D8
+	// Token: 0x0600755A RID: 30042 RVA: 0x00244374 File Offset: 0x00242574
 	private void RefreshRewardComponent()
 	{
 		List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -128,7 +128,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(previewReward, null);
 	}
 
-	// Token: 0x0600A17D RID: 41341 RVA: 0x0023A523 File Offset: 0x00238723
+	// Token: 0x0600755B RID: 30043 RVA: 0x002443BF File Offset: 0x002425BF
 	private void OnClickedForwardButton(int data)
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -143,7 +143,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600A17E RID: 41342 RVA: 0x0023A544 File Offset: 0x00238744
+	// Token: 0x0600755C RID: 30044 RVA: 0x002443E0 File Offset: 0x002425E0
 	private void RefreshDisabledBar()
 	{
 		ActivityBaseData data = this.ActivityBaseData;
@@ -207,7 +207,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600A17F RID: 41343 RVA: 0x0023A664 File Offset: 0x00238864
+	// Token: 0x0600755D RID: 30045 RVA: 0x00244500 File Offset: 0x00242700
 	private void RefreshCurProgress()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -225,7 +225,7 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600A180 RID: 41344 RVA: 0x0023A6D4 File Offset: 0x002388D4
+	// Token: 0x0600755E RID: 30046 RVA: 0x00244570 File Offset: 0x00242770
 	private void RefreshConfirmButtonRedPoint(int uid = 0)
 	{
 		WuWuLogisticsActivityData activityData = this.ActivityData;
@@ -238,16 +238,16 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 		confirmQuick.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x04004969 RID: 18793
+	// Token: 0x04004A0F RID: 18959
 	protected WuWuLogisticsActivityData ActivityData;
 
-	// Token: 0x0400496A RID: 18794
+	// Token: 0x04004A10 RID: 18960
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x0400496B RID: 18795
+	// Token: 0x04004A11 RID: 18961
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x0400496C RID: 18796
+	// Token: 0x04004A12 RID: 18962
 	[Nullable(new byte[]
 	{
 		2,
@@ -255,9 +255,9 @@ public class WuWuLogisticsActivitySubView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x0400496D RID: 18797
+	// Token: 0x04004A13 RID: 18963
 	protected ButtonItem ConfirmQuick;
 
-	// Token: 0x0400496E RID: 18798
+	// Token: 0x04004A14 RID: 18964
 	private FunctionalPanelConditionLock DisabledBarPanel;
 }

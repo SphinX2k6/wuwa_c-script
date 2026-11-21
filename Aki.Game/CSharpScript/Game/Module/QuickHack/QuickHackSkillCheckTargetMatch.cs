@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F5B RID: 20315
+	// Token: 0x02003F24 RID: 16164
 	public class QuickHackSkillCheckTargetMatch : IQuickHackSkillCondition
 	{
-		// Token: 0x0603410C RID: 213260 RVA: 0x00C361AC File Offset: 0x00C343AC
+		// Token: 0x06028F7A RID: 167802 RVA: 0x00B7F94C File Offset: 0x00B7DB4C
 		[NullableContext(1)]
 		public bool Check(QuickHackSkillInstance skill, EQuickHackTargetType? hackType, [Nullable(new byte[]
 		{

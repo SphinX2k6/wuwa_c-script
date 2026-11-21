@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A9E RID: 19102
+	// Token: 0x02003A46 RID: 14918
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseDevelopPreviewLevelInfoItem : GridProxyAbstract<ITrapDefenseDevelopPreviewLevelInfo>
 	{
-		// Token: 0x06031829 RID: 202793 RVA: 0x00B7A304 File Offset: 0x00B78504
+		// Token: 0x060265B9 RID: 157113 RVA: 0x00ABE2B8 File Offset: 0x00ABC4B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,19 +41,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603182A RID: 202794 RVA: 0x00B7A412 File Offset: 0x00B78612
+		// Token: 0x060265BA RID: 157114 RVA: 0x00ABE3C6 File Offset: 0x00ABC5C6
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<TrapDefenseDevelopPreviewLevelBranchItem, ITrapDefenseDevelopPreviewLevelInfo>(base.GetVerticalLayout(1), new Func<TrapDefenseDevelopPreviewLevelBranchItem>(this.CreateItem), null, false, true);
 		}
 
-		// Token: 0x0603182B RID: 202795 RVA: 0x00B7A435 File Offset: 0x00B78635
+		// Token: 0x060265BB RID: 157115 RVA: 0x00ABE3E9 File Offset: 0x00ABC5E9
 		protected override void OnBeforeDestroy()
 		{
 			this.Layout = null;
 		}
 
-		// Token: 0x0603182C RID: 202796 RVA: 0x00B7A440 File Offset: 0x00B78640
+		// Token: 0x060265BC RID: 157116 RVA: 0x00ABE3F4 File Offset: 0x00ABC5F4
 		public override void Refresh(ITrapDefenseDevelopPreviewLevelInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.RefreshData();
 		}
 
-		// Token: 0x0603182D RID: 202797 RVA: 0x00B7A530 File Offset: 0x00B78730
+		// Token: 0x060265BD RID: 157117 RVA: 0x00ABE4E4 File Offset: 0x00ABC6E4
 		protected void RefreshData()
 		{
 			ITrapDefenseMachineIdInfo trapDefenseMachineIdInfo = TrapDefenseModel.Instance.DecomposeMachineId(this.Data.Id);
@@ -149,17 +149,17 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.Layout.RefreshByData(new <>z__ReadOnlySingleElementList<ITrapDefenseDevelopPreviewLevelInfo>(this.Data), null, true);
 		}
 
-		// Token: 0x0603182E RID: 202798 RVA: 0x00B7A739 File Offset: 0x00B78939
+		// Token: 0x060265BE RID: 157118 RVA: 0x00ABE6ED File Offset: 0x00ABC8ED
 		private TrapDefenseDevelopPreviewLevelBranchItem CreateItem()
 		{
 			return new TrapDefenseDevelopPreviewLevelBranchItem();
 		}
 
-		// Token: 0x0401A773 RID: 108403
+		// Token: 0x040150C5 RID: 86213
 		[Nullable(2)]
 		protected ITrapDefenseDevelopPreviewLevelInfo Data;
 
-		// Token: 0x0401A774 RID: 108404
+		// Token: 0x040150C6 RID: 86214
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,29 +168,29 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		protected GenericLayout<TrapDefenseDevelopPreviewLevelBranchItem, ITrapDefenseDevelopPreviewLevelInfo> Layout;
 
-		// Token: 0x0200ABF6 RID: 44022
+		// Token: 0x02009616 RID: 38422
 		[NullableContext(0)]
 		private class EDetailInfo
 		{
-			// Token: 0x0403440F RID: 214031
+			// Token: 0x0402EDC0 RID: 191936
 			public const int ArtTxt = 0;
 
-			// Token: 0x04034410 RID: 214032
+			// Token: 0x0402EDC1 RID: 191937
 			public const int PanelBranchLayout = 1;
 
-			// Token: 0x04034411 RID: 214033
+			// Token: 0x0402EDC2 RID: 191938
 			public const int BranchDescItem = 2;
 
-			// Token: 0x04034412 RID: 214034
+			// Token: 0x0402EDC3 RID: 191939
 			public const int PanelCurLevelLayout = 3;
 
-			// Token: 0x04034413 RID: 214035
+			// Token: 0x0402EDC4 RID: 191940
 			public const int PanelSelectState = 4;
 
-			// Token: 0x04034414 RID: 214036
+			// Token: 0x0402EDC5 RID: 191941
 			public const int SpriteUnSelectBg = 5;
 
-			// Token: 0x04034415 RID: 214037
+			// Token: 0x0402EDC6 RID: 191942
 			public const int PanelAlpha = 6;
 		}
 	}

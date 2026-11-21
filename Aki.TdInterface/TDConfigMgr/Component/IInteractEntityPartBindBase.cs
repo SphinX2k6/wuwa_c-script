@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000478 RID: 1144
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004D1 RID: 1233
 	public class IInteractEntityPartBindBase
 	{
-		// Token: 0x0600170D RID: 5901 RVA: 0x000464E4 File Offset: 0x000446E4
+		// Token: 0x060018A7 RID: 6311 RVA: 0x0004A22C File Offset: 0x0004842C
 		private IInteractEntityPartBindBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600170E RID: 5902 RVA: 0x0004651C File Offset: 0x0004471C
+		// Token: 0x060018A8 RID: 6312 RVA: 0x0004A264 File Offset: 0x00048464
 		public static IInteractEntityPartBindBase Create([Nullable(2)] IInteractEntityPartBindBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600170F RID: 5903 RVA: 0x0004652F File Offset: 0x0004472F
+		// Token: 0x060018A9 RID: 6313 RVA: 0x0004A277 File Offset: 0x00048477
 		public static IInteractEntityPartBindBase CreateFromSetValue([Nullable(2)] IInteractEntityPartBindBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001710 RID: 5904 RVA: 0x00046542 File Offset: 0x00044742
+		// Token: 0x060018AA RID: 6314 RVA: 0x0004A28A File Offset: 0x0004848A
 		public IInteractEntityPartBindBase_SetValue ToSetValue()
 		{
 			return new IInteractEntityPartBindBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000630 RID: 1584
-		// (get) Token: 0x06001711 RID: 5905 RVA: 0x00046555 File Offset: 0x00044755
-		// (set) Token: 0x06001712 RID: 5906 RVA: 0x00046580 File Offset: 0x00044780
+		// Token: 0x17000697 RID: 1687
+		// (get) Token: 0x060018AB RID: 6315 RVA: 0x0004A29D File Offset: 0x0004849D
+		// (set) Token: 0x060018AC RID: 6316 RVA: 0x0004A2C8 File Offset: 0x000484C8
 		public virtual EInteractEntityPartBindType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001163 RID: 4451
+		// Token: 0x04001285 RID: 4741
 		[Nullable(2)]
 		protected IInteractEntityPartBindBase FbInstance;
 
-		// Token: 0x04001164 RID: 4452
+		// Token: 0x04001286 RID: 4742
 		[Nullable(2)]
 		protected IInteractEntityPartBindBase_SetValue PocoInterface;
 	}

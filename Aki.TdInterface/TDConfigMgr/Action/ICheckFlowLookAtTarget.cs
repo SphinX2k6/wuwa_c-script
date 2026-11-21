@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001898 RID: 6296
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A23 RID: 6691
 	public class ICheckFlowLookAtTarget
 	{
-		// Token: 0x06008733 RID: 34611 RVA: 0x00140B10 File Offset: 0x0013ED10
+		// Token: 0x06008E5B RID: 36443 RVA: 0x00150344 File Offset: 0x0014E544
 		private ICheckFlowLookAtTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008734 RID: 34612 RVA: 0x00140B48 File Offset: 0x0013ED48
+		// Token: 0x06008E5C RID: 36444 RVA: 0x0015037C File Offset: 0x0014E57C
 		public static ICheckFlowLookAtTarget Create([Nullable(2)] ICheckFlowLookAtTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008735 RID: 34613 RVA: 0x00140B5B File Offset: 0x0013ED5B
+		// Token: 0x06008E5D RID: 36445 RVA: 0x0015038F File Offset: 0x0014E58F
 		public static ICheckFlowLookAtTarget CreateFromSetValue([Nullable(2)] ICheckFlowLookAtTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008736 RID: 34614 RVA: 0x00140B6E File Offset: 0x0013ED6E
+		// Token: 0x06008E5E RID: 36446 RVA: 0x001503A2 File Offset: 0x0014E5A2
 		public ICheckFlowLookAtTarget_SetValue ToSetValue()
 		{
 			return new ICheckFlowLookAtTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C0A RID: 11274
-		// (get) Token: 0x06008737 RID: 34615 RVA: 0x00140B81 File Offset: 0x0013ED81
-		// (set) Token: 0x06008738 RID: 34616 RVA: 0x00140BAC File Offset: 0x0013EDAC
+		// Token: 0x17002E05 RID: 11781
+		// (get) Token: 0x06008E5F RID: 36447 RVA: 0x001503B5 File Offset: 0x0014E5B5
+		// (set) Token: 0x06008E60 RID: 36448 RVA: 0x001503E0 File Offset: 0x0014E5E0
 		public virtual ECheckFlowLookAtTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005525 RID: 21797
+		// Token: 0x04005972 RID: 22898
 		[Nullable(2)]
 		protected ICheckFlowLookAtTarget FbInstance;
 
-		// Token: 0x04005526 RID: 21798
+		// Token: 0x04005973 RID: 22899
 		[Nullable(2)]
 		protected ICheckFlowLookAtTarget_SetValue PocoInterface;
 	}

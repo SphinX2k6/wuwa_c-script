@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B36 RID: 19254
+	// Token: 0x0200501D RID: 20509
 	public class ICheckSunSpiritDeliveryLevelT
 	{
-		// Token: 0x17008BAF RID: 35759
-		// (get) Token: 0x0601E4CE RID: 124110 RVA: 0x0043EF38 File Offset: 0x0043D138
-		// (set) Token: 0x0601E4CF RID: 124111 RVA: 0x0043EF40 File Offset: 0x0043D140
+		// Token: 0x170092BF RID: 37567
+		// (get) Token: 0x06020059 RID: 131161 RVA: 0x004716E4 File Offset: 0x0046F8E4
+		// (set) Token: 0x0602005A RID: 131162 RVA: 0x004716EC File Offset: 0x0046F8EC
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x17008BB0 RID: 35760
-		// (get) Token: 0x0601E4D0 RID: 124112 RVA: 0x0043EF49 File Offset: 0x0043D149
-		// (set) Token: 0x0601E4D1 RID: 124113 RVA: 0x0043EF51 File Offset: 0x0043D151
+		// Token: 0x170092C0 RID: 37568
+		// (get) Token: 0x0602005B RID: 131163 RVA: 0x004716F5 File Offset: 0x0046F8F5
+		// (set) Token: 0x0602005C RID: 131164 RVA: 0x004716FD File Offset: 0x0046F8FD
 		public int Level { get; set; }
 
-		// Token: 0x0601E4D2 RID: 124114 RVA: 0x0043EF5A File Offset: 0x0043D15A
+		// Token: 0x0602005D RID: 131165 RVA: 0x00471706 File Offset: 0x0046F906
 		public ICheckSunSpiritDeliveryLevelT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

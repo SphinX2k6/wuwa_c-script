@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D55 RID: 19797
+	// Token: 0x02003D1E RID: 15646
 	public class RoleDevelopTabItemCellData
 	{
-		// Token: 0x17007E65 RID: 32357
-		// (get) Token: 0x0603328B RID: 209547 RVA: 0x00BEEF45 File Offset: 0x00BED145
-		// (set) Token: 0x0603328C RID: 209548 RVA: 0x00BEEF4D File Offset: 0x00BED14D
+		// Token: 0x17005215 RID: 21013
+		// (get) Token: 0x060280F5 RID: 164085 RVA: 0x00B38079 File Offset: 0x00B36279
+		// (set) Token: 0x060280F6 RID: 164086 RVA: 0x00B38081 File Offset: 0x00B36281
 		public int TypeId { get; set; }
 	}
 }

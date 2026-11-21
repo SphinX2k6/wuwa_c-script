@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AD1 RID: 2769
+	// Token: 0x02000BAB RID: 2987
 	public struct ActivityViewName : IFlatbufferObject
 	{
-		// Token: 0x17000197 RID: 407
-		// (get) Token: 0x0600443D RID: 17469 RVA: 0x001CDF6C File Offset: 0x001CC16C
+		// Token: 0x170001AE RID: 430
+		// (get) Token: 0x06004984 RID: 18820 RVA: 0x001EDA98 File Offset: 0x001EBC98
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600443E RID: 17470 RVA: 0x001CDF79 File Offset: 0x001CC179
+		// Token: 0x06004985 RID: 18821 RVA: 0x001EDAA5 File Offset: 0x001EBCA5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600443F RID: 17471 RVA: 0x001CDF80 File Offset: 0x001CC180
+		// Token: 0x06004986 RID: 18822 RVA: 0x001EDAAC File Offset: 0x001EBCAC
 		public static ActivityViewName GetRootAsActivityViewName(ByteBuffer _bb)
 		{
 			return ActivityViewName.GetRootAsActivityViewName(_bb, default(ActivityViewName));
 		}
 
-		// Token: 0x06004440 RID: 17472 RVA: 0x001CDF9C File Offset: 0x001CC19C
+		// Token: 0x06004987 RID: 18823 RVA: 0x001EDAC8 File Offset: 0x001EBCC8
 		public static ActivityViewName GetRootAsActivityViewName(ByteBuffer _bb, ActivityViewName obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004441 RID: 17473 RVA: 0x001CDFB9 File Offset: 0x001CC1B9
+		// Token: 0x06004988 RID: 18824 RVA: 0x001EDAE5 File Offset: 0x001EBCE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004442 RID: 17474 RVA: 0x001CDFC8 File Offset: 0x001CC1C8
+		// Token: 0x06004989 RID: 18825 RVA: 0x001EDAF4 File Offset: 0x001EBCF4
 		public ActivityViewName __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000198 RID: 408
-		// (get) Token: 0x06004443 RID: 17475 RVA: 0x001CDFD8 File Offset: 0x001CC1D8
+		// Token: 0x170001AF RID: 431
+		// (get) Token: 0x0600498A RID: 18826 RVA: 0x001EDB04 File Offset: 0x001EBD04
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000199 RID: 409
-		// (get) Token: 0x06004444 RID: 17476 RVA: 0x001CE014 File Offset: 0x001CC214
+		// Token: 0x170001B0 RID: 432
+		// (get) Token: 0x0600498B RID: 18827 RVA: 0x001EDB40 File Offset: 0x001EBD40
 		public int Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700019A RID: 410
-		// (get) Token: 0x06004445 RID: 17477 RVA: 0x001CE050 File Offset: 0x001CC250
+		// Token: 0x170001B1 RID: 433
+		// (get) Token: 0x0600498C RID: 18828 RVA: 0x001EDB7C File Offset: 0x001EBD7C
 		public string ViewName
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004446 RID: 17478 RVA: 0x001CE087 File Offset: 0x001CC287
+		// Token: 0x0600498D RID: 18829 RVA: 0x001EDBB3 File Offset: 0x001EBDB3
 		public Span<byte> GetViewNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004447 RID: 17479 RVA: 0x001CE096 File Offset: 0x001CC296
+		// Token: 0x0600498E RID: 18830 RVA: 0x001EDBC2 File Offset: 0x001EBDC2
 		public byte[] GetViewNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004AAE RID: 19118
+		// Token: 0x04005088 RID: 20616
 		private Table __p;
 	}
 }

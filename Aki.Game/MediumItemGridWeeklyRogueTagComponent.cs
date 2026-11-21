@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001949 RID: 6473
+// Token: 0x02000E06 RID: 3590
 public class MediumItemGridWeeklyRogueTagComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BD11 RID: 48401 RVA: 0x002AC75B File Offset: 0x002AA95B
+	// Token: 0x06009114 RID: 37140 RVA: 0x002B759F File Offset: 0x002B579F
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemTagDescript";
 	}
 
-	// Token: 0x0600BD12 RID: 48402 RVA: 0x002AC762 File Offset: 0x002AA962
+	// Token: 0x06009115 RID: 37141 RVA: 0x002B75A6 File Offset: 0x002B57A6
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;

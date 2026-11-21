@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B2D RID: 15149
+	// Token: 0x02003F2F RID: 16175
 	public class IWoodenBoxProliferateParamsT
 	{
-		// Token: 0x170067F2 RID: 26610
-		// (get) Token: 0x06014B2D RID: 84781 RVA: 0x00302C7A File Offset: 0x00300E7A
-		// (set) Token: 0x06014B2E RID: 84782 RVA: 0x00302C82 File Offset: 0x00300E82
+		// Token: 0x17006D8D RID: 28045
+		// (get) Token: 0x06015FD7 RID: 90071 RVA: 0x00328F0A File Offset: 0x0032710A
+		// (set) Token: 0x06015FD8 RID: 90072 RVA: 0x00328F12 File Offset: 0x00327112
 		public EParamsPreset Type { get; set; }
 
-		// Token: 0x170067F3 RID: 26611
-		// (get) Token: 0x06014B2F RID: 84783 RVA: 0x00302C8B File Offset: 0x00300E8B
-		// (set) Token: 0x06014B30 RID: 84784 RVA: 0x00302C93 File Offset: 0x00300E93
+		// Token: 0x17006D8E RID: 28046
+		// (get) Token: 0x06015FD9 RID: 90073 RVA: 0x00328F1B File Offset: 0x0032711B
+		// (set) Token: 0x06015FDA RID: 90074 RVA: 0x00328F23 File Offset: 0x00327123
 		public TWoodenBoxProliferateSpawnConfigUnion SpawnConfig { get; set; }
 
-		// Token: 0x170067F4 RID: 26612
-		// (get) Token: 0x06014B31 RID: 84785 RVA: 0x00302C9C File Offset: 0x00300E9C
-		// (set) Token: 0x06014B32 RID: 84786 RVA: 0x00302CA4 File Offset: 0x00300EA4
+		// Token: 0x17006D8F RID: 28047
+		// (get) Token: 0x06015FDB RID: 90075 RVA: 0x00328F2C File Offset: 0x0032712C
+		// (set) Token: 0x06015FDC RID: 90076 RVA: 0x00328F34 File Offset: 0x00327134
 		public EWoodenBoxProliferateVisualType ProliferateVisualType { get; set; }
 
-		// Token: 0x170067F5 RID: 26613
-		// (get) Token: 0x06014B33 RID: 84787 RVA: 0x00302CAD File Offset: 0x00300EAD
-		// (set) Token: 0x06014B34 RID: 84788 RVA: 0x00302CB5 File Offset: 0x00300EB5
+		// Token: 0x17006D90 RID: 28048
+		// (get) Token: 0x06015FDD RID: 90077 RVA: 0x00328F3D File Offset: 0x0032713D
+		// (set) Token: 0x06015FDE RID: 90078 RVA: 0x00328F45 File Offset: 0x00327145
 		public string ProliferateReadyState { get; set; }
 
-		// Token: 0x170067F6 RID: 26614
-		// (get) Token: 0x06014B35 RID: 84789 RVA: 0x00302CBE File Offset: 0x00300EBE
-		// (set) Token: 0x06014B36 RID: 84790 RVA: 0x00302CC6 File Offset: 0x00300EC6
+		// Token: 0x17006D91 RID: 28049
+		// (get) Token: 0x06015FDF RID: 90079 RVA: 0x00328F4E File Offset: 0x0032714E
+		// (set) Token: 0x06015FE0 RID: 90080 RVA: 0x00328F56 File Offset: 0x00327156
 		public string ProliferatedState { get; set; }
 
-		// Token: 0x170067F7 RID: 26615
-		// (get) Token: 0x06014B37 RID: 84791 RVA: 0x00302CCF File Offset: 0x00300ECF
-		// (set) Token: 0x06014B38 RID: 84792 RVA: 0x00302CD7 File Offset: 0x00300ED7
+		// Token: 0x17006D92 RID: 28050
+		// (get) Token: 0x06015FE1 RID: 90081 RVA: 0x00328F5F File Offset: 0x0032715F
+		// (set) Token: 0x06015FE2 RID: 90082 RVA: 0x00328F67 File Offset: 0x00327167
 		public float ProliferateDuration { get; set; }
 
-		// Token: 0x170067F8 RID: 26616
-		// (get) Token: 0x06014B39 RID: 84793 RVA: 0x00302CE0 File Offset: 0x00300EE0
-		// (set) Token: 0x06014B3A RID: 84794 RVA: 0x00302CE8 File Offset: 0x00300EE8
+		// Token: 0x17006D93 RID: 28051
+		// (get) Token: 0x06015FE3 RID: 90083 RVA: 0x00328F70 File Offset: 0x00327170
+		// (set) Token: 0x06015FE4 RID: 90084 RVA: 0x00328F78 File Offset: 0x00327178
 		public byte NullMask { get; set; }
 
-		// Token: 0x06014B3B RID: 84795 RVA: 0x00302CF1 File Offset: 0x00300EF1
+		// Token: 0x06015FE5 RID: 90085 RVA: 0x00328F81 File Offset: 0x00327181
 		public IWoodenBoxProliferateParamsT()
 		{
 			this.Type = EParamsPreset.Decal;

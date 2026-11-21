@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 {
-	// Token: 0x0200685F RID: 26719
+	// Token: 0x020057AF RID: 22447
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleBuffManager
 	{
-		// Token: 0x06042B7F RID: 273279 RVA: 0x0103A332 File Offset: 0x01038532
+		// Token: 0x060376D4 RID: 227028 RVA: 0x00F7B87E File Offset: 0x00F79A7E
 		public void Init()
 		{
 			this.EffectManager.Init();
 		}
 
-		// Token: 0x06042B80 RID: 273280 RVA: 0x0103A340 File Offset: 0x01038540
+		// Token: 0x060376D5 RID: 227029 RVA: 0x00F7B88C File Offset: 0x00F79A8C
 		public bool ApplyStateForAction(IDangoBrawlBattleAction action)
 		{
 			bool result = false;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return result;
 		}
 
-		// Token: 0x06042B81 RID: 273281 RVA: 0x0103A3B8 File Offset: 0x010385B8
+		// Token: 0x060376D6 RID: 227030 RVA: 0x00F7B904 File Offset: 0x00F79B04
 		public void PlayVisualForAction(IDangoBrawlBattleAction action)
 		{
 			BuffVisualDelta buffVisualDelta;
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.ReportBuffGainText(buffVisualDelta);
 		}
 
-		// Token: 0x06042B82 RID: 273282 RVA: 0x0103A40C File Offset: 0x0103860C
+		// Token: 0x060376D7 RID: 227031 RVA: 0x00F7B958 File Offset: 0x00F79B58
 		private void ReportBuffGainText(BuffVisualDelta delta)
 		{
 			if (delta.Op != EDangoBrawlBuffVisualOp.Add && delta.Op != EDangoBrawlBuffVisualOp.StackChange)
@@ -103,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			});
 		}
 
-		// Token: 0x06042B83 RID: 273283 RVA: 0x0103A4DC File Offset: 0x010386DC
+		// Token: 0x060376D8 RID: 227032 RVA: 0x00F7BA28 File Offset: 0x00F79C28
 		private BuffVisualDelta ComputeBuffChangeDelta(DangoBrawlFightActionBuffChangeInfo info)
 		{
 			BuffInfo buffInfo;
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return buffVisualDelta;
 		}
 
-		// Token: 0x06042B84 RID: 273284 RVA: 0x0103A5A4 File Offset: 0x010387A4
+		// Token: 0x060376D9 RID: 227033 RVA: 0x00F7BAF0 File Offset: 0x00F79CF0
 		[return: Nullable(2)]
 		private BuffVisualDelta ComputeBuffRemoveDelta(DangoBrawlFightActionBuffRemoveInfo info)
 		{
@@ -154,12 +153,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			};
 		}
 
-		// Token: 0x06042B85 RID: 273285 RVA: 0x0103A630 File Offset: 0x01038830
+		// Token: 0x060376DA RID: 227034 RVA: 0x00F7BB7C File Offset: 0x00F79D7C
 		private static void LogBuffVisualDelta(BuffVisualDelta delta)
 		{
 		}
 
-		// Token: 0x06042B86 RID: 273286 RVA: 0x0103A634 File Offset: 0x01038834
+		// Token: 0x060376DB RID: 227035 RVA: 0x00F7BB80 File Offset: 0x00F79D80
 		private void ApplyBuffChange(DangoBrawlFightActionBuffChangeInfo info)
 		{
 			Dictionary<int, BuffInfo> dictByFighter = this.GetDictByFighter(info.TargetFighterUId);
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			dictByFighter[info.BuffUId] = buffInfo2;
 		}
 
-		// Token: 0x06042B87 RID: 273287 RVA: 0x0103A680 File Offset: 0x01038880
+		// Token: 0x060376DC RID: 227036 RVA: 0x00F7BBCC File Offset: 0x00F79DCC
 		private unsafe bool ApplyBuffRemove(DangoBrawlFightActionBuffRemoveInfo info)
 		{
 			if (!this.GetDictByFighter(info.TargetFighterUId).ContainsKey(info.BuffUId))
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return true;
 		}
 
-		// Token: 0x06042B88 RID: 273288 RVA: 0x0103A730 File Offset: 0x01038930
+		// Token: 0x060376DD RID: 227037 RVA: 0x00F7BC7C File Offset: 0x00F79E7C
 		public void FlushPendingRemovals()
 		{
 			if (this.PendingRemovals.Count == 0)
@@ -209,7 +208,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.PendingRemovals.Clear();
 		}
 
-		// Token: 0x06042B89 RID: 273289 RVA: 0x0103A7B0 File Offset: 0x010389B0
+		// Token: 0x060376DE RID: 227038 RVA: 0x00F7BCFC File Offset: 0x00F79EFC
 		private Dictionary<int, BuffInfo> GetDictByFighter(int fighterUid)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -220,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return this.SelfBuffs;
 		}
 
-		// Token: 0x06042B8A RID: 273290 RVA: 0x0103A7DC File Offset: 0x010389DC
+		// Token: 0x060376DF RID: 227039 RVA: 0x00F7BD28 File Offset: 0x00F79F28
 		public void ReportBuffTick(DangoBrawlFightActionBuffTickInfo buffTick)
 		{
 			BuffInfo buffInfo = this.FindBuffByUid(buffTick.BuffUId);
@@ -278,13 +277,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042B8B RID: 273291 RVA: 0x0103A9DC File Offset: 0x01038BDC
+		// Token: 0x060376E0 RID: 227040 RVA: 0x00F7BF28 File Offset: 0x00F7A128
 		public List<BuffInfo> GetCurrentBuffs(bool isSelf)
 		{
-			return (isSelf ? this.SelfBuffs : this.OpponentBuffs).Values.ToList<BuffInfo>();
+			return new List<BuffInfo>((isSelf ? this.SelfBuffs : this.OpponentBuffs).Values);
 		}
 
-		// Token: 0x06042B8C RID: 273292 RVA: 0x0103A9FC File Offset: 0x01038BFC
+		// Token: 0x060376E1 RID: 227041 RVA: 0x00F7BF48 File Offset: 0x00F7A148
 		public bool TryGetBuffBrief(int buffUid, out int sourceItemUid, out int buffConfigId)
 		{
 			BuffInfo buffInfo = this.FindBuffByUid(buffUid);
@@ -299,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return true;
 		}
 
-		// Token: 0x06042B8D RID: 273293 RVA: 0x0103AA30 File Offset: 0x01038C30
+		// Token: 0x060376E2 RID: 227042 RVA: 0x00F7BF7C File Offset: 0x00F7A17C
 		[NullableContext(2)]
 		private BuffInfo FindBuffByUid(int buffUid)
 		{
@@ -316,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return null;
 		}
 
-		// Token: 0x06042B8E RID: 273294 RVA: 0x0103AA62 File Offset: 0x01038C62
+		// Token: 0x060376E3 RID: 227043 RVA: 0x00F7BFAE File Offset: 0x00F7A1AE
 		public void Destroy()
 		{
 			this.EffectManager.Destroy();
@@ -326,16 +325,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.OpponentBuffs.Clear();
 		}
 
-		// Token: 0x04022BB0 RID: 142256
+		// Token: 0x0401D40D RID: 119821
 		private readonly Dictionary<int, BuffInfo> SelfBuffs = new Dictionary<int, BuffInfo>();
 
-		// Token: 0x04022BB1 RID: 142257
+		// Token: 0x0401D40E RID: 119822
 		private readonly Dictionary<int, BuffInfo> OpponentBuffs = new Dictionary<int, BuffInfo>();
 
-		// Token: 0x04022BB2 RID: 142258
+		// Token: 0x0401D40F RID: 119823
 		private readonly Dictionary<IDangoBrawlBattleAction, BuffVisualDelta> PendingVisualDelta = new Dictionary<IDangoBrawlBattleAction, BuffVisualDelta>();
 
-		// Token: 0x04022BB3 RID: 142259
+		// Token: 0x0401D410 RID: 119824
 		[TupleElementNames(new string[]
 		{
 			"TargetFighterUId",
@@ -348,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 		})]
 		private readonly List<ValueTuple<int, int>> PendingRemovals = new List<ValueTuple<int, int>>();
 
-		// Token: 0x04022BB4 RID: 142260
+		// Token: 0x0401D411 RID: 119825
 		private readonly DangoBrawlBattleBuffEffectManager EffectManager = new DangoBrawlBattleBuffEffectManager();
 	}
 }

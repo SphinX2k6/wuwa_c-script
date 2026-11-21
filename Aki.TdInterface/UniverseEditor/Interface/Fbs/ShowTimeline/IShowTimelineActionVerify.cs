@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003B9D RID: 15261
+	// Token: 0x02003FA5 RID: 16293
 	public static class IShowTimelineActionVerify
 	{
-		// Token: 0x06014E9E RID: 85662 RVA: 0x00308C28 File Offset: 0x00306E28
+		// Token: 0x06016368 RID: 90984 RVA: 0x0032F1C0 File Offset: 0x0032D3C0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false))
@@ -36,14 +36,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return false;
 		}
 
-		// Token: 0x0200788D RID: 30861
+		// Token: 0x020080D0 RID: 32976
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040130F6 RID: 78070
+			// Token: 0x04014151 RID: 82257
 			public static VerifyUnionAction <0>__Verify;
 
-			// Token: 0x040130F7 RID: 78071
+			// Token: 0x04014152 RID: 82258
 			public static VerifyTableAction <1>__Verify;
 		}
 	}

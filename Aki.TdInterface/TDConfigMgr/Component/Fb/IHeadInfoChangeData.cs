@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA5 RID: 2725
+	// Token: 0x02000B6F RID: 2927
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHeadInfoChangeData
 	{
-		// Token: 0x06003EBF RID: 16063 RVA: 0x000A0866 File Offset: 0x0009EA66
-		[NullableContext(1)]
+		// Token: 0x060042E9 RID: 17129 RVA: 0x000A9E5A File Offset: 0x000A805A
+		[NullableContext(0)]
 		public static IHeadInfoChangeData Create(IHeadInfoChangeData? instance)
 		{
 			if (instance == null)
@@ -24,12 +24,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F32 RID: 3890
-		// (get) Token: 0x06003EC0 RID: 16064 RVA: 0x000A0885 File Offset: 0x0009EA85
-		[Nullable(1)]
+		// Token: 0x17001006 RID: 4102
+		// (get) Token: 0x060042EA RID: 17130 RVA: 0x000A9E79 File Offset: 0x000A8079
+		[Nullable(0)]
 		public virtual IConditionGroup Conditions
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ConditionsInited)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F33 RID: 3891
-		// (get) Token: 0x06003EC1 RID: 16065 RVA: 0x000A08B9 File Offset: 0x0009EAB9
+		// Token: 0x17001007 RID: 4103
+		// (get) Token: 0x060042EB RID: 17131 RVA: 0x000A9EAD File Offset: 0x000A80AD
 		public virtual string TidName
 		{
 			get
@@ -52,8 +52,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F34 RID: 3892
-		// (get) Token: 0x06003EC2 RID: 16066 RVA: 0x000A08C6 File Offset: 0x0009EAC6
+		// Token: 0x17001008 RID: 4104
+		// (get) Token: 0x060042EC RID: 17132 RVA: 0x000A9EBA File Offset: 0x000A80BA
 		public virtual string Icon
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F35 RID: 3893
-		// (get) Token: 0x06003EC3 RID: 16067 RVA: 0x000A08D3 File Offset: 0x0009EAD3
+		// Token: 0x17001009 RID: 4105
+		// (get) Token: 0x060042ED RID: 17133 RVA: 0x000A9EC7 File Offset: 0x000A80C7
 		public virtual string TidSecondaryName
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F36 RID: 3894
-		// (get) Token: 0x06003EC4 RID: 16068 RVA: 0x000A08E0 File Offset: 0x0009EAE0
+		// Token: 0x1700100A RID: 4106
+		// (get) Token: 0x060042EE RID: 17134 RVA: 0x000A9ED4 File Offset: 0x000A80D4
 		public virtual string EdTidName
 		{
 			get
@@ -82,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F37 RID: 3895
-		// (get) Token: 0x06003EC5 RID: 16069 RVA: 0x000A08E3 File Offset: 0x0009EAE3
+		// Token: 0x1700100B RID: 4107
+		// (get) Token: 0x060042EF RID: 17135 RVA: 0x000A9ED7 File Offset: 0x000A80D7
 		public virtual string EdTidSecondaryName
 		{
 			get
@@ -92,13 +92,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022DA RID: 8922
+		// Token: 0x040024F6 RID: 9462
 		private IHeadInfoChangeData Instance;
 
-		// Token: 0x040022DB RID: 8923
+		// Token: 0x040024F7 RID: 9463
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x040022DC RID: 8924
+		// Token: 0x040024F8 RID: 9464
 		private bool _ConditionsInited;
 	}
 }

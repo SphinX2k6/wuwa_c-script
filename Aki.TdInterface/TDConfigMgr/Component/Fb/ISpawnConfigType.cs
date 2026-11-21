@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D86 RID: 3462
+	// Token: 0x02000E82 RID: 3714
 	public class ISpawnConfigType
 	{
-		// Token: 0x06004EC2 RID: 20162 RVA: 0x000C3499 File Offset: 0x000C1699
-		[NullableContext(1)]
+		// Token: 0x060053E7 RID: 21479 RVA: 0x000CECE9 File Offset: 0x000CCEE9
 		public static ISpawnConfigType Create(ISpawnConfigType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001973 RID: 6515
-		// (get) Token: 0x06004EC3 RID: 20163 RVA: 0x000C34B8 File Offset: 0x000C16B8
+		// Token: 0x17001ADE RID: 6878
+		// (get) Token: 0x060053E8 RID: 21480 RVA: 0x000CED08 File Offset: 0x000CCF08
 		public virtual ESpawnConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D33 RID: 11571
+		// Token: 0x04002FF9 RID: 12281
 		private ISpawnConfigType Instance;
 	}
 }

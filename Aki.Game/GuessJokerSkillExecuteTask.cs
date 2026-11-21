@@ -5,10 +5,10 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200103B RID: 4155
+// Token: 0x020004EF RID: 1263
 public class GuessJokerSkillExecuteTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A9D RID: 27293 RVA: 0x00157440 File Offset: 0x00155640
+	// Token: 0x06003E32 RID: 15922 RVA: 0x0015FD68 File Offset: 0x0015DF68
 	[NullableContext(1)]
 	public GuessJokerSkillExecuteTask(JokerGuessSkillExecAction data)
 	{
@@ -19,7 +19,7 @@ public class GuessJokerSkillExecuteTask : GuessJokerTaskBase
 		this.FinishTime = 1500f;
 	}
 
-	// Token: 0x06006A9E RID: 27294 RVA: 0x0015749C File Offset: 0x0015569C
+	// Token: 0x06003E33 RID: 15923 RVA: 0x0015FDC4 File Offset: 0x0015DFC4
 	protected override void OnExecute()
 	{
 		if (this.Data == null)
@@ -72,7 +72,7 @@ public class GuessJokerSkillExecuteTask : GuessJokerTaskBase
 		this.DoNotUseSkill();
 	}
 
-	// Token: 0x06006A9F RID: 27295 RVA: 0x00157698 File Offset: 0x00155898
+	// Token: 0x06003E34 RID: 15924 RVA: 0x0015FFC0 File Offset: 0x0015E1C0
 	private void DoUseSkill(bool isJokerReturnFlagForGuide)
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -104,7 +104,7 @@ public class GuessJokerSkillExecuteTask : GuessJokerTaskBase
 		}
 	}
 
-	// Token: 0x06006AA0 RID: 27296 RVA: 0x00157784 File Offset: 0x00155984
+	// Token: 0x06003E35 RID: 15925 RVA: 0x001600AC File Offset: 0x0015E2AC
 	private void DoNotUseSkill()
 	{
 		if (GuessJokerGamePlayModel.Instance.ShowPlayGiveUpSkillTip(this.SkillId))
@@ -123,16 +123,16 @@ public class GuessJokerSkillExecuteTask : GuessJokerTaskBase
 		base.FinishTask();
 	}
 
-	// Token: 0x04003122 RID: 12578
+	// Token: 0x040031BB RID: 12731
 	[Nullable(2)]
 	private readonly JokerGuessSkillExecAction Data;
 
-	// Token: 0x04003123 RID: 12579
+	// Token: 0x040031BC RID: 12732
 	public int SkillId;
 
-	// Token: 0x04003124 RID: 12580
+	// Token: 0x040031BD RID: 12733
 	public EGuessJokerPlayerType PlayerType = EGuessJokerPlayerType.Ai;
 
-	// Token: 0x04003125 RID: 12581
+	// Token: 0x040031BE RID: 12734
 	public bool IsUseSkill;
 }

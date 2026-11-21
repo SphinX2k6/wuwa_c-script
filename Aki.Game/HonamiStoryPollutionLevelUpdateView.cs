@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EE5 RID: 7909
+// Token: 0x020013A7 RID: 5031
 public class HonamiStoryPollutionLevelUpdateView : UiViewBase
 {
-	// Token: 0x0600F383 RID: 62339 RVA: 0x003AB3F6 File Offset: 0x003A95F6
+	// Token: 0x0600C7A2 RID: 51106 RVA: 0x003B6EF2 File Offset: 0x003B50F2
 	[NullableContext(1)]
 	public HonamiStoryPollutionLevelUpdateView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F384 RID: 62340 RVA: 0x003AB400 File Offset: 0x003A9600
+	// Token: 0x0600C7A3 RID: 51107 RVA: 0x003B6EFC File Offset: 0x003B50FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class HonamiStoryPollutionLevelUpdateView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F385 RID: 62341 RVA: 0x003AB46C File Offset: 0x003A966C
+	// Token: 0x0600C7A4 RID: 51108 RVA: 0x003B6F68 File Offset: 0x003B5168
 	protected override void OnStart()
 	{
 		IHonamiStoryPollutionUpdateParams honamiStoryPollutionUpdateParams = (IHonamiStoryPollutionUpdateParams)this.OpenParam;
@@ -40,12 +40,12 @@ public class HonamiStoryPollutionLevelUpdateView : UiViewBase
 		}, 3500f, null, null, true, 1f);
 	}
 
-	// Token: 0x020084DC RID: 34012
+	// Token: 0x02007661 RID: 30305
 	private enum EComponentType
 	{
-		// Token: 0x0402B3C8 RID: 177096
+		// Token: 0x040266EC RID: 157420
 		PollutionLevelText,
-		// Token: 0x0402B3C9 RID: 177097
+		// Token: 0x040266ED RID: 157421
 		MonsterLevelText
 	}
 }

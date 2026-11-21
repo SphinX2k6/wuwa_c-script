@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200168D RID: 5773
+	// Token: 0x02001802 RID: 6146
 	[EnumExtensions]
 	public enum ERogueRewardReceiveType
 	{
-		// Token: 0x04004D5C RID: 19804
+		// Token: 0x04005167 RID: 20839
 		ReceiveByCount,
-		// Token: 0x04004D5D RID: 19805
+		// Token: 0x04005168 RID: 20840
 		ReceiveByEnergy
 	}
 }

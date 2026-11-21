@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007644 RID: 30276
+	// Token: 0x02007E52 RID: 32338
 	public enum TAssistCharacterMoveType : byte
 	{
-		// Token: 0x040125EB RID: 75243
+		// Token: 0x04013635 RID: 79413
 		NONE,
-		// Token: 0x040125EC RID: 75244
+		// Token: 0x04013636 RID: 79414
 		IAssistCharacterNavigationMove,
-		// Token: 0x040125ED RID: 75245
+		// Token: 0x04013637 RID: 79415
 		IAssistCharacterSplineMove
 	}
 }

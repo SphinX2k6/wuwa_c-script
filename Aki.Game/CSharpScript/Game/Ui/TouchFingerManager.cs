@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C4 RID: 18116
+	// Token: 0x020035F5 RID: 13813
 	public class TouchFingerManager : Singleton
 	{
-		// Token: 0x0602EB7F RID: 191359 RVA: 0x00ACFB98 File Offset: 0x00ACDD98
+		// Token: 0x060232CB RID: 144075 RVA: 0x009FE52C File Offset: 0x009FC72C
 		public void Initialize()
 		{
 			foreach (object obj in Enum.GetValues(typeof(EFingerIndex)))
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB80 RID: 191360 RVA: 0x00ACFBFC File Offset: 0x00ACDDFC
+		// Token: 0x060232CC RID: 144076 RVA: 0x009FE590 File Offset: 0x009FC790
 		private void NewTouchFingerData(EFingerIndex fingerIndex)
 		{
 			TouchFingerData value = new TouchFingerData(fingerIndex);
 			this.TouchFingerDataMap[fingerIndex] = value;
 		}
 
-		// Token: 0x0602EB81 RID: 191361 RVA: 0x00ACFC20 File Offset: 0x00ACDE20
+		// Token: 0x060232CD RID: 144077 RVA: 0x009FE5B4 File Offset: 0x009FC7B4
 		[NullableContext(2)]
 		public TouchFingerData GetTouchFingerData(EFingerIndex fingerIndex)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602EB82 RID: 191362 RVA: 0x00ACFC40 File Offset: 0x00ACDE40
+		// Token: 0x060232CE RID: 144078 RVA: 0x009FE5D4 File Offset: 0x009FC7D4
 		public void StartTouch(EFingerIndex fingerIndex, FVector touchPosition)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(fingerIndex);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Ui
 			touchFingerData.StartTouch(touchPosition);
 		}
 
-		// Token: 0x0602EB83 RID: 191363 RVA: 0x00ACFC78 File Offset: 0x00ACDE78
+		// Token: 0x060232CF RID: 144079 RVA: 0x009FE60C File Offset: 0x009FC80C
 		public void EndTouch(EFingerIndex fingerIndex)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(fingerIndex);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Ui
 			touchFingerData.EndTouch();
 		}
 
-		// Token: 0x0602EB84 RID: 191364 RVA: 0x00ACFCB4 File Offset: 0x00ACDEB4
+		// Token: 0x060232D0 RID: 144080 RVA: 0x009FE648 File Offset: 0x009FC848
 		public void MoveTouch(EFingerIndex fingerIndex, FVector touchPosition)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(fingerIndex);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Ui
 			touchFingerData.MoveTouch(touchPosition);
 		}
 
-		// Token: 0x0602EB85 RID: 191365 RVA: 0x00ACFCD4 File Offset: 0x00ACDED4
+		// Token: 0x060232D1 RID: 144081 RVA: 0x009FE668 File Offset: 0x009FC868
 		public FVector? GetTouchPosition(EFingerIndex fingerIndex)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(fingerIndex);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Ui
 			return touchFingerData.GetTouchPosition();
 		}
 
-		// Token: 0x0602EB86 RID: 191366 RVA: 0x00ACFD10 File Offset: 0x00ACDF10
+		// Token: 0x060232D2 RID: 144082 RVA: 0x009FE6A4 File Offset: 0x009FC8A4
 		public FVector? GetLastTouchPosition(EFingerIndex fingerIndex)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(fingerIndex);
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Ui
 			return touchFingerData.GetLastTouchPosition();
 		}
 
-		// Token: 0x0602EB87 RID: 191367 RVA: 0x00ACFD4A File Offset: 0x00ACDF4A
+		// Token: 0x060232D3 RID: 144083 RVA: 0x009FE6DE File Offset: 0x009FC8DE
 		public int GetTouchFingerCount()
 		{
 			return this.CurrentTouchFingerCount;
 		}
 
-		// Token: 0x0602EB88 RID: 191368 RVA: 0x00ACFD54 File Offset: 0x00ACDF54
+		// Token: 0x060232D4 RID: 144084 RVA: 0x009FE6E8 File Offset: 0x009FC8E8
 		public float GetFingerExpandCloseValue(EFingerIndex aFingerIndex, EFingerIndex bFingerIndex)
 		{
 			TouchFingerData touchFingerData = this.GetTouchFingerData(aFingerIndex);
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Ui
 			return num7 - num8;
 		}
 
-		// Token: 0x0602EB89 RID: 191369 RVA: 0x00ACFEA8 File Offset: 0x00ACE0A8
+		// Token: 0x060232D5 RID: 144085 RVA: 0x009FE83C File Offset: 0x009FCA3C
 		[return: TupleElementNames(new string[]
 		{
 			"State",
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Ui
 			return new ValueTuple<EFingerExpandCloseType, float>(item, num);
 		}
 
-		// Token: 0x0602EB8A RID: 191370 RVA: 0x00ACFFA4 File Offset: 0x00ACE1A4
+		// Token: 0x060232D6 RID: 144086 RVA: 0x009FE938 File Offset: 0x009FCB38
 		[return: TupleElementNames(new string[]
 		{
 			"X",
@@ -232,8 +232,8 @@ namespace CSharpScript.Game.Ui
 			return new ValueTuple<float, float>?(new ValueTuple<float, float>(touchPosition.Value.X - lastTouchPosition.Value.X, touchPosition.Value.Y - lastTouchPosition.Value.Y));
 		}
 
-		// Token: 0x1700766A RID: 30314
-		// (get) Token: 0x0602EB8B RID: 191371 RVA: 0x00AD0049 File Offset: 0x00ACE249
+		// Token: 0x17004926 RID: 18726
+		// (get) Token: 0x060232D7 RID: 144087 RVA: 0x009FE9DD File Offset: 0x009FCBDD
 		[Nullable(1)]
 		public static TouchFingerManager Instance
 		{
@@ -249,12 +249,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB8C RID: 191372 RVA: 0x00AD006C File Offset: 0x00ACE26C
+		// Token: 0x060232D8 RID: 144088 RVA: 0x009FEA00 File Offset: 0x009FCC00
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB8D RID: 191373 RVA: 0x00AD006E File Offset: 0x00ACE26E
+		// Token: 0x060232D9 RID: 144089 RVA: 0x009FEA02 File Offset: 0x009FCC02
 		public static void ResetStaticDefaultValue()
 		{
 			TouchFingerManager instance = TouchFingerManager._instance;
@@ -265,20 +265,20 @@ namespace CSharpScript.Game.Ui
 			TouchFingerManager._instance = null;
 		}
 
-		// Token: 0x0602EB8E RID: 191374 RVA: 0x00AD0087 File Offset: 0x00ACE287
+		// Token: 0x060232DA RID: 144090 RVA: 0x009FEA1B File Offset: 0x009FCC1B
 		static TouchFingerManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TouchFingerManager.CreateStaticDefaultValue), new Action(TouchFingerManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196F4 RID: 104180
+		// Token: 0x04013D9B RID: 81307
 		[Nullable(1)]
 		private readonly Dictionary<EFingerIndex, TouchFingerData> TouchFingerDataMap = new Dictionary<EFingerIndex, TouchFingerData>();
 
-		// Token: 0x040196F5 RID: 104181
+		// Token: 0x04013D9C RID: 81308
 		public int CurrentTouchFingerCount;
 
-		// Token: 0x040196F6 RID: 104182
+		// Token: 0x04013D9D RID: 81309
 		[Nullable(2)]
 		private static TouchFingerManager _instance;
 	}

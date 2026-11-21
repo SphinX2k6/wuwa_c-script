@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F7C RID: 8060
+// Token: 0x0200143E RID: 5182
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class InfluenceModel : ModelBase
 {
-	// Token: 0x0600FA0B RID: 64011 RVA: 0x003C9394 File Offset: 0x003C7594
+	// Token: 0x0600CE2A RID: 52778 RVA: 0x003D4EB0 File Offset: 0x003D30B0
 	public void AddUnlockCountry(int[] unlockItems)
 	{
 		for (int i = 0; i < unlockItems.Length; i++)
@@ -20,7 +20,7 @@ public class InfluenceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FA0C RID: 64012 RVA: 0x003C93D0 File Offset: 0x003C75D0
+	// Token: 0x0600CE2B RID: 52779 RVA: 0x003D4EEC File Offset: 0x003D30EC
 	public void AddUnlockInfluence(int[] unlockItems)
 	{
 		for (int i = 0; i < unlockItems.Length; i++)
@@ -32,8 +32,8 @@ public class InfluenceModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001343 RID: 4931
-	// (get) Token: 0x0600FA0D RID: 64013 RVA: 0x003C940A File Offset: 0x003C760A
+	// Token: 0x1700136D RID: 4973
+	// (get) Token: 0x0600CE2C RID: 52780 RVA: 0x003D4F26 File Offset: 0x003D3126
 	public static InfluenceModel Instance
 	{
 		get
@@ -42,7 +42,7 @@ public class InfluenceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FA0E RID: 64014 RVA: 0x003C9411 File Offset: 0x003C7611
+	// Token: 0x0600CE2D RID: 52781 RVA: 0x003D4F2D File Offset: 0x003D312D
 	public static InfluenceModel GetOrCreateInstance()
 	{
 		if (InfluenceModel._Instance == null)
@@ -52,7 +52,7 @@ public class InfluenceModel : ModelBase
 		return InfluenceModel._Instance;
 	}
 
-	// Token: 0x0600FA0F RID: 64015 RVA: 0x003C9425 File Offset: 0x003C7625
+	// Token: 0x0600CE2E RID: 52782 RVA: 0x003D4F41 File Offset: 0x003D3141
 	public static bool CreateInstance()
 	{
 		if (InfluenceModel._Instance != null)
@@ -63,36 +63,36 @@ public class InfluenceModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FA10 RID: 64016 RVA: 0x003C943B File Offset: 0x003C763B
+	// Token: 0x0600CE2F RID: 52783 RVA: 0x003D4F57 File Offset: 0x003D3157
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FA11 RID: 64017 RVA: 0x003C943D File Offset: 0x003C763D
+	// Token: 0x0600CE30 RID: 52784 RVA: 0x003D4F59 File Offset: 0x003D3159
 	public static void ResetStaticDefaultValue()
 	{
 		InfluenceModel._Instance = null;
 	}
 
-	// Token: 0x0600FA12 RID: 64018 RVA: 0x003C9445 File Offset: 0x003C7645
+	// Token: 0x0600CE31 RID: 52785 RVA: 0x003D4F61 File Offset: 0x003D3161
 	static InfluenceModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InfluenceModel.CreateStaticDefaultValue), new Action(InfluenceModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007486 RID: 29830
+	// Token: 0x04007567 RID: 30055
 	public HashSet<int> UnlockCountry = new HashSet<int>();
 
-	// Token: 0x04007487 RID: 29831
+	// Token: 0x04007568 RID: 30056
 	public HashSet<int> UnlockInfluence = new HashSet<int>();
 
-	// Token: 0x04007488 RID: 29832
+	// Token: 0x04007569 RID: 30057
 	public int CurrentSelectAreaId;
 
-	// Token: 0x04007489 RID: 29833
+	// Token: 0x0400756A RID: 30058
 	public int CurrentSelectInfluenceId;
 
-	// Token: 0x0400748A RID: 29834
+	// Token: 0x0400756B RID: 30059
 	[Nullable(2)]
 	private static InfluenceModel _Instance;
 }

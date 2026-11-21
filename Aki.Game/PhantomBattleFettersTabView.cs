@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001755 RID: 5973
+// Token: 0x02000C0E RID: 3086
 public class PhantomBattleFettersTabView : UiTabViewBase
 {
-	// Token: 0x0600ACD2 RID: 44242 RVA: 0x0026D894 File Offset: 0x0026BA94
+	// Token: 0x060080B9 RID: 32953 RVA: 0x00277D10 File Offset: 0x00275F10
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomBattleFettersTabView.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;
@@ -18,7 +18,7 @@ public class PhantomBattleFettersTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600ACD3 RID: 44243 RVA: 0x0026D8D8 File Offset: 0x0026BAD8
+	// Token: 0x060080BA RID: 32954 RVA: 0x00277D54 File Offset: 0x00275F54
 	protected override void OnBeforeShow()
 	{
 		int? num = this.ExtraParams as int?;
@@ -33,7 +33,7 @@ public class PhantomBattleFettersTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x04004E9F RID: 20127
+	// Token: 0x04004F48 RID: 20296
 	[Nullable(2)]
 	private PhantomBattleFettersViewItem ViewItem;
 }

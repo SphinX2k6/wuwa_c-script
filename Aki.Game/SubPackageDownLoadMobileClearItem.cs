@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AAB RID: 10923
+// Token: 0x02002027 RID: 8231
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDownLoadMobileClearData>
 {
-	// Token: 0x06016BEF RID: 93167 RVA: 0x005C5790 File Offset: 0x005C3990
+	// Token: 0x0601461E RID: 83486 RVA: 0x005F2224 File Offset: 0x005F0424
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 		};
 	}
 
-	// Token: 0x06016BF0 RID: 93168 RVA: 0x005C57EC File Offset: 0x005C39EC
+	// Token: 0x0601461F RID: 83487 RVA: 0x005F2280 File Offset: 0x005F0480
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SubPackageDownLoadMobileClearItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016BF1 RID: 93169 RVA: 0x005C582F File Offset: 0x005C3A2F
+	// Token: 0x06014620 RID: 83488 RVA: 0x005F22C3 File Offset: 0x005F04C3
 	private SubPackageDownLoadMobileClearInfoItem InitInfoItem()
 	{
 		return new SubPackageDownLoadMobileClearInfoItem
@@ -46,7 +46,7 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 		};
 	}
 
-	// Token: 0x06016BF2 RID: 93170 RVA: 0x005C5844 File Offset: 0x005C3A44
+	// Token: 0x06014621 RID: 83489 RVA: 0x005F22D8 File Offset: 0x005F04D8
 	public override void Refresh(ISubPackageDownLoadMobileClearData data, bool isSelected, int gridIndex)
 	{
 		SubPackageDownLoadMobileClearTitleItem titleItem = this.TitleItem;
@@ -110,7 +110,7 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 		infoItemLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0400A8D1 RID: 43217
+	// Token: 0x0400ACD7 RID: 44247
 	[Nullable(new byte[]
 	{
 		2,
@@ -118,15 +118,15 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 	})]
 	public Action<int, UUIItem> OnClickHelpBtnCallBack;
 
-	// Token: 0x0400A8D2 RID: 43218
+	// Token: 0x0400ACD8 RID: 44248
 	[Nullable(2)]
 	public Action<int?, bool, EToggleState, string> OnClickToggleCallBack;
 
-	// Token: 0x0400A8D3 RID: 43219
+	// Token: 0x0400ACD9 RID: 44249
 	[Nullable(2)]
 	private SubPackageDownLoadMobileClearTitleItem TitleItem;
 
-	// Token: 0x0400A8D4 RID: 43220
+	// Token: 0x0400ACDA RID: 44250
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,17 +135,17 @@ public class SubPackageDownLoadMobileClearItem : GridProxyAbstract<ISubPackageDo
 	})]
 	private GenericLayout<SubPackageDownLoadMobileClearInfoItem, ISubPackageDownLoadMobileClearInfoItemData> InfoItemLayout;
 
-	// Token: 0x020090DA RID: 37082
+	// Token: 0x0200831E RID: 33566
 	[NullableContext(0)]
 	private class ESubPackageDownLoadMobileClearItem
 	{
-		// Token: 0x0402EEE5 RID: 192229
+		// Token: 0x0402A5EA RID: 173546
 		public const int TitleItem = 0;
 
-		// Token: 0x0402EEE6 RID: 192230
+		// Token: 0x0402A5EB RID: 173547
 		public const int InfoLayout = 1;
 
-		// Token: 0x0402EEE7 RID: 192231
+		// Token: 0x0402A5EC RID: 173548
 		public const int InfoItem = 2;
 	}
 }

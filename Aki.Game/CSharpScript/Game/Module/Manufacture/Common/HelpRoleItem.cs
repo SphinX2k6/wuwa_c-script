@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005693 RID: 22163
+	// Token: 0x02004669 RID: 18025
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 	})]
 	public class HelpRoleItem : GridProxyAbstract<ICommonRoleItemData>
 	{
-		// Token: 0x0603864A RID: 230986 RVA: 0x00D62E14 File Offset: 0x00D61014
+		// Token: 0x0602D547 RID: 185671 RVA: 0x00CB0F64 File Offset: 0x00CAF164
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,14 +42,14 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603864B RID: 230987 RVA: 0x00D62EFC File Offset: 0x00D610FC
+		// Token: 0x0602D548 RID: 185672 RVA: 0x00CB104C File Offset: 0x00CAF24C
 		protected override void OnStart()
 		{
 			this.ItemGrid = new SmallItemGrid();
 			this.ItemGrid.Initialize(base.GetItem(3).GetOwner());
 		}
 
-		// Token: 0x0603864C RID: 230988 RVA: 0x00D62F20 File Offset: 0x00D61120
+		// Token: 0x0602D549 RID: 185673 RVA: 0x00CB1070 File Offset: 0x00CAF270
 		[NullableContext(1)]
 		public override void Refresh(ICommonRoleItemData data, bool isSelected, int gridIndex)
 		{
@@ -70,26 +70,26 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(2).OnSelfLanguageChange.Bind(new Action(this.SetInfoText));
 		}
 
-		// Token: 0x0603864D RID: 230989 RVA: 0x00D62FDB File Offset: 0x00D611DB
+		// Token: 0x0602D54A RID: 185674 RVA: 0x00CB112B File Offset: 0x00CAF32B
 		public override void Clear()
 		{
 			base.GetText(2).OnSelfLanguageChange.Unbind();
 		}
 
-		// Token: 0x0603864E RID: 230990 RVA: 0x00D62FEE File Offset: 0x00D611EE
+		// Token: 0x0602D54B RID: 185675 RVA: 0x00CB113E File Offset: 0x00CAF33E
 		protected override void OnBeforeDestroy()
 		{
 			this.ItemGrid.Destroy(null);
 			this.ItemGrid = null;
 		}
 
-		// Token: 0x0603864F RID: 230991 RVA: 0x00D63003 File Offset: 0x00D61203
+		// Token: 0x0602D54C RID: 185676 RVA: 0x00CB1153 File Offset: 0x00CAF353
 		private void SetName()
 		{
 			base.GetText(1).SetText(this.ItemData.RoleName, true);
 		}
 
-		// Token: 0x06038650 RID: 230992 RVA: 0x00D63020 File Offset: 0x00D61220
+		// Token: 0x0602D54D RID: 185677 RVA: 0x00CB1170 File Offset: 0x00CAF370
 		private void SetInfoText()
 		{
 			if (CommonManager.Instance.CheckIsBuff(this.ItemData.RoleId, this.ItemData.ItemId))
@@ -102,26 +102,26 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(2).SetText(textById, true);
 		}
 
-		// Token: 0x06038651 RID: 230993 RVA: 0x00D63097 File Offset: 0x00D61297
+		// Token: 0x0602D54E RID: 185678 RVA: 0x00CB11E7 File Offset: 0x00CAF3E7
 		[NullableContext(1)]
 		public void BindOnClickedCallback(Action<int> onItemButtonClicked)
 		{
 			this.OnClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x06038652 RID: 230994 RVA: 0x00D630A0 File Offset: 0x00D612A0
+		// Token: 0x0602D54F RID: 185679 RVA: 0x00CB11F0 File Offset: 0x00CAF3F0
 		public override void OnSelected(bool fireEvent)
 		{
 			this.Selected(true, true);
 		}
 
-		// Token: 0x06038653 RID: 230995 RVA: 0x00D630AA File Offset: 0x00D612AA
+		// Token: 0x0602D550 RID: 185680 RVA: 0x00CB11FA File Offset: 0x00CAF3FA
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.Selected(false, true);
 		}
 
-		// Token: 0x06038654 RID: 230996 RVA: 0x00D630B4 File Offset: 0x00D612B4
+		// Token: 0x0602D551 RID: 185681 RVA: 0x00CB1204 File Offset: 0x00CAF404
 		private void Selected(bool bSelected, bool fireEvent = true)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06038655 RID: 230997 RVA: 0x00D630E3 File Offset: 0x00D612E3
+		// Token: 0x0602D552 RID: 185682 RVA: 0x00CB1233 File Offset: 0x00CAF433
 		private void OnClick(EToggleState state)
 		{
 			if (this.OnClickedCallback != null)
@@ -142,29 +142,29 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			}
 		}
 
-		// Token: 0x0401DA13 RID: 121363
+		// Token: 0x0401849E RID: 99486
 		private ICommonRoleItemData ItemData;
 
-		// Token: 0x0401DA14 RID: 121364
+		// Token: 0x0401849F RID: 99487
 		private SmallItemGrid ItemGrid;
 
-		// Token: 0x0401DA15 RID: 121365
+		// Token: 0x040184A0 RID: 99488
 		private Action<int> OnClickedCallback;
 
-		// Token: 0x0200B855 RID: 47189
+		// Token: 0x0200A27D RID: 41597
 		[NullableContext(0)]
 		private class EHelpRoleItemDefine
 		{
-			// Token: 0x04037CAE RID: 228526
+			// Token: 0x040326CB RID: 206539
 			public const int HelpRoleExtendToggle = 0;
 
-			// Token: 0x04037CAF RID: 228527
+			// Token: 0x040326CC RID: 206540
 			public const int RoleNameText = 1;
 
-			// Token: 0x04037CB0 RID: 228528
+			// Token: 0x040326CD RID: 206541
 			public const int CommonInfoText = 2;
 
-			// Token: 0x04037CB1 RID: 228529
+			// Token: 0x040326CE RID: 206542
 			public const int ItemGridItem = 3;
 		}
 	}

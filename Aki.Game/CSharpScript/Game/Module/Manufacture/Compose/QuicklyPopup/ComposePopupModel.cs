@@ -9,13 +9,13 @@ using CSharpScript.Game.Module.Manufacture.Common;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x0200567F RID: 22143
+	// Token: 0x02004655 RID: 18005
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ComposePopupModel : ModelBase
 	{
-		// Token: 0x0603857A RID: 230778 RVA: 0x00D5EF0C File Offset: 0x00D5D10C
+		// Token: 0x0602D477 RID: 185463 RVA: 0x00CAD05C File Offset: 0x00CAB25C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x0603857B RID: 230779 RVA: 0x00D5EFA4 File Offset: 0x00D5D1A4
+		// Token: 0x0602D478 RID: 185464 RVA: 0x00CAD0F4 File Offset: 0x00CAB2F4
 		[NullableContext(2)]
 		public int GetMaxCreateCountNormal(int itemId, bool useGift, Dictionary<int, int> usedItemMap = null)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return num2 + num;
 		}
 
-		// Token: 0x0603857C RID: 230780 RVA: 0x00D5F070 File Offset: 0x00D5D270
+		// Token: 0x0602D479 RID: 185465 RVA: 0x00CAD1C0 File Offset: 0x00CAB3C0
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return this.MergeDuplicateItems(list5);
 		}
 
-		// Token: 0x0603857D RID: 230781 RVA: 0x00D5F298 File Offset: 0x00D5D498
+		// Token: 0x0602D47A RID: 185466 RVA: 0x00CAD3E8 File Offset: 0x00CAB5E8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x0603857E RID: 230782 RVA: 0x00D5F460 File Offset: 0x00D5D660
+		// Token: 0x0602D47B RID: 185467 RVA: 0x00CAD5B0 File Offset: 0x00CAB7B0
 		[NullableContext(2)]
 		public Dictionary<int, int> GetLowestLevelExchangeMap(int itemId)
 		{
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return dictionary2;
 		}
 
-		// Token: 0x0603857F RID: 230783 RVA: 0x00D5F674 File Offset: 0x00D5D874
+		// Token: 0x0602D47C RID: 185468 RVA: 0x00CAD7C4 File Offset: 0x00CAB9C4
 		[NullableContext(2)]
 		public int GetMaxCreateCountPurification(int itemId, bool useGift, Dictionary<int, int> usedItemMap = null)
 		{
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return num2 / lowestLevelExchangeMap[itemId] + num;
 		}
 
-		// Token: 0x06038580 RID: 230784 RVA: 0x00D5F740 File Offset: 0x00D5D940
+		// Token: 0x0602D47D RID: 185469 RVA: 0x00CAD890 File Offset: 0x00CABA90
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038581 RID: 230785 RVA: 0x00D5F9A0 File Offset: 0x00D5DBA0
+		// Token: 0x0602D47E RID: 185470 RVA: 0x00CADAF0 File Offset: 0x00CABCF0
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return new ValueTuple<int, List<IComposeItemData>>(count, new List<IComposeItemData>());
 		}
 
-		// Token: 0x06038582 RID: 230786 RVA: 0x00D5F9F8 File Offset: 0x00D5DBF8
+		// Token: 0x0602D47F RID: 185471 RVA: 0x00CADB48 File Offset: 0x00CABD48
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list2;
 		}
 
-		// Token: 0x06038583 RID: 230787 RVA: 0x00D5FC84 File Offset: 0x00D5DE84
+		// Token: 0x0602D480 RID: 185472 RVA: 0x00CADDD4 File Offset: 0x00CABFD4
 		private bool CanUseAsExchangeMaterial(int materialItemId, int targetItemId)
 		{
 			IReadOnlyList<MaterialReplace> exchangeList = ComposeConfig.Instance.GetExchangeList();
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return target != null && target.Value.Item1 == targetItemId;
 		}
 
-		// Token: 0x06038584 RID: 230788 RVA: 0x00D5FD6C File Offset: 0x00D5DF6C
+		// Token: 0x0602D481 RID: 185473 RVA: 0x00CADEBC File Offset: 0x00CAC0BC
 		[NullableContext(2)]
 		public int GetMaxGiftExchangeCount(int itemId, Dictionary<int, int> usedItemMap = null)
 		{
@@ -556,7 +556,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return num;
 		}
 
-		// Token: 0x06038585 RID: 230789 RVA: 0x00D5FDF4 File Offset: 0x00D5DFF4
+		// Token: 0x0602D482 RID: 185474 RVA: 0x00CADF44 File Offset: 0x00CAC144
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -608,14 +608,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x06038586 RID: 230790 RVA: 0x00D5FF10 File Offset: 0x00D5E110
+		// Token: 0x0602D483 RID: 185475 RVA: 0x00CAE060 File Offset: 0x00CAC260
 		public int GetGiftInnerCount(int giftItemId, int targetItemId)
 		{
 			GiftPackage? giftPackageConfig = GiftPackageConfig.Instance.GetGiftPackageConfig(ItemConfig.Instance.GetConfig(giftItemId).Value.Parameters(0).Value.Value);
 			return ((giftPackageConfig != null) ? giftPackageConfig.GetValueOrDefault().GetContent(targetItemId) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x06038587 RID: 230791 RVA: 0x00D5FF84 File Offset: 0x00D5E184
+		// Token: 0x0602D484 RID: 185476 RVA: 0x00CAE0D4 File Offset: 0x00CAC2D4
 		public int GetMaxCreateCount(int itemId, bool useGift)
 		{
 			SynthesisFormula? synthesisFormulaByItemId = ComposeConfig.Instance.GetSynthesisFormulaByItemId(itemId);
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038588 RID: 230792 RVA: 0x00D5FFDC File Offset: 0x00D5E1DC
+		// Token: 0x0602D485 RID: 185477 RVA: 0x00CAE12C File Offset: 0x00CAC32C
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038589 RID: 230793 RVA: 0x00D60040 File Offset: 0x00D5E240
+		// Token: 0x0602D486 RID: 185478 RVA: 0x00CAE190 File Offset: 0x00CAC390
 		public List<IComposePopupGridItemData> CalcComposeListAll(List<ISelectedData> selectedItemList, bool useGift)
 		{
 			List<IComposePopupGridItemData> list = new List<IComposePopupGridItemData>(selectedItemList.Count);
@@ -738,7 +738,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x0603858A RID: 230794 RVA: 0x00D60258 File Offset: 0x00D5E458
+		// Token: 0x0602D487 RID: 185479 RVA: 0x00CAE3A8 File Offset: 0x00CAC5A8
 		private IComposePopupGridItemData HandleFormulaMaterial(ISelectedData selectedItem, bool useGift, [Nullable(2)] Dictionary<int, int> usedItemMap = null)
 		{
 			int num = (usedItemMap != null) ? usedItemMap.GetValueOrDefault(selectedItem.ItemId, 0) : 0;
@@ -792,7 +792,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			};
 		}
 
-		// Token: 0x0603858B RID: 230795 RVA: 0x00D60370 File Offset: 0x00D5E570
+		// Token: 0x0602D488 RID: 185480 RVA: 0x00CAE4C0 File Offset: 0x00CAC6C0
 		private IComposePopupGridItemData HandleNonFormulaMaterial(ISelectedData selectedItem, bool useGift, [Nullable(2)] Dictionary<int, int> usedItemMap = null)
 		{
 			int num = (usedItemMap != null) ? usedItemMap.GetValueOrDefault(selectedItem.ItemId, 0) : 0;
@@ -836,7 +836,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			};
 		}
 
-		// Token: 0x0603858C RID: 230796 RVA: 0x00D60468 File Offset: 0x00D5E668
+		// Token: 0x0602D489 RID: 185481 RVA: 0x00CAE5B8 File Offset: 0x00CAC7B8
 		[return: TupleElementNames(new string[]
 		{
 			"Result",
@@ -917,13 +917,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return new ValueTuple<EComposeCheckResult, List<IComposePopupGridItemData>>(ecomposeCheckResult.Value, list);
 		}
 
-		// Token: 0x0603858D RID: 230797 RVA: 0x00D6060C File Offset: 0x00D5E80C
+		// Token: 0x0602D48A RID: 185482 RVA: 0x00CAE75C File Offset: 0x00CAC95C
 		public bool CheckOpenResult(List<ISelectedData> selectedData)
 		{
 			return this.CheckComposeResult(selectedData, true, true).Item1 != EComposeCheckResult.CannotCompose;
 		}
 
-		// Token: 0x0603858E RID: 230798 RVA: 0x00D60624 File Offset: 0x00D5E824
+		// Token: 0x0602D48B RID: 185483 RVA: 0x00CAE774 File Offset: 0x00CAC974
 		public bool IsComposeGiftShouldShow(List<ISelectedData> selectedData)
 		{
 			List<IComposePopupGridItemData> list = this.CalcComposeListAll(selectedData, false);
@@ -943,7 +943,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return false;
 		}
 
-		// Token: 0x0603858F RID: 230799 RVA: 0x00D606A0 File Offset: 0x00D5E8A0
+		// Token: 0x0602D48C RID: 185484 RVA: 0x00CAE7F0 File Offset: 0x00CAC9F0
 		private void AccumulateUsedMap(Dictionary<int, int> map, List<IComposeItemData> items)
 		{
 			foreach (IComposeItemData composeItemData in items)
@@ -952,7 +952,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038590 RID: 230800 RVA: 0x00D60708 File Offset: 0x00D5E908
+		// Token: 0x0602D48D RID: 185485 RVA: 0x00CAE858 File Offset: 0x00CACA58
 		private List<IComposeItemData> MergeDuplicateItems(List<IComposeItemData> items)
 		{
 			Dictionary<int, IComposeItemData> dictionary = new Dictionary<int, IComposeItemData>();
@@ -973,7 +973,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x06038591 RID: 230801 RVA: 0x00D60798 File Offset: 0x00D5E998
+		// Token: 0x0602D48E RID: 185486 RVA: 0x00CAE8E8 File Offset: 0x00CACAE8
 		public List<ISelectedData> MergeDuplicateSelectedData(List<ISelectedData> items)
 		{
 			Dictionary<int, ISelectedData> dictionary = new Dictionary<int, ISelectedData>();
@@ -994,7 +994,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x06038592 RID: 230802 RVA: 0x00D60828 File Offset: 0x00D5EA28
+		// Token: 0x0602D48F RID: 185487 RVA: 0x00CAE978 File Offset: 0x00CACB78
 		public List<ISelectedData> ConvertToSelectedData(List<IComposeItemData> data)
 		{
 			List<ISelectedData> list = new List<ISelectedData>();
@@ -1011,8 +1011,8 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return list;
 		}
 
-		// Token: 0x17008771 RID: 34673
-		// (get) Token: 0x06038593 RID: 230803 RVA: 0x00D608B8 File Offset: 0x00D5EAB8
+		// Token: 0x17005B38 RID: 23352
+		// (get) Token: 0x0602D490 RID: 185488 RVA: 0x00CAEA08 File Offset: 0x00CACC08
 		public static ComposePopupModel Instance
 		{
 			get
@@ -1021,7 +1021,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038594 RID: 230804 RVA: 0x00D608BF File Offset: 0x00D5EABF
+		// Token: 0x0602D491 RID: 185489 RVA: 0x00CAEA0F File Offset: 0x00CACC0F
 		public static ComposePopupModel GetOrCreateInstance()
 		{
 			if (ComposePopupModel._Instance == null)
@@ -1031,7 +1031,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return ComposePopupModel._Instance;
 		}
 
-		// Token: 0x06038595 RID: 230805 RVA: 0x00D608D3 File Offset: 0x00D5EAD3
+		// Token: 0x0602D492 RID: 185490 RVA: 0x00CAEA23 File Offset: 0x00CACC23
 		public static bool CreateInstance()
 		{
 			if (ComposePopupModel._Instance != null)
@@ -1042,24 +1042,24 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return true;
 		}
 
-		// Token: 0x06038596 RID: 230806 RVA: 0x00D608E9 File Offset: 0x00D5EAE9
+		// Token: 0x0602D493 RID: 185491 RVA: 0x00CAEA39 File Offset: 0x00CACC39
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038597 RID: 230807 RVA: 0x00D608EB File Offset: 0x00D5EAEB
+		// Token: 0x0602D494 RID: 185492 RVA: 0x00CAEA3B File Offset: 0x00CACC3B
 		public static void ResetStaticDefaultValue()
 		{
 			ComposePopupModel._Instance = null;
 		}
 
-		// Token: 0x06038598 RID: 230808 RVA: 0x00D608F3 File Offset: 0x00D5EAF3
+		// Token: 0x0602D495 RID: 185493 RVA: 0x00CAEA43 File Offset: 0x00CACC43
 		static ComposePopupModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComposePopupModel.CreateStaticDefaultValue), new Action(ComposePopupModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D9D0 RID: 121296
+		// Token: 0x0401845B RID: 99419
 		[Nullable(2)]
 		private static ComposePopupModel _Instance;
 	}

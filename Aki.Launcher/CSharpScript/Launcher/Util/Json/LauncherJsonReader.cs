@@ -5,12 +5,12 @@ using System.Text.Json;
 
 namespace CSharpScript.Launcher.Util.Json
 {
-	// Token: 0x0200007F RID: 127
+	// Token: 0x02000082 RID: 130
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class LauncherJsonReader
 	{
-		// Token: 0x06000350 RID: 848 RVA: 0x000118FC File Offset: 0x0000FAFC
+		// Token: 0x06000360 RID: 864 RVA: 0x00012780 File Offset: 0x00010980
 		public static T Read<T>(ref Utf8JsonReader reader, [Nullable(1)] JsonSerializerOptions options)
 		{
 			JsonTokenType tokenType = reader.TokenType;
@@ -37,7 +37,7 @@ namespace CSharpScript.Launcher.Util.Json
 			}
 		}
 
-		// Token: 0x06000351 RID: 849 RVA: 0x00011958 File Offset: 0x0000FB58
+		// Token: 0x06000361 RID: 865 RVA: 0x000127DC File Offset: 0x000109DC
 		public unsafe static T ReadString<T>(ref Utf8JsonReader reader)
 		{
 			string @string = reader.GetString();
@@ -94,7 +94,7 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new ArgumentException(@string + " with " + typeof(T).Name + " is not support");
 		}
 
-		// Token: 0x06000352 RID: 850 RVA: 0x00011AE4 File Offset: 0x0000FCE4
+		// Token: 0x06000362 RID: 866 RVA: 0x00012968 File Offset: 0x00010B68
 		private unsafe static T ReadStringBoolean<T>([Nullable(1)] string value, bool result)
 		{
 			Type typeFromHandle = typeof(T);
@@ -109,7 +109,7 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new ArgumentException(value + " with " + typeFromHandle.Name + " is not support");
 		}
 
-		// Token: 0x06000353 RID: 851 RVA: 0x00011B5C File Offset: 0x0000FD5C
+		// Token: 0x06000363 RID: 867 RVA: 0x000129E0 File Offset: 0x00010BE0
 		private static T ReadStringUndefined<T>([Nullable(1)] string value)
 		{
 			Type typeFromHandle = typeof(T);
@@ -124,25 +124,25 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new JsonException("Cannot assign 'undefined' to non-nullable value type " + typeFromHandle.Name);
 		}
 
-		// Token: 0x06000354 RID: 852 RVA: 0x00011BB3 File Offset: 0x0000FDB3
+		// Token: 0x06000364 RID: 868 RVA: 0x00012A37 File Offset: 0x00010C37
 		private static T ReadStringNaN<T>([Nullable(1)] string value)
 		{
 			return LauncherJsonReader.ReadStringFloating<T>(value, double.NaN, "NaN");
 		}
 
-		// Token: 0x06000355 RID: 853 RVA: 0x00011BC9 File Offset: 0x0000FDC9
+		// Token: 0x06000365 RID: 869 RVA: 0x00012A4D File Offset: 0x00010C4D
 		private static T ReadStringInfinity<T>([Nullable(1)] string value)
 		{
 			return LauncherJsonReader.ReadStringFloating<T>(value, double.PositiveInfinity, "Infinity");
 		}
 
-		// Token: 0x06000356 RID: 854 RVA: 0x00011BDF File Offset: 0x0000FDDF
+		// Token: 0x06000366 RID: 870 RVA: 0x00012A63 File Offset: 0x00010C63
 		private static T ReadStringInfinityNegative<T>([Nullable(1)] string value)
 		{
 			return LauncherJsonReader.ReadStringFloating<T>(value, double.NegativeInfinity, "InfinityNegative");
 		}
 
-		// Token: 0x06000357 RID: 855 RVA: 0x00011BF8 File Offset: 0x0000FDF8
+		// Token: 0x06000367 RID: 871 RVA: 0x00012A7C File Offset: 0x00010C7C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private unsafe static T ReadStringFloating<[Nullable(2)] T>(string value, double v, string name)
@@ -174,7 +174,7 @@ namespace CSharpScript.Launcher.Util.Json
 			}
 		}
 
-		// Token: 0x06000358 RID: 856 RVA: 0x00011CA4 File Offset: 0x0000FEA4
+		// Token: 0x06000368 RID: 872 RVA: 0x00012B28 File Offset: 0x00010D28
 		private unsafe static T ReadStringBigInt<T>([Nullable(1)] string value)
 		{
 			long num;
@@ -194,7 +194,7 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new JsonException("Cannot deserialize 'BigInt':'" + value + "' to " + typeof(T).Name);
 		}
 
-		// Token: 0x06000359 RID: 857 RVA: 0x00011D44 File Offset: 0x0000FF44
+		// Token: 0x06000369 RID: 873 RVA: 0x00012BC8 File Offset: 0x00010DC8
 		private unsafe static T ReadNumber<T>(ref Utf8JsonReader reader)
 		{
 			Type typeFromHandle = typeof(T);
@@ -297,7 +297,7 @@ namespace CSharpScript.Launcher.Util.Json
 			}
 		}
 
-		// Token: 0x0600035A RID: 858 RVA: 0x00011F30 File Offset: 0x00010130
+		// Token: 0x0600036A RID: 874 RVA: 0x00012DB4 File Offset: 0x00010FB4
 		[NullableContext(1)]
 		private static bool TryReadMetaJson(this Utf8JsonReader reader, JsonSerializerOptions options, [Nullable(2)] out LauncherJsonSettings.MetaJson metaJson)
 		{
@@ -312,7 +312,7 @@ namespace CSharpScript.Launcher.Util.Json
 			return false;
 		}
 
-		// Token: 0x0600035B RID: 859 RVA: 0x00011F68 File Offset: 0x00010168
+		// Token: 0x0600036B RID: 875 RVA: 0x00012DEC File Offset: 0x00010FEC
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static T ReadMetaObject<[Nullable(2)] T>(LauncherJsonSettings.MetaJson metaJson, JsonSerializerOptions options)
@@ -333,7 +333,7 @@ namespace CSharpScript.Launcher.Util.Json
 			return default(T);
 		}
 
-		// Token: 0x0600035C RID: 860 RVA: 0x00011FD0 File Offset: 0x000101D0
+		// Token: 0x0600036C RID: 876 RVA: 0x00012E54 File Offset: 0x00011054
 		private static T DeserializeMap<T>(JsonElement mapElement, [Nullable(1)] JsonSerializerOptions options)
 		{
 			Type typeFromHandle = typeof(T);
@@ -344,7 +344,7 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new JsonException("Failed to deserialize JSON to " + typeof(T).Name + ".");
 		}
 
-		// Token: 0x0600035D RID: 861 RVA: 0x00012024 File Offset: 0x00010224
+		// Token: 0x0600036D RID: 877 RVA: 0x00012EA8 File Offset: 0x000110A8
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static object DeserializeDictionary(JsonElement mapElement, Type dictType, JsonSerializerOptions options)
@@ -399,7 +399,7 @@ namespace CSharpScript.Launcher.Util.Json
 			return obj;
 		}
 
-		// Token: 0x0600035E RID: 862 RVA: 0x000121E8 File Offset: 0x000103E8
+		// Token: 0x0600036E RID: 878 RVA: 0x0001306C File Offset: 0x0001126C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static object DeserializeElement(JsonElement element, Type type, JsonSerializerOptions options)
@@ -422,7 +422,7 @@ namespace CSharpScript.Launcher.Util.Json
 			return element.Deserialize(type, options);
 		}
 
-		// Token: 0x0600035F RID: 863 RVA: 0x0001227C File Offset: 0x0001047C
+		// Token: 0x0600036F RID: 879 RVA: 0x00013100 File Offset: 0x00011300
 		private static T DeserializeSet<T>(JsonElement setElement, [Nullable(1)] JsonSerializerOptions options)
 		{
 			if (LauncherJsonSettings.IsGenericHashSet(typeof(T)))
@@ -433,7 +433,7 @@ namespace CSharpScript.Launcher.Util.Json
 			throw new JsonException("Failed to deserialize JSON to " + typeof(T).Name + ".");
 		}
 
-		// Token: 0x06000360 RID: 864 RVA: 0x000122CC File Offset: 0x000104CC
+		// Token: 0x06000370 RID: 880 RVA: 0x00013150 File Offset: 0x00011350
 		[NullableContext(1)]
 		[return: TupleElementNames(new string[]
 		{

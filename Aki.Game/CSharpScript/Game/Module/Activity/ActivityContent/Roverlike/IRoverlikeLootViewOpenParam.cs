@@ -5,18 +5,18 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200618E RID: 24974
+	// Token: 0x0200510C RID: 20748
 	[NullableContext(2)]
 	public interface IRoverlikeLootViewOpenParam
 	{
-		// Token: 0x170091E4 RID: 37348
-		// (get) Token: 0x0603F1B1 RID: 258481
-		// (set) Token: 0x0603F1B2 RID: 258482
+		// Token: 0x17006546 RID: 25926
+		// (get) Token: 0x06033E71 RID: 212593
+		// (set) Token: 0x06033E72 RID: 212594
 		bool IsInGame { get; set; }
 
-		// Token: 0x170091E5 RID: 37349
-		// (get) Token: 0x0603F1B3 RID: 258483
-		// (set) Token: 0x0603F1B4 RID: 258484
+		// Token: 0x17006547 RID: 25927
+		// (get) Token: 0x06033E73 RID: 212595
+		// (set) Token: 0x06033E74 RID: 212596
 		[Nullable(new byte[]
 		{
 			2,
@@ -32,24 +32,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			1
 		})] set; }
 
-		// Token: 0x170091E6 RID: 37350
-		// (get) Token: 0x0603F1B5 RID: 258485
-		// (set) Token: 0x0603F1B6 RID: 258486
+		// Token: 0x17006548 RID: 25928
+		// (get) Token: 0x06033E75 RID: 212597
+		// (set) Token: 0x06033E76 RID: 212598
 		bool? EnableUse { get; set; }
 
-		// Token: 0x170091E7 RID: 37351
-		// (get) Token: 0x0603F1B7 RID: 258487
-		// (set) Token: 0x0603F1B8 RID: 258488
+		// Token: 0x17006549 RID: 25929
+		// (get) Token: 0x06033E77 RID: 212599
+		// (set) Token: 0x06033E78 RID: 212600
 		List<int> EquippedLootIds { get; set; }
 
-		// Token: 0x170091E8 RID: 37352
-		// (get) Token: 0x0603F1B9 RID: 258489
-		// (set) Token: 0x0603F1BA RID: 258490
+		// Token: 0x1700654A RID: 25930
+		// (get) Token: 0x06033E79 RID: 212601
+		// (set) Token: 0x06033E7A RID: 212602
 		Action<int, int> OnConfirmSelect { get; set; }
 
-		// Token: 0x170091E9 RID: 37353
-		// (get) Token: 0x0603F1BB RID: 258491
-		// (set) Token: 0x0603F1BC RID: 258492
+		// Token: 0x1700654B RID: 25931
+		// (get) Token: 0x06033E7B RID: 212603
+		// (set) Token: 0x06033E7C RID: 212604
 		int DefaultSelectedLootId { get; set; }
 	}
 }

@@ -13,12 +13,12 @@ using CSharpScript.Game.Module.Kurotato;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02000EB9 RID: 3769
+// Token: 0x0200036E RID: 878
 [NullableContext(1)]
 [Nullable(0)]
 public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 {
-	// Token: 0x06005D48 RID: 23880 RVA: 0x00111D7C File Offset: 0x0010FF7C
+	// Token: 0x060030DF RID: 12511 RVA: 0x001199F0 File Offset: 0x00117BF0
 	protected unsafe override bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		IPotatoCombatInfo potatoCombatInfo = PotatoEntityModelBuilder.Get(entityData, componentDataMap);
@@ -46,7 +46,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005D49 RID: 23881 RVA: 0x00111E6C File Offset: 0x0011006C
+	// Token: 0x060030E0 RID: 12512 RVA: 0x00119AE0 File Offset: 0x00117CE0
 	private unsafe void CreateEntityFromModel(IPotatoCombatInfo model)
 	{
 		IPotatoCombatInfo potatoCombatInfo = model;
@@ -84,7 +84,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Add(potatoCombatInfo);
 	}
 
-	// Token: 0x06005D4A RID: 23882 RVA: 0x00111F88 File Offset: 0x00110188
+	// Token: 0x060030E1 RID: 12513 RVA: 0x00119BFC File Offset: 0x00117DFC
 	protected override void OnInstantiateEntities()
 	{
 		foreach (IPotatoCombatInfo model in this.PendingEntities)
@@ -94,7 +94,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06005D4B RID: 23883 RVA: 0x00111FE8 File Offset: 0x001101E8
+	// Token: 0x060030E2 RID: 12514 RVA: 0x00119C5C File Offset: 0x00117E5C
 	private void InstantiateEntity(IPotatoCombatInfo model)
 	{
 		EPotatoEntityType entityType = model.EntityType;
@@ -282,7 +282,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		});
 	}
 
-	// Token: 0x06005D4C RID: 23884 RVA: 0x001123D0 File Offset: 0x001105D0
+	// Token: 0x060030E3 RID: 12515 RVA: 0x0011A044 File Offset: 0x00118244
 	private void ApplyInheritAttrs(AKSC_Entity entity, IPotatoActivityEntityInfo entityModel)
 	{
 		AKSC_Entity_Weapon aksc_Entity_Weapon = entity as AKSC_Entity_Weapon;
@@ -348,7 +348,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06005D4D RID: 23885 RVA: 0x00112608 File Offset: 0x00110808
+	// Token: 0x060030E4 RID: 12516 RVA: 0x0011A27C File Offset: 0x0011847C
 	protected override bool OnRemoveEntity(int creatureDataId)
 	{
 		PotatoSubModel potatoSubModel = KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.Potato) as PotatoSubModel;
@@ -384,7 +384,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06005D4E RID: 23886 RVA: 0x001126E8 File Offset: 0x001108E8
+	// Token: 0x060030E5 RID: 12517 RVA: 0x0011A35C File Offset: 0x0011855C
 	private void RemoveEntity(IPotatoCombatInfo model, EKscEntityRemoveReasonType removeReasonType)
 	{
 		PotatoWorldEntityModel potatoWorldEntityModel;
@@ -400,7 +400,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06005D4F RID: 23887 RVA: 0x00112764 File Offset: 0x00110964
+	// Token: 0x060030E6 RID: 12518 RVA: 0x0011A3D8 File Offset: 0x001185D8
 	public override void Reset()
 	{
 		(KuroSimpleCombatController.Instance.GetSubModel(EKscGameplayType.Potato) as PotatoSubModel).GetAllEntities(this.CachedAllEntities);
@@ -421,7 +421,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		this.PromiseWaitForPlayer = null;
 	}
 
-	// Token: 0x06005D50 RID: 23888 RVA: 0x00112864 File Offset: 0x00110A64
+	// Token: 0x060030E7 RID: 12519 RVA: 0x0011A4D8 File Offset: 0x001186D8
 	private unsafe void ApplyWaypointsToMultiStage(UKSC_Move_MultiStage multiStage, IPotatoActivityEntityInfo entityModel)
 	{
 		ValueTuple<int, bool>? valueTuple = this.ResolveWaypointsConfig(entityModel);
@@ -483,7 +483,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		multiStage.SetWaypointLoop(item2);
 	}
 
-	// Token: 0x06005D51 RID: 23889 RVA: 0x00112A60 File Offset: 0x00110C60
+	// Token: 0x060030E8 RID: 12520 RVA: 0x0011A6D4 File Offset: 0x001188D4
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -540,7 +540,7 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		return new ValueTuple<int, bool>?(new ValueTuple<int, bool>(num, item));
 	}
 
-	// Token: 0x06005D52 RID: 23890 RVA: 0x00112C48 File Offset: 0x00110E48
+	// Token: 0x060030E9 RID: 12521 RVA: 0x0011A8BC File Offset: 0x00118ABC
 	[return: Nullable(2)]
 	public string FillUpModelInfo(IPotatoCombatInfo model)
 	{
@@ -566,19 +566,19 @@ public class PotatoEntityRedirectFilter : KscEntityRedirectFilter
 		return null;
 	}
 
-	// Token: 0x04002A80 RID: 10880
+	// Token: 0x04002B1B RID: 11035
 	private static readonly Pool<PotatoWorldEntityModel> WorldEntityPool = new Pool<PotatoWorldEntityModel>(100, () => new PotatoWorldEntityModel(), null);
 
-	// Token: 0x04002A81 RID: 10881
+	// Token: 0x04002B1C RID: 11036
 	private readonly List<IPotatoCombatInfo> PendingEntities = new List<IPotatoCombatInfo>();
 
-	// Token: 0x04002A82 RID: 10882
+	// Token: 0x04002B1D RID: 11037
 	private readonly List<IPotatoCombatInfo> CachedAllEntities = new List<IPotatoCombatInfo>();
 
-	// Token: 0x04002A83 RID: 10883
+	// Token: 0x04002B1E RID: 11038
 	private readonly Dictionary<int, PotatoWorldEntityModel> InitializedEntities = new Dictionary<int, PotatoWorldEntityModel>();
 
-	// Token: 0x04002A84 RID: 10884
+	// Token: 0x04002B1F RID: 11039
 	[Nullable(2)]
 	private CustomPromise PromiseWaitForPlayer;
 }

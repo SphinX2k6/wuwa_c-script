@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F29 RID: 7977
+	// Token: 0x02000630 RID: 1584
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FKuroVehicleMovementModeChangedSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E53A RID: 124218 RVA: 0x002D0E0D File Offset: 0x002CF00D
+		// Token: 0x06008B11 RID: 35601 RVA: 0x000D1251 File Offset: 0x000CF451
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroVehicleMovementModeChangedSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E53B RID: 124219 RVA: 0x002D0E19 File Offset: 0x002CF019
+		// Token: 0x06008B12 RID: 35602 RVA: 0x000D125D File Offset: 0x000CF45D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroVehicleMovementModeChangedSignature._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FKuroVehicleMovementModeChangedSignature._FunctionPtr;
 		}
 
-		// Token: 0x0601E53C RID: 124220 RVA: 0x002D0E3C File Offset: 0x002CF03C
+		// Token: 0x06008B13 RID: 35603 RVA: 0x000D1280 File Offset: 0x000CF480
 		public FKuroVehicleMovementModeChangedSignature()
 		{
 		}
 
-		// Token: 0x0601E53D RID: 124221 RVA: 0x002D0E44 File Offset: 0x002CF044
+		// Token: 0x06008B14 RID: 35604 RVA: 0x000D1288 File Offset: 0x000CF488
 		[NullableContext(2)]
 		public FKuroVehicleMovementModeChangedSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E53E RID: 124222 RVA: 0x002D0E4E File Offset: 0x002CF04E
+		// Token: 0x06008B15 RID: 35605 RVA: 0x000D1292 File Offset: 0x000CF492
 		public FKuroVehicleMovementModeChangedSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E53F RID: 124223 RVA: 0x002D0E59 File Offset: 0x002CF059
+		// Token: 0x06008B16 RID: 35606 RVA: 0x000D129D File Offset: 0x000CF49D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<AKuroBaseVehicle, TEnumAsByte<EKuroVehicleMovementMode>, byte>) ?? ((Action<AKuroBaseVehicle, TEnumAsByte<EKuroVehicleMovementMode>, byte>)Delegate.CreateDelegate(typeof(Action<AKuroBaseVehicle, TEnumAsByte<EKuroVehicleMovementMode>, byte>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E540 RID: 124224 RVA: 0x002D0E8B File Offset: 0x002CF08B
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06008B17 RID: 35607 RVA: 0x000D12CF File Offset: 0x000CF4CF
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(Callback, FKuroVehicleMovementModeChangedSignature.RegisterId);
 		}
 
-		// Token: 0x0601E541 RID: 124225 RVA: 0x002D0EC5 File Offset: 0x002CF0C5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06008B18 RID: 35608 RVA: 0x000D1309 File Offset: 0x000CF509
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601E542 RID: 124226 RVA: 0x002D0ED0 File Offset: 0x002CF0D0
+		// Token: 0x06008B19 RID: 35609 RVA: 0x000D1314 File Offset: 0x000CF514
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(AKuroBaseVehicle Vehicle, EKuroVehicleMovementMode PrevMovementMode, byte PreviousCustomMode)
 		{
 			FKuroVehicleMovementModeChangedSignature.__FKuroVehicleMovementModeChangedSignature_DelegateParams* ptr = stackalloc FKuroVehicleMovementModeChangedSignature.__FKuroVehicleMovementModeChangedSignature_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FKuroVehicleMovementModeChangedSignature.__FKuroVehicleMovementModeChangedSignature_DelegateParams) & -16L;
@@ -97,10 +94,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E543 RID: 124227 RVA: 0x002D0F30 File Offset: 0x002CF130
+		// Token: 0x06008B1A RID: 35610 RVA: 0x000D1374 File Offset: 0x000CF574
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<AKuroBaseVehicle, TEnumAsByte<EKuroVehicleMovementMode>, byte> action = target as Action<AKuroBaseVehicle, TEnumAsByte<EKuroVehicleMovementMode>, byte>;
@@ -112,39 +108,39 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FKuroVehicleMovementModeChangedSignature.__FKuroVehicleMovementModeChangedSignature_DelegateParams*)__Parameters)->PrevMovementMode, ((FKuroVehicleMovementModeChangedSignature.__FKuroVehicleMovementModeChangedSignature_DelegateParams*)__Parameters)->PreviousCustomMode);
 		}
 
-		// Token: 0x040105B6 RID: 66998
+		// Token: 0x04003C5A RID: 15450
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040105B7 RID: 66999
+		// Token: 0x04003C5B RID: 15451
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroVehicle.KuroVehicleMovementModeChangedSignature__DelegateSignature";
 
-		// Token: 0x040105B8 RID: 67000
+		// Token: 0x04003C5C RID: 15452
 		private static int RegisterId;
 
-		// Token: 0x02003405 RID: 13317
+		// Token: 0x02000E52 RID: 3666
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FKuroVehicleMovementModeChangedSignature_DelegateParams
+		private ref struct __FKuroVehicleMovementModeChangedSignature_DelegateParams
 		{
-			// Token: 0x040173C3 RID: 95171
+			// Token: 0x040061F0 RID: 25072
 			[FieldOffset(0)]
 			public IntPtr Vehicle;
 
-			// Token: 0x040173C4 RID: 95172
+			// Token: 0x040061F1 RID: 25073
 			[FieldOffset(8)]
 			public TEnumAsByte<EKuroVehicleMovementMode> PrevMovementMode;
 
-			// Token: 0x040173C5 RID: 95173
+			// Token: 0x040061F2 RID: 25074
 			[FieldOffset(9)]
 			public byte PreviousCustomMode;
 		}
 
-		// Token: 0x02003406 RID: 13318
+		// Token: 0x02000E53 RID: 3667
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173C6 RID: 95174
+			// Token: 0x040061F3 RID: 25075
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

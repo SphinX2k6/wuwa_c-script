@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005342 RID: 21314
+	// Token: 0x02004312 RID: 17170
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 	})]
 	public class RogueTaskItem : GridProxyAbstract<RogueTaskData>
 	{
-		// Token: 0x06036765 RID: 223077 RVA: 0x00CE5760 File Offset: 0x00CE3960
+		// Token: 0x0602B661 RID: 177761 RVA: 0x00C33130 File Offset: 0x00C31330
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,25 +35,25 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036766 RID: 223078 RVA: 0x00CE5835 File Offset: 0x00CE3A35
+		// Token: 0x0602B662 RID: 177762 RVA: 0x00C33205 File Offset: 0x00C31405
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreatePropItem), null, false, null);
 		}
 
-		// Token: 0x06036767 RID: 223079 RVA: 0x00CE5858 File Offset: 0x00CE3A58
+		// Token: 0x0602B663 RID: 177763 RVA: 0x00C33228 File Offset: 0x00C31428
 		private CommonItemSmallItemGrid CreatePropItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06036768 RID: 223080 RVA: 0x00CE585F File Offset: 0x00CE3A5F
+		// Token: 0x0602B664 RID: 177764 RVA: 0x00C3322F File Offset: 0x00C3142F
 		private void OnClickGetButton()
 		{
 			ActivityPermanentRogueController.Instance.RequestTaskAward(this.TaskData.Id);
 		}
 
-		// Token: 0x06036769 RID: 223081 RVA: 0x00CE5878 File Offset: 0x00CE3A78
+		// Token: 0x0602B665 RID: 177765 RVA: 0x00C33248 File Offset: 0x00C31448
 		public override void Refresh(RogueTaskData data, bool isSelected, int gridIndex)
 		{
 			this.TaskData = data;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CCFD RID: 118013
+		// Token: 0x04017733 RID: 96051
 		[Nullable(new byte[]
 		{
 			2,
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-		// Token: 0x0401CCFE RID: 118014
+		// Token: 0x04017734 RID: 96052
 		private RogueTaskData TaskData;
 	}
 }

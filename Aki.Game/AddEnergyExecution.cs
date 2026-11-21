@@ -2,23 +2,23 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F88 RID: 12168
+// Token: 0x020024DC RID: 9436
 [NullableContext(1)]
 [Nullable(0)]
 public class AddEnergyExecution : PeriodExecution
 {
-	// Token: 0x06019D8B RID: 105867 RVA: 0x006BECAF File Offset: 0x006BCEAF
+	// Token: 0x0601769D RID: 95901 RVA: 0x006E558F File Offset: 0x006E378F
 	public AddEnergyExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D8C RID: 105868 RVA: 0x006BECB8 File Offset: 0x006BCEB8
+	// Token: 0x0601769E RID: 95902 RVA: 0x006E5598 File Offset: 0x006E3798
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.AddValue = AbilityUtils.GetLevelValue<float>(parameters.ExtraEffectGrowParameters1, this.Level, 0f);
 	}
 
-	// Token: 0x06019D8D RID: 105869 RVA: 0x006BECD8 File Offset: 0x006BCED8
+	// Token: 0x0601769F RID: 95903 RVA: 0x006E55B8 File Offset: 0x006E37B8
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -82,6 +82,6 @@ public class AddEnergyExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C32F RID: 49967
+	// Token: 0x0400C6D8 RID: 50904
 	public float AddValue;
 }

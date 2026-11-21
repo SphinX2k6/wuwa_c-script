@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005036 RID: 20534
+	// Token: 0x02004003 RID: 16387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CacheDialogueData
 	{
-		// Token: 0x0603490A RID: 215306 RVA: 0x00C69234 File Offset: 0x00C67434
+		// Token: 0x060297C8 RID: 169928 RVA: 0x00BB56C4 File Offset: 0x00BB38C4
 		public CacheDialogueData(bool show, string dialogueId, float guardTime, float audioDelay, float audioTransitionDuration, ELanguageAudio languageAudio, float autoPlayDelay, TArray<int> unisonIdList)
 		{
 			this.Show = show;
@@ -22,28 +22,28 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.UnisonIdList = unisonIdList;
 		}
 
-		// Token: 0x0401C019 RID: 114713
+		// Token: 0x04016A24 RID: 92708
 		public readonly bool Show;
 
-		// Token: 0x0401C01A RID: 114714
+		// Token: 0x04016A25 RID: 92709
 		public readonly string DialogueId;
 
-		// Token: 0x0401C01B RID: 114715
+		// Token: 0x04016A26 RID: 92710
 		public readonly float GuardTime;
 
-		// Token: 0x0401C01C RID: 114716
+		// Token: 0x04016A27 RID: 92711
 		public readonly float AudioDelay;
 
-		// Token: 0x0401C01D RID: 114717
+		// Token: 0x04016A28 RID: 92712
 		public readonly float AudioTransitionDuration;
 
-		// Token: 0x0401C01E RID: 114718
+		// Token: 0x04016A29 RID: 92713
 		public readonly ELanguageAudio LanguageAudio;
 
-		// Token: 0x0401C01F RID: 114719
+		// Token: 0x04016A2A RID: 92714
 		public readonly float AutoPlayDelay;
 
-		// Token: 0x0401C020 RID: 114720
+		// Token: 0x04016A2B RID: 92715
 		public readonly TArray<int> UnisonIdList;
 	}
 }

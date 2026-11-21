@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014F3 RID: 5363
+// Token: 0x020009AB RID: 2475
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 {
-	// Token: 0x060098D5 RID: 39125 RVA: 0x002106A4 File Offset: 0x0020E8A4
+	// Token: 0x06006CAF RID: 27823 RVA: 0x0021A394 File Offset: 0x00218594
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -40,7 +40,7 @@ public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060098D6 RID: 39126 RVA: 0x0021078C File Offset: 0x0020E98C
+	// Token: 0x06006CB0 RID: 27824 RVA: 0x0021A47C File Offset: 0x0021867C
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
@@ -48,7 +48,7 @@ public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 		base.GetExtendToggle(0).CanExecuteChange.Bind(() => base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x060098D7 RID: 39127 RVA: 0x002107C4 File Offset: 0x0020E9C4
+	// Token: 0x06006CB1 RID: 27825 RVA: 0x0021A4B4 File Offset: 0x002186B4
 	public override void Refresh(ScratchTicketRoundData data, bool isSelected, int gridIndex)
 	{
 		this.RoundData = data;
@@ -58,14 +58,14 @@ public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 		base.GetItem(3).SetUIActive(roundState == EScratchTicketRoundState.Finish);
 	}
 
-	// Token: 0x060098D8 RID: 39128 RVA: 0x0021082C File Offset: 0x0020EA2C
+	// Token: 0x06006CB2 RID: 27826 RVA: 0x0021A51C File Offset: 0x0021871C
 	public void SetSelect(bool state, bool isFireEvent)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleStateForce(state2, isFireEvent, false, false);
 	}
 
-	// Token: 0x060098D9 RID: 39129 RVA: 0x00210851 File Offset: 0x0020EA51
+	// Token: 0x06006CB3 RID: 27827 RVA: 0x0021A541 File Offset: 0x00218741
 	private void OnClickTabToggle(EToggleState toggleState)
 	{
 		Action<ScratchTicketRoundData, ScratchTicketTabItem> clickToggleCallBack = this.ClickToggleCallBack;
@@ -76,17 +76,17 @@ public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 		clickToggleCallBack(this.RoundData, this);
 	}
 
-	// Token: 0x060098DA RID: 39130 RVA: 0x0021086A File Offset: 0x0020EA6A
+	// Token: 0x06006CB4 RID: 27828 RVA: 0x0021A55A File Offset: 0x0021875A
 	public void SetClickToggleCallback(Action<ScratchTicketRoundData, ScratchTicketTabItem> callback)
 	{
 		this.ClickToggleCallBack = callback;
 	}
 
-	// Token: 0x0400433B RID: 17211
+	// Token: 0x040043E0 RID: 17376
 	[Nullable(2)]
 	private ScratchTicketRoundData RoundData;
 
-	// Token: 0x0400433C RID: 17212
+	// Token: 0x040043E1 RID: 17377
 	[Nullable(new byte[]
 	{
 		2,
@@ -95,24 +95,24 @@ public class ScratchTicketTabItem : GridProxyAbstract<ScratchTicketRoundData>
 	})]
 	private Action<ScratchTicketRoundData, ScratchTicketTabItem> ClickToggleCallBack;
 
-	// Token: 0x0400433D RID: 17213
+	// Token: 0x040043E2 RID: 17378
 	[Nullable(2)]
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x02007B26 RID: 31526
+	// Token: 0x02006CB2 RID: 27826
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04028805 RID: 165893
+		// Token: 0x04023B43 RID: 146243
 		public const int TabToggle = 0;
 
-		// Token: 0x04028806 RID: 165894
+		// Token: 0x04023B44 RID: 146244
 		public const int RoundIcon = 1;
 
-		// Token: 0x04028807 RID: 165895
+		// Token: 0x04023B45 RID: 146245
 		public const int LockItem = 2;
 
-		// Token: 0x04028808 RID: 165896
+		// Token: 0x04023B46 RID: 146246
 		public const int FinishItem = 3;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000978 RID: 2424
+	// Token: 0x02000A4D RID: 2637
 	public class ConfigSpringFestivalAreaCameraById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060038E4 RID: 14564 RVA: 0x0019B348 File Offset: 0x00199548
+		// Token: 0x06003DE2 RID: 15842 RVA: 0x001BA6DC File Offset: 0x001B88DC
 		static ConfigSpringFestivalAreaCameraById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpringFestivalAreaCameraById.CreateStaticDefaultValue), new Action(ConfigSpringFestivalAreaCameraById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060038E5 RID: 14565 RVA: 0x0019B368 File Offset: 0x00199568
+		// Token: 0x06003DE3 RID: 15843 RVA: 0x001BA6FC File Offset: 0x001B88FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpringFestivalAreaCameraById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060038E6 RID: 14566 RVA: 0x0019B3E7 File Offset: 0x001995E7
+		// Token: 0x06003DE4 RID: 15844 RVA: 0x001BA77B File Offset: 0x001B897B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpringFestivalAreaCameraById.LogPair = null;
 			ConfigSpringFestivalAreaCameraById.HandleId = 0;
 		}
 
-		// Token: 0x060038E7 RID: 14567 RVA: 0x0019B3F5 File Offset: 0x001995F5
+		// Token: 0x06003DE5 RID: 15845 RVA: 0x001BA789 File Offset: 0x001B8989
 		public static void Init()
 		{
 			ConfigSpringFestivalAreaCameraById.HandleId = ConfigCommon.InitDataStatement(ConfigSpringFestivalAreaCameraById.HandleId, "db_spring26.db", "select BinData from `SpringFestivalAreaCamera` where Id=?");
 		}
 
-		// Token: 0x060038E8 RID: 14568 RVA: 0x0019B410 File Offset: 0x00199610
+		// Token: 0x06003DE6 RID: 15846 RVA: 0x001BA7A4 File Offset: 0x001B89A4
 		public static SpringFestivalAreaCamera? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSpringFestivalAreaCameraById.HandleId, ConfigSpringFestivalAreaCameraById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SpringFestivalAreaCamera?(rootAsSpringFestivalAreaCamera);
 		}
 
-		// Token: 0x0400422E RID: 16942
+		// Token: 0x04004801 RID: 18433
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x0400422F RID: 16943
+		// Token: 0x04004802 RID: 18434
 		private const string FILE = "c.3.1春节活动外围.xlsx";
 
-		// Token: 0x04004230 RID: 16944
+		// Token: 0x04004803 RID: 18435
 		private const string TABLE = "SpringFestivalAreaCamera";
 
-		// Token: 0x04004231 RID: 16945
+		// Token: 0x04004804 RID: 18436
 		private const string COMMAND = "select BinData from `SpringFestivalAreaCamera` where Id=?";
 
-		// Token: 0x04004232 RID: 16946
+		// Token: 0x04004805 RID: 18437
 		private const string KEY_PREFIX = "SpringFestivalAreaCameraById";
 
-		// Token: 0x04004233 RID: 16947
+		// Token: 0x04004806 RID: 18438
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004234 RID: 16948
+		// Token: 0x04004807 RID: 18439
 		private static int HandleId;
 	}
 }

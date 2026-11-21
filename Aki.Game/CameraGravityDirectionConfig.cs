@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using UnrealEngine;
 
-// Token: 0x02000201 RID: 513
+// Token: 0x02000205 RID: 517
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraGravityDirectionConfig
 {
-	// Token: 0x06002055 RID: 8277 RVA: 0x000AC7F0 File Offset: 0x000AA9F0
+	// Token: 0x06002103 RID: 8451 RVA: 0x000B3B10 File Offset: 0x000B1D10
 	public void SetConfig(SCamera_ChangeGravity config)
 	{
 		if (config == null)
@@ -22,7 +22,7 @@ public class CameraGravityDirectionConfig
 		targetGravity.DeepCopy(fvectorDouble);
 	}
 
-	// Token: 0x06002056 RID: 8278 RVA: 0x000AC834 File Offset: 0x000AAA34
+	// Token: 0x06002104 RID: 8452 RVA: 0x000B3B54 File Offset: 0x000B1D54
 	public void DeepCopy(CameraGravityDirectionConfig config)
 	{
 		if (config == null)
@@ -33,7 +33,7 @@ public class CameraGravityDirectionConfig
 		this.TargetGravity.DeepCopy(config.TargetGravity);
 	}
 
-	// Token: 0x06002057 RID: 8279 RVA: 0x000AC858 File Offset: 0x000AAA58
+	// Token: 0x06002105 RID: 8453 RVA: 0x000B3B78 File Offset: 0x000B1D78
 	public void Reset()
 	{
 		this.GravityMode = ECameraGravityMode.CameraTargetGravityDirect;
@@ -42,9 +42,9 @@ public class CameraGravityDirectionConfig
 		targetGravity.DeepCopy(fvectorDouble);
 	}
 
-	// Token: 0x04001445 RID: 5189
+	// Token: 0x04001487 RID: 5255
 	public ECameraGravityMode GravityMode;
 
-	// Token: 0x04001446 RID: 5190
+	// Token: 0x04001488 RID: 5256
 	public Vector TargetGravity = Vector.Create();
 }

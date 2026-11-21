@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006248 RID: 25160
+	// Token: 0x020051C6 RID: 20934
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	public class RhythmShipSetItemBtn : SyncGridProxyAbstract<RhythmShipSetData>
 	{
-		// Token: 0x0603F63E RID: 259646 RVA: 0x00F532B4 File Offset: 0x00F514B4
+		// Token: 0x060342FF RID: 213759 RVA: 0x00E9A210 File Offset: 0x00E98410
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F63F RID: 259647 RVA: 0x00F53358 File Offset: 0x00F51558
+		// Token: 0x06034300 RID: 213760 RVA: 0x00E9A2B4 File Offset: 0x00E984B4
 		public override void Refresh(RhythmShipSetData data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Text, Array.Empty<object>());
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.OnClickBtnCallBack = data.BtnCallBack;
 		}
 
-		// Token: 0x0603F640 RID: 259648 RVA: 0x00F533A8 File Offset: 0x00F515A8
+		// Token: 0x06034301 RID: 213761 RVA: 0x00E9A304 File Offset: 0x00E98504
 		private void OnClickBtn()
 		{
 			Action onClickBtnCallBack = this.OnClickBtnCallBack;
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			onClickBtnCallBack();
 		}
 
-		// Token: 0x0603F641 RID: 259649 RVA: 0x00F533BC File Offset: 0x00F515BC
+		// Token: 0x06034302 RID: 213762 RVA: 0x00E9A318 File Offset: 0x00E98518
 		public UUIItem GetBtnItem()
 		{
 			return base.GetButton(1).RootUIComp.Get();
 		}
 
-		// Token: 0x0603F642 RID: 259650 RVA: 0x00F533DD File Offset: 0x00F515DD
+		// Token: 0x06034303 RID: 213763 RVA: 0x00E9A339 File Offset: 0x00E98539
 		[NullableContext(2)]
 		public UUIItem GetNavigationItem()
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return null;
 		}
 
-		// Token: 0x040211B4 RID: 135604
+		// Token: 0x0401BAE3 RID: 113379
 		[Nullable(2)]
 		private Action OnClickBtnCallBack;
 	}

@@ -5,13 +5,13 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066A2 RID: 26274
+	// Token: 0x020055F2 RID: 22002
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchDefine : Singleton
 	{
-		// Token: 0x17009642 RID: 38466
-		// (get) Token: 0x06041C64 RID: 269412 RVA: 0x00FF35BF File Offset: 0x00FF17BF
+		// Token: 0x17006981 RID: 27009
+		// (get) Token: 0x060367B0 RID: 223152 RVA: 0x00F349C7 File Offset: 0x00F32BC7
 		public static DropCatchDefine Instance
 		{
 			get
@@ -25,12 +25,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C65 RID: 269413 RVA: 0x00FF35E2 File Offset: 0x00FF17E2
+		// Token: 0x060367B1 RID: 223153 RVA: 0x00F349EA File Offset: 0x00F32BEA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041C66 RID: 269414 RVA: 0x00FF35E4 File Offset: 0x00FF17E4
+		// Token: 0x060367B2 RID: 223154 RVA: 0x00F349EC File Offset: 0x00F32BEC
 		public static void ResetStaticDefaultValue()
 		{
 			DropCatchDefine instance = DropCatchDefine._instance;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			DropCatchDefine._instance = null;
 		}
 
-		// Token: 0x06041C67 RID: 269415 RVA: 0x00FF35FD File Offset: 0x00FF17FD
+		// Token: 0x060367B3 RID: 223155 RVA: 0x00F34A05 File Offset: 0x00F32C05
 		static DropCatchDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DropCatchDefine.CreateStaticDefaultValue), new Action(DropCatchDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06041C68 RID: 269416 RVA: 0x00FF361C File Offset: 0x00FF181C
+		// Token: 0x060367B4 RID: 223156 RVA: 0x00F34A24 File Offset: 0x00F32C24
 		public DropCatchDefine()
 		{
 			EDropCatchGameplayInputSource[] array = new EDropCatchGameplayInputSource[2];
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			base..ctor();
 		}
 
-		// Token: 0x040223D0 RID: 140240
+		// Token: 0x0401CC29 RID: 117801
 		public readonly Dictionary<string, IDropCatchCommand> CommandClass = new Dictionary<string, IDropCatchCommand>
 		{
 			{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		};
 
-		// Token: 0x040223D1 RID: 140241
+		// Token: 0x0401CC2A RID: 117802
 		public readonly Dictionary<EDropCatchCommandName, Type> CommandParamsTypeMap = new Dictionary<EDropCatchCommandName, Type>
 		{
 			{
@@ -210,10 +210,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		};
 
-		// Token: 0x040223D2 RID: 140242
+		// Token: 0x0401CC2B RID: 117803
 		public readonly EDropCatchGameplayInputSource[] InputPriority;
 
-		// Token: 0x040223D3 RID: 140243
+		// Token: 0x0401CC2C RID: 117804
 		[Nullable(2)]
 		private static DropCatchDefine _instance;
 	}

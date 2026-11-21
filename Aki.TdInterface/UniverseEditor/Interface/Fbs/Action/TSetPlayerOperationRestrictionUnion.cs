@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007787 RID: 30599
+	// Token: 0x02007FBF RID: 32703
 	public class TSetPlayerOperationRestrictionUnion
 	{
-		// Token: 0x1700E69D RID: 59037
-		// (get) Token: 0x060378DC RID: 227548 RVA: 0x00784590 File Offset: 0x00782790
-		// (set) Token: 0x060378DD RID: 227549 RVA: 0x00784598 File Offset: 0x00782798
+		// Token: 0x1700F2F7 RID: 62199
+		// (get) Token: 0x0603AE57 RID: 241239 RVA: 0x007E9A92 File Offset: 0x007E7C92
+		// (set) Token: 0x0603AE58 RID: 241240 RVA: 0x007E9A9A File Offset: 0x007E7C9A
 		public TSetPlayerOperationRestriction Type { get; set; }
 
-		// Token: 0x1700E69E RID: 59038
-		// (get) Token: 0x060378DE RID: 227550 RVA: 0x007845A1 File Offset: 0x007827A1
-		// (set) Token: 0x060378DF RID: 227551 RVA: 0x007845A9 File Offset: 0x007827A9
+		// Token: 0x1700F2F8 RID: 62200
+		// (get) Token: 0x0603AE59 RID: 241241 RVA: 0x007E9AA3 File Offset: 0x007E7CA3
+		// (set) Token: 0x0603AE5A RID: 241242 RVA: 0x007E9AAB File Offset: 0x007E7CAB
 		public object Value { get; set; }
 
-		// Token: 0x060378E0 RID: 227552 RVA: 0x007845B2 File Offset: 0x007827B2
+		// Token: 0x0603AE5B RID: 241243 RVA: 0x007E9AB4 File Offset: 0x007E7CB4
 		public TSetPlayerOperationRestrictionUnion()
 		{
 			this.Type = TSetPlayerOperationRestriction.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060378E1 RID: 227553 RVA: 0x007845C8 File Offset: 0x007827C8
+		// Token: 0x0603AE5C RID: 241244 RVA: 0x007E9ACA File Offset: 0x007E7CCA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060378E2 RID: 227554 RVA: 0x007845DA File Offset: 0x007827DA
+		// Token: 0x0603AE5D RID: 241245 RVA: 0x007E9ADC File Offset: 0x007E7CDC
 		public IDisableAllPlayerOperationT AsIDisableAllPlayerOperation()
 		{
 			return this.As<IDisableAllPlayerOperationT>();
 		}
 
-		// Token: 0x060378E3 RID: 227555 RVA: 0x007845E2 File Offset: 0x007827E2
+		// Token: 0x0603AE5E RID: 241246 RVA: 0x007E9AE4 File Offset: 0x007E7CE4
 		public static TSetPlayerOperationRestrictionUnion FromIDisableAllPlayerOperation(IDisableAllPlayerOperationT _idisableallplayeroperation)
 		{
 			return new TSetPlayerOperationRestrictionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378E4 RID: 227556 RVA: 0x007845F7 File Offset: 0x007827F7
+		// Token: 0x0603AE5F RID: 241247 RVA: 0x007E9AF9 File Offset: 0x007E7CF9
 		public IDisableModulePlayerOperationT AsIDisableModulePlayerOperation()
 		{
 			return this.As<IDisableModulePlayerOperationT>();
 		}
 
-		// Token: 0x060378E5 RID: 227557 RVA: 0x007845FF File Offset: 0x007827FF
+		// Token: 0x0603AE60 RID: 241248 RVA: 0x007E9B01 File Offset: 0x007E7D01
 		public static TSetPlayerOperationRestrictionUnion FromIDisableModulePlayerOperation(IDisableModulePlayerOperationT _idisablemoduleplayeroperation)
 		{
 			return new TSetPlayerOperationRestrictionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378E6 RID: 227558 RVA: 0x00784614 File Offset: 0x00782814
+		// Token: 0x0603AE61 RID: 241249 RVA: 0x007E9B16 File Offset: 0x007E7D16
 		public IEnableAllPlayerOperationT AsIEnableAllPlayerOperation()
 		{
 			return this.As<IEnableAllPlayerOperationT>();
 		}
 
-		// Token: 0x060378E7 RID: 227559 RVA: 0x0078461C File Offset: 0x0078281C
+		// Token: 0x0603AE62 RID: 241250 RVA: 0x007E9B1E File Offset: 0x007E7D1E
 		public static TSetPlayerOperationRestrictionUnion FromIEnableAllPlayerOperation(IEnableAllPlayerOperationT _ienableallplayeroperation)
 		{
 			return new TSetPlayerOperationRestrictionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378E8 RID: 227560 RVA: 0x00784634 File Offset: 0x00782834
+		// Token: 0x0603AE63 RID: 241251 RVA: 0x007E9B34 File Offset: 0x007E7D34
 		public static int Pack(FlatBufferBuilder builder, TSetPlayerOperationRestrictionUnion _o)
 		{
 			switch (_o.Type)

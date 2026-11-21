@@ -2,36 +2,36 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042FC RID: 17148
+	// Token: 0x0200475B RID: 18267
 	public enum TQuestSchedule : byte
 	{
-		// Token: 0x0400C05F RID: 49247
+		// Token: 0x0400CA77 RID: 51831
 		NONE,
-		// Token: 0x0400C060 RID: 49248
+		// Token: 0x0400CA78 RID: 51832
 		IQuestScheduleBtTreeVar,
-		// Token: 0x0400C061 RID: 49249
+		// Token: 0x0400CA79 RID: 51833
 		IQuestScheduleChildQuestCompleted,
-		// Token: 0x0400C062 RID: 49250
+		// Token: 0x0400CA7A RID: 51834
 		IQuestScheduleChildQuestCompletedCount,
-		// Token: 0x0400C063 RID: 49251
+		// Token: 0x0400CA7B RID: 51835
 		IQuestScheduleDistanceValue,
-		// Token: 0x0400C064 RID: 49252
+		// Token: 0x0400CA7C RID: 51836
 		IQuestScheduleEntityHP,
-		// Token: 0x0400C065 RID: 49253
+		// Token: 0x0400CA7D RID: 51837
 		IQuestScheduleMeetCondition,
-		// Token: 0x0400C066 RID: 49254
+		// Token: 0x0400CA7E RID: 51838
 		IQuestScheduleMultiBtTreeVar,
-		// Token: 0x0400C067 RID: 49255
+		// Token: 0x0400CA7F RID: 51839
 		IQuestScheduleNone,
-		// Token: 0x0400C068 RID: 49256
+		// Token: 0x0400CA80 RID: 51840
 		IQuestScheduleProgressValue,
-		// Token: 0x0400C069 RID: 49257
+		// Token: 0x0400CA81 RID: 51841
 		IQuestScheduleRoleTowerChallengeTitle,
-		// Token: 0x0400C06A RID: 49258
+		// Token: 0x0400CA82 RID: 51842
 		IQuestScheduleScore,
-		// Token: 0x0400C06B RID: 49259
+		// Token: 0x0400CA83 RID: 51843
 		IQuestScheduleTimeLeft,
-		// Token: 0x0400C06C RID: 49260
+		// Token: 0x0400CA84 RID: 51844
 		IQuestScheduleTowerChallengeTitle
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058E5 RID: 22757
+	// Token: 0x02005EF2 RID: 24306
 	public struct ISceneTextGuideUiScaleConfig : IFlatbufferObject
 	{
-		// Token: 0x1700AA75 RID: 43637
-		// (get) Token: 0x060266DA RID: 157402 RVA: 0x0054BB2F File Offset: 0x00549D2F
+		// Token: 0x1700B3A5 RID: 45989
+		// (get) Token: 0x06028C3C RID: 166972 RVA: 0x0059267B File Offset: 0x0059087B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060266DB RID: 157403 RVA: 0x0054BB3C File Offset: 0x00549D3C
+		// Token: 0x06028C3D RID: 166973 RVA: 0x00592688 File Offset: 0x00590888
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060266DC RID: 157404 RVA: 0x0054BB44 File Offset: 0x00549D44
+		// Token: 0x06028C3E RID: 166974 RVA: 0x00592690 File Offset: 0x00590890
 		public static ISceneTextGuideUiScaleConfig GetRootAsISceneTextGuideUiScaleConfig(ByteBuffer _bb)
 		{
 			return ISceneTextGuideUiScaleConfig.GetRootAsISceneTextGuideUiScaleConfig(_bb, default(ISceneTextGuideUiScaleConfig));
 		}
 
-		// Token: 0x060266DD RID: 157405 RVA: 0x0054BB60 File Offset: 0x00549D60
+		// Token: 0x06028C3F RID: 166975 RVA: 0x005926AC File Offset: 0x005908AC
 		public static ISceneTextGuideUiScaleConfig GetRootAsISceneTextGuideUiScaleConfig(ByteBuffer _bb, ISceneTextGuideUiScaleConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060266DE RID: 157406 RVA: 0x0054BB7D File Offset: 0x00549D7D
+		// Token: 0x06028C40 RID: 166976 RVA: 0x005926C9 File Offset: 0x005908C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060266DF RID: 157407 RVA: 0x0054BB8C File Offset: 0x00549D8C
+		// Token: 0x06028C41 RID: 166977 RVA: 0x005926D8 File Offset: 0x005908D8
 		public ISceneTextGuideUiScaleConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AA76 RID: 43638
-		// (get) Token: 0x060266E0 RID: 157408 RVA: 0x0054BB9C File Offset: 0x00549D9C
+		// Token: 0x1700B3A6 RID: 45990
+		// (get) Token: 0x06028C42 RID: 166978 RVA: 0x005926E8 File Offset: 0x005908E8
 		public int MinDist
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA77 RID: 43639
-		// (get) Token: 0x060266E1 RID: 157409 RVA: 0x0054BBD8 File Offset: 0x00549DD8
+		// Token: 0x1700B3A7 RID: 45991
+		// (get) Token: 0x06028C43 RID: 166979 RVA: 0x00592724 File Offset: 0x00590924
 		public int MaxDist
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA78 RID: 43640
-		// (get) Token: 0x060266E2 RID: 157410 RVA: 0x0054BC14 File Offset: 0x00549E14
+		// Token: 0x1700B3A8 RID: 45992
+		// (get) Token: 0x06028C44 RID: 166980 RVA: 0x00592760 File Offset: 0x00590960
 		public float MinScale
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA79 RID: 43641
-		// (get) Token: 0x060266E3 RID: 157411 RVA: 0x0054BC54 File Offset: 0x00549E54
+		// Token: 0x1700B3A9 RID: 45993
+		// (get) Token: 0x06028C45 RID: 166981 RVA: 0x005927A0 File Offset: 0x005909A0
 		public float MaxScale
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AA7A RID: 43642
-		// (get) Token: 0x060266E4 RID: 157412 RVA: 0x0054BC98 File Offset: 0x00549E98
+		// Token: 0x1700B3AA RID: 45994
+		// (get) Token: 0x06028C46 RID: 166982 RVA: 0x005927E4 File Offset: 0x005909E4
 		public ESceneTextGuideUiScaleType ScaleType
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060266E5 RID: 157413 RVA: 0x0054BCD5 File Offset: 0x00549ED5
+		// Token: 0x06028C47 RID: 166983 RVA: 0x00592821 File Offset: 0x00590A21
 		public static Offset<ISceneTextGuideUiScaleConfig> CreateISceneTextGuideUiScaleConfig(FlatBufferBuilder builder, int MinDist = 0, int MaxDist = 0, float MinScale = 0f, float MaxScale = 0f, ESceneTextGuideUiScaleType ScaleType = ESceneTextGuideUiScaleType.FarBigNearSmall)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneTextGuideUiScaleConfig.EndISceneTextGuideUiScaleConfig(builder);
 		}
 
-		// Token: 0x060266E6 RID: 157414 RVA: 0x0054BD09 File Offset: 0x00549F09
+		// Token: 0x06028C48 RID: 166984 RVA: 0x00592855 File Offset: 0x00590A55
 		public static void StartISceneTextGuideUiScaleConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x060266E7 RID: 157415 RVA: 0x0054BD12 File Offset: 0x00549F12
+		// Token: 0x06028C49 RID: 166985 RVA: 0x0059285E File Offset: 0x00590A5E
 		public static void AddMinDist(FlatBufferBuilder builder, int minDist)
 		{
 			builder.AddInt(0, minDist, 0);
 		}
 
-		// Token: 0x060266E8 RID: 157416 RVA: 0x0054BD1D File Offset: 0x00549F1D
+		// Token: 0x06028C4A RID: 166986 RVA: 0x00592869 File Offset: 0x00590A69
 		public static void AddMaxDist(FlatBufferBuilder builder, int maxDist)
 		{
 			builder.AddInt(1, maxDist, 0);
 		}
 
-		// Token: 0x060266E9 RID: 157417 RVA: 0x0054BD28 File Offset: 0x00549F28
+		// Token: 0x06028C4B RID: 166987 RVA: 0x00592874 File Offset: 0x00590A74
 		public static void AddMinScale(FlatBufferBuilder builder, float minScale)
 		{
 			builder.AddFloat(2, minScale, 0.0);
 		}
 
-		// Token: 0x060266EA RID: 157418 RVA: 0x0054BD3B File Offset: 0x00549F3B
+		// Token: 0x06028C4C RID: 166988 RVA: 0x00592887 File Offset: 0x00590A87
 		public static void AddMaxScale(FlatBufferBuilder builder, float maxScale)
 		{
 			builder.AddFloat(3, maxScale, 0.0);
 		}
 
-		// Token: 0x060266EB RID: 157419 RVA: 0x0054BD4E File Offset: 0x00549F4E
+		// Token: 0x06028C4D RID: 166989 RVA: 0x0059289A File Offset: 0x00590A9A
 		public static void AddScaleType(FlatBufferBuilder builder, ESceneTextGuideUiScaleType scaleType)
 		{
 			builder.AddByte(4, (byte)scaleType, 0);
 		}
 
-		// Token: 0x060266EC RID: 157420 RVA: 0x0054BD59 File Offset: 0x00549F59
+		// Token: 0x06028C4E RID: 166990 RVA: 0x005928A5 File Offset: 0x00590AA5
 		public static Offset<ISceneTextGuideUiScaleConfig> EndISceneTextGuideUiScaleConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneTextGuideUiScaleConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060266ED RID: 157421 RVA: 0x0054BD68 File Offset: 0x00549F68
+		// Token: 0x06028C4F RID: 166991 RVA: 0x005928B4 File Offset: 0x00590AB4
 		public ISceneTextGuideUiScaleConfigT UnPack()
 		{
 			ISceneTextGuideUiScaleConfigT sceneTextGuideUiScaleConfigT = new ISceneTextGuideUiScaleConfigT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sceneTextGuideUiScaleConfigT;
 		}
 
-		// Token: 0x060266EE RID: 157422 RVA: 0x0054BD83 File Offset: 0x00549F83
+		// Token: 0x06028C50 RID: 166992 RVA: 0x005928CF File Offset: 0x00590ACF
 		public void UnPackTo(ISceneTextGuideUiScaleConfigT _o)
 		{
 			_o.MinDist = this.MinDist;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.ScaleType = this.ScaleType;
 		}
 
-		// Token: 0x060266EF RID: 157423 RVA: 0x0054BDC4 File Offset: 0x00549FC4
+		// Token: 0x06028C51 RID: 166993 RVA: 0x00592910 File Offset: 0x00590B10
 		public static Offset<ISceneTextGuideUiScaleConfig> Pack(FlatBufferBuilder builder, ISceneTextGuideUiScaleConfigT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISceneTextGuideUiScaleConfig.CreateISceneTextGuideUiScaleConfig(builder, _o.MinDist, _o.MaxDist, _o.MinScale, _o.MaxScale, _o.ScaleType);
 		}
 
-		// Token: 0x0400EE6D RID: 61037
+		// Token: 0x0400FB60 RID: 64352
 		private Table __p;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055BE RID: 21950
+	// Token: 0x02005B5C RID: 23388
 	public class IMotorHookPerformanceConfigT
 	{
-		// Token: 0x1700A23B RID: 41531
-		// (get) Token: 0x060245D7 RID: 148951 RVA: 0x00505240 File Offset: 0x00503440
-		// (set) Token: 0x060245D8 RID: 148952 RVA: 0x00505248 File Offset: 0x00503448
+		// Token: 0x1700AAC3 RID: 43715
+		// (get) Token: 0x060267E4 RID: 157668 RVA: 0x005457B8 File Offset: 0x005439B8
+		// (set) Token: 0x060267E5 RID: 157669 RVA: 0x005457C0 File Offset: 0x005439C0
 		public long HookEffectBuffId { get; set; }
 
-		// Token: 0x1700A23C RID: 41532
-		// (get) Token: 0x060245D9 RID: 148953 RVA: 0x00505251 File Offset: 0x00503451
-		// (set) Token: 0x060245DA RID: 148954 RVA: 0x00505259 File Offset: 0x00503459
+		// Token: 0x1700AAC4 RID: 43716
+		// (get) Token: 0x060267E6 RID: 157670 RVA: 0x005457C9 File Offset: 0x005439C9
+		// (set) Token: 0x060267E7 RID: 157671 RVA: 0x005457D1 File Offset: 0x005439D1
 		public byte NullMask { get; set; }
 
-		// Token: 0x060245DB RID: 148955 RVA: 0x00505262 File Offset: 0x00503462
+		// Token: 0x060267E8 RID: 157672 RVA: 0x005457DA File Offset: 0x005439DA
 		public IMotorHookPerformanceConfigT()
 		{
 			this.HookEffectBuffId = 0L;

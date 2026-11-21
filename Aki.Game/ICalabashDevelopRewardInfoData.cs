@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001739 RID: 5945
+// Token: 0x02000BF2 RID: 3058
 [NullableContext(1)]
 public interface ICalabashDevelopRewardInfoData
 {
-	// Token: 0x17000E53 RID: 3667
-	// (get) Token: 0x0600ABC7 RID: 43975
-	// (set) Token: 0x0600ABC8 RID: 43976
+	// Token: 0x17000E76 RID: 3702
+	// (get) Token: 0x06007FAE RID: 32686
+	// (set) Token: 0x06007FAF RID: 32687
 	bool IsUnlock { get; set; }
 
-	// Token: 0x17000E54 RID: 3668
-	// (get) Token: 0x0600ABC9 RID: 43977
-	// (set) Token: 0x0600ABCA RID: 43978
+	// Token: 0x17000E77 RID: 3703
+	// (get) Token: 0x06007FB0 RID: 32688
+	// (set) Token: 0x06007FB1 RID: 32689
 	string Info { get; set; }
 
-	// Token: 0x17000E55 RID: 3669
-	// (get) Token: 0x0600ABCB RID: 43979
-	// (set) Token: 0x0600ABCC RID: 43980
+	// Token: 0x17000E78 RID: 3704
+	// (get) Token: 0x06007FB2 RID: 32690
+	// (set) Token: 0x06007FB3 RID: 32691
 	int Num { get; set; }
 }

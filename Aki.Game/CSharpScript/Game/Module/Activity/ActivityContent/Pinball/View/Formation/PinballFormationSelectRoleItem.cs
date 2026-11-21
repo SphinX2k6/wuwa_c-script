@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006361 RID: 25441
+	// Token: 0x020052DF RID: 21215
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 	})]
 	public class PinballFormationSelectRoleItem : PinballItemGridView<IPinballItemDataRole>
 	{
-		// Token: 0x06040021 RID: 262177 RVA: 0x00F7C420 File Offset: 0x00F7A620
+		// Token: 0x06034CE2 RID: 216290 RVA: 0x00EC3380 File Offset: 0x00EC1580
 		[NullableContext(2)]
 		public UUIItem GetRoleItemToggleRootUiItem()
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return tweakObjectPtr.GetValueOrDefault();
 		}
 
-		// Token: 0x06040022 RID: 262178 RVA: 0x00F7C464 File Offset: 0x00F7A664
+		// Token: 0x06034CE3 RID: 216291 RVA: 0x00EC33C4 File Offset: 0x00EC15C4
 		public override UniTask RefreshAsync(IPinballItemDataRole data, bool isSelected, int gridIndex)
 		{
 			PinballFormationSelectRoleItem.<RefreshAsync>d__1 <RefreshAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040023 RID: 262179 RVA: 0x00F7C4AF File Offset: 0x00F7A6AF
+		// Token: 0x06034CE4 RID: 216292 RVA: 0x00EC340F File Offset: 0x00EC160F
 		public override void Refresh(IPinballItemDataRole data, bool isSelected, int gridIndex)
 		{
 			this.RefreshAsync(data, isSelected, gridIndex).Forget();

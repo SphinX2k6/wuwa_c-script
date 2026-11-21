@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02003143 RID: 12611
+// Token: 0x020026A5 RID: 9893
 [NullableContext(1)]
 [Nullable(0)]
 public class HitEffectDataTableRepository : BaseFightDataTableRepository
 {
-	// Token: 0x0601B1FE RID: 111102 RVA: 0x0076070D File Offset: 0x0075E90D
+	// Token: 0x06018C96 RID: 101526 RVA: 0x00787006 File Offset: 0x00785206
 	public HitEffectDataTableRepository(FightDataTableCollection collection) : base(collection)
 	{
 	}
 
-	// Token: 0x0601B1FF RID: 111103 RVA: 0x00760718 File Offset: 0x0075E918
+	// Token: 0x06018C97 RID: 101527 RVA: 0x00787010 File Offset: 0x00785210
 	[return: Nullable(2)]
 	public SHitEffect FindHitEffect(string rowName)
 	{
@@ -35,7 +34,7 @@ public class HitEffectDataTableRepository : BaseFightDataTableRepository
 		{
 			return dataTableRow2;
 		}
-		SHitEffect dataTableRow3 = DataTableUtil.GetDataTableRow<SHitEffect>(this.CommonOverrideTable, rowName);
+		SHitEffect dataTableRow3 = DataTableUtil.GetDataTableRow<SHitEffect>(GameplayCommonFightDataTables.GetGameplayCommonHitEffectDataTable(), rowName);
 		if (dataTableRow3 != null)
 		{
 			return dataTableRow3;
@@ -43,22 +42,23 @@ public class HitEffectDataTableRepository : BaseFightDataTableRepository
 		return DataTableUtil.GetDataTableRow<SHitEffect>(HitEffectDataTableRepository.GetCommonHitEffectDataTable(), rowName);
 	}
 
-	// Token: 0x0601B200 RID: 111104 RVA: 0x007607C0 File Offset: 0x0075E9C0
-	public override FightDataTableSnapshot CreateSnapshot(EEntityType entityType)
+	// Token: 0x06018C98 RID: 101528 RVA: 0x007870B8 File Offset: 0x007852B8
+	[NullableContext(2)]
+	public override UDataTable GetTable(EFightDataTableSourceType tableSourceType, EEntityType? entityType = null)
 	{
-		return new FightDataTableSnapshot
+		UDataTable result;
+		if ((result = base.GetTable(tableSourceType, entityType)) == null)
 		{
-			SelfTable = this.SelfTable,
-			CommonTables = FightDataTableUtil.BuildCommonTables(new UDataTable[]
+			if ((tableSourceType & EFightDataTableSourceType.Common) == (EFightDataTableSourceType)0)
 			{
-				this.CommonOverrideTable,
-				HitEffectDataTableRepository.GetCommonHitEffectDataTable()
-			}),
-			ExtraTables = ((this.ExtraTables == null) ? null : new List<UDataTable>(this.ExtraTables))
-		};
+				return null;
+			}
+			result = (GameplayCommonFightDataTables.GetGameplayCommonHitEffectDataTable() ?? HitEffectDataTableRepository.GetCommonHitEffectDataTable());
+		}
+		return result;
 	}
 
-	// Token: 0x0601B201 RID: 111105 RVA: 0x0076081E File Offset: 0x0075EA1E
+	// Token: 0x06018C99 RID: 101529 RVA: 0x007870DB File Offset: 0x007852DB
 	[NullableContext(2)]
 	public static UDataTable GetCommonHitEffectDataTable()
 	{

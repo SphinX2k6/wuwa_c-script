@@ -2,67 +2,67 @@
 
 namespace CSharpScript.Game.Module.Inventory.Views
 {
-	// Token: 0x0200583C RID: 22588
+	// Token: 0x02004813 RID: 18451
 	public class EComponent
 	{
-		// Token: 0x0401E051 RID: 122961
+		// Token: 0x04018AEA RID: 101098
 		public const int ItemContent = 0;
 
-		// Token: 0x0401E052 RID: 122962
+		// Token: 0x04018AEB RID: 101099
 		public const int ItemCaption = 1;
 
-		// Token: 0x0401E053 RID: 122963
+		// Token: 0x04018AEC RID: 101100
 		public const int TextCountAll = 2;
 
-		// Token: 0x0401E054 RID: 122964
+		// Token: 0x04018AED RID: 101101
 		public const int PanelInfo = 3;
 
-		// Token: 0x0401E055 RID: 122965
+		// Token: 0x04018AEE RID: 101102
 		public const int LoopMain = 4;
 
-		// Token: 0x0401E056 RID: 122966
+		// Token: 0x04018AEF RID: 101103
 		public const int ItemGrid = 5;
 
-		// Token: 0x0401E057 RID: 122967
+		// Token: 0x04018AF0 RID: 101104
 		public const int ViewportMain = 6;
 
-		// Token: 0x0401E058 RID: 122968
+		// Token: 0x04018AF1 RID: 101105
 		public const int ItemInfo = 7;
 
-		// Token: 0x0401E059 RID: 122969
+		// Token: 0x04018AF2 RID: 101106
 		public const int ItemFilterSort = 8;
 
-		// Token: 0x0401E05A RID: 122970
+		// Token: 0x04018AF3 RID: 101107
 		public const int BtnExit = 9;
 
-		// Token: 0x0401E05B RID: 122971
+		// Token: 0x04018AF4 RID: 101108
 		public const int TextureBg = 10;
 
-		// Token: 0x0401E05C RID: 122972
+		// Token: 0x04018AF5 RID: 101109
 		public const int BtnConfig = 11;
 
-		// Token: 0x0401E05D RID: 122973
+		// Token: 0x04018AF6 RID: 101110
 		public const int BtnAll = 12;
 
-		// Token: 0x0401E05E RID: 122974
+		// Token: 0x04018AF7 RID: 101111
 		public const int BtnClear = 13;
 
-		// Token: 0x0401E05F RID: 122975
+		// Token: 0x04018AF8 RID: 101112
 		public const int BtnDispose = 14;
 
-		// Token: 0x0401E060 RID: 122976
+		// Token: 0x04018AF9 RID: 101113
 		public const int BtnLock = 15;
 
-		// Token: 0x0401E061 RID: 122977
+		// Token: 0x04018AFA RID: 101114
 		public const int PanelEmpty = 16;
 
-		// Token: 0x0401E062 RID: 122978
+		// Token: 0x04018AFB RID: 101115
 		public const int BtnSmartDiscard = 17;
 
-		// Token: 0x0401E063 RID: 122979
+		// Token: 0x04018AFC RID: 101116
 		public const int BtnManage = 18;
 
-		// Token: 0x0401E064 RID: 122980
+		// Token: 0x04018AFD RID: 101117
 		public const int ToggleHideStrengthened = 19;
 	}
 }

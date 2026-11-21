@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F51 RID: 28497
+	// Token: 0x0200770B RID: 30475
 	public struct ISeasonLoopConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D3C0 RID: 54208
-		// (get) Token: 0x06032583 RID: 206211 RVA: 0x006CC458 File Offset: 0x006CA658
+		// Token: 0x1700DF7F RID: 57215
+		// (get) Token: 0x06035783 RID: 219011 RVA: 0x0072B714 File Offset: 0x00729914
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032584 RID: 206212 RVA: 0x006CC465 File Offset: 0x006CA665
+		// Token: 0x06035784 RID: 219012 RVA: 0x0072B721 File Offset: 0x00729921
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032585 RID: 206213 RVA: 0x006CC46C File Offset: 0x006CA66C
+		// Token: 0x06035785 RID: 219013 RVA: 0x0072B728 File Offset: 0x00729928
 		public static ISeasonLoopConfig GetRootAsISeasonLoopConfig(ByteBuffer _bb)
 		{
 			return ISeasonLoopConfig.GetRootAsISeasonLoopConfig(_bb, default(ISeasonLoopConfig));
 		}
 
-		// Token: 0x06032586 RID: 206214 RVA: 0x006CC488 File Offset: 0x006CA688
+		// Token: 0x06035786 RID: 219014 RVA: 0x0072B744 File Offset: 0x00729944
 		public static ISeasonLoopConfig GetRootAsISeasonLoopConfig(ByteBuffer _bb, ISeasonLoopConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032587 RID: 206215 RVA: 0x006CC4A5 File Offset: 0x006CA6A5
+		// Token: 0x06035787 RID: 219015 RVA: 0x0072B761 File Offset: 0x00729961
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032588 RID: 206216 RVA: 0x006CC4B4 File Offset: 0x006CA6B4
+		// Token: 0x06035788 RID: 219016 RVA: 0x0072B770 File Offset: 0x00729970
 		public ISeasonLoopConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D3C1 RID: 54209
-		// (get) Token: 0x06032589 RID: 206217 RVA: 0x006CC4C4 File Offset: 0x006CA6C4
+		// Token: 0x1700DF80 RID: 57216
+		// (get) Token: 0x06035789 RID: 219017 RVA: 0x0072B780 File Offset: 0x00729980
 		public float HoldTime
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D3C2 RID: 54210
-		// (get) Token: 0x0603258A RID: 206218 RVA: 0x006CC504 File Offset: 0x006CA704
+		// Token: 0x1700DF81 RID: 57217
+		// (get) Token: 0x0603578A RID: 219018 RVA: 0x0072B7C0 File Offset: 0x007299C0
 		public float SwitchTime
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603258B RID: 206219 RVA: 0x006CC544 File Offset: 0x006CA744
+		// Token: 0x0603578B RID: 219019 RVA: 0x0072B800 File Offset: 0x00729A00
 		public static Offset<ISeasonLoopConfig> CreateISeasonLoopConfig(FlatBufferBuilder builder, float HoldTime = 0f, float SwitchTime = 0f)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISeasonLoopConfig.EndISeasonLoopConfig(builder);
 		}
 
-		// Token: 0x0603258C RID: 206220 RVA: 0x006CC561 File Offset: 0x006CA761
+		// Token: 0x0603578C RID: 219020 RVA: 0x0072B81D File Offset: 0x00729A1D
 		public static void StartISeasonLoopConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603258D RID: 206221 RVA: 0x006CC56A File Offset: 0x006CA76A
+		// Token: 0x0603578D RID: 219021 RVA: 0x0072B826 File Offset: 0x00729A26
 		public static void AddHoldTime(FlatBufferBuilder builder, float holdTime)
 		{
 			builder.AddFloat(0, holdTime, 0.0);
 		}
 
-		// Token: 0x0603258E RID: 206222 RVA: 0x006CC57D File Offset: 0x006CA77D
+		// Token: 0x0603578E RID: 219022 RVA: 0x0072B839 File Offset: 0x00729A39
 		public static void AddSwitchTime(FlatBufferBuilder builder, float switchTime)
 		{
 			builder.AddFloat(1, switchTime, 0.0);
 		}
 
-		// Token: 0x0603258F RID: 206223 RVA: 0x006CC590 File Offset: 0x006CA790
+		// Token: 0x0603578F RID: 219023 RVA: 0x0072B84C File Offset: 0x00729A4C
 		public static Offset<ISeasonLoopConfig> EndISeasonLoopConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISeasonLoopConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06032590 RID: 206224 RVA: 0x006CC5A0 File Offset: 0x006CA7A0
+		// Token: 0x06035790 RID: 219024 RVA: 0x0072B85C File Offset: 0x00729A5C
 		public ISeasonLoopConfigT UnPack()
 		{
 			ISeasonLoopConfigT seasonLoopConfigT = new ISeasonLoopConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return seasonLoopConfigT;
 		}
 
-		// Token: 0x06032591 RID: 206225 RVA: 0x006CC5BB File Offset: 0x006CA7BB
+		// Token: 0x06035791 RID: 219025 RVA: 0x0072B877 File Offset: 0x00729A77
 		public void UnPackTo(ISeasonLoopConfigT _o)
 		{
 			_o.HoldTime = this.HoldTime;
 			_o.SwitchTime = this.SwitchTime;
 		}
 
-		// Token: 0x06032592 RID: 206226 RVA: 0x006CC5D8 File Offset: 0x006CA7D8
+		// Token: 0x06035792 RID: 219026 RVA: 0x0072B894 File Offset: 0x00729A94
 		public static Offset<ISeasonLoopConfig> Pack(FlatBufferBuilder builder, ISeasonLoopConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISeasonLoopConfig.CreateISeasonLoopConfig(builder, _o.HoldTime, _o.SwitchTime);
 		}
 
-		// Token: 0x0401194C RID: 72012
+		// Token: 0x04012924 RID: 76068
 		private Table __p;
 	}
 }

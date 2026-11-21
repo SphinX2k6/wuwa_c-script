@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F2 RID: 1010
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200044B RID: 1099
 	public class IGroupAiModeDefault : IGroupAiMode
 	{
-		// Token: 0x06001455 RID: 5205 RVA: 0x00041120 File Offset: 0x0003F320
+		// Token: 0x060015EF RID: 5615 RVA: 0x00044E68 File Offset: 0x00043068
 		private IGroupAiModeDefault_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001456 RID: 5206 RVA: 0x00041158 File Offset: 0x0003F358
+		// Token: 0x060015F0 RID: 5616 RVA: 0x00044EA0 File Offset: 0x000430A0
 		public static IGroupAiModeDefault Create([Nullable(2)] IGroupAiModeDefault instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001457 RID: 5207 RVA: 0x0004116B File Offset: 0x0003F36B
+		// Token: 0x060015F1 RID: 5617 RVA: 0x00044EB3 File Offset: 0x000430B3
 		public static IGroupAiModeDefault CreateFromSetValue([Nullable(2)] IGroupAiModeDefault_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001458 RID: 5208 RVA: 0x0004117E File Offset: 0x0003F37E
+		// Token: 0x060015F2 RID: 5618 RVA: 0x00044EC6 File Offset: 0x000430C6
 		public new IGroupAiModeDefault_SetValue ToSetValue()
 		{
 			return new IGroupAiModeDefault_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700059D RID: 1437
-		// (get) Token: 0x06001459 RID: 5209 RVA: 0x00041191 File Offset: 0x0003F391
-		// (set) Token: 0x0600145A RID: 5210 RVA: 0x000411BC File Offset: 0x0003F3BC
+		// Token: 0x17000604 RID: 1540
+		// (get) Token: 0x060015F3 RID: 5619 RVA: 0x00044ED9 File Offset: 0x000430D9
+		// (set) Token: 0x060015F4 RID: 5620 RVA: 0x00044F04 File Offset: 0x00043104
 		public override EGroupAiMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001002 RID: 4098
+		// Token: 0x04001124 RID: 4388
 		[Nullable(2)]
 		protected new IGroupAiModeDefault FbInstance;
 
-		// Token: 0x04001003 RID: 4099
+		// Token: 0x04001125 RID: 4389
 		[Nullable(2)]
 		protected new IGroupAiModeDefault_SetValue PocoInterface;
 	}

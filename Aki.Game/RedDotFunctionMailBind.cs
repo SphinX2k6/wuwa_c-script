@@ -2,16 +2,16 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.MailBind;
 
-// Token: 0x0200339A RID: 13210
+// Token: 0x0200290C RID: 10508
 public class RedDotFunctionMailBind : RedDotBase
 {
-	// Token: 0x0601CB01 RID: 117505 RVA: 0x0080734D File Offset: 0x0080554D
+	// Token: 0x0601A7F9 RID: 108537 RVA: 0x0082D911 File Offset: 0x0082BB11
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.BattleViewMenu);
 	}
 
-	// Token: 0x0601CB02 RID: 117506 RVA: 0x00807358 File Offset: 0x00805558
+	// Token: 0x0601A7FA RID: 108538 RVA: 0x0082D91C File Offset: 0x0082BB1C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnMailBindInfoNotify, new Action(base.EventCheck));
@@ -21,7 +21,7 @@ public class RedDotFunctionMailBind : RedDotBase
 		EventSystem.Instance.Add(EEventName.RefreshMailBindRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB03 RID: 117507 RVA: 0x008073F4 File Offset: 0x008055F4
+	// Token: 0x0601A7FB RID: 108539 RVA: 0x0082D9B8 File Offset: 0x0082BBB8
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnMailBindInfoNotify, new Action(base.EventCheck));
@@ -31,7 +31,7 @@ public class RedDotFunctionMailBind : RedDotBase
 		EventSystem.Instance.Remove(EEventName.RefreshMailBindRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB04 RID: 117508 RVA: 0x00807490 File Offset: 0x00805690
+	// Token: 0x0601A7FC RID: 108540 RVA: 0x0082DA54 File Offset: 0x0082BC54
 	protected override bool OnCheck(int uId = 0)
 	{
 		MailBindModel instance = MailBindModel.Instance;

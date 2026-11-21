@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006201 RID: 25089
+	// Token: 0x02006872 RID: 26738
 	public class IBehaviorTreeFragmentContextT
 	{
-		// Token: 0x1700BB09 RID: 47881
-		// (get) Token: 0x0602B407 RID: 177159 RVA: 0x005F5794 File Offset: 0x005F3994
-		// (set) Token: 0x0602B408 RID: 177160 RVA: 0x005F579C File Offset: 0x005F399C
+		// Token: 0x1700C48F RID: 50319
+		// (get) Token: 0x0602DB60 RID: 187232 RVA: 0x00640380 File Offset: 0x0063E580
+		// (set) Token: 0x0602DB61 RID: 187233 RVA: 0x00640388 File Offset: 0x0063E588
 		public EVarContext Type { get; set; }
 
-		// Token: 0x1700BB0A RID: 47882
-		// (get) Token: 0x0602B409 RID: 177161 RVA: 0x005F57A5 File Offset: 0x005F39A5
-		// (set) Token: 0x0602B40A RID: 177162 RVA: 0x005F57AD File Offset: 0x005F39AD
+		// Token: 0x1700C490 RID: 50320
+		// (get) Token: 0x0602DB62 RID: 187234 RVA: 0x00640391 File Offset: 0x0063E591
+		// (set) Token: 0x0602DB63 RID: 187235 RVA: 0x00640399 File Offset: 0x0063E599
 		public int Id { get; set; }
 
-		// Token: 0x0602B40B RID: 177163 RVA: 0x005F57B6 File Offset: 0x005F39B6
+		// Token: 0x0602DB64 RID: 187236 RVA: 0x006403A2 File Offset: 0x0063E5A2
 		public IBehaviorTreeFragmentContextT()
 		{
 			this.Type = EVarContext.None;

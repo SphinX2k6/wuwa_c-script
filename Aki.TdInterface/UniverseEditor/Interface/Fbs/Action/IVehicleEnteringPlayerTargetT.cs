@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007509 RID: 29961
+	// Token: 0x02007CFF RID: 31999
 	public class IVehicleEnteringPlayerTargetT
 	{
-		// Token: 0x1700E35C RID: 58204
-		// (get) Token: 0x060367D4 RID: 223188 RVA: 0x00766F22 File Offset: 0x00765122
-		// (set) Token: 0x060367D5 RID: 223189 RVA: 0x00766F2A File Offset: 0x0076512A
+		// Token: 0x1700EF86 RID: 61318
+		// (get) Token: 0x06039BE9 RID: 236521 RVA: 0x007CA172 File Offset: 0x007C8372
+		// (set) Token: 0x06039BEA RID: 236522 RVA: 0x007CA17A File Offset: 0x007C837A
 		public EVehicleEnteringTarget Type { get; set; }
 
-		// Token: 0x1700E35D RID: 58205
-		// (get) Token: 0x060367D6 RID: 223190 RVA: 0x00766F33 File Offset: 0x00765133
-		// (set) Token: 0x060367D7 RID: 223191 RVA: 0x00766F3B File Offset: 0x0076513B
+		// Token: 0x1700EF87 RID: 61319
+		// (get) Token: 0x06039BEB RID: 236523 RVA: 0x007CA183 File Offset: 0x007C8383
+		// (set) Token: 0x06039BEC RID: 236524 RVA: 0x007CA18B File Offset: 0x007C838B
 		public int TargetVehicle { get; set; }
 
-		// Token: 0x1700E35E RID: 58206
-		// (get) Token: 0x060367D8 RID: 223192 RVA: 0x00766F44 File Offset: 0x00765144
-		// (set) Token: 0x060367D9 RID: 223193 RVA: 0x00766F4C File Offset: 0x0076514C
+		// Token: 0x1700EF88 RID: 61320
+		// (get) Token: 0x06039BED RID: 236525 RVA: 0x007CA194 File Offset: 0x007C8394
+		// (set) Token: 0x06039BEE RID: 236526 RVA: 0x007CA19C File Offset: 0x007C839C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060367DA RID: 223194 RVA: 0x00766F55 File Offset: 0x00765155
+		// Token: 0x06039BEF RID: 236527 RVA: 0x007CA1A5 File Offset: 0x007C83A5
 		public IVehicleEnteringPlayerTargetT()
 		{
 			this.Type = EVehicleEnteringTarget.Player;

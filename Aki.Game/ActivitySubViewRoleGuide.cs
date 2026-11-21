@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014C5 RID: 5317
+// Token: 0x02000979 RID: 2425
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewRoleGuide : ActivitySubViewBase
 {
-	// Token: 0x060096C7 RID: 38599 RVA: 0x0020903C File Offset: 0x0020723C
+	// Token: 0x06006A5C RID: 27228 RVA: 0x00211FA8 File Offset: 0x002101A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -55,13 +55,13 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060096C8 RID: 38600 RVA: 0x00209232 File Offset: 0x00207432
+	// Token: 0x06006A5D RID: 27229 RVA: 0x0021219E File Offset: 0x0021039E
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityRoleGuideData)this.ActivityBaseData;
 	}
 
-	// Token: 0x060096C9 RID: 38601 RVA: 0x00209248 File Offset: 0x00207448
+	// Token: 0x06006A5E RID: 27230 RVA: 0x002121B4 File Offset: 0x002103B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewRoleGuide.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060096CA RID: 38602 RVA: 0x0020928C File Offset: 0x0020748C
+	// Token: 0x06006A5F RID: 27231 RVA: 0x002121F8 File Offset: 0x002103F8
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityData.LocalConfig;
@@ -97,7 +97,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x060096CB RID: 38603 RVA: 0x0020941C File Offset: 0x0020761C
+	// Token: 0x06006A60 RID: 27232 RVA: 0x00212388 File Offset: 0x00210588
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -106,13 +106,13 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		this.RefreshState();
 	}
 
-	// Token: 0x060096CC RID: 38604 RVA: 0x00209436 File Offset: 0x00207636
+	// Token: 0x06006A61 RID: 27233 RVA: 0x002123A2 File Offset: 0x002105A2
 	private void RefreshTimerText()
 	{
 		this.TitleComponent.SetTimeTextVisible(false);
 	}
 
-	// Token: 0x060096CD RID: 38605 RVA: 0x00209444 File Offset: 0x00207644
+	// Token: 0x06006A62 RID: 27234 RVA: 0x002123B0 File Offset: 0x002105B0
 	private void RefreshShowQuest()
 	{
 		ActivityRoleGuideData activityData = this.ActivityData;
@@ -139,7 +139,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060096CE RID: 38606 RVA: 0x00209528 File Offset: 0x00207728
+	// Token: 0x06006A63 RID: 27235 RVA: 0x00212494 File Offset: 0x00210694
 	private void RefreshReward()
 	{
 		bool hasClaimed = QuestNewModel.Instance.GetQuestState(this.ActivityData.RoleQuestId) == EQuestState.Finish;
@@ -157,7 +157,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(list, null);
 	}
 
-	// Token: 0x060096CF RID: 38607 RVA: 0x002095D0 File Offset: 0x002077D0
+	// Token: 0x06006A64 RID: 27236 RVA: 0x0021253C File Offset: 0x0021073C
 	private void RefreshState()
 	{
 		int questState = (int)QuestNewModel.Instance.GetQuestState(this.ActivityData.RoleQuestId);
@@ -177,14 +177,14 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		item.SetUIActive(flag && flag2);
 	}
 
-	// Token: 0x060096D0 RID: 38608 RVA: 0x00209663 File Offset: 0x00207863
+	// Token: 0x06006A65 RID: 27237 RVA: 0x002125CF File Offset: 0x002107CF
 	[NullableContext(1)]
 	private ActivitySmallItemGrid InitGridItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x060096D1 RID: 38609 RVA: 0x0020966C File Offset: 0x0020786C
+	// Token: 0x06006A66 RID: 27238 RVA: 0x002125D8 File Offset: 0x002107D8
 	private void ButtonShowQuestJump()
 	{
 		int showQuestId = this.ActivityData.ShowQuestId;
@@ -206,7 +206,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		ScrollingTipsController.Instance.ShowTipsByText(localTextNew);
 	}
 
-	// Token: 0x060096D2 RID: 38610 RVA: 0x002096EC File Offset: 0x002078EC
+	// Token: 0x06006A67 RID: 27239 RVA: 0x00212658 File Offset: 0x00210858
 	private void ButtonRoleQuestJump()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -219,7 +219,7 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x060096D3 RID: 38611 RVA: 0x0020970C File Offset: 0x0020790C
+	// Token: 0x06006A68 RID: 27240 RVA: 0x00212678 File Offset: 0x00210878
 	private void ButtonRolePreviewClick()
 	{
 		List<int> roleIdList = new List<int>
@@ -229,16 +229,16 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 		RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, roleIdList, null, null);
 	}
 
-	// Token: 0x0400427E RID: 17022
+	// Token: 0x04004316 RID: 17174
 	protected ActivityRoleGuideData ActivityData;
 
-	// Token: 0x0400427F RID: 17023
+	// Token: 0x04004317 RID: 17175
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04004280 RID: 17024
+	// Token: 0x04004318 RID: 17176
 	private ActivityDescriptionTypeB DescriptionComponent;
 
-	// Token: 0x04004281 RID: 17025
+	// Token: 0x04004319 RID: 17177
 	[Nullable(new byte[]
 	{
 		2,
@@ -247,47 +247,47 @@ public class ActivitySubViewRoleGuide : ActivitySubViewBase
 	})]
 	private ActivityRewardList<ActivitySmallItemGrid, IItemGridData> RewardListComponent;
 
-	// Token: 0x04004282 RID: 17026
+	// Token: 0x0400431A RID: 17178
 	private ActivityRoleDescribeComponent RoleDescribeComponent;
 
-	// Token: 0x04004283 RID: 17027
+	// Token: 0x0400431B RID: 17179
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x02007AFB RID: 31483
+	// Token: 0x02006C7F RID: 27775
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402873A RID: 165690
+		// Token: 0x04023A54 RID: 146004
 		public const int TitleItem = 0;
 
-		// Token: 0x0402873B RID: 165691
+		// Token: 0x04023A55 RID: 146005
 		public const int TextItem = 1;
 
-		// Token: 0x0402873C RID: 165692
+		// Token: 0x04023A56 RID: 146006
 		public const int RewardItem = 2;
 
-		// Token: 0x0402873D RID: 165693
+		// Token: 0x04023A57 RID: 146007
 		public const int PanelBottom = 3;
 
-		// Token: 0x0402873E RID: 165694
+		// Token: 0x04023A58 RID: 146008
 		public const int RoleAttribute = 4;
 
-		// Token: 0x0402873F RID: 165695
+		// Token: 0x04023A59 RID: 146009
 		public const int PanelFinished = 5;
 
-		// Token: 0x04028740 RID: 165696
+		// Token: 0x04023A5A RID: 146010
 		public const int PanelShowQuest = 6;
 
-		// Token: 0x04028741 RID: 165697
+		// Token: 0x04023A5B RID: 146011
 		public const int TxtShowQuest = 7;
 
-		// Token: 0x04028742 RID: 165698
+		// Token: 0x04023A5C RID: 146012
 		public const int BtnShowQuest = 8;
 
-		// Token: 0x04028743 RID: 165699
+		// Token: 0x04023A5D RID: 146013
 		public const int PanelRole = 9;
 
-		// Token: 0x04028744 RID: 165700
+		// Token: 0x04023A5E RID: 146014
 		public const int BtnRolePreview = 10;
 	}
 }

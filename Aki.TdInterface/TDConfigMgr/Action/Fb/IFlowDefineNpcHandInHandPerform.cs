@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A81 RID: 10881
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D75 RID: 11637
 	public class IFlowDefineNpcHandInHandPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x0600EF2B RID: 61227 RVA: 0x0022C901 File Offset: 0x0022AB01
+		// Token: 0x0600FDE1 RID: 64993 RVA: 0x0024A60D File Offset: 0x0024880D
 		public static IFlowDefineNpcHandInHandPerform Create(IFlowDefineNpcHandInHandPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BEB RID: 19435
-		// (get) Token: 0x0600EF2C RID: 61228 RVA: 0x0022C920 File Offset: 0x0022AB20
+		// Token: 0x17004FA5 RID: 20389
+		// (get) Token: 0x0600FDE2 RID: 64994 RVA: 0x0024A62C File Offset: 0x0024882C
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BEC RID: 19436
-		// (get) Token: 0x0600EF2D RID: 61229 RVA: 0x0022C92D File Offset: 0x0022AB2D
+		// Token: 0x17004FA6 RID: 20390
+		// (get) Token: 0x0600FDE3 RID: 64995 RVA: 0x0024A639 File Offset: 0x00248839
 		public virtual string Key
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400839D RID: 33693
+		// Token: 0x04008AA1 RID: 35489
 		private IFlowDefineNpcHandInHandPerform Instance;
 	}
 }

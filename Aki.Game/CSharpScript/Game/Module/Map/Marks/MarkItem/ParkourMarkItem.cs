@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054F0 RID: 21744
+	// Token: 0x020044C3 RID: 17603
 	public class ParkourMarkItem : SceneGameplayMarkItem
 	{
-		// Token: 0x060378B1 RID: 227505 RVA: 0x00D2FEE2 File Offset: 0x00D2E0E2
+		// Token: 0x0602C77C RID: 182140 RVA: 0x00C7DED8 File Offset: 0x00C7C0D8
 		[NullableContext(1)]
 		public ParkourMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource? trackSource = null) : base(markId, markConfig, parent, mapType, markScale, trackSource)
 		{
 		}
 
-		// Token: 0x060378B2 RID: 227506 RVA: 0x00D2FEF4 File Offset: 0x00D2E0F4
+		// Token: 0x0602C77D RID: 182141 RVA: 0x00C7DEEC File Offset: 0x00C7C0EC
 		public override bool CheckCanShowView()
 		{
 			ParkourChallenge? config = ConfigParkourChallengeByMarkId.GetConfig(this.MarkId, true);

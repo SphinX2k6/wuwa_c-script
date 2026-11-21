@@ -8,13 +8,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Common.Button
 {
-	// Token: 0x02005B87 RID: 23431
+	// Token: 0x02004B67 RID: 19303
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ButtonStateController : ControllerBase
 	{
-		// Token: 0x0603B482 RID: 242818 RVA: 0x00E2131C File Offset: 0x00E1F51C
+		// Token: 0x060303CF RID: 197583 RVA: 0x00D71888 File Offset: 0x00D6FA88
 		protected override bool OnInit()
 		{
 			Dictionary<ButtonType, ModelBase> dictionary = new Dictionary<ButtonType, ModelBase>();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Common.Button
 			return true;
 		}
 
-		// Token: 0x0603B483 RID: 242819 RVA: 0x00E21354 File Offset: 0x00E1F554
+		// Token: 0x060303D0 RID: 197584 RVA: 0x00D718C0 File Offset: 0x00D6FAC0
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.Common.Button
 			return true;
 		}
 
-		// Token: 0x0603B484 RID: 242820 RVA: 0x00E213AB File Offset: 0x00E1F5AB
+		// Token: 0x060303D1 RID: 197585 RVA: 0x00D71917 File Offset: 0x00D6FB17
 		private void OnWorldDone()
 		{
 			this.RequestBtnState();
 			this.InitTimer();
 		}
 
-		// Token: 0x0603B485 RID: 242821 RVA: 0x00E213B9 File Offset: 0x00E1F5B9
+		// Token: 0x060303D2 RID: 197586 RVA: 0x00D71925 File Offset: 0x00D6FB25
 		private void CancelTimer()
 		{
 			if (this.CheckStateTimer != null)
@@ -56,20 +56,20 @@ namespace CSharpScript.Game.Module.Common.Button
 			}
 		}
 
-		// Token: 0x0603B486 RID: 242822 RVA: 0x00E213DB File Offset: 0x00E1F5DB
+		// Token: 0x060303D3 RID: 197587 RVA: 0x00D71947 File Offset: 0x00D6FB47
 		private void InitTimer()
 		{
 			this.CancelTimer();
 			this.CheckStateTimer = TimerSystem.RealTimeInstance.Forever(new TTimerAction(this.OnCheckStateTimer), 120000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603B487 RID: 242823 RVA: 0x00E2140C File Offset: 0x00E1F60C
+		// Token: 0x060303D4 RID: 197588 RVA: 0x00D71978 File Offset: 0x00D6FB78
 		private void OnCheckStateTimer(float _)
 		{
 			this.RequestBtnState();
 		}
 
-		// Token: 0x0603B488 RID: 242824 RVA: 0x00E21414 File Offset: 0x00E1F614
+		// Token: 0x060303D5 RID: 197589 RVA: 0x00D71980 File Offset: 0x00D6FB80
 		public unsafe void RequestBtnState()
 		{
 			if (this.ButtonTypeMap == null)
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Module.Common.Button
 			}, 0);
 		}
 
-		// Token: 0x17008CD0 RID: 36048
-		// (get) Token: 0x0603B489 RID: 242825 RVA: 0x00E214EC File Offset: 0x00E1F6EC
+		// Token: 0x170060A2 RID: 24738
+		// (get) Token: 0x060303D6 RID: 197590 RVA: 0x00D71A58 File Offset: 0x00D6FC58
 		public static ButtonStateController Instance
 		{
 			get
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Common.Button
 			}
 		}
 
-		// Token: 0x0603B48A RID: 242826 RVA: 0x00E214F3 File Offset: 0x00E1F6F3
+		// Token: 0x060303D7 RID: 197591 RVA: 0x00D71A5F File Offset: 0x00D6FC5F
 		public static ButtonStateController GetOrCreateInstance()
 		{
 			if (ButtonStateController._Instance == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Common.Button
 			return ButtonStateController._Instance;
 		}
 
-		// Token: 0x0603B48B RID: 242827 RVA: 0x00E21507 File Offset: 0x00E1F707
+		// Token: 0x060303D8 RID: 197592 RVA: 0x00D71A73 File Offset: 0x00D6FC73
 		public static bool CreateInstance()
 		{
 			if (ButtonStateController._Instance != null)
@@ -149,31 +149,31 @@ namespace CSharpScript.Game.Module.Common.Button
 			return true;
 		}
 
-		// Token: 0x0603B48C RID: 242828 RVA: 0x00E2151D File Offset: 0x00E1F71D
+		// Token: 0x060303D9 RID: 197593 RVA: 0x00D71A89 File Offset: 0x00D6FC89
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B48D RID: 242829 RVA: 0x00E2151F File Offset: 0x00E1F71F
+		// Token: 0x060303DA RID: 197594 RVA: 0x00D71A8B File Offset: 0x00D6FC8B
 		public static void ResetStaticDefaultValue()
 		{
 			ButtonStateController._Instance = null;
 		}
 
-		// Token: 0x0603B48E RID: 242830 RVA: 0x00E21527 File Offset: 0x00E1F727
+		// Token: 0x060303DB RID: 197595 RVA: 0x00D71A93 File Offset: 0x00D6FC93
 		static ButtonStateController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ButtonStateController.CreateStaticDefaultValue), new Action(ButtonStateController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EE72 RID: 126578
+		// Token: 0x04019923 RID: 104739
 		private const int CheckGap = 120000;
 
-		// Token: 0x0401EE73 RID: 126579
+		// Token: 0x04019924 RID: 104740
 		[Nullable(2)]
 		private TimerHandle CheckStateTimer;
 
-		// Token: 0x0401EE74 RID: 126580
+		// Token: 0x04019925 RID: 104741
 		[Nullable(new byte[]
 		{
 			2,
@@ -181,10 +181,10 @@ namespace CSharpScript.Game.Module.Common.Button
 		})]
 		private Dictionary<ButtonType, ModelBase> ButtonTypeMap;
 
-		// Token: 0x0401EE75 RID: 126581
+		// Token: 0x04019926 RID: 104742
 		private double LastServerTime;
 
-		// Token: 0x0401EE76 RID: 126582
+		// Token: 0x04019927 RID: 104743
 		[Nullable(2)]
 		private static ButtonStateController _Instance;
 	}

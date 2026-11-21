@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EBE RID: 28350
+	// Token: 0x0200603E RID: 24638
 	public interface IGrabItemData
 	{
-		// Token: 0x17009A9C RID: 39580
-		// (get) Token: 0x06045095 RID: 282773
-		// (set) Token: 0x06045096 RID: 282774
+		// Token: 0x17006FD3 RID: 28627
+		// (get) Token: 0x0603B236 RID: 242230
+		// (set) Token: 0x0603B237 RID: 242231
 		int ItemId { get; set; }
 
-		// Token: 0x17009A9D RID: 39581
-		// (get) Token: 0x06045097 RID: 282775
-		// (set) Token: 0x06045098 RID: 282776
+		// Token: 0x17006FD4 RID: 28628
+		// (get) Token: 0x0603B238 RID: 242232
+		// (set) Token: 0x0603B239 RID: 242233
 		int Count { get; set; }
 	}
 }

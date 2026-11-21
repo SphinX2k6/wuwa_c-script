@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020012CE RID: 4814
+// Token: 0x02000782 RID: 1922
 public enum EMapTravelSubType
 {
-	// Token: 0x04003B8B RID: 15243
+	// Token: 0x04003C23 RID: 15395
 	Main,
-	// Token: 0x04003B8C RID: 15244
+	// Token: 0x04003C24 RID: 15396
 	TravelTask,
-	// Token: 0x04003B8D RID: 15245
+	// Token: 0x04003C25 RID: 15397
 	PhantomQuest,
-	// Token: 0x04003B8E RID: 15246
+	// Token: 0x04003C26 RID: 15398
 	PhantomCollect,
-	// Token: 0x04003B8F RID: 15247
+	// Token: 0x04003C27 RID: 15399
 	SoarChallenge
 }

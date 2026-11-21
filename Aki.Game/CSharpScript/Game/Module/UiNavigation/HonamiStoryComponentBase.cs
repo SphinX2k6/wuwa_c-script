@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004971 RID: 18801
+	// Token: 0x020038E9 RID: 14569
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HonamiStoryComponentBase : HotKeyComponent
 	{
-		// Token: 0x06031063 RID: 200803 RVA: 0x00B61978 File Offset: 0x00B5FB78
+		// Token: 0x06025B93 RID: 154515 RVA: 0x00A9C858 File Offset: 0x00A9AA58
 		public HonamiStoryComponentBase(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x170079D9 RID: 31193
-		// (get) Token: 0x06031064 RID: 200804 RVA: 0x00B61981 File Offset: 0x00B5FB81
+		// Token: 0x17004D41 RID: 19777
+		// (get) Token: 0x06025B94 RID: 154516 RVA: 0x00A9C861 File Offset: 0x00A9AA61
 		protected HonamiStoryGamepadLogicController Logic
 		{
 			get

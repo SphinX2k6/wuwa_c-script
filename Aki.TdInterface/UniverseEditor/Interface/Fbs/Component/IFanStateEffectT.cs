@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200523E RID: 21054
+	// Token: 0x020057A6 RID: 22438
 	public class IFanStateEffectT
 	{
-		// Token: 0x17009A3E RID: 39486
-		// (get) Token: 0x060223E9 RID: 140265 RVA: 0x004BFF23 File Offset: 0x004BE123
-		// (set) Token: 0x060223EA RID: 140266 RVA: 0x004BFF2B File Offset: 0x004BE12B
+		// Token: 0x1700A23A RID: 41530
+		// (get) Token: 0x0602437F RID: 148351 RVA: 0x004FA9E7 File Offset: 0x004F8BE7
+		// (set) Token: 0x06024380 RID: 148352 RVA: 0x004FA9EF File Offset: 0x004F8BEF
 		public string EntityState { get; set; }
 
-		// Token: 0x17009A3F RID: 39487
-		// (get) Token: 0x060223EB RID: 140267 RVA: 0x004BFF34 File Offset: 0x004BE134
-		// (set) Token: 0x060223EC RID: 140268 RVA: 0x004BFF3C File Offset: 0x004BE13C
+		// Token: 0x1700A23B RID: 41531
+		// (get) Token: 0x06024381 RID: 148353 RVA: 0x004FA9F8 File Offset: 0x004F8BF8
+		// (set) Token: 0x06024382 RID: 148354 RVA: 0x004FAA00 File Offset: 0x004F8C00
 		public IFanEffectConfigT EffectConfig { get; set; }
 
-		// Token: 0x060223ED RID: 140269 RVA: 0x004BFF45 File Offset: 0x004BE145
+		// Token: 0x06024383 RID: 148355 RVA: 0x004FAA09 File Offset: 0x004F8C09
 		public IFanStateEffectT()
 		{
 			this.EntityState = null;

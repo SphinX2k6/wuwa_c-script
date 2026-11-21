@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200176D RID: 5997
+	// Token: 0x020018EE RID: 6382
 	public class IActorFxEmoteStop_SetValue
 	{
-		// Token: 0x040050CE RID: 20686
+		// Token: 0x04005504 RID: 21764
 		public EActorFxEmoteType Type;
 
-		// Token: 0x040050CF RID: 20687
-		[Nullable(1)]
+		// Token: 0x04005505 RID: 21765
 		public IActorFxEmoteStopSubType StopType;
 
-		// Token: 0x040050D0 RID: 20688
+		// Token: 0x04005506 RID: 21766
 		public float? DelayTime;
 	}
 }

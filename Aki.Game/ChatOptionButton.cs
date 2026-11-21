@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017A6 RID: 6054
+// Token: 0x02000C5F RID: 3167
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatOptionButton : UiPanelBase
 {
-	// Token: 0x0600B072 RID: 45170 RVA: 0x0027DF52 File Offset: 0x0027C152
+	// Token: 0x0600845A RID: 33882 RVA: 0x002884EA File Offset: 0x002866EA
 	public ChatOptionButton(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B073 RID: 45171 RVA: 0x0027DF68 File Offset: 0x0027C168
+	// Token: 0x0600845B RID: 33883 RVA: 0x00288500 File Offset: 0x00286700
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class ChatOptionButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B074 RID: 45172 RVA: 0x0027E00E File Offset: 0x0027C20E
+	// Token: 0x0600845C RID: 33884 RVA: 0x002885A6 File Offset: 0x002867A6
 	private void OnClickButton()
 	{
 		Action clickCallBack = this.ClickCallBack;
@@ -48,30 +48,30 @@ public class ChatOptionButton : UiPanelBase
 		clickCallBack();
 	}
 
-	// Token: 0x0600B075 RID: 45173 RVA: 0x0027E020 File Offset: 0x0027C220
+	// Token: 0x0600845D RID: 33885 RVA: 0x002885B8 File Offset: 0x002867B8
 	public void RefreshButtonText(string str)
 	{
 		base.GetText(1).SetText(str, true);
 	}
 
-	// Token: 0x0600B076 RID: 45174 RVA: 0x0027E030 File Offset: 0x0027C230
+	// Token: 0x0600845E RID: 33886 RVA: 0x002885C8 File Offset: 0x002867C8
 	public void SetClickCallBack(Action call)
 	{
 		this.ClickCallBack = call;
 	}
 
-	// Token: 0x04005023 RID: 20515
+	// Token: 0x040050CD RID: 20685
 	[Nullable(2)]
 	private Action ClickCallBack;
 
-	// Token: 0x02007DB7 RID: 32183
+	// Token: 0x02006F3D RID: 28477
 	[NullableContext(0)]
 	private class EChatOptionButtonType
 	{
-		// Token: 0x04029281 RID: 168577
+		// Token: 0x040245AC RID: 148908
 		public const int Button = 0;
 
-		// Token: 0x04029282 RID: 168578
+		// Token: 0x040245AD RID: 148909
 		public const int Text = 1;
 	}
 }

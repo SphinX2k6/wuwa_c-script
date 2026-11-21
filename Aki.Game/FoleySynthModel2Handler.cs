@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200301A RID: 12314
+// Token: 0x02002570 RID: 9584
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,18 +11,18 @@ using System.Runtime.CompilerServices;
 })]
 public class FoleySynthModel2Handler : FoleySynthHandlerBase<FoleySynthModel2Config>
 {
-	// Token: 0x0601A159 RID: 106841 RVA: 0x006D6DA6 File Offset: 0x006D4FA6
+	// Token: 0x06017AA1 RID: 96929 RVA: 0x006FECAE File Offset: 0x006FCEAE
 	[NullableContext(2)]
 	public FoleySynthModel2Handler(CharacterActorComponent actorComp, CharacterAkComponent akComp, int recordCount) : base(actorComp, akComp, recordCount)
 	{
 	}
 
-	// Token: 0x170023E4 RID: 9188
-	// (get) Token: 0x0601A15A RID: 106842 RVA: 0x006D6DBC File Offset: 0x006D4FBC
-	// (set) Token: 0x0601A15B RID: 106843 RVA: 0x006D6DC4 File Offset: 0x006D4FC4
+	// Token: 0x170024B2 RID: 9394
+	// (get) Token: 0x06017AA2 RID: 96930 RVA: 0x006FECC4 File Offset: 0x006FCEC4
+	// (set) Token: 0x06017AA3 RID: 96931 RVA: 0x006FECCC File Offset: 0x006FCECC
 	public int VelocityMaxCount { get; set; }
 
-	// Token: 0x0601A15C RID: 106844 RVA: 0x006D6DD0 File Offset: 0x006D4FD0
+	// Token: 0x06017AA4 RID: 96932 RVA: 0x006FECD8 File Offset: 0x006FCED8
 	protected override void OnInit(IReadOnlyList<FoleySynthModel2Config> configs)
 	{
 		foreach (FoleySynthModel2Config item in configs)
@@ -32,7 +32,7 @@ public class FoleySynthModel2Handler : FoleySynthHandlerBase<FoleySynthModel2Con
 		}
 	}
 
-	// Token: 0x0601A15D RID: 106845 RVA: 0x006D6E30 File Offset: 0x006D5030
+	// Token: 0x06017AA5 RID: 96933 RVA: 0x006FED38 File Offset: 0x006FCF38
 	protected unsafe override void OnParseBoneSpeedForAudio()
 	{
 		List<float> list = new List<float>();
@@ -114,6 +114,6 @@ public class FoleySynthModel2Handler : FoleySynthHandlerBase<FoleySynthModel2Con
 		}
 	}
 
-	// Token: 0x0400C5C0 RID: 50624
+	// Token: 0x0400C98D RID: 51597
 	private readonly List<float> CacheSpeed = new List<float>();
 }

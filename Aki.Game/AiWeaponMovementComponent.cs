@@ -9,12 +9,12 @@ using CSharpScript.Game.NewWorld.SceneItem;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x020032A8 RID: 12968
+// Token: 0x02002819 RID: 10265
 [NullableContext(2)]
 [Nullable(0)]
 public class AiWeaponMovementComponent : EntityComponent
 {
-	// Token: 0x0601C100 RID: 114944 RVA: 0x007CD7CC File Offset: 0x007CB9CC
+	// Token: 0x06019D37 RID: 105783 RVA: 0x007F49F4 File Offset: 0x007F2BF4
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -31,14 +31,14 @@ public class AiWeaponMovementComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601C101 RID: 114945 RVA: 0x007CD84D File Offset: 0x007CBA4D
+	// Token: 0x06019D38 RID: 105784 RVA: 0x007F4A75 File Offset: 0x007F2C75
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
 		return true;
 	}
 
-	// Token: 0x0601C102 RID: 114946 RVA: 0x007CD861 File Offset: 0x007CBA61
+	// Token: 0x06019D39 RID: 105785 RVA: 0x007F4A89 File Offset: 0x007F2C89
 	protected override void OnTick(float delta)
 	{
 		if (this.EnableMovement == null || !this.EnableMovement.Value)
@@ -48,7 +48,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		this.UpdateMovement((double)delta);
 	}
 
-	// Token: 0x0601C103 RID: 114947 RVA: 0x007CD888 File Offset: 0x007CBA88
+	// Token: 0x06019D3A RID: 105786 RVA: 0x007F4AB0 File Offset: 0x007F2CB0
 	public void UpdateMovement(double delta)
 	{
 		this.ActorComp.SetActorLocation(this.ActorComp.StaticMesh.D_K2_GetComponentLocation(), "unknown", true);
@@ -68,7 +68,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C104 RID: 114948 RVA: 0x007CD8E8 File Offset: 0x007CBAE8
+	// Token: 0x06019D3B RID: 105787 RVA: 0x007F4B10 File Offset: 0x007F2D10
 	public void UpdateItemBorn(double delta)
 	{
 		global::Vector commonTempVector = MathUtils.Instance.CommonTempVector;
@@ -89,7 +89,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		this.ItemMovementState = EItemMovementState.Fall;
 	}
 
-	// Token: 0x0601C105 RID: 114949 RVA: 0x007CD958 File Offset: 0x007CBB58
+	// Token: 0x06019D3C RID: 105788 RVA: 0x007F4B80 File Offset: 0x007F2D80
 	public void UpdateItemFall(double delta)
 	{
 		if (!this.CheckDropOutOfRange() && !this.CheckDropAtGround() && !this.CheckDropAtWater())
@@ -109,13 +109,13 @@ public class AiWeaponMovementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601C106 RID: 114950 RVA: 0x007CD9AD File Offset: 0x007CBBAD
+	// Token: 0x06019D3D RID: 105789 RVA: 0x007F4BD5 File Offset: 0x007F2DD5
 	public void UpdateItemStay(double delta)
 	{
 		this.EnableMovement = new bool?(false);
 	}
 
-	// Token: 0x0601C107 RID: 114951 RVA: 0x007CD9BC File Offset: 0x007CBBBC
+	// Token: 0x06019D3E RID: 105790 RVA: 0x007F4BE4 File Offset: 0x007F2DE4
 	private void InitPhysics()
 	{
 		UStaticMeshComponent staticMesh = this.ActorComp.StaticMesh;
@@ -149,7 +149,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		staticMesh.SetPhysicsLinearVelocity(commonTempVector.ToUeVectorOld(), false, default(FName));
 	}
 
-	// Token: 0x0601C108 RID: 114952 RVA: 0x007CDACC File Offset: 0x007CBCCC
+	// Token: 0x06019D3F RID: 105791 RVA: 0x007F4CF4 File Offset: 0x007F2EF4
 	private void DisablePhysics()
 	{
 		UStaticMeshComponent staticMesh = this.ActorComp.StaticMesh;
@@ -162,7 +162,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		staticMesh.SetUseCCD(false, default(FName));
 	}
 
-	// Token: 0x0601C109 RID: 114953 RVA: 0x007CDB3C File Offset: 0x007CBD3C
+	// Token: 0x06019D40 RID: 105792 RVA: 0x007F4D64 File Offset: 0x007F2F64
 	private void InitWaterTrace()
 	{
 		if (this.TraceElement == null)
@@ -179,7 +179,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		TraceElementCommon.Instance.SetTraceHitColor(this.TraceElement, ColorUtils.LinearRed);
 	}
 
-	// Token: 0x0601C10A RID: 114954 RVA: 0x007CDBDC File Offset: 0x007CBDDC
+	// Token: 0x06019D41 RID: 105793 RVA: 0x007F4E04 File Offset: 0x007F3004
 	private bool TraceHitWater(double zOffset)
 	{
 		this.InitWaterTrace();
@@ -200,7 +200,7 @@ public class AiWeaponMovementComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601C10B RID: 114955 RVA: 0x007CDC74 File Offset: 0x007CBE74
+	// Token: 0x06019D42 RID: 105794 RVA: 0x007F4E9C File Offset: 0x007F309C
 	private bool CheckDropOutOfRange()
 	{
 		if (this.ActorComp.StaticMesh.GetComponentVelocity().Z > 0f)
@@ -217,20 +217,20 @@ public class AiWeaponMovementComponent : EntityComponent
 		return Math.Abs((fvectorDouble != null) ? (this.ActorComp.ActorLocationProxy.Z - fvectorDouble.Value.Z) : 0.0) > 10000.0;
 	}
 
-	// Token: 0x0601C10C RID: 114956 RVA: 0x007CDD4C File Offset: 0x007CBF4C
+	// Token: 0x06019D43 RID: 105795 RVA: 0x007F4F74 File Offset: 0x007F3174
 	private bool CheckDropAtGround()
 	{
 		FVector componentVelocity = this.ActorComp.StaticMesh.GetComponentVelocity();
 		return componentVelocity.Z <= 0f && (double)Math.Abs(componentVelocity.Z) <= 2.0 && (double)componentVelocity.SizeSquared2D() <= 4.0;
 	}
 
-	// Token: 0x0601C10D RID: 114957 RVA: 0x007CDDA4 File Offset: 0x007CBFA4
+	// Token: 0x06019D44 RID: 105796 RVA: 0x007F4FCC File Offset: 0x007F31CC
 	private bool CheckDropAtWater()
 	{
 		return this.ActorComp.StaticMesh.GetComponentVelocity().Z <= 0f && this.TraceHitWater(-5.0);
 	}
 
-	// Token: 0x0601C10E RID: 114958 RVA: 0x007CDDD8 File Offset: 0x007CBFD8
+	// Token: 0x06019D45 RID: 105797 RVA: 0x007F5000 File Offset: 0x007F3200
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -239,84 +239,86 @@ public class AiWeaponMovementComponent : EntityComponent
 			return false;
 		}
 		AiWeaponMovementComponent aiWeaponMovementComponent = (AiWeaponMovementComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (aiWeaponMovementComponent.ActorComp == null)
 		{
-			if (aiWeaponMovementComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (aiWeaponMovementComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("EnableMovement"))
+		if (aiWeaponMovementComponent.CreatureDataComp == null)
 		{
-			this.EnableMovement = aiWeaponMovementComponent.EnableMovement;
+			this.CreatureDataComp = null;
 		}
-		if (base.CanResetComponentProperty("ItemMovementState"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 		{
-			this.ItemMovementState = aiWeaponMovementComponent.ItemMovementState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ItemMass"))
+		this.EnableMovement = aiWeaponMovementComponent.EnableMovement;
+		this.ItemMovementState = aiWeaponMovementComponent.ItemMovementState;
+		this.ItemMass = aiWeaponMovementComponent.ItemMass;
+		if (aiWeaponMovementComponent.TraceElement == null)
 		{
-			this.ItemMass = aiWeaponMovementComponent.ItemMass;
+			this.TraceElement = null;
 		}
-		if (base.CanResetComponentProperty("TraceElement"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
 		{
-			if (aiWeaponMovementComponent.TraceElement == null)
-			{
-				this.TraceElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.TraceElement), "TraceElement"))
-			{
-				return false;
-			}
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DDD2 RID: 56786
+	// Token: 0x170029A4 RID: 10660
+	// (get) Token: 0x06019D46 RID: 105798 RVA: 0x007F50C5 File Offset: 0x007F32C5
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029A5 RID: 10661
+	// (get) Token: 0x06019D47 RID: 105799 RVA: 0x007F50C8 File Offset: 0x007F32C8
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E279 RID: 57977
 	private static readonly FName COLLISION_PROFILE_NAME = new FName("DropItem");
 
-	// Token: 0x0400DDD3 RID: 56787
+	// Token: 0x0400E27A RID: 57978
 	private const double GROUND_MAX_XY_VEL_SQUARED = 4.0;
 
-	// Token: 0x0400DDD4 RID: 56788
+	// Token: 0x0400E27B RID: 57979
 	private const double GROUND_MAX_Z_VEL = 2.0;
 
-	// Token: 0x0400DDD5 RID: 56789
+	// Token: 0x0400E27C RID: 57980
 	private const double MAX_DROP_HEIGHT = 10000.0;
 
-	// Token: 0x0400DDD6 RID: 56790
+	// Token: 0x0400E27D RID: 57981
 	private const double ON_WATER_MAX_DIST = 5.0;
 
-	// Token: 0x0400DDD7 RID: 56791
+	// Token: 0x0400E27E RID: 57982
 	private SceneItemActorComponent ActorComp;
 
-	// Token: 0x0400DDD8 RID: 56792
+	// Token: 0x0400E27F RID: 57983
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400DDD9 RID: 56793
+	// Token: 0x0400E280 RID: 57984
 	public bool? EnableMovement;
 
-	// Token: 0x0400DDDA RID: 56794
+	// Token: 0x0400E281 RID: 57985
 	private EItemMovementState ItemMovementState = EItemMovementState.Fall;
 
-	// Token: 0x0400DDDB RID: 56795
+	// Token: 0x0400E282 RID: 57986
 	private double ItemMass;
 
-	// Token: 0x0400DDDC RID: 56796
+	// Token: 0x0400E283 RID: 57987
 	private UTraceLineElement TraceElement;
 }

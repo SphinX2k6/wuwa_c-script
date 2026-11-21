@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001915 RID: 6421
+// Token: 0x02000DCE RID: 3534
 public class MediumItemGridEmptySlotComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BC18 RID: 48152 RVA: 0x002AA138 File Offset: 0x002A8338
+	// Token: 0x06009002 RID: 36866 RVA: 0x002B4894 File Offset: 0x002B2A94
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,39 +26,39 @@ public class MediumItemGridEmptySlotComponent : MediumItemGridVisibleComponent
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BC19 RID: 48153 RVA: 0x002AA1BD File Offset: 0x002A83BD
+	// Token: 0x06009003 RID: 36867 RVA: 0x002B4919 File Offset: 0x002B2B19
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBtnAdd";
 	}
 
-	// Token: 0x0600BC1A RID: 48154 RVA: 0x002AA1C4 File Offset: 0x002A83C4
+	// Token: 0x06009004 RID: 36868 RVA: 0x002B4920 File Offset: 0x002B2B20
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x0600BC1B RID: 48155 RVA: 0x002AA1C7 File Offset: 0x002A83C7
+	// Token: 0x06009005 RID: 36869 RVA: 0x002B4923 File Offset: 0x002B2B23
 	protected override void OnDeactivate()
 	{
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600BC1C RID: 48156 RVA: 0x002AA1D0 File Offset: 0x002A83D0
+	// Token: 0x06009006 RID: 36870 RVA: 0x002B492C File Offset: 0x002B2B2C
 	[NullableContext(1)]
 	public void BindEmptySlotButtonCallback(Action onClickedEmptySlotButton)
 	{
 		this.OnClickedCallback = onClickedEmptySlotButton;
 	}
 
-	// Token: 0x0600BC1D RID: 48157 RVA: 0x002AA1D9 File Offset: 0x002A83D9
+	// Token: 0x06009007 RID: 36871 RVA: 0x002B4935 File Offset: 0x002B2B35
 	public void UnBindEmptySlotButtonCallback()
 	{
 		this.OnClickedCallback = null;
 	}
 
-	// Token: 0x0600BC1E RID: 48158 RVA: 0x002AA1E2 File Offset: 0x002A83E2
+	// Token: 0x06009008 RID: 36872 RVA: 0x002B493E File Offset: 0x002B2B3E
 	private void OnClickedEmptySlotButton()
 	{
 		Action onClickedCallback = this.OnClickedCallback;
@@ -69,14 +69,14 @@ public class MediumItemGridEmptySlotComponent : MediumItemGridVisibleComponent
 		onClickedCallback();
 	}
 
-	// Token: 0x04005531 RID: 21809
+	// Token: 0x040055DC RID: 21980
 	[Nullable(2)]
 	private Action OnClickedCallback;
 
-	// Token: 0x02007E88 RID: 32392
+	// Token: 0x0200700F RID: 28687
 	private class EChildType
 	{
-		// Token: 0x04029655 RID: 169557
+		// Token: 0x04024981 RID: 149889
 		public const int AddButton = 0;
 	}
 }

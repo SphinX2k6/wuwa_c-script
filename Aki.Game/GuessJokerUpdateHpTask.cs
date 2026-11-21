@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200103D RID: 4157
+// Token: 0x020004F1 RID: 1265
 public class GuessJokerUpdateHpTask : GuessJokerTaskBase
 {
-	// Token: 0x06006AB1 RID: 27313 RVA: 0x00157917 File Offset: 0x00155B17
+	// Token: 0x06003E46 RID: 15942 RVA: 0x0016023F File Offset: 0x0015E43F
 	[NullableContext(1)]
 	public GuessJokerUpdateHpTask(JokerGuessHpAction data)
 	{
@@ -14,7 +14,7 @@ public class GuessJokerUpdateHpTask : GuessJokerTaskBase
 		this.Hp = data.HealthHp;
 	}
 
-	// Token: 0x06006AB2 RID: 27314 RVA: 0x00157944 File Offset: 0x00155B44
+	// Token: 0x06003E47 RID: 15943 RVA: 0x0016026C File Offset: 0x0015E46C
 	protected override void OnExecute()
 	{
 		GuessJokerGamePlayModel.Instance.UpdateHp(this.PlayerType, this.Hp);
@@ -32,9 +32,9 @@ public class GuessJokerUpdateHpTask : GuessJokerTaskBase
 		GuessJokerGamePlayModel.Instance.PushActions(list);
 	}
 
-	// Token: 0x0400312E RID: 12590
+	// Token: 0x040031C7 RID: 12743
 	public EGuessJokerPlayerType PlayerType = EGuessJokerPlayerType.Ai;
 
-	// Token: 0x0400312F RID: 12591
+	// Token: 0x040031C8 RID: 12744
 	public int Hp;
 }

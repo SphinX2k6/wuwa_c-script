@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F7D RID: 20349
+	// Token: 0x020054AC RID: 21676
 	public class ICharacterConnectorComponentT
 	{
-		// Token: 0x17009312 RID: 37650
-		// (get) Token: 0x060204E1 RID: 132321 RVA: 0x0047E9AD File Offset: 0x0047CBAD
-		// (set) Token: 0x060204E2 RID: 132322 RVA: 0x0047E9B5 File Offset: 0x0047CBB5
+		// Token: 0x17009A8B RID: 39563
+		// (get) Token: 0x06022233 RID: 139827 RVA: 0x004B499D File Offset: 0x004B2B9D
+		// (set) Token: 0x06022234 RID: 139828 RVA: 0x004B49A5 File Offset: 0x004B2BA5
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009313 RID: 37651
-		// (get) Token: 0x060204E3 RID: 132323 RVA: 0x0047E9BE File Offset: 0x0047CBBE
-		// (set) Token: 0x060204E4 RID: 132324 RVA: 0x0047E9C6 File Offset: 0x0047CBC6
+		// Token: 0x17009A8C RID: 39564
+		// (get) Token: 0x06022235 RID: 139829 RVA: 0x004B49AE File Offset: 0x004B2BAE
+		// (set) Token: 0x06022236 RID: 139830 RVA: 0x004B49B6 File Offset: 0x004B2BB6
 		public ICharacterConnectorRangeT LogicType { get; set; }
 
-		// Token: 0x17009314 RID: 37652
-		// (get) Token: 0x060204E5 RID: 132325 RVA: 0x0047E9CF File Offset: 0x0047CBCF
-		// (set) Token: 0x060204E6 RID: 132326 RVA: 0x0047E9D7 File Offset: 0x0047CBD7
+		// Token: 0x17009A8D RID: 39565
+		// (get) Token: 0x06022237 RID: 139831 RVA: 0x004B49BF File Offset: 0x004B2BBF
+		// (set) Token: 0x06022238 RID: 139832 RVA: 0x004B49C7 File Offset: 0x004B2BC7
 		public byte NullMask { get; set; }
 
-		// Token: 0x060204E7 RID: 132327 RVA: 0x0047E9E0 File Offset: 0x0047CBE0
+		// Token: 0x06022239 RID: 139833 RVA: 0x004B49D0 File Offset: 0x004B2BD0
 		public ICharacterConnectorComponentT()
 		{
 			this.Disabled = false;

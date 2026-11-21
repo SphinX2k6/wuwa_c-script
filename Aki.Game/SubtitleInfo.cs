@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Module.Plot.Sequence;
 
-// Token: 0x02002976 RID: 10614
+// Token: 0x02001EF1 RID: 7921
 [NullableContext(1)]
 [Nullable(0)]
 public class SubtitleInfo
 {
-	// Token: 0x17001D84 RID: 7556
-	// (get) Token: 0x06015F35 RID: 89909 RVA: 0x00588C54 File Offset: 0x00586E54
+	// Token: 0x17001DDD RID: 7645
+	// (get) Token: 0x0601393B RID: 80187 RVA: 0x005B3C7B File Offset: 0x005B1E7B
 	[Nullable(2)]
 	public ITalkItem CurrentConfig
 	{
@@ -21,8 +21,8 @@ public class SubtitleInfo
 		}
 	}
 
-	// Token: 0x17001D85 RID: 7557
-	// (get) Token: 0x06015F36 RID: 89910 RVA: 0x00588C61 File Offset: 0x00586E61
+	// Token: 0x17001DDE RID: 7646
+	// (get) Token: 0x0601393C RID: 80188 RVA: 0x005B3C88 File Offset: 0x005B1E88
 	public float CurrentDelayTime
 	{
 		get
@@ -31,8 +31,8 @@ public class SubtitleInfo
 		}
 	}
 
-	// Token: 0x17001D86 RID: 7558
-	// (get) Token: 0x06015F37 RID: 89911 RVA: 0x00588C6E File Offset: 0x00586E6E
+	// Token: 0x17001DDF RID: 7647
+	// (get) Token: 0x0601393D RID: 80189 RVA: 0x005B3C95 File Offset: 0x005B1E95
 	public float CurrentAutoPlayDelayTime
 	{
 		get
@@ -41,8 +41,8 @@ public class SubtitleInfo
 		}
 	}
 
-	// Token: 0x17001D87 RID: 7559
-	// (get) Token: 0x06015F38 RID: 89912 RVA: 0x00588C7B File Offset: 0x00586E7B
+	// Token: 0x17001DE0 RID: 7648
+	// (get) Token: 0x0601393E RID: 80190 RVA: 0x005B3CA2 File Offset: 0x005B1EA2
 	public float CurrentAudioTransitionDuration
 	{
 		get
@@ -51,20 +51,20 @@ public class SubtitleInfo
 		}
 	}
 
-	// Token: 0x06015F39 RID: 89913 RVA: 0x00588C88 File Offset: 0x00586E88
+	// Token: 0x0601393F RID: 80191 RVA: 0x005B3CAF File Offset: 0x005B1EAF
 	public bool HasSubtitle()
 	{
 		return this.CurSubConfig.Subtitles != null;
 	}
 
-	// Token: 0x06015F3A RID: 89914 RVA: 0x00588C98 File Offset: 0x00586E98
+	// Token: 0x06013940 RID: 80192 RVA: 0x005B3CBF File Offset: 0x005B1EBF
 	public void SetCurrentSubtitle(PlotSubtitleConfig subtitleInfo)
 	{
 		this.CurSubConfig.CopyFrom(subtitleInfo);
 		this.InitSubtitle();
 	}
 
-	// Token: 0x06015F3B RID: 89915 RVA: 0x00588CAC File Offset: 0x00586EAC
+	// Token: 0x06013941 RID: 80193 RVA: 0x005B3CD4 File Offset: 0x005B1ED4
 	private void InitSubtitle()
 	{
 		if (!this.HasSubtitle())
@@ -80,7 +80,7 @@ public class SubtitleInfo
 		this.StartFinish = false;
 	}
 
-	// Token: 0x06015F3C RID: 89916 RVA: 0x00588D48 File Offset: 0x00586F48
+	// Token: 0x06013942 RID: 80194 RVA: 0x005B3D70 File Offset: 0x005B1F70
 	public void Clear()
 	{
 		this.CurSubConfig.Clear();
@@ -93,27 +93,27 @@ public class SubtitleInfo
 		this.StartFinish = false;
 	}
 
-	// Token: 0x0400A340 RID: 41792
+	// Token: 0x0400A72A RID: 42794
 	private readonly PlotSubtitleConfig CurSubConfig = new PlotSubtitleConfig();
 
-	// Token: 0x0400A341 RID: 41793
+	// Token: 0x0400A72B RID: 42795
 	public bool HasOption;
 
-	// Token: 0x0400A342 RID: 41794
+	// Token: 0x0400A72C RID: 42796
 	public bool ShowAllText;
 
-	// Token: 0x0400A343 RID: 41795
+	// Token: 0x0400A72D RID: 42797
 	public bool ShowOption;
 
-	// Token: 0x0400A344 RID: 41796
+	// Token: 0x0400A72E RID: 42798
 	public bool Skip;
 
-	// Token: 0x0400A345 RID: 41797
+	// Token: 0x0400A72F RID: 42799
 	public double EnableSkipTime;
 
-	// Token: 0x0400A346 RID: 41798
+	// Token: 0x0400A730 RID: 42800
 	public bool NeedDelay;
 
-	// Token: 0x0400A347 RID: 41799
+	// Token: 0x0400A731 RID: 42801
 	public bool StartFinish;
 }

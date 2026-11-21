@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E09 RID: 28169
+	// Token: 0x02005F89 RID: 24457
 	public interface IGuaranteeFadeInParams
 	{
-		// Token: 0x170099F4 RID: 39412
-		// (get) Token: 0x06044B4D RID: 281421
-		// (set) Token: 0x06044B4E RID: 281422
+		// Token: 0x17006EF7 RID: 28407
+		// (get) Token: 0x0603ACB3 RID: 240819
+		// (set) Token: 0x0603ACB4 RID: 240820
 		bool? KeepFadeAfterTreeRollBack { get; set; }
 	}
 }

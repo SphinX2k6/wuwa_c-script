@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BD4 RID: 19412
+	// Token: 0x02003B7E RID: 15230
 	public class SkipToMusicalInstrumentView : SkipTask
 	{
-		// Token: 0x06032338 RID: 205624 RVA: 0x00BAA6EC File Offset: 0x00BA88EC
+		// Token: 0x060270C9 RID: 159945 RVA: 0x00AEE9A4 File Offset: 0x00AECBA4
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

@@ -3,439 +3,439 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200157F RID: 5503
+	// Token: 0x020015F5 RID: 5621
 	public enum EAttributeType
 	{
-		// Token: 0x0400A6D6 RID: 42710
+		// Token: 0x0400AB63 RID: 43875
 		[OriginalName("EAttributeType_None")]
 		None,
-		// Token: 0x0400A6D7 RID: 42711
+		// Token: 0x0400AB64 RID: 43876
 		[OriginalName("Lv")]
 		Lv,
-		// Token: 0x0400A6D8 RID: 42712
+		// Token: 0x0400AB65 RID: 43877
 		[OriginalName("LifeMax")]
 		LifeMax,
-		// Token: 0x0400A6D9 RID: 42713
+		// Token: 0x0400AB66 RID: 43878
 		[OriginalName("Life")]
 		Life,
-		// Token: 0x0400A6DA RID: 42714
+		// Token: 0x0400AB67 RID: 43879
 		[OriginalName("Sheild")]
 		Sheild,
-		// Token: 0x0400A6DB RID: 42715
+		// Token: 0x0400AB68 RID: 43880
 		[OriginalName("SheildDamageChange")]
 		SheildDamageChange,
-		// Token: 0x0400A6DC RID: 42716
+		// Token: 0x0400AB69 RID: 43881
 		[OriginalName("SheildDamageReduce")]
 		SheildDamageReduce,
-		// Token: 0x0400A6DD RID: 42717
+		// Token: 0x0400AB6A RID: 43882
 		[OriginalName("Atk")]
 		Atk,
-		// Token: 0x0400A6DE RID: 42718
+		// Token: 0x0400AB6B RID: 43883
 		[OriginalName("Crit")]
 		Crit,
-		// Token: 0x0400A6DF RID: 42719
+		// Token: 0x0400AB6C RID: 43884
 		[OriginalName("CritDamage")]
 		CritDamage,
-		// Token: 0x0400A6E0 RID: 42720
+		// Token: 0x0400AB6D RID: 43885
 		[OriginalName("Def")]
 		Def,
-		// Token: 0x0400A6E1 RID: 42721
+		// Token: 0x0400AB6E RID: 43886
 		[OriginalName("EnergyEfficiency")]
 		EnergyEfficiency,
-		// Token: 0x0400A6E2 RID: 42722
+		// Token: 0x0400AB6F RID: 43887
 		[OriginalName("CdReduse")]
 		CdReduse,
-		// Token: 0x0400A6E3 RID: 42723
+		// Token: 0x0400AB70 RID: 43888
 		[OriginalName("ElementEfficiency")]
 		ElementEfficiency,
-		// Token: 0x0400A6E4 RID: 42724
+		// Token: 0x0400AB71 RID: 43889
 		[OriginalName("DamageChangeNormalSkill")]
 		DamageChangeNormalSkill,
-		// Token: 0x0400A6E5 RID: 42725
+		// Token: 0x0400AB72 RID: 43890
 		[OriginalName("DamageChange")]
 		DamageChange,
-		// Token: 0x0400A6E6 RID: 42726
+		// Token: 0x0400AB73 RID: 43891
 		[OriginalName("DamageReduce")]
 		DamageReduce,
-		// Token: 0x0400A6E7 RID: 42727
+		// Token: 0x0400AB74 RID: 43892
 		[OriginalName("DamageChangeAuto")]
 		DamageChangeAuto,
-		// Token: 0x0400A6E8 RID: 42728
+		// Token: 0x0400AB75 RID: 43893
 		[OriginalName("DamageChangeCast")]
 		DamageChangeCast,
-		// Token: 0x0400A6E9 RID: 42729
+		// Token: 0x0400AB76 RID: 43894
 		[OriginalName("DamageChangeUltra")]
 		DamageChangeUltra,
-		// Token: 0x0400A6EA RID: 42730
+		// Token: 0x0400AB77 RID: 43895
 		[OriginalName("DamageChangeQte")]
 		DamageChangeQte,
-		// Token: 0x0400A6EB RID: 42731
+		// Token: 0x0400AB78 RID: 43896
 		[OriginalName("DamageChangePhys")]
 		DamageChangePhys,
-		// Token: 0x0400A6EC RID: 42732
+		// Token: 0x0400AB79 RID: 43897
 		[OriginalName("DamageChangeElement1")]
 		DamageChangeElement1,
-		// Token: 0x0400A6ED RID: 42733
+		// Token: 0x0400AB7A RID: 43898
 		[OriginalName("DamageChangeElement2")]
 		DamageChangeElement2,
-		// Token: 0x0400A6EE RID: 42734
+		// Token: 0x0400AB7B RID: 43899
 		[OriginalName("DamageChangeElement3")]
 		DamageChangeElement3,
-		// Token: 0x0400A6EF RID: 42735
+		// Token: 0x0400AB7C RID: 43900
 		[OriginalName("DamageChangeElement4")]
 		DamageChangeElement4,
-		// Token: 0x0400A6F0 RID: 42736
+		// Token: 0x0400AB7D RID: 43901
 		[OriginalName("DamageChangeElement5")]
 		DamageChangeElement5,
-		// Token: 0x0400A6F1 RID: 42737
+		// Token: 0x0400AB7E RID: 43902
 		[OriginalName("DamageChangeElement6")]
 		DamageChangeElement6,
-		// Token: 0x0400A6F2 RID: 42738
+		// Token: 0x0400AB7F RID: 43903
 		[OriginalName("DamageResistancePhys")]
 		DamageResistancePhys,
-		// Token: 0x0400A6F3 RID: 42739
+		// Token: 0x0400AB80 RID: 43904
 		[OriginalName("DamageResistanceElement1")]
 		DamageResistanceElement1,
-		// Token: 0x0400A6F4 RID: 42740
+		// Token: 0x0400AB81 RID: 43905
 		[OriginalName("DamageResistanceElement2")]
 		DamageResistanceElement2,
-		// Token: 0x0400A6F5 RID: 42741
+		// Token: 0x0400AB82 RID: 43906
 		[OriginalName("DamageResistanceElement3")]
 		DamageResistanceElement3,
-		// Token: 0x0400A6F6 RID: 42742
+		// Token: 0x0400AB83 RID: 43907
 		[OriginalName("DamageResistanceElement4")]
 		DamageResistanceElement4,
-		// Token: 0x0400A6F7 RID: 42743
+		// Token: 0x0400AB84 RID: 43908
 		[OriginalName("DamageResistanceElement5")]
 		DamageResistanceElement5,
-		// Token: 0x0400A6F8 RID: 42744
+		// Token: 0x0400AB85 RID: 43909
 		[OriginalName("DamageResistanceElement6")]
 		DamageResistanceElement6,
-		// Token: 0x0400A6F9 RID: 42745
+		// Token: 0x0400AB86 RID: 43910
 		[OriginalName("HealChange")]
 		HealChange,
-		// Token: 0x0400A6FA RID: 42746
+		// Token: 0x0400AB87 RID: 43911
 		[OriginalName("HealedChange")]
 		HealedChange,
-		// Token: 0x0400A6FB RID: 42747
+		// Token: 0x0400AB88 RID: 43912
 		[OriginalName("DamageReducePhys")]
 		DamageReducePhys,
-		// Token: 0x0400A6FC RID: 42748
+		// Token: 0x0400AB89 RID: 43913
 		[OriginalName("DamageReduceElement1")]
 		DamageReduceElement1,
-		// Token: 0x0400A6FD RID: 42749
+		// Token: 0x0400AB8A RID: 43914
 		[OriginalName("DamageReduceElement2")]
 		DamageReduceElement2,
-		// Token: 0x0400A6FE RID: 42750
+		// Token: 0x0400AB8B RID: 43915
 		[OriginalName("DamageReduceElement3")]
 		DamageReduceElement3,
-		// Token: 0x0400A6FF RID: 42751
+		// Token: 0x0400AB8C RID: 43916
 		[OriginalName("DamageReduceElement4")]
 		DamageReduceElement4,
-		// Token: 0x0400A700 RID: 42752
+		// Token: 0x0400AB8D RID: 43917
 		[OriginalName("DamageReduceElement5")]
 		DamageReduceElement5,
-		// Token: 0x0400A701 RID: 42753
+		// Token: 0x0400AB8E RID: 43918
 		[OriginalName("DamageReduceElement6")]
 		DamageReduceElement6,
-		// Token: 0x0400A702 RID: 42754
+		// Token: 0x0400AB8F RID: 43919
 		[OriginalName("SpecialEnergy5Max")]
 		SpecialEnergy5Max,
-		// Token: 0x0400A703 RID: 42755
+		// Token: 0x0400AB90 RID: 43920
 		[OriginalName("SpecialEnergy5")]
 		SpecialEnergy5,
-		// Token: 0x0400A704 RID: 42756
+		// Token: 0x0400AB91 RID: 43921
 		[OriginalName("ReactionChange3")]
 		ReactionChange3,
-		// Token: 0x0400A705 RID: 42757
+		// Token: 0x0400AB92 RID: 43922
 		[OriginalName("ReactionChange4")]
 		ReactionChange4,
-		// Token: 0x0400A706 RID: 42758
+		// Token: 0x0400AB93 RID: 43923
 		[OriginalName("ReactionChange5")]
 		ReactionChange5,
-		// Token: 0x0400A707 RID: 42759
+		// Token: 0x0400AB94 RID: 43924
 		[OriginalName("ReactionChange6")]
 		ReactionChange6,
-		// Token: 0x0400A708 RID: 42760
+		// Token: 0x0400AB95 RID: 43925
 		[OriginalName("ReactionChange7")]
 		ReactionChange7,
-		// Token: 0x0400A709 RID: 42761
+		// Token: 0x0400AB96 RID: 43926
 		[OriginalName("ReactionChange8")]
 		ReactionChange8,
-		// Token: 0x0400A70A RID: 42762
+		// Token: 0x0400AB97 RID: 43927
 		[OriginalName("ReactionChange9")]
 		ReactionChange9,
-		// Token: 0x0400A70B RID: 42763
+		// Token: 0x0400AB98 RID: 43928
 		[OriginalName("ReactionChange10")]
 		ReactionChange10,
-		// Token: 0x0400A70C RID: 42764
+		// Token: 0x0400AB99 RID: 43929
 		[OriginalName("ReactionChange11")]
 		ReactionChange11,
-		// Token: 0x0400A70D RID: 42765
+		// Token: 0x0400AB9A RID: 43930
 		[OriginalName("ReactionChange12")]
 		ReactionChange12,
-		// Token: 0x0400A70E RID: 42766
+		// Token: 0x0400AB9B RID: 43931
 		[OriginalName("ReactionChange13")]
 		ReactionChange13,
-		// Token: 0x0400A70F RID: 42767
+		// Token: 0x0400AB9C RID: 43932
 		[OriginalName("ReactionChange14")]
 		ReactionChange14,
-		// Token: 0x0400A710 RID: 42768
+		// Token: 0x0400AB9D RID: 43933
 		[OriginalName("ReactionChange15")]
 		ReactionChange15,
-		// Token: 0x0400A711 RID: 42769
+		// Token: 0x0400AB9E RID: 43934
 		[OriginalName("EnergyMax")]
 		EnergyMax,
-		// Token: 0x0400A712 RID: 42770
+		// Token: 0x0400AB9F RID: 43935
 		[OriginalName("Energy")]
 		Energy,
-		// Token: 0x0400A713 RID: 42771
+		// Token: 0x0400ABA0 RID: 43936
 		[OriginalName("SpecialEnergy1Max")]
 		SpecialEnergy1Max,
-		// Token: 0x0400A714 RID: 42772
+		// Token: 0x0400ABA1 RID: 43937
 		[OriginalName("SpecialEnergy1")]
 		SpecialEnergy1,
-		// Token: 0x0400A715 RID: 42773
+		// Token: 0x0400ABA2 RID: 43938
 		[OriginalName("SpecialEnergy2Max")]
 		SpecialEnergy2Max,
-		// Token: 0x0400A716 RID: 42774
+		// Token: 0x0400ABA3 RID: 43939
 		[OriginalName("SpecialEnergy2")]
 		SpecialEnergy2,
-		// Token: 0x0400A717 RID: 42775
+		// Token: 0x0400ABA4 RID: 43940
 		[OriginalName("SpecialEnergy3Max")]
 		SpecialEnergy3Max,
-		// Token: 0x0400A718 RID: 42776
+		// Token: 0x0400ABA5 RID: 43941
 		[OriginalName("SpecialEnergy3")]
 		SpecialEnergy3,
-		// Token: 0x0400A719 RID: 42777
+		// Token: 0x0400ABA6 RID: 43942
 		[OriginalName("SpecialEnergy4Max")]
 		SpecialEnergy4Max,
-		// Token: 0x0400A71A RID: 42778
+		// Token: 0x0400ABA7 RID: 43943
 		[OriginalName("SpecialEnergy4")]
 		SpecialEnergy4,
-		// Token: 0x0400A71B RID: 42779
+		// Token: 0x0400ABA8 RID: 43944
 		[OriginalName("StrengthMax")]
 		StrengthMax,
-		// Token: 0x0400A71C RID: 42780
+		// Token: 0x0400ABA9 RID: 43945
 		[OriginalName("Strength")]
 		Strength,
-		// Token: 0x0400A71D RID: 42781
+		// Token: 0x0400ABAA RID: 43946
 		[OriginalName("StrengthRecover")]
 		StrengthRecover,
-		// Token: 0x0400A71E RID: 42782
+		// Token: 0x0400ABAB RID: 43947
 		[OriginalName("StrengthPunishTime")]
 		StrengthPunishTime,
-		// Token: 0x0400A71F RID: 42783
+		// Token: 0x0400ABAC RID: 43948
 		[OriginalName("StrengthRun")]
 		StrengthRun,
-		// Token: 0x0400A720 RID: 42784
+		// Token: 0x0400ABAD RID: 43949
 		[OriginalName("StrengthSwim")]
 		StrengthSwim,
-		// Token: 0x0400A721 RID: 42785
+		// Token: 0x0400ABAE RID: 43950
 		[OriginalName("StrengthFastSwim")]
 		StrengthFastSwim,
-		// Token: 0x0400A722 RID: 42786
+		// Token: 0x0400ABAF RID: 43951
 		[OriginalName("ElementEnergyMax")]
 		ElementEnergyMax,
-		// Token: 0x0400A723 RID: 42787
+		// Token: 0x0400ABB0 RID: 43952
 		[OriginalName("ElementEnergy")]
 		ElementEnergy,
-		// Token: 0x0400A724 RID: 42788
+		// Token: 0x0400ABB1 RID: 43953
 		[OriginalName("HardnessMax")]
 		HardnessMax,
-		// Token: 0x0400A725 RID: 42789
+		// Token: 0x0400ABB2 RID: 43954
 		[OriginalName("Hardness")]
 		Hardness,
-		// Token: 0x0400A726 RID: 42790
+		// Token: 0x0400ABB3 RID: 43955
 		[OriginalName("HardnessRecover")]
 		HardnessRecover,
-		// Token: 0x0400A727 RID: 42791
+		// Token: 0x0400ABB4 RID: 43956
 		[OriginalName("HardnessPunishTime")]
 		HardnessPunishTime,
-		// Token: 0x0400A728 RID: 42792
+		// Token: 0x0400ABB5 RID: 43957
 		[OriginalName("HardnessChange")]
 		HardnessChange,
-		// Token: 0x0400A729 RID: 42793
+		// Token: 0x0400ABB6 RID: 43958
 		[OriginalName("HardnessReduce")]
 		HardnessReduce,
-		// Token: 0x0400A72A RID: 42794
+		// Token: 0x0400ABB7 RID: 43959
 		[OriginalName("ToughMax")]
 		ToughMax,
-		// Token: 0x0400A72B RID: 42795
+		// Token: 0x0400ABB8 RID: 43960
 		[OriginalName("Tough")]
 		Tough,
-		// Token: 0x0400A72C RID: 42796
+		// Token: 0x0400ABB9 RID: 43961
 		[OriginalName("ToughRecover")]
 		ToughRecover,
-		// Token: 0x0400A72D RID: 42797
+		// Token: 0x0400ABBA RID: 43962
 		[OriginalName("ToughChange")]
 		ToughChange,
-		// Token: 0x0400A72E RID: 42798
+		// Token: 0x0400ABBB RID: 43963
 		[OriginalName("ToughReduce")]
 		ToughReduce,
-		// Token: 0x0400A72F RID: 42799
+		// Token: 0x0400ABBC RID: 43964
 		[OriginalName("ElementPower1")]
 		ElementPower1,
-		// Token: 0x0400A730 RID: 42800
+		// Token: 0x0400ABBD RID: 43965
 		[OriginalName("ElementPower2")]
 		ElementPower2,
-		// Token: 0x0400A731 RID: 42801
+		// Token: 0x0400ABBE RID: 43966
 		[OriginalName("ElementPower3")]
 		ElementPower3,
-		// Token: 0x0400A732 RID: 42802
+		// Token: 0x0400ABBF RID: 43967
 		[OriginalName("ElementPower4")]
 		ElementPower4,
-		// Token: 0x0400A733 RID: 42803
+		// Token: 0x0400ABC0 RID: 43968
 		[OriginalName("ElementPower5")]
 		ElementPower5,
-		// Token: 0x0400A734 RID: 42804
+		// Token: 0x0400ABC1 RID: 43969
 		[OriginalName("ElementPower6")]
 		ElementPower6,
-		// Token: 0x0400A735 RID: 42805
+		// Token: 0x0400ABC2 RID: 43970
 		[OriginalName("SpecialDamageChange")]
 		SpecialDamageChange,
-		// Token: 0x0400A736 RID: 42806
+		// Token: 0x0400ABC3 RID: 43971
 		[OriginalName("StrengthFastClimbCost")]
 		StrengthFastClimbCost,
-		// Token: 0x0400A737 RID: 42807
+		// Token: 0x0400ABC4 RID: 43972
 		[OriginalName("ElementPropertyType")]
 		ElementPropertyType,
-		// Token: 0x0400A738 RID: 42808
+		// Token: 0x0400ABC5 RID: 43973
 		[OriginalName("WeakTime")]
 		WeakTime,
-		// Token: 0x0400A739 RID: 42809
+		// Token: 0x0400ABC6 RID: 43974
 		[OriginalName("IgnoreDefRate")]
 		IgnoreDefRate,
-		// Token: 0x0400A73A RID: 42810
+		// Token: 0x0400ABC7 RID: 43975
 		[OriginalName("IgnoreDamageResistancePhys")]
 		IgnoreDamageResistancePhys,
-		// Token: 0x0400A73B RID: 42811
+		// Token: 0x0400ABC8 RID: 43976
 		[OriginalName("IgnoreDamageResistanceElement1")]
 		IgnoreDamageResistanceElement1,
-		// Token: 0x0400A73C RID: 42812
+		// Token: 0x0400ABC9 RID: 43977
 		[OriginalName("IgnoreDamageResistanceElement2")]
 		IgnoreDamageResistanceElement2,
-		// Token: 0x0400A73D RID: 42813
+		// Token: 0x0400ABCA RID: 43978
 		[OriginalName("IgnoreDamageResistanceElement3")]
 		IgnoreDamageResistanceElement3,
-		// Token: 0x0400A73E RID: 42814
+		// Token: 0x0400ABCB RID: 43979
 		[OriginalName("IgnoreDamageResistanceElement4")]
 		IgnoreDamageResistanceElement4,
-		// Token: 0x0400A73F RID: 42815
+		// Token: 0x0400ABCC RID: 43980
 		[OriginalName("IgnoreDamageResistanceElement5")]
 		IgnoreDamageResistanceElement5,
-		// Token: 0x0400A740 RID: 42816
+		// Token: 0x0400ABCD RID: 43981
 		[OriginalName("IgnoreDamageResistanceElement6")]
 		IgnoreDamageResistanceElement6,
-		// Token: 0x0400A741 RID: 42817
+		// Token: 0x0400ABCE RID: 43982
 		[OriginalName("SkillToughRatio")]
 		SkillToughRatio,
-		// Token: 0x0400A742 RID: 42818
+		// Token: 0x0400ABCF RID: 43983
 		[OriginalName("StrengthClimbJump")]
 		StrengthClimbJump,
-		// Token: 0x0400A743 RID: 42819
+		// Token: 0x0400ABD0 RID: 43984
 		[OriginalName("StrengthGliding")]
 		StrengthGliding,
-		// Token: 0x0400A744 RID: 42820
+		// Token: 0x0400ABD1 RID: 43985
 		[OriginalName("Mass")]
 		Mass,
-		// Token: 0x0400A745 RID: 42821
+		// Token: 0x0400ABD2 RID: 43986
 		[OriginalName("BrakingFrictionFactor")]
 		BrakingFrictionFactor,
-		// Token: 0x0400A746 RID: 42822
+		// Token: 0x0400ABD3 RID: 43987
 		[OriginalName("GravityScale")]
 		GravityScale,
-		// Token: 0x0400A747 RID: 42823
+		// Token: 0x0400ABD4 RID: 43988
 		[OriginalName("SpeedRatio")]
 		SpeedRatio,
-		// Token: 0x0400A748 RID: 42824
+		// Token: 0x0400ABD5 RID: 43989
 		[OriginalName("DamageChangePhantom")]
 		DamageChangePhantom,
-		// Token: 0x0400A749 RID: 42825
+		// Token: 0x0400ABD6 RID: 43990
 		[OriginalName("AutoAttackSpeed")]
 		AutoAttackSpeed,
-		// Token: 0x0400A74A RID: 42826
+		// Token: 0x0400ABD7 RID: 43991
 		[OriginalName("CastAttackSpeed")]
 		CastAttackSpeed,
-		// Token: 0x0400A74B RID: 42827
+		// Token: 0x0400ABD8 RID: 43992
 		[OriginalName("StatusBuildUp1Max")]
 		StatusBuildUp1Max,
-		// Token: 0x0400A74C RID: 42828
+		// Token: 0x0400ABD9 RID: 43993
 		[OriginalName("StatusBuildUp1")]
 		StatusBuildUp1,
-		// Token: 0x0400A74D RID: 42829
+		// Token: 0x0400ABDA RID: 43994
 		[OriginalName("StatusBuildUp2Max")]
 		StatusBuildUp2Max,
-		// Token: 0x0400A74E RID: 42830
+		// Token: 0x0400ABDB RID: 43995
 		[OriginalName("StatusBuildUp2")]
 		StatusBuildUp2,
-		// Token: 0x0400A74F RID: 42831
+		// Token: 0x0400ABDC RID: 43996
 		[OriginalName("StatusBuildUp3Max")]
 		StatusBuildUp3Max,
-		// Token: 0x0400A750 RID: 42832
+		// Token: 0x0400ABDD RID: 43997
 		[OriginalName("StatusBuildUp3")]
 		StatusBuildUp3,
-		// Token: 0x0400A751 RID: 42833
+		// Token: 0x0400ABDE RID: 43998
 		[OriginalName("StatusBuildUp4Max")]
 		StatusBuildUp4Max,
-		// Token: 0x0400A752 RID: 42834
+		// Token: 0x0400ABDF RID: 43999
 		[OriginalName("StatusBuildUp4")]
 		StatusBuildUp4,
-		// Token: 0x0400A753 RID: 42835
+		// Token: 0x0400ABE0 RID: 44000
 		[OriginalName("StatusBuildUp5Max")]
 		StatusBuildUp5Max,
-		// Token: 0x0400A754 RID: 42836
+		// Token: 0x0400ABE1 RID: 44001
 		[OriginalName("StatusBuildUp5")]
 		StatusBuildUp5,
-		// Token: 0x0400A755 RID: 42837
+		// Token: 0x0400ABE2 RID: 44002
 		[OriginalName("RageMax")]
 		RageMax,
-		// Token: 0x0400A756 RID: 42838
+		// Token: 0x0400ABE3 RID: 44003
 		[OriginalName("Rage")]
 		Rage,
-		// Token: 0x0400A757 RID: 42839
+		// Token: 0x0400ABE4 RID: 44004
 		[OriginalName("RageRecover")]
 		RageRecover,
-		// Token: 0x0400A758 RID: 42840
+		// Token: 0x0400ABE5 RID: 44005
 		[OriginalName("RagePunishTime")]
 		RagePunishTime,
-		// Token: 0x0400A759 RID: 42841
+		// Token: 0x0400ABE6 RID: 44006
 		[OriginalName("RageChange")]
 		RageChange,
-		// Token: 0x0400A75A RID: 42842
+		// Token: 0x0400ABE7 RID: 44007
 		[OriginalName("RageReduce")]
 		RageReduce,
-		// Token: 0x0400A75B RID: 42843
+		// Token: 0x0400ABE8 RID: 44008
 		[OriginalName("ToughRecoverDelayTime")]
 		ToughRecoverDelayTime,
-		// Token: 0x0400A75C RID: 42844
+		// Token: 0x0400ABE9 RID: 44009
 		[OriginalName("Jump")]
 		Jump,
-		// Token: 0x0400A75D RID: 42845
+		// Token: 0x0400ABEA RID: 44010
 		[OriginalName("ParalysisTimeMax")]
 		ParalysisTimeMax,
-		// Token: 0x0400A75E RID: 42846
+		// Token: 0x0400ABEB RID: 44011
 		[OriginalName("ParalysisTime")]
 		ParalysisTime,
-		// Token: 0x0400A75F RID: 42847
+		// Token: 0x0400ABEC RID: 44012
 		[OriginalName("ParalysisTimeRecover")]
 		ParalysisTimeRecover,
-		// Token: 0x0400A760 RID: 42848
+		// Token: 0x0400ABED RID: 44013
 		[OriginalName("WeaknessBuildUp")]
 		WeaknessBuildUp,
-		// Token: 0x0400A761 RID: 42849
+		// Token: 0x0400ABEE RID: 44014
 		[OriginalName("WeaknessBuildUpMax")]
 		WeaknessBuildUpMax,
-		// Token: 0x0400A762 RID: 42850
+		// Token: 0x0400ABEF RID: 44015
 		[OriginalName("WeaknessTotalBonus")]
 		WeaknessTotalBonus,
-		// Token: 0x0400A763 RID: 42851
+		// Token: 0x0400ABF0 RID: 44016
 		[OriginalName("BreakWeaknessRatio")]
 		BreakWeaknessRatio,
-		// Token: 0x0400A764 RID: 42852
+		// Token: 0x0400ABF1 RID: 44017
 		[OriginalName("WeaknessMastery")]
 		WeaknessMastery,
-		// Token: 0x0400A765 RID: 42853
+		// Token: 0x0400ABF2 RID: 44018
 		[OriginalName("EAttributeType_MAX")]
 		Max
 	}

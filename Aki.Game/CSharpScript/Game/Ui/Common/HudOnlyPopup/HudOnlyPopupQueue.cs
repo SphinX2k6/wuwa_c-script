@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 {
-	// Token: 0x020046EE RID: 18158
+	// Token: 0x0200361E RID: 13854
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HudOnlyPopupQueue
 	{
-		// Token: 0x17007689 RID: 30345
-		// (get) Token: 0x0602F7D8 RID: 194520 RVA: 0x00B021DD File Offset: 0x00B003DD
+		// Token: 0x17004945 RID: 18757
+		// (get) Token: 0x06023FA1 RID: 147361 RVA: 0x00A32019 File Offset: 0x00A30219
 		public bool IsEmpty
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			}
 		}
 
-		// Token: 0x1700768A RID: 30346
-		// (get) Token: 0x0602F7D9 RID: 194521 RVA: 0x00B021ED File Offset: 0x00B003ED
+		// Token: 0x17004946 RID: 18758
+		// (get) Token: 0x06023FA2 RID: 147362 RVA: 0x00A32029 File Offset: 0x00A30229
 		public int Length
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			}
 		}
 
-		// Token: 0x0602F7DA RID: 194522 RVA: 0x00B021FC File Offset: 0x00B003FC
+		// Token: 0x06023FA3 RID: 147363 RVA: 0x00A32038 File Offset: 0x00A30238
 		public unsafe void Push(HudOnlyPopupTask task)
 		{
 			if (task.DedupKey != null && this.HasKey(task.DedupKey))
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			this.Tasks.Add(task);
 		}
 
-		// Token: 0x0602F7DB RID: 194523 RVA: 0x00B0228E File Offset: 0x00B0048E
+		// Token: 0x06023FA4 RID: 147364 RVA: 0x00A320CA File Offset: 0x00A302CA
 		[NullableContext(2)]
 		public HudOnlyPopupTask Shift()
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			return result;
 		}
 
-		// Token: 0x0602F7DC RID: 194524 RVA: 0x00B022B8 File Offset: 0x00B004B8
+		// Token: 0x06023FA5 RID: 147365 RVA: 0x00A320F4 File Offset: 0x00A302F4
 		public bool RemoveByKey(string dedupKey)
 		{
 			for (int i = 0; i < this.Tasks.Count; i++)
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			return false;
 		}
 
-		// Token: 0x0602F7DD RID: 194525 RVA: 0x00B02303 File Offset: 0x00B00503
+		// Token: 0x06023FA6 RID: 147366 RVA: 0x00A3213F File Offset: 0x00A3033F
 		public void Clear()
 		{
 			this.Tasks.Clear();
 		}
 
-		// Token: 0x0602F7DE RID: 194526 RVA: 0x00B02310 File Offset: 0x00B00510
+		// Token: 0x06023FA7 RID: 147367 RVA: 0x00A3214C File Offset: 0x00A3034C
 		private bool HasKey(string dedupKey)
 		{
 			using (List<HudOnlyPopupTask>.Enumerator enumerator = this.Tasks.GetEnumerator())
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			return false;
 		}
 
-		// Token: 0x04019A7B RID: 105083
+		// Token: 0x0401412A RID: 82218
 		private readonly List<HudOnlyPopupTask> Tasks = new List<HudOnlyPopupTask>();
 	}
 }

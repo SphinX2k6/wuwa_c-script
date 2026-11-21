@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200275D RID: 10077
+	// Token: 0x02002A29 RID: 10793
 	public class ISheriffStartTrack : ICommonTipType
 	{
-		// Token: 0x0600E085 RID: 57477 RVA: 0x00213195 File Offset: 0x00211395
-		[NullableContext(1)]
+		// Token: 0x0600EE85 RID: 61061 RVA: 0x0022FCCD File Offset: 0x0022DECD
 		public static ISheriffStartTrack Create(ISheriffStartTrack? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700438D RID: 17293
-		// (get) Token: 0x0600E086 RID: 57478 RVA: 0x002131B4 File Offset: 0x002113B4
+		// Token: 0x170046E1 RID: 18145
+		// (get) Token: 0x0600EE86 RID: 61062 RVA: 0x0022FCEC File Offset: 0x0022DEEC
 		public override ECommonTipType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700438E RID: 17294
-		// (get) Token: 0x0600E087 RID: 57479 RVA: 0x002131C1 File Offset: 0x002113C1
+		// Token: 0x170046E2 RID: 18146
+		// (get) Token: 0x0600EE87 RID: 61063 RVA: 0x0022FCF9 File Offset: 0x0022DEF9
 		public virtual int AnomalyId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C5B RID: 31835
+		// Token: 0x04008309 RID: 33545
 		private ISheriffStartTrack Instance;
 	}
 }

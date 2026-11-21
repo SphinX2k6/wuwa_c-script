@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FDB RID: 24539
+	// Token: 0x02006635 RID: 26165
 	public enum EPostAkEvent : byte
 	{
-		// Token: 0x0400FF6A RID: 65386
+		// Token: 0x04010D3B RID: 68923
 		Global,
-		// Token: 0x0400FF6B RID: 65387
+		// Token: 0x04010D3C RID: 68924
 		Target,
-		// Token: 0x0400FF6C RID: 65388
+		// Token: 0x04010D3D RID: 68925
 		Map,
-		// Token: 0x0400FF6D RID: 65389
+		// Token: 0x04010D3E RID: 68926
 		MusicSubtitle
 	}
 }

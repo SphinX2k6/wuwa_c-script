@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006308 RID: 25352
+	// Token: 0x02005286 RID: 21126
 	public class PinballRoleBdItem : UiPanelBase
 	{
-		// Token: 0x0603FCAE RID: 261294 RVA: 0x00F6F7BC File Offset: 0x00F6D9BC
+		// Token: 0x0603496F RID: 215407 RVA: 0x00EB6718 File Offset: 0x00EB4918
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FCAF RID: 261295 RVA: 0x00F6F825 File Offset: 0x00F6DA25
+		// Token: 0x06034970 RID: 215408 RVA: 0x00EB6781 File Offset: 0x00EB4981
 		public void RefreshByBdId(int bdId)
 		{
 			this.BdId = bdId;
 			this.Refresh();
 		}
 
-		// Token: 0x0603FCB0 RID: 261296 RVA: 0x00F6F834 File Offset: 0x00F6DA34
+		// Token: 0x06034971 RID: 215409 RVA: 0x00EB6790 File Offset: 0x00EB4990
 		private void Refresh()
 		{
 			PinballBdConfig? pinballRoleBdConfigById = PinballConfig.Instance.GetPinballRoleBdConfigById(this.BdId);
@@ -43,15 +43,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.SetTextureByPath(pinballRoleBdConfigById.Value.Icon, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x040214B7 RID: 136375
+		// Token: 0x0401BDE6 RID: 114150
 		private int BdId;
 
-		// Token: 0x0200C501 RID: 50433
+		// Token: 0x0200AEE8 RID: 44776
 		private enum EComponent
 		{
-			// Token: 0x0403B750 RID: 243536
+			// Token: 0x040360B2 RID: 221362
 			BgSprite,
-			// Token: 0x0403B751 RID: 243537
+			// Token: 0x040360B3 RID: 221363
 			IconTexture
 		}
 	}

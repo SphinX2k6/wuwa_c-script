@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F7E RID: 28542
+	// Token: 0x020060FF RID: 24831
 	public class LevelFlowCameraShake : LevelFlowActionBase
 	{
-		// Token: 0x060456CD RID: 284365 RVA: 0x01136F95 File Offset: 0x01135195
+		// Token: 0x0603B87B RID: 243835 RVA: 0x010E0D99 File Offset: 0x010DEF99
 		[NullableContext(1)]
 		public LevelFlowCameraShake Init(TriggerCameraShake shakeParam)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456CE RID: 284366 RVA: 0x01136FA0 File Offset: 0x011351A0
+		// Token: 0x0603B87C RID: 243836 RVA: 0x010E0DA4 File Offset: 0x010DEFA4
 		protected unsafe override void OnExecute()
 		{
 			TriggerCameraShake shakeParam = this.ShakeParam;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 							return;
 						}
 						CameraController instance5 = CameraController.Instance;
-						TSubclassOf<UCameraShakeBase> shakeClass = csClass;
+						TSubclassOf<UCameraShakeBase>? shakeClass = new TSubclassOf<UCameraShakeBase>?(csClass);
 						FVector value = fvector.Value;
 						instance5.PlayWorldCameraShake(shakeClass, new FVectorDouble?(value), (float)linearOverRangeCameraShake.MinRange, (float)linearOverRangeCameraShake.MaxRange, 0f, false, "MainCamera");
 					}
@@ -144,10 +144,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243A9 RID: 148393
+		// Token: 0x0401F65E RID: 128606
 		private const int MAX_SHAKE_DURATION = 60;
 
-		// Token: 0x040243AA RID: 148394
+		// Token: 0x0401F65F RID: 128607
 		[Nullable(2)]
 		private TriggerCameraShake ShakeParam;
 	}

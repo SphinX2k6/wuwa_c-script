@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025D6 RID: 9686
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002895 RID: 10389
 	public class PlaySequenceData : ActionParams
 	{
-		// Token: 0x0600D9BC RID: 55740 RVA: 0x00207821 File Offset: 0x00205A21
+		// Token: 0x0600E784 RID: 59268 RVA: 0x00223ED5 File Offset: 0x002220D5
 		public static PlaySequenceData Create(IPlaySequenceData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FD2 RID: 16338
-		// (get) Token: 0x0600D9BD RID: 55741 RVA: 0x00207840 File Offset: 0x00205A40
+		// Token: 0x17004308 RID: 17160
+		// (get) Token: 0x0600E785 RID: 59269 RVA: 0x00223EF4 File Offset: 0x002220F4
 		public virtual string Path
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD3 RID: 16339
-		// (get) Token: 0x0600D9BE RID: 55742 RVA: 0x00207850 File Offset: 0x00205A50
+		// Token: 0x17004309 RID: 17161
+		// (get) Token: 0x0600E786 RID: 59270 RVA: 0x00223F04 File Offset: 0x00222104
 		public virtual bool? ResetCamera
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD4 RID: 16340
-		// (get) Token: 0x0600D9BF RID: 55743 RVA: 0x00207888 File Offset: 0x00205A88
+		// Token: 0x1700430A RID: 17162
+		// (get) Token: 0x0600E787 RID: 59271 RVA: 0x00223F3C File Offset: 0x0022213C
 		public virtual bool? KeepCamera
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD5 RID: 16341
-		// (get) Token: 0x0600D9C0 RID: 55744 RVA: 0x002078C0 File Offset: 0x00205AC0
+		// Token: 0x1700430B RID: 17163
+		// (get) Token: 0x0600E788 RID: 59272 RVA: 0x00223F74 File Offset: 0x00222174
 		public virtual bool? PreLoadRenderAssets
 		{
 			get
@@ -75,19 +73,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD6 RID: 16342
-		// (get) Token: 0x0600D9C1 RID: 55745 RVA: 0x002078F8 File Offset: 0x00205AF8
+		// Token: 0x1700430C RID: 17164
+		// (get) Token: 0x0600E789 RID: 59273 RVA: 0x00223FAC File Offset: 0x002221AC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISequenceFrameEvent> FrameEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -110,8 +108,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD7 RID: 16343
-		// (get) Token: 0x0600D9C2 RID: 55746 RVA: 0x00207974 File Offset: 0x00205B74
+		// Token: 0x1700430D RID: 17165
+		// (get) Token: 0x0600E78A RID: 59274 RVA: 0x00224028 File Offset: 0x00222228
 		public virtual bool? SaveFinalPos
 		{
 			get
@@ -124,8 +122,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FD8 RID: 16344
-		// (get) Token: 0x0600D9C3 RID: 55747 RVA: 0x002079AB File Offset: 0x00205BAB
+		// Token: 0x1700430E RID: 17166
+		// (get) Token: 0x0600E78B RID: 59275 RVA: 0x0022405F File Offset: 0x0022225F
 		[Nullable(2)]
 		public virtual SetBlendAnim SeqBlendAnim
 		{
@@ -142,25 +140,25 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078EC RID: 30956
+		// Token: 0x04007F83 RID: 32643
 		private IPlaySequenceData Instance;
 
-		// Token: 0x040078ED RID: 30957
+		// Token: 0x04007F84 RID: 32644
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISequenceFrameEvent> _FrameEventsCache;
 
-		// Token: 0x040078EE RID: 30958
+		// Token: 0x04007F85 RID: 32645
 		private bool _FrameEventsInited;
 
-		// Token: 0x040078EF RID: 30959
+		// Token: 0x04007F86 RID: 32646
 		[Nullable(2)]
 		private SetBlendAnim _SeqBlendAnimCache;
 
-		// Token: 0x040078F0 RID: 30960
+		// Token: 0x04007F87 RID: 32647
 		private bool _SeqBlendAnimInited;
 	}
 }

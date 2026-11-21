@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000042 RID: 66
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CollectComponent : IComponentBase
 	{
-		// Token: 0x0600023E RID: 574 RVA: 0x00019168 File Offset: 0x00017368
+		// Token: 0x06000242 RID: 578 RVA: 0x00019ADC File Offset: 0x00017CDC
 		private CollectComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600023F RID: 575 RVA: 0x000191A0 File Offset: 0x000173A0
+		// Token: 0x06000243 RID: 579 RVA: 0x00019B14 File Offset: 0x00017D14
 		public static CollectComponent Create([Nullable(2)] CollectComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000240 RID: 576 RVA: 0x000191B3 File Offset: 0x000173B3
+		// Token: 0x06000244 RID: 580 RVA: 0x00019B27 File Offset: 0x00017D27
 		public static CollectComponent CreateFromSetValue([Nullable(2)] CollectComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000241 RID: 577 RVA: 0x000191C6 File Offset: 0x000173C6
+		// Token: 0x06000245 RID: 581 RVA: 0x00019B3A File Offset: 0x00017D3A
 		public new CollectComponent_SetValue ToSetValue()
 		{
 			return new CollectComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000CE RID: 206
-		// (get) Token: 0x06000242 RID: 578 RVA: 0x000191F4 File Offset: 0x000173F4
-		// (set) Token: 0x06000243 RID: 579 RVA: 0x0001922E File Offset: 0x0001742E
+		// Token: 0x170000D0 RID: 208
+		// (get) Token: 0x06000246 RID: 582 RVA: 0x00019B68 File Offset: 0x00017D68
+		// (set) Token: 0x06000247 RID: 583 RVA: 0x00019BA2 File Offset: 0x00017DA2
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000CF RID: 207
-		// (get) Token: 0x06000244 RID: 580 RVA: 0x0001923C File Offset: 0x0001743C
-		// (set) Token: 0x06000245 RID: 581 RVA: 0x00019266 File Offset: 0x00017466
+		// Token: 0x170000D1 RID: 209
+		// (get) Token: 0x06000248 RID: 584 RVA: 0x00019BB0 File Offset: 0x00017DB0
+		// (set) Token: 0x06000249 RID: 585 RVA: 0x00019BDA File Offset: 0x00017DDA
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D0 RID: 208
-		// (get) Token: 0x06000246 RID: 582 RVA: 0x00019274 File Offset: 0x00017474
-		// (set) Token: 0x06000247 RID: 583 RVA: 0x000192AE File Offset: 0x000174AE
+		// Token: 0x170000D2 RID: 210
+		// (get) Token: 0x0600024A RID: 586 RVA: 0x00019BE8 File Offset: 0x00017DE8
+		// (set) Token: 0x0600024B RID: 587 RVA: 0x00019C22 File Offset: 0x00017E22
 		public virtual bool? IsDisableOneClickCollection
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000171 RID: 369
+		// Token: 0x04000176 RID: 374
 		[Nullable(2)]
 		protected new CollectComponent FbInstance;
 
-		// Token: 0x04000172 RID: 370
+		// Token: 0x04000177 RID: 375
 		[Nullable(2)]
 		protected new CollectComponent_SetValue PocoInterface;
 	}

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.TrainingDegree
 {
-	// Token: 0x02004AF6 RID: 19190
+	// Token: 0x02003A9E RID: 15006
 	public enum ETrainingType
 	{
-		// Token: 0x0401A8A5 RID: 108709
+		// Token: 0x040151F7 RID: 86519
 		RoleLevel,
-		// Token: 0x0401A8A6 RID: 108710
+		// Token: 0x040151F8 RID: 86520
 		WeaponLevel,
-		// Token: 0x0401A8A7 RID: 108711
+		// Token: 0x040151F9 RID: 86521
 		EquipLevel,
-		// Token: 0x0401A8A8 RID: 108712
+		// Token: 0x040151FA RID: 86522
 		SkillLevel
 	}
 }

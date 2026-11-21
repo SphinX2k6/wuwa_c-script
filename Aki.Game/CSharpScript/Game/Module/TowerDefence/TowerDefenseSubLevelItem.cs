@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B53 RID: 19283
+	// Token: 0x02003AFB RID: 15099
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseSubLevelItem : GridProxyAbstract<TowerDefenseSubLevelData>
 	{
-		// Token: 0x06031EF0 RID: 204528 RVA: 0x00B9603C File Offset: 0x00B9423C
+		// Token: 0x06026C7F RID: 158847 RVA: 0x00ADA278 File Offset: 0x00AD8478
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031EF1 RID: 204529 RVA: 0x00B961EC File Offset: 0x00B943EC
+		// Token: 0x06026C80 RID: 158848 RVA: 0x00ADA428 File Offset: 0x00AD8628
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			extendToggle.OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x06031EF2 RID: 204530 RVA: 0x00B96238 File Offset: 0x00B94438
+		// Token: 0x06026C81 RID: 158849 RVA: 0x00ADA474 File Offset: 0x00AD8674
 		public override void Refresh(TowerDefenseSubLevelData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshSelectionVisual();
 		}
 
-		// Token: 0x06031EF3 RID: 204531 RVA: 0x00B96414 File Offset: 0x00B94614
+		// Token: 0x06026C82 RID: 158850 RVA: 0x00ADA650 File Offset: 0x00AD8850
 		private void RefreshHardSubDescText(UUIText descTxt, bool unlocked, bool passed)
 		{
 			if (!unlocked)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(descTxt, "TowerDefence_SubLevelUnpassed", Array.Empty<object>());
 		}
 
-		// Token: 0x06031EF4 RID: 204532 RVA: 0x00B96468 File Offset: 0x00B94668
+		// Token: 0x06026C83 RID: 158851 RVA: 0x00ADA6A4 File Offset: 0x00AD88A4
 		private void RefreshTransitionColors(bool isNormal)
 		{
 			UUIExtendToggleTextTransition uiExtendToggleTextTransition = base.GetUiExtendToggleTextTransition(8);
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EF5 RID: 204533 RVA: 0x00B964D8 File Offset: 0x00B946D8
+		// Token: 0x06026C84 RID: 158852 RVA: 0x00ADA714 File Offset: 0x00AD8914
 		private void SetTextTransitionColor(UUIExtendToggleTextTransition transition, string uncheckedHex, string checkedHex)
 		{
 			FExtendToggleTextTransitionState transitionState = transition.TransitionState;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			transition.TransitionState = transitionState;
 		}
 
-		// Token: 0x06031EF6 RID: 204534 RVA: 0x00B96565 File Offset: 0x00B94765
+		// Token: 0x06026C85 RID: 158853 RVA: 0x00ADA7A1 File Offset: 0x00AD89A1
 		private FTextTransitionInfoOfState BuildTextStateColor(FTextTransitionInfoOfState state, string hex)
 		{
 			state.bSetFontColor = true;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return state;
 		}
 
-		// Token: 0x06031EF7 RID: 204535 RVA: 0x00B9657C File Offset: 0x00B9477C
+		// Token: 0x06026C86 RID: 158854 RVA: 0x00ADA7B8 File Offset: 0x00AD89B8
 		public void RefreshSelectionVisual()
 		{
 			if (this.Data == null)
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031EF8 RID: 204536 RVA: 0x00B965F0 File Offset: 0x00B947F0
+		// Token: 0x06026C87 RID: 158855 RVA: 0x00ADA82C File Offset: 0x00AD8A2C
 		public void RefreshRedDot()
 		{
 			if (this.Data == null)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			item.SetUIActive(TowerDefenseModel.Instance.CheckTowerDefenseInstanceHasRedDot(instanceId));
 		}
 
-		// Token: 0x06031EF9 RID: 204537 RVA: 0x00B96654 File Offset: 0x00B94854
+		// Token: 0x06026C88 RID: 158856 RVA: 0x00ADA890 File Offset: 0x00AD8A90
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.Data == null)
@@ -256,13 +256,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06031EFA RID: 204538 RVA: 0x00B966D6 File Offset: 0x00B948D6
+		// Token: 0x06026C89 RID: 158857 RVA: 0x00ADA912 File Offset: 0x00AD8B12
 		private bool OnCanExecuteChange()
 		{
 			return this.Data != null && TowerDefenseController.Instance.CheckStageSelectableById(this.Data.StageId);
 		}
 
-		// Token: 0x06031EFB RID: 204539 RVA: 0x00B966F7 File Offset: 0x00B948F7
+		// Token: 0x06026C8A RID: 158858 RVA: 0x00ADA933 File Offset: 0x00AD8B33
 		private void OnUndeterminedClicked()
 		{
 			if (this.Data != null && !TowerDefenseController.Instance.CheckStageSelectableById(this.Data.StageId))
@@ -271,66 +271,66 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401AA15 RID: 109077
+		// Token: 0x04015367 RID: 86887
 		private const string SubNormalTitleUncheckedColor = "adc2cd";
 
-		// Token: 0x0401AA16 RID: 109078
+		// Token: 0x04015368 RID: 86888
 		private const string SubNormalTitleCheckedColor = "182b34";
 
-		// Token: 0x0401AA17 RID: 109079
+		// Token: 0x04015369 RID: 86889
 		private const string SubNormalDescUncheckedColor = "5d6e77";
 
-		// Token: 0x0401AA18 RID: 109080
+		// Token: 0x0401536A RID: 86890
 		private const string SubNormalDescCheckedColor = "182b34";
 
-		// Token: 0x0401AA19 RID: 109081
+		// Token: 0x0401536B RID: 86891
 		private const string SubHardTitleUncheckedColor = "dad1cc";
 
-		// Token: 0x0401AA1A RID: 109082
+		// Token: 0x0401536C RID: 86892
 		private const string SubHardTitleCheckedColor = "dad1cc";
 
-		// Token: 0x0401AA1B RID: 109083
+		// Token: 0x0401536D RID: 86893
 		private const string SubHardDescUncheckedColor = "dad1cc7f";
 
-		// Token: 0x0401AA1C RID: 109084
+		// Token: 0x0401536E RID: 86894
 		private const string SubHardDescCheckedColor = "dad1cc7f";
 
-		// Token: 0x0401AA1D RID: 109085
+		// Token: 0x0401536F RID: 86895
 		[Nullable(2)]
 		private TowerDefenseSubLevelData Data;
 
-		// Token: 0x0200ACD7 RID: 44247
+		// Token: 0x020096F6 RID: 38646
 		[NullableContext(0)]
 		private class ESubLevelItemComponent
 		{
-			// Token: 0x04034841 RID: 215105
+			// Token: 0x0402F1EA RID: 193002
 			public const int Toggle = 0;
 
-			// Token: 0x04034842 RID: 215106
+			// Token: 0x0402F1EB RID: 193003
 			public const int NormalPnl = 1;
 
-			// Token: 0x04034843 RID: 215107
+			// Token: 0x0402F1EC RID: 193004
 			public const int DifficultPnl = 2;
 
-			// Token: 0x04034844 RID: 215108
+			// Token: 0x0402F1ED RID: 193005
 			public const int TitleTxt = 3;
 
-			// Token: 0x04034845 RID: 215109
+			// Token: 0x0402F1EE RID: 193006
 			public const int DescTxt = 4;
 
-			// Token: 0x04034846 RID: 215110
+			// Token: 0x0402F1EF RID: 193007
 			public const int LockPnl = 5;
 
-			// Token: 0x04034847 RID: 215111
+			// Token: 0x0402F1F0 RID: 193008
 			public const int FinishPnl = 6;
 
-			// Token: 0x04034848 RID: 215112
+			// Token: 0x0402F1F1 RID: 193009
 			public const int RedDotItem = 7;
 
-			// Token: 0x04034849 RID: 215113
+			// Token: 0x0402F1F2 RID: 193010
 			public const int TitleTransition = 8;
 
-			// Token: 0x0403484A RID: 215114
+			// Token: 0x0402F1F3 RID: 193011
 			public const int DescTransition = 9;
 		}
 	}

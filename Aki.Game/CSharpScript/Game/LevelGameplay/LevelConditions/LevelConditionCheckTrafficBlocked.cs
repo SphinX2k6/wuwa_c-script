@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CF9 RID: 27897
+	// Token: 0x02005E76 RID: 24182
 	public class LevelConditionCheckTrafficBlocked : LevelConditionBase
 	{
-		// Token: 0x06044695 RID: 280213 RVA: 0x010DFBA8 File Offset: 0x010DDDA8
+		// Token: 0x0603A7F5 RID: 239605 RVA: 0x01089D34 File Offset: 0x01087F34
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

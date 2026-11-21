@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D6C RID: 3436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E66 RID: 3686
 	public class IRenderFogBarrier : IRenderSpecifiedRangeType
 	{
-		// Token: 0x06004E32 RID: 20018 RVA: 0x000C218C File Offset: 0x000C038C
+		// Token: 0x0600534E RID: 21326 RVA: 0x000CD8D0 File Offset: 0x000CBAD0
 		public static IRenderFogBarrier Create(IRenderFogBarrier? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001917 RID: 6423
-		// (get) Token: 0x06004E33 RID: 20019 RVA: 0x000C21AB File Offset: 0x000C03AB
+		// Token: 0x17001A7D RID: 6781
+		// (get) Token: 0x0600534F RID: 21327 RVA: 0x000CD8EF File Offset: 0x000CBAEF
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001918 RID: 6424
-		// (get) Token: 0x06004E34 RID: 20020 RVA: 0x000C21B8 File Offset: 0x000C03B8
+		// Token: 0x17001A7E RID: 6782
+		// (get) Token: 0x06005350 RID: 21328 RVA: 0x000CD8FC File Offset: 0x000CBAFC
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001919 RID: 6425
-		// (get) Token: 0x06004E35 RID: 20021 RVA: 0x000C21E7 File Offset: 0x000C03E7
+		// Token: 0x17001A7F RID: 6783
+		// (get) Token: 0x06005351 RID: 21329 RVA: 0x000CD92B File Offset: 0x000CBB2B
 		public virtual VectorInfo Center
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700191A RID: 6426
-		// (get) Token: 0x06004E36 RID: 20022 RVA: 0x000C221B File Offset: 0x000C041B
+		// Token: 0x17001A80 RID: 6784
+		// (get) Token: 0x06005352 RID: 21330 RVA: 0x000CD95F File Offset: 0x000CBB5F
 		public virtual VectorInfo Size
 		{
 			get
@@ -82,8 +80,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700191B RID: 6427
-		// (get) Token: 0x06004E37 RID: 20023 RVA: 0x000C224F File Offset: 0x000C044F
+		// Token: 0x17001A81 RID: 6785
+		// (get) Token: 0x06005353 RID: 21331 RVA: 0x000CD993 File Offset: 0x000CBB93
 		[Nullable(2)]
 		public virtual VectorInfo Rotator
 		{
@@ -100,34 +98,34 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CCF RID: 11471
+		// Token: 0x04002F8F RID: 12175
 		private IRenderFogBarrier Instance;
 
-		// Token: 0x04002CD0 RID: 11472
+		// Token: 0x04002F90 RID: 12176
 		private ITargetEntityType _CenterTargetCache;
 
-		// Token: 0x04002CD1 RID: 11473
+		// Token: 0x04002F91 RID: 12177
 		private bool _CenterTargetInited;
 
-		// Token: 0x04002CD2 RID: 11474
+		// Token: 0x04002F92 RID: 12178
 		[Nullable(2)]
 		private VectorInfo _CenterCache;
 
-		// Token: 0x04002CD3 RID: 11475
+		// Token: 0x04002F93 RID: 12179
 		private bool _CenterInited;
 
-		// Token: 0x04002CD4 RID: 11476
+		// Token: 0x04002F94 RID: 12180
 		[Nullable(2)]
 		private VectorInfo _SizeCache;
 
-		// Token: 0x04002CD5 RID: 11477
+		// Token: 0x04002F95 RID: 12181
 		private bool _SizeInited;
 
-		// Token: 0x04002CD6 RID: 11478
+		// Token: 0x04002F96 RID: 12182
 		[Nullable(2)]
 		private VectorInfo _RotatorCache;
 
-		// Token: 0x04002CD7 RID: 11479
+		// Token: 0x04002F97 RID: 12183
 		private bool _RotatorInited;
 	}
 }

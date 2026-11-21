@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 {
-	// Token: 0x02004818 RID: 18456
+	// Token: 0x02003749 RID: 14153
 	public class HonamiScanItemPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030536 RID: 197942 RVA: 0x00B375F8 File Offset: 0x00B357F8
+		// Token: 0x06024D06 RID: 150790 RVA: 0x00A676B4 File Offset: 0x00A658B4
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030537 RID: 197943 RVA: 0x00B37600 File Offset: 0x00B35800
+		// Token: 0x06024D07 RID: 150791 RVA: 0x00A676BC File Offset: 0x00A658BC
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(16);
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			base.OnStart();
 		}
 
-		// Token: 0x06030538 RID: 197944 RVA: 0x00B37690 File Offset: 0x00B35890
+		// Token: 0x06024D08 RID: 150792 RVA: 0x00A6774C File Offset: 0x00A6594C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			}
 		}
 
-		// Token: 0x06030539 RID: 197945 RVA: 0x00B37703 File Offset: 0x00B35903
+		// Token: 0x06024D09 RID: 150793 RVA: 0x00A677BF File Offset: 0x00A659BF
 		protected override void UpdateEnableFastMoveLayout()
 		{
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			base.UpdateQuickGotoActive(true);
 		}
 
-		// Token: 0x0603053A RID: 197946 RVA: 0x00B37730 File Offset: 0x00B35930
+		// Token: 0x06024D0A RID: 150794 RVA: 0x00A677EC File Offset: 0x00A659EC
 		private void UpdateDescription()
 		{
 			HonamiScanItemMarkItem honamiScanItemMarkItem = this.LayoutContext.MarkItem as HonamiScanItemMarkItem;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			}
 		}
 
-		// Token: 0x0603053B RID: 197947 RVA: 0x00B3776C File Offset: 0x00B3596C
+		// Token: 0x06024D0B RID: 150795 RVA: 0x00A67828 File Offset: 0x00A65A28
 		private void UpdateTitle()
 		{
 			HonamiScanItemMarkItem honamiScanItemMarkItem = this.LayoutContext.MarkItem as HonamiScanItemMarkItem;
@@ -116,10 +116,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.HonamiPanel
 			}
 		}
 
-		// Token: 0x0200AAEF RID: 43759
+		// Token: 0x0200949E RID: 38046
 		public static class EComponents
 		{
-			// Token: 0x04033F81 RID: 212865
+			// Token: 0x0402E701 RID: 190209
 			public const int HonamiScanItemPanel = 0;
 		}
 	}

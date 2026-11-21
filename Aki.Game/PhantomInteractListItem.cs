@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200247F RID: 9343
+// Token: 0x02001964 RID: 6500
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomInteractListItem : UiPanelBase
 {
-	// Token: 0x1700188F RID: 6287
-	// (get) Token: 0x06012BF7 RID: 76791 RVA: 0x0049FF2A File Offset: 0x0049E12A
+	// Token: 0x170018C9 RID: 6345
+	// (get) Token: 0x060100AE RID: 65710 RVA: 0x004AD682 File Offset: 0x004AB882
 	public int ItemIndex
 	{
 		get
@@ -26,7 +26,7 @@ public class PhantomInteractListItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012BF8 RID: 76792 RVA: 0x0049FF40 File Offset: 0x0049E140
+	// Token: 0x060100AF RID: 65711 RVA: 0x004AD698 File Offset: 0x004AB898
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ public class PhantomInteractListItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012BF9 RID: 76793 RVA: 0x004A0000 File Offset: 0x0049E200
+	// Token: 0x060100B0 RID: 65712 RVA: 0x004AD758 File Offset: 0x004AB958
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomInteractListItem.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -55,13 +55,13 @@ public class PhantomInteractListItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012BFA RID: 76794 RVA: 0x004A0043 File Offset: 0x0049E243
+	// Token: 0x060100B1 RID: 65713 RVA: 0x004AD79B File Offset: 0x004AB99B
 	protected override void OnStart()
 	{
 		base.OnStart();
 	}
 
-	// Token: 0x06012BFB RID: 76795 RVA: 0x004A004B File Offset: 0x0049E24B
+	// Token: 0x060100B2 RID: 65714 RVA: 0x004AD7A3 File Offset: 0x004AB9A3
 	public void DisableToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -72,7 +72,7 @@ public class PhantomInteractListItem : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnDetermined, false, false, false);
 	}
 
-	// Token: 0x06012BFC RID: 76796 RVA: 0x004A0064 File Offset: 0x0049E264
+	// Token: 0x060100B3 RID: 65715 RVA: 0x004AD7BC File Offset: 0x004AB9BC
 	[NullableContext(1)]
 	public UniTask Refresh(IPhantomInteractItemData itemData, bool showIndex, bool needAnim = true)
 	{
@@ -87,7 +87,7 @@ public class PhantomInteractListItem : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012BFD RID: 76797 RVA: 0x004A00BF File Offset: 0x0049E2BF
+	// Token: 0x060100B4 RID: 65716 RVA: 0x004AD817 File Offset: 0x004ABA17
 	public void SetSelected(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -98,7 +98,7 @@ public class PhantomInteractListItem : UiPanelBase
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06012BFE RID: 76798 RVA: 0x004A00DC File Offset: 0x0049E2DC
+	// Token: 0x060100B5 RID: 65717 RVA: 0x004AD834 File Offset: 0x004ABA34
 	private void OnToggleStateChange(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -116,7 +116,7 @@ public class PhantomInteractListItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012BFF RID: 76799 RVA: 0x004A0136 File Offset: 0x0049E336
+	// Token: 0x060100B6 RID: 65718 RVA: 0x004AD88E File Offset: 0x004ABA8E
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -127,22 +127,22 @@ public class PhantomInteractListItem : UiPanelBase
 		this.SeqPlayer = null;
 	}
 
-	// Token: 0x04008D36 RID: 36150
+	// Token: 0x04008E7D RID: 36477
 	private PhantomInteractListItemSlotIndexPanel SlotIndexPanel;
 
-	// Token: 0x04008D37 RID: 36151
+	// Token: 0x04008E7E RID: 36478
 	private IPhantomInteractItemData ItemData;
 
-	// Token: 0x04008D38 RID: 36152
+	// Token: 0x04008E7F RID: 36479
 	private PhantomInteractListItemSkillTagPanel SkillTagPanel;
 
-	// Token: 0x04008D39 RID: 36153
+	// Token: 0x04008E80 RID: 36480
 	private int? CurrentMonsterId;
 
-	// Token: 0x04008D3A RID: 36154
+	// Token: 0x04008E81 RID: 36481
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008D3B RID: 36155
+	// Token: 0x04008E82 RID: 36482
 	[Nullable(new byte[]
 	{
 		2,
@@ -150,7 +150,7 @@ public class PhantomInteractListItem : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData> OnClickCb;
 
-	// Token: 0x04008D3C RID: 36156
+	// Token: 0x04008E83 RID: 36483
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,7 +158,7 @@ public class PhantomInteractListItem : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData, bool> OnHoverCb;
 
-	// Token: 0x04008D3D RID: 36157
+	// Token: 0x04008E84 RID: 36484
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,7 +166,7 @@ public class PhantomInteractListItem : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData> OnPointerDownCb;
 
-	// Token: 0x04008D3E RID: 36158
+	// Token: 0x04008E85 RID: 36485
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,7 +174,7 @@ public class PhantomInteractListItem : UiPanelBase
 	})]
 	public Action<IPhantomInteractItemData> OnPointerUpCb;
 
-	// Token: 0x04008D3F RID: 36159
+	// Token: 0x04008E86 RID: 36486
 	[Nullable(new byte[]
 	{
 		2,
@@ -183,21 +183,21 @@ public class PhantomInteractListItem : UiPanelBase
 	})]
 	public Action<PhantomInteractListItem, IPhantomInteractItemData, bool> OnToggleStateChangeCb;
 
-	// Token: 0x020089F3 RID: 35315
+	// Token: 0x02007B7A RID: 31610
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CCCD RID: 183501
+		// Token: 0x04027FE3 RID: 163811
 		TogItem,
-		// Token: 0x0402CCCE RID: 183502
+		// Token: 0x04027FE4 RID: 163812
 		TexIcon,
-		// Token: 0x0402CCCF RID: 183503
+		// Token: 0x04027FE5 RID: 163813
 		ItemTagRight,
-		// Token: 0x0402CCD0 RID: 183504
+		// Token: 0x04027FE6 RID: 163814
 		ItemTagLeft,
-		// Token: 0x0402CCD1 RID: 183505
+		// Token: 0x04027FE7 RID: 163815
 		ItemSpriteEmptyAdd,
-		// Token: 0x0402CCD2 RID: 183506
+		// Token: 0x04027FE8 RID: 163816
 		ItemFXSelected
 	}
 }

@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A96 RID: 2710
+	// Token: 0x02000B60 RID: 2912
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AiComponent : IComponentBase
 	{
-		// Token: 0x06003E4F RID: 15951 RVA: 0x0009F7BA File Offset: 0x0009D9BA
-		[NullableContext(1)]
+		// Token: 0x06004278 RID: 17016 RVA: 0x000A8D72 File Offset: 0x000A6F72
+		[NullableContext(0)]
 		public static AiComponent Create(IAiComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EE0 RID: 3808
-		// (get) Token: 0x06003E50 RID: 15952 RVA: 0x0009F7DC File Offset: 0x0009D9DC
+		// Token: 0x17000FB3 RID: 4019
+		// (get) Token: 0x06004279 RID: 17017 RVA: 0x000A8D94 File Offset: 0x000A6F94
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE1 RID: 3809
-		// (get) Token: 0x06003E51 RID: 15953 RVA: 0x0009F814 File Offset: 0x0009DA14
+		// Token: 0x17000FB4 RID: 4020
+		// (get) Token: 0x0600427A RID: 17018 RVA: 0x000A8DCC File Offset: 0x000A6FCC
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE2 RID: 3810
-		// (get) Token: 0x06003E52 RID: 15954 RVA: 0x0009F82A File Offset: 0x0009DA2A
+		// Token: 0x17000FB5 RID: 4021
+		// (get) Token: 0x0600427B RID: 17019 RVA: 0x000A8DE2 File Offset: 0x000A6FE2
 		public virtual int AiId
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE3 RID: 3811
-		// (get) Token: 0x06003E53 RID: 15955 RVA: 0x0009F837 File Offset: 0x0009DA37
+		// Token: 0x17000FB6 RID: 4022
+		// (get) Token: 0x0600427C RID: 17020 RVA: 0x000A8DEF File Offset: 0x000A6FEF
 		public virtual IPatrol Patrol
 		{
 			get
@@ -75,12 +75,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE4 RID: 3812
-		// (get) Token: 0x06003E54 RID: 15956 RVA: 0x0009F86B File Offset: 0x0009DA6B
-		[Nullable(1)]
+		// Token: 0x17000FB7 RID: 4023
+		// (get) Token: 0x0600427D RID: 17021 RVA: 0x000A8E23 File Offset: 0x000A7023
+		[Nullable(0)]
 		public virtual IInitState InitState
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._InitStateInited)
@@ -93,8 +93,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE5 RID: 3813
-		// (get) Token: 0x06003E55 RID: 15957 RVA: 0x0009F89C File Offset: 0x0009DA9C
+		// Token: 0x17000FB8 RID: 4024
+		// (get) Token: 0x0600427E RID: 17022 RVA: 0x000A8E54 File Offset: 0x000A7054
 		public virtual int? CenterPoint
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE6 RID: 3814
-		// (get) Token: 0x06003E56 RID: 15958 RVA: 0x0009F8D2 File Offset: 0x0009DAD2
+		// Token: 0x17000FB9 RID: 4025
+		// (get) Token: 0x0600427F RID: 17023 RVA: 0x000A8E8A File Offset: 0x000A708A
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IBlackBoard> InitBlackBoard
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -137,8 +137,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE7 RID: 3815
-		// (get) Token: 0x06003E57 RID: 15959 RVA: 0x0009F912 File Offset: 0x0009DB12
+		// Token: 0x17000FBA RID: 4026
+		// (get) Token: 0x06004280 RID: 17024 RVA: 0x000A8ECA File Offset: 0x000A70CA
 		public virtual string WeaponId
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE8 RID: 3816
-		// (get) Token: 0x06003E58 RID: 15960 RVA: 0x0009F920 File Offset: 0x0009DB20
+		// Token: 0x17000FBB RID: 4027
+		// (get) Token: 0x06004281 RID: 17025 RVA: 0x000A8ED8 File Offset: 0x000A70D8
 		public virtual int? AiTeamLevelId
 		{
 			get
@@ -161,19 +161,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EE9 RID: 3817
-		// (get) Token: 0x06003E59 RID: 15961 RVA: 0x0009F958 File Offset: 0x0009DB58
+		// Token: 0x17000FBC RID: 4028
+		// (get) Token: 0x06004282 RID: 17026 RVA: 0x000A8F10 File Offset: 0x000A7110
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateRepPerfItem> StateRepPerfList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -196,8 +196,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EEA RID: 3818
-		// (get) Token: 0x06003E5A RID: 15962 RVA: 0x0009F9D3 File Offset: 0x0009DBD3
+		// Token: 0x17000FBD RID: 4029
+		// (get) Token: 0x06004283 RID: 17027 RVA: 0x000A8F8B File Offset: 0x000A718B
 		public virtual IAiAlertSystemConfig AlertSystemConfig
 		{
 			get
@@ -212,48 +212,48 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022B3 RID: 8883
+		// Token: 0x040024CF RID: 9423
 		private IAiComponent Instance;
 
-		// Token: 0x040022B4 RID: 8884
+		// Token: 0x040024D0 RID: 9424
 		private IPatrol _PatrolCache;
 
-		// Token: 0x040022B5 RID: 8885
+		// Token: 0x040024D1 RID: 9425
 		private bool _PatrolInited;
 
-		// Token: 0x040022B6 RID: 8886
-		[Nullable(1)]
+		// Token: 0x040024D2 RID: 9426
+		[Nullable(0)]
 		private IInitState _InitStateCache;
 
-		// Token: 0x040022B7 RID: 8887
+		// Token: 0x040024D3 RID: 9427
 		private bool _InitStateInited;
 
-		// Token: 0x040022B8 RID: 8888
+		// Token: 0x040024D4 RID: 9428
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IBlackBoard> _InitBlackBoardCache;
 
-		// Token: 0x040022B9 RID: 8889
+		// Token: 0x040024D5 RID: 9429
 		private bool _InitBlackBoardInited;
 
-		// Token: 0x040022BA RID: 8890
+		// Token: 0x040024D6 RID: 9430
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateRepPerfItem> _StateRepPerfListCache;
 
-		// Token: 0x040022BB RID: 8891
+		// Token: 0x040024D7 RID: 9431
 		private bool _StateRepPerfListInited;
 
-		// Token: 0x040022BC RID: 8892
+		// Token: 0x040024D8 RID: 9432
 		private IAiAlertSystemConfig _AlertSystemConfigCache;
 
-		// Token: 0x040022BD RID: 8893
+		// Token: 0x040024D9 RID: 9433
 		private bool _AlertSystemConfigInited;
 	}
 }

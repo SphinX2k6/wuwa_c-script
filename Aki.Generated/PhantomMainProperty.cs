@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EEF RID: 3823
+	// Token: 0x02000FD4 RID: 4052
 	public struct PhantomMainProperty : IFlatbufferObject
 	{
-		// Token: 0x17002719 RID: 10009
-		// (get) Token: 0x0600A97F RID: 43391 RVA: 0x002B530D File Offset: 0x002B350D
+		// Token: 0x1700277F RID: 10111
+		// (get) Token: 0x0600AFA0 RID: 44960 RVA: 0x002D2201 File Offset: 0x002D0401
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A980 RID: 43392 RVA: 0x002B531A File Offset: 0x002B351A
+		// Token: 0x0600AFA1 RID: 44961 RVA: 0x002D220E File Offset: 0x002D040E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A981 RID: 43393 RVA: 0x002B5324 File Offset: 0x002B3524
+		// Token: 0x0600AFA2 RID: 44962 RVA: 0x002D2218 File Offset: 0x002D0418
 		public static PhantomMainProperty GetRootAsPhantomMainProperty(ByteBuffer _bb)
 		{
 			return PhantomMainProperty.GetRootAsPhantomMainProperty(_bb, default(PhantomMainProperty));
 		}
 
-		// Token: 0x0600A982 RID: 43394 RVA: 0x002B5340 File Offset: 0x002B3540
+		// Token: 0x0600AFA3 RID: 44963 RVA: 0x002D2234 File Offset: 0x002D0434
 		public static PhantomMainProperty GetRootAsPhantomMainProperty(ByteBuffer _bb, PhantomMainProperty obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A983 RID: 43395 RVA: 0x002B535D File Offset: 0x002B355D
+		// Token: 0x0600AFA4 RID: 44964 RVA: 0x002D2251 File Offset: 0x002D0451
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A984 RID: 43396 RVA: 0x002B536C File Offset: 0x002B356C
+		// Token: 0x0600AFA5 RID: 44965 RVA: 0x002D2260 File Offset: 0x002D0460
 		public PhantomMainProperty __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700271A RID: 10010
-		// (get) Token: 0x0600A985 RID: 43397 RVA: 0x002B537C File Offset: 0x002B357C
+		// Token: 0x17002780 RID: 10112
+		// (get) Token: 0x0600AFA6 RID: 44966 RVA: 0x002D2270 File Offset: 0x002D0470
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700271B RID: 10011
-		// (get) Token: 0x0600A986 RID: 43398 RVA: 0x002B53B8 File Offset: 0x002B35B8
+		// Token: 0x17002781 RID: 10113
+		// (get) Token: 0x0600AFA7 RID: 44967 RVA: 0x002D22AC File Offset: 0x002D04AC
 		public int RandGroupId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A987 RID: 43399 RVA: 0x002B53F4 File Offset: 0x002B35F4
+		// Token: 0x0600AFA8 RID: 44968 RVA: 0x002D22E8 File Offset: 0x002D04E8
 		public int PropGroup(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700271C RID: 10012
-		// (get) Token: 0x0600A988 RID: 43400 RVA: 0x002B5434 File Offset: 0x002B3634
+		// Token: 0x17002782 RID: 10114
+		// (get) Token: 0x0600AFA9 RID: 44969 RVA: 0x002D2328 File Offset: 0x002D0528
 		public int PropGroupLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A989 RID: 43401 RVA: 0x002B545F File Offset: 0x002B365F
+		// Token: 0x0600AFAA RID: 44970 RVA: 0x002D2353 File Offset: 0x002D0553
 		public Span<int> GetPropGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600A98A RID: 43402 RVA: 0x002B546E File Offset: 0x002B366E
+		// Token: 0x0600AFAB RID: 44971 RVA: 0x002D2362 File Offset: 0x002D0562
 		public int[] GetPropGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A98B RID: 43403 RVA: 0x002B5488 File Offset: 0x002B3688
+		// Token: 0x0600AFAC RID: 44972 RVA: 0x002D2379 File Offset: 0x002D0579
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PropGroupIter()或GetPropGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PropGroup()
+		public int[] PropGroup()
 		{
-			PhantomMainProperty phantomMainProperty = this;
-			return phantomMainProperty.GetPropGroupArray() ?? Array.Empty<int>();
+			return this.GetPropGroupArray();
 		}
 
-		// Token: 0x0600A98C RID: 43404 RVA: 0x002B54AC File Offset: 0x002B36AC
+		// Token: 0x0600AFAD RID: 44973 RVA: 0x002D2381 File Offset: 0x002D0581
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PropGroupIter()
+		public IEnumerable<int> PropGroupIter()
 		{
 			PhantomMainProperty.<PropGroupIter>d__18 <PropGroupIter>d__ = new PhantomMainProperty.<PropGroupIter>d__18(-2);
 			<PropGroupIter>d__.<>3__<>4__this = this;
 			return <PropGroupIter>d__;
 		}
 
-		// Token: 0x04004FB1 RID: 20401
+		// Token: 0x04005596 RID: 21910
 		private Table __p;
 	}
 }

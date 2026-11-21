@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F22 RID: 20258
+	// Token: 0x02005454 RID: 21588
 	public struct IBoxAkEvent : IFlatbufferObject
 	{
-		// Token: 0x170091E8 RID: 37352
-		// (get) Token: 0x0602009A RID: 131226 RVA: 0x004753CE File Offset: 0x004735CE
+		// Token: 0x1700996A RID: 39274
+		// (get) Token: 0x06021E0A RID: 138762 RVA: 0x004AB762 File Offset: 0x004A9962
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602009B RID: 131227 RVA: 0x004753DB File Offset: 0x004735DB
+		// Token: 0x06021E0B RID: 138763 RVA: 0x004AB76F File Offset: 0x004A996F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602009C RID: 131228 RVA: 0x004753E4 File Offset: 0x004735E4
+		// Token: 0x06021E0C RID: 138764 RVA: 0x004AB778 File Offset: 0x004A9978
 		public static IBoxAkEvent GetRootAsIBoxAkEvent(ByteBuffer _bb)
 		{
 			return IBoxAkEvent.GetRootAsIBoxAkEvent(_bb, default(IBoxAkEvent));
 		}
 
-		// Token: 0x0602009D RID: 131229 RVA: 0x00475400 File Offset: 0x00473600
+		// Token: 0x06021E0D RID: 138765 RVA: 0x004AB794 File Offset: 0x004A9994
 		public static IBoxAkEvent GetRootAsIBoxAkEvent(ByteBuffer _bb, IBoxAkEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602009E RID: 131230 RVA: 0x0047541D File Offset: 0x0047361D
+		// Token: 0x06021E0E RID: 138766 RVA: 0x004AB7B1 File Offset: 0x004A99B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602009F RID: 131231 RVA: 0x0047542C File Offset: 0x0047362C
+		// Token: 0x06021E0F RID: 138767 RVA: 0x004AB7C0 File Offset: 0x004A99C0
 		public IBoxAkEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170091E9 RID: 37353
-		// (get) Token: 0x060200A0 RID: 131232 RVA: 0x0047543C File Offset: 0x0047363C
+		// Token: 0x1700996B RID: 39275
+		// (get) Token: 0x06021E10 RID: 138768 RVA: 0x004AB7D0 File Offset: 0x004A99D0
 		public EAkEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170091EA RID: 37354
-		// (get) Token: 0x060200A1 RID: 131233 RVA: 0x00475478 File Offset: 0x00473678
+		// Token: 0x1700996C RID: 39276
+		// (get) Token: 0x06021E11 RID: 138769 RVA: 0x004AB80C File Offset: 0x004A9A0C
 		public EAudioType AudioType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170091EB RID: 37355
-		// (get) Token: 0x060200A2 RID: 131234 RVA: 0x004754B4 File Offset: 0x004736B4
+		// Token: 0x1700996D RID: 39277
+		// (get) Token: 0x06021E12 RID: 138770 RVA: 0x004AB848 File Offset: 0x004A9A48
 		public int Priority
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060200A3 RID: 131235 RVA: 0x004754F0 File Offset: 0x004736F0
+		// Token: 0x06021E13 RID: 138771 RVA: 0x004AB884 File Offset: 0x004A9A84
 		public static Offset<IBoxAkEvent> CreateIBoxAkEvent(FlatBufferBuilder builder, EAkEventType Type = EAkEventType.Point, EAudioType AudioType = EAudioType.AudioAMB, int Priority = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBoxAkEvent.EndIBoxAkEvent(builder);
 		}
 
-		// Token: 0x060200A4 RID: 131236 RVA: 0x00475514 File Offset: 0x00473714
+		// Token: 0x06021E14 RID: 138772 RVA: 0x004AB8A8 File Offset: 0x004A9AA8
 		public static void StartIBoxAkEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060200A5 RID: 131237 RVA: 0x0047551D File Offset: 0x0047371D
+		// Token: 0x06021E15 RID: 138773 RVA: 0x004AB8B1 File Offset: 0x004A9AB1
 		public static void AddType(FlatBufferBuilder builder, EAkEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060200A6 RID: 131238 RVA: 0x00475528 File Offset: 0x00473728
+		// Token: 0x06021E16 RID: 138774 RVA: 0x004AB8BC File Offset: 0x004A9ABC
 		public static void AddAudioType(FlatBufferBuilder builder, EAudioType audioType)
 		{
 			builder.AddByte(1, (byte)audioType, 0);
 		}
 
-		// Token: 0x060200A7 RID: 131239 RVA: 0x00475533 File Offset: 0x00473733
+		// Token: 0x06021E17 RID: 138775 RVA: 0x004AB8C7 File Offset: 0x004A9AC7
 		public static void AddPriority(FlatBufferBuilder builder, int priority)
 		{
 			builder.AddInt(2, priority, 0);
 		}
 
-		// Token: 0x060200A8 RID: 131240 RVA: 0x0047553E File Offset: 0x0047373E
+		// Token: 0x06021E18 RID: 138776 RVA: 0x004AB8D2 File Offset: 0x004A9AD2
 		public static Offset<IBoxAkEvent> EndIBoxAkEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IBoxAkEvent>(builder.EndTable());
 		}
 
-		// Token: 0x060200A9 RID: 131241 RVA: 0x0047554C File Offset: 0x0047374C
+		// Token: 0x06021E19 RID: 138777 RVA: 0x004AB8E0 File Offset: 0x004A9AE0
 		public IBoxAkEventT UnPack()
 		{
 			IBoxAkEventT boxAkEventT = new IBoxAkEventT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return boxAkEventT;
 		}
 
-		// Token: 0x060200AA RID: 131242 RVA: 0x00475567 File Offset: 0x00473767
+		// Token: 0x06021E1A RID: 138778 RVA: 0x004AB8FB File Offset: 0x004A9AFB
 		public void UnPackTo(IBoxAkEventT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Priority = this.Priority;
 		}
 
-		// Token: 0x060200AB RID: 131243 RVA: 0x00475590 File Offset: 0x00473790
+		// Token: 0x06021E1B RID: 138779 RVA: 0x004AB924 File Offset: 0x004A9B24
 		public static Offset<IBoxAkEvent> Pack(FlatBufferBuilder builder, IBoxAkEventT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBoxAkEvent.CreateIBoxAkEvent(builder, _o.Type, _o.AudioType, _o.Priority);
 		}
 
-		// Token: 0x0400DD79 RID: 56697
+		// Token: 0x0400E928 RID: 59688
 		private Table __p;
 	}
 }

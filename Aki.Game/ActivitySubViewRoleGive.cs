@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014C0 RID: 5312
+// Token: 0x02000974 RID: 2420
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewRoleGive : ActivitySubViewBase
 {
-	// Token: 0x06009699 RID: 38553 RVA: 0x002085FC File Offset: 0x002067FC
+	// Token: 0x06006A2E RID: 27182 RVA: 0x00211568 File Offset: 0x0020F768
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -49,13 +49,13 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600969A RID: 38554 RVA: 0x00208768 File Offset: 0x00206968
+	// Token: 0x06006A2F RID: 27183 RVA: 0x002116D4 File Offset: 0x0020F8D4
 	protected override void OnSetData()
 	{
 		this.Data = (this.ActivityBaseData as ActivityRoleGiveData);
 	}
 
-	// Token: 0x0600969B RID: 38555 RVA: 0x0020877C File Offset: 0x0020697C
+	// Token: 0x06006A30 RID: 27184 RVA: 0x002116E8 File Offset: 0x0020F8E8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewRoleGive.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600969C RID: 38556 RVA: 0x002087C0 File Offset: 0x002069C0
+	// Token: 0x06006A31 RID: 27185 RVA: 0x0021172C File Offset: 0x0020F92C
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.Data.LocalConfig;
@@ -113,13 +113,13 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600969D RID: 38557 RVA: 0x00208943 File Offset: 0x00206B43
+	// Token: 0x06006A32 RID: 27186 RVA: 0x002118AF File Offset: 0x0020FAAF
 	protected override void OnTimer(float gap)
 	{
 		this.OnRefreshView();
 	}
 
-	// Token: 0x0600969E RID: 38558 RVA: 0x0020894B File Offset: 0x00206B4B
+	// Token: 0x06006A33 RID: 27187 RVA: 0x002118B7 File Offset: 0x0020FAB7
 	protected override void OnRefreshView()
 	{
 		this.RefreshCondition();
@@ -128,7 +128,7 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		this.RefreshProgress();
 	}
 
-	// Token: 0x0600969F RID: 38559 RVA: 0x00208968 File Offset: 0x00206B68
+	// Token: 0x06006A34 RID: 27188 RVA: 0x002118D4 File Offset: 0x0020FAD4
 	private void RefreshProgress()
 	{
 		TrackMoonPhaseActivity? extraConfig = this.Data.GetExtraConfig();
@@ -151,14 +151,14 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		sprite.SetFillAmount((float)num / (float)extraConfig.Value.PopularityNeed);
 	}
 
-	// Token: 0x060096A0 RID: 38560 RVA: 0x00208A04 File Offset: 0x00206C04
+	// Token: 0x06006A35 RID: 27189 RVA: 0x00211970 File Offset: 0x0020FB70
 	private void RefreshTimerText()
 	{
 		string item = this.GetTimeVisibleAndRemainTime().Item2;
 		this.TitleComponent.SetTimeTextByText(item);
 	}
 
-	// Token: 0x060096A1 RID: 38561 RVA: 0x00208A2C File Offset: 0x00206C2C
+	// Token: 0x06006A36 RID: 27190 RVA: 0x00211998 File Offset: 0x0020FB98
 	protected void RefreshCondition()
 	{
 		TrackMoonPhaseActivity? extraConfig = this.Data.GetExtraConfig();
@@ -220,7 +220,7 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		functionButton5.SetText(ConfigMultiTextLang.GetLocalTextNew("CollectActivity_Button_ahead", null));
 	}
 
-	// Token: 0x060096A2 RID: 38562 RVA: 0x00208B83 File Offset: 0x00206D83
+	// Token: 0x06006A37 RID: 27191 RVA: 0x00211AEF File Offset: 0x0020FCEF
 	private void RefreshRedDot()
 	{
 		ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -231,7 +231,7 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		functionalComponent.SetFunctionRedDotVisible(this.Data.RedPointShowState);
 	}
 
-	// Token: 0x060096A3 RID: 38563 RVA: 0x00208BA0 File Offset: 0x00206DA0
+	// Token: 0x06006A38 RID: 27192 RVA: 0x00211B0C File Offset: 0x0020FD0C
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -285,7 +285,7 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x060096A4 RID: 38564 RVA: 0x00208BC0 File Offset: 0x00206DC0
+	// Token: 0x06006A39 RID: 27193 RVA: 0x00211B2C File Offset: 0x0020FD2C
 	private unsafe void OnClickPreview()
 	{
 		TrackMoonPhaseActivity? extraConfig = this.Data.GetExtraConfig();
@@ -304,50 +304,50 @@ public class ActivitySubViewRoleGive : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x04004270 RID: 17008
+	// Token: 0x04004308 RID: 17160
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04004271 RID: 17009
+	// Token: 0x04004309 RID: 17161
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04004272 RID: 17010
+	// Token: 0x0400430A RID: 17162
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x04004273 RID: 17011
+	// Token: 0x0400430B RID: 17163
 	private RoleDescribeComponent RoleDescComponent;
 
-	// Token: 0x04004274 RID: 17012
+	// Token: 0x0400430C RID: 17164
 	private CommonItemSmallItemGrid CommonItemGrid;
 
-	// Token: 0x04004275 RID: 17013
+	// Token: 0x0400430D RID: 17165
 	private ActivityRoleGiveData Data;
 
-	// Token: 0x02007AF8 RID: 31480
+	// Token: 0x02006C7C RID: 27772
 	[NullableContext(0)]
 	private class EActivitySubViewRoleGiveDefine
 	{
-		// Token: 0x0402872D RID: 165677
+		// Token: 0x04023A47 RID: 145991
 		public const int TitleItem = 0;
 
-		// Token: 0x0402872E RID: 165678
+		// Token: 0x04023A48 RID: 145992
 		public const int DescItem = 1;
 
-		// Token: 0x0402872F RID: 165679
+		// Token: 0x04023A49 RID: 145993
 		public const int RoleDescriptionItem = 2;
 
-		// Token: 0x04028730 RID: 165680
+		// Token: 0x04023A4A RID: 145994
 		public const int BtnPreview = 3;
 
-		// Token: 0x04028731 RID: 165681
+		// Token: 0x04023A4B RID: 145995
 		public const int FunctionItem = 4;
 
-		// Token: 0x04028732 RID: 165682
+		// Token: 0x04023A4C RID: 145996
 		public const int RewardItem = 5;
 
-		// Token: 0x04028733 RID: 165683
+		// Token: 0x04023A4D RID: 145997
 		public const int TxtProgress = 6;
 
-		// Token: 0x04028734 RID: 165684
+		// Token: 0x04023A4E RID: 145998
 		public const int SpriteProgress = 7;
 	}
 }

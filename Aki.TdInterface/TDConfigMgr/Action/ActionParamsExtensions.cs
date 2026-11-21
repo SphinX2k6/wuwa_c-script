@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001485 RID: 5253
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015DE RID: 5598
 	public static class ActionParamsExtensions
 	{
-		// Token: 0x0600778F RID: 30607 RVA: 0x0011EF98 File Offset: 0x0011D198
+		// Token: 0x06007E5C RID: 32348 RVA: 0x0012DBE4 File Offset: 0x0012BDE4
 		public static IReadOnlyList<ICharacterGroupNew> GetCharacterGroupNew(this ActionParams p)
 		{
 			AddTrialCharacter addTrialCharacter = p as AddTrialCharacter;
@@ -30,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return characterGroupNew;
 		}
 
-		// Token: 0x06007790 RID: 30608 RVA: 0x0011EFF0 File Offset: 0x0011D1F0
+		// Token: 0x06007E5D RID: 32349 RVA: 0x0012DC3C File Offset: 0x0012BE3C
 		public static IReadOnlyList<IEnableLevelPlayConfig> GetConfigs(this ActionParams p)
 		{
 			EnableLevelPlay enableLevelPlay = p as EnableLevelPlay;
@@ -51,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return configs;
 		}
 
-		// Token: 0x06007791 RID: 30609 RVA: 0x0011F048 File Offset: 0x0011D248
+		// Token: 0x06007E5E RID: 32350 RVA: 0x0012DC94 File Offset: 0x0012BE94
 		public static IReadOnlyList<IItemData> GetItems(this ActionParams p)
 		{
 			FixGetItem fixGetItem = p as FixGetItem;

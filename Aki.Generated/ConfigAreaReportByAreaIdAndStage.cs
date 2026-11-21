@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000AA RID: 170
+	// Token: 0x020000B2 RID: 178
 	public class ConfigAreaReportByAreaIdAndStage : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003FD RID: 1021 RVA: 0x00070353 File Offset: 0x0006E553
+		// Token: 0x0600042D RID: 1069 RVA: 0x00074C07 File Offset: 0x00072E07
 		static ConfigAreaReportByAreaIdAndStage()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaReportByAreaIdAndStage.CreateStaticDefaultValue), new Action(ConfigAreaReportByAreaIdAndStage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003FE RID: 1022 RVA: 0x00070374 File Offset: 0x0006E574
+		// Token: 0x0600042E RID: 1070 RVA: 0x00074C28 File Offset: 0x00072E28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaReportByAreaIdAndStage.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003FF RID: 1023 RVA: 0x000703F3 File Offset: 0x0006E5F3
+		// Token: 0x0600042F RID: 1071 RVA: 0x00074CA7 File Offset: 0x00072EA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaReportByAreaIdAndStage.LogPair = null;
 			ConfigAreaReportByAreaIdAndStage.HandleId = 0;
 		}
 
-		// Token: 0x06000400 RID: 1024 RVA: 0x00070401 File Offset: 0x0006E601
+		// Token: 0x06000430 RID: 1072 RVA: 0x00074CB5 File Offset: 0x00072EB5
 		public static void Init()
 		{
 			ConfigAreaReportByAreaIdAndStage.HandleId = ConfigCommon.InitDataStatement(ConfigAreaReportByAreaIdAndStage.HandleId, "db_area.db", "select BinData from `AreaReport` where AreaId=? AND Stage=?");
 		}
 
-		// Token: 0x06000401 RID: 1025 RVA: 0x0007041C File Offset: 0x0006E61C
+		// Token: 0x06000431 RID: 1073 RVA: 0x00074CD0 File Offset: 0x00072ED0
 		public static AreaReport? GetConfig(int p0AreaId, int p1Stage, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaReportByAreaIdAndStage.HandleId, ConfigAreaReportByAreaIdAndStage.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new AreaReport?(rootAsAreaReport);
 		}
 
-		// Token: 0x0400048A RID: 1162
+		// Token: 0x040004C2 RID: 1218
 		private const string DB = "db_area.db";
 
-		// Token: 0x0400048B RID: 1163
+		// Token: 0x040004C3 RID: 1219
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x0400048C RID: 1164
+		// Token: 0x040004C4 RID: 1220
 		private const string TABLE = "AreaReport";
 
-		// Token: 0x0400048D RID: 1165
+		// Token: 0x040004C5 RID: 1221
 		private const string COMMAND = "select BinData from `AreaReport` where AreaId=? AND Stage=?";
 
-		// Token: 0x0400048E RID: 1166
+		// Token: 0x040004C6 RID: 1222
 		private const string KEY_PREFIX = "AreaReportByAreaIdAndStage";
 
-		// Token: 0x0400048F RID: 1167
+		// Token: 0x040004C7 RID: 1223
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000490 RID: 1168
+		// Token: 0x040004C8 RID: 1224
 		private static int HandleId;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B66 RID: 7014
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D13 RID: 7443
 	public class IJigsawConfig
 	{
-		// Token: 0x06009633 RID: 38451 RVA: 0x0015B0D0 File Offset: 0x001592D0
+		// Token: 0x06009E15 RID: 40469 RVA: 0x0016BC7C File Offset: 0x00169E7C
 		private IJigsawConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009634 RID: 38452 RVA: 0x0015B108 File Offset: 0x00159308
+		// Token: 0x06009E16 RID: 40470 RVA: 0x0016BCB4 File Offset: 0x00169EB4
 		public static IJigsawConfig Create([Nullable(2)] IJigsawConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009635 RID: 38453 RVA: 0x0015B11B File Offset: 0x0015931B
+		// Token: 0x06009E17 RID: 40471 RVA: 0x0016BCC7 File Offset: 0x00169EC7
 		public static IJigsawConfig CreateFromSetValue([Nullable(2)] IJigsawConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009636 RID: 38454 RVA: 0x0015B130 File Offset: 0x00159330
+		// Token: 0x06009E18 RID: 40472 RVA: 0x0016BCDC File Offset: 0x00169EDC
 		public IJigsawConfig_SetValue ToSetValue()
 		{
 			return new IJigsawConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F57 RID: 12119
-		// (get) Token: 0x06009637 RID: 38455 RVA: 0x0015B17E File Offset: 0x0015937E
-		// (set) Token: 0x06009638 RID: 38456 RVA: 0x0015B1A9 File Offset: 0x001593A9
+		// Token: 0x1700317C RID: 12668
+		// (get) Token: 0x06009E19 RID: 40473 RVA: 0x0016BD2A File Offset: 0x00169F2A
+		// (set) Token: 0x06009E1A RID: 40474 RVA: 0x0016BD55 File Offset: 0x00169F55
 		public virtual int Row
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F58 RID: 12120
-		// (get) Token: 0x06009639 RID: 38457 RVA: 0x0015B1B7 File Offset: 0x001593B7
-		// (set) Token: 0x0600963A RID: 38458 RVA: 0x0015B1E2 File Offset: 0x001593E2
+		// Token: 0x1700317D RID: 12669
+		// (get) Token: 0x06009E1B RID: 40475 RVA: 0x0016BD63 File Offset: 0x00169F63
+		// (set) Token: 0x06009E1C RID: 40476 RVA: 0x0016BD8E File Offset: 0x00169F8E
 		public virtual int Column
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F59 RID: 12121
-		// (get) Token: 0x0600963B RID: 38459 RVA: 0x0015B1F0 File Offset: 0x001593F0
-		// (set) Token: 0x0600963C RID: 38460 RVA: 0x0015B21B File Offset: 0x0015941B
+		// Token: 0x1700317E RID: 12670
+		// (get) Token: 0x06009E1D RID: 40477 RVA: 0x0016BD9C File Offset: 0x00169F9C
+		// (set) Token: 0x06009E1E RID: 40478 RVA: 0x0016BDC7 File Offset: 0x00169FC7
 		public virtual int Size
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F5A RID: 12122
-		// (get) Token: 0x0600963D RID: 38461 RVA: 0x0015B22C File Offset: 0x0015942C
-		// (set) Token: 0x0600963E RID: 38462 RVA: 0x0015B266 File Offset: 0x00159466
+		// Token: 0x1700317F RID: 12671
+		// (get) Token: 0x06009E1F RID: 40479 RVA: 0x0016BDD8 File Offset: 0x00169FD8
+		// (set) Token: 0x06009E20 RID: 40480 RVA: 0x0016BE12 File Offset: 0x0016A012
 		public virtual EJigsawShape? Shape
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F5B RID: 12123
-		// (get) Token: 0x0600963F RID: 38463 RVA: 0x0015B274 File Offset: 0x00159474
-		// (set) Token: 0x06009640 RID: 38464 RVA: 0x0015B307 File Offset: 0x00159507
+		// Token: 0x17003180 RID: 12672
+		// (get) Token: 0x06009E21 RID: 40481 RVA: 0x0016BE20 File Offset: 0x0016A020
+		// (set) Token: 0x06009E22 RID: 40482 RVA: 0x0016BEB3 File Offset: 0x0016A0B3
 		public virtual List<IJigsawPiece> Pieces
 		{
 			get
@@ -195,18 +193,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BDE RID: 23518
+		// Token: 0x04006077 RID: 24695
 		[Nullable(2)]
 		protected IJigsawConfig FbInstance;
 
-		// Token: 0x04005BDF RID: 23519
+		// Token: 0x04006078 RID: 24696
 		[Nullable(2)]
 		protected IJigsawConfig_SetValue PocoInterface;
 
-		// Token: 0x04005BE0 RID: 23520
+		// Token: 0x04006079 RID: 24697
 		private List<IJigsawPiece> _PiecesCache;
 
-		// Token: 0x04005BE1 RID: 23521
+		// Token: 0x0400607A RID: 24698
 		private bool _PiecesInited;
 	}
 }

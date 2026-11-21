@@ -3,10 +3,10 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C24 RID: 19492
+	// Token: 0x02003BD5 RID: 15317
 	public class SkillButtonCustomHandleSharedHoldRingFx : SkillButtonCustomHandleBase
 	{
-		// Token: 0x06032725 RID: 206629 RVA: 0x00BC1638 File Offset: 0x00BBF838
+		// Token: 0x060274D8 RID: 160984 RVA: 0x00B06250 File Offset: 0x00B04450
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)

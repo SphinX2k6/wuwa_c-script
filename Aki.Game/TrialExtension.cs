@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.RoleUi;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001BD1 RID: 7121
+// Token: 0x02001090 RID: 4240
 public class TrialExtension : ISlotExtension
 {
-	// Token: 0x0600D45C RID: 54364 RVA: 0x0030DFB4 File Offset: 0x0030C1B4
+	// Token: 0x0600A86E RID: 43118 RVA: 0x00319128 File Offset: 0x00317328
 	[NullableContext(1)]
 	public UniTask OnAttach(ISlotMountPoint mount, int position)
 	{
@@ -20,13 +20,13 @@ public class TrialExtension : ISlotExtension
 		return <OnAttach>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D45D RID: 54365 RVA: 0x0030DFFF File Offset: 0x0030C1FF
+	// Token: 0x0600A86F RID: 43119 RVA: 0x00319173 File Offset: 0x00317373
 	public void OnDetach()
 	{
 		this.TrialLabelItem = null;
 	}
 
-	// Token: 0x0600D45E RID: 54366 RVA: 0x0030E008 File Offset: 0x0030C208
+	// Token: 0x0600A870 RID: 43120 RVA: 0x0031917C File Offset: 0x0031737C
 	[NullableContext(1)]
 	public void OnRefresh(IRoleSlotDisplayData data)
 	{
@@ -49,7 +49,7 @@ public class TrialExtension : ISlotExtension
 		this.TrialLabelItem.Refresh(configId);
 	}
 
-	// Token: 0x0400610A RID: 24842
+	// Token: 0x040061D9 RID: 25049
 	[Nullable(2)]
 	private RoleTrialLabelItem TrialLabelItem;
 }

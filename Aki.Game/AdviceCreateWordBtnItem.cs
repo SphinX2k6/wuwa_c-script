@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016CF RID: 5839
+// Token: 0x02000B87 RID: 2951
 public class AdviceCreateWordBtnItem : UiPanelBase
 {
-	// Token: 0x0600A6FA RID: 42746 RVA: 0x00256EDB File Offset: 0x002550DB
+	// Token: 0x06007ADA RID: 31450 RVA: 0x002612E7 File Offset: 0x0025F4E7
 	[NullableContext(1)]
 	public AdviceCreateWordBtnItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A6FB RID: 42747 RVA: 0x00256EF0 File Offset: 0x002550F0
+	// Token: 0x06007ADB RID: 31451 RVA: 0x002612FC File Offset: 0x0025F4FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,19 +30,19 @@ public class AdviceCreateWordBtnItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A6FC RID: 42748 RVA: 0x00256F57 File Offset: 0x00255157
+	// Token: 0x06007ADC RID: 31452 RVA: 0x00261363 File Offset: 0x0025F563
 	public void SetType(EActiveCreateWordType type)
 	{
 		this.Type = type;
 	}
 
-	// Token: 0x0600A6FD RID: 42749 RVA: 0x00256F60 File Offset: 0x00255160
+	// Token: 0x06007ADD RID: 31453 RVA: 0x0026136C File Offset: 0x0025F56C
 	public void SetIndex(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0600A6FE RID: 42750 RVA: 0x00256F69 File Offset: 0x00255169
+	// Token: 0x06007ADE RID: 31454 RVA: 0x00261375 File Offset: 0x0025F575
 	private void OnClickBtn()
 	{
 		if (this.Type == EActiveCreateWordType.NormalWord)
@@ -55,7 +55,7 @@ public class AdviceCreateWordBtnItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.AdviceWordView, null, null);
 	}
 
-	// Token: 0x0600A6FF RID: 42751 RVA: 0x00256FA4 File Offset: 0x002551A4
+	// Token: 0x06007ADF RID: 31455 RVA: 0x002613B0 File Offset: 0x0025F5B0
 	private void InitSortWordViewParam()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -75,7 +75,7 @@ public class AdviceCreateWordBtnItem : UiPanelBase
 		instance.CurrentSelectWordIndex = this.Index;
 	}
 
-	// Token: 0x0600A700 RID: 42752 RVA: 0x00257039 File Offset: 0x00255239
+	// Token: 0x06007AE0 RID: 31456 RVA: 0x00261445 File Offset: 0x0025F645
 	private void InitWordViewParam()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -83,13 +83,13 @@ public class AdviceCreateWordBtnItem : UiPanelBase
 		instance.CurrentSelectWordId = instance.CurrentConjunctionId;
 	}
 
-	// Token: 0x0600A701 RID: 42753 RVA: 0x00257052 File Offset: 0x00255252
+	// Token: 0x06007AE1 RID: 31457 RVA: 0x0026145E File Offset: 0x0025F65E
 	public void RefreshView()
 	{
 		this.RefreshWord();
 	}
 
-	// Token: 0x0600A702 RID: 42754 RVA: 0x0025705C File Offset: 0x0025525C
+	// Token: 0x06007AE2 RID: 31458 RVA: 0x00261468 File Offset: 0x0025F668
 	private void RefreshWord()
 	{
 		if (this.Type == EActiveCreateWordType.NormalWord)
@@ -129,19 +129,19 @@ public class AdviceCreateWordBtnItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004B72 RID: 19314
+	// Token: 0x04004C19 RID: 19481
 	private EActiveCreateWordType Type;
 
-	// Token: 0x04004B73 RID: 19315
+	// Token: 0x04004C1A RID: 19482
 	private int Index;
 
-	// Token: 0x02007CA2 RID: 31906
+	// Token: 0x02006E27 RID: 28199
 	private static class EComponents
 	{
-		// Token: 0x04028E21 RID: 167457
+		// Token: 0x0402414A RID: 147786
 		public const int WordBtn = 0;
 
-		// Token: 0x04028E22 RID: 167458
+		// Token: 0x0402414B RID: 147787
 		public const int WordText = 1;
 	}
 }

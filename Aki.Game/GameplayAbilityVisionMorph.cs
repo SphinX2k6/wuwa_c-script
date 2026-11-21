@@ -7,18 +7,18 @@ using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020031AA RID: 12714
+// Token: 0x02002719 RID: 10009
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 {
-	// Token: 0x0601B664 RID: 112228 RVA: 0x0077DA19 File Offset: 0x0077BC19
+	// Token: 0x06019192 RID: 102802 RVA: 0x007A5CF9 File Offset: 0x007A3EF9
 	[NullableContext(1)]
 	public GameplayAbilityVisionMorph(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B665 RID: 112229 RVA: 0x0077DA22 File Offset: 0x0077BC22
+	// Token: 0x06019193 RID: 102803 RVA: 0x007A5D02 File Offset: 0x007A3F02
 	protected override void OnCreate()
 	{
 		this.StealthTagTask = base.GameplayTagComponent.ListenForTagAddOrRemove(new int?(GameplayAbilityVisionMisc.stealthTag), delegate(int tagId, bool tagExist)
@@ -46,7 +46,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}, null);
 	}
 
-	// Token: 0x0601B666 RID: 112230 RVA: 0x0077DA4C File Offset: 0x0077BC4C
+	// Token: 0x06019194 RID: 102804 RVA: 0x007A5D2C File Offset: 0x007A3F2C
 	protected override void OnDestroy()
 	{
 		this.EndAllTask();
@@ -63,7 +63,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		stealthTagTask.EndTask();
 	}
 
-	// Token: 0x0601B667 RID: 112231 RVA: 0x0077DA78 File Offset: 0x0077BC78
+	// Token: 0x06019195 RID: 102805 RVA: 0x007A5D58 File Offset: 0x007A3F58
 	protected unsafe override void OnTick(float delta)
 	{
 		if (this.Synchronized)
@@ -99,7 +99,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B668 RID: 112232 RVA: 0x0077DBF0 File Offset: 0x0077BDF0
+	// Token: 0x06019196 RID: 102806 RVA: 0x007A5ED0 File Offset: 0x007A40D0
 	protected override bool OnActivateAbility()
 	{
 		if (this.IsActivating || !this.Init())
@@ -131,7 +131,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B669 RID: 112233 RVA: 0x0077DD0C File Offset: 0x0077BF0C
+	// Token: 0x06019197 RID: 102807 RVA: 0x007A5FEC File Offset: 0x007A41EC
 	protected override bool OnEndAbility()
 	{
 		if (!this.IsActivating)
@@ -145,17 +145,17 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B66A RID: 112234 RVA: 0x0077DD5E File Offset: 0x0077BF5E
+	// Token: 0x06019198 RID: 102808 RVA: 0x007A603E File Offset: 0x007A423E
 	public override bool HandlePress(EInputAction action, float time)
 	{
 		return this.VisionSkillComponent != null && this.VisionSkillComponent.HandlePress(action, time);
 	}
 
-	// Token: 0x0601B66B RID: 112235 RVA: 0x0077DD78 File Offset: 0x0077BF78
-	private bool Init()
+	// Token: 0x06019199 RID: 102809 RVA: 0x007A6058 File Offset: 0x007A4258
+	protected bool Init()
 	{
 		this.PreInit();
-		if (!this.VisionEntity.IsInit)
+		if (this.VisionEntity == null || !this.VisionEntity.IsInit)
 		{
 			return false;
 		}
@@ -178,12 +178,12 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		this.VisionCueComponent = this.VisionEntity.Entity.GetComponent<CharacterGameplayCueComponent>();
 		this.VisionMoveComponent = this.VisionEntity.Entity.GetComponent<CharacterMoveComponent>();
 		this.VisionSkillComponent = this.VisionEntity.Entity.GetComponent<VisionSkillComponent>();
-		this.VisionSkillComponent.InitVisionSkill(base.EntityHandle, true);
+		this.VisionSkillComponent.InitVisionSkill(base.EntityHandle, true, this.GetCheckVisionType());
 		return true;
 	}
 
-	// Token: 0x0601B66C RID: 112236 RVA: 0x0077DE9C File Offset: 0x0077C09C
-	private void SetCollision(bool enable, EntityHandle visionEntity = null)
+	// Token: 0x0601919A RID: 102810 RVA: 0x007A6188 File Offset: 0x007A4388
+	protected void SetCollision(bool enable, EntityHandle visionEntity = null)
 	{
 		if (visionEntity == null)
 		{
@@ -209,8 +209,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		base.ActorComponent.Actor.CapsuleComponent.IgnoreActorWhenMoving(characterActorComponent2.Actor, !enable);
 	}
 
-	// Token: 0x0601B66D RID: 112237 RVA: 0x0077DF2C File Offset: 0x0077C12C
-	private unsafe void MorphBegin()
+	// Token: 0x0601919B RID: 102811 RVA: 0x007A6218 File Offset: 0x007A4418
+	protected unsafe virtual void MorphBegin()
 	{
 		this.IsMorphing = true;
 		this.VisionMoveComponent.SetForceSpeed(Vector.ZeroVectorProxy);
@@ -271,8 +271,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}, EEventName.VisionMorphBegin, this.VisionEntity, base.EntityHandle);
 	}
 
-	// Token: 0x0601B66E RID: 112238 RVA: 0x0077E1C0 File Offset: 0x0077C3C0
-	private void MorphEnd(bool playMontage)
+	// Token: 0x0601919C RID: 102812 RVA: 0x007A64AC File Offset: 0x007A46AC
+	protected virtual void MorphEnd(bool playMontage)
 	{
 		if (!this.IsMorphing)
 		{
@@ -311,8 +311,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}, EEventName.VisionMorphEnd, base.EntityHandle, this.VisionEntity);
 	}
 
-	// Token: 0x0601B66F RID: 112239 RVA: 0x0077E2A8 File Offset: 0x0077C4A8
-	private void SetCharacterHidden(bool hidden)
+	// Token: 0x0601919D RID: 102813 RVA: 0x007A6594 File Offset: 0x007A4794
+	protected void SetCharacterHidden(bool hidden)
 	{
 		if (!hidden)
 		{
@@ -327,8 +327,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		CreatureController.Instance.SetActorVisible(base.Entity, !hidden, true, true, "幻象变身技能隐藏角色", true);
 	}
 
-	// Token: 0x0601B670 RID: 112240 RVA: 0x0077E350 File Offset: 0x0077C550
-	private void EndAllTask()
+	// Token: 0x0601919E RID: 102814 RVA: 0x007A663C File Offset: 0x007A483C
+	protected virtual void EndAllTask()
 	{
 		this.Synchronized = false;
 		if (this.WaitMorphTagRemoveTask != null)
@@ -343,8 +343,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B671 RID: 112241 RVA: 0x0077E3B0 File Offset: 0x0077C5B0
-	private bool FixMovementMode()
+	// Token: 0x0601919F RID: 102815 RVA: 0x007A669C File Offset: 0x007A489C
+	protected bool FixMovementMode()
 	{
 		UTraceLineElement staticLineTrace = SkillUtils.GetStaticLineTrace();
 		Vector actorLocationProxy = base.ActorComponent.ActorLocationProxy;
@@ -357,8 +357,8 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		return TraceElementCommon.Instance.LineTrace(staticLineTrace, "GameplayAbilityVisionMorph.FixMovementMode") && staticLineTrace.HitResult.bBlockingHit;
 	}
 
-	// Token: 0x0601B672 RID: 112242 RVA: 0x0077E43C File Offset: 0x0077C63C
-	private void PlayEndEffect()
+	// Token: 0x060191A0 RID: 102816 RVA: 0x007A6728 File Offset: 0x007A4928
+	protected void PlayEndEffect()
 	{
 		GameplayAbilityVisionMorph.<>c__DisplayClass29_0 CS$<>8__locals1 = new GameplayAbilityVisionMorph.<>c__DisplayClass29_0();
 		CS$<>8__locals1.<>4__this = this;
@@ -401,7 +401,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		CS$<>8__locals2.capturedVisionHiddenTimer = instance.Delay(action, num * ((instance2 != null) ? instance2.SelfCenteredTimeDilation : 1f), null, null, true, 1f);
 	}
 
-	// Token: 0x0601B673 RID: 112243 RVA: 0x0077E544 File Offset: 0x0077C744
+	// Token: 0x060191A1 RID: 102817 RVA: 0x007A6830 File Offset: 0x007A4A30
 	[NullableContext(1)]
 	private bool IsHit(Vector startLocation, Vector endLocation)
 	{
@@ -411,7 +411,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		return TraceElementCommon.Instance.LineTrace(staticLineTrace, "GameplayAbilityVisionMorph.FixLocation") && staticLineTrace.HitResult.bBlockingHit;
 	}
 
-	// Token: 0x0601B674 RID: 112244 RVA: 0x0077E590 File Offset: 0x0077C790
+	// Token: 0x060191A2 RID: 102818 RVA: 0x007A687C File Offset: 0x007A4A7C
 	private void VisionDisable(int cueHandle, EntityHandle visionEntity, CharacterGameplayCueComponent visionCueComponent)
 	{
 		if (this.IsActivating)
@@ -420,7 +420,10 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}
 		if (visionEntity != null && visionEntity.Valid)
 		{
-			BulletController.Instance.CreateBulletCustomTarget(visionEntity.Entity, "210000004", null, null, null, EBulletCreateSource.Others);
+			if (this.NeedPlayHuluBullet())
+			{
+				BulletController.Instance.CreateBulletCustomTarget(visionEntity.Entity, "210000004", null, null, null, EBulletCreateSource.Others);
+			}
 			if (visionCueComponent != null)
 			{
 				visionCueComponent.RemoveCueByHandle((long)cueHandle);
@@ -430,7 +433,7 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B675 RID: 112245 RVA: 0x0077E60B File Offset: 0x0077C80B
+	// Token: 0x060191A3 RID: 102819 RVA: 0x007A68FF File Offset: 0x007A4AFF
 	protected virtual void SetVisionEnable(bool enable, EntityHandle visionEntity = null)
 	{
 		if (visionEntity == null)
@@ -441,26 +444,65 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnPhantomEnableStateChange, enable);
 	}
 
-	// Token: 0x0601B676 RID: 112246 RVA: 0x0077E640 File Offset: 0x0077C840
+	// Token: 0x060191A4 RID: 102820 RVA: 0x007A6934 File Offset: 0x007A4B34
+	protected virtual bool NeedPlayHuluBullet()
+	{
+		return true;
+	}
+
+	// Token: 0x060191A5 RID: 102821 RVA: 0x007A6938 File Offset: 0x007A4B38
 	protected virtual void PreInit()
 	{
 		this.VisionEntity = PhantomUtil.GetSummonedEntity(this.VisionComponent.Entity, ESummonType.ConcomitantVision, 1);
 		this.VisionData = PhantomUtil.GetVisionData(this.VisionComponent.GetVisionId(null));
 	}
 
-	// Token: 0x0601B677 RID: 112247 RVA: 0x0077E684 File Offset: 0x0077C884
+	// Token: 0x060191A6 RID: 102822 RVA: 0x007A697C File Offset: 0x007A4B7C
 	protected virtual bool NeedNoAi()
 	{
 		return true;
 	}
 
-	// Token: 0x0601B678 RID: 112248 RVA: 0x0077E687 File Offset: 0x0077C887
+	// Token: 0x060191A7 RID: 102823 RVA: 0x007A697F File Offset: 0x007A4B7F
 	protected virtual bool NeedNoActive()
 	{
 		return true;
 	}
 
-	// Token: 0x0601B67C RID: 112252 RVA: 0x0077E6DA File Offset: 0x0077C8DA
+	// Token: 0x060191A8 RID: 102824 RVA: 0x007A6982 File Offset: 0x007A4B82
+	protected virtual ECheckVisionType GetCheckVisionType()
+	{
+		return ECheckVisionType.Vision;
+	}
+
+	// Token: 0x060191A9 RID: 102825 RVA: 0x007A6985 File Offset: 0x007A4B85
+	public virtual bool CanInterruptMorph()
+	{
+		return false;
+	}
+
+	// Token: 0x170027E1 RID: 10209
+	// (get) Token: 0x060191AA RID: 102826 RVA: 0x007A6988 File Offset: 0x007A4B88
+	public bool IsMorphActivating
+	{
+		get
+		{
+			return this.IsActivating;
+		}
+	}
+
+	// Token: 0x060191AB RID: 102827 RVA: 0x007A6990 File Offset: 0x007A4B90
+	public virtual void InterruptMorph()
+	{
+		BaseSkillComponent component = this.VisionComponent.Entity.GetComponent<BaseSkillComponent>();
+		if (component == null)
+		{
+			return;
+		}
+		component.EndSkill(200001, "GameplayAbilityVisionMorph.InterruptMorph");
+	}
+
+	// Token: 0x060191AF RID: 102831 RVA: 0x007A6A06 File Offset: 0x007A4C06
 	[CompilerGenerated]
 	private void <MorphEnd>g__endSkill|25_0()
 	{
@@ -469,48 +511,48 @@ public class GameplayAbilityVisionMorph : GameplayAbilityVisionBase
 		skillComponent.EndSkill((currentSkill != null) ? currentSkill.SkillId : 0, "GameplayAbilityVisionMorph.MorphEnd");
 	}
 
-	// Token: 0x0400D6A8 RID: 54952
+	// Token: 0x0400DB2F RID: 56111
 	protected EntityHandle VisionEntity;
 
-	// Token: 0x0400D6A9 RID: 54953
+	// Token: 0x0400DB30 RID: 56112
 	protected SVisionData VisionData;
 
-	// Token: 0x0400D6AA RID: 54954
+	// Token: 0x0400DB31 RID: 56113
 	protected CharacterActorComponent VisionActorComponent;
 
-	// Token: 0x0400D6AB RID: 54955
+	// Token: 0x0400DB32 RID: 56114
 	private BaseTagComponent VisionTagComponent;
 
-	// Token: 0x0400D6AC RID: 54956
+	// Token: 0x0400DB33 RID: 56115
 	protected CharacterBuffComponent VisionBuffComponent;
 
-	// Token: 0x0400D6AD RID: 54957
+	// Token: 0x0400DB34 RID: 56116
 	private CharacterGameplayCueComponent VisionCueComponent;
 
-	// Token: 0x0400D6AE RID: 54958
-	private CharacterMoveComponent VisionMoveComponent;
+	// Token: 0x0400DB35 RID: 56117
+	protected CharacterMoveComponent VisionMoveComponent;
 
-	// Token: 0x0400D6AF RID: 54959
+	// Token: 0x0400DB36 RID: 56118
 	protected VisionSkillComponent VisionSkillComponent;
 
-	// Token: 0x0400D6B0 RID: 54960
-	private ITagTask WaitMorphTagRemoveTask;
+	// Token: 0x0400DB37 RID: 56119
+	protected ITagTask WaitMorphTagRemoveTask;
 
-	// Token: 0x0400D6B1 RID: 54961
+	// Token: 0x0400DB38 RID: 56120
 	private ITagTask StealthTagTask;
 
-	// Token: 0x0400D6B2 RID: 54962
-	private TimerHandle CharacterHiddenTimer;
+	// Token: 0x0400DB39 RID: 56121
+	protected TimerHandle CharacterHiddenTimer;
 
-	// Token: 0x0400D6B3 RID: 54963
-	private bool IsActivating;
+	// Token: 0x0400DB3A RID: 56122
+	protected bool IsActivating;
 
-	// Token: 0x0400D6B4 RID: 54964
-	private bool IsMorphing;
+	// Token: 0x0400DB3B RID: 56123
+	protected bool IsMorphing;
 
-	// Token: 0x0400D6B5 RID: 54965
-	private bool Synchronized;
+	// Token: 0x0400DB3C RID: 56124
+	protected bool Synchronized;
 
-	// Token: 0x0400D6B6 RID: 54966
-	private bool PrintLog;
+	// Token: 0x0400DB3D RID: 56125
+	protected bool PrintLog;
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071AC RID: 29100
+	// Token: 0x02006261 RID: 25185
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MagneticDragModeStrategy : BaseDragModeStrategy
 	{
-		// Token: 0x17009DB0 RID: 40368
-		// (get) Token: 0x06047353 RID: 291667 RVA: 0x01218A9C File Offset: 0x01216C9C
+		// Token: 0x17007300 RID: 29440
+		// (get) Token: 0x0603CC4E RID: 248910 RVA: 0x011729A0 File Offset: 0x01170BA0
 		public override EKuroSplineConstrainedDragMode Mode { get; }
 
-		// Token: 0x06047354 RID: 291668 RVA: 0x01218AA4 File Offset: 0x01216CA4
+		// Token: 0x0603CC4F RID: 248911 RVA: 0x011729A8 File Offset: 0x01170BA8
 		private void OnMagneticTick(float deltaMs)
 		{
 			IKuroSplineConstrainedDrag host = this.Host;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.EndDrag();
 		}
 
-		// Token: 0x06047355 RID: 291669 RVA: 0x01218B50 File Offset: 0x01216D50
+		// Token: 0x0603CC50 RID: 248912 RVA: 0x01172A54 File Offset: 0x01170C54
 		public override void OnActivate(IKuroSplineConstrainedDrag host)
 		{
 			base.OnActivate(host);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047356 RID: 291670 RVA: 0x01218B89 File Offset: 0x01216D89
+		// Token: 0x0603CC51 RID: 248913 RVA: 0x01172A8D File Offset: 0x01170C8D
 		public override void OnDeactivate()
 		{
 			base.OnDeactivate();
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.HasInitialScreenPos = false;
 		}
 
-		// Token: 0x06047357 RID: 291671 RVA: 0x01218BC0 File Offset: 0x01216DC0
+		// Token: 0x0603CC52 RID: 248914 RVA: 0x01172AC4 File Offset: 0x01170CC4
 		public override void BeginDrag()
 		{
 			base.BeginDrag();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.EnsureTimerStarted();
 		}
 
-		// Token: 0x06047358 RID: 291672 RVA: 0x01218C6E File Offset: 0x01216E6E
+		// Token: 0x0603CC53 RID: 248915 RVA: 0x01172B72 File Offset: 0x01170D72
 		public override void SetCurrentScreenPosition(Vector screenPosition)
 		{
 			this.CachedMouseScreenPos.Set((float)screenPosition.X, (float)screenPosition.Y);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.WakeIfSuspended();
 		}
 
-		// Token: 0x06047359 RID: 291673 RVA: 0x01218C96 File Offset: 0x01216E96
+		// Token: 0x0603CC54 RID: 248916 RVA: 0x01172B9A File Offset: 0x01170D9A
 		public override void ApplyScreenDelta(Vector screenDelta)
 		{
 			this.CachedMouseScreenPos.Set(this.CachedMouseScreenPos.X + (float)screenDelta.X, this.CachedMouseScreenPos.Y + (float)screenDelta.Y);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.WakeIfSuspended();
 		}
 
-		// Token: 0x0604735A RID: 291674 RVA: 0x01218CD6 File Offset: 0x01216ED6
+		// Token: 0x0603CC55 RID: 248917 RVA: 0x01172BDA File Offset: 0x01170DDA
 		public override void EndDrag()
 		{
 			base.EndDrag();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.HasInitialScreenPos = false;
 		}
 
-		// Token: 0x0604735B RID: 291675 RVA: 0x01218D16 File Offset: 0x01216F16
+		// Token: 0x0603CC56 RID: 248918 RVA: 0x01172C1A File Offset: 0x01170E1A
 		private void StopTimerIfRunning()
 		{
 			if (this.MagneticTimerHandle != null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604735C RID: 291676 RVA: 0x01218D33 File Offset: 0x01216F33
+		// Token: 0x0603CC57 RID: 248919 RVA: 0x01172C37 File Offset: 0x01170E37
 		private void EnsureTimerStarted()
 		{
 			if (this.MagneticTimerHandle != null)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.MagneticTimerHandle = TimerSystem.Instance.Forever(new TTimerAction(this.OnMagneticTick), 20f, 1f, null, "MagneticDrag", true);
 		}
 
-		// Token: 0x0604735D RID: 291677 RVA: 0x01218D6B File Offset: 0x01216F6B
+		// Token: 0x0603CC58 RID: 248920 RVA: 0x01172C6F File Offset: 0x01170E6F
 		private void WakeIfSuspended()
 		{
 			if (!this.MagneticIsSuspended)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.EnsureTimerStarted();
 		}
 
-		// Token: 0x0604735E RID: 291678 RVA: 0x01218D84 File Offset: 0x01216F84
+		// Token: 0x0603CC59 RID: 248921 RVA: 0x01172C88 File Offset: 0x01170E88
 		public static IStepSpringResult StepSpringSimulation(float current, float target, float velocity, float stiffness, float damping, float dtSeconds, float maxStepSeconds, float convergeSpeedThreshold, float convergePosThreshold)
 		{
 			float num = Math.Min(dtSeconds, maxStepSeconds);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			};
 		}
 
-		// Token: 0x0604735F RID: 291679 RVA: 0x01218DFC File Offset: 0x01216FFC
+		// Token: 0x0603CC5A RID: 248922 RVA: 0x01172D00 File Offset: 0x01170F00
 		private static int ResolveCoarseSampleCount(float splineLength)
 		{
 			int val = SplineConstrainedCommonDefineConstants.magneticCoarseSampleCountByQuality[GameSettingsDeviceRender.Instance.GameQualitySettingLevel];
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return Math.Max(val, 2);
 		}
 
-		// Token: 0x06047360 RID: 291680 RVA: 0x01218E58 File Offset: 0x01217058
+		// Token: 0x0603CC5B RID: 248923 RVA: 0x01172D5C File Offset: 0x01170F5C
 		private float TickMagneticDrag(Vector currentMouseScreenPosition, float deltaTime)
 		{
 			IKuroSplineConstrainedDrag host = this.Host;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return result;
 		}
 
-		// Token: 0x06047361 RID: 291681 RVA: 0x01219068 File Offset: 0x01217268
+		// Token: 0x0603CC5C RID: 248924 RVA: 0x01172F6C File Offset: 0x0117116C
 		private unsafe void EnsureSampleBufferCapacity(int requiredSize)
 		{
 			if (requiredSize > 128)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047362 RID: 291682 RVA: 0x0121911C File Offset: 0x0121731C
+		// Token: 0x0603CC5D RID: 248925 RVA: 0x01173020 File Offset: 0x01171220
 		private float FindClosestSplineDistanceToScreenPos(FVector2D mouseScreenPos)
 		{
 			IKuroSplineConstrainedDrag host = this.Host;
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.RefineByBisection(constraintSpline, characterController, mouseScreenPos, loIn, hiIn);
 		}
 
-		// Token: 0x06047363 RID: 291683 RVA: 0x012192CC File Offset: 0x012174CC
+		// Token: 0x0603CC5E RID: 248926 RVA: 0x011731D0 File Offset: 0x011713D0
 		private float RefineByBisection(USplineComponent spline, APlayerController playerController, FVector2D mouseScreenPos, float loIn, float hiIn)
 		{
 			int num = 8;
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return (num3 + num4) * 0.5f;
 		}
 
-		// Token: 0x06047364 RID: 291684 RVA: 0x012193B4 File Offset: 0x012175B4
+		// Token: 0x0603CC5F RID: 248927 RVA: 0x011732B8 File Offset: 0x011714B8
 		private double ScreenDistSqAtDistance(USplineComponent spline, APlayerController playerController, FVector2D mouseScreenPos, float distance)
 		{
 			FVectorDouble fvectorDouble = spline.D_GetLocationAtDistanceAlongSpline(distance, ESplineCoordinateSpace.World);
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return (double)FVector2D.DistSquared(this.BisectionTempScreenPos, mouseScreenPos);
 		}
 
-		// Token: 0x06047365 RID: 291685 RVA: 0x01219400 File Offset: 0x01217600
+		// Token: 0x0603CC60 RID: 248928 RVA: 0x01173304 File Offset: 0x01171504
 		private double ScreenWidthSqOnSpline(USplineComponent spline, APlayerController playerController, float lo, float hi)
 		{
 			FVectorDouble fvectorDouble = spline.D_GetLocationAtDistanceAlongSpline(lo, ESplineCoordinateSpace.World);
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return (double)FVector2D.DistSquared(this.BisectionWidthScreenPosA, this.BisectionWidthScreenPosB);
 		}
 
-		// Token: 0x06047366 RID: 291686 RVA: 0x0121947C File Offset: 0x0121767C
+		// Token: 0x0603CC61 RID: 248929 RVA: 0x01173380 File Offset: 0x01171580
 		private unsafe void LogFallbackOnce(string reason)
 		{
 			if (this.MagneticFallbackLogged)
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06047367 RID: 291687 RVA: 0x012194FD File Offset: 0x012176FD
+		// Token: 0x0603CC62 RID: 248930 RVA: 0x01173401 File Offset: 0x01171601
 		private void SuspendMagneticTick()
 		{
 			this.StopTimerIfRunning();
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.ScreenDegenerateFrames = 0;
 		}
 
-		// Token: 0x06047368 RID: 291688 RVA: 0x01219520 File Offset: 0x01217720
+		// Token: 0x0603CC63 RID: 248931 RVA: 0x01173424 File Offset: 0x01171624
 		private void DebugDrawMagnetic()
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("SplineConstrainedDrag") <= 0)
@@ -481,47 +481,47 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, lineStart, fvectorDouble, ColorUtils.LinearCyan, 0f, 0f);
 		}
 
-		// Token: 0x04025711 RID: 153361
+		// Token: 0x04020380 RID: 131968
 		private readonly List<SampleBufferEntry> SampleBuffer = new List<SampleBufferEntry>();
 
-		// Token: 0x04025712 RID: 153362
+		// Token: 0x04020381 RID: 131969
 		private FVector2D BisectionTempScreenPos = new FVector2D();
 
-		// Token: 0x04025713 RID: 153363
+		// Token: 0x04020382 RID: 131970
 		private FVector2D BisectionWidthScreenPosA = new FVector2D();
 
-		// Token: 0x04025714 RID: 153364
+		// Token: 0x04020383 RID: 131971
 		private FVector2D BisectionWidthScreenPosB = new FVector2D();
 
-		// Token: 0x04025715 RID: 153365
+		// Token: 0x04020384 RID: 131972
 		private float MagneticVelocity;
 
-		// Token: 0x04025716 RID: 153366
+		// Token: 0x04020385 RID: 131973
 		private FVector2D CachedMouseScreenPos = new FVector2D();
 
-		// Token: 0x04025717 RID: 153367
+		// Token: 0x04020386 RID: 131974
 		private bool HasInitialScreenPos;
 
-		// Token: 0x04025718 RID: 153368
+		// Token: 0x04020387 RID: 131975
 		[Nullable(2)]
 		private TimerHandle MagneticTimerHandle;
 
-		// Token: 0x04025719 RID: 153369
+		// Token: 0x04020388 RID: 131976
 		private bool MagneticFallbackLogged;
 
-		// Token: 0x0402571A RID: 153370
+		// Token: 0x04020389 RID: 131977
 		private float LastMagneticTargetDistance;
 
-		// Token: 0x0402571B RID: 153371
+		// Token: 0x0402038A RID: 131978
 		private bool MagneticIsSuspended;
 
-		// Token: 0x0402571C RID: 153372
+		// Token: 0x0402038B RID: 131979
 		private int ScreenDegenerateFrames;
 
-		// Token: 0x0402571D RID: 153373
+		// Token: 0x0402038C RID: 131980
 		private FVector2D LastActorScreenPos = new FVector2D();
 
-		// Token: 0x0402571E RID: 153374
+		// Token: 0x0402038D RID: 131981
 		private readonly Vector TickMousePosVector = Vector.Create();
 	}
 }

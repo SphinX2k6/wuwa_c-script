@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x0200731F RID: 29471
+	// Token: 0x020064A2 RID: 25762
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AiStateMachineTaskPatrol : AiStateMachineTask
 	{
-		// Token: 0x06048569 RID: 296297 RVA: 0x0129B599 File Offset: 0x01299799
+		// Token: 0x0603E9B6 RID: 256438 RVA: 0x0123E019 File Offset: 0x0123C219
 		[NullableContext(1)]
 		public AiStateMachineTaskPatrol(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x0604856A RID: 296298 RVA: 0x0129B5A3 File Offset: 0x012997A3
+		// Token: 0x0603E9B7 RID: 256439 RVA: 0x0123E023 File Offset: 0x0123C223
 		[NullableContext(1)]
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Task state)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			return true;
 		}
 
-		// Token: 0x0604856B RID: 296299 RVA: 0x0129B5C8 File Offset: 0x012997C8
+		// Token: 0x0603E9B8 RID: 256440 RVA: 0x0123E048 File Offset: 0x0123C248
 		public override void OnEnter(long? contextId = null)
 		{
 			this.AiController = this.Node.AiComponent.AiController;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.BeginPatrol();
 		}
 
-		// Token: 0x0604856C RID: 296300 RVA: 0x0129B6A4 File Offset: 0x012998A4
+		// Token: 0x0603E9B9 RID: 256441 RVA: 0x0123E124 File Offset: 0x0123C324
 		public override void OnExit(long? contextId = null)
 		{
 			if (!this.Node.TaskFinished)
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x0604856D RID: 296301 RVA: 0x0129B719 File Offset: 0x01299919
+		// Token: 0x0603E9BA RID: 256442 RVA: 0x0123E199 File Offset: 0x0123C399
 		private void Finish()
 		{
 			this.Node.TaskFinished = true;
 		}
 
-		// Token: 0x0604856E RID: 296302 RVA: 0x0129B728 File Offset: 0x01299928
+		// Token: 0x0603E9BB RID: 256443 RVA: 0x0123E1A8 File Offset: 0x0123C3A8
 		private void InitPatrolInfo()
 		{
 			this.PatrolLogic.GeneratePatrol(true);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.PatrolLogic.ResetBaseInfoByMainPoint(this.MoveComp, this.StateComp, this.MoveState);
 		}
 
-		// Token: 0x0604856F RID: 296303 RVA: 0x0129B778 File Offset: 0x01299978
+		// Token: 0x0603E9BC RID: 256444 RVA: 0x0123E1F8 File Offset: 0x0123C3F8
 		private void CallOutside()
 		{
 			if (GlobalData.BpEventManager == null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			GlobalData.BpEventManager.AI巡逻达到样条点.Broadcast(this.ActorComp.Actor, this.PatrolLogic.PatrolIndex);
 		}
 
-		// Token: 0x06048570 RID: 296304 RVA: 0x0129B7D4 File Offset: 0x012999D4
+		// Token: 0x0603E9BD RID: 256445 RVA: 0x0123E254 File Offset: 0x0123C454
 		private void MoveToPatrolPoint()
 		{
 			AiStateMachineTaskPatrol.<>c__DisplayClass17_0 CS$<>8__locals1 = new AiStateMachineTaskPatrol.<>c__DisplayClass17_0();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			this.PatrolComp.StartPatrol(this.PatrolConfig.SplineEntityId, config);
 		}
 
-		// Token: 0x06048571 RID: 296305 RVA: 0x0129B8B0 File Offset: 0x01299AB0
+		// Token: 0x0603E9BE RID: 256446 RVA: 0x0123E330 File Offset: 0x0123C530
 		private void PatrolFinish()
 		{
 			this.CallOutside();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			patrolLogic.PatrolFinish();
 		}
 
-		// Token: 0x06048572 RID: 296306 RVA: 0x0129B8C8 File Offset: 0x01299AC8
+		// Token: 0x0603E9BF RID: 256447 RVA: 0x0123E348 File Offset: 0x0123C548
 		private void BeginPatrol()
 		{
 			if (this.PatrolConfig.ContainZ && this.MoveComp != null)
@@ -198,34 +198,34 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x040263F3 RID: 156659
+		// Token: 0x040216E0 RID: 136928
 		private AiPatrolController PatrolLogic;
 
-		// Token: 0x040263F4 RID: 156660
+		// Token: 0x040216E1 RID: 136929
 		private AiPatrolConfig PatrolConfig;
 
-		// Token: 0x040263F5 RID: 156661
+		// Token: 0x040216E2 RID: 136930
 		private Entity Entity;
 
-		// Token: 0x040263F6 RID: 156662
+		// Token: 0x040216E3 RID: 136931
 		private BaseMoveComponent MoveComp;
 
-		// Token: 0x040263F7 RID: 156663
+		// Token: 0x040216E4 RID: 136932
 		private BaseUnifiedStateComponent StateComp;
 
-		// Token: 0x040263F8 RID: 156664
+		// Token: 0x040216E5 RID: 136933
 		private CharacterPatrolComponent PatrolComp;
 
-		// Token: 0x040263F9 RID: 156665
+		// Token: 0x040216E6 RID: 136934
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x040263FA RID: 156666
+		// Token: 0x040216E7 RID: 136935
 		private AiController AiController;
 
-		// Token: 0x040263FB RID: 156667
+		// Token: 0x040216E8 RID: 136936
 		public int MoveState;
 
-		// Token: 0x040263FC RID: 156668
+		// Token: 0x040216E9 RID: 136937
 		public bool OpenDebugMode;
 	}
 }

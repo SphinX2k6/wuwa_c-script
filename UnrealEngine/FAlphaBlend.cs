@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007D6 RID: 2006
+	// Token: 0x02000174 RID: 372
 	[UnrealObjectPath("/Script/Engine.AlphaBlend")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FAlphaBlend : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006ADD RID: 27357 RVA: 0x00099F91 File Offset: 0x00098191
+		// Token: 0x060016B4 RID: 5812 RVA: 0x0002371A File Offset: 0x0002191A
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAlphaBlend._ScriptStructPtr != 0) ? FAlphaBlend._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AlphaBlend", ref FAlphaBlend._ScriptStructPtr);
 		}
 
-		// Token: 0x1700192C RID: 6444
-		// (get) Token: 0x06006ADE RID: 27358 RVA: 0x00099FB5 File Offset: 0x000981B5
-		// (set) Token: 0x06006ADF RID: 27359 RVA: 0x00099FC9 File Offset: 0x000981C9
+		// Token: 0x17000258 RID: 600
+		// (get) Token: 0x060016B5 RID: 5813 RVA: 0x0002373E File Offset: 0x0002193E
+		// (set) Token: 0x060016B6 RID: 5814 RVA: 0x00023752 File Offset: 0x00021952
 		[Nullable(2)]
 		public unsafe UCurveFloat CustomCurve
 		{
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700192D RID: 6445
-		// (get) Token: 0x06006AE0 RID: 27360 RVA: 0x00099FDE File Offset: 0x000981DE
-		// (set) Token: 0x06006AE1 RID: 27361 RVA: 0x00099FEE File Offset: 0x000981EE
+		// Token: 0x17000259 RID: 601
+		// (get) Token: 0x060016B7 RID: 5815 RVA: 0x00023767 File Offset: 0x00021967
+		// (set) Token: 0x060016B8 RID: 5816 RVA: 0x00023777 File Offset: 0x00021977
 		public unsafe float BlendTime
 		{
 			get
@@ -50,80 +50,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700192E RID: 6446
-		// (get) Token: 0x06006AE2 RID: 27362 RVA: 0x00099FFF File Offset: 0x000981FF
-		// (set) Token: 0x06006AE3 RID: 27363 RVA: 0x0009A00F File Offset: 0x0009820F
-		public unsafe EAlphaBlendOption BlendOption
-		{
-			get
-			{
-				return (EAlphaBlendOption)(*(base.NativePtr + (IntPtr)FAlphaBlend.__PropertyOffset_BlendOption));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAlphaBlend.__PropertyOffset_BlendOption) = (byte)value;
-			}
-		}
-
-		// Token: 0x06006AE4 RID: 27364 RVA: 0x0009A020 File Offset: 0x00098220
+		// Token: 0x060016B9 RID: 5817 RVA: 0x00023788 File Offset: 0x00021988
 		public FAlphaBlend()
 		{
 		}
 
-		// Token: 0x06006AE5 RID: 27365 RVA: 0x0009A028 File Offset: 0x00098228
-		[NullableContext(1)]
-		public FAlphaBlend(UCurveFloat CustomCurve, float BlendTime, EAlphaBlendOption BlendOption)
-		{
-			this.CustomCurve = CustomCurve;
-			this.BlendTime = BlendTime;
-			this.BlendOption = BlendOption;
-		}
-
-		// Token: 0x06006AE6 RID: 27366 RVA: 0x0009A045 File Offset: 0x00098245
+		// Token: 0x060016BA RID: 5818 RVA: 0x00023790 File Offset: 0x00021990
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAlphaBlend.StaticStruct();
 		}
 
-		// Token: 0x06006AE7 RID: 27367 RVA: 0x0009A051 File Offset: 0x00098251
+		// Token: 0x060016BB RID: 5819 RVA: 0x0002379C File Offset: 0x0002199C
 		[NullableContext(2)]
 		public FAlphaBlend(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06006AE8 RID: 27368 RVA: 0x0009A05B File Offset: 0x0009825B
+		// Token: 0x060016BC RID: 5820 RVA: 0x000237A6 File Offset: 0x000219A6
 		public FAlphaBlend(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06006AE9 RID: 27369 RVA: 0x0009A066 File Offset: 0x00098266
+		// Token: 0x060016BD RID: 5821 RVA: 0x000237B1 File Offset: 0x000219B1
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAlphaBlend(Pointer, false, true);
 		}
 
-		// Token: 0x06006AEA RID: 27370 RVA: 0x0009A070 File Offset: 0x00098270
+		// Token: 0x060016BE RID: 5822 RVA: 0x000237BB File Offset: 0x000219BB
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAlphaBlend(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04003371 RID: 13169
+		// Token: 0x04000739 RID: 1849
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.AlphaBlend";
 
-		// Token: 0x04003372 RID: 13170
+		// Token: 0x0400073A RID: 1850
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04003373 RID: 13171
+		// Token: 0x0400073B RID: 1851
 		internal static int __PropertyOffset_CustomCurve;
 
-		// Token: 0x04003374 RID: 13172
+		// Token: 0x0400073C RID: 1852
 		internal static int __PropertyOffset_BlendTime;
-
-		// Token: 0x04003375 RID: 13173
-		internal static int __PropertyOffset_BlendOption;
 	}
 }

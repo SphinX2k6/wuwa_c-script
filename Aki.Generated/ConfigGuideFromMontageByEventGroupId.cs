@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003BE RID: 958
+	// Token: 0x020003D4 RID: 980
 	public class ConfigGuideFromMontageByEventGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600167B RID: 5755 RVA: 0x000D8A00 File Offset: 0x000D6C00
+		// Token: 0x060016FF RID: 5887 RVA: 0x000DF154 File Offset: 0x000DD354
 		static ConfigGuideFromMontageByEventGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideFromMontageByEventGroupId.CreateStaticDefaultValue), new Action(ConfigGuideFromMontageByEventGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600167C RID: 5756 RVA: 0x000D8A20 File Offset: 0x000D6C20
+		// Token: 0x06001700 RID: 5888 RVA: 0x000DF174 File Offset: 0x000DD374
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideFromMontageByEventGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600167D RID: 5757 RVA: 0x000D8A9F File Offset: 0x000D6C9F
+		// Token: 0x06001701 RID: 5889 RVA: 0x000DF1F3 File Offset: 0x000DD3F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideFromMontageByEventGroupId.LogPair = null;
 			ConfigGuideFromMontageByEventGroupId.HandleId = 0;
 		}
 
-		// Token: 0x0600167E RID: 5758 RVA: 0x000D8AAD File Offset: 0x000D6CAD
+		// Token: 0x06001702 RID: 5890 RVA: 0x000DF201 File Offset: 0x000DD401
 		public static void Init()
 		{
 			ConfigGuideFromMontageByEventGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigGuideFromMontageByEventGroupId.HandleId, "db_guide_new.db", "select BinData from `GuideFromMontage` where EventGroupId=?");
 		}
 
-		// Token: 0x0600167F RID: 5759 RVA: 0x000D8AC8 File Offset: 0x000D6CC8
+		// Token: 0x06001703 RID: 5891 RVA: 0x000DF21C File Offset: 0x000DD41C
 		public static GuideFromMontage? GetConfig(int p0EventGroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuideFromMontageByEventGroupId.HandleId, ConfigGuideFromMontageByEventGroupId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuideFromMontage?(rootAsGuideFromMontage);
 		}
 
-		// Token: 0x04001A16 RID: 6678
+		// Token: 0x04001AB0 RID: 6832
 		private const string DB = "db_guide_new.db";
 
-		// Token: 0x04001A17 RID: 6679
+		// Token: 0x04001AB1 RID: 6833
 		private const string FILE = "y.引导(新).xlsx";
 
-		// Token: 0x04001A18 RID: 6680
+		// Token: 0x04001AB2 RID: 6834
 		private const string TABLE = "GuideFromMontage";
 
-		// Token: 0x04001A19 RID: 6681
+		// Token: 0x04001AB3 RID: 6835
 		private const string COMMAND = "select BinData from `GuideFromMontage` where EventGroupId=?";
 
-		// Token: 0x04001A1A RID: 6682
+		// Token: 0x04001AB4 RID: 6836
 		private const string KEY_PREFIX = "GuideFromMontageByEventGroupId";
 
-		// Token: 0x04001A1B RID: 6683
+		// Token: 0x04001AB5 RID: 6837
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A1C RID: 6684
+		// Token: 0x04001AB6 RID: 6838
 		private static int HandleId;
 	}
 }

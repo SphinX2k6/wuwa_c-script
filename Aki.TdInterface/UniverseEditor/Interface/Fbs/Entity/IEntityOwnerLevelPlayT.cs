@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047C4 RID: 18372
+	// Token: 0x02004C2C RID: 19500
 	public class IEntityOwnerLevelPlayT
 	{
-		// Token: 0x170083F5 RID: 33781
-		// (get) Token: 0x0601C5E7 RID: 116199 RVA: 0x00403B94 File Offset: 0x00401D94
-		// (set) Token: 0x0601C5E8 RID: 116200 RVA: 0x00403B9C File Offset: 0x00401D9C
+		// Token: 0x17008A36 RID: 35382
+		// (get) Token: 0x0601DDBC RID: 122300 RVA: 0x0042FE30 File Offset: 0x0042E030
+		// (set) Token: 0x0601DDBD RID: 122301 RVA: 0x0042FE38 File Offset: 0x0042E038
 		public EEntityOwnerType Type { get; set; }
 
-		// Token: 0x170083F6 RID: 33782
-		// (get) Token: 0x0601C5E9 RID: 116201 RVA: 0x00403BA5 File Offset: 0x00401DA5
-		// (set) Token: 0x0601C5EA RID: 116202 RVA: 0x00403BAD File Offset: 0x00401DAD
+		// Token: 0x17008A37 RID: 35383
+		// (get) Token: 0x0601DDBE RID: 122302 RVA: 0x0042FE41 File Offset: 0x0042E041
+		// (set) Token: 0x0601DDBF RID: 122303 RVA: 0x0042FE49 File Offset: 0x0042E049
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x0601C5EB RID: 116203 RVA: 0x00403BB6 File Offset: 0x00401DB6
+		// Token: 0x0601DDC0 RID: 122304 RVA: 0x0042FE52 File Offset: 0x0042E052
 		public IEntityOwnerLevelPlayT()
 		{
 			this.Type = EEntityOwnerType.Quest;

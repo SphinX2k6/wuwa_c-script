@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053EC RID: 21484
+	// Token: 0x020043CF RID: 17359
 	public enum EFilterSettingValueIndex
 	{
-		// Token: 0x0401CFC4 RID: 118724
+		// Token: 0x04017A5D RID: 96861
 		Horizontal,
-		// Token: 0x0401CFC5 RID: 118725
+		// Token: 0x04017A5E RID: 96862
 		Vertical,
-		// Token: 0x0401CFC6 RID: 118726
+		// Token: 0x04017A5F RID: 96863
 		Intensity,
-		// Token: 0x0401CFC7 RID: 118727
+		// Token: 0x04017A60 RID: 96864
 		SharpenIntensity,
-		// Token: 0x0401CFC8 RID: 118728
+		// Token: 0x04017A61 RID: 96865
 		Brightness,
-		// Token: 0x0401CFC9 RID: 118729
+		// Token: 0x04017A62 RID: 96866
 		Contrast,
-		// Token: 0x0401CFCA RID: 118730
+		// Token: 0x04017A63 RID: 96867
 		ColorTemperature,
-		// Token: 0x0401CFCB RID: 118731
+		// Token: 0x04017A64 RID: 96868
 		Saturation,
-		// Token: 0x0401CFCC RID: 118732
+		// Token: 0x04017A65 RID: 96869
 		Bloom,
-		// Token: 0x0401CFCD RID: 118733
+		// Token: 0x04017A66 RID: 96870
 		Gamma,
-		// Token: 0x0401CFCE RID: 118734
+		// Token: 0x04017A67 RID: 96871
 		ShadowIntensity,
-		// Token: 0x0401CFCF RID: 118735
+		// Token: 0x04017A68 RID: 96872
 		NoiseIntensity,
-		// Token: 0x0401CFD0 RID: 118736
+		// Token: 0x04017A69 RID: 96873
 		Halation
 	}
 }

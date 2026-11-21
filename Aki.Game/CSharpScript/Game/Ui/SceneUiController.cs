@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Camera;
 using Cysharp.Threading.Tasks;
@@ -9,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046BA RID: 18106
+	// Token: 0x020035EB RID: 13803
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class SceneUiController : ControllerBase
 	{
-		// Token: 0x0602EB36 RID: 191286 RVA: 0x00ACEE00 File Offset: 0x00ACD000
+		// Token: 0x06023282 RID: 144002 RVA: 0x009FD6D4 File Offset: 0x009FB8D4
 		protected override bool OnInit()
 		{
 			Ticker ticker = TickSystem.Instance.Add(new Action<float>(this.PostUpdateTick), "SceneUiController", ETickingGroup.TG_PostUpdateWork, true, 0, false);
@@ -23,7 +22,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EB37 RID: 191287 RVA: 0x00ACEE4C File Offset: 0x00ACD04C
+		// Token: 0x06023283 RID: 144003 RVA: 0x009FD720 File Offset: 0x009FB920
 		protected override bool OnLeaveLevel()
 		{
 			this.Unsubscribe();
@@ -31,7 +30,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EB38 RID: 191288 RVA: 0x00ACEE5B File Offset: 0x00ACD05B
+		// Token: 0x06023284 RID: 144004 RVA: 0x009FD72F File Offset: 0x009FB92F
 		protected override bool OnClear()
 		{
 			this.Unsubscribe();
@@ -44,14 +43,14 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EB39 RID: 191289 RVA: 0x00ACEE99 File Offset: 0x00ACD099
+		// Token: 0x06023285 RID: 144005 RVA: 0x009FD76D File Offset: 0x009FB96D
 		private void PostUpdateTick(float delta)
 		{
 			this.EnsureSubscribed();
 			this.UpdateAllFacing();
 		}
 
-		// Token: 0x0602EB3A RID: 191290 RVA: 0x00ACEEA8 File Offset: 0x00ACD0A8
+		// Token: 0x06023286 RID: 144006 RVA: 0x009FD77C File Offset: 0x009FB97C
 		private void EnsureSubscribed()
 		{
 			if (this.SubscribedSubsystem != null && this.SubscribedSubsystem.IsValid())
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Ui
 			Log.Instance.Info(ELogModule.Scene3dUi, ELogAuthor.HYF, "[SceneUiController]已订阅SceneUiAnchorSubsystem", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602EB3B RID: 191291 RVA: 0x00ACEFB0 File Offset: 0x00ACD1B0
+		// Token: 0x06023287 RID: 144007 RVA: 0x009FD884 File Offset: 0x009FBA84
 		private void Unsubscribe()
 		{
 			USceneUiAnchorSubsystem subscribedSubsystem = this.SubscribedSubsystem;
@@ -98,31 +97,36 @@ namespace CSharpScript.Game.Ui
 			subscribedSubsystem.OnAnchorEndPlay.Remove(new Action<ASceneUiAnchorActor>(this.OnAnchorEndPlay));
 		}
 
-		// Token: 0x0602EB3C RID: 191292 RVA: 0x00ACF04C File Offset: 0x00ACD24C
+		// Token: 0x06023288 RID: 144008 RVA: 0x009FD920 File Offset: 0x009FBB20
 		private void ClearAll()
 		{
-			HashSet<SceneUiView>[] array = this.ClosingViewMap.Values.ToArray<HashSet<SceneUiView>>();
-			SceneUiView[] array2;
-			for (int i = 0; i < array.Length; i++)
+			HashSet<SceneUiView>[] array = new HashSet<SceneUiView>[this.ClosingViewMap.Count];
+			this.ClosingViewMap.Values.CopyTo(array, 0);
+			SceneUiView[] array4;
+			foreach (HashSet<SceneUiView> hashSet in array)
 			{
-				array2 = array[i].ToArray<SceneUiView>();
-				for (int j = 0; j < array2.Length; j++)
+				SceneUiView[] array3 = new SceneUiView[hashSet.Count];
+				hashSet.CopyTo(array3, 0);
+				array4 = array3;
+				for (int j = 0; j < array4.Length; j++)
 				{
-					array2[j].SkipPlayingSequence();
+					array4[j].SkipPlayingSequence();
 				}
 			}
 			this.ClosingViewMap.Clear();
-			array2 = this.AnchorViewMap.Values.ToArray<SceneUiView>();
-			for (int i = 0; i < array2.Length; i++)
+			SceneUiView[] array5 = new SceneUiView[this.AnchorViewMap.Count];
+			this.AnchorViewMap.Values.CopyTo(array5, 0);
+			array4 = array5;
+			for (int i = 0; i < array4.Length; i++)
 			{
-				array2[i].DestroyAsync().Forget<bool>();
+				array4[i].DestroyAsync().Forget<bool>();
 			}
 			this.AnchorViewMap.Clear();
 			this.AnchorViewNameMap.Clear();
 			this.CreatingAnchorSet.Clear();
 		}
 
-		// Token: 0x0602EB3D RID: 191293 RVA: 0x00ACF0EF File Offset: 0x00ACD2EF
+		// Token: 0x06023289 RID: 144009 RVA: 0x009FDA08 File Offset: 0x009FBC08
 		private void OnPreloadRequest([Nullable(2)] ASceneUiAnchorActor anchor, string viewName)
 		{
 			if (anchor == null)
@@ -132,7 +136,7 @@ namespace CSharpScript.Game.Ui
 			this.EnsureCreatedAsync(anchor, viewName, null).Forget<SceneUiView>();
 		}
 
-		// Token: 0x0602EB3E RID: 191294 RVA: 0x00ACF103 File Offset: 0x00ACD303
+		// Token: 0x0602328A RID: 144010 RVA: 0x009FDA1C File Offset: 0x009FBC1C
 		private void OnOpenRequest([Nullable(2)] ASceneUiAnchorActor anchor, string viewName, string param)
 		{
 			if (anchor == null)
@@ -142,7 +146,7 @@ namespace CSharpScript.Game.Ui
 			this.OpenAsync(anchor, viewName, param).Forget();
 		}
 
-		// Token: 0x0602EB3F RID: 191295 RVA: 0x00ACF118 File Offset: 0x00ACD318
+		// Token: 0x0602328B RID: 144011 RVA: 0x009FDA30 File Offset: 0x009FBC30
 		private void OnOpenWithMapRequest([Nullable(2)] ASceneUiAnchorActor anchor, string viewName)
 		{
 			if (anchor == null)
@@ -169,7 +173,7 @@ namespace CSharpScript.Game.Ui
 			this.OpenAsync(anchor, viewName, dictionary).Forget();
 		}
 
-		// Token: 0x0602EB40 RID: 191296 RVA: 0x00ACF189 File Offset: 0x00ACD389
+		// Token: 0x0602328C RID: 144012 RVA: 0x009FDAA1 File Offset: 0x009FBCA1
 		[NullableContext(2)]
 		private void OnCloseRequest(ASceneUiAnchorActor anchor)
 		{
@@ -185,7 +189,7 @@ namespace CSharpScript.Game.Ui
 			valueOrDefault.HideAsync().Forget<bool>();
 		}
 
-		// Token: 0x0602EB41 RID: 191297 RVA: 0x00ACF1AA File Offset: 0x00ACD3AA
+		// Token: 0x0602328D RID: 144013 RVA: 0x009FDAC2 File Offset: 0x009FBCC2
 		[NullableContext(2)]
 		private void OnDestroyRequest(ASceneUiAnchorActor anchor)
 		{
@@ -196,7 +200,7 @@ namespace CSharpScript.Game.Ui
 			this.DestroyAnchorUi(anchor, true);
 		}
 
-		// Token: 0x0602EB42 RID: 191298 RVA: 0x00ACF1B8 File Offset: 0x00ACD3B8
+		// Token: 0x0602328E RID: 144014 RVA: 0x009FDAD0 File Offset: 0x009FBCD0
 		[NullableContext(2)]
 		private void OnAnchorEndPlay(ASceneUiAnchorActor anchor)
 		{
@@ -219,7 +223,7 @@ namespace CSharpScript.Game.Ui
 			}, null, null);
 		}
 
-		// Token: 0x0602EB43 RID: 191299 RVA: 0x00ACF238 File Offset: 0x00ACD438
+		// Token: 0x0602328F RID: 144015 RVA: 0x009FDB50 File Offset: 0x009FBD50
 		private UniTask OpenAsync(ASceneUiAnchorActor anchor, string viewName, [Nullable(2)] object param)
 		{
 			SceneUiController.<OpenAsync>d__19 <OpenAsync>d__;
@@ -233,7 +237,7 @@ namespace CSharpScript.Game.Ui
 			return <OpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EB44 RID: 191300 RVA: 0x00ACF294 File Offset: 0x00ACD494
+		// Token: 0x06023290 RID: 144016 RVA: 0x009FDBAC File Offset: 0x009FBDAC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -252,13 +256,13 @@ namespace CSharpScript.Game.Ui
 			return <EnsureCreatedAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EB45 RID: 191301 RVA: 0x00ACF2EF File Offset: 0x00ACD4EF
+		// Token: 0x06023291 RID: 144017 RVA: 0x009FDC07 File Offset: 0x009FBE07
 		private void DestroyAnchorUi(ASceneUiAnchorActor anchor, bool playCloseSequence)
 		{
 			this.DestroyAnchorUiAsync(anchor, playCloseSequence).Forget();
 		}
 
-		// Token: 0x0602EB46 RID: 191302 RVA: 0x00ACF300 File Offset: 0x00ACD500
+		// Token: 0x06023292 RID: 144018 RVA: 0x009FDC18 File Offset: 0x009FBE18
 		private UniTask DestroyAnchorUiAsync(ASceneUiAnchorActor anchor, bool playCloseSequence)
 		{
 			SceneUiController.<DestroyAnchorUiAsync>d__22 <DestroyAnchorUiAsync>d__;
@@ -271,22 +275,24 @@ namespace CSharpScript.Game.Ui
 			return <DestroyAnchorUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EB47 RID: 191303 RVA: 0x00ACF354 File Offset: 0x00ACD554
+		// Token: 0x06023293 RID: 144019 RVA: 0x009FDC6C File Offset: 0x009FBE6C
 		private void SkipClosingViews(AActor anchor)
 		{
-			HashSet<SceneUiView> source;
-			if (!this.ClosingViewMap.TryGetValue(anchor, out source))
+			HashSet<SceneUiView> hashSet;
+			if (!this.ClosingViewMap.TryGetValue(anchor, out hashSet))
 			{
 				return;
 			}
-			SceneUiView[] array = source.ToArray<SceneUiView>();
-			for (int i = 0; i < array.Length; i++)
+			SceneUiView[] array = new SceneUiView[hashSet.Count];
+			hashSet.CopyTo(array, 0);
+			SceneUiView[] array2 = array;
+			for (int i = 0; i < array2.Length; i++)
 			{
-				array[i].SkipPlayingSequence();
+				array2[i].SkipPlayingSequence();
 			}
 		}
 
-		// Token: 0x0602EB48 RID: 191304 RVA: 0x00ACF390 File Offset: 0x00ACD590
+		// Token: 0x06023294 RID: 144020 RVA: 0x009FDCB8 File Offset: 0x009FBEB8
 		private void UpdateAllFacing()
 		{
 			if (this.AnchorViewMap.Count == 0)
@@ -308,7 +314,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB49 RID: 191305 RVA: 0x00ACF424 File Offset: 0x00ACD624
+		// Token: 0x06023295 RID: 144021 RVA: 0x009FDD4C File Offset: 0x009FBF4C
 		private void UpdateViewFacing(SceneUiView view)
 		{
 			CameraModelInstance mainModel = CameraController.Instance.MainModel;
@@ -323,8 +329,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007666 RID: 30310
-		// (get) Token: 0x0602EB4A RID: 191306 RVA: 0x00ACF466 File Offset: 0x00ACD666
+		// Token: 0x17004922 RID: 18722
+		// (get) Token: 0x06023296 RID: 144022 RVA: 0x009FDD8E File Offset: 0x009FBF8E
 		public static SceneUiController Instance
 		{
 			get
@@ -333,7 +339,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB4B RID: 191307 RVA: 0x00ACF46D File Offset: 0x00ACD66D
+		// Token: 0x06023297 RID: 144023 RVA: 0x009FDD95 File Offset: 0x009FBF95
 		public static SceneUiController GetOrCreateInstance()
 		{
 			if (SceneUiController._Instance == null)
@@ -343,7 +349,7 @@ namespace CSharpScript.Game.Ui
 			return SceneUiController._Instance;
 		}
 
-		// Token: 0x0602EB4C RID: 191308 RVA: 0x00ACF481 File Offset: 0x00ACD681
+		// Token: 0x06023298 RID: 144024 RVA: 0x009FDDA9 File Offset: 0x009FBFA9
 		public static bool CreateInstance()
 		{
 			if (SceneUiController._Instance != null)
@@ -354,43 +360,43 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EB4D RID: 191309 RVA: 0x00ACF497 File Offset: 0x00ACD697
+		// Token: 0x06023299 RID: 144025 RVA: 0x009FDDBF File Offset: 0x009FBFBF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB4E RID: 191310 RVA: 0x00ACF499 File Offset: 0x00ACD699
+		// Token: 0x0602329A RID: 144026 RVA: 0x009FDDC1 File Offset: 0x009FBFC1
 		public static void ResetStaticDefaultValue()
 		{
 			SceneUiController._Instance = null;
 		}
 
-		// Token: 0x0602EB4F RID: 191311 RVA: 0x00ACF4A1 File Offset: 0x00ACD6A1
+		// Token: 0x0602329B RID: 144027 RVA: 0x009FDDC9 File Offset: 0x009FBFC9
 		static SceneUiController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneUiController.CreateStaticDefaultValue), new Action(SceneUiController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196C9 RID: 104137
+		// Token: 0x04013D6E RID: 81262
 		private readonly Dictionary<AActor, SceneUiView> AnchorViewMap = new Dictionary<AActor, SceneUiView>();
 
-		// Token: 0x040196CA RID: 104138
+		// Token: 0x04013D6F RID: 81263
 		private readonly Dictionary<AActor, string> AnchorViewNameMap = new Dictionary<AActor, string>();
 
-		// Token: 0x040196CB RID: 104139
+		// Token: 0x04013D70 RID: 81264
 		private readonly HashSet<AActor> CreatingAnchorSet = new HashSet<AActor>();
 
-		// Token: 0x040196CC RID: 104140
+		// Token: 0x04013D71 RID: 81265
 		private readonly Dictionary<AActor, HashSet<SceneUiView>> ClosingViewMap = new Dictionary<AActor, HashSet<SceneUiView>>();
 
-		// Token: 0x040196CD RID: 104141
+		// Token: 0x04013D72 RID: 81266
 		[Nullable(2)]
 		private USceneUiAnchorSubsystem SubscribedSubsystem;
 
-		// Token: 0x040196CE RID: 104142
+		// Token: 0x04013D73 RID: 81267
 		private int? TickerId;
 
-		// Token: 0x040196CF RID: 104143
+		// Token: 0x04013D74 RID: 81268
 		[Nullable(2)]
 		private static SceneUiController _Instance;
 	}

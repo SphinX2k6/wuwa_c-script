@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047D5 RID: 18389
+	// Token: 0x02003706 RID: 14086
 	public static class EQuickNavigateLoopScrollAreaGridItemComponent
 	{
-		// Token: 0x04019F23 RID: 106275
+		// Token: 0x040145D7 RID: 83415
 		public const int SpritePos = 0;
 
-		// Token: 0x04019F24 RID: 106276
+		// Token: 0x040145D8 RID: 83416
 		public const int TxtName = 1;
 
-		// Token: 0x04019F25 RID: 106277
+		// Token: 0x040145D9 RID: 83417
 		public const int RedDot = 2;
 
-		// Token: 0x04019F26 RID: 106278
+		// Token: 0x040145DA RID: 83418
 		public const int Toggle = 3;
 
-		// Token: 0x04019F27 RID: 106279
+		// Token: 0x040145DB RID: 83419
 		public const int HorizontalLayout = 4;
 
-		// Token: 0x04019F28 RID: 106280
+		// Token: 0x040145DC RID: 83420
 		public const int SpritePlayerIcon1 = 5;
 
-		// Token: 0x04019F29 RID: 106281
+		// Token: 0x040145DD RID: 83421
 		public const int SpritePlayerIcon2 = 6;
 	}
 }

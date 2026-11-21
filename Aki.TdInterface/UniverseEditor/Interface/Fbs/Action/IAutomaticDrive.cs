@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061BB RID: 25019
+	// Token: 0x02006829 RID: 26665
 	public struct IAutomaticDrive : IFlatbufferObject
 	{
-		// Token: 0x1700BA86 RID: 47750
-		// (get) Token: 0x0602B1BE RID: 176574 RVA: 0x005F194E File Offset: 0x005EFB4E
+		// Token: 0x1700C409 RID: 50185
+		// (get) Token: 0x0602D905 RID: 186629 RVA: 0x0063C3C2 File Offset: 0x0063A5C2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B1BF RID: 176575 RVA: 0x005F195B File Offset: 0x005EFB5B
+		// Token: 0x0602D906 RID: 186630 RVA: 0x0063C3CF File Offset: 0x0063A5CF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B1C0 RID: 176576 RVA: 0x005F1964 File Offset: 0x005EFB64
+		// Token: 0x0602D907 RID: 186631 RVA: 0x0063C3D8 File Offset: 0x0063A5D8
 		public static IAutomaticDrive GetRootAsIAutomaticDrive(ByteBuffer _bb)
 		{
 			return IAutomaticDrive.GetRootAsIAutomaticDrive(_bb, default(IAutomaticDrive));
 		}
 
-		// Token: 0x0602B1C1 RID: 176577 RVA: 0x005F1980 File Offset: 0x005EFB80
+		// Token: 0x0602D908 RID: 186632 RVA: 0x0063C3F4 File Offset: 0x0063A5F4
 		public static IAutomaticDrive GetRootAsIAutomaticDrive(ByteBuffer _bb, IAutomaticDrive obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B1C2 RID: 176578 RVA: 0x005F199D File Offset: 0x005EFB9D
+		// Token: 0x0602D909 RID: 186633 RVA: 0x0063C411 File Offset: 0x0063A611
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B1C3 RID: 176579 RVA: 0x005F19AC File Offset: 0x005EFBAC
+		// Token: 0x0602D90A RID: 186634 RVA: 0x0063C420 File Offset: 0x0063A620
 		public IAutomaticDrive __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BA87 RID: 47751
-		// (get) Token: 0x0602B1C4 RID: 176580 RVA: 0x005F19BC File Offset: 0x005EFBBC
+		// Token: 0x1700C40A RID: 50186
+		// (get) Token: 0x0602D90B RID: 186635 RVA: 0x0063C430 File Offset: 0x0063A630
 		public float StandbyTime
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B1C5 RID: 176581 RVA: 0x005F19FC File Offset: 0x005EFBFC
+		// Token: 0x0602D90C RID: 186636 RVA: 0x0063C470 File Offset: 0x0063A670
 		public static Offset<IAutomaticDrive> CreateIAutomaticDrive(FlatBufferBuilder builder, float StandbyTime = 0f)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAutomaticDrive.EndIAutomaticDrive(builder);
 		}
 
-		// Token: 0x0602B1C6 RID: 176582 RVA: 0x005F1A12 File Offset: 0x005EFC12
+		// Token: 0x0602D90D RID: 186637 RVA: 0x0063C486 File Offset: 0x0063A686
 		public static void StartIAutomaticDrive(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602B1C7 RID: 176583 RVA: 0x005F1A1B File Offset: 0x005EFC1B
+		// Token: 0x0602D90E RID: 186638 RVA: 0x0063C48F File Offset: 0x0063A68F
 		public static void AddStandbyTime(FlatBufferBuilder builder, float standbyTime)
 		{
 			builder.AddFloat(0, standbyTime, 0.0);
 		}
 
-		// Token: 0x0602B1C8 RID: 176584 RVA: 0x005F1A2E File Offset: 0x005EFC2E
+		// Token: 0x0602D90F RID: 186639 RVA: 0x0063C4A2 File Offset: 0x0063A6A2
 		public static Offset<IAutomaticDrive> EndIAutomaticDrive(FlatBufferBuilder builder)
 		{
 			return new Offset<IAutomaticDrive>(builder.EndTable());
 		}
 
-		// Token: 0x0602B1C9 RID: 176585 RVA: 0x005F1A3C File Offset: 0x005EFC3C
+		// Token: 0x0602D910 RID: 186640 RVA: 0x0063C4B0 File Offset: 0x0063A6B0
 		public IAutomaticDriveT UnPack()
 		{
 			IAutomaticDriveT automaticDriveT = new IAutomaticDriveT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return automaticDriveT;
 		}
 
-		// Token: 0x0602B1CA RID: 176586 RVA: 0x005F1A57 File Offset: 0x005EFC57
+		// Token: 0x0602D911 RID: 186641 RVA: 0x0063C4CB File Offset: 0x0063A6CB
 		public void UnPackTo(IAutomaticDriveT _o)
 		{
 			_o.StandbyTime = this.StandbyTime;
 		}
 
-		// Token: 0x0602B1CB RID: 176587 RVA: 0x005F1A68 File Offset: 0x005EFC68
+		// Token: 0x0602D912 RID: 186642 RVA: 0x0063C4DC File Offset: 0x0063A6DC
 		public static Offset<IAutomaticDrive> Pack(FlatBufferBuilder builder, IAutomaticDriveT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAutomaticDrive.CreateIAutomaticDrive(builder, _o.StandbyTime);
 		}
 
-		// Token: 0x040106DC RID: 67292
+		// Token: 0x040114EE RID: 70894
 		private Table __p;
 	}
 }

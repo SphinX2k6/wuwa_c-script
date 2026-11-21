@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001613 RID: 5651
+// Token: 0x02000ACB RID: 2763
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerCoverRecordPopupView : UiViewBase
 {
-	// Token: 0x06009F0B RID: 40715 RVA: 0x0022CD1C File Offset: 0x0022AF1C
+	// Token: 0x060072E9 RID: 29417 RVA: 0x00236B4C File Offset: 0x00234D4C
 	[NullableContext(1)]
 	public WheelTowerCoverRecordPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F0C RID: 40716 RVA: 0x0022CD28 File Offset: 0x0022AF28
+	// Token: 0x060072EA RID: 29418 RVA: 0x00236B58 File Offset: 0x00234D58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -53,7 +53,7 @@ public class WheelTowerCoverRecordPopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009F0D RID: 40717 RVA: 0x0022CE98 File Offset: 0x0022B098
+	// Token: 0x060072EB RID: 29419 RVA: 0x00236CC8 File Offset: 0x00234EC8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerCoverRecordPopupView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class WheelTowerCoverRecordPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F0E RID: 40718 RVA: 0x0022CEDC File Offset: 0x0022B0DC
+	// Token: 0x060072EC RID: 29420 RVA: 0x00236D0C File Offset: 0x00234F0C
 	protected override void OnStart()
 	{
 		IWheelTowerCoverRecordViewData wheelTowerCoverRecordViewData = this.OpenParam as IWheelTowerCoverRecordViewData;
@@ -103,7 +103,7 @@ public class WheelTowerCoverRecordPopupView : UiViewBase
 		WheelTowerModel.Instance.BlockEndlessUnlockTips = false;
 	}
 
-	// Token: 0x06009F0F RID: 40719 RVA: 0x0022CFD5 File Offset: 0x0022B1D5
+	// Token: 0x060072ED RID: 29421 RVA: 0x00236E05 File Offset: 0x00235005
 	private void OnClickCancel()
 	{
 		Action cancelCallback = this.CancelCallback;
@@ -114,7 +114,7 @@ public class WheelTowerCoverRecordPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009F10 RID: 40720 RVA: 0x0022CFEF File Offset: 0x0022B1EF
+	// Token: 0x060072EE RID: 29422 RVA: 0x00236E1F File Offset: 0x0023501F
 	private void OnClickConfirm()
 	{
 		Action confirmCallback = this.ConfirmCallback;
@@ -125,21 +125,21 @@ public class WheelTowerCoverRecordPopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400476B RID: 18283
+	// Token: 0x04004811 RID: 18449
 	private WheelTowerCoverRecordItem OldItem;
 
-	// Token: 0x0400476C RID: 18284
+	// Token: 0x04004812 RID: 18450
 	private WheelTowerCoverRecordItem NewItem;
 
-	// Token: 0x0400476D RID: 18285
+	// Token: 0x04004813 RID: 18451
 	private WheelTowerCoverRecordResetScoreItem ResetScoreItem;
 
-	// Token: 0x0400476E RID: 18286
+	// Token: 0x04004814 RID: 18452
 	private WheelTowerCoverRecordResetBossItem ResetBossItem;
 
-	// Token: 0x0400476F RID: 18287
+	// Token: 0x04004815 RID: 18453
 	private Action ConfirmCallback;
 
-	// Token: 0x04004770 RID: 18288
+	// Token: 0x04004816 RID: 18454
 	private Action CancelCallback;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D28 RID: 7464
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F39 RID: 7993
 	public class IPlotConfig
 	{
-		// Token: 0x0600A02D RID: 41005 RVA: 0x0016D940 File Offset: 0x0016BB40
+		// Token: 0x0600AA19 RID: 43545 RVA: 0x00181D64 File Offset: 0x0017FF64
 		private IPlotConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A02E RID: 41006 RVA: 0x0016D978 File Offset: 0x0016BB78
+		// Token: 0x0600AA1A RID: 43546 RVA: 0x00181D9C File Offset: 0x0017FF9C
 		public static IPlotConfig Create([Nullable(2)] IPlotConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A02F RID: 41007 RVA: 0x0016D98B File Offset: 0x0016BB8B
+		// Token: 0x0600AA1B RID: 43547 RVA: 0x00181DAF File Offset: 0x0017FFAF
 		public static IPlotConfig CreateFromSetValue([Nullable(2)] IPlotConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A030 RID: 41008 RVA: 0x0016D99E File Offset: 0x0016BB9E
+		// Token: 0x0600AA1C RID: 43548 RVA: 0x00181DC2 File Offset: 0x0017FFC2
 		public IPlotConfig_SetValue ToSetValue()
 		{
 			return new IPlotConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031B1 RID: 12721
-		// (get) Token: 0x0600A031 RID: 41009 RVA: 0x0016D9D5 File Offset: 0x0016BBD5
-		// (set) Token: 0x0600A032 RID: 41010 RVA: 0x0016D9EC File Offset: 0x0016BBEC
+		// Token: 0x17003445 RID: 13381
+		// (get) Token: 0x0600AA1D RID: 43549 RVA: 0x00181DF9 File Offset: 0x0017FFF9
+		// (set) Token: 0x0600AA1E RID: 43550 RVA: 0x00181E10 File Offset: 0x00180010
 		public virtual string EdPlotNode
 		{
 			get
@@ -81,9 +79,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031B2 RID: 12722
-		// (get) Token: 0x0600A033 RID: 41011 RVA: 0x0016D9FA File Offset: 0x0016BBFA
-		// (set) Token: 0x0600A034 RID: 41012 RVA: 0x0016DA11 File Offset: 0x0016BC11
+		// Token: 0x17003446 RID: 13382
+		// (get) Token: 0x0600AA1F RID: 43551 RVA: 0x00181E1E File Offset: 0x0018001E
+		// (set) Token: 0x0600AA20 RID: 43552 RVA: 0x00181E35 File Offset: 0x00180035
 		public virtual bool EdPlotHandleJump
 		{
 			get
@@ -96,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031B3 RID: 12723
-		// (get) Token: 0x0600A035 RID: 41013 RVA: 0x0016DA1F File Offset: 0x0016BC1F
-		// (set) Token: 0x0600A036 RID: 41014 RVA: 0x0016DA36 File Offset: 0x0016BC36
+		// Token: 0x17003447 RID: 13383
+		// (get) Token: 0x0600AA21 RID: 43553 RVA: 0x00181E43 File Offset: 0x00180043
+		// (set) Token: 0x0600AA22 RID: 43554 RVA: 0x00181E5A File Offset: 0x0018005A
 		public virtual string EdPlotFileId
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031B4 RID: 12724
-		// (get) Token: 0x0600A037 RID: 41015 RVA: 0x0016DA44 File Offset: 0x0016BC44
-		// (set) Token: 0x0600A038 RID: 41016 RVA: 0x0016DA6E File Offset: 0x0016BC6E
+		// Token: 0x17003448 RID: 13384
+		// (get) Token: 0x0600AA23 RID: 43555 RVA: 0x00181E68 File Offset: 0x00180068
+		// (set) Token: 0x0600AA24 RID: 43556 RVA: 0x00181E92 File Offset: 0x00180092
 		public virtual EVisualNovelLayout? EdPlotLayout
 		{
 			get
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006094 RID: 24724
+		// Token: 0x04006610 RID: 26128
 		[Nullable(2)]
 		protected IPlotConfig FbInstance;
 
-		// Token: 0x04006095 RID: 24725
+		// Token: 0x04006611 RID: 26129
 		[Nullable(2)]
 		protected IPlotConfig_SetValue PocoInterface;
 	}

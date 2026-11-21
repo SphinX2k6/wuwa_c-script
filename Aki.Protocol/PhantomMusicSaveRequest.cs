@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000CEA RID: 3306
+	// Token: 0x02000CDA RID: 3290
 	[NetMessage(EMessageId.PhantomMusicSaveRequest)]
 	public sealed class PhantomMusicSaveRequest : IMessage<PhantomMusicSaveRequest>, IMessage, IEquatable<PhantomMusicSaveRequest>, IDeepCloneable<PhantomMusicSaveRequest>, IBufferMessage
 	{
-		// Token: 0x06011E22 RID: 73250 RVA: 0x0029DBA4 File Offset: 0x0029BDA4
+		// Token: 0x06011D26 RID: 72998 RVA: 0x0029BF8D File Offset: 0x0029A18D
 		[NullableContext(1)]
 		public static PhantomMusicSaveRequest Create()
 		{
 			return new PhantomMusicSaveRequest();
 		}
 
-		// Token: 0x17003B44 RID: 15172
-		// (get) Token: 0x06011E23 RID: 73251 RVA: 0x0029DBAB File Offset: 0x0029BDAB
+		// Token: 0x17003B0F RID: 15119
+		// (get) Token: 0x06011D27 RID: 72999 RVA: 0x0029BF94 File Offset: 0x0029A194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003B45 RID: 15173
-		// (get) Token: 0x06011E24 RID: 73252 RVA: 0x0029DBAE File Offset: 0x0029BDAE
+		// Token: 0x17003B10 RID: 15120
+		// (get) Token: 0x06011D28 RID: 73000 RVA: 0x0029BF97 File Offset: 0x0029A197
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011E25 RID: 73253 RVA: 0x0029DBB5 File Offset: 0x0029BDB5
+		// Token: 0x06011D29 RID: 73001 RVA: 0x0029BF9E File Offset: 0x0029A19E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomMusicSaveRequest()
 		{
 		}
 
-		// Token: 0x06011E26 RID: 73254 RVA: 0x0029DBBD File Offset: 0x0029BDBD
+		// Token: 0x06011D2A RID: 73002 RVA: 0x0029BFA6 File Offset: 0x0029A1A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomMusicSaveRequest(PhantomMusicSaveRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06011E27 RID: 73255 RVA: 0x0029DBE2 File Offset: 0x0029BDE2
+		// Token: 0x06011D2B RID: 73003 RVA: 0x0029BFCB File Offset: 0x0029A1CB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomMusicSaveRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new PhantomMusicSaveRequest(this);
 		}
 
-		// Token: 0x17003B46 RID: 15174
-		// (get) Token: 0x06011E28 RID: 73256 RVA: 0x0029DBEA File Offset: 0x0029BDEA
-		// (set) Token: 0x06011E29 RID: 73257 RVA: 0x0029DBF2 File Offset: 0x0029BDF2
+		// Token: 0x17003B11 RID: 15121
+		// (get) Token: 0x06011D2C RID: 73004 RVA: 0x0029BFD3 File Offset: 0x0029A1D3
+		// (set) Token: 0x06011D2D RID: 73005 RVA: 0x0029BFDB File Offset: 0x0029A1DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Music
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011E2A RID: 73258 RVA: 0x0029DBFB File Offset: 0x0029BDFB
+		// Token: 0x06011D2E RID: 73006 RVA: 0x0029BFE4 File Offset: 0x0029A1E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomMusicSaveRequest);
 		}
 
-		// Token: 0x06011E2B RID: 73259 RVA: 0x0029DC09 File Offset: 0x0029BE09
+		// Token: 0x06011D2F RID: 73007 RVA: 0x0029BFF2 File Offset: 0x0029A1F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomMusicSaveRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Music == other.Music && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06011E2C RID: 73260 RVA: 0x0029DC38 File Offset: 0x0029BE38
+		// Token: 0x06011D30 RID: 73008 RVA: 0x0029C020 File Offset: 0x0029A220
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011E2D RID: 73261 RVA: 0x0029DC77 File Offset: 0x0029BE77
+		// Token: 0x06011D31 RID: 73009 RVA: 0x0029C05F File Offset: 0x0029A25F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06011E2E RID: 73262 RVA: 0x0029DC84 File Offset: 0x0029BE84
+		// Token: 0x06011D32 RID: 73010 RVA: 0x0029C06C File Offset: 0x0029A26C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,7 +132,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06011E2F RID: 73263 RVA: 0x0029DC8D File Offset: 0x0029BE8D
+		// Token: 0x06011D33 RID: 73011 RVA: 0x0029C075 File Offset: 0x0029A275
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011E30 RID: 73264 RVA: 0x0029DCC0 File Offset: 0x0029BEC0
+		// Token: 0x06011D34 RID: 73012 RVA: 0x0029C0A8 File Offset: 0x0029A2A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011E31 RID: 73265 RVA: 0x0029DCFE File Offset: 0x0029BEFE
+		// Token: 0x06011D35 RID: 73013 RVA: 0x0029C0E6 File Offset: 0x0029A2E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomMusicSaveRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06011E32 RID: 73266 RVA: 0x0029DD2F File Offset: 0x0029BF2F
+		// Token: 0x06011D36 RID: 73014 RVA: 0x0029C117 File Offset: 0x0029A317
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06011E33 RID: 73267 RVA: 0x0029DD38 File Offset: 0x0029BF38
+		// Token: 0x06011D37 RID: 73015 RVA: 0x0029C120 File Offset: 0x0029A320
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400703C RID: 28732
+		// Token: 0x04007054 RID: 28756
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400703D RID: 28733
+		// Token: 0x04007055 RID: 28757
 		public const int MusicFieldNumber = 5;
 
-		// Token: 0x0400703E RID: 28734
+		// Token: 0x04007056 RID: 28758
 		private int music_;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001218 RID: 4632
+// Token: 0x020006CC RID: 1740
 public enum EAbyssShopType
 {
-	// Token: 0x040038D1 RID: 14545
+	// Token: 0x0400396A RID: 14698
 	Limit = 1,
-	// Token: 0x040038D2 RID: 14546
+	// Token: 0x0400396B RID: 14699
 	Common
 }

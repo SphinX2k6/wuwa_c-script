@@ -4,77 +4,77 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F46 RID: 24390
+	// Token: 0x02004F2D RID: 20269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerSettlementViewData : IWheelTowerSettlementViewData
 	{
-		// Token: 0x17008FA9 RID: 36777
-		// (get) Token: 0x0603DF7E RID: 253822 RVA: 0x00EF5B6C File Offset: 0x00EF3D6C
-		// (set) Token: 0x0603DF7F RID: 253823 RVA: 0x00EF5B74 File Offset: 0x00EF3D74
+		// Token: 0x1700637B RID: 25467
+		// (get) Token: 0x06032F19 RID: 208665 RVA: 0x00E47898 File Offset: 0x00E45A98
+		// (set) Token: 0x06032F1A RID: 208666 RVA: 0x00E478A0 File Offset: 0x00E45AA0
 		public bool EndlessMode { get; set; }
 
-		// Token: 0x17008FAA RID: 36778
-		// (get) Token: 0x0603DF80 RID: 253824 RVA: 0x00EF5B7D File Offset: 0x00EF3D7D
-		// (set) Token: 0x0603DF81 RID: 253825 RVA: 0x00EF5B85 File Offset: 0x00EF3D85
+		// Token: 0x1700637C RID: 25468
+		// (get) Token: 0x06032F1B RID: 208667 RVA: 0x00E478A9 File Offset: 0x00E45AA9
+		// (set) Token: 0x06032F1C RID: 208668 RVA: 0x00E478B1 File Offset: 0x00E45AB1
 		public int TotalRound { get; set; }
 
-		// Token: 0x17008FAB RID: 36779
-		// (get) Token: 0x0603DF82 RID: 253826 RVA: 0x00EF5B8E File Offset: 0x00EF3D8E
-		// (set) Token: 0x0603DF83 RID: 253827 RVA: 0x00EF5B96 File Offset: 0x00EF3D96
+		// Token: 0x1700637D RID: 25469
+		// (get) Token: 0x06032F1D RID: 208669 RVA: 0x00E478BA File Offset: 0x00E45ABA
+		// (set) Token: 0x06032F1E RID: 208670 RVA: 0x00E478C2 File Offset: 0x00E45AC2
 		public int CurrentRound { get; set; }
 
-		// Token: 0x17008FAC RID: 36780
-		// (get) Token: 0x0603DF84 RID: 253828 RVA: 0x00EF5B9F File Offset: 0x00EF3D9F
-		// (set) Token: 0x0603DF85 RID: 253829 RVA: 0x00EF5BA7 File Offset: 0x00EF3DA7
+		// Token: 0x1700637E RID: 25470
+		// (get) Token: 0x06032F1F RID: 208671 RVA: 0x00E478CB File Offset: 0x00E45ACB
+		// (set) Token: 0x06032F20 RID: 208672 RVA: 0x00E478D3 File Offset: 0x00E45AD3
 		public int TotalScore { get; set; }
 
-		// Token: 0x17008FAD RID: 36781
-		// (get) Token: 0x0603DF86 RID: 253830 RVA: 0x00EF5BB0 File Offset: 0x00EF3DB0
-		// (set) Token: 0x0603DF87 RID: 253831 RVA: 0x00EF5BB8 File Offset: 0x00EF3DB8
+		// Token: 0x1700637F RID: 25471
+		// (get) Token: 0x06032F21 RID: 208673 RVA: 0x00E478DC File Offset: 0x00E45ADC
+		// (set) Token: 0x06032F22 RID: 208674 RVA: 0x00E478E4 File Offset: 0x00E45AE4
 		public int CurrentScore { get; set; }
 
-		// Token: 0x17008FAE RID: 36782
-		// (get) Token: 0x0603DF88 RID: 253832 RVA: 0x00EF5BC1 File Offset: 0x00EF3DC1
-		// (set) Token: 0x0603DF89 RID: 253833 RVA: 0x00EF5BC9 File Offset: 0x00EF3DC9
+		// Token: 0x17006380 RID: 25472
+		// (get) Token: 0x06032F23 RID: 208675 RVA: 0x00E478ED File Offset: 0x00E45AED
+		// (set) Token: 0x06032F24 RID: 208676 RVA: 0x00E478F5 File Offset: 0x00E45AF5
 		public List<IBossItemData> BossInfoList { get; set; } = new List<IBossItemData>();
 
-		// Token: 0x17008FAF RID: 36783
-		// (get) Token: 0x0603DF8A RID: 253834 RVA: 0x00EF5BD2 File Offset: 0x00EF3DD2
-		// (set) Token: 0x0603DF8B RID: 253835 RVA: 0x00EF5BDA File Offset: 0x00EF3DDA
+		// Token: 0x17006381 RID: 25473
+		// (get) Token: 0x06032F25 RID: 208677 RVA: 0x00E478FE File Offset: 0x00E45AFE
+		// (set) Token: 0x06032F26 RID: 208678 RVA: 0x00E47906 File Offset: 0x00E45B06
 		public int MaxBossWaveNum { get; set; }
 
-		// Token: 0x17008FB0 RID: 36784
-		// (get) Token: 0x0603DF8C RID: 253836 RVA: 0x00EF5BE3 File Offset: 0x00EF3DE3
-		// (set) Token: 0x0603DF8D RID: 253837 RVA: 0x00EF5BEB File Offset: 0x00EF3DEB
+		// Token: 0x17006382 RID: 25474
+		// (get) Token: 0x06032F27 RID: 208679 RVA: 0x00E4790F File Offset: 0x00E45B0F
+		// (set) Token: 0x06032F28 RID: 208680 RVA: 0x00E47917 File Offset: 0x00E45B17
 		public List<RoleDataWithBranch> RoleList { get; set; } = new List<RoleDataWithBranch>();
 
-		// Token: 0x17008FB1 RID: 36785
-		// (get) Token: 0x0603DF8E RID: 253838 RVA: 0x00EF5BF4 File Offset: 0x00EF3DF4
-		// (set) Token: 0x0603DF8F RID: 253839 RVA: 0x00EF5BFC File Offset: 0x00EF3DFC
+		// Token: 0x17006383 RID: 25475
+		// (get) Token: 0x06032F29 RID: 208681 RVA: 0x00E47920 File Offset: 0x00E45B20
+		// (set) Token: 0x06032F2A RID: 208682 RVA: 0x00E47928 File Offset: 0x00E45B28
 		public List<int> FinishedSeasonTaskIds { get; set; } = new List<int>();
 
-		// Token: 0x17008FB2 RID: 36786
-		// (get) Token: 0x0603DF90 RID: 253840 RVA: 0x00EF5C05 File Offset: 0x00EF3E05
-		// (set) Token: 0x0603DF91 RID: 253841 RVA: 0x00EF5C0D File Offset: 0x00EF3E0D
+		// Token: 0x17006384 RID: 25476
+		// (get) Token: 0x06032F2B RID: 208683 RVA: 0x00E47931 File Offset: 0x00E45B31
+		// (set) Token: 0x06032F2C RID: 208684 RVA: 0x00E47939 File Offset: 0x00E45B39
 		[Nullable(2)]
 		public IWheelTowerSettlementViewButtonData LeftButtonData { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008FB3 RID: 36787
-		// (get) Token: 0x0603DF92 RID: 253842 RVA: 0x00EF5C16 File Offset: 0x00EF3E16
-		// (set) Token: 0x0603DF93 RID: 253843 RVA: 0x00EF5C1E File Offset: 0x00EF3E1E
+		// Token: 0x17006385 RID: 25477
+		// (get) Token: 0x06032F2D RID: 208685 RVA: 0x00E47942 File Offset: 0x00E45B42
+		// (set) Token: 0x06032F2E RID: 208686 RVA: 0x00E4794A File Offset: 0x00E45B4A
 		[Nullable(2)]
 		public IWheelTowerSettlementViewButtonData CenterButtonData { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008FB4 RID: 36788
-		// (get) Token: 0x0603DF94 RID: 253844 RVA: 0x00EF5C27 File Offset: 0x00EF3E27
-		// (set) Token: 0x0603DF95 RID: 253845 RVA: 0x00EF5C2F File Offset: 0x00EF3E2F
+		// Token: 0x17006386 RID: 25478
+		// (get) Token: 0x06032F2F RID: 208687 RVA: 0x00E47953 File Offset: 0x00E45B53
+		// (set) Token: 0x06032F30 RID: 208688 RVA: 0x00E4795B File Offset: 0x00E45B5B
 		[Nullable(2)]
 		public IWheelTowerSettlementViewButtonData RightButtonData { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008FB5 RID: 36789
-		// (get) Token: 0x0603DF96 RID: 253846 RVA: 0x00EF5C38 File Offset: 0x00EF3E38
-		// (set) Token: 0x0603DF97 RID: 253847 RVA: 0x00EF5C40 File Offset: 0x00EF3E40
+		// Token: 0x17006387 RID: 25479
+		// (get) Token: 0x06032F31 RID: 208689 RVA: 0x00E47964 File Offset: 0x00E45B64
+		// (set) Token: 0x06032F32 RID: 208690 RVA: 0x00E4796C File Offset: 0x00E45B6C
 		public bool? ShowEndlessUnlockTips { get; set; }
 	}
 }

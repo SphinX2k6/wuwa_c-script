@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002088 RID: 8328
+// Token: 0x0200155B RID: 5467
 public class LoginQueueConfig
 {
-	// Token: 0x04007916 RID: 30998
+	// Token: 0x040079FF RID: 31231
 	public int ClientWaitingMode;
 
-	// Token: 0x04007917 RID: 30999
+	// Token: 0x04007A00 RID: 31232
 	public int ClientWaitingTime;
 }

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004923 RID: 18723
+	// Token: 0x0200389A RID: 14490
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationPhantomArenaOwnBattleToggle : NavigationButton
 	{
-		// Token: 0x06030E9E RID: 200350 RVA: 0x00B5B3A6 File Offset: 0x00B595A6
+		// Token: 0x060259CB RID: 154059 RVA: 0x00A96216 File Offset: 0x00A94416
 		public NavigationPhantomArenaOwnBattleToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x170079CC RID: 31180
-		// (get) Token: 0x06030E9F RID: 200351 RVA: 0x00B5B3B4 File Offset: 0x00B595B4
+		// Token: 0x17004D34 RID: 19764
+		// (get) Token: 0x060259CC RID: 154060 RVA: 0x00A96224 File Offset: 0x00A94424
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -34,18 +34,18 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EA0 RID: 200352 RVA: 0x00B5B3F6 File Offset: 0x00B595F6
+		// Token: 0x060259CD RID: 154061 RVA: 0x00A96266 File Offset: 0x00A94466
 		protected override void OnButtonClick()
 		{
 		}
 
-		// Token: 0x06030EA1 RID: 200353 RVA: 0x00B5B3F8 File Offset: 0x00B595F8
+		// Token: 0x060259CE RID: 154062 RVA: 0x00A96268 File Offset: 0x00A94468
 		protected override bool OnCheckFindOpposite()
 		{
 			return this.Proxy == null || !this.Proxy.SkillTriggerMask.IsInSkillInteract || this.IsInSkillInteract;
 		}
 
-		// Token: 0x06030EA2 RID: 200354 RVA: 0x00B5B420 File Offset: 0x00B59620
+		// Token: 0x060259CF RID: 154063 RVA: 0x00A96290 File Offset: 0x00A94490
 		protected override void OnNotifyFocusListener(bool isSameListener)
 		{
 			int index = int.Parse(this.ParamList[0]);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EA3 RID: 200355 RVA: 0x00B5B4A4 File Offset: 0x00B596A4
+		// Token: 0x060259D0 RID: 154064 RVA: 0x00A96314 File Offset: 0x00A94514
 		[NullableContext(0)]
 		public UniTask<bool> TriggerSelectCard()
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <TriggerSelectCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030EA4 RID: 200356 RVA: 0x00B5B4E8 File Offset: 0x00B596E8
+		// Token: 0x060259D1 RID: 154065 RVA: 0x00A96358 File Offset: 0x00A94558
 		public void SwitchBattleCardTips()
 		{
 			if (this.Proxy != null)
@@ -86,8 +86,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079CD RID: 31181
-		// (get) Token: 0x06030EA5 RID: 200357 RVA: 0x00B5B520 File Offset: 0x00B59720
+		// Token: 0x17004D35 RID: 19765
+		// (get) Token: 0x060259D2 RID: 154066 RVA: 0x00A96390 File Offset: 0x00A94590
 		public bool IsInSkillInteract
 		{
 			get
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3DE RID: 107486
+		// Token: 0x04014C51 RID: 85073
 		protected PhantomArenaBattleProxy ProxyInternal;
 	}
 }

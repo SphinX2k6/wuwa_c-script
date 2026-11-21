@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066C6 RID: 26310
+	// Token: 0x02005616 RID: 22038
 	public static class EDropCatchTextIdExtensions
 	{
-		// Token: 0x06041CCE RID: 269518 RVA: 0x00FF585C File Offset: 0x00FF3A5C
+		// Token: 0x0603681A RID: 223258 RVA: 0x00F36C60 File Offset: 0x00F34E60
 		public static string ToEnumString(this EDropCatchTextId value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041CCF RID: 269519 RVA: 0x00FF5884 File Offset: 0x00FF3A84
+		// Token: 0x0603681B RID: 223259 RVA: 0x00F36C88 File Offset: 0x00F34E88
 		public static EDropCatchTextId FromString(string name)
 		{
 			EDropCatchTextId result;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return result;
 		}
 
-		// Token: 0x06041CD0 RID: 269520 RVA: 0x00FF58AD File Offset: 0x00FF3AAD
+		// Token: 0x0603681C RID: 223260 RVA: 0x00F36CB1 File Offset: 0x00F34EB1
 		public static bool TryFromString(string name, out EDropCatchTextId value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return false;
 		}
 
-		// Token: 0x06041CD1 RID: 269521 RVA: 0x00FF58D2 File Offset: 0x00FF3AD2
+		// Token: 0x0603681D RID: 223261 RVA: 0x00F36CD6 File Offset: 0x00F34ED6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041CD2 RID: 269522 RVA: 0x00FF58E2 File Offset: 0x00FF3AE2
+		// Token: 0x0603681E RID: 223262 RVA: 0x00F36CE6 File Offset: 0x00F34EE6
 		public static EDropCatchTextId[] GetValues()
 		{
 			return new EDropCatchTextId[1];
 		}
 
-		// Token: 0x06041CD3 RID: 269523 RVA: 0x00FF58EA File Offset: 0x00FF3AEA
+		// Token: 0x0603681F RID: 223263 RVA: 0x00F36CEE File Offset: 0x00F34EEE
 		public static string[] GetNames()
 		{
 			return new string[]

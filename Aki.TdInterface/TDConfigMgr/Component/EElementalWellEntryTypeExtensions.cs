@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000930 RID: 2352
+	// Token: 0x020009DD RID: 2525
 	public static class EElementalWellEntryTypeExtensions
 	{
-		// Token: 0x06003509 RID: 13577 RVA: 0x0008A83C File Offset: 0x00088A3C
+		// Token: 0x06003875 RID: 14453 RVA: 0x000923BC File Offset: 0x000905BC
 		public static string ToEnumString(this EElementalWellEntryType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600350A RID: 13578 RVA: 0x0008A874 File Offset: 0x00088A74
+		// Token: 0x06003876 RID: 14454 RVA: 0x000923F4 File Offset: 0x000905F4
 		public static EElementalWellEntryType FromString(string name)
 		{
 			EElementalWellEntryType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600350B RID: 13579 RVA: 0x0008A89D File Offset: 0x00088A9D
+		// Token: 0x06003877 RID: 14455 RVA: 0x0009241D File Offset: 0x0009061D
 		public static bool TryFromString(string name, out EElementalWellEntryType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600350C RID: 13580 RVA: 0x0008A8D6 File Offset: 0x00088AD6
+		// Token: 0x06003878 RID: 14456 RVA: 0x00092456 File Offset: 0x00090656
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600350D RID: 13581 RVA: 0x0008A8EE File Offset: 0x00088AEE
+		// Token: 0x06003879 RID: 14457 RVA: 0x0009246E File Offset: 0x0009066E
 		public static EElementalWellEntryType[] GetValues()
 		{
 			return new EElementalWellEntryType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600350E RID: 13582 RVA: 0x0008A8FA File Offset: 0x00088AFA
+		// Token: 0x0600387A RID: 14458 RVA: 0x0009247A File Offset: 0x0009067A
 		public static string[] GetNames()
 		{
 			return new string[]

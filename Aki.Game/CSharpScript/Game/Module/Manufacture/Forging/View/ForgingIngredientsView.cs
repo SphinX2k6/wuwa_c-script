@@ -13,10 +13,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging.View
 {
-	// Token: 0x02005651 RID: 22097
+	// Token: 0x02004627 RID: 17959
 	public class ForgingIngredientsView : UiPanelBase
 	{
-		// Token: 0x060382E1 RID: 230113 RVA: 0x00D4F458 File Offset: 0x00D4D658
+		// Token: 0x0602D1DF RID: 184799 RVA: 0x00C9D1E4 File Offset: 0x00C9B3E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060382E2 RID: 230114 RVA: 0x00D4F5C4 File Offset: 0x00D4D7C4
+		// Token: 0x0602D1E0 RID: 184800 RVA: 0x00C9D350 File Offset: 0x00C9B550
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.CloseHelpRole, new Action(this.RefreshHelpRole));
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			EventSystem.Instance.Add(EEventName.ForgingFail, new Action(this.RefreshCurrentView));
 		}
 
-		// Token: 0x060382E3 RID: 230115 RVA: 0x00D4F628 File Offset: 0x00D4D828
+		// Token: 0x0602D1E1 RID: 184801 RVA: 0x00C9D3B4 File Offset: 0x00C9B5B4
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.CloseHelpRole, new Action(this.RefreshHelpRole));
@@ -65,19 +65,19 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			EventSystem.Instance.Remove(EEventName.ForgingFail, new Action(this.RefreshCurrentView));
 		}
 
-		// Token: 0x060382E4 RID: 230116 RVA: 0x00D4F689 File Offset: 0x00D4D889
+		// Token: 0x0602D1E2 RID: 184802 RVA: 0x00C9D415 File Offset: 0x00C9B615
 		private void RefreshCurrentView()
 		{
 			this.RefreshTips(this.ForgingItemData);
 		}
 
-		// Token: 0x060382E5 RID: 230117 RVA: 0x00D4F697 File Offset: 0x00D4D897
+		// Token: 0x0602D1E3 RID: 184803 RVA: 0x00C9D423 File Offset: 0x00C9B623
 		private void RefreshHelpRole()
 		{
 			this.VerticalTextView.RefreshHelpRole();
 		}
 
-		// Token: 0x060382E6 RID: 230118 RVA: 0x00D4F6A4 File Offset: 0x00D4D8A4
+		// Token: 0x0602D1E4 RID: 184804 RVA: 0x00C9D430 File Offset: 0x00C9B630
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ForgingIngredientsView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060382E7 RID: 230119 RVA: 0x00D4F6E7 File Offset: 0x00D4D8E7
+		// Token: 0x0602D1E5 RID: 184805 RVA: 0x00C9D473 File Offset: 0x00C9B673
 		protected override void OnStart()
 		{
 			this.AddEventListener();
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			base.GetButton(3).SetCanClickWhenDisable(true);
 		}
 
-		// Token: 0x060382E8 RID: 230120 RVA: 0x00D4F713 File Offset: 0x00D4D913
+		// Token: 0x0602D1E6 RID: 184806 RVA: 0x00C9D49F File Offset: 0x00C9B69F
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
 			this.VerticalTextView.Destroy(null);
 		}
 
-		// Token: 0x060382E9 RID: 230121 RVA: 0x00D4F728 File Offset: 0x00D4D928
+		// Token: 0x0602D1E7 RID: 184807 RVA: 0x00C9D4B4 File Offset: 0x00C9B6B4
 		private void OnClickConfirmButton()
 		{
 			if (!base.GetButton(3).IsSelfInteractive)
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			CommonManager.Instance.SendManufacture(this.ForgingItemData.ItemId, this.VerticalTextView.GetManufactureCount());
 		}
 
-		// Token: 0x060382EA RID: 230122 RVA: 0x00D4F7B0 File Offset: 0x00D4D9B0
+		// Token: 0x0602D1E8 RID: 184808 RVA: 0x00C9D53C File Offset: 0x00C9B73C
 		private void OnClickChangeRole()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.OpenHelpRole, this.ForgingItemData.ItemId);
 		}
 
-		// Token: 0x060382EB RID: 230123 RVA: 0x00D4F7CD File Offset: 0x00D4D9CD
+		// Token: 0x0602D1E9 RID: 184809 RVA: 0x00C9D559 File Offset: 0x00C9B759
 		public void OnSecondTimerRefresh()
 		{
 			if (this.ForgingItemData == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			verticalTextView.OnSecondTimerRefresh();
 		}
 
-		// Token: 0x060382EC RID: 230124 RVA: 0x00D4F7E8 File Offset: 0x00D4D9E8
+		// Token: 0x0602D1EA RID: 184810 RVA: 0x00C9D574 File Offset: 0x00C9B774
 		[NullableContext(1)]
 		public void RefreshTips(IWeaponForgingData data)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			this.CheckCanInteractConfirm();
 		}
 
-		// Token: 0x060382ED RID: 230125 RVA: 0x00D4F8AC File Offset: 0x00D4DAAC
+		// Token: 0x0602D1EB RID: 184811 RVA: 0x00C9D638 File Offset: 0x00C9B838
 		private void CheckCanInteractConfirm()
 		{
 			bool flag = true;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			base.GetButton(3).RootUIComp.Get().SetUIActive(flag2 && flag && flag3);
 		}
 
-		// Token: 0x060382EE RID: 230126 RVA: 0x00D4F9A4 File Offset: 0x00D4DBA4
+		// Token: 0x0602D1EC RID: 184812 RVA: 0x00C9D730 File Offset: 0x00C9B930
 		[NullableContext(1)]
 		private string GetDisableText(bool isUnlock, bool isMatEnough, bool isCoinEnough, bool isMakeCountEnough)
 		{
@@ -224,39 +224,39 @@ namespace CSharpScript.Game.Module.Manufacture.Forging.View
 			}
 		}
 
-		// Token: 0x0401D8D6 RID: 121046
+		// Token: 0x04018361 RID: 99169
 		[Nullable(2)]
 		private IWeaponForgingData ForgingItemData;
 
-		// Token: 0x0401D8D7 RID: 121047
+		// Token: 0x04018362 RID: 99170
 		[Nullable(2)]
 		private ForgingIngredientsVerticalView VerticalTextView;
 
-		// Token: 0x0200B809 RID: 47113
+		// Token: 0x0200A233 RID: 41523
 		public class EForgingIngredientsDefine
 		{
-			// Token: 0x04037ADB RID: 228059
+			// Token: 0x04032503 RID: 206083
 			public const int TxtName = 0;
 
-			// Token: 0x04037ADC RID: 228060
+			// Token: 0x04032504 RID: 206084
 			public const int TxtHaveNum = 1;
 
-			// Token: 0x04037ADD RID: 228061
+			// Token: 0x04032505 RID: 206085
 			public const int PanelBuy = 2;
 
-			// Token: 0x04037ADE RID: 228062
+			// Token: 0x04032506 RID: 206086
 			public const int BtnConfirm = 3;
 
-			// Token: 0x04037ADF RID: 228063
+			// Token: 0x04032507 RID: 206087
 			public const int PanelVertical = 4;
 
-			// Token: 0x04037AE0 RID: 228064
+			// Token: 0x04032508 RID: 206088
 			public const int TxtConfirm = 5;
 
-			// Token: 0x04037AE1 RID: 228065
+			// Token: 0x04032509 RID: 206089
 			public const int PnlActivate = 6;
 
-			// Token: 0x04037AE2 RID: 228066
+			// Token: 0x0403250A RID: 206090
 			public const int TxtActivate = 7;
 		}
 	}

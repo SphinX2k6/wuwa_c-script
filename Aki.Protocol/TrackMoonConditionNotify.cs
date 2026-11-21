@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013E1 RID: 5089
+	// Token: 0x02001454 RID: 5204
 	[NetMessage(EMessageId.TrackMoonConditionNotify)]
 	public sealed class TrackMoonConditionNotify : IMessage<TrackMoonConditionNotify>, IMessage, IEquatable<TrackMoonConditionNotify>, IDeepCloneable<TrackMoonConditionNotify>, IBufferMessage
 	{
-		// Token: 0x0601AFA3 RID: 110499 RVA: 0x003E8779 File Offset: 0x003E6979
+		// Token: 0x0601BA2E RID: 113198 RVA: 0x00403A45 File Offset: 0x00401C45
 		[NullableContext(1)]
 		public static TrackMoonConditionNotify Create()
 		{
 			return new TrackMoonConditionNotify();
 		}
 
-		// Token: 0x17005AF0 RID: 23280
-		// (get) Token: 0x0601AFA4 RID: 110500 RVA: 0x003E8780 File Offset: 0x003E6980
+		// Token: 0x17005D85 RID: 23941
+		// (get) Token: 0x0601BA2F RID: 113199 RVA: 0x00403A4C File Offset: 0x00401C4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005AF1 RID: 23281
-		// (get) Token: 0x0601AFA5 RID: 110501 RVA: 0x003E8783 File Offset: 0x003E6983
+		// Token: 0x17005D86 RID: 23942
+		// (get) Token: 0x0601BA30 RID: 113200 RVA: 0x00403A4F File Offset: 0x00401C4F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AFA6 RID: 110502 RVA: 0x003E878A File Offset: 0x003E698A
+		// Token: 0x0601BA31 RID: 113201 RVA: 0x00403A56 File Offset: 0x00401C56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonConditionNotify()
 		{
 		}
 
-		// Token: 0x0601AFA7 RID: 110503 RVA: 0x003E8794 File Offset: 0x003E6994
+		// Token: 0x0601BA32 RID: 113202 RVA: 0x00403A60 File Offset: 0x00401C60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonConditionNotify(TrackMoonConditionNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601AFA8 RID: 110504 RVA: 0x003E87E0 File Offset: 0x003E69E0
+		// Token: 0x0601BA33 RID: 113203 RVA: 0x00403AAC File Offset: 0x00401CAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonConditionNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new TrackMoonConditionNotify(this);
 		}
 
-		// Token: 0x17005AF2 RID: 23282
-		// (get) Token: 0x0601AFA9 RID: 110505 RVA: 0x003E87E8 File Offset: 0x003E69E8
-		// (set) Token: 0x0601AFAA RID: 110506 RVA: 0x003E87F0 File Offset: 0x003E69F0
+		// Token: 0x17005D87 RID: 23943
+		// (get) Token: 0x0601BA34 RID: 113204 RVA: 0x00403AB4 File Offset: 0x00401CB4
+		// (set) Token: 0x0601BA35 RID: 113205 RVA: 0x00403ABC File Offset: 0x00401CBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonConditionType TrackMoonConditionType
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005AF3 RID: 23283
-		// (get) Token: 0x0601AFAB RID: 110507 RVA: 0x003E87F9 File Offset: 0x003E69F9
-		// (set) Token: 0x0601AFAC RID: 110508 RVA: 0x003E8801 File Offset: 0x003E6A01
+		// Token: 0x17005D88 RID: 23944
+		// (get) Token: 0x0601BA36 RID: 113206 RVA: 0x00403AC5 File Offset: 0x00401CC5
+		// (set) Token: 0x0601BA37 RID: 113207 RVA: 0x00403ACD File Offset: 0x00401CCD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonUpdateInfo TrackMoonUpdateInfo
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AFAD RID: 110509 RVA: 0x003E880A File Offset: 0x003E6A0A
+		// Token: 0x0601BA38 RID: 113208 RVA: 0x00403AD6 File Offset: 0x00401CD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrackMoonConditionNotify);
 		}
 
-		// Token: 0x0601AFAE RID: 110510 RVA: 0x003E8818 File Offset: 0x003E6A18
+		// Token: 0x0601BA39 RID: 113209 RVA: 0x00403AE4 File Offset: 0x00401CE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrackMoonConditionNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TrackMoonConditionType == other.TrackMoonConditionType && object.Equals(this.TrackMoonUpdateInfo, other.TrackMoonUpdateInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601AFAF RID: 110511 RVA: 0x003E8868 File Offset: 0x003E6A68
+		// Token: 0x0601BA3A RID: 113210 RVA: 0x00403B34 File Offset: 0x00401D34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AFB0 RID: 110512 RVA: 0x003E88C3 File Offset: 0x003E6AC3
+		// Token: 0x0601BA3B RID: 113211 RVA: 0x00403B8F File Offset: 0x00401D8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601AFB1 RID: 110513 RVA: 0x003E88D0 File Offset: 0x003E6AD0
+		// Token: 0x0601BA3C RID: 113212 RVA: 0x00403B9C File Offset: 0x00401D9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601AFB2 RID: 110514 RVA: 0x003E88DC File Offset: 0x003E6ADC
+		// Token: 0x0601BA3D RID: 113213 RVA: 0x00403BA8 File Offset: 0x00401DA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.TrackMoonConditionType != TrackMoonConditionType.TrackMoonEntrust)
-			{
-				output.WriteRawTag(16);
-				output.WriteEnum((int)this.TrackMoonConditionType);
-			}
 			if (this.trackMoonUpdateInfo_ != null)
 			{
-				output.WriteRawTag(26);
+				output.WriteRawTag(10);
 				output.WriteMessage(this.TrackMoonUpdateInfo);
+			}
+			if (this.TrackMoonConditionType != TrackMoonConditionType.TrackMoonEntrust)
+			{
+				output.WriteRawTag(32);
+				output.WriteEnum((int)this.TrackMoonConditionType);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601AFB3 RID: 110515 RVA: 0x003E8938 File Offset: 0x003E6B38
+		// Token: 0x0601BA3E RID: 113214 RVA: 0x00403C04 File Offset: 0x00401E04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601AFB4 RID: 110516 RVA: 0x003E8990 File Offset: 0x003E6B90
+		// Token: 0x0601BA3F RID: 113215 RVA: 0x00403C5C File Offset: 0x00401E5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrackMoonConditionNotify other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601AFB5 RID: 110517 RVA: 0x003E89F8 File Offset: 0x003E6BF8
+		// Token: 0x0601BA40 RID: 113216 RVA: 0x00403CC4 File Offset: 0x00401EC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601AFB6 RID: 110518 RVA: 0x003E8A04 File Offset: 0x003E6C04
+		// Token: 0x0601BA41 RID: 113217 RVA: 0x00403CD0 File Offset: 0x00401ED0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,41 +240,41 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 16U)
+				if (num != 10U)
 				{
-					if (num != 26U)
+					if (num != 32U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						if (this.trackMoonUpdateInfo_ == null)
-						{
-							this.TrackMoonUpdateInfo = new TrackMoonUpdateInfo();
-						}
-						input.ReadMessage(this.TrackMoonUpdateInfo);
+						this.TrackMoonConditionType = (TrackMoonConditionType)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.TrackMoonConditionType = (TrackMoonConditionType)input.ReadEnum();
+					if (this.trackMoonUpdateInfo_ == null)
+					{
+						this.TrackMoonUpdateInfo = new TrackMoonUpdateInfo();
+					}
+					input.ReadMessage(this.TrackMoonUpdateInfo);
 				}
 			}
 		}
 
-		// Token: 0x04009C43 RID: 40003
+		// Token: 0x0400A08A RID: 41098
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009C44 RID: 40004
-		public const int TrackMoonConditionTypeFieldNumber = 2;
+		// Token: 0x0400A08B RID: 41099
+		public const int TrackMoonConditionTypeFieldNumber = 4;
 
-		// Token: 0x04009C45 RID: 40005
+		// Token: 0x0400A08C RID: 41100
 		private TrackMoonConditionType trackMoonConditionType_;
 
-		// Token: 0x04009C46 RID: 40006
-		public const int TrackMoonUpdateInfoFieldNumber = 3;
+		// Token: 0x0400A08D RID: 41101
+		public const int TrackMoonUpdateInfoFieldNumber = 1;
 
-		// Token: 0x04009C47 RID: 40007
+		// Token: 0x0400A08E RID: 41102
 		private TrackMoonUpdateInfo trackMoonUpdateInfo_;
 	}
 }

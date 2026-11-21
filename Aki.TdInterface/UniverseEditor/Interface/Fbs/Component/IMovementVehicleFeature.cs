@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055E1 RID: 21985
+	// Token: 0x02005B7F RID: 23423
 	public struct IMovementVehicleFeature : IFlatbufferObject
 	{
-		// Token: 0x1700A2AD RID: 41645
-		// (get) Token: 0x06024785 RID: 149381 RVA: 0x00508E05 File Offset: 0x00507005
+		// Token: 0x1700AB35 RID: 43829
+		// (get) Token: 0x06026992 RID: 158098 RVA: 0x0054937D File Offset: 0x0054757D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024786 RID: 149382 RVA: 0x00508E12 File Offset: 0x00507012
+		// Token: 0x06026993 RID: 158099 RVA: 0x0054938A File Offset: 0x0054758A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024787 RID: 149383 RVA: 0x00508E1C File Offset: 0x0050701C
+		// Token: 0x06026994 RID: 158100 RVA: 0x00549394 File Offset: 0x00547594
 		public static IMovementVehicleFeature GetRootAsIMovementVehicleFeature(ByteBuffer _bb)
 		{
 			return IMovementVehicleFeature.GetRootAsIMovementVehicleFeature(_bb, default(IMovementVehicleFeature));
 		}
 
-		// Token: 0x06024788 RID: 149384 RVA: 0x00508E38 File Offset: 0x00507038
+		// Token: 0x06026995 RID: 158101 RVA: 0x005493B0 File Offset: 0x005475B0
 		public static IMovementVehicleFeature GetRootAsIMovementVehicleFeature(ByteBuffer _bb, IMovementVehicleFeature obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024789 RID: 149385 RVA: 0x00508E55 File Offset: 0x00507055
+		// Token: 0x06026996 RID: 158102 RVA: 0x005493CD File Offset: 0x005475CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602478A RID: 149386 RVA: 0x00508E64 File Offset: 0x00507064
+		// Token: 0x06026997 RID: 158103 RVA: 0x005493DC File Offset: 0x005475DC
 		public IMovementVehicleFeature __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A2AE RID: 41646
-		// (get) Token: 0x0602478B RID: 149387 RVA: 0x00508E74 File Offset: 0x00507074
+		// Token: 0x1700AB36 RID: 43830
+		// (get) Token: 0x06026998 RID: 158104 RVA: 0x005493EC File Offset: 0x005475EC
 		public EVehicleFeatureFlag Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A2AF RID: 41647
-		// (get) Token: 0x0602478C RID: 149388 RVA: 0x00508EB0 File Offset: 0x005070B0
+		// Token: 0x1700AB37 RID: 43831
+		// (get) Token: 0x06026999 RID: 158105 RVA: 0x00549428 File Offset: 0x00547628
 		public int MoveSpline
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A2B0 RID: 41648
-		// (get) Token: 0x0602478D RID: 149389 RVA: 0x00508EEC File Offset: 0x005070EC
+		// Token: 0x1700AB38 RID: 43832
+		// (get) Token: 0x0602699A RID: 158106 RVA: 0x00549464 File Offset: 0x00547664
 		public IMovementPerformConfig? MovePerformConfig
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A2B1 RID: 41649
-		// (get) Token: 0x0602478E RID: 149390 RVA: 0x00508F4C File Offset: 0x0050714C
+		// Token: 0x1700AB39 RID: 43833
+		// (get) Token: 0x0602699B RID: 158107 RVA: 0x005494C4 File Offset: 0x005476C4
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602478F RID: 149391 RVA: 0x00508F89 File Offset: 0x00507189
+		// Token: 0x0602699C RID: 158108 RVA: 0x00549501 File Offset: 0x00547701
 		public static Offset<IMovementVehicleFeature> CreateIMovementVehicleFeature(FlatBufferBuilder builder, EVehicleFeatureFlag Type = EVehicleFeatureFlag.None, int MoveSpline = 0, Offset<IMovementPerformConfig> MovePerformConfigOffset = default(Offset<IMovementPerformConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMovementVehicleFeature.EndIMovementVehicleFeature(builder);
 		}
 
-		// Token: 0x06024790 RID: 149392 RVA: 0x00508FB5 File Offset: 0x005071B5
+		// Token: 0x0602699D RID: 158109 RVA: 0x0054952D File Offset: 0x0054772D
 		public static void StartIMovementVehicleFeature(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06024791 RID: 149393 RVA: 0x00508FBE File Offset: 0x005071BE
+		// Token: 0x0602699E RID: 158110 RVA: 0x00549536 File Offset: 0x00547736
 		public static void AddType(FlatBufferBuilder builder, EVehicleFeatureFlag type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06024792 RID: 149394 RVA: 0x00508FC9 File Offset: 0x005071C9
+		// Token: 0x0602699F RID: 158111 RVA: 0x00549541 File Offset: 0x00547741
 		public static void AddMoveSpline(FlatBufferBuilder builder, int moveSpline)
 		{
 			builder.AddInt(1, moveSpline, 0);
 		}
 
-		// Token: 0x06024793 RID: 149395 RVA: 0x00508FD4 File Offset: 0x005071D4
+		// Token: 0x060269A0 RID: 158112 RVA: 0x0054954C File Offset: 0x0054774C
 		public static void AddMovePerformConfig(FlatBufferBuilder builder, Offset<IMovementPerformConfig> movePerformConfigOffset)
 		{
 			builder.AddOffset(2, movePerformConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06024794 RID: 149396 RVA: 0x00508FE4 File Offset: 0x005071E4
+		// Token: 0x060269A1 RID: 158113 RVA: 0x0054955C File Offset: 0x0054775C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06024795 RID: 149397 RVA: 0x00508FEF File Offset: 0x005071EF
+		// Token: 0x060269A2 RID: 158114 RVA: 0x00549567 File Offset: 0x00547767
 		public static Offset<IMovementVehicleFeature> EndIMovementVehicleFeature(FlatBufferBuilder builder)
 		{
 			return new Offset<IMovementVehicleFeature>(builder.EndTable());
 		}
 
-		// Token: 0x06024796 RID: 149398 RVA: 0x00508FFC File Offset: 0x005071FC
+		// Token: 0x060269A3 RID: 158115 RVA: 0x00549574 File Offset: 0x00547774
 		public IMovementVehicleFeatureT UnPack()
 		{
 			IMovementVehicleFeatureT movementVehicleFeatureT = new IMovementVehicleFeatureT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return movementVehicleFeatureT;
 		}
 
-		// Token: 0x06024797 RID: 149399 RVA: 0x00509018 File Offset: 0x00507218
+		// Token: 0x060269A4 RID: 158116 RVA: 0x00549590 File Offset: 0x00547790
 		public void UnPackTo(IMovementVehicleFeatureT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06024798 RID: 149400 RVA: 0x00509078 File Offset: 0x00507278
+		// Token: 0x060269A5 RID: 158117 RVA: 0x005495F0 File Offset: 0x005477F0
 		public static Offset<IMovementVehicleFeature> Pack(FlatBufferBuilder builder, IMovementVehicleFeatureT _o)
 		{
 			if (_o == null)
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMovementVehicleFeature.CreateIMovementVehicleFeature(builder, _o.Type, _o.MoveSpline, movePerformConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E949 RID: 59721
+		// Token: 0x0400F5AB RID: 62891
 		private Table __p;
 	}
 }

@@ -2,25 +2,25 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001AFC RID: 6908
+// Token: 0x02000FBB RID: 4027
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchShopItemCardData : FloroRanchShopItemDataBase
 {
-	// Token: 0x0600CD0C RID: 52492 RVA: 0x002EC9D1 File Offset: 0x002EABD1
+	// Token: 0x0600A11D RID: 41245 RVA: 0x002F7ABD File Offset: 0x002F5CBD
 	public FloroRanchShopItemCardData(FloroRanchShopItem data) : base(data)
 	{
 		this.ConfigData = FloroRanchModel.Instance.GetFloroRanchCardData(this.Id);
 	}
 
-	// Token: 0x0600CD0D RID: 52493 RVA: 0x002EC9F0 File Offset: 0x002EABF0
+	// Token: 0x0600A11E RID: 41246 RVA: 0x002F7ADC File Offset: 0x002F5CDC
 	public override string GetName()
 	{
 		return this.ConfigData.GetName();
 	}
 
-	// Token: 0x170010F6 RID: 4342
-	// (get) Token: 0x0600CD0E RID: 52494 RVA: 0x002EC9FD File Offset: 0x002EABFD
+	// Token: 0x1700111B RID: 4379
+	// (get) Token: 0x0600A11F RID: 41247 RVA: 0x002F7AE9 File Offset: 0x002F5CE9
 	public override string Desc
 	{
 		get
@@ -29,36 +29,36 @@ public class FloroRanchShopItemCardData : FloroRanchShopItemDataBase
 		}
 	}
 
-	// Token: 0x0600CD0F RID: 52495 RVA: 0x002ECA0A File Offset: 0x002EAC0A
+	// Token: 0x0600A120 RID: 41248 RVA: 0x002F7AF6 File Offset: 0x002F5CF6
 	public override string GetIcon()
 	{
 		return this.ConfigData.GetIcon();
 	}
 
-	// Token: 0x0600CD10 RID: 52496 RVA: 0x002ECA17 File Offset: 0x002EAC17
+	// Token: 0x0600A121 RID: 41249 RVA: 0x002F7B03 File Offset: 0x002F5D03
 	public override FloroRanchRarityData GetQualityData()
 	{
 		return this.ConfigData.GetCardQualityData();
 	}
 
-	// Token: 0x0600CD11 RID: 52497 RVA: 0x002ECA24 File Offset: 0x002EAC24
+	// Token: 0x0600A122 RID: 41250 RVA: 0x002F7B10 File Offset: 0x002F5D10
 	public override int GetRace()
 	{
 		return this.ConfigData.GetRace();
 	}
 
-	// Token: 0x0600CD12 RID: 52498 RVA: 0x002ECA31 File Offset: 0x002EAC31
+	// Token: 0x0600A123 RID: 41251 RVA: 0x002F7B1D File Offset: 0x002F5D1D
 	public override int GetEarnCount()
 	{
 		return this.ConfigData.GetCardSalary();
 	}
 
-	// Token: 0x0600CD13 RID: 52499 RVA: 0x002ECA3E File Offset: 0x002EAC3E
+	// Token: 0x0600A124 RID: 41252 RVA: 0x002F7B2A File Offset: 0x002F5D2A
 	public override bool GetIsSpecialPhantom()
 	{
 		return this.ConfigData.IsSpecialPhantom;
 	}
 
-	// Token: 0x04005E1A RID: 24090
+	// Token: 0x04005EE9 RID: 24297
 	public FloroRanchCardData ConfigData;
 }

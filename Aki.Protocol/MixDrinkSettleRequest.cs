@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009DE RID: 2526
+	// Token: 0x020009CD RID: 2509
 	[NetMessage(EMessageId.MixDrinkSettleRequest)]
 	public sealed class MixDrinkSettleRequest : IMessage<MixDrinkSettleRequest>, IMessage, IEquatable<MixDrinkSettleRequest>, IDeepCloneable<MixDrinkSettleRequest>, IBufferMessage
 	{
-		// Token: 0x0600DD5E RID: 56670 RVA: 0x002078F1 File Offset: 0x00205AF1
+		// Token: 0x0600DC44 RID: 56388 RVA: 0x00205705 File Offset: 0x00203905
 		[NullableContext(1)]
 		public static MixDrinkSettleRequest Create()
 		{
 			return new MixDrinkSettleRequest();
 		}
 
-		// Token: 0x17002CDC RID: 11484
-		// (get) Token: 0x0600DD5F RID: 56671 RVA: 0x002078F8 File Offset: 0x00205AF8
+		// Token: 0x17002C9E RID: 11422
+		// (get) Token: 0x0600DC45 RID: 56389 RVA: 0x0020570C File Offset: 0x0020390C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CDD RID: 11485
-		// (get) Token: 0x0600DD60 RID: 56672 RVA: 0x002078FB File Offset: 0x00205AFB
+		// Token: 0x17002C9F RID: 11423
+		// (get) Token: 0x0600DC46 RID: 56390 RVA: 0x0020570F File Offset: 0x0020390F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DD61 RID: 56673 RVA: 0x00207902 File Offset: 0x00205B02
+		// Token: 0x0600DC47 RID: 56391 RVA: 0x00205716 File Offset: 0x00203916
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MixDrinkSettleRequest()
 		{
 		}
 
-		// Token: 0x0600DD62 RID: 56674 RVA: 0x00207920 File Offset: 0x00205B20
+		// Token: 0x0600DC48 RID: 56392 RVA: 0x00205734 File Offset: 0x00203934
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MixDrinkSettleRequest(MixDrinkSettleRequest other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DD63 RID: 56675 RVA: 0x0020798A File Offset: 0x00205B8A
+		// Token: 0x0600DC49 RID: 56393 RVA: 0x0020579E File Offset: 0x0020399E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MixDrinkSettleRequest Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new MixDrinkSettleRequest(this);
 		}
 
-		// Token: 0x17002CDE RID: 11486
-		// (get) Token: 0x0600DD64 RID: 56676 RVA: 0x00207992 File Offset: 0x00205B92
-		// (set) Token: 0x0600DD65 RID: 56677 RVA: 0x0020799A File Offset: 0x00205B9A
+		// Token: 0x17002CA0 RID: 11424
+		// (get) Token: 0x0600DC4A RID: 56394 RVA: 0x002057A6 File Offset: 0x002039A6
+		// (set) Token: 0x0600DC4B RID: 56395 RVA: 0x002057AE File Offset: 0x002039AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RequireId
@@ -88,8 +88,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CDF RID: 11487
-		// (get) Token: 0x0600DD66 RID: 56678 RVA: 0x002079A3 File Offset: 0x00205BA3
+		// Token: 0x17002CA1 RID: 11425
+		// (get) Token: 0x0600DC4C RID: 56396 RVA: 0x002057B7 File Offset: 0x002039B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> BaseDrinks
@@ -100,8 +100,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CE0 RID: 11488
-		// (get) Token: 0x0600DD67 RID: 56679 RVA: 0x002079AB File Offset: 0x00205BAB
+		// Token: 0x17002CA2 RID: 11426
+		// (get) Token: 0x0600DC4D RID: 56397 RVA: 0x002057BF File Offset: 0x002039BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> Batching
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CE1 RID: 11489
-		// (get) Token: 0x0600DD68 RID: 56680 RVA: 0x002079B3 File Offset: 0x00205BB3
-		// (set) Token: 0x0600DD69 RID: 56681 RVA: 0x002079BB File Offset: 0x00205BBB
+		// Token: 0x17002CA3 RID: 11427
+		// (get) Token: 0x0600DC4E RID: 56398 RVA: 0x002057C7 File Offset: 0x002039C7
+		// (set) Token: 0x0600DC4F RID: 56399 RVA: 0x002057CF File Offset: 0x002039CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Orna
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CE2 RID: 11490
-		// (get) Token: 0x0600DD6A RID: 56682 RVA: 0x002079C4 File Offset: 0x00205BC4
-		// (set) Token: 0x0600DD6B RID: 56683 RVA: 0x002079CC File Offset: 0x00205BCC
+		// Token: 0x17002CA4 RID: 11428
+		// (get) Token: 0x0600DC50 RID: 56400 RVA: 0x002057D8 File Offset: 0x002039D8
+		// (set) Token: 0x0600DC51 RID: 56401 RVA: 0x002057E0 File Offset: 0x002039E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LikePoint
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DD6C RID: 56684 RVA: 0x002079D5 File Offset: 0x00205BD5
+		// Token: 0x0600DC52 RID: 56402 RVA: 0x002057E9 File Offset: 0x002039E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MixDrinkSettleRequest);
 		}
 
-		// Token: 0x0600DD6D RID: 56685 RVA: 0x002079E4 File Offset: 0x00205BE4
+		// Token: 0x0600DC53 RID: 56403 RVA: 0x002057F8 File Offset: 0x002039F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MixDrinkSettleRequest other)
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RequireId == other.RequireId && this.baseDrinks_.Equals(other.baseDrinks_) && this.batching_.Equals(other.batching_) && this.Orna == other.Orna && this.LikePoint == other.LikePoint && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DD6E RID: 56686 RVA: 0x00207A68 File Offset: 0x00205C68
+		// Token: 0x0600DC54 RID: 56404 RVA: 0x0020587C File Offset: 0x00203A7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DD6F RID: 56687 RVA: 0x00207AF5 File Offset: 0x00205CF5
+		// Token: 0x0600DC55 RID: 56405 RVA: 0x00205909 File Offset: 0x00203B09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DD70 RID: 56688 RVA: 0x00207B02 File Offset: 0x00205D02
+		// Token: 0x0600DC56 RID: 56406 RVA: 0x00205916 File Offset: 0x00203B16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -205,35 +205,35 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DD71 RID: 56689 RVA: 0x00207B0C File Offset: 0x00205D0C
+		// Token: 0x0600DC57 RID: 56407 RVA: 0x00205920 File Offset: 0x00203B20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.baseDrinks_.WriteTo(ref output, MixDrinkSettleRequest._repeated_baseDrinks_codec);
-			this.batching_.WriteTo(ref output, MixDrinkSettleRequest._repeated_batching_codec);
-			if (this.RequireId != 0)
+			if (this.LikePoint != 0)
 			{
-				output.WriteRawTag(104);
-				output.WriteInt32(this.RequireId);
+				output.WriteRawTag(8);
+				output.WriteInt32(this.LikePoint);
 			}
 			if (this.Orna != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.Orna);
 			}
-			if (this.LikePoint != 0)
+			if (this.RequireId != 0)
 			{
-				output.WriteRawTag(120);
-				output.WriteInt32(this.LikePoint);
+				output.WriteRawTag(64);
+				output.WriteInt32(this.RequireId);
 			}
+			this.batching_.WriteTo(ref output, MixDrinkSettleRequest._repeated_batching_codec);
+			this.baseDrinks_.WriteTo(ref output, MixDrinkSettleRequest._repeated_baseDrinks_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600DD72 RID: 56690 RVA: 0x00207BA4 File Offset: 0x00205DA4
+		// Token: 0x0600DC58 RID: 56408 RVA: 0x002059B8 File Offset: 0x00203BB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DD73 RID: 56691 RVA: 0x00207C38 File Offset: 0x00205E38
+		// Token: 0x0600DC59 RID: 56409 RVA: 0x00205A4C File Offset: 0x00203C4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MixDrinkSettleRequest other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DD74 RID: 56692 RVA: 0x00207CBE File Offset: 0x00205EBE
+		// Token: 0x0600DC5A RID: 56410 RVA: 0x00205AD2 File Offset: 0x00203CD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DD75 RID: 56693 RVA: 0x00207CC8 File Offset: 0x00205EC8
+		// Token: 0x0600DC5B RID: 56411 RVA: 0x00205ADC File Offset: 0x00203CDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,87 +306,78 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 80U)
+				if (num <= 64U)
 				{
-					if (num == 16U || num == 18U)
+					if (num == 8U)
 					{
-						this.baseDrinks_.AddEntriesFrom(ref input, MixDrinkSettleRequest._repeated_baseDrinks_codec);
+						this.LikePoint = input.ReadInt32();
 						continue;
 					}
-					if (num == 80U)
+					if (num == 40U)
 					{
-						goto IL_64;
+						this.Orna = input.ReadInt32();
+						continue;
 					}
-				}
-				else if (num <= 104U)
-				{
-					if (num == 82U)
-					{
-						goto IL_64;
-					}
-					if (num == 104U)
+					if (num == 64U)
 					{
 						this.RequireId = input.ReadInt32();
 						continue;
 					}
 				}
-				else
+				else if (num <= 98U)
 				{
-					if (num == 112U)
+					if (num == 96U || num == 98U)
 					{
-						this.Orna = input.ReadInt32();
-						continue;
-					}
-					if (num == 120U)
-					{
-						this.LikePoint = input.ReadInt32();
+						this.batching_.AddEntriesFrom(ref input, MixDrinkSettleRequest._repeated_batching_codec);
 						continue;
 					}
 				}
+				else if (num == 120U || num == 122U)
+				{
+					this.baseDrinks_.AddEntriesFrom(ref input, MixDrinkSettleRequest._repeated_baseDrinks_codec);
+					continue;
+				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
-				continue;
-				IL_64:
-				this.batching_.AddEntriesFrom(ref input, MixDrinkSettleRequest._repeated_batching_codec);
 			}
 		}
 
-		// Token: 0x04005B88 RID: 23432
+		// Token: 0x04005B91 RID: 23441
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005B89 RID: 23433
-		public const int RequireIdFieldNumber = 13;
-
-		// Token: 0x04005B8A RID: 23434
-		private int requireId_;
-
-		// Token: 0x04005B8B RID: 23435
-		public const int BaseDrinksFieldNumber = 2;
-
-		// Token: 0x04005B8C RID: 23436
-		private static readonly FieldCodec<int> _repeated_baseDrinks_codec = FieldCodec.ForInt32(18U);
-
-		// Token: 0x04005B8D RID: 23437
-		private readonly RepeatedField<int> baseDrinks_ = new RepeatedField<int>();
-
-		// Token: 0x04005B8E RID: 23438
-		public const int BatchingFieldNumber = 10;
-
-		// Token: 0x04005B8F RID: 23439
-		private static readonly FieldCodec<int> _repeated_batching_codec = FieldCodec.ForInt32(82U);
-
-		// Token: 0x04005B90 RID: 23440
-		private readonly RepeatedField<int> batching_ = new RepeatedField<int>();
-
-		// Token: 0x04005B91 RID: 23441
-		public const int OrnaFieldNumber = 14;
-
 		// Token: 0x04005B92 RID: 23442
-		private int orna_;
+		public const int RequireIdFieldNumber = 8;
 
 		// Token: 0x04005B93 RID: 23443
-		public const int LikePointFieldNumber = 15;
+		private int requireId_;
 
 		// Token: 0x04005B94 RID: 23444
+		public const int BaseDrinksFieldNumber = 15;
+
+		// Token: 0x04005B95 RID: 23445
+		private static readonly FieldCodec<int> _repeated_baseDrinks_codec = FieldCodec.ForInt32(122U);
+
+		// Token: 0x04005B96 RID: 23446
+		private readonly RepeatedField<int> baseDrinks_ = new RepeatedField<int>();
+
+		// Token: 0x04005B97 RID: 23447
+		public const int BatchingFieldNumber = 12;
+
+		// Token: 0x04005B98 RID: 23448
+		private static readonly FieldCodec<int> _repeated_batching_codec = FieldCodec.ForInt32(98U);
+
+		// Token: 0x04005B99 RID: 23449
+		private readonly RepeatedField<int> batching_ = new RepeatedField<int>();
+
+		// Token: 0x04005B9A RID: 23450
+		public const int OrnaFieldNumber = 5;
+
+		// Token: 0x04005B9B RID: 23451
+		private int orna_;
+
+		// Token: 0x04005B9C RID: 23452
+		public const int LikePointFieldNumber = 1;
+
+		// Token: 0x04005B9D RID: 23453
 		private int likePoint_;
 	}
 }

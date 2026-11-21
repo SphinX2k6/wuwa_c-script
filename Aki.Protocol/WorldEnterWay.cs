@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200166E RID: 5742
+	// Token: 0x020016EA RID: 5866
 	public enum WorldEnterWay
 	{
-		// Token: 0x0400C1A7 RID: 49575
+		// Token: 0x0400C6D0 RID: 50896
 		[OriginalName("LobbyJoin")]
 		LobbyJoin,
-		// Token: 0x0400C1A8 RID: 49576
+		// Token: 0x0400C6D1 RID: 50897
 		[OriginalName("QueryJoin")]
 		QueryJoin
 	}

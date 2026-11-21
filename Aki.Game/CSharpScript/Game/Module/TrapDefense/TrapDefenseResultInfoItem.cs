@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AED RID: 19181
+	// Token: 0x02003A95 RID: 14997
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseResultInfoItem : GridProxyAbstract<ITrapDefensePauseInfo>
 	{
-		// Token: 0x06031AF3 RID: 203507 RVA: 0x00B88B38 File Offset: 0x00B86D38
+		// Token: 0x06026883 RID: 157827 RVA: 0x00ACCAEC File Offset: 0x00ACACEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031AF4 RID: 203508 RVA: 0x00B88BE4 File Offset: 0x00B86DE4
+		// Token: 0x06026884 RID: 157828 RVA: 0x00ACCB98 File Offset: 0x00ACAD98
 		public override void Refresh(ITrapDefensePauseInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -96,23 +96,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A889 RID: 108681
+		// Token: 0x040151DB RID: 86491
 		protected ITrapDefensePauseInfo Data;
 
-		// Token: 0x0200AC80 RID: 44160
+		// Token: 0x020096A0 RID: 38560
 		[NullableContext(0)]
 		internal class EItem
 		{
-			// Token: 0x040346C2 RID: 214722
+			// Token: 0x0402F073 RID: 192627
 			public const int Icon = 0;
 
-			// Token: 0x040346C3 RID: 214723
+			// Token: 0x0402F074 RID: 192628
 			public const int Title = 1;
 
-			// Token: 0x040346C4 RID: 214724
+			// Token: 0x0402F075 RID: 192629
 			public const int Value = 2;
 
-			// Token: 0x040346C5 RID: 214725
+			// Token: 0x0402F076 RID: 192630
 			public const int Split = 3;
 		}
 	}

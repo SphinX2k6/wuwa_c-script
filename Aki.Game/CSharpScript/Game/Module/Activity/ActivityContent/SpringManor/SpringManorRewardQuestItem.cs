@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200606D RID: 24685
+	// Token: 0x02004FEB RID: 20459
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringManorRewardQuestItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E6E7 RID: 255719 RVA: 0x00F150AC File Offset: 0x00F132AC
+		// Token: 0x060333AB RID: 209835 RVA: 0x00E5BE70 File Offset: 0x00E5A070
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E6E8 RID: 255720 RVA: 0x00F151F8 File Offset: 0x00F133F8
+		// Token: 0x060333AC RID: 209836 RVA: 0x00E5BFBC File Offset: 0x00E5A1BC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringManorRewardQuestItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6E9 RID: 255721 RVA: 0x00F1523C File Offset: 0x00F1343C
+		// Token: 0x060333AD RID: 209837 RVA: 0x00E5C000 File Offset: 0x00E5A200
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), () => new CommonItemSmallItemGrid(), null, false, null);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			receiveButton.SetRedDotVisible(true);
 		}
 
-		// Token: 0x0603E6EA RID: 255722 RVA: 0x00F152A4 File Offset: 0x00F134A4
+		// Token: 0x060333AE RID: 209838 RVA: 0x00E5C068 File Offset: 0x00E5A268
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			ActivitySpringManorTaskData rewardTaskData = SpringManorModel.Instance.ActivityData.GetRewardTaskData(data);
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			base.GetItem(3).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603E6EB RID: 255723 RVA: 0x00F15407 File Offset: 0x00F13607
+		// Token: 0x060333AF RID: 209839 RVA: 0x00E5C1CB File Offset: 0x00E5A3CB
 		[NullableContext(1)]
 		public void SetReceiveClickCallback(Action callback)
 		{
 			this.ReceiveClickCallback = callback;
 		}
 
-		// Token: 0x0603E6EC RID: 255724 RVA: 0x00F15410 File Offset: 0x00F13610
+		// Token: 0x060333B0 RID: 209840 RVA: 0x00E5C1D4 File Offset: 0x00E5A3D4
 		private void OnClickSkip()
 		{
 			if (this.TaskId == 0)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			onSkipClick((ESpringRewardTaskSkipType)rewardTaskConfigById.Value.SkipType);
 		}
 
-		// Token: 0x0603E6ED RID: 255725 RVA: 0x00F15585 File Offset: 0x00F13785
+		// Token: 0x060333B1 RID: 209841 RVA: 0x00E5C349 File Offset: 0x00E5A549
 		private void OnClickReceive(int _)
 		{
 			Action receiveClickCallback = this.ReceiveClickCallback;
@@ -201,13 +201,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			receiveClickCallback();
 		}
 
-		// Token: 0x04020A30 RID: 133680
+		// Token: 0x0401B35D RID: 111453
 		private int TaskId;
 
-		// Token: 0x04020A31 RID: 133681
+		// Token: 0x0401B35E RID: 111454
 		private Action ReceiveClickCallback;
 
-		// Token: 0x04020A32 RID: 133682
+		// Token: 0x0401B35F RID: 111455
 		[Nullable(new byte[]
 		{
 			2,
@@ -215,10 +215,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x04020A33 RID: 133683
+		// Token: 0x0401B360 RID: 111456
 		private ButtonItem ReceiveButton;
 
-		// Token: 0x04020A34 RID: 133684
+		// Token: 0x0401B361 RID: 111457
 		public Action<ESpringRewardTaskSkipType> OnSkipClick;
 	}
 }

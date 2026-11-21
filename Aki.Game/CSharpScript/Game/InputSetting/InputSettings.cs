@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FED RID: 28653
+	// Token: 0x0200616E RID: 24942
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputSettings : Singleton
 	{
-		// Token: 0x06045B29 RID: 285481 RVA: 0x0114FFD8 File Offset: 0x0114E1D8
+		// Token: 0x0603BCDA RID: 244954 RVA: 0x010F9DCC File Offset: 0x010F7FCC
 		private InputActionKey PopInputActionKey(string actionName, bool bShift, bool bCtrl, bool bAlt, bool bCmd, string keyName)
 		{
 			InputActionKey inputActionKey = null;
@@ -34,13 +33,13 @@ namespace CSharpScript.Game.InputSetting
 			return inputActionKey;
 		}
 
-		// Token: 0x06045B2A RID: 285482 RVA: 0x01150040 File Offset: 0x0114E240
+		// Token: 0x0603BCDB RID: 244955 RVA: 0x010F9E34 File Offset: 0x010F8034
 		private void RecycleInputActionKey(InputActionKey inputActionKey)
 		{
 			this.InputActionKeyPool.Add(inputActionKey);
 		}
 
-		// Token: 0x06045B2B RID: 285483 RVA: 0x01150050 File Offset: 0x0114E250
+		// Token: 0x0603BCDC RID: 244956 RVA: 0x010F9E44 File Offset: 0x010F8044
 		private InputAxisKey PopInputAxisKey(string axisName, float scale, string keyName)
 		{
 			InputAxisKey inputAxisKey = null;
@@ -61,13 +60,13 @@ namespace CSharpScript.Game.InputSetting
 			return inputAxisKey;
 		}
 
-		// Token: 0x06045B2C RID: 285484 RVA: 0x011500AC File Offset: 0x0114E2AC
+		// Token: 0x0603BCDD RID: 244957 RVA: 0x010F9EA0 File Offset: 0x010F80A0
 		private void RecycleInputAxisKey(InputAxisKey inputAxisKey)
 		{
 			this.InputAxisKeyPool.Add(inputAxisKey);
 		}
 
-		// Token: 0x06045B2D RID: 285485 RVA: 0x011500BA File Offset: 0x0114E2BA
+		// Token: 0x0603BCDE RID: 244958 RVA: 0x010F9EAE File Offset: 0x010F80AE
 		public void Initialize()
 		{
 			LanguageKeyTransUtils.Initialize();
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.InputSetting
 			this.Refresh();
 		}
 
-		// Token: 0x06045B2E RID: 285486 RVA: 0x011500D2 File Offset: 0x0114E2D2
+		// Token: 0x0603BCDF RID: 244959 RVA: 0x010F9EC6 File Offset: 0x010F80C6
 		public void Clear()
 		{
 			this.InputSettingsInstance = null;
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ClearKey();
 		}
 
-		// Token: 0x06045B2F RID: 285487 RVA: 0x0115010D File Offset: 0x0114E30D
+		// Token: 0x0603BCE0 RID: 244960 RVA: 0x010F9F01 File Offset: 0x010F8101
 		private void ReApplyGamepadDeadZone()
 		{
 			this.ReApplyIfValid(EFunction.GamepadLeftStickDeadZone);
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ReApplyIfValid(EFunction.GamepadRightTriggerDeadZone);
 		}
 
-		// Token: 0x06045B30 RID: 285488 RVA: 0x0115013B File Offset: 0x0114E33B
+		// Token: 0x0603BCE1 RID: 244961 RVA: 0x010F9F2F File Offset: 0x010F812F
 		private void ReApplyIfValid(EFunction id)
 		{
 			if (!GameSettingsManager.Instance.IsValid(id, false))
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.InputSetting
 			GameSettingsManager.Instance.ReApply(id, EGameSettingsApplyReason.AnyTime, false);
 		}
 
-		// Token: 0x06045B31 RID: 285489 RVA: 0x0115015A File Offset: 0x0114E35A
+		// Token: 0x0603BCE2 RID: 244962 RVA: 0x010F9F4E File Offset: 0x010F814E
 		public void Refresh()
 		{
 			this.RefreshActionKeyMappings();
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RefreshCombinationAxis();
 		}
 
-		// Token: 0x06045B32 RID: 285490 RVA: 0x01150170 File Offset: 0x0114E370
+		// Token: 0x0603BCE3 RID: 244963 RVA: 0x010F9F64 File Offset: 0x010F8164
 		private void RefreshActionKeyMappings()
 		{
 			TArray<FName> actionNames = this.GetActionNames();
@@ -123,50 +122,43 @@ namespace CSharpScript.Game.InputSetting
 				TArray<FInputActionKeyMapping> tarray = new TArray<FInputActionKeyMapping>();
 				this.InputSettingsInstance.GetActionMappingByName(inActionName, ref tarray);
 				TArray<FInputActionKeyMapping> tarray2 = tarray;
-				string text = inActionName.ToString();
-				if (Info.Instance.IsPlayInEditor && InputSettingsConfig.Instance.GetActionMappingConfigByActionName(text) == null)
+				string key = inActionName.ToString();
+				Dictionary<EInputBindingType, Dictionary<string, InputActionKey>> dictionary;
+				if (!this.InputActionKeyMappings.TryGetValue(key, out dictionary) || dictionary == null)
 				{
-					this.InputSettingsInstance.RemoveActionMappings(tarray2, true);
+					dictionary = new Dictionary<EInputBindingType, Dictionary<string, InputActionKey>>();
+					this.InputActionKeyMappings[key] = dictionary;
 				}
-				else
+				for (int j = 0; j < tarray2.Num(); j++)
 				{
-					Dictionary<EInputBindingType, Dictionary<string, InputActionKey>> dictionary;
-					if (!this.InputActionKeyMappings.TryGetValue(text, out dictionary) || dictionary == null)
+					FInputActionKeyMapping finputActionKeyMapping = tarray2.Get(j);
+					string text = finputActionKeyMapping.Key.KeyName.ToString();
+					this.TryAddKey(text);
+					foreach (EInputBindingType key2 in InputBindingDefine.inputBindingTypesArray)
 					{
-						dictionary = new Dictionary<EInputBindingType, Dictionary<string, InputActionKey>>();
-						this.InputActionKeyMappings[text] = dictionary;
-					}
-					for (int j = 0; j < tarray2.Num(); j++)
-					{
-						FInputActionKeyMapping finputActionKeyMapping = tarray2.Get(j);
-						string text2 = finputActionKeyMapping.Key.KeyName.ToString();
-						this.TryAddKey(text2);
-						foreach (EInputBindingType key in InputBindingDefine.inputBindingTypesArray)
+						Dictionary<string, InputActionKey> dictionary2;
+						if (!dictionary.TryGetValue(key2, out dictionary2) || dictionary2 == null)
 						{
-							Dictionary<string, InputActionKey> dictionary2;
-							if (!dictionary.TryGetValue(key, out dictionary2) || dictionary2 == null)
+							dictionary2 = new Dictionary<string, InputActionKey>();
+							dictionary[key2] = dictionary2;
+						}
+						InputActionKey inputActionKey;
+						dictionary2.TryGetValue(text, out inputActionKey);
+						if (inputActionKey == null || !inputActionKey.IsEqual(finputActionKeyMapping))
+						{
+							InputActionKey inputActionKey2 = InputActionKey.NewByInputActionKeyMapping(finputActionKeyMapping);
+							if (inputActionKey2 != null)
 							{
-								dictionary2 = new Dictionary<string, InputActionKey>();
-								dictionary[key] = dictionary2;
-							}
-							InputActionKey inputActionKey;
-							dictionary2.TryGetValue(text2, out inputActionKey);
-							if (inputActionKey == null || !inputActionKey.IsEqual(finputActionKeyMapping))
-							{
-								InputActionKey inputActionKey2 = InputActionKey.NewByInputActionKeyMapping(finputActionKeyMapping);
-								if (inputActionKey2 != null)
-								{
-									dictionary2[text2] = inputActionKey2;
-								}
+								dictionary2[text] = inputActionKey2;
 							}
 						}
 					}
-					tarray2.Empty(true);
 				}
+				tarray2.Empty(true);
 			}
 		}
 
-		// Token: 0x06045B33 RID: 285491 RVA: 0x011502F8 File Offset: 0x0114E4F8
+		// Token: 0x0603BCE4 RID: 244964 RVA: 0x010FA0B4 File Offset: 0x010F82B4
 		private void RefreshAxisKeyMappings()
 		{
 			TArray<FName> axisNames = this.GetAxisNames();
@@ -176,47 +168,40 @@ namespace CSharpScript.Game.InputSetting
 				TArray<FInputAxisKeyMapping> tarray = new TArray<FInputAxisKeyMapping>();
 				this.InputSettingsInstance.GetAxisMappingByName(inAxisName, ref tarray);
 				TArray<FInputAxisKeyMapping> tarray2 = tarray;
-				string text = inAxisName.ToString();
-				if (Info.Instance.IsPlayInEditor && InputSettingsConfig.Instance.GetAxisMappingConfigByAxisName(text) == null)
+				string key = inAxisName.ToString();
+				Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>> dictionary;
+				if (!this.InputAxisKeyMappings.TryGetValue(key, out dictionary) || dictionary == null)
 				{
-					this.InputSettingsInstance.RemoveAxisMappings(tarray2, true);
+					dictionary = new Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>>();
+					this.InputAxisKeyMappings[key] = dictionary;
 				}
-				else
+				for (int j = 0; j < tarray2.Num(); j++)
 				{
-					Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>> dictionary;
-					if (!this.InputAxisKeyMappings.TryGetValue(text, out dictionary) || dictionary == null)
+					FInputAxisKeyMapping finputAxisKeyMapping = tarray2.Get(j);
+					string text = finputAxisKeyMapping.Key.KeyName.ToString();
+					this.TryAddKey(text);
+					foreach (EInputBindingType key2 in InputBindingDefine.inputBindingTypesArray)
 					{
-						dictionary = new Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>>();
-						this.InputAxisKeyMappings[text] = dictionary;
-					}
-					for (int j = 0; j < tarray2.Num(); j++)
-					{
-						FInputAxisKeyMapping finputAxisKeyMapping = tarray2.Get(j);
-						string text2 = finputAxisKeyMapping.Key.KeyName.ToString();
-						this.TryAddKey(text2);
-						foreach (EInputBindingType key in InputBindingDefine.inputBindingTypesArray)
+						Dictionary<string, InputAxisKey> dictionary2;
+						if (!dictionary.TryGetValue(key2, out dictionary2) || dictionary2 == null)
 						{
-							Dictionary<string, InputAxisKey> dictionary2;
-							if (!dictionary.TryGetValue(key, out dictionary2) || dictionary2 == null)
-							{
-								dictionary2 = new Dictionary<string, InputAxisKey>();
-								dictionary[key] = dictionary2;
-							}
-							InputAxisKey inputAxisKey;
-							dictionary2.TryGetValue(text2, out inputAxisKey);
-							if (inputAxisKey == null || !inputAxisKey.IsEqual(finputAxisKeyMapping))
-							{
-								InputAxisKey value = InputAxisKey.NewByInputAxisKeyMapping(finputAxisKeyMapping);
-								dictionary2[text2] = value;
-							}
+							dictionary2 = new Dictionary<string, InputAxisKey>();
+							dictionary[key2] = dictionary2;
+						}
+						InputAxisKey inputAxisKey;
+						dictionary2.TryGetValue(text, out inputAxisKey);
+						if (inputAxisKey == null || !inputAxisKey.IsEqual(finputAxisKeyMapping))
+						{
+							InputAxisKey value = InputAxisKey.NewByInputAxisKeyMapping(finputAxisKeyMapping);
+							dictionary2[text] = value;
 						}
 					}
-					tarray2.Empty(true);
 				}
+				tarray2.Empty(true);
 			}
 		}
 
-		// Token: 0x06045B34 RID: 285492 RVA: 0x0115047C File Offset: 0x0114E67C
+		// Token: 0x0603BCE5 RID: 244965 RVA: 0x010FA200 File Offset: 0x010F8400
 		public void RemoveCombinationActionMapping(string actionName, string mainKeyName, string secondaryKeyName)
 		{
 			Dictionary<string, List<InputCombinationActionKey>> dictionary;
@@ -249,7 +234,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B35 RID: 285493 RVA: 0x01150500 File Offset: 0x0114E700
+		// Token: 0x0603BCE6 RID: 244966 RVA: 0x010FA284 File Offset: 0x010F8484
 		public void NewInputCombinationActionKey(string actionName, string mainKeyName, string secondaryKeyName)
 		{
 			this.TryAddKey(mainKeyName);
@@ -278,7 +263,7 @@ namespace CSharpScript.Game.InputSetting
 			};
 		}
 
-		// Token: 0x06045B36 RID: 285494 RVA: 0x01150588 File Offset: 0x0114E788
+		// Token: 0x0603BCE7 RID: 244967 RVA: 0x010FA30C File Offset: 0x010F850C
 		private void RefreshCombinationAxis()
 		{
 			this.InputCombinationAxisKeyMappings.Clear();
@@ -307,31 +292,31 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B37 RID: 285495 RVA: 0x011506B8 File Offset: 0x0114E8B8
+		// Token: 0x0603BCE8 RID: 244968 RVA: 0x010FA43C File Offset: 0x010F863C
 		public void ClearCombinationActionMappings()
 		{
 			this.InputCombinationActionKeyMappings.Clear();
 		}
 
-		// Token: 0x06045B38 RID: 285496 RVA: 0x011506C5 File Offset: 0x0114E8C5
+		// Token: 0x0603BCE9 RID: 244969 RVA: 0x010FA449 File Offset: 0x010F8649
 		public void ClearCombinationAxisMappings()
 		{
 			this.InputCombinationAxisKeyMappings.Clear();
 		}
 
-		// Token: 0x06045B39 RID: 285497 RVA: 0x011506D2 File Offset: 0x0114E8D2
+		// Token: 0x0603BCEA RID: 244970 RVA: 0x010FA456 File Offset: 0x010F8656
 		public void NewInputCombinationAxisKey(string axisName, string mainKeyName, string secondaryKeyName, float scale)
 		{
 			this.NewCombinationAxisKey(axisName, mainKeyName, secondaryKeyName, scale);
 		}
 
-		// Token: 0x06045B3A RID: 285498 RVA: 0x011506DF File Offset: 0x0114E8DF
+		// Token: 0x0603BCEB RID: 244971 RVA: 0x010FA463 File Offset: 0x010F8663
 		[Conditional("DEBUG")]
 		public void RefreshDebugKey()
 		{
 		}
 
-		// Token: 0x06045B3B RID: 285499 RVA: 0x011506E4 File Offset: 0x0114E8E4
+		// Token: 0x0603BCEC RID: 244972 RVA: 0x010FA468 File Offset: 0x010F8668
 		public void RemoveCombinationAxisMapping(string axisName, string mainKeyName, string secondaryKeyName)
 		{
 			Dictionary<string, IList<InputCombinationAxisKey>> dictionary;
@@ -364,7 +349,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B3C RID: 285500 RVA: 0x01150768 File Offset: 0x0114E968
+		// Token: 0x0603BCED RID: 244973 RVA: 0x010FA4EC File Offset: 0x010F86EC
 		private void NewCombinationAxisKey(string axisName, string mainKeyName, string secondaryKeyName, float scale)
 		{
 			this.TryAddKey(mainKeyName);
@@ -385,7 +370,7 @@ namespace CSharpScript.Game.InputSetting
 			list.Add(item);
 		}
 
-		// Token: 0x06045B3D RID: 285501 RVA: 0x011507D7 File Offset: 0x0114E9D7
+		// Token: 0x0603BCEE RID: 244974 RVA: 0x010FA55B File Offset: 0x010F875B
 		public void SaveKeyMappings()
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -396,7 +381,7 @@ namespace CSharpScript.Game.InputSetting
 			inputSettingsInstance.SaveKeyMappingsNotSort();
 		}
 
-		// Token: 0x06045B3E RID: 285502 RVA: 0x011507E9 File Offset: 0x0114E9E9
+		// Token: 0x0603BCEF RID: 244975 RVA: 0x010FA56D File Offset: 0x010F876D
 		private void TryAddKey(string keyName)
 		{
 			if (this.InputKeyMap.ContainsKey(keyName))
@@ -406,27 +391,27 @@ namespace CSharpScript.Game.InputSetting
 			this.AddKey(keyName);
 		}
 
-		// Token: 0x06045B3F RID: 285503 RVA: 0x01150804 File Offset: 0x0114EA04
+		// Token: 0x0603BCF0 RID: 244976 RVA: 0x010FA588 File Offset: 0x010F8788
 		private void AddKey(string keyName)
 		{
 			InputKey value = new InputKey(keyName);
 			this.InputKeyMap[keyName] = value;
 		}
 
-		// Token: 0x06045B40 RID: 285504 RVA: 0x01150825 File Offset: 0x0114EA25
+		// Token: 0x0603BCF1 RID: 244977 RVA: 0x010FA5A9 File Offset: 0x010F87A9
 		private void ClearKey()
 		{
 			this.InputKeyMap.Clear();
 		}
 
-		// Token: 0x06045B41 RID: 285505 RVA: 0x01150832 File Offset: 0x0114EA32
+		// Token: 0x0603BCF2 RID: 244978 RVA: 0x010FA5B6 File Offset: 0x010F87B6
 		[NullableContext(2)]
 		public InputKey GetKey(EKey key)
 		{
 			return this.GetKey(key.ToString());
 		}
 
-		// Token: 0x06045B42 RID: 285506 RVA: 0x01150848 File Offset: 0x0114EA48
+		// Token: 0x0603BCF3 RID: 244979 RVA: 0x010FA5CC File Offset: 0x010F87CC
 		[return: Nullable(2)]
 		public InputKey GetKey(string key)
 		{
@@ -438,7 +423,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B43 RID: 285507 RVA: 0x01150868 File Offset: 0x0114EA68
+		// Token: 0x0603BCF4 RID: 244980 RVA: 0x010FA5EC File Offset: 0x010F87EC
 		[return: Nullable(2)]
 		public FKey GetUeKey(string keyName)
 		{
@@ -450,7 +435,7 @@ namespace CSharpScript.Game.InputSetting
 			return key.ToUeKey();
 		}
 
-		// Token: 0x06045B44 RID: 285508 RVA: 0x0115087C File Offset: 0x0114EA7C
+		// Token: 0x0603BCF5 RID: 244981 RVA: 0x010FA600 File Offset: 0x010F8800
 		public float? GetInputAnalogKeyState(string keyName)
 		{
 			InputKey key = this.GetKey(keyName);
@@ -461,56 +446,65 @@ namespace CSharpScript.Game.InputSetting
 			return new float?(key.GetInputAnalogKeyState());
 		}
 
-		// Token: 0x06045B45 RID: 285509 RVA: 0x011508A8 File Offset: 0x0114EAA8
+		// Token: 0x0603BCF6 RID: 244982 RVA: 0x010FA62C File Offset: 0x010F882C
 		public bool IsInputKeyDown(string keyName)
 		{
 			InputKey key = this.GetKey(keyName);
 			return key != null && key.IsInputKeyDown();
 		}
 
-		// Token: 0x06045B46 RID: 285510 RVA: 0x011508C8 File Offset: 0x0114EAC8
+		// Token: 0x0603BCF7 RID: 244983 RVA: 0x010FA64C File Offset: 0x010F884C
 		public bool IsKeyboardKey(string keyName)
 		{
 			InputKey key = this.GetKey(keyName);
 			if (key == null)
 			{
-				FKey fkey = new FKey(new FName(keyName));
+				FKey fkey = new FKey
+				{
+					KeyName = new FName(keyName)
+				};
 				return UKismetInputLibrary.Key_IsKeyboardKey(fkey);
 			}
 			return key.IsKeyboardKey;
 		}
 
-		// Token: 0x06045B47 RID: 285511 RVA: 0x011508FC File Offset: 0x0114EAFC
+		// Token: 0x0603BCF8 RID: 244984 RVA: 0x010FA684 File Offset: 0x010F8884
 		public bool IsGamepadKey(string keyName)
 		{
 			InputKey key = this.GetKey(keyName);
 			if (key == null)
 			{
-				FKey fkey = new FKey(new FName(keyName));
+				FKey fkey = new FKey
+				{
+					KeyName = new FName(keyName)
+				};
 				return UKismetInputLibrary.Key_IsGamepadKey(fkey);
 			}
 			return key.IsGamepadKey;
 		}
 
-		// Token: 0x06045B48 RID: 285512 RVA: 0x01150930 File Offset: 0x0114EB30
+		// Token: 0x0603BCF9 RID: 244985 RVA: 0x010FA6BC File Offset: 0x010F88BC
 		public bool IsMouseButton(string keyName)
 		{
 			InputKey key = this.GetKey(keyName);
 			if (key == null)
 			{
-				FKey fkey = new FKey(new FName(keyName));
+				FKey fkey = new FKey
+				{
+					KeyName = new FName(keyName)
+				};
 				return UKismetInputLibrary.Key_IsMouseButton(fkey);
 			}
 			return key.IsMouseButton;
 		}
 
-		// Token: 0x06045B49 RID: 285513 RVA: 0x01150962 File Offset: 0x0114EB62
+		// Token: 0x0603BCFA RID: 244986 RVA: 0x010FA6F4 File Offset: 0x010F88F4
 		public bool IsValidKey(string keyName)
 		{
 			return keyName != EKey.Keyboard_Invalid && keyName != EKey.Gamepad_Invalid && keyName != EKey.GenericUSBController_ButtonInvalid;
 		}
 
-		// Token: 0x06045B4A RID: 285514 RVA: 0x0115099C File Offset: 0x0114EB9C
+		// Token: 0x0603BCFB RID: 244987 RVA: 0x010FA72C File Offset: 0x010F892C
 		[return: Nullable(2)]
 		public string GetKeyIconPath(string keyName)
 		{
@@ -522,14 +516,14 @@ namespace CSharpScript.Game.InputSetting
 			return key.GetKeyIconPath();
 		}
 
-		// Token: 0x06045B4B RID: 285515 RVA: 0x011509BC File Offset: 0x0114EBBC
+		// Token: 0x0603BCFC RID: 244988 RVA: 0x010FA74C File Offset: 0x010F894C
 		public void SetActionMappingApplyInputSettings(string actionName, IList<string> keys, EInputBindingType bindingType, bool applyRemoveInputSettings, bool applyAddInputSettings)
 		{
 			this.ClearActionMappingInternalByBindingType(actionName, bindingType, applyRemoveInputSettings);
 			this.SetAllActionMappingInternalByBindingType(actionName, keys, bindingType, applyAddInputSettings);
 		}
 
-		// Token: 0x06045B4C RID: 285516 RVA: 0x011509D4 File Offset: 0x0114EBD4
+		// Token: 0x0603BCFD RID: 244989 RVA: 0x010FA764 File Offset: 0x010F8964
 		public void SetActionMapping(string actionName, IList<string> keys, EInputBindingType lastBindingType, EInputBindingType bindingType)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -560,7 +554,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ReApplyGamepadDeadZone();
 		}
 
-		// Token: 0x06045B4D RID: 285517 RVA: 0x01150AB0 File Offset: 0x0114ECB0
+		// Token: 0x0603BCFE RID: 244990 RVA: 0x010FA840 File Offset: 0x010F8A40
 		public void AddActionMapping(string actionName, string keyName, EInputBindingType bindingType, bool needApply)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -577,7 +571,7 @@ namespace CSharpScript.Game.InputSetting
 			this.AddActionMappingInternal(actionName, keyName, bindingType, needApply);
 		}
 
-		// Token: 0x06045B4E RID: 285518 RVA: 0x01150B08 File Offset: 0x0114ED08
+		// Token: 0x0603BCFF RID: 244991 RVA: 0x010FA898 File Offset: 0x010F8A98
 		private void SetAllActionMappingInternalByBindingType(string actionName, IList<string> keys, EInputBindingType bindingType, bool applyAddInputSettings)
 		{
 			if (keys.Count > 0)
@@ -601,7 +595,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B4F RID: 285519 RVA: 0x01150BC8 File Offset: 0x0114EDC8
+		// Token: 0x0603BD00 RID: 244992 RVA: 0x010FA958 File Offset: 0x010F8B58
 		private InputActionKey AddActionMappingInternal(string actionName, string keyName, EInputBindingType bindingType, bool needApply)
 		{
 			this.TryAddKey(keyName);
@@ -629,7 +623,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputActionKey;
 		}
 
-		// Token: 0x06045B50 RID: 285520 RVA: 0x01150C4C File Offset: 0x0114EE4C
+		// Token: 0x0603BD01 RID: 244993 RVA: 0x010FA9DC File Offset: 0x010F8BDC
 		public unsafe void RemoveActionMapping(string actionName, string keyName, EInputBindingType bindingType, bool applyInputSettings, bool rebuildKeyMaps)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -664,7 +658,7 @@ namespace CSharpScript.Game.InputSetting
 			this.RemoveActionMappingInternal(inputActionKey, inputActionKeyMapByBindingType, applyInputSettings, rebuildKeyMaps);
 		}
 
-		// Token: 0x06045B51 RID: 285521 RVA: 0x01150D14 File Offset: 0x0114EF14
+		// Token: 0x0603BD02 RID: 244994 RVA: 0x010FAAA4 File Offset: 0x010F8CA4
 		private void RemoveActionMappingInternal(InputActionKey inputActionKey, Dictionary<string, InputActionKey> inputActionKeyMap, bool applyInputSettings, bool rebuildKeyMaps)
 		{
 			string keyName = inputActionKey.KeyName;
@@ -681,7 +675,7 @@ namespace CSharpScript.Game.InputSetting
 			inputActionKeyMap.Remove(keyName);
 		}
 
-		// Token: 0x06045B52 RID: 285522 RVA: 0x01150D54 File Offset: 0x0114EF54
+		// Token: 0x0603BD03 RID: 244995 RVA: 0x010FAAE4 File Offset: 0x010F8CE4
 		public void ClearActionMapping(string actionName)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -698,7 +692,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ClearActionMappingInternal(actionName);
 		}
 
-		// Token: 0x06045B53 RID: 285523 RVA: 0x01150DA8 File Offset: 0x0114EFA8
+		// Token: 0x0603BD04 RID: 244996 RVA: 0x010FAB38 File Offset: 0x010F8D38
 		private void ClearActionMappingInternal(string actionName)
 		{
 			Dictionary<EInputBindingType, Dictionary<string, InputActionKey>> inputActionKeyMap = this.GetInputActionKeyMap(actionName);
@@ -723,7 +717,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B54 RID: 285524 RVA: 0x01150E80 File Offset: 0x0114F080
+		// Token: 0x0603BD05 RID: 244997 RVA: 0x010FAC10 File Offset: 0x010F8E10
 		private void ClearActionMappingInternalByBindingType(string actionName, EInputBindingType bindingType, bool applyInputSettings)
 		{
 			Dictionary<EInputBindingType, Dictionary<string, InputActionKey>> inputActionKeyMap = this.GetInputActionKeyMap(actionName);
@@ -757,7 +751,7 @@ namespace CSharpScript.Game.InputSetting
 			dictionary.Clear();
 		}
 
-		// Token: 0x06045B55 RID: 285525 RVA: 0x01150F70 File Offset: 0x0114F170
+		// Token: 0x0603BD06 RID: 244998 RVA: 0x010FAD00 File Offset: 0x010F8F00
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -775,7 +769,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B56 RID: 285526 RVA: 0x01150F90 File Offset: 0x0114F190
+		// Token: 0x0603BD07 RID: 244999 RVA: 0x010FAD20 File Offset: 0x010F8F20
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -797,7 +791,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B57 RID: 285527 RVA: 0x01150FC0 File Offset: 0x0114F1C0
+		// Token: 0x0603BD08 RID: 245000 RVA: 0x010FAD50 File Offset: 0x010F8F50
 		[return: Nullable(2)]
 		public InputActionKey GetInputActionKey(string actionName, string keyName, EInputBindingType bindingType)
 		{
@@ -819,7 +813,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B58 RID: 285528 RVA: 0x01150FF8 File Offset: 0x0114F1F8
+		// Token: 0x0603BD09 RID: 245001 RVA: 0x010FAD88 File Offset: 0x010F8F88
 		public TArray<FName> GetActionNames()
 		{
 			TArray<FName> result = new TArray<FName>();
@@ -827,7 +821,7 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x06045B59 RID: 285529 RVA: 0x0115101C File Offset: 0x0114F21C
+		// Token: 0x0603BD0A RID: 245002 RVA: 0x010FADAC File Offset: 0x010F8FAC
 		public TArray<FInputActionKeyMapping> GetActionMappings(string actionName)
 		{
 			TArray<FInputActionKeyMapping> result = new TArray<FInputActionKeyMapping>();
@@ -835,7 +829,7 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x06045B5A RID: 285530 RVA: 0x0115104C File Offset: 0x0114F24C
+		// Token: 0x0603BD0B RID: 245003 RVA: 0x010FADDC File Offset: 0x010F8FDC
 		private void SetAxisMappingWithAddInputSettings(string axisName, Dictionary<string, float> keyScaleMap, EInputBindingType bindingType)
 		{
 			Dictionary<string, InputAxisKey> inputAxisKeyMap = this.GetInputAxisKeyMap(axisName, bindingType);
@@ -864,7 +858,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B5B RID: 285531 RVA: 0x01151188 File Offset: 0x0114F388
+		// Token: 0x0603BD0C RID: 245004 RVA: 0x010FAF18 File Offset: 0x010F9118
 		private void SetAxisMappingApplyInputSettings(string axisName, Dictionary<string, float> keyScaleMap, EInputBindingType bindingType)
 		{
 			Dictionary<string, InputAxisKey> inputAxisKeyMap = this.GetInputAxisKeyMap(axisName, bindingType);
@@ -915,7 +909,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B5C RID: 285532 RVA: 0x01151390 File Offset: 0x0114F590
+		// Token: 0x0603BD0D RID: 245005 RVA: 0x010FB120 File Offset: 0x010F9320
 		public void SetAxisMappingWithoutInputSettings(string axisName, Dictionary<string, float> keyScaleMap, EInputBindingType bindingType)
 		{
 			Dictionary<string, InputAxisKey> inputAxisKeyMap = this.GetInputAxisKeyMap(axisName, bindingType);
@@ -934,7 +928,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B5D RID: 285533 RVA: 0x01151448 File Offset: 0x0114F648
+		// Token: 0x0603BD0E RID: 245006 RVA: 0x010FB1D8 File Offset: 0x010F93D8
 		public void SetAxisMapping(string axisName, Dictionary<string, float> keyScaleMap, EInputBindingType lastBindingType, EInputBindingType bindingType)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -969,7 +963,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ReApplyGamepadDeadZone();
 		}
 
-		// Token: 0x06045B5E RID: 285534 RVA: 0x0115152C File Offset: 0x0114F72C
+		// Token: 0x0603BD0F RID: 245007 RVA: 0x010FB2BC File Offset: 0x010F94BC
 		private InputAxisKey AddAxisMappingInternal(string axisName, float scale, string keyName, EInputBindingType bindingType, bool needApply)
 		{
 			this.TryAddKey(keyName);
@@ -997,7 +991,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputAxisKey;
 		}
 
-		// Token: 0x06045B5F RID: 285535 RVA: 0x011515B0 File Offset: 0x0114F7B0
+		// Token: 0x0603BD10 RID: 245008 RVA: 0x010FB340 File Offset: 0x010F9540
 		private void RemoveAxisMappingInternal(InputAxisKey inputAxisKey, Dictionary<string, InputAxisKey> inputAxisMap, bool needApply)
 		{
 			string keyName = inputAxisKey.KeyName;
@@ -1012,7 +1006,7 @@ namespace CSharpScript.Game.InputSetting
 			inputAxisMap.Remove(keyName);
 		}
 
-		// Token: 0x06045B60 RID: 285536 RVA: 0x011515F4 File Offset: 0x0114F7F4
+		// Token: 0x0603BD11 RID: 245009 RVA: 0x010FB384 File Offset: 0x010F9584
 		public void ClearAxisMapping(string axisName)
 		{
 			UInputSettings inputSettingsInstance = this.InputSettingsInstance;
@@ -1048,7 +1042,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B61 RID: 285537 RVA: 0x0115170C File Offset: 0x0114F90C
+		// Token: 0x0603BD12 RID: 245010 RVA: 0x010FB49C File Offset: 0x010F969C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1066,7 +1060,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B62 RID: 285538 RVA: 0x0115172C File Offset: 0x0114F92C
+		// Token: 0x0603BD13 RID: 245011 RVA: 0x010FB4BC File Offset: 0x010F96BC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1088,7 +1082,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B63 RID: 285539 RVA: 0x0115175C File Offset: 0x0114F95C
+		// Token: 0x0603BD14 RID: 245012 RVA: 0x010FB4EC File Offset: 0x010F96EC
 		[return: Nullable(2)]
 		public InputAxisKey GetInputAxisKey(string axisName, string keyName, EInputBindingType bindingType)
 		{
@@ -1110,7 +1104,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B64 RID: 285540 RVA: 0x0115179C File Offset: 0x0114F99C
+		// Token: 0x0603BD15 RID: 245013 RVA: 0x010FB52C File Offset: 0x010F972C
 		public TArray<FName> GetAxisNames()
 		{
 			TArray<FName> result = new TArray<FName>();
@@ -1118,7 +1112,7 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x06045B65 RID: 285541 RVA: 0x011517C0 File Offset: 0x0114F9C0
+		// Token: 0x0603BD16 RID: 245014 RVA: 0x010FB550 File Offset: 0x010F9750
 		public TArray<FInputAxisKeyMapping> GetAxisMappings(string actionName)
 		{
 			TArray<FInputAxisKeyMapping> result = new TArray<FInputAxisKeyMapping>();
@@ -1126,7 +1120,7 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x06045B66 RID: 285542 RVA: 0x011517F0 File Offset: 0x0114F9F0
+		// Token: 0x0603BD17 RID: 245015 RVA: 0x010FB580 File Offset: 0x010F9780
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1144,7 +1138,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B67 RID: 285543 RVA: 0x01151810 File Offset: 0x0114FA10
+		// Token: 0x0603BD18 RID: 245016 RVA: 0x010FB5A0 File Offset: 0x010F97A0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1165,7 +1159,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B68 RID: 285544 RVA: 0x01151840 File Offset: 0x0114FA40
+		// Token: 0x0603BD19 RID: 245017 RVA: 0x010FB5D0 File Offset: 0x010F97D0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1183,7 +1177,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B69 RID: 285545 RVA: 0x01151860 File Offset: 0x0114FA60
+		// Token: 0x0603BD1A RID: 245018 RVA: 0x010FB5F0 File Offset: 0x010F97F0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1204,7 +1198,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B6A RID: 285546 RVA: 0x01151890 File Offset: 0x0114FA90
+		// Token: 0x0603BD1B RID: 245019 RVA: 0x010FB620 File Offset: 0x010F9820
 		public void SetUseMouseForTouch(bool value)
 		{
 			if (this.InputSettingsInstance == null)
@@ -1214,7 +1208,7 @@ namespace CSharpScript.Game.InputSetting
 			this.InputSettingsInstance.bUseMouseForTouch = value;
 		}
 
-		// Token: 0x06045B6B RID: 285547 RVA: 0x011518A8 File Offset: 0x0114FAA8
+		// Token: 0x0603BD1C RID: 245020 RVA: 0x010FB638 File Offset: 0x010F9838
 		public EKeyboardPrimaryLangId GetKeyboardPrimaryLangId()
 		{
 			if (this.InputSettingsInstance != null)
@@ -1228,8 +1222,8 @@ namespace CSharpScript.Game.InputSetting
 			return EKeyboardPrimaryLangId.Default;
 		}
 
-		// Token: 0x17009B95 RID: 39829
-		// (get) Token: 0x06045B6C RID: 285548 RVA: 0x011518FD File Offset: 0x0114FAFD
+		// Token: 0x170070D5 RID: 28885
+		// (get) Token: 0x0603BD1D RID: 245021 RVA: 0x010FB68D File Offset: 0x010F988D
 		public static InputSettings Instance
 		{
 			get
@@ -1243,12 +1237,12 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B6D RID: 285549 RVA: 0x01151920 File Offset: 0x0114FB20
+		// Token: 0x0603BD1E RID: 245022 RVA: 0x010FB6B0 File Offset: 0x010F98B0
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045B6E RID: 285550 RVA: 0x01151922 File Offset: 0x0114FB22
+		// Token: 0x0603BD1F RID: 245023 RVA: 0x010FB6B2 File Offset: 0x010F98B2
 		public static void ResetStaticDefaultValue()
 		{
 			InputSettings instance = InputSettings._instance;
@@ -1259,38 +1253,38 @@ namespace CSharpScript.Game.InputSetting
 			InputSettings._instance = null;
 		}
 
-		// Token: 0x06045B6F RID: 285551 RVA: 0x0115193B File Offset: 0x0114FB3B
+		// Token: 0x0603BD20 RID: 245024 RVA: 0x010FB6CB File Offset: 0x010F98CB
 		static InputSettings()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputSettings.CreateStaticDefaultValue), new Action(InputSettings.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040245D5 RID: 148949
+		// Token: 0x0401F88A RID: 129162
 		[Nullable(2)]
 		private UInputSettings InputSettingsInstance;
 
-		// Token: 0x040245D6 RID: 148950
+		// Token: 0x0401F88B RID: 129163
 		private readonly Dictionary<string, InputKey> InputKeyMap = new Dictionary<string, InputKey>();
 
-		// Token: 0x040245D7 RID: 148951
+		// Token: 0x0401F88C RID: 129164
 		private readonly Dictionary<string, Dictionary<EInputBindingType, Dictionary<string, InputActionKey>>> InputActionKeyMappings = new Dictionary<string, Dictionary<EInputBindingType, Dictionary<string, InputActionKey>>>();
 
-		// Token: 0x040245D8 RID: 148952
+		// Token: 0x0401F88D RID: 129165
 		private readonly Dictionary<string, Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>>> InputAxisKeyMappings = new Dictionary<string, Dictionary<EInputBindingType, Dictionary<string, InputAxisKey>>>();
 
-		// Token: 0x040245D9 RID: 148953
+		// Token: 0x0401F88E RID: 129166
 		private readonly Dictionary<string, Dictionary<string, List<InputCombinationActionKey>>> InputCombinationActionKeyMappings = new Dictionary<string, Dictionary<string, List<InputCombinationActionKey>>>();
 
-		// Token: 0x040245DA RID: 148954
+		// Token: 0x0401F88F RID: 129167
 		private readonly Dictionary<string, Dictionary<string, IList<InputCombinationAxisKey>>> InputCombinationAxisKeyMappings = new Dictionary<string, Dictionary<string, IList<InputCombinationAxisKey>>>();
 
-		// Token: 0x040245DB RID: 148955
+		// Token: 0x0401F890 RID: 129168
 		private readonly List<InputActionKey> InputActionKeyPool = new List<InputActionKey>();
 
-		// Token: 0x040245DC RID: 148956
+		// Token: 0x0401F891 RID: 129169
 		private readonly List<InputAxisKey> InputAxisKeyPool = new List<InputAxisKey>();
 
-		// Token: 0x040245DD RID: 148957
+		// Token: 0x0401F892 RID: 129170
 		[Nullable(2)]
 		private static InputSettings _instance;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BFC RID: 7164
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DEB RID: 7659
 	public class IMonsterStandByConfig
 	{
-		// Token: 0x06009967 RID: 39271 RVA: 0x00161014 File Offset: 0x0015F214
+		// Token: 0x0600A297 RID: 41623 RVA: 0x00173F60 File Offset: 0x00172160
 		private IMonsterStandByConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009968 RID: 39272 RVA: 0x0016104C File Offset: 0x0015F24C
+		// Token: 0x0600A298 RID: 41624 RVA: 0x00173F98 File Offset: 0x00172198
 		public static IMonsterStandByConfig Create([Nullable(2)] IMonsterStandByConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009969 RID: 39273 RVA: 0x0016105F File Offset: 0x0015F25F
+		// Token: 0x0600A299 RID: 41625 RVA: 0x00173FAB File Offset: 0x001721AB
 		public static IMonsterStandByConfig CreateFromSetValue([Nullable(2)] IMonsterStandByConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600996A RID: 39274 RVA: 0x00161072 File Offset: 0x0015F272
+		// Token: 0x0600A29A RID: 41626 RVA: 0x00173FBE File Offset: 0x001721BE
 		public IMonsterStandByConfig_SetValue ToSetValue()
 		{
 			return new IMonsterStandByConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003010 RID: 12304
-		// (get) Token: 0x0600996B RID: 39275 RVA: 0x001610A9 File Offset: 0x0015F2A9
-		// (set) Token: 0x0600996C RID: 39276 RVA: 0x001610D4 File Offset: 0x0015F2D4
+		// Token: 0x17003279 RID: 12921
+		// (get) Token: 0x0600A29B RID: 41627 RVA: 0x00173FF5 File Offset: 0x001721F5
+		// (set) Token: 0x0600A29C RID: 41628 RVA: 0x00174020 File Offset: 0x00172220
 		public virtual string Tag
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003011 RID: 12305
-		// (get) Token: 0x0600996D RID: 39277 RVA: 0x001610E4 File Offset: 0x0015F2E4
-		// (set) Token: 0x0600996E RID: 39278 RVA: 0x0016111E File Offset: 0x0015F31E
+		// Token: 0x1700327A RID: 12922
+		// (get) Token: 0x0600A29D RID: 41629 RVA: 0x00174030 File Offset: 0x00172230
+		// (set) Token: 0x0600A29E RID: 41630 RVA: 0x0017406A File Offset: 0x0017226A
 		public virtual float? Duration
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003012 RID: 12306
-		// (get) Token: 0x0600996F RID: 39279 RVA: 0x0016112C File Offset: 0x0015F32C
-		// (set) Token: 0x06009970 RID: 39280 RVA: 0x00161166 File Offset: 0x0015F366
+		// Token: 0x1700327B RID: 12923
+		// (get) Token: 0x0600A29F RID: 41631 RVA: 0x00174078 File Offset: 0x00172278
+		// (set) Token: 0x0600A2A0 RID: 41632 RVA: 0x001740B2 File Offset: 0x001722B2
 		public virtual int? RepeatTimes
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003013 RID: 12307
-		// (get) Token: 0x06009971 RID: 39281 RVA: 0x00161174 File Offset: 0x0015F374
-		// (set) Token: 0x06009972 RID: 39282 RVA: 0x001611AE File Offset: 0x0015F3AE
+		// Token: 0x1700327C RID: 12924
+		// (get) Token: 0x0600A2A1 RID: 41633 RVA: 0x001740C0 File Offset: 0x001722C0
+		// (set) Token: 0x0600A2A2 RID: 41634 RVA: 0x001740FA File Offset: 0x001722FA
 		public virtual int? EmotionId
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D65 RID: 23909
+		// Token: 0x0400628C RID: 25228
 		[Nullable(2)]
 		protected IMonsterStandByConfig FbInstance;
 
-		// Token: 0x04005D66 RID: 23910
+		// Token: 0x0400628D RID: 25229
 		[Nullable(2)]
 		protected IMonsterStandByConfig_SetValue PocoInterface;
 	}

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001814 RID: 6164
+// Token: 0x02000CCD RID: 3277
 [NullableContext(1)]
 [Nullable(0)]
 public class ConsumeItemData
 {
-	// Token: 0x0400518D RID: 20877
+	// Token: 0x04005238 RID: 21048
 	public int IncId;
 
-	// Token: 0x0400518E RID: 20878
+	// Token: 0x04005239 RID: 21049
 	public int ItemId;
 
-	// Token: 0x0400518F RID: 20879
+	// Token: 0x0400523A RID: 21050
 	public string BottomText;
 
-	// Token: 0x04005190 RID: 20880
+	// Token: 0x0400523B RID: 21051
 	public int ResonanceLevel;
 
-	// Token: 0x04005191 RID: 20881
+	// Token: 0x0400523C RID: 21052
 	public string ChipPath;
 }

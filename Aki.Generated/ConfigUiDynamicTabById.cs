@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A65 RID: 2661
+	// Token: 0x02000B3A RID: 2874
 	public class ConfigUiDynamicTabById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E72 RID: 15986 RVA: 0x001BB0B5 File Offset: 0x001B92B5
+		// Token: 0x06004370 RID: 17264 RVA: 0x001DA449 File Offset: 0x001D8649
 		static ConfigUiDynamicTabById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiDynamicTabById.CreateStaticDefaultValue), new Action(ConfigUiDynamicTabById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E73 RID: 15987 RVA: 0x001BB0D4 File Offset: 0x001B92D4
+		// Token: 0x06004371 RID: 17265 RVA: 0x001DA468 File Offset: 0x001D8668
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiDynamicTabById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E74 RID: 15988 RVA: 0x001BB153 File Offset: 0x001B9353
+		// Token: 0x06004372 RID: 17266 RVA: 0x001DA4E7 File Offset: 0x001D86E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiDynamicTabById.LogPair = null;
 			ConfigUiDynamicTabById.HandleId = 0;
 		}
 
-		// Token: 0x06003E75 RID: 15989 RVA: 0x001BB161 File Offset: 0x001B9361
+		// Token: 0x06004373 RID: 17267 RVA: 0x001DA4F5 File Offset: 0x001D86F5
 		public static void Init()
 		{
 			ConfigUiDynamicTabById.HandleId = ConfigCommon.InitDataStatement(ConfigUiDynamicTabById.HandleId, "db_ui.db", "select BinData from `UiDynamicTab` where Id = ?");
 		}
 
-		// Token: 0x06003E76 RID: 15990 RVA: 0x001BB17C File Offset: 0x001B937C
+		// Token: 0x06004374 RID: 17268 RVA: 0x001DA510 File Offset: 0x001D8710
 		public static UiDynamicTab? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiDynamicTabById.HandleId, ConfigUiDynamicTabById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new UiDynamicTab?(rootAsUiDynamicTab);
 		}
 
-		// Token: 0x040048A9 RID: 18601
+		// Token: 0x04004E7C RID: 20092
 		private const string DB = "db_ui.db";
 
-		// Token: 0x040048AA RID: 18602
+		// Token: 0x04004E7D RID: 20093
 		private const string FILE = "u.UI动态页签.csv";
 
-		// Token: 0x040048AB RID: 18603
+		// Token: 0x04004E7E RID: 20094
 		private const string TABLE = "UiDynamicTab";
 
-		// Token: 0x040048AC RID: 18604
+		// Token: 0x04004E7F RID: 20095
 		private const string COMMAND = "select BinData from `UiDynamicTab` where Id = ?";
 
-		// Token: 0x040048AD RID: 18605
+		// Token: 0x04004E80 RID: 20096
 		private const string KEY_PREFIX = "UiDynamicTabById";
 
-		// Token: 0x040048AE RID: 18606
+		// Token: 0x04004E81 RID: 20097
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048AF RID: 18607
+		// Token: 0x04004E82 RID: 20098
 		private static int HandleId;
 	}
 }

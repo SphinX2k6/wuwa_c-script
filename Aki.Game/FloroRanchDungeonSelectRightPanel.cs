@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B60 RID: 7008
+// Token: 0x0200101F RID: 4127
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 {
-	// Token: 0x0600CFF4 RID: 53236 RVA: 0x002F64AC File Offset: 0x002F46AC
+	// Token: 0x0600A405 RID: 41989 RVA: 0x00301584 File Offset: 0x002FF784
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -46,7 +46,7 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CFF5 RID: 53237 RVA: 0x002F6664 File Offset: 0x002F4864
+	// Token: 0x0600A406 RID: 41990 RVA: 0x0030173C File Offset: 0x002FF93C
 	protected override void OnStart()
 	{
 		this.DifficultyLayout = new GenericLayout<FloroRanchDifficultyItem, FloroRanchSubDungeonData>(base.GetHorizontalLayout(1), new Func<FloroRanchDifficultyItem>(this.CreateDifficultyItem), null, false, true);
@@ -63,7 +63,7 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600CFF6 RID: 53238 RVA: 0x002F6700 File Offset: 0x002F4900
+	// Token: 0x0600A407 RID: 41991 RVA: 0x003017D8 File Offset: 0x002FF9D8
 	public void RefreshDungeonInfo(FloroRanchDungeonData dungeonData, FloroRanchSubDungeonData subDungeonData = null)
 	{
 		this.DungeonData = dungeonData;
@@ -93,7 +93,7 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), conditionGroupHintText, Array.Empty<object>());
 	}
 
-	// Token: 0x0600CFF7 RID: 53239 RVA: 0x002F67E0 File Offset: 0x002F49E0
+	// Token: 0x0600A408 RID: 41992 RVA: 0x003018B8 File Offset: 0x002FFAB8
 	private void RefreshSubDungeonInfo(FloroRanchSubDungeonData subDungeonData)
 	{
 		this.SubDungeonData = subDungeonData;
@@ -131,7 +131,7 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		this.RefreshRaceList(this.SubDungeonData.SelectedRaceIds);
 	}
 
-	// Token: 0x0600CFF8 RID: 53240 RVA: 0x002F6910 File Offset: 0x002F4B10
+	// Token: 0x0600A409 RID: 41993 RVA: 0x003019E8 File Offset: 0x002FFBE8
 	public void RefreshRaceList(IReadOnlyList<int> raceIdList)
 	{
 		List<FloroRanchSelectRaceData> list = new List<FloroRanchSelectRaceData>();
@@ -142,13 +142,13 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		this.RaceLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600CFF9 RID: 53241 RVA: 0x002F6978 File Offset: 0x002F4B78
+	// Token: 0x0600A40A RID: 41994 RVA: 0x00301A50 File Offset: 0x002FFC50
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(5));
 	}
 
-	// Token: 0x0600CFFA RID: 53242 RVA: 0x002F698B File Offset: 0x002F4B8B
+	// Token: 0x0600A40B RID: 41995 RVA: 0x00301A63 File Offset: 0x002FFC63
 	private FloroRanchDifficultyItem CreateDifficultyItem()
 	{
 		FloroRanchDifficultyItem floroRanchDifficultyItem = new FloroRanchDifficultyItem();
@@ -156,62 +156,62 @@ public class FloroRanchDungeonSelectRightPanel : UiPanelBase
 		return floroRanchDifficultyItem;
 	}
 
-	// Token: 0x04005F8B RID: 24459
+	// Token: 0x0400605A RID: 24666
 	private FloroRanchDungeonData DungeonData;
 
-	// Token: 0x04005F8C RID: 24460
+	// Token: 0x0400605B RID: 24667
 	private FloroRanchSubDungeonData SubDungeonData;
 
-	// Token: 0x04005F8D RID: 24461
+	// Token: 0x0400605C RID: 24668
 	private GenericLayout<FloroRanchDifficultyItem, FloroRanchSubDungeonData> DifficultyLayout;
 
-	// Token: 0x04005F8E RID: 24462
+	// Token: 0x0400605D RID: 24669
 	private GenericLayout<FloroRanchRaceItem, FloroRanchSelectRaceData> RaceLayout;
 
-	// Token: 0x04005F8F RID: 24463
+	// Token: 0x0400605E RID: 24670
 	public Action<int> OnSelectDifficultyCallBack;
 
-	// Token: 0x04005F90 RID: 24464
+	// Token: 0x0400605F RID: 24671
 	private readonly Func<FloroRanchRaceItem> CreateRaceItem = () => new FloroRanchRaceItem();
 
-	// Token: 0x020080B6 RID: 32950
+	// Token: 0x02007244 RID: 29252
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04029FAA RID: 171946
+		// Token: 0x040252DE RID: 152286
 		public const int TextTitle = 0;
 
-		// Token: 0x04029FAB RID: 171947
+		// Token: 0x040252DF RID: 152287
 		public const int LayoutDifficulty = 1;
 
-		// Token: 0x04029FAC RID: 171948
+		// Token: 0x040252E0 RID: 152288
 		public const int TextTarget = 2;
 
-		// Token: 0x04029FAD RID: 171949
+		// Token: 0x040252E1 RID: 152289
 		public const int TextFirstReward = 3;
 
-		// Token: 0x04029FAE RID: 171950
+		// Token: 0x040252E2 RID: 152290
 		public const int TextAgainReward = 4;
 
-		// Token: 0x04029FAF RID: 171951
+		// Token: 0x040252E3 RID: 152291
 		public const int TextEnvironment = 5;
 
-		// Token: 0x04029FB0 RID: 171952
+		// Token: 0x040252E4 RID: 152292
 		public const int ItemLockPanel = 6;
 
-		// Token: 0x04029FB1 RID: 171953
+		// Token: 0x040252E5 RID: 152293
 		public const int TextLock = 7;
 
-		// Token: 0x04029FB2 RID: 171954
+		// Token: 0x040252E6 RID: 152294
 		public const int ItemRacePanel = 8;
 
-		// Token: 0x04029FB3 RID: 171955
+		// Token: 0x040252E7 RID: 152295
 		public const int LayoutRace = 9;
 
-		// Token: 0x04029FB4 RID: 171956
+		// Token: 0x040252E8 RID: 152296
 		public const int ItemUnlockPanel = 10;
 
-		// Token: 0x04029FB5 RID: 171957
+		// Token: 0x040252E9 RID: 152297
 		public const int ItemAgainRewardPanel = 11;
 	}
 }

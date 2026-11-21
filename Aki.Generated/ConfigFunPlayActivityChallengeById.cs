@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200035E RID: 862
+	// Token: 0x02000373 RID: 883
 	public class ConfigFunPlayActivityChallengeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001439 RID: 5177 RVA: 0x000CBC13 File Offset: 0x000C9E13
+		// Token: 0x060014B7 RID: 5303 RVA: 0x000D211F File Offset: 0x000D031F
 		static ConfigFunPlayActivityChallengeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFunPlayActivityChallengeById.CreateStaticDefaultValue), new Action(ConfigFunPlayActivityChallengeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600143A RID: 5178 RVA: 0x000CBC34 File Offset: 0x000C9E34
+		// Token: 0x060014B8 RID: 5304 RVA: 0x000D2140 File Offset: 0x000D0340
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFunPlayActivityChallengeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600143B RID: 5179 RVA: 0x000CBCB3 File Offset: 0x000C9EB3
+		// Token: 0x060014B9 RID: 5305 RVA: 0x000D21BF File Offset: 0x000D03BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFunPlayActivityChallengeById.LogPair = null;
 			ConfigFunPlayActivityChallengeById.HandleId = 0;
 		}
 
-		// Token: 0x0600143C RID: 5180 RVA: 0x000CBCC1 File Offset: 0x000C9EC1
+		// Token: 0x060014BA RID: 5306 RVA: 0x000D21CD File Offset: 0x000D03CD
 		public static void Init()
 		{
 			ConfigFunPlayActivityChallengeById.HandleId = ConfigCommon.InitDataStatement(ConfigFunPlayActivityChallengeById.HandleId, "db_activityfunplay.db", "select BinData from `FunPlayActivityChallenge` where Id=?");
 		}
 
-		// Token: 0x0600143D RID: 5181 RVA: 0x000CBCDC File Offset: 0x000C9EDC
+		// Token: 0x060014BB RID: 5307 RVA: 0x000D21E8 File Offset: 0x000D03E8
 		public static FunPlayActivityChallenge? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFunPlayActivityChallengeById.HandleId, ConfigFunPlayActivityChallengeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FunPlayActivityChallenge?(rootAsFunPlayActivityChallenge);
 		}
 
-		// Token: 0x04001776 RID: 6006
+		// Token: 0x04001809 RID: 6153
 		private const string DB = "db_activityfunplay.db";
 
-		// Token: 0x04001777 RID: 6007
+		// Token: 0x0400180A RID: 6154
 		private const string FILE = "q.趣味玩法活动.xlsx";
 
-		// Token: 0x04001778 RID: 6008
+		// Token: 0x0400180B RID: 6155
 		private const string TABLE = "FunPlayActivityChallenge";
 
-		// Token: 0x04001779 RID: 6009
+		// Token: 0x0400180C RID: 6156
 		private const string COMMAND = "select BinData from `FunPlayActivityChallenge` where Id=?";
 
-		// Token: 0x0400177A RID: 6010
+		// Token: 0x0400180D RID: 6157
 		private const string KEY_PREFIX = "FunPlayActivityChallengeById";
 
-		// Token: 0x0400177B RID: 6011
+		// Token: 0x0400180E RID: 6158
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400177C RID: 6012
+		// Token: 0x0400180F RID: 6159
 		private static int HandleId;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A70 RID: 23152
+	// Token: 0x0200607D RID: 24701
 	public struct IThrowMotionTrackTarget : IFlatbufferObject
 	{
-		// Token: 0x1700AE42 RID: 44610
-		// (get) Token: 0x0602767B RID: 161403 RVA: 0x0056C25A File Offset: 0x0056A45A
+		// Token: 0x1700B77A RID: 46970
+		// (get) Token: 0x06029BF3 RID: 170995 RVA: 0x005B3266 File Offset: 0x005B1466
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602767C RID: 161404 RVA: 0x0056C267 File Offset: 0x0056A467
+		// Token: 0x06029BF4 RID: 170996 RVA: 0x005B3273 File Offset: 0x005B1473
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602767D RID: 161405 RVA: 0x0056C270 File Offset: 0x0056A470
+		// Token: 0x06029BF5 RID: 170997 RVA: 0x005B327C File Offset: 0x005B147C
 		public static IThrowMotionTrackTarget GetRootAsIThrowMotionTrackTarget(ByteBuffer _bb)
 		{
 			return IThrowMotionTrackTarget.GetRootAsIThrowMotionTrackTarget(_bb, default(IThrowMotionTrackTarget));
 		}
 
-		// Token: 0x0602767E RID: 161406 RVA: 0x0056C28C File Offset: 0x0056A48C
+		// Token: 0x06029BF6 RID: 170998 RVA: 0x005B3298 File Offset: 0x005B1498
 		public static IThrowMotionTrackTarget GetRootAsIThrowMotionTrackTarget(ByteBuffer _bb, IThrowMotionTrackTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602767F RID: 161407 RVA: 0x0056C2A9 File Offset: 0x0056A4A9
+		// Token: 0x06029BF7 RID: 170999 RVA: 0x005B32B5 File Offset: 0x005B14B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027680 RID: 161408 RVA: 0x0056C2B8 File Offset: 0x0056A4B8
+		// Token: 0x06029BF8 RID: 171000 RVA: 0x005B32C4 File Offset: 0x005B14C4
 		public IThrowMotionTrackTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE43 RID: 44611
-		// (get) Token: 0x06027681 RID: 161409 RVA: 0x0056C2C8 File Offset: 0x0056A4C8
+		// Token: 0x1700B77B RID: 46971
+		// (get) Token: 0x06029BF9 RID: 171001 RVA: 0x005B32D4 File Offset: 0x005B14D4
 		public EThrowMotion Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE44 RID: 44612
-		// (get) Token: 0x06027682 RID: 161410 RVA: 0x0056C304 File Offset: 0x0056A504
+		// Token: 0x1700B77C RID: 46972
+		// (get) Token: 0x06029BFA RID: 171002 RVA: 0x005B3310 File Offset: 0x005B1510
 		public float Velocity
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE45 RID: 44613
-		// (get) Token: 0x06027683 RID: 161411 RVA: 0x0056C344 File Offset: 0x0056A544
+		// Token: 0x1700B77D RID: 46973
+		// (get) Token: 0x06029BFB RID: 171003 RVA: 0x005B3350 File Offset: 0x005B1550
 		public string VelocityCurve
 		{
 			get
@@ -93,20 +93,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027684 RID: 161412 RVA: 0x0056C37B File Offset: 0x0056A57B
+		// Token: 0x06029BFC RID: 171004 RVA: 0x005B3387 File Offset: 0x005B1587
 		public Span<byte> GetVelocityCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06027685 RID: 161413 RVA: 0x0056C38A File Offset: 0x0056A58A
+		// Token: 0x06029BFD RID: 171005 RVA: 0x005B3396 File Offset: 0x005B1596
 		public byte[] GetVelocityCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700AE46 RID: 44614
-		// (get) Token: 0x06027686 RID: 161414 RVA: 0x0056C398 File Offset: 0x0056A598
+		// Token: 0x1700B77E RID: 46974
+		// (get) Token: 0x06029BFE RID: 171006 RVA: 0x005B33A4 File Offset: 0x005B15A4
 		public IVectorInfo? VelocityOffset
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE47 RID: 44615
-		// (get) Token: 0x06027687 RID: 161415 RVA: 0x0056C3F8 File Offset: 0x0056A5F8
+		// Token: 0x1700B77F RID: 46975
+		// (get) Token: 0x06029BFF RID: 171007 RVA: 0x005B3404 File Offset: 0x005B1604
 		public float AngularVelocity
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE48 RID: 44616
-		// (get) Token: 0x06027688 RID: 161416 RVA: 0x0056C43C File Offset: 0x0056A63C
+		// Token: 0x1700B780 RID: 46976
+		// (get) Token: 0x06029C00 RID: 171008 RVA: 0x005B3448 File Offset: 0x005B1648
 		public string AngularVelocityCurve
 		{
 			get
@@ -150,19 +150,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027689 RID: 161417 RVA: 0x0056C474 File Offset: 0x0056A674
+		// Token: 0x06029C01 RID: 171009 RVA: 0x005B3480 File Offset: 0x005B1680
 		public Span<byte> GetAngularVelocityCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0602768A RID: 161418 RVA: 0x0056C484 File Offset: 0x0056A684
+		// Token: 0x06029C02 RID: 171010 RVA: 0x005B3490 File Offset: 0x005B1690
 		public byte[] GetAngularVelocityCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(14);
 		}
 
-		// Token: 0x0602768B RID: 161419 RVA: 0x0056C493 File Offset: 0x0056A693
+		// Token: 0x06029C03 RID: 171011 RVA: 0x005B349F File Offset: 0x005B169F
 		public static Offset<IThrowMotionTrackTarget> CreateIThrowMotionTrackTarget(FlatBufferBuilder builder, EThrowMotion Type = EThrowMotion.Projectile, float Velocity = 0f, StringOffset VelocityCurveOffset = default(StringOffset), Offset<IVectorInfo> VelocityOffsetOffset = default(Offset<IVectorInfo>), float AngularVelocity = 0f, StringOffset AngularVelocityCurveOffset = default(StringOffset))
 		{
 			builder.StartTable(6);
@@ -175,55 +175,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowMotionTrackTarget.EndIThrowMotionTrackTarget(builder);
 		}
 
-		// Token: 0x0602768C RID: 161420 RVA: 0x0056C4CF File Offset: 0x0056A6CF
+		// Token: 0x06029C04 RID: 171012 RVA: 0x005B34DB File Offset: 0x005B16DB
 		public static void StartIThrowMotionTrackTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602768D RID: 161421 RVA: 0x0056C4D8 File Offset: 0x0056A6D8
+		// Token: 0x06029C05 RID: 171013 RVA: 0x005B34E4 File Offset: 0x005B16E4
 		public static void AddType(FlatBufferBuilder builder, EThrowMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602768E RID: 161422 RVA: 0x0056C4E3 File Offset: 0x0056A6E3
+		// Token: 0x06029C06 RID: 171014 RVA: 0x005B34EF File Offset: 0x005B16EF
 		public static void AddVelocity(FlatBufferBuilder builder, float velocity)
 		{
 			builder.AddFloat(1, velocity, 0.0);
 		}
 
-		// Token: 0x0602768F RID: 161423 RVA: 0x0056C4F6 File Offset: 0x0056A6F6
+		// Token: 0x06029C07 RID: 171015 RVA: 0x005B3502 File Offset: 0x005B1702
 		public static void AddVelocityCurve(FlatBufferBuilder builder, StringOffset velocityCurveOffset)
 		{
 			builder.AddOffset(2, velocityCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06027690 RID: 161424 RVA: 0x0056C506 File Offset: 0x0056A706
+		// Token: 0x06029C08 RID: 171016 RVA: 0x005B3512 File Offset: 0x005B1712
 		public static void AddVelocityOffset(FlatBufferBuilder builder, Offset<IVectorInfo> velocityOffsetOffset)
 		{
 			builder.AddOffset(3, velocityOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06027691 RID: 161425 RVA: 0x0056C516 File Offset: 0x0056A716
+		// Token: 0x06029C09 RID: 171017 RVA: 0x005B3522 File Offset: 0x005B1722
 		public static void AddAngularVelocity(FlatBufferBuilder builder, float angularVelocity)
 		{
 			builder.AddFloat(4, angularVelocity, 0.0);
 		}
 
-		// Token: 0x06027692 RID: 161426 RVA: 0x0056C529 File Offset: 0x0056A729
+		// Token: 0x06029C0A RID: 171018 RVA: 0x005B3535 File Offset: 0x005B1735
 		public static void AddAngularVelocityCurve(FlatBufferBuilder builder, StringOffset angularVelocityCurveOffset)
 		{
 			builder.AddOffset(5, angularVelocityCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06027693 RID: 161427 RVA: 0x0056C539 File Offset: 0x0056A739
+		// Token: 0x06029C0B RID: 171019 RVA: 0x005B3545 File Offset: 0x005B1745
 		public static Offset<IThrowMotionTrackTarget> EndIThrowMotionTrackTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IThrowMotionTrackTarget>(builder.EndTable());
 		}
 
-		// Token: 0x06027694 RID: 161428 RVA: 0x0056C548 File Offset: 0x0056A748
+		// Token: 0x06029C0C RID: 171020 RVA: 0x005B3554 File Offset: 0x005B1754
 		public IThrowMotionTrackTargetT UnPack()
 		{
 			IThrowMotionTrackTargetT throwMotionTrackTargetT = new IThrowMotionTrackTargetT();
@@ -231,7 +231,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return throwMotionTrackTargetT;
 		}
 
-		// Token: 0x06027695 RID: 161429 RVA: 0x0056C564 File Offset: 0x0056A764
+		// Token: 0x06029C0D RID: 171021 RVA: 0x005B3570 File Offset: 0x005B1770
 		public void UnPackTo(IThrowMotionTrackTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.AngularVelocityCurve = this.AngularVelocityCurve;
 		}
 
-		// Token: 0x06027696 RID: 161430 RVA: 0x0056C5DC File Offset: 0x0056A7DC
+		// Token: 0x06029C0E RID: 171022 RVA: 0x005B35E8 File Offset: 0x005B17E8
 		public static Offset<IThrowMotionTrackTarget> Pack(FlatBufferBuilder builder, IThrowMotionTrackTargetT _o)
 		{
 			if (_o == null)
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowMotionTrackTarget.CreateIThrowMotionTrackTarget(builder, _o.Type, _o.Velocity, velocityCurveOffset, velocityOffsetOffset, _o.AngularVelocity, angularVelocityCurveOffset);
 		}
 
-		// Token: 0x0400F107 RID: 61703
+		// Token: 0x0400FDFE RID: 65022
 		private Table __p;
 	}
 }

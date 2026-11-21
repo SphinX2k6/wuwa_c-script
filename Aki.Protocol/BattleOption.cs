@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001636 RID: 5686
+	// Token: 0x020016A9 RID: 5801
 	public enum BattleOption
 	{
-		// Token: 0x0400C072 RID: 49266
+		// Token: 0x0400C56C RID: 50540
 		[OriginalName("LoadLevelPlayFail")]
 		LoadLevelPlayFail,
-		// Token: 0x0400C073 RID: 49267
+		// Token: 0x0400C56D RID: 50541
 		[OriginalName("LoadLevelPlaySucc")]
 		LoadLevelPlaySucc,
-		// Token: 0x0400C074 RID: 49268
+		// Token: 0x0400C56E RID: 50542
 		[OriginalName("SkipBattle")]
 		SkipBattle
 	}

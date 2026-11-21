@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FCF RID: 8143
+	// Token: 0x02000646 RID: 1606
 	public sealed class FCanExecuteChange : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601EE48 RID: 126536 RVA: 0x002DE879 File Offset: 0x002DCA79
+		// Token: 0x06008D48 RID: 36168 RVA: 0x000D48F5 File Offset: 0x000D2AF5
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FCanExecuteChange.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601EE49 RID: 126537 RVA: 0x002DE885 File Offset: 0x002DCA85
+		// Token: 0x06008D49 RID: 36169 RVA: 0x000D4901 File Offset: 0x000D2B01
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FCanExecuteChange._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FCanExecuteChange._FunctionPtr;
 		}
 
-		// Token: 0x0601EE4A RID: 126538 RVA: 0x002DE8A8 File Offset: 0x002DCAA8
+		// Token: 0x06008D4A RID: 36170 RVA: 0x000D4924 File Offset: 0x000D2B24
 		public FCanExecuteChange()
 		{
 		}
 
-		// Token: 0x0601EE4B RID: 126539 RVA: 0x002DE8B0 File Offset: 0x002DCAB0
+		// Token: 0x06008D4B RID: 36171 RVA: 0x000D492C File Offset: 0x000D2B2C
 		[NullableContext(2)]
 		public FCanExecuteChange(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601EE4C RID: 126540 RVA: 0x002DE8BA File Offset: 0x002DCABA
+		// Token: 0x06008D4C RID: 36172 RVA: 0x000D4936 File Offset: 0x000D2B36
 		public FCanExecuteChange(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601EE4D RID: 126541 RVA: 0x002DE8C5 File Offset: 0x002DCAC5
+		// Token: 0x06008D4D RID: 36173 RVA: 0x000D4941 File Offset: 0x000D2B41
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<bool>) ?? ((Func<bool>)Delegate.CreateDelegate(typeof(Func<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601EE4E RID: 126542 RVA: 0x002DE8F7 File Offset: 0x002DCAF7
+		// Token: 0x06008D4E RID: 36174 RVA: 0x000D4973 File Offset: 0x000D2B73
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<bool> Callback)
 		{
 			if (FCanExecuteChange.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FCanExecuteChange.RegisterId);
 		}
 
-		// Token: 0x0601EE4F RID: 126543 RVA: 0x002DE934 File Offset: 0x002DCB34
+		// Token: 0x06008D4F RID: 36175 RVA: 0x000D49B0 File Offset: 0x000D2BB0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Execute()
 		{
 			FCanExecuteChange.__FCanExecuteChange_DelegateParams* ptr = stackalloc FCanExecuteChange.__FCanExecuteChange_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FCanExecuteChange.__FCanExecuteChange_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601EE50 RID: 126544 RVA: 0x002DE970 File Offset: 0x002DCB70
+		// Token: 0x06008D50 RID: 36176 RVA: 0x000D49EC File Offset: 0x000D2BEC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<bool> func = target as Func<bool>;
@@ -91,31 +88,31 @@ namespace UnrealEngine
 			((FCanExecuteChange.__FCanExecuteChange_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x04010B01 RID: 68353
+		// Token: 0x04003D7D RID: 15741
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010B02 RID: 68354
+		// Token: 0x04003D7E RID: 15742
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.CanExecuteChange__DelegateSignature";
 
-		// Token: 0x04010B03 RID: 68355
+		// Token: 0x04003D7F RID: 15743
 		private static int RegisterId;
 
-		// Token: 0x02003423 RID: 13347
+		// Token: 0x02000E66 RID: 3686
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FCanExecuteChange_DelegateParams
+		private ref struct __FCanExecuteChange_DelegateParams
 		{
-			// Token: 0x040173FE RID: 95230
+			// Token: 0x0400620D RID: 25101
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003424 RID: 13348
+		// Token: 0x02000E67 RID: 3687
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173FF RID: 95231
+			// Token: 0x0400620E RID: 25102
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

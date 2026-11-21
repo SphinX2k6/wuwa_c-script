@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034C9 RID: 13513
+// Token: 0x02002A3D RID: 10813
 [NullableContext(1)]
 [Nullable(0)]
 public class SpaceUtils : IStaticVariableResetter
 {
-	// Token: 0x0601D6EB RID: 120555 RVA: 0x008368E4 File Offset: 0x00834AE4
+	// Token: 0x0601B3EA RID: 111594 RVA: 0x0085DD8C File Offset: 0x0085BF8C
 	static SpaceUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpaceUtils.CreateStaticDefaultValue), new Action(SpaceUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D6EC RID: 120556 RVA: 0x00836AD4 File Offset: 0x00834CD4
+	// Token: 0x0601B3EB RID: 111595 RVA: 0x0085DF7C File Offset: 0x0085C17C
 	private static Vector GetVectorFromPool()
 	{
 		if (SpaceUtils.VectorPool.Count > 0)
@@ -26,14 +26,14 @@ public class SpaceUtils : IStaticVariableResetter
 		return Vector.Create();
 	}
 
-	// Token: 0x0601D6ED RID: 120557 RVA: 0x00836B20 File Offset: 0x00834D20
+	// Token: 0x0601B3EC RID: 111596 RVA: 0x0085DFC8 File Offset: 0x0085C1C8
 	private static void ReleaseVectorArray(List<Vector> array)
 	{
 		SpaceUtils.VectorPool.AddRange(array);
 		array.Clear();
 	}
 
-	// Token: 0x0601D6EE RID: 120558 RVA: 0x00836B34 File Offset: 0x00834D34
+	// Token: 0x0601B3ED RID: 111597 RVA: 0x0085DFDC File Offset: 0x0085C1DC
 	public static bool IsComponentInRingArea(Vector ringCenter, Vector ringSize, UPrimitiveComponent component, [Nullable(2)] Vector upVector = null)
 	{
 		FBoxSphereBounds fboxSphereBounds = component.D_GetComponentBounds();
@@ -139,7 +139,7 @@ public class SpaceUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601D6EF RID: 120559 RVA: 0x00836D88 File Offset: 0x00834F88
+	// Token: 0x0601B3EE RID: 111598 RVA: 0x0085E230 File Offset: 0x0085C430
 	private static bool IsComponentInRingAreaWhenCompHuge(Vector componentLocation, Vector boxExt, Vector ringLocation, double maxRadius)
 	{
 		ringLocation.Subtraction(componentLocation, SpaceUtils.TempMinDistance);
@@ -169,13 +169,13 @@ public class SpaceUtils : IStaticVariableResetter
 		return SpaceUtils.TempMinDistance.DotProduct(SpaceUtils.TempMinDistance) <= maxRadius * maxRadius;
 	}
 
-	// Token: 0x0601D6F0 RID: 120560 RVA: 0x00836E72 File Offset: 0x00835072
+	// Token: 0x0601B3EF RID: 111599 RVA: 0x0085E31A File Offset: 0x0085C51A
 	private static bool IgnoreInSectorArea(double sectorRadius)
 	{
 		return SpaceUtils.BoundsExtent.X > sectorRadius || SpaceUtils.BoundsExtent.Y > sectorRadius;
 	}
 
-	// Token: 0x0601D6F1 RID: 120561 RVA: 0x00836E90 File Offset: 0x00835090
+	// Token: 0x0601B3F0 RID: 111600 RVA: 0x0085E338 File Offset: 0x0085C538
 	public static bool IsComponentInSectorArea(Vector sectorCenter, Vector sectorSize, Quat sectorQuat, UPrimitiveComponent component)
 	{
 		FBoxSphereBounds fboxSphereBounds = component.D_GetComponentBounds();
@@ -272,7 +272,7 @@ public class SpaceUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601D6F2 RID: 120562 RVA: 0x008370F0 File Offset: 0x008352F0
+	// Token: 0x0601B3F1 RID: 111601 RVA: 0x0085E598 File Offset: 0x0085C798
 	private static bool CheckLineCrossX()
 	{
 		foreach (Vector vector in SpaceUtils.LeftPoints)
@@ -288,7 +288,7 @@ public class SpaceUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601D6F3 RID: 120563 RVA: 0x008371D8 File Offset: 0x008353D8
+	// Token: 0x0601B3F2 RID: 111602 RVA: 0x0085E680 File Offset: 0x0085C880
 	public static bool IsLocationInSideBullet(BulletInfo bulletInfo, Vector location)
 	{
 		double num = Vector.DistSquared(bulletInfo.GetCollisionLocation(true), location);
@@ -306,7 +306,7 @@ public class SpaceUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x0601D6F4 RID: 120564 RVA: 0x00837280 File Offset: 0x00835480
+	// Token: 0x0601B3F3 RID: 111603 RVA: 0x0085E728 File Offset: 0x0085C928
 	public static void CreateStaticDefaultValue()
 	{
 		SpaceUtils.VectorPool = new List<Vector>();
@@ -314,7 +314,7 @@ public class SpaceUtils : IStaticVariableResetter
 		SpaceUtils.RightPoints = new List<Vector>();
 	}
 
-	// Token: 0x0601D6F5 RID: 120565 RVA: 0x008372A0 File Offset: 0x008354A0
+	// Token: 0x0601B3F4 RID: 111604 RVA: 0x0085E748 File Offset: 0x0085C948
 	public static void ResetStaticDefaultValue()
 	{
 		SpaceUtils.VectorPool = null;
@@ -322,7 +322,7 @@ public class SpaceUtils : IStaticVariableResetter
 		SpaceUtils.RightPoints = null;
 	}
 
-	// Token: 0x0400E7DD RID: 59357
+	// Token: 0x0400EC91 RID: 60561
 	[StaticVariableRuleIgnore]
 	private static readonly Vector[] boundPoints = new Vector[]
 	{
@@ -336,48 +336,48 @@ public class SpaceUtils : IStaticVariableResetter
 		Vector.Create(-1.0, -1.0, -1.0)
 	};
 
-	// Token: 0x0400E7DE RID: 59358
+	// Token: 0x0400EC92 RID: 60562
 	[StaticVariableRuleIgnore]
 	private static readonly Vector BoundsCenter = Vector.Create();
 
-	// Token: 0x0400E7DF RID: 59359
+	// Token: 0x0400EC93 RID: 60563
 	[StaticVariableRuleIgnore]
 	private static readonly Vector BoundsExtent = Vector.Create();
 
-	// Token: 0x0400E7E0 RID: 59360
+	// Token: 0x0400EC94 RID: 60564
 	[StaticVariableRuleIgnore]
 	private static readonly Quat BoundsQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E7E1 RID: 59361
+	// Token: 0x0400EC95 RID: 60565
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400E7E2 RID: 59362
+	// Token: 0x0400EC96 RID: 60566
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400E7E3 RID: 59363
+	// Token: 0x0400EC97 RID: 60567
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 
-	// Token: 0x0400E7E4 RID: 59364
+	// Token: 0x0400EC98 RID: 60568
 	[StaticVariableRuleIgnore]
 	private static readonly Quat InverseQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E7E5 RID: 59365
+	// Token: 0x0400EC99 RID: 60569
 	private static List<Vector> VectorPool;
 
-	// Token: 0x0400E7E6 RID: 59366
+	// Token: 0x0400EC9A RID: 60570
 	private static List<Vector> LeftPoints;
 
-	// Token: 0x0400E7E7 RID: 59367
+	// Token: 0x0400EC9B RID: 60571
 	private static List<Vector> RightPoints;
 
-	// Token: 0x0400E7E8 RID: 59368
+	// Token: 0x0400EC9C RID: 60572
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TempVectorForHugComponent = Vector.Create();
 
-	// Token: 0x0400E7E9 RID: 59369
+	// Token: 0x0400EC9D RID: 60573
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TempMinDistance = Vector.Create();
 }

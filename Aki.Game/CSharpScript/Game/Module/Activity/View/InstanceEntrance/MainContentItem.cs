@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F19 RID: 24345
+	// Token: 0x02004F00 RID: 20224
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class MainContentItem : UiPanelBase
 	{
-		// Token: 0x0603DD94 RID: 253332 RVA: 0x00EF2D78 File Offset: 0x00EF0F78
+		// Token: 0x06032D2F RID: 208175 RVA: 0x00E44A80 File Offset: 0x00E42C80
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DD95 RID: 253333 RVA: 0x00EF2F28 File Offset: 0x00EF1128
+		// Token: 0x06032D30 RID: 208176 RVA: 0x00E44C30 File Offset: 0x00E42E30
 		public void RefreshView(ActivityEntranceItemData data)
 		{
 			this.ItemData = data;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.RefreshRedDotState(data);
 		}
 
-		// Token: 0x0603DD96 RID: 253334 RVA: 0x00EF2F84 File Offset: 0x00EF1184
+		// Token: 0x06032D31 RID: 208177 RVA: 0x00E44C8C File Offset: 0x00E42E8C
 		private void RefreshToggleState(ActivityEntranceItemData data)
 		{
 			bool selectState = data.GetSelectState();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			extendToggle.SetToggleStateForce(selectState ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603DD97 RID: 253335 RVA: 0x00EF2FB4 File Offset: 0x00EF11B4
+		// Token: 0x06032D32 RID: 208178 RVA: 0x00E44CBC File Offset: 0x00E42EBC
 		private void OnClickExtendToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD98 RID: 253336 RVA: 0x00EF302C File Offset: 0x00EF122C
+		// Token: 0x06032D33 RID: 208179 RVA: 0x00E44D34 File Offset: 0x00E42F34
 		private void RefreshPointItem(ActivityEntranceItemData data)
 		{
 			bool selectState = data.GetSelectState();
@@ -110,21 +110,21 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			item.SetUIActive(selectState);
 		}
 
-		// Token: 0x0603DD99 RID: 253337 RVA: 0x00EF3054 File Offset: 0x00EF1254
+		// Token: 0x06032D34 RID: 208180 RVA: 0x00E44D5C File Offset: 0x00E42F5C
 		private void RefreshLockItem(ActivityEntranceItemData data)
 		{
 			bool lockState = data.GetLockState();
 			base.GetItem(7).SetUIActive(lockState);
 		}
 
-		// Token: 0x0603DD9A RID: 253338 RVA: 0x00EF3078 File Offset: 0x00EF1278
+		// Token: 0x06032D35 RID: 208181 RVA: 0x00E44D80 File Offset: 0x00E42F80
 		private void RefreshFinishItem(ActivityEntranceItemData data)
 		{
 			bool finishState = data.GetFinishState();
 			base.GetItem(6).SetUIActive(finishState);
 		}
 
-		// Token: 0x0603DD9B RID: 253339 RVA: 0x00EF309C File Offset: 0x00EF129C
+		// Token: 0x06032D36 RID: 208182 RVA: 0x00E44DA4 File Offset: 0x00E42FA4
 		private void RefreshOffsetItem(ActivityEntranceItemData data)
 		{
 			bool flag = data.HaveChildData();
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			item.SetUIActive(flag && selectState);
 		}
 
-		// Token: 0x0603DD9C RID: 253340 RVA: 0x00EF30CC File Offset: 0x00EF12CC
+		// Token: 0x06032D37 RID: 208183 RVA: 0x00E44DD4 File Offset: 0x00E42FD4
 		private void RefreshDifficultIcon(ActivityEntranceItemData data)
 		{
 			UUITexture texture = base.GetTexture(2);
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			base.SetTextureByPath(instanceDifficultIconPath, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0603DD9D RID: 253341 RVA: 0x00EF3110 File Offset: 0x00EF1310
+		// Token: 0x06032D38 RID: 208184 RVA: 0x00E44E18 File Offset: 0x00E43018
 		private void RefreshTitle(ActivityEntranceItemData data)
 		{
 			UUIText text = base.GetText(3);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			text2.SetText(instanceName, true);
 		}
 
-		// Token: 0x0603DD9E RID: 253342 RVA: 0x00EF3160 File Offset: 0x00EF1360
+		// Token: 0x06032D39 RID: 208185 RVA: 0x00E44E68 File Offset: 0x00E43068
 		private void RefreshSubTitle(ActivityEntranceItemData data)
 		{
 			if (data.GetLockState())
@@ -201,47 +201,47 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD9F RID: 253343 RVA: 0x00EF31AC File Offset: 0x00EF13AC
+		// Token: 0x06032D3A RID: 208186 RVA: 0x00E44EB4 File Offset: 0x00E430B4
 		private void RefreshDisplayGrid(ActivityEntranceItemData data)
 		{
 			bool uiactive = data.HaveChildData();
 			base.GetItem(4).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603DDA0 RID: 253344 RVA: 0x00EF31D0 File Offset: 0x00EF13D0
+		// Token: 0x06032D3B RID: 208187 RVA: 0x00E44ED8 File Offset: 0x00E430D8
 		private void RefreshRedDotState(ActivityEntranceItemData data)
 		{
 			bool redDotState = data.GetRedDotState();
 			base.GetItem(9).SetUIActive(redDotState);
 		}
 
-		// Token: 0x040204DA RID: 132314
+		// Token: 0x0401AFAC RID: 110508
 		[Nullable(2)]
 		private ActivityEntranceItemData ItemData;
 
-		// Token: 0x0200C250 RID: 49744
+		// Token: 0x0200AC5D RID: 44125
 		[NullableContext(0)]
 		private enum EMainContentComponent
 		{
-			// Token: 0x0403AB39 RID: 240441
+			// Token: 0x0403552B RID: 218411
 			Toggle,
-			// Token: 0x0403AB3A RID: 240442
+			// Token: 0x0403552C RID: 218412
 			OffsetItem,
-			// Token: 0x0403AB3B RID: 240443
+			// Token: 0x0403552D RID: 218413
 			IconTexture,
-			// Token: 0x0403AB3C RID: 240444
+			// Token: 0x0403552E RID: 218414
 			Title,
-			// Token: 0x0403AB3D RID: 240445
+			// Token: 0x0403552F RID: 218415
 			DisplayGridItem,
-			// Token: 0x0403AB3E RID: 240446
+			// Token: 0x04035530 RID: 218416
 			PointItem,
-			// Token: 0x0403AB3F RID: 240447
+			// Token: 0x04035531 RID: 218417
 			FinishItem,
-			// Token: 0x0403AB40 RID: 240448
+			// Token: 0x04035532 RID: 218418
 			LockItem,
-			// Token: 0x0403AB41 RID: 240449
+			// Token: 0x04035533 RID: 218419
 			SubTitle,
-			// Token: 0x0403AB42 RID: 240450
+			// Token: 0x04035534 RID: 218420
 			RedDotItem
 		}
 	}

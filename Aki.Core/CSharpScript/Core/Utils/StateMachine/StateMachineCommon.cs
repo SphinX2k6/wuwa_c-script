@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Utils.StateMachine
 {
-	// Token: 0x0200012B RID: 299
+	// Token: 0x0200012C RID: 300
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class StateMachineCommon<[Nullable(2)] TObject, [Nullable(2)] TState>
 	{
-		// Token: 0x170000FE RID: 254
-		// (get) Token: 0x06000ABA RID: 2746 RVA: 0x000345B4 File Offset: 0x000327B4
+		// Token: 0x17000111 RID: 273
+		// (get) Token: 0x06000B11 RID: 2833 RVA: 0x00035028 File Offset: 0x00033228
 		public bool HasSubNode
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Core.Utils.StateMachine
 			}
 		}
 
-		// Token: 0x170000FF RID: 255
-		// (get) Token: 0x06000ABB RID: 2747 RVA: 0x000345BC File Offset: 0x000327BC
+		// Token: 0x17000112 RID: 274
+		// (get) Token: 0x06000B12 RID: 2834 RVA: 0x00035030 File Offset: 0x00033230
 		public bool Activated
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Core.Utils.StateMachine
 			}
 		}
 
-		// Token: 0x17000100 RID: 256
-		// (get) Token: 0x06000ABC RID: 2748 RVA: 0x000345C4 File Offset: 0x000327C4
+		// Token: 0x17000113 RID: 275
+		// (get) Token: 0x06000B13 RID: 2835 RVA: 0x00035038 File Offset: 0x00033238
 		public virtual StateMachineCommon<TObject, TState> CurrentLeafNode
 		{
 			get
@@ -43,7 +43,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			}
 		}
 
-		// Token: 0x06000ABD RID: 2749 RVA: 0x000345DB File Offset: 0x000327DB
+		// Token: 0x06000B14 RID: 2836 RVA: 0x0003504F File Offset: 0x0003324F
 		public StateMachineCommon(TObject owner, TState state, [Nullable(new byte[]
 		{
 			2,
@@ -56,8 +56,8 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.Parent = parent;
 		}
 
-		// Token: 0x17000101 RID: 257
-		// (get) Token: 0x06000ABE RID: 2750 RVA: 0x00034603 File Offset: 0x00032803
+		// Token: 0x17000114 RID: 276
+		// (get) Token: 0x06000B15 RID: 2837 RVA: 0x00035077 File Offset: 0x00033277
 		public StateMachineCommon<TObject, TState> Root
 		{
 			get
@@ -70,7 +70,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			}
 		}
 
-		// Token: 0x06000ABF RID: 2751 RVA: 0x0003461A File Offset: 0x0003281A
+		// Token: 0x06000B16 RID: 2838 RVA: 0x0003508E File Offset: 0x0003328E
 		public void Tick(float delta)
 		{
 			StateMachineCommon<TObject, TState> currentNode = this.CurrentNode;
@@ -81,7 +81,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.OnTick(delta);
 		}
 
-		// Token: 0x06000AC0 RID: 2752 RVA: 0x00034635 File Offset: 0x00032835
+		// Token: 0x06000B17 RID: 2839 RVA: 0x000350A9 File Offset: 0x000332A9
 		public void Start(params object[] pairs)
 		{
 			if (this.Parent != null)
@@ -92,7 +92,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.Enter(null, true, false, pairs);
 		}
 
-		// Token: 0x06000AC1 RID: 2753 RVA: 0x00034668 File Offset: 0x00032868
+		// Token: 0x06000B18 RID: 2840 RVA: 0x000350DC File Offset: 0x000332DC
 		public void Enter([Nullable(new byte[]
 		{
 			2,
@@ -125,13 +125,13 @@ namespace CSharpScript.Core.Utils.StateMachine
 			}
 		}
 
-		// Token: 0x06000AC2 RID: 2754 RVA: 0x0003470C File Offset: 0x0003290C
+		// Token: 0x06000B19 RID: 2841 RVA: 0x00035180 File Offset: 0x00033380
 		private void ReEnter()
 		{
 			this.OnReEnter();
 		}
 
-		// Token: 0x06000AC3 RID: 2755 RVA: 0x00034714 File Offset: 0x00032914
+		// Token: 0x06000B1A RID: 2842 RVA: 0x00035188 File Offset: 0x00033388
 		public void Exit([Nullable(new byte[]
 		{
 			2,
@@ -150,7 +150,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.CurrentNode = null;
 		}
 
-		// Token: 0x06000AC4 RID: 2756 RVA: 0x0003476C File Offset: 0x0003296C
+		// Token: 0x06000B1B RID: 2843 RVA: 0x000351E0 File Offset: 0x000333E0
 		public void Clear()
 		{
 			foreach (StateMachineCommon<TObject, TState> stateMachineCommon in this.StateMap.Values)
@@ -163,18 +163,18 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.FirstState = default(TState);
 		}
 
-		// Token: 0x06000AC5 RID: 2757 RVA: 0x000347E8 File Offset: 0x000329E8
+		// Token: 0x06000B1C RID: 2844 RVA: 0x0003525C File Offset: 0x0003345C
 		public virtual bool CanReEnter()
 		{
 			return false;
 		}
 
-		// Token: 0x06000AC6 RID: 2758 RVA: 0x000347EB File Offset: 0x000329EB
+		// Token: 0x06000B1D RID: 2845 RVA: 0x0003525F File Offset: 0x0003345F
 		protected virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x06000AC7 RID: 2759 RVA: 0x000347ED File Offset: 0x000329ED
+		// Token: 0x06000B1E RID: 2846 RVA: 0x00035261 File Offset: 0x00033461
 		protected virtual void OnEnter([Nullable(new byte[]
 		{
 			2,
@@ -184,12 +184,12 @@ namespace CSharpScript.Core.Utils.StateMachine
 		{
 		}
 
-		// Token: 0x06000AC8 RID: 2760 RVA: 0x000347EF File Offset: 0x000329EF
+		// Token: 0x06000B1F RID: 2847 RVA: 0x00035263 File Offset: 0x00033463
 		protected virtual void OnReEnter()
 		{
 		}
 
-		// Token: 0x06000AC9 RID: 2761 RVA: 0x000347F1 File Offset: 0x000329F1
+		// Token: 0x06000B20 RID: 2848 RVA: 0x00035265 File Offset: 0x00033465
 		protected virtual void OnExit([Nullable(new byte[]
 		{
 			2,
@@ -199,12 +199,12 @@ namespace CSharpScript.Core.Utils.StateMachine
 		{
 		}
 
-		// Token: 0x06000ACA RID: 2762 RVA: 0x000347F3 File Offset: 0x000329F3
+		// Token: 0x06000B21 RID: 2849 RVA: 0x00035267 File Offset: 0x00033467
 		protected virtual void OnClear()
 		{
 		}
 
-		// Token: 0x06000ACB RID: 2763 RVA: 0x000347F5 File Offset: 0x000329F5
+		// Token: 0x06000B22 RID: 2850 RVA: 0x00035269 File Offset: 0x00033469
 		protected virtual void OnActivate([Nullable(new byte[]
 		{
 			2,
@@ -214,7 +214,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 		{
 		}
 
-		// Token: 0x06000ACC RID: 2764 RVA: 0x000347F7 File Offset: 0x000329F7
+		// Token: 0x06000B23 RID: 2851 RVA: 0x0003526B File Offset: 0x0003346B
 		protected virtual void OnDeactivate([Nullable(new byte[]
 		{
 			2,
@@ -224,7 +224,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 		{
 		}
 
-		// Token: 0x06000ACD RID: 2765 RVA: 0x000347F9 File Offset: 0x000329F9
+		// Token: 0x06000B24 RID: 2852 RVA: 0x0003526D File Offset: 0x0003346D
 		protected virtual void OnSwitchState([Nullable(new byte[]
 		{
 			2,
@@ -239,7 +239,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 		{
 		}
 
-		// Token: 0x06000ACE RID: 2766 RVA: 0x000347FC File Offset: 0x000329FC
+		// Token: 0x06000B25 RID: 2853 RVA: 0x00035270 File Offset: 0x00033470
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -262,7 +262,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			return null;
 		}
 
-		// Token: 0x06000ACF RID: 2767 RVA: 0x00034848 File Offset: 0x00032A48
+		// Token: 0x06000B26 RID: 2854 RVA: 0x000352BC File Offset: 0x000334BC
 		public void AddState(TState state, Func<TObject, TState, StateMachineCommon<TObject, TState>, StateMachineCommon<TObject, TState>> ctor)
 		{
 			if (this.FirstState == null || EqualityComparer<TState>.Default.Equals(this.FirstState, default(TState)))
@@ -282,7 +282,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.HasSubNodeInternal = true;
 		}
 
-		// Token: 0x06000AD0 RID: 2768 RVA: 0x000348D8 File Offset: 0x00032AD8
+		// Token: 0x06000B27 RID: 2855 RVA: 0x0003534C File Offset: 0x0003354C
 		public void AddStateInstance(TState state, StateMachineCommon<TObject, TState> node)
 		{
 			if (this.FirstState == null || EqualityComparer<TState>.Default.Equals(this.FirstState, default(TState)))
@@ -301,7 +301,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 			this.HasSubNodeInternal = true;
 		}
 
-		// Token: 0x06000AD1 RID: 2769 RVA: 0x00034958 File Offset: 0x00032B58
+		// Token: 0x06000B28 RID: 2856 RVA: 0x000353CC File Offset: 0x000335CC
 		public bool Switch(TState state, bool triggerEvent = true, bool triggerSubNode = true, params object[] pairs)
 		{
 			if (this.CurrentNode == null)
@@ -342,26 +342,26 @@ namespace CSharpScript.Core.Utils.StateMachine
 			return true;
 		}
 
-		// Token: 0x040006A9 RID: 1705
+		// Token: 0x040006B7 RID: 1719
 		public readonly TObject Owner;
 
-		// Token: 0x040006AA RID: 1706
+		// Token: 0x040006B8 RID: 1720
 		public readonly TState State;
 
-		// Token: 0x040006AB RID: 1707
+		// Token: 0x040006B9 RID: 1721
 		[Nullable(2)]
 		public TState FirstState;
 
-		// Token: 0x040006AC RID: 1708
+		// Token: 0x040006BA RID: 1722
 		private readonly Dictionary<TState, StateMachineCommon<TObject, TState>> StateMap = new Dictionary<TState, StateMachineCommon<TObject, TState>>();
 
-		// Token: 0x040006AD RID: 1709
+		// Token: 0x040006BB RID: 1723
 		private bool HasSubNodeInternal;
 
-		// Token: 0x040006AE RID: 1710
+		// Token: 0x040006BC RID: 1724
 		private bool ActivatedInternal;
 
-		// Token: 0x040006AF RID: 1711
+		// Token: 0x040006BD RID: 1725
 		[Nullable(new byte[]
 		{
 			2,
@@ -370,7 +370,7 @@ namespace CSharpScript.Core.Utils.StateMachine
 		})]
 		public StateMachineCommon<TObject, TState> CurrentNode;
 
-		// Token: 0x040006B0 RID: 1712
+		// Token: 0x040006BE RID: 1726
 		[Nullable(new byte[]
 		{
 			2,

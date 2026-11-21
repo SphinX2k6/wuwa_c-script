@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200517E RID: 20862
+	// Token: 0x020056E3 RID: 22243
 	public class IEntityGroupFailureArbitraryStateT
 	{
-		// Token: 0x1700986F RID: 39023
-		// (get) Token: 0x06021BBF RID: 138175 RVA: 0x004AE64F File Offset: 0x004AC84F
-		// (set) Token: 0x06021BC0 RID: 138176 RVA: 0x004AE657 File Offset: 0x004AC857
+		// Token: 0x1700A05E RID: 41054
+		// (get) Token: 0x06023B17 RID: 146199 RVA: 0x004E866F File Offset: 0x004E686F
+		// (set) Token: 0x06023B18 RID: 146200 RVA: 0x004E8677 File Offset: 0x004E6877
 		public EEntityGroupFailureCondition Type { get; set; }
 
-		// Token: 0x17009870 RID: 39024
-		// (get) Token: 0x06021BC1 RID: 138177 RVA: 0x004AE660 File Offset: 0x004AC860
-		// (set) Token: 0x06021BC2 RID: 138178 RVA: 0x004AE668 File Offset: 0x004AC868
+		// Token: 0x1700A05F RID: 41055
+		// (get) Token: 0x06023B19 RID: 146201 RVA: 0x004E8680 File Offset: 0x004E6880
+		// (set) Token: 0x06023B1A RID: 146202 RVA: 0x004E8688 File Offset: 0x004E6888
 		public string State { get; set; }
 
-		// Token: 0x06021BC3 RID: 138179 RVA: 0x004AE671 File Offset: 0x004AC871
+		// Token: 0x06023B1B RID: 146203 RVA: 0x004E8691 File Offset: 0x004E6891
 		public IEntityGroupFailureArbitraryStateT()
 		{
 			this.Type = EEntityGroupFailureCondition.SequentialState;

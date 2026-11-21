@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B64 RID: 7012
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D11 RID: 7441
 	public class IItemInspection : IUiGame
 	{
-		// Token: 0x0600961B RID: 38427 RVA: 0x0015ACC0 File Offset: 0x00158EC0
+		// Token: 0x06009DFD RID: 40445 RVA: 0x0016B86C File Offset: 0x00169A6C
 		private IItemInspection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600961C RID: 38428 RVA: 0x0015ACF8 File Offset: 0x00158EF8
+		// Token: 0x06009DFE RID: 40446 RVA: 0x0016B8A4 File Offset: 0x00169AA4
 		public static IItemInspection Create([Nullable(2)] IItemInspection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600961D RID: 38429 RVA: 0x0015AD0B File Offset: 0x00158F0B
+		// Token: 0x06009DFF RID: 40447 RVA: 0x0016B8B7 File Offset: 0x00169AB7
 		public static IItemInspection CreateFromSetValue([Nullable(2)] IItemInspection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600961E RID: 38430 RVA: 0x0015AD20 File Offset: 0x00158F20
+		// Token: 0x06009E00 RID: 40448 RVA: 0x0016B8CC File Offset: 0x00169ACC
 		public new IItemInspection_SetValue ToSetValue()
 		{
 			return new IItemInspection_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F4E RID: 12110
-		// (get) Token: 0x0600961F RID: 38431 RVA: 0x0015AD9E File Offset: 0x00158F9E
-		// (set) Token: 0x06009620 RID: 38432 RVA: 0x0015ADC9 File Offset: 0x00158FC9
+		// Token: 0x17003173 RID: 12659
+		// (get) Token: 0x06009E01 RID: 40449 RVA: 0x0016B94A File Offset: 0x00169B4A
+		// (set) Token: 0x06009E02 RID: 40450 RVA: 0x0016B975 File Offset: 0x00169B75
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F4F RID: 12111
-		// (get) Token: 0x06009621 RID: 38433 RVA: 0x0015ADD7 File Offset: 0x00158FD7
-		// (set) Token: 0x06009622 RID: 38434 RVA: 0x0015AE02 File Offset: 0x00159002
+		// Token: 0x17003174 RID: 12660
+		// (get) Token: 0x06009E03 RID: 40451 RVA: 0x0016B983 File Offset: 0x00169B83
+		// (set) Token: 0x06009E04 RID: 40452 RVA: 0x0016B9AE File Offset: 0x00169BAE
 		public virtual string PrefabPath
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F50 RID: 12112
-		// (get) Token: 0x06009623 RID: 38435 RVA: 0x0015AE10 File Offset: 0x00159010
-		// (set) Token: 0x06009624 RID: 38436 RVA: 0x0015AE3F File Offset: 0x0015903F
+		// Token: 0x17003175 RID: 12661
+		// (get) Token: 0x06009E05 RID: 40453 RVA: 0x0016B9BC File Offset: 0x00169BBC
+		// (set) Token: 0x06009E06 RID: 40454 RVA: 0x0016B9EB File Offset: 0x00169BEB
 		public virtual float RotateSpeed
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F51 RID: 12113
-		// (get) Token: 0x06009625 RID: 38437 RVA: 0x0015AE50 File Offset: 0x00159050
-		// (set) Token: 0x06009626 RID: 38438 RVA: 0x0015AEB1 File Offset: 0x001590B1
+		// Token: 0x17003176 RID: 12662
+		// (get) Token: 0x06009E07 RID: 40455 RVA: 0x0016B9FC File Offset: 0x00169BFC
+		// (set) Token: 0x06009E08 RID: 40456 RVA: 0x0016BA5D File Offset: 0x00169C5D
 		public virtual ISequenceUnlockPoints InteractPointsConfig
 		{
 			get
@@ -166,9 +164,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F52 RID: 12114
-		// (get) Token: 0x06009627 RID: 38439 RVA: 0x0015AEC8 File Offset: 0x001590C8
-		// (set) Token: 0x06009628 RID: 38440 RVA: 0x0015AF29 File Offset: 0x00159129
+		// Token: 0x17003177 RID: 12663
+		// (get) Token: 0x06009E09 RID: 40457 RVA: 0x0016BA74 File Offset: 0x00169C74
+		// (set) Token: 0x06009E0A RID: 40458 RVA: 0x0016BAD5 File Offset: 0x00169CD5
 		public virtual IConeRangeCheck RangeCheckConfig
 		{
 			get
@@ -196,9 +194,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F53 RID: 12115
-		// (get) Token: 0x06009629 RID: 38441 RVA: 0x0015AF40 File Offset: 0x00159140
-		// (set) Token: 0x0600962A RID: 38442 RVA: 0x0015AFA1 File Offset: 0x001591A1
+		// Token: 0x17003178 RID: 12664
+		// (get) Token: 0x06009E0B RID: 40459 RVA: 0x0016BAEC File Offset: 0x00169CEC
+		// (set) Token: 0x06009E0C RID: 40460 RVA: 0x0016BB4D File Offset: 0x00169D4D
 		public virtual IAstrologyTextUiConfig TextUiConfig
 		{
 			get
@@ -226,9 +224,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F54 RID: 12116
-		// (get) Token: 0x0600962B RID: 38443 RVA: 0x0015AFB8 File Offset: 0x001591B8
-		// (set) Token: 0x0600962C RID: 38444 RVA: 0x0015AFF2 File Offset: 0x001591F2
+		// Token: 0x17003179 RID: 12665
+		// (get) Token: 0x06009E0D RID: 40461 RVA: 0x0016BB64 File Offset: 0x00169D64
+		// (set) Token: 0x06009E0E RID: 40462 RVA: 0x0016BB9E File Offset: 0x00169D9E
 		public virtual bool? CanExit
 		{
 			get
@@ -250,9 +248,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F55 RID: 12117
-		// (get) Token: 0x0600962D RID: 38445 RVA: 0x0015B000 File Offset: 0x00159200
-		// (set) Token: 0x0600962E RID: 38446 RVA: 0x0015B03A File Offset: 0x0015923A
+		// Token: 0x1700317A RID: 12666
+		// (get) Token: 0x06009E0F RID: 40463 RVA: 0x0016BBAC File Offset: 0x00169DAC
+		// (set) Token: 0x06009E10 RID: 40464 RVA: 0x0016BBE6 File Offset: 0x00169DE6
 		public virtual float? ItemOffsetDistance
 		{
 			get
@@ -274,9 +272,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F56 RID: 12118
-		// (get) Token: 0x0600962F RID: 38447 RVA: 0x0015B048 File Offset: 0x00159248
-		// (set) Token: 0x06009630 RID: 38448 RVA: 0x0015B0A9 File Offset: 0x001592A9
+		// Token: 0x1700317B RID: 12667
+		// (get) Token: 0x06009E11 RID: 40465 RVA: 0x0016BBF4 File Offset: 0x00169DF4
+		// (set) Token: 0x06009E12 RID: 40466 RVA: 0x0016BC55 File Offset: 0x00169E55
 		[Nullable(2)]
 		public virtual IItemInspectFinishEffect ItemInteractFinishEffect
 		{
@@ -307,36 +305,36 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BCB RID: 23499
+		// Token: 0x04006064 RID: 24676
 		[Nullable(2)]
 		protected new IItemInspection FbInstance;
 
-		// Token: 0x04005BCC RID: 23500
+		// Token: 0x04006065 RID: 24677
 		[Nullable(2)]
 		protected new IItemInspection_SetValue PocoInterface;
 
-		// Token: 0x04005BCD RID: 23501
+		// Token: 0x04006066 RID: 24678
 		private ISequenceUnlockPoints _InteractPointsConfigCache;
 
-		// Token: 0x04005BCE RID: 23502
+		// Token: 0x04006067 RID: 24679
 		private bool _InteractPointsConfigInited;
 
-		// Token: 0x04005BCF RID: 23503
+		// Token: 0x04006068 RID: 24680
 		private IConeRangeCheck _RangeCheckConfigCache;
 
-		// Token: 0x04005BD0 RID: 23504
+		// Token: 0x04006069 RID: 24681
 		private bool _RangeCheckConfigInited;
 
-		// Token: 0x04005BD1 RID: 23505
+		// Token: 0x0400606A RID: 24682
 		private IAstrologyTextUiConfig _TextUiConfigCache;
 
-		// Token: 0x04005BD2 RID: 23506
+		// Token: 0x0400606B RID: 24683
 		private bool _TextUiConfigInited;
 
-		// Token: 0x04005BD3 RID: 23507
+		// Token: 0x0400606C RID: 24684
 		private IItemInspectFinishEffect _ItemInteractFinishEffectCache;
 
-		// Token: 0x04005BD4 RID: 23508
+		// Token: 0x0400606D RID: 24685
 		private bool _ItemInteractFinishEffectInited;
 	}
 }

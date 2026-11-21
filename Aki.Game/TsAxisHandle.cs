@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000257 RID: 599
+// Token: 0x0200025B RID: 603
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Controller/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Controller/TsAxisHandle.TsAxisHandle_C")]
 public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000595 RID: 1429
-	// (get) Token: 0x06002476 RID: 9334 RVA: 0x000DDF7F File Offset: 0x000DC17F
-	// (set) Token: 0x06002477 RID: 9335 RVA: 0x000DDF93 File Offset: 0x000DC193
+	// Token: 0x170005BC RID: 1468
+	// (get) Token: 0x0600252D RID: 9517 RVA: 0x000E435B File Offset: 0x000E255B
+	// (set) Token: 0x0600252E RID: 9518 RVA: 0x000E436F File Offset: 0x000E256F
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe TsBasePlayerController PlayerController
@@ -33,9 +33,9 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17000596 RID: 1430
-	// (get) Token: 0x06002478 RID: 9336 RVA: 0x000DDFA8 File Offset: 0x000DC1A8
-	// (set) Token: 0x06002479 RID: 9337 RVA: 0x000DDFBC File Offset: 0x000DC1BC
+	// Token: 0x170005BD RID: 1469
+	// (get) Token: 0x0600252F RID: 9519 RVA: 0x000E4384 File Offset: 0x000E2584
+	// (set) Token: 0x06002530 RID: 9520 RVA: 0x000E4398 File Offset: 0x000E2598
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe string AxisName
 	{
@@ -49,14 +49,14 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0600247A RID: 9338 RVA: 0x000DDFD1 File Offset: 0x000DC1D1
+	// Token: 0x06002531 RID: 9521 RVA: 0x000E43AD File Offset: 0x000E25AD
 	public void Initialize(TsBasePlayerController playerController)
 	{
 		this.PlayerController = playerController;
 		this.OnInputStat = Stat.Create("TsAxisHandle.OnInputAxis", "", "STATGROUP_KuroBattle");
 	}
 
-	// Token: 0x0600247B RID: 9339 RVA: 0x000DDFF4 File Offset: 0x000DC1F4
+	// Token: 0x06002532 RID: 9522 RVA: 0x000E43D0 File Offset: 0x000E25D0
 	public void Reset()
 	{
 		this.PlayerController = null;
@@ -64,7 +64,7 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		this.OnInputAxisCallback = null;
 	}
 
-	// Token: 0x0600247C RID: 9340 RVA: 0x000DE010 File Offset: 0x000DC210
+	// Token: 0x06002533 RID: 9523 RVA: 0x000E43EC File Offset: 0x000E25EC
 	public void AddAxisBinding(string axisName, [Nullable(new byte[]
 	{
 		2,
@@ -98,28 +98,25 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		playerController.AddAxisBinding(value, this, fname);
 	}
 
-	// Token: 0x0600247D RID: 9341 RVA: 0x000DE094 File Offset: 0x000DC294
+	// Token: 0x06002534 RID: 9524 RVA: 0x000E4470 File Offset: 0x000E2670
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnInputAxis(float value)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnInputAxis"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsAxisHandle.__OnInputAxis_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAxisHandle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnInputAxis"), TsAxisHandle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsAxisHandle.__OnInputAxis_FunctionParams*)ptr + 15L / (long)sizeof(TsAxisHandle.__OnInputAxis_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->value = value;
+			this.OnInputAxis_Implementation(value);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsAxisHandle.__OnInputAxis_FunctionParams* ptr = stackalloc TsAxisHandle.__OnInputAxis_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsAxisHandle.__OnInputAxis_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->value = value;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600247E RID: 9342 RVA: 0x000DE10A File Offset: 0x000DC30A
+	// Token: 0x06002535 RID: 9525 RVA: 0x000E44FC File Offset: 0x000E26FC
 	protected void OnInputAxis_Implementation(float value)
 	{
 		Action<string, float> onInputAxisCallback = this.OnInputAxisCallback;
@@ -130,7 +127,7 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		onInputAxisCallback(this.AxisName, value);
 	}
 
-	// Token: 0x0600247F RID: 9343 RVA: 0x000DE123 File Offset: 0x000DC323
+	// Token: 0x06002536 RID: 9526 RVA: 0x000E4515 File Offset: 0x000E2715
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAxisHandle._ClassPtr == IntPtr.Zero)
@@ -140,33 +137,33 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 		return TsAxisHandle._ClassPtr;
 	}
 
-	// Token: 0x06002480 RID: 9344 RVA: 0x000DE148 File Offset: 0x000DC348
+	// Token: 0x06002537 RID: 9527 RVA: 0x000E453C File Offset: 0x000E273C
 	public TsAxisHandle() : this(BuiltinUtils.AllocNativeUObject(TsAxisHandle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002481 RID: 9345 RVA: 0x000DE170 File Offset: 0x000DC370
+	// Token: 0x06002538 RID: 9528 RVA: 0x000E4564 File Offset: 0x000E2764
 	public TsAxisHandle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAxisHandle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002482 RID: 9346 RVA: 0x000DE1A3 File Offset: 0x000DC3A3
+	// Token: 0x06002539 RID: 9529 RVA: 0x000E4597 File Offset: 0x000E2797
 	protected TsAxisHandle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06002483 RID: 9347 RVA: 0x000DE1AC File Offset: 0x000DC3AC
+	// Token: 0x0600253A RID: 9530 RVA: 0x000E45A0 File Offset: 0x000E27A0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnInputAxis_Implementation(TsAxisHandle.__OnInputAxis_FunctionParams* __Params)
 	{
 		this.OnInputAxis_Implementation(__Params->value);
 	}
 
-	// Token: 0x040023DC RID: 9180
+	// Token: 0x0400245A RID: 9306
 	[Nullable(2)]
 	private Stat OnInputStat;
 
-	// Token: 0x040023DD RID: 9181
+	// Token: 0x0400245B RID: 9307
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,28 +171,28 @@ public class TsAxisHandle : UObject, IUnrealUObject, IUnrealObject
 	})]
 	private Action<string, float> OnInputAxisCallback;
 
-	// Token: 0x040023DE RID: 9182
+	// Token: 0x0400245C RID: 9308
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Controller/TsAxisHandle.TsAxisHandle_C";
 
-	// Token: 0x040023DF RID: 9183
+	// Token: 0x0400245D RID: 9309
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040023E0 RID: 9184
+	// Token: 0x0400245E RID: 9310
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040023E1 RID: 9185
+	// Token: 0x0400245F RID: 9311
 	private static int __PropertyOffset_PlayerController;
 
-	// Token: 0x040023E2 RID: 9186
+	// Token: 0x04002460 RID: 9312
 	private static int __PropertyOffset_AxisName;
 
-	// Token: 0x02007445 RID: 29765
+	// Token: 0x020065D6 RID: 26070
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __OnInputAxis_FunctionParams
 	{
-		// Token: 0x0402682D RID: 157741
+		// Token: 0x04021B6B RID: 138091
 		[FieldOffset(0)]
 		public float value;
 	}

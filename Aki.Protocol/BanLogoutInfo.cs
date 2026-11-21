@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000159 RID: 345
+	// Token: 0x0200015C RID: 348
 	public sealed class BanLogoutInfo : IMessage<BanLogoutInfo>, IMessage, IEquatable<BanLogoutInfo>, IDeepCloneable<BanLogoutInfo>, IBufferMessage
 	{
-		// Token: 0x06002B7D RID: 11133 RVA: 0x000715C4 File Offset: 0x0006F7C4
+		// Token: 0x06002BF4 RID: 11252 RVA: 0x000729F4 File Offset: 0x00070BF4
 		[NullableContext(1)]
 		public static BanLogoutInfo Create()
 		{
 			return new BanLogoutInfo();
 		}
 
-		// Token: 0x1700067A RID: 1658
-		// (get) Token: 0x06002B7E RID: 11134 RVA: 0x000715CB File Offset: 0x0006F7CB
+		// Token: 0x1700068E RID: 1678
+		// (get) Token: 0x06002BF5 RID: 11253 RVA: 0x000729FB File Offset: 0x00070BFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700067B RID: 1659
-		// (get) Token: 0x06002B7F RID: 11135 RVA: 0x000715CE File Offset: 0x0006F7CE
+		// Token: 0x1700068F RID: 1679
+		// (get) Token: 0x06002BF6 RID: 11254 RVA: 0x000729FE File Offset: 0x00070BFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B80 RID: 11136 RVA: 0x000715D5 File Offset: 0x0006F7D5
+		// Token: 0x06002BF7 RID: 11255 RVA: 0x00072A05 File Offset: 0x00070C05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanLogoutInfo()
 		{
 		}
 
-		// Token: 0x06002B81 RID: 11137 RVA: 0x000715DD File Offset: 0x0006F7DD
+		// Token: 0x06002BF8 RID: 11256 RVA: 0x00072A0D File Offset: 0x00070C0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanLogoutInfo(BanLogoutInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002B82 RID: 11138 RVA: 0x0007160E File Offset: 0x0006F80E
+		// Token: 0x06002BF9 RID: 11257 RVA: 0x00072A3E File Offset: 0x00070C3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanLogoutInfo Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new BanLogoutInfo(this);
 		}
 
-		// Token: 0x1700067C RID: 1660
-		// (get) Token: 0x06002B83 RID: 11139 RVA: 0x00071616 File Offset: 0x0006F816
-		// (set) Token: 0x06002B84 RID: 11140 RVA: 0x0007161E File Offset: 0x0006F81E
+		// Token: 0x17000690 RID: 1680
+		// (get) Token: 0x06002BFA RID: 11258 RVA: 0x00072A46 File Offset: 0x00070C46
+		// (set) Token: 0x06002BFB RID: 11259 RVA: 0x00072A4E File Offset: 0x00070C4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Reason
@@ -83,9 +83,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700067D RID: 1661
-		// (get) Token: 0x06002B85 RID: 11141 RVA: 0x00071627 File Offset: 0x0006F827
-		// (set) Token: 0x06002B86 RID: 11142 RVA: 0x0007162F File Offset: 0x0006F82F
+		// Token: 0x17000691 RID: 1681
+		// (get) Token: 0x06002BFC RID: 11260 RVA: 0x00072A57 File Offset: 0x00070C57
+		// (set) Token: 0x06002BFD RID: 11261 RVA: 0x00072A5F File Offset: 0x00070C5F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BanEndTime
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B87 RID: 11143 RVA: 0x00071638 File Offset: 0x0006F838
+		// Token: 0x06002BFE RID: 11262 RVA: 0x00072A68 File Offset: 0x00070C68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BanLogoutInfo);
 		}
 
-		// Token: 0x06002B88 RID: 11144 RVA: 0x00071646 File Offset: 0x0006F846
+		// Token: 0x06002BFF RID: 11263 RVA: 0x00072A76 File Offset: 0x00070C76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BanLogoutInfo other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Reason == other.Reason && this.BanEndTime == other.BanEndTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002B89 RID: 11145 RVA: 0x00071684 File Offset: 0x0006F884
+		// Token: 0x06002C00 RID: 11264 RVA: 0x00072AB4 File Offset: 0x00070CB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B8A RID: 11146 RVA: 0x000716DC File Offset: 0x0006F8DC
+		// Token: 0x06002C01 RID: 11265 RVA: 0x00072B0C File Offset: 0x00070D0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002B8B RID: 11147 RVA: 0x000716E9 File Offset: 0x0006F8E9
+		// Token: 0x06002C02 RID: 11266 RVA: 0x00072B19 File Offset: 0x00070D19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002B8C RID: 11148 RVA: 0x000716F4 File Offset: 0x0006F8F4
+		// Token: 0x06002C03 RID: 11267 RVA: 0x00072B24 File Offset: 0x00070D24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B8D RID: 11149 RVA: 0x0007174C File Offset: 0x0006F94C
+		// Token: 0x06002C04 RID: 11268 RVA: 0x00072B7C File Offset: 0x00070D7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B8E RID: 11150 RVA: 0x000717A4 File Offset: 0x0006F9A4
+		// Token: 0x06002C05 RID: 11269 RVA: 0x00072BD4 File Offset: 0x00070DD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BanLogoutInfo other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002B8F RID: 11151 RVA: 0x000717F4 File Offset: 0x0006F9F4
+		// Token: 0x06002C06 RID: 11270 RVA: 0x00072C24 File Offset: 0x00070E24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002B90 RID: 11152 RVA: 0x00071800 File Offset: 0x0006FA00
+		// Token: 0x06002C07 RID: 11271 RVA: 0x00072C30 File Offset: 0x00070E30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -253,19 +253,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040027A2 RID: 10146
+		// Token: 0x04002816 RID: 10262
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040027A3 RID: 10147
+		// Token: 0x04002817 RID: 10263
 		public const int ReasonFieldNumber = 1;
 
-		// Token: 0x040027A4 RID: 10148
+		// Token: 0x04002818 RID: 10264
 		private int reason_;
 
-		// Token: 0x040027A5 RID: 10149
+		// Token: 0x04002819 RID: 10265
 		public const int BanEndTimeFieldNumber = 2;
 
-		// Token: 0x040027A6 RID: 10150
+		// Token: 0x0400281A RID: 10266
 		private long banEndTime_;
 	}
 }

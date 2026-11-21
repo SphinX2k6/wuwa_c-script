@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020014A4 RID: 5284
+	// Token: 0x0200151A RID: 5402
 	[NetMessage(EMessageId.UpdatePlayerSingleFightRoleNotify)]
 	public sealed class UpdatePlayerSingleFightRoleNotify : IMessage<UpdatePlayerSingleFightRoleNotify>, IMessage, IEquatable<UpdatePlayerSingleFightRoleNotify>, IDeepCloneable<UpdatePlayerSingleFightRoleNotify>, IBufferMessage
 	{
-		// Token: 0x0601BF23 RID: 114467 RVA: 0x0040A099 File Offset: 0x00408299
+		// Token: 0x0601C9EA RID: 117226 RVA: 0x00425B51 File Offset: 0x00423D51
 		[NullableContext(1)]
 		public static UpdatePlayerSingleFightRoleNotify Create()
 		{
 			return new UpdatePlayerSingleFightRoleNotify();
 		}
 
-		// Token: 0x17005E2D RID: 24109
-		// (get) Token: 0x0601BF24 RID: 114468 RVA: 0x0040A0A0 File Offset: 0x004082A0
+		// Token: 0x170060CE RID: 24782
+		// (get) Token: 0x0601C9EB RID: 117227 RVA: 0x00425B58 File Offset: 0x00423D58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E2E RID: 24110
-		// (get) Token: 0x0601BF25 RID: 114469 RVA: 0x0040A0A3 File Offset: 0x004082A3
+		// Token: 0x170060CF RID: 24783
+		// (get) Token: 0x0601C9EC RID: 117228 RVA: 0x00425B5B File Offset: 0x00423D5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BF26 RID: 114470 RVA: 0x0040A0AA File Offset: 0x004082AA
+		// Token: 0x0601C9ED RID: 117229 RVA: 0x00425B62 File Offset: 0x00423D62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UpdatePlayerSingleFightRoleNotify()
 		{
 		}
 
-		// Token: 0x0601BF27 RID: 114471 RVA: 0x0040A0B4 File Offset: 0x004082B4
+		// Token: 0x0601C9EE RID: 117230 RVA: 0x00425B6C File Offset: 0x00423D6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UpdatePlayerSingleFightRoleNotify(UpdatePlayerSingleFightRoleNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601BF28 RID: 114472 RVA: 0x0040A100 File Offset: 0x00408300
+		// Token: 0x0601C9EF RID: 117231 RVA: 0x00425BB8 File Offset: 0x00423DB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UpdatePlayerSingleFightRoleNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new UpdatePlayerSingleFightRoleNotify(this);
 		}
 
-		// Token: 0x17005E2F RID: 24111
-		// (get) Token: 0x0601BF29 RID: 114473 RVA: 0x0040A108 File Offset: 0x00408308
-		// (set) Token: 0x0601BF2A RID: 114474 RVA: 0x0040A110 File Offset: 0x00408310
+		// Token: 0x170060D0 RID: 24784
+		// (get) Token: 0x0601C9F0 RID: 117232 RVA: 0x00425BC0 File Offset: 0x00423DC0
+		// (set) Token: 0x0601C9F1 RID: 117233 RVA: 0x00425BC8 File Offset: 0x00423DC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005E30 RID: 24112
-		// (get) Token: 0x0601BF2B RID: 114475 RVA: 0x0040A119 File Offset: 0x00408319
-		// (set) Token: 0x0601BF2C RID: 114476 RVA: 0x0040A121 File Offset: 0x00408321
+		// Token: 0x170060D1 RID: 24785
+		// (get) Token: 0x0601C9F2 RID: 117234 RVA: 0x00425BD1 File Offset: 0x00423DD1
+		// (set) Token: 0x0601C9F3 RID: 117235 RVA: 0x00425BD9 File Offset: 0x00423DD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FightRoleInformation FightRoleInfo
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BF2D RID: 114477 RVA: 0x0040A12A File Offset: 0x0040832A
+		// Token: 0x0601C9F4 RID: 117236 RVA: 0x00425BE2 File Offset: 0x00423DE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as UpdatePlayerSingleFightRoleNotify);
 		}
 
-		// Token: 0x0601BF2E RID: 114478 RVA: 0x0040A138 File Offset: 0x00408338
+		// Token: 0x0601C9F5 RID: 117237 RVA: 0x00425BF0 File Offset: 0x00423DF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(UpdatePlayerSingleFightRoleNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && object.Equals(this.FightRoleInfo, other.FightRoleInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601BF2F RID: 114479 RVA: 0x0040A188 File Offset: 0x00408388
+		// Token: 0x0601C9F6 RID: 117238 RVA: 0x00425C40 File Offset: 0x00423E40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BF30 RID: 114480 RVA: 0x0040A1DD File Offset: 0x004083DD
+		// Token: 0x0601C9F7 RID: 117239 RVA: 0x00425C95 File Offset: 0x00423E95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601BF31 RID: 114481 RVA: 0x0040A1EA File Offset: 0x004083EA
+		// Token: 0x0601C9F8 RID: 117240 RVA: 0x00425CA2 File Offset: 0x00423EA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601BF32 RID: 114482 RVA: 0x0040A1F4 File Offset: 0x004083F4
+		// Token: 0x0601C9F9 RID: 117241 RVA: 0x00425CAC File Offset: 0x00423EAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.fightRoleInfo_ != null)
 			{
-				output.WriteRawTag(58);
+				output.WriteRawTag(18);
 				output.WriteMessage(this.FightRoleInfo);
 			}
 			if (this.PlayerId != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.PlayerId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BF33 RID: 114483 RVA: 0x0040A250 File Offset: 0x00408450
+		// Token: 0x0601C9FA RID: 117242 RVA: 0x00425D08 File Offset: 0x00423F08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BF34 RID: 114484 RVA: 0x0040A2A8 File Offset: 0x004084A8
+		// Token: 0x0601C9FB RID: 117243 RVA: 0x00425D60 File Offset: 0x00423F60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(UpdatePlayerSingleFightRoleNotify other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601BF35 RID: 114485 RVA: 0x0040A310 File Offset: 0x00408510
+		// Token: 0x0601C9FC RID: 117244 RVA: 0x00425DC8 File Offset: 0x00423FC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601BF36 RID: 114486 RVA: 0x0040A31C File Offset: 0x0040851C
+		// Token: 0x0601C9FD RID: 117245 RVA: 0x00425DD4 File Offset: 0x00423FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,9 +240,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 58U)
+				if (num != 18U)
 				{
-					if (num != 88U)
+					if (num != 40U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -262,19 +262,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400A08F RID: 41103
+		// Token: 0x0400A4E8 RID: 42216
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A090 RID: 41104
-		public const int PlayerIdFieldNumber = 11;
+		// Token: 0x0400A4E9 RID: 42217
+		public const int PlayerIdFieldNumber = 5;
 
-		// Token: 0x0400A091 RID: 41105
+		// Token: 0x0400A4EA RID: 42218
 		private int playerId_;
 
-		// Token: 0x0400A092 RID: 41106
-		public const int FightRoleInfoFieldNumber = 7;
+		// Token: 0x0400A4EB RID: 42219
+		public const int FightRoleInfoFieldNumber = 2;
 
-		// Token: 0x0400A093 RID: 41107
+		// Token: 0x0400A4EC RID: 42220
 		private FightRoleInformation fightRoleInfo_;
 	}
 }

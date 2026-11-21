@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E3 RID: 17891
+	// Token: 0x0200350C RID: 13580
 	public enum EFlyWaterEffectState
 	{
-		// Token: 0x04018BDC RID: 101340
+		// Token: 0x0401321A RID: 78362
 		Default,
-		// Token: 0x04018BDD RID: 101341
+		// Token: 0x0401321B RID: 78363
 		MotorSoaring
 	}
 }

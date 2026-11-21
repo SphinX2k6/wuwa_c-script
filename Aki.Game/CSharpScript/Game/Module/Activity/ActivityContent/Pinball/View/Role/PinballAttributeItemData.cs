@@ -3,22 +3,22 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006302 RID: 25346
+	// Token: 0x02005280 RID: 21120
 	public class PinballAttributeItemData : IPinballAttributeItemData
 	{
-		// Token: 0x170092C1 RID: 37569
-		// (get) Token: 0x0603FC71 RID: 261233 RVA: 0x00F6E527 File Offset: 0x00F6C727
-		// (set) Token: 0x0603FC72 RID: 261234 RVA: 0x00F6E52F File Offset: 0x00F6C72F
+		// Token: 0x17006623 RID: 26147
+		// (get) Token: 0x06034932 RID: 215346 RVA: 0x00EB5483 File Offset: 0x00EB3683
+		// (set) Token: 0x06034933 RID: 215347 RVA: 0x00EB548B File Offset: 0x00EB368B
 		public bool IsBgShow { get; set; }
 
-		// Token: 0x170092C2 RID: 37570
-		// (get) Token: 0x0603FC73 RID: 261235 RVA: 0x00F6E538 File Offset: 0x00F6C738
-		// (set) Token: 0x0603FC74 RID: 261236 RVA: 0x00F6E540 File Offset: 0x00F6C740
+		// Token: 0x17006624 RID: 26148
+		// (get) Token: 0x06034934 RID: 215348 RVA: 0x00EB5494 File Offset: 0x00EB3694
+		// (set) Token: 0x06034935 RID: 215349 RVA: 0x00EB549C File Offset: 0x00EB369C
 		public PinballPropertyIndex AttributeConfig { get; set; }
 
-		// Token: 0x170092C3 RID: 37571
-		// (get) Token: 0x0603FC75 RID: 261237 RVA: 0x00F6E549 File Offset: 0x00F6C749
-		// (set) Token: 0x0603FC76 RID: 261238 RVA: 0x00F6E551 File Offset: 0x00F6C751
+		// Token: 0x17006625 RID: 26149
+		// (get) Token: 0x06034936 RID: 215350 RVA: 0x00EB54A5 File Offset: 0x00EB36A5
+		// (set) Token: 0x06034937 RID: 215351 RVA: 0x00EB54AD File Offset: 0x00EB36AD
 		public int AttributeValue { get; set; }
 	}
 }

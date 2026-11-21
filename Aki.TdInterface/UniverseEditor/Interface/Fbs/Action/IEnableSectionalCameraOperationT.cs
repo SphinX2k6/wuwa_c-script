@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200667F RID: 26239
+	// Token: 0x02006CF9 RID: 27897
 	public class IEnableSectionalCameraOperationT
 	{
-		// Token: 0x1700C2E8 RID: 49896
-		// (get) Token: 0x0602D967 RID: 186727 RVA: 0x0063D984 File Offset: 0x0063BB84
-		// (set) Token: 0x0602D968 RID: 186728 RVA: 0x0063D98C File Offset: 0x0063BB8C
+		// Token: 0x1700CC99 RID: 52377
+		// (get) Token: 0x06030184 RID: 196996 RVA: 0x0068AC38 File Offset: 0x00688E38
+		// (set) Token: 0x06030185 RID: 196997 RVA: 0x0068AC40 File Offset: 0x00688E40
 		public ECameraOperationType Type { get; set; }
 
-		// Token: 0x1700C2E9 RID: 49897
-		// (get) Token: 0x0602D969 RID: 186729 RVA: 0x0063D995 File Offset: 0x0063BB95
-		// (set) Token: 0x0602D96A RID: 186730 RVA: 0x0063D99D File Offset: 0x0063BB9D
+		// Token: 0x1700CC9A RID: 52378
+		// (get) Token: 0x06030186 RID: 196998 RVA: 0x0068AC49 File Offset: 0x00688E49
+		// (set) Token: 0x06030187 RID: 196999 RVA: 0x0068AC51 File Offset: 0x00688E51
 		public bool EnableRotate { get; set; }
 
-		// Token: 0x1700C2EA RID: 49898
-		// (get) Token: 0x0602D96B RID: 186731 RVA: 0x0063D9A6 File Offset: 0x0063BBA6
-		// (set) Token: 0x0602D96C RID: 186732 RVA: 0x0063D9AE File Offset: 0x0063BBAE
+		// Token: 0x1700CC9B RID: 52379
+		// (get) Token: 0x06030188 RID: 197000 RVA: 0x0068AC5A File Offset: 0x00688E5A
+		// (set) Token: 0x06030189 RID: 197001 RVA: 0x0068AC62 File Offset: 0x00688E62
 		public bool EnableZoom { get; set; }
 
-		// Token: 0x1700C2EB RID: 49899
-		// (get) Token: 0x0602D96D RID: 186733 RVA: 0x0063D9B7 File Offset: 0x0063BBB7
-		// (set) Token: 0x0602D96E RID: 186734 RVA: 0x0063D9BF File Offset: 0x0063BBBF
+		// Token: 0x1700CC9C RID: 52380
+		// (get) Token: 0x0603018A RID: 197002 RVA: 0x0068AC6B File Offset: 0x00688E6B
+		// (set) Token: 0x0603018B RID: 197003 RVA: 0x0068AC73 File Offset: 0x00688E73
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D96F RID: 186735 RVA: 0x0063D9C8 File Offset: 0x0063BBC8
+		// Token: 0x0603018C RID: 197004 RVA: 0x0068AC7C File Offset: 0x00688E7C
 		public IEnableSectionalCameraOperationT()
 		{
 			this.Type = ECameraOperationType.Enable;

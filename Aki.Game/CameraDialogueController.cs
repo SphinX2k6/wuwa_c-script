@@ -9,24 +9,24 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x020001FB RID: 507
+// Token: 0x020001FF RID: 511
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06001FEA RID: 8170 RVA: 0x000A46B4 File Offset: 0x000A28B4
+	// Token: 0x06002098 RID: 8344 RVA: 0x000ABA08 File Offset: 0x000A9C08
 	public CameraDialogueController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06001FEB RID: 8171 RVA: 0x000A470A File Offset: 0x000A290A
+	// Token: 0x06002099 RID: 8345 RVA: 0x000ABA5E File Offset: 0x000A9C5E
 	public override string Name()
 	{
 		return "DialogueController";
 	}
 
-	// Token: 0x06001FEC RID: 8172 RVA: 0x000A4714 File Offset: 0x000A2914
+	// Token: 0x0600209A RID: 8346 RVA: 0x000ABA68 File Offset: 0x000A9C68
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraDialogue.淡入系数, "FadeInExp");
@@ -47,7 +47,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		this.Camera.CameraModifyController.UnlockCameraModify(EModifyInternalLockReason.CameraDialogueController);
 	}
 
-	// Token: 0x06001FED RID: 8173 RVA: 0x000A4830 File Offset: 0x000A2A30
+	// Token: 0x0600209B RID: 8347 RVA: 0x000ABB84 File Offset: 0x000A9D84
 	protected override void UpdateInternal(float deltaSeconds)
 	{
 		BP_CharacterController_C characterController = this.Camera.CharacterController;
@@ -126,7 +126,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x06001FEE RID: 8174 RVA: 0x000A4B4C File Offset: 0x000A2D4C
+	// Token: 0x0600209C RID: 8348 RVA: 0x000ABEA0 File Offset: 0x000AA0A0
 	[NullableContext(2)]
 	public void EnterSequenceDialogue(Vector armLocation, bool delayBlendInDialogueCamera = false, float? specificOffsetRate = null, float? specificHeightOffset = null)
 	{
@@ -154,7 +154,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		this.UpdateArmYawAndPitch(armLocation, true, true);
 	}
 
-	// Token: 0x06001FEF RID: 8175 RVA: 0x000A4C1C File Offset: 0x000A2E1C
+	// Token: 0x0600209D RID: 8349 RVA: 0x000ABF70 File Offset: 0x000AA170
 	public void ExitSequenceDialogue()
 	{
 		this.Camera.CurrentCamera.ArmLocation.Subtraction(this.Camera.PlayerLocation, this.CurrentOffset);
@@ -165,7 +165,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x06001FF0 RID: 8176 RVA: 0x000A4C70 File Offset: 0x000A2E70
+	// Token: 0x0600209E RID: 8350 RVA: 0x000ABFC4 File Offset: 0x000AA1C4
 	private void UpdateArmTargetLocation(Vector targetArmLocation)
 	{
 		Vector vector = Vector.Create(targetArmLocation);
@@ -192,7 +192,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x06001FF1 RID: 8177 RVA: 0x000A4D1C File Offset: 0x000A2F1C
+	// Token: 0x0600209F RID: 8351 RVA: 0x000AC070 File Offset: 0x000AA270
 	private void UpdateArmYawAndPitch(Vector targetArmLocation, bool bAdjustPitch = true, bool bAdjustYaw = true)
 	{
 		Rotator rotator = Rotator.Create(this.Camera.CameraActor.K2_GetActorRotation());
@@ -301,7 +301,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x06001FF2 RID: 8178 RVA: 0x000A5048 File Offset: 0x000A3248
+	// Token: 0x060020A0 RID: 8352 RVA: 0x000AC39C File Offset: 0x000AA59C
 	public void AdjustDialogueParams(VectorInfo cameraTargetPos, float pitchAngle, float yawAngle, float? armLength = null)
 	{
 		this.IsAdjustedParams = true;
@@ -343,13 +343,13 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x06001FF3 RID: 8179 RVA: 0x000A51BD File Offset: 0x000A33BD
+	// Token: 0x060020A1 RID: 8353 RVA: 0x000AC511 File Offset: 0x000AA711
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06001FF4 RID: 8180 RVA: 0x000A51C8 File Offset: 0x000A33C8
+	// Token: 0x060020A2 RID: 8354 RVA: 0x000AC51C File Offset: 0x000AA71C
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -643,7 +643,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06001FF5 RID: 8181 RVA: 0x000A57A0 File Offset: 0x000A39A0
+	// Token: 0x060020A3 RID: 8355 RVA: 0x000ACAF4 File Offset: 0x000AACF4
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -1350,7 +1350,7 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06001FF6 RID: 8182 RVA: 0x000A63E4 File Offset: 0x000A45E4
+	// Token: 0x060020A4 RID: 8356 RVA: 0x000AD738 File Offset: 0x000AB938
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -1359,93 +1359,93 @@ public class CameraDialogueController : CameraControllerBase, ICanGetConfigMapVa
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040013BA RID: 5050
+	// Token: 0x040013FC RID: 5116
 	public float FadeInExp;
 
-	// Token: 0x040013BB RID: 5051
+	// Token: 0x040013FD RID: 5117
 	public float FadeInDuration;
 
-	// Token: 0x040013BC RID: 5052
+	// Token: 0x040013FE RID: 5118
 	public float FadeOutInterpSpeed;
 
-	// Token: 0x040013BD RID: 5053
+	// Token: 0x040013FF RID: 5119
 	public float CheckYaw;
 
-	// Token: 0x040013BE RID: 5054
+	// Token: 0x04001400 RID: 5120
 	public float CheckPitchMin;
 
-	// Token: 0x040013BF RID: 5055
+	// Token: 0x04001401 RID: 5121
 	public float CheckPitchMax;
 
-	// Token: 0x040013C0 RID: 5056
+	// Token: 0x04001402 RID: 5122
 	public float AdjustYaw;
 
-	// Token: 0x040013C1 RID: 5057
+	// Token: 0x04001403 RID: 5123
 	public float AdjustPitchMin;
 
-	// Token: 0x040013C2 RID: 5058
+	// Token: 0x04001404 RID: 5124
 	public float AdjustPitchMax;
 
-	// Token: 0x040013C3 RID: 5059
+	// Token: 0x04001405 RID: 5125
 	public float OffsetRate;
 
-	// Token: 0x040013C4 RID: 5060
+	// Token: 0x04001406 RID: 5126
 	public float OffsetLengthMax;
 
-	// Token: 0x040013C5 RID: 5061
+	// Token: 0x04001407 RID: 5127
 	public float DefaultArmLength;
 
-	// Token: 0x040013C6 RID: 5062
+	// Token: 0x04001408 RID: 5128
 	private float FadeInElapseTime;
 
-	// Token: 0x040013C7 RID: 5063
+	// Token: 0x04001409 RID: 5129
 	private bool Fading;
 
-	// Token: 0x040013C8 RID: 5064
+	// Token: 0x0400140A RID: 5130
 	public EBlendState State;
 
-	// Token: 0x040013C9 RID: 5065
+	// Token: 0x0400140B RID: 5131
 	private readonly Vector StartArmLocation = Vector.Create();
 
-	// Token: 0x040013CA RID: 5066
+	// Token: 0x0400140C RID: 5132
 	private readonly Vector TargetArmLocation = Vector.Create();
 
-	// Token: 0x040013CB RID: 5067
+	// Token: 0x0400140D RID: 5133
 	private readonly Vector CurrentOffset = Vector.Create();
 
-	// Token: 0x040013CC RID: 5068
+	// Token: 0x0400140E RID: 5134
 	private readonly Vector CurrentLocation = Vector.Create();
 
-	// Token: 0x040013CD RID: 5069
+	// Token: 0x0400140F RID: 5135
 	private readonly Rotator ControllerRotator = Rotator.Create();
 
-	// Token: 0x040013CE RID: 5070
+	// Token: 0x04001410 RID: 5136
 	private bool IsAdjustedParams;
 
-	// Token: 0x040013CF RID: 5071
+	// Token: 0x04001411 RID: 5137
 	private bool IsAdjustedPitch;
 
-	// Token: 0x040013D0 RID: 5072
+	// Token: 0x04001412 RID: 5138
 	private float AdjustBeginRotatorYaw;
 
-	// Token: 0x040013D1 RID: 5073
+	// Token: 0x04001413 RID: 5139
 	private float AdjustDesiredRotatorYaw;
 
-	// Token: 0x040013D2 RID: 5074
+	// Token: 0x04001414 RID: 5140
 	private float AdjustBeginRotatorPitch;
 
-	// Token: 0x040013D3 RID: 5075
+	// Token: 0x04001415 RID: 5141
 	private float AdjustDesiredRotatorPitch;
 
-	// Token: 0x040013D4 RID: 5076
+	// Token: 0x04001416 RID: 5142
 	private float AdjustBeginArmLength;
 
-	// Token: 0x040013D5 RID: 5077
+	// Token: 0x04001417 RID: 5143
 	private float? SpecificOffsetAlpha;
 
-	// Token: 0x040013D6 RID: 5078
+	// Token: 0x04001418 RID: 5144
 	private float SpecificOffsetHeight;
 
-	// Token: 0x040013D7 RID: 5079
+	// Token: 0x04001419 RID: 5145
 	private readonly Rotator TmpRotator = Rotator.Create();
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200012C RID: 300
+	// Token: 0x0200013B RID: 315
 	public class ConfigBuildingUpGradeCurveByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000709 RID: 1801 RVA: 0x000816D0 File Offset: 0x0007F8D0
+		// Token: 0x06000763 RID: 1891 RVA: 0x00087034 File Offset: 0x00085234
 		static ConfigBuildingUpGradeCurveByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuildingUpGradeCurveByGroupId.CreateStaticDefaultValue), new Action(ConfigBuildingUpGradeCurveByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600070A RID: 1802 RVA: 0x000816F0 File Offset: 0x0007F8F0
+		// Token: 0x06000764 RID: 1892 RVA: 0x00087054 File Offset: 0x00085254
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuildingUpGradeCurveByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600070B RID: 1803 RVA: 0x0008176F File Offset: 0x0007F96F
+		// Token: 0x06000765 RID: 1893 RVA: 0x000870D3 File Offset: 0x000852D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuildingUpGradeCurveByGroupId.LogPair = null;
 			ConfigBuildingUpGradeCurveByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x0600070C RID: 1804 RVA: 0x0008177D File Offset: 0x0007F97D
+		// Token: 0x06000766 RID: 1894 RVA: 0x000870E1 File Offset: 0x000852E1
 		public static void Init()
 		{
 			ConfigBuildingUpGradeCurveByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigBuildingUpGradeCurveByGroupId.HandleId, "db_moonchasing.db", "select BinData from `BuildingUpGradeCurve` where GroupId=?");
 		}
 
-		// Token: 0x0600070D RID: 1805 RVA: 0x00081798 File Offset: 0x0007F998
+		// Token: 0x06000767 RID: 1895 RVA: 0x000870FC File Offset: 0x000852FC
 		[NullableContext(2)]
 		public static IReadOnlyList<BuildingUpGradeCurve> GetConfigList(int p0GroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000818 RID: 2072
+		// Token: 0x04000881 RID: 2177
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04000819 RID: 2073
+		// Token: 0x04000882 RID: 2178
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x0400081A RID: 2074
+		// Token: 0x04000883 RID: 2179
 		private const string TABLE = "BuildingUpGradeCurve";
 
-		// Token: 0x0400081B RID: 2075
+		// Token: 0x04000884 RID: 2180
 		private const string COMMAND = "select BinData from `BuildingUpGradeCurve` where GroupId=?";
 
-		// Token: 0x0400081C RID: 2076
+		// Token: 0x04000885 RID: 2181
 		private const string KEY_PREFIX = "BuildingUpGradeCurveByGroupId";
 
-		// Token: 0x0400081D RID: 2077
+		// Token: 0x04000886 RID: 2182
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400081E RID: 2078
+		// Token: 0x04000887 RID: 2183
 		private static int HandleId;
 	}
 }

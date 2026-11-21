@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A5E RID: 23134
+	// Token: 0x02004A3A RID: 19002
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeBuffView : UiViewBase
 	{
-		// Token: 0x17008BF7 RID: 35831
-		// (get) Token: 0x0603AA39 RID: 240185 RVA: 0x00DF5AC0 File Offset: 0x00DF3CC0
+		// Token: 0x17005FC5 RID: 24517
+		// (get) Token: 0x0602F982 RID: 194946 RVA: 0x00D46044 File Offset: 0x00D44244
 		[Nullable(2)]
 		public new FlagChallengeBuffViewParams OpenParam
 		{
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA3A RID: 240186 RVA: 0x00DF5ACD File Offset: 0x00DF3CCD
+		// Token: 0x0602F983 RID: 194947 RVA: 0x00D46051 File Offset: 0x00D44251
 		public FlagChallengeBuffView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603AA3B RID: 240187 RVA: 0x00DF5AEC File Offset: 0x00DF3CEC
+		// Token: 0x0602F984 RID: 194948 RVA: 0x00D46070 File Offset: 0x00D44270
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA3C RID: 240188 RVA: 0x00DF5CD4 File Offset: 0x00DF3ED4
+		// Token: 0x0602F985 RID: 194949 RVA: 0x00D46258 File Offset: 0x00D44458
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeBuffView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AA3D RID: 240189 RVA: 0x00DF5D18 File Offset: 0x00DF3F18
+		// Token: 0x0602F986 RID: 194950 RVA: 0x00D4629C File Offset: 0x00D4449C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshView();
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			});
 		}
 
-		// Token: 0x0603AA3E RID: 240190 RVA: 0x00DF5D62 File Offset: 0x00DF3F62
+		// Token: 0x0602F987 RID: 194951 RVA: 0x00D462E6 File Offset: 0x00D444E6
 		protected override void OnBeforeDestroy()
 		{
 			FlagChallengeModel.Instance.GetFlagChallengeData(this.ActivityId).ClearBuffNewlyUnlocked();
 		}
 
-		// Token: 0x0603AA3F RID: 240191 RVA: 0x00DF5D7C File Offset: 0x00DF3F7C
+		// Token: 0x0602F988 RID: 194952 RVA: 0x00D46300 File Offset: 0x00D44500
 		private UniTask InitBuffList()
 		{
 			FlagChallengeBuffView.<InitBuffList>d__16 <InitBuffList>d__;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <InitBuffList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AA40 RID: 240192 RVA: 0x00DF5DC0 File Offset: 0x00DF3FC0
+		// Token: 0x0602F989 RID: 194953 RVA: 0x00D46344 File Offset: 0x00D44544
 		private void RefreshView()
 		{
 			foreach (FlagChallengeBuffItem flagChallengeBuffItem in this.BuffItemList)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshBoxLevel();
 		}
 
-		// Token: 0x0603AA41 RID: 240193 RVA: 0x00DF5ED0 File Offset: 0x00DF40D0
+		// Token: 0x0602F98A RID: 194954 RVA: 0x00D46454 File Offset: 0x00D44654
 		private void RefreshBoxLevel()
 		{
 			UUIText text = base.GetText(18);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			LguiUtil.Instance.SetLocalTextNew(text, "Morale_32_Buff_ChestLv", new <>z__ReadOnlySingleElementList<object>(boxLevel));
 		}
 
-		// Token: 0x0603AA42 RID: 240194 RVA: 0x00DF5F24 File Offset: 0x00DF4124
+		// Token: 0x0602F98B RID: 194955 RVA: 0x00D464A8 File Offset: 0x00D446A8
 		private void UpdateProgressAndJump(float delta)
 		{
 			if (base.IsDestroyOrDestroying)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateScrollJumpPos();
 		}
 
-		// Token: 0x0603AA43 RID: 240195 RVA: 0x00DF5F58 File Offset: 0x00DF4158
+		// Token: 0x0602F98C RID: 194956 RVA: 0x00D464DC File Offset: 0x00D446DC
 		private void UpdateLevelProgress(int? fixedLevel = null, int? tempLevel = null)
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA44 RID: 240196 RVA: 0x00DF605C File Offset: 0x00DF425C
+		// Token: 0x0602F98D RID: 194957 RVA: 0x00D465E0 File Offset: 0x00D447E0
 		public float GetLevelProgress(int level)
 		{
 			int num = this.BuffItemList.Count * 2 - 1;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return (float)((Math.Max(buffDataByLevel.GetIndex() * 2 - 1, 0) + num4) / num);
 		}
 
-		// Token: 0x0603AA45 RID: 240197 RVA: 0x00DF60D4 File Offset: 0x00DF42D4
+		// Token: 0x0602F98E RID: 194958 RVA: 0x00D46658 File Offset: 0x00D44858
 		private void UpdateScrollJumpPos()
 		{
 			if (this.SelectBuff == null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			scrollViewWithScrollbar.ScrollToLeft(ref fvector2D, flagChallengeBuffItem.GetRootItem(), false);
 		}
 
-		// Token: 0x0603AA46 RID: 240198 RVA: 0x00DF6157 File Offset: 0x00DF4357
+		// Token: 0x0602F98F RID: 194959 RVA: 0x00D466DB File Offset: 0x00D448DB
 		[NullableContext(2)]
 		private void SetSelectBuff(FlagChallengeBuffData buff)
 		{
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateSelectBuffState();
 		}
 
-		// Token: 0x0603AA47 RID: 240199 RVA: 0x00DF6168 File Offset: 0x00DF4368
+		// Token: 0x0602F990 RID: 194960 RVA: 0x00D466EC File Offset: 0x00D448EC
 		private void UpdateSelectBuffState()
 		{
 			foreach (FlagChallengeBuffData flagChallengeBuffData in this.BuffDataList)
@@ -265,20 +265,20 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA48 RID: 240200 RVA: 0x00DF61F0 File Offset: 0x00DF43F0
+		// Token: 0x0602F991 RID: 194961 RVA: 0x00D46774 File Offset: 0x00D44974
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603AA49 RID: 240201 RVA: 0x00DF61FC File Offset: 0x00DF43FC
+		// Token: 0x0602F992 RID: 194962 RVA: 0x00D46780 File Offset: 0x00D44980
 		private void OnHelpClick()
 		{
 			int buffHelpId = FlagChallengeConfig.Instance.GetBuffHelpId();
 			HelpController.Instance.OpenHelpById(buffHelpId);
 		}
 
-		// Token: 0x0603AA4A RID: 240202 RVA: 0x00DF6220 File Offset: 0x00DF4420
+		// Token: 0x0602F993 RID: 194963 RVA: 0x00D467A4 File Offset: 0x00D449A4
 		private void OnBuffItemClick(FlagChallengeBuffData data)
 		{
 			this.SetSelectBuff(data);
@@ -290,38 +290,38 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			FlagChallengeModel.Instance.GetFlagChallengeData(this.ActivityId).SetBuffNewlyUnlockedState(data.Id, false);
 		}
 
-		// Token: 0x0603AA4B RID: 240203 RVA: 0x00DF62A0 File Offset: 0x00DF44A0
+		// Token: 0x0602F994 RID: 194964 RVA: 0x00D46824 File Offset: 0x00D44A24
 		private void OnBuffDetailButtonClick()
 		{
 			this.RoleAttrAddPanel.SetActive(true);
 		}
 
-		// Token: 0x0401E932 RID: 125234
+		// Token: 0x040193D9 RID: 103385
 		private int ActivityId;
 
-		// Token: 0x0401E933 RID: 125235
+		// Token: 0x040193DA RID: 103386
 		private List<FlagChallengeBuffData> BuffDataList;
 
-		// Token: 0x0401E934 RID: 125236
+		// Token: 0x040193DB RID: 103387
 		[Nullable(2)]
 		private FlagChallengeBuffData SelectBuff;
 
-		// Token: 0x0401E935 RID: 125237
+		// Token: 0x040193DC RID: 103388
 		private PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401E936 RID: 125238
+		// Token: 0x040193DD RID: 103389
 		private FlagChallengeBuffInfoPanel BuffInfoPanel;
 
-		// Token: 0x0401E937 RID: 125239
+		// Token: 0x040193DE RID: 103390
 		private FlagChallengeLevelInfoItem LevelInfoItem;
 
-		// Token: 0x0401E938 RID: 125240
+		// Token: 0x040193DF RID: 103391
 		private FlagChallengeBuffAddPanel RoleAttrAddPanel;
 
-		// Token: 0x0401E939 RID: 125241
+		// Token: 0x040193E0 RID: 103392
 		private readonly List<FlagChallengeBuffItem> BuffItemList = new List<FlagChallengeBuffItem>();
 
-		// Token: 0x0401E93A RID: 125242
+		// Token: 0x040193E1 RID: 103393
 		private readonly Dictionary<int, FlagChallengeBuffItem> BuffItemMap = new Dictionary<int, FlagChallengeBuffItem>();
 	}
 }

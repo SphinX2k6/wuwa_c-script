@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001358 RID: 4952
+// Token: 0x0200080C RID: 2060
 public class PopularityModule : UiPanelBase
 {
-	// Token: 0x060089EB RID: 35307 RVA: 0x001D7814 File Offset: 0x001D5A14
+	// Token: 0x06005D86 RID: 23942 RVA: 0x001E0678 File Offset: 0x001DE878
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,13 +18,13 @@ public class PopularityModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x060089EC RID: 35308 RVA: 0x001D786E File Offset: 0x001D5A6E
+	// Token: 0x06005D87 RID: 23943 RVA: 0x001E06D2 File Offset: 0x001DE8D2
 	protected override void OnBeforeShow()
 	{
 		this.RefreshPopularity();
 	}
 
-	// Token: 0x060089ED RID: 35309 RVA: 0x001D7878 File Offset: 0x001D5A78
+	// Token: 0x06005D88 RID: 23944 RVA: 0x001E06DC File Offset: 0x001DE8DC
 	public void RefreshPopularity()
 	{
 		Popularity currentPopularityConfig = MoonChasingBusinessModel.Instance.GetCurrentPopularityConfig();
@@ -38,16 +38,16 @@ public class PopularityModule : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), currentPopularityConfig.PopularityRating, Array.Empty<object>());
 	}
 
-	// Token: 0x020079BE RID: 31166
+	// Token: 0x02006B48 RID: 27464
 	private static class EComponentDefine
 	{
-		// Token: 0x04028147 RID: 164167
+		// Token: 0x04023474 RID: 144500
 		public const int RatingText = 0;
 
-		// Token: 0x04028148 RID: 164168
+		// Token: 0x04023475 RID: 144501
 		public const int ValueText = 1;
 
-		// Token: 0x04028149 RID: 164169
+		// Token: 0x04023476 RID: 144502
 		public const int Progress = 2;
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200685C RID: 26716
+	// Token: 0x02006EF1 RID: 28401
 	public class IFoxPickUpT
 	{
-		// Token: 0x1700C66E RID: 50798
-		// (get) Token: 0x0602E959 RID: 190809 RVA: 0x0065AC98 File Offset: 0x00658E98
-		// (set) Token: 0x0602E95A RID: 190810 RVA: 0x0065ACA0 File Offset: 0x00658EA0
+		// Token: 0x1700D042 RID: 53314
+		// (get) Token: 0x0603123F RID: 201279 RVA: 0x006A9504 File Offset: 0x006A7704
+		// (set) Token: 0x06031240 RID: 201280 RVA: 0x006A950C File Offset: 0x006A770C
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700C66F RID: 50799
-		// (get) Token: 0x0602E95B RID: 190811 RVA: 0x0065ACA9 File Offset: 0x00658EA9
-		// (set) Token: 0x0602E95C RID: 190812 RVA: 0x0065ACB1 File Offset: 0x00658EB1
+		// Token: 0x1700D043 RID: 53315
+		// (get) Token: 0x06031241 RID: 201281 RVA: 0x006A9515 File Offset: 0x006A7715
+		// (set) Token: 0x06031242 RID: 201282 RVA: 0x006A951D File Offset: 0x006A771D
 		public int DataTableIndex { get; set; }
 
-		// Token: 0x1700C670 RID: 50800
-		// (get) Token: 0x0602E95D RID: 190813 RVA: 0x0065ACBA File Offset: 0x00658EBA
-		// (set) Token: 0x0602E95E RID: 190814 RVA: 0x0065ACC2 File Offset: 0x00658EC2
+		// Token: 0x1700D044 RID: 53316
+		// (get) Token: 0x06031243 RID: 201283 RVA: 0x006A9526 File Offset: 0x006A7726
+		// (set) Token: 0x06031244 RID: 201284 RVA: 0x006A952E File Offset: 0x006A772E
 		public bool MouthOpen { get; set; }
 
-		// Token: 0x1700C671 RID: 50801
-		// (get) Token: 0x0602E95F RID: 190815 RVA: 0x0065ACCB File Offset: 0x00658ECB
-		// (set) Token: 0x0602E960 RID: 190816 RVA: 0x0065ACD3 File Offset: 0x00658ED3
+		// Token: 0x1700D045 RID: 53317
+		// (get) Token: 0x06031245 RID: 201285 RVA: 0x006A9537 File Offset: 0x006A7737
+		// (set) Token: 0x06031246 RID: 201286 RVA: 0x006A953F File Offset: 0x006A773F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E961 RID: 190817 RVA: 0x0065ACDC File Offset: 0x00658EDC
+		// Token: 0x06031247 RID: 201287 RVA: 0x006A9548 File Offset: 0x006A7748
 		public IFoxPickUpT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

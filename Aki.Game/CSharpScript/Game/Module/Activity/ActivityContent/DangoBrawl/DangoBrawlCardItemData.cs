@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067CD RID: 26573
+	// Token: 0x0200571D RID: 22301
 	public class DangoBrawlCardItemData
 	{
-		// Token: 0x060422D5 RID: 271061 RVA: 0x0100C730 File Offset: 0x0100A930
+		// Token: 0x06036E2B RID: 224811 RVA: 0x00F4DAFC File Offset: 0x00F4BCFC
 		public DangoBrawlCardItemData(int cardId, int remainRefreshCount)
 		{
 			this.CardId = cardId;
 			this.RemainRefreshCount = remainRefreshCount;
 		}
 
-		// Token: 0x040228C0 RID: 141504
+		// Token: 0x0401D11D RID: 119069
 		public int CardId;
 
-		// Token: 0x040228C1 RID: 141505
+		// Token: 0x0401D11E RID: 119070
 		public int RemainRefreshCount;
 	}
 }

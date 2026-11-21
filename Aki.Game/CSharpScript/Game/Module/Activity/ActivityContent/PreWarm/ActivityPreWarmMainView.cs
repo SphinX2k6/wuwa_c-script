@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062BD RID: 25277
+	// Token: 0x0200523B RID: 21051
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityPreWarmMainView : UiViewBase
 	{
-		// Token: 0x0603F901 RID: 260353 RVA: 0x00F5F7CD File Offset: 0x00F5D9CD
+		// Token: 0x060345C2 RID: 214466 RVA: 0x00EA6729 File Offset: 0x00EA4929
 		public ActivityPreWarmMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F902 RID: 260354 RVA: 0x00F5F7D8 File Offset: 0x00F5D9D8
+		// Token: 0x060345C3 RID: 214467 RVA: 0x00EA6734 File Offset: 0x00EA4934
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F903 RID: 260355 RVA: 0x00F5FAA0 File Offset: 0x00F5DCA0
+		// Token: 0x060345C4 RID: 214468 RVA: 0x00EA69FC File Offset: 0x00EA4BFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityPreWarmMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F904 RID: 260356 RVA: 0x00F5FAE4 File Offset: 0x00F5DCE4
+		// Token: 0x060345C5 RID: 214469 RVA: 0x00EA6A40 File Offset: 0x00EA4C40
 		private UniTask LoadMaterial()
 		{
 			ActivityPreWarmMainView.<LoadMaterial>d__13 <LoadMaterial>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return <LoadMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F905 RID: 260357 RVA: 0x00F5FB28 File Offset: 0x00F5DD28
+		// Token: 0x060345C6 RID: 214470 RVA: 0x00EA6A84 File Offset: 0x00EA4C84
 		private void InitText()
 		{
 			this.TextAnimDataComp = (base.GetText(5).GetOwner().GetComponentByClass(UUIEffectTextAnimation.StaticClass()) as UUIEffectTextAnimation);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			base.GetText(5).SetUIActive(false);
 		}
 
-		// Token: 0x0603F906 RID: 260358 RVA: 0x00F5FBD8 File Offset: 0x00F5DDD8
+		// Token: 0x060345C7 RID: 214471 RVA: 0x00EA6B34 File Offset: 0x00EA4D34
 		private void ShowText()
 		{
 			if (this.TextAnimDataComp == null || this.TextPlayTweenComp == null)
@@ -128,14 +128,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.TextPlayTweenComp.Play();
 		}
 
-		// Token: 0x0603F907 RID: 260359 RVA: 0x00F5FC7A File Offset: 0x00F5DE7A
+		// Token: 0x060345C8 RID: 214472 RVA: 0x00EA6BD6 File Offset: 0x00EA4DD6
 		private void OnTweenEnd()
 		{
 			this.TextPlayTweenComp.Stop();
 			this.TextAnimDataComp.SetSelectorOffset(0f);
 		}
 
-		// Token: 0x0603F908 RID: 260360 RVA: 0x00F5FC98 File Offset: 0x00F5DE98
+		// Token: 0x060345C9 RID: 214473 RVA: 0x00EA6BF4 File Offset: 0x00EA4DF4
 		private void OnChangeInfo(int direction)
 		{
 			this.CurrentId += direction;
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			uiViewSequence.PlaySequence("Switch", false, null);
 		}
 
-		// Token: 0x0603F909 RID: 260361 RVA: 0x00F5FD04 File Offset: 0x00F5DF04
+		// Token: 0x060345CA RID: 214474 RVA: 0x00EA6C60 File Offset: 0x00EA4E60
 		private void OnClickBtnJump()
 		{
 			Log.Instance.Info(ELogModule.ActivityPreWarm, ELogAuthor.CB, "点击跳过,设置5倍数", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -188,14 +188,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			sequencePlayer.SetPlayRate(5f);
 		}
 
-		// Token: 0x0603F90A RID: 260362 RVA: 0x00F5FD8B File Offset: 0x00F5DF8B
+		// Token: 0x060345CB RID: 214475 RVA: 0x00EA6CE7 File Offset: 0x00EA4EE7
 		protected override void OnStart()
 		{
 			this.InitCaptionItem();
 			this.InitText();
 		}
 
-		// Token: 0x0603F90B RID: 260363 RVA: 0x00F5FD9C File Offset: 0x00F5DF9C
+		// Token: 0x060345CC RID: 214476 RVA: 0x00EA6CF8 File Offset: 0x00EA4EF8
 		protected override void OnBeforeShow()
 		{
 			if (this.IsParsing)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.RefreshInfo();
 		}
 
-		// Token: 0x0603F90C RID: 260364 RVA: 0x00F5FE6E File Offset: 0x00F5E06E
+		// Token: 0x060345CD RID: 214477 RVA: 0x00EA6DCA File Offset: 0x00EA4FCA
 		private void InitCaptionItem()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -263,13 +263,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.CaptionItem.SetCloseBtnActive(!this.IsParsing);
 		}
 
-		// Token: 0x0603F90D RID: 260365 RVA: 0x00F5FEAD File Offset: 0x00F5E0AD
+		// Token: 0x060345CE RID: 214478 RVA: 0x00EA6E09 File Offset: 0x00EA5009
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603F90E RID: 260366 RVA: 0x00F5FEB6 File Offset: 0x00F5E0B6
+		// Token: 0x060345CF RID: 214479 RVA: 0x00EA6E12 File Offset: 0x00EA5012
 		private void RefreshInfo()
 		{
 			this.RefreshTitle();
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.LastTime = Time.Instance.Now;
 		}
 
-		// Token: 0x0603F90F RID: 260367 RVA: 0x00F5FEE8 File Offset: 0x00F5E0E8
+		// Token: 0x060345D0 RID: 214480 RVA: 0x00EA6E44 File Offset: 0x00EA5044
 		private void RefreshTitle()
 		{
 			ActivityPreWarmModel instance = ActivityPreWarmModel.Instance;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(2), (activityPreWarmCollectItemData != null) ? activityPreWarmCollectItemData.GetTitle() : null, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F910 RID: 260368 RVA: 0x00F5FF54 File Offset: 0x00F5E154
+		// Token: 0x060345D1 RID: 214481 RVA: 0x00EA6EB0 File Offset: 0x00EA50B0
 		private void RefreshDesc()
 		{
 			ActivityPreWarmModel instance = ActivityPreWarmModel.Instance;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F911 RID: 260369 RVA: 0x00F5FFBC File Offset: 0x00F5E1BC
+		// Token: 0x060345D2 RID: 214482 RVA: 0x00EA6F18 File Offset: 0x00EA5118
 		private void RefreshContentBg()
 		{
 			ActivityPreWarmModel instance = ActivityPreWarmModel.Instance;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			base.TrySetTextureByPath((activityPreWarmCollectItemData != null) ? activityPreWarmCollectItemData.GetBgPath() : null, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0603F912 RID: 260370 RVA: 0x00F60004 File Offset: 0x00F5E204
+		// Token: 0x060345D3 RID: 214483 RVA: 0x00EA6F60 File Offset: 0x00EA5160
 		private void RefreshShadowIcon()
 		{
 			if (this.IsParsing)
@@ -325,19 +325,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F913 RID: 260371 RVA: 0x00F60054 File Offset: 0x00F5E254
+		// Token: 0x060345D4 RID: 214484 RVA: 0x00EA6FB0 File Offset: 0x00EA51B0
 		private void OnClickBtnExpand()
 		{
 			this.OnDescInfoStateChange(true);
 		}
 
-		// Token: 0x0603F914 RID: 260372 RVA: 0x00F6005D File Offset: 0x00F5E25D
+		// Token: 0x060345D5 RID: 214485 RVA: 0x00EA6FB9 File Offset: 0x00EA51B9
 		private void OnClickBtnShrink()
 		{
 			this.OnDescInfoStateChange(false);
 		}
 
-		// Token: 0x0603F915 RID: 260373 RVA: 0x00F60068 File Offset: 0x00F5E268
+		// Token: 0x060345D6 RID: 214486 RVA: 0x00EA6FC4 File Offset: 0x00EA51C4
 		private void OnDescInfoStateChange(bool isExpand)
 		{
 			UUIButtonComponent button = base.GetButton(10);
@@ -363,21 +363,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			uiViewSequence2.PlaySequence(isExpand ? "InfoShow" : "InfoHide", false, null);
 		}
 
-		// Token: 0x0603F916 RID: 260374 RVA: 0x00F60105 File Offset: 0x00F5E305
+		// Token: 0x060345D7 RID: 214487 RVA: 0x00EA7061 File Offset: 0x00EA5261
 		private void OnClickBtnLeft()
 		{
 			this.LogReport();
 			this.OnChangeInfo(-1);
 		}
 
-		// Token: 0x0603F917 RID: 260375 RVA: 0x00F60114 File Offset: 0x00F5E314
+		// Token: 0x060345D8 RID: 214488 RVA: 0x00EA7070 File Offset: 0x00EA5270
 		private void OnClickBtnRight()
 		{
 			this.LogReport();
 			this.OnChangeInfo(1);
 		}
 
-		// Token: 0x0603F918 RID: 260376 RVA: 0x00F60124 File Offset: 0x00F5E324
+		// Token: 0x060345D9 RID: 214489 RVA: 0x00EA7080 File Offset: 0x00EA5280
 		public void RefreshLeftRightBtnState()
 		{
 			if (this.IsParsing)
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F919 RID: 260377 RVA: 0x00F601DC File Offset: 0x00F5E3DC
+		// Token: 0x060345DA RID: 214490 RVA: 0x00EA7138 File Offset: 0x00EA5338
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TextPlayTweenEndCbWrapper != null)
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			this.LogReport();
 		}
 
-		// Token: 0x0603F91A RID: 260378 RVA: 0x00F60240 File Offset: 0x00F5E440
+		// Token: 0x060345DB RID: 214491 RVA: 0x00EA719C File Offset: 0x00EA539C
 		private void LogReport()
 		{
 			if (this.LastTime == 0.0)
@@ -455,80 +455,80 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			LogReportController.Instance.LogReport(activityPreWarmStayLogEvent);
 		}
 
-		// Token: 0x040213E3 RID: 136163
+		// Token: 0x0401BD12 RID: 113938
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040213E4 RID: 136164
+		// Token: 0x0401BD13 RID: 113939
 		private UUIEffectTextAnimation TextAnimDataComp;
 
-		// Token: 0x040213E5 RID: 136165
+		// Token: 0x0401BD14 RID: 113940
 		private ULGUIPlayTweenComponent TextPlayTweenComp;
 
-		// Token: 0x040213E6 RID: 136166
+		// Token: 0x0401BD15 RID: 113941
 		private FLGUIPlayTweenCompleteDynamicDelegate TextPlayTweenEndCb;
 
-		// Token: 0x040213E7 RID: 136167
+		// Token: 0x0401BD16 RID: 113942
 		private FLGUIDelegateHandleWrapper TextPlayTweenEndCbWrapper;
 
-		// Token: 0x040213E8 RID: 136168
+		// Token: 0x0401BD17 RID: 113943
 		private int CurrentId;
 
-		// Token: 0x040213E9 RID: 136169
+		// Token: 0x0401BD18 RID: 113944
 		private bool IsParsing;
 
-		// Token: 0x040213EA RID: 136170
+		// Token: 0x0401BD19 RID: 113945
 		private float ParsingDuration;
 
-		// Token: 0x040213EB RID: 136171
+		// Token: 0x0401BD1A RID: 113946
 		private int ActivityId;
 
-		// Token: 0x040213EC RID: 136172
+		// Token: 0x0401BD1B RID: 113947
 		private double LastTime;
 
-		// Token: 0x0200C48E RID: 50318
+		// Token: 0x0200AE75 RID: 44661
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B4E7 RID: 242919
+			// Token: 0x04035E49 RID: 220745
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403B4E8 RID: 242920
+			// Token: 0x04035E4A RID: 220746
 			public const int CurrentNum = 1;
 
-			// Token: 0x0403B4E9 RID: 242921
+			// Token: 0x04035E4B RID: 220747
 			public const int TitleTxt = 2;
 
-			// Token: 0x0403B4EA RID: 242922
+			// Token: 0x04035E4C RID: 220748
 			public const int ContentBg = 3;
 
-			// Token: 0x0403B4EB RID: 242923
+			// Token: 0x04035E4D RID: 220749
 			public const int ShadowIcon = 4;
 
-			// Token: 0x0403B4EC RID: 242924
+			// Token: 0x04035E4E RID: 220750
 			public const int TxtDesc = 5;
 
-			// Token: 0x0403B4ED RID: 242925
+			// Token: 0x04035E4F RID: 220751
 			public const int LoadingRoot = 6;
 
-			// Token: 0x0403B4EE RID: 242926
+			// Token: 0x04035E50 RID: 220752
 			public const int DetailRoot = 7;
 
-			// Token: 0x0403B4EF RID: 242927
+			// Token: 0x04035E51 RID: 220753
 			public const int BtnLeft = 8;
 
-			// Token: 0x0403B4F0 RID: 242928
+			// Token: 0x04035E52 RID: 220754
 			public const int BtnRight = 9;
 
-			// Token: 0x0403B4F1 RID: 242929
+			// Token: 0x04035E53 RID: 220755
 			public const int BtnExpand = 10;
 
-			// Token: 0x0403B4F2 RID: 242930
+			// Token: 0x04035E54 RID: 220756
 			public const int BtnShrink = 11;
 
-			// Token: 0x0403B4F3 RID: 242931
+			// Token: 0x04035E55 RID: 220757
 			public const int BtnJump = 12;
 
-			// Token: 0x0403B4F4 RID: 242932
+			// Token: 0x04035E56 RID: 220758
 			public const int TexGlitch = 13;
 		}
 	}

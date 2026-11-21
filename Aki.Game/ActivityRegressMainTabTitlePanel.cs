@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001491 RID: 5265
+// Token: 0x02000945 RID: 2373
 public class ActivityRegressMainTabTitlePanel : UiPanelBase
 {
-	// Token: 0x0600952A RID: 38186 RVA: 0x00202CD4 File Offset: 0x00200ED4
+	// Token: 0x060068BF RID: 26815 RVA: 0x0020BC3C File Offset: 0x00209E3C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class ActivityRegressMainTabTitlePanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600952B RID: 38187 RVA: 0x00202DE0 File Offset: 0x00200FE0
+	// Token: 0x060068C0 RID: 26816 RVA: 0x0020BD48 File Offset: 0x00209F48
 	[NullableContext(1)]
 	public void UpdateIcon(string iconPath)
 	{
@@ -45,7 +45,7 @@ public class ActivityRegressMainTabTitlePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600952C RID: 38188 RVA: 0x00202E10 File Offset: 0x00201010
+	// Token: 0x060068C1 RID: 26817 RVA: 0x0020BD78 File Offset: 0x00209F78
 	[NullableContext(2)]
 	public void UpdateTitle(CommonTabTitleData titleData)
 	{
@@ -59,7 +59,7 @@ public class ActivityRegressMainTabTitlePanel : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600952D RID: 38189 RVA: 0x00202E4E File Offset: 0x0020104E
+	// Token: 0x060068C2 RID: 26818 RVA: 0x0020BDB6 File Offset: 0x00209FB6
 	private void OnBackBtnClick()
 	{
 		Action onBackBtnCallBack = this.OnBackBtnCallBack;
@@ -70,26 +70,26 @@ public class ActivityRegressMainTabTitlePanel : UiPanelBase
 		onBackBtnCallBack();
 	}
 
-	// Token: 0x040041FE RID: 16894
+	// Token: 0x04004296 RID: 17046
 	[Nullable(2)]
 	public Action OnBackBtnCallBack;
 
-	// Token: 0x02007AC1 RID: 31425
+	// Token: 0x02006C45 RID: 27717
 	private class EComponents
 	{
-		// Token: 0x04028634 RID: 165428
+		// Token: 0x0402394E RID: 145742
 		public const int SprTitleIcon = 0;
 
-		// Token: 0x04028635 RID: 165429
+		// Token: 0x0402394F RID: 145743
 		public const int TxtTitle = 1;
 
-		// Token: 0x04028636 RID: 165430
+		// Token: 0x04023950 RID: 145744
 		public const int BtnHelpInfo = 2;
 
-		// Token: 0x04028637 RID: 165431
+		// Token: 0x04023951 RID: 145745
 		public const int BtnBack = 3;
 
-		// Token: 0x04028638 RID: 165432
+		// Token: 0x04023952 RID: 145746
 		public const int PnlCost = 4;
 	}
 }

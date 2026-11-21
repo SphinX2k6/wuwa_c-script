@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025E6 RID: 9702
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028A5 RID: 10405
 	public class IPlayCommonEffect : PlayEffect2
 	{
-		// Token: 0x0600DA09 RID: 55817 RVA: 0x0020811B File Offset: 0x0020631B
+		// Token: 0x0600E7D2 RID: 59346 RVA: 0x00224807 File Offset: 0x00222A07
 		public static IPlayCommonEffect Create(IPlayCommonEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FFF RID: 16383
-		// (get) Token: 0x0600DA0A RID: 55818 RVA: 0x0020813A File Offset: 0x0020633A
+		// Token: 0x17004336 RID: 17206
+		// (get) Token: 0x0600E7D3 RID: 59347 RVA: 0x00224826 File Offset: 0x00222A26
 		public override EEffectType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004000 RID: 16384
-		// (get) Token: 0x0600DA0B RID: 55819 RVA: 0x00208147 File Offset: 0x00206347
+		// Token: 0x17004337 RID: 17207
+		// (get) Token: 0x0600E7D4 RID: 59348 RVA: 0x00224833 File Offset: 0x00222A33
 		public override string Path
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004001 RID: 16385
-		// (get) Token: 0x0600DA0C RID: 55820 RVA: 0x00208154 File Offset: 0x00206354
+		// Token: 0x17004338 RID: 17208
+		// (get) Token: 0x0600E7D5 RID: 59349 RVA: 0x00224840 File Offset: 0x00222A40
 		public virtual IBasePos2 Pos2
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004002 RID: 16386
-		// (get) Token: 0x0600DA0D RID: 55821 RVA: 0x00208184 File Offset: 0x00206384
+		// Token: 0x17004339 RID: 17209
+		// (get) Token: 0x0600E7D6 RID: 59350 RVA: 0x00224870 File Offset: 0x00222A70
 		public virtual float? DestroyTime
 		{
 			get
@@ -72,8 +69,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004003 RID: 16387
-		// (get) Token: 0x0600DA0E RID: 55822 RVA: 0x002081BC File Offset: 0x002063BC
+		// Token: 0x1700433A RID: 17210
+		// (get) Token: 0x0600E7D7 RID: 59351 RVA: 0x002248A8 File Offset: 0x00222AA8
 		public virtual bool? PlayEffectEnd
 		{
 			get
@@ -86,13 +83,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007918 RID: 31000
+		// Token: 0x04007FAF RID: 32687
 		private IPlayCommonEffect Instance;
 
-		// Token: 0x04007919 RID: 31001
+		// Token: 0x04007FB0 RID: 32688
 		private IBasePos2 _Pos2Cache;
 
-		// Token: 0x0400791A RID: 31002
+		// Token: 0x04007FB1 RID: 32689
 		private bool _Pos2Inited;
 	}
 }

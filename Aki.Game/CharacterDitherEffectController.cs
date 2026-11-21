@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
 using UnrealEngine;
 
-// Token: 0x020030A2 RID: 12450
+// Token: 0x020025F9 RID: 9721
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterDitherEffectController
 {
-	// Token: 0x170024A2 RID: 9378
-	// (get) Token: 0x0601AACD RID: 109261 RVA: 0x0072EE4B File Offset: 0x0072D04B
+	// Token: 0x17002620 RID: 9760
+	// (get) Token: 0x060184D6 RID: 99542 RVA: 0x00754386 File Offset: 0x00752586
 	private bool IsHiddenInGame
 	{
 		get
@@ -18,8 +18,8 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x170024A3 RID: 9379
-	// (get) Token: 0x0601AACE RID: 109262 RVA: 0x0072EE6F File Offset: 0x0072D06F
+	// Token: 0x17002621 RID: 9761
+	// (get) Token: 0x060184D7 RID: 99543 RVA: 0x007543AA File Offset: 0x007525AA
 	public double CurrentDitherValue
 	{
 		get
@@ -28,8 +28,8 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x170024A4 RID: 9380
-	// (get) Token: 0x0601AACF RID: 109263 RVA: 0x0072EE78 File Offset: 0x0072D078
+	// Token: 0x17002622 RID: 9762
+	// (get) Token: 0x060184D8 RID: 99544 RVA: 0x007543B3 File Offset: 0x007525B3
 	public bool IsInAutoAnimationValue
 	{
 		get
@@ -38,8 +38,8 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x170024A5 RID: 9381
-	// (get) Token: 0x0601AAD0 RID: 109264 RVA: 0x0072EE80 File Offset: 0x0072D080
+	// Token: 0x17002623 RID: 9763
+	// (get) Token: 0x060184D9 RID: 99545 RVA: 0x007543BB File Offset: 0x007525BB
 	public float DitherSpeedRateValue
 	{
 		get
@@ -48,8 +48,8 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x170024A6 RID: 9382
-	// (get) Token: 0x0601AAD1 RID: 109265 RVA: 0x0072EE88 File Offset: 0x0072D088
+	// Token: 0x17002624 RID: 9764
+	// (get) Token: 0x060184DA RID: 99546 RVA: 0x007543C3 File Offset: 0x007525C3
 	public bool IsDisableValue
 	{
 		get
@@ -58,7 +58,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD2 RID: 109266 RVA: 0x0072EE90 File Offset: 0x0072D090
+	// Token: 0x060184DB RID: 99547 RVA: 0x007543CC File Offset: 0x007525CC
 	[NullableContext(1)]
 	public CharacterDitherEffectController(AActor actor, CharRenderingComponent charRenderingComponent)
 	{
@@ -83,7 +83,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD3 RID: 109267 RVA: 0x0072EF0C File Offset: 0x0072D10C
+	// Token: 0x060184DC RID: 99548 RVA: 0x00754448 File Offset: 0x00752648
 	public void SetIsDisable(bool isDisable, ECharacterDitherType ditherType = ECharacterDitherType.Temporary)
 	{
 		if (this.IsDisable == isDisable)
@@ -115,7 +115,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD4 RID: 109268 RVA: 0x0072EF98 File Offset: 0x0072D198
+	// Token: 0x060184DD RID: 99549 RVA: 0x007544D4 File Offset: 0x007526D4
 	public void EnterAppearEffect(float ditherSpeedRate = 1f, ECharacterDitherType ditherType = ECharacterDitherType.Temporary, bool replay = true)
 	{
 		if (this.IsHiddenInGame)
@@ -138,7 +138,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD5 RID: 109269 RVA: 0x0072EFFC File Offset: 0x0072D1FC
+	// Token: 0x060184DE RID: 99550 RVA: 0x00754538 File Offset: 0x00752738
 	public void EnterDisappearEffect(float ditherSpeedRate = 1f, ECharacterDitherType ditherType = ECharacterDitherType.Temporary, bool replay = true)
 	{
 		if (this.IsHiddenInGame)
@@ -163,7 +163,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD6 RID: 109270 RVA: 0x0072F06C File Offset: 0x0072D26C
+	// Token: 0x060184DF RID: 99551 RVA: 0x007545A8 File Offset: 0x007527A8
 	public void SetDitherEffect(double dither, ECharacterDitherType ditherType = ECharacterDitherType.Temporary, bool clearAnimationState = true)
 	{
 		if (this.IsInAutoAnimation && ditherType < this.CurrentDitherType)
@@ -185,7 +185,7 @@ public class CharacterDitherEffectController
 		charRenderingComponent.SetDitherEffect(this.CurrentDither, ditherType);
 	}
 
-	// Token: 0x0601AAD7 RID: 109271 RVA: 0x0072F0FC File Offset: 0x0072D2FC
+	// Token: 0x060184E0 RID: 99552 RVA: 0x00754638 File Offset: 0x00752838
 	public void SetHiddenInGame(bool isHiddenInGame, bool clearAnimationState)
 	{
 		if (this.Actor == null)
@@ -242,7 +242,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD8 RID: 109272 RVA: 0x0072F238 File Offset: 0x0072D438
+	// Token: 0x060184E1 RID: 99553 RVA: 0x00754774 File Offset: 0x00752974
 	public void Update(float deltaTime)
 	{
 		if (!this.IsDisable && this.IsInAutoAnimation)
@@ -252,7 +252,7 @@ public class CharacterDitherEffectController
 		}
 	}
 
-	// Token: 0x0601AAD9 RID: 109273 RVA: 0x0072F274 File Offset: 0x0072D474
+	// Token: 0x060184E2 RID: 99554 RVA: 0x007547B0 File Offset: 0x007529B0
 	private void ForceUpdate()
 	{
 		if (this.HasForceUpdated)
@@ -274,7 +274,7 @@ public class CharacterDitherEffectController
 		charRenderingComponent2.UpdateMaterialEffectsOnly();
 	}
 
-	// Token: 0x0601AADA RID: 109274 RVA: 0x0072F2E4 File Offset: 0x0072D4E4
+	// Token: 0x060184E3 RID: 99555 RVA: 0x00754820 File Offset: 0x00752A20
 	public void ForceResetDither()
 	{
 		this.CurrentDither = 0f;
@@ -282,7 +282,7 @@ public class CharacterDitherEffectController
 		this.ForceUpdate();
 	}
 
-	// Token: 0x0601AADB RID: 109275 RVA: 0x0072F300 File Offset: 0x0072D500
+	// Token: 0x060184E4 RID: 99556 RVA: 0x0075483C File Offset: 0x00752A3C
 	private void AddDitherEffectInternal(float ditherDelta, ECharacterDitherType ditherType)
 	{
 		this.CurrentDither = MathUtils.Instance.Clamp(this.CurrentDither + ditherDelta, 0f, 1f);
@@ -303,7 +303,7 @@ public class CharacterDitherEffectController
 		charRenderingComponent.SetDitherEffect(this.CurrentDither, ditherType);
 	}
 
-	// Token: 0x0601AADC RID: 109276 RVA: 0x0072F388 File Offset: 0x0072D588
+	// Token: 0x060184E5 RID: 99557 RVA: 0x007548C4 File Offset: 0x00752AC4
 	public void Clear()
 	{
 		this.Actor = null;
@@ -316,39 +316,39 @@ public class CharacterDitherEffectController
 		this.DisableCollisionHandle = null;
 	}
 
-	// Token: 0x0400CDC2 RID: 52674
+	// Token: 0x0400D1A5 RID: 53669
 	private const float MILLISECOND_TO_SECOND = 0.001f;
 
-	// Token: 0x0400CDC3 RID: 52675
+	// Token: 0x0400D1A6 RID: 53670
 	private AActor Actor;
 
-	// Token: 0x0400CDC4 RID: 52676
+	// Token: 0x0400D1A7 RID: 53671
 	private Entity Entity;
 
-	// Token: 0x0400CDC5 RID: 52677
+	// Token: 0x0400D1A8 RID: 53672
 	private CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x0400CDC6 RID: 52678
+	// Token: 0x0400D1A9 RID: 53673
 	private bool IsInAutoAnimation;
 
-	// Token: 0x0400CDC7 RID: 52679
+	// Token: 0x0400D1AA RID: 53674
 	private float CurrentDither = 1f;
 
-	// Token: 0x0400CDC8 RID: 52680
+	// Token: 0x0400D1AB RID: 53675
 	private ECharacterDitherType CurrentDitherType;
 
-	// Token: 0x0400CDC9 RID: 52681
+	// Token: 0x0400D1AC RID: 53676
 	private float DitherSpeedRate = 1f;
 
-	// Token: 0x0400CDCA RID: 52682
+	// Token: 0x0400D1AD RID: 53677
 	private bool IsDisable;
 
-	// Token: 0x0400CDCB RID: 52683
+	// Token: 0x0400D1AE RID: 53678
 	private int? DisableActorHandle;
 
-	// Token: 0x0400CDCC RID: 52684
+	// Token: 0x0400D1AF RID: 53679
 	private int? DisableCollisionHandle;
 
-	// Token: 0x0400CDCD RID: 52685
+	// Token: 0x0400D1B0 RID: 53680
 	private bool HasForceUpdated;
 }

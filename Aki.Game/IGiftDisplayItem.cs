@@ -4,20 +4,20 @@ using CSharpScript.Game.Module.PayShop;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002394 RID: 9108
+// Token: 0x02001879 RID: 6265
 [NullableContext(2)]
 public interface IGiftDisplayItem
 {
-	// Token: 0x06012375 RID: 74613
+	// Token: 0x0600F827 RID: 63527
 	[NullableContext(1)]
 	UniTask CreateByActorAsync(AActor actor);
 
-	// Token: 0x06012376 RID: 74614
+	// Token: 0x0600F828 RID: 63528
 	UUIItem GetOriginalItem();
 
-	// Token: 0x06012377 RID: 74615
+	// Token: 0x0600F829 RID: 63529
 	void SetActive(bool active);
 
-	// Token: 0x06012378 RID: 74616
+	// Token: 0x0600F82A RID: 63530
 	void Refresh(PayShopGoods data, bool isSelected, int gridIndex);
 }

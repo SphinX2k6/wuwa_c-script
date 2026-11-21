@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200126B RID: 4715
+// Token: 0x0200071F RID: 1823
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoLevelGroupData
 {
-	// Token: 0x0600808B RID: 32907 RVA: 0x001B35BB File Offset: 0x001B17BB
+	// Token: 0x06005422 RID: 21538 RVA: 0x001BC28B File Offset: 0x001BA48B
 	public FightPhotoLevelGroupData(PhotoFightActivityGroup config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x0600808C RID: 32908 RVA: 0x001B35E0 File Offset: 0x001B17E0
+	// Token: 0x06005423 RID: 21539 RVA: 0x001BC2B0 File Offset: 0x001BA4B0
 	public void PushFightPhotoLevel(FightPhotoLevelData level)
 	{
 		this.FightPhotoLevelList.Add(level);
@@ -28,8 +28,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000AFC RID: 2812
-	// (get) Token: 0x0600808D RID: 32909 RVA: 0x001B3654 File Offset: 0x001B1854
+	// Token: 0x17000B1C RID: 2844
+	// (get) Token: 0x06005424 RID: 21540 RVA: 0x001BC324 File Offset: 0x001BA524
 	[Nullable(0)]
 	public Span<int> LevelIdList
 	{
@@ -40,8 +40,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000AFD RID: 2813
-	// (get) Token: 0x0600808E RID: 32910 RVA: 0x001B3661 File Offset: 0x001B1861
+	// Token: 0x17000B1D RID: 2845
+	// (get) Token: 0x06005425 RID: 21541 RVA: 0x001BC331 File Offset: 0x001BA531
 	public List<FightPhotoLevelData> LevelDataList
 	{
 		get
@@ -50,9 +50,9 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000AFE RID: 2814
-	// (get) Token: 0x06008090 RID: 32912 RVA: 0x001B367E File Offset: 0x001B187E
-	// (set) Token: 0x0600808F RID: 32911 RVA: 0x001B3669 File Offset: 0x001B1869
+	// Token: 0x17000B1E RID: 2846
+	// (get) Token: 0x06005427 RID: 21543 RVA: 0x001BC34E File Offset: 0x001BA54E
+	// (set) Token: 0x06005426 RID: 21542 RVA: 0x001BC339 File Offset: 0x001BA539
 	public long UnlockTime
 	{
 		get
@@ -65,15 +65,15 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x06008091 RID: 32913 RVA: 0x001B3688 File Offset: 0x001B1888
+	// Token: 0x06005428 RID: 21544 RVA: 0x001BC358 File Offset: 0x001BA558
 	public bool IsReachUnlockTime()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
 		return this.UnlockTimeInterval == 0L || (double)this.UnlockTime < serverTime;
 	}
 
-	// Token: 0x17000AFF RID: 2815
-	// (get) Token: 0x06008092 RID: 32914 RVA: 0x001B36B4 File Offset: 0x001B18B4
+	// Token: 0x17000B1F RID: 2847
+	// (get) Token: 0x06005429 RID: 21545 RVA: 0x001BC384 File Offset: 0x001BA584
 	public bool IsUnLock
 	{
 		get
@@ -82,8 +82,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B00 RID: 2816
-	// (get) Token: 0x06008093 RID: 32915 RVA: 0x001B36BC File Offset: 0x001B18BC
+	// Token: 0x17000B20 RID: 2848
+	// (get) Token: 0x0600542A RID: 21546 RVA: 0x001BC38C File Offset: 0x001BA58C
 	public bool IsFinished
 	{
 		get
@@ -102,8 +102,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B01 RID: 2817
-	// (get) Token: 0x06008094 RID: 32916 RVA: 0x001B3718 File Offset: 0x001B1918
+	// Token: 0x17000B21 RID: 2849
+	// (get) Token: 0x0600542B RID: 21547 RVA: 0x001BC3E8 File Offset: 0x001BA5E8
 	public FightPhotoLevelData FirstUnFinishedLevelData
 	{
 		get
@@ -144,8 +144,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B02 RID: 2818
-	// (get) Token: 0x06008095 RID: 32917 RVA: 0x001B37CC File Offset: 0x001B19CC
+	// Token: 0x17000B22 RID: 2850
+	// (get) Token: 0x0600542C RID: 21548 RVA: 0x001BC49C File Offset: 0x001BA69C
 	public bool HasRedDot
 	{
 		get
@@ -164,8 +164,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B03 RID: 2819
-	// (get) Token: 0x06008096 RID: 32918 RVA: 0x001B3828 File Offset: 0x001B1A28
+	// Token: 0x17000B23 RID: 2851
+	// (get) Token: 0x0600542D RID: 21549 RVA: 0x001BC4F8 File Offset: 0x001BA6F8
 	public int Id
 	{
 		get
@@ -174,8 +174,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B04 RID: 2820
-	// (get) Token: 0x06008097 RID: 32919 RVA: 0x001B3835 File Offset: 0x001B1A35
+	// Token: 0x17000B24 RID: 2852
+	// (get) Token: 0x0600542E RID: 21550 RVA: 0x001BC505 File Offset: 0x001BA705
 	public int SortId
 	{
 		get
@@ -184,8 +184,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B05 RID: 2821
-	// (get) Token: 0x06008098 RID: 32920 RVA: 0x001B3842 File Offset: 0x001B1A42
+	// Token: 0x17000B25 RID: 2853
+	// (get) Token: 0x0600542F RID: 21551 RVA: 0x001BC512 File Offset: 0x001BA712
 	public string ThemeName
 	{
 		get
@@ -194,8 +194,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B06 RID: 2822
-	// (get) Token: 0x06008099 RID: 32921 RVA: 0x001B384F File Offset: 0x001B1A4F
+	// Token: 0x17000B26 RID: 2854
+	// (get) Token: 0x06005430 RID: 21552 RVA: 0x001BC51F File Offset: 0x001BA71F
 	public string RoleTextureLight
 	{
 		get
@@ -204,8 +204,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B07 RID: 2823
-	// (get) Token: 0x0600809A RID: 32922 RVA: 0x001B385C File Offset: 0x001B1A5C
+	// Token: 0x17000B27 RID: 2855
+	// (get) Token: 0x06005431 RID: 21553 RVA: 0x001BC52C File Offset: 0x001BA72C
 	public string RoleTextureDark
 	{
 		get
@@ -214,8 +214,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B08 RID: 2824
-	// (get) Token: 0x0600809B RID: 32923 RVA: 0x001B3869 File Offset: 0x001B1A69
+	// Token: 0x17000B28 RID: 2856
+	// (get) Token: 0x06005432 RID: 21554 RVA: 0x001BC539 File Offset: 0x001BA739
 	public string NumTexture
 	{
 		get
@@ -224,8 +224,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B09 RID: 2825
-	// (get) Token: 0x0600809C RID: 32924 RVA: 0x001B3876 File Offset: 0x001B1A76
+	// Token: 0x17000B29 RID: 2857
+	// (get) Token: 0x06005433 RID: 21555 RVA: 0x001BC546 File Offset: 0x001BA746
 	public string NumTexture2
 	{
 		get
@@ -234,8 +234,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B0A RID: 2826
-	// (get) Token: 0x0600809D RID: 32925 RVA: 0x001B3884 File Offset: 0x001B1A84
+	// Token: 0x17000B2A RID: 2858
+	// (get) Token: 0x06005434 RID: 21556 RVA: 0x001BC554 File Offset: 0x001BA754
 	public unsafe string TargetRoleName
 	{
 		get
@@ -266,8 +266,8 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x17000B0B RID: 2827
-	// (get) Token: 0x0600809E RID: 32926 RVA: 0x001B395F File Offset: 0x001B1B5F
+	// Token: 0x17000B2B RID: 2859
+	// (get) Token: 0x06005435 RID: 21557 RVA: 0x001BC62F File Offset: 0x001BA82F
 	public List<int> TargetRoleIds
 	{
 		get
@@ -276,15 +276,15 @@ public class FightPhotoLevelGroupData
 		}
 	}
 
-	// Token: 0x04003A4C RID: 14924
+	// Token: 0x04003AE4 RID: 15076
 	private PhotoFightActivityGroup Config;
 
-	// Token: 0x04003A4D RID: 14925
+	// Token: 0x04003AE5 RID: 15077
 	private readonly List<FightPhotoLevelData> FightPhotoLevelList = new List<FightPhotoLevelData>();
 
-	// Token: 0x04003A4E RID: 14926
+	// Token: 0x04003AE6 RID: 15078
 	private long UnlockTimeInterval;
 
-	// Token: 0x04003A4F RID: 14927
+	// Token: 0x04003AE7 RID: 15079
 	private readonly List<int> TargetRoleIdListInternal = new List<int>();
 }

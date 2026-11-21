@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 {
-	// Token: 0x02003D09 RID: 15625
+	// Token: 0x020030ED RID: 12525
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Interaction/BP_CameraEffect.BP_CameraEffect_C")]
-	[UnrealStructLayout(1696, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1696)]
+	[UnrealStructLayout(1704, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1701)]
 	public class BP_CameraEffect_C : AKuroEditorTickActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060255E8 RID: 153064 RVA: 0x00958248 File Offset: 0x00956448
+		// Token: 0x0601E5D0 RID: 124368 RVA: 0x009121B3 File Offset: 0x009103B3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_CameraEffect_C._ClassPtr == IntPtr.Zero)
@@ -25,140 +25,125 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			return BP_CameraEffect_C._ClassPtr;
 		}
 
-		// Token: 0x060255E9 RID: 153065 RVA: 0x0095826C File Offset: 0x0095646C
+		// Token: 0x0601E5D1 RID: 124369 RVA: 0x009121D8 File Offset: 0x009103D8
 		public BP_CameraEffect_C() : this(BuiltinUtils.AllocNativeUObject(BP_CameraEffect_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060255EA RID: 153066 RVA: 0x00958294 File Offset: 0x00956494
+		// Token: 0x0601E5D2 RID: 124370 RVA: 0x00912200 File Offset: 0x00910400
 		[NullableContext(1)]
 		public BP_CameraEffect_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_CameraEffect_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004C42 RID: 19522
-		// (get) Token: 0x060255EB RID: 153067 RVA: 0x009582C7 File Offset: 0x009564C7
-		// (set) Token: 0x060255EC RID: 153068 RVA: 0x009582DB File Offset: 0x009564DB
-		public unsafe UKuroGameBudgetComponent KuroGameBudget
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroGameBudgetComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_1);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_1, value);
-			}
-		}
-
-		// Token: 0x17004C43 RID: 19523
-		// (get) Token: 0x060255ED RID: 153069 RVA: 0x009582F0 File Offset: 0x009564F0
-		// (set) Token: 0x060255EE RID: 153070 RVA: 0x00958304 File Offset: 0x00956504
+		// Token: 0x17003354 RID: 13140
+		// (get) Token: 0x0601E5D3 RID: 124371 RVA: 0x00912233 File Offset: 0x00910433
+		// (set) Token: 0x0601E5D4 RID: 124372 RVA: 0x00912247 File Offset: 0x00910447
 		public unsafe UKuroPostProcessComponent KuroPostProcess
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroPostProcessComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroPostProcessComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_KuroPostProcess);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_KuroPostProcess, value);
 			}
 		}
 
-		// Token: 0x17004C44 RID: 19524
-		// (get) Token: 0x060255EF RID: 153071 RVA: 0x00958319 File Offset: 0x00956519
-		// (set) Token: 0x060255F0 RID: 153072 RVA: 0x0095832D File Offset: 0x0095652D
+		// Token: 0x17003355 RID: 13141
+		// (get) Token: 0x0601E5D5 RID: 124373 RVA: 0x0091225C File Offset: 0x0091045C
+		// (set) Token: 0x0601E5D6 RID: 124374 RVA: 0x00912270 File Offset: 0x00910470
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17004C45 RID: 19525
-		// (get) Token: 0x060255F1 RID: 153073 RVA: 0x00958342 File Offset: 0x00956542
-		// (set) Token: 0x060255F2 RID: 153074 RVA: 0x00958352 File Offset: 0x00956552
+		// Token: 0x17003356 RID: 13142
+		// (get) Token: 0x0601E5D7 RID: 124375 RVA: 0x00912285 File Offset: 0x00910485
+		// (set) Token: 0x0601E5D8 RID: 124376 RVA: 0x00912295 File Offset: 0x00910495
 		public unsafe float 全局风方向
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_全局风方向);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_全局风方向) = value;
 			}
 		}
 
-		// Token: 0x17004C46 RID: 19526
-		// (get) Token: 0x060255F3 RID: 153075 RVA: 0x00958363 File Offset: 0x00956563
-		// (set) Token: 0x060255F4 RID: 153076 RVA: 0x00958373 File Offset: 0x00956573
+		// Token: 0x17003357 RID: 13143
+		// (get) Token: 0x0601E5D9 RID: 124377 RVA: 0x009122A6 File Offset: 0x009104A6
+		// (set) Token: 0x0601E5DA RID: 124378 RVA: 0x009122B6 File Offset: 0x009104B6
 		public unsafe float 角色光照方向_水平_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照方向_水平_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照方向_水平_) = value;
 			}
 		}
 
-		// Token: 0x17004C47 RID: 19527
-		// (get) Token: 0x060255F5 RID: 153077 RVA: 0x00958384 File Offset: 0x00956584
-		// (set) Token: 0x060255F6 RID: 153078 RVA: 0x00958398 File Offset: 0x00956598
+		// Token: 0x17003358 RID: 13144
+		// (get) Token: 0x0601E5DB RID: 124379 RVA: 0x009122C7 File Offset: 0x009104C7
+		// (set) Token: 0x0601E5DC RID: 124380 RVA: 0x009122DB File Offset: 0x009104DB
 		public unsafe UNiagaraComponent CurrentNS
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_CurrentNS);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_CurrentNS, value);
 			}
 		}
 
-		// Token: 0x17004C48 RID: 19528
-		// (get) Token: 0x060255F7 RID: 153079 RVA: 0x009583AD File Offset: 0x009565AD
-		// (set) Token: 0x060255F8 RID: 153080 RVA: 0x009583BD File Offset: 0x009565BD
+		// Token: 0x17003359 RID: 13145
+		// (get) Token: 0x0601E5DD RID: 124381 RVA: 0x009122F0 File Offset: 0x009104F0
+		// (set) Token: 0x0601E5DE RID: 124382 RVA: 0x00912300 File Offset: 0x00910500
 		public unsafe float 集群特效密度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_集群特效密度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_集群特效密度) = value;
 			}
 		}
 
-		// Token: 0x17004C49 RID: 19529
-		// (get) Token: 0x060255F9 RID: 153081 RVA: 0x009583CE File Offset: 0x009565CE
-		// (set) Token: 0x060255FA RID: 153082 RVA: 0x009583DE File Offset: 0x009565DE
+		// Token: 0x1700335A RID: 13146
+		// (get) Token: 0x0601E5DF RID: 124383 RVA: 0x00912311 File Offset: 0x00910511
+		// (set) Token: 0x0601E5E0 RID: 124384 RVA: 0x00912321 File Offset: 0x00910521
 		public unsafe float 全局风强度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_全局风强度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_全局风强度) = value;
 			}
 		}
 
-		// Token: 0x17004C4A RID: 19530
-		// (get) Token: 0x060255FB RID: 153083 RVA: 0x009583F0 File Offset: 0x009565F0
-		// (set) Token: 0x060255FC RID: 153084 RVA: 0x00958429 File Offset: 0x00956629
+		// Token: 0x1700335B RID: 13147
+		// (get) Token: 0x0601E5E1 RID: 124385 RVA: 0x00912334 File Offset: 0x00910534
+		// (set) Token: 0x0601E5E2 RID: 124386 RVA: 0x0091236D File Offset: 0x0091056D
 		[Nullable(1)]
 		public TArray<UNiagaraSystem> Niagara_System_Objects
 		{
@@ -169,7 +154,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 				TArray<UNiagaraSystem> result;
 				if ((result = this._Niagara_System_Objects) == null)
 				{
-					result = (this._Niagara_System_Objects = new TArray<UNiagaraSystem>(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_9, this));
+					result = (this._Niagara_System_Objects = new TArray<UNiagaraSystem>(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Niagara_System_Objects, this));
 				}
 				return result;
 			}
@@ -180,624 +165,653 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			}
 		}
 
-		// Token: 0x17004C4B RID: 19531
-		// (get) Token: 0x060255FD RID: 153085 RVA: 0x00958437 File Offset: 0x00956637
-		// (set) Token: 0x060255FE RID: 153086 RVA: 0x00958447 File Offset: 0x00956647
+		// Token: 0x1700335C RID: 13148
+		// (get) Token: 0x0601E5E3 RID: 124387 RVA: 0x0091237B File Offset: 0x0091057B
+		// (set) Token: 0x0601E5E4 RID: 124388 RVA: 0x0091238B File Offset: 0x0091058B
 		public unsafe float 角色光照亮部Hue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Hue);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Hue) = value;
 			}
 		}
 
-		// Token: 0x17004C4C RID: 19532
-		// (get) Token: 0x060255FF RID: 153087 RVA: 0x00958458 File Offset: 0x00956658
-		// (set) Token: 0x06025600 RID: 153088 RVA: 0x00958468 File Offset: 0x00956668
+		// Token: 0x1700335D RID: 13149
+		// (get) Token: 0x0601E5E5 RID: 124389 RVA: 0x0091239C File Offset: 0x0091059C
+		// (set) Token: 0x0601E5E6 RID: 124390 RVA: 0x009123AC File Offset: 0x009105AC
 		public unsafe float 角色光照亮部Saturation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Saturation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Saturation) = value;
 			}
 		}
 
-		// Token: 0x17004C4D RID: 19533
-		// (get) Token: 0x06025601 RID: 153089 RVA: 0x00958479 File Offset: 0x00956679
-		// (set) Token: 0x06025602 RID: 153090 RVA: 0x00958489 File Offset: 0x00956689
+		// Token: 0x1700335E RID: 13150
+		// (get) Token: 0x0601E5E7 RID: 124391 RVA: 0x009123BD File Offset: 0x009105BD
+		// (set) Token: 0x0601E5E8 RID: 124392 RVA: 0x009123CD File Offset: 0x009105CD
 		public unsafe float 角色光照亮部Value
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Value);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照亮部Value) = value;
 			}
 		}
 
-		// Token: 0x17004C4E RID: 19534
-		// (get) Token: 0x06025603 RID: 153091 RVA: 0x0095849A File Offset: 0x0095669A
-		// (set) Token: 0x06025604 RID: 153092 RVA: 0x009584AA File Offset: 0x009566AA
+		// Token: 0x1700335F RID: 13151
+		// (get) Token: 0x0601E5E9 RID: 124393 RVA: 0x009123DE File Offset: 0x009105DE
+		// (set) Token: 0x0601E5EA RID: 124394 RVA: 0x009123EE File Offset: 0x009105EE
 		public unsafe float 角色光照暗部Hue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Hue);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Hue) = value;
 			}
 		}
 
-		// Token: 0x17004C4F RID: 19535
-		// (get) Token: 0x06025605 RID: 153093 RVA: 0x009584BB File Offset: 0x009566BB
-		// (set) Token: 0x06025606 RID: 153094 RVA: 0x009584CB File Offset: 0x009566CB
+		// Token: 0x17003360 RID: 13152
+		// (get) Token: 0x0601E5EB RID: 124395 RVA: 0x009123FF File Offset: 0x009105FF
+		// (set) Token: 0x0601E5EC RID: 124396 RVA: 0x0091240F File Offset: 0x0091060F
 		public unsafe float 角色光照暗部Saturation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Saturation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Saturation) = value;
 			}
 		}
 
-		// Token: 0x17004C50 RID: 19536
-		// (get) Token: 0x06025607 RID: 153095 RVA: 0x009584DC File Offset: 0x009566DC
-		// (set) Token: 0x06025608 RID: 153096 RVA: 0x009584EC File Offset: 0x009566EC
+		// Token: 0x17003361 RID: 13153
+		// (get) Token: 0x0601E5ED RID: 124397 RVA: 0x00912420 File Offset: 0x00910620
+		// (set) Token: 0x0601E5EE RID: 124398 RVA: 0x00912430 File Offset: 0x00910630
 		public unsafe float 角色光照暗部Value
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Value);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照暗部Value) = value;
 			}
 		}
 
-		// Token: 0x17004C51 RID: 19537
-		// (get) Token: 0x06025609 RID: 153097 RVA: 0x009584FD File Offset: 0x009566FD
-		// (set) Token: 0x0602560A RID: 153098 RVA: 0x0095850D File Offset: 0x0095670D
+		// Token: 0x17003362 RID: 13154
+		// (get) Token: 0x0601E5EF RID: 124399 RVA: 0x00912441 File Offset: 0x00910641
+		// (set) Token: 0x0601E5F0 RID: 124400 RVA: 0x00912451 File Offset: 0x00910651
 		public unsafe float 角色光照边缘光Hue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Hue);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Hue) = value;
 			}
 		}
 
-		// Token: 0x17004C52 RID: 19538
-		// (get) Token: 0x0602560B RID: 153099 RVA: 0x0095851E File Offset: 0x0095671E
-		// (set) Token: 0x0602560C RID: 153100 RVA: 0x0095852E File Offset: 0x0095672E
+		// Token: 0x17003363 RID: 13155
+		// (get) Token: 0x0601E5F1 RID: 124401 RVA: 0x00912462 File Offset: 0x00910662
+		// (set) Token: 0x0601E5F2 RID: 124402 RVA: 0x00912472 File Offset: 0x00910672
 		public unsafe float 角色光照边缘光Saturation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Saturation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Saturation) = value;
 			}
 		}
 
-		// Token: 0x17004C53 RID: 19539
-		// (get) Token: 0x0602560D RID: 153101 RVA: 0x0095853F File Offset: 0x0095673F
-		// (set) Token: 0x0602560E RID: 153102 RVA: 0x0095854F File Offset: 0x0095674F
+		// Token: 0x17003364 RID: 13156
+		// (get) Token: 0x0601E5F3 RID: 124403 RVA: 0x00912483 File Offset: 0x00910683
+		// (set) Token: 0x0601E5F4 RID: 124404 RVA: 0x00912493 File Offset: 0x00910693
 		public unsafe float 角色光照边缘光Value
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Value);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_角色光照边缘光Value) = value;
 			}
 		}
 
-		// Token: 0x17004C54 RID: 19540
-		// (get) Token: 0x0602560F RID: 153103 RVA: 0x00958560 File Offset: 0x00956760
-		// (set) Token: 0x06025610 RID: 153104 RVA: 0x00958574 File Offset: 0x00956774
+		// Token: 0x17003365 RID: 13157
+		// (get) Token: 0x0601E5F5 RID: 124405 RVA: 0x009124A4 File Offset: 0x009106A4
+		// (set) Token: 0x0601E5F6 RID: 124406 RVA: 0x009124B8 File Offset: 0x009106B8
 		public unsafe UMaterialInterface Material
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_19);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_Material);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_19, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_Material, value);
 			}
 		}
 
-		// Token: 0x17004C55 RID: 19541
-		// (get) Token: 0x06025611 RID: 153105 RVA: 0x00958589 File Offset: 0x00956789
-		// (set) Token: 0x06025612 RID: 153106 RVA: 0x0095859D File Offset: 0x0095679D
+		// Token: 0x17003366 RID: 13158
+		// (get) Token: 0x0601E5F7 RID: 124407 RVA: 0x009124CD File Offset: 0x009106CD
+		// (set) Token: 0x0601E5F8 RID: 124408 RVA: 0x009124E1 File Offset: 0x009106E1
 		public unsafe UMaterialInstanceDynamic DynamicMaterial
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstanceDynamic>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_20);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstanceDynamic>(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_DynamicMaterial);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_20, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_CameraEffect_C.__PropertyOffset_DynamicMaterial, value);
 			}
 		}
 
-		// Token: 0x17004C56 RID: 19542
-		// (get) Token: 0x06025613 RID: 153107 RVA: 0x009585B2 File Offset: 0x009567B2
-		// (set) Token: 0x06025614 RID: 153108 RVA: 0x009585C2 File Offset: 0x009567C2
+		// Token: 0x17003367 RID: 13159
+		// (get) Token: 0x0601E5F9 RID: 124409 RVA: 0x009124F6 File Offset: 0x009106F6
+		// (set) Token: 0x0601E5FA RID: 124410 RVA: 0x00912506 File Offset: 0x00910706
 		public unsafe float Mode
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Mode);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Mode) = value;
 			}
 		}
 
-		// Token: 0x17004C57 RID: 19543
-		// (get) Token: 0x06025615 RID: 153109 RVA: 0x009585D3 File Offset: 0x009567D3
-		// (set) Token: 0x06025616 RID: 153110 RVA: 0x009585E3 File Offset: 0x009567E3
+		// Token: 0x17003368 RID: 13160
+		// (get) Token: 0x0601E5FB RID: 124411 RVA: 0x00912517 File Offset: 0x00910717
+		// (set) Token: 0x0601E5FC RID: 124412 RVA: 0x00912527 File Offset: 0x00910727
 		public unsafe float BackgroundStrength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_BackgroundStrength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_BackgroundStrength) = value;
 			}
 		}
 
-		// Token: 0x17004C58 RID: 19544
-		// (get) Token: 0x06025617 RID: 153111 RVA: 0x009585F4 File Offset: 0x009567F4
-		// (set) Token: 0x06025618 RID: 153112 RVA: 0x00958604 File Offset: 0x00956804
+		// Token: 0x17003369 RID: 13161
+		// (get) Token: 0x0601E5FD RID: 124413 RVA: 0x00912538 File Offset: 0x00910738
+		// (set) Token: 0x0601E5FE RID: 124414 RVA: 0x00912548 File Offset: 0x00910748
 		public unsafe float RotationAngle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_RotationAngle);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_RotationAngle) = value;
 			}
 		}
 
-		// Token: 0x17004C59 RID: 19545
-		// (get) Token: 0x06025619 RID: 153113 RVA: 0x00958615 File Offset: 0x00956815
-		// (set) Token: 0x0602561A RID: 153114 RVA: 0x00958625 File Offset: 0x00956825
+		// Token: 0x1700336A RID: 13162
+		// (get) Token: 0x0601E5FF RID: 124415 RVA: 0x00912559 File Offset: 0x00910759
+		// (set) Token: 0x0601E600 RID: 124416 RVA: 0x00912569 File Offset: 0x00910769
 		public unsafe float BlurIntensity
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_BlurIntensity);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_BlurIntensity) = value;
 			}
 		}
 
-		// Token: 0x17004C5A RID: 19546
-		// (get) Token: 0x0602561B RID: 153115 RVA: 0x00958636 File Offset: 0x00956836
-		// (set) Token: 0x0602561C RID: 153116 RVA: 0x00958646 File Offset: 0x00956846
+		// Token: 0x1700336B RID: 13163
+		// (get) Token: 0x0601E601 RID: 124417 RVA: 0x0091257A File Offset: 0x0091077A
+		// (set) Token: 0x0601E602 RID: 124418 RVA: 0x0091258A File Offset: 0x0091078A
 		public unsafe float CircleRadius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleRadius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleRadius) = value;
 			}
 		}
 
-		// Token: 0x17004C5B RID: 19547
-		// (get) Token: 0x0602561D RID: 153117 RVA: 0x00958657 File Offset: 0x00956857
-		// (set) Token: 0x0602561E RID: 153118 RVA: 0x00958667 File Offset: 0x00956867
+		// Token: 0x1700336C RID: 13164
+		// (get) Token: 0x0601E603 RID: 124419 RVA: 0x0091259B File Offset: 0x0091079B
+		// (set) Token: 0x0601E604 RID: 124420 RVA: 0x009125AB File Offset: 0x009107AB
 		public unsafe float FrameThickness
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameThickness);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameThickness) = value;
 			}
 		}
 
-		// Token: 0x17004C5C RID: 19548
-		// (get) Token: 0x0602561F RID: 153119 RVA: 0x00958678 File Offset: 0x00956878
-		// (set) Token: 0x06025620 RID: 153120 RVA: 0x00958688 File Offset: 0x00956888
+		// Token: 0x1700336D RID: 13165
+		// (get) Token: 0x0601E605 RID: 124421 RVA: 0x009125BC File Offset: 0x009107BC
+		// (set) Token: 0x0601E606 RID: 124422 RVA: 0x009125CC File Offset: 0x009107CC
 		public unsafe float FrameX
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameX);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameX) = value;
 			}
 		}
 
-		// Token: 0x17004C5D RID: 19549
-		// (get) Token: 0x06025621 RID: 153121 RVA: 0x00958699 File Offset: 0x00956899
-		// (set) Token: 0x06025622 RID: 153122 RVA: 0x009586A9 File Offset: 0x009568A9
+		// Token: 0x1700336E RID: 13166
+		// (get) Token: 0x0601E607 RID: 124423 RVA: 0x009125DD File Offset: 0x009107DD
+		// (set) Token: 0x0601E608 RID: 124424 RVA: 0x009125ED File Offset: 0x009107ED
 		public unsafe float FrameY
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_28);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameY);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_28) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_FrameY) = value;
 			}
 		}
 
-		// Token: 0x17004C5E RID: 19550
-		// (get) Token: 0x06025623 RID: 153123 RVA: 0x009586BA File Offset: 0x009568BA
-		// (set) Token: 0x06025624 RID: 153124 RVA: 0x009586CA File Offset: 0x009568CA
+		// Token: 0x1700336F RID: 13167
+		// (get) Token: 0x0601E609 RID: 124425 RVA: 0x009125FE File Offset: 0x009107FE
+		// (set) Token: 0x0601E60A RID: 124426 RVA: 0x0091260E File Offset: 0x0091080E
 		public unsafe float Line1X
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line1X);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line1X) = value;
 			}
 		}
 
-		// Token: 0x17004C5F RID: 19551
-		// (get) Token: 0x06025625 RID: 153125 RVA: 0x009586DB File Offset: 0x009568DB
-		// (set) Token: 0x06025626 RID: 153126 RVA: 0x009586EB File Offset: 0x009568EB
+		// Token: 0x17003370 RID: 13168
+		// (get) Token: 0x0601E60B RID: 124427 RVA: 0x0091261F File Offset: 0x0091081F
+		// (set) Token: 0x0601E60C RID: 124428 RVA: 0x0091262F File Offset: 0x0091082F
 		public unsafe float Line1Y
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line1Y);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line1Y) = value;
 			}
 		}
 
-		// Token: 0x17004C60 RID: 19552
-		// (get) Token: 0x06025627 RID: 153127 RVA: 0x009586FC File Offset: 0x009568FC
-		// (set) Token: 0x06025628 RID: 153128 RVA: 0x0095870C File Offset: 0x0095690C
+		// Token: 0x17003371 RID: 13169
+		// (get) Token: 0x0601E60D RID: 124429 RVA: 0x00912640 File Offset: 0x00910840
+		// (set) Token: 0x0601E60E RID: 124430 RVA: 0x00912650 File Offset: 0x00910850
 		public unsafe float Line2X
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line2X);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line2X) = value;
 			}
 		}
 
-		// Token: 0x17004C61 RID: 19553
-		// (get) Token: 0x06025629 RID: 153129 RVA: 0x0095871D File Offset: 0x0095691D
-		// (set) Token: 0x0602562A RID: 153130 RVA: 0x0095872D File Offset: 0x0095692D
+		// Token: 0x17003372 RID: 13170
+		// (get) Token: 0x0601E60F RID: 124431 RVA: 0x00912661 File Offset: 0x00910861
+		// (set) Token: 0x0601E610 RID: 124432 RVA: 0x00912671 File Offset: 0x00910871
 		public unsafe float Line2Y
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line2Y);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_Line2Y) = value;
 			}
 		}
 
-		// Token: 0x17004C62 RID: 19554
-		// (get) Token: 0x0602562B RID: 153131 RVA: 0x0095873E File Offset: 0x0095693E
-		// (set) Token: 0x0602562C RID: 153132 RVA: 0x0095874E File Offset: 0x0095694E
+		// Token: 0x17003373 RID: 13171
+		// (get) Token: 0x0601E611 RID: 124433 RVA: 0x00912682 File Offset: 0x00910882
+		// (set) Token: 0x0601E612 RID: 124434 RVA: 0x00912692 File Offset: 0x00910892
 		public unsafe float LineAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_LineAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_LineAlpha) = value;
 			}
 		}
 
-		// Token: 0x17004C63 RID: 19555
-		// (get) Token: 0x0602562D RID: 153133 RVA: 0x0095875F File Offset: 0x0095695F
-		// (set) Token: 0x0602562E RID: 153134 RVA: 0x0095876F File Offset: 0x0095696F
+		// Token: 0x17003374 RID: 13172
+		// (get) Token: 0x0601E613 RID: 124435 RVA: 0x009126A3 File Offset: 0x009108A3
+		// (set) Token: 0x0601E614 RID: 124436 RVA: 0x009126B3 File Offset: 0x009108B3
 		public unsafe float LineThickness
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_LineThickness);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_LineThickness) = value;
 			}
 		}
 
-		// Token: 0x17004C64 RID: 19556
-		// (get) Token: 0x0602562F RID: 153135 RVA: 0x00958780 File Offset: 0x00956980
-		// (set) Token: 0x06025630 RID: 153136 RVA: 0x00958790 File Offset: 0x00956990
+		// Token: 0x17003375 RID: 13173
+		// (get) Token: 0x0601E615 RID: 124437 RVA: 0x009126C4 File Offset: 0x009108C4
+		// (set) Token: 0x0601E616 RID: 124438 RVA: 0x009126D4 File Offset: 0x009108D4
 		public unsafe float EmissionPower
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionPower);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionPower) = value;
 			}
 		}
 
-		// Token: 0x17004C65 RID: 19557
-		// (get) Token: 0x06025631 RID: 153137 RVA: 0x009587A1 File Offset: 0x009569A1
-		// (set) Token: 0x06025632 RID: 153138 RVA: 0x009587B1 File Offset: 0x009569B1
+		// Token: 0x17003376 RID: 13174
+		// (get) Token: 0x0601E617 RID: 124439 RVA: 0x009126E5 File Offset: 0x009108E5
+		// (set) Token: 0x0601E618 RID: 124440 RVA: 0x009126F5 File Offset: 0x009108F5
 		public unsafe float EmissionRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_36);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_36) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionRange) = value;
 			}
 		}
 
-		// Token: 0x17004C66 RID: 19558
-		// (get) Token: 0x06025633 RID: 153139 RVA: 0x009587C2 File Offset: 0x009569C2
-		// (set) Token: 0x06025634 RID: 153140 RVA: 0x009587D2 File Offset: 0x009569D2
+		// Token: 0x17003377 RID: 13175
+		// (get) Token: 0x0601E619 RID: 124441 RVA: 0x00912706 File Offset: 0x00910906
+		// (set) Token: 0x0601E61A RID: 124442 RVA: 0x00912716 File Offset: 0x00910916
 		public unsafe float EmissionStrength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_37);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionStrength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_37) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionStrength) = value;
 			}
 		}
 
-		// Token: 0x17004C67 RID: 19559
-		// (get) Token: 0x06025635 RID: 153141 RVA: 0x009587E3 File Offset: 0x009569E3
-		// (set) Token: 0x06025636 RID: 153142 RVA: 0x009587F3 File Offset: 0x009569F3
+		// Token: 0x17003378 RID: 13176
+		// (get) Token: 0x0601E61B RID: 124443 RVA: 0x00912727 File Offset: 0x00910927
+		// (set) Token: 0x0601E61C RID: 124444 RVA: 0x00912737 File Offset: 0x00910937
 		public unsafe float ShadowPower
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_38);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowPower);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_38) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowPower) = value;
 			}
 		}
 
-		// Token: 0x17004C68 RID: 19560
-		// (get) Token: 0x06025637 RID: 153143 RVA: 0x00958804 File Offset: 0x00956A04
-		// (set) Token: 0x06025638 RID: 153144 RVA: 0x00958814 File Offset: 0x00956A14
+		// Token: 0x17003379 RID: 13177
+		// (get) Token: 0x0601E61D RID: 124445 RVA: 0x00912748 File Offset: 0x00910948
+		// (set) Token: 0x0601E61E RID: 124446 RVA: 0x00912758 File Offset: 0x00910958
 		public unsafe float ShadowRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_39);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_39) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowRange) = value;
 			}
 		}
 
-		// Token: 0x17004C69 RID: 19561
-		// (get) Token: 0x06025639 RID: 153145 RVA: 0x00958825 File Offset: 0x00956A25
-		// (set) Token: 0x0602563A RID: 153146 RVA: 0x00958835 File Offset: 0x00956A35
+		// Token: 0x1700337A RID: 13178
+		// (get) Token: 0x0601E61F RID: 124447 RVA: 0x00912769 File Offset: 0x00910969
+		// (set) Token: 0x0601E620 RID: 124448 RVA: 0x00912779 File Offset: 0x00910979
 		public unsafe float ShadowStrength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_40);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowStrength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_40) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowStrength) = value;
 			}
 		}
 
-		// Token: 0x17004C6A RID: 19562
-		// (get) Token: 0x0602563B RID: 153147 RVA: 0x00958846 File Offset: 0x00956A46
-		// (set) Token: 0x0602563C RID: 153148 RVA: 0x00958856 File Offset: 0x00956A56
+		// Token: 0x1700337B RID: 13179
+		// (get) Token: 0x0601E621 RID: 124449 RVA: 0x0091278A File Offset: 0x0091098A
+		// (set) Token: 0x0601E622 RID: 124450 RVA: 0x0091279A File Offset: 0x0091099A
 		public unsafe float MaskWidth
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_41);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskWidth);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_41) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskWidth) = value;
 			}
 		}
 
-		// Token: 0x17004C6B RID: 19563
-		// (get) Token: 0x0602563D RID: 153149 RVA: 0x00958867 File Offset: 0x00956A67
-		// (set) Token: 0x0602563E RID: 153150 RVA: 0x00958877 File Offset: 0x00956A77
+		// Token: 0x1700337C RID: 13180
+		// (get) Token: 0x0601E623 RID: 124451 RVA: 0x009127AB File Offset: 0x009109AB
+		// (set) Token: 0x0601E624 RID: 124452 RVA: 0x009127BB File Offset: 0x009109BB
 		public unsafe float MaskHeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_42);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskHeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_42) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskHeight) = value;
 			}
 		}
 
-		// Token: 0x17004C6C RID: 19564
-		// (get) Token: 0x0602563F RID: 153151 RVA: 0x00958888 File Offset: 0x00956A88
-		// (set) Token: 0x06025640 RID: 153152 RVA: 0x0095889C File Offset: 0x00956A9C
+		// Token: 0x1700337D RID: 13181
+		// (get) Token: 0x0601E625 RID: 124453 RVA: 0x009127CC File Offset: 0x009109CC
+		// (set) Token: 0x0601E626 RID: 124454 RVA: 0x009127E0 File Offset: 0x009109E0
 		public unsafe FColor MaskColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_43);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_43) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_MaskColor) = value;
 			}
 		}
 
-		// Token: 0x17004C6D RID: 19565
-		// (get) Token: 0x06025641 RID: 153153 RVA: 0x009588B1 File Offset: 0x00956AB1
-		// (set) Token: 0x06025642 RID: 153154 RVA: 0x009588C5 File Offset: 0x00956AC5
+		// Token: 0x1700337E RID: 13182
+		// (get) Token: 0x0601E627 RID: 124455 RVA: 0x009127F5 File Offset: 0x009109F5
+		// (set) Token: 0x0601E628 RID: 124456 RVA: 0x00912809 File Offset: 0x00910A09
 		public unsafe FColor EmissionColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_44);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_44) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_EmissionColor) = value;
 			}
 		}
 
-		// Token: 0x17004C6E RID: 19566
-		// (get) Token: 0x06025643 RID: 153155 RVA: 0x009588DA File Offset: 0x00956ADA
-		// (set) Token: 0x06025644 RID: 153156 RVA: 0x009588EE File Offset: 0x00956AEE
+		// Token: 0x1700337F RID: 13183
+		// (get) Token: 0x0601E629 RID: 124457 RVA: 0x0091281E File Offset: 0x00910A1E
+		// (set) Token: 0x0601E62A RID: 124458 RVA: 0x00912832 File Offset: 0x00910A32
 		public unsafe FColor ShadowColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_45);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowColor);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_45) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_ShadowColor) = value;
 			}
 		}
 
-		// Token: 0x17004C6F RID: 19567
-		// (get) Token: 0x06025645 RID: 153157 RVA: 0x00958903 File Offset: 0x00956B03
-		// (set) Token: 0x06025646 RID: 153158 RVA: 0x00958913 File Offset: 0x00956B13
+		// Token: 0x17003380 RID: 13184
+		// (get) Token: 0x0601E62B RID: 124459 RVA: 0x00912847 File Offset: 0x00910A47
+		// (set) Token: 0x0601E62C RID: 124460 RVA: 0x00912857 File Offset: 0x00910A57
 		public unsafe float RhombusRadius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_46);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_RhombusRadius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_46) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_RhombusRadius) = value;
 			}
 		}
 
-		// Token: 0x17004C70 RID: 19568
-		// (get) Token: 0x06025647 RID: 153159 RVA: 0x00958924 File Offset: 0x00956B24
-		// (set) Token: 0x06025648 RID: 153160 RVA: 0x00958934 File Offset: 0x00956B34
+		// Token: 0x17003381 RID: 13185
+		// (get) Token: 0x0601E62D RID: 124461 RVA: 0x00912868 File Offset: 0x00910A68
+		// (set) Token: 0x0601E62E RID: 124462 RVA: 0x00912878 File Offset: 0x00910A78
 		public unsafe float PositionHorizon
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_PositionHorizon);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_PositionHorizon) = value;
 			}
 		}
 
-		// Token: 0x17004C71 RID: 19569
-		// (get) Token: 0x06025649 RID: 153161 RVA: 0x00958945 File Offset: 0x00956B45
-		// (set) Token: 0x0602564A RID: 153162 RVA: 0x00958955 File Offset: 0x00956B55
+		// Token: 0x17003382 RID: 13186
+		// (get) Token: 0x0601E62F RID: 124463 RVA: 0x00912889 File Offset: 0x00910A89
+		// (set) Token: 0x0601E630 RID: 124464 RVA: 0x00912899 File Offset: 0x00910A99
 		public unsafe float PositionVertical
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_48);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_PositionVertical);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_48) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_PositionVertical) = value;
 			}
 		}
 
-		// Token: 0x17004C72 RID: 19570
-		// (get) Token: 0x0602564B RID: 153163 RVA: 0x00958966 File Offset: 0x00956B66
-		// (set) Token: 0x0602564C RID: 153164 RVA: 0x00958976 File Offset: 0x00956B76
+		// Token: 0x17003383 RID: 13187
+		// (get) Token: 0x0601E631 RID: 124465 RVA: 0x009128AA File Offset: 0x00910AAA
+		// (set) Token: 0x0601E632 RID: 124466 RVA: 0x009128BA File Offset: 0x00910ABA
 		public unsafe float CircleMaskSoftness
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_49);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleMaskSoftness);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_49) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleMaskSoftness) = value;
 			}
 		}
 
-		// Token: 0x17004C73 RID: 19571
-		// (get) Token: 0x0602564D RID: 153165 RVA: 0x00958987 File Offset: 0x00956B87
-		// (set) Token: 0x0602564E RID: 153166 RVA: 0x00958997 File Offset: 0x00956B97
+		// Token: 0x17003384 RID: 13188
+		// (get) Token: 0x0601E633 RID: 124467 RVA: 0x009128CB File Offset: 0x00910ACB
+		// (set) Token: 0x0601E634 RID: 124468 RVA: 0x009128DB File Offset: 0x00910ADB
 		public unsafe float CircleMaskRadius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_50);
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleMaskRadius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_50) = value;
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_CircleMaskRadius) = value;
 			}
 		}
 
-		// Token: 0x0602564F RID: 153167 RVA: 0x009589A8 File Offset: 0x00956BA8
+		// Token: 0x17003385 RID: 13189
+		// (get) Token: 0x0601E635 RID: 124469 RVA: 0x009128EC File Offset: 0x00910AEC
+		// (set) Token: 0x0601E636 RID: 124470 RVA: 0x009128FC File Offset: 0x00910AFC
+		public unsafe int SavedDlssFixDof
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_SavedDlssFixDof);
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_SavedDlssFixDof) = value;
+			}
+		}
+
+		// Token: 0x17003386 RID: 13190
+		// (get) Token: 0x0601E637 RID: 124471 RVA: 0x0091290D File Offset: 0x00910B0D
+		// (set) Token: 0x0601E638 RID: 124472 RVA: 0x0091291D File Offset: 0x00910B1D
+		public unsafe bool HasSavedDlssFixDof
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_HasSavedDlssFixDof) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)BP_CameraEffect_C.__PropertyOffset_HasSavedDlssFixDof) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x0601E639 RID: 124473 RVA: 0x00912930 File Offset: 0x00910B30
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPPVWeatherDA(UKuroWeatherDataAsset WeatherDA)
 		{
 			BP_CameraEffect_C.__SetPPVWeatherDA_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__SetPPVWeatherDA_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CameraEffect_C.__SetPPVWeatherDA_FunctionParams) & -16L;
@@ -806,9 +820,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__SetPPVWeatherDA_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025650 RID: 153168 RVA: 0x00958A00 File Offset: 0x00956C00
+		// Token: 0x0601E63A RID: 124474 RVA: 0x00912988 File Offset: 0x00910B88
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPPVBlendWeight(float BlendWeight)
 		{
 			BP_CameraEffect_C.__SetPPVBlendWeight_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__SetPPVBlendWeight_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__SetPPVBlendWeight_FunctionParams) & -16L;
@@ -817,9 +830,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__SetPPVBlendWeight_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025651 RID: 153169 RVA: 0x00958A48 File Offset: 0x00956C48
+		// Token: 0x0601E63B RID: 124475 RVA: 0x009129D0 File Offset: 0x00910BD0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPPVPriority(float Priority)
 		{
 			BP_CameraEffect_C.__SetPPVPriority_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__SetPPVPriority_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__SetPPVPriority_FunctionParams) & -16L;
@@ -828,9 +840,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__SetPPVPriority_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025652 RID: 153170 RVA: 0x00958A90 File Offset: 0x00956C90
+		// Token: 0x0601E63C RID: 124476 RVA: 0x00912A18 File Offset: 0x00910C18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetNiagaraEffect(int Index)
 		{
 			BP_CameraEffect_C.__SetNiagaraEffect_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__SetNiagaraEffect_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_CameraEffect_C.__SetNiagaraEffect_FunctionParams) & -16L;
@@ -839,185 +850,162 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__SetNiagaraEffect_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06025653 RID: 153171 RVA: 0x00958AD6 File Offset: 0x00956CD6
+		// Token: 0x0601E63D RID: 124477 RVA: 0x00912A5E File Offset: 0x00910C5E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 贴图画框()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__贴图画框_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025654 RID: 153172 RVA: 0x00958AEA File Offset: 0x00956CEA
+		// Token: 0x0601E63E RID: 124478 RVA: 0x00912A72 File Offset: 0x00910C72
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 菱形遮罩()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__菱形遮罩_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025655 RID: 153173 RVA: 0x00958AFE File Offset: 0x00956CFE
+		// Token: 0x0601E63F RID: 124479 RVA: 0x00912A86 File Offset: 0x00910C86
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 圆形遮罩()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__圆形遮罩_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025656 RID: 153174 RVA: 0x00958B12 File Offset: 0x00956D12
+		// Token: 0x0601E640 RID: 124480 RVA: 0x00912A9A File Offset: 0x00910C9A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 纯色遮罩()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__纯色遮罩_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025657 RID: 153175 RVA: 0x00958B26 File Offset: 0x00956D26
+		// Token: 0x0601E641 RID: 124481 RVA: 0x00912AAE File Offset: 0x00910CAE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 艺术画框()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__艺术画框_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025658 RID: 153176 RVA: 0x00958B3A File Offset: 0x00956D3A
+		// Token: 0x0601E642 RID: 124482 RVA: 0x00912AC2 File Offset: 0x00910CC2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 默认()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__默认_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025659 RID: 153177 RVA: 0x00958B4E File Offset: 0x00956D4E
+		// Token: 0x0601E643 RID: 124483 RVA: 0x00912AD6 File Offset: 0x00910CD6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SetParameter()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__SetParameter_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565A RID: 153178 RVA: 0x00958B62 File Offset: 0x00956D62
+		// Token: 0x0601E644 RID: 124484 RVA: 0x00912AEA File Offset: 0x00910CEA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 关闭集群特效()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__关闭集群特效_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565B RID: 153179 RVA: 0x00958B76 File Offset: 0x00956D76
+		// Token: 0x0601E645 RID: 124485 RVA: 0x00912AFE File Offset: 0x00910CFE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _8彩带()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___8彩带_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565C RID: 153180 RVA: 0x00958B8A File Offset: 0x00956D8A
+		// Token: 0x0601E646 RID: 124486 RVA: 0x00912B12 File Offset: 0x00910D12
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _7蒲公英()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___7蒲公英_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565D RID: 153181 RVA: 0x00958B9E File Offset: 0x00956D9E
+		// Token: 0x0601E647 RID: 124487 RVA: 0x00912B26 File Offset: 0x00910D26
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _6樱花()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___6樱花_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565E RID: 153182 RVA: 0x00958BB2 File Offset: 0x00956DB2
+		// Token: 0x0601E648 RID: 124488 RVA: 0x00912B3A File Offset: 0x00910D3A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _5彼岸花()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___5彼岸花_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602565F RID: 153183 RVA: 0x00958BC6 File Offset: 0x00956DC6
+		// Token: 0x0601E649 RID: 124489 RVA: 0x00912B4E File Offset: 0x00910D4E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _4竹叶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___4竹叶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025660 RID: 153184 RVA: 0x00958BDA File Offset: 0x00956DDA
+		// Token: 0x0601E64A RID: 124490 RVA: 0x00912B62 File Offset: 0x00910D62
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _3银杏叶()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___3银杏叶_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025661 RID: 153185 RVA: 0x00958BEE File Offset: 0x00956DEE
+		// Token: 0x0601E64B RID: 124491 RVA: 0x00912B76 File Offset: 0x00910D76
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _2枫叶红()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___2枫叶红_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025662 RID: 153186 RVA: 0x00958C02 File Offset: 0x00956E02
+		// Token: 0x0601E64C RID: 124492 RVA: 0x00912B8A File Offset: 0x00910D8A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void _1枫叶橙()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.___1枫叶橙_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025663 RID: 153187 RVA: 0x00958C16 File Offset: 0x00956E16
+		// Token: 0x0601E64D RID: 124493 RVA: 0x00912B9E File Offset: 0x00910D9E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateCharacterLight()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__UpdateCharacterLight_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025664 RID: 153188 RVA: 0x00958C2A File Offset: 0x00956E2A
+		// Token: 0x0601E64E RID: 124494 RVA: 0x00912BB2 File Offset: 0x00910DB2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void UpdateWindFieldDirectoin()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__UpdateWindFieldDirectoin_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025665 RID: 153189 RVA: 0x00958C3E File Offset: 0x00956E3E
+		// Token: 0x0601E64F RID: 124495 RVA: 0x00912BC6 File Offset: 0x00910DC6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025666 RID: 153190 RVA: 0x00958C52 File Offset: 0x00956E52
+		// Token: 0x0601E650 RID: 124496 RVA: 0x00912BDA File Offset: 0x00910DDA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025667 RID: 153191 RVA: 0x00958C67 File Offset: 0x00956E67
+		// Token: 0x0601E651 RID: 124497 RVA: 0x00912BEE File Offset: 0x00910DEE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025668 RID: 153192 RVA: 0x00958C7B File Offset: 0x00956E7B
+		// Token: 0x0601E652 RID: 124498 RVA: 0x00912C02 File Offset: 0x00910E02
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06025669 RID: 153193 RVA: 0x00958C90 File Offset: 0x00956E90
+		// Token: 0x0601E653 RID: 124499 RVA: 0x00912C18 File Offset: 0x00910E18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_CameraEffect_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__ReceiveTick_FunctionParams) & -16L;
@@ -1026,20 +1014,18 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602566A RID: 153194 RVA: 0x00958CD8 File Offset: 0x00956ED8
+		// Token: 0x0601E654 RID: 124500 RVA: 0x00912C60 File Offset: 0x00910E60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_CameraEffect_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CameraEffect_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602566B RID: 153195 RVA: 0x00958D20 File Offset: 0x00956F20
+		// Token: 0x0601E655 RID: 124501 RVA: 0x00912CA8 File Offset: 0x00910EA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_CameraEffect_C.__EditorTick_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__EditorTick_FunctionParams) & -16L;
@@ -1048,60 +1034,76 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602566C RID: 153196 RVA: 0x00958D68 File Offset: 0x00956F68
+		// Token: 0x0601E656 RID: 124502 RVA: 0x00912CF0 File Offset: 0x00910EF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_CameraEffect_C.__EditorTick_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_CameraEffect_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_CameraEffect_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602566D RID: 153197 RVA: 0x00958DAF File Offset: 0x00956FAF
+		// Token: 0x0601E657 RID: 124503 RVA: 0x00912D38 File Offset: 0x00910F38
+		[SkipLocalsInit]
+		public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
+		{
+			BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams) & -16L;
+			UnrealReflectionUtils.InitializeStruct(BP_CameraEffect_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
+			ptr->EndPlayReason = EndPlayReason;
+			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
+		}
+
+		// Token: 0x0601E658 RID: 124504 RVA: 0x00912D84 File Offset: 0x00910F84
+		[SkipLocalsInit]
+		protected unsafe virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
+		{
+			BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams* ptr = stackalloc BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_CameraEffect_C.__ReceiveEndPlay_FunctionParams) & -16L;
+			UnrealReflectionUtils.InitializeStruct(BP_CameraEffect_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr, 1);
+			ptr->EndPlayReason = EndPlayReason;
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_CameraEffect_C.__ReceiveEndPlay_NativeFunctionPtr, (void*)ptr);
+		}
+
+		// Token: 0x0601E659 RID: 124505 RVA: 0x00912DCF File Offset: 0x00910FCF
 		protected BP_CameraEffect_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012A32 RID: 76338
+		// Token: 0x0401013D RID: 65853
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Interaction/BP_CameraEffect.BP_CameraEffect_C";
 
-		// Token: 0x04012A33 RID: 76339
+		// Token: 0x0401013E RID: 65854
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012A34 RID: 76340
+		// Token: 0x0401013F RID: 65855
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012A35 RID: 76341
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010140 RID: 65856
+		internal static int __PropertyOffset_KuroPostProcess;
 
-		// Token: 0x04012A36 RID: 76342
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010141 RID: 65857
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04012A37 RID: 76343
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010142 RID: 65858
+		internal static int __PropertyOffset_全局风方向;
 
-		// Token: 0x04012A38 RID: 76344
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010143 RID: 65859
+		internal static int __PropertyOffset_角色光照方向_水平_;
 
-		// Token: 0x04012A39 RID: 76345
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010144 RID: 65860
+		internal static int __PropertyOffset_CurrentNS;
 
-		// Token: 0x04012A3A RID: 76346
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010145 RID: 65861
+		internal static int __PropertyOffset_集群特效密度;
 
-		// Token: 0x04012A3B RID: 76347
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010146 RID: 65862
+		internal static int __PropertyOffset_全局风强度;
 
-		// Token: 0x04012A3C RID: 76348
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010147 RID: 65863
+		internal static int __PropertyOffset_Niagara_System_Objects;
 
-		// Token: 0x04012A3D RID: 76349
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x04012A3E RID: 76350
+		// Token: 0x04010148 RID: 65864
 		[Nullable(new byte[]
 		{
 			2,
@@ -1109,271 +1111,291 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Interaction
 		})]
 		private TArray<UNiagaraSystem> _Niagara_System_Objects;
 
-		// Token: 0x04012A3F RID: 76351
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010149 RID: 65865
+		internal static int __PropertyOffset_角色光照亮部Hue;
 
-		// Token: 0x04012A40 RID: 76352
-		internal static int __PropertyOffset_11;
+		// Token: 0x0401014A RID: 65866
+		internal static int __PropertyOffset_角色光照亮部Saturation;
 
-		// Token: 0x04012A41 RID: 76353
-		internal static int __PropertyOffset_12;
+		// Token: 0x0401014B RID: 65867
+		internal static int __PropertyOffset_角色光照亮部Value;
 
-		// Token: 0x04012A42 RID: 76354
-		internal static int __PropertyOffset_13;
+		// Token: 0x0401014C RID: 65868
+		internal static int __PropertyOffset_角色光照暗部Hue;
 
-		// Token: 0x04012A43 RID: 76355
-		internal static int __PropertyOffset_14;
+		// Token: 0x0401014D RID: 65869
+		internal static int __PropertyOffset_角色光照暗部Saturation;
 
-		// Token: 0x04012A44 RID: 76356
-		internal static int __PropertyOffset_15;
+		// Token: 0x0401014E RID: 65870
+		internal static int __PropertyOffset_角色光照暗部Value;
 
-		// Token: 0x04012A45 RID: 76357
-		internal static int __PropertyOffset_16;
+		// Token: 0x0401014F RID: 65871
+		internal static int __PropertyOffset_角色光照边缘光Hue;
 
-		// Token: 0x04012A46 RID: 76358
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010150 RID: 65872
+		internal static int __PropertyOffset_角色光照边缘光Saturation;
 
-		// Token: 0x04012A47 RID: 76359
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010151 RID: 65873
+		internal static int __PropertyOffset_角色光照边缘光Value;
 
-		// Token: 0x04012A48 RID: 76360
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010152 RID: 65874
+		internal static int __PropertyOffset_Material;
 
-		// Token: 0x04012A49 RID: 76361
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010153 RID: 65875
+		internal static int __PropertyOffset_DynamicMaterial;
 
-		// Token: 0x04012A4A RID: 76362
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010154 RID: 65876
+		internal static int __PropertyOffset_Mode;
 
-		// Token: 0x04012A4B RID: 76363
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010155 RID: 65877
+		internal static int __PropertyOffset_BackgroundStrength;
 
-		// Token: 0x04012A4C RID: 76364
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010156 RID: 65878
+		internal static int __PropertyOffset_RotationAngle;
 
-		// Token: 0x04012A4D RID: 76365
-		internal static int __PropertyOffset_24;
+		// Token: 0x04010157 RID: 65879
+		internal static int __PropertyOffset_BlurIntensity;
 
-		// Token: 0x04012A4E RID: 76366
-		internal static int __PropertyOffset_25;
+		// Token: 0x04010158 RID: 65880
+		internal static int __PropertyOffset_CircleRadius;
 
-		// Token: 0x04012A4F RID: 76367
-		internal static int __PropertyOffset_26;
+		// Token: 0x04010159 RID: 65881
+		internal static int __PropertyOffset_FrameThickness;
 
-		// Token: 0x04012A50 RID: 76368
-		internal static int __PropertyOffset_27;
+		// Token: 0x0401015A RID: 65882
+		internal static int __PropertyOffset_FrameX;
 
-		// Token: 0x04012A51 RID: 76369
-		internal static int __PropertyOffset_28;
+		// Token: 0x0401015B RID: 65883
+		internal static int __PropertyOffset_FrameY;
 
-		// Token: 0x04012A52 RID: 76370
-		internal static int __PropertyOffset_29;
+		// Token: 0x0401015C RID: 65884
+		internal static int __PropertyOffset_Line1X;
 
-		// Token: 0x04012A53 RID: 76371
-		internal static int __PropertyOffset_30;
+		// Token: 0x0401015D RID: 65885
+		internal static int __PropertyOffset_Line1Y;
 
-		// Token: 0x04012A54 RID: 76372
-		internal static int __PropertyOffset_31;
+		// Token: 0x0401015E RID: 65886
+		internal static int __PropertyOffset_Line2X;
 
-		// Token: 0x04012A55 RID: 76373
-		internal static int __PropertyOffset_32;
+		// Token: 0x0401015F RID: 65887
+		internal static int __PropertyOffset_Line2Y;
 
-		// Token: 0x04012A56 RID: 76374
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010160 RID: 65888
+		internal static int __PropertyOffset_LineAlpha;
 
-		// Token: 0x04012A57 RID: 76375
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010161 RID: 65889
+		internal static int __PropertyOffset_LineThickness;
 
-		// Token: 0x04012A58 RID: 76376
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010162 RID: 65890
+		internal static int __PropertyOffset_EmissionPower;
 
-		// Token: 0x04012A59 RID: 76377
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010163 RID: 65891
+		internal static int __PropertyOffset_EmissionRange;
 
-		// Token: 0x04012A5A RID: 76378
-		internal static int __PropertyOffset_37;
+		// Token: 0x04010164 RID: 65892
+		internal static int __PropertyOffset_EmissionStrength;
 
-		// Token: 0x04012A5B RID: 76379
-		internal static int __PropertyOffset_38;
+		// Token: 0x04010165 RID: 65893
+		internal static int __PropertyOffset_ShadowPower;
 
-		// Token: 0x04012A5C RID: 76380
-		internal static int __PropertyOffset_39;
+		// Token: 0x04010166 RID: 65894
+		internal static int __PropertyOffset_ShadowRange;
 
-		// Token: 0x04012A5D RID: 76381
-		internal static int __PropertyOffset_40;
+		// Token: 0x04010167 RID: 65895
+		internal static int __PropertyOffset_ShadowStrength;
 
-		// Token: 0x04012A5E RID: 76382
-		internal static int __PropertyOffset_41;
+		// Token: 0x04010168 RID: 65896
+		internal static int __PropertyOffset_MaskWidth;
 
-		// Token: 0x04012A5F RID: 76383
-		internal static int __PropertyOffset_42;
+		// Token: 0x04010169 RID: 65897
+		internal static int __PropertyOffset_MaskHeight;
 
-		// Token: 0x04012A60 RID: 76384
-		internal static int __PropertyOffset_43;
+		// Token: 0x0401016A RID: 65898
+		internal static int __PropertyOffset_MaskColor;
 
-		// Token: 0x04012A61 RID: 76385
-		internal static int __PropertyOffset_44;
+		// Token: 0x0401016B RID: 65899
+		internal static int __PropertyOffset_EmissionColor;
 
-		// Token: 0x04012A62 RID: 76386
-		internal static int __PropertyOffset_45;
+		// Token: 0x0401016C RID: 65900
+		internal static int __PropertyOffset_ShadowColor;
 
-		// Token: 0x04012A63 RID: 76387
-		internal static int __PropertyOffset_46;
+		// Token: 0x0401016D RID: 65901
+		internal static int __PropertyOffset_RhombusRadius;
 
-		// Token: 0x04012A64 RID: 76388
-		internal static int __PropertyOffset_47;
+		// Token: 0x0401016E RID: 65902
+		internal static int __PropertyOffset_PositionHorizon;
 
-		// Token: 0x04012A65 RID: 76389
-		internal static int __PropertyOffset_48;
+		// Token: 0x0401016F RID: 65903
+		internal static int __PropertyOffset_PositionVertical;
 
-		// Token: 0x04012A66 RID: 76390
-		internal static int __PropertyOffset_49;
+		// Token: 0x04010170 RID: 65904
+		internal static int __PropertyOffset_CircleMaskSoftness;
 
-		// Token: 0x04012A67 RID: 76391
-		internal static int __PropertyOffset_50;
+		// Token: 0x04010171 RID: 65905
+		internal static int __PropertyOffset_CircleMaskRadius;
 
-		// Token: 0x04012A68 RID: 76392
+		// Token: 0x04010172 RID: 65906
+		internal static int __PropertyOffset_SavedDlssFixDof;
+
+		// Token: 0x04010173 RID: 65907
+		internal static int __PropertyOffset_HasSavedDlssFixDof;
+
+		// Token: 0x04010174 RID: 65908
 		private static IntPtr __SetPPVWeatherDA_NativeFunctionPtr;
 
-		// Token: 0x04012A69 RID: 76393
+		// Token: 0x04010175 RID: 65909
 		private static IntPtr __SetPPVBlendWeight_NativeFunctionPtr;
 
-		// Token: 0x04012A6A RID: 76394
+		// Token: 0x04010176 RID: 65910
 		private static IntPtr __SetPPVPriority_NativeFunctionPtr;
 
-		// Token: 0x04012A6B RID: 76395
+		// Token: 0x04010177 RID: 65911
 		private static IntPtr __SetNiagaraEffect_NativeFunctionPtr;
 
-		// Token: 0x04012A6C RID: 76396
+		// Token: 0x04010178 RID: 65912
 		private static IntPtr __贴图画框_NativeFunctionPtr;
 
-		// Token: 0x04012A6D RID: 76397
+		// Token: 0x04010179 RID: 65913
 		private static IntPtr __菱形遮罩_NativeFunctionPtr;
 
-		// Token: 0x04012A6E RID: 76398
+		// Token: 0x0401017A RID: 65914
 		private static IntPtr __圆形遮罩_NativeFunctionPtr;
 
-		// Token: 0x04012A6F RID: 76399
+		// Token: 0x0401017B RID: 65915
 		private static IntPtr __纯色遮罩_NativeFunctionPtr;
 
-		// Token: 0x04012A70 RID: 76400
+		// Token: 0x0401017C RID: 65916
 		private static IntPtr __艺术画框_NativeFunctionPtr;
 
-		// Token: 0x04012A71 RID: 76401
+		// Token: 0x0401017D RID: 65917
 		private static IntPtr __默认_NativeFunctionPtr;
 
-		// Token: 0x04012A72 RID: 76402
+		// Token: 0x0401017E RID: 65918
 		private static IntPtr __SetParameter_NativeFunctionPtr;
 
-		// Token: 0x04012A73 RID: 76403
+		// Token: 0x0401017F RID: 65919
 		private static IntPtr __关闭集群特效_NativeFunctionPtr;
 
-		// Token: 0x04012A74 RID: 76404
+		// Token: 0x04010180 RID: 65920
 		private static IntPtr ___8彩带_NativeFunctionPtr;
 
-		// Token: 0x04012A75 RID: 76405
+		// Token: 0x04010181 RID: 65921
 		private static IntPtr ___7蒲公英_NativeFunctionPtr;
 
-		// Token: 0x04012A76 RID: 76406
+		// Token: 0x04010182 RID: 65922
 		private static IntPtr ___6樱花_NativeFunctionPtr;
 
-		// Token: 0x04012A77 RID: 76407
+		// Token: 0x04010183 RID: 65923
 		private static IntPtr ___5彼岸花_NativeFunctionPtr;
 
-		// Token: 0x04012A78 RID: 76408
+		// Token: 0x04010184 RID: 65924
 		private static IntPtr ___4竹叶_NativeFunctionPtr;
 
-		// Token: 0x04012A79 RID: 76409
+		// Token: 0x04010185 RID: 65925
 		private static IntPtr ___3银杏叶_NativeFunctionPtr;
 
-		// Token: 0x04012A7A RID: 76410
+		// Token: 0x04010186 RID: 65926
 		private static IntPtr ___2枫叶红_NativeFunctionPtr;
 
-		// Token: 0x04012A7B RID: 76411
+		// Token: 0x04010187 RID: 65927
 		private static IntPtr ___1枫叶橙_NativeFunctionPtr;
 
-		// Token: 0x04012A7C RID: 76412
+		// Token: 0x04010188 RID: 65928
 		private static IntPtr __UpdateCharacterLight_NativeFunctionPtr;
 
-		// Token: 0x04012A7D RID: 76413
+		// Token: 0x04010189 RID: 65929
 		private static IntPtr __UpdateWindFieldDirectoin_NativeFunctionPtr;
 
-		// Token: 0x04012A7E RID: 76414
+		// Token: 0x0401018A RID: 65930
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04012A7F RID: 76415
+		// Token: 0x0401018B RID: 65931
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04012A80 RID: 76416
+		// Token: 0x0401018C RID: 65932
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x04012A81 RID: 76417
+		// Token: 0x0401018D RID: 65933
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x02009FEE RID: 40942
+		// Token: 0x0401018E RID: 65934
+		private static IntPtr __ReceiveEndPlay_NativeFunctionPtr;
+
+		// Token: 0x02008E6D RID: 36461
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetPPVWeatherDA_FunctionParams
 		{
-			// Token: 0x04031A89 RID: 203401
+			// Token: 0x0402CABA RID: 182970
 			[FieldOffset(0)]
 			public IntPtr WeatherDA;
 		}
 
-		// Token: 0x02009FEF RID: 40943
+		// Token: 0x02008E6E RID: 36462
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetPPVBlendWeight_FunctionParams
 		{
-			// Token: 0x04031A8A RID: 203402
+			// Token: 0x0402CABB RID: 182971
 			[FieldOffset(0)]
 			public float BlendWeight;
 		}
 
-		// Token: 0x02009FF0 RID: 40944
+		// Token: 0x02008E6F RID: 36463
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetPPVPriority_FunctionParams
 		{
-			// Token: 0x04031A8B RID: 203403
+			// Token: 0x0402CABC RID: 182972
 			[FieldOffset(0)]
 			public float Priority;
 		}
 
-		// Token: 0x02009FF1 RID: 40945
+		// Token: 0x02008E70 RID: 36464
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetNiagaraEffect_FunctionParams
 		{
-			// Token: 0x04031A8C RID: 203404
+			// Token: 0x0402CABD RID: 182973
 			[FieldOffset(0)]
 			public int Index;
 		}
 
-		// Token: 0x02009FF2 RID: 40946
+		// Token: 0x02008E71 RID: 36465
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031A8D RID: 203405
+			// Token: 0x0402CABE RID: 182974
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02009FF3 RID: 40947
+		// Token: 0x02008E72 RID: 36466
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x04031A8E RID: 203406
+			// Token: 0x0402CABF RID: 182975
 			[FieldOffset(0)]
 			public float DeltaSeconds;
+		}
+
+		// Token: 0x02008E73 RID: 36467
+		[NullableContext(0)]
+		[CompilerFeatureRequired("RefStructs")]
+		[StructLayout(LayoutKind.Explicit, Size = 1)]
+		protected new ref struct __ReceiveEndPlay_FunctionParams
+		{
+			// Token: 0x0402CAC0 RID: 182976
+			[FieldOffset(0)]
+			public TEnumAsByte<EEndPlayReason> EndPlayReason;
 		}
 	}
 }

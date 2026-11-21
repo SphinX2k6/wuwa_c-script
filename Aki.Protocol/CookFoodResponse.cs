@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020002F3 RID: 755
+	// Token: 0x020002FA RID: 762
 	[NetMessage(EMessageId.CookFoodResponse)]
 	public sealed class CookFoodResponse : IMessage<CookFoodResponse>, IMessage, IEquatable<CookFoodResponse>, IDeepCloneable<CookFoodResponse>, IBufferMessage
 	{
-		// Token: 0x06004C89 RID: 19593 RVA: 0x000BA2D8 File Offset: 0x000B84D8
+		// Token: 0x06004D62 RID: 19810 RVA: 0x000BC6C5 File Offset: 0x000BA8C5
 		[NullableContext(1)]
 		public static CookFoodResponse Create()
 		{
 			return new CookFoodResponse();
 		}
 
-		// Token: 0x17000D7D RID: 3453
-		// (get) Token: 0x06004C8A RID: 19594 RVA: 0x000BA2DF File Offset: 0x000B84DF
+		// Token: 0x17000DAA RID: 3498
+		// (get) Token: 0x06004D63 RID: 19811 RVA: 0x000BC6CC File Offset: 0x000BA8CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D7E RID: 3454
-		// (get) Token: 0x06004C8B RID: 19595 RVA: 0x000BA2E2 File Offset: 0x000B84E2
+		// Token: 0x17000DAB RID: 3499
+		// (get) Token: 0x06004D64 RID: 19812 RVA: 0x000BC6CF File Offset: 0x000BA8CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C8C RID: 19596 RVA: 0x000BA2E9 File Offset: 0x000B84E9
+		// Token: 0x06004D65 RID: 19813 RVA: 0x000BC6D6 File Offset: 0x000BA8D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFoodResponse()
 		{
 		}
 
-		// Token: 0x06004C8D RID: 19597 RVA: 0x000BA308 File Offset: 0x000B8508
+		// Token: 0x06004D66 RID: 19814 RVA: 0x000BC6F4 File Offset: 0x000BA8F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFoodResponse(CookFoodResponse other) : this()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06004C8E RID: 19598 RVA: 0x000BA37E File Offset: 0x000B857E
+		// Token: 0x06004D67 RID: 19815 RVA: 0x000BC76A File Offset: 0x000BA96A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CookFoodResponse Clone()
@@ -72,9 +72,9 @@ namespace Aki.Protocol
 			return new CookFoodResponse(this);
 		}
 
-		// Token: 0x17000D7F RID: 3455
-		// (get) Token: 0x06004C8F RID: 19599 RVA: 0x000BA386 File Offset: 0x000B8586
-		// (set) Token: 0x06004C90 RID: 19600 RVA: 0x000BA38E File Offset: 0x000B858E
+		// Token: 0x17000DAC RID: 3500
+		// (get) Token: 0x06004D68 RID: 19816 RVA: 0x000BC772 File Offset: 0x000BA972
+		// (set) Token: 0x06004D69 RID: 19817 RVA: 0x000BC77A File Offset: 0x000BA97A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode Code
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D80 RID: 3456
-		// (get) Token: 0x06004C91 RID: 19601 RVA: 0x000BA397 File Offset: 0x000B8597
-		// (set) Token: 0x06004C92 RID: 19602 RVA: 0x000BA39F File Offset: 0x000B859F
+		// Token: 0x17000DAD RID: 3501
+		// (get) Token: 0x06004D6A RID: 19818 RVA: 0x000BC783 File Offset: 0x000BA983
+		// (set) Token: 0x06004D6B RID: 19819 RVA: 0x000BC78B File Offset: 0x000BA98B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -106,8 +106,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D81 RID: 3457
-		// (get) Token: 0x06004C93 RID: 19603 RVA: 0x000BA3A8 File Offset: 0x000B85A8
+		// Token: 0x17000DAE RID: 3502
+		// (get) Token: 0x06004D6C RID: 19820 RVA: 0x000BC794 File Offset: 0x000BA994
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SingleItemInfo> ItemInfos
@@ -118,9 +118,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D82 RID: 3458
-		// (get) Token: 0x06004C94 RID: 19604 RVA: 0x000BA3B0 File Offset: 0x000B85B0
-		// (set) Token: 0x06004C95 RID: 19605 RVA: 0x000BA3B8 File Offset: 0x000B85B8
+		// Token: 0x17000DAF RID: 3503
+		// (get) Token: 0x06004D6D RID: 19821 RVA: 0x000BC79C File Offset: 0x000BA99C
+		// (set) Token: 0x06004D6E RID: 19822 RVA: 0x000BC7A4 File Offset: 0x000BA9A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActiveSkillType
@@ -135,8 +135,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D83 RID: 3459
-		// (get) Token: 0x06004C96 RID: 19606 RVA: 0x000BA3C1 File Offset: 0x000B85C1
+		// Token: 0x17000DB0 RID: 3504
+		// (get) Token: 0x06004D6F RID: 19823 RVA: 0x000BC7AD File Offset: 0x000BA9AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SingleItemInfo> ExtraItemInfos
@@ -147,9 +147,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000D84 RID: 3460
-		// (get) Token: 0x06004C97 RID: 19607 RVA: 0x000BA3C9 File Offset: 0x000B85C9
-		// (set) Token: 0x06004C98 RID: 19608 RVA: 0x000BA3D1 File Offset: 0x000B85D1
+		// Token: 0x17000DB1 RID: 3505
+		// (get) Token: 0x06004D70 RID: 19824 RVA: 0x000BC7B5 File Offset: 0x000BA9B5
+		// (set) Token: 0x06004D71 RID: 19825 RVA: 0x000BC7BD File Offset: 0x000BA9BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C99 RID: 19609 RVA: 0x000BA3DA File Offset: 0x000B85DA
+		// Token: 0x06004D72 RID: 19826 RVA: 0x000BC7C6 File Offset: 0x000BA9C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CookFoodResponse);
 		}
 
-		// Token: 0x06004C9A RID: 19610 RVA: 0x000BA3E8 File Offset: 0x000B85E8
+		// Token: 0x06004D73 RID: 19827 RVA: 0x000BC7D4 File Offset: 0x000BA9D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CookFoodResponse other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Code == other.Code && this.Id == other.Id && this.itemInfos_.Equals(other.itemInfos_) && this.ActiveSkillType == other.ActiveSkillType && this.extraItemInfos_.Equals(other.extraItemInfos_) && this.RoleId == other.RoleId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06004C9B RID: 19611 RVA: 0x000BA47C File Offset: 0x000B867C
+		// Token: 0x06004D74 RID: 19828 RVA: 0x000BC868 File Offset: 0x000BAA68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004C9C RID: 19612 RVA: 0x000BA528 File Offset: 0x000B8728
+		// Token: 0x06004D75 RID: 19829 RVA: 0x000BC914 File Offset: 0x000BAB14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06004C9D RID: 19613 RVA: 0x000BA535 File Offset: 0x000B8735
+		// Token: 0x06004D76 RID: 19830 RVA: 0x000BC921 File Offset: 0x000BAB21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -227,32 +227,32 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06004C9E RID: 19614 RVA: 0x000BA540 File Offset: 0x000B8740
+		// Token: 0x06004D77 RID: 19831 RVA: 0x000BC92C File Offset: 0x000BAB2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			this.itemInfos_.WriteTo(ref output, CookFoodResponse._repeated_itemInfos_codec);
-			if (this.RoleId != 0)
-			{
-				output.WriteRawTag(32);
-				output.WriteInt32(this.RoleId);
-			}
 			this.extraItemInfos_.WriteTo(ref output, CookFoodResponse._repeated_extraItemInfos_codec);
-			if (this.ActiveSkillType != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.ActiveSkillType);
-			}
 			if (this.Code != ErrorCode.Success)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(40);
 				output.WriteEnum((int)this.Code);
+			}
+			if (this.ActiveSkillType != 0)
+			{
+				output.WriteRawTag(88);
+				output.WriteInt32(this.ActiveSkillType);
 			}
 			if (this.Id != 0)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.Id);
+			}
+			if (this.RoleId != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.RoleId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06004C9F RID: 19615 RVA: 0x000BA5F4 File Offset: 0x000B87F4
+		// Token: 0x06004D78 RID: 19832 RVA: 0x000BC9E0 File Offset: 0x000BABE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -291,7 +291,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06004CA0 RID: 19616 RVA: 0x000BA6A0 File Offset: 0x000B88A0
+		// Token: 0x06004D79 RID: 19833 RVA: 0x000BCA8C File Offset: 0x000BAC8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CookFoodResponse other)
@@ -321,7 +321,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06004CA1 RID: 19617 RVA: 0x000BA73A File Offset: 0x000B893A
+		// Token: 0x06004D7A RID: 19834 RVA: 0x000BCB26 File Offset: 0x000BAD26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06004CA2 RID: 19618 RVA: 0x000BA744 File Offset: 0x000B8944
+		// Token: 0x06004D7B RID: 19835 RVA: 0x000BCB30 File Offset: 0x000BAD30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -341,39 +341,39 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 50U)
+				if (num <= 40U)
 				{
-					if (num == 26U)
+					if (num == 10U)
 					{
 						this.itemInfos_.AddEntriesFrom(ref input, CookFoodResponse._repeated_itemInfos_codec);
 						continue;
 					}
-					if (num == 32U)
-					{
-						this.RoleId = input.ReadInt32();
-						continue;
-					}
-					if (num == 50U)
+					if (num == 34U)
 					{
 						this.extraItemInfos_.AddEntriesFrom(ref input, CookFoodResponse._repeated_extraItemInfos_codec);
+						continue;
+					}
+					if (num == 40U)
+					{
+						this.Code = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 64U)
+					if (num == 88U)
 					{
 						this.ActiveSkillType = input.ReadInt32();
 						continue;
 					}
-					if (num == 72U)
-					{
-						this.Code = (ErrorCode)input.ReadEnum();
-						continue;
-					}
-					if (num == 80U)
+					if (num == 104U)
 					{
 						this.Id = input.ReadInt32();
+						continue;
+					}
+					if (num == 120U)
+					{
+						this.RoleId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -381,49 +381,49 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003102 RID: 12546
+		// Token: 0x04003199 RID: 12697
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003103 RID: 12547
-		public const int CodeFieldNumber = 9;
+		// Token: 0x0400319A RID: 12698
+		public const int CodeFieldNumber = 5;
 
-		// Token: 0x04003104 RID: 12548
+		// Token: 0x0400319B RID: 12699
 		private ErrorCode code_;
 
-		// Token: 0x04003105 RID: 12549
-		public const int IdFieldNumber = 10;
+		// Token: 0x0400319C RID: 12700
+		public const int IdFieldNumber = 13;
 
-		// Token: 0x04003106 RID: 12550
+		// Token: 0x0400319D RID: 12701
 		private int id_;
 
-		// Token: 0x04003107 RID: 12551
-		public const int ItemInfosFieldNumber = 3;
+		// Token: 0x0400319E RID: 12702
+		public const int ItemInfosFieldNumber = 1;
 
-		// Token: 0x04003108 RID: 12552
-		private static readonly FieldCodec<SingleItemInfo> _repeated_itemInfos_codec = FieldCodec.ForMessage<SingleItemInfo>(26U, SingleItemInfo.Parser);
+		// Token: 0x0400319F RID: 12703
+		private static readonly FieldCodec<SingleItemInfo> _repeated_itemInfos_codec = FieldCodec.ForMessage<SingleItemInfo>(10U, SingleItemInfo.Parser);
 
-		// Token: 0x04003109 RID: 12553
+		// Token: 0x040031A0 RID: 12704
 		private readonly RepeatedField<SingleItemInfo> itemInfos_ = new RepeatedField<SingleItemInfo>();
 
-		// Token: 0x0400310A RID: 12554
-		public const int ActiveSkillTypeFieldNumber = 8;
+		// Token: 0x040031A1 RID: 12705
+		public const int ActiveSkillTypeFieldNumber = 11;
 
-		// Token: 0x0400310B RID: 12555
+		// Token: 0x040031A2 RID: 12706
 		private int activeSkillType_;
 
-		// Token: 0x0400310C RID: 12556
-		public const int ExtraItemInfosFieldNumber = 6;
+		// Token: 0x040031A3 RID: 12707
+		public const int ExtraItemInfosFieldNumber = 4;
 
-		// Token: 0x0400310D RID: 12557
-		private static readonly FieldCodec<SingleItemInfo> _repeated_extraItemInfos_codec = FieldCodec.ForMessage<SingleItemInfo>(50U, SingleItemInfo.Parser);
+		// Token: 0x040031A4 RID: 12708
+		private static readonly FieldCodec<SingleItemInfo> _repeated_extraItemInfos_codec = FieldCodec.ForMessage<SingleItemInfo>(34U, SingleItemInfo.Parser);
 
-		// Token: 0x0400310E RID: 12558
+		// Token: 0x040031A5 RID: 12709
 		private readonly RepeatedField<SingleItemInfo> extraItemInfos_ = new RepeatedField<SingleItemInfo>();
 
-		// Token: 0x0400310F RID: 12559
-		public const int RoleIdFieldNumber = 4;
+		// Token: 0x040031A6 RID: 12710
+		public const int RoleIdFieldNumber = 15;
 
-		// Token: 0x04003110 RID: 12560
+		// Token: 0x040031A7 RID: 12711
 		private int roleId_;
 	}
 }

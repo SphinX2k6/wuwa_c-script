@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x020021F4 RID: 8692
-// (Invoke) Token: 0x06010E97 RID: 69271
+// Token: 0x020016D8 RID: 5848
+// (Invoke) Token: 0x0600E32A RID: 58154
 public delegate void TPreemptiveCancelMethod();

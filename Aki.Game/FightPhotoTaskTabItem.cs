@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001283 RID: 4739
+// Token: 0x02000737 RID: 1847
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoTaskTabItem : GridProxyAbstract<PhotoFightRewardTab>
 {
-	// Token: 0x06008168 RID: 33128 RVA: 0x001B7404 File Offset: 0x001B5604
+	// Token: 0x060054FF RID: 21759 RVA: 0x001C00D4 File Offset: 0x001BE2D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class FightPhotoTaskTabItem : GridProxyAbstract<PhotoFightRewardTab>
 		};
 	}
 
-	// Token: 0x06008169 RID: 33129 RVA: 0x001B7484 File Offset: 0x001B5684
+	// Token: 0x06005500 RID: 21760 RVA: 0x001C0154 File Offset: 0x001BE354
 	public override void Refresh(PhotoFightRewardTab data, bool isSelected, int gridIndex)
 	{
 		this.Data = new PhotoFightRewardTab?(data);
@@ -39,57 +39,57 @@ public class FightPhotoTaskTabItem : GridProxyAbstract<PhotoFightRewardTab>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600816A RID: 33130 RVA: 0x001B74E0 File Offset: 0x001B56E0
+	// Token: 0x06005501 RID: 21761 RVA: 0x001C01B0 File Offset: 0x001BE3B0
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		this.OnToggleClickCallBack(this.Data.Value.TabId);
 	}
 
-	// Token: 0x0600816B RID: 33131 RVA: 0x001B750B File Offset: 0x001B570B
+	// Token: 0x06005502 RID: 21762 RVA: 0x001C01DB File Offset: 0x001BE3DB
 	public override object GetKey(PhotoFightRewardTab data, int displayIndex)
 	{
 		return data.TabId;
 	}
 
-	// Token: 0x0600816C RID: 33132 RVA: 0x001B751C File Offset: 0x001B571C
+	// Token: 0x06005503 RID: 21763 RVA: 0x001C01EC File Offset: 0x001BE3EC
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600816D RID: 33133 RVA: 0x001B7542 File Offset: 0x001B5742
+	// Token: 0x06005504 RID: 21764 RVA: 0x001C0212 File Offset: 0x001BE412
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600816E RID: 33134 RVA: 0x001B754B File Offset: 0x001B574B
+	// Token: 0x06005505 RID: 21765 RVA: 0x001C021B File Offset: 0x001BE41B
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x04003AA3 RID: 15011
+	// Token: 0x04003B3B RID: 15163
 	private PhotoFightRewardTab? Data;
 
-	// Token: 0x04003AA4 RID: 15012
+	// Token: 0x04003B3C RID: 15164
 	public FightPhotoActivityData activityData;
 
-	// Token: 0x04003AA5 RID: 15013
+	// Token: 0x04003B3D RID: 15165
 	public Action<int> OnToggleClickCallBack = delegate(int tabId)
 	{
 	};
 
-	// Token: 0x0200789A RID: 30874
+	// Token: 0x02006A25 RID: 27173
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027BCE RID: 162766
+		// Token: 0x04022EFF RID: 143103
 		ToggleRoot,
-		// Token: 0x04027BCF RID: 162767
+		// Token: 0x04022F00 RID: 143104
 		TextTabName,
-		// Token: 0x04027BD0 RID: 162768
+		// Token: 0x04022F01 RID: 143105
 		ItemRedDot
 	}
 }

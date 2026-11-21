@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200491F RID: 18719
+	// Token: 0x02003896 RID: 14486
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationPhantomArenaCardToggle : NavigationButton
 	{
-		// Token: 0x06030E8C RID: 200332 RVA: 0x00B5B135 File Offset: 0x00B59335
+		// Token: 0x060259B9 RID: 154041 RVA: 0x00A95FA5 File Offset: 0x00A941A5
 		public NavigationPhantomArenaCardToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x170079C8 RID: 31176
-		// (get) Token: 0x06030E8D RID: 200333 RVA: 0x00B5B140 File Offset: 0x00B59340
+		// Token: 0x17004D30 RID: 19760
+		// (get) Token: 0x060259BA RID: 154042 RVA: 0x00A95FB0 File Offset: 0x00A941B0
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E8E RID: 200334 RVA: 0x00B5B182 File Offset: 0x00B59382
+		// Token: 0x060259BB RID: 154043 RVA: 0x00A95FF2 File Offset: 0x00A941F2
 		protected override void OnNotifyFocusListener(bool isSameListener)
 		{
 			if (this.Proxy != null && !isSameListener)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3DA RID: 107482
+		// Token: 0x04014C4D RID: 85069
 		protected PhantomArenaBattleProxy ProxyInternal;
 	}
 }

@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013C7 RID: 5063
+// Token: 0x0200087B RID: 2171
 [NullableContext(1)]
 [Nullable(0)]
 public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 {
-	// Token: 0x06008EE1 RID: 36577 RVA: 0x001ED96D File Offset: 0x001EBB6D
+	// Token: 0x06006276 RID: 25206 RVA: 0x001F648D File Offset: 0x001F468D
 	public NewPlayerSupportTrialRoleListComponent(NewPlayerSupportTrialRoleViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x06008EE2 RID: 36578 RVA: 0x001ED988 File Offset: 0x001EBB88
+	// Token: 0x06006277 RID: 25207 RVA: 0x001F64A8 File Offset: 0x001F46A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008EE3 RID: 36579 RVA: 0x001EDA68 File Offset: 0x001EBC68
+	// Token: 0x06006278 RID: 25208 RVA: 0x001F6588 File Offset: 0x001F4788
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewPlayerSupportTrialRoleListComponent.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008EE4 RID: 36580 RVA: 0x001EDAAC File Offset: 0x001EBCAC
+	// Token: 0x06006279 RID: 25209 RVA: 0x001F65CC File Offset: 0x001F47CC
 	private UniTask CreateRoleItem(UUIItem parent, TrialRoleGroupData trialRoleData)
 	{
 		NewPlayerSupportTrialRoleListComponent.<CreateRoleItem>d__9 <CreateRoleItem>d__;
@@ -59,7 +59,7 @@ public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 		return <CreateRoleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008EE5 RID: 36581 RVA: 0x001EDB00 File Offset: 0x001EBD00
+	// Token: 0x0600627A RID: 25210 RVA: 0x001F6620 File Offset: 0x001F4820
 	private void OnSelectRoleItem(NewPlayerSupportTrialRoleListItem roleItem, int groupId)
 	{
 		if (this.CurSelectRoleItem != null)
@@ -76,13 +76,13 @@ public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 		EventSystem.Instance.Emit(EEventName.OnGroupTrialRoleRedDotUpdate);
 	}
 
-	// Token: 0x06008EE6 RID: 36582 RVA: 0x001EDB51 File Offset: 0x001EBD51
+	// Token: 0x0600627B RID: 25211 RVA: 0x001F6671 File Offset: 0x001F4871
 	private bool CanSelectRoleItem()
 	{
 		return this.CanSelectRoleItemCallback == null || this.CanSelectRoleItemCallback();
 	}
 
-	// Token: 0x06008EE7 RID: 36583 RVA: 0x001EDB68 File Offset: 0x001EBD68
+	// Token: 0x0600627C RID: 25212 RVA: 0x001F6688 File Offset: 0x001F4888
 	public void RefreshDefaultSelected(int? selectedGroupId = null)
 	{
 		NewPlayerSupportTrialRoleListComponent.<>c__DisplayClass12_0 CS$<>8__locals1 = new NewPlayerSupportTrialRoleListComponent.<>c__DisplayClass12_0();
@@ -111,66 +111,66 @@ public class NewPlayerSupportTrialRoleListComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008EE8 RID: 36584 RVA: 0x001EDC54 File Offset: 0x001EBE54
+	// Token: 0x0600627D RID: 25213 RVA: 0x001F6774 File Offset: 0x001F4974
 	public void SetSelectRoleItemCallback(Action<int> callback)
 	{
 		this.SelectRoleItemCallback = callback;
 	}
 
-	// Token: 0x06008EE9 RID: 36585 RVA: 0x001EDC5D File Offset: 0x001EBE5D
+	// Token: 0x0600627E RID: 25214 RVA: 0x001F677D File Offset: 0x001F497D
 	public void SetCanSelectRoleItemCallback(Func<bool> callback)
 	{
 		this.CanSelectRoleItemCallback = callback;
 	}
 
-	// Token: 0x04003F2C RID: 16172
+	// Token: 0x04003FC4 RID: 16324
 	private readonly List<NewPlayerSupportTrialRoleListItem> RoleItemList = new List<NewPlayerSupportTrialRoleListItem>();
 
-	// Token: 0x04003F2D RID: 16173
+	// Token: 0x04003FC5 RID: 16325
 	[Nullable(2)]
 	private NewPlayerSupportTrialRoleListItem CurSelectRoleItem;
 
-	// Token: 0x04003F2E RID: 16174
+	// Token: 0x04003FC6 RID: 16326
 	[Nullable(2)]
 	private Action<int> SelectRoleItemCallback;
 
-	// Token: 0x04003F2F RID: 16175
+	// Token: 0x04003FC7 RID: 16327
 	[Nullable(2)]
 	private Func<bool> CanSelectRoleItemCallback;
 
-	// Token: 0x04003F30 RID: 16176
+	// Token: 0x04003FC8 RID: 16328
 	[Nullable(2)]
 	private NewPlayerSupportTrialRoleViewModel ViewModel;
 
-	// Token: 0x02007A48 RID: 31304
+	// Token: 0x02006BCE RID: 27598
 	[NullableContext(0)]
 	private static class EComponentType
 	{
-		// Token: 0x040283FA RID: 164858
+		// Token: 0x04023717 RID: 145175
 		public const int RoleItem1 = 0;
 
-		// Token: 0x040283FB RID: 164859
+		// Token: 0x04023718 RID: 145176
 		public const int RoleItem2 = 1;
 
-		// Token: 0x040283FC RID: 164860
+		// Token: 0x04023719 RID: 145177
 		public const int RoleItem3 = 2;
 
-		// Token: 0x040283FD RID: 164861
+		// Token: 0x0402371A RID: 145178
 		public const int RoleItem4 = 3;
 
-		// Token: 0x040283FE RID: 164862
+		// Token: 0x0402371B RID: 145179
 		public const int RoleItem5 = 4;
 
-		// Token: 0x040283FF RID: 164863
+		// Token: 0x0402371C RID: 145180
 		public const int RoleItem6 = 5;
 
-		// Token: 0x04028400 RID: 164864
+		// Token: 0x0402371D RID: 145181
 		public const int RoleItem7 = 6;
 
-		// Token: 0x04028401 RID: 164865
+		// Token: 0x0402371E RID: 145182
 		public const int RoleItem8 = 7;
 
-		// Token: 0x04028402 RID: 164866
+		// Token: 0x0402371F RID: 145183
 		public const int RoleItem9 = 8;
 	}
 }

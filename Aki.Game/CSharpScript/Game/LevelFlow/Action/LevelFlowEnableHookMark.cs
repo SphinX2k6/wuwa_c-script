@@ -4,10 +4,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F82 RID: 28546
+	// Token: 0x02006103 RID: 24835
 	public class LevelFlowEnableHookMark : LevelFlowActionBase
 	{
-		// Token: 0x060456DD RID: 284381 RVA: 0x011373B8 File Offset: 0x011355B8
+		// Token: 0x0603B88B RID: 243851 RVA: 0x010E11BC File Offset: 0x010DF3BC
 		[NullableContext(1)]
 		public LevelFlowEnableHookMark Init(bool isEnable)
 		{
@@ -15,14 +15,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456DE RID: 284382 RVA: 0x011373C2 File Offset: 0x011355C2
+		// Token: 0x0603B88C RID: 243852 RVA: 0x010E11C6 File Offset: 0x010DF3C6
 		protected override void OnExecute()
 		{
 			EventSystem.Instance.Emit<bool>(EEventName.EnableGrapplingHookMark, this.IsEnable);
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243B1 RID: 148401
+		// Token: 0x0401F666 RID: 128614
 		private bool IsEnable;
 	}
 }

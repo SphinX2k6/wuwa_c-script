@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Fight.AssestStruct
 {
-	// Token: 0x02003F85 RID: 16261
+	// Token: 0x0200321C RID: 12828
 	[UnrealObjectPath("/Game/Aki/Data/Fight/AssestStruct/BP_KiteConfig.BP_KiteConfig_C")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 96)]
 	public class BP_KiteConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029828 RID: 170024 RVA: 0x009C5D48 File Offset: 0x009C3F48
+		// Token: 0x0601FFD4 RID: 131028 RVA: 0x0093A799 File Offset: 0x00938999
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KiteConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,102 +22,102 @@ namespace AkiClient.Game.Aki.Data.Fight.AssestStruct
 			return BP_KiteConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06029829 RID: 170025 RVA: 0x009C5D6C File Offset: 0x009C3F6C
+		// Token: 0x0601FFD5 RID: 131029 RVA: 0x0093A7C0 File Offset: 0x009389C0
 		public BP_KiteConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_KiteConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602982A RID: 170026 RVA: 0x009C5D94 File Offset: 0x009C3F94
+		// Token: 0x0601FFD6 RID: 131030 RVA: 0x0093A7E8 File Offset: 0x009389E8
 		[NullableContext(1)]
 		public BP_KiteConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KiteConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170063A4 RID: 25508
-		// (get) Token: 0x0602982B RID: 170027 RVA: 0x009C5DC7 File Offset: 0x009C3FC7
-		// (set) Token: 0x0602982C RID: 170028 RVA: 0x009C5DD7 File Offset: 0x009C3FD7
+		// Token: 0x17003C9F RID: 15519
+		// (get) Token: 0x0601FFD7 RID: 131031 RVA: 0x0093A81B File Offset: 0x00938A1B
+		// (set) Token: 0x0601FFD8 RID: 131032 RVA: 0x0093A82B File Offset: 0x00938A2B
 		public unsafe float 收缩速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_收缩速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_收缩速度) = value;
 			}
 		}
 
-		// Token: 0x170063A5 RID: 25509
-		// (get) Token: 0x0602982D RID: 170029 RVA: 0x009C5DE8 File Offset: 0x009C3FE8
-		// (set) Token: 0x0602982E RID: 170030 RVA: 0x009C5DF8 File Offset: 0x009C3FF8
+		// Token: 0x17003CA0 RID: 15520
+		// (get) Token: 0x0601FFD9 RID: 131033 RVA: 0x0093A83C File Offset: 0x00938A3C
+		// (set) Token: 0x0601FFDA RID: 131034 RVA: 0x0093A84C File Offset: 0x00938A4C
 		public unsafe float 最短收缩距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_最短收缩距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_最短收缩距离) = value;
 			}
 		}
 
-		// Token: 0x170063A6 RID: 25510
-		// (get) Token: 0x0602982F RID: 170031 RVA: 0x009C5E09 File Offset: 0x009C4009
-		// (set) Token: 0x06029830 RID: 170032 RVA: 0x009C5E19 File Offset: 0x009C4019
+		// Token: 0x17003CA1 RID: 15521
+		// (get) Token: 0x0601FFDB RID: 131035 RVA: 0x0093A85D File Offset: 0x00938A5D
+		// (set) Token: 0x0601FFDC RID: 131036 RVA: 0x0093A86D File Offset: 0x00938A6D
 		public unsafe float 重力强度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_重力强度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_重力强度) = value;
 			}
 		}
 
-		// Token: 0x170063A7 RID: 25511
-		// (get) Token: 0x06029831 RID: 170033 RVA: 0x009C5E2A File Offset: 0x009C402A
-		// (set) Token: 0x06029832 RID: 170034 RVA: 0x009C5E3A File Offset: 0x009C403A
+		// Token: 0x17003CA2 RID: 15522
+		// (get) Token: 0x0601FFDD RID: 131037 RVA: 0x0093A87E File Offset: 0x00938A7E
+		// (set) Token: 0x0601FFDE RID: 131038 RVA: 0x0093A88E File Offset: 0x00938A8E
 		public unsafe float 速度衰减系数_每秒保留比例_
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_速度衰减系数_每秒保留比例_);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_KiteConfig_C.__PropertyOffset_速度衰减系数_每秒保留比例_) = value;
 			}
 		}
 
-		// Token: 0x06029833 RID: 170035 RVA: 0x009C5E4B File Offset: 0x009C404B
+		// Token: 0x0601FFDF RID: 131039 RVA: 0x0093A89F File Offset: 0x00938A9F
 		protected BP_KiteConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401546C RID: 87148
+		// Token: 0x040112FA RID: 70394
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Fight/AssestStruct/BP_KiteConfig.BP_KiteConfig_C";
 
-		// Token: 0x0401546D RID: 87149
+		// Token: 0x040112FB RID: 70395
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401546E RID: 87150
+		// Token: 0x040112FC RID: 70396
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401546F RID: 87151
-		internal static int __PropertyOffset_0;
+		// Token: 0x040112FD RID: 70397
+		internal static int __PropertyOffset_收缩速度;
 
-		// Token: 0x04015470 RID: 87152
-		internal static int __PropertyOffset_1;
+		// Token: 0x040112FE RID: 70398
+		internal static int __PropertyOffset_最短收缩距离;
 
-		// Token: 0x04015471 RID: 87153
-		internal static int __PropertyOffset_2;
+		// Token: 0x040112FF RID: 70399
+		internal static int __PropertyOffset_重力强度;
 
-		// Token: 0x04015472 RID: 87154
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011300 RID: 70400
+		internal static int __PropertyOffset_速度衰减系数_每秒保留比例_;
 	}
 }

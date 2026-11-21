@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020018B6 RID: 6326
+// Token: 0x02000D6F RID: 3439
 public class DangoPluginIconInfo : IDangoPluginIconInfo
 {
-	// Token: 0x17000F59 RID: 3929
-	// (get) Token: 0x0600B957 RID: 47447 RVA: 0x002A0BF6 File Offset: 0x0029EDF6
-	// (set) Token: 0x0600B958 RID: 47448 RVA: 0x002A0BFE File Offset: 0x0029EDFE
+	// Token: 0x17000F7C RID: 3964
+	// (get) Token: 0x06008D40 RID: 36160 RVA: 0x002AB34A File Offset: 0x002A954A
+	// (set) Token: 0x06008D41 RID: 36161 RVA: 0x002AB352 File Offset: 0x002A9552
 	public int PluginItemId { get; set; }
 }

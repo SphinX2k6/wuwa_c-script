@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D26 RID: 19750
+	// Token: 0x02003CDF RID: 15583
 	public enum ERoleDevelopItemJumpType
 	{
-		// Token: 0x0401B21E RID: 111134
+		// Token: 0x04015BB8 RID: 89016
 		AccessPath,
-		// Token: 0x0401B21F RID: 111135
+		// Token: 0x04015BB9 RID: 89017
 		DungeonDetection,
-		// Token: 0x0401B220 RID: 111136
+		// Token: 0x04015BBA RID: 89018
 		SilentAreaDetection
 	}
 }

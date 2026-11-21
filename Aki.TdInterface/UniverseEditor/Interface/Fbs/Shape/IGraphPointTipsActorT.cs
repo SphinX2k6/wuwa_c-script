@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C17 RID: 15383
+	// Token: 0x02004023 RID: 16419
 	public class IGraphPointTipsActorT
 	{
-		// Token: 0x170069CE RID: 27086
-		// (get) Token: 0x0601535D RID: 86877 RVA: 0x0031271C File Offset: 0x0031091C
-		// (set) Token: 0x0601535E RID: 86878 RVA: 0x00312724 File Offset: 0x00310924
+		// Token: 0x17006F76 RID: 28534
+		// (get) Token: 0x06016853 RID: 92243 RVA: 0x003392A4 File Offset: 0x003374A4
+		// (set) Token: 0x06016854 RID: 92244 RVA: 0x003392AC File Offset: 0x003374AC
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x170069CF RID: 27087
-		// (get) Token: 0x0601535F RID: 86879 RVA: 0x0031272D File Offset: 0x0031092D
-		// (set) Token: 0x06015360 RID: 86880 RVA: 0x00312735 File Offset: 0x00310935
+		// Token: 0x17006F77 RID: 28535
+		// (get) Token: 0x06016855 RID: 92245 RVA: 0x003392B5 File Offset: 0x003374B5
+		// (set) Token: 0x06016856 RID: 92246 RVA: 0x003392BD File Offset: 0x003374BD
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x170069D0 RID: 27088
-		// (get) Token: 0x06015361 RID: 86881 RVA: 0x0031273E File Offset: 0x0031093E
-		// (set) Token: 0x06015362 RID: 86882 RVA: 0x00312746 File Offset: 0x00310946
+		// Token: 0x17006F78 RID: 28536
+		// (get) Token: 0x06016857 RID: 92247 RVA: 0x003392C6 File Offset: 0x003374C6
+		// (set) Token: 0x06016858 RID: 92248 RVA: 0x003392CE File Offset: 0x003374CE
 		public float Size { get; set; }
 
-		// Token: 0x170069D1 RID: 27089
-		// (get) Token: 0x06015363 RID: 86883 RVA: 0x0031274F File Offset: 0x0031094F
-		// (set) Token: 0x06015364 RID: 86884 RVA: 0x00312757 File Offset: 0x00310957
+		// Token: 0x17006F79 RID: 28537
+		// (get) Token: 0x06016859 RID: 92249 RVA: 0x003392D7 File Offset: 0x003374D7
+		// (set) Token: 0x0601685A RID: 92250 RVA: 0x003392DF File Offset: 0x003374DF
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015365 RID: 86885 RVA: 0x00312760 File Offset: 0x00310960
+		// Token: 0x0601685B RID: 92251 RVA: 0x003392E8 File Offset: 0x003374E8
 		public IGraphPointTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

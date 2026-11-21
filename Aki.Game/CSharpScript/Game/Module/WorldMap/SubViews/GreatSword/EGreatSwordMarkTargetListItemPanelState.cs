@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.GreatSword
 {
-	// Token: 0x0200481B RID: 18459
+	// Token: 0x0200374C RID: 14156
 	public enum EGreatSwordMarkTargetListItemPanelState
 	{
-		// Token: 0x0401A009 RID: 106505
+		// Token: 0x040146BD RID: 83645
 		Unfinished,
-		// Token: 0x0401A00A RID: 106506
+		// Token: 0x040146BE RID: 83646
 		Finished
 	}
 }

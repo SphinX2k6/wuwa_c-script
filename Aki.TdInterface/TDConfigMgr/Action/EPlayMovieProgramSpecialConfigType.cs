@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200167A RID: 5754
+	// Token: 0x020017ED RID: 6125
 	[EnumExtensions]
 	public enum EPlayMovieProgramSpecialConfigType
 	{
-		// Token: 0x04004D1B RID: 19739
+		// Token: 0x04005120 RID: 20768
 		Mp4UiReplaceMaterial
 	}
 }

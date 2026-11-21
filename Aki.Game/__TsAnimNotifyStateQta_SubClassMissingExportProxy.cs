@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003769 RID: 14185
+// Token: 0x02002CE2 RID: 11490
 public class __TsAnimNotifyStateQta_SubClassMissingExportProxy : __TsAnimNotifyStateQta_InheritProxy
 {
-	// Token: 0x0601E632 RID: 124466 RVA: 0x0088C41C File Offset: 0x0088A61C
+	// Token: 0x0601C32B RID: 115499 RVA: 0x008B2818 File Offset: 0x008B0A18
 	[NullableContext(1)]
 	protected __TsAnimNotifyStateQta_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateQta.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E633 RID: 124467 RVA: 0x0088C44F File Offset: 0x0088A64F
+	// Token: 0x0601C32C RID: 115500 RVA: 0x008B284B File Offset: 0x008B0A4B
 	protected __TsAnimNotifyStateQta_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

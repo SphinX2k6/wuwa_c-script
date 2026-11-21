@@ -10,13 +10,13 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002BAC RID: 11180
+// Token: 0x02002128 RID: 8488
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class TimeOfDayController : UiControllerBase
 {
-	// Token: 0x06017294 RID: 94868 RVA: 0x005DEEB4 File Offset: 0x005DD0B4
+	// Token: 0x06014CC5 RID: 85189 RVA: 0x0060BA88 File Offset: 0x00609C88
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.EnterGameSuccess, new Action(this.OnEnterGame));
@@ -26,7 +26,7 @@ public class TimeOfDayController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDoneAndCloseLoading));
 	}
 
-	// Token: 0x06017295 RID: 94869 RVA: 0x005DEF48 File Offset: 0x005DD148
+	// Token: 0x06014CC6 RID: 85190 RVA: 0x0060BB1C File Offset: 0x00609D1C
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.EnterGameSuccess, new Action(this.OnEnterGame));
@@ -36,7 +36,7 @@ public class TimeOfDayController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDoneAndCloseLoading));
 	}
 
-	// Token: 0x06017296 RID: 94870 RVA: 0x005DEFDC File Offset: 0x005DD1DC
+	// Token: 0x06014CC7 RID: 85191 RVA: 0x0060BBB0 File Offset: 0x00609DB0
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SceneDateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSceneDateNotify));
@@ -45,7 +45,7 @@ public class TimeOfDayController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.TimeResetNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTimeResetNotify));
 	}
 
-	// Token: 0x06017297 RID: 94871 RVA: 0x005DF05C File Offset: 0x005DD25C
+	// Token: 0x06014CC8 RID: 85192 RVA: 0x0060BC30 File Offset: 0x00609E30
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SceneDateNotify);
@@ -54,7 +54,7 @@ public class TimeOfDayController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.TimeResetNotify);
 	}
 
-	// Token: 0x06017298 RID: 94872 RVA: 0x005DF0AC File Offset: 0x005DD2AC
+	// Token: 0x06014CC9 RID: 85193 RVA: 0x0060BC80 File Offset: 0x00609E80
 	protected override void OnTick(float delta)
 	{
 		if (!this.TimeInitState || !this.EnterGameFlag || this.LoadingFlag || this.UiAnimFlag || TimeOfDayModel.Instance.TimeRunLockState)
@@ -66,26 +66,26 @@ public class TimeOfDayController : UiControllerBase
 		this.TickDelta = 0.0;
 	}
 
-	// Token: 0x06017299 RID: 94873 RVA: 0x005DF110 File Offset: 0x005DD310
+	// Token: 0x06014CCA RID: 85194 RVA: 0x0060BCE4 File Offset: 0x00609EE4
 	private void OnEnterGame()
 	{
 		this.EnterGameFlag = true;
 	}
 
-	// Token: 0x0601729A RID: 94874 RVA: 0x005DF119 File Offset: 0x005DD319
+	// Token: 0x06014CCB RID: 85195 RVA: 0x0060BCED File Offset: 0x00609EED
 	private void OnBeforeLoadMap()
 	{
 		this.LoadingFlag = true;
 	}
 
-	// Token: 0x0601729B RID: 94875 RVA: 0x005DF122 File Offset: 0x005DD322
+	// Token: 0x06014CCC RID: 85196 RVA: 0x0060BCF6 File Offset: 0x00609EF6
 	private void OnWorldDoneAndCloseLoading()
 	{
 		this.LoadingFlag = false;
 		this.SyncGlobalGameTime(TimeOfDayModel.Instance.GameTime.Second, false);
 	}
 
-	// Token: 0x0601729C RID: 94876 RVA: 0x005DF141 File Offset: 0x005DD341
+	// Token: 0x06014CCD RID: 85197 RVA: 0x0060BD15 File Offset: 0x00609F15
 	private void OnPauseGame(int flag)
 	{
 		if (flag == 1)
@@ -99,13 +99,13 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601729D RID: 94877 RVA: 0x005DF158 File Offset: 0x005DD358
+	// Token: 0x06014CCE RID: 85198 RVA: 0x0060BD2C File Offset: 0x00609F2C
 	private void OnLoginSuccess(string account)
 	{
 		TimeOfDayModel.Instance.PlayerAccount = account;
 	}
 
-	// Token: 0x0601729E RID: 94878 RVA: 0x005DF168 File Offset: 0x005DD368
+	// Token: 0x06014CCF RID: 85199 RVA: 0x0060BD3C File Offset: 0x00609F3C
 	private void TimeFlow(double realTimeMillionSecond)
 	{
 		float num = GameModeModel.Instance.IsMulti ? 1f : TimeOfDayModel.Instance.TimeScale;
@@ -117,7 +117,7 @@ public class TimeOfDayController : UiControllerBase
 		this.SetTimeInternal(TimeOfDayModel.Instance.GameTime.Second + num2, true);
 	}
 
-	// Token: 0x0601729F RID: 94879 RVA: 0x005DF1CC File Offset: 0x005DD3CC
+	// Token: 0x06014CD0 RID: 85200 RVA: 0x0060BDA0 File Offset: 0x00609FA0
 	private bool CheckCanOpenView()
 	{
 		if (Global.BaseCharacter == null)
@@ -173,7 +173,7 @@ public class TimeOfDayController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060172A0 RID: 94880 RVA: 0x005DF348 File Offset: 0x005DD548
+	// Token: 0x06014CD1 RID: 85201 RVA: 0x0060BF1C File Offset: 0x0060A11C
 	private void SetTimeInternal(double second, bool needCheckSendTimeToServer = true)
 	{
 		double second2 = second % 86400.0;
@@ -187,7 +187,7 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172A1 RID: 94881 RVA: 0x005DF3A8 File Offset: 0x005DD5A8
+	// Token: 0x06014CD2 RID: 85202 RVA: 0x0060BF7C File Offset: 0x0060A17C
 	private void CheckDayChangeOrNeedSyncTimeToServer(double second)
 	{
 		double num = second;
@@ -214,7 +214,7 @@ public class TimeOfDayController : UiControllerBase
 		this.RecordLastHour((int)num2);
 	}
 
-	// Token: 0x060172A2 RID: 94882 RVA: 0x005DF490 File Offset: 0x005DD690
+	// Token: 0x06014CD3 RID: 85203 RVA: 0x0060C064 File Offset: 0x0060A264
 	public void SyncServerGameTime(double second)
 	{
 		if (GlobalData.World == null || (GameModeModel.Instance.IsMulti && !CreatureModel.Instance.IsMyWorld()))
@@ -228,7 +228,7 @@ public class TimeOfDayController : UiControllerBase
 		this.SyncTime = Time.Instance.Now;
 	}
 
-	// Token: 0x060172A3 RID: 94883 RVA: 0x005DF50F File Offset: 0x005DD70F
+	// Token: 0x06014CD4 RID: 85204 RVA: 0x0060C0E3 File Offset: 0x0060A2E3
 	public void SyncGlobalGameTime(double second, bool fromAnimNeed = false)
 	{
 		if (!this.IsSyncToEngine)
@@ -246,7 +246,7 @@ public class TimeOfDayController : UiControllerBase
 		UKuroRenderingRuntimeBPPluginBPLibrary.SetGlobalGITime(GlobalData.World, (float)TodDayTime.ConvertToHour(second));
 	}
 
-	// Token: 0x060172A4 RID: 94884 RVA: 0x005DF544 File Offset: 0x005DD744
+	// Token: 0x06014CD5 RID: 85205 RVA: 0x0060C118 File Offset: 0x0060A318
 	private void SyncAudioRTPCDayTime(double second)
 	{
 		if (GlobalData.World == null)
@@ -262,57 +262,57 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172A5 RID: 94885 RVA: 0x005DF5C2 File Offset: 0x005DD7C2
+	// Token: 0x06014CD6 RID: 85206 RVA: 0x0060C196 File Offset: 0x0060A396
 	public void ChangeTimeScale(float timeScale)
 	{
 		TimeOfDayModel.Instance.SetTimeScale(timeScale, true);
 	}
 
-	// Token: 0x060172A6 RID: 94886 RVA: 0x005DF5D0 File Offset: 0x005DD7D0
+	// Token: 0x06014CD7 RID: 85207 RVA: 0x0060C1A4 File Offset: 0x0060A3A4
 	public void PauseTime()
 	{
 		TimeOfDayModel.Instance.SetTimeScale(0f, true);
 	}
 
-	// Token: 0x060172A7 RID: 94887 RVA: 0x005DF5E2 File Offset: 0x005DD7E2
+	// Token: 0x06014CD8 RID: 85208 RVA: 0x0060C1B6 File Offset: 0x0060A3B6
 	public void ResumeTimeScale(bool forceNormal = true)
 	{
 		TimeOfDayModel.Instance.SetTimeScale(forceNormal ? 1f : TimeOfDayModel.Instance.OldTimeScale, true);
 	}
 
-	// Token: 0x060172A8 RID: 94888 RVA: 0x005DF603 File Offset: 0x005DD803
+	// Token: 0x06014CD9 RID: 85209 RVA: 0x0060C1D7 File Offset: 0x0060A3D7
 	public void ForcePauseTime()
 	{
 		this.PauseTime();
 		TimeOfDayModel.Instance.FreezeTimeScale = true;
 	}
 
-	// Token: 0x060172A9 RID: 94889 RVA: 0x005DF616 File Offset: 0x005DD816
+	// Token: 0x06014CDA RID: 85210 RVA: 0x0060C1EA File Offset: 0x0060A3EA
 	public void ForceResumeTime()
 	{
 		TimeOfDayModel.Instance.FreezeTimeScale = false;
 		this.ResumeTimeScale(true);
 	}
 
-	// Token: 0x060172AA RID: 94890 RVA: 0x005DF62A File Offset: 0x005DD82A
+	// Token: 0x06014CDB RID: 85211 RVA: 0x0060C1FE File Offset: 0x0060A3FE
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.TimeOfDaySecondView, new Func<EUiViewName, object, bool>(this.CanOpenView), "TimeOfDayController.CanOpenView");
 	}
 
-	// Token: 0x060172AB RID: 94891 RVA: 0x005DF64C File Offset: 0x005DD84C
+	// Token: 0x06014CDC RID: 85212 RVA: 0x0060C220 File Offset: 0x0060A420
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.TimeOfDaySecondView, new Func<EUiViewName, object, bool>(this.CanOpenView));
 	}
 
-	// Token: 0x060172AC RID: 94892 RVA: 0x005DF669 File Offset: 0x005DD869
+	// Token: 0x06014CDD RID: 85213 RVA: 0x0060C23D File Offset: 0x0060A43D
 	public bool CanOpenView(EUiViewName viewName, object param)
 	{
 		return this.CanOpenView(viewName);
 	}
 
-	// Token: 0x060172AD RID: 94893 RVA: 0x005DF674 File Offset: 0x005DD874
+	// Token: 0x06014CDE RID: 85214 RVA: 0x0060C248 File Offset: 0x0060A448
 	public bool CanOpenView(EUiViewName viewName)
 	{
 		if (!WeatherModel.Instance.CanSwitchWeather())
@@ -329,7 +329,7 @@ public class TimeOfDayController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060172AE RID: 94894 RVA: 0x005DF6E4 File Offset: 0x005DD8E4
+	// Token: 0x06014CDF RID: 85215 RVA: 0x0060C2B8 File Offset: 0x0060A4B8
 	public unsafe void SyncSceneTime(double hour, double minute, long passedRealMillionSecond, bool showUi = false)
 	{
 		TimeOfDayModel.Instance.SetPassSceneTime(TimeOfDayModel.Instance.GameTime.Second);
@@ -389,7 +389,7 @@ public class TimeOfDayController : UiControllerBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x060172AF RID: 94895 RVA: 0x005DF820 File Offset: 0x005DDA20
+	// Token: 0x06014CE0 RID: 85216 RVA: 0x0060C3F4 File Offset: 0x0060A5F4
 	public void AdjustTime(double second, SceneDateUpdateReason reason, uint addDay = 0U, bool needEmitTs = true)
 	{
 		if (GlobalData.World == null || (GameModeModel.Instance.IsMulti && !CreatureModel.Instance.IsMyWorld()))
@@ -406,7 +406,7 @@ public class TimeOfDayController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.AdjustTime);
 	}
 
-	// Token: 0x060172B0 RID: 94896 RVA: 0x005DF8BC File Offset: 0x005DDABC
+	// Token: 0x06014CE1 RID: 85217 RVA: 0x0060C490 File Offset: 0x0060A690
 	private void ChangeSceneTimeDateRequest(uint addDay, int hour, int minute, SceneDateUpdateReason reason, bool needEmitTs = false)
 	{
 		if (GlobalData.World == null || (GameModeModel.Instance.IsMulti && !CreatureModel.Instance.IsMyWorld()))
@@ -427,34 +427,34 @@ public class TimeOfDayController : UiControllerBase
 			}
 			if (updateSceneDateResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(updateSceneDateResponse.ErrorCode, 18163, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(updateSceneDateResponse.ErrorCode, 24289, null, true, true);
 				return;
 			}
 			TimeOfDayModel.Instance.SetCurrentDay(updateSceneDateResponse.CurrDate);
 		}, 0);
 	}
 
-	// Token: 0x060172B1 RID: 94897 RVA: 0x005DF940 File Offset: 0x005DDB40
+	// Token: 0x06014CE2 RID: 85218 RVA: 0x0060C514 File Offset: 0x0060A714
 	public bool CheckInMinuteSpan(int startMinute, int endMinute)
 	{
 		TTodTimeSpan minuteSpan = new TTodTimeSpan(startMinute, endMinute);
 		return TodDayTime.CheckInMinuteSpan(TimeOfDayModel.Instance.GameTime.Minute, minuteSpan);
 	}
 
-	// Token: 0x060172B2 RID: 94898 RVA: 0x005DF96A File Offset: 0x005DDB6A
+	// Token: 0x06014CE3 RID: 85219 RVA: 0x0060C53E File Offset: 0x0060A73E
 	public void AdjustTimeByMinute(int minute, SceneDateUpdateReason reason)
 	{
 		this.AdjustTime(TodDayTime.ConvertFromMinute((double)minute), reason, 0U, true);
 	}
 
-	// Token: 0x060172B3 RID: 94899 RVA: 0x005DF97C File Offset: 0x005DDB7C
+	// Token: 0x06014CE4 RID: 85220 RVA: 0x0060C550 File Offset: 0x0060A750
 	private void OnSceneDateNotify([Nullable(2)] IMessage msg, Net.CallbackStatus status)
 	{
 		SceneDateNotify sceneDateNotify = (SceneDateNotify)msg;
 		TimeOfDayModel.Instance.SetCurrentDay(sceneDateNotify.CurrDate);
 	}
 
-	// Token: 0x060172B4 RID: 94900 RVA: 0x005DF9A4 File Offset: 0x005DDBA4
+	// Token: 0x06014CE5 RID: 85221 RVA: 0x0060C578 File Offset: 0x0060A778
 	private void SyncSceneTimeNotify([Nullable(2)] IMessage msg, Net.CallbackStatus status)
 	{
 		SyncSceneTimeNotify syncSceneTimeNotify = (SyncSceneTimeNotify)msg;
@@ -462,7 +462,7 @@ public class TimeOfDayController : UiControllerBase
 		this.SyncSceneTime((double)timeInfo.Hour, (double)timeInfo.Minute, timeInfo.OwnerTimeClockTimeSpan, syncSceneTimeNotify.ShowUi);
 	}
 
-	// Token: 0x060172B5 RID: 94901 RVA: 0x005DF9E0 File Offset: 0x005DDBE0
+	// Token: 0x06014CE6 RID: 85222 RVA: 0x0060C5B4 File Offset: 0x0060A7B4
 	private void OnServerTimeLock([Nullable(2)] IMessage msg, Net.CallbackStatus status)
 	{
 		TimeLockInfoNotify timeLockInfoNotify = (TimeLockInfoNotify)msg;
@@ -487,7 +487,7 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172B6 RID: 94902 RVA: 0x005DFAB0 File Offset: 0x005DDCB0
+	// Token: 0x06014CE7 RID: 85223 RVA: 0x0060C684 File Offset: 0x0060A884
 	private void OnTimeResetNotify([Nullable(2)] IMessage msg, Net.CallbackStatus status)
 	{
 		TimeResetNotify timeResetNotify = (TimeResetNotify)msg;
@@ -504,13 +504,13 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172B7 RID: 94903 RVA: 0x005DFB2F File Offset: 0x005DDD2F
+	// Token: 0x06014CE8 RID: 85224 RVA: 0x0060C703 File Offset: 0x0060A903
 	public void SetUiAnimFlag(bool value)
 	{
 		this.UiAnimFlag = value;
 	}
 
-	// Token: 0x060172B8 RID: 94904 RVA: 0x005DFB38 File Offset: 0x005DDD38
+	// Token: 0x06014CE9 RID: 85225 RVA: 0x0060C70C File Offset: 0x0060A90C
 	public void RecordLastHour(int hour)
 	{
 		if (this.LastHour != (double)hour)
@@ -520,31 +520,31 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172B9 RID: 94905 RVA: 0x005DFB5C File Offset: 0x005DDD5C
+	// Token: 0x06014CEA RID: 85226 RVA: 0x0060C730 File Offset: 0x0060A930
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060172BA RID: 94906 RVA: 0x005DFB5F File Offset: 0x005DDD5F
+	// Token: 0x06014CEB RID: 85227 RVA: 0x0060C733 File Offset: 0x0060A933
 	private void TsRequestAdjustTime(double second, int reason, int addDay)
 	{
 		this.AdjustTime(second, (SceneDateUpdateReason)reason, (uint)addDay, false);
 	}
 
-	// Token: 0x060172BB RID: 94907 RVA: 0x005DFB6B File Offset: 0x005DDD6B
+	// Token: 0x06014CEC RID: 85228 RVA: 0x0060C73F File Offset: 0x0060A93F
 	private void TsRequestLockTimeRunStateClient(bool state)
 	{
 		TimeOfDayModel.Instance.SetTimeRunLockStateClient(state, false);
 	}
 
-	// Token: 0x060172BC RID: 94908 RVA: 0x005DFB79 File Offset: 0x005DDD79
+	// Token: 0x06014CED RID: 85229 RVA: 0x0060C74D File Offset: 0x0060A94D
 	private void TsRequestLockTimeSyncLockStateClient(bool state)
 	{
 		TimeOfDayModel.Instance.SetTimeSyncLockStateClient(state, false);
 	}
 
-	// Token: 0x060172BD RID: 94909 RVA: 0x005DFB88 File Offset: 0x005DDD88
+	// Token: 0x06014CEE RID: 85230 RVA: 0x0060C75C File Offset: 0x0060A95C
 	private void TsRequestSetTimeScale(string scale)
 	{
 		float value;
@@ -561,50 +561,50 @@ public class TimeOfDayController : UiControllerBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060172BE RID: 94910 RVA: 0x005DFBD3 File Offset: 0x005DDDD3
+	// Token: 0x06014CEF RID: 85231 RVA: 0x0060C7A7 File Offset: 0x0060A9A7
 	private void TsResponseTimeCanOpenViewState(bool state)
 	{
 		this.CanOpenViewState = state;
 	}
 
-	// Token: 0x060172BF RID: 94911 RVA: 0x005DFBDC File Offset: 0x005DDDDC
+	// Token: 0x06014CF0 RID: 85232 RVA: 0x0060C7B0 File Offset: 0x0060A9B0
 	private void TsResponseSyncServerGameTime(double currentDay)
 	{
 		TimeOfDayModel.Instance.SetCurrentDay(currentDay);
 	}
 
-	// Token: 0x060172C0 RID: 94912 RVA: 0x005DFBE9 File Offset: 0x005DDDE9
+	// Token: 0x06014CF1 RID: 85233 RVA: 0x0060C7BD File Offset: 0x0060A9BD
 	private void TsOnTimeEnterGame()
 	{
 		this.OnEnterGame();
 	}
 
-	// Token: 0x060172C1 RID: 94913 RVA: 0x005DFBF1 File Offset: 0x005DDDF1
+	// Token: 0x06014CF2 RID: 85234 RVA: 0x0060C7C5 File Offset: 0x0060A9C5
 	private void TsOnTimeBeforeLoadMap()
 	{
 		this.OnBeforeLoadMap();
 	}
 
-	// Token: 0x060172C2 RID: 94914 RVA: 0x005DFBF9 File Offset: 0x005DDDF9
+	// Token: 0x06014CF3 RID: 85235 RVA: 0x0060C7CD File Offset: 0x0060A9CD
 	private void TsOnTimeWorldDone()
 	{
 		this.OnWorldDoneAndCloseLoading();
 	}
 
-	// Token: 0x060172C3 RID: 94915 RVA: 0x005DFC01 File Offset: 0x005DDE01
+	// Token: 0x06014CF4 RID: 85236 RVA: 0x0060C7D5 File Offset: 0x0060A9D5
 	private void TsSyncSceneTime(int hour, int minute, int passedRealMillionSecond)
 	{
 		this.SyncSceneTime((double)hour, (double)minute, (long)passedRealMillionSecond, false);
 	}
 
-	// Token: 0x060172C4 RID: 94916 RVA: 0x005DFC10 File Offset: 0x005DDE10
+	// Token: 0x06014CF5 RID: 85237 RVA: 0x0060C7E4 File Offset: 0x0060A9E4
 	private void TsSyncUseClientLockState(bool state)
 	{
 		TimeOfDayModel.Instance.SetUseClientLockState(state);
 	}
 
-	// Token: 0x17001F47 RID: 8007
-	// (get) Token: 0x060172C5 RID: 94917 RVA: 0x005DFC1D File Offset: 0x005DDE1D
+	// Token: 0x17001F9F RID: 8095
+	// (get) Token: 0x06014CF6 RID: 85238 RVA: 0x0060C7F1 File Offset: 0x0060A9F1
 	public static TimeOfDayController Instance
 	{
 		get
@@ -613,7 +613,7 @@ public class TimeOfDayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060172C6 RID: 94918 RVA: 0x005DFC24 File Offset: 0x005DDE24
+	// Token: 0x06014CF7 RID: 85239 RVA: 0x0060C7F8 File Offset: 0x0060A9F8
 	public static TimeOfDayController GetOrCreateInstance()
 	{
 		if (TimeOfDayController._Instance == null)
@@ -623,7 +623,7 @@ public class TimeOfDayController : UiControllerBase
 		return TimeOfDayController._Instance;
 	}
 
-	// Token: 0x060172C7 RID: 94919 RVA: 0x005DFC38 File Offset: 0x005DDE38
+	// Token: 0x06014CF8 RID: 85240 RVA: 0x0060C80C File Offset: 0x0060AA0C
 	public static bool CreateInstance()
 	{
 		if (TimeOfDayController._Instance != null)
@@ -634,66 +634,66 @@ public class TimeOfDayController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060172C8 RID: 94920 RVA: 0x005DFC4E File Offset: 0x005DDE4E
+	// Token: 0x06014CF9 RID: 85241 RVA: 0x0060C822 File Offset: 0x0060AA22
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060172C9 RID: 94921 RVA: 0x005DFC50 File Offset: 0x005DDE50
+	// Token: 0x06014CFA RID: 85242 RVA: 0x0060C824 File Offset: 0x0060AA24
 	public static void ResetStaticDefaultValue()
 	{
 		TimeOfDayController._Instance = null;
 	}
 
-	// Token: 0x060172CA RID: 94922 RVA: 0x005DFC58 File Offset: 0x005DDE58
+	// Token: 0x06014CFB RID: 85243 RVA: 0x0060C82C File Offset: 0x0060AA2C
 	static TimeOfDayController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TimeOfDayController.CreateStaticDefaultValue), new Action(TimeOfDayController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AD51 RID: 44369
+	// Token: 0x0400B158 RID: 45400
 	private const int SENDTIMEGAP = 2000;
 
-	// Token: 0x0400AD52 RID: 44370
+	// Token: 0x0400B159 RID: 45401
 	public bool IsSyncToEngine = true;
 
-	// Token: 0x0400AD53 RID: 44371
+	// Token: 0x0400B15A RID: 45402
 	private double TickDelta;
 
-	// Token: 0x0400AD54 RID: 44372
+	// Token: 0x0400B15B RID: 45403
 	private ETodDayState TempDayState = ETodDayState.Count;
 
-	// Token: 0x0400AD55 RID: 44373
+	// Token: 0x0400B15C RID: 45404
 	private double SyncEnvironmentTime;
 
-	// Token: 0x0400AD56 RID: 44374
+	// Token: 0x0400B15D RID: 45405
 	private double LastSyncSecond;
 
-	// Token: 0x0400AD57 RID: 44375
+	// Token: 0x0400B15E RID: 45406
 	private double SyncTime;
 
-	// Token: 0x0400AD58 RID: 44376
+	// Token: 0x0400B15F RID: 45407
 	private double LastHour;
 
-	// Token: 0x0400AD59 RID: 44377
+	// Token: 0x0400B160 RID: 45408
 	private bool EnterGameFlag;
 
-	// Token: 0x0400AD5A RID: 44378
+	// Token: 0x0400B161 RID: 45409
 	private bool LoadingFlag;
 
-	// Token: 0x0400AD5B RID: 44379
+	// Token: 0x0400B162 RID: 45410
 	private bool UiAnimFlag;
 
-	// Token: 0x0400AD5C RID: 44380
+	// Token: 0x0400B163 RID: 45411
 	private bool TimeInitState;
 
-	// Token: 0x0400AD5D RID: 44381
+	// Token: 0x0400B164 RID: 45412
 	private const double CheckTimeGap = 360.0;
 
-	// Token: 0x0400AD5E RID: 44382
+	// Token: 0x0400B165 RID: 45413
 	private bool CanOpenViewState;
 
-	// Token: 0x0400AD5F RID: 44383
+	// Token: 0x0400B166 RID: 45414
 	[Nullable(2)]
 	private static TimeOfDayController _Instance;
 }

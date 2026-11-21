@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200171C RID: 5916
+	// Token: 0x02001899 RID: 6297
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FadeInScreen_SetValue
 	{
-		// Token: 0x04004FFD RID: 20477
+		// Token: 0x0400542C RID: 21548
 		public EFadeUiOverride? TypeOverride;
 
-		// Token: 0x04004FFE RID: 20478
+		// Token: 0x0400542D RID: 21549
 		public IEaseData Ease;
 
-		// Token: 0x04004FFF RID: 20479
+		// Token: 0x0400542E RID: 21550
 		public EFadeInScreenShowType? ScreenType;
 
-		// Token: 0x04005000 RID: 20480
+		// Token: 0x0400542F RID: 21551
 		public bool? KeepFadeAfterTreeEnd;
 
-		// Token: 0x04005001 RID: 20481
+		// Token: 0x04005430 RID: 21552
 		public bool? KeepFadeAfterTreeRollBack;
 
-		// Token: 0x04005002 RID: 20482
+		// Token: 0x04005431 RID: 21553
 		public IFadeBackgroundType FadeBackground;
 
-		// Token: 0x04005003 RID: 20483
+		// Token: 0x04005432 RID: 21554
 		public bool? OnlyLowMemoryDeviceExecute;
 	}
 }

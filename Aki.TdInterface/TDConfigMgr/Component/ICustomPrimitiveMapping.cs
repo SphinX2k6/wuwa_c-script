@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200029D RID: 669
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002E2 RID: 738
 	public class ICustomPrimitiveMapping
 	{
-		// Token: 0x06000C7D RID: 3197 RVA: 0x000304A4 File Offset: 0x0002E6A4
+		// Token: 0x06000DA1 RID: 3489 RVA: 0x00033294 File Offset: 0x00031494
 		private ICustomPrimitiveMapping_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C7E RID: 3198 RVA: 0x000304DC File Offset: 0x0002E6DC
+		// Token: 0x06000DA2 RID: 3490 RVA: 0x000332CC File Offset: 0x000314CC
 		public static ICustomPrimitiveMapping Create([Nullable(2)] ICustomPrimitiveMapping instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C7F RID: 3199 RVA: 0x000304EF File Offset: 0x0002E6EF
+		// Token: 0x06000DA3 RID: 3491 RVA: 0x000332DF File Offset: 0x000314DF
 		public static ICustomPrimitiveMapping CreateFromSetValue([Nullable(2)] ICustomPrimitiveMapping_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C80 RID: 3200 RVA: 0x00030502 File Offset: 0x0002E702
+		// Token: 0x06000DA4 RID: 3492 RVA: 0x000332F2 File Offset: 0x000314F2
 		public ICustomPrimitiveMapping_SetValue ToSetValue()
 		{
 			return new ICustomPrimitiveMapping_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003B0 RID: 944
-		// (get) Token: 0x06000C81 RID: 3201 RVA: 0x00030521 File Offset: 0x0002E721
-		// (set) Token: 0x06000C82 RID: 3202 RVA: 0x0003054C File Offset: 0x0002E74C
+		// Token: 0x170003FA RID: 1018
+		// (get) Token: 0x06000DA5 RID: 3493 RVA: 0x00033311 File Offset: 0x00031511
+		// (set) Token: 0x06000DA6 RID: 3494 RVA: 0x0003333C File Offset: 0x0003153C
 		public virtual string KeyPrefix
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003B1 RID: 945
-		// (get) Token: 0x06000C83 RID: 3203 RVA: 0x0003055A File Offset: 0x0002E75A
-		// (set) Token: 0x06000C84 RID: 3204 RVA: 0x00030585 File Offset: 0x0002E785
+		// Token: 0x170003FB RID: 1019
+		// (get) Token: 0x06000DA7 RID: 3495 RVA: 0x0003334A File Offset: 0x0003154A
+		// (set) Token: 0x06000DA8 RID: 3496 RVA: 0x00033375 File Offset: 0x00031575
 		public virtual int Index
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BB3 RID: 2995
+		// Token: 0x04000C98 RID: 3224
 		[Nullable(2)]
 		protected ICustomPrimitiveMapping FbInstance;
 
-		// Token: 0x04000BB4 RID: 2996
+		// Token: 0x04000C99 RID: 3225
 		[Nullable(2)]
 		protected ICustomPrimitiveMapping_SetValue PocoInterface;
 	}

@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA0 RID: 24480
+	// Token: 0x02004F87 RID: 20359
 	public interface ITotalTopUpPickRoleRewardItemData
 	{
-		// Token: 0x17008FF4 RID: 36852
-		// (get) Token: 0x0603E165 RID: 254309
-		// (set) Token: 0x0603E166 RID: 254310
+		// Token: 0x170063C6 RID: 25542
+		// (get) Token: 0x060330FF RID: 209151
+		// (set) Token: 0x06033100 RID: 209152
 		int Index { get; set; }
 
-		// Token: 0x17008FF5 RID: 36853
-		// (get) Token: 0x0603E167 RID: 254311
-		// (set) Token: 0x0603E168 RID: 254312
+		// Token: 0x170063C7 RID: 25543
+		// (get) Token: 0x06033101 RID: 209153
+		// (set) Token: 0x06033102 RID: 209154
 		int RoleId { get; set; }
 
-		// Token: 0x17008FF6 RID: 36854
-		// (get) Token: 0x0603E169 RID: 254313
-		// (set) Token: 0x0603E16A RID: 254314
+		// Token: 0x170063C8 RID: 25544
+		// (get) Token: 0x06033103 RID: 209155
+		// (set) Token: 0x06033104 RID: 209156
 		int RoleChain { get; set; }
 
-		// Token: 0x17008FF7 RID: 36855
-		// (get) Token: 0x0603E16B RID: 254315
-		// (set) Token: 0x0603E16C RID: 254316
+		// Token: 0x170063C9 RID: 25545
+		// (get) Token: 0x06033105 RID: 209157
+		// (set) Token: 0x06033106 RID: 209158
 		bool RoleOwned { get; set; }
 
-		// Token: 0x17008FF8 RID: 36856
-		// (get) Token: 0x0603E16D RID: 254317
-		// (set) Token: 0x0603E16E RID: 254318
+		// Token: 0x170063CA RID: 25546
+		// (get) Token: 0x06033107 RID: 209159
+		// (set) Token: 0x06033108 RID: 209160
 		int ItemId { get; set; }
 
-		// Token: 0x17008FF9 RID: 36857
-		// (get) Token: 0x0603E16F RID: 254319
-		// (set) Token: 0x0603E170 RID: 254320
+		// Token: 0x170063CB RID: 25547
+		// (get) Token: 0x06033109 RID: 209161
+		// (set) Token: 0x0603310A RID: 209162
 		int ItemCount { get; set; }
 
-		// Token: 0x17008FFA RID: 36858
-		// (get) Token: 0x0603E171 RID: 254321
-		// (set) Token: 0x0603E172 RID: 254322
+		// Token: 0x170063CC RID: 25548
+		// (get) Token: 0x0603310B RID: 209163
+		// (set) Token: 0x0603310C RID: 209164
 		bool CanClaim { get; set; }
 	}
 }

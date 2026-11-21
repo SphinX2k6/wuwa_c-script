@@ -13,32 +13,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.ItemGrid
 {
-	// Token: 0x02005B70 RID: 23408
+	// Token: 0x02004B50 RID: 19280
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonItemSimpleGrid : GridProxyAbstract<TItem>
 	{
-		// Token: 0x0603B397 RID: 242583 RVA: 0x00E1ED97 File Offset: 0x00E1CF97
+		// Token: 0x060302E4 RID: 197348 RVA: 0x00D6F30B File Offset: 0x00D6D50B
 		public int GetItemId()
 		{
 			return this.ItemConfigId;
 		}
 
-		// Token: 0x0603B398 RID: 242584 RVA: 0x00E1ED9F File Offset: 0x00E1CF9F
+		// Token: 0x060302E5 RID: 197349 RVA: 0x00D6F313 File Offset: 0x00D6D513
 		public CommonItemSimpleGrid()
 		{
 			this.ClickCallback = delegate(int itemConfigId)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null, false);
 			};
 		}
 
-		// Token: 0x0603B399 RID: 242585 RVA: 0x00E1EDD8 File Offset: 0x00E1CFD8
+		// Token: 0x060302E6 RID: 197350 RVA: 0x00D6F34C File Offset: 0x00D6D54C
 		public CommonItemSimpleGrid(AActor commonItemActor = null)
 		{
 			this.ClickCallback = delegate(int itemConfigId)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(itemConfigId, true, null, false);
 			};
 			if (commonItemActor != null)
 			{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			}
 		}
 
-		// Token: 0x0603B39A RID: 242586 RVA: 0x00E1EE28 File Offset: 0x00E1D028
+		// Token: 0x060302E7 RID: 197351 RVA: 0x00D6F39C File Offset: 0x00D6D59C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B39B RID: 242587 RVA: 0x00E1EF94 File Offset: 0x00E1D194
+		// Token: 0x060302E8 RID: 197352 RVA: 0x00D6F508 File Offset: 0x00D6D708
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.CloseItemTips, new Action<int, int>(this.OnCloseItemTips));
 		}
 
-		// Token: 0x0603B39C RID: 242588 RVA: 0x00E1EFB2 File Offset: 0x00E1D1B2
+		// Token: 0x060302E9 RID: 197353 RVA: 0x00D6F526 File Offset: 0x00D6D726
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.CloseItemTips, new Action<int, int>(this.OnCloseItemTips));
 		}
 
-		// Token: 0x0603B39D RID: 242589 RVA: 0x00E1EFD0 File Offset: 0x00E1D1D0
+		// Token: 0x060302EA RID: 197354 RVA: 0x00D6F544 File Offset: 0x00D6D744
 		private void OnCloseItemTips(int itemId, int i)
 		{
 			if (itemId != this.ItemConfigId)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B39E RID: 242590 RVA: 0x00E1EFED File Offset: 0x00E1D1ED
+		// Token: 0x060302EB RID: 197355 RVA: 0x00D6F561 File Offset: 0x00D6D761
 		private void OnToggleClick(EToggleState state)
 		{
 			if (this.ClickCallback == null)
@@ -114,14 +114,14 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			}
 		}
 
-		// Token: 0x0603B39F RID: 242591 RVA: 0x00E1F00D File Offset: 0x00E1D20D
+		// Token: 0x060302EC RID: 197356 RVA: 0x00D6F581 File Offset: 0x00D6D781
 		public void ResetToggleClick()
 		{
 			base.GetExtendToggle(4).OnStateChange.Clear();
 			base.GetExtendToggle(4).OnStateChange.Add(new Action<EToggleState>(this.OnToggleClick));
 		}
 
-		// Token: 0x0603B3A0 RID: 242592 RVA: 0x00E1F040 File Offset: 0x00E1D240
+		// Token: 0x060302ED RID: 197357 RVA: 0x00D6F5B4 File Offset: 0x00D6D7B4
 		private void UpdateView()
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			base.SetItemQualityIcon(sprite, this.ItemConfigId, this.BelongViewName, CommonDefine.EQualityIconType.BackgroundSprite, null);
 		}
 
-		// Token: 0x0603B3A1 RID: 242593 RVA: 0x00E1F088 File Offset: 0x00E1D288
+		// Token: 0x060302EE RID: 197358 RVA: 0x00D6F5FC File Offset: 0x00D6D7FC
 		public override void Refresh(TItem data, bool isSelect, int gridIndex)
 		{
 			InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -138,37 +138,37 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			this.RefreshItem(itemData.ItemId, count);
 		}
 
-		// Token: 0x0603B3A2 RID: 242594 RVA: 0x00E1F0B0 File Offset: 0x00E1D2B0
+		// Token: 0x060302EF RID: 197359 RVA: 0x00D6F624 File Offset: 0x00D6D824
 		public void SetQualityActive(bool isShow)
 		{
 			base.GetSprite(0).SetUIActive(isShow);
 		}
 
-		// Token: 0x0603B3A3 RID: 242595 RVA: 0x00E1F0BF File Offset: 0x00E1D2BF
+		// Token: 0x060302F0 RID: 197360 RVA: 0x00D6F633 File Offset: 0x00D6D833
 		public void SetCanReceiveActive(bool isShow)
 		{
 			base.GetSprite(5).SetUIActive(false);
 		}
 
-		// Token: 0x0603B3A4 RID: 242596 RVA: 0x00E1F0CE File Offset: 0x00E1D2CE
+		// Token: 0x060302F1 RID: 197361 RVA: 0x00D6F642 File Offset: 0x00D6D842
 		public void SetLockReceiveActive(bool isShow)
 		{
 			base.GetSprite(6).SetUIActive(isShow);
 		}
 
-		// Token: 0x0603B3A5 RID: 242597 RVA: 0x00E1F0DD File Offset: 0x00E1D2DD
+		// Token: 0x060302F2 RID: 197362 RVA: 0x00D6F651 File Offset: 0x00D6D851
 		public void SetReceivedActive(bool isShow)
 		{
 			base.GetItem(7).SetUIActive(isShow);
 		}
 
-		// Token: 0x0603B3A6 RID: 242598 RVA: 0x00E1F0EC File Offset: 0x00E1D2EC
+		// Token: 0x060302F3 RID: 197363 RVA: 0x00D6F660 File Offset: 0x00D6D860
 		public void SetBelongViewName(EUiViewName viewName)
 		{
 			this.BelongViewName = new EUiViewName?(viewName);
 		}
 
-		// Token: 0x0603B3A7 RID: 242599 RVA: 0x00E1F0FA File Offset: 0x00E1D2FA
+		// Token: 0x060302F4 RID: 197364 RVA: 0x00D6F66E File Offset: 0x00D6D86E
 		public void RefreshItem(int itemConfigId, int itemCount = 0)
 		{
 			this.ItemConfigId = itemConfigId;
@@ -176,14 +176,14 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			this.SetCount(itemCount);
 		}
 
-		// Token: 0x0603B3A8 RID: 242600 RVA: 0x00E1F110 File Offset: 0x00E1D310
+		// Token: 0x060302F5 RID: 197365 RVA: 0x00D6F684 File Offset: 0x00D6D884
 		[NullableContext(1)]
 		public void BindClickCallback(Action<int> clickCallback)
 		{
 			this.ClickCallback = clickCallback;
 		}
 
-		// Token: 0x0603B3A9 RID: 242601 RVA: 0x00E1F119 File Offset: 0x00E1D319
+		// Token: 0x060302F6 RID: 197366 RVA: 0x00D6F68D File Offset: 0x00D6D88D
 		private void SetCount(int count = 0)
 		{
 			if (count == 0)
@@ -195,26 +195,26 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			this.GetCountItem().SetUIActive(true);
 		}
 
-		// Token: 0x0603B3AA RID: 242602 RVA: 0x00E1F158 File Offset: 0x00E1D358
+		// Token: 0x060302F7 RID: 197367 RVA: 0x00D6F6CC File Offset: 0x00D6D8CC
 		private UUIText GetCountText()
 		{
 			return base.GetText(2);
 		}
 
-		// Token: 0x0603B3AB RID: 242603 RVA: 0x00E1F161 File Offset: 0x00E1D361
+		// Token: 0x060302F8 RID: 197368 RVA: 0x00D6F6D5 File Offset: 0x00D6D8D5
 		private UUIItem GetCountItem()
 		{
 			return base.GetItem(3);
 		}
 
-		// Token: 0x0603B3AC RID: 242604 RVA: 0x00E1F16A File Offset: 0x00E1D36A
+		// Token: 0x060302F9 RID: 197369 RVA: 0x00D6F6DE File Offset: 0x00D6D8DE
 		[NullableContext(1)]
 		public void SetCountTextId(string textId)
 		{
 			this.CountTextId = textId;
 		}
 
-		// Token: 0x0603B3AD RID: 242605 RVA: 0x00E1F174 File Offset: 0x00E1D374
+		// Token: 0x060302FA RID: 197370 RVA: 0x00D6F6E8 File Offset: 0x00D6D8E8
 		public UniTask RefreshItemAsync(int itemConfigId, int itemCount = 0)
 		{
 			CommonItemSimpleGrid.<RefreshItemAsync>d__27 <RefreshItemAsync>d__;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			return <RefreshItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B3AE RID: 242606 RVA: 0x00E1F1C8 File Offset: 0x00E1D3C8
+		// Token: 0x060302FB RID: 197371 RVA: 0x00D6F73C File Offset: 0x00D6D93C
 		private UniTask UpdateViewAsync()
 		{
 			CommonItemSimpleGrid.<UpdateViewAsync>d__28 <UpdateViewAsync>d__;
@@ -238,38 +238,38 @@ namespace CSharpScript.Game.Module.Common.ItemGrid
 			return <UpdateViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401EE35 RID: 126517
+		// Token: 0x040198E6 RID: 104678
 		private int ItemConfigId;
 
-		// Token: 0x0401EE36 RID: 126518
+		// Token: 0x040198E7 RID: 104679
 		[Nullable(1)]
 		private string CountTextId = "ShowCount";
 
-		// Token: 0x0401EE37 RID: 126519
+		// Token: 0x040198E8 RID: 104680
 		private EUiViewName? BelongViewName;
 
-		// Token: 0x0401EE38 RID: 126520
+		// Token: 0x040198E9 RID: 104681
 		private Action<int> ClickCallback;
 
-		// Token: 0x0200BD7D RID: 48509
+		// Token: 0x0200A787 RID: 42887
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x04039290 RID: 234128
+			// Token: 0x04033C5E RID: 212062
 			SpriteQuality,
-			// Token: 0x04039291 RID: 234129
+			// Token: 0x04033C5F RID: 212063
 			TextureIcon,
-			// Token: 0x04039292 RID: 234130
+			// Token: 0x04033C60 RID: 212064
 			TextCount,
-			// Token: 0x04039293 RID: 234131
+			// Token: 0x04033C61 RID: 212065
 			NumItem,
-			// Token: 0x04039294 RID: 234132
+			// Token: 0x04033C62 RID: 212066
 			ToggleClick,
-			// Token: 0x04039295 RID: 234133
+			// Token: 0x04033C63 RID: 212067
 			CanReceiveSprite,
-			// Token: 0x04039296 RID: 234134
+			// Token: 0x04033C64 RID: 212068
 			LockSprite,
-			// Token: 0x04039297 RID: 234135
+			// Token: 0x04033C65 RID: 212069
 			ReceivedItem
 		}
 	}

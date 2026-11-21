@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200618C RID: 24972
+	// Token: 0x020067F7 RID: 26615
 	public class IAlertSystemOption_UnionUnion
 	{
-		// Token: 0x1700BA2E RID: 47662
-		// (get) Token: 0x0602B032 RID: 176178 RVA: 0x005EEFAA File Offset: 0x005ED1AA
-		// (set) Token: 0x0602B033 RID: 176179 RVA: 0x005EEFB2 File Offset: 0x005ED1B2
+		// Token: 0x1700C3AC RID: 50092
+		// (get) Token: 0x0602D763 RID: 186211 RVA: 0x0063981E File Offset: 0x00637A1E
+		// (set) Token: 0x0602D764 RID: 186212 RVA: 0x00639826 File Offset: 0x00637A26
 		public IAlertSystemOption_Union Type { get; set; }
 
-		// Token: 0x1700BA2F RID: 47663
-		// (get) Token: 0x0602B034 RID: 176180 RVA: 0x005EEFBB File Offset: 0x005ED1BB
-		// (set) Token: 0x0602B035 RID: 176181 RVA: 0x005EEFC3 File Offset: 0x005ED1C3
+		// Token: 0x1700C3AD RID: 50093
+		// (get) Token: 0x0602D765 RID: 186213 RVA: 0x0063982F File Offset: 0x00637A2F
+		// (set) Token: 0x0602D766 RID: 186214 RVA: 0x00639837 File Offset: 0x00637A37
 		public object Value { get; set; }
 
-		// Token: 0x0602B036 RID: 176182 RVA: 0x005EEFCC File Offset: 0x005ED1CC
+		// Token: 0x0602D767 RID: 186215 RVA: 0x00639840 File Offset: 0x00637A40
 		public IAlertSystemOption_UnionUnion()
 		{
 			this.Type = IAlertSystemOption_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602B037 RID: 176183 RVA: 0x005EEFE2 File Offset: 0x005ED1E2
+		// Token: 0x0602D768 RID: 186216 RVA: 0x00639856 File Offset: 0x00637A56
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602B038 RID: 176184 RVA: 0x005EEFF4 File Offset: 0x005ED1F4
+		// Token: 0x0602D769 RID: 186217 RVA: 0x00639868 File Offset: 0x00637A68
 		public IAlertSystemOptionT AsIAlertSystemOption()
 		{
 			return this.As<IAlertSystemOptionT>();
 		}
 
-		// Token: 0x0602B039 RID: 176185 RVA: 0x005EEFFC File Offset: 0x005ED1FC
+		// Token: 0x0602D76A RID: 186218 RVA: 0x00639870 File Offset: 0x00637A70
 		public static IAlertSystemOption_UnionUnion FromIAlertSystemOption(IAlertSystemOptionT _ialertsystemoption)
 		{
 			return new IAlertSystemOption_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B03A RID: 176186 RVA: 0x005EF011 File Offset: 0x005ED211
+		// Token: 0x0602D76B RID: 186219 RVA: 0x00639885 File Offset: 0x00637A85
 		public IEnableAlertAreaT AsIEnableAlertArea()
 		{
 			return this.As<IEnableAlertAreaT>();
 		}
 
-		// Token: 0x0602B03B RID: 176187 RVA: 0x005EF019 File Offset: 0x005ED219
+		// Token: 0x0602D76C RID: 186220 RVA: 0x0063988D File Offset: 0x00637A8D
 		public static IAlertSystemOption_UnionUnion FromIEnableAlertArea(IEnableAlertAreaT _ienablealertarea)
 		{
 			return new IAlertSystemOption_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B03C RID: 176188 RVA: 0x005EF02E File Offset: 0x005ED22E
+		// Token: 0x0602D76D RID: 186221 RVA: 0x006398A2 File Offset: 0x00637AA2
 		public IModifyAlertValueT AsIModifyAlertValue()
 		{
 			return this.As<IModifyAlertValueT>();
 		}
 
-		// Token: 0x0602B03D RID: 176189 RVA: 0x005EF036 File Offset: 0x005ED236
+		// Token: 0x0602D76E RID: 186222 RVA: 0x006398AA File Offset: 0x00637AAA
 		public static IAlertSystemOption_UnionUnion FromIModifyAlertValue(IModifyAlertValueT _imodifyalertvalue)
 		{
 			return new IAlertSystemOption_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B03E RID: 176190 RVA: 0x005EF04B File Offset: 0x005ED24B
+		// Token: 0x0602D76F RID: 186223 RVA: 0x006398BF File Offset: 0x00637ABF
 		public IEnableAlertUiT AsIEnableAlertUi()
 		{
 			return this.As<IEnableAlertUiT>();
 		}
 
-		// Token: 0x0602B03F RID: 176191 RVA: 0x005EF053 File Offset: 0x005ED253
+		// Token: 0x0602D770 RID: 186224 RVA: 0x006398C7 File Offset: 0x00637AC7
 		public static IAlertSystemOption_UnionUnion FromIEnableAlertUi(IEnableAlertUiT _ienablealertui)
 		{
 			return new IAlertSystemOption_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B040 RID: 176192 RVA: 0x005EF068 File Offset: 0x005ED268
+		// Token: 0x0602D771 RID: 186225 RVA: 0x006398DC File Offset: 0x00637ADC
 		public ISetAlertUiVisibleT AsISetAlertUiVisible()
 		{
 			return this.As<ISetAlertUiVisibleT>();
 		}
 
-		// Token: 0x0602B041 RID: 176193 RVA: 0x005EF070 File Offset: 0x005ED270
+		// Token: 0x0602D772 RID: 186226 RVA: 0x006398E4 File Offset: 0x00637AE4
 		public static IAlertSystemOption_UnionUnion FromISetAlertUiVisible(ISetAlertUiVisibleT _isetalertuivisible)
 		{
 			return new IAlertSystemOption_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602B042 RID: 176194 RVA: 0x005EF088 File Offset: 0x005ED288
+		// Token: 0x0602D773 RID: 186227 RVA: 0x006398FC File Offset: 0x00637AFC
 		public static int Pack(FlatBufferBuilder builder, IAlertSystemOption_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Enrichment
 {
-	// Token: 0x02004827 RID: 18471
+	// Token: 0x02003758 RID: 14168
 	public class EnrichmentAreaPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x0603059F RID: 198047 RVA: 0x00B393B9 File Offset: 0x00B375B9
+		// Token: 0x06024D6F RID: 150895 RVA: 0x00A69485 File Offset: 0x00A67685
 		[NullableContext(1)]
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x060305A0 RID: 198048 RVA: 0x00B393C0 File Offset: 0x00B375C0
+		// Token: 0x06024D70 RID: 150896 RVA: 0x00A6948C File Offset: 0x00A6768C
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Enrichment
 			delButton.RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x060305A1 RID: 198049 RVA: 0x00B39440 File Offset: 0x00B37640
+		// Token: 0x06024D71 RID: 150897 RVA: 0x00A6950C File Offset: 0x00A6770C
 		[NullableContext(1)]
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Enrichment
 			}
 		}
 
-		// Token: 0x060305A2 RID: 198050 RVA: 0x00B39548 File Offset: 0x00B37748
+		// Token: 0x06024D72 RID: 150898 RVA: 0x00A69614 File Offset: 0x00A67814
 		protected unsafe override void HandleTrack()
 		{
 			EnrichmentAreaItem enrichmentAreaItem = this.LayoutContext.MarkItem as EnrichmentAreaItem;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Enrichment
 			base.Close();
 		}
 
-		// Token: 0x060305A3 RID: 198051 RVA: 0x00B3961C File Offset: 0x00B3781C
+		// Token: 0x06024D73 RID: 150899 RVA: 0x00A696E8 File Offset: 0x00A678E8
 		protected override void OnDelBtnClick()
 		{
 			if (this.SelectedMarkItem == null)
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Enrichment
 			base.Close();
 		}
 
-		// Token: 0x0401A01C RID: 106524
+		// Token: 0x040146D0 RID: 83664
 		[Nullable(2)]
 		private EnrichmentAreaItem SelectedMarkItem;
 
-		// Token: 0x0200AAFE RID: 43774
+		// Token: 0x020094AD RID: 38061
 		public static class EComponents
 		{
-			// Token: 0x04033FA3 RID: 212899
+			// Token: 0x0402E723 RID: 190243
 			public const int EnrichmentAreaPanel = 0;
 		}
 	}

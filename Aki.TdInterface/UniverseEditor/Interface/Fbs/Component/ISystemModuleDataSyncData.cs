@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A1C RID: 23068
+	// Token: 0x02006029 RID: 24617
 	public struct ISystemModuleDataSyncData : IFlatbufferObject
 	{
-		// Token: 0x1700AD6B RID: 44395
-		// (get) Token: 0x060272DB RID: 160475 RVA: 0x00563B93 File Offset: 0x00561D93
+		// Token: 0x1700B6A3 RID: 46755
+		// (get) Token: 0x06029853 RID: 170067 RVA: 0x005AAB57 File Offset: 0x005A8D57
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060272DC RID: 160476 RVA: 0x00563BA0 File Offset: 0x00561DA0
+		// Token: 0x06029854 RID: 170068 RVA: 0x005AAB64 File Offset: 0x005A8D64
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060272DD RID: 160477 RVA: 0x00563BA8 File Offset: 0x00561DA8
+		// Token: 0x06029855 RID: 170069 RVA: 0x005AAB6C File Offset: 0x005A8D6C
 		public static ISystemModuleDataSyncData GetRootAsISystemModuleDataSyncData(ByteBuffer _bb)
 		{
 			return ISystemModuleDataSyncData.GetRootAsISystemModuleDataSyncData(_bb, default(ISystemModuleDataSyncData));
 		}
 
-		// Token: 0x060272DE RID: 160478 RVA: 0x00563BC4 File Offset: 0x00561DC4
+		// Token: 0x06029856 RID: 170070 RVA: 0x005AAB88 File Offset: 0x005A8D88
 		public static ISystemModuleDataSyncData GetRootAsISystemModuleDataSyncData(ByteBuffer _bb, ISystemModuleDataSyncData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060272DF RID: 160479 RVA: 0x00563BE1 File Offset: 0x00561DE1
+		// Token: 0x06029857 RID: 170071 RVA: 0x005AABA5 File Offset: 0x005A8DA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060272E0 RID: 160480 RVA: 0x00563BF0 File Offset: 0x00561DF0
+		// Token: 0x06029858 RID: 170072 RVA: 0x005AABB4 File Offset: 0x005A8DB4
 		public ISystemModuleDataSyncData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AD6C RID: 44396
-		// (get) Token: 0x060272E1 RID: 160481 RVA: 0x00563C00 File Offset: 0x00561E00
+		// Token: 0x1700B6A4 RID: 46756
+		// (get) Token: 0x06029859 RID: 170073 RVA: 0x005AABC4 File Offset: 0x005A8DC4
 		public ESyncDataSystemType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060272E2 RID: 160482 RVA: 0x00563C3C File Offset: 0x00561E3C
+		// Token: 0x0602985A RID: 170074 RVA: 0x005AAC00 File Offset: 0x005A8E00
 		public static Offset<ISystemModuleDataSyncData> CreateISystemModuleDataSyncData(FlatBufferBuilder builder, ESyncDataSystemType Type = ESyncDataSystemType.MotorRacing)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISystemModuleDataSyncData.EndISystemModuleDataSyncData(builder);
 		}
 
-		// Token: 0x060272E3 RID: 160483 RVA: 0x00563C52 File Offset: 0x00561E52
+		// Token: 0x0602985B RID: 170075 RVA: 0x005AAC16 File Offset: 0x005A8E16
 		public static void StartISystemModuleDataSyncData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060272E4 RID: 160484 RVA: 0x00563C5B File Offset: 0x00561E5B
+		// Token: 0x0602985C RID: 170076 RVA: 0x005AAC1F File Offset: 0x005A8E1F
 		public static void AddType(FlatBufferBuilder builder, ESyncDataSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060272E5 RID: 160485 RVA: 0x00563C66 File Offset: 0x00561E66
+		// Token: 0x0602985D RID: 170077 RVA: 0x005AAC2A File Offset: 0x005A8E2A
 		public static Offset<ISystemModuleDataSyncData> EndISystemModuleDataSyncData(FlatBufferBuilder builder)
 		{
 			return new Offset<ISystemModuleDataSyncData>(builder.EndTable());
 		}
 
-		// Token: 0x060272E6 RID: 160486 RVA: 0x00563C74 File Offset: 0x00561E74
+		// Token: 0x0602985E RID: 170078 RVA: 0x005AAC38 File Offset: 0x005A8E38
 		public ISystemModuleDataSyncDataT UnPack()
 		{
 			ISystemModuleDataSyncDataT systemModuleDataSyncDataT = new ISystemModuleDataSyncDataT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return systemModuleDataSyncDataT;
 		}
 
-		// Token: 0x060272E7 RID: 160487 RVA: 0x00563C8F File Offset: 0x00561E8F
+		// Token: 0x0602985F RID: 170079 RVA: 0x005AAC53 File Offset: 0x005A8E53
 		public void UnPackTo(ISystemModuleDataSyncDataT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060272E8 RID: 160488 RVA: 0x00563CA0 File Offset: 0x00561EA0
+		// Token: 0x06029860 RID: 170080 RVA: 0x005AAC64 File Offset: 0x005A8E64
 		public static Offset<ISystemModuleDataSyncData> Pack(FlatBufferBuilder builder, ISystemModuleDataSyncDataT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISystemModuleDataSyncData.CreateISystemModuleDataSyncData(builder, _o.Type);
 		}
 
-		// Token: 0x0400F070 RID: 61552
+		// Token: 0x0400FD67 RID: 64871
 		private Table __p;
 	}
 }

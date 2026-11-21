@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D34 RID: 3380
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E2E RID: 3630
 	public class PickInteractComponent : IComponentBase
 	{
-		// Token: 0x06004D20 RID: 19744 RVA: 0x000BFEFC File Offset: 0x000BE0FC
+		// Token: 0x0600523C RID: 21052 RVA: 0x000CB640 File Offset: 0x000C9840
 		public static PickInteractComponent Create(IPickInteractComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001875 RID: 6261
-		// (get) Token: 0x06004D21 RID: 19745 RVA: 0x000BFF1C File Offset: 0x000BE11C
+		// Token: 0x170019DB RID: 6619
+		// (get) Token: 0x0600523D RID: 21053 RVA: 0x000CB660 File Offset: 0x000C9860
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001876 RID: 6262
-		// (get) Token: 0x06004D22 RID: 19746 RVA: 0x000BFF54 File Offset: 0x000BE154
+		// Token: 0x170019DC RID: 6620
+		// (get) Token: 0x0600523E RID: 21054 RVA: 0x000CB698 File Offset: 0x000C9898
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001877 RID: 6263
-		// (get) Token: 0x06004D23 RID: 19747 RVA: 0x000BFF6A File Offset: 0x000BE16A
+		// Token: 0x170019DD RID: 6621
+		// (get) Token: 0x0600523F RID: 21055 RVA: 0x000CB6AE File Offset: 0x000C98AE
 		public virtual IChessmanPickInteraction PickInteractType
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C35 RID: 11317
+		// Token: 0x04002EF5 RID: 12021
 		private IPickInteractComponent Instance;
 
-		// Token: 0x04002C36 RID: 11318
+		// Token: 0x04002EF6 RID: 12022
 		[Nullable(2)]
 		private IChessmanPickInteraction _PickInteractTypeCache;
 
-		// Token: 0x04002C37 RID: 11319
+		// Token: 0x04002EF7 RID: 12023
 		private bool _PickInteractTypeInited;
 	}
 }

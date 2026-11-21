@@ -7,14 +7,14 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001F7D RID: 8061
+// Token: 0x0200143F RID: 5183
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class InfluenceReputationModel : ModelBase
 {
-	// Token: 0x0600FA14 RID: 64020 RVA: 0x003C9484 File Offset: 0x003C7684
-	public void SetInfluenceInfoList(OneInfluenceInfo[] infoList)
+	// Token: 0x0600CE33 RID: 52787 RVA: 0x003D4FA0 File Offset: 0x003D31A0
+	public void SetInfluenceInfoList(IReadOnlyList<OneInfluenceInfo> infoList)
 	{
 		foreach (OneInfluenceInfo oneInfluenceInfo in infoList)
 		{
@@ -32,7 +32,7 @@ public class InfluenceReputationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FA15 RID: 64021 RVA: 0x003C9514 File Offset: 0x003C7714
+	// Token: 0x0600CE34 RID: 52788 RVA: 0x003D5050 File Offset: 0x003D3250
 	public bool UpdateInfluenceRewardIndex(int id, int rewardIndex)
 	{
 		InfluenceInstance influenceInstance;
@@ -50,7 +50,7 @@ public class InfluenceReputationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FA16 RID: 64022 RVA: 0x003C956C File Offset: 0x003C776C
+	// Token: 0x0600CE35 RID: 52789 RVA: 0x003D50A8 File Offset: 0x003D32A8
 	[NullableContext(2)]
 	public InfluenceInstance GetInfluenceInstance(int id)
 	{
@@ -62,7 +62,7 @@ public class InfluenceReputationModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600FA17 RID: 64023 RVA: 0x003C958C File Offset: 0x003C778C
+	// Token: 0x0600CE36 RID: 52790 RVA: 0x003D50C8 File Offset: 0x003D32C8
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -89,7 +89,7 @@ public class InfluenceReputationModel : ModelBase
 		return new ValueTuple<bool, IntPair>?(new ValueTuple<bool, IntPair>(false, array[influenceInstance.RewardIndex + 1]));
 	}
 
-	// Token: 0x0600FA18 RID: 64024 RVA: 0x003C9620 File Offset: 0x003C7820
+	// Token: 0x0600CE37 RID: 52791 RVA: 0x003D515C File Offset: 0x003D335C
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -109,7 +109,7 @@ public class InfluenceReputationModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FA19 RID: 64025 RVA: 0x003C96AC File Offset: 0x003C78AC
+	// Token: 0x0600CE38 RID: 52792 RVA: 0x003D51E8 File Offset: 0x003D33E8
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -133,7 +133,7 @@ public class InfluenceReputationModel : ModelBase
 		return new ValueTuple<int, int>(num2, num);
 	}
 
-	// Token: 0x0600FA1A RID: 64026 RVA: 0x003C973C File Offset: 0x003C793C
+	// Token: 0x0600CE39 RID: 52793 RVA: 0x003D5278 File Offset: 0x003D3478
 	public void SetUnLockCountry(int[] unlockCountryList)
 	{
 		int i = 0;
@@ -145,7 +145,7 @@ public class InfluenceReputationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FA1B RID: 64027 RVA: 0x003C9768 File Offset: 0x003C7968
+	// Token: 0x0600CE3A RID: 52794 RVA: 0x003D52A4 File Offset: 0x003D34A4
 	public int[] GetUnLockCountry()
 	{
 		int[] array = new int[this.CountrySet.Count];
@@ -153,13 +153,13 @@ public class InfluenceReputationModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x0600FA1C RID: 64028 RVA: 0x003C9793 File Offset: 0x003C7993
+	// Token: 0x0600CE3B RID: 52795 RVA: 0x003D52CF File Offset: 0x003D34CF
 	public bool IsCountryUnLock(int countryId)
 	{
 		return this.CountrySet.Contains(countryId);
 	}
 
-	// Token: 0x0600FA1D RID: 64029 RVA: 0x003C97A4 File Offset: 0x003C79A4
+	// Token: 0x0600CE3C RID: 52796 RVA: 0x003D52E0 File Offset: 0x003D34E0
 	public List<int> FilterUnLockInfluence(int[] influenceList, string filterText)
 	{
 		List<int> list = new List<int>();
@@ -181,7 +181,7 @@ public class InfluenceReputationModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600FA1E RID: 64030 RVA: 0x003C9808 File Offset: 0x003C7A08
+	// Token: 0x0600CE3D RID: 52797 RVA: 0x003D5344 File Offset: 0x003D3544
 	public InfluenceSearchData FilterUnLockInfluenceList(int[] countryIdList, string filterText)
 	{
 		InfluenceSearchData influenceSearchData = new InfluenceSearchData
@@ -205,14 +205,14 @@ public class InfluenceReputationModel : ModelBase
 		return influenceSearchData;
 	}
 
-	// Token: 0x0600FA1F RID: 64031 RVA: 0x003C98B0 File Offset: 0x003C7AB0
+	// Token: 0x0600CE3E RID: 52798 RVA: 0x003D53EC File Offset: 0x003D35EC
 	public bool RedDotInfluenceRewardCondition(int influenceId)
 	{
 		ValueTuple<bool, IntPair>? canReceiveReward = this.GetCanReceiveReward(influenceId);
 		return canReceiveReward != null && !canReceiveReward.Value.Item1 && this.GetReputationProgress(influenceId).Item1 >= canReceiveReward.Value.Item2.Item1;
 	}
 
-	// Token: 0x0600FA20 RID: 64032 RVA: 0x003C9908 File Offset: 0x003C7B08
+	// Token: 0x0600CE3F RID: 52799 RVA: 0x003D5444 File Offset: 0x003D3644
 	public bool HasRedDotExcludeCurrentCountry(int currentCountryId)
 	{
 		foreach (int num in this.CountrySet)
@@ -225,7 +225,7 @@ public class InfluenceReputationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600FA21 RID: 64033 RVA: 0x003C9968 File Offset: 0x003C7B68
+	// Token: 0x0600CE40 RID: 52800 RVA: 0x003D54A4 File Offset: 0x003D36A4
 	public bool HasRedDotInCurrentCountry(int countryId)
 	{
 		Country? countryConfig = InfluenceConfig.Instance.GetCountryConfig(countryId);
@@ -242,8 +242,8 @@ public class InfluenceReputationModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001344 RID: 4932
-	// (get) Token: 0x0600FA22 RID: 64034 RVA: 0x003C99BA File Offset: 0x003C7BBA
+	// Token: 0x1700136E RID: 4974
+	// (get) Token: 0x0600CE41 RID: 52801 RVA: 0x003D54F6 File Offset: 0x003D36F6
 	public static InfluenceReputationModel Instance
 	{
 		get
@@ -252,7 +252,7 @@ public class InfluenceReputationModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600FA23 RID: 64035 RVA: 0x003C99C1 File Offset: 0x003C7BC1
+	// Token: 0x0600CE42 RID: 52802 RVA: 0x003D54FD File Offset: 0x003D36FD
 	public static InfluenceReputationModel GetOrCreateInstance()
 	{
 		if (InfluenceReputationModel._Instance == null)
@@ -262,7 +262,7 @@ public class InfluenceReputationModel : ModelBase
 		return InfluenceReputationModel._Instance;
 	}
 
-	// Token: 0x0600FA24 RID: 64036 RVA: 0x003C99D5 File Offset: 0x003C7BD5
+	// Token: 0x0600CE43 RID: 52803 RVA: 0x003D5511 File Offset: 0x003D3711
 	public static bool CreateInstance()
 	{
 		if (InfluenceReputationModel._Instance != null)
@@ -273,30 +273,30 @@ public class InfluenceReputationModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600FA25 RID: 64037 RVA: 0x003C99EB File Offset: 0x003C7BEB
+	// Token: 0x0600CE44 RID: 52804 RVA: 0x003D5527 File Offset: 0x003D3727
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FA26 RID: 64038 RVA: 0x003C99ED File Offset: 0x003C7BED
+	// Token: 0x0600CE45 RID: 52805 RVA: 0x003D5529 File Offset: 0x003D3729
 	public static void ResetStaticDefaultValue()
 	{
 		InfluenceReputationModel._Instance = null;
 	}
 
-	// Token: 0x0600FA27 RID: 64039 RVA: 0x003C99F5 File Offset: 0x003C7BF5
+	// Token: 0x0600CE46 RID: 52806 RVA: 0x003D5531 File Offset: 0x003D3731
 	static InfluenceReputationModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InfluenceReputationModel.CreateStaticDefaultValue), new Action(InfluenceReputationModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400748B RID: 29835
+	// Token: 0x0400756C RID: 30060
 	private readonly Dictionary<int, InfluenceInstance> InfluenceInstanceMap = new Dictionary<int, InfluenceInstance>();
 
-	// Token: 0x0400748C RID: 29836
+	// Token: 0x0400756D RID: 30061
 	private readonly HashSet<int> CountrySet = new HashSet<int>();
 
-	// Token: 0x0400748D RID: 29837
+	// Token: 0x0400756E RID: 30062
 	[Nullable(2)]
 	private static InfluenceReputationModel _Instance;
 }

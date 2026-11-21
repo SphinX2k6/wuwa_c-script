@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200301D RID: 12317
+// Token: 0x02002573 RID: 9587
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class FoleySynthHandlerBase
 {
-	// Token: 0x0601A160 RID: 106848 RVA: 0x006D71F8 File Offset: 0x006D53F8
+	// Token: 0x06017AA8 RID: 96936 RVA: 0x006FF100 File Offset: 0x006FD300
 	protected FoleySynthHandlerBase(CharacterActorComponent actorComp, CharacterAkComponent akComp, int recordCount)
 	{
 	}
 
-	// Token: 0x170023E5 RID: 9189
-	// (get) Token: 0x0601A161 RID: 106849 RVA: 0x006D726D File Offset: 0x006D546D
-	// (set) Token: 0x0601A162 RID: 106850 RVA: 0x006D7275 File Offset: 0x006D5475
+	// Token: 0x170024B3 RID: 9395
+	// (get) Token: 0x06017AA9 RID: 96937 RVA: 0x006FF175 File Offset: 0x006FD375
+	// (set) Token: 0x06017AAA RID: 96938 RVA: 0x006FF17D File Offset: 0x006FD37D
 	public CharacterActorComponent ActorComp { get; private set; } = actorComp;
 
-	// Token: 0x170023E6 RID: 9190
-	// (get) Token: 0x0601A163 RID: 106851 RVA: 0x006D727E File Offset: 0x006D547E
-	// (set) Token: 0x0601A164 RID: 106852 RVA: 0x006D7286 File Offset: 0x006D5486
+	// Token: 0x170024B4 RID: 9396
+	// (get) Token: 0x06017AAB RID: 96939 RVA: 0x006FF186 File Offset: 0x006FD386
+	// (set) Token: 0x06017AAC RID: 96940 RVA: 0x006FF18E File Offset: 0x006FD38E
 	public CharacterAkComponent AkComp { get; private set; } = akComp;
 
-	// Token: 0x170023E7 RID: 9191
-	// (get) Token: 0x0601A165 RID: 106853 RVA: 0x006D728F File Offset: 0x006D548F
-	// (set) Token: 0x0601A166 RID: 106854 RVA: 0x006D7297 File Offset: 0x006D5497
+	// Token: 0x170024B5 RID: 9397
+	// (get) Token: 0x06017AAD RID: 96941 RVA: 0x006FF197 File Offset: 0x006FD397
+	// (set) Token: 0x06017AAE RID: 96942 RVA: 0x006FF19F File Offset: 0x006FD39F
 	public int RecordCount { get; private set; } = recordCount;
 
-	// Token: 0x0601A167 RID: 106855 RVA: 0x006D72A0 File Offset: 0x006D54A0
+	// Token: 0x06017AAF RID: 96943 RVA: 0x006FF1A8 File Offset: 0x006FD3A8
 	public virtual void Tick(float deltaTime)
 	{
 		if (!this.IsActive)
@@ -38,13 +38,13 @@ public abstract class FoleySynthHandlerBase
 		this.CalCurrentFoleySynthTick(deltaTime);
 	}
 
-	// Token: 0x0601A168 RID: 106856 RVA: 0x006D72B2 File Offset: 0x006D54B2
+	// Token: 0x06017AB0 RID: 96944 RVA: 0x006FF1BA File Offset: 0x006FD3BA
 	public void SetActive(bool active)
 	{
 		this.IsActive = active;
 	}
 
-	// Token: 0x0601A169 RID: 106857 RVA: 0x006D72BB File Offset: 0x006D54BB
+	// Token: 0x06017AB1 RID: 96945 RVA: 0x006FF1C3 File Offset: 0x006FD3C3
 	public virtual void Clear()
 	{
 		this.ActorComp = null;
@@ -52,7 +52,7 @@ public abstract class FoleySynthHandlerBase
 		this.UeAkComp = null;
 	}
 
-	// Token: 0x0601A16A RID: 106858 RVA: 0x006D72D4 File Offset: 0x006D54D4
+	// Token: 0x06017AB2 RID: 96946 RVA: 0x006FF1DC File Offset: 0x006FD3DC
 	private void CalCurrentFoleySynthTick(float deltaTime)
 	{
 		float num = deltaTime * 0.001f;
@@ -79,18 +79,18 @@ public abstract class FoleySynthHandlerBase
 		}
 	}
 
-	// Token: 0x0601A16B RID: 106859
+	// Token: 0x06017AB3 RID: 96947
 	protected abstract void PreCacheBoneLocation();
 
-	// Token: 0x0601A16C RID: 106860
+	// Token: 0x06017AB4 RID: 96948
 	protected abstract void CalBoneRecord(float deltaTime);
 
-	// Token: 0x0601A16D RID: 106861 RVA: 0x006D736D File Offset: 0x006D556D
+	// Token: 0x06017AB5 RID: 96949 RVA: 0x006FF275 File Offset: 0x006FD475
 	protected virtual void OnParseBoneSpeedForAudio()
 	{
 	}
 
-	// Token: 0x0601A16E RID: 106862 RVA: 0x006D7370 File Offset: 0x006D5570
+	// Token: 0x06017AB6 RID: 96950 RVA: 0x006FF278 File Offset: 0x006FD478
 	[NullableContext(1)]
 	[return: Nullable(0)]
 	protected ValueTuple<double, double> CalBoneSpeed(Vector nowLocation, Vector preLocation, float deltaTime)
@@ -103,20 +103,20 @@ public abstract class FoleySynthHandlerBase
 		return new ValueTuple<double, double>(this.TempVector.Size(), item);
 	}
 
-	// Token: 0x0601A16F RID: 106863 RVA: 0x006D73D8 File Offset: 0x006D55D8
+	// Token: 0x06017AB7 RID: 96951 RVA: 0x006FF2E0 File Offset: 0x006FD4E0
 	protected int GetPreRecordIndex(int size)
 	{
 		return (this.RecordIndex + this.RecordCount - size) % this.RecordCount;
 	}
 
-	// Token: 0x0601A170 RID: 106864 RVA: 0x006D73F0 File Offset: 0x006D55F0
+	// Token: 0x06017AB8 RID: 96952 RVA: 0x006FF2F8 File Offset: 0x006FD4F8
 	[NullableContext(1)]
 	protected FoleySynthRecord GetCurrentRecord(int configIndex)
 	{
 		return this.FoleySynthRecordsModel[this.RecordIndex][configIndex];
 	}
 
-	// Token: 0x0601A171 RID: 106865 RVA: 0x006D740C File Offset: 0x006D560C
+	// Token: 0x06017AB9 RID: 96953 RVA: 0x006FF314 File Offset: 0x006FD514
 	public void SetDebug(bool debug)
 	{
 		if (debug)
@@ -139,7 +139,7 @@ public abstract class FoleySynthHandlerBase
 		this.IsDebug = false;
 	}
 
-	// Token: 0x0601A172 RID: 106866 RVA: 0x006D74A0 File Offset: 0x006D56A0
+	// Token: 0x06017ABA RID: 96954 RVA: 0x006FF3A8 File Offset: 0x006FD5A8
 	public unsafe void SaveDebugInfo(FName? boneName, double speed, double acceleration, double boneSpeed)
 	{
 		if (!this.IsDebug)
@@ -168,52 +168,52 @@ public abstract class FoleySynthHandlerBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0400C5C8 RID: 50632
+	// Token: 0x0400C995 RID: 51605
 	protected UAkComponent UeAkComp;
 
-	// Token: 0x0400C5C9 RID: 50633
+	// Token: 0x0400C996 RID: 51606
 	[Nullable(1)]
 	protected readonly List<List<FoleySynthRecord>> FoleySynthRecordsModel = new List<List<FoleySynthRecord>>();
 
-	// Token: 0x0400C5CA RID: 50634
+	// Token: 0x0400C997 RID: 51607
 	[Nullable(1)]
 	protected readonly List<FoleySynthDynamicConfig> FoleySynthModelDynamicConfigs = new List<FoleySynthDynamicConfig>();
 
-	// Token: 0x0400C5CB RID: 50635
+	// Token: 0x0400C998 RID: 51608
 	[Nullable(1)]
 	protected readonly List<Vector> PreModelBoneComponentLocations = new List<Vector>();
 
-	// Token: 0x0400C5CC RID: 50636
+	// Token: 0x0400C999 RID: 51609
 	protected int RecordIndex;
 
-	// Token: 0x0400C5CD RID: 50637
+	// Token: 0x0400C99A RID: 51610
 	protected int RecordTickCount;
 
-	// Token: 0x0400C5CE RID: 50638
+	// Token: 0x0400C99B RID: 51611
 	protected int RecordErrorFlag;
 
-	// Token: 0x0400C5CF RID: 50639
+	// Token: 0x0400C99C RID: 51612
 	[Nullable(1)]
 	protected readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400C5D0 RID: 50640
+	// Token: 0x0400C99D RID: 51613
 	[Nullable(1)]
 	protected readonly Vector TempBoneLocation = Vector.Create();
 
-	// Token: 0x0400C5D1 RID: 50641
+	// Token: 0x0400C99E RID: 51614
 	protected bool IsActive;
 
-	// Token: 0x0400C5D2 RID: 50642
+	// Token: 0x0400C99F RID: 51615
 	[Nullable(1)]
 	protected string SavedRecords = "";
 
-	// Token: 0x0400C5D3 RID: 50643
+	// Token: 0x0400C9A0 RID: 51616
 	protected bool IsDebug;
 
-	// Token: 0x0400C5D4 RID: 50644
+	// Token: 0x0400C9A1 RID: 51617
 	[Nullable(1)]
 	protected string SavedPath = "";
 
-	// Token: 0x0400C5D5 RID: 50645
+	// Token: 0x0400C9A2 RID: 51618
 	protected float DebugTime;
 }

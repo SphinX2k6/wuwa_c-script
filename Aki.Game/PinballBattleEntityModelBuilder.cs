@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02000EA9 RID: 3753
+// Token: 0x0200035E RID: 862
 public class PinballBattleEntityModelBuilder
 {
-	// Token: 0x06005CAE RID: 23726 RVA: 0x00110D70 File Offset: 0x0010EF70
+	// Token: 0x06003045 RID: 12357 RVA: 0x00118A0C File Offset: 0x00116C0C
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static IPinballBattleCombatInfo Get(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -24,7 +24,7 @@ public class PinballBattleEntityModelBuilder
 		return null;
 	}
 
-	// Token: 0x06005CAF RID: 23727 RVA: 0x00110D98 File Offset: 0x0010EF98
+	// Token: 0x06003046 RID: 12358 RVA: 0x00118A34 File Offset: 0x00116C34
 	public static void Clear()
 	{
 		PinballBattleActivityEntityModel.Clear();

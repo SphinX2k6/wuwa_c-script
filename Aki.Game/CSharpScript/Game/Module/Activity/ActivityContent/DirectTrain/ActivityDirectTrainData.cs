@@ -7,10 +7,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 {
-	// Token: 0x0200673E RID: 26430
+	// Token: 0x0200568E RID: 22158
 	public class ActivityDirectTrainData : ActivityBaseData
 	{
-		// Token: 0x06041F88 RID: 270216 RVA: 0x01000B88 File Offset: 0x00FFED88
+		// Token: 0x06036AD4 RID: 223956 RVA: 0x00F41F38 File Offset: 0x00F40138
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -23,9 +23,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			EventSystem.Instance.Emit<int>(EEventName.ActivityDirectTrainRedDotUpdate, base.Id);
 		}
 
-		// Token: 0x1700965D RID: 38493
-		// (get) Token: 0x06041F89 RID: 270217 RVA: 0x01000BD4 File Offset: 0x00FFEDD4
-		// (set) Token: 0x06041F8A RID: 270218 RVA: 0x01000C24 File Offset: 0x00FFEE24
+		// Token: 0x1700699C RID: 27036
+		// (get) Token: 0x06036AD5 RID: 223957 RVA: 0x00F41F84 File Offset: 0x00F40184
+		// (set) Token: 0x06036AD6 RID: 223958 RVA: 0x00F41FD4 File Offset: 0x00F401D4
 		public bool HaveDisplayedGotoRedDot
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x1700965E RID: 38494
-		// (get) Token: 0x06041F8B RID: 270219 RVA: 0x01000CCF File Offset: 0x00FFEECF
+		// Token: 0x1700699D RID: 27037
+		// (get) Token: 0x06036AD7 RID: 223959 RVA: 0x00F4207F File Offset: 0x00F4027F
 		public override bool RedPointShowState
 		{
 			get
@@ -72,16 +72,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F8C RID: 270220 RVA: 0x01000CD2 File Offset: 0x00FFEED2
+		// Token: 0x06036AD8 RID: 223960 RVA: 0x00F42082 File Offset: 0x00F40282
 		protected override bool GetExDataFinishShowState()
 		{
 			return this.IsFinished;
 		}
 
-		// Token: 0x040225E5 RID: 140773
+		// Token: 0x0401CE3E RID: 118334
 		public bool IsFinished;
 
-		// Token: 0x040225E6 RID: 140774
+		// Token: 0x0401CE3F RID: 118335
 		private bool? HaveDisplayedGotoRedDotInner;
 	}
 }

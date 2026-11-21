@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008C5 RID: 2245
+	// Token: 0x020008E1 RID: 2273
 	public class ConfigRoleSkinBirthdayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060034B1 RID: 13489 RVA: 0x0018317C File Offset: 0x0018137C
+		// Token: 0x06003559 RID: 13657 RVA: 0x0018A464 File Offset: 0x00188664
 		static ConfigRoleSkinBirthdayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleSkinBirthdayById.CreateStaticDefaultValue), new Action(ConfigRoleSkinBirthdayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060034B2 RID: 13490 RVA: 0x0018319C File Offset: 0x0018139C
+		// Token: 0x0600355A RID: 13658 RVA: 0x0018A484 File Offset: 0x00188684
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleSkinBirthdayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060034B3 RID: 13491 RVA: 0x0018321B File Offset: 0x0018141B
+		// Token: 0x0600355B RID: 13659 RVA: 0x0018A503 File Offset: 0x00188703
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleSkinBirthdayById.LogPair = null;
 			ConfigRoleSkinBirthdayById.HandleId = 0;
 		}
 
-		// Token: 0x060034B4 RID: 13492 RVA: 0x00183229 File Offset: 0x00181429
+		// Token: 0x0600355C RID: 13660 RVA: 0x0018A511 File Offset: 0x00188711
 		public static void Init()
 		{
 			ConfigRoleSkinBirthdayById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleSkinBirthdayById.HandleId, "db_birthday.db", "select BinData from `RoleSkinBirthday` where Id=?");
 		}
 
-		// Token: 0x060034B5 RID: 13493 RVA: 0x00183244 File Offset: 0x00181444
+		// Token: 0x0600355D RID: 13661 RVA: 0x0018A52C File Offset: 0x0018872C
 		public static RoleSkinBirthday? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleSkinBirthdayById.HandleId, ConfigRoleSkinBirthdayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleSkinBirthday?(rootAsRoleSkinBirthday);
 		}
 
-		// Token: 0x04003D49 RID: 15689
+		// Token: 0x04003E0D RID: 15885
 		private const string DB = "db_birthday.db";
 
-		// Token: 0x04003D4A RID: 15690
+		// Token: 0x04003E0E RID: 15886
 		private const string FILE = "s.生日.xlsx";
 
-		// Token: 0x04003D4B RID: 15691
+		// Token: 0x04003E0F RID: 15887
 		private const string TABLE = "RoleSkinBirthday";
 
-		// Token: 0x04003D4C RID: 15692
+		// Token: 0x04003E10 RID: 15888
 		private const string COMMAND = "select BinData from `RoleSkinBirthday` where Id=?";
 
-		// Token: 0x04003D4D RID: 15693
+		// Token: 0x04003E11 RID: 15889
 		private const string KEY_PREFIX = "RoleSkinBirthdayById";
 
-		// Token: 0x04003D4E RID: 15694
+		// Token: 0x04003E12 RID: 15890
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D4F RID: 15695
+		// Token: 0x04003E13 RID: 15891
 		private static int HandleId;
 	}
 }

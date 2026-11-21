@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200247D RID: 9341
+// Token: 0x02001962 RID: 6498
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class PhantomGridGridTemplateData : MultiTemplateGridDataBase<PhantomInteractEditGridViewModel, PhantomGridItem>
 {
-	// Token: 0x06012BEE RID: 76782 RVA: 0x0049FD81 File Offset: 0x0049DF81
+	// Token: 0x060100A5 RID: 65701 RVA: 0x004AD4D9 File Offset: 0x004AB6D9
 	public override int GetTemplateIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x06012BEF RID: 76783 RVA: 0x0049FD84 File Offset: 0x0049DF84
+	// Token: 0x060100A6 RID: 65702 RVA: 0x004AD4DC File Offset: 0x004AB6DC
 	public override PhantomGridItem CreateProxy()
 	{
 		return new PhantomGridItem
@@ -29,6 +29,6 @@ public class PhantomGridGridTemplateData : MultiTemplateGridDataBase<PhantomInte
 		};
 	}
 
-	// Token: 0x04008D31 RID: 36145
+	// Token: 0x04008E78 RID: 36472
 	public Action<IPhantomInteractGridViewModel, int> OnClickCb;
 }

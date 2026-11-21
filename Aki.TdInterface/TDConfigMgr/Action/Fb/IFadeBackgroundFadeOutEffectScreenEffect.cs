@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200268B RID: 9867
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200294E RID: 10574
 	public class IFadeBackgroundFadeOutEffectScreenEffect : IFadeBackgroundFadeOutEffectTypeBase
 	{
-		// Token: 0x0600DCF3 RID: 56563 RVA: 0x0020D8DA File Offset: 0x0020BADA
+		// Token: 0x0600EACA RID: 60106 RVA: 0x0022A07A File Offset: 0x0022827A
 		public static IFadeBackgroundFadeOutEffectScreenEffect Create(IFadeBackgroundFadeOutEffectScreenEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700419F RID: 16799
-		// (get) Token: 0x0600DCF4 RID: 56564 RVA: 0x0020D8F9 File Offset: 0x0020BAF9
+		// Token: 0x170044DC RID: 17628
+		// (get) Token: 0x0600EACB RID: 60107 RVA: 0x0022A099 File Offset: 0x00228299
 		public override EFadeBackgroundFadeOutEffectType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A0 RID: 16800
-		// (get) Token: 0x0600DCF5 RID: 56565 RVA: 0x0020D906 File Offset: 0x0020BB06
+		// Token: 0x170044DD RID: 17629
+		// (get) Token: 0x0600EACC RID: 60108 RVA: 0x0022A0A6 File Offset: 0x002282A6
 		public virtual string ScreenEffect
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ABF RID: 31423
+		// Token: 0x0400815C RID: 33116
 		private IFadeBackgroundFadeOutEffectScreenEffect Instance;
 	}
 }

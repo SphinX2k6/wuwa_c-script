@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E7D RID: 7805
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020B2 RID: 8370
 	public class ISkillBtnEffectBase
 	{
-		// Token: 0x0600A708 RID: 42760 RVA: 0x00179C24 File Offset: 0x00177E24
+		// Token: 0x0600B1C0 RID: 45504 RVA: 0x0018F924 File Offset: 0x0018DB24
 		private ISkillBtnEffectBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A709 RID: 42761 RVA: 0x00179C5C File Offset: 0x00177E5C
+		// Token: 0x0600B1C1 RID: 45505 RVA: 0x0018F95C File Offset: 0x0018DB5C
 		public static ISkillBtnEffectBase Create([Nullable(2)] ISkillBtnEffectBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A70A RID: 42762 RVA: 0x00179C6F File Offset: 0x00177E6F
+		// Token: 0x0600B1C2 RID: 45506 RVA: 0x0018F96F File Offset: 0x0018DB6F
 		public static ISkillBtnEffectBase CreateFromSetValue([Nullable(2)] ISkillBtnEffectBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A70B RID: 42763 RVA: 0x00179C82 File Offset: 0x00177E82
+		// Token: 0x0600B1C3 RID: 45507 RVA: 0x0018F982 File Offset: 0x0018DB82
 		public ISkillBtnEffectBase_SetValue ToSetValue()
 		{
 			return new ISkillBtnEffectBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003320 RID: 13088
-		// (get) Token: 0x0600A70C RID: 42764 RVA: 0x00179C95 File Offset: 0x00177E95
-		// (set) Token: 0x0600A70D RID: 42765 RVA: 0x00179CC0 File Offset: 0x00177EC0
+		// Token: 0x170035E4 RID: 13796
+		// (get) Token: 0x0600B1C4 RID: 45508 RVA: 0x0018F995 File Offset: 0x0018DB95
+		// (set) Token: 0x0600B1C5 RID: 45509 RVA: 0x0018F9C0 File Offset: 0x0018DBC0
 		public virtual ESkillBtnEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063B5 RID: 25525
+		// Token: 0x04006999 RID: 27033
 		[Nullable(2)]
 		protected ISkillBtnEffectBase FbInstance;
 
-		// Token: 0x040063B6 RID: 25526
+		// Token: 0x0400699A RID: 27034
 		[Nullable(2)]
 		protected ISkillBtnEffectBase_SetValue PocoInterface;
 	}

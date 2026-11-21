@@ -4,38 +4,38 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C40 RID: 7232
+	// Token: 0x020004FA RID: 1274
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.EKuroRhythmGameNoteType")]
 	public enum EKuroRhythmGameNoteType : byte
 	{
-		// Token: 0x0400F112 RID: 61714
+		// Token: 0x04003269 RID: 12905
 		None,
-		// Token: 0x0400F113 RID: 61715
+		// Token: 0x0400326A RID: 12906
 		KuroTapA,
-		// Token: 0x0400F114 RID: 61716
+		// Token: 0x0400326B RID: 12907
 		KuroTapB,
-		// Token: 0x0400F115 RID: 61717
+		// Token: 0x0400326C RID: 12908
 		KuroTapLeft,
-		// Token: 0x0400F116 RID: 61718
+		// Token: 0x0400326D RID: 12909
 		KuroTapRight,
-		// Token: 0x0400F117 RID: 61719
+		// Token: 0x0400326E RID: 12910
 		KuroFlickLeft,
-		// Token: 0x0400F118 RID: 61720
+		// Token: 0x0400326F RID: 12911
 		KuroFlickRight,
-		// Token: 0x0400F119 RID: 61721
+		// Token: 0x04003270 RID: 12912
 		Kuro3DFlickLeft,
-		// Token: 0x0400F11A RID: 61722
+		// Token: 0x04003271 RID: 12913
 		Kuro3DFlickRight,
-		// Token: 0x0400F11B RID: 61723
+		// Token: 0x04003272 RID: 12914
 		KuroLine,
-		// Token: 0x0400F11C RID: 61724
+		// Token: 0x04003273 RID: 12915
 		KuroLineHold,
-		// Token: 0x0400F11D RID: 61725
+		// Token: 0x04003274 RID: 12916
 		KuroLineHit,
-		// Token: 0x0400F11E RID: 61726
+		// Token: 0x04003275 RID: 12917
 		KuroEvent,
-		// Token: 0x0400F11F RID: 61727
+		// Token: 0x04003276 RID: 12918
 		EKuroRhythmGameNoteType_MAX
 	}
 }

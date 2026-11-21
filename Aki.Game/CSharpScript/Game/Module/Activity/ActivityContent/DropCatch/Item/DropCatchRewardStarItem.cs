@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E3 RID: 26339
+	// Token: 0x02005633 RID: 22067
 	public class DropCatchRewardStarItem : GridProxyAbstract<bool>
 	{
-		// Token: 0x06041D4E RID: 269646 RVA: 0x00FF721D File Offset: 0x00FF541D
+		// Token: 0x0603689A RID: 223386 RVA: 0x00F38621 File Offset: 0x00F36821
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 			};
 		}
 
-		// Token: 0x06041D4F RID: 269647 RVA: 0x00FF7256 File Offset: 0x00FF5456
+		// Token: 0x0603689B RID: 223387 RVA: 0x00F3865A File Offset: 0x00F3685A
 		public override void Refresh(bool visible, bool isSelected, int gridIndex)
 		{
 			base.GetSprite(0).SetUIActive(true);

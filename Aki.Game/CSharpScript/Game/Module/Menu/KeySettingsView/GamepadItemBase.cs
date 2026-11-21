@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005460 RID: 21600
+	// Token: 0x02004443 RID: 17475
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GamepadItemBase : UiPanelBase
 	{
-		// Token: 0x06037220 RID: 225824 RVA: 0x00D11898 File Offset: 0x00D0FA98
+		// Token: 0x0602C169 RID: 180585 RVA: 0x00C60CB0 File Offset: 0x00C5EEB0
 		protected void AddKeySprite(string keyName, UUISprite keySprite)
 		{
 			this.KeySpriteMap.Add(keyName, keySprite);
 		}
 
-		// Token: 0x06037221 RID: 225825 RVA: 0x00D118A8 File Offset: 0x00D0FAA8
+		// Token: 0x0602C16A RID: 180586 RVA: 0x00C60CC0 File Offset: 0x00C5EEC0
 		public void SetKeysEnable(string[] keyNameList)
 		{
 			foreach (KeyValuePair<string, UUISprite> keyValuePair in this.VisibleKeySpriteMap)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x06037222 RID: 225826 RVA: 0x00D1193C File Offset: 0x00D0FB3C
+		// Token: 0x0602C16B RID: 180587 RVA: 0x00C60D54 File Offset: 0x00C5EF54
 		public void SetAllKeyDisable()
 		{
 			foreach (UUISprite uuisprite in this.VisibleKeySpriteMap.Values)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			}
 		}
 
-		// Token: 0x06037223 RID: 225827 RVA: 0x00D11994 File Offset: 0x00D0FB94
+		// Token: 0x0602C16C RID: 180588 RVA: 0x00C60DAC File Offset: 0x00C5EFAC
 		public void SetKeySpriteVisible(string keyName, bool bVisible)
 		{
 			UUISprite uuisprite;
@@ -61,17 +61,17 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			this.VisibleKeySpriteMap.Remove(keyName);
 		}
 
-		// Token: 0x06037224 RID: 225828 RVA: 0x00D119D7 File Offset: 0x00D0FBD7
+		// Token: 0x0602C16D RID: 180589 RVA: 0x00C60DEF File Offset: 0x00C5EFEF
 		protected override void OnBeforeDestroy()
 		{
 			this.KeySpriteMap.Clear();
 			this.VisibleKeySpriteMap.Clear();
 		}
 
-		// Token: 0x0401D16A RID: 119146
+		// Token: 0x04017C03 RID: 97283
 		private readonly Dictionary<string, UUISprite> KeySpriteMap = new Dictionary<string, UUISprite>();
 
-		// Token: 0x0401D16B RID: 119147
+		// Token: 0x04017C04 RID: 97284
 		private readonly Dictionary<string, UUISprite> VisibleKeySpriteMap = new Dictionary<string, UUISprite>();
 	}
 }

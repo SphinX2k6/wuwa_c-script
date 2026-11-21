@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000120 RID: 288
+	// Token: 0x0200012F RID: 303
 	public class ConfigBrokenRockRingById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006C1 RID: 1729 RVA: 0x0007FD58 File Offset: 0x0007DF58
+		// Token: 0x0600071B RID: 1819 RVA: 0x000856BC File Offset: 0x000838BC
 		static ConfigBrokenRockRingById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBrokenRockRingById.CreateStaticDefaultValue), new Action(ConfigBrokenRockRingById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006C2 RID: 1730 RVA: 0x0007FD78 File Offset: 0x0007DF78
+		// Token: 0x0600071C RID: 1820 RVA: 0x000856DC File Offset: 0x000838DC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBrokenRockRingById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006C3 RID: 1731 RVA: 0x0007FDF7 File Offset: 0x0007DFF7
+		// Token: 0x0600071D RID: 1821 RVA: 0x0008575B File Offset: 0x0008395B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBrokenRockRingById.LogPair = null;
 			ConfigBrokenRockRingById.HandleId = 0;
 		}
 
-		// Token: 0x060006C4 RID: 1732 RVA: 0x0007FE05 File Offset: 0x0007E005
+		// Token: 0x0600071E RID: 1822 RVA: 0x00085769 File Offset: 0x00083969
 		public static void Init()
 		{
 			ConfigBrokenRockRingById.HandleId = ConfigCommon.InitDataStatement(ConfigBrokenRockRingById.HandleId, "db_brokenrockconfig.db", "select BinData from `BrokenRockRing` where Id=?");
 		}
 
-		// Token: 0x060006C5 RID: 1733 RVA: 0x0007FE20 File Offset: 0x0007E020
+		// Token: 0x0600071F RID: 1823 RVA: 0x00085784 File Offset: 0x00083984
 		public static BrokenRockRing? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBrokenRockRingById.HandleId, ConfigBrokenRockRingById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BrokenRockRing?(rootAsBrokenRockRing);
 		}
 
-		// Token: 0x040007C4 RID: 1988
+		// Token: 0x0400082D RID: 2093
 		private const string DB = "db_brokenrockconfig.db";
 
-		// Token: 0x040007C5 RID: 1989
+		// Token: 0x0400082E RID: 2094
 		private const string FILE = "k.可视化编辑/c.Csv/p.破碎岩石圆环/*.csv*";
 
-		// Token: 0x040007C6 RID: 1990
+		// Token: 0x0400082F RID: 2095
 		private const string TABLE = "BrokenRockRing";
 
-		// Token: 0x040007C7 RID: 1991
+		// Token: 0x04000830 RID: 2096
 		private const string COMMAND = "select BinData from `BrokenRockRing` where Id=?";
 
-		// Token: 0x040007C8 RID: 1992
+		// Token: 0x04000831 RID: 2097
 		private const string KEY_PREFIX = "BrokenRockRingById";
 
-		// Token: 0x040007C9 RID: 1993
+		// Token: 0x04000832 RID: 2098
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007CA RID: 1994
+		// Token: 0x04000833 RID: 2099
 		private static int HandleId;
 	}
 }

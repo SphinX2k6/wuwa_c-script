@@ -9,25 +9,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054E9 RID: 21737
+	// Token: 0x020044BC RID: 17596
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HonamiScanMarkItem : ConfigMarkItem
 	{
-		// Token: 0x06037804 RID: 227332 RVA: 0x00D2E525 File Offset: 0x00D2C725
+		// Token: 0x0602C6C1 RID: 181953 RVA: 0x00C7C63B File Offset: 0x00C7A83B
 		public HonamiScanMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.Instance) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 		}
 
-		// Token: 0x06037805 RID: 227333 RVA: 0x00D2E546 File Offset: 0x00D2C746
+		// Token: 0x0602C6C2 RID: 181954 RVA: 0x00C7C65C File Offset: 0x00C7A85C
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
-			this.UpdateGamePlayState();
 			this.RefreshSubMapState();
 		}
 
-		// Token: 0x06037806 RID: 227334 RVA: 0x00D2E55A File Offset: 0x00D2C75A
+		// Token: 0x0602C6C3 RID: 181955 RVA: 0x00C7C66A File Offset: 0x00C7A86A
 		protected override void OnUpdate(global::Vector playerLocation)
 		{
 			base.OnUpdate(playerLocation);
@@ -37,33 +36,33 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037807 RID: 227335 RVA: 0x00D2E572 File Offset: 0x00D2C772
+		// Token: 0x0602C6C4 RID: 181956 RVA: 0x00C7C682 File Offset: 0x00C7A882
 		protected override void InitIcon()
 		{
 			this.UpdateIcon();
 		}
 
-		// Token: 0x06037808 RID: 227336 RVA: 0x00D2E57C File Offset: 0x00D2C77C
+		// Token: 0x0602C6C5 RID: 181957 RVA: 0x00C7C68C File Offset: 0x00C7A88C
 		public void UpdateIcon()
 		{
-			this.IconPathInner = (this.IsLocked ? this.MarkConfig.Value.LockMarkPic : this.MarkConfig.Value.UnlockMarkPic);
+			this.IconPathInner = (this.IsLocked ? base.MarkConfig.Value.LockMarkPic : base.MarkConfig.Value.UnlockMarkPic);
 		}
 
-		// Token: 0x06037809 RID: 227337 RVA: 0x00D2E5BF File Offset: 0x00D2C7BF
+		// Token: 0x0602C6C6 RID: 181958 RVA: 0x00C7C6D5 File Offset: 0x00C7A8D5
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.HonamiScanMarkItemView;
 		}
 
-		// Token: 0x0603780A RID: 227338 RVA: 0x00D2E5C3 File Offset: 0x00D2C7C3
+		// Token: 0x0602C6C7 RID: 181959 RVA: 0x00C7C6D9 File Offset: 0x00C7A8D9
 		[PreserveBaseOverrides]
 		protected new virtual HonamiScanMarkItemView CreateView()
 		{
 			return new HonamiScanMarkItemView(this);
 		}
 
-		// Token: 0x17008543 RID: 34115
-		// (get) Token: 0x0603780B RID: 227339 RVA: 0x00D2E5CB File Offset: 0x00D2C7CB
+		// Token: 0x170058D2 RID: 22738
+		// (get) Token: 0x0602C6C8 RID: 181960 RVA: 0x00C7C6E1 File Offset: 0x00C7A8E1
 		public override bool IsLocked
 		{
 			get
@@ -72,9 +71,9 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008544 RID: 34116
-		// (get) Token: 0x0603780C RID: 227340 RVA: 0x00D2E5E0 File Offset: 0x00D2C7E0
-		// (set) Token: 0x0603780D RID: 227341 RVA: 0x00D2E5E8 File Offset: 0x00D2C7E8
+		// Token: 0x170058D3 RID: 22739
+		// (get) Token: 0x0602C6C9 RID: 181961 RVA: 0x00C7C6F6 File Offset: 0x00C7A8F6
+		// (set) Token: 0x0602C6CA RID: 181962 RVA: 0x00C7C6FE File Offset: 0x00C7A8FE
 		public override string IconPath
 		{
 			get
@@ -87,32 +86,22 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x0603780E RID: 227342 RVA: 0x00D2E5F1 File Offset: 0x00D2C7F1
-		protected override bool GamePlayIsFinish()
+		// Token: 0x0602C6CB RID: 181963 RVA: 0x00C7C707 File Offset: 0x00C7A907
+		protected override bool IsGamePlayFinishRaw()
 		{
 			return MapModel.Instance.GetHonamiScanMarkInfo(this.MarkId) == MarkState.MarkComplete;
 		}
 
-		// Token: 0x0603780F RID: 227343 RVA: 0x00D2E606 File Offset: 0x00D2C806
-		private void UpdateGamePlayState()
-		{
-			base.MarkItemEntity.GamePlay.GamePlayState = (this.GamePlayIsFinish() ? EMarkGamePlayState.Finish : EMarkGamePlayState.Lock);
-		}
-
-		// Token: 0x06037810 RID: 227344 RVA: 0x00D2E624 File Offset: 0x00D2C824
+		// Token: 0x0602C6CC RID: 181964 RVA: 0x00C7C71C File Offset: 0x00C7A91C
 		private void RefreshSubMapState()
 		{
 			base.IsSelectThisFloor = this.GetIsSelectThisFloor();
 		}
 
-		// Token: 0x0401D3A4 RID: 119716
-		[Nullable(2)]
-		public HonamiScanMarkItemView InnerView;
-
-		// Token: 0x0401D3A5 RID: 119717
+		// Token: 0x04017E1E RID: 97822
 		public bool IsDirty;
 
-		// Token: 0x0401D3A6 RID: 119718
+		// Token: 0x04017E1F RID: 97823
 		private string IconPathInner = "";
 	}
 }

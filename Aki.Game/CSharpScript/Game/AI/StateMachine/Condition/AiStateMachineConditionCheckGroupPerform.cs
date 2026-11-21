@@ -6,29 +6,29 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x02007339 RID: 29497
+	// Token: 0x020064BC RID: 25788
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionCheckGroupPerform : AiStateMachineCondition
 	{
-		// Token: 0x0604861F RID: 296479 RVA: 0x0129E977 File Offset: 0x0129CB77
+		// Token: 0x0603EA6C RID: 256620 RVA: 0x012413FF File Offset: 0x0123F5FF
 		public AiStateMachineConditionCheckGroupPerform(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048620 RID: 296480 RVA: 0x0129E982 File Offset: 0x0129CB82
+		// Token: 0x0603EA6D RID: 256621 RVA: 0x0124140A File Offset: 0x0123F60A
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			return true;
 		}
 
-		// Token: 0x06048621 RID: 296481 RVA: 0x0129E985 File Offset: 0x0129CB85
+		// Token: 0x0603EA6E RID: 256622 RVA: 0x0124140D File Offset: 0x0123F60D
 		protected override void OnTick()
 		{
 			this.ResultSelf = MonsterGroupEcologyController.Instance.CheckEntityInMonsterGroup(this.Node.Entity.Id);
 		}
 
-		// Token: 0x06048622 RID: 296482 RVA: 0x0129E9A7 File Offset: 0x0129CBA7
+		// Token: 0x0603EA6F RID: 256623 RVA: 0x0124142F File Offset: 0x0123F62F
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);

@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018C1 RID: 6337
+// Token: 0x02000D7A RID: 3450
 internal class StarLayoutItem : UiPanelBase
 {
-	// Token: 0x0600B9CE RID: 47566 RVA: 0x002A1F7A File Offset: 0x002A017A
+	// Token: 0x06008DB7 RID: 36279 RVA: 0x002AC6D2 File Offset: 0x002AA8D2
 	[NullableContext(1)]
 	public StarLayoutItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600B9CF RID: 47567 RVA: 0x002A1F8F File Offset: 0x002A018F
+	// Token: 0x06008DB8 RID: 36280 RVA: 0x002AC6E7 File Offset: 0x002AA8E7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +26,13 @@ internal class StarLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B9D0 RID: 47568 RVA: 0x002A1FC8 File Offset: 0x002A01C8
+	// Token: 0x06008DB9 RID: 36281 RVA: 0x002AC720 File Offset: 0x002AA920
 	protected override void OnStart()
 	{
 		this.StarLayout = new GenericLayoutNew<StarItem>(base.GetVerticalLayout(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<StarItem>(this.InitStarItem), base.GetItem(1));
 	}
 
-	// Token: 0x0600B9D1 RID: 47569 RVA: 0x002A1FF0 File Offset: 0x002A01F0
+	// Token: 0x06008DBA RID: 36282 RVA: 0x002AC748 File Offset: 0x002AA948
 	[NullableContext(1)]
 	private ILayoutItem<StarItem> InitStarItem([Nullable(2)] object data, UUIItem uiItem, int index)
 	{
@@ -44,7 +44,7 @@ internal class StarLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B9D2 RID: 47570 RVA: 0x002A201C File Offset: 0x002A021C
+	// Token: 0x06008DBB RID: 36283 RVA: 0x002AC774 File Offset: 0x002AA974
 	[NullableContext(2)]
 	public void RefreshStar(int[] starNum)
 	{
@@ -56,13 +56,13 @@ internal class StarLayoutItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B9D3 RID: 47571 RVA: 0x002A2069 File Offset: 0x002A0269
+	// Token: 0x06008DBC RID: 36284 RVA: 0x002AC7C1 File Offset: 0x002AA9C1
 	protected override void OnBeforeDestroy()
 	{
 		this.StarLayout.ClearChildren();
 	}
 
-	// Token: 0x0400543D RID: 21565
+	// Token: 0x040054E8 RID: 21736
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,12 +70,12 @@ internal class StarLayoutItem : UiPanelBase
 	})]
 	protected GenericLayoutNew<StarItem> StarLayout;
 
-	// Token: 0x02007E4C RID: 32332
+	// Token: 0x02006FD3 RID: 28627
 	private enum EStarDefine
 	{
-		// Token: 0x04029550 RID: 169296
+		// Token: 0x0402487D RID: 149629
 		Layout,
-		// Token: 0x04029551 RID: 169297
+		// Token: 0x0402487E RID: 149630
 		StarItem
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A2 RID: 9122
+	// Token: 0x0200262D RID: 9773
 	public class EMovieBackgroundTypeJsonConverter : JsonConverter<EMovieBackgroundType>
 	{
-		// Token: 0x0600C6D9 RID: 50905 RVA: 0x001D1E54 File Offset: 0x001D0054
+		// Token: 0x0600D326 RID: 54054 RVA: 0x001EAFF4 File Offset: 0x001E91F4
 		public override EMovieBackgroundType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMovieBackgroundTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6DA RID: 50906 RVA: 0x001D1E78 File Offset: 0x001D0078
+		// Token: 0x0600D327 RID: 54055 RVA: 0x001EB018 File Offset: 0x001E9218
 		public override void Write(Utf8JsonWriter writer, EMovieBackgroundType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

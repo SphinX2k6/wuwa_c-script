@@ -5,12 +5,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E3 RID: 21219
+	// Token: 0x020042B3 RID: 17075
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAiOperationFactory
 	{
-		// Token: 0x0603648F RID: 222351 RVA: 0x00CD7550 File Offset: 0x00CD5750
+		// Token: 0x0602B38A RID: 177034 RVA: 0x00C24C74 File Offset: 0x00C22E74
 		public static NpcAiOperation GetAiOperation(EPhantomArenaAiOperationType type, object param)
 		{
 			if (!PhantomArenaAiOperationFactory.AiOperationMap.ContainsKey(type))
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 			return PhantomArenaAiOperationFactory.AiOperationMap[type](param);
 		}
 
-		// Token: 0x0401CB0F RID: 117519
+		// Token: 0x04017544 RID: 95556
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EPhantomArenaAiOperationType, Func<object, NpcAiOperation>> AiOperationMap = new Dictionary<EPhantomArenaAiOperationType, Func<object, NpcAiOperation>>
 		{

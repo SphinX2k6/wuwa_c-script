@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002643 RID: 9795
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002903 RID: 10499
 	public class SetEntityVisible : ActionParams
 	{
-		// Token: 0x0600DBC1 RID: 56257 RVA: 0x0020B490 File Offset: 0x00209690
+		// Token: 0x0600E98F RID: 59791 RVA: 0x00227C5C File Offset: 0x00225E5C
 		public static SetEntityVisible Create(ISetEntityVisible? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040FD RID: 16637
-		// (get) Token: 0x0600DBC2 RID: 56258 RVA: 0x0020B4B0 File Offset: 0x002096B0
+		// Token: 0x17004437 RID: 17463
+		// (get) Token: 0x0600E990 RID: 59792 RVA: 0x00227C7C File Offset: 0x00225E7C
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040FE RID: 16638
-		// (get) Token: 0x0600DBC3 RID: 56259 RVA: 0x0020B514 File Offset: 0x00209714
+		// Token: 0x17004438 RID: 17464
+		// (get) Token: 0x0600E991 RID: 59793 RVA: 0x00227CE0 File Offset: 0x00225EE0
 		public virtual bool Visible
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040FF RID: 16639
-		// (get) Token: 0x0600DBC4 RID: 56260 RVA: 0x0020B524 File Offset: 0x00209724
+		// Token: 0x17004439 RID: 17465
+		// (get) Token: 0x0600E992 RID: 59794 RVA: 0x00227CF0 File Offset: 0x00225EF0
 		public virtual bool? PerformDestroy
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A1D RID: 31261
+		// Token: 0x040080B9 RID: 32953
 		private ISetEntityVisible Instance;
 
-		// Token: 0x04007A1E RID: 31262
+		// Token: 0x040080BA RID: 32954
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A1F RID: 31263
+		// Token: 0x040080BB RID: 32955
 		private bool _EntityIdsInited;
 	}
 }

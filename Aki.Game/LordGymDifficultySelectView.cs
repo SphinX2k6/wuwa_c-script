@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021A2 RID: 8610
+// Token: 0x02001686 RID: 5766
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymDifficultySelectView : UiViewBase
 {
-	// Token: 0x06010BD5 RID: 68565 RVA: 0x00410FEE File Offset: 0x0040F1EE
+	// Token: 0x0600E066 RID: 57446 RVA: 0x0041D8D6 File Offset: 0x0041BAD6
 	public LordGymDifficultySelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010BD6 RID: 68566 RVA: 0x00410FF8 File Offset: 0x0040F1F8
+	// Token: 0x0600E067 RID: 57447 RVA: 0x0041D8E0 File Offset: 0x0041BAE0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010BD7 RID: 68567 RVA: 0x004111B8 File Offset: 0x0040F3B8
+	// Token: 0x0600E068 RID: 57448 RVA: 0x0041DAA0 File Offset: 0x0041BCA0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymDifficultySelectView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010BD8 RID: 68568 RVA: 0x004111FB File Offset: 0x0040F3FB
+	// Token: 0x0600E069 RID: 57449 RVA: 0x0041DAE3 File Offset: 0x0041BCE3
 	protected override void OnHandleLoadScene()
 	{
 		UiSceneManager.Instance.InitLordSkeletalHandle();
@@ -67,32 +67,32 @@ public class LordGymDifficultySelectView : UiViewBase
 		LordGymController.Instance.LoadLordModelByEntranceId(this.LordEntranceId, true, false).Forget();
 	}
 
-	// Token: 0x06010BD9 RID: 68569 RVA: 0x00411228 File Offset: 0x0040F428
+	// Token: 0x0600E06A RID: 57450 RVA: 0x0041DB10 File Offset: 0x0041BD10
 	protected override void OnHandleReleaseScene()
 	{
 		UiSceneManager.Instance.DestroyLordSkeletalHandle();
 	}
 
-	// Token: 0x06010BDA RID: 68570 RVA: 0x00411234 File Offset: 0x0040F434
+	// Token: 0x0600E06B RID: 57451 RVA: 0x0041DB1C File Offset: 0x0041BD1C
 	protected virtual void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010BDB RID: 68571 RVA: 0x00411240 File Offset: 0x0040F440
+	// Token: 0x0600E06C RID: 57452 RVA: 0x0041DB28 File Offset: 0x0041BD28
 	private void OnHelpBtnClick()
 	{
 		int helpId = ConfigLordGymEntranceSetById.GetConfig(this.LordEntranceSetId, true).Value.HelpId;
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x06010BDC RID: 68572 RVA: 0x00411275 File Offset: 0x0040F475
+	// Token: 0x0600E06D RID: 57453 RVA: 0x0041DB5D File Offset: 0x0041BD5D
 	private LordGymDifficultyItem CreateDifficultyLoopItem()
 	{
 		return this.CreateItem();
 	}
 
-	// Token: 0x06010BDD RID: 68573 RVA: 0x0041127D File Offset: 0x0040F47D
+	// Token: 0x0600E06E RID: 57454 RVA: 0x0041DB65 File Offset: 0x0041BD65
 	protected virtual LordGymDifficultyItem CreateItem()
 	{
 		return new LordGymDifficultyItem
@@ -102,19 +102,19 @@ public class LordGymDifficultySelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010BDE RID: 68574 RVA: 0x004112A8 File Offset: 0x0040F4A8
+	// Token: 0x0600E06F RID: 57455 RVA: 0x0041DB90 File Offset: 0x0041BD90
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06010BDF RID: 68575 RVA: 0x004112AF File Offset: 0x0040F4AF
+	// Token: 0x0600E070 RID: 57456 RVA: 0x0041DB97 File Offset: 0x0041BD97
 	private void OnStartChallengeButtonClick()
 	{
 		this.OnStartChallenge();
 	}
 
-	// Token: 0x06010BE0 RID: 68576 RVA: 0x004112B8 File Offset: 0x0040F4B8
+	// Token: 0x0600E071 RID: 57457 RVA: 0x0041DBA0 File Offset: 0x0041BDA0
 	protected virtual void OnStartChallenge()
 	{
 		if (!LordGymController.Instance.IsInEntranceEntity())
@@ -134,7 +134,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x06010BE1 RID: 68577 RVA: 0x00411320 File Offset: 0x0040F520
+	// Token: 0x0600E072 RID: 57458 RVA: 0x0041DC08 File Offset: 0x0041BE08
 	private void OnHistoryButtonClick()
 	{
 		LordGym? lordGymConfig = LordGymConfig.Instance.GetLordGymConfig(this.SelectedLordId);
@@ -146,7 +146,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.LordGymChallengeRecordView, param, null);
 	}
 
-	// Token: 0x06010BE2 RID: 68578 RVA: 0x00411384 File Offset: 0x0040F584
+	// Token: 0x0600E073 RID: 57459 RVA: 0x0041DC6C File Offset: 0x0041BE6C
 	private void SetDefaultSelect()
 	{
 		if (this.LordList == null || this.LordList.Count == 0)
@@ -177,13 +177,13 @@ public class LordGymDifficultySelectView : UiViewBase
 		this.SelectLordDifficultyByIndex(num3);
 	}
 
-	// Token: 0x06010BE3 RID: 68579 RVA: 0x00411430 File Offset: 0x0040F630
+	// Token: 0x0600E074 RID: 57460 RVA: 0x0041DD18 File Offset: 0x0041BF18
 	protected bool CanLordDifficultyToggleChange(int index)
 	{
 		return index != this.LordDifficultyScrollView.GetSelectedGridIndex();
 	}
 
-	// Token: 0x06010BE4 RID: 68580 RVA: 0x00411443 File Offset: 0x0040F643
+	// Token: 0x0600E075 RID: 57461 RVA: 0x0041DD2B File Offset: 0x0041BF2B
 	protected void OnLordDifficultyToggleClick(int index)
 	{
 		if (!this.CanLordDifficultyToggleChange(index))
@@ -193,7 +193,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		this.SelectLordDifficultyByIndex(index);
 	}
 
-	// Token: 0x06010BE5 RID: 68581 RVA: 0x00411456 File Offset: 0x0040F656
+	// Token: 0x0600E076 RID: 57462 RVA: 0x0041DD3E File Offset: 0x0041BF3E
 	public void SelectLordDifficultyByIndex(int index)
 	{
 		LoopScrollView<LordGymDifficultyItem, int> lordDifficultyScrollView = this.LordDifficultyScrollView;
@@ -205,7 +205,7 @@ public class LordGymDifficultySelectView : UiViewBase
 		this.RefreshDetail();
 	}
 
-	// Token: 0x06010BE6 RID: 68582 RVA: 0x00411484 File Offset: 0x0040F684
+	// Token: 0x0600E077 RID: 57463 RVA: 0x0041DD6C File Offset: 0x0041BF6C
 	public virtual void RefreshDetail()
 	{
 		LordGym? lordGymConfig = LordGymConfig.Instance.GetLordGymConfig(this.SelectedLordId);
@@ -267,21 +267,21 @@ public class LordGymDifficultySelectView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(11), "Text_StartBattle_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x04007F73 RID: 32627
+	// Token: 0x040080BA RID: 32954
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04007F74 RID: 32628
+	// Token: 0x040080BB RID: 32955
 	protected int LordEntranceSetId;
 
-	// Token: 0x04007F75 RID: 32629
+	// Token: 0x040080BC RID: 32956
 	protected int LordEntranceId;
 
-	// Token: 0x04007F76 RID: 32630
+	// Token: 0x040080BD RID: 32957
 	[Nullable(2)]
 	protected List<int> LordList;
 
-	// Token: 0x04007F77 RID: 32631
+	// Token: 0x040080BE RID: 32958
 	[Nullable(new byte[]
 	{
 		2,
@@ -289,7 +289,7 @@ public class LordGymDifficultySelectView : UiViewBase
 	})]
 	protected LoopScrollView<LordGymDifficultyItem, int> LordDifficultyScrollView;
 
-	// Token: 0x04007F78 RID: 32632
+	// Token: 0x040080BF RID: 32959
 	[Nullable(new byte[]
 	{
 		2,
@@ -297,56 +297,56 @@ public class LordGymDifficultySelectView : UiViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x04007F79 RID: 32633
+	// Token: 0x040080C0 RID: 32960
 	protected int SelectedLordId;
 
-	// Token: 0x020086CD RID: 34509
+	// Token: 0x02007858 RID: 30808
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402BDC2 RID: 179650
+		// Token: 0x040270E3 RID: 159971
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402BDC3 RID: 179651
+		// Token: 0x040270E4 RID: 159972
 		public const int DifficultyLoopScrollView = 1;
 
-		// Token: 0x0402BDC4 RID: 179652
+		// Token: 0x040270E5 RID: 159973
 		public const int DifficultyLoopItem = 2;
 
-		// Token: 0x0402BDC5 RID: 179653
+		// Token: 0x040270E6 RID: 159974
 		public const int LordNameText = 3;
 
-		// Token: 0x0402BDC6 RID: 179654
+		// Token: 0x040270E7 RID: 159975
 		public const int LordLevelText = 4;
 
-		// Token: 0x0402BDC7 RID: 179655
+		// Token: 0x040270E8 RID: 159976
 		public const int DetailText = 5;
 
-		// Token: 0x0402BDC8 RID: 179656
+		// Token: 0x040270E9 RID: 159977
 		public const int RewardScrollView = 6;
 
-		// Token: 0x0402BDC9 RID: 179657
+		// Token: 0x040270EA RID: 159978
 		public const int HistoryButton = 7;
 
-		// Token: 0x0402BDCA RID: 179658
+		// Token: 0x040270EB RID: 159979
 		public const int HistoryText = 8;
 
-		// Token: 0x0402BDCB RID: 179659
+		// Token: 0x040270EC RID: 159980
 		public const int WarningItem = 9;
 
-		// Token: 0x0402BDCC RID: 179660
+		// Token: 0x040270ED RID: 159981
 		public const int StartChallengeButton = 10;
 
-		// Token: 0x0402BDCD RID: 179661
+		// Token: 0x040270EE RID: 159982
 		public const int StartChallengeText = 11;
 
-		// Token: 0x0402BDCE RID: 179662
+		// Token: 0x040270EF RID: 159983
 		public const int LockItem = 12;
 
-		// Token: 0x0402BDCF RID: 179663
+		// Token: 0x040270F0 RID: 159984
 		public const int ConditionText = 13;
 
-		// Token: 0x0402BDD0 RID: 179664
+		// Token: 0x040270F1 RID: 159985
 		public const int BackBtn = 14;
 	}
 }

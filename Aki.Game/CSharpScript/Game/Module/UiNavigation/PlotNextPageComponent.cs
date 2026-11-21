@@ -8,33 +8,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049B8 RID: 18872
+	// Token: 0x02003932 RID: 14642
 	public class PlotNextPageComponent : HotKeyComponent
 	{
-		// Token: 0x060311AE RID: 201134 RVA: 0x00B649A6 File Offset: 0x00B62BA6
+		// Token: 0x06025CE4 RID: 154852 RVA: 0x00A9F8F6 File Offset: 0x00A9DAF6
 		public PlotNextPageComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311AF RID: 201135 RVA: 0x00B649AF File Offset: 0x00B62BAF
+		// Token: 0x06025CE5 RID: 154853 RVA: 0x00A9F8FF File Offset: 0x00A9DAFF
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.NavigationRefreshPlotNextPage, new Action<bool>(this.NavigationRefreshPlotNextPage));
 		}
 
-		// Token: 0x060311B0 RID: 201136 RVA: 0x00B649CD File Offset: 0x00B62BCD
+		// Token: 0x06025CE6 RID: 154854 RVA: 0x00A9F91D File Offset: 0x00A9DB1D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.NavigationRefreshPlotNextPage, new Action<bool>(this.NavigationRefreshPlotNextPage));
 		}
 
-		// Token: 0x060311B1 RID: 201137 RVA: 0x00B649EB File Offset: 0x00B62BEB
+		// Token: 0x06025CE7 RID: 154855 RVA: 0x00A9F93B File Offset: 0x00A9DB3B
 		protected override void OnPress(HotKeyMap config)
 		{
 			UiNavigationNewController.Instance.ClickButton(config.BindButtonTag);
 		}
 
-		// Token: 0x060311B2 RID: 201138 RVA: 0x00B64A00 File Offset: 0x00B62C00
+		// Token: 0x06025CE8 RID: 154856 RVA: 0x00A9F950 File Offset: 0x00A9DB50
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshNewStyleAlpha();
 		}
 
-		// Token: 0x060311B3 RID: 201139 RVA: 0x00B64A5C File Offset: 0x00B62C5C
+		// Token: 0x06025CE9 RID: 154857 RVA: 0x00A9F9AC File Offset: 0x00A9DBAC
 		private void NavigationRefreshPlotNextPage(bool isActive)
 		{
 			TsUiNavigationBehaviorListener listener = this.Listener;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.RefreshNewStyleAlpha();
 		}
 
-		// Token: 0x060311B4 RID: 201140 RVA: 0x00B64A90 File Offset: 0x00B62C90
+		// Token: 0x06025CEA RID: 154858 RVA: 0x00A9F9E0 File Offset: 0x00A9DBE0
 		private void RefreshNewStyleAlpha()
 		{
 			bool flag = PlotModel.Instance.IsNewSubtitleStyleActive();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			rootItem.SetAlpha((float)((flag || flag2) ? 0 : 1));
 		}
 
-		// Token: 0x0401A4BC RID: 107708
+		// Token: 0x04014D2E RID: 85294
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener Listener;
 	}

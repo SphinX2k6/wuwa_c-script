@@ -3,25 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AA4 RID: 6820
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C3D RID: 7229
 	public class IFlowTextConfig_SetValue
 	{
-		// Token: 0x04005A13 RID: 23059
+		// Token: 0x04005E83 RID: 24195
 		public string Text;
 
-		// Token: 0x04005A14 RID: 23060
+		// Token: 0x04005E84 RID: 24196
 		[Nullable(2)]
 		public string PlotLineKey;
 
-		// Token: 0x04005A15 RID: 23061
+		// Token: 0x04005E85 RID: 24197
 		public string StringKey;
 
-		// Token: 0x04005A16 RID: 23062
+		// Token: 0x04005E86 RID: 24198
 		public int FlowListId;
 
-		// Token: 0x04005A17 RID: 23063
+		// Token: 0x04005E87 RID: 24199
 		public bool? IsNoPlotText;
 	}
 }

@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CEB RID: 3307
+	// Token: 0x02000DE3 RID: 3555
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ModelComponent : IComponentBase
 	{
-		// Token: 0x06004B82 RID: 19330 RVA: 0x000BC859 File Offset: 0x000BAA59
-		[NullableContext(1)]
+		// Token: 0x0600508F RID: 20623 RVA: 0x000C7D0D File Offset: 0x000C5F0D
+		[NullableContext(0)]
 		public static ModelComponent Create(IModelComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001769 RID: 5993
-		// (get) Token: 0x06004B83 RID: 19331 RVA: 0x000BC878 File Offset: 0x000BAA78
+		// Token: 0x170018C4 RID: 6340
+		// (get) Token: 0x06005090 RID: 20624 RVA: 0x000C7D2C File Offset: 0x000C5F2C
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176A RID: 5994
-		// (get) Token: 0x06004B84 RID: 19332 RVA: 0x000BC8B0 File Offset: 0x000BAAB0
+		// Token: 0x170018C5 RID: 6341
+		// (get) Token: 0x06005091 RID: 20625 RVA: 0x000C7D64 File Offset: 0x000C5F64
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,12 +49,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176B RID: 5995
-		// (get) Token: 0x06004B85 RID: 19333 RVA: 0x000BC8C6 File Offset: 0x000BAAC6
-		[Nullable(1)]
+		// Token: 0x170018C6 RID: 6342
+		// (get) Token: 0x06005092 RID: 20626 RVA: 0x000C7D7A File Offset: 0x000C5F7A
+		[Nullable(0)]
 		public virtual IModelConfig ModelType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ModelTypeInited)
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176C RID: 5996
-		// (get) Token: 0x06004B86 RID: 19334 RVA: 0x000BC8F8 File Offset: 0x000BAAF8
+		// Token: 0x170018C7 RID: 6343
+		// (get) Token: 0x06005093 RID: 20627 RVA: 0x000C7DAC File Offset: 0x000C5FAC
 		public virtual int? HalfHeight
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176D RID: 5997
-		// (get) Token: 0x06004B87 RID: 19335 RVA: 0x000BC930 File Offset: 0x000BAB30
+		// Token: 0x170018C8 RID: 6344
+		// (get) Token: 0x06005094 RID: 20628 RVA: 0x000C7DE4 File Offset: 0x000C5FE4
 		public virtual int? TrackHeight
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176E RID: 5998
-		// (get) Token: 0x06004B88 RID: 19336 RVA: 0x000BC968 File Offset: 0x000BAB68
+		// Token: 0x170018C9 RID: 6345
+		// (get) Token: 0x06005095 RID: 20629 RVA: 0x000C7E1C File Offset: 0x000C601C
 		public virtual List<int> PerformanceTags
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700176F RID: 5999
-		// (get) Token: 0x06004B89 RID: 19337 RVA: 0x000BC9E0 File Offset: 0x000BABE0
+		// Token: 0x170018CA RID: 6346
+		// (get) Token: 0x06005096 RID: 20630 RVA: 0x000C7E94 File Offset: 0x000C6094
 		public virtual bool? AoiFadeOut
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001770 RID: 6000
-		// (get) Token: 0x06004B8A RID: 19338 RVA: 0x000BCA17 File Offset: 0x000BAC17
+		// Token: 0x170018CB RID: 6347
+		// (get) Token: 0x06005097 RID: 20631 RVA: 0x000C7ECB File Offset: 0x000C60CB
 		public virtual string PerformanceFaceSkeletalMeshPath
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001771 RID: 6001
-		// (get) Token: 0x06004B8B RID: 19339 RVA: 0x000BCA24 File Offset: 0x000BAC24
+		// Token: 0x170018CC RID: 6348
+		// (get) Token: 0x06005098 RID: 20632 RVA: 0x000C7ED8 File Offset: 0x000C60D8
 		public virtual bool? IsUseSeqFace
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001772 RID: 6002
-		// (get) Token: 0x06004B8C RID: 19340 RVA: 0x000BCA5C File Offset: 0x000BAC5C
+		// Token: 0x170018CD RID: 6349
+		// (get) Token: 0x06005099 RID: 20633 RVA: 0x000C7F10 File Offset: 0x000C6110
 		public virtual EAbpAnimScheme? AbpAnimScheme
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001773 RID: 6003
-		// (get) Token: 0x06004B8D RID: 19341 RVA: 0x000BCA93 File Offset: 0x000BAC93
+		// Token: 0x170018CE RID: 6350
+		// (get) Token: 0x0600509A RID: 20634 RVA: 0x000C7F47 File Offset: 0x000C6147
 		public virtual ICollisionChannelConfig CollisionChannelConfig
 		{
 			get
@@ -188,26 +188,72 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B2C RID: 11052
+		// Token: 0x170018CF RID: 6351
+		// (get) Token: 0x0600509B RID: 20635 RVA: 0x000C7F7C File Offset: 0x000C617C
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public virtual List<string> DefaultDecorationIds
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
+			get
+			{
+				if (this._DefaultDecorationIdsInited)
+				{
+					return this._DefaultDecorationIdsCache;
+				}
+				this._DefaultDecorationIdsInited = true;
+				if ((this.Instance.NullMask & 128) == 0)
+				{
+					return null;
+				}
+				int defaultDecorationIdsLength = this.Instance.DefaultDecorationIdsLength;
+				this._DefaultDecorationIdsCache = new List<string>(defaultDecorationIdsLength);
+				for (int i = 0; i < defaultDecorationIdsLength; i++)
+				{
+					this._DefaultDecorationIdsCache.Add(this.Instance.DefaultDecorationIds(i));
+				}
+				return this._DefaultDecorationIdsCache;
+			}
+		}
+
+		// Token: 0x04002DE4 RID: 11748
 		private IModelComponent Instance;
 
-		// Token: 0x04002B2D RID: 11053
-		[Nullable(1)]
+		// Token: 0x04002DE5 RID: 11749
+		[Nullable(0)]
 		private IModelConfig _ModelTypeCache;
 
-		// Token: 0x04002B2E RID: 11054
+		// Token: 0x04002DE6 RID: 11750
 		private bool _ModelTypeInited;
 
-		// Token: 0x04002B2F RID: 11055
+		// Token: 0x04002DE7 RID: 11751
 		private List<int> _PerformanceTagsCache;
 
-		// Token: 0x04002B30 RID: 11056
+		// Token: 0x04002DE8 RID: 11752
 		private bool _PerformanceTagsInited;
 
-		// Token: 0x04002B31 RID: 11057
+		// Token: 0x04002DE9 RID: 11753
 		private ICollisionChannelConfig _CollisionChannelConfigCache;
 
-		// Token: 0x04002B32 RID: 11058
+		// Token: 0x04002DEA RID: 11754
 		private bool _CollisionChannelConfigInited;
+
+		// Token: 0x04002DEB RID: 11755
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		private List<string> _DefaultDecorationIdsCache;
+
+		// Token: 0x04002DEC RID: 11756
+		private bool _DefaultDecorationIdsInited;
 	}
 }

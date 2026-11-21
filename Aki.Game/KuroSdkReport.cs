@@ -9,24 +9,24 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.Plot.Flow;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E2E RID: 3630
+// Token: 0x020002E3 RID: 739
 [NullableContext(1)]
 [Nullable(0)]
 public class KuroSdkReport : Singleton
 {
-	// Token: 0x06005754 RID: 22356 RVA: 0x000FBAF3 File Offset: 0x000F9CF3
+	// Token: 0x06002AE4 RID: 10980 RVA: 0x00103327 File Offset: 0x00101527
 	public void Init()
 	{
 		this.AddEvent();
 	}
 
-	// Token: 0x06005755 RID: 22357 RVA: 0x000FBAFB File Offset: 0x000F9CFB
+	// Token: 0x06002AE5 RID: 10981 RVA: 0x0010332F File Offset: 0x0010152F
 	public void Report(SdkReportData data)
 	{
 		HotPatchKuroSdk.Instance.ReportEvent(data);
 	}
 
-	// Token: 0x06005756 RID: 22358 RVA: 0x000FBB08 File Offset: 0x000F9D08
+	// Token: 0x06002AE6 RID: 10982 RVA: 0x0010333C File Offset: 0x0010153C
 	private void AddEvent()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
@@ -34,7 +34,7 @@ public class KuroSdkReport : Singleton
 		EventSystem.Instance.Add(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06005757 RID: 22359 RVA: 0x000FBB6C File Offset: 0x000F9D6C
+	// Token: 0x06002AE7 RID: 10983 RVA: 0x001033A0 File Offset: 0x001015A0
 	public void OnPlayerLevelChange(int level)
 	{
 		if (SdkReportLevel.IfNeedReport(level))
@@ -47,7 +47,7 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x06005758 RID: 22360 RVA: 0x000FBB98 File Offset: 0x000F9D98
+	// Token: 0x06002AE8 RID: 10984 RVA: 0x001033CC File Offset: 0x001015CC
 	public void OnPlotFinish(FlowContext context)
 	{
 		if (SdkReportStartFlow.IfNeedReport(context.FlowId, context.FlowStateId))
@@ -60,14 +60,14 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x06005759 RID: 22361 RVA: 0x000FBBD4 File Offset: 0x000F9DD4
+	// Token: 0x06002AE9 RID: 10985 RVA: 0x00103408 File Offset: 0x00101608
 	public void OnSdkPay()
 	{
 		SdkReportPay data = new SdkReportPay(null);
 		this.Report(data);
 	}
 
-	// Token: 0x0600575A RID: 22362 RVA: 0x000FBBF0 File Offset: 0x000F9DF0
+	// Token: 0x06002AEA RID: 10986 RVA: 0x00103424 File Offset: 0x00101624
 	public void OnPayShopDirectBuy(int shopItemId)
 	{
 		if (SdkReportDirectBuy.IfNeedReport(shopItemId))
@@ -80,12 +80,12 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x0600575B RID: 22363 RVA: 0x000FBC1A File Offset: 0x000F9E1A
+	// Token: 0x06002AEB RID: 10987 RVA: 0x0010344E File Offset: 0x0010164E
 	public void OnChapterStart(int chapterId, int chapterState)
 	{
 	}
 
-	// Token: 0x0600575C RID: 22364 RVA: 0x000FBC1C File Offset: 0x000F9E1C
+	// Token: 0x06002AEC RID: 10988 RVA: 0x00103450 File Offset: 0x00101650
 	private void OnPayItemSuccess(PayItemSuccess payItem)
 	{
 		if (SdkReportRecharge.IfNeedReport(payItem.PayItemId))
@@ -98,7 +98,7 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x0600575D RID: 22365 RVA: 0x000FBC50 File Offset: 0x000F9E50
+	// Token: 0x06002AED RID: 10989 RVA: 0x00103484 File Offset: 0x00101684
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason _)
 	{
 		if (SdkReportQuestFinish.IfNeedReport(questId))
@@ -119,7 +119,7 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x0600575E RID: 22366 RVA: 0x000FBC9C File Offset: 0x000F9E9C
+	// Token: 0x06002AEE RID: 10990 RVA: 0x001034D0 File Offset: 0x001016D0
 	private void OnChildQuestNodeStatusChange(GeneralContext context, ChildQuestNodeStatus oldStatus, ChildQuestNodeStatus newStatus, ENodeStatusUpdateReason _)
 	{
 		if (context.Type.GetValueOrDefault() != EGeneralContextType.GeneralLogicTree)
@@ -144,8 +144,8 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x0600575F RID: 22367 RVA: 0x000FBD4C File Offset: 0x000F9F4C
-	public void OnGachaResult(int gachaId, Aki.Protocol.GachaResult[] message)
+	// Token: 0x06002AEF RID: 10991 RVA: 0x00103580 File Offset: 0x00101780
+	public void OnGachaResult(int gachaId, IReadOnlyList<Aki.Protocol.GachaResult> message)
 	{
 		if (gachaId == 0)
 		{
@@ -184,9 +184,9 @@ public class KuroSdkReport : Singleton
 		{
 			dictionary = new Dictionary<string, int>();
 		}
-		for (int i = 0; i < message.Length; i++)
+		foreach (Aki.Protocol.GachaResult gachaResult in message)
 		{
-			GachaReward gachaReward = message[i].GachaReward;
+			GachaReward gachaReward = gachaResult.GachaReward;
 			int? num3 = (gachaReward != null) ? new int?(gachaReward.ItemId) : null;
 			RoleInfo? roleInfoById = GachaConfig.Instance.GetRoleInfoById(num3.Value);
 			if (roleInfoById != null && roleInfoById.Value.QualityId >= 5)
@@ -197,7 +197,7 @@ public class KuroSdkReport : Singleton
 					this.Report(data);
 					dictionary["HIGHGACHAPOOLREPORTSTATEKEY"] = 1;
 					LocalStorage.SetPlayer<Dictionary<string, int>>(ELocalStoragePlayerKey.SdkReportStateMap, dictionary);
-					return;
+					break;
 				}
 				if (egachaViewType.GetValueOrDefault() == GachaDefine.EGachaViewType.RoleCommon)
 				{
@@ -205,13 +205,13 @@ public class KuroSdkReport : Singleton
 					this.Report(data2);
 					dictionary["NORMALGACHAPOOLREPORTSTATEKEY"] = 1;
 					LocalStorage.SetPlayer<Dictionary<string, int>>(ELocalStoragePlayerKey.SdkReportStateMap, dictionary);
-					return;
+					break;
 				}
 			}
 		}
 	}
 
-	// Token: 0x06005760 RID: 22368 RVA: 0x000FBF10 File Offset: 0x000FA110
+	// Token: 0x06002AF0 RID: 10992 RVA: 0x00103764 File Offset: 0x00101964
 	public void OnRougeFinish()
 	{
 		Dictionary<string, int> dictionary = LocalStorage.GetPlayer<Dictionary<string, int>>(ELocalStoragePlayerKey.SdkReportStateMap, null);
@@ -230,8 +230,8 @@ public class KuroSdkReport : Singleton
 		LocalStorage.SetPlayer<Dictionary<string, int>>(ELocalStoragePlayerKey.SdkReportStateMap, dictionary);
 	}
 
-	// Token: 0x1700064F RID: 1615
-	// (get) Token: 0x06005761 RID: 22369 RVA: 0x000FBF6F File Offset: 0x000FA16F
+	// Token: 0x17000673 RID: 1651
+	// (get) Token: 0x06002AF1 RID: 10993 RVA: 0x001037C3 File Offset: 0x001019C3
 	public static KuroSdkReport Instance
 	{
 		get
@@ -245,12 +245,12 @@ public class KuroSdkReport : Singleton
 		}
 	}
 
-	// Token: 0x06005762 RID: 22370 RVA: 0x000FBF92 File Offset: 0x000FA192
+	// Token: 0x06002AF2 RID: 10994 RVA: 0x001037E6 File Offset: 0x001019E6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005763 RID: 22371 RVA: 0x000FBF94 File Offset: 0x000FA194
+	// Token: 0x06002AF3 RID: 10995 RVA: 0x001037E8 File Offset: 0x001019E8
 	public static void ResetStaticDefaultValue()
 	{
 		KuroSdkReport instance = KuroSdkReport._instance;
@@ -261,133 +261,133 @@ public class KuroSdkReport : Singleton
 		KuroSdkReport._instance = null;
 	}
 
-	// Token: 0x06005764 RID: 22372 RVA: 0x000FBFAD File Offset: 0x000FA1AD
+	// Token: 0x06002AF4 RID: 10996 RVA: 0x00103801 File Offset: 0x00101A01
 	static KuroSdkReport()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroSdkReport.CreateStaticDefaultValue), new Action(KuroSdkReport.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002839 RID: 10297
+	// Token: 0x040028D2 RID: 10450
 	private const int KILLPHANTOMMISSION = 139000025;
 
-	// Token: 0x0400283A RID: 10298
+	// Token: 0x040028D3 RID: 10451
 	private const int CAPTUREPHANTOMMISSION = 139000026;
 
-	// Token: 0x0400283B RID: 10299
+	// Token: 0x040028D4 RID: 10452
 	private const int CHAPTERCPRE1 = 139000025;
 
-	// Token: 0x0400283C RID: 10300
+	// Token: 0x040028D5 RID: 10453
 	private const int CHAPTERCPRE2 = 139000026;
 
-	// Token: 0x0400283D RID: 10301
+	// Token: 0x040028D6 RID: 10454
 	private const int CHAPTERC11 = 139000027;
 
-	// Token: 0x0400283E RID: 10302
+	// Token: 0x040028D7 RID: 10455
 	private const int CHAPTERC12 = 139000029;
 
-	// Token: 0x0400283F RID: 10303
+	// Token: 0x040028D8 RID: 10456
 	private const int CHAPTERC13 = 139000030;
 
-	// Token: 0x04002840 RID: 10304
+	// Token: 0x040028D9 RID: 10457
 	private const int CHAPTERC14 = 139000031;
 
-	// Token: 0x04002841 RID: 10305
+	// Token: 0x040028DA RID: 10458
 	private const int CHAPTERC15 = 114000020;
 
-	// Token: 0x04002842 RID: 10306
+	// Token: 0x040028DB RID: 10459
 	private const int CHAPTERC16 = 140000004;
 
-	// Token: 0x04002843 RID: 10307
+	// Token: 0x040028DC RID: 10460
 	private const int KILLPHANTOMSTEP1 = 6;
 
-	// Token: 0x04002844 RID: 10308
+	// Token: 0x040028DD RID: 10461
 	private const int KILLPHANTOMSTEP2 = 10;
 
-	// Token: 0x04002845 RID: 10309
+	// Token: 0x040028DE RID: 10462
 	private const int KILLPHANTOMSTEP3 = 91;
 
-	// Token: 0x04002846 RID: 10310
+	// Token: 0x040028DF RID: 10463
 	private const int KILLPHANTOMSTEP4 = 132;
 
-	// Token: 0x04002847 RID: 10311
+	// Token: 0x040028E0 RID: 10464
 	private const int GOJINZHOU = 16;
 
-	// Token: 0x04002848 RID: 10312
+	// Token: 0x040028E1 RID: 10465
 	private const int STARTFLOW = 1;
 
-	// Token: 0x04002849 RID: 10313
+	// Token: 0x040028E2 RID: 10466
 	private const int STARTSTATE = 1;
 
-	// Token: 0x0400284A RID: 10314
+	// Token: 0x040028E3 RID: 10467
 	private const int RECHARGEONE = 1;
 
-	// Token: 0x0400284B RID: 10315
+	// Token: 0x040028E4 RID: 10468
 	private const int RECHARGETWO = 2;
 
-	// Token: 0x0400284C RID: 10316
+	// Token: 0x040028E5 RID: 10469
 	private const int RECHARGETHREE = 3;
 
-	// Token: 0x0400284D RID: 10317
+	// Token: 0x040028E6 RID: 10470
 	private const int RECHARGEFOUR = 4;
 
-	// Token: 0x0400284E RID: 10318
+	// Token: 0x040028E7 RID: 10471
 	private const int RECHARGEFIVE = 5;
 
-	// Token: 0x0400284F RID: 10319
+	// Token: 0x040028E8 RID: 10472
 	private const int RECHARGESIX = 6;
 
-	// Token: 0x04002850 RID: 10320
+	// Token: 0x040028E9 RID: 10473
 	private const int REPORTLEVEL8 = 8;
 
-	// Token: 0x04002851 RID: 10321
+	// Token: 0x040028EA RID: 10474
 	private const int REPORTLEVEL10 = 10;
 
-	// Token: 0x04002852 RID: 10322
+	// Token: 0x040028EB RID: 10475
 	private const int REPORTLEVEL12 = 12;
 
-	// Token: 0x04002853 RID: 10323
+	// Token: 0x040028EC RID: 10476
 	private const int REPORTLEVEL15 = 15;
 
-	// Token: 0x04002854 RID: 10324
+	// Token: 0x040028ED RID: 10477
 	private const int REPORTLEVEL20 = 20;
 
-	// Token: 0x04002855 RID: 10325
+	// Token: 0x040028EE RID: 10478
 	private const int REPORTLEVEL25 = 25;
 
-	// Token: 0x04002856 RID: 10326
+	// Token: 0x040028EF RID: 10479
 	private const int REPORTLEVEL30 = 30;
 
-	// Token: 0x04002857 RID: 10327
+	// Token: 0x040028F0 RID: 10480
 	private const int REPORTLEVEL35 = 35;
 
-	// Token: 0x04002858 RID: 10328
+	// Token: 0x040028F1 RID: 10481
 	private const int REPORTLEVEL40 = 40;
 
-	// Token: 0x04002859 RID: 10329
+	// Token: 0x040028F2 RID: 10482
 	private const int REPORTLEVEL45 = 45;
 
-	// Token: 0x0400285A RID: 10330
+	// Token: 0x040028F3 RID: 10483
 	private const string CREATEROLEEVENTID = "101104";
 
-	// Token: 0x0400285B RID: 10331
+	// Token: 0x040028F4 RID: 10484
 	private const string BATTLEEVENTID = "101803";
 
-	// Token: 0x0400285C RID: 10332
+	// Token: 0x040028F5 RID: 10485
 	private const string QUESTEVENTID = "101805";
 
-	// Token: 0x0400285D RID: 10333
+	// Token: 0x040028F6 RID: 10486
 	private const string FLOWEVENTID = "123000";
 
-	// Token: 0x0400285E RID: 10334
+	// Token: 0x040028F7 RID: 10487
 	private const string NORMALGACHAPOOLREPORTSTATEKEY = "NORMALGACHAPOOLREPORTSTATEKEY";
 
-	// Token: 0x0400285F RID: 10335
+	// Token: 0x040028F8 RID: 10488
 	private const string HIGHGACHAPOOLREPORTSTATEKEY = "HIGHGACHAPOOLREPORTSTATEKEY";
 
-	// Token: 0x04002860 RID: 10336
+	// Token: 0x040028F9 RID: 10489
 	private const string ROUGEFINISHSTATEKEY = "ROUGEFINISHSTATEKEY";
 
-	// Token: 0x04002861 RID: 10337
+	// Token: 0x040028FA RID: 10490
 	[Nullable(2)]
 	private static KuroSdkReport _instance;
 }

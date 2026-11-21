@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002EAD RID: 11949
+// Token: 0x02002400 RID: 9216
 public static class SpecialBuffToSkillIdMap
 {
-	// Token: 0x0400BE9C RID: 48796
+	// Token: 0x0400C237 RID: 49719
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<long, long> Values = new Dictionary<long, long>

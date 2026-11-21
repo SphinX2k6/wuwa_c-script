@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051E7 RID: 20967
+	// Token: 0x020041B7 RID: 16823
 	public interface ICardEffectCountComponentData
 	{
-		// Token: 0x170081C8 RID: 33224
-		// (get) Token: 0x06035A40 RID: 219712
-		// (set) Token: 0x06035A41 RID: 219713
+		// Token: 0x17005588 RID: 21896
+		// (get) Token: 0x0602A93B RID: 174395
+		// (set) Token: 0x0602A93C RID: 174396
 		int EffectCount { get; set; }
 
-		// Token: 0x170081C9 RID: 33225
-		// (get) Token: 0x06035A42 RID: 219714
-		// (set) Token: 0x06035A43 RID: 219715
+		// Token: 0x17005589 RID: 21897
+		// (get) Token: 0x0602A93D RID: 174397
+		// (set) Token: 0x0602A93E RID: 174398
 		int EffectCountMax { get; set; }
 
-		// Token: 0x170081CA RID: 33226
-		// (get) Token: 0x06035A44 RID: 219716
-		// (set) Token: 0x06035A45 RID: 219717
+		// Token: 0x1700558A RID: 21898
+		// (get) Token: 0x0602A93F RID: 174399
+		// (set) Token: 0x0602A940 RID: 174400
 		bool InFight { get; set; }
 	}
 }

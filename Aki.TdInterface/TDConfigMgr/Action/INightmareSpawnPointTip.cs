@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C60 RID: 7264
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E59 RID: 7769
 	public class INightmareSpawnPointTip : ICommonTipType
 	{
-		// Token: 0x06009BC9 RID: 39881 RVA: 0x0016599C File Offset: 0x00163B9C
+		// Token: 0x0600A529 RID: 42281 RVA: 0x00178D98 File Offset: 0x00176F98
 		private INightmareSpawnPointTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BCA RID: 39882 RVA: 0x001659D4 File Offset: 0x00163BD4
+		// Token: 0x0600A52A RID: 42282 RVA: 0x00178DD0 File Offset: 0x00176FD0
 		public static INightmareSpawnPointTip Create([Nullable(2)] INightmareSpawnPointTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BCB RID: 39883 RVA: 0x001659E7 File Offset: 0x00163BE7
+		// Token: 0x0600A52B RID: 42283 RVA: 0x00178DE3 File Offset: 0x00176FE3
 		public static INightmareSpawnPointTip CreateFromSetValue([Nullable(2)] INightmareSpawnPointTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BCC RID: 39884 RVA: 0x001659FC File Offset: 0x00163BFC
+		// Token: 0x0600A52C RID: 42284 RVA: 0x00178DF8 File Offset: 0x00176FF8
 		public new INightmareSpawnPointTip_SetValue ToSetValue()
 		{
 			return new INightmareSpawnPointTip_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030AB RID: 12459
-		// (get) Token: 0x06009BCD RID: 39885 RVA: 0x00165A4A File Offset: 0x00163C4A
-		// (set) Token: 0x06009BCE RID: 39886 RVA: 0x00165A75 File Offset: 0x00163C75
+		// Token: 0x1700331D RID: 13085
+		// (get) Token: 0x0600A52D RID: 42285 RVA: 0x00178E46 File Offset: 0x00177046
+		// (set) Token: 0x0600A52E RID: 42286 RVA: 0x00178E71 File Offset: 0x00177071
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030AC RID: 12460
-		// (get) Token: 0x06009BCF RID: 39887 RVA: 0x00165A83 File Offset: 0x00163C83
-		// (set) Token: 0x06009BD0 RID: 39888 RVA: 0x00165AAE File Offset: 0x00163CAE
+		// Token: 0x1700331E RID: 13086
+		// (get) Token: 0x0600A52F RID: 42287 RVA: 0x00178E7F File Offset: 0x0017707F
+		// (set) Token: 0x0600A530 RID: 42288 RVA: 0x00178EAA File Offset: 0x001770AA
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030AD RID: 12461
-		// (get) Token: 0x06009BD1 RID: 39889 RVA: 0x00165ABC File Offset: 0x00163CBC
-		// (set) Token: 0x06009BD2 RID: 39890 RVA: 0x00165AE7 File Offset: 0x00163CE7
+		// Token: 0x1700331F RID: 13087
+		// (get) Token: 0x0600A531 RID: 42289 RVA: 0x00178EB8 File Offset: 0x001770B8
+		// (set) Token: 0x0600A532 RID: 42290 RVA: 0x00178EE3 File Offset: 0x001770E3
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030AE RID: 12462
-		// (get) Token: 0x06009BD3 RID: 39891 RVA: 0x00165AF5 File Offset: 0x00163CF5
-		// (set) Token: 0x06009BD4 RID: 39892 RVA: 0x00165B0C File Offset: 0x00163D0C
+		// Token: 0x17003320 RID: 13088
+		// (get) Token: 0x0600A533 RID: 42291 RVA: 0x00178EF1 File Offset: 0x001770F1
+		// (set) Token: 0x0600A534 RID: 42292 RVA: 0x00178F08 File Offset: 0x00177108
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030AF RID: 12463
-		// (get) Token: 0x06009BD5 RID: 39893 RVA: 0x00165B1A File Offset: 0x00163D1A
-		// (set) Token: 0x06009BD6 RID: 39894 RVA: 0x00165B31 File Offset: 0x00163D31
+		// Token: 0x17003321 RID: 13089
+		// (get) Token: 0x0600A535 RID: 42293 RVA: 0x00178F16 File Offset: 0x00177116
+		// (set) Token: 0x0600A536 RID: 42294 RVA: 0x00178F2D File Offset: 0x0017712D
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E8E RID: 24206
+		// Token: 0x040063C8 RID: 25544
 		[Nullable(2)]
 		protected new INightmareSpawnPointTip FbInstance;
 
-		// Token: 0x04005E8F RID: 24207
+		// Token: 0x040063C9 RID: 25545
 		[Nullable(2)]
 		protected new INightmareSpawnPointTip_SetValue PocoInterface;
 	}

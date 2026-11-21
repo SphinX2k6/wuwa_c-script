@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001191 RID: 4497
+// Token: 0x02000645 RID: 1605
 public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 {
-	// Token: 0x06007708 RID: 30472 RVA: 0x0018D0C4 File Offset: 0x0018B2C4
+	// Token: 0x06004A9F RID: 19103 RVA: 0x00195CB0 File Offset: 0x00193EB0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -32,13 +32,13 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007709 RID: 30473 RVA: 0x0018D1B1 File Offset: 0x0018B3B1
+	// Token: 0x06004AA0 RID: 19104 RVA: 0x00195D9D File Offset: 0x00193F9D
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as ActivityBeginnerBookData);
 	}
 
-	// Token: 0x0600770A RID: 30474 RVA: 0x0018D1C4 File Offset: 0x0018B3C4
+	// Token: 0x06004AA1 RID: 19105 RVA: 0x00195DB0 File Offset: 0x00193FB0
 	protected override void OnStart()
 	{
 		base.GetText(0).SetText(this.ActivityData.GetTitle(), true);
@@ -60,7 +60,7 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		this.SetRemainTimeText();
 	}
 
-	// Token: 0x0600770B RID: 30475 RVA: 0x0018D290 File Offset: 0x0018B490
+	// Token: 0x06004AA2 RID: 19106 RVA: 0x00195E7C File Offset: 0x0019407C
 	protected override UniTask OnBeforeShowSelfAsync()
 	{
 		ActivitySubViewBeginnerBook.<OnBeforeShowSelfAsync>d__8 <OnBeforeShowSelfAsync>d__;
@@ -71,7 +71,7 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600770C RID: 30476 RVA: 0x0018D2D3 File Offset: 0x0018B4D3
+	// Token: 0x06004AA3 RID: 19107 RVA: 0x00195EBF File Offset: 0x001940BF
 	protected override void OnRefreshView()
 	{
 		GenericLayout<ActivityBeginnerTargetItem, int> targetLayout = this.TargetLayout;
@@ -92,7 +92,7 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		}, false);
 	}
 
-	// Token: 0x0600770D RID: 30477 RVA: 0x0018D2FD File Offset: 0x0018B4FD
+	// Token: 0x06004AA4 RID: 19108 RVA: 0x00195EE9 File Offset: 0x001940E9
 	private void SetRemainTimeActive(bool isActive)
 	{
 		if (this.IsRemainTimeActive == isActive)
@@ -103,7 +103,7 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		this.RemainTime.SetUIActive(isActive);
 	}
 
-	// Token: 0x0600770E RID: 30478 RVA: 0x0018D31C File Offset: 0x0018B51C
+	// Token: 0x06004AA5 RID: 19109 RVA: 0x00195F08 File Offset: 0x00194108
 	private void SetRemainTimeText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -116,24 +116,24 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600770F RID: 30479 RVA: 0x0018D353 File Offset: 0x0018B553
+	// Token: 0x06004AA6 RID: 19110 RVA: 0x00195F3F File Offset: 0x0019413F
 	protected override void OnTimer(float gap)
 	{
 		this.SetRemainTimeText();
 	}
 
-	// Token: 0x04003692 RID: 13970
+	// Token: 0x0400372B RID: 14123
 	[Nullable(2)]
 	private UUIText RemainTime;
 
-	// Token: 0x04003693 RID: 13971
+	// Token: 0x0400372C RID: 14124
 	private bool IsRemainTimeActive = true;
 
-	// Token: 0x04003694 RID: 13972
+	// Token: 0x0400372D RID: 14125
 	[Nullable(2)]
 	private ActivityBeginnerBookData ActivityData;
 
-	// Token: 0x04003695 RID: 13973
+	// Token: 0x0400372E RID: 14126
 	[Nullable(new byte[]
 	{
 		2,
@@ -141,29 +141,29 @@ public class ActivitySubViewBeginnerBook : ActivitySubViewBase
 	})]
 	private GenericLayout<ActivityBeginnerTargetItem, int> TargetLayout;
 
-	// Token: 0x04003696 RID: 13974
+	// Token: 0x0400372F RID: 14127
 	[Nullable(1)]
 	private readonly Func<ActivityBeginnerTargetItem> InitItem = () => new ActivityBeginnerTargetItem();
 
-	// Token: 0x02007776 RID: 30582
+	// Token: 0x02006903 RID: 26883
 	private class EChildType
 	{
-		// Token: 0x04027676 RID: 161398
+		// Token: 0x040229AF RID: 141743
 		public const int TitleText = 0;
 
-		// Token: 0x04027677 RID: 161399
+		// Token: 0x040229B0 RID: 141744
 		public const int RemainTimeText = 1;
 
-		// Token: 0x04027678 RID: 161400
+		// Token: 0x040229B1 RID: 141745
 		public const int TargetLayout = 2;
 
-		// Token: 0x04027679 RID: 161401
+		// Token: 0x040229B2 RID: 141746
 		public const int LayouetItem = 3;
 
-		// Token: 0x0402767A RID: 161402
+		// Token: 0x040229B3 RID: 141747
 		public const int FemaleItem = 4;
 
-		// Token: 0x0402767B RID: 161403
+		// Token: 0x040229B4 RID: 141748
 		public const int MaleItem = 5;
 	}
 }

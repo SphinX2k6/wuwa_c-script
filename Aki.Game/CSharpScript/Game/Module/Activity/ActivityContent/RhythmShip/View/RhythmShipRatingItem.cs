@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006241 RID: 25153
+	// Token: 0x020051BF RID: 20927
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	internal class RhythmShipRatingItem : GridProxyAbstract<IRhythmShipSubLevelRatingData>
 	{
-		// Token: 0x0603F62F RID: 259631 RVA: 0x00F52E6C File Offset: 0x00F5106C
+		// Token: 0x060342F0 RID: 213744 RVA: 0x00E99DC8 File Offset: 0x00E97FC8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F630 RID: 259632 RVA: 0x00F52F78 File Offset: 0x00F51178
+		// Token: 0x060342F1 RID: 213745 RVA: 0x00E99ED4 File Offset: 0x00E980D4
 		public override void Refresh(IRhythmShipSubLevelRatingData data, bool isSelected, int gridIndex)
 		{
 			this.RefreshItemByData(data);
 		}
 
-		// Token: 0x0603F631 RID: 259633 RVA: 0x00F52F84 File Offset: 0x00F51184
+		// Token: 0x060342F2 RID: 213746 RVA: 0x00E99EE0 File Offset: 0x00E980E0
 		public void RefreshItemByData(IRhythmShipSubLevelRatingData data)
 		{
 			RhythmRole? rhythmRoleById = RhythmShipConfig.Instance.GetRhythmRoleById(data.RoleId);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603F632 RID: 259634 RVA: 0x00F530F4 File Offset: 0x00F512F4
+		// Token: 0x060342F3 RID: 213747 RVA: 0x00E9A050 File Offset: 0x00E98250
 		public void RefreshItemNone()
 		{
 			base.GetText(5).SetText(PlayerInfoModel.Instance.GetPlayerName() ?? "", true);

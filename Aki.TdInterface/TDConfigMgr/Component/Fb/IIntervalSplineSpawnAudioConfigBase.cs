@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E1D RID: 3613
+	// Token: 0x02000F19 RID: 3865
 	public class IIntervalSplineSpawnAudioConfigBase
 	{
-		// Token: 0x060051C0 RID: 20928 RVA: 0x000C9946 File Offset: 0x000C7B46
-		[NullableContext(1)]
+		// Token: 0x060056E7 RID: 22247 RVA: 0x000D520E File Offset: 0x000D340E
 		public static IIntervalSplineSpawnAudioConfigBase Create(IIntervalSplineSpawnAudioConfigBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B43 RID: 6979
-		// (get) Token: 0x060051C1 RID: 20929 RVA: 0x000C9965 File Offset: 0x000C7B65
+		// Token: 0x17001CB0 RID: 7344
+		// (get) Token: 0x060056E8 RID: 22248 RVA: 0x000D522D File Offset: 0x000D342D
 		public virtual EIntervalSplineSpawnAudioConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F14 RID: 12052
+		// Token: 0x040031DC RID: 12764
 		private IIntervalSplineSpawnAudioConfigBase Instance;
 	}
 }

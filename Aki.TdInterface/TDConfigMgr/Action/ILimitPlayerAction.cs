@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B8A RID: 7050
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D37 RID: 7479
 	public class ILimitPlayerAction : ILimitPlayerOption
 	{
-		// Token: 0x060096F9 RID: 38649 RVA: 0x0015C770 File Offset: 0x0015A970
+		// Token: 0x06009EDB RID: 40667 RVA: 0x0016D31C File Offset: 0x0016B51C
 		private ILimitPlayerAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060096FA RID: 38650 RVA: 0x0015C7A8 File Offset: 0x0015A9A8
+		// Token: 0x06009EDC RID: 40668 RVA: 0x0016D354 File Offset: 0x0016B554
 		public static ILimitPlayerAction Create([Nullable(2)] ILimitPlayerAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096FB RID: 38651 RVA: 0x0015C7BB File Offset: 0x0015A9BB
+		// Token: 0x06009EDD RID: 40669 RVA: 0x0016D367 File Offset: 0x0016B567
 		public static ILimitPlayerAction CreateFromSetValue([Nullable(2)] ILimitPlayerAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060096FC RID: 38652 RVA: 0x0015C7CE File Offset: 0x0015A9CE
+		// Token: 0x06009EDE RID: 40670 RVA: 0x0016D37A File Offset: 0x0016B57A
 		public new ILimitPlayerAction_SetValue ToSetValue()
 		{
 			return new ILimitPlayerAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F84 RID: 12164
-		// (get) Token: 0x060096FD RID: 38653 RVA: 0x0015C7E1 File Offset: 0x0015A9E1
-		// (set) Token: 0x060096FE RID: 38654 RVA: 0x0015C80C File Offset: 0x0015AA0C
+		// Token: 0x170031A9 RID: 12713
+		// (get) Token: 0x06009EDF RID: 40671 RVA: 0x0016D38D File Offset: 0x0016B58D
+		// (set) Token: 0x06009EE0 RID: 40672 RVA: 0x0016D3B8 File Offset: 0x0016B5B8
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C39 RID: 23609
+		// Token: 0x040060D2 RID: 24786
 		[Nullable(2)]
 		protected new ILimitPlayerAction FbInstance;
 
-		// Token: 0x04005C3A RID: 23610
+		// Token: 0x040060D3 RID: 24787
 		[Nullable(2)]
 		protected new ILimitPlayerAction_SetValue PocoInterface;
 	}

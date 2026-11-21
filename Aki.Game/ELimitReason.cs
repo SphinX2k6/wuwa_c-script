@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001BE1 RID: 7137
+// Token: 0x020010A0 RID: 4256
 public enum ELimitReason
 {
-	// Token: 0x04006160 RID: 24928
+	// Token: 0x0400622F RID: 25135
 	None,
-	// Token: 0x04006161 RID: 24929
+	// Token: 0x04006230 RID: 25136
 	RoleNotInLimitList,
-	// Token: 0x04006162 RID: 24930
+	// Token: 0x04006231 RID: 25137
 	CountNotAllowed,
-	// Token: 0x04006163 RID: 24931
+	// Token: 0x04006232 RID: 25138
 	ElementMismatch,
-	// Token: 0x04006164 RID: 24932
+	// Token: 0x04006233 RID: 25139
 	ExtraRuleFailed
 }

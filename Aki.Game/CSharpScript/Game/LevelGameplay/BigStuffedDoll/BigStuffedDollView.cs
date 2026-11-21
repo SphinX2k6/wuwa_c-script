@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F52 RID: 28498
+	// Token: 0x020060D3 RID: 24787
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BigStuffedDollView : UiTickViewBase
 	{
-		// Token: 0x0604553A RID: 283962 RVA: 0x01126CC8 File Offset: 0x01124EC8
+		// Token: 0x0603B6E8 RID: 243432 RVA: 0x010D0AA8 File Offset: 0x010CECA8
 		public BigStuffedDollView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0604553B RID: 283963 RVA: 0x01126D30 File Offset: 0x01124F30
+		// Token: 0x0603B6E9 RID: 243433 RVA: 0x010D0B10 File Offset: 0x010CED10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604553C RID: 283964 RVA: 0x01126F28 File Offset: 0x01125128
+		// Token: 0x0603B6EA RID: 243434 RVA: 0x010D0D08 File Offset: 0x010CEF08
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BigStuffedDollView.<OnBeforeStartAsync>d__34 <OnBeforeStartAsync>d__;
@@ -74,20 +74,20 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604553D RID: 283965 RVA: 0x01126F6B File Offset: 0x0112516B
+		// Token: 0x0603B6EB RID: 243435 RVA: 0x010D0D4B File Offset: 0x010CEF4B
 		protected override void OnStart()
 		{
 			base.OnStart();
 		}
 
-		// Token: 0x0604553E RID: 283966 RVA: 0x01126F73 File Offset: 0x01125173
+		// Token: 0x0603B6EC RID: 243436 RVA: 0x010D0D53 File Offset: 0x010CEF53
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
 			BigStuffedDollModel.Instance.EnterNextGameStage();
 		}
 
-		// Token: 0x0604553F RID: 283967 RVA: 0x01126F88 File Offset: 0x01125188
+		// Token: 0x0603B6ED RID: 243437 RVA: 0x010D0D68 File Offset: 0x010CEF68
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer qteLeftBtnLevelSequence = this.QteLeftBtnLevelSequence;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045540 RID: 283968 RVA: 0x011270EE File Offset: 0x011252EE
+		// Token: 0x0603B6EE RID: 243438 RVA: 0x010D0ECE File Offset: 0x010CF0CE
 		protected override void OnAfterDestroy()
 		{
 			if (this.FinishCallback != null)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045541 RID: 283969 RVA: 0x01127104 File Offset: 0x01125304
+		// Token: 0x0603B6EF RID: 243439 RVA: 0x010D0EE4 File Offset: 0x010CF0E4
 		protected override void OnTick(float delta)
 		{
 			this.ProgressItem.OnTick(delta);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045542 RID: 283970 RVA: 0x01127268 File Offset: 0x01125468
+		// Token: 0x0603B6F0 RID: 243440 RVA: 0x010D1048 File Offset: 0x010CF248
 		private UniTask InitRings([Nullable(new byte[]
 		{
 			0,
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitRings>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045543 RID: 283971 RVA: 0x011272B4 File Offset: 0x011254B4
+		// Token: 0x0603B6F1 RID: 243441 RVA: 0x010D1094 File Offset: 0x010CF294
 		private UniTask InitProgressItem([Nullable(new byte[]
 		{
 			0,
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitProgressItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045544 RID: 283972 RVA: 0x01127300 File Offset: 0x01125500
+		// Token: 0x0603B6F2 RID: 243442 RVA: 0x010D10E0 File Offset: 0x010CF2E0
 		private UniTask InitPrepareCountDownItem()
 		{
 			BigStuffedDollView.<InitPrepareCountDownItem>d__42 <InitPrepareCountDownItem>d__;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitPrepareCountDownItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045545 RID: 283973 RVA: 0x01127344 File Offset: 0x01125544
+		// Token: 0x0603B6F3 RID: 243443 RVA: 0x010D1124 File Offset: 0x010CF324
 		private UniTask InitGameCountDownItem()
 		{
 			BigStuffedDollView.<InitGameCountDownItem>d__43 <InitGameCountDownItem>d__;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitGameCountDownItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045546 RID: 283974 RVA: 0x01127388 File Offset: 0x01125588
+		// Token: 0x0603B6F4 RID: 243444 RVA: 0x010D1168 File Offset: 0x010CF368
 		private UniTask InitSuccessItem()
 		{
 			BigStuffedDollView.<InitSuccessItem>d__44 <InitSuccessItem>d__;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitSuccessItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045547 RID: 283975 RVA: 0x011273CC File Offset: 0x011255CC
+		// Token: 0x0603B6F5 RID: 243445 RVA: 0x010D11AC File Offset: 0x010CF3AC
 		private UniTask InitFailItem()
 		{
 			BigStuffedDollView.<InitFailItem>d__45 <InitFailItem>d__;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitFailItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045548 RID: 283976 RVA: 0x01127410 File Offset: 0x01125610
+		// Token: 0x0603B6F6 RID: 243446 RVA: 0x010D11F0 File Offset: 0x010CF3F0
 		private UniTask InitTipItem()
 		{
 			BigStuffedDollView.<InitTipItem>d__46 <InitTipItem>d__;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <InitTipItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045549 RID: 283977 RVA: 0x01127454 File Offset: 0x01125654
+		// Token: 0x0603B6F7 RID: 243447 RVA: 0x010D1234 File Offset: 0x010CF434
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnBigStuffedDollGameStageUpdate, new Action<EGameStage>(this.OnGameStageUpdate));
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			EventSystem.Instance.Add(EEventName.OnBigStuffedDollRingItemSequencePlayStart, new Action<int, EAreaType, int>(this.RingItemSequenceStart));
 		}
 
-		// Token: 0x0604554A RID: 283978 RVA: 0x011274B8 File Offset: 0x011256B8
+		// Token: 0x0603B6F8 RID: 243448 RVA: 0x010D1298 File Offset: 0x010CF498
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBigStuffedDollGameStageUpdate, new Action<EGameStage>(this.OnGameStageUpdate));
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			EventSystem.Instance.Remove(EEventName.GeneralLogicTreePrepareRollbackFinish, new Action<int>(this.OnRollbackFinish));
 		}
 
-		// Token: 0x0604554B RID: 283979 RVA: 0x01127538 File Offset: 0x01125738
+		// Token: 0x0603B6F9 RID: 243449 RVA: 0x010D1318 File Offset: 0x010CF518
 		private void OnGameStageUpdate(EGameStage currentGameStage)
 		{
 			BigStuffedDollModel instance = BigStuffedDollModel.Instance;
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x0604554C RID: 283980 RVA: 0x01127758 File Offset: 0x01125958
+		// Token: 0x0603B6FA RID: 243450 RVA: 0x010D1538 File Offset: 0x010CF738
 		private UniTask OnGameEnd(bool success)
 		{
 			BigStuffedDollView.<OnGameEnd>d__50 <OnGameEnd>d__;
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <OnGameEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604554D RID: 283981 RVA: 0x011277A3 File Offset: 0x011259A3
+		// Token: 0x0603B6FB RID: 243451 RVA: 0x010D1583 File Offset: 0x010CF783
 		private void OnRollbackFinish(int treeConfigId)
 		{
 			if (treeConfigId != BigStuffedDollModel.Instance.BehaviorTreeConfigId)
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.GameFailed();
 		}
 
-		// Token: 0x0604554E RID: 283982 RVA: 0x011277BC File Offset: 0x011259BC
+		// Token: 0x0603B6FC RID: 243452 RVA: 0x010D159C File Offset: 0x010CF79C
 		private UniTask GameFailed()
 		{
 			BigStuffedDollView.<GameFailed>d__52 <GameFailed>d__;
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return <GameFailed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604554F RID: 283983 RVA: 0x01127800 File Offset: 0x01125A00
+		// Token: 0x0603B6FD RID: 243453 RVA: 0x010D15E0 File Offset: 0x010CF7E0
 		private void OnArrowStayAreaUpdate(int lastRingId, int ringId, int relativeValidAreaIndex)
 		{
 			foreach (KeyValuePair<int, BigStuffedRingItem> keyValuePair in this.RingItems)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045550 RID: 283984 RVA: 0x01127880 File Offset: 0x01125A80
+		// Token: 0x0603B6FE RID: 243454 RVA: 0x010D1660 File Offset: 0x010CF860
 		private void RingItemSequenceStart(int ringId, EAreaType areaType, int continuousIndex)
 		{
 			BigStuffedRingItem bigStuffedRingItem;
@@ -524,7 +524,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045551 RID: 283985 RVA: 0x01127AF4 File Offset: 0x01125CF4
+		// Token: 0x0603B6FF RID: 243455 RVA: 0x010D18D4 File Offset: 0x010CFAD4
 		private void EnterBonusState()
 		{
 			this.IsInBonusTime = true;
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			qteRightBtnLevelSequence.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06045552 RID: 283986 RVA: 0x01127BD0 File Offset: 0x01125DD0
+		// Token: 0x0603B700 RID: 243456 RVA: 0x010D19B0 File Offset: 0x010CFBB0
 		private void OnClickBack()
 		{
 			BigStuffedDollModel model = BigStuffedDollModel.Instance;
@@ -576,14 +576,14 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06045553 RID: 283987 RVA: 0x01127C3C File Offset: 0x01125E3C
+		// Token: 0x0603B701 RID: 243457 RVA: 0x010D1A1C File Offset: 0x010CFC1C
 		private void OnConfirmExit()
 		{
 			BigStuffedDollModel.Instance.GameResult = false;
 			BigStuffedDollModel.Instance.SetGameStage(EGameStage.GameEnd);
 		}
 
-		// Token: 0x06045554 RID: 283988 RVA: 0x01127C54 File Offset: 0x01125E54
+		// Token: 0x0603B702 RID: 243458 RVA: 0x010D1A34 File Offset: 0x010CFC34
 		private void OnClickCommonQte()
 		{
 			Log.Instance.Info(ELogModule.SceneGameplay, ELogAuthor.YSQ, "[BigStuffedDoll]QteButton Click", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -622,19 +622,19 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.OnAreaClick(EAreaType.BlankArea, null);
 		}
 
-		// Token: 0x06045555 RID: 283989 RVA: 0x01127D33 File Offset: 0x01125F33
+		// Token: 0x0603B703 RID: 243459 RVA: 0x010D1B13 File Offset: 0x010CFD13
 		private void OnClickLeftBonusQte()
 		{
 			this.OnClickBonusBtn(BigStuffedDollView.EBonusBtnType.Left);
 		}
 
-		// Token: 0x06045556 RID: 283990 RVA: 0x01127D3C File Offset: 0x01125F3C
+		// Token: 0x0603B704 RID: 243460 RVA: 0x010D1B1C File Offset: 0x010CFD1C
 		private void OnClickRightBonusQte()
 		{
 			this.OnClickBonusBtn(BigStuffedDollView.EBonusBtnType.Right);
 		}
 
-		// Token: 0x06045557 RID: 283991 RVA: 0x01127D48 File Offset: 0x01125F48
+		// Token: 0x0603B705 RID: 243461 RVA: 0x010D1B28 File Offset: 0x010CFD28
 		private void OnClickBonusBtn(BigStuffedDollView.EBonusBtnType buttonType)
 		{
 			if (!this.IsInBonusTime)
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045558 RID: 283992 RVA: 0x01127E84 File Offset: 0x01126084
+		// Token: 0x0603B706 RID: 243462 RVA: 0x010D1C64 File Offset: 0x010CFE64
 		[return: Nullable(2)]
 		private ContinuousArea CheckInArea(Dictionary<int, ContinuousArea> areas, int currentArrowStayCellIndex)
 		{
@@ -726,7 +726,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return null;
 		}
 
-		// Token: 0x06045559 RID: 283993 RVA: 0x01127F2C File Offset: 0x0112612C
+		// Token: 0x0603B707 RID: 243463 RVA: 0x010D1D0C File Offset: 0x010CFF0C
 		[NullableContext(2)]
 		private void OnAreaClick(EAreaType areaType, ContinuousArea area)
 		{
@@ -789,7 +789,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			bigStuffedRingItem.OnAreaClick(areaType, area);
 		}
 
-		// Token: 0x0604555A RID: 283994 RVA: 0x0112808C File Offset: 0x0112628C
+		// Token: 0x0603B708 RID: 243464 RVA: 0x010D1E6C File Offset: 0x010D006C
 		private void OnQteLeftBtnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Start" || sequenceName == "Press")
@@ -798,7 +798,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x0604555B RID: 283995 RVA: 0x011280D0 File Offset: 0x011262D0
+		// Token: 0x0603B709 RID: 243465 RVA: 0x010D1EB0 File Offset: 0x010D00B0
 		private void OnQteRightBtnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Start" || sequenceName == "Press")
@@ -807,140 +807,140 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x0402427F RID: 148095
+		// Token: 0x0401F534 RID: 128308
 		private const int BONUS_TIME_TIPSTAYTIME = 3000;
 
-		// Token: 0x04024280 RID: 148096
+		// Token: 0x0401F535 RID: 128309
 		private const string COUNTDOWNSTART = "CountDownStart";
 
-		// Token: 0x04024281 RID: 148097
+		// Token: 0x0401F536 RID: 128310
 		private const string COUNTDOWNOVER = "CountDownOver";
 
-		// Token: 0x04024282 RID: 148098
+		// Token: 0x0401F537 RID: 128311
 		private const string GAMEOVER = "GameOver";
 
-		// Token: 0x04024283 RID: 148099
+		// Token: 0x0401F538 RID: 128312
 		private const string PRESS_FAIL_COUNT = "PressFailCount";
 
-		// Token: 0x04024284 RID: 148100
+		// Token: 0x0401F539 RID: 128313
 		private const string PRESS_COMMONAREA_SUCCESS_COUNT = "PressCommonAreaSuccessCount";
 
-		// Token: 0x04024285 RID: 148101
+		// Token: 0x0401F53A RID: 128314
 		private const string PRESS_PERFECTAREA_SUCCESS_COUNT = "PressPerfectAreaSuccessCount";
 
-		// Token: 0x04024286 RID: 148102
+		// Token: 0x0401F53B RID: 128315
 		private const string PRESS_BONUSAREA_SUCCESS_COUNT = "PressBonusAreaSuccessCount";
 
-		// Token: 0x04024287 RID: 148103
+		// Token: 0x0401F53C RID: 128316
 		private const string FINISH_SKILL_OVER = "FinishSkillOver";
 
-		// Token: 0x04024288 RID: 148104
+		// Token: 0x0401F53D RID: 128317
 		private const string DELAY_FINISH_TIME = "DelayFinishTime";
 
-		// Token: 0x04024289 RID: 148105
+		// Token: 0x0401F53E RID: 128318
 		private const string QTE_ROCK_DESTORY_EVENT = "BrokenRockEventKey6";
 
-		// Token: 0x0402428A RID: 148106
+		// Token: 0x0401F53F RID: 128319
 		private readonly Dictionary<int, BigStuffedRingItem> RingItems = new Dictionary<int, BigStuffedRingItem>();
 
-		// Token: 0x0402428B RID: 148107
+		// Token: 0x0401F540 RID: 128320
 		private readonly BigStuffedDollProgressItem ProgressItem = new BigStuffedDollProgressItem();
 
-		// Token: 0x0402428C RID: 148108
+		// Token: 0x0401F541 RID: 128321
 		private readonly PrepareCountDownItem PrepareCountDownItem = new PrepareCountDownItem();
 
-		// Token: 0x0402428D RID: 148109
+		// Token: 0x0401F542 RID: 128322
 		private readonly GameCountDownItem GameCountDownItem = new GameCountDownItem();
 
-		// Token: 0x0402428E RID: 148110
+		// Token: 0x0401F543 RID: 128323
 		private readonly BigStuffedDollTipItem TipItem = new BigStuffedDollTipItem();
 
-		// Token: 0x0402428F RID: 148111
+		// Token: 0x0401F544 RID: 128324
 		private readonly BigStuffedDollChallengeSuccessItem GameSuccessItem = new BigStuffedDollChallengeSuccessItem();
 
-		// Token: 0x04024290 RID: 148112
+		// Token: 0x0401F545 RID: 128325
 		private readonly BigStuffedDollChallengeFailItem GameFailItem = new BigStuffedDollChallengeFailItem();
 
-		// Token: 0x04024291 RID: 148113
+		// Token: 0x0401F546 RID: 128326
 		private double LastClickAreaTime;
 
-		// Token: 0x04024292 RID: 148114
+		// Token: 0x0401F547 RID: 128327
 		private bool IsInBonusTime;
 
-		// Token: 0x04024293 RID: 148115
+		// Token: 0x0401F548 RID: 128328
 		[Nullable(2)]
 		private UUIButtonComponent QteLeftBtn;
 
-		// Token: 0x04024294 RID: 148116
+		// Token: 0x0401F549 RID: 128329
 		[Nullable(2)]
 		private UUIButtonComponent QteRightBtn;
 
-		// Token: 0x04024295 RID: 148117
+		// Token: 0x0401F54A RID: 128330
 		[Nullable(2)]
 		private LevelSequencePlayer QteLeftBtnLevelSequence;
 
-		// Token: 0x04024296 RID: 148118
+		// Token: 0x0401F54B RID: 128331
 		[Nullable(2)]
 		private LevelSequencePlayer QteRightBtnLevelSequence;
 
-		// Token: 0x04024297 RID: 148119
+		// Token: 0x0401F54C RID: 128332
 		private int EntityId = -1;
 
-		// Token: 0x04024298 RID: 148120
+		// Token: 0x0401F54D RID: 128333
 		private int PressCommonSuccessCount;
 
-		// Token: 0x04024299 RID: 148121
+		// Token: 0x0401F54E RID: 128334
 		private int PressBonusSuccessCount;
 
-		// Token: 0x0402429A RID: 148122
+		// Token: 0x0401F54F RID: 128335
 		private int PressFailCount;
 
-		// Token: 0x0402429B RID: 148123
+		// Token: 0x0401F550 RID: 128336
 		[Nullable(2)]
 		private Action FinishCallback;
 
-		// Token: 0x0402429C RID: 148124
+		// Token: 0x0401F551 RID: 128337
 		private bool IsExecutedFinish;
 
-		// Token: 0x0200CD7C RID: 52604
+		// Token: 0x0200B96E RID: 47470
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x0403DEB7 RID: 253623
+			// Token: 0x040392E6 RID: 234214
 			public const int GameUiRoot = 0;
 
-			// Token: 0x0403DEB8 RID: 253624
+			// Token: 0x040392E7 RID: 234215
 			public const int BackBtn = 1;
 
-			// Token: 0x0403DEB9 RID: 253625
+			// Token: 0x040392E8 RID: 234216
 			public const int ProgressItem = 2;
 
-			// Token: 0x0403DEBA RID: 253626
+			// Token: 0x040392E9 RID: 234217
 			public const int QteLeftBtn = 3;
 
-			// Token: 0x0403DEBB RID: 253627
+			// Token: 0x040392EA RID: 234218
 			public const int QteRightBtn = 4;
 
-			// Token: 0x0403DEBC RID: 253628
+			// Token: 0x040392EB RID: 234219
 			public const int RingItemRoot = 5;
 
-			// Token: 0x0403DEBD RID: 253629
+			// Token: 0x040392EC RID: 234220
 			public const int RingItem = 6;
 
-			// Token: 0x0403DEBE RID: 253630
+			// Token: 0x040392ED RID: 234221
 			public const int QteTipItem = 7;
 
-			// Token: 0x0403DEBF RID: 253631
+			// Token: 0x040392EE RID: 234222
 			public const int BtnSingleQte = 8;
 		}
 
-		// Token: 0x0200CD7D RID: 52605
+		// Token: 0x0200B96F RID: 47471
 		[NullableContext(0)]
 		private enum EBonusBtnType
 		{
-			// Token: 0x0403DEC1 RID: 253633
+			// Token: 0x040392F0 RID: 234224
 			Left,
-			// Token: 0x0403DEC2 RID: 253634
+			// Token: 0x040392F1 RID: 234225
 			Right
 		}
 	}

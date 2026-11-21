@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200145F RID: 5215
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015B8 RID: 5560
 	public class IRecallEntityConfig
 	{
-		// Token: 0x06007683 RID: 30339 RVA: 0x0011B0A4 File Offset: 0x001192A4
+		// Token: 0x06007D50 RID: 32080 RVA: 0x00129C88 File Offset: 0x00127E88
 		public static IRecallEntityConfig Create(IRecallEntityConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002798 RID: 10136
-		// (get) Token: 0x06007684 RID: 30340 RVA: 0x0011B0C4 File Offset: 0x001192C4
+		// Token: 0x17002982 RID: 10626
+		// (get) Token: 0x06007D51 RID: 32081 RVA: 0x00129CA8 File Offset: 0x00127EA8
 		public virtual List<IRecallEntityGroup> EntityGroups
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002799 RID: 10137
-		// (get) Token: 0x06007685 RID: 30341 RVA: 0x0011B130 File Offset: 0x00119330
+		// Token: 0x17002983 RID: 10627
+		// (get) Token: 0x06007D52 RID: 32082 RVA: 0x00129D14 File Offset: 0x00127F14
 		public virtual List<IRecallEntry> Recalls
 		{
 			get
@@ -65,19 +62,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044D3 RID: 17619
+		// Token: 0x0400486C RID: 18540
 		private IRecallEntityConfig Instance;
 
-		// Token: 0x040044D4 RID: 17620
+		// Token: 0x0400486D RID: 18541
 		private List<IRecallEntityGroup> _EntityGroupsCache;
 
-		// Token: 0x040044D5 RID: 17621
+		// Token: 0x0400486E RID: 18542
 		private bool _EntityGroupsInited;
 
-		// Token: 0x040044D6 RID: 17622
+		// Token: 0x0400486F RID: 18543
 		private List<IRecallEntry> _RecallsCache;
 
-		// Token: 0x040044D7 RID: 17623
+		// Token: 0x04004870 RID: 18544
 		private bool _RecallsInited;
 	}
 }

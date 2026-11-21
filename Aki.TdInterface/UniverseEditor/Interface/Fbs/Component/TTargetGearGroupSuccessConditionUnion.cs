@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CBB RID: 23739
+	// Token: 0x020062EC RID: 25324
 	public class TTargetGearGroupSuccessConditionUnion
 	{
-		// Token: 0x1700B25A RID: 45658
-		// (get) Token: 0x06028A33 RID: 166451 RVA: 0x00595830 File Offset: 0x00593A30
-		// (set) Token: 0x06028A34 RID: 166452 RVA: 0x00595838 File Offset: 0x00593A38
+		// Token: 0x1700BBB4 RID: 48052
+		// (get) Token: 0x0602B07B RID: 176251 RVA: 0x005DDFA4 File Offset: 0x005DC1A4
+		// (set) Token: 0x0602B07C RID: 176252 RVA: 0x005DDFAC File Offset: 0x005DC1AC
 		public TTargetGearGroupSuccessCondition Type { get; set; }
 
-		// Token: 0x1700B25B RID: 45659
-		// (get) Token: 0x06028A35 RID: 166453 RVA: 0x00595841 File Offset: 0x00593A41
-		// (set) Token: 0x06028A36 RID: 166454 RVA: 0x00595849 File Offset: 0x00593A49
+		// Token: 0x1700BBB5 RID: 48053
+		// (get) Token: 0x0602B07D RID: 176253 RVA: 0x005DDFB5 File Offset: 0x005DC1B5
+		// (set) Token: 0x0602B07E RID: 176254 RVA: 0x005DDFBD File Offset: 0x005DC1BD
 		public object Value { get; set; }
 
-		// Token: 0x06028A37 RID: 166455 RVA: 0x00595852 File Offset: 0x00593A52
+		// Token: 0x0602B07F RID: 176255 RVA: 0x005DDFC6 File Offset: 0x005DC1C6
 		public TTargetGearGroupSuccessConditionUnion()
 		{
 			this.Type = TTargetGearGroupSuccessCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028A38 RID: 166456 RVA: 0x00595868 File Offset: 0x00593A68
+		// Token: 0x0602B080 RID: 176256 RVA: 0x005DDFDC File Offset: 0x005DC1DC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028A39 RID: 166457 RVA: 0x0059587A File Offset: 0x00593A7A
+		// Token: 0x0602B081 RID: 176257 RVA: 0x005DDFEE File Offset: 0x005DC1EE
 		public ISuccessConditionCountDownStateT AsISuccessConditionCountDownState()
 		{
 			return this.As<ISuccessConditionCountDownStateT>();
 		}
 
-		// Token: 0x06028A3A RID: 166458 RVA: 0x00595882 File Offset: 0x00593A82
+		// Token: 0x0602B082 RID: 176258 RVA: 0x005DDFF6 File Offset: 0x005DC1F6
 		public static TTargetGearGroupSuccessConditionUnion FromISuccessConditionCountDownState(ISuccessConditionCountDownStateT _isuccessconditioncountdownstate)
 		{
 			return new TTargetGearGroupSuccessConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A3B RID: 166459 RVA: 0x00595897 File Offset: 0x00593A97
+		// Token: 0x0602B083 RID: 176259 RVA: 0x005DE00B File Offset: 0x005DC20B
 		public ISuccessConditionSameArbitraryStateT AsISuccessConditionSameArbitraryState()
 		{
 			return this.As<ISuccessConditionSameArbitraryStateT>();
 		}
 
-		// Token: 0x06028A3C RID: 166460 RVA: 0x0059589F File Offset: 0x00593A9F
+		// Token: 0x0602B084 RID: 176260 RVA: 0x005DE013 File Offset: 0x005DC213
 		public static TTargetGearGroupSuccessConditionUnion FromISuccessConditionSameArbitraryState(ISuccessConditionSameArbitraryStateT _isuccessconditionsamearbitrarystate)
 		{
 			return new TTargetGearGroupSuccessConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A3D RID: 166461 RVA: 0x005958B4 File Offset: 0x00593AB4
+		// Token: 0x0602B085 RID: 176261 RVA: 0x005DE028 File Offset: 0x005DC228
 		public ISuccessConditionSameSpecificStateT AsISuccessConditionSameSpecificState()
 		{
 			return this.As<ISuccessConditionSameSpecificStateT>();
 		}
 
-		// Token: 0x06028A3E RID: 166462 RVA: 0x005958BC File Offset: 0x00593ABC
+		// Token: 0x0602B086 RID: 176262 RVA: 0x005DE030 File Offset: 0x005DC230
 		public static TTargetGearGroupSuccessConditionUnion FromISuccessConditionSameSpecificState(ISuccessConditionSameSpecificStateT _isuccessconditionsamespecificstate)
 		{
 			return new TTargetGearGroupSuccessConditionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A3F RID: 166463 RVA: 0x005958D1 File Offset: 0x00593AD1
+		// Token: 0x0602B087 RID: 176263 RVA: 0x005DE045 File Offset: 0x005DC245
 		public ISuccessConditionSpecificTargetStateT AsISuccessConditionSpecificTargetState()
 		{
 			return this.As<ISuccessConditionSpecificTargetStateT>();
 		}
 
-		// Token: 0x06028A40 RID: 166464 RVA: 0x005958D9 File Offset: 0x00593AD9
+		// Token: 0x0602B088 RID: 176264 RVA: 0x005DE04D File Offset: 0x005DC24D
 		public static TTargetGearGroupSuccessConditionUnion FromISuccessConditionSpecificTargetState(ISuccessConditionSpecificTargetStateT _isuccessconditionspecifictargetstate)
 		{
 			return new TTargetGearGroupSuccessConditionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A41 RID: 166465 RVA: 0x005958F0 File Offset: 0x00593AF0
+		// Token: 0x0602B089 RID: 176265 RVA: 0x005DE064 File Offset: 0x005DC264
 		public static int Pack(FlatBufferBuilder builder, TTargetGearGroupSuccessConditionUnion _o)
 		{
 			switch (_o.Type)

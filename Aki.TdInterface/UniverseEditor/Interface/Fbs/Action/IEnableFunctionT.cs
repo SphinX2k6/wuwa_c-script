@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006664 RID: 26212
+	// Token: 0x02006CD5 RID: 27861
 	public class IEnableFunctionT
 	{
-		// Token: 0x1700C2BF RID: 49855
-		// (get) Token: 0x0602D897 RID: 186519 RVA: 0x0063C37A File Offset: 0x0063A57A
-		// (set) Token: 0x0602D898 RID: 186520 RVA: 0x0063C382 File Offset: 0x0063A582
+		// Token: 0x1700CC5D RID: 52317
+		// (get) Token: 0x06030068 RID: 196712 RVA: 0x00688EE2 File Offset: 0x006870E2
+		// (set) Token: 0x06030069 RID: 196713 RVA: 0x00688EEA File Offset: 0x006870EA
 		public EEnableFunctionType Type { get; set; }
 
-		// Token: 0x0602D899 RID: 186521 RVA: 0x0063C38B File Offset: 0x0063A58B
+		// Token: 0x0603006A RID: 196714 RVA: 0x00688EF3 File Offset: 0x006870F3
 		public IEnableFunctionT()
 		{
 			this.Type = EEnableFunctionType.TeleportDungeon;

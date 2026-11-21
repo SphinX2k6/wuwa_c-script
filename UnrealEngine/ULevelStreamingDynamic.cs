@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D3A RID: 3386
+	// Token: 0x02000232 RID: 562
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.LevelStreamingDynamic")]
 	[UnrealStructLayout(496, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 496)]
 	public class ULevelStreamingDynamic : ULevelStreaming, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B58B RID: 46475 RVA: 0x00102F16 File Offset: 0x00101116
+		// Token: 0x06002DA5 RID: 11685 RVA: 0x000407F5 File Offset: 0x0003E9F5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULevelStreamingDynamic._ClassPtr;
 		}
 
-		// Token: 0x0600B58C RID: 46476 RVA: 0x00102F24 File Offset: 0x00101124
+		// Token: 0x06002DA6 RID: 11686 RVA: 0x00040804 File Offset: 0x0003EA04
 		public ULevelStreamingDynamic() : this(BuiltinUtils.AllocNativeUObject(ULevelStreamingDynamic.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B58D RID: 46477 RVA: 0x00102F4C File Offset: 0x0010114C
+		// Token: 0x06002DA7 RID: 11687 RVA: 0x0004082C File Offset: 0x0003EA2C
 		public ULevelStreamingDynamic(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULevelStreamingDynamic.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700298A RID: 10634
-		// (get) Token: 0x0600B58E RID: 46478 RVA: 0x00102F7F File Offset: 0x0010117F
-		// (set) Token: 0x0600B58F RID: 46479 RVA: 0x00102F98 File Offset: 0x00101198
+		// Token: 0x17000577 RID: 1399
+		// (get) Token: 0x06002DA8 RID: 11688 RVA: 0x0004085F File Offset: 0x0003EA5F
+		// (set) Token: 0x06002DA9 RID: 11689 RVA: 0x00040878 File Offset: 0x0003EA78
 		public unsafe bool bInitiallyLoaded
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700298B RID: 10635
-		// (get) Token: 0x0600B590 RID: 46480 RVA: 0x00102FC8 File Offset: 0x001011C8
-		// (set) Token: 0x0600B591 RID: 46481 RVA: 0x00102FE1 File Offset: 0x001011E1
+		// Token: 0x17000578 RID: 1400
+		// (get) Token: 0x06002DAA RID: 11690 RVA: 0x000408A8 File Offset: 0x0003EAA8
+		// (set) Token: 0x06002DAB RID: 11691 RVA: 0x000408C1 File Offset: 0x0003EAC1
 		public unsafe bool bInitiallyVisible
 		{
 			get
@@ -59,7 +59,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B592 RID: 46482 RVA: 0x00103014 File Offset: 0x00101214
+		// Token: 0x06002DAC RID: 11692 RVA: 0x000408F4 File Offset: 0x0003EAF4
 		[return: Nullable(2)]
 		public unsafe static ULevelStreamingDynamic LoadLevelInstanceBySoftObjectPtr([Nullable(2)] UObject WorldContextObject, TSoftObjectPtr<UWorld> Level, FVector Location, FRotator Rotation, ref bool bOutSuccess, string OptionalLevelNameOverride = "", [Nullable(new byte[]
 		{
@@ -77,7 +77,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B593 RID: 46483 RVA: 0x00103070 File Offset: 0x00101270
+		// Token: 0x06002DAD RID: 11693 RVA: 0x00040950 File Offset: 0x0003EB50
 		[return: Nullable(2)]
 		public unsafe static ULevelStreamingDynamic LoadLevelInstance([Nullable(2)] UObject WorldContextObject, string LevelName, FVector Location, FRotator Rotation, ref bool bOutSuccess, string OptionalLevelNameOverride = "", [Nullable(new byte[]
 		{
@@ -97,7 +97,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B594 RID: 46484 RVA: 0x001030D0 File Offset: 0x001012D0
+		// Token: 0x06002DAE RID: 11694 RVA: 0x000409B0 File Offset: 0x0003EBB0
 		[return: Nullable(2)]
 		public unsafe static ULevelStreamingDynamic D_LoadLevelInstance([Nullable(2)] UObject WorldContextObject, string LevelName, FVectorDouble Location, FRotator Rotation, ref bool bOutSuccess, string OptionalLevelNameOverride = "", [Nullable(new byte[]
 		{
@@ -117,48 +117,48 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600B595 RID: 46485
+		// Token: 0x06002DAF RID: 11695
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __LoadLevelInstanceBySoftObjectPtr_Internal(IntPtr WorldContextObject, IntPtr Level, FVector Location, FRotator Rotation, ref bool bOutSuccess, in FString OptionalLevelNameOverride, IntPtr OptionalLevelStreamingClass);
 
-		// Token: 0x0600B596 RID: 46486
+		// Token: 0x06002DB0 RID: 11696
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __LoadLevelInstance_Internal(IntPtr WorldContextObject, in FString LevelName, FVector Location, FRotator Rotation, ref bool bOutSuccess, in FString OptionalLevelNameOverride, IntPtr OptionalLevelStreamingClass);
 
-		// Token: 0x0600B597 RID: 46487
+		// Token: 0x06002DB1 RID: 11697
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __D_LoadLevelInstance_Internal(IntPtr WorldContextObject, in FString LevelName, FVectorDouble Location, FRotator Rotation, ref bool bOutSuccess, in FString OptionalLevelNameOverride, IntPtr OptionalLevelStreamingClass);
 
-		// Token: 0x0600B598 RID: 46488 RVA: 0x0010312D File Offset: 0x0010132D
+		// Token: 0x06002DB2 RID: 11698 RVA: 0x00040A0D File Offset: 0x0003EC0D
 		static ULevelStreamingDynamic()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.LevelStreamingDynamic");
 		}
 
-		// Token: 0x0600B599 RID: 46489 RVA: 0x0010313B File Offset: 0x0010133B
+		// Token: 0x06002DB3 RID: 11699 RVA: 0x00040A1B File Offset: 0x0003EC1B
 		protected ULevelStreamingDynamic(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005F6A RID: 24426
+		// Token: 0x04000E9D RID: 3741
 		public new const string __ObjectPath = "/Script/Engine.LevelStreamingDynamic";
 
-		// Token: 0x04005F6B RID: 24427
+		// Token: 0x04000E9E RID: 3742
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005F6C RID: 24428
+		// Token: 0x04000E9F RID: 3743
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005F6D RID: 24429
+		// Token: 0x04000EA0 RID: 3744
 		internal static int __PropertyOffset_bInitiallyLoaded;
 
-		// Token: 0x04005F6E RID: 24430
+		// Token: 0x04000EA1 RID: 3745
 		internal static byte __PropertyMask_bInitiallyLoaded;
 
-		// Token: 0x04005F6F RID: 24431
+		// Token: 0x04000EA2 RID: 3746
 		internal static int __PropertyOffset_bInitiallyVisible;
 
-		// Token: 0x04005F70 RID: 24432
+		// Token: 0x04000EA3 RID: 3747
 		internal static byte __PropertyMask_bInitiallyVisible;
 	}
 }

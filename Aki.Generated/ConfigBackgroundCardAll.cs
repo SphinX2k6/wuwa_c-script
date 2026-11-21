@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000DE RID: 222
+	// Token: 0x020000ED RID: 237
 	public class ConfigBackgroundCardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000535 RID: 1333 RVA: 0x000770D0 File Offset: 0x000752D0
+		// Token: 0x0600058F RID: 1423 RVA: 0x0007CA34 File Offset: 0x0007AC34
 		static ConfigBackgroundCardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBackgroundCardAll.CreateStaticDefaultValue), new Action(ConfigBackgroundCardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000536 RID: 1334 RVA: 0x000770F0 File Offset: 0x000752F0
+		// Token: 0x06000590 RID: 1424 RVA: 0x0007CA54 File Offset: 0x0007AC54
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBackgroundCardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000537 RID: 1335 RVA: 0x0007716F File Offset: 0x0007536F
+		// Token: 0x06000591 RID: 1425 RVA: 0x0007CAD3 File Offset: 0x0007ACD3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBackgroundCardAll.LogPair = null;
 			ConfigBackgroundCardAll.HandleId = 0;
 		}
 
-		// Token: 0x06000538 RID: 1336 RVA: 0x0007717D File Offset: 0x0007537D
+		// Token: 0x06000592 RID: 1426 RVA: 0x0007CAE1 File Offset: 0x0007ACE1
 		public static void Init()
 		{
 			ConfigBackgroundCardAll.HandleId = ConfigCommon.InitDataStatement(ConfigBackgroundCardAll.HandleId, "db_personal_card.db", "select BinData from `BackgroundCard`");
 		}
 
-		// Token: 0x06000539 RID: 1337 RVA: 0x00077198 File Offset: 0x00075398
+		// Token: 0x06000593 RID: 1427 RVA: 0x0007CAFC File Offset: 0x0007ACFC
 		[NullableContext(2)]
 		public static IReadOnlyList<BackgroundCard> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040005F6 RID: 1526
+		// Token: 0x0400065F RID: 1631
 		private const string DB = "db_personal_card.db";
 
-		// Token: 0x040005F7 RID: 1527
+		// Token: 0x04000660 RID: 1632
 		private const string FILE = "m.名片.xlsx";
 
-		// Token: 0x040005F8 RID: 1528
+		// Token: 0x04000661 RID: 1633
 		private const string TABLE = "BackgroundCard";
 
-		// Token: 0x040005F9 RID: 1529
+		// Token: 0x04000662 RID: 1634
 		private const string COMMAND = "select BinData from `BackgroundCard`";
 
-		// Token: 0x040005FA RID: 1530
+		// Token: 0x04000663 RID: 1635
 		private const string KEY_PREFIX = "BackgroundCardAll";
 
-		// Token: 0x040005FB RID: 1531
+		// Token: 0x04000664 RID: 1636
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040005FC RID: 1532
+		// Token: 0x04000665 RID: 1637
 		private static int HandleId;
 	}
 }

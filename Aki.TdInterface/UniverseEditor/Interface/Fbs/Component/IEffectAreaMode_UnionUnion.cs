@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005112 RID: 20754
+	// Token: 0x02005677 RID: 22135
 	public class IEffectAreaMode_UnionUnion
 	{
-		// Token: 0x17009736 RID: 38710
-		// (get) Token: 0x06021708 RID: 136968 RVA: 0x004A4819 File Offset: 0x004A2A19
-		// (set) Token: 0x06021709 RID: 136969 RVA: 0x004A4821 File Offset: 0x004A2A21
+		// Token: 0x17009F23 RID: 40739
+		// (get) Token: 0x0602365C RID: 144988 RVA: 0x004DE7A5 File Offset: 0x004DC9A5
+		// (set) Token: 0x0602365D RID: 144989 RVA: 0x004DE7AD File Offset: 0x004DC9AD
 		public IEffectAreaMode_Union Type { get; set; }
 
-		// Token: 0x17009737 RID: 38711
-		// (get) Token: 0x0602170A RID: 136970 RVA: 0x004A482A File Offset: 0x004A2A2A
-		// (set) Token: 0x0602170B RID: 136971 RVA: 0x004A4832 File Offset: 0x004A2A32
+		// Token: 0x17009F24 RID: 40740
+		// (get) Token: 0x0602365E RID: 144990 RVA: 0x004DE7B6 File Offset: 0x004DC9B6
+		// (set) Token: 0x0602365F RID: 144991 RVA: 0x004DE7BE File Offset: 0x004DC9BE
 		public object Value { get; set; }
 
-		// Token: 0x0602170C RID: 136972 RVA: 0x004A483B File Offset: 0x004A2A3B
+		// Token: 0x06023660 RID: 144992 RVA: 0x004DE7C7 File Offset: 0x004DC9C7
 		public IEffectAreaMode_UnionUnion()
 		{
 			this.Type = IEffectAreaMode_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602170D RID: 136973 RVA: 0x004A4851 File Offset: 0x004A2A51
+		// Token: 0x06023661 RID: 144993 RVA: 0x004DE7DD File Offset: 0x004DC9DD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602170E RID: 136974 RVA: 0x004A4863 File Offset: 0x004A2A63
+		// Token: 0x06023662 RID: 144994 RVA: 0x004DE7EF File Offset: 0x004DC9EF
 		public IEffectAreaModeT AsIEffectAreaMode()
 		{
 			return this.As<IEffectAreaModeT>();
 		}
 
-		// Token: 0x0602170F RID: 136975 RVA: 0x004A486B File Offset: 0x004A2A6B
+		// Token: 0x06023663 RID: 144995 RVA: 0x004DE7F7 File Offset: 0x004DC9F7
 		public static IEffectAreaMode_UnionUnion FromIEffectAreaMode(IEffectAreaModeT _ieffectareamode)
 		{
 			return new IEffectAreaMode_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06021710 RID: 136976 RVA: 0x004A4880 File Offset: 0x004A2A80
+		// Token: 0x06023664 RID: 144996 RVA: 0x004DE80C File Offset: 0x004DCA0C
 		public IBuffAreaT AsIBuffArea()
 		{
 			return this.As<IBuffAreaT>();
 		}
 
-		// Token: 0x06021711 RID: 136977 RVA: 0x004A4888 File Offset: 0x004A2A88
+		// Token: 0x06023665 RID: 144997 RVA: 0x004DE814 File Offset: 0x004DCA14
 		public static IEffectAreaMode_UnionUnion FromIBuffArea(IBuffAreaT _ibuffarea)
 		{
 			return new IEffectAreaMode_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06021712 RID: 136978 RVA: 0x004A48A0 File Offset: 0x004A2AA0
+		// Token: 0x06023666 RID: 144998 RVA: 0x004DE82C File Offset: 0x004DCA2C
 		public static int Pack(FlatBufferBuilder builder, IEffectAreaMode_UnionUnion _o)
 		{
 			IEffectAreaMode_Union type = _o.Type;

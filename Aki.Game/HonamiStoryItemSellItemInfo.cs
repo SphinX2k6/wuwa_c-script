@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001EED RID: 7917
+// Token: 0x020013AF RID: 5039
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemSellItemInfo : IHonamiStoryItemSellItemInfo
 {
-	// Token: 0x1700130B RID: 4875
-	// (get) Token: 0x0600F3AF RID: 62383 RVA: 0x003ABF92 File Offset: 0x003AA192
-	// (set) Token: 0x0600F3B0 RID: 62384 RVA: 0x003ABF9A File Offset: 0x003AA19A
+	// Token: 0x17001335 RID: 4917
+	// (get) Token: 0x0600C7CE RID: 51150 RVA: 0x003B7A8E File Offset: 0x003B5C8E
+	// (set) Token: 0x0600C7CF RID: 51151 RVA: 0x003B7A96 File Offset: 0x003B5C96
 	public HonamiStoryItemDataBase ItemData { get; set; }
 
-	// Token: 0x1700130C RID: 4876
-	// (get) Token: 0x0600F3B1 RID: 62385 RVA: 0x003ABFA3 File Offset: 0x003AA1A3
-	// (set) Token: 0x0600F3B2 RID: 62386 RVA: 0x003ABFAB File Offset: 0x003AA1AB
+	// Token: 0x17001336 RID: 4918
+	// (get) Token: 0x0600C7D0 RID: 51152 RVA: 0x003B7A9F File Offset: 0x003B5C9F
+	// (set) Token: 0x0600C7D1 RID: 51153 RVA: 0x003B7AA7 File Offset: 0x003B5CA7
 	public int Number { get; set; }
 }

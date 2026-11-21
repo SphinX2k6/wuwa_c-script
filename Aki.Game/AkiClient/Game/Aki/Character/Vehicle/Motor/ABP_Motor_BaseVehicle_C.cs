@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 {
-	// Token: 0x02004032 RID: 16434
-	[NullableContext(2)]
+	// Token: 0x0200328B RID: 12939
+	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Vehicle/Motor/ABP_Motor_BaseVehicle.ABP_Motor_BaseVehicle_C")]
-	[UnrealStructLayout(16320, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 16308)]
+	[UnrealStructLayout(16336, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 16324)]
 	public class ABP_Motor_BaseVehicle_C : UKuroAnimInstanceVehicle, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A281 RID: 172673 RVA: 0x009D7AC4 File Offset: 0x009D5CC4
+		// Token: 0x060205F1 RID: 132593 RVA: 0x00944A87 File Offset: 0x00942C87
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_Motor_BaseVehicle_C._ClassPtr == IntPtr.Zero)
@@ -25,466 +25,401 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			return ABP_Motor_BaseVehicle_C._ClassPtr;
 		}
 
-		// Token: 0x0602A282 RID: 172674 RVA: 0x009D7AE8 File Offset: 0x009D5CE8
+		// Token: 0x060205F2 RID: 132594 RVA: 0x00944AAC File Offset: 0x00942CAC
 		public ABP_Motor_BaseVehicle_C() : this(BuiltinUtils.AllocNativeUObject(ABP_Motor_BaseVehicle_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A283 RID: 172675 RVA: 0x009D7B10 File Offset: 0x009D5D10
-		[NullableContext(1)]
+		// Token: 0x060205F3 RID: 132595 RVA: 0x00944AD4 File Offset: 0x00942CD4
 		public ABP_Motor_BaseVehicle_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_Motor_BaseVehicle_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170066F3 RID: 26355
-		// (get) Token: 0x0602A284 RID: 172676 RVA: 0x009D7B43 File Offset: 0x009D5D43
-		// (set) Token: 0x0602A285 RID: 172677 RVA: 0x009D7B57 File Offset: 0x009D5D57
+		// Token: 0x17003EAD RID: 16045
+		// (get) Token: 0x060205F4 RID: 132596 RVA: 0x00944B07 File Offset: 0x00942D07
+		// (set) Token: 0x060205F5 RID: 132597 RVA: 0x00944B1B File Offset: 0x00942D1B
+		[Nullable(2)]
 		public unsafe UKuroVehicleMovementComponent VehicleMove
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UKuroVehicleMovementComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_100);
+				return BuiltinUtils.ObjectPropertyGetter<UKuroVehicleMovementComponent>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_VehicleMove);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_100, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_VehicleMove, value);
 			}
 		}
 
-		// Token: 0x170066F4 RID: 26356
-		// (get) Token: 0x0602A286 RID: 172678 RVA: 0x009D7B6C File Offset: 0x009D5D6C
-		// (set) Token: 0x0602A287 RID: 172679 RVA: 0x009D7B80 File Offset: 0x009D5D80
+		// Token: 0x17003EAE RID: 16046
+		// (get) Token: 0x060205F6 RID: 132598 RVA: 0x00944B30 File Offset: 0x00942D30
+		// (set) Token: 0x060205F7 RID: 132599 RVA: 0x00944B44 File Offset: 0x00942D44
 		public unsafe FVector2D 移动混合
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_101);
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_移动混合);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_101) = value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_移动混合) = value;
 			}
 		}
 
-		// Token: 0x170066F5 RID: 26357
-		// (get) Token: 0x0602A288 RID: 172680 RVA: 0x009D7B95 File Offset: 0x009D5D95
-		// (set) Token: 0x0602A289 RID: 172681 RVA: 0x009D7BA5 File Offset: 0x009D5DA5
+		// Token: 0x17003EAF RID: 16047
+		// (get) Token: 0x060205F8 RID: 132600 RVA: 0x00944B59 File Offset: 0x00942D59
+		// (set) Token: 0x060205F9 RID: 132601 RVA: 0x00944B69 File Offset: 0x00942D69
 		public unsafe float 左右混合缓冲
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_102);
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右混合缓冲);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_102) = value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右混合缓冲) = value;
 			}
 		}
 
-		// Token: 0x170066F6 RID: 26358
-		// (get) Token: 0x0602A28A RID: 172682 RVA: 0x009D7BB6 File Offset: 0x009D5DB6
-		// (set) Token: 0x0602A28B RID: 172683 RVA: 0x009D7BC6 File Offset: 0x009D5DC6
+		// Token: 0x17003EB0 RID: 16048
+		// (get) Token: 0x060205FA RID: 132602 RVA: 0x00944B7A File Offset: 0x00942D7A
+		// (set) Token: 0x060205FB RID: 132603 RVA: 0x00944B8A File Offset: 0x00942D8A
 		public unsafe float 左右Mix一段缓冲
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_103);
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右Mix一段缓冲);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_103) = value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右Mix一段缓冲) = value;
 			}
 		}
 
-		// Token: 0x170066F7 RID: 26359
-		// (get) Token: 0x0602A28C RID: 172684 RVA: 0x009D7BD7 File Offset: 0x009D5DD7
-		// (set) Token: 0x0602A28D RID: 172685 RVA: 0x009D7BE7 File Offset: 0x009D5DE7
+		// Token: 0x17003EB1 RID: 16049
+		// (get) Token: 0x060205FC RID: 132604 RVA: 0x00944B9B File Offset: 0x00942D9B
+		// (set) Token: 0x060205FD RID: 132605 RVA: 0x00944BAB File Offset: 0x00942DAB
 		public unsafe float 左右Mix二段缓冲
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_104);
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右Mix二段缓冲);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_104) = value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_左右Mix二段缓冲) = value;
 			}
 		}
 
-		// Token: 0x170066F8 RID: 26360
-		// (get) Token: 0x0602A28E RID: 172686 RVA: 0x009D7BF8 File Offset: 0x009D5DF8
-		// (set) Token: 0x0602A28F RID: 172687 RVA: 0x009D7C08 File Offset: 0x009D5E08
+		// Token: 0x17003EB2 RID: 16050
+		// (get) Token: 0x060205FE RID: 132606 RVA: 0x00944BBC File Offset: 0x00942DBC
+		// (set) Token: 0x060205FF RID: 132607 RVA: 0x00944BCC File Offset: 0x00942DCC
 		public unsafe bool 技能状态_定点钩索
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_105) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_技能状态_定点钩索) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_105) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_技能状态_定点钩索) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066F9 RID: 26361
-		// (get) Token: 0x0602A290 RID: 172688 RVA: 0x009D7C1C File Offset: 0x009D5E1C
-		// (set) Token: 0x0602A291 RID: 172689 RVA: 0x009D7C55 File Offset: 0x009D5E55
-		[Nullable(1)]
+		// Token: 0x17003EB3 RID: 16051
+		// (get) Token: 0x06020600 RID: 132608 RVA: 0x00944BE0 File Offset: 0x00942DE0
+		// (set) Token: 0x06020601 RID: 132609 RVA: 0x00944C19 File Offset: 0x00942E19
 		public TMap<int, FVector> Target_Locations
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<int, FVector> result;
 				if ((result = this._Target_Locations) == null)
 				{
-					result = (this._Target_Locations = new TMap<int, FVector>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_106, this));
+					result = (this._Target_Locations = new TMap<int, FVector>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_Target_Locations, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.Target_Locations.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x170066FA RID: 26362
-		// (get) Token: 0x0602A292 RID: 172690 RVA: 0x009D7C64 File Offset: 0x009D5E64
-		// (set) Token: 0x0602A293 RID: 172691 RVA: 0x009D7C9D File Offset: 0x009D5E9D
-		[Nullable(1)]
+		// Token: 0x17003EB4 RID: 16052
+		// (get) Token: 0x06020602 RID: 132610 RVA: 0x00944C28 File Offset: 0x00942E28
+		// (set) Token: 0x06020603 RID: 132611 RVA: 0x00944C61 File Offset: 0x00942E61
 		public TMap<int, float> Wheel_Speeds
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<int, float> result;
 				if ((result = this._Wheel_Speeds) == null)
 				{
-					result = (this._Wheel_Speeds = new TMap<int, float>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_107, this));
+					result = (this._Wheel_Speeds = new TMap<int, float>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_Wheel_Speeds, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.Wheel_Speeds.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x170066FB RID: 26363
-		// (get) Token: 0x0602A294 RID: 172692 RVA: 0x009D7CAC File Offset: 0x009D5EAC
-		// (set) Token: 0x0602A295 RID: 172693 RVA: 0x009D7CE5 File Offset: 0x009D5EE5
-		[Nullable(1)]
+		// Token: 0x17003EB5 RID: 16053
+		// (get) Token: 0x06020604 RID: 132612 RVA: 0x00944C70 File Offset: 0x00942E70
+		// (set) Token: 0x06020605 RID: 132613 RVA: 0x00944CA9 File Offset: 0x00942EA9
 		public TMap<int, float> Wheel_Accels
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TMap<int, float> result;
 				if ((result = this._Wheel_Accels) == null)
 				{
-					result = (this._Wheel_Accels = new TMap<int, float>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_108, this));
+					result = (this._Wheel_Accels = new TMap<int, float>(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_Wheel_Accels, this));
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.Wheel_Accels.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x170066FC RID: 26364
-		// (get) Token: 0x0602A296 RID: 172694 RVA: 0x009D7CF3 File Offset: 0x009D5EF3
-		// (set) Token: 0x0602A297 RID: 172695 RVA: 0x009D7D03 File Offset: 0x009D5F03
+		// Token: 0x17003EB6 RID: 16054
+		// (get) Token: 0x06020606 RID: 132614 RVA: 0x00944CB7 File Offset: 0x00942EB7
+		// (set) Token: 0x06020607 RID: 132615 RVA: 0x00944CC7 File Offset: 0x00942EC7
 		public unsafe EMotorSubState 摩托运动状态
 		{
 			get
 			{
-				return (EMotorSubState)(*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_109));
+				return (EMotorSubState)(*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_摩托运动状态));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_109) = (byte)value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_摩托运动状态) = (byte)value;
 			}
 		}
 
-		// Token: 0x170066FD RID: 26365
-		// (get) Token: 0x0602A298 RID: 172696 RVA: 0x009D7D14 File Offset: 0x009D5F14
-		// (set) Token: 0x0602A299 RID: 172697 RVA: 0x009D7D24 File Offset: 0x009D5F24
+		// Token: 0x17003EB7 RID: 16055
+		// (get) Token: 0x06020608 RID: 132616 RVA: 0x00944CD8 File Offset: 0x00942ED8
+		// (set) Token: 0x06020609 RID: 132617 RVA: 0x00944CE8 File Offset: 0x00942EE8
 		public unsafe bool 状态_冲刺
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_110) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_冲刺) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_110) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_冲刺) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066FE RID: 26366
-		// (get) Token: 0x0602A29A RID: 172698 RVA: 0x009D7D35 File Offset: 0x009D5F35
-		// (set) Token: 0x0602A29B RID: 172699 RVA: 0x009D7D45 File Offset: 0x009D5F45
+		// Token: 0x17003EB8 RID: 16056
+		// (get) Token: 0x0602060A RID: 132618 RVA: 0x00944CF9 File Offset: 0x00942EF9
+		// (set) Token: 0x0602060B RID: 132619 RVA: 0x00944D09 File Offset: 0x00942F09
 		public unsafe bool 滑轨状态_滑轨移动中
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_111) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨状态_滑轨移动中) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_111) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨状态_滑轨移动中) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170066FF RID: 26367
-		// (get) Token: 0x0602A29C RID: 172700 RVA: 0x009D7D56 File Offset: 0x009D5F56
-		// (set) Token: 0x0602A29D RID: 172701 RVA: 0x009D7D66 File Offset: 0x009D5F66
+		// Token: 0x17003EB9 RID: 16057
+		// (get) Token: 0x0602060C RID: 132620 RVA: 0x00944D1A File Offset: 0x00942F1A
+		// (set) Token: 0x0602060D RID: 132621 RVA: 0x00944D2A File Offset: 0x00942F2A
 		public unsafe bool 滑轨动作状态_子弹跳
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_112) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_子弹跳) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_112) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_子弹跳) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006700 RID: 26368
-		// (get) Token: 0x0602A29E RID: 172702 RVA: 0x009D7D77 File Offset: 0x009D5F77
-		// (set) Token: 0x0602A29F RID: 172703 RVA: 0x009D7D87 File Offset: 0x009D5F87
+		// Token: 0x17003EBA RID: 16058
+		// (get) Token: 0x0602060E RID: 132622 RVA: 0x00944D3B File Offset: 0x00942F3B
+		// (set) Token: 0x0602060F RID: 132623 RVA: 0x00944D4B File Offset: 0x00942F4B
 		public unsafe bool 滑轨动作状态_滑行
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_113) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_滑行) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_113) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_滑行) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006701 RID: 26369
-		// (get) Token: 0x0602A2A0 RID: 172704 RVA: 0x009D7D98 File Offset: 0x009D5F98
-		// (set) Token: 0x0602A2A1 RID: 172705 RVA: 0x009D7DA8 File Offset: 0x009D5FA8
+		// Token: 0x17003EBB RID: 16059
+		// (get) Token: 0x06020610 RID: 132624 RVA: 0x00944D5C File Offset: 0x00942F5C
+		// (set) Token: 0x06020611 RID: 132625 RVA: 0x00944D6C File Offset: 0x00942F6C
 		public unsafe bool 滑轨动作状态_翘车头
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_114) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_翘车头) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_114) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_滑轨动作状态_翘车头) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006702 RID: 26370
-		// (get) Token: 0x0602A2A2 RID: 172706 RVA: 0x009D7DB9 File Offset: 0x009D5FB9
-		// (set) Token: 0x0602A2A3 RID: 172707 RVA: 0x009D7DC9 File Offset: 0x009D5FC9
+		// Token: 0x17003EBC RID: 16060
+		// (get) Token: 0x06020612 RID: 132626 RVA: 0x00944D7D File Offset: 0x00942F7D
+		// (set) Token: 0x06020613 RID: 132627 RVA: 0x00944D8D File Offset: 0x00942F8D
 		public unsafe bool 状态_地面
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_115) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_地面) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_115) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_地面) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006703 RID: 26371
-		// (get) Token: 0x0602A2A4 RID: 172708 RVA: 0x009D7DDA File Offset: 0x009D5FDA
-		// (set) Token: 0x0602A2A5 RID: 172709 RVA: 0x009D7DEA File Offset: 0x009D5FEA
+		// Token: 0x17003EBD RID: 16061
+		// (get) Token: 0x06020614 RID: 132628 RVA: 0x00944D9E File Offset: 0x00942F9E
+		// (set) Token: 0x06020615 RID: 132629 RVA: 0x00944DAE File Offset: 0x00942FAE
 		public unsafe bool 状态_漂移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_116) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_漂移) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_116) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_漂移) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006704 RID: 26372
-		// (get) Token: 0x0602A2A6 RID: 172710 RVA: 0x009D7DFB File Offset: 0x009D5FFB
-		// (set) Token: 0x0602A2A7 RID: 172711 RVA: 0x009D7E0B File Offset: 0x009D600B
+		// Token: 0x17003EBE RID: 16062
+		// (get) Token: 0x06020616 RID: 132630 RVA: 0x00944DBF File Offset: 0x00942FBF
+		// (set) Token: 0x06020617 RID: 132631 RVA: 0x00944DCF File Offset: 0x00942FCF
 		public unsafe float 下落速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_117);
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_下落速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_117) = value;
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_下落速度) = value;
 			}
 		}
 
-		// Token: 0x17006705 RID: 26373
-		// (get) Token: 0x0602A2A8 RID: 172712 RVA: 0x009D7E1C File Offset: 0x009D601C
-		// (set) Token: 0x0602A2A9 RID: 172713 RVA: 0x009D7E30 File Offset: 0x009D6030
+		// Token: 0x17003EBF RID: 16063
+		// (get) Token: 0x06020618 RID: 132632 RVA: 0x00944DE0 File Offset: 0x00942FE0
+		// (set) Token: 0x06020619 RID: 132633 RVA: 0x00944DF4 File Offset: 0x00942FF4
+		[Nullable(2)]
 		public unsafe UCurveFloat 前进速度混合映射
 		{
+			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_118);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_前进速度混合映射);
 			}
+			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_118, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ABP_Motor_BaseVehicle_C.__PropertyOffset_前进速度混合映射, value);
 			}
 		}
 
-		// Token: 0x17006706 RID: 26374
-		// (get) Token: 0x0602A2AA RID: 172714 RVA: 0x009D7E45 File Offset: 0x009D6045
-		// (set) Token: 0x0602A2AB RID: 172715 RVA: 0x009D7E55 File Offset: 0x009D6055
+		// Token: 0x17003EC0 RID: 16064
+		// (get) Token: 0x0602061A RID: 132634 RVA: 0x00944E09 File Offset: 0x00943009
+		// (set) Token: 0x0602061B RID: 132635 RVA: 0x00944E19 File Offset: 0x00943019
 		public unsafe bool 第一人称
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_119) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_第一人称) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_119) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_第一人称) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006707 RID: 26375
-		// (get) Token: 0x0602A2AC RID: 172716 RVA: 0x009D7E66 File Offset: 0x009D6066
-		// (set) Token: 0x0602A2AD RID: 172717 RVA: 0x009D7E76 File Offset: 0x009D6076
+		// Token: 0x17003EC1 RID: 16065
+		// (get) Token: 0x0602061C RID: 132636 RVA: 0x00944E2A File Offset: 0x0094302A
+		// (set) Token: 0x0602061D RID: 132637 RVA: 0x00944E3A File Offset: 0x0094303A
 		public unsafe bool NeedSimulate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_120) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_NeedSimulate) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_120) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_NeedSimulate) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006708 RID: 26376
-		// (get) Token: 0x0602A2AE RID: 172718 RVA: 0x009D7E87 File Offset: 0x009D6087
-		// (set) Token: 0x0602A2AF RID: 172719 RVA: 0x009D7E97 File Offset: 0x009D6097
+		// Token: 0x17003EC2 RID: 16066
+		// (get) Token: 0x0602061E RID: 132638 RVA: 0x00944E4B File Offset: 0x0094304B
+		// (set) Token: 0x0602061F RID: 132639 RVA: 0x00944E5B File Offset: 0x0094305B
 		public unsafe bool 状态_技能下落
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_121) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_技能下落) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_121) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_技能下落) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006709 RID: 26377
-		// (get) Token: 0x0602A2B0 RID: 172720 RVA: 0x009D7EA8 File Offset: 0x009D60A8
-		// (set) Token: 0x0602A2B1 RID: 172721 RVA: 0x009D7EB8 File Offset: 0x009D60B8
+		// Token: 0x17003EC3 RID: 16067
+		// (get) Token: 0x06020620 RID: 132640 RVA: 0x00944E6C File Offset: 0x0094306C
+		// (set) Token: 0x06020621 RID: 132641 RVA: 0x00944E7C File Offset: 0x0094307C
 		public unsafe bool 状态_滑翔
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_122) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_滑翔) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_122) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Motor_BaseVehicle_C.__PropertyOffset_状态_滑翔) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602A2B2 RID: 172722 RVA: 0x009D7ECC File Offset: 0x009D60CC
+		// Token: 0x06020622 RID: 132642 RVA: 0x00944E8D File Offset: 0x0094308D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 后处理层(FPoseLink InPose, ref FPoseLink 后处理层)
-		{
-			ABP_Motor_BaseVehicle_C.__后处理层_FunctionParams* ptr = stackalloc ABP_Motor_BaseVehicle_C.__后处理层_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(ABP_Motor_BaseVehicle_C.__后处理层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_Motor_BaseVehicle_C.__后处理层_NativeFunctionPtr, (void*)ptr, 1);
-			if (InPose != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->InPose, InPose.NativePtr, 1, false);
-			}
-			if (后处理层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->后处理层, 后处理层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__后处理层_NativeFunctionPtr, (void*)ptr);
-			if (后处理层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 后处理层.NativePtr, &ptr->后处理层, 1, false);
-			}
-		}
-
-		// Token: 0x0602A2B3 RID: 172723 RVA: 0x009D7F78 File Offset: 0x009D6178
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void 主动作层(ref FPoseLink 主动作层)
-		{
-			ABP_Motor_BaseVehicle_C.__主动作层_FunctionParams* ptr = stackalloc ABP_Motor_BaseVehicle_C.__主动作层_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_Motor_BaseVehicle_C.__主动作层_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_Motor_BaseVehicle_C.__主动作层_NativeFunctionPtr, (void*)ptr, 1);
-			if (主动作层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->主动作层, 主动作层.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__主动作层_NativeFunctionPtr, (void*)ptr);
-			if (主动作层 != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), 主动作层.NativePtr, &ptr->主动作层, 1, false);
-			}
-		}
-
-		// Token: 0x0602A2B4 RID: 172724 RVA: 0x009D8000 File Offset: 0x009D6200
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(ref FPoseLink AnimGraph)
-		{
-			ABP_Motor_BaseVehicle_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_Motor_BaseVehicle_C.__AnimGraph_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_Motor_BaseVehicle_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_Motor_BaseVehicle_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x0602A2B5 RID: 172725 RVA: 0x009D8087 File Offset: 0x009D6287
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 更新移动占比()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__更新移动占比_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2B6 RID: 172726 RVA: 0x009D809B File Offset: 0x009D629B
+		// Token: 0x06020623 RID: 132643 RVA: 0x00944EA1 File Offset: 0x009430A1
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 初始化Tag()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__初始化Tag_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2B7 RID: 172727 RVA: 0x009D80B0 File Offset: 0x009D62B0
+		// Token: 0x06020624 RID: 132644 RVA: 0x00944EB8 File Offset: 0x009430B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -493,210 +428,161 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A2B8 RID: 172728 RVA: 0x009D80F8 File Offset: 0x009D62F8
+		// Token: 0x06020625 RID: 132645 RVA: 0x00944F00 File Offset: 0x00943100
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602A2B9 RID: 172729 RVA: 0x009D813F File Offset: 0x009D633F
+		// Token: 0x06020626 RID: 132646 RVA: 0x00944F46 File Offset: 0x00943146
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void BlueprintInitializeAnimation()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2BA RID: 172730 RVA: 0x009D8153 File Offset: 0x009D6353
+		// Token: 0x06020627 RID: 132647 RVA: 0x00944F5A File Offset: 0x0094315A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void BlueprintInitializeAnimation_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__BlueprintInitializeAnimation_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2BB RID: 172731 RVA: 0x009D8168 File Offset: 0x009D6368
+		// Token: 0x06020628 RID: 132648 RVA: 0x00944F6E File Offset: 0x0094316E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void OnComponentStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__OnComponentStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2BC RID: 172732 RVA: 0x009D817C File Offset: 0x009D637C
+		// Token: 0x06020629 RID: 132649 RVA: 0x00944F82 File Offset: 0x00943182
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnComponentStart_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__OnComponentStart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Motor_BaseVehicle_C.__OnComponentStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602A2BD RID: 172733 RVA: 0x009D8191 File Offset: 0x009D6391
+		// Token: 0x0602062A RID: 132650 RVA: 0x00944F96 File Offset: 0x00943196
 		protected ABP_Motor_BaseVehicle_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015BAA RID: 89002
-		[Nullable(1)]
+		// Token: 0x040117B6 RID: 71606
 		public new const string __ObjectPath = "/Game/Aki/Character/Vehicle/Motor/ABP_Motor_BaseVehicle.ABP_Motor_BaseVehicle_C";
 
-		// Token: 0x04015BAB RID: 89003
+		// Token: 0x040117B7 RID: 71607
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015BAC RID: 89004
+		// Token: 0x040117B8 RID: 71608
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015BAD RID: 89005
-		internal static int __PropertyOffset_100;
+		// Token: 0x040117B9 RID: 71609
+		internal static int __PropertyOffset_VehicleMove;
 
-		// Token: 0x04015BAE RID: 89006
-		internal static int __PropertyOffset_101;
+		// Token: 0x040117BA RID: 71610
+		internal static int __PropertyOffset_移动混合;
 
-		// Token: 0x04015BAF RID: 89007
-		internal static int __PropertyOffset_102;
+		// Token: 0x040117BB RID: 71611
+		internal static int __PropertyOffset_左右混合缓冲;
 
-		// Token: 0x04015BB0 RID: 89008
-		internal static int __PropertyOffset_103;
+		// Token: 0x040117BC RID: 71612
+		internal static int __PropertyOffset_左右Mix一段缓冲;
 
-		// Token: 0x04015BB1 RID: 89009
-		internal static int __PropertyOffset_104;
+		// Token: 0x040117BD RID: 71613
+		internal static int __PropertyOffset_左右Mix二段缓冲;
 
-		// Token: 0x04015BB2 RID: 89010
-		internal static int __PropertyOffset_105;
+		// Token: 0x040117BE RID: 71614
+		internal static int __PropertyOffset_技能状态_定点钩索;
 
-		// Token: 0x04015BB3 RID: 89011
-		internal static int __PropertyOffset_106;
+		// Token: 0x040117BF RID: 71615
+		internal static int __PropertyOffset_Target_Locations;
 
-		// Token: 0x04015BB4 RID: 89012
+		// Token: 0x040117C0 RID: 71616
+		[Nullable(2)]
 		private TMap<int, FVector> _Target_Locations;
 
-		// Token: 0x04015BB5 RID: 89013
-		internal static int __PropertyOffset_107;
+		// Token: 0x040117C1 RID: 71617
+		internal static int __PropertyOffset_Wheel_Speeds;
 
-		// Token: 0x04015BB6 RID: 89014
+		// Token: 0x040117C2 RID: 71618
+		[Nullable(2)]
 		private TMap<int, float> _Wheel_Speeds;
 
-		// Token: 0x04015BB7 RID: 89015
-		internal static int __PropertyOffset_108;
+		// Token: 0x040117C3 RID: 71619
+		internal static int __PropertyOffset_Wheel_Accels;
 
-		// Token: 0x04015BB8 RID: 89016
+		// Token: 0x040117C4 RID: 71620
+		[Nullable(2)]
 		private TMap<int, float> _Wheel_Accels;
 
-		// Token: 0x04015BB9 RID: 89017
-		internal static int __PropertyOffset_109;
+		// Token: 0x040117C5 RID: 71621
+		internal static int __PropertyOffset_摩托运动状态;
 
-		// Token: 0x04015BBA RID: 89018
-		internal static int __PropertyOffset_110;
+		// Token: 0x040117C6 RID: 71622
+		internal static int __PropertyOffset_状态_冲刺;
 
-		// Token: 0x04015BBB RID: 89019
-		internal static int __PropertyOffset_111;
+		// Token: 0x040117C7 RID: 71623
+		internal static int __PropertyOffset_滑轨状态_滑轨移动中;
 
-		// Token: 0x04015BBC RID: 89020
-		internal static int __PropertyOffset_112;
+		// Token: 0x040117C8 RID: 71624
+		internal static int __PropertyOffset_滑轨动作状态_子弹跳;
 
-		// Token: 0x04015BBD RID: 89021
-		internal static int __PropertyOffset_113;
+		// Token: 0x040117C9 RID: 71625
+		internal static int __PropertyOffset_滑轨动作状态_滑行;
 
-		// Token: 0x04015BBE RID: 89022
-		internal static int __PropertyOffset_114;
+		// Token: 0x040117CA RID: 71626
+		internal static int __PropertyOffset_滑轨动作状态_翘车头;
 
-		// Token: 0x04015BBF RID: 89023
-		internal static int __PropertyOffset_115;
+		// Token: 0x040117CB RID: 71627
+		internal static int __PropertyOffset_状态_地面;
 
-		// Token: 0x04015BC0 RID: 89024
-		internal static int __PropertyOffset_116;
+		// Token: 0x040117CC RID: 71628
+		internal static int __PropertyOffset_状态_漂移;
 
-		// Token: 0x04015BC1 RID: 89025
-		internal static int __PropertyOffset_117;
+		// Token: 0x040117CD RID: 71629
+		internal static int __PropertyOffset_下落速度;
 
-		// Token: 0x04015BC2 RID: 89026
-		internal static int __PropertyOffset_118;
+		// Token: 0x040117CE RID: 71630
+		internal static int __PropertyOffset_前进速度混合映射;
 
-		// Token: 0x04015BC3 RID: 89027
-		internal static int __PropertyOffset_119;
+		// Token: 0x040117CF RID: 71631
+		internal static int __PropertyOffset_第一人称;
 
-		// Token: 0x04015BC4 RID: 89028
-		internal static int __PropertyOffset_120;
+		// Token: 0x040117D0 RID: 71632
+		internal static int __PropertyOffset_NeedSimulate;
 
-		// Token: 0x04015BC5 RID: 89029
-		internal static int __PropertyOffset_121;
+		// Token: 0x040117D1 RID: 71633
+		internal static int __PropertyOffset_状态_技能下落;
 
-		// Token: 0x04015BC6 RID: 89030
-		internal static int __PropertyOffset_122;
+		// Token: 0x040117D2 RID: 71634
+		internal static int __PropertyOffset_状态_滑翔;
 
-		// Token: 0x04015BC7 RID: 89031
-		private static IntPtr __后处理层_NativeFunctionPtr;
-
-		// Token: 0x04015BC8 RID: 89032
-		private static IntPtr __主动作层_NativeFunctionPtr;
-
-		// Token: 0x04015BC9 RID: 89033
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x04015BCA RID: 89034
+		// Token: 0x040117D3 RID: 71635
 		private static IntPtr __更新移动占比_NativeFunctionPtr;
 
-		// Token: 0x04015BCB RID: 89035
+		// Token: 0x040117D4 RID: 71636
 		private static IntPtr __初始化Tag_NativeFunctionPtr;
 
-		// Token: 0x04015BCC RID: 89036
+		// Token: 0x040117D5 RID: 71637
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x04015BCD RID: 89037
+		// Token: 0x040117D6 RID: 71638
 		private static IntPtr __BlueprintInitializeAnimation_NativeFunctionPtr;
 
-		// Token: 0x04015BCE RID: 89038
+		// Token: 0x040117D7 RID: 71639
 		private static IntPtr __OnComponentStart_NativeFunctionPtr;
 
-		// Token: 0x0200A341 RID: 41793
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __后处理层_FunctionParams
-		{
-			// Token: 0x04032104 RID: 205060
-			[FieldOffset(0)]
-			public byte InPose;
-
-			// Token: 0x04032105 RID: 205061
-			[FieldOffset(24)]
-			public byte 后处理层;
-		}
-
-		// Token: 0x0200A342 RID: 41794
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __主动作层_FunctionParams
-		{
-			// Token: 0x04032106 RID: 205062
-			[FieldOffset(0)]
-			public byte 主动作层;
-		}
-
-		// Token: 0x0200A343 RID: 41795
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x04032107 RID: 205063
-			[FieldOffset(0)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A344 RID: 41796
+		// Token: 0x02008F59 RID: 36697
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x04032108 RID: 205064
+			// Token: 0x0402CCCD RID: 183501
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}

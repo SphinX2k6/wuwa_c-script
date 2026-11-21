@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055E2 RID: 21986
+	// Token: 0x02005B80 RID: 23424
 	public class IMovementVehicleFeatureT
 	{
-		// Token: 0x1700A2B2 RID: 41650
-		// (get) Token: 0x06024799 RID: 149401 RVA: 0x005090CB File Offset: 0x005072CB
-		// (set) Token: 0x0602479A RID: 149402 RVA: 0x005090D3 File Offset: 0x005072D3
+		// Token: 0x1700AB3A RID: 43834
+		// (get) Token: 0x060269A6 RID: 158118 RVA: 0x00549643 File Offset: 0x00547843
+		// (set) Token: 0x060269A7 RID: 158119 RVA: 0x0054964B File Offset: 0x0054784B
 		public EVehicleFeatureFlag Type { get; set; }
 
-		// Token: 0x1700A2B3 RID: 41651
-		// (get) Token: 0x0602479B RID: 149403 RVA: 0x005090DC File Offset: 0x005072DC
-		// (set) Token: 0x0602479C RID: 149404 RVA: 0x005090E4 File Offset: 0x005072E4
+		// Token: 0x1700AB3B RID: 43835
+		// (get) Token: 0x060269A8 RID: 158120 RVA: 0x00549654 File Offset: 0x00547854
+		// (set) Token: 0x060269A9 RID: 158121 RVA: 0x0054965C File Offset: 0x0054785C
 		public int MoveSpline { get; set; }
 
-		// Token: 0x1700A2B4 RID: 41652
-		// (get) Token: 0x0602479D RID: 149405 RVA: 0x005090ED File Offset: 0x005072ED
-		// (set) Token: 0x0602479E RID: 149406 RVA: 0x005090F5 File Offset: 0x005072F5
+		// Token: 0x1700AB3C RID: 43836
+		// (get) Token: 0x060269AA RID: 158122 RVA: 0x00549665 File Offset: 0x00547865
+		// (set) Token: 0x060269AB RID: 158123 RVA: 0x0054966D File Offset: 0x0054786D
 		public IMovementPerformConfigT MovePerformConfig { get; set; }
 
-		// Token: 0x1700A2B5 RID: 41653
-		// (get) Token: 0x0602479F RID: 149407 RVA: 0x005090FE File Offset: 0x005072FE
-		// (set) Token: 0x060247A0 RID: 149408 RVA: 0x00509106 File Offset: 0x00507306
+		// Token: 0x1700AB3D RID: 43837
+		// (get) Token: 0x060269AC RID: 158124 RVA: 0x00549676 File Offset: 0x00547876
+		// (set) Token: 0x060269AD RID: 158125 RVA: 0x0054967E File Offset: 0x0054787E
 		public byte NullMask { get; set; }
 
-		// Token: 0x060247A1 RID: 149409 RVA: 0x0050910F File Offset: 0x0050730F
+		// Token: 0x060269AE RID: 158126 RVA: 0x00549687 File Offset: 0x00547887
 		public IMovementVehicleFeatureT()
 		{
 			this.Type = EVehicleFeatureFlag.None;

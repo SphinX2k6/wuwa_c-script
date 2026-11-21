@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E7 RID: 17895
+	// Token: 0x02003510 RID: 13584
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneObjectWaterEffect
 	{
-		// Token: 0x0602E26C RID: 189036 RVA: 0x00AA97E4 File Offset: 0x00AA79E4
+		// Token: 0x06022961 RID: 141665 RVA: 0x009D5F7C File Offset: 0x009D417C
 		private void InitTraceInfo()
 		{
 			UTraceSphereElement utraceSphereElement = new UTraceSphereElement();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Render
 			this.SphereTrace = utraceSphereElement;
 		}
 
-		// Token: 0x0602E26D RID: 189037 RVA: 0x00AA9878 File Offset: 0x00AA7A78
+		// Token: 0x06022962 RID: 141666 RVA: 0x009D6010 File Offset: 0x009D4210
 		public void Start(SWaterEffectObject config, USceneComponent actorToAttach)
 		{
 			if (config == null || actorToAttach == null)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Render
 			Log.Instance.Info(ELogModule.RenderEffect, ELogAuthor.LSY, "SceneObjectWaterEffect Start", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602E26E RID: 189038 RVA: 0x00AA99A4 File Offset: 0x00AA7BA4
+		// Token: 0x06022963 RID: 141667 RVA: 0x009D613C File Offset: 0x009D433C
 		protected void GetActorLocation()
 		{
 			Vector tempVector = this.TempVector;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Render
 			tempVector.FromUeVector(fvectorDouble);
 		}
 
-		// Token: 0x0602E26F RID: 189039 RVA: 0x00AA99CA File Offset: 0x00AA7BCA
+		// Token: 0x06022964 RID: 141668 RVA: 0x009D6162 File Offset: 0x009D4362
 		public void AfterRegistered()
 		{
 			if (!this.IsReady)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Render
 			this.IsEnabled = true;
 		}
 
-		// Token: 0x0602E270 RID: 189040 RVA: 0x00AA99FA File Offset: 0x00AA7BFA
+		// Token: 0x06022965 RID: 141669 RVA: 0x009D6192 File Offset: 0x009D4392
 		public void BeforeUnregistered()
 		{
 			if (!this.IsEnabled)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Render
 			this.IsEnabled = false;
 		}
 
-		// Token: 0x0602E271 RID: 189041 RVA: 0x00AA9A14 File Offset: 0x00AA7C14
+		// Token: 0x06022966 RID: 141670 RVA: 0x009D61AC File Offset: 0x009D43AC
 		public void Update(float deltaSeconds)
 		{
 			if (this.IsEnabled)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E272 RID: 189042 RVA: 0x00AA9C2C File Offset: 0x00AA7E2C
+		// Token: 0x06022967 RID: 141671 RVA: 0x009D63C4 File Offset: 0x009D45C4
 		public void StopEffect()
 		{
 			if (EffectSystem.Instance.IsValid(this.SurfaceHandle))
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Render
 			this.SurfaceHandle = 0;
 		}
 
-		// Token: 0x0602E273 RID: 189043 RVA: 0x00AA9C80 File Offset: 0x00AA7E80
+		// Token: 0x06022968 RID: 141672 RVA: 0x009D6418 File Offset: 0x009D4618
 		[NullableContext(1)]
 		protected void SpawnEffect(string effectDataPath)
 		{
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Render
 			}, null, null, false, false);
 		}
 
-		// Token: 0x0602E274 RID: 189044 RVA: 0x00AA9CD0 File Offset: 0x00AA7ED0
+		// Token: 0x06022969 RID: 141673 RVA: 0x009D6468 File Offset: 0x009D4668
 		[NullableContext(1)]
 		protected void SpawnFallEffect(string effectDataPath, Vector location)
 		{
@@ -207,73 +207,73 @@ namespace CSharpScript.Game.Render
 			this.Handle = instance.SpawnUnloopedEffect(world, ftransformDouble, effectDataPath, "[SceneObjectWaterEffect.SpawnFallEffect]", null, EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x04018C31 RID: 101425
+		// Token: 0x04013270 RID: 78448
 		[Nullable(1)]
 		private const string PROFILE_KEY = "SceneObjectWaterEffect_Update";
 
-		// Token: 0x04018C32 RID: 101426
+		// Token: 0x04013271 RID: 78449
 		public SWaterEffectObject Config;
 
-		// Token: 0x04018C33 RID: 101427
+		// Token: 0x04013272 RID: 78450
 		public USceneComponent ActorToAttach;
 
-		// Token: 0x04018C34 RID: 101428
+		// Token: 0x04013273 RID: 78451
 		public bool IsReady;
 
-		// Token: 0x04018C35 RID: 101429
+		// Token: 0x04013274 RID: 78452
 		protected float Radius;
 
-		// Token: 0x04018C36 RID: 101430
+		// Token: 0x04013275 RID: 78453
 		protected FTransformDouble? Transform;
 
-		// Token: 0x04018C37 RID: 101431
+		// Token: 0x04013276 RID: 78454
 		[Nullable(1)]
 		protected string Effect = "";
 
-		// Token: 0x04018C38 RID: 101432
+		// Token: 0x04013277 RID: 78455
 		protected bool TriggerOnce;
 
-		// Token: 0x04018C39 RID: 101433
+		// Token: 0x04013278 RID: 78456
 		protected bool EnableSurfaceEffect;
 
-		// Token: 0x04018C3A RID: 101434
+		// Token: 0x04013279 RID: 78457
 		[Nullable(1)]
 		protected string WaterSurfaceEffect = "";
 
-		// Token: 0x04018C3B RID: 101435
+		// Token: 0x0401327A RID: 78458
 		protected float TimeAfterSurfaceEffectStop;
 
-		// Token: 0x04018C3C RID: 101436
+		// Token: 0x0401327B RID: 78459
 		private UTraceSphereElement SphereTrace;
 
-		// Token: 0x04018C3D RID: 101437
+		// Token: 0x0401327C RID: 78460
 		protected int Handle;
 
-		// Token: 0x04018C3E RID: 101438
+		// Token: 0x0401327D RID: 78461
 		protected int SurfaceHandle;
 
-		// Token: 0x04018C3F RID: 101439
+		// Token: 0x0401327E RID: 78462
 		protected bool WasHitWater;
 
-		// Token: 0x04018C40 RID: 101440
+		// Token: 0x0401327F RID: 78463
 		protected Vector LastPosition;
 
-		// Token: 0x04018C41 RID: 101441
+		// Token: 0x04013280 RID: 78464
 		protected double WaterHeight;
 
-		// Token: 0x04018C42 RID: 101442
+		// Token: 0x04013281 RID: 78465
 		protected FVector? TempUeVector;
 
-		// Token: 0x04018C43 RID: 101443
+		// Token: 0x04013282 RID: 78466
 		protected Vector TempVector;
 
-		// Token: 0x04018C44 RID: 101444
+		// Token: 0x04013283 RID: 78467
 		protected Vector TempVector1;
 
-		// Token: 0x04018C45 RID: 101445
+		// Token: 0x04013284 RID: 78468
 		protected Vector TempPosition;
 
-		// Token: 0x04018C46 RID: 101446
+		// Token: 0x04013285 RID: 78469
 		public bool IsEnabled;
 	}
 }

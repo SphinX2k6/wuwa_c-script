@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D1 RID: 18129
+	// Token: 0x02003601 RID: 13825
 	public enum EInitState
 	{
-		// Token: 0x0401972B RID: 104235
+		// Token: 0x04013DC9 RID: 81353
 		None,
-		// Token: 0x0401972C RID: 104236
+		// Token: 0x04013DCA RID: 81354
 		Initializing,
-		// Token: 0x0401972D RID: 104237
+		// Token: 0x04013DCB RID: 81355
 		Inited
 	}
 }

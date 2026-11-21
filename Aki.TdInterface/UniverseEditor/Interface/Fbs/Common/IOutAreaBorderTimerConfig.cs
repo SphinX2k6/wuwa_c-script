@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E1E RID: 24094
+	// Token: 0x0200645B RID: 25691
 	public struct IOutAreaBorderTimerConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B43F RID: 46143
-		// (get) Token: 0x060293FC RID: 168956 RVA: 0x005A867E File Offset: 0x005A687E
+		// Token: 0x1700BDA5 RID: 48549
+		// (get) Token: 0x0602BA86 RID: 178822 RVA: 0x005F13AE File Offset: 0x005EF5AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060293FD RID: 168957 RVA: 0x005A868B File Offset: 0x005A688B
+		// Token: 0x0602BA87 RID: 178823 RVA: 0x005F13BB File Offset: 0x005EF5BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060293FE RID: 168958 RVA: 0x005A8694 File Offset: 0x005A6894
+		// Token: 0x0602BA88 RID: 178824 RVA: 0x005F13C4 File Offset: 0x005EF5C4
 		public static IOutAreaBorderTimerConfig GetRootAsIOutAreaBorderTimerConfig(ByteBuffer _bb)
 		{
 			return IOutAreaBorderTimerConfig.GetRootAsIOutAreaBorderTimerConfig(_bb, default(IOutAreaBorderTimerConfig));
 		}
 
-		// Token: 0x060293FF RID: 168959 RVA: 0x005A86B0 File Offset: 0x005A68B0
+		// Token: 0x0602BA89 RID: 178825 RVA: 0x005F13E0 File Offset: 0x005EF5E0
 		public static IOutAreaBorderTimerConfig GetRootAsIOutAreaBorderTimerConfig(ByteBuffer _bb, IOutAreaBorderTimerConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029400 RID: 168960 RVA: 0x005A86CD File Offset: 0x005A68CD
+		// Token: 0x0602BA8A RID: 178826 RVA: 0x005F13FD File Offset: 0x005EF5FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029401 RID: 168961 RVA: 0x005A86DC File Offset: 0x005A68DC
+		// Token: 0x0602BA8B RID: 178827 RVA: 0x005F140C File Offset: 0x005EF60C
 		public IOutAreaBorderTimerConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B440 RID: 46144
-		// (get) Token: 0x06029402 RID: 168962 RVA: 0x005A86EC File Offset: 0x005A68EC
+		// Token: 0x1700BDA6 RID: 48550
+		// (get) Token: 0x0602BA8C RID: 178828 RVA: 0x005F141C File Offset: 0x005EF61C
 		public EOutAreaBorderType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B441 RID: 46145
-		// (get) Token: 0x06029403 RID: 168963 RVA: 0x005A8728 File Offset: 0x005A6928
+		// Token: 0x1700BDA7 RID: 48551
+		// (get) Token: 0x0602BA8D RID: 178829 RVA: 0x005F1458 File Offset: 0x005EF658
 		public float OutAreaBorderTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B442 RID: 46146
-		// (get) Token: 0x06029404 RID: 168964 RVA: 0x005A8768 File Offset: 0x005A6968
+		// Token: 0x1700BDA8 RID: 48552
+		// (get) Token: 0x0602BA8E RID: 178830 RVA: 0x005F1498 File Offset: 0x005EF698
 		public int TeleportTransitionConfigId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B443 RID: 46147
-		// (get) Token: 0x06029405 RID: 168965 RVA: 0x005A87A4 File Offset: 0x005A69A4
+		// Token: 0x1700BDA9 RID: 48553
+		// (get) Token: 0x0602BA8F RID: 178831 RVA: 0x005F14D4 File Offset: 0x005EF6D4
 		public IOutAreaBorderDownTimeTextTip? OutAreaBorderTipOption
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B444 RID: 46148
-		// (get) Token: 0x06029406 RID: 168966 RVA: 0x005A8804 File Offset: 0x005A6A04
+		// Token: 0x1700BDAA RID: 48554
+		// (get) Token: 0x0602BA90 RID: 178832 RVA: 0x005F1534 File Offset: 0x005EF734
 		public IOutAreaBorderBuffEffect? OutAreaBorderEffectOption
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029407 RID: 168967 RVA: 0x005A8862 File Offset: 0x005A6A62
+		// Token: 0x0602BA91 RID: 178833 RVA: 0x005F1592 File Offset: 0x005EF792
 		public static Offset<IOutAreaBorderTimerConfig> CreateIOutAreaBorderTimerConfig(FlatBufferBuilder builder, EOutAreaBorderType Type = EOutAreaBorderType.TeleportTimer, float OutAreaBorderTime = 0f, int TeleportTransitionConfigId = 0, Offset<IOutAreaBorderDownTimeTextTip> OutAreaBorderTipOptionOffset = default(Offset<IOutAreaBorderDownTimeTextTip>), Offset<IOutAreaBorderBuffEffect> OutAreaBorderEffectOptionOffset = default(Offset<IOutAreaBorderBuffEffect>))
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IOutAreaBorderTimerConfig.EndIOutAreaBorderTimerConfig(builder);
 		}
 
-		// Token: 0x06029408 RID: 168968 RVA: 0x005A8896 File Offset: 0x005A6A96
+		// Token: 0x0602BA92 RID: 178834 RVA: 0x005F15C6 File Offset: 0x005EF7C6
 		public static void StartIOutAreaBorderTimerConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06029409 RID: 168969 RVA: 0x005A889F File Offset: 0x005A6A9F
+		// Token: 0x0602BA93 RID: 178835 RVA: 0x005F15CF File Offset: 0x005EF7CF
 		public static void AddType(FlatBufferBuilder builder, EOutAreaBorderType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602940A RID: 168970 RVA: 0x005A88AA File Offset: 0x005A6AAA
+		// Token: 0x0602BA94 RID: 178836 RVA: 0x005F15DA File Offset: 0x005EF7DA
 		public static void AddOutAreaBorderTime(FlatBufferBuilder builder, float outAreaBorderTime)
 		{
 			builder.AddFloat(1, outAreaBorderTime, 0.0);
 		}
 
-		// Token: 0x0602940B RID: 168971 RVA: 0x005A88BD File Offset: 0x005A6ABD
+		// Token: 0x0602BA95 RID: 178837 RVA: 0x005F15ED File Offset: 0x005EF7ED
 		public static void AddTeleportTransitionConfigId(FlatBufferBuilder builder, int teleportTransitionConfigId)
 		{
 			builder.AddInt(2, teleportTransitionConfigId, 0);
 		}
 
-		// Token: 0x0602940C RID: 168972 RVA: 0x005A88C8 File Offset: 0x005A6AC8
+		// Token: 0x0602BA96 RID: 178838 RVA: 0x005F15F8 File Offset: 0x005EF7F8
 		public static void AddOutAreaBorderTipOption(FlatBufferBuilder builder, Offset<IOutAreaBorderDownTimeTextTip> outAreaBorderTipOptionOffset)
 		{
 			builder.AddOffset(3, outAreaBorderTipOptionOffset.Value, 0);
 		}
 
-		// Token: 0x0602940D RID: 168973 RVA: 0x005A88D8 File Offset: 0x005A6AD8
+		// Token: 0x0602BA97 RID: 178839 RVA: 0x005F1608 File Offset: 0x005EF808
 		public static void AddOutAreaBorderEffectOption(FlatBufferBuilder builder, Offset<IOutAreaBorderBuffEffect> outAreaBorderEffectOptionOffset)
 		{
 			builder.AddOffset(4, outAreaBorderEffectOptionOffset.Value, 0);
 		}
 
-		// Token: 0x0602940E RID: 168974 RVA: 0x005A88E8 File Offset: 0x005A6AE8
+		// Token: 0x0602BA98 RID: 178840 RVA: 0x005F1618 File Offset: 0x005EF818
 		public static Offset<IOutAreaBorderTimerConfig> EndIOutAreaBorderTimerConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IOutAreaBorderTimerConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602940F RID: 168975 RVA: 0x005A88F8 File Offset: 0x005A6AF8
+		// Token: 0x0602BA99 RID: 178841 RVA: 0x005F1628 File Offset: 0x005EF828
 		public IOutAreaBorderTimerConfigT UnPack()
 		{
 			IOutAreaBorderTimerConfigT outAreaBorderTimerConfigT = new IOutAreaBorderTimerConfigT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return outAreaBorderTimerConfigT;
 		}
 
-		// Token: 0x06029410 RID: 168976 RVA: 0x005A8914 File Offset: 0x005A6B14
+		// Token: 0x0602BA9A RID: 178842 RVA: 0x005F1644 File Offset: 0x005EF844
 		public void UnPackTo(IOutAreaBorderTimerConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			_o.OutAreaBorderEffectOption = ((this.OutAreaBorderEffectOption != null) ? this.OutAreaBorderEffectOption.Value.UnPack() : null);
 		}
 
-		// Token: 0x06029411 RID: 168977 RVA: 0x005A89A4 File Offset: 0x005A6BA4
+		// Token: 0x0602BA9B RID: 178843 RVA: 0x005F16D4 File Offset: 0x005EF8D4
 		public static Offset<IOutAreaBorderTimerConfig> Pack(FlatBufferBuilder builder, IOutAreaBorderTimerConfigT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IOutAreaBorderTimerConfig.CreateIOutAreaBorderTimerConfig(builder, _o.Type, _o.OutAreaBorderTime, _o.TeleportTransitionConfigId, outAreaBorderTipOptionOffset, outAreaBorderEffectOptionOffset);
 		}
 
-		// Token: 0x0400F815 RID: 63509
+		// Token: 0x04010570 RID: 66928
 		private Table __p;
 	}
 }

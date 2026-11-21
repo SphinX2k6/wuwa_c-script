@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056BD RID: 22205
+	// Token: 0x02004694 RID: 18068
 	public enum EProcessType
 	{
-		// Token: 0x0401DAAB RID: 121515
+		// Token: 0x04018538 RID: 99640
 		OpenLoading,
-		// Token: 0x0401DAAC RID: 121516
+		// Token: 0x04018539 RID: 99641
 		CloseLoading
 	}
 }

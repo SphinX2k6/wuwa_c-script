@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EB2 RID: 3762
+	// Token: 0x02000FC8 RID: 4040
 	[EnumExtensions]
 	public enum EWordArtEffectiveTargetType
 	{
-		// Token: 0x04003235 RID: 12853
+		// Token: 0x04003542 RID: 13634
 		Number
 	}
 }

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Tab.Role
 {
-	// Token: 0x02004BEA RID: 19434
+	// Token: 0x02003B9B RID: 15259
 	public class RoleSkinItemContent : UiPanelBase
 	{
-		// Token: 0x0603241B RID: 205851 RVA: 0x00BACB59 File Offset: 0x00BAAD59
+		// Token: 0x060271BF RID: 160191 RVA: 0x00AF10D9 File Offset: 0x00AEF2D9
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			};
 		}
 
-		// Token: 0x0603241C RID: 205852 RVA: 0x00BACB94 File Offset: 0x00BAAD94
+		// Token: 0x060271C0 RID: 160192 RVA: 0x00AF1114 File Offset: 0x00AEF314
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleSkinItemContent.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603241D RID: 205853 RVA: 0x00BACBD8 File Offset: 0x00BAADD8
+		// Token: 0x060271C1 RID: 160193 RVA: 0x00AF1158 File Offset: 0x00AEF358
 		public void Refresh(int recommendId)
 		{
 			RoleSkinRecommendItem roleSkinRecommendItem = this.RoleSkinRecommendItem;
@@ -49,16 +49,16 @@ namespace CSharpScript.Game.Module.Skin.Tab.Role
 			base.GetSpine(1).SetAnimation(0, ESpineAnimation.Idle.ToString(), true);
 		}
 
-		// Token: 0x0401ABC9 RID: 109513
+		// Token: 0x04015524 RID: 87332
 		[Nullable(2)]
 		private RoleSkinRecommendItem RoleSkinRecommendItem;
 
-		// Token: 0x0200ADDD RID: 44509
+		// Token: 0x020097FC RID: 38908
 		private enum EContentComponent
 		{
-			// Token: 0x04034CD9 RID: 216281
+			// Token: 0x0402F680 RID: 194176
 			Content,
-			// Token: 0x04034CDA RID: 216282
+			// Token: 0x0402F681 RID: 194177
 			SpineTexture
 		}
 	}

@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C29 RID: 3113
+	// Token: 0x02000CFC RID: 3324
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemMovementComponent : IComponentBase
 	{
-		// Token: 0x06004751 RID: 18257 RVA: 0x000B398A File Offset: 0x000B1B8A
-		[NullableContext(1)]
+		// Token: 0x06004BC1 RID: 19393 RVA: 0x000BDD3A File Offset: 0x000BBF3A
+		[NullableContext(0)]
 		public static SceneItemMovementComponent Create(ISceneItemMovementComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014BC RID: 5308
-		// (get) Token: 0x06004752 RID: 18258 RVA: 0x000B39AC File Offset: 0x000B1BAC
+		// Token: 0x170015C4 RID: 5572
+		// (get) Token: 0x06004BC2 RID: 19394 RVA: 0x000BDD5C File Offset: 0x000BBF5C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014BD RID: 5309
-		// (get) Token: 0x06004753 RID: 18259 RVA: 0x000B39E4 File Offset: 0x000B1BE4
+		// Token: 0x170015C5 RID: 5573
+		// (get) Token: 0x06004BC3 RID: 19395 RVA: 0x000BDD94 File Offset: 0x000BBF94
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014BE RID: 5310
-		// (get) Token: 0x06004754 RID: 18260 RVA: 0x000B39FA File Offset: 0x000B1BFA
+		// Token: 0x170015C6 RID: 5574
+		// (get) Token: 0x06004BC4 RID: 19396 RVA: 0x000BDDAA File Offset: 0x000BBFAA
 		public virtual ISplineMove Patrol
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014BF RID: 5311
-		// (get) Token: 0x06004755 RID: 18261 RVA: 0x000B3A2E File Offset: 0x000B1C2E
+		// Token: 0x170015C7 RID: 5575
+		// (get) Token: 0x06004BC5 RID: 19397 RVA: 0x000BDDDE File Offset: 0x000BBFDE
 		public virtual IMovementPlatformConfig PlatformConfig
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400287A RID: 10362
+		// Token: 0x04002ACF RID: 10959
 		private ISceneItemMovementComponent Instance;
 
-		// Token: 0x0400287B RID: 10363
+		// Token: 0x04002AD0 RID: 10960
 		private ISplineMove _PatrolCache;
 
-		// Token: 0x0400287C RID: 10364
+		// Token: 0x04002AD1 RID: 10961
 		private bool _PatrolInited;
 
-		// Token: 0x0400287D RID: 10365
+		// Token: 0x04002AD2 RID: 10962
 		private IMovementPlatformConfig _PlatformConfigCache;
 
-		// Token: 0x0400287E RID: 10366
+		// Token: 0x04002AD3 RID: 10963
 		private bool _PlatformConfigInited;
 	}
 }

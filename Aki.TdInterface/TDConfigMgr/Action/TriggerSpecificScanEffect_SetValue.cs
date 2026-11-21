@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200225D RID: 8797
+	// Token: 0x020024CA RID: 9418
 	public class TriggerSpecificScanEffect_SetValue
 	{
-		// Token: 0x0400730C RID: 29452
-		[Nullable(1)]
+		// Token: 0x04007959 RID: 31065
 		public ISpecificScanEffect ScanEffect;
 	}
 }

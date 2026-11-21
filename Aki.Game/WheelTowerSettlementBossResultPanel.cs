@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015E0 RID: 5600
+// Token: 0x02000A98 RID: 2712
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerSettlementBossResultPanel : UiPanelBase
 {
-	// Token: 0x06009E52 RID: 40530 RVA: 0x00228490 File Offset: 0x00226690
+	// Token: 0x06007230 RID: 29232 RVA: 0x00232244 File Offset: 0x00230444
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,13 +26,13 @@ public class WheelTowerSettlementBossResultPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E53 RID: 40531 RVA: 0x002284F9 File Offset: 0x002266F9
+	// Token: 0x06007231 RID: 29233 RVA: 0x002322AD File Offset: 0x002304AD
 	protected override void OnStart()
 	{
 		this.BossScrollView = new GenericScrollViewNew<WheelTowerSettlementBossItem, IBossItemData>(base.GetScrollViewWithScrollbar(0), new Func<WheelTowerSettlementBossItem>(this.CreateBossItem), null, false, null);
 	}
 
-	// Token: 0x06009E54 RID: 40532 RVA: 0x0022851C File Offset: 0x0022671C
+	// Token: 0x06007232 RID: 29234 RVA: 0x002322D0 File Offset: 0x002304D0
 	public void Refresh(List<IBossItemData> bossList)
 	{
 		GenericScrollViewNew<WheelTowerSettlementBossItem, IBossItemData> bossScrollView = this.BossScrollView;
@@ -43,7 +43,7 @@ public class WheelTowerSettlementBossResultPanel : UiPanelBase
 		bossScrollView.RefreshByData(bossList, null, true);
 	}
 
-	// Token: 0x06009E55 RID: 40533 RVA: 0x00228531 File Offset: 0x00226731
+	// Token: 0x06007233 RID: 29235 RVA: 0x002322E5 File Offset: 0x002304E5
 	public void SetBossScrollEnable(bool canScroll)
 	{
 		GenericScrollViewNew<WheelTowerSettlementBossItem, IBossItemData> bossScrollView = this.BossScrollView;
@@ -54,13 +54,13 @@ public class WheelTowerSettlementBossResultPanel : UiPanelBase
 		bossScrollView.SetVerticalScrollEnable(canScroll);
 	}
 
-	// Token: 0x06009E56 RID: 40534 RVA: 0x00228544 File Offset: 0x00226744
+	// Token: 0x06007234 RID: 29236 RVA: 0x002322F8 File Offset: 0x002304F8
 	private WheelTowerSettlementBossItem CreateBossItem()
 	{
 		return new WheelTowerSettlementBossItem();
 	}
 
-	// Token: 0x0400468D RID: 18061
+	// Token: 0x04004733 RID: 18227
 	[Nullable(new byte[]
 	{
 		2,

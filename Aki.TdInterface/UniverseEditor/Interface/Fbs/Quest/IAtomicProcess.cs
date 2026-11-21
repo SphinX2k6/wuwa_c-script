@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D16 RID: 15638
+	// Token: 0x0200412D RID: 16685
 	public struct IAtomicProcess : IFlatbufferObject
 	{
-		// Token: 0x17006B47 RID: 27463
-		// (get) Token: 0x0601593B RID: 88379 RVA: 0x0031DBD5 File Offset: 0x0031BDD5
+		// Token: 0x17007101 RID: 28929
+		// (get) Token: 0x06016E73 RID: 93811 RVA: 0x00344E4D File Offset: 0x0034304D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601593C RID: 88380 RVA: 0x0031DBE2 File Offset: 0x0031BDE2
+		// Token: 0x06016E74 RID: 93812 RVA: 0x00344E5A File Offset: 0x0034305A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601593D RID: 88381 RVA: 0x0031DBEC File Offset: 0x0031BDEC
+		// Token: 0x06016E75 RID: 93813 RVA: 0x00344E64 File Offset: 0x00343064
 		public static IAtomicProcess GetRootAsIAtomicProcess(ByteBuffer _bb)
 		{
 			return IAtomicProcess.GetRootAsIAtomicProcess(_bb, default(IAtomicProcess));
 		}
 
-		// Token: 0x0601593E RID: 88382 RVA: 0x0031DC08 File Offset: 0x0031BE08
+		// Token: 0x06016E76 RID: 93814 RVA: 0x00344E80 File Offset: 0x00343080
 		public static IAtomicProcess GetRootAsIAtomicProcess(ByteBuffer _bb, IAtomicProcess obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601593F RID: 88383 RVA: 0x0031DC25 File Offset: 0x0031BE25
+		// Token: 0x06016E77 RID: 93815 RVA: 0x00344E9D File Offset: 0x0034309D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015940 RID: 88384 RVA: 0x0031DC34 File Offset: 0x0031BE34
+		// Token: 0x06016E78 RID: 93816 RVA: 0x00344EAC File Offset: 0x003430AC
 		public IAtomicProcess __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B48 RID: 27464
-		// (get) Token: 0x06015941 RID: 88385 RVA: 0x0031DC44 File Offset: 0x0031BE44
+		// Token: 0x17007102 RID: 28930
+		// (get) Token: 0x06016E79 RID: 93817 RVA: 0x00344EBC File Offset: 0x003430BC
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B49 RID: 27465
-		// (get) Token: 0x06015942 RID: 88386 RVA: 0x0031DC80 File Offset: 0x0031BE80
+		// Token: 0x17007103 RID: 28931
+		// (get) Token: 0x06016E7A RID: 93818 RVA: 0x00344EF8 File Offset: 0x003430F8
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006B4A RID: 27466
-		// (get) Token: 0x06015943 RID: 88387 RVA: 0x0031DCE0 File Offset: 0x0031BEE0
+		// Token: 0x17007104 RID: 28932
+		// (get) Token: 0x06016E7B RID: 93819 RVA: 0x00344F58 File Offset: 0x00343158
 		public IAtomicProcessStoveCoreFall? AtomicProcessType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015944 RID: 88388 RVA: 0x0031DD3D File Offset: 0x0031BF3D
+		// Token: 0x06016E7C RID: 93820 RVA: 0x00344FB5 File Offset: 0x003431B5
 		public static Offset<IAtomicProcess> CreateIAtomicProcess(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), Offset<IAtomicProcessStoveCoreFall> AtomicProcessTypeOffset = default(Offset<IAtomicProcessStoveCoreFall>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcess.EndIAtomicProcess(builder);
 		}
 
-		// Token: 0x06015945 RID: 88389 RVA: 0x0031DD61 File Offset: 0x0031BF61
+		// Token: 0x06016E7D RID: 93821 RVA: 0x00344FD9 File Offset: 0x003431D9
 		public static void StartIAtomicProcess(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015946 RID: 88390 RVA: 0x0031DD6A File Offset: 0x0031BF6A
+		// Token: 0x06016E7E RID: 93822 RVA: 0x00344FE2 File Offset: 0x003431E2
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015947 RID: 88391 RVA: 0x0031DD75 File Offset: 0x0031BF75
+		// Token: 0x06016E7F RID: 93823 RVA: 0x00344FED File Offset: 0x003431ED
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06015948 RID: 88392 RVA: 0x0031DD85 File Offset: 0x0031BF85
+		// Token: 0x06016E80 RID: 93824 RVA: 0x00344FFD File Offset: 0x003431FD
 		public static void AddAtomicProcessType(FlatBufferBuilder builder, Offset<IAtomicProcessStoveCoreFall> atomicProcessTypeOffset)
 		{
 			builder.AddOffset(2, atomicProcessTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06015949 RID: 88393 RVA: 0x0031DD95 File Offset: 0x0031BF95
+		// Token: 0x06016E81 RID: 93825 RVA: 0x0034500D File Offset: 0x0034320D
 		public static Offset<IAtomicProcess> EndIAtomicProcess(FlatBufferBuilder builder)
 		{
 			return new Offset<IAtomicProcess>(builder.EndTable());
 		}
 
-		// Token: 0x0601594A RID: 88394 RVA: 0x0031DDA4 File Offset: 0x0031BFA4
+		// Token: 0x06016E82 RID: 93826 RVA: 0x0034501C File Offset: 0x0034321C
 		public IAtomicProcessT UnPack()
 		{
 			IAtomicProcessT atomicProcessT = new IAtomicProcessT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return atomicProcessT;
 		}
 
-		// Token: 0x0601594B RID: 88395 RVA: 0x0031DDC0 File Offset: 0x0031BFC0
+		// Token: 0x06016E83 RID: 93827 RVA: 0x00345038 File Offset: 0x00343238
 		public void UnPackTo(IAtomicProcessT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.AtomicProcessType = ((this.AtomicProcessType != null) ? this.AtomicProcessType.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601594C RID: 88396 RVA: 0x0031DE38 File Offset: 0x0031C038
+		// Token: 0x06016E84 RID: 93828 RVA: 0x003450B0 File Offset: 0x003432B0
 		public static Offset<IAtomicProcess> Pack(FlatBufferBuilder builder, IAtomicProcessT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcess.CreateIAtomicProcess(builder, _o.Type, preConditionsOffset, atomicProcessTypeOffset);
 		}
 
-		// Token: 0x0400B5CA RID: 46538
+		// Token: 0x0400BF77 RID: 49015
 		private Table __p;
 	}
 }

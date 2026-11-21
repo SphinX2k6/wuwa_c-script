@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F3 RID: 24819
+	// Token: 0x02005071 RID: 20593
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,31 +17,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeBlessingRoleItem : GridProxyAbstract<IRoverlikeBlessingRoleData>
 	{
-		// Token: 0x0603EC40 RID: 257088 RVA: 0x00F2934E File Offset: 0x00F2754E
+		// Token: 0x06033902 RID: 211202 RVA: 0x00E70162 File Offset: 0x00E6E362
 		public void BindOnRoleClick(Action<IRoverlikeBlessingRoleData> callback)
 		{
 			this.OnRoleClick = callback;
 		}
 
-		// Token: 0x0603EC41 RID: 257089 RVA: 0x00F29357 File Offset: 0x00F27557
+		// Token: 0x06033903 RID: 211203 RVA: 0x00E7016B File Offset: 0x00E6E36B
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603EC42 RID: 257090 RVA: 0x00F2936A File Offset: 0x00F2756A
+		// Token: 0x06033904 RID: 211204 RVA: 0x00E7017E File Offset: 0x00E6E37E
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC43 RID: 257091 RVA: 0x00F2937D File Offset: 0x00F2757D
+		// Token: 0x06033905 RID: 211205 RVA: 0x00E70191 File Offset: 0x00E6E391
 		public override object GetKey(IRoverlikeBlessingRoleData data, int displayIndex)
 		{
 			return data.RoleId;
 		}
 
-		// Token: 0x0603EC44 RID: 257092 RVA: 0x00F2938C File Offset: 0x00F2758C
+		// Token: 0x06033906 RID: 211206 RVA: 0x00E701A0 File Offset: 0x00E6E3A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EC45 RID: 257093 RVA: 0x00F29434 File Offset: 0x00F27634
+		// Token: 0x06033907 RID: 211207 RVA: 0x00E70248 File Offset: 0x00E6E448
 		public override void Refresh(IRoverlikeBlessingRoleData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EC46 RID: 257094 RVA: 0x00F2949F File Offset: 0x00F2769F
+		// Token: 0x06033908 RID: 211208 RVA: 0x00E702B3 File Offset: 0x00E6E4B3
 		private void OnTogCommonStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.CurrentData != null)
@@ -88,11 +88,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020CC8 RID: 134344
+		// Token: 0x0401B5F5 RID: 112117
 		[Nullable(2)]
 		private IRoverlikeBlessingRoleData CurrentData;
 
-		// Token: 0x04020CC9 RID: 134345
+		// Token: 0x0401B5F6 RID: 112118
 		[Nullable(new byte[]
 		{
 			2,
@@ -100,14 +100,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<IRoverlikeBlessingRoleData> OnRoleClick;
 
-		// Token: 0x0200C350 RID: 50000
+		// Token: 0x0200AD38 RID: 44344
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF31 RID: 241457
+			// Token: 0x04035896 RID: 219286
 			public const int TogCommon = 0;
 
-			// Token: 0x0403AF32 RID: 241458
+			// Token: 0x04035897 RID: 219287
 			public const int TexRole = 1;
 		}
 	}

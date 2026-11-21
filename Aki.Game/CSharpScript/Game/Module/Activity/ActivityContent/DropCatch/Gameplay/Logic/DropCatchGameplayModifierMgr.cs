@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006737 RID: 26423
+	// Token: 0x02005687 RID: 22151
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayModifierMgr : DropCatchGameplayBaseMgr
 	{
-		// Token: 0x06041F23 RID: 270115 RVA: 0x00FFF32F File Offset: 0x00FFD52F
+		// Token: 0x06036A6F RID: 223855 RVA: 0x00F406DF File Offset: 0x00F3E8DF
 		public DropCatchGameplayModifierMgr(IGameplayLogicContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06041F24 RID: 270116 RVA: 0x00FFF364 File Offset: 0x00FFD564
+		// Token: 0x06036A70 RID: 223856 RVA: 0x00F40714 File Offset: 0x00F3E914
 		public override void Init()
 		{
 			this.Modifiers.Clear();
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.ModifiersToDelete.Clear();
 		}
 
-		// Token: 0x06041F25 RID: 270117 RVA: 0x00FFF390 File Offset: 0x00FFD590
+		// Token: 0x06036A71 RID: 223857 RVA: 0x00F40740 File Offset: 0x00F3E940
 		public override void OnTick(float deltaTime)
 		{
 			this.AttrToRefresh.Clear();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F26 RID: 270118 RVA: 0x00FFF5D0 File Offset: 0x00FFD7D0
+		// Token: 0x06036A72 RID: 223858 RVA: 0x00F40980 File Offset: 0x00F3EB80
 		public int AddModifierToAttr(IDropCatchGameplayAttribute attr, EDropCatchModifierType type, float value, float? duration)
 		{
 			Dictionary<int, IDropCatchGameplayModifier> dictionary;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return num2;
 		}
 
-		// Token: 0x06041F27 RID: 270119 RVA: 0x00FFF664 File Offset: 0x00FFD864
+		// Token: 0x06036A73 RID: 223859 RVA: 0x00F40A14 File Offset: 0x00F3EC14
 		public void RemoveModifierFromAttr(IDropCatchGameplayAttribute attr, int modifierId)
 		{
 			Dictionary<int, IDropCatchGameplayModifier> dictionary;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.RefreshValueByAttr(attr);
 		}
 
-		// Token: 0x06041F28 RID: 270120 RVA: 0x00FFF6A8 File Offset: 0x00FFD8A8
+		// Token: 0x06036A74 RID: 223860 RVA: 0x00F40A58 File Offset: 0x00F3EC58
 		private void RefreshValueByAttr(IDropCatchGameplayAttribute attr)
 		{
 			float baseValue = attr.GetBaseValue();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			attr.SetFinalValue(num);
 		}
 
-		// Token: 0x06041F29 RID: 270121 RVA: 0x00FFF79C File Offset: 0x00FFD99C
+		// Token: 0x06036A75 RID: 223861 RVA: 0x00F40B4C File Offset: 0x00F3ED4C
 		public void AddSkillModifier(IDropCatchGameplayAttribute attr, int modifierId)
 		{
 			if (this.SkillModifiers.ContainsKey(attr))
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.SkillModifiers.Add(attr, modifierId);
 		}
 
-		// Token: 0x06041F2A RID: 270122 RVA: 0x00FFF7C8 File Offset: 0x00FFD9C8
+		// Token: 0x06036A76 RID: 223862 RVA: 0x00F40B78 File Offset: 0x00F3ED78
 		public void ClearAllSkillModifiers()
 		{
 			foreach (KeyValuePair<IDropCatchGameplayAttribute, int> keyValuePair in this.SkillModifiers)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.SkillModifiers.Clear();
 		}
 
-		// Token: 0x06041F2B RID: 270123 RVA: 0x00FFF834 File Offset: 0x00FFDA34
+		// Token: 0x06036A77 RID: 223863 RVA: 0x00F40BE4 File Offset: 0x00F3EDE4
 		public override void Destroy()
 		{
 			this.Modifiers.Clear();
@@ -180,19 +180,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.ModifiersToDelete.Clear();
 		}
 
-		// Token: 0x040225BD RID: 140733
+		// Token: 0x0401CE16 RID: 118294
 		private readonly Dictionary<IDropCatchGameplayAttribute, Dictionary<int, IDropCatchGameplayModifier>> Modifiers = new Dictionary<IDropCatchGameplayAttribute, Dictionary<int, IDropCatchGameplayModifier>>();
 
-		// Token: 0x040225BE RID: 140734
+		// Token: 0x0401CE17 RID: 118295
 		private int ModifierIdCounter;
 
-		// Token: 0x040225BF RID: 140735
+		// Token: 0x0401CE18 RID: 118296
 		private readonly HashSet<IDropCatchGameplayAttribute> AttrToRefresh = new HashSet<IDropCatchGameplayAttribute>();
 
-		// Token: 0x040225C0 RID: 140736
+		// Token: 0x0401CE19 RID: 118297
 		private readonly HashSet<int> ModifiersToDelete = new HashSet<int>();
 
-		// Token: 0x040225C1 RID: 140737
+		// Token: 0x0401CE1A RID: 118298
 		private readonly Dictionary<IDropCatchGameplayAttribute, int> SkillModifiers = new Dictionary<IDropCatchGameplayAttribute, int>();
 	}
 }

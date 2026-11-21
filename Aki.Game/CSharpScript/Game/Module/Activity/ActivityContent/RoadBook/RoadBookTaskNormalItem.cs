@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061E8 RID: 25064
+	// Token: 0x02005166 RID: 20838
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,12 +17,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 	})]
 	public class RoadBookTaskNormalItem : RoadBookTaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0603F43C RID: 259132 RVA: 0x00F4972C File Offset: 0x00F4792C
+		// Token: 0x060340FD RID: 213245 RVA: 0x00E90684 File Offset: 0x00E8E884
 		public RoadBookTaskNormalItem(ActivityRoadBookData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0603F43D RID: 259133 RVA: 0x00F49738 File Offset: 0x00F47938
+		// Token: 0x060340FE RID: 213246 RVA: 0x00E90690 File Offset: 0x00E8E890
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			base.GetItem(5).SetUIActive(flag);
 		}
 
-		// Token: 0x0603F43E RID: 259134 RVA: 0x00F49850 File Offset: 0x00F47A50
+		// Token: 0x060340FF RID: 213247 RVA: 0x00E907A8 File Offset: 0x00E8E9A8
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F43F RID: 259135 RVA: 0x00F498E0 File Offset: 0x00F47AE0
+		// Token: 0x06034100 RID: 213248 RVA: 0x00E90838 File Offset: 0x00E8EA38
 		protected override void OnClickedButton()
 		{
 			RoadBookTask value = ActivityRoadBookConfig.Instance.GetRoadBookTaskConfig(this.TaskData.Id).Value;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F440 RID: 259136 RVA: 0x00F49921 File Offset: 0x00F47B21
+		// Token: 0x06034101 RID: 213249 RVA: 0x00E90879 File Offset: 0x00E8EA79
 		public void SetBtnClickCallback(Action callback)
 		{
 			this.ClickRewardBtnCb = callback;
 		}
 
-		// Token: 0x0603F441 RID: 259137 RVA: 0x00F4992A File Offset: 0x00F47B2A
+		// Token: 0x06034102 RID: 213250 RVA: 0x00E90882 File Offset: 0x00E8EA82
 		protected override void OnClickedRewardButton()
 		{
 			Action clickRewardBtnCb = this.ClickRewardBtnCb;
@@ -87,10 +87,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			clickRewardBtnCb();
 		}
 
-		// Token: 0x04020FDA RID: 135130
+		// Token: 0x0401B909 RID: 112905
 		protected new ActivityTaskData TaskData;
 
-		// Token: 0x04020FDB RID: 135131
+		// Token: 0x0401B90A RID: 112906
 		[Nullable(2)]
 		private Action ClickRewardBtnCb;
 	}

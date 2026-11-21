@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF9 RID: 8185
+	// Token: 0x02002240 RID: 8768
 	public class ITriggerActions_SetValue
 	{
-		// Token: 0x04006C88 RID: 27784
-		[Nullable(1)]
+		// Token: 0x0400728A RID: 29322
 		public List<ActionInfo> Actions;
 	}
 }

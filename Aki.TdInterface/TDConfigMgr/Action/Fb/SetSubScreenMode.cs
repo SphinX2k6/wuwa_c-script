@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027A6 RID: 10150
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A78 RID: 10872
 	public class SetSubScreenMode : ActionParams
 	{
-		// Token: 0x0600E1D4 RID: 57812 RVA: 0x00215CD1 File Offset: 0x00213ED1
+		// Token: 0x0600EFF2 RID: 61426 RVA: 0x00232A65 File Offset: 0x00230C65
 		public static SetSubScreenMode Create(ISetSubScreenMode? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700444A RID: 17482
-		// (get) Token: 0x0600E1D5 RID: 57813 RVA: 0x00215CF0 File Offset: 0x00213EF0
+		// Token: 0x170047B0 RID: 18352
+		// (get) Token: 0x0600EFF3 RID: 61427 RVA: 0x00232A84 File Offset: 0x00230C84
 		public virtual ISubScreenModeConfig Config
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D3C RID: 32060
+		// Token: 0x040083F2 RID: 33778
 		private ISetSubScreenMode Instance;
 
-		// Token: 0x04007D3D RID: 32061
+		// Token: 0x040083F3 RID: 33779
 		private ISubScreenModeConfig _ConfigCache;
 
-		// Token: 0x04007D3E RID: 32062
+		// Token: 0x040083F4 RID: 33780
 		private bool _ConfigInited;
 	}
 }

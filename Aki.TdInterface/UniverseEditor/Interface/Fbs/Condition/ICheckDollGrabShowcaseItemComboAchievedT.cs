@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049D1 RID: 18897
+	// Token: 0x02004E91 RID: 20113
 	public class ICheckDollGrabShowcaseItemComboAchievedT
 	{
-		// Token: 0x170088A4 RID: 34980
-		// (get) Token: 0x0601D82C RID: 120876 RVA: 0x00427E8C File Offset: 0x0042608C
-		// (set) Token: 0x0601D82D RID: 120877 RVA: 0x00427E94 File Offset: 0x00426094
+		// Token: 0x17008F74 RID: 36724
+		// (get) Token: 0x0601F29F RID: 127647 RVA: 0x00458AF8 File Offset: 0x00456CF8
+		// (set) Token: 0x0601F2A0 RID: 127648 RVA: 0x00458B00 File Offset: 0x00456D00
 		public ECondition Type { get; set; }
 
-		// Token: 0x170088A5 RID: 34981
-		// (get) Token: 0x0601D82E RID: 120878 RVA: 0x00427E9D File Offset: 0x0042609D
-		// (set) Token: 0x0601D82F RID: 120879 RVA: 0x00427EA5 File Offset: 0x004260A5
+		// Token: 0x17008F75 RID: 36725
+		// (get) Token: 0x0601F2A1 RID: 127649 RVA: 0x00458B09 File Offset: 0x00456D09
+		// (set) Token: 0x0601F2A2 RID: 127650 RVA: 0x00458B11 File Offset: 0x00456D11
 		public int ShowcaseEntityId { get; set; }
 
-		// Token: 0x170088A6 RID: 34982
-		// (get) Token: 0x0601D830 RID: 120880 RVA: 0x00427EAE File Offset: 0x004260AE
-		// (set) Token: 0x0601D831 RID: 120881 RVA: 0x00427EB6 File Offset: 0x004260B6
+		// Token: 0x17008F76 RID: 36726
+		// (get) Token: 0x0601F2A3 RID: 127651 RVA: 0x00458B1A File Offset: 0x00456D1A
+		// (set) Token: 0x0601F2A4 RID: 127652 RVA: 0x00458B22 File Offset: 0x00456D22
 		public ECompare Compare { get; set; }
 
-		// Token: 0x170088A7 RID: 34983
-		// (get) Token: 0x0601D832 RID: 120882 RVA: 0x00427EBF File Offset: 0x004260BF
-		// (set) Token: 0x0601D833 RID: 120883 RVA: 0x00427EC7 File Offset: 0x004260C7
+		// Token: 0x17008F77 RID: 36727
+		// (get) Token: 0x0601F2A5 RID: 127653 RVA: 0x00458B2B File Offset: 0x00456D2B
+		// (set) Token: 0x0601F2A6 RID: 127654 RVA: 0x00458B33 File Offset: 0x00456D33
 		public int Count { get; set; }
 
-		// Token: 0x0601D834 RID: 120884 RVA: 0x00427ED0 File Offset: 0x004260D0
+		// Token: 0x0601F2A7 RID: 127655 RVA: 0x00458B3C File Offset: 0x00456D3C
 		public ICheckDollGrabShowcaseItemComboAchievedT()
 		{
 			this.Type = ECondition.CompareVar;

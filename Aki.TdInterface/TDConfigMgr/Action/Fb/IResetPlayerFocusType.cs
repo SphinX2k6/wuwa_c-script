@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028C9 RID: 10441
+	// Token: 0x02002B9E RID: 11166
 	public class IResetPlayerFocusType
 	{
-		// Token: 0x0600E7EF RID: 59375 RVA: 0x00220C75 File Offset: 0x0021EE75
-		[NullableContext(1)]
+		// Token: 0x0600F61E RID: 63006 RVA: 0x0023DBF5 File Offset: 0x0023BDF5
 		public static IResetPlayerFocusType Create(IResetPlayerFocusType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700481F RID: 18463
-		// (get) Token: 0x0600E7F0 RID: 59376 RVA: 0x00220C94 File Offset: 0x0021EE94
+		// Token: 0x17004B90 RID: 19344
+		// (get) Token: 0x0600F61F RID: 63007 RVA: 0x0023DC14 File Offset: 0x0023BE14
 		public virtual EResetPlayerFocusType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008037 RID: 32823
+		// Token: 0x040086F6 RID: 34550
 		private IResetPlayerFocusType Instance;
 	}
 }

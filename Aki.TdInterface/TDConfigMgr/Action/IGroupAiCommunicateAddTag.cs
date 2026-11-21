@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ADF RID: 6879
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C86 RID: 7302
 	public class IGroupAiCommunicateAddTag : IGroupAiCommunicateMode
 	{
-		// Token: 0x0600936E RID: 37742 RVA: 0x00156270 File Offset: 0x00154470
+		// Token: 0x06009B2C RID: 39724 RVA: 0x00166A90 File Offset: 0x00164C90
 		private IGroupAiCommunicateAddTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600936F RID: 37743 RVA: 0x001562A8 File Offset: 0x001544A8
+		// Token: 0x06009B2D RID: 39725 RVA: 0x00166AC8 File Offset: 0x00164CC8
 		public static IGroupAiCommunicateAddTag Create([Nullable(2)] IGroupAiCommunicateAddTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009370 RID: 37744 RVA: 0x001562BB File Offset: 0x001544BB
+		// Token: 0x06009B2E RID: 39726 RVA: 0x00166ADB File Offset: 0x00164CDB
 		public static IGroupAiCommunicateAddTag CreateFromSetValue([Nullable(2)] IGroupAiCommunicateAddTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009371 RID: 37745 RVA: 0x001562CE File Offset: 0x001544CE
+		// Token: 0x06009B2F RID: 39727 RVA: 0x00166AEE File Offset: 0x00164CEE
 		public new IGroupAiCommunicateAddTag_SetValue ToSetValue()
 		{
 			return new IGroupAiCommunicateAddTag_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EBE RID: 11966
-		// (get) Token: 0x06009372 RID: 37746 RVA: 0x001562ED File Offset: 0x001544ED
-		// (set) Token: 0x06009373 RID: 37747 RVA: 0x00156318 File Offset: 0x00154518
+		// Token: 0x170030DA RID: 12506
+		// (get) Token: 0x06009B30 RID: 39728 RVA: 0x00166B0D File Offset: 0x00164D0D
+		// (set) Token: 0x06009B31 RID: 39729 RVA: 0x00166B38 File Offset: 0x00164D38
 		public override EGroupAiCommunicateType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EBF RID: 11967
-		// (get) Token: 0x06009374 RID: 37748 RVA: 0x00156326 File Offset: 0x00154526
-		// (set) Token: 0x06009375 RID: 37749 RVA: 0x0015634D File Offset: 0x0015454D
+		// Token: 0x170030DB RID: 12507
+		// (get) Token: 0x06009B32 RID: 39730 RVA: 0x00166B46 File Offset: 0x00164D46
+		// (set) Token: 0x06009B33 RID: 39731 RVA: 0x00166B6D File Offset: 0x00164D6D
 		public virtual List<string> Tags
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A9B RID: 23195
+		// Token: 0x04005F25 RID: 24357
 		[Nullable(2)]
 		protected new IGroupAiCommunicateAddTag FbInstance;
 
-		// Token: 0x04005A9C RID: 23196
+		// Token: 0x04005F26 RID: 24358
 		[Nullable(2)]
 		protected new IGroupAiCommunicateAddTag_SetValue PocoInterface;
 	}

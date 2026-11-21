@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011EE RID: 4590
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200132A RID: 4906
 	public class IUseSkillQuestCondition : IQuestCondition
 	{
-		// Token: 0x06006834 RID: 26676 RVA: 0x000F8F74 File Offset: 0x000F7174
+		// Token: 0x06006E75 RID: 28277 RVA: 0x00106880 File Offset: 0x00104A80
 		private IUseSkillQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006835 RID: 26677 RVA: 0x000F8FAC File Offset: 0x000F71AC
+		// Token: 0x06006E76 RID: 28278 RVA: 0x001068B8 File Offset: 0x00104AB8
 		public static IUseSkillQuestCondition Create([Nullable(2)] IUseSkillQuestCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006836 RID: 26678 RVA: 0x000F8FBF File Offset: 0x000F71BF
+		// Token: 0x06006E77 RID: 28279 RVA: 0x001068CB File Offset: 0x00104ACB
 		public static IUseSkillQuestCondition CreateFromSetValue([Nullable(2)] IUseSkillQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006837 RID: 26679 RVA: 0x000F8FD4 File Offset: 0x000F71D4
+		// Token: 0x06006E78 RID: 28280 RVA: 0x001068E0 File Offset: 0x00104AE0
 		public new IUseSkillQuestCondition_SetValue ToSetValue()
 		{
 			return new IUseSkillQuestCondition_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021BA RID: 8634
-		// (get) Token: 0x06006838 RID: 26680 RVA: 0x000F902E File Offset: 0x000F722E
-		// (set) Token: 0x06006839 RID: 26681 RVA: 0x000F9059 File Offset: 0x000F7259
+		// Token: 0x1700237B RID: 9083
+		// (get) Token: 0x06006E79 RID: 28281 RVA: 0x0010693A File Offset: 0x00104B3A
+		// (set) Token: 0x06006E7A RID: 28282 RVA: 0x00106965 File Offset: 0x00104B65
 		public override EChildQuest Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021BB RID: 8635
-		// (get) Token: 0x0600683A RID: 26682 RVA: 0x000F9068 File Offset: 0x000F7268
-		// (set) Token: 0x0600683B RID: 26683 RVA: 0x000F90C9 File Offset: 0x000F72C9
+		// Token: 0x1700237C RID: 9084
+		// (get) Token: 0x06006E7B RID: 28283 RVA: 0x00106974 File Offset: 0x00104B74
+		// (set) Token: 0x06006E7C RID: 28284 RVA: 0x001069D5 File Offset: 0x00104BD5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -121,9 +119,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021BC RID: 8636
-		// (get) Token: 0x0600683C RID: 26684 RVA: 0x000F90E0 File Offset: 0x000F72E0
-		// (set) Token: 0x0600683D RID: 26685 RVA: 0x000F911A File Offset: 0x000F731A
+		// Token: 0x1700237D RID: 9085
+		// (get) Token: 0x06006E7D RID: 28285 RVA: 0x001069EC File Offset: 0x00104BEC
+		// (set) Token: 0x06006E7E RID: 28286 RVA: 0x00106A26 File Offset: 0x00104C26
 		public virtual ESkillType? SkillType
 		{
 			get
@@ -145,9 +143,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021BD RID: 8637
-		// (get) Token: 0x0600683E RID: 26686 RVA: 0x000F9128 File Offset: 0x000F7328
-		// (set) Token: 0x0600683F RID: 26687 RVA: 0x000F9162 File Offset: 0x000F7362
+		// Token: 0x1700237E RID: 9086
+		// (get) Token: 0x06006E7F RID: 28287 RVA: 0x00106A34 File Offset: 0x00104C34
+		// (set) Token: 0x06006E80 RID: 28288 RVA: 0x00106A6E File Offset: 0x00104C6E
 		public virtual int? SkillId
 		{
 			get
@@ -169,9 +167,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021BE RID: 8638
-		// (get) Token: 0x06006840 RID: 26688 RVA: 0x000F9170 File Offset: 0x000F7370
-		// (set) Token: 0x06006841 RID: 26689 RVA: 0x000F9197 File Offset: 0x000F7397
+		// Token: 0x1700237F RID: 9087
+		// (get) Token: 0x06006E81 RID: 28289 RVA: 0x00106A7C File Offset: 0x00104C7C
+		// (set) Token: 0x06006E82 RID: 28290 RVA: 0x00106AA3 File Offset: 0x00104CA3
 		public virtual IUseSkillCheckBase Check
 		{
 			get
@@ -193,9 +191,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021BF RID: 8639
-		// (get) Token: 0x06006842 RID: 26690 RVA: 0x000F91A8 File Offset: 0x000F73A8
-		// (set) Token: 0x06006843 RID: 26691 RVA: 0x000F91E2 File Offset: 0x000F73E2
+		// Token: 0x17002380 RID: 9088
+		// (get) Token: 0x06006E83 RID: 28291 RVA: 0x00106AB4 File Offset: 0x00104CB4
+		// (set) Token: 0x06006E84 RID: 28292 RVA: 0x00106AEE File Offset: 0x00104CEE
 		public virtual bool? IsWaitFinish
 		{
 			get
@@ -217,18 +215,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E6D RID: 15981
+		// Token: 0x040041DB RID: 16859
 		[Nullable(2)]
 		protected new IUseSkillQuestCondition FbInstance;
 
-		// Token: 0x04003E6E RID: 15982
+		// Token: 0x040041DC RID: 16860
 		[Nullable(2)]
 		protected new IUseSkillQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003E6F RID: 15983
+		// Token: 0x040041DD RID: 16861
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003E70 RID: 15984
+		// Token: 0x040041DE RID: 16862
 		private bool _PreConditionsInited;
 	}
 }

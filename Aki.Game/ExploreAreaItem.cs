@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001AB4 RID: 6836
+// Token: 0x02000F73 RID: 3955
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreAreaItem : UiPanelBase
 {
-	// Token: 0x0600CA81 RID: 51841 RVA: 0x002E2422 File Offset: 0x002E0622
+	// Token: 0x06009E92 RID: 40594 RVA: 0x002ED572 File Offset: 0x002EB772
 	public void Initialize(UUIItem uiItem)
 	{
 		base.CreateByActorAsync(uiItem.GetOwner(), null, false);
 	}
 
-	// Token: 0x0600CA82 RID: 51842 RVA: 0x002E2434 File Offset: 0x002E0634
+	// Token: 0x06009E93 RID: 40595 RVA: 0x002ED584 File Offset: 0x002EB784
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,13 +44,13 @@ public class ExploreAreaItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CA83 RID: 51843 RVA: 0x002E253D File Offset: 0x002E073D
+	// Token: 0x06009E94 RID: 40596 RVA: 0x002ED68D File Offset: 0x002EB88D
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(4).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x0600CA84 RID: 51844 RVA: 0x002E255C File Offset: 0x002E075C
+	// Token: 0x06009E95 RID: 40597 RVA: 0x002ED6AC File Offset: 0x002EB8AC
 	protected override void OnBeforeDestroy()
 	{
 		this.OnSelectedCallback = null;
@@ -58,7 +58,7 @@ public class ExploreAreaItem : UiPanelBase
 		base.GetExtendToggle(4).CanExecuteChange.Unbind();
 	}
 
-	// Token: 0x0600CA85 RID: 51845 RVA: 0x002E2580 File Offset: 0x002E0780
+	// Token: 0x06009E96 RID: 40598 RVA: 0x002ED6D0 File Offset: 0x002EB8D0
 	private void OnExtendToggleStateChanged(EToggleState toggleState)
 	{
 		if (this.OnSelectedCallback != null && this.Data != null)
@@ -68,7 +68,7 @@ public class ExploreAreaItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CA86 RID: 51846 RVA: 0x002E25C0 File Offset: 0x002E07C0
+	// Token: 0x06009E97 RID: 40599 RVA: 0x002ED710 File Offset: 0x002EB910
 	public void Refresh(ExploreAreaViewData data)
 	{
 		this.Data = data;
@@ -86,20 +86,20 @@ public class ExploreAreaItem : UiPanelBase
 		this.SetSelected(selectedAreaId == areaId, true);
 	}
 
-	// Token: 0x0600CA87 RID: 51847 RVA: 0x002E266C File Offset: 0x002E086C
+	// Token: 0x06009E98 RID: 40600 RVA: 0x002ED7BC File Offset: 0x002EB9BC
 	private bool OnCanExecuteChange()
 	{
 		Func<bool> onCanExecuteChangeCallback = this.OnCanExecuteChangeCallback;
 		return onCanExecuteChangeCallback == null || onCanExecuteChangeCallback();
 	}
 
-	// Token: 0x0600CA88 RID: 51848 RVA: 0x002E267F File Offset: 0x002E087F
+	// Token: 0x06009E99 RID: 40601 RVA: 0x002ED7CF File Offset: 0x002EB9CF
 	public void BindCanExecuteChange(Func<bool> onCanExecuteChange)
 	{
 		this.OnCanExecuteChangeCallback = onCanExecuteChange;
 	}
 
-	// Token: 0x0600CA89 RID: 51849 RVA: 0x002E2688 File Offset: 0x002E0888
+	// Token: 0x06009E9A RID: 40602 RVA: 0x002ED7D8 File Offset: 0x002EB9D8
 	public void SetSelected(bool bSelected, bool bFireEvent = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -111,17 +111,17 @@ public class ExploreAreaItem : UiPanelBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, bFireEvent, false, false);
 	}
 
-	// Token: 0x0600CA8A RID: 51850 RVA: 0x002E26B7 File Offset: 0x002E08B7
+	// Token: 0x06009E9B RID: 40603 RVA: 0x002ED807 File Offset: 0x002EBA07
 	public void BindOnSelected(Action<ExploreAreaItem, ExploreAreaViewData, bool> onSelectedCallback)
 	{
 		this.OnSelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x04005D43 RID: 23875
+	// Token: 0x04005E12 RID: 24082
 	[Nullable(2)]
 	private ExploreAreaViewData Data;
 
-	// Token: 0x04005D44 RID: 23876
+	// Token: 0x04005E13 RID: 24083
 	[Nullable(new byte[]
 	{
 		2,
@@ -130,23 +130,23 @@ public class ExploreAreaItem : UiPanelBase
 	})]
 	private Action<ExploreAreaItem, ExploreAreaViewData, bool> OnSelectedCallback;
 
-	// Token: 0x04005D45 RID: 23877
+	// Token: 0x04005E14 RID: 24084
 	[Nullable(2)]
 	private Func<bool> OnCanExecuteChangeCallback;
 
-	// Token: 0x02008008 RID: 32776
+	// Token: 0x02007197 RID: 29079
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029CC3 RID: 171203
+		// Token: 0x04024FFD RID: 151549
 		LocationSprite,
-		// Token: 0x04029CC4 RID: 171204
+		// Token: 0x04024FFE RID: 151550
 		TitleText,
-		// Token: 0x04029CC5 RID: 171205
+		// Token: 0x04024FFF RID: 151551
 		ProgressText,
-		// Token: 0x04029CC6 RID: 171206
+		// Token: 0x04025000 RID: 151552
 		RedDotItem,
-		// Token: 0x04029CC7 RID: 171207
+		// Token: 0x04025001 RID: 151553
 		ExtendToggle
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026BD RID: 9917
+	// Token: 0x02002981 RID: 10625
 	public class IClientTeleportConfig
 	{
-		// Token: 0x0600DDD5 RID: 56789 RVA: 0x0020EF5E File Offset: 0x0020D15E
-		[NullableContext(1)]
+		// Token: 0x0600EBB1 RID: 60337 RVA: 0x0022B79E File Offset: 0x0022999E
 		public static IClientTeleportConfig Create(IClientTeleportConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700421D RID: 16925
-		// (get) Token: 0x0600DDD6 RID: 56790 RVA: 0x0020EF7D File Offset: 0x0020D17D
+		// Token: 0x1700455D RID: 17757
+		// (get) Token: 0x0600EBB2 RID: 60338 RVA: 0x0022B7BD File Offset: 0x002299BD
 		public virtual EClientTeleportType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B29 RID: 31529
+		// Token: 0x040081C9 RID: 33225
 		private IClientTeleportConfig Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A99 RID: 2713
+	// Token: 0x02000B6E RID: 2926
 	public class ConfigWeeklyFrameHelpById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FAB RID: 16299 RVA: 0x001C2633 File Offset: 0x001C0833
+		// Token: 0x060044A9 RID: 17577 RVA: 0x001E19C7 File Offset: 0x001DFBC7
 		static ConfigWeeklyFrameHelpById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeeklyFrameHelpById.CreateStaticDefaultValue), new Action(ConfigWeeklyFrameHelpById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FAC RID: 16300 RVA: 0x001C2654 File Offset: 0x001C0854
+		// Token: 0x060044AA RID: 17578 RVA: 0x001E19E8 File Offset: 0x001DFBE8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeeklyFrameHelpById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FAD RID: 16301 RVA: 0x001C26D3 File Offset: 0x001C08D3
+		// Token: 0x060044AB RID: 17579 RVA: 0x001E1A67 File Offset: 0x001DFC67
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeeklyFrameHelpById.LogPair = null;
 			ConfigWeeklyFrameHelpById.HandleId = 0;
 		}
 
-		// Token: 0x06003FAE RID: 16302 RVA: 0x001C26E1 File Offset: 0x001C08E1
+		// Token: 0x060044AC RID: 17580 RVA: 0x001E1A75 File Offset: 0x001DFC75
 		public static void Init()
 		{
 			ConfigWeeklyFrameHelpById.HandleId = ConfigCommon.InitDataStatement(ConfigWeeklyFrameHelpById.HandleId, "db_weeklychallenge.db", "select BinData from `WeeklyFrameHelp` where Id = ?");
 		}
 
-		// Token: 0x06003FAF RID: 16303 RVA: 0x001C26FC File Offset: 0x001C08FC
+		// Token: 0x060044AD RID: 17581 RVA: 0x001E1A90 File Offset: 0x001DFC90
 		public static WeeklyFrameHelp? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeeklyFrameHelpById.HandleId, ConfigWeeklyFrameHelpById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WeeklyFrameHelp?(rootAsWeeklyFrameHelp);
 		}
 
-		// Token: 0x04004A15 RID: 18965
+		// Token: 0x04004FE8 RID: 20456
 		private const string DB = "db_weeklychallenge.db";
 
-		// Token: 0x04004A16 RID: 18966
+		// Token: 0x04004FE9 RID: 20457
 		private const string FILE = "z.周常框架.xlsx";
 
-		// Token: 0x04004A17 RID: 18967
+		// Token: 0x04004FEA RID: 20458
 		private const string TABLE = "WeeklyFrameHelp";
 
-		// Token: 0x04004A18 RID: 18968
+		// Token: 0x04004FEB RID: 20459
 		private const string COMMAND = "select BinData from `WeeklyFrameHelp` where Id = ?";
 
-		// Token: 0x04004A19 RID: 18969
+		// Token: 0x04004FEC RID: 20460
 		private const string KEY_PREFIX = "WeeklyFrameHelpById";
 
-		// Token: 0x04004A1A RID: 18970
+		// Token: 0x04004FED RID: 20461
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A1B RID: 18971
+		// Token: 0x04004FEE RID: 20462
 		private static int HandleId;
 	}
 }

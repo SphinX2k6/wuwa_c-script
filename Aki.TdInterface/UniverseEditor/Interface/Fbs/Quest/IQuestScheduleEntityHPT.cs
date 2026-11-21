@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004023 RID: 16419
+	// Token: 0x02004464 RID: 17508
 	public class IQuestScheduleEntityHPT
 	{
-		// Token: 0x1700737B RID: 29563
-		// (get) Token: 0x06017BA9 RID: 97193 RVA: 0x0036C2F4 File Offset: 0x0036A4F4
-		// (set) Token: 0x06017BAA RID: 97194 RVA: 0x0036C2FC File Offset: 0x0036A4FC
+		// Token: 0x1700797D RID: 31101
+		// (get) Token: 0x06019242 RID: 102978 RVA: 0x003960E8 File Offset: 0x003942E8
+		// (set) Token: 0x06019243 RID: 102979 RVA: 0x003960F0 File Offset: 0x003942F0
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x1700737C RID: 29564
-		// (get) Token: 0x06017BAB RID: 97195 RVA: 0x0036C305 File Offset: 0x0036A505
-		// (set) Token: 0x06017BAC RID: 97196 RVA: 0x0036C30D File Offset: 0x0036A50D
+		// Token: 0x1700797E RID: 31102
+		// (get) Token: 0x06019244 RID: 102980 RVA: 0x003960F9 File Offset: 0x003942F9
+		// (set) Token: 0x06019245 RID: 102981 RVA: 0x00396101 File Offset: 0x00394301
 		public int EntityId { get; set; }
 
-		// Token: 0x06017BAD RID: 97197 RVA: 0x0036C316 File Offset: 0x0036A516
+		// Token: 0x06019246 RID: 102982 RVA: 0x0039610A File Offset: 0x0039430A
 		public IQuestScheduleEntityHPT()
 		{
 			this.Type = EQuestScheduleType.None;

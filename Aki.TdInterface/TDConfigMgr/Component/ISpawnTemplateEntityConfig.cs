@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F2 RID: 1778
+	// Token: 0x02000793 RID: 1939
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISpawnTemplateEntityConfig
 	{
-		// Token: 0x0600264A RID: 9802 RVA: 0x000668AC File Offset: 0x00064AAC
-		[NullableContext(1)]
+		// Token: 0x0600296A RID: 10602 RVA: 0x0006D91C File Offset: 0x0006BB1C
+		[NullableContext(0)]
 		private ISpawnTemplateEntityConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600264B RID: 9803 RVA: 0x000668E4 File Offset: 0x00064AE4
-		[NullableContext(1)]
+		// Token: 0x0600296B RID: 10603 RVA: 0x0006D954 File Offset: 0x0006BB54
+		[NullableContext(0)]
 		public static ISpawnTemplateEntityConfig Create([Nullable(2)] ISpawnTemplateEntityConfig instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600264C RID: 9804 RVA: 0x000668F7 File Offset: 0x00064AF7
-		[NullableContext(1)]
+		// Token: 0x0600296C RID: 10604 RVA: 0x0006D967 File Offset: 0x0006BB67
+		[NullableContext(0)]
 		public static ISpawnTemplateEntityConfig CreateFromSetValue([Nullable(2)] ISpawnTemplateEntityConfig_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600264D RID: 9805 RVA: 0x0006690A File Offset: 0x00064B0A
-		[NullableContext(1)]
+		// Token: 0x0600296D RID: 10605 RVA: 0x0006D97A File Offset: 0x0006BB7A
+		[NullableContext(0)]
 		public ISpawnTemplateEntityConfig_SetValue ToSetValue()
 		{
 			return new ISpawnTemplateEntityConfig_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A19 RID: 2585
-		// (get) Token: 0x0600264E RID: 9806 RVA: 0x00066941 File Offset: 0x00064B41
-		// (set) Token: 0x0600264F RID: 9807 RVA: 0x00066968 File Offset: 0x00064B68
+		// Token: 0x17000AD7 RID: 2775
+		// (get) Token: 0x0600296E RID: 10606 RVA: 0x0006D9B1 File Offset: 0x0006BBB1
+		// (set) Token: 0x0600296F RID: 10607 RVA: 0x0006D9D8 File Offset: 0x0006BBD8
 		public virtual string TemplateBpType
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A1A RID: 2586
-		// (get) Token: 0x06002650 RID: 9808 RVA: 0x00066978 File Offset: 0x00064B78
-		// (set) Token: 0x06002651 RID: 9809 RVA: 0x000669D9 File Offset: 0x00064BD9
+		// Token: 0x17000AD8 RID: 2776
+		// (get) Token: 0x06002970 RID: 10608 RVA: 0x0006D9E8 File Offset: 0x0006BBE8
+		// (set) Token: 0x06002971 RID: 10609 RVA: 0x0006DA49 File Offset: 0x0006BC49
 		public virtual VectorInfo PosOffset
 		{
 			get
@@ -122,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A1B RID: 2587
-		// (get) Token: 0x06002652 RID: 9810 RVA: 0x000669F0 File Offset: 0x00064BF0
-		// (set) Token: 0x06002653 RID: 9811 RVA: 0x00066A51 File Offset: 0x00064C51
+		// Token: 0x17000AD9 RID: 2777
+		// (get) Token: 0x06002972 RID: 10610 RVA: 0x0006DA60 File Offset: 0x0006BC60
+		// (set) Token: 0x06002973 RID: 10611 RVA: 0x0006DAC1 File Offset: 0x0006BCC1
 		public virtual VectorInfo RotOffset
 		{
 			get
@@ -152,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A1C RID: 2588
-		// (get) Token: 0x06002654 RID: 9812 RVA: 0x00066A66 File Offset: 0x00064C66
-		// (set) Token: 0x06002655 RID: 9813 RVA: 0x00066A8D File Offset: 0x00064C8D
+		// Token: 0x17000ADA RID: 2778
+		// (get) Token: 0x06002974 RID: 10612 RVA: 0x0006DAD6 File Offset: 0x0006BCD6
+		// (set) Token: 0x06002975 RID: 10613 RVA: 0x0006DAFD File Offset: 0x0006BCFD
 		public virtual List<ETemplateEntityGroupType> GroupTypes
 		{
 			get
@@ -176,24 +176,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A01 RID: 6657
+		// Token: 0x04001C00 RID: 7168
 		protected ISpawnTemplateEntityConfig FbInstance;
 
-		// Token: 0x04001A02 RID: 6658
+		// Token: 0x04001C01 RID: 7169
 		protected ISpawnTemplateEntityConfig_SetValue PocoInterface;
 
-		// Token: 0x04001A03 RID: 6659
-		[Nullable(1)]
+		// Token: 0x04001C02 RID: 7170
+		[Nullable(0)]
 		private VectorInfo _PosOffsetCache;
 
-		// Token: 0x04001A04 RID: 6660
+		// Token: 0x04001C03 RID: 7171
 		private bool _PosOffsetInited;
 
-		// Token: 0x04001A05 RID: 6661
-		[Nullable(1)]
+		// Token: 0x04001C04 RID: 7172
+		[Nullable(0)]
 		private VectorInfo _RotOffsetCache;
 
-		// Token: 0x04001A06 RID: 6662
+		// Token: 0x04001C05 RID: 7173
 		private bool _RotOffsetInited;
 	}
 }

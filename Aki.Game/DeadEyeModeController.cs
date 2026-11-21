@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -23,13 +22,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02001A7A RID: 6778
+// Token: 0x02000F39 RID: 3897
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DeadEyeModeController : ControllerBase
 {
-	// Token: 0x0600C774 RID: 51060 RVA: 0x002D6AA6 File Offset: 0x002D4CA6
+	// Token: 0x06009B84 RID: 39812 RVA: 0x002E1BC6 File Offset: 0x002DFDC6
 	public override bool Init()
 	{
 		bool result = base.Init();
@@ -37,7 +36,7 @@ public class DeadEyeModeController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0600C775 RID: 51061 RVA: 0x002D6AB4 File Offset: 0x002D4CB4
+	// Token: 0x06009B85 RID: 39813 RVA: 0x002E1BD4 File Offset: 0x002DFDD4
 	public override bool Clear()
 	{
 		this.OnRemoveEvents();
@@ -45,7 +44,7 @@ public class DeadEyeModeController : ControllerBase
 		return base.Clear();
 	}
 
-	// Token: 0x0600C776 RID: 51062 RVA: 0x002D6AC8 File Offset: 0x002D4CC8
+	// Token: 0x06009B86 RID: 39814 RVA: 0x002E1BE8 File Offset: 0x002DFDE8
 	protected override bool OnLeaveLevel()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.TimeScaleTimerHandle))
@@ -55,7 +54,7 @@ public class DeadEyeModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C777 RID: 51063 RVA: 0x002D6AEE File Offset: 0x002D4CEE
+	// Token: 0x06009B87 RID: 39815 RVA: 0x002E1C0E File Offset: 0x002DFE0E
 	private void TryRemoveAudioFilter()
 	{
 		if (this.AudioFilterHandle != 0)
@@ -65,26 +64,26 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C778 RID: 51064 RVA: 0x002D6B14 File Offset: 0x002D4D14
+	// Token: 0x06009B88 RID: 39816 RVA: 0x002E1C34 File Offset: 0x002DFE34
 	private void TryPushAudioFilter()
 	{
 		this.TryRemoveAudioFilter();
 		this.AudioFilterHandle = AudioFilterController.Instance.PushUiFilterState("ui_only_ui", "DeadEyeMode");
 	}
 
-	// Token: 0x0600C779 RID: 51065 RVA: 0x002D6B36 File Offset: 0x002D4D36
+	// Token: 0x06009B89 RID: 39817 RVA: 0x002E1C56 File Offset: 0x002DFE56
 	private void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnDeadEyeModeStageChange, new Action(this.OnDeadEyeModeStageChange));
 	}
 
-	// Token: 0x0600C77A RID: 51066 RVA: 0x002D6B54 File Offset: 0x002D4D54
+	// Token: 0x06009B8A RID: 39818 RVA: 0x002E1C74 File Offset: 0x002DFE74
 	private void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnDeadEyeModeStageChange, new Action(this.OnDeadEyeModeStageChange));
 	}
 
-	// Token: 0x0600C77B RID: 51067 RVA: 0x002D6B72 File Offset: 0x002D4D72
+	// Token: 0x06009B8B RID: 39819 RVA: 0x002E1C92 File Offset: 0x002DFE92
 	private void OnDeadEyeModeTrigger(int _)
 	{
 		CustomPromise waitDeadEyeTriggerPromise = this.WaitDeadEyeTriggerPromise;
@@ -95,7 +94,7 @@ public class DeadEyeModeController : ControllerBase
 		waitDeadEyeTriggerPromise.SetResult();
 	}
 
-	// Token: 0x0600C77C RID: 51068 RVA: 0x002D6B84 File Offset: 0x002D4D84
+	// Token: 0x06009B8C RID: 39820 RVA: 0x002E1CA4 File Offset: 0x002DFEA4
 	private void OnDeadEyeModeStageChange()
 	{
 		DeadEyeModeModel deadEyeModeModel = DeadEyeModeModel.Instance;
@@ -153,13 +152,13 @@ public class DeadEyeModeController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600C77D RID: 51069 RVA: 0x002D6D18 File Offset: 0x002D4F18
+	// Token: 0x06009B8D RID: 39821 RVA: 0x002E1E38 File Offset: 0x002E0038
 	public void OnDeadEyeModeShowShooter()
 	{
 		DeadEyeModeController.PlayMotorSkill(100010101);
 	}
 
-	// Token: 0x0600C77E RID: 51070 RVA: 0x002D6D28 File Offset: 0x002D4F28
+	// Token: 0x06009B8E RID: 39822 RVA: 0x002E1E48 File Offset: 0x002E0048
 	public UniTask EnterDeadEyeJumpPlatform(TriggerDeadeyeMode @params, long triggerEntityCreatureDataId)
 	{
 		DeadEyeModeController.<EnterDeadEyeJumpPlatform>d__17 <EnterDeadEyeJumpPlatform>d__;
@@ -172,7 +171,7 @@ public class DeadEyeModeController : ControllerBase
 		return <EnterDeadEyeJumpPlatform>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C77F RID: 51071 RVA: 0x002D6D7C File Offset: 0x002D4F7C
+	// Token: 0x06009B8F RID: 39823 RVA: 0x002E1E9C File Offset: 0x002E009C
 	public UniTask EnterDeadEyeModeWithoutEntity(DeadEyeModeParams @params)
 	{
 		DeadEyeModeController.<EnterDeadEyeModeWithoutEntity>d__18 <EnterDeadEyeModeWithoutEntity>d__;
@@ -184,7 +183,7 @@ public class DeadEyeModeController : ControllerBase
 		return <EnterDeadEyeModeWithoutEntity>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C780 RID: 51072 RVA: 0x002D6DC8 File Offset: 0x002D4FC8
+	// Token: 0x06009B90 RID: 39824 RVA: 0x002E1EE8 File Offset: 0x002E00E8
 	public void EnableSingleEntityHighlight(EntityHandle entityHandle, ETargetHighlightType type)
 	{
 		DeadEyeModeModel instance = DeadEyeModeModel.Instance;
@@ -292,7 +291,7 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C781 RID: 51073 RVA: 0x002D70E8 File Offset: 0x002D52E8
+	// Token: 0x06009B91 RID: 39825 RVA: 0x002E2208 File Offset: 0x002E0408
 	private UniTask AsyncShootingSettlement()
 	{
 		DeadEyeModeController.<AsyncShootingSettlement>d__20 <AsyncShootingSettlement>d__;
@@ -302,7 +301,7 @@ public class DeadEyeModeController : ControllerBase
 		return <AsyncShootingSettlement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C782 RID: 51074 RVA: 0x002D7124 File Offset: 0x002D5324
+	// Token: 0x06009B92 RID: 39826 RVA: 0x002E2244 File Offset: 0x002E0444
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -318,7 +317,7 @@ public class DeadEyeModeController : ControllerBase
 		return <LoadDeadEyeShooterPrimaryDataAsset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C783 RID: 51075 RVA: 0x002D7168 File Offset: 0x002D5368
+	// Token: 0x06009B93 RID: 39827 RVA: 0x002E2288 File Offset: 0x002E0488
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -334,7 +333,7 @@ public class DeadEyeModeController : ControllerBase
 		return <LoadDeadEyeTargetMaterialDataAsset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C784 RID: 51076 RVA: 0x002D71AC File Offset: 0x002D53AC
+	// Token: 0x06009B94 RID: 39828 RVA: 0x002E22CC File Offset: 0x002E04CC
 	[NullableContext(0)]
 	private static UniTask<int> PlayMotorSkill(int skillId)
 	{
@@ -346,7 +345,7 @@ public class DeadEyeModeController : ControllerBase
 		return <PlayMotorSkill>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C785 RID: 51077 RVA: 0x002D71F0 File Offset: 0x002D53F0
+	// Token: 0x06009B95 RID: 39829 RVA: 0x002E2310 File Offset: 0x002E0510
 	[NullableContext(2)]
 	private void CameraLookAtOnDeadEyeModeStart(global::Vector lookAtPosition, float transitionTime, int? subLensTag)
 	{
@@ -360,7 +359,7 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C786 RID: 51078 RVA: 0x002D7248 File Offset: 0x002D5448
+	// Token: 0x06009B96 RID: 39830 RVA: 0x002E2368 File Offset: 0x002E0568
 	private static void AddSubCameraTag(int tagId, bool bEnable)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -378,7 +377,7 @@ public class DeadEyeModeController : ControllerBase
 		baseTagComponent.RemoveTag(new int?(tagId));
 	}
 
-	// Token: 0x0600C787 RID: 51079 RVA: 0x002D7294 File Offset: 0x002D5494
+	// Token: 0x06009B97 RID: 39831 RVA: 0x002E23B4 File Offset: 0x002E05B4
 	private static bool GetEntityPosition(int? pbDataId, global::Vector outVector)
 	{
 		if (pbDataId == null)
@@ -436,7 +435,7 @@ public class DeadEyeModeController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600C788 RID: 51080 RVA: 0x002D7444 File Offset: 0x002D5644
+	// Token: 0x06009B98 RID: 39832 RVA: 0x002E2564 File Offset: 0x002E0764
 	private void TickTimeScale(float delta)
 	{
 		DeadEyeModeModel instance = DeadEyeModeModel.Instance;
@@ -448,7 +447,7 @@ public class DeadEyeModeController : ControllerBase
 		EffectSystem.Instance.SetAdditionTimeScale(ETimeScaleSourceType.DeadEyeMode, this.ScreenEffectHandle, inverseSelfCenteredTimeDilation);
 	}
 
-	// Token: 0x0600C789 RID: 51081 RVA: 0x002D74C4 File Offset: 0x002D56C4
+	// Token: 0x06009B99 RID: 39833 RVA: 0x002E25E4 File Offset: 0x002E07E4
 	private void EnableMotorEntityTimeScaleComponent(bool enable)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -475,7 +474,7 @@ public class DeadEyeModeController : ControllerBase
 		this.MotorTimeScaleCompDisableHandle = component.Disable("DeadEyeMode");
 	}
 
-	// Token: 0x0600C78A RID: 51082 RVA: 0x002D753C File Offset: 0x002D573C
+	// Token: 0x06009B9A RID: 39834 RVA: 0x002E265C File Offset: 0x002E085C
 	private void HandleEntityFocusOn([Nullable(2)] EntityHandle entityHandle, float lockRange, IList<int> focusOnTags)
 	{
 		if (entityHandle == null || !entityHandle.Valid)
@@ -526,7 +525,7 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C78B RID: 51083 RVA: 0x002D7668 File Offset: 0x002D5868
+	// Token: 0x06009B9B RID: 39835 RVA: 0x002E2788 File Offset: 0x002E0988
 	private void EnableFocusEntitiesHighlight(ETargetHighlightType type)
 	{
 		foreach (EntityHandle entityHandle in DeadEyeModeModel.Instance.GetFocusEntities())
@@ -535,14 +534,14 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C78C RID: 51084 RVA: 0x002D76C0 File Offset: 0x002D58C0
+	// Token: 0x06009B9C RID: 39836 RVA: 0x002E27E0 File Offset: 0x002E09E0
 	[NullableContext(2)]
 	private static EntityHandle GetFollowShooterEntityHandle()
 	{
 		return FollowUtils.GetPlayerFollowShooter(CreatureModel.Instance.GetPlayerId());
 	}
 
-	// Token: 0x0600C78D RID: 51085 RVA: 0x002D76D4 File Offset: 0x002D58D4
+	// Token: 0x06009B9D RID: 39837 RVA: 0x002E27F4 File Offset: 0x002E09F4
 	private static UniTask AsyncExecuteShootingPerformance(List<global::Vector> targets)
 	{
 		DeadEyeModeController.<AsyncExecuteShootingPerformance>d__32 <AsyncExecuteShootingPerformance>d__;
@@ -553,23 +552,23 @@ public class DeadEyeModeController : ControllerBase
 		return <AsyncExecuteShootingPerformance>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C78E RID: 51086 RVA: 0x002D7718 File Offset: 0x002D5918
+	// Token: 0x06009B9E RID: 39838 RVA: 0x002E2838 File Offset: 0x002E0A38
 	private static void RequestShootHit(List<long> entityCreatureDataIds)
 	{
 		DeadeyeShootHitRequest deadeyeShootHitRequest = DeadeyeShootHitRequest.Create();
 		deadeyeShootHitRequest.InstId = CreatureModel.Instance.GetInstanceId();
-		deadeyeShootHitRequest.EntityIds.Add(entityCreatureDataIds.ToList<long>());
+		deadeyeShootHitRequest.EntityIds.Add(entityCreatureDataIds);
 		Net.Instance.Call(ERequestMessageId.DeadeyeShootHitRequest, deadeyeShootHitRequest, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			DeadeyeShootHitResponse deadeyeShootHitResponse = (DeadeyeShootHitResponse)msg;
 			if (deadeyeShootHitResponse.ErrCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(deadeyeShootHitResponse.ErrCode, 23822, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(deadeyeShootHitResponse.ErrCode, 21965, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600C78F RID: 51087 RVA: 0x002D777C File Offset: 0x002D597C
+	// Token: 0x06009B9F RID: 39839 RVA: 0x002E2898 File Offset: 0x002E0A98
 	public static int PlayFilterEffect(string effectPath, [Nullable(2)] Action<ELoadEffectResult, int> callback = null)
 	{
 		EffectSystem instance = EffectSystem.Instance;
@@ -592,8 +591,8 @@ public class DeadEyeModeController : ControllerBase
 		return num;
 	}
 
-	// Token: 0x1700105A RID: 4186
-	// (get) Token: 0x0600C790 RID: 51088 RVA: 0x002D77F2 File Offset: 0x002D59F2
+	// Token: 0x1700107F RID: 4223
+	// (get) Token: 0x06009BA0 RID: 39840 RVA: 0x002E290E File Offset: 0x002E0B0E
 	public static DeadEyeModeController Instance
 	{
 		get
@@ -602,7 +601,7 @@ public class DeadEyeModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600C791 RID: 51089 RVA: 0x002D77F9 File Offset: 0x002D59F9
+	// Token: 0x06009BA1 RID: 39841 RVA: 0x002E2915 File Offset: 0x002E0B15
 	public static DeadEyeModeController GetOrCreateInstance()
 	{
 		if (DeadEyeModeController._Instance == null)
@@ -612,7 +611,7 @@ public class DeadEyeModeController : ControllerBase
 		return DeadEyeModeController._Instance;
 	}
 
-	// Token: 0x0600C792 RID: 51090 RVA: 0x002D780D File Offset: 0x002D5A0D
+	// Token: 0x06009BA2 RID: 39842 RVA: 0x002E2929 File Offset: 0x002E0B29
 	public static bool CreateInstance()
 	{
 		if (DeadEyeModeController._Instance != null)
@@ -623,47 +622,47 @@ public class DeadEyeModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C793 RID: 51091 RVA: 0x002D7823 File Offset: 0x002D5A23
+	// Token: 0x06009BA3 RID: 39843 RVA: 0x002E293F File Offset: 0x002E0B3F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C794 RID: 51092 RVA: 0x002D7825 File Offset: 0x002D5A25
+	// Token: 0x06009BA4 RID: 39844 RVA: 0x002E2941 File Offset: 0x002E0B41
 	public static void ResetStaticDefaultValue()
 	{
 		DeadEyeModeController._Instance = null;
 	}
 
-	// Token: 0x0600C795 RID: 51093 RVA: 0x002D782D File Offset: 0x002D5A2D
+	// Token: 0x06009BA5 RID: 39845 RVA: 0x002E2949 File Offset: 0x002E0B49
 	static DeadEyeModeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DeadEyeModeController.CreateStaticDefaultValue), new Action(DeadEyeModeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C17 RID: 23575
+	// Token: 0x04005CE6 RID: 23782
 	private const string DEAD_EYE_MODE_STRING = "DeadEyeMode";
 
-	// Token: 0x04005C18 RID: 23576
+	// Token: 0x04005CE7 RID: 23783
 	private const string AUDIO_FILTER_STATE_NAME = "ui_only_ui";
 
-	// Token: 0x04005C19 RID: 23577
+	// Token: 0x04005CE8 RID: 23784
 	[Nullable(2)]
 	private TimerHandle TimeScaleTimerHandle;
 
-	// Token: 0x04005C1A RID: 23578
+	// Token: 0x04005CE9 RID: 23785
 	private int MotorTimeScaleCompDisableHandle;
 
-	// Token: 0x04005C1B RID: 23579
+	// Token: 0x04005CEA RID: 23786
 	[Nullable(2)]
 	private CustomPromise WaitDeadEyeTriggerPromise;
 
-	// Token: 0x04005C1C RID: 23580
+	// Token: 0x04005CEB RID: 23787
 	private int ScreenEffectHandle;
 
-	// Token: 0x04005C1D RID: 23581
+	// Token: 0x04005CEC RID: 23788
 	private int AudioFilterHandle;
 
-	// Token: 0x04005C1E RID: 23582
+	// Token: 0x04005CED RID: 23789
 	[Nullable(2)]
 	private static DeadEyeModeController _Instance;
 }

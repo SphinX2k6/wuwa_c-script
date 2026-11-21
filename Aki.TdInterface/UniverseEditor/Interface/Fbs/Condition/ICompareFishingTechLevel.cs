@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BA7 RID: 19367
+	// Token: 0x02005091 RID: 20625
 	public struct ICompareFishingTechLevel : IFlatbufferObject
 	{
-		// Token: 0x17008C94 RID: 35988
-		// (get) Token: 0x0601E8A0 RID: 125088 RVA: 0x00445DD0 File Offset: 0x00443FD0
+		// Token: 0x170093AD RID: 37805
+		// (get) Token: 0x0602044C RID: 132172 RVA: 0x00478934 File Offset: 0x00476B34
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E8A1 RID: 125089 RVA: 0x00445DDD File Offset: 0x00443FDD
+		// Token: 0x0602044D RID: 132173 RVA: 0x00478941 File Offset: 0x00476B41
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E8A2 RID: 125090 RVA: 0x00445DE4 File Offset: 0x00443FE4
+		// Token: 0x0602044E RID: 132174 RVA: 0x00478948 File Offset: 0x00476B48
 		public static ICompareFishingTechLevel GetRootAsICompareFishingTechLevel(ByteBuffer _bb)
 		{
 			return ICompareFishingTechLevel.GetRootAsICompareFishingTechLevel(_bb, default(ICompareFishingTechLevel));
 		}
 
-		// Token: 0x0601E8A3 RID: 125091 RVA: 0x00445E00 File Offset: 0x00444000
+		// Token: 0x0602044F RID: 132175 RVA: 0x00478964 File Offset: 0x00476B64
 		public static ICompareFishingTechLevel GetRootAsICompareFishingTechLevel(ByteBuffer _bb, ICompareFishingTechLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E8A4 RID: 125092 RVA: 0x00445E1D File Offset: 0x0044401D
+		// Token: 0x06020450 RID: 132176 RVA: 0x00478981 File Offset: 0x00476B81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E8A5 RID: 125093 RVA: 0x00445E2C File Offset: 0x0044402C
+		// Token: 0x06020451 RID: 132177 RVA: 0x00478990 File Offset: 0x00476B90
 		public ICompareFishingTechLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C95 RID: 35989
-		// (get) Token: 0x0601E8A6 RID: 125094 RVA: 0x00445E3C File Offset: 0x0044403C
+		// Token: 0x170093AE RID: 37806
+		// (get) Token: 0x06020452 RID: 132178 RVA: 0x004789A0 File Offset: 0x00476BA0
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C96 RID: 35990
-		// (get) Token: 0x0601E8A7 RID: 125095 RVA: 0x00445E78 File Offset: 0x00444078
+		// Token: 0x170093AF RID: 37807
+		// (get) Token: 0x06020453 RID: 132179 RVA: 0x004789DC File Offset: 0x00476BDC
 		public int TechId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C97 RID: 35991
-		// (get) Token: 0x0601E8A8 RID: 125096 RVA: 0x00445EB4 File Offset: 0x004440B4
+		// Token: 0x170093B0 RID: 37808
+		// (get) Token: 0x06020454 RID: 132180 RVA: 0x00478A18 File Offset: 0x00476C18
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C98 RID: 35992
-		// (get) Token: 0x0601E8A9 RID: 125097 RVA: 0x00445EF0 File Offset: 0x004440F0
+		// Token: 0x170093B1 RID: 37809
+		// (get) Token: 0x06020455 RID: 132181 RVA: 0x00478A54 File Offset: 0x00476C54
 		public int TechLevel
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E8AA RID: 125098 RVA: 0x00445F2D File Offset: 0x0044412D
+		// Token: 0x06020456 RID: 132182 RVA: 0x00478A91 File Offset: 0x00476C91
 		public static Offset<ICompareFishingTechLevel> CreateICompareFishingTechLevel(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int TechId = 0, ECompare Compare = ECompare.Eq, int TechLevel = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareFishingTechLevel.EndICompareFishingTechLevel(builder);
 		}
 
-		// Token: 0x0601E8AB RID: 125099 RVA: 0x00445F59 File Offset: 0x00444159
+		// Token: 0x06020457 RID: 132183 RVA: 0x00478ABD File Offset: 0x00476CBD
 		public static void StartICompareFishingTechLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E8AC RID: 125100 RVA: 0x00445F62 File Offset: 0x00444162
+		// Token: 0x06020458 RID: 132184 RVA: 0x00478AC6 File Offset: 0x00476CC6
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E8AD RID: 125101 RVA: 0x00445F6D File Offset: 0x0044416D
+		// Token: 0x06020459 RID: 132185 RVA: 0x00478AD1 File Offset: 0x00476CD1
 		public static void AddTechId(FlatBufferBuilder builder, int techId)
 		{
 			builder.AddInt(1, techId, 0);
 		}
 
-		// Token: 0x0601E8AE RID: 125102 RVA: 0x00445F78 File Offset: 0x00444178
+		// Token: 0x0602045A RID: 132186 RVA: 0x00478ADC File Offset: 0x00476CDC
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E8AF RID: 125103 RVA: 0x00445F83 File Offset: 0x00444183
+		// Token: 0x0602045B RID: 132187 RVA: 0x00478AE7 File Offset: 0x00476CE7
 		public static void AddTechLevel(FlatBufferBuilder builder, int techLevel)
 		{
 			builder.AddInt(3, techLevel, 0);
 		}
 
-		// Token: 0x0601E8B0 RID: 125104 RVA: 0x00445F8E File Offset: 0x0044418E
+		// Token: 0x0602045C RID: 132188 RVA: 0x00478AF2 File Offset: 0x00476CF2
 		public static Offset<ICompareFishingTechLevel> EndICompareFishingTechLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareFishingTechLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601E8B1 RID: 125105 RVA: 0x00445F9C File Offset: 0x0044419C
+		// Token: 0x0602045D RID: 132189 RVA: 0x00478B00 File Offset: 0x00476D00
 		public ICompareFishingTechLevelT UnPack()
 		{
 			ICompareFishingTechLevelT compareFishingTechLevelT = new ICompareFishingTechLevelT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareFishingTechLevelT;
 		}
 
-		// Token: 0x0601E8B2 RID: 125106 RVA: 0x00445FB7 File Offset: 0x004441B7
+		// Token: 0x0602045E RID: 132190 RVA: 0x00478B1B File Offset: 0x00476D1B
 		public void UnPackTo(ICompareFishingTechLevelT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.TechLevel = this.TechLevel;
 		}
 
-		// Token: 0x0601E8B3 RID: 125107 RVA: 0x00445FEC File Offset: 0x004441EC
+		// Token: 0x0602045F RID: 132191 RVA: 0x00478B50 File Offset: 0x00476D50
 		public static Offset<ICompareFishingTechLevel> Pack(FlatBufferBuilder builder, ICompareFishingTechLevelT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareFishingTechLevel.CreateICompareFishingTechLevel(builder, _o.Type, _o.TechId, _o.Compare, _o.TechLevel);
 		}
 
-		// Token: 0x0400D486 RID: 54406
+		// Token: 0x0400DF8B RID: 57227
 		private Table __p;
 	}
 }

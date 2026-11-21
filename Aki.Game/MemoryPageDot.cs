@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C16 RID: 7190
+// Token: 0x020010D5 RID: 4309
 public class MemoryPageDot : GridProxyAbstract<bool>
 {
-	// Token: 0x0600D7AA RID: 55210 RVA: 0x0031EF68 File Offset: 0x0031D168
+	// Token: 0x0600ABBE RID: 43966 RVA: 0x0032A2B8 File Offset: 0x003284B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ public class MemoryPageDot : GridProxyAbstract<bool>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D7AB RID: 55211 RVA: 0x0031EFB0 File Offset: 0x0031D1B0
+	// Token: 0x0600ABBF RID: 43967 RVA: 0x0032A300 File Offset: 0x00328500
 	public override void Refresh(bool data, bool isSelected, int gridIndex)
 	{
 		UUIItem item = base.GetItem(0);
@@ -30,10 +30,10 @@ public class MemoryPageDot : GridProxyAbstract<bool>
 		item.SetUIActive(data);
 	}
 
-	// Token: 0x020081D5 RID: 33237
+	// Token: 0x0200735E RID: 29534
 	private class EDotItem
 	{
-		// Token: 0x0402A602 RID: 173570
+		// Token: 0x04025929 RID: 153897
 		public const int Dot = 0;
 	}
 }

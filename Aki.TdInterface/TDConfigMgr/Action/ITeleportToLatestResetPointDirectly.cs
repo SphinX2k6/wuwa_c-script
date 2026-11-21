@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F9C RID: 8092
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021DF RID: 8671
 	public class ITeleportToLatestResetPointDirectly : ITeleportToLatestResetPointType
 	{
-		// Token: 0x0600B1EE RID: 45550 RVA: 0x0019EDE8 File Offset: 0x0019CFE8
+		// Token: 0x0600BCF2 RID: 48370 RVA: 0x001B5198 File Offset: 0x001B3398
 		private ITeleportToLatestResetPointDirectly_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1EF RID: 45551 RVA: 0x0019EE20 File Offset: 0x0019D020
+		// Token: 0x0600BCF3 RID: 48371 RVA: 0x001B51D0 File Offset: 0x001B33D0
 		public static ITeleportToLatestResetPointDirectly Create([Nullable(2)] ITeleportToLatestResetPointDirectly instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1F0 RID: 45552 RVA: 0x0019EE33 File Offset: 0x0019D033
+		// Token: 0x0600BCF4 RID: 48372 RVA: 0x001B51E3 File Offset: 0x001B33E3
 		public static ITeleportToLatestResetPointDirectly CreateFromSetValue([Nullable(2)] ITeleportToLatestResetPointDirectly_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1F1 RID: 45553 RVA: 0x0019EE46 File Offset: 0x0019D046
+		// Token: 0x0600BCF5 RID: 48373 RVA: 0x001B51F6 File Offset: 0x001B33F6
 		public new ITeleportToLatestResetPointDirectly_SetValue ToSetValue()
 		{
 			return new ITeleportToLatestResetPointDirectly_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036E5 RID: 14053
-		// (get) Token: 0x0600B1F2 RID: 45554 RVA: 0x0019EE59 File Offset: 0x0019D059
-		// (set) Token: 0x0600B1F3 RID: 45555 RVA: 0x0019EE84 File Offset: 0x0019D084
+		// Token: 0x170039BA RID: 14778
+		// (get) Token: 0x0600BCF6 RID: 48374 RVA: 0x001B5209 File Offset: 0x001B3409
+		// (set) Token: 0x0600BCF7 RID: 48375 RVA: 0x001B5234 File Offset: 0x001B3434
 		public override ETeleportToLatestResetPointType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B80 RID: 27520
+		// Token: 0x0400717B RID: 29051
 		[Nullable(2)]
 		protected new ITeleportToLatestResetPointDirectly FbInstance;
 
-		// Token: 0x04006B81 RID: 27521
+		// Token: 0x0400717C RID: 29052
 		[Nullable(2)]
 		protected new ITeleportToLatestResetPointDirectly_SetValue PocoInterface;
 	}

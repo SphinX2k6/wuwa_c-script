@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common
 {
-	// Token: 0x02005B46 RID: 23366
+	// Token: 0x02004B27 RID: 19239
 	public class TipsAttributeItem : UiPanelBase
 	{
-		// Token: 0x0603B289 RID: 242313 RVA: 0x00E1B2B2 File Offset: 0x00E194B2
+		// Token: 0x060301FB RID: 197115 RVA: 0x00D6BF52 File Offset: 0x00D6A152
 		[NullableContext(1)]
 		public TipsAttributeItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B28A RID: 242314 RVA: 0x00E1B2C7 File Offset: 0x00E194C7
+		// Token: 0x060301FC RID: 197116 RVA: 0x00D6BF67 File Offset: 0x00D6A167
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Common
 			};
 		}
 
-		// Token: 0x0603B28B RID: 242315 RVA: 0x00E1B300 File Offset: 0x00E19500
+		// Token: 0x060301FD RID: 197117 RVA: 0x00D6BFA0 File Offset: 0x00D6A1A0
 		[NullableContext(1)]
 		public void UpdateItem(CommonComponentDefine.TipsAttributeData data)
 		{
@@ -35,12 +35,12 @@ namespace CSharpScript.Game.Module.Common
 			base.GetText(1).SetText(AttributeModel.Instance.GetFormatAttributeValueString(data.Id, data.Value, data.IsRatio), true);
 		}
 
-		// Token: 0x0200BD76 RID: 48502
+		// Token: 0x0200A77F RID: 42879
 		private enum ETipsAttributeItemDefine
 		{
-			// Token: 0x0403926A RID: 234090
+			// Token: 0x04033C36 RID: 212022
 			AttributeName,
-			// Token: 0x0403926B RID: 234091
+			// Token: 0x04033C37 RID: 212023
 			AttributeValue
 		}
 	}

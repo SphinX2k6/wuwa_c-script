@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018FE RID: 6398
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A85 RID: 6789
 	public class ICommonBtOverride
 	{
-		// Token: 0x06008917 RID: 35095 RVA: 0x00143CC4 File Offset: 0x00141EC4
+		// Token: 0x06009035 RID: 36917 RVA: 0x0015344C File Offset: 0x0015164C
 		private ICommonBtOverride_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008918 RID: 35096 RVA: 0x00143CFC File Offset: 0x00141EFC
+		// Token: 0x06009036 RID: 36918 RVA: 0x00153484 File Offset: 0x00151684
 		public static ICommonBtOverride Create([Nullable(2)] ICommonBtOverride instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008919 RID: 35097 RVA: 0x00143D0F File Offset: 0x00141F0F
+		// Token: 0x06009037 RID: 36919 RVA: 0x00153497 File Offset: 0x00151697
 		public static ICommonBtOverride CreateFromSetValue([Nullable(2)] ICommonBtOverride_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600891A RID: 35098 RVA: 0x00143D22 File Offset: 0x00141F22
+		// Token: 0x06009038 RID: 36920 RVA: 0x001534AA File Offset: 0x001516AA
 		public ICommonBtOverride_SetValue ToSetValue()
 		{
 			return new ICommonBtOverride_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C63 RID: 11363
-		// (get) Token: 0x0600891B RID: 35099 RVA: 0x00143D4D File Offset: 0x00141F4D
-		// (set) Token: 0x0600891C RID: 35100 RVA: 0x00143D78 File Offset: 0x00141F78
+		// Token: 0x17002E5F RID: 11871
+		// (get) Token: 0x06009039 RID: 36921 RVA: 0x001534D5 File Offset: 0x001516D5
+		// (set) Token: 0x0600903A RID: 36922 RVA: 0x00153500 File Offset: 0x00151700
 		public virtual int CommonBtId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C64 RID: 11364
-		// (get) Token: 0x0600891D RID: 35101 RVA: 0x00143D88 File Offset: 0x00141F88
-		// (set) Token: 0x0600891E RID: 35102 RVA: 0x00143E1B File Offset: 0x0014201B
+		// Token: 0x17002E60 RID: 11872
+		// (get) Token: 0x0600903B RID: 36923 RVA: 0x00153510 File Offset: 0x00151710
+		// (set) Token: 0x0600903C RID: 36924 RVA: 0x001535A3 File Offset: 0x001517A3
 		public virtual List<ICommonBtPlaceholder> OverridePlaceholders
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C65 RID: 11365
-		// (get) Token: 0x0600891F RID: 35103 RVA: 0x00143E30 File Offset: 0x00142030
-		// (set) Token: 0x06008920 RID: 35104 RVA: 0x00143EC3 File Offset: 0x001420C3
+		// Token: 0x17002E61 RID: 11873
+		// (get) Token: 0x0600903D RID: 36925 RVA: 0x001535B8 File Offset: 0x001517B8
+		// (set) Token: 0x0600903E RID: 36926 RVA: 0x0015364B File Offset: 0x0015184B
 		public virtual List<ICommonBtClientOverrideData> ClientOverrideData
 		{
 			get
@@ -161,24 +159,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040055F2 RID: 22002
+		// Token: 0x04005A3C RID: 23100
 		[Nullable(2)]
 		protected ICommonBtOverride FbInstance;
 
-		// Token: 0x040055F3 RID: 22003
+		// Token: 0x04005A3D RID: 23101
 		[Nullable(2)]
 		protected ICommonBtOverride_SetValue PocoInterface;
 
-		// Token: 0x040055F4 RID: 22004
+		// Token: 0x04005A3E RID: 23102
 		private List<ICommonBtPlaceholder> _OverridePlaceholdersCache;
 
-		// Token: 0x040055F5 RID: 22005
+		// Token: 0x04005A3F RID: 23103
 		private bool _OverridePlaceholdersInited;
 
-		// Token: 0x040055F6 RID: 22006
+		// Token: 0x04005A40 RID: 23104
 		private List<ICommonBtClientOverrideData> _ClientOverrideDataCache;
 
-		// Token: 0x040055F7 RID: 22007
+		// Token: 0x04005A41 RID: 23105
 		private bool _ClientOverrideDataInited;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C21 RID: 23585
+	// Token: 0x02004C01 RID: 19457
 	public class BossPilingBuffCountItem : UiPanelBase
 	{
-		// Token: 0x0603B964 RID: 244068 RVA: 0x00E3633C File Offset: 0x00E3453C
+		// Token: 0x060308AF RID: 198831 RVA: 0x00D86698 File Offset: 0x00D84898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B965 RID: 244069 RVA: 0x00E36384 File Offset: 0x00E34584
+		// Token: 0x060308B0 RID: 198832 RVA: 0x00D866E0 File Offset: 0x00D848E0
 		public void Refresh(int count)
 		{
 			base.SetUiActive(count >= 2);
@@ -41,10 +41,10 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0200BE0B RID: 48651
+		// Token: 0x0200A813 RID: 43027
 		private enum ECount
 		{
-			// Token: 0x040394E0 RID: 234720
+			// Token: 0x04033EA3 RID: 212643
 			Txt
 		}
 	}

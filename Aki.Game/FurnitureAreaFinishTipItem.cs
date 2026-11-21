@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FBB RID: 4027
+// Token: 0x02000470 RID: 1136
 public class FurnitureAreaFinishTipItem : UiPanelBase
 {
-	// Token: 0x06006728 RID: 26408 RVA: 0x001465A0 File Offset: 0x001447A0
+	// Token: 0x06003AC0 RID: 15040 RVA: 0x0014EE64 File Offset: 0x0014D064
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class FurnitureAreaFinishTipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006729 RID: 26409 RVA: 0x001465D9 File Offset: 0x001447D9
+	// Token: 0x06003AC1 RID: 15041 RVA: 0x0014EE9D File Offset: 0x0014D09D
 	[NullableContext(1)]
 	public void Refresh(string content)
 	{

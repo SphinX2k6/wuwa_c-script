@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A21 RID: 18977
+	// Token: 0x02004EE4 RID: 20196
 	public struct ICheckFinishLoading : IFlatbufferObject
 	{
-		// Token: 0x1700895E RID: 35166
-		// (get) Token: 0x0601DB15 RID: 121621 RVA: 0x0042D578 File Offset: 0x0042B778
+		// Token: 0x17009033 RID: 36915
+		// (get) Token: 0x0601F59E RID: 128414 RVA: 0x0045E470 File Offset: 0x0045C670
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB16 RID: 121622 RVA: 0x0042D585 File Offset: 0x0042B785
+		// Token: 0x0601F59F RID: 128415 RVA: 0x0045E47D File Offset: 0x0045C67D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DB17 RID: 121623 RVA: 0x0042D58C File Offset: 0x0042B78C
+		// Token: 0x0601F5A0 RID: 128416 RVA: 0x0045E484 File Offset: 0x0045C684
 		public static ICheckFinishLoading GetRootAsICheckFinishLoading(ByteBuffer _bb)
 		{
 			return ICheckFinishLoading.GetRootAsICheckFinishLoading(_bb, default(ICheckFinishLoading));
 		}
 
-		// Token: 0x0601DB18 RID: 121624 RVA: 0x0042D5A8 File Offset: 0x0042B7A8
+		// Token: 0x0601F5A1 RID: 128417 RVA: 0x0045E4A0 File Offset: 0x0045C6A0
 		public static ICheckFinishLoading GetRootAsICheckFinishLoading(ByteBuffer _bb, ICheckFinishLoading obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DB19 RID: 121625 RVA: 0x0042D5C5 File Offset: 0x0042B7C5
+		// Token: 0x0601F5A2 RID: 128418 RVA: 0x0045E4BD File Offset: 0x0045C6BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DB1A RID: 121626 RVA: 0x0042D5D4 File Offset: 0x0042B7D4
+		// Token: 0x0601F5A3 RID: 128419 RVA: 0x0045E4CC File Offset: 0x0045C6CC
 		public ICheckFinishLoading __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700895F RID: 35167
-		// (get) Token: 0x0601DB1B RID: 121627 RVA: 0x0042D5E4 File Offset: 0x0042B7E4
+		// Token: 0x17009034 RID: 36916
+		// (get) Token: 0x0601F5A4 RID: 128420 RVA: 0x0045E4DC File Offset: 0x0045C6DC
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008960 RID: 35168
-		// (get) Token: 0x0601DB1C RID: 121628 RVA: 0x0042D620 File Offset: 0x0042B820
+		// Token: 0x17009035 RID: 36917
+		// (get) Token: 0x0601F5A5 RID: 128421 RVA: 0x0045E518 File Offset: 0x0045C718
 		public IAllPlayerType? CheckTarget
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DB1D RID: 121629 RVA: 0x0042D67D File Offset: 0x0042B87D
+		// Token: 0x0601F5A6 RID: 128422 RVA: 0x0045E575 File Offset: 0x0045C775
 		public static Offset<ICheckFinishLoading> CreateICheckFinishLoading(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, Offset<IAllPlayerType> CheckTargetOffset = default(Offset<IAllPlayerType>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFinishLoading.EndICheckFinishLoading(builder);
 		}
 
-		// Token: 0x0601DB1E RID: 121630 RVA: 0x0042D69A File Offset: 0x0042B89A
+		// Token: 0x0601F5A7 RID: 128423 RVA: 0x0045E592 File Offset: 0x0045C792
 		public static void StartICheckFinishLoading(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DB1F RID: 121631 RVA: 0x0042D6A3 File Offset: 0x0042B8A3
+		// Token: 0x0601F5A8 RID: 128424 RVA: 0x0045E59B File Offset: 0x0045C79B
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DB20 RID: 121632 RVA: 0x0042D6AE File Offset: 0x0042B8AE
+		// Token: 0x0601F5A9 RID: 128425 RVA: 0x0045E5A6 File Offset: 0x0045C7A6
 		public static void AddCheckTarget(FlatBufferBuilder builder, Offset<IAllPlayerType> checkTargetOffset)
 		{
 			builder.AddOffset(1, checkTargetOffset.Value, 0);
 		}
 
-		// Token: 0x0601DB21 RID: 121633 RVA: 0x0042D6BE File Offset: 0x0042B8BE
+		// Token: 0x0601F5AA RID: 128426 RVA: 0x0045E5B6 File Offset: 0x0045C7B6
 		public static Offset<ICheckFinishLoading> EndICheckFinishLoading(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckFinishLoading>(builder.EndTable());
 		}
 
-		// Token: 0x0601DB22 RID: 121634 RVA: 0x0042D6CC File Offset: 0x0042B8CC
+		// Token: 0x0601F5AB RID: 128427 RVA: 0x0045E5C4 File Offset: 0x0045C7C4
 		public ICheckFinishLoadingT UnPack()
 		{
 			ICheckFinishLoadingT checkFinishLoadingT = new ICheckFinishLoadingT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkFinishLoadingT;
 		}
 
-		// Token: 0x0601DB23 RID: 121635 RVA: 0x0042D6E8 File Offset: 0x0042B8E8
+		// Token: 0x0601F5AC RID: 128428 RVA: 0x0045E5E0 File Offset: 0x0045C7E0
 		public void UnPackTo(ICheckFinishLoadingT _o)
 		{
 			_o.Type = this.Type;
 			_o.CheckTarget = ((this.CheckTarget != null) ? this.CheckTarget.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601DB24 RID: 121636 RVA: 0x0042D730 File Offset: 0x0042B930
+		// Token: 0x0601F5AD RID: 128429 RVA: 0x0045E628 File Offset: 0x0045C828
 		public static Offset<ICheckFinishLoading> Pack(FlatBufferBuilder builder, ICheckFinishLoadingT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckFinishLoading.CreateICheckFinishLoading(builder, _o.Type, checkTargetOffset);
 		}
 
-		// Token: 0x0400D272 RID: 53874
+		// Token: 0x0400DD49 RID: 56649
 		private Table __p;
 	}
 }

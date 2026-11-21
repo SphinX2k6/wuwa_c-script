@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001166 RID: 4454
+// Token: 0x0200061A RID: 1562
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 {
-	// Token: 0x0600759C RID: 30108 RVA: 0x00184B28 File Offset: 0x00182D28
+	// Token: 0x06004933 RID: 18739 RVA: 0x0018D6A4 File Offset: 0x0018B8A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,7 +44,7 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600759D RID: 30109 RVA: 0x00184C34 File Offset: 0x00182E34
+	// Token: 0x06004934 RID: 18740 RVA: 0x0018D7B0 File Offset: 0x0018B9B0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerPreTeamItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -55,14 +55,14 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600759E RID: 30110 RVA: 0x00184C77 File Offset: 0x00182E77
+	// Token: 0x06004935 RID: 18741 RVA: 0x0018D7F3 File Offset: 0x0018B9F3
 	[NullableContext(2)]
 	private UUIExtendToggle GetItemToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600759F RID: 30111 RVA: 0x00184C80 File Offset: 0x00182E80
+	// Token: 0x06004936 RID: 18742 RVA: 0x0018D7FC File Offset: 0x0018B9FC
 	public override void Refresh(FormationData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -102,7 +102,7 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		base.GetText(1).SetText(data.FormationId.ToString(), true);
 	}
 
-	// Token: 0x060075A0 RID: 30112 RVA: 0x00184E0F File Offset: 0x0018300F
+	// Token: 0x06004937 RID: 18743 RVA: 0x0018D98B File Offset: 0x0018BB8B
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -118,7 +118,7 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		onClickCallback(this.ItemData, base.GridIndex);
 	}
 
-	// Token: 0x060075A1 RID: 30113 RVA: 0x00184E42 File Offset: 0x00183042
+	// Token: 0x06004938 RID: 18744 RVA: 0x0018D9BE File Offset: 0x0018BBBE
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -129,7 +129,7 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		itemToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060075A2 RID: 30114 RVA: 0x00184E58 File Offset: 0x00183058
+	// Token: 0x06004939 RID: 18745 RVA: 0x0018D9D4 File Offset: 0x0018BBD4
 	public void ForceSetSelected(bool selected)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -140,7 +140,7 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		itemToggle.SetToggleStateForce(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060075A3 RID: 30115 RVA: 0x00184E74 File Offset: 0x00183074
+	// Token: 0x0600493A RID: 18746 RVA: 0x0018D9F0 File Offset: 0x0018BBF0
 	private void OnToggleClick(EToggleState state)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -156,16 +156,16 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 		scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 	}
 
-	// Token: 0x040035F9 RID: 13817
+	// Token: 0x04003692 RID: 13970
 	private readonly List<MediumItemGrid> RoleList = new List<MediumItemGrid>();
 
-	// Token: 0x040035FA RID: 13818
+	// Token: 0x04003693 RID: 13971
 	private readonly List<bool> HasCharacter = new List<bool>();
 
-	// Token: 0x040035FB RID: 13819
+	// Token: 0x04003694 RID: 13972
 	private FormationData ItemData;
 
-	// Token: 0x040035FC RID: 13820
+	// Token: 0x04003695 RID: 13973
 	[Nullable(new byte[]
 	{
 		2,
@@ -173,23 +173,23 @@ public class BabelTowerPreTeamItem : GridProxyAbstract<FormationData>
 	})]
 	public Action<FormationData, int> OnClickCallback;
 
-	// Token: 0x02007738 RID: 30520
+	// Token: 0x020068C6 RID: 26822
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x04027542 RID: 161090
+		// Token: 0x04022880 RID: 141440
 		public const int ToggleRoot = 0;
 
-		// Token: 0x04027543 RID: 161091
+		// Token: 0x04022881 RID: 141441
 		public const int TxtTeamIndex = 1;
 
-		// Token: 0x04027544 RID: 161092
+		// Token: 0x04022882 RID: 141442
 		public const int ItemRole1 = 2;
 
-		// Token: 0x04027545 RID: 161093
+		// Token: 0x04022883 RID: 141443
 		public const int ItemRole2 = 3;
 
-		// Token: 0x04027546 RID: 161094
+		// Token: 0x04022884 RID: 141444
 		public const int ItemRole3 = 4;
 	}
 }

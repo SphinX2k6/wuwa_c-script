@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F98 RID: 24472
+	// Token: 0x02004F7F RID: 20351
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpViewDefine : Singleton
 	{
-		// Token: 0x17008FE9 RID: 36841
-		// (get) Token: 0x0603E130 RID: 254256 RVA: 0x00EFCBFB File Offset: 0x00EFADFB
+		// Token: 0x170063BB RID: 25531
+		// (get) Token: 0x060330CA RID: 209098 RVA: 0x00E4E8B3 File Offset: 0x00E4CAB3
 		public static TotalTopUpViewDefine Instance
 		{
 			get
@@ -24,12 +24,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E131 RID: 254257 RVA: 0x00EFCC1E File Offset: 0x00EFAE1E
+		// Token: 0x060330CB RID: 209099 RVA: 0x00E4E8D6 File Offset: 0x00E4CAD6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E132 RID: 254258 RVA: 0x00EFCC20 File Offset: 0x00EFAE20
+		// Token: 0x060330CC RID: 209100 RVA: 0x00E4E8D8 File Offset: 0x00E4CAD8
 		public static void ResetStaticDefaultValue()
 		{
 			TotalTopUpViewDefine instance = TotalTopUpViewDefine._instance;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			TotalTopUpViewDefine._instance = null;
 		}
 
-		// Token: 0x0603E133 RID: 254259 RVA: 0x00EFCC39 File Offset: 0x00EFAE39
+		// Token: 0x060330CD RID: 209101 RVA: 0x00E4E8F1 File Offset: 0x00E4CAF1
 		static TotalTopUpViewDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TotalTopUpViewDefine.CreateStaticDefaultValue), new Action(TotalTopUpViewDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603E134 RID: 254260 RVA: 0x00EFCC58 File Offset: 0x00EFAE58
+		// Token: 0x060330CE RID: 209102 RVA: 0x00E4E910 File Offset: 0x00E4CB10
 		public TotalTopUpViewDefine()
 		{
 			Dictionary<ETotalTopUpPreviewFunction, Func<TotalTopUpPreviewSubView>> dictionary = new Dictionary<ETotalTopUpPreviewFunction, Func<TotalTopUpPreviewSubView>>();
@@ -60,10 +60,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			base..ctor();
 		}
 
-		// Token: 0x040206B7 RID: 132791
+		// Token: 0x0401B189 RID: 110985
 		public Dictionary<ETotalTopUpPreviewFunction, Func<TotalTopUpPreviewSubView>> TotalTopUpPreviewSubViewConstructorMap;
 
-		// Token: 0x040206B8 RID: 132792
+		// Token: 0x0401B18A RID: 110986
 		[Nullable(2)]
 		private static TotalTopUpViewDefine _instance;
 	}

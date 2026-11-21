@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002642 RID: 9794
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002902 RID: 10498
 	public class AwakeEntity : ActionParams
 	{
-		// Token: 0x0600DBBC RID: 56252 RVA: 0x0020B396 File Offset: 0x00209596
+		// Token: 0x0600E98A RID: 59786 RVA: 0x00227B62 File Offset: 0x00225D62
 		public static AwakeEntity Create(IAwakeEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040FA RID: 16634
-		// (get) Token: 0x0600DBBD RID: 56253 RVA: 0x0020B3B5 File Offset: 0x002095B5
+		// Token: 0x17004434 RID: 17460
+		// (get) Token: 0x0600E98B RID: 59787 RVA: 0x00227B81 File Offset: 0x00225D81
 		[Nullable(2)]
 		public virtual IAwakeWithTransformVar Position
 		{
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040FB RID: 16635
-		// (get) Token: 0x0600DBBE RID: 56254 RVA: 0x0020B3EC File Offset: 0x002095EC
+		// Token: 0x17004435 RID: 17461
+		// (get) Token: 0x0600E98C RID: 59788 RVA: 0x00227BB8 File Offset: 0x00225DB8
 		public virtual bool? IsSnap
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040FC RID: 16636
-		// (get) Token: 0x0600DBBF RID: 56255 RVA: 0x0020B424 File Offset: 0x00209624
+		// Token: 0x17004436 RID: 17462
+		// (get) Token: 0x0600E98D RID: 59789 RVA: 0x00227BF0 File Offset: 0x00225DF0
 		public virtual List<int> EntityIds
 		{
 			get
@@ -76,20 +74,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A18 RID: 31256
+		// Token: 0x040080B4 RID: 32948
 		private IAwakeEntity Instance;
 
-		// Token: 0x04007A19 RID: 31257
+		// Token: 0x040080B5 RID: 32949
 		[Nullable(2)]
 		private IAwakeWithTransformVar _PositionCache;
 
-		// Token: 0x04007A1A RID: 31258
+		// Token: 0x040080B6 RID: 32950
 		private bool _PositionInited;
 
-		// Token: 0x04007A1B RID: 31259
+		// Token: 0x040080B7 RID: 32951
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A1C RID: 31260
+		// Token: 0x040080B8 RID: 32952
 		private bool _EntityIdsInited;
 	}
 }

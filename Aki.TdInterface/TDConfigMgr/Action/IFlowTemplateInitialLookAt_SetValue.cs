@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A9E RID: 6814
+	// Token: 0x02001C37 RID: 7223
 	public class IFlowTemplateInitialLookAt_SetValue
 	{
-		// Token: 0x04005A08 RID: 23048
+		// Token: 0x04005E78 RID: 24184
 		public int ActorIndex;
 
-		// Token: 0x04005A09 RID: 23049
-		[Nullable(1)]
+		// Token: 0x04005E79 RID: 24185
 		public IActorLookAtData Target;
 	}
 }

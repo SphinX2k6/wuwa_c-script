@@ -2,110 +2,110 @@
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006941 RID: 26945
+	// Token: 0x02005A9C RID: 23196
 	public enum EControllerTickPriority
 	{
-		// Token: 0x04022F63 RID: 143203
+		// Token: 0x0401E14D RID: 123213
 		FreezeOnSightController,
-		// Token: 0x04022F64 RID: 143204
+		// Token: 0x0401E14E RID: 123214
 		SplineMoveTaskController,
-		// Token: 0x04022F65 RID: 143205
+		// Token: 0x0401E14F RID: 123215
 		SceneBattleInteractController,
-		// Token: 0x04022F66 RID: 143206
+		// Token: 0x0401E150 RID: 123216
 		TermExplanationController,
-		// Token: 0x04022F67 RID: 143207
+		// Token: 0x0401E151 RID: 123217
 		CiacconaGalController,
-		// Token: 0x04022F68 RID: 143208
+		// Token: 0x0401E152 RID: 123218
 		EffectAudioController,
-		// Token: 0x04022F69 RID: 143209
+		// Token: 0x0401E153 RID: 123219
 		VehicleController,
-		// Token: 0x04022F6A RID: 143210
+		// Token: 0x0401E154 RID: 123220
 		MonsterGroupPatrolController,
-		// Token: 0x04022F6B RID: 143211
+		// Token: 0x0401E155 RID: 123221
 		LevelPickInteractController,
-		// Token: 0x04022F6C RID: 143212
+		// Token: 0x0401E156 RID: 123222
 		PlayerSoarMonitorController,
-		// Token: 0x04022F6D RID: 143213
+		// Token: 0x0401E157 RID: 123223
 		PlayerVelocityController,
-		// Token: 0x04022F6E RID: 143214
+		// Token: 0x0401E158 RID: 123224
 		GameAudioController,
-		// Token: 0x04022F6F RID: 143215
+		// Token: 0x0401E159 RID: 123225
 		RoleAudioController,
-		// Token: 0x04022F70 RID: 143216
+		// Token: 0x0401E15A RID: 123226
 		BpActorController,
-		// Token: 0x04022F71 RID: 143217
+		// Token: 0x0401E15B RID: 123227
 		MultiInteractionActorController,
-		// Token: 0x04022F72 RID: 143218
+		// Token: 0x0401E15C RID: 123228
 		KuroAutoCoolController,
-		// Token: 0x04022F73 RID: 143219
+		// Token: 0x0401E15D RID: 123229
 		KuroPerformanceController,
-		// Token: 0x04022F74 RID: 143220
+		// Token: 0x0401E15E RID: 123230
 		SeamlessTravelController,
-		// Token: 0x04022F75 RID: 143221
+		// Token: 0x0401E15F RID: 123231
 		TeleportController,
-		// Token: 0x04022F76 RID: 143222
+		// Token: 0x0401E160 RID: 123232
 		LevelLoadingController,
-		// Token: 0x04022F77 RID: 143223
+		// Token: 0x0401E161 RID: 123233
 		SequenceController,
-		// Token: 0x04022F78 RID: 143224
+		// Token: 0x0401E162 RID: 123234
 		FlowController,
-		// Token: 0x04022F79 RID: 143225
+		// Token: 0x0401E163 RID: 123235
 		PerfSightController,
-		// Token: 0x04022F7A RID: 143226
+		// Token: 0x0401E164 RID: 123236
 		ComponentForceTickController,
-		// Token: 0x04022F7B RID: 143227
+		// Token: 0x0401E165 RID: 123237
 		TimeController,
-		// Token: 0x04022F7C RID: 143228
+		// Token: 0x0401E166 RID: 123238
 		FormationAttributeController,
-		// Token: 0x04022F7D RID: 143229
+		// Token: 0x0401E167 RID: 123239
 		FormationDataController,
-		// Token: 0x04022F7E RID: 143230
+		// Token: 0x0401E168 RID: 123240
 		SkillCdController,
-		// Token: 0x04022F7F RID: 143231
+		// Token: 0x0401E169 RID: 123241
 		OnlineController,
-		// Token: 0x04022F80 RID: 143232
+		// Token: 0x0401E16A RID: 123242
 		UiNavigationNewController,
-		// Token: 0x04022F81 RID: 143233
+		// Token: 0x0401E16B RID: 123243
 		UnopenedAreaController,
-		// Token: 0x04022F82 RID: 143234
+		// Token: 0x0401E16C RID: 123244
 		AceAntiCheatController,
-		// Token: 0x04022F83 RID: 143235
+		// Token: 0x0401E16D RID: 123245
 		BulletController,
-		// Token: 0x04022F84 RID: 143236
+		// Token: 0x0401E16E RID: 123246
 		LevelPlayController,
-		// Token: 0x04022F85 RID: 143237
+		// Token: 0x0401E16F RID: 123247
 		PhotographController,
-		// Token: 0x04022F86 RID: 143238
+		// Token: 0x0401E170 RID: 123248
 		PlotController,
-		// Token: 0x04022F87 RID: 143239
+		// Token: 0x0401E171 RID: 123249
 		DamageUiController,
-		// Token: 0x04022F88 RID: 143240
+		// Token: 0x0401E172 RID: 123250
 		AreaController,
-		// Token: 0x04022F89 RID: 143241
+		// Token: 0x0401E173 RID: 123251
 		AiModelController,
-		// Token: 0x04022F8A RID: 143242
+		// Token: 0x0401E174 RID: 123252
 		CharacterShadowController,
-		// Token: 0x04022F8B RID: 143243
+		// Token: 0x0401E175 RID: 123253
 		RoleTriggerController,
-		// Token: 0x04022F8C RID: 143244
+		// Token: 0x0401E176 RID: 123254
 		HudUnitController,
-		// Token: 0x04022F8D RID: 143245
+		// Token: 0x0401E177 RID: 123255
 		ItemHintController,
-		// Token: 0x04022F8E RID: 143246
+		// Token: 0x0401E178 RID: 123256
 		QuestNewController,
-		// Token: 0x04022F8F RID: 143247
+		// Token: 0x0401E179 RID: 123257
 		EnvironmentalPerceptionController,
-		// Token: 0x04022F90 RID: 143248
+		// Token: 0x0401E17A RID: 123258
 		TimeOfDayController,
-		// Token: 0x04022F91 RID: 143249
+		// Token: 0x0401E17B RID: 123259
 		LevelGeneralController,
-		// Token: 0x04022F92 RID: 143250
+		// Token: 0x0401E17C RID: 123260
 		CameraController,
-		// Token: 0x04022F93 RID: 143251
+		// Token: 0x0401E17D RID: 123261
 		CharacterController,
-		// Token: 0x04022F94 RID: 143252
+		// Token: 0x0401E17E RID: 123262
 		GameModeController,
-		// Token: 0x04022F95 RID: 143253
+		// Token: 0x0401E17F RID: 123263
 		CombatMessageController
 	}
 }

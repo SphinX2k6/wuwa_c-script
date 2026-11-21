@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Kurotato.Data;
 using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
@@ -16,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005730 RID: 22320
+	// Token: 0x02004707 RID: 18183
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoSettleView : UiViewBase
 	{
-		// Token: 0x06038BD6 RID: 232406 RVA: 0x00D77740 File Offset: 0x00D75940
+		// Token: 0x0602DAE6 RID: 187110 RVA: 0x00CC5DEC File Offset: 0x00CC3FEC
 		public KurotatoSettleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038BD7 RID: 232407 RVA: 0x00D77790 File Offset: 0x00D75990
+		// Token: 0x0602DAE7 RID: 187111 RVA: 0x00CC5E3C File Offset: 0x00CC403C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -79,19 +78,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038BD8 RID: 232408 RVA: 0x00D77A51 File Offset: 0x00D75C51
+		// Token: 0x0602DAE8 RID: 187112 RVA: 0x00CC60FD File Offset: 0x00CC42FD
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnFirstShare, new Action(this.OnFirstShare));
 		}
 
-		// Token: 0x06038BD9 RID: 232409 RVA: 0x00D77A6F File Offset: 0x00D75C6F
+		// Token: 0x0602DAE9 RID: 187113 RVA: 0x00CC611B File Offset: 0x00CC431B
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFirstShare, new Action(this.OnFirstShare));
 		}
 
-		// Token: 0x06038BDA RID: 232410 RVA: 0x00D77A90 File Offset: 0x00D75C90
+		// Token: 0x0602DAEA RID: 187114 RVA: 0x00CC613C File Offset: 0x00CC433C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoSettleView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BDB RID: 232411 RVA: 0x00D77AD4 File Offset: 0x00D75CD4
+		// Token: 0x0602DAEB RID: 187115 RVA: 0x00CC6180 File Offset: 0x00CC4380
 		private void SetupParams()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -160,7 +159,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.IsEndlessLevel = (kurotatoLevelData != null && kurotatoLevelData.IsEndless);
 		}
 
-		// Token: 0x06038BDC RID: 232412 RVA: 0x00D77C2C File Offset: 0x00D75E2C
+		// Token: 0x0602DAEC RID: 187116 RVA: 0x00CC62D8 File Offset: 0x00CC44D8
 		private UniTask CreateRightPanelAsync()
 		{
 			KurotatoSettleView.<CreateRightPanelAsync>d__18 <CreateRightPanelAsync>d__;
@@ -171,7 +170,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateRightPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BDD RID: 232413 RVA: 0x00D77C70 File Offset: 0x00D75E70
+		// Token: 0x0602DAED RID: 187117 RVA: 0x00CC631C File Offset: 0x00CC451C
 		private UniTask CreateBtnNextPageAsync()
 		{
 			KurotatoSettleView.<CreateBtnNextPageAsync>d__19 <CreateBtnNextPageAsync>d__;
@@ -182,7 +181,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateBtnNextPageAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BDE RID: 232414 RVA: 0x00D77CB4 File Offset: 0x00D75EB4
+		// Token: 0x0602DAEE RID: 187118 RVA: 0x00CC6360 File Offset: 0x00CC4560
 		private UniTask CreateBtnExitAsync()
 		{
 			KurotatoSettleView.<CreateBtnExitAsync>d__20 <CreateBtnExitAsync>d__;
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateBtnExitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BDF RID: 232415 RVA: 0x00D77CF8 File Offset: 0x00D75EF8
+		// Token: 0x0602DAEF RID: 187119 RVA: 0x00CC63A4 File Offset: 0x00CC45A4
 		private UniTask CreateBtnStartAsync()
 		{
 			KurotatoSettleView.<CreateBtnStartAsync>d__21 <CreateBtnStartAsync>d__;
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <CreateBtnStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BE0 RID: 232416 RVA: 0x00D77D3B File Offset: 0x00D75F3B
+		// Token: 0x0602DAF0 RID: 187120 RVA: 0x00CC63E7 File Offset: 0x00CC45E7
 		protected override void OnStart()
 		{
 			this.CreateAttrLayout();
@@ -219,31 +218,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.PlaySettlementAudio();
 		}
 
-		// Token: 0x06038BE1 RID: 232417 RVA: 0x00D77D79 File Offset: 0x00D75F79
+		// Token: 0x0602DAF1 RID: 187121 RVA: 0x00CC6425 File Offset: 0x00CC4625
 		private void CreateAttrLayout()
 		{
 			this.AttrLayout = new GenericLayout<AttributeItem, IKurotatoRoleSkillInfo>(base.GetGridLayout(5), new Func<AttributeItem>(this.InitAttrItem), null, false, true);
 		}
 
-		// Token: 0x06038BE2 RID: 232418 RVA: 0x00D77D9C File Offset: 0x00D75F9C
+		// Token: 0x0602DAF2 RID: 187122 RVA: 0x00CC6448 File Offset: 0x00CC4648
 		private void CreateSkillScrollList()
 		{
 			this.SkillScrollList = new GenericScrollViewNew<SkillItem, string>(base.GetScrollViewWithScrollbar(8), new Func<SkillItem>(this.InitSkillItem), null, false, null);
 		}
 
-		// Token: 0x06038BE3 RID: 232419 RVA: 0x00D77DBF File Offset: 0x00D75FBF
+		// Token: 0x0602DAF3 RID: 187123 RVA: 0x00CC646B File Offset: 0x00CC466B
 		private AttributeItem InitAttrItem()
 		{
 			return new AttributeItem();
 		}
 
-		// Token: 0x06038BE4 RID: 232420 RVA: 0x00D77DC6 File Offset: 0x00D75FC6
+		// Token: 0x0602DAF4 RID: 187124 RVA: 0x00CC6472 File Offset: 0x00CC4672
 		private SkillItem InitSkillItem()
 		{
 			return new SkillItem();
 		}
 
-		// Token: 0x06038BE5 RID: 232421 RVA: 0x00D77DD0 File Offset: 0x00D75FD0
+		// Token: 0x0602DAF5 RID: 187125 RVA: 0x00CC647C File Offset: 0x00CC467C
 		private void RefreshAttrList()
 		{
 			IKurotatoSettlementData settlementData = KurotatoModel.Instance.GetSettlementData();
@@ -270,19 +269,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.AttrLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06038BE6 RID: 232422 RVA: 0x00D77EC8 File Offset: 0x00D760C8
+		// Token: 0x0602DAF6 RID: 187126 RVA: 0x00CC6574 File Offset: 0x00CC4774
 		private void RefreshSkillList()
 		{
 			int roleId = KurotatoModel.Instance.GetRoleId();
 			KurotatoCharacter value = KurotatoConfig.Instance.GetCharacterById(roleId).Value;
 			List<string> data = new List<string>
 			{
-				KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false)
+				KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false)
 			};
 			this.SkillScrollList.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038BE7 RID: 232423 RVA: 0x00D77F2C File Offset: 0x00D7612C
+		// Token: 0x0602DAF7 RID: 187127 RVA: 0x00CC65D8 File Offset: 0x00CC47D8
 		private void RefreshRoleInfo()
 		{
 			int roleId = KurotatoModel.Instance.GetRoleId();
@@ -303,7 +302,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(3).SetText(ConfigMultiTextLang.GetLocalTextNew("Kurotato_Lv", null) + KurotatoModel.Instance.BattleData.GetRoleLevel().ToString(), true);
 		}
 
-		// Token: 0x06038BE8 RID: 232424 RVA: 0x00D7805D File Offset: 0x00D7625D
+		// Token: 0x0602DAF8 RID: 187128 RVA: 0x00CC6709 File Offset: 0x00CC4909
 		private void RefreshRoleAttrInfo()
 		{
 			GenericLayout<AttributeItem, IKurotatoRoleSkillInfo> attrLayout = this.AttrLayout;
@@ -314,7 +313,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetItem(7).SetUIActive(this.IsShowingSkill);
 		}
 
-		// Token: 0x06038BE9 RID: 232425 RVA: 0x00D7808B File Offset: 0x00D7628B
+		// Token: 0x0602DAF9 RID: 187129 RVA: 0x00CC6737 File Offset: 0x00CC4937
 		private void RefreshTitle()
 		{
 			if (this.PageState == EKurotatoSettlePageState.Unlock)
@@ -325,7 +324,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(16).ShowTextNew("Kurotato_FinishprefabTilte_All");
 		}
 
-		// Token: 0x06038BEA RID: 232426 RVA: 0x00D780BC File Offset: 0x00D762BC
+		// Token: 0x0602DAFA RID: 187130 RVA: 0x00CC6768 File Offset: 0x00CC4968
 		private void PlaySettlementAudio()
 		{
 			if (this.IsEndlessLevel)
@@ -338,7 +337,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			AudioSystem.Instance.PostEvent(flag ? "play_ui_tudou_settlement_success_start" : "play_ui_tudou_settlement_fail_start");
 		}
 
-		// Token: 0x06038BEB RID: 232427 RVA: 0x00D78114 File Offset: 0x00D76314
+		// Token: 0x0602DAFB RID: 187131 RVA: 0x00CC67C0 File Offset: 0x00CC49C0
 		private void RefreshButtons()
 		{
 			this.BtnNextPage.GetRootItem().SetUIActive(this.PageState == EKurotatoSettlePageState.Unlock);
@@ -353,7 +352,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.BtnStart.SetLocalTextNew("Kurotato_finishbutton_back", Array.Empty<object>());
 		}
 
-		// Token: 0x06038BEC RID: 232428 RVA: 0x00D781C4 File Offset: 0x00D763C4
+		// Token: 0x0602DAFC RID: 187132 RVA: 0x00CC6870 File Offset: 0x00CC4A70
 		private void RefreshShare()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -373,7 +372,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06038BED RID: 232429 RVA: 0x00D78210 File Offset: 0x00D76410
+		// Token: 0x0602DAFD RID: 187133 RVA: 0x00CC68BC File Offset: 0x00CC4ABC
 		private void SetShareState(bool isShow)
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -407,7 +406,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			item2.SetUIActive(isShow);
 		}
 
-		// Token: 0x06038BEE RID: 232430 RVA: 0x00D78290 File Offset: 0x00D76490
+		// Token: 0x0602DAFE RID: 187134 RVA: 0x00CC693C File Offset: 0x00CC4B3C
 		private void OpenShareView()
 		{
 			UiAsyncTask task = new UiAsyncTask("OpenShareView", delegate()
@@ -422,7 +421,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06038BEF RID: 232431 RVA: 0x00D782C4 File Offset: 0x00D764C4
+		// Token: 0x0602DAFF RID: 187135 RVA: 0x00CC6970 File Offset: 0x00CC4B70
 		private UniTask OpenShareViewAsync()
 		{
 			KurotatoSettleView.<OpenShareViewAsync>d__37 <OpenShareViewAsync>d__;
@@ -433,38 +432,38 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			return <OpenShareViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038BF0 RID: 232432 RVA: 0x00D78307 File Offset: 0x00D76507
+		// Token: 0x0602DB00 RID: 187136 RVA: 0x00CC69B3 File Offset: 0x00CC4BB3
 		private void OnClickBtnShare()
 		{
 			this.OpenShareView();
 		}
 
-		// Token: 0x06038BF1 RID: 232433 RVA: 0x00D7830F File Offset: 0x00D7650F
+		// Token: 0x0602DB01 RID: 187137 RVA: 0x00CC69BB File Offset: 0x00CC4BBB
 		private void OnFirstShare()
 		{
 			this.RefreshShare();
 		}
 
-		// Token: 0x06038BF2 RID: 232434 RVA: 0x00D78317 File Offset: 0x00D76517
+		// Token: 0x0602DB02 RID: 187138 RVA: 0x00CC69C3 File Offset: 0x00CC4BC3
 		private void OnClickBtnSwitch()
 		{
 			this.IsShowingSkill = !this.IsShowingSkill;
 			this.RefreshRoleAttrInfo();
 		}
 
-		// Token: 0x0401DC4F RID: 121935
+		// Token: 0x040186E5 RID: 100069
 		private readonly KurotatoSettleRightPanel RightPanel = new KurotatoSettleRightPanel();
 
-		// Token: 0x0401DC50 RID: 121936
+		// Token: 0x040186E6 RID: 100070
 		private readonly ButtonItem BtnNextPage = new ButtonItem(null);
 
-		// Token: 0x0401DC51 RID: 121937
+		// Token: 0x040186E7 RID: 100071
 		private readonly ButtonItem BtnExit = new ButtonItem(null);
 
-		// Token: 0x0401DC52 RID: 121938
+		// Token: 0x040186E8 RID: 100072
 		private readonly ButtonItem BtnStart = new ButtonItem(null);
 
-		// Token: 0x0401DC53 RID: 121939
+		// Token: 0x040186E9 RID: 100073
 		[Nullable(new byte[]
 		{
 			2,
@@ -473,7 +472,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 		})]
 		private GenericLayout<AttributeItem, IKurotatoRoleSkillInfo> AttrLayout;
 
-		// Token: 0x0401DC54 RID: 121940
+		// Token: 0x040186EA RID: 100074
 		[Nullable(new byte[]
 		{
 			2,
@@ -482,74 +481,74 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 		})]
 		private GenericScrollViewNew<SkillItem, string> SkillScrollList;
 
-		// Token: 0x0401DC55 RID: 121941
+		// Token: 0x040186EB RID: 100075
 		private bool IsShowingSkill;
 
-		// Token: 0x0401DC56 RID: 121942
+		// Token: 0x040186EC RID: 100076
 		private EKurotatoSettlePageState PageState;
 
-		// Token: 0x0401DC57 RID: 121943
+		// Token: 0x040186ED RID: 100077
 		private int NextLevelId;
 
-		// Token: 0x0401DC58 RID: 121944
+		// Token: 0x040186EE RID: 100078
 		private string PassTime = "";
 
-		// Token: 0x0401DC59 RID: 121945
+		// Token: 0x040186EF RID: 100079
 		private bool IsEndlessLevel;
 
-		// Token: 0x0200B8F9 RID: 47353
+		// Token: 0x0200A31A RID: 41754
 		[NullableContext(0)]
 		private class EComps
 		{
-			// Token: 0x04037F21 RID: 229153
+			// Token: 0x04032931 RID: 207153
 			public const int SpineRole = 0;
 
-			// Token: 0x04037F22 RID: 229154
+			// Token: 0x04032932 RID: 207154
 			public const int BtnShare = 1;
 
-			// Token: 0x04037F23 RID: 229155
+			// Token: 0x04032933 RID: 207155
 			public const int TextName = 2;
 
-			// Token: 0x04037F24 RID: 229156
+			// Token: 0x04032934 RID: 207156
 			public const int TextLv = 3;
 
-			// Token: 0x04037F25 RID: 229157
+			// Token: 0x04032935 RID: 207157
 			public const int BtnSwitch = 4;
 
-			// Token: 0x04037F26 RID: 229158
+			// Token: 0x04032936 RID: 207158
 			public const int PanelGrid = 5;
 
-			// Token: 0x04037F27 RID: 229159
+			// Token: 0x04032937 RID: 207159
 			public const int PanelAttribute = 6;
 
-			// Token: 0x04037F28 RID: 229160
+			// Token: 0x04032938 RID: 207160
 			public const int PanelSkill = 7;
 
-			// Token: 0x04037F29 RID: 229161
+			// Token: 0x04032939 RID: 207161
 			public const int ScrollSkill = 8;
 
-			// Token: 0x04037F2A RID: 229162
+			// Token: 0x0403293A RID: 207162
 			public const int PanelInfo = 9;
 
-			// Token: 0x04037F2B RID: 229163
+			// Token: 0x0403293B RID: 207163
 			public const int PanelRight = 10;
 
-			// Token: 0x04037F2C RID: 229164
+			// Token: 0x0403293C RID: 207164
 			public const int PanelBtn = 11;
 
-			// Token: 0x04037F2D RID: 229165
+			// Token: 0x0403293D RID: 207165
 			public const int BtnNextPage = 12;
 
-			// Token: 0x04037F2E RID: 229166
+			// Token: 0x0403293E RID: 207166
 			public const int BtnExit = 13;
 
-			// Token: 0x04037F2F RID: 229167
+			// Token: 0x0403293F RID: 207167
 			public const int BtnStart = 14;
 
-			// Token: 0x04037F30 RID: 229168
+			// Token: 0x04032940 RID: 207168
 			public const int ItemFirstShareBubble = 15;
 
-			// Token: 0x04037F31 RID: 229169
+			// Token: 0x04032941 RID: 207169
 			public const int TextTittle = 16;
 		}
 	}

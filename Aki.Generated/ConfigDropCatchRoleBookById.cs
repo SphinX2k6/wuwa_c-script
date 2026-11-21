@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200023D RID: 573
+	// Token: 0x0200024F RID: 591
 	public class ConfigDropCatchRoleBookById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D72 RID: 3442 RVA: 0x000A585B File Offset: 0x000A3A5B
+		// Token: 0x06000DDE RID: 3550 RVA: 0x000AB793 File Offset: 0x000A9993
 		static ConfigDropCatchRoleBookById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDropCatchRoleBookById.CreateStaticDefaultValue), new Action(ConfigDropCatchRoleBookById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D73 RID: 3443 RVA: 0x000A587C File Offset: 0x000A3A7C
+		// Token: 0x06000DDF RID: 3551 RVA: 0x000AB7B4 File Offset: 0x000A99B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDropCatchRoleBookById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D74 RID: 3444 RVA: 0x000A58FB File Offset: 0x000A3AFB
+		// Token: 0x06000DE0 RID: 3552 RVA: 0x000AB833 File Offset: 0x000A9A33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDropCatchRoleBookById.LogPair = null;
 			ConfigDropCatchRoleBookById.HandleId = 0;
 		}
 
-		// Token: 0x06000D75 RID: 3445 RVA: 0x000A5909 File Offset: 0x000A3B09
+		// Token: 0x06000DE1 RID: 3553 RVA: 0x000AB841 File Offset: 0x000A9A41
 		public static void Init()
 		{
 			ConfigDropCatchRoleBookById.HandleId = ConfigCommon.InitDataStatement(ConfigDropCatchRoleBookById.HandleId, "db_dropcatch.db", "select BinData from `DropCatchRoleBook` where Id=?");
 		}
 
-		// Token: 0x06000D76 RID: 3446 RVA: 0x000A5924 File Offset: 0x000A3B24
+		// Token: 0x06000DE2 RID: 3554 RVA: 0x000AB85C File Offset: 0x000A9A5C
 		public static DropCatchRoleBook? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDropCatchRoleBookById.HandleId, ConfigDropCatchRoleBookById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DropCatchRoleBook?(rootAsDropCatchRoleBook);
 		}
 
-		// Token: 0x04000F8F RID: 3983
+		// Token: 0x0400100D RID: 4109
 		private const string DB = "db_dropcatch.db";
 
-		// Token: 0x04000F90 RID: 3984
+		// Token: 0x0400100E RID: 4110
 		private const string FILE = "j.接金币活动.xlsx";
 
-		// Token: 0x04000F91 RID: 3985
+		// Token: 0x0400100F RID: 4111
 		private const string TABLE = "DropCatchRoleBook";
 
-		// Token: 0x04000F92 RID: 3986
+		// Token: 0x04001010 RID: 4112
 		private const string COMMAND = "select BinData from `DropCatchRoleBook` where Id=?";
 
-		// Token: 0x04000F93 RID: 3987
+		// Token: 0x04001011 RID: 4113
 		private const string KEY_PREFIX = "DropCatchRoleBookById";
 
-		// Token: 0x04000F94 RID: 3988
+		// Token: 0x04001012 RID: 4114
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000F95 RID: 3989
+		// Token: 0x04001013 RID: 4115
 		private static int HandleId;
 	}
 }

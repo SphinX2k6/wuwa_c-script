@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200258B RID: 9611
+// Token: 0x02001A76 RID: 6774
 public enum EPhotoSubOptionBanType
 {
-	// Token: 0x040092C5 RID: 37573
+	// Token: 0x0400941D RID: 37917
 	Hide = 1,
-	// Token: 0x040092C6 RID: 37574
+	// Token: 0x0400941E RID: 37918
 	Lock
 }

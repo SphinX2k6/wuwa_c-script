@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Movement
 {
-	// Token: 0x02005390 RID: 21392
+	// Token: 0x02004373 RID: 17267
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MoveTriggerController : ControllerBase
 	{
-		// Token: 0x06036A65 RID: 223845 RVA: 0x00CEF157 File Offset: 0x00CED357
+		// Token: 0x0602B9AB RID: 178603 RVA: 0x00C3E07F File Offset: 0x00C3C27F
 		protected override bool OnClear()
 		{
 			this.ClearController();
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Movement
 			return true;
 		}
 
-		// Token: 0x06036A66 RID: 223846 RVA: 0x00CEF17C File Offset: 0x00CED37C
+		// Token: 0x0602B9AC RID: 178604 RVA: 0x00C3E0A4 File Offset: 0x00C3C2A4
 		protected override bool OnInit()
 		{
 			AKuroMoveTriggerController.UnRegisterController();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Movement
 			return true;
 		}
 
-		// Token: 0x06036A67 RID: 223847 RVA: 0x00CEF1A0 File Offset: 0x00CED3A0
+		// Token: 0x0602B9AD RID: 178605 RVA: 0x00C3E0C8 File Offset: 0x00C3C2C8
 		private void OnWorldDone()
 		{
 			this.ClearController();
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.Movement
 			}
 		}
 
-		// Token: 0x06036A68 RID: 223848 RVA: 0x00CEF213 File Offset: 0x00CED413
+		// Token: 0x0602B9AE RID: 178606 RVA: 0x00C3E13B File Offset: 0x00C3C33B
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearController();
 			return true;
 		}
 
-		// Token: 0x06036A69 RID: 223849 RVA: 0x00CEF21C File Offset: 0x00CED41C
+		// Token: 0x0602B9AF RID: 178607 RVA: 0x00C3E144 File Offset: 0x00C3C344
 		public void ClearController()
 		{
 			if (this.UeController != null)
@@ -58,8 +58,8 @@ namespace CSharpScript.Game.Module.Movement
 			this.UeController = null;
 		}
 
-		// Token: 0x170083A1 RID: 33697
-		// (get) Token: 0x06036A6A RID: 223850 RVA: 0x00CEF249 File Offset: 0x00CED449
+		// Token: 0x1700576D RID: 22381
+		// (get) Token: 0x0602B9B0 RID: 178608 RVA: 0x00C3E171 File Offset: 0x00C3C371
 		public static MoveTriggerController Instance
 		{
 			get
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Movement
 			}
 		}
 
-		// Token: 0x06036A6B RID: 223851 RVA: 0x00CEF250 File Offset: 0x00CED450
+		// Token: 0x0602B9B1 RID: 178609 RVA: 0x00C3E178 File Offset: 0x00C3C378
 		public static MoveTriggerController GetOrCreateInstance()
 		{
 			if (MoveTriggerController._Instance == null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Movement
 			return MoveTriggerController._Instance;
 		}
 
-		// Token: 0x06036A6C RID: 223852 RVA: 0x00CEF264 File Offset: 0x00CED464
+		// Token: 0x0602B9B2 RID: 178610 RVA: 0x00C3E18C File Offset: 0x00C3C38C
 		public static bool CreateInstance()
 		{
 			if (MoveTriggerController._Instance != null)
@@ -89,24 +89,24 @@ namespace CSharpScript.Game.Module.Movement
 			return true;
 		}
 
-		// Token: 0x06036A6D RID: 223853 RVA: 0x00CEF27A File Offset: 0x00CED47A
+		// Token: 0x0602B9B3 RID: 178611 RVA: 0x00C3E1A2 File Offset: 0x00C3C3A2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036A6E RID: 223854 RVA: 0x00CEF27C File Offset: 0x00CED47C
+		// Token: 0x0602B9B4 RID: 178612 RVA: 0x00C3E1A4 File Offset: 0x00C3C3A4
 		public static void ResetStaticDefaultValue()
 		{
 			MoveTriggerController._Instance = null;
 		}
 
-		// Token: 0x06036A6F RID: 223855 RVA: 0x00CEF284 File Offset: 0x00CED484
+		// Token: 0x0602B9B5 RID: 178613 RVA: 0x00C3E1AC File Offset: 0x00C3C3AC
 		static MoveTriggerController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MoveTriggerController.CreateStaticDefaultValue), new Action(MoveTriggerController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06036A71 RID: 223857 RVA: 0x00CEF2AC File Offset: 0x00CED4AC
+		// Token: 0x0602B9B7 RID: 178615 RVA: 0x00C3E1D4 File Offset: 0x00C3C3D4
 		[CompilerGenerated]
 		internal static void <OnWorldDone>g__OverlapTaskCallback|3_0([Nullable(new byte[]
 		{
@@ -173,11 +173,11 @@ namespace CSharpScript.Game.Module.Movement
 			}
 		}
 
-		// Token: 0x0401CE01 RID: 118273
+		// Token: 0x04017899 RID: 96409
 		[Nullable(2)]
 		private AKuroMoveTriggerController UeController;
 
-		// Token: 0x0401CE02 RID: 118274
+		// Token: 0x0401789A RID: 96410
 		[Nullable(2)]
 		private static MoveTriggerController _Instance;
 	}

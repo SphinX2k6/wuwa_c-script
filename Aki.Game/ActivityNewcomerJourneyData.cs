@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
 using Google.Protobuf.Collections;
 
-// Token: 0x020013A0 RID: 5024
+// Token: 0x02000854 RID: 2132
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityNewcomerJourneyData : ActivityBaseData
 {
-	// Token: 0x06008D10 RID: 36112 RVA: 0x001E4478 File Offset: 0x001E2678
+	// Token: 0x060060A6 RID: 24742 RVA: 0x001ED094 File Offset: 0x001EB294
 	protected override void PhraseEx(ActivityData data)
 	{
 		if (data.NewbieAdventureV2Pb == null)
@@ -50,7 +49,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, base.Id);
 	}
 
-	// Token: 0x06008D11 RID: 36113 RVA: 0x001E4644 File Offset: 0x001E2844
+	// Token: 0x060060A7 RID: 24743 RVA: 0x001ED260 File Offset: 0x001EB460
 	public override bool GetExDataRedPointShowState()
 	{
 		foreach (int chapterId in this.ChapterDataMap.Keys)
@@ -63,8 +62,8 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06008D12 RID: 36114 RVA: 0x001E46A8 File Offset: 0x001E28A8
-	public void UpdateChapterData(List<NewbieAdventureV2ChapterPb> dataList)
+	// Token: 0x060060A8 RID: 24744 RVA: 0x001ED2C4 File Offset: 0x001EB4C4
+	public void UpdateChapterData(IEnumerable<NewbieAdventureV2ChapterPb> dataList)
 	{
 		foreach (NewbieAdventureV2ChapterPb newbieAdventureV2ChapterPb in dataList)
 		{
@@ -88,7 +87,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06008D13 RID: 36115 RVA: 0x001E4774 File Offset: 0x001E2974
+	// Token: 0x060060A9 RID: 24745 RVA: 0x001ED38C File Offset: 0x001EB58C
 	public List<int> GetPreviewCharacterList()
 	{
 		if (this.PreviewCharacterList == null || this.PreviewCharacterList.Count <= 0)
@@ -107,7 +106,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return this.PreviewCharacterList;
 	}
 
-	// Token: 0x06008D14 RID: 36116 RVA: 0x001E4824 File Offset: 0x001E2A24
+	// Token: 0x060060AA RID: 24746 RVA: 0x001ED43C File Offset: 0x001EB63C
 	public bool GetCanGetCharacter()
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -120,14 +119,14 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return chapterById != null && chapterById.Value.RewardUnlockCount <= chapterCompleteNum && !newcomerJourneyChapterData.Data.RewardRoleId;
 	}
 
-	// Token: 0x06008D15 RID: 36117 RVA: 0x001E4894 File Offset: 0x001E2A94
+	// Token: 0x060060AB RID: 24747 RVA: 0x001ED4AC File Offset: 0x001EB6AC
 	public bool GetCharacterHasGet()
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
 		return this.ChapterDataMap.TryGetValue(this.ChooseRoleChapterId, out newcomerJourneyChapterData) && newcomerJourneyChapterData.Data.RewardRoleId;
 	}
 
-	// Token: 0x06008D16 RID: 36118 RVA: 0x001E48C4 File Offset: 0x001E2AC4
+	// Token: 0x060060AC RID: 24748 RVA: 0x001ED4DC File Offset: 0x001EB6DC
 	public bool GetChapterCanGetReward(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -140,14 +139,14 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return chapterById != null && chapterById.Value.RewardUnlockCount <= chapterCompleteNum && !newcomerJourneyChapterData.Data.RewardDrop && !this.GetChapterIsLock(chapterId);
 	}
 
-	// Token: 0x06008D17 RID: 36119 RVA: 0x001E4934 File Offset: 0x001E2B34
+	// Token: 0x060060AD RID: 24749 RVA: 0x001ED54C File Offset: 0x001EB74C
 	public bool GetChapterRewardHasGet(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
 		return this.ChapterDataMap.TryGetValue(chapterId, out newcomerJourneyChapterData) && newcomerJourneyChapterData.Data.RewardDrop;
 	}
 
-	// Token: 0x06008D18 RID: 36120 RVA: 0x001E4960 File Offset: 0x001E2B60
+	// Token: 0x060060AE RID: 24750 RVA: 0x001ED578 File Offset: 0x001EB778
 	public bool GetChapterHasReward(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -178,7 +177,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008D19 RID: 36121 RVA: 0x001E49E8 File Offset: 0x001E2BE8
+	// Token: 0x060060AF RID: 24751 RVA: 0x001ED600 File Offset: 0x001EB800
 	public List<TItem> GetChapterRewardList(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -197,7 +196,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008D1A RID: 36122 RVA: 0x001E4AA4 File Offset: 0x001E2CA4
+	// Token: 0x060060B0 RID: 24752 RVA: 0x001ED6BC File Offset: 0x001EB8BC
 	public List<NewcomerJourneyTaskData> GetChapterTaskList(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -219,7 +218,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return taskDataList;
 	}
 
-	// Token: 0x06008D1B RID: 36123 RVA: 0x001E4AF4 File Offset: 0x001E2CF4
+	// Token: 0x060060B1 RID: 24753 RVA: 0x001ED70C File Offset: 0x001EB90C
 	public List<AdventureTaskChapterV2> GetChapterList()
 	{
 		List<AdventureTaskChapterV2> list = new List<AdventureTaskChapterV2>();
@@ -231,7 +230,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x06008D1C RID: 36124 RVA: 0x001E4B94 File Offset: 0x001E2D94
+	// Token: 0x060060B2 RID: 24754 RVA: 0x001ED7AC File Offset: 0x001EB9AC
 	public int GetChapterCompleteNum(int chapterId)
 	{
 		NewcomerJourneyChapterData newcomerJourneyChapterData;
@@ -239,10 +238,21 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		{
 			return 0;
 		}
-		return newcomerJourneyChapterData.Data.Task.Count((ConditionTask task) => task.Status >= ConditionTaskState.ConditionTaskTaken);
+		int num = 0;
+		using (IEnumerator<ConditionTask> enumerator = newcomerJourneyChapterData.Data.Task.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current.Status >= ConditionTaskState.ConditionTaskTaken)
+				{
+					num++;
+				}
+			}
+		}
+		return num;
 	}
 
-	// Token: 0x06008D1D RID: 36125 RVA: 0x001E4BF0 File Offset: 0x001E2DF0
+	// Token: 0x060060B3 RID: 24755 RVA: 0x001ED824 File Offset: 0x001EBA24
 	public bool GetChapterTaskAllComplete(int chapterId)
 	{
 		int chapterCompleteNum = this.GetChapterCompleteNum(chapterId);
@@ -250,7 +260,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return this.ChapterDataMap.TryGetValue(chapterId, out newcomerJourneyChapterData) && newcomerJourneyChapterData.Data.Task.Count <= chapterCompleteNum && !this.GetChapterIsLock(chapterId);
 	}
 
-	// Token: 0x06008D1E RID: 36126 RVA: 0x001E4C3C File Offset: 0x001E2E3C
+	// Token: 0x060060B4 RID: 24756 RVA: 0x001ED870 File Offset: 0x001EBA70
 	public bool GetChapterIsLock(int chapterId)
 	{
 		AdventureTaskChapterV2? chapterById = ActivityNewcomerJourneyConfig.Instance.GetChapterById(chapterId);
@@ -275,7 +285,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return adventureTaskChapterV == null || this.GetChapterCompleteNum(adventureTaskChapterV.Value.Id) < chapterById.Value.LevelUnlockCount;
 	}
 
-	// Token: 0x06008D1F RID: 36127 RVA: 0x001E4D3C File Offset: 0x001E2F3C
+	// Token: 0x060060B5 RID: 24757 RVA: 0x001ED970 File Offset: 0x001EBB70
 	public int GetLastUnLockChapterIndex()
 	{
 		List<AdventureTaskChapterV2> chapterList = this.GetChapterList();
@@ -294,7 +304,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008D20 RID: 36128 RVA: 0x001E4DB4 File Offset: 0x001E2FB4
+	// Token: 0x060060B6 RID: 24758 RVA: 0x001ED9E8 File Offset: 0x001EBBE8
 	protected override bool GetExDataFinishShowState()
 	{
 		bool flag = true;
@@ -309,7 +319,7 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return flag && this.GetCharacterHasGet();
 	}
 
-	// Token: 0x06008D22 RID: 36130 RVA: 0x001E4E42 File Offset: 0x001E3042
+	// Token: 0x060060B8 RID: 24760 RVA: 0x001EDA76 File Offset: 0x001EBC76
 	[CompilerGenerated]
 	internal static int <GetChapterTaskList>g__GetPriority|13_0(ConditionTaskState status)
 	{
@@ -323,13 +333,13 @@ public class ActivityNewcomerJourneyData : ActivityBaseData
 		return 2;
 	}
 
-	// Token: 0x04003E83 RID: 16003
+	// Token: 0x04003F1B RID: 16155
 	private readonly Dictionary<int, NewcomerJourneyChapterData> ChapterDataMap = new Dictionary<int, NewcomerJourneyChapterData>();
 
-	// Token: 0x04003E84 RID: 16004
+	// Token: 0x04003F1C RID: 16156
 	[Nullable(2)]
 	private List<int> PreviewCharacterList;
 
-	// Token: 0x04003E85 RID: 16005
+	// Token: 0x04003F1D RID: 16157
 	public int ChooseRoleChapterId = -1;
 }

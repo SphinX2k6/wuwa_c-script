@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E04 RID: 3588
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F00 RID: 3840
 	public class IWuWaGoMovableGridStatePos
 	{
-		// Token: 0x0600513F RID: 20799 RVA: 0x000C87C6 File Offset: 0x000C69C6
+		// Token: 0x06005666 RID: 22118 RVA: 0x000D408E File Offset: 0x000D228E
 		public static IWuWaGoMovableGridStatePos Create(IWuWaGoMovableGridStatePos? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AF4 RID: 6900
-		// (get) Token: 0x06005140 RID: 20800 RVA: 0x000C87E5 File Offset: 0x000C69E5
+		// Token: 0x17001C61 RID: 7265
+		// (get) Token: 0x06005667 RID: 22119 RVA: 0x000D40AD File Offset: 0x000D22AD
 		public virtual string EntityState
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AF5 RID: 6901
-		// (get) Token: 0x06005141 RID: 20801 RVA: 0x000C87F2 File Offset: 0x000C69F2
+		// Token: 0x17001C62 RID: 7266
+		// (get) Token: 0x06005668 RID: 22120 RVA: 0x000D40BA File Offset: 0x000D22BA
 		public virtual VectorInfo GridPos
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EC1 RID: 11969
+		// Token: 0x04003189 RID: 12681
 		private IWuWaGoMovableGridStatePos Instance;
 
-		// Token: 0x04002EC2 RID: 11970
+		// Token: 0x0400318A RID: 12682
 		[Nullable(2)]
 		private VectorInfo _GridPosCache;
 
-		// Token: 0x04002EC3 RID: 11971
+		// Token: 0x0400318B RID: 12683
 		private bool _GridPosInited;
 	}
 }

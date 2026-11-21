@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC0 RID: 28096
+	// Token: 0x02005F3F RID: 24383
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiTaskPlayBubble : LevelAiTask
 	{
-		// Token: 0x060448C2 RID: 280770 RVA: 0x010E7890 File Offset: 0x010E5A90
+		// Token: 0x0603AA26 RID: 240166 RVA: 0x01091AB8 File Offset: 0x0108FCB8
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			PlayBubble playBubble = this.Params as PlayBubble;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.Succeeded;
 		}
 
-		// Token: 0x060448C3 RID: 280771 RVA: 0x010E7934 File Offset: 0x010E5B34
+		// Token: 0x0603AA27 RID: 240167 RVA: 0x01091B5C File Offset: 0x0108FD5C
 		private CharacterDynamicFlowData CreateCharacterFlowDataFromPbDataId(int pbDataId, PlayBubble @params)
 		{
 			CharacterDynamicFlowData characterDynamicFlowData = new CharacterDynamicFlowData();
@@ -53,6 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 				Flow = @params.Flow,
 				WaitTime = new int?(0),
 				RedDot = new bool?(false),
+				IsRangeFollowEntity = @params.IsRangeFollowEntity,
 				IsAudioOccludedByScene = @params.IsAudioOccludedByScene
 			};
 			DynamicFlowActorInfo masterInfo = new DynamicFlowActorInfo();
@@ -67,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return characterDynamicFlowData;
 		}
 
-		// Token: 0x060448C4 RID: 280772 RVA: 0x010E79DC File Offset: 0x010E5BDC
+		// Token: 0x0603AA28 RID: 240168 RVA: 0x01091C10 File Offset: 0x0108FE10
 		private CharacterDynamicFlowData CreateCharacterFlowDataFromCreatureId(long creatureId, PlayBubble @params)
 		{
 			CharacterDynamicFlowData characterDynamicFlowData = new CharacterDynamicFlowData();
@@ -76,6 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 				EntityIds = new List<int>(),
 				Flow = @params.Flow,
 				WaitTime = new int?(0),
+				IsRangeFollowEntity = @params.IsRangeFollowEntity,
 				IsAudioOccludedByScene = @params.IsAudioOccludedByScene
 			};
 			DynamicFlowActorInfo masterInfo = new DynamicFlowActorInfo();

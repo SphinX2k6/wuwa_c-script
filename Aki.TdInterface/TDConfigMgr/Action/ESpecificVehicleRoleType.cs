@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016AB RID: 5803
+	// Token: 0x02001824 RID: 6180
 	public enum ESpecificVehicleRoleType
 	{
-		// Token: 0x04004DE1 RID: 19937
+		// Token: 0x040051FB RID: 20987
 		FishingBoat = 10001
 	}
 }

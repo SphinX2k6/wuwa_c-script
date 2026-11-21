@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007407 RID: 29703
+	// Token: 0x02007BF1 RID: 31729
 	public class IToggleEntityElementalAbilityT
 	{
-		// Token: 0x1700E19B RID: 57755
-		// (get) Token: 0x06035F6B RID: 221035 RVA: 0x00757BB8 File Offset: 0x00755DB8
-		// (set) Token: 0x06035F6C RID: 221036 RVA: 0x00757BC0 File Offset: 0x00755DC0
+		// Token: 0x1700EDB0 RID: 60848
+		// (get) Token: 0x0603931E RID: 234270 RVA: 0x007BA32C File Offset: 0x007B852C
+		// (set) Token: 0x0603931F RID: 234271 RVA: 0x007BA334 File Offset: 0x007B8534
 		public int EntityId { get; set; }
 
-		// Token: 0x1700E19C RID: 57756
-		// (get) Token: 0x06035F6D RID: 221037 RVA: 0x00757BC9 File Offset: 0x00755DC9
-		// (set) Token: 0x06035F6E RID: 221038 RVA: 0x00757BD1 File Offset: 0x00755DD1
+		// Token: 0x1700EDB1 RID: 60849
+		// (get) Token: 0x06039320 RID: 234272 RVA: 0x007BA33D File Offset: 0x007B853D
+		// (set) Token: 0x06039321 RID: 234273 RVA: 0x007BA345 File Offset: 0x007B8545
 		public bool Enable { get; set; }
 
-		// Token: 0x06035F6F RID: 221039 RVA: 0x00757BDA File Offset: 0x00755DDA
+		// Token: 0x06039322 RID: 234274 RVA: 0x007BA34E File Offset: 0x007B854E
 		public IToggleEntityElementalAbilityT()
 		{
 			this.EntityId = 0;

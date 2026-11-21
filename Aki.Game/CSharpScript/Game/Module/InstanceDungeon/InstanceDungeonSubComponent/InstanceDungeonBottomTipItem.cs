@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x02005895 RID: 22677
+	// Token: 0x0200486D RID: 18541
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 	})]
 	public class InstanceDungeonBottomTipItem : GridProxyAbstract<InstanceDungeonBottomTipItemData>
 	{
-		// Token: 0x06039B48 RID: 236360 RVA: 0x00DB68BC File Offset: 0x00DB4ABC
+		// Token: 0x0602EA6B RID: 191083 RVA: 0x00D057D4 File Offset: 0x00D039D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039B49 RID: 236361 RVA: 0x00DB6904 File Offset: 0x00DB4B04
+		// Token: 0x0602EA6C RID: 191084 RVA: 0x00D0581C File Offset: 0x00D03A1C
 		[NullableContext(1)]
 		public override void Refresh(InstanceDungeonBottomTipItemData data, bool isSelected, int gridIndex)
 		{
@@ -41,10 +41,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200BAEF RID: 47855
+		// Token: 0x0200A508 RID: 42248
 		private enum EComponent
 		{
-			// Token: 0x040387BD RID: 231357
+			// Token: 0x040331BE RID: 209342
 			DescText
 		}
 	}

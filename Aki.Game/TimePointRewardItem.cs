@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001521 RID: 5409
+// Token: 0x020009D9 RID: 2521
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 {
-	// Token: 0x06009A40 RID: 39488 RVA: 0x00215E50 File Offset: 0x00214050
+	// Token: 0x06006E1E RID: 28190 RVA: 0x0021FBEC File Offset: 0x0021DDEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,7 +47,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009A41 RID: 39489 RVA: 0x00215F7C File Offset: 0x0021417C
+	// Token: 0x06006E1F RID: 28191 RVA: 0x0021FD18 File Offset: 0x0021DF18
 	protected override void OnStart()
 	{
 		this.RewardItemGrid = new SmallItemGrid();
@@ -56,7 +56,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		this.RewardItemGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 	}
 
-	// Token: 0x06009A42 RID: 39490 RVA: 0x00215FEC File Offset: 0x002141EC
+	// Token: 0x06006E20 RID: 28192 RVA: 0x0021FD88 File Offset: 0x0021DF88
 	[NullableContext(1)]
 	public override void Refresh(TimePointRewardData data, bool isSelected, int gridIndex)
 	{
@@ -103,7 +103,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		this.RefreshGrid();
 	}
 
-	// Token: 0x06009A43 RID: 39491 RVA: 0x00216148 File Offset: 0x00214348
+	// Token: 0x06006E21 RID: 28193 RVA: 0x0021FEE4 File Offset: 0x0021E0E4
 	private void RefreshGrid()
 	{
 		PropSmallItemGrid parameters = new PropSmallItemGrid
@@ -124,7 +124,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		rewardItemGrid3.SetReceivedVisible(data3 != null && data3.RewardState == ETimePointRewardState.UnlockAndClaimed);
 	}
 
-	// Token: 0x06009A44 RID: 39492 RVA: 0x00216214 File Offset: 0x00214414
+	// Token: 0x06006E22 RID: 28194 RVA: 0x0021FFB0 File Offset: 0x0021E1B0
 	private void SetTime(double timeStamp)
 	{
 		DateTime dataFromTimeStamp = TimeUtil.Instance.GetDataFromTimeStamp(timeStamp * TimeUtil.Instance.Millisecond);
@@ -135,7 +135,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		}));
 	}
 
-	// Token: 0x06009A45 RID: 39493 RVA: 0x00216278 File Offset: 0x00214478
+	// Token: 0x06006E23 RID: 28195 RVA: 0x00220014 File Offset: 0x0021E214
 	private void SetIndex(int index)
 	{
 		UUISprite spriteIndex = base.GetSprite(5);
@@ -151,7 +151,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		});
 	}
 
-	// Token: 0x06009A46 RID: 39494 RVA: 0x002162FC File Offset: 0x002144FC
+	// Token: 0x06006E24 RID: 28196 RVA: 0x00220098 File Offset: 0x0021E298
 	private void SetTextStateChangeColor(bool useChangeColor)
 	{
 		UUIItem text = base.GetText(4);
@@ -159,7 +159,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		text.SetChangeColor(useChangeColor, fcolor);
 	}
 
-	// Token: 0x06009A47 RID: 39495 RVA: 0x0021632A File Offset: 0x0021452A
+	// Token: 0x06006E25 RID: 28197 RVA: 0x002200C6 File Offset: 0x0021E2C6
 	private void OnClickedButton()
 	{
 		TimePointRewardData data = this.Data;
@@ -174,7 +174,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		}
 	}
 
-	// Token: 0x06009A48 RID: 39496 RVA: 0x00216360 File Offset: 0x00214560
+	// Token: 0x06006E26 RID: 28198 RVA: 0x002200FC File Offset: 0x0021E2FC
 	[NullableContext(1)]
 	private void OnClickedGrid(MediumItemGridExtendCallback callback)
 	{
@@ -183,7 +183,7 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		{
 			if (this.RewardItem != null)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null, false);
 			}
 			return;
 		}
@@ -195,38 +195,38 @@ public class TimePointRewardItem : GridProxyAbstract<TimePointRewardData>
 		onClickToGet(this.Data.Id);
 	}
 
-	// Token: 0x040043E6 RID: 17382
+	// Token: 0x0400448C RID: 17548
 	private TimePointRewardData Data;
 
-	// Token: 0x040043E7 RID: 17383
+	// Token: 0x0400448D RID: 17549
 	private SmallItemGrid RewardItemGrid;
 
-	// Token: 0x040043E8 RID: 17384
+	// Token: 0x0400448E RID: 17550
 	private TItem? RewardItem;
 
-	// Token: 0x040043E9 RID: 17385
+	// Token: 0x0400448F RID: 17551
 	public Action<int> OnClickToGet;
 
-	// Token: 0x02007B50 RID: 31568
+	// Token: 0x02006CDB RID: 27867
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040288C0 RID: 166080
+		// Token: 0x04023BFB RID: 146427
 		public const int Button = 0;
 
-		// Token: 0x040288C1 RID: 166081
+		// Token: 0x04023BFC RID: 146428
 		public const int ItemGrid = 1;
 
-		// Token: 0x040288C2 RID: 166082
+		// Token: 0x04023BFD RID: 146429
 		public const int TxtDate = 2;
 
-		// Token: 0x040288C3 RID: 166083
+		// Token: 0x04023BFE RID: 146430
 		public const int ItemCanReceive = 3;
 
-		// Token: 0x040288C4 RID: 166084
+		// Token: 0x04023BFF RID: 146431
 		public const int TxtState = 4;
 
-		// Token: 0x040288C5 RID: 166085
+		// Token: 0x04023C00 RID: 146432
 		public const int SpriteIndex = 5;
 	}
 }

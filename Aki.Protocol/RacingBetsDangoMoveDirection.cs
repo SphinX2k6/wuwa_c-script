@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200156C RID: 5484
+	// Token: 0x020015E2 RID: 5602
 	public enum RacingBetsDangoMoveDirection
 	{
-		// Token: 0x0400A669 RID: 42601
+		// Token: 0x0400AAF6 RID: 43766
 		[OriginalName("DangoForward")]
 		DangoForward,
-		// Token: 0x0400A66A RID: 42602
+		// Token: 0x0400AAF7 RID: 43767
 		[OriginalName("DangoReverse")]
 		DangoReverse
 	}

@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000144 RID: 324
+	// Token: 0x02000157 RID: 343
 	[EnumExtensions]
 	public enum ESplineLine
 	{
-		// Token: 0x0400063F RID: 1599
+		// Token: 0x04000684 RID: 1668
 		Linear,
-		// Token: 0x04000640 RID: 1600
+		// Token: 0x04000685 RID: 1669
 		Curve,
-		// Token: 0x04000641 RID: 1601
+		// Token: 0x04000686 RID: 1670
 		Constant,
-		// Token: 0x04000642 RID: 1602
+		// Token: 0x04000687 RID: 1671
 		CurveCustomTangent
 	}
 }

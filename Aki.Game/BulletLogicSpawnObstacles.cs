@@ -4,7 +4,7 @@ using AkiClient.Game.Aki.TypeScript.Game.NewWorld.Bullet.LogicDataClass;
 using CSharpScript.Game.NewWorld.SceneItem.RefCompController;
 using UnrealEngine;
 
-// Token: 0x02002DD9 RID: 11737
+// Token: 0x02002333 RID: 9011
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,12 +14,12 @@ using UnrealEngine;
 })]
 public class BulletLogicSpawnObstacles : BulletLogicController<LogicDataSpawnObstacles, object>
 {
-	// Token: 0x06018A47 RID: 100935 RVA: 0x0064EC92 File Offset: 0x0064CE92
+	// Token: 0x060162EF RID: 90863 RVA: 0x00674A7E File Offset: 0x00672C7E
 	public BulletLogicSpawnObstacles(LogicDataSpawnObstacles data, Entity entity) : base(data, entity)
 	{
 	}
 
-	// Token: 0x06018A48 RID: 100936 RVA: 0x0064EC9C File Offset: 0x0064CE9C
+	// Token: 0x060162F0 RID: 90864 RVA: 0x00674A88 File Offset: 0x00672C88
 	public override void OnInit()
 	{
 		LogicDataSpawnObstacles logicController = this.LogicController;
@@ -80,7 +80,7 @@ public class BulletLogicSpawnObstacles : BulletLogicController<LogicDataSpawnObs
 		}
 	}
 
-	// Token: 0x06018A49 RID: 100937 RVA: 0x0064EE98 File Offset: 0x0064D098
+	// Token: 0x060162F1 RID: 90865 RVA: 0x00674C84 File Offset: 0x00672E84
 	public override void OnBulletDestroy()
 	{
 		if (this.LogicController.NeedAttach)
@@ -90,7 +90,7 @@ public class BulletLogicSpawnObstacles : BulletLogicController<LogicDataSpawnObs
 		ActorSystem.Instance.Put("BulletLogicSpawnObstacles.OnBulletDestroy", this.Actor, null);
 	}
 
-	// Token: 0x0400B790 RID: 46992
+	// Token: 0x0400BB0B RID: 47883
 	[Nullable(2)]
 	private AActor Actor;
 }

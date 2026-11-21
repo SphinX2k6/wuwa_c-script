@@ -8,12 +8,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x02006434 RID: 25652
+	// Token: 0x020053B2 RID: 21426
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorDecalLinkData : ActivityBaseData
 	{
-		// Token: 0x060407F1 RID: 264177 RVA: 0x00F9BED8 File Offset: 0x00F9A0D8
+		// Token: 0x060354B2 RID: 218290 RVA: 0x00EE2E54 File Offset: 0x00EE1054
 		public MotorDecalLinkData(int activityId)
 		{
 			foreach (MotorDecalIp motorDecalIp in MotorDecalLinkConfig.Instance.GetIpConfigListByActivityId(activityId))
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x060407F2 RID: 264178 RVA: 0x00F9BFBC File Offset: 0x00F9A1BC
+		// Token: 0x060354B3 RID: 218291 RVA: 0x00EE2F38 File Offset: 0x00EE1138
 		protected unsafe override void PhraseEx(ActivityData data)
 		{
 			this.MainViewModel.InitFromActivityDataIfNot(this);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x060407F3 RID: 264179 RVA: 0x00F9C158 File Offset: 0x00F9A358
+		// Token: 0x060354B4 RID: 218292 RVA: 0x00EE30D4 File Offset: 0x00EE12D4
 		public void OnRewardReceiveByTaskIds(IReadOnlyList<int> taskIds)
 		{
 			string message = "领奖成功";
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.MainViewModel.HasRewardCanReceive = this.HasAnyRewardCanReceive();
 		}
 
-		// Token: 0x060407F4 RID: 264180 RVA: 0x00F9C1F0 File Offset: 0x00F9A3F0
+		// Token: 0x060354B5 RID: 218293 RVA: 0x00EE316C File Offset: 0x00EE136C
 		public bool ContainsTaskId(int taskId)
 		{
 			return this.ActivityQuestData.ContainsKey(taskId);
 		}
 
-		// Token: 0x060407F5 RID: 264181 RVA: 0x00F9C200 File Offset: 0x00F9A400
+		// Token: 0x060354B6 RID: 218294 RVA: 0x00EE317C File Offset: 0x00EE137C
 		public unsafe void OnTaskUpdateNotify(MotorDecalUpdateNotify notify)
 		{
 			ConditionTask task = notify.Task;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.MainViewModel.HasRewardCanReceive = this.HasAnyRewardCanReceive();
 		}
 
-		// Token: 0x060407F6 RID: 264182 RVA: 0x00F9C2D7 File Offset: 0x00F9A4D7
+		// Token: 0x060354B7 RID: 218295 RVA: 0x00EE3253 File Offset: 0x00EE1453
 		private EActivityTaskState TaskServerStatus2ClientStatus(ConditionTaskState serverStatus)
 		{
 			switch (serverStatus)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			}
 		}
 
-		// Token: 0x060407F7 RID: 264183 RVA: 0x00F9C2F4 File Offset: 0x00F9A4F4
+		// Token: 0x060354B8 RID: 218296 RVA: 0x00EE3270 File Offset: 0x00EE1470
 		public bool HasAnyRewardCanReceive()
 		{
 			foreach (KeyValuePair<int, global::ActivityTaskData> keyValuePair in this.ActivityQuestData)
@@ -147,13 +147,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return false;
 		}
 
-		// Token: 0x060407F8 RID: 264184 RVA: 0x00F9C358 File Offset: 0x00F9A558
+		// Token: 0x060354B9 RID: 218297 RVA: 0x00EE32D4 File Offset: 0x00EE14D4
 		public override bool GetExDataRedPointShowState()
 		{
 			return !this.GetExDataFinishShowState() && (this.HasAnyRewardCanReceive() || !this.HasFirstRead);
 		}
 
-		// Token: 0x060407F9 RID: 264185 RVA: 0x00F9C378 File Offset: 0x00F9A578
+		// Token: 0x060354BA RID: 218298 RVA: 0x00EE32F4 File Offset: 0x00EE14F4
 		protected override bool GetExDataFinishShowState()
 		{
 			foreach (KeyValuePair<int, global::ActivityTaskData> keyValuePair in this.ActivityQuestData)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			return true;
 		}
 
-		// Token: 0x060407FA RID: 264186 RVA: 0x00F9C3DC File Offset: 0x00F9A5DC
+		// Token: 0x060354BB RID: 218299 RVA: 0x00EE3358 File Offset: 0x00EE1558
 		public void SetHasFirstRead()
 		{
 			string message = "设置活动已读";
@@ -177,13 +177,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 			this.MainViewModel.HasFirstRead = true;
 		}
 
-		// Token: 0x0402186D RID: 137325
+		// Token: 0x0401C19C RID: 115100
 		private readonly Dictionary<int, global::ActivityTaskData> ActivityQuestData = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x0402186E RID: 137326
+		// Token: 0x0401C19D RID: 115101
 		public readonly MotorDecalLinkMainViewModel MainViewModel = new MotorDecalLinkMainViewModel();
 
-		// Token: 0x0402186F RID: 137327
+		// Token: 0x0401C19E RID: 115102
 		private bool HasFirstRead;
 	}
 }

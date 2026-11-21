@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060BC RID: 24764
+	// Token: 0x0200503A RID: 20538
 	[NullableContext(1)]
 	public interface ITowerDefenseRolePanelData : ISolarSpeedRolePanelData
 	{
-		// Token: 0x1700910B RID: 37131
-		// (get) Token: 0x0603E9FA RID: 256506
-		// (set) Token: 0x0603E9FB RID: 256507
+		// Token: 0x1700646D RID: 25709
+		// (get) Token: 0x060336BE RID: 210622
+		// (set) Token: 0x060336BF RID: 210623
 		int BestTitle { get; set; }
 
-		// Token: 0x1700910C RID: 37132
-		// (get) Token: 0x0603E9FC RID: 256508
-		// (set) Token: 0x0603E9FD RID: 256509
+		// Token: 0x1700646E RID: 25710
+		// (get) Token: 0x060336C0 RID: 210624
+		// (set) Token: 0x060336C1 RID: 210625
 		List<ITowerDefenseRoleDescData> DescDataList { get; set; }
 	}
 }

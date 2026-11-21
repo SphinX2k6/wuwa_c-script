@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002565 RID: 9573
+// Token: 0x02001A50 RID: 6736
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class PhotoWeatherItem : GridProxyAbstract<PhotoWeatherData>
 {
-	// Token: 0x06013512 RID: 79122 RVA: 0x004CE59C File Offset: 0x004CC79C
+	// Token: 0x060109F4 RID: 68084 RVA: 0x004DD1D4 File Offset: 0x004DB3D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class PhotoWeatherItem : GridProxyAbstract<PhotoWeatherData>
 		};
 	}
 
-	// Token: 0x06013513 RID: 79123 RVA: 0x004CE671 File Offset: 0x004CC871
+	// Token: 0x060109F5 RID: 68085 RVA: 0x004DD2A9 File Offset: 0x004DB4A9
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x06013514 RID: 79124 RVA: 0x004CE680 File Offset: 0x004CC880
+	// Token: 0x060109F6 RID: 68086 RVA: 0x004DD2B8 File Offset: 0x004DB4B8
 	public override void Refresh(PhotoWeatherData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -71,7 +71,7 @@ public class PhotoWeatherItem : GridProxyAbstract<PhotoWeatherData>
 		this.SetToggleState(isSelected, false);
 	}
 
-	// Token: 0x06013515 RID: 79125 RVA: 0x004CE734 File Offset: 0x004CC934
+	// Token: 0x060109F7 RID: 68087 RVA: 0x004DD36C File Offset: 0x004DB56C
 	private void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -82,25 +82,25 @@ public class PhotoWeatherItem : GridProxyAbstract<PhotoWeatherData>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06013516 RID: 79126 RVA: 0x004CE751 File Offset: 0x004CC951
+	// Token: 0x060109F8 RID: 68088 RVA: 0x004DD389 File Offset: 0x004DB589
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06013517 RID: 79127 RVA: 0x004CE75B File Offset: 0x004CC95B
+	// Token: 0x060109F9 RID: 68089 RVA: 0x004DD393 File Offset: 0x004DB593
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x06013518 RID: 79128 RVA: 0x004CE765 File Offset: 0x004CC965
+	// Token: 0x060109FA RID: 68090 RVA: 0x004DD39D File Offset: 0x004DB59D
 	public override object GetKey(PhotoWeatherData data, int displayIndex)
 	{
 		return data.IsDefault ? -1 : data.WeatherId;
 	}
 
-	// Token: 0x06013519 RID: 79129 RVA: 0x004CE77D File Offset: 0x004CC97D
+	// Token: 0x060109FB RID: 68091 RVA: 0x004DD3B5 File Offset: 0x004DB5B5
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -110,31 +110,31 @@ public class PhotoWeatherItem : GridProxyAbstract<PhotoWeatherData>
 		this.OnWeatherClick(base.GridIndex);
 	}
 
-	// Token: 0x040091B3 RID: 37299
+	// Token: 0x0400930C RID: 37644
 	private PhotoWeatherData Data;
 
-	// Token: 0x040091B4 RID: 37300
+	// Token: 0x0400930D RID: 37645
 	public Action<int> OnWeatherClick = delegate(int gridIndex)
 	{
 	};
 
-	// Token: 0x02008B40 RID: 35648
+	// Token: 0x02007CC6 RID: 31942
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D35C RID: 185180
+		// Token: 0x04028669 RID: 165481
 		ToggleItem,
-		// Token: 0x0402D35D RID: 185181
+		// Token: 0x0402866A RID: 165482
 		ItemNormalPanel,
-		// Token: 0x0402D35E RID: 185182
+		// Token: 0x0402866B RID: 165483
 		ItemWeatherPanel,
-		// Token: 0x0402D35F RID: 185183
+		// Token: 0x0402866C RID: 165484
 		TextName,
-		// Token: 0x0402D360 RID: 185184
+		// Token: 0x0402866D RID: 165485
 		SpriteIcon,
-		// Token: 0x0402D361 RID: 185185
+		// Token: 0x0402866E RID: 165486
 		SpriteRedDot,
-		// Token: 0x0402D362 RID: 185186
+		// Token: 0x0402866F RID: 165487
 		ItemLockState
 	}
 }

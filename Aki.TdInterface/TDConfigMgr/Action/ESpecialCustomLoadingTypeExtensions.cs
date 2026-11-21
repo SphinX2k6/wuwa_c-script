@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002423 RID: 9251
+	// Token: 0x020026C2 RID: 9922
 	public static class ESpecialCustomLoadingTypeExtensions
 	{
-		// Token: 0x0600C91C RID: 51484 RVA: 0x001D733C File Offset: 0x001D553C
+		// Token: 0x0600D5C3 RID: 54723 RVA: 0x001F1010 File Offset: 0x001EF210
 		public static string ToEnumString(this ESpecialCustomLoadingType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C91D RID: 51485 RVA: 0x001D7364 File Offset: 0x001D5564
+		// Token: 0x0600D5C4 RID: 54724 RVA: 0x001F1038 File Offset: 0x001EF238
 		public static ESpecialCustomLoadingType FromString(string name)
 		{
 			ESpecialCustomLoadingType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C91E RID: 51486 RVA: 0x001D738D File Offset: 0x001D558D
+		// Token: 0x0600D5C5 RID: 54725 RVA: 0x001F1061 File Offset: 0x001EF261
 		public static bool TryFromString(string name, out ESpecialCustomLoadingType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C91F RID: 51487 RVA: 0x001D73B2 File Offset: 0x001D55B2
+		// Token: 0x0600D5C6 RID: 54726 RVA: 0x001F1086 File Offset: 0x001EF286
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C920 RID: 51488 RVA: 0x001D73C2 File Offset: 0x001D55C2
+		// Token: 0x0600D5C7 RID: 54727 RVA: 0x001F1096 File Offset: 0x001EF296
 		public static ESpecialCustomLoadingType[] GetValues()
 		{
 			return new ESpecialCustomLoadingType[1];
 		}
 
-		// Token: 0x0600C921 RID: 51489 RVA: 0x001D73CA File Offset: 0x001D55CA
+		// Token: 0x0600D5C8 RID: 54728 RVA: 0x001F109E File Offset: 0x001EF29E
 		public static string[] GetNames()
 		{
 			return new string[]

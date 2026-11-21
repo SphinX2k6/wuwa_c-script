@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006748 RID: 26440
+	// Token: 0x02006DC8 RID: 28104
 	public class IFaceExpressionConfigT
 	{
-		// Token: 0x1700C44A RID: 50250
-		// (get) Token: 0x0602DFD3 RID: 188371 RVA: 0x00648F7A File Offset: 0x0064717A
-		// (set) Token: 0x0602DFD4 RID: 188372 RVA: 0x00648F82 File Offset: 0x00647182
+		// Token: 0x1700CE00 RID: 52736
+		// (get) Token: 0x06030819 RID: 198681 RVA: 0x006966BE File Offset: 0x006948BE
+		// (set) Token: 0x0603081A RID: 198682 RVA: 0x006966C6 File Offset: 0x006948C6
 		public EFaceExpressionConfigType Type { get; set; }
 
-		// Token: 0x0602DFD5 RID: 188373 RVA: 0x00648F8B File Offset: 0x0064718B
+		// Token: 0x0603081B RID: 198683 RVA: 0x006966CF File Offset: 0x006948CF
 		public IFaceExpressionConfigT()
 		{
 			this.Type = EFaceExpressionConfigType.Morph;

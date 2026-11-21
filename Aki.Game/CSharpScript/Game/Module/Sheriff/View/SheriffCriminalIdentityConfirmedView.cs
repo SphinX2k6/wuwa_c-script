@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C57 RID: 19543
+	// Token: 0x02003C08 RID: 15368
 	public class SheriffCriminalIdentityConfirmedView : UiViewBase
 	{
-		// Token: 0x06032867 RID: 206951 RVA: 0x00BC4DDD File Offset: 0x00BC2FDD
+		// Token: 0x0602761A RID: 161306 RVA: 0x00B09A29 File Offset: 0x00B07C29
 		[NullableContext(1)]
 		public SheriffCriminalIdentityConfirmedView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032868 RID: 206952 RVA: 0x00BC4DE8 File Offset: 0x00BC2FE8
+		// Token: 0x0602761B RID: 161307 RVA: 0x00B09A34 File Offset: 0x00B07C34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032869 RID: 206953 RVA: 0x00BC4F34 File Offset: 0x00BC3134
+		// Token: 0x0602761C RID: 161308 RVA: 0x00B09B80 File Offset: 0x00B07D80
 		protected override void OnStart()
 		{
 			SheriffCriminalIdentityConfirmedViewData sheriffCriminalIdentityConfirmedViewData = this.OpenParam as SheriffCriminalIdentityConfirmedViewData;
@@ -83,34 +83,34 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}));
 		}
 
-		// Token: 0x0603286A RID: 206954 RVA: 0x00BC5172 File Offset: 0x00BC3372
+		// Token: 0x0602761D RID: 161309 RVA: 0x00B09DBE File Offset: 0x00B07FBE
 		private void OnBtnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200ADFA RID: 44538
+		// Token: 0x02009818 RID: 38936
 		private static class EComponents
 		{
-			// Token: 0x04034D7C RID: 216444
+			// Token: 0x0402F721 RID: 194337
 			public const int BtnClose = 0;
 
-			// Token: 0x04034D7D RID: 216445
+			// Token: 0x0402F722 RID: 194338
 			public const int ImgNpc = 1;
 
-			// Token: 0x04034D7E RID: 216446
+			// Token: 0x0402F723 RID: 194339
 			public const int TxtBountyNum = 2;
 
-			// Token: 0x04034D7F RID: 216447
+			// Token: 0x0402F724 RID: 194340
 			public const int TxtCriminalName = 3;
 
-			// Token: 0x04034D80 RID: 216448
+			// Token: 0x0402F725 RID: 194341
 			public const int TxtCriminalDescription = 4;
 
-			// Token: 0x04034D81 RID: 216449
+			// Token: 0x0402F726 RID: 194342
 			public const int TxtEnvironment = 5;
 
-			// Token: 0x04034D82 RID: 216450
+			// Token: 0x0402F727 RID: 194343
 			public const int TxtCriminalIdentity = 6;
 		}
 	}

@@ -5,24 +5,24 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001C86 RID: 7302
+// Token: 0x02001145 RID: 4421
 [NullableContext(2)]
 [Nullable(0)]
 public class GachaPoolItem : UiPanelBase
 {
-	// Token: 0x0600DC4C RID: 56396 RVA: 0x00335C75 File Offset: 0x00333E75
+	// Token: 0x0600B062 RID: 45154 RVA: 0x003411A1 File Offset: 0x0033F3A1
 	public GachaPoolItem(GachaDefine.EGachaViewType gachaType)
 	{
 		this.GachaType = new GachaDefine.EGachaViewType?(gachaType);
 	}
 
-	// Token: 0x0600DC4D RID: 56397 RVA: 0x00335C89 File Offset: 0x00333E89
+	// Token: 0x0600B063 RID: 45155 RVA: 0x003411B5 File Offset: 0x0033F3B5
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600DC4E RID: 56398 RVA: 0x00335C9C File Offset: 0x00333E9C
+	// Token: 0x0600B064 RID: 45156 RVA: 0x003411C8 File Offset: 0x0033F3C8
 	public UniTask PlayStartSeqAsync()
 	{
 		GachaPoolItem.<PlayStartSeqAsync>d__6 <PlayStartSeqAsync>d__;
@@ -33,7 +33,7 @@ public class GachaPoolItem : UiPanelBase
 		return <PlayStartSeqAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC4F RID: 56399 RVA: 0x00335CE0 File Offset: 0x00333EE0
+	// Token: 0x0600B065 RID: 45157 RVA: 0x0034120C File Offset: 0x0033F40C
 	public void PlayStartSeq()
 	{
 		this.OnPlayStartSeq();
@@ -45,19 +45,19 @@ public class GachaPoolItem : UiPanelBase
 		levelSequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600DC50 RID: 56400 RVA: 0x00335D12 File Offset: 0x00333F12
+	// Token: 0x0600B066 RID: 45158 RVA: 0x0034123E File Offset: 0x0033F43E
 	protected virtual void OnPlayStartSeq()
 	{
 	}
 
-	// Token: 0x0600DC51 RID: 56401 RVA: 0x00335D14 File Offset: 0x00333F14
+	// Token: 0x0600B067 RID: 45159 RVA: 0x00341240 File Offset: 0x0033F440
 	public void PlaySwitchSeq()
 	{
 		this.OnPlaySwitchSeq();
 		this.LevelSequencePlayer.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x0600DC52 RID: 56402 RVA: 0x00335D44 File Offset: 0x00333F44
+	// Token: 0x0600B068 RID: 45160 RVA: 0x00341270 File Offset: 0x0033F470
 	public UniTask PlaySwitchSeqAsync()
 	{
 		GachaPoolItem.<PlaySwitchSeqAsync>d__10 <PlaySwitchSeqAsync>d__;
@@ -68,18 +68,18 @@ public class GachaPoolItem : UiPanelBase
 		return <PlaySwitchSeqAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC53 RID: 56403 RVA: 0x00335D87 File Offset: 0x00333F87
+	// Token: 0x0600B069 RID: 45161 RVA: 0x003412B3 File Offset: 0x0033F4B3
 	protected virtual void OnPlaySwitchSeq()
 	{
 	}
 
-	// Token: 0x0600DC54 RID: 56404 RVA: 0x00335D89 File Offset: 0x00333F89
+	// Token: 0x0600B06A RID: 45162 RVA: 0x003412B5 File Offset: 0x0033F4B5
 	protected virtual UniTask OnPlayingSwitchSeqAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600DC55 RID: 56405 RVA: 0x00335D90 File Offset: 0x00333F90
+	// Token: 0x0600B06B RID: 45163 RVA: 0x003412BC File Offset: 0x0033F4BC
 	[NullableContext(1)]
 	public void Update(GachaPoolData gachaPoolData)
 	{
@@ -93,20 +93,20 @@ public class GachaPoolItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600DC56 RID: 56406 RVA: 0x00335DD5 File Offset: 0x00333FD5
+	// Token: 0x0600B06C RID: 45164 RVA: 0x00341301 File Offset: 0x0033F501
 	public virtual void Refresh()
 	{
 	}
 
-	// Token: 0x04006510 RID: 25872
+	// Token: 0x040065E2 RID: 26082
 	protected GachaPoolData GachaPoolData;
 
-	// Token: 0x04006511 RID: 25873
+	// Token: 0x040065E3 RID: 26083
 	protected GachaViewInfo? GachaViewInfo;
 
-	// Token: 0x04006512 RID: 25874
+	// Token: 0x040065E4 RID: 26084
 	protected readonly GachaDefine.EGachaViewType? GachaType;
 
-	// Token: 0x04006513 RID: 25875
+	// Token: 0x040065E5 RID: 26085
 	protected LevelSequencePlayer LevelSequencePlayer;
 }

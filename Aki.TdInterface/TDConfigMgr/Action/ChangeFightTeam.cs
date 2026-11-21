@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D2 RID: 5330
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200162B RID: 5675
 	public class ChangeFightTeam : ActionParams
 	{
-		// Token: 0x06007958 RID: 31064 RVA: 0x001227A4 File Offset: 0x001209A4
+		// Token: 0x06008025 RID: 32805 RVA: 0x001313F0 File Offset: 0x0012F5F0
 		private ChangeFightTeam_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007959 RID: 31065 RVA: 0x001227DC File Offset: 0x001209DC
+		// Token: 0x06008026 RID: 32806 RVA: 0x00131428 File Offset: 0x0012F628
 		public static ChangeFightTeam Create([Nullable(2)] ChangeFightTeam instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600795A RID: 31066 RVA: 0x001227EF File Offset: 0x001209EF
+		// Token: 0x06008027 RID: 32807 RVA: 0x0013143B File Offset: 0x0012F63B
 		public static ChangeFightTeam CreateFromSetValue([Nullable(2)] ChangeFightTeam_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600795B RID: 31067 RVA: 0x00122802 File Offset: 0x00120A02
+		// Token: 0x06008028 RID: 32808 RVA: 0x0013144E File Offset: 0x0012F64E
 		public ChangeFightTeam_SetValue ToSetValue()
 		{
 			return new ChangeFightTeam_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028A7 RID: 10407
-		// (get) Token: 0x0600795C RID: 31068 RVA: 0x00122818 File Offset: 0x00120A18
-		// (set) Token: 0x0600795D RID: 31069 RVA: 0x00122852 File Offset: 0x00120A52
+		// Token: 0x17002A91 RID: 10897
+		// (get) Token: 0x06008029 RID: 32809 RVA: 0x00131464 File Offset: 0x0012F664
+		// (set) Token: 0x0600802A RID: 32810 RVA: 0x0013149E File Offset: 0x0012F69E
 		public virtual int? TeamIndex
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400466C RID: 18028
+		// Token: 0x04004A07 RID: 18951
 		[Nullable(2)]
 		protected new ChangeFightTeam FbInstance;
 
-		// Token: 0x0400466D RID: 18029
+		// Token: 0x04004A08 RID: 18952
 		[Nullable(2)]
 		protected ChangeFightTeam_SetValue PocoInterface;
 	}

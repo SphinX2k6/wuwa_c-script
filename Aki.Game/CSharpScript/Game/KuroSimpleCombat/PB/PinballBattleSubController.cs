@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using AkiClient.Game.Aki.Data.SimpleCombat._3_3Pinball.GameBase.SpawnObj;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.Pinball;
@@ -21,18 +19,18 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FC0 RID: 28608
+	// Token: 0x02006141 RID: 24897
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleSubController : KscSubControllerBase, IStaticVariableResetter
 	{
-		// Token: 0x06045853 RID: 284755 RVA: 0x01140108 File Offset: 0x0113E308
+		// Token: 0x0603BA03 RID: 244227 RVA: 0x010E9ED8 File Offset: 0x010E80D8
 		static PinballBattleSubController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleSubController.CreateStaticDefaultValue), new Action(PinballBattleSubController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045854 RID: 284756 RVA: 0x01140127 File Offset: 0x0113E327
+		// Token: 0x0603BA04 RID: 244228 RVA: 0x010E9EF7 File Offset: 0x010E80F7
 		public static void CreateStaticDefaultValue()
 		{
 			PinballBattleSubController.PlayerEntityKeys = new int[]
@@ -46,7 +44,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			PinballBattleSubController.EnableSpineShadow = true;
 		}
 
-		// Token: 0x06045855 RID: 284757 RVA: 0x01140164 File Offset: 0x0113E364
+		// Token: 0x0603BA05 RID: 244229 RVA: 0x010E9F34 File Offset: 0x010E8134
 		public static void ResetStaticDefaultValue()
 		{
 			PinballBattleSubController.PlayerEntityKeys = null;
@@ -55,8 +53,8 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			PinballBattleSubController.EnableSpineShadow = false;
 		}
 
-		// Token: 0x17009B81 RID: 39809
-		// (get) Token: 0x06045856 RID: 284758 RVA: 0x01140180 File Offset: 0x0113E380
+		// Token: 0x170070C1 RID: 28865
+		// (get) Token: 0x0603BA06 RID: 244230 RVA: 0x010E9F50 File Offset: 0x010E8150
 		private bool IsFormationTestMode
 		{
 			get
@@ -66,32 +64,32 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045857 RID: 284759 RVA: 0x011401BA File Offset: 0x0113E3BA
+		// Token: 0x0603BA07 RID: 244231 RVA: 0x010E9F8A File Offset: 0x010E818A
 		protected override void CreateModel()
 		{
 			this.SubModel = new PinballBattleSubModel();
 		}
 
-		// Token: 0x06045858 RID: 284760 RVA: 0x011401C7 File Offset: 0x0113E3C7
+		// Token: 0x0603BA08 RID: 244232 RVA: 0x010E9F97 File Offset: 0x010E8197
 		public PinballBattleSubModel GetModel()
 		{
 			return this.SubModel as PinballBattleSubModel;
 		}
 
-		// Token: 0x06045859 RID: 284761 RVA: 0x011401D4 File Offset: 0x0113E3D4
+		// Token: 0x0603BA09 RID: 244233 RVA: 0x010E9FA4 File Offset: 0x010E81A4
 		public override bool IsTargetMap(int instSubType)
 		{
 			return instSubType == 45;
 		}
 
-		// Token: 0x0604585A RID: 284762 RVA: 0x011401DB File Offset: 0x0113E3DB
+		// Token: 0x0603BA0A RID: 244234 RVA: 0x010E9FAB File Offset: 0x010E81AB
 		[NullableContext(2)]
 		protected override UClass GetKscWorldClass()
 		{
 			return UKSC_Shape2D_World.StaticClass().ToWeakClass();
 		}
 
-		// Token: 0x0604585B RID: 284763 RVA: 0x011401EC File Offset: 0x0113E3EC
+		// Token: 0x0603BA0B RID: 244235 RVA: 0x010E9FBC File Offset: 0x010E81BC
 		protected override KscCollisionAlgorithmConfig? GetCollisionAlgorithmConfig()
 		{
 			return new KscCollisionAlgorithmConfig?(new KscCollisionAlgorithmConfig
@@ -101,7 +99,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			});
 		}
 
-		// Token: 0x0604585C RID: 284764 RVA: 0x01140228 File Offset: 0x0113E428
+		// Token: 0x0603BA0C RID: 244236 RVA: 0x010E9FF8 File Offset: 0x010E81F8
 		protected override void OnInitMap()
 		{
 			FDamageConfig fdamageConfig = new FDamageConfig();
@@ -118,7 +116,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			DamageUiController.Instance.SetUeDamageConfig(fdamageConfig, false);
 		}
 
-		// Token: 0x0604585D RID: 284765 RVA: 0x011402AD File Offset: 0x0113E4AD
+		// Token: 0x0603BA0D RID: 244237 RVA: 0x010EA07D File Offset: 0x010E827D
 		protected override void OnMapLoaded()
 		{
 			this.IsMapLoadFinish = true;
@@ -128,7 +126,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.TryInitShapeWorld();
 		}
 
-		// Token: 0x0604585E RID: 284766 RVA: 0x011402D0 File Offset: 0x0113E4D0
+		// Token: 0x0603BA0E RID: 244238 RVA: 0x010EA0A0 File Offset: 0x010E82A0
 		private void InitLevelConfig()
 		{
 			int curLevelId = PinballModel.Instance.CurLevelId;
@@ -141,13 +139,17 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(curLevelId);
 			if (pinballLevelConfigById.Value.Type == 2)
 			{
-				model.SetLevelScoreTargetList((from k in pinballLevelConfigById.Value.ScoreLevelReward().Keys
-				select (float)k).ToList<float>());
+				List<float> list = new List<float>();
+				foreach (int num in pinballLevelConfigById.Value.ScoreLevelReward().Keys)
+				{
+					list.Add((float)num);
+				}
+				model.SetLevelScoreTargetList(list);
 			}
 			model.SetLevelConfig(pinballLevelConfigById);
 		}
 
-		// Token: 0x0604585F RID: 284767 RVA: 0x0114037C File Offset: 0x0113E57C
+		// Token: 0x0603BA0F RID: 244239 RVA: 0x010EA174 File Offset: 0x010E8374
 		protected override void OnWorldDone()
 		{
 			this.PlayerHpHandle.Init();
@@ -191,7 +193,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			shapeWorld.SetBroadcastBuffIdList(tarray);
 		}
 
-		// Token: 0x06045860 RID: 284768 RVA: 0x011404B0 File Offset: 0x0113E6B0
+		// Token: 0x0603BA10 RID: 244240 RVA: 0x010EA2A8 File Offset: 0x010E84A8
 		protected override void OnWorldReset()
 		{
 			this.ClearBulletWorld();
@@ -313,7 +315,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("PinballPreReset");
 		}
 
-		// Token: 0x06045861 RID: 284769 RVA: 0x01140784 File Offset: 0x0113E984
+		// Token: 0x0603BA11 RID: 244241 RVA: 0x010EA57C File Offset: 0x010E877C
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.RefreshCameraFov));
@@ -321,7 +323,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x06045862 RID: 284770 RVA: 0x011407E0 File Offset: 0x0113E9E0
+		// Token: 0x0603BA12 RID: 244242 RVA: 0x010EA5D8 File Offset: 0x010E87D8
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.RefreshCameraFov));
@@ -329,7 +331,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 		}
 
-		// Token: 0x06045863 RID: 284771 RVA: 0x0114083C File Offset: 0x0113EA3C
+		// Token: 0x0603BA13 RID: 244243 RVA: 0x010EA634 File Offset: 0x010E8834
 		protected override void OnTick(float delta)
 		{
 			this.UpdateDamageInfo();
@@ -358,7 +360,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			launchDirectionController.Update(this.KscEntityLeftBar, this.KscEntityRightBar);
 		}
 
-		// Token: 0x06045864 RID: 284772 RVA: 0x011408AC File Offset: 0x0113EAAC
+		// Token: 0x0603BA14 RID: 244244 RVA: 0x010EA6A4 File Offset: 0x010E88A4
 		public override UniTask PreloadAsync()
 		{
 			PinballBattleSubController.<PreloadAsync>d__90 <PreloadAsync>d__;
@@ -369,7 +371,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <PreloadAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045865 RID: 284773 RVA: 0x011408F0 File Offset: 0x0113EAF0
+		// Token: 0x0603BA15 RID: 244245 RVA: 0x010EA6E8 File Offset: 0x010E88E8
 		private void TryInitShapeWorld()
 		{
 			if (!this.IsPreloadFinish || !this.IsMapLoadFinish || this.IsInitShapeWorld)
@@ -388,12 +390,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			FVectorDouble? fvectorDouble = (instance != null) ? instance.BornLocation : null;
 			if (fvectorDouble != null)
 			{
-				this.WorldOrigin.FromConfigVector(fvectorDouble);
+				global::Vector worldOrigin = this.WorldOrigin;
+				FVectorDouble? fvectorDouble2 = fvectorDouble;
+				worldOrigin.FromConfigVector((fvectorDouble2 != null) ? fvectorDouble2.GetValueOrDefault() : null);
 				this.WorldOriginTransform.SetLocation(this.WorldOrigin);
 			}
 			UKSC_Shape2D_World uksc_Shape2D_World2 = uksc_Shape2D_World;
-			FVectorDouble fvectorDouble2 = this.WorldOrigin.ToUeVector(false);
-			uksc_Shape2D_World2.SetWorldOrigin(fvectorDouble2);
+			FVectorDouble fvectorDouble3 = this.WorldOrigin.ToUeVector(false);
+			uksc_Shape2D_World2.SetWorldOrigin(fvectorDouble3);
 			UKSC_DA_Shape2D_World shapeWorldDa = this.GetModel().ShapeWorldDa;
 			if (shapeWorldDa != null)
 			{
@@ -441,7 +445,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			uksc_Shape2D_World.AssignTeamAllDead(this.TeamAllDeadDelegateRef);
 		}
 
-		// Token: 0x06045866 RID: 284774 RVA: 0x01140BA8 File Offset: 0x0113EDA8
+		// Token: 0x0603BA16 RID: 244246 RVA: 0x010EA9B4 File Offset: 0x010E8BB4
 		protected UniTask LoadBulletDt()
 		{
 			PinballBattleSubController.<LoadBulletDt>d__92 <LoadBulletDt>d__;
@@ -452,7 +456,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadBulletDt>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045867 RID: 284775 RVA: 0x01140BEC File Offset: 0x0113EDEC
+		// Token: 0x0603BA17 RID: 244247 RVA: 0x010EA9F8 File Offset: 0x010E8BF8
 		protected UniTask LoadShapeWorldDa()
 		{
 			PinballBattleSubController.<LoadShapeWorldDa>d__93 <LoadShapeWorldDa>d__;
@@ -463,7 +467,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadShapeWorldDa>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045868 RID: 284776 RVA: 0x01140C30 File Offset: 0x0113EE30
+		// Token: 0x0603BA18 RID: 244248 RVA: 0x010EAA3C File Offset: 0x010E8C3C
 		protected UniTask LoadShapeWorldBoundsDa()
 		{
 			PinballBattleSubController.<LoadShapeWorldBoundsDa>d__94 <LoadShapeWorldBoundsDa>d__;
@@ -474,7 +478,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadShapeWorldBoundsDa>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045869 RID: 284777 RVA: 0x01140C74 File Offset: 0x0113EE74
+		// Token: 0x0603BA19 RID: 244249 RVA: 0x010EAA80 File Offset: 0x010E8C80
 		protected UniTask LoadShapeMaterialDt()
 		{
 			PinballBattleSubController.<LoadShapeMaterialDt>d__95 <LoadShapeMaterialDt>d__;
@@ -485,7 +489,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadShapeMaterialDt>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604586A RID: 284778 RVA: 0x01140CB8 File Offset: 0x0113EEB8
+		// Token: 0x0603BA1A RID: 244250 RVA: 0x010EAAC4 File Offset: 0x010E8CC4
 		protected UniTask LoadShowBuffDa()
 		{
 			PinballBattleSubController.<LoadShowBuffDa>d__96 <LoadShowBuffDa>d__;
@@ -496,7 +500,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadShowBuffDa>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604586B RID: 284779 RVA: 0x01140CFC File Offset: 0x0113EEFC
+		// Token: 0x0603BA1B RID: 244251 RVA: 0x010EAB08 File Offset: 0x010E8D08
 		protected UniTask LoadSummonBuffDa()
 		{
 			PinballBattleSubController.<LoadSummonBuffDa>d__97 <LoadSummonBuffDa>d__;
@@ -507,7 +511,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadSummonBuffDa>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604586C RID: 284780 RVA: 0x01140D40 File Offset: 0x0113EF40
+		// Token: 0x0603BA1C RID: 244252 RVA: 0x010EAB4C File Offset: 0x010E8D4C
 		protected UniTask LoadRoleBornBuffDa()
 		{
 			PinballBattleSubController.<LoadRoleBornBuffDa>d__98 <LoadRoleBornBuffDa>d__;
@@ -518,7 +522,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadRoleBornBuffDa>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604586D RID: 284781 RVA: 0x01140D84 File Offset: 0x0113EF84
+		// Token: 0x0603BA1D RID: 244253 RVA: 0x010EAB90 File Offset: 0x010E8D90
 		private bool AddLoadBuffTask(int buffId, List<UniTask> outTasks)
 		{
 			if (this.PendingLoadBuffs == null)
@@ -549,7 +553,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return true;
 		}
 
-		// Token: 0x0604586E RID: 284782 RVA: 0x01140E50 File Offset: 0x0113F050
+		// Token: 0x0603BA1E RID: 244254 RVA: 0x010EAC5C File Offset: 0x010E8E5C
 		private UniTask LoadLaunchCurves()
 		{
 			PinballBattleSubController.<LoadLaunchCurves>d__100 <LoadLaunchCurves>d__;
@@ -560,7 +564,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadLaunchCurves>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604586F RID: 284783 RVA: 0x01140E94 File Offset: 0x0113F094
+		// Token: 0x0603BA1F RID: 244255 RVA: 0x010EACA0 File Offset: 0x010E8EA0
 		private UniTask LoadLaunchBall()
 		{
 			PinballBattleSubController.<LoadLaunchBall>d__101 <LoadLaunchBall>d__;
@@ -571,7 +575,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadLaunchBall>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045870 RID: 284784 RVA: 0x01140ED8 File Offset: 0x0113F0D8
+		// Token: 0x0603BA20 RID: 244256 RVA: 0x010EACE4 File Offset: 0x010E8EE4
 		protected UniTask LoadFeverBarClass()
 		{
 			PinballBattleSubController.<LoadFeverBarClass>d__102 <LoadFeverBarClass>d__;
@@ -581,7 +585,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadFeverBarClass>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045871 RID: 284785 RVA: 0x01140F14 File Offset: 0x0113F114
+		// Token: 0x0603BA21 RID: 244257 RVA: 0x010EAD20 File Offset: 0x010E8F20
 		protected UniTask LoadFeverBarMaterial()
 		{
 			PinballBattleSubController.<LoadFeverBarMaterial>d__103 <LoadFeverBarMaterial>d__;
@@ -592,7 +596,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadFeverBarMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045872 RID: 284786 RVA: 0x01140F58 File Offset: 0x0113F158
+		// Token: 0x0603BA22 RID: 244258 RVA: 0x010EAD64 File Offset: 0x010E8F64
 		private UniTask LoadDirectionItem()
 		{
 			PinballBattleSubController.<LoadDirectionItem>d__104 <LoadDirectionItem>d__;
@@ -603,7 +607,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadDirectionItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045873 RID: 284787 RVA: 0x01140F9C File Offset: 0x0113F19C
+		// Token: 0x0603BA23 RID: 244259 RVA: 0x010EADA8 File Offset: 0x010E8FA8
 		public unsafe override void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 		{
 			KscEntityHandle kscEntityHandle = this.GetModel().GetKscEntityHandle(context.CreatureDataId);
@@ -640,7 +644,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06045874 RID: 284788 RVA: 0x01141114 File Offset: 0x0113F314
+		// Token: 0x0603BA24 RID: 244260 RVA: 0x010EAF20 File Offset: 0x010E9120
 		public override void InitPropertyConfigs()
 		{
 			if (this.GetModel() == null)
@@ -658,7 +662,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().InitMonsterAttrConfigs();
 		}
 
-		// Token: 0x06045875 RID: 284789 RVA: 0x01141190 File Offset: 0x0113F390
+		// Token: 0x0603BA25 RID: 244261 RVA: 0x010EAF9C File Offset: 0x010E919C
 		public override Dictionary<EKSC_AttrType, float> GetAttrsDefault(int propertyId)
 		{
 			Dictionary<EKSC_AttrType, float> dictionary = new Dictionary<EKSC_AttrType, float>();
@@ -676,12 +680,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return dictionary;
 		}
 
-		// Token: 0x06045876 RID: 284790 RVA: 0x011411DF File Offset: 0x0113F3DF
+		// Token: 0x0603BA26 RID: 244262 RVA: 0x010EAFEB File Offset: 0x010E91EB
 		public override void InitDamageConfigs()
 		{
 		}
 
-		// Token: 0x06045877 RID: 284791 RVA: 0x011411E4 File Offset: 0x0113F3E4
+		// Token: 0x0603BA27 RID: 244263 RVA: 0x010EAFF0 File Offset: 0x010E91F0
 		private void InitDamageConfigsNew()
 		{
 			UKSC_Shape2D_World shapeWorld = this.ShapeWorld;
@@ -714,18 +718,25 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				fkscdamage.RelatedProperty = (EKSC_AttrType)pinballDamage.RelatedProperty;
 				damageIds[(int)pinballDamage.Id] = fkscdamage;
 				damageData.AddDamageData((int)pinballDamage.Id, fkscdamage);
-				FKSC_Shape2D_DamageEffect fksc_Shape2D_DamageEffect = new FKSC_Shape2D_DamageEffect(pinballDamage.IsRecordedCombo == 1, (float)pinballDamage.RecoverSkillEnergy, (float)pinballDamage.RecoverSprintEnergy, (float)pinballDamage.RecoverFeverEnergy, pinballDamage.IsRecoverTeamSkillEnergy == 1);
+				FKSC_Shape2D_DamageEffect fksc_Shape2D_DamageEffect = new FKSC_Shape2D_DamageEffect
+				{
+					IsRecordedCombo = (pinballDamage.IsRecordedCombo == 1),
+					RecoverSkillEnergy = (float)pinballDamage.RecoverSkillEnergy,
+					RecoverSprintEnergy = (float)pinballDamage.RecoverSprintEnergy,
+					RecoverFeverEnergy = (float)pinballDamage.RecoverFeverEnergy,
+					IsRecoverTeamSkillEnergy = (pinballDamage.IsRecoverTeamSkillEnergy == 1)
+				};
 				shapeWorld.AddDamageEffectData((int)pinballDamage.Id, fksc_Shape2D_DamageEffect);
 			}
 		}
 
-		// Token: 0x06045878 RID: 284792 RVA: 0x01141398 File Offset: 0x0113F598
+		// Token: 0x0603BA28 RID: 244264 RVA: 0x010EB1C4 File Offset: 0x010E93C4
 		protected override void InitEntityAndSkillDt()
 		{
 			KscUtil.LoadDt<FKSCEntityTableRow>(KscEnv.Instance.KscWorld, this.GetModel().GetEntityDtPath(), this.GetModel().EntityDataDt);
 		}
 
-		// Token: 0x06045879 RID: 284793 RVA: 0x011413C0 File Offset: 0x0113F5C0
+		// Token: 0x0603BA29 RID: 244265 RVA: 0x010EB1EC File Offset: 0x010E93EC
 		private void InitAttrBounds()
 		{
 			TMap<EKSC_AttrType, EKSC_AttrType> attributeIdsWithMax = KscEnv.Instance.KscWorld.AttributeIdsWithMax;
@@ -737,40 +748,40 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			attributeIdsWithMax.Add(EKSC_AttrType.SpecialEnergy3, EKSC_AttrType.SpecialEnergy3Max);
 		}
 
-		// Token: 0x0604587A RID: 284794 RVA: 0x01141413 File Offset: 0x0113F613
+		// Token: 0x0603BA2A RID: 244266 RVA: 0x010EB23F File Offset: 0x010E943F
 		protected override void CreateEntityFilter()
 		{
 			this.RedirectFilter = this.EntityRedirectFilter;
 		}
 
-		// Token: 0x0604587B RID: 284795 RVA: 0x01141421 File Offset: 0x0113F621
+		// Token: 0x0603BA2B RID: 244267 RVA: 0x010EB24D File Offset: 0x010E944D
 		[NullableContext(2)]
 		protected override EntityHandle GetPossessedPlayerEntity()
 		{
 			return null;
 		}
 
-		// Token: 0x0604587C RID: 284796 RVA: 0x01141424 File Offset: 0x0113F624
+		// Token: 0x0603BA2C RID: 244268 RVA: 0x010EB250 File Offset: 0x010E9450
 		protected override void SyncPlayerTransform()
 		{
 		}
 
-		// Token: 0x0604587D RID: 284797 RVA: 0x01141426 File Offset: 0x0113F626
+		// Token: 0x0603BA2D RID: 244269 RVA: 0x010EB252 File Offset: 0x010E9452
 		private void AddTreeListener()
 		{
 		}
 
-		// Token: 0x0604587E RID: 284798 RVA: 0x01141428 File Offset: 0x0113F628
+		// Token: 0x0603BA2E RID: 244270 RVA: 0x010EB254 File Offset: 0x010E9454
 		private void RemoveTreeListener()
 		{
 		}
 
-		// Token: 0x0604587F RID: 284799 RVA: 0x0114142A File Offset: 0x0113F62A
+		// Token: 0x0603BA2F RID: 244271 RVA: 0x010EB256 File Offset: 0x010E9456
 		public override void OnPlayerEntityCreated()
 		{
 		}
 
-		// Token: 0x06045880 RID: 284800 RVA: 0x0114142C File Offset: 0x0113F62C
+		// Token: 0x0603BA30 RID: 244272 RVA: 0x010EB258 File Offset: 0x010E9458
 		private void OnPlayerEntityCreatedNew(AKSC_Shape2D_Entity_Player kscPlayer, PinballFormationRolePb roleData)
 		{
 			this.UpdateTranslucentSortPriority(kscPlayer, roleData.RoleId, null);
@@ -790,7 +801,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045881 RID: 284801 RVA: 0x011414BC File Offset: 0x0113F6BC
+		// Token: 0x0603BA31 RID: 244273 RVA: 0x010EB2E8 File Offset: 0x010E94E8
 		private void OnTeamPlayerEntityCreated(AKSC_Shape2D_Entity_TeamPlayer kscTeamPlayer)
 		{
 			Dictionary<EKSC_AttrType, float> dictionary = new Dictionary<EKSC_AttrType, float>();
@@ -807,7 +818,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			feverBarController.BindAttr(kscTeamPlayer);
 		}
 
-		// Token: 0x06045882 RID: 284802 RVA: 0x01141540 File Offset: 0x0113F740
+		// Token: 0x0603BA32 RID: 244274 RVA: 0x010EB36C File Offset: 0x010E956C
 		protected void InitKscPlayerEntities()
 		{
 			if (!this.IsShapeWorldReady)
@@ -925,7 +936,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045883 RID: 284803 RVA: 0x0114174F File Offset: 0x0113F94F
+		// Token: 0x0603BA33 RID: 244275 RVA: 0x010EB57B File Offset: 0x010E977B
 		protected override void AddKscPlayerEntity()
 		{
 			if (this.IsFormationTestMode)
@@ -934,7 +945,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045884 RID: 284804 RVA: 0x01141760 File Offset: 0x0113F960
+		// Token: 0x0603BA34 RID: 244276 RVA: 0x010EB58C File Offset: 0x010E978C
 		private void TempInitKscEntities()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -964,7 +975,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045885 RID: 284805 RVA: 0x011418CC File Offset: 0x0113FACC
+		// Token: 0x0603BA35 RID: 244277 RVA: 0x010EB6F8 File Offset: 0x010E98F8
 		private void OnAddKscEntity(AKSC_Entity kscEntity)
 		{
 			AKSC_Shape2D_Entity_Bar aksc_Shape2D_Entity_Bar = kscEntity as AKSC_Shape2D_Entity_Bar;
@@ -974,7 +985,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045886 RID: 284806 RVA: 0x011418EC File Offset: 0x0113FAEC
+		// Token: 0x0603BA36 RID: 244278 RVA: 0x010EB718 File Offset: 0x010E9918
 		private void SetShapeWorldReady()
 		{
 			this.IsShapeWorldReady = true;
@@ -999,14 +1010,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.InitKscPlayerEntities();
 		}
 
-		// Token: 0x06045887 RID: 284807 RVA: 0x01141964 File Offset: 0x0113FB64
+		// Token: 0x0603BA37 RID: 244279 RVA: 0x010EB790 File Offset: 0x010E9990
 		private void SetFormationDataReady()
 		{
 			this.IsFormationDataReady = true;
 			this.InitKscPlayerEntities();
 		}
 
-		// Token: 0x06045888 RID: 284808 RVA: 0x01141974 File Offset: 0x0113FB74
+		// Token: 0x0603BA38 RID: 244280 RVA: 0x010EB7A0 File Offset: 0x010E99A0
 		[return: Nullable(2)]
 		public global::Transform GetEntityTransform(global::Vector location, global::Rotator rotation)
 		{
@@ -1019,14 +1030,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return transform;
 		}
 
-		// Token: 0x06045889 RID: 284809 RVA: 0x011419D7 File Offset: 0x0113FBD7
+		// Token: 0x0603BA39 RID: 244281 RVA: 0x010EB803 File Offset: 0x010E9A03
 		[NullableContext(2)]
 		public global::Transform GetPlayerEntityTransform()
 		{
 			return this.BornTransform;
 		}
 
-		// Token: 0x0604588A RID: 284810 RVA: 0x011419E0 File Offset: 0x0113FBE0
+		// Token: 0x0603BA3A RID: 244282 RVA: 0x010EB80C File Offset: 0x010E9A0C
 		public void OnAddKscBar(AKSC_Shape2D_Entity_Bar kscBarEntity)
 		{
 			PinballBattlePlayerBarController pinballBattlePlayerBarController = new PinballBattlePlayerBarController();
@@ -1041,7 +1052,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.RightBarController = pinballBattlePlayerBarController;
 		}
 
-		// Token: 0x0604588B RID: 284811 RVA: 0x01141A28 File Offset: 0x0113FC28
+		// Token: 0x0603BA3B RID: 244283 RVA: 0x010EB854 File Offset: 0x010E9A54
 		private void TempInitCamera(float? overrideFov = null)
 		{
 			PinballWorldConfig? worldConfigCache = this.GetModel().WorldConfigCache;
@@ -1062,7 +1073,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.EnterFixCamera(vector, rotation, num);
 		}
 
-		// Token: 0x0604588C RID: 284812 RVA: 0x01141B1C File Offset: 0x0113FD1C
+		// Token: 0x0603BA3C RID: 244284 RVA: 0x010EB948 File Offset: 0x010E9B48
 		protected override void OnInit()
 		{
 			base.OnInit();
@@ -1082,7 +1093,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			};
 		}
 
-		// Token: 0x0604588D RID: 284813 RVA: 0x01141C10 File Offset: 0x0113FE10
+		// Token: 0x0603BA3D RID: 244285 RVA: 0x010EBA3C File Offset: 0x010E9C3C
 		protected override void OnClear()
 		{
 			base.OnClear();
@@ -1096,7 +1107,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().CurWaveMachineTracker.OnAllSpawned = null;
 		}
 
-		// Token: 0x0604588E RID: 284814 RVA: 0x01141CA5 File Offset: 0x0113FEA5
+		// Token: 0x0603BA3E RID: 244286 RVA: 0x010EBAD1 File Offset: 0x010E9CD1
 		[NullableContext(2)]
 		private void OnPinballSpawnFinishNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1107,7 +1118,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().FirstWaveMonsterTracker.MarkServerDone();
 		}
 
-		// Token: 0x0604588F RID: 284815 RVA: 0x01141CC8 File Offset: 0x0113FEC8
+		// Token: 0x0603BA3F RID: 244287 RVA: 0x010EBAF4 File Offset: 0x010E9CF4
 		[NullableContext(2)]
 		private void OnPinballStartNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1123,7 +1134,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045890 RID: 284816 RVA: 0x01141D2C File Offset: 0x0113FF2C
+		// Token: 0x0603BA40 RID: 244288 RVA: 0x010EBB58 File Offset: 0x010E9D58
 		[NullableContext(2)]
 		private void OnPinballUpdateWaveNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1132,7 +1143,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().CurWaveMachineTracker.MarkServerDone();
 		}
 
-		// Token: 0x06045891 RID: 284817 RVA: 0x01141D64 File Offset: 0x0113FF64
+		// Token: 0x0603BA41 RID: 244289 RVA: 0x010EBB90 File Offset: 0x010E9D90
 		[NullableContext(2)]
 		private void OnPinballInGameStarChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1144,7 +1155,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045892 RID: 284818 RVA: 0x01141DA4 File Offset: 0x0113FFA4
+		// Token: 0x0603BA42 RID: 244290 RVA: 0x010EBBD0 File Offset: 0x010E9DD0
 		[NullableContext(2)]
 		private void OnPinballGameStateChangeNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1182,7 +1193,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.HandleGameStateChangeReason(pinballInGameStateChangeNotify.ChangeReason);
 		}
 
-		// Token: 0x06045893 RID: 284819 RVA: 0x01141ECC File Offset: 0x011400CC
+		// Token: 0x0603BA43 RID: 244291 RVA: 0x010EBCF8 File Offset: 0x010E9EF8
 		private void HandleGameStateChangeReason(PinballStateChangeReasonPb reason)
 		{
 			PinballController instance = PinballController.Instance;
@@ -1236,7 +1247,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045894 RID: 284820 RVA: 0x01141F8A File Offset: 0x0114018A
+		// Token: 0x0603BA44 RID: 244292 RVA: 0x010EBDB6 File Offset: 0x010E9FB6
 		public void FirstStartLaunch()
 		{
 			this.ReadyLaunch();
@@ -1245,7 +1256,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.StartAutoLaunchTimer();
 		}
 
-		// Token: 0x06045895 RID: 284821 RVA: 0x01141FA8 File Offset: 0x011401A8
+		// Token: 0x0603BA45 RID: 244293 RVA: 0x010EBDD4 File Offset: 0x010E9FD4
 		[NullableContext(2)]
 		private void OnPinballSettleNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -1253,7 +1264,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.OnPinballSettleAsync(notify).Forget();
 		}
 
-		// Token: 0x06045896 RID: 284822 RVA: 0x01141FC8 File Offset: 0x011401C8
+		// Token: 0x0603BA46 RID: 244294 RVA: 0x010EBDF4 File Offset: 0x010E9FF4
 		private UniTask OnPinballSettleAsync(PinballSettleNotify notify)
 		{
 			PinballBattleSubController.<OnPinballSettleAsync>d__140 <OnPinballSettleAsync>d__;
@@ -1265,7 +1276,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <OnPinballSettleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045897 RID: 284823 RVA: 0x01142013 File Offset: 0x01140213
+		// Token: 0x0603BA47 RID: 244295 RVA: 0x010EBE3F File Offset: 0x010EA03F
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.PinballBattlePauseView)
@@ -1280,7 +1291,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			canOpenSettleResultPromise.SetResult();
 		}
 
-		// Token: 0x06045898 RID: 284824 RVA: 0x01142034 File Offset: 0x01140234
+		// Token: 0x0603BA48 RID: 244296 RVA: 0x010EBE60 File Offset: 0x010EA060
 		private UniTask OpenSettleViewAsync(bool isWin, Action openSettleView)
 		{
 			PinballBattleSubController.<OpenSettleViewAsync>d__142 <OpenSettleViewAsync>d__;
@@ -1293,7 +1304,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <OpenSettleViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045899 RID: 284825 RVA: 0x01142088 File Offset: 0x01140288
+		// Token: 0x0603BA49 RID: 244297 RVA: 0x010EBEB4 File Offset: 0x010EA0B4
 		public unsafe void RequestGameDataSync()
 		{
 			if (Time.Instance.Now - this.LastSyncRealTimeMs < 5000.0)
@@ -1318,13 +1329,13 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 					string message = "战斗数据定时同步返回错误";
 					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("errorCode", pinballInGameSyncPayloadResponse.ErrorCode);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("messageId", 19461);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("messageId", 24557);
 					instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 				}
 			}, 0);
 		}
 
-		// Token: 0x0604589A RID: 284826 RVA: 0x01142109 File Offset: 0x01140309
+		// Token: 0x0603BA4A RID: 244298 RVA: 0x010EBF35 File Offset: 0x010EA135
 		private void StartScheduledSyncData()
 		{
 			if (this.PayloadSyncTimerHandle != null)
@@ -1337,7 +1348,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}, 10000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0604589B RID: 284827 RVA: 0x0114213D File Offset: 0x0114033D
+		// Token: 0x0603BA4B RID: 244299 RVA: 0x010EBF69 File Offset: 0x010EA169
 		private void StopScheduledSyncData()
 		{
 			if (this.PayloadSyncTimerHandle == null)
@@ -1348,14 +1359,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.PayloadSyncTimerHandle = null;
 		}
 
-		// Token: 0x0604589C RID: 284828 RVA: 0x01142160 File Offset: 0x01140360
+		// Token: 0x0603BA4C RID: 244300 RVA: 0x010EBF8C File Offset: 0x010EA18C
 		private void StopAllTimerTask()
 		{
 			this.StopScheduledSyncData();
 			this.StopAutoLaunchTimer();
 		}
 
-		// Token: 0x0604589D RID: 284829 RVA: 0x01142170 File Offset: 0x01140370
+		// Token: 0x0603BA4D RID: 244301 RVA: 0x010EBF9C File Offset: 0x010EA19C
 		public void RequestTeamAllDie()
 		{
 			PinballTeamDieRequest message = PinballTeamDieRequest.Create();
@@ -1368,12 +1379,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballTeamDieResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballTeamDieResponse.ErrorCode, 24554, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballTeamDieResponse.ErrorCode, 15684, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0604589E RID: 284830 RVA: 0x011421B4 File Offset: 0x011403B4
+		// Token: 0x0603BA4E RID: 244302 RVA: 0x010EBFE0 File Offset: 0x010EA1E0
 		public void RequestTeamRevive()
 		{
 			PinballTeamReviveRequest message = PinballTeamReviveRequest.Create();
@@ -1386,12 +1397,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballTeamReviveResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballTeamReviveResponse.ErrorCode, 17085, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballTeamReviveResponse.ErrorCode, 15477, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x0604589F RID: 284831 RVA: 0x011421F8 File Offset: 0x011403F8
+		// Token: 0x0603BA4F RID: 244303 RVA: 0x010EC024 File Offset: 0x010EA224
 		public void RequestQuit()
 		{
 			this.StopAllTimerTask();
@@ -1407,12 +1418,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballQuitResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballQuitResponse.ErrCode, 17521, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballQuitResponse.ErrCode, 21377, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060458A0 RID: 284832 RVA: 0x0114225C File Offset: 0x0114045C
+		// Token: 0x0603BA50 RID: 244304 RVA: 0x010EC088 File Offset: 0x010EA288
 		[NullableContext(2)]
 		public UniTask Restart(List<int> roleIdList = null)
 		{
@@ -1425,7 +1436,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <Restart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060458A1 RID: 284833 RVA: 0x011422A8 File Offset: 0x011404A8
+		// Token: 0x0603BA51 RID: 244305 RVA: 0x010EC0D4 File Offset: 0x010EA2D4
 		public void RequestBonusFullWin()
 		{
 			this.StopAllTimerTask();
@@ -1440,12 +1451,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballBonusFullWinResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballBonusFullWinResponse.ErrCode, 22647, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballBonusFullWinResponse.ErrCode, 16828, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060458A2 RID: 284834 RVA: 0x01142304 File Offset: 0x01140504
+		// Token: 0x0603BA52 RID: 244306 RVA: 0x010EC130 File Offset: 0x010EA330
 		public void RequestSettle()
 		{
 			this.StopAllTimerTask();
@@ -1460,12 +1471,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballSetPayloadResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballSetPayloadResponse.ErrorCode, 24616, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballSetPayloadResponse.ErrorCode, 26267, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060458A3 RID: 284835 RVA: 0x0114235E File Offset: 0x0114055E
+		// Token: 0x0603BA53 RID: 244307 RVA: 0x010EC18A File Offset: 0x010EA38A
 		private void OnBlackFadeScreenFinish()
 		{
 			CustomPromise canRequestSettlePromise = this.CanRequestSettlePromise;
@@ -1476,7 +1487,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			canRequestSettlePromise.SetResult();
 		}
 
-		// Token: 0x060458A4 RID: 284836 RVA: 0x01142370 File Offset: 0x01140570
+		// Token: 0x0603BA54 RID: 244308 RVA: 0x010EC19C File Offset: 0x010EA39C
 		private void RequestLaunch()
 		{
 			PinballInGameKickBallRequest message = PinballInGameKickBallRequest.Create();
@@ -1489,12 +1500,12 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 				}
 				if (pinballInGameKickBallResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballInGameKickBallResponse.ErrorCode, 26970, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(pinballInGameKickBallResponse.ErrorCode, 23854, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x060458A5 RID: 284837 RVA: 0x011423B3 File Offset: 0x011405B3
+		// Token: 0x0603BA55 RID: 244309 RVA: 0x010EC1DF File Offset: 0x010EA3DF
 		private void OnScoreChanged(int score)
 		{
 			if (this.AlreadyRequestBonusWin)
@@ -1508,7 +1519,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458A6 RID: 284838 RVA: 0x011423D8 File Offset: 0x011405D8
+		// Token: 0x0603BA56 RID: 244310 RVA: 0x010EC204 File Offset: 0x010EA404
 		public static void RequestEnterInst(int levelId, List<int> roleIdList)
 		{
 			PinballCtx pinballCtx = PinballCtx.Create();
@@ -1554,7 +1565,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			InstanceDungeonController.Instance.PrewarTeamFightRequest(instId, new List<int>(), 0, 0, null, null).Forget<bool>();
 		}
 
-		// Token: 0x060458A7 RID: 284839 RVA: 0x01142588 File Offset: 0x01140788
+		// Token: 0x0603BA57 RID: 244311 RVA: 0x010EC3B4 File Offset: 0x010EA5B4
 		protected override void OnHandleHeadHpInfo(FKSC_HeadHpContext headInfo)
 		{
 			bool flag = headInfo.HeadUiType == EKSC_HeadUiType.TopBoss;
@@ -1585,7 +1596,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458A8 RID: 284840 RVA: 0x01142621 File Offset: 0x01140821
+		// Token: 0x0603BA58 RID: 244312 RVA: 0x010EC44D File Offset: 0x010EA64D
 		protected override void OnHandlePlayerHeadHpInfo(KscHeadStateData kscPlayerHeadStateData, FKSC_HeadHpContext headInfo)
 		{
 			base.OnHandlePlayerHeadHpInfo(kscPlayerHeadStateData, headInfo);
@@ -1593,7 +1604,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.OnHandleHeadHpInfo(headInfo);
 		}
 
-		// Token: 0x060458A9 RID: 284841 RVA: 0x01142640 File Offset: 0x01140840
+		// Token: 0x0603BA59 RID: 244313 RVA: 0x010EC46C File Offset: 0x010EA66C
 		protected override UniTask LoadHeadStateCurve()
 		{
 			PinballBattleSubController.<LoadHeadStateCurve>d__159 <LoadHeadStateCurve>d__;
@@ -1604,7 +1615,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadHeadStateCurve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060458AA RID: 284842 RVA: 0x01142684 File Offset: 0x01140884
+		// Token: 0x0603BA5A RID: 244314 RVA: 0x010EC4B0 File Offset: 0x010EA6B0
 		protected override UniTask LoadHeadStateDynamicBatchActor()
 		{
 			PinballBattleSubController.<LoadHeadStateDynamicBatchActor>d__160 <LoadHeadStateDynamicBatchActor>d__;
@@ -1615,7 +1626,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadHeadStateDynamicBatchActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060458AB RID: 284843 RVA: 0x011426C8 File Offset: 0x011408C8
+		// Token: 0x0603BA5B RID: 244315 RVA: 0x010EC4F4 File Offset: 0x010EA6F4
 		protected override UniTask LoadHeadStateViewActor()
 		{
 			PinballBattleSubController.<LoadHeadStateViewActor>d__161 <LoadHeadStateViewActor>d__;
@@ -1626,7 +1637,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadHeadStateViewActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060458AC RID: 284844 RVA: 0x0114270B File Offset: 0x0114090B
+		// Token: 0x0603BA5C RID: 244316 RVA: 0x010EC537 File Offset: 0x010EA737
 		public void OnInputTriggerBar()
 		{
 			PinballBattleLaunchPhaseController launchPhaseController = this.LaunchPhaseController;
@@ -1648,7 +1659,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			kscEntityRightBar.TriggerBar();
 		}
 
-		// Token: 0x060458AD RID: 284845 RVA: 0x0114274C File Offset: 0x0114094C
+		// Token: 0x0603BA5D RID: 244317 RVA: 0x010EC578 File Offset: 0x010EA778
 		public void OnInputRebuildBounds()
 		{
 			UKSC_DA_Shape2D_WorldBounds shapeWorldBoundsDa = this.GetModel().ShapeWorldBoundsDa;
@@ -1663,7 +1674,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458AE RID: 284846 RVA: 0x0114277C File Offset: 0x0114097C
+		// Token: 0x0603BA5E RID: 244318 RVA: 0x010EC5A8 File Offset: 0x010EA7A8
 		public void OnInputResetPlayerPosition()
 		{
 			UKSC_Shape2D_World shapeWorld = this.ShapeWorld;
@@ -1676,7 +1687,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458AF RID: 284847 RVA: 0x011427BC File Offset: 0x011409BC
+		// Token: 0x0603BA5F RID: 244319 RVA: 0x010EC5E8 File Offset: 0x010EA7E8
 		public bool OnInputUseSkill(int roleIndex, int skillIndex = 0)
 		{
 			if (roleIndex < this.KscPlayerEntities.Length)
@@ -1692,7 +1703,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return false;
 		}
 
-		// Token: 0x060458B0 RID: 284848 RVA: 0x0114281B File Offset: 0x01140A1B
+		// Token: 0x0603BA60 RID: 244320 RVA: 0x010EC647 File Offset: 0x010EA847
 		public void OnInputUseTeamSkill(int skillIndex)
 		{
 			if (this.KscTeamPlayer != null)
@@ -1701,14 +1712,14 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458B1 RID: 284849 RVA: 0x01142832 File Offset: 0x01140A32
+		// Token: 0x0603BA61 RID: 244321 RVA: 0x010EC65E File Offset: 0x010EA85E
 		protected int GetCreatureSpawnId()
 		{
 			this.CreatureIdCounter++;
 			return this.CreatureIdCounter;
 		}
 
-		// Token: 0x060458B2 RID: 284850 RVA: 0x01142848 File Offset: 0x01140A48
+		// Token: 0x0603BA62 RID: 244322 RVA: 0x010EC674 File Offset: 0x010EA874
 		private void OnKscEntitySummon(FTransformDouble ueOwnerTransform, in TArray<FKSC_SpawnEntity> contexts, int summonerEntityId)
 		{
 			int num = contexts.Num();
@@ -1731,38 +1742,26 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458B3 RID: 284851 RVA: 0x011428C7 File Offset: 0x01140AC7
+		// Token: 0x0603BA63 RID: 244323 RVA: 0x010EC6F3 File Offset: 0x010EA8F3
 		private void OnRelaunchPlayer()
 		{
 			this.ReadyLaunch();
 		}
 
-		// Token: 0x060458B4 RID: 284852 RVA: 0x011428CF File Offset: 0x01140ACF
+		// Token: 0x0603BA64 RID: 244324 RVA: 0x010EC6FB File Offset: 0x010EA8FB
 		private void OnTeamAllDead()
 		{
 			this.RequestTeamAllDie();
 		}
 
-		// Token: 0x060458B5 RID: 284853 RVA: 0x011428D8 File Offset: 0x01140AD8
+		// Token: 0x0603BA65 RID: 244325 RVA: 0x010EC704 File Offset: 0x010EA904
 		private void OnWorldUpdateOnce()
 		{
-			if (!Info.Instance.IsBuildShipping && this.ShapeWorld != null)
-			{
-				this.ShapeWorld.Entities_.Num();
-				int num = this.ShapeWorld.ToAddEntities_.Num();
-				if (num > 0)
-				{
-					for (int i = 0; i < num; i++)
-					{
-						this.ShapeWorld.ToAddEntities_.Get(i);
-					}
-				}
-			}
 			List<PinballFormationRolePb> list = this.GetModel().FormationData ?? new List<PinballFormationRolePb>();
-			for (int j = 0; j < this.KscPlayerEntities.Length; j++)
+			for (int i = 0; i < this.KscPlayerEntities.Length; i++)
 			{
-				AKSC_Shape2D_Entity_Player kscPlayer = this.KscPlayerEntities[j];
-				PinballFormationRolePb pinballFormationRolePb = (list.Count > j) ? list[j] : null;
+				AKSC_Shape2D_Entity_Player kscPlayer = this.KscPlayerEntities[i];
+				PinballFormationRolePb pinballFormationRolePb = (list.Count > i) ? list[i] : null;
 				if (pinballFormationRolePb != null)
 				{
 					this.InitPlayerEntityAttrAndBuffs(kscPlayer, pinballFormationRolePb);
@@ -1775,7 +1774,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458B6 RID: 284854 RVA: 0x011429B4 File Offset: 0x01140BB4
+		// Token: 0x0603BA66 RID: 244326 RVA: 0x010EC788 File Offset: 0x010EA988
 		private void InitPlayerEntityAttrAndBuffs(AKSC_Shape2D_Entity_Player kscPlayer, PinballFormationRolePb roleData)
 		{
 			PinballBattleSubModel model = this.GetModel();
@@ -1838,7 +1837,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().SetRoleBaseAttrsRecord(roleData, dictionary);
 		}
 
-		// Token: 0x060458B7 RID: 284855 RVA: 0x01142C04 File Offset: 0x01140E04
+		// Token: 0x0603BA67 RID: 244327 RVA: 0x010EC9DC File Offset: 0x010EABDC
 		protected bool SpawnEntityById(int creatureId, int configId, FTransformDouble transform, int? summonerEntityId = null)
 		{
 			PinballCreature? creatureConfig = PinballBattleConfig.Instance.GetCreatureConfigById(configId);
@@ -1924,7 +1923,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return true;
 		}
 
-		// Token: 0x060458B8 RID: 284856 RVA: 0x01142E44 File Offset: 0x01141044
+		// Token: 0x0603BA68 RID: 244328 RVA: 0x010ECC1C File Offset: 0x010EAE1C
 		private void RefreshCameraFov()
 		{
 			SceneCamera sceneCamera = CameraController.Instance.MainModel.SceneCamera;
@@ -1963,7 +1962,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			ucineCameraComponent2.SetFieldOfView(fieldOfView);
 		}
 
-		// Token: 0x060458B9 RID: 284857 RVA: 0x01142EAC File Offset: 0x011410AC
+		// Token: 0x0603BA69 RID: 244329 RVA: 0x010ECC84 File Offset: 0x010EAE84
 		public float AdjustCameraFovByScreenHeight(float baseFov)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -1980,7 +1979,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return baseFov;
 		}
 
-		// Token: 0x060458BA RID: 284858 RVA: 0x01142F14 File Offset: 0x01141114
+		// Token: 0x0603BA6A RID: 244330 RVA: 0x010ECCEC File Offset: 0x010EAEEC
 		private void InitBackgroundMaterial()
 		{
 			TArray<AActor> tarray = new TArray<AActor>();
@@ -2005,7 +2004,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458BB RID: 284859 RVA: 0x01142FDC File Offset: 0x011411DC
+		// Token: 0x0603BA6B RID: 244331 RVA: 0x010ECDB4 File Offset: 0x010EAFB4
 		private void ChangeBackground(string texturePath)
 		{
 			if (string.IsNullOrEmpty(texturePath))
@@ -2021,7 +2020,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			bgDynamicMat.SetTextureParameterValue(FNameUtil.GetDynamicFName("Background").Value, value);
 		}
 
-		// Token: 0x060458BC RID: 284860 RVA: 0x01143028 File Offset: 0x01141228
+		// Token: 0x0603BA6C RID: 244332 RVA: 0x010ECE00 File Offset: 0x010EB000
 		private void UpdateCombo()
 		{
 			if (this.ShapeWorld == null)
@@ -2037,7 +2036,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			model.SetCombo(worldAttr);
 		}
 
-		// Token: 0x060458BD RID: 284861 RVA: 0x0114305C File Offset: 0x0114125C
+		// Token: 0x0603BA6D RID: 244333 RVA: 0x010ECE34 File Offset: 0x010EB034
 		private void UpdateDamageInfo()
 		{
 			if (this.ShapeWorld == null)
@@ -2052,7 +2051,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().UpdateDamageInfo(this.DamageInfo);
 		}
 
-		// Token: 0x060458BE RID: 284862 RVA: 0x0114309C File Offset: 0x0114129C
+		// Token: 0x0603BA6E RID: 244334 RVA: 0x010ECE74 File Offset: 0x010EB074
 		public void CreateLaunchController()
 		{
 			global::Vector vector = global::Vector.Create(this.WorldOrigin);
@@ -2075,7 +2074,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.LaunchPhaseController.SetupSplineMotion(rootActor, 319850000, this.LaunchSpeedCurve, this.LaunchDegCurve);
 		}
 
-		// Token: 0x060458BF RID: 284863 RVA: 0x01143163 File Offset: 0x01141363
+		// Token: 0x0603BA6F RID: 244335 RVA: 0x010ECF3B File Offset: 0x010EB13B
 		public void ReadyLaunch()
 		{
 			this.SetAllPlayerEntityActive(false, true);
@@ -2087,7 +2086,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			launchPhaseController.StartSplineMotion();
 		}
 
-		// Token: 0x060458C0 RID: 284864 RVA: 0x01143180 File Offset: 0x01141380
+		// Token: 0x0603BA70 RID: 244336 RVA: 0x010ECF58 File Offset: 0x010EB158
 		public void LaunchBall()
 		{
 			PinballBattleLaunchPhaseController launchPhaseController = this.LaunchPhaseController;
@@ -2137,7 +2136,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.StopAutoLaunchTimer();
 		}
 
-		// Token: 0x060458C1 RID: 284865 RVA: 0x011432DC File Offset: 0x011414DC
+		// Token: 0x0603BA71 RID: 244337 RVA: 0x010ED0B4 File Offset: 0x010EB2B4
 		public void SetAllPlayerEntityActive(bool active, bool checkIsAlive = true)
 		{
 			foreach (AKSC_Shape2D_Entity_Player aksc_Shape2D_Entity_Player in this.KscPlayerEntities)
@@ -2149,7 +2148,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458C2 RID: 284866 RVA: 0x0114330E File Offset: 0x0114150E
+		// Token: 0x0603BA72 RID: 244338 RVA: 0x010ED0E6 File Offset: 0x010EB2E6
 		public void SetPlayerEntityActive(AKSC_Shape2D_Entity_Player entity, bool active, bool checkIsAlive = true)
 		{
 			if (checkIsAlive && !entity.IsPlayerAlive)
@@ -2164,7 +2163,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458C3 RID: 284867 RVA: 0x01143340 File Offset: 0x01141540
+		// Token: 0x0603BA73 RID: 244339 RVA: 0x010ED118 File Offset: 0x010EB318
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -2180,7 +2179,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return <LoadCurveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060458C4 RID: 284868 RVA: 0x01143384 File Offset: 0x01141584
+		// Token: 0x0603BA74 RID: 244340 RVA: 0x010ED15C File Offset: 0x010EB35C
 		private void InitFeverBar()
 		{
 			global::Transform transform = global::Transform.Create(this.WorldOriginTransform.ToUeTransform());
@@ -2203,7 +2202,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.FeverBarController.Init(this.FeverBar, dissolveMin, dissolveMax, this.FeverBarMaterial);
 		}
 
-		// Token: 0x060458C5 RID: 284869 RVA: 0x0114346E File Offset: 0x0114166E
+		// Token: 0x0603BA75 RID: 244341 RVA: 0x010ED246 File Offset: 0x010EB446
 		private void InitLaunchDirectionController()
 		{
 			if (this.LaunchDirectionItem == null)
@@ -2214,7 +2213,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.LaunchDirectionController.Init(this.LaunchDirectionItem);
 		}
 
-		// Token: 0x060458C6 RID: 284870 RVA: 0x01143495 File Offset: 0x01141695
+		// Token: 0x0603BA76 RID: 244342 RVA: 0x010ED26D File Offset: 0x010EB46D
 		public void BindBossSkillStateChangeDelegate(AKSC_Shape2D_Entity kscEntity)
 		{
 			this.ClearBossSkillStateChangeDelegate();
@@ -2222,7 +2221,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			kscEntity.AssignSkillStateChange(this.BossSkillStateChangeDelegate);
 		}
 
-		// Token: 0x060458C7 RID: 284871 RVA: 0x011434C0 File Offset: 0x011416C0
+		// Token: 0x0603BA77 RID: 244343 RVA: 0x010ED298 File Offset: 0x010EB498
 		public void ClearBossSkillStateChangeDelegate()
 		{
 			if (this.BossSkillStateChangeDelegate != null)
@@ -2232,7 +2231,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458C8 RID: 284872 RVA: 0x011434E4 File Offset: 0x011416E4
+		// Token: 0x0603BA78 RID: 244344 RVA: 0x010ED2BC File Offset: 0x010EB4BC
 		private void ClearTotalDelegateList()
 		{
 			foreach (Delegate callBack in this.RoleSkillDelegateList)
@@ -2248,7 +2247,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.ClearBossSkillStateChangeDelegate();
 		}
 
-		// Token: 0x060458C9 RID: 284873 RVA: 0x01143590 File Offset: 0x01141790
+		// Token: 0x0603BA79 RID: 244345 RVA: 0x010ED368 File Offset: 0x010EB568
 		private void BindPlayerEntityTotalDelegate(AKSC_Shape2D_Entity_Player playerEntity, IPinballRoleTotalInfo roleTotalData, int roleId)
 		{
 			Action<int, EKSC_Skill_State> action = delegate(int skillIndex, EKSC_Skill_State state)
@@ -2294,7 +2293,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			playerEntity.AssignPlayerStateChange(fonPlayerStateChange);
 		}
 
-		// Token: 0x060458CA RID: 284874 RVA: 0x01143617 File Offset: 0x01141817
+		// Token: 0x0603BA7A RID: 244346 RVA: 0x010ED3EF File Offset: 0x010EB5EF
 		public void OnBossSkillStateChange(int skillIndex, EKSC_Skill_State state)
 		{
 			if (state != EKSC_Skill_State.BeginSkill)
@@ -2304,7 +2303,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.GetModel().BossSkillTimes++;
 		}
 
-		// Token: 0x060458CB RID: 284875 RVA: 0x01143634 File Offset: 0x01141834
+		// Token: 0x0603BA7B RID: 244347 RVA: 0x010ED40C File Offset: 0x010EB60C
 		private void UpdateDamageTotalInfo()
 		{
 			if (this.ShapeWorld == null)
@@ -2323,7 +2322,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458CC RID: 284876 RVA: 0x01143698 File Offset: 0x01141898
+		// Token: 0x0603BA7C RID: 244348 RVA: 0x010ED470 File Offset: 0x010EB670
 		private void ExecuteDamageTotalInfo(FKSC_Shape2D_DamageTotalInfo damageInfo)
 		{
 			int sourceEntityId = damageInfo.SourceEntityId;
@@ -2361,7 +2360,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458CD RID: 284877 RVA: 0x01143798 File Offset: 0x01141998
+		// Token: 0x0603BA7D RID: 244349 RVA: 0x010ED570 File Offset: 0x010EB770
 		public void StartAutoLaunchTimer()
 		{
 			if (this.AutoLaunchTimer != null)
@@ -2374,7 +2373,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}, (float)this.GetModel().WorldConfigCache.Value.ForceLaunchTime, null, null, true, 1f);
 		}
 
-		// Token: 0x060458CE RID: 284878 RVA: 0x011437EB File Offset: 0x011419EB
+		// Token: 0x0603BA7E RID: 244350 RVA: 0x010ED5C3 File Offset: 0x010EB7C3
 		public void StopAutoLaunchTimer()
 		{
 			if (this.AutoLaunchTimer == null)
@@ -2385,7 +2384,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.AutoLaunchTimer = null;
 		}
 
-		// Token: 0x060458CF RID: 284879 RVA: 0x01143810 File Offset: 0x01141A10
+		// Token: 0x0603BA7F RID: 244351 RVA: 0x010ED5E8 File Offset: 0x010EB7E8
 		private void TryTriggerDeathrattle(int creatureDataId)
 		{
 			IPinballBattleCombatInfo entity = this.GetModel().GetEntity(creatureDataId);
@@ -2426,7 +2425,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458D0 RID: 284880 RVA: 0x01143930 File Offset: 0x01141B30
+		// Token: 0x0603BA80 RID: 244352 RVA: 0x010ED708 File Offset: 0x010EB908
 		private void ApplyBuffToAllies(string buffIdStr)
 		{
 			foreach (int buffId in this.ParseNumberArray(buffIdStr))
@@ -2438,7 +2437,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458D1 RID: 284881 RVA: 0x011439AC File Offset: 0x01141BAC
+		// Token: 0x0603BA81 RID: 244353 RVA: 0x010ED784 File Offset: 0x010EB984
 		private void ApplyBuffToEnemies(PinballEffect buffEffect)
 		{
 			List<IPinballBattleCombatInfo> list = new List<IPinballBattleCombatInfo>();
@@ -2507,7 +2506,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458D2 RID: 284882 RVA: 0x01143C40 File Offset: 0x01141E40
+		// Token: 0x0603BA82 RID: 244354 RVA: 0x010EDA18 File Offset: 0x010EBC18
 		private List<int> ParseNumberArray(string str)
 		{
 			string text = str.Replace("[", "").Replace("]", "").Trim();
@@ -2528,7 +2527,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return list;
 		}
 
-		// Token: 0x060458D3 RID: 284883 RVA: 0x01143CB8 File Offset: 0x01141EB8
+		// Token: 0x0603BA83 RID: 244355 RVA: 0x010EDA90 File Offset: 0x010EBC90
 		public void AddRoleChargeMaxEffectBuff(int roleId)
 		{
 			KscEntityHandle kscEntityByRoleId = this.GetModel().GetKscEntityByRoleId(roleId);
@@ -2540,7 +2539,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			KuroSimpleCombatController.Instance.ModifyBuffAsync(aksc_Shape2D_Entity_Player.EntityId_, true, this.GetModel().WorldConfigCache.Value.RoleChargeMaxBuffId);
 		}
 
-		// Token: 0x060458D4 RID: 284884 RVA: 0x01143D18 File Offset: 0x01141F18
+		// Token: 0x0603BA84 RID: 244356 RVA: 0x010EDAF0 File Offset: 0x010EBCF0
 		public void RemoveRoleChargeMaxEffectBuff(int roleId)
 		{
 			KscEntityHandle kscEntityByRoleId = this.GetModel().GetKscEntityByRoleId(roleId);
@@ -2552,7 +2551,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			KuroSimpleCombatController.Instance.ModifyBuffAsync(aksc_Shape2D_Entity_Player.EntityId_, false, this.GetModel().WorldConfigCache.Value.RoleChargeMaxBuffId);
 		}
 
-		// Token: 0x060458D5 RID: 284885 RVA: 0x01143D70 File Offset: 0x01141F70
+		// Token: 0x0603BA85 RID: 244357 RVA: 0x010EDB48 File Offset: 0x010EBD48
 		private void UpdateTranslucentSortPriority(AKSC_Shape2D_Entity_Player kscPlayer, int roleId, int? priority = null)
 		{
 			int? roleSlotIndex = this.GetModel().GetRoleSlotIndex(roleId);
@@ -2579,7 +2578,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458D6 RID: 284886 RVA: 0x01143E44 File Offset: 0x01142044
+		// Token: 0x0603BA86 RID: 244358 RVA: 0x010EDC1C File Offset: 0x010EBE1C
 		public bool HasAnyPlayerUseSkill()
 		{
 			AKSC_Shape2D_Entity_Player[] kscPlayerEntities = this.KscPlayerEntities;
@@ -2602,7 +2601,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return false;
 		}
 
-		// Token: 0x060458D7 RID: 284887 RVA: 0x01143EBC File Offset: 0x011420BC
+		// Token: 0x0603BA87 RID: 244359 RVA: 0x010EDC94 File Offset: 0x010EBE94
 		public bool IsInDashCd()
 		{
 			UKSC_Shape2D_World shapeWorld = this.ShapeWorld;
@@ -2616,7 +2615,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return tarray != null && tarray.Num() > 1 && tarray.Get(1).SkillState_ > EKSC_Skill_State.Ready;
 		}
 
-		// Token: 0x060458D8 RID: 284888 RVA: 0x01143F14 File Offset: 0x01142114
+		// Token: 0x0603BA88 RID: 244360 RVA: 0x010EDCEC File Offset: 0x010EBEEC
 		public float? GetDashNeedCost()
 		{
 			UKSC_Shape2D_World shapeWorld = this.ShapeWorld;
@@ -2639,7 +2638,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			return new float?(daSkill_.CustomCostValue);
 		}
 
-		// Token: 0x060458D9 RID: 284889 RVA: 0x01143F90 File Offset: 0x01142190
+		// Token: 0x0603BA89 RID: 244361 RVA: 0x010EDD68 File Offset: 0x010EBF68
 		private void EnterFixCamera(global::Vector location, global::Rotator rotation, float fov)
 		{
 			if (this.IsInFixCamera)
@@ -2660,7 +2659,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			playerComponent.EnterFixSceneSubCamera(location, rotation, fov, 0f, 0f, ESceneSubCameraType.Fix, null, new EViewTargetBlendFunction?(EViewTargetBlendFunction.VTBlend_Linear), new float?(0f), new EViewTargetBlendFunction?(EViewTargetBlendFunction.VTBlend_Linear), new float?(0f), new bool?(false), null, new bool?(false), null, "", null, null, null, false, false);
 		}
 
-		// Token: 0x060458DA RID: 284890 RVA: 0x01144017 File Offset: 0x01142217
+		// Token: 0x0603BA8A RID: 244362 RVA: 0x010EDDEF File Offset: 0x010EBFEF
 		private void ExitFixCamera()
 		{
 			if (!this.IsInFixCamera)
@@ -2681,7 +2680,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			playerComponent.ExitFixSceneSubCamera(null, true);
 		}
 
-		// Token: 0x060458DB RID: 284891 RVA: 0x01144050 File Offset: 0x01142250
+		// Token: 0x0603BA8B RID: 244363 RVA: 0x010EDE28 File Offset: 0x010EC028
 		private void ClearAllBullets()
 		{
 			BulletModel instance = BulletModel.Instance;
@@ -2698,7 +2697,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458DC RID: 284892 RVA: 0x011440D8 File Offset: 0x011422D8
+		// Token: 0x0603BA8C RID: 244364 RVA: 0x010EDEB0 File Offset: 0x010EC0B0
 		public void SetSpineCompTickEnabled(AKSC_Entity kscEntity, bool enabled)
 		{
 			USpineSkeletonAnimationComponent uspineSkeletonAnimationComponent = kscEntity.GetComponentByClass(USpineSkeletonAnimationComponent.StaticClass()) as USpineSkeletonAnimationComponent;
@@ -2721,7 +2720,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458DD RID: 284893 RVA: 0x0114414C File Offset: 0x0114234C
+		// Token: 0x0603BA8D RID: 244365 RVA: 0x010EDF24 File Offset: 0x010EC124
 		public void OnAllCurWaveMachineSpawned()
 		{
 			foreach (AKSC_Entity aksc_Entity in this.GetModel().CurWaveMachineTracker.SpawnedEntities)
@@ -2734,7 +2733,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x060458DE RID: 284894 RVA: 0x011441EC File Offset: 0x011423EC
+		// Token: 0x0603BA8E RID: 244366 RVA: 0x010EDFC4 File Offset: 0x010EC1C4
 		public void ClearGame(bool exitCamera = false)
 		{
 			this.ClearAllBullets();
@@ -2757,165 +2756,165 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x04024470 RID: 148592
+		// Token: 0x0401F725 RID: 128805
 		[Nullable(2)]
 		private static int[] PlayerEntityKeys;
 
-		// Token: 0x04024471 RID: 148593
+		// Token: 0x0401F726 RID: 128806
 		[Nullable(2)]
 		private static Stat UpdateStat;
 
-		// Token: 0x04024472 RID: 148594
+		// Token: 0x0401F727 RID: 128807
 		public static bool EnableSpineParallelUpdate;
 
-		// Token: 0x04024473 RID: 148595
+		// Token: 0x0401F728 RID: 128808
 		public static bool EnableSpineShadow;
 
-		// Token: 0x04024474 RID: 148596
+		// Token: 0x0401F729 RID: 128809
 		public const int PINBALL_TEAM_PLAYER_ENTITY_KEY = 10001;
 
-		// Token: 0x04024475 RID: 148597
+		// Token: 0x0401F72A RID: 128810
 		private const int TEAM_PLAYER_ATTR_ID = 1001;
 
-		// Token: 0x04024476 RID: 148598
+		// Token: 0x0401F72B RID: 128811
 		private const int MAX_FORMATION_ROLES = 3;
 
-		// Token: 0x04024477 RID: 148599
+		// Token: 0x0401F72C RID: 128812
 		private const float BASE_ASPECT_RATIO = 1.7777778f;
 
-		// Token: 0x04024478 RID: 148600
+		// Token: 0x0401F72D RID: 128813
 		private const string SCENE_BG_ACTOR_TAG = "Background";
 
-		// Token: 0x04024479 RID: 148601
+		// Token: 0x0401F72E RID: 128814
 		private const string BG_MAT_TEX_PARAM_NAME = "Background";
 
-		// Token: 0x0402447A RID: 148602
+		// Token: 0x0401F72F RID: 128815
 		private const int GAME_SYNC_INTERVAL = 10000;
 
-		// Token: 0x0402447B RID: 148603
+		// Token: 0x0401F730 RID: 128816
 		private const int GAME_SYNC_REJECT_TIME = 5000;
 
-		// Token: 0x0402447C RID: 148604
+		// Token: 0x0401F731 RID: 128817
 		private const int LAUNCH_WAY_SPLINE_ID = 319850000;
 
-		// Token: 0x0402447D RID: 148605
+		// Token: 0x0401F732 RID: 128818
 		private FVectorDouble EntityHidePosition = new FVectorDouble(0.0, 0.0, 0.0);
 
-		// Token: 0x0402447E RID: 148606
+		// Token: 0x0401F733 RID: 128819
 		private const string FORCE_SHOW_CURSOR_TAG = "PinballBattleInstanceForceShowCursor";
 
-		// Token: 0x0402447F RID: 148607
+		// Token: 0x0401F734 RID: 128820
 		private const int DASH_SKILL_INDEX = 1;
 
-		// Token: 0x04024480 RID: 148608
+		// Token: 0x0401F735 RID: 128821
 		private const int MAIN_SKILL_INDEX = 0;
 
-		// Token: 0x04024481 RID: 148609
+		// Token: 0x0401F736 RID: 128822
 		private const int DEATHRATTLE_ADD_BUFF_TYPE = 2;
 
-		// Token: 0x04024482 RID: 148610
+		// Token: 0x0401F737 RID: 128823
 		private const int EFFECT_TYPE_ALLY = 1;
 
-		// Token: 0x04024483 RID: 148611
+		// Token: 0x0401F738 RID: 128824
 		private const int EFFECT_TYPE_ENEMY = 2;
 
-		// Token: 0x04024484 RID: 148612
+		// Token: 0x0401F739 RID: 128825
 		private const int ROLE_ID_FEIXUE = 80850019;
 
-		// Token: 0x04024485 RID: 148613
+		// Token: 0x0401F73A RID: 128826
 		private readonly PinballBattlePlayerHpHandle PlayerHpHandle = new PinballBattlePlayerHpHandle();
 
-		// Token: 0x04024486 RID: 148614
+		// Token: 0x0401F73B RID: 128827
 		private readonly PinballBattleEntityRedirectFilter EntityRedirectFilter = new PinballBattleEntityRedirectFilter();
 
-		// Token: 0x04024487 RID: 148615
+		// Token: 0x0401F73C RID: 128828
 		private int CreatureIdCounter;
 
-		// Token: 0x04024488 RID: 148616
+		// Token: 0x0401F73D RID: 128829
 		[Nullable(2)]
 		private UKSC_Shape2D_World ShapeWorld;
 
-		// Token: 0x04024489 RID: 148617
+		// Token: 0x0401F73E RID: 128830
 		[Nullable(2)]
 		private AKSC_Shape2D_Entity_Bar KscEntityLeftBar;
 
-		// Token: 0x0402448A RID: 148618
+		// Token: 0x0401F73F RID: 128831
 		[Nullable(2)]
 		private AKSC_Shape2D_Entity_Bar KscEntityRightBar;
 
-		// Token: 0x0402448B RID: 148619
+		// Token: 0x0401F740 RID: 128832
 		[Nullable(2)]
 		private BP_Fever_Bar_C FeverBar;
 
-		// Token: 0x0402448C RID: 148620
+		// Token: 0x0401F741 RID: 128833
 		[Nullable(2)]
 		private PinballBattleFeverBarController FeverBarController;
 
-		// Token: 0x0402448D RID: 148621
+		// Token: 0x0401F742 RID: 128834
 		[Nullable(2)]
 		private PinballBattlePlayerBarController LeftBarController;
 
-		// Token: 0x0402448E RID: 148622
+		// Token: 0x0401F743 RID: 128835
 		[Nullable(2)]
 		private PinballBattlePlayerBarController RightBarController;
 
-		// Token: 0x0402448F RID: 148623
+		// Token: 0x0401F744 RID: 128836
 		private float GroundPositionZ;
 
-		// Token: 0x04024490 RID: 148624
+		// Token: 0x0401F745 RID: 128837
 		private global::Vector WorldOrigin = global::Vector.Create();
 
-		// Token: 0x04024491 RID: 148625
+		// Token: 0x0401F746 RID: 128838
 		private global::Transform WorldOriginTransform = global::Transform.Create();
 
-		// Token: 0x04024492 RID: 148626
+		// Token: 0x0401F747 RID: 128839
 		private global::Transform BornTransform = global::Transform.Create();
 
-		// Token: 0x04024493 RID: 148627
+		// Token: 0x0401F748 RID: 128840
 		private global::Vector InitLocation = global::Vector.Create();
 
-		// Token: 0x04024494 RID: 148628
+		// Token: 0x0401F749 RID: 128841
 		private bool IsShapeWorldReady;
 
-		// Token: 0x04024495 RID: 148629
+		// Token: 0x0401F74A RID: 128842
 		private bool IsInFixCamera;
 
-		// Token: 0x04024496 RID: 148630
+		// Token: 0x0401F74B RID: 128843
 		private bool IsInitShapeWorld;
 
-		// Token: 0x04024497 RID: 148631
+		// Token: 0x0401F74C RID: 128844
 		private bool IsPreloadFinish;
 
-		// Token: 0x04024498 RID: 148632
+		// Token: 0x0401F74D RID: 128845
 		private bool IsMapLoadFinish;
 
-		// Token: 0x04024499 RID: 148633
+		// Token: 0x0401F74E RID: 128846
 		[Nullable(2)]
 		public AKSC_Shape2D_Entity_TeamPlayer KscTeamPlayer;
 
-		// Token: 0x0402449A RID: 148634
+		// Token: 0x0401F74F RID: 128847
 		private int[] KscPlayerEntityIds = Array.Empty<int>();
 
-		// Token: 0x0402449B RID: 148635
+		// Token: 0x0401F750 RID: 128848
 		private AKSC_Shape2D_Entity_Player[] KscPlayerEntities = Array.Empty<AKSC_Shape2D_Entity_Player>();
 
-		// Token: 0x0402449C RID: 148636
+		// Token: 0x0401F751 RID: 128849
 		private int KscPlayerInitCount;
 
-		// Token: 0x0402449D RID: 148637
+		// Token: 0x0401F752 RID: 128850
 		private bool IsFormationDataReady;
 
-		// Token: 0x0402449E RID: 148638
+		// Token: 0x0401F753 RID: 128851
 		private bool IsInitKscPlayerEntities;
 
-		// Token: 0x0402449F RID: 148639
+		// Token: 0x0401F754 RID: 128852
 		private bool NeedSendLaunchRequest;
 
-		// Token: 0x040244A0 RID: 148640
+		// Token: 0x0401F755 RID: 128853
 		[Nullable(2)]
 		private TMap<int, int> DamageInfo;
 
-		// Token: 0x040244A1 RID: 148641
+		// Token: 0x0401F756 RID: 128854
 		[Nullable(new byte[]
 		{
 			2,
@@ -2923,110 +2922,110 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 		})]
 		private TArray<FKSC_Shape2D_DamageTotalInfo> DamageTotalInfo;
 
-		// Token: 0x040244A2 RID: 148642
+		// Token: 0x0401F757 RID: 128855
 		private bool IsFirstLaunch;
 
-		// Token: 0x040244A3 RID: 148643
+		// Token: 0x0401F758 RID: 128856
 		[Nullable(2)]
 		private FOnWorldUpdateOnce WorldUpdateOnceDelegateRef;
 
-		// Token: 0x040244A4 RID: 148644
+		// Token: 0x0401F759 RID: 128857
 		[Nullable(2)]
 		private FOnKSCEntitySummon KscEntitySummonDelegateRef;
 
-		// Token: 0x040244A5 RID: 148645
+		// Token: 0x0401F75A RID: 128858
 		[Nullable(2)]
 		private FOnRelaunchPlayer RelaunchPlayerDelegateRef;
 
-		// Token: 0x040244A6 RID: 148646
+		// Token: 0x0401F75B RID: 128859
 		[Nullable(2)]
 		private FOnTeamAllDead TeamAllDeadDelegateRef;
 
-		// Token: 0x040244A7 RID: 148647
+		// Token: 0x0401F75C RID: 128860
 		[Nullable(2)]
 		private HashSet<int> PendingLoadBuffs;
 
-		// Token: 0x040244A8 RID: 148648
+		// Token: 0x0401F75D RID: 128861
 		private int CachedShowFlagTonemapper;
 
-		// Token: 0x040244A9 RID: 148649
+		// Token: 0x0401F75E RID: 128862
 		private int CachedScreenSizeCullRatioFactor;
 
-		// Token: 0x040244AA RID: 148650
+		// Token: 0x0401F75F RID: 128863
 		private int CachedAntiAliasing;
 
-		// Token: 0x040244AB RID: 148651
+		// Token: 0x0401F760 RID: 128864
 		[Nullable(2)]
 		private UMaterialInstanceDynamic BgDynamicMat;
 
-		// Token: 0x040244AC RID: 148652
+		// Token: 0x0401F761 RID: 128865
 		[Nullable(2)]
 		private UMaterialInstance FeverBarMaterial;
 
-		// Token: 0x040244AD RID: 148653
+		// Token: 0x0401F762 RID: 128866
 		[Nullable(2)]
 		private TimerHandle PayloadSyncTimerHandle;
 
-		// Token: 0x040244AE RID: 148654
+		// Token: 0x0401F763 RID: 128867
 		private double LastSyncRealTimeMs;
 
-		// Token: 0x040244AF RID: 148655
+		// Token: 0x0401F764 RID: 128868
 		[Nullable(2)]
 		private UCurveFloat LaunchSpeedCurve;
 
-		// Token: 0x040244B0 RID: 148656
+		// Token: 0x0401F765 RID: 128869
 		[Nullable(2)]
 		private UCurveFloat LaunchDegCurve;
 
-		// Token: 0x040244B1 RID: 148657
+		// Token: 0x0401F766 RID: 128870
 		[Nullable(2)]
 		private UiPanelBase LaunchBallItem;
 
-		// Token: 0x040244B2 RID: 148658
+		// Token: 0x0401F767 RID: 128871
 		[Nullable(2)]
 		private PinballBattleLaunchDirectionItem LaunchDirectionItem;
 
-		// Token: 0x040244B3 RID: 148659
+		// Token: 0x0401F768 RID: 128872
 		[Nullable(2)]
 		private PinballBattleLaunchDirectionController LaunchDirectionController;
 
-		// Token: 0x040244B4 RID: 148660
+		// Token: 0x0401F769 RID: 128873
 		private bool AlreadyRequestBonusWin;
 
-		// Token: 0x040244B5 RID: 148661
+		// Token: 0x0401F76A RID: 128874
 		[Nullable(2)]
 		private CustomPromise CanRequestSettlePromise;
 
-		// Token: 0x040244B6 RID: 148662
+		// Token: 0x0401F76B RID: 128875
 		[Nullable(2)]
 		private CustomPromise CanOpenSettleResultPromise;
 
-		// Token: 0x040244B7 RID: 148663
+		// Token: 0x0401F76C RID: 128876
 		private float BaseFov;
 
-		// Token: 0x040244B8 RID: 148664
+		// Token: 0x0401F76D RID: 128877
 		[Nullable(2)]
 		public PinballBattleLaunchPhaseController LaunchPhaseController;
 
-		// Token: 0x040244B9 RID: 148665
+		// Token: 0x0401F76E RID: 128878
 		private readonly List<Delegate> RoleSkillDelegateList = new List<Delegate>();
 
-		// Token: 0x040244BA RID: 148666
+		// Token: 0x0401F76F RID: 128879
 		private readonly List<Delegate> PlayerStateChangeDelegateList = new List<Delegate>();
 
-		// Token: 0x040244BB RID: 148667
+		// Token: 0x0401F770 RID: 128880
 		[Nullable(2)]
 		private FOnShape2DSkillStateChange BossSkillStateChangeDelegate;
 
-		// Token: 0x040244BC RID: 148668
+		// Token: 0x0401F771 RID: 128881
 		[Nullable(2)]
 		private TimerHandle AutoLaunchTimer;
 
-		// Token: 0x0200CDBA RID: 52666
+		// Token: 0x0200B9AC RID: 47532
 		[NullableContext(0)]
 		private class AlwaysShowCursor : IExtraShowCursor
 		{
-			// Token: 0x06051CD2 RID: 335058 RVA: 0x01637450 File Offset: 0x01635650
+			// Token: 0x0604853E RID: 296254 RVA: 0x0160C7B8 File Offset: 0x0160A9B8
 			public bool IsShowCursor()
 			{
 				return true;

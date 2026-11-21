@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200309D RID: 12445
+// Token: 0x020025F4 RID: 9716
 public class WeaponEquipInfo
 {
-	// Token: 0x0601A995 RID: 108949 RVA: 0x00724FB4 File Offset: 0x007231B4
+	// Token: 0x06018393 RID: 99219 RVA: 0x0074ADC0 File Offset: 0x00748FC0
 	[NullableContext(1)]
 	public unsafe bool SetData(EquipComponentPb pb)
 	{
@@ -42,12 +42,12 @@ public class WeaponEquipInfo
 		return true;
 	}
 
-	// Token: 0x0400CCE4 RID: 52452
+	// Token: 0x0400D0C7 RID: 53447
 	public int WeaponId;
 
-	// Token: 0x0400CCE5 RID: 52453
+	// Token: 0x0400D0C8 RID: 53448
 	public WeaponConf? _WeaponConfig;
 
-	// Token: 0x0400CCE6 RID: 52454
+	// Token: 0x0400D0C9 RID: 53449
 	public int WeaponBreachLevel;
 }

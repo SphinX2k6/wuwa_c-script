@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064D7 RID: 25815
+	// Token: 0x02005455 RID: 21589
 	public class MatchThreeEnvTipsView : UiPanelBase
 	{
-		// Token: 0x06040C54 RID: 265300 RVA: 0x00FAF468 File Offset: 0x00FAD668
+		// Token: 0x06035918 RID: 219416 RVA: 0x00EF64B0 File Offset: 0x00EF46B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040C55 RID: 265301 RVA: 0x00FAF4B0 File Offset: 0x00FAD6B0
+		// Token: 0x06035919 RID: 219417 RVA: 0x00EF64F8 File Offset: 0x00EF46F8
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06040C56 RID: 265302 RVA: 0x00FAF4C3 File Offset: 0x00FAD6C3
+		// Token: 0x0603591A RID: 219418 RVA: 0x00EF650B File Offset: 0x00EF470B
 		[NullableContext(1)]
 		public void SetContent(string textId, int remainingRounds, int generateCount)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}));
 		}
 
-		// Token: 0x06040C57 RID: 265303 RVA: 0x00FAF4F4 File Offset: 0x00FAD6F4
+		// Token: 0x0603591B RID: 219419 RVA: 0x00EF653C File Offset: 0x00EF473C
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			MatchThreeEnvTipsView.<OnShowAsyncImplementImplement>d__5 <OnShowAsyncImplementImplement>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040C58 RID: 265304 RVA: 0x00FAF537 File Offset: 0x00FAD737
+		// Token: 0x0603591C RID: 219420 RVA: 0x00EF657F File Offset: 0x00EF477F
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -63,14 +63,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x04021BE3 RID: 138211
+		// Token: 0x0401C514 RID: 115988
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C6D8 RID: 50904
+		// Token: 0x0200B0BE RID: 45246
 		private enum EComponent
 		{
-			// Token: 0x0403C0B1 RID: 245937
+			// Token: 0x04036A0C RID: 223756
 			TextTip
 		}
 	}

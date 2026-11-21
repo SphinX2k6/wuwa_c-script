@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02001E05 RID: 7685
+// Token: 0x020012C7 RID: 4807
 public class EHandBookFetterItemDefine
 {
-	// Token: 0x04006C71 RID: 27761
+	// Token: 0x04006D52 RID: 27986
 	public const int Toggle = 0;
 
-	// Token: 0x04006C72 RID: 27762
+	// Token: 0x04006D53 RID: 27987
 	public const int TargetPic = 1;
 
-	// Token: 0x04006C73 RID: 27763
+	// Token: 0x04006D54 RID: 27988
 	public const int NotFoundItem = 2;
 
-	// Token: 0x04006C74 RID: 27764
+	// Token: 0x04006D55 RID: 27989
 	public const int LvlTxt = 3;
 
-	// Token: 0x04006C75 RID: 27765
+	// Token: 0x04006D56 RID: 27990
 	public const int NameTxt = 4;
 
-	// Token: 0x04006C76 RID: 27766
+	// Token: 0x04006D57 RID: 27991
 	public const int TargetingIco = 5;
 
-	// Token: 0x04006C77 RID: 27767
+	// Token: 0x04006D58 RID: 27992
 	public const int HorizontalLayout = 6;
 }

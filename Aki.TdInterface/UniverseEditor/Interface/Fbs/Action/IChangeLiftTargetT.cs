@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006306 RID: 25350
+	// Token: 0x02006977 RID: 26999
 	public class IChangeLiftTargetT
 	{
-		// Token: 0x1700BD3C RID: 48444
-		// (get) Token: 0x0602BD67 RID: 179559 RVA: 0x00607705 File Offset: 0x00605905
-		// (set) Token: 0x0602BD68 RID: 179560 RVA: 0x0060770D File Offset: 0x0060590D
+		// Token: 0x1700C6C6 RID: 50886
+		// (get) Token: 0x0602E4D0 RID: 189648 RVA: 0x00652711 File Offset: 0x00650911
+		// (set) Token: 0x0602E4D1 RID: 189649 RVA: 0x00652719 File Offset: 0x00650919
 		public bool IsSelf { get; set; }
 
-		// Token: 0x1700BD3D RID: 48445
-		// (get) Token: 0x0602BD69 RID: 179561 RVA: 0x00607716 File Offset: 0x00605916
-		// (set) Token: 0x0602BD6A RID: 179562 RVA: 0x0060771E File Offset: 0x0060591E
+		// Token: 0x1700C6C7 RID: 50887
+		// (get) Token: 0x0602E4D2 RID: 189650 RVA: 0x00652722 File Offset: 0x00650922
+		// (set) Token: 0x0602E4D3 RID: 189651 RVA: 0x0065272A File Offset: 0x0065092A
 		public TLiftMoveTypeUnion MoveType { get; set; }
 
-		// Token: 0x1700BD3E RID: 48446
-		// (get) Token: 0x0602BD6B RID: 179563 RVA: 0x00607727 File Offset: 0x00605927
-		// (set) Token: 0x0602BD6C RID: 179564 RVA: 0x0060772F File Offset: 0x0060592F
+		// Token: 0x1700C6C8 RID: 50888
+		// (get) Token: 0x0602E4D4 RID: 189652 RVA: 0x00652733 File Offset: 0x00650933
+		// (set) Token: 0x0602E4D5 RID: 189653 RVA: 0x0065273B File Offset: 0x0065093B
 		public int EntityId { get; set; }
 
-		// Token: 0x1700BD3F RID: 48447
-		// (get) Token: 0x0602BD6D RID: 179565 RVA: 0x00607738 File Offset: 0x00605938
-		// (set) Token: 0x0602BD6E RID: 179566 RVA: 0x00607740 File Offset: 0x00605940
+		// Token: 0x1700C6C9 RID: 50889
+		// (get) Token: 0x0602E4D6 RID: 189654 RVA: 0x00652744 File Offset: 0x00650944
+		// (set) Token: 0x0602E4D7 RID: 189655 RVA: 0x0065274C File Offset: 0x0065094C
 		public int Location { get; set; }
 
-		// Token: 0x1700BD40 RID: 48448
-		// (get) Token: 0x0602BD6F RID: 179567 RVA: 0x00607749 File Offset: 0x00605949
-		// (set) Token: 0x0602BD70 RID: 179568 RVA: 0x00607751 File Offset: 0x00605951
+		// Token: 0x1700C6CA RID: 50890
+		// (get) Token: 0x0602E4D8 RID: 189656 RVA: 0x00652755 File Offset: 0x00650955
+		// (set) Token: 0x0602E4D9 RID: 189657 RVA: 0x0065275D File Offset: 0x0065095D
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BD71 RID: 179569 RVA: 0x0060775A File Offset: 0x0060595A
+		// Token: 0x0602E4DA RID: 189658 RVA: 0x00652766 File Offset: 0x00650966
 		public IChangeLiftTargetT()
 		{
 			this.IsSelf = false;

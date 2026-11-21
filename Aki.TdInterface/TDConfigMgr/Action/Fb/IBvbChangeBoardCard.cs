@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A25 RID: 10789
+	// Token: 0x02002D12 RID: 11538
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBvbChangeBoardCard : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDC6 RID: 60870 RVA: 0x0022A622 File Offset: 0x00228822
-		[NullableContext(1)]
+		// Token: 0x0600FC5E RID: 64606 RVA: 0x00247FD6 File Offset: 0x002461D6
+		[NullableContext(0)]
 		public static IBvbChangeBoardCard Create(IBvbChangeBoardCard? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B3E RID: 19262
-		// (get) Token: 0x0600EDC7 RID: 60871 RVA: 0x0022A641 File Offset: 0x00228841
+		// Token: 0x17004EE8 RID: 20200
+		// (get) Token: 0x0600FC5F RID: 64607 RVA: 0x00247FF5 File Offset: 0x002461F5
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B3F RID: 19263
-		// (get) Token: 0x0600EDC8 RID: 60872 RVA: 0x0022A650 File Offset: 0x00228850
+		// Token: 0x17004EE9 RID: 20201
+		// (get) Token: 0x0600FC60 RID: 64608 RVA: 0x00248004 File Offset: 0x00246204
 		public virtual int? BoardPosIndex
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B40 RID: 19264
-		// (get) Token: 0x0600EDC9 RID: 60873 RVA: 0x0022A688 File Offset: 0x00228888
+		// Token: 0x17004EEA RID: 20202
+		// (get) Token: 0x0600FC61 RID: 64609 RVA: 0x0024803C File Offset: 0x0024623C
 		public virtual List<int> BoardPosIndexList
 		{
 			get
@@ -73,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082DF RID: 33503
+		// Token: 0x040089D2 RID: 35282
 		private IBvbChangeBoardCard Instance;
 
-		// Token: 0x040082E0 RID: 33504
+		// Token: 0x040089D3 RID: 35283
 		private List<int> _BoardPosIndexListCache;
 
-		// Token: 0x040082E1 RID: 33505
+		// Token: 0x040089D4 RID: 35284
 		private bool _BoardPosIndexListInited;
 	}
 }

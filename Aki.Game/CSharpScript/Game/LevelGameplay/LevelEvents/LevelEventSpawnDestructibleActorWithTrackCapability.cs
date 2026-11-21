@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B87 RID: 27527
+	// Token: 0x02005CFF RID: 23807
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSpawnDestructibleActorWithTrackCapability : LevelEventBase
 	{
-		// Token: 0x0604427C RID: 279164 RVA: 0x010CAF73 File Offset: 0x010C9173
+		// Token: 0x0603A3CE RID: 238542 RVA: 0x01074C0B File Offset: 0x01072E0B
 		public LevelEventSpawnDestructibleActorWithTrackCapability(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604427D RID: 279165 RVA: 0x010CAF7C File Offset: 0x010C917C
+		// Token: 0x0603A3CF RID: 238543 RVA: 0x01074C14 File Offset: 0x01072E14
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			ActionSpawnDestructibleActorWithTrackCapability actionSpawnDestructibleActorWithTrackCapability = inParams as ActionSpawnDestructibleActorWithTrackCapability;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604427E RID: 279166 RVA: 0x010CAF9C File Offset: 0x010C919C
+		// Token: 0x0603A3D0 RID: 238544 RVA: 0x01074C34 File Offset: 0x01072E34
 		[NullableContext(0)]
 		public UniTask<bool> ExecuteNewManually([Nullable(1)] ActionSpawnDestructibleActorWithTrackCapability inParams)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <ExecuteNewManually>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604427F RID: 279167 RVA: 0x010CAFE8 File Offset: 0x010C91E8
+		// Token: 0x0603A3D1 RID: 238545 RVA: 0x01074C80 File Offset: 0x01072E80
 		private TaskGraph LoadTypeAndResourceThenSpawnActor(SpawnDestructibleActorWithTrackCapability @params)
 		{
 			LevelEventSpawnDestructibleActorWithTrackCapability.<>c__DisplayClass12_0 CS$<>8__locals1 = new LevelEventSpawnDestructibleActorWithTrackCapability.<>c__DisplayClass12_0();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TaskGraph(dictionary, dependencies);
 		}
 
-		// Token: 0x06044280 RID: 279168 RVA: 0x010CB112 File Offset: 0x010C9312
+		// Token: 0x0603A3D2 RID: 238546 RVA: 0x01074DAA File Offset: 0x01072FAA
 		private void ResetResource()
 		{
 			this.KuroDestructibleAsset = null;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.TrackTargetWhileRotateActor = null;
 		}
 
-		// Token: 0x06044281 RID: 279169 RVA: 0x010CB130 File Offset: 0x010C9330
+		// Token: 0x0603A3D3 RID: 238547 RVA: 0x01074DC8 File Offset: 0x01072FC8
 		private UniTask LoadKuroDestructibleAsset(string path, Type type)
 		{
 			LevelEventSpawnDestructibleActorWithTrackCapability.<LoadKuroDestructibleAsset>d__14 <LoadKuroDestructibleAsset>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadKuroDestructibleAsset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044282 RID: 279170 RVA: 0x010CB17C File Offset: 0x010C937C
+		// Token: 0x0603A3D4 RID: 238548 RVA: 0x01074E14 File Offset: 0x01073014
 		private UniTask LoadKuroDestructibleDestructionAssetName(string path, Type type)
 		{
 			LevelEventSpawnDestructibleActorWithTrackCapability.<LoadKuroDestructibleDestructionAssetName>d__15 <LoadKuroDestructibleDestructionAssetName>d__;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadKuroDestructibleDestructionAssetName>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044283 RID: 279171 RVA: 0x010CB1C8 File Offset: 0x010C93C8
+		// Token: 0x0603A3D5 RID: 238549 RVA: 0x01074E60 File Offset: 0x01073060
 		private static UniTask LoadTypeAsync()
 		{
 			LevelEventSpawnDestructibleActorWithTrackCapability.<LoadTypeAsync>d__16 <LoadTypeAsync>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <LoadTypeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044284 RID: 279172 RVA: 0x010CB204 File Offset: 0x010C9404
+		// Token: 0x0603A3D6 RID: 238550 RVA: 0x01074E9C File Offset: 0x0107309C
 		private UniTask SpawnKuroDestructibleActor(FTransformDouble spawnTransform)
 		{
 			UKuroDestructibleAsset kuroDestructibleAsset = this.KuroDestructibleAsset;
@@ -157,42 +157,42 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x04023957 RID: 145751
+		// Token: 0x0401EBF9 RID: 125945
 		[Nullable(2)]
 		private UKuroDestructibleAsset KuroDestructibleAsset;
 
-		// Token: 0x04023958 RID: 145752
+		// Token: 0x0401EBFA RID: 125946
 		[Nullable(2)]
 		private UKuroDestructibleDestructionAsset KuroDestructibleDestructionAsset;
 
-		// Token: 0x04023959 RID: 145753
+		// Token: 0x0401EBFB RID: 125947
 		[Nullable(2)]
 		private AKuroDestructibleActor KuroDestructibleActor;
 
-		// Token: 0x0402395A RID: 145754
+		// Token: 0x0401EBFC RID: 125948
 		[Nullable(2)]
 		private AActor TrackTargetWhileRotateActor;
 
-		// Token: 0x0402395B RID: 145755
+		// Token: 0x0401EBFD RID: 125949
 		private const string KuroDestructibleAssetName = "KuroDestructibleAsset";
 
-		// Token: 0x0402395C RID: 145756
+		// Token: 0x0401EBFE RID: 125950
 		private const string KuroDestructibleDestructionAssetName = "KuroDestructibleDestructionAsset";
 
-		// Token: 0x0402395D RID: 145757
+		// Token: 0x0401EBFF RID: 125951
 		private const string SpawnKuroDestructibleActorFunc = "SpawnKuroDestructibleActor";
 
-		// Token: 0x0402395E RID: 145758
+		// Token: 0x0401EC00 RID: 125952
 		private const string LoadKuroTrackTargetWhileRotateType = "LoadKuroTrackTargetWhileRotateType";
 
-		// Token: 0x0402395F RID: 145759
+		// Token: 0x0401EC01 RID: 125953
 		private const string SpawnTrackTargetWhileRotate = "SpawnTrackTargetWhileRotate";
 
-		// Token: 0x0200CC0F RID: 52239
+		// Token: 0x0200B7FF RID: 47103
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D98C RID: 252300
+			// Token: 0x04038DAE RID: 232878
 			[Nullable(0)]
 			public static Func<UniTask> <0>__LoadTypeAsync;
 		}

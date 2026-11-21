@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004521 RID: 17697
+	// Token: 0x02004989 RID: 18825
 	public struct IMarbleCommonItem : IFlatbufferObject
 	{
-		// Token: 0x17007D74 RID: 32116
-		// (get) Token: 0x0601A991 RID: 108945 RVA: 0x003CC0FC File Offset: 0x003CA2FC
+		// Token: 0x170083B5 RID: 33717
+		// (get) Token: 0x0601C166 RID: 115046 RVA: 0x003F8398 File Offset: 0x003F6598
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A992 RID: 108946 RVA: 0x003CC109 File Offset: 0x003CA309
+		// Token: 0x0601C167 RID: 115047 RVA: 0x003F83A5 File Offset: 0x003F65A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A993 RID: 108947 RVA: 0x003CC110 File Offset: 0x003CA310
+		// Token: 0x0601C168 RID: 115048 RVA: 0x003F83AC File Offset: 0x003F65AC
 		public static IMarbleCommonItem GetRootAsIMarbleCommonItem(ByteBuffer _bb)
 		{
 			return IMarbleCommonItem.GetRootAsIMarbleCommonItem(_bb, default(IMarbleCommonItem));
 		}
 
-		// Token: 0x0601A994 RID: 108948 RVA: 0x003CC12C File Offset: 0x003CA32C
+		// Token: 0x0601C169 RID: 115049 RVA: 0x003F83C8 File Offset: 0x003F65C8
 		public static IMarbleCommonItem GetRootAsIMarbleCommonItem(ByteBuffer _bb, IMarbleCommonItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A995 RID: 108949 RVA: 0x003CC149 File Offset: 0x003CA349
+		// Token: 0x0601C16A RID: 115050 RVA: 0x003F83E5 File Offset: 0x003F65E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A996 RID: 108950 RVA: 0x003CC158 File Offset: 0x003CA358
+		// Token: 0x0601C16B RID: 115051 RVA: 0x003F83F4 File Offset: 0x003F65F4
 		public IMarbleCommonItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007D75 RID: 32117
-		// (get) Token: 0x0601A997 RID: 108951 RVA: 0x003CC168 File Offset: 0x003CA368
+		// Token: 0x170083B6 RID: 33718
+		// (get) Token: 0x0601C16C RID: 115052 RVA: 0x003F8404 File Offset: 0x003F6604
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D76 RID: 32118
-		// (get) Token: 0x0601A998 RID: 108952 RVA: 0x003CC1A4 File Offset: 0x003CA3A4
+		// Token: 0x170083B7 RID: 33719
+		// (get) Token: 0x0601C16D RID: 115053 RVA: 0x003F8440 File Offset: 0x003F6640
 		public ETwoDimensionLevelType Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D77 RID: 32119
-		// (get) Token: 0x0601A999 RID: 108953 RVA: 0x003CC1E0 File Offset: 0x003CA3E0
+		// Token: 0x170083B8 RID: 33720
+		// (get) Token: 0x0601C16E RID: 115054 RVA: 0x003F847C File Offset: 0x003F667C
 		public ITwoDimensionTransform? Transform
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D78 RID: 32120
-		// (get) Token: 0x0601A99A RID: 108954 RVA: 0x003CC240 File Offset: 0x003CA440
+		// Token: 0x170083B9 RID: 33721
+		// (get) Token: 0x0601C16F RID: 115055 RVA: 0x003F84DC File Offset: 0x003F66DC
 		public EMarbleItemType SubType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D79 RID: 32121
-		// (get) Token: 0x0601A99B RID: 108955 RVA: 0x003CC280 File Offset: 0x003CA480
+		// Token: 0x170083BA RID: 33722
+		// (get) Token: 0x0601C170 RID: 115056 RVA: 0x003F851C File Offset: 0x003F671C
 		public int DataId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D7A RID: 32122
-		// (get) Token: 0x0601A99C RID: 108956 RVA: 0x003CC2C0 File Offset: 0x003CA4C0
+		// Token: 0x170083BB RID: 33723
+		// (get) Token: 0x0601C171 RID: 115057 RVA: 0x003F855C File Offset: 0x003F675C
 		public int AwakenWave
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007D7B RID: 32123
-		// (get) Token: 0x0601A99D RID: 108957 RVA: 0x003CC300 File Offset: 0x003CA500
+		// Token: 0x170083BC RID: 33724
+		// (get) Token: 0x0601C172 RID: 115058 RVA: 0x003F859C File Offset: 0x003F679C
 		public int DestroyWave
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A99E RID: 108958 RVA: 0x003CC340 File Offset: 0x003CA540
+		// Token: 0x0601C173 RID: 115059 RVA: 0x003F85DC File Offset: 0x003F67DC
 		public static Offset<IMarbleCommonItem> CreateIMarbleCommonItem(FlatBufferBuilder builder, int Id = 0, ETwoDimensionLevelType Type = ETwoDimensionLevelType.Marble, Offset<ITwoDimensionTransform> TransformOffset = default(Offset<ITwoDimensionTransform>), EMarbleItemType SubType = EMarbleItemType.CommonItem, int DataId = 0, int AwakenWave = 0, int DestroyWave = 0)
 		{
 			builder.StartTable(7);
@@ -166,61 +166,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IMarbleCommonItem.EndIMarbleCommonItem(builder);
 		}
 
-		// Token: 0x0601A99F RID: 108959 RVA: 0x003CC38F File Offset: 0x003CA58F
+		// Token: 0x0601C174 RID: 115060 RVA: 0x003F862B File Offset: 0x003F682B
 		public static void StartIMarbleCommonItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601A9A0 RID: 108960 RVA: 0x003CC398 File Offset: 0x003CA598
+		// Token: 0x0601C175 RID: 115061 RVA: 0x003F8634 File Offset: 0x003F6834
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601A9A1 RID: 108961 RVA: 0x003CC3A3 File Offset: 0x003CA5A3
+		// Token: 0x0601C176 RID: 115062 RVA: 0x003F863F File Offset: 0x003F683F
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionLevelType type)
 		{
 			builder.AddByte(1, (byte)type, 0);
 		}
 
-		// Token: 0x0601A9A2 RID: 108962 RVA: 0x003CC3AE File Offset: 0x003CA5AE
+		// Token: 0x0601C177 RID: 115063 RVA: 0x003F864A File Offset: 0x003F684A
 		public static void AddTransform(FlatBufferBuilder builder, Offset<ITwoDimensionTransform> transformOffset)
 		{
 			builder.AddOffset(2, transformOffset.Value, 0);
 		}
 
-		// Token: 0x0601A9A3 RID: 108963 RVA: 0x003CC3BE File Offset: 0x003CA5BE
+		// Token: 0x0601C178 RID: 115064 RVA: 0x003F865A File Offset: 0x003F685A
 		public static void AddSubType(FlatBufferBuilder builder, EMarbleItemType subType)
 		{
 			builder.AddByte(3, (byte)subType, 0);
 		}
 
-		// Token: 0x0601A9A4 RID: 108964 RVA: 0x003CC3C9 File Offset: 0x003CA5C9
+		// Token: 0x0601C179 RID: 115065 RVA: 0x003F8665 File Offset: 0x003F6865
 		public static void AddDataId(FlatBufferBuilder builder, int dataId)
 		{
 			builder.AddInt(4, dataId, 0);
 		}
 
-		// Token: 0x0601A9A5 RID: 108965 RVA: 0x003CC3D4 File Offset: 0x003CA5D4
+		// Token: 0x0601C17A RID: 115066 RVA: 0x003F8670 File Offset: 0x003F6870
 		public static void AddAwakenWave(FlatBufferBuilder builder, int awakenWave)
 		{
 			builder.AddInt(5, awakenWave, 0);
 		}
 
-		// Token: 0x0601A9A6 RID: 108966 RVA: 0x003CC3DF File Offset: 0x003CA5DF
+		// Token: 0x0601C17B RID: 115067 RVA: 0x003F867B File Offset: 0x003F687B
 		public static void AddDestroyWave(FlatBufferBuilder builder, int destroyWave)
 		{
 			builder.AddInt(6, destroyWave, 0);
 		}
 
-		// Token: 0x0601A9A7 RID: 108967 RVA: 0x003CC3EA File Offset: 0x003CA5EA
+		// Token: 0x0601C17C RID: 115068 RVA: 0x003F8686 File Offset: 0x003F6886
 		public static Offset<IMarbleCommonItem> EndIMarbleCommonItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IMarbleCommonItem>(builder.EndTable());
 		}
 
-		// Token: 0x0601A9A8 RID: 108968 RVA: 0x003CC3F8 File Offset: 0x003CA5F8
+		// Token: 0x0601C17D RID: 115069 RVA: 0x003F8694 File Offset: 0x003F6894
 		public IMarbleCommonItemT UnPack()
 		{
 			IMarbleCommonItemT marbleCommonItemT = new IMarbleCommonItemT();
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return marbleCommonItemT;
 		}
 
-		// Token: 0x0601A9A9 RID: 108969 RVA: 0x003CC414 File Offset: 0x003CA614
+		// Token: 0x0601C17E RID: 115070 RVA: 0x003F86B0 File Offset: 0x003F68B0
 		public void UnPackTo(IMarbleCommonItemT _o)
 		{
 			_o.Id = this.Id;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.DestroyWave = this.DestroyWave;
 		}
 
-		// Token: 0x0601A9AA RID: 108970 RVA: 0x003CC498 File Offset: 0x003CA698
+		// Token: 0x0601C17F RID: 115071 RVA: 0x003F8734 File Offset: 0x003F6934
 		public static Offset<IMarbleCommonItem> Pack(FlatBufferBuilder builder, IMarbleCommonItemT _o)
 		{
 			if (_o == null)
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IMarbleCommonItem.CreateIMarbleCommonItem(builder, _o.Id, _o.Type, transformOffset, _o.SubType, _o.DataId, _o.AwakenWave, _o.DestroyWave);
 		}
 
-		// Token: 0x0400C59C RID: 50588
+		// Token: 0x0400CFCB RID: 53195
 		private Table __p;
 	}
 }

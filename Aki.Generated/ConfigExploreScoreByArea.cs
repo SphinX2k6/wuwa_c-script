@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002A3 RID: 675
+	// Token: 0x020002B7 RID: 695
 	public class ConfigExploreScoreByArea : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000FD7 RID: 4055 RVA: 0x000B2F93 File Offset: 0x000B1193
+		// Token: 0x0600104F RID: 4175 RVA: 0x000B9257 File Offset: 0x000B7457
 		static ConfigExploreScoreByArea()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExploreScoreByArea.CreateStaticDefaultValue), new Action(ConfigExploreScoreByArea.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000FD8 RID: 4056 RVA: 0x000B2FB4 File Offset: 0x000B11B4
+		// Token: 0x06001050 RID: 4176 RVA: 0x000B9278 File Offset: 0x000B7478
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExploreScoreByArea.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000FD9 RID: 4057 RVA: 0x000B3033 File Offset: 0x000B1233
+		// Token: 0x06001051 RID: 4177 RVA: 0x000B92F7 File Offset: 0x000B74F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExploreScoreByArea.LogPair = null;
 			ConfigExploreScoreByArea.HandleId = 0;
 		}
 
-		// Token: 0x06000FDA RID: 4058 RVA: 0x000B3041 File Offset: 0x000B1241
+		// Token: 0x06001052 RID: 4178 RVA: 0x000B9305 File Offset: 0x000B7505
 		public static void Init()
 		{
 			ConfigExploreScoreByArea.HandleId = ConfigCommon.InitDataStatement(ConfigExploreScoreByArea.HandleId, "db_explore_progress.db", "select BinData from `ExploreScore` where Area=?");
 		}
 
-		// Token: 0x06000FDB RID: 4059 RVA: 0x000B305C File Offset: 0x000B125C
+		// Token: 0x06001053 RID: 4179 RVA: 0x000B9320 File Offset: 0x000B7520
 		public static ExploreScore? GetConfig(int p0Area, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExploreScoreByArea.HandleId, ConfigExploreScoreByArea.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExploreScore?(rootAsExploreScore);
 		}
 
-		// Token: 0x04001259 RID: 4697
+		// Token: 0x040012E5 RID: 4837
 		private const string DB = "db_explore_progress.db";
 
-		// Token: 0x0400125A RID: 4698
+		// Token: 0x040012E6 RID: 4838
 		private const string FILE = "t.探索度.xlsx";
 
-		// Token: 0x0400125B RID: 4699
+		// Token: 0x040012E7 RID: 4839
 		private const string TABLE = "ExploreScore";
 
-		// Token: 0x0400125C RID: 4700
+		// Token: 0x040012E8 RID: 4840
 		private const string COMMAND = "select BinData from `ExploreScore` where Area=?";
 
-		// Token: 0x0400125D RID: 4701
+		// Token: 0x040012E9 RID: 4841
 		private const string KEY_PREFIX = "ExploreScoreByArea";
 
-		// Token: 0x0400125E RID: 4702
+		// Token: 0x040012EA RID: 4842
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400125F RID: 4703
+		// Token: 0x040012EB RID: 4843
 		private static int HandleId;
 	}
 }

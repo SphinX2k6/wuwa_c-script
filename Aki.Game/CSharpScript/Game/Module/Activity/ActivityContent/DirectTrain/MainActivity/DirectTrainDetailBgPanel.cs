@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity
 {
-	// Token: 0x0200674B RID: 26443
+	// Token: 0x0200569B RID: 22171
 	internal class DirectTrainDetailBgPanel : UiPanelBase
 	{
-		// Token: 0x06041FF1 RID: 270321 RVA: 0x010020E8 File Offset: 0x010002E8
+		// Token: 0x06036B40 RID: 224064 RVA: 0x00F434DC File Offset: 0x00F416DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActi
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041FF2 RID: 270322 RVA: 0x01002154 File Offset: 0x01000354
+		// Token: 0x06036B41 RID: 224065 RVA: 0x00F43548 File Offset: 0x00F41748
 		protected override void OnStart()
 		{
 			EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();

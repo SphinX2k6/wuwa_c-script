@@ -5,18 +5,18 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005C0B RID: 23563
+	// Token: 0x02004BEB RID: 19435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603B8B6 RID: 243894 RVA: 0x00E322A0 File Offset: 0x00E304A0
+		// Token: 0x06030801 RID: 198657 RVA: 0x00D825E0 File Offset: 0x00D807E0
 		static BossPilingDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BossPilingDefine.CreateStaticDefaultValue), new Action(BossPilingDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603B8B7 RID: 243895 RVA: 0x00E322C0 File Offset: 0x00E304C0
+		// Token: 0x06030802 RID: 198658 RVA: 0x00D82600 File Offset: 0x00D80800
 		public static void CreateStaticDefaultValue()
 		{
 			BossPilingDefine.BossPilingScoreTexMap = new Dictionary<int, string>
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			};
 		}
 
-		// Token: 0x0603B8B8 RID: 243896 RVA: 0x00E32357 File Offset: 0x00E30557
+		// Token: 0x06030803 RID: 198659 RVA: 0x00D82697 File Offset: 0x00D80897
 		public static void ResetStaticDefaultValue()
 		{
 			BossPilingDefine.BossPilingScoreTexMap = null;
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.BossPiling
 			BossPilingDefine.BossPilingTaskStateToRewardText = null;
 		}
 
-		// Token: 0x0401F014 RID: 126996
+		// Token: 0x04019AC5 RID: 105157
 		public static Dictionary<int, string> BossPilingScoreTexMap;
 
-		// Token: 0x0401F015 RID: 126997
+		// Token: 0x04019AC6 RID: 105158
 		public static Dictionary<ConditionTaskState, EActivityRewardState> BossPilingTaskStateToRewardStateResolver;
 
-		// Token: 0x0401F016 RID: 126998
+		// Token: 0x04019AC7 RID: 105159
 		public static Dictionary<ConditionTaskState, string> BossPilingTaskStateToRewardText;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006944 RID: 26948
+	// Token: 0x02005A9F RID: 23199
 	public class ControllerManager : ControllerManagerBase
 	{
-		// Token: 0x06043274 RID: 275060 RVA: 0x0105E41B File Offset: 0x0105C61B
+		// Token: 0x060392AB RID: 234155 RVA: 0x010025DA File Offset: 0x010007DA
 		public override bool Init()
 		{
 			bool result = base.Init();
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Manager
 			return result;
 		}
 
-		// Token: 0x06043275 RID: 275061 RVA: 0x0105E43F File Offset: 0x0105C63F
+		// Token: 0x060392AC RID: 234156 RVA: 0x010025FE File Offset: 0x010007FE
 		public override bool Clear()
 		{
 			bool result = base.Clear();
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Manager
 			return result;
 		}
 
-		// Token: 0x06043276 RID: 275062 RVA: 0x0105E463 File Offset: 0x0105C663
+		// Token: 0x060392AD RID: 234157 RVA: 0x01002622 File Offset: 0x01000822
 		private void OnBattleStateChanged(bool isInFight)
 		{
 			this.IsInFight = isInFight;
 		}
 
-		// Token: 0x04022F96 RID: 143254
+		// Token: 0x0401E180 RID: 123264
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly ControllerManager Instance = new ControllerManager();

@@ -10,27 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005504 RID: 21764
+	// Token: 0x020044D7 RID: 17623
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfigMarkItemView : MarkItemView
 	{
-		// Token: 0x06037992 RID: 227730 RVA: 0x00D3324D File Offset: 0x00D3144D
+		// Token: 0x0602C861 RID: 182369 RVA: 0x00C81231 File Offset: 0x00C7F431
 		public ConfigMarkItemView(ConfigMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x1700859D RID: 34205
-		// (get) Token: 0x06037993 RID: 227731 RVA: 0x00D33256 File Offset: 0x00D31456
-		public MapMark? MarkConfig
-		{
-			get
-			{
-				return ((ConfigMarkItem)this.Holder).MarkConfig;
-			}
-		}
-
-		// Token: 0x06037994 RID: 227732 RVA: 0x00D33268 File Offset: 0x00D31468
+		// Token: 0x0602C862 RID: 182370 RVA: 0x00C8123A File Offset: 0x00C7F43A
 		protected override void OnDataInitialized(MarkItem holder)
 		{
 			if (this.LevelSequencer == null)
@@ -39,7 +29,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037995 RID: 227733 RVA: 0x00D33284 File Offset: 0x00D31484
+		// Token: 0x0602C863 RID: 182371 RVA: 0x00C81258 File Offset: 0x00C7F458
 		public override void RegisterEvents()
 		{
 			Entity teleportEntity = this.GetTeleportEntity();
@@ -47,10 +37,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			{
 				EventSystem.Instance.AddWithTarget<int, bool>(teleportEntity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnEntityStateChange));
 			}
-			EventSystem.Instance.Add(EEventName.LevelPlayMarkGamePlayStateUpdate, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
-			EventSystem.Instance.Add(EEventName.CommonPlayMarkGamePlayStateUpdate, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
-			EventSystem.Instance.Add(EEventName.OnFlagChallengeUpdateStrongholdData, new Action(this.OnFlagChallengeUpdateStrongholdData));
-			EventSystem.Instance.Add(EEventName.OnMarkItemShowStateChange, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
+			EventSystem.Instance.Add(EEventName.OnMarkItemShowStateChange, new Action<int>(this.OnMarkItemShowStateChange));
 			MarkItem holder = this.Holder;
 			if (holder != null && holder.MapType == EMapType.WorldMap)
 			{
@@ -58,7 +45,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037996 RID: 227734 RVA: 0x00D3335C File Offset: 0x00D3155C
+		// Token: 0x0602C864 RID: 182372 RVA: 0x00C812DC File Offset: 0x00C7F4DC
 		public override void UnRegisterEvents()
 		{
 			Entity teleportEntity = this.GetTeleportEntity();
@@ -66,10 +53,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			{
 				EventSystem.Instance.RemoveWithTarget<int, bool>(teleportEntity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnEntityStateChange));
 			}
-			EventSystem.Instance.Remove(EEventName.LevelPlayMarkGamePlayStateUpdate, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
-			EventSystem.Instance.Remove(EEventName.CommonPlayMarkGamePlayStateUpdate, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
-			EventSystem.Instance.Remove(EEventName.OnFlagChallengeUpdateStrongholdData, new Action(this.OnFlagChallengeUpdateStrongholdData));
-			EventSystem.Instance.Remove(EEventName.OnMarkItemShowStateChange, new Action<int>(this.OnLevelPlayMarkGamePlayStateUpdate));
+			EventSystem.Instance.Remove(EEventName.OnMarkItemShowStateChange, new Action<int>(this.OnMarkItemShowStateChange));
 			MarkItem holder = this.Holder;
 			if (holder != null && holder.MapType == EMapType.WorldMap)
 			{
@@ -77,15 +61,15 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037997 RID: 227735 RVA: 0x00D33434 File Offset: 0x00D31634
+		// Token: 0x0602C865 RID: 182373 RVA: 0x00C81360 File Offset: 0x00C7F560
 		[NullableContext(2)]
 		private Entity GetTeleportEntity()
 		{
-			if (!MapConfig.Instance.GetIsInstanceTeleporterExist(this.MarkConfig.Value.MarkId))
+			if (!MapConfig.Instance.GetIsInstanceTeleporterExist(this.Holder.MarkId))
 			{
 				return null;
 			}
-			InstEntityTeleporter? instEntityTeleportConfigById = MapConfig.Instance.GetInstEntityTeleportConfigById(this.MarkConfig.Value.MarkId);
+			InstEntityTeleporter? instEntityTeleportConfigById = MapConfig.Instance.GetInstEntityTeleportConfigById(this.Holder.MarkId);
 			if (instEntityTeleportConfigById == null)
 			{
 				return null;
@@ -98,7 +82,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return entityByPbDataId.Entity;
 		}
 
-		// Token: 0x06037998 RID: 227736 RVA: 0x00D334B7 File Offset: 0x00D316B7
+		// Token: 0x0602C866 RID: 182374 RVA: 0x00C813CB File Offset: 0x00C7F5CB
 		protected override void OnViewRefresh()
 		{
 			this.UpdateMultiMapFloorSelectState(true);
@@ -106,7 +90,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.OnIconPathChanged(this.Holder.IconPath);
 		}
 
-		// Token: 0x06037999 RID: 227737 RVA: 0x00D334E4 File Offset: 0x00D316E4
+		// Token: 0x0602C867 RID: 182375 RVA: 0x00C813F8 File Offset: 0x00C7F5F8
 		public void UpdateMultiMapFloorSelectState(bool isForceUpdate = false)
 		{
 			MarkItem holder = this.Holder;
@@ -123,18 +107,18 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x0603799A RID: 227738 RVA: 0x00D33540 File Offset: 0x00D31740
+		// Token: 0x0602C868 RID: 182376 RVA: 0x00C81454 File Offset: 0x00C7F654
 		public override UniTask PlayUnlockSequence()
 		{
-			ConfigMarkItemView.<PlayUnlockSequence>d__11 <PlayUnlockSequence>d__;
+			ConfigMarkItemView.<PlayUnlockSequence>d__9 <PlayUnlockSequence>d__;
 			<PlayUnlockSequence>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<PlayUnlockSequence>d__.<>4__this = this;
 			<PlayUnlockSequence>d__.<>1__state = -1;
-			<PlayUnlockSequence>d__.<>t__builder.Start<ConfigMarkItemView.<PlayUnlockSequence>d__11>(ref <PlayUnlockSequence>d__);
+			<PlayUnlockSequence>d__.<>t__builder.Start<ConfigMarkItemView.<PlayUnlockSequence>d__9>(ref <PlayUnlockSequence>d__);
 			return <PlayUnlockSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603799B RID: 227739 RVA: 0x00D33583 File Offset: 0x00D31783
+		// Token: 0x0602C869 RID: 182377 RVA: 0x00C81497 File Offset: 0x00C7F697
 		protected override void OnBeforeDestroy()
 		{
 			if (this.UnlockUiEffect != null)
@@ -144,7 +128,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603799C RID: 227740 RVA: 0x00D335A4 File Offset: 0x00D317A4
+		// Token: 0x0602C86A RID: 182378 RVA: 0x00C814B8 File Offset: 0x00C7F6B8
 		public override void OnIconPathChanged(string iconPath)
 		{
 			if (!base.IsViewReady)
@@ -159,40 +143,37 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			base.MarkItemTopRightIconHandle.ApplyModified();
 		}
 
-		// Token: 0x0603799D RID: 227741 RVA: 0x00D335F8 File Offset: 0x00D317F8
+		// Token: 0x0602C86B RID: 182379 RVA: 0x00C8150C File Offset: 0x00C7F70C
 		public virtual void UpdateIcon()
 		{
 			string iconPath = this.Holder.IconPath;
 			this.OnIconPathChanged(iconPath);
 		}
 
-		// Token: 0x0603799E RID: 227742 RVA: 0x00D33618 File Offset: 0x00D31818
+		// Token: 0x0602C86C RID: 182380 RVA: 0x00C8152C File Offset: 0x00C7F72C
+		public override void RefreshGamePlayStateView()
+		{
+			this.UpdateIcon();
+		}
+
+		// Token: 0x0602C86D RID: 182381 RVA: 0x00C81534 File Offset: 0x00C7F734
 		private void OnEntityStateChange(int stateId, bool _)
 		{
 			(this.Holder as ConfigMarkItem).UpdateIconPath();
 			this.UpdateIcon();
 		}
 
-		// Token: 0x0603799F RID: 227743 RVA: 0x00D33630 File Offset: 0x00D31830
-		private void OnFlagChallengeUpdateStrongholdData()
+		// Token: 0x0602C86E RID: 182382 RVA: 0x00C8154C File Offset: 0x00C7F74C
+		private void OnMarkItemShowStateChange(int markId)
 		{
-			if (this.Holder != null)
-			{
-				this.OnIconPathChanged(this.Holder.IconPath);
-			}
-		}
-
-		// Token: 0x060379A0 RID: 227744 RVA: 0x00D3364C File Offset: 0x00D3184C
-		private void OnLevelPlayMarkGamePlayStateUpdate(int markId)
-		{
-			if (markId != this.MarkConfig.Value.MarkId)
+			if (markId != this.Holder.MarkId)
 			{
 				return;
 			}
 			this.UpdateIcon();
 		}
 
-		// Token: 0x060379A1 RID: 227745 RVA: 0x00D33679 File Offset: 0x00D31879
+		// Token: 0x0602C86F RID: 182383 RVA: 0x00C81563 File Offset: 0x00C7F763
 		protected virtual void OnSubMapChanged(int floorIndex)
 		{
 			ConfigMarkItem configMarkItem = this.Holder as ConfigMarkItem;
@@ -203,11 +184,11 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			configMarkItem.ChangeSubMap(floorIndex);
 		}
 
-		// Token: 0x0401D408 RID: 119816
+		// Token: 0x04017E8C RID: 97932
 		[Nullable(2)]
 		private UUIItem UnlockUiEffect;
 
-		// Token: 0x0401D409 RID: 119817
+		// Token: 0x04017E8D RID: 97933
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencer;
 	}

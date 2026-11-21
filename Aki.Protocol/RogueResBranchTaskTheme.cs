@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FD0 RID: 4048
+	// Token: 0x02000FC0 RID: 4032
 	public sealed class RogueResBranchTaskTheme : IMessage<RogueResBranchTaskTheme>, IMessage, IEquatable<RogueResBranchTaskTheme>, IDeepCloneable<RogueResBranchTaskTheme>, IBufferMessage
 	{
-		// Token: 0x06015A34 RID: 88628 RVA: 0x00323ECB File Offset: 0x003220CB
+		// Token: 0x0601594F RID: 88399 RVA: 0x00322817 File Offset: 0x00320A17
 		[NullableContext(1)]
 		public static RogueResBranchTaskTheme Create()
 		{
 			return new RogueResBranchTaskTheme();
 		}
 
-		// Token: 0x17004828 RID: 18472
-		// (get) Token: 0x06015A35 RID: 88629 RVA: 0x00323ED2 File Offset: 0x003220D2
+		// Token: 0x170047FE RID: 18430
+		// (get) Token: 0x06015950 RID: 88400 RVA: 0x0032281E File Offset: 0x00320A1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004829 RID: 18473
-		// (get) Token: 0x06015A36 RID: 88630 RVA: 0x00323ED5 File Offset: 0x003220D5
+		// Token: 0x170047FF RID: 18431
+		// (get) Token: 0x06015951 RID: 88401 RVA: 0x00322821 File Offset: 0x00320A21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A37 RID: 88631 RVA: 0x00323EDC File Offset: 0x003220DC
+		// Token: 0x06015952 RID: 88402 RVA: 0x00322828 File Offset: 0x00320A28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResBranchTaskTheme()
 		{
 		}
 
-		// Token: 0x06015A38 RID: 88632 RVA: 0x00323EF0 File Offset: 0x003220F0
+		// Token: 0x06015953 RID: 88403 RVA: 0x0032283C File Offset: 0x00320A3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResBranchTaskTheme(RogueResBranchTaskTheme other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015A39 RID: 88633 RVA: 0x00323F3D File Offset: 0x0032213D
+		// Token: 0x06015954 RID: 88404 RVA: 0x00322889 File Offset: 0x00320A89
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResBranchTaskTheme Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new RogueResBranchTaskTheme(this);
 		}
 
-		// Token: 0x1700482A RID: 18474
-		// (get) Token: 0x06015A3A RID: 88634 RVA: 0x00323F45 File Offset: 0x00322145
+		// Token: 0x17004800 RID: 18432
+		// (get) Token: 0x06015955 RID: 88405 RVA: 0x00322891 File Offset: 0x00320A91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ActivityTask> BranchActivityTasks
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700482B RID: 18475
-		// (get) Token: 0x06015A3B RID: 88635 RVA: 0x00323F4D File Offset: 0x0032214D
-		// (set) Token: 0x06015A3C RID: 88636 RVA: 0x00323F55 File Offset: 0x00322155
+		// Token: 0x17004801 RID: 18433
+		// (get) Token: 0x06015956 RID: 88406 RVA: 0x00322899 File Offset: 0x00320A99
+		// (set) Token: 0x06015957 RID: 88407 RVA: 0x003228A1 File Offset: 0x00320AA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RogueResTaskThemeId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700482C RID: 18476
-		// (get) Token: 0x06015A3D RID: 88637 RVA: 0x00323F5E File Offset: 0x0032215E
-		// (set) Token: 0x06015A3E RID: 88638 RVA: 0x00323F66 File Offset: 0x00322166
+		// Token: 0x17004802 RID: 18434
+		// (get) Token: 0x06015958 RID: 88408 RVA: 0x003228AA File Offset: 0x00320AAA
+		// (set) Token: 0x06015959 RID: 88409 RVA: 0x003228B2 File Offset: 0x00320AB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EndTime
@@ -114,7 +114,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A3F RID: 88639 RVA: 0x00323F6F File Offset: 0x0032216F
+		// Token: 0x0601595A RID: 88410 RVA: 0x003228BB File Offset: 0x00320ABB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -122,7 +122,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResBranchTaskTheme);
 		}
 
-		// Token: 0x06015A40 RID: 88640 RVA: 0x00323F80 File Offset: 0x00322180
+		// Token: 0x0601595B RID: 88411 RVA: 0x003228CC File Offset: 0x00320ACC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResBranchTaskTheme other)
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.branchActivityTasks_.Equals(other.branchActivityTasks_) && this.RogueResTaskThemeId == other.RogueResTaskThemeId && this.EndTime == other.EndTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015A41 RID: 88641 RVA: 0x00323FE0 File Offset: 0x003221E0
+		// Token: 0x0601595C RID: 88412 RVA: 0x0032292C File Offset: 0x00320B2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015A42 RID: 88642 RVA: 0x00324046 File Offset: 0x00322246
+		// Token: 0x0601595D RID: 88413 RVA: 0x00322992 File Offset: 0x00320B92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015A43 RID: 88643 RVA: 0x00324053 File Offset: 0x00322253
+		// Token: 0x0601595E RID: 88414 RVA: 0x0032299F File Offset: 0x00320B9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015A44 RID: 88644 RVA: 0x0032405C File Offset: 0x0032225C
+		// Token: 0x0601595F RID: 88415 RVA: 0x003229A8 File Offset: 0x00320BA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A45 RID: 88645 RVA: 0x003240C8 File Offset: 0x003222C8
+		// Token: 0x06015960 RID: 88416 RVA: 0x00322A14 File Offset: 0x00320C14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015A46 RID: 88646 RVA: 0x00324134 File Offset: 0x00322334
+		// Token: 0x06015961 RID: 88417 RVA: 0x00322A80 File Offset: 0x00320C80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResBranchTaskTheme other)
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015A47 RID: 88647 RVA: 0x00324195 File Offset: 0x00322395
+		// Token: 0x06015962 RID: 88418 RVA: 0x00322AE1 File Offset: 0x00320CE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015A48 RID: 88648 RVA: 0x003241A0 File Offset: 0x003223A0
+		// Token: 0x06015963 RID: 88419 RVA: 0x00322AEC File Offset: 0x00320CEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -278,28 +278,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040081EA RID: 33258
+		// Token: 0x04008214 RID: 33300
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040081EB RID: 33259
+		// Token: 0x04008215 RID: 33301
 		public const int BranchActivityTasksFieldNumber = 1;
 
-		// Token: 0x040081EC RID: 33260
+		// Token: 0x04008216 RID: 33302
 		private static readonly FieldCodec<ActivityTask> _repeated_branchActivityTasks_codec = FieldCodec.ForMessage<ActivityTask>(10U, ActivityTask.Parser);
 
-		// Token: 0x040081ED RID: 33261
+		// Token: 0x04008217 RID: 33303
 		private readonly RepeatedField<ActivityTask> branchActivityTasks_ = new RepeatedField<ActivityTask>();
 
-		// Token: 0x040081EE RID: 33262
+		// Token: 0x04008218 RID: 33304
 		public const int RogueResTaskThemeIdFieldNumber = 2;
 
-		// Token: 0x040081EF RID: 33263
+		// Token: 0x04008219 RID: 33305
 		private int rogueResTaskThemeId_;
 
-		// Token: 0x040081F0 RID: 33264
+		// Token: 0x0400821A RID: 33306
 		public const int EndTimeFieldNumber = 3;
 
-		// Token: 0x040081F1 RID: 33265
+		// Token: 0x0400821B RID: 33307
 		private long endTime_;
 	}
 }

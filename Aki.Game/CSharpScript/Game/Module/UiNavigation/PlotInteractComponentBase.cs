@@ -7,27 +7,27 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049B4 RID: 18868
+	// Token: 0x0200392E RID: 14638
 	public class PlotInteractComponentBase : HotKeyComponent
 	{
-		// Token: 0x0603119E RID: 201118 RVA: 0x00B647E0 File Offset: 0x00B629E0
+		// Token: 0x06025CD4 RID: 154836 RVA: 0x00A9F730 File Offset: 0x00A9D930
 		public PlotInteractComponentBase(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603119F RID: 201119 RVA: 0x00B647E9 File Offset: 0x00B629E9
+		// Token: 0x06025CD5 RID: 154837 RVA: 0x00A9F739 File Offset: 0x00A9D939
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PlotEnableControlView, new Action<bool>(this.PlotEnableControlView));
 		}
 
-		// Token: 0x060311A0 RID: 201120 RVA: 0x00B64807 File Offset: 0x00B62A07
+		// Token: 0x06025CD6 RID: 154838 RVA: 0x00A9F757 File Offset: 0x00A9D957
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotEnableControlView, new Action<bool>(this.PlotEnableControlView));
 		}
 
-		// Token: 0x060311A1 RID: 201121 RVA: 0x00B64828 File Offset: 0x00B62A28
+		// Token: 0x06025CD7 RID: 154839 RVA: 0x00A9F778 File Offset: 0x00A9D978
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, flag && flag2, false);
 		}
 
-		// Token: 0x060311A2 RID: 201122 RVA: 0x00B64890 File Offset: 0x00B62A90
+		// Token: 0x06025CD8 RID: 154840 RVA: 0x00A9F7E0 File Offset: 0x00A9D9E0
 		private void PlotEnableControlView(bool isActive)
 		{
 			bool flag = isActive && this.CheckAxisCanInput() && this.CheckCameraMode();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, flag2 && flag, false);
 		}
 
-		// Token: 0x060311A3 RID: 201123 RVA: 0x00B648D0 File Offset: 0x00B62AD0
+		// Token: 0x06025CD9 RID: 154841 RVA: 0x00A9F820 File Offset: 0x00A9DA20
 		private bool CheckCameraMode()
 		{
 			ECustomCameraMode? cameraMode = CameraModel.Instance.MainModel.CameraMode;
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return cameraMode.GetValueOrDefault() == ecustomCameraMode & cameraMode != null;
 		}
 
-		// Token: 0x060311A4 RID: 201124 RVA: 0x00B64901 File Offset: 0x00B62B01
+		// Token: 0x06025CDA RID: 154842 RVA: 0x00A9F851 File Offset: 0x00A9DA51
 		protected virtual bool CheckAxisCanInput()
 		{
 			return true;
 		}
 
-		// Token: 0x0401A4B9 RID: 107705
+		// Token: 0x04014D2B RID: 85291
 		protected const float ZOOM_RATE = 30f;
 
-		// Token: 0x0401A4BA RID: 107706
+		// Token: 0x04014D2C RID: 85292
 		protected const float MOVE_RATE = 0.7f;
 
-		// Token: 0x0401A4BB RID: 107707
+		// Token: 0x04014D2D RID: 85293
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener Listener;
 	}

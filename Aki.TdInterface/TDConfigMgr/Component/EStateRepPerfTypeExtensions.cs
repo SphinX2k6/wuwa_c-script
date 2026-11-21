@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A20 RID: 2592
+	// Token: 0x02000AE5 RID: 2789
 	public static class EStateRepPerfTypeExtensions
 	{
-		// Token: 0x06003941 RID: 14657 RVA: 0x00093F78 File Offset: 0x00092178
+		// Token: 0x06003D19 RID: 15641 RVA: 0x0009C8AC File Offset: 0x0009AAAC
 		public static string ToEnumString(this EStateRepPerfType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003942 RID: 14658 RVA: 0x00093FC0 File Offset: 0x000921C0
+		// Token: 0x06003D1A RID: 15642 RVA: 0x0009C8F4 File Offset: 0x0009AAF4
 		public static EStateRepPerfType FromString(string name)
 		{
 			EStateRepPerfType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003943 RID: 14659 RVA: 0x00093FEC File Offset: 0x000921EC
+		// Token: 0x06003D1B RID: 15643 RVA: 0x0009C920 File Offset: 0x0009AB20
 		public static bool TryFromString(string name, out EStateRepPerfType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003944 RID: 14660 RVA: 0x00094042 File Offset: 0x00092242
+		// Token: 0x06003D1C RID: 15644 RVA: 0x0009C976 File Offset: 0x0009AB76
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003945 RID: 14661 RVA: 0x00094062 File Offset: 0x00092262
+		// Token: 0x06003D1D RID: 15645 RVA: 0x0009C996 File Offset: 0x0009AB96
 		public static EStateRepPerfType[] GetValues()
 		{
 			return new EStateRepPerfType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003946 RID: 14662 RVA: 0x00094072 File Offset: 0x00092272
+		// Token: 0x06003D1E RID: 15646 RVA: 0x0009C9A6 File Offset: 0x0009ABA6
 		public static string[] GetNames()
 		{
 			return new string[]

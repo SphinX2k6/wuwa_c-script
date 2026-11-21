@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BF7 RID: 27639
+	// Token: 0x0200735B RID: 29531
 	public struct IOpenConfirmBoxWithReturn : IFlatbufferObject
 	{
-		// Token: 0x1700CD83 RID: 52611
-		// (get) Token: 0x06030949 RID: 198985 RVA: 0x00698208 File Offset: 0x00696408
+		// Token: 0x1700D891 RID: 55441
+		// (get) Token: 0x06033869 RID: 211049 RVA: 0x006F1B9C File Offset: 0x006EFD9C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603094A RID: 198986 RVA: 0x00698215 File Offset: 0x00696415
+		// Token: 0x0603386A RID: 211050 RVA: 0x006F1BA9 File Offset: 0x006EFDA9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603094B RID: 198987 RVA: 0x0069821C File Offset: 0x0069641C
+		// Token: 0x0603386B RID: 211051 RVA: 0x006F1BB0 File Offset: 0x006EFDB0
 		public static IOpenConfirmBoxWithReturn GetRootAsIOpenConfirmBoxWithReturn(ByteBuffer _bb)
 		{
 			return IOpenConfirmBoxWithReturn.GetRootAsIOpenConfirmBoxWithReturn(_bb, default(IOpenConfirmBoxWithReturn));
 		}
 
-		// Token: 0x0603094C RID: 198988 RVA: 0x00698238 File Offset: 0x00696438
+		// Token: 0x0603386C RID: 211052 RVA: 0x006F1BCC File Offset: 0x006EFDCC
 		public static IOpenConfirmBoxWithReturn GetRootAsIOpenConfirmBoxWithReturn(ByteBuffer _bb, IOpenConfirmBoxWithReturn obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603094D RID: 198989 RVA: 0x00698255 File Offset: 0x00696455
+		// Token: 0x0603386D RID: 211053 RVA: 0x006F1BE9 File Offset: 0x006EFDE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603094E RID: 198990 RVA: 0x00698264 File Offset: 0x00696464
+		// Token: 0x0603386E RID: 211054 RVA: 0x006F1BF8 File Offset: 0x006EFDF8
 		public IOpenConfirmBoxWithReturn __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CD84 RID: 52612
-		// (get) Token: 0x0603094F RID: 198991 RVA: 0x00698274 File Offset: 0x00696474
+		// Token: 0x1700D892 RID: 55442
+		// (get) Token: 0x0603386F RID: 211055 RVA: 0x006F1C08 File Offset: 0x006EFE08
 		public ESystemType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD85 RID: 52613
-		// (get) Token: 0x06030950 RID: 198992 RVA: 0x006982B0 File Offset: 0x006964B0
+		// Token: 0x1700D893 RID: 55443
+		// (get) Token: 0x06033870 RID: 211056 RVA: 0x006F1C44 File Offset: 0x006EFE44
 		public int Id
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD86 RID: 52614
-		// (get) Token: 0x06030951 RID: 198993 RVA: 0x006982EC File Offset: 0x006964EC
+		// Token: 0x1700D894 RID: 55444
+		// (get) Token: 0x06033871 RID: 211057 RVA: 0x006F1C80 File Offset: 0x006EFE80
 		public TVarRef ReturnVarType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030952 RID: 198994 RVA: 0x00698328 File Offset: 0x00696528
+		// Token: 0x06033872 RID: 211058 RVA: 0x006F1CBC File Offset: 0x006EFEBC
 		public TTable? ReturnVar<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,37 +104,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030953 RID: 198995 RVA: 0x00698370 File Offset: 0x00696570
+		// Token: 0x06033873 RID: 211059 RVA: 0x006F1D04 File Offset: 0x006EFF04
 		public IConstVarRef ReturnVarAsIConstVarRef()
 		{
 			return this.ReturnVar<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06030954 RID: 198996 RVA: 0x0069838C File Offset: 0x0069658C
+		// Token: 0x06033874 RID: 211060 RVA: 0x006F1D20 File Offset: 0x006EFF20
 		public IGlobalVarRef ReturnVarAsIGlobalVarRef()
 		{
 			return this.ReturnVar<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06030955 RID: 198997 RVA: 0x006983A8 File Offset: 0x006965A8
+		// Token: 0x06033875 RID: 211061 RVA: 0x006F1D3C File Offset: 0x006EFF3C
 		public IOtherVarRef ReturnVarAsIOtherVarRef()
 		{
 			return this.ReturnVar<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06030956 RID: 198998 RVA: 0x006983C4 File Offset: 0x006965C4
+		// Token: 0x06033876 RID: 211062 RVA: 0x006F1D58 File Offset: 0x006EFF58
 		public ISelfVarRef ReturnVarAsISelfVarRef()
 		{
 			return this.ReturnVar<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06030957 RID: 198999 RVA: 0x006983E0 File Offset: 0x006965E0
+		// Token: 0x06033877 RID: 211063 RVA: 0x006F1D74 File Offset: 0x006EFF74
 		public ISystemVarRef ReturnVarAsISystemVarRef()
 		{
 			return this.ReturnVar<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06030958 RID: 199000 RVA: 0x006983FB File Offset: 0x006965FB
+		// Token: 0x06033878 RID: 211064 RVA: 0x006F1D8F File Offset: 0x006EFF8F
 		public static Offset<IOpenConfirmBoxWithReturn> CreateIOpenConfirmBoxWithReturn(FlatBufferBuilder builder, ESystemType Type = ESystemType.Shop, int Id = 0, TVarRef ReturnVar_type = TVarRef.NONE, int ReturnVarOffset = 0)
 		{
 			builder.StartTable(4);
@@ -145,43 +145,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenConfirmBoxWithReturn.EndIOpenConfirmBoxWithReturn(builder);
 		}
 
-		// Token: 0x06030959 RID: 199001 RVA: 0x00698427 File Offset: 0x00696627
+		// Token: 0x06033879 RID: 211065 RVA: 0x006F1DBB File Offset: 0x006EFFBB
 		public static void StartIOpenConfirmBoxWithReturn(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603095A RID: 199002 RVA: 0x00698430 File Offset: 0x00696630
+		// Token: 0x0603387A RID: 211066 RVA: 0x006F1DC4 File Offset: 0x006EFFC4
 		public static void AddType(FlatBufferBuilder builder, ESystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603095B RID: 199003 RVA: 0x0069843B File Offset: 0x0069663B
+		// Token: 0x0603387B RID: 211067 RVA: 0x006F1DCF File Offset: 0x006EFFCF
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0603095C RID: 199004 RVA: 0x00698446 File Offset: 0x00696646
+		// Token: 0x0603387C RID: 211068 RVA: 0x006F1DDA File Offset: 0x006EFFDA
 		public static void AddReturnVarType(FlatBufferBuilder builder, TVarRef returnVarType)
 		{
 			builder.AddByte(2, (byte)returnVarType, 0);
 		}
 
-		// Token: 0x0603095D RID: 199005 RVA: 0x00698451 File Offset: 0x00696651
+		// Token: 0x0603387D RID: 211069 RVA: 0x006F1DE5 File Offset: 0x006EFFE5
 		public static void AddReturnVar(FlatBufferBuilder builder, int returnVarOffset)
 		{
 			builder.AddOffset(3, returnVarOffset, 0);
 		}
 
-		// Token: 0x0603095E RID: 199006 RVA: 0x0069845C File Offset: 0x0069665C
+		// Token: 0x0603387E RID: 211070 RVA: 0x006F1DF0 File Offset: 0x006EFFF0
 		public static Offset<IOpenConfirmBoxWithReturn> EndIOpenConfirmBoxWithReturn(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenConfirmBoxWithReturn>(builder.EndTable());
 		}
 
-		// Token: 0x0603095F RID: 199007 RVA: 0x0069846C File Offset: 0x0069666C
+		// Token: 0x0603387F RID: 211071 RVA: 0x006F1E00 File Offset: 0x006F0000
 		public IOpenConfirmBoxWithReturnT UnPack()
 		{
 			IOpenConfirmBoxWithReturnT openConfirmBoxWithReturnT = new IOpenConfirmBoxWithReturnT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openConfirmBoxWithReturnT;
 		}
 
-		// Token: 0x06030960 RID: 199008 RVA: 0x00698488 File Offset: 0x00696688
+		// Token: 0x06033880 RID: 211072 RVA: 0x006F1E1C File Offset: 0x006F001C
 		public void UnPackTo(IOpenConfirmBoxWithReturnT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030961 RID: 199009 RVA: 0x00698600 File Offset: 0x00696800
+		// Token: 0x06033881 RID: 211073 RVA: 0x006F1F94 File Offset: 0x006F0194
 		public static Offset<IOpenConfirmBoxWithReturn> Pack(FlatBufferBuilder builder, IOpenConfirmBoxWithReturnT _o)
 		{
 			if (_o == null)
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenConfirmBoxWithReturn.CreateIOpenConfirmBoxWithReturn(builder, _o.Type, _o.Id, returnVar_type, returnVarOffset);
 		}
 
-		// Token: 0x040114F0 RID: 70896
+		// Token: 0x04012440 RID: 74816
 		private Table __p;
 	}
 }

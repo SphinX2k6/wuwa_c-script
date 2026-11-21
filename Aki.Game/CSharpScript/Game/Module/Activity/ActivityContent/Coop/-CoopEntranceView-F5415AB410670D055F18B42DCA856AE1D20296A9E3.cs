@@ -2,38 +2,38 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068D1 RID: 26833
+	// Token: 0x02005821 RID: 22561
 	internal enum <CoopEntranceView>F5415AB410670D055F18B42DCA856AE1D20296A9E30C72929A40AB8C022040289__EComponents
 	{
-		// Token: 0x04022D5C RID: 142684
+		// Token: 0x0401D5B8 RID: 120248
 		CaptionItem,
-		// Token: 0x04022D5D RID: 142685
+		// Token: 0x0401D5B9 RID: 120249
 		PanelMale,
-		// Token: 0x04022D5E RID: 142686
+		// Token: 0x0401D5BA RID: 120250
 		PanelMidMale,
-		// Token: 0x04022D5F RID: 142687
+		// Token: 0x0401D5BB RID: 120251
 		PanelFemale,
-		// Token: 0x04022D60 RID: 142688
+		// Token: 0x0401D5BC RID: 120252
 		PanelMidFemale,
-		// Token: 0x04022D61 RID: 142689
+		// Token: 0x0401D5BD RID: 120253
 		Role1,
-		// Token: 0x04022D62 RID: 142690
+		// Token: 0x0401D5BE RID: 120254
 		Role2,
-		// Token: 0x04022D63 RID: 142691
+		// Token: 0x0401D5BF RID: 120255
 		Role3,
-		// Token: 0x04022D64 RID: 142692
+		// Token: 0x0401D5C0 RID: 120256
 		Role4,
-		// Token: 0x04022D65 RID: 142693
+		// Token: 0x0401D5C1 RID: 120257
 		Role5,
-		// Token: 0x04022D66 RID: 142694
+		// Token: 0x0401D5C2 RID: 120258
 		Role6,
-		// Token: 0x04022D67 RID: 142695
+		// Token: 0x0401D5C3 RID: 120259
 		BtnReward,
-		// Token: 0x04022D68 RID: 142696
+		// Token: 0x0401D5C4 RID: 120260
 		PanelTalk,
-		// Token: 0x04022D69 RID: 142697
+		// Token: 0x0401D5C5 RID: 120261
 		TxtTalkName,
-		// Token: 0x04022D6A RID: 142698
+		// Token: 0x0401D5C6 RID: 120262
 		TxtTalk
 	}
 }

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C5B RID: 19547
+	// Token: 0x02003C0C RID: 15372
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffShowClueViewPanel : UiPanelBase
 	{
-		// Token: 0x0603288E RID: 206990 RVA: 0x00BC5DAC File Offset: 0x00BC3FAC
+		// Token: 0x06027641 RID: 161345 RVA: 0x00B0A9F8 File Offset: 0x00B08BF8
 		public SheriffShowClueViewPanel(List<int> dataList, int? inputClue = null)
 		{
 			this.DataList = dataList;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}
 		}
 
-		// Token: 0x0603288F RID: 206991 RVA: 0x00BC5DE8 File Offset: 0x00BC3FE8
+		// Token: 0x06027642 RID: 161346 RVA: 0x00B0AA34 File Offset: 0x00B08C34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -64,14 +64,14 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032890 RID: 206992 RVA: 0x00BC5FBC File Offset: 0x00BC41BC
+		// Token: 0x06027643 RID: 161347 RVA: 0x00B0AC08 File Offset: 0x00B08E08
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 			this.PagePointLayout = new GenericLayout<SheriffMainCluePagePoint, bool>(base.GetHorizontalLayout(4), new Func<SheriffMainCluePagePoint>(this.CreatePagePointItem), null, false, true);
 		}
 
-		// Token: 0x06032891 RID: 206993 RVA: 0x00BC5FF0 File Offset: 0x00BC41F0
+		// Token: 0x06027644 RID: 161348 RVA: 0x00B0AC3C File Offset: 0x00B08E3C
 		protected override void OnBeforeShow()
 		{
 			this.LevelSequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032892 RID: 206994 RVA: 0x00BC608C File Offset: 0x00BC428C
+		// Token: 0x06027645 RID: 161349 RVA: 0x00B0ACD8 File Offset: 0x00B08ED8
 		protected void RefreshClueDetail()
 		{
 			if (this.DataList.Count == 0)
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			base.GetText(7).ShowTextNew(value.Desc);
 		}
 
-		// Token: 0x06032893 RID: 206995 RVA: 0x00BC620E File Offset: 0x00BC440E
+		// Token: 0x06027646 RID: 161350 RVA: 0x00B0AE5A File Offset: 0x00B0905A
 		private SheriffMainCluePagePoint CreatePagePointItem()
 		{
 			return new SheriffMainCluePagePoint();
 		}
 
-		// Token: 0x06032894 RID: 206996 RVA: 0x00BC6218 File Offset: 0x00BC4418
+		// Token: 0x06027647 RID: 161351 RVA: 0x00B0AE64 File Offset: 0x00B09064
 		private void OnClickBtnPageRight()
 		{
 			if (this.CurIndex >= this.DataList.Count - 1)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032895 RID: 206997 RVA: 0x00BC6288 File Offset: 0x00BC4488
+		// Token: 0x06027648 RID: 161352 RVA: 0x00B0AED4 File Offset: 0x00B090D4
 		private void OnClickBtnPageLeft()
 		{
 			if (this.CurIndex <= 0)
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshClueDetail();
 		}
 
-		// Token: 0x06032896 RID: 206998 RVA: 0x00BC62EC File Offset: 0x00BC44EC
+		// Token: 0x06027649 RID: 161353 RVA: 0x00B0AF38 File Offset: 0x00B09138
 		private void OnClickBtnBackB2()
 		{
 			Action closeCallBack = this.CloseCallBack;
@@ -186,17 +186,17 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			closeCallBack();
 		}
 
-		// Token: 0x0401AE64 RID: 110180
+		// Token: 0x040157C1 RID: 88001
 		[Nullable(2)]
 		public Action CloseCallBack;
 
-		// Token: 0x0401AE65 RID: 110181
+		// Token: 0x040157C2 RID: 88002
 		protected int CurIndex;
 
-		// Token: 0x0401AE66 RID: 110182
+		// Token: 0x040157C3 RID: 88003
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401AE67 RID: 110183
+		// Token: 0x040157C4 RID: 88004
 		[Nullable(new byte[]
 		{
 			2,
@@ -204,38 +204,38 @@ namespace CSharpScript.Game.Module.Sheriff.View
 		})]
 		private GenericLayout<SheriffMainCluePagePoint, bool> PagePointLayout;
 
-		// Token: 0x0401AE68 RID: 110184
+		// Token: 0x040157C5 RID: 88005
 		protected List<int> DataList;
 
-		// Token: 0x0200AE00 RID: 44544
+		// Token: 0x0200981E RID: 38942
 		[NullableContext(0)]
 		private static class EPanelDefine
 		{
-			// Token: 0x04034D9A RID: 216474
+			// Token: 0x0402F73F RID: 194367
 			public const int BtnPageArrowRight = 0;
 
-			// Token: 0x04034D9B RID: 216475
+			// Token: 0x0402F740 RID: 194368
 			public const int BtnPageArrowLeft = 1;
 
-			// Token: 0x04034D9C RID: 216476
+			// Token: 0x0402F741 RID: 194369
 			public const int TexIcon = 2;
 
-			// Token: 0x04034D9D RID: 216477
+			// Token: 0x0402F742 RID: 194370
 			public const int TxtLock = 3;
 
-			// Token: 0x04034D9E RID: 216478
+			// Token: 0x0402F743 RID: 194371
 			public const int PanelPage = 4;
 
-			// Token: 0x04034D9F RID: 216479
+			// Token: 0x0402F744 RID: 194372
 			public const int ItemPoint = 5;
 
-			// Token: 0x04034DA0 RID: 216480
+			// Token: 0x0402F745 RID: 194373
 			public const int TxtName = 6;
 
-			// Token: 0x04034DA1 RID: 216481
+			// Token: 0x0402F746 RID: 194374
 			public const int TxtInfo = 7;
 
-			// Token: 0x04034DA2 RID: 216482
+			// Token: 0x0402F747 RID: 194375
 			public const int BtnBackB2 = 8;
 		}
 	}

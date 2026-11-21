@@ -5,24 +5,24 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using CSharpScript.Core.Common;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Motorcycle.Model;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022A7 RID: 8871
+// Token: 0x0200178B RID: 6027
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDiyEditRootView : UiViewBase
 {
-	// Token: 0x060115A9 RID: 71081 RVA: 0x0043E31E File Offset: 0x0043C51E
+	// Token: 0x0600EA41 RID: 59969 RVA: 0x0044AF12 File Offset: 0x00449112
 	public MotorcycleDiyEditRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060115AA RID: 71082 RVA: 0x0043E34C File Offset: 0x0043C54C
+	// Token: 0x0600EA42 RID: 59970 RVA: 0x0044AF40 File Offset: 0x00449140
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -57,7 +57,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060115AB RID: 71083 RVA: 0x0043E4E0 File Offset: 0x0043C6E0
+	// Token: 0x0600EA43 RID: 59971 RVA: 0x0044B0D4 File Offset: 0x004492D4
 	protected override void OnStart()
 	{
 		IOpenMotorcycleDiyRootViewData openMotorcycleDiyRootViewData = this.OpenParam as IOpenMotorcycleDiyRootViewData;
@@ -72,7 +72,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.AddHomeBtnExtraCallback();
 	}
 
-	// Token: 0x060115AC RID: 71084 RVA: 0x0043E548 File Offset: 0x0043C748
+	// Token: 0x0600EA44 RID: 59972 RVA: 0x0044B13C File Offset: 0x0044933C
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTabListAsync();
@@ -106,19 +106,19 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x060115AD RID: 71085 RVA: 0x0043E608 File Offset: 0x0043C808
+	// Token: 0x0600EA45 RID: 59973 RVA: 0x0044B1FC File Offset: 0x004493FC
 	protected override void OnBeforeHide()
 	{
 		MotorcycleUiModelUtil.Instance.ShowMotor(false);
 	}
 
-	// Token: 0x060115AE RID: 71086 RVA: 0x0043E615 File Offset: 0x0043C815
+	// Token: 0x0600EA46 RID: 59974 RVA: 0x0044B209 File Offset: 0x00449409
 	protected override void OnHandleReleaseScene()
 	{
 		MotorcycleUiModelUtil.Instance.DestroyMotor();
 	}
 
-	// Token: 0x060115AF RID: 71087 RVA: 0x0043E621 File Offset: 0x0043C821
+	// Token: 0x0600EA47 RID: 59975 RVA: 0x0044B215 File Offset: 0x00449415
 	protected override void OnBeforeDestroy()
 	{
 		TabComponentWithCaptionItem<MotorcycleEditTabItem> tabComponent = this.TabComponent;
@@ -135,7 +135,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.TabViewComponent = null;
 	}
 
-	// Token: 0x060115B0 RID: 71088 RVA: 0x0043E654 File Offset: 0x0043C854
+	// Token: 0x0600EA48 RID: 59976 RVA: 0x0044B248 File Offset: 0x00449448
 	private void InitTabComponent()
 	{
 		CommonTabComponentData<MotorcycleEditTabItem> data = new CommonTabComponentData<MotorcycleEditTabItem>(new Func<UUIItem, int?, MotorcycleEditTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -145,7 +145,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(2), EKeyMode.Default);
 	}
 
-	// Token: 0x060115B1 RID: 71089 RVA: 0x0043E6E4 File Offset: 0x0043C8E4
+	// Token: 0x0600EA49 RID: 59977 RVA: 0x0044B2D8 File Offset: 0x004494D8
 	private void InitCameraInputData()
 	{
 		if (this.IsInitCameraInput)
@@ -162,17 +162,17 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		{
 			return;
 		}
-		UiCameraInputComponentData uiCameraInputComponentData = new UiCameraInputComponentData();
-		uiCameraInputComponentData.DragComponent = base.GetDraggable(6);
-		uiCameraInputComponentData.CameraSettingConfig = roleCameraConfig.Value;
+		UiCameraInputBindingData uiCameraInputBindingData = new UiCameraInputBindingData();
+		uiCameraInputBindingData.DragComponent = base.GetDraggable(6);
+		uiCameraInputBindingData.CameraSettingConfig = roleCameraConfig.Value;
 		FVectorDouble fvectorDouble = actorWithTag.D_K2_GetActorLocation();
-		uiCameraInputComponentData.SourceLocation = fvectorDouble;
-		UiCameraInputComponentData data = uiCameraInputComponentData;
-		this.CameraInputComponent.InitData(data);
+		uiCameraInputBindingData.SourceLocation = fvectorDouble;
+		UiCameraInputBindingData data = uiCameraInputBindingData;
+		this.CameraInputBinding.Configure(data);
 		this.IsInitCameraInput = true;
 	}
 
-	// Token: 0x060115B2 RID: 71090 RVA: 0x0043E779 File Offset: 0x0043C979
+	// Token: 0x0600EA4A RID: 59978 RVA: 0x0044B36D File Offset: 0x0044956D
 	private MotorcycleEditTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new MotorcycleEditTabItem
@@ -191,7 +191,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x060115B3 RID: 71091 RVA: 0x0043E794 File Offset: 0x0043C994
+	// Token: 0x0600EA4B RID: 59979 RVA: 0x0044B388 File Offset: 0x00449588
 	private UniTask RefreshTabListAsync()
 	{
 		MotorcycleDiyEditRootView.<RefreshTabListAsync>d__26 <RefreshTabListAsync>d__;
@@ -202,7 +202,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return <RefreshTabListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060115B4 RID: 71092 RVA: 0x0043E7D8 File Offset: 0x0043C9D8
+	// Token: 0x0600EA4C RID: 59980 RVA: 0x0044B3CC File Offset: 0x004495CC
 	public void SwitchToTabPart(EUiTabViewName tabViewName, int? partTabIndex = null)
 	{
 		int num = this.TabDataList.FindIndex((UiDynamicTab data) => (EUiTabViewName)data.ChildViewName == tabViewName);
@@ -214,7 +214,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(num, false);
 	}
 
-	// Token: 0x060115B5 RID: 71093 RVA: 0x0043E82C File Offset: 0x0043CA2C
+	// Token: 0x0600EA4D RID: 59981 RVA: 0x0044B420 File Offset: 0x00449620
 	private bool CanToggleChange(int index, bool? _)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -225,7 +225,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return this.LastClickTime == null || Time.Instance.Now - this.LastClickTime.Value >= (double)value;
 	}
 
-	// Token: 0x060115B6 RID: 71094 RVA: 0x0043E888 File Offset: 0x0043CA88
+	// Token: 0x0600EA4E RID: 59982 RVA: 0x0044B47C File Offset: 0x0044967C
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = new double?(Time.Instance.Now);
@@ -244,14 +244,14 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.CurSelectTabView = new EUiTabViewName?(euiTabViewName);
 	}
 
-	// Token: 0x060115B7 RID: 71095 RVA: 0x0043E92C File Offset: 0x0043CB2C
+	// Token: 0x0600EA4F RID: 59983 RVA: 0x0044B520 File Offset: 0x00449720
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x060115B8 RID: 71096 RVA: 0x0043E964 File Offset: 0x0043CB64
+	// Token: 0x0600EA50 RID: 59984 RVA: 0x0044B558 File Offset: 0x00449758
 	private void CheckBtnEnable(EOutlookType itemType, int itemPart, int itemId)
 	{
 		bool flag = itemType == EOutlookType.Sticker;
@@ -264,7 +264,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.IsModifyPreset = flag2;
 	}
 
-	// Token: 0x060115B9 RID: 71097 RVA: 0x0043E9D8 File Offset: 0x0043CBD8
+	// Token: 0x0600EA51 RID: 59985 RVA: 0x0044B5CC File Offset: 0x004497CC
 	private bool IsPresetModified()
 	{
 		if (this.LocalPresetData == null)
@@ -281,7 +281,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return !this.IsSameIdList(selectedStickerIdList, listB) || !this.IsSameIdList(selectedDecorationIdList, listB2) || selectedFrameId != frameId;
 	}
 
-	// Token: 0x060115BA RID: 71098 RVA: 0x0043EA68 File Offset: 0x0043CC68
+	// Token: 0x0600EA52 RID: 59986 RVA: 0x0044B65C File Offset: 0x0044985C
 	private bool IsSameIdList(List<int> listA, int[] listB)
 	{
 		if (listA.Count != listB.Length)
@@ -298,7 +298,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x060115BB RID: 71099 RVA: 0x0043EAA4 File Offset: 0x0043CCA4
+	// Token: 0x0600EA53 RID: 59987 RVA: 0x0044B698 File Offset: 0x00449898
 	private void CreateOrSaveDiyOutlookRequest()
 	{
 		EMotorcycleDiyCustomMode? customMode = this.CustomMode;
@@ -329,7 +329,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x060115BC RID: 71100 RVA: 0x0043EB00 File Offset: 0x0043CD00
+	// Token: 0x0600EA54 RID: 59988 RVA: 0x0044B6F4 File Offset: 0x004498F4
 	[NullableContext(0)]
 	private UniTask<bool> CreateDiyOutlookRequestAsync(bool isHome = false)
 	{
@@ -342,7 +342,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return <CreateDiyOutlookRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060115BD RID: 71101 RVA: 0x0043EB4C File Offset: 0x0043CD4C
+	// Token: 0x0600EA55 RID: 59989 RVA: 0x0044B740 File Offset: 0x00449940
 	[NullableContext(0)]
 	private UniTask<bool> SaveDiyOutlookRequestAsync()
 	{
@@ -354,7 +354,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return <SaveDiyOutlookRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060115BE RID: 71102 RVA: 0x0043EB8F File Offset: 0x0043CD8F
+	// Token: 0x0600EA56 RID: 59990 RVA: 0x0044B783 File Offset: 0x00449983
 	private void RemoveMaskTimer()
 	{
 		if (this.TimerHandle != null)
@@ -364,7 +364,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x060115BF RID: 71103 RVA: 0x0043EBB4 File Offset: 0x0043CDB4
+	// Token: 0x0600EA57 RID: 59991 RVA: 0x0044B7A8 File Offset: 0x004499A8
 	private void StartMaskTimer()
 	{
 		this.RemoveMaskTimer();
@@ -380,7 +380,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x060115C0 RID: 71104 RVA: 0x0043EC20 File Offset: 0x0043CE20
+	// Token: 0x0600EA58 RID: 59992 RVA: 0x0044B814 File Offset: 0x00449A14
 	private void PushPartCameraHandle(int partTabIndex)
 	{
 		MotorFramePart? motorFramePart = null;
@@ -425,11 +425,18 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		{
 			handleName = (this.IsPartDefaultCam ? array3[0] : array3[1]);
 		}
-		this.CameraInputComponent.CanCameraInput = !this.IsNotHidingUi;
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null, null);
+		if (this.IsNotHidingUi)
+		{
+			this.CameraInputBinding.Unbind();
+		}
+		else
+		{
+			this.CameraInputBinding.Bind();
+		}
+		UiCameraModel.Instance.PushCameraHandleByHandleName(handleName, true, true, "1001", false, null);
 	}
 
-	// Token: 0x060115C1 RID: 71105 RVA: 0x0043EDF7 File Offset: 0x0043CFF7
+	// Token: 0x0600EA59 RID: 59993 RVA: 0x0044B9ED File Offset: 0x00449BED
 	private void OnTabCameraClick(int partIndex)
 	{
 		this.CurSelectPart = partIndex;
@@ -437,13 +444,13 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.StartMaskTimer();
 	}
 
-	// Token: 0x060115C2 RID: 71106 RVA: 0x0043EE0D File Offset: 0x0043D00D
+	// Token: 0x0600EA5A RID: 59994 RVA: 0x0044BA03 File Offset: 0x00449C03
 	private void OnSelectItemClick(EOutlookType itemType, int itemPart, int itemId)
 	{
 		this.CheckBtnEnable(itemType, itemPart, itemId);
 	}
 
-	// Token: 0x060115C3 RID: 71107 RVA: 0x0043EE18 File Offset: 0x0043D018
+	// Token: 0x0600EA5B RID: 59995 RVA: 0x0044BA10 File Offset: 0x00449C10
 	private void OnEditPresetChanged(EOutlookType outlookType, bool isModified)
 	{
 		if (this.TabComponent == null || this.TabDataList.Count == 0)
@@ -491,7 +498,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x060115C4 RID: 71108 RVA: 0x0043EEF8 File Offset: 0x0043D0F8
+	// Token: 0x0600EA5C RID: 59996 RVA: 0x0044BAF0 File Offset: 0x00449CF0
 	[NullableContext(2)]
 	private MotorcycleDiyPresetData GetLocalPresetData()
 	{
@@ -504,7 +511,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		return this.LocalPresetData;
 	}
 
-	// Token: 0x060115C5 RID: 71109 RVA: 0x0043EF2A File Offset: 0x0043D12A
+	// Token: 0x0600EA5D RID: 59997 RVA: 0x0044BB22 File Offset: 0x00449D22
 	private void OnTogChangeCameraPosClick(EToggleState toggleState)
 	{
 		this.IsPartDefaultCam = !this.IsPartDefaultCam;
@@ -512,13 +519,13 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		this.StartMaskTimer();
 	}
 
-	// Token: 0x060115C6 RID: 71110 RVA: 0x0043EF48 File Offset: 0x0043D148
+	// Token: 0x0600EA5E RID: 59998 RVA: 0x0044BB40 File Offset: 0x00449D40
 	private void OnBtnMotorDiySaveClick()
 	{
 		this.CreateOrSaveDiyOutlookRequest();
 	}
 
-	// Token: 0x060115C7 RID: 71111 RVA: 0x0043EF50 File Offset: 0x0043D150
+	// Token: 0x0600EA5F RID: 59999 RVA: 0x0044BB48 File Offset: 0x00449D48
 	private void OnTogEyeClick(EToggleState toggleState)
 	{
 		this.IsNotHidingUi = !this.IsNotHidingUi;
@@ -529,7 +536,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 			base.PlaySequence("UiIn", delegate
 			{
 			}, true);
-			this.CameraInputComponent.End();
+			this.CameraInputBinding.Unbind();
 		}
 		else
 		{
@@ -537,14 +544,13 @@ public class MotorcycleDiyEditRootView : UiViewBase
 			{
 				this.GetItem(0).SetUIActive(state);
 			}, true);
-			this.CameraInputComponent.Start();
-			this.CameraInputComponent.TryActivate();
+			this.CameraInputBinding.Bind();
 		}
 		base.GetItem(0).SetUIActive(state);
 		this.PushPartCameraHandle(this.CurSelectPart);
 	}
 
-	// Token: 0x060115C8 RID: 71112 RVA: 0x0043F024 File Offset: 0x0043D224
+	// Token: 0x0600EA60 RID: 60000 RVA: 0x0044BC10 File Offset: 0x00449E10
 	protected void CloseClick()
 	{
 		EMotorcycleDiyCustomMode? customMode = this.CustomMode;
@@ -574,7 +580,7 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060115C9 RID: 71113 RVA: 0x0043F0B7 File Offset: 0x0043D2B7
+	// Token: 0x0600EA61 RID: 60001 RVA: 0x0044BCA3 File Offset: 0x00449EA3
 	private void AddHomeBtnExtraCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -593,10 +599,10 @@ public class MotorcycleDiyEditRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x040083E4 RID: 33764
+	// Token: 0x04008522 RID: 34082
 	private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x040083E5 RID: 33765
+	// Token: 0x04008523 RID: 34083
 	[Nullable(new byte[]
 	{
 		2,
@@ -604,74 +610,74 @@ public class MotorcycleDiyEditRootView : UiViewBase
 	})]
 	private TabComponentWithCaptionItem<MotorcycleEditTabItem> TabComponent;
 
-	// Token: 0x040083E6 RID: 33766
+	// Token: 0x04008524 RID: 34084
 	[Nullable(2)]
 	private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x040083E7 RID: 33767
+	// Token: 0x04008525 RID: 34085
 	private double? LastClickTime;
 
-	// Token: 0x040083E8 RID: 33768
+	// Token: 0x04008526 RID: 34086
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x040083E9 RID: 33769
-	public UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	// Token: 0x04008527 RID: 34087
+	public UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x040083EA RID: 33770
+	// Token: 0x04008528 RID: 34088
 	private bool IsNotHidingUi = true;
 
-	// Token: 0x040083EB RID: 33771
+	// Token: 0x04008529 RID: 34089
 	private bool IsPartDefaultCam = true;
 
-	// Token: 0x040083EC RID: 33772
+	// Token: 0x0400852A RID: 34090
 	private EUiTabViewName? CurSelectTabView;
 
-	// Token: 0x040083ED RID: 33773
+	// Token: 0x0400852B RID: 34091
 	private int CurSelectPart;
 
-	// Token: 0x040083EE RID: 33774
+	// Token: 0x0400852C RID: 34092
 	private int OriginPartTabIndex;
 
-	// Token: 0x040083EF RID: 33775
+	// Token: 0x0400852D RID: 34093
 	private bool IsInitCameraInput;
 
-	// Token: 0x040083F0 RID: 33776
+	// Token: 0x0400852E RID: 34094
 	private bool IsModifyPreset;
 
-	// Token: 0x040083F1 RID: 33777
+	// Token: 0x0400852F RID: 34095
 	[Nullable(2)]
 	private MotorcycleDiyPresetData LocalPresetData;
 
-	// Token: 0x040083F2 RID: 33778
+	// Token: 0x04008530 RID: 34096
 	private EMotorcycleDiyCustomMode? CustomMode;
 
-	// Token: 0x020087FB RID: 34811
+	// Token: 0x02007983 RID: 31107
 	[NullableContext(0)]
 	private class EMotorDiyRootComponent
 	{
-		// Token: 0x0402C302 RID: 180994
+		// Token: 0x0402760C RID: 161292
 		public const int NotHideUIItem = 0;
 
-		// Token: 0x0402C303 RID: 180995
+		// Token: 0x0402760D RID: 161293
 		public const int CaptainItem = 1;
 
-		// Token: 0x0402C304 RID: 180996
+		// Token: 0x0402760E RID: 161294
 		public const int ContentItem = 2;
 
-		// Token: 0x0402C305 RID: 180997
+		// Token: 0x0402760F RID: 161295
 		public const int TogMotorDiyChange = 3;
 
-		// Token: 0x0402C306 RID: 180998
+		// Token: 0x04027610 RID: 161296
 		public const int BtnMotorSaveOld = 4;
 
-		// Token: 0x0402C307 RID: 180999
+		// Token: 0x04027611 RID: 161297
 		public const int TogEye = 5;
 
-		// Token: 0x0402C308 RID: 181000
+		// Token: 0x04027612 RID: 161298
 		public const int DragComponent = 6;
 
-		// Token: 0x0402C309 RID: 181001
+		// Token: 0x04027613 RID: 161299
 		public const int BtnMotorSave = 7;
 	}
 }

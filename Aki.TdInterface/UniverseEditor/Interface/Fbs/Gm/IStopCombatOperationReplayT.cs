@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046B2 RID: 18098
+	// Token: 0x02004B1A RID: 19226
 	public class IStopCombatOperationReplayT
 	{
-		// Token: 0x1700808A RID: 32906
-		// (get) Token: 0x0601B7FF RID: 112639 RVA: 0x003E74D2 File Offset: 0x003E56D2
-		// (set) Token: 0x0601B800 RID: 112640 RVA: 0x003E74DA File Offset: 0x003E56DA
+		// Token: 0x170086CB RID: 34507
+		// (get) Token: 0x0601CFD4 RID: 118740 RVA: 0x0041376E File Offset: 0x0041196E
+		// (set) Token: 0x0601CFD5 RID: 118741 RVA: 0x00413776 File Offset: 0x00411976
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B801 RID: 112641 RVA: 0x003E74E3 File Offset: 0x003E56E3
+		// Token: 0x0601CFD6 RID: 118742 RVA: 0x0041377F File Offset: 0x0041197F
 		public IStopCombatOperationReplayT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

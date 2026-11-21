@@ -6,27 +6,27 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8E RID: 23950
+	// Token: 0x02004D70 RID: 19824
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class StepControllerBase : UiPanelBase
 	{
-		// Token: 0x17008E64 RID: 36452
-		// (get) Token: 0x0603CC8B RID: 248971
+		// Token: 0x17006236 RID: 25142
+		// (get) Token: 0x06031BE7 RID: 203751
 		public abstract bool Enable { get; }
 
-		// Token: 0x0603CC8C RID: 248972 RVA: 0x00E9823F File Offset: 0x00E9643F
+		// Token: 0x06031BE8 RID: 203752 RVA: 0x00DE8A87 File Offset: 0x00DE6C87
 		public virtual bool CheckTextVisible()
 		{
 			return true;
 		}
 
-		// Token: 0x0603CC8D RID: 248973 RVA: 0x00E98242 File Offset: 0x00E96442
+		// Token: 0x06031BE9 RID: 203753 RVA: 0x00DE8A8A File Offset: 0x00DE6C8A
 		public virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0603CC8E RID: 248974 RVA: 0x00E98244 File Offset: 0x00E96444
+		// Token: 0x06031BEA RID: 203754 RVA: 0x00DE8A8C File Offset: 0x00DE6C8C
 		public virtual UniTask OnConfigRefresh(IMissionItemViewShowData showData, MissionViewStepTextInfoBase config)
 		{
 			StepControllerBase.<OnConfigRefresh>d__6 <OnConfigRefresh>d__;
@@ -39,10 +39,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnConfigRefresh>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401FAA1 RID: 129697
+		// Token: 0x0401A559 RID: 107865
 		protected IMissionItemViewShowData ShowData;
 
-		// Token: 0x0401FAA2 RID: 129698
+		// Token: 0x0401A55A RID: 107866
 		protected MissionViewStepTextInfoBase Config;
 	}
 }

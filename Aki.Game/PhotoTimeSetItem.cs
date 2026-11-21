@@ -5,10 +5,10 @@ using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002563 RID: 9571
+// Token: 0x02001A4E RID: 6734
 public class PhotoTimeSetItem : UiPanelBase
 {
-	// Token: 0x06013503 RID: 79107 RVA: 0x004CE244 File Offset: 0x004CC444
+	// Token: 0x060109E5 RID: 68069 RVA: 0x004DCE7C File Offset: 0x004DB07C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class PhotoTimeSetItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013504 RID: 79108 RVA: 0x004CE2B4 File Offset: 0x004CC4B4
+	// Token: 0x060109E6 RID: 68070 RVA: 0x004DCEEC File Offset: 0x004DB0EC
 	protected override void OnStart()
 	{
 		UUISliderComponent slider = base.GetSlider(2);
@@ -39,7 +39,7 @@ public class PhotoTimeSetItem : UiPanelBase
 		slider.OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
 	}
 
-	// Token: 0x06013505 RID: 79109 RVA: 0x004CE309 File Offset: 0x004CC509
+	// Token: 0x060109E7 RID: 68071 RVA: 0x004DCF41 File Offset: 0x004DB141
 	protected override void OnBeforeDestroy()
 	{
 		UUISliderComponent slider = base.GetSlider(2);
@@ -55,7 +55,7 @@ public class PhotoTimeSetItem : UiPanelBase
 		this.Timer = null;
 	}
 
-	// Token: 0x06013506 RID: 79110 RVA: 0x004CE33C File Offset: 0x004CC53C
+	// Token: 0x060109E8 RID: 68072 RVA: 0x004DCF74 File Offset: 0x004DB174
 	public void Refresh()
 	{
 		TimerHandle timer = this.Timer;
@@ -76,7 +76,7 @@ public class PhotoTimeSetItem : UiPanelBase
 		slider.SetValue((float)num, false);
 	}
 
-	// Token: 0x06013507 RID: 79111 RVA: 0x004CE3B4 File Offset: 0x004CC5B4
+	// Token: 0x060109E9 RID: 68073 RVA: 0x004DCFEC File Offset: 0x004DB1EC
 	private void OnValueChanged(float value)
 	{
 		int timeText = (int)Math.Round((double)value);
@@ -89,7 +89,7 @@ public class PhotoTimeSetItem : UiPanelBase
 		this.Timer = TimerSystem.RealTimeInstance.Delay(new TTimerAction(this.OnChangeTime), 200f, null, null, true, 1f);
 	}
 
-	// Token: 0x06013508 RID: 79112 RVA: 0x004CE40C File Offset: 0x004CC60C
+	// Token: 0x060109EA RID: 68074 RVA: 0x004DD044 File Offset: 0x004DB244
 	private void OnChangeTime(float _)
 	{
 		this.Timer = null;
@@ -110,14 +110,14 @@ public class PhotoTimeSetItem : UiPanelBase
 		effectComponent.SetPhotoTime((float)num);
 	}
 
-	// Token: 0x06013509 RID: 79113 RVA: 0x004CE467 File Offset: 0x004CC667
+	// Token: 0x060109EB RID: 68075 RVA: 0x004DD09F File Offset: 0x004DB29F
 	[NullableContext(2)]
 	private PhotoCameraEffectComponent GetEffectComponent()
 	{
 		return PhotographController.Instance.GetPhotoCameraComponent<PhotoCameraEffectComponent>(EPhotoCameraComponent.Effect);
 	}
 
-	// Token: 0x0601350A RID: 79114 RVA: 0x004CE474 File Offset: 0x004CC674
+	// Token: 0x060109EC RID: 68076 RVA: 0x004DD0AC File Offset: 0x004DB2AC
 	private void SetTimeText(int hour)
 	{
 		UUIText text = base.GetText(1);
@@ -131,26 +131,26 @@ public class PhotoTimeSetItem : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x040091AE RID: 37294
+	// Token: 0x04009307 RID: 37639
 	private int CurrentHour = -1;
 
-	// Token: 0x040091AF RID: 37295
+	// Token: 0x04009308 RID: 37640
 	private const float APPLY_DELAY = 200f;
 
-	// Token: 0x040091B0 RID: 37296
+	// Token: 0x04009309 RID: 37641
 	[Nullable(2)]
 	private TimerHandle Timer;
 
-	// Token: 0x02008B3F RID: 35647
+	// Token: 0x02007CC5 RID: 31941
 	private enum EComponents
 	{
-		// Token: 0x0402D357 RID: 185175
+		// Token: 0x04028664 RID: 165476
 		TextTitle,
-		// Token: 0x0402D358 RID: 185176
+		// Token: 0x04028665 RID: 165477
 		TextTime,
-		// Token: 0x0402D359 RID: 185177
+		// Token: 0x04028666 RID: 165478
 		Slider,
-		// Token: 0x0402D35A RID: 185178
+		// Token: 0x04028667 RID: 165479
 		SpriteHandle
 	}
 }

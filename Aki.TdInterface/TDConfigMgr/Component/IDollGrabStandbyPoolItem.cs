@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002CB RID: 715
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000312 RID: 786
 	public class IDollGrabStandbyPoolItem
 	{
-		// Token: 0x06000D77 RID: 3447 RVA: 0x00032300 File Offset: 0x00030500
+		// Token: 0x06000EA7 RID: 3751 RVA: 0x00035234 File Offset: 0x00033434
 		private IDollGrabStandbyPoolItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D78 RID: 3448 RVA: 0x00032338 File Offset: 0x00030538
+		// Token: 0x06000EA8 RID: 3752 RVA: 0x0003526C File Offset: 0x0003346C
 		public static IDollGrabStandbyPoolItem Create([Nullable(2)] IDollGrabStandbyPoolItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D79 RID: 3449 RVA: 0x0003234B File Offset: 0x0003054B
+		// Token: 0x06000EA9 RID: 3753 RVA: 0x0003527F File Offset: 0x0003347F
 		public static IDollGrabStandbyPoolItem CreateFromSetValue([Nullable(2)] IDollGrabStandbyPoolItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D7A RID: 3450 RVA: 0x0003235E File Offset: 0x0003055E
+		// Token: 0x06000EAA RID: 3754 RVA: 0x00035292 File Offset: 0x00033492
 		public IDollGrabStandbyPoolItem_SetValue ToSetValue()
 		{
 			return new IDollGrabStandbyPoolItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003E8 RID: 1000
-		// (get) Token: 0x06000D7B RID: 3451 RVA: 0x0003237D File Offset: 0x0003057D
-		// (set) Token: 0x06000D7C RID: 3452 RVA: 0x000323A8 File Offset: 0x000305A8
+		// Token: 0x17000435 RID: 1077
+		// (get) Token: 0x06000EAB RID: 3755 RVA: 0x000352B1 File Offset: 0x000334B1
+		// (set) Token: 0x06000EAC RID: 3756 RVA: 0x000352DC File Offset: 0x000334DC
 		public virtual int UniqueId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003E9 RID: 1001
-		// (get) Token: 0x06000D7D RID: 3453 RVA: 0x000323B6 File Offset: 0x000305B6
-		// (set) Token: 0x06000D7E RID: 3454 RVA: 0x000323E1 File Offset: 0x000305E1
+		// Token: 0x17000436 RID: 1078
+		// (get) Token: 0x06000EAD RID: 3757 RVA: 0x000352EA File Offset: 0x000334EA
+		// (set) Token: 0x06000EAE RID: 3758 RVA: 0x00035315 File Offset: 0x00033515
 		public virtual int ItemId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C33 RID: 3123
+		// Token: 0x04000D1D RID: 3357
 		[Nullable(2)]
 		protected IDollGrabStandbyPoolItem FbInstance;
 
-		// Token: 0x04000C34 RID: 3124
+		// Token: 0x04000D1E RID: 3358
 		[Nullable(2)]
 		protected IDollGrabStandbyPoolItem_SetValue PocoInterface;
 	}

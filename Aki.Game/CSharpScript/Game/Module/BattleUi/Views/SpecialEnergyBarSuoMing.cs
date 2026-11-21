@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E03 RID: 24067
+	// Token: 0x02004DE8 RID: 19944
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarSuoMing : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D313 RID: 250643 RVA: 0x00EBD650 File Offset: 0x00EBB850
+		// Token: 0x060322A2 RID: 205474 RVA: 0x00E0EBB0 File Offset: 0x00E0CDB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D314 RID: 250644 RVA: 0x00EBD86D File Offset: 0x00EBBA6D
+		// Token: 0x060322A3 RID: 205475 RVA: 0x00E0EDCD File Offset: 0x00E0CFCD
 		protected override void OnInitData()
 		{
 			this.StrengthConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(SpecialEnergyBarSuoMing.STRENGTH_CONFIG_ID);
 		}
 
-		// Token: 0x0603D315 RID: 250645 RVA: 0x00EBD88C File Offset: 0x00EBBA8C
+		// Token: 0x060322A4 RID: 205476 RVA: 0x00E0EDEC File Offset: 0x00E0CFEC
 		protected override void AddEvents()
 		{
 			base.AddEvents();
@@ -71,13 +71,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.ListenForAttributeChanged(SpecialEnergyBarSuoMing.MAX_STRENGTH_ATTR_ID, new Action<EAttributeType, float, float>(this.OnStrengthEnergyChange));
 		}
 
-		// Token: 0x0603D316 RID: 250646 RVA: 0x00EBD912 File Offset: 0x00EBBB12
+		// Token: 0x060322A5 RID: 205477 RVA: 0x00E0EE72 File Offset: 0x00E0D072
 		private void OnStateTagChange(int tagId, bool tagExist)
 		{
 			this.RefreshState();
 		}
 
-		// Token: 0x0603D317 RID: 250647 RVA: 0x00EBD91C File Offset: 0x00EBBB1C
+		// Token: 0x060322A6 RID: 205478 RVA: 0x00E0EE7C File Offset: 0x00E0D07C
 		private void OnPrepareTagChange(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItemStrength2.SetIsInPrepareState(tagExist);
 		}
 
-		// Token: 0x0603D318 RID: 250648 RVA: 0x00EBD990 File Offset: 0x00EBBB90
+		// Token: 0x060322A7 RID: 205479 RVA: 0x00E0EEF0 File Offset: 0x00E0D0F0
 		protected float GetAttributePercent(EAttributeType attrId, EAttributeType maxAttrId)
 		{
 			float currentValue = this.AttributeComponent.GetCurrentValue(attrId);
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D319 RID: 250649 RVA: 0x00EBD9CA File Offset: 0x00EBBBCA
+		// Token: 0x060322A8 RID: 205480 RVA: 0x00E0EF2A File Offset: 0x00E0D12A
 		private void OnStrengthEnergyChange(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.UpdateStrengthBarStyle();
 		}
 
-		// Token: 0x0603D31A RID: 250650 RVA: 0x00EBD9D4 File Offset: 0x00EBBBD4
+		// Token: 0x060322A9 RID: 205481 RVA: 0x00E0EF34 File Offset: 0x00E0D134
 		protected void UpdateStrengthBarStyle()
 		{
 			float attributePercent = this.GetAttributePercent(SpecialEnergyBarSuoMing.STRENGTH_ATTR_ID, SpecialEnergyBarSuoMing.MAX_STRENGTH_ATTR_ID);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			texture2.SetUIActive(attributePercent >= 1f && attributePercent2 >= 1f);
 		}
 
-		// Token: 0x0603D31B RID: 250651 RVA: 0x00EBDA50 File Offset: 0x00EBBC50
+		// Token: 0x060322AA RID: 205482 RVA: 0x00E0EFB0 File Offset: 0x00E0D1B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarSuoMing.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D31C RID: 250652 RVA: 0x00EBDA94 File Offset: 0x00EBBC94
+		// Token: 0x060322AB RID: 205483 RVA: 0x00E0EFF4 File Offset: 0x00E0D1F4
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarSuoMing.<InitBarItem>d__25 <InitBarItem>d__;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D31D RID: 250653 RVA: 0x00EBDAD8 File Offset: 0x00EBBCD8
+		// Token: 0x060322AC RID: 205484 RVA: 0x00E0F038 File Offset: 0x00E0D238
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(8);
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateStrengthBarStyle();
 		}
 
-		// Token: 0x0603D31E RID: 250654 RVA: 0x00EBDB2F File Offset: 0x00EBBD2F
+		// Token: 0x060322AD RID: 205485 RVA: 0x00E0F08F File Offset: 0x00E0D28F
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TickFinalStateRemaining();
 		}
 
-		// Token: 0x0603D31F RID: 250655 RVA: 0x00EBDB70 File Offset: 0x00EBBD70
+		// Token: 0x060322AE RID: 205486 RVA: 0x00E0F0D0 File Offset: 0x00E0D2D0
 		protected void RefreshState()
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetState(SpecialEnergyBarSuoMing.EState.Normal);
 		}
 
-		// Token: 0x0603D320 RID: 250656 RVA: 0x00EBDBC8 File Offset: 0x00EBBDC8
+		// Token: 0x060322AF RID: 205487 RVA: 0x00E0F128 File Offset: 0x00E0D328
 		protected void SetState(SpecialEnergyBarSuoMing.EState state)
 		{
 			if (this.CurState == state)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItemStrength.SetIsInFinalState(SpecialEnergyBarSuoMing.EState.Final == state);
 		}
 
-		// Token: 0x0603D321 RID: 250657 RVA: 0x00EBDC3C File Offset: 0x00EBBE3C
+		// Token: 0x060322B0 RID: 205488 RVA: 0x00E0F19C File Offset: 0x00E0D39C
 		protected void PlayStateChangeAnim(SpecialEnergyBarSuoMing.EState oldState, SpecialEnergyBarSuoMing.EState newState)
 		{
 			if (oldState != SpecialEnergyBarSuoMing.EState.Max && newState == SpecialEnergyBarSuoMing.EState.Normal)
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D322 RID: 250658 RVA: 0x00EBDCE0 File Offset: 0x00EBBEE0
+		// Token: 0x060322B1 RID: 205489 RVA: 0x00E0F240 File Offset: 0x00E0D440
 		protected override void OnBarPercentChanged()
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -305,14 +305,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastPercent = curPercent;
 		}
 
-		// Token: 0x0603D323 RID: 250659 RVA: 0x00EBDD58 File Offset: 0x00EBBF58
+		// Token: 0x060322B2 RID: 205490 RVA: 0x00E0F2B8 File Offset: 0x00E0D4B8
 		private void TickWarnAnim()
 		{
 			bool bPlay = this.CurState == SpecialEnergyBarSuoMing.EState.Final && this.Buff != null && this.Buff.GetRemainDuration() < this.StrengthConfig.ExtraFloatParams[0];
 			this.PlayWarnAnim(bPlay);
 		}
 
-		// Token: 0x0603D324 RID: 250660 RVA: 0x00EBDDA0 File Offset: 0x00EBBFA0
+		// Token: 0x060322B3 RID: 205491 RVA: 0x00E0F300 File Offset: 0x00E0D500
 		private void TickFinalStateRemaining()
 		{
 			if (this.CurState != SpecialEnergyBarSuoMing.EState.Final)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItemStrength.UpdateFinalStateRemainingPercent(percent);
 		}
 
-		// Token: 0x0603D325 RID: 250661 RVA: 0x00EBDE0C File Offset: 0x00EBC00C
+		// Token: 0x060322B4 RID: 205492 RVA: 0x00E0F36C File Offset: 0x00E0D56C
 		private void RefreshBuff()
 		{
 			if (this.CurState != SpecialEnergyBarSuoMing.EState.Final)
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D326 RID: 250662 RVA: 0x00EBDEB4 File Offset: 0x00EBC0B4
+		// Token: 0x060322B5 RID: 205493 RVA: 0x00E0F414 File Offset: 0x00E0D614
 		private void PlayWarnAnim(bool bPlay)
 		{
 			if (this.IsPlayWarnAnim == bPlay)
@@ -388,103 +388,103 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(1).SetAlpha(1f);
 		}
 
-		// Token: 0x0603D327 RID: 250663 RVA: 0x00EBDF08 File Offset: 0x00EBC108
+		// Token: 0x060322B6 RID: 205494 RVA: 0x00E0F468 File Offset: 0x00E0D668
 		protected override void ClearAllTweenAnim()
 		{
 			base.StopTweenAnim(13);
 			base.ClearAllTweenAnim();
 		}
 
-		// Token: 0x0401FE84 RID: 130692
+		// Token: 0x0401A94B RID: 108875
 		[StaticVariableRuleIgnore]
 		private static readonly int STRENGTH_CONFIG_ID = 131201;
 
-		// Token: 0x0401FE85 RID: 130693
+		// Token: 0x0401A94C RID: 108876
 		private SpecialEnergyBarInfo StrengthConfig;
 
-		// Token: 0x0401FE86 RID: 130694
+		// Token: 0x0401A94D RID: 108877
 		private static readonly int StateStrengthTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1SuomingMd10011.变形状态.进阶阶段"];
 
-		// Token: 0x0401FE87 RID: 130695
+		// Token: 0x0401A94E RID: 108878
 		private static readonly int StateFinalTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1SuomingMd10011.变形状态.终结阶段"];
 
-		// Token: 0x0401FE88 RID: 130696
+		// Token: 0x0401A94F RID: 108879
 		private static readonly int PrepareTriggerFinalTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1SuomingMd10011.动作状态.触发电钻蓄力"];
 
-		// Token: 0x0401FE89 RID: 130697
+		// Token: 0x0401A950 RID: 108880
 		private static readonly EAttributeType STRENGTH_ATTR_ID = EAttributeType.SpecialEnergy2;
 
-		// Token: 0x0401FE8A RID: 130698
+		// Token: 0x0401A951 RID: 108881
 		private static readonly EAttributeType MAX_STRENGTH_ATTR_ID = EAttributeType.SpecialEnergy2Max;
 
-		// Token: 0x0401FE8B RID: 130699
+		// Token: 0x0401A952 RID: 108882
 		private SpecialEnergyBarSuoMing.EState CurState = SpecialEnergyBarSuoMing.EState.Max;
 
-		// Token: 0x0401FE8C RID: 130700
+		// Token: 0x0401A953 RID: 108883
 		private SpecialEnergyBarSlot BarItemNormal;
 
-		// Token: 0x0401FE8D RID: 130701
+		// Token: 0x0401A954 RID: 108884
 		private SpecialEnergyBarSuoMingSlot BarItemStrength;
 
-		// Token: 0x0401FE8E RID: 130702
+		// Token: 0x0401A955 RID: 108885
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FE8F RID: 130703
+		// Token: 0x0401A956 RID: 108886
 		private int BuffHandle;
 
-		// Token: 0x0401FE90 RID: 130704
+		// Token: 0x0401A957 RID: 108887
 		private bool IsPlayWarnAnim;
 
-		// Token: 0x0401FE91 RID: 130705
+		// Token: 0x0401A958 RID: 108888
 		private float LastPercent;
 
-		// Token: 0x0200C15C RID: 49500
+		// Token: 0x0200AB6B RID: 43883
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A697 RID: 239255
+			// Token: 0x04035089 RID: 217225
 			BarSlotNormal,
-			// Token: 0x0403A698 RID: 239256
+			// Token: 0x0403508A RID: 217226
 			BarSlotStrength,
-			// Token: 0x0403A699 RID: 239257
+			// Token: 0x0403508B RID: 217227
 			TexDescBg,
-			// Token: 0x0403A69A RID: 239258
+			// Token: 0x0403508C RID: 217228
 			TexDescMiddle,
-			// Token: 0x0403A69B RID: 239259
+			// Token: 0x0403508D RID: 217229
 			PnlMiddle,
-			// Token: 0x0403A69C RID: 239260
+			// Token: 0x0403508E RID: 217230
 			TexCircleBg,
-			// Token: 0x0403A69D RID: 239261
+			// Token: 0x0403508F RID: 217231
 			TexLightAdd,
-			// Token: 0x0403A69E RID: 239262
+			// Token: 0x04035090 RID: 217232
 			TexLight,
-			// Token: 0x0403A69F RID: 239263
+			// Token: 0x04035091 RID: 217233
 			AniStart,
-			// Token: 0x0403A6A0 RID: 239264
+			// Token: 0x04035092 RID: 217234
 			AniBottomGlow,
-			// Token: 0x0403A6A1 RID: 239265
+			// Token: 0x04035093 RID: 217235
 			AniBottomRes,
-			// Token: 0x0403A6A2 RID: 239266
+			// Token: 0x04035094 RID: 217236
 			Ani2SlotStrength,
-			// Token: 0x0403A6A3 RID: 239267
+			// Token: 0x04035095 RID: 217237
 			AniFinal,
-			// Token: 0x0403A6A4 RID: 239268
+			// Token: 0x04035096 RID: 217238
 			AniBlink,
-			// Token: 0x0403A6A5 RID: 239269
+			// Token: 0x04035097 RID: 217239
 			AniFinalReady
 		}
 
-		// Token: 0x0200C15D RID: 49501
+		// Token: 0x0200AB6C RID: 43884
 		[NullableContext(0)]
 		public enum EState
 		{
-			// Token: 0x0403A6A7 RID: 239271
+			// Token: 0x04035099 RID: 217241
 			Normal,
-			// Token: 0x0403A6A8 RID: 239272
+			// Token: 0x0403509A RID: 217242
 			Strength,
-			// Token: 0x0403A6A9 RID: 239273
+			// Token: 0x0403509B RID: 217243
 			Final,
-			// Token: 0x0403A6AA RID: 239274
+			// Token: 0x0403509C RID: 217244
 			Max
 		}
 	}

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005EE RID: 1518
+	// Token: 0x020005D9 RID: 1497
 	[NetMessage(EMessageId.FloroRanchUpdatePlayerInfoNotify)]
 	public sealed class FloroRanchUpdatePlayerInfoNotify : IMessage<FloroRanchUpdatePlayerInfoNotify>, IMessage, IEquatable<FloroRanchUpdatePlayerInfoNotify>, IDeepCloneable<FloroRanchUpdatePlayerInfoNotify>, IBufferMessage
 	{
-		// Token: 0x06008C88 RID: 35976 RVA: 0x00154921 File Offset: 0x00152B21
+		// Token: 0x06008B20 RID: 35616 RVA: 0x00151D08 File Offset: 0x0014FF08
 		[NullableContext(1)]
 		public static FloroRanchUpdatePlayerInfoNotify Create()
 		{
 			return new FloroRanchUpdatePlayerInfoNotify();
 		}
 
-		// Token: 0x17001BD3 RID: 7123
-		// (get) Token: 0x06008C89 RID: 35977 RVA: 0x00154928 File Offset: 0x00152B28
+		// Token: 0x17001B86 RID: 7046
+		// (get) Token: 0x06008B21 RID: 35617 RVA: 0x00151D0F File Offset: 0x0014FF0F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BD4 RID: 7124
-		// (get) Token: 0x06008C8A RID: 35978 RVA: 0x0015492B File Offset: 0x00152B2B
+		// Token: 0x17001B87 RID: 7047
+		// (get) Token: 0x06008B22 RID: 35618 RVA: 0x00151D12 File Offset: 0x0014FF12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008C8B RID: 35979 RVA: 0x00154932 File Offset: 0x00152B32
+		// Token: 0x06008B23 RID: 35619 RVA: 0x00151D19 File Offset: 0x0014FF19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchUpdatePlayerInfoNotify()
 		{
 		}
 
-		// Token: 0x06008C8C RID: 35980 RVA: 0x0015493C File Offset: 0x00152B3C
+		// Token: 0x06008B24 RID: 35620 RVA: 0x00151D24 File Offset: 0x0014FF24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchUpdatePlayerInfoNotify(FloroRanchUpdatePlayerInfoNotify other) : this()
@@ -61,17 +61,20 @@ namespace Aki.Protocol
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.Task:
 				this.Task = other.Task.Clone();
 				break;
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy:
+				this.UnlockToy = other.UnlockToy.Clone();
+				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo:
 				this.InsLockInfo = other.InsLockInfo.Clone();
 				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo:
-				this.FloroSubInsInfo = other.FloroSubInsInfo.Clone();
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory:
+				this.SubInfHistory = other.SubInfHistory.Clone();
+				break;
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard:
+				this.UnlockCard = other.UnlockCard.Clone();
 				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask:
 				this.ConditionTask = other.ConditionTask.Clone();
-				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory:
-				this.SubInfHistory = other.SubInfHistory.Clone();
 				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockSkill:
 				this.UnlockSkill = other.UnlockSkill.Clone();
@@ -79,17 +82,14 @@ namespace Aki.Protocol
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.RaceUnLockInfo:
 				this.RaceUnLockInfo = other.RaceUnLockInfo.Clone();
 				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard:
-				this.UnlockCard = other.UnlockCard.Clone();
-				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy:
-				this.UnlockToy = other.UnlockToy.Clone();
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo:
+				this.FloroSubInsInfo = other.FloroSubInsInfo.Clone();
 				break;
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06008C8D RID: 35981 RVA: 0x00154A6F File Offset: 0x00152C6F
+		// Token: 0x06008B25 RID: 35621 RVA: 0x00151E57 File Offset: 0x00150057
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchUpdatePlayerInfoNotify Clone()
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			return new FloroRanchUpdatePlayerInfoNotify(this);
 		}
 
-		// Token: 0x17001BD5 RID: 7125
-		// (get) Token: 0x06008C8E RID: 35982 RVA: 0x00154A77 File Offset: 0x00152C77
-		// (set) Token: 0x06008C8F RID: 35983 RVA: 0x00154A7F File Offset: 0x00152C7F
+		// Token: 0x17001B88 RID: 7048
+		// (get) Token: 0x06008B26 RID: 35622 RVA: 0x00151E5F File Offset: 0x0015005F
+		// (set) Token: 0x06008B27 RID: 35623 RVA: 0x00151E67 File Offset: 0x00150067
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroConfigType FloroCfgType
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BD6 RID: 7126
-		// (get) Token: 0x06008C90 RID: 35984 RVA: 0x00154A88 File Offset: 0x00152C88
-		// (set) Token: 0x06008C91 RID: 35985 RVA: 0x00154A90 File Offset: 0x00152C90
+		// Token: 0x17001B89 RID: 7049
+		// (get) Token: 0x06008B28 RID: 35624 RVA: 0x00151E70 File Offset: 0x00150070
+		// (set) Token: 0x06008B29 RID: 35625 RVA: 0x00151E78 File Offset: 0x00150078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BD7 RID: 7127
-		// (get) Token: 0x06008C92 RID: 35986 RVA: 0x00154A99 File Offset: 0x00152C99
-		// (set) Token: 0x06008C93 RID: 35987 RVA: 0x00154AB2 File Offset: 0x00152CB2
+		// Token: 0x17001B8A RID: 7050
+		// (get) Token: 0x06008B2A RID: 35626 RVA: 0x00151E81 File Offset: 0x00150081
+		// (set) Token: 0x06008B2B RID: 35627 RVA: 0x00151E9A File Offset: 0x0015009A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroUnLockInfo UnlockCard
@@ -153,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BD8 RID: 7128
-		// (get) Token: 0x06008C94 RID: 35988 RVA: 0x00154AC9 File Offset: 0x00152CC9
-		// (set) Token: 0x06008C95 RID: 35989 RVA: 0x00154AE2 File Offset: 0x00152CE2
+		// Token: 0x17001B8B RID: 7051
+		// (get) Token: 0x06008B2C RID: 35628 RVA: 0x00151EB1 File Offset: 0x001500B1
+		// (set) Token: 0x06008B2D RID: 35629 RVA: 0x00151EC9 File Offset: 0x001500C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroUnLockInfo UnlockToy
@@ -175,9 +175,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BD9 RID: 7129
-		// (get) Token: 0x06008C96 RID: 35990 RVA: 0x00154AF9 File Offset: 0x00152CF9
-		// (set) Token: 0x06008C97 RID: 35991 RVA: 0x00154B12 File Offset: 0x00152D12
+		// Token: 0x17001B8C RID: 7052
+		// (get) Token: 0x06008B2E RID: 35630 RVA: 0x00151EDF File Offset: 0x001500DF
+		// (set) Token: 0x06008B2F RID: 35631 RVA: 0x00151EF8 File Offset: 0x001500F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroUnLockInfo UnlockSkill
@@ -197,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDA RID: 7130
-		// (get) Token: 0x06008C98 RID: 35992 RVA: 0x00154B29 File Offset: 0x00152D29
-		// (set) Token: 0x06008C99 RID: 35993 RVA: 0x00154B41 File Offset: 0x00152D41
+		// Token: 0x17001B8D RID: 7053
+		// (get) Token: 0x06008B30 RID: 35632 RVA: 0x00151F0F File Offset: 0x0015010F
+		// (set) Token: 0x06008B31 RID: 35633 RVA: 0x00151F27 File Offset: 0x00150127
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityTask Task
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDB RID: 7131
-		// (get) Token: 0x06008C9A RID: 35994 RVA: 0x00154B57 File Offset: 0x00152D57
-		// (set) Token: 0x06008C9B RID: 35995 RVA: 0x00154B70 File Offset: 0x00152D70
+		// Token: 0x17001B8E RID: 7054
+		// (get) Token: 0x06008B32 RID: 35634 RVA: 0x00151F3D File Offset: 0x0015013D
+		// (set) Token: 0x06008B33 RID: 35635 RVA: 0x00151F56 File Offset: 0x00150156
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroUnLockInfo RaceUnLockInfo
@@ -241,9 +241,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDC RID: 7132
-		// (get) Token: 0x06008C9C RID: 35996 RVA: 0x00154B87 File Offset: 0x00152D87
-		// (set) Token: 0x06008C9D RID: 35997 RVA: 0x00154B9F File Offset: 0x00152D9F
+		// Token: 0x17001B8F RID: 7055
+		// (get) Token: 0x06008B34 RID: 35636 RVA: 0x00151F6D File Offset: 0x0015016D
+		// (set) Token: 0x06008B35 RID: 35637 RVA: 0x00151F86 File Offset: 0x00150186
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroSubInsInfo FloroSubInsInfo
@@ -263,9 +263,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDD RID: 7133
-		// (get) Token: 0x06008C9E RID: 35998 RVA: 0x00154BB5 File Offset: 0x00152DB5
-		// (set) Token: 0x06008C9F RID: 35999 RVA: 0x00154BCD File Offset: 0x00152DCD
+		// Token: 0x17001B90 RID: 7056
+		// (get) Token: 0x06008B36 RID: 35638 RVA: 0x00151F9D File Offset: 0x0015019D
+		// (set) Token: 0x06008B37 RID: 35639 RVA: 0x00151FB6 File Offset: 0x001501B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConditionTask ConditionTask
@@ -285,9 +285,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDE RID: 7134
-		// (get) Token: 0x06008CA0 RID: 36000 RVA: 0x00154BE3 File Offset: 0x00152DE3
-		// (set) Token: 0x06008CA1 RID: 36001 RVA: 0x00154BFC File Offset: 0x00152DFC
+		// Token: 0x17001B91 RID: 7057
+		// (get) Token: 0x06008B38 RID: 35640 RVA: 0x00151FCD File Offset: 0x001501CD
+		// (set) Token: 0x06008B39 RID: 35641 RVA: 0x00151FE6 File Offset: 0x001501E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchSubInsRecord SubInfHistory
@@ -307,9 +307,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BDF RID: 7135
-		// (get) Token: 0x06008CA2 RID: 36002 RVA: 0x00154C13 File Offset: 0x00152E13
-		// (set) Token: 0x06008CA3 RID: 36003 RVA: 0x00154C2B File Offset: 0x00152E2B
+		// Token: 0x17001B92 RID: 7058
+		// (get) Token: 0x06008B3A RID: 35642 RVA: 0x00151FFD File Offset: 0x001501FD
+		// (set) Token: 0x06008B3B RID: 35643 RVA: 0x00152015 File Offset: 0x00150215
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroUnLockInfo InsLockInfo
@@ -329,8 +329,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001BE0 RID: 7136
-		// (get) Token: 0x06008CA4 RID: 36004 RVA: 0x00154C41 File Offset: 0x00152E41
+		// Token: 0x17001B93 RID: 7059
+		// (get) Token: 0x06008B3C RID: 35644 RVA: 0x0015202B File Offset: 0x0015022B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchUpdatePlayerInfoNotify.DataOneofCase DataCase
@@ -341,7 +341,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008CA5 RID: 36005 RVA: 0x00154C49 File Offset: 0x00152E49
+		// Token: 0x06008B3D RID: 35645 RVA: 0x00152033 File Offset: 0x00150233
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -350,7 +350,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x06008CA6 RID: 36006 RVA: 0x00154C59 File Offset: 0x00152E59
+		// Token: 0x06008B3E RID: 35646 RVA: 0x00152043 File Offset: 0x00150243
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -358,7 +358,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FloroRanchUpdatePlayerInfoNotify);
 		}
 
-		// Token: 0x06008CA7 RID: 36007 RVA: 0x00154C68 File Offset: 0x00152E68
+		// Token: 0x06008B3F RID: 35647 RVA: 0x00152054 File Offset: 0x00150254
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FloroRanchUpdatePlayerInfoNotify other)
@@ -366,7 +366,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.FloroCfgType == other.FloroCfgType && this.ActivityId == other.ActivityId && object.Equals(this.UnlockCard, other.UnlockCard) && object.Equals(this.UnlockToy, other.UnlockToy) && object.Equals(this.UnlockSkill, other.UnlockSkill) && object.Equals(this.Task, other.Task) && object.Equals(this.RaceUnLockInfo, other.RaceUnLockInfo) && object.Equals(this.FloroSubInsInfo, other.FloroSubInsInfo) && object.Equals(this.ConditionTask, other.ConditionTask) && object.Equals(this.SubInfHistory, other.SubInfHistory) && object.Equals(this.InsLockInfo, other.InsLockInfo) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06008CA8 RID: 36008 RVA: 0x00154D80 File Offset: 0x00152F80
+		// Token: 0x06008B40 RID: 35648 RVA: 0x0015216C File Offset: 0x0015036C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -424,7 +424,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008CA9 RID: 36009 RVA: 0x00154EBB File Offset: 0x001530BB
+		// Token: 0x06008B41 RID: 35649 RVA: 0x001522A8 File Offset: 0x001504A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -432,7 +432,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06008CAA RID: 36010 RVA: 0x00154EC8 File Offset: 0x001530C8
+		// Token: 0x06008B42 RID: 35650 RVA: 0x001522B5 File Offset: 0x001504B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -440,65 +440,65 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06008CAB RID: 36011 RVA: 0x00154ED4 File Offset: 0x001530D4
+		// Token: 0x06008B43 RID: 35651 RVA: 0x001522C0 File Offset: 0x001504C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.FloroCfgType != FloroConfigType.FloroCard)
-			{
-				output.WriteRawTag(8);
-				output.WriteEnum((int)this.FloroCfgType);
-			}
 			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.Task)
 			{
-				output.WriteRawTag(26);
+				output.WriteRawTag(18);
 				output.WriteMessage(this.Task);
 			}
-			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo)
+			if (this.FloroCfgType != FloroConfigType.FloroCard)
 			{
-				output.WriteRawTag(42);
-				output.WriteMessage(this.InsLockInfo);
+				output.WriteRawTag(40);
+				output.WriteEnum((int)this.FloroCfgType);
+			}
+			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy)
+			{
+				output.WriteRawTag(50);
+				output.WriteMessage(this.UnlockToy);
 			}
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.ActivityId);
 			}
-			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo)
-			{
-				output.WriteRawTag(58);
-				output.WriteMessage(this.FloroSubInsInfo);
-			}
-			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask)
+			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo)
 			{
 				output.WriteRawTag(66);
-				output.WriteMessage(this.ConditionTask);
+				output.WriteMessage(this.InsLockInfo);
 			}
 			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(74);
 				output.WriteMessage(this.SubInfHistory);
+			}
+			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard)
+			{
+				output.WriteRawTag(82);
+				output.WriteMessage(this.UnlockCard);
+			}
+			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask)
+			{
+				output.WriteRawTag(90);
+				output.WriteMessage(this.ConditionTask);
 			}
 			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockSkill)
 			{
-				output.WriteRawTag(90);
+				output.WriteRawTag(98);
 				output.WriteMessage(this.UnlockSkill);
 			}
 			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.RaceUnLockInfo)
 			{
-				output.WriteRawTag(98);
+				output.WriteRawTag(106);
 				output.WriteMessage(this.RaceUnLockInfo);
 			}
-			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard)
+			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo)
 			{
-				output.WriteRawTag(106);
-				output.WriteMessage(this.UnlockCard);
-			}
-			if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy)
-			{
-				output.WriteRawTag(122);
-				output.WriteMessage(this.UnlockToy);
+				output.WriteRawTag(114);
+				output.WriteMessage(this.FloroSubInsInfo);
 			}
 			if (this._unknownFields != null)
 			{
@@ -506,7 +506,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008CAC RID: 36012 RVA: 0x00155038 File Offset: 0x00153238
+		// Token: 0x06008B44 RID: 35652 RVA: 0x00152424 File Offset: 0x00150624
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -563,7 +563,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008CAD RID: 36013 RVA: 0x00155174 File Offset: 0x00153374
+		// Token: 0x06008B45 RID: 35653 RVA: 0x00152564 File Offset: 0x00150764
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FloroRanchUpdatePlayerInfoNotify other)
@@ -589,6 +589,13 @@ namespace Aki.Protocol
 				}
 				this.Task.MergeFrom(other.Task);
 				break;
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy:
+				if (this.UnlockToy == null)
+				{
+					this.UnlockToy = new FloroUnLockInfo();
+				}
+				this.UnlockToy.MergeFrom(other.UnlockToy);
+				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo:
 				if (this.InsLockInfo == null)
 				{
@@ -596,12 +603,19 @@ namespace Aki.Protocol
 				}
 				this.InsLockInfo.MergeFrom(other.InsLockInfo);
 				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo:
-				if (this.FloroSubInsInfo == null)
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory:
+				if (this.SubInfHistory == null)
 				{
-					this.FloroSubInsInfo = new FloroSubInsInfo();
+					this.SubInfHistory = new FloroRanchSubInsRecord();
 				}
-				this.FloroSubInsInfo.MergeFrom(other.FloroSubInsInfo);
+				this.SubInfHistory.MergeFrom(other.SubInfHistory);
+				break;
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard:
+				if (this.UnlockCard == null)
+				{
+					this.UnlockCard = new FloroUnLockInfo();
+				}
+				this.UnlockCard.MergeFrom(other.UnlockCard);
 				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask:
 				if (this.ConditionTask == null)
@@ -609,13 +623,6 @@ namespace Aki.Protocol
 					this.ConditionTask = new ConditionTask();
 				}
 				this.ConditionTask.MergeFrom(other.ConditionTask);
-				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory:
-				if (this.SubInfHistory == null)
-				{
-					this.SubInfHistory = new FloroRanchSubInsRecord();
-				}
-				this.SubInfHistory.MergeFrom(other.SubInfHistory);
 				break;
 			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockSkill:
 				if (this.UnlockSkill == null)
@@ -631,25 +638,18 @@ namespace Aki.Protocol
 				}
 				this.RaceUnLockInfo.MergeFrom(other.RaceUnLockInfo);
 				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard:
-				if (this.UnlockCard == null)
+			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo:
+				if (this.FloroSubInsInfo == null)
 				{
-					this.UnlockCard = new FloroUnLockInfo();
+					this.FloroSubInsInfo = new FloroSubInsInfo();
 				}
-				this.UnlockCard.MergeFrom(other.UnlockCard);
-				break;
-			case FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy:
-				if (this.UnlockToy == null)
-				{
-					this.UnlockToy = new FloroUnLockInfo();
-				}
-				this.UnlockToy.MergeFrom(other.UnlockToy);
+				this.FloroSubInsInfo.MergeFrom(other.FloroSubInsInfo);
 				break;
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06008CAE RID: 36014 RVA: 0x0015536F File Offset: 0x0015356F
+		// Token: 0x06008B46 RID: 35654 RVA: 0x0015275F File Offset: 0x0015095F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -657,7 +657,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06008CAF RID: 36015 RVA: 0x00155378 File Offset: 0x00153578
+		// Token: 0x06008B47 RID: 35655 RVA: 0x00152768 File Offset: 0x00150968
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -669,16 +669,11 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 58U)
+				if (num <= 66U)
 				{
-					if (num <= 26U)
+					if (num <= 40U)
 					{
-						if (num == 8U)
-						{
-							this.FloroCfgType = (FloroConfigType)input.ReadEnum();
-							continue;
-						}
-						if (num == 26U)
+						if (num == 18U)
 						{
 							ActivityTask activityTask = new ActivityTask();
 							if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.Task)
@@ -689,52 +684,46 @@ namespace Aki.Protocol
 							this.Task = activityTask;
 							continue;
 						}
+						if (num == 40U)
+						{
+							this.FloroCfgType = (FloroConfigType)input.ReadEnum();
+							continue;
+						}
 					}
 					else
 					{
-						if (num == 42U)
+						if (num == 50U)
 						{
 							FloroUnLockInfo floroUnLockInfo = new FloroUnLockInfo();
-							if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo)
+							if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy)
 							{
-								floroUnLockInfo.MergeFrom(this.InsLockInfo);
+								floroUnLockInfo.MergeFrom(this.UnlockToy);
 							}
 							input.ReadMessage(floroUnLockInfo);
-							this.InsLockInfo = floroUnLockInfo;
+							this.UnlockToy = floroUnLockInfo;
 							continue;
 						}
-						if (num == 48U)
+						if (num == 56U)
 						{
 							this.ActivityId = input.ReadInt32();
 							continue;
 						}
-						if (num == 58U)
+						if (num == 66U)
 						{
-							FloroSubInsInfo floroSubInsInfo = new FloroSubInsInfo();
-							if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo)
+							FloroUnLockInfo floroUnLockInfo2 = new FloroUnLockInfo();
+							if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.InsLockInfo)
 							{
-								floroSubInsInfo.MergeFrom(this.FloroSubInsInfo);
+								floroUnLockInfo2.MergeFrom(this.InsLockInfo);
 							}
-							input.ReadMessage(floroSubInsInfo);
-							this.FloroSubInsInfo = floroSubInsInfo;
+							input.ReadMessage(floroUnLockInfo2);
+							this.InsLockInfo = floroUnLockInfo2;
 							continue;
 						}
 					}
 				}
 				else if (num <= 90U)
 				{
-					if (num == 66U)
-					{
-						ConditionTask conditionTask = new ConditionTask();
-						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask)
-						{
-							conditionTask.MergeFrom(this.ConditionTask);
-						}
-						input.ReadMessage(conditionTask);
-						this.ConditionTask = conditionTask;
-						continue;
-					}
-					if (num == 82U)
+					if (num == 74U)
 					{
 						FloroRanchSubInsRecord floroRanchSubInsRecord = new FloroRanchSubInsRecord();
 						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.SubInfHistory)
@@ -745,15 +734,26 @@ namespace Aki.Protocol
 						this.SubInfHistory = floroRanchSubInsRecord;
 						continue;
 					}
+					if (num == 82U)
+					{
+						FloroUnLockInfo floroUnLockInfo3 = new FloroUnLockInfo();
+						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard)
+						{
+							floroUnLockInfo3.MergeFrom(this.UnlockCard);
+						}
+						input.ReadMessage(floroUnLockInfo3);
+						this.UnlockCard = floroUnLockInfo3;
+						continue;
+					}
 					if (num == 90U)
 					{
-						FloroUnLockInfo floroUnLockInfo2 = new FloroUnLockInfo();
-						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockSkill)
+						ConditionTask conditionTask = new ConditionTask();
+						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.ConditionTask)
 						{
-							floroUnLockInfo2.MergeFrom(this.UnlockSkill);
+							conditionTask.MergeFrom(this.ConditionTask);
 						}
-						input.ReadMessage(floroUnLockInfo2);
-						this.UnlockSkill = floroUnLockInfo2;
+						input.ReadMessage(conditionTask);
+						this.ConditionTask = conditionTask;
 						continue;
 					}
 				}
@@ -761,35 +761,35 @@ namespace Aki.Protocol
 				{
 					if (num == 98U)
 					{
-						FloroUnLockInfo floroUnLockInfo3 = new FloroUnLockInfo();
-						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.RaceUnLockInfo)
+						FloroUnLockInfo floroUnLockInfo4 = new FloroUnLockInfo();
+						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockSkill)
 						{
-							floroUnLockInfo3.MergeFrom(this.RaceUnLockInfo);
+							floroUnLockInfo4.MergeFrom(this.UnlockSkill);
 						}
-						input.ReadMessage(floroUnLockInfo3);
-						this.RaceUnLockInfo = floroUnLockInfo3;
+						input.ReadMessage(floroUnLockInfo4);
+						this.UnlockSkill = floroUnLockInfo4;
 						continue;
 					}
 					if (num == 106U)
 					{
-						FloroUnLockInfo floroUnLockInfo4 = new FloroUnLockInfo();
-						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockCard)
-						{
-							floroUnLockInfo4.MergeFrom(this.UnlockCard);
-						}
-						input.ReadMessage(floroUnLockInfo4);
-						this.UnlockCard = floroUnLockInfo4;
-						continue;
-					}
-					if (num == 122U)
-					{
 						FloroUnLockInfo floroUnLockInfo5 = new FloroUnLockInfo();
-						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.UnlockToy)
+						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.RaceUnLockInfo)
 						{
-							floroUnLockInfo5.MergeFrom(this.UnlockToy);
+							floroUnLockInfo5.MergeFrom(this.RaceUnLockInfo);
 						}
 						input.ReadMessage(floroUnLockInfo5);
-						this.UnlockToy = floroUnLockInfo5;
+						this.RaceUnLockInfo = floroUnLockInfo5;
+						continue;
+					}
+					if (num == 114U)
+					{
+						FloroSubInsInfo floroSubInsInfo = new FloroSubInsInfo();
+						if (this.dataCase_ == FloroRanchUpdatePlayerInfoNotify.DataOneofCase.FloroSubInsInfo)
+						{
+							floroSubInsInfo.MergeFrom(this.FloroSubInsInfo);
+						}
+						input.ReadMessage(floroSubInsInfo);
+						this.FloroSubInsInfo = floroSubInsInfo;
 						continue;
 					}
 				}
@@ -797,77 +797,77 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040044C5 RID: 17605
+		// Token: 0x040044BB RID: 17595
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040044C6 RID: 17606
-		public const int FloroCfgTypeFieldNumber = 1;
+		// Token: 0x040044BC RID: 17596
+		public const int FloroCfgTypeFieldNumber = 5;
 
-		// Token: 0x040044C7 RID: 17607
+		// Token: 0x040044BD RID: 17597
 		private FloroConfigType floroCfgType_;
 
-		// Token: 0x040044C8 RID: 17608
-		public const int ActivityIdFieldNumber = 6;
+		// Token: 0x040044BE RID: 17598
+		public const int ActivityIdFieldNumber = 7;
 
-		// Token: 0x040044C9 RID: 17609
+		// Token: 0x040044BF RID: 17599
 		private int activityId_;
 
-		// Token: 0x040044CA RID: 17610
-		public const int UnlockCardFieldNumber = 13;
+		// Token: 0x040044C0 RID: 17600
+		public const int UnlockCardFieldNumber = 10;
 
-		// Token: 0x040044CB RID: 17611
-		public const int UnlockToyFieldNumber = 15;
+		// Token: 0x040044C1 RID: 17601
+		public const int UnlockToyFieldNumber = 6;
 
-		// Token: 0x040044CC RID: 17612
-		public const int UnlockSkillFieldNumber = 11;
+		// Token: 0x040044C2 RID: 17602
+		public const int UnlockSkillFieldNumber = 12;
 
-		// Token: 0x040044CD RID: 17613
-		public const int TaskFieldNumber = 3;
+		// Token: 0x040044C3 RID: 17603
+		public const int TaskFieldNumber = 2;
 
-		// Token: 0x040044CE RID: 17614
-		public const int RaceUnLockInfoFieldNumber = 12;
+		// Token: 0x040044C4 RID: 17604
+		public const int RaceUnLockInfoFieldNumber = 13;
 
-		// Token: 0x040044CF RID: 17615
-		public const int FloroSubInsInfoFieldNumber = 7;
+		// Token: 0x040044C5 RID: 17605
+		public const int FloroSubInsInfoFieldNumber = 14;
 
-		// Token: 0x040044D0 RID: 17616
-		public const int ConditionTaskFieldNumber = 8;
+		// Token: 0x040044C6 RID: 17606
+		public const int ConditionTaskFieldNumber = 11;
 
-		// Token: 0x040044D1 RID: 17617
-		public const int SubInfHistoryFieldNumber = 10;
+		// Token: 0x040044C7 RID: 17607
+		public const int SubInfHistoryFieldNumber = 9;
 
-		// Token: 0x040044D2 RID: 17618
-		public const int InsLockInfoFieldNumber = 5;
+		// Token: 0x040044C8 RID: 17608
+		public const int InsLockInfoFieldNumber = 8;
 
-		// Token: 0x040044D3 RID: 17619
+		// Token: 0x040044C9 RID: 17609
 		private object data_;
 
-		// Token: 0x040044D4 RID: 17620
+		// Token: 0x040044CA RID: 17610
 		private FloroRanchUpdatePlayerInfoNotify.DataOneofCase dataCase_;
 
-		// Token: 0x020017AA RID: 6058
+		// Token: 0x02001822 RID: 6178
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C6EC RID: 50924
+			// Token: 0x0400CC17 RID: 52247
 			None,
-			// Token: 0x0400C6ED RID: 50925
-			UnlockCard = 13,
-			// Token: 0x0400C6EE RID: 50926
-			UnlockToy = 15,
-			// Token: 0x0400C6EF RID: 50927
-			UnlockSkill = 11,
-			// Token: 0x0400C6F0 RID: 50928
-			Task = 3,
-			// Token: 0x0400C6F1 RID: 50929
-			RaceUnLockInfo = 12,
-			// Token: 0x0400C6F2 RID: 50930
-			FloroSubInsInfo = 7,
-			// Token: 0x0400C6F3 RID: 50931
-			ConditionTask,
-			// Token: 0x0400C6F4 RID: 50932
-			SubInfHistory = 10,
-			// Token: 0x0400C6F5 RID: 50933
-			InsLockInfo = 5
+			// Token: 0x0400CC18 RID: 52248
+			UnlockCard = 10,
+			// Token: 0x0400CC19 RID: 52249
+			UnlockToy = 6,
+			// Token: 0x0400CC1A RID: 52250
+			UnlockSkill = 12,
+			// Token: 0x0400CC1B RID: 52251
+			Task = 2,
+			// Token: 0x0400CC1C RID: 52252
+			RaceUnLockInfo = 13,
+			// Token: 0x0400CC1D RID: 52253
+			FloroSubInsInfo,
+			// Token: 0x0400CC1E RID: 52254
+			ConditionTask = 11,
+			// Token: 0x0400CC1F RID: 52255
+			SubInfHistory = 9,
+			// Token: 0x0400CC20 RID: 52256
+			InsLockInfo = 8
 		}
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002E5B RID: 11867
+// Token: 0x020023AD RID: 9133
 public interface IGameplayEventTask
 {
-	// Token: 0x060194DC RID: 103644
+	// Token: 0x06016D96 RID: 93590
 	void EndTask();
 }

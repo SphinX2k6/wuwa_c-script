@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041AF RID: 16815
+	// Token: 0x02004608 RID: 17928
 	public class ITakePhotoTimeConditionT
 	{
-		// Token: 0x17007743 RID: 30531
-		// (get) Token: 0x06018C26 RID: 101414 RVA: 0x0039093D File Offset: 0x0038EB3D
-		// (set) Token: 0x06018C27 RID: 101415 RVA: 0x00390945 File Offset: 0x0038EB45
+		// Token: 0x17007D6F RID: 32111
+		// (get) Token: 0x0601A37C RID: 107388 RVA: 0x003BBD91 File Offset: 0x003B9F91
+		// (set) Token: 0x0601A37D RID: 107389 RVA: 0x003BBD99 File Offset: 0x003B9F99
 		public IHourToHourT TimeRange { get; set; }
 
-		// Token: 0x17007744 RID: 30532
-		// (get) Token: 0x06018C28 RID: 101416 RVA: 0x0039094E File Offset: 0x0038EB4E
-		// (set) Token: 0x06018C29 RID: 101417 RVA: 0x00390956 File Offset: 0x0038EB56
+		// Token: 0x17007D70 RID: 32112
+		// (get) Token: 0x0601A37E RID: 107390 RVA: 0x003BBDA2 File Offset: 0x003B9FA2
+		// (set) Token: 0x0601A37F RID: 107391 RVA: 0x003BBDAA File Offset: 0x003B9FAA
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17007745 RID: 30533
-		// (get) Token: 0x06018C2A RID: 101418 RVA: 0x0039095F File Offset: 0x0038EB5F
-		// (set) Token: 0x06018C2B RID: 101419 RVA: 0x00390967 File Offset: 0x0038EB67
+		// Token: 0x17007D71 RID: 32113
+		// (get) Token: 0x0601A380 RID: 107392 RVA: 0x003BBDB3 File Offset: 0x003B9FB3
+		// (set) Token: 0x0601A381 RID: 107393 RVA: 0x003BBDBB File Offset: 0x003B9FBB
 		public string TidDescription { get; set; }
 
-		// Token: 0x06018C2C RID: 101420 RVA: 0x00390970 File Offset: 0x0038EB70
+		// Token: 0x0601A382 RID: 107394 RVA: 0x003BBDC4 File Offset: 0x003B9FC4
 		public ITakePhotoTimeConditionT()
 		{
 			this.TimeRange = null;

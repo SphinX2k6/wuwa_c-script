@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200235C RID: 9052
+	// Token: 0x020025D1 RID: 9681
 	public class EInfrActivityBuildStageTypeJsonConverter : JsonConverter<EInfrActivityBuildStageType>
 	{
-		// Token: 0x0600C59E RID: 50590 RVA: 0x001CD704 File Offset: 0x001CB904
+		// Token: 0x0600D188 RID: 53640 RVA: 0x001E59E4 File Offset: 0x001E3BE4
 		public override EInfrActivityBuildStageType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EInfrActivityBuildStageTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C59F RID: 50591 RVA: 0x001CD728 File Offset: 0x001CB928
+		// Token: 0x0600D189 RID: 53641 RVA: 0x001E5A08 File Offset: 0x001E3C08
 		public override void Write(Utf8JsonWriter writer, EInfrActivityBuildStageType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042C7 RID: 17095
+	// Token: 0x0200331D RID: 13085
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/EPawnChannel.EPawnChannel")]
 	public enum EPawnChannel : byte
 	{
-		// Token: 0x0401741B RID: 95259
+		// Token: 0x040120FD RID: 73981
 		All,
-		// Token: 0x0401741C RID: 95260
+		// Token: 0x040120FE RID: 73982
 		Pawn,
-		// Token: 0x0401741D RID: 95261
+		// Token: 0x040120FF RID: 73983
 		PawnPlayer,
-		// Token: 0x0401741E RID: 95262
+		// Token: 0x04012100 RID: 73984
 		PawnMonster,
-		// Token: 0x0401741F RID: 95263
+		// Token: 0x04012101 RID: 73985
 		EPawnChannel_MAX
 	}
 }

@@ -2,16 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x02004403 RID: 17411
+	// Token: 0x0200486B RID: 18539
 	public enum IMatchRoleType_Union : byte
 	{
-		// Token: 0x0400C358 RID: 50008
+		// Token: 0x0400CD83 RID: 52611
 		NONE,
-		// Token: 0x0400C359 RID: 50009
+		// Token: 0x0400CD84 RID: 52612
 		IMatchRoleType,
-		// Token: 0x0400C35A RID: 50010
+		// Token: 0x0400CD85 RID: 52613
 		IMatchPlayerRole,
-		// Token: 0x0400C35B RID: 50011
-		IMatchPhantomRole
+		// Token: 0x0400CD86 RID: 52614
+		IMatchPhantomRole,
+		// Token: 0x0400CD87 RID: 52615
+		IMatchAssistCharacterRole
 	}
 }

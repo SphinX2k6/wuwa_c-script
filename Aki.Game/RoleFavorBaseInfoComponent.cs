@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x0200286A RID: 10346
+// Token: 0x02001DE5 RID: 7653
 public class RoleFavorBaseInfoComponent : RoleFavorViewComponentBase
 {
-	// Token: 0x060154CE RID: 87246 RVA: 0x005612B4 File Offset: 0x0055F4B4
+	// Token: 0x06012ECC RID: 77516 RVA: 0x0058C010 File Offset: 0x0058A210
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,14 +23,14 @@ public class RoleFavorBaseInfoComponent : RoleFavorViewComponentBase
 		};
 	}
 
-	// Token: 0x060154CF RID: 87247 RVA: 0x0056137C File Offset: 0x0055F57C
+	// Token: 0x06012ECD RID: 77517 RVA: 0x0058C0D8 File Offset: 0x0058A2D8
 	[NullableContext(1)]
 	protected override void OnSetData(RoleFavorContentDataBase contentData)
 	{
 		this.RoleId = new int?(contentData.RoleId);
 	}
 
-	// Token: 0x060154D0 RID: 87248 RVA: 0x00561390 File Offset: 0x0055F590
+	// Token: 0x06012ECE RID: 77518 RVA: 0x0058C0EC File Offset: 0x0058A2EC
 	protected override void OnRefreshView()
 	{
 		if (this.RoleId != null)
@@ -77,7 +77,7 @@ public class RoleFavorBaseInfoComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154D1 RID: 87249 RVA: 0x005614A0 File Offset: 0x0055F6A0
+	// Token: 0x06012ECF RID: 77519 RVA: 0x0058C1FC File Offset: 0x0058A3FC
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(6);
@@ -87,7 +87,7 @@ public class RoleFavorBaseInfoComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154D2 RID: 87250 RVA: 0x005614E0 File Offset: 0x0055F6E0
+	// Token: 0x06012ED0 RID: 77520 RVA: 0x0058C23C File Offset: 0x0058A43C
 	protected override void OnBeforeDestroy()
 	{
 		this.RoleId = null;
@@ -98,6 +98,6 @@ public class RoleFavorBaseInfoComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x04009F27 RID: 40743
+	// Token: 0x0400A310 RID: 41744
 	private int? RoleId = new int?(0);
 }

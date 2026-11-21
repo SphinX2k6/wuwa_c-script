@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 {
-	// Token: 0x02005738 RID: 22328
+	// Token: 0x0200470F RID: 18191
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 	})]
 	public class KurotatoPopupWeaponBuildItem : GridProxyAbstract<IKurotatoWeaponBuildInfoPanel>
 	{
-		// Token: 0x06038C48 RID: 232520 RVA: 0x00D7A4B4 File Offset: 0x00D786B4
+		// Token: 0x0602DB58 RID: 187224 RVA: 0x00CC8B64 File Offset: 0x00CC6D64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038C49 RID: 232521 RVA: 0x00D7A53E File Offset: 0x00D7873E
+		// Token: 0x0602DB59 RID: 187225 RVA: 0x00CC8BEE File Offset: 0x00CC6DEE
 		protected override void OnStart()
 		{
 			this.BuildInfoLayout = new GenericLayout<InfoItem, IInfoItemData>(base.GetVerticalLayout(1), () => new InfoItem(), null, false, true);
 		}
 
-		// Token: 0x06038C4A RID: 232522 RVA: 0x00D7A574 File Offset: 0x00D78774
+		// Token: 0x0602DB5A RID: 187226 RVA: 0x00CC8C24 File Offset: 0x00CC6E24
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoWeaponBuildInfoPanel data, bool isSelected, int gridIndex)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 			this.BuildInfoLayout.RefreshByData(list2, null, false);
 		}
 
-		// Token: 0x0401DC7C RID: 121980
+		// Token: 0x04018712 RID: 100114
 		[Nullable(new byte[]
 		{
 			2,
@@ -101,14 +101,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupItemDetail
 		})]
 		private GenericLayout<InfoItem, IInfoItemData> BuildInfoLayout;
 
-		// Token: 0x0200B919 RID: 47385
+		// Token: 0x0200A33A RID: 41786
 		private enum EChildComp
 		{
-			// Token: 0x04037FB7 RID: 229303
+			// Token: 0x040329C7 RID: 207303
 			TextName,
-			// Token: 0x04037FB8 RID: 229304
+			// Token: 0x040329C8 RID: 207304
 			PanelVerticalLayout,
-			// Token: 0x04037FB9 RID: 229305
+			// Token: 0x040329C9 RID: 207305
 			TextDesc
 		}
 	}

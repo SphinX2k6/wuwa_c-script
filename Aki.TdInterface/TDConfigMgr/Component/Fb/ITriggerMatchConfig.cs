@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D3B RID: 3387
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E35 RID: 3637
 	public class ITriggerMatchConfig
 	{
-		// Token: 0x06004D3E RID: 19774 RVA: 0x000C0354 File Offset: 0x000BE554
+		// Token: 0x0600525A RID: 21082 RVA: 0x000CBA98 File Offset: 0x000C9C98
 		public static ITriggerMatchConfig Create(ITriggerMatchConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001885 RID: 6277
-		// (get) Token: 0x06004D3F RID: 19775 RVA: 0x000C0373 File Offset: 0x000BE573
+		// Token: 0x170019EB RID: 6635
+		// (get) Token: 0x0600525B RID: 21083 RVA: 0x000CBAB7 File Offset: 0x000C9CB7
 		public virtual IEntityMatchConfig EntityMatch
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001886 RID: 6278
-		// (get) Token: 0x06004D40 RID: 19776 RVA: 0x000C03A4 File Offset: 0x000BE5A4
+		// Token: 0x170019EC RID: 6636
+		// (get) Token: 0x0600525C RID: 21084 RVA: 0x000CBAE8 File Offset: 0x000C9CE8
 		public virtual int? EntityMatchCount
 		{
 			get
@@ -52,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C48 RID: 11336
+		// Token: 0x04002F08 RID: 12040
 		private ITriggerMatchConfig Instance;
 
-		// Token: 0x04002C49 RID: 11337
+		// Token: 0x04002F09 RID: 12041
 		private IEntityMatchConfig _EntityMatchCache;
 
-		// Token: 0x04002C4A RID: 11338
+		// Token: 0x04002F0A RID: 12042
 		private bool _EntityMatchInited;
 	}
 }

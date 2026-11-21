@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001998 RID: 6552
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B1F RID: 6943
 	public class IDetectBattleTag : IDetectBattleStateType
 	{
-		// Token: 0x06008C39 RID: 35897 RVA: 0x00149218 File Offset: 0x00147418
+		// Token: 0x0600935D RID: 37725 RVA: 0x00158A28 File Offset: 0x00156C28
 		private IDetectBattleTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C3A RID: 35898 RVA: 0x00149250 File Offset: 0x00147450
+		// Token: 0x0600935E RID: 37726 RVA: 0x00158A60 File Offset: 0x00156C60
 		public static IDetectBattleTag Create([Nullable(2)] IDetectBattleTag instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C3B RID: 35899 RVA: 0x00149263 File Offset: 0x00147463
+		// Token: 0x0600935F RID: 37727 RVA: 0x00158A73 File Offset: 0x00156C73
 		public static IDetectBattleTag CreateFromSetValue([Nullable(2)] IDetectBattleTag_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C3C RID: 35900 RVA: 0x00149276 File Offset: 0x00147476
+		// Token: 0x06009360 RID: 37728 RVA: 0x00158A86 File Offset: 0x00156C86
 		public new IDetectBattleTag_SetValue ToSetValue()
 		{
 			return new IDetectBattleTag_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D0D RID: 11533
-		// (get) Token: 0x06008C3D RID: 35901 RVA: 0x001492AD File Offset: 0x001474AD
-		// (set) Token: 0x06008C3E RID: 35902 RVA: 0x001492D8 File Offset: 0x001474D8
+		// Token: 0x17002F0C RID: 12044
+		// (get) Token: 0x06009361 RID: 37729 RVA: 0x00158ABD File Offset: 0x00156CBD
+		// (set) Token: 0x06009362 RID: 37730 RVA: 0x00158AE8 File Offset: 0x00156CE8
 		public override EDetectBattleConditionType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D0E RID: 11534
-		// (get) Token: 0x06008C3F RID: 35903 RVA: 0x001492E6 File Offset: 0x001474E6
-		// (set) Token: 0x06008C40 RID: 35904 RVA: 0x00149311 File Offset: 0x00147511
+		// Token: 0x17002F0D RID: 12045
+		// (get) Token: 0x06009363 RID: 37731 RVA: 0x00158AF6 File Offset: 0x00156CF6
+		// (set) Token: 0x06009364 RID: 37732 RVA: 0x00158B21 File Offset: 0x00156D21
 		public virtual int EntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D0F RID: 11535
-		// (get) Token: 0x06008C41 RID: 35905 RVA: 0x00149320 File Offset: 0x00147520
-		// (set) Token: 0x06008C42 RID: 35906 RVA: 0x00149381 File Offset: 0x00147581
+		// Token: 0x17002F0E RID: 12046
+		// (get) Token: 0x06009365 RID: 37733 RVA: 0x00158B30 File Offset: 0x00156D30
+		// (set) Token: 0x06009366 RID: 37734 RVA: 0x00158B91 File Offset: 0x00156D91
 		public virtual IDetectBattleMonsterOnGround TagOption
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D10 RID: 11536
-		// (get) Token: 0x06008C43 RID: 35907 RVA: 0x00149396 File Offset: 0x00147596
-		// (set) Token: 0x06008C44 RID: 35908 RVA: 0x001493C5 File Offset: 0x001475C5
+		// Token: 0x17002F0F RID: 12047
+		// (get) Token: 0x06009367 RID: 37735 RVA: 0x00158BA6 File Offset: 0x00156DA6
+		// (set) Token: 0x06009368 RID: 37736 RVA: 0x00158BD5 File Offset: 0x00156DD5
 		public virtual float MaxWaitTime
 		{
 			get
@@ -161,18 +159,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005752 RID: 22354
+		// Token: 0x04005B9B RID: 23451
 		[Nullable(2)]
 		protected new IDetectBattleTag FbInstance;
 
-		// Token: 0x04005753 RID: 22355
+		// Token: 0x04005B9C RID: 23452
 		[Nullable(2)]
 		protected new IDetectBattleTag_SetValue PocoInterface;
 
-		// Token: 0x04005754 RID: 22356
+		// Token: 0x04005B9D RID: 23453
 		private IDetectBattleMonsterOnGround _TagOptionCache;
 
-		// Token: 0x04005755 RID: 22357
+		// Token: 0x04005B9E RID: 23454
 		private bool _TagOptionInited;
 	}
 }

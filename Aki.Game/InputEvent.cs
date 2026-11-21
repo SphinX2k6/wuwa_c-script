@@ -2,35 +2,35 @@
 using AkiClient.Game.Aki.Character.Input.Enum;
 using CSharpScript.Game.Input;
 
-// Token: 0x02003069 RID: 12393
+// Token: 0x020025BF RID: 9663
 public class InputEvent : IInputBase
 {
-	// Token: 0x17002452 RID: 9298
-	// (get) Token: 0x0601A67B RID: 108155 RVA: 0x0070B095 File Offset: 0x00709295
-	// (set) Token: 0x0601A67C RID: 108156 RVA: 0x0070B09D File Offset: 0x0070929D
+	// Token: 0x17002588 RID: 9608
+	// (get) Token: 0x06018033 RID: 98355 RVA: 0x00731889 File Offset: 0x0072FA89
+	// (set) Token: 0x06018034 RID: 98356 RVA: 0x00731891 File Offset: 0x0072FA91
 	public CSharpScript.Game.Input.EInputAction Action { get; set; }
 
-	// Token: 0x17002453 RID: 9299
-	// (get) Token: 0x0601A67D RID: 108157 RVA: 0x0070B0A6 File Offset: 0x007092A6
-	// (set) Token: 0x0601A67E RID: 108158 RVA: 0x0070B0AE File Offset: 0x007092AE
+	// Token: 0x17002589 RID: 9609
+	// (get) Token: 0x06018035 RID: 98357 RVA: 0x0073189A File Offset: 0x0072FA9A
+	// (set) Token: 0x06018036 RID: 98358 RVA: 0x007318A2 File Offset: 0x0072FAA2
 	public EInputState State { get; set; }
 
-	// Token: 0x17002454 RID: 9300
-	// (get) Token: 0x0601A67F RID: 108159 RVA: 0x0070B0B7 File Offset: 0x007092B7
-	// (set) Token: 0x0601A680 RID: 108160 RVA: 0x0070B0BF File Offset: 0x007092BF
+	// Token: 0x1700258A RID: 9610
+	// (get) Token: 0x06018037 RID: 98359 RVA: 0x007318AB File Offset: 0x0072FAAB
+	// (set) Token: 0x06018038 RID: 98360 RVA: 0x007318B3 File Offset: 0x0072FAB3
 	public float Time { get; set; }
 
-	// Token: 0x17002455 RID: 9301
-	// (get) Token: 0x0601A681 RID: 108161 RVA: 0x0070B0C8 File Offset: 0x007092C8
-	// (set) Token: 0x0601A682 RID: 108162 RVA: 0x0070B0D0 File Offset: 0x007092D0
+	// Token: 0x1700258B RID: 9611
+	// (get) Token: 0x06018039 RID: 98361 RVA: 0x007318BC File Offset: 0x0072FABC
+	// (set) Token: 0x0601803A RID: 98362 RVA: 0x007318C4 File Offset: 0x0072FAC4
 	public int Id { get; set; }
 
-	// Token: 0x17002456 RID: 9302
-	// (get) Token: 0x0601A683 RID: 108163 RVA: 0x0070B0D9 File Offset: 0x007092D9
-	// (set) Token: 0x0601A684 RID: 108164 RVA: 0x0070B0E1 File Offset: 0x007092E1
+	// Token: 0x1700258C RID: 9612
+	// (get) Token: 0x0601803B RID: 98363 RVA: 0x007318CD File Offset: 0x0072FACD
+	// (set) Token: 0x0601803C RID: 98364 RVA: 0x007318D5 File Offset: 0x0072FAD5
 	public float MoveInputYaw { get; set; }
 
-	// Token: 0x0601A685 RID: 108165 RVA: 0x0070B0EA File Offset: 0x007092EA
+	// Token: 0x0601803D RID: 98365 RVA: 0x007318DE File Offset: 0x0072FADE
 	public InputEvent(CSharpScript.Game.Input.EInputAction action, EInputState state, float time, float moveInputYaw = 0f)
 	{
 		this.Action = action;

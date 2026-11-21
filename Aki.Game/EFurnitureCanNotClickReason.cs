@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000F8C RID: 3980
+// Token: 0x02000441 RID: 1089
 public enum EFurnitureCanNotClickReason
 {
-	// Token: 0x04002E4D RID: 11853
+	// Token: 0x04002EE6 RID: 12006
 	None,
-	// Token: 0x04002E4E RID: 11854
+	// Token: 0x04002EE7 RID: 12007
 	ConfigNotFound,
-	// Token: 0x04002E4F RID: 11855
+	// Token: 0x04002EE8 RID: 12008
 	Lock,
-	// Token: 0x04002E50 RID: 11856
+	// Token: 0x04002EE9 RID: 12009
 	CountLimit,
-	// Token: 0x04002E51 RID: 11857
+	// Token: 0x04002EEA RID: 12010
 	CanNotUnPlace
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BC4 RID: 27588
+	// Token: 0x02007328 RID: 29480
 	public enum INpcLeisureInteractType_Union : byte
 	{
-		// Token: 0x0401149C RID: 70812
+		// Token: 0x040123EB RID: 74731
 		NONE,
-		// Token: 0x0401149D RID: 70813
+		// Token: 0x040123EC RID: 74732
 		INpcLeisureInteractType,
-		// Token: 0x0401149E RID: 70814
+		// Token: 0x040123ED RID: 74733
 		INpcSitDown,
-		// Token: 0x0401149F RID: 70815
+		// Token: 0x040123EE RID: 74734
 		INpcSwing,
-		// Token: 0x040114A0 RID: 70816
+		// Token: 0x040123EF RID: 74735
 		INpcSwingGetUp,
-		// Token: 0x040114A1 RID: 70817
+		// Token: 0x040123F0 RID: 74736
 		INpcExitCurrentInteract
 	}
 }

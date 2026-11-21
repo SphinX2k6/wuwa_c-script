@@ -6,17 +6,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ED2 RID: 7890
+// Token: 0x02001394 RID: 5012
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryLoadingView : LoadingViewBase
 {
-	// Token: 0x0600F297 RID: 62103 RVA: 0x003A7B6D File Offset: 0x003A5D6D
+	// Token: 0x0600C6B6 RID: 50870 RVA: 0x003B366D File Offset: 0x003B186D
 	public HonamiStoryLoadingView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x0600F298 RID: 62104 RVA: 0x003A7B78 File Offset: 0x003A5D78
+	// Token: 0x0600C6B7 RID: 50871 RVA: 0x003B3678 File Offset: 0x003B1878
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -42,7 +42,7 @@ public class HonamiStoryLoadingView : LoadingViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F299 RID: 62105 RVA: 0x003A7CA8 File Offset: 0x003A5EA8
+	// Token: 0x0600C6B8 RID: 50872 RVA: 0x003B37A8 File Offset: 0x003B19A8
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -98,18 +98,18 @@ public class HonamiStoryLoadingView : LoadingViewBase
 		this.UpdateHonamiStoryLoading();
 	}
 
-	// Token: 0x0600F29A RID: 62106 RVA: 0x003A7E3A File Offset: 0x003A603A
+	// Token: 0x0600C6B9 RID: 50873 RVA: 0x003B393A File Offset: 0x003B1B3A
 	protected override void UpdateProgressRate(float rate)
 	{
 	}
 
-	// Token: 0x0600F29B RID: 62107 RVA: 0x003A7E3C File Offset: 0x003A603C
+	// Token: 0x0600C6BA RID: 50874 RVA: 0x003B393C File Offset: 0x003B1B3C
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(1, value, "");
 	}
 
-	// Token: 0x0600F29C RID: 62108 RVA: 0x003A7E4C File Offset: 0x003A604C
+	// Token: 0x0600C6BB RID: 50875 RVA: 0x003B394C File Offset: 0x003B1B4C
 	private void UpdateHonamiStoryLoading()
 	{
 		if (this.LoadingConfig == null)
@@ -146,13 +146,13 @@ public class HonamiStoryLoadingView : LoadingViewBase
 		HonamiStoryModel.Instance.ClearCurLoadingData();
 	}
 
-	// Token: 0x0600F29D RID: 62109 RVA: 0x003A7F82 File Offset: 0x003A6182
+	// Token: 0x0600C6BC RID: 50876 RVA: 0x003B3A82 File Offset: 0x003B1C82
 	protected override void OnLevelSequencePlayerBandStateChange(bool state)
 	{
 		base.PlaySequence("Start", null, false);
 	}
 
-	// Token: 0x0600F29E RID: 62110 RVA: 0x003A7F94 File Offset: 0x003A6194
+	// Token: 0x0600C6BD RID: 50877 RVA: 0x003B3A94 File Offset: 0x003B1C94
 	private void OnStartSequenceEvent(string _)
 	{
 		if (this.LoadingConfig == null || this.LoadingConfig.Value.StartAudioEvent == "")
@@ -162,7 +162,7 @@ public class HonamiStoryLoadingView : LoadingViewBase
 		AudioSystem.Instance.PostEvent(this.LoadingConfig.Value.StartAudioEvent);
 	}
 
-	// Token: 0x0600F29F RID: 62111 RVA: 0x003A7FEC File Offset: 0x003A61EC
+	// Token: 0x0600C6BE RID: 50878 RVA: 0x003B3AEC File Offset: 0x003B1CEC
 	private void OnCloseSequenceEvent(string _)
 	{
 		if (this.LoadingConfig == null || this.LoadingConfig.Value.EndAudioEvent == "")
@@ -172,28 +172,28 @@ public class HonamiStoryLoadingView : LoadingViewBase
 		AudioSystem.Instance.PostEvent(this.LoadingConfig.Value.EndAudioEvent);
 	}
 
-	// Token: 0x04007060 RID: 28768
+	// Token: 0x04007141 RID: 28993
 	private HonamiStoryLoadingPerform? LoadingConfig;
 
-	// Token: 0x020084B8 RID: 33976
+	// Token: 0x0200763D RID: 30269
 	[NullableContext(0)]
 	private enum EHonamiStoryLoadingComponents
 	{
-		// Token: 0x0402B324 RID: 176932
+		// Token: 0x04026648 RID: 157256
 		BgTexture,
-		// Token: 0x0402B325 RID: 176933
+		// Token: 0x04026649 RID: 157257
 		ProgressText,
-		// Token: 0x0402B326 RID: 176934
+		// Token: 0x0402664A RID: 157258
 		TitleText,
-		// Token: 0x0402B327 RID: 176935
+		// Token: 0x0402664B RID: 157259
 		DescText,
-		// Token: 0x0402B328 RID: 176936
+		// Token: 0x0402664C RID: 157260
 		FxBusFirst,
-		// Token: 0x0402B329 RID: 176937
+		// Token: 0x0402664D RID: 157261
 		FxBusNormal,
-		// Token: 0x0402B32A RID: 176938
+		// Token: 0x0402664E RID: 157262
 		FxBusSuccess,
-		// Token: 0x0402B32B RID: 176939
+		// Token: 0x0402664F RID: 157263
 		FxBusFail
 	}
 }

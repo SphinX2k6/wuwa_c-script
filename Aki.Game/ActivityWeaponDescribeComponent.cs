@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001548 RID: 5448
+// Token: 0x02000A00 RID: 2560
 public class ActivityWeaponDescribeComponent : UiPanelBase
 {
-	// Token: 0x06009BB3 RID: 39859 RVA: 0x0021B504 File Offset: 0x00219704
+	// Token: 0x06006F91 RID: 28561 RVA: 0x002252B4 File Offset: 0x002234B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -40,7 +40,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009BB4 RID: 39860 RVA: 0x0021B650 File Offset: 0x00219850
+	// Token: 0x06006F92 RID: 28562 RVA: 0x00225400 File Offset: 0x00223600
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(2));
@@ -57,7 +57,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		this.SetLookButtonVisible(false);
 	}
 
-	// Token: 0x06009BB5 RID: 39861 RVA: 0x0021B69C File Offset: 0x0021989C
+	// Token: 0x06006F93 RID: 28563 RVA: 0x0022544C File Offset: 0x0022364C
 	public void Refresh(int weaponId, bool isUp = false)
 	{
 		WeaponConf? weaponConfigByItemId = WeaponConfig.Instance.GetWeaponConfigByItemId(weaponId);
@@ -71,7 +71,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		this.UpdateQuality(weaponConfigByItemId.Value.QualityId);
 	}
 
-	// Token: 0x06009BB6 RID: 39862 RVA: 0x0021B714 File Offset: 0x00219914
+	// Token: 0x06006F94 RID: 28564 RVA: 0x002254C4 File Offset: 0x002236C4
 	private void UpdateQuality(int quality)
 	{
 		this.StarLayout.RebuildLayout(quality);
@@ -87,7 +87,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		this.SetSpriteByPath(resourcePath, base.GetSprite(4), false, null, null);
 	}
 
-	// Token: 0x06009BB7 RID: 39863 RVA: 0x0021B780 File Offset: 0x00219980
+	// Token: 0x06006F95 RID: 28565 RVA: 0x00225530 File Offset: 0x00223730
 	private void UpdateWeaponIcon(int weaponType)
 	{
 		foreach (Mapping mapping in MappingConfig.Instance.GetWeaponConfList())
@@ -100,7 +100,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BB8 RID: 39864 RVA: 0x0021B7F8 File Offset: 0x002199F8
+	// Token: 0x06006F96 RID: 28566 RVA: 0x002255A8 File Offset: 0x002237A8
 	private void LookButtonClicked()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -111,14 +111,14 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		buttonFunction();
 	}
 
-	// Token: 0x06009BB9 RID: 39865 RVA: 0x0021B80A File Offset: 0x00219A0A
+	// Token: 0x06006F97 RID: 28567 RVA: 0x002255BA File Offset: 0x002237BA
 	[NullableContext(1)]
 	public void BindButtonFunction(Action func)
 	{
 		this.ButtonFunction = func;
 	}
 
-	// Token: 0x06009BBA RID: 39866 RVA: 0x0021B814 File Offset: 0x00219A14
+	// Token: 0x06006F98 RID: 28568 RVA: 0x002255C4 File Offset: 0x002237C4
 	public void SetLookButtonVisible(bool bVisible)
 	{
 		UUIButtonComponent button = base.GetButton(6);
@@ -129,7 +129,7 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		button.RootUIComp.Get().SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009BBB RID: 39867 RVA: 0x0021B840 File Offset: 0x00219A40
+	// Token: 0x06006F99 RID: 28569 RVA: 0x002255F0 File Offset: 0x002237F0
 	[NullableContext(1)]
 	public void BindWeaponPreviewFunction(int[] previewWeaponIdList, int selectedIndex = 0)
 	{
@@ -156,36 +156,36 @@ public class ActivityWeaponDescribeComponent : UiPanelBase
 		this.BindButtonFunction(func);
 	}
 
-	// Token: 0x04004467 RID: 17511
+	// Token: 0x0400450D RID: 17677
 	[Nullable(2)]
 	private Action ButtonFunction;
 
-	// Token: 0x04004468 RID: 17512
+	// Token: 0x0400450E RID: 17678
 	[Nullable(2)]
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x02007B7C RID: 31612
+	// Token: 0x02006D07 RID: 27911
 	private class EComponent
 	{
-		// Token: 0x0402899A RID: 166298
+		// Token: 0x04023CD5 RID: 146645
 		public const int NameText = 0;
 
-		// Token: 0x0402899B RID: 166299
+		// Token: 0x04023CD6 RID: 146646
 		public const int UpItem = 1;
 
-		// Token: 0x0402899C RID: 166300
+		// Token: 0x04023CD7 RID: 146647
 		public const int StarLayout = 2;
 
-		// Token: 0x0402899D RID: 166301
+		// Token: 0x04023CD8 RID: 146648
 		public const int WeaponIconTexture = 3;
 
-		// Token: 0x0402899E RID: 166302
+		// Token: 0x04023CD9 RID: 146649
 		public const int WeaponBgSprite = 4;
 
-		// Token: 0x0402899F RID: 166303
+		// Token: 0x04023CDA RID: 146650
 		public const int WeaponIconSprite = 5;
 
-		// Token: 0x040289A0 RID: 166304
+		// Token: 0x04023CDB RID: 146651
 		public const int LookButton = 6;
 	}
 }

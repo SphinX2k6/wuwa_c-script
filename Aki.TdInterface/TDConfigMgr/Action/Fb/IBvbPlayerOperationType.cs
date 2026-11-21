@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A21 RID: 10785
+	// Token: 0x02002D0E RID: 11534
 	public class IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDB3 RID: 60851 RVA: 0x0022A34A File Offset: 0x0022854A
-		[NullableContext(1)]
+		// Token: 0x0600FC4B RID: 64587 RVA: 0x00247CFD File Offset: 0x00245EFD
 		public static IBvbPlayerOperationType Create(IBvbPlayerOperationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B33 RID: 19251
-		// (get) Token: 0x0600EDB4 RID: 60852 RVA: 0x0022A369 File Offset: 0x00228569
+		// Token: 0x17004EDD RID: 20189
+		// (get) Token: 0x0600FC4C RID: 64588 RVA: 0x00247D1C File Offset: 0x00245F1C
 		public virtual EBvbPlayerOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082D7 RID: 33495
+		// Token: 0x040089CA RID: 35274
 		private IBvbPlayerOperationType Instance;
 	}
 }

@@ -6,26 +6,26 @@ namespace Aki.TDConfigMgr.Component
 	// Token: 0x02000014 RID: 20
 	public class AdsorbComponent_SetValue
 	{
-		// Token: 0x04000037 RID: 55
+		// Token: 0x04000038 RID: 56
 		public bool? Disabled;
 
-		// Token: 0x04000038 RID: 56
+		// Token: 0x04000039 RID: 57
 		public bool? EdIsLocked;
 
-		// Token: 0x04000039 RID: 57
+		// Token: 0x0400003A RID: 58
 		public float Range;
 
-		// Token: 0x0400003A RID: 58
+		// Token: 0x0400003B RID: 59
 		public float StartVelocity;
 
-		// Token: 0x0400003B RID: 59
+		// Token: 0x0400003C RID: 60
 		public float Acceleration;
 
-		// Token: 0x0400003C RID: 60
+		// Token: 0x0400003D RID: 61
 		[Nullable(2)]
 		public IEntityState ActiveStateCondition;
 
-		// Token: 0x0400003D RID: 61
+		// Token: 0x0400003E RID: 62
 		public int AdsorbLimitedTime;
 	}
 }

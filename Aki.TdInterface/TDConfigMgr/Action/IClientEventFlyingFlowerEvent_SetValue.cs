@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018A7 RID: 6311
+	// Token: 0x02001A32 RID: 6706
 	public class IClientEventFlyingFlowerEvent_SetValue
 	{
-		// Token: 0x04005543 RID: 21827
+		// Token: 0x04005990 RID: 22928
 		public EClientEventFlyingFlowerEventType Type;
 	}
 }

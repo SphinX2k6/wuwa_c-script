@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000702 RID: 1794
+	// Token: 0x020006EE RID: 1774
 	public sealed class GolemCrackActivityInfo : IMessage<GolemCrackActivityInfo>, IMessage, IEquatable<GolemCrackActivityInfo>, IDeepCloneable<GolemCrackActivityInfo>, IBufferMessage
 	{
-		// Token: 0x0600A34A RID: 41802 RVA: 0x0018A7ED File Offset: 0x001889ED
+		// Token: 0x0600A1F4 RID: 41460 RVA: 0x00187DB9 File Offset: 0x00185FB9
 		[NullableContext(1)]
 		public static GolemCrackActivityInfo Create()
 		{
 			return new GolemCrackActivityInfo();
 		}
 
-		// Token: 0x170020D1 RID: 8401
-		// (get) Token: 0x0600A34B RID: 41803 RVA: 0x0018A7F4 File Offset: 0x001889F4
+		// Token: 0x17002087 RID: 8327
+		// (get) Token: 0x0600A1F5 RID: 41461 RVA: 0x00187DC0 File Offset: 0x00185FC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170020D2 RID: 8402
-		// (get) Token: 0x0600A34C RID: 41804 RVA: 0x0018A7F7 File Offset: 0x001889F7
+		// Token: 0x17002088 RID: 8328
+		// (get) Token: 0x0600A1F6 RID: 41462 RVA: 0x00187DC3 File Offset: 0x00185FC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A34D RID: 41805 RVA: 0x0018A7FE File Offset: 0x001889FE
+		// Token: 0x0600A1F7 RID: 41463 RVA: 0x00187DCA File Offset: 0x00185FCA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GolemCrackActivityInfo()
 		{
 		}
 
-		// Token: 0x0600A34E RID: 41806 RVA: 0x0018A811 File Offset: 0x00188A11
+		// Token: 0x0600A1F8 RID: 41464 RVA: 0x00187DDD File Offset: 0x00185FDD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GolemCrackActivityInfo(GolemCrackActivityInfo other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600A34F RID: 41807 RVA: 0x0018A83B File Offset: 0x00188A3B
+		// Token: 0x0600A1F9 RID: 41465 RVA: 0x00187E07 File Offset: 0x00186007
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GolemCrackActivityInfo Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new GolemCrackActivityInfo(this);
 		}
 
-		// Token: 0x170020D3 RID: 8403
-		// (get) Token: 0x0600A350 RID: 41808 RVA: 0x0018A843 File Offset: 0x00188A43
+		// Token: 0x17002089 RID: 8329
+		// (get) Token: 0x0600A1FA RID: 41466 RVA: 0x00187E0F File Offset: 0x0018600F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GolemCrackLevelInfo> GolemCrackLevelInfos
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A351 RID: 41809 RVA: 0x0018A84B File Offset: 0x00188A4B
+		// Token: 0x0600A1FB RID: 41467 RVA: 0x00187E17 File Offset: 0x00186017
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as GolemCrackActivityInfo);
 		}
 
-		// Token: 0x0600A352 RID: 41810 RVA: 0x0018A859 File Offset: 0x00188A59
+		// Token: 0x0600A1FC RID: 41468 RVA: 0x00187E25 File Offset: 0x00186025
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GolemCrackActivityInfo other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.golemCrackLevelInfos_.Equals(other.golemCrackLevelInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600A353 RID: 41811 RVA: 0x0018A88C File Offset: 0x00188A8C
+		// Token: 0x0600A1FD RID: 41469 RVA: 0x00187E58 File Offset: 0x00186058
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A354 RID: 41812 RVA: 0x0018A8C0 File Offset: 0x00188AC0
+		// Token: 0x0600A1FE RID: 41470 RVA: 0x00187E8C File Offset: 0x0018608C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600A355 RID: 41813 RVA: 0x0018A8CD File Offset: 0x00188ACD
+		// Token: 0x0600A1FF RID: 41471 RVA: 0x00187E99 File Offset: 0x00186099
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600A356 RID: 41814 RVA: 0x0018A8D6 File Offset: 0x00188AD6
+		// Token: 0x0600A200 RID: 41472 RVA: 0x00187EA2 File Offset: 0x001860A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600A357 RID: 41815 RVA: 0x0018A900 File Offset: 0x00188B00
+		// Token: 0x0600A201 RID: 41473 RVA: 0x00187ECC File Offset: 0x001860CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600A358 RID: 41816 RVA: 0x0018A939 File Offset: 0x00188B39
+		// Token: 0x0600A202 RID: 41474 RVA: 0x00187F05 File Offset: 0x00186105
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GolemCrackActivityInfo other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600A359 RID: 41817 RVA: 0x0018A967 File Offset: 0x00188B67
+		// Token: 0x0600A203 RID: 41475 RVA: 0x00187F33 File Offset: 0x00186133
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600A35A RID: 41818 RVA: 0x0018A970 File Offset: 0x00188B70
+		// Token: 0x0600A204 RID: 41476 RVA: 0x00187F3C File Offset: 0x0018613C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004B7C RID: 19324
+		// Token: 0x04004B75 RID: 19317
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004B7D RID: 19325
+		// Token: 0x04004B76 RID: 19318
 		public const int GolemCrackLevelInfosFieldNumber = 1;
 
-		// Token: 0x04004B7E RID: 19326
+		// Token: 0x04004B77 RID: 19319
 		private static readonly FieldCodec<GolemCrackLevelInfo> _repeated_golemCrackLevelInfos_codec = FieldCodec.ForMessage<GolemCrackLevelInfo>(10U, GolemCrackLevelInfo.Parser);
 
-		// Token: 0x04004B7F RID: 19327
+		// Token: 0x04004B78 RID: 19320
 		private readonly RepeatedField<GolemCrackLevelInfo> golemCrackLevelInfos_ = new RepeatedField<GolemCrackLevelInfo>();
 	}
 }

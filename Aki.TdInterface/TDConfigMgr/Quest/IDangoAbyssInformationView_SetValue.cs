@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F37 RID: 3895
+	// Token: 0x0200104D RID: 4173
 	public class IDangoAbyssInformationView_SetValue
 	{
-		// Token: 0x04003474 RID: 13428
+		// Token: 0x04003781 RID: 14209
 		public EInformationViewType Type;
 	}
 }

@@ -7,14 +7,14 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class PlayResult
 {
-	// Token: 0x06000044 RID: 68 RVA: 0x00003E5D File Offset: 0x0000205D
+	// Token: 0x06000044 RID: 68 RVA: 0x00003A6D File Offset: 0x00001C6D
 	public void Reset()
 	{
 		this.PlayingIds.Clear();
 		this.CallbackIds.Clear();
 	}
 
-	// Token: 0x06000045 RID: 69 RVA: 0x00003E75 File Offset: 0x00002075
+	// Token: 0x06000045 RID: 69 RVA: 0x00003A85 File Offset: 0x00001C85
 	public void AddPlayingId(int id)
 	{
 		if (id != 0 && !this.PlayingIds.Contains(id))
@@ -23,7 +23,7 @@ public class PlayResult
 		}
 	}
 
-	// Token: 0x06000046 RID: 70 RVA: 0x00003E94 File Offset: 0x00002094
+	// Token: 0x06000046 RID: 70 RVA: 0x00003AA4 File Offset: 0x00001CA4
 	public void AddCallbackId(int id)
 	{
 		if (id != 0 && !this.CallbackIds.Contains(id))
@@ -32,7 +32,7 @@ public class PlayResult
 		}
 	}
 
-	// Token: 0x06000047 RID: 71 RVA: 0x00003EB4 File Offset: 0x000020B4
+	// Token: 0x06000047 RID: 71 RVA: 0x00003AC4 File Offset: 0x00001CC4
 	public void RemoveCallbackId(int id)
 	{
 		int num = this.CallbackIds.IndexOf(id);

@@ -10,24 +10,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200504D RID: 20557
+	// Token: 0x0200401C RID: 16412
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotChildView : UiPanelBase
 	{
-		// Token: 0x060349C6 RID: 215494 RVA: 0x00C6DA7E File Offset: 0x00C6BC7E
+		// Token: 0x060298A8 RID: 170152 RVA: 0x00BBABF2 File Offset: 0x00BB8DF2
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add<string, bool>(EEventName.PlayPlotSpine, new Action<string, bool>(this.PlaySpineAnimation));
 		}
 
-		// Token: 0x060349C7 RID: 215495 RVA: 0x00C6DA9C File Offset: 0x00C6BC9C
+		// Token: 0x060298A9 RID: 170153 RVA: 0x00BBAC10 File Offset: 0x00BB8E10
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove<string, bool>(EEventName.PlayPlotSpine, new Action<string, bool>(this.PlaySpineAnimation));
 		}
 
-		// Token: 0x060349C8 RID: 215496 RVA: 0x00C6DABA File Offset: 0x00C6BCBA
+		// Token: 0x060298AA RID: 170154 RVA: 0x00BBAC2E File Offset: 0x00BB8E2E
 		protected override void OnBeforeDestroy()
 		{
 			this.Niagara.Clear();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x060349C9 RID: 215497 RVA: 0x00C6DAF0 File Offset: 0x00C6BCF0
+		// Token: 0x060298AB RID: 170155 RVA: 0x00BBAC64 File Offset: 0x00BB8E64
 		public UniTask PreOpenAsync(UUIItem parentItem, string uiName)
 		{
 			PlotChildView.<PreOpenAsync>d__6 <PreOpenAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <PreOpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349CA RID: 215498 RVA: 0x00C6DB44 File Offset: 0x00C6BD44
+		// Token: 0x060298AC RID: 170156 RVA: 0x00BBACB8 File Offset: 0x00BB8EB8
 		public UniTask OpenAsync(UUIItem parentItem, string uiName, string spineName, bool isLoop = true, bool onlyOpen = false)
 		{
 			PlotChildView.<OpenAsync>d__7 <OpenAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349CB RID: 215499 RVA: 0x00C6DBB4 File Offset: 0x00C6BDB4
+		// Token: 0x060298AD RID: 170157 RVA: 0x00BBAD28 File Offset: 0x00BB8F28
 		public UniTask OpenAsyncInArray(UUIItem parentItem, string uiName, TArray<SpineThingsInfo> spineArray, bool onlyOpen = false)
 		{
 			PlotChildView.<OpenAsyncInArray>d__8 <OpenAsyncInArray>d__;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OpenAsyncInArray>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349CC RID: 215500 RVA: 0x00C6DC18 File Offset: 0x00C6BE18
+		// Token: 0x060298AE RID: 170158 RVA: 0x00BBAD8C File Offset: 0x00BB8F8C
 		[NullableContext(0)]
 		public UniTask<bool> PlayUiLevelSequence([Nullable(1)] string sequenceName)
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <PlayUiLevelSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349CD RID: 215501 RVA: 0x00C6DC64 File Offset: 0x00C6BE64
+		// Token: 0x060298AF RID: 170159 RVA: 0x00BBADD8 File Offset: 0x00BB8FD8
 		public UniTask CloseAsync()
 		{
 			PlotChildView.<CloseAsync>d__10 <CloseAsync>d__;
@@ -109,13 +109,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <CloseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060349CE RID: 215502 RVA: 0x00C6DCA7 File Offset: 0x00C6BEA7
+		// Token: 0x060298B0 RID: 170160 RVA: 0x00BBAE1B File Offset: 0x00BB901B
 		private void PlaySpineAnimation(string spineName, bool isLoop = true)
 		{
 			this.PlaySpineAnimation(spineName, isLoop, false, 0f);
 		}
 
-		// Token: 0x060349CF RID: 215503 RVA: 0x00C6DCB8 File Offset: 0x00C6BEB8
+		// Token: 0x060298B1 RID: 170161 RVA: 0x00BBAE2C File Offset: 0x00BB902C
 		public unsafe bool PlaySpineAnimation(string spineName, bool isLoop = true, bool freeze = false, float duration = 0f)
 		{
 			if (StringUtils.IsEmpty(spineName))
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return result;
 		}
 
-		// Token: 0x060349D0 RID: 215504 RVA: 0x00C6DE58 File Offset: 0x00C6C058
+		// Token: 0x060298B2 RID: 170162 RVA: 0x00BBAFCC File Offset: 0x00BB91CC
 		[NullableContext(2)]
 		private void OnAnimCompleted(UTrackEntry entry)
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D1 RID: 215505 RVA: 0x00C6DF20 File Offset: 0x00C6C120
+		// Token: 0x060298B3 RID: 170163 RVA: 0x00BBB094 File Offset: 0x00BB9294
 		public void CloseSpineAnimation(string spineName, float blendOutTime = 0f)
 		{
 			if (StringUtils.IsEmpty(spineName))
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D2 RID: 215506 RVA: 0x00C6DFDC File Offset: 0x00C6C1DC
+		// Token: 0x060298B4 RID: 170164 RVA: 0x00BBB150 File Offset: 0x00BB9350
 		private void ClearSpineTrackCache(string spineName)
 		{
 			HashSet<UTrackEntry> hashSet;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SpineMap.Remove(spineName);
 		}
 
-		// Token: 0x060349D3 RID: 215507 RVA: 0x00C6E06C File Offset: 0x00C6C26C
+		// Token: 0x060298B5 RID: 170165 RVA: 0x00BBB1E0 File Offset: 0x00BB93E0
 		public void UpdateFrozenSpine(float percentage)
 		{
 			foreach (KeyValuePair<UTrackEntry, float> keyValuePair in this.FrozenSpineMap)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D4 RID: 215508 RVA: 0x00C6E0EC File Offset: 0x00C6C2EC
+		// Token: 0x060298B6 RID: 170166 RVA: 0x00BBB260 File Offset: 0x00BB9460
 		public void UpdateFrozenSpineByName(string spineName, float percentage)
 		{
 			HashSet<UTrackEntry> hashSet;
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D5 RID: 215509 RVA: 0x00C6E174 File Offset: 0x00C6C374
+		// Token: 0x060298B7 RID: 170167 RVA: 0x00BBB2E8 File Offset: 0x00BB94E8
 		public void ManualUpdateNiagara(List<string> varNames, float value)
 		{
 			foreach (string varName in varNames)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D6 RID: 215510 RVA: 0x00C6E1FC File Offset: 0x00C6C3FC
+		// Token: 0x060298B8 RID: 170168 RVA: 0x00BBB370 File Offset: 0x00BB9570
 		public void RestoreFreezeSpine(string spineName, bool isLoop = false)
 		{
 			HashSet<UTrackEntry> hashSet;
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349D7 RID: 215511 RVA: 0x00C6E328 File Offset: 0x00C6C528
+		// Token: 0x060298B9 RID: 170169 RVA: 0x00BBB49C File Offset: 0x00BB969C
 		public void SetUiParent(UUIItem parentItem)
 		{
 			if (this.ParentUiItem == parentItem)
@@ -377,14 +377,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			originalItem.SetUIParent(parentItem, false);
 		}
 
-		// Token: 0x0401C09E RID: 114846
+		// Token: 0x04016AC1 RID: 92865
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401C09F RID: 114847
+		// Token: 0x04016AC2 RID: 92866
 		private readonly List<UUINiagara> Niagara = new List<UUINiagara>();
 
-		// Token: 0x0401C0A0 RID: 114848
+		// Token: 0x04016AC3 RID: 92867
 		[Nullable(new byte[]
 		{
 			2,
@@ -392,10 +392,10 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		public Action<string> FiniteSpineEndCallback;
 
-		// Token: 0x0401C0A1 RID: 114849
+		// Token: 0x04016AC4 RID: 92868
 		private readonly Dictionary<UTrackEntry, float> FrozenSpineMap = new Dictionary<UTrackEntry, float>();
 
-		// Token: 0x0401C0A2 RID: 114850
+		// Token: 0x04016AC5 RID: 92869
 		private readonly Dictionary<string, HashSet<UTrackEntry>> SpineMap = new Dictionary<string, HashSet<UTrackEntry>>();
 	}
 }

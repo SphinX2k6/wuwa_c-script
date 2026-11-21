@@ -13,16 +13,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A12 RID: 23058
+	// Token: 0x020049EE RID: 18926
 	public class DangoBrawlHpBarItem : UiPanelBase
 	{
-		// Token: 0x0603A792 RID: 239506 RVA: 0x00DEA228 File Offset: 0x00DE8428
+		// Token: 0x0602F6DB RID: 194267 RVA: 0x00D3A7C0 File Offset: 0x00D389C0
 		public DangoBrawlHpBarItem(bool isSelf)
 		{
 			this.IsSelf = isSelf;
 		}
 
-		// Token: 0x0603A793 RID: 239507 RVA: 0x00DEA250 File Offset: 0x00DE8450
+		// Token: 0x0602F6DC RID: 194268 RVA: 0x00D3A7E8 File Offset: 0x00D389E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A794 RID: 239508 RVA: 0x00DEA340 File Offset: 0x00DE8540
+		// Token: 0x0602F6DD RID: 194269 RVA: 0x00D3A8D8 File Offset: 0x00D38AD8
 		protected override void OnStart()
 		{
 			this.AnimDelay = DangoBrawlConfig.Instance.GetHpTweenDelay();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.TickHandle = TimerSystem.Instance.Forever(new TTimerAction(this.OnTick), 50f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603A795 RID: 239509 RVA: 0x00DEA3FB File Offset: 0x00DE85FB
+		// Token: 0x0602F6DE RID: 194270 RVA: 0x00D3A993 File Offset: 0x00D38B93
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TickHandle != null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ShieldAnimator = null;
 		}
 
-		// Token: 0x0603A796 RID: 239510 RVA: 0x00DEA438 File Offset: 0x00DE8638
+		// Token: 0x0602F6DF RID: 194271 RVA: 0x00D3A9D0 File Offset: 0x00D38BD0
 		public void RefreshBind()
 		{
 			ActivityGameplayEntity entity = DangoBrawlModel.Instance.GetBattleManager(true).GetEntity(this.IsSelf);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.InitAttribute();
 		}
 
-		// Token: 0x0603A797 RID: 239511 RVA: 0x00DEA4BD File Offset: 0x00DE86BD
+		// Token: 0x0602F6E0 RID: 194272 RVA: 0x00D3AA55 File Offset: 0x00D38C55
 		public void OnBeginFatigue()
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			sprite.SetUIActive(true);
 		}
 
-		// Token: 0x0603A798 RID: 239512 RVA: 0x00DEA4D4 File Offset: 0x00DE86D4
+		// Token: 0x0602F6E1 RID: 194273 RVA: 0x00D3AA6C File Offset: 0x00D38C6C
 		protected void InitAttribute()
 		{
 			int attr = this.GetAttr(DangoBrawlProType.MaxHp);
@@ -126,21 +126,21 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			shieldAnimator.Init(attr3);
 		}
 
-		// Token: 0x0603A799 RID: 239513 RVA: 0x00DEA514 File Offset: 0x00DE8714
+		// Token: 0x0602F6E2 RID: 194274 RVA: 0x00D3AAAC File Offset: 0x00D38CAC
 		private void OnMaxHpChanged(int oldValue, int newValue)
 		{
 			int attr = this.GetAttr(DangoBrawlProType.Hp);
 			this.RefreshHpBar(attr, attr, oldValue, newValue);
 		}
 
-		// Token: 0x0603A79A RID: 239514 RVA: 0x00DEA534 File Offset: 0x00DE8734
+		// Token: 0x0602F6E3 RID: 194275 RVA: 0x00D3AACC File Offset: 0x00D38CCC
 		private void OnHpChanged(int oldValue, int newValue)
 		{
 			int attr = this.GetAttr(DangoBrawlProType.MaxHp);
 			this.RefreshHpBar(oldValue, newValue, attr, attr);
 		}
 
-		// Token: 0x0603A79B RID: 239515 RVA: 0x00DEA553 File Offset: 0x00DE8753
+		// Token: 0x0602F6E4 RID: 194276 RVA: 0x00D3AAEB File Offset: 0x00D38CEB
 		private void OnShieldChanged(int oldValue, int newValue)
 		{
 			DangoBrawlShieldAnimator shieldAnimator = this.ShieldAnimator;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			shieldAnimator.SetShield(newValue);
 		}
 
-		// Token: 0x0603A79C RID: 239516 RVA: 0x00DEA568 File Offset: 0x00DE8768
+		// Token: 0x0602F6E5 RID: 194277 RVA: 0x00D3AB00 File Offset: 0x00D38D00
 		private int GetAttr(DangoBrawlProType type)
 		{
 			ActivityGameplayEntity entity = DangoBrawlModel.Instance.GetBattleManager(true).GetEntity(this.IsSelf);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return dangoAttributeComponent.GetAttribute((int)type);
 		}
 
-		// Token: 0x0603A79D RID: 239517 RVA: 0x00DEA5A4 File Offset: 0x00DE87A4
+		// Token: 0x0602F6E6 RID: 194278 RVA: 0x00D3AB3C File Offset: 0x00D38D3C
 		private void RefreshHpBar(int oldHp, int newHp, int oldMaxHp, int newMaxHp)
 		{
 			float num = (newMaxHp > 0) ? ((float)newHp / (float)newMaxHp) : 0f;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A79E RID: 239518 RVA: 0x00DEA6B4 File Offset: 0x00DE88B4
+		// Token: 0x0602F6E7 RID: 194279 RVA: 0x00D3AC4C File Offset: 0x00D38E4C
 		private void OnTick(float delta)
 		{
 			DangoBrawlShieldAnimator shieldAnimator = this.ShieldAnimator;
@@ -245,63 +245,63 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0401E771 RID: 124785
+		// Token: 0x04019218 RID: 102936
 		private const int TICK_INTERVAL = 50;
 
-		// Token: 0x0401E772 RID: 124786
+		// Token: 0x04019219 RID: 102937
 		private int AnimDelay = 500;
 
-		// Token: 0x0401E773 RID: 124787
+		// Token: 0x0401921A RID: 102938
 		private const int DEFAULT_HP_CHANGE_COLOR = 25;
 
-		// Token: 0x0401E774 RID: 124788
+		// Token: 0x0401921B RID: 102939
 		private readonly bool IsSelf;
 
-		// Token: 0x0401E775 RID: 124789
+		// Token: 0x0401921C RID: 102940
 		private float TweenSpeed;
 
-		// Token: 0x0401E776 RID: 124790
+		// Token: 0x0401921D RID: 102941
 		private float HpChangeColorRatio = 0.25f;
 
-		// Token: 0x0401E777 RID: 124791
+		// Token: 0x0401921E RID: 102942
 		[Nullable(2)]
 		private TimerHandle TickHandle;
 
-		// Token: 0x0401E778 RID: 124792
+		// Token: 0x0401921F RID: 102943
 		[Nullable(2)]
 		private DangoBrawlShieldAnimator ShieldAnimator;
 
-		// Token: 0x0401E779 RID: 124793
+		// Token: 0x04019220 RID: 102944
 		private bool NeedTick;
 
-		// Token: 0x0401E77A RID: 124794
+		// Token: 0x04019221 RID: 102945
 		private double StartAnimTime;
 
-		// Token: 0x0401E77B RID: 124795
+		// Token: 0x04019222 RID: 102946
 		private float CurAnimHp;
 
-		// Token: 0x0401E77C RID: 124796
+		// Token: 0x04019223 RID: 102947
 		private int CurTargetHp;
 
-		// Token: 0x0401E77D RID: 124797
+		// Token: 0x04019224 RID: 102948
 		private int TargetMaxHp;
 
-		// Token: 0x0200BC82 RID: 48258
+		// Token: 0x0200A68B RID: 42635
 		private enum EComp
 		{
-			// Token: 0x04038DFD RID: 232957
+			// Token: 0x040337C8 RID: 210888
 			SpriteHp,
-			// Token: 0x04038DFE RID: 232958
+			// Token: 0x040337C9 RID: 210889
 			SpriteHpWhite,
-			// Token: 0x04038DFF RID: 232959
+			// Token: 0x040337CA RID: 210890
 			SpriteHpLight,
-			// Token: 0x04038E00 RID: 232960
+			// Token: 0x040337CB RID: 210891
 			TxtShield,
-			// Token: 0x04038E01 RID: 232961
+			// Token: 0x040337CC RID: 210892
 			TxtHpNum,
-			// Token: 0x04038E02 RID: 232962
+			// Token: 0x040337CD RID: 210893
 			SpriteHpIncrease,
-			// Token: 0x04038E03 RID: 232963
+			// Token: 0x040337CE RID: 210894
 			PanelShield
 		}
 	}

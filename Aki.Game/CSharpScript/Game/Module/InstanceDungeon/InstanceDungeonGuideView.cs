@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005878 RID: 22648
+	// Token: 0x02004850 RID: 18512
 	public class InstanceDungeonGuideView : UiViewBase
 	{
-		// Token: 0x06039A04 RID: 236036 RVA: 0x00DB1A83 File Offset: 0x00DAFC83
+		// Token: 0x0602E925 RID: 190757 RVA: 0x00D00953 File Offset: 0x00CFEB53
 		[NullableContext(1)]
 		public InstanceDungeonGuideView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039A05 RID: 236037 RVA: 0x00DB1A8C File Offset: 0x00DAFC8C
+		// Token: 0x0602E926 RID: 190758 RVA: 0x00D0095C File Offset: 0x00CFEB5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -52,13 +52,23 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039A06 RID: 236038 RVA: 0x00DB1C1A File Offset: 0x00DAFE1A
+		// Token: 0x0602E927 RID: 190759 RVA: 0x00D00AEA File Offset: 0x00CFECEA
 		private void OnClickedCloseButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06039A07 RID: 236039 RVA: 0x00DB1C24 File Offset: 0x00DAFE24
+		// Token: 0x0602E928 RID: 190760 RVA: 0x00D00AF3 File Offset: 0x00CFECF3
+		protected override float OnGetTimeDilation()
+		{
+			if (!RoleTowerModel.Instance.IsInRoleTowerDungeon())
+			{
+				return base.OnGetTimeDilation();
+			}
+			return 1f;
+		}
+
+		// Token: 0x0602E929 RID: 190761 RVA: 0x00D00B10 File Offset: 0x00CFED10
 		protected override void OnStart()
 		{
 			base.GetButton(4).RootUIComp.Get().SetUIActive(false);
@@ -69,15 +79,28 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.RefreshGuideView();
 		}
 
-		// Token: 0x06039A08 RID: 236040 RVA: 0x00DB1C88 File Offset: 0x00DAFE88
+		// Token: 0x0602E92A RID: 190762 RVA: 0x00D00B74 File Offset: 0x00CFED74
 		private void RefreshGuideView()
 		{
-			int currentInstanceDungeonGuideValue = InstanceDungeonGuideModel.Instance.GetCurrentInstanceDungeonGuideValue();
-			if (currentInstanceDungeonGuideValue == 0)
+			object openParam = this.OpenParam;
+			int num2;
+			if (openParam is int)
+			{
+				int num = (int)openParam;
+				if (num > 0)
+				{
+					num2 = num;
+					goto IL_2A;
+				}
+			}
+			num2 = InstanceDungeonGuideModel.Instance.GetCurrentInstanceDungeonGuideValue();
+			IL_2A:
+			int num3 = num2;
+			if (num3 == 0)
 			{
 				return;
 			}
-			IReadOnlyList<HelpText> helpContentInfoByGroupId = HelpConfig.Instance.GetHelpContentInfoByGroupId(currentInstanceDungeonGuideValue);
+			IReadOnlyList<HelpText> helpContentInfoByGroupId = HelpConfig.Instance.GetHelpContentInfoByGroupId(num3);
 			if (helpContentInfoByGroupId == null || helpContentInfoByGroupId.Count < 1)
 			{
 				return;
@@ -94,34 +117,34 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.SetTextureByPath(picture, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200BAD3 RID: 47827
+		// Token: 0x0200A4EC RID: 42220
 		private static class EChildType
 		{
-			// Token: 0x0403874B RID: 231243
+			// Token: 0x0403314C RID: 209228
 			public const int TextTitle = 0;
 
-			// Token: 0x0403874C RID: 231244
+			// Token: 0x0403314D RID: 209229
 			public const int DescriptionTexture = 1;
 
-			// Token: 0x0403874D RID: 231245
+			// Token: 0x0403314E RID: 209230
 			public const int EffectItem = 2;
 
-			// Token: 0x0403874E RID: 231246
+			// Token: 0x0403314F RID: 209231
 			public const int TextDescription = 3;
 
-			// Token: 0x0403874F RID: 231247
+			// Token: 0x04033150 RID: 209232
 			public const int DetailButton = 4;
 
-			// Token: 0x04038750 RID: 231248
+			// Token: 0x04033151 RID: 209233
 			public const int ItemElement = 5;
 
-			// Token: 0x04038751 RID: 231249
+			// Token: 0x04033152 RID: 209234
 			public const int CloseButton = 6;
 
-			// Token: 0x04038752 RID: 231250
+			// Token: 0x04033153 RID: 209235
 			public const int TrialPanel = 7;
 
-			// Token: 0x04038753 RID: 231251
+			// Token: 0x04033154 RID: 209236
 			public const int BigTitle = 8;
 		}
 	}

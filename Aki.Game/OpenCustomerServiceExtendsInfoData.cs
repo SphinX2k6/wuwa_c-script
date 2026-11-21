@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000DEC RID: 3564
+// Token: 0x0200029E RID: 670
 [NullableContext(1)]
 [Nullable(0)]
 public class OpenCustomerServiceExtendsInfoData
 {
-	// Token: 0x04002708 RID: 9992
+	// Token: 0x04002790 RID: 10128
 	public string key = "";
 
-	// Token: 0x04002709 RID: 9993
+	// Token: 0x04002791 RID: 10129
 	public string label = "";
 
-	// Token: 0x0400270A RID: 9994
+	// Token: 0x04002792 RID: 10130
 	public string value = "";
 }

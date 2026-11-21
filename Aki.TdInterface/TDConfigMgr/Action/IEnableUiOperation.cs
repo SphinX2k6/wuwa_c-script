@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019F6 RID: 6646
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B89 RID: 7049
 	[JsonConverter(typeof(IEnableUiOperationConverter))]
 	public class IEnableUiOperation : IUiOperationType
 	{
-		// Token: 0x06008E69 RID: 36457 RVA: 0x0014D254 File Offset: 0x0014B454
+		// Token: 0x060095CB RID: 38347 RVA: 0x0015D0C4 File Offset: 0x0015B2C4
 		private IEnableUiOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E6A RID: 36458 RVA: 0x0014D28C File Offset: 0x0014B48C
+		// Token: 0x060095CC RID: 38348 RVA: 0x0015D0FC File Offset: 0x0015B2FC
 		public static IEnableUiOperation Create([Nullable(2)] IEnableUiOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E6B RID: 36459 RVA: 0x0014D29F File Offset: 0x0014B49F
+		// Token: 0x060095CD RID: 38349 RVA: 0x0015D10F File Offset: 0x0015B30F
 		public static IEnableUiOperation CreateFromSetValue([Nullable(2)] IEnableUiOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E6C RID: 36460 RVA: 0x0014D2B2 File Offset: 0x0014B4B2
+		// Token: 0x060095CE RID: 38350 RVA: 0x0015D122 File Offset: 0x0015B322
 		public new IEnableUiOperation_SetValue ToSetValue()
 		{
 			return new IEnableUiOperation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D98 RID: 11672
-		// (get) Token: 0x06008E6D RID: 36461 RVA: 0x0014D2C5 File Offset: 0x0014B4C5
-		// (set) Token: 0x06008E6E RID: 36462 RVA: 0x0014D2F0 File Offset: 0x0014B4F0
+		// Token: 0x17002FA4 RID: 12196
+		// (get) Token: 0x060095CF RID: 38351 RVA: 0x0015D135 File Offset: 0x0015B335
+		// (set) Token: 0x060095D0 RID: 38352 RVA: 0x0015D160 File Offset: 0x0015B360
 		public override EUiOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005849 RID: 22601
+		// Token: 0x04005CAB RID: 23723
 		[Nullable(2)]
 		protected new IEnableUiOperation FbInstance;
 
-		// Token: 0x0400584A RID: 22602
+		// Token: 0x04005CAC RID: 23724
 		[Nullable(2)]
 		protected new IEnableUiOperation_SetValue PocoInterface;
 	}

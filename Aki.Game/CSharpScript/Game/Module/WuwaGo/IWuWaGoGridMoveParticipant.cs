@@ -4,21 +4,21 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004704 RID: 18180
+	// Token: 0x02003634 RID: 13876
 	[NullableContext(1)]
 	public interface IWuWaGoGridMoveParticipant
 	{
-		// Token: 0x170076A2 RID: 30370
-		// (get) Token: 0x0602F850 RID: 194640
+		// Token: 0x1700495E RID: 18782
+		// (get) Token: 0x06024016 RID: 147478
 		string ParticipantKey { get; }
 
-		// Token: 0x170076A3 RID: 30371
-		// (get) Token: 0x0602F851 RID: 194641
+		// Token: 0x1700495F RID: 18783
+		// (get) Token: 0x06024017 RID: 147479
 		int? MovedRoleId { get; }
 
-		// Token: 0x170076A4 RID: 30372
-		// (get) Token: 0x0602F852 RID: 194642
-		// (set) Token: 0x0602F853 RID: 194643
+		// Token: 0x17004960 RID: 18784
+		// (get) Token: 0x06024018 RID: 147480
+		// (set) Token: 0x06024019 RID: 147481
 		[Nullable(new byte[]
 		{
 			2,
@@ -37,9 +37,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			2
 		})] set; }
 
-		// Token: 0x170076A5 RID: 30373
-		// (get) Token: 0x0602F854 RID: 194644
-		// (set) Token: 0x0602F855 RID: 194645
+		// Token: 0x17004961 RID: 18785
+		// (get) Token: 0x0602401A RID: 147482
+		// (set) Token: 0x0602401B RID: 147483
 		[Nullable(new byte[]
 		{
 			2,
@@ -55,9 +55,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			1
 		})] set; }
 
-		// Token: 0x170076A6 RID: 30374
-		// (get) Token: 0x0602F856 RID: 194646
-		// (set) Token: 0x0602F857 RID: 194647
+		// Token: 0x17004962 RID: 18786
+		// (get) Token: 0x0602401C RID: 147484
+		// (set) Token: 0x0602401D RID: 147485
 		[Nullable(new byte[]
 		{
 			2,
@@ -73,9 +73,9 @@ namespace CSharpScript.Game.Module.WuwaGo
 			1
 		})] set; }
 
-		// Token: 0x170076A7 RID: 30375
-		// (get) Token: 0x0602F858 RID: 194648
-		// (set) Token: 0x0602F859 RID: 194649
+		// Token: 0x17004963 RID: 18787
+		// (get) Token: 0x0602401E RID: 147486
+		// (set) Token: 0x0602401F RID: 147487
 		[Nullable(new byte[]
 		{
 			2,

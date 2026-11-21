@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200132A RID: 4906
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200147A RID: 5242
 	public class IQuestScheduleDistanceValue : IQuestScheduleType
 	{
-		// Token: 0x0600708B RID: 28811 RVA: 0x0010FAFC File Offset: 0x0010DCFC
+		// Token: 0x0600772B RID: 30507 RVA: 0x0011E068 File Offset: 0x0011C268
 		public static IQuestScheduleDistanceValue Create(IQuestScheduleDistanceValue? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700240A RID: 9226
-		// (get) Token: 0x0600708C RID: 28812 RVA: 0x0010FB1B File Offset: 0x0010DD1B
+		// Token: 0x170025D9 RID: 9689
+		// (get) Token: 0x0600772C RID: 30508 RVA: 0x0011E087 File Offset: 0x0011C287
 		public override EQuestScheduleType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700240B RID: 9227
-		// (get) Token: 0x0600708D RID: 28813 RVA: 0x0010FB28 File Offset: 0x0010DD28
+		// Token: 0x170025DA RID: 9690
+		// (get) Token: 0x0600772D RID: 30509 RVA: 0x0011E094 File Offset: 0x0011C294
 		public virtual Aki.TDConfigMgr.Action.Fb.PosA Pos
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700240C RID: 9228
-		// (get) Token: 0x0600708E RID: 28814 RVA: 0x0010FB5C File Offset: 0x0010DD5C
+		// Token: 0x170025DB RID: 9691
+		// (get) Token: 0x0600772E RID: 30510 RVA: 0x0011E0C8 File Offset: 0x0011C2C8
 		public virtual EDistanceMeasureMode DistanceMeasureMode
 		{
 			get
@@ -60,14 +58,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040EA RID: 16618
+		// Token: 0x04004466 RID: 17510
 		private IQuestScheduleDistanceValue Instance;
 
-		// Token: 0x040040EB RID: 16619
+		// Token: 0x04004467 RID: 17511
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PosA _PosCache;
 
-		// Token: 0x040040EC RID: 16620
+		// Token: 0x04004468 RID: 17512
 		private bool _PosInited;
 	}
 }

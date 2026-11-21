@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005223 RID: 21027
+	// Token: 0x020041F3 RID: 16883
 	public interface ICardDetailRemainRoundData
 	{
-		// Token: 0x1700822F RID: 33327
-		// (get) Token: 0x06035C27 RID: 220199
-		// (set) Token: 0x06035C28 RID: 220200
+		// Token: 0x170055EF RID: 21999
+		// (get) Token: 0x0602AB22 RID: 174882
+		// (set) Token: 0x0602AB23 RID: 174883
 		int RemainRound { get; set; }
 	}
 }

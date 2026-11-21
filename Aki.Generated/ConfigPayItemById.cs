@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200063F RID: 1599
+	// Token: 0x02000657 RID: 1623
 	public class ConfigPayItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600258A RID: 9610 RVA: 0x0012DE47 File Offset: 0x0012C047
+		// Token: 0x0600261A RID: 9754 RVA: 0x001348C3 File Offset: 0x00132AC3
 		static ConfigPayItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPayItemById.CreateStaticDefaultValue), new Action(ConfigPayItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600258B RID: 9611 RVA: 0x0012DE68 File Offset: 0x0012C068
+		// Token: 0x0600261B RID: 9755 RVA: 0x001348E4 File Offset: 0x00132AE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPayItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600258C RID: 9612 RVA: 0x0012DEE7 File Offset: 0x0012C0E7
+		// Token: 0x0600261C RID: 9756 RVA: 0x00134963 File Offset: 0x00132B63
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPayItemById.LogPair = null;
 			ConfigPayItemById.HandleId = 0;
 		}
 
-		// Token: 0x0600258D RID: 9613 RVA: 0x0012DEF5 File Offset: 0x0012C0F5
+		// Token: 0x0600261D RID: 9757 RVA: 0x00134971 File Offset: 0x00132B71
 		public static void Init()
 		{
 			ConfigPayItemById.HandleId = ConfigCommon.InitDataStatement(ConfigPayItemById.HandleId, "db_paycurrency.db", "select BinData from `PayItem` where Id=?");
 		}
 
-		// Token: 0x0600258E RID: 9614 RVA: 0x0012DF10 File Offset: 0x0012C110
+		// Token: 0x0600261E RID: 9758 RVA: 0x0013498C File Offset: 0x00132B8C
 		public static PayItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPayItemById.HandleId, ConfigPayItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PayItem?(rootAsPayItem);
 		}
 
-		// Token: 0x04002B9F RID: 11167
+		// Token: 0x04002C47 RID: 11335
 		private const string DB = "db_paycurrency.db";
 
-		// Token: 0x04002BA0 RID: 11168
+		// Token: 0x04002C48 RID: 11336
 		private const string FILE = "c.充值.xlsx";
 
-		// Token: 0x04002BA1 RID: 11169
+		// Token: 0x04002C49 RID: 11337
 		private const string TABLE = "PayItem";
 
-		// Token: 0x04002BA2 RID: 11170
+		// Token: 0x04002C4A RID: 11338
 		private const string COMMAND = "select BinData from `PayItem` where Id=?";
 
-		// Token: 0x04002BA3 RID: 11171
+		// Token: 0x04002C4B RID: 11339
 		private const string KEY_PREFIX = "PayItemById";
 
-		// Token: 0x04002BA4 RID: 11172
+		// Token: 0x04002C4C RID: 11340
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002BA5 RID: 11173
+		// Token: 0x04002C4D RID: 11341
 		private static int HandleId;
 	}
 }

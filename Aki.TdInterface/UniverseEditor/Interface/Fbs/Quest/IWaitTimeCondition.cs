@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004283 RID: 17027
+	// Token: 0x020046DF RID: 18143
 	public struct IWaitTimeCondition : IFlatbufferObject
 	{
-		// Token: 0x170078DC RID: 30940
-		// (get) Token: 0x06019360 RID: 103264 RVA: 0x0039F469 File Offset: 0x0039D669
+		// Token: 0x17007F0D RID: 32525
+		// (get) Token: 0x0601AACC RID: 109260 RVA: 0x003CAB41 File Offset: 0x003C8D41
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019361 RID: 103265 RVA: 0x0039F476 File Offset: 0x0039D676
+		// Token: 0x0601AACD RID: 109261 RVA: 0x003CAB4E File Offset: 0x003C8D4E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019362 RID: 103266 RVA: 0x0039F480 File Offset: 0x0039D680
+		// Token: 0x0601AACE RID: 109262 RVA: 0x003CAB58 File Offset: 0x003C8D58
 		public static IWaitTimeCondition GetRootAsIWaitTimeCondition(ByteBuffer _bb)
 		{
 			return IWaitTimeCondition.GetRootAsIWaitTimeCondition(_bb, default(IWaitTimeCondition));
 		}
 
-		// Token: 0x06019363 RID: 103267 RVA: 0x0039F49C File Offset: 0x0039D69C
+		// Token: 0x0601AACF RID: 109263 RVA: 0x003CAB74 File Offset: 0x003C8D74
 		public static IWaitTimeCondition GetRootAsIWaitTimeCondition(ByteBuffer _bb, IWaitTimeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019364 RID: 103268 RVA: 0x0039F4B9 File Offset: 0x0039D6B9
+		// Token: 0x0601AAD0 RID: 109264 RVA: 0x003CAB91 File Offset: 0x003C8D91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019365 RID: 103269 RVA: 0x0039F4C8 File Offset: 0x0039D6C8
+		// Token: 0x0601AAD1 RID: 109265 RVA: 0x003CABA0 File Offset: 0x003C8DA0
 		public IWaitTimeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170078DD RID: 30941
-		// (get) Token: 0x06019366 RID: 103270 RVA: 0x0039F4D8 File Offset: 0x0039D6D8
+		// Token: 0x17007F0E RID: 32526
+		// (get) Token: 0x0601AAD2 RID: 109266 RVA: 0x003CABB0 File Offset: 0x003C8DB0
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078DE RID: 30942
-		// (get) Token: 0x06019367 RID: 103271 RVA: 0x0039F514 File Offset: 0x0039D714
+		// Token: 0x17007F0F RID: 32527
+		// (get) Token: 0x0601AAD3 RID: 109267 RVA: 0x003CABEC File Offset: 0x003C8DEC
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078DF RID: 30943
-		// (get) Token: 0x06019368 RID: 103272 RVA: 0x0039F574 File Offset: 0x0039D774
+		// Token: 0x17007F10 RID: 32528
+		// (get) Token: 0x0601AAD4 RID: 109268 RVA: 0x003CAC4C File Offset: 0x003C8E4C
 		public int Days
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078E0 RID: 30944
-		// (get) Token: 0x06019369 RID: 103273 RVA: 0x0039F5B0 File Offset: 0x0039D7B0
+		// Token: 0x17007F11 RID: 32529
+		// (get) Token: 0x0601AAD5 RID: 109269 RVA: 0x003CAC88 File Offset: 0x003C8E88
 		public int Hours
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078E1 RID: 30945
-		// (get) Token: 0x0601936A RID: 103274 RVA: 0x0039F5F0 File Offset: 0x0039D7F0
+		// Token: 0x17007F12 RID: 32530
+		// (get) Token: 0x0601AAD6 RID: 109270 RVA: 0x003CACC8 File Offset: 0x003C8EC8
 		public int Minutes
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170078E2 RID: 30946
-		// (get) Token: 0x0601936B RID: 103275 RVA: 0x0039F630 File Offset: 0x0039D830
+		// Token: 0x17007F13 RID: 32531
+		// (get) Token: 0x0601AAD7 RID: 109271 RVA: 0x003CAD08 File Offset: 0x003C8F08
 		public int Seconds
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601936C RID: 103276 RVA: 0x0039F66D File Offset: 0x0039D86D
+		// Token: 0x0601AAD8 RID: 109272 RVA: 0x003CAD45 File Offset: 0x003C8F45
 		public static Offset<IWaitTimeCondition> CreateIWaitTimeCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), int Days = 0, int Hours = 0, int Minutes = 0, int Seconds = 0)
 		{
 			builder.StartTable(6);
@@ -151,55 +151,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWaitTimeCondition.EndIWaitTimeCondition(builder);
 		}
 
-		// Token: 0x0601936D RID: 103277 RVA: 0x0039F6A9 File Offset: 0x0039D8A9
+		// Token: 0x0601AAD9 RID: 109273 RVA: 0x003CAD81 File Offset: 0x003C8F81
 		public static void StartIWaitTimeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601936E RID: 103278 RVA: 0x0039F6B2 File Offset: 0x0039D8B2
+		// Token: 0x0601AADA RID: 109274 RVA: 0x003CAD8A File Offset: 0x003C8F8A
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601936F RID: 103279 RVA: 0x0039F6BD File Offset: 0x0039D8BD
+		// Token: 0x0601AADB RID: 109275 RVA: 0x003CAD95 File Offset: 0x003C8F95
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06019370 RID: 103280 RVA: 0x0039F6CD File Offset: 0x0039D8CD
+		// Token: 0x0601AADC RID: 109276 RVA: 0x003CADA5 File Offset: 0x003C8FA5
 		public static void AddDays(FlatBufferBuilder builder, int days)
 		{
 			builder.AddInt(2, days, 0);
 		}
 
-		// Token: 0x06019371 RID: 103281 RVA: 0x0039F6D8 File Offset: 0x0039D8D8
+		// Token: 0x0601AADD RID: 109277 RVA: 0x003CADB0 File Offset: 0x003C8FB0
 		public static void AddHours(FlatBufferBuilder builder, int hours)
 		{
 			builder.AddInt(3, hours, 0);
 		}
 
-		// Token: 0x06019372 RID: 103282 RVA: 0x0039F6E3 File Offset: 0x0039D8E3
+		// Token: 0x0601AADE RID: 109278 RVA: 0x003CADBB File Offset: 0x003C8FBB
 		public static void AddMinutes(FlatBufferBuilder builder, int minutes)
 		{
 			builder.AddInt(4, minutes, 0);
 		}
 
-		// Token: 0x06019373 RID: 103283 RVA: 0x0039F6EE File Offset: 0x0039D8EE
+		// Token: 0x0601AADF RID: 109279 RVA: 0x003CADC6 File Offset: 0x003C8FC6
 		public static void AddSeconds(FlatBufferBuilder builder, int seconds)
 		{
 			builder.AddInt(5, seconds, 0);
 		}
 
-		// Token: 0x06019374 RID: 103284 RVA: 0x0039F6F9 File Offset: 0x0039D8F9
+		// Token: 0x0601AAE0 RID: 109280 RVA: 0x003CADD1 File Offset: 0x003C8FD1
 		public static Offset<IWaitTimeCondition> EndIWaitTimeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IWaitTimeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06019375 RID: 103285 RVA: 0x0039F708 File Offset: 0x0039D908
+		// Token: 0x0601AAE1 RID: 109281 RVA: 0x003CADE0 File Offset: 0x003C8FE0
 		public IWaitTimeConditionT UnPack()
 		{
 			IWaitTimeConditionT waitTimeConditionT = new IWaitTimeConditionT();
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return waitTimeConditionT;
 		}
 
-		// Token: 0x06019376 RID: 103286 RVA: 0x0039F724 File Offset: 0x0039D924
+		// Token: 0x0601AAE2 RID: 109282 RVA: 0x003CADFC File Offset: 0x003C8FFC
 		public void UnPackTo(IWaitTimeConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.Seconds = this.Seconds;
 		}
 
-		// Token: 0x06019377 RID: 103287 RVA: 0x0039F79C File Offset: 0x0039D99C
+		// Token: 0x0601AAE3 RID: 109283 RVA: 0x003CAE74 File Offset: 0x003C9074
 		public static Offset<IWaitTimeCondition> Pack(FlatBufferBuilder builder, IWaitTimeConditionT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IWaitTimeCondition.CreateIWaitTimeCondition(builder, _o.Type, preConditionsOffset, _o.Days, _o.Hours, _o.Minutes, _o.Seconds);
 		}
 
-		// Token: 0x0400BF1B RID: 48923
+		// Token: 0x0400C928 RID: 51496
 		private Table __p;
 	}
 }

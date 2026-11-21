@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x02005159 RID: 20825
+	// Token: 0x02004129 RID: 16681
 	public class PhantomArenaActivityOpen : GenericPromptFloatTipsBase
 	{
-		// Token: 0x060353D7 RID: 218071 RVA: 0x00C9ADE5 File Offset: 0x00C98FE5
+		// Token: 0x0602A2D3 RID: 172755 RVA: 0x00BE82E5 File Offset: 0x00BE64E5
 		[NullableContext(1)]
 		public PhantomArenaActivityOpen(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060353D8 RID: 218072 RVA: 0x00C9ADEE File Offset: 0x00C98FEE
+		// Token: 0x0602A2D4 RID: 172756 RVA: 0x00BE82EE File Offset: 0x00BE64EE
 		protected override void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 		{
 		}
 
-		// Token: 0x060353D9 RID: 218073 RVA: 0x00C9ADF0 File Offset: 0x00C98FF0
+		// Token: 0x0602A2D5 RID: 172757 RVA: 0x00BE82F0 File Offset: 0x00BE64F0
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,

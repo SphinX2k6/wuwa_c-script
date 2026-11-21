@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F4C RID: 8012
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002185 RID: 8581
 	public class ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600AE4E RID: 44622 RVA: 0x00191830 File Offset: 0x0018FA30
+		// Token: 0x0600B920 RID: 47392 RVA: 0x001A7828 File Offset: 0x001A5A28
 		private ITalkItemPhoneMessageBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AE4F RID: 44623 RVA: 0x00191868 File Offset: 0x0018FA68
+		// Token: 0x0600B921 RID: 47393 RVA: 0x001A7860 File Offset: 0x001A5A60
 		public static ITalkItemPhoneMessageBase Create([Nullable(2)] ITalkItemPhoneMessageBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE50 RID: 44624 RVA: 0x0019187B File Offset: 0x0018FA7B
+		// Token: 0x0600B922 RID: 47394 RVA: 0x001A7873 File Offset: 0x001A5A73
 		public static ITalkItemPhoneMessageBase CreateFromSetValue([Nullable(2)] ITalkItemPhoneMessageBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE51 RID: 44625 RVA: 0x0019188E File Offset: 0x0018FA8E
+		// Token: 0x0600B923 RID: 47395 RVA: 0x001A7886 File Offset: 0x001A5A86
 		public ITalkItemPhoneMessageBase_SetValue ToSetValue()
 		{
 			return new ITalkItemPhoneMessageBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700358D RID: 13709
-		// (get) Token: 0x0600AE52 RID: 44626 RVA: 0x001918A1 File Offset: 0x0018FAA1
-		// (set) Token: 0x0600AE53 RID: 44627 RVA: 0x001918CC File Offset: 0x0018FACC
+		// Token: 0x17003858 RID: 14424
+		// (get) Token: 0x0600B924 RID: 47396 RVA: 0x001A7899 File Offset: 0x001A5A99
+		// (set) Token: 0x0600B925 RID: 47397 RVA: 0x001A78C4 File Offset: 0x001A5AC4
 		public virtual EPhoneMessageType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040068CB RID: 26827
+		// Token: 0x04006EBA RID: 28346
 		[Nullable(2)]
 		protected ITalkItemPhoneMessageBase FbInstance;
 
-		// Token: 0x040068CC RID: 26828
+		// Token: 0x04006EBB RID: 28347
 		[Nullable(2)]
 		protected ITalkItemPhoneMessageBase_SetValue PocoInterface;
 	}

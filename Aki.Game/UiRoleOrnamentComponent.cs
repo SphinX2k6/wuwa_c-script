@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002CB6 RID: 11446
+// Token: 0x0200220F RID: 8719
 [NullableContext(1)]
 [Nullable(0)]
 public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IUiModelSetDitherEffect, IUiModelRenderingMaterialChange, IUiModelSetPlanarReflectionRenderOffset
 {
-	// Token: 0x06017E98 RID: 97944 RVA: 0x00613EC0 File Offset: 0x006120C0
+	// Token: 0x0601570C RID: 87820 RVA: 0x00639A4C File Offset: 0x00637C4C
 	protected override void OnInit()
 	{
 		this.RoleDataComponent = base.Owner.CheckGetComponent<UiRoleDataComponent>();
@@ -21,7 +20,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.TagComponent = base.Owner.GetComponent<UiModelTagComponent>();
 	}
 
-	// Token: 0x06017E99 RID: 97945 RVA: 0x00613F24 File Offset: 0x00612124
+	// Token: 0x0601570D RID: 87821 RVA: 0x00639AB0 File Offset: 0x00637CB0
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.OnBeforeRoleModelLoad));
@@ -29,7 +28,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelSetMorphTypeComplete, new Action(this.OnRoleModelReady));
 	}
 
-	// Token: 0x06017E9A RID: 97946 RVA: 0x00613F98 File Offset: 0x00612198
+	// Token: 0x0601570E RID: 87822 RVA: 0x00639B24 File Offset: 0x00637D24
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.OnBeforeRoleModelLoad));
@@ -38,13 +37,13 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.DestroyAllOrnaments();
 	}
 
-	// Token: 0x06017E9B RID: 97947 RVA: 0x00614011 File Offset: 0x00612211
+	// Token: 0x0601570F RID: 87823 RVA: 0x00639B9D File Offset: 0x00637D9D
 	public void SetPendingContexts(OrnamentModelContext[] contexts)
 	{
 		this.PendingOrnamentContexts = contexts;
 	}
 
-	// Token: 0x06017E9C RID: 97948 RVA: 0x0061401A File Offset: 0x0061221A
+	// Token: 0x06015710 RID: 87824 RVA: 0x00639BA6 File Offset: 0x00637DA6
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -57,13 +56,13 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		return pendingOrnamentContexts;
 	}
 
-	// Token: 0x06017E9D RID: 97949 RVA: 0x00614029 File Offset: 0x00612229
+	// Token: 0x06015711 RID: 87825 RVA: 0x00639BB5 File Offset: 0x00637DB5
 	public bool HasPendingContexts()
 	{
 		return this.PendingOrnamentContexts != null;
 	}
 
-	// Token: 0x06017E9E RID: 97950 RVA: 0x00614034 File Offset: 0x00612234
+	// Token: 0x06015712 RID: 87826 RVA: 0x00639BC0 File Offset: 0x00637DC0
 	public void RefreshModels([Nullable(new byte[]
 	{
 		2,
@@ -80,9 +79,8 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		{
 			return;
 		}
-		(from x in array
-		select x.ModelId).ToArray<int>();
-		this.OrnamentHandleMap.Keys.ToArray<int>();
+		UiRoleOrnamentComponent.SelectModelIds(array);
+		UiRoleOrnamentComponent.ToIntArray(this.OrnamentHandleMap.Keys);
 		bool flag = this.IsRoleModelLoaded();
 		this.OrnamentContextMap.Clear();
 		foreach (OrnamentModelContext ornamentModelContext in array)
@@ -165,7 +163,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017E9F RID: 97951 RVA: 0x0061434C File Offset: 0x0061254C
+	// Token: 0x06015713 RID: 87827 RVA: 0x00639EB4 File Offset: 0x006380B4
 	[NullableContext(2)]
 	public AActor GetActorByModelId(int modelId)
 	{
@@ -187,7 +185,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		return uiModelActorComponent.Actor;
 	}
 
-	// Token: 0x06017EA0 RID: 97952 RVA: 0x00614388 File Offset: 0x00612588
+	// Token: 0x06015714 RID: 87828 RVA: 0x00639EF0 File Offset: 0x006380F0
 	public void OnModelPlanarReflectionRenderOffsetChange(bool enable, FVector? offset)
 	{
 		foreach (int key in this.OrnamentHandleMap.Keys)
@@ -205,7 +203,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA1 RID: 97953 RVA: 0x00614408 File Offset: 0x00612608
+	// Token: 0x06015715 RID: 87829 RVA: 0x00639F70 File Offset: 0x00638170
 	private void ApplyPlanarReflectionRenderOffset(int modelId)
 	{
 		UiModelDataComponent modelDataComponent = this.ModelDataComponent;
@@ -224,7 +222,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		uiModelDataComponent.SetPlanarReflectionRenderOffset(flag.Value, modelDataComponent.GetPlanarReflectionRenderOffset());
 	}
 
-	// Token: 0x06017EA2 RID: 97954 RVA: 0x00614478 File Offset: 0x00612678
+	// Token: 0x06015716 RID: 87830 RVA: 0x00639FE0 File Offset: 0x006381E0
 	public void OnModelDitherEffectChange(float value)
 	{
 		foreach (SkeletalObserverHandle skeletalObserverHandle in this.OrnamentHandleMap.Values)
@@ -238,7 +236,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA3 RID: 97955 RVA: 0x006144E8 File Offset: 0x006126E8
+	// Token: 0x06015717 RID: 87831 RVA: 0x0063A050 File Offset: 0x00638250
 	public void OnRenderingMaterialAdd(int materialId, UObject data, bool isGroup, bool withAnimObject)
 	{
 		ActiveMaterialEntry activeMaterialEntry = new ActiveMaterialEntry();
@@ -252,7 +250,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA4 RID: 97956 RVA: 0x00614578 File Offset: 0x00612778
+	// Token: 0x06015718 RID: 87832 RVA: 0x0063A0E0 File Offset: 0x006382E0
 	public void OnRenderingMaterialRemove(int materialId, bool isGroup, bool withEnding)
 	{
 		this.ActiveMaterialMap.Remove(materialId);
@@ -262,7 +260,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA5 RID: 97957 RVA: 0x006145E8 File Offset: 0x006127E8
+	// Token: 0x06015719 RID: 87833 RVA: 0x0063A150 File Offset: 0x00638350
 	public void OnModelVisibleChange(bool visible)
 	{
 		if (visible)
@@ -273,7 +271,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.SetAllOrnamentsActualVisible(false);
 	}
 
-	// Token: 0x06017EA6 RID: 97958 RVA: 0x006145FC File Offset: 0x006127FC
+	// Token: 0x0601571A RID: 87834 RVA: 0x0063A164 File Offset: 0x00638364
 	private void SyncOrnamentVisible(int modelId)
 	{
 		bool flag;
@@ -293,7 +291,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.ApplyOrnamentVisible(modelId, flag2 && flag3 && this.CheckOrnamentTagVisible(modelId));
 	}
 
-	// Token: 0x06017EA7 RID: 97959 RVA: 0x00614654 File Offset: 0x00612854
+	// Token: 0x0601571B RID: 87835 RVA: 0x0063A1BC File Offset: 0x006383BC
 	private void SyncAllOrnamentsVisible()
 	{
 		foreach (int modelId in this.OrnamentHandleMap.Keys)
@@ -302,7 +300,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA8 RID: 97960 RVA: 0x006146AC File Offset: 0x006128AC
+	// Token: 0x0601571C RID: 87836 RVA: 0x0063A214 File Offset: 0x00638414
 	private void SetAllOrnamentsActualVisible(bool visible)
 	{
 		foreach (int modelId in this.OrnamentHandleMap.Keys)
@@ -315,7 +313,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EA9 RID: 97961 RVA: 0x00614710 File Offset: 0x00612910
+	// Token: 0x0601571D RID: 87837 RVA: 0x0063A278 File Offset: 0x00638478
 	private void ApplyOrnamentVisible(int modelId, bool visible)
 	{
 		SkeletalObserverHandle skeletalObserverHandle;
@@ -332,7 +330,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		uiModelDataComponent.SetVisible(visible);
 	}
 
-	// Token: 0x06017EAA RID: 97962 RVA: 0x00614758 File Offset: 0x00612958
+	// Token: 0x0601571E RID: 87838 RVA: 0x0063A2C0 File Offset: 0x006384C0
 	private bool IsSameModelIds(OrnamentModelContext[] ctxList)
 	{
 		if (ctxList.Length != this.OrnamentContextMap.Count)
@@ -349,13 +347,13 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		return true;
 	}
 
-	// Token: 0x06017EAB RID: 97963 RVA: 0x006147A1 File Offset: 0x006129A1
+	// Token: 0x0601571F RID: 87839 RVA: 0x0063A309 File Offset: 0x00638509
 	private bool IsRoleModelLoaded()
 	{
 		return this.ModelDataComponent.GetModelLoadState() == EUiModelLoadState.LoadComplete;
 	}
 
-	// Token: 0x06017EAC RID: 97964 RVA: 0x006147B4 File Offset: 0x006129B4
+	// Token: 0x06015720 RID: 87840 RVA: 0x0063A31C File Offset: 0x0063851C
 	private void AttachOrnamentToRole(int modelId)
 	{
 		if (this.DeferOrnamentAttachUntilRoleMeshReady || !this.IsRoleModelLoaded())
@@ -380,7 +378,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.SyncActiveMaterialsToOrnament(modelId, skeletalObserverHandle);
 	}
 
-	// Token: 0x06017EAD RID: 97965 RVA: 0x00614820 File Offset: 0x00612A20
+	// Token: 0x06015721 RID: 87841 RVA: 0x0063A388 File Offset: 0x00638588
 	private void AttachAllOrnamentToRole()
 	{
 		foreach (int modelId in this.OrnamentHandleMap.Keys)
@@ -389,13 +387,13 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EAE RID: 97966 RVA: 0x00614878 File Offset: 0x00612A78
+	// Token: 0x06015722 RID: 87842 RVA: 0x0063A3E0 File Offset: 0x006385E0
 	private SDecorationConfig GetOrnamentConfig(int configId)
 	{
 		return DataTableUtil.GetDataTableRowFromName<SDecorationConfig>(EDataTable.DecorationConfig, configId.ToString());
 	}
 
-	// Token: 0x06017EAF RID: 97967 RVA: 0x00614888 File Offset: 0x00612A88
+	// Token: 0x06015723 RID: 87843 RVA: 0x0063A3F0 File Offset: 0x006385F0
 	private void DestroyOrnamentByModelId(int modelId)
 	{
 		this.OrnamentMaterialIdMap.Remove(modelId);
@@ -412,7 +410,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentContextMap.Remove(modelId);
 	}
 
-	// Token: 0x06017EB0 RID: 97968 RVA: 0x006148F4 File Offset: 0x00612AF4
+	// Token: 0x06015724 RID: 87844 RVA: 0x0063A45C File Offset: 0x0063865C
 	private void DestroyAllOrnaments()
 	{
 		this.OrnamentMaterialIdMap.Clear();
@@ -429,7 +427,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentContextMap.Clear();
 	}
 
-	// Token: 0x06017EB1 RID: 97969 RVA: 0x00614990 File Offset: 0x00612B90
+	// Token: 0x06015725 RID: 87845 RVA: 0x0063A4F8 File Offset: 0x006386F8
 	private void AddOrnamentBuffs(int modelId, long[] buffIds)
 	{
 		if (this.BuffComponent == null || buffIds == null || buffIds.Length == 0)
@@ -443,7 +441,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentBuffMap[modelId] = buffIds;
 	}
 
-	// Token: 0x06017EB2 RID: 97970 RVA: 0x006149DC File Offset: 0x00612BDC
+	// Token: 0x06015726 RID: 87846 RVA: 0x0063A544 File Offset: 0x00638744
 	private void RemoveOrnamentBuffs(int modelId)
 	{
 		long[] array;
@@ -458,7 +456,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentBuffMap.Remove(modelId);
 	}
 
-	// Token: 0x06017EB3 RID: 97971 RVA: 0x00614A30 File Offset: 0x00612C30
+	// Token: 0x06015727 RID: 87847 RVA: 0x0063A598 File Offset: 0x00638798
 	private void RemoveAllOrnamentBuffs()
 	{
 		if (this.BuffComponent == null)
@@ -476,7 +474,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentBuffMap.Clear();
 	}
 
-	// Token: 0x06017EB4 RID: 97972 RVA: 0x00614AC0 File Offset: 0x00612CC0
+	// Token: 0x06015728 RID: 87848 RVA: 0x0063A628 File Offset: 0x00638828
 	private void SpawnOrnamentEffects(int modelId)
 	{
 		HashSet<int> hashSet;
@@ -541,7 +539,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EB5 RID: 97973 RVA: 0x00614BE4 File Offset: 0x00612DE4
+	// Token: 0x06015729 RID: 87849 RVA: 0x0063A74C File Offset: 0x0063894C
 	private void SpawnEffectsFromConfig(int modelId, TArray<SDecorationConfig_Effect> effects, USkeletalMeshComponent meshComp, UiModelEffectComponent effectComp, HashSet<int> effectHandleList, string effectSource)
 	{
 		for (int i = 0; i < effects.Num(); i++)
@@ -560,7 +558,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EB6 RID: 97974 RVA: 0x00614C80 File Offset: 0x00612E80
+	// Token: 0x0601572A RID: 87850 RVA: 0x0063A7E8 File Offset: 0x006389E8
 	private void DestroyOrnamentEffects(int modelId)
 	{
 		HashSet<int> hashSet;
@@ -586,7 +584,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		hashSet.Clear();
 	}
 
-	// Token: 0x06017EB7 RID: 97975 RVA: 0x00614D10 File Offset: 0x00612F10
+	// Token: 0x0601572B RID: 87851 RVA: 0x0063A878 File Offset: 0x00638A78
 	private void DestroyAllOrnamentEffects()
 	{
 		foreach (int modelId in new List<int>(this.OrnamentEffectHandleMap.Keys))
@@ -596,7 +594,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentEffectHandleMap.Clear();
 	}
 
-	// Token: 0x06017EB8 RID: 97976 RVA: 0x00614D78 File Offset: 0x00612F78
+	// Token: 0x0601572C RID: 87852 RVA: 0x0063A8E0 File Offset: 0x00638AE0
 	private void OnBeforeRoleModelLoad()
 	{
 		this.DeferOrnamentAttachUntilRoleMeshReady = true;
@@ -608,7 +606,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.RefreshModels(pendingOrnamentContexts, false);
 	}
 
-	// Token: 0x06017EB9 RID: 97977 RVA: 0x00614DB8 File Offset: 0x00612FB8
+	// Token: 0x0601572D RID: 87853 RVA: 0x0063A920 File Offset: 0x00638B20
 	private void OnRoleModelReady()
 	{
 		this.DeferOrnamentAttachUntilRoleMeshReady = false;
@@ -633,7 +631,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EBA RID: 97978 RVA: 0x00614E6C File Offset: 0x0061306C
+	// Token: 0x0601572E RID: 87854 RVA: 0x0063A9D4 File Offset: 0x00638BD4
 	private void SyncActiveMaterialsToOrnament(int modelId, SkeletalObserverHandle handle)
 	{
 		foreach (KeyValuePair<int, ActiveMaterialEntry> keyValuePair in this.ActiveMaterialMap)
@@ -643,7 +641,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EBB RID: 97979 RVA: 0x00614EE4 File Offset: 0x006130E4
+	// Token: 0x0601572F RID: 87855 RVA: 0x0063AA4C File Offset: 0x00638C4C
 	private void AddMaterialToOrnament(int modelId, SkeletalObserverHandle handle, int materialId, UObject data, bool isGroup, bool withAnimObject)
 	{
 		UiModelBase model = handle.Model;
@@ -663,7 +661,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		dictionary[materialId] = value;
 	}
 
-	// Token: 0x06017EBC RID: 97980 RVA: 0x00614F70 File Offset: 0x00613170
+	// Token: 0x06015730 RID: 87856 RVA: 0x0063AAD8 File Offset: 0x00638CD8
 	private void RemoveMaterialFromOrnament(int modelId, SkeletalObserverHandle handle, int materialId, bool isGroup, bool withEnding)
 	{
 		Dictionary<int, int> dictionary;
@@ -704,7 +702,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EBD RID: 97981 RVA: 0x00614FF0 File Offset: 0x006131F0
+	// Token: 0x06015731 RID: 87857 RVA: 0x0063AB58 File Offset: 0x00638D58
 	private void OnOrnamentTagChanged(int tagId, bool tagExist, params object[] _)
 	{
 		foreach (Dictionary<int, bool> dictionary in this.OrnamentDisplayTagsMap.Values)
@@ -724,7 +722,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.SyncAllOrnamentsVisible();
 	}
 
-	// Token: 0x06017EBE RID: 97982 RVA: 0x006150AC File Offset: 0x006132AC
+	// Token: 0x06015732 RID: 87858 RVA: 0x0063AC14 File Offset: 0x00638E14
 	private void RegisterOrnamentTagListeners(int modelId)
 	{
 		if (this.TagComponent == null)
@@ -740,7 +738,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentHideTagsMap[modelId] = dictionary2;
 	}
 
-	// Token: 0x06017EBF RID: 97983 RVA: 0x0061510C File Offset: 0x0061330C
+	// Token: 0x06015733 RID: 87859 RVA: 0x0063AC74 File Offset: 0x00638E74
 	private void AddTagsFromContainer(Dictionary<int, bool> map, FGameplayTagContainer container)
 	{
 		if (this.TagComponent == null)
@@ -765,7 +763,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EC0 RID: 97984 RVA: 0x006151A0 File Offset: 0x006133A0
+	// Token: 0x06015734 RID: 87860 RVA: 0x0063AD08 File Offset: 0x00638F08
 	private void RemoveOrnamentTagListeners(int modelId)
 	{
 		Dictionary<int, bool> map;
@@ -782,7 +780,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EC1 RID: 97985 RVA: 0x006151F8 File Offset: 0x006133F8
+	// Token: 0x06015735 RID: 87861 RVA: 0x0063AD60 File Offset: 0x00638F60
 	private void RemoveTagListenersFromMap(Dictionary<int, bool> map)
 	{
 		if (this.TagComponent == null)
@@ -806,7 +804,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		map.Clear();
 	}
 
-	// Token: 0x06017EC2 RID: 97986 RVA: 0x0061529C File Offset: 0x0061349C
+	// Token: 0x06015736 RID: 87862 RVA: 0x0063AE04 File Offset: 0x00639004
 	private void RemoveAllOrnamentTagListeners()
 	{
 		if (this.TagComponent != null)
@@ -821,7 +819,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentHideTagsMap.Clear();
 	}
 
-	// Token: 0x06017EC3 RID: 97987 RVA: 0x00615330 File Offset: 0x00613530
+	// Token: 0x06015737 RID: 87863 RVA: 0x0063AE98 File Offset: 0x00639098
 	private bool CheckOrnamentTagVisible(int modelId)
 	{
 		Dictionary<int, bool> map;
@@ -831,7 +829,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		return UiRoleOrnamentComponent.CheckHasTagInMap(map, true) && !UiRoleOrnamentComponent.CheckHasTagInMap(map2, false);
 	}
 
-	// Token: 0x06017EC4 RID: 97988 RVA: 0x00615370 File Offset: 0x00613570
+	// Token: 0x06015738 RID: 87864 RVA: 0x0063AED8 File Offset: 0x006390D8
 	[NullableContext(2)]
 	private static bool CheckHasTagInMap(Dictionary<int, bool> map, bool defaultValue)
 	{
@@ -852,29 +850,63 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		return false;
 	}
 
-	// Token: 0x06017EC5 RID: 97989 RVA: 0x006153D4 File Offset: 0x006135D4
+	// Token: 0x06015739 RID: 87865 RVA: 0x0063AF3C File Offset: 0x0063913C
+	private static int[] SelectModelIds(OrnamentModelContext[] contexts)
+	{
+		int[] array = new int[contexts.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = contexts[i].ModelId;
+		}
+		return array;
+	}
+
+	// Token: 0x0601573A RID: 87866 RVA: 0x0063AF6C File Offset: 0x0063916C
+	private static int[] ToIntArray(ICollection<int> source)
+	{
+		int[] array = new int[source.Count];
+		source.CopyTo(array, 0);
+		return array;
+	}
+
+	// Token: 0x0601573B RID: 87867 RVA: 0x0063AF90 File Offset: 0x00639190
+	private static string[] ToTagNames(ICollection<int> tagIds)
+	{
+		string[] array = new string[tagIds.Count];
+		int num = 0;
+		foreach (int tagId in tagIds)
+		{
+			array[num++] = GameplayTagUtils.GetNameByTagId(tagId);
+		}
+		return array;
+	}
+
+	// Token: 0x0601573C RID: 87868 RVA: 0x0063AFF0 File Offset: 0x006391F0
 	private void RefreshEquipTags(OrnamentModelContext[] ctxList)
 	{
 		if (this.TagComponent == null)
 		{
 			return;
 		}
-		HashSet<int> hashSet = new HashSet<int>(from ctx in ctxList
-		select ctx.ModelId);
-		foreach (int num in this.OrnamentEquipTagsMap.Keys.ToArray<int>())
+		HashSet<int> hashSet = new HashSet<int>();
+		foreach (OrnamentModelContext ornamentModelContext in ctxList)
+		{
+			hashSet.Add(ornamentModelContext.ModelId);
+		}
+		foreach (int num in UiRoleOrnamentComponent.ToIntArray(this.OrnamentEquipTagsMap.Keys))
 		{
 			if (!hashSet.Contains(num))
 			{
 				this.RemoveEquipTags(num);
 			}
 		}
-		foreach (OrnamentModelContext ornamentModelContext in ctxList)
+		foreach (OrnamentModelContext ornamentModelContext2 in ctxList)
 		{
-			this.AddEquipTags(ornamentModelContext.ModelId, ornamentModelContext.EquipTags);
+			this.AddEquipTags(ornamentModelContext2.ModelId, ornamentModelContext2.EquipTags);
 		}
 	}
 
-	// Token: 0x06017EC6 RID: 97990 RVA: 0x00615474 File Offset: 0x00613674
+	// Token: 0x0601573D RID: 87869 RVA: 0x0063B090 File Offset: 0x00639290
 	private void AddEquipTags(int modelId, List<string> tagNames)
 	{
 		if (this.TagComponent == null || this.OrnamentEquipTagsMap.ContainsKey(modelId))
@@ -906,7 +938,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		}
 	}
 
-	// Token: 0x06017EC7 RID: 97991 RVA: 0x00615550 File Offset: 0x00613750
+	// Token: 0x0601573E RID: 87870 RVA: 0x0063B16C File Offset: 0x0063936C
 	private void RemoveEquipTags(int modelId)
 	{
 		int[] array;
@@ -922,7 +954,7 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentEquipTagsMap.Remove(modelId);
 	}
 
-	// Token: 0x06017EC8 RID: 97992 RVA: 0x006155B8 File Offset: 0x006137B8
+	// Token: 0x0601573F RID: 87871 RVA: 0x0063B1D4 File Offset: 0x006393D4
 	private void RemoveAllEquipTags()
 	{
 		if (this.TagComponent != null)
@@ -941,66 +973,66 @@ public class UiRoleOrnamentComponent : UiModelComponentBase, IUiModelVisible, IU
 		this.OrnamentEquipTagsMap.Clear();
 	}
 
-	// Token: 0x0400B244 RID: 45636
+	// Token: 0x0400B5AF RID: 46511
 	public bool FollowRoleVisibility;
 
-	// Token: 0x0400B245 RID: 45637
+	// Token: 0x0400B5B0 RID: 46512
 	[Nullable(2)]
 	private UiRoleDataComponent RoleDataComponent;
 
-	// Token: 0x0400B246 RID: 45638
+	// Token: 0x0400B5B1 RID: 46513
 	[Nullable(2)]
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B247 RID: 45639
+	// Token: 0x0400B5B2 RID: 46514
 	[Nullable(2)]
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B248 RID: 45640
+	// Token: 0x0400B5B3 RID: 46515
 	[Nullable(2)]
 	private UiModelBuffComponent BuffComponent;
 
-	// Token: 0x0400B249 RID: 45641
+	// Token: 0x0400B5B4 RID: 46516
 	private readonly Dictionary<int, OrnamentModelContext> OrnamentContextMap = new Dictionary<int, OrnamentModelContext>();
 
-	// Token: 0x0400B24A RID: 45642
+	// Token: 0x0400B5B5 RID: 46517
 	private readonly Dictionary<int, EOrnamentState> OrnamentStateMap = new Dictionary<int, EOrnamentState>();
 
-	// Token: 0x0400B24B RID: 45643
+	// Token: 0x0400B5B6 RID: 46518
 	private readonly Dictionary<int, SkeletalObserverHandle> OrnamentHandleMap = new Dictionary<int, SkeletalObserverHandle>();
 
-	// Token: 0x0400B24C RID: 45644
+	// Token: 0x0400B5B7 RID: 46519
 	private readonly Dictionary<int, HashSet<int>> OrnamentEffectHandleMap = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x0400B24D RID: 45645
+	// Token: 0x0400B5B8 RID: 46520
 	private readonly Dictionary<int, long[]> OrnamentBuffMap = new Dictionary<int, long[]>();
 
-	// Token: 0x0400B24E RID: 45646
+	// Token: 0x0400B5B9 RID: 46521
 	private readonly Dictionary<int, ActiveMaterialEntry> ActiveMaterialMap = new Dictionary<int, ActiveMaterialEntry>();
 
-	// Token: 0x0400B24F RID: 45647
+	// Token: 0x0400B5BA RID: 46522
 	private readonly Dictionary<int, Dictionary<int, int>> OrnamentMaterialIdMap = new Dictionary<int, Dictionary<int, int>>();
 
-	// Token: 0x0400B250 RID: 45648
+	// Token: 0x0400B5BB RID: 46523
 	private readonly Dictionary<int, Dictionary<int, bool>> OrnamentDisplayTagsMap = new Dictionary<int, Dictionary<int, bool>>();
 
-	// Token: 0x0400B251 RID: 45649
+	// Token: 0x0400B5BC RID: 46524
 	private readonly Dictionary<int, Dictionary<int, bool>> OrnamentHideTagsMap = new Dictionary<int, Dictionary<int, bool>>();
 
-	// Token: 0x0400B252 RID: 45650
+	// Token: 0x0400B5BD RID: 46525
 	private readonly Dictionary<int, int> TagListenerRefCount = new Dictionary<int, int>();
 
-	// Token: 0x0400B253 RID: 45651
+	// Token: 0x0400B5BE RID: 46526
 	private readonly Dictionary<int, int[]> OrnamentEquipTagsMap = new Dictionary<int, int[]>();
 
-	// Token: 0x0400B254 RID: 45652
+	// Token: 0x0400B5BF RID: 46527
 	[Nullable(2)]
 	private UiModelTagComponent TagComponent;
 
-	// Token: 0x0400B255 RID: 45653
+	// Token: 0x0400B5C0 RID: 46528
 	private bool DeferOrnamentAttachUntilRoleMeshReady;
 
-	// Token: 0x0400B256 RID: 45654
+	// Token: 0x0400B5C1 RID: 46529
 	[Nullable(new byte[]
 	{
 		2,

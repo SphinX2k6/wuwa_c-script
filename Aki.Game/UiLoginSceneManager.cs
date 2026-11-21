@@ -8,12 +8,12 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Game.Camera;
 using UnrealEngine;
 
-// Token: 0x02002C5B RID: 11355
+// Token: 0x020021B4 RID: 8628
 [NullableContext(1)]
 [Nullable(0)]
 public class UiLoginSceneManager : Singleton
 {
-	// Token: 0x06017B44 RID: 97092 RVA: 0x00606A9C File Offset: 0x00604C9C
+	// Token: 0x060153B8 RID: 86968 RVA: 0x0062C560 File Offset: 0x0062A760
 	public TsUiSceneRoleActor GetRoleObserver(int roleId)
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor;
@@ -25,7 +25,7 @@ public class UiLoginSceneManager : Singleton
 		return tsUiSceneRoleActor;
 	}
 
-	// Token: 0x06017B45 RID: 97093 RVA: 0x00606ADC File Offset: 0x00604CDC
+	// Token: 0x060153B9 RID: 86969 RVA: 0x0062C5A0 File Offset: 0x0062A7A0
 	private void DestroyCreateCharacterObservers()
 	{
 		foreach (int taskId in this.HuluHandleList)
@@ -41,7 +41,7 @@ public class UiLoginSceneManager : Singleton
 		this.Observers.Clear();
 	}
 
-	// Token: 0x06017B46 RID: 97094 RVA: 0x00606B9C File Offset: 0x00604D9C
+	// Token: 0x060153BA RID: 86970 RVA: 0x0062C660 File Offset: 0x0062A860
 	public void InitCinematicTick()
 	{
 		this.CinematicTick = ActorSystem.Instance.Get<BP_Cinematics_Tick_C>(BP_Cinematics_Tick_C.StaticClass(), new FTransformDouble(), null, true);
@@ -49,7 +49,7 @@ public class UiLoginSceneManager : Singleton
 		this.Spotlight2 = ActorSystem.Instance.Get<ASpotLight>(ASpotLight.StaticClass(), new FTransformDouble(), null, true);
 	}
 
-	// Token: 0x06017B47 RID: 97095 RVA: 0x00606C00 File Offset: 0x00604E00
+	// Token: 0x060153BB RID: 86971 RVA: 0x0062C6C4 File Offset: 0x0062A8C4
 	private void BindCinematicTick()
 	{
 		IReadOnlyList<int> initialRoles = CreateCharacterConfig.Instance.GetInitialRoles();
@@ -60,7 +60,7 @@ public class UiLoginSceneManager : Singleton
 		this.CinematicTick.Is_Tick = 1;
 	}
 
-	// Token: 0x06017B48 RID: 97096 RVA: 0x00606C56 File Offset: 0x00604E56
+	// Token: 0x060153BC RID: 86972 RVA: 0x0062C71A File Offset: 0x0062A91A
 	private USkeletalMeshComponent GetActorMeshComponent(int roleId)
 	{
 		UiModelBase model = this.Observers[roleId].Model;
@@ -72,7 +72,7 @@ public class UiLoginSceneManager : Singleton
 		return uiModelActorComponent.MainMeshComponent;
 	}
 
-	// Token: 0x06017B49 RID: 97097 RVA: 0x00606C80 File Offset: 0x00604E80
+	// Token: 0x060153BD RID: 86973 RVA: 0x0062C744 File Offset: 0x0062A944
 	private void DestroyCinematicTick()
 	{
 		if (this.CinematicTick != null)
@@ -92,7 +92,7 @@ public class UiLoginSceneManager : Singleton
 		}
 	}
 
-	// Token: 0x06017B4A RID: 97098 RVA: 0x00606D00 File Offset: 0x00604F00
+	// Token: 0x060153BE RID: 86974 RVA: 0x0062C7C4 File Offset: 0x0062A9C4
 	public void InitRoleObservers(Action delegateAction = null)
 	{
 		this.InitRoleFinishDelegate = delegateAction;
@@ -104,7 +104,7 @@ public class UiLoginSceneManager : Singleton
 		this.CreateRoleObserver(roleId2, "BoyCase");
 	}
 
-	// Token: 0x06017B4B RID: 97099 RVA: 0x00606D4C File Offset: 0x00604F4C
+	// Token: 0x060153BF RID: 86975 RVA: 0x0062C810 File Offset: 0x0062AA10
 	private void CreateRoleObserver(int roleId, string tag)
 	{
 		TsUiSceneRoleActor observer = this.GetRoleObserver(roleId);
@@ -185,7 +185,7 @@ public class UiLoginSceneManager : Singleton
 		});
 	}
 
-	// Token: 0x06017B4C RID: 97100 RVA: 0x00606DC7 File Offset: 0x00604FC7
+	// Token: 0x060153C0 RID: 86976 RVA: 0x0062C88B File Offset: 0x0062AA8B
 	public void PlayRoleMontage(int roleId, EPerformanceRoleState roleState)
 	{
 		UiModelBase model = this.GetRoleObserver(roleId).Model;
@@ -197,21 +197,21 @@ public class UiLoginSceneManager : Singleton
 		uiRoleStateMachineComponent.SetState(roleState, false, false, false);
 	}
 
-	// Token: 0x06017B4D RID: 97101 RVA: 0x00606DF0 File Offset: 0x00604FF0
+	// Token: 0x060153C1 RID: 86977 RVA: 0x0062C8B4 File Offset: 0x0062AAB4
 	public int SetRoleRenderingMaterial(int roleId, string effectId)
 	{
 		TsUiSceneRoleActor roleObserver = this.GetRoleObserver(roleId);
 		return UiModelUtil.Instance.SetRenderingMaterial(roleObserver.Model, effectId);
 	}
 
-	// Token: 0x06017B4E RID: 97102 RVA: 0x00606E18 File Offset: 0x00605018
+	// Token: 0x060153C2 RID: 86978 RVA: 0x0062C8DC File Offset: 0x0062AADC
 	public void RemoveRoleRenderingMaterial(int roleId, int materialId)
 	{
 		TsUiSceneRoleActor roleObserver = this.GetRoleObserver(roleId);
 		UiModelUtil.Instance.RemoveRenderingMaterial(roleObserver.Model, materialId);
 	}
 
-	// Token: 0x06017B4F RID: 97103 RVA: 0x00606E3E File Offset: 0x0060503E
+	// Token: 0x060153C3 RID: 86979 RVA: 0x0062C902 File Offset: 0x0062AB02
 	public void RemoveRoleRenderingMaterialWithEnding(int roleId, int materialId)
 	{
 		UiModelBase model = this.GetRoleObserver(roleId).Model;
@@ -223,32 +223,32 @@ public class UiLoginSceneManager : Singleton
 		uiModelRenderingMaterialComponent.RemoveRenderingMaterialWithEnding(materialId);
 	}
 
-	// Token: 0x06017B50 RID: 97104 RVA: 0x00606E64 File Offset: 0x00605064
+	// Token: 0x060153C4 RID: 86980 RVA: 0x0062C928 File Offset: 0x0062AB28
 	public int SetHuluRenderingMaterial(int roleId, string materialId)
 	{
 		SkeletalObserverHandle huluHandle = this.GetRoleObserver(roleId).Model.CheckGetComponent<UiRoleHuluComponent>().GetHuluHandle();
 		return UiModelUtil.Instance.SetRenderingMaterial(huluHandle.Model, materialId);
 	}
 
-	// Token: 0x06017B51 RID: 97105 RVA: 0x00606E99 File Offset: 0x00605099
+	// Token: 0x060153C5 RID: 86981 RVA: 0x0062C95D File Offset: 0x0062AB5D
 	public void RemoveHuluRenderingMaterialWithEnding(int roleId, int materialId)
 	{
 		this.GetRoleObserver(roleId).Model.CheckGetComponent<UiRoleHuluComponent>().GetHuluHandle().Model.CheckGetComponent<UiModelRenderingMaterialComponent>().RemoveRenderingMaterialWithEnding(materialId);
 	}
 
-	// Token: 0x06017B52 RID: 97106 RVA: 0x00606EC1 File Offset: 0x006050C1
+	// Token: 0x060153C6 RID: 86982 RVA: 0x0062C985 File Offset: 0x0062AB85
 	public void SetBurstEyeMaterialId(int materialId)
 	{
 		this.BurstEyeMaterialId = materialId;
 	}
 
-	// Token: 0x06017B53 RID: 97107 RVA: 0x00606ECA File Offset: 0x006050CA
+	// Token: 0x060153C7 RID: 86983 RVA: 0x0062C98E File Offset: 0x0062AB8E
 	public int GetBurstEyeMaterialId()
 	{
 		return this.BurstEyeMaterialId;
 	}
 
-	// Token: 0x06017B54 RID: 97108 RVA: 0x00606ED4 File Offset: 0x006050D4
+	// Token: 0x060153C8 RID: 86984 RVA: 0x0062C998 File Offset: 0x0062AB98
 	public void LoadSequenceAsync(string resourceId, Action callBack = null, bool playReverse = false, Action startCallBack = null)
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath(resourceId);
@@ -322,7 +322,7 @@ public class UiLoginSceneManager : Singleton
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06017B55 RID: 97109 RVA: 0x00606F30 File Offset: 0x00605130
+	// Token: 0x060153C9 RID: 86985 RVA: 0x0062C9F4 File Offset: 0x0062ABF4
 	public void PlayLoginLoopSequence()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("LevelSequence_Login");
@@ -350,7 +350,7 @@ public class UiLoginSceneManager : Singleton
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06017B56 RID: 97110 RVA: 0x00606F6C File Offset: 0x0060516C
+	// Token: 0x060153CA RID: 86986 RVA: 0x0062CA30 File Offset: 0x0062AC30
 	private void BlendCameraSequence()
 	{
 		APlayerController playerController = UGameplayStatics.GetPlayerController(GlobalData.World, 0);
@@ -363,7 +363,7 @@ public class UiLoginSceneManager : Singleton
 		playerController.SetViewTargetWithBlend(cineCamera, 0.5f, EViewTargetBlendFunction.VTBlend_Linear, 0f, true, true);
 	}
 
-	// Token: 0x06017B57 RID: 97111 RVA: 0x00606FD6 File Offset: 0x006051D6
+	// Token: 0x060153CB RID: 86987 RVA: 0x0062CA9A File Offset: 0x0062AC9A
 	public void Destroy()
 	{
 		this.DestroyCreateCharacterObservers();
@@ -375,8 +375,8 @@ public class UiLoginSceneManager : Singleton
 		}
 	}
 
-	// Token: 0x17001FD6 RID: 8150
-	// (get) Token: 0x06017B58 RID: 97112 RVA: 0x00606FFE File Offset: 0x006051FE
+	// Token: 0x17002027 RID: 8231
+	// (get) Token: 0x060153CC RID: 86988 RVA: 0x0062CAC2 File Offset: 0x0062ACC2
 	public static UiLoginSceneManager Instance
 	{
 		get
@@ -390,12 +390,12 @@ public class UiLoginSceneManager : Singleton
 		}
 	}
 
-	// Token: 0x06017B59 RID: 97113 RVA: 0x00607021 File Offset: 0x00605221
+	// Token: 0x060153CD RID: 86989 RVA: 0x0062CAE5 File Offset: 0x0062ACE5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017B5A RID: 97114 RVA: 0x00607023 File Offset: 0x00605223
+	// Token: 0x060153CE RID: 86990 RVA: 0x0062CAE7 File Offset: 0x0062ACE7
 	public static void ResetStaticDefaultValue()
 	{
 		UiLoginSceneManager instance = UiLoginSceneManager._instance;
@@ -406,53 +406,53 @@ public class UiLoginSceneManager : Singleton
 		UiLoginSceneManager._instance = null;
 	}
 
-	// Token: 0x06017B5B RID: 97115 RVA: 0x0060703C File Offset: 0x0060523C
+	// Token: 0x060153CF RID: 86991 RVA: 0x0062CB00 File Offset: 0x0062AD00
 	static UiLoginSceneManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiLoginSceneManager.CreateStaticDefaultValue), new Action(UiLoginSceneManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B096 RID: 45206
+	// Token: 0x0400B402 RID: 46082
 	private readonly Dictionary<int, TsUiSceneRoleActor> Observers = new Dictionary<int, TsUiSceneRoleActor>();
 
-	// Token: 0x0400B097 RID: 45207
+	// Token: 0x0400B403 RID: 46083
 	private BP_Cinematics_Tick_C CinematicTick;
 
-	// Token: 0x0400B098 RID: 45208
+	// Token: 0x0400B404 RID: 46084
 	private ASpotLight Spotlight1;
 
-	// Token: 0x0400B099 RID: 45209
+	// Token: 0x0400B405 RID: 46085
 	private ASpotLight Spotlight2;
 
-	// Token: 0x0400B09A RID: 45210
+	// Token: 0x0400B406 RID: 46086
 	private int BurstEyeMaterialId;
 
-	// Token: 0x0400B09B RID: 45211
+	// Token: 0x0400B407 RID: 46087
 	private readonly List<int> RoleLoadingFinishList = new List<int>();
 
-	// Token: 0x0400B09C RID: 45212
+	// Token: 0x0400B408 RID: 46088
 	private readonly List<int> HuluHandleList = new List<int>();
 
-	// Token: 0x0400B09D RID: 45213
+	// Token: 0x0400B409 RID: 46089
 	private Action InitRoleFinishDelegate;
 
-	// Token: 0x0400B09E RID: 45214
+	// Token: 0x0400B40A RID: 46090
 	[Nullable(2)]
 	private ALevelSequenceActor LoginLoopSequence;
 
-	// Token: 0x0400B09F RID: 45215
+	// Token: 0x0400B40B RID: 46091
 	private readonly FName SEQUENCE_CAMERA_TAG = new FName("SequenceCamera");
 
-	// Token: 0x0400B0A0 RID: 45216
+	// Token: 0x0400B40C RID: 46092
 	private readonly FName CINEMATIC_TICK_TAG = new FName("CinematicTick");
 
-	// Token: 0x0400B0A1 RID: 45217
+	// Token: 0x0400B40D RID: 46093
 	private readonly FName SPOT_LIGHT1_TAG = new FName("SpotLight1");
 
-	// Token: 0x0400B0A2 RID: 45218
+	// Token: 0x0400B40E RID: 46094
 	private readonly FName SPOT_LIGHT2_TAG = new FName("SpotLight2");
 
-	// Token: 0x0400B0A3 RID: 45219
+	// Token: 0x0400B40F RID: 46095
 	[Nullable(2)]
 	private static UiLoginSceneManager _instance;
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F5 RID: 18677
+	// Token: 0x0200386C RID: 14444
 	public class FindOppositeNavigationResult
 	{
-		// Token: 0x0401A3A7 RID: 107431
+		// Token: 0x04014C1A RID: 85018
 		public bool IsOppositeNavigationPositive = true;
 	}
 }

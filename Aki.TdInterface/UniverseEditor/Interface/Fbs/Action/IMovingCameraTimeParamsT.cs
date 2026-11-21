@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B75 RID: 27509
+	// Token: 0x020072BB RID: 29371
 	public class IMovingCameraTimeParamsT
 	{
-		// Token: 0x1700CC7C RID: 52348
-		// (get) Token: 0x060304F2 RID: 197874 RVA: 0x006906BC File Offset: 0x0068E8BC
-		// (set) Token: 0x060304F3 RID: 197875 RVA: 0x006906C4 File Offset: 0x0068E8C4
+		// Token: 0x1700D761 RID: 55137
+		// (get) Token: 0x0603334A RID: 209738 RVA: 0x006E8CDC File Offset: 0x006E6EDC
+		// (set) Token: 0x0603334B RID: 209739 RVA: 0x006E8CE4 File Offset: 0x006E6EE4
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700CC7D RID: 52349
-		// (get) Token: 0x060304F4 RID: 197876 RVA: 0x006906CD File Offset: 0x0068E8CD
-		// (set) Token: 0x060304F5 RID: 197877 RVA: 0x006906D5 File Offset: 0x0068E8D5
+		// Token: 0x1700D762 RID: 55138
+		// (get) Token: 0x0603334C RID: 209740 RVA: 0x006E8CED File Offset: 0x006E6EED
+		// (set) Token: 0x0603334D RID: 209741 RVA: 0x006E8CF5 File Offset: 0x006E6EF5
 		public float AfterFadeInStayTime { get; set; }
 
-		// Token: 0x1700CC7E RID: 52350
-		// (get) Token: 0x060304F6 RID: 197878 RVA: 0x006906DE File Offset: 0x0068E8DE
-		// (set) Token: 0x060304F7 RID: 197879 RVA: 0x006906E6 File Offset: 0x0068E8E6
+		// Token: 0x1700D763 RID: 55139
+		// (get) Token: 0x0603334E RID: 209742 RVA: 0x006E8CFE File Offset: 0x006E6EFE
+		// (set) Token: 0x0603334F RID: 209743 RVA: 0x006E8D06 File Offset: 0x006E6F06
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700CC7F RID: 52351
-		// (get) Token: 0x060304F8 RID: 197880 RVA: 0x006906EF File Offset: 0x0068E8EF
-		// (set) Token: 0x060304F9 RID: 197881 RVA: 0x006906F7 File Offset: 0x0068E8F7
+		// Token: 0x1700D764 RID: 55140
+		// (get) Token: 0x06033350 RID: 209744 RVA: 0x006E8D0F File Offset: 0x006E6F0F
+		// (set) Token: 0x06033351 RID: 209745 RVA: 0x006E8D17 File Offset: 0x006E6F17
 		public float BeforeFadeOutStayTime { get; set; }
 
-		// Token: 0x060304FA RID: 197882 RVA: 0x00690700 File Offset: 0x0068E900
+		// Token: 0x06033352 RID: 209746 RVA: 0x006E8D20 File Offset: 0x006E6F20
 		public IMovingCameraTimeParamsT()
 		{
 			this.FadeInTime = 0f;

@@ -13,8 +13,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000013 RID: 19
-	// (get) Token: 0x060000B8 RID: 184 RVA: 0x00004A77 File Offset: 0x00002C77
-	// (set) Token: 0x060000B9 RID: 185 RVA: 0x00004A8B File Offset: 0x00002C8B
+	// (get) Token: 0x060000B8 RID: 184 RVA: 0x00004BDB File Offset: 0x00002DDB
+	// (set) Token: 0x060000B9 RID: 185 RVA: 0x00004BEF File Offset: 0x00002DEF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TEnumAsByte<EArithmeticKeyOperation> CheckType
 	{
@@ -29,8 +29,8 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 	}
 
 	// Token: 0x17000014 RID: 20
-	// (get) Token: 0x060000BA RID: 186 RVA: 0x00004AA0 File Offset: 0x00002CA0
-	// (set) Token: 0x060000BB RID: 187 RVA: 0x00004AB0 File Offset: 0x00002CB0
+	// (get) Token: 0x060000BA RID: 186 RVA: 0x00004C04 File Offset: 0x00002E04
+	// (set) Token: 0x060000BB RID: 187 RVA: 0x00004C14 File Offset: 0x00002E14
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int SourcePbDataId
 	{
@@ -45,8 +45,8 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 	}
 
 	// Token: 0x17000015 RID: 21
-	// (get) Token: 0x060000BC RID: 188 RVA: 0x00004AC1 File Offset: 0x00002CC1
-	// (set) Token: 0x060000BD RID: 189 RVA: 0x00004AD1 File Offset: 0x00002CD1
+	// (get) Token: 0x060000BC RID: 188 RVA: 0x00004C25 File Offset: 0x00002E25
+	// (set) Token: 0x060000BD RID: 189 RVA: 0x00004C35 File Offset: 0x00002E35
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int TargetPbDataId
 	{
@@ -61,8 +61,8 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 	}
 
 	// Token: 0x17000016 RID: 22
-	// (get) Token: 0x060000BE RID: 190 RVA: 0x00004AE2 File Offset: 0x00002CE2
-	// (set) Token: 0x060000BF RID: 191 RVA: 0x00004AF2 File Offset: 0x00002CF2
+	// (get) Token: 0x060000BE RID: 190 RVA: 0x00004C46 File Offset: 0x00002E46
+	// (set) Token: 0x060000BF RID: 191 RVA: 0x00004C56 File Offset: 0x00002E56
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Distance
 	{
@@ -77,8 +77,8 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 	}
 
 	// Token: 0x17000017 RID: 23
-	// (get) Token: 0x060000C0 RID: 192 RVA: 0x00004B03 File Offset: 0x00002D03
-	// (set) Token: 0x060000C1 RID: 193 RVA: 0x00004B13 File Offset: 0x00002D13
+	// (get) Token: 0x060000C0 RID: 192 RVA: 0x00004C67 File Offset: 0x00002E67
+	// (set) Token: 0x060000C1 RID: 193 RVA: 0x00004C77 File Offset: 0x00002E77
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IgnoreZ
 	{
@@ -93,8 +93,8 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 	}
 
 	// Token: 0x17000018 RID: 24
-	// (get) Token: 0x060000C2 RID: 194 RVA: 0x00004B24 File Offset: 0x00002D24
-	// (set) Token: 0x060000C3 RID: 195 RVA: 0x00004B34 File Offset: 0x00002D34
+	// (get) Token: 0x060000C2 RID: 194 RVA: 0x00004C88 File Offset: 0x00002E88
+	// (set) Token: 0x060000C3 RID: 195 RVA: 0x00004C98 File Offset: 0x00002E98
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Tolerance
 	{
@@ -108,7 +108,7 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x060000C4 RID: 196 RVA: 0x00004B48 File Offset: 0x00002D48
+	// Token: 0x060000C4 RID: 196 RVA: 0x00004CAC File Offset: 0x00002EAC
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -123,32 +123,28 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x060000C5 RID: 197 RVA: 0x00004BB8 File Offset: 0x00002DB8
+	// Token: 0x060000C5 RID: 197 RVA: 0x00004D1C File Offset: 0x00002F1C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorDistanceCheck) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorDistanceCheck.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060000C6 RID: 198 RVA: 0x00004C58 File Offset: 0x00002E58
+	// Token: 0x060000C6 RID: 198 RVA: 0x00004DD4 File Offset: 0x00002FD4
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -198,7 +194,7 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 		return flag;
 	}
 
-	// Token: 0x060000C7 RID: 199 RVA: 0x00004DD4 File Offset: 0x00002FD4
+	// Token: 0x060000C7 RID: 199 RVA: 0x00004F50 File Offset: 0x00003150
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private BaseActorComponent GetActorCompByConfig(int configId, AiController aiController)
@@ -235,7 +231,7 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x060000C8 RID: 200 RVA: 0x00004E3E File Offset: 0x0000303E
+	// Token: 0x060000C8 RID: 200 RVA: 0x00004FBA File Offset: 0x000031BA
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorDistanceCheck._ClassPtr == IntPtr.Zero)
@@ -245,23 +241,23 @@ public class TsDecoratorDistanceCheck : UBTDecorator_BlueprintBase, IUnrealUObje
 		return TsDecoratorDistanceCheck._ClassPtr;
 	}
 
-	// Token: 0x060000C9 RID: 201 RVA: 0x00004E64 File Offset: 0x00003064
+	// Token: 0x060000C9 RID: 201 RVA: 0x00004FE0 File Offset: 0x000031E0
 	public TsDecoratorDistanceCheck() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorDistanceCheck.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060000CA RID: 202 RVA: 0x00004E8C File Offset: 0x0000308C
+	// Token: 0x060000CA RID: 202 RVA: 0x00005008 File Offset: 0x00003208
 	[NullableContext(1)]
 	public TsDecoratorDistanceCheck(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorDistanceCheck.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060000CB RID: 203 RVA: 0x00004EBF File Offset: 0x000030BF
+	// Token: 0x060000CB RID: 203 RVA: 0x0000503B File Offset: 0x0000323B
 	protected TsDecoratorDistanceCheck(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060000CC RID: 204 RVA: 0x00004ED4 File Offset: 0x000030D4
+	// Token: 0x060000CC RID: 204 RVA: 0x00005050 File Offset: 0x00003250
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024DD RID: 9437
+// Token: 0x020019C4 RID: 6596
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetterRecommendInfo>
 {
-	// Token: 0x06012FA7 RID: 77735 RVA: 0x004B3238 File Offset: 0x004B1438
+	// Token: 0x06010466 RID: 66662 RVA: 0x004C0DF8 File Offset: 0x004BEFF8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		};
 	}
 
-	// Token: 0x06012FA8 RID: 77736 RVA: 0x004B32CC File Offset: 0x004B14CC
+	// Token: 0x06010467 RID: 66663 RVA: 0x004C0E8C File Offset: 0x004BF08C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendBranchFetterItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FA9 RID: 77737 RVA: 0x004B3310 File Offset: 0x004B1510
+	// Token: 0x06010468 RID: 66664 RVA: 0x004C0ED0 File Offset: 0x004BF0D0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -57,7 +57,7 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		this.FetterItem.CreateThenShowByActor(base.GetExtendToggle(0).GetOwner());
 	}
 
-	// Token: 0x06012FAA RID: 77738 RVA: 0x004B335D File Offset: 0x004B155D
+	// Token: 0x06010469 RID: 66665 RVA: 0x004C0F1D File Offset: 0x004BF11D
 	[NullableContext(1)]
 	public override void Refresh(VisionFetterRecommendInfo data, bool isSelected, int gridIndex)
 	{
@@ -66,7 +66,7 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		this.RefreshSkillBranchItem();
 	}
 
-	// Token: 0x06012FAB RID: 77739 RVA: 0x004B337C File Offset: 0x004B157C
+	// Token: 0x0601046A RID: 66666 RVA: 0x004C0F3C File Offset: 0x004BF13C
 	public void RefreshSkillBranchItem()
 	{
 		PhantomRecommend? config = ConfigPhantomRecommendByRoleId.GetConfig(this.RoleId, true);
@@ -114,13 +114,13 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), config2.Value.SkillBranchText, Array.Empty<object>());
 	}
 
-	// Token: 0x06012FAC RID: 77740 RVA: 0x004B3536 File Offset: 0x004B1736
+	// Token: 0x0601046B RID: 66667 RVA: 0x004C10F6 File Offset: 0x004BF2F6
 	public void SetRoldId(int roleId)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x06012FAD RID: 77741 RVA: 0x004B3540 File Offset: 0x004B1740
+	// Token: 0x0601046C RID: 66668 RVA: 0x004C1100 File Offset: 0x004BF300
 	[NullableContext(1)]
 	private string RefreshSkillBranchIconHandler(int index)
 	{
@@ -133,7 +133,7 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		return skillBranchConfigById.Value.Icon;
 	}
 
-	// Token: 0x06012FAE RID: 77742 RVA: 0x004B3589 File Offset: 0x004B1789
+	// Token: 0x0601046D RID: 66669 RVA: 0x004C1149 File Offset: 0x004BF349
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -147,19 +147,19 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		}
 	}
 
-	// Token: 0x06012FAF RID: 77743 RVA: 0x004B35A5 File Offset: 0x004B17A5
+	// Token: 0x0601046E RID: 66670 RVA: 0x004C1165 File Offset: 0x004BF365
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06012FB0 RID: 77744 RVA: 0x004B35AF File Offset: 0x004B17AF
+	// Token: 0x0601046F RID: 66671 RVA: 0x004C116F File Offset: 0x004BF36F
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x06012FB1 RID: 77745 RVA: 0x004B35B9 File Offset: 0x004B17B9
+	// Token: 0x06010470 RID: 66672 RVA: 0x004C1179 File Offset: 0x004BF379
 	private void SetToggleState(bool isSelected, bool fireEvent = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -170,39 +170,39 @@ public class VisionNewRecommendBranchFetterItem : GridProxyAbstract<VisionFetter
 		extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x06012FB2 RID: 77746 RVA: 0x004B35D6 File Offset: 0x004B17D6
+	// Token: 0x06010471 RID: 66673 RVA: 0x004C1196 File Offset: 0x004BF396
 	[NullableContext(1)]
 	public override object GetKey(VisionFetterRecommendInfo data, int displayIndex)
 	{
 		return data.GetPlanId();
 	}
 
-	// Token: 0x04008EDC RID: 36572
+	// Token: 0x04009026 RID: 36902
 	private VisionNewRecommendFetterItem FetterItem;
 
-	// Token: 0x04008EDD RID: 36573
+	// Token: 0x04009027 RID: 36903
 	private RecommendSkillBranchItem SkillBranchItem;
 
-	// Token: 0x04008EDE RID: 36574
+	// Token: 0x04009028 RID: 36904
 	private int RoleId;
 
-	// Token: 0x04008EDF RID: 36575
+	// Token: 0x04009029 RID: 36905
 	private VisionFetterRecommendInfo Data;
 
-	// Token: 0x04008EE0 RID: 36576
+	// Token: 0x0400902A RID: 36906
 	public Action<int> OnSelectedCallback;
 
-	// Token: 0x02008A6E RID: 35438
+	// Token: 0x02007BF6 RID: 31734
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF3B RID: 184123
+		// Token: 0x04028254 RID: 164436
 		Toggle,
-		// Token: 0x0402CF3C RID: 184124
+		// Token: 0x04028255 RID: 164437
 		SkillBranchRoot,
-		// Token: 0x0402CF3D RID: 184125
+		// Token: 0x04028256 RID: 164438
 		SkillBranchItem,
-		// Token: 0x0402CF3E RID: 184126
+		// Token: 0x04028257 RID: 164439
 		SkillBranchText
 	}
 }

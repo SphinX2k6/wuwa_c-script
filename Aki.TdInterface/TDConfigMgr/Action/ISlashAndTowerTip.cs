@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E81 RID: 7809
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020B6 RID: 8374
 	public class ISlashAndTowerTip : ICommonTipType
 	{
-		// Token: 0x0600A718 RID: 42776 RVA: 0x00179D9C File Offset: 0x00177F9C
+		// Token: 0x0600B1D0 RID: 45520 RVA: 0x0018FA9C File Offset: 0x0018DC9C
 		private ISlashAndTowerTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A719 RID: 42777 RVA: 0x00179DD4 File Offset: 0x00177FD4
+		// Token: 0x0600B1D1 RID: 45521 RVA: 0x0018FAD4 File Offset: 0x0018DCD4
 		public static ISlashAndTowerTip Create([Nullable(2)] ISlashAndTowerTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A71A RID: 42778 RVA: 0x00179DE7 File Offset: 0x00177FE7
+		// Token: 0x0600B1D2 RID: 45522 RVA: 0x0018FAE7 File Offset: 0x0018DCE7
 		public static ISlashAndTowerTip CreateFromSetValue([Nullable(2)] ISlashAndTowerTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A71B RID: 42779 RVA: 0x00179DFA File Offset: 0x00177FFA
+		// Token: 0x0600B1D3 RID: 45523 RVA: 0x0018FAFA File Offset: 0x0018DCFA
 		public new ISlashAndTowerTip_SetValue ToSetValue()
 		{
 			return new ISlashAndTowerTip_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003322 RID: 13090
-		// (get) Token: 0x0600A71C RID: 42780 RVA: 0x00179E19 File Offset: 0x00178019
-		// (set) Token: 0x0600A71D RID: 42781 RVA: 0x00179E44 File Offset: 0x00178044
+		// Token: 0x170035E6 RID: 13798
+		// (get) Token: 0x0600B1D4 RID: 45524 RVA: 0x0018FB19 File Offset: 0x0018DD19
+		// (set) Token: 0x0600B1D5 RID: 45525 RVA: 0x0018FB44 File Offset: 0x0018DD44
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003323 RID: 13091
-		// (get) Token: 0x0600A71E RID: 42782 RVA: 0x00179E52 File Offset: 0x00178052
-		// (set) Token: 0x0600A71F RID: 42783 RVA: 0x00179E7D File Offset: 0x0017807D
+		// Token: 0x170035E7 RID: 13799
+		// (get) Token: 0x0600B1D6 RID: 45526 RVA: 0x0018FB52 File Offset: 0x0018DD52
+		// (set) Token: 0x0600B1D7 RID: 45527 RVA: 0x0018FB7D File Offset: 0x0018DD7D
 		public virtual string WarningText
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063BB RID: 25531
+		// Token: 0x0400699F RID: 27039
 		[Nullable(2)]
 		protected new ISlashAndTowerTip FbInstance;
 
-		// Token: 0x040063BC RID: 25532
+		// Token: 0x040069A0 RID: 27040
 		[Nullable(2)]
 		protected new ISlashAndTowerTip_SetValue PocoInterface;
 	}

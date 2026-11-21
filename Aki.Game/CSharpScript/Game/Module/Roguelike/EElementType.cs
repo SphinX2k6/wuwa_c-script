@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D99 RID: 19865
+	// Token: 0x02003D62 RID: 15714
 	public enum EElementType
 	{
-		// Token: 0x0401B3EF RID: 111599
+		// Token: 0x04015DC2 RID: 89538
 		UnKnow = -1,
-		// Token: 0x0401B3F0 RID: 111600
+		// Token: 0x04015DC3 RID: 89539
 		Element0,
-		// Token: 0x0401B3F1 RID: 111601
+		// Token: 0x04015DC4 RID: 89540
 		Element1,
-		// Token: 0x0401B3F2 RID: 111602
+		// Token: 0x04015DC5 RID: 89541
 		Element2,
-		// Token: 0x0401B3F3 RID: 111603
+		// Token: 0x04015DC6 RID: 89542
 		Element3,
-		// Token: 0x0401B3F4 RID: 111604
+		// Token: 0x04015DC7 RID: 89543
 		Element4,
-		// Token: 0x0401B3F5 RID: 111605
+		// Token: 0x04015DC8 RID: 89544
 		Element5,
-		// Token: 0x0401B3F6 RID: 111606
+		// Token: 0x04015DC9 RID: 89545
 		Element6,
-		// Token: 0x0401B3F7 RID: 111607
+		// Token: 0x04015DCA RID: 89546
 		Universal,
-		// Token: 0x0401B3F8 RID: 111608
+		// Token: 0x04015DCB RID: 89547
 		TotalLevel = 9
 	}
 }

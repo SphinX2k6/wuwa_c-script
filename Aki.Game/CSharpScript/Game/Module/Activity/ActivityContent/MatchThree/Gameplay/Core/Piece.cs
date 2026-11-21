@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core
 {
-	// Token: 0x0200652A RID: 25898
+	// Token: 0x020054A8 RID: 21672
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Piece
 	{
-		// Token: 0x17009526 RID: 38182
-		// (get) Token: 0x06040EFC RID: 265980 RVA: 0x00FBC73F File Offset: 0x00FBA93F
-		// (set) Token: 0x06040EFD RID: 265981 RVA: 0x00FBC747 File Offset: 0x00FBA947
+		// Token: 0x17006888 RID: 26760
+		// (get) Token: 0x06035BC1 RID: 220097 RVA: 0x00F03783 File Offset: 0x00F01983
+		// (set) Token: 0x06035BC2 RID: 220098 RVA: 0x00F0378B File Offset: 0x00F0198B
 		public EPieceCaps Caps { get; private set; }
 
-		// Token: 0x17009527 RID: 38183
-		// (get) Token: 0x06040EFE RID: 265982 RVA: 0x00FBC750 File Offset: 0x00FBA950
+		// Token: 0x17006889 RID: 26761
+		// (get) Token: 0x06035BC3 RID: 220099 RVA: 0x00F03794 File Offset: 0x00F01994
 		public bool IsMatchable
 		{
 			get
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040EFF RID: 265983 RVA: 0x00FBC75D File Offset: 0x00FBA95D
+		// Token: 0x06035BC4 RID: 220100 RVA: 0x00F037A1 File Offset: 0x00F019A1
 		public bool Has(EPieceCaps cap)
 		{
 			return (this.Caps & cap) > EPieceCaps.None;
 		}
 
-		// Token: 0x06040F00 RID: 265984 RVA: 0x00FBC76C File Offset: 0x00FBA96C
+		// Token: 0x06035BC5 RID: 220101 RVA: 0x00F037B0 File Offset: 0x00F019B0
 		public ref PieceComponentState StateOf(IPieceComponent comp)
 		{
 			for (int i = 0; i < this.Components.Count; i++)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return ref this.Missing;
 		}
 
-		// Token: 0x06040F01 RID: 265985 RVA: 0x00FBC7F4 File Offset: 0x00FBA9F4
+		// Token: 0x06035BC6 RID: 220102 RVA: 0x00F03838 File Offset: 0x00F01A38
 		public void Assign(IReadOnlyList<IPieceComponent> prototypes, EPieceCaps caps)
 		{
 			this.Components.Clear();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Caps = caps;
 		}
 
-		// Token: 0x06040F02 RID: 265986 RVA: 0x00FBC86C File Offset: 0x00FBAA6C
+		// Token: 0x06035BC7 RID: 220103 RVA: 0x00F038B0 File Offset: 0x00F01AB0
 		public void Append(IPieceComponent comp)
 		{
 			this.Components.Add(comp);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Caps |= comp.Caps;
 		}
 
-		// Token: 0x06040F03 RID: 265987 RVA: 0x00FBC8E8 File Offset: 0x00FBAAE8
+		// Token: 0x06035BC8 RID: 220104 RVA: 0x00F0392C File Offset: 0x00F01B2C
 		public bool Remove(IPieceComponent comp)
 		{
 			for (int i = 0; i < this.Components.Count; i++)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return false;
 		}
 
-		// Token: 0x06040F04 RID: 265988 RVA: 0x00FBC954 File Offset: 0x00FBAB54
+		// Token: 0x06035BC9 RID: 220105 RVA: 0x00F03998 File Offset: 0x00F01B98
 		private void RebuildCaps()
 		{
 			EPieceCaps epieceCaps = EPieceCaps.None;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Caps = epieceCaps;
 		}
 
-		// Token: 0x06040F05 RID: 265989 RVA: 0x00FBC9B4 File Offset: 0x00FBABB4
+		// Token: 0x06035BCA RID: 220106 RVA: 0x00F039F8 File Offset: 0x00F01BF8
 		public void CopyFrom(Piece src)
 		{
 			this.Components.Clear();
@@ -116,14 +116,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Type = src.Type;
 		}
 
-		// Token: 0x06040F06 RID: 265990 RVA: 0x00FBCA3A File Offset: 0x00FBAC3A
+		// Token: 0x06035BCB RID: 220107 RVA: 0x00F03A7E File Offset: 0x00F01C7E
 		public void Reset()
 		{
 			this.Components.Clear();
 			this.Caps = EPieceCaps.None;
 		}
 
-		// Token: 0x06040F07 RID: 265991 RVA: 0x00FBCA4E File Offset: 0x00FBAC4E
+		// Token: 0x06035BCC RID: 220108 RVA: 0x00F03A92 File Offset: 0x00F01C92
 		private void EnsureStateCapacity(int count)
 		{
 			if (this.States.Length < count)
@@ -132,16 +132,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021DF5 RID: 138741
+		// Token: 0x0401C726 RID: 116518
 		public readonly List<IPieceComponent> Components = new List<IPieceComponent>();
 
-		// Token: 0x04021DF6 RID: 138742
+		// Token: 0x0401C727 RID: 116519
 		private PieceComponentState[] States = new PieceComponentState[4];
 
-		// Token: 0x04021DF8 RID: 138744
+		// Token: 0x0401C729 RID: 116521
 		private PieceComponentState Missing;
 
-		// Token: 0x04021DF9 RID: 138745
+		// Token: 0x0401C72A RID: 116522
 		public EPieceType Type;
 	}
 }

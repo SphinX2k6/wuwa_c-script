@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005755 RID: 22357
+	// Token: 0x02005D5C RID: 23900
 	public class IPointChooseType_UnionUnion
 	{
-		// Token: 0x1700A6CA RID: 42698
-		// (get) Token: 0x0602576B RID: 153451 RVA: 0x0052B499 File Offset: 0x00529699
-		// (set) Token: 0x0602576C RID: 153452 RVA: 0x0052B4A1 File Offset: 0x005296A1
+		// Token: 0x1700AFEE RID: 45038
+		// (get) Token: 0x06027C8B RID: 162955 RVA: 0x00571625 File Offset: 0x0056F825
+		// (set) Token: 0x06027C8C RID: 162956 RVA: 0x0057162D File Offset: 0x0056F82D
 		public IPointChooseType_Union Type { get; set; }
 
-		// Token: 0x1700A6CB RID: 42699
-		// (get) Token: 0x0602576D RID: 153453 RVA: 0x0052B4AA File Offset: 0x005296AA
-		// (set) Token: 0x0602576E RID: 153454 RVA: 0x0052B4B2 File Offset: 0x005296B2
+		// Token: 0x1700AFEF RID: 45039
+		// (get) Token: 0x06027C8D RID: 162957 RVA: 0x00571636 File Offset: 0x0056F836
+		// (set) Token: 0x06027C8E RID: 162958 RVA: 0x0057163E File Offset: 0x0056F83E
 		public object Value { get; set; }
 
-		// Token: 0x0602576F RID: 153455 RVA: 0x0052B4BB File Offset: 0x005296BB
+		// Token: 0x06027C8F RID: 162959 RVA: 0x00571647 File Offset: 0x0056F847
 		public IPointChooseType_UnionUnion()
 		{
 			this.Type = IPointChooseType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025770 RID: 153456 RVA: 0x0052B4D1 File Offset: 0x005296D1
+		// Token: 0x06027C90 RID: 162960 RVA: 0x0057165D File Offset: 0x0056F85D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025771 RID: 153457 RVA: 0x0052B4E3 File Offset: 0x005296E3
+		// Token: 0x06027C91 RID: 162961 RVA: 0x0057166F File Offset: 0x0056F86F
 		public IPointChooseTypeT AsIPointChooseType()
 		{
 			return this.As<IPointChooseTypeT>();
 		}
 
-		// Token: 0x06025772 RID: 153458 RVA: 0x0052B4EB File Offset: 0x005296EB
+		// Token: 0x06027C92 RID: 162962 RVA: 0x00571677 File Offset: 0x0056F877
 		public static IPointChooseType_UnionUnion FromIPointChooseType(IPointChooseTypeT _ipointchoosetype)
 		{
 			return new IPointChooseType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025773 RID: 153459 RVA: 0x0052B500 File Offset: 0x00529700
+		// Token: 0x06027C93 RID: 162963 RVA: 0x0057168C File Offset: 0x0056F88C
 		public ISpawnMonsterPointT AsISpawnMonsterPoint()
 		{
 			return this.As<ISpawnMonsterPointT>();
 		}
 
-		// Token: 0x06025774 RID: 153460 RVA: 0x0052B508 File Offset: 0x00529708
+		// Token: 0x06027C94 RID: 162964 RVA: 0x00571694 File Offset: 0x0056F894
 		public static IPointChooseType_UnionUnion FromISpawnMonsterPoint(ISpawnMonsterPointT _ispawnmonsterpoint)
 		{
 			return new IPointChooseType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025775 RID: 153461 RVA: 0x0052B520 File Offset: 0x00529720
+		// Token: 0x06027C95 RID: 162965 RVA: 0x005716AC File Offset: 0x0056F8AC
 		public static int Pack(FlatBufferBuilder builder, IPointChooseType_UnionUnion _o)
 		{
 			IPointChooseType_Union type = _o.Type;

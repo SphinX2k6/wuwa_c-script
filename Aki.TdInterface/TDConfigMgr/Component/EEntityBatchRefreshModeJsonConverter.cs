@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000933 RID: 2355
+	// Token: 0x020009E0 RID: 2528
 	public class EEntityBatchRefreshModeJsonConverter : JsonConverter<EEntityBatchRefreshMode>
 	{
-		// Token: 0x06003518 RID: 13592 RVA: 0x0008AA6C File Offset: 0x00088C6C
+		// Token: 0x06003884 RID: 14468 RVA: 0x000925EC File Offset: 0x000907EC
 		public override EEntityBatchRefreshMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EEntityBatchRefreshModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003519 RID: 13593 RVA: 0x0008AA90 File Offset: 0x00088C90
+		// Token: 0x06003885 RID: 14469 RVA: 0x00092610 File Offset: 0x00090810
 		public override void Write(Utf8JsonWriter writer, EEntityBatchRefreshMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

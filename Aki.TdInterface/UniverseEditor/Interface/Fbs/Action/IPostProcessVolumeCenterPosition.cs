@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D83 RID: 28035
+	// Token: 0x020074FE RID: 29950
 	public struct IPostProcessVolumeCenterPosition : IFlatbufferObject
 	{
-		// Token: 0x1700D12A RID: 53546
-		// (get) Token: 0x0603185A RID: 202842 RVA: 0x006B67E8 File Offset: 0x006B49E8
+		// Token: 0x1700DC72 RID: 56434
+		// (get) Token: 0x06034856 RID: 215126 RVA: 0x00711ED0 File Offset: 0x007100D0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603185B RID: 202843 RVA: 0x006B67F5 File Offset: 0x006B49F5
+		// Token: 0x06034857 RID: 215127 RVA: 0x00711EDD File Offset: 0x007100DD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603185C RID: 202844 RVA: 0x006B67FC File Offset: 0x006B49FC
+		// Token: 0x06034858 RID: 215128 RVA: 0x00711EE4 File Offset: 0x007100E4
 		public static IPostProcessVolumeCenterPosition GetRootAsIPostProcessVolumeCenterPosition(ByteBuffer _bb)
 		{
 			return IPostProcessVolumeCenterPosition.GetRootAsIPostProcessVolumeCenterPosition(_bb, default(IPostProcessVolumeCenterPosition));
 		}
 
-		// Token: 0x0603185D RID: 202845 RVA: 0x006B6818 File Offset: 0x006B4A18
+		// Token: 0x06034859 RID: 215129 RVA: 0x00711F00 File Offset: 0x00710100
 		public static IPostProcessVolumeCenterPosition GetRootAsIPostProcessVolumeCenterPosition(ByteBuffer _bb, IPostProcessVolumeCenterPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603185E RID: 202846 RVA: 0x006B6835 File Offset: 0x006B4A35
+		// Token: 0x0603485A RID: 215130 RVA: 0x00711F1D File Offset: 0x0071011D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603185F RID: 202847 RVA: 0x006B6844 File Offset: 0x006B4A44
+		// Token: 0x0603485B RID: 215131 RVA: 0x00711F2C File Offset: 0x0071012C
 		public IPostProcessVolumeCenterPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D12B RID: 53547
-		// (get) Token: 0x06031860 RID: 202848 RVA: 0x006B6854 File Offset: 0x006B4A54
+		// Token: 0x1700DC73 RID: 56435
+		// (get) Token: 0x0603485C RID: 215132 RVA: 0x00711F3C File Offset: 0x0071013C
 		public EMpcEffectParamType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D12C RID: 53548
-		// (get) Token: 0x06031861 RID: 202849 RVA: 0x006B6890 File Offset: 0x006B4A90
+		// Token: 0x1700DC74 RID: 56436
+		// (get) Token: 0x0603485D RID: 215133 RVA: 0x00711F78 File Offset: 0x00710178
 		public IVectorInfo? Position
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031862 RID: 202850 RVA: 0x006B68ED File Offset: 0x006B4AED
+		// Token: 0x0603485E RID: 215134 RVA: 0x00711FD5 File Offset: 0x007101D5
 		public static Offset<IPostProcessVolumeCenterPosition> CreateIPostProcessVolumeCenterPosition(FlatBufferBuilder builder, EMpcEffectParamType Type = EMpcEffectParamType.PostProcessVolumeCenterPosition, Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostProcessVolumeCenterPosition.EndIPostProcessVolumeCenterPosition(builder);
 		}
 
-		// Token: 0x06031863 RID: 202851 RVA: 0x006B690A File Offset: 0x006B4B0A
+		// Token: 0x0603485F RID: 215135 RVA: 0x00711FF2 File Offset: 0x007101F2
 		public static void StartIPostProcessVolumeCenterPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031864 RID: 202852 RVA: 0x006B6913 File Offset: 0x006B4B13
+		// Token: 0x06034860 RID: 215136 RVA: 0x00711FFB File Offset: 0x007101FB
 		public static void AddType(FlatBufferBuilder builder, EMpcEffectParamType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031865 RID: 202853 RVA: 0x006B691E File Offset: 0x006B4B1E
+		// Token: 0x06034861 RID: 215137 RVA: 0x00712006 File Offset: 0x00710206
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(1, positionOffset.Value, 0);
 		}
 
-		// Token: 0x06031866 RID: 202854 RVA: 0x006B692E File Offset: 0x006B4B2E
+		// Token: 0x06034862 RID: 215138 RVA: 0x00712016 File Offset: 0x00710216
 		public static Offset<IPostProcessVolumeCenterPosition> EndIPostProcessVolumeCenterPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<IPostProcessVolumeCenterPosition>(builder.EndTable());
 		}
 
-		// Token: 0x06031867 RID: 202855 RVA: 0x006B693C File Offset: 0x006B4B3C
+		// Token: 0x06034863 RID: 215139 RVA: 0x00712024 File Offset: 0x00710224
 		public IPostProcessVolumeCenterPositionT UnPack()
 		{
 			IPostProcessVolumeCenterPositionT postProcessVolumeCenterPositionT = new IPostProcessVolumeCenterPositionT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return postProcessVolumeCenterPositionT;
 		}
 
-		// Token: 0x06031868 RID: 202856 RVA: 0x006B6958 File Offset: 0x006B4B58
+		// Token: 0x06034864 RID: 215140 RVA: 0x00712040 File Offset: 0x00710240
 		public void UnPackTo(IPostProcessVolumeCenterPositionT _o)
 		{
 			_o.Type = this.Type;
 			_o.Position = ((this.Position != null) ? this.Position.Value.UnPack() : null);
 		}
 
-		// Token: 0x06031869 RID: 202857 RVA: 0x006B69A0 File Offset: 0x006B4BA0
+		// Token: 0x06034865 RID: 215141 RVA: 0x00712088 File Offset: 0x00710288
 		public static Offset<IPostProcessVolumeCenterPosition> Pack(FlatBufferBuilder builder, IPostProcessVolumeCenterPositionT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostProcessVolumeCenterPosition.CreateIPostProcessVolumeCenterPosition(builder, _o.Type, positionOffset);
 		}
 
-		// Token: 0x04011751 RID: 71505
+		// Token: 0x040126CD RID: 75469
 		private Table __p;
 	}
 }

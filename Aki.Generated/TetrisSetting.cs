@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001127 RID: 4391
+	// Token: 0x0200125D RID: 4701
 	public struct TetrisSetting : IFlatbufferObject
 	{
-		// Token: 0x17003A4C RID: 14924
-		// (get) Token: 0x0600DE59 RID: 56921 RVA: 0x0032CDB1 File Offset: 0x0032AFB1
+		// Token: 0x17003DAE RID: 15790
+		// (get) Token: 0x0600EBC0 RID: 60352 RVA: 0x003582D1 File Offset: 0x003564D1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE5A RID: 56922 RVA: 0x0032CDBE File Offset: 0x0032AFBE
+		// Token: 0x0600EBC1 RID: 60353 RVA: 0x003582DE File Offset: 0x003564DE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DE5B RID: 56923 RVA: 0x0032CDC8 File Offset: 0x0032AFC8
+		// Token: 0x0600EBC2 RID: 60354 RVA: 0x003582E8 File Offset: 0x003564E8
 		public static TetrisSetting GetRootAsTetrisSetting(ByteBuffer _bb)
 		{
 			return TetrisSetting.GetRootAsTetrisSetting(_bb, default(TetrisSetting));
 		}
 
-		// Token: 0x0600DE5C RID: 56924 RVA: 0x0032CDE4 File Offset: 0x0032AFE4
+		// Token: 0x0600EBC3 RID: 60355 RVA: 0x00358304 File Offset: 0x00356504
 		public static TetrisSetting GetRootAsTetrisSetting(ByteBuffer _bb, TetrisSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DE5D RID: 56925 RVA: 0x0032CE01 File Offset: 0x0032B001
+		// Token: 0x0600EBC4 RID: 60356 RVA: 0x00358321 File Offset: 0x00356521
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DE5E RID: 56926 RVA: 0x0032CE10 File Offset: 0x0032B010
+		// Token: 0x0600EBC5 RID: 60357 RVA: 0x00358330 File Offset: 0x00356530
 		public TetrisSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003A4D RID: 14925
-		// (get) Token: 0x0600DE5F RID: 56927 RVA: 0x0032CE20 File Offset: 0x0032B020
+		// Token: 0x17003DAF RID: 15791
+		// (get) Token: 0x0600EBC6 RID: 60358 RVA: 0x00358340 File Offset: 0x00356540
 		public string Key
 		{
 			get
@@ -64,19 +64,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE60 RID: 56928 RVA: 0x0032CE57 File Offset: 0x0032B057
+		// Token: 0x0600EBC7 RID: 60359 RVA: 0x00358377 File Offset: 0x00356577
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600DE61 RID: 56929 RVA: 0x0032CE66 File Offset: 0x0032B066
+		// Token: 0x0600EBC8 RID: 60360 RVA: 0x00358386 File Offset: 0x00356586
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600DE62 RID: 56930 RVA: 0x0032CE80 File Offset: 0x0032B080
+		// Token: 0x0600EBC9 RID: 60361 RVA: 0x003583A0 File Offset: 0x003565A0
 		public int BasicScore(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -87,8 +87,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003A4E RID: 14926
-		// (get) Token: 0x0600DE63 RID: 56931 RVA: 0x0032CEC0 File Offset: 0x0032B0C0
+		// Token: 0x17003DB0 RID: 15792
+		// (get) Token: 0x0600EBCA RID: 60362 RVA: 0x003583E0 File Offset: 0x003565E0
 		public int BasicScoreLength
 		{
 			get
@@ -102,19 +102,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE64 RID: 56932 RVA: 0x0032CEEB File Offset: 0x0032B0EB
+		// Token: 0x0600EBCB RID: 60363 RVA: 0x0035840B File Offset: 0x0035660B
 		public Span<int> GetBasicScoreBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600DE65 RID: 56933 RVA: 0x0032CEFA File Offset: 0x0032B0FA
+		// Token: 0x0600EBCC RID: 60364 RVA: 0x0035841A File Offset: 0x0035661A
 		public int[] GetBasicScoreArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600DE66 RID: 56934 RVA: 0x0032CF14 File Offset: 0x0032B114
+		// Token: 0x0600EBCD RID: 60365 RVA: 0x00358434 File Offset: 0x00356634
 		public int ComboAddation(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -125,8 +125,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003A4F RID: 14927
-		// (get) Token: 0x0600DE67 RID: 56935 RVA: 0x0032CF54 File Offset: 0x0032B154
+		// Token: 0x17003DB1 RID: 15793
+		// (get) Token: 0x0600EBCE RID: 60366 RVA: 0x00358474 File Offset: 0x00356674
 		public int ComboAddationLength
 		{
 			get
@@ -140,20 +140,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE68 RID: 56936 RVA: 0x0032CF7F File Offset: 0x0032B17F
+		// Token: 0x0600EBCF RID: 60367 RVA: 0x0035849F File Offset: 0x0035669F
 		public Span<int> GetComboAddationBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600DE69 RID: 56937 RVA: 0x0032CF8E File Offset: 0x0032B18E
+		// Token: 0x0600EBD0 RID: 60368 RVA: 0x003584AE File Offset: 0x003566AE
 		public int[] GetComboAddationArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003A50 RID: 14928
-		// (get) Token: 0x0600DE6A RID: 56938 RVA: 0x0032CFA8 File Offset: 0x0032B1A8
+		// Token: 0x17003DB2 RID: 15794
+		// (get) Token: 0x0600EBD1 RID: 60369 RVA: 0x003584C8 File Offset: 0x003566C8
 		public int AllClear
 		{
 			get
@@ -167,43 +167,108 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DE6B RID: 56939 RVA: 0x0032CFE8 File Offset: 0x0032B1E8
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BasicScoreIter()或GetBasicScoreBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BasicScore()
+		// Token: 0x0600EBD2 RID: 60370 RVA: 0x00358508 File Offset: 0x00356708
+		public int BombScore(int j)
 		{
-			TetrisSetting tetrisSetting = this;
-			return tetrisSetting.GetBasicScoreArray() ?? Array.Empty<int>();
+			int num = this.__p.__offset(12);
+			if (num == 0)
+			{
+				return 0;
+			}
+			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x0600DE6C RID: 56940 RVA: 0x0032D00C File Offset: 0x0032B20C
-		[NullableContext(1)]
-		public readonly IEnumerable<int> BasicScoreIter()
+		// Token: 0x17003DB3 RID: 15795
+		// (get) Token: 0x0600EBD3 RID: 60371 RVA: 0x00358548 File Offset: 0x00356748
+		public int BombScoreLength
 		{
-			TetrisSetting.<BasicScoreIter>d__25 <BasicScoreIter>d__ = new TetrisSetting.<BasicScoreIter>d__25(-2);
+			get
+			{
+				int num = this.__p.__offset(12);
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
+			}
+		}
+
+		// Token: 0x0600EBD4 RID: 60372 RVA: 0x00358574 File Offset: 0x00356774
+		public Span<int> GetBombScoreBytes()
+		{
+			return this.__p.__vector_as_span<int>(12, 4);
+		}
+
+		// Token: 0x0600EBD5 RID: 60373 RVA: 0x00358584 File Offset: 0x00356784
+		public int[] GetBombScoreArray()
+		{
+			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
+		}
+
+		// Token: 0x17003DB4 RID: 15796
+		// (get) Token: 0x0600EBD6 RID: 60374 RVA: 0x0035859C File Offset: 0x0035679C
+		public float RotationLength
+		{
+			get
+			{
+				int num = this.__p.__offset(14);
+				if (num == 0)
+				{
+					return 0f;
+				}
+				return this.__p.bb.GetFloat(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x0600EBD7 RID: 60375 RVA: 0x003585DD File Offset: 0x003567DD
+		[NullableContext(1)]
+		public int[] BasicScore()
+		{
+			return this.GetBasicScoreArray();
+		}
+
+		// Token: 0x0600EBD8 RID: 60376 RVA: 0x003585E5 File Offset: 0x003567E5
+		[NullableContext(1)]
+		public IEnumerable<int> BasicScoreIter()
+		{
+			TetrisSetting.<BasicScoreIter>d__32 <BasicScoreIter>d__ = new TetrisSetting.<BasicScoreIter>d__32(-2);
 			<BasicScoreIter>d__.<>3__<>4__this = this;
 			return <BasicScoreIter>d__;
 		}
 
-		// Token: 0x0600DE6D RID: 56941 RVA: 0x0032D024 File Offset: 0x0032B224
+		// Token: 0x0600EBD9 RID: 60377 RVA: 0x003585FA File Offset: 0x003567FA
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ComboAddationIter()或GetComboAddationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ComboAddation()
+		public int[] BombScore()
 		{
-			TetrisSetting tetrisSetting = this;
-			return tetrisSetting.GetComboAddationArray() ?? Array.Empty<int>();
+			return this.GetBombScoreArray();
 		}
 
-		// Token: 0x0600DE6E RID: 56942 RVA: 0x0032D048 File Offset: 0x0032B248
+		// Token: 0x0600EBDA RID: 60378 RVA: 0x00358602 File Offset: 0x00356802
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ComboAddationIter()
+		public IEnumerable<int> BombScoreIter()
 		{
-			TetrisSetting.<ComboAddationIter>d__27 <ComboAddationIter>d__ = new TetrisSetting.<ComboAddationIter>d__27(-2);
+			TetrisSetting.<BombScoreIter>d__34 <BombScoreIter>d__ = new TetrisSetting.<BombScoreIter>d__34(-2);
+			<BombScoreIter>d__.<>3__<>4__this = this;
+			return <BombScoreIter>d__;
+		}
+
+		// Token: 0x0600EBDB RID: 60379 RVA: 0x00358617 File Offset: 0x00356817
+		[NullableContext(1)]
+		public int[] ComboAddation()
+		{
+			return this.GetComboAddationArray();
+		}
+
+		// Token: 0x0600EBDC RID: 60380 RVA: 0x0035861F File Offset: 0x0035681F
+		[NullableContext(1)]
+		public IEnumerable<int> ComboAddationIter()
+		{
+			TetrisSetting.<ComboAddationIter>d__36 <ComboAddationIter>d__ = new TetrisSetting.<ComboAddationIter>d__36(-2);
 			<ComboAddationIter>d__.<>3__<>4__this = this;
 			return <ComboAddationIter>d__;
 		}
 
-		// Token: 0x04005265 RID: 21093
+		// Token: 0x040058A8 RID: 22696
 		private Table __p;
 	}
 }

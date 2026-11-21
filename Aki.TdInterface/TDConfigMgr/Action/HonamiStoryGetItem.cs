@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001749 RID: 5961
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018CA RID: 6346
 	public class HonamiStoryGetItem : ActionParams
 	{
-		// Token: 0x06007E27 RID: 32295 RVA: 0x0012E330 File Offset: 0x0012C530
+		// Token: 0x06008517 RID: 34071 RVA: 0x0013D590 File Offset: 0x0013B790
 		private HonamiStoryGetItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E28 RID: 32296 RVA: 0x0012E368 File Offset: 0x0012C568
+		// Token: 0x06008518 RID: 34072 RVA: 0x0013D5C8 File Offset: 0x0013B7C8
 		public static HonamiStoryGetItem Create([Nullable(2)] HonamiStoryGetItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E29 RID: 32297 RVA: 0x0012E37B File Offset: 0x0012C57B
+		// Token: 0x06008519 RID: 34073 RVA: 0x0013D5DB File Offset: 0x0013B7DB
 		public static HonamiStoryGetItem CreateFromSetValue([Nullable(2)] HonamiStoryGetItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E2A RID: 32298 RVA: 0x0012E38E File Offset: 0x0012C58E
+		// Token: 0x0600851A RID: 34074 RVA: 0x0013D5EE File Offset: 0x0013B7EE
 		public HonamiStoryGetItem_SetValue ToSetValue()
 		{
 			return new HonamiStoryGetItem_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700297A RID: 10618
-		// (get) Token: 0x06007E2B RID: 32299 RVA: 0x0012E3AD File Offset: 0x0012C5AD
-		// (set) Token: 0x06007E2C RID: 32300 RVA: 0x0012E3D8 File Offset: 0x0012C5D8
+		// Token: 0x17002B68 RID: 11112
+		// (get) Token: 0x0600851B RID: 34075 RVA: 0x0013D60D File Offset: 0x0013B80D
+		// (set) Token: 0x0600851C RID: 34076 RVA: 0x0013D638 File Offset: 0x0013B838
 		public virtual int ActivityId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700297B RID: 10619
-		// (get) Token: 0x06007E2D RID: 32301 RVA: 0x0012E3E6 File Offset: 0x0012C5E6
-		// (set) Token: 0x06007E2E RID: 32302 RVA: 0x0012E40D File Offset: 0x0012C60D
+		// Token: 0x17002B69 RID: 11113
+		// (get) Token: 0x0600851D RID: 34077 RVA: 0x0013D646 File Offset: 0x0013B846
+		// (set) Token: 0x0600851E RID: 34078 RVA: 0x0013D66D File Offset: 0x0013B86D
 		public virtual List<int> ItemId
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005062 RID: 20578
+		// Token: 0x04005498 RID: 21656
 		[Nullable(2)]
 		protected new HonamiStoryGetItem FbInstance;
 
-		// Token: 0x04005063 RID: 20579
+		// Token: 0x04005499 RID: 21657
 		[Nullable(2)]
 		protected HonamiStoryGetItem_SetValue PocoInterface;
 	}

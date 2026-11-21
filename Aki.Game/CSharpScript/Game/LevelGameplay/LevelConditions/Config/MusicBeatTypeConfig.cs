@@ -4,20 +4,20 @@ using Aki.Config;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions.Config
 {
-	// Token: 0x02006DA3 RID: 28067
+	// Token: 0x02005F22 RID: 24354
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MusicBeatTypeConfig : ConfigBase
 	{
-		// Token: 0x06044807 RID: 280583 RVA: 0x010E4BC2 File Offset: 0x010E2DC2
+		// Token: 0x0603A96B RID: 239979 RVA: 0x0108EDEA File Offset: 0x0108CFEA
 		public MusicBeatType? GetMusicBeatTypeConfig(string beatType)
 		{
 			return ConfigMusicBeatTypeByBeatType.GetConfig(beatType, true);
 		}
 
-		// Token: 0x170099B3 RID: 39347
-		// (get) Token: 0x06044808 RID: 280584 RVA: 0x010E4BCB File Offset: 0x010E2DCB
+		// Token: 0x17006EB6 RID: 28342
+		// (get) Token: 0x0603A96C RID: 239980 RVA: 0x0108EDF3 File Offset: 0x0108CFF3
 		public static MusicBeatTypeConfig Instance
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions.Config
 			}
 		}
 
-		// Token: 0x06044809 RID: 280585 RVA: 0x010E4BD2 File Offset: 0x010E2DD2
+		// Token: 0x0603A96D RID: 239981 RVA: 0x0108EDFA File Offset: 0x0108CFFA
 		public static MusicBeatTypeConfig GetOrCreateInstance()
 		{
 			if (MusicBeatTypeConfig._Instance == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions.Config
 			return MusicBeatTypeConfig._Instance;
 		}
 
-		// Token: 0x0604480A RID: 280586 RVA: 0x010E4BE6 File Offset: 0x010E2DE6
+		// Token: 0x0603A96E RID: 239982 RVA: 0x0108EE0E File Offset: 0x0108D00E
 		public static bool CreateInstance()
 		{
 			if (MusicBeatTypeConfig._Instance != null)
@@ -47,24 +47,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions.Config
 			return true;
 		}
 
-		// Token: 0x0604480B RID: 280587 RVA: 0x010E4BFC File Offset: 0x010E2DFC
+		// Token: 0x0603A96F RID: 239983 RVA: 0x0108EE24 File Offset: 0x0108D024
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604480C RID: 280588 RVA: 0x010E4BFE File Offset: 0x010E2DFE
+		// Token: 0x0603A970 RID: 239984 RVA: 0x0108EE26 File Offset: 0x0108D026
 		public static void ResetStaticDefaultValue()
 		{
 			MusicBeatTypeConfig._Instance = null;
 		}
 
-		// Token: 0x0604480D RID: 280589 RVA: 0x010E4C06 File Offset: 0x010E2E06
+		// Token: 0x0603A971 RID: 239985 RVA: 0x0108EE2E File Offset: 0x0108D02E
 		static MusicBeatTypeConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MusicBeatTypeConfig.CreateStaticDefaultValue), new Action(MusicBeatTypeConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040239EC RID: 145900
+		// Token: 0x0401EC8E RID: 126094
 		[Nullable(2)]
 		private static MusicBeatTypeConfig _Instance;
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200209B RID: 8347
+// Token: 0x02001572 RID: 5490
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkLoginConfig
 {
-	// Token: 0x060106FF RID: 67327 RVA: 0x00403F96 File Offset: 0x00402196
+	// Token: 0x0600DB6D RID: 56173 RVA: 0x00410566 File Offset: 0x0040E766
 	public SdkLoginConfig(string uId = "", string userName = "", string token = "")
 	{
 		this.Uid = uId;
@@ -14,18 +14,18 @@ public class SdkLoginConfig
 		this.Token = token;
 	}
 
-	// Token: 0x06010700 RID: 67328 RVA: 0x00403FD4 File Offset: 0x004021D4
+	// Token: 0x0600DB6E RID: 56174 RVA: 0x004105A4 File Offset: 0x0040E7A4
 	public string GetLoginUserNameWithUriEncode()
 	{
 		return Uri.EscapeDataString(this.UserName);
 	}
 
-	// Token: 0x04007981 RID: 31105
+	// Token: 0x04007A7F RID: 31359
 	public string Uid = string.Empty;
 
-	// Token: 0x04007982 RID: 31106
+	// Token: 0x04007A80 RID: 31360
 	public string UserName = string.Empty;
 
-	// Token: 0x04007983 RID: 31107
+	// Token: 0x04007A81 RID: 31361
 	public string Token = string.Empty;
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200657F RID: 25983
+	// Token: 0x020054FD RID: 21757
 	public class ActivityFishingDefine
 	{
-		// Token: 0x04021ED1 RID: 138961
+		// Token: 0x0401C802 RID: 116738
 		public const int DEFAULT_PORT_ID = 1;
 	}
 }

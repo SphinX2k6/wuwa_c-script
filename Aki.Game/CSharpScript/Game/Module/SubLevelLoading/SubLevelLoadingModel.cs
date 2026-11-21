@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SubLevelLoading
 {
-	// Token: 0x02004B76 RID: 19318
+	// Token: 0x02003B20 RID: 15136
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SubLevelLoadingModel : ModelBase
 	{
-		// Token: 0x17007C2B RID: 31787
-		// (get) Token: 0x060320D4 RID: 205012 RVA: 0x00B9F05D File Offset: 0x00B9D25D
-		// (set) Token: 0x060320D5 RID: 205013 RVA: 0x00B9F065 File Offset: 0x00B9D265
+		// Token: 0x17004FD5 RID: 20437
+		// (get) Token: 0x06026E65 RID: 159333 RVA: 0x00AE320D File Offset: 0x00AE140D
+		// (set) Token: 0x06026E66 RID: 159334 RVA: 0x00AE3215 File Offset: 0x00AE1415
 		public EScreenEffectType ScreenEffect
 		{
 			get
@@ -24,9 +24,9 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			}
 		}
 
-		// Token: 0x17007C2C RID: 31788
-		// (get) Token: 0x060320D7 RID: 205015 RVA: 0x00B9F077 File Offset: 0x00B9D277
-		// (set) Token: 0x060320D6 RID: 205014 RVA: 0x00B9F06E File Offset: 0x00B9D26E
+		// Token: 0x17004FD6 RID: 20438
+		// (get) Token: 0x06026E68 RID: 159336 RVA: 0x00AE3227 File Offset: 0x00AE1427
+		// (set) Token: 0x06026E67 RID: 159335 RVA: 0x00AE321E File Offset: 0x00AE141E
 		public GameModePromise LoadSubLevelPromise
 		{
 			get
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			}
 		}
 
-		// Token: 0x060320D8 RID: 205016 RVA: 0x00B9F07F File Offset: 0x00B9D27F
+		// Token: 0x06026E69 RID: 159337 RVA: 0x00AE322F File Offset: 0x00AE142F
 		protected override bool OnLeaveLevel()
 		{
 			return true;
 		}
 
-		// Token: 0x060320D9 RID: 205017 RVA: 0x00B9F082 File Offset: 0x00B9D282
+		// Token: 0x06026E6A RID: 159338 RVA: 0x00AE3232 File Offset: 0x00AE1432
 		protected override bool OnClear()
 		{
 			this.ScreenEffectInternal = EScreenEffectType.ScreenEffectNone;
@@ -54,8 +54,8 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			return true;
 		}
 
-		// Token: 0x17007C2D RID: 31789
-		// (get) Token: 0x060320DA RID: 205018 RVA: 0x00B9F0A3 File Offset: 0x00B9D2A3
+		// Token: 0x17004FD7 RID: 20439
+		// (get) Token: 0x06026E6B RID: 159339 RVA: 0x00AE3253 File Offset: 0x00AE1453
 		[Nullable(1)]
 		public static SubLevelLoadingModel Instance
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			}
 		}
 
-		// Token: 0x060320DB RID: 205019 RVA: 0x00B9F0AA File Offset: 0x00B9D2AA
+		// Token: 0x06026E6C RID: 159340 RVA: 0x00AE325A File Offset: 0x00AE145A
 		[NullableContext(1)]
 		public static SubLevelLoadingModel GetOrCreateInstance()
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			return SubLevelLoadingModel._Instance;
 		}
 
-		// Token: 0x060320DC RID: 205020 RVA: 0x00B9F0BE File Offset: 0x00B9D2BE
+		// Token: 0x06026E6D RID: 159341 RVA: 0x00AE326E File Offset: 0x00AE146E
 		public static bool CreateInstance()
 		{
 			if (SubLevelLoadingModel._Instance != null)
@@ -88,30 +88,30 @@ namespace CSharpScript.Game.Module.SubLevelLoading
 			return true;
 		}
 
-		// Token: 0x060320DD RID: 205021 RVA: 0x00B9F0D4 File Offset: 0x00B9D2D4
+		// Token: 0x06026E6E RID: 159342 RVA: 0x00AE3284 File Offset: 0x00AE1484
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060320DE RID: 205022 RVA: 0x00B9F0D6 File Offset: 0x00B9D2D6
+		// Token: 0x06026E6F RID: 159343 RVA: 0x00AE3286 File Offset: 0x00AE1486
 		public static void ResetStaticDefaultValue()
 		{
 			SubLevelLoadingModel._Instance = null;
 		}
 
-		// Token: 0x060320DF RID: 205023 RVA: 0x00B9F0DE File Offset: 0x00B9D2DE
+		// Token: 0x06026E70 RID: 159344 RVA: 0x00AE328E File Offset: 0x00AE148E
 		static SubLevelLoadingModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SubLevelLoadingModel.CreateStaticDefaultValue), new Action(SubLevelLoadingModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AAC0 RID: 109248
+		// Token: 0x04015414 RID: 87060
 		private EScreenEffectType ScreenEffectInternal;
 
-		// Token: 0x0401AAC1 RID: 109249
+		// Token: 0x04015415 RID: 87061
 		private GameModePromise LoadSubLevelPromiseInternal;
 
-		// Token: 0x0401AAC2 RID: 109250
+		// Token: 0x04015416 RID: 87062
 		private static SubLevelLoadingModel _Instance;
 	}
 }

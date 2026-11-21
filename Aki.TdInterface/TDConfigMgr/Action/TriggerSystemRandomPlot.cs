@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200225E RID: 8798
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024CB RID: 9419
 	public class TriggerSystemRandomPlot : ActionParams
 	{
-		// Token: 0x0600C10A RID: 49418 RVA: 0x001BB2B4 File Offset: 0x001B94B4
+		// Token: 0x0600CCD0 RID: 52432 RVA: 0x001D2A38 File Offset: 0x001D0C38
 		private TriggerSystemRandomPlot_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C10B RID: 49419 RVA: 0x001BB2EC File Offset: 0x001B94EC
+		// Token: 0x0600CCD1 RID: 52433 RVA: 0x001D2A70 File Offset: 0x001D0C70
 		public static TriggerSystemRandomPlot Create([Nullable(2)] TriggerSystemRandomPlot instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C10C RID: 49420 RVA: 0x001BB2FF File Offset: 0x001B94FF
+		// Token: 0x0600CCD2 RID: 52434 RVA: 0x001D2A83 File Offset: 0x001D0C83
 		public static TriggerSystemRandomPlot CreateFromSetValue([Nullable(2)] TriggerSystemRandomPlot_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C10D RID: 49421 RVA: 0x001BB312 File Offset: 0x001B9512
+		// Token: 0x0600CCD3 RID: 52435 RVA: 0x001D2A96 File Offset: 0x001D0C96
 		public TriggerSystemRandomPlot_SetValue ToSetValue()
 		{
 			return new TriggerSystemRandomPlot_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A65 RID: 14949
-		// (get) Token: 0x0600C10E RID: 49422 RVA: 0x001BB325 File Offset: 0x001B9525
-		// (set) Token: 0x0600C10F RID: 49423 RVA: 0x001BB350 File Offset: 0x001B9550
+		// Token: 0x17003D5C RID: 15708
+		// (get) Token: 0x0600CCD4 RID: 52436 RVA: 0x001D2AA9 File Offset: 0x001D0CA9
+		// (set) Token: 0x0600CCD5 RID: 52437 RVA: 0x001D2AD4 File Offset: 0x001D0CD4
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400730D RID: 29453
+		// Token: 0x0400795A RID: 31066
 		[Nullable(2)]
 		protected new TriggerSystemRandomPlot FbInstance;
 
-		// Token: 0x0400730E RID: 29454
+		// Token: 0x0400795B RID: 31067
 		[Nullable(2)]
 		protected TriggerSystemRandomPlot_SetValue PocoInterface;
 	}

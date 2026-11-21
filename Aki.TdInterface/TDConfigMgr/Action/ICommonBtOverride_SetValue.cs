@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018FF RID: 6399
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A86 RID: 6790
 	public class ICommonBtOverride_SetValue
 	{
-		// Token: 0x040055F8 RID: 22008
+		// Token: 0x04005A42 RID: 23106
 		public int CommonBtId;
 
-		// Token: 0x040055F9 RID: 22009
+		// Token: 0x04005A43 RID: 23107
 		public List<ICommonBtPlaceholder> OverridePlaceholders;
 
-		// Token: 0x040055FA RID: 22010
+		// Token: 0x04005A44 RID: 23108
 		public List<ICommonBtClientOverrideData> ClientOverrideData;
 	}
 }

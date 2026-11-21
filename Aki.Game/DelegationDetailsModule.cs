@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001312 RID: 4882
+// Token: 0x020007C6 RID: 1990
 [NullableContext(1)]
 [Nullable(0)]
 public class DelegationDetailsModule : UiPanelBase
 {
-	// Token: 0x06008747 RID: 34631 RVA: 0x001CDDAC File Offset: 0x001CBFAC
+	// Token: 0x06005AE2 RID: 23266 RVA: 0x001D6C18 File Offset: 0x001D4E18
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +40,7 @@ public class DelegationDetailsModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008748 RID: 34632 RVA: 0x001CDF38 File Offset: 0x001CC138
+	// Token: 0x06005AE3 RID: 23267 RVA: 0x001D6DA4 File Offset: 0x001D4FA4
 	private UniTask InitCostItem()
 	{
 		DelegationDetailsModule.<InitCostItem>d__12 <InitCostItem>d__;
@@ -53,7 +51,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <InitCostItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008749 RID: 34633 RVA: 0x001CDF7C File Offset: 0x001CC17C
+	// Token: 0x06005AE4 RID: 23268 RVA: 0x001D6DE8 File Offset: 0x001D4FE8
 	private UniTask InitRoleModule()
 	{
 		DelegationDetailsModule.<InitRoleModule>d__13 <InitRoleModule>d__;
@@ -64,7 +62,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <InitRoleModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600874A RID: 34634 RVA: 0x001CDFC0 File Offset: 0x001CC1C0
+	// Token: 0x06005AE5 RID: 23269 RVA: 0x001D6E2C File Offset: 0x001D502C
 	private UniTask InitCharacterListModule()
 	{
 		DelegationDetailsModule.<InitCharacterListModule>d__14 <InitCharacterListModule>d__;
@@ -75,7 +73,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <InitCharacterListModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600874B RID: 34635 RVA: 0x001CE004 File Offset: 0x001CC204
+	// Token: 0x06005AE6 RID: 23270 RVA: 0x001D6E70 File Offset: 0x001D5070
 	private UniTask InitEditTeamModule()
 	{
 		DelegationDetailsModule.<InitEditTeamModule>d__15 <InitEditTeamModule>d__;
@@ -86,7 +84,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <InitEditTeamModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600874C RID: 34636 RVA: 0x001CE047 File Offset: 0x001CC247
+	// Token: 0x06005AE7 RID: 23271 RVA: 0x001D6EB3 File Offset: 0x001D50B3
 	private void InitBtn()
 	{
 		this.HelperBtn = new ButtonItem(base.GetItem(14));
@@ -96,7 +94,7 @@ public class DelegationDetailsModule : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600874D RID: 34637 RVA: 0x001CE074 File Offset: 0x001CC274
+	// Token: 0x06005AE8 RID: 23272 RVA: 0x001D6EE0 File Offset: 0x001D50E0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DelegationDetailsModule.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -107,7 +105,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600874E RID: 34638 RVA: 0x001CE0B8 File Offset: 0x001CC2B8
+	// Token: 0x06005AE9 RID: 23273 RVA: 0x001D6F24 File Offset: 0x001D5124
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		DelegationDetailsModule.<OnBeforeShowAsyncImplement>d__18 <OnBeforeShowAsyncImplement>d__;
@@ -118,14 +116,14 @@ public class DelegationDetailsModule : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600874F RID: 34639 RVA: 0x001CE0FB File Offset: 0x001CC2FB
+	// Token: 0x06005AEA RID: 23274 RVA: 0x001D6F67 File Offset: 0x001D5167
 	protected override void OnAfterHide()
 	{
 		this.HelperBtn.UnBindGivenUid(0);
 		this.SelectedRoleIdSet.Clear();
 	}
 
-	// Token: 0x06008750 RID: 34640 RVA: 0x001CE114 File Offset: 0x001CC314
+	// Token: 0x06005AEB RID: 23275 RVA: 0x001D6F80 File Offset: 0x001D5180
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -167,28 +165,28 @@ public class DelegationDetailsModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008751 RID: 34641 RVA: 0x001CE1CC File Offset: 0x001CC3CC
+	// Token: 0x06005AEC RID: 23276 RVA: 0x001D7038 File Offset: 0x001D5238
 	private void RefreshTitle()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), delegationConfig.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x06008752 RID: 34642 RVA: 0x001CE20C File Offset: 0x001CC40C
+	// Token: 0x06005AED RID: 23277 RVA: 0x001D7078 File Offset: 0x001D5278
 	private void RefreshStar()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
 		this.StarLayout.RefreshByDataAsync(new List<object>(), false, new int?(delegationConfig.Star)).Forget();
 	}
 
-	// Token: 0x06008753 RID: 34643 RVA: 0x001CE254 File Offset: 0x001CC454
+	// Token: 0x06005AEE RID: 23278 RVA: 0x001D70C0 File Offset: 0x001D52C0
 	private void RefreshContent()
 	{
 		TrackMoonEntrust delegationConfig = BusinessConfig.Instance.GetDelegationConfig(this.Data.Id);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), delegationConfig.Content, Array.Empty<object>());
 	}
 
-	// Token: 0x06008754 RID: 34644 RVA: 0x001CE294 File Offset: 0x001CC494
+	// Token: 0x06005AEF RID: 23279 RVA: 0x001D7100 File Offset: 0x001D5300
 	private void RefreshEvaluate()
 	{
 		base.GetItem(4).SetUIActive(this.Data.HasBestEvaluate());
@@ -198,7 +196,7 @@ public class DelegationDetailsModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008755 RID: 34645 RVA: 0x001CE2FC File Offset: 0x001CC4FC
+	// Token: 0x06005AF0 RID: 23280 RVA: 0x001D7168 File Offset: 0x001D5368
 	private UniTask RefreshRecommend()
 	{
 		DelegationDetailsModule.<RefreshRecommend>d__25 <RefreshRecommend>d__;
@@ -209,7 +207,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <RefreshRecommend>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008756 RID: 34646 RVA: 0x001CE340 File Offset: 0x001CC540
+	// Token: 0x06005AF1 RID: 23281 RVA: 0x001D71AC File Offset: 0x001D53AC
 	private UniTask RefreshCharacterList()
 	{
 		DelegationDetailsModule.<RefreshCharacterList>d__26 <RefreshCharacterList>d__;
@@ -220,7 +218,7 @@ public class DelegationDetailsModule : UiPanelBase
 		return <RefreshCharacterList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008757 RID: 34647 RVA: 0x001CE384 File Offset: 0x001CC584
+	// Token: 0x06005AF2 RID: 23282 RVA: 0x001D71F0 File Offset: 0x001D53F0
 	private UniTask RefreshEditTeamModule()
 	{
 		DelegationDetailsModule.<RefreshEditTeamModule>d__27 <RefreshEditTeamModule>d__;
@@ -231,13 +229,13 @@ public class DelegationDetailsModule : UiPanelBase
 		return <RefreshEditTeamModule>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008758 RID: 34648 RVA: 0x001CE3C7 File Offset: 0x001CC5C7
+	// Token: 0x06005AF3 RID: 23283 RVA: 0x001D7233 File Offset: 0x001D5433
 	private void RefreshRole()
 	{
 		this.RoleModule.Refresh(this.SelectedRoleIdSet);
 	}
 
-	// Token: 0x06008759 RID: 34649 RVA: 0x001CE3DC File Offset: 0x001CC5DC
+	// Token: 0x06005AF4 RID: 23284 RVA: 0x001D7248 File Offset: 0x001D5448
 	private void RefreshConsume()
 	{
 		List<IItemData> consumeList = this.Data.GetConsumeList();
@@ -249,37 +247,37 @@ public class DelegationDetailsModule : UiPanelBase
 		this.SecondCost.RefreshCountEnableState();
 	}
 
-	// Token: 0x0600875A RID: 34650 RVA: 0x001CE447 File Offset: 0x001CC647
+	// Token: 0x06005AF5 RID: 23285 RVA: 0x001D72B3 File Offset: 0x001D54B3
 	private void RefreshConfirm()
 	{
 		base.GetButton(12).SetSelfInteractive(this.FirstCost.IsEnough && this.SecondCost.IsEnough);
 	}
 
-	// Token: 0x0600875B RID: 34651 RVA: 0x001CE471 File Offset: 0x001CC671
+	// Token: 0x06005AF6 RID: 23286 RVA: 0x001D72DD File Offset: 0x001D54DD
 	private void RefreshRedDot()
 	{
 		this.HelperBtn.BindGivenUid(ERedDotName.MoonChasingRole, 0);
 	}
 
-	// Token: 0x0600875C RID: 34652 RVA: 0x001CE484 File Offset: 0x001CC684
+	// Token: 0x06005AF7 RID: 23287 RVA: 0x001D72F0 File Offset: 0x001D54F0
 	private CharacterItem InitCharacterItem()
 	{
 		return new CharacterItem();
 	}
 
-	// Token: 0x0600875D RID: 34653 RVA: 0x001CE48B File Offset: 0x001CC68B
+	// Token: 0x06005AF8 RID: 23288 RVA: 0x001D72F7 File Offset: 0x001D54F7
 	private CharacterNameWithBg InitRecommendItem()
 	{
 		return new CharacterNameWithBg();
 	}
 
-	// Token: 0x0600875E RID: 34654 RVA: 0x001CE492 File Offset: 0x001CC692
+	// Token: 0x06005AF9 RID: 23289 RVA: 0x001D72FE File Offset: 0x001D54FE
 	private DelegationDetailsModuleStarItem InitStarItem()
 	{
 		return new DelegationDetailsModuleStarItem();
 	}
 
-	// Token: 0x0600875F RID: 34655 RVA: 0x001CE49C File Offset: 0x001CC69C
+	// Token: 0x06005AFA RID: 23290 RVA: 0x001D7308 File Offset: 0x001D5508
 	private void OnConfirm()
 	{
 		if (this.SelectedRoleIdSet.Count == 0)
@@ -297,13 +295,13 @@ public class DelegationDetailsModule : UiPanelBase
 		this.<OnConfirm>g__AcceptDelegateRequest|35_0();
 	}
 
-	// Token: 0x06008760 RID: 34656 RVA: 0x001CE527 File Offset: 0x001CC727
+	// Token: 0x06005AFB RID: 23291 RVA: 0x001D7393 File Offset: 0x001D5593
 	private void OnSkipToHelper()
 	{
 		MoonChasingController.Instance.OpenHelperView();
 	}
 
-	// Token: 0x06008761 RID: 34657 RVA: 0x001CE534 File Offset: 0x001CC734
+	// Token: 0x06005AFC RID: 23292 RVA: 0x001D73A0 File Offset: 0x001D55A0
 	private void RefreshDetails(int roleId, bool isSelected)
 	{
 		if (isSelected)
@@ -323,7 +321,7 @@ public class DelegationDetailsModule : UiPanelBase
 		this.RefreshConfirm();
 	}
 
-	// Token: 0x06008762 RID: 34658 RVA: 0x001CE588 File Offset: 0x001CC788
+	// Token: 0x06005AFD RID: 23293 RVA: 0x001D73F4 File Offset: 0x001D55F4
 	private bool CanExecuteChange(int roleId, EToggleState toggle)
 	{
 		if (toggle == EToggleState.ETT_Checked)
@@ -342,19 +340,19 @@ public class DelegationDetailsModule : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x06008763 RID: 34659 RVA: 0x001CE5C5 File Offset: 0x001CC7C5
+	// Token: 0x06005AFE RID: 23294 RVA: 0x001D7431 File Offset: 0x001D5631
 	private bool IsItemSelected(int roleId)
 	{
 		return this.SelectedRoleIdSet.Contains(roleId);
 	}
 
-	// Token: 0x06008764 RID: 34660 RVA: 0x001CE5D3 File Offset: 0x001CC7D3
+	// Token: 0x06005AFF RID: 23295 RVA: 0x001D743F File Offset: 0x001D563F
 	public void SetDelegationData(DelegationData data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06008765 RID: 34661 RVA: 0x001CE5DC File Offset: 0x001CC7DC
+	// Token: 0x06005B00 RID: 23296 RVA: 0x001D7448 File Offset: 0x001D5648
 	public UniTask RefreshAsync()
 	{
 		DelegationDetailsModule.<RefreshAsync>d__41 <RefreshAsync>d__;
@@ -365,15 +363,15 @@ public class DelegationDetailsModule : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008769 RID: 34665 RVA: 0x001CE644 File Offset: 0x001CC844
+	// Token: 0x06005B04 RID: 23300 RVA: 0x001D74B0 File Offset: 0x001D56B0
 	[CompilerGenerated]
 	private void <OnConfirm>g__AcceptDelegateRequest|35_0()
 	{
-		List<int> roleIdList = this.SelectedRoleIdSet.ToList<int>();
+		List<int> roleIdList = new List<int>(this.SelectedRoleIdSet);
 		MoonChasingController.Instance.AcceptDelegateRequest(this.Data.Id, roleIdList);
 	}
 
-	// Token: 0x04003C62 RID: 15458
+	// Token: 0x04003CFA RID: 15610
 	[Nullable(new byte[]
 	{
 		2,
@@ -381,7 +379,7 @@ public class DelegationDetailsModule : UiPanelBase
 	})]
 	protected GenericLayout<CharacterNameWithBg, int> RecommendLayout;
 
-	// Token: 0x04003C63 RID: 15459
+	// Token: 0x04003CFB RID: 15611
 	[Nullable(new byte[]
 	{
 		2,
@@ -389,27 +387,27 @@ public class DelegationDetailsModule : UiPanelBase
 	})]
 	protected CharacterListModule<CharacterItem> CharacterListModule;
 
-	// Token: 0x04003C64 RID: 15460
+	// Token: 0x04003CFC RID: 15612
 	[Nullable(2)]
 	protected DelegationRoleModule RoleModule;
 
-	// Token: 0x04003C65 RID: 15461
+	// Token: 0x04003CFD RID: 15613
 	protected CommonCostItem FirstCost;
 
-	// Token: 0x04003C66 RID: 15462
+	// Token: 0x04003CFE RID: 15614
 	protected CommonCostItem SecondCost;
 
-	// Token: 0x04003C67 RID: 15463
+	// Token: 0x04003CFF RID: 15615
 	[Nullable(2)]
 	protected EditTeamModule EditTeamModule;
 
-	// Token: 0x04003C68 RID: 15464
+	// Token: 0x04003D00 RID: 15616
 	protected DelegationData Data;
 
-	// Token: 0x04003C69 RID: 15465
+	// Token: 0x04003D01 RID: 15617
 	protected OrderedSet<int> SelectedRoleIdSet = new OrderedSet<int>();
 
-	// Token: 0x04003C6A RID: 15466
+	// Token: 0x04003D02 RID: 15618
 	[Nullable(new byte[]
 	{
 		1,
@@ -418,56 +416,56 @@ public class DelegationDetailsModule : UiPanelBase
 	})]
 	protected GenericLayout<DelegationDetailsModuleStarItem, object> StarLayout;
 
-	// Token: 0x04003C6B RID: 15467
+	// Token: 0x04003D03 RID: 15619
 	protected ButtonItem HelperBtn;
 
-	// Token: 0x02007951 RID: 31057
+	// Token: 0x02006ADB RID: 27355
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F4F RID: 163663
+		// Token: 0x0402327C RID: 143996
 		public const int Title = 0;
 
-		// Token: 0x04027F50 RID: 163664
+		// Token: 0x0402327D RID: 143997
 		public const int StarLayout = 1;
 
-		// Token: 0x04027F51 RID: 163665
+		// Token: 0x0402327E RID: 143998
 		public const int StarItem = 2;
 
-		// Token: 0x04027F52 RID: 163666
+		// Token: 0x0402327F RID: 143999
 		public const int Content = 3;
 
-		// Token: 0x04027F53 RID: 163667
+		// Token: 0x04023280 RID: 144000
 		public const int BestEvaluateItem = 4;
 
-		// Token: 0x04027F54 RID: 163668
+		// Token: 0x04023281 RID: 144001
 		public const int BestEvaluateTexture = 5;
 
-		// Token: 0x04027F55 RID: 163669
+		// Token: 0x04023282 RID: 144002
 		public const int RecommendLayout = 6;
 
-		// Token: 0x04027F56 RID: 163670
+		// Token: 0x04023283 RID: 144003
 		public const int RecommendItem = 7;
 
-		// Token: 0x04027F57 RID: 163671
+		// Token: 0x04023284 RID: 144004
 		public const int CharacterListItem = 8;
 
-		// Token: 0x04027F58 RID: 163672
+		// Token: 0x04023285 RID: 144005
 		public const int SelectedRoleRootItem = 9;
 
-		// Token: 0x04027F59 RID: 163673
+		// Token: 0x04023286 RID: 144006
 		public const int FirstCost = 10;
 
-		// Token: 0x04027F5A RID: 163674
+		// Token: 0x04023287 RID: 144007
 		public const int SecondCost = 11;
 
-		// Token: 0x04027F5B RID: 163675
+		// Token: 0x04023288 RID: 144008
 		public const int ConfirmBtn = 12;
 
-		// Token: 0x04027F5C RID: 163676
+		// Token: 0x04023289 RID: 144009
 		public const int RoleListRootItem = 13;
 
-		// Token: 0x04027F5D RID: 163677
+		// Token: 0x0402328A RID: 144010
 		public const int HelperItem = 14;
 	}
 }

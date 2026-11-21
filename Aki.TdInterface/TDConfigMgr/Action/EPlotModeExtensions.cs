@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002283 RID: 8835
+	// Token: 0x020024F0 RID: 9456
 	public static class EPlotModeExtensions
 	{
-		// Token: 0x0600C1CC RID: 49612 RVA: 0x001BC900 File Offset: 0x001BAB00
+		// Token: 0x0600CD92 RID: 52626 RVA: 0x001D4084 File Offset: 0x001D2284
 		public static string ToEnumString(this EPlotMode value)
 		{
 			string result;
@@ -45,7 +45,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1CD RID: 49613 RVA: 0x001BC990 File Offset: 0x001BAB90
+		// Token: 0x0600CD93 RID: 52627 RVA: 0x001D4114 File Offset: 0x001D2314
 		public static EPlotMode FromString(string name)
 		{
 			EPlotMode result;
@@ -56,7 +56,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1CE RID: 49614 RVA: 0x001BC9BC File Offset: 0x001BABBC
+		// Token: 0x0600CD94 RID: 52628 RVA: 0x001D4140 File Offset: 0x001D2340
 		public static bool TryFromString(string name, out EPlotMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -152,7 +152,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C1CF RID: 49615 RVA: 0x001BCB00 File Offset: 0x001BAD00
+		// Token: 0x0600CD95 RID: 52629 RVA: 0x001D4284 File Offset: 0x001D2484
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -169,7 +169,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1D0 RID: 49616 RVA: 0x001BCB5C File Offset: 0x001BAD5C
+		// Token: 0x0600CD96 RID: 52630 RVA: 0x001D42E0 File Offset: 0x001D24E0
 		public static EPlotMode[] GetValues()
 		{
 			return new EPlotMode[]
@@ -186,7 +186,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1D1 RID: 49617 RVA: 0x001BCB70 File Offset: 0x001BAD70
+		// Token: 0x0600CD97 RID: 52631 RVA: 0x001D42F4 File Offset: 0x001D24F4
 		public static string[] GetNames()
 		{
 			return new string[]

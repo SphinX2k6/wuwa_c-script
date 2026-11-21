@@ -15,17 +15,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020027A9 RID: 10153
+// Token: 0x02001D24 RID: 7460
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleBreachView : UiViewBase
 {
-	// Token: 0x06014DB4 RID: 85428 RVA: 0x0054ADAD File Offset: 0x00548FAD
+	// Token: 0x060127AE RID: 75694 RVA: 0x00575935 File Offset: 0x00573B35
 	public RoleBreachView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014DB5 RID: 85429 RVA: 0x0054ADB8 File Offset: 0x00548FB8
+	// Token: 0x060127AF RID: 75695 RVA: 0x00575940 File Offset: 0x00573B40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -53,7 +53,7 @@ public class RoleBreachView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014DB6 RID: 85430 RVA: 0x0054AF0C File Offset: 0x0054910C
+	// Token: 0x060127B0 RID: 75696 RVA: 0x00575A94 File Offset: 0x00573C94
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleBreachView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class RoleBreachView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DB7 RID: 85431 RVA: 0x0054AF50 File Offset: 0x00549150
+	// Token: 0x060127B1 RID: 75697 RVA: 0x00575AD8 File Offset: 0x00573CD8
 	private void RefreshCostItemButton()
 	{
 		if (this.RoleBreachState.GetValueOrDefault() == ERoleBreachState.CanBreach)
@@ -90,13 +90,13 @@ public class RoleBreachView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014DB8 RID: 85432 RVA: 0x0054AFF5 File Offset: 0x005491F5
+	// Token: 0x060127B2 RID: 75698 RVA: 0x00575B7D File Offset: 0x00573D7D
 	protected override void OnBeforeShow()
 	{
 		this.UpdateView();
 	}
 
-	// Token: 0x06014DB9 RID: 85433 RVA: 0x0054B000 File Offset: 0x00549200
+	// Token: 0x060127B3 RID: 75699 RVA: 0x00575B88 File Offset: 0x00573D88
 	protected override UniTask OnPlayingStartSequenceAsync()
 	{
 		RoleBreachView.<OnPlayingStartSequenceAsync>d__14 <OnPlayingStartSequenceAsync>d__;
@@ -107,7 +107,7 @@ public class RoleBreachView : UiViewBase
 		return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DBA RID: 85434 RVA: 0x0054B044 File Offset: 0x00549244
+	// Token: 0x060127B4 RID: 75700 RVA: 0x00575BCC File Offset: 0x00573DCC
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		RoleBreachView.<OnPlayingCloseSequenceAsync>d__15 <OnPlayingCloseSequenceAsync>d__;
@@ -118,7 +118,7 @@ public class RoleBreachView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014DBB RID: 85435 RVA: 0x0054B087 File Offset: 0x00549287
+	// Token: 0x060127B5 RID: 75701 RVA: 0x00575C0F File Offset: 0x00573E0F
 	protected override void OnHandleLoadScene()
 	{
 		this.ViewModel.HandleLoadScene(delegate
@@ -127,13 +127,13 @@ public class RoleBreachView : UiViewBase
 		});
 	}
 
-	// Token: 0x06014DBC RID: 85436 RVA: 0x0054B0B3 File Offset: 0x005492B3
+	// Token: 0x060127B6 RID: 75702 RVA: 0x00575C3B File Offset: 0x00573E3B
 	protected override void OnHandleReleaseScene()
 	{
 		this.ViewModel.HandleReleaseScene();
 	}
 
-	// Token: 0x06014DBD RID: 85437 RVA: 0x0054B0C0 File Offset: 0x005492C0
+	// Token: 0x060127B7 RID: 75703 RVA: 0x00575C48 File Offset: 0x00573E48
 	protected void CloseClick()
 	{
 		UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.RoleBreach);
@@ -141,7 +141,7 @@ public class RoleBreachView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014DBE RID: 85438 RVA: 0x0054B0E0 File Offset: 0x005492E0
+	// Token: 0x060127B8 RID: 75704 RVA: 0x00575C68 File Offset: 0x00573E68
 	protected void LevelUpClick(int _)
 	{
 		Action action = delegate()
@@ -172,13 +172,13 @@ public class RoleBreachView : UiViewBase
 		action();
 	}
 
-	// Token: 0x06014DBF RID: 85439 RVA: 0x0054B175 File Offset: 0x00549375
+	// Token: 0x060127B9 RID: 75705 RVA: 0x00575CFD File Offset: 0x00573EFD
 	private List<ISelectedData> GetSelectedDataList()
 	{
 		return this.CachedConsumeList ?? new List<ISelectedData>();
 	}
 
-	// Token: 0x06014DC0 RID: 85440 RVA: 0x0054B188 File Offset: 0x00549388
+	// Token: 0x060127BA RID: 75706 RVA: 0x00575D10 File Offset: 0x00573F10
 	protected void LevelUpLockTipClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleBreakUpTip);
@@ -198,21 +198,21 @@ public class RoleBreachView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06014DC1 RID: 85441 RVA: 0x0054B1FF File Offset: 0x005493FF
+	// Token: 0x060127BB RID: 75707 RVA: 0x00575D87 File Offset: 0x00573F87
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.RoleBreakUp, new Action<int, int>(this.RoleBreakUp));
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06014DC2 RID: 85442 RVA: 0x0054B239 File Offset: 0x00549439
+	// Token: 0x060127BC RID: 75708 RVA: 0x00575DC1 File Offset: 0x00573FC1
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RoleBreakUp, new Action<int, int>(this.RoleBreakUp));
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06014DC3 RID: 85443 RVA: 0x0054B274 File Offset: 0x00549474
+	// Token: 0x060127BD RID: 75709 RVA: 0x00575DFC File Offset: 0x00573FFC
 	private void UpdateView()
 	{
 		RoleLevelData levelData = RoleModel.Instance.GetRoleInstanceById(this.RoleId).GetLevelData();
@@ -287,7 +287,7 @@ public class RoleBreachView : UiViewBase
 		this.RefreshCostItemButton();
 	}
 
-	// Token: 0x06014DC4 RID: 85444 RVA: 0x0054B510 File Offset: 0x00549710
+	// Token: 0x060127BE RID: 75710 RVA: 0x00576098 File Offset: 0x00574298
 	private void UpdateAttribute()
 	{
 		IEnumerable<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("RoleAttributeDisplay3");
@@ -323,13 +323,13 @@ public class RoleBreachView : UiViewBase
 		this.AttributeLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06014DC5 RID: 85445 RVA: 0x0054B648 File Offset: 0x00549848
+	// Token: 0x060127BF RID: 75711 RVA: 0x005761D0 File Offset: 0x005743D0
 	private AttributeItem InitAttributeItem()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x06014DC6 RID: 85446 RVA: 0x0054B650 File Offset: 0x00549850
+	// Token: 0x060127C0 RID: 75712 RVA: 0x005761D8 File Offset: 0x005743D8
 	private void UpdateStar(int breachLevel, int maxLevel)
 	{
 		List<IStarItemData> list = new List<IStarItemData>(maxLevel);
@@ -349,20 +349,20 @@ public class RoleBreachView : UiViewBase
 		this.StarLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06014DC7 RID: 85447 RVA: 0x0054B6C4 File Offset: 0x005498C4
+	// Token: 0x060127C1 RID: 75713 RVA: 0x0057624C File Offset: 0x0057444C
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x06014DC8 RID: 85448 RVA: 0x0054B6CC File Offset: 0x005498CC
+	// Token: 0x060127C2 RID: 75714 RVA: 0x00576254 File Offset: 0x00574454
 	private void BreakUpSuccess()
 	{
 		RoleBreachSuccessViewData param = new RoleBreachSuccessViewData(this.RoleId, new Action(this.OnBreachSuccessViewMaskClick));
 		UiManager.Instance.OpenView(EUiViewName.RoleBreachSuccessView, param, null);
 	}
 
-	// Token: 0x06014DC9 RID: 85449 RVA: 0x0054B704 File Offset: 0x00549904
+	// Token: 0x060127C3 RID: 75715 RVA: 0x0057628C File Offset: 0x0057448C
 	private void OnBreachSuccessViewMaskClick()
 	{
 		if (!RoleModel.Instance.GetRoleInstanceById(this.RoleId).GetLevelData().GetRoleIsMaxLevel())
@@ -381,7 +381,7 @@ public class RoleBreachView : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.RoleBreachSuccessView, null);
 	}
 
-	// Token: 0x06014DCA RID: 85450 RVA: 0x0054B7A0 File Offset: 0x005499A0
+	// Token: 0x060127C4 RID: 75716 RVA: 0x00576328 File Offset: 0x00574528
 	private void RoleBreakUp(int roleId, int level)
 	{
 		base.GetItem(3).SetUIActive(false);
@@ -417,16 +417,16 @@ public class RoleBreachView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014DCB RID: 85451 RVA: 0x0054B8D2 File Offset: 0x00549AD2
+	// Token: 0x060127C5 RID: 75717 RVA: 0x0057645A File Offset: 0x0057465A
 	private void OnCommonItemCountAnyChange(int i, int i1)
 	{
 		this.UpdateView();
 	}
 
-	// Token: 0x04009CE8 RID: 40168
+	// Token: 0x0400A0CB RID: 41163
 	private int RoleId;
 
-	// Token: 0x04009CE9 RID: 40169
+	// Token: 0x0400A0CC RID: 41164
 	[Nullable(new byte[]
 	{
 		2,
@@ -435,7 +435,7 @@ public class RoleBreachView : UiViewBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x04009CEA RID: 40170
+	// Token: 0x0400A0CD RID: 41165
 	[Nullable(new byte[]
 	{
 		2,
@@ -444,22 +444,22 @@ public class RoleBreachView : UiViewBase
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x04009CEB RID: 40171
+	// Token: 0x0400A0CE RID: 41166
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009CEC RID: 40172
+	// Token: 0x0400A0CF RID: 41167
 	[Nullable(2)]
 	private CostItemGridComponent CostItemGridComponent;
 
-	// Token: 0x04009CED RID: 40173
+	// Token: 0x0400A0D0 RID: 41168
 	private ERoleBreachState? RoleBreachState;
 
-	// Token: 0x04009CEE RID: 40174
+	// Token: 0x0400A0D1 RID: 41169
 	[Nullable(2)]
 	private RoleViewViewModel ViewModel;
 
-	// Token: 0x04009CEF RID: 40175
+	// Token: 0x0400A0D2 RID: 41170
 	[Nullable(new byte[]
 	{
 		2,
@@ -467,27 +467,27 @@ public class RoleBreachView : UiViewBase
 	})]
 	private List<ISelectedData> CachedConsumeList;
 
-	// Token: 0x02008E24 RID: 36388
+	// Token: 0x0200806D RID: 32877
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E1F1 RID: 188913
+		// Token: 0x040298ED RID: 170221
 		NewLevelLimitText,
-		// Token: 0x0402E1F2 RID: 188914
+		// Token: 0x040298EE RID: 170222
 		SkillRewardPanel,
-		// Token: 0x0402E1F3 RID: 188915
+		// Token: 0x040298EF RID: 170223
 		NewSkillIconTexture,
-		// Token: 0x0402E1F4 RID: 188916
+		// Token: 0x040298F0 RID: 170224
 		BreachPanel,
-		// Token: 0x0402E1F5 RID: 188917
+		// Token: 0x040298F1 RID: 170225
 		DescText,
-		// Token: 0x0402E1F6 RID: 188918
+		// Token: 0x040298F2 RID: 170226
 		StarHorizontalLayout,
-		// Token: 0x0402E1F7 RID: 188919
+		// Token: 0x040298F3 RID: 170227
 		AttributeLayout,
-		// Token: 0x0402E1F8 RID: 188920
+		// Token: 0x040298F4 RID: 170228
 		CaptionItem,
-		// Token: 0x0402E1F9 RID: 188921
+		// Token: 0x040298F5 RID: 170229
 		ConsumeItem
 	}
 }

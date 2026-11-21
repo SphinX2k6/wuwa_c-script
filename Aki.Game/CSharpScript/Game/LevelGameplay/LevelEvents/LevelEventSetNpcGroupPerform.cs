@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B76 RID: 27510
+	// Token: 0x02005CEE RID: 23790
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSetNpcGroupPerform : LevelEventBase
 	{
-		// Token: 0x06044242 RID: 279106 RVA: 0x010C9193 File Offset: 0x010C7393
+		// Token: 0x0603A394 RID: 238484 RVA: 0x01072E07 File Offset: 0x01071007
 		public LevelEventSetNpcGroupPerform(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044243 RID: 279107 RVA: 0x010C91A8 File Offset: 0x010C73A8
+		// Token: 0x0603A395 RID: 238485 RVA: 0x01072E1C File Offset: 0x0107101C
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.Params = (inParams as SetNpcGroupPerform);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(this.EnterAssistedWalkGroupPerform(performType as ISetNpcSupportedWalkingPerform), false, true);
 		}
 
-		// Token: 0x06044244 RID: 279108 RVA: 0x010C9228 File Offset: 0x010C7428
+		// Token: 0x0603A396 RID: 238486 RVA: 0x01072E9C File Offset: 0x0107109C
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			SetNpcGroupPerform @params = this.Params;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(value2, false, true);
 		}
 
-		// Token: 0x06044245 RID: 279109 RVA: 0x010C92BB File Offset: 0x010C74BB
+		// Token: 0x0603A397 RID: 238487 RVA: 0x01072F2F File Offset: 0x0107112F
 		private bool EnterGroupPerform(ISetNpcTwoPersonPerform perform)
 		{
 			if (perform == null || perform.Target == 0)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044246 RID: 279110 RVA: 0x010C92D8 File Offset: 0x010C74D8
+		// Token: 0x0603A398 RID: 238488 RVA: 0x01072F4C File Offset: 0x0107114C
 		private unsafe NpcGroupPerformConfig? GetGroupPerformConfig(ISetNpcTwoPersonPerform perform, string mark)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new NpcGroupPerformConfig?(value);
 		}
 
-		// Token: 0x06044247 RID: 279111 RVA: 0x010C95F4 File Offset: 0x010C77F4
+		// Token: 0x0603A399 RID: 238489 RVA: 0x01073268 File Offset: 0x01071468
 		private bool ExecuteNpcGroupPerform(ISetNpcTwoPersonPerform perform, string mark)
 		{
 			LevelEventSetNpcGroupPerform.<>c__DisplayClass8_0 CS$<>8__locals1 = new LevelEventSetNpcGroupPerform.<>c__DisplayClass8_0();
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044248 RID: 279112 RVA: 0x010C97AC File Offset: 0x010C79AC
+		// Token: 0x0603A39A RID: 238490 RVA: 0x01073420 File Offset: 0x01071620
 		private unsafe void MoveToGroupPerformLocation(EntityHandle npc, BaseActorComponent npcActor, NpcGroupPerformConfig config, EWaitInteractNpcMontageWaitType? interactType = null)
 		{
 			LevelEventSetNpcGroupPerform.<>c__DisplayClass9_0 CS$<>8__locals1 = new LevelEventSetNpcGroupPerform.<>c__DisplayClass9_0();
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, null);
 		}
 
-		// Token: 0x06044249 RID: 279113 RVA: 0x010C99D0 File Offset: 0x010C7BD0
+		// Token: 0x0603A39B RID: 238491 RVA: 0x01073644 File Offset: 0x01071844
 		[NullableContext(2)]
 		private void OnGroupPerformFinish(EntityHandle npc)
 		{
@@ -432,13 +432,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604424A RID: 279114 RVA: 0x010C9A7A File Offset: 0x010C7C7A
+		// Token: 0x0603A39C RID: 238492 RVA: 0x010736EE File Offset: 0x010718EE
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			this.OnGroupPerformFinish(handle);
 		}
 
-		// Token: 0x0604424B RID: 279115 RVA: 0x010C9A84 File Offset: 0x010C7C84
+		// Token: 0x0603A39D RID: 238493 RVA: 0x010736F8 File Offset: 0x010718F8
 		private bool EnterHandInHand(ISetNpcHandInHandPerform perform)
 		{
 			if (perform == null || perform.Follower == 0)
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x0604424C RID: 279116 RVA: 0x010C9B00 File Offset: 0x010C7D00
+		// Token: 0x0603A39E RID: 238494 RVA: 0x01073774 File Offset: 0x01071974
 		private bool ExecuteNpcHandInHandPerform(SetNpcGroupPerform params_, GeneralContext context)
 		{
 			ISetNpcHandInHandPerform setNpcHandInHandPerform = params_.PerformType as ISetNpcHandInHandPerform;
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x0604424D RID: 279117 RVA: 0x010C9BB0 File Offset: 0x010C7DB0
+		// Token: 0x0603A39F RID: 238495 RVA: 0x01073824 File Offset: 0x01071A24
 		[return: Nullable(2)]
 		private EntityHandle GetInitiatorEntityHandle(IHandInHandInitiatorType target)
 		{
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x0604424E RID: 279118 RVA: 0x010C9BED File Offset: 0x010C7DED
+		// Token: 0x0603A3A0 RID: 238496 RVA: 0x01073861 File Offset: 0x01071A61
 		private bool EnterAssistedWalkGroupPerform(ISetNpcSupportedWalkingPerform perform)
 		{
 			if (perform == null || perform.Target == 0)
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x0604424F RID: 279119 RVA: 0x010C9C0C File Offset: 0x010C7E0C
+		// Token: 0x0603A3A1 RID: 238497 RVA: 0x01073880 File Offset: 0x01071A80
 		private unsafe bool ExecuteNpcAssistedWalkPerform(SetNpcGroupPerform params_, GeneralContext context)
 		{
 			ISetNpcSupportedWalkingPerform setNpcSupportedWalkingPerform = params_.PerformType as ISetNpcSupportedWalkingPerform;
@@ -562,14 +562,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return false;
 		}
 
-		// Token: 0x04023952 RID: 145746
+		// Token: 0x0401EBF4 RID: 125940
 		private readonly global::Vector CacheVector = global::Vector.Create();
 
-		// Token: 0x04023953 RID: 145747
+		// Token: 0x0401EBF5 RID: 125941
 		[Nullable(2)]
 		private SetNpcGroupPerform Params;
 
-		// Token: 0x04023954 RID: 145748
+		// Token: 0x0401EBF6 RID: 125942
 		[Nullable(2)]
 		private GeneralContext Context;
 	}

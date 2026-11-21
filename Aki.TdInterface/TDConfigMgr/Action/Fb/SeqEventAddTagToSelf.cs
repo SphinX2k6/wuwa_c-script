@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A87 RID: 10887
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D7B RID: 11643
 	public class SeqEventAddTagToSelf : ActionParams
 	{
-		// Token: 0x0600EF42 RID: 61250 RVA: 0x0022CA9C File Offset: 0x0022AC9C
+		// Token: 0x0600FDF8 RID: 65016 RVA: 0x0024A7A8 File Offset: 0x002489A8
 		public static SeqEventAddTagToSelf Create(ISeqEventAddTagToSelf? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BF6 RID: 19446
-		// (get) Token: 0x0600EF43 RID: 61251 RVA: 0x0022CABC File Offset: 0x0022ACBC
+		// Token: 0x17004FB0 RID: 20400
+		// (get) Token: 0x0600FDF9 RID: 65017 RVA: 0x0024A7C8 File Offset: 0x002489C8
 		public virtual List<int> Tags
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083A5 RID: 33701
+		// Token: 0x04008AA9 RID: 35497
 		private ISeqEventAddTagToSelf Instance;
 
-		// Token: 0x040083A6 RID: 33702
+		// Token: 0x04008AAA RID: 35498
 		private List<int> _TagsCache;
 
-		// Token: 0x040083A7 RID: 33703
+		// Token: 0x04008AAB RID: 35499
 		private bool _TagsInited;
 	}
 }

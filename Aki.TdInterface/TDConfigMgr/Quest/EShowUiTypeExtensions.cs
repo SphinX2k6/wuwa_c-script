@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200128C RID: 4748
+	// Token: 0x020013CC RID: 5068
 	public static class EShowUiTypeExtensions
 	{
-		// Token: 0x06006B1D RID: 27421 RVA: 0x00100EFC File Offset: 0x000FF0FC
+		// Token: 0x06007170 RID: 29040 RVA: 0x0010EBF8 File Offset: 0x0010CDF8
 		public static string ToEnumString(this EShowUiType value)
 		{
 			string result;
@@ -57,7 +57,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B1E RID: 27422 RVA: 0x00100FBC File Offset: 0x000FF1BC
+		// Token: 0x06007171 RID: 29041 RVA: 0x0010ECB8 File Offset: 0x0010CEB8
 		public static EShowUiType FromString(string name)
 		{
 			EShowUiType result;
@@ -68,7 +68,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B1F RID: 27423 RVA: 0x00100FE8 File Offset: 0x000FF1E8
+		// Token: 0x06007172 RID: 29042 RVA: 0x0010ECE4 File Offset: 0x0010CEE4
 		public static bool TryFromString(string name, out EShowUiType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -185,7 +185,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006B20 RID: 27424 RVA: 0x001011C8 File Offset: 0x000FF3C8
+		// Token: 0x06007173 RID: 29043 RVA: 0x0010EEC4 File Offset: 0x0010D0C4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -206,7 +206,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B21 RID: 27425 RVA: 0x00101248 File Offset: 0x000FF448
+		// Token: 0x06007174 RID: 29044 RVA: 0x0010EF44 File Offset: 0x0010D144
 		public static EShowUiType[] GetValues()
 		{
 			return new EShowUiType[]
@@ -227,7 +227,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B22 RID: 27426 RVA: 0x0010125C File Offset: 0x000FF45C
+		// Token: 0x06007175 RID: 29045 RVA: 0x0010EF58 File Offset: 0x0010D158
 		public static string[] GetNames()
 		{
 			return new string[]

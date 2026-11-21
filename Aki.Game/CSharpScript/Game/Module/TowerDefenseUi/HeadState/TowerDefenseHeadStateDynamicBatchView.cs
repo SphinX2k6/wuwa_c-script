@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 {
-	// Token: 0x02004AFE RID: 19198
+	// Token: 0x02003AA6 RID: 15014
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseHeadStateDynamicBatchView : UiPanelBase
 	{
-		// Token: 0x06031B7A RID: 203642 RVA: 0x00B8BAEC File Offset: 0x00B89CEC
+		// Token: 0x0602690A RID: 157962 RVA: 0x00ACFB48 File Offset: 0x00ACDD48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031B7B RID: 203643 RVA: 0x00B8BB58 File Offset: 0x00B89D58
+		// Token: 0x0602690B RID: 157963 RVA: 0x00ACFBB4 File Offset: 0x00ACDDB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseHeadStateDynamicBatchView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031B7C RID: 203644 RVA: 0x00B8BB9C File Offset: 0x00B89D9C
+		// Token: 0x0602690C RID: 157964 RVA: 0x00ACFBF8 File Offset: 0x00ACDDF8
 		protected override void OnStart()
 		{
 			this.IsEnable = true;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.HpParentItem.SetUIActive(true);
 		}
 
-		// Token: 0x06031B7D RID: 203645 RVA: 0x00B8BC00 File Offset: 0x00B89E00
+		// Token: 0x0602690D RID: 157965 RVA: 0x00ACFC5C File Offset: 0x00ACDE5C
 		protected override void OnBeforeDestroy()
 		{
 			this.IsEnable = false;
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x06031B7E RID: 203646 RVA: 0x00B8BC24 File Offset: 0x00B89E24
+		// Token: 0x0602690E RID: 157966 RVA: 0x00ACFC80 File Offset: 0x00ACDE80
 		public bool GetIsEnable()
 		{
 			return this.IsEnable;
 		}
 
-		// Token: 0x06031B7F RID: 203647 RVA: 0x00B8BC2C File Offset: 0x00B89E2C
+		// Token: 0x0602690F RID: 157967 RVA: 0x00ACFC88 File Offset: 0x00ACDE88
 		public void RefreshRotation(Rotator cameraRotation)
 		{
 			this.ActorRotation.Yaw = cameraRotation.Yaw + 90f;
@@ -79,51 +79,51 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.HpParentItem.K2_SetWorldRotation(this.ActorRotation.ToUeRotator(), false, ref fhitResult, true);
 		}
 
-		// Token: 0x06031B80 RID: 203648 RVA: 0x00B8BC93 File Offset: 0x00B89E93
+		// Token: 0x06026910 RID: 157968 RVA: 0x00ACFCEF File Offset: 0x00ACDEEF
 		public void AddToDynamicBatchMesh(TowerDefenseHeadStateData headStateData)
 		{
 			this.HeadStateView.Refresh(headStateData, this.HpItemWorldPos);
 			this.DynamicBatch.AddContainerNode(this.HpItem, true);
 		}
 
-		// Token: 0x06031B81 RID: 203649 RVA: 0x00B8BCB9 File Offset: 0x00B89EB9
+		// Token: 0x06026911 RID: 157969 RVA: 0x00ACFD15 File Offset: 0x00ACDF15
 		public void ClearDynamicBatchMesh()
 		{
 			this.DynamicBatch.ClearAllGeometries();
 		}
 
-		// Token: 0x0401A8C7 RID: 108743
+		// Token: 0x04015219 RID: 86553
 		private bool IsEnable;
 
-		// Token: 0x0401A8C8 RID: 108744
+		// Token: 0x0401521A RID: 86554
 		[Nullable(2)]
 		private TowerDefenseHeadStateView HeadStateView;
 
-		// Token: 0x0401A8C9 RID: 108745
+		// Token: 0x0401521B RID: 86555
 		[Nullable(2)]
 		private UUIDynamicBatchMesh DynamicBatch;
 
-		// Token: 0x0401A8CA RID: 108746
+		// Token: 0x0401521C RID: 86556
 		[Nullable(2)]
 		private UUIItem HpParentItem;
 
-		// Token: 0x0401A8CB RID: 108747
+		// Token: 0x0401521D RID: 86557
 		[Nullable(2)]
 		private UUIItem HpItem;
 
-		// Token: 0x0401A8CC RID: 108748
+		// Token: 0x0401521E RID: 86558
 		private readonly Rotator ActorRotation = Rotator.Create();
 
-		// Token: 0x0401A8CD RID: 108749
+		// Token: 0x0401521F RID: 86559
 		private readonly Vector HpItemWorldPos = Vector.Create();
 
-		// Token: 0x0200AC8B RID: 44171
+		// Token: 0x020096AB RID: 38571
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040346F6 RID: 214774
+			// Token: 0x0402F0A7 RID: 192679
 			UIDynamicBatchMesh,
-			// Token: 0x040346F7 RID: 214775
+			// Token: 0x0402F0A8 RID: 192680
 			HpContainerItem
 		}
 	}

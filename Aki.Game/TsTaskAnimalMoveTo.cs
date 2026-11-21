@@ -16,13 +16,13 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/Animal/TsTaskAnimalMoveTo.TsTaskAnimalMoveTo_C")]
 public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000362 RID: 866 RVA: 0x0000FC41 File Offset: 0x0000DE41
+	// Token: 0x06000362 RID: 866 RVA: 0x0001039D File Offset: 0x0000E59D
 	static TsTaskAnimalMoveTo()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsTaskAnimalMoveTo.CreateStaticDefaultValue), new Action(TsTaskAnimalMoveTo.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000363 RID: 867 RVA: 0x0000FC60 File Offset: 0x0000DE60
+	// Token: 0x06000363 RID: 867 RVA: 0x000103BC File Offset: 0x0000E5BC
 	public static void CreateStaticDefaultValue()
 	{
 		TsTaskAnimalMoveTo.AnimalValidMoveState = new HashSet<global::ECharMoveState>();
@@ -32,7 +32,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		TsTaskAnimalMoveTo.StaticVariablesInited = true;
 	}
 
-	// Token: 0x06000364 RID: 868 RVA: 0x0000FC97 File Offset: 0x0000DE97
+	// Token: 0x06000364 RID: 868 RVA: 0x000103F3 File Offset: 0x0000E5F3
 	public static void ResetStaticDefaultValue()
 	{
 		TsTaskAnimalMoveTo.StaticVariablesInited = false;
@@ -40,8 +40,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x1700007F RID: 127
-	// (get) Token: 0x06000365 RID: 869 RVA: 0x0000FCA5 File Offset: 0x0000DEA5
-	// (set) Token: 0x06000366 RID: 870 RVA: 0x0000FCB5 File Offset: 0x0000DEB5
+	// (get) Token: 0x06000365 RID: 869 RVA: 0x00010401 File Offset: 0x0000E601
+	// (set) Token: 0x06000366 RID: 870 RVA: 0x00010411 File Offset: 0x0000E611
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECharState MoveState
 	{
@@ -56,8 +56,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000080 RID: 128
-	// (get) Token: 0x06000367 RID: 871 RVA: 0x0000FCC6 File Offset: 0x0000DEC6
-	// (set) Token: 0x06000368 RID: 872 RVA: 0x0000FCD6 File Offset: 0x0000DED6
+	// (get) Token: 0x06000367 RID: 871 RVA: 0x00010422 File Offset: 0x0000E622
+	// (set) Token: 0x06000368 RID: 872 RVA: 0x00010432 File Offset: 0x0000E632
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool NavigationOn
 	{
@@ -72,8 +72,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000081 RID: 129
-	// (get) Token: 0x06000369 RID: 873 RVA: 0x0000FCE7 File Offset: 0x0000DEE7
-	// (set) Token: 0x0600036A RID: 874 RVA: 0x0000FCFB File Offset: 0x0000DEFB
+	// (get) Token: 0x06000369 RID: 873 RVA: 0x00010443 File Offset: 0x0000E643
+	// (set) Token: 0x0600036A RID: 874 RVA: 0x00010457 File Offset: 0x0000E657
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetLocation
 	{
@@ -88,8 +88,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000082 RID: 130
-	// (get) Token: 0x0600036B RID: 875 RVA: 0x0000FD10 File Offset: 0x0000DF10
-	// (set) Token: 0x0600036C RID: 876 RVA: 0x0000FD20 File Offset: 0x0000DF20
+	// (get) Token: 0x0600036B RID: 875 RVA: 0x0001046C File Offset: 0x0000E66C
+	// (set) Token: 0x0600036C RID: 876 RVA: 0x0001047C File Offset: 0x0000E67C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float TurnSpeed
 	{
@@ -104,8 +104,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000083 RID: 131
-	// (get) Token: 0x0600036D RID: 877 RVA: 0x0000FD31 File Offset: 0x0000DF31
-	// (set) Token: 0x0600036E RID: 878 RVA: 0x0000FD41 File Offset: 0x0000DF41
+	// (get) Token: 0x0600036D RID: 877 RVA: 0x0001048D File Offset: 0x0000E68D
+	// (set) Token: 0x0600036E RID: 878 RVA: 0x0001049D File Offset: 0x0000E69D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int LimitTime
 	{
@@ -120,8 +120,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000084 RID: 132
-	// (get) Token: 0x0600036F RID: 879 RVA: 0x0000FD52 File Offset: 0x0000DF52
-	// (set) Token: 0x06000370 RID: 880 RVA: 0x0000FD62 File Offset: 0x0000DF62
+	// (get) Token: 0x0600036F RID: 879 RVA: 0x000104AE File Offset: 0x0000E6AE
+	// (set) Token: 0x06000370 RID: 880 RVA: 0x000104BE File Offset: 0x0000E6BE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool RootMotion
 	{
@@ -136,8 +136,8 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 	}
 
 	// Token: 0x17000085 RID: 133
-	// (get) Token: 0x06000371 RID: 881 RVA: 0x0000FD73 File Offset: 0x0000DF73
-	// (set) Token: 0x06000372 RID: 882 RVA: 0x0000FD83 File Offset: 0x0000DF83
+	// (get) Token: 0x06000371 RID: 881 RVA: 0x000104CF File Offset: 0x0000E6CF
+	// (set) Token: 0x06000372 RID: 882 RVA: 0x000104DF File Offset: 0x0000E6DF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int DistanceErrorThreshold
 	{
@@ -151,7 +151,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		}
 	}
 
-	// Token: 0x06000373 RID: 883 RVA: 0x0000FD94 File Offset: 0x0000DF94
+	// Token: 0x06000373 RID: 883 RVA: 0x000104F0 File Offset: 0x0000E6F0
 	private static void InitStaticVariables()
 	{
 		TsTaskAnimalMoveTo.AnimalValidMoveState = new HashSet<global::ECharMoveState>();
@@ -161,7 +161,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		TsTaskAnimalMoveTo.StaticVariablesInited = true;
 	}
 
-	// Token: 0x06000374 RID: 884 RVA: 0x0000FDCC File Offset: 0x0000DFCC
+	// Token: 0x06000374 RID: 884 RVA: 0x00010528 File Offset: 0x0000E728
 	private void InitTsVariables(Entity entity)
 	{
 		if (!this.IsInitTsVariables)
@@ -178,30 +178,27 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		}
 	}
 
-	// Token: 0x06000375 RID: 885 RVA: 0x0000FE74 File Offset: 0x0000E074
+	// Token: 0x06000375 RID: 885 RVA: 0x000105D0 File Offset: 0x0000E7D0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAnimalMoveTo) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskAnimalMoveTo.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000376 RID: 886 RVA: 0x0000FF10 File Offset: 0x0000E110
+	// Token: 0x06000376 RID: 886 RVA: 0x00010680 File Offset: 0x0000E880
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -253,31 +250,28 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		}
 	}
 
-	// Token: 0x06000377 RID: 887 RVA: 0x000100A0 File Offset: 0x0000E2A0
+	// Token: 0x06000377 RID: 887 RVA: 0x00010810 File Offset: 0x0000EA10
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAnimalMoveTo) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskAnimalMoveTo.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000378 RID: 888 RVA: 0x00010140 File Offset: 0x0000E340
+	// Token: 0x06000378 RID: 888 RVA: 0x000108C8 File Offset: 0x0000EAC8
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -300,7 +294,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		base.Finish(false);
 	}
 
-	// Token: 0x06000379 RID: 889 RVA: 0x000101A8 File Offset: 0x0000E3A8
+	// Token: 0x06000379 RID: 889 RVA: 0x00010930 File Offset: 0x0000EB30
 	protected override void OnClear()
 	{
 		AnimalMoveToController animalMoveToController = this.AnimalMoveToController;
@@ -311,7 +305,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		this.AnimalMoveToController = null;
 	}
 
-	// Token: 0x0600037A RID: 890 RVA: 0x000101C2 File Offset: 0x0000E3C2
+	// Token: 0x0600037A RID: 890 RVA: 0x0001094A File Offset: 0x0000EB4A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskAnimalMoveTo._ClassPtr == IntPtr.Zero)
@@ -321,22 +315,22 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		return TsTaskAnimalMoveTo._ClassPtr;
 	}
 
-	// Token: 0x0600037B RID: 891 RVA: 0x000101E8 File Offset: 0x0000E3E8
+	// Token: 0x0600037B RID: 891 RVA: 0x00010970 File Offset: 0x0000EB70
 	public TsTaskAnimalMoveTo() : this(BuiltinUtils.AllocNativeUObject(TsTaskAnimalMoveTo.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600037C RID: 892 RVA: 0x00010210 File Offset: 0x0000E410
+	// Token: 0x0600037C RID: 892 RVA: 0x00010998 File Offset: 0x0000EB98
 	public TsTaskAnimalMoveTo(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAnimalMoveTo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600037D RID: 893 RVA: 0x00010243 File Offset: 0x0000E443
+	// Token: 0x0600037D RID: 893 RVA: 0x000109CB File Offset: 0x0000EBCB
 	protected TsTaskAnimalMoveTo(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600037E RID: 894 RVA: 0x00010260 File Offset: 0x0000E460
+	// Token: 0x0600037E RID: 894 RVA: 0x000109E8 File Offset: 0x0000EBE8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -345,7 +339,7 @@ public class TsTaskAnimalMoveTo : TsTaskAbortImmediatelyBase, IStaticVariableRes
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0600037F RID: 895 RVA: 0x00010290 File Offset: 0x0000E490
+	// Token: 0x0600037F RID: 895 RVA: 0x00010A18 File Offset: 0x0000EC18
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{

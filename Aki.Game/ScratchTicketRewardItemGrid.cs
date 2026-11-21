@@ -2,16 +2,16 @@
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020014F2 RID: 5362
+// Token: 0x020009AA RID: 2474
 public class ScratchTicketRewardItemGrid : LoopScrollSmallItemGrid<TItem>
 {
-	// Token: 0x060098D0 RID: 39120 RVA: 0x0021060D File Offset: 0x0020E80D
+	// Token: 0x06006CAA RID: 27818 RVA: 0x0021A2F9 File Offset: 0x002184F9
 	protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 	{
 		this._Refresh(data);
 	}
 
-	// Token: 0x060098D1 RID: 39121 RVA: 0x00210618 File Offset: 0x0020E818
+	// Token: 0x06006CAB RID: 27819 RVA: 0x0021A304 File Offset: 0x00218504
 	private void _Refresh(TItem data)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -27,18 +27,18 @@ public class ScratchTicketRewardItemGrid : LoopScrollSmallItemGrid<TItem>
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060098D2 RID: 39122 RVA: 0x00210685 File Offset: 0x0020E885
+	// Token: 0x06006CAC RID: 27820 RVA: 0x0021A371 File Offset: 0x00218571
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x060098D3 RID: 39123 RVA: 0x00210688 File Offset: 0x0020E888
+	// Token: 0x06006CAD RID: 27821 RVA: 0x0021A374 File Offset: 0x00218574
 	protected override void OnExtendToggleClicked()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x0400433A RID: 17210
+	// Token: 0x040043DF RID: 17375
 	private int ConfigId;
 }

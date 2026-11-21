@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200293F RID: 10559
+// Token: 0x02001EBA RID: 7866
 [UClass("/Game/Aki/TypeScript/Game/Module/Scene3DUI/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/Scene3DUI/TsSceneDecorativeUiActor.TsSceneDecorativeUiActor_C")]
 public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17001D3E RID: 7486
-	// (get) Token: 0x06015CE6 RID: 89318 RVA: 0x0057FEAD File Offset: 0x0057E0AD
-	// (set) Token: 0x06015CE7 RID: 89319 RVA: 0x0057FEBD File Offset: 0x0057E0BD
+	// Token: 0x17001D98 RID: 7576
+	// (get) Token: 0x060136EB RID: 79595 RVA: 0x005AAEE5 File Offset: 0x005A90E5
+	// (set) Token: 0x060136EC RID: 79596 RVA: 0x005AAEF5 File Offset: 0x005A90F5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ShowDistance
 	{
@@ -28,9 +28,9 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x17001D3F RID: 7487
-	// (get) Token: 0x06015CE8 RID: 89320 RVA: 0x0057FECE File Offset: 0x0057E0CE
-	// (set) Token: 0x06015CE9 RID: 89321 RVA: 0x0057FEDE File Offset: 0x0057E0DE
+	// Token: 0x17001D99 RID: 7577
+	// (get) Token: 0x060136ED RID: 79597 RVA: 0x005AAF06 File Offset: 0x005A9106
+	// (set) Token: 0x060136EE RID: 79598 RVA: 0x005AAF16 File Offset: 0x005A9116
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsFaceToCharacter
 	{
@@ -44,9 +44,9 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x17001D40 RID: 7488
-	// (get) Token: 0x06015CEA RID: 89322 RVA: 0x0057FEEF File Offset: 0x0057E0EF
-	// (set) Token: 0x06015CEB RID: 89323 RVA: 0x0057FEF7 File Offset: 0x0057E0F7
+	// Token: 0x17001D9A RID: 7578
+	// (get) Token: 0x060136EF RID: 79599 RVA: 0x005AAF27 File Offset: 0x005A9127
+	// (set) Token: 0x060136F0 RID: 79600 RVA: 0x005AAF2F File Offset: 0x005A912F
 	public bool IsControlled
 	{
 		get
@@ -59,9 +59,9 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x17001D41 RID: 7489
-	// (get) Token: 0x06015CEC RID: 89324 RVA: 0x0057FF00 File Offset: 0x0057E100
-	// (set) Token: 0x06015CED RID: 89325 RVA: 0x0057FF08 File Offset: 0x0057E108
+	// Token: 0x17001D9B RID: 7579
+	// (get) Token: 0x060136F1 RID: 79601 RVA: 0x005AAF38 File Offset: 0x005A9138
+	// (set) Token: 0x060136F2 RID: 79602 RVA: 0x005AAF40 File Offset: 0x005A9140
 	public bool InShow
 	{
 		get
@@ -74,52 +74,40 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x06015CEE RID: 89326 RVA: 0x0057FF14 File Offset: 0x0057E114
+	// Token: 0x060136F3 RID: 79603 RVA: 0x005AAF4C File Offset: 0x005A914C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void Create3dUi()
+	public virtual void Create3dUi()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Create3dUi"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSceneDecorativeUiActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Create3dUi"), TsSceneDecorativeUiActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.Create3dUi_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06015CEF RID: 89327 RVA: 0x0057FF84 File Offset: 0x0057E184
+	// Token: 0x060136F4 RID: 79604 RVA: 0x005AAFA5 File Offset: 0x005A91A5
 	protected void Create3dUi_Implementation()
 	{
 	}
 
-	// Token: 0x06015CF0 RID: 89328 RVA: 0x0057FF88 File Offset: 0x0057E188
+	// Token: 0x060136F5 RID: 79605 RVA: 0x005AAFA8 File Offset: 0x005A91A8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void Destroy3dUi()
+	public virtual void Destroy3dUi()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Destroy3dUi"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSceneDecorativeUiActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Destroy3dUi"), TsSceneDecorativeUiActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.Destroy3dUi_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06015CF1 RID: 89329 RVA: 0x0057FFF8 File Offset: 0x0057E1F8
+	// Token: 0x060136F6 RID: 79606 RVA: 0x005AB001 File Offset: 0x005A9201
 	protected void Destroy3dUi_Implementation()
 	{
 		if (this.EditorUiActor != null)
@@ -129,27 +117,21 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		}
 	}
 
-	// Token: 0x06015CF2 RID: 89330 RVA: 0x00580020 File Offset: 0x0057E220
+	// Token: 0x060136F7 RID: 79607 RVA: 0x005AB02C File Offset: 0x005A922C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DrawDistance()
+	public virtual void DrawDistance()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DrawDistance"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSceneDecorativeUiActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DrawDistance"), TsSceneDecorativeUiActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DrawDistance_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06015CF3 RID: 89331 RVA: 0x00580090 File Offset: 0x0057E290
+	// Token: 0x060136F8 RID: 79608 RVA: 0x005AB088 File Offset: 0x005A9288
 	protected void DrawDistance_Implementation()
 	{
 		int segments = 12;
@@ -157,13 +139,13 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		UKismetSystemLibrary.D_DrawDebugSphere(this, base.D_K2_GetActorLocation(), this.ShowDistance, segments, new FLinearColor?(ColorUtils.LinearRed), (float)num, 0f);
 	}
 
-	// Token: 0x06015CF4 RID: 89332 RVA: 0x005800C6 File Offset: 0x0057E2C6
+	// Token: 0x060136F9 RID: 79609 RVA: 0x005AB0BE File Offset: 0x005A92BE
 	protected override bool OnCanTick()
 	{
 		return !this.IsControlled && base.CalculateSquaredDistance() <= (double)(this.ShowDistance * this.ShowDistance);
 	}
 
-	// Token: 0x06015CF5 RID: 89333 RVA: 0x005800EB File Offset: 0x0057E2EB
+	// Token: 0x060136FA RID: 79610 RVA: 0x005AB0E3 File Offset: 0x005A92E3
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSceneDecorativeUiActor._ClassPtr == IntPtr.Zero)
@@ -173,63 +155,63 @@ public class TsSceneDecorativeUiActor : TsSceneUiTag, IUnrealUObject, IUnrealObj
 		return TsSceneDecorativeUiActor._ClassPtr;
 	}
 
-	// Token: 0x06015CF6 RID: 89334 RVA: 0x00580110 File Offset: 0x0057E310
+	// Token: 0x060136FB RID: 79611 RVA: 0x005AB108 File Offset: 0x005A9308
 	public TsSceneDecorativeUiActor() : this(BuiltinUtils.AllocNativeUObject(TsSceneDecorativeUiActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06015CF7 RID: 89335 RVA: 0x00580138 File Offset: 0x0057E338
+	// Token: 0x060136FC RID: 79612 RVA: 0x005AB130 File Offset: 0x005A9330
 	[NullableContext(1)]
 	public TsSceneDecorativeUiActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSceneDecorativeUiActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06015CF8 RID: 89336 RVA: 0x0058016B File Offset: 0x0057E36B
+	// Token: 0x060136FD RID: 79613 RVA: 0x005AB163 File Offset: 0x005A9363
 	protected TsSceneDecorativeUiActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06015CF9 RID: 89337 RVA: 0x00580174 File Offset: 0x0057E374
+	// Token: 0x060136FE RID: 79614 RVA: 0x005AB16C File Offset: 0x005A936C
 	protected virtual void __CPPCALL_Create3dUi_Implementation()
 	{
 		this.Create3dUi_Implementation();
 	}
 
-	// Token: 0x06015CFA RID: 89338 RVA: 0x0058017C File Offset: 0x0057E37C
+	// Token: 0x060136FF RID: 79615 RVA: 0x005AB174 File Offset: 0x005A9374
 	protected virtual void __CPPCALL_Destroy3dUi_Implementation()
 	{
 		this.Destroy3dUi_Implementation();
 	}
 
-	// Token: 0x06015CFB RID: 89339 RVA: 0x00580184 File Offset: 0x0057E384
+	// Token: 0x06013700 RID: 79616 RVA: 0x005AB17C File Offset: 0x005A937C
 	protected virtual void __CPPCALL_DrawDistance_Implementation()
 	{
 		this.DrawDistance_Implementation();
 	}
 
-	// Token: 0x0400A252 RID: 41554
+	// Token: 0x0400A63D RID: 42557
 	private bool IsControlledInternal;
 
-	// Token: 0x0400A253 RID: 41555
+	// Token: 0x0400A63E RID: 42558
 	private bool InShowInternal;
 
-	// Token: 0x0400A254 RID: 41556
+	// Token: 0x0400A63F RID: 42559
 	[Nullable(2)]
 	private AActor EditorUiActor;
 
-	// Token: 0x0400A255 RID: 41557
+	// Token: 0x0400A640 RID: 42560
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/Scene3DUI/TsSceneDecorativeUiActor.TsSceneDecorativeUiActor_C";
 
-	// Token: 0x0400A256 RID: 41558
+	// Token: 0x0400A641 RID: 42561
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400A257 RID: 41559
+	// Token: 0x0400A642 RID: 42562
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400A258 RID: 41560
+	// Token: 0x0400A643 RID: 42563
 	private static int __PropertyOffset_ShowDistance;
 
-	// Token: 0x0400A259 RID: 41561
+	// Token: 0x0400A644 RID: 42564
 	private static int __PropertyOffset_IsFaceToCharacter;
 }

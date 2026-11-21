@@ -4,45 +4,45 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x02006389 RID: 25481
+	// Token: 0x02005307 RID: 21255
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NewbieMainTabData
 	{
-		// Token: 0x0604013F RID: 262463 RVA: 0x00F814AC File Offset: 0x00F7F6AC
+		// Token: 0x06034E00 RID: 216576 RVA: 0x00EC8410 File Offset: 0x00EC6610
 		public NewbieMainTabData(int tabId)
 		{
 			this.TabId = tabId;
 		}
 
-		// Token: 0x06040140 RID: 262464 RVA: 0x00F814C6 File Offset: 0x00F7F6C6
+		// Token: 0x06034E01 RID: 216577 RVA: 0x00EC842A File Offset: 0x00EC662A
 		public void SetCompletedTaskIds(IEnumerable<int> ids)
 		{
 			this.CompletedTaskIdsInternal = new HashSet<int>(ids);
 		}
 
-		// Token: 0x06040141 RID: 262465 RVA: 0x00F814D4 File Offset: 0x00F7F6D4
+		// Token: 0x06034E02 RID: 216578 RVA: 0x00EC8438 File Offset: 0x00EC6638
 		public bool IsTaskCompleted(int taskId)
 		{
 			return this.CompletedTaskIdsInternal.Contains(taskId);
 		}
 
-		// Token: 0x06040142 RID: 262466 RVA: 0x00F814E2 File Offset: 0x00F7F6E2
+		// Token: 0x06034E03 RID: 216579 RVA: 0x00EC8446 File Offset: 0x00EC6646
 		public HashSet<int> GetCompletedTaskIds()
 		{
 			return this.CompletedTaskIdsInternal;
 		}
 
-		// Token: 0x06040143 RID: 262467 RVA: 0x00F814EA File Offset: 0x00F7F6EA
+		// Token: 0x06034E04 RID: 216580 RVA: 0x00EC844E File Offset: 0x00EC664E
 		public int GetCompletedTaskCount()
 		{
 			return this.CompletedTaskIdsInternal.Count;
 		}
 
-		// Token: 0x04021642 RID: 136770
+		// Token: 0x0401BF71 RID: 114545
 		public readonly int TabId;
 
-		// Token: 0x04021643 RID: 136771
+		// Token: 0x0401BF72 RID: 114546
 		private HashSet<int> CompletedTaskIdsInternal = new HashSet<int>();
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200166B RID: 5739
+// Token: 0x02000B23 RID: 2851
 [NullableContext(1)]
 [Nullable(0)]
 public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600A1CA RID: 41418 RVA: 0x0023B914 File Offset: 0x00239B14
+	// Token: 0x060075A8 RID: 30120 RVA: 0x002457B0 File Offset: 0x002439B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,19 +32,19 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600A1CB RID: 41419 RVA: 0x0023BA2C File Offset: 0x00239C2C
+	// Token: 0x060075A9 RID: 30121 RVA: 0x002458C8 File Offset: 0x00243AC8
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600A1CC RID: 41420 RVA: 0x0023BA3F File Offset: 0x00239C3F
+	// Token: 0x060075AA RID: 30122 RVA: 0x002458DB File Offset: 0x00243ADB
 	public void SetClickCallback(Action<int> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x0600A1CD RID: 41421 RVA: 0x0023BA48 File Offset: 0x00239C48
+	// Token: 0x060075AB RID: 30123 RVA: 0x002458E4 File Offset: 0x00243AE4
 	public void SetPackToggleInteractive(bool interactive)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -55,7 +55,7 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		extendToggle.SetSelfInteractive(interactive);
 	}
 
-	// Token: 0x0600A1CE RID: 41422 RVA: 0x0023BA5C File Offset: 0x00239C5C
+	// Token: 0x060075AC RID: 30124 RVA: 0x002458F8 File Offset: 0x00243AF8
 	public override void Refresh(int cfgId, bool isSelected, int gridIndex)
 	{
 		this.CfgId = cfgId;
@@ -87,7 +87,7 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600A1CF RID: 41423 RVA: 0x0023BB58 File Offset: 0x00239D58
+	// Token: 0x060075AD RID: 30125 RVA: 0x002459F4 File Offset: 0x00243BF4
 	private void RefreshStateInfo()
 	{
 		UUIItem item = base.GetItem(1);
@@ -172,7 +172,7 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600A1D0 RID: 41424 RVA: 0x0023BC83 File Offset: 0x00239E83
+	// Token: 0x060075AE RID: 30126 RVA: 0x00245B1F File Offset: 0x00243D1F
 	private void OnClicked(EToggleState state)
 	{
 		Action<int> clickCallback = this.ClickCallback;
@@ -183,19 +183,19 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		clickCallback(this.CfgId);
 	}
 
-	// Token: 0x0600A1D1 RID: 41425 RVA: 0x0023BC9B File Offset: 0x00239E9B
+	// Token: 0x060075AF RID: 30127 RVA: 0x00245B37 File Offset: 0x00243D37
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleSelect(true);
 	}
 
-	// Token: 0x0600A1D2 RID: 41426 RVA: 0x0023BCA4 File Offset: 0x00239EA4
+	// Token: 0x060075B0 RID: 30128 RVA: 0x00245B40 File Offset: 0x00243D40
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleSelect(false);
 	}
 
-	// Token: 0x0600A1D3 RID: 41427 RVA: 0x0023BCB0 File Offset: 0x00239EB0
+	// Token: 0x060075B1 RID: 30129 RVA: 0x00245B4C File Offset: 0x00243D4C
 	public void SetToggleSelect(bool select)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -209,7 +209,7 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		sprite.SetChangeColor(select, fcolor);
 	}
 
-	// Token: 0x0600A1D4 RID: 41428 RVA: 0x0023BCF8 File Offset: 0x00239EF8
+	// Token: 0x060075B2 RID: 30130 RVA: 0x00245B94 File Offset: 0x00243D94
 	public void PlaySequencePurely()
 	{
 		if (this.SeqPlayer != null && this.SeqPlayer.IsPlayingSequence("Loop"))
@@ -224,15 +224,15 @@ public class WuWuLogisticsPackItem : GridProxyAbstract<int>
 		seqPlayer.PlayLevelSequenceByName("Loop", false, null, false);
 	}
 
-	// Token: 0x040049AF RID: 18863
+	// Token: 0x04004A55 RID: 19029
 	private int CfgId;
 
-	// Token: 0x040049B0 RID: 18864
+	// Token: 0x04004A56 RID: 19030
 	private Action<int> ClickCallback = delegate(int _)
 	{
 	};
 
-	// Token: 0x040049B1 RID: 18865
+	// Token: 0x04004A57 RID: 19031
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 }

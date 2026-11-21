@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005960 RID: 22880
+	// Token: 0x02005F6D RID: 24429
 	public class ISpawnMonsterPreDependOnPrecedingT
 	{
-		// Token: 0x1700ABBD RID: 43965
-		// (get) Token: 0x06026BB1 RID: 158641 RVA: 0x005553BF File Offset: 0x005535BF
-		// (set) Token: 0x06026BB2 RID: 158642 RVA: 0x005553C7 File Offset: 0x005535C7
+		// Token: 0x1700B4F1 RID: 46321
+		// (get) Token: 0x0602911B RID: 168219 RVA: 0x0059C02B File Offset: 0x0059A22B
+		// (set) Token: 0x0602911C RID: 168220 RVA: 0x0059C033 File Offset: 0x0059A233
 		public ESpawnMonsterPreCondition Type { get; set; }
 
-		// Token: 0x1700ABBE RID: 43966
-		// (get) Token: 0x06026BB3 RID: 158643 RVA: 0x005553D0 File Offset: 0x005535D0
-		// (set) Token: 0x06026BB4 RID: 158644 RVA: 0x005553D8 File Offset: 0x005535D8
+		// Token: 0x1700B4F2 RID: 46322
+		// (get) Token: 0x0602911D RID: 168221 RVA: 0x0059C03C File Offset: 0x0059A23C
+		// (set) Token: 0x0602911E RID: 168222 RVA: 0x0059C044 File Offset: 0x0059A244
 		public List<int> Ids { get; set; }
 
-		// Token: 0x06026BB5 RID: 158645 RVA: 0x005553E1 File Offset: 0x005535E1
+		// Token: 0x0602911F RID: 168223 RVA: 0x0059C04D File Offset: 0x0059A24D
 		public ISpawnMonsterPreDependOnPrecedingT()
 		{
 			this.Type = ESpawnMonsterPreCondition.DependOnPreceding;

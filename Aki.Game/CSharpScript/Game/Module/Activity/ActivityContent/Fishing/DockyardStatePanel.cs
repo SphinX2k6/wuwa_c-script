@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065CA RID: 26058
+	// Token: 0x02005548 RID: 21832
 	public class DockyardStatePanel : UiPanelBase
 	{
-		// Token: 0x060415C1 RID: 267713 RVA: 0x00FD6A14 File Offset: 0x00FD4C14
+		// Token: 0x06036286 RID: 221830 RVA: 0x00F1DA54 File Offset: 0x00F1BC54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415C2 RID: 267714 RVA: 0x00FD6AE0 File Offset: 0x00FD4CE0
+		// Token: 0x06036287 RID: 221831 RVA: 0x00F1DB20 File Offset: 0x00F1BD20
 		[NullableContext(1)]
 		protected UniTask InitConsumeItem(int itemId, UUIItem item)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitConsumeItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060415C3 RID: 267715 RVA: 0x00FD6B2C File Offset: 0x00FD4D2C
+		// Token: 0x06036288 RID: 221832 RVA: 0x00F1DB6C File Offset: 0x00F1BD6C
 		protected void InitSkillText()
 		{
 			int unlockFishingTechCount = FishingModel.Instance.UnlockFishingTechCount;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060415C4 RID: 267716 RVA: 0x00FD6B90 File Offset: 0x00FD4D90
+		// Token: 0x06036289 RID: 221833 RVA: 0x00F1DBD0 File Offset: 0x00F1BDD0
 		protected void InitSpeedText()
 		{
 			EntityHandle entityHandle = FishingModel.Instance.GetShipData().GetEntityHandle();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(valueOrDefault.ToString(), true);
 		}
 
-		// Token: 0x060415C5 RID: 267717 RVA: 0x00FD6C14 File Offset: 0x00FD4E14
+		// Token: 0x0603628A RID: 221834 RVA: 0x00F1DC54 File Offset: 0x00F1BE54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DockyardStatePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -108,22 +108,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200C7EF RID: 51183
+		// Token: 0x0200B1D2 RID: 45522
 		private class EComponentDefine
 		{
-			// Token: 0x0403C61F RID: 247327
+			// Token: 0x04036F6D RID: 225133
 			public const int CurrencyItem = 0;
 
-			// Token: 0x0403C620 RID: 247328
+			// Token: 0x04036F6E RID: 225134
 			public const int BombItem = 1;
 
-			// Token: 0x0403C621 RID: 247329
+			// Token: 0x04036F6F RID: 225135
 			public const int BaitItem = 2;
 
-			// Token: 0x0403C622 RID: 247330
+			// Token: 0x04036F70 RID: 225136
 			public const int SkillText = 3;
 
-			// Token: 0x0403C623 RID: 247331
+			// Token: 0x04036F71 RID: 225137
 			public const int SpeedText = 4;
 		}
 	}

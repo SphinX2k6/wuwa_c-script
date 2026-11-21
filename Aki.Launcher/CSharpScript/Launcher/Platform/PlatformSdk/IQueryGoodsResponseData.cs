@@ -3,27 +3,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000187 RID: 391
+	// Token: 0x0200018B RID: 395
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IQueryGoodsResponseData
 	{
-		// Token: 0x040006BE RID: 1726
+		// Token: 0x040006F9 RID: 1785
 		public string goodsId;
 
-		// Token: 0x040006BF RID: 1727
+		// Token: 0x040006FA RID: 1786
 		public string name;
 
-		// Token: 0x040006C0 RID: 1728
+		// Token: 0x040006FB RID: 1787
 		public string currency;
 
-		// Token: 0x040006C1 RID: 1729
+		// Token: 0x040006FC RID: 1788
 		public double price;
 
-		// Token: 0x040006C2 RID: 1730
+		// Token: 0x040006FD RID: 1789
 		public string desc;
 
-		// Token: 0x040006C3 RID: 1731
+		// Token: 0x040006FE RID: 1790
 		public string channelGoodsId;
 	}
 }

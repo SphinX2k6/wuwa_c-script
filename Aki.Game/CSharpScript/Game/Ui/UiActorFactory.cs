@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C7 RID: 18119
+	// Token: 0x020035F8 RID: 13816
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class UiActorFactory
 	{
-		// Token: 0x0602EB9B RID: 191387 RVA: 0x00AD0152 File Offset: 0x00ACE352
+		// Token: 0x060232E7 RID: 144103 RVA: 0x009FEAE6 File Offset: 0x009FCCE6
 		private UiPoolActor Creator()
 		{
 			return new UiPoolActor(this.PathInternal)
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Ui
 			};
 		}
 
-		// Token: 0x0602EB9C RID: 191388 RVA: 0x00AD0179 File Offset: 0x00ACE379
+		// Token: 0x060232E8 RID: 144104 RVA: 0x009FEB0D File Offset: 0x009FCD0D
 		private void Clearer(UiPoolActor uiPoolActor)
 		{
 			uiPoolActor.Clear();
 		}
 
-		// Token: 0x0602EB9D RID: 191389 RVA: 0x00AD0184 File Offset: 0x00ACE384
+		// Token: 0x060232E9 RID: 144105 RVA: 0x009FEB18 File Offset: 0x009FCD18
 		public UiActorFactory(string path, [Nullable(2)] UUIItem poolRoot)
 		{
 			this.PathInternal = path;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB9E RID: 191390 RVA: 0x00AD0210 File Offset: 0x00ACE410
+		// Token: 0x060232EA RID: 144106 RVA: 0x009FEBA4 File Offset: 0x009FCDA4
 		public UniTask PreloadActor(Func<int> cacheCount)
 		{
 			UiActorFactory.<PreloadActor>d__8 <PreloadActor>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Ui
 			return <PreloadActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EB9F RID: 191391 RVA: 0x00AD025C File Offset: 0x00ACE45C
+		// Token: 0x060232EB RID: 144107 RVA: 0x009FEBF0 File Offset: 0x009FCDF0
 		public bool Release(UiPoolActor uiPoolActor)
 		{
 			if (uiPoolActor == null)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EBA0 RID: 191392 RVA: 0x00AD02EC File Offset: 0x00ACE4EC
+		// Token: 0x060232EC RID: 144108 RVA: 0x009FEC80 File Offset: 0x009FCE80
 		public int GarbageCollect(int allowGarbageCount)
 		{
 			if (this.Queue.Size <= this.PoolCacheCount)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Ui
 			return allowGarbageCount - num;
 		}
 
-		// Token: 0x0602EBA1 RID: 191393 RVA: 0x00AD0364 File Offset: 0x00ACE564
+		// Token: 0x060232ED RID: 144109 RVA: 0x009FECF8 File Offset: 0x009FCEF8
 		public void Clear()
 		{
 			while (!this.Queue.Empty)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Ui
 			this.Queue.Clear();
 		}
 
-		// Token: 0x0602EBA2 RID: 191394 RVA: 0x00AD03A0 File Offset: 0x00ACE5A0
+		// Token: 0x060232EE RID: 144110 RVA: 0x009FED34 File Offset: 0x009FCF34
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBA3 RID: 191395 RVA: 0x00AD03E4 File Offset: 0x00ACE5E4
+		// Token: 0x060232EF RID: 144111 RVA: 0x009FED78 File Offset: 0x009FCF78
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -146,30 +146,30 @@ namespace CSharpScript.Game.Ui
 			return <GetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBA4 RID: 191396 RVA: 0x00AD0437 File Offset: 0x00ACE637
+		// Token: 0x060232F0 RID: 144112 RVA: 0x009FEDCB File Offset: 0x009FCFCB
 		public void CancelGetAsync()
 		{
 			LguiResourceManager.Instance.CancelLoadPrefab(this.AsyncHandleId);
 			this.AsyncHandleId = LguiResourceManager.Instance.InvalidId;
 		}
 
-		// Token: 0x040196FA RID: 104186
+		// Token: 0x04013DA1 RID: 81313
 		private readonly string PathInternal = "";
 
-		// Token: 0x040196FB RID: 104187
+		// Token: 0x04013DA2 RID: 81314
 		[Nullable(2)]
 		private readonly UUIItem PoolRootInternal;
 
-		// Token: 0x040196FC RID: 104188
+		// Token: 0x04013DA3 RID: 81315
 		private int PoolCacheCount;
 
-		// Token: 0x040196FD RID: 104189
+		// Token: 0x04013DA4 RID: 81316
 		public bool IsKeepWhileCleaning;
 
-		// Token: 0x040196FE RID: 104190
+		// Token: 0x04013DA5 RID: 81317
 		private readonly Queue<UiPoolActor> Queue = new Queue<UiPoolActor>(15);
 
-		// Token: 0x040196FF RID: 104191
+		// Token: 0x04013DA6 RID: 81318
 		private int AsyncHandleId = LguiResourceManager.Instance.InvalidId;
 	}
 }

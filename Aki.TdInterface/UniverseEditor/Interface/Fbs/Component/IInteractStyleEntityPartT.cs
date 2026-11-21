@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200547D RID: 21629
+	// Token: 0x02005A03 RID: 23043
 	public class IInteractStyleEntityPartT
 	{
-		// Token: 0x17009F30 RID: 40752
-		// (get) Token: 0x0602394D RID: 145741 RVA: 0x004EB973 File Offset: 0x004E9B73
-		// (set) Token: 0x0602394E RID: 145742 RVA: 0x004EB97B File Offset: 0x004E9B7B
+		// Token: 0x1700A76A RID: 42858
+		// (get) Token: 0x06025A05 RID: 154117 RVA: 0x005289E7 File Offset: 0x00526BE7
+		// (set) Token: 0x06025A06 RID: 154118 RVA: 0x005289EF File Offset: 0x00526BEF
 		public EInteractStyleType Type { get; set; }
 
-		// Token: 0x17009F31 RID: 40753
-		// (get) Token: 0x0602394F RID: 145743 RVA: 0x004EB984 File Offset: 0x004E9B84
-		// (set) Token: 0x06023950 RID: 145744 RVA: 0x004EB98C File Offset: 0x004E9B8C
+		// Token: 0x1700A76B RID: 42859
+		// (get) Token: 0x06025A07 RID: 154119 RVA: 0x005289F8 File Offset: 0x00526BF8
+		// (set) Token: 0x06025A08 RID: 154120 RVA: 0x00528A00 File Offset: 0x00526C00
 		public TInteractEntityPartBindUnion Bind { get; set; }
 
-		// Token: 0x17009F32 RID: 40754
-		// (get) Token: 0x06023951 RID: 145745 RVA: 0x004EB995 File Offset: 0x004E9B95
-		// (set) Token: 0x06023952 RID: 145746 RVA: 0x004EB99D File Offset: 0x004E9B9D
+		// Token: 0x1700A76C RID: 42860
+		// (get) Token: 0x06025A09 RID: 154121 RVA: 0x00528A09 File Offset: 0x00526C09
+		// (set) Token: 0x06025A0A RID: 154122 RVA: 0x00528A11 File Offset: 0x00526C11
 		public float ShowAngle { get; set; }
 
-		// Token: 0x17009F33 RID: 40755
-		// (get) Token: 0x06023953 RID: 145747 RVA: 0x004EB9A6 File Offset: 0x004E9BA6
-		// (set) Token: 0x06023954 RID: 145748 RVA: 0x004EB9AE File Offset: 0x004E9BAE
+		// Token: 0x1700A76D RID: 42861
+		// (get) Token: 0x06025A0B RID: 154123 RVA: 0x00528A1A File Offset: 0x00526C1A
+		// (set) Token: 0x06025A0C RID: 154124 RVA: 0x00528A22 File Offset: 0x00526C22
 		public float TriggerAngle { get; set; }
 
-		// Token: 0x06023955 RID: 145749 RVA: 0x004EB9B7 File Offset: 0x004E9BB7
+		// Token: 0x06025A0D RID: 154125 RVA: 0x00528A2B File Offset: 0x00526C2B
 		public IInteractStyleEntityPartT()
 		{
 			this.Type = EInteractStyleType.Panorama;

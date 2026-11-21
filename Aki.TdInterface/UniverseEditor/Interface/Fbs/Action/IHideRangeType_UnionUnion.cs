@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068F8 RID: 26872
+	// Token: 0x02006FAB RID: 28587
 	public class IHideRangeType_UnionUnion
 	{
-		// Token: 0x1700C75C RID: 51036
-		// (get) Token: 0x0602EE05 RID: 192005 RVA: 0x00664FB9 File Offset: 0x006631B9
-		// (set) Token: 0x0602EE06 RID: 192006 RVA: 0x00664FC1 File Offset: 0x006631C1
+		// Token: 0x1700D15F RID: 53599
+		// (get) Token: 0x060317D5 RID: 202709 RVA: 0x006B54A1 File Offset: 0x006B36A1
+		// (set) Token: 0x060317D6 RID: 202710 RVA: 0x006B54A9 File Offset: 0x006B36A9
 		public IHideRangeType_Union Type { get; set; }
 
-		// Token: 0x1700C75D RID: 51037
-		// (get) Token: 0x0602EE07 RID: 192007 RVA: 0x00664FCA File Offset: 0x006631CA
-		// (set) Token: 0x0602EE08 RID: 192008 RVA: 0x00664FD2 File Offset: 0x006631D2
+		// Token: 0x1700D160 RID: 53600
+		// (get) Token: 0x060317D7 RID: 202711 RVA: 0x006B54B2 File Offset: 0x006B36B2
+		// (set) Token: 0x060317D8 RID: 202712 RVA: 0x006B54BA File Offset: 0x006B36BA
 		public object Value { get; set; }
 
-		// Token: 0x0602EE09 RID: 192009 RVA: 0x00664FDB File Offset: 0x006631DB
+		// Token: 0x060317D9 RID: 202713 RVA: 0x006B54C3 File Offset: 0x006B36C3
 		public IHideRangeType_UnionUnion()
 		{
 			this.Type = IHideRangeType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602EE0A RID: 192010 RVA: 0x00664FF1 File Offset: 0x006631F1
+		// Token: 0x060317DA RID: 202714 RVA: 0x006B54D9 File Offset: 0x006B36D9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602EE0B RID: 192011 RVA: 0x00665003 File Offset: 0x00663203
+		// Token: 0x060317DB RID: 202715 RVA: 0x006B54EB File Offset: 0x006B36EB
 		public IHideRangeTypeT AsIHideRangeType()
 		{
 			return this.As<IHideRangeTypeT>();
 		}
 
-		// Token: 0x0602EE0C RID: 192012 RVA: 0x0066500B File Offset: 0x0066320B
+		// Token: 0x060317DC RID: 202716 RVA: 0x006B54F3 File Offset: 0x006B36F3
 		public static IHideRangeType_UnionUnion FromIHideRangeType(IHideRangeTypeT _ihiderangetype)
 		{
 			return new IHideRangeType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602EE0D RID: 192013 RVA: 0x00665020 File Offset: 0x00663220
+		// Token: 0x060317DD RID: 202717 RVA: 0x006B5508 File Offset: 0x006B3708
 		public IHideWorldMonsterAndMonsterTreasureT AsIHideWorldMonsterAndMonsterTreasure()
 		{
 			return this.As<IHideWorldMonsterAndMonsterTreasureT>();
 		}
 
-		// Token: 0x0602EE0E RID: 192014 RVA: 0x00665028 File Offset: 0x00663228
+		// Token: 0x060317DE RID: 202718 RVA: 0x006B5510 File Offset: 0x006B3710
 		public static IHideRangeType_UnionUnion FromIHideWorldMonsterAndMonsterTreasure(IHideWorldMonsterAndMonsterTreasureT _ihideworldmonsterandmonstertreasure)
 		{
 			return new IHideRangeType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602EE0F RID: 192015 RVA: 0x0066503D File Offset: 0x0066323D
+		// Token: 0x060317DF RID: 202719 RVA: 0x006B5525 File Offset: 0x006B3725
 		public IHideWorldEntityAndLevelPlayT AsIHideWorldEntityAndLevelPlay()
 		{
 			return this.As<IHideWorldEntityAndLevelPlayT>();
 		}
 
-		// Token: 0x0602EE10 RID: 192016 RVA: 0x00665045 File Offset: 0x00663245
+		// Token: 0x060317E0 RID: 202720 RVA: 0x006B552D File Offset: 0x006B372D
 		public static IHideRangeType_UnionUnion FromIHideWorldEntityAndLevelPlay(IHideWorldEntityAndLevelPlayT _ihideworldentityandlevelplay)
 		{
 			return new IHideRangeType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602EE11 RID: 192017 RVA: 0x0066505A File Offset: 0x0066325A
+		// Token: 0x060317E1 RID: 202721 RVA: 0x006B5542 File Offset: 0x006B3742
 		public IHideSpecifyEntityT AsIHideSpecifyEntity()
 		{
 			return this.As<IHideSpecifyEntityT>();
 		}
 
-		// Token: 0x0602EE12 RID: 192018 RVA: 0x00665062 File Offset: 0x00663262
+		// Token: 0x060317E2 RID: 202722 RVA: 0x006B554A File Offset: 0x006B374A
 		public static IHideRangeType_UnionUnion FromIHideSpecifyEntity(IHideSpecifyEntityT _ihidespecifyentity)
 		{
 			return new IHideRangeType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602EE13 RID: 192019 RVA: 0x00665078 File Offset: 0x00663278
+		// Token: 0x060317E3 RID: 202723 RVA: 0x006B5560 File Offset: 0x006B3760
 		public static int Pack(FlatBufferBuilder builder, IHideRangeType_UnionUnion _o)
 		{
 			switch (_o.Type)

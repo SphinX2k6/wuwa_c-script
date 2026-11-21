@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 
-// Token: 0x02002FCC RID: 12236
+// Token: 0x02002520 RID: 9504
 public class GameplayCueMotorcycleFixHook : GameplayCueBase
 {
-	// Token: 0x06019F0F RID: 106255 RVA: 0x006C9368 File Offset: 0x006C7568
+	// Token: 0x06017821 RID: 96289 RVA: 0x006EFC3C File Offset: 0x006EDE3C
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06019F10 RID: 106256 RVA: 0x006C936A File Offset: 0x006C756A
+	// Token: 0x06017822 RID: 96290 RVA: 0x006EFC3E File Offset: 0x006EDE3E
 	protected override void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x06019F11 RID: 106257 RVA: 0x006C936C File Offset: 0x006C756C
+	// Token: 0x06017823 RID: 96291 RVA: 0x006EFC40 File Offset: 0x006EDE40
 	protected override void OnCreate()
 	{
 		WorldEntity entity = this.EntityHandle.Entity;
@@ -39,7 +39,7 @@ public class GameplayCueMotorcycleFixHook : GameplayCueBase
 		this.HookItem = GameplayCueHookCommonItem.Spawn(this.ActorInternal, FNameUtil.GetDynamicFName(this.CueConfig.Socket).Value, interactingTargetLocation.ToUeVector(false), this.GetResourcePaths(), true);
 	}
 
-	// Token: 0x06019F12 RID: 106258 RVA: 0x006C9438 File Offset: 0x006C7638
+	// Token: 0x06017824 RID: 96292 RVA: 0x006EFD0C File Offset: 0x006EDF0C
 	[NullableContext(1)]
 	private string[] GetResourcePaths()
 	{
@@ -58,7 +58,7 @@ public class GameplayCueMotorcycleFixHook : GameplayCueBase
 		return array2;
 	}
 
-	// Token: 0x06019F13 RID: 106259 RVA: 0x006C94A7 File Offset: 0x006C76A7
+	// Token: 0x06017825 RID: 96293 RVA: 0x006EFD7B File Offset: 0x006EDF7B
 	protected override void OnDestroy()
 	{
 		if (this.HookItem != null)
@@ -68,7 +68,7 @@ public class GameplayCueMotorcycleFixHook : GameplayCueBase
 		}
 	}
 
-	// Token: 0x0400C44E RID: 50254
+	// Token: 0x0400C7F7 RID: 51191
 	[Nullable(2)]
 	private GameplayCueHookCommonItem HookItem;
 }

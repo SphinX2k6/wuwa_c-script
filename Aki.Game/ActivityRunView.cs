@@ -11,17 +11,17 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020014DC RID: 5340
+// Token: 0x02000994 RID: 2452
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRunView : UiTickViewBase
 {
-	// Token: 0x06009801 RID: 38913 RVA: 0x0020D7E4 File Offset: 0x0020B9E4
+	// Token: 0x06006BDB RID: 27611 RVA: 0x00217524 File Offset: 0x00215724
 	public ActivityRunView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009802 RID: 38914 RVA: 0x0020D844 File Offset: 0x0020BA44
+	// Token: 0x06006BDC RID: 27612 RVA: 0x00217584 File Offset: 0x00215784
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -74,7 +74,7 @@ public class ActivityRunView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009803 RID: 38915 RVA: 0x0020DB04 File Offset: 0x0020BD04
+	// Token: 0x06006BDD RID: 27613 RVA: 0x00217844 File Offset: 0x00215A44
 	private void InitCaptionItem()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -83,7 +83,7 @@ public class ActivityRunView : UiTickViewBase
 		this.CaptionItem.SetTitle(this.CurrentActivity.GetTitle());
 	}
 
-	// Token: 0x06009804 RID: 38916 RVA: 0x0020DB68 File Offset: 0x0020BD68
+	// Token: 0x06006BDE RID: 27614 RVA: 0x002178A8 File Offset: 0x00215AA8
 	protected override void OnStart()
 	{
 		this.CurrentActivity = (this.OpenParam as ActivityRun);
@@ -98,7 +98,7 @@ public class ActivityRunView : UiTickViewBase
 		base.GetButton(12).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06009805 RID: 38917 RVA: 0x0020DC44 File Offset: 0x0020BE44
+	// Token: 0x06006BDF RID: 27615 RVA: 0x00217984 File Offset: 0x00215B84
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnSelectActivityRunChallengeItem, new Action(this.OnSelectActivityRunChallengeItem));
@@ -107,7 +107,7 @@ public class ActivityRunView : UiTickViewBase
 		EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x06009806 RID: 38918 RVA: 0x0020DCC4 File Offset: 0x0020BEC4
+	// Token: 0x06006BE0 RID: 27616 RVA: 0x00217A04 File Offset: 0x00215C04
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectActivityRunChallengeItem, new Action(this.OnSelectActivityRunChallengeItem));
@@ -116,7 +116,7 @@ public class ActivityRunView : UiTickViewBase
 		EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x06009807 RID: 38919 RVA: 0x0020DD44 File Offset: 0x0020BF44
+	// Token: 0x06006BE1 RID: 27617 RVA: 0x00217A84 File Offset: 0x00215C84
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		if (closeActivities.Contains(this.CurrentActivity.Id))
@@ -132,7 +132,7 @@ public class ActivityRunView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009808 RID: 38920 RVA: 0x0020DD9F File Offset: 0x0020BF9F
+	// Token: 0x06006BE2 RID: 27618 RVA: 0x00217ADF File Offset: 0x00215CDF
 	private void OnSelectActivityRunChallengeItem()
 	{
 		this.RefreshTaskScroller();
@@ -143,7 +143,7 @@ public class ActivityRunView : UiTickViewBase
 		this.PlaySwitchAnimation();
 	}
 
-	// Token: 0x06009809 RID: 38921 RVA: 0x0020DDC8 File Offset: 0x0020BFC8
+	// Token: 0x06006BE3 RID: 27619 RVA: 0x00217B08 File Offset: 0x00215D08
 	private void RefreshContainer()
 	{
 		bool isShow = ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId).GetIsShow();
@@ -155,7 +155,7 @@ public class ActivityRunView : UiTickViewBase
 		base.GetItem(9).SetUIActive(!isShow);
 	}
 
-	// Token: 0x0600980A RID: 38922 RVA: 0x0020DE14 File Offset: 0x0020C014
+	// Token: 0x06006BE4 RID: 27620 RVA: 0x00217B54 File Offset: 0x00215D54
 	private void RefreshConfirmButton()
 	{
 		ActivityRunData activityRunData = ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId);
@@ -166,7 +166,7 @@ public class ActivityRunView : UiTickViewBase
 		base.GetButton(6).RootUIComp.Get().SetUIActive(activityRunData.GetIsShow());
 	}
 
-	// Token: 0x0600980B RID: 38923 RVA: 0x0020DE5C File Offset: 0x0020C05C
+	// Token: 0x06006BE5 RID: 27621 RVA: 0x00217B9C File Offset: 0x00215D9C
 	private void PlaySwitchAnimation()
 	{
 		if (this.UiViewSequence.HasSequenceNameInPlaying("Switch"))
@@ -177,13 +177,13 @@ public class ActivityRunView : UiTickViewBase
 		this.UiViewSequence.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x0600980C RID: 38924 RVA: 0x0020DEA6 File Offset: 0x0020C0A6
+	// Token: 0x06006BE6 RID: 27622 RVA: 0x00217BE6 File Offset: 0x00215DE6
 	private void OnClickActivityRunChallenge(ActivityRunCycleItem item)
 	{
 		this.ExhibitionView.ScrollToGridIndex(item.GridIndex, true);
 	}
 
-	// Token: 0x0600980D RID: 38925 RVA: 0x0020DEBA File Offset: 0x0020C0BA
+	// Token: 0x06006BE7 RID: 27623 RVA: 0x00217BFA File Offset: 0x00215DFA
 	private void OnGetRunActivityReward(int i)
 	{
 		LoopScrollView<ActivityRunCycleItem, int> exhibitionView = this.ExhibitionView;
@@ -194,7 +194,7 @@ public class ActivityRunView : UiTickViewBase
 		exhibitionView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x0600980E RID: 38926 RVA: 0x0020DECC File Offset: 0x0020C0CC
+	// Token: 0x06006BE8 RID: 27624 RVA: 0x00217C0C File Offset: 0x00215E0C
 	private void OnClickConfirmBtn()
 	{
 		if (!ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId).GetIsShow())
@@ -211,26 +211,26 @@ public class ActivityRunView : UiTickViewBase
 		WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 	}
 
-	// Token: 0x0600980F RID: 38927 RVA: 0x0020DF3E File Offset: 0x0020C13E
+	// Token: 0x06006BE9 RID: 27625 RVA: 0x00217C7E File Offset: 0x00215E7E
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009810 RID: 38928 RVA: 0x0020DF47 File Offset: 0x0020C147
+	// Token: 0x06006BEA RID: 27626 RVA: 0x00217C87 File Offset: 0x00215E87
 	private void OnClickMoreButton()
 	{
 		this.OpenHelpView();
 	}
 
-	// Token: 0x06009811 RID: 38929 RVA: 0x0020DF50 File Offset: 0x0020C150
+	// Token: 0x06006BEB RID: 27627 RVA: 0x00217C90 File Offset: 0x00215E90
 	protected void OpenHelpView()
 	{
 		int helpId = this.CurrentActivity.GetHelpId();
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x06009812 RID: 38930 RVA: 0x0020DF74 File Offset: 0x0020C174
+	// Token: 0x06006BEC RID: 27628 RVA: 0x00217CB4 File Offset: 0x00215EB4
 	protected override void OnBeforeShow()
 	{
 		ActivityRunController.Instance.SelectDefaultChallengeId(this.CurrentActivity);
@@ -238,13 +238,13 @@ public class ActivityRunView : UiTickViewBase
 		this.InitTimer();
 	}
 
-	// Token: 0x06009813 RID: 38931 RVA: 0x0020DF92 File Offset: 0x0020C192
+	// Token: 0x06006BED RID: 27629 RVA: 0x00217CD2 File Offset: 0x00215ED2
 	private void InitTimer()
 	{
 		this.RefreshTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTimerRefresh), 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06009814 RID: 38932 RVA: 0x0020DFC0 File Offset: 0x0020C1C0
+	// Token: 0x06006BEE RID: 27630 RVA: 0x00217D00 File Offset: 0x00215F00
 	private void OnTimerRefresh(float deltaTime)
 	{
 		this.RefreshCountDownText();
@@ -266,7 +266,7 @@ public class ActivityRunView : UiTickViewBase
 		this.IsLastShow = isShow;
 	}
 
-	// Token: 0x06009815 RID: 38933 RVA: 0x0020E038 File Offset: 0x0020C238
+	// Token: 0x06006BEF RID: 27631 RVA: 0x00217D78 File Offset: 0x00215F78
 	private void RefreshCountDownText()
 	{
 		ActivityRunData activityRunData = ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId);
@@ -277,7 +277,7 @@ public class ActivityRunView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009816 RID: 38934 RVA: 0x0020E084 File Offset: 0x0020C284
+	// Token: 0x06006BF0 RID: 27632 RVA: 0x00217DC4 File Offset: 0x00215FC4
 	private string GetRemainTimeText(long dataTime, string timeText)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -294,7 +294,7 @@ public class ActivityRunView : UiTickViewBase
 		return ConfigMultiTextLang.GetLocalTextNew(TextConfig.Instance.GetTextContentIdById(timeText), null).Replace("{0}", countDownData.CountDownText);
 	}
 
-	// Token: 0x06009817 RID: 38935 RVA: 0x0020E11C File Offset: 0x0020C31C
+	// Token: 0x06006BF1 RID: 27633 RVA: 0x00217E5C File Offset: 0x0021605C
 	private void RefreshActivityScroller()
 	{
 		int count = this.ActivityRunDataArray.Count;
@@ -309,7 +309,7 @@ public class ActivityRunView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009818 RID: 38936 RVA: 0x0020E180 File Offset: 0x0020C380
+	// Token: 0x06006BF2 RID: 27634 RVA: 0x00217EC0 File Offset: 0x002160C0
 	private void RefreshTaskScroller()
 	{
 		ActivityRunData activityRunData = ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId);
@@ -321,7 +321,7 @@ public class ActivityRunView : UiTickViewBase
 		this.TaskScroller.RefreshByData(scoreArray, null, false);
 	}
 
-	// Token: 0x06009819 RID: 38937 RVA: 0x0020E1BC File Offset: 0x0020C3BC
+	// Token: 0x06006BF3 RID: 27635 RVA: 0x00217EFC File Offset: 0x002160FC
 	private void RefreshPointText()
 	{
 		ActivityRunData activityRunData = ActivityRunModel.Instance.GetActivityRunData(ActivityRunModel.Instance.CurrentSelectChallengeId);
@@ -363,7 +363,7 @@ public class ActivityRunView : UiTickViewBase
 		base.GetText(17).ShowTextNew("ReadyToFightText");
 	}
 
-	// Token: 0x0600981A RID: 38938 RVA: 0x0020E2DC File Offset: 0x0020C4DC
+	// Token: 0x06006BF4 RID: 27636 RVA: 0x0021801C File Offset: 0x0021621C
 	protected override void OnBeforeDestroy()
 	{
 		if (this.RefreshTimer != null)
@@ -374,14 +374,14 @@ public class ActivityRunView : UiTickViewBase
 		RedDotController.Instance.UnBindRedDot(ERedDotName.ActivityRun);
 	}
 
-	// Token: 0x040042DE RID: 17118
+	// Token: 0x04004383 RID: 17283
 	private const int TIMERGAP = 1000;
 
-	// Token: 0x040042DF RID: 17119
+	// Token: 0x04004384 RID: 17284
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x040042E0 RID: 17120
+	// Token: 0x04004385 RID: 17285
 	[Nullable(new byte[]
 	{
 		2,
@@ -389,11 +389,11 @@ public class ActivityRunView : UiTickViewBase
 	})]
 	private List<ActivityRunData> ActivityRunDataArray;
 
-	// Token: 0x040042E1 RID: 17121
+	// Token: 0x04004386 RID: 17286
 	[Nullable(2)]
 	private ActivityRun CurrentActivity;
 
-	// Token: 0x040042E2 RID: 17122
+	// Token: 0x04004387 RID: 17287
 	[Nullable(new byte[]
 	{
 		2,
@@ -401,7 +401,7 @@ public class ActivityRunView : UiTickViewBase
 	})]
 	private GenericLayout<ActivityRunItem, int> TaskScroller;
 
-	// Token: 0x040042E3 RID: 17123
+	// Token: 0x04004388 RID: 17288
 	[Nullable(new byte[]
 	{
 		2,
@@ -409,75 +409,75 @@ public class ActivityRunView : UiTickViewBase
 	})]
 	private LoopScrollView<ActivityRunCycleItem, int> ExhibitionView;
 
-	// Token: 0x040042E4 RID: 17124
+	// Token: 0x04004389 RID: 17289
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040042E5 RID: 17125
+	// Token: 0x0400438A RID: 17290
 	private readonly Func<ActivityRunItem> CreateTaskItem = () => new ActivityRunItem();
 
-	// Token: 0x040042E6 RID: 17126
+	// Token: 0x0400438B RID: 17291
 	private readonly Func<ActivityRunCycleItem> CreateActivityItem = () => new ActivityRunCycleItem();
 
-	// Token: 0x040042E7 RID: 17127
+	// Token: 0x0400438C RID: 17292
 	private bool IsLastShow;
 
-	// Token: 0x02007B1B RID: 31515
+	// Token: 0x02006CA7 RID: 27815
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040287D1 RID: 165841
+		// Token: 0x04023B0F RID: 146191
 		public const int CaptionItem = 0;
 
-		// Token: 0x040287D2 RID: 165842
+		// Token: 0x04023B10 RID: 146192
 		public const int LeftScroller = 1;
 
-		// Token: 0x040287D3 RID: 165843
+		// Token: 0x04023B11 RID: 146193
 		public const int LeftItem = 2;
 
-		// Token: 0x040287D4 RID: 165844
+		// Token: 0x04023B12 RID: 146194
 		public const int PnlRight = 3;
 
-		// Token: 0x040287D5 RID: 165845
+		// Token: 0x04023B13 RID: 146195
 		public const int BestPointText = 4;
 
-		// Token: 0x040287D6 RID: 165846
+		// Token: 0x04023B14 RID: 146196
 		public const int BestTimeText = 5;
 
-		// Token: 0x040287D7 RID: 165847
+		// Token: 0x04023B15 RID: 146197
 		public const int BtnConfirm = 6;
 
-		// Token: 0x040287D8 RID: 165848
+		// Token: 0x04023B16 RID: 146198
 		public const int RightScroller = 7;
 
-		// Token: 0x040287D9 RID: 165849
+		// Token: 0x04023B17 RID: 146199
 		public const int RightItem = 8;
 
-		// Token: 0x040287DA RID: 165850
+		// Token: 0x04023B18 RID: 146200
 		public const int LockContainer = 9;
 
-		// Token: 0x040287DB RID: 165851
+		// Token: 0x04023B19 RID: 146201
 		public const int LockText = 10;
 
-		// Token: 0x040287DC RID: 165852
+		// Token: 0x04023B1A RID: 146202
 		public const int BtnUp = 11;
 
-		// Token: 0x040287DD RID: 165853
+		// Token: 0x04023B1B RID: 146203
 		public const int BtnDown = 12;
 
-		// Token: 0x040287DE RID: 165854
+		// Token: 0x04023B1C RID: 146204
 		public const int UpRed = 13;
 
-		// Token: 0x040287DF RID: 165855
+		// Token: 0x04023B1D RID: 146205
 		public const int DownRed = 14;
 
-		// Token: 0x040287E0 RID: 165856
+		// Token: 0x04023B1E RID: 146206
 		public const int BestPointTextTitle = 15;
 
-		// Token: 0x040287E1 RID: 165857
+		// Token: 0x04023B1F RID: 146207
 		public const int BestTimeTextTitle = 16;
 
-		// Token: 0x040287E2 RID: 165858
+		// Token: 0x04023B20 RID: 146208
 		public const int TxtFunc = 17;
 	}
 }

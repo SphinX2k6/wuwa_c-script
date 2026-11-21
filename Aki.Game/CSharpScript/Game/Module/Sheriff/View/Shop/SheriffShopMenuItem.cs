@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Shop
 {
-	// Token: 0x02004C60 RID: 19552
+	// Token: 0x02003C11 RID: 15377
 	public class SheriffShopMenuItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060328AD RID: 207021 RVA: 0x00BC67A0 File Offset: 0x00BC49A0
+		// Token: 0x06027660 RID: 161376 RVA: 0x00B0B3EC File Offset: 0x00B095EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060328AE RID: 207022 RVA: 0x00BC6848 File Offset: 0x00BC4A48
+		// Token: 0x06027661 RID: 161377 RVA: 0x00B0B494 File Offset: 0x00B09694
 		public override void Refresh(int dataId, bool isSelected, int gridIndex)
 		{
 			this.Level = dataId;
@@ -40,26 +40,26 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			base.GetText(1).ShowTextNew(text ?? "");
 		}
 
-		// Token: 0x060328AF RID: 207023 RVA: 0x00BC6885 File Offset: 0x00BC4A85
+		// Token: 0x06027662 RID: 161378 RVA: 0x00B0B4D1 File Offset: 0x00B096D1
 		[NullableContext(1)]
 		public void SetOnClickToggleItem(Action<int> onClickToggleItem)
 		{
 			this.OnClickToggleItem = onClickToggleItem;
 		}
 
-		// Token: 0x060328B0 RID: 207024 RVA: 0x00BC688E File Offset: 0x00BC4A8E
+		// Token: 0x06027663 RID: 161379 RVA: 0x00B0B4DA File Offset: 0x00B096DA
 		public void SetDeselect()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060328B1 RID: 207025 RVA: 0x00BC68A1 File Offset: 0x00BC4AA1
+		// Token: 0x06027664 RID: 161380 RVA: 0x00B0B4ED File Offset: 0x00B096ED
 		public void SetSelect()
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060328B2 RID: 207026 RVA: 0x00BC68B4 File Offset: 0x00BC4AB4
+		// Token: 0x06027665 RID: 161381 RVA: 0x00B0B500 File Offset: 0x00B09700
 		private void OnClickToggleItemInner(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -73,20 +73,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Shop
 			}
 		}
 
-		// Token: 0x0401AE6B RID: 110187
+		// Token: 0x040157C8 RID: 88008
 		public int Level;
 
-		// Token: 0x0401AE6C RID: 110188
+		// Token: 0x040157C9 RID: 88009
 		[Nullable(2)]
 		private Action<int> OnClickToggleItem;
 
-		// Token: 0x0200AE05 RID: 44549
+		// Token: 0x02009823 RID: 38947
 		private class EMenuComponents
 		{
-			// Token: 0x04034DAF RID: 216495
+			// Token: 0x0402F754 RID: 194388
 			public const int ToggleItem = 0;
 
-			// Token: 0x04034DB0 RID: 216496
+			// Token: 0x0402F755 RID: 194389
 			public const int TextTitle = 1;
 		}
 	}

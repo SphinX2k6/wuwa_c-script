@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200448E RID: 17550
+	// Token: 0x020048F6 RID: 18678
 	public struct IDartSkillResultType : IFlatbufferObject
 	{
-		// Token: 0x17007BD5 RID: 31701
-		// (get) Token: 0x0601A2CE RID: 107214 RVA: 0x003BD2BB File Offset: 0x003BB4BB
+		// Token: 0x17008214 RID: 33300
+		// (get) Token: 0x0601BA9F RID: 113311 RVA: 0x003E94C7 File Offset: 0x003E76C7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A2CF RID: 107215 RVA: 0x003BD2C8 File Offset: 0x003BB4C8
+		// Token: 0x0601BAA0 RID: 113312 RVA: 0x003E94D4 File Offset: 0x003E76D4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A2D0 RID: 107216 RVA: 0x003BD2D0 File Offset: 0x003BB4D0
+		// Token: 0x0601BAA1 RID: 113313 RVA: 0x003E94DC File Offset: 0x003E76DC
 		public static IDartSkillResultType GetRootAsIDartSkillResultType(ByteBuffer _bb)
 		{
 			return IDartSkillResultType.GetRootAsIDartSkillResultType(_bb, default(IDartSkillResultType));
 		}
 
-		// Token: 0x0601A2D1 RID: 107217 RVA: 0x003BD2EC File Offset: 0x003BB4EC
+		// Token: 0x0601BAA2 RID: 113314 RVA: 0x003E94F8 File Offset: 0x003E76F8
 		public static IDartSkillResultType GetRootAsIDartSkillResultType(ByteBuffer _bb, IDartSkillResultType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A2D2 RID: 107218 RVA: 0x003BD309 File Offset: 0x003BB509
+		// Token: 0x0601BAA3 RID: 113315 RVA: 0x003E9515 File Offset: 0x003E7715
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A2D3 RID: 107219 RVA: 0x003BD318 File Offset: 0x003BB518
+		// Token: 0x0601BAA4 RID: 113316 RVA: 0x003E9524 File Offset: 0x003E7724
 		public IDartSkillResultType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007BD6 RID: 31702
-		// (get) Token: 0x0601A2D4 RID: 107220 RVA: 0x003BD328 File Offset: 0x003BB528
+		// Token: 0x17008215 RID: 33301
+		// (get) Token: 0x0601BAA5 RID: 113317 RVA: 0x003E9534 File Offset: 0x003E7734
 		public EDartSkillResultType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A2D5 RID: 107221 RVA: 0x003BD364 File Offset: 0x003BB564
+		// Token: 0x0601BAA6 RID: 113318 RVA: 0x003E9570 File Offset: 0x003E7770
 		public static Offset<IDartSkillResultType> CreateIDartSkillResultType(FlatBufferBuilder builder, EDartSkillResultType Type = EDartSkillResultType.NoBust)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartSkillResultType.EndIDartSkillResultType(builder);
 		}
 
-		// Token: 0x0601A2D6 RID: 107222 RVA: 0x003BD37A File Offset: 0x003BB57A
+		// Token: 0x0601BAA7 RID: 113319 RVA: 0x003E9586 File Offset: 0x003E7786
 		public static void StartIDartSkillResultType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601A2D7 RID: 107223 RVA: 0x003BD383 File Offset: 0x003BB583
+		// Token: 0x0601BAA8 RID: 113320 RVA: 0x003E958F File Offset: 0x003E778F
 		public static void AddType(FlatBufferBuilder builder, EDartSkillResultType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601A2D8 RID: 107224 RVA: 0x003BD38E File Offset: 0x003BB58E
+		// Token: 0x0601BAA9 RID: 113321 RVA: 0x003E959A File Offset: 0x003E779A
 		public static Offset<IDartSkillResultType> EndIDartSkillResultType(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartSkillResultType>(builder.EndTable());
 		}
 
-		// Token: 0x0601A2D9 RID: 107225 RVA: 0x003BD39C File Offset: 0x003BB59C
+		// Token: 0x0601BAAA RID: 113322 RVA: 0x003E95A8 File Offset: 0x003E77A8
 		public IDartSkillResultTypeT UnPack()
 		{
 			IDartSkillResultTypeT dartSkillResultTypeT = new IDartSkillResultTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dartSkillResultTypeT;
 		}
 
-		// Token: 0x0601A2DA RID: 107226 RVA: 0x003BD3B7 File Offset: 0x003BB5B7
+		// Token: 0x0601BAAB RID: 113323 RVA: 0x003E95C3 File Offset: 0x003E77C3
 		public void UnPackTo(IDartSkillResultTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601A2DB RID: 107227 RVA: 0x003BD3C8 File Offset: 0x003BB5C8
+		// Token: 0x0601BAAC RID: 113324 RVA: 0x003E95D4 File Offset: 0x003E77D4
 		public static Offset<IDartSkillResultType> Pack(FlatBufferBuilder builder, IDartSkillResultTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDartSkillResultType.CreateIDartSkillResultType(builder, _o.Type);
 		}
 
-		// Token: 0x0400C48B RID: 50315
+		// Token: 0x0400CEB9 RID: 52921
 		private Table __p;
 	}
 }

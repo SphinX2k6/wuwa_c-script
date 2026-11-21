@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
@@ -8,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002477 RID: 9335
+// Token: 0x0200195C RID: 6492
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractEditView : UiViewBase
 {
-	// Token: 0x06012BBC RID: 76732 RVA: 0x0049ED08 File Offset: 0x0049CF08
+	// Token: 0x06010074 RID: 65652 RVA: 0x004AC474 File Offset: 0x004AA674
 	public PhantomInteractEditView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012BBD RID: 76733 RVA: 0x0049EDCF File Offset: 0x0049CFCF
+	// Token: 0x06010075 RID: 65653 RVA: 0x004AC53B File Offset: 0x004AA73B
 	private void LocalLog(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -29,7 +28,7 @@ public class PhantomInteractEditView : UiViewBase
 	{
 	}
 
-	// Token: 0x06012BBE RID: 76734 RVA: 0x0049EDD4 File Offset: 0x0049CFD4
+	// Token: 0x06010076 RID: 65654 RVA: 0x004AC540 File Offset: 0x004AA740
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -58,7 +57,7 @@ public class PhantomInteractEditView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012BBF RID: 76735 RVA: 0x0049EF6C File Offset: 0x0049D16C
+	// Token: 0x06010077 RID: 65655 RVA: 0x004AC6D8 File Offset: 0x004AA8D8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomInteractEditView.<OnBeforeStartAsync>d__26 <OnBeforeStartAsync>d__;
@@ -69,7 +68,7 @@ public class PhantomInteractEditView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012BC0 RID: 76736 RVA: 0x0049EFAF File Offset: 0x0049D1AF
+	// Token: 0x06010078 RID: 65656 RVA: 0x004AC71B File Offset: 0x004AA91B
 	protected override void OnDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -80,13 +79,13 @@ public class PhantomInteractEditView : UiViewBase
 		this.SeqPlayer = null;
 	}
 
-	// Token: 0x06012BC1 RID: 76737 RVA: 0x0049EFC9 File Offset: 0x0049D1C9
+	// Token: 0x06010079 RID: 65657 RVA: 0x004AC735 File Offset: 0x004AA935
 	protected override void OnBeforeShow()
 	{
 		this.SetOtherTeamEntitiesEnable(false);
 	}
 
-	// Token: 0x06012BC2 RID: 76738 RVA: 0x0049EFD2 File Offset: 0x0049D1D2
+	// Token: 0x0601007A RID: 65658 RVA: 0x004AC73E File Offset: 0x004AA93E
 	protected override void OnAfterHide()
 	{
 		PhantomInteractDetailPanelGroup detailPanelGroup = this.DetailPanelGroup;
@@ -97,7 +96,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.SetOtherTeamEntitiesEnable(true);
 	}
 
-	// Token: 0x06012BC3 RID: 76739 RVA: 0x0049EFF0 File Offset: 0x0049D1F0
+	// Token: 0x0601007B RID: 65659 RVA: 0x004AC75C File Offset: 0x004AA95C
 	private void InitDropDown()
 	{
 		this.FilterDropDown.SetOnSelectCall(new Action<int, EFilterIsSpecialOption>(this.OnDropDownSelectCall));
@@ -105,13 +104,13 @@ public class PhantomInteractEditView : UiViewBase
 		this.FilterDropDown.InitScroll(this.allFilterOption, new Func<EFilterIsSpecialOption, int>(this.GetDropDownTextId), 0, true);
 	}
 
-	// Token: 0x06012BC4 RID: 76740 RVA: 0x0049F03F File Offset: 0x0049D23F
+	// Token: 0x0601007C RID: 65660 RVA: 0x004AC7AB File Offset: 0x004AA9AB
 	private int GetDropDownTextId(EFilterIsSpecialOption data)
 	{
 		return (int)data;
 	}
 
-	// Token: 0x06012BC5 RID: 76741 RVA: 0x0049F044 File Offset: 0x0049D244
+	// Token: 0x0601007D RID: 65661 RVA: 0x004AC7B0 File Offset: 0x004AA9B0
 	private void OnDropDownSelectCall(int index, EFilterIsSpecialOption data)
 	{
 		PhantomInteractEditViewModel editViewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -126,7 +125,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.RefreshRightScrollView(null, true);
 	}
 
-	// Token: 0x06012BC6 RID: 76742 RVA: 0x0049F094 File Offset: 0x0049D294
+	// Token: 0x0601007E RID: 65662 RVA: 0x004AC800 File Offset: 0x004AAA00
 	protected override void OnStart()
 	{
 		PhantomInteractEditViewParam phantomInteractEditViewParam = this.OpenParam as PhantomInteractEditViewParam;
@@ -150,7 +149,7 @@ public class PhantomInteractEditView : UiViewBase
 		PhantomInteractListPanel visionList = this.VisionList;
 		if (visionList != null)
 		{
-			visionList.Refresh(phantomInteractEditViewParam.InfoData.EquippedVisionData.Cast<IPhantomInteractItemData>().ToList<IPhantomInteractItemData>(), true, true);
+			visionList.Refresh(new List<IPhantomInteractItemData>(phantomInteractEditViewParam.InfoData.EquippedVisionData), true, true);
 		}
 		this.RefreshRightScrollData();
 		IPhantomInteractItemData selectedItemData = editViewModel.SelectedItemData;
@@ -176,7 +175,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.ViewStarted = true;
 	}
 
-	// Token: 0x06012BC7 RID: 76743 RVA: 0x0049F1E5 File Offset: 0x0049D3E5
+	// Token: 0x0601007F RID: 65663 RVA: 0x004AC94C File Offset: 0x004AAB4C
 	protected override void OnAddEventListener()
 	{
 		if (EventSystem.Instance.HasWithTarget<HitInformation, HitContext>(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit)))
@@ -186,13 +185,13 @@ public class PhantomInteractEditView : UiViewBase
 		EventSystem.Instance.AddWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit));
 	}
 
-	// Token: 0x06012BC8 RID: 76744 RVA: 0x0049F225 File Offset: 0x0049D425
+	// Token: 0x06010080 RID: 65664 RVA: 0x004AC98C File Offset: 0x004AAB8C
 	protected override void OnRemoveEventListener()
 	{
 		this.RemoveCharBeHitListener();
 	}
 
-	// Token: 0x06012BC9 RID: 76745 RVA: 0x0049F22D File Offset: 0x0049D42D
+	// Token: 0x06010081 RID: 65665 RVA: 0x004AC994 File Offset: 0x004AAB94
 	private CostTabItem TabItemProxyCreate(UUIItem uiItem, int index)
 	{
 		CostTabItem costTabItem = new CostTabItem(uiItem);
@@ -200,7 +199,7 @@ public class PhantomInteractEditView : UiViewBase
 		return costTabItem;
 	}
 
-	// Token: 0x06012BCA RID: 76746 RVA: 0x0049F23C File Offset: 0x0049D43C
+	// Token: 0x06010082 RID: 65666 RVA: 0x004AC9A4 File Offset: 0x004AABA4
 	private void ToggleCallBack(int index)
 	{
 		PhantomInteractEditViewModel editViewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -216,7 +215,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.RefreshRightScrollView(null, true);
 	}
 
-	// Token: 0x06012BCB RID: 76747 RVA: 0x0049F29C File Offset: 0x0049D49C
+	// Token: 0x06010083 RID: 65667 RVA: 0x004ACA04 File Offset: 0x004AAC04
 	private void ConfirmEquipHandler(int _)
 	{
 		PhantomInteractEditViewModel editViewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -242,7 +241,7 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012BCC RID: 76748 RVA: 0x0049F310 File Offset: 0x0049D510
+	// Token: 0x06010084 RID: 65668 RVA: 0x004ACA78 File Offset: 0x004AAC78
 	private void ReplaceRecommendHandler()
 	{
 		PhantomInteractEditViewModel viewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -261,7 +260,7 @@ public class PhantomInteractEditView : UiViewBase
 		viewModel.EquipRecommendHandler();
 	}
 
-	// Token: 0x06012BCD RID: 76749 RVA: 0x0049F35C File Offset: 0x0049D55C
+	// Token: 0x06010085 RID: 65669 RVA: 0x004ACAC4 File Offset: 0x004AACC4
 	private void OnListItemClick(IPhantomInteractItemData itemData)
 	{
 		PhantomInteractEditViewModel editViewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -306,7 +305,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x06012BCE RID: 76750 RVA: 0x0049F444 File Offset: 0x0049D644
+	// Token: 0x06010086 RID: 65670 RVA: 0x004ACBAC File Offset: 0x004AADAC
 	private void OnMoveNextSkinClick()
 	{
 		PhantomInteractEditViewModel editViewModel = PhantomInteractModel.Instance.EditViewModel;
@@ -320,7 +319,7 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012BCF RID: 76751 RVA: 0x0049F48C File Offset: 0x0049D68C
+	// Token: 0x06010087 RID: 65671 RVA: 0x004ACBF4 File Offset: 0x004AADF4
 	public void Refresh()
 	{
 		PhantomInteractInfoData interactInfoData = PhantomInteractModel.Instance.InteractInfoData;
@@ -329,7 +328,7 @@ public class PhantomInteractEditView : UiViewBase
 		PhantomInteractListPanel visionList = this.VisionList;
 		if (visionList != null)
 		{
-			visionList.Refresh(interactInfoData.EquippedVisionData.Cast<IPhantomInteractItemData>().ToList<IPhantomInteractItemData>(), true, true);
+			visionList.Refresh(new List<IPhantomInteractItemData>(interactInfoData.EquippedVisionData), true, true);
 		}
 		IPhantomInteractItemData selectedItemData = editViewModel.SelectedItemData;
 		if (selectedItemData != null)
@@ -361,7 +360,7 @@ public class PhantomInteractEditView : UiViewBase
 		detailPanelGroup.RefreshDetailPanel(editViewModel.ShowDetail, editViewModel.DetailViewModel);
 	}
 
-	// Token: 0x06012BD0 RID: 76752 RVA: 0x0049F5A4 File Offset: 0x0049D7A4
+	// Token: 0x06010088 RID: 65672 RVA: 0x004ACD08 File Offset: 0x004AAF08
 	private void RefreshSelectGridId(int newId)
 	{
 		if (newId == this.CurrentSelectGridId)
@@ -376,7 +375,7 @@ public class PhantomInteractEditView : UiViewBase
 		this.CurrentSelectGridId = newId;
 	}
 
-	// Token: 0x06012BD1 RID: 76753 RVA: 0x0049F5F0 File Offset: 0x0049D7F0
+	// Token: 0x06010089 RID: 65673 RVA: 0x004ACD54 File Offset: 0x004AAF54
 	private void ApplyBtnState(EPhantomInteractEditBtnState state, bool enableClick)
 	{
 		bool flag = state == EPhantomInteractEditBtnState.Invisible;
@@ -394,7 +393,7 @@ public class PhantomInteractEditView : UiViewBase
 		btnConfirm2.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x06012BD2 RID: 76754 RVA: 0x0049F630 File Offset: 0x0049D830
+	// Token: 0x0601008A RID: 65674 RVA: 0x004ACD94 File Offset: 0x004AAF94
 	private void SetConfirmBtnText(EPhantomInteractEditBtnState state)
 	{
 		string text;
@@ -423,19 +422,19 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012BD3 RID: 76755 RVA: 0x0049F68A File Offset: 0x0049D88A
+	// Token: 0x0601008B RID: 65675 RVA: 0x004ACDEE File Offset: 0x004AAFEE
 	private PhantomInteractDropDownItem CreateDropDownItem(UUIItem uiItem, EFilterIsSpecialOption data)
 	{
 		return new PhantomInteractDropDownItem(uiItem);
 	}
 
-	// Token: 0x06012BD4 RID: 76756 RVA: 0x0049F692 File Offset: 0x0049D892
+	// Token: 0x0601008C RID: 65676 RVA: 0x004ACDF6 File Offset: 0x004AAFF6
 	private PhantomInteractDropDownTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new PhantomInteractDropDownTitleItem(uiItem);
 	}
 
-	// Token: 0x06012BD5 RID: 76757 RVA: 0x0049F69C File Offset: 0x0049D89C
+	// Token: 0x0601008D RID: 65677 RVA: 0x004ACE00 File Offset: 0x004AB000
 	private void RefreshRightScrollData()
 	{
 		this.RightScrollDataList = new List<IMultiTemplateGridData>();
@@ -473,7 +472,7 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012BD6 RID: 76758 RVA: 0x0049F828 File Offset: 0x0049DA28
+	// Token: 0x0601008E RID: 65678 RVA: 0x004ACF8C File Offset: 0x004AB18C
 	private PhantomGridGridTemplateData GetGridTemplateData(int index)
 	{
 		for (int i = index - this.GridTemplateDataList.Count; i >= 0; i--)
@@ -484,7 +483,7 @@ public class PhantomInteractEditView : UiViewBase
 		return this.GridTemplateDataList[index];
 	}
 
-	// Token: 0x06012BD7 RID: 76759 RVA: 0x0049F86C File Offset: 0x0049DA6C
+	// Token: 0x0601008F RID: 65679 RVA: 0x004ACFD0 File Offset: 0x004AB1D0
 	private PhantomGridRowTitleTemplateData GetTitleTemplateData(int index)
 	{
 		for (int i = index - this.TitleTemplateDataList.Count; i >= 0; i--)
@@ -495,7 +494,7 @@ public class PhantomInteractEditView : UiViewBase
 		return this.TitleTemplateDataList[index];
 	}
 
-	// Token: 0x06012BD8 RID: 76760 RVA: 0x0049F8B0 File Offset: 0x0049DAB0
+	// Token: 0x06010090 RID: 65680 RVA: 0x004AD014 File Offset: 0x004AB214
 	private void RefreshRightScrollView(int? focusIndex = null, bool playAnim = false)
 	{
 		MultiTemplateScrollViewRefreshContext multiTemplateScrollViewRefreshContext = new MultiTemplateScrollViewRefreshContext(this.RightScrollDataList);
@@ -525,7 +524,7 @@ public class PhantomInteractEditView : UiViewBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012BD9 RID: 76761 RVA: 0x0049F974 File Offset: 0x0049DB74
+	// Token: 0x06010091 RID: 65681 RVA: 0x004AD0D8 File Offset: 0x004AB2D8
 	private void RefreshRightScrollViewGrid(int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.RightScrollDataList.Count)
@@ -542,21 +541,21 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012BDA RID: 76762 RVA: 0x0049F9CC File Offset: 0x0049DBCC
+	// Token: 0x06010092 RID: 65682 RVA: 0x004AD130 File Offset: 0x004AB330
 	private void OnClickGridItem(IPhantomInteractGridViewModel data, int gridIndex)
 	{
 		PhantomInteractModel.Instance.EditViewModel.SelectGrid(data.MonsterId);
 		this.Refresh();
 	}
 
-	// Token: 0x06012BDB RID: 76763 RVA: 0x0049F9E9 File Offset: 0x0049DBE9
+	// Token: 0x06010093 RID: 65683 RVA: 0x004AD14D File Offset: 0x004AB34D
 	private void OnCharBeHit(HitInformation hitData, HitContext hitContext)
 	{
 		this.RemoveCharBeHitListener();
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x06012BDC RID: 76764 RVA: 0x0049F9FC File Offset: 0x0049DBFC
+	// Token: 0x06010094 RID: 65684 RVA: 0x004AD160 File Offset: 0x004AB360
 	private void RemoveCharBeHitListener()
 	{
 		if (!EventSystem.Instance.HasWithTarget<HitInformation, HitContext>(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit)))
@@ -566,7 +565,7 @@ public class PhantomInteractEditView : UiViewBase
 		EventSystem.Instance.RemoveWithTarget(SceneTeam.Local, EEventName.CharBeHitLocal, new Action<HitInformation, HitContext>(this.OnCharBeHit));
 	}
 
-	// Token: 0x06012BDD RID: 76765 RVA: 0x0049FA3C File Offset: 0x0049DC3C
+	// Token: 0x06010095 RID: 65685 RVA: 0x004AD1A0 File Offset: 0x004AB3A0
 	private void SetOtherTeamEntitiesEnable(bool isEnable)
 	{
 		foreach (EntityHandle entityHandle in SceneTeamModel.Instance.GetTeamEntities(false))
@@ -596,7 +595,7 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x04008D12 RID: 36114
+	// Token: 0x04008E59 RID: 36441
 	private ICostToggleInfo[] allCostToggleInfo = new ICostToggleInfo[]
 	{
 		new CostToggleInfo
@@ -621,7 +620,7 @@ public class PhantomInteractEditView : UiViewBase
 		}
 	};
 
-	// Token: 0x04008D13 RID: 36115
+	// Token: 0x04008E5A RID: 36442
 	private EFilterIsSpecialOption[] allFilterOption = new EFilterIsSpecialOption[]
 	{
 		EFilterIsSpecialOption.All,
@@ -629,39 +628,39 @@ public class PhantomInteractEditView : UiViewBase
 		EFilterIsSpecialOption.NonSpecial
 	};
 
-	// Token: 0x04008D14 RID: 36116
+	// Token: 0x04008E5B RID: 36443
 	private const string CAPTION_ICON_ID = "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconT29.SP_IconT29";
 
-	// Token: 0x04008D15 RID: 36117
+	// Token: 0x04008E5C RID: 36444
 	private const string CAPTION_TITLE_ID = "ExploreTools_1007_Name";
 
-	// Token: 0x04008D16 RID: 36118
+	// Token: 0x04008E5D RID: 36445
 	private const int CAPTION_HELP_ID = 473;
 
-	// Token: 0x04008D17 RID: 36119
+	// Token: 0x04008E5E RID: 36446
 	private const int GRID_FOCUS_CLAMP_TO_TITLE_RANGE = 3;
 
-	// Token: 0x04008D18 RID: 36120
+	// Token: 0x04008E5F RID: 36447
 	[Nullable(2)]
 	private PopupCaptionItem CaptionPanel;
 
-	// Token: 0x04008D19 RID: 36121
+	// Token: 0x04008E60 RID: 36448
 	[Nullable(2)]
 	private PhantomInteractListPanel VisionList;
 
-	// Token: 0x04008D1A RID: 36122
+	// Token: 0x04008E61 RID: 36449
 	[Nullable(2)]
 	private PhantomInteractDetailPanelGroup DetailPanelGroup;
 
-	// Token: 0x04008D1B RID: 36123
+	// Token: 0x04008E62 RID: 36450
 	[Nullable(2)]
 	private ButtonItem BtnConfirm;
 
-	// Token: 0x04008D1C RID: 36124
+	// Token: 0x04008E63 RID: 36451
 	[Nullable(2)]
 	private MultiTemplateScrollView MultiTemplateScrollView;
 
-	// Token: 0x04008D1D RID: 36125
+	// Token: 0x04008E64 RID: 36452
 	[Nullable(new byte[]
 	{
 		2,
@@ -669,75 +668,75 @@ public class PhantomInteractEditView : UiViewBase
 	})]
 	private StaticTabComponent<CostTabItem> CostTabComponent;
 
-	// Token: 0x04008D1E RID: 36126
+	// Token: 0x04008E65 RID: 36453
 	private List<IMultiTemplateGridData> RightScrollDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x04008D1F RID: 36127
+	// Token: 0x04008E66 RID: 36454
 	[Nullable(2)]
 	private CommonDropDown<int, EFilterIsSpecialOption> FilterDropDown;
 
-	// Token: 0x04008D20 RID: 36128
+	// Token: 0x04008E67 RID: 36455
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04008D21 RID: 36129
+	// Token: 0x04008E68 RID: 36456
 	private int CurrentDetailMonsterId;
 
-	// Token: 0x04008D22 RID: 36130
+	// Token: 0x04008E69 RID: 36457
 	private readonly List<PhantomGridGridTemplateData> GridTemplateDataList = new List<PhantomGridGridTemplateData>();
 
-	// Token: 0x04008D23 RID: 36131
+	// Token: 0x04008E6A RID: 36458
 	private readonly List<PhantomGridRowTitleTemplateData> TitleTemplateDataList = new List<PhantomGridRowTitleTemplateData>();
 
-	// Token: 0x04008D24 RID: 36132
+	// Token: 0x04008E6B RID: 36459
 	private readonly List<int> TitleTemplatePositionList = new List<int>();
 
-	// Token: 0x04008D25 RID: 36133
+	// Token: 0x04008E6C RID: 36460
 	private int CurrentSelectGridId;
 
-	// Token: 0x04008D26 RID: 36134
+	// Token: 0x04008E6D RID: 36461
 	private bool ViewStarted;
 
-	// Token: 0x04008D27 RID: 36135
+	// Token: 0x04008E6E RID: 36462
 	private readonly Dictionary<int, int> DisabledEntityHandles = new Dictionary<int, int>();
 
-	// Token: 0x020089EF RID: 35311
+	// Token: 0x02007B76 RID: 31606
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CCB3 RID: 183475
+		// Token: 0x04027FC9 RID: 163785
 		ItemPanelVisionList,
-		// Token: 0x0402CCB4 RID: 183476
+		// Token: 0x04027FCA RID: 163786
 		ScrollView,
-		// Token: 0x0402CCB5 RID: 183477
+		// Token: 0x04027FCB RID: 163787
 		ItemPanelEmpty,
-		// Token: 0x0402CCB6 RID: 183478
+		// Token: 0x04027FCC RID: 163788
 		ToggleGroupTopTab,
-		// Token: 0x0402CCB7 RID: 183479
+		// Token: 0x04027FCD RID: 163789
 		ItemSort,
-		// Token: 0x0402CCB8 RID: 183480
+		// Token: 0x04027FCE RID: 163790
 		ItemBtnConfirm,
-		// Token: 0x0402CCB9 RID: 183481
+		// Token: 0x04027FCF RID: 163791
 		BtnSkin,
-		// Token: 0x0402CCBA RID: 183482
+		// Token: 0x04027FD0 RID: 163792
 		ItemCaption,
-		// Token: 0x0402CCBB RID: 183483
+		// Token: 0x04027FD1 RID: 163793
 		ItemVisionEditTip,
-		// Token: 0x0402CCBC RID: 183484
+		// Token: 0x04027FD2 RID: 163794
 		TogTabCostAll,
-		// Token: 0x0402CCBD RID: 183485
+		// Token: 0x04027FD3 RID: 163795
 		TogTabCost1,
-		// Token: 0x0402CCBE RID: 183486
+		// Token: 0x04027FD4 RID: 163796
 		TogTabCost3,
-		// Token: 0x0402CCBF RID: 183487
+		// Token: 0x04027FD5 RID: 163797
 		TogTabCost4,
-		// Token: 0x0402CCC0 RID: 183488
+		// Token: 0x04027FD6 RID: 163798
 		ItemTemplateTitle,
-		// Token: 0x0402CCC1 RID: 183489
+		// Token: 0x04027FD7 RID: 163799
 		ItemTemplateGrid,
-		// Token: 0x0402CCC2 RID: 183490
+		// Token: 0x04027FD8 RID: 163800
 		ItemEquipBtnGroup,
-		// Token: 0x0402CCC3 RID: 183491
+		// Token: 0x04027FD9 RID: 163801
 		ItemGridContent
 	}
 }

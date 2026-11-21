@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E36 RID: 3638
+// Token: 0x020002EB RID: 747
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkReportStartFlow : SdkReportData
 {
-	// Token: 0x06005781 RID: 22401 RVA: 0x000FC317 File Offset: 0x000FA517
+	// Token: 0x06002B11 RID: 11025 RVA: 0x00103B6B File Offset: 0x00101D6B
 	public SdkReportStartFlow([Nullable(new byte[]
 	{
 		2,
@@ -18,7 +18,7 @@ public class SdkReportStartFlow : SdkReportData
 	{
 	}
 
-	// Token: 0x06005782 RID: 22402 RVA: 0x000FC320 File Offset: 0x000FA520
+	// Token: 0x06002B12 RID: 11026 RVA: 0x00103B74 File Offset: 0x00101D74
 	public override string GetEventName()
 	{
 		if (this.IfGlobalSdk)
@@ -28,13 +28,13 @@ public class SdkReportStartFlow : SdkReportData
 		return "";
 	}
 
-	// Token: 0x06005783 RID: 22403 RVA: 0x000FC335 File Offset: 0x000FA535
+	// Token: 0x06002B13 RID: 11027 RVA: 0x00103B89 File Offset: 0x00101D89
 	public static bool IfNeedReport(int flowId, int stateId)
 	{
 		return flowId == 1 && stateId == 1;
 	}
 
-	// Token: 0x06005784 RID: 22404 RVA: 0x000FC344 File Offset: 0x000FA544
+	// Token: 0x06002B14 RID: 11028 RVA: 0x00103B98 File Offset: 0x00101D98
 	protected override string GetEventDataJson()
 	{
 		this.EventData = new Dictionary<string, string>();
@@ -43,6 +43,6 @@ public class SdkReportStartFlow : SdkReportData
 		return base.GetEventDataJson();
 	}
 
-	// Token: 0x04002867 RID: 10343
+	// Token: 0x04002900 RID: 10496
 	public int FlowId;
 }

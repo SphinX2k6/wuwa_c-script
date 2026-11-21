@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C0F RID: 3087
+	// Token: 0x02000CF1 RID: 3313
 	public struct DropCatchRole : IFlatbufferObject
 	{
-		// Token: 0x17000DCF RID: 3535
-		// (get) Token: 0x060065AC RID: 26028 RVA: 0x0021B914 File Offset: 0x00219B14
+		// Token: 0x17000E1B RID: 3611
+		// (get) Token: 0x06006B8B RID: 27531 RVA: 0x0023AC64 File Offset: 0x00238E64
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065AD RID: 26029 RVA: 0x0021B921 File Offset: 0x00219B21
+		// Token: 0x06006B8C RID: 27532 RVA: 0x0023AC71 File Offset: 0x00238E71
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060065AE RID: 26030 RVA: 0x0021B928 File Offset: 0x00219B28
+		// Token: 0x06006B8D RID: 27533 RVA: 0x0023AC78 File Offset: 0x00238E78
 		public static DropCatchRole GetRootAsDropCatchRole(ByteBuffer _bb)
 		{
 			return DropCatchRole.GetRootAsDropCatchRole(_bb, default(DropCatchRole));
 		}
 
-		// Token: 0x060065AF RID: 26031 RVA: 0x0021B944 File Offset: 0x00219B44
+		// Token: 0x06006B8E RID: 27534 RVA: 0x0023AC94 File Offset: 0x00238E94
 		public static DropCatchRole GetRootAsDropCatchRole(ByteBuffer _bb, DropCatchRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060065B0 RID: 26032 RVA: 0x0021B961 File Offset: 0x00219B61
+		// Token: 0x06006B8F RID: 27535 RVA: 0x0023ACB1 File Offset: 0x00238EB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060065B1 RID: 26033 RVA: 0x0021B970 File Offset: 0x00219B70
+		// Token: 0x06006B90 RID: 27536 RVA: 0x0023ACC0 File Offset: 0x00238EC0
 		public DropCatchRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000DD0 RID: 3536
-		// (get) Token: 0x060065B2 RID: 26034 RVA: 0x0021B980 File Offset: 0x00219B80
+		// Token: 0x17000E1C RID: 3612
+		// (get) Token: 0x06006B91 RID: 27537 RVA: 0x0023ACD0 File Offset: 0x00238ED0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DD1 RID: 3537
-		// (get) Token: 0x060065B3 RID: 26035 RVA: 0x0021B9BC File Offset: 0x00219BBC
+		// Token: 0x17000E1D RID: 3613
+		// (get) Token: 0x06006B92 RID: 27538 RVA: 0x0023AD0C File Offset: 0x00238F0C
 		public float MoveSpeed
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DD2 RID: 3538
-		// (get) Token: 0x060065B4 RID: 26036 RVA: 0x0021B9FC File Offset: 0x00219BFC
+		// Token: 0x17000E1E RID: 3614
+		// (get) Token: 0x06006B93 RID: 27539 RVA: 0x0023AD4C File Offset: 0x00238F4C
 		public float EnergyGetRate
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DD3 RID: 3539
-		// (get) Token: 0x060065B5 RID: 26037 RVA: 0x0021BA3C File Offset: 0x00219C3C
+		// Token: 0x17000E1F RID: 3615
+		// (get) Token: 0x06006B94 RID: 27540 RVA: 0x0023AD8C File Offset: 0x00238F8C
 		public float EnergySelfRecover
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DD4 RID: 3540
-		// (get) Token: 0x060065B6 RID: 26038 RVA: 0x0021BA80 File Offset: 0x00219C80
+		// Token: 0x17000E20 RID: 3616
+		// (get) Token: 0x06006B95 RID: 27541 RVA: 0x0023ADD0 File Offset: 0x00238FD0
 		public float MaxEnergy
 		{
 			get
@@ -124,7 +124,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065B7 RID: 26039 RVA: 0x0021BAC4 File Offset: 0x00219CC4
+		// Token: 0x06006B96 RID: 27542 RVA: 0x0023AE14 File Offset: 0x00239014
 		public float RoleSize(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -135,8 +135,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000DD5 RID: 3541
-		// (get) Token: 0x060065B8 RID: 26040 RVA: 0x0021BB08 File Offset: 0x00219D08
+		// Token: 0x17000E21 RID: 3617
+		// (get) Token: 0x06006B97 RID: 27543 RVA: 0x0023AE58 File Offset: 0x00239058
 		public int RoleSizeLength
 		{
 			get
@@ -150,19 +150,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065B9 RID: 26041 RVA: 0x0021BB34 File Offset: 0x00219D34
+		// Token: 0x06006B98 RID: 27544 RVA: 0x0023AE84 File Offset: 0x00239084
 		public Span<float> GetRoleSizeBytes()
 		{
 			return this.__p.__vector_as_span<float>(14, 4);
 		}
 
-		// Token: 0x060065BA RID: 26042 RVA: 0x0021BB44 File Offset: 0x00219D44
+		// Token: 0x06006B99 RID: 27545 RVA: 0x0023AE94 File Offset: 0x00239094
 		public float[] GetRoleSizeArray()
 		{
 			return this.__p.__vector_as_array<float>(14) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x060065BB RID: 26043 RVA: 0x0021BB5C File Offset: 0x00219D5C
+		// Token: 0x06006B9A RID: 27546 RVA: 0x0023AEAC File Offset: 0x002390AC
 		public float RoleSizeBiasNew(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -173,8 +173,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000DD6 RID: 3542
-		// (get) Token: 0x060065BC RID: 26044 RVA: 0x0021BBA0 File Offset: 0x00219DA0
+		// Token: 0x17000E22 RID: 3618
+		// (get) Token: 0x06006B9B RID: 27547 RVA: 0x0023AEF0 File Offset: 0x002390F0
 		public int RoleSizeBiasNewLength
 		{
 			get
@@ -188,20 +188,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065BD RID: 26045 RVA: 0x0021BBCC File Offset: 0x00219DCC
+		// Token: 0x06006B9C RID: 27548 RVA: 0x0023AF1C File Offset: 0x0023911C
 		public Span<float> GetRoleSizeBiasNewBytes()
 		{
 			return this.__p.__vector_as_span<float>(16, 4);
 		}
 
-		// Token: 0x060065BE RID: 26046 RVA: 0x0021BBDC File Offset: 0x00219DDC
+		// Token: 0x06006B9D RID: 27549 RVA: 0x0023AF2C File Offset: 0x0023912C
 		public float[] GetRoleSizeBiasNewArray()
 		{
 			return this.__p.__vector_as_array<float>(16) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x17000DD7 RID: 3543
-		// (get) Token: 0x060065BF RID: 26047 RVA: 0x0021BBF4 File Offset: 0x00219DF4
+		// Token: 0x17000E23 RID: 3619
+		// (get) Token: 0x06006B9E RID: 27550 RVA: 0x0023AF44 File Offset: 0x00239144
 		public float RoleSizeBias
 		{
 			get
@@ -215,7 +215,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065C0 RID: 26048 RVA: 0x0021BC38 File Offset: 0x00219E38
+		// Token: 0x06006B9F RID: 27551 RVA: 0x0023AF88 File Offset: 0x00239188
 		public float BowlSize(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -226,8 +226,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000DD8 RID: 3544
-		// (get) Token: 0x060065C1 RID: 26049 RVA: 0x0021BC7C File Offset: 0x00219E7C
+		// Token: 0x17000E24 RID: 3620
+		// (get) Token: 0x06006BA0 RID: 27552 RVA: 0x0023AFCC File Offset: 0x002391CC
 		public int BowlSizeLength
 		{
 			get
@@ -241,19 +241,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065C2 RID: 26050 RVA: 0x0021BCA8 File Offset: 0x00219EA8
+		// Token: 0x06006BA1 RID: 27553 RVA: 0x0023AFF8 File Offset: 0x002391F8
 		public Span<float> GetBowlSizeBytes()
 		{
 			return this.__p.__vector_as_span<float>(20, 4);
 		}
 
-		// Token: 0x060065C3 RID: 26051 RVA: 0x0021BCB8 File Offset: 0x00219EB8
+		// Token: 0x06006BA2 RID: 27554 RVA: 0x0023B008 File Offset: 0x00239208
 		public float[] GetBowlSizeArray()
 		{
 			return this.__p.__vector_as_array<float>(20) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x060065C4 RID: 26052 RVA: 0x0021BCD0 File Offset: 0x00219ED0
+		// Token: 0x06006BA3 RID: 27555 RVA: 0x0023B020 File Offset: 0x00239220
 		public float BowlSizeBiasNew(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -264,8 +264,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000DD9 RID: 3545
-		// (get) Token: 0x060065C5 RID: 26053 RVA: 0x0021BD14 File Offset: 0x00219F14
+		// Token: 0x17000E25 RID: 3621
+		// (get) Token: 0x06006BA4 RID: 27556 RVA: 0x0023B064 File Offset: 0x00239264
 		public int BowlSizeBiasNewLength
 		{
 			get
@@ -279,20 +279,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065C6 RID: 26054 RVA: 0x0021BD40 File Offset: 0x00219F40
+		// Token: 0x06006BA5 RID: 27557 RVA: 0x0023B090 File Offset: 0x00239290
 		public Span<float> GetBowlSizeBiasNewBytes()
 		{
 			return this.__p.__vector_as_span<float>(22, 4);
 		}
 
-		// Token: 0x060065C7 RID: 26055 RVA: 0x0021BD50 File Offset: 0x00219F50
+		// Token: 0x06006BA6 RID: 27558 RVA: 0x0023B0A0 File Offset: 0x002392A0
 		public float[] GetBowlSizeBiasNewArray()
 		{
 			return this.__p.__vector_as_array<float>(22) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x17000DDA RID: 3546
-		// (get) Token: 0x060065C8 RID: 26056 RVA: 0x0021BD68 File Offset: 0x00219F68
+		// Token: 0x17000E26 RID: 3622
+		// (get) Token: 0x06006BA7 RID: 27559 RVA: 0x0023B0B8 File Offset: 0x002392B8
 		public float BowlSizeBias
 		{
 			get
@@ -306,8 +306,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DDB RID: 3547
-		// (get) Token: 0x060065C9 RID: 26057 RVA: 0x0021BDAC File Offset: 0x00219FAC
+		// Token: 0x17000E27 RID: 3623
+		// (get) Token: 0x06006BA8 RID: 27560 RVA: 0x0023B0FC File Offset: 0x002392FC
 		public float BowlSpineScaleX
 		{
 			get
@@ -321,8 +321,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DDC RID: 3548
-		// (get) Token: 0x060065CA RID: 26058 RVA: 0x0021BDF0 File Offset: 0x00219FF0
+		// Token: 0x17000E28 RID: 3624
+		// (get) Token: 0x06006BA9 RID: 27561 RVA: 0x0023B140 File Offset: 0x00239340
 		public string Name
 		{
 			get
@@ -336,20 +336,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065CB RID: 26059 RVA: 0x0021BE28 File Offset: 0x0021A028
+		// Token: 0x06006BAA RID: 27562 RVA: 0x0023B178 File Offset: 0x00239378
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(28, 1);
 		}
 
-		// Token: 0x060065CC RID: 26060 RVA: 0x0021BE38 File Offset: 0x0021A038
+		// Token: 0x06006BAB RID: 27563 RVA: 0x0023B188 File Offset: 0x00239388
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(28) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000DDD RID: 3549
-		// (get) Token: 0x060065CD RID: 26061 RVA: 0x0021BE50 File Offset: 0x0021A050
+		// Token: 0x17000E29 RID: 3625
+		// (get) Token: 0x06006BAC RID: 27564 RVA: 0x0023B1A0 File Offset: 0x002393A0
 		public string Desc
 		{
 			get
@@ -363,20 +363,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065CE RID: 26062 RVA: 0x0021BE88 File Offset: 0x0021A088
+		// Token: 0x06006BAD RID: 27565 RVA: 0x0023B1D8 File Offset: 0x002393D8
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(30, 1);
 		}
 
-		// Token: 0x060065CF RID: 26063 RVA: 0x0021BE98 File Offset: 0x0021A098
+		// Token: 0x06006BAE RID: 27566 RVA: 0x0023B1E8 File Offset: 0x002393E8
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(30) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000DDE RID: 3550
-		// (get) Token: 0x060065D0 RID: 26064 RVA: 0x0021BEB0 File Offset: 0x0021A0B0
+		// Token: 0x17000E2A RID: 3626
+		// (get) Token: 0x06006BAF RID: 27567 RVA: 0x0023B200 File Offset: 0x00239400
 		public float SkillReduceEnergy
 		{
 			get
@@ -390,8 +390,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DDF RID: 3551
-		// (get) Token: 0x060065D1 RID: 26065 RVA: 0x0021BEF4 File Offset: 0x0021A0F4
+		// Token: 0x17000E2B RID: 3627
+		// (get) Token: 0x06006BB0 RID: 27568 RVA: 0x0023B244 File Offset: 0x00239444
 		public float SkillReduceEnergyRateInterval
 		{
 			get
@@ -405,8 +405,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DE0 RID: 3552
-		// (get) Token: 0x060065D2 RID: 26066 RVA: 0x0021BF38 File Offset: 0x0021A138
+		// Token: 0x17000E2C RID: 3628
+		// (get) Token: 0x06006BB1 RID: 27569 RVA: 0x0023B288 File Offset: 0x00239488
 		public float SkillReduceEnergyRate
 		{
 			get
@@ -420,8 +420,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DE1 RID: 3553
-		// (get) Token: 0x060065D3 RID: 26067 RVA: 0x0021BF7C File Offset: 0x0021A17C
+		// Token: 0x17000E2D RID: 3629
+		// (get) Token: 0x06006BB2 RID: 27570 RVA: 0x0023B2CC File Offset: 0x002394CC
 		public float ReceiveRange
 		{
 			get
@@ -435,8 +435,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DE2 RID: 3554
-		// (get) Token: 0x060065D4 RID: 26068 RVA: 0x0021BFC0 File Offset: 0x0021A1C0
+		// Token: 0x17000E2E RID: 3630
+		// (get) Token: 0x06006BB3 RID: 27571 RVA: 0x0023B310 File Offset: 0x00239510
 		public float GuideMoveSpeed
 		{
 			get
@@ -450,8 +450,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DE3 RID: 3555
-		// (get) Token: 0x060065D5 RID: 26069 RVA: 0x0021C004 File Offset: 0x0021A204
+		// Token: 0x17000E2F RID: 3631
+		// (get) Token: 0x06006BB4 RID: 27572 RVA: 0x0023B354 File Offset: 0x00239554
 		public float GuideEnergyGetRate
 		{
 			get
@@ -465,8 +465,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DE4 RID: 3556
-		// (get) Token: 0x060065D6 RID: 26070 RVA: 0x0021C048 File Offset: 0x0021A248
+		// Token: 0x17000E30 RID: 3632
+		// (get) Token: 0x06006BB5 RID: 27573 RVA: 0x0023B398 File Offset: 0x00239598
 		public string SilhouettePath
 		{
 			get
@@ -480,20 +480,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065D7 RID: 26071 RVA: 0x0021C080 File Offset: 0x0021A280
+		// Token: 0x06006BB6 RID: 27574 RVA: 0x0023B3D0 File Offset: 0x002395D0
 		public Span<byte> GetSilhouettePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(44, 1);
 		}
 
-		// Token: 0x060065D8 RID: 26072 RVA: 0x0021C090 File Offset: 0x0021A290
+		// Token: 0x06006BB7 RID: 27575 RVA: 0x0023B3E0 File Offset: 0x002395E0
 		public byte[] GetSilhouettePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(44) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000DE5 RID: 3557
-		// (get) Token: 0x060065D9 RID: 26073 RVA: 0x0021C0A8 File Offset: 0x0021A2A8
+		// Token: 0x17000E31 RID: 3633
+		// (get) Token: 0x06006BB8 RID: 27576 RVA: 0x0023B3F8 File Offset: 0x002395F8
 		public string RoleTexturePath
 		{
 			get
@@ -507,20 +507,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065DA RID: 26074 RVA: 0x0021C0E0 File Offset: 0x0021A2E0
+		// Token: 0x06006BB9 RID: 27577 RVA: 0x0023B430 File Offset: 0x00239630
 		public Span<byte> GetRoleTexturePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(46, 1);
 		}
 
-		// Token: 0x060065DB RID: 26075 RVA: 0x0021C0F0 File Offset: 0x0021A2F0
+		// Token: 0x06006BBA RID: 27578 RVA: 0x0023B440 File Offset: 0x00239640
 		public byte[] GetRoleTexturePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(46) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000DE6 RID: 3558
-		// (get) Token: 0x060065DC RID: 26076 RVA: 0x0021C108 File Offset: 0x0021A308
+		// Token: 0x17000E32 RID: 3634
+		// (get) Token: 0x06006BBB RID: 27579 RVA: 0x0023B458 File Offset: 0x00239658
 		public string SpineAtlasPath
 		{
 			get
@@ -534,20 +534,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065DD RID: 26077 RVA: 0x0021C140 File Offset: 0x0021A340
+		// Token: 0x06006BBC RID: 27580 RVA: 0x0023B490 File Offset: 0x00239690
 		public Span<byte> GetSpineAtlasPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(48, 1);
 		}
 
-		// Token: 0x060065DE RID: 26078 RVA: 0x0021C150 File Offset: 0x0021A350
+		// Token: 0x06006BBD RID: 27581 RVA: 0x0023B4A0 File Offset: 0x002396A0
 		public byte[] GetSpineAtlasPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(48) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000DE7 RID: 3559
-		// (get) Token: 0x060065DF RID: 26079 RVA: 0x0021C168 File Offset: 0x0021A368
+		// Token: 0x17000E33 RID: 3635
+		// (get) Token: 0x06006BBE RID: 27582 RVA: 0x0023B4B8 File Offset: 0x002396B8
 		public string SpineSkeletonDataPath
 		{
 			get
@@ -561,91 +561,83 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065E0 RID: 26080 RVA: 0x0021C1A0 File Offset: 0x0021A3A0
+		// Token: 0x06006BBF RID: 27583 RVA: 0x0023B4F0 File Offset: 0x002396F0
 		public Span<byte> GetSpineSkeletonDataPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(50, 1);
 		}
 
-		// Token: 0x060065E1 RID: 26081 RVA: 0x0021C1B0 File Offset: 0x0021A3B0
+		// Token: 0x06006BC0 RID: 27584 RVA: 0x0023B500 File Offset: 0x00239700
 		public byte[] GetSpineSkeletonDataPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(50) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060065E2 RID: 26082 RVA: 0x0021C1C8 File Offset: 0x0021A3C8
+		// Token: 0x06006BC1 RID: 27585 RVA: 0x0023B518 File Offset: 0x00239718
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BowlSizeIter()或GetBowlSizeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] BowlSize()
+		public float[] BowlSize()
 		{
-			DropCatchRole dropCatchRole = this;
-			return dropCatchRole.GetBowlSizeArray() ?? Array.Empty<float>();
+			return this.GetBowlSizeArray();
 		}
 
-		// Token: 0x060065E3 RID: 26083 RVA: 0x0021C1EC File Offset: 0x0021A3EC
+		// Token: 0x06006BC2 RID: 27586 RVA: 0x0023B520 File Offset: 0x00239720
 		[NullableContext(1)]
-		public readonly IEnumerable<float> BowlSizeIter()
+		public IEnumerable<float> BowlSizeIter()
 		{
 			DropCatchRole.<BowlSizeIter>d__81 <BowlSizeIter>d__ = new DropCatchRole.<BowlSizeIter>d__81(-2);
 			<BowlSizeIter>d__.<>3__<>4__this = this;
 			return <BowlSizeIter>d__;
 		}
 
-		// Token: 0x060065E4 RID: 26084 RVA: 0x0021C204 File Offset: 0x0021A404
+		// Token: 0x06006BC3 RID: 27587 RVA: 0x0023B535 File Offset: 0x00239735
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BowlSizeBiasNewIter()或GetBowlSizeBiasNewBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] BowlSizeBiasNew()
+		public float[] BowlSizeBiasNew()
 		{
-			DropCatchRole dropCatchRole = this;
-			return dropCatchRole.GetBowlSizeBiasNewArray() ?? Array.Empty<float>();
+			return this.GetBowlSizeBiasNewArray();
 		}
 
-		// Token: 0x060065E5 RID: 26085 RVA: 0x0021C228 File Offset: 0x0021A428
+		// Token: 0x06006BC4 RID: 27588 RVA: 0x0023B53D File Offset: 0x0023973D
 		[NullableContext(1)]
-		public readonly IEnumerable<float> BowlSizeBiasNewIter()
+		public IEnumerable<float> BowlSizeBiasNewIter()
 		{
 			DropCatchRole.<BowlSizeBiasNewIter>d__83 <BowlSizeBiasNewIter>d__ = new DropCatchRole.<BowlSizeBiasNewIter>d__83(-2);
 			<BowlSizeBiasNewIter>d__.<>3__<>4__this = this;
 			return <BowlSizeBiasNewIter>d__;
 		}
 
-		// Token: 0x060065E6 RID: 26086 RVA: 0x0021C240 File Offset: 0x0021A440
+		// Token: 0x06006BC5 RID: 27589 RVA: 0x0023B552 File Offset: 0x00239752
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleSizeIter()或GetRoleSizeBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] RoleSize()
+		public float[] RoleSize()
 		{
-			DropCatchRole dropCatchRole = this;
-			return dropCatchRole.GetRoleSizeArray() ?? Array.Empty<float>();
+			return this.GetRoleSizeArray();
 		}
 
-		// Token: 0x060065E7 RID: 26087 RVA: 0x0021C264 File Offset: 0x0021A464
+		// Token: 0x06006BC6 RID: 27590 RVA: 0x0023B55A File Offset: 0x0023975A
 		[NullableContext(1)]
-		public readonly IEnumerable<float> RoleSizeIter()
+		public IEnumerable<float> RoleSizeIter()
 		{
 			DropCatchRole.<RoleSizeIter>d__85 <RoleSizeIter>d__ = new DropCatchRole.<RoleSizeIter>d__85(-2);
 			<RoleSizeIter>d__.<>3__<>4__this = this;
 			return <RoleSizeIter>d__;
 		}
 
-		// Token: 0x060065E8 RID: 26088 RVA: 0x0021C27C File Offset: 0x0021A47C
+		// Token: 0x06006BC7 RID: 27591 RVA: 0x0023B56F File Offset: 0x0023976F
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleSizeBiasNewIter()或GetRoleSizeBiasNewBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] RoleSizeBiasNew()
+		public float[] RoleSizeBiasNew()
 		{
-			DropCatchRole dropCatchRole = this;
-			return dropCatchRole.GetRoleSizeBiasNewArray() ?? Array.Empty<float>();
+			return this.GetRoleSizeBiasNewArray();
 		}
 
-		// Token: 0x060065E9 RID: 26089 RVA: 0x0021C2A0 File Offset: 0x0021A4A0
+		// Token: 0x06006BC8 RID: 27592 RVA: 0x0023B577 File Offset: 0x00239777
 		[NullableContext(1)]
-		public readonly IEnumerable<float> RoleSizeBiasNewIter()
+		public IEnumerable<float> RoleSizeBiasNewIter()
 		{
 			DropCatchRole.<RoleSizeBiasNewIter>d__87 <RoleSizeBiasNewIter>d__ = new DropCatchRole.<RoleSizeBiasNewIter>d__87(-2);
 			<RoleSizeBiasNewIter>d__.<>3__<>4__this = this;
 			return <RoleSizeBiasNewIter>d__;
 		}
 
-		// Token: 0x04004C4C RID: 19532
+		// Token: 0x0400522E RID: 21038
 		private Table __p;
 	}
 }

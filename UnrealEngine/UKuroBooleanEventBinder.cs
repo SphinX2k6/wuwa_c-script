@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EAE RID: 7854
+	// Token: 0x020005CD RID: 1485
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.KuroBooleanEventBinder")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class UKuroBooleanEventBinder : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DD1C RID: 122140 RVA: 0x002C1CB7 File Offset: 0x002BFEB7
+		// Token: 0x060083F0 RID: 33776 RVA: 0x000C3F87 File Offset: 0x000C2187
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroBooleanEventBinder._ClassPtr;
 		}
 
-		// Token: 0x0601DD1D RID: 122141 RVA: 0x002C1CC4 File Offset: 0x002BFEC4
+		// Token: 0x060083F1 RID: 33777 RVA: 0x000C3F94 File Offset: 0x000C2194
 		public UKuroBooleanEventBinder() : this(BuiltinUtils.AllocNativeUObject(UKuroBooleanEventBinder.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DD1E RID: 122142 RVA: 0x002C1CEC File Offset: 0x002BFEEC
+		// Token: 0x060083F2 RID: 33778 RVA: 0x000C3FBC File Offset: 0x000C21BC
 		public UKuroBooleanEventBinder(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroBooleanEventBinder.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007799 RID: 30617
-		// (get) Token: 0x0601DD1F RID: 122143 RVA: 0x002C1D20 File Offset: 0x002BFF20
-		// (set) Token: 0x0601DD20 RID: 122144 RVA: 0x002C1D59 File Offset: 0x002BFF59
+		// Token: 0x17001958 RID: 6488
+		// (get) Token: 0x060083F3 RID: 33779 RVA: 0x000C3FF0 File Offset: 0x000C21F0
+		// (set) Token: 0x060083F4 RID: 33780 RVA: 0x000C4029 File Offset: 0x000C2229
 		public FOnBooleanEventTrigger Callback
 		{
 			get
@@ -50,30 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD21 RID: 122145 RVA: 0x002C1D7A File Offset: 0x002BFF7A
+		// Token: 0x060083F5 RID: 33781 RVA: 0x000C404A File Offset: 0x000C224A
 		static UKuroBooleanEventBinder()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroBooleanEventBinder");
 		}
 
-		// Token: 0x0601DD22 RID: 122146 RVA: 0x002C1D88 File Offset: 0x002BFF88
+		// Token: 0x060083F6 RID: 33782 RVA: 0x000C4058 File Offset: 0x000C2258
 		protected UKuroBooleanEventBinder(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010293 RID: 66195
+		// Token: 0x040039AE RID: 14766
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroBooleanEventBinder";
 
-		// Token: 0x04010294 RID: 66196
+		// Token: 0x040039AF RID: 14767
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010295 RID: 66197
+		// Token: 0x040039B0 RID: 14768
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010296 RID: 66198
+		// Token: 0x040039B1 RID: 14769
 		internal static int __PropertyOffset_Callback;
 
-		// Token: 0x04010297 RID: 66199
+		// Token: 0x040039B2 RID: 14770
 		[Nullable(2)]
 		private FOnBooleanEventTrigger _Callback;
 	}

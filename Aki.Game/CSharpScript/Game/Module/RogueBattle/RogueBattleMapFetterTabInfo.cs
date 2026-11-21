@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ED0 RID: 20176
+	// Token: 0x02003E99 RID: 16025
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleMapFetterTabInfo : IRogueBattleMapFetterTabInfo
 	{
-		// Token: 0x17007F0F RID: 32527
-		// (get) Token: 0x06033CB3 RID: 212147 RVA: 0x00C20FF1 File Offset: 0x00C1F1F1
-		// (set) Token: 0x06033CB4 RID: 212148 RVA: 0x00C20FF9 File Offset: 0x00C1F1F9
+		// Token: 0x170052BF RID: 21183
+		// (get) Token: 0x06028B1E RID: 166686 RVA: 0x00B6A509 File Offset: 0x00B68709
+		// (set) Token: 0x06028B1F RID: 166687 RVA: 0x00B6A511 File Offset: 0x00B68711
 		public bool IsSelected { get; set; }
 
-		// Token: 0x17007F10 RID: 32528
-		// (get) Token: 0x06033CB5 RID: 212149 RVA: 0x00C21002 File Offset: 0x00C1F202
-		// (set) Token: 0x06033CB6 RID: 212150 RVA: 0x00C2100A File Offset: 0x00C1F20A
+		// Token: 0x170052C0 RID: 21184
+		// (get) Token: 0x06028B20 RID: 166688 RVA: 0x00B6A51A File Offset: 0x00B6871A
+		// (set) Token: 0x06028B21 RID: 166689 RVA: 0x00B6A522 File Offset: 0x00B68722
 		public List<int> Config { get; set; } = new List<int>();
 	}
 }

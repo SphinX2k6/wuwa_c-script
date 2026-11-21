@@ -9,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029FD RID: 10749
+// Token: 0x02001F78 RID: 8056
 [NullableContext(2)]
 [Nullable(0)]
 public class MoonTogetherMainView : UiTickViewBase
 {
-	// Token: 0x060164CD RID: 91341 RVA: 0x005A4BF7 File Offset: 0x005A2DF7
+	// Token: 0x06013ED4 RID: 81620 RVA: 0x005CFBCF File Offset: 0x005CDDCF
 	[NullableContext(1)]
 	public MoonTogetherMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060164CE RID: 91342 RVA: 0x005A4C00 File Offset: 0x005A2E00
+	// Token: 0x06013ED5 RID: 81621 RVA: 0x005CFBD8 File Offset: 0x005CDDD8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060164CF RID: 91343 RVA: 0x005A4CAC File Offset: 0x005A2EAC
+	// Token: 0x06013ED6 RID: 81622 RVA: 0x005CFC84 File Offset: 0x005CDE84
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonTogetherMainView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060164D0 RID: 91344 RVA: 0x005A4CF0 File Offset: 0x005A2EF0
+	// Token: 0x06013ED7 RID: 81623 RVA: 0x005CFCC8 File Offset: 0x005CDEC8
 	protected override void OnStart()
 	{
 		base.GetItem(4).SetUIActive(false);
@@ -77,7 +77,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		MoonTogetherModel.Instance.IsInMoonTogether = true;
 	}
 
-	// Token: 0x060164D1 RID: 91345 RVA: 0x005A4E3C File Offset: 0x005A303C
+	// Token: 0x06013ED8 RID: 81624 RVA: 0x005CFE14 File Offset: 0x005CE014
 	protected override void OnBeforeDestroy()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -94,7 +94,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		baseTagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["系统.功能.致敬观察索拉里斯.默认镜头"]));
 	}
 
-	// Token: 0x060164D2 RID: 91346 RVA: 0x005A4EA8 File Offset: 0x005A30A8
+	// Token: 0x06013ED9 RID: 81625 RVA: 0x005CFE80 File Offset: 0x005CE080
 	protected override void OnBeforeShow()
 	{
 		this.IsFirstPerson = false;
@@ -107,13 +107,13 @@ public class MoonTogetherMainView : UiTickViewBase
 		this.OnInviteNormalRole();
 	}
 
-	// Token: 0x060164D3 RID: 91347 RVA: 0x005A4EE5 File Offset: 0x005A30E5
+	// Token: 0x06013EDA RID: 81626 RVA: 0x005CFEBD File Offset: 0x005CE0BD
 	protected override void OnTick(float delta)
 	{
 		this.ChangeVisionSkillItem.TickSkillCoolDown(delta);
 	}
 
-	// Token: 0x060164D4 RID: 91348 RVA: 0x005A4EF4 File Offset: 0x005A30F4
+	// Token: 0x06013EDB RID: 81627 RVA: 0x005CFECC File Offset: 0x005CE0CC
 	private UniTask OnInviteButtonClick()
 	{
 		MoonTogetherMainView.<OnInviteButtonClick>d__12 <OnInviteButtonClick>d__;
@@ -124,7 +124,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		return <OnInviteButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060164D5 RID: 91349 RVA: 0x005A4F38 File Offset: 0x005A3138
+	// Token: 0x06013EDC RID: 81628 RVA: 0x005CFF10 File Offset: 0x005CE110
 	private UniTask OnChangeVisionButtonClick()
 	{
 		MoonTogetherMainView.<OnChangeVisionButtonClick>d__13 <OnChangeVisionButtonClick>d__;
@@ -135,7 +135,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		return <OnChangeVisionButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060164D6 RID: 91350 RVA: 0x005A4F7C File Offset: 0x005A317C
+	// Token: 0x06013EDD RID: 81629 RVA: 0x005CFF54 File Offset: 0x005CE154
 	private void OnTakePictureButtonClick()
 	{
 		PhotoSaveViewParam param = new PhotoSaveViewParam
@@ -152,7 +152,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		PhotographController.Instance.ScreenShot(param);
 	}
 
-	// Token: 0x060164D7 RID: 91351 RVA: 0x005A4FD4 File Offset: 0x005A31D4
+	// Token: 0x06013EDE RID: 81630 RVA: 0x005CFFAC File Offset: 0x005CE1AC
 	private UniTask OnCloseButtonClick()
 	{
 		MoonTogetherMainView.<OnCloseButtonClick>d__15 <OnCloseButtonClick>d__;
@@ -163,7 +163,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		return <OnCloseButtonClick>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060164D8 RID: 91352 RVA: 0x005A5018 File Offset: 0x005A3218
+	// Token: 0x06013EDF RID: 81631 RVA: 0x005CFFF0 File Offset: 0x005CE1F0
 	public void OnInviteLinkageRole()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_IconMoonView01");
@@ -188,7 +188,7 @@ public class MoonTogetherMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x060164D9 RID: 91353 RVA: 0x005A5088 File Offset: 0x005A3288
+	// Token: 0x06013EE0 RID: 81632 RVA: 0x005D0060 File Offset: 0x005CE260
 	public void OnInviteNormalRole()
 	{
 		string resourcePath = UiResourceConfig.Instance.GetResourcePath("SP_IconMoonView02");
@@ -210,35 +210,35 @@ public class MoonTogetherMainView : UiTickViewBase
 		changeVisionSkillItem2.SetDisabledHint(null);
 	}
 
-	// Token: 0x0400A5E4 RID: 42468
+	// Token: 0x0400A9CE RID: 43470
 	private ShowerSkillButton InviteSkillItem;
 
-	// Token: 0x0400A5E5 RID: 42469
+	// Token: 0x0400A9CF RID: 43471
 	private ShowerSkillButton ChangeVisionSkillItem;
 
-	// Token: 0x0400A5E6 RID: 42470
+	// Token: 0x0400A9D0 RID: 43472
 	private ShowerSkillButton TakePictureSkillItem;
 
-	// Token: 0x0400A5E7 RID: 42471
+	// Token: 0x0400A9D1 RID: 43473
 	private bool IsFirstPerson;
 
-	// Token: 0x02009036 RID: 36918
+	// Token: 0x0200827D RID: 33405
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402EB28 RID: 191272
+		// Token: 0x0402A220 RID: 172576
 		public const int InviteSkillItem = 0;
 
-		// Token: 0x0402EB29 RID: 191273
+		// Token: 0x0402A221 RID: 172577
 		public const int ChangeVisionSkillItem = 1;
 
-		// Token: 0x0402EB2A RID: 191274
+		// Token: 0x0402A222 RID: 172578
 		public const int TakePictureSkillItem = 2;
 
-		// Token: 0x0402EB2B RID: 191275
+		// Token: 0x0402A223 RID: 172579
 		public const int CloseButton = 3;
 
-		// Token: 0x0402EB2C RID: 191276
+		// Token: 0x0402A224 RID: 172580
 		public const int NiaItem = 4;
 	}
 }

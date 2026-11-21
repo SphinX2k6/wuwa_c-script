@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004F2 RID: 1266
+	// Token: 0x02000508 RID: 1288
 	public class ConfigLoopTeleportVolumeFunctionByVolumeId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001DB7 RID: 7607 RVA: 0x001013F4 File Offset: 0x000FF5F4
+		// Token: 0x06001E3B RID: 7739 RVA: 0x00107B48 File Offset: 0x00105D48
 		static ConfigLoopTeleportVolumeFunctionByVolumeId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLoopTeleportVolumeFunctionByVolumeId.CreateStaticDefaultValue), new Action(ConfigLoopTeleportVolumeFunctionByVolumeId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001DB8 RID: 7608 RVA: 0x00101414 File Offset: 0x000FF614
+		// Token: 0x06001E3C RID: 7740 RVA: 0x00107B68 File Offset: 0x00105D68
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLoopTeleportVolumeFunctionByVolumeId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001DB9 RID: 7609 RVA: 0x00101493 File Offset: 0x000FF693
+		// Token: 0x06001E3D RID: 7741 RVA: 0x00107BE7 File Offset: 0x00105DE7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLoopTeleportVolumeFunctionByVolumeId.LogPair = null;
 			ConfigLoopTeleportVolumeFunctionByVolumeId.HandleId = 0;
 		}
 
-		// Token: 0x06001DBA RID: 7610 RVA: 0x001014A1 File Offset: 0x000FF6A1
+		// Token: 0x06001E3E RID: 7742 RVA: 0x00107BF5 File Offset: 0x00105DF5
 		public static void Init()
 		{
 			ConfigLoopTeleportVolumeFunctionByVolumeId.HandleId = ConfigCommon.InitDataStatement(ConfigLoopTeleportVolumeFunctionByVolumeId.HandleId, "db_loopteleportvolumefunction.db", "select BinData from `LoopTeleportVolumeFunction` where VolumeId = ?");
 		}
 
-		// Token: 0x06001DBB RID: 7611 RVA: 0x001014BC File Offset: 0x000FF6BC
+		// Token: 0x06001E3F RID: 7743 RVA: 0x00107C10 File Offset: 0x00105E10
 		[NullableContext(2)]
 		public static IReadOnlyList<LoopTeleportVolumeFunction> GetConfigList(int p0VolumeId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002282 RID: 8834
+		// Token: 0x0400231C RID: 8988
 		private const string DB = "db_loopteleportvolumefunction.db";
 
-		// Token: 0x04002283 RID: 8835
+		// Token: 0x0400231D RID: 8989
 		private const string FILE = "k.可视化编辑/c.Csv/c.循环传送Volume功能/*.csv*";
 
-		// Token: 0x04002284 RID: 8836
+		// Token: 0x0400231E RID: 8990
 		private const string TABLE = "LoopTeleportVolumeFunction";
 
-		// Token: 0x04002285 RID: 8837
+		// Token: 0x0400231F RID: 8991
 		private const string COMMAND = "select BinData from `LoopTeleportVolumeFunction` where VolumeId = ?";
 
-		// Token: 0x04002286 RID: 8838
+		// Token: 0x04002320 RID: 8992
 		private const string KEY_PREFIX = "LoopTeleportVolumeFunctionByVolumeId";
 
-		// Token: 0x04002287 RID: 8839
+		// Token: 0x04002321 RID: 8993
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002288 RID: 8840
+		// Token: 0x04002322 RID: 8994
 		private static int HandleId;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000534 RID: 1332
+	// Token: 0x0200054A RID: 1354
 	public class ConfigMatchThreePieceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F43 RID: 8003 RVA: 0x0010A05C File Offset: 0x0010825C
+		// Token: 0x06001FC7 RID: 8135 RVA: 0x001107B0 File Offset: 0x0010E9B0
 		static ConfigMatchThreePieceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMatchThreePieceById.CreateStaticDefaultValue), new Action(ConfigMatchThreePieceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F44 RID: 8004 RVA: 0x0010A07C File Offset: 0x0010827C
+		// Token: 0x06001FC8 RID: 8136 RVA: 0x001107D0 File Offset: 0x0010E9D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMatchThreePieceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F45 RID: 8005 RVA: 0x0010A0FB File Offset: 0x001082FB
+		// Token: 0x06001FC9 RID: 8137 RVA: 0x0011084F File Offset: 0x0010EA4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMatchThreePieceById.LogPair = null;
 			ConfigMatchThreePieceById.HandleId = 0;
 		}
 
-		// Token: 0x06001F46 RID: 8006 RVA: 0x0010A109 File Offset: 0x00108309
+		// Token: 0x06001FCA RID: 8138 RVA: 0x0011085D File Offset: 0x0010EA5D
 		public static void Init()
 		{
 			ConfigMatchThreePieceById.HandleId = ConfigCommon.InitDataStatement(ConfigMatchThreePieceById.HandleId, "db_matchthree.db", "select BinData from `MatchThreePiece` where Id=?");
 		}
 
-		// Token: 0x06001F47 RID: 8007 RVA: 0x0010A124 File Offset: 0x00108324
+		// Token: 0x06001FCB RID: 8139 RVA: 0x00110878 File Offset: 0x0010EA78
 		public static MatchThreePiece? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMatchThreePieceById.HandleId, ConfigMatchThreePieceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MatchThreePiece?(rootAsMatchThreePiece);
 		}
 
-		// Token: 0x04002450 RID: 9296
+		// Token: 0x040024EA RID: 9450
 		private const string DB = "db_matchthree.db";
 
-		// Token: 0x04002451 RID: 9297
+		// Token: 0x040024EB RID: 9451
 		private const string FILE = "s.三消活动局内.xlsx";
 
-		// Token: 0x04002452 RID: 9298
+		// Token: 0x040024EC RID: 9452
 		private const string TABLE = "MatchThreePiece";
 
-		// Token: 0x04002453 RID: 9299
+		// Token: 0x040024ED RID: 9453
 		private const string COMMAND = "select BinData from `MatchThreePiece` where Id=?";
 
-		// Token: 0x04002454 RID: 9300
+		// Token: 0x040024EE RID: 9454
 		private const string KEY_PREFIX = "MatchThreePieceById";
 
-		// Token: 0x04002455 RID: 9301
+		// Token: 0x040024EF RID: 9455
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002456 RID: 9302
+		// Token: 0x040024F0 RID: 9456
 		private static int HandleId;
 	}
 }

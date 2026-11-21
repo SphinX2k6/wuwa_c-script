@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015F7 RID: 5623
+// Token: 0x02000AAF RID: 2735
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerTeamSelectMainPanel : UiPanelBase
 {
-	// Token: 0x06009EA1 RID: 40609 RVA: 0x0022A57C File Offset: 0x0022877C
+	// Token: 0x0600727F RID: 29311 RVA: 0x00234354 File Offset: 0x00232554
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,7 +35,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009EA2 RID: 40610 RVA: 0x0022A648 File Offset: 0x00228848
+	// Token: 0x06007280 RID: 29312 RVA: 0x00234420 File Offset: 0x00232620
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerTeamSelectMainPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -46,21 +46,21 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EA3 RID: 40611 RVA: 0x0022A68B File Offset: 0x0022888B
+	// Token: 0x06007281 RID: 29313 RVA: 0x00234463 File Offset: 0x00232663
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnRoleSkillBranchChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 		EventSystem.Instance.Add<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x06009EA4 RID: 40612 RVA: 0x0022A6C5 File Offset: 0x002288C5
+	// Token: 0x06007282 RID: 29314 RVA: 0x0023449D File Offset: 0x0023269D
 	protected override void OnAfterHide()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnRoleSkillBranchChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 		EventSystem.Instance.Remove<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleSkillBranchChanged));
 	}
 
-	// Token: 0x06009EA5 RID: 40613 RVA: 0x0022A700 File Offset: 0x00228900
+	// Token: 0x06007283 RID: 29315 RVA: 0x002344D8 File Offset: 0x002326D8
 	protected override void OnStart()
 	{
 		this.TabComponent = new GenericLayout<TeamTabItem, string>(base.GetHorizontalLayout(0), new Func<TeamTabItem>(this.CreateTab), null, false, true);
@@ -102,7 +102,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009EA6 RID: 40614 RVA: 0x0022A7B0 File Offset: 0x002289B0
+	// Token: 0x06007284 RID: 29316 RVA: 0x00234588 File Offset: 0x00232788
 	public void RefreshPanel()
 	{
 		GenericLayout<TeamTabItem, string> tabComponent = this.TabComponent;
@@ -148,7 +148,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009EA7 RID: 40615 RVA: 0x0022A81C File Offset: 0x00228A1C
+	// Token: 0x06007285 RID: 29317 RVA: 0x002345F4 File Offset: 0x002327F4
 	public UUIItem GetTabItem(int index)
 	{
 		GenericLayout<TeamTabItem, string> tabComponent = this.TabComponent;
@@ -159,7 +159,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		return tabComponent.GetGridByDisplayIndex(index);
 	}
 
-	// Token: 0x06009EA8 RID: 40616 RVA: 0x0022A830 File Offset: 0x00228A30
+	// Token: 0x06007286 RID: 29318 RVA: 0x00234608 File Offset: 0x00232808
 	private void OnRoleSkillBranchChanged(int roleId)
 	{
 		GenericLayout<TeamTabItem, string> tabComponent = this.TabComponent;
@@ -205,7 +205,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009EA9 RID: 40617 RVA: 0x0022A89E File Offset: 0x00228A9E
+	// Token: 0x06007287 RID: 29319 RVA: 0x00234676 File Offset: 0x00232876
 	[NullableContext(1)]
 	private TeamTabItem CreateTab()
 	{
@@ -214,7 +214,7 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		return teamTabItem;
 	}
 
-	// Token: 0x06009EAA RID: 40618 RVA: 0x0022A8B8 File Offset: 0x00228AB8
+	// Token: 0x06007288 RID: 29320 RVA: 0x00234690 File Offset: 0x00232890
 	private void OnClickTab(int index)
 	{
 		GenericLayout<TeamTabItem, string> tabComponent = this.TabComponent;
@@ -280,16 +280,16 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 		onSelectModeChange((ESelectMode)index, arg);
 	}
 
-	// Token: 0x040046EE RID: 18158
+	// Token: 0x04004794 RID: 18324
 	public Action<ESelectMode, int> OnSelectModeChange;
 
-	// Token: 0x040046EF RID: 18159
+	// Token: 0x04004795 RID: 18325
 	public Action<int> OnRoleSelect;
 
-	// Token: 0x040046F0 RID: 18160
+	// Token: 0x04004796 RID: 18326
 	public Action<int> OnTeamSelect;
 
-	// Token: 0x040046F1 RID: 18161
+	// Token: 0x04004797 RID: 18327
 	[Nullable(new byte[]
 	{
 		2,
@@ -298,12 +298,12 @@ public class WheelTowerTeamSelectMainPanel : UiPanelBase
 	})]
 	private GenericLayout<TeamTabItem, string> TabComponent;
 
-	// Token: 0x040046F2 RID: 18162
+	// Token: 0x04004798 RID: 18328
 	private WheelTowerRoleSelectPanel RoleSelectPanel;
 
-	// Token: 0x040046F3 RID: 18163
+	// Token: 0x04004799 RID: 18329
 	private WheelTowerTeamSelectPanel TeamSelectPanel;
 
-	// Token: 0x040046F4 RID: 18164
+	// Token: 0x0400479A RID: 18330
 	private WheelTowerTemplateSelectPanel TemplateSelectPanel;
 }

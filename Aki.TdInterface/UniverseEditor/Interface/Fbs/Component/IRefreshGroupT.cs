@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005827 RID: 22567
+	// Token: 0x02005E2E RID: 24110
 	public class IRefreshGroupT
 	{
-		// Token: 0x1700A88E RID: 43150
-		// (get) Token: 0x06025F2E RID: 155438 RVA: 0x0053B71F File Offset: 0x0053991F
-		// (set) Token: 0x06025F2F RID: 155439 RVA: 0x0053B727 File Offset: 0x00539927
+		// Token: 0x1700B1B2 RID: 45490
+		// (get) Token: 0x0602844E RID: 164942 RVA: 0x005818AB File Offset: 0x0057FAAB
+		// (set) Token: 0x0602844F RID: 164943 RVA: 0x005818B3 File Offset: 0x0057FAB3
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A88F RID: 43151
-		// (get) Token: 0x06025F30 RID: 155440 RVA: 0x0053B730 File Offset: 0x00539930
-		// (set) Token: 0x06025F31 RID: 155441 RVA: 0x0053B738 File Offset: 0x00539938
+		// Token: 0x1700B1B3 RID: 45491
+		// (get) Token: 0x06028450 RID: 164944 RVA: 0x005818BC File Offset: 0x0057FABC
+		// (set) Token: 0x06028451 RID: 164945 RVA: 0x005818C4 File Offset: 0x0057FAC4
 		public int RefreshInterval { get; set; }
 
-		// Token: 0x1700A890 RID: 43152
-		// (get) Token: 0x06025F32 RID: 155442 RVA: 0x0053B741 File Offset: 0x00539941
-		// (set) Token: 0x06025F33 RID: 155443 RVA: 0x0053B749 File Offset: 0x00539949
+		// Token: 0x1700B1B4 RID: 45492
+		// (get) Token: 0x06028452 RID: 164946 RVA: 0x005818CD File Offset: 0x0057FACD
+		// (set) Token: 0x06028453 RID: 164947 RVA: 0x005818D5 File Offset: 0x0057FAD5
 		public bool DelayRefresh { get; set; }
 
-		// Token: 0x1700A891 RID: 43153
-		// (get) Token: 0x06025F34 RID: 155444 RVA: 0x0053B752 File Offset: 0x00539952
-		// (set) Token: 0x06025F35 RID: 155445 RVA: 0x0053B75A File Offset: 0x0053995A
+		// Token: 0x1700B1B5 RID: 45493
+		// (get) Token: 0x06028454 RID: 164948 RVA: 0x005818DE File Offset: 0x0057FADE
+		// (set) Token: 0x06028455 RID: 164949 RVA: 0x005818E6 File Offset: 0x0057FAE6
 		public List<int> EntityIdList { get; set; }
 
-		// Token: 0x1700A892 RID: 43154
-		// (get) Token: 0x06025F36 RID: 155446 RVA: 0x0053B763 File Offset: 0x00539963
-		// (set) Token: 0x06025F37 RID: 155447 RVA: 0x0053B76B File Offset: 0x0053996B
+		// Token: 0x1700B1B6 RID: 45494
+		// (get) Token: 0x06028456 RID: 164950 RVA: 0x005818EF File Offset: 0x0057FAEF
+		// (set) Token: 0x06028457 RID: 164951 RVA: 0x005818F7 File Offset: 0x0057FAF7
 		public ICylinderT IsUesCylinder { get; set; }
 
-		// Token: 0x1700A893 RID: 43155
-		// (get) Token: 0x06025F38 RID: 155448 RVA: 0x0053B774 File Offset: 0x00539974
-		// (set) Token: 0x06025F39 RID: 155449 RVA: 0x0053B77C File Offset: 0x0053997C
+		// Token: 0x1700B1B7 RID: 45495
+		// (get) Token: 0x06028458 RID: 164952 RVA: 0x00581900 File Offset: 0x0057FB00
+		// (set) Token: 0x06028459 RID: 164953 RVA: 0x00581908 File Offset: 0x0057FB08
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025F3A RID: 155450 RVA: 0x0053B785 File Offset: 0x00539985
+		// Token: 0x0602845A RID: 164954 RVA: 0x00581911 File Offset: 0x0057FB11
 		public IRefreshGroupT()
 		{
 			this.Disabled = false;

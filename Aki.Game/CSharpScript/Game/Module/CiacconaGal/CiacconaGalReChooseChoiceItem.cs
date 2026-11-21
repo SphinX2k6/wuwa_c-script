@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BDD RID: 23517
+	// Token: 0x02004BBD RID: 19389
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalReChooseChoiceItem : GridProxyAbstract<ICiacconaGalReChooseChoiceParam>
 	{
-		// Token: 0x0603B730 RID: 243504 RVA: 0x00E2CD9C File Offset: 0x00E2AF9C
+		// Token: 0x0603067B RID: 198267 RVA: 0x00D7D0A4 File Offset: 0x00D7B2A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B731 RID: 243505 RVA: 0x00E2CE63 File Offset: 0x00E2B063
+		// Token: 0x0603067C RID: 198268 RVA: 0x00D7D16B File Offset: 0x00D7B36B
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveProtectionTimer();
 		}
 
-		// Token: 0x0603B732 RID: 243506 RVA: 0x00E2CE6C File Offset: 0x00E2B06C
+		// Token: 0x0603067D RID: 198269 RVA: 0x00D7D174 File Offset: 0x00D7B374
 		public override void Refresh(ICiacconaGalReChooseChoiceParam data, bool isSelected, int gridIndex)
 		{
 			this.AddProtectionTimer();
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.UpdateIcon(data.IconResId);
 		}
 
-		// Token: 0x0603B733 RID: 243507 RVA: 0x00E2CED0 File Offset: 0x00E2B0D0
+		// Token: 0x0603067E RID: 198270 RVA: 0x00D7D1D8 File Offset: 0x00D7B3D8
 		public override void Clear()
 		{
 			this.RemoveProtectionTimer();
 		}
 
-		// Token: 0x0603B734 RID: 243508 RVA: 0x00E2CED8 File Offset: 0x00E2B0D8
+		// Token: 0x0603067F RID: 198271 RVA: 0x00D7D1E0 File Offset: 0x00D7B3E0
 		public void SetInteractive(bool isInteractive)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			extendToggle.SetSelfInteractive(isInteractive);
 		}
 
-		// Token: 0x0603B735 RID: 243509 RVA: 0x00E2CEEC File Offset: 0x00E2B0EC
+		// Token: 0x06030680 RID: 198272 RVA: 0x00D7D1F4 File Offset: 0x00D7B3F4
 		private void AddProtectionTimer()
 		{
 			this.CanClick = false;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}, interval, null, null, true, 1f);
 		}
 
-		// Token: 0x0603B736 RID: 243510 RVA: 0x00E2CF37 File Offset: 0x00E2B137
+		// Token: 0x06030681 RID: 198273 RVA: 0x00D7D23F File Offset: 0x00D7B43F
 		private void RemoveProtectionTimer()
 		{
 			if (this.ProtectionTimerHandle != null && TimerSystem.Instance.Has(this.ProtectionTimerHandle))
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B737 RID: 243511 RVA: 0x00E2CF6C File Offset: 0x00E2B16C
+		// Token: 0x06030682 RID: 198274 RVA: 0x00D7D274 File Offset: 0x00D7B474
 		private UniTask UpdateIcon(string resourceName)
 		{
 			CiacconaGalReChooseChoiceItem.<UpdateIcon>d__11 <UpdateIcon>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <UpdateIcon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B738 RID: 243512 RVA: 0x00E2CFB7 File Offset: 0x00E2B1B7
+		// Token: 0x06030683 RID: 198275 RVA: 0x00D7D2BF File Offset: 0x00D7B4BF
 		private void OnClickInternal(EToggleState toggleState)
 		{
 			if (this.OnClick != null && this.CanClick)
@@ -120,26 +120,26 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0401EF96 RID: 126870
+		// Token: 0x04019A47 RID: 105031
 		private Action OnClick;
 
-		// Token: 0x0401EF97 RID: 126871
+		// Token: 0x04019A48 RID: 105032
 		private bool CanClick;
 
-		// Token: 0x0401EF98 RID: 126872
+		// Token: 0x04019A49 RID: 105033
 		private TimerHandle ProtectionTimerHandle;
 
-		// Token: 0x0200BDBB RID: 48571
+		// Token: 0x0200A7C4 RID: 42948
 		[NullableContext(0)]
 		public class EChoiceItemComponentDefine
 		{
-			// Token: 0x04039370 RID: 234352
+			// Token: 0x04033D35 RID: 212277
 			public const int TogSelf = 0;
 
-			// Token: 0x04039371 RID: 234353
+			// Token: 0x04033D36 RID: 212278
 			public const int Text = 1;
 
-			// Token: 0x04039372 RID: 234354
+			// Token: 0x04033D37 RID: 212279
 			public const int TextureIconLock = 2;
 		}
 	}

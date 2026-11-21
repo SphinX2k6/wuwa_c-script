@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002904 RID: 10500
+	// Token: 0x02002BE0 RID: 11232
 	public class IModifyMediaConfig
 	{
-		// Token: 0x0600E91F RID: 59679 RVA: 0x00223044 File Offset: 0x00221244
-		[NullableContext(1)]
+		// Token: 0x0600F770 RID: 63344 RVA: 0x00240365 File Offset: 0x0023E565
 		public static IModifyMediaConfig Create(IModifyMediaConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048D9 RID: 18649
-		// (get) Token: 0x0600E920 RID: 59680 RVA: 0x00223063 File Offset: 0x00221263
+		// Token: 0x17004C5E RID: 19550
+		// (get) Token: 0x0600F771 RID: 63345 RVA: 0x00240384 File Offset: 0x0023E584
 		public virtual EModifyActorMediaType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080B2 RID: 32946
+		// Token: 0x04008780 RID: 34688
 		private IModifyMediaConfig Instance;
 	}
 }

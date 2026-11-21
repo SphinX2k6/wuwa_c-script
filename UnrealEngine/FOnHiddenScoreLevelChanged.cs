@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C65 RID: 7269
+	// Token: 0x0200050B RID: 1291
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnHiddenScoreLevelChanged : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C31C RID: 115484 RVA: 0x00298EF6 File Offset: 0x002970F6
+		// Token: 0x06007918 RID: 31000 RVA: 0x000B18CE File Offset: 0x000AFACE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnHiddenScoreLevelChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C31D RID: 115485 RVA: 0x00298F02 File Offset: 0x00297102
+		// Token: 0x06007919 RID: 31001 RVA: 0x000B18DA File Offset: 0x000AFADA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnHiddenScoreLevelChanged._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnHiddenScoreLevelChanged._FunctionPtr;
 		}
 
-		// Token: 0x0601C31E RID: 115486 RVA: 0x00298F25 File Offset: 0x00297125
+		// Token: 0x0600791A RID: 31002 RVA: 0x000B18FD File Offset: 0x000AFAFD
 		public FOnHiddenScoreLevelChanged()
 		{
 		}
 
-		// Token: 0x0601C31F RID: 115487 RVA: 0x00298F2D File Offset: 0x0029712D
+		// Token: 0x0600791B RID: 31003 RVA: 0x000B1905 File Offset: 0x000AFB05
 		[NullableContext(2)]
 		public FOnHiddenScoreLevelChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C320 RID: 115488 RVA: 0x00298F37 File Offset: 0x00297137
+		// Token: 0x0600791C RID: 31004 RVA: 0x000B190F File Offset: 0x000AFB0F
 		public FOnHiddenScoreLevelChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C321 RID: 115489 RVA: 0x00298F42 File Offset: 0x00297142
+		// Token: 0x0600791D RID: 31005 RVA: 0x000B191A File Offset: 0x000AFB1A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C322 RID: 115490 RVA: 0x00298F74 File Offset: 0x00297174
+		// Token: 0x0600791E RID: 31006 RVA: 0x000B194C File Offset: 0x000AFB4C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FOnHiddenScoreLevelChanged.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnHiddenScoreLevelChanged.RegisterId);
 		}
 
-		// Token: 0x0601C323 RID: 115491 RVA: 0x00298FAE File Offset: 0x002971AE
+		// Token: 0x0600791F RID: 31007 RVA: 0x000B1986 File Offset: 0x000AFB86
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C324 RID: 115492 RVA: 0x00298FB8 File Offset: 0x002971B8
+		// Token: 0x06007920 RID: 31008 RVA: 0x000B1990 File Offset: 0x000AFB90
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int NewLevel, int OldLevel)
 		{
 			FOnHiddenScoreLevelChanged.__FOnHiddenScoreLevelChanged_DelegateParams* ptr = stackalloc FOnHiddenScoreLevelChanged.__FOnHiddenScoreLevelChanged_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnHiddenScoreLevelChanged.__FOnHiddenScoreLevelChanged_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C325 RID: 115493 RVA: 0x00298FFC File Offset: 0x002971FC
+		// Token: 0x06007921 RID: 31009 RVA: 0x000B19D4 File Offset: 0x000AFBD4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FOnHiddenScoreLevelChanged.__FOnHiddenScoreLevelChanged_DelegateParams*)__Parameters)->NewLevel, ((FOnHiddenScoreLevelChanged.__FOnHiddenScoreLevelChanged_DelegateParams*)__Parameters)->OldLevel);
 		}
 
-		// Token: 0x0400F2B3 RID: 62131
+		// Token: 0x0400337E RID: 13182
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2B4 RID: 62132
+		// Token: 0x0400337F RID: 13183
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnHiddenScoreLevelChanged__DelegateSignature";
 
-		// Token: 0x0400F2B5 RID: 62133
+		// Token: 0x04003380 RID: 13184
 		private static int RegisterId;
 
-		// Token: 0x020031FA RID: 12794
+		// Token: 0x02000C6F RID: 3183
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnHiddenScoreLevelChanged_DelegateParams
+		private ref struct __FOnHiddenScoreLevelChanged_DelegateParams
 		{
-			// Token: 0x04017055 RID: 94293
+			// Token: 0x04005EC9 RID: 24265
 			[FieldOffset(0)]
 			public int NewLevel;
 
-			// Token: 0x04017056 RID: 94294
+			// Token: 0x04005ECA RID: 24266
 			[FieldOffset(4)]
 			public int OldLevel;
 		}
 
-		// Token: 0x020031FB RID: 12795
+		// Token: 0x02000C70 RID: 3184
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017057 RID: 94295
+			// Token: 0x04005ECB RID: 24267
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

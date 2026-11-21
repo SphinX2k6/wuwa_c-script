@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200228F RID: 8847
+	// Token: 0x020024FC RID: 9468
 	public static class EActorFxEmoteTypeExtensions
 	{
-		// Token: 0x0600C202 RID: 49666 RVA: 0x001C5350 File Offset: 0x001C3550
+		// Token: 0x0600CDC8 RID: 52680 RVA: 0x001DD044 File Offset: 0x001DB244
 		public static string ToEnumString(this EActorFxEmoteType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C203 RID: 49667 RVA: 0x001C5388 File Offset: 0x001C3588
+		// Token: 0x0600CDC9 RID: 52681 RVA: 0x001DD07C File Offset: 0x001DB27C
 		public static EActorFxEmoteType FromString(string name)
 		{
 			EActorFxEmoteType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C204 RID: 49668 RVA: 0x001C53B1 File Offset: 0x001C35B1
+		// Token: 0x0600CDCA RID: 52682 RVA: 0x001DD0A5 File Offset: 0x001DB2A5
 		public static bool TryFromString(string name, out EActorFxEmoteType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C205 RID: 49669 RVA: 0x001C53EA File Offset: 0x001C35EA
+		// Token: 0x0600CDCB RID: 52683 RVA: 0x001DD0DE File Offset: 0x001DB2DE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C206 RID: 49670 RVA: 0x001C5402 File Offset: 0x001C3602
+		// Token: 0x0600CDCC RID: 52684 RVA: 0x001DD0F6 File Offset: 0x001DB2F6
 		public static EActorFxEmoteType[] GetValues()
 		{
 			return new EActorFxEmoteType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C207 RID: 49671 RVA: 0x001C540E File Offset: 0x001C360E
+		// Token: 0x0600CDCD RID: 52685 RVA: 0x001DD102 File Offset: 0x001DB302
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004784 RID: 18308
+	// Token: 0x020036B5 RID: 14005
 	public enum EWorldMapScaleTier
 	{
-		// Token: 0x04019D29 RID: 105769
+		// Token: 0x040143D9 RID: 82905
 		Box,
-		// Token: 0x04019D2A RID: 105770
+		// Token: 0x040143DA RID: 82906
 		OutBox,
-		// Token: 0x04019D2B RID: 105771
+		// Token: 0x040143DB RID: 82907
 		Other
 	}
 }

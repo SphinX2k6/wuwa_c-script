@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E99 RID: 20121
+	// Token: 0x02003E62 RID: 15970
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleSettleInfoPanelWithList<TItem, [Nullable(2)] TData> : UiPanelBase where TItem : class, IGridProxy<TData>
 	{
-		// Token: 0x06033B90 RID: 211856 RVA: 0x00C1DC90 File Offset: 0x00C1BE90
+		// Token: 0x060289FB RID: 166395 RVA: 0x00B671AC File Offset: 0x00B653AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B91 RID: 211857 RVA: 0x00C1DD68 File Offset: 0x00C1BF68
+		// Token: 0x060289FC RID: 166396 RVA: 0x00B67284 File Offset: 0x00B65484
 		private void OnClickBtnShowMore()
 		{
 			FRotator frotator;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetVerticalLayout(5).SetHeightFitToChildren(true);
 		}
 
-		// Token: 0x06033B92 RID: 211858 RVA: 0x00C1DE0C File Offset: 0x00C1C00C
+		// Token: 0x060289FD RID: 166397 RVA: 0x00B67328 File Offset: 0x00B65528
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleSettleInfoPanelWithList<TItem, TData>.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B78B RID: 112523
+		// Token: 0x0401615E RID: 90462
 		[Nullable(new byte[]
 		{
 			2,
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<TItem, TData> LayoutComponent;
 
-		// Token: 0x0401B78C RID: 112524
+		// Token: 0x0401615F RID: 90463
 		private bool IsShowMore;
 
-		// Token: 0x0401B78D RID: 112525
+		// Token: 0x04016160 RID: 90464
 		private float OriginalHeight;
 
-		// Token: 0x0401B78E RID: 112526
+		// Token: 0x04016161 RID: 90465
 		[Nullable(new byte[]
 		{
 			2,
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public Func<TItem> CreateItem;
 
-		// Token: 0x0401B78F RID: 112527
+		// Token: 0x04016162 RID: 90466
 		public List<TData> Data = new List<TData>();
 	}
 }

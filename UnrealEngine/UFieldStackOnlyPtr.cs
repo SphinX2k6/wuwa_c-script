@@ -2,26 +2,26 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x0200009A RID: 154
+	// Token: 0x0200007F RID: 127
 	public readonly struct UFieldStackOnlyPtr
 	{
-		// Token: 0x0600106E RID: 4206 RVA: 0x000189DE File Offset: 0x00016BDE
+		// Token: 0x06000C01 RID: 3073 RVA: 0x00013702 File Offset: 0x00011902
 		public UFieldStackOnlyPtr(IntPtr NativePtr)
 		{
 			this.FieldPtr = new IntPtr((long)NativePtr);
 		}
 
-		// Token: 0x170004CB RID: 1227
-		// (get) Token: 0x0600106F RID: 4207 RVA: 0x000189ED File Offset: 0x00016BED
+		// Token: 0x170000D3 RID: 211
+		// (get) Token: 0x06000C02 RID: 3074 RVA: 0x00013711 File Offset: 0x00011911
 		public IntPtr FieldPtr { get; }
 
-		// Token: 0x06001070 RID: 4208 RVA: 0x000189F5 File Offset: 0x00016BF5
+		// Token: 0x06000C03 RID: 3075 RVA: 0x00013719 File Offset: 0x00011919
 		public bool IsValid()
 		{
 			return this.FieldPtr != IntPtr.Zero;
 		}
 
-		// Token: 0x06001071 RID: 4209 RVA: 0x00018A07 File Offset: 0x00016C07
+		// Token: 0x06000C04 RID: 3076 RVA: 0x0001372B File Offset: 0x0001192B
 		public static implicit operator UFieldStackOnlyPtr(IntPtr Ptr)
 		{
 			return new UFieldStackOnlyPtr(Ptr);

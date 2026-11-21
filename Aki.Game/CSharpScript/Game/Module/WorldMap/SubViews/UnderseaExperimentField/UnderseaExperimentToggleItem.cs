@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 {
-	// Token: 0x020047E4 RID: 18404
+	// Token: 0x02003715 RID: 14101
 	public class UnderseaExperimentToggleItem : UiPanelBase
 	{
-		// Token: 0x06030355 RID: 197461 RVA: 0x00B2C7FC File Offset: 0x00B2A9FC
+		// Token: 0x06024B25 RID: 150309 RVA: 0x00A5C740 File Offset: 0x00A5A940
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030356 RID: 197462 RVA: 0x00B2C868 File Offset: 0x00B2AA68
+		// Token: 0x06024B26 RID: 150310 RVA: 0x00A5C7AC File Offset: 0x00A5A9AC
 		[NullableContext(1)]
 		public UniTask Initialize(EDeepSeaMapId deepSeaMapId, UUIExtendToggle uiRoot)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030357 RID: 197463 RVA: 0x00B2C8BC File Offset: 0x00B2AABC
+		// Token: 0x06024B27 RID: 150311 RVA: 0x00A5C800 File Offset: 0x00A5AA00
 		public void RefreshPlayerIcon()
 		{
 			CustomizedThumbnail? customizedThumbnailConfig = WorldMapConfig.Instance.GetCustomizedThumbnailConfig(this.DeepSeaMapId);
@@ -57,16 +57,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.UnderseaExperimentField
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x04019F5C RID: 106332
+		// Token: 0x04014610 RID: 83472
 		private EDeepSeaMapId DeepSeaMapId = EDeepSeaMapId.Graveyard;
 
-		// Token: 0x0200AAA3 RID: 43683
+		// Token: 0x02009455 RID: 37973
 		public static class EComponents
 		{
-			// Token: 0x04033E98 RID: 212632
+			// Token: 0x0402E61E RID: 189982
 			public const int Cursor = 0;
 
-			// Token: 0x04033E99 RID: 212633
+			// Token: 0x0402E61F RID: 189983
 			public const int PlayerIcon = 1;
 		}
 	}

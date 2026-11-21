@@ -3,14 +3,14 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000191 RID: 401
+	// Token: 0x02000195 RID: 405
 	[EnumExtensions]
 	public enum PlatformSdkServerMsg
 	{
-		// Token: 0x040006CE RID: 1742
+		// Token: 0x04000709 RID: 1801
 		[EnumStringMember("HttpFail")]
 		BadHttp,
-		// Token: 0x040006CF RID: 1743
+		// Token: 0x0400070A RID: 1802
 		[EnumStringMember("PsnAuthFail")]
 		PsnAuthFail
 	}

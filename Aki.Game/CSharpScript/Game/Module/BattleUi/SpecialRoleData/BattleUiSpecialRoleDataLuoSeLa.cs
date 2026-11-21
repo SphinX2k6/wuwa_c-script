@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E50 RID: 24144
+	// Token: 0x02004E35 RID: 20021
 	public class BattleUiSpecialRoleDataLuoSeLa : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D671 RID: 251505 RVA: 0x00ECFD8C File Offset: 0x00ECDF8C
+		// Token: 0x06032601 RID: 206337 RVA: 0x00E212FC File Offset: 0x00E1F4FC
 		protected override void OnInit()
 		{
 			if (this.RoleData != null)
@@ -16,30 +16,30 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D672 RID: 251506 RVA: 0x00ECFDFB File Offset: 0x00ECDFFB
+		// Token: 0x06032602 RID: 206338 RVA: 0x00E2136B File Offset: 0x00E1F56B
 		private void OnUltimateTagChanged(int tagId, bool tagExist)
 		{
 			this.HasUltimateTag = tagExist;
 			this.RefreshHasEnergyTag();
 		}
 
-		// Token: 0x0603D673 RID: 251507 RVA: 0x00ECFE0A File Offset: 0x00ECE00A
+		// Token: 0x06032603 RID: 206339 RVA: 0x00E2137A File Offset: 0x00E1F57A
 		private void OnStrongTagChanged(int tagId, bool tagExist)
 		{
 			this.HasStrongTag = tagExist;
 			this.RefreshHasEnergyTag();
 		}
 
-		// Token: 0x0603D674 RID: 251508 RVA: 0x00ECFE19 File Offset: 0x00ECE019
+		// Token: 0x06032604 RID: 206340 RVA: 0x00E21389 File Offset: 0x00E1F589
 		private void RefreshHasEnergyTag()
 		{
 			this.RoleData.SetHasEnergyTag(this.HasUltimateTag && !this.HasStrongTag);
 		}
 
-		// Token: 0x040200A2 RID: 131234
+		// Token: 0x0401AB69 RID: 109417
 		private bool HasUltimateTag;
 
-		// Token: 0x040200A3 RID: 131235
+		// Token: 0x0401AB6A RID: 109418
 		private bool HasStrongTag;
 	}
 }

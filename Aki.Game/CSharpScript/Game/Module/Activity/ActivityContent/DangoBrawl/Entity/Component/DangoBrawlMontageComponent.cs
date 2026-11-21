@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Component
 {
-	// Token: 0x02006899 RID: 26777
+	// Token: 0x020057E9 RID: 22505
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,45 +17,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 	})]
 	public class DangoBrawlMontageComponent : ActivityGameplayComponentBase<IDangoBrawlEntityData>
 	{
-		// Token: 0x170097BE RID: 38846
-		// (get) Token: 0x06042D2E RID: 273710 RVA: 0x01044030 File Offset: 0x01042230
-		public new static List<Type> Dependencies
+		// Token: 0x17006AFE RID: 27390
+		// (get) Token: 0x06037886 RID: 227462 RVA: 0x00F855AC File Offset: 0x00F837AC
+		public override Type[] Dependencies
 		{
 			get
 			{
-				return new List<Type>
+				return new Type[]
 				{
 					typeof(DangoBrawlDataComponent)
 				};
 			}
 		}
 
-		// Token: 0x06042D2F RID: 273711 RVA: 0x01044047 File Offset: 0x01042247
+		// Token: 0x06037887 RID: 227463 RVA: 0x00F855C1 File Offset: 0x00F837C1
 		public bool IsTerminalAnimFinished()
 		{
 			return this.IsTerminalFinished;
 		}
 
-		// Token: 0x06042D30 RID: 273712 RVA: 0x0104404F File Offset: 0x0104224F
+		// Token: 0x06037888 RID: 227464 RVA: 0x00F855C9 File Offset: 0x00F837C9
 		public bool IsPlayingDefeat()
 		{
 			return this.CurrentState == EDangoBrawlMontageState.Defeat;
 		}
 
-		// Token: 0x06042D31 RID: 273713 RVA: 0x0104405A File Offset: 0x0104225A
+		// Token: 0x06037889 RID: 227465 RVA: 0x00F855D4 File Offset: 0x00F837D4
 		public float GetJumpDurationMs()
 		{
 			return this.JumpDurationMs;
 		}
 
-		// Token: 0x06042D32 RID: 273714 RVA: 0x01044062 File Offset: 0x01042262
+		// Token: 0x0603788A RID: 227466 RVA: 0x00F855DC File Offset: 0x00F837DC
 		public float GetLandDurationMs()
 		{
 			return this.LandDurationMs;
 		}
 
-		// Token: 0x170097BF RID: 38847
-		// (get) Token: 0x06042D33 RID: 273715 RVA: 0x0104406C File Offset: 0x0104226C
+		// Token: 0x17006AFF RID: 27391
+		// (get) Token: 0x0603788B RID: 227467 RVA: 0x00F855E4 File Offset: 0x00F837E4
 		private string SideTag
 		{
 			get
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D34 RID: 273716 RVA: 0x010440A6 File Offset: 0x010422A6
+		// Token: 0x0603788C RID: 227468 RVA: 0x00F8561E File Offset: 0x00F8381E
 		protected override void OnInit()
 		{
 			base.SetNeedTick(true);
 		}
 
-		// Token: 0x06042D35 RID: 273717 RVA: 0x010440AF File Offset: 0x010422AF
+		// Token: 0x0603788D RID: 227469 RVA: 0x00F85627 File Offset: 0x00F83827
 		public void ResetTerminalState()
 		{
 			this.IsTerminated = false;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.MovePhase = DangoBrawlMontageComponent.EMovePhase.None;
 		}
 
-		// Token: 0x06042D36 RID: 273718 RVA: 0x010440D4 File Offset: 0x010422D4
+		// Token: 0x0603788E RID: 227470 RVA: 0x00F8564C File Offset: 0x00F8384C
 		public unsafe UniTask LoadAsync()
 		{
 			if (this.IsDisposed)
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return tcs.Task;
 		}
 
-		// Token: 0x06042D37 RID: 273719 RVA: 0x01044404 File Offset: 0x01042604
+		// Token: 0x0603788F RID: 227471 RVA: 0x00F8597C File Offset: 0x00F83B7C
 		public void PlayMontage(EDangoBrawlMontageState state)
 		{
 			if (this.IsTerminated)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D38 RID: 273720 RVA: 0x010444A8 File Offset: 0x010426A8
+		// Token: 0x06037890 RID: 227472 RVA: 0x00F85A20 File Offset: 0x00F83C20
 		public void PlayDefeat()
 		{
 			if (this.IsTerminated)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.StartFallingProportional();
 		}
 
-		// Token: 0x06042D39 RID: 273721 RVA: 0x01044508 File Offset: 0x01042708
+		// Token: 0x06037891 RID: 227473 RVA: 0x00F85A80 File Offset: 0x00F83C80
 		public void PlayVictorySequence()
 		{
 			if (this.IsTerminated)
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.PendingVictory = true;
 		}
 
-		// Token: 0x06042D3A RID: 273722 RVA: 0x01044564 File Offset: 0x01042764
+		// Token: 0x06037892 RID: 227474 RVA: 0x00F85ADC File Offset: 0x00F83CDC
 		private void PlayVictory()
 		{
 			if (this.IsTerminated)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D3B RID: 273723 RVA: 0x010445C4 File Offset: 0x010427C4
+		// Token: 0x06037893 RID: 227475 RVA: 0x00F85B3C File Offset: 0x00F83D3C
 		private void PostRoundWinAudio()
 		{
 			DangoBrawlDataComponent component = base.OwnerEntity.GetComponent<DangoBrawlDataComponent>();
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			AudioSystem.Instance.PostEvent(text, acharacter, null);
 		}
 
-		// Token: 0x06042D3C RID: 273724 RVA: 0x0104469C File Offset: 0x0104289C
+		// Token: 0x06037894 RID: 227476 RVA: 0x00F85C14 File Offset: 0x00F83E14
 		public void PauseMontage()
 		{
 			DangoBrawlActorComponent component = base.OwnerEntity.GetComponent<DangoBrawlActorComponent>();
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			animInstance.Montage_Pause(null);
 		}
 
-		// Token: 0x06042D3D RID: 273725 RVA: 0x010446CC File Offset: 0x010428CC
+		// Token: 0x06037895 RID: 227477 RVA: 0x00F85C44 File Offset: 0x00F83E44
 		public void ResumeMontage()
 		{
 			DangoBrawlActorComponent component = base.OwnerEntity.GetComponent<DangoBrawlActorComponent>();
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D3E RID: 273726 RVA: 0x01044720 File Offset: 0x01042920
+		// Token: 0x06037896 RID: 227478 RVA: 0x00F85C98 File Offset: 0x00F83E98
 		private void StartRising()
 		{
 			DangoBrawlActorComponent component = base.OwnerEntity.GetComponent<DangoBrawlActorComponent>();
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.MoveToZ = bornLocationZ + (double)dangoJumpHeight;
 		}
 
-		// Token: 0x06042D3F RID: 273727 RVA: 0x01044780 File Offset: 0x01042980
+		// Token: 0x06037897 RID: 227479 RVA: 0x00F85CF8 File Offset: 0x00F83EF8
 		private void StartFalling()
 		{
 			DangoBrawlActorComponent component = base.OwnerEntity.GetComponent<DangoBrawlActorComponent>();
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.MoveToZ = bornLocationZ;
 		}
 
-		// Token: 0x06042D40 RID: 273728 RVA: 0x010447D8 File Offset: 0x010429D8
+		// Token: 0x06037898 RID: 227480 RVA: 0x00F85D50 File Offset: 0x00F83F50
 		private void StartFallingProportional()
 		{
 			DangoBrawlActorComponent component = base.OwnerEntity.GetComponent<DangoBrawlActorComponent>();
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.MoveToZ = bornLocationZ;
 		}
 
-		// Token: 0x06042D41 RID: 273729 RVA: 0x01044880 File Offset: 0x01042A80
+		// Token: 0x06037899 RID: 227481 RVA: 0x00F85DF8 File Offset: 0x00F83FF8
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.MovePhase == DangoBrawlMontageComponent.EMovePhase.None)
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D42 RID: 273730 RVA: 0x0104491C File Offset: 0x01042B1C
+		// Token: 0x0603789A RID: 227482 RVA: 0x00F85E94 File Offset: 0x00F84094
 		public void AddEndedListener(EDangoBrawlMontageState state, TMontageEndedCallback callback)
 		{
 			HashSet<TMontageEndedCallback> hashSet;
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			hashSet.Add(callback);
 		}
 
-		// Token: 0x06042D43 RID: 273731 RVA: 0x01044954 File Offset: 0x01042B54
+		// Token: 0x0603789B RID: 227483 RVA: 0x00F85ECC File Offset: 0x00F840CC
 		public void RemoveEndedListener(EDangoBrawlMontageState state, TMontageEndedCallback callback)
 		{
 			HashSet<TMontageEndedCallback> hashSet;
@@ -494,7 +494,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x06042D44 RID: 273732 RVA: 0x0104497C File Offset: 0x01042B7C
+		// Token: 0x0603789C RID: 227484 RVA: 0x00F85EF4 File Offset: 0x00F840F4
 		protected override void OnEnd()
 		{
 			this.IsDisposed = true;
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.CurrentState = EDangoBrawlMontageState.Idle;
 		}
 
-		// Token: 0x06042D45 RID: 273733 RVA: 0x01044A30 File Offset: 0x01042C30
+		// Token: 0x0603789D RID: 227485 RVA: 0x00F85FA8 File Offset: 0x00F841A8
 		[NullableContext(2)]
 		private UAnimInstance GetAnimInstance()
 		{
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return component.GetAnimInstance();
 		}
 
-		// Token: 0x06042D46 RID: 273734 RVA: 0x01044A54 File Offset: 0x01042C54
+		// Token: 0x0603789E RID: 227486 RVA: 0x00F85FCC File Offset: 0x00F841CC
 		private void TrySubscribeMontageEnded(UAnimInstance animInstance)
 		{
 			if (this.SubscribedAnimInstance == animInstance)
@@ -545,7 +545,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.SubscribedAnimInstance = animInstance;
 		}
 
-		// Token: 0x06042D47 RID: 273735 RVA: 0x01044AE0 File Offset: 0x01042CE0
+		// Token: 0x0603789F RID: 227487 RVA: 0x00F86058 File Offset: 0x00F84258
 		[NullableContext(2)]
 		private EDangoBrawlMontageState? ResolveState(UAnimMontage montage)
 		{
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return null;
 		}
 
-		// Token: 0x06042D48 RID: 273736 RVA: 0x01044B60 File Offset: 0x01042D60
+		// Token: 0x060378A0 RID: 227488 RVA: 0x00F860D8 File Offset: 0x00F842D8
 		private bool TryAdvanceChain(UAnimMontage montage, EDangoBrawlMontageState endedState, bool interrupted)
 		{
 			if (this.IsTerminated || this.ChainAdvancedFrom == montage)
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			return false;
 		}
 
-		// Token: 0x06042D49 RID: 273737 RVA: 0x01044BCC File Offset: 0x01042DCC
+		// Token: 0x060378A1 RID: 227489 RVA: 0x00F86144 File Offset: 0x00F84344
 		[NullableContext(2)]
 		private void OnAnyMontageBlendingOut(UAnimMontage montage, bool interrupted)
 		{
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			this.TryAdvanceChain(montage, edangoBrawlMontageState.Value, interrupted);
 		}
 
-		// Token: 0x06042D4A RID: 273738 RVA: 0x01044C04 File Offset: 0x01042E04
+		// Token: 0x060378A2 RID: 227490 RVA: 0x00F8617C File Offset: 0x00F8437C
 		[NullableContext(2)]
 		private void OnAnyMontageEnded(UAnimMontage montage, bool interrupted)
 		{
@@ -639,69 +639,69 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Co
 			}
 		}
 
-		// Token: 0x04022C59 RID: 142425
+		// Token: 0x0401D4B5 RID: 119989
 		private readonly Dictionary<EDangoBrawlMontageState, UAnimMontage> MontageMap = new Dictionary<EDangoBrawlMontageState, UAnimMontage>();
 
-		// Token: 0x04022C5A RID: 142426
+		// Token: 0x0401D4B6 RID: 119990
 		private readonly Dictionary<EDangoBrawlMontageState, HashSet<TMontageEndedCallback>> EndCallbacks = new Dictionary<EDangoBrawlMontageState, HashSet<TMontageEndedCallback>>();
 
-		// Token: 0x04022C5B RID: 142427
+		// Token: 0x0401D4B7 RID: 119991
 		[Nullable(2)]
 		private UAnimInstance SubscribedAnimInstance;
 
-		// Token: 0x04022C5C RID: 142428
+		// Token: 0x0401D4B8 RID: 119992
 		[Nullable(2)]
 		private UniTaskCompletionSource LoadSource;
 
-		// Token: 0x04022C5D RID: 142429
+		// Token: 0x0401D4B9 RID: 119993
 		private bool IsDisposed;
 
-		// Token: 0x04022C5E RID: 142430
+		// Token: 0x0401D4BA RID: 119994
 		private float JumpDurationMs;
 
-		// Token: 0x04022C5F RID: 142431
+		// Token: 0x0401D4BB RID: 119995
 		private float LandDurationMs;
 
-		// Token: 0x04022C60 RID: 142432
+		// Token: 0x0401D4BC RID: 119996
 		private DangoBrawlMontageComponent.EMovePhase MovePhase;
 
-		// Token: 0x04022C61 RID: 142433
+		// Token: 0x0401D4BD RID: 119997
 		private float MoveElapsedMs;
 
-		// Token: 0x04022C62 RID: 142434
+		// Token: 0x0401D4BE RID: 119998
 		private float MoveDurationMs;
 
-		// Token: 0x04022C63 RID: 142435
+		// Token: 0x0401D4BF RID: 119999
 		private double MoveFromZ;
 
-		// Token: 0x04022C64 RID: 142436
+		// Token: 0x0401D4C0 RID: 120000
 		private double MoveToZ;
 
-		// Token: 0x04022C65 RID: 142437
+		// Token: 0x0401D4C1 RID: 120001
 		private EDangoBrawlMontageState CurrentState;
 
-		// Token: 0x04022C66 RID: 142438
+		// Token: 0x0401D4C2 RID: 120002
 		private bool IsTerminated;
 
-		// Token: 0x04022C67 RID: 142439
+		// Token: 0x0401D4C3 RID: 120003
 		private bool IsTerminalFinished;
 
-		// Token: 0x04022C68 RID: 142440
+		// Token: 0x0401D4C4 RID: 120004
 		private bool PendingVictory;
 
-		// Token: 0x04022C69 RID: 142441
+		// Token: 0x0401D4C5 RID: 120005
 		[Nullable(2)]
 		private UAnimMontage ChainAdvancedFrom;
 
-		// Token: 0x0200CA62 RID: 51810
+		// Token: 0x0200B42C RID: 46124
 		[NullableContext(0)]
 		private enum EMovePhase
 		{
-			// Token: 0x0403D2CF RID: 250575
+			// Token: 0x04037BAE RID: 228270
 			None,
-			// Token: 0x0403D2D0 RID: 250576
+			// Token: 0x04037BAF RID: 228271
 			Rising,
-			// Token: 0x0403D2D1 RID: 250577
+			// Token: 0x04037BB0 RID: 228272
 			Falling
 		}
 	}

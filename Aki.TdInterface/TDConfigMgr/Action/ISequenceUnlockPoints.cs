@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E04 RID: 7684
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002037 RID: 8247
 	public class ISequenceUnlockPoints : IInteractPointConfig
 	{
-		// Token: 0x0600A467 RID: 42087 RVA: 0x00174E28 File Offset: 0x00173028
+		// Token: 0x0600AF0F RID: 44815 RVA: 0x0018A830 File Offset: 0x00188A30
 		private ISequenceUnlockPoints_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A468 RID: 42088 RVA: 0x00174E60 File Offset: 0x00173060
+		// Token: 0x0600AF10 RID: 44816 RVA: 0x0018A868 File Offset: 0x00188A68
 		public static ISequenceUnlockPoints Create([Nullable(2)] ISequenceUnlockPoints instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A469 RID: 42089 RVA: 0x00174E73 File Offset: 0x00173073
+		// Token: 0x0600AF11 RID: 44817 RVA: 0x0018A87B File Offset: 0x00188A7B
 		public static ISequenceUnlockPoints CreateFromSetValue([Nullable(2)] ISequenceUnlockPoints_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A46A RID: 42090 RVA: 0x00174E86 File Offset: 0x00173086
+		// Token: 0x0600AF12 RID: 44818 RVA: 0x0018A88E File Offset: 0x00188A8E
 		public new ISequenceUnlockPoints_SetValue ToSetValue()
 		{
 			return new ISequenceUnlockPoints_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003284 RID: 12932
-		// (get) Token: 0x0600A46B RID: 42091 RVA: 0x00174EA5 File Offset: 0x001730A5
-		// (set) Token: 0x0600A46C RID: 42092 RVA: 0x00174ED0 File Offset: 0x001730D0
+		// Token: 0x17003543 RID: 13635
+		// (get) Token: 0x0600AF13 RID: 44819 RVA: 0x0018A8AD File Offset: 0x00188AAD
+		// (set) Token: 0x0600AF14 RID: 44820 RVA: 0x0018A8D8 File Offset: 0x00188AD8
 		public override EInteractUnlockType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003285 RID: 12933
-		// (get) Token: 0x0600A46D RID: 42093 RVA: 0x00174EE0 File Offset: 0x001730E0
-		// (set) Token: 0x0600A46E RID: 42094 RVA: 0x00174F73 File Offset: 0x00173173
+		// Token: 0x17003544 RID: 13636
+		// (get) Token: 0x0600AF15 RID: 44821 RVA: 0x0018A8E8 File Offset: 0x00188AE8
+		// (set) Token: 0x0600AF16 RID: 44822 RVA: 0x0018A97B File Offset: 0x00188B7B
 		public virtual List<ISequenceInteractStage> Stages
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006273 RID: 25203
+		// Token: 0x0400684A RID: 26698
 		[Nullable(2)]
 		protected new ISequenceUnlockPoints FbInstance;
 
-		// Token: 0x04006274 RID: 25204
+		// Token: 0x0400684B RID: 26699
 		[Nullable(2)]
 		protected new ISequenceUnlockPoints_SetValue PocoInterface;
 
-		// Token: 0x04006275 RID: 25205
+		// Token: 0x0400684C RID: 26700
 		private List<ISequenceInteractStage> _StagesCache;
 
-		// Token: 0x04006276 RID: 25206
+		// Token: 0x0400684D RID: 26701
 		private bool _StagesInited;
 	}
 }

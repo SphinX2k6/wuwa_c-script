@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002085 RID: 8325
+	// Token: 0x020006A2 RID: 1698
 	public sealed class FLGUILoopScrollViewGridDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F678 RID: 128632 RVA: 0x002EA3CF File Offset: 0x002E85CF
+		// Token: 0x06009216 RID: 37398 RVA: 0x000DBEB3 File Offset: 0x000DA0B3
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUILoopScrollViewGridDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F679 RID: 128633 RVA: 0x002EA3DB File Offset: 0x002E85DB
+		// Token: 0x06009217 RID: 37399 RVA: 0x000DBEBF File Offset: 0x000DA0BF
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUILoopScrollViewGridDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUILoopScrollViewGridDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F67A RID: 128634 RVA: 0x002EA3FE File Offset: 0x002E85FE
+		// Token: 0x06009218 RID: 37400 RVA: 0x000DBEE2 File Offset: 0x000DA0E2
 		public FLGUILoopScrollViewGridDelegate()
 		{
 		}
 
-		// Token: 0x0601F67B RID: 128635 RVA: 0x002EA406 File Offset: 0x002E8606
+		// Token: 0x06009219 RID: 37401 RVA: 0x000DBEEA File Offset: 0x000DA0EA
 		[NullableContext(2)]
 		public FLGUILoopScrollViewGridDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F67C RID: 128636 RVA: 0x002EA410 File Offset: 0x002E8610
+		// Token: 0x0600921A RID: 37402 RVA: 0x000DBEF4 File Offset: 0x000DA0F4
 		public FLGUILoopScrollViewGridDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F67D RID: 128637 RVA: 0x002EA41B File Offset: 0x002E861B
+		// Token: 0x0600921B RID: 37403 RVA: 0x000DBEFF File Offset: 0x000DA0FF
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F67E RID: 128638 RVA: 0x002EA44D File Offset: 0x002E864D
+		// Token: 0x0600921C RID: 37404 RVA: 0x000DBF31 File Offset: 0x000DA131
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int, int> Callback)
 		{
 			if (FLGUILoopScrollViewGridDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUILoopScrollViewGridDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F67F RID: 128639 RVA: 0x002EA488 File Offset: 0x002E8688
+		// Token: 0x0600921D RID: 37405 RVA: 0x000DBF6C File Offset: 0x000DA16C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int StartIndex, int EndIndex)
 		{
 			FLGUILoopScrollViewGridDelegate.__FLGUILoopScrollViewGridDelegate_DelegateParams* ptr = stackalloc FLGUILoopScrollViewGridDelegate.__FLGUILoopScrollViewGridDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FLGUILoopScrollViewGridDelegate.__FLGUILoopScrollViewGridDelegate_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F680 RID: 128640 RVA: 0x002EA4CC File Offset: 0x002E86CC
+		// Token: 0x0600921E RID: 37406 RVA: 0x000DBFB0 File Offset: 0x000DA1B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FLGUILoopScrollViewGridDelegate.__FLGUILoopScrollViewGridDelegate_DelegateParams*)__Parameters)->StartIndex, ((FLGUILoopScrollViewGridDelegate.__FLGUILoopScrollViewGridDelegate_DelegateParams*)__Parameters)->EndIndex);
 		}
 
-		// Token: 0x04010F5E RID: 69470
+		// Token: 0x04003FA8 RID: 16296
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010F5F RID: 69471
+		// Token: 0x04003FA9 RID: 16297
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUILoopScrollViewGridDelegate__DelegateSignature";
 
-		// Token: 0x04010F60 RID: 69472
+		// Token: 0x04003FAA RID: 16298
 		private static int RegisterId;
 
-		// Token: 0x02003488 RID: 13448
+		// Token: 0x02000ECB RID: 3787
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FLGUILoopScrollViewGridDelegate_DelegateParams
+		private ref struct __FLGUILoopScrollViewGridDelegate_DelegateParams
 		{
-			// Token: 0x04017477 RID: 95351
+			// Token: 0x04006286 RID: 25222
 			[FieldOffset(0)]
 			public int StartIndex;
 
-			// Token: 0x04017478 RID: 95352
+			// Token: 0x04006287 RID: 25223
 			[FieldOffset(4)]
 			public int EndIndex;
 		}
 
-		// Token: 0x02003489 RID: 13449
+		// Token: 0x02000ECC RID: 3788
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017479 RID: 95353
+			// Token: 0x04006288 RID: 25224
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

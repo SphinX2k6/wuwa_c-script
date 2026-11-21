@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200332A RID: 13098
+// Token: 0x0200289C RID: 10396
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class RedDotConfig : ConfigBase
 {
-	// Token: 0x0601C8ED RID: 116973 RVA: 0x0080205A File Offset: 0x0080025A
+	// Token: 0x0601A5E5 RID: 108005 RVA: 0x008285FE File Offset: 0x008267FE
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C8EE RID: 116974 RVA: 0x00802060 File Offset: 0x00800260
+	// Token: 0x0601A5E6 RID: 108006 RVA: 0x00828604 File Offset: 0x00826804
 	public static Dictionary<ERedDotName, ERedDotName?> GetRelativeNameMap()
 	{
 		Dictionary<ERedDotName, ERedDotName?> dictionary = new Dictionary<ERedDotName, ERedDotName?>();
@@ -31,8 +31,8 @@ public class RedDotConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x1700279F RID: 10143
-	// (get) Token: 0x0601C8EF RID: 116975 RVA: 0x008020DC File Offset: 0x008002DC
+	// Token: 0x17002B3B RID: 11067
+	// (get) Token: 0x0601A5E7 RID: 108007 RVA: 0x00828680 File Offset: 0x00826880
 	public static RedDotConfig Instance
 	{
 		get
@@ -41,7 +41,7 @@ public class RedDotConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601C8F0 RID: 116976 RVA: 0x008020E3 File Offset: 0x008002E3
+	// Token: 0x0601A5E8 RID: 108008 RVA: 0x00828687 File Offset: 0x00826887
 	public static RedDotConfig GetOrCreateInstance()
 	{
 		if (RedDotConfig._Instance == null)
@@ -51,7 +51,7 @@ public class RedDotConfig : ConfigBase
 		return RedDotConfig._Instance;
 	}
 
-	// Token: 0x0601C8F1 RID: 116977 RVA: 0x008020F7 File Offset: 0x008002F7
+	// Token: 0x0601A5E9 RID: 108009 RVA: 0x0082869B File Offset: 0x0082689B
 	public static bool CreateInstance()
 	{
 		if (RedDotConfig._Instance != null)
@@ -62,24 +62,24 @@ public class RedDotConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601C8F2 RID: 116978 RVA: 0x0080210D File Offset: 0x0080030D
+	// Token: 0x0601A5EA RID: 108010 RVA: 0x008286B1 File Offset: 0x008268B1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C8F3 RID: 116979 RVA: 0x0080210F File Offset: 0x0080030F
+	// Token: 0x0601A5EB RID: 108011 RVA: 0x008286B3 File Offset: 0x008268B3
 	public static void ResetStaticDefaultValue()
 	{
 		RedDotConfig._Instance = null;
 	}
 
-	// Token: 0x0601C8F4 RID: 116980 RVA: 0x00802117 File Offset: 0x00800317
+	// Token: 0x0601A5EC RID: 108012 RVA: 0x008286BB File Offset: 0x008268BB
 	static RedDotConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RedDotConfig.CreateStaticDefaultValue), new Action(RedDotConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E2BE RID: 58046
+	// Token: 0x0400E76E RID: 59246
 	[Nullable(2)]
 	private static RedDotConfig _Instance;
 }

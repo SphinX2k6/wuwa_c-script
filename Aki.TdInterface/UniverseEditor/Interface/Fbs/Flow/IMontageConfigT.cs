@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004740 RID: 18240
+	// Token: 0x02004BA8 RID: 19368
 	public class IMontageConfigT
 	{
-		// Token: 0x170082DD RID: 33501
-		// (get) Token: 0x0601C10D RID: 114957 RVA: 0x003FA17B File Offset: 0x003F837B
-		// (set) Token: 0x0601C10E RID: 114958 RVA: 0x003FA183 File Offset: 0x003F8383
+		// Token: 0x1700891E RID: 35102
+		// (get) Token: 0x0601D8E2 RID: 121058 RVA: 0x00426417 File Offset: 0x00424617
+		// (set) Token: 0x0601D8E3 RID: 121059 RVA: 0x0042641F File Offset: 0x0042461F
 		public int Id { get; set; }
 
-		// Token: 0x170082DE RID: 33502
-		// (get) Token: 0x0601C10F RID: 114959 RVA: 0x003FA18C File Offset: 0x003F838C
-		// (set) Token: 0x0601C110 RID: 114960 RVA: 0x003FA194 File Offset: 0x003F8394
+		// Token: 0x1700891F RID: 35103
+		// (get) Token: 0x0601D8E4 RID: 121060 RVA: 0x00426428 File Offset: 0x00424628
+		// (set) Token: 0x0601D8E5 RID: 121061 RVA: 0x00426430 File Offset: 0x00424630
 		public string ActionMontage { get; set; }
 
-		// Token: 0x170082DF RID: 33503
-		// (get) Token: 0x0601C111 RID: 114961 RVA: 0x003FA19D File Offset: 0x003F839D
-		// (set) Token: 0x0601C112 RID: 114962 RVA: 0x003FA1A5 File Offset: 0x003F83A5
+		// Token: 0x17008920 RID: 35104
+		// (get) Token: 0x0601D8E6 RID: 121062 RVA: 0x00426439 File Offset: 0x00424639
+		// (set) Token: 0x0601D8E7 RID: 121063 RVA: 0x00426441 File Offset: 0x00424641
 		public string ExpressionMontage { get; set; }
 
-		// Token: 0x170082E0 RID: 33504
-		// (get) Token: 0x0601C113 RID: 114963 RVA: 0x003FA1AE File Offset: 0x003F83AE
-		// (set) Token: 0x0601C114 RID: 114964 RVA: 0x003FA1B6 File Offset: 0x003F83B6
+		// Token: 0x17008921 RID: 35105
+		// (get) Token: 0x0601D8E8 RID: 121064 RVA: 0x0042644A File Offset: 0x0042464A
+		// (set) Token: 0x0601D8E9 RID: 121065 RVA: 0x00426452 File Offset: 0x00424652
 		public string MouthSequence { get; set; }
 
-		// Token: 0x170082E1 RID: 33505
-		// (get) Token: 0x0601C115 RID: 114965 RVA: 0x003FA1BF File Offset: 0x003F83BF
-		// (set) Token: 0x0601C116 RID: 114966 RVA: 0x003FA1C7 File Offset: 0x003F83C7
+		// Token: 0x17008922 RID: 35106
+		// (get) Token: 0x0601D8EA RID: 121066 RVA: 0x0042645B File Offset: 0x0042465B
+		// (set) Token: 0x0601D8EB RID: 121067 RVA: 0x00426463 File Offset: 0x00424663
 		public string InitState { get; set; }
 
-		// Token: 0x170082E2 RID: 33506
-		// (get) Token: 0x0601C117 RID: 114967 RVA: 0x003FA1D0 File Offset: 0x003F83D0
-		// (set) Token: 0x0601C118 RID: 114968 RVA: 0x003FA1D8 File Offset: 0x003F83D8
+		// Token: 0x17008923 RID: 35107
+		// (get) Token: 0x0601D8EC RID: 121068 RVA: 0x0042646C File Offset: 0x0042466C
+		// (set) Token: 0x0601D8ED RID: 121069 RVA: 0x00426474 File Offset: 0x00424674
 		public string EndState { get; set; }
 
-		// Token: 0x170082E3 RID: 33507
-		// (get) Token: 0x0601C119 RID: 114969 RVA: 0x003FA1E1 File Offset: 0x003F83E1
-		// (set) Token: 0x0601C11A RID: 114970 RVA: 0x003FA1E9 File Offset: 0x003F83E9
+		// Token: 0x17008924 RID: 35108
+		// (get) Token: 0x0601D8EE RID: 121070 RVA: 0x0042647D File Offset: 0x0042467D
+		// (set) Token: 0x0601D8EF RID: 121071 RVA: 0x00426485 File Offset: 0x00424685
 		public bool DisableBlinkCurve { get; set; }
 
-		// Token: 0x170082E4 RID: 33508
-		// (get) Token: 0x0601C11B RID: 114971 RVA: 0x003FA1F2 File Offset: 0x003F83F2
-		// (set) Token: 0x0601C11C RID: 114972 RVA: 0x003FA1FA File Offset: 0x003F83FA
+		// Token: 0x17008925 RID: 35109
+		// (get) Token: 0x0601D8F0 RID: 121072 RVA: 0x0042648E File Offset: 0x0042468E
+		// (set) Token: 0x0601D8F1 RID: 121073 RVA: 0x00426496 File Offset: 0x00424696
 		public string MaleVariant { get; set; }
 
-		// Token: 0x170082E5 RID: 33509
-		// (get) Token: 0x0601C11D RID: 114973 RVA: 0x003FA203 File Offset: 0x003F8403
-		// (set) Token: 0x0601C11E RID: 114974 RVA: 0x003FA20B File Offset: 0x003F840B
+		// Token: 0x17008926 RID: 35110
+		// (get) Token: 0x0601D8F2 RID: 121074 RVA: 0x0042649F File Offset: 0x0042469F
+		// (set) Token: 0x0601D8F3 RID: 121075 RVA: 0x004264A7 File Offset: 0x004246A7
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C11F RID: 114975 RVA: 0x003FA214 File Offset: 0x003F8414
+		// Token: 0x0601D8F4 RID: 121076 RVA: 0x004264B0 File Offset: 0x004246B0
 		public IMontageConfigT()
 		{
 			this.Id = 0;

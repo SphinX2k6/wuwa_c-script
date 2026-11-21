@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F49 RID: 12105
+// Token: 0x0200249C RID: 9372
 [NullableContext(1)]
 [Nullable(0)]
 public class PreventReduceStack : BuffEffect
 {
-	// Token: 0x06019C51 RID: 105553 RVA: 0x006B7C9B File Offset: 0x006B5E9B
+	// Token: 0x0601755C RID: 95580 RVA: 0x006DDFB7 File Offset: 0x006DC1B7
 	public PreventReduceStack(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C52 RID: 105554 RVA: 0x006B7CB8 File Offset: 0x006B5EB8
+	// Token: 0x0601755D RID: 95581 RVA: 0x006DDFD4 File Offset: 0x006DC1D4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -26,7 +26,7 @@ public class PreventReduceStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C53 RID: 105555 RVA: 0x006B7D0C File Offset: 0x006B5F0C
+	// Token: 0x0601755E RID: 95582 RVA: 0x006DE028 File Offset: 0x006DC228
 	public override void OnCreated()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -40,14 +40,14 @@ public class PreventReduceStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C54 RID: 105556 RVA: 0x006B7D44 File Offset: 0x006B5F44
+	// Token: 0x0601755F RID: 95583 RVA: 0x006DE060 File Offset: 0x006DC260
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C55 RID: 105557 RVA: 0x006B7D48 File Offset: 0x006B5F48
+	// Token: 0x06017560 RID: 95584 RVA: 0x006DE064 File Offset: 0x006DC264
 	public override void OnRemoved(bool bPremature)
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
@@ -61,12 +61,12 @@ public class PreventReduceStack : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C56 RID: 105558 RVA: 0x006B7D80 File Offset: 0x006B5F80
+	// Token: 0x06017561 RID: 95585 RVA: 0x006DE09C File Offset: 0x006DC29C
 	public override string GetDebugEffectString()
 	{
 		return "阻止buff" + string.Join<long>(",", this.InvolvedBuffIds) + "随时间自然衰减";
 	}
 
-	// Token: 0x0400C240 RID: 49728
+	// Token: 0x0400C5E2 RID: 50658
 	protected long[] InvolvedBuffIds = Array.Empty<long>();
 }

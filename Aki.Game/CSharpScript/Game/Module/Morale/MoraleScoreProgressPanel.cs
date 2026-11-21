@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B7 RID: 21431
+	// Token: 0x0200439A RID: 17306
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleScoreProgressPanel : UiPanelBase
 	{
-		// Token: 0x06036C2A RID: 224298 RVA: 0x00CF5F3C File Offset: 0x00CF413C
+		// Token: 0x0602BB70 RID: 179056 RVA: 0x00C44FE4 File Offset: 0x00C431E4
 		public UniTask Init(UUIItem item)
 		{
 			MoraleScoreProgressPanel.<Init>d__3 <Init>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C2B RID: 224299 RVA: 0x00CF5F88 File Offset: 0x00CF4188
+		// Token: 0x0602BB71 RID: 179057 RVA: 0x00C45030 File Offset: 0x00C43230
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C2C RID: 224300 RVA: 0x00CF6024 File Offset: 0x00CF4224
+		// Token: 0x0602BB72 RID: 179058 RVA: 0x00C450CC File Offset: 0x00C432CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleScoreProgressPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C2D RID: 224301 RVA: 0x00CF6067 File Offset: 0x00CF4267
+		// Token: 0x0602BB73 RID: 179059 RVA: 0x00C4510F File Offset: 0x00C4330F
 		public void UpdateData()
 		{
 			this.UpdateDataExcludeReward();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Morale
 			rewardRewardLayout.RefreshByData(MoraleModel.Instance.ProgressRewardList, null, false);
 		}
 
-		// Token: 0x06036C2E RID: 224302 RVA: 0x00CF608C File Offset: 0x00CF428C
+		// Token: 0x0602BB74 RID: 179060 RVA: 0x00C45134 File Offset: 0x00C43334
 		public void UpdateDataExcludeReward()
 		{
 			MoraleModel instance = MoraleModel.Instance;
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.Morale
 			text2.ShowTextNew("Morale_title_1");
 		}
 
-		// Token: 0x06036C2F RID: 224303 RVA: 0x00CF613D File Offset: 0x00CF433D
+		// Token: 0x0602BB75 RID: 179061 RVA: 0x00C451E5 File Offset: 0x00C433E5
 		protected void TimerUpdatePercentHandle(float _)
 		{
 			this.UpdatePercentHandle();
 		}
 
-		// Token: 0x06036C30 RID: 224304 RVA: 0x00CF6148 File Offset: 0x00CF4348
+		// Token: 0x0602BB76 RID: 179062 RVA: 0x00C451F0 File Offset: 0x00C433F0
 		protected void UpdatePercentHandle()
 		{
 			GenericLayout<MoraleScoreProgressPercentItem, MoraleProgressRewardData> rewardPercentLayout = this.RewardPercentLayout;
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036C31 RID: 224305 RVA: 0x00CF6189 File Offset: 0x00CF4389
+		// Token: 0x0602BB77 RID: 179063 RVA: 0x00C45231 File Offset: 0x00C43431
 		private MoraleScoreProgressPercentItem CreatePercentItem()
 		{
 			return new MoraleScoreProgressPercentItem();
 		}
 
-		// Token: 0x06036C32 RID: 224306 RVA: 0x00CF6190 File Offset: 0x00CF4390
+		// Token: 0x0602BB78 RID: 179064 RVA: 0x00C45238 File Offset: 0x00C43438
 		private MoraleScoreProgressRewardItem CreateRewardItem()
 		{
 			return new MoraleScoreProgressRewardItem
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C33 RID: 224307 RVA: 0x00CF61A9 File Offset: 0x00CF43A9
+		// Token: 0x0602BB79 RID: 179065 RVA: 0x00C45251 File Offset: 0x00C43451
 		private void OnClickRewardItem(MoraleProgressRewardData data)
 		{
 			if (data.IsCanReceived)
@@ -148,10 +148,10 @@ namespace CSharpScript.Game.Module.Morale
 				MoraleModel.Instance.RequestProgressReward(data.Id, true);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(data.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(data.ItemId, true, null, false);
 		}
 
-		// Token: 0x0401CE74 RID: 118388
+		// Token: 0x0401790C RID: 96524
 		[Nullable(new byte[]
 		{
 			2,
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public GenericLayout<MoraleScoreProgressPercentItem, MoraleProgressRewardData> RewardPercentLayout;
 
-		// Token: 0x0401CE75 RID: 118389
+		// Token: 0x0401790D RID: 96525
 		[Nullable(new byte[]
 		{
 			2,
@@ -169,26 +169,26 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public GenericLayout<MoraleScoreProgressRewardItem, MoraleProgressRewardData> RewardRewardLayout;
 
-		// Token: 0x0200B655 RID: 46677
+		// Token: 0x0200A08D RID: 41101
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040373D1 RID: 226257
+			// Token: 0x04031E26 RID: 204326
 			public const int TxtSumScoreProgress = 0;
 
-			// Token: 0x040373D2 RID: 226258
+			// Token: 0x04031E27 RID: 204327
 			public const int TxtSumProgressTitle = 1;
 
-			// Token: 0x040373D3 RID: 226259
+			// Token: 0x04031E28 RID: 204328
 			public const int LayoutPercent = 2;
 
-			// Token: 0x040373D4 RID: 226260
+			// Token: 0x04031E29 RID: 204329
 			public const int ItemPercent = 3;
 
-			// Token: 0x040373D5 RID: 226261
+			// Token: 0x04031E2A RID: 204330
 			public const int LayoutReward = 4;
 
-			// Token: 0x040373D6 RID: 226262
+			// Token: 0x04031E2B RID: 204331
 			public const int ItemReward = 5;
 		}
 	}

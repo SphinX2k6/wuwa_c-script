@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Typing;
 
-// Token: 0x02003330 RID: 13104
+// Token: 0x020028A2 RID: 10402
 [NullableContext(1)]
 [Nullable(0)]
 public class RedDotSystem : Singleton, ITickable
 {
-	// Token: 0x0601C920 RID: 117024 RVA: 0x00803918 File Offset: 0x00801B18
+	// Token: 0x0601A618 RID: 108056 RVA: 0x00829EDC File Offset: 0x008280DC
 	public void PushToEventQueue(TRedDotCheckEvent @event, int id, ERedDotName redDotName)
 	{
 		string key = redDotName.ToEnumString() + id.ToString();
@@ -36,7 +36,7 @@ public class RedDotSystem : Singleton, ITickable
 		this.RedDotRepeatMap[key] = value;
 	}
 
-	// Token: 0x0601C921 RID: 117025 RVA: 0x008039D4 File Offset: 0x00801BD4
+	// Token: 0x0601A619 RID: 108057 RVA: 0x00829F98 File Offset: 0x00828198
 	public void PopRedDotEventData(int id, ERedDotName redDotName)
 	{
 		string key = redDotName.ToEnumString() + id.ToString();
@@ -68,7 +68,7 @@ public class RedDotSystem : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x0601C922 RID: 117026 RVA: 0x00803AA0 File Offset: 0x00801CA0
+	// Token: 0x0601A61A RID: 108058 RVA: 0x0082A064 File Offset: 0x00828264
 	private void HandleRedDotData()
 	{
 		LinkedNode<RedDotEventData> headNextNode = this.RedDotEventLinkedList.GetHeadNextNode();
@@ -81,7 +81,7 @@ public class RedDotSystem : Singleton, ITickable
 		this.RedDotEventRecycleList.Add(element);
 	}
 
-	// Token: 0x0601C923 RID: 117027 RVA: 0x00803B14 File Offset: 0x00801D14
+	// Token: 0x0601A61B RID: 108059 RVA: 0x0082A0D8 File Offset: 0x008282D8
 	public void Tick(float deltaTime)
 	{
 		GameModeModel instance = GameModeModel.Instance;
@@ -107,7 +107,7 @@ public class RedDotSystem : Singleton, ITickable
 		this.TickRemainingTime = (double)this.TICK_TOTAL_TIME;
 	}
 
-	// Token: 0x0601C924 RID: 117028 RVA: 0x00803BC8 File Offset: 0x00801DC8
+	// Token: 0x0601A61C RID: 108060 RVA: 0x0082A18C File Offset: 0x0082838C
 	public RedDotEventData GetRedDotEventData(TRedDotCheckEvent @event, int id, string redDotName)
 	{
 		if (this.RedDotEventRecycleList.Count > 0)
@@ -123,8 +123,8 @@ public class RedDotSystem : Singleton, ITickable
 		return new RedDotEventData(@event, id, redDotName);
 	}
 
-	// Token: 0x170027A5 RID: 10149
-	// (get) Token: 0x0601C925 RID: 117029 RVA: 0x00803C2C File Offset: 0x00801E2C
+	// Token: 0x17002B41 RID: 11073
+	// (get) Token: 0x0601A61D RID: 108061 RVA: 0x0082A1F0 File Offset: 0x008283F0
 	public static RedDotSystem Instance
 	{
 		get
@@ -138,12 +138,12 @@ public class RedDotSystem : Singleton, ITickable
 		}
 	}
 
-	// Token: 0x0601C926 RID: 117030 RVA: 0x00803C4F File Offset: 0x00801E4F
+	// Token: 0x0601A61E RID: 108062 RVA: 0x0082A213 File Offset: 0x00828413
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C927 RID: 117031 RVA: 0x00803C51 File Offset: 0x00801E51
+	// Token: 0x0601A61F RID: 108063 RVA: 0x0082A215 File Offset: 0x00828415
 	public static void ResetStaticDefaultValue()
 	{
 		RedDotSystem instance = RedDotSystem._instance;
@@ -154,37 +154,37 @@ public class RedDotSystem : Singleton, ITickable
 		RedDotSystem._instance = null;
 	}
 
-	// Token: 0x0601C928 RID: 117032 RVA: 0x00803C6A File Offset: 0x00801E6A
+	// Token: 0x0601A620 RID: 108064 RVA: 0x0082A22E File Offset: 0x0082842E
 	static RedDotSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RedDotSystem.CreateStaticDefaultValue), new Action(RedDotSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E405 RID: 58373
+	// Token: 0x0400E8B7 RID: 59575
 	private readonly global::LinkedList<RedDotEventData> RedDotEventLinkedList = new global::LinkedList<RedDotEventData>(new RedDotEventData(delegate(int uId)
 	{
 	}, 0, ""));
 
-	// Token: 0x0400E406 RID: 58374
+	// Token: 0x0400E8B8 RID: 59576
 	private readonly List<RedDotEventData> RedDotEventRecycleList = new List<RedDotEventData>();
 
-	// Token: 0x0400E407 RID: 58375
+	// Token: 0x0400E8B9 RID: 59577
 	private readonly Dictionary<string, LinkedNode<RedDotEventData>> RedDotRepeatMap = new Dictionary<string, LinkedNode<RedDotEventData>>();
 
-	// Token: 0x0400E408 RID: 58376
+	// Token: 0x0400E8BA RID: 59578
 	[Nullable(2)]
 	private RedDotEventData CurrentEventData;
 
-	// Token: 0x0400E409 RID: 58377
+	// Token: 0x0400E8BB RID: 59579
 	private float TICK_TOTAL_TIME = 500f;
 
-	// Token: 0x0400E40A RID: 58378
+	// Token: 0x0400E8BC RID: 59580
 	private double TickRemainingTime = 500.0;
 
-	// Token: 0x0400E40B RID: 58379
+	// Token: 0x0400E8BD RID: 59581
 	public bool IsOpenLogCallTime;
 
-	// Token: 0x0400E40C RID: 58380
+	// Token: 0x0400E8BE RID: 59582
 	[Nullable(2)]
 	private static RedDotSystem _instance;
 }

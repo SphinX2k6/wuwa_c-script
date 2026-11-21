@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009BA RID: 2490
+	// Token: 0x02000A8F RID: 2703
 	public class ConfigSynthesisFormulaByFormulaType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A70 RID: 14960 RVA: 0x001A4464 File Offset: 0x001A2664
+		// Token: 0x06003F6E RID: 16238 RVA: 0x001C37F8 File Offset: 0x001C19F8
 		static ConfigSynthesisFormulaByFormulaType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSynthesisFormulaByFormulaType.CreateStaticDefaultValue), new Action(ConfigSynthesisFormulaByFormulaType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A71 RID: 14961 RVA: 0x001A4484 File Offset: 0x001A2684
+		// Token: 0x06003F6F RID: 16239 RVA: 0x001C3818 File Offset: 0x001C1A18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSynthesisFormulaByFormulaType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A72 RID: 14962 RVA: 0x001A4503 File Offset: 0x001A2703
+		// Token: 0x06003F70 RID: 16240 RVA: 0x001C3897 File Offset: 0x001C1A97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSynthesisFormulaByFormulaType.LogPair = null;
 			ConfigSynthesisFormulaByFormulaType.HandleId = 0;
 		}
 
-		// Token: 0x06003A73 RID: 14963 RVA: 0x001A4511 File Offset: 0x001A2711
+		// Token: 0x06003F71 RID: 16241 RVA: 0x001C38A5 File Offset: 0x001C1AA5
 		public static void Init()
 		{
 			ConfigSynthesisFormulaByFormulaType.HandleId = ConfigCommon.InitDataStatement(ConfigSynthesisFormulaByFormulaType.HandleId, "db_compose.db", "select BinData from `SynthesisFormula` where FormulaType=?");
 		}
 
-		// Token: 0x06003A74 RID: 14964 RVA: 0x001A452C File Offset: 0x001A272C
+		// Token: 0x06003F72 RID: 16242 RVA: 0x001C38C0 File Offset: 0x001C1AC0
 		[NullableContext(2)]
 		public static IReadOnlyList<SynthesisFormula> GetConfigList(int p0FormulaType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040043FC RID: 17404
+		// Token: 0x040049CF RID: 18895
 		private const string DB = "db_compose.db";
 
-		// Token: 0x040043FD RID: 17405
+		// Token: 0x040049D0 RID: 18896
 		private const string FILE = "h.合成.xlsx";
 
-		// Token: 0x040043FE RID: 17406
+		// Token: 0x040049D1 RID: 18897
 		private const string TABLE = "SynthesisFormula";
 
-		// Token: 0x040043FF RID: 17407
+		// Token: 0x040049D2 RID: 18898
 		private const string COMMAND = "select BinData from `SynthesisFormula` where FormulaType=?";
 
-		// Token: 0x04004400 RID: 17408
+		// Token: 0x040049D3 RID: 18899
 		private const string KEY_PREFIX = "SynthesisFormulaByFormulaType";
 
-		// Token: 0x04004401 RID: 17409
+		// Token: 0x040049D4 RID: 18900
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004402 RID: 17410
+		// Token: 0x040049D5 RID: 18901
 		private static int HandleId;
 	}
 }

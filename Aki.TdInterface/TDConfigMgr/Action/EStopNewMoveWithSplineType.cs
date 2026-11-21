@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016B1 RID: 5809
+	// Token: 0x0200182B RID: 6187
 	[EnumExtensions]
 	public enum EStopNewMoveWithSplineType
 	{
-		// Token: 0x04004DF7 RID: 19959
+		// Token: 0x04005216 RID: 21014
 		StopAtCurrentPos,
-		// Token: 0x04004DF8 RID: 19960
+		// Token: 0x04005217 RID: 21015
 		StopAtStartPoint,
-		// Token: 0x04004DF9 RID: 19961
+		// Token: 0x04005218 RID: 21016
 		StopAtEndPoint,
-		// Token: 0x04004DFA RID: 19962
+		// Token: 0x04005219 RID: 21017
 		StopAtTargetPoint
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012A6 RID: 4774
+	// Token: 0x020013EC RID: 5100
 	public static class ETrackEffectExtensions
 	{
-		// Token: 0x06006B92 RID: 27538 RVA: 0x00102DB8 File Offset: 0x00100FB8
+		// Token: 0x06007200 RID: 29184 RVA: 0x00110D80 File Offset: 0x0010EF80
 		public static string ToEnumString(this ETrackEffect value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B93 RID: 27539 RVA: 0x00102DF0 File Offset: 0x00100FF0
+		// Token: 0x06007201 RID: 29185 RVA: 0x00110DB8 File Offset: 0x0010EFB8
 		public static ETrackEffect FromString(string name)
 		{
 			ETrackEffect result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B94 RID: 27540 RVA: 0x00102E19 File Offset: 0x00101019
+		// Token: 0x06007202 RID: 29186 RVA: 0x00110DE1 File Offset: 0x0010EFE1
 		public static bool TryFromString(string name, out ETrackEffect value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B95 RID: 27541 RVA: 0x00102E52 File Offset: 0x00101052
+		// Token: 0x06007203 RID: 29187 RVA: 0x00110E1A File Offset: 0x0010F01A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B96 RID: 27542 RVA: 0x00102E6A File Offset: 0x0010106A
+		// Token: 0x06007204 RID: 29188 RVA: 0x00110E32 File Offset: 0x0010F032
 		public static ETrackEffect[] GetValues()
 		{
 			return new ETrackEffect[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B97 RID: 27543 RVA: 0x00102E76 File Offset: 0x00101076
+		// Token: 0x06007205 RID: 29189 RVA: 0x00110E3E File Offset: 0x0010F03E
 		public static string[] GetNames()
 		{
 			return new string[]

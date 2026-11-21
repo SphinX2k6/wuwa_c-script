@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007094 RID: 28820
+	// Token: 0x02007860 RID: 30816
 	public struct ISetTimeLockState : IFlatbufferObject
 	{
-		// Token: 0x1700D628 RID: 54824
-		// (get) Token: 0x0603308A RID: 209034 RVA: 0x006E2464 File Offset: 0x006E0664
+		// Token: 0x1700E20B RID: 57867
+		// (get) Token: 0x0603632C RID: 221996 RVA: 0x00742A70 File Offset: 0x00740C70
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603308B RID: 209035 RVA: 0x006E2471 File Offset: 0x006E0671
+		// Token: 0x0603632D RID: 221997 RVA: 0x00742A7D File Offset: 0x00740C7D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603308C RID: 209036 RVA: 0x006E2478 File Offset: 0x006E0678
+		// Token: 0x0603632E RID: 221998 RVA: 0x00742A84 File Offset: 0x00740C84
 		public static ISetTimeLockState GetRootAsISetTimeLockState(ByteBuffer _bb)
 		{
 			return ISetTimeLockState.GetRootAsISetTimeLockState(_bb, default(ISetTimeLockState));
 		}
 
-		// Token: 0x0603308D RID: 209037 RVA: 0x006E2494 File Offset: 0x006E0694
+		// Token: 0x0603632F RID: 221999 RVA: 0x00742AA0 File Offset: 0x00740CA0
 		public static ISetTimeLockState GetRootAsISetTimeLockState(ByteBuffer _bb, ISetTimeLockState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603308E RID: 209038 RVA: 0x006E24B1 File Offset: 0x006E06B1
+		// Token: 0x06036330 RID: 222000 RVA: 0x00742ABD File Offset: 0x00740CBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603308F RID: 209039 RVA: 0x006E24C0 File Offset: 0x006E06C0
+		// Token: 0x06036331 RID: 222001 RVA: 0x00742ACC File Offset: 0x00740CCC
 		public ISetTimeLockState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D629 RID: 54825
-		// (get) Token: 0x06033090 RID: 209040 RVA: 0x006E24D0 File Offset: 0x006E06D0
+		// Token: 0x1700E20C RID: 57868
+		// (get) Token: 0x06036332 RID: 222002 RVA: 0x00742ADC File Offset: 0x00740CDC
 		public ELockState LockState
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033091 RID: 209041 RVA: 0x006E250C File Offset: 0x006E070C
+		// Token: 0x06036333 RID: 222003 RVA: 0x00742B18 File Offset: 0x00740D18
 		public static Offset<ISetTimeLockState> CreateISetTimeLockState(FlatBufferBuilder builder, ELockState LockState = ELockState.Lock)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetTimeLockState.EndISetTimeLockState(builder);
 		}
 
-		// Token: 0x06033092 RID: 209042 RVA: 0x006E2522 File Offset: 0x006E0722
+		// Token: 0x06036334 RID: 222004 RVA: 0x00742B2E File Offset: 0x00740D2E
 		public static void StartISetTimeLockState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033093 RID: 209043 RVA: 0x006E252B File Offset: 0x006E072B
+		// Token: 0x06036335 RID: 222005 RVA: 0x00742B37 File Offset: 0x00740D37
 		public static void AddLockState(FlatBufferBuilder builder, ELockState lockState)
 		{
 			builder.AddByte(0, (byte)lockState, 0);
 		}
 
-		// Token: 0x06033094 RID: 209044 RVA: 0x006E2536 File Offset: 0x006E0736
+		// Token: 0x06036336 RID: 222006 RVA: 0x00742B42 File Offset: 0x00740D42
 		public static Offset<ISetTimeLockState> EndISetTimeLockState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetTimeLockState>(builder.EndTable());
 		}
 
-		// Token: 0x06033095 RID: 209045 RVA: 0x006E2544 File Offset: 0x006E0744
+		// Token: 0x06036337 RID: 222007 RVA: 0x00742B50 File Offset: 0x00740D50
 		public ISetTimeLockStateT UnPack()
 		{
 			ISetTimeLockStateT setTimeLockStateT = new ISetTimeLockStateT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setTimeLockStateT;
 		}
 
-		// Token: 0x06033096 RID: 209046 RVA: 0x006E255F File Offset: 0x006E075F
+		// Token: 0x06036338 RID: 222008 RVA: 0x00742B6B File Offset: 0x00740D6B
 		public void UnPackTo(ISetTimeLockStateT _o)
 		{
 			_o.LockState = this.LockState;
 		}
 
-		// Token: 0x06033097 RID: 209047 RVA: 0x006E2570 File Offset: 0x006E0770
+		// Token: 0x06036339 RID: 222009 RVA: 0x00742B7C File Offset: 0x00740D7C
 		public static Offset<ISetTimeLockState> Pack(FlatBufferBuilder builder, ISetTimeLockStateT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetTimeLockState.CreateISetTimeLockState(builder, _o.LockState);
 		}
 
-		// Token: 0x04011B00 RID: 72448
+		// Token: 0x04012AEE RID: 76526
 		private Table __p;
 	}
 }

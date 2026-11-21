@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F48 RID: 12104
+// Token: 0x0200249B RID: 9371
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyToughReduce : BuffEffect
 {
-	// Token: 0x06019C4A RID: 105546 RVA: 0x006B787C File Offset: 0x006B5A7C
+	// Token: 0x06017555 RID: 95573 RVA: 0x006DDB98 File Offset: 0x006DBD98
 	public ModifyToughReduce(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C4B RID: 105547 RVA: 0x006B7898 File Offset: 0x006B5A98
+	// Token: 0x06017556 RID: 95574 RVA: 0x006DDBB4 File Offset: 0x006DBDB4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -24,7 +24,7 @@ public class ModifyToughReduce : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C4C RID: 105548 RVA: 0x006B78C4 File Offset: 0x006B5AC4
+	// Token: 0x06017557 RID: 95575 RVA: 0x006DDBE0 File Offset: 0x006DBDE0
 	public override void OnCreated()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -48,14 +48,14 @@ public class ModifyToughReduce : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C4D RID: 105549 RVA: 0x006B79A8 File Offset: 0x006B5BA8
+	// Token: 0x06017558 RID: 95576 RVA: 0x006DDCC4 File Offset: 0x006DBEC4
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C4E RID: 105550 RVA: 0x006B79AC File Offset: 0x006B5BAC
+	// Token: 0x06017559 RID: 95577 RVA: 0x006DDCC8 File Offset: 0x006DBEC8
 	public override void OnRemoved(bool bPremature)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in this.EntityModifierMap)
@@ -94,7 +94,7 @@ public class ModifyToughReduce : BuffEffect
 		this.EntityModifierMap.Clear();
 	}
 
-	// Token: 0x06019C4F RID: 105551 RVA: 0x006B7A84 File Offset: 0x006B5C84
+	// Token: 0x0601755A RID: 95578 RVA: 0x006DDDA0 File Offset: 0x006DBFA0
 	private void OnChangeTeam()
 	{
 		List<int> list = new List<int>();
@@ -165,7 +165,7 @@ public class ModifyToughReduce : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C50 RID: 105552 RVA: 0x006B7C1C File Offset: 0x006B5E1C
+	// Token: 0x0601755B RID: 95579 RVA: 0x006DDF38 File Offset: 0x006DC138
 	public override string GetDebugEffectString()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -178,9 +178,9 @@ public class ModifyToughReduce : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C23E RID: 49726
+	// Token: 0x0400C5E0 RID: 50656
 	protected float ModifyRate;
 
-	// Token: 0x0400C23F RID: 49727
+	// Token: 0x0400C5E1 RID: 50657
 	protected Dictionary<int, int> EntityModifierMap = new Dictionary<int, int>();
 }

@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002709 RID: 9993
+// Token: 0x02001BF4 RID: 7156
 public class RacingBetsBulletScreenItem : UiPanelBase
 {
-	// Token: 0x060147B8 RID: 83896 RVA: 0x0052BFF4 File Offset: 0x0052A1F4
+	// Token: 0x06011C9A RID: 72858 RVA: 0x0053AD10 File Offset: 0x00538F10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class RacingBetsBulletScreenItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147B9 RID: 83897 RVA: 0x0052C07C File Offset: 0x0052A27C
+	// Token: 0x06011C9B RID: 72859 RVA: 0x0053AD98 File Offset: 0x00538F98
 	public void RefreshUi(int bulletScreenId, bool isShowFrame)
 	{
 		this.BulletConfig = RacingBetsConfig.Instance.GetRacingBetsBulletScreen(bulletScreenId);
@@ -123,7 +123,7 @@ public class RacingBetsBulletScreenItem : UiPanelBase
 		uuiitem.SetUIActive(isShowFrame);
 	}
 
-	// Token: 0x060147BA RID: 83898 RVA: 0x0052C250 File Offset: 0x0052A450
+	// Token: 0x06011C9C RID: 72860 RVA: 0x0053AF6C File Offset: 0x0053916C
 	public float GetBulletScreenItemWidth()
 	{
 		float num;
@@ -157,7 +157,7 @@ public class RacingBetsBulletScreenItem : UiPanelBase
 		return num;
 	}
 
-	// Token: 0x060147BB RID: 83899 RVA: 0x0052C374 File Offset: 0x0052A574
+	// Token: 0x06011C9D RID: 72861 RVA: 0x0053B090 File Offset: 0x00539290
 	public float GetBulletScreenItemHeight()
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -178,7 +178,7 @@ public class RacingBetsBulletScreenItem : UiPanelBase
 		return num;
 	}
 
-	// Token: 0x060147BC RID: 83900 RVA: 0x0052C3E4 File Offset: 0x0052A5E4
+	// Token: 0x06011C9E RID: 72862 RVA: 0x0053B100 File Offset: 0x00539300
 	public void MoveLeft(float delta)
 	{
 		UUIItem rootItem = base.GetRootItem();
@@ -188,28 +188,28 @@ public class RacingBetsBulletScreenItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009A15 RID: 39445
+	// Token: 0x04009B6D RID: 39789
 	private RacingBetsBulletScreen? BulletConfig;
 
-	// Token: 0x04009A16 RID: 39446
+	// Token: 0x04009B6E RID: 39790
 	private bool IsShowFrame;
 
-	// Token: 0x04009A17 RID: 39447
+	// Token: 0x04009B6F RID: 39791
 	[Nullable(1)]
 	public List<int> OccupiedTracks = new List<int>();
 
-	// Token: 0x02008D55 RID: 36181
+	// Token: 0x02007EDE RID: 32478
 	private enum EComponent
 	{
-		// Token: 0x0402DDD3 RID: 187859
+		// Token: 0x040290EA RID: 168170
 		BulletIcon,
-		// Token: 0x0402DDD4 RID: 187860
+		// Token: 0x040290EB RID: 168171
 		BulletText,
-		// Token: 0x0402DDD5 RID: 187861
+		// Token: 0x040290EC RID: 168172
 		BulletBigIcon,
-		// Token: 0x0402DDD6 RID: 187862
+		// Token: 0x040290ED RID: 168173
 		FrameItem,
-		// Token: 0x0402DDD7 RID: 187863
+		// Token: 0x040290EE RID: 168174
 		TextBulletItem
 	}
 }

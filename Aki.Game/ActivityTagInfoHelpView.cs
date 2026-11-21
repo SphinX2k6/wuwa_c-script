@@ -8,11 +8,11 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E4E RID: 7758
+// Token: 0x02001310 RID: 4880
 public class ActivityTagInfoHelpView : UiViewBase, IExtraUiPopFrameType
 {
-	// Token: 0x17001286 RID: 4742
-	// (get) Token: 0x0600EBF1 RID: 60401 RVA: 0x0038036B File Offset: 0x0037E56B
+	// Token: 0x170012B0 RID: 4784
+	// (get) Token: 0x0600C010 RID: 49168 RVA: 0x0038C003 File Offset: 0x0038A203
 	[Nullable(1)]
 	private new int[] OpenParam
 	{
@@ -23,13 +23,13 @@ public class ActivityTagInfoHelpView : UiViewBase, IExtraUiPopFrameType
 		}
 	}
 
-	// Token: 0x0600EBF2 RID: 60402 RVA: 0x00380378 File Offset: 0x0037E578
+	// Token: 0x0600C011 RID: 49169 RVA: 0x0038C010 File Offset: 0x0038A210
 	[NullableContext(1)]
 	public ActivityTagInfoHelpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EBF3 RID: 60403 RVA: 0x00380384 File Offset: 0x0037E584
+	// Token: 0x0600C012 RID: 49170 RVA: 0x0038C01C File Offset: 0x0038A21C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -47,7 +47,7 @@ public class ActivityTagInfoHelpView : UiViewBase, IExtraUiPopFrameType
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600EBF4 RID: 60404 RVA: 0x00380430 File Offset: 0x0037E630
+	// Token: 0x0600C013 RID: 49171 RVA: 0x0038C0C8 File Offset: 0x0038A2C8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityTagInfoHelpView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -58,20 +58,20 @@ public class ActivityTagInfoHelpView : UiViewBase, IExtraUiPopFrameType
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EBF5 RID: 60405 RVA: 0x00380473 File Offset: 0x0037E673
+	// Token: 0x0600C014 RID: 49172 RVA: 0x0038C10B File Offset: 0x0038A30B
 	protected override void OnStart()
 	{
 		this.Init();
 	}
 
-	// Token: 0x0600EBF6 RID: 60406 RVA: 0x0038047B File Offset: 0x0037E67B
+	// Token: 0x0600C015 RID: 49173 RVA: 0x0038C113 File Offset: 0x0038A313
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param)
 	{
 		return new EUiBehaviourPopType?(EUiBehaviourPopType.Middle);
 	}
 
-	// Token: 0x0600EBF7 RID: 60407 RVA: 0x00380484 File Offset: 0x0037E684
+	// Token: 0x0600C016 RID: 49174 RVA: 0x0038C11C File Offset: 0x0038A31C
 	private void Init()
 	{
 		int[] openParam = this.OpenParam;
@@ -112,24 +112,24 @@ public class ActivityTagInfoHelpView : UiViewBase, IExtraUiPopFrameType
 		this.InfoItem2.SetView(activityTitleTags2.Value);
 	}
 
-	// Token: 0x04006D6B RID: 28011
+	// Token: 0x04006E4C RID: 28236
 	[Nullable(2)]
 	private ActivityTagInfoItem InfoItem1;
 
-	// Token: 0x04006D6C RID: 28012
+	// Token: 0x04006E4D RID: 28237
 	[Nullable(2)]
 	private ActivityTagInfoItem InfoItem2;
 
-	// Token: 0x02008403 RID: 33795
+	// Token: 0x02007588 RID: 30088
 	private enum EComponents
 	{
-		// Token: 0x0402AF8C RID: 176012
+		// Token: 0x040262B0 RID: 156336
 		ScrollView,
-		// Token: 0x0402AF8D RID: 176013
+		// Token: 0x040262B1 RID: 156337
 		Content,
-		// Token: 0x0402AF8E RID: 176014
+		// Token: 0x040262B2 RID: 156338
 		ExplanationItem1,
-		// Token: 0x0402AF8F RID: 176015
+		// Token: 0x040262B3 RID: 156339
 		ExplanationItem2
 	}
 }

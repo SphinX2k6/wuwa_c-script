@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DC5 RID: 19909
+	// Token: 0x02003D8E RID: 15758
 	public class RoguelikeChallengeButtonItem : UiPanelBase
 	{
-		// Token: 0x0603364C RID: 210508 RVA: 0x00BFFB8C File Offset: 0x00BFDD8C
+		// Token: 0x060284B9 RID: 165049 RVA: 0x00B490CC File Offset: 0x00B472CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603364D RID: 210509 RVA: 0x00BFFC95 File Offset: 0x00BFDE95
+		// Token: 0x060284BA RID: 165050 RVA: 0x00B491D5 File Offset: 0x00B473D5
 		private void ButtonCallback()
 		{
 			Action buttonCallbackInternal = this.ButtonCallbackInternal;
@@ -48,45 +48,45 @@ namespace CSharpScript.Game.Module.Roguelike
 			buttonCallbackInternal();
 		}
 
-		// Token: 0x0603364E RID: 210510 RVA: 0x00BFFCA7 File Offset: 0x00BFDEA7
+		// Token: 0x060284BB RID: 165051 RVA: 0x00B491E7 File Offset: 0x00B473E7
 		[NullableContext(1)]
 		public void SetButtonCallback(Action callback)
 		{
 			this.ButtonCallbackInternal = callback;
 		}
 
-		// Token: 0x0603364F RID: 210511 RVA: 0x00BFFCB0 File Offset: 0x00BFDEB0
+		// Token: 0x060284BC RID: 165052 RVA: 0x00B491F0 File Offset: 0x00B473F0
 		public void SetTxtScore(int count)
 		{
 			base.GetText(3).SetText(count.ToString(), true);
 		}
 
-		// Token: 0x06033650 RID: 210512 RVA: 0x00BFFCC6 File Offset: 0x00BFDEC6
+		// Token: 0x060284BD RID: 165053 RVA: 0x00B49206 File Offset: 0x00B47406
 		public void SetProcessingState(bool bVisible)
 		{
 			base.GetItem(4).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0401B49E RID: 111774
+		// Token: 0x04015E71 RID: 89713
 		[Nullable(2)]
 		private Action ButtonCallbackInternal;
 
-		// Token: 0x0200AF3C RID: 44860
+		// Token: 0x02009971 RID: 39281
 		private class EComponents
 		{
-			// Token: 0x04035364 RID: 217956
+			// Token: 0x0402FD99 RID: 195993
 			public const int BtnConfirm = 0;
 
-			// Token: 0x04035365 RID: 217957
+			// Token: 0x0402FD9A RID: 195994
 			public const int TxtConfirm = 1;
 
-			// Token: 0x04035366 RID: 217958
+			// Token: 0x0402FD9B RID: 195995
 			public const int ItemRedDot = 2;
 
-			// Token: 0x04035367 RID: 217959
+			// Token: 0x0402FD9C RID: 195996
 			public const int TxtScore = 3;
 
-			// Token: 0x04035368 RID: 217960
+			// Token: 0x0402FD9D RID: 195997
 			public const int PanelProcessing = 4;
 		}
 	}

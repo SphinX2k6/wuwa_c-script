@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200060C RID: 1548
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006A9 RID: 1705
 	public class IPointField : IConveyorBeltField
 	{
-		// Token: 0x0600210A RID: 8458 RVA: 0x0005BADC File Offset: 0x00059CDC
+		// Token: 0x06002410 RID: 9232 RVA: 0x000627F0 File Offset: 0x000609F0
 		private IPointField_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600210B RID: 8459 RVA: 0x0005BB14 File Offset: 0x00059D14
+		// Token: 0x06002411 RID: 9233 RVA: 0x00062828 File Offset: 0x00060A28
 		public static IPointField Create([Nullable(2)] IPointField instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600210C RID: 8460 RVA: 0x0005BB27 File Offset: 0x00059D27
+		// Token: 0x06002412 RID: 9234 RVA: 0x0006283B File Offset: 0x00060A3B
 		public static IPointField CreateFromSetValue([Nullable(2)] IPointField_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600210D RID: 8461 RVA: 0x0005BB3A File Offset: 0x00059D3A
+		// Token: 0x06002413 RID: 9235 RVA: 0x0006284E File Offset: 0x00060A4E
 		public new IPointField_SetValue ToSetValue()
 		{
 			return new IPointField_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008D2 RID: 2258
-		// (get) Token: 0x0600210E RID: 8462 RVA: 0x0005BB4D File Offset: 0x00059D4D
-		// (set) Token: 0x0600210F RID: 8463 RVA: 0x0005BB78 File Offset: 0x00059D78
+		// Token: 0x17000989 RID: 2441
+		// (get) Token: 0x06002414 RID: 9236 RVA: 0x00062861 File Offset: 0x00060A61
+		// (set) Token: 0x06002415 RID: 9237 RVA: 0x0006288C File Offset: 0x00060A8C
 		public override EConveyorBeltFieldType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400171C RID: 5916
+		// Token: 0x0400190E RID: 6414
 		[Nullable(2)]
 		protected new IPointField FbInstance;
 
-		// Token: 0x0400171D RID: 5917
+		// Token: 0x0400190F RID: 6415
 		[Nullable(2)]
 		protected new IPointField_SetValue PocoInterface;
 	}

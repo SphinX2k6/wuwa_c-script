@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005440 RID: 21568
+	// Token: 0x02004423 RID: 17443
 	public class TipsItem : UiPanelBase
 	{
-		// Token: 0x0603711E RID: 225566 RVA: 0x00D0D100 File Offset: 0x00D0B300
+		// Token: 0x0602C067 RID: 180327 RVA: 0x00C5C520 File Offset: 0x00C5A720
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x0603711F RID: 225567 RVA: 0x00D0D15A File Offset: 0x00D0B35A
+		// Token: 0x0602C068 RID: 180328 RVA: 0x00C5C57A File Offset: 0x00C5A77A
 		protected override void OnBeforeShow()
 		{
 			base.GetSprite(0).SetUIActive(false);

@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020027B0 RID: 10160
+// Token: 0x02001D2B RID: 7467
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleAudioData : RoleModuleDataBase
 {
-	// Token: 0x06014E45 RID: 85573 RVA: 0x0054E31A File Offset: 0x0054C51A
+	// Token: 0x06012844 RID: 75844 RVA: 0x00579042 File Offset: 0x00577242
 	public RoleAudioData(int roleId) : base(roleId)
 	{
 		this.InitAudioData();
 	}
 
-	// Token: 0x06014E46 RID: 85574 RVA: 0x0054E334 File Offset: 0x0054C534
+	// Token: 0x06012845 RID: 75845 RVA: 0x0057905C File Offset: 0x0057725C
 	private void InitAudioData()
 	{
 		IReadOnlyList<RoleAnimAudio> roleAudioMap = RoleConfig.Instance.GetRoleAudioMap(this.RoleId);
@@ -30,7 +30,7 @@ public class RoleAudioData : RoleModuleDataBase
 		}
 	}
 
-	// Token: 0x06014E47 RID: 85575 RVA: 0x0054E3B4 File Offset: 0x0054C5B4
+	// Token: 0x06012846 RID: 75846 RVA: 0x005790DC File Offset: 0x005772DC
 	[return: Nullable(2)]
 	public RoleAnimAudioData GetAudioPathByName(string animName)
 	{
@@ -46,6 +46,6 @@ public class RoleAudioData : RoleModuleDataBase
 		return result;
 	}
 
-	// Token: 0x04009CFE RID: 40190
+	// Token: 0x0400A0E1 RID: 41185
 	private readonly Dictionary<string, RoleAnimAudioData> AudioMap = new Dictionary<string, RoleAnimAudioData>();
 }

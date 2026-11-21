@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020027BA RID: 10170
+// Token: 0x02001D35 RID: 7477
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleRobotData : RoleDataBase
 {
-	// Token: 0x06014EC9 RID: 85705 RVA: 0x0055024C File Offset: 0x0054E44C
+	// Token: 0x060128C8 RID: 75976 RVA: 0x0057AF70 File Offset: 0x00579170
 	public RoleRobotData(int id) : base(id)
 	{
 		this.SetDefaultData();
 	}
 
-	// Token: 0x06014ECA RID: 85706 RVA: 0x0055025B File Offset: 0x0054E45B
+	// Token: 0x060128C9 RID: 75977 RVA: 0x0057AF7F File Offset: 0x0057917F
 	protected void SetDefaultData()
 	{
 		this.SetLevelData();
@@ -27,7 +26,7 @@ public class RoleRobotData : RoleDataBase
 		this.SetSkinData();
 	}
 
-	// Token: 0x06014ECB RID: 85707 RVA: 0x00550284 File Offset: 0x0054E484
+	// Token: 0x060128CA RID: 75978 RVA: 0x0057AFA8 File Offset: 0x005791A8
 	private void SetLevelData()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -53,7 +52,7 @@ public class RoleRobotData : RoleDataBase
 		}
 	}
 
-	// Token: 0x06014ECC RID: 85708 RVA: 0x00550348 File Offset: 0x0054E548
+	// Token: 0x060128CB RID: 75979 RVA: 0x0057B06C File Offset: 0x0057926C
 	private void SetSkillData()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -94,7 +93,7 @@ public class RoleRobotData : RoleDataBase
 		skillData.SetSkillNodeStateData(dictionary);
 	}
 
-	// Token: 0x06014ECD RID: 85709 RVA: 0x005504CC File Offset: 0x0054E6CC
+	// Token: 0x060128CC RID: 75980 RVA: 0x0057B1F0 File Offset: 0x005793F0
 	private void AddSkillNodeData(int skillGroupId, int nodeIndex, Dictionary<int, SkillNodeDataInfo> skillNodeDataMap)
 	{
 		SkillTree? skillTreeNodeByGroupIdAndIndex = RoleSkillConfig.Instance.GetSkillTreeNodeByGroupIdAndIndex(skillGroupId, nodeIndex);
@@ -107,7 +106,7 @@ public class RoleRobotData : RoleDataBase
 		}
 	}
 
-	// Token: 0x06014ECE RID: 85710 RVA: 0x00550558 File Offset: 0x0054E758
+	// Token: 0x060128CD RID: 75981 RVA: 0x0057B27C File Offset: 0x0057947C
 	private int GetTrialSkillLevel(int skillId)
 	{
 		IReadOnlyList<SkillLevel> skillLevelConfigList = RoleSkillConfig.Instance.GetSkillLevelConfigList(skillId);
@@ -115,13 +114,18 @@ public class RoleRobotData : RoleDataBase
 		{
 			return 0;
 		}
-		List<SkillLevel> list = (from aConfig in skillLevelConfigList
-		orderby aConfig.Id
-		select aConfig).ToList<SkillLevel>();
-		return list[list.Count - 1].SkillId;
+		SkillLevel skillLevel = skillLevelConfigList[0];
+		for (int i = 1; i < skillLevelConfigList.Count; i++)
+		{
+			if (skillLevelConfigList[i].Id >= skillLevel.Id)
+			{
+				skillLevel = skillLevelConfigList[i];
+			}
+		}
+		return skillLevel.SkillId;
 	}
 
-	// Token: 0x06014ECF RID: 85711 RVA: 0x005505C0 File Offset: 0x0054E7C0
+	// Token: 0x060128CE RID: 75982 RVA: 0x0057B2E4 File Offset: 0x005794E4
 	private void SetResonanceData()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -132,7 +136,7 @@ public class RoleRobotData : RoleDataBase
 		base.GetResonanceData().SetResonantChainGroupIndex(trialRoleConfig.Value.ResonanceLevel);
 	}
 
-	// Token: 0x06014ED0 RID: 85712 RVA: 0x00550604 File Offset: 0x0054E804
+	// Token: 0x060128CF RID: 75983 RVA: 0x0057B328 File Offset: 0x00579528
 	private void SetWeaponData()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -145,7 +149,7 @@ public class RoleRobotData : RoleDataBase
 		this.WeaponTrialData.SetRoleId(this.Id);
 	}
 
-	// Token: 0x06014ED1 RID: 85713 RVA: 0x00550664 File Offset: 0x0054E864
+	// Token: 0x060128D0 RID: 75984 RVA: 0x0057B388 File Offset: 0x00579588
 	private void SetPhantomData()
 	{
 		RolePhantomData phantomData = base.GetPhantomData();
@@ -188,7 +192,7 @@ public class RoleRobotData : RoleDataBase
 		}
 	}
 
-	// Token: 0x06014ED2 RID: 85714 RVA: 0x00550858 File Offset: 0x0054EA58
+	// Token: 0x060128D1 RID: 75985 RVA: 0x0057B57C File Offset: 0x0057977C
 	private void SetSkinData()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -202,7 +206,7 @@ public class RoleRobotData : RoleDataBase
 		}
 	}
 
-	// Token: 0x06014ED3 RID: 85715 RVA: 0x005508A8 File Offset: 0x0054EAA8
+	// Token: 0x060128D2 RID: 75986 RVA: 0x0057B5CC File Offset: 0x005797CC
 	public override int GetRoleId()
 	{
 		TrialRoleInfo? trialRoleConfig = RoleConfig.Instance.GetTrialRoleConfig(this.Id);
@@ -213,74 +217,74 @@ public class RoleRobotData : RoleDataBase
 		return trialRoleConfig.Value.ParentId;
 	}
 
-	// Token: 0x06014ED4 RID: 85716 RVA: 0x005508E0 File Offset: 0x0054EAE0
+	// Token: 0x060128D3 RID: 75987 RVA: 0x0057B604 File Offset: 0x00579804
 	public override bool IsTrialRole()
 	{
 		return true;
 	}
 
-	// Token: 0x06014ED5 RID: 85717 RVA: 0x005508E4 File Offset: 0x0054EAE4
+	// Token: 0x060128D4 RID: 75988 RVA: 0x0057B608 File Offset: 0x00579808
 	public override string GetName(int? playerId = null)
 	{
 		return RoleConfig.Instance.GetRoleName(base.GetRoleConfig().Name);
 	}
 
-	// Token: 0x06014ED6 RID: 85718 RVA: 0x00550909 File Offset: 0x0054EB09
+	// Token: 0x060128D5 RID: 75989 RVA: 0x0057B62D File Offset: 0x0057982D
 	public void SetName(string name)
 	{
 		this.Name = name;
 	}
 
-	// Token: 0x06014ED7 RID: 85719 RVA: 0x00550912 File Offset: 0x0054EB12
+	// Token: 0x060128D6 RID: 75990 RVA: 0x0057B636 File Offset: 0x00579836
 	public override bool CanChangeName()
 	{
 		return false;
 	}
 
-	// Token: 0x06014ED8 RID: 85720 RVA: 0x00550915 File Offset: 0x0054EB15
+	// Token: 0x060128D7 RID: 75991 RVA: 0x0057B639 File Offset: 0x00579839
 	[NullableContext(2)]
 	public WeaponTrialData GetWeaponData()
 	{
 		return this.WeaponTrialData;
 	}
 
-	// Token: 0x06014ED9 RID: 85721 RVA: 0x0055091D File Offset: 0x0054EB1D
+	// Token: 0x060128D8 RID: 75992 RVA: 0x0057B641 File Offset: 0x00579841
 	public override bool IsOnlineRole()
 	{
 		return false;
 	}
 
-	// Token: 0x06014EDA RID: 85722 RVA: 0x00550920 File Offset: 0x0054EB20
+	// Token: 0x060128D9 RID: 75993 RVA: 0x0057B644 File Offset: 0x00579844
 	public override int GetRoleCreateTime()
 	{
 		return 0;
 	}
 
-	// Token: 0x06014EDB RID: 85723 RVA: 0x00550923 File Offset: 0x0054EB23
+	// Token: 0x060128DA RID: 75994 RVA: 0x0057B647 File Offset: 0x00579847
 	public override bool GetIsNew()
 	{
 		return false;
 	}
 
-	// Token: 0x06014EDC RID: 85724 RVA: 0x00550926 File Offset: 0x0054EB26
+	// Token: 0x060128DB RID: 75995 RVA: 0x0057B64A File Offset: 0x0057984A
 	public virtual bool CanEditInFormation()
 	{
 		return false;
 	}
 
-	// Token: 0x06014EDD RID: 85725 RVA: 0x00550929 File Offset: 0x0054EB29
+	// Token: 0x060128DC RID: 75996 RVA: 0x0057B64D File Offset: 0x0057984D
 	public virtual bool IsVisibleInFormation()
 	{
 		return false;
 	}
 
-	// Token: 0x06014EDE RID: 85726 RVA: 0x0055092C File Offset: 0x0054EB2C
+	// Token: 0x060128DD RID: 75997 RVA: 0x0057B650 File Offset: 0x00579850
 	public int GetTrialRoleId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x04009D1F RID: 40223
+	// Token: 0x0400A102 RID: 41218
 	[Nullable(2)]
 	private WeaponTrialData WeaponTrialData;
 }

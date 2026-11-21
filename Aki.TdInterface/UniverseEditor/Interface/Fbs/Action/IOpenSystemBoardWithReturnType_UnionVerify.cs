@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C41 RID: 27713
+	// Token: 0x020073A8 RID: 29608
 	public static class IOpenSystemBoardWithReturnType_UnionVerify
 	{
-		// Token: 0x06030D15 RID: 199957 RVA: 0x006A1B00 File Offset: 0x0069FD00
+		// Token: 0x06033C70 RID: 212080 RVA: 0x006FBFF4 File Offset: 0x006FA1F4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -28,18 +28,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IOpenMotorRaceChallengeResultWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			case 6:
-				result = IOpenFishingItemDeliveryWithReturnVerify.Verify(verifier, tablePos);
+				result = IOpenMechaStuntTrackChallengeResultWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
-				result = IOpenInfrastructureItemDeliveryWithReturnVerify.Verify(verifier, tablePos);
+				result = IOpenFishingItemDeliveryWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			case 8:
-				result = IOpenVillageInfrDeliveryWithReturnVerify.Verify(verifier, tablePos);
+				result = IOpenInfrastructureItemDeliveryWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			case 9:
-				result = IOpenGreatSwordChallengeResultVerify.Verify(verifier, tablePos);
+				result = IOpenVillageInfrDeliveryWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			case 10:
+				result = IOpenGreatSwordChallengeResultVerify.Verify(verifier, tablePos);
+				break;
+			case 11:
 				result = IOpenGiantDeliveryWithReturnVerify.Verify(verifier, tablePos);
 				break;
 			default:

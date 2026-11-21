@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023DF RID: 9183
+// Token: 0x020018C4 RID: 6340
 public class PersonalPlayerTitleUnLockTipsView : UiTickViewBase
 {
-	// Token: 0x060125BA RID: 75194 RVA: 0x004864EA File Offset: 0x004846EA
+	// Token: 0x0600FA6C RID: 64108 RVA: 0x004939F6 File Offset: 0x00491BF6
 	[NullableContext(1)]
 	public PersonalPlayerTitleUnLockTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060125BB RID: 75195 RVA: 0x004864F3 File Offset: 0x004846F3
+	// Token: 0x0600FA6D RID: 64109 RVA: 0x004939FF File Offset: 0x00491BFF
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class PersonalPlayerTitleUnLockTipsView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060125BC RID: 75196 RVA: 0x00486518 File Offset: 0x00484718
+	// Token: 0x0600FA6E RID: 64110 RVA: 0x00493A24 File Offset: 0x00491C24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PersonalPlayerTitleUnLockTipsView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class PersonalPlayerTitleUnLockTipsView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060125BD RID: 75197 RVA: 0x0048655C File Offset: 0x0048475C
+	// Token: 0x0600FA6F RID: 64111 RVA: 0x00493A68 File Offset: 0x00491C68
 	protected override void OnStart()
 	{
 		PersonalPlayerTitleData personalPlayerTitleData = (PersonalPlayerTitleData)this.OpenParam;
@@ -49,7 +49,7 @@ public class PersonalPlayerTitleUnLockTipsView : UiTickViewBase
 		this.PlayerTitleItem.Refresh(new int?(personalPlayerTitleData.PlayerTitleId), personalPlayerTitleData.StarLevel, new int?(sex));
 	}
 
-	// Token: 0x060125BE RID: 75198 RVA: 0x004865AD File Offset: 0x004847AD
+	// Token: 0x0600FA70 RID: 64112 RVA: 0x00493AB9 File Offset: 0x00491CB9
 	protected override void OnTick(float delta)
 	{
 		if (this.HaveClosed)
@@ -64,23 +64,23 @@ public class PersonalPlayerTitleUnLockTipsView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x04008ADF RID: 35551
+	// Token: 0x04008C26 RID: 35878
 	private const int CLOSE_TIME = 4000;
 
-	// Token: 0x04008AE0 RID: 35552
+	// Token: 0x04008C27 RID: 35879
 	[Nullable(2)]
 	private PlayerTitleItem PlayerTitleItem;
 
-	// Token: 0x04008AE1 RID: 35553
+	// Token: 0x04008C28 RID: 35880
 	private float CloseTimerDown;
 
-	// Token: 0x04008AE2 RID: 35554
+	// Token: 0x04008C29 RID: 35881
 	private bool HaveClosed;
 
-	// Token: 0x02008985 RID: 35205
+	// Token: 0x02007B0E RID: 31502
 	private enum EComponent
 	{
-		// Token: 0x0402CB07 RID: 183047
+		// Token: 0x04027E22 RID: 163362
 		ItemTitle
 	}
 }

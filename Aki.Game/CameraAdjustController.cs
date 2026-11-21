@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using CSharpScript.Core.Common;
 
-// Token: 0x020001F0 RID: 496
-[GeneratePropertyAccessMethod(true)]
+// Token: 0x020001F4 RID: 500
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06001F56 RID: 8022 RVA: 0x0009AB13 File Offset: 0x00098D13
+	// Token: 0x06002005 RID: 8197 RVA: 0x000A1EDF File Offset: 0x000A00DF
 	[NullableContext(1)]
 	public CameraAdjustController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06001F57 RID: 8023 RVA: 0x0009AB27 File Offset: 0x00098D27
+	// Token: 0x06002006 RID: 8198 RVA: 0x000A1EF3 File Offset: 0x000A00F3
 	[NullableContext(1)]
 	public override string Name()
 	{
 		return "AdjustController";
 	}
 
-	// Token: 0x06001F58 RID: 8024 RVA: 0x0009AB30 File Offset: 0x00098D30
+	// Token: 0x06002007 RID: 8199 RVA: 0x000A1EFC File Offset: 0x000A00FC
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraAdjust.摄像机最小Pitch_目标比角色矮_, "CheckLowAdjustPitchMin");
@@ -47,7 +47,7 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		base.RegisterPairConfigKey(EFightCameraAdjust.检测屏幕内MinY, EFightCameraAdjust.检测屏幕内MaxY, true);
 	}
 
-	// Token: 0x06001F59 RID: 8025 RVA: 0x0009ACBA File Offset: 0x00098EBA
+	// Token: 0x06002008 RID: 8200 RVA: 0x000A2086 File Offset: 0x000A0286
 	protected override void OnDisable()
 	{
 		if (this.IsAdjusting)
@@ -56,7 +56,7 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06001F5A RID: 8026 RVA: 0x0009ACCC File Offset: 0x00098ECC
+	// Token: 0x06002009 RID: 8201 RVA: 0x000A2098 File Offset: 0x000A0298
 	public void ApplyCameraAdjust()
 	{
 		if (!this.IsActivate)
@@ -141,12 +141,12 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06001F5B RID: 8027 RVA: 0x0009B080 File Offset: 0x00099280
+	// Token: 0x0600200A RID: 8202 RVA: 0x000A244C File Offset: 0x000A064C
 	protected override void UpdateInternal(float deltaTime)
 	{
 	}
 
-	// Token: 0x06001F5C RID: 8028 RVA: 0x0009B08D File Offset: 0x0009928D
+	// Token: 0x0600200B RID: 8203 RVA: 0x000A2459 File Offset: 0x000A0659
 	private void EndAdjust()
 	{
 		this.Camera.CameraAutoController.DisableForce(this);
@@ -155,14 +155,14 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		this.IsAdjustedYaw = false;
 	}
 
-	// Token: 0x06001F5D RID: 8029 RVA: 0x0009B0B5 File Offset: 0x000992B5
+	// Token: 0x0600200C RID: 8204 RVA: 0x000A2481 File Offset: 0x000A0681
 	[NullableContext(1)]
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x06001F5E RID: 8030 RVA: 0x0009B0C0 File Offset: 0x000992C0
+	// Token: 0x0600200D RID: 8205 RVA: 0x000A248C File Offset: 0x000A068C
 	public override bool TryGetMember(string key, out object value)
 	{
 		if (key != null)
@@ -401,7 +401,7 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06001F5F RID: 8031 RVA: 0x0009B594 File Offset: 0x00099794
+	// Token: 0x0600200E RID: 8206 RVA: 0x000A2960 File Offset: 0x000A0B60
 	public override void SetMember(string key, object value)
 	{
 		if (key != null)
@@ -1101,7 +1101,7 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06001F60 RID: 8032 RVA: 0x0009C1B7 File Offset: 0x0009A3B7
+	// Token: 0x0600200F RID: 8207 RVA: 0x000A3583 File Offset: 0x000A1783
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
 		CameraAdjustController.<MemberIter>d__34 <MemberIter>d__ = new CameraAdjustController.<MemberIter>d__34(-2);
@@ -1109,77 +1109,77 @@ public class CameraAdjustController : CameraControllerBase, ICanGetConfigMapValu
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040012EF RID: 4847
+	// Token: 0x04001332 RID: 4914
 	public float CheckLowAdjustPitchMin;
 
-	// Token: 0x040012F0 RID: 4848
+	// Token: 0x04001333 RID: 4915
 	public float CheckLowAdjustPitchMax;
 
-	// Token: 0x040012F1 RID: 4849
+	// Token: 0x04001334 RID: 4916
 	public float CheckTallAdjustPitchMin;
 
-	// Token: 0x040012F2 RID: 4850
+	// Token: 0x04001335 RID: 4917
 	public float CheckTallAdjustPitchMax;
 
-	// Token: 0x040012F3 RID: 4851
+	// Token: 0x04001336 RID: 4918
 	public float CheckAdjustNearerRange;
 
-	// Token: 0x040012F4 RID: 4852
+	// Token: 0x04001337 RID: 4919
 	public float CheckAdjustNearerYawAngleMin;
 
-	// Token: 0x040012F5 RID: 4853
+	// Token: 0x04001338 RID: 4920
 	public float CheckAdjustNearerYawAngleMax;
 
-	// Token: 0x040012F6 RID: 4854
+	// Token: 0x04001339 RID: 4921
 	public float CheckAdjustFartherYawAngleMin;
 
-	// Token: 0x040012F7 RID: 4855
+	// Token: 0x0400133A RID: 4922
 	public float CheckAdjustFartherYawAngleMax;
 
-	// Token: 0x040012F8 RID: 4856
+	// Token: 0x0400133B RID: 4923
 	public float CheckInScreenMinX;
 
-	// Token: 0x040012F9 RID: 4857
+	// Token: 0x0400133C RID: 4924
 	public float CheckInScreenMaxX;
 
-	// Token: 0x040012FA RID: 4858
+	// Token: 0x0400133D RID: 4925
 	public float CheckInScreenMinY;
 
-	// Token: 0x040012FB RID: 4859
+	// Token: 0x0400133E RID: 4926
 	public float CheckInScreenMaxY;
 
-	// Token: 0x040012FC RID: 4860
+	// Token: 0x0400133F RID: 4927
 	public float DefaultAdjustFadeTime;
 
-	// Token: 0x040012FD RID: 4861
+	// Token: 0x04001340 RID: 4928
 	[Nullable(2)]
 	public CurveBase DefaultAdjustFadeCurve;
 
-	// Token: 0x040012FE RID: 4862
+	// Token: 0x04001341 RID: 4929
 	private bool IsAdjusting;
 
-	// Token: 0x040012FF RID: 4863
+	// Token: 0x04001342 RID: 4930
 	private bool IsAdjustedPitch;
 
-	// Token: 0x04001300 RID: 4864
+	// Token: 0x04001343 RID: 4931
 	private float AdjustBeginRotatorPitch;
 
-	// Token: 0x04001301 RID: 4865
+	// Token: 0x04001344 RID: 4932
 	private float AdjustDesiredRotatorPitch;
 
-	// Token: 0x04001302 RID: 4866
+	// Token: 0x04001345 RID: 4933
 	private bool IsAdjustedYaw;
 
-	// Token: 0x04001303 RID: 4867
+	// Token: 0x04001346 RID: 4934
 	private float AdjustBeginRotatorYaw;
 
-	// Token: 0x04001304 RID: 4868
+	// Token: 0x04001347 RID: 4935
 	private float AdjustDesiredRotatorYaw;
 
-	// Token: 0x04001305 RID: 4869
+	// Token: 0x04001348 RID: 4936
 	private float AdjustElapsedTime;
 
-	// Token: 0x04001306 RID: 4870
+	// Token: 0x04001349 RID: 4937
 	[Nullable(1)]
 	private readonly Vector TmpTargetOffset = Vector.Create();
 }

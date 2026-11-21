@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000DAF RID: 3503
+	// Token: 0x02000D9F RID: 3487
 	public sealed class PlayerSkillInfoPb : IMessage<PlayerSkillInfoPb>, IMessage, IEquatable<PlayerSkillInfoPb>, IDeepCloneable<PlayerSkillInfoPb>, IBufferMessage
 	{
-		// Token: 0x06012E08 RID: 77320 RVA: 0x002C107A File Offset: 0x002BF27A
+		// Token: 0x06012D0C RID: 77068 RVA: 0x002BF456 File Offset: 0x002BD656
 		[NullableContext(1)]
 		public static PlayerSkillInfoPb Create()
 		{
 			return new PlayerSkillInfoPb();
 		}
 
-		// Token: 0x17003EAA RID: 16042
-		// (get) Token: 0x06012E09 RID: 77321 RVA: 0x002C1081 File Offset: 0x002BF281
+		// Token: 0x17003E75 RID: 15989
+		// (get) Token: 0x06012D0D RID: 77069 RVA: 0x002BF45D File Offset: 0x002BD65D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003EAB RID: 16043
-		// (get) Token: 0x06012E0A RID: 77322 RVA: 0x002C1084 File Offset: 0x002BF284
+		// Token: 0x17003E76 RID: 15990
+		// (get) Token: 0x06012D0E RID: 77070 RVA: 0x002BF460 File Offset: 0x002BD660
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012E0B RID: 77323 RVA: 0x002C108B File Offset: 0x002BF28B
+		// Token: 0x06012D0F RID: 77071 RVA: 0x002BF467 File Offset: 0x002BD667
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerSkillInfoPb()
 		{
 		}
 
-		// Token: 0x06012E0C RID: 77324 RVA: 0x002C10A0 File Offset: 0x002BF2A0
+		// Token: 0x06012D10 RID: 77072 RVA: 0x002BF47C File Offset: 0x002BD67C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerSkillInfoPb(PlayerSkillInfoPb other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012E0D RID: 77325 RVA: 0x002C10F1 File Offset: 0x002BF2F1
+		// Token: 0x06012D11 RID: 77073 RVA: 0x002BF4CD File Offset: 0x002BD6CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerSkillInfoPb Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new PlayerSkillInfoPb(this);
 		}
 
-		// Token: 0x17003EAC RID: 16044
-		// (get) Token: 0x06012E0E RID: 77326 RVA: 0x002C10F9 File Offset: 0x002BF2F9
-		// (set) Token: 0x06012E0F RID: 77327 RVA: 0x002C1101 File Offset: 0x002BF301
+		// Token: 0x17003E77 RID: 15991
+		// (get) Token: 0x06012D12 RID: 77074 RVA: 0x002BF4D5 File Offset: 0x002BD6D5
+		// (set) Token: 0x06012D13 RID: 77075 RVA: 0x002BF4DD File Offset: 0x002BD6DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillInfoPb RoleCommonSkillInfoPb
@@ -84,8 +84,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003EAD RID: 16045
-		// (get) Token: 0x06012E10 RID: 77328 RVA: 0x002C110A File Offset: 0x002BF30A
+		// Token: 0x17003E78 RID: 15992
+		// (get) Token: 0x06012D14 RID: 77076 RVA: 0x002BF4E6 File Offset: 0x002BD6E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RoleSkillInfoPb> RoleSkillInfoPbList
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012E11 RID: 77329 RVA: 0x002C1112 File Offset: 0x002BF312
+		// Token: 0x06012D15 RID: 77077 RVA: 0x002BF4EE File Offset: 0x002BD6EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerSkillInfoPb);
 		}
 
-		// Token: 0x06012E12 RID: 77330 RVA: 0x002C1120 File Offset: 0x002BF320
+		// Token: 0x06012D16 RID: 77078 RVA: 0x002BF4FC File Offset: 0x002BD6FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerSkillInfoPb other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.RoleCommonSkillInfoPb, other.RoleCommonSkillInfoPb) && this.roleSkillInfoPbList_.Equals(other.roleSkillInfoPbList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012E13 RID: 77331 RVA: 0x002C1174 File Offset: 0x002BF374
+		// Token: 0x06012D17 RID: 77079 RVA: 0x002BF550 File Offset: 0x002BD750
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012E14 RID: 77332 RVA: 0x002C11BE File Offset: 0x002BF3BE
+		// Token: 0x06012D18 RID: 77080 RVA: 0x002BF59A File Offset: 0x002BD79A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012E15 RID: 77333 RVA: 0x002C11CB File Offset: 0x002BF3CB
+		// Token: 0x06012D19 RID: 77081 RVA: 0x002BF5A7 File Offset: 0x002BD7A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012E16 RID: 77334 RVA: 0x002C11D4 File Offset: 0x002BF3D4
+		// Token: 0x06012D1A RID: 77082 RVA: 0x002BF5B0 File Offset: 0x002BD7B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012E17 RID: 77335 RVA: 0x002C1224 File Offset: 0x002BF424
+		// Token: 0x06012D1B RID: 77083 RVA: 0x002BF600 File Offset: 0x002BD800
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012E18 RID: 77336 RVA: 0x002C1278 File Offset: 0x002BF478
+		// Token: 0x06012D1C RID: 77084 RVA: 0x002BF654 File Offset: 0x002BD854
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerSkillInfoPb other)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012E19 RID: 77337 RVA: 0x002C12DD File Offset: 0x002BF4DD
+		// Token: 0x06012D1D RID: 77085 RVA: 0x002BF6B9 File Offset: 0x002BD8B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012E1A RID: 77338 RVA: 0x002C12E8 File Offset: 0x002BF4E8
+		// Token: 0x06012D1E RID: 77086 RVA: 0x002BF6C4 File Offset: 0x002BD8C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -244,22 +244,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040074DE RID: 29918
+		// Token: 0x040074F6 RID: 29942
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040074DF RID: 29919
+		// Token: 0x040074F7 RID: 29943
 		public const int RoleCommonSkillInfoPbFieldNumber = 1;
 
-		// Token: 0x040074E0 RID: 29920
+		// Token: 0x040074F8 RID: 29944
 		private SkillInfoPb roleCommonSkillInfoPb_;
 
-		// Token: 0x040074E1 RID: 29921
+		// Token: 0x040074F9 RID: 29945
 		public const int RoleSkillInfoPbListFieldNumber = 2;
 
-		// Token: 0x040074E2 RID: 29922
+		// Token: 0x040074FA RID: 29946
 		private static readonly FieldCodec<RoleSkillInfoPb> _repeated_roleSkillInfoPbList_codec = FieldCodec.ForMessage<RoleSkillInfoPb>(18U, RoleSkillInfoPb.Parser);
 
-		// Token: 0x040074E3 RID: 29923
+		// Token: 0x040074FB RID: 29947
 		private readonly RepeatedField<RoleSkillInfoPb> roleSkillInfoPbList_ = new RepeatedField<RoleSkillInfoPb>();
 	}
 }

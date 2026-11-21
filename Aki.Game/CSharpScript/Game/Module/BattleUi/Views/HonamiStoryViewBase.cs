@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D5C RID: 23900
+	// Token: 0x02004D3E RID: 19774
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class HonamiStoryViewBase : BattleVisibleChildView
 	{
-		// Token: 0x0603CABC RID: 248508 RVA: 0x00E90544 File Offset: 0x00E8E744
+		// Token: 0x06031A15 RID: 203285 RVA: 0x00DE0CF8 File Offset: 0x00DDEEF8
 		protected override void OnStart()
 		{
 			this.OnInitData();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CABD RID: 248509 RVA: 0x00E906A0 File Offset: 0x00E8E8A0
+		// Token: 0x06031A16 RID: 203286 RVA: 0x00DE0E54 File Offset: 0x00DDF054
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CABE RID: 248510 RVA: 0x00E90750 File Offset: 0x00E8E950
+		// Token: 0x06031A17 RID: 203287 RVA: 0x00DE0F04 File Offset: 0x00DDF104
 		protected override void OnBeforeShow()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshAttribute(true);
 		}
 
-		// Token: 0x0603CABF RID: 248511 RVA: 0x00E907E8 File Offset: 0x00E8E9E8
+		// Token: 0x06031A18 RID: 203288 RVA: 0x00DE0F9C File Offset: 0x00DDF19C
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotViewChange, new Action<EUiViewName, bool>(this.OnPlotViewChange));
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			FormationAttributeController.Instance.RemoveMaxListener(EFormationAttributeId.HonamiStoryLifeSupport, new TValueListener(this.OnAttributeChanged));
 		}
 
-		// Token: 0x0603CAC0 RID: 248512 RVA: 0x00E90844 File Offset: 0x00E8EA44
+		// Token: 0x06031A19 RID: 203289 RVA: 0x00DE0FF8 File Offset: 0x00DDF1F8
 		private void OnPlotViewChange(EUiViewName viewName, bool isShow)
 		{
 			if (viewName != EUiViewName.PlotViewHUD)
@@ -102,13 +102,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenPlayer.PlayTweenAnim(this.InTweenType);
 		}
 
-		// Token: 0x0603CAC1 RID: 248513 RVA: 0x00E908A7 File Offset: 0x00E8EAA7
+		// Token: 0x06031A1A RID: 203290 RVA: 0x00DE105B File Offset: 0x00DDF25B
 		private void OnAttributeChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			this.RefreshAttribute(false);
 		}
 
-		// Token: 0x0603CAC2 RID: 248514 RVA: 0x00E908B0 File Offset: 0x00E8EAB0
+		// Token: 0x06031A1B RID: 203291 RVA: 0x00DE1064 File Offset: 0x00DDF264
 		private void RefreshAttribute(bool isInit = false)
 		{
 			float value = FormationAttributeController.Instance.GetValue(EFormationAttributeId.HonamiStoryLifeSupport);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(this.HpTextType).SetText(this.GetHpText(ehpStateType, value, max), true);
 		}
 
-		// Token: 0x0603CAC3 RID: 248515 RVA: 0x00E90978 File Offset: 0x00E8EB78
+		// Token: 0x06031A1C RID: 203292 RVA: 0x00DE112C File Offset: 0x00DDF32C
 		private string GetHpText(EHpStateType state, float curValue, float maxValue)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0603CAC4 RID: 248516 RVA: 0x00E90A88 File Offset: 0x00E8EC88
+		// Token: 0x06031A1D RID: 203293 RVA: 0x00DE123C File Offset: 0x00DDF43C
 		private void OnFunctionOpenUpdate(EFunctionType functionType, bool isOpen)
 		{
 			EFunctionType? efunctionType = this.ShowFunctionType;
@@ -197,66 +197,66 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(1, !flag3);
 		}
 
-		// Token: 0x0603CAC5 RID: 248517 RVA: 0x00E90B35 File Offset: 0x00E8ED35
+		// Token: 0x06031A1E RID: 203294 RVA: 0x00DE12E9 File Offset: 0x00DDF4E9
 		private void PlaySequence(string sequenceName)
 		{
 			this.SequencePlayer.StopPrevSequence(false, true);
 			this.SequencePlayer.PlaySequencePurely(sequenceName, false, false);
 		}
 
-		// Token: 0x0603CAC6 RID: 248518 RVA: 0x00E90B52 File Offset: 0x00E8ED52
+		// Token: 0x06031A1F RID: 203295 RVA: 0x00DE1306 File Offset: 0x00DDF506
 		protected virtual void OnInitData()
 		{
 		}
 
-		// Token: 0x0603CAC7 RID: 248519 RVA: 0x00E90B54 File Offset: 0x00E8ED54
+		// Token: 0x06031A20 RID: 203296 RVA: 0x00DE1308 File Offset: 0x00DDF508
 		protected virtual void OnRefreshState(EHpStateType state)
 		{
 		}
 
-		// Token: 0x0603CAC8 RID: 248520 RVA: 0x00E90B56 File Offset: 0x00E8ED56
+		// Token: 0x06031A21 RID: 203297 RVA: 0x00DE130A File Offset: 0x00DDF50A
 		protected virtual void OnRefreshAttribute(float percent, EHpStateType state)
 		{
 		}
 
-		// Token: 0x0401F9A4 RID: 129444
+		// Token: 0x0401A45D RID: 107613
 		protected const EFormationAttributeId AttributeId = EFormationAttributeId.HonamiStoryLifeSupport;
 
-		// Token: 0x0401F9A5 RID: 129445
+		// Token: 0x0401A45E RID: 107614
 		private const float ROOT_TRANSLUCENT_ALPHA = 0.2f;
 
-		// Token: 0x0401F9A6 RID: 129446
+		// Token: 0x0401A45F RID: 107615
 		protected float DangerPercent;
 
-		// Token: 0x0401F9A7 RID: 129447
+		// Token: 0x0401A460 RID: 107616
 		protected float NormalPercent;
 
-		// Token: 0x0401F9A8 RID: 129448
+		// Token: 0x0401A461 RID: 107617
 		private EHpStateType StateType;
 
-		// Token: 0x0401F9A9 RID: 129449
+		// Token: 0x0401A462 RID: 107618
 		protected int HpTextType;
 
-		// Token: 0x0401F9AA RID: 129450
+		// Token: 0x0401A463 RID: 107619
 		protected int InTweenType;
 
-		// Token: 0x0401F9AB RID: 129451
+		// Token: 0x0401A464 RID: 107620
 		protected int OutTweenType;
 
-		// Token: 0x0401F9AC RID: 129452
+		// Token: 0x0401A465 RID: 107621
 		protected string DangerPercentConfigId = string.Empty;
 
-		// Token: 0x0401F9AD RID: 129453
+		// Token: 0x0401A466 RID: 107622
 		protected EFunctionType? ShowFunctionType;
 
-		// Token: 0x0401F9AE RID: 129454
+		// Token: 0x0401A467 RID: 107623
 		protected EFunctionType? HideFunctionType;
 
-		// Token: 0x0401F9AF RID: 129455
+		// Token: 0x0401A468 RID: 107624
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401F9B0 RID: 129456
+		// Token: 0x0401A469 RID: 107625
 		[Nullable(2)]
 		private BattleUiTweenAnimPlayer TweenPlayer;
 	}

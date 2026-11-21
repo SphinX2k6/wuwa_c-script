@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006413 RID: 25619
+	// Token: 0x02005391 RID: 21393
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,8 +16,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightItemSmallGrid : LoopScrollSmallItemGrid<MotorFightItemData>
 	{
-		// Token: 0x17009475 RID: 38005
-		// (get) Token: 0x060406F3 RID: 263923 RVA: 0x00F965D9 File Offset: 0x00F947D9
+		// Token: 0x170067D7 RID: 26583
+		// (get) Token: 0x060353B4 RID: 218036 RVA: 0x00EDD579 File Offset: 0x00EDB779
 		public new MotorFightItemData Data
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406F4 RID: 263924 RVA: 0x00F965E8 File Offset: 0x00F947E8
+		// Token: 0x060353B5 RID: 218037 RVA: 0x00EDD588 File Offset: 0x00EDB788
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060406F5 RID: 263925 RVA: 0x00F96754 File Offset: 0x00F94954
+		// Token: 0x060353B6 RID: 218038 RVA: 0x00EDD6F4 File Offset: 0x00EDB8F4
 		[NullableContext(1)]
 		protected override void OnRefresh(MotorFightItemData data, bool isSelected, int gridIndex)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			base.SetLeftTopIconVisible(MotorFightConfig.Instance.GetMotorFightItemType(data.Type).Value.Icon);
 		}
 
-		// Token: 0x060406F6 RID: 263926 RVA: 0x00F96808 File Offset: 0x00F94A08
+		// Token: 0x060353B7 RID: 218039 RVA: 0x00EDD7A8 File Offset: 0x00EDB9A8
 		private void OnClickToggle(EToggleState _)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(7);
@@ -85,32 +85,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			UiManager.Instance.OpenView(EUiViewName.MotorFightItemTips, this.Data, null);
 		}
 
-		// Token: 0x0200C637 RID: 50743
+		// Token: 0x0200B01E RID: 45086
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BD6E RID: 245102
+			// Token: 0x040366CB RID: 222923
 			public const int SpriteQuality = 0;
 
-			// Token: 0x0403BD6F RID: 245103
+			// Token: 0x040366CC RID: 222924
 			public const int TextureIcon = 1;
 
-			// Token: 0x0403BD70 RID: 245104
+			// Token: 0x040366CD RID: 222925
 			public const int ItemTextPanel = 2;
 
-			// Token: 0x0403BD71 RID: 245105
+			// Token: 0x040366CE RID: 222926
 			public const int TextNum = 3;
 
-			// Token: 0x0403BD72 RID: 245106
+			// Token: 0x040366CF RID: 222927
 			public const int SpriteBg = 4;
 
-			// Token: 0x0403BD73 RID: 245107
+			// Token: 0x040366D0 RID: 222928
 			public const int ItemBottomAddPanel = 5;
 
-			// Token: 0x0403BD74 RID: 245108
+			// Token: 0x040366D1 RID: 222929
 			public const int ItemAddPanel = 6;
 
-			// Token: 0x0403BD75 RID: 245109
+			// Token: 0x040366D2 RID: 222930
 			public const int ToggleRoot = 7;
 		}
 	}

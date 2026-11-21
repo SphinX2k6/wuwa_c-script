@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020007C1 RID: 1985
+	// Token: 0x020007AD RID: 1965
 	public sealed class ICustomScreenTextSettingPb : IMessage<ICustomScreenTextSettingPb>, IMessage, IEquatable<ICustomScreenTextSettingPb>, IDeepCloneable<ICustomScreenTextSettingPb>, IBufferMessage
 	{
-		// Token: 0x0600B28D RID: 45709 RVA: 0x001AB6C0 File Offset: 0x001A98C0
+		// Token: 0x0600B137 RID: 45367 RVA: 0x001A8C90 File Offset: 0x001A6E90
 		[NullableContext(1)]
 		public static ICustomScreenTextSettingPb Create()
 		{
 			return new ICustomScreenTextSettingPb();
 		}
 
-		// Token: 0x17002402 RID: 9218
-		// (get) Token: 0x0600B28E RID: 45710 RVA: 0x001AB6C7 File Offset: 0x001A98C7
+		// Token: 0x170023B8 RID: 9144
+		// (get) Token: 0x0600B138 RID: 45368 RVA: 0x001A8C97 File Offset: 0x001A6E97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002403 RID: 9219
-		// (get) Token: 0x0600B28F RID: 45711 RVA: 0x001AB6CA File Offset: 0x001A98CA
+		// Token: 0x170023B9 RID: 9145
+		// (get) Token: 0x0600B139 RID: 45369 RVA: 0x001A8C9A File Offset: 0x001A6E9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B290 RID: 45712 RVA: 0x001AB6D1 File Offset: 0x001A98D1
+		// Token: 0x0600B13A RID: 45370 RVA: 0x001A8CA1 File Offset: 0x001A6EA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ICustomScreenTextSettingPb()
 		{
 		}
 
-		// Token: 0x0600B291 RID: 45713 RVA: 0x001AB6DC File Offset: 0x001A98DC
+		// Token: 0x0600B13B RID: 45371 RVA: 0x001A8CAC File Offset: 0x001A6EAC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ICustomScreenTextSettingPb(ICustomScreenTextSettingPb other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600B292 RID: 45714 RVA: 0x001AB730 File Offset: 0x001A9930
+		// Token: 0x0600B13C RID: 45372 RVA: 0x001A8D00 File Offset: 0x001A6F00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ICustomScreenTextSettingPb Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new ICustomScreenTextSettingPb(this);
 		}
 
-		// Token: 0x17002404 RID: 9220
-		// (get) Token: 0x0600B293 RID: 45715 RVA: 0x001AB738 File Offset: 0x001A9938
-		// (set) Token: 0x0600B294 RID: 45716 RVA: 0x001AB750 File Offset: 0x001A9950
+		// Token: 0x170023BA RID: 9146
+		// (get) Token: 0x0600B13D RID: 45373 RVA: 0x001A8D08 File Offset: 0x001A6F08
+		// (set) Token: 0x0600B13E RID: 45374 RVA: 0x001A8D20 File Offset: 0x001A6F20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsShowTextInfo
@@ -90,8 +90,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002405 RID: 9221
-		// (get) Token: 0x0600B295 RID: 45717 RVA: 0x001AB767 File Offset: 0x001A9967
+		// Token: 0x170023BB RID: 9147
+		// (get) Token: 0x0600B13F RID: 45375 RVA: 0x001A8D37 File Offset: 0x001A6F37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasIsShowTextInfo
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B296 RID: 45718 RVA: 0x001AB774 File Offset: 0x001A9974
+		// Token: 0x0600B140 RID: 45376 RVA: 0x001A8D44 File Offset: 0x001A6F44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearIsShowTextInfo()
@@ -110,9 +110,9 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x17002406 RID: 9222
-		// (get) Token: 0x0600B297 RID: 45719 RVA: 0x001AB785 File Offset: 0x001A9985
-		// (set) Token: 0x0600B298 RID: 45720 RVA: 0x001AB796 File Offset: 0x001A9996
+		// Token: 0x170023BC RID: 9148
+		// (get) Token: 0x0600B141 RID: 45377 RVA: 0x001A8D55 File Offset: 0x001A6F55
+		// (set) Token: 0x0600B142 RID: 45378 RVA: 0x001A8D66 File Offset: 0x001A6F66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string TidTextContent
@@ -127,8 +127,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002407 RID: 9223
-		// (get) Token: 0x0600B299 RID: 45721 RVA: 0x001AB7A9 File Offset: 0x001A99A9
+		// Token: 0x170023BD RID: 9149
+		// (get) Token: 0x0600B143 RID: 45379 RVA: 0x001A8D79 File Offset: 0x001A6F79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasTidTextContent
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B29A RID: 45722 RVA: 0x001AB7B4 File Offset: 0x001A99B4
+		// Token: 0x0600B144 RID: 45380 RVA: 0x001A8D84 File Offset: 0x001A6F84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearTidTextContent()
@@ -147,9 +147,9 @@ namespace Aki.Protocol
 			this.tidTextContent_ = null;
 		}
 
-		// Token: 0x17002408 RID: 9224
-		// (get) Token: 0x0600B29B RID: 45723 RVA: 0x001AB7BD File Offset: 0x001A99BD
-		// (set) Token: 0x0600B29C RID: 45724 RVA: 0x001AB7CE File Offset: 0x001A99CE
+		// Token: 0x170023BE RID: 9150
+		// (get) Token: 0x0600B145 RID: 45381 RVA: 0x001A8D8D File Offset: 0x001A6F8D
+		// (set) Token: 0x0600B146 RID: 45382 RVA: 0x001A8D9E File Offset: 0x001A6F9E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string EdTidTextContent
@@ -164,8 +164,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002409 RID: 9225
-		// (get) Token: 0x0600B29D RID: 45725 RVA: 0x001AB7E1 File Offset: 0x001A99E1
+		// Token: 0x170023BF RID: 9151
+		// (get) Token: 0x0600B147 RID: 45383 RVA: 0x001A8DB1 File Offset: 0x001A6FB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasEdTidTextContent
@@ -176,7 +176,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B29E RID: 45726 RVA: 0x001AB7EC File Offset: 0x001A99EC
+		// Token: 0x0600B148 RID: 45384 RVA: 0x001A8DBC File Offset: 0x001A6FBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearEdTidTextContent()
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 			this.edTidTextContent_ = null;
 		}
 
-		// Token: 0x0600B29F RID: 45727 RVA: 0x001AB7F5 File Offset: 0x001A99F5
+		// Token: 0x0600B149 RID: 45385 RVA: 0x001A8DC5 File Offset: 0x001A6FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -192,7 +192,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ICustomScreenTextSettingPb);
 		}
 
-		// Token: 0x0600B2A0 RID: 45728 RVA: 0x001AB804 File Offset: 0x001A9A04
+		// Token: 0x0600B14A RID: 45386 RVA: 0x001A8DD4 File Offset: 0x001A6FD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ICustomScreenTextSettingPb other)
@@ -200,7 +200,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IsShowTextInfo == other.IsShowTextInfo && !(this.TidTextContent != other.TidTextContent) && !(this.EdTidTextContent != other.EdTidTextContent) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600B2A1 RID: 45729 RVA: 0x001AB868 File Offset: 0x001A9A68
+		// Token: 0x0600B14B RID: 45387 RVA: 0x001A8E38 File Offset: 0x001A7038
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -225,7 +225,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B2A2 RID: 45730 RVA: 0x001AB8D3 File Offset: 0x001A9AD3
+		// Token: 0x0600B14C RID: 45388 RVA: 0x001A8EA3 File Offset: 0x001A70A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600B2A3 RID: 45731 RVA: 0x001AB8E0 File Offset: 0x001A9AE0
+		// Token: 0x0600B14D RID: 45389 RVA: 0x001A8EB0 File Offset: 0x001A70B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600B2A4 RID: 45732 RVA: 0x001AB8EC File Offset: 0x001A9AEC
+		// Token: 0x0600B14E RID: 45390 RVA: 0x001A8EBC File Offset: 0x001A70BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -267,7 +267,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B2A5 RID: 45733 RVA: 0x001AB960 File Offset: 0x001A9B60
+		// Token: 0x0600B14F RID: 45391 RVA: 0x001A8F30 File Offset: 0x001A7130
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -292,7 +292,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B2A6 RID: 45734 RVA: 0x001AB9C4 File Offset: 0x001A9BC4
+		// Token: 0x0600B150 RID: 45392 RVA: 0x001A8F94 File Offset: 0x001A7194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ICustomScreenTextSettingPb other)
@@ -316,7 +316,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600B2A7 RID: 45735 RVA: 0x001ABA28 File Offset: 0x001A9C28
+		// Token: 0x0600B151 RID: 45393 RVA: 0x001A8FF8 File Offset: 0x001A71F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -324,7 +324,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600B2A8 RID: 45736 RVA: 0x001ABA34 File Offset: 0x001A9C34
+		// Token: 0x0600B152 RID: 45394 RVA: 0x001A9004 File Offset: 0x001A7204
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -361,37 +361,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004FC6 RID: 20422
+		// Token: 0x04004FBF RID: 20415
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004FC7 RID: 20423
+		// Token: 0x04004FC0 RID: 20416
 		private int _hasBits0;
 
-		// Token: 0x04004FC8 RID: 20424
+		// Token: 0x04004FC1 RID: 20417
 		public const int IsShowTextInfoFieldNumber = 1;
 
-		// Token: 0x04004FC9 RID: 20425
+		// Token: 0x04004FC2 RID: 20418
 		private static readonly bool IsShowTextInfoDefaultValue = false;
 
-		// Token: 0x04004FCA RID: 20426
+		// Token: 0x04004FC3 RID: 20419
 		private bool isShowTextInfo_;
 
-		// Token: 0x04004FCB RID: 20427
+		// Token: 0x04004FC4 RID: 20420
 		public const int TidTextContentFieldNumber = 2;
 
-		// Token: 0x04004FCC RID: 20428
+		// Token: 0x04004FC5 RID: 20421
 		private static readonly string TidTextContentDefaultValue = "";
 
-		// Token: 0x04004FCD RID: 20429
+		// Token: 0x04004FC6 RID: 20422
 		private string tidTextContent_;
 
-		// Token: 0x04004FCE RID: 20430
+		// Token: 0x04004FC7 RID: 20423
 		public const int EdTidTextContentFieldNumber = 3;
 
-		// Token: 0x04004FCF RID: 20431
+		// Token: 0x04004FC8 RID: 20424
 		private static readonly string EdTidTextContentDefaultValue = "";
 
-		// Token: 0x04004FD0 RID: 20432
+		// Token: 0x04004FC9 RID: 20425
 		private string edTidTextContent_;
 	}
 }

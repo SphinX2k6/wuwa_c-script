@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x0200526F RID: 21103
+	// Token: 0x0200423F RID: 16959
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleDetailsFieldItem : UiPanelBase
 	{
-		// Token: 0x06035F62 RID: 221026 RVA: 0x00CC4330 File Offset: 0x00CC2530
+		// Token: 0x0602AE5D RID: 175709 RVA: 0x00C11A30 File Offset: 0x00C0FC30
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,33 +26,33 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			};
 		}
 
-		// Token: 0x06035F63 RID: 221027 RVA: 0x00CC4397 File Offset: 0x00CC2597
+		// Token: 0x0602AE5E RID: 175710 RVA: 0x00C11A97 File Offset: 0x00C0FC97
 		private void OnClick()
 		{
 		}
 
-		// Token: 0x06035F64 RID: 221028 RVA: 0x00CC4399 File Offset: 0x00CC2599
+		// Token: 0x0602AE5F RID: 175711 RVA: 0x00C11A99 File Offset: 0x00C0FC99
 		public void Refresh(PhantomArenaFieldData fieldData)
 		{
 		}
 
-		// Token: 0x06035F65 RID: 221029 RVA: 0x00CC439B File Offset: 0x00CC259B
+		// Token: 0x0602AE60 RID: 175712 RVA: 0x00C11A9B File Offset: 0x00C0FC9B
 		public void RegisterProxy(PhantomArenaBattleDetailsViewProxy proxy)
 		{
 			this.Proxy = proxy;
 		}
 
-		// Token: 0x0401C928 RID: 117032
+		// Token: 0x0401735D RID: 95069
 		protected PhantomArenaBattleDetailsViewProxy Proxy;
 
-		// Token: 0x0200B45F RID: 46175
+		// Token: 0x02009E97 RID: 40599
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036A64 RID: 223844
+			// Token: 0x040314B7 RID: 201911
 			public const int Icon = 0;
 
-			// Token: 0x04036A65 RID: 223845
+			// Token: 0x040314B8 RID: 201912
 			public const int Button = 1;
 		}
 	}

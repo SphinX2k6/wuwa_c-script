@@ -5,15 +5,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 {
-	// Token: 0x02006DEF RID: 28143
+	// Token: 0x02005F6E RID: 24430
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ItemInspectPointManager
 	{
-		// Token: 0x06044A9B RID: 281243
+		// Token: 0x0603ABFF RID: 240639
 		public abstract void Init(ISequenceUnlockPoints config);
 
-		// Token: 0x06044A9C RID: 281244 RVA: 0x010F2FF4 File Offset: 0x010F11F4
+		// Token: 0x0603AC00 RID: 240640 RVA: 0x0109D240 File Offset: 0x0109B440
 		protected ItemInspectPoint CreatePoint(IInteractPoint config)
 		{
 			ItemInspectPoint itemInspectPoint = new ItemInspectPoint();
@@ -33,25 +33,25 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return itemInspectPoint;
 		}
 
-		// Token: 0x06044A9D RID: 281245 RVA: 0x010F3083 File Offset: 0x010F1283
+		// Token: 0x0603AC01 RID: 240641 RVA: 0x0109D2CF File Offset: 0x0109B4CF
 		protected virtual bool IsCurrentStageComplete()
 		{
 			return false;
 		}
 
-		// Token: 0x06044A9E RID: 281246 RVA: 0x010F3086 File Offset: 0x010F1286
+		// Token: 0x0603AC02 RID: 240642 RVA: 0x0109D2D2 File Offset: 0x0109B4D2
 		public int GetMaxValidCount()
 		{
 			return this.MaxValidCount;
 		}
 
-		// Token: 0x06044A9F RID: 281247 RVA: 0x010F308E File Offset: 0x010F128E
+		// Token: 0x0603AC03 RID: 240643 RVA: 0x0109D2DA File Offset: 0x0109B4DA
 		public int GetCheckedValidCount()
 		{
 			return this.CheckedValidCount;
 		}
 
-		// Token: 0x06044AA0 RID: 281248 RVA: 0x010F3098 File Offset: 0x010F1298
+		// Token: 0x0603AC04 RID: 240644 RVA: 0x0109D2E4 File Offset: 0x0109B4E4
 		[NullableContext(2)]
 		public ItemInspectPoint GetPoint(int tagId)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return null;
 		}
 
-		// Token: 0x06044AA1 RID: 281249 RVA: 0x010F30B8 File Offset: 0x010F12B8
+		// Token: 0x0603AC05 RID: 240645 RVA: 0x0109D304 File Offset: 0x0109B504
 		public bool CheckPoint(int tagId)
 		{
 			ItemInspectPoint itemInspectPoint;
@@ -80,20 +80,20 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return this.IsCurrentStageComplete();
 		}
 
-		// Token: 0x06044AA2 RID: 281250 RVA: 0x010F30FC File Offset: 0x010F12FC
+		// Token: 0x0603AC06 RID: 240646 RVA: 0x0109D348 File Offset: 0x0109B548
 		public virtual EInteractPointInteractionType? GetCurrentStageInteractionType()
 		{
 			return null;
 		}
 
-		// Token: 0x06044AA3 RID: 281251 RVA: 0x010F3112 File Offset: 0x010F1312
+		// Token: 0x0603AC07 RID: 240647 RVA: 0x0109D35E File Offset: 0x0109B55E
 		[NullableContext(2)]
 		public virtual ItemInspectPoint GetCurrentStageDragPoint()
 		{
 			return null;
 		}
 
-		// Token: 0x06044AA4 RID: 281252 RVA: 0x010F3115 File Offset: 0x010F1315
+		// Token: 0x0603AC08 RID: 240648 RVA: 0x0109D361 File Offset: 0x0109B561
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -104,36 +104,36 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 			return null;
 		}
 
-		// Token: 0x06044AA5 RID: 281253 RVA: 0x010F3118 File Offset: 0x010F1318
+		// Token: 0x0603AC09 RID: 240649 RVA: 0x0109D364 File Offset: 0x0109B564
 		public virtual bool ShouldResetAfterCurrentStageEnd()
 		{
 			return false;
 		}
 
-		// Token: 0x06044AA6 RID: 281254 RVA: 0x010F311B File Offset: 0x010F131B
+		// Token: 0x0603AC0A RID: 240650 RVA: 0x0109D367 File Offset: 0x0109B567
 		public virtual bool HasNextStage()
 		{
 			return false;
 		}
 
-		// Token: 0x06044AA7 RID: 281255 RVA: 0x010F311E File Offset: 0x010F131E
+		// Token: 0x0603AC0B RID: 240651 RVA: 0x0109D36A File Offset: 0x0109B56A
 		public virtual bool AdvanceToNextStage()
 		{
 			return false;
 		}
 
-		// Token: 0x06044AA8 RID: 281256 RVA: 0x010F3121 File Offset: 0x010F1321
+		// Token: 0x0603AC0C RID: 240652 RVA: 0x0109D36D File Offset: 0x0109B56D
 		public virtual void ActivateCurrentStage()
 		{
 		}
 
-		// Token: 0x04023B96 RID: 146326
+		// Token: 0x0401EE38 RID: 126520
 		private readonly Dictionary<int, ItemInspectPoint> TagIdToPointMap = new Dictionary<int, ItemInspectPoint>();
 
-		// Token: 0x04023B97 RID: 146327
+		// Token: 0x0401EE39 RID: 126521
 		private int MaxValidCount;
 
-		// Token: 0x04023B98 RID: 146328
+		// Token: 0x0401EE3A RID: 126522
 		private int CheckedValidCount;
 	}
 }

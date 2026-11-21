@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200218E RID: 8590
+	// Token: 0x020023F7 RID: 9207
 	public class SeqEventAddTagToSelf_SetValue
 	{
-		// Token: 0x040070AB RID: 28843
-		[Nullable(1)]
+		// Token: 0x040076ED RID: 30445
 		public List<int> Tags;
 	}
 }

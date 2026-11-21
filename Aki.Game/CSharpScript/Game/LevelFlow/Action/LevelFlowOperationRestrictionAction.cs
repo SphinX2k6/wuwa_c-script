@@ -6,10 +6,10 @@ using CSharpScript.Game.LevelGamePlay.OperationRestrict;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F90 RID: 28560
+	// Token: 0x02006111 RID: 24849
 	public class LevelFlowOperationRestrictionAction : LevelFlowActionBase
 	{
-		// Token: 0x06045734 RID: 284468 RVA: 0x01139B54 File Offset: 0x01137D54
+		// Token: 0x0603B8E2 RID: 243938 RVA: 0x010E3958 File Offset: 0x010E1B58
 		[NullableContext(1)]
 		public LevelFlowOperationRestrictionAction Init([Nullable(2)] SetPlayerOperationRestriction param)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045735 RID: 284469 RVA: 0x01139B60 File Offset: 0x01137D60
+		// Token: 0x0603B8E3 RID: 243939 RVA: 0x010E3964 File Offset: 0x010E1B64
 		protected override void OnExecute()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.ForceReleaseInput, "Set Player Operation Action");
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243CC RID: 148428
+		// Token: 0x0401F681 RID: 128641
 		[Nullable(2)]
 		private SetPlayerOperationRestriction RestrictionParam;
 	}

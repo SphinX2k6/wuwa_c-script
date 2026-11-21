@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020C1 RID: 8385
+// Token: 0x02001598 RID: 5528
 [NullableContext(1)]
 [Nullable(0)]
 public class InstFightEndRecord : PlayerCommonLogData
 {
-	// Token: 0x06010883 RID: 67715 RVA: 0x0040A2F0 File Offset: 0x004084F0
+	// Token: 0x0600DCF3 RID: 56563 RVA: 0x004169F8 File Offset: 0x00414BF8
 	public InstFightEndRecord()
 	{
 		this.i_inst_id = 0;
@@ -31,12 +31,12 @@ public class InstFightEndRecord : PlayerCommonLogData
 		this.i_bullet_rebound_times = 0;
 	}
 
-	// Token: 0x1700146B RID: 5227
-	// (get) Token: 0x06010884 RID: 67716 RVA: 0x0040A3BD File Offset: 0x004085BD
-	// (set) Token: 0x06010885 RID: 67717 RVA: 0x0040A3C5 File Offset: 0x004085C5
+	// Token: 0x17001498 RID: 5272
+	// (get) Token: 0x0600DCF4 RID: 56564 RVA: 0x00416AC5 File Offset: 0x00414CC5
+	// (set) Token: 0x0600DCF5 RID: 56565 RVA: 0x00416ACD File Offset: 0x00414CCD
 	public override string event_id { get; set; } = "102801";
 
-	// Token: 0x06010886 RID: 67718 RVA: 0x0040A3D0 File Offset: 0x004085D0
+	// Token: 0x0600DCF6 RID: 56566 RVA: 0x00416AD8 File Offset: 0x00414CD8
 	public void Clear()
 	{
 		this.i_inst_id = 0;
@@ -70,90 +70,90 @@ public class InstFightEndRecord : PlayerCommonLogData
 		this.i_area_index = 0;
 	}
 
-	// Token: 0x04007ADA RID: 31450
+	// Token: 0x04007BD8 RID: 31704
 	public int i_inst_id;
 
-	// Token: 0x04007ADB RID: 31451
+	// Token: 0x04007BD9 RID: 31705
 	public string s_fight_roles = "";
 
-	// Token: 0x04007ADC RID: 31452
+	// Token: 0x04007BDA RID: 31706
 	public string s_fight_id = "";
 
-	// Token: 0x04007ADD RID: 31453
+	// Token: 0x04007BDB RID: 31707
 	public int i_result;
 
-	// Token: 0x04007ADE RID: 31454
+	// Token: 0x04007BDC RID: 31708
 	public int i_reason;
 
-	// Token: 0x04007ADF RID: 31455
+	// Token: 0x04007BDD RID: 31709
 	public int i_inst_use_time;
 
-	// Token: 0x04007AE0 RID: 31456
+	// Token: 0x04007BDE RID: 31710
 	public int i_fight_use_time;
 
-	// Token: 0x04007AE1 RID: 31457
+	// Token: 0x04007BDF RID: 31711
 	public long l_acc_damage;
 
-	// Token: 0x04007AE2 RID: 31458
+	// Token: 0x04007BE0 RID: 31712
 	public long l_acc_shield_damage;
 
-	// Token: 0x04007AE3 RID: 31459
+	// Token: 0x04007BE1 RID: 31713
 	public long l_acc_self_damage;
 
-	// Token: 0x04007AE4 RID: 31460
+	// Token: 0x04007BE2 RID: 31714
 	public long l_acc_skill_heal;
 
-	// Token: 0x04007AE5 RID: 31461
+	// Token: 0x04007BE3 RID: 31715
 	public long l_acc_item_heal;
 
-	// Token: 0x04007AE6 RID: 31462
+	// Token: 0x04007BE4 RID: 31716
 	public int i_stop_times;
 
-	// Token: 0x04007AE7 RID: 31463
+	// Token: 0x04007BE5 RID: 31717
 	public int i_damage_max;
 
-	// Token: 0x04007AE8 RID: 31464
+	// Token: 0x04007BE6 RID: 31718
 	public int i_acc_dodge_times;
 
-	// Token: 0x04007AE9 RID: 31465
+	// Token: 0x04007BE7 RID: 31719
 	public int i_dodge_succ_times;
 
-	// Token: 0x04007AEA RID: 31466
+	// Token: 0x04007BE8 RID: 31720
 	public int i_death_role_count;
 
-	// Token: 0x04007AEB RID: 31467
+	// Token: 0x04007BE9 RID: 31721
 	public int i_revive_times;
 
-	// Token: 0x04007AEC RID: 31468
+	// Token: 0x04007BEA RID: 31722
 	public int i_counter_attack_times;
 
-	// Token: 0x04007AED RID: 31469
+	// Token: 0x04007BEB RID: 31723
 	public int i_bullet_rebound_times;
 
-	// Token: 0x04007AEE RID: 31470
+	// Token: 0x04007BEC RID: 31724
 	public double i_move_duration;
 
-	// Token: 0x04007AEF RID: 31471
+	// Token: 0x04007BED RID: 31725
 	public double i_swim_duration;
 
-	// Token: 0x04007AF0 RID: 31472
+	// Token: 0x04007BEE RID: 31726
 	public double i_glide_duration;
 
-	// Token: 0x04007AF1 RID: 31473
+	// Token: 0x04007BEF RID: 31727
 	public double i_climb_duration;
 
-	// Token: 0x04007AF2 RID: 31474
+	// Token: 0x04007BF0 RID: 31728
 	public double i_behit_duration;
 
-	// Token: 0x04007AF3 RID: 31475
+	// Token: 0x04007BF1 RID: 31729
 	public double i_skill_duration;
 
-	// Token: 0x04007AF4 RID: 31476
+	// Token: 0x04007BF2 RID: 31730
 	public double i_dash_duration;
 
-	// Token: 0x04007AF5 RID: 31477
+	// Token: 0x04007BF3 RID: 31731
 	public double i_other_duration;
 
-	// Token: 0x04007AF6 RID: 31478
+	// Token: 0x04007BF4 RID: 31732
 	public int i_area_index;
 }

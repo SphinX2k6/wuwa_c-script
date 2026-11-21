@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DE3 RID: 19939
+	// Token: 0x020052E8 RID: 21224
 	public enum EOnlineInteractType : byte
 	{
-		// Token: 0x0400DA91 RID: 55953
+		// Token: 0x0400E5E6 RID: 58854
 		HostOnly,
-		// Token: 0x0400DA92 RID: 55954
+		// Token: 0x0400E5E7 RID: 58855
 		EveryOne,
-		// Token: 0x0400DA93 RID: 55955
+		// Token: 0x0400E5E8 RID: 58856
 		NoOne
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7E RID: 19838
+	// Token: 0x0200527F RID: 21119
 	public enum ECollisionChannelPreset : byte
 	{
-		// Token: 0x0400D831 RID: 55345
+		// Token: 0x0400E373 RID: 58227
 		CanBePassedThrough
 	}
 }

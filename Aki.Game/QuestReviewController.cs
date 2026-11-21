@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
@@ -10,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002672 RID: 9842
+// Token: 0x02001B5D RID: 7005
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewController : ControllerBase
 {
-	// Token: 0x060142B0 RID: 82608 RVA: 0x005179FE File Offset: 0x00515BFE
+	// Token: 0x06011792 RID: 71570 RVA: 0x00526756 File Offset: 0x00524956
 	protected override bool OnInit()
 	{
 		this.AddListeners();
@@ -25,7 +24,7 @@ public class QuestReviewController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060142B1 RID: 82609 RVA: 0x00517A28 File Offset: 0x00515C28
+	// Token: 0x06011793 RID: 71571 RVA: 0x00526780 File Offset: 0x00524980
 	protected override bool OnClear()
 	{
 		this.ViewRefreshDelegates.Clear();
@@ -33,13 +32,13 @@ public class QuestReviewController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060142B2 RID: 82610 RVA: 0x00517A3C File Offset: 0x00515C3C
+	// Token: 0x06011794 RID: 71572 RVA: 0x00526794 File Offset: 0x00524994
 	public void AddViewRefreshDelegate(Action<int?> @delegate)
 	{
 		this.ViewRefreshDelegates.Add(@delegate);
 	}
 
-	// Token: 0x060142B3 RID: 82611 RVA: 0x00517A4C File Offset: 0x00515C4C
+	// Token: 0x06011795 RID: 71573 RVA: 0x005267A4 File Offset: 0x005249A4
 	public void RemoveViewRefreshDelegate(Action<int?> @delegate)
 	{
 		int num = this.ViewRefreshDelegates.IndexOf(@delegate);
@@ -49,7 +48,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142B4 RID: 82612 RVA: 0x00517A78 File Offset: 0x00515C78
+	// Token: 0x06011796 RID: 71574 RVA: 0x005267D0 File Offset: 0x005249D0
 	public void TriggerViewRefresh(int tabId = 0)
 	{
 		foreach (Action<int?> action in this.ViewRefreshDelegates)
@@ -58,7 +57,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142B5 RID: 82613 RVA: 0x00517AD0 File Offset: 0x00515CD0
+	// Token: 0x06011797 RID: 71575 RVA: 0x00526828 File Offset: 0x00524A28
 	public void OpenQuestReview(int entryId, bool useLoopMusic = true)
 	{
 		QuestReviewEntryData questReviewEntryDataById = QuestReviewModel.Instance.GetQuestReviewEntryDataById(entryId);
@@ -72,7 +71,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142B6 RID: 82614 RVA: 0x00517B10 File Offset: 0x00515D10
+	// Token: 0x06011798 RID: 71576 RVA: 0x00526868 File Offset: 0x00524A68
 	[NullableContext(0)]
 	public UniTask<bool> OpenQuestReviewAsync(int entryId, bool useLoopMusic = true)
 	{
@@ -85,7 +84,7 @@ public class QuestReviewController : ControllerBase
 		return <OpenQuestReviewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060142B7 RID: 82615 RVA: 0x00517B5C File Offset: 0x00515D5C
+	// Token: 0x06011799 RID: 71577 RVA: 0x005268B4 File Offset: 0x00524AB4
 	[NullableContext(0)]
 	public UniTask<bool> OpenQuestReviewTipsViewAsync(int entryId, int nodeId)
 	{
@@ -98,7 +97,7 @@ public class QuestReviewController : ControllerBase
 		return <OpenQuestReviewTipsViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060142B8 RID: 82616 RVA: 0x00517BA8 File Offset: 0x00515DA8
+	// Token: 0x0601179A RID: 71578 RVA: 0x00526900 File Offset: 0x00524B00
 	public void OpenQuestNodeDetail(int nodeId)
 	{
 		QuestReviewNodeData questReviewNodeDataById = QuestReviewModel.Instance.GetQuestReviewNodeDataById(nodeId);
@@ -108,21 +107,21 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142B9 RID: 82617 RVA: 0x00517BD5 File Offset: 0x00515DD5
+	// Token: 0x0601179B RID: 71579 RVA: 0x0052692D File Offset: 0x00524B2D
 	private void AddListeners()
 	{
 		Net.Instance.Register(ENotifyMessageId.QuestReviewInfoNotify, this.OnQuestReviewInfoNotify);
 		EventSystem.Instance.Add(EEventName.EnterGameSuccess, this.OnEnterGameSuccess);
 	}
 
-	// Token: 0x060142BA RID: 82618 RVA: 0x00517C00 File Offset: 0x00515E00
+	// Token: 0x0601179C RID: 71580 RVA: 0x00526958 File Offset: 0x00524B58
 	private void RemoveListeners()
 	{
 		EventSystem.Instance.Remove(EEventName.EnterGameSuccess, this.OnEnterGameSuccess);
 		Net.Instance.UnRegister(ENotifyMessageId.QuestReviewInfoNotify);
 	}
 
-	// Token: 0x060142BB RID: 82619 RVA: 0x00517C28 File Offset: 0x00515E28
+	// Token: 0x0601179D RID: 71581 RVA: 0x00526980 File Offset: 0x00524B80
 	public UniTask RequestQuestReviewData()
 	{
 		QuestReviewController.<RequestQuestReviewData>d__13 <RequestQuestReviewData>d__;
@@ -132,22 +131,22 @@ public class QuestReviewController : ControllerBase
 		return <RequestQuestReviewData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170019EC RID: 6636
-	// (get) Token: 0x060142BC RID: 82620 RVA: 0x00517C63 File Offset: 0x00515E63
-	// (set) Token: 0x060142BD RID: 82621 RVA: 0x00517C6B File Offset: 0x00515E6B
+	// Token: 0x17001A24 RID: 6692
+	// (get) Token: 0x0601179E RID: 71582 RVA: 0x005269BB File Offset: 0x00524BBB
+	// (set) Token: 0x0601179F RID: 71583 RVA: 0x005269C3 File Offset: 0x00524BC3
 	public CustomPromise<object> BurnFinishPromise { get; set; }
 
-	// Token: 0x170019ED RID: 6637
-	// (get) Token: 0x060142BE RID: 82622 RVA: 0x00517C74 File Offset: 0x00515E74
-	// (set) Token: 0x060142BF RID: 82623 RVA: 0x00517C7C File Offset: 0x00515E7C
+	// Token: 0x17001A25 RID: 6693
+	// (get) Token: 0x060117A0 RID: 71584 RVA: 0x005269CC File Offset: 0x00524BCC
+	// (set) Token: 0x060117A1 RID: 71585 RVA: 0x005269D4 File Offset: 0x00524BD4
 	public CustomPromise<object> FusionFinishPromise { get; set; }
 
-	// Token: 0x170019EE RID: 6638
-	// (get) Token: 0x060142C0 RID: 82624 RVA: 0x00517C85 File Offset: 0x00515E85
-	// (set) Token: 0x060142C1 RID: 82625 RVA: 0x00517C8D File Offset: 0x00515E8D
+	// Token: 0x17001A26 RID: 6694
+	// (get) Token: 0x060117A2 RID: 71586 RVA: 0x005269DD File Offset: 0x00524BDD
+	// (set) Token: 0x060117A3 RID: 71587 RVA: 0x005269E5 File Offset: 0x00524BE5
 	public CustomPromise<object> NewTabUnlockPromise { get; set; }
 
-	// Token: 0x060142C2 RID: 82626 RVA: 0x00517C96 File Offset: 0x00515E96
+	// Token: 0x060117A4 RID: 71588 RVA: 0x005269EE File Offset: 0x00524BEE
 	public void SetBurnFinish()
 	{
 		if (this.BurnFinishPromise != null)
@@ -157,7 +156,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142C3 RID: 82627 RVA: 0x00517CB3 File Offset: 0x00515EB3
+	// Token: 0x060117A5 RID: 71589 RVA: 0x00526A0B File Offset: 0x00524C0B
 	public void SetFusionFinish()
 	{
 		if (this.FusionFinishPromise != null)
@@ -168,7 +167,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142C4 RID: 82628 RVA: 0x00517CDB File Offset: 0x00515EDB
+	// Token: 0x060117A6 RID: 71590 RVA: 0x00526A33 File Offset: 0x00524C33
 	public void SetNewTabUnlockFinish()
 	{
 		if (this.NewTabUnlockPromise != null)
@@ -179,7 +178,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142C5 RID: 82629 RVA: 0x00517D04 File Offset: 0x00515F04
+	// Token: 0x060117A7 RID: 71591 RVA: 0x00526A5C File Offset: 0x00524C5C
 	public void GmResetBurn()
 	{
 		this.SetBurnFinish();
@@ -197,8 +196,8 @@ public class QuestReviewController : ControllerBase
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.QuestReviewHasFused, false);
 	}
 
-	// Token: 0x170019EF RID: 6639
-	// (get) Token: 0x060142C6 RID: 82630 RVA: 0x00517DD9 File Offset: 0x00515FD9
+	// Token: 0x17001A27 RID: 6695
+	// (get) Token: 0x060117A8 RID: 71592 RVA: 0x00526B31 File Offset: 0x00524D31
 	public static QuestReviewController Instance
 	{
 		get
@@ -207,7 +206,7 @@ public class QuestReviewController : ControllerBase
 		}
 	}
 
-	// Token: 0x060142C7 RID: 82631 RVA: 0x00517DE0 File Offset: 0x00515FE0
+	// Token: 0x060117A9 RID: 71593 RVA: 0x00526B38 File Offset: 0x00524D38
 	public static QuestReviewController GetOrCreateInstance()
 	{
 		if (QuestReviewController._Instance == null)
@@ -217,7 +216,7 @@ public class QuestReviewController : ControllerBase
 		return QuestReviewController._Instance;
 	}
 
-	// Token: 0x060142C8 RID: 82632 RVA: 0x00517DF4 File Offset: 0x00515FF4
+	// Token: 0x060117AA RID: 71594 RVA: 0x00526B4C File Offset: 0x00524D4C
 	public static bool CreateInstance()
 	{
 		if (QuestReviewController._Instance != null)
@@ -228,33 +227,33 @@ public class QuestReviewController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x060142C9 RID: 82633 RVA: 0x00517E0A File Offset: 0x0051600A
+	// Token: 0x060117AB RID: 71595 RVA: 0x00526B62 File Offset: 0x00524D62
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060142CA RID: 82634 RVA: 0x00517E0C File Offset: 0x0051600C
+	// Token: 0x060117AC RID: 71596 RVA: 0x00526B64 File Offset: 0x00524D64
 	public static void ResetStaticDefaultValue()
 	{
 		QuestReviewController._Instance = null;
 	}
 
-	// Token: 0x060142CB RID: 82635 RVA: 0x00517E14 File Offset: 0x00516014
+	// Token: 0x060117AD RID: 71597 RVA: 0x00526B6C File Offset: 0x00524D6C
 	static QuestReviewController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestReviewController.CreateStaticDefaultValue), new Action(QuestReviewController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040097D9 RID: 38873
+	// Token: 0x04009931 RID: 39217
 	private readonly List<Action<int?>> ViewRefreshDelegates = new List<Action<int?>>();
 
-	// Token: 0x040097DA RID: 38874
+	// Token: 0x04009932 RID: 39218
 	private readonly Action OnEnterGameSuccess = delegate()
 	{
 		QuestReviewController.Instance.RequestQuestReviewData();
 	};
 
-	// Token: 0x040097DB RID: 38875
+	// Token: 0x04009933 RID: 39219
 	[Nullable(new byte[]
 	{
 		1,
@@ -264,13 +263,13 @@ public class QuestReviewController : ControllerBase
 	private readonly Action<IMessage, Net.CallbackStatus> OnQuestReviewInfoNotify = delegate(IMessage __msg, Net.CallbackStatus _)
 	{
 		QuestReviewInfoNotify questReviewInfoNotify = (QuestReviewInfoNotify)__msg;
-		QuestReviewModel.Instance.UpdateAllQuestReviewEntryData(questReviewInfoNotify.EntryInfos.ToList<QuestReviewEntryInfo>());
-		QuestReviewModel.Instance.UpdateAllQuestReviewTabData(questReviewInfoNotify.TabInfos.ToList<QuestReviewTabInfo>());
-		QuestReviewModel.Instance.UpdateAllQuestReviewLineData(questReviewInfoNotify.LineInfos.ToList<QuestReviewLineInfo>());
-		QuestReviewModel.Instance.UpdateAllQuestReviewNodeData(questReviewInfoNotify.NodeInfos.ToList<QuestReviewNodeInfo>());
+		QuestReviewModel.Instance.UpdateAllQuestReviewEntryData(questReviewInfoNotify.EntryInfos);
+		QuestReviewModel.Instance.UpdateAllQuestReviewTabData(questReviewInfoNotify.TabInfos);
+		QuestReviewModel.Instance.UpdateAllQuestReviewLineData(questReviewInfoNotify.LineInfos);
+		QuestReviewModel.Instance.UpdateAllQuestReviewNodeData(questReviewInfoNotify.NodeInfos);
 	};
 
-	// Token: 0x040097DF RID: 38879
+	// Token: 0x04009937 RID: 39223
 	[Nullable(2)]
 	private static QuestReviewController _Instance;
 }

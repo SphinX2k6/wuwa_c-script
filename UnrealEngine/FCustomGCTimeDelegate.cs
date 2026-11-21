@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E93 RID: 7827
+	// Token: 0x020005B8 RID: 1464
 	public sealed class FCustomGCTimeDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC51 RID: 121937 RVA: 0x002BFD5B File Offset: 0x002BDF5B
+		// Token: 0x06008352 RID: 33618 RVA: 0x000C2525 File Offset: 0x000C0725
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FCustomGCTimeDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC52 RID: 121938 RVA: 0x002BFD67 File Offset: 0x002BDF67
+		// Token: 0x06008353 RID: 33619 RVA: 0x000C2531 File Offset: 0x000C0731
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FCustomGCTimeDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FCustomGCTimeDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601DC53 RID: 121939 RVA: 0x002BFD8A File Offset: 0x002BDF8A
+		// Token: 0x06008354 RID: 33620 RVA: 0x000C2554 File Offset: 0x000C0754
 		public FCustomGCTimeDelegate()
 		{
 		}
 
-		// Token: 0x0601DC54 RID: 121940 RVA: 0x002BFD92 File Offset: 0x002BDF92
+		// Token: 0x06008355 RID: 33621 RVA: 0x000C255C File Offset: 0x000C075C
 		[NullableContext(2)]
 		public FCustomGCTimeDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC55 RID: 121941 RVA: 0x002BFD9C File Offset: 0x002BDF9C
+		// Token: 0x06008356 RID: 33622 RVA: 0x000C2566 File Offset: 0x000C0766
 		public FCustomGCTimeDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC56 RID: 121942 RVA: 0x002BFDA7 File Offset: 0x002BDFA7
+		// Token: 0x06008357 RID: 33623 RVA: 0x000C2571 File Offset: 0x000C0771
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<float, float, int, float>) ?? ((Func<float, float, int, float>)Delegate.CreateDelegate(typeof(Func<float, float, int, float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC57 RID: 121943 RVA: 0x002BFDD9 File Offset: 0x002BDFD9
+		// Token: 0x06008358 RID: 33624 RVA: 0x000C25A3 File Offset: 0x000C07A3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<float, float, int, float> Callback)
 		{
 			if (FCustomGCTimeDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FCustomGCTimeDelegate.RegisterId);
 		}
 
-		// Token: 0x0601DC58 RID: 121944 RVA: 0x002BFE14 File Offset: 0x002BE014
+		// Token: 0x06008359 RID: 33625 RVA: 0x000C25E0 File Offset: 0x000C07E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe float Execute(float MBFree, float ExtraDevelopmentMemorySize, int NumObjects)
 		{
 			FCustomGCTimeDelegate.__FCustomGCTimeDelegate_DelegateParams* ptr = stackalloc FCustomGCTimeDelegate.__FCustomGCTimeDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FCustomGCTimeDelegate.__FCustomGCTimeDelegate_DelegateParams) & -16L;
@@ -79,10 +77,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x0601DC59 RID: 121945 RVA: 0x002BFE68 File Offset: 0x002BE068
+		// Token: 0x0600835A RID: 33626 RVA: 0x000C2634 File Offset: 0x000C0834
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<float, float, int, float> func = target as Func<float, float, int, float>;
@@ -94,43 +91,43 @@ namespace UnrealEngine
 			((FCustomGCTimeDelegate.__FCustomGCTimeDelegate_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x040101DB RID: 66011
+		// Token: 0x0400391C RID: 14620
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101DC RID: 66012
+		// Token: 0x0400391D RID: 14621
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.CustomGCTimeDelegate__DelegateSignature";
 
-		// Token: 0x040101DD RID: 66013
+		// Token: 0x0400391E RID: 14622
 		private static int RegisterId;
 
-		// Token: 0x020032E1 RID: 13025
+		// Token: 0x02000D3B RID: 3387
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FCustomGCTimeDelegate_DelegateParams
+		private ref struct __FCustomGCTimeDelegate_DelegateParams
 		{
-			// Token: 0x0401718E RID: 94606
+			// Token: 0x04005FD5 RID: 24533
 			[FieldOffset(0)]
 			public float MBFree;
 
-			// Token: 0x0401718F RID: 94607
+			// Token: 0x04005FD6 RID: 24534
 			[FieldOffset(4)]
 			public float ExtraDevelopmentMemorySize;
 
-			// Token: 0x04017190 RID: 94608
+			// Token: 0x04005FD7 RID: 24535
 			[FieldOffset(8)]
 			public int NumObjects;
 
-			// Token: 0x04017191 RID: 94609
+			// Token: 0x04005FD8 RID: 24536
 			[FieldOffset(12)]
 			public float __Result;
 		}
 
-		// Token: 0x020032E2 RID: 13026
+		// Token: 0x02000D3C RID: 3388
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017192 RID: 94610
+			// Token: 0x04005FD9 RID: 24537
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

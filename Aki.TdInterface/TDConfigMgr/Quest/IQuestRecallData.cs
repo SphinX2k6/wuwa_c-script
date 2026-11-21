@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001095 RID: 4245
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011C3 RID: 4547
 	public class IQuestRecallData : IRecallData
 	{
-		// Token: 0x06005FB8 RID: 24504 RVA: 0x000E7B8C File Offset: 0x000E5D8C
+		// Token: 0x060065B1 RID: 26033 RVA: 0x000F4CAC File Offset: 0x000F2EAC
 		private IQuestRecallData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FB9 RID: 24505 RVA: 0x000E7BC4 File Offset: 0x000E5DC4
+		// Token: 0x060065B2 RID: 26034 RVA: 0x000F4CE4 File Offset: 0x000F2EE4
 		public static IQuestRecallData Create([Nullable(2)] IQuestRecallData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FBA RID: 24506 RVA: 0x000E7BD7 File Offset: 0x000E5DD7
+		// Token: 0x060065B3 RID: 26035 RVA: 0x000F4CF7 File Offset: 0x000F2EF7
 		public static IQuestRecallData CreateFromSetValue([Nullable(2)] IQuestRecallData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FBB RID: 24507 RVA: 0x000E7BEA File Offset: 0x000E5DEA
+		// Token: 0x060065B4 RID: 26036 RVA: 0x000F4D0A File Offset: 0x000F2F0A
 		public new IQuestRecallData_SetValue ToSetValue()
 		{
 			return new IQuestRecallData_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F80 RID: 8064
-		// (get) Token: 0x06005FBC RID: 24508 RVA: 0x000E7C15 File Offset: 0x000E5E15
-		// (set) Token: 0x06005FBD RID: 24509 RVA: 0x000E7C40 File Offset: 0x000E5E40
+		// Token: 0x17002132 RID: 8498
+		// (get) Token: 0x060065B5 RID: 26037 RVA: 0x000F4D35 File Offset: 0x000F2F35
+		// (set) Token: 0x060065B6 RID: 26038 RVA: 0x000F4D60 File Offset: 0x000F2F60
 		public override ERecallDataType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F81 RID: 8065
-		// (get) Token: 0x06005FBE RID: 24510 RVA: 0x000E7C4E File Offset: 0x000E5E4E
-		// (set) Token: 0x06005FBF RID: 24511 RVA: 0x000E7C79 File Offset: 0x000E5E79
+		// Token: 0x17002133 RID: 8499
+		// (get) Token: 0x060065B7 RID: 26039 RVA: 0x000F4D6E File Offset: 0x000F2F6E
+		// (set) Token: 0x060065B8 RID: 26040 RVA: 0x000F4D99 File Offset: 0x000F2F99
 		public override int Id
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F82 RID: 8066
-		// (get) Token: 0x06005FC0 RID: 24512 RVA: 0x000E7C88 File Offset: 0x000E5E88
-		// (set) Token: 0x06005FC1 RID: 24513 RVA: 0x000E7CE9 File Offset: 0x000E5EE9
+		// Token: 0x17002134 RID: 8500
+		// (get) Token: 0x060065B9 RID: 26041 RVA: 0x000F4DA8 File Offset: 0x000F2FA8
+		// (set) Token: 0x060065BA RID: 26042 RVA: 0x000F4E09 File Offset: 0x000F3009
 		public virtual IQuestRecallConfig RecallConfig
 		{
 			get
@@ -137,18 +135,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039B9 RID: 14777
+		// Token: 0x04003D06 RID: 15622
 		[Nullable(2)]
 		protected new IQuestRecallData FbInstance;
 
-		// Token: 0x040039BA RID: 14778
+		// Token: 0x04003D07 RID: 15623
 		[Nullable(2)]
 		protected new IQuestRecallData_SetValue PocoInterface;
 
-		// Token: 0x040039BB RID: 14779
+		// Token: 0x04003D08 RID: 15624
 		private IQuestRecallConfig _RecallConfigCache;
 
-		// Token: 0x040039BC RID: 14780
+		// Token: 0x04003D09 RID: 15625
 		private bool _RecallConfigInited;
 	}
 }

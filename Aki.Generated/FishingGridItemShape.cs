@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C7F RID: 3199
+	// Token: 0x02000D63 RID: 3427
 	public struct FishingGridItemShape : IFlatbufferObject
 	{
-		// Token: 0x1700115E RID: 4446
-		// (get) Token: 0x06006F4B RID: 28491 RVA: 0x00231071 File Offset: 0x0022F271
+		// Token: 0x170011BB RID: 4539
+		// (get) Token: 0x06007556 RID: 30038 RVA: 0x0025023D File Offset: 0x0024E43D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F4C RID: 28492 RVA: 0x0023107E File Offset: 0x0022F27E
+		// Token: 0x06007557 RID: 30039 RVA: 0x0025024A File Offset: 0x0024E44A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006F4D RID: 28493 RVA: 0x00231088 File Offset: 0x0022F288
+		// Token: 0x06007558 RID: 30040 RVA: 0x00250254 File Offset: 0x0024E454
 		public static FishingGridItemShape GetRootAsFishingGridItemShape(ByteBuffer _bb)
 		{
 			return FishingGridItemShape.GetRootAsFishingGridItemShape(_bb, default(FishingGridItemShape));
 		}
 
-		// Token: 0x06006F4E RID: 28494 RVA: 0x002310A4 File Offset: 0x0022F2A4
+		// Token: 0x06007559 RID: 30041 RVA: 0x00250270 File Offset: 0x0024E470
 		public static FishingGridItemShape GetRootAsFishingGridItemShape(ByteBuffer _bb, FishingGridItemShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006F4F RID: 28495 RVA: 0x002310C1 File Offset: 0x0022F2C1
+		// Token: 0x0600755A RID: 30042 RVA: 0x0025028D File Offset: 0x0024E48D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006F50 RID: 28496 RVA: 0x002310D0 File Offset: 0x0022F2D0
+		// Token: 0x0600755B RID: 30043 RVA: 0x0025029C File Offset: 0x0024E49C
 		public FishingGridItemShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700115F RID: 4447
-		// (get) Token: 0x06006F51 RID: 28497 RVA: 0x002310E0 File Offset: 0x0022F2E0
+		// Token: 0x170011BC RID: 4540
+		// (get) Token: 0x0600755C RID: 30044 RVA: 0x002502AC File Offset: 0x0024E4AC
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F52 RID: 28498 RVA: 0x0023111C File Offset: 0x0022F31C
+		// Token: 0x0600755D RID: 30045 RVA: 0x002502E8 File Offset: 0x0024E4E8
 		public IntArray? FillState(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001160 RID: 4448
-		// (get) Token: 0x06006F53 RID: 28499 RVA: 0x0023117C File Offset: 0x0022F37C
+		// Token: 0x170011BD RID: 4541
+		// (get) Token: 0x0600755E RID: 30046 RVA: 0x00250348 File Offset: 0x0024E548
 		public int FillStateLength
 		{
 			get
@@ -91,24 +91,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F54 RID: 28500 RVA: 0x002311A7 File Offset: 0x0022F3A7
+		// Token: 0x0600755F RID: 30047 RVA: 0x00250373 File Offset: 0x0024E573
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FillStateIter()或GetFillStateBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] FillState()
+		public IntArray[] FillState()
 		{
 			return this.FillStateIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x06006F55 RID: 28501 RVA: 0x002311B4 File Offset: 0x0022F3B4
+		// Token: 0x06007560 RID: 30048 RVA: 0x00250380 File Offset: 0x0024E580
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> FillStateIter()
+		public IEnumerable<IntArray> FillStateIter()
 		{
 			FishingGridItemShape.<FillStateIter>d__14 <FillStateIter>d__ = new FishingGridItemShape.<FillStateIter>d__14(-2);
 			<FillStateIter>d__.<>3__<>4__this = this;
 			return <FillStateIter>d__;
 		}
 
-		// Token: 0x04004CCE RID: 19662
+		// Token: 0x040052B2 RID: 21170
 		private Table __p;
 	}
 }

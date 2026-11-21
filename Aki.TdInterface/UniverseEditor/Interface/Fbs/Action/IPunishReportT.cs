@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DD8 RID: 28120
+	// Token: 0x02007553 RID: 30035
 	public class IPunishReportT
 	{
-		// Token: 0x1700D1A3 RID: 53667
-		// (get) Token: 0x06031ABF RID: 203455 RVA: 0x006BA624 File Offset: 0x006B8824
-		// (set) Token: 0x06031AC0 RID: 203456 RVA: 0x006BA62C File Offset: 0x006B882C
+		// Token: 0x1700DCEB RID: 56555
+		// (get) Token: 0x06034ABB RID: 215739 RVA: 0x00715D0C File Offset: 0x00713F0C
+		// (set) Token: 0x06034ABC RID: 215740 RVA: 0x00715D14 File Offset: 0x00713F14
 		public ECommonTipType Type { get; set; }
 
-		// Token: 0x1700D1A4 RID: 53668
-		// (get) Token: 0x06031AC1 RID: 203457 RVA: 0x006BA635 File Offset: 0x006B8835
-		// (set) Token: 0x06031AC2 RID: 203458 RVA: 0x006BA63D File Offset: 0x006B883D
+		// Token: 0x1700DCEC RID: 56556
+		// (get) Token: 0x06034ABD RID: 215741 RVA: 0x00715D1D File Offset: 0x00713F1D
+		// (set) Token: 0x06034ABE RID: 215742 RVA: 0x00715D25 File Offset: 0x00713F25
 		public string MainText { get; set; }
 
-		// Token: 0x1700D1A5 RID: 53669
-		// (get) Token: 0x06031AC3 RID: 203459 RVA: 0x006BA646 File Offset: 0x006B8846
-		// (set) Token: 0x06031AC4 RID: 203460 RVA: 0x006BA64E File Offset: 0x006B884E
+		// Token: 0x1700DCED RID: 56557
+		// (get) Token: 0x06034ABF RID: 215743 RVA: 0x00715D2E File Offset: 0x00713F2E
+		// (set) Token: 0x06034AC0 RID: 215744 RVA: 0x00715D36 File Offset: 0x00713F36
 		public string SubText { get; set; }
 
-		// Token: 0x1700D1A6 RID: 53670
-		// (get) Token: 0x06031AC5 RID: 203461 RVA: 0x006BA657 File Offset: 0x006B8857
-		// (set) Token: 0x06031AC6 RID: 203462 RVA: 0x006BA65F File Offset: 0x006B885F
+		// Token: 0x1700DCEE RID: 56558
+		// (get) Token: 0x06034AC1 RID: 215745 RVA: 0x00715D3F File Offset: 0x00713F3F
+		// (set) Token: 0x06034AC2 RID: 215746 RVA: 0x00715D47 File Offset: 0x00713F47
 		public EPunishReportShowType ShowType { get; set; }
 
-		// Token: 0x1700D1A7 RID: 53671
-		// (get) Token: 0x06031AC7 RID: 203463 RVA: 0x006BA668 File Offset: 0x006B8868
-		// (set) Token: 0x06031AC8 RID: 203464 RVA: 0x006BA670 File Offset: 0x006B8870
+		// Token: 0x1700DCEF RID: 56559
+		// (get) Token: 0x06034AC3 RID: 215747 RVA: 0x00715D50 File Offset: 0x00713F50
+		// (set) Token: 0x06034AC4 RID: 215748 RVA: 0x00715D58 File Offset: 0x00713F58
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031AC9 RID: 203465 RVA: 0x006BA679 File Offset: 0x006B8879
+		// Token: 0x06034AC5 RID: 215749 RVA: 0x00715D61 File Offset: 0x00713F61
 		public IPunishReportT()
 		{
 			this.Type = ECommonTipType.ChallengeCondition;

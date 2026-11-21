@@ -13,17 +13,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02002491 RID: 9361
+// Token: 0x02001978 RID: 6520
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionAssembleView : UiViewBase
 {
-	// Token: 0x06012C92 RID: 76946 RVA: 0x004A25E0 File Offset: 0x004A07E0
+	// Token: 0x06010153 RID: 65875 RVA: 0x004B00D0 File Offset: 0x004AE2D0
 	public VisionAssembleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012C93 RID: 76947 RVA: 0x004A2614 File Offset: 0x004A0814
+	// Token: 0x06010154 RID: 65876 RVA: 0x004B0104 File Offset: 0x004AE304
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -62,7 +62,7 @@ public class VisionAssembleView : UiViewBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06012C94 RID: 76948 RVA: 0x004A2878 File Offset: 0x004A0A78
+	// Token: 0x06010155 RID: 65877 RVA: 0x004B0368 File Offset: 0x004AE568
 	protected override UniTask OnCreateAsync()
 	{
 		VisionAssembleView.<OnCreateAsync>d__25 <OnCreateAsync>d__;
@@ -72,7 +72,7 @@ public class VisionAssembleView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C95 RID: 76949 RVA: 0x004A28B4 File Offset: 0x004A0AB4
+	// Token: 0x06010156 RID: 65878 RVA: 0x004B03A4 File Offset: 0x004AE5A4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnVisionGroupDataUpdate, new Action(this.OnVisionGroupDataUpdate));
@@ -83,7 +83,7 @@ public class VisionAssembleView : UiViewBase
 		EventSystem.Instance.Add(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 	}
 
-	// Token: 0x06012C96 RID: 76950 RVA: 0x004A296C File Offset: 0x004A0B6C
+	// Token: 0x06010157 RID: 65879 RVA: 0x004B045C File Offset: 0x004AE65C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnVisionGroupDataUpdate, new Action(this.OnVisionGroupDataUpdate));
@@ -94,7 +94,7 @@ public class VisionAssembleView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.PhantomEquip, new Action(this.OnPhantomEquip));
 	}
 
-	// Token: 0x06012C97 RID: 76951 RVA: 0x004A2A24 File Offset: 0x004A0C24
+	// Token: 0x06010158 RID: 65880 RVA: 0x004B0514 File Offset: 0x004AE714
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionAssembleView.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -105,7 +105,7 @@ public class VisionAssembleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C98 RID: 76952 RVA: 0x004A2A68 File Offset: 0x004A0C68
+	// Token: 0x06010159 RID: 65881 RVA: 0x004B0558 File Offset: 0x004AE758
 	private UniTask InitDropDown()
 	{
 		VisionAssembleView.<InitDropDown>d__29 <InitDropDown>d__;
@@ -116,7 +116,7 @@ public class VisionAssembleView : UiViewBase
 		return <InitDropDown>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C99 RID: 76953 RVA: 0x004A2AAB File Offset: 0x004A0CAB
+	// Token: 0x0601015A RID: 65882 RVA: 0x004B059B File Offset: 0x004AE79B
 	private void OnPhantomEquip()
 	{
 		this.RefreshCurrentSelectDataInfo();
@@ -129,7 +129,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshAttributeScroller(false, null);
 	}
 
-	// Token: 0x06012C9A RID: 76954 RVA: 0x004A2AE4 File Offset: 0x004A0CE4
+	// Token: 0x0601015B RID: 65883 RVA: 0x004B05D4 File Offset: 0x004AE7D4
 	private void OnVisionGroupDataUpdate()
 	{
 		int count = VisionEquipGroupModel.Instance.GetVisionEquipGroupList().Count;
@@ -140,7 +140,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshViewAfterChangeGroupData();
 	}
 
-	// Token: 0x06012C9B RID: 76955 RVA: 0x004A2B34 File Offset: 0x004A0D34
+	// Token: 0x0601015C RID: 65884 RVA: 0x004B0624 File Offset: 0x004AE824
 	private void OnVisionGroupDataAdd()
 	{
 		this.UpdateFilterComponent();
@@ -157,7 +157,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshCompareToggleState();
 	}
 
-	// Token: 0x06012C9C RID: 76956 RVA: 0x004A2B9C File Offset: 0x004A0D9C
+	// Token: 0x0601015D RID: 65885 RVA: 0x004B068C File Offset: 0x004AE88C
 	private void OnVisionGroupDataDelete()
 	{
 		if (VisionEquipGroupModel.Instance.GetVisionEquipGroupList().Count > 0)
@@ -171,7 +171,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshViewAfterChangeGroupData();
 	}
 
-	// Token: 0x06012C9D RID: 76957 RVA: 0x004A2BC6 File Offset: 0x004A0DC6
+	// Token: 0x0601015E RID: 65886 RVA: 0x004B06B6 File Offset: 0x004AE8B6
 	private void OnVisionGroupDataToTop()
 	{
 		if (VisionEquipGroupModel.Instance.GetVisionEquipGroupList().Count > 0)
@@ -186,7 +186,7 @@ public class VisionAssembleView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnVisionAssembleNavigationRefresh, false);
 	}
 
-	// Token: 0x06012C9E RID: 76958 RVA: 0x004A2C01 File Offset: 0x004A0E01
+	// Token: 0x0601015F RID: 65887 RVA: 0x004B06F1 File Offset: 0x004AE8F1
 	private void OnVisionGroupDataChangeName()
 	{
 		this.RefreshCompareTopData();
@@ -194,7 +194,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshScroller(true, false);
 	}
 
-	// Token: 0x06012C9F RID: 76959 RVA: 0x004A2C17 File Offset: 0x004A0E17
+	// Token: 0x06010160 RID: 65888 RVA: 0x004B0707 File Offset: 0x004AE907
 	private void RefreshViewAfterChangeGroupData()
 	{
 		this.RefreshScroller(false, false);
@@ -206,32 +206,32 @@ public class VisionAssembleView : UiViewBase
 		this.UpdateFilterComponent();
 	}
 
-	// Token: 0x06012CA0 RID: 76960 RVA: 0x004A2C47 File Offset: 0x004A0E47
+	// Token: 0x06010161 RID: 65889 RVA: 0x004B0737 File Offset: 0x004AE937
 	private int GetDropDownTextId(int data)
 	{
 		return data;
 	}
 
-	// Token: 0x06012CA1 RID: 76961 RVA: 0x004A2C4A File Offset: 0x004A0E4A
+	// Token: 0x06010162 RID: 65890 RVA: 0x004B073A File Offset: 0x004AE93A
 	private void OnDropDownSelectCall(int index, int data)
 	{
 		this.CurrentSelectSuitIndex = index;
 		this.UpdateFilterComponent();
 	}
 
-	// Token: 0x06012CA2 RID: 76962 RVA: 0x004A2C59 File Offset: 0x004A0E59
+	// Token: 0x06010163 RID: 65891 RVA: 0x004B0749 File Offset: 0x004AE949
 	private VisionAssembleDropDownItem CreateDropDownItem(UUIItem uiItem, int data)
 	{
 		return new VisionAssembleDropDownItem(uiItem);
 	}
 
-	// Token: 0x06012CA3 RID: 76963 RVA: 0x004A2C61 File Offset: 0x004A0E61
+	// Token: 0x06010164 RID: 65892 RVA: 0x004B0751 File Offset: 0x004AE951
 	private VisionEquipmentDropDownTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new VisionEquipmentDropDownTitleItem(uiItem);
 	}
 
-	// Token: 0x06012CA4 RID: 76964 RVA: 0x004A2C6C File Offset: 0x004A0E6C
+	// Token: 0x06010165 RID: 65893 RVA: 0x004B075C File Offset: 0x004AE95C
 	private void OnCompareToggle(EToggleState toggleState)
 	{
 		this.CompareMode = !this.CompareMode;
@@ -259,7 +259,7 @@ public class VisionAssembleView : UiViewBase
 		this.AssembleScrollToSelectIndex(false);
 	}
 
-	// Token: 0x06012CA5 RID: 76965 RVA: 0x004A2D24 File Offset: 0x004A0F24
+	// Token: 0x06010166 RID: 65894 RVA: 0x004B0814 File Offset: 0x004AEA14
 	private void AssembleScrollToSelectIndex(bool playGridAnim = false)
 	{
 		if (this.CurrentSelectedIndex == -1)
@@ -288,7 +288,7 @@ public class VisionAssembleView : UiViewBase
 		assembleListLayout.ScrollToGridIndex(gridIndex, playGridAnim);
 	}
 
-	// Token: 0x06012CA6 RID: 76966 RVA: 0x004A2D9B File Offset: 0x004A0F9B
+	// Token: 0x06010167 RID: 65895 RVA: 0x004B088B File Offset: 0x004AEA8B
 	private bool CancelCompareMode()
 	{
 		if (!this.CompareMode)
@@ -299,7 +299,7 @@ public class VisionAssembleView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06012CA7 RID: 76967 RVA: 0x004A2DB0 File Offset: 0x004A0FB0
+	// Token: 0x06010168 RID: 65896 RVA: 0x004B08A0 File Offset: 0x004AEAA0
 	private bool ClearFilter()
 	{
 		bool result = false;
@@ -315,7 +315,7 @@ public class VisionAssembleView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x06012CA8 RID: 76968 RVA: 0x004A2DE6 File Offset: 0x004A0FE6
+	// Token: 0x06010169 RID: 65897 RVA: 0x004B08D6 File Offset: 0x004AEAD6
 	private void OnClickStaticItem()
 	{
 		if (this.CurrentSelectedIndex == -1)
@@ -333,7 +333,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshCompareToggleState();
 	}
 
-	// Token: 0x06012CA9 RID: 76969 RVA: 0x004A2E28 File Offset: 0x004A1028
+	// Token: 0x0601016A RID: 65898 RVA: 0x004B0918 File Offset: 0x004AEB18
 	private void OnClickConfirmButton(int _)
 	{
 		VisionAssembleView.EOperation currentOperationState = this.GetCurrentOperationState();
@@ -354,7 +354,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CAA RID: 76970 RVA: 0x004A2E74 File Offset: 0x004A1074
+	// Token: 0x0601016B RID: 65899 RVA: 0x004B0964 File Offset: 0x004AEB64
 	private void SaveCurrentIndexGroup()
 	{
 		List<int> incrIdList = RoleModel.Instance.GetRoleInstanceById(this.CurrentRoleId).GetPhantomData().GetIncrIdList();
@@ -400,7 +400,7 @@ public class VisionAssembleView : UiViewBase
 		CommonInputViewController.Instance.OpenSetVisionEquipGroupName(bottomText, callBack, "");
 	}
 
-	// Token: 0x06012CAB RID: 76971 RVA: 0x004A2F74 File Offset: 0x004A1174
+	// Token: 0x0601016C RID: 65900 RVA: 0x004B0A64 File Offset: 0x004AEC64
 	private void ApplyCurrentIndexGroup()
 	{
 		int[] visionUniqueIdList = VisionEquipGroupModel.Instance.GetVisionEquipGroupDataByIndex(this.CurrentSelectedIndex).GetVisionUniqueIdList();
@@ -427,7 +427,7 @@ public class VisionAssembleView : UiViewBase
 		VisionEquipGroupController.Instance.RequestApplyVisionGroup(this.CurrentSelectedIndex, this.CurrentRoleId);
 	}
 
-	// Token: 0x06012CAC RID: 76972 RVA: 0x004A3020 File Offset: 0x004A1220
+	// Token: 0x0601016D RID: 65901 RVA: 0x004B0B10 File Offset: 0x004AED10
 	private void OnClickReNameBtn()
 	{
 		Func<string, UniTask<Aki.Protocol.ErrorCode>> callBack = delegate([Nullable(1)] string input)
@@ -449,7 +449,7 @@ public class VisionAssembleView : UiViewBase
 		CommonInputViewController.Instance.OpenSetVisionEquipGroupName(bottomText, callBack, text ?? "");
 	}
 
-	// Token: 0x06012CAD RID: 76973 RVA: 0x004A3098 File Offset: 0x004A1298
+	// Token: 0x0601016E RID: 65902 RVA: 0x004B0B88 File Offset: 0x004AED88
 	private void OnClickToTopBtn()
 	{
 		if (!VisionEquipGroupModel.Instance.GetLocalTipsState())
@@ -468,13 +468,13 @@ public class VisionAssembleView : UiViewBase
 		VisionEquipGroupController.Instance.RequestPutVisionGroupToTop(this.CurrentSelectedIndex);
 	}
 
-	// Token: 0x06012CAE RID: 76974 RVA: 0x004A311B File Offset: 0x004A131B
+	// Token: 0x0601016F RID: 65903 RVA: 0x004B0C0B File Offset: 0x004AEE0B
 	private void OnClickedNotShowConfirm(bool toggleState)
 	{
 		VisionEquipGroupModel.Instance.SaveLocalTopTipState(toggleState);
 	}
 
-	// Token: 0x06012CAF RID: 76975 RVA: 0x004A3128 File Offset: 0x004A1328
+	// Token: 0x06010170 RID: 65904 RVA: 0x004B0C18 File Offset: 0x004AEE18
 	private void OnClickDeleteBtn()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.VisionGroupDelete);
@@ -485,7 +485,7 @@ public class VisionAssembleView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06012CB0 RID: 76976 RVA: 0x004A3164 File Offset: 0x004A1364
+	// Token: 0x06010171 RID: 65905 RVA: 0x004B0C54 File Offset: 0x004AEE54
 	private void UpdateFilterComponent()
 	{
 		List<VisionEquipGroupData> visionEquipGroupList = VisionEquipGroupModel.Instance.GetVisionEquipGroupList();
@@ -500,19 +500,19 @@ public class VisionAssembleView : UiViewBase
 		});
 	}
 
-	// Token: 0x06012CB1 RID: 76977 RVA: 0x004A31EC File Offset: 0x004A13EC
+	// Token: 0x06010172 RID: 65906 RVA: 0x004B0CDC File Offset: 0x004AEEDC
 	private VisionAssembleScrollItem InitAssembleItem()
 	{
 		return new VisionAssembleScrollItem();
 	}
 
-	// Token: 0x06012CB2 RID: 76978 RVA: 0x004A31F3 File Offset: 0x004A13F3
+	// Token: 0x06010173 RID: 65907 RVA: 0x004B0CE3 File Offset: 0x004AEEE3
 	private VisionAssembleAttrScrollItem InitItem()
 	{
 		return new VisionAssembleAttrScrollItem();
 	}
 
-	// Token: 0x06012CB3 RID: 76979 RVA: 0x004A31FC File Offset: 0x004A13FC
+	// Token: 0x06010174 RID: 65908 RVA: 0x004B0CEC File Offset: 0x004AEEEC
 	private void OnFilterRefresh(List<int> list, bool ifOutSideChange, EFilterSortType type)
 	{
 		this.CurrentShowingGroupList = list;
@@ -530,13 +530,13 @@ public class VisionAssembleView : UiViewBase
 		this.CancelCompareMode();
 	}
 
-	// Token: 0x06012CB4 RID: 76980 RVA: 0x004A324E File Offset: 0x004A144E
+	// Token: 0x06010175 RID: 65909 RVA: 0x004B0D3E File Offset: 0x004AEF3E
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012CB5 RID: 76981 RVA: 0x004A3258 File Offset: 0x004A1458
+	// Token: 0x06010176 RID: 65910 RVA: 0x004B0D48 File Offset: 0x004AEF48
 	protected override void OnBeforeShow()
 	{
 		this.UpdateFilterComponent();
@@ -573,7 +573,7 @@ public class VisionAssembleView : UiViewBase
 		this.TryPlayInfoSequence();
 	}
 
-	// Token: 0x06012CB6 RID: 76982 RVA: 0x004A32D0 File Offset: 0x004A14D0
+	// Token: 0x06010177 RID: 65911 RVA: 0x004B0DC0 File Offset: 0x004AEFC0
 	private void InitCurrentShowingGroupList()
 	{
 		List<VisionEquipGroupData> visionEquipGroupList = VisionEquipGroupModel.Instance.GetVisionEquipGroupList();
@@ -586,7 +586,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CB7 RID: 76983 RVA: 0x004A331F File Offset: 0x004A151F
+	// Token: 0x06010178 RID: 65912 RVA: 0x004B0E0F File Offset: 0x004AF00F
 	private void RefreshCurrentSuitInfo()
 	{
 		VisionAssembleStaticItem staticItem = this.StaticItem;
@@ -597,7 +597,7 @@ public class VisionAssembleView : UiViewBase
 		staticItem.Refresh(this.CurrentRoleId);
 	}
 
-	// Token: 0x06012CB8 RID: 76984 RVA: 0x004A3338 File Offset: 0x004A1538
+	// Token: 0x06010179 RID: 65913 RVA: 0x004B0E28 File Offset: 0x004AF028
 	private List<VisionEquipGroupData> GetFilterDataList()
 	{
 		List<VisionEquipGroupData> visionEquipGroupList = VisionEquipGroupModel.Instance.GetVisionEquipGroupList();
@@ -650,7 +650,7 @@ public class VisionAssembleView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012CB9 RID: 76985 RVA: 0x004A3458 File Offset: 0x004A1658
+	// Token: 0x0601017A RID: 65914 RVA: 0x004B0F48 File Offset: 0x004AF148
 	private void RefreshScroller(bool keepPosition = false, bool needAnimation = false)
 	{
 		bool flag = this.GetFilterIfHaveSelect() || this.CurrentSelectSuitIndex > 0;
@@ -704,13 +704,13 @@ public class VisionAssembleView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06012CBA RID: 76986 RVA: 0x004A35A8 File Offset: 0x004A17A8
+	// Token: 0x0601017B RID: 65915 RVA: 0x004B1098 File Offset: 0x004AF298
 	private bool CheckIfCanSelect()
 	{
 		return true;
 	}
 
-	// Token: 0x06012CBB RID: 76987 RVA: 0x004A35AB File Offset: 0x004A17AB
+	// Token: 0x0601017C RID: 65916 RVA: 0x004B109B File Offset: 0x004AF29B
 	private void RefreshStaticItemSelectState()
 	{
 		VisionAssembleStaticItem staticItem = this.StaticItem;
@@ -721,7 +721,7 @@ public class VisionAssembleView : UiViewBase
 		staticItem.RefreshSelectState(this.CurrentSelectedIndex == -1, this.CompareMode);
 	}
 
-	// Token: 0x06012CBC RID: 76988 RVA: 0x004A35CC File Offset: 0x004A17CC
+	// Token: 0x0601017D RID: 65917 RVA: 0x004B10BC File Offset: 0x004AF2BC
 	private void OnClickScrollItem(VisionEquipGroupData data)
 	{
 		int index = data.GetIndex();
@@ -739,7 +739,7 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshCurrentSelectDataInfo();
 	}
 
-	// Token: 0x06012CBD RID: 76989 RVA: 0x004A3617 File Offset: 0x004A1817
+	// Token: 0x0601017E RID: 65918 RVA: 0x004B1107 File Offset: 0x004AF307
 	private void OnChangeSelectIndex(bool keepPosition = true)
 	{
 		this.RefreshScroller(keepPosition, false);
@@ -768,14 +768,14 @@ public class VisionAssembleView : UiViewBase
 		});
 	}
 
-	// Token: 0x06012CBE RID: 76990 RVA: 0x004A3654 File Offset: 0x004A1854
+	// Token: 0x0601017F RID: 65919 RVA: 0x004B1144 File Offset: 0x004AF344
 	private void RefreshOperationFunctionState()
 	{
 		VisionAssembleView.EOperation currentOperationState = this.GetCurrentOperationState();
 		this.RefreshUseButtonByOperationState(currentOperationState);
 	}
 
-	// Token: 0x06012CBF RID: 76991 RVA: 0x004A3670 File Offset: 0x004A1870
+	// Token: 0x06010180 RID: 65920 RVA: 0x004B1160 File Offset: 0x004AF360
 	private void RefreshUseButtonByOperationState(VisionAssembleView.EOperation state)
 	{
 		bool flag = state == VisionAssembleView.EOperation.Use || state == VisionAssembleView.EOperation.Save || state == VisionAssembleView.EOperation.HasUsing;
@@ -804,7 +804,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CC0 RID: 76992 RVA: 0x004A36D4 File Offset: 0x004A18D4
+	// Token: 0x06010181 RID: 65921 RVA: 0x004B11C4 File Offset: 0x004AF3C4
 	private VisionAssembleView.EOperation GetCurrentOperationState()
 	{
 		if (this.CurrentSelectedIndex == 999)
@@ -836,7 +836,7 @@ public class VisionAssembleView : UiViewBase
 		return VisionAssembleView.EOperation.Use;
 	}
 
-	// Token: 0x06012CC1 RID: 76993 RVA: 0x004A3774 File Offset: 0x004A1974
+	// Token: 0x06010182 RID: 65922 RVA: 0x004B1264 File Offset: 0x004AF464
 	private void RefreshFunctionButtonState()
 	{
 		bool state = !this.CompareMode && this.CurrentSelectedIndex != -1 && this.CurrentSelectedIndex != 999;
@@ -844,19 +844,19 @@ public class VisionAssembleView : UiViewBase
 		this.RefreshTopButtonState(state);
 	}
 
-	// Token: 0x06012CC2 RID: 76994 RVA: 0x004A37B4 File Offset: 0x004A19B4
+	// Token: 0x06010183 RID: 65923 RVA: 0x004B12A4 File Offset: 0x004AF4A4
 	private void RefreshDeleteButtonState(bool state)
 	{
 		base.GetButton(12).RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x06012CC3 RID: 76995 RVA: 0x004A37DC File Offset: 0x004A19DC
+	// Token: 0x06010184 RID: 65924 RVA: 0x004B12CC File Offset: 0x004AF4CC
 	private void RefreshTopButtonState(bool state)
 	{
 		base.GetButton(11).RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x06012CC4 RID: 76996 RVA: 0x004A3804 File Offset: 0x004A1A04
+	// Token: 0x06010185 RID: 65925 RVA: 0x004B12F4 File Offset: 0x004AF4F4
 	private void RefreshCurrentSelectDataInfo()
 	{
 		bool compareMode = this.CompareMode;
@@ -876,7 +876,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CC5 RID: 76997 RVA: 0x004A3844 File Offset: 0x004A1A44
+	// Token: 0x06010186 RID: 65926 RVA: 0x004B1334 File Offset: 0x004AF534
 	[NullableContext(2)]
 	private FilterResultData GetFilterData()
 	{
@@ -884,7 +884,7 @@ public class VisionAssembleView : UiViewBase
 		return FilterModel.Instance.GetFilterResultData(uniqueIdByGroupId);
 	}
 
-	// Token: 0x06012CC6 RID: 76998 RVA: 0x004A3870 File Offset: 0x004A1A70
+	// Token: 0x06010187 RID: 65927 RVA: 0x004B1360 File Offset: 0x004AF560
 	private bool GetFilterIfHaveSelect()
 	{
 		FilterResultData filterData = this.GetFilterData();
@@ -905,14 +905,14 @@ public class VisionAssembleView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06012CC7 RID: 76999 RVA: 0x004A38DC File Offset: 0x004A1ADC
+	// Token: 0x06010188 RID: 65928 RVA: 0x004B13CC File Offset: 0x004AF5CC
 	private void RefreshMiddleEmptyItem()
 	{
 		bool uiactive = (this.GetFilterIfHaveSelect() && this.GetFilterDataList().Count == 0) || (this.CurrentSelectSuitIndex > 0 && this.GetFilterDataList().Count == 0);
 		base.GetItem(18).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012CC8 RID: 77000 RVA: 0x004A392C File Offset: 0x004A1B2C
+	// Token: 0x06010189 RID: 65929 RVA: 0x004B141C File Offset: 0x004AF61C
 	[NullableContext(2)]
 	private void RefreshAttributeScroller(bool needAnimation = false, Action finishCall = null)
 	{
@@ -967,7 +967,7 @@ public class VisionAssembleView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06012CC9 RID: 77001 RVA: 0x004A3A04 File Offset: 0x004A1C04
+	// Token: 0x0601018A RID: 65930 RVA: 0x004B14F4 File Offset: 0x004AF6F4
 	private void RefreshSaveText()
 	{
 		int count = VisionEquipGroupModel.Instance.GetVisionEquipGroupList().Count;
@@ -979,7 +979,7 @@ public class VisionAssembleView : UiViewBase
 		}));
 	}
 
-	// Token: 0x06012CCA RID: 77002 RVA: 0x004A3A60 File Offset: 0x004A1C60
+	// Token: 0x0601018B RID: 65931 RVA: 0x004B1550 File Offset: 0x004AF750
 	private void TryPlayInfoSequence()
 	{
 		if (true)
@@ -1007,7 +1007,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CCB RID: 77003 RVA: 0x004A3AB8 File Offset: 0x004A1CB8
+	// Token: 0x0601018C RID: 65932 RVA: 0x004B15A8 File Offset: 0x004AF7A8
 	private void RefreshCompareTopData()
 	{
 		VisionAssembleTopItem compareTopItem = this.CompareTopItem;
@@ -1045,7 +1045,7 @@ public class VisionAssembleView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012CCC RID: 77004 RVA: 0x004A3B78 File Offset: 0x004A1D78
+	// Token: 0x0601018D RID: 65933 RVA: 0x004B1668 File Offset: 0x004AF868
 	private void RefreshCompareToggleState()
 	{
 		bool uiactive = this.CurrentSelectedIndex != 999 && this.CurrentSelectedIndex != -1;
@@ -1057,7 +1057,7 @@ public class VisionAssembleView : UiViewBase
 		extendToggle.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06012CCD RID: 77005 RVA: 0x004A3BC4 File Offset: 0x004A1DC4
+	// Token: 0x0601018E RID: 65934 RVA: 0x004B16B4 File Offset: 0x004AF8B4
 	private bool GetCompareIncIdListIfEmpty()
 	{
 		if (this.CurrentSelectedIndex == 999)
@@ -1089,7 +1089,7 @@ public class VisionAssembleView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06012CCE RID: 77006 RVA: 0x004A3C70 File Offset: 0x004A1E70
+	// Token: 0x0601018F RID: 65935 RVA: 0x004B1760 File Offset: 0x004AF960
 	[NullableContext(2)]
 	private VisionAssembleTopData GetCompareTopData()
 	{
@@ -1133,7 +1133,7 @@ public class VisionAssembleView : UiViewBase
 		return visionAssembleTopData;
 	}
 
-	// Token: 0x06012CCF RID: 77007 RVA: 0x004A3DF0 File Offset: 0x004A1FF0
+	// Token: 0x06010190 RID: 65936 RVA: 0x004B18E0 File Offset: 0x004AFAE0
 	private VisionAssembleTopData GetCurrentTopData()
 	{
 		VisionAssembleTopData visionAssembleTopData = new VisionAssembleTopData();
@@ -1163,7 +1163,7 @@ public class VisionAssembleView : UiViewBase
 		return visionAssembleTopData;
 	}
 
-	// Token: 0x06012CD0 RID: 77008 RVA: 0x004A3F18 File Offset: 0x004A2118
+	// Token: 0x06010191 RID: 65937 RVA: 0x004B1A08 File Offset: 0x004AFC08
 	private List<VisionFetterData> FilterSameFetterData(List<VisionFetterData> dataList)
 	{
 		List<VisionFetterData> list = new List<VisionFetterData>();
@@ -1179,52 +1179,52 @@ public class VisionAssembleView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x04008D74 RID: 36212
+	// Token: 0x04008EBD RID: 36541
 	private const int EMPTYSELECTINDEX = 999;
 
-	// Token: 0x04008D75 RID: 36213
+	// Token: 0x04008EBE RID: 36542
 	private const int STATICINDEX = -1;
 
-	// Token: 0x04008D76 RID: 36214
+	// Token: 0x04008EBF RID: 36543
 	private readonly EFilterSortGroupId UseWayId = EFilterSortGroupId.VisionAssemble;
 
-	// Token: 0x04008D77 RID: 36215
+	// Token: 0x04008EC0 RID: 36544
 	private List<int> CurrentShowingGroupList = new List<int>();
 
-	// Token: 0x04008D78 RID: 36216
+	// Token: 0x04008EC1 RID: 36545
 	private int CurrentRoleId;
 
-	// Token: 0x04008D79 RID: 36217
+	// Token: 0x04008EC2 RID: 36546
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008D7A RID: 36218
+	// Token: 0x04008EC3 RID: 36547
 	[Nullable(2)]
 	private VisionAssembleStaticItem StaticItem;
 
-	// Token: 0x04008D7B RID: 36219
+	// Token: 0x04008EC4 RID: 36548
 	[Nullable(2)]
 	private VisionAssembleTopItem CompareTopItem;
 
-	// Token: 0x04008D7C RID: 36220
+	// Token: 0x04008EC5 RID: 36549
 	[Nullable(2)]
 	private VisionAssembleTopItem CurrentTopItem;
 
-	// Token: 0x04008D7D RID: 36221
+	// Token: 0x04008EC6 RID: 36550
 	[Nullable(2)]
 	private FilterEntrance<int> FilterEntrance;
 
-	// Token: 0x04008D7E RID: 36222
+	// Token: 0x04008EC7 RID: 36551
 	private readonly List<int> FetterSuitFilterArray = new List<int>();
 
-	// Token: 0x04008D7F RID: 36223
+	// Token: 0x04008EC8 RID: 36552
 	private int CurrentSelectSuitIndex;
 
-	// Token: 0x04008D80 RID: 36224
+	// Token: 0x04008EC9 RID: 36553
 	[Nullable(2)]
 	private CommonDropDown<int, int> CommonDropDown;
 
-	// Token: 0x04008D81 RID: 36225
+	// Token: 0x04008ECA RID: 36554
 	[Nullable(new byte[]
 	{
 		2,
@@ -1233,7 +1233,7 @@ public class VisionAssembleView : UiViewBase
 	})]
 	private GenericScrollViewNew<VisionAssembleAttrScrollItem, VisionAssembleAttrData> AttributeLayout;
 
-	// Token: 0x04008D82 RID: 36226
+	// Token: 0x04008ECB RID: 36555
 	[Nullable(new byte[]
 	{
 		2,
@@ -1242,25 +1242,25 @@ public class VisionAssembleView : UiViewBase
 	})]
 	private LoopScrollView<VisionAssembleScrollItem, VisionAssembleScrollItemData> AssembleListLayout;
 
-	// Token: 0x04008D83 RID: 36227
+	// Token: 0x04008ECC RID: 36556
 	[Nullable(2)]
 	private ButtonItem ConfirmButtonItem;
 
-	// Token: 0x04008D84 RID: 36228
+	// Token: 0x04008ECD RID: 36557
 	private int CurrentSelectedIndex = 999;
 
-	// Token: 0x04008D85 RID: 36229
+	// Token: 0x04008ECE RID: 36558
 	private bool CompareMode;
 
-	// Token: 0x04008D86 RID: 36230
+	// Token: 0x04008ECF RID: 36559
 	[Nullable(2)]
 	private UUIInturnAnimController AttributeTurnAniComponentR;
 
-	// Token: 0x04008D87 RID: 36231
+	// Token: 0x04008ED0 RID: 36560
 	[Nullable(2)]
 	private UUIInturnAnimController AttributeTurnAniComponentL;
 
-	// Token: 0x04008D88 RID: 36232
+	// Token: 0x04008ED1 RID: 36561
 	[Nullable(new byte[]
 	{
 		2,
@@ -1268,63 +1268,63 @@ public class VisionAssembleView : UiViewBase
 	})]
 	private List<VisionAssembleScrollItemData> ShowList;
 
-	// Token: 0x02008A0C RID: 35340
+	// Token: 0x02007B96 RID: 31638
 	[NullableContext(0)]
 	private enum EOperation
 	{
-		// Token: 0x0402CD4C RID: 183628
+		// Token: 0x0402806C RID: 163948
 		Empty,
-		// Token: 0x0402CD4D RID: 183629
+		// Token: 0x0402806D RID: 163949
 		Save,
-		// Token: 0x0402CD4E RID: 183630
+		// Token: 0x0402806E RID: 163950
 		Use,
-		// Token: 0x0402CD4F RID: 183631
+		// Token: 0x0402806F RID: 163951
 		HasUsing
 	}
 
-	// Token: 0x02008A0D RID: 35341
+	// Token: 0x02007B97 RID: 31639
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CD51 RID: 183633
+		// Token: 0x04028071 RID: 163953
 		CaptionItem,
-		// Token: 0x0402CD52 RID: 183634
+		// Token: 0x04028072 RID: 163954
 		CurrentSuitItem,
-		// Token: 0x0402CD53 RID: 183635
+		// Token: 0x04028073 RID: 163955
 		SuitScroller,
-		// Token: 0x0402CD54 RID: 183636
+		// Token: 0x04028074 RID: 163956
 		SuitItem,
-		// Token: 0x0402CD55 RID: 183637
+		// Token: 0x04028075 RID: 163957
 		LeftDownItem,
-		// Token: 0x0402CD56 RID: 183638
+		// Token: 0x04028076 RID: 163958
 		FilterItem,
-		// Token: 0x0402CD57 RID: 183639
+		// Token: 0x04028077 RID: 163959
 		SuitFilterItem,
-		// Token: 0x0402CD58 RID: 183640
+		// Token: 0x04028078 RID: 163960
 		CurrentSaveText,
-		// Token: 0x0402CD59 RID: 183641
+		// Token: 0x04028079 RID: 163961
 		CurrentInfoItem,
-		// Token: 0x0402CD5A RID: 183642
+		// Token: 0x0402807A RID: 163962
 		CompareInfoItem,
-		// Token: 0x0402CD5B RID: 183643
+		// Token: 0x0402807B RID: 163963
 		AttributeScroller,
-		// Token: 0x0402CD5C RID: 183644
+		// Token: 0x0402807C RID: 163964
 		ToTopBtn,
-		// Token: 0x0402CD5D RID: 183645
+		// Token: 0x0402807D RID: 163965
 		DeleteBtn,
-		// Token: 0x0402CD5E RID: 183646
+		// Token: 0x0402807E RID: 163966
 		CompareToggle,
-		// Token: 0x0402CD5F RID: 183647
+		// Token: 0x0402807F RID: 163967
 		EmptyItem,
-		// Token: 0x0402CD60 RID: 183648
+		// Token: 0x04028080 RID: 163968
 		ConfirmButtonItem,
-		// Token: 0x0402CD61 RID: 183649
+		// Token: 0x04028081 RID: 163969
 		TextureMaskItem,
-		// Token: 0x0402CD62 RID: 183650
+		// Token: 0x04028082 RID: 163970
 		CompareMask,
-		// Token: 0x0402CD63 RID: 183651
+		// Token: 0x04028083 RID: 163971
 		MiddleEmptyItem,
-		// Token: 0x0402CD64 RID: 183652
+		// Token: 0x04028084 RID: 163972
 		TurnAnimationItem
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011D8 RID: 4568
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001314 RID: 4884
 	public class ITrapDefenseConditionStepSpawnMonster : ITrapDefenseConditionStepBase
 	{
-		// Token: 0x060067C6 RID: 26566 RVA: 0x000F83C8 File Offset: 0x000F65C8
+		// Token: 0x06006E07 RID: 28167 RVA: 0x00105CD4 File Offset: 0x00103ED4
 		private ITrapDefenseConditionStepSpawnMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067C7 RID: 26567 RVA: 0x000F8400 File Offset: 0x000F6600
+		// Token: 0x06006E08 RID: 28168 RVA: 0x00105D0C File Offset: 0x00103F0C
 		public static ITrapDefenseConditionStepSpawnMonster Create([Nullable(2)] ITrapDefenseConditionStepSpawnMonster instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067C8 RID: 26568 RVA: 0x000F8413 File Offset: 0x000F6613
+		// Token: 0x06006E09 RID: 28169 RVA: 0x00105D1F File Offset: 0x00103F1F
 		public static ITrapDefenseConditionStepSpawnMonster CreateFromSetValue([Nullable(2)] ITrapDefenseConditionStepSpawnMonster_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067C9 RID: 26569 RVA: 0x000F8426 File Offset: 0x000F6626
+		// Token: 0x06006E0A RID: 28170 RVA: 0x00105D32 File Offset: 0x00103F32
 		public new ITrapDefenseConditionStepSpawnMonster_SetValue ToSetValue()
 		{
 			return new ITrapDefenseConditionStepSpawnMonster_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021A4 RID: 8612
-		// (get) Token: 0x060067CA RID: 26570 RVA: 0x000F8439 File Offset: 0x000F6639
-		// (set) Token: 0x060067CB RID: 26571 RVA: 0x000F8464 File Offset: 0x000F6664
+		// Token: 0x17002365 RID: 9061
+		// (get) Token: 0x06006E0B RID: 28171 RVA: 0x00105D45 File Offset: 0x00103F45
+		// (set) Token: 0x06006E0C RID: 28172 RVA: 0x00105D70 File Offset: 0x00103F70
 		public override ETrapDefenseConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E3D RID: 15933
+		// Token: 0x040041AB RID: 16811
 		[Nullable(2)]
 		protected new ITrapDefenseConditionStepSpawnMonster FbInstance;
 
-		// Token: 0x04003E3E RID: 15934
+		// Token: 0x040041AC RID: 16812
 		[Nullable(2)]
 		protected new ITrapDefenseConditionStepSpawnMonster_SetValue PocoInterface;
 	}

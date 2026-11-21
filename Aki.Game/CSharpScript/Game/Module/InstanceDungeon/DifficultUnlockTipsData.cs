@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005860 RID: 22624
+	// Token: 0x02004838 RID: 18488
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DifficultUnlockTipsData
 	{
-		// Token: 0x17008A5A RID: 35418
-		// (get) Token: 0x06039856 RID: 235606 RVA: 0x00DA8492 File Offset: 0x00DA6692
-		// (set) Token: 0x06039857 RID: 235607 RVA: 0x00DA849A File Offset: 0x00DA669A
+		// Token: 0x17005E26 RID: 24102
+		// (get) Token: 0x0602E773 RID: 190323 RVA: 0x00CF71BA File Offset: 0x00CF53BA
+		// (set) Token: 0x0602E774 RID: 190324 RVA: 0x00CF71C2 File Offset: 0x00CF53C2
 		public string Text { get; set; } = string.Empty;
 
-		// Token: 0x17008A5B RID: 35419
-		// (get) Token: 0x06039858 RID: 235608 RVA: 0x00DA84A3 File Offset: 0x00DA66A3
-		// (set) Token: 0x06039859 RID: 235609 RVA: 0x00DA84AB File Offset: 0x00DA66AB
+		// Token: 0x17005E27 RID: 24103
+		// (get) Token: 0x0602E775 RID: 190325 RVA: 0x00CF71CB File Offset: 0x00CF53CB
+		// (set) Token: 0x0602E776 RID: 190326 RVA: 0x00CF71D3 File Offset: 0x00CF53D3
 		public object[] Params { get; set; } = Array.Empty<object>();
 	}
 }

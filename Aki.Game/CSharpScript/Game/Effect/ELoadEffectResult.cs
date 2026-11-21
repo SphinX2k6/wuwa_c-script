@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x0200726C RID: 29292
+	// Token: 0x020063EB RID: 25579
 	public enum ELoadEffectResult
 	{
-		// Token: 0x04025BC4 RID: 154564
+		// Token: 0x04020E83 RID: 134787
 		Fail,
-		// Token: 0x04025BC5 RID: 154565
+		// Token: 0x04020E84 RID: 134788
 		CanNotPlay,
-		// Token: 0x04025BC6 RID: 154566
+		// Token: 0x04020E85 RID: 134789
 		Cancel,
-		// Token: 0x04025BC7 RID: 154567
+		// Token: 0x04020E86 RID: 134790
 		Stop,
-		// Token: 0x04025BC8 RID: 154568
+		// Token: 0x04020E87 RID: 134791
 		EffectActorError,
-		// Token: 0x04025BC9 RID: 154569
+		// Token: 0x04020E88 RID: 134792
 		Success
 	}
 }

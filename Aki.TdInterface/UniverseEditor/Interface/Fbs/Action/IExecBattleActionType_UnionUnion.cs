@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006700 RID: 26368
+	// Token: 0x02006D80 RID: 28032
 	public class IExecBattleActionType_UnionUnion
 	{
-		// Token: 0x1700C3EE RID: 50158
-		// (get) Token: 0x0602DDB1 RID: 187825 RVA: 0x00645525 File Offset: 0x00643725
-		// (set) Token: 0x0602DDB2 RID: 187826 RVA: 0x0064552D File Offset: 0x0064372D
+		// Token: 0x1700CDA4 RID: 52644
+		// (get) Token: 0x060305F0 RID: 198128 RVA: 0x00692B49 File Offset: 0x00690D49
+		// (set) Token: 0x060305F1 RID: 198129 RVA: 0x00692B51 File Offset: 0x00690D51
 		public IExecBattleActionType_Union Type { get; set; }
 
-		// Token: 0x1700C3EF RID: 50159
-		// (get) Token: 0x0602DDB3 RID: 187827 RVA: 0x00645536 File Offset: 0x00643736
-		// (set) Token: 0x0602DDB4 RID: 187828 RVA: 0x0064553E File Offset: 0x0064373E
+		// Token: 0x1700CDA5 RID: 52645
+		// (get) Token: 0x060305F2 RID: 198130 RVA: 0x00692B5A File Offset: 0x00690D5A
+		// (set) Token: 0x060305F3 RID: 198131 RVA: 0x00692B62 File Offset: 0x00690D62
 		public object Value { get; set; }
 
-		// Token: 0x0602DDB5 RID: 187829 RVA: 0x00645547 File Offset: 0x00643747
+		// Token: 0x060305F4 RID: 198132 RVA: 0x00692B6B File Offset: 0x00690D6B
 		public IExecBattleActionType_UnionUnion()
 		{
 			this.Type = IExecBattleActionType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602DDB6 RID: 187830 RVA: 0x0064555D File Offset: 0x0064375D
+		// Token: 0x060305F5 RID: 198133 RVA: 0x00692B81 File Offset: 0x00690D81
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602DDB7 RID: 187831 RVA: 0x0064556F File Offset: 0x0064376F
+		// Token: 0x060305F6 RID: 198134 RVA: 0x00692B93 File Offset: 0x00690D93
 		public IExecBattleActionTypeT AsIExecBattleActionType()
 		{
 			return this.As<IExecBattleActionTypeT>();
 		}
 
-		// Token: 0x0602DDB8 RID: 187832 RVA: 0x00645577 File Offset: 0x00643777
+		// Token: 0x060305F7 RID: 198135 RVA: 0x00692B9B File Offset: 0x00690D9B
 		public static IExecBattleActionType_UnionUnion FromIExecBattleActionType(IExecBattleActionTypeT _iexecbattleactiontype)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDB9 RID: 187833 RVA: 0x0064558C File Offset: 0x0064378C
+		// Token: 0x060305F8 RID: 198136 RVA: 0x00692BB0 File Offset: 0x00690DB0
 		public ISetBattleTagsT AsISetBattleTags()
 		{
 			return this.As<ISetBattleTagsT>();
 		}
 
-		// Token: 0x0602DDBA RID: 187834 RVA: 0x00645594 File Offset: 0x00643794
+		// Token: 0x060305F9 RID: 198137 RVA: 0x00692BB8 File Offset: 0x00690DB8
 		public static IExecBattleActionType_UnionUnion FromISetBattleTags(ISetBattleTagsT _isetbattletags)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDBB RID: 187835 RVA: 0x006455A9 File Offset: 0x006437A9
+		// Token: 0x060305FA RID: 198138 RVA: 0x00692BCD File Offset: 0x00690DCD
 		public ISendBattleEventsT AsISendBattleEvents()
 		{
 			return this.As<ISendBattleEventsT>();
 		}
 
-		// Token: 0x0602DDBC RID: 187836 RVA: 0x006455B1 File Offset: 0x006437B1
+		// Token: 0x060305FB RID: 198139 RVA: 0x00692BD5 File Offset: 0x00690DD5
 		public static IExecBattleActionType_UnionUnion FromISendBattleEvents(ISendBattleEventsT _isendbattleevents)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDBD RID: 187837 RVA: 0x006455C6 File Offset: 0x006437C6
+		// Token: 0x060305FC RID: 198140 RVA: 0x00692BEA File Offset: 0x00690DEA
 		public ISendBattleEventsForMonsterSummonT AsISendBattleEventsForMonsterSummon()
 		{
 			return this.As<ISendBattleEventsForMonsterSummonT>();
 		}
 
-		// Token: 0x0602DDBE RID: 187838 RVA: 0x006455CE File Offset: 0x006437CE
+		// Token: 0x060305FD RID: 198141 RVA: 0x00692BF2 File Offset: 0x00690DF2
 		public static IExecBattleActionType_UnionUnion FromISendBattleEventsForMonsterSummon(ISendBattleEventsForMonsterSummonT _isendbattleeventsformonstersummon)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDBF RID: 187839 RVA: 0x006455E3 File Offset: 0x006437E3
+		// Token: 0x060305FE RID: 198142 RVA: 0x00692C07 File Offset: 0x00690E07
 		public ISetMonsterMoveTargetT AsISetMonsterMoveTarget()
 		{
 			return this.As<ISetMonsterMoveTargetT>();
 		}
 
-		// Token: 0x0602DDC0 RID: 187840 RVA: 0x006455EB File Offset: 0x006437EB
+		// Token: 0x060305FF RID: 198143 RVA: 0x00692C0F File Offset: 0x00690E0F
 		public static IExecBattleActionType_UnionUnion FromISetMonsterMoveTarget(ISetMonsterMoveTargetT _isetmonstermovetarget)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDC1 RID: 187841 RVA: 0x00645600 File Offset: 0x00643800
+		// Token: 0x06030600 RID: 198144 RVA: 0x00692C24 File Offset: 0x00690E24
 		public IExitMonsterMoveTargetT AsIExitMonsterMoveTarget()
 		{
 			return this.As<IExitMonsterMoveTargetT>();
 		}
 
-		// Token: 0x0602DDC2 RID: 187842 RVA: 0x00645608 File Offset: 0x00643808
+		// Token: 0x06030601 RID: 198145 RVA: 0x00692C2C File Offset: 0x00690E2C
 		public static IExecBattleActionType_UnionUnion FromIExitMonsterMoveTarget(IExitMonsterMoveTargetT _iexitmonstermovetarget)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDC3 RID: 187843 RVA: 0x0064561D File Offset: 0x0064381D
+		// Token: 0x06030602 RID: 198146 RVA: 0x00692C41 File Offset: 0x00690E41
 		public ISetMonsterMoveWithSplineT AsISetMonsterMoveWithSpline()
 		{
 			return this.As<ISetMonsterMoveWithSplineT>();
 		}
 
-		// Token: 0x0602DDC4 RID: 187844 RVA: 0x00645625 File Offset: 0x00643825
+		// Token: 0x06030603 RID: 198147 RVA: 0x00692C49 File Offset: 0x00690E49
 		public static IExecBattleActionType_UnionUnion FromISetMonsterMoveWithSpline(ISetMonsterMoveWithSplineT _isetmonstermovewithspline)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDC5 RID: 187845 RVA: 0x0064563A File Offset: 0x0064383A
+		// Token: 0x06030604 RID: 198148 RVA: 0x00692C5E File Offset: 0x00690E5E
 		public IExitMonsterMoveWithSplineT AsIExitMonsterMoveWithSpline()
 		{
 			return this.As<IExitMonsterMoveWithSplineT>();
 		}
 
-		// Token: 0x0602DDC6 RID: 187846 RVA: 0x00645642 File Offset: 0x00643842
+		// Token: 0x06030605 RID: 198149 RVA: 0x00692C66 File Offset: 0x00690E66
 		public static IExecBattleActionType_UnionUnion FromIExitMonsterMoveWithSpline(IExitMonsterMoveWithSplineT _iexitmonstermovewithspline)
 		{
 			return new IExecBattleActionType_UnionUnion
@@ -157,7 +157,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DDC7 RID: 187847 RVA: 0x00645658 File Offset: 0x00643858
+		// Token: 0x06030606 RID: 198150 RVA: 0x00692C7B File Offset: 0x00690E7B
+		public IAiAssistCharacterMoveToPointT AsIAiAssistCharacterMoveToPoint()
+		{
+			return this.As<IAiAssistCharacterMoveToPointT>();
+		}
+
+		// Token: 0x06030607 RID: 198151 RVA: 0x00692C83 File Offset: 0x00690E83
+		public static IExecBattleActionType_UnionUnion FromIAiAssistCharacterMoveToPoint(IAiAssistCharacterMoveToPointT _iaiassistcharactermovetopoint)
+		{
+			return new IExecBattleActionType_UnionUnion
+			{
+				Type = IExecBattleActionType_Union.IAiAssistCharacterMoveToPoint,
+				Value = _iaiassistcharactermovetopoint
+			};
+		}
+
+		// Token: 0x06030608 RID: 198152 RVA: 0x00692C99 File Offset: 0x00690E99
+		public IAiAssistCharacterStopMoveToPointT AsIAiAssistCharacterStopMoveToPoint()
+		{
+			return this.As<IAiAssistCharacterStopMoveToPointT>();
+		}
+
+		// Token: 0x06030609 RID: 198153 RVA: 0x00692CA1 File Offset: 0x00690EA1
+		public static IExecBattleActionType_UnionUnion FromIAiAssistCharacterStopMoveToPoint(IAiAssistCharacterStopMoveToPointT _iaiassistcharacterstopmovetopoint)
+		{
+			return new IExecBattleActionType_UnionUnion
+			{
+				Type = IExecBattleActionType_Union.IAiAssistCharacterStopMoveToPoint,
+				Value = _iaiassistcharacterstopmovetopoint
+			};
+		}
+
+		// Token: 0x0603060A RID: 198154 RVA: 0x00692CB8 File Offset: 0x00690EB8
 		public static int Pack(FlatBufferBuilder builder, IExecBattleActionType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -178,6 +210,10 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return ISetMonsterMoveWithSpline.Pack(builder, _o.AsISetMonsterMoveWithSpline()).Value;
 			case IExecBattleActionType_Union.IExitMonsterMoveWithSpline:
 				return IExitMonsterMoveWithSpline.Pack(builder, _o.AsIExitMonsterMoveWithSpline()).Value;
+			case IExecBattleActionType_Union.IAiAssistCharacterMoveToPoint:
+				return IAiAssistCharacterMoveToPoint.Pack(builder, _o.AsIAiAssistCharacterMoveToPoint()).Value;
+			case IExecBattleActionType_Union.IAiAssistCharacterStopMoveToPoint:
+				return IAiAssistCharacterStopMoveToPoint.Pack(builder, _o.AsIAiAssistCharacterStopMoveToPoint()).Value;
 			default:
 				return 0;
 			}

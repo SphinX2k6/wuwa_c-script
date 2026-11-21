@@ -3,37 +3,37 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data;
 using UnrealEngine;
 
-// Token: 0x02002628 RID: 9768
+// Token: 0x02001B13 RID: 6931
 [NullableContext(2)]
 public interface IQteResource
 {
-	// Token: 0x17001962 RID: 6498
-	// (get) Token: 0x06013F59 RID: 81753
-	// (set) Token: 0x06013F5A RID: 81754
+	// Token: 0x1700199A RID: 6554
+	// (get) Token: 0x0601143B RID: 70715
+	// (set) Token: 0x0601143C RID: 70716
 	ULGUITexturePackerSpriteData Icon { get; set; }
 
-	// Token: 0x17001963 RID: 6499
-	// (get) Token: 0x06013F5B RID: 81755
-	// (set) Token: 0x06013F5C RID: 81756
+	// Token: 0x1700199B RID: 6555
+	// (get) Token: 0x0601143D RID: 70717
+	// (set) Token: 0x0601143E RID: 70718
 	EffectScreenPlayData_C ScreenEffect1 { get; set; }
 
-	// Token: 0x17001964 RID: 6500
-	// (get) Token: 0x06013F5D RID: 81757
-	// (set) Token: 0x06013F5E RID: 81758
+	// Token: 0x1700199C RID: 6556
+	// (get) Token: 0x0601143F RID: 70719
+	// (set) Token: 0x06011440 RID: 70720
 	EffectModelPostProcess ScreenEffect2 { get; set; }
 
-	// Token: 0x17001965 RID: 6501
-	// (get) Token: 0x06013F5F RID: 81759
-	// (set) Token: 0x06013F60 RID: 81760
+	// Token: 0x1700199D RID: 6557
+	// (get) Token: 0x06011441 RID: 70721
+	// (set) Token: 0x06011442 RID: 70722
 	UClass CameraShake { get; set; }
 
-	// Token: 0x17001966 RID: 6502
-	// (get) Token: 0x06013F61 RID: 81761
-	// (set) Token: 0x06013F62 RID: 81762
+	// Token: 0x1700199E RID: 6558
+	// (get) Token: 0x06011443 RID: 70723
+	// (set) Token: 0x06011444 RID: 70724
 	UKuroForceFeedbackEffect GamepadShake { get; set; }
 
-	// Token: 0x17001967 RID: 6503
-	// (get) Token: 0x06013F63 RID: 81763
-	// (set) Token: 0x06013F64 RID: 81764
+	// Token: 0x1700199F RID: 6559
+	// (get) Token: 0x06011445 RID: 70725
+	// (set) Token: 0x06011446 RID: 70726
 	UCurveFloat ScaleCurve { get; set; }
 }

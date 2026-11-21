@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Command
 {
-	// Token: 0x02005EE0 RID: 24288
+	// Token: 0x02006523 RID: 25891
 	public enum EGmRunningContext : byte
 	{
-		// Token: 0x0400F9C3 RID: 63939
+		// Token: 0x04010727 RID: 67367
 		GmView,
-		// Token: 0x0400F9C4 RID: 63940
+		// Token: 0x04010728 RID: 67368
 		BehaviorTree,
-		// Token: 0x0400F9C5 RID: 63941
+		// Token: 0x04010729 RID: 67369
 		OnLoginIn,
-		// Token: 0x0400F9C6 RID: 63942
+		// Token: 0x0401072A RID: 67370
 		EntityView,
-		// Token: 0x0400F9C7 RID: 63943
+		// Token: 0x0401072B RID: 67371
 		FlowView,
-		// Token: 0x0400F9C8 RID: 63944
+		// Token: 0x0401072C RID: 67372
 		Url,
-		// Token: 0x0400F9C9 RID: 63945
+		// Token: 0x0401072D RID: 67373
 		CsvEditor
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000135 RID: 309
+	// Token: 0x02000144 RID: 324
 	public class ConfigCalabashDevelopRewardByMonsterId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600073F RID: 1855 RVA: 0x00082A0F File Offset: 0x00080C0F
+		// Token: 0x06000799 RID: 1945 RVA: 0x00088373 File Offset: 0x00086573
 		static ConfigCalabashDevelopRewardByMonsterId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCalabashDevelopRewardByMonsterId.CreateStaticDefaultValue), new Action(ConfigCalabashDevelopRewardByMonsterId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000740 RID: 1856 RVA: 0x00082A30 File Offset: 0x00080C30
+		// Token: 0x0600079A RID: 1946 RVA: 0x00088394 File Offset: 0x00086594
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCalabashDevelopRewardByMonsterId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000741 RID: 1857 RVA: 0x00082AAF File Offset: 0x00080CAF
+		// Token: 0x0600079B RID: 1947 RVA: 0x00088413 File Offset: 0x00086613
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCalabashDevelopRewardByMonsterId.LogPair = null;
 			ConfigCalabashDevelopRewardByMonsterId.HandleId = 0;
 		}
 
-		// Token: 0x06000742 RID: 1858 RVA: 0x00082ABD File Offset: 0x00080CBD
+		// Token: 0x0600079C RID: 1948 RVA: 0x00088421 File Offset: 0x00086621
 		public static void Init()
 		{
 			ConfigCalabashDevelopRewardByMonsterId.HandleId = ConfigCommon.InitDataStatement(ConfigCalabashDevelopRewardByMonsterId.HandleId, "db_calabash.db", "select BinData from `CalabashDevelopReward` where MonsterId=?");
 		}
 
-		// Token: 0x06000743 RID: 1859 RVA: 0x00082AD8 File Offset: 0x00080CD8
+		// Token: 0x0600079D RID: 1949 RVA: 0x0008843C File Offset: 0x0008663C
 		public static CalabashDevelopReward? GetConfig(int p0MonsterId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCalabashDevelopRewardByMonsterId.HandleId, ConfigCalabashDevelopRewardByMonsterId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CalabashDevelopReward?(rootAsCalabashDevelopReward);
 		}
 
-		// Token: 0x04000857 RID: 2135
+		// Token: 0x040008C0 RID: 2240
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x04000858 RID: 2136
+		// Token: 0x040008C1 RID: 2241
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x04000859 RID: 2137
+		// Token: 0x040008C2 RID: 2242
 		private const string TABLE = "CalabashDevelopReward";
 
-		// Token: 0x0400085A RID: 2138
+		// Token: 0x040008C3 RID: 2243
 		private const string COMMAND = "select BinData from `CalabashDevelopReward` where MonsterId=?";
 
-		// Token: 0x0400085B RID: 2139
+		// Token: 0x040008C4 RID: 2244
 		private const string KEY_PREFIX = "CalabashDevelopRewardByMonsterId";
 
-		// Token: 0x0400085C RID: 2140
+		// Token: 0x040008C5 RID: 2245
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400085D RID: 2141
+		// Token: 0x040008C6 RID: 2246
 		private static int HandleId;
 	}
 }

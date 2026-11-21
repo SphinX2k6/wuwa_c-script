@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007374 RID: 29556
+	// Token: 0x02007B5B RID: 31579
 	public class ITelePortAfterTimeOutT
 	{
-		// Token: 0x1700E061 RID: 57441
-		// (get) Token: 0x06035A44 RID: 219716 RVA: 0x0074DD14 File Offset: 0x0074BF14
-		// (set) Token: 0x06035A45 RID: 219717 RVA: 0x0074DD1C File Offset: 0x0074BF1C
+		// Token: 0x1700EC71 RID: 60529
+		// (get) Token: 0x06038DDF RID: 232927 RVA: 0x007B0254 File Offset: 0x007AE454
+		// (set) Token: 0x06038DE0 RID: 232928 RVA: 0x007B025C File Offset: 0x007AE45C
 		public ETeammateTeleportType Type { get; set; }
 
-		// Token: 0x1700E062 RID: 57442
-		// (get) Token: 0x06035A46 RID: 219718 RVA: 0x0074DD25 File Offset: 0x0074BF25
-		// (set) Token: 0x06035A47 RID: 219719 RVA: 0x0074DD2D File Offset: 0x0074BF2D
+		// Token: 0x1700EC72 RID: 60530
+		// (get) Token: 0x06038DE1 RID: 232929 RVA: 0x007B0265 File Offset: 0x007AE465
+		// (set) Token: 0x06038DE2 RID: 232930 RVA: 0x007B026D File Offset: 0x007AE46D
 		public int TimeOut { get; set; }
 
-		// Token: 0x06035A48 RID: 219720 RVA: 0x0074DD36 File Offset: 0x0074BF36
+		// Token: 0x06038DE3 RID: 232931 RVA: 0x007B0276 File Offset: 0x007AE476
 		public ITelePortAfterTimeOutT()
 		{
 			this.Type = ETeammateTeleportType.TelePortAfterTimeOut;

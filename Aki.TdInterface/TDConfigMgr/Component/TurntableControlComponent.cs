@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008D2 RID: 2258
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000977 RID: 2423
 	public class TurntableControlComponent : IComponentBase
 	{
-		// Token: 0x06003311 RID: 13073 RVA: 0x00082FC0 File Offset: 0x000811C0
+		// Token: 0x06003659 RID: 13913 RVA: 0x0008A5FC File Offset: 0x000887FC
 		private TurntableControlComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003312 RID: 13074 RVA: 0x00082FF8 File Offset: 0x000811F8
+		// Token: 0x0600365A RID: 13914 RVA: 0x0008A634 File Offset: 0x00088834
 		public static TurntableControlComponent Create([Nullable(2)] TurntableControlComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003313 RID: 13075 RVA: 0x0008300B File Offset: 0x0008120B
+		// Token: 0x0600365B RID: 13915 RVA: 0x0008A647 File Offset: 0x00088847
 		public static TurntableControlComponent CreateFromSetValue([Nullable(2)] TurntableControlComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003314 RID: 13076 RVA: 0x0008301E File Offset: 0x0008121E
+		// Token: 0x0600365C RID: 13916 RVA: 0x0008A65A File Offset: 0x0008885A
 		public new TurntableControlComponent_SetValue ToSetValue()
 		{
 			return new TurntableControlComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DB5 RID: 3509
-		// (get) Token: 0x06003315 RID: 13077 RVA: 0x0008304C File Offset: 0x0008124C
-		// (set) Token: 0x06003316 RID: 13078 RVA: 0x00083086 File Offset: 0x00081286
+		// Token: 0x17000E81 RID: 3713
+		// (get) Token: 0x0600365D RID: 13917 RVA: 0x0008A688 File Offset: 0x00088888
+		// (set) Token: 0x0600365E RID: 13918 RVA: 0x0008A6C2 File Offset: 0x000888C2
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB6 RID: 3510
-		// (get) Token: 0x06003317 RID: 13079 RVA: 0x00083094 File Offset: 0x00081294
-		// (set) Token: 0x06003318 RID: 13080 RVA: 0x000830BE File Offset: 0x000812BE
+		// Token: 0x17000E82 RID: 3714
+		// (get) Token: 0x0600365F RID: 13919 RVA: 0x0008A6D0 File Offset: 0x000888D0
+		// (set) Token: 0x06003660 RID: 13920 RVA: 0x0008A6FA File Offset: 0x000888FA
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB7 RID: 3511
-		// (get) Token: 0x06003319 RID: 13081 RVA: 0x000830CC File Offset: 0x000812CC
-		// (set) Token: 0x0600331A RID: 13082 RVA: 0x000830F3 File Offset: 0x000812F3
+		// Token: 0x17000E83 RID: 3715
+		// (get) Token: 0x06003661 RID: 13921 RVA: 0x0008A708 File Offset: 0x00088908
+		// (set) Token: 0x06003662 RID: 13922 RVA: 0x0008A72F File Offset: 0x0008892F
 		public virtual ITurntableControlType Config
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002186 RID: 8582
+		// Token: 0x0400239D RID: 9117
 		[Nullable(2)]
 		protected new TurntableControlComponent FbInstance;
 
-		// Token: 0x04002187 RID: 8583
+		// Token: 0x0400239E RID: 9118
 		[Nullable(2)]
 		protected new TurntableControlComponent_SetValue PocoInterface;
 	}

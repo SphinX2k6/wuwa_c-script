@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x0200509D RID: 20637
+	// Token: 0x0200406D RID: 16493
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowLaunchResCheckHardCodingList
 	{
-		// Token: 0x0401C2D0 RID: 115408
+		// Token: 0x04016CFF RID: 93439
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<string> TempDisableWorldOffsetZ = new HashSet<string>
 		{
@@ -257,18 +257,37 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			"剧情_2_0_黎那汐塔主线_第一幕,34,1"
 		};
 
-		// Token: 0x0401C2D1 RID: 115409
+		// Token: 0x04016D00 RID: 93440
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<string> TempDisableSequenceInertiaKeeper = new HashSet<string>
 		{
-			"剧情_3_7_主线火匣,36,1"
+			"剧情_3_7_主线火匣,36,1",
+			"剧情_3_8_予以明日的花束3,34,1",
+			"剧情_3_8_予以明日的花束4,52,1",
+			"剧情_3_8_予以明日的花束4,26,1",
+			"剧情_3_8_予以明日的花束4,32,1",
+			"剧情_3_8_予以明日的花束4,16,1"
 		};
 
-		// Token: 0x0401C2D2 RID: 115410
+		// Token: 0x04016D01 RID: 93441
 		[StaticVariableRuleIgnore]
 		public static readonly HashSet<string> TempDisableNextFrameDelay = new HashSet<string>
 		{
 			"剧情_3_3_拉海洛主线_上半新,6,4"
+		};
+
+		// Token: 0x04016D02 RID: 93442
+		[StaticVariableRuleIgnore]
+		public static readonly HashSet<string> TempWaitNpcRenderedBeforeEndSwitch = new HashSet<string>
+		{
+			"剧情_3_8_予以明日的花束5,14,1"
+		};
+
+		// Token: 0x04016D03 RID: 93443
+		[StaticVariableRuleIgnore]
+		public static readonly HashSet<string> TempReadFinalPosByGenderTag = new HashSet<string>
+		{
+			"剧情_3_8_予以明日的花束5,14,1"
 		};
 	}
 }

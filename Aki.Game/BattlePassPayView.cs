@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002327 RID: 8999
+// Token: 0x0200180C RID: 6156
 [NullableContext(1)]
 [Nullable(0)]
 public class BattlePassPayView : UiViewBase
 {
-	// Token: 0x06011D0B RID: 72971 RVA: 0x004630D9 File Offset: 0x004612D9
+	// Token: 0x0600F1BB RID: 61883 RVA: 0x0047019D File Offset: 0x0046E39D
 	public BattlePassPayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011D0C RID: 72972 RVA: 0x004630E4 File Offset: 0x004612E4
+	// Token: 0x0600F1BC RID: 61884 RVA: 0x004701A8 File Offset: 0x0046E3A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -77,7 +77,7 @@ public class BattlePassPayView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D0D RID: 72973 RVA: 0x004633CC File Offset: 0x004615CC
+	// Token: 0x0600F1BD RID: 61885 RVA: 0x00470490 File Offset: 0x0046E690
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BattlePassPayView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ public class BattlePassPayView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D0E RID: 72974 RVA: 0x00463408 File Offset: 0x00461608
+	// Token: 0x0600F1BE RID: 61886 RVA: 0x004704CC File Offset: 0x0046E6CC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnReceiveBattlePassPaid, new Action(this.OnClickExitBtn));
@@ -96,7 +96,7 @@ public class BattlePassPayView : UiViewBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x06011D0F RID: 72975 RVA: 0x0046347C File Offset: 0x0046167C
+	// Token: 0x0600F1BF RID: 61887 RVA: 0x00470540 File Offset: 0x0046E740
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnReceiveBattlePassPaid, new Action(this.OnClickExitBtn));
@@ -105,7 +105,7 @@ public class BattlePassPayView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x06011D10 RID: 72976 RVA: 0x004634EF File Offset: 0x004616EF
+	// Token: 0x0600F1C0 RID: 61888 RVA: 0x004705B3 File Offset: 0x0046E7B3
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.SdkPayProductInformationView)
@@ -119,7 +119,7 @@ public class BattlePassPayView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011D11 RID: 72977 RVA: 0x00463513 File Offset: 0x00461713
+	// Token: 0x0600F1C1 RID: 61889 RVA: 0x004705D7 File Offset: 0x0046E7D7
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.SdkPayProductInformationView)
@@ -128,13 +128,13 @@ public class BattlePassPayView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011D12 RID: 72978 RVA: 0x00463531 File Offset: 0x00461731
+	// Token: 0x0600F1C2 RID: 61890 RVA: 0x004705F5 File Offset: 0x0046E7F5
 	private void OnClickExitBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011D13 RID: 72979 RVA: 0x0046353A File Offset: 0x0046173A
+	// Token: 0x0600F1C3 RID: 61891 RVA: 0x004705FE File Offset: 0x0046E7FE
 	private void SdkPayEnd(ESdkDialogResult eSdkDialogResult)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -145,19 +145,19 @@ public class BattlePassPayView : UiViewBase
 		platformSdk.ShowPlayStationStoreIcon(0);
 	}
 
-	// Token: 0x06011D14 RID: 72980 RVA: 0x00463551 File Offset: 0x00461751
+	// Token: 0x0600F1C4 RID: 61892 RVA: 0x00470615 File Offset: 0x0046E815
 	private void OnClickPrimaryPayBtn()
 	{
 		BattlePassController.Instance.PayPrimaryBattlePass();
 	}
 
-	// Token: 0x06011D15 RID: 72981 RVA: 0x0046355D File Offset: 0x0046175D
+	// Token: 0x0600F1C5 RID: 61893 RVA: 0x00470621 File Offset: 0x0046E821
 	private void OnClickHighPayBtn()
 	{
 		BattlePassController.Instance.PayHighBattlePass();
 	}
 
-	// Token: 0x06011D16 RID: 72982 RVA: 0x0046356C File Offset: 0x0046176C
+	// Token: 0x0600F1C6 RID: 61894 RVA: 0x00470630 File Offset: 0x0046E830
 	private void OnClickDetailBtn()
 	{
 		WeaponPreviewViewParam param = new WeaponPreviewViewParam
@@ -169,7 +169,7 @@ public class BattlePassPayView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x06011D17 RID: 72983 RVA: 0x004635C0 File Offset: 0x004617C0
+	// Token: 0x0600F1C7 RID: 61895 RVA: 0x00470684 File Offset: 0x0046E884
 	protected override void OnStart()
 	{
 		this.PrimaryRewardList = new List<TItem>();
@@ -187,7 +187,7 @@ public class BattlePassPayView : UiViewBase
 		this.CheckSdkProductInfoConfirmIfCanShow();
 	}
 
-	// Token: 0x06011D18 RID: 72984 RVA: 0x004636BE File Offset: 0x004618BE
+	// Token: 0x0600F1C8 RID: 61896 RVA: 0x00470782 File Offset: 0x0046E982
 	protected override void OnBeforeShow()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -198,13 +198,13 @@ public class BattlePassPayView : UiViewBase
 		platformSdk.ShowPlayStationStoreIcon(0);
 	}
 
-	// Token: 0x06011D19 RID: 72985 RVA: 0x004636D5 File Offset: 0x004618D5
+	// Token: 0x0600F1C9 RID: 61897 RVA: 0x00470799 File Offset: 0x0046E999
 	protected override void OnAfterShow()
 	{
 		this.QueryProductPriceAndRefresh().Forget();
 	}
 
-	// Token: 0x06011D1A RID: 72986 RVA: 0x004636E4 File Offset: 0x004618E4
+	// Token: 0x0600F1CA RID: 61898 RVA: 0x004707A8 File Offset: 0x0046E9A8
 	private UniTask QueryProductPriceAndRefresh()
 	{
 		BattlePassPayView.<QueryProductPriceAndRefresh>d__23 <QueryProductPriceAndRefresh>d__;
@@ -215,7 +215,7 @@ public class BattlePassPayView : UiViewBase
 		return <QueryProductPriceAndRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D1B RID: 72987 RVA: 0x00463728 File Offset: 0x00461928
+	// Token: 0x0600F1CB RID: 61899 RVA: 0x004707EC File Offset: 0x0046E9EC
 	private bool CheckSdkProductInfoConfirmIfCanShow()
 	{
 		if (PlatformSdkManagerNew.Instance.GetPlatformSdk().NeedConfirmSdkProductInfo())
@@ -237,7 +237,7 @@ public class BattlePassPayView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06011D1C RID: 72988 RVA: 0x004637C8 File Offset: 0x004619C8
+	// Token: 0x0600F1CC RID: 61900 RVA: 0x0047088C File Offset: 0x0046EA8C
 	private UniTask OpenThirdPartyMessageBox()
 	{
 		BattlePassPayView.<OpenThirdPartyMessageBox>d__25 <OpenThirdPartyMessageBox>d__;
@@ -247,7 +247,7 @@ public class BattlePassPayView : UiViewBase
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011D1D RID: 72989 RVA: 0x00463803 File Offset: 0x00461A03
+	// Token: 0x0600F1CD RID: 61901 RVA: 0x004708C7 File Offset: 0x0046EAC7
 	private int[] GetNeedRequestGoodId()
 	{
 		return new int[]
@@ -258,19 +258,19 @@ public class BattlePassPayView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011D1E RID: 72990 RVA: 0x00463832 File Offset: 0x00461A32
+	// Token: 0x0600F1CE RID: 61902 RVA: 0x004708F6 File Offset: 0x0046EAF6
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06011D1F RID: 72991 RVA: 0x00463839 File Offset: 0x00461A39
+	// Token: 0x0600F1CF RID: 61903 RVA: 0x004708FD File Offset: 0x0046EAFD
 	protected override void OnBeforeHide()
 	{
 		PlatformSdkManagerNew.Instance.GetPlatformSdk().HidePlayStationStoreIcon();
 	}
 
-	// Token: 0x06011D20 RID: 72992 RVA: 0x0046384C File Offset: 0x00461A4C
+	// Token: 0x0600F1D0 RID: 61904 RVA: 0x00470910 File Offset: 0x0046EB10
 	protected override void OnBeforeDestroy()
 	{
 		this.PrimaryRewardList.Clear();
@@ -284,7 +284,7 @@ public class BattlePassPayView : UiViewBase
 		PlatformSdkManagerNew.Instance.GetPlatformSdk().HidePlayStationStoreIcon();
 	}
 
-	// Token: 0x06011D21 RID: 72993 RVA: 0x004638B0 File Offset: 0x00461AB0
+	// Token: 0x0600F1D1 RID: 61905 RVA: 0x00470974 File Offset: 0x0046EB74
 	private void RefreshButtonView()
 	{
 		BattlePassPayStatus payType = BattlePassModel.Instance.PayType;
@@ -310,7 +310,7 @@ public class BattlePassPayView : UiViewBase
 		this.RefreshCloudGameInfo();
 	}
 
-	// Token: 0x06011D22 RID: 72994 RVA: 0x004639C8 File Offset: 0x00461BC8
+	// Token: 0x0600F1D2 RID: 61906 RVA: 0x00470A8C File Offset: 0x0046EC8C
 	private void RefreshCloudGameInfo()
 	{
 		UUIText text = base.GetText(13);
@@ -334,7 +334,7 @@ public class BattlePassPayView : UiViewBase
 		text2.SetText(payShopGoodsById2.GetCloudGameDesc(), true);
 	}
 
-	// Token: 0x06011D23 RID: 72995 RVA: 0x00463A94 File Offset: 0x00461C94
+	// Token: 0x0600F1D3 RID: 61907 RVA: 0x00470B58 File Offset: 0x0046ED58
 	public void RefreshLeftTime(float _)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -347,14 +347,14 @@ public class BattlePassPayView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(7), "Text_GachaRemainingTime_Text", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText));
 	}
 
-	// Token: 0x06011D24 RID: 72996 RVA: 0x00463AF0 File Offset: 0x00461CF0
+	// Token: 0x0600F1D4 RID: 61908 RVA: 0x00470BB4 File Offset: 0x0046EDB4
 	[CompilerGenerated]
 	internal static void <CheckSdkProductInfoConfirmIfCanShow>g__confirmCallback|24_0()
 	{
 		UiManager.Instance.CloseView(EUiViewName.BattlePassPayView, null);
 	}
 
-	// Token: 0x04008705 RID: 34565
+	// Token: 0x04008848 RID: 34888
 	[Nullable(new byte[]
 	{
 		2,
@@ -362,7 +362,7 @@ public class BattlePassPayView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> PrimaryGridLayout;
 
-	// Token: 0x04008706 RID: 34566
+	// Token: 0x04008849 RID: 34889
 	[Nullable(new byte[]
 	{
 		2,
@@ -370,59 +370,59 @@ public class BattlePassPayView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> HighGridLayout;
 
-	// Token: 0x04008707 RID: 34567
+	// Token: 0x0400884A RID: 34890
 	[Nullable(2)]
 	private List<TItem> PrimaryRewardList;
 
-	// Token: 0x04008708 RID: 34568
+	// Token: 0x0400884B RID: 34891
 	[Nullable(2)]
 	private List<TItem> HighRewardList;
 
-	// Token: 0x04008709 RID: 34569
+	// Token: 0x0400884C RID: 34892
 	private long PassEndTime;
 
-	// Token: 0x0400870A RID: 34570
+	// Token: 0x0400884D RID: 34893
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400870B RID: 34571
+	// Token: 0x0400884E RID: 34894
 	private const int PLAYSTATIONICONPOSITION = 0;
 
-	// Token: 0x020088A5 RID: 34981
+	// Token: 0x02007A2E RID: 31278
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C68E RID: 181902
+		// Token: 0x040279A2 RID: 162210
 		ExitBtn,
-		// Token: 0x0402C68F RID: 181903
+		// Token: 0x040279A3 RID: 162211
 		PrimaryGrid,
-		// Token: 0x0402C690 RID: 181904
+		// Token: 0x040279A4 RID: 162212
 		PrimaryPrice,
-		// Token: 0x0402C691 RID: 181905
+		// Token: 0x040279A5 RID: 162213
 		PrimaryPayBtn,
-		// Token: 0x0402C692 RID: 181906
+		// Token: 0x040279A6 RID: 162214
 		HighGrid,
-		// Token: 0x0402C693 RID: 181907
+		// Token: 0x040279A7 RID: 162215
 		HighPrice,
-		// Token: 0x0402C694 RID: 181908
+		// Token: 0x040279A8 RID: 162216
 		HighPayBtn,
-		// Token: 0x0402C695 RID: 181909
+		// Token: 0x040279A9 RID: 162217
 		TxtCountDown,
-		// Token: 0x0402C696 RID: 181910
+		// Token: 0x040279AA RID: 162218
 		DetailBtn,
-		// Token: 0x0402C697 RID: 181911
+		// Token: 0x040279AB RID: 162219
 		PrimaryBuyItem,
-		// Token: 0x0402C698 RID: 181912
+		// Token: 0x040279AC RID: 162220
 		HighBuyItem,
-		// Token: 0x0402C699 RID: 181913
+		// Token: 0x040279AD RID: 162221
 		PrimaryDoneItem,
-		// Token: 0x0402C69A RID: 181914
+		// Token: 0x040279AE RID: 162222
 		HighDoneItem,
-		// Token: 0x0402C69B RID: 181915
+		// Token: 0x040279AF RID: 162223
 		PrimaryCloudGameDesc,
-		// Token: 0x0402C69C RID: 181916
+		// Token: 0x040279B0 RID: 162224
 		HighCloudGameDesc,
-		// Token: 0x0402C69D RID: 181917
+		// Token: 0x040279B1 RID: 162225
 		CloudGameTip
 	}
 }

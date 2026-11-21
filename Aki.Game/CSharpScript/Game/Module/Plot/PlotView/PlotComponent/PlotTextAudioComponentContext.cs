@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200507D RID: 20605
+	// Token: 0x0200404D RID: 16461
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotTextAudioComponentContext
 	{
-		// Token: 0x17008061 RID: 32865
-		// (get) Token: 0x06034CBE RID: 216254 RVA: 0x00C7DA97 File Offset: 0x00C7BC97
-		// (set) Token: 0x06034CBF RID: 216255 RVA: 0x00C7DA9F File Offset: 0x00C7BC9F
+		// Token: 0x17005421 RID: 21537
+		// (get) Token: 0x06029BB3 RID: 170931 RVA: 0x00BCAE6F File Offset: 0x00BC906F
+		// (set) Token: 0x06029BB4 RID: 170932 RVA: 0x00BCAE77 File Offset: 0x00BC9077
 		public Action OnAudioStartDelegate { get; set; }
 
-		// Token: 0x17008062 RID: 32866
-		// (get) Token: 0x06034CC0 RID: 216256 RVA: 0x00C7DAA8 File Offset: 0x00C7BCA8
-		// (set) Token: 0x06034CC1 RID: 216257 RVA: 0x00C7DAB0 File Offset: 0x00C7BCB0
+		// Token: 0x17005422 RID: 21538
+		// (get) Token: 0x06029BB5 RID: 170933 RVA: 0x00BCAE80 File Offset: 0x00BC9080
+		// (set) Token: 0x06029BB6 RID: 170934 RVA: 0x00BCAE88 File Offset: 0x00BC9088
 		public Action OnAudioEndDelegate { get; set; }
 
-		// Token: 0x17008063 RID: 32867
-		// (get) Token: 0x06034CC2 RID: 216258 RVA: 0x00C7DAB9 File Offset: 0x00C7BCB9
-		// (set) Token: 0x06034CC3 RID: 216259 RVA: 0x00C7DAC1 File Offset: 0x00C7BCC1
+		// Token: 0x17005423 RID: 21539
+		// (get) Token: 0x06029BB7 RID: 170935 RVA: 0x00BCAE91 File Offset: 0x00BC9091
+		// (set) Token: 0x06029BB8 RID: 170936 RVA: 0x00BCAE99 File Offset: 0x00BC9099
 		public Action OnAudioLoadTimeoutDelegate { get; set; }
 	}
 }

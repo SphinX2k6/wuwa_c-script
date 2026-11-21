@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E9F RID: 20127
+	// Token: 0x020053C8 RID: 21448
 	public class IAngleWeightT
 	{
-		// Token: 0x17009057 RID: 36951
-		// (get) Token: 0x0601FAE0 RID: 129760 RVA: 0x00469463 File Offset: 0x00467663
-		// (set) Token: 0x0601FAE1 RID: 129761 RVA: 0x0046946B File Offset: 0x0046766B
+		// Token: 0x170097B6 RID: 38838
+		// (get) Token: 0x060217D5 RID: 137173 RVA: 0x0049E6C7 File Offset: 0x0049C8C7
+		// (set) Token: 0x060217D6 RID: 137174 RVA: 0x0049E6CF File Offset: 0x0049C8CF
 		public EExploreSkillSearchTargetCfg Type { get; set; }
 
-		// Token: 0x17009058 RID: 36952
-		// (get) Token: 0x0601FAE2 RID: 129762 RVA: 0x00469474 File Offset: 0x00467674
-		// (set) Token: 0x0601FAE3 RID: 129763 RVA: 0x0046947C File Offset: 0x0046767C
+		// Token: 0x170097B7 RID: 38839
+		// (get) Token: 0x060217D7 RID: 137175 RVA: 0x0049E6D8 File Offset: 0x0049C8D8
+		// (set) Token: 0x060217D8 RID: 137176 RVA: 0x0049E6E0 File Offset: 0x0049C8E0
 		public List<IEntityAngleWeightT> AngleWeight { get; set; }
 
-		// Token: 0x0601FAE4 RID: 129764 RVA: 0x00469485 File Offset: 0x00467685
+		// Token: 0x060217D9 RID: 137177 RVA: 0x0049E6E9 File Offset: 0x0049C8E9
 		public IAngleWeightT()
 		{
 			this.Type = EExploreSkillSearchTargetCfg.AngleWeight;

@@ -5,15 +5,15 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.NewWorld.Vehicle.Motorcycle;
 using UnrealEngine;
 
-// Token: 0x02000EE0 RID: 3808
+// Token: 0x02000395 RID: 917
 public class LevelEventMotorSoarInWindField : LevelEventBase
 {
-	// Token: 0x06005F14 RID: 24340 RVA: 0x0011C960 File Offset: 0x0011AB60
+	// Token: 0x060032AA RID: 12970 RVA: 0x001246B0 File Offset: 0x001228B0
 	public LevelEventMotorSoarInWindField(int id) : base(id)
 	{
 	}
 
-	// Token: 0x06005F15 RID: 24341 RVA: 0x0011C96C File Offset: 0x0011AB6C
+	// Token: 0x060032AB RID: 12971 RVA: 0x001246BC File Offset: 0x001228BC
 	[NullableContext(1)]
 	public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 	{

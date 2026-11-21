@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001B5E RID: 7006
+	// Token: 0x020004D2 RID: 1234
 	public sealed class FKuroMaterialControllerPreBodyInfoRuntimeReInit : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601A874 RID: 108660 RVA: 0x00271CEA File Offset: 0x0026FEEA
+		// Token: 0x06007375 RID: 29557 RVA: 0x000A9342 File Offset: 0x000A7542
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroMaterialControllerPreBodyInfoRuntimeReInit.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601A875 RID: 108661 RVA: 0x00271CF6 File Offset: 0x0026FEF6
+		// Token: 0x06007376 RID: 29558 RVA: 0x000A934E File Offset: 0x000A754E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroMaterialControllerPreBodyInfoRuntimeReInit._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroMaterialControllerPreBodyInfoRuntimeReInit._FunctionPtr;
 		}
 
-		// Token: 0x0601A876 RID: 108662 RVA: 0x00271D19 File Offset: 0x0026FF19
+		// Token: 0x06007377 RID: 29559 RVA: 0x000A9371 File Offset: 0x000A7571
 		public FKuroMaterialControllerPreBodyInfoRuntimeReInit()
 		{
 		}
 
-		// Token: 0x0601A877 RID: 108663 RVA: 0x00271D21 File Offset: 0x0026FF21
+		// Token: 0x06007378 RID: 29560 RVA: 0x000A9379 File Offset: 0x000A7579
 		[NullableContext(2)]
 		public FKuroMaterialControllerPreBodyInfoRuntimeReInit(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601A878 RID: 108664 RVA: 0x00271D2B File Offset: 0x0026FF2B
+		// Token: 0x06007379 RID: 29561 RVA: 0x000A9383 File Offset: 0x000A7583
 		public FKuroMaterialControllerPreBodyInfoRuntimeReInit(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601A879 RID: 108665 RVA: 0x00271D36 File Offset: 0x0026FF36
+		// Token: 0x0600737A RID: 29562 RVA: 0x000A938E File Offset: 0x000A758E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FName>) ?? ((Action<FName>)Delegate.CreateDelegate(typeof(Action<FName>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601A87A RID: 108666 RVA: 0x00271D68 File Offset: 0x0026FF68
+		// Token: 0x0600737B RID: 29563 RVA: 0x000A93C0 File Offset: 0x000A75C0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FName> Callback)
 		{
 			if (FKuroMaterialControllerPreBodyInfoRuntimeReInit.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroMaterialControllerPreBodyInfoRuntimeReInit.RegisterId);
 		}
 
-		// Token: 0x0601A87B RID: 108667 RVA: 0x00271DA4 File Offset: 0x0026FFA4
+		// Token: 0x0600737C RID: 29564 RVA: 0x000A93FC File Offset: 0x000A75FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FName BodyName)
 		{
 			FKuroMaterialControllerPreBodyInfoRuntimeReInit.__FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams* ptr = stackalloc FKuroMaterialControllerPreBodyInfoRuntimeReInit.__FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FKuroMaterialControllerPreBodyInfoRuntimeReInit.__FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601A87C RID: 108668 RVA: 0x00271DE4 File Offset: 0x0026FFE4
+		// Token: 0x0600737D RID: 29565 RVA: 0x000A943C File Offset: 0x000A763C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FName> action = target as Action<FName>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FKuroMaterialControllerPreBodyInfoRuntimeReInit.__FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams*)__Parameters)->BodyName);
 		}
 
-		// Token: 0x0400E5E0 RID: 58848
+		// Token: 0x04003178 RID: 12664
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400E5E1 RID: 58849
+		// Token: 0x04003179 RID: 12665
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroMaterialControllerPreBodyInfoRuntimeReInit__DelegateSignature";
 
-		// Token: 0x0400E5E2 RID: 58850
+		// Token: 0x0400317A RID: 12666
 		private static int RegisterId;
 
-		// Token: 0x02003157 RID: 12631
+		// Token: 0x02000C15 RID: 3093
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams
+		private ref struct __FKuroMaterialControllerPreBodyInfoRuntimeReInit_DelegateParams
 		{
-			// Token: 0x04016F6E RID: 94062
+			// Token: 0x04005E4C RID: 24140
 			[FieldOffset(0)]
 			public FName BodyName;
 		}
 
-		// Token: 0x02003158 RID: 12632
+		// Token: 0x02000C16 RID: 3094
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016F6F RID: 94063
+			// Token: 0x04005E4D RID: 24141
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

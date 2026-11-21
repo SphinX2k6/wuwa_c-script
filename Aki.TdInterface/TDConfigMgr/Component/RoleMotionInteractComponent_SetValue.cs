@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200087C RID: 2172
+	// Token: 0x0200091F RID: 2335
 	public class RoleMotionInteractComponent_SetValue
 	{
-		// Token: 0x04001FC5 RID: 8133
+		// Token: 0x040021D7 RID: 8663
 		public bool? Disabled;
 
-		// Token: 0x04001FC6 RID: 8134
+		// Token: 0x040021D8 RID: 8664
 		public bool? EdIsLocked;
 
-		// Token: 0x04001FC7 RID: 8135
-		[Nullable(1)]
+		// Token: 0x040021D9 RID: 8665
 		public IPetalGrabRoleMotionInteract MotionInteractConfig;
 	}
 }

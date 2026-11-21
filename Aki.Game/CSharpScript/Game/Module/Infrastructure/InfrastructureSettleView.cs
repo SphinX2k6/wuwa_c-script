@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590C RID: 22796
+	// Token: 0x020048E5 RID: 18661
 	public class InfrastructureSettleView : UiViewBase
 	{
-		// Token: 0x06039E34 RID: 237108 RVA: 0x00DBFC65 File Offset: 0x00DBDE65
+		// Token: 0x0602ED57 RID: 191831 RVA: 0x00D0EF5D File Offset: 0x00D0D15D
 		[NullableContext(1)]
 		public InfrastructureSettleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06039E35 RID: 237109 RVA: 0x00DBFC7C File Offset: 0x00DBDE7C
+		// Token: 0x0602ED58 RID: 191832 RVA: 0x00D0EF74 File Offset: 0x00D0D174
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039E36 RID: 237110 RVA: 0x00DBFD90 File Offset: 0x00DBDF90
+		// Token: 0x0602ED59 RID: 191833 RVA: 0x00D0F088 File Offset: 0x00D0D288
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureSettleView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E37 RID: 237111 RVA: 0x00DBFDD4 File Offset: 0x00DBDFD4
+		// Token: 0x0602ED5A RID: 191834 RVA: 0x00D0F0CC File Offset: 0x00D0D2CC
 		protected override void OnStart()
 		{
 			base.GetItem(13).SetUIActive(true);
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshButton();
 		}
 
-		// Token: 0x06039E38 RID: 237112 RVA: 0x00DBFF90 File Offset: 0x00DBE190
+		// Token: 0x0602ED5B RID: 191835 RVA: 0x00D0F288 File Offset: 0x00D0D488
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.UiViewSequence.PlaySequence("Success", true, null);
 		}
 
-		// Token: 0x06039E39 RID: 237113 RVA: 0x00DBFFB8 File Offset: 0x00DBE1B8
+		// Token: 0x0602ED5C RID: 191836 RVA: 0x00D0F2B0 File Offset: 0x00D0D4B0
 		private UniTask InitButtonAsync()
 		{
 			InfrastructureSettleView.<InitButtonAsync>d__7 <InitButtonAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <InitButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E3A RID: 237114 RVA: 0x00DBFFFC File Offset: 0x00DBE1FC
+		// Token: 0x0602ED5D RID: 191837 RVA: 0x00D0F2F4 File Offset: 0x00D0D4F4
 		private void RefreshButton()
 		{
 			base.GetItem(5).SetUIActive(true);
@@ -110,47 +110,47 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.Button.SetOnClickLeftEvent(new Action(this.OnClickBtnLeaveLeft));
 		}
 
-		// Token: 0x06039E3B RID: 237115 RVA: 0x00DC0070 File Offset: 0x00DBE270
+		// Token: 0x0602ED5E RID: 191838 RVA: 0x00D0F368 File Offset: 0x00D0D568
 		private void OnClickBtnLeave()
 		{
 			UiManager.Instance.ResetToBattleView(null);
 		}
 
-		// Token: 0x06039E3C RID: 237116 RVA: 0x00DC007D File Offset: 0x00DBE27D
+		// Token: 0x0602ED5F RID: 191839 RVA: 0x00D0F375 File Offset: 0x00D0D575
 		private void OnClickBtnLeaveLeft()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401E310 RID: 123664
+		// Token: 0x04018DAD RID: 101805
 		[Nullable(1)]
 		protected InfrastructureSettleViewButton Button = new InfrastructureSettleViewButton();
 
-		// Token: 0x0200BB77 RID: 47991
+		// Token: 0x0200A587 RID: 42375
 		private class EComponents
 		{
-			// Token: 0x0403895D RID: 231773
+			// Token: 0x04033345 RID: 209733
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403895E RID: 231774
+			// Token: 0x04033346 RID: 209734
 			public const int TextureIcon = 2;
 
-			// Token: 0x0403895F RID: 231775
+			// Token: 0x04033347 RID: 209735
 			public const int ButtonHorizontalItem = 4;
 
-			// Token: 0x04038960 RID: 231776
+			// Token: 0x04033348 RID: 209736
 			public const int PanelButtonItem = 5;
 
-			// Token: 0x04038961 RID: 231777
+			// Token: 0x04033349 RID: 209737
 			public const int TextTime = 10;
 
-			// Token: 0x04038962 RID: 231778
+			// Token: 0x0403334A RID: 209738
 			public const int TextPassTime = 11;
 
-			// Token: 0x04038963 RID: 231779
+			// Token: 0x0403334B RID: 209739
 			public const int PanelPassTime = 13;
 
-			// Token: 0x04038964 RID: 231780
+			// Token: 0x0403334C RID: 209740
 			public const int TextMidText = 14;
 		}
 	}

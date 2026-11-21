@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064BA RID: 25786
+	// Token: 0x02005438 RID: 21560
 	public struct GridPosition
 	{
-		// Token: 0x06040BA1 RID: 265121 RVA: 0x00FAB800 File Offset: 0x00FA9A00
+		// Token: 0x06035865 RID: 219237 RVA: 0x00EF2848 File Offset: 0x00EF0A48
 		public GridPosition(int row, int col)
 		{
 			this.Row = row;
 			this.Col = col;
 		}
 
-		// Token: 0x04021B5A RID: 138074
+		// Token: 0x0401C48B RID: 115851
 		public int Row;
 
-		// Token: 0x04021B5B RID: 138075
+		// Token: 0x0401C48C RID: 115852
 		public int Col;
 	}
 }

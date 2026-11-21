@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018F3 RID: 6387
+	// Token: 0x020003F4 RID: 1012
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroLevelPlaySubsystem")]
 	[UnrealStructLayout(480, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public class UKuroLevelPlaySubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017AFD RID: 97021 RVA: 0x0022B5DA File Offset: 0x002297DA
+		// Token: 0x06006382 RID: 25474 RVA: 0x0008E434 File Offset: 0x0008C634
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroLevelPlaySubsystem._ClassPtr;
 		}
 
-		// Token: 0x06017AFE RID: 97022 RVA: 0x0022B5E8 File Offset: 0x002297E8
+		// Token: 0x06006383 RID: 25475 RVA: 0x0008E440 File Offset: 0x0008C640
 		public UKuroLevelPlaySubsystem() : this(BuiltinUtils.AllocNativeUObject(UKuroLevelPlaySubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017AFF RID: 97023 RVA: 0x0022B610 File Offset: 0x00229810
+		// Token: 0x06006384 RID: 25476 RVA: 0x0008E468 File Offset: 0x0008C668
 		public UKuroLevelPlaySubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroLevelPlaySubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005F70 RID: 24432
-		// (get) Token: 0x06017B00 RID: 97024 RVA: 0x0022B644 File Offset: 0x00229844
-		// (set) Token: 0x06017B01 RID: 97025 RVA: 0x0022B67D File Offset: 0x0022987D
+		// Token: 0x17001408 RID: 5128
+		// (get) Token: 0x06006385 RID: 25477 RVA: 0x0008E49C File Offset: 0x0008C69C
+		// (set) Token: 0x06006386 RID: 25478 RVA: 0x0008E4D5 File Offset: 0x0008C6D5
 		public FSpecificTagActorHitSignature OnSpecificTagActorHit
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F71 RID: 24433
-		// (get) Token: 0x06017B02 RID: 97026 RVA: 0x0022B6A0 File Offset: 0x002298A0
-		// (set) Token: 0x06017B03 RID: 97027 RVA: 0x0022B6D9 File Offset: 0x002298D9
+		// Token: 0x17001409 RID: 5129
+		// (get) Token: 0x06006387 RID: 25479 RVA: 0x0008E4F8 File Offset: 0x0008C6F8
+		// (set) Token: 0x06006388 RID: 25480 RVA: 0x0008E531 File Offset: 0x0008C731
 		public FSpecificTagActorBeginOverlapSignature OnSpecificTagActorBeginOverlap
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F72 RID: 24434
-		// (get) Token: 0x06017B04 RID: 97028 RVA: 0x0022B6FC File Offset: 0x002298FC
-		// (set) Token: 0x06017B05 RID: 97029 RVA: 0x0022B735 File Offset: 0x00229935
+		// Token: 0x1700140A RID: 5130
+		// (get) Token: 0x06006389 RID: 25481 RVA: 0x0008E554 File Offset: 0x0008C754
+		// (set) Token: 0x0600638A RID: 25482 RVA: 0x0008E58D File Offset: 0x0008C78D
 		public FSpecificTagRelaySignature OnSpecificTagObjectStartRelayCollisionEvent
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F73 RID: 24435
-		// (get) Token: 0x06017B06 RID: 97030 RVA: 0x0022B758 File Offset: 0x00229958
-		// (set) Token: 0x06017B07 RID: 97031 RVA: 0x0022B791 File Offset: 0x00229991
+		// Token: 0x1700140B RID: 5131
+		// (get) Token: 0x0600638B RID: 25483 RVA: 0x0008E5B0 File Offset: 0x0008C7B0
+		// (set) Token: 0x0600638C RID: 25484 RVA: 0x0008E5E9 File Offset: 0x0008C7E9
 		public FSpecificTagRelaySignature OnSpecificTagObjectEndRelayCollisionEvent
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F74 RID: 24436
-		// (get) Token: 0x06017B08 RID: 97032 RVA: 0x0022B7B4 File Offset: 0x002299B4
-		// (set) Token: 0x06017B09 RID: 97033 RVA: 0x0022B7ED File Offset: 0x002299ED
+		// Token: 0x1700140C RID: 5132
+		// (get) Token: 0x0600638D RID: 25485 RVA: 0x0008E60C File Offset: 0x0008C80C
+		// (set) Token: 0x0600638E RID: 25486 RVA: 0x0008E645 File Offset: 0x0008C845
 		public FLoopTeleportVolumeRegisteredSignature OnLoopTeleportVolumeRegistered
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F75 RID: 24437
-		// (get) Token: 0x06017B0A RID: 97034 RVA: 0x0022B810 File Offset: 0x00229A10
-		// (set) Token: 0x06017B0B RID: 97035 RVA: 0x0022B849 File Offset: 0x00229A49
+		// Token: 0x1700140D RID: 5133
+		// (get) Token: 0x0600638F RID: 25487 RVA: 0x0008E668 File Offset: 0x0008C868
+		// (set) Token: 0x06006390 RID: 25488 RVA: 0x0008E6A1 File Offset: 0x0008C8A1
 		[Nullable(new byte[]
 		{
 			1,
@@ -173,9 +173,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F76 RID: 24438
-		// (get) Token: 0x06017B0C RID: 97036 RVA: 0x0022B858 File Offset: 0x00229A58
-		// (set) Token: 0x06017B0D RID: 97037 RVA: 0x0022B891 File Offset: 0x00229A91
+		// Token: 0x1700140E RID: 5134
+		// (get) Token: 0x06006391 RID: 25489 RVA: 0x0008E6B0 File Offset: 0x0008C8B0
+		// (set) Token: 0x06006392 RID: 25490 RVA: 0x0008E6E9 File Offset: 0x0008C8E9
 		[Nullable(new byte[]
 		{
 			1,
@@ -212,66 +212,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017B0E RID: 97038 RVA: 0x0022B89F File Offset: 0x00229A9F
-		[NullableContext(2)]
-		public void WaitEntitiesByPbDataIds(UObject WorldContextObject, int LevelPlayId, in TArray<int> PbDataIds, float Timeout, FLatentActionInfo LatentInfo)
-		{
-			UKuroLevelPlaySubsystem.__WaitEntitiesByPbDataIds_Internal(base.NativePtr, (WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, LevelPlayId, (PbDataIds ?? new TArray<int>()).NativePtr, Timeout, (LatentInfo ?? new FLatentActionInfo()).NativePtr);
-		}
-
-		// Token: 0x06017B0F RID: 97039 RVA: 0x0022B8DF File Offset: 0x00229ADF
+		// Token: 0x06006393 RID: 25491 RVA: 0x0008E6F7 File Offset: 0x0008C8F7
 		[NullableContext(2)]
 		public void UnregisterObject(UObject InKuroLevelPlayObject)
 		{
 			UKuroLevelPlaySubsystem.__UnregisterObject_Internal(base.NativePtr, (InKuroLevelPlayObject != null) ? InKuroLevelPlayObject.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017B10 RID: 97040 RVA: 0x0022B8FC File Offset: 0x00229AFC
+		// Token: 0x06006394 RID: 25492 RVA: 0x0008E714 File Offset: 0x0008C914
 		[NullableContext(2)]
 		public void UnregisterLoopTeleportVolume(AKuroLoopTeleportVolume Volume)
 		{
 			UKuroLevelPlaySubsystem.__UnregisterLoopTeleportVolume_Internal(base.NativePtr, (Volume != null) ? Volume.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017B11 RID: 97041 RVA: 0x0022B919 File Offset: 0x00229B19
+		// Token: 0x06006395 RID: 25493 RVA: 0x0008E731 File Offset: 0x0008C931
 		[NullableContext(2)]
 		public void RegisterObject(UObject InKuroLevelPlayObject)
 		{
 			UKuroLevelPlaySubsystem.__RegisterObject_Internal(base.NativePtr, (InKuroLevelPlayObject != null) ? InKuroLevelPlayObject.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017B12 RID: 97042 RVA: 0x0022B936 File Offset: 0x00229B36
+		// Token: 0x06006396 RID: 25494 RVA: 0x0008E74E File Offset: 0x0008C94E
 		[NullableContext(2)]
 		public void RegisterLoopTeleportVolume(AKuroLoopTeleportVolume Volume)
 		{
 			UKuroLevelPlaySubsystem.__RegisterLoopTeleportVolume_Internal(base.NativePtr, (Volume != null) ? Volume.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017B13 RID: 97043 RVA: 0x0022B953 File Offset: 0x00229B53
+		// Token: 0x06006397 RID: 25495 RVA: 0x0008E76B File Offset: 0x0008C96B
 		public void RegisterEntityToLevelPlay(int LevelPlayId, int EntityId)
 		{
 			UKuroLevelPlaySubsystem.__RegisterEntityToLevelPlay_Internal(base.NativePtr, LevelPlayId, EntityId);
 		}
 
-		// Token: 0x06017B14 RID: 97044 RVA: 0x0022B962 File Offset: 0x00229B62
+		// Token: 0x06006398 RID: 25496 RVA: 0x0008E77A File Offset: 0x0008C97A
 		public void ProcessAllItems()
 		{
 			UKuroLevelPlaySubsystem.__ProcessAllItems_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B15 RID: 97045 RVA: 0x0022B96F File Offset: 0x00229B6F
+		// Token: 0x06006399 RID: 25497 RVA: 0x0008E787 File Offset: 0x0008C987
 		public TArray<AKuroLoopTeleportVolume> GetRegisteredLoopTeleportVolumes()
 		{
 			return new TArray<AKuroLoopTeleportVolume>(UKuroLevelPlaySubsystem.__GetRegisteredLoopTeleportVolumes_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x06017B16 RID: 97046 RVA: 0x0022B982 File Offset: 0x00229B82
-		public TSet<int> GetLevelPlayIdsByType(EKuroLevelPlayType PlayType)
-		{
-			return new TSet<int>(UKuroLevelPlaySubsystem.__GetLevelPlayIdsByType_Internal(base.NativePtr, PlayType), null);
-		}
-
-		// Token: 0x06017B17 RID: 97047 RVA: 0x0022B998 File Offset: 0x00229B98
+		// Token: 0x0600639A RID: 25498 RVA: 0x0008E79C File Offset: 0x0008C99C
 		[NullableContext(2)]
 		public unsafe static bool D_FindTeleportSpot(AActor TestActor, UPrimitiveComponent TestPrimitiveComponent, FVectorDouble InPlaceLocation, FRotator TestRotation, byte Iterations, ref FVectorDouble OutPlaceLocation)
 		{
@@ -282,115 +269,97 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017B18 RID: 97048 RVA: 0x0022B9D6 File Offset: 0x00229BD6
-		public int AssignLevelPlayId(EKuroLevelPlayType PlayType)
-		{
-			return UKuroLevelPlaySubsystem.__AssignLevelPlayId_Internal(base.NativePtr, PlayType);
-		}
-
-		// Token: 0x06017B19 RID: 97049
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __WaitEntitiesByPbDataIds_Internal(IntPtr @this, IntPtr WorldContextObject, int LevelPlayId, IntPtr PbDataIds, float Timeout, IntPtr LatentInfo);
-
-		// Token: 0x06017B1A RID: 97050
+		// Token: 0x0600639B RID: 25499
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterObject_Internal(IntPtr @this, IntPtr InKuroLevelPlayObject);
 
-		// Token: 0x06017B1B RID: 97051
+		// Token: 0x0600639C RID: 25500
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnregisterLoopTeleportVolume_Internal(IntPtr @this, IntPtr Volume);
 
-		// Token: 0x06017B1C RID: 97052
+		// Token: 0x0600639D RID: 25501
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterObject_Internal(IntPtr @this, IntPtr InKuroLevelPlayObject);
 
-		// Token: 0x06017B1D RID: 97053
+		// Token: 0x0600639E RID: 25502
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterLoopTeleportVolume_Internal(IntPtr @this, IntPtr Volume);
 
-		// Token: 0x06017B1E RID: 97054
+		// Token: 0x0600639F RID: 25503
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterEntityToLevelPlay_Internal(IntPtr @this, int LevelPlayId, int EntityId);
 
-		// Token: 0x06017B1F RID: 97055
+		// Token: 0x060063A0 RID: 25504
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ProcessAllItems_Internal(IntPtr @this);
 
-		// Token: 0x06017B20 RID: 97056
+		// Token: 0x060063A1 RID: 25505
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRegisteredLoopTeleportVolumes_Internal(IntPtr @this);
 
-		// Token: 0x06017B21 RID: 97057
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetLevelPlayIdsByType_Internal(IntPtr @this, EKuroLevelPlayType PlayType);
-
-		// Token: 0x06017B22 RID: 97058
+		// Token: 0x060063A2 RID: 25506
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_FindTeleportSpot_Internal(IntPtr TestActor, IntPtr TestPrimitiveComponent, FVectorDouble InPlaceLocation, FRotator TestRotation, byte Iterations, ref FVectorDouble OutPlaceLocation);
 
-		// Token: 0x06017B23 RID: 97059
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern int __AssignLevelPlayId_Internal(IntPtr @this, EKuroLevelPlayType PlayType);
-
-		// Token: 0x06017B24 RID: 97060 RVA: 0x0022B9E4 File Offset: 0x00229BE4
+		// Token: 0x060063A3 RID: 25507 RVA: 0x0008E7DA File Offset: 0x0008C9DA
 		static UKuroLevelPlaySubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroLevelPlaySubsystem");
 		}
 
-		// Token: 0x06017B25 RID: 97061 RVA: 0x0022B9F2 File Offset: 0x00229BF2
+		// Token: 0x060063A4 RID: 25508 RVA: 0x0008E7E8 File Offset: 0x0008C9E8
 		protected UKuroLevelPlaySubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CDCB RID: 52683
+		// Token: 0x04002A0D RID: 10765
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroLevelPlaySubsystem";
 
-		// Token: 0x0400CDCC RID: 52684
+		// Token: 0x04002A0E RID: 10766
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CDCD RID: 52685
+		// Token: 0x04002A0F RID: 10767
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CDCE RID: 52686
+		// Token: 0x04002A10 RID: 10768
 		internal static int __PropertyOffset_OnSpecificTagActorHit;
 
-		// Token: 0x0400CDCF RID: 52687
+		// Token: 0x04002A11 RID: 10769
 		[Nullable(2)]
 		private FSpecificTagActorHitSignature _OnSpecificTagActorHit;
 
-		// Token: 0x0400CDD0 RID: 52688
+		// Token: 0x04002A12 RID: 10770
 		internal static int __PropertyOffset_OnSpecificTagActorBeginOverlap;
 
-		// Token: 0x0400CDD1 RID: 52689
+		// Token: 0x04002A13 RID: 10771
 		[Nullable(2)]
 		private FSpecificTagActorBeginOverlapSignature _OnSpecificTagActorBeginOverlap;
 
-		// Token: 0x0400CDD2 RID: 52690
+		// Token: 0x04002A14 RID: 10772
 		internal static int __PropertyOffset_OnSpecificTagObjectStartRelayCollisionEvent;
 
-		// Token: 0x0400CDD3 RID: 52691
+		// Token: 0x04002A15 RID: 10773
 		[Nullable(2)]
 		private FSpecificTagRelaySignature _OnSpecificTagObjectStartRelayCollisionEvent;
 
-		// Token: 0x0400CDD4 RID: 52692
+		// Token: 0x04002A16 RID: 10774
 		internal static int __PropertyOffset_OnSpecificTagObjectEndRelayCollisionEvent;
 
-		// Token: 0x0400CDD5 RID: 52693
+		// Token: 0x04002A17 RID: 10775
 		[Nullable(2)]
 		private FSpecificTagRelaySignature _OnSpecificTagObjectEndRelayCollisionEvent;
 
-		// Token: 0x0400CDD6 RID: 52694
+		// Token: 0x04002A18 RID: 10776
 		internal static int __PropertyOffset_OnLoopTeleportVolumeRegistered;
 
-		// Token: 0x0400CDD7 RID: 52695
+		// Token: 0x04002A19 RID: 10777
 		[Nullable(2)]
 		private FLoopTeleportVolumeRegisteredSignature _OnLoopTeleportVolumeRegistered;
 
-		// Token: 0x0400CDD8 RID: 52696
+		// Token: 0x04002A1A RID: 10778
 		internal static int __PropertyOffset_ManagedObjects;
 
-		// Token: 0x0400CDD9 RID: 52697
+		// Token: 0x04002A1B RID: 10779
 		[Nullable(new byte[]
 		{
 			2,
@@ -399,10 +368,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TWeakObjectPtr<UObject>> _ManagedObjects;
 
-		// Token: 0x0400CDDA RID: 52698
+		// Token: 0x04002A1C RID: 10780
 		internal static int __PropertyOffset_LoopTeleportVolumes;
 
-		// Token: 0x0400CDDB RID: 52699
+		// Token: 0x04002A1D RID: 10781
 		[Nullable(new byte[]
 		{
 			2,

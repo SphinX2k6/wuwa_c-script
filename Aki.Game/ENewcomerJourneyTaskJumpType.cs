@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x020013A8 RID: 5032
+// Token: 0x0200085C RID: 2140
 public enum ENewcomerJourneyTaskJumpType
 {
-	// Token: 0x04003EB0 RID: 16048
+	// Token: 0x04003F48 RID: 16200
 	Mission,
-	// Token: 0x04003EB1 RID: 16049
+	// Token: 0x04003F49 RID: 16201
 	Map,
-	// Token: 0x04003EB2 RID: 16050
+	// Token: 0x04003F4A RID: 16202
 	View,
-	// Token: 0x04003EB3 RID: 16051
+	// Token: 0x04003F4B RID: 16203
 	RoleTabView,
-	// Token: 0x04003EB4 RID: 16052
+	// Token: 0x04003F4C RID: 16204
 	CalabashTabView,
-	// Token: 0x04003EB5 RID: 16053
+	// Token: 0x04003F4D RID: 16205
 	ShopTabView,
-	// Token: 0x04003EB6 RID: 16054
+	// Token: 0x04003F4E RID: 16206
 	ActiveView,
-	// Token: 0x04003EB7 RID: 16055
+	// Token: 0x04003F4F RID: 16207
 	AdventureTabView,
-	// Token: 0x04003EB8 RID: 16056
+	// Token: 0x04003F50 RID: 16208
 	DisposableChallengeTabView,
-	// Token: 0x04003EB9 RID: 16057
+	// Token: 0x04003F51 RID: 16209
 	ExploreAreaDetailView,
-	// Token: 0x04003EBA RID: 16058
+	// Token: 0x04003F52 RID: 16210
 	JumpToMissionByType,
-	// Token: 0x04003EBB RID: 16059
+	// Token: 0x04003F53 RID: 16211
 	NearestLockedTeleport,
-	// Token: 0x04003EBC RID: 16060
+	// Token: 0x04003F54 RID: 16212
 	JumpByAccessPath
 }

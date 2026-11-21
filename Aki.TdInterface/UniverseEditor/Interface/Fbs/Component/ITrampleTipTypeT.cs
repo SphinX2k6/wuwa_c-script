@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AD0 RID: 23248
+	// Token: 0x020060DD RID: 24797
 	public class ITrampleTipTypeT
 	{
-		// Token: 0x1700AF37 RID: 44855
-		// (get) Token: 0x06027A5C RID: 162396 RVA: 0x005742F2 File Offset: 0x005724F2
-		// (set) Token: 0x06027A5D RID: 162397 RVA: 0x005742FA File Offset: 0x005724FA
+		// Token: 0x1700B873 RID: 47219
+		// (get) Token: 0x06029FE6 RID: 172006 RVA: 0x005BB722 File Offset: 0x005B9922
+		// (set) Token: 0x06029FE7 RID: 172007 RVA: 0x005BB72A File Offset: 0x005B992A
 		public ETrampleTipType Type { get; set; }
 
-		// Token: 0x06027A5E RID: 162398 RVA: 0x00574303 File Offset: 0x00572503
+		// Token: 0x06029FE8 RID: 172008 RVA: 0x005BB733 File Offset: 0x005B9933
 		public ITrampleTipTypeT()
 		{
 			this.Type = ETrampleTipType.CountDownTextTip;

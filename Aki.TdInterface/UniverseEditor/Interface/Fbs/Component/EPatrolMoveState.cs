@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DEB RID: 19947
+	// Token: 0x020052F6 RID: 21238
 	public enum EPatrolMoveState : byte
 	{
-		// Token: 0x0400DAA4 RID: 55972
+		// Token: 0x0400E607 RID: 58887
 		None,
-		// Token: 0x0400DAA5 RID: 55973
+		// Token: 0x0400E608 RID: 58888
 		Walk,
-		// Token: 0x0400DAA6 RID: 55974
+		// Token: 0x0400E609 RID: 58889
 		Run,
-		// Token: 0x0400DAA7 RID: 55975
+		// Token: 0x0400E60A RID: 58890
 		Sprint
 	}
 }

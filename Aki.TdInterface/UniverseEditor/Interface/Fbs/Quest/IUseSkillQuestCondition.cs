@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004259 RID: 16985
+	// Token: 0x020046B5 RID: 18101
 	public struct IUseSkillQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x17007891 RID: 30865
-		// (get) Token: 0x060191FF RID: 102911 RVA: 0x0039C80E File Offset: 0x0039AA0E
+		// Token: 0x17007EC2 RID: 32450
+		// (get) Token: 0x0601A96B RID: 108907 RVA: 0x003C7EE6 File Offset: 0x003C60E6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019200 RID: 102912 RVA: 0x0039C81B File Offset: 0x0039AA1B
+		// Token: 0x0601A96C RID: 108908 RVA: 0x003C7EF3 File Offset: 0x003C60F3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019201 RID: 102913 RVA: 0x0039C824 File Offset: 0x0039AA24
+		// Token: 0x0601A96D RID: 108909 RVA: 0x003C7EFC File Offset: 0x003C60FC
 		public static IUseSkillQuestCondition GetRootAsIUseSkillQuestCondition(ByteBuffer _bb)
 		{
 			return IUseSkillQuestCondition.GetRootAsIUseSkillQuestCondition(_bb, default(IUseSkillQuestCondition));
 		}
 
-		// Token: 0x06019202 RID: 102914 RVA: 0x0039C840 File Offset: 0x0039AA40
+		// Token: 0x0601A96E RID: 108910 RVA: 0x003C7F18 File Offset: 0x003C6118
 		public static IUseSkillQuestCondition GetRootAsIUseSkillQuestCondition(ByteBuffer _bb, IUseSkillQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019203 RID: 102915 RVA: 0x0039C85D File Offset: 0x0039AA5D
+		// Token: 0x0601A96F RID: 108911 RVA: 0x003C7F35 File Offset: 0x003C6135
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019204 RID: 102916 RVA: 0x0039C86C File Offset: 0x0039AA6C
+		// Token: 0x0601A970 RID: 108912 RVA: 0x003C7F44 File Offset: 0x003C6144
 		public IUseSkillQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007892 RID: 30866
-		// (get) Token: 0x06019205 RID: 102917 RVA: 0x0039C87C File Offset: 0x0039AA7C
+		// Token: 0x17007EC3 RID: 32451
+		// (get) Token: 0x0601A971 RID: 108913 RVA: 0x003C7F54 File Offset: 0x003C6154
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007893 RID: 30867
-		// (get) Token: 0x06019206 RID: 102918 RVA: 0x0039C8B8 File Offset: 0x0039AAB8
+		// Token: 0x17007EC4 RID: 32452
+		// (get) Token: 0x0601A972 RID: 108914 RVA: 0x003C7F90 File Offset: 0x003C6190
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007894 RID: 30868
-		// (get) Token: 0x06019207 RID: 102919 RVA: 0x0039C918 File Offset: 0x0039AB18
+		// Token: 0x17007EC5 RID: 32453
+		// (get) Token: 0x0601A973 RID: 108915 RVA: 0x003C7FF0 File Offset: 0x003C61F0
 		public ESkillType SkillType
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007895 RID: 30869
-		// (get) Token: 0x06019208 RID: 102920 RVA: 0x0039C954 File Offset: 0x0039AB54
+		// Token: 0x17007EC6 RID: 32454
+		// (get) Token: 0x0601A974 RID: 108916 RVA: 0x003C802C File Offset: 0x003C622C
 		public int SkillId
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007896 RID: 30870
-		// (get) Token: 0x06019209 RID: 102921 RVA: 0x0039C994 File Offset: 0x0039AB94
+		// Token: 0x17007EC7 RID: 32455
+		// (get) Token: 0x0601A975 RID: 108917 RVA: 0x003C806C File Offset: 0x003C626C
 		public TUseSkillCheck CheckType
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601920A RID: 102922 RVA: 0x0039C9D4 File Offset: 0x0039ABD4
+		// Token: 0x0601A976 RID: 108918 RVA: 0x003C80AC File Offset: 0x003C62AC
 		public TTable? Check<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -134,38 +134,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601920B RID: 102923 RVA: 0x0039CA1C File Offset: 0x0039AC1C
+		// Token: 0x0601A977 RID: 108919 RVA: 0x003C80F4 File Offset: 0x003C62F4
 		public IUseSkillCheckByFollowShooterSkillId CheckAsIUseSkillCheckByFollowShooterSkillId()
 		{
 			return this.Check<IUseSkillCheckByFollowShooterSkillId>().Value;
 		}
 
-		// Token: 0x0601920C RID: 102924 RVA: 0x0039CA38 File Offset: 0x0039AC38
+		// Token: 0x0601A978 RID: 108920 RVA: 0x003C8110 File Offset: 0x003C6310
 		public IUseSkillCheckBySkillGenre CheckAsIUseSkillCheckBySkillGenre()
 		{
 			return this.Check<IUseSkillCheckBySkillGenre>().Value;
 		}
 
-		// Token: 0x0601920D RID: 102925 RVA: 0x0039CA54 File Offset: 0x0039AC54
+		// Token: 0x0601A979 RID: 108921 RVA: 0x003C812C File Offset: 0x003C632C
 		public IUseSkillCheckBySkillId CheckAsIUseSkillCheckBySkillId()
 		{
 			return this.Check<IUseSkillCheckBySkillId>().Value;
 		}
 
-		// Token: 0x0601920E RID: 102926 RVA: 0x0039CA70 File Offset: 0x0039AC70
+		// Token: 0x0601A97A RID: 108922 RVA: 0x003C8148 File Offset: 0x003C6348
 		public IUseSkillCheckByVisionShowId CheckAsIUseSkillCheckByVisionShowId()
 		{
 			return this.Check<IUseSkillCheckByVisionShowId>().Value;
 		}
 
-		// Token: 0x0601920F RID: 102927 RVA: 0x0039CA8C File Offset: 0x0039AC8C
+		// Token: 0x0601A97B RID: 108923 RVA: 0x003C8164 File Offset: 0x003C6364
 		public IUseSkillCheckByVisionSummonId CheckAsIUseSkillCheckByVisionSummonId()
 		{
 			return this.Check<IUseSkillCheckByVisionSummonId>().Value;
 		}
 
-		// Token: 0x17007897 RID: 30871
-		// (get) Token: 0x06019210 RID: 102928 RVA: 0x0039CAA8 File Offset: 0x0039ACA8
+		// Token: 0x17007EC8 RID: 32456
+		// (get) Token: 0x0601A97C RID: 108924 RVA: 0x003C8180 File Offset: 0x003C6380
 		public bool IsWaitFinish
 		{
 			get
@@ -175,8 +175,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007898 RID: 30872
-		// (get) Token: 0x06019211 RID: 102929 RVA: 0x0039CAE8 File Offset: 0x0039ACE8
+		// Token: 0x17007EC9 RID: 32457
+		// (get) Token: 0x0601A97D RID: 108925 RVA: 0x003C81C0 File Offset: 0x003C63C0
 		public byte NullMask
 		{
 			get
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06019212 RID: 102930 RVA: 0x0039CB28 File Offset: 0x0039AD28
+		// Token: 0x0601A97E RID: 108926 RVA: 0x003C8200 File Offset: 0x003C6400
 		public static Offset<IUseSkillQuestCondition> CreateIUseSkillQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), ESkillType SkillType = ESkillType.NormalSkill, int SkillId = 0, TUseSkillCheck Check_type = TUseSkillCheck.NONE, int CheckOffset = 0, bool IsWaitFinish = false, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -205,67 +205,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseSkillQuestCondition.EndIUseSkillQuestCondition(builder);
 		}
 
-		// Token: 0x06019213 RID: 102931 RVA: 0x0039CB7F File Offset: 0x0039AD7F
+		// Token: 0x0601A97F RID: 108927 RVA: 0x003C8257 File Offset: 0x003C6457
 		public static void StartIUseSkillQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06019214 RID: 102932 RVA: 0x0039CB88 File Offset: 0x0039AD88
+		// Token: 0x0601A980 RID: 108928 RVA: 0x003C8260 File Offset: 0x003C6460
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019215 RID: 102933 RVA: 0x0039CB93 File Offset: 0x0039AD93
+		// Token: 0x0601A981 RID: 108929 RVA: 0x003C826B File Offset: 0x003C646B
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06019216 RID: 102934 RVA: 0x0039CBA3 File Offset: 0x0039ADA3
+		// Token: 0x0601A982 RID: 108930 RVA: 0x003C827B File Offset: 0x003C647B
 		public static void AddSkillType(FlatBufferBuilder builder, ESkillType skillType)
 		{
 			builder.AddByte(2, (byte)skillType, 0);
 		}
 
-		// Token: 0x06019217 RID: 102935 RVA: 0x0039CBAE File Offset: 0x0039ADAE
+		// Token: 0x0601A983 RID: 108931 RVA: 0x003C8286 File Offset: 0x003C6486
 		public static void AddSkillId(FlatBufferBuilder builder, int skillId)
 		{
 			builder.AddInt(3, skillId, 0);
 		}
 
-		// Token: 0x06019218 RID: 102936 RVA: 0x0039CBB9 File Offset: 0x0039ADB9
+		// Token: 0x0601A984 RID: 108932 RVA: 0x003C8291 File Offset: 0x003C6491
 		public static void AddCheckType(FlatBufferBuilder builder, TUseSkillCheck checkType)
 		{
 			builder.AddByte(4, (byte)checkType, 0);
 		}
 
-		// Token: 0x06019219 RID: 102937 RVA: 0x0039CBC4 File Offset: 0x0039ADC4
+		// Token: 0x0601A985 RID: 108933 RVA: 0x003C829C File Offset: 0x003C649C
 		public static void AddCheck(FlatBufferBuilder builder, int checkOffset)
 		{
 			builder.AddOffset(5, checkOffset, 0);
 		}
 
-		// Token: 0x0601921A RID: 102938 RVA: 0x0039CBCF File Offset: 0x0039ADCF
+		// Token: 0x0601A986 RID: 108934 RVA: 0x003C82A7 File Offset: 0x003C64A7
 		public static void AddIsWaitFinish(FlatBufferBuilder builder, bool isWaitFinish)
 		{
 			builder.AddBool(6, isWaitFinish, false);
 		}
 
-		// Token: 0x0601921B RID: 102939 RVA: 0x0039CBDA File Offset: 0x0039ADDA
+		// Token: 0x0601A987 RID: 108935 RVA: 0x003C82B2 File Offset: 0x003C64B2
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x0601921C RID: 102940 RVA: 0x0039CBE5 File Offset: 0x0039ADE5
+		// Token: 0x0601A988 RID: 108936 RVA: 0x003C82BD File Offset: 0x003C64BD
 		public static Offset<IUseSkillQuestCondition> EndIUseSkillQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IUseSkillQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601921D RID: 102941 RVA: 0x0039CBF4 File Offset: 0x0039ADF4
+		// Token: 0x0601A989 RID: 108937 RVA: 0x003C82CC File Offset: 0x003C64CC
 		public IUseSkillQuestConditionT UnPack()
 		{
 			IUseSkillQuestConditionT useSkillQuestConditionT = new IUseSkillQuestConditionT();
@@ -273,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return useSkillQuestConditionT;
 		}
 
-		// Token: 0x0601921E RID: 102942 RVA: 0x0039CC10 File Offset: 0x0039AE10
+		// Token: 0x0601A98A RID: 108938 RVA: 0x003C82E8 File Offset: 0x003C64E8
 		public void UnPackTo(IUseSkillQuestConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -304,7 +304,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601921F RID: 102943 RVA: 0x0039CDEC File Offset: 0x0039AFEC
+		// Token: 0x0601A98B RID: 108939 RVA: 0x003C84C4 File Offset: 0x003C66C4
 		public static Offset<IUseSkillQuestCondition> Pack(FlatBufferBuilder builder, IUseSkillQuestConditionT _o)
 		{
 			if (_o == null)
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseSkillQuestCondition.CreateIUseSkillQuestCondition(builder, _o.Type, preConditionsOffset, _o.SkillType, _o.SkillId, check_type, checkOffset, _o.IsWaitFinish, _o.NullMask);
 		}
 
-		// Token: 0x0400BEE3 RID: 48867
+		// Token: 0x0400C8F0 RID: 51440
 		private Table __p;
 	}
 }

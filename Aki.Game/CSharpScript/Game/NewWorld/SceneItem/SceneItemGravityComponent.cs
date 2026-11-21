@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Game.NewWorld.Character.Custom.Components.Range;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
@@ -8,7 +9,6 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.GenericPrompt.View;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
-using CSharpScript.Game.NewWorld.Character.Custom;
 using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
@@ -17,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200717D RID: 29053
+	// Token: 0x02006231 RID: 25137
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemGravityComponent : EntityComponent
 	{
-		// Token: 0x06046FD1 RID: 290769 RVA: 0x011F82AC File Offset: 0x011F64AC
+		// Token: 0x0603C85F RID: 247903 RVA: 0x01152C8C File Offset: 0x01150E8C
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			TrampleComponent trampleComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemGravityComponent>() as TrampleComponent;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FD2 RID: 290770 RVA: 0x011F83A0 File Offset: 0x011F65A0
+		// Token: 0x0603C860 RID: 247904 RVA: 0x01152D80 File Offset: 0x01150F80
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<SceneItemActorComponent>();
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			{
 				EventSystem.Instance.AddWithTarget<bool, EntityHandle>(base.Entity, EEventName.OnEntityInOutRangeLocal, new Action<bool, EntityHandle>(this.OnEntityInOutRangeLocal));
 			}
-			if (!RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new TMessageRegisterCallback(this.OnServerMessageEmit)))
+			if (!RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new MessageRegisterCallback(this.OnServerMessageEmit)))
 			{
-				RangeComponentMessageManager.Instance.RegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new TMessageRegisterCallback(this.OnServerMessageEmit));
+				RangeComponentMessageManager.Instance.RegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new MessageRegisterCallback(this.OnServerMessageEmit));
 			}
 			return true;
 		}
 
-		// Token: 0x06046FD3 RID: 290771 RVA: 0x011F8478 File Offset: 0x011F6678
+		// Token: 0x0603C861 RID: 247905 RVA: 0x01152E58 File Offset: 0x01151058
 		protected override void OnActivate()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FD4 RID: 290772 RVA: 0x011F85CC File Offset: 0x011F67CC
+		// Token: 0x0603C862 RID: 247906 RVA: 0x01152FAC File Offset: 0x011511AC
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<bool, EntityHandle>(base.Entity, EEventName.OnEntityInOutRangeLocal, new Action<bool, EntityHandle>(this.OnEntityInOutRangeLocal)))
@@ -123,9 +123,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			{
 				EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneInteractionLoadCompleted, new Action(this.OnSceneInteractionLoadCompleted));
 			}
-			if (RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new TMessageRegisterCallback(this.OnServerMessageEmit)))
+			if (RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new MessageRegisterCallback(this.OnServerMessageEmit)))
 			{
-				RangeComponentMessageManager.Instance.UnRegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new TMessageRegisterCallback(this.OnServerMessageEmit));
+				RangeComponentMessageManager.Instance.UnRegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trample, new MessageRegisterCallback(this.OnServerMessageEmit));
 			}
 			if (this.CheckDistanceTimerHandle != null)
 			{
@@ -136,38 +136,38 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FD5 RID: 290773 RVA: 0x011F8752 File Offset: 0x011F6952
+		// Token: 0x0603C863 RID: 247907 RVA: 0x01153132 File Offset: 0x01151332
 		protected override void OnTick(float delta)
 		{
 			this.TickState(delta * this.CustomTimeDilation);
 		}
 
-		// Token: 0x06046FD6 RID: 290774 RVA: 0x011F8764 File Offset: 0x011F6964
+		// Token: 0x0603C864 RID: 247908 RVA: 0x01153144 File Offset: 0x01151344
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
 			this.CustomTimeDilation = ((component != null) ? (timeDilation * component.CurrentTimeScale) : 1f);
 		}
 
-		// Token: 0x06046FD7 RID: 290775 RVA: 0x011F8795 File Offset: 0x011F6995
+		// Token: 0x0603C865 RID: 247909 RVA: 0x01153175 File Offset: 0x01151375
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			this.OnSceneItemStateChange();
 		}
 
-		// Token: 0x06046FD8 RID: 290776 RVA: 0x011F879D File Offset: 0x011F699D
+		// Token: 0x0603C866 RID: 247910 RVA: 0x0115317D File Offset: 0x0115137D
 		private void OnSceneItemStateChange()
 		{
 			this.HandleServerChangedState();
 		}
 
-		// Token: 0x06046FD9 RID: 290777 RVA: 0x011F87A5 File Offset: 0x011F69A5
+		// Token: 0x0603C867 RID: 247911 RVA: 0x01153185 File Offset: 0x01151385
 		private void OnSceneItemLockPropChange(bool bLock)
 		{
 			this.EnableStateTick("[SceneItemGravityComponent] 锁定属性改变");
 		}
 
-		// Token: 0x06046FDA RID: 290778 RVA: 0x011F87B2 File Offset: 0x011F69B2
+		// Token: 0x0603C868 RID: 247912 RVA: 0x01153192 File Offset: 0x01151392
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.EnableStateTick("[SceneItemGravityComponent] 场景交互物加载完毕");
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FDB RID: 290779 RVA: 0x011F87D4 File Offset: 0x011F69D4
+		// Token: 0x0603C869 RID: 247913 RVA: 0x011531B4 File Offset: 0x011513B4
 		private void HandleServerChangedState()
 		{
 			switch (this.StateComp.State)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FDC RID: 290780 RVA: 0x011F8860 File Offset: 0x011F6A60
+		// Token: 0x0603C86A RID: 247914 RVA: 0x01153240 File Offset: 0x01151440
 		public void ChangeTransition(bool isUp)
 		{
 			switch (this.AnimState)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FDD RID: 290781 RVA: 0x011F88A0 File Offset: 0x011F6AA0
+		// Token: 0x0603C86B RID: 247915 RVA: 0x01153280 File Offset: 0x01151480
 		private unsafe void ChangeAnimState(SceneItemGravityComponent.ESceneItemGravityState targetAnimState)
 		{
 			if (!this.GetIsLoadComplete())
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TickState(0f);
 		}
 
-		// Token: 0x06046FDE RID: 290782 RVA: 0x011F89C8 File Offset: 0x011F6BC8
+		// Token: 0x0603C86C RID: 247916 RVA: 0x011533A8 File Offset: 0x011515A8
 		private void TickState(float delta = 0f)
 		{
 			if (!this.GetIsLoadComplete())
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FDF RID: 290783 RVA: 0x011F8A3A File Offset: 0x011F6C3A
+		// Token: 0x0603C86D RID: 247917 RVA: 0x0115341A File Offset: 0x0115161A
 		private void TickAtTop(float delta)
 		{
 			this.DownAnimPlayedMsTime = 0f;
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DisableStateTick("[SceneItemGravityComponent] 到达顶部");
 		}
 
-		// Token: 0x06046FE0 RID: 290784 RVA: 0x011F8A58 File Offset: 0x011F6C58
+		// Token: 0x0603C86E RID: 247918 RVA: 0x01153438 File Offset: 0x01151638
 		private void TickAtBottom(float delta)
 		{
 			this.DownAnimPlayedMsTime = this.AnimConfigMsTime;
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DisableStateTick("[SceneItemGravityComponent] 到达底部");
 		}
 
-		// Token: 0x06046FE1 RID: 290785 RVA: 0x011F8A98 File Offset: 0x011F6C98
+		// Token: 0x0603C86F RID: 247919 RVA: 0x01153478 File Offset: 0x01151678
 		private void TickRising(float delta)
 		{
 			float num = (this.AnimConfigMsTime > 0f) ? (delta * (this.AnimConfigMsTime / this.UpAnimConfigMsTime)) : delta;
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FE2 RID: 290786 RVA: 0x011F8B07 File Offset: 0x011F6D07
+		// Token: 0x0603C870 RID: 247920 RVA: 0x011534E7 File Offset: 0x011516E7
 		private void TickFalling(float delta)
 		{
 			this.DownAnimPlayedMsTime = MathUtils.Instance.Clamp(this.DownAnimPlayedMsTime + delta, 0f, this.AnimConfigMsTime);
@@ -350,14 +350,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EnableStateTick("[SceneItemGravityComponent] 下降中");
 		}
 
-		// Token: 0x06046FE3 RID: 290787 RVA: 0x011F8B3D File Offset: 0x011F6D3D
+		// Token: 0x0603C871 RID: 247921 RVA: 0x0115351D File Offset: 0x0115171D
 		private void ChangePerformTagByState(SceneItemGravityComponent.ESceneItemGravityState fromState, SceneItemGravityComponent.ESceneItemGravityState toState)
 		{
 			this.ChangeRiseAndFallPerformByState(toState);
 			this.ChangeInOutTopAndBottomPerformTagByState(fromState, toState);
 		}
 
-		// Token: 0x06046FE4 RID: 290788 RVA: 0x011F8B50 File Offset: 0x011F6D50
+		// Token: 0x0603C872 RID: 247922 RVA: 0x01153530 File Offset: 0x01151730
 		private void ChangeRiseAndFallPerformByState(SceneItemGravityComponent.ESceneItemGravityState toState)
 		{
 			if (this.TagComp == null)
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FE5 RID: 290789 RVA: 0x011F8E35 File Offset: 0x011F7035
+		// Token: 0x0603C873 RID: 247923 RVA: 0x01153815 File Offset: 0x01151A15
 		[NullableContext(1)]
 		private void OnServerMessageEmit(AccessRangeType accessRangeType, AccessRangeResultType accessRangeResultType, Entity otherEntity, ErrorCode errorCode)
 		{
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FE6 RID: 290790 RVA: 0x011F8E64 File Offset: 0x011F7064
+		// Token: 0x0603C874 RID: 247924 RVA: 0x01153844 File Offset: 0x01151A44
 		private void ChangeInOutTopAndBottomPerformTagByState(SceneItemGravityComponent.ESceneItemGravityState fromState, SceneItemGravityComponent.ESceneItemGravityState toState)
 		{
 			if (this.TagComp == null)
@@ -503,20 +503,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FE7 RID: 290791 RVA: 0x011F8FC3 File Offset: 0x011F71C3
+		// Token: 0x0603C875 RID: 247925 RVA: 0x011539A3 File Offset: 0x01151BA3
 		private bool GetIsLoadComplete()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
 			return actorComp != null && actorComp.GetIsSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x06046FE8 RID: 290792 RVA: 0x011F8FD8 File Offset: 0x011F71D8
+		// Token: 0x0603C876 RID: 247926 RVA: 0x011539B8 File Offset: 0x01151BB8
 		private bool GetIsSelfEnable()
 		{
 			return this.StateComp != null && this.PropComp != null && this.TagComp != null && !this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Completed) && !this.PropComp.IsLocked && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.静默"]);
 		}
 
-		// Token: 0x06046FE9 RID: 290793 RVA: 0x011F9038 File Offset: 0x011F7238
+		// Token: 0x0603C877 RID: 247927 RVA: 0x01153A18 File Offset: 0x01151C18
 		private float GetUpTimeSec()
 		{
 			if (this.CompConfig.UpTime == null)
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.CompConfig.UpTime.Value;
 		}
 
-		// Token: 0x06046FEA RID: 290794 RVA: 0x011F909C File Offset: 0x011F729C
+		// Token: 0x0603C878 RID: 247928 RVA: 0x01153A7C File Offset: 0x01151C7C
 		[NullableContext(1)]
 		private void OnEntityInOutRangeLocal(bool isEnter, EntityHandle handle)
 		{
@@ -553,13 +553,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FEB RID: 290795 RVA: 0x011F9115 File Offset: 0x011F7315
+		// Token: 0x0603C879 RID: 247929 RVA: 0x01153AF5 File Offset: 0x01151CF5
 		private bool IsStateTickEnabled()
 		{
 			return this.TickDisableHandle == null;
 		}
 
-		// Token: 0x06046FEC RID: 290796 RVA: 0x011F9125 File Offset: 0x011F7325
+		// Token: 0x0603C87A RID: 247930 RVA: 0x01153B05 File Offset: 0x01151D05
 		[NullableContext(1)]
 		private void EnableStateTick(string reason)
 		{
@@ -569,7 +569,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FED RID: 290797 RVA: 0x011F914A File Offset: 0x011F734A
+		// Token: 0x0603C87B RID: 247931 RVA: 0x01153B2A File Offset: 0x01151D2A
 		[NullableContext(1)]
 		private void DisableStateTick(string reason)
 		{
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FEE RID: 290798 RVA: 0x011F9168 File Offset: 0x011F7368
+		// Token: 0x0603C87C RID: 247932 RVA: 0x01153B48 File Offset: 0x01151D48
 		private void CheckPlayerDistance()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -613,16 +613,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			instance2.RemoveShowLandTipsCount(base.Entity);
 		}
 
-		// Token: 0x06046FEF RID: 290799 RVA: 0x011F91F4 File Offset: 0x011F73F4
+		// Token: 0x0603C87D RID: 247933 RVA: 0x01153BD4 File Offset: 0x01151DD4
 		private void OpenCountDownTip()
 		{
 			TrampleComponent compConfig = this.CompConfig;
-			ICountDownTextTip countDownTextTip = (compConfig != null) ? compConfig.TrampleTipOption : null;
-			if (countDownTextTip == null)
+			ITrampleTipType trampleTipType = (compConfig != null) ? compConfig.TrampleTipOption : null;
+			if (trampleTipType == null)
 			{
 				return;
 			}
-			if (countDownTextTip.Type != ETrampleTipType.CountDownTextTip)
+			if (trampleTipType.Type != ETrampleTipType.CountDownTextTip)
 			{
 				return;
 			}
@@ -630,16 +630,18 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			{
 				return;
 			}
-			ICountDownTextTip countDownTextTip2 = countDownTextTip;
+			ICountDownTextTip countDownTextTip = trampleTipType as ICountDownTextTip;
+			float remainSec = (this.AnimConfigMsTime - this.DownAnimPlayedMsTime) * 0.001f;
 			UnOpenedAreaCountDownFloatTipsParam param = new UnOpenedAreaCountDownFloatTipsParam
 			{
-				TidCountDownTip = countDownTextTip2.TidCountDownTip
+				TidCountDownTip = countDownTextTip.TidCountDownTip,
+				RemainSec = remainSec
 			};
 			UiManager.Instance.OpenView(EUiViewName.UnOpenedAreaCountDownFloatTips, param, null);
 			this.IsCountDownTipOpen = true;
 		}
 
-		// Token: 0x06046FF0 RID: 290800 RVA: 0x011F9256 File Offset: 0x011F7456
+		// Token: 0x0603C87E RID: 247934 RVA: 0x01153C56 File Offset: 0x01151E56
 		private void CloseCountDownTip()
 		{
 			if (!this.IsCountDownTipOpen)
@@ -650,7 +652,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.IsCountDownTipOpen = false;
 		}
 
-		// Token: 0x06046FF1 RID: 290801 RVA: 0x011F9278 File Offset: 0x011F7478
+		// Token: 0x0603C87F RID: 247935 RVA: 0x01153C78 File Offset: 0x01151E78
 		private void UpdateCountDownTip()
 		{
 			if (!this.IsCountDownTipOpen)
@@ -661,8 +663,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Emit<float>(EEventName.OnUnOpenedAreaCountDownUpdate, p);
 		}
 
-		// Token: 0x17009D78 RID: 40312
-		// (get) Token: 0x06046FF2 RID: 290802 RVA: 0x011F92B3 File Offset: 0x011F74B3
+		// Token: 0x17007266 RID: 29286
+		// (get) Token: 0x0603C880 RID: 247936 RVA: 0x01153CB3 File Offset: 0x01151EB3
 		[Nullable(new byte[]
 		{
 			2,
@@ -686,8 +688,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D79 RID: 40313
-		// (get) Token: 0x06046FF3 RID: 290803 RVA: 0x011F92C6 File Offset: 0x011F74C6
+		// Token: 0x17007267 RID: 29287
+		// (get) Token: 0x0603C881 RID: 247937 RVA: 0x01153CC6 File Offset: 0x01151EC6
 		[Nullable(new byte[]
 		{
 			2,
@@ -711,7 +713,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046FF4 RID: 290804 RVA: 0x011F92DC File Offset: 0x011F74DC
+		// Token: 0x0603C882 RID: 247938 RVA: 0x01153CDC File Offset: 0x01151EDC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -720,191 +722,190 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemGravityComponent sceneItemGravityComponent = (SceneItemGravityComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemGravityComponent.CreatureDataComp == null)
 			{
-				if (sceneItemGravityComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemGravityComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
+			if (sceneItemGravityComponent.ActorComp == null)
 			{
-				if (sceneItemGravityComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemGravityComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PropComp"))
+			if (sceneItemGravityComponent.TagComp == null)
 			{
-				if (sceneItemGravityComponent.PropComp == null)
-				{
-					this.PropComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropComp), "PropComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("CompConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemGravityComponent.CompConfig == null)
-				{
-					this.CompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TrampleComponent>(this.CompConfig), "CompConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AnimState"))
+			if (sceneItemGravityComponent.StateComp == null)
 			{
-				this.AnimState = sceneItemGravityComponent.AnimState;
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("AnimConfigMsTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
-				this.AnimConfigMsTime = sceneItemGravityComponent.AnimConfigMsTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("UpAnimConfigMsTime"))
+			if (sceneItemGravityComponent.PropComp == null)
 			{
-				this.UpAnimConfigMsTime = sceneItemGravityComponent.UpAnimConfigMsTime;
+				this.PropComp = null;
 			}
-			if (base.CanResetComponentProperty("DownAnimPlayedMsTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropComp), "PropComp"))
 			{
-				this.DownAnimPlayedMsTime = sceneItemGravityComponent.DownAnimPlayedMsTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TickDisableHandle"))
+			if (sceneItemGravityComponent.CompConfig == null)
 			{
-				this.TickDisableHandle = sceneItemGravityComponent.TickDisableHandle;
+				this.CompConfig = null;
 			}
-			if (base.CanResetComponentProperty("CustomTimeDilation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CompConfig), "CompConfig"))
 			{
-				this.CustomTimeDilation = sceneItemGravityComponent.CustomTimeDilation;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsCountDownTipOpen"))
+			this.AnimState = sceneItemGravityComponent.AnimState;
+			this.AnimConfigMsTime = sceneItemGravityComponent.AnimConfigMsTime;
+			this.UpAnimConfigMsTime = sceneItemGravityComponent.UpAnimConfigMsTime;
+			this.DownAnimPlayedMsTime = sceneItemGravityComponent.DownAnimPlayedMsTime;
+			this.TickDisableHandle = sceneItemGravityComponent.TickDisableHandle;
+			this.CustomTimeDilation = sceneItemGravityComponent.CustomTimeDilation;
+			this.IsCountDownTipOpen = sceneItemGravityComponent.IsCountDownTipOpen;
+			this.ShowLandTipRange = sceneItemGravityComponent.ShowLandTipRange;
+			this.HideLandTipRange = sceneItemGravityComponent.HideLandTipRange;
+			this.ShowingLandTip = sceneItemGravityComponent.ShowingLandTip;
+			if (sceneItemGravityComponent.CheckDistanceTimerHandle == null)
 			{
-				this.IsCountDownTipOpen = sceneItemGravityComponent.IsCountDownTipOpen;
+				this.CheckDistanceTimerHandle = null;
 			}
-			if (base.CanResetComponentProperty("ShowLandTipRange"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CheckDistanceTimerHandle), "CheckDistanceTimerHandle"))
 			{
-				this.ShowLandTipRange = sceneItemGravityComponent.ShowLandTipRange;
-			}
-			if (base.CanResetComponentProperty("HideLandTipRange"))
-			{
-				this.HideLandTipRange = sceneItemGravityComponent.HideLandTipRange;
-			}
-			if (base.CanResetComponentProperty("ShowingLandTip"))
-			{
-				this.ShowingLandTip = sceneItemGravityComponent.ShowingLandTip;
-			}
-			if (base.CanResetComponentProperty("CheckDistanceTimerHandle"))
-			{
-				if (sceneItemGravityComponent.CheckDistanceTimerHandle == null)
-				{
-					this.CheckDistanceTimerHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.CheckDistanceTimerHandle), "CheckDistanceTimerHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040254D1 RID: 152785
+		// Token: 0x17007268 RID: 29288
+		// (get) Token: 0x0603C883 RID: 247939 RVA: 0x01153EA1 File Offset: 0x011520A1
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007269 RID: 29289
+		// (get) Token: 0x0603C884 RID: 247940 RVA: 0x01153EA4 File Offset: 0x011520A4
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700726A RID: 29290
+		// (get) Token: 0x0603C885 RID: 247941 RVA: 0x01153EA7 File Offset: 0x011520A7
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700726B RID: 29291
+		// (get) Token: 0x0603C886 RID: 247942 RVA: 0x01153EAA File Offset: 0x011520AA
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700726C RID: 29292
+		// (get) Token: 0x0603C887 RID: 247943 RVA: 0x01153EAD File Offset: 0x011520AD
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020138 RID: 131384
 		private const int CHECK_DISTANCE_INTERVAL = 100;
 
-		// Token: 0x040254D2 RID: 152786
+		// Token: 0x04020139 RID: 131385
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040254D3 RID: 152787
+		// Token: 0x0402013A RID: 131386
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040254D4 RID: 152788
+		// Token: 0x0402013B RID: 131387
 		private LevelTagComponent TagComp;
 
-		// Token: 0x040254D5 RID: 152789
+		// Token: 0x0402013C RID: 131388
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x040254D6 RID: 152790
+		// Token: 0x0402013D RID: 131389
 		private SceneItemPropertyComponent PropComp;
 
-		// Token: 0x040254D7 RID: 152791
+		// Token: 0x0402013E RID: 131390
 		private TrampleComponent CompConfig;
 
-		// Token: 0x040254D8 RID: 152792
+		// Token: 0x0402013F RID: 131391
 		private SceneItemGravityComponent.ESceneItemGravityState AnimState;
 
-		// Token: 0x040254D9 RID: 152793
+		// Token: 0x04020140 RID: 131392
 		private float AnimConfigMsTime;
 
-		// Token: 0x040254DA RID: 152794
+		// Token: 0x04020141 RID: 131393
 		private float UpAnimConfigMsTime;
 
-		// Token: 0x040254DB RID: 152795
+		// Token: 0x04020142 RID: 131394
 		private float DownAnimPlayedMsTime;
 
-		// Token: 0x040254DC RID: 152796
+		// Token: 0x04020143 RID: 131395
 		private int? TickDisableHandle;
 
-		// Token: 0x040254DD RID: 152797
+		// Token: 0x04020144 RID: 131396
 		private float CustomTimeDilation = 1f;
 
-		// Token: 0x040254DE RID: 152798
+		// Token: 0x04020145 RID: 131397
 		private bool IsCountDownTipOpen;
 
-		// Token: 0x040254DF RID: 152799
+		// Token: 0x04020146 RID: 131398
 		private float ShowLandTipRange = -1f;
 
-		// Token: 0x040254E0 RID: 152800
+		// Token: 0x04020147 RID: 131399
 		private float HideLandTipRange = -1f;
 
-		// Token: 0x040254E1 RID: 152801
+		// Token: 0x04020148 RID: 131400
 		private bool ShowingLandTip;
 
-		// Token: 0x040254E2 RID: 152802
+		// Token: 0x04020149 RID: 131401
 		private TimerHandle CheckDistanceTimerHandle;
 
-		// Token: 0x0200CEC2 RID: 52930
+		// Token: 0x0200BA58 RID: 47704
 		[NullableContext(0)]
 		private enum ESceneItemGravityState
 		{
-			// Token: 0x0403E36B RID: 254827
+			// Token: 0x04039691 RID: 235153
 			AtTop,
-			// Token: 0x0403E36C RID: 254828
+			// Token: 0x04039692 RID: 235154
 			AtBottom,
-			// Token: 0x0403E36D RID: 254829
+			// Token: 0x04039693 RID: 235155
 			Rising,
-			// Token: 0x0403E36E RID: 254830
+			// Token: 0x04039694 RID: 235156
 			Falling
 		}
 	}

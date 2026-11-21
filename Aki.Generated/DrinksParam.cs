@@ -7,52 +7,60 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C06 RID: 3078
+	// Token: 0x02000CE8 RID: 3304
+	[NullableContext(1)]
+	[Nullable(0)]
 	public struct DrinksParam : IFlatbufferObject
 	{
-		// Token: 0x17000D51 RID: 3409
-		// (get) Token: 0x06006447 RID: 25671 RVA: 0x002182E4 File Offset: 0x002164E4
+		// Token: 0x17000D9D RID: 3485
+		// (get) Token: 0x06006A26 RID: 27174 RVA: 0x002378E8 File Offset: 0x00235AE8
+		[Nullable(0)]
 		public ByteBuffer ByteBuffer
 		{
+			[NullableContext(0)]
 			get
 			{
 				return this.__p.bb;
 			}
 		}
 
-		// Token: 0x06006448 RID: 25672 RVA: 0x002182F1 File Offset: 0x002164F1
+		// Token: 0x06006A27 RID: 27175 RVA: 0x002378F5 File Offset: 0x00235AF5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006449 RID: 25673 RVA: 0x002182F8 File Offset: 0x002164F8
+		// Token: 0x06006A28 RID: 27176 RVA: 0x002378FC File Offset: 0x00235AFC
+		[NullableContext(0)]
 		public static DrinksParam GetRootAsDrinksParam(ByteBuffer _bb)
 		{
 			return DrinksParam.GetRootAsDrinksParam(_bb, default(DrinksParam));
 		}
 
-		// Token: 0x0600644A RID: 25674 RVA: 0x00218314 File Offset: 0x00216514
+		// Token: 0x06006A29 RID: 27177 RVA: 0x00237918 File Offset: 0x00235B18
+		[NullableContext(0)]
 		public static DrinksParam GetRootAsDrinksParam(ByteBuffer _bb, DrinksParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600644B RID: 25675 RVA: 0x00218331 File Offset: 0x00216531
+		// Token: 0x06006A2A RID: 27178 RVA: 0x00237935 File Offset: 0x00235B35
+		[NullableContext(0)]
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600644C RID: 25676 RVA: 0x00218340 File Offset: 0x00216540
+		// Token: 0x06006A2B RID: 27179 RVA: 0x00237944 File Offset: 0x00235B44
+		[NullableContext(0)]
 		public DrinksParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000D52 RID: 3410
-		// (get) Token: 0x0600644D RID: 25677 RVA: 0x00218350 File Offset: 0x00216550
+		// Token: 0x17000D9E RID: 3486
+		// (get) Token: 0x06006A2C RID: 27180 RVA: 0x00237954 File Offset: 0x00235B54
 		public int Id
 		{
 			get
@@ -66,7 +74,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600644E RID: 25678 RVA: 0x0021838C File Offset: 0x0021658C
+		// Token: 0x06006A2D RID: 27181 RVA: 0x00237990 File Offset: 0x00235B90
 		public int MainColorPalette(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +85,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D53 RID: 3411
-		// (get) Token: 0x0600644F RID: 25679 RVA: 0x002183CC File Offset: 0x002165CC
+		// Token: 0x17000D9F RID: 3487
+		// (get) Token: 0x06006A2E RID: 27182 RVA: 0x002379D0 File Offset: 0x00235BD0
 		public int MainColorPaletteLength
 		{
 			get
@@ -92,19 +100,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006450 RID: 25680 RVA: 0x002183F7 File Offset: 0x002165F7
+		// Token: 0x06006A2F RID: 27183 RVA: 0x002379FB File Offset: 0x00235BFB
+		[NullableContext(0)]
 		public Span<int> GetMainColorPaletteBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06006451 RID: 25681 RVA: 0x00218406 File Offset: 0x00216606
+		// Token: 0x06006A30 RID: 27184 RVA: 0x00237A0A File Offset: 0x00235C0A
+		[NullableContext(0)]
 		public int[] GetMainColorPaletteArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006452 RID: 25682 RVA: 0x00218420 File Offset: 0x00216620
+		// Token: 0x06006A31 RID: 27185 RVA: 0x00237A24 File Offset: 0x00235C24
 		public DicIntInt? WaterHighProcessMap(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -115,8 +125,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D54 RID: 3412
-		// (get) Token: 0x06006453 RID: 25683 RVA: 0x00218480 File Offset: 0x00216680
+		// Token: 0x17000DA0 RID: 3488
+		// (get) Token: 0x06006A32 RID: 27186 RVA: 0x00237A84 File Offset: 0x00235C84
 		public int WaterHighProcessMapLength
 		{
 			get
@@ -130,7 +140,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006454 RID: 25684 RVA: 0x002184AC File Offset: 0x002166AC
+		// Token: 0x06006A33 RID: 27187 RVA: 0x00237AB0 File Offset: 0x00235CB0
 		public DicIntInt? WaterMaskCenterOffsetMap(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -141,8 +151,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D55 RID: 3413
-		// (get) Token: 0x06006455 RID: 25685 RVA: 0x00218510 File Offset: 0x00216710
+		// Token: 0x17000DA1 RID: 3489
+		// (get) Token: 0x06006A34 RID: 27188 RVA: 0x00237B14 File Offset: 0x00235D14
 		public int WaterMaskCenterOffsetMapLength
 		{
 			get
@@ -156,7 +166,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006456 RID: 25686 RVA: 0x0021853C File Offset: 0x0021673C
+		// Token: 0x06006A35 RID: 27189 RVA: 0x00237B40 File Offset: 0x00235D40
 		public DicIntInt? WaterMaskWidthMap(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -167,8 +177,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000D56 RID: 3414
-		// (get) Token: 0x06006457 RID: 25687 RVA: 0x002185A0 File Offset: 0x002167A0
+		// Token: 0x17000DA2 RID: 3490
+		// (get) Token: 0x06006A36 RID: 27190 RVA: 0x00237BA4 File Offset: 0x00235DA4
 		public int WaterMaskWidthMapLength
 		{
 			get
@@ -182,7 +192,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006458 RID: 25688 RVA: 0x002185CC File Offset: 0x002167CC
+		// Token: 0x06006A37 RID: 27191 RVA: 0x00237BD0 File Offset: 0x00235DD0
 		public int WaterLineColor(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -193,8 +203,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D57 RID: 3415
-		// (get) Token: 0x06006459 RID: 25689 RVA: 0x0021860C File Offset: 0x0021680C
+		// Token: 0x17000DA3 RID: 3491
+		// (get) Token: 0x06006A38 RID: 27192 RVA: 0x00237C10 File Offset: 0x00235E10
 		public int WaterLineColorLength
 		{
 			get
@@ -208,19 +218,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600645A RID: 25690 RVA: 0x00218638 File Offset: 0x00216838
+		// Token: 0x06006A39 RID: 27193 RVA: 0x00237C3C File Offset: 0x00235E3C
+		[NullableContext(0)]
 		public Span<int> GetWaterLineColorBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600645B RID: 25691 RVA: 0x00218648 File Offset: 0x00216848
+		// Token: 0x06006A3A RID: 27194 RVA: 0x00237C4C File Offset: 0x00235E4C
+		[NullableContext(0)]
 		public int[] GetWaterLineColorArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600645C RID: 25692 RVA: 0x00218660 File Offset: 0x00216860
+		// Token: 0x06006A3B RID: 27195 RVA: 0x00237C64 File Offset: 0x00235E64
 		public int WaterColorHigh(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -231,8 +243,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D58 RID: 3416
-		// (get) Token: 0x0600645D RID: 25693 RVA: 0x002186A0 File Offset: 0x002168A0
+		// Token: 0x17000DA4 RID: 3492
+		// (get) Token: 0x06006A3C RID: 27196 RVA: 0x00237CA4 File Offset: 0x00235EA4
 		public int WaterColorHighLength
 		{
 			get
@@ -246,19 +258,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600645E RID: 25694 RVA: 0x002186CC File Offset: 0x002168CC
+		// Token: 0x06006A3D RID: 27197 RVA: 0x00237CD0 File Offset: 0x00235ED0
+		[NullableContext(0)]
 		public Span<int> GetWaterColorHighBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x0600645F RID: 25695 RVA: 0x002186DC File Offset: 0x002168DC
+		// Token: 0x06006A3E RID: 27198 RVA: 0x00237CE0 File Offset: 0x00235EE0
+		[NullableContext(0)]
 		public int[] GetWaterColorHighArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006460 RID: 25696 RVA: 0x002186F4 File Offset: 0x002168F4
+		// Token: 0x06006A3F RID: 27199 RVA: 0x00237CF8 File Offset: 0x00235EF8
 		public int WaterColorMiddle(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -269,8 +283,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D59 RID: 3417
-		// (get) Token: 0x06006461 RID: 25697 RVA: 0x00218734 File Offset: 0x00216934
+		// Token: 0x17000DA5 RID: 3493
+		// (get) Token: 0x06006A40 RID: 27200 RVA: 0x00237D38 File Offset: 0x00235F38
 		public int WaterColorMiddleLength
 		{
 			get
@@ -284,19 +298,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006462 RID: 25698 RVA: 0x00218760 File Offset: 0x00216960
+		// Token: 0x06006A41 RID: 27201 RVA: 0x00237D64 File Offset: 0x00235F64
+		[NullableContext(0)]
 		public Span<int> GetWaterColorMiddleBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06006463 RID: 25699 RVA: 0x00218770 File Offset: 0x00216970
+		// Token: 0x06006A42 RID: 27202 RVA: 0x00237D74 File Offset: 0x00235F74
+		[NullableContext(0)]
 		public int[] GetWaterColorMiddleArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006464 RID: 25700 RVA: 0x00218788 File Offset: 0x00216988
+		// Token: 0x06006A43 RID: 27203 RVA: 0x00237D8C File Offset: 0x00235F8C
 		public int WaterColorDown(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -307,8 +323,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D5A RID: 3418
-		// (get) Token: 0x06006465 RID: 25701 RVA: 0x002187C8 File Offset: 0x002169C8
+		// Token: 0x17000DA6 RID: 3494
+		// (get) Token: 0x06006A44 RID: 27204 RVA: 0x00237DCC File Offset: 0x00235FCC
 		public int WaterColorDownLength
 		{
 			get
@@ -322,19 +338,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006466 RID: 25702 RVA: 0x002187F4 File Offset: 0x002169F4
+		// Token: 0x06006A45 RID: 27205 RVA: 0x00237DF8 File Offset: 0x00235FF8
+		[NullableContext(0)]
 		public Span<int> GetWaterColorDownBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06006467 RID: 25703 RVA: 0x00218804 File Offset: 0x00216A04
+		// Token: 0x06006A46 RID: 27206 RVA: 0x00237E08 File Offset: 0x00236008
+		[NullableContext(0)]
 		public int[] GetWaterColorDownArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06006468 RID: 25704 RVA: 0x0021881C File Offset: 0x00216A1C
+		// Token: 0x06006A47 RID: 27207 RVA: 0x00237E20 File Offset: 0x00236020
 		public int UpColorAdd(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -345,8 +363,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D5B RID: 3419
-		// (get) Token: 0x06006469 RID: 25705 RVA: 0x0021885C File Offset: 0x00216A5C
+		// Token: 0x17000DA7 RID: 3495
+		// (get) Token: 0x06006A48 RID: 27208 RVA: 0x00237E60 File Offset: 0x00236060
 		public int UpColorAddLength
 		{
 			get
@@ -360,19 +378,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600646A RID: 25706 RVA: 0x00218888 File Offset: 0x00216A88
+		// Token: 0x06006A49 RID: 27209 RVA: 0x00237E8C File Offset: 0x0023608C
+		[NullableContext(0)]
 		public Span<int> GetUpColorAddBytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x0600646B RID: 25707 RVA: 0x00218898 File Offset: 0x00216A98
+		// Token: 0x06006A4A RID: 27210 RVA: 0x00237E9C File Offset: 0x0023609C
+		[NullableContext(0)]
 		public int[] GetUpColorAddArray()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600646C RID: 25708 RVA: 0x002188B0 File Offset: 0x00216AB0
+		// Token: 0x06006A4B RID: 27211 RVA: 0x00237EB4 File Offset: 0x002360B4
 		public int UpLightColor(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -383,8 +403,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D5C RID: 3420
-		// (get) Token: 0x0600646D RID: 25709 RVA: 0x002188F0 File Offset: 0x00216AF0
+		// Token: 0x17000DA8 RID: 3496
+		// (get) Token: 0x06006A4C RID: 27212 RVA: 0x00237EF4 File Offset: 0x002360F4
 		public int UpLightColorLength
 		{
 			get
@@ -398,20 +418,22 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600646E RID: 25710 RVA: 0x0021891C File Offset: 0x00216B1C
+		// Token: 0x06006A4D RID: 27213 RVA: 0x00237F20 File Offset: 0x00236120
+		[NullableContext(0)]
 		public Span<int> GetUpLightColorBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x0600646F RID: 25711 RVA: 0x0021892C File Offset: 0x00216B2C
+		// Token: 0x06006A4E RID: 27214 RVA: 0x00237F30 File Offset: 0x00236130
+		[NullableContext(0)]
 		public int[] GetUpLightColorArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D5D RID: 3421
-		// (get) Token: 0x06006470 RID: 25712 RVA: 0x00218944 File Offset: 0x00216B44
+		// Token: 0x17000DA9 RID: 3497
+		// (get) Token: 0x06006A4F RID: 27215 RVA: 0x00237F48 File Offset: 0x00236148
 		public int ColorMidHighProcess
 		{
 			get
@@ -425,8 +447,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D5E RID: 3422
-		// (get) Token: 0x06006471 RID: 25713 RVA: 0x00218988 File Offset: 0x00216B88
+		// Token: 0x17000DAA RID: 3498
+		// (get) Token: 0x06006A50 RID: 27216 RVA: 0x00237F8C File Offset: 0x0023618C
 		public int ColorMidHighWidth
 		{
 			get
@@ -440,8 +462,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D5F RID: 3423
-		// (get) Token: 0x06006472 RID: 25714 RVA: 0x002189CC File Offset: 0x00216BCC
+		// Token: 0x17000DAB RID: 3499
+		// (get) Token: 0x06006A51 RID: 27217 RVA: 0x00237FD0 File Offset: 0x002361D0
 		public int ColorDownMidProcess
 		{
 			get
@@ -455,8 +477,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D60 RID: 3424
-		// (get) Token: 0x06006473 RID: 25715 RVA: 0x00218A10 File Offset: 0x00216C10
+		// Token: 0x17000DAC RID: 3500
+		// (get) Token: 0x06006A52 RID: 27218 RVA: 0x00238014 File Offset: 0x00236214
 		public int ColorDownMidWidth
 		{
 			get
@@ -470,8 +492,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D61 RID: 3425
-		// (get) Token: 0x06006474 RID: 25716 RVA: 0x00218A54 File Offset: 0x00216C54
+		// Token: 0x17000DAD RID: 3501
+		// (get) Token: 0x06006A53 RID: 27219 RVA: 0x00238058 File Offset: 0x00236258
 		public int UpLightMaskProcess
 		{
 			get
@@ -485,8 +507,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D62 RID: 3426
-		// (get) Token: 0x06006475 RID: 25717 RVA: 0x00218A98 File Offset: 0x00216C98
+		// Token: 0x17000DAE RID: 3502
+		// (get) Token: 0x06006A54 RID: 27220 RVA: 0x0023809C File Offset: 0x0023629C
 		public int WaterRoughness
 		{
 			get
@@ -500,8 +522,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D63 RID: 3427
-		// (get) Token: 0x06006476 RID: 25718 RVA: 0x00218ADC File Offset: 0x00216CDC
+		// Token: 0x17000DAF RID: 3503
+		// (get) Token: 0x06006A55 RID: 27221 RVA: 0x002380E0 File Offset: 0x002362E0
 		public int WaterMetallic
 		{
 			get
@@ -515,7 +537,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006477 RID: 25719 RVA: 0x00218B1C File Offset: 0x00216D1C
+		// Token: 0x06006A56 RID: 27222 RVA: 0x00238120 File Offset: 0x00236320
 		public int FresnelColorAdd(int j)
 		{
 			int num = this.__p.__offset(40);
@@ -526,8 +548,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D64 RID: 3428
-		// (get) Token: 0x06006478 RID: 25720 RVA: 0x00218B5C File Offset: 0x00216D5C
+		// Token: 0x17000DB0 RID: 3504
+		// (get) Token: 0x06006A57 RID: 27223 RVA: 0x00238160 File Offset: 0x00236360
 		public int FresnelColorAddLength
 		{
 			get
@@ -541,20 +563,22 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006479 RID: 25721 RVA: 0x00218B88 File Offset: 0x00216D88
+		// Token: 0x06006A58 RID: 27224 RVA: 0x0023818C File Offset: 0x0023638C
+		[NullableContext(0)]
 		public Span<int> GetFresnelColorAddBytes()
 		{
 			return this.__p.__vector_as_span<int>(40, 4);
 		}
 
-		// Token: 0x0600647A RID: 25722 RVA: 0x00218B98 File Offset: 0x00216D98
+		// Token: 0x06006A59 RID: 27225 RVA: 0x0023819C File Offset: 0x0023639C
+		[NullableContext(0)]
 		public int[] GetFresnelColorAddArray()
 		{
 			return this.__p.__vector_as_array<int>(40) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D65 RID: 3429
-		// (get) Token: 0x0600647B RID: 25723 RVA: 0x00218BB0 File Offset: 0x00216DB0
+		// Token: 0x17000DB1 RID: 3505
+		// (get) Token: 0x06006A5A RID: 27226 RVA: 0x002381B4 File Offset: 0x002363B4
 		public int FresnelRangeWater
 		{
 			get
@@ -568,8 +592,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D66 RID: 3430
-		// (get) Token: 0x0600647C RID: 25724 RVA: 0x00218BF4 File Offset: 0x00216DF4
+		// Token: 0x17000DB2 RID: 3506
+		// (get) Token: 0x06006A5B RID: 27227 RVA: 0x002381F8 File Offset: 0x002363F8
 		public int RefractIntensity
 		{
 			get
@@ -583,8 +607,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D67 RID: 3431
-		// (get) Token: 0x0600647D RID: 25725 RVA: 0x00218C38 File Offset: 0x00216E38
+		// Token: 0x17000DB3 RID: 3507
+		// (get) Token: 0x06006A5C RID: 27228 RVA: 0x0023823C File Offset: 0x0023643C
 		public int BubbleIntensity
 		{
 			get
@@ -598,8 +622,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D68 RID: 3432
-		// (get) Token: 0x0600647E RID: 25726 RVA: 0x00218C78 File Offset: 0x00216E78
+		// Token: 0x17000DB4 RID: 3508
+		// (get) Token: 0x06006A5D RID: 27229 RVA: 0x0023827C File Offset: 0x0023647C
 		public int BubbleSpeed
 		{
 			get
@@ -613,202 +637,161 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600647F RID: 25727 RVA: 0x00218CBC File Offset: 0x00216EBC
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FresnelColorAddIter()或GetFresnelColorAddBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FresnelColorAdd()
+		// Token: 0x06006A5E RID: 27230 RVA: 0x002382BD File Offset: 0x002364BD
+		public int[] FresnelColorAdd()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetFresnelColorAddArray() ?? Array.Empty<int>();
+			return this.GetFresnelColorAddArray();
 		}
 
-		// Token: 0x06006480 RID: 25728 RVA: 0x00218CE0 File Offset: 0x00216EE0
-		[NullableContext(1)]
-		public readonly IEnumerable<int> FresnelColorAddIter()
+		// Token: 0x06006A5F RID: 27231 RVA: 0x002382C5 File Offset: 0x002364C5
+		public IEnumerable<int> FresnelColorAddIter()
 		{
 			DrinksParam.<FresnelColorAddIter>d__82 <FresnelColorAddIter>d__ = new DrinksParam.<FresnelColorAddIter>d__82(-2);
 			<FresnelColorAddIter>d__.<>3__<>4__this = this;
 			return <FresnelColorAddIter>d__;
 		}
 
-		// Token: 0x06006481 RID: 25729 RVA: 0x00218CF8 File Offset: 0x00216EF8
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MainColorPaletteIter()或GetMainColorPaletteBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MainColorPalette()
+		// Token: 0x06006A60 RID: 27232 RVA: 0x002382DA File Offset: 0x002364DA
+		public int[] MainColorPalette()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetMainColorPaletteArray() ?? Array.Empty<int>();
+			return this.GetMainColorPaletteArray();
 		}
 
-		// Token: 0x06006482 RID: 25730 RVA: 0x00218D1C File Offset: 0x00216F1C
-		[NullableContext(1)]
-		public readonly IEnumerable<int> MainColorPaletteIter()
+		// Token: 0x06006A61 RID: 27233 RVA: 0x002382E2 File Offset: 0x002364E2
+		public IEnumerable<int> MainColorPaletteIter()
 		{
 			DrinksParam.<MainColorPaletteIter>d__84 <MainColorPaletteIter>d__ = new DrinksParam.<MainColorPaletteIter>d__84(-2);
 			<MainColorPaletteIter>d__.<>3__<>4__this = this;
 			return <MainColorPaletteIter>d__;
 		}
 
-		// Token: 0x06006483 RID: 25731 RVA: 0x00218D34 File Offset: 0x00216F34
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用UpColorAddIter()或GetUpColorAddBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] UpColorAdd()
+		// Token: 0x06006A62 RID: 27234 RVA: 0x002382F7 File Offset: 0x002364F7
+		public int[] UpColorAdd()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetUpColorAddArray() ?? Array.Empty<int>();
+			return this.GetUpColorAddArray();
 		}
 
-		// Token: 0x06006484 RID: 25732 RVA: 0x00218D58 File Offset: 0x00216F58
-		[NullableContext(1)]
-		public readonly IEnumerable<int> UpColorAddIter()
+		// Token: 0x06006A63 RID: 27235 RVA: 0x002382FF File Offset: 0x002364FF
+		public IEnumerable<int> UpColorAddIter()
 		{
 			DrinksParam.<UpColorAddIter>d__86 <UpColorAddIter>d__ = new DrinksParam.<UpColorAddIter>d__86(-2);
 			<UpColorAddIter>d__.<>3__<>4__this = this;
 			return <UpColorAddIter>d__;
 		}
 
-		// Token: 0x06006485 RID: 25733 RVA: 0x00218D70 File Offset: 0x00216F70
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用UpLightColorIter()或GetUpLightColorBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] UpLightColor()
+		// Token: 0x06006A64 RID: 27236 RVA: 0x00238314 File Offset: 0x00236514
+		public int[] UpLightColor()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetUpLightColorArray() ?? Array.Empty<int>();
+			return this.GetUpLightColorArray();
 		}
 
-		// Token: 0x06006486 RID: 25734 RVA: 0x00218D94 File Offset: 0x00216F94
-		[NullableContext(1)]
-		public readonly IEnumerable<int> UpLightColorIter()
+		// Token: 0x06006A65 RID: 27237 RVA: 0x0023831C File Offset: 0x0023651C
+		public IEnumerable<int> UpLightColorIter()
 		{
 			DrinksParam.<UpLightColorIter>d__88 <UpLightColorIter>d__ = new DrinksParam.<UpLightColorIter>d__88(-2);
 			<UpLightColorIter>d__.<>3__<>4__this = this;
 			return <UpLightColorIter>d__;
 		}
 
-		// Token: 0x06006487 RID: 25735 RVA: 0x00218DAC File Offset: 0x00216FAC
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaterColorDownIter()或GetWaterColorDownBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaterColorDown()
+		// Token: 0x06006A66 RID: 27238 RVA: 0x00238331 File Offset: 0x00236531
+		public int[] WaterColorDown()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetWaterColorDownArray() ?? Array.Empty<int>();
+			return this.GetWaterColorDownArray();
 		}
 
-		// Token: 0x06006488 RID: 25736 RVA: 0x00218DD0 File Offset: 0x00216FD0
-		[NullableContext(1)]
-		public readonly IEnumerable<int> WaterColorDownIter()
+		// Token: 0x06006A67 RID: 27239 RVA: 0x00238339 File Offset: 0x00236539
+		public IEnumerable<int> WaterColorDownIter()
 		{
 			DrinksParam.<WaterColorDownIter>d__90 <WaterColorDownIter>d__ = new DrinksParam.<WaterColorDownIter>d__90(-2);
 			<WaterColorDownIter>d__.<>3__<>4__this = this;
 			return <WaterColorDownIter>d__;
 		}
 
-		// Token: 0x06006489 RID: 25737 RVA: 0x00218DE8 File Offset: 0x00216FE8
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaterColorHighIter()或GetWaterColorHighBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaterColorHigh()
+		// Token: 0x06006A68 RID: 27240 RVA: 0x0023834E File Offset: 0x0023654E
+		public int[] WaterColorHigh()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetWaterColorHighArray() ?? Array.Empty<int>();
+			return this.GetWaterColorHighArray();
 		}
 
-		// Token: 0x0600648A RID: 25738 RVA: 0x00218E0C File Offset: 0x0021700C
-		[NullableContext(1)]
-		public readonly IEnumerable<int> WaterColorHighIter()
+		// Token: 0x06006A69 RID: 27241 RVA: 0x00238356 File Offset: 0x00236556
+		public IEnumerable<int> WaterColorHighIter()
 		{
 			DrinksParam.<WaterColorHighIter>d__92 <WaterColorHighIter>d__ = new DrinksParam.<WaterColorHighIter>d__92(-2);
 			<WaterColorHighIter>d__.<>3__<>4__this = this;
 			return <WaterColorHighIter>d__;
 		}
 
-		// Token: 0x0600648B RID: 25739 RVA: 0x00218E24 File Offset: 0x00217024
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaterColorMiddleIter()或GetWaterColorMiddleBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaterColorMiddle()
+		// Token: 0x06006A6A RID: 27242 RVA: 0x0023836B File Offset: 0x0023656B
+		public int[] WaterColorMiddle()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetWaterColorMiddleArray() ?? Array.Empty<int>();
+			return this.GetWaterColorMiddleArray();
 		}
 
-		// Token: 0x0600648C RID: 25740 RVA: 0x00218E48 File Offset: 0x00217048
-		[NullableContext(1)]
-		public readonly IEnumerable<int> WaterColorMiddleIter()
+		// Token: 0x06006A6B RID: 27243 RVA: 0x00238373 File Offset: 0x00236573
+		public IEnumerable<int> WaterColorMiddleIter()
 		{
 			DrinksParam.<WaterColorMiddleIter>d__94 <WaterColorMiddleIter>d__ = new DrinksParam.<WaterColorMiddleIter>d__94(-2);
 			<WaterColorMiddleIter>d__.<>3__<>4__this = this;
 			return <WaterColorMiddleIter>d__;
 		}
 
-		// Token: 0x0600648D RID: 25741 RVA: 0x00218E60 File Offset: 0x00217060
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WaterHighProcessMapFrozenDict()缓存字典，遍历请使用WaterHighProcessMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> WaterHighProcessMap()
+		// Token: 0x06006A6C RID: 27244 RVA: 0x00238388 File Offset: 0x00236588
+		public Dictionary<int, int> WaterHighProcessMap()
 		{
 			return this.WaterHighProcessMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600648E RID: 25742 RVA: 0x00218EB6 File Offset: 0x002170B6
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WaterHighProcessMapIter()
+		// Token: 0x06006A6D RID: 27245 RVA: 0x002383DE File Offset: 0x002365DE
+		public IEnumerable<DicIntInt> WaterHighProcessMapIter()
 		{
 			DrinksParam.<WaterHighProcessMapIter>d__96 <WaterHighProcessMapIter>d__ = new DrinksParam.<WaterHighProcessMapIter>d__96(-2);
 			<WaterHighProcessMapIter>d__.<>3__<>4__this = this;
 			return <WaterHighProcessMapIter>d__;
 		}
 
-		// Token: 0x0600648F RID: 25743 RVA: 0x00218ECC File Offset: 0x002170CC
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaterLineColorIter()或GetWaterLineColorBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaterLineColor()
+		// Token: 0x06006A6E RID: 27246 RVA: 0x002383F3 File Offset: 0x002365F3
+		public int[] WaterLineColor()
 		{
-			DrinksParam drinksParam = this;
-			return drinksParam.GetWaterLineColorArray() ?? Array.Empty<int>();
+			return this.GetWaterLineColorArray();
 		}
 
-		// Token: 0x06006490 RID: 25744 RVA: 0x00218EF0 File Offset: 0x002170F0
-		[NullableContext(1)]
-		public readonly IEnumerable<int> WaterLineColorIter()
+		// Token: 0x06006A6F RID: 27247 RVA: 0x002383FB File Offset: 0x002365FB
+		public IEnumerable<int> WaterLineColorIter()
 		{
 			DrinksParam.<WaterLineColorIter>d__98 <WaterLineColorIter>d__ = new DrinksParam.<WaterLineColorIter>d__98(-2);
 			<WaterLineColorIter>d__.<>3__<>4__this = this;
 			return <WaterLineColorIter>d__;
 		}
 
-		// Token: 0x06006491 RID: 25745 RVA: 0x00218F08 File Offset: 0x00217108
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WaterMaskCenterOffsetMapFrozenDict()缓存字典，遍历请使用WaterMaskCenterOffsetMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> WaterMaskCenterOffsetMap()
+		// Token: 0x06006A70 RID: 27248 RVA: 0x00238410 File Offset: 0x00236610
+		public Dictionary<int, int> WaterMaskCenterOffsetMap()
 		{
 			return this.WaterMaskCenterOffsetMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006492 RID: 25746 RVA: 0x00218F5E File Offset: 0x0021715E
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WaterMaskCenterOffsetMapIter()
+		// Token: 0x06006A71 RID: 27249 RVA: 0x00238466 File Offset: 0x00236666
+		public IEnumerable<DicIntInt> WaterMaskCenterOffsetMapIter()
 		{
 			DrinksParam.<WaterMaskCenterOffsetMapIter>d__100 <WaterMaskCenterOffsetMapIter>d__ = new DrinksParam.<WaterMaskCenterOffsetMapIter>d__100(-2);
 			<WaterMaskCenterOffsetMapIter>d__.<>3__<>4__this = this;
 			return <WaterMaskCenterOffsetMapIter>d__;
 		}
 
-		// Token: 0x06006493 RID: 25747 RVA: 0x00218F74 File Offset: 0x00217174
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WaterMaskWidthMapFrozenDict()缓存字典，遍历请使用WaterMaskWidthMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> WaterMaskWidthMap()
+		// Token: 0x06006A72 RID: 27250 RVA: 0x0023847C File Offset: 0x0023667C
+		public Dictionary<int, int> WaterMaskWidthMap()
 		{
 			return this.WaterMaskWidthMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006494 RID: 25748 RVA: 0x00218FCA File Offset: 0x002171CA
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WaterMaskWidthMapIter()
+		// Token: 0x06006A73 RID: 27251 RVA: 0x002384D2 File Offset: 0x002366D2
+		public IEnumerable<DicIntInt> WaterMaskWidthMapIter()
 		{
 			DrinksParam.<WaterMaskWidthMapIter>d__102 <WaterMaskWidthMapIter>d__ = new DrinksParam.<WaterMaskWidthMapIter>d__102(-2);
 			<WaterMaskWidthMapIter>d__.<>3__<>4__this = this;
 			return <WaterMaskWidthMapIter>d__;
 		}
 
-		// Token: 0x06006495 RID: 25749 RVA: 0x00218FE0 File Offset: 0x002171E0
+		// Token: 0x06006A74 RID: 27252 RVA: 0x002384E8 File Offset: 0x002366E8
 		public int? GetWaterHighProcessMap(int key)
 		{
 			this.EnsureWaterHighProcessMapCacheIfNeeded();
@@ -820,7 +803,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006496 RID: 25750 RVA: 0x00219014 File Offset: 0x00217214
+		// Token: 0x06006A75 RID: 27253 RVA: 0x0023851C File Offset: 0x0023671C
 		public int? GetWaterMaskCenterOffsetMap(int key)
 		{
 			this.EnsureWaterMaskCenterOffsetMapCacheIfNeeded();
@@ -832,7 +815,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006497 RID: 25751 RVA: 0x00219048 File Offset: 0x00217248
+		// Token: 0x06006A76 RID: 27254 RVA: 0x00238550 File Offset: 0x00236750
 		public int? GetWaterMaskWidthMap(int key)
 		{
 			this.EnsureWaterMaskWidthMapCacheIfNeeded();
@@ -844,7 +827,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006498 RID: 25752 RVA: 0x0021907C File Offset: 0x0021727C
+		// Token: 0x06006A77 RID: 27255 RVA: 0x00238584 File Offset: 0x00236784
 		private void EnsureWaterHighProcessMapCacheIfNeeded()
 		{
 			if (this.WaterHighProcessMapCache != null)
@@ -854,7 +837,7 @@ namespace Aki.Config
 			this.WaterHighProcessMapCache = this.WaterHighProcessMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006499 RID: 25753 RVA: 0x002190E4 File Offset: 0x002172E4
+		// Token: 0x06006A78 RID: 27256 RVA: 0x002385EC File Offset: 0x002367EC
 		private void EnsureWaterMaskCenterOffsetMapCacheIfNeeded()
 		{
 			if (this.WaterMaskCenterOffsetMapCache != null)
@@ -864,7 +847,7 @@ namespace Aki.Config
 			this.WaterMaskCenterOffsetMapCache = this.WaterMaskCenterOffsetMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600649A RID: 25754 RVA: 0x0021914C File Offset: 0x0021734C
+		// Token: 0x06006A79 RID: 27257 RVA: 0x00238654 File Offset: 0x00236854
 		private void EnsureWaterMaskWidthMapCacheIfNeeded()
 		{
 			if (this.WaterMaskWidthMapCache != null)
@@ -874,42 +857,39 @@ namespace Aki.Config
 			this.WaterMaskWidthMapCache = this.WaterMaskWidthMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600649B RID: 25755 RVA: 0x002191B2 File Offset: 0x002173B2
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWaterHighProcessMapFrozenDict(int key)
+		// Token: 0x06006A7A RID: 27258 RVA: 0x002386BA File Offset: 0x002368BA
+		public FrozenDictionary<int, int> GetWaterHighProcessMapFrozenDict()
 		{
 			this.EnsureWaterHighProcessMapCacheIfNeeded();
 			return this.WaterHighProcessMapCache;
 		}
 
-		// Token: 0x0600649C RID: 25756 RVA: 0x002191C0 File Offset: 0x002173C0
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWaterMaskCenterOffsetMapFrozenDict(int key)
+		// Token: 0x06006A7B RID: 27259 RVA: 0x002386C8 File Offset: 0x002368C8
+		public FrozenDictionary<int, int> GetWaterMaskCenterOffsetMapFrozenDict()
 		{
 			this.EnsureWaterMaskCenterOffsetMapCacheIfNeeded();
 			return this.WaterMaskCenterOffsetMapCache;
 		}
 
-		// Token: 0x0600649D RID: 25757 RVA: 0x002191CE File Offset: 0x002173CE
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWaterMaskWidthMapFrozenDict(int key)
+		// Token: 0x06006A7C RID: 27260 RVA: 0x002386D6 File Offset: 0x002368D6
+		public FrozenDictionary<int, int> GetWaterMaskWidthMapFrozenDict()
 		{
 			this.EnsureWaterMaskWidthMapCacheIfNeeded();
 			return this.WaterMaskWidthMapCache;
 		}
 
-		// Token: 0x04004C3F RID: 19519
+		// Token: 0x04005221 RID: 21025
 		private Table __p;
 
-		// Token: 0x04004C40 RID: 19520
+		// Token: 0x04005222 RID: 21026
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WaterHighProcessMapCache;
 
-		// Token: 0x04004C41 RID: 19521
+		// Token: 0x04005223 RID: 21027
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WaterMaskCenterOffsetMapCache;
 
-		// Token: 0x04004C42 RID: 19522
+		// Token: 0x04005224 RID: 21028
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WaterMaskWidthMapCache;
 	}

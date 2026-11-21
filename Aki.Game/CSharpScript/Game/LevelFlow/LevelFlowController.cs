@@ -8,59 +8,59 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F66 RID: 28518
+	// Token: 0x020060E7 RID: 24807
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class LevelFlowController : ControllerBase
 	{
-		// Token: 0x060455FD RID: 284157 RVA: 0x0112CA09 File Offset: 0x0112AC09
+		// Token: 0x0603B7AB RID: 243627 RVA: 0x010D680D File Offset: 0x010D4A0D
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.TriggerUiTimeDilation, new Action(this.OnTimeDilationChange));
 			return true;
 		}
 
-		// Token: 0x060455FE RID: 284158 RVA: 0x0112CA25 File Offset: 0x0112AC25
+		// Token: 0x0603B7AC RID: 243628 RVA: 0x010D6829 File Offset: 0x010D4A29
 		public void InitTaskTreeInfo(long treeIncId, int nodeId)
 		{
 			LevelFlowModel.Instance.InitTaskTreeInfo(treeIncId, nodeId);
 		}
 
-		// Token: 0x060455FF RID: 284159 RVA: 0x0112CA33 File Offset: 0x0112AC33
+		// Token: 0x0603B7AD RID: 243629 RVA: 0x010D6837 File Offset: 0x010D4A37
 		public void StartLevelFlow(int index = 0)
 		{
 			LevelFlowModel.Instance.InitTiTanLevelFlowInfo();
 			LevelFlowModel.Instance.StartLevelFlow(index);
 		}
 
-		// Token: 0x06045600 RID: 284160 RVA: 0x0112CA4A File Offset: 0x0112AC4A
+		// Token: 0x0603B7AE RID: 243630 RVA: 0x010D684E File Offset: 0x010D4A4E
 		public void ResetLevelFlow(bool isEnd = false)
 		{
 			LevelFlowModel.Instance.ResetLevelFlow(isEnd);
 		}
 
-		// Token: 0x06045601 RID: 284161 RVA: 0x0112CA57 File Offset: 0x0112AC57
+		// Token: 0x0603B7AF RID: 243631 RVA: 0x010D685B File Offset: 0x010D4A5B
 		protected override void OnTick(float delta)
 		{
 			LevelFlowModel.Instance.OnTick(delta);
 			LevelFlowResourceManager.OnTick(delta);
 		}
 
-		// Token: 0x06045602 RID: 284162 RVA: 0x0112CA6A File Offset: 0x0112AC6A
+		// Token: 0x0603B7B0 RID: 243632 RVA: 0x010D686E File Offset: 0x010D4A6E
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.TriggerUiTimeDilation, new Action(this.OnTimeDilationChange));
 			return true;
 		}
 
-		// Token: 0x06045603 RID: 284163 RVA: 0x0112CA86 File Offset: 0x0112AC86
+		// Token: 0x0603B7B1 RID: 243633 RVA: 0x010D688A File Offset: 0x010D4A8A
 		private void OnTimeDilationChange()
 		{
 			LevelFlowResourceManager.OnTimeDilationChange();
 		}
 
-		// Token: 0x06045604 RID: 284164 RVA: 0x0112CA90 File Offset: 0x0112AC90
+		// Token: 0x0603B7B2 RID: 243634 RVA: 0x010D6894 File Offset: 0x010D4A94
 		public void LevelFlowTeleportRequest(int targetEntityId, Action<bool> callback)
 		{
 			AtomicProcessTeleportRequest atomicProcessTeleportRequest = AtomicProcessTeleportRequest.Create();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.LevelFlow
 				}
 				if (atomicProcessTeleportResponse.ErrorId != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessTeleportResponse.ErrorId, 27447, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessTeleportResponse.ErrorId, 27008, null, true, true);
 					callback(false);
 					return;
 				}
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelFlow
 			}, 0);
 		}
 
-		// Token: 0x06045605 RID: 284165 RVA: 0x0112CB18 File Offset: 0x0112AD18
+		// Token: 0x0603B7B3 RID: 243635 RVA: 0x010D691C File Offset: 0x010D4B1C
 		public void LevelFlowAddBuffRequest(List<long> buffIdList)
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -121,12 +121,12 @@ namespace CSharpScript.Game.LevelFlow
 				}
 				if (atomicProcessAddBuffResponse.ErrorId != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessAddBuffResponse.ErrorId, 19678, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessAddBuffResponse.ErrorId, 15504, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06045606 RID: 284166 RVA: 0x0112CC00 File Offset: 0x0112AE00
+		// Token: 0x0603B7B4 RID: 243636 RVA: 0x010D6A04 File Offset: 0x010D4C04
 		public void LevelFlowRemoveBuffRequest(List<long> buffIdList)
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -161,13 +161,13 @@ namespace CSharpScript.Game.LevelFlow
 				}
 				if (atomicProcessRemoveBuffResponse.ErrorId != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessRemoveBuffResponse.ErrorId, 23095, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(atomicProcessRemoveBuffResponse.ErrorId, 24883, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x17009B62 RID: 39778
-		// (get) Token: 0x06045607 RID: 284167 RVA: 0x0112CCE6 File Offset: 0x0112AEE6
+		// Token: 0x170070A1 RID: 28833
+		// (get) Token: 0x0603B7B5 RID: 243637 RVA: 0x010D6AEA File Offset: 0x010D4CEA
 		public static LevelFlowController Instance
 		{
 			get
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelFlow
 			}
 		}
 
-		// Token: 0x06045608 RID: 284168 RVA: 0x0112CCED File Offset: 0x0112AEED
+		// Token: 0x0603B7B6 RID: 243638 RVA: 0x010D6AF1 File Offset: 0x010D4CF1
 		public static LevelFlowController GetOrCreateInstance()
 		{
 			if (LevelFlowController._Instance == null)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.LevelFlow
 			return LevelFlowController._Instance;
 		}
 
-		// Token: 0x06045609 RID: 284169 RVA: 0x0112CD01 File Offset: 0x0112AF01
+		// Token: 0x0603B7B7 RID: 243639 RVA: 0x010D6B05 File Offset: 0x010D4D05
 		public static bool CreateInstance()
 		{
 			if (LevelFlowController._Instance != null)
@@ -197,24 +197,24 @@ namespace CSharpScript.Game.LevelFlow
 			return true;
 		}
 
-		// Token: 0x0604560A RID: 284170 RVA: 0x0112CD17 File Offset: 0x0112AF17
+		// Token: 0x0603B7B8 RID: 243640 RVA: 0x010D6B1B File Offset: 0x010D4D1B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604560B RID: 284171 RVA: 0x0112CD19 File Offset: 0x0112AF19
+		// Token: 0x0603B7B9 RID: 243641 RVA: 0x010D6B1D File Offset: 0x010D4D1D
 		public static void ResetStaticDefaultValue()
 		{
 			LevelFlowController._Instance = null;
 		}
 
-		// Token: 0x0604560C RID: 284172 RVA: 0x0112CD21 File Offset: 0x0112AF21
+		// Token: 0x0603B7BA RID: 243642 RVA: 0x010D6B25 File Offset: 0x010D4D25
 		static LevelFlowController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelFlowController.CreateStaticDefaultValue), new Action(LevelFlowController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402431A RID: 148250
+		// Token: 0x0401F5CF RID: 128463
 		[Nullable(2)]
 		private static LevelFlowController _Instance;
 	}

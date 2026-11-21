@@ -1,24 +1,24 @@
 ﻿using System;
 
-// Token: 0x02001DAE RID: 7598
+// Token: 0x02001270 RID: 4720
 internal enum <GreatSwordLevelSelectView>FDF13E77AAEC64439D1A4D0B7C4D8100B82D580585D120E0261EA442F40FEA2D0__EComponent
 {
-	// Token: 0x04006AB0 RID: 27312
+	// Token: 0x04006B91 RID: 27537
 	SprIcon,
-	// Token: 0x04006AB1 RID: 27313
+	// Token: 0x04006B92 RID: 27538
 	TxtTitle,
-	// Token: 0x04006AB2 RID: 27314
+	// Token: 0x04006B93 RID: 27539
 	UIItemBackBtn1,
-	// Token: 0x04006AB3 RID: 27315
+	// Token: 0x04006B94 RID: 27540
 	PnlHLayout,
-	// Token: 0x04006AB4 RID: 27316
+	// Token: 0x04006B95 RID: 27541
 	UIItemTogLevel,
-	// Token: 0x04006AB5 RID: 27317
+	// Token: 0x04006B96 RID: 27542
 	PnlVLayout,
-	// Token: 0x04006AB6 RID: 27318
+	// Token: 0x04006B97 RID: 27543
 	PnlList,
-	// Token: 0x04006AB7 RID: 27319
+	// Token: 0x04006B98 RID: 27544
 	TxtDescript,
-	// Token: 0x04006AB8 RID: 27320
+	// Token: 0x04006B99 RID: 27545
 	BtnConfirmB1
 }

@@ -4,13 +4,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA4 RID: 28324
+	// Token: 0x02006024 RID: 24612
 	[RequiredMember]
 	public class ElementalFieldBlockTarget : IElementalFieldBlockTarget
 	{
-		// Token: 0x17009A7B RID: 39547
-		// (get) Token: 0x0604502D RID: 282669 RVA: 0x0110DAA3 File Offset: 0x0110BCA3
-		// (set) Token: 0x0604502E RID: 282670 RVA: 0x0110DAAB File Offset: 0x0110BCAB
+		// Token: 0x17006FB2 RID: 28594
+		// (get) Token: 0x0603B1CE RID: 242126 RVA: 0x010B7B7F File Offset: 0x010B5D7F
+		// (set) Token: 0x0603B1CF RID: 242127 RVA: 0x010B7B87 File Offset: 0x010B5D87
 		[Nullable(new byte[]
 		{
 			1,
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			2
 		})] set; }
 
-		// Token: 0x17009A7C RID: 39548
-		// (get) Token: 0x0604502F RID: 282671 RVA: 0x0110DAB4 File Offset: 0x0110BCB4
-		// (set) Token: 0x06045030 RID: 282672 RVA: 0x0110DABC File Offset: 0x0110BCBC
+		// Token: 0x17006FB3 RID: 28595
+		// (get) Token: 0x0603B1D0 RID: 242128 RVA: 0x010B7B90 File Offset: 0x010B5D90
+		// (set) Token: 0x0603B1D1 RID: 242129 RVA: 0x010B7B98 File Offset: 0x010B5D98
 		[RequiredMember]
 		public ECollisionChannel TargetChannel { get; set; }
 
-		// Token: 0x06045031 RID: 282673 RVA: 0x0110DAC5 File Offset: 0x0110BCC5
+		// Token: 0x0603B1D2 RID: 242130 RVA: 0x010B7BA1 File Offset: 0x010B5DA1
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ElementalFieldBlockTarget()

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DE3 RID: 15843
+	// Token: 0x0200421E RID: 16926
 	public class IDungeonConditionT
 	{
-		// Token: 0x17006D6D RID: 28013
-		// (get) Token: 0x0601622B RID: 90667 RVA: 0x00332EA4 File Offset: 0x003310A4
-		// (set) Token: 0x0601622C RID: 90668 RVA: 0x00332EAC File Offset: 0x003310AC
+		// Token: 0x1700734D RID: 29517
+		// (get) Token: 0x0601784A RID: 96330 RVA: 0x0035B8A8 File Offset: 0x00359AA8
+		// (set) Token: 0x0601784B RID: 96331 RVA: 0x0035B8B0 File Offset: 0x00359AB0
 		public EDungeonConditionType Type { get; set; }
 
-		// Token: 0x17006D6E RID: 28014
-		// (get) Token: 0x0601622D RID: 90669 RVA: 0x00332EB5 File Offset: 0x003310B5
-		// (set) Token: 0x0601622E RID: 90670 RVA: 0x00332EBD File Offset: 0x003310BD
+		// Token: 0x1700734E RID: 29518
+		// (get) Token: 0x0601784C RID: 96332 RVA: 0x0035B8B9 File Offset: 0x00359AB9
+		// (set) Token: 0x0601784D RID: 96333 RVA: 0x0035B8C1 File Offset: 0x00359AC1
 		public int Count { get; set; }
 
-		// Token: 0x17006D6F RID: 28015
-		// (get) Token: 0x0601622F RID: 90671 RVA: 0x00332EC6 File Offset: 0x003310C6
-		// (set) Token: 0x06016230 RID: 90672 RVA: 0x00332ECE File Offset: 0x003310CE
+		// Token: 0x1700734F RID: 29519
+		// (get) Token: 0x0601784E RID: 96334 RVA: 0x0035B8CA File Offset: 0x00359ACA
+		// (set) Token: 0x0601784F RID: 96335 RVA: 0x0035B8D2 File Offset: 0x00359AD2
 		public bool IsExitDungeon { get; set; }
 
-		// Token: 0x17006D70 RID: 28016
-		// (get) Token: 0x06016231 RID: 90673 RVA: 0x00332ED7 File Offset: 0x003310D7
-		// (set) Token: 0x06016232 RID: 90674 RVA: 0x00332EDF File Offset: 0x003310DF
+		// Token: 0x17007350 RID: 29520
+		// (get) Token: 0x06017850 RID: 96336 RVA: 0x0035B8DB File Offset: 0x00359ADB
+		// (set) Token: 0x06017851 RID: 96337 RVA: 0x0035B8E3 File Offset: 0x00359AE3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016233 RID: 90675 RVA: 0x00332EE8 File Offset: 0x003310E8
+		// Token: 0x06017852 RID: 96338 RVA: 0x0035B8EC File Offset: 0x00359AEC
 		public IDungeonConditionT()
 		{
 			this.Type = EDungeonConditionType.DungeonSubType;

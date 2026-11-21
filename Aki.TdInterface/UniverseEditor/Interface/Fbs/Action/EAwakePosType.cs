@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F20 RID: 24352
+	// Token: 0x02006564 RID: 25956
 	public enum EAwakePosType : byte
 	{
-		// Token: 0x0400FC2C RID: 64556
+		// Token: 0x040109A2 RID: 68002
 		TransformVar
 	}
 }

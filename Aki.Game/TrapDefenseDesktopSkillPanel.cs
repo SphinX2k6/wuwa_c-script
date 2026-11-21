@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D36 RID: 7478
+// Token: 0x020011F8 RID: 4600
 public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 {
-	// Token: 0x0600E28F RID: 57999 RVA: 0x00353BAD File Offset: 0x00351DAD
+	// Token: 0x0600B6AC RID: 46764 RVA: 0x0035F5DD File Offset: 0x0035D7DD
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		};
 	}
 
-	// Token: 0x0600E290 RID: 58000 RVA: 0x00353BE8 File Offset: 0x00351DE8
+	// Token: 0x0600B6AD RID: 46765 RVA: 0x0035F618 File Offset: 0x0035D818
 	public override UniTask InitializeAsync()
 	{
 		TrapDefenseDesktopSkillPanel.<InitializeAsync>d__3 <InitializeAsync>d__;
@@ -30,13 +30,13 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E291 RID: 58001 RVA: 0x00353C2B File Offset: 0x00351E2B
+	// Token: 0x0600B6AE RID: 46766 RVA: 0x0035F65B File Offset: 0x0035D85B
 	protected override void OnChildStart()
 	{
 		this.RefreshExploreSkillItem();
 	}
 
-	// Token: 0x0600E292 RID: 58002 RVA: 0x00353C34 File Offset: 0x00351E34
+	// Token: 0x0600B6AF RID: 46767 RVA: 0x0035F664 File Offset: 0x0035D864
 	private UniTask NewAllBattleSkillItems()
 	{
 		TrapDefenseDesktopSkillPanel.<NewAllBattleSkillItems>d__5 <NewAllBattleSkillItems>d__;
@@ -47,7 +47,7 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		return <NewAllBattleSkillItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E293 RID: 58003 RVA: 0x00353C78 File Offset: 0x00351E78
+	// Token: 0x0600B6B0 RID: 46768 RVA: 0x0035F6A8 File Offset: 0x0035D8A8
 	private void RefreshExploreSkillItem()
 	{
 		TrapDefenseBattleSkillData trapDefenseBattleSkillData;
@@ -60,7 +60,7 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		this.BattleSkillItemList[1].RefreshVisible();
 	}
 
-	// Token: 0x0600E294 RID: 58004 RVA: 0x00353CC8 File Offset: 0x00351EC8
+	// Token: 0x0600B6B1 RID: 46769 RVA: 0x0035F6F8 File Offset: 0x0035D8F8
 	public void RefreshButtonByIsInBuild(bool isInBuild)
 	{
 		bool visible = !isInBuild;
@@ -72,14 +72,14 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		this.BattleSkillItemList[0].RefreshVisible();
 	}
 
-	// Token: 0x0600E295 RID: 58005 RVA: 0x00353D02 File Offset: 0x00351F02
+	// Token: 0x0600B6B2 RID: 46770 RVA: 0x0035F732 File Offset: 0x0035D932
 	[NullableContext(1)]
 	protected override string[] GetActionNameList()
 	{
 		return TrapDefenseDesktopSkillPanel.actionNameList;
 	}
 
-	// Token: 0x040068C5 RID: 26821
+	// Token: 0x040069A4 RID: 27044
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly string[] actionNameList = new string[]
@@ -88,13 +88,13 @@ public class TrapDefenseDesktopSkillPanel : TrapDefenseSkillPanelBase
 		"塔防道具"
 	};
 
-	// Token: 0x02008340 RID: 33600
+	// Token: 0x020074C9 RID: 29897
 	private static class EComponentDefine
 	{
-		// Token: 0x0402ACC4 RID: 175300
+		// Token: 0x04025FEC RID: 155628
 		public const int Attack = 0;
 
-		// Token: 0x0402ACC5 RID: 175301
+		// Token: 0x04025FED RID: 155629
 		public const int Explore = 1;
 	}
 }

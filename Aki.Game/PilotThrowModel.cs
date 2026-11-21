@@ -6,14 +6,14 @@ using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Data.Gameplay.PilotThrow;
 using UnrealEngine;
 
-// Token: 0x020025E1 RID: 9697
+// Token: 0x02001ACC RID: 6860
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PilotThrowModel : ModelBase
 {
-	// Token: 0x17001948 RID: 6472
-	// (get) Token: 0x06013B66 RID: 80742 RVA: 0x004F15E4 File Offset: 0x004EF7E4
+	// Token: 0x17001980 RID: 6528
+	// (get) Token: 0x06011048 RID: 69704 RVA: 0x00500314 File Offset: 0x004FE514
 	[Nullable(2)]
 	public BP_PilotThrowGameplaySetting_C Setting
 	{
@@ -29,8 +29,8 @@ public class PilotThrowModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001949 RID: 6473
-	// (get) Token: 0x06013B67 RID: 80743 RVA: 0x004F1620 File Offset: 0x004EF820
+	// Token: 0x17001981 RID: 6529
+	// (get) Token: 0x06011049 RID: 69705 RVA: 0x00500350 File Offset: 0x004FE550
 	public float AimPointInRangeDist
 	{
 		get
@@ -40,7 +40,7 @@ public class PilotThrowModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013B68 RID: 80744 RVA: 0x004F1642 File Offset: 0x004EF842
+	// Token: 0x0601104A RID: 69706 RVA: 0x00500372 File Offset: 0x004FE572
 	public void InitInteractInfo(int hookPointPbDataId, int titanEntityId, List<IPilotThrowTarget> pilotThrowTargets)
 	{
 		this.CurrentInteractHookPoint = hookPointPbDataId;
@@ -48,31 +48,31 @@ public class PilotThrowModel : ModelBase
 		this.PilotThrowTargets = pilotThrowTargets;
 	}
 
-	// Token: 0x06013B69 RID: 80745 RVA: 0x004F1659 File Offset: 0x004EF859
+	// Token: 0x0601104B RID: 69707 RVA: 0x00500389 File Offset: 0x004FE589
 	public int GetCurrentInteractHookPoint()
 	{
 		return this.CurrentInteractHookPoint;
 	}
 
-	// Token: 0x06013B6A RID: 80746 RVA: 0x004F1661 File Offset: 0x004EF861
+	// Token: 0x0601104C RID: 69708 RVA: 0x00500391 File Offset: 0x004FE591
 	public int GetCurrentTitanEntityId()
 	{
 		return this.TitanEntityId;
 	}
 
-	// Token: 0x06013B6B RID: 80747 RVA: 0x004F1669 File Offset: 0x004EF869
+	// Token: 0x0601104D RID: 69709 RVA: 0x00500399 File Offset: 0x004FE599
 	public IReadOnlyList<IPilotThrowTarget> GetPilotThrowTargets()
 	{
 		return this.PilotThrowTargets;
 	}
 
-	// Token: 0x06013B6C RID: 80748 RVA: 0x004F1674 File Offset: 0x004EF874
+	// Token: 0x0601104E RID: 69710 RVA: 0x005003A4 File Offset: 0x004FE5A4
 	public float GetSwitchAimTargetTime()
 	{
 		return ConfigCommonParamById.GetFloatConfig("PilotThrowSwitchTargetTime").Value;
 	}
 
-	// Token: 0x06013B6D RID: 80749 RVA: 0x004F1694 File Offset: 0x004EF894
+	// Token: 0x0601104F RID: 69711 RVA: 0x005003C4 File Offset: 0x004FE5C4
 	public bool IsInProjectileSplineLastPointRange(global::Vector point)
 	{
 		USplineComponent projectileSpline = PilotThrowController.Instance.ProjectileSpline;
@@ -86,7 +86,7 @@ public class PilotThrowModel : ModelBase
 		return global::Vector.DistSquared(point, v) <= (double)this.AimPointInRangeDist;
 	}
 
-	// Token: 0x06013B6E RID: 80750 RVA: 0x004F16E0 File Offset: 0x004EF8E0
+	// Token: 0x06011050 RID: 69712 RVA: 0x00500410 File Offset: 0x004FE610
 	protected override bool OnInit()
 	{
 		ResourceSystem.Instance.LoadTypeAsync("BP_PilotThrowGameplaySetting_C", delegate
@@ -109,8 +109,8 @@ public class PilotThrowModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x1700194A RID: 6474
-	// (get) Token: 0x06013B6F RID: 80751 RVA: 0x004F1703 File Offset: 0x004EF903
+	// Token: 0x17001982 RID: 6530
+	// (get) Token: 0x06011051 RID: 69713 RVA: 0x00500433 File Offset: 0x004FE633
 	public static PilotThrowModel Instance
 	{
 		get
@@ -119,7 +119,7 @@ public class PilotThrowModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013B70 RID: 80752 RVA: 0x004F170A File Offset: 0x004EF90A
+	// Token: 0x06011052 RID: 69714 RVA: 0x0050043A File Offset: 0x004FE63A
 	public static PilotThrowModel GetOrCreateInstance()
 	{
 		if (PilotThrowModel._Instance == null)
@@ -129,7 +129,7 @@ public class PilotThrowModel : ModelBase
 		return PilotThrowModel._Instance;
 	}
 
-	// Token: 0x06013B71 RID: 80753 RVA: 0x004F171E File Offset: 0x004EF91E
+	// Token: 0x06011053 RID: 69715 RVA: 0x0050044E File Offset: 0x004FE64E
 	public static bool CreateInstance()
 	{
 		if (PilotThrowModel._Instance != null)
@@ -140,69 +140,69 @@ public class PilotThrowModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013B72 RID: 80754 RVA: 0x004F1734 File Offset: 0x004EF934
+	// Token: 0x06011054 RID: 69716 RVA: 0x00500464 File Offset: 0x004FE664
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013B73 RID: 80755 RVA: 0x004F1736 File Offset: 0x004EF936
+	// Token: 0x06011055 RID: 69717 RVA: 0x00500466 File Offset: 0x004FE666
 	public static void ResetStaticDefaultValue()
 	{
 		PilotThrowModel._Instance = null;
 	}
 
-	// Token: 0x06013B74 RID: 80756 RVA: 0x004F173E File Offset: 0x004EF93E
+	// Token: 0x06011056 RID: 69718 RVA: 0x0050046E File Offset: 0x004FE66E
 	static PilotThrowModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PilotThrowModel.CreateStaticDefaultValue), new Action(PilotThrowModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400947F RID: 38015
+	// Token: 0x040095D6 RID: 38358
 	private int CurrentInteractHookPoint;
 
-	// Token: 0x04009480 RID: 38016
+	// Token: 0x040095D7 RID: 38359
 	private int TitanEntityId;
 
-	// Token: 0x04009481 RID: 38017
+	// Token: 0x040095D8 RID: 38360
 	private List<IPilotThrowTarget> PilotThrowTargets = new List<IPilotThrowTarget>();
 
-	// Token: 0x04009482 RID: 38018
+	// Token: 0x040095D9 RID: 38361
 	[Nullable(2)]
 	private BP_PilotThrowGameplaySetting_C SettingDataAsset;
 
-	// Token: 0x04009483 RID: 38019
+	// Token: 0x040095DA RID: 38362
 	[Nullable(2)]
 	public global::Vector CurrentInRangePoint;
 
-	// Token: 0x04009484 RID: 38020
+	// Token: 0x040095DB RID: 38363
 	public global::Vector LaunchDirection = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04009485 RID: 38021
+	// Token: 0x040095DC RID: 38364
 	public float LaunchSpeed;
 
-	// Token: 0x04009486 RID: 38022
+	// Token: 0x040095DD RID: 38365
 	public float LaunchGravity;
 
-	// Token: 0x04009487 RID: 38023
+	// Token: 0x040095DE RID: 38366
 	public bool NeedMotorRide;
 
-	// Token: 0x04009488 RID: 38024
+	// Token: 0x040095DF RID: 38367
 	public bool DisableInterrupt;
 
-	// Token: 0x04009489 RID: 38025
+	// Token: 0x040095E0 RID: 38368
 	[Nullable(2)]
 	public global::Vector ForceLookDir;
 
-	// Token: 0x0400948A RID: 38026
+	// Token: 0x040095E1 RID: 38369
 	public Rotator CameraRot = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x0400948B RID: 38027
+	// Token: 0x040095E2 RID: 38370
 	public global::Vector CameraLoc = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400948C RID: 38028
+	// Token: 0x040095E3 RID: 38371
 	public global::Vector ProjectileSplineLastPoint = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400948D RID: 38029
+	// Token: 0x040095E4 RID: 38372
 	[Nullable(2)]
 	private static PilotThrowModel _Instance;
 }

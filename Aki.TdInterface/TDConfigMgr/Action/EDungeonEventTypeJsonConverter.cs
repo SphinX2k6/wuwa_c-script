@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200230A RID: 8970
+	// Token: 0x02002579 RID: 9593
 	public class EDungeonEventTypeJsonConverter : JsonConverter<EDungeonEventType>
 	{
-		// Token: 0x0600C42D RID: 50221 RVA: 0x001CA478 File Offset: 0x001C8678
+		// Token: 0x0600CFFC RID: 53244 RVA: 0x001E2340 File Offset: 0x001E0540
 		public override EDungeonEventType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EDungeonEventTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C42E RID: 50222 RVA: 0x001CA49C File Offset: 0x001C869C
+		// Token: 0x0600CFFD RID: 53245 RVA: 0x001E2364 File Offset: 0x001E0564
 		public override void Write(Utf8JsonWriter writer, EDungeonEventType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

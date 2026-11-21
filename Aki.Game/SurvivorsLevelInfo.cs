@@ -2,28 +2,28 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002B8A RID: 11146
+// Token: 0x02002106 RID: 8454
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsLevelInfo : ISurvivorsLevelInfo
 {
-	// Token: 0x17001EDD RID: 7901
-	// (get) Token: 0x0601718D RID: 94605 RVA: 0x005DC924 File Offset: 0x005DAB24
-	// (set) Token: 0x0601718E RID: 94606 RVA: 0x005DC92C File Offset: 0x005DAB2C
+	// Token: 0x17001F35 RID: 7989
+	// (get) Token: 0x06014BBE RID: 84926 RVA: 0x00609504 File Offset: 0x00607704
+	// (set) Token: 0x06014BBF RID: 84927 RVA: 0x0060950C File Offset: 0x0060770C
 	public int LevelId { get; set; }
 
-	// Token: 0x17001EDE RID: 7902
-	// (get) Token: 0x0601718F RID: 94607 RVA: 0x005DC935 File Offset: 0x005DAB35
-	// (set) Token: 0x06017190 RID: 94608 RVA: 0x005DC93D File Offset: 0x005DAB3D
+	// Token: 0x17001F36 RID: 7990
+	// (get) Token: 0x06014BC0 RID: 84928 RVA: 0x00609515 File Offset: 0x00607715
+	// (set) Token: 0x06014BC1 RID: 84929 RVA: 0x0060951D File Offset: 0x0060771D
 	public long OpenTime { get; set; }
 
-	// Token: 0x17001EDF RID: 7903
-	// (get) Token: 0x06017191 RID: 94609 RVA: 0x005DC946 File Offset: 0x005DAB46
-	// (set) Token: 0x06017192 RID: 94610 RVA: 0x005DC94E File Offset: 0x005DAB4E
+	// Token: 0x17001F37 RID: 7991
+	// (get) Token: 0x06014BC2 RID: 84930 RVA: 0x00609526 File Offset: 0x00607726
+	// (set) Token: 0x06014BC3 RID: 84931 RVA: 0x0060952E File Offset: 0x0060772E
 	public bool IsEndlessMode { get; set; }
 
-	// Token: 0x17001EE0 RID: 7904
-	// (get) Token: 0x06017193 RID: 94611 RVA: 0x005DC957 File Offset: 0x005DAB57
-	// (set) Token: 0x06017194 RID: 94612 RVA: 0x005DC95F File Offset: 0x005DAB5F
+	// Token: 0x17001F38 RID: 7992
+	// (get) Token: 0x06014BC4 RID: 84932 RVA: 0x00609537 File Offset: 0x00607737
+	// (set) Token: 0x06014BC5 RID: 84933 RVA: 0x0060953F File Offset: 0x0060773F
 	public ModeInfo Info { get; set; }
 }

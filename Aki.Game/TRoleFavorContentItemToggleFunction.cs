@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x0200284C RID: 10316
-// (Invoke) Token: 0x06015458 RID: 87128
+// Token: 0x02001DC7 RID: 7623
+// (Invoke) Token: 0x06012E56 RID: 77398
 public delegate void TRoleFavorContentItemToggleFunction(bool bSelected, RoleFavorContentDataBase contentData, RoleFavorContentItem roleFavorContentItem);

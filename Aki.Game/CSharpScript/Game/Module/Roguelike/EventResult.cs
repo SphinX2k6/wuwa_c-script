@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D89 RID: 19849
+	// Token: 0x02003D52 RID: 15698
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EventResult
 	{
-		// Token: 0x060334E5 RID: 210149 RVA: 0x00BF9B25 File Offset: 0x00BF7D25
+		// Token: 0x06028352 RID: 164690 RVA: 0x00B43121 File Offset: 0x00B41321
 		public EventResult([Nullable(new byte[]
 		{
 			2,
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.Callback = callback;
 		}
 
-		// Token: 0x0401B3B2 RID: 111538
+		// Token: 0x04015D85 RID: 89477
 		[Nullable(new byte[]
 		{
 			2,
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public List<RogueGainEntry> RogueGainEntryArray;
 
-		// Token: 0x0401B3B3 RID: 111539
+		// Token: 0x04015D86 RID: 89478
 		public Action<bool?> Callback;
 	}
 }

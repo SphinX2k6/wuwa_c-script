@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 {
-	// Token: 0x02004B9D RID: 19357
+	// Token: 0x02003B47 RID: 15175
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MobileControlItem : ControlItem
 	{
-		// Token: 0x06032283 RID: 205443 RVA: 0x00BA782C File Offset: 0x00BA5A2C
+		// Token: 0x06027013 RID: 159763 RVA: 0x00AEB978 File Offset: 0x00AE9B78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032284 RID: 205444 RVA: 0x00BA7A04 File Offset: 0x00BA5C04
+		// Token: 0x06027014 RID: 159764 RVA: 0x00AEBB50 File Offset: 0x00AE9D50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MobileControlItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032285 RID: 205445 RVA: 0x00BA7A47 File Offset: 0x00BA5C47
+		// Token: 0x06027015 RID: 159765 RVA: 0x00AEBB93 File Offset: 0x00AE9D93
 		public override void OnTick(float delta)
 		{
 			base.OnTick(delta);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			joystick.Tick(delta);
 		}
 
-		// Token: 0x06032286 RID: 205446 RVA: 0x00BA7A64 File Offset: 0x00BA5C64
+		// Token: 0x06027016 RID: 159766 RVA: 0x00AEBBB0 File Offset: 0x00AE9DB0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -106,83 +106,83 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <InitializeJoystick>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032287 RID: 205447 RVA: 0x00BA7AA7 File Offset: 0x00BA5CA7
+		// Token: 0x06027017 RID: 159767 RVA: 0x00AEBBF3 File Offset: 0x00AE9DF3
 		private static void OnJumpBtnClick()
 		{
 			InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.跳跃, EInputState.Press);
 		}
 
-		// Token: 0x06032288 RID: 205448 RVA: 0x00BA7AB9 File Offset: 0x00BA5CB9
+		// Token: 0x06027018 RID: 159768 RVA: 0x00AEBC05 File Offset: 0x00AE9E05
 		private static void OnDodgeBtnClick()
 		{
 			InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.闪避, EInputState.Press);
 		}
 
-		// Token: 0x06032289 RID: 205449 RVA: 0x00BA7ACB File Offset: 0x00BA5CCB
+		// Token: 0x06027019 RID: 159769 RVA: 0x00AEBC17 File Offset: 0x00AE9E17
 		protected override void OnClimbBtnClick()
 		{
 			base.OnClimbBtnClick();
 		}
 
-		// Token: 0x0603228A RID: 205450 RVA: 0x00BA7AD3 File Offset: 0x00BA5CD3
+		// Token: 0x0602701A RID: 159770 RVA: 0x00AEBC1F File Offset: 0x00AE9E1F
 		protected override void OnRotateBtnClick()
 		{
 			base.OnRotateBtnClick();
 		}
 
-		// Token: 0x0603228B RID: 205451 RVA: 0x00BA7ADB File Offset: 0x00BA5CDB
+		// Token: 0x0602701B RID: 159771 RVA: 0x00AEBC27 File Offset: 0x00AE9E27
 		protected override void OnFallDownBtnClick()
 		{
 			base.OnFallDownBtnClick();
 		}
 
-		// Token: 0x0401AB74 RID: 109428
+		// Token: 0x040154C8 RID: 87240
 		private SlidingBlocksJoystick Joystick;
 
-		// Token: 0x0401AB75 RID: 109429
+		// Token: 0x040154C9 RID: 87241
 		private UUIButtonComponent RotateBtn;
 
-		// Token: 0x0401AB76 RID: 109430
+		// Token: 0x040154CA RID: 87242
 		private UUIButtonComponent FallDownBtn;
 
-		// Token: 0x0401AB77 RID: 109431
+		// Token: 0x040154CB RID: 87243
 		private UUIButtonComponent ClimbBtn;
 
-		// Token: 0x0401AB78 RID: 109432
+		// Token: 0x040154CC RID: 87244
 		private CharacterClimbComponent ClimbComp;
 
-		// Token: 0x0200ADC4 RID: 44484
+		// Token: 0x020097E3 RID: 38883
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x04034C73 RID: 216179
+			// Token: 0x0402F61A RID: 194074
 			public const int JoystickItem = 0;
 
-			// Token: 0x04034C74 RID: 216180
+			// Token: 0x0402F61B RID: 194075
 			public const int RotateBtn = 1;
 
-			// Token: 0x04034C75 RID: 216181
+			// Token: 0x0402F61C RID: 194076
 			public const int FallDownBtn = 2;
 
-			// Token: 0x04034C76 RID: 216182
+			// Token: 0x0402F61D RID: 194077
 			public const int ClimbBtn = 3;
 
-			// Token: 0x04034C77 RID: 216183
+			// Token: 0x0402F61E RID: 194078
 			public const int JumpBtn = 4;
 
-			// Token: 0x04034C78 RID: 216184
+			// Token: 0x0402F61F RID: 194079
 			public const int DodgeBtn = 5;
 		}
 
-		// Token: 0x0200ADC5 RID: 44485
+		// Token: 0x020097E4 RID: 38884
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04034C79 RID: 216185
+			// Token: 0x0402F620 RID: 194080
 			[Nullable(0)]
 			public static Action <0>__OnJumpBtnClick;
 
-			// Token: 0x04034C7A RID: 216186
+			// Token: 0x0402F621 RID: 194081
 			[Nullable(0)]
 			public static Action <1>__OnDodgeBtnClick;
 		}

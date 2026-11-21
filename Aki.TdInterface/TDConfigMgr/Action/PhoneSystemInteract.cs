@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002101 RID: 8449
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002362 RID: 9058
 	public class PhoneSystemInteract : ActionParams
 	{
-		// Token: 0x0600B9DE RID: 47582 RVA: 0x001ADA58 File Offset: 0x001ABC58
+		// Token: 0x0600C56A RID: 50538 RVA: 0x001C4BB8 File Offset: 0x001C2DB8
 		private PhoneSystemInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9DF RID: 47583 RVA: 0x001ADA90 File Offset: 0x001ABC90
+		// Token: 0x0600C56B RID: 50539 RVA: 0x001C4BF0 File Offset: 0x001C2DF0
 		public static PhoneSystemInteract Create([Nullable(2)] PhoneSystemInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9E0 RID: 47584 RVA: 0x001ADAA3 File Offset: 0x001ABCA3
+		// Token: 0x0600C56C RID: 50540 RVA: 0x001C4C03 File Offset: 0x001C2E03
 		public static PhoneSystemInteract CreateFromSetValue([Nullable(2)] PhoneSystemInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9E1 RID: 47585 RVA: 0x001ADAB6 File Offset: 0x001ABCB6
+		// Token: 0x0600C56D RID: 50541 RVA: 0x001C4C16 File Offset: 0x001C2E16
 		public PhoneSystemInteract_SetValue ToSetValue()
 		{
 			return new PhoneSystemInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038C7 RID: 14535
-		// (get) Token: 0x0600B9E2 RID: 47586 RVA: 0x001ADAC9 File Offset: 0x001ABCC9
-		// (set) Token: 0x0600B9E3 RID: 47587 RVA: 0x001ADAF0 File Offset: 0x001ABCF0
+		// Token: 0x17003BB3 RID: 15283
+		// (get) Token: 0x0600C56E RID: 50542 RVA: 0x001C4C29 File Offset: 0x001C2E29
+		// (set) Token: 0x0600C56F RID: 50543 RVA: 0x001C4C50 File Offset: 0x001C2E50
 		public virtual IPhoneSystemInteractBase InteractType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F4C RID: 28492
+		// Token: 0x04007580 RID: 30080
 		[Nullable(2)]
 		protected new PhoneSystemInteract FbInstance;
 
-		// Token: 0x04006F4D RID: 28493
+		// Token: 0x04007581 RID: 30081
 		[Nullable(2)]
 		protected PhoneSystemInteract_SetValue PocoInterface;
 	}

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200353F RID: 13631
+// Token: 0x02002AB4 RID: 10932
 public abstract class TaskBase
 {
-	// Token: 0x0601DF07 RID: 122631 RVA: 0x00863C28 File Offset: 0x00861E28
+	// Token: 0x0601BC2F RID: 113711 RVA: 0x0088B860 File Offset: 0x00889A60
 	[NullableContext(2)]
 	public TaskBase([Nullable(1)] string name, Func<bool> initHandle = null, Action<bool> finishedCallback = null, TaskInterruptOptions interruptOptions = null)
 	{
@@ -17,20 +17,20 @@ public abstract class TaskBase
 		this.TaskPromise = new UniTaskCompletionSource<bool>();
 	}
 
-	// Token: 0x17002979 RID: 10617
-	// (get) Token: 0x0601DF08 RID: 122632 RVA: 0x00863C7A File Offset: 0x00861E7A
+	// Token: 0x17002D12 RID: 11538
+	// (get) Token: 0x0601BC30 RID: 113712 RVA: 0x0088B8B2 File Offset: 0x00889AB2
 	[Nullable(1)]
 	public string Name { [NullableContext(1)] get; }
 
-	// Token: 0x0601DF09 RID: 122633 RVA: 0x00863C82 File Offset: 0x00861E82
+	// Token: 0x0601BC31 RID: 113713 RVA: 0x0088B8BA File Offset: 0x00889ABA
 	[NullableContext(2)]
 	public void SetLogPrefix(string logPrefix = null)
 	{
 		this.LogPrefix = logPrefix;
 	}
 
-	// Token: 0x1700297A RID: 10618
-	// (get) Token: 0x0601DF0A RID: 122634 RVA: 0x00863C8B File Offset: 0x00861E8B
+	// Token: 0x17002D13 RID: 11539
+	// (get) Token: 0x0601BC32 RID: 113714 RVA: 0x0088B8C3 File Offset: 0x00889AC3
 	public ETaskPriority InterruptPriority
 	{
 		get
@@ -39,8 +39,8 @@ public abstract class TaskBase
 		}
 	}
 
-	// Token: 0x1700297B RID: 10619
-	// (get) Token: 0x0601DF0B RID: 122635 RVA: 0x00863C98 File Offset: 0x00861E98
+	// Token: 0x17002D14 RID: 11540
+	// (get) Token: 0x0601BC33 RID: 113715 RVA: 0x0088B8D0 File Offset: 0x00889AD0
 	public bool Interruptible
 	{
 		get
@@ -49,7 +49,7 @@ public abstract class TaskBase
 		}
 	}
 
-	// Token: 0x0601DF0C RID: 122636 RVA: 0x00863CA8 File Offset: 0x00861EA8
+	// Token: 0x0601BC34 RID: 113716 RVA: 0x0088B8E0 File Offset: 0x00889AE0
 	public void RequestInterrupt()
 	{
 		if (this.Interrupted)
@@ -66,7 +66,7 @@ public abstract class TaskBase
 		this.OnInterrupt();
 	}
 
-	// Token: 0x0601DF0D RID: 122637 RVA: 0x00863CF8 File Offset: 0x00861EF8
+	// Token: 0x0601BC35 RID: 113717 RVA: 0x0088B930 File Offset: 0x00889B30
 	protected virtual void OnInterrupt()
 	{
 		Log instance = Log.Instance;
@@ -83,14 +83,14 @@ public abstract class TaskBase
 		onInterrupt();
 	}
 
-	// Token: 0x0601DF0E RID: 122638 RVA: 0x00863D46 File Offset: 0x00861F46
+	// Token: 0x0601BC36 RID: 113718 RVA: 0x0088B97E File Offset: 0x00889B7E
 	public bool Init()
 	{
 		return (this.InitHandle == null || this.InitHandle()) && this.OnInit();
 	}
 
-	// Token: 0x1700297C RID: 10620
-	// (get) Token: 0x0601DF0F RID: 122639 RVA: 0x00863D65 File Offset: 0x00861F65
+	// Token: 0x17002D15 RID: 11541
+	// (get) Token: 0x0601BC37 RID: 113719 RVA: 0x0088B99D File Offset: 0x00889B9D
 	public UniTask<bool> Promise
 	{
 		get
@@ -99,7 +99,7 @@ public abstract class TaskBase
 		}
 	}
 
-	// Token: 0x0601DF10 RID: 122640 RVA: 0x00863D74 File Offset: 0x00861F74
+	// Token: 0x0601BC38 RID: 113720 RVA: 0x0088B9AC File Offset: 0x00889BAC
 	public UniTask<bool> Run()
 	{
 		TaskBase.<Run>d__20 <Run>d__;
@@ -110,40 +110,40 @@ public abstract class TaskBase
 		return <Run>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601DF11 RID: 122641
+	// Token: 0x0601BC39 RID: 113721
 	protected abstract UniTask<bool> OnRun();
 
-	// Token: 0x0601DF12 RID: 122642 RVA: 0x00863DB7 File Offset: 0x00861FB7
+	// Token: 0x0601BC3A RID: 113722 RVA: 0x0088B9EF File Offset: 0x00889BEF
 	protected virtual bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601DF13 RID: 122643 RVA: 0x00863DBA File Offset: 0x00861FBA
+	// Token: 0x0601BC3B RID: 113723 RVA: 0x0088B9F2 File Offset: 0x00889BF2
 	protected virtual void OnExit()
 	{
 	}
 
-	// Token: 0x0400EB2F RID: 60207
+	// Token: 0x0400EFEC RID: 61420
 	[Nullable(1)]
 	protected readonly TaskInterruptOptions InterruptOptions;
 
-	// Token: 0x0400EB30 RID: 60208
+	// Token: 0x0400EFED RID: 61421
 	public bool Interrupted;
 
-	// Token: 0x0400EB31 RID: 60209
+	// Token: 0x0400EFEE RID: 61422
 	[Nullable(2)]
 	protected string LogPrefix = "";
 
-	// Token: 0x0400EB32 RID: 60210
+	// Token: 0x0400EFEF RID: 61423
 	[Nullable(2)]
 	protected Func<bool> InitHandle;
 
-	// Token: 0x0400EB33 RID: 60211
+	// Token: 0x0400EFF0 RID: 61424
 	[Nullable(2)]
 	protected Action<bool> FinishedCallback;
 
-	// Token: 0x0400EB34 RID: 60212
+	// Token: 0x0400EFF1 RID: 61425
 	[Nullable(1)]
 	private readonly UniTaskCompletionSource<bool> TaskPromise;
 }

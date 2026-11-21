@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062ED RID: 25325
+	// Token: 0x0200695E RID: 26974
 	public struct IChangeEntityStateBatchDirectly : IFlatbufferObject
 	{
-		// Token: 0x1700BCF9 RID: 48377
-		// (get) Token: 0x0602BC53 RID: 179283 RVA: 0x00605642 File Offset: 0x00603842
+		// Token: 0x1700C683 RID: 50819
+		// (get) Token: 0x0602E3BC RID: 189372 RVA: 0x0065064E File Offset: 0x0064E84E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC54 RID: 179284 RVA: 0x0060564F File Offset: 0x0060384F
+		// Token: 0x0602E3BD RID: 189373 RVA: 0x0065065B File Offset: 0x0064E85B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BC55 RID: 179285 RVA: 0x00605658 File Offset: 0x00603858
+		// Token: 0x0602E3BE RID: 189374 RVA: 0x00650664 File Offset: 0x0064E864
 		public static IChangeEntityStateBatchDirectly GetRootAsIChangeEntityStateBatchDirectly(ByteBuffer _bb)
 		{
 			return IChangeEntityStateBatchDirectly.GetRootAsIChangeEntityStateBatchDirectly(_bb, default(IChangeEntityStateBatchDirectly));
 		}
 
-		// Token: 0x0602BC56 RID: 179286 RVA: 0x00605674 File Offset: 0x00603874
+		// Token: 0x0602E3BF RID: 189375 RVA: 0x00650680 File Offset: 0x0064E880
 		public static IChangeEntityStateBatchDirectly GetRootAsIChangeEntityStateBatchDirectly(ByteBuffer _bb, IChangeEntityStateBatchDirectly obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BC57 RID: 179287 RVA: 0x00605691 File Offset: 0x00603891
+		// Token: 0x0602E3C0 RID: 189376 RVA: 0x0065069D File Offset: 0x0064E89D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BC58 RID: 179288 RVA: 0x006056A0 File Offset: 0x006038A0
+		// Token: 0x0602E3C1 RID: 189377 RVA: 0x006506AC File Offset: 0x0064E8AC
 		public IChangeEntityStateBatchDirectly __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCFA RID: 48378
-		// (get) Token: 0x0602BC59 RID: 179289 RVA: 0x006056B0 File Offset: 0x006038B0
+		// Token: 0x1700C684 RID: 50820
+		// (get) Token: 0x0602E3C2 RID: 189378 RVA: 0x006506BC File Offset: 0x0064E8BC
 		public EChangeEntityState Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCFB RID: 48379
-		// (get) Token: 0x0602BC5A RID: 179290 RVA: 0x006056EC File Offset: 0x006038EC
+		// Token: 0x1700C685 RID: 50821
+		// (get) Token: 0x0602E3C3 RID: 189379 RVA: 0x006506F8 File Offset: 0x0064E8F8
 		public int EntityId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC5B RID: 179291 RVA: 0x00605728 File Offset: 0x00603928
+		// Token: 0x0602E3C4 RID: 189380 RVA: 0x00650734 File Offset: 0x0064E934
 		public int EntityIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700BCFC RID: 48380
-		// (get) Token: 0x0602BC5C RID: 179292 RVA: 0x00605768 File Offset: 0x00603968
+		// Token: 0x1700C686 RID: 50822
+		// (get) Token: 0x0602E3C5 RID: 189381 RVA: 0x00650774 File Offset: 0x0064E974
 		public int EntityIdsLength
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC5D RID: 179293 RVA: 0x00605793 File Offset: 0x00603993
+		// Token: 0x0602E3C6 RID: 189382 RVA: 0x0065079F File Offset: 0x0064E99F
 		public Span<int> GetEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0602BC5E RID: 179294 RVA: 0x006057A2 File Offset: 0x006039A2
+		// Token: 0x0602E3C7 RID: 189383 RVA: 0x006507AE File Offset: 0x0064E9AE
 		public int[] GetEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x1700BCFD RID: 48381
-		// (get) Token: 0x0602BC5F RID: 179295 RVA: 0x006057B0 File Offset: 0x006039B0
+		// Token: 0x1700C687 RID: 50823
+		// (get) Token: 0x0602E3C8 RID: 189384 RVA: 0x006507BC File Offset: 0x0064E9BC
 		public string State
 		{
 			get
@@ -131,20 +131,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC60 RID: 179296 RVA: 0x006057E8 File Offset: 0x006039E8
+		// Token: 0x0602E3C9 RID: 189385 RVA: 0x006507F4 File Offset: 0x0064E9F4
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602BC61 RID: 179297 RVA: 0x006057F8 File Offset: 0x006039F8
+		// Token: 0x0602E3CA RID: 189386 RVA: 0x00650804 File Offset: 0x0064EA04
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x1700BCFE RID: 48382
-		// (get) Token: 0x0602BC62 RID: 179298 RVA: 0x00605808 File Offset: 0x00603A08
+		// Token: 0x1700C688 RID: 50824
+		// (get) Token: 0x0602E3CB RID: 189387 RVA: 0x00650814 File Offset: 0x0064EA14
 		public bool DelayChange
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCFF RID: 48383
-		// (get) Token: 0x0602BC63 RID: 179299 RVA: 0x00605848 File Offset: 0x00603A48
+		// Token: 0x1700C689 RID: 50825
+		// (get) Token: 0x0602E3CC RID: 189388 RVA: 0x00650854 File Offset: 0x0064EA54
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BC64 RID: 179300 RVA: 0x00605885 File Offset: 0x00603A85
+		// Token: 0x0602E3CD RID: 189389 RVA: 0x00650891 File Offset: 0x0064EA91
 		public static Offset<IChangeEntityStateBatchDirectly> CreateIChangeEntityStateBatchDirectly(FlatBufferBuilder builder, EChangeEntityState Type = EChangeEntityState.Directly, int EntityId = 0, VectorOffset EntityIdsOffset = default(VectorOffset), StringOffset StateOffset = default(StringOffset), bool DelayChange = false, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -182,31 +182,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityStateBatchDirectly.EndIChangeEntityStateBatchDirectly(builder);
 		}
 
-		// Token: 0x0602BC65 RID: 179301 RVA: 0x006058C1 File Offset: 0x00603AC1
+		// Token: 0x0602E3CE RID: 189390 RVA: 0x006508CD File Offset: 0x0064EACD
 		public static void StartIChangeEntityStateBatchDirectly(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602BC66 RID: 179302 RVA: 0x006058CA File Offset: 0x00603ACA
+		// Token: 0x0602E3CF RID: 189391 RVA: 0x006508D6 File Offset: 0x0064EAD6
 		public static void AddType(FlatBufferBuilder builder, EChangeEntityState type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BC67 RID: 179303 RVA: 0x006058D5 File Offset: 0x00603AD5
+		// Token: 0x0602E3D0 RID: 189392 RVA: 0x006508E1 File Offset: 0x0064EAE1
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0602BC68 RID: 179304 RVA: 0x006058E0 File Offset: 0x00603AE0
+		// Token: 0x0602E3D1 RID: 189393 RVA: 0x006508EC File Offset: 0x0064EAEC
 		public static void AddEntityIds(FlatBufferBuilder builder, VectorOffset entityIdsOffset)
 		{
 			builder.AddOffset(2, entityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602BC69 RID: 179305 RVA: 0x006058F0 File Offset: 0x00603AF0
+		// Token: 0x0602E3D2 RID: 189394 RVA: 0x006508FC File Offset: 0x0064EAFC
 		public static VectorOffset CreateEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BC6A RID: 179306 RVA: 0x00605927 File Offset: 0x00603B27
+		// Token: 0x0602E3D3 RID: 189395 RVA: 0x00650933 File Offset: 0x0064EB33
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BC6B RID: 179307 RVA: 0x00605941 File Offset: 0x00603B41
+		// Token: 0x0602E3D4 RID: 189396 RVA: 0x0065094D File Offset: 0x0064EB4D
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BC6C RID: 179308 RVA: 0x0060595F File Offset: 0x00603B5F
+		// Token: 0x0602E3D5 RID: 189397 RVA: 0x0065096B File Offset: 0x0064EB6B
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -241,37 +241,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602BC6D RID: 179309 RVA: 0x00605978 File Offset: 0x00603B78
+		// Token: 0x0602E3D6 RID: 189398 RVA: 0x00650984 File Offset: 0x0064EB84
 		public static void StartEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602BC6E RID: 179310 RVA: 0x00605983 File Offset: 0x00603B83
+		// Token: 0x0602E3D7 RID: 189399 RVA: 0x0065098F File Offset: 0x0064EB8F
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(3, stateOffset.Value, 0);
 		}
 
-		// Token: 0x0602BC6F RID: 179311 RVA: 0x00605993 File Offset: 0x00603B93
+		// Token: 0x0602E3D8 RID: 189400 RVA: 0x0065099F File Offset: 0x0064EB9F
 		public static void AddDelayChange(FlatBufferBuilder builder, bool delayChange)
 		{
 			builder.AddBool(4, delayChange, false);
 		}
 
-		// Token: 0x0602BC70 RID: 179312 RVA: 0x0060599E File Offset: 0x00603B9E
+		// Token: 0x0602E3D9 RID: 189401 RVA: 0x006509AA File Offset: 0x0064EBAA
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602BC71 RID: 179313 RVA: 0x006059A9 File Offset: 0x00603BA9
+		// Token: 0x0602E3DA RID: 189402 RVA: 0x006509B5 File Offset: 0x0064EBB5
 		public static Offset<IChangeEntityStateBatchDirectly> EndIChangeEntityStateBatchDirectly(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeEntityStateBatchDirectly>(builder.EndTable());
 		}
 
-		// Token: 0x0602BC72 RID: 179314 RVA: 0x006059B8 File Offset: 0x00603BB8
+		// Token: 0x0602E3DB RID: 189403 RVA: 0x006509C4 File Offset: 0x0064EBC4
 		public IChangeEntityStateBatchDirectlyT UnPack()
 		{
 			IChangeEntityStateBatchDirectlyT changeEntityStateBatchDirectlyT = new IChangeEntityStateBatchDirectlyT();
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeEntityStateBatchDirectlyT;
 		}
 
-		// Token: 0x0602BC73 RID: 179315 RVA: 0x006059D4 File Offset: 0x00603BD4
+		// Token: 0x0602E3DC RID: 189404 RVA: 0x006509E0 File Offset: 0x0064EBE0
 		public void UnPackTo(IChangeEntityStateBatchDirectlyT _o)
 		{
 			_o.Type = this.Type;
@@ -294,7 +294,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602BC74 RID: 179316 RVA: 0x00605A4C File Offset: 0x00603C4C
+		// Token: 0x0602E3DD RID: 189405 RVA: 0x00650A58 File Offset: 0x0064EC58
 		public static Offset<IChangeEntityStateBatchDirectly> Pack(FlatBufferBuilder builder, IChangeEntityStateBatchDirectlyT _o)
 		{
 			if (_o == null)
@@ -311,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeEntityStateBatchDirectly.CreateIChangeEntityStateBatchDirectly(builder, _o.Type, _o.EntityId, entityIdsOffset, stateOffset, _o.DelayChange, _o.NullMask);
 		}
 
-		// Token: 0x0401089A RID: 67738
+		// Token: 0x040116B0 RID: 71344
 		private Table __p;
 	}
 }

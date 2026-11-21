@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014D0 RID: 5328
+// Token: 0x02000988 RID: 2440
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityParkourButton : UiPanelBase
 {
-	// Token: 0x06009757 RID: 38743 RVA: 0x0020B430 File Offset: 0x00209630
+	// Token: 0x06006B31 RID: 27441 RVA: 0x00215170 File Offset: 0x00213370
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -37,7 +37,7 @@ public class ActivityParkourButton : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009758 RID: 38744 RVA: 0x0020B518 File Offset: 0x00209718
+	// Token: 0x06006B32 RID: 27442 RVA: 0x00215258 File Offset: 0x00213458
 	protected override void OnBeforeShow()
 	{
 		UUIText text = base.GetText(0);
@@ -53,7 +53,7 @@ public class ActivityParkourButton : UiPanelBase
 		text2.SetText("", true);
 	}
 
-	// Token: 0x06009759 RID: 38745 RVA: 0x0020B54C File Offset: 0x0020974C
+	// Token: 0x06006B33 RID: 27443 RVA: 0x0021528C File Offset: 0x0021348C
 	public UniTask InitializeAsync(AActor rootActor, Action onClickCall)
 	{
 		ActivityParkourButton.<InitializeAsync>d__4 <InitializeAsync>d__;
@@ -66,7 +66,7 @@ public class ActivityParkourButton : UiPanelBase
 		return <InitializeAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600975A RID: 38746 RVA: 0x0020B59F File Offset: 0x0020979F
+	// Token: 0x06006B34 RID: 27444 RVA: 0x002152DF File Offset: 0x002134DF
 	private void OnClickedButton()
 	{
 		Action onClickEvent = this.OnClickEvent;
@@ -77,7 +77,7 @@ public class ActivityParkourButton : UiPanelBase
 		onClickEvent();
 	}
 
-	// Token: 0x0600975B RID: 38747 RVA: 0x0020B5B1 File Offset: 0x002097B1
+	// Token: 0x06006B35 RID: 27445 RVA: 0x002152F1 File Offset: 0x002134F1
 	public void SetFloatText(string textId, params string[] args)
 	{
 		UUIText text = base.GetText(2);
@@ -88,30 +88,30 @@ public class ActivityParkourButton : UiPanelBase
 		LguiUtil.Instance.SetLocalText(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x0600975C RID: 38748 RVA: 0x0020B5D9 File Offset: 0x002097D9
+	// Token: 0x06006B36 RID: 27446 RVA: 0x00215319 File Offset: 0x00213519
 	public void SetBtnText(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x040042AA RID: 17066
+	// Token: 0x0400434F RID: 17231
 	[Nullable(2)]
 	private Action OnClickEvent;
 
-	// Token: 0x02007B09 RID: 31497
+	// Token: 0x02006C95 RID: 27797
 	[NullableContext(0)]
 	private class ESimpleButtonChildType
 	{
-		// Token: 0x04028771 RID: 165745
+		// Token: 0x04023AAF RID: 146095
 		public const int ButtonText = 0;
 
-		// Token: 0x04028772 RID: 165746
+		// Token: 0x04023AB0 RID: 146096
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04028773 RID: 165747
+		// Token: 0x04023AB1 RID: 146097
 		public const int DescriptionText = 2;
 
-		// Token: 0x04028774 RID: 165748
+		// Token: 0x04023AB2 RID: 146098
 		public const int Button = 3;
 	}
 }

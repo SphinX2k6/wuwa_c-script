@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200606C RID: 24684
+	// Token: 0x020066CE RID: 26318
 	public class IAcceptCurrentQuestT
 	{
 	}

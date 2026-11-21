@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005049 RID: 20553
+	// Token: 0x02004018 RID: 16408
 	public class PlotArtWord2dTextPanel : UiPanelBase
 	{
-		// Token: 0x0603499A RID: 215450 RVA: 0x00C6CA74 File Offset: 0x00C6AC74
+		// Token: 0x0602987C RID: 170108 RVA: 0x00BB9BE0 File Offset: 0x00BB7DE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603499B RID: 215451 RVA: 0x00C6CABC File Offset: 0x00C6ACBC
+		// Token: 0x0602987D RID: 170109 RVA: 0x00BB9C28 File Offset: 0x00BB7E28
 		[NullableContext(1)]
 		public void SetTextKey(string textKey)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textKey, Array.Empty<object>());
 		}
 
-		// Token: 0x0603499C RID: 215452 RVA: 0x00C6CAD8 File Offset: 0x00C6ACD8
+		// Token: 0x0602987E RID: 170110 RVA: 0x00BB9C44 File Offset: 0x00BB7E44
 		public void ApplyLanguageScale(float scale)
 		{
 			if (Math.Abs(scale - 1f) < 0.0001f)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			text.SetWidth(num);
 		}
 
-		// Token: 0x0603499D RID: 215453 RVA: 0x00C6CB1C File Offset: 0x00C6AD1C
+		// Token: 0x0602987F RID: 170111 RVA: 0x00BB9C88 File Offset: 0x00BB7E88
 		public void SetTextAlpha(float alpha)
 		{
 			UUIText text = base.GetText(0);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			text.SetAlpha(alpha);
 		}
 
-		// Token: 0x0603499E RID: 215454 RVA: 0x00C6CB30 File Offset: 0x00C6AD30
+		// Token: 0x06029880 RID: 170112 RVA: 0x00BB9C9C File Offset: 0x00BB7E9C
 		public void ApplySpaceMark()
 		{
 			FloatingSubtitleLanguageUtil.Instance.ApplySpaceMark(base.GetText(0));
 		}
 
-		// Token: 0x0603499F RID: 215455 RVA: 0x00C6CB43 File Offset: 0x00C6AD43
+		// Token: 0x06029881 RID: 170113 RVA: 0x00BB9CAF File Offset: 0x00BB7EAF
 		[NullableContext(2)]
 		public AActor GetTextActor()
 		{
@@ -75,10 +75,10 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return text.GetOwner();
 		}
 
-		// Token: 0x0200B19D RID: 45469
+		// Token: 0x02009BD7 RID: 39895
 		private enum EComponents
 		{
-			// Token: 0x04035DDE RID: 220638
+			// Token: 0x04030833 RID: 198707
 			Text
 		}
 	}

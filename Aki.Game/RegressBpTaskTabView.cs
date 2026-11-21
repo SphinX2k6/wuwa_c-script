@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001486 RID: 5254
+// Token: 0x0200093A RID: 2362
 [NullableContext(1)]
 [Nullable(0)]
 public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 {
-	// Token: 0x060094B9 RID: 38073 RVA: 0x00200B9D File Offset: 0x001FED9D
+	// Token: 0x0600684E RID: 26702 RVA: 0x00209B05 File Offset: 0x00207D05
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		};
 	}
 
-	// Token: 0x060094BA RID: 38074 RVA: 0x00200BD8 File Offset: 0x001FEDD8
+	// Token: 0x0600684F RID: 26703 RVA: 0x00209B40 File Offset: 0x00207D40
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RegressBpTaskTabView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -34,25 +34,25 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060094BB RID: 38075 RVA: 0x00200C1B File Offset: 0x001FEE1B
+	// Token: 0x06006850 RID: 26704 RVA: 0x00209B83 File Offset: 0x00207D83
 	public void OnClickBtnClaimAll()
 	{
 		ActivityRegressController.Instance.RequestClaimAllTaskReward();
 	}
 
-	// Token: 0x060094BC RID: 38076 RVA: 0x00200C27 File Offset: 0x001FEE27
+	// Token: 0x06006851 RID: 26705 RVA: 0x00209B8F File Offset: 0x00207D8F
 	public void RefreshBtnClaimVisible(UUIItem uiItem)
 	{
 		uiItem.SetUIActive(ActivityRegressModel.Instance.ActivityData.HasReachableConstantTask());
 	}
 
-	// Token: 0x060094BD RID: 38077 RVA: 0x00200C3E File Offset: 0x001FEE3E
+	// Token: 0x06006852 RID: 26706 RVA: 0x00209BA6 File Offset: 0x00207DA6
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView(true);
 	}
 
-	// Token: 0x060094BE RID: 38078 RVA: 0x00200C48 File Offset: 0x001FEE48
+	// Token: 0x06006853 RID: 26707 RVA: 0x00209BB0 File Offset: 0x00207DB0
 	public void RefreshView(bool playAnim = false)
 	{
 		ActivityRegressData activityData = ActivityRegressModel.Instance.ActivityData;
@@ -86,13 +86,13 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		this.TaskScrollView.RefreshByData(list, false, null, playAnim);
 	}
 
-	// Token: 0x060094BF RID: 38079 RVA: 0x00200CEC File Offset: 0x001FEEEC
+	// Token: 0x06006854 RID: 26708 RVA: 0x00209C54 File Offset: 0x00207E54
 	private RegressBpTaskItem OnCreateTaskItem()
 	{
 		return new RegressBpTaskItem();
 	}
 
-	// Token: 0x060094C0 RID: 38080 RVA: 0x00200CF3 File Offset: 0x001FEEF3
+	// Token: 0x06006855 RID: 26709 RVA: 0x00209C5B File Offset: 0x00207E5B
 	private void SortTask(List<RegressQuest> taskList)
 	{
 		taskList.Sort(delegate(RegressQuest a, RegressQuest b)
@@ -113,7 +113,7 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		});
 	}
 
-	// Token: 0x040041E3 RID: 16867
+	// Token: 0x0400427B RID: 17019
 	private static readonly Dictionary<ERegressTaskType, int> RegressTaskTypeSortRecord = new Dictionary<ERegressTaskType, int>
 	{
 		{
@@ -134,7 +134,7 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		}
 	};
 
-	// Token: 0x040041E4 RID: 16868
+	// Token: 0x0400427C RID: 17020
 	private static readonly Dictionary<ERegressRewardState, int> RegressTaskRewardStateSortRecord = new Dictionary<ERegressRewardState, int>
 	{
 		{
@@ -151,7 +151,7 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 		}
 	};
 
-	// Token: 0x040041E5 RID: 16869
+	// Token: 0x0400427D RID: 17021
 	[Nullable(new byte[]
 	{
 		2,
@@ -159,14 +159,14 @@ public class RegressBpTaskTabView : UiTabViewBase, IRegressBpTabView
 	})]
 	private LoopScrollView<RegressBpTaskItem, RegressQuest> TaskScrollView;
 
-	// Token: 0x02007AAF RID: 31407
+	// Token: 0x02006C33 RID: 27699
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040285D3 RID: 165331
+		// Token: 0x040238ED RID: 145645
 		public const int MissionScroll = 0;
 
-		// Token: 0x040285D4 RID: 165332
+		// Token: 0x040238EE RID: 145646
 		public const int Item = 1;
 	}
 }

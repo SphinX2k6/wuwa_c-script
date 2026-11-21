@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020014BD RID: 5309
+// Token: 0x02000971 RID: 2417
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityRoleGiveConfig : ConfigBase
 {
-	// Token: 0x0600967E RID: 38526 RVA: 0x00208280 File Offset: 0x00206480
+	// Token: 0x06006A13 RID: 27155 RVA: 0x002111EC File Offset: 0x0020F3EC
 	public TrackMoonPhaseActivity? GetActivityUniversalConfig(int activityId)
 	{
 		return null;
 	}
 
-	// Token: 0x17000D07 RID: 3335
-	// (get) Token: 0x0600967F RID: 38527 RVA: 0x00208296 File Offset: 0x00206496
+	// Token: 0x17000D27 RID: 3367
+	// (get) Token: 0x06006A14 RID: 27156 RVA: 0x00211202 File Offset: 0x0020F402
 	public static ActivityRoleGiveConfig Instance
 	{
 		get
@@ -24,7 +24,7 @@ public class ActivityRoleGiveConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06009680 RID: 38528 RVA: 0x0020829D File Offset: 0x0020649D
+	// Token: 0x06006A15 RID: 27157 RVA: 0x00211209 File Offset: 0x0020F409
 	public static ActivityRoleGiveConfig GetOrCreateInstance()
 	{
 		if (ActivityRoleGiveConfig._Instance == null)
@@ -34,7 +34,7 @@ public class ActivityRoleGiveConfig : ConfigBase
 		return ActivityRoleGiveConfig._Instance;
 	}
 
-	// Token: 0x06009681 RID: 38529 RVA: 0x002082B1 File Offset: 0x002064B1
+	// Token: 0x06006A16 RID: 27158 RVA: 0x0021121D File Offset: 0x0020F41D
 	public static bool CreateInstance()
 	{
 		if (ActivityRoleGiveConfig._Instance != null)
@@ -45,24 +45,24 @@ public class ActivityRoleGiveConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06009682 RID: 38530 RVA: 0x002082C7 File Offset: 0x002064C7
+	// Token: 0x06006A17 RID: 27159 RVA: 0x00211233 File Offset: 0x0020F433
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009683 RID: 38531 RVA: 0x002082C9 File Offset: 0x002064C9
+	// Token: 0x06006A18 RID: 27160 RVA: 0x00211235 File Offset: 0x0020F435
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRoleGiveConfig._Instance = null;
 	}
 
-	// Token: 0x06009684 RID: 38532 RVA: 0x002082D1 File Offset: 0x002064D1
+	// Token: 0x06006A19 RID: 27161 RVA: 0x0021123D File Offset: 0x0020F43D
 	static ActivityRoleGiveConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRoleGiveConfig.CreateStaticDefaultValue), new Action(ActivityRoleGiveConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400426C RID: 17004
+	// Token: 0x04004304 RID: 17156
 	[Nullable(2)]
 	private static ActivityRoleGiveConfig _Instance;
 }

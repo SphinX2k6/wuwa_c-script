@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02003218 RID: 12824
+// Token: 0x02002787 RID: 10119
 internal enum ETaskPhase
 {
-	// Token: 0x0400D993 RID: 55699
+	// Token: 0x0400DE32 RID: 56882
 	None,
-	// Token: 0x0400D994 RID: 55700
+	// Token: 0x0400DE33 RID: 56883
 	InProgress,
-	// Token: 0x0400D995 RID: 55701
+	// Token: 0x0400DE34 RID: 56884
 	Succeeded,
-	// Token: 0x0400D996 RID: 55702
+	// Token: 0x0400DE35 RID: 56885
 	Failed
 }

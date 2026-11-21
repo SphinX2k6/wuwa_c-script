@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006714 RID: 26388
+	// Token: 0x02006D94 RID: 28052
 	public struct IExecRiskHarvestEffect : IFlatbufferObject
 	{
-		// Token: 0x1700C403 RID: 50179
-		// (get) Token: 0x0602DE55 RID: 187989 RVA: 0x0064693D File Offset: 0x00644B3D
+		// Token: 0x1700CDB9 RID: 52665
+		// (get) Token: 0x0603069B RID: 198299 RVA: 0x00694081 File Offset: 0x00692281
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DE56 RID: 187990 RVA: 0x0064694A File Offset: 0x00644B4A
+		// Token: 0x0603069C RID: 198300 RVA: 0x0069408E File Offset: 0x0069228E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DE57 RID: 187991 RVA: 0x00646954 File Offset: 0x00644B54
+		// Token: 0x0603069D RID: 198301 RVA: 0x00694098 File Offset: 0x00692298
 		public static IExecRiskHarvestEffect GetRootAsIExecRiskHarvestEffect(ByteBuffer _bb)
 		{
 			return IExecRiskHarvestEffect.GetRootAsIExecRiskHarvestEffect(_bb, default(IExecRiskHarvestEffect));
 		}
 
-		// Token: 0x0602DE58 RID: 187992 RVA: 0x00646970 File Offset: 0x00644B70
+		// Token: 0x0603069E RID: 198302 RVA: 0x006940B4 File Offset: 0x006922B4
 		public static IExecRiskHarvestEffect GetRootAsIExecRiskHarvestEffect(ByteBuffer _bb, IExecRiskHarvestEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DE59 RID: 187993 RVA: 0x0064698D File Offset: 0x00644B8D
+		// Token: 0x0603069F RID: 198303 RVA: 0x006940D1 File Offset: 0x006922D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DE5A RID: 187994 RVA: 0x0064699C File Offset: 0x00644B9C
+		// Token: 0x060306A0 RID: 198304 RVA: 0x006940E0 File Offset: 0x006922E0
 		public IExecRiskHarvestEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C404 RID: 50180
-		// (get) Token: 0x0602DE5B RID: 187995 RVA: 0x006469AC File Offset: 0x00644BAC
+		// Token: 0x1700CDBA RID: 52666
+		// (get) Token: 0x060306A1 RID: 198305 RVA: 0x006940F0 File Offset: 0x006922F0
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DE5C RID: 187996 RVA: 0x006469E8 File Offset: 0x00644BE8
+		// Token: 0x060306A2 RID: 198306 RVA: 0x0069412C File Offset: 0x0069232C
 		public static Offset<IExecRiskHarvestEffect> CreateIExecRiskHarvestEffect(FlatBufferBuilder builder, int Id = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecRiskHarvestEffect.EndIExecRiskHarvestEffect(builder);
 		}
 
-		// Token: 0x0602DE5D RID: 187997 RVA: 0x006469FE File Offset: 0x00644BFE
+		// Token: 0x060306A3 RID: 198307 RVA: 0x00694142 File Offset: 0x00692342
 		public static void StartIExecRiskHarvestEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602DE5E RID: 187998 RVA: 0x00646A07 File Offset: 0x00644C07
+		// Token: 0x060306A4 RID: 198308 RVA: 0x0069414B File Offset: 0x0069234B
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0602DE5F RID: 187999 RVA: 0x00646A12 File Offset: 0x00644C12
+		// Token: 0x060306A5 RID: 198309 RVA: 0x00694156 File Offset: 0x00692356
 		public static Offset<IExecRiskHarvestEffect> EndIExecRiskHarvestEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IExecRiskHarvestEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602DE60 RID: 188000 RVA: 0x00646A20 File Offset: 0x00644C20
+		// Token: 0x060306A6 RID: 198310 RVA: 0x00694164 File Offset: 0x00692364
 		public IExecRiskHarvestEffectT UnPack()
 		{
 			IExecRiskHarvestEffectT execRiskHarvestEffectT = new IExecRiskHarvestEffectT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return execRiskHarvestEffectT;
 		}
 
-		// Token: 0x0602DE61 RID: 188001 RVA: 0x00646A3B File Offset: 0x00644C3B
+		// Token: 0x060306A7 RID: 198311 RVA: 0x0069417F File Offset: 0x0069237F
 		public void UnPackTo(IExecRiskHarvestEffectT _o)
 		{
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0602DE62 RID: 188002 RVA: 0x00646A4C File Offset: 0x00644C4C
+		// Token: 0x060306A8 RID: 198312 RVA: 0x00694190 File Offset: 0x00692390
 		public static Offset<IExecRiskHarvestEffect> Pack(FlatBufferBuilder builder, IExecRiskHarvestEffectT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecRiskHarvestEffect.CreateIExecRiskHarvestEffect(builder, _o.Id);
 		}
 
-		// Token: 0x04010DFA RID: 69114
+		// Token: 0x04011C2C RID: 72748
 		private Table __p;
 	}
 }

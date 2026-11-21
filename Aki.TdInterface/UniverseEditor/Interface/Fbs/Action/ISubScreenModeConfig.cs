@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007211 RID: 29201
+	// Token: 0x020079E6 RID: 31206
 	public struct ISubScreenModeConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D8CB RID: 55499
-		// (get) Token: 0x06033CB8 RID: 212152 RVA: 0x006F88C0 File Offset: 0x006F6AC0
+		// Token: 0x1700E4C4 RID: 58564
+		// (get) Token: 0x06036FBA RID: 225210 RVA: 0x00759C20 File Offset: 0x00757E20
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033CB9 RID: 212153 RVA: 0x006F88CD File Offset: 0x006F6ACD
+		// Token: 0x06036FBB RID: 225211 RVA: 0x00759C2D File Offset: 0x00757E2D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033CBA RID: 212154 RVA: 0x006F88D4 File Offset: 0x006F6AD4
+		// Token: 0x06036FBC RID: 225212 RVA: 0x00759C34 File Offset: 0x00757E34
 		public static ISubScreenModeConfig GetRootAsISubScreenModeConfig(ByteBuffer _bb)
 		{
 			return ISubScreenModeConfig.GetRootAsISubScreenModeConfig(_bb, default(ISubScreenModeConfig));
 		}
 
-		// Token: 0x06033CBB RID: 212155 RVA: 0x006F88F0 File Offset: 0x006F6AF0
+		// Token: 0x06036FBD RID: 225213 RVA: 0x00759C50 File Offset: 0x00757E50
 		public static ISubScreenModeConfig GetRootAsISubScreenModeConfig(ByteBuffer _bb, ISubScreenModeConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033CBC RID: 212156 RVA: 0x006F890D File Offset: 0x006F6B0D
+		// Token: 0x06036FBE RID: 225214 RVA: 0x00759C6D File Offset: 0x00757E6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033CBD RID: 212157 RVA: 0x006F891C File Offset: 0x006F6B1C
+		// Token: 0x06036FBF RID: 225215 RVA: 0x00759C7C File Offset: 0x00757E7C
 		public ISubScreenModeConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D8CC RID: 55500
-		// (get) Token: 0x06033CBE RID: 212158 RVA: 0x006F892C File Offset: 0x006F6B2C
+		// Token: 0x1700E4C5 RID: 58565
+		// (get) Token: 0x06036FC0 RID: 225216 RVA: 0x00759C8C File Offset: 0x00757E8C
 		public ESubScreenOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033CBF RID: 212159 RVA: 0x006F8968 File Offset: 0x006F6B68
+		// Token: 0x06036FC1 RID: 225217 RVA: 0x00759CC8 File Offset: 0x00757EC8
 		public static Offset<ISubScreenModeConfig> CreateISubScreenModeConfig(FlatBufferBuilder builder, ESubScreenOperationType Type = ESubScreenOperationType.Init)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubScreenModeConfig.EndISubScreenModeConfig(builder);
 		}
 
-		// Token: 0x06033CC0 RID: 212160 RVA: 0x006F897E File Offset: 0x006F6B7E
+		// Token: 0x06036FC2 RID: 225218 RVA: 0x00759CDE File Offset: 0x00757EDE
 		public static void StartISubScreenModeConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033CC1 RID: 212161 RVA: 0x006F8987 File Offset: 0x006F6B87
+		// Token: 0x06036FC3 RID: 225219 RVA: 0x00759CE7 File Offset: 0x00757EE7
 		public static void AddType(FlatBufferBuilder builder, ESubScreenOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033CC2 RID: 212162 RVA: 0x006F8992 File Offset: 0x006F6B92
+		// Token: 0x06036FC4 RID: 225220 RVA: 0x00759CF2 File Offset: 0x00757EF2
 		public static Offset<ISubScreenModeConfig> EndISubScreenModeConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISubScreenModeConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06033CC3 RID: 212163 RVA: 0x006F89A0 File Offset: 0x006F6BA0
+		// Token: 0x06036FC5 RID: 225221 RVA: 0x00759D00 File Offset: 0x00757F00
 		public ISubScreenModeConfigT UnPack()
 		{
 			ISubScreenModeConfigT subScreenModeConfigT = new ISubScreenModeConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return subScreenModeConfigT;
 		}
 
-		// Token: 0x06033CC4 RID: 212164 RVA: 0x006F89BB File Offset: 0x006F6BBB
+		// Token: 0x06036FC6 RID: 225222 RVA: 0x00759D1B File Offset: 0x00757F1B
 		public void UnPackTo(ISubScreenModeConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06033CC5 RID: 212165 RVA: 0x006F89CC File Offset: 0x006F6BCC
+		// Token: 0x06036FC7 RID: 225223 RVA: 0x00759D2C File Offset: 0x00757F2C
 		public static Offset<ISubScreenModeConfig> Pack(FlatBufferBuilder builder, ISubScreenModeConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubScreenModeConfig.CreateISubScreenModeConfig(builder, _o.Type);
 		}
 
-		// Token: 0x04011CFC RID: 72956
+		// Token: 0x04012CFE RID: 77054
 		private Table __p;
 	}
 }

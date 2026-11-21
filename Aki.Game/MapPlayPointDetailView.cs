@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AD0 RID: 6864
+// Token: 0x02000F8F RID: 3983
 public class MapPlayPointDetailView : UiViewBase
 {
-	// Token: 0x0600CBA6 RID: 52134 RVA: 0x002E7C5C File Offset: 0x002E5E5C
+	// Token: 0x06009FB7 RID: 40887 RVA: 0x002F2DB0 File Offset: 0x002F0FB0
 	[NullableContext(1)]
 	public MapPlayPointDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CBA7 RID: 52135 RVA: 0x002E7C68 File Offset: 0x002E5E68
+	// Token: 0x06009FB8 RID: 40888 RVA: 0x002F2DBC File Offset: 0x002F0FBC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -44,7 +44,7 @@ public class MapPlayPointDetailView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CBA8 RID: 52136 RVA: 0x002E7DBC File Offset: 0x002E5FBC
+	// Token: 0x06009FB9 RID: 40889 RVA: 0x002F2F10 File Offset: 0x002F1110
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapPlayPointDetailView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class MapPlayPointDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBA9 RID: 52137 RVA: 0x002E7E00 File Offset: 0x002E6000
+	// Token: 0x06009FBA RID: 40890 RVA: 0x002F2F54 File Offset: 0x002F1154
 	protected override void OnBeforeShow()
 	{
 		MapPlayPointDetailViewParams dataParam = this.DataParam;
@@ -83,34 +83,34 @@ public class MapPlayPointDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005DAA RID: 23978
+	// Token: 0x04005E79 RID: 24185
 	[Nullable(2)]
 	private MapExplorePlayProgressPanel PlayProgressPanel;
 
-	// Token: 0x04005DAB RID: 23979
+	// Token: 0x04005E7A RID: 24186
 	[Nullable(2)]
 	private MapPlayPointDetailViewParams DataParam;
 
-	// Token: 0x02008031 RID: 32817
+	// Token: 0x020071BF RID: 29119
 	private enum EChildType
 	{
-		// Token: 0x04029DAA RID: 171434
+		// Token: 0x040250DE RID: 151774
 		ItemProgressPanel,
-		// Token: 0x04029DAB RID: 171435
+		// Token: 0x040250DF RID: 151775
 		TxtProgressTotal,
-		// Token: 0x04029DAC RID: 171436
+		// Token: 0x040250E0 RID: 151776
 		TxtCompleted,
-		// Token: 0x04029DAD RID: 171437
+		// Token: 0x040250E1 RID: 151777
 		TxtToBeCompleted,
-		// Token: 0x04029DAE RID: 171438
+		// Token: 0x040250E2 RID: 151778
 		TxtLocked,
-		// Token: 0x04029DAF RID: 171439
+		// Token: 0x040250E3 RID: 151779
 		TxtTitle,
-		// Token: 0x04029DB0 RID: 171440
+		// Token: 0x040250E4 RID: 151780
 		TxtNormalDesc,
-		// Token: 0x04029DB1 RID: 171441
+		// Token: 0x040250E5 RID: 151781
 		TxtSpecialDesc,
-		// Token: 0x04029DB2 RID: 171442
+		// Token: 0x040250E6 RID: 151782
 		ItemSpecialRoot
 	}
 }

@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015D9 RID: 5593
+	// Token: 0x0200164B RID: 5707
 	public enum GatherTaskState
 	{
-		// Token: 0x0400BD96 RID: 48534
+		// Token: 0x0400C28A RID: 49802
 		[OriginalName("Lock")]
 		Lock,
-		// Token: 0x0400BD97 RID: 48535
+		// Token: 0x0400C28B RID: 49803
 		[OriginalName("Running")]
 		Running,
-		// Token: 0x0400BD98 RID: 48536
+		// Token: 0x0400C28C RID: 49804
 		[OriginalName("InComplete")]
 		InComplete,
-		// Token: 0x0400BD99 RID: 48537
+		// Token: 0x0400C28D RID: 49805
 		[OriginalName("Done")]
 		Done,
-		// Token: 0x0400BD9A RID: 48538
+		// Token: 0x0400C28E RID: 49806
 		[OriginalName("TakeReward")]
 		TakeReward
 	}

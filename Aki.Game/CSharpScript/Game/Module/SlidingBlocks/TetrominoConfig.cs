@@ -4,31 +4,31 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B7B RID: 19323
+	// Token: 0x02003B25 RID: 15141
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class TetrominoConfig : ITetrominoConfig
 	{
-		// Token: 0x17007C35 RID: 31797
-		// (get) Token: 0x0603213F RID: 205119 RVA: 0x00BA121D File Offset: 0x00B9F41D
-		// (set) Token: 0x06032140 RID: 205120 RVA: 0x00BA1225 File Offset: 0x00B9F425
+		// Token: 0x17004FDF RID: 20447
+		// (get) Token: 0x06026ED0 RID: 159440 RVA: 0x00AE53AD File Offset: 0x00AE35AD
+		// (set) Token: 0x06026ED1 RID: 159441 RVA: 0x00AE53B5 File Offset: 0x00AE35B5
 		[RequiredMember]
 		public string ShapeName { get; set; }
 
-		// Token: 0x17007C36 RID: 31798
-		// (get) Token: 0x06032141 RID: 205121 RVA: 0x00BA122E File Offset: 0x00B9F42E
-		// (set) Token: 0x06032142 RID: 205122 RVA: 0x00BA1236 File Offset: 0x00B9F436
+		// Token: 0x17004FE0 RID: 20448
+		// (get) Token: 0x06026ED2 RID: 159442 RVA: 0x00AE53BE File Offset: 0x00AE35BE
+		// (set) Token: 0x06026ED3 RID: 159443 RVA: 0x00AE53C6 File Offset: 0x00AE35C6
 		[RequiredMember]
 		public SlidingBlocksDefine.ETetrominoType Type { get; set; }
 
-		// Token: 0x17007C37 RID: 31799
-		// (get) Token: 0x06032143 RID: 205123 RVA: 0x00BA123F File Offset: 0x00B9F43F
-		// (set) Token: 0x06032144 RID: 205124 RVA: 0x00BA1247 File Offset: 0x00B9F447
+		// Token: 0x17004FE1 RID: 20449
+		// (get) Token: 0x06026ED4 RID: 159444 RVA: 0x00AE53CF File Offset: 0x00AE35CF
+		// (set) Token: 0x06026ED5 RID: 159445 RVA: 0x00AE53D7 File Offset: 0x00AE35D7
 		[RequiredMember]
 		public ITetrisBoard Board { get; set; }
 
-		// Token: 0x06032145 RID: 205125 RVA: 0x00BA1250 File Offset: 0x00B9F450
+		// Token: 0x06026ED6 RID: 159446 RVA: 0x00AE53E0 File Offset: 0x00AE35E0
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public TetrominoConfig()

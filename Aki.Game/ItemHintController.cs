@@ -13,14 +13,14 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001FF3 RID: 8179
+// Token: 0x020014C6 RID: 5318
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(42)]
 public class ItemHintController : UiControllerBase
 {
-	// Token: 0x17001368 RID: 4968
-	// (get) Token: 0x0601004F RID: 65615 RVA: 0x003E7718 File Offset: 0x003E5918
+	// Token: 0x17001395 RID: 5013
+	// (get) Token: 0x0600D4B7 RID: 54455 RVA: 0x003F3D10 File Offset: 0x003F1F10
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -29,19 +29,19 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010050 RID: 65616 RVA: 0x003E771B File Offset: 0x003E591B
+	// Token: 0x0600D4B8 RID: 54456 RVA: 0x003F3D13 File Offset: 0x003F1F13
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ItemRewardNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleItemRewardNotify));
 	}
 
-	// Token: 0x06010051 RID: 65617 RVA: 0x003E7739 File Offset: 0x003E5939
+	// Token: 0x0600D4B9 RID: 54457 RVA: 0x003F3D31 File Offset: 0x003F1F31
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ItemRewardNotify);
 	}
 
-	// Token: 0x06010052 RID: 65618 RVA: 0x003E774B File Offset: 0x003E594B
+	// Token: 0x0600D4BA RID: 54458 RVA: 0x003F3D43 File Offset: 0x003F1F43
 	private void TryOpenItemReward(AddCountItemInfo[] addCountItemInfoList)
 	{
 		if (addCountItemInfoList.Length == 0)
@@ -54,7 +54,7 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010053 RID: 65619 RVA: 0x003E7768 File Offset: 0x003E5968
+	// Token: 0x0600D4BB RID: 54459 RVA: 0x003F3D60 File Offset: 0x003F1F60
 	private bool CheckShowInItemHint()
 	{
 		if (this.CanShowHintOtherViewIsOpen(true))
@@ -70,7 +70,7 @@ public class ItemHintController : UiControllerBase
 		return viewByName2 != null && !viewByName2.IsRegister;
 	}
 
-	// Token: 0x06010054 RID: 65620 RVA: 0x003E77BC File Offset: 0x003E59BC
+	// Token: 0x0600D4BC RID: 54460 RVA: 0x003F3DB4 File Offset: 0x003F1FB4
 	[NullableContext(2)]
 	public void HandleRecallItemRewardNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -87,7 +87,7 @@ public class ItemHintController : UiControllerBase
 		this.HandleItemRewardNotify(itemRewardNotify, status);
 	}
 
-	// Token: 0x06010055 RID: 65621 RVA: 0x003E7850 File Offset: 0x003E5A50
+	// Token: 0x0600D4BD RID: 54461 RVA: 0x003F3E48 File Offset: 0x003F2048
 	[NullableContext(2)]
 	public void HandleItemRewardNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -158,13 +158,13 @@ public class ItemHintController : UiControllerBase
 		EventSystem.Instance.Emit<ItemRewardNotify>(EEventName.OnItemRewardNotify, itemRewardNotify);
 	}
 
-	// Token: 0x06010056 RID: 65622 RVA: 0x003E7A74 File Offset: 0x003E5C74
+	// Token: 0x0600D4BE RID: 54462 RVA: 0x003F406C File Offset: 0x003F226C
 	public static void AddItemRewardList(ItemRewardNotify itemRewardInfo)
 	{
 		ItemHintModel.Instance.AddItemRewardList(itemRewardInfo);
 	}
 
-	// Token: 0x06010057 RID: 65623 RVA: 0x003E7A84 File Offset: 0x003E5C84
+	// Token: 0x0600D4BF RID: 54463 RVA: 0x003F407C File Offset: 0x003F227C
 	public ItemRewardInfo[] CombineAllShowItems(ItemRewardNotify inItemRewardNotify, bool needSort)
 	{
 		List<ItemRewardInfo> list = new List<ItemRewardInfo>();
@@ -235,7 +235,7 @@ public class ItemHintController : UiControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06010058 RID: 65624 RVA: 0x003E7D1C File Offset: 0x003E5F1C
+	// Token: 0x0600D4C0 RID: 54464 RVA: 0x003F4314 File Offset: 0x003F2514
 	public static List<TItem> ConvertRewardListToItem(List<ItemRewardInfo> itemList)
 	{
 		List<TItem> list = new List<TItem>();
@@ -247,7 +247,7 @@ public class ItemHintController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x06010059 RID: 65625 RVA: 0x003E7D94 File Offset: 0x003E5F94
+	// Token: 0x0600D4C1 RID: 54465 RVA: 0x003F438C File Offset: 0x003F258C
 	public DropShowPlan? GetFirstShowBgDropGroup(ItemRewardNotify inItemRewardNotify)
 	{
 		MapField<int, RewardItemInfoList> rewardItems = inItemRewardNotify.RewardItems;
@@ -287,7 +287,7 @@ public class ItemHintController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x0601005A RID: 65626 RVA: 0x003E7EC8 File Offset: 0x003E60C8
+	// Token: 0x0600D4C2 RID: 54466 RVA: 0x003F44C0 File Offset: 0x003F26C0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int, int, int, int, int, int>(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
@@ -303,7 +303,7 @@ public class ItemHintController : UiControllerBase
 		EventSystem.Instance.Add<TItem[]>(EEventName.OnAddOrnamentItemList, new Action<TItem[]>(this.OnAddOrnamentItemList));
 	}
 
-	// Token: 0x0601005B RID: 65627 RVA: 0x003E8004 File Offset: 0x003E6204
+	// Token: 0x0600D4C3 RID: 54467 RVA: 0x003F45FC File Offset: 0x003F27FC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
@@ -331,7 +331,7 @@ public class ItemHintController : UiControllerBase
 		EventSystem.Instance.Remove<TItem[]>(EEventName.OnAddOrnamentItemList, new Action<TItem[]>(this.OnAddOrnamentItemList));
 	}
 
-	// Token: 0x0601005C RID: 65628 RVA: 0x003E8140 File Offset: 0x003E6340
+	// Token: 0x0600D4C4 RID: 54468 RVA: 0x003F4738 File Offset: 0x003F2938
 	private void OnPlayerLevelChanged(int lastLevel, int currentLevel, int currentExp, int lastExp, int addExp, int currentMaxExp, int lastMaxExp)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -343,7 +343,7 @@ public class ItemHintController : UiControllerBase
 		this.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x0601005D RID: 65629 RVA: 0x003E8184 File Offset: 0x003E6384
+	// Token: 0x0600D4C5 RID: 54469 RVA: 0x003F477C File Offset: 0x003F297C
 	private void OnPlayerExpChanged(int currentExp, int lastExp, int maxExp)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -355,7 +355,7 @@ public class ItemHintController : UiControllerBase
 		this.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x0601005E RID: 65630 RVA: 0x003E81C8 File Offset: 0x003E63C8
+	// Token: 0x0600D4C6 RID: 54470 RVA: 0x003F47C0 File Offset: 0x003F29C0
 	public void AddCommonItemList(IReadOnlyList<NormalItem> normalItemList)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -385,7 +385,7 @@ public class ItemHintController : UiControllerBase
 		ItemHintController.Instance.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x0601005F RID: 65631 RVA: 0x003E8294 File Offset: 0x003E6494
+	// Token: 0x0600D4C7 RID: 54471 RVA: 0x003F488C File Offset: 0x003F2A8C
 	public void AddCommonItemList(IReadOnlyList<ValidTimeItem> normalItemList)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -415,7 +415,7 @@ public class ItemHintController : UiControllerBase
 		ItemHintController.Instance.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x06010060 RID: 65632 RVA: 0x003E8368 File Offset: 0x003E6568
+	// Token: 0x0600D4C8 RID: 54472 RVA: 0x003F4960 File Offset: 0x003F2B60
 	public void AddRecallItemList([TupleElementNames(new string[]
 	{
 		"configId",
@@ -443,7 +443,7 @@ public class ItemHintController : UiControllerBase
 		this.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x06010061 RID: 65633 RVA: 0x003E83E0 File Offset: 0x003E65E0
+	// Token: 0x0600D4C9 RID: 54473 RVA: 0x003F49D8 File Offset: 0x003F2BD8
 	public void AddRoguelikeItemList(int itemId, int count)
 	{
 		AddCountItemInfo addCountItemInfo = AddCountItemInfo.Create();
@@ -456,7 +456,7 @@ public class ItemHintController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010062 RID: 65634 RVA: 0x003E841C File Offset: 0x003E661C
+	// Token: 0x0600D4CA RID: 54474 RVA: 0x003F4A14 File Offset: 0x003F2C14
 	public void AddAbyssItemList(Dictionary<int, int> dataMap)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -471,7 +471,7 @@ public class ItemHintController : UiControllerBase
 		ItemHintModel.Instance.MainInterfaceInsertItemRewardInfo(list.ToArray());
 	}
 
-	// Token: 0x06010063 RID: 65635 RVA: 0x003E84A8 File Offset: 0x003E66A8
+	// Token: 0x0600D4CB RID: 54475 RVA: 0x003F4AA0 File Offset: 0x003F2CA0
 	public void AddItemRewardInfoList([Nullable(new byte[]
 	{
 		1,
@@ -490,7 +490,7 @@ public class ItemHintController : UiControllerBase
 		ItemHintModel.Instance.MainInterfaceInsertItemRewardInfo(list.ToArray());
 	}
 
-	// Token: 0x06010064 RID: 65636 RVA: 0x003E8534 File Offset: 0x003E6734
+	// Token: 0x0600D4CC RID: 54476 RVA: 0x003F4B2C File Offset: 0x003F2D2C
 	private void OnAddWeaponItemList(IReadOnlyList<WeaponItem> weaponItemList, bool bAddFromRole, bool bShowNewTips)
 	{
 		if (bAddFromRole || !bShowNewTips)
@@ -509,7 +509,7 @@ public class ItemHintController : UiControllerBase
 		this.TryOpenItemReward(list.ToArray());
 	}
 
-	// Token: 0x06010065 RID: 65637 RVA: 0x003E85B8 File Offset: 0x003E67B8
+	// Token: 0x0600D4CD RID: 54477 RVA: 0x003F4BB0 File Offset: 0x003F2DB0
 	private void OnAddPhantomItemList(IReadOnlyList<Aki.Protocol.PhantomItem> phantomItemList, bool isCatch)
 	{
 		if (!isCatch)
@@ -522,7 +522,7 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010066 RID: 65638 RVA: 0x003E8610 File Offset: 0x003E6810
+	// Token: 0x0600D4CE RID: 54478 RVA: 0x003F4C08 File Offset: 0x003F2E08
 	private void OnAddFavorItem(TItem item)
 	{
 		AddCountItemInfo addCountItemInfo = AddCountItemInfo.Create();
@@ -535,7 +535,7 @@ public class ItemHintController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06010067 RID: 65639 RVA: 0x003E8658 File Offset: 0x003E6858
+	// Token: 0x0600D4CF RID: 54479 RVA: 0x003F4C50 File Offset: 0x003F2E50
 	private void OnAddOrnamentItemList(TItem[] itemList)
 	{
 		List<AddCountItemInfo> list = new List<AddCountItemInfo>();
@@ -550,31 +550,31 @@ public class ItemHintController : UiControllerBase
 		ItemHintModel.Instance.MainInterfaceInsertItemRewardInfo(list.ToArray());
 	}
 
-	// Token: 0x06010068 RID: 65640 RVA: 0x003E86C9 File Offset: 0x003E68C9
+	// Token: 0x0600D4D0 RID: 54480 RVA: 0x003F4CC1 File Offset: 0x003F2EC1
 	private void CheckVisibility()
 	{
 		this.CheckVisibilityInternal();
 	}
 
-	// Token: 0x06010069 RID: 65641 RVA: 0x003E86D1 File Offset: 0x003E68D1
+	// Token: 0x0600D4D1 RID: 54481 RVA: 0x003F4CC9 File Offset: 0x003F2EC9
 	private void CheckVisibility(PlotInfo plotInfo)
 	{
 		this.CheckVisibilityInternal();
 	}
 
-	// Token: 0x0601006A RID: 65642 RVA: 0x003E86D9 File Offset: 0x003E68D9
+	// Token: 0x0600D4D2 RID: 54482 RVA: 0x003F4CD1 File Offset: 0x003F2ED1
 	private void CheckVisibility(PlotResultInfo plotResultInfo)
 	{
 		this.CheckVisibilityInternal();
 	}
 
-	// Token: 0x0601006B RID: 65643 RVA: 0x003E86E1 File Offset: 0x003E68E1
+	// Token: 0x0600D4D3 RID: 54483 RVA: 0x003F4CD9 File Offset: 0x003F2ED9
 	private void CheckVisibility(EUiViewName viewName, int viewId)
 	{
 		this.CheckVisibilityInternal();
 	}
 
-	// Token: 0x0601006C RID: 65644 RVA: 0x003E86EC File Offset: 0x003E68EC
+	// Token: 0x0600D4D4 RID: 54484 RVA: 0x003F4CE4 File Offset: 0x003F2EE4
 	private void CheckVisibilityInternal()
 	{
 		bool visibility = ItemHintModel.Instance.Visibility;
@@ -595,7 +595,7 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601006D RID: 65645 RVA: 0x003E8784 File Offset: 0x003E6984
+	// Token: 0x0600D4D5 RID: 54485 RVA: 0x003F4D7C File Offset: 0x003F2F7C
 	private bool CanShowHintOtherViewIsOpen(bool isPush = false)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.BattleView))
@@ -614,7 +614,7 @@ public class ItemHintController : UiControllerBase
 		return instance.GetIsPushHintShow();
 	}
 
-	// Token: 0x0601006E RID: 65646 RVA: 0x003E87CD File Offset: 0x003E69CD
+	// Token: 0x0600D4D6 RID: 54486 RVA: 0x003F4DC5 File Offset: 0x003F2FC5
 	protected override void OnTick(float delta)
 	{
 		this.CheckItemHint();
@@ -626,7 +626,7 @@ public class ItemHintController : UiControllerBase
 		this.CheckItemReward();
 	}
 
-	// Token: 0x0601006F RID: 65647 RVA: 0x003E87F4 File Offset: 0x003E69F4
+	// Token: 0x0600D4D7 RID: 54487 RVA: 0x003F4DEC File Offset: 0x003F2FEC
 	public void CheckItemReward()
 	{
 		if (ItemHintModel.Instance.IsItemRewardListEmpty)
@@ -694,7 +694,7 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010070 RID: 65648 RVA: 0x003E8A00 File Offset: 0x003E6C00
+	// Token: 0x0600D4D8 RID: 54488 RVA: 0x003F4FF8 File Offset: 0x003F31F8
 	public void CheckItemHint()
 	{
 		if (!ItemHintModel.Instance.Visibility)
@@ -720,8 +720,8 @@ public class ItemHintController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.ItemHintView, null, null);
 	}
 
-	// Token: 0x17001369 RID: 4969
-	// (get) Token: 0x06010071 RID: 65649 RVA: 0x003E8A7F File Offset: 0x003E6C7F
+	// Token: 0x17001396 RID: 5014
+	// (get) Token: 0x0600D4D9 RID: 54489 RVA: 0x003F5077 File Offset: 0x003F3277
 	public static ItemHintController Instance
 	{
 		get
@@ -730,7 +730,7 @@ public class ItemHintController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010072 RID: 65650 RVA: 0x003E8A86 File Offset: 0x003E6C86
+	// Token: 0x0600D4DA RID: 54490 RVA: 0x003F507E File Offset: 0x003F327E
 	public static ItemHintController GetOrCreateInstance()
 	{
 		if (ItemHintController._Instance == null)
@@ -740,7 +740,7 @@ public class ItemHintController : UiControllerBase
 		return ItemHintController._Instance;
 	}
 
-	// Token: 0x06010073 RID: 65651 RVA: 0x003E8A9A File Offset: 0x003E6C9A
+	// Token: 0x0600D4DB RID: 54491 RVA: 0x003F5092 File Offset: 0x003F3292
 	public static bool CreateInstance()
 	{
 		if (ItemHintController._Instance != null)
@@ -751,27 +751,27 @@ public class ItemHintController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010074 RID: 65652 RVA: 0x003E8AB0 File Offset: 0x003E6CB0
+	// Token: 0x0600D4DC RID: 54492 RVA: 0x003F50A8 File Offset: 0x003F32A8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010075 RID: 65653 RVA: 0x003E8AB2 File Offset: 0x003E6CB2
+	// Token: 0x0600D4DD RID: 54493 RVA: 0x003F50AA File Offset: 0x003F32AA
 	public static void ResetStaticDefaultValue()
 	{
 		ItemHintController._Instance = null;
 	}
 
-	// Token: 0x06010076 RID: 65654 RVA: 0x003E8ABA File Offset: 0x003E6CBA
+	// Token: 0x0600D4DE RID: 54494 RVA: 0x003F50B2 File Offset: 0x003F32B2
 	static ItemHintController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ItemHintController.CreateStaticDefaultValue), new Action(ItemHintController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040076A4 RID: 30372
+	// Token: 0x0400778D RID: 30605
 	public bool IsPrintNoRewardReason;
 
-	// Token: 0x040076A5 RID: 30373
+	// Token: 0x0400778E RID: 30606
 	private IReadOnlyDictionary<EShowBgType, EUiViewName?> showBgTypeToView = new Dictionary<EShowBgType, EUiViewName?>
 	{
 		{
@@ -792,7 +792,7 @@ public class ItemHintController : UiControllerBase
 		}
 	};
 
-	// Token: 0x040076A6 RID: 30374
+	// Token: 0x0400778F RID: 30607
 	[Nullable(2)]
 	private static ItemHintController _Instance;
 }

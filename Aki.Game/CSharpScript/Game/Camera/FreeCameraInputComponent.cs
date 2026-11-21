@@ -6,14 +6,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D0 RID: 29392
+	// Token: 0x02006452 RID: 25682
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class FreeCameraInputComponent : EntityComponent, IComponentDependency
+	public class FreeCameraInputComponent : EntityComponent
 	{
-		// Token: 0x17009F37 RID: 40759
-		// (get) Token: 0x060481F7 RID: 295415 RVA: 0x0127FC7C File Offset: 0x0127DE7C
-		public static Type[] Dependencies
+		// Token: 0x170076A8 RID: 30376
+		// (get) Token: 0x0603E602 RID: 255490 RVA: 0x0122275A File Offset: 0x0122095A
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481F8 RID: 295416 RVA: 0x0127FC91 File Offset: 0x0127DE91
+		// Token: 0x0603E603 RID: 255491 RVA: 0x0122276F File Offset: 0x0122096F
 		protected override bool OnStart()
 		{
 			this.LogicComponent = base.Entity.GetComponent<FreeCameraLogicComponent>();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Camera
 			return this.LogicComponent != null;
 		}
 
-		// Token: 0x060481F9 RID: 295417 RVA: 0x0127FCB4 File Offset: 0x0127DEB4
+		// Token: 0x0603E604 RID: 255492 RVA: 0x01222794 File Offset: 0x01220994
 		private void HandleInputDirty()
 		{
 			if (this.ForwardData.Distance == 0f && this.RightData.Distance == 0f && this.UpData.Distance == 0f && this.RotateLookUp == 0f && this.RotateTurn == 0f && this.DeltaFov == 0f)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060481FA RID: 295418 RVA: 0x0127FD28 File Offset: 0x0127DF28
+		// Token: 0x0603E605 RID: 255493 RVA: 0x01222808 File Offset: 0x01220A08
 		private void ResetData()
 		{
 			this.ForwardData.Distance = 0f;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = false;
 		}
 
-		// Token: 0x060481FB RID: 295419 RVA: 0x0127FD90 File Offset: 0x0127DF90
+		// Token: 0x0603E606 RID: 255494 RVA: 0x01222870 File Offset: 0x01220A70
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsInputDirty)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Camera
 			this.ResetData();
 		}
 
-		// Token: 0x060481FC RID: 295420 RVA: 0x0127FDF0 File Offset: 0x0127DFF0
+		// Token: 0x0603E607 RID: 255495 RVA: 0x012228D0 File Offset: 0x01220AD0
 		[NullableContext(2)]
 		public void BindAxes(UUIDraggableComponent dragComponent = null)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Camera
 			}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x060481FD RID: 295421 RVA: 0x0127FF78 File Offset: 0x0127E178
+		// Token: 0x0603E608 RID: 255496 RVA: 0x01222A58 File Offset: 0x01220C58
 		public void UnBindAxes()
 		{
 			InputDistributeController.Instance.UnBindAxes(new <>z__ReadOnlyArray<string>(new string[]
@@ -130,50 +130,50 @@ namespace CSharpScript.Game.Camera
 			}), new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 		}
 
-		// Token: 0x060481FE RID: 295422 RVA: 0x012800D4 File Offset: 0x0127E2D4
+		// Token: 0x0603E609 RID: 255497 RVA: 0x01222BB4 File Offset: 0x01220DB4
 		private void InitViewportSize()
 		{
 			this.ViewportSize.X = (double)UiLayer.Instance.UiRootItem.GetWidth();
 			this.ViewportSize.Y = (double)UiLayer.Instance.UiRootItem.GetHeight();
 		}
 
-		// Token: 0x060481FF RID: 295423 RVA: 0x0128010C File Offset: 0x0127E30C
+		// Token: 0x0603E60A RID: 255498 RVA: 0x01222BEC File Offset: 0x01220DEC
 		protected void InputCameraFov(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraFieldFov(value * 1f);
 		}
 
-		// Token: 0x06048200 RID: 295424 RVA: 0x0128011B File Offset: 0x0127E31B
+		// Token: 0x0603E60B RID: 255499 RVA: 0x01222BFB File Offset: 0x01220DFB
 		protected void InputCameraForward(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraMoveForward(value * 10f);
 		}
 
-		// Token: 0x06048201 RID: 295425 RVA: 0x0128012A File Offset: 0x0127E32A
+		// Token: 0x0603E60C RID: 255500 RVA: 0x01222C0A File Offset: 0x01220E0A
 		protected void InputCameraRight(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraMoveRight(value * 10f);
 		}
 
-		// Token: 0x06048202 RID: 295426 RVA: 0x01280139 File Offset: 0x0127E339
+		// Token: 0x0603E60D RID: 255501 RVA: 0x01222C19 File Offset: 0x01220E19
 		protected void InputCameraUp(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraMoveUp(value * 10f);
 		}
 
-		// Token: 0x06048203 RID: 295427 RVA: 0x01280148 File Offset: 0x0127E348
+		// Token: 0x0603E60E RID: 255502 RVA: 0x01222C28 File Offset: 0x01220E28
 		protected void InputCameraLookUp(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraRotateLookUp(-value * 3f);
 		}
 
-		// Token: 0x06048204 RID: 295428 RVA: 0x01280158 File Offset: 0x0127E358
+		// Token: 0x0603E60F RID: 255503 RVA: 0x01222C38 File Offset: 0x01220E38
 		protected void InputCameraTurn(string axisName, float value, InputIdentification inputIdentification)
 		{
 			this.InputCameraRotateTurn(value * 3f);
 		}
 
-		// Token: 0x06048205 RID: 295429 RVA: 0x01280167 File Offset: 0x0127E367
+		// Token: 0x0603E610 RID: 255504 RVA: 0x01222C47 File Offset: 0x01220E47
 		public void InputCameraMoveForward(float value)
 		{
 			if (value == 0f)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x06048206 RID: 295430 RVA: 0x01280185 File Offset: 0x0127E385
+		// Token: 0x0603E611 RID: 255505 RVA: 0x01222C65 File Offset: 0x01220E65
 		public void InputCameraMoveRight(float value)
 		{
 			if (value == 0f)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x06048207 RID: 295431 RVA: 0x012801A3 File Offset: 0x0127E3A3
+		// Token: 0x0603E612 RID: 255506 RVA: 0x01222C83 File Offset: 0x01220E83
 		public void InputCameraMoveUp(float value)
 		{
 			if (value == 0f)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x06048208 RID: 295432 RVA: 0x012801C1 File Offset: 0x0127E3C1
+		// Token: 0x0603E613 RID: 255507 RVA: 0x01222CA1 File Offset: 0x01220EA1
 		public void InputCameraRotateLookUp(float value)
 		{
 			if (value == 0f && this.RotateLookUp == 0f)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x06048209 RID: 295433 RVA: 0x012801E7 File Offset: 0x0127E3E7
+		// Token: 0x0603E614 RID: 255508 RVA: 0x01222CC7 File Offset: 0x01220EC7
 		public void InputCameraRotateTurn(float value)
 		{
 			if (value == 0f && this.RotateTurn == 0f)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x0604820A RID: 295434 RVA: 0x0128020D File Offset: 0x0127E40D
+		// Token: 0x0603E615 RID: 255509 RVA: 0x01222CED File Offset: 0x01220EED
 		public void InputCameraFieldFov(float value)
 		{
 			if (value == 0f)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInputDirty = true;
 		}
 
-		// Token: 0x0604820B RID: 295435 RVA: 0x01280226 File Offset: 0x0127E426
+		// Token: 0x0603E616 RID: 255510 RVA: 0x01222D06 File Offset: 0x01220F06
 		public void SetIsMoveBySelf(bool isMoveBySelf)
 		{
 			this.ForwardData.IsMoveBySelf = isMoveBySelf;
@@ -247,25 +247,25 @@ namespace CSharpScript.Game.Camera
 			this.UpData.IsMoveBySelf = isMoveBySelf;
 		}
 
-		// Token: 0x0604820C RID: 295436 RVA: 0x0128024C File Offset: 0x0127E44C
+		// Token: 0x0603E617 RID: 255511 RVA: 0x01222D2C File Offset: 0x01220F2C
 		public void SetUpMoveByWorld()
 		{
 			this.UpData.IsMoveBySelf = false;
 		}
 
-		// Token: 0x0604820D RID: 295437 RVA: 0x0128025A File Offset: 0x0127E45A
+		// Token: 0x0603E618 RID: 255512 RVA: 0x01222D3A File Offset: 0x01220F3A
 		public void SetForwardMoveByWorld()
 		{
 			this.ForwardData.IsMoveBySelf = false;
 		}
 
-		// Token: 0x0604820E RID: 295438 RVA: 0x01280268 File Offset: 0x0127E468
+		// Token: 0x0603E619 RID: 255513 RVA: 0x01222D48 File Offset: 0x01220F48
 		public void SetRightMoveByWorld()
 		{
 			this.RightData.IsMoveBySelf = false;
 		}
 
-		// Token: 0x0604820F RID: 295439 RVA: 0x01280276 File Offset: 0x0127E476
+		// Token: 0x0603E61A RID: 255514 RVA: 0x01222D56 File Offset: 0x01220F56
 		[NullableContext(2)]
 		private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Camera
 			this.CurrentDragPosition = new FVector?(eventData.GetLocalPointInPlane());
 		}
 
-		// Token: 0x06048210 RID: 295440 RVA: 0x012802A4 File Offset: 0x0127E4A4
+		// Token: 0x0603E61B RID: 255515 RVA: 0x01222D84 File Offset: 0x01220F84
 		[NullableContext(2)]
 		private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048211 RID: 295441 RVA: 0x0128037C File Offset: 0x0127E57C
+		// Token: 0x0603E61C RID: 255516 RVA: 0x01222E5C File Offset: 0x0122105C
 		[NullableContext(2)]
 		private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Camera
 			this.CurrentDragPosition = null;
 		}
 
-		// Token: 0x06048212 RID: 295442 RVA: 0x012804AB File Offset: 0x0127E6AB
+		// Token: 0x0603E61D RID: 255517 RVA: 0x01222F8B File Offset: 0x0122118B
 		[NullableContext(2)]
 		private void OnPointerScrollCallBack(ULGUIPointerEventData eventData)
 		{
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048213 RID: 295443 RVA: 0x012804CF File Offset: 0x0127E6CF
+		// Token: 0x0603E61E RID: 255518 RVA: 0x01222FAF File Offset: 0x012211AF
 		private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification inputIdentification)
 		{
 			if (!this.CanCameraInput)
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048214 RID: 295444 RVA: 0x012804EC File Offset: 0x0127E6EC
+		// Token: 0x0603E61F RID: 255519 RVA: 0x01222FCC File Offset: 0x012211CC
 		private void TouchMoved()
 		{
 			if (!this.CanCameraInput)
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048215 RID: 295445 RVA: 0x01280524 File Offset: 0x0127E724
+		// Token: 0x0603E620 RID: 255520 RVA: 0x01223004 File Offset: 0x01221204
 		public void ResetInputData()
 		{
 			this.ForwardData.Distance = 0f;
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Camera
 			logicComponent.ResetToInit(0f, null, null);
 		}
 
-		// Token: 0x06048216 RID: 295446 RVA: 0x012805A0 File Offset: 0x0127E7A0
+		// Token: 0x0603E621 RID: 255521 RVA: 0x01223080 File Offset: 0x01221280
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -403,151 +403,141 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			FreeCameraInputComponent freeCameraInputComponent = (FreeCameraInputComponent)componentTemplate;
-			if (base.CanResetComponentProperty("LogicComponent"))
+			if (freeCameraInputComponent.LogicComponent == null)
 			{
-				if (freeCameraInputComponent.LogicComponent == null)
-				{
-					this.LogicComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FreeCameraLogicComponent>(this.LogicComponent), "LogicComponent"))
-				{
-					return false;
-				}
+				this.LogicComponent = null;
 			}
-			if (base.CanResetComponentProperty("IsInputDirty"))
-			{
-				this.IsInputDirty = freeCameraInputComponent.IsInputDirty;
-			}
-			if (base.CanResetComponentProperty("ForwardData") && freeCameraInputComponent.ForwardData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FreeCameraLogicComponent.ICameraMoveData>(this.ForwardData), "ForwardData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LogicComponent), "LogicComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RightData") && freeCameraInputComponent.RightData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FreeCameraLogicComponent.ICameraMoveData>(this.RightData), "RightData"))
+			this.IsInputDirty = freeCameraInputComponent.IsInputDirty;
+			if (freeCameraInputComponent.ForwardData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForwardData), "ForwardData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("UpData") && freeCameraInputComponent.UpData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FreeCameraLogicComponent.ICameraMoveData>(this.UpData), "UpData"))
+			if (freeCameraInputComponent.RightData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RightData), "RightData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RotateLookUp"))
+			if (freeCameraInputComponent.UpData != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.UpData), "UpData"))
 			{
-				this.RotateLookUp = freeCameraInputComponent.RotateLookUp;
+				return false;
 			}
-			if (base.CanResetComponentProperty("RotateTurn"))
+			this.RotateLookUp = freeCameraInputComponent.RotateLookUp;
+			this.RotateTurn = freeCameraInputComponent.RotateTurn;
+			this.DeltaFov = freeCameraInputComponent.DeltaFov;
+			if (freeCameraInputComponent.DragComponent == null)
 			{
-				this.RotateTurn = freeCameraInputComponent.RotateTurn;
+				this.DragComponent = null;
 			}
-			if (base.CanResetComponentProperty("DeltaFov"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DragComponent), "DragComponent"))
 			{
-				this.DeltaFov = freeCameraInputComponent.DeltaFov;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DragComponent"))
+			this.CurrentDragPosition = freeCameraInputComponent.CurrentDragPosition;
+			if (freeCameraInputComponent.DragDeltaPos == null)
 			{
-				if (freeCameraInputComponent.DragComponent == null)
-				{
-					this.DragComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UUIDraggableComponent>(this.DragComponent), "DragComponent"))
-				{
-					return false;
-				}
+				this.DragDeltaPos = null;
 			}
-			if (base.CanResetComponentProperty("CurrentDragPosition"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DragDeltaPos), "DragDeltaPos"))
 			{
-				this.CurrentDragPosition = freeCameraInputComponent.CurrentDragPosition;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DragDeltaPos"))
-			{
-				if (freeCameraInputComponent.DragDeltaPos == null)
-				{
-					this.DragDeltaPos = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.DragDeltaPos), "DragDeltaPos"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CanCameraInput"))
-			{
-				this.CanCameraInput = freeCameraInputComponent.CanCameraInput;
-			}
-			if (base.CanResetComponentProperty("PointerDownTime"))
-			{
-				this.PointerDownTime = freeCameraInputComponent.PointerDownTime;
-			}
-			return !base.CanResetComponentProperty("ViewportSize") || freeCameraInputComponent.ViewportSize == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector2D>(this.ViewportSize), "ViewportSize");
+			this.CanCameraInput = freeCameraInputComponent.CanCameraInput;
+			this.PointerDownTime = freeCameraInputComponent.PointerDownTime;
+			return freeCameraInputComponent.ViewportSize == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.ViewportSize), "ViewportSize");
 		}
 
-		// Token: 0x040260CD RID: 155853
+		// Token: 0x170076A9 RID: 30377
+		// (get) Token: 0x0603E622 RID: 255522 RVA: 0x012231FD File Offset: 0x012213FD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076AA RID: 30378
+		// (get) Token: 0x0603E623 RID: 255523 RVA: 0x01223200 File Offset: 0x01221400
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040213B0 RID: 136112
 		private const int MOVE_STEP = 10;
 
-		// Token: 0x040260CE RID: 155854
+		// Token: 0x040213B1 RID: 136113
 		private const int ROTATE_STEP = 3;
 
-		// Token: 0x040260CF RID: 155855
+		// Token: 0x040213B2 RID: 136114
 		private const int FOV_STEP = 1;
 
-		// Token: 0x040260D0 RID: 155856
+		// Token: 0x040213B3 RID: 136115
 		private const float TWEEN_TIME = 2f;
 
-		// Token: 0x040260D1 RID: 155857
+		// Token: 0x040213B4 RID: 136116
 		private const float DRAG_TWEEN_TIME = 0.8f;
 
-		// Token: 0x040260D2 RID: 155858
+		// Token: 0x040213B5 RID: 136117
 		[Nullable(2)]
 		private FreeCameraLogicComponent LogicComponent;
 
-		// Token: 0x040260D3 RID: 155859
+		// Token: 0x040213B6 RID: 136118
 		private bool IsInputDirty;
 
-		// Token: 0x040260D4 RID: 155860
+		// Token: 0x040213B7 RID: 136119
 		private readonly FreeCameraLogicComponent.ICameraMoveData ForwardData = new FreeCameraLogicComponent.CameraMoveDataImpl
 		{
 			Distance = 0f,
 			IsMoveBySelf = true
 		};
 
-		// Token: 0x040260D5 RID: 155861
+		// Token: 0x040213B8 RID: 136120
 		private readonly FreeCameraLogicComponent.ICameraMoveData RightData = new FreeCameraLogicComponent.CameraMoveDataImpl
 		{
 			Distance = 0f,
 			IsMoveBySelf = true
 		};
 
-		// Token: 0x040260D6 RID: 155862
+		// Token: 0x040213B9 RID: 136121
 		private readonly FreeCameraLogicComponent.ICameraMoveData UpData = new FreeCameraLogicComponent.CameraMoveDataImpl
 		{
 			Distance = 0f,
 			IsMoveBySelf = true
 		};
 
-		// Token: 0x040260D7 RID: 155863
+		// Token: 0x040213BA RID: 136122
 		private float RotateLookUp;
 
-		// Token: 0x040260D8 RID: 155864
+		// Token: 0x040213BB RID: 136123
 		private float RotateTurn;
 
-		// Token: 0x040260D9 RID: 155865
+		// Token: 0x040213BC RID: 136124
 		private float DeltaFov;
 
-		// Token: 0x040260DA RID: 155866
+		// Token: 0x040213BD RID: 136125
 		[Nullable(2)]
 		private UUIDraggableComponent DragComponent;
 
-		// Token: 0x040260DB RID: 155867
+		// Token: 0x040213BE RID: 136126
 		private FVector? CurrentDragPosition;
 
-		// Token: 0x040260DC RID: 155868
+		// Token: 0x040213BF RID: 136127
 		private Vector2D DragDeltaPos = Vector2D.Create();
 
-		// Token: 0x040260DD RID: 155869
+		// Token: 0x040213C0 RID: 136128
 		public bool CanCameraInput;
 
-		// Token: 0x040260DE RID: 155870
+		// Token: 0x040213C1 RID: 136129
 		private double PointerDownTime;
 
-		// Token: 0x040260DF RID: 155871
+		// Token: 0x040213C2 RID: 136130
 		private readonly Vector2D ViewportSize = Vector2D.Create();
 	}
 }

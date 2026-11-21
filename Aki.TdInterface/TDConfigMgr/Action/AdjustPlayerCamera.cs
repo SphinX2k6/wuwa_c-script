@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200149B RID: 5275
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015F4 RID: 5620
 	public class AdjustPlayerCamera : ActionParams
 	{
-		// Token: 0x06007822 RID: 30754 RVA: 0x00120358 File Offset: 0x0011E558
+		// Token: 0x06007EEF RID: 32495 RVA: 0x0012EFA4 File Offset: 0x0012D1A4
 		private AdjustPlayerCamera_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007823 RID: 30755 RVA: 0x00120390 File Offset: 0x0011E590
+		// Token: 0x06007EF0 RID: 32496 RVA: 0x0012EFDC File Offset: 0x0012D1DC
 		public static AdjustPlayerCamera Create([Nullable(2)] AdjustPlayerCamera instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007824 RID: 30756 RVA: 0x001203A3 File Offset: 0x0011E5A3
+		// Token: 0x06007EF1 RID: 32497 RVA: 0x0012EFEF File Offset: 0x0012D1EF
 		public static AdjustPlayerCamera CreateFromSetValue([Nullable(2)] AdjustPlayerCamera_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007825 RID: 30757 RVA: 0x001203B6 File Offset: 0x0011E5B6
+		// Token: 0x06007EF2 RID: 32498 RVA: 0x0012F002 File Offset: 0x0012D202
 		public AdjustPlayerCamera_SetValue ToSetValue()
 		{
 			return new AdjustPlayerCamera_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700285E RID: 10334
-		// (get) Token: 0x06007826 RID: 30758 RVA: 0x001203C9 File Offset: 0x0011E5C9
-		// (set) Token: 0x06007827 RID: 30759 RVA: 0x001203F0 File Offset: 0x0011E5F0
+		// Token: 0x17002A48 RID: 10824
+		// (get) Token: 0x06007EF3 RID: 32499 RVA: 0x0012F015 File Offset: 0x0012D215
+		// (set) Token: 0x06007EF4 RID: 32500 RVA: 0x0012F03C File Offset: 0x0012D23C
 		public virtual IAdjustPlayerCameraType Option
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045DA RID: 17882
+		// Token: 0x04004975 RID: 18805
 		[Nullable(2)]
 		protected new AdjustPlayerCamera FbInstance;
 
-		// Token: 0x040045DB RID: 17883
+		// Token: 0x04004976 RID: 18806
 		[Nullable(2)]
 		protected AdjustPlayerCamera_SetValue PocoInterface;
 	}

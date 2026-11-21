@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02002E0C RID: 11788
+// Token: 0x02002368 RID: 9064
 public enum EBulletHitActorType
 {
-	// Token: 0x0400B95E RID: 47454
+	// Token: 0x0400BCEC RID: 48364
 	Ignore,
-	// Token: 0x0400B95F RID: 47455
+	// Token: 0x0400BCED RID: 48365
 	Character,
-	// Token: 0x0400B960 RID: 47456
+	// Token: 0x0400BCEE RID: 48366
 	Bullet,
-	// Token: 0x0400B961 RID: 47457
+	// Token: 0x0400BCEF RID: 48367
 	SceneItem,
-	// Token: 0x0400B962 RID: 47458
+	// Token: 0x0400BCF0 RID: 48368
 	Obstacles,
-	// Token: 0x0400B963 RID: 47459
+	// Token: 0x0400BCF1 RID: 48369
 	Npc,
-	// Token: 0x0400B964 RID: 47460
+	// Token: 0x0400BCF2 RID: 48370
 	AnimalFriend,
-	// Token: 0x0400B965 RID: 47461
+	// Token: 0x0400BCF3 RID: 48371
 	Vehicle
 }

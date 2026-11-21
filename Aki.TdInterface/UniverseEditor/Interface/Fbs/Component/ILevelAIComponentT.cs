@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054C8 RID: 21704
+	// Token: 0x02005A4E RID: 23118
 	public class ILevelAIComponentT
 	{
-		// Token: 0x17009FF0 RID: 40944
-		// (get) Token: 0x06023C50 RID: 146512 RVA: 0x004F2057 File Offset: 0x004F0257
-		// (set) Token: 0x06023C51 RID: 146513 RVA: 0x004F205F File Offset: 0x004F025F
+		// Token: 0x1700A82A RID: 43050
+		// (get) Token: 0x06025D08 RID: 154888 RVA: 0x0052F0CB File Offset: 0x0052D2CB
+		// (set) Token: 0x06025D09 RID: 154889 RVA: 0x0052F0D3 File Offset: 0x0052D2D3
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009FF1 RID: 40945
-		// (get) Token: 0x06023C52 RID: 146514 RVA: 0x004F2068 File Offset: 0x004F0268
-		// (set) Token: 0x06023C53 RID: 146515 RVA: 0x004F2070 File Offset: 0x004F0270
+		// Token: 0x1700A82B RID: 43051
+		// (get) Token: 0x06025D0A RID: 154890 RVA: 0x0052F0DC File Offset: 0x0052D2DC
+		// (set) Token: 0x06025D0B RID: 154891 RVA: 0x0052F0E4 File Offset: 0x0052D2E4
 		public List<ILevelAIStateT> States { get; set; }
 
-		// Token: 0x17009FF2 RID: 40946
-		// (get) Token: 0x06023C54 RID: 146516 RVA: 0x004F2079 File Offset: 0x004F0279
-		// (set) Token: 0x06023C55 RID: 146517 RVA: 0x004F2081 File Offset: 0x004F0281
+		// Token: 0x1700A82C RID: 43052
+		// (get) Token: 0x06025D0C RID: 154892 RVA: 0x0052F0ED File Offset: 0x0052D2ED
+		// (set) Token: 0x06025D0D RID: 154893 RVA: 0x0052F0F5 File Offset: 0x0052D2F5
 		public string BtTreeAsset { get; set; }
 
-		// Token: 0x17009FF3 RID: 40947
-		// (get) Token: 0x06023C56 RID: 146518 RVA: 0x004F208A File Offset: 0x004F028A
-		// (set) Token: 0x06023C57 RID: 146519 RVA: 0x004F2092 File Offset: 0x004F0292
+		// Token: 0x1700A82D RID: 43053
+		// (get) Token: 0x06025D0E RID: 154894 RVA: 0x0052F0FE File Offset: 0x0052D2FE
+		// (set) Token: 0x06025D0F RID: 154895 RVA: 0x0052F106 File Offset: 0x0052D306
 		public ICommonBtOverrideT CommonBtOverride { get; set; }
 
-		// Token: 0x17009FF4 RID: 40948
-		// (get) Token: 0x06023C58 RID: 146520 RVA: 0x004F209B File Offset: 0x004F029B
-		// (set) Token: 0x06023C59 RID: 146521 RVA: 0x004F20A3 File Offset: 0x004F02A3
+		// Token: 0x1700A82E RID: 43054
+		// (get) Token: 0x06025D10 RID: 154896 RVA: 0x0052F10F File Offset: 0x0052D30F
+		// (set) Token: 0x06025D11 RID: 154897 RVA: 0x0052F117 File Offset: 0x0052D317
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023C5A RID: 146522 RVA: 0x004F20AC File Offset: 0x004F02AC
+		// Token: 0x06025D12 RID: 154898 RVA: 0x0052F120 File Offset: 0x0052D320
 		public ILevelAIComponentT()
 		{
 			this.Disabled = false;

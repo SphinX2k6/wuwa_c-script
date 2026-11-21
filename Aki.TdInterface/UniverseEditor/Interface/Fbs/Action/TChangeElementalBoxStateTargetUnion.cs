@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200765D RID: 30301
+	// Token: 0x02007E6B RID: 32363
 	public class TChangeElementalBoxStateTargetUnion
 	{
-		// Token: 0x1700E5D1 RID: 58833
-		// (get) Token: 0x06037298 RID: 225944 RVA: 0x0077A864 File Offset: 0x00778A64
-		// (set) Token: 0x06037299 RID: 225945 RVA: 0x0077A86C File Offset: 0x00778A6C
+		// Token: 0x1700F20F RID: 61967
+		// (get) Token: 0x0603A73D RID: 239421 RVA: 0x007DE960 File Offset: 0x007DCB60
+		// (set) Token: 0x0603A73E RID: 239422 RVA: 0x007DE968 File Offset: 0x007DCB68
 		public TChangeElementalBoxStateTarget Type { get; set; }
 
-		// Token: 0x1700E5D2 RID: 58834
-		// (get) Token: 0x0603729A RID: 225946 RVA: 0x0077A875 File Offset: 0x00778A75
-		// (set) Token: 0x0603729B RID: 225947 RVA: 0x0077A87D File Offset: 0x00778A7D
+		// Token: 0x1700F210 RID: 61968
+		// (get) Token: 0x0603A73F RID: 239423 RVA: 0x007DE971 File Offset: 0x007DCB71
+		// (set) Token: 0x0603A740 RID: 239424 RVA: 0x007DE979 File Offset: 0x007DCB79
 		public object Value { get; set; }
 
-		// Token: 0x0603729C RID: 225948 RVA: 0x0077A886 File Offset: 0x00778A86
+		// Token: 0x0603A741 RID: 239425 RVA: 0x007DE982 File Offset: 0x007DCB82
 		public TChangeElementalBoxStateTargetUnion()
 		{
 			this.Type = TChangeElementalBoxStateTarget.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603729D RID: 225949 RVA: 0x0077A89C File Offset: 0x00778A9C
+		// Token: 0x0603A742 RID: 239426 RVA: 0x007DE998 File Offset: 0x007DCB98
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603729E RID: 225950 RVA: 0x0077A8AE File Offset: 0x00778AAE
+		// Token: 0x0603A743 RID: 239427 RVA: 0x007DE9AA File Offset: 0x007DCBAA
 		public IChangeElementalBoxStatePlayerTargetT AsIChangeElementalBoxStatePlayerTarget()
 		{
 			return this.As<IChangeElementalBoxStatePlayerTargetT>();
 		}
 
-		// Token: 0x0603729F RID: 225951 RVA: 0x0077A8B6 File Offset: 0x00778AB6
+		// Token: 0x0603A744 RID: 239428 RVA: 0x007DE9B2 File Offset: 0x007DCBB2
 		public static TChangeElementalBoxStateTargetUnion FromIChangeElementalBoxStatePlayerTarget(IChangeElementalBoxStatePlayerTargetT _ichangeelementalboxstateplayertarget)
 		{
 			return new TChangeElementalBoxStateTargetUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060372A0 RID: 225952 RVA: 0x0077A8CB File Offset: 0x00778ACB
+		// Token: 0x0603A745 RID: 239429 RVA: 0x007DE9C7 File Offset: 0x007DCBC7
 		public IChangeElementalBoxStateTargetBoxIdT AsIChangeElementalBoxStateTargetBoxId()
 		{
 			return this.As<IChangeElementalBoxStateTargetBoxIdT>();
 		}
 
-		// Token: 0x060372A1 RID: 225953 RVA: 0x0077A8D3 File Offset: 0x00778AD3
+		// Token: 0x0603A746 RID: 239430 RVA: 0x007DE9CF File Offset: 0x007DCBCF
 		public static TChangeElementalBoxStateTargetUnion FromIChangeElementalBoxStateTargetBoxId(IChangeElementalBoxStateTargetBoxIdT _ichangeelementalboxstatetargetboxid)
 		{
 			return new TChangeElementalBoxStateTargetUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060372A2 RID: 225954 RVA: 0x0077A8E8 File Offset: 0x00778AE8
+		// Token: 0x0603A747 RID: 239431 RVA: 0x007DE9E4 File Offset: 0x007DCBE4
 		public static int Pack(FlatBufferBuilder builder, TChangeElementalBoxStateTargetUnion _o)
 		{
 			TChangeElementalBoxStateTarget type = _o.Type;

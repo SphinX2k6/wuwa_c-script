@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006811 RID: 26641
+	// Token: 0x02005761 RID: 22369
 	public class DangoBrawlOccupationTagItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604276A RID: 272234 RVA: 0x0102559C File Offset: 0x0102379C
+		// Token: 0x060372BF RID: 225983 RVA: 0x00F66AE0 File Offset: 0x00F64CE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604276B RID: 272235 RVA: 0x01025628 File Offset: 0x01023828
+		// Token: 0x060372C0 RID: 225984 RVA: 0x00F66B6C File Offset: 0x00F64D6C
 		public override void Refresh(int tagId, bool isSelected, int gridIndex)
 		{
 			DangoBrawlOccupationTag? tagConfigById = DangoBrawlConfig.Instance.GetTagConfigById(tagId);
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), tagConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C99B RID: 51611
+		// Token: 0x0200B368 RID: 45928
 		private enum EItemComponent
 		{
-			// Token: 0x0403CE3E RID: 249406
+			// Token: 0x0403772B RID: 227115
 			TexTag,
-			// Token: 0x0403CE3F RID: 249407
+			// Token: 0x0403772C RID: 227116
 			TxtTag,
-			// Token: 0x0403CE40 RID: 249408
+			// Token: 0x0403772D RID: 227117
 			SprBg
 		}
 	}

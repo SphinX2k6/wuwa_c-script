@@ -4,29 +4,29 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005143 RID: 20803
+	// Token: 0x02004113 RID: 16659
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhantomArenaMainViewOpenParam : IPhantomArenaMainViewOpenParam
 	{
-		// Token: 0x170080A6 RID: 32934
-		// (get) Token: 0x06035251 RID: 217681 RVA: 0x00C98816 File Offset: 0x00C96A16
-		// (set) Token: 0x06035252 RID: 217682 RVA: 0x00C9881E File Offset: 0x00C96A1E
+		// Token: 0x17005466 RID: 21606
+		// (get) Token: 0x0602A14D RID: 172365 RVA: 0x00BE5D16 File Offset: 0x00BE3F16
+		// (set) Token: 0x0602A14E RID: 172366 RVA: 0x00BE5D1E File Offset: 0x00BE3F1E
 		public int ChallengeId { get; set; }
 
-		// Token: 0x170080A7 RID: 32935
-		// (get) Token: 0x06035253 RID: 217683 RVA: 0x00C98827 File Offset: 0x00C96A27
-		// (set) Token: 0x06035254 RID: 217684 RVA: 0x00C9882F File Offset: 0x00C96A2F
+		// Token: 0x17005467 RID: 21607
+		// (get) Token: 0x0602A14F RID: 172367 RVA: 0x00BE5D27 File Offset: 0x00BE3F27
+		// (set) Token: 0x0602A150 RID: 172368 RVA: 0x00BE5D2F File Offset: 0x00BE3F2F
 		public EPhantomArenaChildViewName OpenView { get; set; }
 
-		// Token: 0x170080A8 RID: 32936
-		// (get) Token: 0x06035255 RID: 217685 RVA: 0x00C98838 File Offset: 0x00C96A38
-		// (set) Token: 0x06035256 RID: 217686 RVA: 0x00C98840 File Offset: 0x00C96A40
+		// Token: 0x17005468 RID: 21608
+		// (get) Token: 0x0602A151 RID: 172369 RVA: 0x00BE5D38 File Offset: 0x00BE3F38
+		// (set) Token: 0x0602A152 RID: 172370 RVA: 0x00BE5D40 File Offset: 0x00BE3F40
 		public int ActivityId { get; set; }
 
-		// Token: 0x170080A9 RID: 32937
-		// (get) Token: 0x06035257 RID: 217687 RVA: 0x00C98849 File Offset: 0x00C96A49
-		// (set) Token: 0x06035258 RID: 217688 RVA: 0x00C98851 File Offset: 0x00C96A51
+		// Token: 0x17005469 RID: 21609
+		// (get) Token: 0x0602A153 RID: 172371 RVA: 0x00BE5D49 File Offset: 0x00BE3F49
+		// (set) Token: 0x0602A154 RID: 172372 RVA: 0x00BE5D51 File Offset: 0x00BE3F51
 		public DeckInfo RecommendDeck { get; set; }
 	}
 }

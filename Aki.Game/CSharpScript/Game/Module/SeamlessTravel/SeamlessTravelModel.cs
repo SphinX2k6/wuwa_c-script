@@ -5,15 +5,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8C RID: 19596
+	// Token: 0x02003C3D RID: 15421
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SeamlessTravelModel : ModelBase
 	{
-		// Token: 0x17007CFB RID: 31995
-		// (get) Token: 0x06032A5A RID: 207450 RVA: 0x00BCF934 File Offset: 0x00BCDB34
-		// (set) Token: 0x06032A5B RID: 207451 RVA: 0x00BCF93C File Offset: 0x00BCDB3C
+		// Token: 0x170050A5 RID: 20645
+		// (get) Token: 0x0602780D RID: 161805 RVA: 0x00B14598 File Offset: 0x00B12798
+		// (set) Token: 0x0602780E RID: 161806 RVA: 0x00B145A0 File Offset: 0x00B127A0
 		public bool IsSeamlessTravel
 		{
 			get
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A5C RID: 207452 RVA: 0x00BCF977 File Offset: 0x00BCDB77
+		// Token: 0x0602780F RID: 161807 RVA: 0x00B145DB File Offset: 0x00B127DB
 		protected override bool OnClear()
 		{
 			this.ClearSeamlessTravelActor();
 			return true;
 		}
 
-		// Token: 0x06032A5D RID: 207453 RVA: 0x00BCF980 File Offset: 0x00BCDB80
+		// Token: 0x06027810 RID: 161808 RVA: 0x00B145E4 File Offset: 0x00B127E4
 		public bool AddSeamlessTravelActor(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A5E RID: 207454 RVA: 0x00BCF9D4 File Offset: 0x00BCDBD4
+		// Token: 0x06027811 RID: 161809 RVA: 0x00B14638 File Offset: 0x00B12838
 		[NullableContext(1)]
 		public bool RemoveSeamlessTravelActor(AActor actor)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A5F RID: 207455 RVA: 0x00BCFA3C File Offset: 0x00BCDC3C
+		// Token: 0x06027812 RID: 161810 RVA: 0x00B146A0 File Offset: 0x00B128A0
 		[NullableContext(1)]
 		public bool IsSeamlessTravelActor(AActor actor)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return this.SeamlessTravelActorList.IndexOf(actor) >= 0;
 		}
 
-		// Token: 0x06032A60 RID: 207456 RVA: 0x00BCFA90 File Offset: 0x00BCDC90
+		// Token: 0x06027813 RID: 161811 RVA: 0x00B146F4 File Offset: 0x00B128F4
 		public EntityHandle GetSeamlessTravelRoleEntityHandle(long creatureDataId)
 		{
 			foreach (EntityHandle entityHandle in this.SeamlessTravelPlayerTeamHandles)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return null;
 		}
 
-		// Token: 0x06032A61 RID: 207457 RVA: 0x00BCFAF8 File Offset: 0x00BCDCF8
+		// Token: 0x06027814 RID: 161812 RVA: 0x00B1475C File Offset: 0x00B1295C
 		public void CreatePromise()
 		{
 			this.MeshAssetLoadedPromise = new GameModePromise();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.SceneEffectEndedPromise = new GameModePromise();
 		}
 
-		// Token: 0x06032A62 RID: 207458 RVA: 0x00BCFBAC File Offset: 0x00BCDDAC
+		// Token: 0x06027815 RID: 161813 RVA: 0x00B14810 File Offset: 0x00B12A10
 		public void ClearPromise()
 		{
 			this.MeshAssetLoadedPromise = null;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.SceneEffectEndedPromise = null;
 		}
 
-		// Token: 0x06032A63 RID: 207459 RVA: 0x00BCFC24 File Offset: 0x00BCDE24
+		// Token: 0x06027816 RID: 161814 RVA: 0x00B14888 File Offset: 0x00B12A88
 		public void ClearSeamlessTravelActor()
 		{
 			foreach (AActor aactor in this.SeamlessTravelActorList)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.SeamlessTravelActorList.Clear();
 		}
 
-		// Token: 0x06032A64 RID: 207460 RVA: 0x00BCFC8C File Offset: 0x00BCDE8C
+		// Token: 0x06027817 RID: 161815 RVA: 0x00B148F0 File Offset: 0x00B12AF0
 		public bool GetIsKeepingCurrentMovementMode()
 		{
 			if (this.IsSeamlessTravel)
@@ -195,8 +195,8 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return false;
 		}
 
-		// Token: 0x17007CFC RID: 31996
-		// (get) Token: 0x06032A65 RID: 207461 RVA: 0x00BCFE0E File Offset: 0x00BCE00E
+		// Token: 0x170050A6 RID: 20646
+		// (get) Token: 0x06027818 RID: 161816 RVA: 0x00B14A72 File Offset: 0x00B12C72
 		[Nullable(1)]
 		public static SeamlessTravelModel Instance
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A66 RID: 207462 RVA: 0x00BCFE15 File Offset: 0x00BCE015
+		// Token: 0x06027819 RID: 161817 RVA: 0x00B14A79 File Offset: 0x00B12C79
 		[NullableContext(1)]
 		public static SeamlessTravelModel GetOrCreateInstance()
 		{
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return SeamlessTravelModel._Instance;
 		}
 
-		// Token: 0x06032A67 RID: 207463 RVA: 0x00BCFE29 File Offset: 0x00BCE029
+		// Token: 0x0602781A RID: 161818 RVA: 0x00B14A8D File Offset: 0x00B12C8D
 		public static bool CreateInstance()
 		{
 			if (SeamlessTravelModel._Instance != null)
@@ -229,139 +229,139 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return true;
 		}
 
-		// Token: 0x06032A68 RID: 207464 RVA: 0x00BCFE3F File Offset: 0x00BCE03F
+		// Token: 0x0602781B RID: 161819 RVA: 0x00B14AA3 File Offset: 0x00B12CA3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032A69 RID: 207465 RVA: 0x00BCFE41 File Offset: 0x00BCE041
+		// Token: 0x0602781C RID: 161820 RVA: 0x00B14AA5 File Offset: 0x00B12CA5
 		public static void ResetStaticDefaultValue()
 		{
 			SeamlessTravelModel._Instance = null;
 		}
 
-		// Token: 0x06032A6A RID: 207466 RVA: 0x00BCFE49 File Offset: 0x00BCE049
+		// Token: 0x0602781D RID: 161821 RVA: 0x00B14AAD File Offset: 0x00B12CAD
 		static SeamlessTravelModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SeamlessTravelModel.CreateStaticDefaultValue), new Action(SeamlessTravelModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AF26 RID: 110374
+		// Token: 0x04015883 RID: 88195
 		private bool IsSeamlessTravelInternal;
 
-		// Token: 0x0401AF27 RID: 110375
+		// Token: 0x04015884 RID: 88196
 		public bool InSeamlessTraveling;
 
-		// Token: 0x0401AF28 RID: 110376
+		// Token: 0x04015885 RID: 88197
 		public bool HasPreEnableSeamlessTravel;
 
-		// Token: 0x0401AF29 RID: 110377
+		// Token: 0x04015886 RID: 88198
 		public TimerHandle SeamlessEndHandle;
 
-		// Token: 0x0401AF2A RID: 110378
+		// Token: 0x04015887 RID: 88199
 		public SeamlessTravelContext Config;
 
-		// Token: 0x0401AF2B RID: 110379
+		// Token: 0x04015888 RID: 88200
 		public APlayerController SeamlessTravelController;
 
-		// Token: 0x0401AF2C RID: 110380
+		// Token: 0x04015889 RID: 88201
 		public AController SeamlessTravelDefaultController;
 
-		// Token: 0x0401AF2D RID: 110381
+		// Token: 0x0401588A RID: 88202
 		[Nullable(1)]
 		public List<AController> SeamlessTravelTeamDefaultController = new List<AController>();
 
-		// Token: 0x0401AF2E RID: 110382
+		// Token: 0x0401588B RID: 88203
 		public EntityHandle SeamlessTravelPlayerEntityHandle;
 
-		// Token: 0x0401AF2F RID: 110383
+		// Token: 0x0401588C RID: 88204
 		[Nullable(1)]
 		public List<EntityHandle> SeamlessTravelPlayerTeamHandles = new List<EntityHandle>();
 
-		// Token: 0x0401AF30 RID: 110384
+		// Token: 0x0401588D RID: 88205
 		public ACameraActor SeamlessTravelCamera;
 
-		// Token: 0x0401AF31 RID: 110385
+		// Token: 0x0401588E RID: 88206
 		public SeamlessTravelScreenEffect SeamlessTravelScreenEffect;
 
-		// Token: 0x0401AF32 RID: 110386
+		// Token: 0x0401588F RID: 88207
 		public bool UseTreadmill;
 
-		// Token: 0x0401AF33 RID: 110387
+		// Token: 0x04015890 RID: 88208
 		public SeamlessTravelTreadmill SeamlessTravelTreadmill;
 
-		// Token: 0x0401AF34 RID: 110388
+		// Token: 0x04015891 RID: 88209
 		public bool UseKeepKite;
 
-		// Token: 0x0401AF35 RID: 110389
+		// Token: 0x04015892 RID: 88210
 		public SeamlessTravelKeepKite SeamlessTravelKeepKite;
 
-		// Token: 0x0401AF36 RID: 110390
+		// Token: 0x04015893 RID: 88211
 		public bool UseKeepMovementMode;
 
-		// Token: 0x0401AF37 RID: 110391
+		// Token: 0x04015894 RID: 88212
 		public SeamlessTravelKeepMovementMode SeamlessTravelKeepMovementMode;
 
-		// Token: 0x0401AF38 RID: 110392
+		// Token: 0x04015895 RID: 88213
 		public SeamlessTravelPostProcess SeamlessTravelPostProcess;
 
-		// Token: 0x0401AF39 RID: 110393
+		// Token: 0x04015896 RID: 88214
 		public SeamlessTravelSceneEffect SeamlessTravelSceneEffect;
 
-		// Token: 0x0401AF3A RID: 110394
+		// Token: 0x04015897 RID: 88215
 		[Nullable(1)]
 		private readonly List<AActor> SeamlessTravelActorList = new List<AActor>();
 
-		// Token: 0x0401AF3B RID: 110395
+		// Token: 0x04015898 RID: 88216
 		[Nullable(1)]
 		public List<string> SeamlessTravelInputDistributeTags = new List<string>();
 
-		// Token: 0x0401AF3C RID: 110396
+		// Token: 0x04015899 RID: 88217
 		public GameModePromise MeshAssetLoadedPromise;
 
-		// Token: 0x0401AF3D RID: 110397
+		// Token: 0x0401589A RID: 88218
 		public GameModePromise ScreenEffectStartedPromise;
 
-		// Token: 0x0401AF3E RID: 110398
+		// Token: 0x0401589B RID: 88219
 		public GameModePromise ScreenEffectEndedPromise;
 
-		// Token: 0x0401AF3F RID: 110399
+		// Token: 0x0401589C RID: 88220
 		public GameModePromise TransitionFloorLoadedPromise;
 
-		// Token: 0x0401AF40 RID: 110400
+		// Token: 0x0401589D RID: 88221
 		public GameModePromise EnterTransitionMapPromise;
 
-		// Token: 0x0401AF41 RID: 110401
+		// Token: 0x0401589E RID: 88222
 		public GameModePromise EnterDestinationMapPromise;
 
-		// Token: 0x0401AF42 RID: 110402
+		// Token: 0x0401589F RID: 88223
 		public GameModePromise TransitionFloorUnloadedPromise;
 
-		// Token: 0x0401AF43 RID: 110403
+		// Token: 0x040158A0 RID: 88224
 		public GameModePromise EffectAssetLoadedPromise;
 
-		// Token: 0x0401AF44 RID: 110404
+		// Token: 0x040158A1 RID: 88225
 		public GameModePromise KiteInitPromise;
 
-		// Token: 0x0401AF45 RID: 110405
+		// Token: 0x040158A2 RID: 88226
 		public GameModePromise PostProcessAssetLoadedPromise;
 
-		// Token: 0x0401AF46 RID: 110406
+		// Token: 0x040158A3 RID: 88227
 		public GameModePromise PostProcessBlendedInPromise;
 
-		// Token: 0x0401AF47 RID: 110407
+		// Token: 0x040158A4 RID: 88228
 		public GameModePromise PostProcessBlendedOutPromise;
 
-		// Token: 0x0401AF48 RID: 110408
+		// Token: 0x040158A5 RID: 88229
 		public GameModePromise SceneEffectAssetLoadedPromise;
 
-		// Token: 0x0401AF49 RID: 110409
+		// Token: 0x040158A6 RID: 88230
 		public GameModePromise SceneEffectStartedPromise;
 
-		// Token: 0x0401AF4A RID: 110410
+		// Token: 0x040158A7 RID: 88231
 		public GameModePromise SceneEffectEndedPromise;
 
-		// Token: 0x0401AF4B RID: 110411
+		// Token: 0x040158A8 RID: 88232
 		private static SeamlessTravelModel _Instance;
 	}
 }

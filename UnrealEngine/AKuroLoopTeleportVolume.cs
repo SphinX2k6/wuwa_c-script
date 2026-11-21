@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018F8 RID: 6392
+	// Token: 0x020003F6 RID: 1014
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroLoopTeleportVolume")]
 	[UnrealStructLayout(1072, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1072)]
 	public class AKuroLoopTeleportVolume : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017B5A RID: 97114 RVA: 0x0022BF32 File Offset: 0x0022A132
+		// Token: 0x060063AE RID: 25518 RVA: 0x0008E936 File Offset: 0x0008CB36
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroLoopTeleportVolume._ClassPtr;
 		}
 
-		// Token: 0x06017B5B RID: 97115 RVA: 0x0022BF40 File Offset: 0x0022A140
+		// Token: 0x060063AF RID: 25519 RVA: 0x0008E944 File Offset: 0x0008CB44
 		public AKuroLoopTeleportVolume() : this(BuiltinUtils.AllocNativeUObject(AKuroLoopTeleportVolume.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017B5C RID: 97116 RVA: 0x0022BF68 File Offset: 0x0022A168
+		// Token: 0x060063B0 RID: 25520 RVA: 0x0008E96C File Offset: 0x0008CB6C
 		[NullableContext(1)]
 		public AKuroLoopTeleportVolume(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroLoopTeleportVolume.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005F82 RID: 24450
-		// (get) Token: 0x06017B5D RID: 97117 RVA: 0x0022BF9B File Offset: 0x0022A19B
-		// (set) Token: 0x06017B5E RID: 97118 RVA: 0x0022BFAB File Offset: 0x0022A1AB
+		// Token: 0x1700140F RID: 5135
+		// (get) Token: 0x060063B1 RID: 25521 RVA: 0x0008E99F File Offset: 0x0008CB9F
+		// (set) Token: 0x060063B2 RID: 25522 RVA: 0x0008E9AF File Offset: 0x0008CBAF
 		public unsafe int VolumeId
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F83 RID: 24451
-		// (get) Token: 0x06017B5F RID: 97119 RVA: 0x0022BFBC File Offset: 0x0022A1BC
-		// (set) Token: 0x06017B60 RID: 97120 RVA: 0x0022BFD0 File Offset: 0x0022A1D0
+		// Token: 0x17001410 RID: 5136
+		// (get) Token: 0x060063B3 RID: 25523 RVA: 0x0008E9C0 File Offset: 0x0008CBC0
+		// (set) Token: 0x060063B4 RID: 25524 RVA: 0x0008E9D4 File Offset: 0x0008CBD4
 		public unsafe AVolume BoundsVolume
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F84 RID: 24452
-		// (get) Token: 0x06017B61 RID: 97121 RVA: 0x0022BFE5 File Offset: 0x0022A1E5
-		// (set) Token: 0x06017B62 RID: 97122 RVA: 0x0022BFF9 File Offset: 0x0022A1F9
+		// Token: 0x17001411 RID: 5137
+		// (get) Token: 0x060063B5 RID: 25525 RVA: 0x0008E9E9 File Offset: 0x0008CBE9
+		// (set) Token: 0x060063B6 RID: 25526 RVA: 0x0008E9FD File Offset: 0x0008CBFD
 		public unsafe ALoopVolumeDynamicStreamingSource DynamicStreamingSource
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F85 RID: 24453
-		// (get) Token: 0x06017B63 RID: 97123 RVA: 0x0022C00E File Offset: 0x0022A20E
-		// (set) Token: 0x06017B64 RID: 97124 RVA: 0x0022C01E File Offset: 0x0022A21E
+		// Token: 0x17001412 RID: 5138
+		// (get) Token: 0x060063B7 RID: 25527 RVA: 0x0008EA12 File Offset: 0x0008CC12
+		// (set) Token: 0x060063B8 RID: 25528 RVA: 0x0008EA22 File Offset: 0x0008CC22
 		public unsafe float BufferDistance
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F86 RID: 24454
-		// (get) Token: 0x06017B65 RID: 97125 RVA: 0x0022C02F File Offset: 0x0022A22F
-		// (set) Token: 0x06017B66 RID: 97126 RVA: 0x0022C03F File Offset: 0x0022A23F
+		// Token: 0x17001413 RID: 5139
+		// (get) Token: 0x060063B9 RID: 25529 RVA: 0x0008EA33 File Offset: 0x0008CC33
+		// (set) Token: 0x060063BA RID: 25530 RVA: 0x0008EA43 File Offset: 0x0008CC43
 		public unsafe bool bEnabled
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F87 RID: 24455
-		// (get) Token: 0x06017B67 RID: 97127 RVA: 0x0022C050 File Offset: 0x0022A250
-		// (set) Token: 0x06017B68 RID: 97128 RVA: 0x0022C060 File Offset: 0x0022A260
+		// Token: 0x17001414 RID: 5140
+		// (get) Token: 0x060063BB RID: 25531 RVA: 0x0008EA54 File Offset: 0x0008CC54
+		// (set) Token: 0x060063BC RID: 25532 RVA: 0x0008EA64 File Offset: 0x0008CC64
 		public unsafe bool bLoopAxisX
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F88 RID: 24456
-		// (get) Token: 0x06017B69 RID: 97129 RVA: 0x0022C071 File Offset: 0x0022A271
-		// (set) Token: 0x06017B6A RID: 97130 RVA: 0x0022C081 File Offset: 0x0022A281
+		// Token: 0x17001415 RID: 5141
+		// (get) Token: 0x060063BD RID: 25533 RVA: 0x0008EA75 File Offset: 0x0008CC75
+		// (set) Token: 0x060063BE RID: 25534 RVA: 0x0008EA85 File Offset: 0x0008CC85
 		public unsafe bool bLoopAxisY
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F89 RID: 24457
-		// (get) Token: 0x06017B6B RID: 97131 RVA: 0x0022C092 File Offset: 0x0022A292
-		// (set) Token: 0x06017B6C RID: 97132 RVA: 0x0022C0A2 File Offset: 0x0022A2A2
+		// Token: 0x17001416 RID: 5142
+		// (get) Token: 0x060063BF RID: 25535 RVA: 0x0008EA96 File Offset: 0x0008CC96
+		// (set) Token: 0x060063C0 RID: 25536 RVA: 0x0008EAA6 File Offset: 0x0008CCA6
 		public unsafe bool bLoopAxisZ
 		{
 			get
@@ -150,129 +150,129 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017B6D RID: 97133 RVA: 0x0022C0B3 File Offset: 0x0022A2B3
+		// Token: 0x060063C1 RID: 25537 RVA: 0x0008EAB7 File Offset: 0x0008CCB7
 		public bool IsLoopEnabled()
 		{
 			return AKuroLoopTeleportVolume.__IsLoopEnabled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B6E RID: 97134 RVA: 0x0022C0C0 File Offset: 0x0022A2C0
+		// Token: 0x060063C2 RID: 25538 RVA: 0x0008EAC4 File Offset: 0x0008CCC4
 		public bool IsLoopAxisZ()
 		{
 			return AKuroLoopTeleportVolume.__IsLoopAxisZ_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B6F RID: 97135 RVA: 0x0022C0CD File Offset: 0x0022A2CD
+		// Token: 0x060063C3 RID: 25539 RVA: 0x0008EAD1 File Offset: 0x0008CCD1
 		public bool IsLoopAxisY()
 		{
 			return AKuroLoopTeleportVolume.__IsLoopAxisY_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B70 RID: 97136 RVA: 0x0022C0DA File Offset: 0x0022A2DA
+		// Token: 0x060063C4 RID: 25540 RVA: 0x0008EADE File Offset: 0x0008CCDE
 		public bool IsLoopAxisX()
 		{
 			return AKuroLoopTeleportVolume.__IsLoopAxisX_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B71 RID: 97137 RVA: 0x0022C0E7 File Offset: 0x0022A2E7
+		// Token: 0x060063C5 RID: 25541 RVA: 0x0008EAEB File Offset: 0x0008CCEB
 		public int GetVolumeId()
 		{
 			return AKuroLoopTeleportVolume.__GetVolumeId_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B72 RID: 97138 RVA: 0x0022C0F4 File Offset: 0x0022A2F4
+		// Token: 0x060063C6 RID: 25542 RVA: 0x0008EAF8 File Offset: 0x0008CCF8
 		public ALoopVolumeDynamicStreamingSource GetDynamicStreamingSource()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ALoopVolumeDynamicStreamingSource>(AKuroLoopTeleportVolume.__GetDynamicStreamingSource_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06017B73 RID: 97139 RVA: 0x0022C106 File Offset: 0x0022A306
+		// Token: 0x060063C7 RID: 25543 RVA: 0x0008EB0A File Offset: 0x0008CD0A
 		public float GetBufferDistance()
 		{
 			return AKuroLoopTeleportVolume.__GetBufferDistance_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017B74 RID: 97140 RVA: 0x0022C113 File Offset: 0x0022A313
+		// Token: 0x060063C8 RID: 25544 RVA: 0x0008EB17 File Offset: 0x0008CD17
 		public AVolume GetBoundsVolume()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AVolume>(AKuroLoopTeleportVolume.__GetBoundsVolume_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06017B75 RID: 97141
+		// Token: 0x060063C9 RID: 25545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLoopEnabled_Internal(IntPtr @this);
 
-		// Token: 0x06017B76 RID: 97142
+		// Token: 0x060063CA RID: 25546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLoopAxisZ_Internal(IntPtr @this);
 
-		// Token: 0x06017B77 RID: 97143
+		// Token: 0x060063CB RID: 25547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLoopAxisY_Internal(IntPtr @this);
 
-		// Token: 0x06017B78 RID: 97144
+		// Token: 0x060063CC RID: 25548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLoopAxisX_Internal(IntPtr @this);
 
-		// Token: 0x06017B79 RID: 97145
+		// Token: 0x060063CD RID: 25549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetVolumeId_Internal(IntPtr @this);
 
-		// Token: 0x06017B7A RID: 97146
+		// Token: 0x060063CE RID: 25550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDynamicStreamingSource_Internal(IntPtr @this);
 
-		// Token: 0x06017B7B RID: 97147
+		// Token: 0x060063CF RID: 25551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetBufferDistance_Internal(IntPtr @this);
 
-		// Token: 0x06017B7C RID: 97148
+		// Token: 0x060063D0 RID: 25552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetBoundsVolume_Internal(IntPtr @this);
 
-		// Token: 0x06017B7D RID: 97149 RVA: 0x0022C125 File Offset: 0x0022A325
+		// Token: 0x060063D1 RID: 25553 RVA: 0x0008EB29 File Offset: 0x0008CD29
 		static AKuroLoopTeleportVolume()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroLoopTeleportVolume");
 		}
 
-		// Token: 0x06017B7E RID: 97150 RVA: 0x0022C133 File Offset: 0x0022A333
+		// Token: 0x060063D2 RID: 25554 RVA: 0x0008EB37 File Offset: 0x0008CD37
 		protected AKuroLoopTeleportVolume(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CDF6 RID: 52726
+		// Token: 0x04002A21 RID: 10785
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroLoopTeleportVolume";
 
-		// Token: 0x0400CDF7 RID: 52727
+		// Token: 0x04002A22 RID: 10786
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CDF8 RID: 52728
+		// Token: 0x04002A23 RID: 10787
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CDF9 RID: 52729
+		// Token: 0x04002A24 RID: 10788
 		internal static int __PropertyOffset_VolumeId;
 
-		// Token: 0x0400CDFA RID: 52730
+		// Token: 0x04002A25 RID: 10789
 		internal static int __PropertyOffset_BoundsVolume;
 
-		// Token: 0x0400CDFB RID: 52731
+		// Token: 0x04002A26 RID: 10790
 		internal static int __PropertyOffset_DynamicStreamingSource;
 
-		// Token: 0x0400CDFC RID: 52732
+		// Token: 0x04002A27 RID: 10791
 		internal static int __PropertyOffset_BufferDistance;
 
-		// Token: 0x0400CDFD RID: 52733
+		// Token: 0x04002A28 RID: 10792
 		internal static int __PropertyOffset_bEnabled;
 
-		// Token: 0x0400CDFE RID: 52734
+		// Token: 0x04002A29 RID: 10793
 		internal static int __PropertyOffset_bLoopAxisX;
 
-		// Token: 0x0400CDFF RID: 52735
+		// Token: 0x04002A2A RID: 10794
 		internal static int __PropertyOffset_bLoopAxisY;
 
-		// Token: 0x0400CE00 RID: 52736
+		// Token: 0x04002A2B RID: 10795
 		internal static int __PropertyOffset_bLoopAxisZ;
 	}
 }

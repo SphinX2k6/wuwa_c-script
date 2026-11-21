@@ -11,15 +11,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AFA RID: 27386
+	// Token: 0x02005C72 RID: 23666
 	public class LevelEventCaptureRequest : LevelEventBase
 	{
-		// Token: 0x06044020 RID: 278560 RVA: 0x010B29E9 File Offset: 0x010B0BE9
+		// Token: 0x0603A172 RID: 237938 RVA: 0x0105C2B9 File Offset: 0x0105A4B9
 		public LevelEventCaptureRequest(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044021 RID: 278561 RVA: 0x010B2A00 File Offset: 0x010B0C00
+		// Token: 0x0603A173 RID: 237939 RVA: 0x0105C2D0 File Offset: 0x0105A4D0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(false, false, true);
 		}
 
-		// Token: 0x06044022 RID: 278562 RVA: 0x010B2D8C File Offset: 0x010B0F8C
+		// Token: 0x0603A174 RID: 237940 RVA: 0x0105C65C File Offset: 0x0105A85C
 		[NullableContext(1)]
 		private void SendGameplayEvent(ActionCaptureRequest config, int entityId)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelGeneralController.Instance.ExecuteActionsNew(list, EntityContext.Create(entityId, null), null);
 		}
 
-		// Token: 0x06044023 RID: 278563 RVA: 0x010B2DD4 File Offset: 0x010B0FD4
+		// Token: 0x0603A175 RID: 237941 RVA: 0x0105C6A4 File Offset: 0x0105A8A4
 		private void HandleCaptureSuccess(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -165,14 +165,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			component.ExecuteCapture(this.SuccessEventGroup, null);
 		}
 
-		// Token: 0x06044024 RID: 278564 RVA: 0x010B2E09 File Offset: 0x010B1009
+		// Token: 0x0603A176 RID: 237942 RVA: 0x0105C6D9 File Offset: 0x0105A8D9
 		protected override void OnReset()
 		{
 			this.SuccessEventGroup = null;
 			this.EntityId = 0;
 		}
 
-		// Token: 0x06044025 RID: 278565 RVA: 0x010B2E1C File Offset: 0x010B101C
+		// Token: 0x0603A177 RID: 237943 RVA: 0x0105C6EC File Offset: 0x0105A8EC
 		public static void CollectInViewport()
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventCaptureRequest.QuickCollect(list);
 		}
 
-		// Token: 0x06044026 RID: 278566 RVA: 0x010B2EF8 File Offset: 0x010B10F8
+		// Token: 0x0603A178 RID: 237944 RVA: 0x0105C7C8 File Offset: 0x0105A9C8
 		private static UniTask<bool> QuickCollect([Nullable(1)] List<int> entityIds)
 		{
 			LevelEventCaptureRequest.<QuickCollect>d__8 <QuickCollect>d__;
@@ -216,11 +216,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <QuickCollect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040238AA RID: 145578
+		// Token: 0x0401EB4C RID: 125772
 		[Nullable(2)]
 		private string SuccessEventGroup = "";
 
-		// Token: 0x040238AB RID: 145579
+		// Token: 0x0401EB4D RID: 125773
 		private int EntityId;
 	}
 }

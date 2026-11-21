@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Skin;
 using UnrealEngine;
 
-// Token: 0x0200198E RID: 6542
+// Token: 0x02000E4B RID: 3659
 public class SmallItemGridRoleHeadComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF29 RID: 48937 RVA: 0x002B3570 File Offset: 0x002B1770
+	// Token: 0x06009331 RID: 37681 RVA: 0x002BE4F4 File Offset: 0x002BC6F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,21 +25,21 @@ public class SmallItemGridRoleHeadComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF2A RID: 48938 RVA: 0x002B35FA File Offset: 0x002B17FA
+	// Token: 0x06009332 RID: 37682 RVA: 0x002BE57E File Offset: 0x002BC77E
 	protected override void OnStart()
 	{
 		this.RefreshSpriteBg();
 		this.RefreshLightBg();
 	}
 
-	// Token: 0x0600BF2B RID: 48939 RVA: 0x002B3608 File Offset: 0x002B1808
+	// Token: 0x06009333 RID: 37683 RVA: 0x002BE58C File Offset: 0x002BC78C
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemRoleS";
 	}
 
-	// Token: 0x0600BF2C RID: 48940 RVA: 0x002B3610 File Offset: 0x002B1810
+	// Token: 0x06009334 RID: 37684 RVA: 0x002BE594 File Offset: 0x002BC794
 	[NullableContext(2)]
 	protected override void OnRefresh(object roleSkinId)
 	{
@@ -65,7 +65,7 @@ public class SmallItemGridRoleHeadComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BF2D RID: 48941 RVA: 0x002B36B4 File Offset: 0x002B18B4
+	// Token: 0x06009335 RID: 37685 RVA: 0x002BE638 File Offset: 0x002BC838
 	private void RefreshSpriteBg()
 	{
 		UUISprite sprite = base.GetSprite(2);
@@ -74,7 +74,7 @@ public class SmallItemGridRoleHeadComponent : SmallItemGridComponent
 		this.SetSpriteByPath(visionHeadSprBgA, sprite, false, null, null);
 	}
 
-	// Token: 0x0600BF2E RID: 48942 RVA: 0x002B36F0 File Offset: 0x002B18F0
+	// Token: 0x06009336 RID: 37686 RVA: 0x002BE674 File Offset: 0x002BC874
 	private void RefreshLightBg()
 	{
 		UUISprite sprite = base.GetSprite(1);
@@ -83,16 +83,16 @@ public class SmallItemGridRoleHeadComponent : SmallItemGridComponent
 		this.SetSpriteByPath(visionHeadLightBgA, sprite, false, null, null);
 	}
 
-	// Token: 0x02007ECC RID: 32460
+	// Token: 0x0200705B RID: 28763
 	private class EChildType
 	{
-		// Token: 0x0402970E RID: 169742
+		// Token: 0x04024A4B RID: 150091
 		public const int RoleHeadTexture = 0;
 
-		// Token: 0x0402970F RID: 169743
+		// Token: 0x04024A4C RID: 150092
 		public const int LightSprite = 1;
 
-		// Token: 0x04029710 RID: 169744
+		// Token: 0x04024A4D RID: 150093
 		public const int SpriteBg = 2;
 	}
 }

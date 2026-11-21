@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x020068FF RID: 26879
+	// Token: 0x0200584F RID: 22607
 	public enum EBuffTabName
 	{
-		// Token: 0x04022E50 RID: 142928
+		// Token: 0x0401D6AC RID: 120492
 		Normal,
-		// Token: 0x04022E51 RID: 142929
+		// Token: 0x0401D6AD RID: 120493
 		Powerful
 	}
 }

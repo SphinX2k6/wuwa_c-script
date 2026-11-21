@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020032CB RID: 13003
+// Token: 0x0200283C RID: 10300
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleGravityComponent : BaseGravityComponent
 {
-	// Token: 0x0601C405 RID: 115717 RVA: 0x007E03CC File Offset: 0x007DE5CC
+	// Token: 0x0601A07A RID: 106618 RVA: 0x008070B0 File Offset: 0x008052B0
 	protected override bool OnStart()
 	{
 		this.VehicleMoveComp = base.Entity.GetComponent<VehicleMoveComponent>();
@@ -20,7 +20,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		return true;
 	}
 
-	// Token: 0x0601C406 RID: 115718 RVA: 0x007E0425 File Offset: 0x007DE625
+	// Token: 0x0601A07B RID: 106619 RVA: 0x00807109 File Offset: 0x00805309
 	protected override bool OnEnd()
 	{
 		this.VehicleMoveComp = null;
@@ -29,7 +29,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601C407 RID: 115719 RVA: 0x007E0442 File Offset: 0x007DE642
+	// Token: 0x0601A07C RID: 106620 RVA: 0x00807126 File Offset: 0x00805326
 	protected override void ApplyGravityToMoveComp(Vector direction, bool clearGround = true, float overrideSmoothTime = -1f, bool withoutRotate = false)
 	{
 		if (this.VehicleMoveComp == null)
@@ -44,7 +44,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		this.VehicleMoveComp.SetGravityDirect(direction, overrideSmoothTime);
 	}
 
-	// Token: 0x0601C408 RID: 115720 RVA: 0x007E046C File Offset: 0x007DE66C
+	// Token: 0x0601A07D RID: 106621 RVA: 0x00807150 File Offset: 0x00805350
 	public void OnPassengerLeave(Entity entity)
 	{
 		if (!this.NeedResetPassengerGravity)
@@ -64,7 +64,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		}
 	}
 
-	// Token: 0x0601C409 RID: 115721 RVA: 0x007E04C8 File Offset: 0x007DE6C8
+	// Token: 0x0601A07E RID: 106622 RVA: 0x008071AC File Offset: 0x008053AC
 	public void SetGravityDirectForVehicle(int priority, IVector gravity, bool needResetPassengerGravity = false, float overrideSmoothTime = -1f, bool withoutRotate = false)
 	{
 		this.NeedResetPassengerGravity = needResetPassengerGravity;
@@ -72,7 +72,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		this.SyncPassengerGravity(gravity, priority);
 	}
 
-	// Token: 0x0601C40A RID: 115722 RVA: 0x007E04E6 File Offset: 0x007DE6E6
+	// Token: 0x0601A07F RID: 106623 RVA: 0x008071CA File Offset: 0x008053CA
 	public void StopGravityDirectForVehicle(int priority)
 	{
 		this.NeedResetPassengerGravity = false;
@@ -80,7 +80,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		this.SyncPassengerGravityStop(priority);
 	}
 
-	// Token: 0x0601C40B RID: 115723 RVA: 0x007E0504 File Offset: 0x007DE704
+	// Token: 0x0601A080 RID: 106624 RVA: 0x008071E8 File Offset: 0x008053E8
 	private void SyncPassengerGravity(IVector gravity, int priority)
 	{
 		if (this.PerformComp == null)
@@ -98,7 +98,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		}
 	}
 
-	// Token: 0x0601C40C RID: 115724 RVA: 0x007E0588 File Offset: 0x007DE788
+	// Token: 0x0601A081 RID: 106625 RVA: 0x0080726C File Offset: 0x0080546C
 	private void SyncPassengerGravityStop(int priority)
 	{
 		if (this.PerformComp == null)
@@ -116,7 +116,7 @@ public class VehicleGravityComponent : BaseGravityComponent
 		}
 	}
 
-	// Token: 0x0601C40D RID: 115725 RVA: 0x007E060C File Offset: 0x007DE80C
+	// Token: 0x0601A082 RID: 106626 RVA: 0x008072F0 File Offset: 0x008054F0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -124,43 +124,54 @@ public class VehicleGravityComponent : BaseGravityComponent
 			return false;
 		}
 		VehicleGravityComponent vehicleGravityComponent = (VehicleGravityComponent)componentTemplate;
-		if (base.CanResetComponentProperty("VehicleMoveComp"))
+		if (vehicleGravityComponent.VehicleMoveComp == null)
 		{
-			if (vehicleGravityComponent.VehicleMoveComp == null)
-			{
-				this.VehicleMoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.VehicleMoveComp), "VehicleMoveComp"))
-			{
-				return false;
-			}
+			this.VehicleMoveComp = null;
 		}
-		if (base.CanResetComponentProperty("PerformComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMoveComp), "VehicleMoveComp"))
 		{
-			if (vehicleGravityComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("NeedResetPassengerGravity"))
+		if (vehicleGravityComponent.PerformComp == null)
 		{
-			this.NeedResetPassengerGravity = vehicleGravityComponent.NeedResetPassengerGravity;
+			this.PerformComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
+		{
+			return false;
+		}
+		this.NeedResetPassengerGravity = vehicleGravityComponent.NeedResetPassengerGravity;
 		return true;
 	}
 
-	// Token: 0x0400DF96 RID: 57238
+	// Token: 0x17002A52 RID: 10834
+	// (get) Token: 0x0601A083 RID: 106627 RVA: 0x00807372 File Offset: 0x00805572
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A53 RID: 10835
+	// (get) Token: 0x0601A084 RID: 106628 RVA: 0x00807375 File Offset: 0x00805575
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E439 RID: 58425
 	[Nullable(2)]
 	private VehicleMoveComponent VehicleMoveComp;
 
-	// Token: 0x0400DF97 RID: 57239
+	// Token: 0x0400E43A RID: 58426
 	[Nullable(2)]
 	private BaseVehiclePerformComponent PerformComp;
 
-	// Token: 0x0400DF98 RID: 57240
+	// Token: 0x0400E43B RID: 58427
 	public bool NeedResetPassengerGravity;
 }

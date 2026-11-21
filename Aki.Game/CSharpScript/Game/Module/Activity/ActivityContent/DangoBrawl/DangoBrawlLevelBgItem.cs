@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200681C RID: 26652
+	// Token: 0x0200576C RID: 22380
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlLevelBgItem : UiPanelBase
 	{
-		// Token: 0x17009739 RID: 38713
-		// (get) Token: 0x06042802 RID: 272386 RVA: 0x01028471 File Offset: 0x01026671
-		// (set) Token: 0x06042803 RID: 272387 RVA: 0x01028479 File Offset: 0x01026679
+		// Token: 0x17006A7A RID: 27258
+		// (get) Token: 0x06037357 RID: 226135 RVA: 0x00F699B5 File Offset: 0x00F67BB5
+		// (set) Token: 0x06037358 RID: 226136 RVA: 0x00F699BD File Offset: 0x00F67BBD
 		public float SpineAnimPlayDelay
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042804 RID: 272388 RVA: 0x01028494 File Offset: 0x01026694
+		// Token: 0x06037359 RID: 226137 RVA: 0x00F699D8 File Offset: 0x00F67BD8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042805 RID: 272389 RVA: 0x010284FD File Offset: 0x010266FD
+		// Token: 0x0603735A RID: 226138 RVA: 0x00F69A41 File Offset: 0x00F67C41
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06042806 RID: 272390 RVA: 0x01028510 File Offset: 0x01026710
+		// Token: 0x0603735B RID: 226139 RVA: 0x00F69A54 File Offset: 0x00F67C54
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearPendingSpinePlay();
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06042807 RID: 272391 RVA: 0x01028544 File Offset: 0x01026744
+		// Token: 0x0603735C RID: 226140 RVA: 0x00F69A88 File Offset: 0x00F67C88
 		public void PlaySequence(string sequenceName)
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -75,20 +75,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 		}
 
-		// Token: 0x06042808 RID: 272392 RVA: 0x0102856D File Offset: 0x0102676D
+		// Token: 0x0603735D RID: 226141 RVA: 0x00F69AB1 File Offset: 0x00F67CB1
 		public void PlayClose()
 		{
 			this.PlaySequence("Close");
 		}
 
-		// Token: 0x06042809 RID: 272393 RVA: 0x0102857C File Offset: 0x0102677C
+		// Token: 0x0603735E RID: 226142 RVA: 0x00F69AC0 File Offset: 0x00F67CC0
 		public void Refresh(DangoBrawlLevelData levelData)
 		{
 			this.SetSpriteByPath(levelData.BgNumIcon, base.GetSprite(0), false, null, null);
 			this.RefreshSpine(levelData.FirstSpineAtlasPath, levelData.FirstSpineSkeletonDataPath, levelData.FirstSpineAnim, levelData.FirstSpineLoopAnim);
 		}
 
-		// Token: 0x0604280A RID: 272394 RVA: 0x010285C8 File Offset: 0x010267C8
+		// Token: 0x0603735F RID: 226143 RVA: 0x00F69B0C File Offset: 0x00F67D0C
 		public void RefreshSpine(string atlasPath, string skeletonPath, string spineAnim, string spineLoopAnim)
 		{
 			DangoBrawlLevelBgItem.<>c__DisplayClass23_0 CS$<>8__locals1 = new DangoBrawlLevelBgItem.<>c__DisplayClass23_0();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0604280B RID: 272395 RVA: 0x01028624 File Offset: 0x01026824
+		// Token: 0x06037360 RID: 226144 RVA: 0x00F69B68 File Offset: 0x00F67D68
 		private UniTask RefreshSpineAsync(string atlasPath, string skeletonPath, string spineAnim, string spineLoopAnim)
 		{
 			DangoBrawlLevelBgItem.<RefreshSpineAsync>d__24 <RefreshSpineAsync>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604280C RID: 272396 RVA: 0x01028688 File Offset: 0x01026888
+		// Token: 0x06037361 RID: 226145 RVA: 0x00F69BCC File Offset: 0x00F67DCC
 		public void PlaySequenceThenSpine(string sequenceName, float delayTime = 0f)
 		{
 			this.SpineAnimPlayDelay = delayTime;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.DoPlaySequenceThenSpine(sequenceName);
 		}
 
-		// Token: 0x0604280D RID: 272397 RVA: 0x010286C2 File Offset: 0x010268C2
+		// Token: 0x06037362 RID: 226146 RVA: 0x00F69C06 File Offset: 0x00F67E06
 		private void DoPlaySequenceThenSpine(string sequenceName)
 		{
 			this.HoldSpineAtAnimFirstFrame(this.SpineAnim);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.PlaySpineAnimDelay();
 		}
 
-		// Token: 0x0604280E RID: 272398 RVA: 0x010286E5 File Offset: 0x010268E5
+		// Token: 0x06037363 RID: 226147 RVA: 0x00F69C29 File Offset: 0x00F67E29
 		private void PlaySpineAnimDelay()
 		{
 			this.CancelSpineAnimPlayTimer();
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}, this.SpineAnimDelayTime * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0604280F RID: 272399 RVA: 0x0102871D File Offset: 0x0102691D
+		// Token: 0x06037364 RID: 226148 RVA: 0x00F69C61 File Offset: 0x00F67E61
 		private void CancelSpineAnimPlayTimer()
 		{
 			TimerHandle spineAnimPlayTimer = this.SpineAnimPlayTimer;
@@ -171,14 +171,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SpineAnimPlayTimer = null;
 		}
 
-		// Token: 0x06042810 RID: 272400 RVA: 0x01028738 File Offset: 0x01026938
+		// Token: 0x06037365 RID: 226149 RVA: 0x00F69C7C File Offset: 0x00F67E7C
 		private void ClearPendingSpinePlay()
 		{
 			this.PendingSpinePlay = false;
 			this.PendingSequenceName = "";
 		}
 
-		// Token: 0x06042811 RID: 272401 RVA: 0x0102874C File Offset: 0x0102694C
+		// Token: 0x06037366 RID: 226150 RVA: 0x00F69C90 File Offset: 0x00F67E90
 		[return: Nullable(0)]
 		private UniTask<bool> LoadSpineAsync(string atlasPath, string skeletonPath)
 		{
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <LoadSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042812 RID: 272402 RVA: 0x0102879F File Offset: 0x0102699F
+		// Token: 0x06037367 RID: 226151 RVA: 0x00F69CE3 File Offset: 0x00F67EE3
 		private void CancelLoadSpine()
 		{
 			LoadAsyncPromise<USpineAtlasAsset> spineAtlasPromise = this.SpineAtlasPromise;
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SpineSkeletonDataPromise = null;
 		}
 
-		// Token: 0x06042813 RID: 272403 RVA: 0x010287D4 File Offset: 0x010269D4
+		// Token: 0x06037368 RID: 226152 RVA: 0x00F69D18 File Offset: 0x00F67F18
 		private void HoldSpineAtAnimFirstFrame(string anim)
 		{
 			this.ClearSpineTrack();
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SpineTrackEntry = utrackEntry;
 		}
 
-		// Token: 0x06042814 RID: 272404 RVA: 0x01028854 File Offset: 0x01026A54
+		// Token: 0x06037369 RID: 226153 RVA: 0x00F69D98 File Offset: 0x00F67F98
 		private void ResumeHeldSpineAnimThenLoop()
 		{
 			if (this.IsLoading)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.PlaySpineAnimThenLoop(this.SpineAnim, this.SpineLoopAnim);
 		}
 
-		// Token: 0x06042815 RID: 272405 RVA: 0x010288DC File Offset: 0x01026ADC
+		// Token: 0x0603736A RID: 226154 RVA: 0x00F69E20 File Offset: 0x00F68020
 		private void PlaySpineAnimThenLoop(string anim, string loopAnim)
 		{
 			if (this.IsLoading)
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042816 RID: 272406 RVA: 0x01028970 File Offset: 0x01026B70
+		// Token: 0x0603736B RID: 226155 RVA: 0x00F69EB4 File Offset: 0x00F680B4
 		private void OnSpineAnimComplete(UTrackEntry entry)
 		{
 			if (entry != this.SpineTrackEntry)
@@ -305,32 +305,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			spine.SetAnimation(0, this.SpineLoopAnim, true);
 		}
 
-		// Token: 0x06042817 RID: 272407 RVA: 0x010289BE File Offset: 0x01026BBE
+		// Token: 0x0603736C RID: 226156 RVA: 0x00F69F02 File Offset: 0x00F68102
 		private void ClearSpineTrack()
 		{
 			this.SpineTrackEntry = null;
 		}
 
-		// Token: 0x04022A70 RID: 141936
+		// Token: 0x0401D2CD RID: 119501
 		private string LoadedAtlasPath = "";
 
-		// Token: 0x04022A71 RID: 141937
+		// Token: 0x0401D2CE RID: 119502
 		private string LoadedSkeletonPath = "";
 
-		// Token: 0x04022A72 RID: 141938
+		// Token: 0x0401D2CF RID: 119503
 		private string SpineAnim = "";
 
-		// Token: 0x04022A73 RID: 141939
+		// Token: 0x0401D2D0 RID: 119504
 		private string SpineLoopAnim = "";
 
-		// Token: 0x04022A74 RID: 141940
+		// Token: 0x0401D2D1 RID: 119505
 		private bool IsLoading;
 
-		// Token: 0x04022A75 RID: 141941
+		// Token: 0x0401D2D2 RID: 119506
 		[Nullable(2)]
 		private UTrackEntry SpineTrackEntry;
 
-		// Token: 0x04022A76 RID: 141942
+		// Token: 0x0401D2D3 RID: 119507
 		[Nullable(new byte[]
 		{
 			2,
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineAtlasAsset> SpineAtlasPromise;
 
-		// Token: 0x04022A77 RID: 141943
+		// Token: 0x0401D2D4 RID: 119508
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,30 +346,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineSkeletonDataAsset> SpineSkeletonDataPromise;
 
-		// Token: 0x04022A78 RID: 141944
+		// Token: 0x0401D2D5 RID: 119509
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04022A79 RID: 141945
+		// Token: 0x0401D2D6 RID: 119510
 		private float SpineAnimDelayTime;
 
-		// Token: 0x04022A7A RID: 141946
+		// Token: 0x0401D2D7 RID: 119511
 		[Nullable(2)]
 		private TimerHandle SpineAnimPlayTimer;
 
-		// Token: 0x04022A7B RID: 141947
+		// Token: 0x0401D2D8 RID: 119512
 		private bool PendingSpinePlay;
 
-		// Token: 0x04022A7C RID: 141948
+		// Token: 0x0401D2D9 RID: 119513
 		private string PendingSequenceName = "";
 
-		// Token: 0x0200C9B1 RID: 51633
+		// Token: 0x0200B37E RID: 45950
 		[NullableContext(0)]
 		private enum EBgItemComponent
 		{
-			// Token: 0x0403CECB RID: 249547
+			// Token: 0x040377B8 RID: 227256
 			SprLevelNum,
-			// Token: 0x0403CECC RID: 249548
+			// Token: 0x040377B9 RID: 227257
 			RoleSpine
 		}
 	}

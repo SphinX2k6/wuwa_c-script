@@ -2,14 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C75 RID: 23669
+	// Token: 0x0200629D RID: 25245
 	public enum TNpcSpecialMark : byte
 	{
-		// Token: 0x0400F4CC RID: 62668
+		// Token: 0x040101FF RID: 66047
 		NONE,
-		// Token: 0x0400F4CD RID: 62669
+		// Token: 0x04010200 RID: 66048
 		INpcSpecialMarkIgnoreCameraHideNpc,
-		// Token: 0x0400F4CE RID: 62670
-		INpcSpecialMarkTrafficLight
+		// Token: 0x04010201 RID: 66049
+		INpcSpecialMarkTrafficLight,
+		// Token: 0x04010202 RID: 66050
+		INpcSpecialMarkTriggerBlueprintFootprintEvent
 	}
 }

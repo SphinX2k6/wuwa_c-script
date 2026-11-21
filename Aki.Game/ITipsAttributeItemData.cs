@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018D5 RID: 6357
+// Token: 0x02000D8E RID: 3470
 [NullableContext(1)]
 public interface ITipsAttributeItemData
 {
-	// Token: 0x17000F76 RID: 3958
-	// (get) Token: 0x0600BA7F RID: 47743
-	// (set) Token: 0x0600BA80 RID: 47744
+	// Token: 0x17000F99 RID: 3993
+	// (get) Token: 0x06008E68 RID: 36456
+	// (set) Token: 0x06008E69 RID: 36457
 	int Id { get; set; }
 
-	// Token: 0x17000F77 RID: 3959
-	// (get) Token: 0x0600BA81 RID: 47745
-	// (set) Token: 0x0600BA82 RID: 47746
+	// Token: 0x17000F9A RID: 3994
+	// (get) Token: 0x06008E6A RID: 36458
+	// (set) Token: 0x06008E6B RID: 36459
 	bool IsMainAttribute { get; set; }
 
-	// Token: 0x17000F78 RID: 3960
-	// (get) Token: 0x0600BA83 RID: 47747
-	// (set) Token: 0x0600BA84 RID: 47748
+	// Token: 0x17000F9B RID: 3995
+	// (get) Token: 0x06008E6C RID: 36460
+	// (set) Token: 0x06008E6D RID: 36461
 	string Name { get; set; }
 
-	// Token: 0x17000F79 RID: 3961
-	// (get) Token: 0x0600BA85 RID: 47749
-	// (set) Token: 0x0600BA86 RID: 47750
+	// Token: 0x17000F9C RID: 3996
+	// (get) Token: 0x06008E6E RID: 36462
+	// (set) Token: 0x06008E6F RID: 36463
 	string IconPath { get; set; }
 
-	// Token: 0x17000F7A RID: 3962
-	// (get) Token: 0x0600BA87 RID: 47751
-	// (set) Token: 0x0600BA88 RID: 47752
+	// Token: 0x17000F9D RID: 3997
+	// (get) Token: 0x06008E70 RID: 36464
+	// (set) Token: 0x06008E71 RID: 36465
 	double Value { get; set; }
 
-	// Token: 0x17000F7B RID: 3963
-	// (get) Token: 0x0600BA89 RID: 47753
-	// (set) Token: 0x0600BA8A RID: 47754
+	// Token: 0x17000F9E RID: 3998
+	// (get) Token: 0x06008E72 RID: 36466
+	// (set) Token: 0x06008E73 RID: 36467
 	bool IsRatio { get; set; }
 }

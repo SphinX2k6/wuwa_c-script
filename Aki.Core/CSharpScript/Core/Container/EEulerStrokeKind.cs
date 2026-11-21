@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x02000154 RID: 340
+	// Token: 0x02000159 RID: 345
 	public enum EEulerStrokeKind
 	{
-		// Token: 0x040006F7 RID: 1783
+		// Token: 0x04000706 RID: 1798
 		Circuit,
-		// Token: 0x040006F8 RID: 1784
+		// Token: 0x04000707 RID: 1799
 		Path,
-		// Token: 0x040006F9 RID: 1785
+		// Token: 0x04000708 RID: 1800
 		None
 	}
 }

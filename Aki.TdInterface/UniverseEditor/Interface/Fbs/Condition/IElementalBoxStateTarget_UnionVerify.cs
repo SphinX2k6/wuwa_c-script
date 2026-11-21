@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C0F RID: 19471
+	// Token: 0x020050FC RID: 20732
 	public static class IElementalBoxStateTarget_UnionVerify
 	{
-		// Token: 0x0601ED66 RID: 126310 RVA: 0x004514FC File Offset: 0x0044F6FC
+		// Token: 0x0602094C RID: 133452 RVA: 0x00484B64 File Offset: 0x00482D64
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AB8 RID: 23224
+	// Token: 0x020060C5 RID: 24773
 	public class ITimeStopComponentT
 	{
-		// Token: 0x1700AEE6 RID: 44774
-		// (get) Token: 0x0602791E RID: 162078 RVA: 0x00571555 File Offset: 0x0056F755
-		// (set) Token: 0x0602791F RID: 162079 RVA: 0x0057155D File Offset: 0x0056F75D
+		// Token: 0x1700B822 RID: 47138
+		// (get) Token: 0x06029EA4 RID: 171684 RVA: 0x005B883D File Offset: 0x005B6A3D
+		// (set) Token: 0x06029EA5 RID: 171685 RVA: 0x005B8845 File Offset: 0x005B6A45
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AEE7 RID: 44775
-		// (get) Token: 0x06027920 RID: 162080 RVA: 0x00571566 File Offset: 0x0056F766
-		// (set) Token: 0x06027921 RID: 162081 RVA: 0x0057156E File Offset: 0x0056F76E
+		// Token: 0x1700B823 RID: 47139
+		// (get) Token: 0x06029EA6 RID: 171686 RVA: 0x005B884E File Offset: 0x005B6A4E
+		// (set) Token: 0x06029EA7 RID: 171687 RVA: 0x005B8856 File Offset: 0x005B6A56
 		public string ActiveState { get; set; }
 
-		// Token: 0x1700AEE8 RID: 44776
-		// (get) Token: 0x06027922 RID: 162082 RVA: 0x00571577 File Offset: 0x0056F777
-		// (set) Token: 0x06027923 RID: 162083 RVA: 0x0057157F File Offset: 0x0056F77F
+		// Token: 0x1700B824 RID: 47140
+		// (get) Token: 0x06029EA8 RID: 171688 RVA: 0x005B885F File Offset: 0x005B6A5F
+		// (set) Token: 0x06029EA9 RID: 171689 RVA: 0x005B8867 File Offset: 0x005B6A67
 		public int StopTime { get; set; }
 
-		// Token: 0x1700AEE9 RID: 44777
-		// (get) Token: 0x06027924 RID: 162084 RVA: 0x00571588 File Offset: 0x0056F788
-		// (set) Token: 0x06027925 RID: 162085 RVA: 0x00571590 File Offset: 0x0056F790
+		// Token: 0x1700B825 RID: 47141
+		// (get) Token: 0x06029EAA RID: 171690 RVA: 0x005B8870 File Offset: 0x005B6A70
+		// (set) Token: 0x06029EAB RID: 171691 RVA: 0x005B8878 File Offset: 0x005B6A78
 		public ITimeStopTargetT Target { get; set; }
 
-		// Token: 0x1700AEEA RID: 44778
-		// (get) Token: 0x06027926 RID: 162086 RVA: 0x00571599 File Offset: 0x0056F799
-		// (set) Token: 0x06027927 RID: 162087 RVA: 0x005715A1 File Offset: 0x0056F7A1
+		// Token: 0x1700B826 RID: 47142
+		// (get) Token: 0x06029EAC RID: 171692 RVA: 0x005B8881 File Offset: 0x005B6A81
+		// (set) Token: 0x06029EAD RID: 171693 RVA: 0x005B8889 File Offset: 0x005B6A89
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027928 RID: 162088 RVA: 0x005715AA File Offset: 0x0056F7AA
+		// Token: 0x06029EAE RID: 171694 RVA: 0x005B8892 File Offset: 0x005B6A92
 		public ITimeStopComponentT()
 		{
 			this.Disabled = false;

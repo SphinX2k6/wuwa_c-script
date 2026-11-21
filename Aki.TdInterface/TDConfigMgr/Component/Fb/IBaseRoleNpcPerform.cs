@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BCE RID: 3022
+	// Token: 0x02000C9C RID: 3228
 	public class IBaseRoleNpcPerform : ISpecialNpcPerformType
 	{
-		// Token: 0x06004578 RID: 17784 RVA: 0x000AFEB1 File Offset: 0x000AE0B1
-		[NullableContext(1)]
+		// Token: 0x060049D1 RID: 18897 RVA: 0x000B9F75 File Offset: 0x000B8175
 		public static IBaseRoleNpcPerform Create(IBaseRoleNpcPerform? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001399 RID: 5017
-		// (get) Token: 0x06004579 RID: 17785 RVA: 0x000AFED0 File Offset: 0x000AE0D0
+		// Token: 0x17001494 RID: 5268
+		// (get) Token: 0x060049D2 RID: 18898 RVA: 0x000B9F94 File Offset: 0x000B8194
 		public override ESpecialNpcType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002785 RID: 10117
+		// Token: 0x040029CD RID: 10701
 		private IBaseRoleNpcPerform Instance;
 	}
 }

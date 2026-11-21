@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F0A RID: 3850
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001020 RID: 4128
 	public class ICheckUiGameQuestCondition : IQuestCondition
 	{
-		// Token: 0x060054E6 RID: 21734 RVA: 0x000D0234 File Offset: 0x000CE434
+		// Token: 0x06005A62 RID: 23138 RVA: 0x000DC3DC File Offset: 0x000DA5DC
 		private ICheckUiGameQuestCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060054E7 RID: 21735 RVA: 0x000D026C File Offset: 0x000CE46C
+		// Token: 0x06005A63 RID: 23139 RVA: 0x000DC414 File Offset: 0x000DA614
 		public static ICheckUiGameQuestCondition Create([Nullable(2)] ICheckUiGameQuestCondition instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054E8 RID: 21736 RVA: 0x000D027F File Offset: 0x000CE47F
+		// Token: 0x06005A64 RID: 23140 RVA: 0x000DC427 File Offset: 0x000DA627
 		public static ICheckUiGameQuestCondition CreateFromSetValue([Nullable(2)] ICheckUiGameQuestCondition_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060054E9 RID: 21737 RVA: 0x000D0292 File Offset: 0x000CE492
+		// Token: 0x06005A65 RID: 23141 RVA: 0x000DC43A File Offset: 0x000DA63A
 		public new ICheckUiGameQuestCondition_SetValue ToSetValue()
 		{
 			return new ICheckUiGameQuestCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C65 RID: 7269
-		// (get) Token: 0x060054EA RID: 21738 RVA: 0x000D02BD File Offset: 0x000CE4BD
-		// (set) Token: 0x060054EB RID: 21739 RVA: 0x000D02E8 File Offset: 0x000CE4E8
+		// Token: 0x17001DFD RID: 7677
+		// (get) Token: 0x06005A66 RID: 23142 RVA: 0x000DC465 File Offset: 0x000DA665
+		// (set) Token: 0x06005A67 RID: 23143 RVA: 0x000DC490 File Offset: 0x000DA690
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C66 RID: 7270
-		// (get) Token: 0x060054EC RID: 21740 RVA: 0x000D02F8 File Offset: 0x000CE4F8
-		// (set) Token: 0x060054ED RID: 21741 RVA: 0x000D0359 File Offset: 0x000CE559
+		// Token: 0x17001DFE RID: 7678
+		// (get) Token: 0x06005A68 RID: 23144 RVA: 0x000DC4A0 File Offset: 0x000DA6A0
+		// (set) Token: 0x06005A69 RID: 23145 RVA: 0x000DC501 File Offset: 0x000DA701
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C67 RID: 7271
-		// (get) Token: 0x060054EE RID: 21742 RVA: 0x000D036E File Offset: 0x000CE56E
-		// (set) Token: 0x060054EF RID: 21743 RVA: 0x000D0395 File Offset: 0x000CE595
+		// Token: 0x17001DFF RID: 7679
+		// (get) Token: 0x06005A6A RID: 23146 RVA: 0x000DC516 File Offset: 0x000DA716
+		// (set) Token: 0x06005A6B RID: 23147 RVA: 0x000DC53D File Offset: 0x000DA73D
 		public virtual List<IUiGame> GameplayConfigs
 		{
 			get
@@ -144,18 +142,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003360 RID: 13152
+		// Token: 0x0400366D RID: 13933
 		[Nullable(2)]
 		protected new ICheckUiGameQuestCondition FbInstance;
 
-		// Token: 0x04003361 RID: 13153
+		// Token: 0x0400366E RID: 13934
 		[Nullable(2)]
 		protected new ICheckUiGameQuestCondition_SetValue PocoInterface;
 
-		// Token: 0x04003362 RID: 13154
+		// Token: 0x0400366F RID: 13935
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003363 RID: 13155
+		// Token: 0x04003670 RID: 13936
 		private bool _PreConditionsInited;
 	}
 }

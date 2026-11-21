@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007506 RID: 29958
+	// Token: 0x02007CFC RID: 31996
 	public class IVehicleEnteringNpcTargetT
 	{
-		// Token: 0x1700E354 RID: 58196
-		// (get) Token: 0x060367B8 RID: 223160 RVA: 0x00766C6C File Offset: 0x00764E6C
-		// (set) Token: 0x060367B9 RID: 223161 RVA: 0x00766C74 File Offset: 0x00764E74
+		// Token: 0x1700EF7E RID: 61310
+		// (get) Token: 0x06039BCD RID: 236493 RVA: 0x007C9EBC File Offset: 0x007C80BC
+		// (set) Token: 0x06039BCE RID: 236494 RVA: 0x007C9EC4 File Offset: 0x007C80C4
 		public EVehicleEnteringTarget Type { get; set; }
 
-		// Token: 0x1700E355 RID: 58197
-		// (get) Token: 0x060367BA RID: 223162 RVA: 0x00766C7D File Offset: 0x00764E7D
-		// (set) Token: 0x060367BB RID: 223163 RVA: 0x00766C85 File Offset: 0x00764E85
+		// Token: 0x1700EF7F RID: 61311
+		// (get) Token: 0x06039BCF RID: 236495 RVA: 0x007C9ECD File Offset: 0x007C80CD
+		// (set) Token: 0x06039BD0 RID: 236496 RVA: 0x007C9ED5 File Offset: 0x007C80D5
 		public int TargetVehicle { get; set; }
 
-		// Token: 0x1700E356 RID: 58198
-		// (get) Token: 0x060367BC RID: 223164 RVA: 0x00766C8E File Offset: 0x00764E8E
-		// (set) Token: 0x060367BD RID: 223165 RVA: 0x00766C96 File Offset: 0x00764E96
+		// Token: 0x1700EF80 RID: 61312
+		// (get) Token: 0x06039BD1 RID: 236497 RVA: 0x007C9EDE File Offset: 0x007C80DE
+		// (set) Token: 0x06039BD2 RID: 236498 RVA: 0x007C9EE6 File Offset: 0x007C80E6
 		public int TargetNpc { get; set; }
 
-		// Token: 0x1700E357 RID: 58199
-		// (get) Token: 0x060367BE RID: 223166 RVA: 0x00766C9F File Offset: 0x00764E9F
-		// (set) Token: 0x060367BF RID: 223167 RVA: 0x00766CA7 File Offset: 0x00764EA7
+		// Token: 0x1700EF81 RID: 61313
+		// (get) Token: 0x06039BD3 RID: 236499 RVA: 0x007C9EEF File Offset: 0x007C80EF
+		// (set) Token: 0x06039BD4 RID: 236500 RVA: 0x007C9EF7 File Offset: 0x007C80F7
 		public byte NullMask { get; set; }
 
-		// Token: 0x060367C0 RID: 223168 RVA: 0x00766CB0 File Offset: 0x00764EB0
+		// Token: 0x06039BD5 RID: 236501 RVA: 0x007C9F00 File Offset: 0x007C8100
 		public IVehicleEnteringNpcTargetT()
 		{
 			this.Type = EVehicleEnteringTarget.Player;

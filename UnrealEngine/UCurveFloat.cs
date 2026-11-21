@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200097D RID: 2429
+	// Token: 0x020001C0 RID: 448
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.CurveFloat")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
 	public class UCurveFloat : UCurveBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008967 RID: 35175 RVA: 0x000C4D19 File Offset: 0x000C2F19
+		// Token: 0x060020DE RID: 8414 RVA: 0x00030441 File Offset: 0x0002E641
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCurveFloat._ClassPtr;
 		}
 
-		// Token: 0x06008968 RID: 35176 RVA: 0x000C4D28 File Offset: 0x000C2F28
+		// Token: 0x060020DF RID: 8415 RVA: 0x00030450 File Offset: 0x0002E650
 		public UCurveFloat() : this(BuiltinUtils.AllocNativeUObject(UCurveFloat.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06008969 RID: 35177 RVA: 0x000C4D50 File Offset: 0x000C2F50
+		// Token: 0x060020E0 RID: 8416 RVA: 0x00030478 File Offset: 0x0002E678
 		public UCurveFloat(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UCurveFloat.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700206A RID: 8298
-		// (get) Token: 0x0600896A RID: 35178 RVA: 0x000C4D84 File Offset: 0x000C2F84
-		// (set) Token: 0x0600896B RID: 35179 RVA: 0x000C4DBD File Offset: 0x000C2FBD
+		// Token: 0x1700048E RID: 1166
+		// (get) Token: 0x060020E1 RID: 8417 RVA: 0x000304AC File Offset: 0x0002E6AC
+		// (set) Token: 0x060020E2 RID: 8418 RVA: 0x000304E5 File Offset: 0x0002E6E5
 		public FRichCurve FloatCurve
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700206B RID: 8299
-		// (get) Token: 0x0600896C RID: 35180 RVA: 0x000C4DDE File Offset: 0x000C2FDE
-		// (set) Token: 0x0600896D RID: 35181 RVA: 0x000C4DEE File Offset: 0x000C2FEE
+		// Token: 0x1700048F RID: 1167
+		// (get) Token: 0x060020E3 RID: 8419 RVA: 0x00030506 File Offset: 0x0002E706
+		// (set) Token: 0x060020E4 RID: 8420 RVA: 0x00030516 File Offset: 0x0002E716
 		public unsafe bool bIsEventCurve
 		{
 			get
@@ -65,44 +65,44 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600896E RID: 35182 RVA: 0x000C4DFF File Offset: 0x000C2FFF
+		// Token: 0x060020E5 RID: 8421 RVA: 0x00030527 File Offset: 0x0002E727
 		public float GetFloatValue(float InTime)
 		{
 			return UCurveFloat.__GetFloatValue_Internal(base.NativePtr, InTime);
 		}
 
-		// Token: 0x0600896F RID: 35183
+		// Token: 0x060020E6 RID: 8422
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFloatValue_Internal(IntPtr @this, float InTime);
 
-		// Token: 0x06008970 RID: 35184 RVA: 0x000C4E0D File Offset: 0x000C300D
+		// Token: 0x060020E7 RID: 8423 RVA: 0x00030535 File Offset: 0x0002E735
 		static UCurveFloat()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.CurveFloat");
 		}
 
-		// Token: 0x06008971 RID: 35185 RVA: 0x000C4E1B File Offset: 0x000C301B
+		// Token: 0x060020E8 RID: 8424 RVA: 0x00030543 File Offset: 0x0002E743
 		protected UCurveFloat(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04004141 RID: 16705
+		// Token: 0x04000AE8 RID: 2792
 		public new const string __ObjectPath = "/Script/Engine.CurveFloat";
 
-		// Token: 0x04004142 RID: 16706
+		// Token: 0x04000AE9 RID: 2793
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04004143 RID: 16707
+		// Token: 0x04000AEA RID: 2794
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04004144 RID: 16708
+		// Token: 0x04000AEB RID: 2795
 		internal static int __PropertyOffset_FloatCurve;
 
-		// Token: 0x04004145 RID: 16709
+		// Token: 0x04000AEC RID: 2796
 		[Nullable(2)]
 		private FRichCurve _FloatCurve;
 
-		// Token: 0x04004146 RID: 16710
+		// Token: 0x04000AED RID: 2797
 		internal static int __PropertyOffset_bIsEventCurve;
 	}
 }

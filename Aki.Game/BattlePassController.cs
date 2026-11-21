@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,13 +12,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200231F RID: 8991
+// Token: 0x02001804 RID: 6148
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BattlePassController : UiControllerBase
 {
-	// Token: 0x06011C67 RID: 72807 RVA: 0x004601E6 File Offset: 0x0045E3E6
+	// Token: 0x0600F117 RID: 61719 RVA: 0x0046D28E File Offset: 0x0046B48E
 	protected override bool OnInit()
 	{
 		InputManager.Instance.RegisterOpenViewFunc(EUiViewName.BattlePassMainView, new Action(this.RegisterOpenView));
@@ -27,33 +26,33 @@ public class BattlePassController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011C68 RID: 72808 RVA: 0x0046021F File Offset: 0x0045E41F
+	// Token: 0x0600F118 RID: 61720 RVA: 0x0046D2C7 File Offset: 0x0046B4C7
 	protected override bool OnClear()
 	{
 		this.StopBattlePassTimer();
 		return true;
 	}
 
-	// Token: 0x06011C69 RID: 72809 RVA: 0x00460228 File Offset: 0x0045E428
+	// Token: 0x0600F119 RID: 61721 RVA: 0x0046D2D0 File Offset: 0x0046B4D0
 	private void RegisterOpenView()
 	{
 		this.OpenBattlePassView();
 	}
 
-	// Token: 0x06011C6A RID: 72810 RVA: 0x00460230 File Offset: 0x0045E430
+	// Token: 0x0600F11A RID: 61722 RVA: 0x0046D2D8 File Offset: 0x0046B4D8
 	private void RegisterCloseView()
 	{
 		this.CloseView();
 	}
 
-	// Token: 0x06011C6B RID: 72811 RVA: 0x00460238 File Offset: 0x0045E438
+	// Token: 0x0600F11B RID: 61723 RVA: 0x0046D2E0 File Offset: 0x0046B4E0
 	public void RequestBattlePassDataForTask()
 	{
 		BattlePassRequest message = BattlePassRequest.Create();
 		Net.Instance.Call(ERequestMessageId.BattlePassRequest, message, new Action<IMessage, Net.CallbackStatus>(this.<RequestBattlePassDataForTask>g__Response|5_0), 0);
 	}
 
-	// Token: 0x06011C6C RID: 72812 RVA: 0x00460268 File Offset: 0x0045E468
+	// Token: 0x0600F11C RID: 61724 RVA: 0x0046D310 File Offset: 0x0046B510
 	public void OpenBattlePassView()
 	{
 		if (BattlePassModel.Instance.IsRequiringViewData || UiManager.Instance.IsViewOpen(EUiViewName.BattlePassMainView) || UiManager.Instance.IsViewOpen(EUiViewName.BattlePassFirstOpenView))
@@ -66,7 +65,7 @@ public class BattlePassController : UiControllerBase
 		}).Forget();
 	}
 
-	// Token: 0x06011C6D RID: 72813 RVA: 0x004602D4 File Offset: 0x0045E4D4
+	// Token: 0x0600F11D RID: 61725 RVA: 0x0046D37C File Offset: 0x0046B57C
 	private UniTask DoOpenBattlePassView()
 	{
 		BattlePassController.<DoOpenBattlePassView>d__7 <DoOpenBattlePassView>d__;
@@ -76,7 +75,7 @@ public class BattlePassController : UiControllerBase
 		return <DoOpenBattlePassView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011C6E RID: 72814 RVA: 0x00460310 File Offset: 0x0045E510
+	// Token: 0x0600F11E RID: 61726 RVA: 0x0046D3B8 File Offset: 0x0046B5B8
 	public void SetBattlePassEnter()
 	{
 		BattlePassEnterPush message = BattlePassEnterPush.Create();
@@ -84,7 +83,7 @@ public class BattlePassController : UiControllerBase
 		BattlePassModel.Instance.HadEnter = true;
 	}
 
-	// Token: 0x06011C6F RID: 72815 RVA: 0x00460340 File Offset: 0x0045E540
+	// Token: 0x0600F11F RID: 61727 RVA: 0x0046D3E8 File Offset: 0x0046B5E8
 	public void RequestTakeBattlePassReward(BattlePassType battlePassType, int level, int itemId, int gridIndex)
 	{
 		BattlePassController.<>c__DisplayClass9_0 CS$<>8__locals1 = new BattlePassController.<>c__DisplayClass9_0();
@@ -105,7 +104,7 @@ public class BattlePassController : UiControllerBase
 		instance.TryAssignRemindLevel(new int?(CS$<>8__locals1.level));
 	}
 
-	// Token: 0x06011C70 RID: 72816 RVA: 0x004603D4 File Offset: 0x0045E5D4
+	// Token: 0x0600F120 RID: 61728 RVA: 0x0046D47C File Offset: 0x0046B67C
 	public void RequestTakeAllRewardResponse()
 	{
 		BattlePassTakeAllRewardRequest message = BattlePassTakeAllRewardRequest.Create();
@@ -121,7 +120,7 @@ public class BattlePassController : UiControllerBase
 		instance.TryAssignRemindLevel(null);
 	}
 
-	// Token: 0x06011C71 RID: 72817 RVA: 0x00460430 File Offset: 0x0045E630
+	// Token: 0x0600F121 RID: 61729 RVA: 0x0046D4D8 File Offset: 0x0046B6D8
 	public void RequestBattlePassTask()
 	{
 		BattlePassTaskRequest message = BattlePassTaskRequest.Create();
@@ -131,13 +130,13 @@ public class BattlePassController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011C72 RID: 72818 RVA: 0x00460473 File Offset: 0x0045E673
+	// Token: 0x0600F122 RID: 61730 RVA: 0x0046D51B File Offset: 0x0046B71B
 	public void TryRequestTaskList(List<int> taskIdList)
 	{
 		BattlePassModel.Instance.TryRequestTaskList(taskIdList);
 	}
 
-	// Token: 0x06011C73 RID: 72819 RVA: 0x00460480 File Offset: 0x0045E680
+	// Token: 0x0600F123 RID: 61731 RVA: 0x0046D528 File Offset: 0x0046B728
 	public void RequestBattlePassTaskTake(List<int> taskIdList)
 	{
 		BattlePassTaskTakeRequest battlePassTaskTakeRequest = BattlePassTaskTakeRequest.Create();
@@ -148,7 +147,7 @@ public class BattlePassController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011C74 RID: 72820 RVA: 0x004604D0 File Offset: 0x0045E6D0
+	// Token: 0x0600F124 RID: 61732 RVA: 0x0046D578 File Offset: 0x0046B778
 	public void RequestBuyBattlePassLevel(int level)
 	{
 		BattlePassLevelUpRequest battlePassLevelUpRequest = BattlePassLevelUpRequest.Create();
@@ -158,7 +157,7 @@ public class BattlePassController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011C75 RID: 72821 RVA: 0x0046051C File Offset: 0x0045E71C
+	// Token: 0x0600F125 RID: 61733 RVA: 0x0046D5C4 File Offset: 0x0046B7C4
 	[NullableContext(2)]
 	private void OnReceiveBattlePassTaskUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -169,7 +168,7 @@ public class BattlePassController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.UpdateBattlePassTaskEvent);
 	}
 
-	// Token: 0x06011C76 RID: 72822 RVA: 0x00460584 File Offset: 0x0045E784
+	// Token: 0x0600F126 RID: 61734 RVA: 0x0046D62C File Offset: 0x0046B82C
 	[NullableContext(2)]
 	private void OnReceiveBattlePassExpUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -177,7 +176,7 @@ public class BattlePassController : UiControllerBase
 		BattlePassModel.Instance.UpdateExpDataFromBattlePassExpUpdateNotify(battlePassExpUpdateNotify.Level, battlePassExpUpdateNotify.Exp, battlePassExpUpdateNotify.WeeklyTotalExp);
 	}
 
-	// Token: 0x06011C77 RID: 72823 RVA: 0x004605B4 File Offset: 0x0045E7B4
+	// Token: 0x0600F127 RID: 61735 RVA: 0x0046D65C File Offset: 0x0046B85C
 	[NullableContext(2)]
 	private void OnReceiveBattlePassPaidNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -199,7 +198,7 @@ public class BattlePassController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.BattlePassUnlockView, ebattlePassUnlockType, null);
 	}
 
-	// Token: 0x06011C78 RID: 72824 RVA: 0x00460654 File Offset: 0x0045E854
+	// Token: 0x0600F128 RID: 61736 RVA: 0x0046D6FC File Offset: 0x0046B8FC
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BattlePassTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveBattlePassTaskUpdateNotify));
@@ -207,7 +206,7 @@ public class BattlePassController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.BattlePassPaidNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveBattlePassPaidNotify));
 	}
 
-	// Token: 0x06011C79 RID: 72825 RVA: 0x004606B5 File Offset: 0x0045E8B5
+	// Token: 0x0600F129 RID: 61737 RVA: 0x0046D75D File Offset: 0x0046B95D
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BattlePassTaskUpdateNotify);
@@ -215,7 +214,7 @@ public class BattlePassController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.BattlePassPaidNotify);
 	}
 
-	// Token: 0x06011C7A RID: 72826 RVA: 0x004606E7 File Offset: 0x0045E8E7
+	// Token: 0x0600F12A RID: 61738 RVA: 0x0046D78F File Offset: 0x0046B98F
 	private void OnFunctionUnlock(EFunctionType functionType, bool isOpen)
 	{
 		if (functionType == EFunctionType.BattlePass && isOpen)
@@ -224,7 +223,7 @@ public class BattlePassController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011C7B RID: 72827 RVA: 0x004606FB File Offset: 0x0045E8FB
+	// Token: 0x0600F12B RID: 61739 RVA: 0x0046D7A3 File Offset: 0x0046B9A3
 	private void OnEnterGameSuccess()
 	{
 		if (!FunctionModel.Instance.IsOpen(10040))
@@ -234,7 +233,7 @@ public class BattlePassController : UiControllerBase
 		this.RequestBattlePassDataForTask();
 	}
 
-	// Token: 0x06011C7C RID: 72828 RVA: 0x00460715 File Offset: 0x0045E915
+	// Token: 0x0600F12C RID: 61740 RVA: 0x0046D7BD File Offset: 0x0046B9BD
 	private void OnDayCross()
 	{
 		if (!FunctionModel.Instance.IsOpen(10040) || !BattlePassModel.Instance.GetInTimeRange())
@@ -244,7 +243,7 @@ public class BattlePassController : UiControllerBase
 		this.RequestBattlePassTask();
 	}
 
-	// Token: 0x06011C7D RID: 72829 RVA: 0x0046073B File Offset: 0x0045E93B
+	// Token: 0x0600F12D RID: 61741 RVA: 0x0046D7E3 File Offset: 0x0046B9E3
 	private void StartBattlePassTimer()
 	{
 		if (this.BattlePassTimer != null)
@@ -265,7 +264,7 @@ public class BattlePassController : UiControllerBase
 		}, 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x06011C7E RID: 72830 RVA: 0x00460770 File Offset: 0x0045E970
+	// Token: 0x0600F12E RID: 61742 RVA: 0x0046D818 File Offset: 0x0046BA18
 	public void ShowTimePassConfirm()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BattlePassExpireTip);
@@ -276,7 +275,7 @@ public class BattlePassController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06011C7F RID: 72831 RVA: 0x004607B9 File Offset: 0x0045E9B9
+	// Token: 0x0600F12F RID: 61743 RVA: 0x0046D861 File Offset: 0x0046BA61
 	private void StopBattlePassTimer()
 	{
 		if (this.BattlePassTimer != null)
@@ -286,7 +285,7 @@ public class BattlePassController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011C80 RID: 72832 RVA: 0x004607DC File Offset: 0x0045E9DC
+	// Token: 0x0600F130 RID: 61744 RVA: 0x0046D884 File Offset: 0x0046BA84
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnEnterGameSuccess));
@@ -294,7 +293,7 @@ public class BattlePassController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnDayCross));
 	}
 
-	// Token: 0x06011C81 RID: 72833 RVA: 0x00460840 File Offset: 0x0045EA40
+	// Token: 0x0600F131 RID: 61745 RVA: 0x0046D8E8 File Offset: 0x0046BAE8
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnEnterGameSuccess));
@@ -302,7 +301,7 @@ public class BattlePassController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnDayCross));
 	}
 
-	// Token: 0x06011C82 RID: 72834 RVA: 0x004608A4 File Offset: 0x0045EAA4
+	// Token: 0x0600F132 RID: 61746 RVA: 0x0046D94C File Offset: 0x0046BB4C
 	public bool TryShowUpLevelView(bool firstBuy)
 	{
 		if (BattlePassModel.Instance.IncreasedLevelToShow <= 0 || UiManager.Instance.IsViewOpen(EUiViewName.BattlePassUnlockView))
@@ -318,7 +317,7 @@ public class BattlePassController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011C83 RID: 72835 RVA: 0x00460900 File Offset: 0x0045EB00
+	// Token: 0x0600F133 RID: 61747 RVA: 0x0046D9A8 File Offset: 0x0046BBA8
 	public void PopHighUnlockReward()
 	{
 		int value = ConfigCommonParamById.GetIntConfig("PrimaryBattlePassGiftPack").Value;
@@ -333,7 +332,7 @@ public class BattlePassController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06011C84 RID: 72836 RVA: 0x004609BC File Offset: 0x0045EBBC
+	// Token: 0x0600F134 RID: 61748 RVA: 0x0046DA64 File Offset: 0x0046BC64
 	public void PayPrimaryBattlePass()
 	{
 		if (FeatureRestrictionTemplate.TemplateForPioneerClient.Check())
@@ -356,7 +355,7 @@ public class BattlePassController : UiControllerBase
 		PayGiftController.Instance.SdkPay(payShopGoodsById.GetGoodsData().Id);
 	}
 
-	// Token: 0x06011C85 RID: 72837 RVA: 0x00460A44 File Offset: 0x0045EC44
+	// Token: 0x0600F135 RID: 61749 RVA: 0x0046DAEC File Offset: 0x0046BCEC
 	public void PayHighBattlePass()
 	{
 		if (FeatureRestrictionTemplate.TemplateForPioneerClient.Check())
@@ -395,7 +394,7 @@ public class BattlePassController : UiControllerBase
 		PayGiftController.Instance.SdkPay(highBattlePassGoodsId);
 	}
 
-	// Token: 0x06011C86 RID: 72838 RVA: 0x00460B1C File Offset: 0x0045ED1C
+	// Token: 0x0600F136 RID: 61750 RVA: 0x0046DBC4 File Offset: 0x0046BDC4
 	private bool PayInWarningTime(int id)
 	{
 		BattlePassController.<>c__DisplayClass32_0 CS$<>8__locals1 = new BattlePassController.<>c__DisplayClass32_0();
@@ -410,7 +409,7 @@ public class BattlePassController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06011C87 RID: 72839 RVA: 0x00460B74 File Offset: 0x0045ED74
+	// Token: 0x0600F137 RID: 61751 RVA: 0x0046DC1C File Offset: 0x0046BE1C
 	public void CloseView()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.BattlePassFirstOpenView))
@@ -420,7 +419,7 @@ public class BattlePassController : UiControllerBase
 		UiManager.Instance.CloseView(EUiViewName.BattlePassMainView, null);
 	}
 
-	// Token: 0x06011C88 RID: 72840 RVA: 0x00460B98 File Offset: 0x0045ED98
+	// Token: 0x0600F138 RID: 61752 RVA: 0x0046DC40 File Offset: 0x0046BE40
 	public RewardData<IBattlePassExtraRewardInfo> BuildExtraRewardData(List<RewardItemData> rewardItemDataList)
 	{
 		RewardItemData[] extraRewardItems = BattlePassModel.Instance.GetExtraRewardItems();
@@ -428,7 +427,7 @@ public class BattlePassController : UiControllerBase
 		battlePassExtraRewardInfo.Type = ERewardInfoType.BattlePassExtra;
 		battlePassExtraRewardInfo.ViewName = EUiViewName.BattlePassExtraRewardView;
 		battlePassExtraRewardInfo.CommonItems = rewardItemDataList;
-		battlePassExtraRewardInfo.ExtraItems = extraRewardItems.ToList<RewardItemData>();
+		battlePassExtraRewardInfo.ExtraItems = new List<RewardItemData>(extraRewardItems);
 		battlePassExtraRewardInfo.LeftAction = delegate()
 		{
 			EventSystem.Instance.Emit(EEventName.NotifyBattlePassToBuyEvent);
@@ -439,15 +438,15 @@ public class BattlePassController : UiControllerBase
 		return new RewardData<IBattlePassExtraRewardInfo>(battlePassExtraRewardInfo, null);
 	}
 
-	// Token: 0x06011C89 RID: 72841 RVA: 0x00460C2C File Offset: 0x0045EE2C
+	// Token: 0x0600F139 RID: 61753 RVA: 0x0046DCD4 File Offset: 0x0046BED4
 	public bool IsNeedExtraRewardView()
 	{
 		BattlePassModel instance = BattlePassModel.Instance;
 		return instance != null && instance.RemindLevel != null;
 	}
 
-	// Token: 0x170016B5 RID: 5813
-	// (get) Token: 0x06011C8A RID: 72842 RVA: 0x00460C51 File Offset: 0x0045EE51
+	// Token: 0x170016EF RID: 5871
+	// (get) Token: 0x0600F13A RID: 61754 RVA: 0x0046DCF9 File Offset: 0x0046BEF9
 	public static BattlePassController Instance
 	{
 		get
@@ -456,7 +455,7 @@ public class BattlePassController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011C8B RID: 72843 RVA: 0x00460C58 File Offset: 0x0045EE58
+	// Token: 0x0600F13B RID: 61755 RVA: 0x0046DD00 File Offset: 0x0046BF00
 	public static BattlePassController GetOrCreateInstance()
 	{
 		if (BattlePassController._Instance == null)
@@ -466,7 +465,7 @@ public class BattlePassController : UiControllerBase
 		return BattlePassController._Instance;
 	}
 
-	// Token: 0x06011C8C RID: 72844 RVA: 0x00460C6C File Offset: 0x0045EE6C
+	// Token: 0x0600F13C RID: 61756 RVA: 0x0046DD14 File Offset: 0x0046BF14
 	public static bool CreateInstance()
 	{
 		if (BattlePassController._Instance != null)
@@ -477,24 +476,24 @@ public class BattlePassController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06011C8D RID: 72845 RVA: 0x00460C82 File Offset: 0x0045EE82
+	// Token: 0x0600F13D RID: 61757 RVA: 0x0046DD2A File Offset: 0x0046BF2A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011C8E RID: 72846 RVA: 0x00460C84 File Offset: 0x0045EE84
+	// Token: 0x0600F13E RID: 61758 RVA: 0x0046DD2C File Offset: 0x0046BF2C
 	public static void ResetStaticDefaultValue()
 	{
 		BattlePassController._Instance = null;
 	}
 
-	// Token: 0x06011C8F RID: 72847 RVA: 0x00460C8C File Offset: 0x0045EE8C
+	// Token: 0x0600F13F RID: 61759 RVA: 0x0046DD34 File Offset: 0x0046BF34
 	static BattlePassController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattlePassController.CreateStaticDefaultValue), new Action(BattlePassController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06011C91 RID: 72849 RVA: 0x00460CB4 File Offset: 0x0045EEB4
+	// Token: 0x0600F141 RID: 61761 RVA: 0x0046DD5C File Offset: 0x0046BF5C
 	[NullableContext(2)]
 	[CompilerGenerated]
 	private void <RequestBattlePassDataForTask>g__Response|5_0(IMessage msg, Net.CallbackStatus _)
@@ -514,10 +513,10 @@ public class BattlePassController : UiControllerBase
 			this.StartBattlePassTimer();
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(battlePassResponse.ErrorCode, 26818, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(battlePassResponse.ErrorCode, 26557, null, true, true);
 	}
 
-	// Token: 0x06011C92 RID: 72850 RVA: 0x00460D10 File Offset: 0x0045EF10
+	// Token: 0x0600F142 RID: 61762 RVA: 0x0046DDB8 File Offset: 0x0046BFB8
 	[CompilerGenerated]
 	internal static void <RequestTakeAllRewardResponse>g__ResponseAction|10_0(BattlePassTakeAllRewardResponse response, [Nullable(2)] Net.CallbackStatus _)
 	{
@@ -530,10 +529,10 @@ public class BattlePassController : UiControllerBase
 			BattlePassModel.Instance.UpdateRewardDataFromBattlePassTakeAllRewardResponse(response);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 28865, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 27259, null, true, true);
 	}
 
-	// Token: 0x06011C93 RID: 72851 RVA: 0x00460D44 File Offset: 0x0045EF44
+	// Token: 0x0600F143 RID: 61763 RVA: 0x0046DDEC File Offset: 0x0046BFEC
 	[CompilerGenerated]
 	internal static void <RequestBattlePassTask>g__ResponseAction|11_0(BattlePassTaskResponse response, [Nullable(2)] Net.CallbackStatus _)
 	{
@@ -554,10 +553,10 @@ public class BattlePassController : UiControllerBase
 			EventSystem.Instance.Emit<bool>(EEventName.ReceiveBattlePassTaskEvent, p);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 21675, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 27662, null, true, true);
 	}
 
-	// Token: 0x06011C94 RID: 72852 RVA: 0x00460E14 File Offset: 0x0045F014
+	// Token: 0x0600F144 RID: 61764 RVA: 0x0046DEBC File Offset: 0x0046C0BC
 	[CompilerGenerated]
 	internal static void <RequestBattlePassTaskTake>g__ResponseAction|13_0(BattlePassTaskTakeResponse response, [Nullable(2)] Net.CallbackStatus _)
 	{
@@ -567,17 +566,17 @@ public class BattlePassController : UiControllerBase
 		}
 		if (response.ErrorCode == Aki.Protocol.ErrorCode.Success)
 		{
-			BattlePassModel.Instance.UpdateTaskDataFromBattlePassTaskTakeResponse(response.Ids.ToArray<int>());
+			BattlePassModel.Instance.UpdateTaskDataFromBattlePassTaskTakeResponse(response.Ids);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 16270, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 17148, null, true, true);
 	}
 
-	// Token: 0x040086D9 RID: 34521
+	// Token: 0x0400881C RID: 34844
 	[Nullable(2)]
 	private TimerHandle BattlePassTimer;
 
-	// Token: 0x040086DA RID: 34522
+	// Token: 0x0400881D RID: 34845
 	[Nullable(2)]
 	private static BattlePassController _Instance;
 }

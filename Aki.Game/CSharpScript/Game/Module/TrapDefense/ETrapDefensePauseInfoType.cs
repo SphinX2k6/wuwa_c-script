@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A53 RID: 19027
+	// Token: 0x020039FB RID: 14843
 	public enum ETrapDefensePauseInfoType
 	{
-		// Token: 0x0401A645 RID: 108101
+		// Token: 0x04014F97 RID: 85911
 		Health,
-		// Token: 0x0401A646 RID: 108102
+		// Token: 0x04014F98 RID: 85912
 		BatchCur,
-		// Token: 0x0401A647 RID: 108103
+		// Token: 0x04014F99 RID: 85913
 		BatchPassed
 	}
 }

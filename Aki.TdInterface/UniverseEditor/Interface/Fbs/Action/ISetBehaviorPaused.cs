@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FCC RID: 28620
+	// Token: 0x02007795 RID: 30613
 	public struct ISetBehaviorPaused : IFlatbufferObject
 	{
-		// Token: 0x1700D478 RID: 54392
-		// (get) Token: 0x06032958 RID: 207192 RVA: 0x006D3505 File Offset: 0x006D1705
+		// Token: 0x1700E04C RID: 57420
+		// (get) Token: 0x06035BBE RID: 220094 RVA: 0x00733149 File Offset: 0x00731349
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,21 +16,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032959 RID: 207193 RVA: 0x006D3512 File Offset: 0x006D1712
+		// Token: 0x06035BBF RID: 220095 RVA: 0x00733156 File Offset: 0x00731356
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Struct(_i, _bb);
 		}
 
-		// Token: 0x0603295A RID: 207194 RVA: 0x006D3521 File Offset: 0x006D1721
+		// Token: 0x06035BC0 RID: 220096 RVA: 0x00733165 File Offset: 0x00731365
 		public ISetBehaviorPaused __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D479 RID: 54393
-		// (get) Token: 0x0603295B RID: 207195 RVA: 0x006D3531 File Offset: 0x006D1731
+		// Token: 0x1700E04D RID: 57421
+		// (get) Token: 0x06035BC1 RID: 220097 RVA: 0x00733175 File Offset: 0x00731375
 		public bool IsPaused
 		{
 			get
@@ -39,7 +39,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603295C RID: 207196 RVA: 0x006D3551 File Offset: 0x006D1751
+		// Token: 0x06035BC2 RID: 220098 RVA: 0x00733195 File Offset: 0x00731395
 		public static Offset<ISetBehaviorPaused> CreateISetBehaviorPaused(FlatBufferBuilder builder, bool IsPaused)
 		{
 			builder.Prep(1, 1);
@@ -47,7 +47,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new Offset<ISetBehaviorPaused>(builder.Offset);
 		}
 
-		// Token: 0x0603295D RID: 207197 RVA: 0x006D3570 File Offset: 0x006D1770
+		// Token: 0x06035BC3 RID: 220099 RVA: 0x007331B4 File Offset: 0x007313B4
 		public ISetBehaviorPausedT UnPack()
 		{
 			ISetBehaviorPausedT setBehaviorPausedT = new ISetBehaviorPausedT();
@@ -55,13 +55,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setBehaviorPausedT;
 		}
 
-		// Token: 0x0603295E RID: 207198 RVA: 0x006D358B File Offset: 0x006D178B
+		// Token: 0x06035BC4 RID: 220100 RVA: 0x007331CF File Offset: 0x007313CF
 		public void UnPackTo(ISetBehaviorPausedT _o)
 		{
 			_o.IsPaused = this.IsPaused;
 		}
 
-		// Token: 0x0603295F RID: 207199 RVA: 0x006D359C File Offset: 0x006D179C
+		// Token: 0x06035BC5 RID: 220101 RVA: 0x007331E0 File Offset: 0x007313E0
 		public static Offset<ISetBehaviorPaused> Pack(FlatBufferBuilder builder, ISetBehaviorPausedT _o)
 		{
 			if (_o == null)
@@ -71,7 +71,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetBehaviorPaused.CreateISetBehaviorPaused(builder, _o.IsPaused);
 		}
 
-		// Token: 0x040119D6 RID: 72150
+		// Token: 0x040129BB RID: 76219
 		private Struct __p;
 	}
 }

@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Debug
 {
-	// Token: 0x020016A2 RID: 5794
+	// Token: 0x0200171E RID: 5918
 	public enum ECheatInput
 	{
-		// Token: 0x0400C3FF RID: 50175
+		// Token: 0x0400C92E RID: 51502
 		[OriginalName("ECheatInputDefault")]
 		Default,
-		// Token: 0x0400C400 RID: 50176
+		// Token: 0x0400C92F RID: 51503
 		[OriginalName("ECheatInputDel")]
 		Del,
-		// Token: 0x0400C401 RID: 50177
+		// Token: 0x0400C930 RID: 51504
 		[OriginalName("ECheatInputEnd")]
 		End
 	}

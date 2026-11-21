@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059A8 RID: 22952
+	// Token: 0x02005FB5 RID: 24501
 	public class IStateElementalEnableConfigT
 	{
-		// Token: 0x1700AC42 RID: 44098
-		// (get) Token: 0x06026E24 RID: 159268 RVA: 0x00559C67 File Offset: 0x00557E67
-		// (set) Token: 0x06026E25 RID: 159269 RVA: 0x00559C6F File Offset: 0x00557E6F
+		// Token: 0x1700B576 RID: 46454
+		// (get) Token: 0x0602938E RID: 168846 RVA: 0x005A08D3 File Offset: 0x0059EAD3
+		// (set) Token: 0x0602938F RID: 168847 RVA: 0x005A08DB File Offset: 0x0059EADB
 		public string State { get; set; }
 
-		// Token: 0x1700AC43 RID: 44099
-		// (get) Token: 0x06026E26 RID: 159270 RVA: 0x00559C78 File Offset: 0x00557E78
-		// (set) Token: 0x06026E27 RID: 159271 RVA: 0x00559C80 File Offset: 0x00557E80
+		// Token: 0x1700B577 RID: 46455
+		// (get) Token: 0x06029390 RID: 168848 RVA: 0x005A08E4 File Offset: 0x0059EAE4
+		// (set) Token: 0x06029391 RID: 168849 RVA: 0x005A08EC File Offset: 0x0059EAEC
 		public bool ElementalEnable { get; set; }
 
-		// Token: 0x06026E28 RID: 159272 RVA: 0x00559C89 File Offset: 0x00557E89
+		// Token: 0x06029392 RID: 168850 RVA: 0x005A08F5 File Offset: 0x0059EAF5
 		public IStateElementalEnableConfigT()
 		{
 			this.State = null;

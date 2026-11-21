@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A05 RID: 10757
+	// Token: 0x02002CF2 RID: 11506
 	public class DangoAbyssGotoNextFloor : ActionParams
 	{
-		// Token: 0x0600ED5B RID: 60763 RVA: 0x00229C1B File Offset: 0x00227E1B
-		[NullableContext(1)]
+		// Token: 0x0600FBF2 RID: 64498 RVA: 0x0024759F File Offset: 0x0024579F
 		public static DangoAbyssGotoNextFloor Create(IDangoAbyssGotoNextFloor? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x040082A9 RID: 33449
+		// Token: 0x0400899A RID: 35226
 		private IDangoAbyssGotoNextFloor Instance;
 	}
 }

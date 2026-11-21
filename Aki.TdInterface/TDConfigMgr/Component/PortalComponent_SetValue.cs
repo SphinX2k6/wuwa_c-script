@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000858 RID: 2136
+	// Token: 0x020008FB RID: 2299
 	public class PortalComponent_SetValue
 	{
-		// Token: 0x04001F20 RID: 7968
+		// Token: 0x04002132 RID: 8498
 		public bool? Disabled;
 
-		// Token: 0x04001F21 RID: 7969
+		// Token: 0x04002133 RID: 8499
 		public bool? EdIsLocked;
 
-		// Token: 0x04001F22 RID: 7970
-		[Nullable(1)]
+		// Token: 0x04002134 RID: 8500
 		public IPortalMode Config;
 	}
 }

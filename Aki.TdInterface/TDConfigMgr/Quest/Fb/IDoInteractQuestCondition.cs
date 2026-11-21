@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200136D RID: 4973
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014BD RID: 5309
 	public class IDoInteractQuestCondition : IQuestCondition
 	{
-		// Token: 0x060071C9 RID: 29129 RVA: 0x00111FC3 File Offset: 0x001101C3
+		// Token: 0x06007869 RID: 30825 RVA: 0x0012052F File Offset: 0x0011E72F
 		public static IDoInteractQuestCondition Create(IDoInteractQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024C2 RID: 9410
-		// (get) Token: 0x060071CA RID: 29130 RVA: 0x00111FE2 File Offset: 0x001101E2
+		// Token: 0x17002691 RID: 9873
+		// (get) Token: 0x0600786A RID: 30826 RVA: 0x0012054E File Offset: 0x0011E74E
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024C3 RID: 9411
-		// (get) Token: 0x060071CB RID: 29131 RVA: 0x00111FEF File Offset: 0x001101EF
+		// Token: 0x17002692 RID: 9874
+		// (get) Token: 0x0600786B RID: 30827 RVA: 0x0012055B File Offset: 0x0011E75B
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024C4 RID: 9412
-		// (get) Token: 0x060071CC RID: 29132 RVA: 0x00112024 File Offset: 0x00110224
+		// Token: 0x17002693 RID: 9875
+		// (get) Token: 0x0600786C RID: 30828 RVA: 0x00120590 File Offset: 0x0011E790
 		public virtual List<IAddInteractOption> AddOptions
 		{
 			get
@@ -73,20 +71,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041B9 RID: 16825
+		// Token: 0x04004535 RID: 17717
 		private IDoInteractQuestCondition Instance;
 
-		// Token: 0x040041BA RID: 16826
+		// Token: 0x04004536 RID: 17718
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040041BB RID: 16827
+		// Token: 0x04004537 RID: 17719
 		private bool _PreConditionsInited;
 
-		// Token: 0x040041BC RID: 16828
+		// Token: 0x04004538 RID: 17720
 		private List<IAddInteractOption> _AddOptionsCache;
 
-		// Token: 0x040041BD RID: 16829
+		// Token: 0x04004539 RID: 17721
 		private bool _AddOptionsInited;
 	}
 }

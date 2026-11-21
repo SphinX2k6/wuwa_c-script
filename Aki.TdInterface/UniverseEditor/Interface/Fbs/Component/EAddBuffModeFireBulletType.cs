@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D63 RID: 19811
+	// Token: 0x0200525F RID: 21087
 	public enum EAddBuffModeFireBulletType
 	{
-		// Token: 0x0400D7B9 RID: 55225
+		// Token: 0x0400E2E9 RID: 58089
 		None,
-		// Token: 0x0400D7BA RID: 55226
+		// Token: 0x0400E2EA RID: 58090
 		Type1 = 200300000,
-		// Token: 0x0400D7BB RID: 55227
+		// Token: 0x0400E2EB RID: 58091
 		Type2 = 200300003
 	}
 }

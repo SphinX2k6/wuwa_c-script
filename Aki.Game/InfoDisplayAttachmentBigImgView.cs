@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F94 RID: 8084
+// Token: 0x02001456 RID: 5206
 public class InfoDisplayAttachmentBigImgView : UiViewBase
 {
-	// Token: 0x0600FB13 RID: 64275 RVA: 0x003CD281 File Offset: 0x003CB481
+	// Token: 0x0600CF35 RID: 53045 RVA: 0x003D8E41 File Offset: 0x003D7041
 	[NullableContext(1)]
 	public InfoDisplayAttachmentBigImgView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FB14 RID: 64276 RVA: 0x003CD28C File Offset: 0x003CB48C
+	// Token: 0x0600CF36 RID: 53046 RVA: 0x003D8E4C File Offset: 0x003D704C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,13 +44,13 @@ public class InfoDisplayAttachmentBigImgView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB15 RID: 64277 RVA: 0x003CD395 File Offset: 0x003CB595
+	// Token: 0x0600CF37 RID: 53047 RVA: 0x003D8F55 File Offset: 0x003D7155
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FB16 RID: 64278 RVA: 0x003CD3A0 File Offset: 0x003CB5A0
+	// Token: 0x0600CF38 RID: 53048 RVA: 0x003D8F60 File Offset: 0x003D7160
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InfoDisplayAttachmentBigImgView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -61,21 +61,21 @@ public class InfoDisplayAttachmentBigImgView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040074D6 RID: 29910
+	// Token: 0x040075B8 RID: 30136
 	private EAttachmentType CurrentShowAttachmentType;
 
-	// Token: 0x0200857F RID: 34175
+	// Token: 0x02007704 RID: 30468
 	private enum EInfoDisplayImgViewComponents
 	{
-		// Token: 0x0402B777 RID: 178039
+		// Token: 0x04026A9A RID: 158362
 		TexInfoImage,
-		// Token: 0x0402B778 RID: 178040
+		// Token: 0x04026A9B RID: 158363
 		CloseMaskBtn,
-		// Token: 0x0402B779 RID: 178041
+		// Token: 0x04026A9C RID: 158364
 		SpineItem,
-		// Token: 0x0402B77A RID: 178042
+		// Token: 0x04026A9D RID: 158365
 		SpineFatherNode,
-		// Token: 0x0402B77B RID: 178043
+		// Token: 0x04026A9E RID: 158366
 		TexBgFrame
 	}
 }

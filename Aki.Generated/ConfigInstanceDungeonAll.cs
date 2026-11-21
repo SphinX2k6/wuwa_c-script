@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000442 RID: 1090
+	// Token: 0x02000458 RID: 1112
 	public class ConfigInstanceDungeonAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001996 RID: 6550 RVA: 0x000EA2B8 File Offset: 0x000E84B8
+		// Token: 0x06001A1A RID: 6682 RVA: 0x000F0A0C File Offset: 0x000EEC0C
 		static ConfigInstanceDungeonAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInstanceDungeonAll.CreateStaticDefaultValue), new Action(ConfigInstanceDungeonAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001997 RID: 6551 RVA: 0x000EA2D8 File Offset: 0x000E84D8
+		// Token: 0x06001A1B RID: 6683 RVA: 0x000F0A2C File Offset: 0x000EEC2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInstanceDungeonAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001998 RID: 6552 RVA: 0x000EA357 File Offset: 0x000E8557
+		// Token: 0x06001A1C RID: 6684 RVA: 0x000F0AAB File Offset: 0x000EECAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInstanceDungeonAll.LogPair = null;
 			ConfigInstanceDungeonAll.HandleId = 0;
 		}
 
-		// Token: 0x06001999 RID: 6553 RVA: 0x000EA365 File Offset: 0x000E8565
+		// Token: 0x06001A1D RID: 6685 RVA: 0x000F0AB9 File Offset: 0x000EECB9
 		public static void Init()
 		{
 			ConfigInstanceDungeonAll.HandleId = ConfigCommon.InitDataStatement(ConfigInstanceDungeonAll.HandleId, "db_instance_dungeon.db", "select BinData from `InstanceDungeon`");
 		}
 
-		// Token: 0x0600199A RID: 6554 RVA: 0x000EA380 File Offset: 0x000E8580
+		// Token: 0x06001A1E RID: 6686 RVA: 0x000F0AD4 File Offset: 0x000EECD4
 		[NullableContext(2)]
 		public static IReadOnlyList<InstanceDungeon> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001DB2 RID: 7602
+		// Token: 0x04001E4C RID: 7756
 		private const string DB = "db_instance_dungeon.db";
 
-		// Token: 0x04001DB3 RID: 7603
+		// Token: 0x04001E4D RID: 7757
 		private const string FILE = "f.副本.xlsx";
 
-		// Token: 0x04001DB4 RID: 7604
+		// Token: 0x04001E4E RID: 7758
 		private const string TABLE = "InstanceDungeon";
 
-		// Token: 0x04001DB5 RID: 7605
+		// Token: 0x04001E4F RID: 7759
 		private const string COMMAND = "select BinData from `InstanceDungeon`";
 
-		// Token: 0x04001DB6 RID: 7606
+		// Token: 0x04001E50 RID: 7760
 		private const string KEY_PREFIX = "InstanceDungeonAll";
 
-		// Token: 0x04001DB7 RID: 7607
+		// Token: 0x04001E51 RID: 7761
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DB8 RID: 7608
+		// Token: 0x04001E52 RID: 7762
 		private static int HandleId;
 	}
 }

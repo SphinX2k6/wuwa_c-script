@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006311 RID: 25361
+	// Token: 0x0200528F RID: 21135
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 	})]
 	public class PinballRoleHeadItem : GridProxyAbstract<IPinballRoleHeadItemData>
 	{
-		// Token: 0x0603FCE4 RID: 261348 RVA: 0x00F6FB2C File Offset: 0x00F6DD2C
+		// Token: 0x060349A5 RID: 215461 RVA: 0x00EB6A88 File Offset: 0x00EB4C88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FCE5 RID: 261349 RVA: 0x00F6FC56 File Offset: 0x00F6DE56
+		// Token: 0x060349A6 RID: 215462 RVA: 0x00EB6BB2 File Offset: 0x00EB4DB2
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChangeInternal));
 		}
 
-		// Token: 0x0603FCE6 RID: 261350 RVA: 0x00F6FC78 File Offset: 0x00F6DE78
+		// Token: 0x060349A7 RID: 215463 RVA: 0x00EB6BD4 File Offset: 0x00EB4DD4
 		public override void Refresh(IPinballRoleHeadItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603FCE7 RID: 261351 RVA: 0x00F6FCD4 File Offset: 0x00F6DED4
+		// Token: 0x060349A8 RID: 215464 RVA: 0x00EB6C30 File Offset: 0x00EB4E30
 		public void RefreshSelectState(bool bJumpToLastFrame)
 		{
 			IPinballRoleHeadItemData data = this.Data;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.GetExtendToggle(0).SetToggleState(state, false, false, bJumpToLastFrame);
 		}
 
-		// Token: 0x0603FCE8 RID: 261352 RVA: 0x00F6FD0C File Offset: 0x00F6DF0C
+		// Token: 0x060349A9 RID: 215465 RVA: 0x00EB6C68 File Offset: 0x00EB4E68
 		public void RefreshHeadTexture()
 		{
 			if (this.Data == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.SetTextureByPath(middleIcon, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x0603FCE9 RID: 261353 RVA: 0x00F6FD68 File Offset: 0x00F6DF68
+		// Token: 0x060349AA RID: 215466 RVA: 0x00EB6CC4 File Offset: 0x00EB4EC4
 		public void RefreshLockState()
 		{
 			if (this.Data == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 		}
 
-		// Token: 0x0603FCEA RID: 261354 RVA: 0x00F6FDD1 File Offset: 0x00F6DFD1
+		// Token: 0x060349AB RID: 215467 RVA: 0x00EB6D2D File Offset: 0x00EB4F2D
 		public void RefreshTrailState()
 		{
 			if (this.Data == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.GetItem(5).SetUIActive(this.Data.IsTrail);
 		}
 
-		// Token: 0x0603FCEB RID: 261355 RVA: 0x00F6FDF4 File Offset: 0x00F6DFF4
+		// Token: 0x060349AC RID: 215468 RVA: 0x00EB6D50 File Offset: 0x00EB4F50
 		public void BindRedDot()
 		{
 			if (this.Data == null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotPinballRole, base.GetItem(4), null, this.Data.RoleConfig.Id);
 		}
 
-		// Token: 0x0603FCEC RID: 261356 RVA: 0x00F6FE34 File Offset: 0x00F6E034
+		// Token: 0x060349AD RID: 215469 RVA: 0x00EB6D90 File Offset: 0x00EB4F90
 		public void UnBindRedDot()
 		{
 			if (this.Data == null)
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotPinballRole, base.GetItem(4), 0);
 		}
 
-		// Token: 0x0603FCED RID: 261357 RVA: 0x00F6FE56 File Offset: 0x00F6E056
+		// Token: 0x060349AE RID: 215470 RVA: 0x00EB6DB2 File Offset: 0x00EB4FB2
 		private bool CanExecuteChangeInternal()
 		{
 			return this.Data != null && (base.GetExtendToggle(0).GetToggleState() != EToggleState.ETT_Checked || !this.Data.IsSelected);
 		}
 
-		// Token: 0x0603FCEE RID: 261358 RVA: 0x00F6FE81 File Offset: 0x00F6E081
+		// Token: 0x060349AF RID: 215471 RVA: 0x00EB6DDD File Offset: 0x00EB4FDD
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -164,23 +164,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			}
 		}
 
-		// Token: 0x0603FCEF RID: 261359 RVA: 0x00F6FE9D File Offset: 0x00F6E09D
+		// Token: 0x060349B0 RID: 215472 RVA: 0x00EB6DF9 File Offset: 0x00EB4FF9
 		protected override void OnDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603FCF0 RID: 261360 RVA: 0x00F6FEA8 File Offset: 0x00F6E0A8
+		// Token: 0x060349B1 RID: 215473 RVA: 0x00EB6E04 File Offset: 0x00EB5004
 		public override object GetKey(IPinballRoleHeadItemData data, int displayIndex)
 		{
 			return data.RoleConfig.Id;
 		}
 
-		// Token: 0x040214C3 RID: 136387
+		// Token: 0x0401BDF2 RID: 114162
 		[Nullable(2)]
 		private IPinballRoleHeadItemData Data;
 
-		// Token: 0x040214C4 RID: 136388
+		// Token: 0x0401BDF3 RID: 114163
 		[Nullable(new byte[]
 		{
 			2,
@@ -188,21 +188,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 		})]
 		public Action<IPinballRoleHeadItemData> OnSelectCallBack;
 
-		// Token: 0x0200C505 RID: 50437
+		// Token: 0x0200AEEC RID: 44780
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B75D RID: 243549
+			// Token: 0x040360BF RID: 221375
 			ItemToggle,
-			// Token: 0x0403B75E RID: 243550
+			// Token: 0x040360C0 RID: 221376
 			UnSelectedHeadTexture,
-			// Token: 0x0403B75F RID: 243551
+			// Token: 0x040360C1 RID: 221377
 			SelectedHeadTexture,
-			// Token: 0x0403B760 RID: 243552
+			// Token: 0x040360C2 RID: 221378
 			LockItem,
-			// Token: 0x0403B761 RID: 243553
+			// Token: 0x040360C3 RID: 221379
 			RedDotItem,
-			// Token: 0x0403B762 RID: 243554
+			// Token: 0x040360C4 RID: 221380
 			TrailItem
 		}
 	}

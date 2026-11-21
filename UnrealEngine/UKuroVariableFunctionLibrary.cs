@@ -6,30 +6,30 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F1F RID: 7967
+	// Token: 0x02000628 RID: 1576
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVariable.KuroVariableFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroVariableFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601E3A6 RID: 123814 RVA: 0x002CED88 File Offset: 0x002CCF88
+		// Token: 0x060089A2 RID: 35234 RVA: 0x000CF6BB File Offset: 0x000CD8BB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroVariableFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x0601E3A7 RID: 123815 RVA: 0x002CED94 File Offset: 0x002CCF94
+		// Token: 0x060089A3 RID: 35235 RVA: 0x000CF6C8 File Offset: 0x000CD8C8
 		public UKuroVariableFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroVariableFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601E3A8 RID: 123816 RVA: 0x002CEDBC File Offset: 0x002CCFBC
+		// Token: 0x060089A4 RID: 35236 RVA: 0x000CF6F0 File Offset: 0x000CD8F0
 		public UKuroVariableFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroVariableFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601E3A9 RID: 123817 RVA: 0x002CEDF0 File Offset: 0x002CCFF0
+		// Token: 0x060089A5 RID: 35237 RVA: 0x000CF724 File Offset: 0x000CD924
 		public unsafe static bool SetStringValue(string Key, string Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -40,7 +40,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AA RID: 123818 RVA: 0x002CEE28 File Offset: 0x002CD028
+		// Token: 0x060089A6 RID: 35238 RVA: 0x000CF75C File Offset: 0x000CD95C
 		public unsafe static bool SetObject(string Key, [Nullable(2)] UObject Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -49,7 +49,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AB RID: 123819 RVA: 0x002CEE5C File Offset: 0x002CD05C
+		// Token: 0x060089A7 RID: 35239 RVA: 0x000CF790 File Offset: 0x000CD990
 		public unsafe static bool SetIntValue(string Key, int Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -58,7 +58,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AC RID: 123820 RVA: 0x002CEE84 File Offset: 0x002CD084
+		// Token: 0x060089A8 RID: 35240 RVA: 0x000CF7B8 File Offset: 0x000CD9B8
 		public unsafe static bool SetFloatValue(string Key, float Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -67,7 +67,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AD RID: 123821 RVA: 0x002CEEAC File Offset: 0x002CD0AC
+		// Token: 0x060089A9 RID: 35241 RVA: 0x000CF7E0 File Offset: 0x000CD9E0
 		public unsafe static bool SetBoolValue(string Key, bool Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -76,7 +76,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AE RID: 123822 RVA: 0x002CEED4 File Offset: 0x002CD0D4
+		// Token: 0x060089AA RID: 35242 RVA: 0x000CF808 File Offset: 0x000CDA08
 		public unsafe static bool RemoveStringValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -85,7 +85,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3AF RID: 123823 RVA: 0x002CEEF8 File Offset: 0x002CD0F8
+		// Token: 0x060089AB RID: 35243 RVA: 0x000CF82C File Offset: 0x000CDA2C
 		public unsafe static bool RemoveObject(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -94,7 +94,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B0 RID: 123824 RVA: 0x002CEF1C File Offset: 0x002CD11C
+		// Token: 0x060089AC RID: 35244 RVA: 0x000CF850 File Offset: 0x000CDA50
 		public unsafe static bool RemoveIntValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -103,7 +103,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B1 RID: 123825 RVA: 0x002CEF40 File Offset: 0x002CD140
+		// Token: 0x060089AD RID: 35245 RVA: 0x000CF874 File Offset: 0x000CDA74
 		public unsafe static bool RemoveFloatValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -112,7 +112,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B2 RID: 123826 RVA: 0x002CEF64 File Offset: 0x002CD164
+		// Token: 0x060089AE RID: 35246 RVA: 0x000CF898 File Offset: 0x000CDA98
 		public unsafe static bool RemoveBoolValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -121,7 +121,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B3 RID: 123827 RVA: 0x002CEF88 File Offset: 0x002CD188
+		// Token: 0x060089AF RID: 35247 RVA: 0x000CF8BC File Offset: 0x000CDABC
 		public unsafe static bool HasStringValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -130,7 +130,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B4 RID: 123828 RVA: 0x002CEFAC File Offset: 0x002CD1AC
+		// Token: 0x060089B0 RID: 35248 RVA: 0x000CF8E0 File Offset: 0x000CDAE0
 		public unsafe static bool HasObject(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -139,7 +139,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B5 RID: 123829 RVA: 0x002CEFD0 File Offset: 0x002CD1D0
+		// Token: 0x060089B1 RID: 35249 RVA: 0x000CF904 File Offset: 0x000CDB04
 		public unsafe static bool HasIntValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -148,7 +148,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B6 RID: 123830 RVA: 0x002CEFF4 File Offset: 0x002CD1F4
+		// Token: 0x060089B2 RID: 35250 RVA: 0x000CF928 File Offset: 0x000CDB28
 		public unsafe static bool HasFloatValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -157,7 +157,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B7 RID: 123831 RVA: 0x002CF018 File Offset: 0x002CD218
+		// Token: 0x060089B3 RID: 35251 RVA: 0x000CF94C File Offset: 0x000CDB4C
 		public unsafe static bool HasBoolValue(string Key)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -166,7 +166,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B8 RID: 123832 RVA: 0x002CF03C File Offset: 0x002CD23C
+		// Token: 0x060089B4 RID: 35252 RVA: 0x000CF970 File Offset: 0x000CDB70
 		public unsafe static bool GetStringValue(string Key, ref string Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -178,7 +178,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3B9 RID: 123833 RVA: 0x002CF07C File Offset: 0x002CD27C
+		// Token: 0x060089B5 RID: 35253 RVA: 0x000CF9B0 File Offset: 0x000CDBB0
 		public unsafe static bool GetObject(string Key, [Nullable(2)] ref UObject Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -190,7 +190,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0601E3BA RID: 123834 RVA: 0x002CF0C0 File Offset: 0x002CD2C0
+		// Token: 0x060089B6 RID: 35254 RVA: 0x000CF9F4 File Offset: 0x000CDBF4
 		public unsafe static bool GetIntValue(string Key, ref int Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -203,7 +203,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E3BB RID: 123835 RVA: 0x002CF0EC File Offset: 0x002CD2EC
+		// Token: 0x060089B7 RID: 35255 RVA: 0x000CFA20 File Offset: 0x000CDC20
 		public unsafe static bool GetFloatValue(string Key, ref float Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -216,7 +216,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E3BC RID: 123836 RVA: 0x002CF118 File Offset: 0x002CD318
+		// Token: 0x060089B8 RID: 35256 RVA: 0x000CFA4C File Offset: 0x000CDC4C
 		public unsafe static bool GetBoolValue(string Key, ref bool Value)
 		{
 			FString fstring = FString.AllocTemp(Key);
@@ -229,108 +229,108 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E3BD RID: 123837
+		// Token: 0x060089B9 RID: 35257
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void Clear();
 
-		// Token: 0x0601E3BE RID: 123838
+		// Token: 0x060089BA RID: 35258
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetStringValue_Internal(in FString Key, in FString Value);
 
-		// Token: 0x0601E3BF RID: 123839
+		// Token: 0x060089BB RID: 35259
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetObject_Internal(in FString Key, IntPtr Value);
 
-		// Token: 0x0601E3C0 RID: 123840
+		// Token: 0x060089BC RID: 35260
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetIntValue_Internal(in FString Key, int Value);
 
-		// Token: 0x0601E3C1 RID: 123841
+		// Token: 0x060089BD RID: 35261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetFloatValue_Internal(in FString Key, float Value);
 
-		// Token: 0x0601E3C2 RID: 123842
+		// Token: 0x060089BE RID: 35262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetBoolValue_Internal(in FString Key, bool Value);
 
-		// Token: 0x0601E3C3 RID: 123843
+		// Token: 0x060089BF RID: 35263
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveStringValue_Internal(in FString Key);
 
-		// Token: 0x0601E3C4 RID: 123844
+		// Token: 0x060089C0 RID: 35264
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveObject_Internal(in FString Key);
 
-		// Token: 0x0601E3C5 RID: 123845
+		// Token: 0x060089C1 RID: 35265
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveIntValue_Internal(in FString Key);
 
-		// Token: 0x0601E3C6 RID: 123846
+		// Token: 0x060089C2 RID: 35266
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveFloatValue_Internal(in FString Key);
 
-		// Token: 0x0601E3C7 RID: 123847
+		// Token: 0x060089C3 RID: 35267
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveBoolValue_Internal(in FString Key);
 
-		// Token: 0x0601E3C8 RID: 123848
+		// Token: 0x060089C4 RID: 35268
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasStringValue_Internal(in FString Key);
 
-		// Token: 0x0601E3C9 RID: 123849
+		// Token: 0x060089C5 RID: 35269
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasObject_Internal(in FString Key);
 
-		// Token: 0x0601E3CA RID: 123850
+		// Token: 0x060089C6 RID: 35270
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasIntValue_Internal(in FString Key);
 
-		// Token: 0x0601E3CB RID: 123851
+		// Token: 0x060089C7 RID: 35271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasFloatValue_Internal(in FString Key);
 
-		// Token: 0x0601E3CC RID: 123852
+		// Token: 0x060089C8 RID: 35272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasBoolValue_Internal(in FString Key);
 
-		// Token: 0x0601E3CD RID: 123853
+		// Token: 0x060089C9 RID: 35273
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetStringValue_Internal(in FString Key, ref FString Value);
 
-		// Token: 0x0601E3CE RID: 123854
+		// Token: 0x060089CA RID: 35274
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetObject_Internal(in FString Key, ref IntPtr Value);
 
-		// Token: 0x0601E3CF RID: 123855
+		// Token: 0x060089CB RID: 35275
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIntValue_Internal(in FString Key, ref int Value);
 
-		// Token: 0x0601E3D0 RID: 123856
+		// Token: 0x060089CC RID: 35276
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetFloatValue_Internal(in FString Key, ref float Value);
 
-		// Token: 0x0601E3D1 RID: 123857
+		// Token: 0x060089CD RID: 35277
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetBoolValue_Internal(in FString Key, ref bool Value);
 
-		// Token: 0x0601E3D2 RID: 123858 RVA: 0x002CF142 File Offset: 0x002CD342
+		// Token: 0x060089CE RID: 35278 RVA: 0x000CFA76 File Offset: 0x000CDC76
 		static UKuroVariableFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroVariable.KuroVariableFunctionLibrary");
 		}
 
-		// Token: 0x0601E3D3 RID: 123859 RVA: 0x002CF150 File Offset: 0x002CD350
+		// Token: 0x060089CF RID: 35279 RVA: 0x000CFA84 File Offset: 0x000CDC84
 		protected UKuroVariableFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040104F9 RID: 66809
+		// Token: 0x04003BB8 RID: 15288
 		public new const string __ObjectPath = "/Script/KuroVariable.KuroVariableFunctionLibrary";
 
-		// Token: 0x040104FA RID: 66810
+		// Token: 0x04003BB9 RID: 15289
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040104FB RID: 66811
+		// Token: 0x04003BBA RID: 15290
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

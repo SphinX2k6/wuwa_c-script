@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200696D RID: 26989
+	// Token: 0x02005AC9 RID: 23241
 	public class ActionPickupDropItem : ActionParams
 	{
-		// Token: 0x04023000 RID: 143360
+		// Token: 0x0401E1EA RID: 123370
 		public int EntityId;
 	}
 }

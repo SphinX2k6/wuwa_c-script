@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubItems
 {
-	// Token: 0x0200484E RID: 18510
+	// Token: 0x0200377F RID: 14207
 	public class HonamiMarkSelectItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06030704 RID: 198404 RVA: 0x00B3F200 File Offset: 0x00B3D400
+		// Token: 0x06024ED3 RID: 151251 RVA: 0x00A6F444 File Offset: 0x00A6D644
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030705 RID: 198405 RVA: 0x00B3F26C File Offset: 0x00B3D46C
+		// Token: 0x06024ED4 RID: 151252 RVA: 0x00A6F4B0 File Offset: 0x00A6D6B0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.HonamiMarkId = data;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubItems
 			this.SetSpriteByPath(UiResourceConfig.Instance.GetResourcePath(honamiMapMarkById.Value.IconResourceId), base.GetSprite(0), true, null, null);
 		}
 
-		// Token: 0x0401A079 RID: 106617
+		// Token: 0x0401472D RID: 83757
 		private int HonamiMarkId;
 	}
 }

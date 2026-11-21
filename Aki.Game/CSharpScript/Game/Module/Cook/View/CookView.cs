@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B29 RID: 23337
+	// Token: 0x02004B0A RID: 19210
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookView : UiNavigationView
 	{
-		// Token: 0x0603B16F RID: 242031 RVA: 0x00E1752C File Offset: 0x00E1572C
+		// Token: 0x060300E1 RID: 196833 RVA: 0x00D68244 File Offset: 0x00D66444
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B170 RID: 242032 RVA: 0x00E1769C File Offset: 0x00E1589C
+		// Token: 0x060300E2 RID: 196834 RVA: 0x00D683B4 File Offset: 0x00D665B4
 		protected override void OnStart()
 		{
 			this.OpenCookRoleButton = new OpenCookRoleButton(base.GetItem(4));
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.IconItem = new IconItem(base.GetItem(1));
 		}
 
-		// Token: 0x0603B171 RID: 242033 RVA: 0x00E17744 File Offset: 0x00E15944
+		// Token: 0x060300E3 RID: 196835 RVA: 0x00D6845C File Offset: 0x00D6665C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -93,20 +93,20 @@ namespace CSharpScript.Game.Module.Cook.View
 			};
 		}
 
-		// Token: 0x0603B172 RID: 242034 RVA: 0x00E17796 File Offset: 0x00E15996
+		// Token: 0x060300E4 RID: 196836 RVA: 0x00D684AE File Offset: 0x00D666AE
 		private int GetMaxCount()
 		{
 			return CookController.Instance.GetMaxCreateCount(this.ItemId, CookModel.Instance.CurrentCookListType);
 		}
 
-		// Token: 0x0603B173 RID: 242035 RVA: 0x00E177B2 File Offset: 0x00E159B2
+		// Token: 0x060300E5 RID: 196837 RVA: 0x00D684CA File Offset: 0x00D666CA
 		private void SetSum(int sum)
 		{
 			this.Count = sum;
 			this.RefreshMaterialNeedNum();
 		}
 
-		// Token: 0x0603B174 RID: 242036 RVA: 0x00E177C1 File Offset: 0x00E159C1
+		// Token: 0x060300E6 RID: 196838 RVA: 0x00D684D9 File Offset: 0x00D666D9
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEventListener();
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.AmountItem = null;
 		}
 
-		// Token: 0x0603B175 RID: 242037 RVA: 0x00E177E4 File Offset: 0x00E159E4
+		// Token: 0x060300E7 RID: 196839 RVA: 0x00D684FC File Offset: 0x00D666FC
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.CookSuccess, new Action(this.OnCookSuccess));
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			EventSystem.Instance.Add(EEventName.CloseCookRole, new Action(this.RefreshCurrentCookRole));
 		}
 
-		// Token: 0x0603B176 RID: 242038 RVA: 0x00E17864 File Offset: 0x00E15A64
+		// Token: 0x060300E8 RID: 196840 RVA: 0x00D6857C File Offset: 0x00D6677C
 		private void RemoveEventListener()
 		{
 			if (!this.IsFirstShow)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B177 RID: 242039 RVA: 0x00E178E9 File Offset: 0x00E15AE9
+		// Token: 0x060300E9 RID: 196841 RVA: 0x00D68601 File Offset: 0x00D66801
 		public void HideView(bool isHide)
 		{
 			this.SetActive(!isHide);
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B178 RID: 242040 RVA: 0x00E17903 File Offset: 0x00E15B03
+		// Token: 0x060300EA RID: 196842 RVA: 0x00D6861B File Offset: 0x00D6681B
 		public void ShowView(int itemId)
 		{
 			CookModel.Instance.CurrentCookViewType = ECookDataType.Cook;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.Refresh();
 		}
 
-		// Token: 0x0603B179 RID: 242041 RVA: 0x00E1793C File Offset: 0x00E15B3C
+		// Token: 0x060300EB RID: 196843 RVA: 0x00D68654 File Offset: 0x00D66854
 		private void Refresh()
 		{
 			if (!base.GetActive())
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshAmountItem();
 		}
 
-		// Token: 0x0603B17A RID: 242042 RVA: 0x00E179EC File Offset: 0x00E15BEC
+		// Token: 0x060300EC RID: 196844 RVA: 0x00D68704 File Offset: 0x00D66904
 		private void RefreshText()
 		{
 			string name;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(0).ShowTextNew(name);
 		}
 
-		// Token: 0x0603B17B RID: 242043 RVA: 0x00E17A4C File Offset: 0x00E15C4C
+		// Token: 0x060300ED RID: 196845 RVA: 0x00D68764 File Offset: 0x00D66964
 		private void RefreshItemIcon()
 		{
 			int? num = null;
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.IconItem.SetQuality(num.Value);
 		}
 
-		// Token: 0x0603B17C RID: 242044 RVA: 0x00E17AC8 File Offset: 0x00E15CC8
+		// Token: 0x060300EE RID: 196846 RVA: 0x00D687E0 File Offset: 0x00D669E0
 		private void RefreshOpenCookRoleButton()
 		{
 			if (CookModel.Instance.CurrentCookListType == ECookListType.Cooking)
@@ -229,21 +229,21 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.OpenCookRoleButton.SetActive(false);
 		}
 
-		// Token: 0x0603B17D RID: 242045 RVA: 0x00E17B24 File Offset: 0x00E15D24
+		// Token: 0x060300EF RID: 196847 RVA: 0x00D6883C File Offset: 0x00D66A3C
 		private void RefreshCurrentCookRole()
 		{
 			this.RoleId = CookModel.Instance.CurrentCookRoleId.Value;
 			this.RefreshOpenCookRoleButton();
 		}
 
-		// Token: 0x0603B17E RID: 242046 RVA: 0x00E17B50 File Offset: 0x00E15D50
+		// Token: 0x060300F0 RID: 196848 RVA: 0x00D68868 File Offset: 0x00D66A68
 		private void RefreshMaterialList()
 		{
 			List<ISingleItemInfo> cookMaterialList = CookModel.Instance.GetCookMaterialList(this.ItemId, CookModel.Instance.CurrentCookListType);
 			this.MaterialHorizontal.RebuildLayoutByDataNew<ISingleItemInfo>(cookMaterialList, null);
 		}
 
-		// Token: 0x0603B17F RID: 242047 RVA: 0x00E17B90 File Offset: 0x00E15D90
+		// Token: 0x060300F1 RID: 196849 RVA: 0x00D688A8 File Offset: 0x00D66AA8
 		private void RefreshMaterialNeedNum()
 		{
 			foreach (MaterialItem materialItem in this.MaterialHorizontal.GetLayoutItemMap().Values)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0603B180 RID: 242048 RVA: 0x00E17BF0 File Offset: 0x00E15DF0
+		// Token: 0x060300F2 RID: 196850 RVA: 0x00D68908 File Offset: 0x00D66B08
 		private void RefreshConfirmButton()
 		{
 			UUIInteractionGroup uuiinteractionGroup = (base.GetButton(3).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup;
@@ -269,20 +269,20 @@ namespace CSharpScript.Game.Module.Cook.View
 			auibaseActor.GetUIItem().SetUIActive(!flag2);
 		}
 
-		// Token: 0x0603B181 RID: 242049 RVA: 0x00E17C90 File Offset: 0x00E15E90
+		// Token: 0x060300F3 RID: 196851 RVA: 0x00D689A8 File Offset: 0x00D66BA8
 		private void RefreshAmountItem()
 		{
 			this.AmountItem.ResetSum();
 			this.AmountItem.RefreshAddAndDelButton();
 		}
 
-		// Token: 0x0603B182 RID: 242050 RVA: 0x00E17CA8 File Offset: 0x00E15EA8
+		// Token: 0x060300F4 RID: 196852 RVA: 0x00D689C0 File Offset: 0x00D66BC0
 		private void OpenCookRoleView()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.OpenCookRole, this.ItemId);
 		}
 
-		// Token: 0x0603B183 RID: 242051 RVA: 0x00E17CC0 File Offset: 0x00E15EC0
+		// Token: 0x060300F5 RID: 196853 RVA: 0x00D689D8 File Offset: 0x00D66BD8
 		private void OnConfirm()
 		{
 			if (CookModel.Instance.CurrentCookListType == ECookListType.Cooking)
@@ -294,25 +294,25 @@ namespace CSharpScript.Game.Module.Cook.View
 			CookController.Instance.SendFoodProcessRequest(this.ItemId, CookModel.Instance.GetTmpMachiningItemList(), this.Count);
 		}
 
-		// Token: 0x0603B184 RID: 242052 RVA: 0x00E17D20 File Offset: 0x00E15F20
+		// Token: 0x060300F6 RID: 196854 RVA: 0x00D68A38 File Offset: 0x00D66C38
 		private void OnDisableCook()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("MaterialShort", Array.Empty<object>());
 		}
 
-		// Token: 0x0603B185 RID: 242053 RVA: 0x00E17D36 File Offset: 0x00E15F36
+		// Token: 0x060300F7 RID: 196855 RVA: 0x00D68A4E File Offset: 0x00D66C4E
 		private void OnClickMaterial(ISingleItemInfo itemData, int _)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(itemData.Proto_ItemId, true, null, false);
 		}
 
-		// Token: 0x0603B186 RID: 242054 RVA: 0x00E17D4A File Offset: 0x00E15F4A
+		// Token: 0x060300F8 RID: 196856 RVA: 0x00D68A63 File Offset: 0x00D66C63
 		private void OnCookSuccess()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603B187 RID: 242055 RVA: 0x00E17D54 File Offset: 0x00E15F54
+		// Token: 0x060300F9 RID: 196857 RVA: 0x00D68A6C File Offset: 0x00D66C6C
 		private void OnOpenMachiningCookPopView()
 		{
 			if (!base.GetActive())
@@ -324,7 +324,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			UiManager.Instance.OpenView(EUiViewName.CookSuccessView, cookRewardPopData, null);
 		}
 
-		// Token: 0x0603B188 RID: 242056 RVA: 0x00E17D88 File Offset: 0x00E15F88
+		// Token: 0x060300FA RID: 196858 RVA: 0x00D68AA0 File Offset: 0x00D66CA0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			};
 		}
 
-		// Token: 0x0401ECEF RID: 126191
+		// Token: 0x040197AB RID: 104363
 		[Nullable(new byte[]
 		{
 			2,
@@ -352,53 +352,53 @@ namespace CSharpScript.Game.Module.Cook.View
 		})]
 		private GenericLayoutNew<MaterialItem> MaterialHorizontal;
 
-		// Token: 0x0401ECF0 RID: 126192
+		// Token: 0x040197AC RID: 104364
 		[Nullable(2)]
 		private OpenCookRoleButton OpenCookRoleButton;
 
-		// Token: 0x0401ECF1 RID: 126193
+		// Token: 0x040197AD RID: 104365
 		[Nullable(2)]
 		private IconItem IconItem;
 
-		// Token: 0x0401ECF2 RID: 126194
+		// Token: 0x040197AE RID: 104366
 		[Nullable(2)]
 		private AmountItem AmountItem;
 
-		// Token: 0x0401ECF3 RID: 126195
+		// Token: 0x040197AF RID: 104367
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401ECF4 RID: 126196
+		// Token: 0x040197B0 RID: 104368
 		private int ItemId;
 
-		// Token: 0x0401ECF5 RID: 126197
+		// Token: 0x040197B1 RID: 104369
 		private int RoleId;
 
-		// Token: 0x0401ECF6 RID: 126198
+		// Token: 0x040197B2 RID: 104370
 		private int Count = 1;
 
-		// Token: 0x0401ECF7 RID: 126199
+		// Token: 0x040197B3 RID: 104371
 		private CookFormula? CookFormula;
 
-		// Token: 0x0401ECF8 RID: 126200
+		// Token: 0x040197B4 RID: 104372
 		private CookProcessed? CookProcessed;
 
-		// Token: 0x0200BD66 RID: 48486
+		// Token: 0x0200A76F RID: 42863
 		[NullableContext(0)]
 		public enum ECookViewDefine
 		{
-			// Token: 0x04039212 RID: 234002
+			// Token: 0x04033BDE RID: 211934
 			CookNameText,
-			// Token: 0x04039213 RID: 234003
+			// Token: 0x04033BDF RID: 211935
 			CookIconItem,
-			// Token: 0x04039214 RID: 234004
+			// Token: 0x04033BE0 RID: 211936
 			CookMaterialHorizontalLayout,
-			// Token: 0x04039215 RID: 234005
+			// Token: 0x04033BE1 RID: 211937
 			CookConfirmButton,
-			// Token: 0x04039216 RID: 234006
+			// Token: 0x04033BE2 RID: 211938
 			CookRoleItem,
-			// Token: 0x04039217 RID: 234007
+			// Token: 0x04033BE3 RID: 211939
 			AmountItem,
-			// Token: 0x04039218 RID: 234008
+			// Token: 0x04033BE4 RID: 211940
 			CookDefaultButton
 		}
 	}

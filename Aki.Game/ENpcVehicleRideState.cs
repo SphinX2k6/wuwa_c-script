@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020031FE RID: 12798
+// Token: 0x0200276D RID: 10093
 public enum ENpcVehicleRideState
 {
-	// Token: 0x0400D916 RID: 55574
+	// Token: 0x0400DDB4 RID: 56756
 	None,
-	// Token: 0x0400D917 RID: 55575
+	// Token: 0x0400DDB5 RID: 56757
 	MoveToVehicle,
-	// Token: 0x0400D918 RID: 55576
+	// Token: 0x0400DDB6 RID: 56758
 	OnVehicleWaiting,
-	// Token: 0x0400D919 RID: 55577
+	// Token: 0x0400DDB7 RID: 56759
 	MoveToTargetPoint,
-	// Token: 0x0400D91A RID: 55578
+	// Token: 0x0400DDB8 RID: 56760
 	WaitingToDismount,
-	// Token: 0x0400D91B RID: 55579
+	// Token: 0x0400DDB9 RID: 56761
 	WaitingToFinishDismount
 }

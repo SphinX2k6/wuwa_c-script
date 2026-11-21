@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001711 RID: 5905
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200188E RID: 6286
 	public class ExecRiskHarvestEffect : ActionParams
 	{
-		// Token: 0x06007D1F RID: 32031 RVA: 0x0012C5F4 File Offset: 0x0012A7F4
+		// Token: 0x060083FD RID: 33789 RVA: 0x0013B6A0 File Offset: 0x001398A0
 		private ExecRiskHarvestEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D20 RID: 32032 RVA: 0x0012C62C File Offset: 0x0012A82C
+		// Token: 0x060083FE RID: 33790 RVA: 0x0013B6D8 File Offset: 0x001398D8
 		public static ExecRiskHarvestEffect Create([Nullable(2)] ExecRiskHarvestEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D21 RID: 32033 RVA: 0x0012C63F File Offset: 0x0012A83F
+		// Token: 0x060083FF RID: 33791 RVA: 0x0013B6EB File Offset: 0x001398EB
 		public static ExecRiskHarvestEffect CreateFromSetValue([Nullable(2)] ExecRiskHarvestEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D22 RID: 32034 RVA: 0x0012C652 File Offset: 0x0012A852
+		// Token: 0x06008400 RID: 33792 RVA: 0x0013B6FE File Offset: 0x001398FE
 		public ExecRiskHarvestEffect_SetValue ToSetValue()
 		{
 			return new ExecRiskHarvestEffect_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002945 RID: 10565
-		// (get) Token: 0x06007D23 RID: 32035 RVA: 0x0012C665 File Offset: 0x0012A865
-		// (set) Token: 0x06007D24 RID: 32036 RVA: 0x0012C690 File Offset: 0x0012A890
+		// Token: 0x17002B30 RID: 11056
+		// (get) Token: 0x06008401 RID: 33793 RVA: 0x0013B711 File Offset: 0x00139911
+		// (set) Token: 0x06008402 RID: 33794 RVA: 0x0013B73C File Offset: 0x0013993C
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FE5 RID: 20453
+		// Token: 0x04005414 RID: 21524
 		[Nullable(2)]
 		protected new ExecRiskHarvestEffect FbInstance;
 
-		// Token: 0x04004FE6 RID: 20454
+		// Token: 0x04005415 RID: 21525
 		[Nullable(2)]
 		protected ExecRiskHarvestEffect_SetValue PocoInterface;
 	}

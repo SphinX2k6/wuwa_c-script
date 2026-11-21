@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200495A RID: 18778
+	// Token: 0x020038D2 RID: 14546
 	public class DraggableInsideComponent : DraggableComponent
 	{
-		// Token: 0x0603100B RID: 200715 RVA: 0x00B60F48 File Offset: 0x00B5F148
+		// Token: 0x06025B3B RID: 154427 RVA: 0x00A9BE28 File Offset: 0x00A9A028
 		public DraggableInsideComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603100C RID: 200716 RVA: 0x00B60F54 File Offset: 0x00B5F154
+		// Token: 0x06025B3C RID: 154428 RVA: 0x00A9BE34 File Offset: 0x00A9A034
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

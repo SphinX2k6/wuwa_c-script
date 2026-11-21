@@ -5,29 +5,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004916 RID: 18710
+	// Token: 0x0200388D RID: 14477
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationButton : NavigationSelectableBase
 	{
-		// Token: 0x06030E36 RID: 200246 RVA: 0x00B5A437 File Offset: 0x00B58637
+		// Token: 0x06025963 RID: 153955 RVA: 0x00A952A7 File Offset: 0x00A934A7
 		public NavigationButton(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E37 RID: 200247 RVA: 0x00B5A442 File Offset: 0x00B58642
+		// Token: 0x06025964 RID: 153956 RVA: 0x00A952B2 File Offset: 0x00A934B2
 		protected override void OnInit()
 		{
 			this.RegisterButtonClick();
 		}
 
-		// Token: 0x06030E38 RID: 200248 RVA: 0x00B5A44A File Offset: 0x00B5864A
+		// Token: 0x06025965 RID: 153957 RVA: 0x00A952BA File Offset: 0x00A934BA
 		protected override void OnClear()
 		{
 			this.UnRegisterButtonClick();
 		}
 
-		// Token: 0x06030E39 RID: 200249 RVA: 0x00B5A454 File Offset: 0x00B58654
+		// Token: 0x06025966 RID: 153958 RVA: 0x00A952C4 File Offset: 0x00A934C4
 		private void RegisterButtonClick()
 		{
 			if (this.NeedAddButtonClick())
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E3A RID: 200250 RVA: 0x00B5A49C File Offset: 0x00B5869C
+		// Token: 0x06025967 RID: 153959 RVA: 0x00A9530C File Offset: 0x00A9350C
 		private void UnRegisterButtonClick()
 		{
 			if (this.HandleWrapper != null)
@@ -53,24 +53,24 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030E3B RID: 200251 RVA: 0x00B5A4EB File Offset: 0x00B586EB
+		// Token: 0x06025968 RID: 153960 RVA: 0x00A9535B File Offset: 0x00A9355B
 		private void ButtonClick()
 		{
 			this.OnButtonClick();
 		}
 
-		// Token: 0x06030E3C RID: 200252 RVA: 0x00B5A4F3 File Offset: 0x00B586F3
+		// Token: 0x06025969 RID: 153961 RVA: 0x00A95363 File Offset: 0x00A93563
 		protected virtual void OnButtonClick()
 		{
 		}
 
-		// Token: 0x06030E3D RID: 200253 RVA: 0x00B5A4F5 File Offset: 0x00B586F5
+		// Token: 0x0602596A RID: 153962 RVA: 0x00A95365 File Offset: 0x00A93565
 		protected virtual bool NeedAddButtonClick()
 		{
 			return base.GetType() != ENavigationSelectableDefine.Button;
 		}
 
-		// Token: 0x06030E3E RID: 200254 RVA: 0x00B5A504 File Offset: 0x00B58704
+		// Token: 0x0602596B RID: 153963 RVA: 0x00A95374 File Offset: 0x00A93574
 		protected override bool OnHandlePointerSelect(ULGUIPointerEventData eventData)
 		{
 			TsUiNavigationBehaviorListener listener = this.Listener;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x0401A3D2 RID: 107474
+		// Token: 0x04014C45 RID: 85061
 		[Nullable(2)]
 		private FLGUIDelegateHandleWrapper HandleWrapper;
 	}

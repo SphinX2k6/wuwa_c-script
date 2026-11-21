@@ -2,22 +2,22 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Personal;
 
-// Token: 0x020033E7 RID: 13287
+// Token: 0x02002959 RID: 10585
 public class PersonalCardRedDot : RedDotBase
 {
-	// Token: 0x0601CC6F RID: 117871 RVA: 0x0080A103 File Offset: 0x00808303
+	// Token: 0x0601A967 RID: 108903 RVA: 0x008306C7 File Offset: 0x0082E8C7
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnPersonalCardRefreshRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC70 RID: 117872 RVA: 0x0080A121 File Offset: 0x00808321
+	// Token: 0x0601A968 RID: 108904 RVA: 0x008306E5 File Offset: 0x0082E8E5
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPersonalCardRefreshRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC71 RID: 117873 RVA: 0x0080A13F File Offset: 0x0080833F
+	// Token: 0x0601A969 RID: 108905 RVA: 0x00830703 File Offset: 0x0082E903
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PersonalModel.Instance.GetPersonalCardRedDotState();

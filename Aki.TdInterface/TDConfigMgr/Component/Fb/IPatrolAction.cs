@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A87 RID: 2695
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B51 RID: 2897
 	public class IPatrolAction
 	{
-		// Token: 0x06003E11 RID: 15889 RVA: 0x0009F065 File Offset: 0x0009D265
+		// Token: 0x0600423A RID: 16954 RVA: 0x000A861D File Offset: 0x000A681D
 		public static IPatrolAction Create(IPatrolAction? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EC0 RID: 3776
-		// (get) Token: 0x06003E12 RID: 15890 RVA: 0x0009F084 File Offset: 0x0009D284
+		// Token: 0x17000F93 RID: 3987
+		// (get) Token: 0x0600423B RID: 16955 RVA: 0x000A863C File Offset: 0x000A683C
 		public virtual int Point
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EC1 RID: 3777
-		// (get) Token: 0x06003E13 RID: 15891 RVA: 0x0009F094 File Offset: 0x0009D294
+		// Token: 0x17000F94 RID: 3988
+		// (get) Token: 0x0600423C RID: 16956 RVA: 0x000A864C File Offset: 0x000A684C
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002294 RID: 8852
+		// Token: 0x040024B0 RID: 9392
 		private IPatrolAction Instance;
 
-		// Token: 0x04002295 RID: 8853
+		// Token: 0x040024B1 RID: 9393
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002296 RID: 8854
+		// Token: 0x040024B2 RID: 9394
 		private bool _ActionsInited;
 	}
 }

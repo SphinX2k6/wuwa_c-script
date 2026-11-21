@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A14 RID: 27156
+	// Token: 0x020070C4 RID: 28868
 	public struct ILimitPlayerBlockAll : IFlatbufferObject
 	{
-		// Token: 0x1700C977 RID: 51575
-		// (get) Token: 0x0602F84F RID: 194639 RVA: 0x006785AD File Offset: 0x006767AD
+		// Token: 0x1700D377 RID: 54135
+		// (get) Token: 0x0603220F RID: 205327 RVA: 0x006C8905 File Offset: 0x006C6B05
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F850 RID: 194640 RVA: 0x006785BA File Offset: 0x006767BA
+		// Token: 0x06032210 RID: 205328 RVA: 0x006C8912 File Offset: 0x006C6B12
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F851 RID: 194641 RVA: 0x006785C4 File Offset: 0x006767C4
+		// Token: 0x06032211 RID: 205329 RVA: 0x006C891C File Offset: 0x006C6B1C
 		public static ILimitPlayerBlockAll GetRootAsILimitPlayerBlockAll(ByteBuffer _bb)
 		{
 			return ILimitPlayerBlockAll.GetRootAsILimitPlayerBlockAll(_bb, default(ILimitPlayerBlockAll));
 		}
 
-		// Token: 0x0602F852 RID: 194642 RVA: 0x006785E0 File Offset: 0x006767E0
+		// Token: 0x06032212 RID: 205330 RVA: 0x006C8938 File Offset: 0x006C6B38
 		public static ILimitPlayerBlockAll GetRootAsILimitPlayerBlockAll(ByteBuffer _bb, ILimitPlayerBlockAll obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F853 RID: 194643 RVA: 0x006785FD File Offset: 0x006767FD
+		// Token: 0x06032213 RID: 205331 RVA: 0x006C8955 File Offset: 0x006C6B55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F854 RID: 194644 RVA: 0x0067860C File Offset: 0x0067680C
+		// Token: 0x06032214 RID: 205332 RVA: 0x006C8964 File Offset: 0x006C6B64
 		public ILimitPlayerBlockAll __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C978 RID: 51576
-		// (get) Token: 0x0602F855 RID: 194645 RVA: 0x0067861C File Offset: 0x0067681C
+		// Token: 0x1700D378 RID: 54136
+		// (get) Token: 0x06032215 RID: 205333 RVA: 0x006C8974 File Offset: 0x006C6B74
 		public ELimitPlayOperation Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F856 RID: 194646 RVA: 0x00678658 File Offset: 0x00676858
+		// Token: 0x06032216 RID: 205334 RVA: 0x006C89B0 File Offset: 0x006C6BB0
 		public static Offset<ILimitPlayerBlockAll> CreateILimitPlayerBlockAll(FlatBufferBuilder builder, ELimitPlayOperation Type = ELimitPlayOperation.AllowCamera)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILimitPlayerBlockAll.EndILimitPlayerBlockAll(builder);
 		}
 
-		// Token: 0x0602F857 RID: 194647 RVA: 0x0067866E File Offset: 0x0067686E
+		// Token: 0x06032217 RID: 205335 RVA: 0x006C89C6 File Offset: 0x006C6BC6
 		public static void StartILimitPlayerBlockAll(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602F858 RID: 194648 RVA: 0x00678677 File Offset: 0x00676877
+		// Token: 0x06032218 RID: 205336 RVA: 0x006C89CF File Offset: 0x006C6BCF
 		public static void AddType(FlatBufferBuilder builder, ELimitPlayOperation type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F859 RID: 194649 RVA: 0x00678682 File Offset: 0x00676882
+		// Token: 0x06032219 RID: 205337 RVA: 0x006C89DA File Offset: 0x006C6BDA
 		public static Offset<ILimitPlayerBlockAll> EndILimitPlayerBlockAll(FlatBufferBuilder builder)
 		{
 			return new Offset<ILimitPlayerBlockAll>(builder.EndTable());
 		}
 
-		// Token: 0x0602F85A RID: 194650 RVA: 0x00678690 File Offset: 0x00676890
+		// Token: 0x0603221A RID: 205338 RVA: 0x006C89E8 File Offset: 0x006C6BE8
 		public ILimitPlayerBlockAllT UnPack()
 		{
 			ILimitPlayerBlockAllT limitPlayerBlockAllT = new ILimitPlayerBlockAllT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return limitPlayerBlockAllT;
 		}
 
-		// Token: 0x0602F85B RID: 194651 RVA: 0x006786AB File Offset: 0x006768AB
+		// Token: 0x0603221B RID: 205339 RVA: 0x006C8A03 File Offset: 0x006C6C03
 		public void UnPackTo(ILimitPlayerBlockAllT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602F85C RID: 194652 RVA: 0x006786BC File Offset: 0x006768BC
+		// Token: 0x0603221C RID: 205340 RVA: 0x006C8A14 File Offset: 0x006C6C14
 		public static Offset<ILimitPlayerBlockAll> Pack(FlatBufferBuilder builder, ILimitPlayerBlockAllT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILimitPlayerBlockAll.CreateILimitPlayerBlockAll(builder, _o.Type);
 		}
 
-		// Token: 0x0401121B RID: 70171
+		// Token: 0x04012085 RID: 73861
 		private Table __p;
 	}
 }

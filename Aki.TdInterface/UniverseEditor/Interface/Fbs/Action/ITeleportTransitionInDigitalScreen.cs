@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200739D RID: 29597
+	// Token: 0x02007B84 RID: 31620
 	public struct ITeleportTransitionInDigitalScreen : IFlatbufferObject
 	{
-		// Token: 0x1700E09F RID: 57503
-		// (get) Token: 0x06035B6D RID: 220013 RVA: 0x0074FE36 File Offset: 0x0074E036
+		// Token: 0x1700ECAF RID: 60591
+		// (get) Token: 0x06038F08 RID: 233224 RVA: 0x007B2376 File Offset: 0x007B0576
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035B6E RID: 220014 RVA: 0x0074FE43 File Offset: 0x0074E043
+		// Token: 0x06038F09 RID: 233225 RVA: 0x007B2383 File Offset: 0x007B0583
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035B6F RID: 220015 RVA: 0x0074FE4C File Offset: 0x0074E04C
+		// Token: 0x06038F0A RID: 233226 RVA: 0x007B238C File Offset: 0x007B058C
 		public static ITeleportTransitionInDigitalScreen GetRootAsITeleportTransitionInDigitalScreen(ByteBuffer _bb)
 		{
 			return ITeleportTransitionInDigitalScreen.GetRootAsITeleportTransitionInDigitalScreen(_bb, default(ITeleportTransitionInDigitalScreen));
 		}
 
-		// Token: 0x06035B70 RID: 220016 RVA: 0x0074FE68 File Offset: 0x0074E068
+		// Token: 0x06038F0B RID: 233227 RVA: 0x007B23A8 File Offset: 0x007B05A8
 		public static ITeleportTransitionInDigitalScreen GetRootAsITeleportTransitionInDigitalScreen(ByteBuffer _bb, ITeleportTransitionInDigitalScreen obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035B71 RID: 220017 RVA: 0x0074FE85 File Offset: 0x0074E085
+		// Token: 0x06038F0C RID: 233228 RVA: 0x007B23C5 File Offset: 0x007B05C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035B72 RID: 220018 RVA: 0x0074FE94 File Offset: 0x0074E094
+		// Token: 0x06038F0D RID: 233229 RVA: 0x007B23D4 File Offset: 0x007B05D4
 		public ITeleportTransitionInDigitalScreen __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E0A0 RID: 57504
-		// (get) Token: 0x06035B73 RID: 220019 RVA: 0x0074FEA4 File Offset: 0x0074E0A4
+		// Token: 0x1700ECB0 RID: 60592
+		// (get) Token: 0x06038F0E RID: 233230 RVA: 0x007B23E4 File Offset: 0x007B05E4
 		public ETeleportTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0A1 RID: 57505
-		// (get) Token: 0x06035B74 RID: 220020 RVA: 0x0074FEE0 File Offset: 0x0074E0E0
+		// Token: 0x1700ECB1 RID: 60593
+		// (get) Token: 0x06038F0F RID: 233231 RVA: 0x007B2420 File Offset: 0x007B0620
 		public int ConfigId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035B75 RID: 220021 RVA: 0x0074FF1C File Offset: 0x0074E11C
+		// Token: 0x06038F10 RID: 233232 RVA: 0x007B245C File Offset: 0x007B065C
 		public static Offset<ITeleportTransitionInDigitalScreen> CreateITeleportTransitionInDigitalScreen(FlatBufferBuilder builder, ETeleportTransitionType Type = ETeleportTransitionType.PlayMp4, int ConfigId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionInDigitalScreen.EndITeleportTransitionInDigitalScreen(builder);
 		}
 
-		// Token: 0x06035B76 RID: 220022 RVA: 0x0074FF39 File Offset: 0x0074E139
+		// Token: 0x06038F11 RID: 233233 RVA: 0x007B2479 File Offset: 0x007B0679
 		public static void StartITeleportTransitionInDigitalScreen(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06035B77 RID: 220023 RVA: 0x0074FF42 File Offset: 0x0074E142
+		// Token: 0x06038F12 RID: 233234 RVA: 0x007B2482 File Offset: 0x007B0682
 		public static void AddType(FlatBufferBuilder builder, ETeleportTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035B78 RID: 220024 RVA: 0x0074FF4D File Offset: 0x0074E14D
+		// Token: 0x06038F13 RID: 233235 RVA: 0x007B248D File Offset: 0x007B068D
 		public static void AddConfigId(FlatBufferBuilder builder, int configId)
 		{
 			builder.AddInt(1, configId, 0);
 		}
 
-		// Token: 0x06035B79 RID: 220025 RVA: 0x0074FF58 File Offset: 0x0074E158
+		// Token: 0x06038F14 RID: 233236 RVA: 0x007B2498 File Offset: 0x007B0698
 		public static Offset<ITeleportTransitionInDigitalScreen> EndITeleportTransitionInDigitalScreen(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportTransitionInDigitalScreen>(builder.EndTable());
 		}
 
-		// Token: 0x06035B7A RID: 220026 RVA: 0x0074FF68 File Offset: 0x0074E168
+		// Token: 0x06038F15 RID: 233237 RVA: 0x007B24A8 File Offset: 0x007B06A8
 		public ITeleportTransitionInDigitalScreenT UnPack()
 		{
 			ITeleportTransitionInDigitalScreenT teleportTransitionInDigitalScreenT = new ITeleportTransitionInDigitalScreenT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportTransitionInDigitalScreenT;
 		}
 
-		// Token: 0x06035B7B RID: 220027 RVA: 0x0074FF83 File Offset: 0x0074E183
+		// Token: 0x06038F16 RID: 233238 RVA: 0x007B24C3 File Offset: 0x007B06C3
 		public void UnPackTo(ITeleportTransitionInDigitalScreenT _o)
 		{
 			_o.Type = this.Type;
 			_o.ConfigId = this.ConfigId;
 		}
 
-		// Token: 0x06035B7C RID: 220028 RVA: 0x0074FFA0 File Offset: 0x0074E1A0
+		// Token: 0x06038F17 RID: 233239 RVA: 0x007B24E0 File Offset: 0x007B06E0
 		public static Offset<ITeleportTransitionInDigitalScreen> Pack(FlatBufferBuilder builder, ITeleportTransitionInDigitalScreenT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionInDigitalScreen.CreateITeleportTransitionInDigitalScreen(builder, _o.Type, _o.ConfigId);
 		}
 
-		// Token: 0x040121BA RID: 74170
+		// Token: 0x040131D3 RID: 78291
 		private Table __p;
 	}
 }

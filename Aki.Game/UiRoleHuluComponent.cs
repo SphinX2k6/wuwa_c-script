@@ -4,12 +4,12 @@ using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002CAF RID: 11439
+// Token: 0x02002208 RID: 8712
 [NullableContext(2)]
 [Nullable(0)]
 public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiModelSetDitherEffect
 {
-	// Token: 0x06017E65 RID: 97893 RVA: 0x00613448 File Offset: 0x00611648
+	// Token: 0x060156D9 RID: 87769 RVA: 0x00638FCC File Offset: 0x006371CC
 	protected override void OnInit()
 	{
 		this.RoleDataComponent = base.Owner.CheckGetComponent<UiRoleDataComponent>();
@@ -20,7 +20,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.SetActive(false);
 	}
 
-	// Token: 0x06017E66 RID: 97894 RVA: 0x006134AC File Offset: 0x006116AC
+	// Token: 0x060156DA RID: 87770 RVA: 0x00639030 File Offset: 0x00637230
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
@@ -30,10 +30,10 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		{
 			return;
 		}
-		ansControllerComponent.RegisterAnsTrigger("UiCalabashAnsContext", new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), null, null);
+		ansControllerComponent.RegisterAnsTrigger(typeof(UiCalabashAnsContext), new Action<UiAnsContextBase>(this.OnAnsBegin), new Action<UiAnsContextBase>(this.OnAnsEnd), null, null);
 	}
 
-	// Token: 0x06017E67 RID: 97895 RVA: 0x0061352C File Offset: 0x0061172C
+	// Token: 0x060156DB RID: 87771 RVA: 0x006390B8 File Offset: 0x006372B8
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnRoleMeshLoadComplete));
@@ -41,14 +41,14 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		SkeletalObserverManager.DestroySkeletalObserver(this.HuluHandle);
 	}
 
-	// Token: 0x06017E68 RID: 97896 RVA: 0x00613588 File Offset: 0x00611788
+	// Token: 0x060156DC RID: 87772 RVA: 0x00639114 File Offset: 0x00637314
 	[NullableContext(1)]
 	public SkeletalObserverHandle GetHuluHandle()
 	{
 		return this.HuluHandle;
 	}
 
-	// Token: 0x06017E69 RID: 97897 RVA: 0x00613590 File Offset: 0x00611790
+	// Token: 0x060156DD RID: 87773 RVA: 0x0063911C File Offset: 0x0063731C
 	public void OnModelVisibleChange(bool visible)
 	{
 		if (!visible && this.CurState == EHuluState.Showing)
@@ -58,13 +58,13 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.AwaitVisible = new bool?(visible);
 	}
 
-	// Token: 0x06017E6A RID: 97898 RVA: 0x006135B1 File Offset: 0x006117B1
+	// Token: 0x060156DE RID: 87774 RVA: 0x0063913D File Offset: 0x0063733D
 	private void OnUiRoleModelStartLoad()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x06017E6B RID: 97899 RVA: 0x006135B9 File Offset: 0x006117B9
+	// Token: 0x060156DF RID: 87775 RVA: 0x00639145 File Offset: 0x00637345
 	public void OnModelDitherEffectChange(float value)
 	{
 		SkeletalObserverHandle huluHandle = this.HuluHandle;
@@ -85,7 +85,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		uiModelDataComponent.SetDitherEffect(value);
 	}
 
-	// Token: 0x06017E6C RID: 97900 RVA: 0x006135E0 File Offset: 0x006117E0
+	// Token: 0x060156E0 RID: 87776 RVA: 0x0063916C File Offset: 0x0063736C
 	public void Refresh()
 	{
 		UiModelBase model = this.HuluHandle.Model;
@@ -110,7 +110,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		uiModelLoadComponent.LoadModelByModelId(modelId, false, null, null);
 	}
 
-	// Token: 0x06017E6D RID: 97901 RVA: 0x00613668 File Offset: 0x00611868
+	// Token: 0x060156E1 RID: 87777 RVA: 0x006391F4 File Offset: 0x006373F4
 	public void SetActive(bool isActive)
 	{
 		if ((isActive && this.CurState == EHuluState.Showing) || (!isActive && this.CurState == EHuluState.Hidden))
@@ -136,7 +136,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.CurState = (isActive ? EHuluState.Showing : EHuluState.Hidden);
 	}
 
-	// Token: 0x06017E6E RID: 97902 RVA: 0x006136C8 File Offset: 0x006118C8
+	// Token: 0x060156E2 RID: 87778 RVA: 0x00639254 File Offset: 0x00637454
 	public void StartHuluRotate()
 	{
 		if (this.HuluHandle != null)
@@ -166,7 +166,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		}
 	}
 
-	// Token: 0x06017E6F RID: 97903 RVA: 0x00613728 File Offset: 0x00611928
+	// Token: 0x060156E3 RID: 87779 RVA: 0x006392B4 File Offset: 0x006374B4
 	public void AttachHuluToRole(FName socketName = default(FName))
 	{
 		if (socketName == default(FName))
@@ -177,7 +177,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.ExecuteAttachHuluToRole();
 	}
 
-	// Token: 0x06017E70 RID: 97904 RVA: 0x00613760 File Offset: 0x00611960
+	// Token: 0x060156E4 RID: 87780 RVA: 0x006392EC File Offset: 0x006374EC
 	private void ExecuteAttachHuluToRole()
 	{
 		if (this.ModelDataComponent.GetModelLoadState() == EUiModelLoadState.LoadComplete)
@@ -217,13 +217,13 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		}
 	}
 
-	// Token: 0x06017E71 RID: 97905 RVA: 0x006137F0 File Offset: 0x006119F0
+	// Token: 0x060156E5 RID: 87781 RVA: 0x0063937C File Offset: 0x0063757C
 	public void OnRoleMeshLoadComplete()
 	{
 		this.ExecuteAttachHuluToRole();
 	}
 
-	// Token: 0x06017E72 RID: 97906 RVA: 0x006137F8 File Offset: 0x006119F8
+	// Token: 0x060156E6 RID: 87782 RVA: 0x00639384 File Offset: 0x00637584
 	[NullableContext(1)]
 	public void OnAnsBegin(UiAnsContextBase ansContext)
 	{
@@ -239,7 +239,7 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.AttachHuluToRole(socket);
 	}
 
-	// Token: 0x06017E73 RID: 97907 RVA: 0x00613846 File Offset: 0x00611A46
+	// Token: 0x060156E7 RID: 87783 RVA: 0x006393D2 File Offset: 0x006375D2
 	[NullableContext(1)]
 	public void OnAnsEnd(UiAnsContextBase ansContext)
 	{
@@ -262,27 +262,27 @@ public class UiRoleHuluComponent : UiModelComponentBase, IUiModelVisible, IUiMod
 		this.SetActive(false);
 	}
 
-	// Token: 0x0400B22F RID: 45615
+	// Token: 0x0400B59A RID: 46490
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B230 RID: 45616
+	// Token: 0x0400B59B RID: 46491
 	private UiRoleDataComponent RoleDataComponent;
 
-	// Token: 0x0400B231 RID: 45617
+	// Token: 0x0400B59C RID: 46492
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B232 RID: 45618
+	// Token: 0x0400B59D RID: 46493
 	private UiModelAnsControllerComponent AnsControllerComponent;
 
-	// Token: 0x0400B233 RID: 45619
+	// Token: 0x0400B59E RID: 46494
 	private SkeletalObserverHandle HuluHandle;
 
-	// Token: 0x0400B234 RID: 45620
+	// Token: 0x0400B59F RID: 46495
 	private FName SocketName = CharacterNameDefines.Instance.HULU_SOCKET_NAME;
 
-	// Token: 0x0400B235 RID: 45621
+	// Token: 0x0400B5A0 RID: 46496
 	private EHuluState CurState;
 
-	// Token: 0x0400B236 RID: 45622
+	// Token: 0x0400B5A1 RID: 46497
 	private bool? AwaitVisible;
 }

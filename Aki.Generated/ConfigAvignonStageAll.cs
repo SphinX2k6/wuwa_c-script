@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000BE RID: 190
+	// Token: 0x020000CD RID: 205
 	public class ConfigAvignonStageAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000475 RID: 1141 RVA: 0x00072F44 File Offset: 0x00071144
+		// Token: 0x060004CF RID: 1231 RVA: 0x000788A8 File Offset: 0x00076AA8
 		static ConfigAvignonStageAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAvignonStageAll.CreateStaticDefaultValue), new Action(ConfigAvignonStageAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000476 RID: 1142 RVA: 0x00072F64 File Offset: 0x00071164
+		// Token: 0x060004D0 RID: 1232 RVA: 0x000788C8 File Offset: 0x00076AC8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAvignonStageAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000477 RID: 1143 RVA: 0x00072FE3 File Offset: 0x000711E3
+		// Token: 0x060004D1 RID: 1233 RVA: 0x00078947 File Offset: 0x00076B47
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAvignonStageAll.LogPair = null;
 			ConfigAvignonStageAll.HandleId = 0;
 		}
 
-		// Token: 0x06000478 RID: 1144 RVA: 0x00072FF1 File Offset: 0x000711F1
+		// Token: 0x060004D2 RID: 1234 RVA: 0x00078955 File Offset: 0x00076B55
 		public static void Init()
 		{
 			ConfigAvignonStageAll.HandleId = ConfigCommon.InitDataStatement(ConfigAvignonStageAll.HandleId, "db_avignon.db", "select BinData from `AvignonStage`");
 		}
 
-		// Token: 0x06000479 RID: 1145 RVA: 0x0007300C File Offset: 0x0007120C
+		// Token: 0x060004D3 RID: 1235 RVA: 0x00078970 File Offset: 0x00076B70
 		[NullableContext(2)]
 		public static IReadOnlyList<AvignonStage> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000516 RID: 1302
+		// Token: 0x0400057F RID: 1407
 		private const string DB = "db_avignon.db";
 
-		// Token: 0x04000517 RID: 1303
+		// Token: 0x04000580 RID: 1408
 		private const string FILE = "a.阿维纽林神学院.xlsx";
 
-		// Token: 0x04000518 RID: 1304
+		// Token: 0x04000581 RID: 1409
 		private const string TABLE = "AvignonStage";
 
-		// Token: 0x04000519 RID: 1305
+		// Token: 0x04000582 RID: 1410
 		private const string COMMAND = "select BinData from `AvignonStage`";
 
-		// Token: 0x0400051A RID: 1306
+		// Token: 0x04000583 RID: 1411
 		private const string KEY_PREFIX = "AvignonStageAll";
 
-		// Token: 0x0400051B RID: 1307
+		// Token: 0x04000584 RID: 1412
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400051C RID: 1308
+		// Token: 0x04000585 RID: 1413
 		private static int HandleId;
 	}
 }

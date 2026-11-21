@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A51 RID: 19025
+	// Token: 0x020039F9 RID: 14841
 	public interface ITrapDefenseDevelopBranchSelectInfo
 	{
-		// Token: 0x17007A64 RID: 31332
-		// (get) Token: 0x060315C3 RID: 202179
-		// (set) Token: 0x060315C4 RID: 202180
+		// Token: 0x17004E11 RID: 19985
+		// (get) Token: 0x06026353 RID: 156499
+		// (set) Token: 0x06026354 RID: 156500
 		int Id { get; set; }
 
-		// Token: 0x17007A65 RID: 31333
-		// (get) Token: 0x060315C5 RID: 202181
-		// (set) Token: 0x060315C6 RID: 202182
+		// Token: 0x17004E12 RID: 19986
+		// (get) Token: 0x06026355 RID: 156501
+		// (set) Token: 0x06026356 RID: 156502
 		bool IsCurLevel { get; set; }
 
-		// Token: 0x17007A66 RID: 31334
-		// (get) Token: 0x060315C7 RID: 202183
-		// (set) Token: 0x060315C8 RID: 202184
+		// Token: 0x17004E13 RID: 19987
+		// (get) Token: 0x06026357 RID: 156503
+		// (set) Token: 0x06026358 RID: 156504
 		bool IsSelected { get; set; }
 	}
 }

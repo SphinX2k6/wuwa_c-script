@@ -10,20 +10,20 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002BC4 RID: 11204
+// Token: 0x0200213F RID: 8511
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Module/TowerDefenseEvent/Item/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/TowerDefenseEvent/Item/TsTowerDefenseEventActor.TsTowerDefenseEventActor_C")]
 public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601744B RID: 95307 RVA: 0x005E8B77 File Offset: 0x005E6D77
+	// Token: 0x06014E7C RID: 85628 RVA: 0x00615727 File Offset: 0x00613927
 	static TsTowerDefenseEventActor()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsTowerDefenseEventActor.CreateStaticDefaultValue), new Action(TsTowerDefenseEventActor.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601744C RID: 95308 RVA: 0x005E8B98 File Offset: 0x005E6D98
+	// Token: 0x06014E7D RID: 85629 RVA: 0x00615748 File Offset: 0x00613948
 	public static void CreateStaticDefaultValue()
 	{
 		TsTowerDefenseEventActor.UpdateBuildStateStat = Stat.Create("TsTowerDefenseEventActor.UpdateBuildState", "", "");
@@ -44,7 +44,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		TsTowerDefenseEventActor.AllTrapActors = new Dictionary<int, TsTowerDefenseEventActor>();
 	}
 
-	// Token: 0x0601744D RID: 95309 RVA: 0x005E8CA8 File Offset: 0x005E6EA8
+	// Token: 0x06014E7E RID: 85630 RVA: 0x00615858 File Offset: 0x00613A58
 	public static void ResetStaticDefaultValue()
 	{
 		TsTowerDefenseEventActor.UpdateBuildStateStat = null;
@@ -65,8 +65,8 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		TsTowerDefenseEventActor.AllTrapActors = null;
 	}
 
-	// Token: 0x17001F63 RID: 8035
-	// (get) Token: 0x0601744E RID: 95310 RVA: 0x005E8D56 File Offset: 0x005E6F56
+	// Token: 0x17001FBB RID: 8123
+	// (get) Token: 0x06014E7F RID: 85631 RVA: 0x00615906 File Offset: 0x00613B06
 	public bool IsVisible
 	{
 		get
@@ -75,14 +75,14 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601744F RID: 95311 RVA: 0x005E8D5E File Offset: 0x005E6F5E
+	// Token: 0x06014E80 RID: 85632 RVA: 0x0061590E File Offset: 0x00613B0E
 	[NullableContext(2)]
 	public ITowerDefenseEventTrapBaseInfo GetTapModel()
 	{
 		return this.TrapData;
 	}
 
-	// Token: 0x06017450 RID: 95312 RVA: 0x005E8D68 File Offset: 0x005E6F68
+	// Token: 0x06014E81 RID: 85633 RVA: 0x00615918 File Offset: 0x00613B18
 	[NullableContext(2)]
 	public string Init([Nullable(1)] ITowerDefenseEventTrapBaseInfo trapModel, AKuroBuildingGrid grid = null)
 	{
@@ -123,7 +123,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		return null;
 	}
 
-	// Token: 0x06017451 RID: 95313 RVA: 0x005E8EB8 File Offset: 0x005E70B8
+	// Token: 0x06014E82 RID: 85634 RVA: 0x00615A68 File Offset: 0x00613C68
 	public void Destroy(string reason)
 	{
 		AKuroBuildingGrid akuroBuildingGrid = base.OccupiedGrid.Get();
@@ -148,7 +148,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		instance.Put(reason, this, clearFunc);
 	}
 
-	// Token: 0x06017452 RID: 95314 RVA: 0x005E8F74 File Offset: 0x005E7174
+	// Token: 0x06014E83 RID: 85635 RVA: 0x00615B24 File Offset: 0x00613D24
 	private static void ClearPooledActor(AActor actor)
 	{
 		UKuroActorManager.ClearAcquiredComponents(actor);
@@ -177,7 +177,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		actor.SetActorEnableCollision(false);
 	}
 
-	// Token: 0x06017453 RID: 95315 RVA: 0x005E9018 File Offset: 0x005E7218
+	// Token: 0x06014E84 RID: 85636 RVA: 0x00615BC8 File Offset: 0x00613DC8
 	private void UpdateGridLevel()
 	{
 		string text = "";
@@ -202,7 +202,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		base.Initialize(tsoftObjectPtr.As<UWorld>(), TsTowerDefenseEventActor.BuildingGridCellVectorTemp);
 	}
 
-	// Token: 0x06017454 RID: 95316 RVA: 0x005E90F8 File Offset: 0x005E72F8
+	// Token: 0x06014E85 RID: 85637 RVA: 0x00615CA8 File Offset: 0x00613EA8
 	public ETowerDefenseEventBuildState UpdateBuildState(AKuroBuildingGrid grid, Vector2D coords, float degree, Vector location, Rotator rotation, OutPollutedNum outPollutedNum)
 	{
 		this.UpdateBuildPosition(location, rotation);
@@ -233,7 +233,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		return etowerDefenseEventBuildState;
 	}
 
-	// Token: 0x06017455 RID: 95317 RVA: 0x005E9194 File Offset: 0x005E7394
+	// Token: 0x06014E86 RID: 85638 RVA: 0x00615D44 File Offset: 0x00613F44
 	private void UpdateBuildPosition(Vector location, Rotator rotation)
 	{
 		if (this.TrapData == null)
@@ -278,7 +278,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06017456 RID: 95318 RVA: 0x005E92A0 File Offset: 0x005E74A0
+	// Token: 0x06014E87 RID: 85639 RVA: 0x00615E50 File Offset: 0x00614050
 	private int GetPollutedCellNum(AKuroBuildingGrid grid, Vector2D coords, float degree)
 	{
 		string buildingGridGuidString = grid.GetBuildingGridGuidString();
@@ -308,7 +308,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		return hashSet.Count;
 	}
 
-	// Token: 0x06017457 RID: 95319 RVA: 0x005E9358 File Offset: 0x005E7558
+	// Token: 0x06014E88 RID: 85640 RVA: 0x00615F08 File Offset: 0x00614108
 	private void UpdateSizeByDegree(Vector2D outGridSize, float degree)
 	{
 		Vector2D gridSize = this.TrapData.GridSize;
@@ -322,7 +322,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		outGridSize.Y = gridSize.Y;
 	}
 
-	// Token: 0x06017458 RID: 95320 RVA: 0x005E93C2 File Offset: 0x005E75C2
+	// Token: 0x06014E89 RID: 85641 RVA: 0x00615F72 File Offset: 0x00614172
 	public void PrepareRemove()
 	{
 		this.IsPreRemove = true;
@@ -332,27 +332,21 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06017459 RID: 95321 RVA: 0x005E93E0 File Offset: 0x005E75E0
+	// Token: 0x06014E8A RID: 85642 RVA: 0x00615F90 File Offset: 0x00614190
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnLevelShown()
+	public override void OnLevelShown()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnLevelShown"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTowerDefenseEventActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnLevelShown"), TsTowerDefenseEventActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnLevelShown_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601745A RID: 95322 RVA: 0x005E9450 File Offset: 0x005E7650
+	// Token: 0x06014E8B RID: 85643 RVA: 0x00615FE9 File Offset: 0x006141E9
 	protected override void OnLevelShown_Implementation()
 	{
 		base.OnLevelShown_Implementation();
@@ -362,14 +356,14 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601745B RID: 95323 RVA: 0x005E9466 File Offset: 0x005E7666
+	// Token: 0x06014E8C RID: 85644 RVA: 0x00615FFF File Offset: 0x006141FF
 	public void ResetRemove()
 	{
 		this.IsPreRemove = false;
 		this.SetMaterialState(TsTowerDefenseEventActor.Normal);
 	}
 
-	// Token: 0x0601745C RID: 95324 RVA: 0x005E947A File Offset: 0x005E767A
+	// Token: 0x06014E8D RID: 85645 RVA: 0x00616013 File Offset: 0x00614213
 	public void Hide()
 	{
 		this.SetRangeState(TsTowerDefenseEventActor.Attack);
@@ -377,7 +371,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		this.SetNormalState(TsTowerDefenseEventActor.Hidden);
 	}
 
-	// Token: 0x0601745D RID: 95325 RVA: 0x005E949D File Offset: 0x005E769D
+	// Token: 0x06014E8E RID: 85646 RVA: 0x00616036 File Offset: 0x00614236
 	private void Built()
 	{
 		this.SetMaterialState(TsTowerDefenseEventActor.Normal);
@@ -385,7 +379,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		this.UpdateRangeState();
 	}
 
-	// Token: 0x0601745E RID: 95326 RVA: 0x005E94BC File Offset: 0x005E76BC
+	// Token: 0x06014E8F RID: 85647 RVA: 0x00616054 File Offset: 0x00614254
 	private void SetNormalState(FName state)
 	{
 		this.CurrentLayerStates[TsTowerDefenseEventActor.NormalLayer] = state;
@@ -408,7 +402,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x0601745F RID: 95327 RVA: 0x005E9538 File Offset: 0x005E7738
+	// Token: 0x06014E90 RID: 85648 RVA: 0x006160D0 File Offset: 0x006142D0
 	private void SetMaterialState(FName state)
 	{
 		if (this.CurrentLayerStates.ContainsKey(TsTowerDefenseEventActor.MaterialLayer) && this.CurrentLayerStates[TsTowerDefenseEventActor.MaterialLayer] == state)
@@ -419,7 +413,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		base.SetLayerState(TsTowerDefenseEventActor.MaterialLayer, state, 1f);
 	}
 
-	// Token: 0x06017460 RID: 95328 RVA: 0x005E9594 File Offset: 0x005E7794
+	// Token: 0x06014E91 RID: 85649 RVA: 0x0061612C File Offset: 0x0061432C
 	private void UpdateRangeState()
 	{
 		ITowerDefenseEventTrapBaseInfo trapData = this.TrapData;
@@ -431,7 +425,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		this.SetRangeState(rangeState);
 	}
 
-	// Token: 0x06017461 RID: 95329 RVA: 0x005E95DC File Offset: 0x005E77DC
+	// Token: 0x06014E92 RID: 85650 RVA: 0x00616174 File Offset: 0x00614374
 	private void SetRangeState(FName state)
 	{
 		if (this.CurrentLayerStates.ContainsKey(TsTowerDefenseEventActor.RangeLayer) && this.CurrentLayerStates[TsTowerDefenseEventActor.RangeLayer] == state)
@@ -442,7 +436,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		base.SetLayerState(TsTowerDefenseEventActor.RangeLayer, state, 1f);
 	}
 
-	// Token: 0x06017462 RID: 95330 RVA: 0x005E9638 File Offset: 0x005E7838
+	// Token: 0x06014E93 RID: 85651 RVA: 0x006161D0 File Offset: 0x006143D0
 	[NullableContext(2)]
 	public static TsTowerDefenseEventActor GetTrapActor(int uid)
 	{
@@ -454,7 +448,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		return result;
 	}
 
-	// Token: 0x06017463 RID: 95331 RVA: 0x005E9658 File Offset: 0x005E7858
+	// Token: 0x06014E94 RID: 85652 RVA: 0x006161F0 File Offset: 0x006143F0
 	public static void UpdateTrapRangeState()
 	{
 		foreach (TsTowerDefenseEventActor tsTowerDefenseEventActor in TsTowerDefenseEventActor.AllTrapActors.Values)
@@ -463,7 +457,7 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		}
 	}
 
-	// Token: 0x06017464 RID: 95332 RVA: 0x005E96AC File Offset: 0x005E78AC
+	// Token: 0x06014E95 RID: 85653 RVA: 0x00616244 File Offset: 0x00614444
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTowerDefenseEventActor._ClassPtr == IntPtr.Zero)
@@ -473,123 +467,123 @@ public class TsTowerDefenseEventActor : AKuroGridLevelActor, IStaticVariableRese
 		return TsTowerDefenseEventActor._ClassPtr;
 	}
 
-	// Token: 0x06017465 RID: 95333 RVA: 0x005E96D0 File Offset: 0x005E78D0
+	// Token: 0x06014E96 RID: 85654 RVA: 0x00616268 File Offset: 0x00614468
 	public TsTowerDefenseEventActor() : this(BuiltinUtils.AllocNativeUObject(TsTowerDefenseEventActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06017466 RID: 95334 RVA: 0x005E96F8 File Offset: 0x005E78F8
+	// Token: 0x06014E97 RID: 85655 RVA: 0x00616290 File Offset: 0x00614490
 	public TsTowerDefenseEventActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTowerDefenseEventActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06017467 RID: 95335 RVA: 0x005E972C File Offset: 0x005E792C
+	// Token: 0x06014E98 RID: 85656 RVA: 0x006162C4 File Offset: 0x006144C4
 	protected TsTowerDefenseEventActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06017468 RID: 95336 RVA: 0x005E9790 File Offset: 0x005E7990
+	// Token: 0x06014E99 RID: 85657 RVA: 0x00616328 File Offset: 0x00614528
 	protected virtual void __CPPCALL_OnLevelShown_Implementation()
 	{
 		this.OnLevelShown_Implementation();
 	}
 
-	// Token: 0x0400ADFD RID: 44541
+	// Token: 0x0400B202 RID: 45570
 	private static Stat UpdateBuildStateStat;
 
-	// Token: 0x0400ADFE RID: 44542
+	// Token: 0x0400B203 RID: 45571
 	private static FName NormalLayer;
 
-	// Token: 0x0400ADFF RID: 44543
+	// Token: 0x0400B204 RID: 45572
 	private static FName Preview;
 
-	// Token: 0x0400AE00 RID: 44544
+	// Token: 0x0400B205 RID: 45573
 	private static FName Idle;
 
-	// Token: 0x0400AE01 RID: 44545
+	// Token: 0x0400B206 RID: 45574
 	private static FName Hidden;
 
-	// Token: 0x0400AE02 RID: 44546
+	// Token: 0x0400B207 RID: 45575
 	private static FName MaterialLayer;
 
-	// Token: 0x0400AE03 RID: 44547
+	// Token: 0x0400B208 RID: 45576
 	private static FName Normal;
 
-	// Token: 0x0400AE04 RID: 44548
+	// Token: 0x0400B209 RID: 45577
 	private static FName HaveMoney;
 
-	// Token: 0x0400AE05 RID: 44549
+	// Token: 0x0400B20A RID: 45578
 	private static FName NoMoney;
 
-	// Token: 0x0400AE06 RID: 44550
+	// Token: 0x0400B20B RID: 45579
 	private static FName PreviewRemove;
 
-	// Token: 0x0400AE07 RID: 44551
+	// Token: 0x0400B20C RID: 45580
 	private static FName RangeLayer;
 
-	// Token: 0x0400AE08 RID: 44552
+	// Token: 0x0400B20D RID: 45581
 	private static FName Attack;
 
-	// Token: 0x0400AE09 RID: 44553
+	// Token: 0x0400B20E RID: 45582
 	private static FName HaveMoneyRange;
 
-	// Token: 0x0400AE0A RID: 44554
+	// Token: 0x0400B20F RID: 45583
 	private static FName NoMoneyRange;
 
-	// Token: 0x0400AE0B RID: 44555
+	// Token: 0x0400B210 RID: 45584
 	[StaticVariableRuleIgnore]
 	private static FKuroBuildingGridCellVector BuildingGridCellVectorTemp;
 
-	// Token: 0x0400AE0C RID: 44556
+	// Token: 0x0400B211 RID: 45585
 	private static Vector2D GridSizeTemp;
 
-	// Token: 0x0400AE0D RID: 44557
+	// Token: 0x0400B212 RID: 45586
 	private static Dictionary<int, TsTowerDefenseEventActor> AllTrapActors;
 
-	// Token: 0x0400AE0E RID: 44558
+	// Token: 0x0400B213 RID: 45587
 	[Nullable(2)]
 	private ITowerDefenseEventTrapBaseInfo TrapData;
 
-	// Token: 0x0400AE0F RID: 44559
+	// Token: 0x0400B214 RID: 45588
 	private string PrefabPath = "";
 
-	// Token: 0x0400AE10 RID: 44560
+	// Token: 0x0400B215 RID: 45589
 	private readonly Vector2D TrapSize = Vector2D.Create(0.0, 0.0);
 
-	// Token: 0x0400AE11 RID: 44561
+	// Token: 0x0400B216 RID: 45590
 	private readonly Vector2D Coords = Vector2D.Create(0.0, 0.0);
 
-	// Token: 0x0400AE12 RID: 44562
+	// Token: 0x0400B217 RID: 45591
 	private readonly Dictionary<FName, FName> CurrentLayerStates = new Dictionary<FName, FName>();
 
-	// Token: 0x0400AE13 RID: 44563
+	// Token: 0x0400B218 RID: 45592
 	private bool IsVisibleInternal;
 
-	// Token: 0x0400AE14 RID: 44564
+	// Token: 0x0400B219 RID: 45593
 	private bool IsPreRemove;
 
-	// Token: 0x0400AE15 RID: 44565
+	// Token: 0x0400B21A RID: 45594
 	[Nullable(2)]
 	private ULTweener PositionTweener;
 
-	// Token: 0x0400AE16 RID: 44566
+	// Token: 0x0400B21B RID: 45595
 	[Nullable(2)]
 	private ULTweener RotationTweener;
 
-	// Token: 0x0400AE17 RID: 44567
+	// Token: 0x0400B21C RID: 45596
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/TowerDefenseEvent/Item/TsTowerDefenseEventActor.TsTowerDefenseEventActor_C";
 
-	// Token: 0x0400AE18 RID: 44568
+	// Token: 0x0400B21D RID: 45597
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400AE19 RID: 44569
+	// Token: 0x0400B21E RID: 45598
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009183 RID: 37251
+	// Token: 0x020083C7 RID: 33735
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402F180 RID: 192896
+		// Token: 0x0402A886 RID: 174214
 		[Nullable(0)]
 		public static TClearFunction <0>__ClearPooledActor;
 	}

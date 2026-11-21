@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002343 RID: 9027
+	// Token: 0x020025B6 RID: 9654
 	public static class EGamepadShakeAttenuationFunctionExtensions
 	{
-		// Token: 0x0600C52C RID: 50476 RVA: 0x001CC770 File Offset: 0x001CA970
+		// Token: 0x0600D10D RID: 53517 RVA: 0x001E493C File Offset: 0x001E2B3C
 		public static string ToEnumString(this EGamepadShakeAttenuationFunction value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C52D RID: 50477 RVA: 0x001CC7C4 File Offset: 0x001CA9C4
+		// Token: 0x0600D10E RID: 53518 RVA: 0x001E4990 File Offset: 0x001E2B90
 		public static EGamepadShakeAttenuationFunction FromString(string name)
 		{
 			EGamepadShakeAttenuationFunction result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C52E RID: 50478 RVA: 0x001CC7F0 File Offset: 0x001CA9F0
+		// Token: 0x0600D10F RID: 53519 RVA: 0x001E49BC File Offset: 0x001E2BBC
 		public static bool TryFromString(string name, out EGamepadShakeAttenuationFunction value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C52F RID: 50479 RVA: 0x001CC858 File Offset: 0x001CAA58
+		// Token: 0x0600D110 RID: 53520 RVA: 0x001E4A24 File Offset: 0x001E2C24
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C530 RID: 50480 RVA: 0x001CC880 File Offset: 0x001CAA80
+		// Token: 0x0600D111 RID: 53521 RVA: 0x001E4A4C File Offset: 0x001E2C4C
 		public static EGamepadShakeAttenuationFunction[] GetValues()
 		{
 			return new EGamepadShakeAttenuationFunction[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C531 RID: 50481 RVA: 0x001CC893 File Offset: 0x001CAA93
+		// Token: 0x0600D112 RID: 53522 RVA: 0x001E4A5F File Offset: 0x001E2C5F
 		public static string[] GetNames()
 		{
 			return new string[]

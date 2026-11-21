@@ -5,90 +5,95 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006994 RID: 27028
+	// Token: 0x02007047 RID: 28743
 	public class IInteractOptionT
 	{
-		// Token: 0x1700C878 RID: 51320
-		// (get) Token: 0x0602F36A RID: 193386 RVA: 0x0066E81B File Offset: 0x0066CA1B
-		// (set) Token: 0x0602F36B RID: 193387 RVA: 0x0066E823 File Offset: 0x0066CA23
+		// Token: 0x1700D27C RID: 53884
+		// (get) Token: 0x06031D44 RID: 204100 RVA: 0x006BEEF4 File Offset: 0x006BD0F4
+		// (set) Token: 0x06031D45 RID: 204101 RVA: 0x006BEEFC File Offset: 0x006BD0FC
 		public string Guid { get; set; }
 
-		// Token: 0x1700C879 RID: 51321
-		// (get) Token: 0x0602F36C RID: 193388 RVA: 0x0066E82C File Offset: 0x0066CA2C
-		// (set) Token: 0x0602F36D RID: 193389 RVA: 0x0066E834 File Offset: 0x0066CA34
+		// Token: 0x1700D27D RID: 53885
+		// (get) Token: 0x06031D46 RID: 204102 RVA: 0x006BEF05 File Offset: 0x006BD105
+		// (set) Token: 0x06031D47 RID: 204103 RVA: 0x006BEF0D File Offset: 0x006BD10D
 		public TInteractOptionUnion Type { get; set; }
 
-		// Token: 0x1700C87A RID: 51322
-		// (get) Token: 0x0602F36E RID: 193390 RVA: 0x0066E83D File Offset: 0x0066CA3D
-		// (set) Token: 0x0602F36F RID: 193391 RVA: 0x0066E845 File Offset: 0x0066CA45
+		// Token: 0x1700D27E RID: 53886
+		// (get) Token: 0x06031D48 RID: 204104 RVA: 0x006BEF16 File Offset: 0x006BD116
+		// (set) Token: 0x06031D49 RID: 204105 RVA: 0x006BEF1E File Offset: 0x006BD11E
 		public EInteractIcon Icon { get; set; }
 
-		// Token: 0x1700C87B RID: 51323
-		// (get) Token: 0x0602F370 RID: 193392 RVA: 0x0066E84E File Offset: 0x0066CA4E
-		// (set) Token: 0x0602F371 RID: 193393 RVA: 0x0066E856 File Offset: 0x0066CA56
+		// Token: 0x1700D27F RID: 53887
+		// (get) Token: 0x06031D4A RID: 204106 RVA: 0x006BEF27 File Offset: 0x006BD127
+		// (set) Token: 0x06031D4B RID: 204107 RVA: 0x006BEF2F File Offset: 0x006BD12F
 		public string TidContent { get; set; }
 
-		// Token: 0x1700C87C RID: 51324
-		// (get) Token: 0x0602F372 RID: 193394 RVA: 0x0066E85F File Offset: 0x0066CA5F
-		// (set) Token: 0x0602F373 RID: 193395 RVA: 0x0066E867 File Offset: 0x0066CA67
+		// Token: 0x1700D280 RID: 53888
+		// (get) Token: 0x06031D4C RID: 204108 RVA: 0x006BEF38 File Offset: 0x006BD138
+		// (set) Token: 0x06031D4D RID: 204109 RVA: 0x006BEF40 File Offset: 0x006BD140
 		public IVectorInfoT InteractPointOffset { get; set; }
 
-		// Token: 0x1700C87D RID: 51325
-		// (get) Token: 0x0602F374 RID: 193396 RVA: 0x0066E870 File Offset: 0x0066CA70
-		// (set) Token: 0x0602F375 RID: 193397 RVA: 0x0066E878 File Offset: 0x0066CA78
+		// Token: 0x1700D281 RID: 53889
+		// (get) Token: 0x06031D4E RID: 204110 RVA: 0x006BEF49 File Offset: 0x006BD149
+		// (set) Token: 0x06031D4F RID: 204111 RVA: 0x006BEF51 File Offset: 0x006BD151
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700C87E RID: 51326
-		// (get) Token: 0x0602F376 RID: 193398 RVA: 0x0066E881 File Offset: 0x0066CA81
-		// (set) Token: 0x0602F377 RID: 193399 RVA: 0x0066E889 File Offset: 0x0066CA89
+		// Token: 0x1700D282 RID: 53890
+		// (get) Token: 0x06031D50 RID: 204112 RVA: 0x006BEF5A File Offset: 0x006BD15A
+		// (set) Token: 0x06031D51 RID: 204113 RVA: 0x006BEF62 File Offset: 0x006BD162
 		public IInteractOptionConfirmBoxT ConfirmBox { get; set; }
 
-		// Token: 0x1700C87F RID: 51327
-		// (get) Token: 0x0602F378 RID: 193400 RVA: 0x0066E892 File Offset: 0x0066CA92
-		// (set) Token: 0x0602F379 RID: 193401 RVA: 0x0066E89A File Offset: 0x0066CA9A
+		// Token: 0x1700D283 RID: 53891
+		// (get) Token: 0x06031D52 RID: 204114 RVA: 0x006BEF6B File Offset: 0x006BD16B
+		// (set) Token: 0x06031D53 RID: 204115 RVA: 0x006BEF73 File Offset: 0x006BD173
 		public EInteractUniqueness UniquenessTest { get; set; }
 
-		// Token: 0x1700C880 RID: 51328
-		// (get) Token: 0x0602F37A RID: 193402 RVA: 0x0066E8A3 File Offset: 0x0066CAA3
-		// (set) Token: 0x0602F37B RID: 193403 RVA: 0x0066E8AB File Offset: 0x0066CAAB
+		// Token: 0x1700D284 RID: 53892
+		// (get) Token: 0x06031D54 RID: 204116 RVA: 0x006BEF7C File Offset: 0x006BD17C
+		// (set) Token: 0x06031D55 RID: 204117 RVA: 0x006BEF84 File Offset: 0x006BD184
 		public EDoInteract DoIntactType { get; set; }
 
-		// Token: 0x1700C881 RID: 51329
-		// (get) Token: 0x0602F37C RID: 193404 RVA: 0x0066E8B4 File Offset: 0x0066CAB4
-		// (set) Token: 0x0602F37D RID: 193405 RVA: 0x0066E8BC File Offset: 0x0066CABC
+		// Token: 0x1700D285 RID: 53893
+		// (get) Token: 0x06031D56 RID: 204118 RVA: 0x006BEF8D File Offset: 0x006BD18D
+		// (set) Token: 0x06031D57 RID: 204119 RVA: 0x006BEF95 File Offset: 0x006BD195
 		public float Range { get; set; }
 
-		// Token: 0x1700C882 RID: 51330
-		// (get) Token: 0x0602F37E RID: 193406 RVA: 0x0066E8C5 File Offset: 0x0066CAC5
-		// (set) Token: 0x0602F37F RID: 193407 RVA: 0x0066E8CD File Offset: 0x0066CACD
+		// Token: 0x1700D286 RID: 53894
+		// (get) Token: 0x06031D58 RID: 204120 RVA: 0x006BEF9E File Offset: 0x006BD19E
+		// (set) Token: 0x06031D59 RID: 204121 RVA: 0x006BEFA6 File Offset: 0x006BD1A6
 		public IDurationInteractT Duration { get; set; }
 
-		// Token: 0x1700C883 RID: 51331
-		// (get) Token: 0x0602F380 RID: 193408 RVA: 0x0066E8D6 File Offset: 0x0066CAD6
-		// (set) Token: 0x0602F381 RID: 193409 RVA: 0x0066E8DE File Offset: 0x0066CADE
+		// Token: 0x1700D287 RID: 53895
+		// (get) Token: 0x06031D5A RID: 204122 RVA: 0x006BEFAF File Offset: 0x006BD1AF
+		// (set) Token: 0x06031D5B RID: 204123 RVA: 0x006BEFB7 File Offset: 0x006BD1B7
 		public IOptionLockTipT OptionLockTip { get; set; }
 
-		// Token: 0x1700C884 RID: 51332
-		// (get) Token: 0x0602F382 RID: 193410 RVA: 0x0066E8E7 File Offset: 0x0066CAE7
-		// (set) Token: 0x0602F383 RID: 193411 RVA: 0x0066E8EF File Offset: 0x0066CAEF
+		// Token: 0x1700D288 RID: 53896
+		// (get) Token: 0x06031D5C RID: 204124 RVA: 0x006BEFC0 File Offset: 0x006BD1C0
+		// (set) Token: 0x06031D5D RID: 204125 RVA: 0x006BEFC8 File Offset: 0x006BD1C8
 		public List<EOptionLockType> OptionLockTypeList { get; set; }
 
-		// Token: 0x1700C885 RID: 51333
-		// (get) Token: 0x0602F384 RID: 193412 RVA: 0x0066E8F8 File Offset: 0x0066CAF8
-		// (set) Token: 0x0602F385 RID: 193413 RVA: 0x0066E900 File Offset: 0x0066CB00
+		// Token: 0x1700D289 RID: 53897
+		// (get) Token: 0x06031D5E RID: 204126 RVA: 0x006BEFD1 File Offset: 0x006BD1D1
+		// (set) Token: 0x06031D5F RID: 204127 RVA: 0x006BEFD9 File Offset: 0x006BD1D9
+		public List<EOptionUnlockType> OptionUnlockTypeList { get; set; }
+
+		// Token: 0x1700D28A RID: 53898
+		// (get) Token: 0x06031D60 RID: 204128 RVA: 0x006BEFE2 File Offset: 0x006BD1E2
+		// (set) Token: 0x06031D61 RID: 204129 RVA: 0x006BEFEA File Offset: 0x006BD1EA
 		public ILongPressInteractConfigT LongPressInteractConfig { get; set; }
 
-		// Token: 0x1700C886 RID: 51334
-		// (get) Token: 0x0602F386 RID: 193414 RVA: 0x0066E909 File Offset: 0x0066CB09
-		// (set) Token: 0x0602F387 RID: 193415 RVA: 0x0066E911 File Offset: 0x0066CB11
+		// Token: 0x1700D28B RID: 53899
+		// (get) Token: 0x06031D62 RID: 204130 RVA: 0x006BEFF3 File Offset: 0x006BD1F3
+		// (set) Token: 0x06031D63 RID: 204131 RVA: 0x006BEFFB File Offset: 0x006BD1FB
 		public bool KeepInRecall { get; set; }
 
-		// Token: 0x1700C887 RID: 51335
-		// (get) Token: 0x0602F388 RID: 193416 RVA: 0x0066E91A File Offset: 0x0066CB1A
-		// (set) Token: 0x0602F389 RID: 193417 RVA: 0x0066E922 File Offset: 0x0066CB22
+		// Token: 0x1700D28C RID: 53900
+		// (get) Token: 0x06031D64 RID: 204132 RVA: 0x006BF004 File Offset: 0x006BD204
+		// (set) Token: 0x06031D65 RID: 204133 RVA: 0x006BF00C File Offset: 0x006BD20C
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602F38A RID: 193418 RVA: 0x0066E92C File Offset: 0x0066CB2C
+		// Token: 0x06031D66 RID: 204134 RVA: 0x006BF018 File Offset: 0x006BD218
 		public IInteractOptionT()
 		{
 			this.Guid = null;
@@ -104,6 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			this.Duration = null;
 			this.OptionLockTip = null;
 			this.OptionLockTypeList = null;
+			this.OptionUnlockTypeList = null;
 			this.LongPressInteractConfig = null;
 			this.KeepInRecall = false;
 			this.NullMask = 0;

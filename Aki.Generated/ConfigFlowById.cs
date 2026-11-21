@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000337 RID: 823
+	// Token: 0x0200034C RID: 844
 	public class ConfigFlowById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600134F RID: 4943 RVA: 0x000C6720 File Offset: 0x000C4920
+		// Token: 0x060013CD RID: 5069 RVA: 0x000CCC2C File Offset: 0x000CAE2C
 		static ConfigFlowById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFlowById.CreateStaticDefaultValue), new Action(ConfigFlowById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001350 RID: 4944 RVA: 0x000C6740 File Offset: 0x000C4940
+		// Token: 0x060013CE RID: 5070 RVA: 0x000CCC4C File Offset: 0x000CAE4C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFlowById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001351 RID: 4945 RVA: 0x000C67BF File Offset: 0x000C49BF
+		// Token: 0x060013CF RID: 5071 RVA: 0x000CCCCB File Offset: 0x000CAECB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFlowById.LogPair = null;
 			ConfigFlowById.HandleId = 0;
 		}
 
-		// Token: 0x06001352 RID: 4946 RVA: 0x000C67CD File Offset: 0x000C49CD
+		// Token: 0x060013D0 RID: 5072 RVA: 0x000CCCD9 File Offset: 0x000CAED9
 		public static void Init()
 		{
 			ConfigFlowById.HandleId = ConfigCommon.InitDataStatement(ConfigFlowById.HandleId, "db_flow.db", "select BinData from `Flow` where Id=?");
 		}
 
-		// Token: 0x06001353 RID: 4947 RVA: 0x000C67E8 File Offset: 0x000C49E8
+		// Token: 0x060013D1 RID: 5073 RVA: 0x000CCCF4 File Offset: 0x000CAEF4
 		public static Flow? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFlowById.HandleId, ConfigFlowById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Flow?(rootAsFlow);
 		}
 
-		// Token: 0x04001665 RID: 5733
+		// Token: 0x040016F8 RID: 5880
 		private const string DB = "db_flow.db";
 
-		// Token: 0x04001666 RID: 5734
+		// Token: 0x040016F9 RID: 5881
 		private const string FILE = "UniverseEditor/Flow/剧情_*";
 
-		// Token: 0x04001667 RID: 5735
+		// Token: 0x040016FA RID: 5882
 		private const string TABLE = "Flow";
 
-		// Token: 0x04001668 RID: 5736
+		// Token: 0x040016FB RID: 5883
 		private const string COMMAND = "select BinData from `Flow` where Id=?";
 
-		// Token: 0x04001669 RID: 5737
+		// Token: 0x040016FC RID: 5884
 		private const string KEY_PREFIX = "FlowById";
 
-		// Token: 0x0400166A RID: 5738
+		// Token: 0x040016FD RID: 5885
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400166B RID: 5739
+		// Token: 0x040016FE RID: 5886
 		private static int HandleId;
 	}
 }

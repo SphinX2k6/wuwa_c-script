@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004956 RID: 18774
+	// Token: 0x02004E0D RID: 19981
 	public enum ESkillUseType : byte
 	{
-		// Token: 0x0400D125 RID: 53541
+		// Token: 0x0400DBEC RID: 56300
 		RoleSkill
 	}
 }

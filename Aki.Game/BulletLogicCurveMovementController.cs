@@ -7,7 +7,7 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002DCD RID: 11725
+// Token: 0x02002327 RID: 8999
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BulletLogicCurveMovementController : BulletLogicController<LogicDataSplineMovement, float>
 {
-	// Token: 0x06018A09 RID: 100873 RVA: 0x0064C2D8 File Offset: 0x0064A4D8
+	// Token: 0x060162B1 RID: 90801 RVA: 0x006720BC File Offset: 0x006702BC
 	public BulletLogicCurveMovementController(LogicDataSplineMovement param, Entity bullet) : base(param, bullet)
 	{
 		this.MovingTimeMs = 0f;
@@ -25,7 +25,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 	}
 
-	// Token: 0x06018A0A RID: 100874 RVA: 0x0064C328 File Offset: 0x0064A528
+	// Token: 0x060162B2 RID: 90802 RVA: 0x0067210C File Offset: 0x0067030C
 	public override void OnInit()
 	{
 		ResourceSystem.Instance.LoadAsync<UClass>(this.LogicController.SplineTrace.ToAssetPathName(), delegate([Nullable(2)] UClass splineTrace, string path)
@@ -35,7 +35,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		this.BulletInfo.BulletDataMain.Execution.MovementReplaced = true;
 	}
 
-	// Token: 0x06018A0B RID: 100875 RVA: 0x0064C379 File Offset: 0x0064A579
+	// Token: 0x060162B3 RID: 90803 RVA: 0x0067215D File Offset: 0x0067035D
 	public override void OnBulletDestroy()
 	{
 		if (this.SplineComp != null)
@@ -45,7 +45,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		}
 	}
 
-	// Token: 0x06018A0C RID: 100876 RVA: 0x0064C3A8 File Offset: 0x0064A5A8
+	// Token: 0x060162B4 RID: 90804 RVA: 0x0067218C File Offset: 0x0067038C
 	private void SpawnCurve(UClass splineTrace)
 	{
 		BulletEntity bullet = this.Bullet;
@@ -108,7 +108,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		}
 	}
 
-	// Token: 0x06018A0D RID: 100877 RVA: 0x0064C594 File Offset: 0x0064A794
+	// Token: 0x060162B5 RID: 90805 RVA: 0x00672378 File Offset: 0x00670578
 	public override void BulletLogicAction(float deltaTime)
 	{
 		if (this.SplineComp == null)
@@ -148,7 +148,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		}
 	}
 
-	// Token: 0x06018A0E RID: 100878 RVA: 0x0064C700 File Offset: 0x0064A900
+	// Token: 0x060162B6 RID: 90806 RVA: 0x006724E4 File Offset: 0x006706E4
 	private void InitTraceInfo()
 	{
 		this.LineTrace = new UTraceLineElement();
@@ -161,7 +161,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		TraceElementCommon.Instance.SetTraceHitColor(this.LineTrace, ColorUtils.LinearRed);
 	}
 
-	// Token: 0x06018A0F RID: 100879 RVA: 0x0064C78C File Offset: 0x0064A98C
+	// Token: 0x060162B7 RID: 90807 RVA: 0x00672570 File Offset: 0x00670770
 	private FVectorDouble? GetDestLocation()
 	{
 		Entity target = this.BulletInfo.Target;
@@ -191,7 +191,7 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		return new FVectorDouble?((FVectorDouble)vector);
 	}
 
-	// Token: 0x06018A10 RID: 100880 RVA: 0x0064C958 File Offset: 0x0064AB58
+	// Token: 0x060162B8 RID: 90808 RVA: 0x0067273C File Offset: 0x0067093C
 	private float CalculateDuration()
 	{
 		float duration = this.LogicController.Duration;
@@ -203,35 +203,35 @@ public class BulletLogicCurveMovementController : BulletLogicController<LogicDat
 		return (float)(MathUtils.Instance.Clamp((double)duration, (double)num2, max) * (double)TimeUtil.Instance.InverseMillisecond);
 	}
 
-	// Token: 0x0400B751 RID: 46929
+	// Token: 0x0400BACC RID: 47820
 	private const string PROFILE_KEY = "BulletLogicCurveMovementController_GetDestLocation";
 
-	// Token: 0x0400B752 RID: 46930
+	// Token: 0x0400BACD RID: 47821
 	private const float HEIGHT_DETECT = 500f;
 
-	// Token: 0x0400B753 RID: 46931
+	// Token: 0x0400BACE RID: 47822
 	private const float DRAW_DURATION = 5f;
 
-	// Token: 0x0400B754 RID: 46932
+	// Token: 0x0400BACF RID: 47823
 	[Nullable(2)]
 	private USplineComponent SplineComp;
 
-	// Token: 0x0400B755 RID: 46933
+	// Token: 0x0400BAD0 RID: 47824
 	private readonly BulletActorComponent ActorComp;
 
-	// Token: 0x0400B756 RID: 46934
+	// Token: 0x0400BAD1 RID: 47825
 	private readonly BulletInfo BulletInfo;
 
-	// Token: 0x0400B757 RID: 46935
+	// Token: 0x0400BAD2 RID: 47826
 	private float MovingTimeMs;
 
-	// Token: 0x0400B758 RID: 46936
+	// Token: 0x0400BAD3 RID: 47827
 	private float ScaleSpline;
 
-	// Token: 0x0400B759 RID: 46937
+	// Token: 0x0400BAD4 RID: 47828
 	private float Duration;
 
-	// Token: 0x0400B75A RID: 46938
+	// Token: 0x0400BAD5 RID: 47829
 	[Nullable(2)]
 	private UTraceLineElement LineTrace;
 }

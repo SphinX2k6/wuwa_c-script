@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004361 RID: 17249
+	// Token: 0x020047C3 RID: 18371
 	public class IPerformerAiCoolDownDecoratorT
 	{
-		// Token: 0x170079C0 RID: 31168
-		// (get) Token: 0x06019956 RID: 104790 RVA: 0x003A9784 File Offset: 0x003A7984
-		// (set) Token: 0x06019957 RID: 104791 RVA: 0x003A978C File Offset: 0x003A798C
+		// Token: 0x17007FF5 RID: 32757
+		// (get) Token: 0x0601B0E4 RID: 110820 RVA: 0x003D51AC File Offset: 0x003D33AC
+		// (set) Token: 0x0601B0E5 RID: 110821 RVA: 0x003D51B4 File Offset: 0x003D33B4
 		public EPerformerAiDecoratorType Type { get; set; }
 
-		// Token: 0x170079C1 RID: 31169
-		// (get) Token: 0x06019958 RID: 104792 RVA: 0x003A9795 File Offset: 0x003A7995
-		// (set) Token: 0x06019959 RID: 104793 RVA: 0x003A979D File Offset: 0x003A799D
+		// Token: 0x17007FF6 RID: 32758
+		// (get) Token: 0x0601B0E6 RID: 110822 RVA: 0x003D51BD File Offset: 0x003D33BD
+		// (set) Token: 0x0601B0E7 RID: 110823 RVA: 0x003D51C5 File Offset: 0x003D33C5
 		public int CoolDown { get; set; }
 
-		// Token: 0x0601995A RID: 104794 RVA: 0x003A97A6 File Offset: 0x003A79A6
+		// Token: 0x0601B0E8 RID: 110824 RVA: 0x003D51CE File Offset: 0x003D33CE
 		public IPerformerAiCoolDownDecoratorT()
 		{
 			this.Type = EPerformerAiDecoratorType.Condition;

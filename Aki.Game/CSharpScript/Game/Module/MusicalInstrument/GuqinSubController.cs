@@ -12,7 +12,7 @@ using CSharpScript.Game.LevelGamePlay.LevelConditions;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.LevelLoading;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -20,16 +20,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x02005367 RID: 21351
+	// Token: 0x0200434A RID: 17226
 	public class GuqinSubController : MusicalInstrumentSubController
 	{
-		// Token: 0x060368C0 RID: 223424 RVA: 0x00CEA66B File Offset: 0x00CE886B
+		// Token: 0x0602B806 RID: 178182 RVA: 0x00C394E7 File Offset: 0x00C376E7
 		public override EInstrumentType GetType()
 		{
 			return EInstrumentType.ChineseZither;
 		}
 
-		// Token: 0x060368C1 RID: 223425 RVA: 0x00CEA670 File Offset: 0x00CE8870
+		// Token: 0x0602B807 RID: 178183 RVA: 0x00C394EC File Offset: 0x00C376EC
 		[NullableContext(2)]
 		private string GetAbortReason()
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return null;
 		}
 
-		// Token: 0x060368C2 RID: 223426 RVA: 0x00CEA6E0 File Offset: 0x00CE88E0
+		// Token: 0x0602B808 RID: 178184 RVA: 0x00C3955C File Offset: 0x00C3775C
 		private bool CheckAborted()
 		{
 			string abortReason = this.GetAbortReason();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return true;
 		}
 
-		// Token: 0x060368C3 RID: 223427 RVA: 0x00CEA724 File Offset: 0x00CE8924
+		// Token: 0x0602B809 RID: 178185 RVA: 0x00C395A0 File Offset: 0x00C377A0
 		public override UniTask<bool> OnEnter([Nullable(1)] MusicalInstrumentEnterParam param)
 		{
 			GuqinSubController.<OnEnter>d__17 <OnEnter>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <OnEnter>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368C4 RID: 223428 RVA: 0x00CEA767 File Offset: 0x00CE8967
+		// Token: 0x0602B80A RID: 178186 RVA: 0x00C395E3 File Offset: 0x00C377E3
 		public override void CancelEnter()
 		{
 			this.IsEnterCancelled = true;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.CancelWaitMontage();
 		}
 
-		// Token: 0x060368C5 RID: 223429 RVA: 0x00CEA77C File Offset: 0x00CE897C
+		// Token: 0x0602B80B RID: 178187 RVA: 0x00C395F8 File Offset: 0x00C377F8
 		private bool CheckRestrictedWithTip()
 		{
 			int restrictConditionGroupId = InventoryConfig.Instance.GetItemConfig(80700051).Value.RestrictConditionGroupId;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return true;
 		}
 
-		// Token: 0x060368C6 RID: 223430 RVA: 0x00CEA818 File Offset: 0x00CE8A18
+		// Token: 0x0602B80C RID: 178188 RVA: 0x00C39694 File Offset: 0x00C37894
 		private UniTask EnsureBattleViewReset()
 		{
 			GuqinSubController.<EnsureBattleViewReset>d__20 <EnsureBattleViewReset>d__;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <EnsureBattleViewReset>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368C7 RID: 223431 RVA: 0x00CEA854 File Offset: 0x00CE8A54
+		// Token: 0x0602B80D RID: 178189 RVA: 0x00C396D0 File Offset: 0x00C378D0
 		private UniTask<bool> PrepareNormalEnter()
 		{
 			GuqinSubController.<PrepareNormalEnter>d__21 <PrepareNormalEnter>d__;
@@ -144,12 +144,12 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <PrepareNormalEnter>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368C8 RID: 223432 RVA: 0x00CEA898 File Offset: 0x00CE8A98
+		// Token: 0x0602B80E RID: 178190 RVA: 0x00C39714 File Offset: 0x00C37914
 		private bool PrepareQteEnter()
 		{
 			this.HandleBattleViewVisible(false);
 			string uiCameraId = ConfigGuQinActivityParamById.GetConfig(111400001, true).Value.UiCameraId;
-			this.CameraHandle = UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(uiCameraId, false, true, "1001", false, null, null);
+			this.CameraHandle = UiCameraModel.Instance.PushCameraHandleByHandleName(uiCameraId, false, true, "1001", false, null);
 			if (!this.CaptureCurrentEntity())
 			{
 				return false;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return true;
 		}
 
-		// Token: 0x060368C9 RID: 223433 RVA: 0x00CEA8FC File Offset: 0x00CE8AFC
+		// Token: 0x0602B80F RID: 178191 RVA: 0x00C39770 File Offset: 0x00C37970
 		private UniTask<bool> EnterInternal([Nullable(2)] MusicalInstrumentQteData qteData)
 		{
 			GuqinSubController.<EnterInternal>d__23 <EnterInternal>d__;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <EnterInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368CA RID: 223434 RVA: 0x00CEA948 File Offset: 0x00CE8B48
+		// Token: 0x0602B810 RID: 178192 RVA: 0x00C397BC File Offset: 0x00C379BC
 		[NullableContext(2)]
 		private void RollbackEnter(MusicalInstrumentQteData qteData)
 		{
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			else if (this.CameraHandle != null)
 			{
 				this.PlayQteEndSection();
-				UiCameraAnimationManager.Instance.PopCameraHandle(this.CameraHandle, null);
+				UiCameraModel.Instance.PopCameraHandle(this.CameraHandle, null);
 				this.CameraHandle = null;
 			}
 			this.HandleBattleViewVisible(true);
@@ -206,13 +206,13 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.UnlockInput();
 		}
 
-		// Token: 0x060368CB RID: 223435 RVA: 0x00CEAA4E File Offset: 0x00CE8C4E
+		// Token: 0x0602B811 RID: 178193 RVA: 0x00C398C3 File Offset: 0x00C37AC3
 		private void RefreshInputTag(EInputControllerMainType last, EInputControllerMainType now)
 		{
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x060368CC RID: 223436 RVA: 0x00CEAA5A File Offset: 0x00CE8C5A
+		// Token: 0x0602B812 RID: 178194 RVA: 0x00C398CF File Offset: 0x00C37ACF
 		private void LockInput()
 		{
 			InputManager.Instance.RegisterLockShortcutKeyReason("MusicalInstrument.ChineseZither", null);
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x060368CD RID: 223437 RVA: 0x00CEAA99 File Offset: 0x00CE8C99
+		// Token: 0x0602B813 RID: 178195 RVA: 0x00C3990E File Offset: 0x00C37B0E
 		private void UnlockInput()
 		{
 			InputManager.Instance.RemoveLockShortcutKeyReason("MusicalInstrument.ChineseZither");
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x060368CE RID: 223438 RVA: 0x00CEAAD8 File Offset: 0x00CE8CD8
+		// Token: 0x0602B814 RID: 178196 RVA: 0x00C3994C File Offset: 0x00C37B4C
 		private void SetInputRestricted(bool restricted)
 		{
 			MusicalInstrumentSubModel subModel = base.GetSubModel();
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			subModel.IsInputRestricted = restricted;
 		}
 
-		// Token: 0x060368CF RID: 223439 RVA: 0x00CEAB18 File Offset: 0x00CE8D18
+		// Token: 0x0602B815 RID: 178197 RVA: 0x00C3998C File Offset: 0x00C37B8C
 		private void AddExitEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationChanged));
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			EventSystem.Instance.Add(EEventName.ChangeMode, new Action(this.OnGameModeChanged));
 		}
 
-		// Token: 0x060368D0 RID: 223440 RVA: 0x00CEAB98 File Offset: 0x00CE8D98
+		// Token: 0x0602B816 RID: 178198 RVA: 0x00C39A0C File Offset: 0x00C37C0C
 		private void RemoveExitEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnUpdateSceneTeam, new Action(this.OnFormationChanged));
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			EventSystem.Instance.Remove(EEventName.ChangeMode, new Action(this.OnGameModeChanged));
 		}
 
-		// Token: 0x060368D1 RID: 223441 RVA: 0x00CEAC18 File Offset: 0x00CE8E18
+		// Token: 0x0602B817 RID: 178199 RVA: 0x00C39A8C File Offset: 0x00C37C8C
 		private bool CaptureCurrentEntity()
 		{
 			this.CurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -272,19 +272,19 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return true;
 		}
 
-		// Token: 0x060368D2 RID: 223442 RVA: 0x00CEAC5F File Offset: 0x00CE8E5F
+		// Token: 0x0602B818 RID: 178200 RVA: 0x00C39AD3 File Offset: 0x00C37CD3
 		private bool IsEntityOnStage()
 		{
 			return this.CurrentEntity != null && this.CurrentEntity == SceneTeamModel.Instance.GetCurrentEntity;
 		}
 
-		// Token: 0x060368D3 RID: 223443 RVA: 0x00CEAC7D File Offset: 0x00CE8E7D
+		// Token: 0x0602B819 RID: 178201 RVA: 0x00C39AF1 File Offset: 0x00C37CF1
 		private bool IsEntityChanged()
 		{
 			return this.CurrentEntity != null && this.CurrentEntity != SceneTeamModel.Instance.GetCurrentEntity;
 		}
 
-		// Token: 0x060368D4 RID: 223444 RVA: 0x00CEACA0 File Offset: 0x00CE8EA0
+		// Token: 0x0602B81A RID: 178202 RVA: 0x00C39B14 File Offset: 0x00C37D14
 		private void OnFormationChanged()
 		{
 			if (!this.IsEntityChanged())
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368D5 RID: 223445 RVA: 0x00CEAD78 File Offset: 0x00CE8F78
+		// Token: 0x0602B81B RID: 178203 RVA: 0x00C39BEC File Offset: 0x00C37DEC
 		private void OnGameModeChanged()
 		{
 			global::Log.Instance.Info(ELogModule.MusicalInstrument, ELogAuthor.CB, "古琴玩法:世界模式已切换,触发退出", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368D6 RID: 223446 RVA: 0x00CEADC4 File Offset: 0x00CE8FC4
+		// Token: 0x0602B81C RID: 178204 RVA: 0x00C39C38 File Offset: 0x00C37E38
 		private void OnRestrictConditionCallback([Nullable(new byte[]
 		{
 			2,
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368D7 RID: 223447 RVA: 0x00CEAE2F File Offset: 0x00CE902F
+		// Token: 0x0602B81D RID: 178205 RVA: 0x00C39CA3 File Offset: 0x00C37EA3
 		private void OnTeleportStart(bool loading)
 		{
 			MusicalInstrumentController.Instance.Exit(new MusicalInstrumentExitParam
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368D8 RID: 223448 RVA: 0x00CEAE54 File Offset: 0x00CE9054
+		// Token: 0x0602B81E RID: 178206 RVA: 0x00C39CC8 File Offset: 0x00C37EC8
 		private void OnRoleDead(int charId)
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368D9 RID: 223449 RVA: 0x00CEAEC0 File Offset: 0x00CE90C0
+		// Token: 0x0602B81F RID: 178207 RVA: 0x00C39D34 File Offset: 0x00C37F34
 		private void OnSkillEnd(int entityId, int skillId)
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.CancelWaitMontage();
 		}
 
-		// Token: 0x060368DA RID: 223450 RVA: 0x00CEAF18 File Offset: 0x00CE9118
+		// Token: 0x0602B820 RID: 178208 RVA: 0x00C39D8C File Offset: 0x00C37F8C
 		private UniTask<bool> CreateView()
 		{
 			GuqinSubController.<CreateView>d__40 <CreateView>d__;
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <CreateView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368DB RID: 223451 RVA: 0x00CEAF5B File Offset: 0x00CE915B
+		// Token: 0x0602B821 RID: 178209 RVA: 0x00C39DCF File Offset: 0x00C37FCF
 		private void DestroyView()
 		{
 			if (this.ViewId != null)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x060368DC RID: 223452 RVA: 0x00CEAF8C File Offset: 0x00CE918C
+		// Token: 0x0602B822 RID: 178210 RVA: 0x00C39E00 File Offset: 0x00C38000
 		private void HandleBattleViewVisible(bool visible)
 		{
 			if (visible)
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}
 		}
 
-		// Token: 0x060368DD RID: 223453 RVA: 0x00CEAFD8 File Offset: 0x00CE91D8
+		// Token: 0x0602B823 RID: 178211 RVA: 0x00C39E4C File Offset: 0x00C3804C
 		public override UniTask<bool> OnExit([Nullable(1)] MusicalInstrumentExitParam param)
 		{
 			GuqinSubController.<OnExit>d__43 <OnExit>d__;
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <OnExit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368DE RID: 223454 RVA: 0x00CEB01C File Offset: 0x00CE921C
+		// Token: 0x0602B824 RID: 178212 RVA: 0x00C39E90 File Offset: 0x00C38090
 		private UniTask<bool> UseSkill()
 		{
 			GuqinSubController.<UseSkill>d__44 <UseSkill>d__;
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <UseSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368DF RID: 223455 RVA: 0x00CEB058 File Offset: 0x00CE9258
+		// Token: 0x0602B825 RID: 178213 RVA: 0x00C39ECC File Offset: 0x00C380CC
 		private bool IsSkillPlaying()
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return ((currentSkill != null) ? new int?(currentSkill.SkillId) : null).GetValueOrDefault() == 800030;
 		}
 
-		// Token: 0x060368E0 RID: 223456 RVA: 0x00CEB0B8 File Offset: 0x00CE92B8
+		// Token: 0x0602B826 RID: 178214 RVA: 0x00C39F2C File Offset: 0x00C3812C
 		private void EndSkill()
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			baseTagComponent2.AddTag(new int?(tagIdByName));
 		}
 
-		// Token: 0x060368E1 RID: 223457 RVA: 0x00CEB180 File Offset: 0x00CE9380
+		// Token: 0x0602B827 RID: 178215 RVA: 0x00C39FF4 File Offset: 0x00C381F4
 		private UniTask WaitQteAudioFinish()
 		{
 			GuqinSubController.<WaitQteAudioFinish>d__47 <WaitQteAudioFinish>d__;
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <WaitQteAudioFinish>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368E2 RID: 223458 RVA: 0x00CEB1C3 File Offset: 0x00CE93C3
+		// Token: 0x0602B828 RID: 178216 RVA: 0x00C3A037 File Offset: 0x00C38237
 		public override void OnQteCompleted()
 		{
 			MusicalInstrumentController.Instance.Exit(new MusicalInstrumentExitParam
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			}).Forget<bool>();
 		}
 
-		// Token: 0x060368E3 RID: 223459 RVA: 0x00CEB1E8 File Offset: 0x00CE93E8
+		// Token: 0x0602B829 RID: 178217 RVA: 0x00C3A05C File Offset: 0x00C3825C
 		private void PlayQtePreMontage()
 		{
 			GuQinActivityParam? config = ConfigGuQinActivityParamById.GetConfig(111400001, true);
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			});
 		}
 
-		// Token: 0x060368E4 RID: 223460 RVA: 0x00CEB2DC File Offset: 0x00CE94DC
+		// Token: 0x0602B82A RID: 178218 RVA: 0x00C3A150 File Offset: 0x00C38350
 		private UniTask WaitMontageSection(FName sectionName)
 		{
 			GuqinSubController.<WaitMontageSection>d__50 <WaitMontageSection>d__;
@@ -600,7 +600,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <WaitMontageSection>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368E5 RID: 223461 RVA: 0x00CEB328 File Offset: 0x00CE9528
+		// Token: 0x0602B82B RID: 178219 RVA: 0x00C3A19C File Offset: 0x00C3839C
 		private void CancelWaitMontage()
 		{
 			TimerHandle montageTimer = this.MontageTimer;
@@ -617,7 +617,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.MontagePromise = null;
 		}
 
-		// Token: 0x060368E6 RID: 223462 RVA: 0x00CEB374 File Offset: 0x00CE9574
+		// Token: 0x0602B82C RID: 178220 RVA: 0x00C3A1E8 File Offset: 0x00C383E8
 		private float? GetMontageSectionEndTime(FName sectionName)
 		{
 			if (!this.IsEntityOnStage())
@@ -663,7 +663,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return null;
 		}
 
-		// Token: 0x060368E7 RID: 223463 RVA: 0x00CEB43C File Offset: 0x00CE963C
+		// Token: 0x0602B82D RID: 178221 RVA: 0x00C3A2B0 File Offset: 0x00C384B0
 		private UniTask WaitMontagePosition(float targetPosition)
 		{
 			GuqinSubController.<WaitMontagePosition>d__53 <WaitMontagePosition>d__;
@@ -675,7 +675,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <WaitMontagePosition>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368E8 RID: 223464 RVA: 0x00CEB488 File Offset: 0x00CE9688
+		// Token: 0x0602B82E RID: 178222 RVA: 0x00C3A2FC File Offset: 0x00C384FC
 		private float GetCurrentMontageBlendInTime()
 		{
 			if (!this.IsEntityOnStage())
@@ -712,7 +712,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return obj4.BlendIn.BlendTime;
 		}
 
-		// Token: 0x060368E9 RID: 223465 RVA: 0x00CEB4F0 File Offset: 0x00CE96F0
+		// Token: 0x0602B82F RID: 178223 RVA: 0x00C3A364 File Offset: 0x00C38564
 		private void PlayQtePostMontage()
 		{
 			GuQinActivityParam? config = ConfigGuQinActivityParamById.GetConfig(111400001, true);
@@ -752,7 +752,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			});
 		}
 
-		// Token: 0x060368EA RID: 223466 RVA: 0x00CEB5E4 File Offset: 0x00CE97E4
+		// Token: 0x0602B830 RID: 178224 RVA: 0x00C3A458 File Offset: 0x00C38658
 		private void PlayQteEndSection()
 		{
 			EntityHandle currentEntity = this.CurrentEntity;
@@ -778,7 +778,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			});
 		}
 
-		// Token: 0x060368EB RID: 223467 RVA: 0x00CEB650 File Offset: 0x00CE9850
+		// Token: 0x0602B831 RID: 178225 RVA: 0x00C3A4C4 File Offset: 0x00C386C4
 		private float GetCurrentMontageBlendOutTime()
 		{
 			if (!this.IsEntityOnStage())
@@ -815,7 +815,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return obj4.BlendOut.BlendTime;
 		}
 
-		// Token: 0x060368EC RID: 223468 RVA: 0x00CEB6B8 File Offset: 0x00CE98B8
+		// Token: 0x0602B832 RID: 178226 RVA: 0x00C3A52C File Offset: 0x00C3872C
 		private UniTask<bool> RequestPlayState(ZitherOpState state)
 		{
 			GuqinSubController.<RequestPlayState>d__58 <RequestPlayState>d__;
@@ -826,7 +826,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return <RequestPlayState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060368ED RID: 223469 RVA: 0x00CEB6FB File Offset: 0x00CE98FB
+		// Token: 0x0602B833 RID: 178227 RVA: 0x00C3A56F File Offset: 0x00C3876F
 		[NullableContext(2)]
 		public GuqinView GetView()
 		{
@@ -837,7 +837,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			return UiManager.Instance.GetView(this.ViewId.Value) as GuqinView;
 		}
 
-		// Token: 0x060368EE RID: 223470 RVA: 0x00CEB728 File Offset: 0x00CE9928
+		// Token: 0x0602B834 RID: 178228 RVA: 0x00C3A59C File Offset: 0x00C3879C
 		[NullableContext(1)]
 		public void OnGamepadCameraZoom(string axisName, float value)
 		{
@@ -874,52 +874,52 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			characterInputComponent2.HandleInputAxis(EInputAxis.Zoom, value2);
 		}
 
-		// Token: 0x0401CD6B RID: 118123
+		// Token: 0x040177FF RID: 96255
 		private const int SKILL_ID = 800030;
 
-		// Token: 0x0401CD6C RID: 118124
+		// Token: 0x04017800 RID: 96256
 		private const int ACTIVITYID = 111400001;
 
-		// Token: 0x0401CD6D RID: 118125
+		// Token: 0x04017801 RID: 96257
 		[Nullable(1)]
 		private const string END_GUQIN_TAG_NAME = "系统.活动.弹琴玩法.结束弹琴";
 
-		// Token: 0x0401CD6E RID: 118126
+		// Token: 0x04017802 RID: 96258
 		private const float BLACK_FADE_TIME = 0.5f;
 
-		// Token: 0x0401CD6F RID: 118127
+		// Token: 0x04017803 RID: 96259
 		[Nullable(2)]
 		private CustomPromise MontagePromise;
 
-		// Token: 0x0401CD70 RID: 118128
+		// Token: 0x04017804 RID: 96260
 		[Nullable(2)]
 		private TimerHandle MontageTimer;
 
-		// Token: 0x0401CD71 RID: 118129
+		// Token: 0x04017805 RID: 96261
 		[Nullable(2)]
 		private UiCameraHandleData CameraHandle;
 
-		// Token: 0x0401CD72 RID: 118130
+		// Token: 0x04017806 RID: 96262
 		private int? ViewId;
 
-		// Token: 0x0401CD73 RID: 118131
+		// Token: 0x04017807 RID: 96263
 		[Nullable(1)]
 		private ConditionPassCallback ConditionPassCallback;
 
-		// Token: 0x0401CD74 RID: 118132
+		// Token: 0x04017808 RID: 96264
 		[Nullable(2)]
 		private EntityHandle CurrentEntity;
 
-		// Token: 0x0401CD75 RID: 118133
+		// Token: 0x04017809 RID: 96265
 		private bool IsSkillEnded;
 
-		// Token: 0x0401CD76 RID: 118134
+		// Token: 0x0401780A RID: 96266
 		private bool IsEnterCancelled;
 
-		// Token: 0x0401CD77 RID: 118135
+		// Token: 0x0401780B RID: 96267
 		private bool IsSkillStarted;
 
-		// Token: 0x0401CD78 RID: 118136
+		// Token: 0x0401780C RID: 96268
 		private bool IsServerEntered;
 	}
 }

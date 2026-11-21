@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B6E RID: 7022
+// Token: 0x0200102D RID: 4141
 public class FloroRanchPhaseSettleView : UiViewBase
 {
-	// Token: 0x0600D0DA RID: 53466 RVA: 0x002FB74A File Offset: 0x002F994A
+	// Token: 0x0600A4EB RID: 42219 RVA: 0x00306822 File Offset: 0x00304A22
 	[NullableContext(1)]
 	public FloroRanchPhaseSettleView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0DB RID: 53467 RVA: 0x002FB754 File Offset: 0x002F9954
+	// Token: 0x0600A4EC RID: 42220 RVA: 0x0030682C File Offset: 0x00304A2C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -59,7 +59,7 @@ public class FloroRanchPhaseSettleView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0DC RID: 53468 RVA: 0x002FB948 File Offset: 0x002F9B48
+	// Token: 0x0600A4ED RID: 42221 RVA: 0x00306A20 File Offset: 0x00304C20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchPhaseSettleView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ public class FloroRanchPhaseSettleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D0DD RID: 53469 RVA: 0x002FB98C File Offset: 0x002F9B8C
+	// Token: 0x0600A4EE RID: 42222 RVA: 0x00306A64 File Offset: 0x00304C64
 	protected override void OnBeforeShow()
 	{
 		global::FloroRanchActivityData currentActivityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -157,7 +157,7 @@ public class FloroRanchPhaseSettleView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D0DE RID: 53470 RVA: 0x002FBC48 File Offset: 0x002F9E48
+	// Token: 0x0600A4EF RID: 42223 RVA: 0x00306D20 File Offset: 0x00304F20
 	private void OnClickSureBtn()
 	{
 		global::FloroRanchActivityData currentActivityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -196,59 +196,59 @@ public class FloroRanchPhaseSettleView : UiViewBase
 		}
 	}
 
-	// Token: 0x04005FD6 RID: 24534
+	// Token: 0x040060A5 RID: 24741
 	private int EventHandle;
 
-	// Token: 0x04005FD7 RID: 24535
+	// Token: 0x040060A6 RID: 24742
 	private long StageTarget;
 
-	// Token: 0x04005FD8 RID: 24536
+	// Token: 0x040060A7 RID: 24743
 	private bool IsSuccess;
 
-	// Token: 0x04005FD9 RID: 24537
+	// Token: 0x040060A8 RID: 24744
 	private bool IsSettle;
 
-	// Token: 0x04005FDA RID: 24538
+	// Token: 0x040060A9 RID: 24745
 	[Nullable(2)]
 	private Action<bool> CloseCallback;
 
-	// Token: 0x020080E0 RID: 32992
+	// Token: 0x0200726E RID: 29294
 	private class EComponents
 	{
-		// Token: 0x0402A0C1 RID: 172225
+		// Token: 0x040253F5 RID: 152565
 		public const int TextureTitleBg = 0;
 
-		// Token: 0x0402A0C2 RID: 172226
+		// Token: 0x040253F6 RID: 152566
 		public const int TextTitle = 1;
 
-		// Token: 0x0402A0C3 RID: 172227
+		// Token: 0x040253F7 RID: 152567
 		public const int TextDescription = 2;
 
-		// Token: 0x0402A0C4 RID: 172228
+		// Token: 0x040253F8 RID: 152568
 		public const int TextTarget = 3;
 
-		// Token: 0x0402A0C5 RID: 172229
+		// Token: 0x040253F9 RID: 152569
 		public const int TextCurNum = 4;
 
-		// Token: 0x0402A0C6 RID: 172230
+		// Token: 0x040253FA RID: 152570
 		public const int BtnSure = 5;
 
-		// Token: 0x0402A0C7 RID: 172231
+		// Token: 0x040253FB RID: 152571
 		public const int BtnText = 6;
 
-		// Token: 0x0402A0C8 RID: 172232
+		// Token: 0x040253FC RID: 152572
 		public const int ItemChatBubble = 7;
 
-		// Token: 0x0402A0C9 RID: 172233
+		// Token: 0x040253FD RID: 152573
 		public const int TextChatBubble = 8;
 
-		// Token: 0x0402A0CA RID: 172234
+		// Token: 0x040253FE RID: 152574
 		public const int ItemComplete = 9;
 
-		// Token: 0x0402A0CB RID: 172235
+		// Token: 0x040253FF RID: 152575
 		public const int ItemNotComplete = 10;
 
-		// Token: 0x0402A0CC RID: 172236
+		// Token: 0x04025400 RID: 152576
 		public const int SpineRole = 11;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.UI.View.Morale
 {
-	// Token: 0x02003E84 RID: 16004
+	// Token: 0x0200315B RID: 12635
 	[UnrealObjectPath("/Game/Aki/Data/UI/View/Morale/BP_MoraleEffectConfig.BP_MoraleEffectConfig_C")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class BP_MoraleEffectConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028675 RID: 165493 RVA: 0x009AB9F0 File Offset: 0x009A9BF0
+		// Token: 0x0601F1DD RID: 127453 RVA: 0x00926AC0 File Offset: 0x00924CC0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_MoraleEffectConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,123 +22,123 @@ namespace AkiClient.Game.Aki.Data.UI.View.Morale
 			return BP_MoraleEffectConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028676 RID: 165494 RVA: 0x009ABA14 File Offset: 0x009A9C14
+		// Token: 0x0601F1DE RID: 127454 RVA: 0x00926AE4 File Offset: 0x00924CE4
 		public BP_MoraleEffectConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_MoraleEffectConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028677 RID: 165495 RVA: 0x009ABA3C File Offset: 0x009A9C3C
+		// Token: 0x0601F1DF RID: 127455 RVA: 0x00926B0C File Offset: 0x00924D0C
 		[NullableContext(1)]
 		public BP_MoraleEffectConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_MoraleEffectConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D94 RID: 23956
-		// (get) Token: 0x06028678 RID: 165496 RVA: 0x009ABA6F File Offset: 0x009A9C6F
-		// (set) Token: 0x06028679 RID: 165497 RVA: 0x009ABA7F File Offset: 0x009A9C7F
+		// Token: 0x1700377E RID: 14206
+		// (get) Token: 0x0601F1E0 RID: 127456 RVA: 0x00926B3F File Offset: 0x00924D3F
+		// (set) Token: 0x0601F1E1 RID: 127457 RVA: 0x00926B4F File Offset: 0x00924D4F
 		public unsafe int 格子入场批次
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_格子入场批次);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_格子入场批次) = value;
 			}
 		}
 
-		// Token: 0x17005D95 RID: 23957
-		// (get) Token: 0x0602867A RID: 165498 RVA: 0x009ABA90 File Offset: 0x009A9C90
-		// (set) Token: 0x0602867B RID: 165499 RVA: 0x009ABAA0 File Offset: 0x009A9CA0
+		// Token: 0x1700377F RID: 14207
+		// (get) Token: 0x0601F1E2 RID: 127458 RVA: 0x00926B60 File Offset: 0x00924D60
+		// (set) Token: 0x0601F1E3 RID: 127459 RVA: 0x00926B70 File Offset: 0x00924D70
 		public unsafe int 格子入场批次间隔时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_格子入场批次间隔时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_格子入场批次间隔时间) = value;
 			}
 		}
 
-		// Token: 0x17005D96 RID: 23958
-		// (get) Token: 0x0602867C RID: 165500 RVA: 0x009ABAB1 File Offset: 0x009A9CB1
-		// (set) Token: 0x0602867D RID: 165501 RVA: 0x009ABAC5 File Offset: 0x009A9CC5
+		// Token: 0x17003780 RID: 14208
+		// (get) Token: 0x0601F1E4 RID: 127460 RVA: 0x00926B81 File Offset: 0x00924D81
+		// (set) Token: 0x0601F1E5 RID: 127461 RVA: 0x00926B95 File Offset: 0x00924D95
 		[Nullable(2)]
 		public unsafe UCurveFloat 格子入场曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MoraleEffectConfig_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MoraleEffectConfig_C.__PropertyOffset_格子入场曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MoraleEffectConfig_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MoraleEffectConfig_C.__PropertyOffset_格子入场曲线, value);
 			}
 		}
 
-		// Token: 0x17005D97 RID: 23959
-		// (get) Token: 0x0602867E RID: 165502 RVA: 0x009ABADA File Offset: 0x009A9CDA
-		// (set) Token: 0x0602867F RID: 165503 RVA: 0x009ABAEA File Offset: 0x009A9CEA
+		// Token: 0x17003781 RID: 14209
+		// (get) Token: 0x0601F1E6 RID: 127462 RVA: 0x00926BAA File Offset: 0x00924DAA
+		// (set) Token: 0x0601F1E7 RID: 127463 RVA: 0x00926BBA File Offset: 0x00924DBA
 		public unsafe int 解锁新格子播放前间隔时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_解锁新格子播放前间隔时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_解锁新格子播放前间隔时间) = value;
 			}
 		}
 
-		// Token: 0x17005D98 RID: 23960
-		// (get) Token: 0x06028680 RID: 165504 RVA: 0x009ABAFB File Offset: 0x009A9CFB
-		// (set) Token: 0x06028681 RID: 165505 RVA: 0x009ABB0B File Offset: 0x009A9D0B
+		// Token: 0x17003782 RID: 14210
+		// (get) Token: 0x0601F1E8 RID: 127464 RVA: 0x00926BCB File Offset: 0x00924DCB
+		// (set) Token: 0x0601F1E9 RID: 127465 RVA: 0x00926BDB File Offset: 0x00924DDB
 		public unsafe int 解锁新格子播放所需时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_解锁新格子播放所需时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_MoraleEffectConfig_C.__PropertyOffset_解锁新格子播放所需时间) = value;
 			}
 		}
 
-		// Token: 0x06028682 RID: 165506 RVA: 0x009ABB1C File Offset: 0x009A9D1C
+		// Token: 0x0601F1EA RID: 127466 RVA: 0x00926BEC File Offset: 0x00924DEC
 		protected BP_MoraleEffectConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014984 RID: 84356
+		// Token: 0x04010A05 RID: 68101
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/UI/View/Morale/BP_MoraleEffectConfig.BP_MoraleEffectConfig_C";
 
-		// Token: 0x04014985 RID: 84357
+		// Token: 0x04010A06 RID: 68102
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014986 RID: 84358
+		// Token: 0x04010A07 RID: 68103
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014987 RID: 84359
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010A08 RID: 68104
+		internal static int __PropertyOffset_格子入场批次;
 
-		// Token: 0x04014988 RID: 84360
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010A09 RID: 68105
+		internal static int __PropertyOffset_格子入场批次间隔时间;
 
-		// Token: 0x04014989 RID: 84361
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010A0A RID: 68106
+		internal static int __PropertyOffset_格子入场曲线;
 
-		// Token: 0x0401498A RID: 84362
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010A0B RID: 68107
+		internal static int __PropertyOffset_解锁新格子播放前间隔时间;
 
-		// Token: 0x0401498B RID: 84363
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010A0C RID: 68108
+		internal static int __PropertyOffset_解锁新格子播放所需时间;
 	}
 }

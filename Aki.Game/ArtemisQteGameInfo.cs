@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010FE RID: 4350
+// Token: 0x020005B2 RID: 1458
 public class ArtemisQteGameInfo
 {
-	// Token: 0x06007153 RID: 29011 RVA: 0x00172501 File Offset: 0x00170701
+	// Token: 0x060044E9 RID: 17641 RVA: 0x0017AEBD File Offset: 0x001790BD
 	public void CreateRingInfo(EArrowDirection arrowDirection)
 	{
 		this.RingInfo = new ArtemisQteRingInfo(arrowDirection);
 	}
 
-	// Token: 0x06007154 RID: 29012 RVA: 0x0017250F File Offset: 0x0017070F
+	// Token: 0x060044EA RID: 17642 RVA: 0x0017AECB File Offset: 0x001790CB
 	[NullableContext(1)]
 	public ArtemisQteRingInfo GetRingInfo()
 	{
 		return this.RingInfo;
 	}
 
-	// Token: 0x06007155 RID: 29013 RVA: 0x00172517 File Offset: 0x00170717
+	// Token: 0x060044EB RID: 17643 RVA: 0x0017AED3 File Offset: 0x001790D3
 	public void Clear()
 	{
 		ArtemisQteRingInfo ringInfo = this.RingInfo;
@@ -32,52 +32,52 @@ public class ArtemisQteGameInfo
 		this.MaxRound = 0;
 	}
 
-	// Token: 0x06007156 RID: 29014 RVA: 0x0017254D File Offset: 0x0017074D
+	// Token: 0x060044EC RID: 17644 RVA: 0x0017AF09 File Offset: 0x00179109
 	public void SetGameStage(EArtemisQteStage stage)
 	{
 		this.GameStage = stage;
 	}
 
-	// Token: 0x06007157 RID: 29015 RVA: 0x00172556 File Offset: 0x00170756
+	// Token: 0x060044ED RID: 17645 RVA: 0x0017AF12 File Offset: 0x00179112
 	public EArtemisQteStage GetGameStage()
 	{
 		return this.GameStage;
 	}
 
-	// Token: 0x06007158 RID: 29016 RVA: 0x0017255E File Offset: 0x0017075E
+	// Token: 0x060044EE RID: 17646 RVA: 0x0017AF1A File Offset: 0x0017911A
 	public bool IsGamePause()
 	{
 		return this.GameStage != EArtemisQteStage.OnGoing;
 	}
 
-	// Token: 0x06007159 RID: 29017 RVA: 0x0017256C File Offset: 0x0017076C
+	// Token: 0x060044EF RID: 17647 RVA: 0x0017AF28 File Offset: 0x00179128
 	public bool IsGameEnd()
 	{
 		return this.GameStage >= EArtemisQteStage.End;
 	}
 
-	// Token: 0x04003491 RID: 13457
+	// Token: 0x0400352A RID: 13610
 	[Nullable(2)]
 	private ArtemisQteRingInfo RingInfo;
 
-	// Token: 0x04003492 RID: 13458
+	// Token: 0x0400352B RID: 13611
 	private EArtemisQteStage GameStage;
 
-	// Token: 0x04003493 RID: 13459
+	// Token: 0x0400352C RID: 13612
 	public int CurrentScore;
 
-	// Token: 0x04003494 RID: 13460
+	// Token: 0x0400352D RID: 13613
 	public int CurrentRound;
 
-	// Token: 0x04003495 RID: 13461
+	// Token: 0x0400352E RID: 13614
 	public int MaxRound;
 
-	// Token: 0x04003496 RID: 13462
+	// Token: 0x0400352F RID: 13615
 	public float CursorSpeed;
 
-	// Token: 0x04003497 RID: 13463
+	// Token: 0x04003530 RID: 13616
 	public float RingSpeed;
 
-	// Token: 0x04003498 RID: 13464
+	// Token: 0x04003531 RID: 13617
 	public float PerfectAppearRate;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EAB RID: 7851
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020E4 RID: 8420
 	public class ISportConfig
 	{
-		// Token: 0x0600A7F2 RID: 42994 RVA: 0x0017B578 File Offset: 0x00179778
+		// Token: 0x0600B2C2 RID: 45762 RVA: 0x00191518 File Offset: 0x0018F718
 		private ISportConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7F3 RID: 42995 RVA: 0x0017B5B0 File Offset: 0x001797B0
+		// Token: 0x0600B2C3 RID: 45763 RVA: 0x00191550 File Offset: 0x0018F750
 		public static ISportConfig Create([Nullable(2)] ISportConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7F4 RID: 42996 RVA: 0x0017B5C3 File Offset: 0x001797C3
+		// Token: 0x0600B2C4 RID: 45764 RVA: 0x00191563 File Offset: 0x0018F763
 		public static ISportConfig CreateFromSetValue([Nullable(2)] ISportConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7F5 RID: 42997 RVA: 0x0017B5D6 File Offset: 0x001797D6
+		// Token: 0x0600B2C5 RID: 45765 RVA: 0x00191576 File Offset: 0x0018F776
 		public ISportConfig_SetValue ToSetValue()
 		{
 			return new ISportConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003350 RID: 13136
-		// (get) Token: 0x0600A7F6 RID: 42998 RVA: 0x0017B5E9 File Offset: 0x001797E9
-		// (set) Token: 0x0600A7F7 RID: 42999 RVA: 0x0017B614 File Offset: 0x00179814
+		// Token: 0x1700361A RID: 13850
+		// (get) Token: 0x0600B2C6 RID: 45766 RVA: 0x00191589 File Offset: 0x0018F789
+		// (set) Token: 0x0600B2C7 RID: 45767 RVA: 0x001915B4 File Offset: 0x0018F7B4
 		public virtual ESportStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006419 RID: 25625
+		// Token: 0x04006A07 RID: 27143
 		[Nullable(2)]
 		protected ISportConfig FbInstance;
 
-		// Token: 0x0400641A RID: 25626
+		// Token: 0x04006A08 RID: 27144
 		[Nullable(2)]
 		protected ISportConfig_SetValue PocoInterface;
 	}

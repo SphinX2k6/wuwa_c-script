@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200153E RID: 5438
+// Token: 0x020009F6 RID: 2550
 public enum ETurntableSaveFlag
 {
-	// Token: 0x04004450 RID: 17488
+	// Token: 0x040044F6 RID: 17654
 	NewQuest = 1,
-	// Token: 0x04004451 RID: 17489
+	// Token: 0x040044F7 RID: 17655
 	Unlock,
-	// Token: 0x04004452 RID: 17490
+	// Token: 0x040044F8 RID: 17656
 	DailyQuestTimeStamp
 }

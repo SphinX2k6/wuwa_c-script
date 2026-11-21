@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200675A RID: 26458
+	// Token: 0x02006DDA RID: 28122
 	public class IFaceToPosT
 	{
-		// Token: 0x1700C46B RID: 50283
-		// (get) Token: 0x0602E06F RID: 188527 RVA: 0x0064A2DD File Offset: 0x006484DD
-		// (set) Token: 0x0602E070 RID: 188528 RVA: 0x0064A2E5 File Offset: 0x006484E5
+		// Token: 0x1700CE21 RID: 52769
+		// (get) Token: 0x060308B5 RID: 198837 RVA: 0x00697A21 File Offset: 0x00695C21
+		// (set) Token: 0x060308B6 RID: 198838 RVA: 0x00697A29 File Offset: 0x00695C29
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x0602E071 RID: 188529 RVA: 0x0064A2EE File Offset: 0x006484EE
+		// Token: 0x060308B7 RID: 198839 RVA: 0x00697A32 File Offset: 0x00695C32
 		public IFaceToPosT()
 		{
 			this.Pos = null;

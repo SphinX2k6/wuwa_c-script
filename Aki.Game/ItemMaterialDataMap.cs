@@ -6,15 +6,15 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200348B RID: 13451
+// Token: 0x020029FF RID: 10751
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialDataMap.ItemMaterialDataMap_C")]
 public class ItemMaterialDataMap : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700286B RID: 10347
-	// (get) Token: 0x0601D311 RID: 119569 RVA: 0x00821340 File Offset: 0x0081F540
+	// Token: 0x17002C09 RID: 11273
+	// (get) Token: 0x0601B018 RID: 110616 RVA: 0x0084864C File Offset: 0x0084684C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<float, ItemMaterialControllerActorData> Map
 	{
@@ -30,7 +30,7 @@ public class ItemMaterialDataMap : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0601D312 RID: 119570 RVA: 0x00821379 File Offset: 0x0081F579
+	// Token: 0x0601B019 RID: 110617 RVA: 0x00848685 File Offset: 0x00846885
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (ItemMaterialDataMap._ClassPtr == IntPtr.Zero)
@@ -40,33 +40,23 @@ public class ItemMaterialDataMap : AActor, IUnrealUObject, IUnrealObject
 		return ItemMaterialDataMap._ClassPtr;
 	}
 
-	// Token: 0x0601D313 RID: 119571 RVA: 0x008213A0 File Offset: 0x0081F5A0
+	// Token: 0x0601B01A RID: 110618 RVA: 0x008486AC File Offset: 0x008468AC
 	public ItemMaterialDataMap() : this(BuiltinUtils.AllocNativeUObject(ItemMaterialDataMap.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D314 RID: 119572 RVA: 0x008213C8 File Offset: 0x0081F5C8
+	// Token: 0x0601B01B RID: 110619 RVA: 0x008486D4 File Offset: 0x008468D4
 	public ItemMaterialDataMap(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ItemMaterialDataMap.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D315 RID: 119573 RVA: 0x008213FB File Offset: 0x0081F5FB
+	// Token: 0x0601B01C RID: 110620 RVA: 0x00848707 File Offset: 0x00846907
 	protected ItemMaterialDataMap(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x1700286C RID: 10348
-	// (get) Token: 0x0601D316 RID: 119574 RVA: 0x00821404 File Offset: 0x0081F604
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)ItemMaterialDataMap.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x1700286D RID: 10349
-	// (get) Token: 0x0601D317 RID: 119575 RVA: 0x00821414 File Offset: 0x0081F614
+	// Token: 0x17002C0A RID: 11274
+	// (get) Token: 0x0601B01D RID: 110621 RVA: 0x00848710 File Offset: 0x00846910
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -77,25 +67,22 @@ public class ItemMaterialDataMap : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x0400E639 RID: 58937
+	// Token: 0x0400EAF0 RID: 60144
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Scene/Item/MaterialController/ItemMaterialDataMap.ItemMaterialDataMap_C";
 
-	// Token: 0x0400E63A RID: 58938
+	// Token: 0x0400EAF1 RID: 60145
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E63B RID: 58939
+	// Token: 0x0400EAF2 RID: 60146
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E63C RID: 58940
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400E63D RID: 58941
+	// Token: 0x0400EAF3 RID: 60147
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0400E63E RID: 58942
+	// Token: 0x0400EAF4 RID: 60148
 	private static int __PropertyOffset_Map;
 
-	// Token: 0x0400E63F RID: 58943
+	// Token: 0x0400EAF5 RID: 60149
 	[Nullable(new byte[]
 	{
 		2,

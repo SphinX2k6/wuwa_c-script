@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200283A RID: 10298
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B0D RID: 11021
 	public class IInstrumentQteConfig
 	{
-		// Token: 0x0600E452 RID: 58450 RVA: 0x00219C6A File Offset: 0x00217E6A
+		// Token: 0x0600F277 RID: 62071 RVA: 0x00236ACE File Offset: 0x00234CCE
 		public static IInstrumentQteConfig Create(IInstrumentQteConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045A0 RID: 17824
-		// (get) Token: 0x0600E453 RID: 58451 RVA: 0x00219C89 File Offset: 0x00217E89
+		// Token: 0x1700490B RID: 18699
+		// (get) Token: 0x0600F278 RID: 62072 RVA: 0x00236AED File Offset: 0x00234CED
 		public virtual int Id
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045A1 RID: 17825
-		// (get) Token: 0x0600E454 RID: 58452 RVA: 0x00219C96 File Offset: 0x00217E96
+		// Token: 0x1700490C RID: 18700
+		// (get) Token: 0x0600F279 RID: 62073 RVA: 0x00236AFA File Offset: 0x00234CFA
 		public virtual EInstrumentType InstrumentType
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045A2 RID: 17826
-		// (get) Token: 0x0600E455 RID: 58453 RVA: 0x00219CA3 File Offset: 0x00217EA3
+		// Token: 0x1700490D RID: 18701
+		// (get) Token: 0x0600F27A RID: 62074 RVA: 0x00236B07 File Offset: 0x00234D07
 		public virtual string Description
 		{
 			get
@@ -53,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045A3 RID: 17827
-		// (get) Token: 0x0600E456 RID: 58454 RVA: 0x00219CB0 File Offset: 0x00217EB0
+		// Token: 0x1700490E RID: 18702
+		// (get) Token: 0x0600F27B RID: 62075 RVA: 0x00236B14 File Offset: 0x00234D14
 		public virtual List<IInstrumentQteConfig_QteSequenceRow> QteSequence
 		{
 			get
@@ -74,8 +71,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045A4 RID: 17828
-		// (get) Token: 0x0600E457 RID: 58455 RVA: 0x00219D19 File Offset: 0x00217F19
+		// Token: 0x1700490F RID: 18703
+		// (get) Token: 0x0600F27C RID: 62076 RVA: 0x00236B7D File Offset: 0x00234D7D
 		public virtual string PreludeAsset
 		{
 			get
@@ -84,13 +81,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E54 RID: 32340
+		// Token: 0x04008511 RID: 34065
 		private IInstrumentQteConfig Instance;
 
-		// Token: 0x04007E55 RID: 32341
+		// Token: 0x04008512 RID: 34066
 		private List<IInstrumentQteConfig_QteSequenceRow> _QteSequenceCache;
 
-		// Token: 0x04007E56 RID: 32342
+		// Token: 0x04008513 RID: 34067
 		private bool _QteSequenceInited;
 	}
 }

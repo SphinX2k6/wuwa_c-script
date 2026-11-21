@@ -7,15 +7,14 @@ using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x02002C77 RID: 11383
+// Token: 0x020021D0 RID: 8656
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiModelSetDitherEffect, IUiModelSetPlanarReflectionRenderOffset
 {
-	// Token: 0x06017C69 RID: 97385 RVA: 0x0060C170 File Offset: 0x0060A370
+	// Token: 0x060154DB RID: 87259 RVA: 0x00631C18 File Offset: 0x0062FE18
 	protected override void OnInit()
 	{
 		this.ModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
@@ -37,17 +36,17 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C6A RID: 97386 RVA: 0x0060C1E0 File Offset: 0x0060A3E0
+	// Token: 0x060154DC RID: 87260 RVA: 0x00631C88 File Offset: 0x0062FE88
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06017C6B RID: 97387 RVA: 0x0060C1E2 File Offset: 0x0060A3E2
+	// Token: 0x060154DD RID: 87261 RVA: 0x00631C8A File Offset: 0x0062FE8A
 	protected override void OnEnd()
 	{
 	}
 
-	// Token: 0x06017C6C RID: 97388 RVA: 0x0060C1E4 File Offset: 0x0060A3E4
+	// Token: 0x060154DE RID: 87262 RVA: 0x00631C8C File Offset: 0x0062FE8C
 	public void OnModelVisibleChange(bool visible)
 	{
 		if (this.MainMeshComponent != null)
@@ -74,7 +73,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C6D RID: 97389 RVA: 0x0060C2D0 File Offset: 0x0060A4D0
+	// Token: 0x060154DF RID: 87263 RVA: 0x00631D78 File Offset: 0x0062FF78
 	public void OnModelDitherEffectChange(float value)
 	{
 		CharRenderingComponent charRenderingComponent = this.CharRenderingComponent;
@@ -85,7 +84,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		charRenderingComponent.SetDitherEffect(value, ECharacterDitherType.UnDefined);
 	}
 
-	// Token: 0x06017C6E RID: 97390 RVA: 0x0060C2E4 File Offset: 0x0060A4E4
+	// Token: 0x060154E0 RID: 87264 RVA: 0x00631D8C File Offset: 0x0062FF8C
 	private USkeletalMeshComponent CreateUiModelSkeletalMeshComponent(FTransform? transform = null, [Nullable(2)] string componentName = null)
 	{
 		FTransform ftransform = transform ?? MathUtils.Instance.DefaultTransform;
@@ -93,14 +92,10 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		uskeletalMeshComponent.KuroMaterialControllerUpdateGroupMode = EKuroMaterialControllerUpdateGroupMode.CharMesh;
 		uskeletalMeshComponent.SetTickableWhenPaused(true);
 		this.SetMeshComponentEnable(uskeletalMeshComponent, this.ModelDataComponent.GetVisible());
-		if (Info.Instance.IsPlayInEditor)
-		{
-			ULGUIBPLibrary.AddInstanceComponent(this.Actor, uskeletalMeshComponent);
-		}
 		return uskeletalMeshComponent;
 	}
 
-	// Token: 0x06017C6F RID: 97391 RVA: 0x0060C3A8 File Offset: 0x0060A5A8
+	// Token: 0x060154E1 RID: 87265 RVA: 0x00631E38 File Offset: 0x00630038
 	private CharRenderingComponent CreateUiModelCharRenderingComponent(ECharacterRenderingType renderType)
 	{
 		CharRenderingComponent charRenderingComponent = this.Actor.AddComponentByClass(CharRenderingComponent.StaticClass(), false, MathUtils.Instance.DefaultTransform, false, default(FName)) as CharRenderingComponent;
@@ -109,7 +104,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		return charRenderingComponent;
 	}
 
-	// Token: 0x06017C70 RID: 97392 RVA: 0x0060C3F4 File Offset: 0x0060A5F4
+	// Token: 0x060154E2 RID: 87266 RVA: 0x00631E84 File Offset: 0x00630084
 	private void InitCharRenderingComponent()
 	{
 		EUiModelType? modelType = this.ModelDataComponent.ModelType;
@@ -156,7 +151,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C71 RID: 97393 RVA: 0x0060C548 File Offset: 0x0060A748
+	// Token: 0x060154E3 RID: 87267 RVA: 0x00631FD8 File Offset: 0x006301D8
 	public void ChangeMesh(USkeletalMesh newMesh, [Nullable(2)] UClass newAnimClass = null, [Nullable(new byte[]
 	{
 		2,
@@ -197,7 +192,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C72 RID: 97394 RVA: 0x0060C5DC File Offset: 0x0060A7DC
+	// Token: 0x060154E4 RID: 87268 RVA: 0x0063206C File Offset: 0x0063026C
 	private void ChangeMainMeshCommon(USkeletalMesh newMesh, [Nullable(2)] UClass newAnimClass = null, [Nullable(new byte[]
 	{
 		2,
@@ -235,6 +230,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.MainMeshComponent = uskeletalMeshComponent;
 		if (mainMeshComponent != null)
 		{
+			this.ClearAttachedFollowerPose(mainMeshComponent);
 			this.DestroyMeshComponent(mainMeshComponent);
 		}
 		if (childMeshList != null && childMeshList.Count > 0)
@@ -254,7 +250,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.InitCharRenderingComponent();
 	}
 
-	// Token: 0x06017C73 RID: 97395 RVA: 0x0060C718 File Offset: 0x0060A918
+	// Token: 0x060154E5 RID: 87269 RVA: 0x006321B0 File Offset: 0x006303B0
 	public void ChangeRoleMainMeshAnimation(UAnimationAsset animation)
 	{
 		USkeletalMeshComponent mainMeshComponent = this.MainMeshComponent;
@@ -270,14 +266,14 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		mainMeshComponent2.SetAnimationMode(EAnimationMode.AnimationSingleNode);
 	}
 
-	// Token: 0x06017C74 RID: 97396 RVA: 0x0060C73E File Offset: 0x0060A93E
+	// Token: 0x060154E6 RID: 87270 RVA: 0x006321D6 File Offset: 0x006303D6
 	private void RefreshMeshAndSetLod(USkeletalMeshComponent skeletalComponent, USkeletalMesh mesh, int levelOfDetail = 0)
 	{
 		skeletalComponent.SetSkeletalMesh(mesh, true);
 		skeletalComponent.SetForcedLOD(levelOfDetail);
 	}
 
-	// Token: 0x06017C75 RID: 97397 RVA: 0x0060C750 File Offset: 0x0060A950
+	// Token: 0x060154E7 RID: 87271 RVA: 0x006321E8 File Offset: 0x006303E8
 	private void ChangeRoleMainMesh(USkeletalMesh newMesh, [Nullable(2)] UClass newAnimClass = null, [Nullable(new byte[]
 	{
 		2,
@@ -349,6 +345,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.MainMeshComponent = uskeletalMeshComponent;
 		if (mainMeshComponent != null)
 		{
+			this.ClearAttachedFollowerPose(mainMeshComponent);
 			this.DestroyMeshComponent(mainMeshComponent);
 		}
 		if (childMeshList != null && childMeshList.Count > 0)
@@ -369,7 +366,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.ApplyToonCustomStencilAfterSetup();
 	}
 
-	// Token: 0x06017C76 RID: 97398 RVA: 0x0060C930 File Offset: 0x0060AB30
+	// Token: 0x060154E8 RID: 87272 RVA: 0x006323D0 File Offset: 0x006305D0
 	private void ApplyToonCustomStencilAfterSetup()
 	{
 		if (this.ModelDataComponent != null && this.ModelDataComponent.ModelConfigId > 0)
@@ -396,7 +393,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C77 RID: 97399 RVA: 0x0060C9EC File Offset: 0x0060ABEC
+	// Token: 0x060154E9 RID: 87273 RVA: 0x0063248C File Offset: 0x0063068C
 	private USkeletalMeshComponent AddChildMeshComponent(USkeletalMesh newMesh)
 	{
 		if (this.ChildMeshComponentList == null)
@@ -422,7 +419,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		return uskeletalMeshComponent;
 	}
 
-	// Token: 0x06017C78 RID: 97400 RVA: 0x0060CAC0 File Offset: 0x0060ACC0
+	// Token: 0x060154EA RID: 87274 RVA: 0x00632560 File Offset: 0x00630760
 	[return: Nullable(2)]
 	private SModelChildMeshConfig GetChildMeshConfig(USkeletalMesh mesh)
 	{
@@ -448,7 +445,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		return null;
 	}
 
-	// Token: 0x06017C79 RID: 97401 RVA: 0x0060CB2C File Offset: 0x0060AD2C
+	// Token: 0x060154EB RID: 87275 RVA: 0x006325CC File Offset: 0x006307CC
 	private void AddDecorationMeshComponent(IUiModelDecorationParam decorationMeshParamList)
 	{
 		if (this.DecorationMeshComponentList == null)
@@ -462,7 +459,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.DecorationMeshComponentList.Add(uskeletalMeshComponent);
 	}
 
-	// Token: 0x06017C7A RID: 97402 RVA: 0x0060CBAC File Offset: 0x0060ADAC
+	// Token: 0x060154EC RID: 87276 RVA: 0x0063264C File Offset: 0x0063084C
 	private void DestroyChildMeshComponent()
 	{
 		if (this.ChildMeshComponentList == null)
@@ -486,7 +483,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.ChildMeshComponentList.Clear();
 	}
 
-	// Token: 0x06017C7B RID: 97403 RVA: 0x0060CC38 File Offset: 0x0060AE38
+	// Token: 0x060154ED RID: 87277 RVA: 0x006326D8 File Offset: 0x006308D8
 	private void DestroyDecorationMeshComponent()
 	{
 		if (this.DecorationMeshComponentList == null)
@@ -505,17 +502,29 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		this.DecorationMeshComponentList.Clear();
 	}
 
-	// Token: 0x06017C7C RID: 97404 RVA: 0x0060CCB4 File Offset: 0x0060AEB4
-	private void DestroyMeshComponent(USkeletalMeshComponent meshComp)
+	// Token: 0x060154EE RID: 87278 RVA: 0x00632754 File Offset: 0x00630954
+	private void ClearAttachedFollowerPose(USkeletalMeshComponent leaderComp)
 	{
-		meshComp.K2_DestroyComponent(this.Actor);
-		if (Info.Instance.IsPlayInEditor)
+		TWeakObjectPtr<USkinnedMeshComponent> right = new TWeakObjectPtr<USkinnedMeshComponent>(leaderComp);
+		TArray<USceneComponent> tarray = new TArray<USceneComponent>();
+		leaderComp.GetChildrenComponents(true, ref tarray);
+		for (int i = 0; i < tarray.Count; i++)
 		{
-			ULGUIBPLibrary.RemoveInstanceComponent(this.Actor, meshComp);
+			USkinnedMeshComponent uskinnedMeshComponent = tarray[i] as USkinnedMeshComponent;
+			if (uskinnedMeshComponent != null && uskinnedMeshComponent.MasterPoseComponent == right)
+			{
+				uskinnedMeshComponent.SetMasterPoseComponent(null, false);
+			}
 		}
 	}
 
-	// Token: 0x06017C7D RID: 97405 RVA: 0x0060CCDC File Offset: 0x0060AEDC
+	// Token: 0x060154EF RID: 87279 RVA: 0x006327AF File Offset: 0x006309AF
+	private void DestroyMeshComponent(USkeletalMeshComponent meshComp)
+	{
+		meshComp.K2_DestroyComponent(this.Actor);
+	}
+
+	// Token: 0x060154F0 RID: 87280 RVA: 0x006327C0 File Offset: 0x006309C0
 	public void SetTransformByTag(string tag)
 	{
 		AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName(tag).Value, ECollectActorType.UI);
@@ -535,7 +544,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		actor.D_K2_SetActorTransform(ftransformDouble, false, ref fhitResult, false);
 	}
 
-	// Token: 0x06017C7E RID: 97406 RVA: 0x0060CD4C File Offset: 0x0060AF4C
+	// Token: 0x060154F1 RID: 87281 RVA: 0x00632830 File Offset: 0x00630A30
 	public void SetAllMeshComponentRelativeTransform(FTransform newTransform, bool bSweep, ref FHitResult sweepHitResult, bool bTeleport = false)
 	{
 		USkeletalMeshComponent mainMeshComponent = this.MainMeshComponent;
@@ -553,7 +562,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C7F RID: 97407 RVA: 0x0060CDD0 File Offset: 0x0060AFD0
+	// Token: 0x060154F2 RID: 87282 RVA: 0x006328B4 File Offset: 0x00630AB4
 	[return: Nullable(2)]
 	public ABP_PerformanceRole_C GetAnimInstanceFromSkeletalMesh(USkeletalMeshComponent meshComponent)
 	{
@@ -600,7 +609,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		return null;
 	}
 
-	// Token: 0x06017C80 RID: 97408 RVA: 0x0060CEC4 File Offset: 0x0060B0C4
+	// Token: 0x060154F3 RID: 87283 RVA: 0x006329A8 File Offset: 0x00630BA8
 	[NullableContext(2)]
 	private void SetMeshComponentEnable(USkeletalMeshComponent meshComp, bool enable)
 	{
@@ -608,21 +617,21 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		meshComp.SetComponentTickEnabled(enable);
 	}
 
-	// Token: 0x06017C81 RID: 97409 RVA: 0x0060CED8 File Offset: 0x0060B0D8
+	// Token: 0x060154F4 RID: 87284 RVA: 0x006329BC File Offset: 0x00630BBC
 	[NullableContext(2)]
 	private void SetMeshComponentVisibility(USkeletalMeshComponent meshComp, bool visible)
 	{
 		meshComp.SetVisibility(visible, false);
 	}
 
-	// Token: 0x06017C82 RID: 97410 RVA: 0x0060CEE2 File Offset: 0x0060B0E2
+	// Token: 0x060154F5 RID: 87285 RVA: 0x006329C6 File Offset: 0x00630BC6
 	[NullableContext(2)]
 	public AActor GetActor()
 	{
 		return this.Actor;
 	}
 
-	// Token: 0x06017C83 RID: 97411 RVA: 0x0060CEEC File Offset: 0x0060B0EC
+	// Token: 0x060154F6 RID: 87286 RVA: 0x006329D0 File Offset: 0x00630BD0
 	[return: Nullable(2)]
 	public ABP_TuanziNPC_C GetDangoAnimInstanceFromSkeletalMesh(USkeletalMeshComponent meshComponent)
 	{
@@ -640,7 +649,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		return animInstance as ABP_TuanziNPC_C;
 	}
 
-	// Token: 0x06017C84 RID: 97412 RVA: 0x0060CF38 File Offset: 0x0060B138
+	// Token: 0x060154F7 RID: 87287 RVA: 0x00632A1C File Offset: 0x00630C1C
 	public void SetPlanarReflectionRenderOffset(bool enable, FVector? offset)
 	{
 		if (this.Actor == null)
@@ -669,21 +678,21 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 		}
 	}
 
-	// Token: 0x06017C85 RID: 97413 RVA: 0x0060D030 File Offset: 0x0060B230
+	// Token: 0x060154F8 RID: 87288 RVA: 0x00632B14 File Offset: 0x00630D14
 	public void OnModelPlanarReflectionRenderOffsetChange(bool enable, FVector? offset)
 	{
 		this.SetPlanarReflectionRenderOffset(enable, offset);
 	}
 
-	// Token: 0x0400B130 RID: 45360
+	// Token: 0x0400B49B RID: 46235
 	[Nullable(2)]
 	public AActor Actor;
 
-	// Token: 0x0400B131 RID: 45361
+	// Token: 0x0400B49C RID: 46236
 	[Nullable(2)]
 	public USkeletalMeshComponent MainMeshComponent;
 
-	// Token: 0x0400B132 RID: 45362
+	// Token: 0x0400B49D RID: 46237
 	[Nullable(new byte[]
 	{
 		2,
@@ -691,7 +700,7 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 	})]
 	public List<USkeletalMeshComponent> ChildMeshComponentList;
 
-	// Token: 0x0400B133 RID: 45363
+	// Token: 0x0400B49E RID: 46238
 	[Nullable(new byte[]
 	{
 		2,
@@ -699,19 +708,19 @@ public class UiModelActorComponent : UiModelComponentBase, IUiModelVisible, IUiM
 	})]
 	public List<USkeletalMeshComponent> DecorationMeshComponentList;
 
-	// Token: 0x0400B134 RID: 45364
+	// Token: 0x0400B49F RID: 46239
 	[Nullable(2)]
 	public CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x0400B135 RID: 45365
+	// Token: 0x0400B4A0 RID: 46240
 	[Nullable(2)]
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B136 RID: 45366
+	// Token: 0x0400B4A1 RID: 46241
 	[Nullable(2)]
 	private UiModelEffectComponent EffectComponent;
 
-	// Token: 0x0400B137 RID: 45367
+	// Token: 0x0400B4A2 RID: 46242
 	[Nullable(2)]
 	private UClass BaseInstance;
 }

@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018B0 RID: 6320
+// Token: 0x02000D69 RID: 3433
 [NullableContext(2)]
 [Nullable(0)]
 public class InputKeyItem : UiPanelBase
 {
-	// Token: 0x0600B8DF RID: 47327 RVA: 0x0029EF63 File Offset: 0x0029D163
+	// Token: 0x06008CC8 RID: 36040 RVA: 0x002A9683 File Offset: 0x002A7883
 	public InputKeyItem(string uniqueId = null)
 	{
 		this.UniqueId = uniqueId;
 	}
 
-	// Token: 0x0600B8E0 RID: 47328 RVA: 0x0029EF74 File Offset: 0x0029D174
+	// Token: 0x06008CC9 RID: 36041 RVA: 0x002A9694 File Offset: 0x002A7894
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -47,7 +47,7 @@ public class InputKeyItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B8E1 RID: 47329 RVA: 0x0029F0A4 File Offset: 0x0029D2A4
+	// Token: 0x06008CCA RID: 36042 RVA: 0x002A97C4 File Offset: 0x002A79C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InputKeyItem.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ public class InputKeyItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B8E2 RID: 47330 RVA: 0x0029F0E7 File Offset: 0x0029D2E7
+	// Token: 0x06008CCB RID: 36043 RVA: 0x002A9807 File Offset: 0x002A7A07
 	protected override void OnBeforeShow()
 	{
 		if (!EventSystem.Instance.Has(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey)))
@@ -67,7 +67,7 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8E3 RID: 47331 RVA: 0x0029F122 File Offset: 0x0029D322
+	// Token: 0x06008CCC RID: 36044 RVA: 0x002A9842 File Offset: 0x002A7A42
 	protected override void OnAfterHide()
 	{
 		if (EventSystem.Instance.Has(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey)))
@@ -76,14 +76,14 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8E4 RID: 47332 RVA: 0x0029F15D File Offset: 0x0029D35D
+	// Token: 0x06008CCD RID: 36045 RVA: 0x002A987D File Offset: 0x002A7A7D
 	protected override void OnBeforeDestroy()
 	{
 		this.LongPressProgressBar = null;
 		this.DeactivateLongPress();
 	}
 
-	// Token: 0x0600B8E5 RID: 47333 RVA: 0x0029F16C File Offset: 0x0029D36C
+	// Token: 0x06008CCE RID: 36046 RVA: 0x002A988C File Offset: 0x002A7A8C
 	[NullableContext(1)]
 	private void OnInputAnyKey(bool bPress, FKey key)
 	{
@@ -130,7 +130,7 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8E6 RID: 47334 RVA: 0x0029F254 File Offset: 0x0029D454
+	// Token: 0x06008CCF RID: 36047 RVA: 0x002A9974 File Offset: 0x002A7B74
 	private void Press()
 	{
 		if (this.IsShowLongPressWhenPress)
@@ -141,7 +141,7 @@ public class InputKeyItem : UiPanelBase
 		this.SetTextArrowVisible(this.IsShowTextArrowWhenPress);
 	}
 
-	// Token: 0x0600B8E7 RID: 47335 RVA: 0x0029F27C File Offset: 0x0029D47C
+	// Token: 0x06008CD0 RID: 36048 RVA: 0x002A999C File Offset: 0x002A7B9C
 	private void Release()
 	{
 		this.DeactivateLongPress();
@@ -149,7 +149,7 @@ public class InputKeyItem : UiPanelBase
 		this.SetTextArrowVisible(this.IsShowTextArrowWhenRelease);
 	}
 
-	// Token: 0x0600B8E8 RID: 47336 RVA: 0x0029F29C File Offset: 0x0029D49C
+	// Token: 0x06008CD1 RID: 36049 RVA: 0x002A99BC File Offset: 0x002A7BBC
 	private void RemoveDelayPressTimer()
 	{
 		if (this.DelayPressTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.DelayPressTimerHandle))
@@ -158,7 +158,7 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8E9 RID: 47337 RVA: 0x0029F2CC File Offset: 0x0029D4CC
+	// Token: 0x06008CD2 RID: 36050 RVA: 0x002A99EC File Offset: 0x002A7BEC
 	[NullableContext(1)]
 	public void Refresh(InputKeyItemData data)
 	{
@@ -188,13 +188,13 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8EA RID: 47338 RVA: 0x0029F3CE File Offset: 0x0029D5CE
+	// Token: 0x06008CD3 RID: 36051 RVA: 0x002A9AEE File Offset: 0x002A7CEE
 	public void SetLongPressDisable(bool bDisable)
 	{
 		this.IsLongPressDisable = bDisable;
 	}
 
-	// Token: 0x0600B8EB RID: 47339 RVA: 0x0029F3D8 File Offset: 0x0029D5D8
+	// Token: 0x06008CD4 RID: 36052 RVA: 0x002A9AF8 File Offset: 0x002A7CF8
 	[NullableContext(1)]
 	public void SetKeyTexture(string keyName)
 	{
@@ -232,13 +232,13 @@ public class InputKeyItem : UiPanelBase
 		keyTexture4.SetUIActive(false);
 	}
 
-	// Token: 0x0600B8EC RID: 47340 RVA: 0x0029F46B File Offset: 0x0029D66B
+	// Token: 0x06008CD5 RID: 36053 RVA: 0x002A9B8B File Offset: 0x002A7D8B
 	public void SetLongPressTime(float time)
 	{
 		this.LongPressTime = new float?(time);
 	}
 
-	// Token: 0x0600B8ED RID: 47341 RVA: 0x0029F479 File Offset: 0x0029D679
+	// Token: 0x06008CD6 RID: 36054 RVA: 0x002A9B99 File Offset: 0x002A7D99
 	public void SetLongPressPercent(float percent)
 	{
 		PcAndGamepadProgressBar longPressProgressBar = this.LongPressProgressBar;
@@ -249,7 +249,7 @@ public class InputKeyItem : UiPanelBase
 		longPressProgressBar.SetPercent(Math.Min(percent, 1f));
 	}
 
-	// Token: 0x0600B8EE RID: 47342 RVA: 0x0029F496 File Offset: 0x0029D696
+	// Token: 0x06008CD7 RID: 36055 RVA: 0x002A9BB6 File Offset: 0x002A7DB6
 	public void SetLongPressProgressVisible(bool bVisible)
 	{
 		PcAndGamepadProgressBar longPressProgressBar = this.LongPressProgressBar;
@@ -260,7 +260,7 @@ public class InputKeyItem : UiPanelBase
 		longPressProgressBar.SetProgressVisible(bVisible);
 	}
 
-	// Token: 0x0600B8EF RID: 47343 RVA: 0x0029F4A9 File Offset: 0x0029D6A9
+	// Token: 0x06008CD8 RID: 36056 RVA: 0x002A9BC9 File Offset: 0x002A7DC9
 	public void SetTextArrowVisible(bool bVisible)
 	{
 		UUITexture texture = base.GetTexture(5);
@@ -271,7 +271,7 @@ public class InputKeyItem : UiPanelBase
 		texture.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B8F0 RID: 47344 RVA: 0x0029F4BD File Offset: 0x0029D6BD
+	// Token: 0x06008CD9 RID: 36057 RVA: 0x002A9BDD File Offset: 0x002A7DDD
 	public void SetUpArrowVisible(bool bVisible)
 	{
 		UUITexture texture = base.GetTexture(6);
@@ -282,7 +282,7 @@ public class InputKeyItem : UiPanelBase
 		texture.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B8F1 RID: 47345 RVA: 0x0029F4D1 File Offset: 0x0029D6D1
+	// Token: 0x06008CDA RID: 36058 RVA: 0x002A9BF1 File Offset: 0x002A7DF1
 	public void SetDownArrowVisible(bool bVisible)
 	{
 		UUITexture texture = base.GetTexture(7);
@@ -293,7 +293,7 @@ public class InputKeyItem : UiPanelBase
 		texture.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B8F2 RID: 47346 RVA: 0x0029F4E8 File Offset: 0x0029D6E8
+	// Token: 0x06008CDB RID: 36059 RVA: 0x002A9C08 File Offset: 0x002A7E08
 	public void SetDescription(string descriptionId)
 	{
 		UUIText text = base.GetText(4);
@@ -312,14 +312,14 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8F3 RID: 47347 RVA: 0x0029F52B File Offset: 0x0029D72B
+	// Token: 0x06008CDC RID: 36060 RVA: 0x002A9C4B File Offset: 0x002A7E4B
 	private void ActivateLongPress()
 	{
 		this.CurrentPressTime = 0f;
 		this.LongPressTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnLongPressRefresh), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600B8F4 RID: 47348 RVA: 0x0029F564 File Offset: 0x0029D764
+	// Token: 0x06008CDD RID: 36061 RVA: 0x002A9C84 File Offset: 0x002A7E84
 	public void DeactivateLongPress()
 	{
 		if (this.LongPressTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.LongPressTimerId))
@@ -331,7 +331,7 @@ public class InputKeyItem : UiPanelBase
 		this.RemoveDelayPressTimer();
 	}
 
-	// Token: 0x0600B8F5 RID: 47349 RVA: 0x0029F5B4 File Offset: 0x0029D7B4
+	// Token: 0x06008CDE RID: 36062 RVA: 0x002A9CD4 File Offset: 0x002A7ED4
 	public void ResetLongPress()
 	{
 		this.DeactivateLongPress();
@@ -339,7 +339,7 @@ public class InputKeyItem : UiPanelBase
 		this.SetLongPressProgressVisible(false);
 	}
 
-	// Token: 0x0600B8F6 RID: 47350 RVA: 0x0029F5D0 File Offset: 0x0029D7D0
+	// Token: 0x06008CDF RID: 36063 RVA: 0x002A9CF0 File Offset: 0x002A7EF0
 	private void OnLongPressRefresh(float _)
 	{
 		if (this.LongPressTime != null)
@@ -356,7 +356,7 @@ public class InputKeyItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B8F7 RID: 47351 RVA: 0x0029F63B File Offset: 0x0029D83B
+	// Token: 0x06008CE0 RID: 36064 RVA: 0x002A9D5B File Offset: 0x002A7F5B
 	public void SetEnable(bool bEnable, bool bForce = false)
 	{
 		if (this.IsEnable == bEnable && !bForce)
@@ -374,86 +374,86 @@ public class InputKeyItem : UiPanelBase
 		this.IsEnable = bEnable;
 	}
 
-	// Token: 0x0600B8F8 RID: 47352 RVA: 0x0029F676 File Offset: 0x0029D876
+	// Token: 0x06008CE1 RID: 36065 RVA: 0x002A9D96 File Offset: 0x002A7F96
 	public string GetKeyName()
 	{
 		return this.KeyName;
 	}
 
-	// Token: 0x040053DF RID: 21471
+	// Token: 0x0400548A RID: 21642
 	private string KeyName;
 
-	// Token: 0x040053E0 RID: 21472
+	// Token: 0x0400548B RID: 21643
 	private string CurrentDisplayKeyName;
 
-	// Token: 0x040053E1 RID: 21473
+	// Token: 0x0400548C RID: 21644
 	private string CurrentKeyIconPath;
 
-	// Token: 0x040053E2 RID: 21474
+	// Token: 0x0400548D RID: 21645
 	private float? LongPressTime;
 
-	// Token: 0x040053E3 RID: 21475
+	// Token: 0x0400548E RID: 21646
 	private float? DelayLongPressTime;
 
-	// Token: 0x040053E4 RID: 21476
+	// Token: 0x0400548F RID: 21647
 	private bool IsShowLongPressWhenPress;
 
-	// Token: 0x040053E5 RID: 21477
+	// Token: 0x04005490 RID: 21648
 	private bool IsShowLongPressWhenRelease;
 
-	// Token: 0x040053E6 RID: 21478
+	// Token: 0x04005491 RID: 21649
 	private bool IsShowTextArrowWhenPress;
 
-	// Token: 0x040053E7 RID: 21479
+	// Token: 0x04005492 RID: 21650
 	private bool IsShowTextArrowWhenRelease;
 
-	// Token: 0x040053E8 RID: 21480
+	// Token: 0x04005493 RID: 21651
 	private PcAndGamepadProgressBar LongPressProgressBar;
 
-	// Token: 0x040053E9 RID: 21481
+	// Token: 0x04005494 RID: 21652
 	private TimerHandle LongPressTimerId;
 
-	// Token: 0x040053EA RID: 21482
+	// Token: 0x04005495 RID: 21653
 	private float CurrentPressTime;
 
-	// Token: 0x040053EB RID: 21483
+	// Token: 0x04005496 RID: 21654
 	private bool IsEnable;
 
-	// Token: 0x040053EC RID: 21484
+	// Token: 0x04005497 RID: 21655
 	private TimerHandle DelayPressTimerHandle;
 
-	// Token: 0x040053ED RID: 21485
+	// Token: 0x04005498 RID: 21656
 	private bool IsLongPressDisable;
 
-	// Token: 0x040053EE RID: 21486
+	// Token: 0x04005499 RID: 21657
 	public readonly string UniqueId;
 
-	// Token: 0x02007E3C RID: 32316
+	// Token: 0x02006FC3 RID: 28611
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x040294FE RID: 169214
+		// Token: 0x0402482B RID: 149547
 		public const int KeyTexture = 0;
 
-		// Token: 0x040294FF RID: 169215
+		// Token: 0x0402482C RID: 149548
 		public const int LongPressItem = 1;
 
-		// Token: 0x04029500 RID: 169216
+		// Token: 0x0402482D RID: 149549
 		public const int CircleLongPressItem = 2;
 
-		// Token: 0x04029501 RID: 169217
+		// Token: 0x0402482E RID: 149550
 		public const int SquareLongPressItem = 3;
 
-		// Token: 0x04029502 RID: 169218
+		// Token: 0x0402482F RID: 149551
 		public const int DescriptionText = 4;
 
-		// Token: 0x04029503 RID: 169219
+		// Token: 0x04024830 RID: 149552
 		public const int TextArrowTexture = 5;
 
-		// Token: 0x04029504 RID: 169220
+		// Token: 0x04024831 RID: 149553
 		public const int UpArrowTexture = 6;
 
-		// Token: 0x04029505 RID: 169221
+		// Token: 0x04024832 RID: 149554
 		public const int DownArrowTexture = 7;
 	}
 }

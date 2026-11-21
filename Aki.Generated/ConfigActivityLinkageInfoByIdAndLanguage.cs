@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000043 RID: 67
+	// Token: 0x0200004B RID: 75
 	public class ConfigActivityLinkageInfoByIdAndLanguage : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000192 RID: 402 RVA: 0x000629A0 File Offset: 0x00060BA0
+		// Token: 0x060001C2 RID: 450 RVA: 0x00067254 File Offset: 0x00065454
 		static ConfigActivityLinkageInfoByIdAndLanguage()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityLinkageInfoByIdAndLanguage.CreateStaticDefaultValue), new Action(ConfigActivityLinkageInfoByIdAndLanguage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000193 RID: 403 RVA: 0x000629C0 File Offset: 0x00060BC0
+		// Token: 0x060001C3 RID: 451 RVA: 0x00067274 File Offset: 0x00065474
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityLinkageInfoByIdAndLanguage.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000194 RID: 404 RVA: 0x00062A3F File Offset: 0x00060C3F
+		// Token: 0x060001C4 RID: 452 RVA: 0x000672F3 File Offset: 0x000654F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityLinkageInfoByIdAndLanguage.LogPair = null;
 			ConfigActivityLinkageInfoByIdAndLanguage.HandleId = 0;
 		}
 
-		// Token: 0x06000195 RID: 405 RVA: 0x00062A4D File Offset: 0x00060C4D
+		// Token: 0x060001C5 RID: 453 RVA: 0x00067301 File Offset: 0x00065501
 		public static void Init()
 		{
 			ConfigActivityLinkageInfoByIdAndLanguage.HandleId = ConfigCommon.InitDataStatement(ConfigActivityLinkageInfoByIdAndLanguage.HandleId, "db_activitylinkage.db", "select BinData from `ActivityLinkageInfo` where ActivityLinkageId=? And Language=?");
 		}
 
-		// Token: 0x06000196 RID: 406 RVA: 0x00062A68 File Offset: 0x00060C68
+		// Token: 0x060001C6 RID: 454 RVA: 0x0006731C File Offset: 0x0006551C
 		public static ActivityLinkageInfo? GetConfig(int p0ActivityLinkageId, int p1Language, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivityLinkageInfoByIdAndLanguage.HandleId, ConfigActivityLinkageInfoByIdAndLanguage.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new ActivityLinkageInfo?(rootAsActivityLinkageInfo);
 		}
 
-		// Token: 0x040001B9 RID: 441
+		// Token: 0x040001F1 RID: 497
 		private const string DB = "db_activitylinkage.db";
 
-		// Token: 0x040001BA RID: 442
+		// Token: 0x040001F2 RID: 498
 		private const string FILE = "h.活动联动页活动.xlsx";
 
-		// Token: 0x040001BB RID: 443
+		// Token: 0x040001F3 RID: 499
 		private const string TABLE = "ActivityLinkageInfo";
 
-		// Token: 0x040001BC RID: 444
+		// Token: 0x040001F4 RID: 500
 		private const string COMMAND = "select BinData from `ActivityLinkageInfo` where ActivityLinkageId=? And Language=?";
 
-		// Token: 0x040001BD RID: 445
+		// Token: 0x040001F5 RID: 501
 		private const string KEY_PREFIX = "ActivityLinkageInfoByIdAndLanguage";
 
-		// Token: 0x040001BE RID: 446
+		// Token: 0x040001F6 RID: 502
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040001BF RID: 447
+		// Token: 0x040001F7 RID: 503
 		private static int HandleId;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044AD RID: 17581
+	// Token: 0x02004915 RID: 18709
 	public class IFindSunSpiritConfigT
 	{
-		// Token: 0x17007C18 RID: 31768
-		// (get) Token: 0x0601A42E RID: 107566 RVA: 0x003C05B9 File Offset: 0x003BE7B9
-		// (set) Token: 0x0601A42F RID: 107567 RVA: 0x003C05C1 File Offset: 0x003BE7C1
+		// Token: 0x17008257 RID: 33367
+		// (get) Token: 0x0601BBFF RID: 113663 RVA: 0x003EC7C5 File Offset: 0x003EA9C5
+		// (set) Token: 0x0601BC00 RID: 113664 RVA: 0x003EC7CD File Offset: 0x003EA9CD
 		public int Id { get; set; }
 
-		// Token: 0x17007C19 RID: 31769
-		// (get) Token: 0x0601A430 RID: 107568 RVA: 0x003C05CA File Offset: 0x003BE7CA
-		// (set) Token: 0x0601A431 RID: 107569 RVA: 0x003C05D2 File Offset: 0x003BE7D2
+		// Token: 0x17008258 RID: 33368
+		// (get) Token: 0x0601BC01 RID: 113665 RVA: 0x003EC7D6 File Offset: 0x003EA9D6
+		// (set) Token: 0x0601BC02 RID: 113666 RVA: 0x003EC7DE File Offset: 0x003EA9DE
 		public string Name { get; set; }
 
-		// Token: 0x17007C1A RID: 31770
-		// (get) Token: 0x0601A432 RID: 107570 RVA: 0x003C05DB File Offset: 0x003BE7DB
-		// (set) Token: 0x0601A433 RID: 107571 RVA: 0x003C05E3 File Offset: 0x003BE7E3
+		// Token: 0x17008259 RID: 33369
+		// (get) Token: 0x0601BC03 RID: 113667 RVA: 0x003EC7E7 File Offset: 0x003EA9E7
+		// (set) Token: 0x0601BC04 RID: 113668 RVA: 0x003EC7EF File Offset: 0x003EA9EF
 		public IFindSunSpiritLevelConfigT Level { get; set; }
 
-		// Token: 0x0601A434 RID: 107572 RVA: 0x003C05EC File Offset: 0x003BE7EC
+		// Token: 0x0601BC05 RID: 113669 RVA: 0x003EC7F8 File Offset: 0x003EA9F8
 		public IFindSunSpiritConfigT()
 		{
 			this.Id = 0;

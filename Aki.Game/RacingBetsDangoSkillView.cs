@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200272D RID: 10029
+// Token: 0x02001C18 RID: 7192
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoSkillView : UiViewBase
 {
-	// Token: 0x060148E4 RID: 84196 RVA: 0x0053184F File Offset: 0x0052FA4F
+	// Token: 0x06011DC6 RID: 73158 RVA: 0x00540567 File Offset: 0x0053E767
 	public RacingBetsDangoSkillView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060148E5 RID: 84197 RVA: 0x00531858 File Offset: 0x0052FA58
+	// Token: 0x06011DC7 RID: 73159 RVA: 0x00540570 File Offset: 0x0053E770
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class RacingBetsDangoSkillView : UiViewBase
 		};
 	}
 
-	// Token: 0x060148E6 RID: 84198 RVA: 0x0053191C File Offset: 0x0052FB1C
+	// Token: 0x06011DC8 RID: 73160 RVA: 0x00540634 File Offset: 0x0053E834
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsDangoSkillView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class RacingBetsDangoSkillView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060148E7 RID: 84199 RVA: 0x0053195F File Offset: 0x0052FB5F
+	// Token: 0x06011DC9 RID: 73161 RVA: 0x00540677 File Offset: 0x0053E877
 	private void OnClickCloseButton()
 	{
 		Action closeCallback = this.CloseCallback;
@@ -57,36 +57,36 @@ public class RacingBetsDangoSkillView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060148E8 RID: 84200 RVA: 0x00531979 File Offset: 0x0052FB79
+	// Token: 0x06011DCA RID: 73162 RVA: 0x00540691 File Offset: 0x0053E891
 	private RacingBetsDangoSkillItem DangoSkillItemProxyCreate()
 	{
 		return new RacingBetsDangoSkillItem();
 	}
 
-	// Token: 0x04009A87 RID: 39559
+	// Token: 0x04009BDF RID: 39903
 	private GenericLayout<RacingBetsDangoSkillItem, RacingBetsDungeonDangoInfo> DangoSkillLayout;
 
-	// Token: 0x04009A88 RID: 39560
+	// Token: 0x04009BE0 RID: 39904
 	[Nullable(2)]
 	private Action CloseCallback;
 
-	// Token: 0x02008D89 RID: 36233
+	// Token: 0x02007F11 RID: 32529
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DEDD RID: 188125
+		// Token: 0x040291F3 RID: 168435
 		public const int CloseButton = 0;
 
-		// Token: 0x0402DEDE RID: 188126
+		// Token: 0x040291F4 RID: 168436
 		public const int SkillLayout = 1;
 
-		// Token: 0x0402DEDF RID: 188127
+		// Token: 0x040291F5 RID: 168437
 		public const int SkillItem = 2;
 
-		// Token: 0x0402DEE0 RID: 188128
+		// Token: 0x040291F6 RID: 168438
 		public const int MaskButton = 3;
 
-		// Token: 0x0402DEE1 RID: 188129
+		// Token: 0x040291F7 RID: 168439
 		public const int TitleText = 4;
 	}
 }

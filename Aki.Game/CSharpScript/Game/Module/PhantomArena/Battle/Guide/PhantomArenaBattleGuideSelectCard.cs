@@ -4,7 +4,7 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052B2 RID: 21170
+	// Token: 0x02004282 RID: 17026
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,12 +13,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 	})]
 	public class PhantomArenaBattleGuideSelectCard : PhantomArenaBattleGuideDataBase<IBvbSelectCard>
 	{
-		// Token: 0x0603627D RID: 221821 RVA: 0x00CCFF52 File Offset: 0x00CCE152
+		// Token: 0x0602B178 RID: 176504 RVA: 0x00C1D67A File Offset: 0x00C1B87A
 		public PhantomArenaBattleGuideSelectCard(EBvbPlayerOperationType type, BvbPlayerOperationConstraint param) : base(type, param)
 		{
 		}
 
-		// Token: 0x0603627E RID: 221822 RVA: 0x00CCFF5C File Offset: 0x00CCE15C
+		// Token: 0x0602B179 RID: 176505 RVA: 0x00C1D684 File Offset: 0x00C1B884
 		public override bool CheckCanExecute(params object[] params_)
 		{
 			if (params_.Length < 1)

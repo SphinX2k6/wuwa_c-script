@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity
 {
-	// Token: 0x020061AF RID: 25007
+	// Token: 0x0200512D RID: 20781
 	public enum ERogueFunctionType
 	{
-		// Token: 0x04020EAE RID: 134830
+		// Token: 0x0401B7DB RID: 112603
 		None,
-		// Token: 0x04020EAF RID: 134831
+		// Token: 0x0401B7DC RID: 112604
 		Quest,
-		// Token: 0x04020EB0 RID: 134832
+		// Token: 0x0401B7DD RID: 112605
 		View
 	}
 }

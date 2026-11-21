@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,14 +10,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020025F0 RID: 9712
+// Token: 0x02001ADB RID: 6875
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PowerController : UiControllerBase
 {
-	// Token: 0x17001952 RID: 6482
-	// (get) Token: 0x06013C27 RID: 80935 RVA: 0x004F44C9 File Offset: 0x004F26C9
+	// Token: 0x1700198A RID: 6538
+	// (get) Token: 0x06011109 RID: 69897 RVA: 0x00503255 File Offset: 0x00501455
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -27,37 +26,42 @@ public class PowerController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06013C28 RID: 80936 RVA: 0x004F44CC File Offset: 0x004F26CC
+	// Token: 0x0601110A RID: 69898 RVA: 0x00503258 File Offset: 0x00501458
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.EnergyUpdateNotify, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			EnergyUpdateNotify energyUpdateNotify = (EnergyUpdateNotify)msg;
-			PowerModel.Instance.UpdatePowerData(energyUpdateNotify.UpdateInfoList.ToArray<EnergyInfo>());
+			EnergyInfo[] array = new EnergyInfo[energyUpdateNotify.UpdateInfoList.Count];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = energyUpdateNotify.UpdateInfoList[i];
+			}
+			PowerModel.Instance.UpdatePowerData(array);
 		});
 	}
 
-	// Token: 0x06013C29 RID: 80937 RVA: 0x004F44FD File Offset: 0x004F26FD
+	// Token: 0x0601110B RID: 69899 RVA: 0x00503289 File Offset: 0x00501489
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.EnergyUpdateNotify);
 	}
 
-	// Token: 0x06013C2A RID: 80938 RVA: 0x004F450F File Offset: 0x004F270F
+	// Token: 0x0601110C RID: 69900 RVA: 0x0050329B File Offset: 0x0050149B
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.BackLoginView, this.OnBackLoginView);
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 	}
 
-	// Token: 0x06013C2B RID: 80939 RVA: 0x004F4543 File Offset: 0x004F2743
+	// Token: 0x0601110D RID: 69901 RVA: 0x005032CF File Offset: 0x005014CF
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.BackLoginView, this.OnBackLoginView);
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 	}
 
-	// Token: 0x06013C2C RID: 80940 RVA: 0x004F4578 File Offset: 0x004F2778
+	// Token: 0x0601110E RID: 69902 RVA: 0x00503304 File Offset: 0x00501504
 	public void OpenPowerView(EPowerMenuType powerMenuType = EPowerMenuType.Supply, int requirePower = 0)
 	{
 		if (!FunctionModel.Instance.IsOpen(10017))
@@ -83,7 +87,7 @@ public class PowerController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06013C2D RID: 80941 RVA: 0x004F4600 File Offset: 0x004F2800
+	// Token: 0x0601110F RID: 69903 RVA: 0x0050338C File Offset: 0x0050158C
 	private UniTask TryExchangePowerRecoveryItem(int itemId, int num)
 	{
 		PowerController.<TryExchangePowerRecoveryItem>d__13 <TryExchangePowerRecoveryItem>d__;
@@ -96,7 +100,7 @@ public class PowerController : UiControllerBase
 		return <TryExchangePowerRecoveryItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013C2E RID: 80942 RVA: 0x004F4654 File Offset: 0x004F2854
+	// Token: 0x06011110 RID: 69904 RVA: 0x005033E0 File Offset: 0x005015E0
 	private UniTask UpdatePowerShopData()
 	{
 		PowerController.<UpdatePowerShopData>d__14 <UpdatePowerShopData>d__;
@@ -106,7 +110,7 @@ public class PowerController : UiControllerBase
 		return <UpdatePowerShopData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013C2F RID: 80943 RVA: 0x004F4690 File Offset: 0x004F2890
+	// Token: 0x06011111 RID: 69905 RVA: 0x0050341C File Offset: 0x0050161C
 	private void OnLoadingNetDataDone()
 	{
 		this.SendUpdatePowerRequest(PowerModel.Instance.PowerItemKeyArray);
@@ -114,7 +118,7 @@ public class PowerController : UiControllerBase
 		this.CheckPowerTimer = TimerSystem.Instance.Forever(new TTimerAction(this.OnPowerTimer), 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x06013C30 RID: 80944 RVA: 0x004F46DC File Offset: 0x004F28DC
+	// Token: 0x06011112 RID: 69906 RVA: 0x00503468 File Offset: 0x00501668
 	private void CancelTimer()
 	{
 		if (this.CheckPowerTimer == null)
@@ -125,19 +129,19 @@ public class PowerController : UiControllerBase
 		this.CheckPowerTimer = null;
 	}
 
-	// Token: 0x06013C31 RID: 80945 RVA: 0x004F46FF File Offset: 0x004F28FF
+	// Token: 0x06011113 RID: 69907 RVA: 0x0050348B File Offset: 0x0050168B
 	private void OnPowerTimer(float _)
 	{
 		PowerModel.Instance.UpdatePowerRenewTimer();
 	}
 
-	// Token: 0x06013C32 RID: 80946 RVA: 0x004F470B File Offset: 0x004F290B
+	// Token: 0x06011114 RID: 69908 RVA: 0x00503497 File Offset: 0x00501697
 	public bool GetIfCanRequestNewPower()
 	{
 		return TimeUtil.Instance.GetServerTime() - this.CurrentRequestPowerTime > 1.0;
 	}
 
-	// Token: 0x06013C33 RID: 80947 RVA: 0x004F472C File Offset: 0x004F292C
+	// Token: 0x06011115 RID: 69909 RVA: 0x005034B8 File Offset: 0x005016B8
 	public void SendUpdatePowerRequest(int[] itemList)
 	{
 		EnergySyncRequest energySyncRequest = EnergySyncRequest.Create();
@@ -152,14 +156,19 @@ public class PowerController : UiControllerBase
 			}
 			if (energySyncResponse.ErrCode == Aki.Protocol.ErrorCode.Success)
 			{
-				PowerModel.Instance.UpdatePowerData(energySyncResponse.SyncInfoList.ToArray<EnergyInfo>());
+				EnergyInfo[] array = new EnergyInfo[energySyncResponse.SyncInfoList.Count];
+				for (int i = 0; i < array.Length; i++)
+				{
+					array[i] = energySyncResponse.SyncInfoList[i];
+				}
+				PowerModel.Instance.UpdatePowerData(array);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(energySyncResponse.ErrCode, 18125, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(energySyncResponse.ErrCode, 16637, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x06013C34 RID: 80948 RVA: 0x004F478C File Offset: 0x004F298C
+	// Token: 0x06011116 RID: 69910 RVA: 0x00503518 File Offset: 0x00501718
 	public unsafe void OpenOverPowerExchangeView()
 	{
 		PowerData powerDataById = PowerModel.Instance.GetPowerDataById(5);
@@ -231,7 +240,7 @@ public class PowerController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CommonExchangeView, commonExchangeViewData, null);
 	}
 
-	// Token: 0x06013C35 RID: 80949 RVA: 0x004F49E8 File Offset: 0x004F2BE8
+	// Token: 0x06011117 RID: 69911 RVA: 0x00503774 File Offset: 0x00501974
 	public UniTask OpenPowerRecoveryExchangeView(EPowerRecoveryItem powerRecoveryItemId)
 	{
 		PowerController.<OpenPowerRecoveryExchangeView>d__21 <OpenPowerRecoveryExchangeView>d__;
@@ -243,7 +252,7 @@ public class PowerController : UiControllerBase
 		return <OpenPowerRecoveryExchangeView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013C36 RID: 80950 RVA: 0x004F4A34 File Offset: 0x004F2C34
+	// Token: 0x06011118 RID: 69912 RVA: 0x005037C0 File Offset: 0x005019C0
 	public UniTask UseSinglePowerRecoveryItem()
 	{
 		PowerController.<UseSinglePowerRecoveryItem>d__22 <UseSinglePowerRecoveryItem>d__;
@@ -253,7 +262,7 @@ public class PowerController : UiControllerBase
 		return <UseSinglePowerRecoveryItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013C37 RID: 80951 RVA: 0x004F4A70 File Offset: 0x004F2C70
+	// Token: 0x06011119 RID: 69913 RVA: 0x005037FC File Offset: 0x005019FC
 	public void ExchangePower(PowerItemInfo itemInfo, int costCount, [Nullable(2)] Action callback = null)
 	{
 		int itemId = itemInfo.ItemId;
@@ -270,15 +279,15 @@ public class PowerController : UiControllerBase
 		this.OpenPowerRecoveryExchangeView((EPowerRecoveryItem)itemInfo.ItemId);
 	}
 
-	// Token: 0x06013C38 RID: 80952 RVA: 0x004F4AC5 File Offset: 0x004F2CC5
+	// Token: 0x0601111A RID: 69914 RVA: 0x00503851 File Offset: 0x00501A51
 	public override bool Clear()
 	{
 		this.CancelTimer();
 		return base.Clear();
 	}
 
-	// Token: 0x17001953 RID: 6483
-	// (get) Token: 0x06013C39 RID: 80953 RVA: 0x004F4AD3 File Offset: 0x004F2CD3
+	// Token: 0x1700198B RID: 6539
+	// (get) Token: 0x0601111B RID: 69915 RVA: 0x0050385F File Offset: 0x00501A5F
 	public static PowerController Instance
 	{
 		get
@@ -287,7 +296,7 @@ public class PowerController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06013C3A RID: 80954 RVA: 0x004F4ADA File Offset: 0x004F2CDA
+	// Token: 0x0601111C RID: 69916 RVA: 0x00503866 File Offset: 0x00501A66
 	public static PowerController GetOrCreateInstance()
 	{
 		if (PowerController._Instance == null)
@@ -297,7 +306,7 @@ public class PowerController : UiControllerBase
 		return PowerController._Instance;
 	}
 
-	// Token: 0x06013C3B RID: 80955 RVA: 0x004F4AEE File Offset: 0x004F2CEE
+	// Token: 0x0601111D RID: 69917 RVA: 0x0050387A File Offset: 0x00501A7A
 	public static bool CreateInstance()
 	{
 		if (PowerController._Instance != null)
@@ -308,40 +317,40 @@ public class PowerController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06013C3C RID: 80956 RVA: 0x004F4B04 File Offset: 0x004F2D04
+	// Token: 0x0601111E RID: 69918 RVA: 0x00503890 File Offset: 0x00501A90
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013C3D RID: 80957 RVA: 0x004F4B06 File Offset: 0x004F2D06
+	// Token: 0x0601111F RID: 69919 RVA: 0x00503892 File Offset: 0x00501A92
 	public static void ResetStaticDefaultValue()
 	{
 		PowerController._Instance = null;
 	}
 
-	// Token: 0x06013C3E RID: 80958 RVA: 0x004F4B0E File Offset: 0x004F2D0E
+	// Token: 0x06011120 RID: 69920 RVA: 0x0050389A File Offset: 0x00501A9A
 	static PowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PowerController.CreateStaticDefaultValue), new Action(PowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040094DC RID: 38108
+	// Token: 0x04009633 RID: 38451
 	private const int DEFAULTEXCHANGETIME = 60;
 
-	// Token: 0x040094DD RID: 38109
+	// Token: 0x04009634 RID: 38452
 	private const int REQUESTPOWERGAP = 1;
 
-	// Token: 0x040094DE RID: 38110
+	// Token: 0x04009635 RID: 38453
 	private const int CHECKPOWERGAP = 500;
 
-	// Token: 0x040094DF RID: 38111
+	// Token: 0x04009636 RID: 38454
 	[Nullable(2)]
 	private TimerHandle CheckPowerTimer;
 
-	// Token: 0x040094E0 RID: 38112
+	// Token: 0x04009637 RID: 38455
 	private double CurrentRequestPowerTime;
 
-	// Token: 0x040094E1 RID: 38113
+	// Token: 0x04009638 RID: 38456
 	private readonly Action OnBackLoginView = delegate()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.PowerView))
@@ -350,7 +359,7 @@ public class PowerController : UiControllerBase
 		}
 	};
 
-	// Token: 0x040094E2 RID: 38114
+	// Token: 0x04009639 RID: 38457
 	[Nullable(2)]
 	private static PowerController _Instance;
 }

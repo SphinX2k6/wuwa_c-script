@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046FF RID: 18175
+	// Token: 0x02004B67 RID: 19303
 	public static class IRunningBehaviorTreeDataVerify
 	{
-		// Token: 0x0601BDBA RID: 114106 RVA: 0x003F2DC4 File Offset: 0x003F0FC4
+		// Token: 0x0601D58F RID: 120207 RVA: 0x0041F060 File Offset: 0x0041D260
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -71,26 +71,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return false;
 		}
 
-		// Token: 0x020079D5 RID: 31189
+		// Token: 0x0200821E RID: 33310
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013373 RID: 78707
+			// Token: 0x040143DA RID: 82906
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013374 RID: 78708
+			// Token: 0x040143DB RID: 82907
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013375 RID: 78709
+			// Token: 0x040143DC RID: 82908
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x04013376 RID: 78710
+			// Token: 0x040143DD RID: 82909
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x04013377 RID: 78711
+			// Token: 0x040143DE RID: 82910
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x04013378 RID: 78712
+			// Token: 0x040143DF RID: 82911
 			public static VerifyTableAction <5>__Verify;
 		}
 	}

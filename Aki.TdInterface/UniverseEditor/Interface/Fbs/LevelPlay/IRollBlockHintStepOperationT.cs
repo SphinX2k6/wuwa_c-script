@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200458B RID: 17803
+	// Token: 0x020049F3 RID: 18931
 	public class IRollBlockHintStepOperationT
 	{
-		// Token: 0x17007E7D RID: 32381
-		// (get) Token: 0x0601AE4B RID: 110155 RVA: 0x003D6726 File Offset: 0x003D4926
-		// (set) Token: 0x0601AE4C RID: 110156 RVA: 0x003D672E File Offset: 0x003D492E
+		// Token: 0x170084BE RID: 33982
+		// (get) Token: 0x0601C620 RID: 116256 RVA: 0x004029C2 File Offset: 0x00400BC2
+		// (set) Token: 0x0601C621 RID: 116257 RVA: 0x004029CA File Offset: 0x00400BCA
 		public ERollBlockHintStepType Type { get; set; }
 
-		// Token: 0x0601AE4D RID: 110157 RVA: 0x003D6737 File Offset: 0x003D4937
+		// Token: 0x0601C622 RID: 116258 RVA: 0x004029D3 File Offset: 0x00400BD3
 		public IRollBlockHintStepOperationT()
 		{
 			this.Type = ERollBlockHintStepType.Roll;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F07 RID: 7943
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002140 RID: 8512
 	public class ISwitchSeason : IClientSetSeasonStateConfig
 	{
-		// Token: 0x0600A9DA RID: 43482 RVA: 0x0017EB78 File Offset: 0x0017CD78
+		// Token: 0x0600B4AC RID: 46252 RVA: 0x00194B70 File Offset: 0x00192D70
 		private ISwitchSeason_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A9DB RID: 43483 RVA: 0x0017EBB0 File Offset: 0x0017CDB0
+		// Token: 0x0600B4AD RID: 46253 RVA: 0x00194BA8 File Offset: 0x00192DA8
 		public static ISwitchSeason Create([Nullable(2)] ISwitchSeason instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9DC RID: 43484 RVA: 0x0017EBC3 File Offset: 0x0017CDC3
+		// Token: 0x0600B4AE RID: 46254 RVA: 0x00194BBB File Offset: 0x00192DBB
 		public static ISwitchSeason CreateFromSetValue([Nullable(2)] ISwitchSeason_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A9DD RID: 43485 RVA: 0x0017EBD6 File Offset: 0x0017CDD6
+		// Token: 0x0600B4AF RID: 46255 RVA: 0x00194BCE File Offset: 0x00192DCE
 		public new ISwitchSeason_SetValue ToSetValue()
 		{
 			return new ISwitchSeason_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033BA RID: 13242
-		// (get) Token: 0x0600A9DE RID: 43486 RVA: 0x0017EC01 File Offset: 0x0017CE01
-		// (set) Token: 0x0600A9DF RID: 43487 RVA: 0x0017EC2C File Offset: 0x0017CE2C
+		// Token: 0x17003685 RID: 13957
+		// (get) Token: 0x0600B4B0 RID: 46256 RVA: 0x00194BF9 File Offset: 0x00192DF9
+		// (set) Token: 0x0600B4B1 RID: 46257 RVA: 0x00194C24 File Offset: 0x00192E24
 		public override EClientSetSeasonStateType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033BB RID: 13243
-		// (get) Token: 0x0600A9E0 RID: 43488 RVA: 0x0017EC3A File Offset: 0x0017CE3A
-		// (set) Token: 0x0600A9E1 RID: 43489 RVA: 0x0017EC65 File Offset: 0x0017CE65
+		// Token: 0x17003686 RID: 13958
+		// (get) Token: 0x0600B4B2 RID: 46258 RVA: 0x00194C32 File Offset: 0x00192E32
+		// (set) Token: 0x0600B4B3 RID: 46259 RVA: 0x00194C5D File Offset: 0x00192E5D
 		public virtual ESeason Season
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033BC RID: 13244
-		// (get) Token: 0x0600A9E2 RID: 43490 RVA: 0x0017EC73 File Offset: 0x0017CE73
-		// (set) Token: 0x0600A9E3 RID: 43491 RVA: 0x0017ECA2 File Offset: 0x0017CEA2
+		// Token: 0x17003687 RID: 13959
+		// (get) Token: 0x0600B4B4 RID: 46260 RVA: 0x00194C6B File Offset: 0x00192E6B
+		// (set) Token: 0x0600B4B5 RID: 46261 RVA: 0x00194C9A File Offset: 0x00192E9A
 		public virtual float TransitionSpeed
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064F9 RID: 25849
+		// Token: 0x04006AE8 RID: 27368
 		[Nullable(2)]
 		protected new ISwitchSeason FbInstance;
 
-		// Token: 0x040064FA RID: 25850
+		// Token: 0x04006AE9 RID: 27369
 		[Nullable(2)]
 		protected new ISwitchSeason_SetValue PocoInterface;
 	}

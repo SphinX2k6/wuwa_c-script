@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056AD RID: 22189
+	// Token: 0x02004683 RID: 18051
 	public enum EPlayerNameComType
 	{
-		// Token: 0x0401DA5C RID: 121436
+		// Token: 0x040184E7 RID: 99559
 		NameInput,
-		// Token: 0x0401DA5D RID: 121437
+		// Token: 0x040184E8 RID: 99560
 		WarningText,
-		// Token: 0x0401DA5E RID: 121438
+		// Token: 0x040184E9 RID: 99561
 		CancelButton,
-		// Token: 0x0401DA5F RID: 121439
+		// Token: 0x040184EA RID: 99562
 		ConfirmButton,
-		// Token: 0x0401DA60 RID: 121440
+		// Token: 0x040184EB RID: 99563
 		NameText
 	}
 }

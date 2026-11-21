@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000214 RID: 532
+	// Token: 0x02000226 RID: 550
 	public class ConfigDoubleRewardActivityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C7B RID: 3195 RVA: 0x000A01C7 File Offset: 0x0009E3C7
+		// Token: 0x06000CE7 RID: 3303 RVA: 0x000A60FF File Offset: 0x000A42FF
 		static ConfigDoubleRewardActivityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDoubleRewardActivityById.CreateStaticDefaultValue), new Action(ConfigDoubleRewardActivityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C7C RID: 3196 RVA: 0x000A01E8 File Offset: 0x0009E3E8
+		// Token: 0x06000CE8 RID: 3304 RVA: 0x000A6120 File Offset: 0x000A4320
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDoubleRewardActivityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C7D RID: 3197 RVA: 0x000A0267 File Offset: 0x0009E467
+		// Token: 0x06000CE9 RID: 3305 RVA: 0x000A619F File Offset: 0x000A439F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDoubleRewardActivityById.LogPair = null;
 			ConfigDoubleRewardActivityById.HandleId = 0;
 		}
 
-		// Token: 0x06000C7E RID: 3198 RVA: 0x000A0275 File Offset: 0x0009E475
+		// Token: 0x06000CEA RID: 3306 RVA: 0x000A61AD File Offset: 0x000A43AD
 		public static void Init()
 		{
 			ConfigDoubleRewardActivityById.HandleId = ConfigCommon.InitDataStatement(ConfigDoubleRewardActivityById.HandleId, "db_doublerewardactivity.db", "select BinData from `DoubleRewardActivity` where Id=?");
 		}
 
-		// Token: 0x06000C7F RID: 3199 RVA: 0x000A0290 File Offset: 0x0009E490
+		// Token: 0x06000CEB RID: 3307 RVA: 0x000A61C8 File Offset: 0x000A43C8
 		public static DoubleRewardActivity? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDoubleRewardActivityById.HandleId, ConfigDoubleRewardActivityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DoubleRewardActivity?(rootAsDoubleRewardActivity);
 		}
 
-		// Token: 0x04000E70 RID: 3696
+		// Token: 0x04000EEE RID: 3822
 		private const string DB = "db_doublerewardactivity.db";
 
-		// Token: 0x04000E71 RID: 3697
+		// Token: 0x04000EEF RID: 3823
 		private const string FILE = "f.副本翻倍掉落活动.xlsx";
 
-		// Token: 0x04000E72 RID: 3698
+		// Token: 0x04000EF0 RID: 3824
 		private const string TABLE = "DoubleRewardActivity";
 
-		// Token: 0x04000E73 RID: 3699
+		// Token: 0x04000EF1 RID: 3825
 		private const string COMMAND = "select BinData from `DoubleRewardActivity` where Id=?";
 
-		// Token: 0x04000E74 RID: 3700
+		// Token: 0x04000EF2 RID: 3826
 		private const string KEY_PREFIX = "DoubleRewardActivityById";
 
-		// Token: 0x04000E75 RID: 3701
+		// Token: 0x04000EF3 RID: 3827
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E76 RID: 3702
+		// Token: 0x04000EF4 RID: 3828
 		private static int HandleId;
 	}
 }

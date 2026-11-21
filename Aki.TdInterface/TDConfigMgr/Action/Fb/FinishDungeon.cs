@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026AC RID: 9900
+	// Token: 0x0200296F RID: 10607
 	public class FinishDungeon : ActionParams
 	{
-		// Token: 0x0600DD89 RID: 56713 RVA: 0x0020E7E2 File Offset: 0x0020C9E2
-		[NullableContext(1)]
+		// Token: 0x0600EB60 RID: 60256 RVA: 0x0022AF82 File Offset: 0x00229182
 		public static FinishDungeon Create(IFinishDungeon? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041F3 RID: 16883
-		// (get) Token: 0x0600DD8A RID: 56714 RVA: 0x0020E801 File Offset: 0x0020CA01
+		// Token: 0x17004530 RID: 17712
+		// (get) Token: 0x0600EB61 RID: 60257 RVA: 0x0022AFA1 File Offset: 0x002291A1
 		public virtual bool IsSuccess
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B04 RID: 31492
+		// Token: 0x040081A1 RID: 33185
 		private IFinishDungeon Instance;
 	}
 }

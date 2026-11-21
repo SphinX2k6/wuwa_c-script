@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050C8 RID: 20680
+	// Token: 0x02004098 RID: 16536
 	public class FlowActionPlayMovie : FlowActionBase
 	{
-		// Token: 0x06034F08 RID: 216840 RVA: 0x00C8A054 File Offset: 0x00C88254
+		// Token: 0x06029E01 RID: 171521 RVA: 0x00BD733C File Offset: 0x00BD553C
 		protected override void OnExecute()
 		{
 			PlayMovie playMovie = this.ActionInfo.Params as PlayMovie;
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			string videoName = (playMovie != null) ? playMovie.VideoName : null;
 			Action videoCloseCb = delegate()
 			{
-				VideoLauncher.SetupFrameEvent(null);
+				VideoLauncher.SetupFrameEvent(null, null);
 				FlowController.Instance.EnableSkip(false);
 				base.FinishExecute(true, true);
 			};
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			FlowContext context = this.Context;
 			showVideoCgConfig.SeamlessEndOnTick = new bool?(context != null && context.SeamlessPlot);
 			VideoLauncher.ShowVideoCg(videoName, videoCloseCb, showVideoCgConfig);
-			VideoLauncher.SetupFrameEvent(playMovie.Mp4FrameEvents);
+			VideoLauncher.SetupFrameEvent(playMovie.Mp4FrameEvents, null);
 		}
 
-		// Token: 0x06034F09 RID: 216841 RVA: 0x00C8A12C File Offset: 0x00C8832C
+		// Token: 0x06029E02 RID: 171522 RVA: 0x00BD7415 File Offset: 0x00BD5615
 		protected override void OnInterruptExecute()
 		{
 			VideoLauncher.CloseVideoCg(null);
-			VideoLauncher.SetupFrameEvent(null);
+			VideoLauncher.SetupFrameEvent(null, null);
 			base.FinishExecute(true, true);
 		}
 	}

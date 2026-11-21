@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200296A RID: 10602
+	// Token: 0x02000859 RID: 2137
 	public sealed class FGenerateWidgetForString : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0602738A RID: 160650 RVA: 0x003BCBE9 File Offset: 0x003BADE9
+		// Token: 0x0600BA0F RID: 47631 RVA: 0x00129E11 File Offset: 0x00128011
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FGenerateWidgetForString.StaticFunctionPtr();
 		}
 
-		// Token: 0x0602738B RID: 160651 RVA: 0x003BCBF5 File Offset: 0x003BADF5
+		// Token: 0x0600BA10 RID: 47632 RVA: 0x00129E1D File Offset: 0x0012801D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (UWidget.__GenerateWidgetForString__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return UWidget.__GenerateWidgetForString__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0602738C RID: 160652 RVA: 0x003BCC18 File Offset: 0x003BAE18
+		// Token: 0x0600BA11 RID: 47633 RVA: 0x00129E40 File Offset: 0x00128040
 		public FGenerateWidgetForString()
 		{
 		}
 
-		// Token: 0x0602738D RID: 160653 RVA: 0x003BCC20 File Offset: 0x003BAE20
+		// Token: 0x0600BA12 RID: 47634 RVA: 0x00129E48 File Offset: 0x00128048
 		[NullableContext(2)]
 		public FGenerateWidgetForString(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602738E RID: 160654 RVA: 0x003BCC2A File Offset: 0x003BAE2A
+		// Token: 0x0600BA13 RID: 47635 RVA: 0x00129E52 File Offset: 0x00128052
 		public FGenerateWidgetForString(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602738F RID: 160655 RVA: 0x003BCC35 File Offset: 0x003BAE35
+		// Token: 0x0600BA14 RID: 47636 RVA: 0x00129E5D File Offset: 0x0012805D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<string, UWidget>) ?? ((Func<string, UWidget>)Delegate.CreateDelegate(typeof(Func<string, UWidget>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06027390 RID: 160656 RVA: 0x003BCC67 File Offset: 0x003BAE67
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600BA15 RID: 47637 RVA: 0x00129E8F File Offset: 0x0012808F
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FGenerateWidgetForString.RegisterId);
 		}
 
-		// Token: 0x06027391 RID: 160657 RVA: 0x003BCCA4 File Offset: 0x003BAEA4
+		// Token: 0x0600BA16 RID: 47638 RVA: 0x00129ECC File Offset: 0x001280CC
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		[return: Nullable(2)]
 		public unsafe UWidget Execute(string Item)
 		{
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x06027392 RID: 160658 RVA: 0x003BCD04 File Offset: 0x003BAF04
+		// Token: 0x0600BA17 RID: 47639 RVA: 0x00129F2C File Offset: 0x0012812C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<string, UWidget> func = target as Func<string, UWidget>;
@@ -101,32 +98,32 @@ namespace UnrealEngine
 			((FGenerateWidgetForString.__FGenerateWidgetForString_DelegateParams*)__Parameters)->__Result = ((uwidget != null) ? uwidget.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x040158EF RID: 88303
+		// Token: 0x0400547E RID: 21630
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.Widget:GenerateWidgetForString__DelegateSignature";
 
-		// Token: 0x040158F0 RID: 88304
+		// Token: 0x0400547F RID: 21631
 		private static int RegisterId;
 
-		// Token: 0x02003B6F RID: 15215
+		// Token: 0x020013EF RID: 5103
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FGenerateWidgetForString_DelegateParams
+		private ref struct __FGenerateWidgetForString_DelegateParams
 		{
-			// Token: 0x04017D48 RID: 97608
+			// Token: 0x04006898 RID: 26776
 			[FieldOffset(0)]
 			public FString Item;
 
-			// Token: 0x04017D49 RID: 97609
+			// Token: 0x04006899 RID: 26777
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003B70 RID: 15216
+		// Token: 0x020013F0 RID: 5104
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D4A RID: 97610
+			// Token: 0x0400689A RID: 26778
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

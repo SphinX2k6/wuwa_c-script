@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A6A RID: 2666
+	// Token: 0x02000B3F RID: 2879
 	public class ConfigUiNormalConfigByViewNameIfNull : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E90 RID: 16016 RVA: 0x001BBBB5 File Offset: 0x001B9DB5
+		// Token: 0x0600438E RID: 17294 RVA: 0x001DAF49 File Offset: 0x001D9149
 		static ConfigUiNormalConfigByViewNameIfNull()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigUiNormalConfigByViewNameIfNull.CreateStaticDefaultValue), new Action(ConfigUiNormalConfigByViewNameIfNull.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E91 RID: 16017 RVA: 0x001BBBD4 File Offset: 0x001B9DD4
+		// Token: 0x0600438F RID: 17295 RVA: 0x001DAF68 File Offset: 0x001D9168
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigUiNormalConfigByViewNameIfNull.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E92 RID: 16018 RVA: 0x001BBC53 File Offset: 0x001B9E53
+		// Token: 0x06004390 RID: 17296 RVA: 0x001DAFE7 File Offset: 0x001D91E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigUiNormalConfigByViewNameIfNull.LogPair = null;
 			ConfigUiNormalConfigByViewNameIfNull.HandleId = 0;
 		}
 
-		// Token: 0x06003E93 RID: 16019 RVA: 0x001BBC61 File Offset: 0x001B9E61
+		// Token: 0x06004391 RID: 17297 RVA: 0x001DAFF5 File Offset: 0x001D91F5
 		public static void Init()
 		{
 			ConfigUiNormalConfigByViewNameIfNull.HandleId = ConfigCommon.InitDataStatement(ConfigUiNormalConfigByViewNameIfNull.HandleId, "db_ui.db", "select BinData from `UiNormalConfig` where ViewName = ? AND (SELECT count(0) from `UiNormalConfig` WHERE ViewName = ?) > 0 OR ViewName = \"DefaultView\" AND (SELECT count(0) from `UiNormalConfig` WHERE ViewName = ?) <= 0");
 		}
 
-		// Token: 0x06003E94 RID: 16020 RVA: 0x001BBC7C File Offset: 0x001B9E7C
+		// Token: 0x06004392 RID: 17298 RVA: 0x001DB010 File Offset: 0x001D9210
 		public static UiNormalConfig? GetConfig(string p0ViewName, string p1ViewName, string p2ViewName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigUiNormalConfigByViewNameIfNull.HandleId, ConfigUiNormalConfigByViewNameIfNull.LogPair))
@@ -98,22 +98,22 @@ namespace Aki.Config
 			return new UiNormalConfig?(rootAsUiNormalConfig);
 		}
 
-		// Token: 0x040048CC RID: 18636
+		// Token: 0x04004E9F RID: 20127
 		private const string DB = "db_ui.db";
 
-		// Token: 0x040048CD RID: 18637
+		// Token: 0x04004EA0 RID: 20128
 		private const string FILE = "u.UiNormal层级队列配置.csv";
 
-		// Token: 0x040048CE RID: 18638
+		// Token: 0x04004EA1 RID: 20129
 		private const string TABLE = "UiNormalConfig";
 
-		// Token: 0x040048CF RID: 18639
+		// Token: 0x04004EA2 RID: 20130
 		private const string COMMAND = "select BinData from `UiNormalConfig` where ViewName = ? AND (SELECT count(0) from `UiNormalConfig` WHERE ViewName = ?) > 0 OR ViewName = \"DefaultView\" AND (SELECT count(0) from `UiNormalConfig` WHERE ViewName = ?) <= 0";
 
-		// Token: 0x040048D0 RID: 18640
+		// Token: 0x04004EA3 RID: 20131
 		private const string KEY_PREFIX = "UiNormalConfigByViewNameIfNull";
 
-		// Token: 0x040048D1 RID: 18641
+		// Token: 0x04004EA4 RID: 20132
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,7 +123,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040048D2 RID: 18642
+		// Token: 0x04004EA5 RID: 20133
 		private static int HandleId;
 	}
 }

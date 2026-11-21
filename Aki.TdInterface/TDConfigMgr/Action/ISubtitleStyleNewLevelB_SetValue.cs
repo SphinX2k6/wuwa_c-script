@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EEA RID: 7914
+	// Token: 0x02002123 RID: 8483
 	public class ISubtitleStyleNewLevelB_SetValue
 	{
-		// Token: 0x040064BE RID: 25790
+		// Token: 0x04006AAD RID: 27309
 		public ESubtitleStyle Type;
 	}
 }

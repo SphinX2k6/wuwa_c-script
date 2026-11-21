@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200256F RID: 9583
+// Token: 0x02001A5A RID: 6746
 public class PhotoLightPanel : PhotoDetailPanelBase
 {
-	// Token: 0x06013587 RID: 79239 RVA: 0x004D05C0 File Offset: 0x004CE7C0
+	// Token: 0x06010A69 RID: 68201 RVA: 0x004DF1F8 File Offset: 0x004DD3F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,8 +29,8 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x170018FA RID: 6394
-	// (get) Token: 0x06013588 RID: 79240 RVA: 0x004D06B5 File Offset: 0x004CE8B5
+	// Token: 0x17001934 RID: 6452
+	// (get) Token: 0x06010A6A RID: 68202 RVA: 0x004DF2ED File Offset: 0x004DD4ED
 	protected override int TabLockPanelIndex
 	{
 		get
@@ -39,8 +39,8 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x170018FB RID: 6395
-	// (get) Token: 0x06013589 RID: 79241 RVA: 0x004D06B8 File Offset: 0x004CE8B8
+	// Token: 0x17001935 RID: 6453
+	// (get) Token: 0x06010A6B RID: 68203 RVA: 0x004DF2F0 File Offset: 0x004DD4F0
 	protected override int SubTabLockPanelIndex
 	{
 		get
@@ -49,7 +49,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x0601358A RID: 79242 RVA: 0x004D06BC File Offset: 0x004CE8BC
+	// Token: 0x06010A6C RID: 68204 RVA: 0x004DF2F4 File Offset: 0x004DD4F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotoLightPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601358B RID: 79243 RVA: 0x004D0700 File Offset: 0x004CE900
+	// Token: 0x06010A6D RID: 68205 RVA: 0x004DF338 File Offset: 0x004DD538
 	private UniTask RefreshLightList()
 	{
 		PhotoLightPanel.<RefreshLightList>d__11 <RefreshLightList>d__;
@@ -71,7 +71,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		return <RefreshLightList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601358C RID: 79244 RVA: 0x004D0744 File Offset: 0x004CE944
+	// Token: 0x06010A6E RID: 68206 RVA: 0x004DF37C File Offset: 0x004DD57C
 	private void OnLightClick(int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.LightDataList.Count)
@@ -103,7 +103,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		}
 	}
 
-	// Token: 0x0601358D RID: 79245 RVA: 0x004D0816 File Offset: 0x004CEA16
+	// Token: 0x06010A6F RID: 68207 RVA: 0x004DF44E File Offset: 0x004DD64E
 	private void OnLightDirectionChanged(float value)
 	{
 		PhotoCameraEffectComponent effectComponent = this.GetEffectComponent();
@@ -114,7 +114,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		this.ViewModel.CurrentLightDirection = (int)value;
 	}
 
-	// Token: 0x0601358E RID: 79246 RVA: 0x004D0838 File Offset: 0x004CEA38
+	// Token: 0x06010A70 RID: 68208 RVA: 0x004DF470 File Offset: 0x004DD670
 	protected override void RefreshContentVisible()
 	{
 		bool uiactive = !base.IsCurrentTabBanned;
@@ -130,7 +130,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		this.RefreshLightParamPanelVisible();
 	}
 
-	// Token: 0x0601358F RID: 79247 RVA: 0x004D087C File Offset: 0x004CEA7C
+	// Token: 0x06010A71 RID: 68209 RVA: 0x004DF4B4 File Offset: 0x004DD6B4
 	private void RefreshLightParamPanelVisible()
 	{
 		bool flag = !base.IsCurrentTabBanned;
@@ -147,14 +147,14 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		item2.SetUIActive(flag && this.IsDefaultLightSelected);
 	}
 
-	// Token: 0x06013590 RID: 79248 RVA: 0x004D08D1 File Offset: 0x004CEAD1
+	// Token: 0x06010A72 RID: 68210 RVA: 0x004DF509 File Offset: 0x004DD709
 	[NullableContext(2)]
 	private PhotoCameraEffectComponent GetEffectComponent()
 	{
 		return PhotographController.Instance.GetPhotoCameraComponent<PhotoCameraEffectComponent>(EPhotoCameraComponent.Effect);
 	}
 
-	// Token: 0x06013591 RID: 79249 RVA: 0x004D08DE File Offset: 0x004CEADE
+	// Token: 0x06010A73 RID: 68211 RVA: 0x004DF516 File Offset: 0x004DD716
 	[NullableContext(1)]
 	private PhotoLightItem CreateLightItem()
 	{
@@ -164,7 +164,7 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 		};
 	}
 
-	// Token: 0x040091CE RID: 37326
+	// Token: 0x04009327 RID: 37671
 	[Nullable(new byte[]
 	{
 		2,
@@ -172,39 +172,39 @@ public class PhotoLightPanel : PhotoDetailPanelBase
 	})]
 	private LoopScrollView<PhotoLightItem, PhotoLight> LightScroll;
 
-	// Token: 0x040091CF RID: 37327
+	// Token: 0x04009328 RID: 37672
 	[Nullable(2)]
 	private PhotoLightDirectionItem DirectionItem;
 
-	// Token: 0x040091D0 RID: 37328
+	// Token: 0x04009329 RID: 37673
 	[Nullable(1)]
 	private List<PhotoLight> LightDataList = new List<PhotoLight>();
 
-	// Token: 0x040091D1 RID: 37329
+	// Token: 0x0400932A RID: 37674
 	private bool IsDefaultLightSelected = true;
 
-	// Token: 0x02008B56 RID: 35670
+	// Token: 0x02007CDC RID: 31964
 	private enum EComponents
 	{
-		// Token: 0x0402D3E3 RID: 185315
+		// Token: 0x040286F0 RID: 165616
 		ItemTabMenu,
-		// Token: 0x0402D3E4 RID: 185316
+		// Token: 0x040286F1 RID: 165617
 		LoopScrollLight,
-		// Token: 0x0402D3E5 RID: 185317
+		// Token: 0x040286F2 RID: 165618
 		ItemLightTemplate,
-		// Token: 0x0402D3E6 RID: 185318
+		// Token: 0x040286F3 RID: 165619
 		ItemParamSet,
-		// Token: 0x0402D3E7 RID: 185319
+		// Token: 0x040286F4 RID: 165620
 		ItemDirectionSlider,
-		// Token: 0x0402D3E8 RID: 185320
+		// Token: 0x040286F5 RID: 165621
 		ItemEmpty,
-		// Token: 0x0402D3E9 RID: 185321
+		// Token: 0x040286F6 RID: 165622
 		ItemTabLockPanel,
-		// Token: 0x0402D3EA RID: 185322
+		// Token: 0x040286F7 RID: 165623
 		TextTabLockTips,
-		// Token: 0x0402D3EB RID: 185323
+		// Token: 0x040286F8 RID: 165624
 		ItemSubTabLockPanel,
-		// Token: 0x0402D3EC RID: 185324
+		// Token: 0x040286F9 RID: 165625
 		TextSubTabLockTips
 	}
 }

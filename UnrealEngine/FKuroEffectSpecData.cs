@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018D0 RID: 6352
+	// Token: 0x020003EA RID: 1002
 	[UnrealObjectPath("/Script/KuroGameplay.KuroEffectSpecData")]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FKuroEffectSpecData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06017801 RID: 96257 RVA: 0x00226837 File Offset: 0x00224A37
+		// Token: 0x06006207 RID: 25095 RVA: 0x0008C2C1 File Offset: 0x0008A4C1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroEffectSpecData._ScriptStructPtr != 0) ? FKuroEffectSpecData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroEffectSpecData", ref FKuroEffectSpecData._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EE7 RID: 24295
-		// (get) Token: 0x06017802 RID: 96258 RVA: 0x0022685B File Offset: 0x00224A5B
-		// (set) Token: 0x06017803 RID: 96259 RVA: 0x0022686B File Offset: 0x00224A6B
+		// Token: 0x170013EC RID: 5100
+		// (get) Token: 0x06006208 RID: 25096 RVA: 0x0008C2E5 File Offset: 0x0008A4E5
+		// (set) Token: 0x06006209 RID: 25097 RVA: 0x0008C2F5 File Offset: 0x0008A4F5
 		public unsafe int Id
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE8 RID: 24296
-		// (get) Token: 0x06017804 RID: 96260 RVA: 0x0022687C File Offset: 0x00224A7C
-		// (set) Token: 0x06017805 RID: 96261 RVA: 0x0022688C File Offset: 0x00224A8C
+		// Token: 0x170013ED RID: 5101
+		// (get) Token: 0x0600620A RID: 25098 RVA: 0x0008C306 File Offset: 0x0008A506
+		// (set) Token: 0x0600620B RID: 25099 RVA: 0x0008C316 File Offset: 0x0008A516
 		public unsafe byte SpecType
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE9 RID: 24297
-		// (get) Token: 0x06017806 RID: 96262 RVA: 0x0022689D File Offset: 0x00224A9D
-		// (set) Token: 0x06017807 RID: 96263 RVA: 0x002268AD File Offset: 0x00224AAD
+		// Token: 0x170013EE RID: 5102
+		// (get) Token: 0x0600620C RID: 25100 RVA: 0x0008C327 File Offset: 0x0008A527
+		// (set) Token: 0x0600620D RID: 25101 RVA: 0x0008C337 File Offset: 0x0008A537
 		public unsafe byte EffectRegularType
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EEA RID: 24298
-		// (get) Token: 0x06017808 RID: 96264 RVA: 0x002268BE File Offset: 0x00224ABE
-		// (set) Token: 0x06017809 RID: 96265 RVA: 0x002268CE File Offset: 0x00224ACE
+		// Token: 0x170013EF RID: 5103
+		// (get) Token: 0x0600620E RID: 25102 RVA: 0x0008C348 File Offset: 0x0008A548
+		// (set) Token: 0x0600620F RID: 25103 RVA: 0x0008C358 File Offset: 0x0008A558
 		public unsafe float LifeTime
 		{
 			get
@@ -76,68 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601780A RID: 96266 RVA: 0x002268DF File Offset: 0x00224ADF
+		// Token: 0x06006210 RID: 25104 RVA: 0x0008C369 File Offset: 0x0008A569
 		public FKuroEffectSpecData()
 		{
 		}
 
-		// Token: 0x0601780B RID: 96267 RVA: 0x002268E7 File Offset: 0x00224AE7
-		public FKuroEffectSpecData(int Id, FName Path, byte SpecType, byte EffectRegularType, float LifeTime)
-		{
-			this.Id = Id;
-			this.SpecType = SpecType;
-			this.EffectRegularType = EffectRegularType;
-			this.LifeTime = LifeTime;
-		}
-
-		// Token: 0x0601780C RID: 96268 RVA: 0x0022690D File Offset: 0x00224B0D
+		// Token: 0x06006211 RID: 25105 RVA: 0x0008C371 File Offset: 0x0008A571
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroEffectSpecData.StaticStruct();
 		}
 
-		// Token: 0x0601780D RID: 96269 RVA: 0x00226919 File Offset: 0x00224B19
+		// Token: 0x06006212 RID: 25106 RVA: 0x0008C37D File Offset: 0x0008A57D
 		[NullableContext(2)]
 		public FKuroEffectSpecData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601780E RID: 96270 RVA: 0x00226923 File Offset: 0x00224B23
+		// Token: 0x06006213 RID: 25107 RVA: 0x0008C387 File Offset: 0x0008A587
 		public FKuroEffectSpecData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601780F RID: 96271 RVA: 0x0022692E File Offset: 0x00224B2E
+		// Token: 0x06006214 RID: 25108 RVA: 0x0008C392 File Offset: 0x0008A592
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroEffectSpecData(Pointer, false, true);
 		}
 
-		// Token: 0x06017810 RID: 96272 RVA: 0x00226938 File Offset: 0x00224B38
+		// Token: 0x06006215 RID: 25109 RVA: 0x0008C39C File Offset: 0x0008A59C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroEffectSpecData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CC86 RID: 52358
+		// Token: 0x040029BF RID: 10687
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroEffectSpecData";
 
-		// Token: 0x0400CC87 RID: 52359
+		// Token: 0x040029C0 RID: 10688
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CC88 RID: 52360
+		// Token: 0x040029C1 RID: 10689
 		internal static int __PropertyOffset_Id;
 
-		// Token: 0x0400CC89 RID: 52361
+		// Token: 0x040029C2 RID: 10690
 		internal static int __PropertyOffset_SpecType;
 
-		// Token: 0x0400CC8A RID: 52362
+		// Token: 0x040029C3 RID: 10691
 		internal static int __PropertyOffset_EffectRegularType;
 
-		// Token: 0x0400CC8B RID: 52363
+		// Token: 0x040029C4 RID: 10692
 		internal static int __PropertyOffset_LifeTime;
 	}
 }

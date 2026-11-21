@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001177 RID: 4471
+	// Token: 0x02000287 RID: 647
 	[UnrealObjectPath("/Script/Engine.SplineComponent")]
 	[UnrealStructLayout(1872, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1872)]
 	public class USplineComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06010542 RID: 66882 RVA: 0x00180CF3 File Offset: 0x0017EEF3
+		// Token: 0x060045AB RID: 17835 RVA: 0x000629E1 File Offset: 0x00060BE1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USplineComponent._ClassPtr;
 		}
 
-		// Token: 0x06010543 RID: 66883 RVA: 0x00180D00 File Offset: 0x0017EF00
+		// Token: 0x060045AC RID: 17836 RVA: 0x000629F0 File Offset: 0x00060BF0
 		public USplineComponent() : this(BuiltinUtils.AllocNativeUObject(USplineComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06010544 RID: 66884 RVA: 0x00180D28 File Offset: 0x0017EF28
+		// Token: 0x060045AD RID: 17837 RVA: 0x00062A18 File Offset: 0x00060C18
 		[NullableContext(1)]
 		public USplineComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USplineComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003FF3 RID: 16371
-		// (get) Token: 0x06010545 RID: 66885 RVA: 0x00180D5C File Offset: 0x0017EF5C
-		// (set) Token: 0x06010546 RID: 66886 RVA: 0x00180D95 File Offset: 0x0017EF95
+		// Token: 0x17000D03 RID: 3331
+		// (get) Token: 0x060045AE RID: 17838 RVA: 0x00062A4C File Offset: 0x00060C4C
+		// (set) Token: 0x060045AF RID: 17839 RVA: 0x00062A85 File Offset: 0x00060C85
 		[Nullable(1)]
 		public FSplineCurves SplineCurves
 		{
@@ -52,9 +52,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF4 RID: 16372
-		// (get) Token: 0x06010547 RID: 66887 RVA: 0x00180DB8 File Offset: 0x0017EFB8
-		// (set) Token: 0x06010548 RID: 66888 RVA: 0x00180DF1 File Offset: 0x0017EFF1
+		// Token: 0x17000D04 RID: 3332
+		// (get) Token: 0x060045B0 RID: 17840 RVA: 0x00062AA8 File Offset: 0x00060CA8
+		// (set) Token: 0x060045B1 RID: 17841 RVA: 0x00062AE1 File Offset: 0x00060CE1
 		[Nullable(1)]
 		public FInterpCurveVector SplineInfo_DEPRECATED
 		{
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF5 RID: 16373
-		// (get) Token: 0x06010549 RID: 66889 RVA: 0x00180E14 File Offset: 0x0017F014
-		// (set) Token: 0x0601054A RID: 66890 RVA: 0x00180E4D File Offset: 0x0017F04D
+		// Token: 0x17000D05 RID: 3333
+		// (get) Token: 0x060045B2 RID: 17842 RVA: 0x00062B04 File Offset: 0x00060D04
+		// (set) Token: 0x060045B3 RID: 17843 RVA: 0x00062B3D File Offset: 0x00060D3D
 		[Nullable(1)]
 		public FInterpCurveQuat SplineRotInfo_DEPRECATED
 		{
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF6 RID: 16374
-		// (get) Token: 0x0601054B RID: 66891 RVA: 0x00180E70 File Offset: 0x0017F070
-		// (set) Token: 0x0601054C RID: 66892 RVA: 0x00180EA9 File Offset: 0x0017F0A9
+		// Token: 0x17000D06 RID: 3334
+		// (get) Token: 0x060045B4 RID: 17844 RVA: 0x00062B60 File Offset: 0x00060D60
+		// (set) Token: 0x060045B5 RID: 17845 RVA: 0x00062B99 File Offset: 0x00060D99
 		[Nullable(1)]
 		public FInterpCurveVector SplineScaleInfo_DEPRECATED
 		{
@@ -124,9 +124,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF7 RID: 16375
-		// (get) Token: 0x0601054D RID: 66893 RVA: 0x00180ECC File Offset: 0x0017F0CC
-		// (set) Token: 0x0601054E RID: 66894 RVA: 0x00180F05 File Offset: 0x0017F105
+		// Token: 0x17000D07 RID: 3335
+		// (get) Token: 0x060045B6 RID: 17846 RVA: 0x00062BBC File Offset: 0x00060DBC
+		// (set) Token: 0x060045B7 RID: 17847 RVA: 0x00062BF5 File Offset: 0x00060DF5
 		[Nullable(1)]
 		public FInterpCurveFloat SplineReparamTable_DEPRECATED
 		{
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF8 RID: 16376
-		// (get) Token: 0x0601054F RID: 66895 RVA: 0x00180F26 File Offset: 0x0017F126
-		// (set) Token: 0x06010550 RID: 66896 RVA: 0x00180F36 File Offset: 0x0017F136
+		// Token: 0x17000D08 RID: 3336
+		// (get) Token: 0x060045B8 RID: 17848 RVA: 0x00062C16 File Offset: 0x00060E16
+		// (set) Token: 0x060045B9 RID: 17849 RVA: 0x00062C26 File Offset: 0x00060E26
 		public unsafe bool bAllowSplineEditingPerInstance_DEPRECATED
 		{
 			get
@@ -163,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FF9 RID: 16377
-		// (get) Token: 0x06010551 RID: 66897 RVA: 0x00180F47 File Offset: 0x0017F147
-		// (set) Token: 0x06010552 RID: 66898 RVA: 0x00180F57 File Offset: 0x0017F157
+		// Token: 0x17000D09 RID: 3337
+		// (get) Token: 0x060045BA RID: 17850 RVA: 0x00062C37 File Offset: 0x00060E37
+		// (set) Token: 0x060045BB RID: 17851 RVA: 0x00062C47 File Offset: 0x00060E47
 		public unsafe int ReparamStepsPerSegment
 		{
 			get
@@ -178,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFA RID: 16378
-		// (get) Token: 0x06010553 RID: 66899 RVA: 0x00180F68 File Offset: 0x0017F168
-		// (set) Token: 0x06010554 RID: 66900 RVA: 0x00180F78 File Offset: 0x0017F178
+		// Token: 0x17000D0A RID: 3338
+		// (get) Token: 0x060045BC RID: 17852 RVA: 0x00062C58 File Offset: 0x00060E58
+		// (set) Token: 0x060045BD RID: 17853 RVA: 0x00062C68 File Offset: 0x00060E68
 		public unsafe float Duration
 		{
 			get
@@ -193,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFB RID: 16379
-		// (get) Token: 0x06010555 RID: 66901 RVA: 0x00180F89 File Offset: 0x0017F189
-		// (set) Token: 0x06010556 RID: 66902 RVA: 0x00180F99 File Offset: 0x0017F199
+		// Token: 0x17000D0B RID: 3339
+		// (get) Token: 0x060045BE RID: 17854 RVA: 0x00062C79 File Offset: 0x00060E79
+		// (set) Token: 0x060045BF RID: 17855 RVA: 0x00062C89 File Offset: 0x00060E89
 		public unsafe bool bStationaryEndpoints
 		{
 			get
@@ -208,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFC RID: 16380
-		// (get) Token: 0x06010557 RID: 66903 RVA: 0x00180FAA File Offset: 0x0017F1AA
-		// (set) Token: 0x06010558 RID: 66904 RVA: 0x00180FBA File Offset: 0x0017F1BA
+		// Token: 0x17000D0C RID: 3340
+		// (get) Token: 0x060045C0 RID: 17856 RVA: 0x00062C9A File Offset: 0x00060E9A
+		// (set) Token: 0x060045C1 RID: 17857 RVA: 0x00062CAA File Offset: 0x00060EAA
 		public unsafe bool bSplineHasBeenEdited
 		{
 			get
@@ -223,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFD RID: 16381
-		// (get) Token: 0x06010559 RID: 66905 RVA: 0x00180FCB File Offset: 0x0017F1CB
-		// (set) Token: 0x0601055A RID: 66906 RVA: 0x00180FDB File Offset: 0x0017F1DB
+		// Token: 0x17000D0D RID: 3341
+		// (get) Token: 0x060045C2 RID: 17858 RVA: 0x00062CBB File Offset: 0x00060EBB
+		// (set) Token: 0x060045C3 RID: 17859 RVA: 0x00062CCB File Offset: 0x00060ECB
 		public unsafe bool bModifiedByConstructionScript
 		{
 			get
@@ -238,9 +238,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFE RID: 16382
-		// (get) Token: 0x0601055B RID: 66907 RVA: 0x00180FEC File Offset: 0x0017F1EC
-		// (set) Token: 0x0601055C RID: 66908 RVA: 0x00180FFC File Offset: 0x0017F1FC
+		// Token: 0x17000D0E RID: 3342
+		// (get) Token: 0x060045C4 RID: 17860 RVA: 0x00062CDC File Offset: 0x00060EDC
+		// (set) Token: 0x060045C5 RID: 17861 RVA: 0x00062CEC File Offset: 0x00060EEC
 		public unsafe bool bInputSplinePointsToConstructionScript
 		{
 			get
@@ -253,9 +253,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003FFF RID: 16383
-		// (get) Token: 0x0601055D RID: 66909 RVA: 0x0018100D File Offset: 0x0017F20D
-		// (set) Token: 0x0601055E RID: 66910 RVA: 0x0018101D File Offset: 0x0017F21D
+		// Token: 0x17000D0F RID: 3343
+		// (get) Token: 0x060045C6 RID: 17862 RVA: 0x00062CFD File Offset: 0x00060EFD
+		// (set) Token: 0x060045C7 RID: 17863 RVA: 0x00062D0D File Offset: 0x00060F0D
 		public unsafe bool bDrawDebug
 		{
 			get
@@ -268,9 +268,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004000 RID: 16384
-		// (get) Token: 0x0601055F RID: 66911 RVA: 0x0018102E File Offset: 0x0017F22E
-		// (set) Token: 0x06010560 RID: 66912 RVA: 0x0018103E File Offset: 0x0017F23E
+		// Token: 0x17000D10 RID: 3344
+		// (get) Token: 0x060045C8 RID: 17864 RVA: 0x00062D1E File Offset: 0x00060F1E
+		// (set) Token: 0x060045C9 RID: 17865 RVA: 0x00062D2E File Offset: 0x00060F2E
 		public unsafe bool bClosedLoop
 		{
 			get
@@ -283,9 +283,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004001 RID: 16385
-		// (get) Token: 0x06010561 RID: 66913 RVA: 0x0018104F File Offset: 0x0017F24F
-		// (set) Token: 0x06010562 RID: 66914 RVA: 0x0018105F File Offset: 0x0017F25F
+		// Token: 0x17000D11 RID: 3345
+		// (get) Token: 0x060045CA RID: 17866 RVA: 0x00062D3F File Offset: 0x00060F3F
+		// (set) Token: 0x060045CB RID: 17867 RVA: 0x00062D4F File Offset: 0x00060F4F
 		public unsafe bool bLoopPositionOverride
 		{
 			get
@@ -298,9 +298,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004002 RID: 16386
-		// (get) Token: 0x06010563 RID: 66915 RVA: 0x00181070 File Offset: 0x0017F270
-		// (set) Token: 0x06010564 RID: 66916 RVA: 0x00181080 File Offset: 0x0017F280
+		// Token: 0x17000D12 RID: 3346
+		// (get) Token: 0x060045CC RID: 17868 RVA: 0x00062D60 File Offset: 0x00060F60
+		// (set) Token: 0x060045CD RID: 17869 RVA: 0x00062D70 File Offset: 0x00060F70
 		public unsafe float LoopPosition
 		{
 			get
@@ -313,9 +313,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004003 RID: 16387
-		// (get) Token: 0x06010565 RID: 66917 RVA: 0x00181091 File Offset: 0x0017F291
-		// (set) Token: 0x06010566 RID: 66918 RVA: 0x001810A5 File Offset: 0x0017F2A5
+		// Token: 0x17000D13 RID: 3347
+		// (get) Token: 0x060045CE RID: 17870 RVA: 0x00062D81 File Offset: 0x00060F81
+		// (set) Token: 0x060045CF RID: 17871 RVA: 0x00062D95 File Offset: 0x00060F95
 		public unsafe FVector DefaultUpVector
 		{
 			get
@@ -328,419 +328,419 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06010567 RID: 66919 RVA: 0x001810BA File Offset: 0x0017F2BA
+		// Token: 0x060045D0 RID: 17872 RVA: 0x00062DAA File Offset: 0x00060FAA
 		public void UpdateSpline()
 		{
 			USplineComponent.__UpdateSpline_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06010568 RID: 66920 RVA: 0x001810C7 File Offset: 0x0017F2C7
+		// Token: 0x060045D1 RID: 17873 RVA: 0x00062DB7 File Offset: 0x00060FB7
 		public void SetWorldLocationAtSplinePoint(int PointIndex, in FVector InLocation)
 		{
 			USplineComponent.__SetWorldLocationAtSplinePoint_Internal(base.NativePtr, PointIndex, InLocation);
 		}
 
-		// Token: 0x06010569 RID: 66921 RVA: 0x001810D6 File Offset: 0x0017F2D6
+		// Token: 0x060045D2 RID: 17874 RVA: 0x00062DC6 File Offset: 0x00060FC6
 		public void SetUpVectorAtSplinePoint(int PointIndex, in FVector InUpVector, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetUpVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, InUpVector, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x0601056A RID: 66922 RVA: 0x001810ED File Offset: 0x0017F2ED
+		// Token: 0x060045D3 RID: 17875 RVA: 0x00062DDD File Offset: 0x00060FDD
 		public void SetUnselectedSplineSegmentColor(in FLinearColor SegmentColor)
 		{
 			USplineComponent.__SetUnselectedSplineSegmentColor_Internal(base.NativePtr, SegmentColor);
 		}
 
-		// Token: 0x0601056B RID: 66923 RVA: 0x001810FB File Offset: 0x0017F2FB
+		// Token: 0x060045D4 RID: 17876 RVA: 0x00062DEB File Offset: 0x00060FEB
 		public void SetTangentsAtSplinePoint(int PointIndex, in FVector InArriveTangent, in FVector InLeaveTangent, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetTangentsAtSplinePoint_Internal(base.NativePtr, PointIndex, InArriveTangent, InLeaveTangent, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x0601056C RID: 66924 RVA: 0x00181114 File Offset: 0x0017F314
+		// Token: 0x060045D5 RID: 17877 RVA: 0x00062E04 File Offset: 0x00061004
 		public void SetTangentColor(in FLinearColor TangentColor)
 		{
 			USplineComponent.__SetTangentColor_Internal(base.NativePtr, TangentColor);
 		}
 
-		// Token: 0x0601056D RID: 66925 RVA: 0x00181122 File Offset: 0x0017F322
+		// Token: 0x060045D6 RID: 17878 RVA: 0x00062E12 File Offset: 0x00061012
 		public void SetTangentAtSplinePoint(int PointIndex, in FVector InTangent, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, InTangent, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x0601056E RID: 66926 RVA: 0x00181139 File Offset: 0x0017F339
+		// Token: 0x060045D7 RID: 17879 RVA: 0x00062E29 File Offset: 0x00061029
 		[NullableContext(2)]
 		public void SetSplineWorldPoints(in TArray<FVector> Points)
 		{
 			USplineComponent.__SetSplineWorldPoints_Internal(base.NativePtr, (Points ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x0601056F RID: 66927 RVA: 0x00181156 File Offset: 0x0017F356
+		// Token: 0x060045D8 RID: 17880 RVA: 0x00062E46 File Offset: 0x00061046
 		public void SetSplinePointType(int PointIndex, ESplinePointType Type, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetSplinePointType_Internal(base.NativePtr, PointIndex, Type, bUpdateSpline);
 		}
 
-		// Token: 0x06010570 RID: 66928 RVA: 0x0018116B File Offset: 0x0017F36B
+		// Token: 0x060045D9 RID: 17881 RVA: 0x00062E5B File Offset: 0x0006105B
 		[NullableContext(2)]
 		public void SetSplinePoints(in TArray<FVector> Points, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetSplinePoints_Internal(base.NativePtr, (Points ?? new TArray<FVector>()).NativePtr, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x06010571 RID: 66929 RVA: 0x0018118F File Offset: 0x0017F38F
+		// Token: 0x060045DA RID: 17882 RVA: 0x00062E7F File Offset: 0x0006107F
 		[NullableContext(2)]
 		public void SetSplineLocalPoints(in TArray<FVector> Points)
 		{
 			USplineComponent.__SetSplineLocalPoints_Internal(base.NativePtr, (Points ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x06010572 RID: 66930 RVA: 0x001811AC File Offset: 0x0017F3AC
+		// Token: 0x060045DB RID: 17883 RVA: 0x00062E9C File Offset: 0x0006109C
 		public void SetSelectedSplineSegmentColor(in FLinearColor SegmentColor)
 		{
 			USplineComponent.__SetSelectedSplineSegmentColor_Internal(base.NativePtr, SegmentColor);
 		}
 
-		// Token: 0x06010573 RID: 66931 RVA: 0x001811BA File Offset: 0x0017F3BA
+		// Token: 0x060045DC RID: 17884 RVA: 0x00062EAA File Offset: 0x000610AA
 		public void SetScaleAtSplinePoint(int PointIndex, in FVector InScaleVector, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetScaleAtSplinePoint_Internal(base.NativePtr, PointIndex, InScaleVector, bUpdateSpline);
 		}
 
-		// Token: 0x06010574 RID: 66932 RVA: 0x001811CA File Offset: 0x0017F3CA
+		// Token: 0x060045DD RID: 17885 RVA: 0x00062EBA File Offset: 0x000610BA
 		public void SetRotationAtSplinePoint(int PointIndex, in FRotator InRotation, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetRotationAtSplinePoint_Internal(base.NativePtr, PointIndex, InRotation, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x06010575 RID: 66933 RVA: 0x001811E1 File Offset: 0x0017F3E1
+		// Token: 0x060045DE RID: 17886 RVA: 0x00062ED1 File Offset: 0x000610D1
 		public void SetLocationAtSplinePoint(int PointIndex, in FVector InLocation, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetLocationAtSplinePoint_Internal(base.NativePtr, PointIndex, InLocation, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x06010576 RID: 66934 RVA: 0x001811F8 File Offset: 0x0017F3F8
+		// Token: 0x060045DF RID: 17887 RVA: 0x00062EE8 File Offset: 0x000610E8
 		public void SetDrawDebug(bool bShow)
 		{
 			USplineComponent.__SetDrawDebug_Internal(base.NativePtr, bShow);
 		}
 
-		// Token: 0x06010577 RID: 66935 RVA: 0x00181206 File Offset: 0x0017F406
+		// Token: 0x060045E0 RID: 17888 RVA: 0x00062EF6 File Offset: 0x000610F6
 		public void SetDefaultUpVector(in FVector UpVector, ESplineCoordinateSpace CoordinateSpace)
 		{
 			USplineComponent.__SetDefaultUpVector_Internal(base.NativePtr, UpVector, CoordinateSpace);
 		}
 
-		// Token: 0x06010578 RID: 66936 RVA: 0x0018121A File Offset: 0x0017F41A
+		// Token: 0x060045E1 RID: 17889 RVA: 0x00062F0A File Offset: 0x0006110A
 		public void SetClosedLoopAtPosition(bool bInClosedLoop, float Key, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetClosedLoopAtPosition_Internal(base.NativePtr, bInClosedLoop, Key, bUpdateSpline);
 		}
 
-		// Token: 0x06010579 RID: 66937 RVA: 0x0018122A File Offset: 0x0017F42A
+		// Token: 0x060045E2 RID: 17890 RVA: 0x00062F1A File Offset: 0x0006111A
 		public void SetClosedLoop(bool bInClosedLoop, bool bUpdateSpline = true)
 		{
 			USplineComponent.__SetClosedLoop_Internal(base.NativePtr, bInClosedLoop, bUpdateSpline);
 		}
 
-		// Token: 0x0601057A RID: 66938 RVA: 0x00181239 File Offset: 0x0017F439
+		// Token: 0x060045E3 RID: 17891 RVA: 0x00062F29 File Offset: 0x00061129
 		public void RemoveSplinePoint(int Index, bool bUpdateSpline = true)
 		{
 			USplineComponent.__RemoveSplinePoint_Internal(base.NativePtr, Index, bUpdateSpline);
 		}
 
-		// Token: 0x0601057B RID: 66939 RVA: 0x00181248 File Offset: 0x0017F448
+		// Token: 0x060045E4 RID: 17892 RVA: 0x00062F38 File Offset: 0x00061138
 		public bool IsClosedLoop()
 		{
 			return USplineComponent.__IsClosedLoop_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601057C RID: 66940 RVA: 0x00181255 File Offset: 0x0017F455
+		// Token: 0x060045E5 RID: 17893 RVA: 0x00062F45 File Offset: 0x00061145
 		public FVector GetWorldTangentAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetWorldTangentAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x0601057D RID: 66941 RVA: 0x00181263 File Offset: 0x0017F463
+		// Token: 0x060045E6 RID: 17894 RVA: 0x00062F53 File Offset: 0x00061153
 		public FRotator GetWorldRotationAtTime(float Time, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetWorldRotationAtTime_Internal(base.NativePtr, Time, bUseConstantVelocity);
 		}
 
-		// Token: 0x0601057E RID: 66942 RVA: 0x00181272 File Offset: 0x0017F472
+		// Token: 0x060045E7 RID: 17895 RVA: 0x00062F62 File Offset: 0x00061162
 		public FRotator GetWorldRotationAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetWorldRotationAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x0601057F RID: 66943 RVA: 0x00181280 File Offset: 0x0017F480
+		// Token: 0x060045E8 RID: 17896 RVA: 0x00062F70 File Offset: 0x00061170
 		public FVector GetWorldLocationAtTime(float Time, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetWorldLocationAtTime_Internal(base.NativePtr, Time, bUseConstantVelocity);
 		}
 
-		// Token: 0x06010580 RID: 66944 RVA: 0x0018128F File Offset: 0x0017F48F
+		// Token: 0x060045E9 RID: 17897 RVA: 0x00062F7F File Offset: 0x0006117F
 		public FVector GetWorldLocationAtSplinePoint(int PointIndex)
 		{
 			return USplineComponent.__GetWorldLocationAtSplinePoint_Internal(base.NativePtr, PointIndex);
 		}
 
-		// Token: 0x06010581 RID: 66945 RVA: 0x0018129D File Offset: 0x0017F49D
+		// Token: 0x060045EA RID: 17898 RVA: 0x00062F8D File Offset: 0x0006118D
 		public FVector GetWorldLocationAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetWorldLocationAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x06010582 RID: 66946 RVA: 0x001812AB File Offset: 0x0017F4AB
+		// Token: 0x060045EB RID: 17899 RVA: 0x00062F9B File Offset: 0x0006119B
 		public FVector GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetWorldDirectionAtTime_Internal(base.NativePtr, Time, bUseConstantVelocity);
 		}
 
-		// Token: 0x06010583 RID: 66947 RVA: 0x001812BA File Offset: 0x0017F4BA
+		// Token: 0x060045EC RID: 17900 RVA: 0x00062FAA File Offset: 0x000611AA
 		public FVector GetWorldDirectionAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetWorldDirectionAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x06010584 RID: 66948 RVA: 0x001812C8 File Offset: 0x0017F4C8
+		// Token: 0x060045ED RID: 17901 RVA: 0x00062FB8 File Offset: 0x000611B8
 		public FVector GetVectorPropertyAtSplinePoint(int Index, FName PropertyName)
 		{
 			return USplineComponent.__GetVectorPropertyAtSplinePoint_Internal(base.NativePtr, Index, PropertyName);
 		}
 
-		// Token: 0x06010585 RID: 66949 RVA: 0x001812D7 File Offset: 0x0017F4D7
+		// Token: 0x060045EE RID: 17902 RVA: 0x00062FC7 File Offset: 0x000611C7
 		public FVector GetVectorPropertyAtSplineInputKey(float InKey, FName PropertyName)
 		{
 			return USplineComponent.__GetVectorPropertyAtSplineInputKey_Internal(base.NativePtr, InKey, PropertyName);
 		}
 
-		// Token: 0x06010586 RID: 66950 RVA: 0x001812E6 File Offset: 0x0017F4E6
+		// Token: 0x060045EF RID: 17903 RVA: 0x00062FD6 File Offset: 0x000611D6
 		public FVector GetUpVectorAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetUpVectorAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x06010587 RID: 66951 RVA: 0x001812FB File Offset: 0x0017F4FB
+		// Token: 0x060045F0 RID: 17904 RVA: 0x00062FEB File Offset: 0x000611EB
 		public FVector GetUpVectorAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetUpVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x06010588 RID: 66952 RVA: 0x0018130F File Offset: 0x0017F50F
+		// Token: 0x060045F1 RID: 17905 RVA: 0x00062FFF File Offset: 0x000611FF
 		public FVector GetUpVectorAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetUpVectorAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x06010589 RID: 66953 RVA: 0x00181323 File Offset: 0x0017F523
+		// Token: 0x060045F2 RID: 17906 RVA: 0x00063013 File Offset: 0x00061213
 		public FVector GetUpVectorAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetUpVectorAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x0601058A RID: 66954 RVA: 0x00181337 File Offset: 0x0017F537
+		// Token: 0x060045F3 RID: 17907 RVA: 0x00063027 File Offset: 0x00061227
 		public FTransform GetTransformAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false, bool bUseScale = false)
 		{
 			return USplineComponent.__GetTransformAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity, bUseScale);
 		}
 
-		// Token: 0x0601058B RID: 66955 RVA: 0x0018134E File Offset: 0x0017F54E
+		// Token: 0x060045F4 RID: 17908 RVA: 0x0006303E File Offset: 0x0006123E
 		public FTransform GetTransformAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__GetTransformAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x0601058C RID: 66956 RVA: 0x00181363 File Offset: 0x0017F563
+		// Token: 0x060045F5 RID: 17909 RVA: 0x00063053 File Offset: 0x00061253
 		public FTransform GetTransformAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__GetTransformAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x0601058D RID: 66957 RVA: 0x00181378 File Offset: 0x0017F578
+		// Token: 0x060045F6 RID: 17910 RVA: 0x00063068 File Offset: 0x00061268
 		public FTransform GetTransformAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__GetTransformAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x0601058E RID: 66958 RVA: 0x0018138D File Offset: 0x0017F58D
+		// Token: 0x060045F7 RID: 17911 RVA: 0x0006307D File Offset: 0x0006127D
 		public FVector GetTangentAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetTangentAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x0601058F RID: 66959 RVA: 0x001813A2 File Offset: 0x0017F5A2
+		// Token: 0x060045F8 RID: 17912 RVA: 0x00063092 File Offset: 0x00061292
 		public FVector GetTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x06010590 RID: 66960 RVA: 0x001813B6 File Offset: 0x0017F5B6
+		// Token: 0x060045F9 RID: 17913 RVA: 0x000630A6 File Offset: 0x000612A6
 		public FVector GetTangentAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetTangentAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x06010591 RID: 66961 RVA: 0x001813CA File Offset: 0x0017F5CA
+		// Token: 0x060045FA RID: 17914 RVA: 0x000630BA File Offset: 0x000612BA
 		public FVector GetTangentAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetTangentAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x06010592 RID: 66962 RVA: 0x001813DE File Offset: 0x0017F5DE
+		// Token: 0x060045FB RID: 17915 RVA: 0x000630CE File Offset: 0x000612CE
 		public TEnumAsByte<ESplinePointType> GetSplinePointType(int PointIndex)
 		{
 			return USplineComponent.__GetSplinePointType_Internal(base.NativePtr, PointIndex);
 		}
 
-		// Token: 0x06010593 RID: 66963 RVA: 0x001813EC File Offset: 0x0017F5EC
+		// Token: 0x060045FC RID: 17916 RVA: 0x000630DC File Offset: 0x000612DC
 		public float GetSplineLength()
 		{
 			return USplineComponent.__GetSplineLength_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06010594 RID: 66964 RVA: 0x001813F9 File Offset: 0x0017F5F9
+		// Token: 0x060045FD RID: 17917 RVA: 0x000630E9 File Offset: 0x000612E9
 		public FVector GetScaleAtTime(float Time, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetScaleAtTime_Internal(base.NativePtr, Time, bUseConstantVelocity);
 		}
 
-		// Token: 0x06010595 RID: 66965 RVA: 0x00181408 File Offset: 0x0017F608
+		// Token: 0x060045FE RID: 17918 RVA: 0x000630F8 File Offset: 0x000612F8
 		public FVector GetScaleAtSplinePoint(int PointIndex)
 		{
 			return USplineComponent.__GetScaleAtSplinePoint_Internal(base.NativePtr, PointIndex);
 		}
 
-		// Token: 0x06010596 RID: 66966 RVA: 0x00181416 File Offset: 0x0017F616
+		// Token: 0x060045FF RID: 17919 RVA: 0x00063106 File Offset: 0x00061306
 		public FVector GetScaleAtSplineInputKey(float InKey)
 		{
 			return USplineComponent.__GetScaleAtSplineInputKey_Internal(base.NativePtr, InKey);
 		}
 
-		// Token: 0x06010597 RID: 66967 RVA: 0x00181424 File Offset: 0x0017F624
+		// Token: 0x06004600 RID: 17920 RVA: 0x00063114 File Offset: 0x00061314
 		public FVector GetScaleAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetScaleAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x06010598 RID: 66968 RVA: 0x00181432 File Offset: 0x0017F632
+		// Token: 0x06004601 RID: 17921 RVA: 0x00063122 File Offset: 0x00061322
 		public FRotator GetRotationAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetRotationAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x06010599 RID: 66969 RVA: 0x00181447 File Offset: 0x0017F647
+		// Token: 0x06004602 RID: 17922 RVA: 0x00063137 File Offset: 0x00061337
 		public FRotator GetRotationAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRotationAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x0601059A RID: 66970 RVA: 0x0018145B File Offset: 0x0017F65B
+		// Token: 0x06004603 RID: 17923 RVA: 0x0006314B File Offset: 0x0006134B
 		public FRotator GetRotationAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRotationAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x0601059B RID: 66971 RVA: 0x0018146F File Offset: 0x0017F66F
+		// Token: 0x06004604 RID: 17924 RVA: 0x0006315F File Offset: 0x0006135F
 		public FRotator GetRotationAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRotationAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x0601059C RID: 66972 RVA: 0x00181483 File Offset: 0x0017F683
+		// Token: 0x06004605 RID: 17925 RVA: 0x00063173 File Offset: 0x00061373
 		public float GetRollAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetRollAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x0601059D RID: 66973 RVA: 0x00181498 File Offset: 0x0017F698
+		// Token: 0x06004606 RID: 17926 RVA: 0x00063188 File Offset: 0x00061388
 		public float GetRollAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRollAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x0601059E RID: 66974 RVA: 0x001814AC File Offset: 0x0017F6AC
+		// Token: 0x06004607 RID: 17927 RVA: 0x0006319C File Offset: 0x0006139C
 		public float GetRollAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRollAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x0601059F RID: 66975 RVA: 0x001814C0 File Offset: 0x0017F6C0
+		// Token: 0x06004608 RID: 17928 RVA: 0x000631B0 File Offset: 0x000613B0
 		public float GetRollAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRollAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105A0 RID: 66976 RVA: 0x001814D4 File Offset: 0x0017F6D4
+		// Token: 0x06004609 RID: 17929 RVA: 0x000631C4 File Offset: 0x000613C4
 		public FVector GetRightVectorAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetRightVectorAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105A1 RID: 66977 RVA: 0x001814E9 File Offset: 0x0017F6E9
+		// Token: 0x0600460A RID: 17930 RVA: 0x000631D9 File Offset: 0x000613D9
 		public FVector GetRightVectorAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRightVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105A2 RID: 66978 RVA: 0x001814FD File Offset: 0x0017F6FD
+		// Token: 0x0600460B RID: 17931 RVA: 0x000631ED File Offset: 0x000613ED
 		public FVector GetRightVectorAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRightVectorAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105A3 RID: 66979 RVA: 0x00181511 File Offset: 0x0017F711
+		// Token: 0x0600460C RID: 17932 RVA: 0x00063201 File Offset: 0x00061401
 		public FVector GetRightVectorAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetRightVectorAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105A4 RID: 66980 RVA: 0x00181525 File Offset: 0x0017F725
+		// Token: 0x0600460D RID: 17933 RVA: 0x00063215 File Offset: 0x00061415
 		[NullableContext(1)]
 		public TArray<FSplinePoint> GetPoints()
 		{
 			return new TArray<FSplinePoint>(USplineComponent.__GetPoints_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x060105A5 RID: 66981 RVA: 0x00181538 File Offset: 0x0017F738
+		// Token: 0x0600460E RID: 17934 RVA: 0x00063228 File Offset: 0x00061428
 		public int GetNumberOfSplineSegments()
 		{
 			return USplineComponent.__GetNumberOfSplineSegments_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060105A6 RID: 66982 RVA: 0x00181545 File Offset: 0x0017F745
+		// Token: 0x0600460F RID: 17935 RVA: 0x00063235 File Offset: 0x00061435
 		public int GetNumberOfSplinePoints()
 		{
 			return USplineComponent.__GetNumberOfSplinePoints_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060105A7 RID: 66983 RVA: 0x00181552 File Offset: 0x0017F752
+		// Token: 0x06004610 RID: 17936 RVA: 0x00063242 File Offset: 0x00061442
 		public FVector GetLocationAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetLocationAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105A8 RID: 66984 RVA: 0x00181567 File Offset: 0x0017F767
+		// Token: 0x06004611 RID: 17937 RVA: 0x00063257 File Offset: 0x00061457
 		public FVector GetLocationAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetLocationAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105A9 RID: 66985 RVA: 0x0018157B File Offset: 0x0017F77B
+		// Token: 0x06004612 RID: 17938 RVA: 0x0006326B File Offset: 0x0006146B
 		public FVector GetLocationAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetLocationAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105AA RID: 66986 RVA: 0x0018158F File Offset: 0x0017F78F
+		// Token: 0x06004613 RID: 17939 RVA: 0x0006327F File Offset: 0x0006147F
 		public FVector GetLocationAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetLocationAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105AB RID: 66987 RVA: 0x001815A4 File Offset: 0x0017F7A4
+		// Token: 0x06004614 RID: 17940 RVA: 0x00063294 File Offset: 0x00061494
 		public unsafe void GetLocationAndTangentAtSplinePoint(int PointIndex, ref FVector Location, ref FVector Tangent, ESplineCoordinateSpace CoordinateSpace)
 		{
 			fixed (FVector* ptr = &Location)
@@ -755,7 +755,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060105AC RID: 66988 RVA: 0x001815D8 File Offset: 0x0017F7D8
+		// Token: 0x06004615 RID: 17941 RVA: 0x000632C8 File Offset: 0x000614C8
 		public unsafe FVector GetLocationAndKeyAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace, ref float Key)
 		{
 			fixed (float* ptr = &Key)
@@ -765,7 +765,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060105AD RID: 66989 RVA: 0x00181600 File Offset: 0x0017F800
+		// Token: 0x06004616 RID: 17942 RVA: 0x000632F0 File Offset: 0x000614F0
 		public unsafe void GetLocalLocationAndTangentAtSplinePoint(int PointIndex, ref FVector LocalLocation, ref FVector LocalTangent)
 		{
 			fixed (FVector* ptr = &LocalLocation)
@@ -780,332 +780,332 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060105AE RID: 66990 RVA: 0x0018162B File Offset: 0x0017F82B
+		// Token: 0x06004617 RID: 17943 RVA: 0x0006331B File Offset: 0x0006151B
 		public FVector GetLeaveTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetLeaveTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105AF RID: 66991 RVA: 0x0018163F File Offset: 0x0017F83F
+		// Token: 0x06004618 RID: 17944 RVA: 0x0006332F File Offset: 0x0006152F
 		public float GetInputKeyAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__GetInputKeyAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x060105B0 RID: 66992 RVA: 0x0018164D File Offset: 0x0017F84D
+		// Token: 0x06004619 RID: 17945 RVA: 0x0006333D File Offset: 0x0006153D
 		public float GetFloatPropertyAtSplinePoint(int Index, FName PropertyName)
 		{
 			return USplineComponent.__GetFloatPropertyAtSplinePoint_Internal(base.NativePtr, Index, PropertyName);
 		}
 
-		// Token: 0x060105B1 RID: 66993 RVA: 0x0018165C File Offset: 0x0017F85C
+		// Token: 0x0600461A RID: 17946 RVA: 0x0006334C File Offset: 0x0006154C
 		public float GetFloatPropertyAtSplineInputKey(float InKey, FName PropertyName)
 		{
 			return USplineComponent.__GetFloatPropertyAtSplineInputKey_Internal(base.NativePtr, InKey, PropertyName);
 		}
 
-		// Token: 0x060105B2 RID: 66994 RVA: 0x0018166B File Offset: 0x0017F86B
+		// Token: 0x0600461B RID: 17947 RVA: 0x0006335B File Offset: 0x0006155B
 		public float GetDistanceAlongSplineAtSplinePoint(int PointIndex)
 		{
 			return USplineComponent.__GetDistanceAlongSplineAtSplinePoint_Internal(base.NativePtr, PointIndex);
 		}
 
-		// Token: 0x060105B3 RID: 66995 RVA: 0x00181679 File Offset: 0x0017F879
+		// Token: 0x0600461C RID: 17948 RVA: 0x00063369 File Offset: 0x00061569
 		public float GetDistanceAlongSplineAtSplineInputKey(float InKey)
 		{
 			return USplineComponent.__GetDistanceAlongSplineAtSplineInputKey_Internal(base.NativePtr, InKey);
 		}
 
-		// Token: 0x060105B4 RID: 66996 RVA: 0x00181687 File Offset: 0x0017F887
+		// Token: 0x0600461D RID: 17949 RVA: 0x00063377 File Offset: 0x00061577
 		public FVector GetDirectionAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__GetDirectionAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105B5 RID: 66997 RVA: 0x0018169C File Offset: 0x0017F89C
+		// Token: 0x0600461E RID: 17950 RVA: 0x0006338C File Offset: 0x0006158C
 		public FVector GetDirectionAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetDirectionAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105B6 RID: 66998 RVA: 0x001816B0 File Offset: 0x0017F8B0
+		// Token: 0x0600461F RID: 17951 RVA: 0x000633A0 File Offset: 0x000615A0
 		public FVector GetDirectionAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetDirectionAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105B7 RID: 66999 RVA: 0x001816C4 File Offset: 0x0017F8C4
+		// Token: 0x06004620 RID: 17952 RVA: 0x000633B4 File Offset: 0x000615B4
 		public FVector GetDirectionAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetDirectionAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105B8 RID: 67000 RVA: 0x001816D8 File Offset: 0x0017F8D8
+		// Token: 0x06004621 RID: 17953 RVA: 0x000633C8 File Offset: 0x000615C8
 		public FVector GetDefaultUpVector(ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetDefaultUpVector_Internal(base.NativePtr, CoordinateSpace);
 		}
 
-		// Token: 0x060105B9 RID: 67001 RVA: 0x001816EB File Offset: 0x0017F8EB
+		// Token: 0x06004622 RID: 17954 RVA: 0x000633DB File Offset: 0x000615DB
 		public FVector GetArriveTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__GetArriveTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105BA RID: 67002 RVA: 0x001816FF File Offset: 0x0017F8FF
+		// Token: 0x06004623 RID: 17955 RVA: 0x000633EF File Offset: 0x000615EF
 		public FVector FindUpVectorClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindUpVectorClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105BB RID: 67003 RVA: 0x00181713 File Offset: 0x0017F913
+		// Token: 0x06004624 RID: 17956 RVA: 0x00063403 File Offset: 0x00061603
 		public FTransform FindTransformClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__FindTransformClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x060105BC RID: 67004 RVA: 0x00181728 File Offset: 0x0017F928
+		// Token: 0x06004625 RID: 17957 RVA: 0x00063418 File Offset: 0x00061618
 		public FVector FindTangentClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindTangentClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105BD RID: 67005 RVA: 0x0018173C File Offset: 0x0017F93C
+		// Token: 0x06004626 RID: 17958 RVA: 0x0006342C File Offset: 0x0006162C
 		public FVector FindScaleClosestToWorldLocation(in FVector WorldLocation)
 		{
 			return USplineComponent.__FindScaleClosestToWorldLocation_Internal(base.NativePtr, WorldLocation);
 		}
 
-		// Token: 0x060105BE RID: 67006 RVA: 0x0018174A File Offset: 0x0017F94A
+		// Token: 0x06004627 RID: 17959 RVA: 0x0006343A File Offset: 0x0006163A
 		public FRotator FindRotationClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindRotationClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105BF RID: 67007 RVA: 0x0018175E File Offset: 0x0017F95E
+		// Token: 0x06004628 RID: 17960 RVA: 0x0006344E File Offset: 0x0006164E
 		public float FindRollClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindRollClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105C0 RID: 67008 RVA: 0x00181772 File Offset: 0x0017F972
+		// Token: 0x06004629 RID: 17961 RVA: 0x00063462 File Offset: 0x00061662
 		public FVector FindRightVectorClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindRightVectorClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105C1 RID: 67009 RVA: 0x00181786 File Offset: 0x0017F986
+		// Token: 0x0600462A RID: 17962 RVA: 0x00063476 File Offset: 0x00061676
 		public FVector FindLocationClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindLocationClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105C2 RID: 67010 RVA: 0x0018179A File Offset: 0x0017F99A
+		// Token: 0x0600462B RID: 17963 RVA: 0x0006348A File Offset: 0x0006168A
 		public float FindInputKeyClosestToWorldLocationInRange(in FVector WorldLocation, int StartKey, int EndKey)
 		{
 			return USplineComponent.__FindInputKeyClosestToWorldLocationInRange_Internal(base.NativePtr, WorldLocation, StartKey, EndKey);
 		}
 
-		// Token: 0x060105C3 RID: 67011 RVA: 0x001817AA File Offset: 0x0017F9AA
+		// Token: 0x0600462C RID: 17964 RVA: 0x0006349A File Offset: 0x0006169A
 		public float FindInputKeyClosestToWorldLocationByPartitionInGravity(in FVector WorldLocation, FVector GravityDirect, float SearchRadius, float HeightLimit)
 		{
 			return USplineComponent.__FindInputKeyClosestToWorldLocationByPartitionInGravity_Internal(base.NativePtr, WorldLocation, GravityDirect, SearchRadius, HeightLimit);
 		}
 
-		// Token: 0x060105C4 RID: 67012 RVA: 0x001817BC File Offset: 0x0017F9BC
+		// Token: 0x0600462D RID: 17965 RVA: 0x000634AC File Offset: 0x000616AC
 		public float FindInputKeyClosestToWorldLocationByPartition(in FVector WorldLocation, float SearchRadius)
 		{
 			return USplineComponent.__FindInputKeyClosestToWorldLocationByPartition_Internal(base.NativePtr, WorldLocation, SearchRadius);
 		}
 
-		// Token: 0x060105C5 RID: 67013 RVA: 0x001817CB File Offset: 0x0017F9CB
+		// Token: 0x0600462E RID: 17966 RVA: 0x000634BB File Offset: 0x000616BB
 		public float FindInputKeyClosestToWorldLocation(in FVector WorldLocation)
 		{
 			return USplineComponent.__FindInputKeyClosestToWorldLocation_Internal(base.NativePtr, WorldLocation);
 		}
 
-		// Token: 0x060105C6 RID: 67014 RVA: 0x001817D9 File Offset: 0x0017F9D9
+		// Token: 0x0600462F RID: 17967 RVA: 0x000634C9 File Offset: 0x000616C9
 		public FVector FindDirectionClosestToWorldLocation(in FVector WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__FindDirectionClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105C7 RID: 67015 RVA: 0x001817ED File Offset: 0x0017F9ED
+		// Token: 0x06004630 RID: 17968 RVA: 0x000634DD File Offset: 0x000616DD
 		public void D_SetUpVectorAtSplinePoint(int PointIndex, in FVectorDouble InUpVector, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_SetUpVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, InUpVector, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105C8 RID: 67016 RVA: 0x00181804 File Offset: 0x0017FA04
+		// Token: 0x06004631 RID: 17969 RVA: 0x000634F4 File Offset: 0x000616F4
 		public void D_SetTangentsAtSplinePoint(int PointIndex, in FVectorDouble InArriveTangent, in FVectorDouble InLeaveTangent, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_SetTangentsAtSplinePoint_Internal(base.NativePtr, PointIndex, InArriveTangent, InLeaveTangent, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105C9 RID: 67017 RVA: 0x0018181D File Offset: 0x0017FA1D
+		// Token: 0x06004632 RID: 17970 RVA: 0x0006350D File Offset: 0x0006170D
 		public void D_SetTangentAtSplinePoint(int PointIndex, in FVectorDouble InTangent, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_SetTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, InTangent, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105CA RID: 67018 RVA: 0x00181834 File Offset: 0x0017FA34
+		// Token: 0x06004633 RID: 17971 RVA: 0x00063524 File Offset: 0x00061724
 		[NullableContext(2)]
 		public void D_SetSplinePoints(in TArray<FVectorDouble> Points, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_SetSplinePoints_Internal(base.NativePtr, (Points ?? new TArray<FVectorDouble>()).NativePtr, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105CB RID: 67019 RVA: 0x00181858 File Offset: 0x0017FA58
+		// Token: 0x06004634 RID: 17972 RVA: 0x00063548 File Offset: 0x00061748
 		public void D_SetLocationAtSplinePoint(int PointIndex, in FVectorDouble InLocation, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_SetLocationAtSplinePoint_Internal(base.NativePtr, PointIndex, InLocation, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105CC RID: 67020 RVA: 0x0018186F File Offset: 0x0017FA6F
+		// Token: 0x06004635 RID: 17973 RVA: 0x0006355F File Offset: 0x0006175F
 		public void D_SetDefaultUpVector(in FVectorDouble UpVector, ESplineCoordinateSpace CoordinateSpace)
 		{
 			USplineComponent.__D_SetDefaultUpVector_Internal(base.NativePtr, UpVector, CoordinateSpace);
 		}
 
-		// Token: 0x060105CD RID: 67021 RVA: 0x00181883 File Offset: 0x0017FA83
+		// Token: 0x06004636 RID: 17974 RVA: 0x00063573 File Offset: 0x00061773
 		public FVectorDouble D_GetVectorPropertyAtSplinePoint(int Index, FName PropertyName)
 		{
 			return USplineComponent.__D_GetVectorPropertyAtSplinePoint_Internal(base.NativePtr, Index, PropertyName);
 		}
 
-		// Token: 0x060105CE RID: 67022 RVA: 0x00181892 File Offset: 0x0017FA92
+		// Token: 0x06004637 RID: 17975 RVA: 0x00063582 File Offset: 0x00061782
 		public FVectorDouble D_GetVectorPropertyAtSplineInputKey(float InKey, FName PropertyName)
 		{
 			return USplineComponent.__D_GetVectorPropertyAtSplineInputKey_Internal(base.NativePtr, InKey, PropertyName);
 		}
 
-		// Token: 0x060105CF RID: 67023 RVA: 0x001818A1 File Offset: 0x0017FAA1
+		// Token: 0x06004638 RID: 17976 RVA: 0x00063591 File Offset: 0x00061791
 		public FVectorDouble D_GetUpVectorAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__D_GetUpVectorAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105D0 RID: 67024 RVA: 0x001818B6 File Offset: 0x0017FAB6
+		// Token: 0x06004639 RID: 17977 RVA: 0x000635A6 File Offset: 0x000617A6
 		public FVectorDouble D_GetUpVectorAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetUpVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105D1 RID: 67025 RVA: 0x001818CA File Offset: 0x0017FACA
+		// Token: 0x0600463A RID: 17978 RVA: 0x000635BA File Offset: 0x000617BA
 		public FVectorDouble D_GetUpVectorAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetUpVectorAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105D2 RID: 67026 RVA: 0x001818DE File Offset: 0x0017FADE
+		// Token: 0x0600463B RID: 17979 RVA: 0x000635CE File Offset: 0x000617CE
 		public FVectorDouble D_GetUpVectorAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetUpVectorAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105D3 RID: 67027 RVA: 0x001818F2 File Offset: 0x0017FAF2
+		// Token: 0x0600463C RID: 17980 RVA: 0x000635E2 File Offset: 0x000617E2
 		public FTransformDouble D_GetTransformAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false, bool bUseScale = false)
 		{
 			return USplineComponent.__D_GetTransformAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity, bUseScale);
 		}
 
-		// Token: 0x060105D4 RID: 67028 RVA: 0x00181909 File Offset: 0x0017FB09
+		// Token: 0x0600463D RID: 17981 RVA: 0x000635F9 File Offset: 0x000617F9
 		public FTransformDouble D_GetTransformAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__D_GetTransformAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x060105D5 RID: 67029 RVA: 0x0018191E File Offset: 0x0017FB1E
+		// Token: 0x0600463E RID: 17982 RVA: 0x0006360E File Offset: 0x0006180E
 		public FTransformDouble D_GetTransformAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__D_GetTransformAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x060105D6 RID: 67030 RVA: 0x00181933 File Offset: 0x0017FB33
+		// Token: 0x0600463F RID: 17983 RVA: 0x00063623 File Offset: 0x00061823
 		public FTransformDouble D_GetTransformAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__D_GetTransformAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x060105D7 RID: 67031 RVA: 0x00181948 File Offset: 0x0017FB48
+		// Token: 0x06004640 RID: 17984 RVA: 0x00063638 File Offset: 0x00061838
 		public FVectorDouble D_GetTangentAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__D_GetTangentAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105D8 RID: 67032 RVA: 0x0018195D File Offset: 0x0017FB5D
+		// Token: 0x06004641 RID: 17985 RVA: 0x0006364D File Offset: 0x0006184D
 		public FVectorDouble D_GetTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105D9 RID: 67033 RVA: 0x00181971 File Offset: 0x0017FB71
+		// Token: 0x06004642 RID: 17986 RVA: 0x00063661 File Offset: 0x00061861
 		public FVectorDouble D_GetTangentAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetTangentAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105DA RID: 67034 RVA: 0x00181985 File Offset: 0x0017FB85
+		// Token: 0x06004643 RID: 17987 RVA: 0x00063675 File Offset: 0x00061875
 		public FVectorDouble D_GetTangentAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetTangentAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105DB RID: 67035 RVA: 0x00181999 File Offset: 0x0017FB99
+		// Token: 0x06004644 RID: 17988 RVA: 0x00063689 File Offset: 0x00061889
 		public FVectorDouble D_GetScaleAtDistanceAlongSpline(float Distance)
 		{
 			return USplineComponent.__D_GetScaleAtDistanceAlongSpline_Internal(base.NativePtr, Distance);
 		}
 
-		// Token: 0x060105DC RID: 67036 RVA: 0x001819A7 File Offset: 0x0017FBA7
+		// Token: 0x06004645 RID: 17989 RVA: 0x00063697 File Offset: 0x00061897
 		public FVectorDouble D_GetRightVectorAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__D_GetRightVectorAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105DD RID: 67037 RVA: 0x001819BC File Offset: 0x0017FBBC
+		// Token: 0x06004646 RID: 17990 RVA: 0x000636AC File Offset: 0x000618AC
 		public FVectorDouble D_GetRightVectorAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetRightVectorAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105DE RID: 67038 RVA: 0x001819D0 File Offset: 0x0017FBD0
+		// Token: 0x06004647 RID: 17991 RVA: 0x000636C0 File Offset: 0x000618C0
 		public FVectorDouble D_GetRightVectorAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetRightVectorAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105DF RID: 67039 RVA: 0x001819E4 File Offset: 0x0017FBE4
+		// Token: 0x06004648 RID: 17992 RVA: 0x000636D4 File Offset: 0x000618D4
 		public FVectorDouble D_GetRightVectorAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetRightVectorAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105E0 RID: 67040 RVA: 0x001819F8 File Offset: 0x0017FBF8
+		// Token: 0x06004649 RID: 17993 RVA: 0x000636E8 File Offset: 0x000618E8
 		public FVectorDouble D_GetLocationAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__D_GetLocationAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105E1 RID: 67041 RVA: 0x00181A0D File Offset: 0x0017FC0D
+		// Token: 0x0600464A RID: 17994 RVA: 0x000636FD File Offset: 0x000618FD
 		public FVectorDouble D_GetLocationAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetLocationAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105E2 RID: 67042 RVA: 0x00181A21 File Offset: 0x0017FC21
+		// Token: 0x0600464B RID: 17995 RVA: 0x00063711 File Offset: 0x00061911
 		public FVectorDouble D_GetLocationAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetLocationAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105E3 RID: 67043 RVA: 0x00181A35 File Offset: 0x0017FC35
+		// Token: 0x0600464C RID: 17996 RVA: 0x00063725 File Offset: 0x00061925
 		public FVectorDouble D_GetLocationAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetLocationAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105E4 RID: 67044 RVA: 0x00181A4C File Offset: 0x0017FC4C
+		// Token: 0x0600464D RID: 17997 RVA: 0x0006373C File Offset: 0x0006193C
 		public unsafe void D_GetLocationAndTangentAtSplinePoint(int PointIndex, ref FVectorDouble Location, ref FVectorDouble Tangent, ESplineCoordinateSpace CoordinateSpace)
 		{
 			fixed (FVectorDouble* ptr = &Location)
@@ -1120,7 +1120,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060105E5 RID: 67045 RVA: 0x00181A80 File Offset: 0x0017FC80
+		// Token: 0x0600464E RID: 17998 RVA: 0x00063770 File Offset: 0x00061970
 		public unsafe FVectorDouble D_GetLocationAndKeyAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace, ref float Key)
 		{
 			fixed (float* ptr = &Key)
@@ -1130,157 +1130,157 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060105E6 RID: 67046 RVA: 0x00181AA5 File Offset: 0x0017FCA5
+		// Token: 0x0600464F RID: 17999 RVA: 0x00063795 File Offset: 0x00061995
 		public FVectorDouble D_GetLeaveTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetLeaveTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105E7 RID: 67047 RVA: 0x00181AB9 File Offset: 0x0017FCB9
+		// Token: 0x06004650 RID: 18000 RVA: 0x000637A9 File Offset: 0x000619A9
 		public FVectorDouble D_GetDirectionAtTime(float Time, ESplineCoordinateSpace CoordinateSpace, bool bUseConstantVelocity = false)
 		{
 			return USplineComponent.__D_GetDirectionAtTime_Internal(base.NativePtr, Time, CoordinateSpace, bUseConstantVelocity);
 		}
 
-		// Token: 0x060105E8 RID: 67048 RVA: 0x00181ACE File Offset: 0x0017FCCE
+		// Token: 0x06004651 RID: 18001 RVA: 0x000637BE File Offset: 0x000619BE
 		public FVectorDouble D_GetDirectionAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetDirectionAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105E9 RID: 67049 RVA: 0x00181AE2 File Offset: 0x0017FCE2
+		// Token: 0x06004652 RID: 18002 RVA: 0x000637D2 File Offset: 0x000619D2
 		public FVectorDouble D_GetDirectionAtSplineInputKey(float InKey, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetDirectionAtSplineInputKey_Internal(base.NativePtr, InKey, CoordinateSpace);
 		}
 
-		// Token: 0x060105EA RID: 67050 RVA: 0x00181AF6 File Offset: 0x0017FCF6
+		// Token: 0x06004653 RID: 18003 RVA: 0x000637E6 File Offset: 0x000619E6
 		public FVectorDouble D_GetDirectionAtDistanceAlongSpline(float Distance, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetDirectionAtDistanceAlongSpline_Internal(base.NativePtr, Distance, CoordinateSpace);
 		}
 
-		// Token: 0x060105EB RID: 67051 RVA: 0x00181B0A File Offset: 0x0017FD0A
+		// Token: 0x06004654 RID: 18004 RVA: 0x000637FA File Offset: 0x000619FA
 		public FVectorDouble D_GetDefaultUpVector(ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetDefaultUpVector_Internal(base.NativePtr, CoordinateSpace);
 		}
 
-		// Token: 0x060105EC RID: 67052 RVA: 0x00181B1D File Offset: 0x0017FD1D
+		// Token: 0x06004655 RID: 18005 RVA: 0x0006380D File Offset: 0x00061A0D
 		public FVectorDouble D_GetArriveTangentAtSplinePoint(int PointIndex, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_GetArriveTangentAtSplinePoint_Internal(base.NativePtr, PointIndex, CoordinateSpace);
 		}
 
-		// Token: 0x060105ED RID: 67053 RVA: 0x00181B31 File Offset: 0x0017FD31
+		// Token: 0x06004656 RID: 18006 RVA: 0x00063821 File Offset: 0x00061A21
 		public FVectorDouble D_FindUpVectorClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_FindUpVectorClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105EE RID: 67054 RVA: 0x00181B45 File Offset: 0x0017FD45
+		// Token: 0x06004657 RID: 18007 RVA: 0x00063835 File Offset: 0x00061A35
 		public FTransformDouble D_FindTransformClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace, bool bUseScale = false)
 		{
 			return USplineComponent.__D_FindTransformClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace, bUseScale);
 		}
 
-		// Token: 0x060105EF RID: 67055 RVA: 0x00181B5A File Offset: 0x0017FD5A
+		// Token: 0x06004658 RID: 18008 RVA: 0x0006384A File Offset: 0x00061A4A
 		public FVectorDouble D_FindTangentClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_FindTangentClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105F0 RID: 67056 RVA: 0x00181B6E File Offset: 0x0017FD6E
+		// Token: 0x06004659 RID: 18009 RVA: 0x0006385E File Offset: 0x00061A5E
 		public FVectorDouble D_FindRightVectorClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_FindRightVectorClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105F1 RID: 67057 RVA: 0x00181B82 File Offset: 0x0017FD82
+		// Token: 0x0600465A RID: 18010 RVA: 0x00063872 File Offset: 0x00061A72
 		public FVectorDouble D_FindLocationClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_FindLocationClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105F2 RID: 67058 RVA: 0x00181B96 File Offset: 0x0017FD96
+		// Token: 0x0600465B RID: 18011 RVA: 0x00063886 File Offset: 0x00061A86
 		public float D_FindInputKeyClosestToWorldLocationInRange(in FVectorDouble WorldLocation, int StartKey, int EndKey)
 		{
 			return USplineComponent.__D_FindInputKeyClosestToWorldLocationInRange_Internal(base.NativePtr, WorldLocation, StartKey, EndKey);
 		}
 
-		// Token: 0x060105F3 RID: 67059 RVA: 0x00181BA6 File Offset: 0x0017FDA6
+		// Token: 0x0600465C RID: 18012 RVA: 0x00063896 File Offset: 0x00061A96
 		public float D_FindInputKeyClosestToWorldLocationInGravity(in FVectorDouble WorldLocation, FVector GravityDirect, float HeightLimit)
 		{
 			return USplineComponent.__D_FindInputKeyClosestToWorldLocationInGravity_Internal(base.NativePtr, WorldLocation, GravityDirect, HeightLimit);
 		}
 
-		// Token: 0x060105F4 RID: 67060 RVA: 0x00181BB6 File Offset: 0x0017FDB6
+		// Token: 0x0600465D RID: 18013 RVA: 0x000638A6 File Offset: 0x00061AA6
 		public float D_FindInputKeyClosestToWorldLocationByPartitionInGravity(in FVectorDouble WorldLocation, FVector GravityDirect, float SearchRadius, float HeightLimit)
 		{
 			return USplineComponent.__D_FindInputKeyClosestToWorldLocationByPartitionInGravity_Internal(base.NativePtr, WorldLocation, GravityDirect, SearchRadius, HeightLimit);
 		}
 
-		// Token: 0x060105F5 RID: 67061 RVA: 0x00181BC8 File Offset: 0x0017FDC8
+		// Token: 0x0600465E RID: 18014 RVA: 0x000638B8 File Offset: 0x00061AB8
 		public float D_FindInputKeyClosestToWorldLocationByPartition(in FVectorDouble WorldLocation, float SearchRadius)
 		{
 			return USplineComponent.__D_FindInputKeyClosestToWorldLocationByPartition_Internal(base.NativePtr, WorldLocation, SearchRadius);
 		}
 
-		// Token: 0x060105F6 RID: 67062 RVA: 0x00181BD7 File Offset: 0x0017FDD7
+		// Token: 0x0600465F RID: 18015 RVA: 0x000638C7 File Offset: 0x00061AC7
 		public float D_FindInputKeyClosestToWorldLocation(in FVectorDouble WorldLocation)
 		{
 			return USplineComponent.__D_FindInputKeyClosestToWorldLocation_Internal(base.NativePtr, WorldLocation);
 		}
 
-		// Token: 0x060105F7 RID: 67063 RVA: 0x00181BE5 File Offset: 0x0017FDE5
+		// Token: 0x06004660 RID: 18016 RVA: 0x000638D5 File Offset: 0x00061AD5
 		public FVectorDouble D_FindDirectionClosestToWorldLocation(in FVectorDouble WorldLocation, ESplineCoordinateSpace CoordinateSpace)
 		{
 			return USplineComponent.__D_FindDirectionClosestToWorldLocation_Internal(base.NativePtr, WorldLocation, CoordinateSpace);
 		}
 
-		// Token: 0x060105F8 RID: 67064 RVA: 0x00181BF9 File Offset: 0x0017FDF9
+		// Token: 0x06004661 RID: 18017 RVA: 0x000638E9 File Offset: 0x00061AE9
 		public void D_AddSplinePointAtIndex(in FVectorDouble Position, int Index, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_AddSplinePointAtIndex_Internal(base.NativePtr, Position, Index, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105F9 RID: 67065 RVA: 0x00181C10 File Offset: 0x0017FE10
+		// Token: 0x06004662 RID: 18018 RVA: 0x00063900 File Offset: 0x00061B00
 		public void D_AddSplinePoint(in FVectorDouble Position, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__D_AddSplinePoint_Internal(base.NativePtr, Position, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105FA RID: 67066 RVA: 0x00181C25 File Offset: 0x0017FE25
+		// Token: 0x06004663 RID: 18019 RVA: 0x00063915 File Offset: 0x00061B15
 		public void ClearSplinePoints(bool bUpdateSpline = true)
 		{
 			USplineComponent.__ClearSplinePoints_Internal(base.NativePtr, bUpdateSpline);
 		}
 
-		// Token: 0x060105FB RID: 67067 RVA: 0x00181C33 File Offset: 0x0017FE33
+		// Token: 0x06004664 RID: 18020 RVA: 0x00063923 File Offset: 0x00061B23
 		public void AddSplineWorldPoint(in FVector Position)
 		{
 			USplineComponent.__AddSplineWorldPoint_Internal(base.NativePtr, Position);
 		}
 
-		// Token: 0x060105FC RID: 67068 RVA: 0x00181C41 File Offset: 0x0017FE41
+		// Token: 0x06004665 RID: 18021 RVA: 0x00063931 File Offset: 0x00061B31
 		public void AddSplinePointAtIndex(in FVector Position, int Index, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__AddSplinePointAtIndex_Internal(base.NativePtr, Position, Index, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105FD RID: 67069 RVA: 0x00181C58 File Offset: 0x0017FE58
+		// Token: 0x06004666 RID: 18022 RVA: 0x00063948 File Offset: 0x00061B48
 		public void AddSplinePoint(in FVector Position, ESplineCoordinateSpace CoordinateSpace, bool bUpdateSpline = true)
 		{
 			USplineComponent.__AddSplinePoint_Internal(base.NativePtr, Position, CoordinateSpace, bUpdateSpline);
 		}
 
-		// Token: 0x060105FE RID: 67070 RVA: 0x00181C6D File Offset: 0x0017FE6D
+		// Token: 0x06004667 RID: 18023 RVA: 0x0006395D File Offset: 0x00061B5D
 		public void AddSplineLocalPoint(in FVector Position)
 		{
 			USplineComponent.__AddSplineLocalPoint_Internal(base.NativePtr, Position);
 		}
 
-		// Token: 0x060105FF RID: 67071 RVA: 0x00181C7B File Offset: 0x0017FE7B
+		// Token: 0x06004668 RID: 18024 RVA: 0x0006396B File Offset: 0x00061B6B
 		public void AddPoints([Nullable(new byte[]
 		{
 			2,
@@ -1290,719 +1290,719 @@ namespace UnrealEngine
 			USplineComponent.__AddPoints_Internal(base.NativePtr, (Points ?? new TArray<FSplinePoint>()).NativePtr, bUpdateSpline);
 		}
 
-		// Token: 0x06010600 RID: 67072 RVA: 0x00181C99 File Offset: 0x0017FE99
+		// Token: 0x06004669 RID: 18025 RVA: 0x00063989 File Offset: 0x00061B89
 		[NullableContext(2)]
 		public void AddPoint(in FSplinePoint Point, bool bUpdateSpline = true)
 		{
 			USplineComponent.__AddPoint_Internal(base.NativePtr, (Point ?? new FSplinePoint()).NativePtr, bUpdateSpline);
 		}
 
-		// Token: 0x06010601 RID: 67073
+		// Token: 0x0600466A RID: 18026
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateSpline_Internal(IntPtr @this);
 
-		// Token: 0x06010602 RID: 67074
+		// Token: 0x0600466B RID: 18027
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWorldLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InLocation);
 
-		// Token: 0x06010603 RID: 67075
+		// Token: 0x0600466C RID: 18028
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetUpVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010604 RID: 67076
+		// Token: 0x0600466D RID: 18029
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetUnselectedSplineSegmentColor_Internal(IntPtr @this, in FLinearColor SegmentColor);
 
-		// Token: 0x06010605 RID: 67077
+		// Token: 0x0600466E RID: 18030
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTangentsAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InArriveTangent, in FVector InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010606 RID: 67078
+		// Token: 0x0600466F RID: 18031
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTangentColor_Internal(IntPtr @this, in FLinearColor TangentColor);
 
-		// Token: 0x06010607 RID: 67079
+		// Token: 0x06004670 RID: 18032
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010608 RID: 67080
+		// Token: 0x06004671 RID: 18033
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplineWorldPoints_Internal(IntPtr @this, IntPtr Points);
 
-		// Token: 0x06010609 RID: 67081
+		// Token: 0x06004672 RID: 18034
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplinePointType_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplinePointType> Type, bool bUpdateSpline);
 
-		// Token: 0x0601060A RID: 67082
+		// Token: 0x06004673 RID: 18035
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplinePoints_Internal(IntPtr @this, IntPtr Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x0601060B RID: 67083
+		// Token: 0x06004674 RID: 18036
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplineLocalPoints_Internal(IntPtr @this, IntPtr Points);
 
-		// Token: 0x0601060C RID: 67084
+		// Token: 0x06004675 RID: 18037
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSelectedSplineSegmentColor_Internal(IntPtr @this, in FLinearColor SegmentColor);
 
-		// Token: 0x0601060D RID: 67085
+		// Token: 0x06004676 RID: 18038
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScaleAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InScaleVector, bool bUpdateSpline);
 
-		// Token: 0x0601060E RID: 67086
+		// Token: 0x06004677 RID: 18039
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRotationAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FRotator InRotation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x0601060F RID: 67087
+		// Token: 0x06004678 RID: 18040
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVector InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010610 RID: 67088
+		// Token: 0x06004679 RID: 18041
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDrawDebug_Internal(IntPtr @this, bool bShow);
 
-		// Token: 0x06010611 RID: 67089
+		// Token: 0x0600467A RID: 18042
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDefaultUpVector_Internal(IntPtr @this, in FVector UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010612 RID: 67090
+		// Token: 0x0600467B RID: 18043
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetClosedLoopAtPosition_Internal(IntPtr @this, bool bInClosedLoop, float Key, bool bUpdateSpline);
 
-		// Token: 0x06010613 RID: 67091
+		// Token: 0x0600467C RID: 18044
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetClosedLoop_Internal(IntPtr @this, bool bInClosedLoop, bool bUpdateSpline);
 
-		// Token: 0x06010614 RID: 67092
+		// Token: 0x0600467D RID: 18045
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RemoveSplinePoint_Internal(IntPtr @this, int Index, bool bUpdateSpline);
 
-		// Token: 0x06010615 RID: 67093
+		// Token: 0x0600467E RID: 18046
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsClosedLoop_Internal(IntPtr @this);
 
-		// Token: 0x06010616 RID: 67094
+		// Token: 0x0600467F RID: 18047
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldTangentAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x06010617 RID: 67095
+		// Token: 0x06004680 RID: 18048
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetWorldRotationAtTime_Internal(IntPtr @this, float Time, bool bUseConstantVelocity);
 
-		// Token: 0x06010618 RID: 67096
+		// Token: 0x06004681 RID: 18049
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetWorldRotationAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x06010619 RID: 67097
+		// Token: 0x06004682 RID: 18050
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldLocationAtTime_Internal(IntPtr @this, float Time, bool bUseConstantVelocity);
 
-		// Token: 0x0601061A RID: 67098
+		// Token: 0x06004683 RID: 18051
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex);
 
-		// Token: 0x0601061B RID: 67099
+		// Token: 0x06004684 RID: 18052
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldLocationAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x0601061C RID: 67100
+		// Token: 0x06004685 RID: 18053
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldDirectionAtTime_Internal(IntPtr @this, float Time, bool bUseConstantVelocity);
 
-		// Token: 0x0601061D RID: 67101
+		// Token: 0x06004686 RID: 18054
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetWorldDirectionAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x0601061E RID: 67102
+		// Token: 0x06004687 RID: 18055
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetVectorPropertyAtSplinePoint_Internal(IntPtr @this, int Index, FName PropertyName);
 
-		// Token: 0x0601061F RID: 67103
+		// Token: 0x06004688 RID: 18056
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetVectorPropertyAtSplineInputKey_Internal(IntPtr @this, float InKey, FName PropertyName);
 
-		// Token: 0x06010620 RID: 67104
+		// Token: 0x06004689 RID: 18057
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUpVectorAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010621 RID: 67105
+		// Token: 0x0600468A RID: 18058
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUpVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010622 RID: 67106
+		// Token: 0x0600468B RID: 18059
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUpVectorAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010623 RID: 67107
+		// Token: 0x0600468C RID: 18060
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUpVectorAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010624 RID: 67108
+		// Token: 0x0600468D RID: 18061
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransformAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity, bool bUseScale);
 
-		// Token: 0x06010625 RID: 67109
+		// Token: 0x0600468E RID: 18062
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransformAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010626 RID: 67110
+		// Token: 0x0600468F RID: 18063
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransformAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010627 RID: 67111
+		// Token: 0x06004690 RID: 18064
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetTransformAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010628 RID: 67112
+		// Token: 0x06004691 RID: 18065
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetTangentAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010629 RID: 67113
+		// Token: 0x06004692 RID: 18066
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601062A RID: 67114
+		// Token: 0x06004693 RID: 18067
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetTangentAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601062B RID: 67115
+		// Token: 0x06004694 RID: 18068
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetTangentAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601062C RID: 67116
+		// Token: 0x06004695 RID: 18069
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern TEnumAsByte<ESplinePointType> __GetSplinePointType_Internal(IntPtr @this, int PointIndex);
 
-		// Token: 0x0601062D RID: 67117
+		// Token: 0x06004696 RID: 18070
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSplineLength_Internal(IntPtr @this);
 
-		// Token: 0x0601062E RID: 67118
+		// Token: 0x06004697 RID: 18071
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetScaleAtTime_Internal(IntPtr @this, float Time, bool bUseConstantVelocity);
 
-		// Token: 0x0601062F RID: 67119
+		// Token: 0x06004698 RID: 18072
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetScaleAtSplinePoint_Internal(IntPtr @this, int PointIndex);
 
-		// Token: 0x06010630 RID: 67120
+		// Token: 0x06004699 RID: 18073
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetScaleAtSplineInputKey_Internal(IntPtr @this, float InKey);
 
-		// Token: 0x06010631 RID: 67121
+		// Token: 0x0600469A RID: 18074
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetScaleAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x06010632 RID: 67122
+		// Token: 0x0600469B RID: 18075
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetRotationAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010633 RID: 67123
+		// Token: 0x0600469C RID: 18076
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetRotationAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010634 RID: 67124
+		// Token: 0x0600469D RID: 18077
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetRotationAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010635 RID: 67125
+		// Token: 0x0600469E RID: 18078
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetRotationAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010636 RID: 67126
+		// Token: 0x0600469F RID: 18079
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRollAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010637 RID: 67127
+		// Token: 0x060046A0 RID: 18080
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRollAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010638 RID: 67128
+		// Token: 0x060046A1 RID: 18081
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRollAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010639 RID: 67129
+		// Token: 0x060046A2 RID: 18082
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRollAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601063A RID: 67130
+		// Token: 0x060046A3 RID: 18083
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetRightVectorAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x0601063B RID: 67131
+		// Token: 0x060046A4 RID: 18084
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetRightVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601063C RID: 67132
+		// Token: 0x060046A5 RID: 18085
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetRightVectorAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601063D RID: 67133
+		// Token: 0x060046A6 RID: 18086
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetRightVectorAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601063E RID: 67134
+		// Token: 0x060046A7 RID: 18087
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetPoints_Internal(IntPtr @this);
 
-		// Token: 0x0601063F RID: 67135
+		// Token: 0x060046A8 RID: 18088
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumberOfSplineSegments_Internal(IntPtr @this);
 
-		// Token: 0x06010640 RID: 67136
+		// Token: 0x060046A9 RID: 18089
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumberOfSplinePoints_Internal(IntPtr @this);
 
-		// Token: 0x06010641 RID: 67137
+		// Token: 0x060046AA RID: 18090
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocationAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010642 RID: 67138
+		// Token: 0x060046AB RID: 18091
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010643 RID: 67139
+		// Token: 0x060046AC RID: 18092
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocationAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010644 RID: 67140
+		// Token: 0x060046AD RID: 18093
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocationAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010645 RID: 67141
+		// Token: 0x060046AE RID: 18094
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetLocationAndTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, ref FVector Location, ref FVector Tangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010646 RID: 67142
+		// Token: 0x060046AF RID: 18095
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLocationAndKeyAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, ref float Key);
 
-		// Token: 0x06010647 RID: 67143
+		// Token: 0x060046B0 RID: 18096
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetLocalLocationAndTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, ref FVector LocalLocation, ref FVector LocalTangent);
 
-		// Token: 0x06010648 RID: 67144
+		// Token: 0x060046B1 RID: 18097
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLeaveTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010649 RID: 67145
+		// Token: 0x060046B2 RID: 18098
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetInputKeyAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x0601064A RID: 67146
+		// Token: 0x060046B3 RID: 18099
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFloatPropertyAtSplinePoint_Internal(IntPtr @this, int Index, FName PropertyName);
 
-		// Token: 0x0601064B RID: 67147
+		// Token: 0x060046B4 RID: 18100
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFloatPropertyAtSplineInputKey_Internal(IntPtr @this, float InKey, FName PropertyName);
 
-		// Token: 0x0601064C RID: 67148
+		// Token: 0x060046B5 RID: 18101
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDistanceAlongSplineAtSplinePoint_Internal(IntPtr @this, int PointIndex);
 
-		// Token: 0x0601064D RID: 67149
+		// Token: 0x060046B6 RID: 18102
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetDistanceAlongSplineAtSplineInputKey_Internal(IntPtr @this, float InKey);
 
-		// Token: 0x0601064E RID: 67150
+		// Token: 0x060046B7 RID: 18103
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDirectionAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x0601064F RID: 67151
+		// Token: 0x060046B8 RID: 18104
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDirectionAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010650 RID: 67152
+		// Token: 0x060046B9 RID: 18105
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDirectionAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010651 RID: 67153
+		// Token: 0x060046BA RID: 18106
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDirectionAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010652 RID: 67154
+		// Token: 0x060046BB RID: 18107
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetDefaultUpVector_Internal(IntPtr @this, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010653 RID: 67155
+		// Token: 0x060046BC RID: 18108
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetArriveTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010654 RID: 67156
+		// Token: 0x060046BD RID: 18109
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindUpVectorClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010655 RID: 67157
+		// Token: 0x060046BE RID: 18110
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __FindTransformClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010656 RID: 67158
+		// Token: 0x060046BF RID: 18111
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindTangentClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010657 RID: 67159
+		// Token: 0x060046C0 RID: 18112
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindScaleClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation);
 
-		// Token: 0x06010658 RID: 67160
+		// Token: 0x060046C1 RID: 18113
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __FindRotationClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010659 RID: 67161
+		// Token: 0x060046C2 RID: 18114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __FindRollClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601065A RID: 67162
+		// Token: 0x060046C3 RID: 18115
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindRightVectorClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601065B RID: 67163
+		// Token: 0x060046C4 RID: 18116
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindLocationClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601065C RID: 67164
+		// Token: 0x060046C5 RID: 18117
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __FindInputKeyClosestToWorldLocationInRange_Internal(IntPtr @this, in FVector WorldLocation, int StartKey, int EndKey);
 
-		// Token: 0x0601065D RID: 67165
+		// Token: 0x060046C6 RID: 18118
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __FindInputKeyClosestToWorldLocationByPartitionInGravity_Internal(IntPtr @this, in FVector WorldLocation, FVector GravityDirect, float SearchRadius, float HeightLimit);
 
-		// Token: 0x0601065E RID: 67166
+		// Token: 0x060046C7 RID: 18119
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __FindInputKeyClosestToWorldLocationByPartition_Internal(IntPtr @this, in FVector WorldLocation, float SearchRadius);
 
-		// Token: 0x0601065F RID: 67167
+		// Token: 0x060046C8 RID: 18120
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __FindInputKeyClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation);
 
-		// Token: 0x06010660 RID: 67168
+		// Token: 0x060046C9 RID: 18121
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __FindDirectionClosestToWorldLocation_Internal(IntPtr @this, in FVector WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010661 RID: 67169
+		// Token: 0x060046CA RID: 18122
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetUpVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVectorDouble InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010662 RID: 67170
+		// Token: 0x060046CB RID: 18123
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetTangentsAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVectorDouble InArriveTangent, in FVectorDouble InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010663 RID: 67171
+		// Token: 0x060046CC RID: 18124
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVectorDouble InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010664 RID: 67172
+		// Token: 0x060046CD RID: 18125
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetSplinePoints_Internal(IntPtr @this, IntPtr Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010665 RID: 67173
+		// Token: 0x060046CE RID: 18126
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex, in FVectorDouble InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010666 RID: 67174
+		// Token: 0x060046CF RID: 18127
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetDefaultUpVector_Internal(IntPtr @this, in FVectorDouble UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010667 RID: 67175
+		// Token: 0x060046D0 RID: 18128
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetVectorPropertyAtSplinePoint_Internal(IntPtr @this, int Index, FName PropertyName);
 
-		// Token: 0x06010668 RID: 67176
+		// Token: 0x060046D1 RID: 18129
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetVectorPropertyAtSplineInputKey_Internal(IntPtr @this, float InKey, FName PropertyName);
 
-		// Token: 0x06010669 RID: 67177
+		// Token: 0x060046D2 RID: 18130
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetUpVectorAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x0601066A RID: 67178
+		// Token: 0x060046D3 RID: 18131
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetUpVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601066B RID: 67179
+		// Token: 0x060046D4 RID: 18132
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetUpVectorAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601066C RID: 67180
+		// Token: 0x060046D5 RID: 18133
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetUpVectorAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601066D RID: 67181
+		// Token: 0x060046D6 RID: 18134
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransformAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity, bool bUseScale);
 
-		// Token: 0x0601066E RID: 67182
+		// Token: 0x060046D7 RID: 18135
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransformAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x0601066F RID: 67183
+		// Token: 0x060046D8 RID: 18136
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransformAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010670 RID: 67184
+		// Token: 0x060046D9 RID: 18137
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_GetTransformAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010671 RID: 67185
+		// Token: 0x060046DA RID: 18138
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetTangentAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010672 RID: 67186
+		// Token: 0x060046DB RID: 18139
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010673 RID: 67187
+		// Token: 0x060046DC RID: 18140
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetTangentAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010674 RID: 67188
+		// Token: 0x060046DD RID: 18141
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetTangentAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010675 RID: 67189
+		// Token: 0x060046DE RID: 18142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetScaleAtDistanceAlongSpline_Internal(IntPtr @this, float Distance);
 
-		// Token: 0x06010676 RID: 67190
+		// Token: 0x060046DF RID: 18143
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetRightVectorAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010677 RID: 67191
+		// Token: 0x060046E0 RID: 18144
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetRightVectorAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010678 RID: 67192
+		// Token: 0x060046E1 RID: 18145
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetRightVectorAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010679 RID: 67193
+		// Token: 0x060046E2 RID: 18146
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetRightVectorAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601067A RID: 67194
+		// Token: 0x060046E3 RID: 18147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLocationAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x0601067B RID: 67195
+		// Token: 0x060046E4 RID: 18148
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLocationAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601067C RID: 67196
+		// Token: 0x060046E5 RID: 18149
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLocationAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601067D RID: 67197
+		// Token: 0x060046E6 RID: 18150
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLocationAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601067E RID: 67198
+		// Token: 0x060046E7 RID: 18151
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_GetLocationAndTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, ref FVectorDouble Location, ref FVectorDouble Tangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601067F RID: 67199
+		// Token: 0x060046E8 RID: 18152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLocationAndKeyAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, ref float Key);
 
-		// Token: 0x06010680 RID: 67200
+		// Token: 0x060046E9 RID: 18153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetLeaveTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010681 RID: 67201
+		// Token: 0x060046EA RID: 18154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetDirectionAtTime_Internal(IntPtr @this, float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
 
-		// Token: 0x06010682 RID: 67202
+		// Token: 0x060046EB RID: 18155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetDirectionAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010683 RID: 67203
+		// Token: 0x060046EC RID: 18156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetDirectionAtSplineInputKey_Internal(IntPtr @this, float InKey, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010684 RID: 67204
+		// Token: 0x060046ED RID: 18157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetDirectionAtDistanceAlongSpline_Internal(IntPtr @this, float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010685 RID: 67205
+		// Token: 0x060046EE RID: 18158
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetDefaultUpVector_Internal(IntPtr @this, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010686 RID: 67206
+		// Token: 0x060046EF RID: 18159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetArriveTangentAtSplinePoint_Internal(IntPtr @this, int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010687 RID: 67207
+		// Token: 0x060046F0 RID: 18160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_FindUpVectorClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010688 RID: 67208
+		// Token: 0x060046F1 RID: 18161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble __D_FindTransformClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
 
-		// Token: 0x06010689 RID: 67209
+		// Token: 0x060046F2 RID: 18162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_FindTangentClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601068A RID: 67210
+		// Token: 0x060046F3 RID: 18163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_FindRightVectorClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601068B RID: 67211
+		// Token: 0x060046F4 RID: 18164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_FindLocationClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x0601068C RID: 67212
+		// Token: 0x060046F5 RID: 18165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindInputKeyClosestToWorldLocationInRange_Internal(IntPtr @this, in FVectorDouble WorldLocation, int StartKey, int EndKey);
 
-		// Token: 0x0601068D RID: 67213
+		// Token: 0x060046F6 RID: 18166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindInputKeyClosestToWorldLocationInGravity_Internal(IntPtr @this, in FVectorDouble WorldLocation, FVector GravityDirect, float HeightLimit);
 
-		// Token: 0x0601068E RID: 67214
+		// Token: 0x060046F7 RID: 18167
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindInputKeyClosestToWorldLocationByPartitionInGravity_Internal(IntPtr @this, in FVectorDouble WorldLocation, FVector GravityDirect, float SearchRadius, float HeightLimit);
 
-		// Token: 0x0601068F RID: 67215
+		// Token: 0x060046F8 RID: 18168
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindInputKeyClosestToWorldLocationByPartition_Internal(IntPtr @this, in FVectorDouble WorldLocation, float SearchRadius);
 
-		// Token: 0x06010690 RID: 67216
+		// Token: 0x060046F9 RID: 18169
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindInputKeyClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation);
 
-		// Token: 0x06010691 RID: 67217
+		// Token: 0x060046FA RID: 18170
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_FindDirectionClosestToWorldLocation_Internal(IntPtr @this, in FVectorDouble WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 
-		// Token: 0x06010692 RID: 67218
+		// Token: 0x060046FB RID: 18171
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_AddSplinePointAtIndex_Internal(IntPtr @this, in FVectorDouble Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010693 RID: 67219
+		// Token: 0x060046FC RID: 18172
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_AddSplinePoint_Internal(IntPtr @this, in FVectorDouble Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010694 RID: 67220
+		// Token: 0x060046FD RID: 18173
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearSplinePoints_Internal(IntPtr @this, bool bUpdateSpline);
 
-		// Token: 0x06010695 RID: 67221
+		// Token: 0x060046FE RID: 18174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddSplineWorldPoint_Internal(IntPtr @this, in FVector Position);
 
-		// Token: 0x06010696 RID: 67222
+		// Token: 0x060046FF RID: 18175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddSplinePointAtIndex_Internal(IntPtr @this, in FVector Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010697 RID: 67223
+		// Token: 0x06004700 RID: 18176
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddSplinePoint_Internal(IntPtr @this, in FVector Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
 
-		// Token: 0x06010698 RID: 67224
+		// Token: 0x06004701 RID: 18177
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddSplineLocalPoint_Internal(IntPtr @this, in FVector Position);
 
-		// Token: 0x06010699 RID: 67225
+		// Token: 0x06004702 RID: 18178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddPoints_Internal(IntPtr @this, IntPtr Points, bool bUpdateSpline);
 
-		// Token: 0x0601069A RID: 67226
+		// Token: 0x06004703 RID: 18179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddPoint_Internal(IntPtr @this, IntPtr Point, bool bUpdateSpline);
 
-		// Token: 0x0601069B RID: 67227 RVA: 0x00181CB7 File Offset: 0x0017FEB7
+		// Token: 0x06004704 RID: 18180 RVA: 0x000639A7 File Offset: 0x00061BA7
 		static USplineComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.SplineComponent");
 		}
 
-		// Token: 0x0601069C RID: 67228 RVA: 0x00181CC5 File Offset: 0x0017FEC5
+		// Token: 0x06004705 RID: 18181 RVA: 0x000639B5 File Offset: 0x00061BB5
 		protected USplineComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008C7E RID: 35966
+		// Token: 0x04001B42 RID: 6978
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.SplineComponent";
 
-		// Token: 0x04008C7F RID: 35967
+		// Token: 0x04001B43 RID: 6979
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008C80 RID: 35968
+		// Token: 0x04001B44 RID: 6980
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008C81 RID: 35969
+		// Token: 0x04001B45 RID: 6981
 		internal static int __PropertyOffset_SplineCurves;
 
-		// Token: 0x04008C82 RID: 35970
+		// Token: 0x04001B46 RID: 6982
 		[Nullable(2)]
 		private FSplineCurves _SplineCurves;
 
-		// Token: 0x04008C83 RID: 35971
+		// Token: 0x04001B47 RID: 6983
 		internal static int __PropertyOffset_SplineInfo_DEPRECATED;
 
-		// Token: 0x04008C84 RID: 35972
+		// Token: 0x04001B48 RID: 6984
 		[Nullable(2)]
 		private FInterpCurveVector _SplineInfo_DEPRECATED;
 
-		// Token: 0x04008C85 RID: 35973
+		// Token: 0x04001B49 RID: 6985
 		internal static int __PropertyOffset_SplineRotInfo_DEPRECATED;
 
-		// Token: 0x04008C86 RID: 35974
+		// Token: 0x04001B4A RID: 6986
 		[Nullable(2)]
 		private FInterpCurveQuat _SplineRotInfo_DEPRECATED;
 
-		// Token: 0x04008C87 RID: 35975
+		// Token: 0x04001B4B RID: 6987
 		internal static int __PropertyOffset_SplineScaleInfo_DEPRECATED;
 
-		// Token: 0x04008C88 RID: 35976
+		// Token: 0x04001B4C RID: 6988
 		[Nullable(2)]
 		private FInterpCurveVector _SplineScaleInfo_DEPRECATED;
 
-		// Token: 0x04008C89 RID: 35977
+		// Token: 0x04001B4D RID: 6989
 		internal static int __PropertyOffset_SplineReparamTable_DEPRECATED;
 
-		// Token: 0x04008C8A RID: 35978
+		// Token: 0x04001B4E RID: 6990
 		[Nullable(2)]
 		private FInterpCurveFloat _SplineReparamTable_DEPRECATED;
 
-		// Token: 0x04008C8B RID: 35979
+		// Token: 0x04001B4F RID: 6991
 		internal static int __PropertyOffset_bAllowSplineEditingPerInstance_DEPRECATED;
 
-		// Token: 0x04008C8C RID: 35980
+		// Token: 0x04001B50 RID: 6992
 		internal static int __PropertyOffset_ReparamStepsPerSegment;
 
-		// Token: 0x04008C8D RID: 35981
+		// Token: 0x04001B51 RID: 6993
 		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x04008C8E RID: 35982
+		// Token: 0x04001B52 RID: 6994
 		internal static int __PropertyOffset_bStationaryEndpoints;
 
-		// Token: 0x04008C8F RID: 35983
+		// Token: 0x04001B53 RID: 6995
 		internal static int __PropertyOffset_bSplineHasBeenEdited;
 
-		// Token: 0x04008C90 RID: 35984
+		// Token: 0x04001B54 RID: 6996
 		internal static int __PropertyOffset_bModifiedByConstructionScript;
 
-		// Token: 0x04008C91 RID: 35985
+		// Token: 0x04001B55 RID: 6997
 		internal static int __PropertyOffset_bInputSplinePointsToConstructionScript;
 
-		// Token: 0x04008C92 RID: 35986
+		// Token: 0x04001B56 RID: 6998
 		internal static int __PropertyOffset_bDrawDebug;
 
-		// Token: 0x04008C93 RID: 35987
+		// Token: 0x04001B57 RID: 6999
 		internal static int __PropertyOffset_bClosedLoop;
 
-		// Token: 0x04008C94 RID: 35988
+		// Token: 0x04001B58 RID: 7000
 		internal static int __PropertyOffset_bLoopPositionOverride;
 
-		// Token: 0x04008C95 RID: 35989
+		// Token: 0x04001B59 RID: 7001
 		internal static int __PropertyOffset_LoopPosition;
 
-		// Token: 0x04008C96 RID: 35990
+		// Token: 0x04001B5A RID: 7002
 		internal static int __PropertyOffset_DefaultUpVector;
 	}
 }

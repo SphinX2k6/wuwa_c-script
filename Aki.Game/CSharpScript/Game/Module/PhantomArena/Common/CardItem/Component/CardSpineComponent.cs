@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F4 RID: 20980
+	// Token: 0x020041C4 RID: 16836
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 	})]
 	public class CardSpineComponent : CardComponentBase<ICardSpineComponentData>
 	{
-		// Token: 0x06035A8E RID: 219790 RVA: 0x00CB56CC File Offset: 0x00CB38CC
+		// Token: 0x0602A989 RID: 174473 RVA: 0x00C02D08 File Offset: 0x00C00F08
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			};
 		}
 
-		// Token: 0x06035A8F RID: 219791 RVA: 0x00CB56EF File Offset: 0x00CB38EF
+		// Token: 0x0602A98A RID: 174474 RVA: 0x00C02D2B File Offset: 0x00C00F2B
 		protected override void OnStart()
 		{
 			this.SetActive(true);
 		}
 
-		// Token: 0x06035A90 RID: 219792 RVA: 0x00CB56F8 File Offset: 0x00CB38F8
+		// Token: 0x0602A98B RID: 174475 RVA: 0x00C02D34 File Offset: 0x00C00F34
 		public override void Refresh(ICardSpineComponentData data)
 		{
 			CardSpineComponent.<>c__DisplayClass2_0 CS$<>8__locals1 = new CardSpineComponent.<>c__DisplayClass2_0();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			}, null).Run();
 		}
 
-		// Token: 0x06035A91 RID: 219793 RVA: 0x00CB5738 File Offset: 0x00CB3938
+		// Token: 0x0602A98C RID: 174476 RVA: 0x00C02D74 File Offset: 0x00C00F74
 		public UniTask RefreshAsync(ICardSpineComponentData data)
 		{
 			CardSpineComponent.<RefreshAsync>d__3 <RefreshAsync>d__;
@@ -61,11 +61,11 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200B373 RID: 45939
+		// Token: 0x02009DAB RID: 40363
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403662B RID: 222763
+			// Token: 0x0403107E RID: 200830
 			public const int CardSpine = 0;
 		}
 	}

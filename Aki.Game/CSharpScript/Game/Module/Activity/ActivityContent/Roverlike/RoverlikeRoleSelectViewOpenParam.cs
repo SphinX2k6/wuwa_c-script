@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200617F RID: 24959
+	// Token: 0x020050FD RID: 20733
 	public class RoverlikeRoleSelectViewOpenParam
 	{
-		// Token: 0x04020E49 RID: 134729
+		// Token: 0x0401B776 RID: 112502
 		public int DefaultRoleTypeId;
 
-		// Token: 0x04020E4A RID: 134730
+		// Token: 0x0401B777 RID: 112503
 		public int InstId;
 
-		// Token: 0x04020E4B RID: 134731
+		// Token: 0x0401B778 RID: 112504
 		[Nullable(2)]
 		public Action<int> OnConfirm;
 	}

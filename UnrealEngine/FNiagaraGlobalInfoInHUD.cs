@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020025AC RID: 9644
+	// Token: 0x020007A9 RID: 1961
 	[UnrealObjectPath("/Script/Niagara.NiagaraGlobalInfoInHUD")]
 	[UnrealStructLayout(32, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FNiagaraGlobalInfoInHUD : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06023D39 RID: 146745 RVA: 0x0034FCAC File Offset: 0x0034DEAC
+		// Token: 0x0600AA67 RID: 43623 RVA: 0x000FB5F1 File Offset: 0x000F97F1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FNiagaraGlobalInfoInHUD._ScriptStructPtr != 0) ? FNiagaraGlobalInfoInHUD._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Niagara.NiagaraGlobalInfoInHUD", ref FNiagaraGlobalInfoInHUD._ScriptStructPtr);
 		}
 
-		// Token: 0x170089B0 RID: 35248
-		// (get) Token: 0x06023D3A RID: 146746 RVA: 0x0034FCD0 File Offset: 0x0034DED0
-		// (set) Token: 0x06023D3B RID: 146747 RVA: 0x0034FCE0 File Offset: 0x0034DEE0
+		// Token: 0x17001FB4 RID: 8116
+		// (get) Token: 0x0600AA68 RID: 43624 RVA: 0x000FB615 File Offset: 0x000F9815
+		// (set) Token: 0x0600AA69 RID: 43625 RVA: 0x000FB625 File Offset: 0x000F9825
 		public unsafe int GlobalTotalActive
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B1 RID: 35249
-		// (get) Token: 0x06023D3C RID: 146748 RVA: 0x0034FCF1 File Offset: 0x0034DEF1
-		// (set) Token: 0x06023D3D RID: 146749 RVA: 0x0034FD01 File Offset: 0x0034DF01
+		// Token: 0x17001FB5 RID: 8117
+		// (get) Token: 0x0600AA6A RID: 43626 RVA: 0x000FB636 File Offset: 0x000F9836
+		// (set) Token: 0x0600AA6B RID: 43627 RVA: 0x000FB646 File Offset: 0x000F9846
 		public unsafe int GlobalTotalScalability
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B2 RID: 35250
-		// (get) Token: 0x06023D3E RID: 146750 RVA: 0x0034FD12 File Offset: 0x0034DF12
-		// (set) Token: 0x06023D3F RID: 146751 RVA: 0x0034FD22 File Offset: 0x0034DF22
+		// Token: 0x17001FB6 RID: 8118
+		// (get) Token: 0x0600AA6C RID: 43628 RVA: 0x000FB657 File Offset: 0x000F9857
+		// (set) Token: 0x0600AA6D RID: 43629 RVA: 0x000FB667 File Offset: 0x000F9867
 		public unsafe int GlobalTotalEmitters
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B3 RID: 35251
-		// (get) Token: 0x06023D40 RID: 146752 RVA: 0x0034FD33 File Offset: 0x0034DF33
-		// (set) Token: 0x06023D41 RID: 146753 RVA: 0x0034FD43 File Offset: 0x0034DF43
+		// Token: 0x17001FB7 RID: 8119
+		// (get) Token: 0x0600AA6E RID: 43630 RVA: 0x000FB678 File Offset: 0x000F9878
+		// (set) Token: 0x0600AA6F RID: 43631 RVA: 0x000FB688 File Offset: 0x000F9888
 		public unsafe int GlobalTotalParticles
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B4 RID: 35252
-		// (get) Token: 0x06023D42 RID: 146754 RVA: 0x0034FD54 File Offset: 0x0034DF54
-		// (set) Token: 0x06023D43 RID: 146755 RVA: 0x0034FD64 File Offset: 0x0034DF64
+		// Token: 0x17001FB8 RID: 8120
+		// (get) Token: 0x0600AA70 RID: 43632 RVA: 0x000FB699 File Offset: 0x000F9899
+		// (set) Token: 0x0600AA71 RID: 43633 RVA: 0x000FB6A9 File Offset: 0x000F98A9
 		public unsafe int GlobalTotalBatchActive
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B5 RID: 35253
-		// (get) Token: 0x06023D44 RID: 146756 RVA: 0x0034FD75 File Offset: 0x0034DF75
-		// (set) Token: 0x06023D45 RID: 146757 RVA: 0x0034FD85 File Offset: 0x0034DF85
+		// Token: 0x17001FB9 RID: 8121
+		// (get) Token: 0x0600AA72 RID: 43634 RVA: 0x000FB6BA File Offset: 0x000F98BA
+		// (set) Token: 0x0600AA73 RID: 43635 RVA: 0x000FB6CA File Offset: 0x000F98CA
 		public unsafe int GlobalTotalBatchScalability
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B6 RID: 35254
-		// (get) Token: 0x06023D46 RID: 146758 RVA: 0x0034FD96 File Offset: 0x0034DF96
-		// (set) Token: 0x06023D47 RID: 146759 RVA: 0x0034FDA6 File Offset: 0x0034DFA6
+		// Token: 0x17001FBA RID: 8122
+		// (get) Token: 0x0600AA74 RID: 43636 RVA: 0x000FB6DB File Offset: 0x000F98DB
+		// (set) Token: 0x0600AA75 RID: 43637 RVA: 0x000FB6EB File Offset: 0x000F98EB
 		public unsafe int GlobalTotalBatchEmitters
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170089B7 RID: 35255
-		// (get) Token: 0x06023D48 RID: 146760 RVA: 0x0034FDB7 File Offset: 0x0034DFB7
-		// (set) Token: 0x06023D49 RID: 146761 RVA: 0x0034FDC7 File Offset: 0x0034DFC7
+		// Token: 0x17001FBB RID: 8123
+		// (get) Token: 0x0600AA76 RID: 43638 RVA: 0x000FB6FC File Offset: 0x000F98FC
+		// (set) Token: 0x0600AA77 RID: 43639 RVA: 0x000FB70C File Offset: 0x000F990C
 		public unsafe int GlobalTotalBatchParticles
 		{
 			get
@@ -136,84 +136,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06023D4A RID: 146762 RVA: 0x0034FDD8 File Offset: 0x0034DFD8
+		// Token: 0x0600AA78 RID: 43640 RVA: 0x000FB71D File Offset: 0x000F991D
 		public FNiagaraGlobalInfoInHUD()
 		{
 		}
 
-		// Token: 0x06023D4B RID: 146763 RVA: 0x0034FDE0 File Offset: 0x0034DFE0
-		public FNiagaraGlobalInfoInHUD(int GlobalTotalActive, int GlobalTotalScalability, int GlobalTotalEmitters, int GlobalTotalParticles, int GlobalTotalBatchActive, int GlobalTotalBatchScalability, int GlobalTotalBatchEmitters, int GlobalTotalBatchParticles)
-		{
-			this.GlobalTotalActive = GlobalTotalActive;
-			this.GlobalTotalScalability = GlobalTotalScalability;
-			this.GlobalTotalEmitters = GlobalTotalEmitters;
-			this.GlobalTotalParticles = GlobalTotalParticles;
-			this.GlobalTotalBatchActive = GlobalTotalBatchActive;
-			this.GlobalTotalBatchScalability = GlobalTotalBatchScalability;
-			this.GlobalTotalBatchEmitters = GlobalTotalBatchEmitters;
-			this.GlobalTotalBatchParticles = GlobalTotalBatchParticles;
-		}
-
-		// Token: 0x06023D4C RID: 146764 RVA: 0x0034FE30 File Offset: 0x0034E030
+		// Token: 0x0600AA79 RID: 43641 RVA: 0x000FB725 File Offset: 0x000F9925
 		protected override IntPtr GetUStructPtr()
 		{
 			return FNiagaraGlobalInfoInHUD.StaticStruct();
 		}
 
-		// Token: 0x06023D4D RID: 146765 RVA: 0x0034FE3C File Offset: 0x0034E03C
+		// Token: 0x0600AA7A RID: 43642 RVA: 0x000FB731 File Offset: 0x000F9931
 		[NullableContext(2)]
 		public FNiagaraGlobalInfoInHUD(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06023D4E RID: 146766 RVA: 0x0034FE46 File Offset: 0x0034E046
+		// Token: 0x0600AA7B RID: 43643 RVA: 0x000FB73B File Offset: 0x000F993B
 		public FNiagaraGlobalInfoInHUD(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06023D4F RID: 146767 RVA: 0x0034FE51 File Offset: 0x0034E051
+		// Token: 0x0600AA7C RID: 43644 RVA: 0x000FB746 File Offset: 0x000F9946
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FNiagaraGlobalInfoInHUD(Pointer, false, true);
 		}
 
-		// Token: 0x06023D50 RID: 146768 RVA: 0x0034FE5B File Offset: 0x0034E05B
+		// Token: 0x0600AA7D RID: 43645 RVA: 0x000FB750 File Offset: 0x000F9950
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FNiagaraGlobalInfoInHUD(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013363 RID: 78691
+		// Token: 0x040048F1 RID: 18673
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Niagara.NiagaraGlobalInfoInHUD";
 
-		// Token: 0x04013364 RID: 78692
+		// Token: 0x040048F2 RID: 18674
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013365 RID: 78693
+		// Token: 0x040048F3 RID: 18675
 		internal static int __PropertyOffset_GlobalTotalActive;
 
-		// Token: 0x04013366 RID: 78694
+		// Token: 0x040048F4 RID: 18676
 		internal static int __PropertyOffset_GlobalTotalScalability;
 
-		// Token: 0x04013367 RID: 78695
+		// Token: 0x040048F5 RID: 18677
 		internal static int __PropertyOffset_GlobalTotalEmitters;
 
-		// Token: 0x04013368 RID: 78696
+		// Token: 0x040048F6 RID: 18678
 		internal static int __PropertyOffset_GlobalTotalParticles;
 
-		// Token: 0x04013369 RID: 78697
+		// Token: 0x040048F7 RID: 18679
 		internal static int __PropertyOffset_GlobalTotalBatchActive;
 
-		// Token: 0x0401336A RID: 78698
+		// Token: 0x040048F8 RID: 18680
 		internal static int __PropertyOffset_GlobalTotalBatchScalability;
 
-		// Token: 0x0401336B RID: 78699
+		// Token: 0x040048F9 RID: 18681
 		internal static int __PropertyOffset_GlobalTotalBatchEmitters;
 
-		// Token: 0x0401336C RID: 78700
+		// Token: 0x040048FA RID: 18682
 		internal static int __PropertyOffset_GlobalTotalBatchParticles;
 	}
 }

@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200610E RID: 24846
+	// Token: 0x0200508C RID: 20620
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeSubViewBlessingSuitPreview : RoverlikeActionSubViewBase
 	{
-		// Token: 0x17009178 RID: 37240
-		// (get) Token: 0x0603ED06 RID: 257286 RVA: 0x00F2B86E File Offset: 0x00F29A6E
+		// Token: 0x170064DA RID: 25818
+		// (get) Token: 0x060339C8 RID: 211400 RVA: 0x00E72682 File Offset: 0x00E70882
 		public override ERoverActionSubViewType SubViewType
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009179 RID: 37241
-		// (get) Token: 0x0603ED07 RID: 257287 RVA: 0x00F2B871 File Offset: 0x00F29A71
+		// Token: 0x170064DB RID: 25819
+		// (get) Token: 0x060339C9 RID: 211401 RVA: 0x00E72685 File Offset: 0x00E70885
 		public override string ResourceId
 		{
 			get
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ED08 RID: 257288 RVA: 0x00F2B878 File Offset: 0x00F29A78
+		// Token: 0x060339CA RID: 211402 RVA: 0x00E7268C File Offset: 0x00E7088C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ED09 RID: 257289 RVA: 0x00F2B8E1 File Offset: 0x00F29AE1
+		// Token: 0x060339CB RID: 211403 RVA: 0x00E726F5 File Offset: 0x00E708F5
 		protected override void OnStart()
 		{
 			this.BlessingSuitLayout = new GenericLayout<RoverlikeBlessingSuitItem, IRoverlikeBlessingSuitData>(base.GetHorizontalLayout(0), new Func<RoverlikeBlessingSuitItem>(this.CreateBlessingSuitItem), null, false, true);
 		}
 
-		// Token: 0x0603ED0A RID: 257290 RVA: 0x00F2B904 File Offset: 0x00F29B04
+		// Token: 0x060339CC RID: 211404 RVA: 0x00E72718 File Offset: 0x00E70918
 		private RoverlikeBlessingSuitItem CreateBlessingSuitItem()
 		{
 			RoverlikeBlessingSuitItem roverlikeBlessingSuitItem = new RoverlikeBlessingSuitItem();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeBlessingSuitItem;
 		}
 
-		// Token: 0x0603ED0B RID: 257291 RVA: 0x00F2B920 File Offset: 0x00F29B20
+		// Token: 0x060339CD RID: 211405 RVA: 0x00E72734 File Offset: 0x00E70934
 		private void OnSuitItemClick(IRoverlikeBlessingSuitData data)
 		{
 			List<IRoverlikeBlessingSuitData> list = this.OpenParam as List<IRoverlikeBlessingSuitData>;
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			RoverlikeController.Instance.FinishActionSubView(this.IncId);
 		}
 
-		// Token: 0x0603ED0C RID: 257292 RVA: 0x00F2B985 File Offset: 0x00F29B85
+		// Token: 0x060339CE RID: 211406 RVA: 0x00E72799 File Offset: 0x00E70999
 		private void RefreshBlessingSuitLayout(List<IRoverlikeBlessingSuitData> dataList)
 		{
 			this.BlessingSuitLayout.RefreshByData(dataList, new Action(this.OnBlessingSuitLayoutRefreshed), true);
 		}
 
-		// Token: 0x0603ED0D RID: 257293 RVA: 0x00F2B9A0 File Offset: 0x00F29BA0
+		// Token: 0x060339CF RID: 211407 RVA: 0x00E727B4 File Offset: 0x00E709B4
 		private void OnBlessingSuitLayoutRefreshed()
 		{
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "RoverlikeBlessingSuitPreview");
 		}
 
-		// Token: 0x0603ED0E RID: 257294 RVA: 0x00F2B9B8 File Offset: 0x00F29BB8
+		// Token: 0x060339D0 RID: 211408 RVA: 0x00E727CC File Offset: 0x00E709CC
 		public override void OnRefreshSubView()
 		{
 			List<IRoverlikeBlessingSuitData> list = this.OpenParam as List<IRoverlikeBlessingSuitData>;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020D04 RID: 134404
+		// Token: 0x0401B631 RID: 112177
 		[Nullable(new byte[]
 		{
 			2,
@@ -110,14 +110,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeBlessingSuitItem, IRoverlikeBlessingSuitData> BlessingSuitLayout;
 
-		// Token: 0x0200C366 RID: 50022
+		// Token: 0x0200AD4E RID: 44366
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AF7C RID: 241532
+			// Token: 0x040358E1 RID: 219361
 			public const int BlessingSuitLayout = 0;
 
-			// Token: 0x0403AF7D RID: 241533
+			// Token: 0x040358E2 RID: 219362
 			public const int BlessingSuitItem = 1;
 		}
 	}

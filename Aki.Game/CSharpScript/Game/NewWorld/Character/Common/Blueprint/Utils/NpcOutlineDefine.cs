@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Blueprint.Utils
 {
-	// Token: 0x0200715C RID: 29020
+	// Token: 0x0200631B RID: 25371
 	public class NpcOutlineDefine
 	{
-		// Token: 0x040252D5 RID: 152277
+		// Token: 0x04020912 RID: 133394
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly string[] npcOutlineMaterials = new string[]

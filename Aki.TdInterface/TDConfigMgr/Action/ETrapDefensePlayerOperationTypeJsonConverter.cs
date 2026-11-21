@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002486 RID: 9350
+	// Token: 0x02002729 RID: 10025
 	public class ETrapDefensePlayerOperationTypeJsonConverter : JsonConverter<ETrapDefensePlayerOperationType>
 	{
-		// Token: 0x0600CADB RID: 51931 RVA: 0x001DDBC8 File Offset: 0x001DBDC8
+		// Token: 0x0600D794 RID: 55188 RVA: 0x001F7D90 File Offset: 0x001F5F90
 		public override ETrapDefensePlayerOperationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETrapDefensePlayerOperationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CADC RID: 51932 RVA: 0x001DDBEC File Offset: 0x001DBDEC
+		// Token: 0x0600D795 RID: 55189 RVA: 0x001F7DB4 File Offset: 0x001F5FB4
 		public override void Write(Utf8JsonWriter writer, ETrapDefensePlayerOperationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

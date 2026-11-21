@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A97 RID: 6807
+// Token: 0x02000F56 RID: 3926
 [NullableContext(1)]
 [Nullable(0)]
 public class ExploreLevelView : UiTickViewBase
 {
-	// Token: 0x0600C909 RID: 51465 RVA: 0x002DDCC0 File Offset: 0x002DBEC0
+	// Token: 0x06009D1A RID: 40218 RVA: 0x002E8E0C File Offset: 0x002E700C
 	public ExploreLevelView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C90A RID: 51466 RVA: 0x002DDCCC File Offset: 0x002DBECC
+	// Token: 0x06009D1B RID: 40219 RVA: 0x002E8E18 File Offset: 0x002E7018
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -70,7 +70,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C90B RID: 51467 RVA: 0x002DDF4C File Offset: 0x002DC14C
+	// Token: 0x06009D1C RID: 40220 RVA: 0x002E9098 File Offset: 0x002E7298
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ExploreLevelView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -81,7 +81,7 @@ public class ExploreLevelView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C90C RID: 51468 RVA: 0x002DDF90 File Offset: 0x002DC190
+	// Token: 0x06009D1D RID: 40221 RVA: 0x002E90DC File Offset: 0x002E72DC
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollView<CommonItemSmallItemGrid>(base.GetScrollViewWithScrollbar(5), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<CommonItemSmallItemGrid>(this.OnCreateRewardItemGrid), null);
@@ -91,7 +91,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.RefreshExploreLevelItemScrollView();
 	}
 
-	// Token: 0x0600C90D RID: 51469 RVA: 0x002DE000 File Offset: 0x002DC200
+	// Token: 0x06009D1E RID: 40222 RVA: 0x002E914C File Offset: 0x002E734C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnExploreScoreRewardResponse, new Action(this.OnExploreScoreRewardResponse));
@@ -101,7 +101,7 @@ public class ExploreLevelView : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600C90E RID: 51470 RVA: 0x002DE094 File Offset: 0x002DC294
+	// Token: 0x06009D1F RID: 40223 RVA: 0x002E91E0 File Offset: 0x002E73E0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnExploreScoreRewardResponse, new Action(this.OnExploreScoreRewardResponse));
@@ -111,7 +111,7 @@ public class ExploreLevelView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600C90F RID: 51471 RVA: 0x002DE126 File Offset: 0x002DC326
+	// Token: 0x06009D20 RID: 40224 RVA: 0x002E9272 File Offset: 0x002E7472
 	protected override void OnBeforeDestroy()
 	{
 		GenericScrollView<CommonItemSmallItemGrid> rewardScrollView = this.RewardScrollView;
@@ -129,18 +129,18 @@ public class ExploreLevelView : UiTickViewBase
 		this.CountryExploreLevelData = null;
 	}
 
-	// Token: 0x0600C910 RID: 51472 RVA: 0x002DE15F File Offset: 0x002DC35F
+	// Token: 0x06009D21 RID: 40225 RVA: 0x002E92AB File Offset: 0x002E74AB
 	private void OnClickCloseButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ExploreLevelView, null);
 	}
 
-	// Token: 0x0600C911 RID: 51473 RVA: 0x002DE171 File Offset: 0x002DC371
+	// Token: 0x06009D22 RID: 40226 RVA: 0x002E92BD File Offset: 0x002E74BD
 	private void OnExploreScoreRewardResponse()
 	{
 	}
 
-	// Token: 0x0600C912 RID: 51474 RVA: 0x002DE174 File Offset: 0x002DC374
+	// Token: 0x06009D23 RID: 40227 RVA: 0x002E92C0 File Offset: 0x002E74C0
 	private void OnCountryExploreScoreInfoResponse()
 	{
 		this.RefreshExploreLevelItemScrollView();
@@ -154,7 +154,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.PlayProgressBar(this.CurrentExploreScore, this.CurrentMaxExploreScore, exploreScore, maxExploreScore);
 	}
 
-	// Token: 0x0600C913 RID: 51475 RVA: 0x002DE1C0 File Offset: 0x002DC3C0
+	// Token: 0x06009D24 RID: 40228 RVA: 0x002E930C File Offset: 0x002E750C
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsProgressBarPlaying)
@@ -188,7 +188,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.AnimationCurrentAnimationTime += delta;
 	}
 
-	// Token: 0x0600C914 RID: 51476 RVA: 0x002DE2B3 File Offset: 0x002DC4B3
+	// Token: 0x06009D25 RID: 40229 RVA: 0x002E93FF File Offset: 0x002E75FF
 	private void PlayProgressBar(int exploreScore, int maxExploreScore, int targetExploreScore, int targetMaxExploreScore)
 	{
 		this.AnimationCurrentExploreScore = exploreScore;
@@ -199,20 +199,20 @@ public class ExploreLevelView : UiTickViewBase
 		this.IsProgressBarPlaying = true;
 	}
 
-	// Token: 0x0600C915 RID: 51477 RVA: 0x002DE2E4 File Offset: 0x002DC4E4
+	// Token: 0x06009D26 RID: 40230 RVA: 0x002E9430 File Offset: 0x002E7630
 	private void SetPausePlayProgressBar(bool bPause)
 	{
 		this.IsPausePlayProgressBar = bPause;
 	}
 
-	// Token: 0x0600C916 RID: 51478 RVA: 0x002DE2ED File Offset: 0x002DC4ED
+	// Token: 0x06009D27 RID: 40231 RVA: 0x002E9439 File Offset: 0x002E7639
 	private void StopProgressBar()
 	{
 		this.IsProgressBarPlaying = false;
 		this.AnimationCurrentAnimationTime = 0f;
 	}
 
-	// Token: 0x0600C917 RID: 51479 RVA: 0x002DE304 File Offset: 0x002DC504
+	// Token: 0x06009D28 RID: 40232 RVA: 0x002E9450 File Offset: 0x002E7650
 	private void ActivateGetExpNiagara()
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(14);
@@ -224,7 +224,7 @@ public class ExploreLevelView : UiTickViewBase
 		uiNiagara.SetUIActive(true);
 	}
 
-	// Token: 0x0600C918 RID: 51480 RVA: 0x002DE334 File Offset: 0x002DC534
+	// Token: 0x06009D29 RID: 40233 RVA: 0x002E9480 File Offset: 0x002E7680
 	private void OnExploreLevelNotify()
 	{
 		this.CountryExploreLevelData = ExploreLevelModel.Instance.GetCurrentCountryExploreLevelData();
@@ -239,7 +239,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.PlayProgressBar(this.CurrentExploreScore, this.CurrentMaxExploreScore, exploreScore, maxExploreScore);
 	}
 
-	// Token: 0x0600C919 RID: 51481 RVA: 0x002DE399 File Offset: 0x002DC599
+	// Token: 0x06009D2A RID: 40234 RVA: 0x002E94E5 File Offset: 0x002E76E5
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.ExploreLevelRewardView)
@@ -249,7 +249,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.SetPausePlayProgressBar(true);
 	}
 
-	// Token: 0x0600C91A RID: 51482 RVA: 0x002DE3B0 File Offset: 0x002DC5B0
+	// Token: 0x06009D2B RID: 40235 RVA: 0x002E94FC File Offset: 0x002E76FC
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName != EUiViewName.ExploreLevelRewardView)
@@ -259,7 +259,7 @@ public class ExploreLevelView : UiTickViewBase
 		this.SetPausePlayProgressBar(false);
 	}
 
-	// Token: 0x0600C91B RID: 51483 RVA: 0x002DE3C8 File Offset: 0x002DC5C8
+	// Token: 0x06009D2C RID: 40236 RVA: 0x002E9514 File Offset: 0x002E7714
 	private ILayoutItem<CommonItemSmallItemGrid> OnCreateRewardItemGrid(object rawData, UUIItem uiItem, int index)
 	{
 		ValueTuple<int, int> valueTuple = (ValueTuple<int, int>)rawData;
@@ -273,7 +273,7 @@ public class ExploreLevelView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600C91C RID: 51484 RVA: 0x002DE420 File Offset: 0x002DC620
+	// Token: 0x06009D2D RID: 40237 RVA: 0x002E956C File Offset: 0x002E776C
 	private ExploreLevelItem OnCreateExploreLevelItem()
 	{
 		ExploreLevelItem exploreLevelItem = new ExploreLevelItem();
@@ -281,7 +281,7 @@ public class ExploreLevelView : UiTickViewBase
 		return exploreLevelItem;
 	}
 
-	// Token: 0x0600C91D RID: 51485 RVA: 0x002DE43C File Offset: 0x002DC63C
+	// Token: 0x06009D2E RID: 40238 RVA: 0x002E9588 File Offset: 0x002E7788
 	private void OnClickedReceiveButton(CountryExploreScoreData countryExploreScoreData)
 	{
 		ExploreLevelView.<>c__DisplayClass35_0 CS$<>8__locals1 = new ExploreLevelView.<>c__DisplayClass35_0();
@@ -300,7 +300,7 @@ public class ExploreLevelView : UiTickViewBase
 		ExploreLevelController.Instance.CountryExploreScoreInfoRequest(CS$<>8__locals1.countryExploreScoreData.CountryId, new Action(CS$<>8__locals1.<OnClickedReceiveButton>g__OnCountryExploreScoreInfoResponse|0));
 	}
 
-	// Token: 0x0600C91E RID: 51486 RVA: 0x002DE4F0 File Offset: 0x002DC6F0
+	// Token: 0x06009D2F RID: 40239 RVA: 0x002E963C File Offset: 0x002E783C
 	private void OnClickRewardPreviewButton()
 	{
 		UiManager.Instance.OpenView(EUiViewName.ExploreLevelPreviewView, this.CountryExploreLevelData, delegate(bool success, int viewId)
@@ -313,7 +313,7 @@ public class ExploreLevelView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600C91F RID: 51487 RVA: 0x002DE513 File Offset: 0x002DC713
+	// Token: 0x06009D30 RID: 40240 RVA: 0x002E965F File Offset: 0x002E785F
 	private void RefreshScoreDisplay()
 	{
 		this.RefreshLevelText();
@@ -321,14 +321,14 @@ public class ExploreLevelView : UiTickViewBase
 		this.RefreshRewardScrollView();
 	}
 
-	// Token: 0x0600C920 RID: 51488 RVA: 0x002DE528 File Offset: 0x002DC728
+	// Token: 0x06009D31 RID: 40241 RVA: 0x002E9674 File Offset: 0x002E7874
 	private void RefreshLevelText()
 	{
 		string scoreNameId = this.CurrentExploreLevelRewardData.GetScoreNameId();
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), scoreNameId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600C921 RID: 51489 RVA: 0x002DE55C File Offset: 0x002DC75C
+	// Token: 0x06009D32 RID: 40242 RVA: 0x002E96A8 File Offset: 0x002E78A8
 	private void RefreshScoreTexture()
 	{
 		string scoreTexturePath = this.CurrentExploreLevelRewardData.GetScoreTexturePath();
@@ -336,7 +336,7 @@ public class ExploreLevelView : UiTickViewBase
 		base.SetTextureByPath(scoreTexturePath, texture, null, null);
 	}
 
-	// Token: 0x0600C922 RID: 51490 RVA: 0x002DE590 File Offset: 0x002DC790
+	// Token: 0x06009D33 RID: 40243 RVA: 0x002E96DC File Offset: 0x002E78DC
 	private void RefreshScoreProgress()
 	{
 		int maxExploreScore = this.CurrentExploreLevelRewardData.GetMaxExploreScore();
@@ -351,7 +351,7 @@ public class ExploreLevelView : UiTickViewBase
 		base.GetItem(11).SetUIActive(true);
 	}
 
-	// Token: 0x0600C923 RID: 51491 RVA: 0x002DE600 File Offset: 0x002DC800
+	// Token: 0x06009D34 RID: 40244 RVA: 0x002E974C File Offset: 0x002E794C
 	private void SetExploreScoreDisplay(int exploreScore, int maxExploreScore)
 	{
 		int num = Math.Min(maxExploreScore, exploreScore);
@@ -364,7 +364,7 @@ public class ExploreLevelView : UiTickViewBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600C924 RID: 51492 RVA: 0x002DE664 File Offset: 0x002DC864
+	// Token: 0x06009D35 RID: 40245 RVA: 0x002E97B0 File Offset: 0x002E79B0
 	private void RefreshRewardScrollView()
 	{
 		CountryExploreLevelRewardData exploreLevelRewardData = this.CountryExploreLevelData.GetExploreLevelRewardData(this.CurrentExploreLevelRewardData.GetExploreLevel() + 1);
@@ -400,7 +400,7 @@ public class ExploreLevelView : UiTickViewBase
 		base.GetItem(13).SetUIActive(false);
 	}
 
-	// Token: 0x0600C925 RID: 51493 RVA: 0x002DE750 File Offset: 0x002DC950
+	// Token: 0x06009D36 RID: 40246 RVA: 0x002E989C File Offset: 0x002E7A9C
 	private void RefreshExploreLevelItemScrollView()
 	{
 		List<CountryExploreScoreData> visibleExploreScoreDataList = this.CountryExploreLevelData.GetVisibleExploreScoreDataList();
@@ -436,18 +436,18 @@ public class ExploreLevelView : UiTickViewBase
 		exploreLevelItemScrollView.ReloadData(visibleExploreScoreDataList, false);
 	}
 
-	// Token: 0x04005C91 RID: 23697
+	// Token: 0x04005D60 RID: 23904
 	private const int PLAY_PROGRESS_BAR_TIME = 300;
 
-	// Token: 0x04005C92 RID: 23698
+	// Token: 0x04005D61 RID: 23905
 	[Nullable(2)]
 	private CountryExploreLevelData CountryExploreLevelData;
 
-	// Token: 0x04005C93 RID: 23699
+	// Token: 0x04005D62 RID: 23906
 	[Nullable(2)]
 	private CountryExploreLevelRewardData CurrentExploreLevelRewardData;
 
-	// Token: 0x04005C94 RID: 23700
+	// Token: 0x04005D63 RID: 23907
 	[Nullable(new byte[]
 	{
 		2,
@@ -455,7 +455,7 @@ public class ExploreLevelView : UiTickViewBase
 	})]
 	private GenericScrollView<CommonItemSmallItemGrid> RewardScrollView;
 
-	// Token: 0x04005C95 RID: 23701
+	// Token: 0x04005D64 RID: 23908
 	[Nullable(new byte[]
 	{
 		2,
@@ -464,66 +464,66 @@ public class ExploreLevelView : UiTickViewBase
 	})]
 	private LoopScrollView<ExploreLevelItem, CountryExploreScoreData> ExploreLevelItemScrollView;
 
-	// Token: 0x04005C96 RID: 23702
+	// Token: 0x04005D65 RID: 23909
 	private int CurrentExploreScore;
 
-	// Token: 0x04005C97 RID: 23703
+	// Token: 0x04005D66 RID: 23910
 	private int CurrentMaxExploreScore;
 
-	// Token: 0x04005C98 RID: 23704
+	// Token: 0x04005D67 RID: 23911
 	private int AnimationCurrentExploreScore;
 
-	// Token: 0x04005C99 RID: 23705
+	// Token: 0x04005D68 RID: 23912
 	private int AnimationCurrentMaxExploreScore;
 
-	// Token: 0x04005C9A RID: 23706
+	// Token: 0x04005D69 RID: 23913
 	private int AnimationTargetExploreScore;
 
-	// Token: 0x04005C9B RID: 23707
+	// Token: 0x04005D6A RID: 23914
 	private int AnimationTargetMaxExploreScore;
 
-	// Token: 0x04005C9C RID: 23708
+	// Token: 0x04005D6B RID: 23915
 	private float AnimationCurrentAnimationTime;
 
-	// Token: 0x04005C9D RID: 23709
+	// Token: 0x04005D6C RID: 23916
 	private bool IsProgressBarPlaying;
 
-	// Token: 0x04005C9E RID: 23710
+	// Token: 0x04005D6D RID: 23917
 	private bool IsPausePlayProgressBar;
 
-	// Token: 0x02007FF8 RID: 32760
+	// Token: 0x02007187 RID: 29063
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029C7D RID: 171133
+		// Token: 0x04024FB7 RID: 151479
 		CountryNameText,
-		// Token: 0x04029C7E RID: 171134
+		// Token: 0x04024FB8 RID: 151480
 		ScoreTexture,
-		// Token: 0x04029C7F RID: 171135
+		// Token: 0x04024FB9 RID: 151481
 		ScoreProgressBarSprite,
-		// Token: 0x04029C80 RID: 171136
+		// Token: 0x04024FBA RID: 151482
 		ScoreItemTexture,
-		// Token: 0x04029C81 RID: 171137
+		// Token: 0x04024FBB RID: 151483
 		ScoreCostText,
-		// Token: 0x04029C82 RID: 171138
+		// Token: 0x04024FBC RID: 151484
 		ScoreRewardScrollViewWithScrollBar,
-		// Token: 0x04029C83 RID: 171139
+		// Token: 0x04024FBD RID: 151485
 		RewardPreviewButton,
-		// Token: 0x04029C84 RID: 171140
+		// Token: 0x04024FBE RID: 151486
 		ExploreProgressText,
-		// Token: 0x04029C85 RID: 171141
+		// Token: 0x04024FBF RID: 151487
 		ScoreItemLoopScrollView,
-		// Token: 0x04029C86 RID: 171142
+		// Token: 0x04024FC0 RID: 151488
 		SourceExploreLevelItem,
-		// Token: 0x04029C87 RID: 171143
+		// Token: 0x04024FC1 RID: 151489
 		CloseButton,
-		// Token: 0x04029C88 RID: 171144
+		// Token: 0x04024FC2 RID: 151490
 		ExpItem,
-		// Token: 0x04029C89 RID: 171145
+		// Token: 0x04024FC3 RID: 151491
 		LevelText,
-		// Token: 0x04029C8A RID: 171146
+		// Token: 0x04024FC4 RID: 151492
 		DoneItem,
-		// Token: 0x04029C8B RID: 171147
+		// Token: 0x04024FC5 RID: 151493
 		GetExpNiagara
 	}
 }

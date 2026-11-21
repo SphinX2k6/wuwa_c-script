@@ -3,14 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000240 RID: 576
+	// Token: 0x02000267 RID: 615
 	public class IChildStateChangedConfig_SetValue
 	{
-		// Token: 0x04000A50 RID: 2640
-		[Nullable(1)]
+		// Token: 0x04000ADA RID: 2778
 		public string State;
 
-		// Token: 0x04000A51 RID: 2641
+		// Token: 0x04000ADB RID: 2779
 		[Nullable(2)]
 		public IDelayChangeState DelayChangeState;
 	}

@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055C2 RID: 21954
+	// Token: 0x02004598 RID: 17816
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridsConstructor : IGridsConstructor
 	{
-		// Token: 0x170086D8 RID: 34520
-		// (get) Token: 0x06037F68 RID: 229224 RVA: 0x00D423FA File Offset: 0x00D405FA
-		// (set) Token: 0x06037F69 RID: 229225 RVA: 0x00D42402 File Offset: 0x00D40602
+		// Token: 0x17005A9F RID: 23199
+		// (get) Token: 0x0602CE66 RID: 183910 RVA: 0x00C90142 File Offset: 0x00C8E342
+		// (set) Token: 0x0602CE67 RID: 183911 RVA: 0x00C9014A File Offset: 0x00C8E34A
 		public List<IPathNode> Matrix { get; set; }
 
-		// Token: 0x170086D9 RID: 34521
-		// (get) Token: 0x06037F6A RID: 229226 RVA: 0x00D4240B File Offset: 0x00D4060B
-		// (set) Token: 0x06037F6B RID: 229227 RVA: 0x00D42413 File Offset: 0x00D40613
+		// Token: 0x17005AA0 RID: 23200
+		// (get) Token: 0x0602CE68 RID: 183912 RVA: 0x00C90153 File Offset: 0x00C8E353
+		// (set) Token: 0x0602CE69 RID: 183913 RVA: 0x00C9015B File Offset: 0x00C8E35B
 		public int Width { get; set; }
 
-		// Token: 0x170086DA RID: 34522
-		// (get) Token: 0x06037F6C RID: 229228 RVA: 0x00D4241C File Offset: 0x00D4061C
-		// (set) Token: 0x06037F6D RID: 229229 RVA: 0x00D42424 File Offset: 0x00D40624
+		// Token: 0x17005AA1 RID: 23201
+		// (get) Token: 0x0602CE6A RID: 183914 RVA: 0x00C90164 File Offset: 0x00C8E364
+		// (set) Token: 0x0602CE6B RID: 183915 RVA: 0x00C9016C File Offset: 0x00C8E36C
 		public int Height { get; set; }
 	}
 }

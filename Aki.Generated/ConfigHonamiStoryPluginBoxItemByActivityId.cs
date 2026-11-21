@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003FB RID: 1019
+	// Token: 0x02000411 RID: 1041
 	public class ConfigHonamiStoryPluginBoxItemByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060017E9 RID: 6121 RVA: 0x000E0E18 File Offset: 0x000DF018
+		// Token: 0x0600186D RID: 6253 RVA: 0x000E756C File Offset: 0x000E576C
 		static ConfigHonamiStoryPluginBoxItemByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryPluginBoxItemByActivityId.CreateStaticDefaultValue), new Action(ConfigHonamiStoryPluginBoxItemByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060017EA RID: 6122 RVA: 0x000E0E38 File Offset: 0x000DF038
+		// Token: 0x0600186E RID: 6254 RVA: 0x000E758C File Offset: 0x000E578C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryPluginBoxItemByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060017EB RID: 6123 RVA: 0x000E0EB7 File Offset: 0x000DF0B7
+		// Token: 0x0600186F RID: 6255 RVA: 0x000E760B File Offset: 0x000E580B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryPluginBoxItemByActivityId.LogPair = null;
 			ConfigHonamiStoryPluginBoxItemByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x060017EC RID: 6124 RVA: 0x000E0EC5 File Offset: 0x000DF0C5
+		// Token: 0x06001870 RID: 6256 RVA: 0x000E7619 File Offset: 0x000E5819
 		public static void Init()
 		{
 			ConfigHonamiStoryPluginBoxItemByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryPluginBoxItemByActivityId.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryPluginBoxItem` where ActivityId=?");
 		}
 
-		// Token: 0x060017ED RID: 6125 RVA: 0x000E0EE0 File Offset: 0x000DF0E0
+		// Token: 0x06001871 RID: 6257 RVA: 0x000E7634 File Offset: 0x000E5834
 		[NullableContext(2)]
 		public static IReadOnlyList<HonamiStoryPluginBoxItem> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001BC1 RID: 7105
+		// Token: 0x04001C5B RID: 7259
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001BC2 RID: 7106
+		// Token: 0x04001C5C RID: 7260
 		private const string FILE = "s.穗波奇妙物语道具.xlsx";
 
-		// Token: 0x04001BC3 RID: 7107
+		// Token: 0x04001C5D RID: 7261
 		private const string TABLE = "HonamiStoryPluginBoxItem";
 
-		// Token: 0x04001BC4 RID: 7108
+		// Token: 0x04001C5E RID: 7262
 		private const string COMMAND = "select BinData from `HonamiStoryPluginBoxItem` where ActivityId=?";
 
-		// Token: 0x04001BC5 RID: 7109
+		// Token: 0x04001C5F RID: 7263
 		private const string KEY_PREFIX = "HonamiStoryPluginBoxItemByActivityId";
 
-		// Token: 0x04001BC6 RID: 7110
+		// Token: 0x04001C60 RID: 7264
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001BC7 RID: 7111
+		// Token: 0x04001C61 RID: 7265
 		private static int HandleId;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC9 RID: 2761
+	// Token: 0x02000B93 RID: 2963
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityMatch
 	{
-		// Token: 0x06003F92 RID: 16274 RVA: 0x000A25D2 File Offset: 0x000A07D2
-		[NullableContext(1)]
+		// Token: 0x060043BC RID: 17340 RVA: 0x000ABBC6 File Offset: 0x000A9DC6
+		[NullableContext(0)]
 		public static IEntityMatch Create(IEntityMatch? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FBD RID: 4029
-		// (get) Token: 0x06003F93 RID: 16275 RVA: 0x000A25F4 File Offset: 0x000A07F4
+		// Token: 0x17001091 RID: 4241
+		// (get) Token: 0x060043BD RID: 17341 RVA: 0x000ABBE8 File Offset: 0x000A9DE8
 		public virtual bool? AllCharacter
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FBE RID: 4030
-		// (get) Token: 0x06003F94 RID: 16276 RVA: 0x000A262C File Offset: 0x000A082C
+		// Token: 0x17001092 RID: 4242
+		// (get) Token: 0x060043BE RID: 17342 RVA: 0x000ABC20 File Offset: 0x000A9E20
 		public virtual bool? OnlyPlayer
 		{
 			get
@@ -52,19 +52,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FBF RID: 4031
-		// (get) Token: 0x06003F95 RID: 16277 RVA: 0x000A2664 File Offset: 0x000A0864
+		// Token: 0x17001093 RID: 4243
+		// (get) Token: 0x060043BF RID: 17343 RVA: 0x000ABC58 File Offset: 0x000A9E58
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityCategory> Categories
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -87,8 +87,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FC0 RID: 4032
-		// (get) Token: 0x06003F96 RID: 16278 RVA: 0x000A26E0 File Offset: 0x000A08E0
+		// Token: 0x17001094 RID: 4244
+		// (get) Token: 0x060043C0 RID: 17344 RVA: 0x000ABCD4 File Offset: 0x000A9ED4
 		public virtual List<int> EntityIds
 		{
 			get
@@ -112,19 +112,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FC1 RID: 4033
-		// (get) Token: 0x06003F97 RID: 16279 RVA: 0x000A2758 File Offset: 0x000A0958
+		// Token: 0x17001095 RID: 4245
+		// (get) Token: 0x060043C1 RID: 17345 RVA: 0x000ABD4C File Offset: 0x000A9F4C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityState> States
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -147,19 +147,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FC2 RID: 4034
-		// (get) Token: 0x06003F98 RID: 16280 RVA: 0x000A27D4 File Offset: 0x000A09D4
+		// Token: 0x17001096 RID: 4246
+		// (get) Token: 0x060043C2 RID: 17346 RVA: 0x000ABDC8 File Offset: 0x000A9FC8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> PerformanceStates
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -182,46 +182,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002354 RID: 9044
+		// Token: 0x04002570 RID: 9584
 		private IEntityMatch Instance;
 
-		// Token: 0x04002355 RID: 9045
+		// Token: 0x04002571 RID: 9585
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityCategory> _CategoriesCache;
 
-		// Token: 0x04002356 RID: 9046
+		// Token: 0x04002572 RID: 9586
 		private bool _CategoriesInited;
 
-		// Token: 0x04002357 RID: 9047
+		// Token: 0x04002573 RID: 9587
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04002358 RID: 9048
+		// Token: 0x04002574 RID: 9588
 		private bool _EntityIdsInited;
 
-		// Token: 0x04002359 RID: 9049
+		// Token: 0x04002575 RID: 9589
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityState> _StatesCache;
 
-		// Token: 0x0400235A RID: 9050
+		// Token: 0x04002576 RID: 9590
 		private bool _StatesInited;
 
-		// Token: 0x0400235B RID: 9051
+		// Token: 0x04002577 RID: 9591
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _PerformanceStatesCache;
 
-		// Token: 0x0400235C RID: 9052
+		// Token: 0x04002578 RID: 9592
 		private bool _PerformanceStatesInited;
 	}
 }

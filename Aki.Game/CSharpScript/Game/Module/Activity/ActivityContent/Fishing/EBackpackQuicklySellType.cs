@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065DD RID: 26077
+	// Token: 0x0200555B RID: 21851
 	public enum EBackpackQuicklySellType
 	{
-		// Token: 0x0402205A RID: 139354
+		// Token: 0x0401C98B RID: 117131
 		Full,
-		// Token: 0x0402205B RID: 139355
+		// Token: 0x0401C98C RID: 117132
 		RangeError,
-		// Token: 0x0402205C RID: 139356
+		// Token: 0x0401C98D RID: 117133
 		ItemError
 	}
 }

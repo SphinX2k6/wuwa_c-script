@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FB9 RID: 4025
+// Token: 0x0200046E RID: 1134
 [NullableContext(2)]
 [Nullable(0)]
 public class FurnitureAreaCameraSelectionItem : UiPanelBase
 {
-	// Token: 0x06006723 RID: 26403 RVA: 0x00146484 File Offset: 0x00144684
+	// Token: 0x06003ABB RID: 15035 RVA: 0x0014ED48 File Offset: 0x0014CF48
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,14 +28,14 @@ public class FurnitureAreaCameraSelectionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006724 RID: 26404 RVA: 0x0014655B File Offset: 0x0014475B
+	// Token: 0x06003ABC RID: 15036 RVA: 0x0014EE1F File Offset: 0x0014D01F
 	[NullableContext(1)]
 	public void Refresh(string name)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), name, Array.Empty<object>());
 	}
 
-	// Token: 0x06006725 RID: 26405 RVA: 0x00146574 File Offset: 0x00144774
+	// Token: 0x06003ABD RID: 15037 RVA: 0x0014EE38 File Offset: 0x0014D038
 	private void OnClickPreBtn()
 	{
 		Action preBtnClickDelegate = this.PreBtnClickDelegate;
@@ -46,7 +46,7 @@ public class FurnitureAreaCameraSelectionItem : UiPanelBase
 		preBtnClickDelegate();
 	}
 
-	// Token: 0x06006726 RID: 26406 RVA: 0x00146586 File Offset: 0x00144786
+	// Token: 0x06003ABE RID: 15038 RVA: 0x0014EE4A File Offset: 0x0014D04A
 	private void OnClickNextBtn()
 	{
 		Action nextBtnClickDelegate = this.NextBtnClickDelegate;
@@ -57,9 +57,9 @@ public class FurnitureAreaCameraSelectionItem : UiPanelBase
 		nextBtnClickDelegate();
 	}
 
-	// Token: 0x04002EBC RID: 11964
+	// Token: 0x04002F55 RID: 12117
 	public Action PreBtnClickDelegate;
 
-	// Token: 0x04002EBD RID: 11965
+	// Token: 0x04002F56 RID: 12118
 	public Action NextBtnClickDelegate;
 }

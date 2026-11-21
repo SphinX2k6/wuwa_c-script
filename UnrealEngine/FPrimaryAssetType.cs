@@ -5,21 +5,21 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200075D RID: 1885
+	// Token: 0x02000143 RID: 323
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Script/CoreUObject.PrimaryAssetType")]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 12)]
 	public class FPrimaryAssetType : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600636C RID: 25452 RVA: 0x0008EBEB File Offset: 0x0008CDEB
+		// Token: 0x060012C6 RID: 4806 RVA: 0x0001DB05 File Offset: 0x0001BD05
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPrimaryAssetType._ScriptStructPtr != 0) ? FPrimaryAssetType._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.PrimaryAssetType", ref FPrimaryAssetType._ScriptStructPtr);
 		}
 
-		// Token: 0x170017A9 RID: 6057
-		// (get) Token: 0x0600636D RID: 25453 RVA: 0x0008EC0F File Offset: 0x0008CE0F
-		// (set) Token: 0x0600636E RID: 25454 RVA: 0x0008EC23 File Offset: 0x0008CE23
+		// Token: 0x170001DA RID: 474
+		// (get) Token: 0x060012C7 RID: 4807 RVA: 0x0001DB29 File Offset: 0x0001BD29
+		// (set) Token: 0x060012C8 RID: 4808 RVA: 0x0001DB3D File Offset: 0x0001BD3D
 		public unsafe FName Name
 		{
 			get
@@ -32,56 +32,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600636F RID: 25455 RVA: 0x0008EC38 File Offset: 0x0008CE38
+		// Token: 0x060012C9 RID: 4809 RVA: 0x0001DB52 File Offset: 0x0001BD52
 		public FPrimaryAssetType()
 		{
 		}
 
-		// Token: 0x06006370 RID: 25456 RVA: 0x0008EC40 File Offset: 0x0008CE40
-		public FPrimaryAssetType(FName Name)
-		{
-			this.Name = Name;
-		}
-
-		// Token: 0x06006371 RID: 25457 RVA: 0x0008EC4F File Offset: 0x0008CE4F
+		// Token: 0x060012CA RID: 4810 RVA: 0x0001DB5A File Offset: 0x0001BD5A
 		protected override IntPtr GetUStructPtr()
 		{
 			return FPrimaryAssetType.StaticStruct();
 		}
 
-		// Token: 0x06006372 RID: 25458 RVA: 0x0008EC5B File Offset: 0x0008CE5B
+		// Token: 0x060012CB RID: 4811 RVA: 0x0001DB66 File Offset: 0x0001BD66
 		[NullableContext(2)]
 		public FPrimaryAssetType(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06006373 RID: 25459 RVA: 0x0008EC65 File Offset: 0x0008CE65
+		// Token: 0x060012CC RID: 4812 RVA: 0x0001DB70 File Offset: 0x0001BD70
 		public FPrimaryAssetType(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06006374 RID: 25460 RVA: 0x0008EC70 File Offset: 0x0008CE70
+		// Token: 0x060012CD RID: 4813 RVA: 0x0001DB7B File Offset: 0x0001BD7B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FPrimaryAssetType(Pointer, false, true);
 		}
 
-		// Token: 0x06006375 RID: 25461 RVA: 0x0008EC7A File Offset: 0x0008CE7A
+		// Token: 0x060012CE RID: 4814 RVA: 0x0001DB85 File Offset: 0x0001BD85
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FPrimaryAssetType(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04002FA5 RID: 12197
+		// Token: 0x040005DB RID: 1499
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/CoreUObject.PrimaryAssetType";
 
-		// Token: 0x04002FA6 RID: 12198
+		// Token: 0x040005DC RID: 1500
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04002FA7 RID: 12199
+		// Token: 0x040005DD RID: 1501
 		internal static int __PropertyOffset_Name;
 	}
 }

@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BB2 RID: 2994
+	// Token: 0x02000C80 RID: 3200
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcStandbyShowLooply : INpcStandbyShowMode
 	{
-		// Token: 0x060044AA RID: 17578 RVA: 0x000AE599 File Offset: 0x000AC799
-		[NullableContext(1)]
+		// Token: 0x06004903 RID: 18691 RVA: 0x000B865D File Offset: 0x000B685D
+		[NullableContext(0)]
 		public static INpcStandbyShowLooply Create(INpcStandbyShowLooply? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001303 RID: 4867
-		// (get) Token: 0x060044AB RID: 17579 RVA: 0x000AE5B8 File Offset: 0x000AC7B8
+		// Token: 0x170013FE RID: 5118
+		// (get) Token: 0x06004904 RID: 18692 RVA: 0x000B867C File Offset: 0x000B687C
 		public override ENpcStandbyShowMode Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001304 RID: 4868
-		// (get) Token: 0x060044AC RID: 17580 RVA: 0x000AE5C8 File Offset: 0x000AC7C8
+		// Token: 0x170013FF RID: 5119
+		// (get) Token: 0x06004905 RID: 18693 RVA: 0x000B868C File Offset: 0x000B688C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<INpcLookAtConfig> LookAtConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,8 +70,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001305 RID: 4869
-		// (get) Token: 0x060044AD RID: 17581 RVA: 0x000AE642 File Offset: 0x000AC842
+		// Token: 0x17001400 RID: 5120
+		// (get) Token: 0x06004906 RID: 18694 RVA: 0x000B8706 File Offset: 0x000B6906
 		public virtual string Montage
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001306 RID: 4870
-		// (get) Token: 0x060044AE RID: 17582 RVA: 0x000AE64F File Offset: 0x000AC84F
+		// Token: 0x17001401 RID: 5121
+		// (get) Token: 0x06004907 RID: 18695 RVA: 0x000B8713 File Offset: 0x000B6913
 		public virtual IMontageId RegisteredMontageId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001307 RID: 4871
-		// (get) Token: 0x060044AF RID: 17583 RVA: 0x000AE684 File Offset: 0x000AC884
+		// Token: 0x17001402 RID: 5122
+		// (get) Token: 0x06004908 RID: 18696 RVA: 0x000B8748 File Offset: 0x000B6948
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001308 RID: 4872
-		// (get) Token: 0x060044B0 RID: 17584 RVA: 0x000AE6BA File Offset: 0x000AC8BA
+		// Token: 0x17001403 RID: 5123
+		// (get) Token: 0x06004909 RID: 18697 RVA: 0x000B877E File Offset: 0x000B697E
 		public virtual IIgnoreEntityIdsCollision IgnoreEntityCollision
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001309 RID: 4873
-		// (get) Token: 0x060044B1 RID: 17585 RVA: 0x000AE6F0 File Offset: 0x000AC8F0
+		// Token: 0x17001404 RID: 5124
+		// (get) Token: 0x0600490A RID: 18698 RVA: 0x000B87B4 File Offset: 0x000B69B4
 		public virtual bool? SetFadeInTimeToZero
 		{
 			get
@@ -140,30 +140,30 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026D3 RID: 9939
+		// Token: 0x0400291B RID: 10523
 		private INpcStandbyShowLooply Instance;
 
-		// Token: 0x040026D4 RID: 9940
+		// Token: 0x0400291C RID: 10524
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x040026D5 RID: 9941
+		// Token: 0x0400291D RID: 10525
 		private bool _LookAtConfigsInited;
 
-		// Token: 0x040026D6 RID: 9942
+		// Token: 0x0400291E RID: 10526
 		private IMontageId _RegisteredMontageIdCache;
 
-		// Token: 0x040026D7 RID: 9943
+		// Token: 0x0400291F RID: 10527
 		private bool _RegisteredMontageIdInited;
 
-		// Token: 0x040026D8 RID: 9944
+		// Token: 0x04002920 RID: 10528
 		private IIgnoreEntityIdsCollision _IgnoreEntityCollisionCache;
 
-		// Token: 0x040026D9 RID: 9945
+		// Token: 0x04002921 RID: 10529
 		private bool _IgnoreEntityCollisionInited;
 	}
 }

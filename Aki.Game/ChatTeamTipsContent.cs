@@ -6,10 +6,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017A7 RID: 6055
+// Token: 0x02000C60 RID: 3168
 public class ChatTeamTipsContent : UiPanelBase
 {
-	// Token: 0x0600B078 RID: 45176 RVA: 0x0027E044 File Offset: 0x0027C244
+	// Token: 0x06008460 RID: 33888 RVA: 0x002885DC File Offset: 0x002867DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -29,7 +29,7 @@ public class ChatTeamTipsContent : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B079 RID: 45177 RVA: 0x0027E110 File Offset: 0x0027C310
+	// Token: 0x06008461 RID: 33889 RVA: 0x002886A8 File Offset: 0x002868A8
 	[NullableContext(1)]
 	public void Refresh(ChatContentData data)
 	{
@@ -61,7 +61,7 @@ public class ChatTeamTipsContent : UiPanelBase
 		this.RefreshTimeText();
 	}
 
-	// Token: 0x0600B07A RID: 45178 RVA: 0x0027E1D8 File Offset: 0x0027C3D8
+	// Token: 0x06008462 RID: 33890 RVA: 0x00288770 File Offset: 0x00286970
 	private void RefreshTimeText()
 	{
 		UUIText text = base.GetText(0);
@@ -113,26 +113,26 @@ public class ChatTeamTipsContent : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x04005024 RID: 20516
+	// Token: 0x040050CE RID: 20686
 	[Nullable(2)]
 	private ChatContentData ChatContentData;
 
-	// Token: 0x02007DB8 RID: 32184
+	// Token: 0x02006F3E RID: 28478
 	private class EChildType
 	{
-		// Token: 0x04029283 RID: 168579
+		// Token: 0x040245AE RID: 148910
 		public const int TimeText = 0;
 
-		// Token: 0x04029284 RID: 168580
+		// Token: 0x040245AF RID: 148911
 		public const int LeaveItem = 1;
 
-		// Token: 0x04029285 RID: 168581
+		// Token: 0x040245B0 RID: 148912
 		public const int LeaveText = 2;
 
-		// Token: 0x04029286 RID: 168582
+		// Token: 0x040245B1 RID: 148913
 		public const int EnterItem = 3;
 
-		// Token: 0x04029287 RID: 168583
+		// Token: 0x040245B2 RID: 148914
 		public const int EnterText = 4;
 	}
 }

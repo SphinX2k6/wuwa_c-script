@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043B4 RID: 17332
+	// Token: 0x02004816 RID: 18454
 	public class IOccupationExportConfigT
 	{
-		// Token: 0x17007A97 RID: 31383
-		// (get) Token: 0x06019D5E RID: 105822 RVA: 0x003B2DEE File Offset: 0x003B0FEE
-		// (set) Token: 0x06019D5F RID: 105823 RVA: 0x003B2DF6 File Offset: 0x003B0FF6
+		// Token: 0x170080CE RID: 32974
+		// (get) Token: 0x0601B4F7 RID: 111863 RVA: 0x003DEA42 File Offset: 0x003DCC42
+		// (set) Token: 0x0601B4F8 RID: 111864 RVA: 0x003DEA4A File Offset: 0x003DCC4A
 		public string Id { get; set; }
 
-		// Token: 0x17007A98 RID: 31384
-		// (get) Token: 0x06019D60 RID: 105824 RVA: 0x003B2DFF File Offset: 0x003B0FFF
-		// (set) Token: 0x06019D61 RID: 105825 RVA: 0x003B2E07 File Offset: 0x003B1007
+		// Token: 0x170080CF RID: 32975
+		// (get) Token: 0x0601B4F9 RID: 111865 RVA: 0x003DEA53 File Offset: 0x003DCC53
+		// (set) Token: 0x0601B4FA RID: 111866 RVA: 0x003DEA5B File Offset: 0x003DCC5B
 		public string NameStringKey { get; set; }
 
-		// Token: 0x17007A99 RID: 31385
-		// (get) Token: 0x06019D62 RID: 105826 RVA: 0x003B2E10 File Offset: 0x003B1010
-		// (set) Token: 0x06019D63 RID: 105827 RVA: 0x003B2E18 File Offset: 0x003B1018
+		// Token: 0x170080D0 RID: 32976
+		// (get) Token: 0x0601B4FB RID: 111867 RVA: 0x003DEA64 File Offset: 0x003DCC64
+		// (set) Token: 0x0601B4FC RID: 111868 RVA: 0x003DEA6C File Offset: 0x003DCC6C
 		public string Name { get; set; }
 
-		// Token: 0x06019D64 RID: 105828 RVA: 0x003B2E21 File Offset: 0x003B1021
+		// Token: 0x0601B4FD RID: 111869 RVA: 0x003DEA75 File Offset: 0x003DCC75
 		public IOccupationExportConfigT()
 		{
 			this.Id = null;

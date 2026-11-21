@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000916 RID: 2326
+	// Token: 0x020009C3 RID: 2499
 	public static class EConveyorBeltFieldTypeExtensions
 	{
-		// Token: 0x06003494 RID: 13460 RVA: 0x00089B08 File Offset: 0x00087D08
+		// Token: 0x06003800 RID: 14336 RVA: 0x00091688 File Offset: 0x0008F888
 		public static string ToEnumString(this EConveyorBeltFieldType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003495 RID: 13461 RVA: 0x00089B40 File Offset: 0x00087D40
+		// Token: 0x06003801 RID: 14337 RVA: 0x000916C0 File Offset: 0x0008F8C0
 		public static EConveyorBeltFieldType FromString(string name)
 		{
 			EConveyorBeltFieldType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003496 RID: 13462 RVA: 0x00089B69 File Offset: 0x00087D69
+		// Token: 0x06003802 RID: 14338 RVA: 0x000916E9 File Offset: 0x0008F8E9
 		public static bool TryFromString(string name, out EConveyorBeltFieldType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003497 RID: 13463 RVA: 0x00089BA2 File Offset: 0x00087DA2
+		// Token: 0x06003803 RID: 14339 RVA: 0x00091722 File Offset: 0x0008F922
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003498 RID: 13464 RVA: 0x00089BBA File Offset: 0x00087DBA
+		// Token: 0x06003804 RID: 14340 RVA: 0x0009173A File Offset: 0x0008F93A
 		public static EConveyorBeltFieldType[] GetValues()
 		{
 			return new EConveyorBeltFieldType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003499 RID: 13465 RVA: 0x00089BC6 File Offset: 0x00087DC6
+		// Token: 0x06003805 RID: 14341 RVA: 0x00091746 File Offset: 0x0008F946
 		public static string[] GetNames()
 		{
 			return new string[]

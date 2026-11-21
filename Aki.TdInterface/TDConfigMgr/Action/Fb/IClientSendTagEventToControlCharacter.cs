@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F1 RID: 9969
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029B7 RID: 10679
 	public class IClientSendTagEventToControlCharacter : IExecClientBattleActionType
 	{
-		// Token: 0x0600DE9E RID: 56990 RVA: 0x0021062E File Offset: 0x0020E82E
+		// Token: 0x0600EC85 RID: 60549 RVA: 0x0022CF64 File Offset: 0x0022B164
 		public static IClientSendTagEventToControlCharacter Create(IClientSendTagEventToControlCharacter? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700427E RID: 17022
-		// (get) Token: 0x0600DE9F RID: 56991 RVA: 0x0021064D File Offset: 0x0020E84D
+		// Token: 0x170045C5 RID: 17861
+		// (get) Token: 0x0600EC86 RID: 60550 RVA: 0x0022CF83 File Offset: 0x0022B183
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700427F RID: 17023
-		// (get) Token: 0x0600DEA0 RID: 56992 RVA: 0x0021065C File Offset: 0x0020E85C
+		// Token: 0x170045C6 RID: 17862
+		// (get) Token: 0x0600EC87 RID: 60551 RVA: 0x0022CF90 File Offset: 0x0022B190
 		public virtual List<string> EventTags
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B93 RID: 31635
+		// Token: 0x04008237 RID: 33335
 		private IClientSendTagEventToControlCharacter Instance;
 
-		// Token: 0x04007B94 RID: 31636
+		// Token: 0x04008238 RID: 33336
 		private List<string> _EventTagsCache;
 
-		// Token: 0x04007B95 RID: 31637
+		// Token: 0x04008239 RID: 33337
 		private bool _EventTagsInited;
 	}
 }

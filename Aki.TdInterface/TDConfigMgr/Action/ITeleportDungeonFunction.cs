@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F98 RID: 8088
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020021DB RID: 8667
 	public class ITeleportDungeonFunction : EnableFunction
 	{
-		// Token: 0x0600B1DA RID: 45530 RVA: 0x0019EBEC File Offset: 0x0019CDEC
-		[NullableContext(1)]
+		// Token: 0x0600BCDE RID: 48350 RVA: 0x001B4F9C File Offset: 0x001B319C
 		private ITeleportDungeonFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1DB RID: 45531 RVA: 0x0019EC24 File Offset: 0x0019CE24
-		[NullableContext(1)]
+		// Token: 0x0600BCDF RID: 48351 RVA: 0x001B4FD4 File Offset: 0x001B31D4
 		public static ITeleportDungeonFunction Create([Nullable(2)] ITeleportDungeonFunction instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1DC RID: 45532 RVA: 0x0019EC37 File Offset: 0x0019CE37
-		[NullableContext(1)]
+		// Token: 0x0600BCE0 RID: 48352 RVA: 0x001B4FE7 File Offset: 0x001B31E7
 		public static ITeleportDungeonFunction CreateFromSetValue([Nullable(2)] ITeleportDungeonFunction_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1DD RID: 45533 RVA: 0x0019EC4A File Offset: 0x0019CE4A
-		[NullableContext(1)]
+		// Token: 0x0600BCE1 RID: 48353 RVA: 0x001B4FFA File Offset: 0x001B31FA
 		public new ITeleportDungeonFunction_SetValue ToSetValue()
 		{
 			return new ITeleportDungeonFunction_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036E1 RID: 14049
-		// (get) Token: 0x0600B1DE RID: 45534 RVA: 0x0019EC75 File Offset: 0x0019CE75
-		// (set) Token: 0x0600B1DF RID: 45535 RVA: 0x0019ECA0 File Offset: 0x0019CEA0
+		// Token: 0x170039B6 RID: 14774
+		// (get) Token: 0x0600BCE2 RID: 48354 RVA: 0x001B5025 File Offset: 0x001B3225
+		// (set) Token: 0x0600BCE3 RID: 48355 RVA: 0x001B5050 File Offset: 0x001B3250
 		public override EEnableFunctionType Type
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036E2 RID: 14050
-		// (get) Token: 0x0600B1E0 RID: 45536 RVA: 0x0019ECAE File Offset: 0x0019CEAE
-		// (set) Token: 0x0600B1E1 RID: 45537 RVA: 0x0019ECD9 File Offset: 0x0019CED9
+		// Token: 0x170039B7 RID: 14775
+		// (get) Token: 0x0600BCE4 RID: 48356 RVA: 0x001B505E File Offset: 0x001B325E
+		// (set) Token: 0x0600BCE5 RID: 48357 RVA: 0x001B5089 File Offset: 0x001B3289
 		public virtual bool Enable
 		{
 			get
@@ -108,11 +102,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036E3 RID: 14051
-		// (get) Token: 0x0600B1E2 RID: 45538 RVA: 0x0019ECE7 File Offset: 0x0019CEE7
-		// (set) Token: 0x0600B1E3 RID: 45539 RVA: 0x0019ED0E File Offset: 0x0019CF0E
+		// Token: 0x170039B8 RID: 14776
+		// (get) Token: 0x0600BCE6 RID: 48358 RVA: 0x001B5097 File Offset: 0x001B3297
+		// (set) Token: 0x0600BCE7 RID: 48359 RVA: 0x001B50BE File Offset: 0x001B32BE
+		[Nullable(2)]
 		public virtual List<int> DungeonList
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -126,16 +122,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.DungeonList;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().DungeonList = value;
 			}
 		}
 
-		// Token: 0x04006B78 RID: 27512
+		// Token: 0x04007173 RID: 29043
+		[Nullable(2)]
 		protected new ITeleportDungeonFunction FbInstance;
 
-		// Token: 0x04006B79 RID: 27513
+		// Token: 0x04007174 RID: 29044
+		[Nullable(2)]
 		protected new ITeleportDungeonFunction_SetValue PocoInterface;
 	}
 }

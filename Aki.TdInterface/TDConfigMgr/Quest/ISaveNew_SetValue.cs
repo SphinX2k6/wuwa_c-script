@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001125 RID: 4389
+	// Token: 0x02001253 RID: 4691
 	public class ISaveNew_SetValue
 	{
-		// Token: 0x04003B65 RID: 15205
+		// Token: 0x04003EB3 RID: 16051
 		public ESaveConfig Type;
 	}
 }

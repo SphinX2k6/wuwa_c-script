@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F4B RID: 28491
+	// Token: 0x02007705 RID: 30469
 	public enum IScreenType_Union : byte
 	{
-		// Token: 0x04011942 RID: 72002
+		// Token: 0x0401291A RID: 76058
 		NONE,
-		// Token: 0x04011943 RID: 72003
+		// Token: 0x0401291B RID: 76059
 		IScreenType,
-		// Token: 0x04011944 RID: 72004
+		// Token: 0x0401291C RID: 76060
 		IMainScreen,
-		// Token: 0x04011945 RID: 72005
+		// Token: 0x0401291D RID: 76061
 		ISubScreen
 	}
 }

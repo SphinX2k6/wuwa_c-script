@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001744 RID: 5956
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018C5 RID: 6341
 	public class HideSpecificEntities : ActionParams
 	{
-		// Token: 0x06007E0F RID: 32271 RVA: 0x0012E0B8 File Offset: 0x0012C2B8
+		// Token: 0x060084FF RID: 34047 RVA: 0x0013D318 File Offset: 0x0013B518
 		private HideSpecificEntities_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E10 RID: 32272 RVA: 0x0012E0F0 File Offset: 0x0012C2F0
+		// Token: 0x06008500 RID: 34048 RVA: 0x0013D350 File Offset: 0x0013B550
 		public static HideSpecificEntities Create([Nullable(2)] HideSpecificEntities instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E11 RID: 32273 RVA: 0x0012E103 File Offset: 0x0012C303
+		// Token: 0x06008501 RID: 34049 RVA: 0x0013D363 File Offset: 0x0013B563
 		public static HideSpecificEntities CreateFromSetValue([Nullable(2)] HideSpecificEntities_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E12 RID: 32274 RVA: 0x0012E116 File Offset: 0x0012C316
+		// Token: 0x06008502 RID: 34050 RVA: 0x0013D376 File Offset: 0x0013B576
 		public HideSpecificEntities_SetValue ToSetValue()
 		{
 			return new HideSpecificEntities_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002975 RID: 10613
-		// (get) Token: 0x06007E13 RID: 32275 RVA: 0x0012E129 File Offset: 0x0012C329
-		// (set) Token: 0x06007E14 RID: 32276 RVA: 0x0012E150 File Offset: 0x0012C350
+		// Token: 0x17002B63 RID: 11107
+		// (get) Token: 0x06008503 RID: 34051 RVA: 0x0013D389 File Offset: 0x0013B589
+		// (set) Token: 0x06008504 RID: 34052 RVA: 0x0013D3B0 File Offset: 0x0013B5B0
 		public virtual List<int> EntityIds
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005058 RID: 20568
+		// Token: 0x0400548E RID: 21646
 		[Nullable(2)]
 		protected new HideSpecificEntities FbInstance;
 
-		// Token: 0x04005059 RID: 20569
+		// Token: 0x0400548F RID: 21647
 		[Nullable(2)]
 		protected HideSpecificEntities_SetValue PocoInterface;
 	}

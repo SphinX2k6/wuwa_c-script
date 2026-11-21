@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F91 RID: 28561
+	// Token: 0x02007757 RID: 30551
 	public class ISetActorVarT
 	{
-		// Token: 0x1700D421 RID: 54305
-		// (get) Token: 0x0603279D RID: 206749 RVA: 0x006D050A File Offset: 0x006CE70A
-		// (set) Token: 0x0603279E RID: 206750 RVA: 0x006D0512 File Offset: 0x006CE712
+		// Token: 0x1700DFF0 RID: 57328
+		// (get) Token: 0x060359ED RID: 219629 RVA: 0x0072FEC2 File Offset: 0x0072E0C2
+		// (set) Token: 0x060359EE RID: 219630 RVA: 0x0072FECA File Offset: 0x0072E0CA
 		public IActorRefT ActorRef { get; set; }
 
-		// Token: 0x1700D422 RID: 54306
-		// (get) Token: 0x0603279F RID: 206751 RVA: 0x006D051B File Offset: 0x006CE71B
-		// (set) Token: 0x060327A0 RID: 206752 RVA: 0x006D0523 File Offset: 0x006CE723
+		// Token: 0x1700DFF1 RID: 57329
+		// (get) Token: 0x060359EF RID: 219631 RVA: 0x0072FED3 File Offset: 0x0072E0D3
+		// (set) Token: 0x060359F0 RID: 219632 RVA: 0x0072FEDB File Offset: 0x0072E0DB
 		public string VarLeft { get; set; }
 
-		// Token: 0x1700D423 RID: 54307
-		// (get) Token: 0x060327A1 RID: 206753 RVA: 0x006D052C File Offset: 0x006CE72C
-		// (set) Token: 0x060327A2 RID: 206754 RVA: 0x006D0534 File Offset: 0x006CE734
+		// Token: 0x1700DFF2 RID: 57330
+		// (get) Token: 0x060359F1 RID: 219633 RVA: 0x0072FEE4 File Offset: 0x0072E0E4
+		// (set) Token: 0x060359F2 RID: 219634 RVA: 0x0072FEEC File Offset: 0x0072E0EC
 		public TVarRefUnion VarRight { get; set; }
 
-		// Token: 0x060327A3 RID: 206755 RVA: 0x006D053D File Offset: 0x006CE73D
+		// Token: 0x060359F3 RID: 219635 RVA: 0x0072FEF5 File Offset: 0x0072E0F5
 		public ISetActorVarT()
 		{
 			this.ActorRef = null;

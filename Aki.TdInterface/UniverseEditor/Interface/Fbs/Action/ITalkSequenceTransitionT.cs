@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007359 RID: 29529
+	// Token: 0x02007B34 RID: 31540
 	public class ITalkSequenceTransitionT
 	{
-		// Token: 0x1700E042 RID: 57410
-		// (get) Token: 0x06035992 RID: 219538 RVA: 0x0074CCF0 File Offset: 0x0074AEF0
-		// (set) Token: 0x06035993 RID: 219539 RVA: 0x0074CCF8 File Offset: 0x0074AEF8
+		// Token: 0x1700EC43 RID: 60483
+		// (get) Token: 0x06038CDB RID: 232667 RVA: 0x007AEAC4 File Offset: 0x007ACCC4
+		// (set) Token: 0x06038CDC RID: 232668 RVA: 0x007AEACC File Offset: 0x007ACCCC
 		public string OptionText { get; set; }
 
-		// Token: 0x1700E043 RID: 57411
-		// (get) Token: 0x06035994 RID: 219540 RVA: 0x0074CD01 File Offset: 0x0074AF01
-		// (set) Token: 0x06035995 RID: 219541 RVA: 0x0074CD09 File Offset: 0x0074AF09
+		// Token: 0x1700EC44 RID: 60484
+		// (get) Token: 0x06038CDD RID: 232669 RVA: 0x007AEAD5 File Offset: 0x007ACCD5
+		// (set) Token: 0x06038CDE RID: 232670 RVA: 0x007AEADD File Offset: 0x007ACCDD
 		public string OptionTextKey { get; set; }
 
-		// Token: 0x1700E044 RID: 57412
-		// (get) Token: 0x06035996 RID: 219542 RVA: 0x0074CD12 File Offset: 0x0074AF12
-		// (set) Token: 0x06035997 RID: 219543 RVA: 0x0074CD1A File Offset: 0x0074AF1A
+		// Token: 0x1700EC45 RID: 60485
+		// (get) Token: 0x06038CDF RID: 232671 RVA: 0x007AEAE6 File Offset: 0x007ACCE6
+		// (set) Token: 0x06038CE0 RID: 232672 RVA: 0x007AEAEE File Offset: 0x007ACCEE
 		public int NextSequenceIndex { get; set; }
 
-		// Token: 0x06035998 RID: 219544 RVA: 0x0074CD23 File Offset: 0x0074AF23
+		// Token: 0x06038CE1 RID: 232673 RVA: 0x007AEAF7 File Offset: 0x007ACCF7
 		public ITalkSequenceTransitionT()
 		{
 			this.OptionText = null;

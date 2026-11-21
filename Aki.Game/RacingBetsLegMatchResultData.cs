@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026F3 RID: 9971
+// Token: 0x02001BDE RID: 7134
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsLegMatchResultData : IRacingBetsLegMatchResultData
 {
-	// Token: 0x17001A9E RID: 6814
-	// (get) Token: 0x06014713 RID: 83731 RVA: 0x0052B9CA File Offset: 0x00529BCA
-	// (set) Token: 0x06014714 RID: 83732 RVA: 0x0052B9D2 File Offset: 0x00529BD2
+	// Token: 0x17001AD6 RID: 6870
+	// (get) Token: 0x06011BF5 RID: 72693 RVA: 0x0053A6E6 File Offset: 0x005388E6
+	// (set) Token: 0x06011BF6 RID: 72694 RVA: 0x0053A6EE File Offset: 0x005388EE
 	public int DangoId { get; set; }
 
-	// Token: 0x17001A9F RID: 6815
-	// (get) Token: 0x06014715 RID: 83733 RVA: 0x0052B9DB File Offset: 0x00529BDB
-	// (set) Token: 0x06014716 RID: 83734 RVA: 0x0052B9E3 File Offset: 0x00529BE3
+	// Token: 0x17001AD7 RID: 6871
+	// (get) Token: 0x06011BF7 RID: 72695 RVA: 0x0053A6F7 File Offset: 0x005388F7
+	// (set) Token: 0x06011BF8 RID: 72696 RVA: 0x0053A6FF File Offset: 0x005388FF
 	public int Rank { get; set; }
 
-	// Token: 0x17001AA0 RID: 6816
-	// (get) Token: 0x06014717 RID: 83735 RVA: 0x0052B9EC File Offset: 0x00529BEC
-	// (set) Token: 0x06014718 RID: 83736 RVA: 0x0052B9F4 File Offset: 0x00529BF4
+	// Token: 0x17001AD8 RID: 6872
+	// (get) Token: 0x06011BF9 RID: 72697 RVA: 0x0053A708 File Offset: 0x00538908
+	// (set) Token: 0x06011BFA RID: 72698 RVA: 0x0053A710 File Offset: 0x00538910
 	public bool HasAdvanced { get; set; }
 
-	// Token: 0x17001AA1 RID: 6817
-	// (get) Token: 0x06014719 RID: 83737 RVA: 0x0052B9FD File Offset: 0x00529BFD
-	// (set) Token: 0x0601471A RID: 83738 RVA: 0x0052BA05 File Offset: 0x00529C05
+	// Token: 0x17001AD9 RID: 6873
+	// (get) Token: 0x06011BFB RID: 72699 RVA: 0x0053A719 File Offset: 0x00538919
+	// (set) Token: 0x06011BFC RID: 72700 RVA: 0x0053A721 File Offset: 0x00538921
 	public ERacingBetsLegMatchType LegMatchType { get; set; }
 
-	// Token: 0x17001AA2 RID: 6818
-	// (get) Token: 0x0601471B RID: 83739 RVA: 0x0052BA0E File Offset: 0x00529C0E
-	// (set) Token: 0x0601471C RID: 83740 RVA: 0x0052BA16 File Offset: 0x00529C16
+	// Token: 0x17001ADA RID: 6874
+	// (get) Token: 0x06011BFD RID: 72701 RVA: 0x0053A72A File Offset: 0x0053892A
+	// (set) Token: 0x06011BFE RID: 72702 RVA: 0x0053A732 File Offset: 0x00538932
 	public bool IsChampion { get; set; }
 
-	// Token: 0x17001AA3 RID: 6819
-	// (get) Token: 0x0601471D RID: 83741 RVA: 0x0052BA1F File Offset: 0x00529C1F
-	// (set) Token: 0x0601471E RID: 83742 RVA: 0x0052BA27 File Offset: 0x00529C27
+	// Token: 0x17001ADB RID: 6875
+	// (get) Token: 0x06011BFF RID: 72703 RVA: 0x0053A73B File Offset: 0x0053893B
+	// (set) Token: 0x06011C00 RID: 72704 RVA: 0x0053A743 File Offset: 0x00538943
 	public ERacingBetsLegMatchResultType ResultShowType { get; set; }
 
-	// Token: 0x17001AA4 RID: 6820
-	// (get) Token: 0x0601471F RID: 83743 RVA: 0x0052BA30 File Offset: 0x00529C30
-	// (set) Token: 0x06014720 RID: 83744 RVA: 0x0052BA38 File Offset: 0x00529C38
+	// Token: 0x17001ADC RID: 6876
+	// (get) Token: 0x06011C01 RID: 72705 RVA: 0x0053A74C File Offset: 0x0053894C
+	// (set) Token: 0x06011C02 RID: 72706 RVA: 0x0053A754 File Offset: 0x00538954
 	public string AdvancedNextMatchName { get; set; }
 
-	// Token: 0x17001AA5 RID: 6821
-	// (get) Token: 0x06014721 RID: 83745 RVA: 0x0052BA41 File Offset: 0x00529C41
-	// (set) Token: 0x06014722 RID: 83746 RVA: 0x0052BA49 File Offset: 0x00529C49
+	// Token: 0x17001ADD RID: 6877
+	// (get) Token: 0x06011C03 RID: 72707 RVA: 0x0053A75D File Offset: 0x0053895D
+	// (set) Token: 0x06011C04 RID: 72708 RVA: 0x0053A765 File Offset: 0x00538965
 	public string LoserNextMatchName { get; set; }
 }

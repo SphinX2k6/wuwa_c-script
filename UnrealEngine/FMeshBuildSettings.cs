@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000EA0 RID: 3744
+	// Token: 0x02000241 RID: 577
 	[UnrealObjectPath("/Script/Engine.MeshBuildSettings")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FMeshBuildSettings : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600C9F7 RID: 51703 RVA: 0x00126066 File Offset: 0x00124266
+		// Token: 0x0600317B RID: 12667 RVA: 0x000466AF File Offset: 0x000448AF
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMeshBuildSettings._ScriptStructPtr != 0) ? FMeshBuildSettings._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.MeshBuildSettings", ref FMeshBuildSettings._ScriptStructPtr);
 		}
 
-		// Token: 0x17002F5D RID: 12125
-		// (get) Token: 0x0600C9F8 RID: 51704 RVA: 0x0012608A File Offset: 0x0012428A
-		// (set) Token: 0x0600C9F9 RID: 51705 RVA: 0x001260A3 File Offset: 0x001242A3
+		// Token: 0x170006CB RID: 1739
+		// (get) Token: 0x0600317C RID: 12668 RVA: 0x000466D3 File Offset: 0x000448D3
+		// (set) Token: 0x0600317D RID: 12669 RVA: 0x000466EC File Offset: 0x000448EC
 		public unsafe bool bHasKuroUVUnwrap
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F5E RID: 12126
-		// (get) Token: 0x0600C9FA RID: 51706 RVA: 0x001260D3 File Offset: 0x001242D3
-		// (set) Token: 0x0600C9FB RID: 51707 RVA: 0x001260EC File Offset: 0x001242EC
+		// Token: 0x170006CC RID: 1740
+		// (get) Token: 0x0600317E RID: 12670 RVA: 0x0004671C File Offset: 0x0004491C
+		// (set) Token: 0x0600317F RID: 12671 RVA: 0x00046735 File Offset: 0x00044935
 		public unsafe bool bHasKuroInsideCulling
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F5F RID: 12127
-		// (get) Token: 0x0600C9FC RID: 51708 RVA: 0x0012611C File Offset: 0x0012431C
-		// (set) Token: 0x0600C9FD RID: 51709 RVA: 0x00126135 File Offset: 0x00124335
+		// Token: 0x170006CD RID: 1741
+		// (get) Token: 0x06003180 RID: 12672 RVA: 0x00046765 File Offset: 0x00044965
+		// (set) Token: 0x06003181 RID: 12673 RVA: 0x0004677E File Offset: 0x0004497E
 		public unsafe bool bKuroKeepRawMeshPrimIndex
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F60 RID: 12128
-		// (get) Token: 0x0600C9FE RID: 51710 RVA: 0x00126165 File Offset: 0x00124365
-		// (set) Token: 0x0600C9FF RID: 51711 RVA: 0x0012617E File Offset: 0x0012437E
+		// Token: 0x170006CE RID: 1742
+		// (get) Token: 0x06003182 RID: 12674 RVA: 0x000467AE File Offset: 0x000449AE
+		// (set) Token: 0x06003183 RID: 12675 RVA: 0x000467C7 File Offset: 0x000449C7
 		public unsafe bool bUseMikkTSpace
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F61 RID: 12129
-		// (get) Token: 0x0600CA00 RID: 51712 RVA: 0x001261AE File Offset: 0x001243AE
-		// (set) Token: 0x0600CA01 RID: 51713 RVA: 0x001261C7 File Offset: 0x001243C7
+		// Token: 0x170006CF RID: 1743
+		// (get) Token: 0x06003184 RID: 12676 RVA: 0x000467F7 File Offset: 0x000449F7
+		// (set) Token: 0x06003185 RID: 12677 RVA: 0x00046810 File Offset: 0x00044A10
 		public unsafe bool bRecomputeNormals
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F62 RID: 12130
-		// (get) Token: 0x0600CA02 RID: 51714 RVA: 0x001261F7 File Offset: 0x001243F7
-		// (set) Token: 0x0600CA03 RID: 51715 RVA: 0x00126210 File Offset: 0x00124410
+		// Token: 0x170006D0 RID: 1744
+		// (get) Token: 0x06003186 RID: 12678 RVA: 0x00046840 File Offset: 0x00044A40
+		// (set) Token: 0x06003187 RID: 12679 RVA: 0x00046859 File Offset: 0x00044A59
 		public unsafe bool bRecomputeTangents
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F63 RID: 12131
-		// (get) Token: 0x0600CA04 RID: 51716 RVA: 0x00126240 File Offset: 0x00124440
-		// (set) Token: 0x0600CA05 RID: 51717 RVA: 0x00126259 File Offset: 0x00124459
+		// Token: 0x170006D1 RID: 1745
+		// (get) Token: 0x06003188 RID: 12680 RVA: 0x00046889 File Offset: 0x00044A89
+		// (set) Token: 0x06003189 RID: 12681 RVA: 0x000468A2 File Offset: 0x00044AA2
 		public unsafe bool bComputeWeightedNormals
 		{
 			get
@@ -122,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F64 RID: 12132
-		// (get) Token: 0x0600CA06 RID: 51718 RVA: 0x00126289 File Offset: 0x00124489
-		// (set) Token: 0x0600CA07 RID: 51719 RVA: 0x001262A2 File Offset: 0x001244A2
+		// Token: 0x170006D2 RID: 1746
+		// (get) Token: 0x0600318A RID: 12682 RVA: 0x000468D2 File Offset: 0x00044AD2
+		// (set) Token: 0x0600318B RID: 12683 RVA: 0x000468EB File Offset: 0x00044AEB
 		public unsafe bool bRemoveDegenerates
 		{
 			get
@@ -137,9 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F65 RID: 12133
-		// (get) Token: 0x0600CA08 RID: 51720 RVA: 0x001262D2 File Offset: 0x001244D2
-		// (set) Token: 0x0600CA09 RID: 51721 RVA: 0x001262EB File Offset: 0x001244EB
+		// Token: 0x170006D3 RID: 1747
+		// (get) Token: 0x0600318C RID: 12684 RVA: 0x0004691B File Offset: 0x00044B1B
+		// (set) Token: 0x0600318D RID: 12685 RVA: 0x00046934 File Offset: 0x00044B34
 		public unsafe bool bBuildAdjacencyBuffer
 		{
 			get
@@ -152,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F66 RID: 12134
-		// (get) Token: 0x0600CA0A RID: 51722 RVA: 0x0012631B File Offset: 0x0012451B
-		// (set) Token: 0x0600CA0B RID: 51723 RVA: 0x00126334 File Offset: 0x00124534
+		// Token: 0x170006D4 RID: 1748
+		// (get) Token: 0x0600318E RID: 12686 RVA: 0x00046964 File Offset: 0x00044B64
+		// (set) Token: 0x0600318F RID: 12687 RVA: 0x0004697D File Offset: 0x00044B7D
 		public unsafe bool bBuildReversedIndexBuffer
 		{
 			get
@@ -167,9 +167,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F67 RID: 12135
-		// (get) Token: 0x0600CA0C RID: 51724 RVA: 0x00126364 File Offset: 0x00124564
-		// (set) Token: 0x0600CA0D RID: 51725 RVA: 0x0012637D File Offset: 0x0012457D
+		// Token: 0x170006D5 RID: 1749
+		// (get) Token: 0x06003190 RID: 12688 RVA: 0x000469AD File Offset: 0x00044BAD
+		// (set) Token: 0x06003191 RID: 12689 RVA: 0x000469C6 File Offset: 0x00044BC6
 		public unsafe bool bUseHighPrecisionTangentBasis
 		{
 			get
@@ -182,9 +182,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F68 RID: 12136
-		// (get) Token: 0x0600CA0E RID: 51726 RVA: 0x001263AD File Offset: 0x001245AD
-		// (set) Token: 0x0600CA0F RID: 51727 RVA: 0x001263C6 File Offset: 0x001245C6
+		// Token: 0x170006D6 RID: 1750
+		// (get) Token: 0x06003192 RID: 12690 RVA: 0x000469F6 File Offset: 0x00044BF6
+		// (set) Token: 0x06003193 RID: 12691 RVA: 0x00046A0F File Offset: 0x00044C0F
 		public unsafe bool bUseFullPrecisionUVs
 		{
 			get
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F69 RID: 12137
-		// (get) Token: 0x0600CA10 RID: 51728 RVA: 0x001263F6 File Offset: 0x001245F6
-		// (set) Token: 0x0600CA11 RID: 51729 RVA: 0x0012640F File Offset: 0x0012460F
+		// Token: 0x170006D7 RID: 1751
+		// (get) Token: 0x06003194 RID: 12692 RVA: 0x00046A3F File Offset: 0x00044C3F
+		// (set) Token: 0x06003195 RID: 12693 RVA: 0x00046A58 File Offset: 0x00044C58
 		public unsafe bool bGenerateLightmapUVs
 		{
 			get
@@ -212,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6A RID: 12138
-		// (get) Token: 0x0600CA12 RID: 51730 RVA: 0x0012643F File Offset: 0x0012463F
-		// (set) Token: 0x0600CA13 RID: 51731 RVA: 0x00126458 File Offset: 0x00124658
+		// Token: 0x170006D8 RID: 1752
+		// (get) Token: 0x06003196 RID: 12694 RVA: 0x00046A88 File Offset: 0x00044C88
+		// (set) Token: 0x06003197 RID: 12695 RVA: 0x00046AA1 File Offset: 0x00044CA1
 		public unsafe bool bUseKuroUVUnwrap
 		{
 			get
@@ -227,9 +227,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6B RID: 12139
-		// (get) Token: 0x0600CA14 RID: 51732 RVA: 0x00126488 File Offset: 0x00124688
-		// (set) Token: 0x0600CA15 RID: 51733 RVA: 0x001264A1 File Offset: 0x001246A1
+		// Token: 0x170006D9 RID: 1753
+		// (get) Token: 0x06003198 RID: 12696 RVA: 0x00046AD1 File Offset: 0x00044CD1
+		// (set) Token: 0x06003199 RID: 12697 RVA: 0x00046AEA File Offset: 0x00044CEA
 		public unsafe bool bGenerateDistanceFieldAsIfTwoSided
 		{
 			get
@@ -242,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6C RID: 12140
-		// (get) Token: 0x0600CA16 RID: 51734 RVA: 0x001264D1 File Offset: 0x001246D1
-		// (set) Token: 0x0600CA17 RID: 51735 RVA: 0x001264EA File Offset: 0x001246EA
+		// Token: 0x170006DA RID: 1754
+		// (get) Token: 0x0600319A RID: 12698 RVA: 0x00046B1A File Offset: 0x00044D1A
+		// (set) Token: 0x0600319B RID: 12699 RVA: 0x00046B33 File Offset: 0x00044D33
 		public unsafe bool bSupportFaceRemap
 		{
 			get
@@ -257,9 +257,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6D RID: 12141
-		// (get) Token: 0x0600CA18 RID: 51736 RVA: 0x0012651A File Offset: 0x0012471A
-		// (set) Token: 0x0600CA19 RID: 51737 RVA: 0x0012652A File Offset: 0x0012472A
+		// Token: 0x170006DB RID: 1755
+		// (get) Token: 0x0600319C RID: 12700 RVA: 0x00046B63 File Offset: 0x00044D63
+		// (set) Token: 0x0600319D RID: 12701 RVA: 0x00046B73 File Offset: 0x00044D73
 		public unsafe int MinLightmapResolution
 		{
 			get
@@ -272,9 +272,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6E RID: 12142
-		// (get) Token: 0x0600CA1A RID: 51738 RVA: 0x0012653B File Offset: 0x0012473B
-		// (set) Token: 0x0600CA1B RID: 51739 RVA: 0x0012654B File Offset: 0x0012474B
+		// Token: 0x170006DC RID: 1756
+		// (get) Token: 0x0600319E RID: 12702 RVA: 0x00046B84 File Offset: 0x00044D84
+		// (set) Token: 0x0600319F RID: 12703 RVA: 0x00046B94 File Offset: 0x00044D94
 		public unsafe int SrcLightmapIndex
 		{
 			get
@@ -287,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F6F RID: 12143
-		// (get) Token: 0x0600CA1C RID: 51740 RVA: 0x0012655C File Offset: 0x0012475C
-		// (set) Token: 0x0600CA1D RID: 51741 RVA: 0x0012656C File Offset: 0x0012476C
+		// Token: 0x170006DD RID: 1757
+		// (get) Token: 0x060031A0 RID: 12704 RVA: 0x00046BA5 File Offset: 0x00044DA5
+		// (set) Token: 0x060031A1 RID: 12705 RVA: 0x00046BB5 File Offset: 0x00044DB5
 		public unsafe int DstLightmapIndex
 		{
 			get
@@ -302,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F70 RID: 12144
-		// (get) Token: 0x0600CA1E RID: 51742 RVA: 0x0012657D File Offset: 0x0012477D
-		// (set) Token: 0x0600CA1F RID: 51743 RVA: 0x0012658D File Offset: 0x0012478D
+		// Token: 0x170006DE RID: 1758
+		// (get) Token: 0x060031A2 RID: 12706 RVA: 0x00046BC6 File Offset: 0x00044DC6
+		// (set) Token: 0x060031A3 RID: 12707 RVA: 0x00046BD6 File Offset: 0x00044DD6
 		public unsafe float BuildScale_DEPRECATED
 		{
 			get
@@ -317,9 +317,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F71 RID: 12145
-		// (get) Token: 0x0600CA20 RID: 51744 RVA: 0x0012659E File Offset: 0x0012479E
-		// (set) Token: 0x0600CA21 RID: 51745 RVA: 0x001265B2 File Offset: 0x001247B2
+		// Token: 0x170006DF RID: 1759
+		// (get) Token: 0x060031A4 RID: 12708 RVA: 0x00046BE7 File Offset: 0x00044DE7
+		// (set) Token: 0x060031A5 RID: 12709 RVA: 0x00046BFB File Offset: 0x00044DFB
 		public unsafe FVector BuildScale3D
 		{
 			get
@@ -332,9 +332,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F72 RID: 12146
-		// (get) Token: 0x0600CA22 RID: 51746 RVA: 0x001265C7 File Offset: 0x001247C7
-		// (set) Token: 0x0600CA23 RID: 51747 RVA: 0x001265D7 File Offset: 0x001247D7
+		// Token: 0x170006E0 RID: 1760
+		// (get) Token: 0x060031A6 RID: 12710 RVA: 0x00046C10 File Offset: 0x00044E10
+		// (set) Token: 0x060031A7 RID: 12711 RVA: 0x00046C20 File Offset: 0x00044E20
 		public unsafe float DistanceFieldResolutionScale
 		{
 			get
@@ -347,9 +347,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002F73 RID: 12147
-		// (get) Token: 0x0600CA24 RID: 51748 RVA: 0x001265E8 File Offset: 0x001247E8
-		// (set) Token: 0x0600CA25 RID: 51749 RVA: 0x001265FC File Offset: 0x001247FC
+		// Token: 0x170006E1 RID: 1761
+		// (get) Token: 0x060031A8 RID: 12712 RVA: 0x00046C31 File Offset: 0x00044E31
+		// (set) Token: 0x060031A9 RID: 12713 RVA: 0x00046C45 File Offset: 0x00044E45
 		[Nullable(2)]
 		public unsafe UStaticMesh DistanceFieldReplacementMesh
 		{
@@ -365,193 +365,164 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600CA26 RID: 51750 RVA: 0x00126611 File Offset: 0x00124811
+		// Token: 0x060031AA RID: 12714 RVA: 0x00046C5A File Offset: 0x00044E5A
 		public FMeshBuildSettings()
 		{
 		}
 
-		// Token: 0x0600CA27 RID: 51751 RVA: 0x0012661C File Offset: 0x0012481C
-		[NullableContext(1)]
-		public FMeshBuildSettings(bool bHasKuroUVUnwrap, bool bHasKuroInsideCulling, bool bKuroKeepRawMeshPrimIndex, bool bUseMikkTSpace, bool bRecomputeNormals, bool bRecomputeTangents, bool bComputeWeightedNormals, bool bRemoveDegenerates, bool bBuildAdjacencyBuffer, bool bBuildReversedIndexBuffer, bool bUseHighPrecisionTangentBasis, bool bUseFullPrecisionUVs, bool bGenerateLightmapUVs, bool bUseKuroUVUnwrap, bool bGenerateDistanceFieldAsIfTwoSided, bool bSupportFaceRemap, int MinLightmapResolution, int SrcLightmapIndex, int DstLightmapIndex, float BuildScale_DEPRECATED, FVector BuildScale3D, float DistanceFieldResolutionScale, float DistanceFieldBias_DEPRECATED, UStaticMesh DistanceFieldReplacementMesh)
-		{
-			this.bHasKuroUVUnwrap = bHasKuroUVUnwrap;
-			this.bHasKuroInsideCulling = bHasKuroInsideCulling;
-			this.bKuroKeepRawMeshPrimIndex = bKuroKeepRawMeshPrimIndex;
-			this.bUseMikkTSpace = bUseMikkTSpace;
-			this.bRecomputeNormals = bRecomputeNormals;
-			this.bRecomputeTangents = bRecomputeTangents;
-			this.bComputeWeightedNormals = bComputeWeightedNormals;
-			this.bRemoveDegenerates = bRemoveDegenerates;
-			this.bBuildAdjacencyBuffer = bBuildAdjacencyBuffer;
-			this.bBuildReversedIndexBuffer = bBuildReversedIndexBuffer;
-			this.bUseHighPrecisionTangentBasis = bUseHighPrecisionTangentBasis;
-			this.bUseFullPrecisionUVs = bUseFullPrecisionUVs;
-			this.bGenerateLightmapUVs = bGenerateLightmapUVs;
-			this.bUseKuroUVUnwrap = bUseKuroUVUnwrap;
-			this.bGenerateDistanceFieldAsIfTwoSided = bGenerateDistanceFieldAsIfTwoSided;
-			this.bSupportFaceRemap = bSupportFaceRemap;
-			this.MinLightmapResolution = MinLightmapResolution;
-			this.SrcLightmapIndex = SrcLightmapIndex;
-			this.DstLightmapIndex = DstLightmapIndex;
-			this.BuildScale_DEPRECATED = BuildScale_DEPRECATED;
-			this.BuildScale3D = BuildScale3D;
-			this.DistanceFieldResolutionScale = DistanceFieldResolutionScale;
-			this.DistanceFieldReplacementMesh = DistanceFieldReplacementMesh;
-		}
-
-		// Token: 0x0600CA28 RID: 51752 RVA: 0x001266E4 File Offset: 0x001248E4
+		// Token: 0x060031AB RID: 12715 RVA: 0x00046C62 File Offset: 0x00044E62
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMeshBuildSettings.StaticStruct();
 		}
 
-		// Token: 0x0600CA29 RID: 51753 RVA: 0x001266F0 File Offset: 0x001248F0
+		// Token: 0x060031AC RID: 12716 RVA: 0x00046C6E File Offset: 0x00044E6E
 		[NullableContext(2)]
 		public FMeshBuildSettings(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600CA2A RID: 51754 RVA: 0x001266FA File Offset: 0x001248FA
+		// Token: 0x060031AD RID: 12717 RVA: 0x00046C78 File Offset: 0x00044E78
 		public FMeshBuildSettings(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600CA2B RID: 51755 RVA: 0x00126705 File Offset: 0x00124905
+		// Token: 0x060031AE RID: 12718 RVA: 0x00046C83 File Offset: 0x00044E83
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMeshBuildSettings(Pointer, false, true);
 		}
 
-		// Token: 0x0600CA2C RID: 51756 RVA: 0x0012670F File Offset: 0x0012490F
+		// Token: 0x060031AF RID: 12719 RVA: 0x00046C8D File Offset: 0x00044E8D
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMeshBuildSettings(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04006CB3 RID: 27827
+		// Token: 0x040010F8 RID: 4344
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.MeshBuildSettings";
 
-		// Token: 0x04006CB4 RID: 27828
+		// Token: 0x040010F9 RID: 4345
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04006CB5 RID: 27829
+		// Token: 0x040010FA RID: 4346
 		internal static int __PropertyOffset_bHasKuroUVUnwrap;
 
-		// Token: 0x04006CB6 RID: 27830
+		// Token: 0x040010FB RID: 4347
 		internal static byte __PropertyMask_bHasKuroUVUnwrap;
 
-		// Token: 0x04006CB7 RID: 27831
+		// Token: 0x040010FC RID: 4348
 		internal static int __PropertyOffset_bHasKuroInsideCulling;
 
-		// Token: 0x04006CB8 RID: 27832
+		// Token: 0x040010FD RID: 4349
 		internal static byte __PropertyMask_bHasKuroInsideCulling;
 
-		// Token: 0x04006CB9 RID: 27833
+		// Token: 0x040010FE RID: 4350
 		internal static int __PropertyOffset_bKuroKeepRawMeshPrimIndex;
 
-		// Token: 0x04006CBA RID: 27834
+		// Token: 0x040010FF RID: 4351
 		internal static byte __PropertyMask_bKuroKeepRawMeshPrimIndex;
 
-		// Token: 0x04006CBB RID: 27835
+		// Token: 0x04001100 RID: 4352
 		internal static int __PropertyOffset_bUseMikkTSpace;
 
-		// Token: 0x04006CBC RID: 27836
+		// Token: 0x04001101 RID: 4353
 		internal static byte __PropertyMask_bUseMikkTSpace;
 
-		// Token: 0x04006CBD RID: 27837
+		// Token: 0x04001102 RID: 4354
 		internal static int __PropertyOffset_bRecomputeNormals;
 
-		// Token: 0x04006CBE RID: 27838
+		// Token: 0x04001103 RID: 4355
 		internal static byte __PropertyMask_bRecomputeNormals;
 
-		// Token: 0x04006CBF RID: 27839
+		// Token: 0x04001104 RID: 4356
 		internal static int __PropertyOffset_bRecomputeTangents;
 
-		// Token: 0x04006CC0 RID: 27840
+		// Token: 0x04001105 RID: 4357
 		internal static byte __PropertyMask_bRecomputeTangents;
 
-		// Token: 0x04006CC1 RID: 27841
+		// Token: 0x04001106 RID: 4358
 		internal static int __PropertyOffset_bComputeWeightedNormals;
 
-		// Token: 0x04006CC2 RID: 27842
+		// Token: 0x04001107 RID: 4359
 		internal static byte __PropertyMask_bComputeWeightedNormals;
 
-		// Token: 0x04006CC3 RID: 27843
+		// Token: 0x04001108 RID: 4360
 		internal static int __PropertyOffset_bRemoveDegenerates;
 
-		// Token: 0x04006CC4 RID: 27844
+		// Token: 0x04001109 RID: 4361
 		internal static byte __PropertyMask_bRemoveDegenerates;
 
-		// Token: 0x04006CC5 RID: 27845
+		// Token: 0x0400110A RID: 4362
 		internal static int __PropertyOffset_bBuildAdjacencyBuffer;
 
-		// Token: 0x04006CC6 RID: 27846
+		// Token: 0x0400110B RID: 4363
 		internal static byte __PropertyMask_bBuildAdjacencyBuffer;
 
-		// Token: 0x04006CC7 RID: 27847
+		// Token: 0x0400110C RID: 4364
 		internal static int __PropertyOffset_bBuildReversedIndexBuffer;
 
-		// Token: 0x04006CC8 RID: 27848
+		// Token: 0x0400110D RID: 4365
 		internal static byte __PropertyMask_bBuildReversedIndexBuffer;
 
-		// Token: 0x04006CC9 RID: 27849
+		// Token: 0x0400110E RID: 4366
 		internal static int __PropertyOffset_bUseHighPrecisionTangentBasis;
 
-		// Token: 0x04006CCA RID: 27850
+		// Token: 0x0400110F RID: 4367
 		internal static byte __PropertyMask_bUseHighPrecisionTangentBasis;
 
-		// Token: 0x04006CCB RID: 27851
+		// Token: 0x04001110 RID: 4368
 		internal static int __PropertyOffset_bUseFullPrecisionUVs;
 
-		// Token: 0x04006CCC RID: 27852
+		// Token: 0x04001111 RID: 4369
 		internal static byte __PropertyMask_bUseFullPrecisionUVs;
 
-		// Token: 0x04006CCD RID: 27853
+		// Token: 0x04001112 RID: 4370
 		internal static int __PropertyOffset_bGenerateLightmapUVs;
 
-		// Token: 0x04006CCE RID: 27854
+		// Token: 0x04001113 RID: 4371
 		internal static byte __PropertyMask_bGenerateLightmapUVs;
 
-		// Token: 0x04006CCF RID: 27855
+		// Token: 0x04001114 RID: 4372
 		internal static int __PropertyOffset_bUseKuroUVUnwrap;
 
-		// Token: 0x04006CD0 RID: 27856
+		// Token: 0x04001115 RID: 4373
 		internal static byte __PropertyMask_bUseKuroUVUnwrap;
 
-		// Token: 0x04006CD1 RID: 27857
+		// Token: 0x04001116 RID: 4374
 		internal static int __PropertyOffset_bGenerateDistanceFieldAsIfTwoSided;
 
-		// Token: 0x04006CD2 RID: 27858
+		// Token: 0x04001117 RID: 4375
 		internal static byte __PropertyMask_bGenerateDistanceFieldAsIfTwoSided;
 
-		// Token: 0x04006CD3 RID: 27859
+		// Token: 0x04001118 RID: 4376
 		internal static int __PropertyOffset_bSupportFaceRemap;
 
-		// Token: 0x04006CD4 RID: 27860
+		// Token: 0x04001119 RID: 4377
 		internal static byte __PropertyMask_bSupportFaceRemap;
 
-		// Token: 0x04006CD5 RID: 27861
+		// Token: 0x0400111A RID: 4378
 		internal static int __PropertyOffset_MinLightmapResolution;
 
-		// Token: 0x04006CD6 RID: 27862
+		// Token: 0x0400111B RID: 4379
 		internal static int __PropertyOffset_SrcLightmapIndex;
 
-		// Token: 0x04006CD7 RID: 27863
+		// Token: 0x0400111C RID: 4380
 		internal static int __PropertyOffset_DstLightmapIndex;
 
-		// Token: 0x04006CD8 RID: 27864
+		// Token: 0x0400111D RID: 4381
 		internal static int __PropertyOffset_BuildScale_DEPRECATED;
 
-		// Token: 0x04006CD9 RID: 27865
+		// Token: 0x0400111E RID: 4382
 		internal static int __PropertyOffset_BuildScale3D;
 
-		// Token: 0x04006CDA RID: 27866
+		// Token: 0x0400111F RID: 4383
 		internal static int __PropertyOffset_DistanceFieldResolutionScale;
 
-		// Token: 0x04006CDB RID: 27867
+		// Token: 0x04001120 RID: 4384
 		internal static int __PropertyOffset_DistanceFieldReplacementMesh;
 	}
 }

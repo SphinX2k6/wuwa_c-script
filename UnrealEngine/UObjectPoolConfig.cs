@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000751 RID: 1873
+	// Token: 0x02000137 RID: 311
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/CoreUObject.ObjectPoolConfig")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public class UObjectPoolConfig : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600630A RID: 25354 RVA: 0x0008E275 File Offset: 0x0008C475
+		// Token: 0x06001266 RID: 4710 RVA: 0x0001D1F5 File Offset: 0x0001B3F5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UObjectPoolConfig._ClassPtr;
 		}
 
-		// Token: 0x0600630B RID: 25355 RVA: 0x0008E284 File Offset: 0x0008C484
+		// Token: 0x06001267 RID: 4711 RVA: 0x0001D204 File Offset: 0x0001B404
 		public UObjectPoolConfig() : this(BuiltinUtils.AllocNativeUObject(UObjectPoolConfig.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600630C RID: 25356 RVA: 0x0008E2AC File Offset: 0x0008C4AC
+		// Token: 0x06001268 RID: 4712 RVA: 0x0001D22C File Offset: 0x0001B42C
 		public UObjectPoolConfig(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UObjectPoolConfig.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700179C RID: 6044
-		// (get) Token: 0x0600630D RID: 25357 RVA: 0x0008E2DF File Offset: 0x0008C4DF
-		// (set) Token: 0x0600630E RID: 25358 RVA: 0x0008E2EF File Offset: 0x0008C4EF
+		// Token: 0x170001CD RID: 461
+		// (get) Token: 0x06001269 RID: 4713 RVA: 0x0001D25F File Offset: 0x0001B45F
+		// (set) Token: 0x0600126A RID: 4714 RVA: 0x0001D26F File Offset: 0x0001B46F
 		public unsafe float ShrinkFactor
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700179D RID: 6045
-		// (get) Token: 0x0600630F RID: 25359 RVA: 0x0008E300 File Offset: 0x0008C500
-		// (set) Token: 0x06006310 RID: 25360 RVA: 0x0008E310 File Offset: 0x0008C510
+		// Token: 0x170001CE RID: 462
+		// (get) Token: 0x0600126B RID: 4715 RVA: 0x0001D280 File Offset: 0x0001B480
+		// (set) Token: 0x0600126C RID: 4716 RVA: 0x0001D290 File Offset: 0x0001B490
 		public unsafe float ScaleFactor
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700179E RID: 6046
-		// (get) Token: 0x06006311 RID: 25361 RVA: 0x0008E324 File Offset: 0x0008C524
-		// (set) Token: 0x06006312 RID: 25362 RVA: 0x0008E35D File Offset: 0x0008C55D
+		// Token: 0x170001CF RID: 463
+		// (get) Token: 0x0600126D RID: 4717 RVA: 0x0001D2A4 File Offset: 0x0001B4A4
+		// (set) Token: 0x0600126E RID: 4718 RVA: 0x0001D2DD File Offset: 0x0001B4DD
 		public TArray<FObjectPoolInstanceConfig> InstanceConfigs
 		{
 			get
@@ -80,36 +80,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006313 RID: 25363 RVA: 0x0008E36B File Offset: 0x0008C56B
+		// Token: 0x0600126F RID: 4719 RVA: 0x0001D2EB File Offset: 0x0001B4EB
 		static UObjectPoolConfig()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.ObjectPoolConfig");
 		}
 
-		// Token: 0x06006314 RID: 25364 RVA: 0x0008E379 File Offset: 0x0008C579
+		// Token: 0x06001270 RID: 4720 RVA: 0x0001D2F9 File Offset: 0x0001B4F9
 		protected UObjectPoolConfig(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002F6B RID: 12139
+		// Token: 0x040005A1 RID: 1441
 		public new const string __ObjectPath = "/Script/CoreUObject.ObjectPoolConfig";
 
-		// Token: 0x04002F6C RID: 12140
+		// Token: 0x040005A2 RID: 1442
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002F6D RID: 12141
+		// Token: 0x040005A3 RID: 1443
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04002F6E RID: 12142
+		// Token: 0x040005A4 RID: 1444
 		internal static int __PropertyOffset_ShrinkFactor;
 
-		// Token: 0x04002F6F RID: 12143
+		// Token: 0x040005A5 RID: 1445
 		internal static int __PropertyOffset_ScaleFactor;
 
-		// Token: 0x04002F70 RID: 12144
+		// Token: 0x040005A6 RID: 1446
 		internal static int __PropertyOffset_InstanceConfigs;
 
-		// Token: 0x04002F71 RID: 12145
+		// Token: 0x040005A7 RID: 1447
 		[Nullable(2)]
 		private TArray<FObjectPoolInstanceConfig> _InstanceConfigs;
 	}

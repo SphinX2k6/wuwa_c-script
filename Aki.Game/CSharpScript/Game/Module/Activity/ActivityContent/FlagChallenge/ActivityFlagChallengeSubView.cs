@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 {
-	// Token: 0x02006579 RID: 25977
+	// Token: 0x020054F7 RID: 21751
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityFlagChallengeSubView : ActivitySubViewBase
 	{
-		// Token: 0x060411A7 RID: 266663 RVA: 0x00FC73E0 File Offset: 0x00FC55E0
+		// Token: 0x06035E6C RID: 220780 RVA: 0x00F0E3C4 File Offset: 0x00F0C5C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			};
 		}
 
-		// Token: 0x060411A8 RID: 266664 RVA: 0x00FC74D8 File Offset: 0x00FC56D8
+		// Token: 0x06035E6D RID: 220781 RVA: 0x00F0E4BC File Offset: 0x00F0C6BC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityFlagChallengeSubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060411A9 RID: 266665 RVA: 0x00FC751B File Offset: 0x00FC571B
+		// Token: 0x06035E6E RID: 220782 RVA: 0x00F0E4FF File Offset: 0x00F0C6FF
 		protected override void OnRefreshView()
 		{
 			base.GetText(2).ShowTextNew("Morale_32_Activity_DifficultTip");
@@ -55,25 +55,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			this.UpdateRedDot();
 		}
 
-		// Token: 0x060411AA RID: 266666 RVA: 0x00FC754C File Offset: 0x00FC574C
+		// Token: 0x06035E6F RID: 220783 RVA: 0x00F0E530 File Offset: 0x00F0C730
 		protected override void OnTimer(float gap)
 		{
 			this.UpdateRemainTime();
 		}
 
-		// Token: 0x060411AB RID: 266667 RVA: 0x00FC7554 File Offset: 0x00FC5754
+		// Token: 0x06035E70 RID: 220784 RVA: 0x00F0E538 File Offset: 0x00F0C738
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnFlagChallengeLevelNewlyUnlock, new Action<int>(this.OnLevelNewlyUnlock));
 		}
 
-		// Token: 0x060411AC RID: 266668 RVA: 0x00FC7572 File Offset: 0x00FC5772
+		// Token: 0x06035E71 RID: 220785 RVA: 0x00F0E556 File Offset: 0x00F0C756
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeLevelNewlyUnlock, new Action<int>(this.OnLevelNewlyUnlock));
 		}
 
-		// Token: 0x060411AD RID: 266669 RVA: 0x00FC7590 File Offset: 0x00FC5790
+		// Token: 0x06035E72 RID: 220786 RVA: 0x00F0E574 File Offset: 0x00F0C774
 		[NullableContext(2)]
 		private void OnCommonInfoClick(ActivityBaseData _)
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			});
 		}
 
-		// Token: 0x060411AE RID: 266670 RVA: 0x00FC75B0 File Offset: 0x00FC57B0
+		// Token: 0x06035E73 RID: 220787 RVA: 0x00F0E594 File Offset: 0x00F0C794
 		private void UpdateLevelInfo()
 		{
 			int id = this.ActivityBaseData.Id;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			base.GetText(6).ShowTextNew(levelConfig.Name);
 		}
 
-		// Token: 0x060411AF RID: 266671 RVA: 0x00FC7628 File Offset: 0x00FC5828
+		// Token: 0x06035E74 RID: 220788 RVA: 0x00F0E60C File Offset: 0x00F0C80C
 		private void UpdateGuideQuestState()
 		{
 			ActivityFunctionalTypeA functional = this.CommonInfoPanel.GetFunctional();
@@ -148,21 +148,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			}
 		}
 
-		// Token: 0x060411B0 RID: 266672 RVA: 0x00FC7718 File Offset: 0x00FC5918
+		// Token: 0x06035E75 RID: 220789 RVA: 0x00F0E6FC File Offset: 0x00F0C8FC
 		private void UpdateNewLevelTips()
 		{
 			bool active = this.IsShowNewLevelTips();
 			this.NewLevelTipsSubPanel.SetActive(active);
 		}
 
-		// Token: 0x060411B1 RID: 266673 RVA: 0x00FC7738 File Offset: 0x00FC5938
+		// Token: 0x06035E76 RID: 220790 RVA: 0x00F0E71C File Offset: 0x00F0C91C
 		private bool IsShowNewLevelTips()
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
 			return activityBaseData.IsUnLock() && activityBaseData.GetPreGuideQuestFinishState() && FlagChallengeModel.Instance.GetFlagChallengeData(activityBaseData.Id).HasLevelNewlyUnlocked();
 		}
 
-		// Token: 0x060411B2 RID: 266674 RVA: 0x00FC7778 File Offset: 0x00FC5978
+		// Token: 0x06035E77 RID: 220791 RVA: 0x00F0E75C File Offset: 0x00F0C95C
 		private void UpdateRemainTime()
 		{
 			string remainTimeText = ActivityModel.Instance.GetRemainTimeText(this.ActivityBaseData.EndShowTime, this.RemainTimeFormatText);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x060411B3 RID: 266675 RVA: 0x00FC77B5 File Offset: 0x00FC59B5
+		// Token: 0x06035E78 RID: 220792 RVA: 0x00F0E799 File Offset: 0x00F0C999
 		private void UpdateRedDot()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -186,14 +186,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			activityFunctionalTypeA.SetFunctionRedDotVisible(this.IsShowNewLevelTips());
 		}
 
-		// Token: 0x060411B4 RID: 266676 RVA: 0x00FC77D9 File Offset: 0x00FC59D9
+		// Token: 0x06035E79 RID: 220793 RVA: 0x00F0E7BD File Offset: 0x00F0C9BD
 		private void OnLevelNewlyUnlock(int levelId)
 		{
 			this.UpdateNewLevelTips();
 			this.UpdateRedDot();
 		}
 
-		// Token: 0x060411B5 RID: 266677 RVA: 0x00FC77E8 File Offset: 0x00FC59E8
+		// Token: 0x06035E7A RID: 220794 RVA: 0x00F0E7CC File Offset: 0x00F0C9CC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -217,16 +217,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			};
 		}
 
-		// Token: 0x04021EBC RID: 138940
+		// Token: 0x0401C7ED RID: 116717
 		private ActivitySubViewGeneralInfo CommonInfoPanel;
 
-		// Token: 0x04021EBD RID: 138941
+		// Token: 0x0401C7EE RID: 116718
 		private FlagChallengeActivityRewardEntranceItem RewardEntrance;
 
-		// Token: 0x04021EBE RID: 138942
+		// Token: 0x0401C7EF RID: 116719
 		private RecommendQuestTipsSubPanel NewLevelTipsSubPanel;
 
-		// Token: 0x04021EBF RID: 138943
+		// Token: 0x0401C7F0 RID: 116720
 		private string RemainTimeFormatText = "";
 	}
 }

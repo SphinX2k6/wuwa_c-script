@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x0200670F RID: 26383
+	// Token: 0x0200565F RID: 22111
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 	})]
 	internal class DropCatchGameplayScoreItem : GridProxyAbstract<IScoreLevelItemData>
 	{
-		// Token: 0x06041E61 RID: 269921 RVA: 0x00FFC2A8 File Offset: 0x00FFA4A8
+		// Token: 0x060369AD RID: 223661 RVA: 0x00F3D674 File Offset: 0x00F3B874
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			};
 		}
 
-		// Token: 0x06041E62 RID: 269922 RVA: 0x00FFC318 File Offset: 0x00FFA518
+		// Token: 0x060369AE RID: 223662 RVA: 0x00F3D6E4 File Offset: 0x00F3B8E4
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06041E63 RID: 269923 RVA: 0x00FFC32C File Offset: 0x00FFA52C
+		// Token: 0x060369AF RID: 223663 RVA: 0x00F3D6F8 File Offset: 0x00F3B8F8
 		public override void Refresh(IScoreLevelItemData data, bool isSelected, int gridIndex)
 		{
 			UUIArtText artText = base.GetArtText(0);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			}
 		}
 
-		// Token: 0x06041E64 RID: 269924 RVA: 0x00FFC3DC File Offset: 0x00FFA5DC
+		// Token: 0x060369B0 RID: 223664 RVA: 0x00F3D7A8 File Offset: 0x00F3B9A8
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -80,10 +80,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			sequencePlayer.Clear();
 		}
 
-		// Token: 0x04022573 RID: 140659
+		// Token: 0x0401CDCC RID: 118220
 		private bool HasFinished;
 
-		// Token: 0x04022574 RID: 140660
+		// Token: 0x0401CDCD RID: 118221
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 	}

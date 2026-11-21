@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050AC RID: 20652
+	// Token: 0x02005611 RID: 22033
 	public class IDollGrabStageAudioStateT
 	{
-		// Token: 0x17009617 RID: 38423
-		// (get) Token: 0x060212DD RID: 135901 RVA: 0x0049C2AA File Offset: 0x0049A4AA
-		// (set) Token: 0x060212DE RID: 135902 RVA: 0x0049C2B2 File Offset: 0x0049A4B2
+		// Token: 0x17009E04 RID: 40452
+		// (get) Token: 0x06023231 RID: 143921 RVA: 0x004D6236 File Offset: 0x004D4436
+		// (set) Token: 0x06023232 RID: 143922 RVA: 0x004D623E File Offset: 0x004D443E
 		public string Group { get; set; }
 
-		// Token: 0x17009618 RID: 38424
-		// (get) Token: 0x060212DF RID: 135903 RVA: 0x0049C2BB File Offset: 0x0049A4BB
-		// (set) Token: 0x060212E0 RID: 135904 RVA: 0x0049C2C3 File Offset: 0x0049A4C3
+		// Token: 0x17009E05 RID: 40453
+		// (get) Token: 0x06023233 RID: 143923 RVA: 0x004D6247 File Offset: 0x004D4447
+		// (set) Token: 0x06023234 RID: 143924 RVA: 0x004D624F File Offset: 0x004D444F
 		public string State { get; set; }
 
-		// Token: 0x060212E1 RID: 135905 RVA: 0x0049C2CC File Offset: 0x0049A4CC
+		// Token: 0x06023235 RID: 143925 RVA: 0x004D6258 File Offset: 0x004D4458
 		public IDollGrabStageAudioStateT()
 		{
 			this.Group = null;

@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027B1 RID: 10161
+	// Token: 0x02002A84 RID: 10884
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AddTrialCharacter : ActionParams
 	{
-		// Token: 0x0600E20A RID: 57866 RVA: 0x00216293 File Offset: 0x00214493
-		[NullableContext(1)]
+		// Token: 0x0600F02C RID: 61484 RVA: 0x00233067 File Offset: 0x00231267
+		[NullableContext(0)]
 		public static AddTrialCharacter Create(IAddTrialCharacter? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700446A RID: 17514
-		// (get) Token: 0x0600E20B RID: 57867 RVA: 0x002162B4 File Offset: 0x002144B4
+		// Token: 0x170047D2 RID: 18386
+		// (get) Token: 0x0600F02D RID: 61485 RVA: 0x00233088 File Offset: 0x00231288
 		public virtual bool? UseUpdateTrialCharacterLogic
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700446B RID: 17515
-		// (get) Token: 0x0600E20C RID: 57868 RVA: 0x002162EA File Offset: 0x002144EA
+		// Token: 0x170047D3 RID: 18387
+		// (get) Token: 0x0600F02E RID: 61486 RVA: 0x002330BE File Offset: 0x002312BE
 		public virtual int CharacterId
 		{
 			get
@@ -49,12 +49,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700446C RID: 17516
-		// (get) Token: 0x0600E20D RID: 57869 RVA: 0x002162F8 File Offset: 0x002144F8
-		[Nullable(1)]
+		// Token: 0x170047D4 RID: 18388
+		// (get) Token: 0x0600F02F RID: 61487 RVA: 0x002330CC File Offset: 0x002312CC
+		[Nullable(0)]
 		public virtual List<int> CharacterGroup
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._CharacterGroupInited)
@@ -72,19 +72,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700446D RID: 17517
-		// (get) Token: 0x0600E20E RID: 57870 RVA: 0x0021635C File Offset: 0x0021455C
+		// Token: 0x170047D5 RID: 18389
+		// (get) Token: 0x0600F030 RID: 61488 RVA: 0x00233130 File Offset: 0x00231330
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICharacterGroupNew> CharacterGroupNew
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700446E RID: 17518
-		// (get) Token: 0x0600E20F RID: 57871 RVA: 0x002163D8 File Offset: 0x002145D8
+		// Token: 0x170047D6 RID: 18390
+		// (get) Token: 0x0600F031 RID: 61489 RVA: 0x002331AC File Offset: 0x002313AC
 		public virtual bool? AutoChange
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700446F RID: 17519
-		// (get) Token: 0x0600E210 RID: 57872 RVA: 0x00216410 File Offset: 0x00214610
+		// Token: 0x170047D7 RID: 18391
+		// (get) Token: 0x0600F032 RID: 61490 RVA: 0x002331E4 File Offset: 0x002313E4
 		public virtual bool? CreateTempTeam
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004470 RID: 17520
-		// (get) Token: 0x0600E211 RID: 57873 RVA: 0x00216448 File Offset: 0x00214648
+		// Token: 0x170047D8 RID: 18392
+		// (get) Token: 0x0600F033 RID: 61491 RVA: 0x0023321C File Offset: 0x0023141C
 		public virtual bool? CreateAiCharacter
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004471 RID: 17521
-		// (get) Token: 0x0600E212 RID: 57874 RVA: 0x0021647F File Offset: 0x0021467F
+		// Token: 0x170047D9 RID: 18393
+		// (get) Token: 0x0600F034 RID: 61492 RVA: 0x00233253 File Offset: 0x00231453
 		public virtual IActiveRange ActiveRange
 		{
 			get
@@ -165,8 +165,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004472 RID: 17522
-		// (get) Token: 0x0600E213 RID: 57875 RVA: 0x002164B4 File Offset: 0x002146B4
+		// Token: 0x170047DA RID: 18394
+		// (get) Token: 0x0600F035 RID: 61493 RVA: 0x00233288 File Offset: 0x00231488
 		public virtual List<int> EnterRangeEntities
 		{
 			get
@@ -190,8 +190,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004473 RID: 17523
-		// (get) Token: 0x0600E214 RID: 57876 RVA: 0x0021652C File Offset: 0x0021472C
+		// Token: 0x170047DB RID: 18395
+		// (get) Token: 0x0600F036 RID: 61494 RVA: 0x00233300 File Offset: 0x00231500
 		public virtual bool? EnableMapAndTeleport
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004474 RID: 17524
-		// (get) Token: 0x0600E215 RID: 57877 RVA: 0x00216564 File Offset: 0x00214764
+		// Token: 0x170047DC RID: 18396
+		// (get) Token: 0x0600F037 RID: 61495 RVA: 0x00233338 File Offset: 0x00231538
 		public virtual List<int> DungeonList
 		{
 			get
@@ -229,8 +229,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004475 RID: 17525
-		// (get) Token: 0x0600E216 RID: 57878 RVA: 0x002165E0 File Offset: 0x002147E0
+		// Token: 0x170047DD RID: 18397
+		// (get) Token: 0x0600F038 RID: 61496 RVA: 0x002333B4 File Offset: 0x002315B4
 		public virtual bool? IsRemoveTips
 		{
 			get
@@ -243,12 +243,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004476 RID: 17526
-		// (get) Token: 0x0600E217 RID: 57879 RVA: 0x0021661A File Offset: 0x0021481A
-		[Nullable(1)]
+		// Token: 0x170047DE RID: 18398
+		// (get) Token: 0x0600F039 RID: 61497 RVA: 0x002333EE File Offset: 0x002315EE
+		[Nullable(0)]
 		public virtual VarRef IsDisableRollBackRestoreCharacter
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._IsDisableRollBackRestoreCharacterInited)
@@ -261,8 +261,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004477 RID: 17527
-		// (get) Token: 0x0600E218 RID: 57880 RVA: 0x0021664C File Offset: 0x0021484C
+		// Token: 0x170047DF RID: 18399
+		// (get) Token: 0x0600F03A RID: 61498 RVA: 0x00233420 File Offset: 0x00231620
 		public virtual bool? EnableSeamlessTeamSwitch
 		{
 			get
@@ -275,8 +275,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004478 RID: 17528
-		// (get) Token: 0x0600E219 RID: 57881 RVA: 0x00216688 File Offset: 0x00214888
+		// Token: 0x170047E0 RID: 18400
+		// (get) Token: 0x0600F03B RID: 61499 RVA: 0x0023345C File Offset: 0x0023165C
 		public virtual bool? OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -289,50 +289,50 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D57 RID: 32087
+		// Token: 0x0400840E RID: 33806
 		private IAddTrialCharacter Instance;
 
-		// Token: 0x04007D58 RID: 32088
-		[Nullable(1)]
+		// Token: 0x0400840F RID: 33807
+		[Nullable(0)]
 		private List<int> _CharacterGroupCache;
 
-		// Token: 0x04007D59 RID: 32089
+		// Token: 0x04008410 RID: 33808
 		private bool _CharacterGroupInited;
 
-		// Token: 0x04007D5A RID: 32090
+		// Token: 0x04008411 RID: 33809
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICharacterGroupNew> _CharacterGroupNewCache;
 
-		// Token: 0x04007D5B RID: 32091
+		// Token: 0x04008412 RID: 33810
 		private bool _CharacterGroupNewInited;
 
-		// Token: 0x04007D5C RID: 32092
+		// Token: 0x04008413 RID: 33811
 		private IActiveRange _ActiveRangeCache;
 
-		// Token: 0x04007D5D RID: 32093
+		// Token: 0x04008414 RID: 33812
 		private bool _ActiveRangeInited;
 
-		// Token: 0x04007D5E RID: 32094
+		// Token: 0x04008415 RID: 33813
 		private List<int> _EnterRangeEntitiesCache;
 
-		// Token: 0x04007D5F RID: 32095
+		// Token: 0x04008416 RID: 33814
 		private bool _EnterRangeEntitiesInited;
 
-		// Token: 0x04007D60 RID: 32096
+		// Token: 0x04008417 RID: 33815
 		private List<int> _DungeonListCache;
 
-		// Token: 0x04007D61 RID: 32097
+		// Token: 0x04008418 RID: 33816
 		private bool _DungeonListInited;
 
-		// Token: 0x04007D62 RID: 32098
-		[Nullable(1)]
+		// Token: 0x04008419 RID: 33817
+		[Nullable(0)]
 		private VarRef _IsDisableRollBackRestoreCharacterCache;
 
-		// Token: 0x04007D63 RID: 32099
+		// Token: 0x0400841A RID: 33818
 		private bool _IsDisableRollBackRestoreCharacterInited;
 	}
 }

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200611E RID: 24862
+	// Token: 0x0200509C RID: 20636
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeCollectEmptyItem : SyncGridProxyAbstract<IRoverlikeCollectEmptyData>
 	{
-		// Token: 0x0603EDD7 RID: 257495 RVA: 0x00F2EFEC File Offset: 0x00F2D1EC
+		// Token: 0x06033A99 RID: 211609 RVA: 0x00E75E00 File Offset: 0x00E74000
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EDD8 RID: 257496 RVA: 0x00F2F058 File Offset: 0x00F2D258
+		// Token: 0x06033A9A RID: 211610 RVA: 0x00E75E6C File Offset: 0x00E7406C
 		[NullableContext(1)]
 		public override void Refresh(IRoverlikeCollectEmptyData data)
 		{
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0200C37D RID: 50045
+		// Token: 0x0200AD65 RID: 44389
 		private class EComponents
 		{
-			// Token: 0x0403AFE9 RID: 241641
+			// Token: 0x0403594E RID: 219470
 			public const int PanelSelf = 0;
 
-			// Token: 0x0403AFEA RID: 241642
+			// Token: 0x0403594F RID: 219471
 			public const int TxtInfo = 1;
 		}
 	}

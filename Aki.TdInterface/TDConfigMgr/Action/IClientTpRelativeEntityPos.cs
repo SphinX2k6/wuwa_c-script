@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018CC RID: 6348
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A5D RID: 6749
 	public class IClientTpRelativeEntityPos : IClientTeleportConfig
 	{
-		// Token: 0x06008823 RID: 34851 RVA: 0x00142328 File Offset: 0x00140528
+		// Token: 0x06008F6B RID: 36715 RVA: 0x00151EA0 File Offset: 0x001500A0
 		private IClientTpRelativeEntityPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008824 RID: 34852 RVA: 0x00142360 File Offset: 0x00140560
+		// Token: 0x06008F6C RID: 36716 RVA: 0x00151ED8 File Offset: 0x001500D8
 		public static IClientTpRelativeEntityPos Create([Nullable(2)] IClientTpRelativeEntityPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008825 RID: 34853 RVA: 0x00142373 File Offset: 0x00140573
+		// Token: 0x06008F6D RID: 36717 RVA: 0x00151EEB File Offset: 0x001500EB
 		public static IClientTpRelativeEntityPos CreateFromSetValue([Nullable(2)] IClientTpRelativeEntityPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008826 RID: 34854 RVA: 0x00142386 File Offset: 0x00140586
+		// Token: 0x06008F6E RID: 36718 RVA: 0x00151EFE File Offset: 0x001500FE
 		public new IClientTpRelativeEntityPos_SetValue ToSetValue()
 		{
 			return new IClientTpRelativeEntityPos_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C34 RID: 11316
-		// (get) Token: 0x06008827 RID: 34855 RVA: 0x001423B1 File Offset: 0x001405B1
-		// (set) Token: 0x06008828 RID: 34856 RVA: 0x001423DC File Offset: 0x001405DC
+		// Token: 0x17002E36 RID: 11830
+		// (get) Token: 0x06008F6F RID: 36719 RVA: 0x00151F29 File Offset: 0x00150129
+		// (set) Token: 0x06008F70 RID: 36720 RVA: 0x00151F54 File Offset: 0x00150154
 		public override EClientTeleportType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C35 RID: 11317
-		// (get) Token: 0x06008829 RID: 34857 RVA: 0x001423EA File Offset: 0x001405EA
-		// (set) Token: 0x0600882A RID: 34858 RVA: 0x00142415 File Offset: 0x00140615
+		// Token: 0x17002E37 RID: 11831
+		// (get) Token: 0x06008F71 RID: 36721 RVA: 0x00151F62 File Offset: 0x00150162
+		// (set) Token: 0x06008F72 RID: 36722 RVA: 0x00151F8D File Offset: 0x0015018D
 		public virtual int SourcePosEntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C36 RID: 11318
-		// (get) Token: 0x0600882B RID: 34859 RVA: 0x00142423 File Offset: 0x00140623
-		// (set) Token: 0x0600882C RID: 34860 RVA: 0x0014244E File Offset: 0x0014064E
+		// Token: 0x17002E38 RID: 11832
+		// (get) Token: 0x06008F73 RID: 36723 RVA: 0x00151F9B File Offset: 0x0015019B
+		// (set) Token: 0x06008F74 RID: 36724 RVA: 0x00151FC6 File Offset: 0x001501C6
 		public virtual int TargetPosEntityId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005589 RID: 21897
+		// Token: 0x040059E3 RID: 23011
 		[Nullable(2)]
 		protected new IClientTpRelativeEntityPos FbInstance;
 
-		// Token: 0x0400558A RID: 21898
+		// Token: 0x040059E4 RID: 23012
 		[Nullable(2)]
 		protected new IClientTpRelativeEntityPos_SetValue PocoInterface;
 	}

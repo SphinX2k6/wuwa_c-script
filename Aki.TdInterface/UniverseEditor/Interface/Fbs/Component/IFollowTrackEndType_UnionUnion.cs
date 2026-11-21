@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052B0 RID: 21168
+	// Token: 0x0200581B RID: 22555
 	public class IFollowTrackEndType_UnionUnion
 	{
-		// Token: 0x17009B39 RID: 39737
-		// (get) Token: 0x06022827 RID: 141351 RVA: 0x004C8A09 File Offset: 0x004C6C09
-		// (set) Token: 0x06022828 RID: 141352 RVA: 0x004C8A11 File Offset: 0x004C6C11
+		// Token: 0x1700A342 RID: 41794
+		// (get) Token: 0x060247EB RID: 149483 RVA: 0x00503B05 File Offset: 0x00501D05
+		// (set) Token: 0x060247EC RID: 149484 RVA: 0x00503B0D File Offset: 0x00501D0D
 		public IFollowTrackEndType_Union Type { get; set; }
 
-		// Token: 0x17009B3A RID: 39738
-		// (get) Token: 0x06022829 RID: 141353 RVA: 0x004C8A1A File Offset: 0x004C6C1A
-		// (set) Token: 0x0602282A RID: 141354 RVA: 0x004C8A22 File Offset: 0x004C6C22
+		// Token: 0x1700A343 RID: 41795
+		// (get) Token: 0x060247ED RID: 149485 RVA: 0x00503B16 File Offset: 0x00501D16
+		// (set) Token: 0x060247EE RID: 149486 RVA: 0x00503B1E File Offset: 0x00501D1E
 		public object Value { get; set; }
 
-		// Token: 0x0602282B RID: 141355 RVA: 0x004C8A2B File Offset: 0x004C6C2B
+		// Token: 0x060247EF RID: 149487 RVA: 0x00503B27 File Offset: 0x00501D27
 		public IFollowTrackEndType_UnionUnion()
 		{
 			this.Type = IFollowTrackEndType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602282C RID: 141356 RVA: 0x004C8A41 File Offset: 0x004C6C41
+		// Token: 0x060247F0 RID: 149488 RVA: 0x00503B3D File Offset: 0x00501D3D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602282D RID: 141357 RVA: 0x004C8A53 File Offset: 0x004C6C53
+		// Token: 0x060247F1 RID: 149489 RVA: 0x00503B4F File Offset: 0x00501D4F
 		public IFollowTrackEndTypeT AsIFollowTrackEndType()
 		{
 			return this.As<IFollowTrackEndTypeT>();
 		}
 
-		// Token: 0x0602282E RID: 141358 RVA: 0x004C8A5B File Offset: 0x004C6C5B
+		// Token: 0x060247F2 RID: 149490 RVA: 0x00503B57 File Offset: 0x00501D57
 		public static IFollowTrackEndType_UnionUnion FromIFollowTrackEndType(IFollowTrackEndTypeT _ifollowtrackendtype)
 		{
 			return new IFollowTrackEndType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602282F RID: 141359 RVA: 0x004C8A70 File Offset: 0x004C6C70
+		// Token: 0x060247F3 RID: 149491 RVA: 0x00503B6C File Offset: 0x00501D6C
 		public IFollowTrackToStartT AsIFollowTrackToStart()
 		{
 			return this.As<IFollowTrackToStartT>();
 		}
 
-		// Token: 0x06022830 RID: 141360 RVA: 0x004C8A78 File Offset: 0x004C6C78
+		// Token: 0x060247F4 RID: 149492 RVA: 0x00503B74 File Offset: 0x00501D74
 		public static IFollowTrackEndType_UnionUnion FromIFollowTrackToStart(IFollowTrackToStartT _ifollowtracktostart)
 		{
 			return new IFollowTrackEndType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022831 RID: 141361 RVA: 0x004C8A8D File Offset: 0x004C6C8D
+		// Token: 0x060247F5 RID: 149493 RVA: 0x00503B89 File Offset: 0x00501D89
 		public IFollowTrackToFoundationT AsIFollowTrackToFoundation()
 		{
 			return this.As<IFollowTrackToFoundationT>();
 		}
 
-		// Token: 0x06022832 RID: 141362 RVA: 0x004C8A95 File Offset: 0x004C6C95
+		// Token: 0x060247F6 RID: 149494 RVA: 0x00503B91 File Offset: 0x00501D91
 		public static IFollowTrackEndType_UnionUnion FromIFollowTrackToFoundation(IFollowTrackToFoundationT _ifollowtracktofoundation)
 		{
 			return new IFollowTrackEndType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022833 RID: 141363 RVA: 0x004C8AAA File Offset: 0x004C6CAA
+		// Token: 0x060247F7 RID: 149495 RVA: 0x00503BA6 File Offset: 0x00501DA6
 		public IFollowTrackToSplineDestinationT AsIFollowTrackToSplineDestination()
 		{
 			return this.As<IFollowTrackToSplineDestinationT>();
 		}
 
-		// Token: 0x06022834 RID: 141364 RVA: 0x004C8AB2 File Offset: 0x004C6CB2
+		// Token: 0x060247F8 RID: 149496 RVA: 0x00503BAE File Offset: 0x00501DAE
 		public static IFollowTrackEndType_UnionUnion FromIFollowTrackToSplineDestination(IFollowTrackToSplineDestinationT _ifollowtracktosplinedestination)
 		{
 			return new IFollowTrackEndType_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022835 RID: 141365 RVA: 0x004C8AC8 File Offset: 0x004C6CC8
+		// Token: 0x060247F9 RID: 149497 RVA: 0x00503BC4 File Offset: 0x00501DC4
 		public static int Pack(FlatBufferBuilder builder, IFollowTrackEndType_UnionUnion _o)
 		{
 			switch (_o.Type)

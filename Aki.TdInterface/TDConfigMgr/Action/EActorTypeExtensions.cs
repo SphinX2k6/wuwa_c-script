@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002291 RID: 8849
+	// Token: 0x020024FE RID: 9470
 	public static class EActorTypeExtensions
 	{
-		// Token: 0x0600C20B RID: 49675 RVA: 0x001C5464 File Offset: 0x001C3664
+		// Token: 0x0600CDD1 RID: 52689 RVA: 0x001DD158 File Offset: 0x001DB358
 		public static string ToEnumString(this EActorType value)
 		{
 			string result;
@@ -75,7 +75,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C20C RID: 49676 RVA: 0x001C557C File Offset: 0x001C377C
+		// Token: 0x0600CDD2 RID: 52690 RVA: 0x001DD270 File Offset: 0x001DB470
 		public static EActorType FromString(string name)
 		{
 			EActorType result;
@@ -86,7 +86,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C20D RID: 49677 RVA: 0x001C55A8 File Offset: 0x001C37A8
+		// Token: 0x0600CDD3 RID: 52691 RVA: 0x001DD29C File Offset: 0x001DB49C
 		public static bool TryFromString(string name, out EActorType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -291,7 +291,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C20E RID: 49678 RVA: 0x001C58C8 File Offset: 0x001C3AC8
+		// Token: 0x0600CDD4 RID: 52692 RVA: 0x001DD5BC File Offset: 0x001DB7BC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -318,7 +318,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C20F RID: 49679 RVA: 0x001C597E File Offset: 0x001C3B7E
+		// Token: 0x0600CDD5 RID: 52693 RVA: 0x001DD672 File Offset: 0x001DB872
 		public static EActorType[] GetValues()
 		{
 			return new EActorType[]
@@ -345,7 +345,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C210 RID: 49680 RVA: 0x001C5994 File Offset: 0x001C3B94
+		// Token: 0x0600CDD6 RID: 52694 RVA: 0x001DD688 File Offset: 0x001DB888
 		public static string[] GetNames()
 		{
 			return new string[]

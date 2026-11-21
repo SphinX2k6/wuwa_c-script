@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200650A RID: 25866
+	// Token: 0x02006B78 RID: 27512
 	public struct ICustomScreenSpine : IFlatbufferObject
 	{
-		// Token: 0x1700C057 RID: 49239
-		// (get) Token: 0x0602CDE1 RID: 183777 RVA: 0x00629B7A File Offset: 0x00627D7A
+		// Token: 0x1700C9E7 RID: 51687
+		// (get) Token: 0x0602F577 RID: 193911 RVA: 0x00675E1A File Offset: 0x0067401A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CDE2 RID: 183778 RVA: 0x00629B87 File Offset: 0x00627D87
+		// Token: 0x0602F578 RID: 193912 RVA: 0x00675E27 File Offset: 0x00674027
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CDE3 RID: 183779 RVA: 0x00629B90 File Offset: 0x00627D90
+		// Token: 0x0602F579 RID: 193913 RVA: 0x00675E30 File Offset: 0x00674030
 		public static ICustomScreenSpine GetRootAsICustomScreenSpine(ByteBuffer _bb)
 		{
 			return ICustomScreenSpine.GetRootAsICustomScreenSpine(_bb, default(ICustomScreenSpine));
 		}
 
-		// Token: 0x0602CDE4 RID: 183780 RVA: 0x00629BAC File Offset: 0x00627DAC
+		// Token: 0x0602F57A RID: 193914 RVA: 0x00675E4C File Offset: 0x0067404C
 		public static ICustomScreenSpine GetRootAsICustomScreenSpine(ByteBuffer _bb, ICustomScreenSpine obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CDE5 RID: 183781 RVA: 0x00629BC9 File Offset: 0x00627DC9
+		// Token: 0x0602F57B RID: 193915 RVA: 0x00675E69 File Offset: 0x00674069
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CDE6 RID: 183782 RVA: 0x00629BD8 File Offset: 0x00627DD8
+		// Token: 0x0602F57C RID: 193916 RVA: 0x00675E78 File Offset: 0x00674078
 		public ICustomScreenSpine __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C058 RID: 49240
-		// (get) Token: 0x0602CDE7 RID: 183783 RVA: 0x00629BE8 File Offset: 0x00627DE8
+		// Token: 0x1700C9E8 RID: 51688
+		// (get) Token: 0x0602F57D RID: 193917 RVA: 0x00675E88 File Offset: 0x00674088
 		public ECustomScreenType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C059 RID: 49241
-		// (get) Token: 0x0602CDE8 RID: 183784 RVA: 0x00629C24 File Offset: 0x00627E24
+		// Token: 0x1700C9E9 RID: 51689
+		// (get) Token: 0x0602F57E RID: 193918 RVA: 0x00675EC4 File Offset: 0x006740C4
 		public int SpineId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CDE9 RID: 183785 RVA: 0x00629C60 File Offset: 0x00627E60
+		// Token: 0x0602F57F RID: 193919 RVA: 0x00675F00 File Offset: 0x00674100
 		public static Offset<ICustomScreenSpine> CreateICustomScreenSpine(FlatBufferBuilder builder, ECustomScreenType Type = ECustomScreenType.Spine, int SpineId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenSpine.EndICustomScreenSpine(builder);
 		}
 
-		// Token: 0x0602CDEA RID: 183786 RVA: 0x00629C7D File Offset: 0x00627E7D
+		// Token: 0x0602F580 RID: 193920 RVA: 0x00675F1D File Offset: 0x0067411D
 		public static void StartICustomScreenSpine(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602CDEB RID: 183787 RVA: 0x00629C86 File Offset: 0x00627E86
+		// Token: 0x0602F581 RID: 193921 RVA: 0x00675F26 File Offset: 0x00674126
 		public static void AddType(FlatBufferBuilder builder, ECustomScreenType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CDEC RID: 183788 RVA: 0x00629C91 File Offset: 0x00627E91
+		// Token: 0x0602F582 RID: 193922 RVA: 0x00675F31 File Offset: 0x00674131
 		public static void AddSpineId(FlatBufferBuilder builder, int spineId)
 		{
 			builder.AddInt(1, spineId, 0);
 		}
 
-		// Token: 0x0602CDED RID: 183789 RVA: 0x00629C9C File Offset: 0x00627E9C
+		// Token: 0x0602F583 RID: 193923 RVA: 0x00675F3C File Offset: 0x0067413C
 		public static Offset<ICustomScreenSpine> EndICustomScreenSpine(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomScreenSpine>(builder.EndTable());
 		}
 
-		// Token: 0x0602CDEE RID: 183790 RVA: 0x00629CAC File Offset: 0x00627EAC
+		// Token: 0x0602F584 RID: 193924 RVA: 0x00675F4C File Offset: 0x0067414C
 		public ICustomScreenSpineT UnPack()
 		{
 			ICustomScreenSpineT customScreenSpineT = new ICustomScreenSpineT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return customScreenSpineT;
 		}
 
-		// Token: 0x0602CDEF RID: 183791 RVA: 0x00629CC7 File Offset: 0x00627EC7
+		// Token: 0x0602F585 RID: 193925 RVA: 0x00675F67 File Offset: 0x00674167
 		public void UnPackTo(ICustomScreenSpineT _o)
 		{
 			_o.Type = this.Type;
 			_o.SpineId = this.SpineId;
 		}
 
-		// Token: 0x0602CDF0 RID: 183792 RVA: 0x00629CE4 File Offset: 0x00627EE4
+		// Token: 0x0602F586 RID: 193926 RVA: 0x00675F84 File Offset: 0x00674184
 		public static Offset<ICustomScreenSpine> Pack(FlatBufferBuilder builder, ICustomScreenSpineT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenSpine.CreateICustomScreenSpine(builder, _o.Type, _o.SpineId);
 		}
 
-		// Token: 0x04010B4E RID: 68430
+		// Token: 0x04011966 RID: 72038
 		private Table __p;
 	}
 }

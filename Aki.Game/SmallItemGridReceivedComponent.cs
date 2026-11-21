@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200198A RID: 6538
+// Token: 0x02000E47 RID: 3655
 [NullableContext(1)]
 [Nullable(0)]
 public class SmallItemGridReceivedComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF16 RID: 48918 RVA: 0x002B338C File Offset: 0x002B158C
+	// Token: 0x0600931E RID: 37662 RVA: 0x002BE310 File Offset: 0x002BC510
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -21,35 +21,35 @@ public class SmallItemGridReceivedComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF17 RID: 48919 RVA: 0x002B33D4 File Offset: 0x002B15D4
+	// Token: 0x0600931F RID: 37663 RVA: 0x002BE358 File Offset: 0x002BC558
 	protected override void OnRefresh(object bVisible)
 	{
 		this.SetActive((bVisible as bool?).GetValueOrDefault());
 	}
 
-	// Token: 0x0600BF18 RID: 48920 RVA: 0x002B33FA File Offset: 0x002B15FA
+	// Token: 0x06009320 RID: 37664 RVA: 0x002BE37E File Offset: 0x002BC57E
 	public void SetSpriteColor(string hexColor)
 	{
 		base.GetSprite(0).SetColor(FColor.FromHex(hexColor));
 	}
 
-	// Token: 0x0600BF19 RID: 48921 RVA: 0x002B340E File Offset: 0x002B160E
+	// Token: 0x06009321 RID: 37665 RVA: 0x002BE392 File Offset: 0x002BC592
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBReceived";
 	}
 
-	// Token: 0x0600BF1A RID: 48922 RVA: 0x002B3415 File Offset: 0x002B1615
+	// Token: 0x06009322 RID: 37666 RVA: 0x002BE399 File Offset: 0x002BC599
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Top;
 	}
 
-	// Token: 0x02007EC9 RID: 32457
+	// Token: 0x02007058 RID: 28760
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402970A RID: 169738
+		// Token: 0x04024A47 RID: 150087
 		public const int Sprite = 0;
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009E2 RID: 2530
+	// Token: 0x020009D1 RID: 2513
 	public sealed class MobileButtonSetting : IMessage<MobileButtonSetting>, IMessage, IEquatable<MobileButtonSetting>, IDeepCloneable<MobileButtonSetting>, IBufferMessage
 	{
-		// Token: 0x0600DDAD RID: 56749 RVA: 0x00208335 File Offset: 0x00206535
+		// Token: 0x0600DC93 RID: 56467 RVA: 0x00206149 File Offset: 0x00204349
 		[NullableContext(1)]
 		public static MobileButtonSetting Create()
 		{
 			return new MobileButtonSetting();
 		}
 
-		// Token: 0x17002CEC RID: 11500
-		// (get) Token: 0x0600DDAE RID: 56750 RVA: 0x0020833C File Offset: 0x0020653C
+		// Token: 0x17002CAE RID: 11438
+		// (get) Token: 0x0600DC94 RID: 56468 RVA: 0x00206150 File Offset: 0x00204350
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<MobileButtonSetting> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CED RID: 11501
-		// (get) Token: 0x0600DDAF RID: 56751 RVA: 0x00208343 File Offset: 0x00206543
+		// Token: 0x17002CAF RID: 11439
+		// (get) Token: 0x0600DC95 RID: 56469 RVA: 0x00206157 File Offset: 0x00204357
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CEE RID: 11502
-		// (get) Token: 0x0600DDB0 RID: 56752 RVA: 0x00208346 File Offset: 0x00206546
+		// Token: 0x17002CB0 RID: 11440
+		// (get) Token: 0x0600DC96 RID: 56470 RVA: 0x0020615A File Offset: 0x0020435A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDB1 RID: 56753 RVA: 0x0020834D File Offset: 0x0020654D
+		// Token: 0x0600DC97 RID: 56471 RVA: 0x00206161 File Offset: 0x00204361
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSetting()
 		{
 		}
 
-		// Token: 0x0600DDB2 RID: 56754 RVA: 0x00208358 File Offset: 0x00206558
+		// Token: 0x0600DC98 RID: 56472 RVA: 0x0020616C File Offset: 0x0020436C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSetting(MobileButtonSetting other) : this()
@@ -76,7 +76,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DDB3 RID: 56755 RVA: 0x002083D0 File Offset: 0x002065D0
+		// Token: 0x0600DC99 RID: 56473 RVA: 0x002061E4 File Offset: 0x002043E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MobileButtonSetting Clone()
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			return new MobileButtonSetting(this);
 		}
 
-		// Token: 0x17002CEF RID: 11503
-		// (get) Token: 0x0600DDB4 RID: 56756 RVA: 0x002083D8 File Offset: 0x002065D8
-		// (set) Token: 0x0600DDB5 RID: 56757 RVA: 0x002083E0 File Offset: 0x002065E0
+		// Token: 0x17002CB1 RID: 11441
+		// (get) Token: 0x0600DC9A RID: 56474 RVA: 0x002061EC File Offset: 0x002043EC
+		// (set) Token: 0x0600DC9B RID: 56475 RVA: 0x002061F4 File Offset: 0x002043F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -101,9 +101,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF0 RID: 11504
-		// (get) Token: 0x0600DDB6 RID: 56758 RVA: 0x002083E9 File Offset: 0x002065E9
-		// (set) Token: 0x0600DDB7 RID: 56759 RVA: 0x002083F1 File Offset: 0x002065F1
+		// Token: 0x17002CB2 RID: 11442
+		// (get) Token: 0x0600DC9C RID: 56476 RVA: 0x002061FD File Offset: 0x002043FD
+		// (set) Token: 0x0600DC9D RID: 56477 RVA: 0x00206205 File Offset: 0x00204405
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float Size
@@ -118,9 +118,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF1 RID: 11505
-		// (get) Token: 0x0600DDB8 RID: 56760 RVA: 0x002083FA File Offset: 0x002065FA
-		// (set) Token: 0x0600DDB9 RID: 56761 RVA: 0x00208402 File Offset: 0x00206602
+		// Token: 0x17002CB3 RID: 11443
+		// (get) Token: 0x0600DC9E RID: 56478 RVA: 0x0020620E File Offset: 0x0020440E
+		// (set) Token: 0x0600DC9F RID: 56479 RVA: 0x00206216 File Offset: 0x00204416
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float Transparency
@@ -135,9 +135,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF2 RID: 11506
-		// (get) Token: 0x0600DDBA RID: 56762 RVA: 0x0020840B File Offset: 0x0020660B
-		// (set) Token: 0x0600DDBB RID: 56763 RVA: 0x00208413 File Offset: 0x00206613
+		// Token: 0x17002CB4 RID: 11444
+		// (get) Token: 0x0600DCA0 RID: 56480 RVA: 0x0020621F File Offset: 0x0020441F
+		// (set) Token: 0x0600DCA1 RID: 56481 RVA: 0x00206227 File Offset: 0x00204427
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ScreenX
@@ -152,9 +152,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF3 RID: 11507
-		// (get) Token: 0x0600DDBC RID: 56764 RVA: 0x0020841C File Offset: 0x0020661C
-		// (set) Token: 0x0600DDBD RID: 56765 RVA: 0x00208424 File Offset: 0x00206624
+		// Token: 0x17002CB5 RID: 11445
+		// (get) Token: 0x0600DCA2 RID: 56482 RVA: 0x00206230 File Offset: 0x00204430
+		// (set) Token: 0x0600DCA3 RID: 56483 RVA: 0x00206238 File Offset: 0x00204438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ScreenY
@@ -169,9 +169,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF4 RID: 11508
-		// (get) Token: 0x0600DDBE RID: 56766 RVA: 0x0020842D File Offset: 0x0020662D
-		// (set) Token: 0x0600DDBF RID: 56767 RVA: 0x00208435 File Offset: 0x00206635
+		// Token: 0x17002CB6 RID: 11446
+		// (get) Token: 0x0600DCA4 RID: 56484 RVA: 0x00206241 File Offset: 0x00204441
+		// (set) Token: 0x0600DCA5 RID: 56485 RVA: 0x00206249 File Offset: 0x00204449
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ButtonLevel
@@ -186,9 +186,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002CF5 RID: 11509
-		// (get) Token: 0x0600DDC0 RID: 56768 RVA: 0x0020843E File Offset: 0x0020663E
-		// (set) Token: 0x0600DDC1 RID: 56769 RVA: 0x00208446 File Offset: 0x00206646
+		// Token: 0x17002CB7 RID: 11447
+		// (get) Token: 0x0600DCA6 RID: 56486 RVA: 0x00206252 File Offset: 0x00204452
+		// (set) Token: 0x0600DCA7 RID: 56487 RVA: 0x0020625A File Offset: 0x0020445A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PanelLevel
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDC2 RID: 56770 RVA: 0x0020844F File Offset: 0x0020664F
+		// Token: 0x0600DCA8 RID: 56488 RVA: 0x00206263 File Offset: 0x00204463
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MobileButtonSetting);
 		}
 
-		// Token: 0x0600DDC3 RID: 56771 RVA: 0x00208460 File Offset: 0x00206660
+		// Token: 0x0600DCA9 RID: 56489 RVA: 0x00206274 File Offset: 0x00204474
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MobileButtonSetting other)
@@ -219,7 +219,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Id == other.Id && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.Size, other.Size) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.Transparency, other.Transparency) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ScreenX, other.ScreenX) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ScreenY, other.ScreenY) && this.ButtonLevel == other.ButtonLevel && this.PanelLevel == other.PanelLevel && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DDC4 RID: 56772 RVA: 0x00208524 File Offset: 0x00206724
+		// Token: 0x0600DCAA RID: 56490 RVA: 0x00206338 File Offset: 0x00204538
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DDC5 RID: 56773 RVA: 0x00208615 File Offset: 0x00206815
+		// Token: 0x0600DCAB RID: 56491 RVA: 0x00206429 File Offset: 0x00204629
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -268,7 +268,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DDC6 RID: 56774 RVA: 0x00208622 File Offset: 0x00206822
+		// Token: 0x0600DCAC RID: 56492 RVA: 0x00206436 File Offset: 0x00204636
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -276,7 +276,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DDC7 RID: 56775 RVA: 0x0020862C File Offset: 0x0020682C
+		// Token: 0x0600DCAD RID: 56493 RVA: 0x00206440 File Offset: 0x00204640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DDC8 RID: 56776 RVA: 0x00208724 File Offset: 0x00206924
+		// Token: 0x0600DCAE RID: 56494 RVA: 0x00206538 File Offset: 0x00204738
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -363,7 +363,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DDC9 RID: 56777 RVA: 0x002087D8 File Offset: 0x002069D8
+		// Token: 0x0600DCAF RID: 56495 RVA: 0x002065EC File Offset: 0x002047EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MobileButtonSetting other)
@@ -403,7 +403,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DDCA RID: 56778 RVA: 0x002088A0 File Offset: 0x00206AA0
+		// Token: 0x0600DCB0 RID: 56496 RVA: 0x002066B4 File Offset: 0x002048B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -411,7 +411,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DDCB RID: 56779 RVA: 0x002088AC File Offset: 0x00206AAC
+		// Token: 0x0600DCB1 RID: 56497 RVA: 0x002066C0 File Offset: 0x002048C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -471,52 +471,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005B9E RID: 23454
+		// Token: 0x04005BA7 RID: 23463
 		private static readonly MessageParser<MobileButtonSetting> _parser = new MessageParser<MobileButtonSetting>(() => new MobileButtonSetting());
 
-		// Token: 0x04005B9F RID: 23455
+		// Token: 0x04005BA8 RID: 23464
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005BA0 RID: 23456
+		// Token: 0x04005BA9 RID: 23465
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x04005BA1 RID: 23457
+		// Token: 0x04005BAA RID: 23466
 		private int id_;
 
-		// Token: 0x04005BA2 RID: 23458
+		// Token: 0x04005BAB RID: 23467
 		public const int SizeFieldNumber = 2;
 
-		// Token: 0x04005BA3 RID: 23459
+		// Token: 0x04005BAC RID: 23468
 		private float size_;
 
-		// Token: 0x04005BA4 RID: 23460
+		// Token: 0x04005BAD RID: 23469
 		public const int TransparencyFieldNumber = 3;
 
-		// Token: 0x04005BA5 RID: 23461
+		// Token: 0x04005BAE RID: 23470
 		private float transparency_;
 
-		// Token: 0x04005BA6 RID: 23462
+		// Token: 0x04005BAF RID: 23471
 		public const int ScreenXFieldNumber = 4;
 
-		// Token: 0x04005BA7 RID: 23463
+		// Token: 0x04005BB0 RID: 23472
 		private float screenX_;
 
-		// Token: 0x04005BA8 RID: 23464
+		// Token: 0x04005BB1 RID: 23473
 		public const int ScreenYFieldNumber = 5;
 
-		// Token: 0x04005BA9 RID: 23465
+		// Token: 0x04005BB2 RID: 23474
 		private float screenY_;
 
-		// Token: 0x04005BAA RID: 23466
+		// Token: 0x04005BB3 RID: 23475
 		public const int ButtonLevelFieldNumber = 6;
 
-		// Token: 0x04005BAB RID: 23467
+		// Token: 0x04005BB4 RID: 23476
 		private int buttonLevel_;
 
-		// Token: 0x04005BAC RID: 23468
+		// Token: 0x04005BB5 RID: 23477
 		public const int PanelLevelFieldNumber = 7;
 
-		// Token: 0x04005BAD RID: 23469
+		// Token: 0x04005BB6 RID: 23478
 		private int panelLevel_;
 	}
 }

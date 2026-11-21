@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000345 RID: 837
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200038C RID: 908
 	public class IExhibitItemType
 	{
-		// Token: 0x0600108E RID: 4238 RVA: 0x00039308 File Offset: 0x00037508
+		// Token: 0x060011C0 RID: 4544 RVA: 0x0003C2D4 File Offset: 0x0003A4D4
 		private IExhibitItemType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600108F RID: 4239 RVA: 0x00039340 File Offset: 0x00037540
+		// Token: 0x060011C1 RID: 4545 RVA: 0x0003C30C File Offset: 0x0003A50C
 		public static IExhibitItemType Create([Nullable(2)] IExhibitItemType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001090 RID: 4240 RVA: 0x00039353 File Offset: 0x00037553
+		// Token: 0x060011C2 RID: 4546 RVA: 0x0003C31F File Offset: 0x0003A51F
 		public static IExhibitItemType CreateFromSetValue([Nullable(2)] IExhibitItemType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001091 RID: 4241 RVA: 0x00039366 File Offset: 0x00037566
+		// Token: 0x060011C3 RID: 4547 RVA: 0x0003C332 File Offset: 0x0003A532
 		public IExhibitItemType_SetValue ToSetValue()
 		{
 			return new IExhibitItemType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004BC RID: 1212
-		// (get) Token: 0x06001092 RID: 4242 RVA: 0x00039379 File Offset: 0x00037579
-		// (set) Token: 0x06001093 RID: 4243 RVA: 0x000393A4 File Offset: 0x000375A4
+		// Token: 0x1700050A RID: 1290
+		// (get) Token: 0x060011C4 RID: 4548 RVA: 0x0003C345 File Offset: 0x0003A545
+		// (set) Token: 0x060011C5 RID: 4549 RVA: 0x0003C370 File Offset: 0x0003A570
 		public virtual EExhibitItemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DE3 RID: 3555
+		// Token: 0x04000ECE RID: 3790
 		[Nullable(2)]
 		protected IExhibitItemType FbInstance;
 
-		// Token: 0x04000DE4 RID: 3556
+		// Token: 0x04000ECF RID: 3791
 		[Nullable(2)]
 		protected IExhibitItemType_SetValue PocoInterface;
 	}

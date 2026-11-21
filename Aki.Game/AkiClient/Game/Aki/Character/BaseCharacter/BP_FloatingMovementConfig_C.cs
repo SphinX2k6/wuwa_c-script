@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200427D RID: 17021
+	// Token: 0x020032E2 RID: 13026
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/BP_FloatingMovementConfig.BP_FloatingMovementConfig_C")]
 	[UnrealStructLayout(904, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 904)]
 	public class BP_FloatingMovementConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C2C2 RID: 180930 RVA: 0x00A18F4B File Offset: 0x00A1714B
+		// Token: 0x0602113A RID: 135482 RVA: 0x0095884F File Offset: 0x00956A4F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FloatingMovementConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,304 +24,304 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			return BP_FloatingMovementConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602C2C3 RID: 180931 RVA: 0x00A18F70 File Offset: 0x00A17170
+		// Token: 0x0602113B RID: 135483 RVA: 0x00958874 File Offset: 0x00956A74
 		public BP_FloatingMovementConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_FloatingMovementConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C2C4 RID: 180932 RVA: 0x00A18F98 File Offset: 0x00A17198
+		// Token: 0x0602113C RID: 135484 RVA: 0x0095889C File Offset: 0x00956A9C
 		public BP_FloatingMovementConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FloatingMovementConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006DF2 RID: 28146
-		// (get) Token: 0x0602C2C5 RID: 180933 RVA: 0x00A18FCB File Offset: 0x00A171CB
-		// (set) Token: 0x0602C2C6 RID: 180934 RVA: 0x00A18FDB File Offset: 0x00A171DB
+		// Token: 0x1700426F RID: 17007
+		// (get) Token: 0x0602113D RID: 135485 RVA: 0x009588CF File Offset: 0x00956ACF
+		// (set) Token: 0x0602113E RID: 135486 RVA: 0x009588DF File Offset: 0x00956ADF
 		public unsafe int MoveSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_MoveSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_MoveSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006DF3 RID: 28147
-		// (get) Token: 0x0602C2C7 RID: 180935 RVA: 0x00A18FEC File Offset: 0x00A171EC
-		// (set) Token: 0x0602C2C8 RID: 180936 RVA: 0x00A18FFC File Offset: 0x00A171FC
+		// Token: 0x17004270 RID: 17008
+		// (get) Token: 0x0602113F RID: 135487 RVA: 0x009588F0 File Offset: 0x00956AF0
+		// (set) Token: 0x06021140 RID: 135488 RVA: 0x00958900 File Offset: 0x00956B00
 		public unsafe int SprintSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SprintSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SprintSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006DF4 RID: 28148
-		// (get) Token: 0x0602C2C9 RID: 180937 RVA: 0x00A1900D File Offset: 0x00A1720D
-		// (set) Token: 0x0602C2CA RID: 180938 RVA: 0x00A1901D File Offset: 0x00A1721D
+		// Token: 0x17004271 RID: 17009
+		// (get) Token: 0x06021141 RID: 135489 RVA: 0x00958911 File Offset: 0x00956B11
+		// (set) Token: 0x06021142 RID: 135490 RVA: 0x00958921 File Offset: 0x00956B21
 		public unsafe int TurnSpeedDeg
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_TurnSpeedDeg);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_TurnSpeedDeg) = value;
 			}
 		}
 
-		// Token: 0x17006DF5 RID: 28149
-		// (get) Token: 0x0602C2CB RID: 180939 RVA: 0x00A1902E File Offset: 0x00A1722E
-		// (set) Token: 0x0602C2CC RID: 180940 RVA: 0x00A1903E File Offset: 0x00A1723E
+		// Token: 0x17004272 RID: 17010
+		// (get) Token: 0x06021143 RID: 135491 RVA: 0x00958932 File Offset: 0x00956B32
+		// (set) Token: 0x06021144 RID: 135492 RVA: 0x00958942 File Offset: 0x00956B42
 		public unsafe int AirEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AirEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AirEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DF6 RID: 28150
-		// (get) Token: 0x0602C2CD RID: 180941 RVA: 0x00A1904F File Offset: 0x00A1724F
-		// (set) Token: 0x0602C2CE RID: 180942 RVA: 0x00A1905F File Offset: 0x00A1725F
+		// Token: 0x17004273 RID: 17011
+		// (get) Token: 0x06021145 RID: 135493 RVA: 0x00958953 File Offset: 0x00956B53
+		// (set) Token: 0x06021146 RID: 135494 RVA: 0x00958963 File Offset: 0x00956B63
 		public unsafe int RiseEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DF7 RID: 28151
-		// (get) Token: 0x0602C2CF RID: 180943 RVA: 0x00A19070 File Offset: 0x00A17270
-		// (set) Token: 0x0602C2D0 RID: 180944 RVA: 0x00A19080 File Offset: 0x00A17280
+		// Token: 0x17004274 RID: 17012
+		// (get) Token: 0x06021147 RID: 135495 RVA: 0x00958974 File Offset: 0x00956B74
+		// (set) Token: 0x06021148 RID: 135496 RVA: 0x00958984 File Offset: 0x00956B84
 		public unsafe int DropEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DF8 RID: 28152
-		// (get) Token: 0x0602C2D1 RID: 180945 RVA: 0x00A19091 File Offset: 0x00A17291
-		// (set) Token: 0x0602C2D2 RID: 180946 RVA: 0x00A190A1 File Offset: 0x00A172A1
+		// Token: 0x17004275 RID: 17013
+		// (get) Token: 0x06021149 RID: 135497 RVA: 0x00958995 File Offset: 0x00956B95
+		// (set) Token: 0x0602114A RID: 135498 RVA: 0x009589A5 File Offset: 0x00956BA5
 		public unsafe int DodgeEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DodgeEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DodgeEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DF9 RID: 28153
-		// (get) Token: 0x0602C2D3 RID: 180947 RVA: 0x00A190B2 File Offset: 0x00A172B2
-		// (set) Token: 0x0602C2D4 RID: 180948 RVA: 0x00A190C2 File Offset: 0x00A172C2
+		// Token: 0x17004276 RID: 17014
+		// (get) Token: 0x0602114B RID: 135499 RVA: 0x009589B6 File Offset: 0x00956BB6
+		// (set) Token: 0x0602114C RID: 135500 RVA: 0x009589C6 File Offset: 0x00956BC6
 		public unsafe int MoveEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_MoveEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_MoveEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DFA RID: 28154
-		// (get) Token: 0x0602C2D5 RID: 180949 RVA: 0x00A190D3 File Offset: 0x00A172D3
-		// (set) Token: 0x0602C2D6 RID: 180950 RVA: 0x00A190E3 File Offset: 0x00A172E3
+		// Token: 0x17004277 RID: 17015
+		// (get) Token: 0x0602114D RID: 135501 RVA: 0x009589D7 File Offset: 0x00956BD7
+		// (set) Token: 0x0602114E RID: 135502 RVA: 0x009589E7 File Offset: 0x00956BE7
 		public unsafe int FastMoveEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_FastMoveEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_FastMoveEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DFB RID: 28155
-		// (get) Token: 0x0602C2D7 RID: 180951 RVA: 0x00A190F4 File Offset: 0x00A172F4
-		// (set) Token: 0x0602C2D8 RID: 180952 RVA: 0x00A19104 File Offset: 0x00A17304
+		// Token: 0x17004278 RID: 17016
+		// (get) Token: 0x0602114F RID: 135503 RVA: 0x009589F8 File Offset: 0x00956BF8
+		// (set) Token: 0x06021150 RID: 135504 RVA: 0x00958A08 File Offset: 0x00956C08
 		public unsafe int SprintEnergyConsumption
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SprintEnergyConsumption);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SprintEnergyConsumption) = value;
 			}
 		}
 
-		// Token: 0x17006DFC RID: 28156
-		// (get) Token: 0x0602C2D9 RID: 180953 RVA: 0x00A19115 File Offset: 0x00A17315
-		// (set) Token: 0x0602C2DA RID: 180954 RVA: 0x00A19125 File Offset: 0x00A17325
+		// Token: 0x17004279 RID: 17017
+		// (get) Token: 0x06021151 RID: 135505 RVA: 0x00958A19 File Offset: 0x00956C19
+		// (set) Token: 0x06021152 RID: 135506 RVA: 0x00958A29 File Offset: 0x00956C29
 		public unsafe int EnergyRecoverSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_EnergyRecoverSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_EnergyRecoverSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006DFD RID: 28157
-		// (get) Token: 0x0602C2DB RID: 180955 RVA: 0x00A19136 File Offset: 0x00A17336
-		// (set) Token: 0x0602C2DC RID: 180956 RVA: 0x00A19146 File Offset: 0x00A17346
+		// Token: 0x1700427A RID: 17018
+		// (get) Token: 0x06021153 RID: 135507 RVA: 0x00958A3A File Offset: 0x00956C3A
+		// (set) Token: 0x06021154 RID: 135508 RVA: 0x00958A4A File Offset: 0x00956C4A
 		public unsafe int EnergyRecoverCoolDownTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_EnergyRecoverCoolDownTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_EnergyRecoverCoolDownTime) = value;
 			}
 		}
 
-		// Token: 0x17006DFE RID: 28158
-		// (get) Token: 0x0602C2DD RID: 180957 RVA: 0x00A19157 File Offset: 0x00A17357
-		// (set) Token: 0x0602C2DE RID: 180958 RVA: 0x00A19167 File Offset: 0x00A17367
+		// Token: 0x1700427B RID: 17019
+		// (get) Token: 0x06021155 RID: 135509 RVA: 0x00958A5B File Offset: 0x00956C5B
+		// (set) Token: 0x06021156 RID: 135510 RVA: 0x00958A6B File Offset: 0x00956C6B
 		public unsafe int AirCriticalHeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AirCriticalHeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AirCriticalHeight) = value;
 			}
 		}
 
-		// Token: 0x17006DFF RID: 28159
-		// (get) Token: 0x0602C2DF RID: 180959 RVA: 0x00A19178 File Offset: 0x00A17378
-		// (set) Token: 0x0602C2E0 RID: 180960 RVA: 0x00A19188 File Offset: 0x00A17388
+		// Token: 0x1700427C RID: 17020
+		// (get) Token: 0x06021157 RID: 135511 RVA: 0x00958A7C File Offset: 0x00956C7C
+		// (set) Token: 0x06021158 RID: 135512 RVA: 0x00958A8C File Offset: 0x00956C8C
 		public unsafe int CloseToGroundHeight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_CloseToGroundHeight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_CloseToGroundHeight) = value;
 			}
 		}
 
-		// Token: 0x17006E00 RID: 28160
-		// (get) Token: 0x0602C2E1 RID: 180961 RVA: 0x00A19199 File Offset: 0x00A17399
-		// (set) Token: 0x0602C2E2 RID: 180962 RVA: 0x00A191A9 File Offset: 0x00A173A9
+		// Token: 0x1700427D RID: 17021
+		// (get) Token: 0x06021159 RID: 135513 RVA: 0x00958A9D File Offset: 0x00956C9D
+		// (set) Token: 0x0602115A RID: 135514 RVA: 0x00958AAD File Offset: 0x00956CAD
 		public unsafe int RiseSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006E01 RID: 28161
-		// (get) Token: 0x0602C2E3 RID: 180963 RVA: 0x00A191BA File Offset: 0x00A173BA
-		// (set) Token: 0x0602C2E4 RID: 180964 RVA: 0x00A191CA File Offset: 0x00A173CA
+		// Token: 0x1700427E RID: 17022
+		// (get) Token: 0x0602115B RID: 135515 RVA: 0x00958ABE File Offset: 0x00956CBE
+		// (set) Token: 0x0602115C RID: 135516 RVA: 0x00958ACE File Offset: 0x00956CCE
 		public unsafe int DropSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006E02 RID: 28162
-		// (get) Token: 0x0602C2E5 RID: 180965 RVA: 0x00A191DB File Offset: 0x00A173DB
-		// (set) Token: 0x0602C2E6 RID: 180966 RVA: 0x00A191EB File Offset: 0x00A173EB
+		// Token: 0x1700427F RID: 17023
+		// (get) Token: 0x0602115D RID: 135517 RVA: 0x00958ADF File Offset: 0x00956CDF
+		// (set) Token: 0x0602115E RID: 135518 RVA: 0x00958AEF File Offset: 0x00956CEF
 		public unsafe float AnimLerpAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AnimLerpAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_AnimLerpAlpha) = value;
 			}
 		}
 
-		// Token: 0x17006E03 RID: 28163
-		// (get) Token: 0x0602C2E7 RID: 180967 RVA: 0x00A191FC File Offset: 0x00A173FC
-		// (set) Token: 0x0602C2E8 RID: 180968 RVA: 0x00A1920C File Offset: 0x00A1740C
+		// Token: 0x17004280 RID: 17024
+		// (get) Token: 0x0602115F RID: 135519 RVA: 0x00958B00 File Offset: 0x00956D00
+		// (set) Token: 0x06021160 RID: 135520 RVA: 0x00958B10 File Offset: 0x00956D10
 		public unsafe float SpeedAcceleration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SpeedAcceleration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_SpeedAcceleration) = value;
 			}
 		}
 
-		// Token: 0x17006E04 RID: 28164
-		// (get) Token: 0x0602C2E9 RID: 180969 RVA: 0x00A1921D File Offset: 0x00A1741D
-		// (set) Token: 0x0602C2EA RID: 180970 RVA: 0x00A1922D File Offset: 0x00A1742D
+		// Token: 0x17004281 RID: 17025
+		// (get) Token: 0x06021161 RID: 135521 RVA: 0x00958B21 File Offset: 0x00956D21
+		// (set) Token: 0x06021162 RID: 135522 RVA: 0x00958B31 File Offset: 0x00956D31
 		public unsafe float DirectionLerpAlpha
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DirectionLerpAlpha);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DirectionLerpAlpha) = value;
 			}
 		}
 
-		// Token: 0x17006E05 RID: 28165
-		// (get) Token: 0x0602C2EB RID: 180971 RVA: 0x00A19240 File Offset: 0x00A17440
-		// (set) Token: 0x0602C2EC RID: 180972 RVA: 0x00A19279 File Offset: 0x00A17479
+		// Token: 0x17004282 RID: 17026
+		// (get) Token: 0x06021163 RID: 135523 RVA: 0x00958B44 File Offset: 0x00956D44
+		// (set) Token: 0x06021164 RID: 135524 RVA: 0x00958B7D File Offset: 0x00956D7D
 		public FGameplayTagContainer ForbidRotationTagList
 		{
 			get
@@ -330,19 +330,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._ForbidRotationTagList) == null)
 				{
-					result = (this._ForbidRotationTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_19, this));
+					result = (this._ForbidRotationTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_ForbidRotationTagList, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_19, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_ForbidRotationTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E06 RID: 28166
-		// (get) Token: 0x0602C2ED RID: 180973 RVA: 0x00A1929C File Offset: 0x00A1749C
-		// (set) Token: 0x0602C2EE RID: 180974 RVA: 0x00A192D5 File Offset: 0x00A174D5
+		// Token: 0x17004283 RID: 17027
+		// (get) Token: 0x06021165 RID: 135525 RVA: 0x00958BA0 File Offset: 0x00956DA0
+		// (set) Token: 0x06021166 RID: 135526 RVA: 0x00958BD9 File Offset: 0x00956DD9
 		public SFloatingMovementState DefaultMode
 		{
 			get
@@ -351,19 +351,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SFloatingMovementState result;
 				if ((result = this._DefaultMode) == null)
 				{
-					result = (this._DefaultMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_20, this));
+					result = (this._DefaultMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DefaultMode, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_20, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DefaultMode, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E07 RID: 28167
-		// (get) Token: 0x0602C2EF RID: 180975 RVA: 0x00A192F8 File Offset: 0x00A174F8
-		// (set) Token: 0x0602C2F0 RID: 180976 RVA: 0x00A19331 File Offset: 0x00A17531
+		// Token: 0x17004284 RID: 17028
+		// (get) Token: 0x06021167 RID: 135527 RVA: 0x00958BFC File Offset: 0x00956DFC
+		// (set) Token: 0x06021168 RID: 135528 RVA: 0x00958C35 File Offset: 0x00956E35
 		public SFloatingMovementState FloatingMode
 		{
 			get
@@ -372,19 +372,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SFloatingMovementState result;
 				if ((result = this._FloatingMode) == null)
 				{
-					result = (this._FloatingMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_21, this));
+					result = (this._FloatingMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_FloatingMode, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_21, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_FloatingMode, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E08 RID: 28168
-		// (get) Token: 0x0602C2F1 RID: 180977 RVA: 0x00A19354 File Offset: 0x00A17554
-		// (set) Token: 0x0602C2F2 RID: 180978 RVA: 0x00A1938D File Offset: 0x00A1758D
+		// Token: 0x17004285 RID: 17029
+		// (get) Token: 0x06021169 RID: 135529 RVA: 0x00958C58 File Offset: 0x00956E58
+		// (set) Token: 0x0602116A RID: 135530 RVA: 0x00958C91 File Offset: 0x00956E91
 		public SFloatingMovementState RiseMode
 		{
 			get
@@ -393,19 +393,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SFloatingMovementState result;
 				if ((result = this._RiseMode) == null)
 				{
-					result = (this._RiseMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_22, this));
+					result = (this._RiseMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseMode, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_22, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_RiseMode, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E09 RID: 28169
-		// (get) Token: 0x0602C2F3 RID: 180979 RVA: 0x00A193B0 File Offset: 0x00A175B0
-		// (set) Token: 0x0602C2F4 RID: 180980 RVA: 0x00A193E9 File Offset: 0x00A175E9
+		// Token: 0x17004286 RID: 17030
+		// (get) Token: 0x0602116B RID: 135531 RVA: 0x00958CB4 File Offset: 0x00956EB4
+		// (set) Token: 0x0602116C RID: 135532 RVA: 0x00958CED File Offset: 0x00956EED
 		public SFloatingMovementState DropMode
 		{
 			get
@@ -414,19 +414,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SFloatingMovementState result;
 				if ((result = this._DropMode) == null)
 				{
-					result = (this._DropMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_23, this));
+					result = (this._DropMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropMode, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_23, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_DropMode, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E0A RID: 28170
-		// (get) Token: 0x0602C2F5 RID: 180981 RVA: 0x00A1940C File Offset: 0x00A1760C
-		// (set) Token: 0x0602C2F6 RID: 180982 RVA: 0x00A19445 File Offset: 0x00A17645
+		// Token: 0x17004287 RID: 17031
+		// (get) Token: 0x0602116D RID: 135533 RVA: 0x00958D10 File Offset: 0x00956F10
+		// (set) Token: 0x0602116E RID: 135534 RVA: 0x00958D49 File Offset: 0x00956F49
 		public SFloatingMovementState WalkMode
 		{
 			get
@@ -435,19 +435,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SFloatingMovementState result;
 				if ((result = this._WalkMode) == null)
 				{
-					result = (this._WalkMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_24, this));
+					result = (this._WalkMode = new SFloatingMovementState(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_WalkMode, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_24, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatingMovementState.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_WalkMode, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006E0B RID: 28171
-		// (get) Token: 0x0602C2F7 RID: 180983 RVA: 0x00A19468 File Offset: 0x00A17668
-		// (set) Token: 0x0602C2F8 RID: 180984 RVA: 0x00A194A1 File Offset: 0x00A176A1
+		// Token: 0x17004288 RID: 17032
+		// (get) Token: 0x0602116F RID: 135535 RVA: 0x00958D6C File Offset: 0x00956F6C
+		// (set) Token: 0x06021170 RID: 135536 RVA: 0x00958DA5 File Offset: 0x00956FA5
 		public FGameplayTagContainer ForbidCloseToGrounTagList
 		{
 			get
@@ -456,133 +456,133 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				FGameplayTagContainer result;
 				if ((result = this._ForbidCloseToGrounTagList) == null)
 				{
-					result = (this._ForbidCloseToGrounTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_25, this));
+					result = (this._ForbidCloseToGrounTagList = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_ForbidCloseToGrounTagList, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_25, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FloatingMovementConfig_C.__PropertyOffset_ForbidCloseToGrounTagList, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602C2F9 RID: 180985 RVA: 0x00A194C2 File Offset: 0x00A176C2
+		// Token: 0x06021171 RID: 135537 RVA: 0x00958DC6 File Offset: 0x00956FC6
 		protected BP_FloatingMovementConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040171D6 RID: 94678
+		// Token: 0x04011F1F RID: 73503
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/BP_FloatingMovementConfig.BP_FloatingMovementConfig_C";
 
-		// Token: 0x040171D7 RID: 94679
+		// Token: 0x04011F20 RID: 73504
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040171D8 RID: 94680
+		// Token: 0x04011F21 RID: 73505
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040171D9 RID: 94681
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011F22 RID: 73506
+		internal static int __PropertyOffset_MoveSpeed;
 
-		// Token: 0x040171DA RID: 94682
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011F23 RID: 73507
+		internal static int __PropertyOffset_SprintSpeed;
 
-		// Token: 0x040171DB RID: 94683
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011F24 RID: 73508
+		internal static int __PropertyOffset_TurnSpeedDeg;
 
-		// Token: 0x040171DC RID: 94684
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011F25 RID: 73509
+		internal static int __PropertyOffset_AirEnergyConsumption;
 
-		// Token: 0x040171DD RID: 94685
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011F26 RID: 73510
+		internal static int __PropertyOffset_RiseEnergyConsumption;
 
-		// Token: 0x040171DE RID: 94686
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011F27 RID: 73511
+		internal static int __PropertyOffset_DropEnergyConsumption;
 
-		// Token: 0x040171DF RID: 94687
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011F28 RID: 73512
+		internal static int __PropertyOffset_DodgeEnergyConsumption;
 
-		// Token: 0x040171E0 RID: 94688
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011F29 RID: 73513
+		internal static int __PropertyOffset_MoveEnergyConsumption;
 
-		// Token: 0x040171E1 RID: 94689
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011F2A RID: 73514
+		internal static int __PropertyOffset_FastMoveEnergyConsumption;
 
-		// Token: 0x040171E2 RID: 94690
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011F2B RID: 73515
+		internal static int __PropertyOffset_SprintEnergyConsumption;
 
-		// Token: 0x040171E3 RID: 94691
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011F2C RID: 73516
+		internal static int __PropertyOffset_EnergyRecoverSpeed;
 
-		// Token: 0x040171E4 RID: 94692
-		internal static int __PropertyOffset_11;
+		// Token: 0x04011F2D RID: 73517
+		internal static int __PropertyOffset_EnergyRecoverCoolDownTime;
 
-		// Token: 0x040171E5 RID: 94693
-		internal static int __PropertyOffset_12;
+		// Token: 0x04011F2E RID: 73518
+		internal static int __PropertyOffset_AirCriticalHeight;
 
-		// Token: 0x040171E6 RID: 94694
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011F2F RID: 73519
+		internal static int __PropertyOffset_CloseToGroundHeight;
 
-		// Token: 0x040171E7 RID: 94695
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011F30 RID: 73520
+		internal static int __PropertyOffset_RiseSpeed;
 
-		// Token: 0x040171E8 RID: 94696
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011F31 RID: 73521
+		internal static int __PropertyOffset_DropSpeed;
 
-		// Token: 0x040171E9 RID: 94697
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011F32 RID: 73522
+		internal static int __PropertyOffset_AnimLerpAlpha;
 
-		// Token: 0x040171EA RID: 94698
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011F33 RID: 73523
+		internal static int __PropertyOffset_SpeedAcceleration;
 
-		// Token: 0x040171EB RID: 94699
-		internal static int __PropertyOffset_18;
+		// Token: 0x04011F34 RID: 73524
+		internal static int __PropertyOffset_DirectionLerpAlpha;
 
-		// Token: 0x040171EC RID: 94700
-		internal static int __PropertyOffset_19;
+		// Token: 0x04011F35 RID: 73525
+		internal static int __PropertyOffset_ForbidRotationTagList;
 
-		// Token: 0x040171ED RID: 94701
+		// Token: 0x04011F36 RID: 73526
 		[Nullable(2)]
 		private FGameplayTagContainer _ForbidRotationTagList;
 
-		// Token: 0x040171EE RID: 94702
-		internal static int __PropertyOffset_20;
+		// Token: 0x04011F37 RID: 73527
+		internal static int __PropertyOffset_DefaultMode;
 
-		// Token: 0x040171EF RID: 94703
+		// Token: 0x04011F38 RID: 73528
 		[Nullable(2)]
 		private SFloatingMovementState _DefaultMode;
 
-		// Token: 0x040171F0 RID: 94704
-		internal static int __PropertyOffset_21;
+		// Token: 0x04011F39 RID: 73529
+		internal static int __PropertyOffset_FloatingMode;
 
-		// Token: 0x040171F1 RID: 94705
+		// Token: 0x04011F3A RID: 73530
 		[Nullable(2)]
 		private SFloatingMovementState _FloatingMode;
 
-		// Token: 0x040171F2 RID: 94706
-		internal static int __PropertyOffset_22;
+		// Token: 0x04011F3B RID: 73531
+		internal static int __PropertyOffset_RiseMode;
 
-		// Token: 0x040171F3 RID: 94707
+		// Token: 0x04011F3C RID: 73532
 		[Nullable(2)]
 		private SFloatingMovementState _RiseMode;
 
-		// Token: 0x040171F4 RID: 94708
-		internal static int __PropertyOffset_23;
+		// Token: 0x04011F3D RID: 73533
+		internal static int __PropertyOffset_DropMode;
 
-		// Token: 0x040171F5 RID: 94709
+		// Token: 0x04011F3E RID: 73534
 		[Nullable(2)]
 		private SFloatingMovementState _DropMode;
 
-		// Token: 0x040171F6 RID: 94710
-		internal static int __PropertyOffset_24;
+		// Token: 0x04011F3F RID: 73535
+		internal static int __PropertyOffset_WalkMode;
 
-		// Token: 0x040171F7 RID: 94711
+		// Token: 0x04011F40 RID: 73536
 		[Nullable(2)]
 		private SFloatingMovementState _WalkMode;
 
-		// Token: 0x040171F8 RID: 94712
-		internal static int __PropertyOffset_25;
+		// Token: 0x04011F41 RID: 73537
+		internal static int __PropertyOffset_ForbidCloseToGrounTagList;
 
-		// Token: 0x040171F9 RID: 94713
+		// Token: 0x04011F42 RID: 73538
 		[Nullable(2)]
 		private FGameplayTagContainer _ForbidCloseToGrounTagList;
 	}

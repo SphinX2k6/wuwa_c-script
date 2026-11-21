@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C5E RID: 19550
+	// Token: 0x02003C0F RID: 15375
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SheriffSubView : ActivitySubViewBase
 	{
-		// Token: 0x17007CD0 RID: 31952
-		// (get) Token: 0x0603289C RID: 207004 RVA: 0x00BC63C0 File Offset: 0x00BC45C0
+		// Token: 0x1700507A RID: 20602
+		// (get) Token: 0x0602764F RID: 161359 RVA: 0x00B0B00C File Offset: 0x00B0920C
 		private SheriffActivityData SheriffActivityDataInternal
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}
 		}
 
-		// Token: 0x0603289D RID: 207005 RVA: 0x00BC63D0 File Offset: 0x00BC45D0
+		// Token: 0x06027650 RID: 161360 RVA: 0x00B0B01C File Offset: 0x00B0921C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603289E RID: 207006 RVA: 0x00BC64B8 File Offset: 0x00BC46B8
+		// Token: 0x06027651 RID: 161361 RVA: 0x00B0B104 File Offset: 0x00B09304
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffSubView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603289F RID: 207007 RVA: 0x00BC64FB File Offset: 0x00BC46FB
+		// Token: 0x06027652 RID: 161362 RVA: 0x00B0B147 File Offset: 0x00B09347
 		protected override void OnStart()
 		{
 			this.RefreshShopBtn();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshCommonInfoRedDot();
 		}
 
-		// Token: 0x060328A0 RID: 207008 RVA: 0x00BC650F File Offset: 0x00BC470F
+		// Token: 0x06027653 RID: 161363 RVA: 0x00B0B15B File Offset: 0x00B0935B
 		protected override void OnRefreshView()
 		{
 			this.RefreshShopBtn();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshCommonInfoRedDot();
 		}
 
-		// Token: 0x060328A1 RID: 207009 RVA: 0x00BC6524 File Offset: 0x00BC4724
+		// Token: 0x06027654 RID: 161364 RVA: 0x00B0B170 File Offset: 0x00B09370
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshActivityRedDot));
 		}
 
-		// Token: 0x060328A2 RID: 207010 RVA: 0x00BC6588 File Offset: 0x00BC4788
+		// Token: 0x06027655 RID: 161365 RVA: 0x00B0B1D4 File Offset: 0x00B093D4
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshActivityRedDot));
 		}
 
-		// Token: 0x060328A3 RID: 207011 RVA: 0x00BC65E9 File Offset: 0x00BC47E9
+		// Token: 0x06027656 RID: 161366 RVA: 0x00B0B235 File Offset: 0x00B09435
 		private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 		{
 			this.RefreshShopBtn();
 		}
 
-		// Token: 0x060328A4 RID: 207012 RVA: 0x00BC65F4 File Offset: 0x00BC47F4
+		// Token: 0x06027657 RID: 161367 RVA: 0x00B0B240 File Offset: 0x00B09440
 		private void OnRefreshActivityRedDot(int uid)
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.RefreshCommonInfoRedDot();
 		}
 
-		// Token: 0x060328A5 RID: 207013 RVA: 0x00BC663C File Offset: 0x00BC483C
+		// Token: 0x06027658 RID: 161368 RVA: 0x00B0B288 File Offset: 0x00B09488
 		private void RefreshCommonInfoRedDot()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			commonInfoPanel.SetFunctionRedDotVisible(sheriffActivityData != null && sheriffActivityData.IsUnlockRedDotActive());
 		}
 
-		// Token: 0x060328A6 RID: 207014 RVA: 0x00BC666C File Offset: 0x00BC486C
+		// Token: 0x06027659 RID: 161369 RVA: 0x00B0B2B8 File Offset: 0x00B094B8
 		private void RefreshShopBtn()
 		{
 			ValueTuple<int, int, int> shopGoodsPriceInfo = SheriffModel.Instance.GetShopGoodsPriceInfo();
@@ -133,14 +133,14 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			base.GetItem(3).SetUIActive(SheriffModel.Instance.CheckShopRedDot());
 		}
 
-		// Token: 0x060328A7 RID: 207015 RVA: 0x00BC66D9 File Offset: 0x00BC48D9
+		// Token: 0x0602765A RID: 161370 RVA: 0x00B0B325 File Offset: 0x00B09525
 		private void RefreshActivityInfo()
 		{
 			this.CommonInfoPanel.SetClickFunc(new Action<ActivityBaseData>(this.OnConfirmBtnClick));
 			this.CommonInfoPanel.SetBtnText("Activity_110600001_Go", Array.Empty<object>());
 		}
 
-		// Token: 0x060328A8 RID: 207016 RVA: 0x00BC6707 File Offset: 0x00BC4907
+		// Token: 0x0602765B RID: 161371 RVA: 0x00B0B353 File Offset: 0x00B09553
 		private void OnBtnShopClick()
 		{
 			SheriffModel.Instance.ClearShopRedDot();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			});
 		}
 
-		// Token: 0x060328A9 RID: 207017 RVA: 0x00BC6742 File Offset: 0x00BC4942
+		// Token: 0x0602765C RID: 161372 RVA: 0x00B0B38E File Offset: 0x00B0958E
 		private void OnConfirmBtnClick(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -167,24 +167,24 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			});
 		}
 
-		// Token: 0x0401AE6A RID: 110186
+		// Token: 0x040157C7 RID: 88007
 		[Nullable(1)]
 		private readonly ActivitySubViewGeneralInfo CommonInfoPanel = new ActivitySubViewGeneralInfo();
 
-		// Token: 0x0200AE02 RID: 44546
+		// Token: 0x02009820 RID: 38944
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04034DA4 RID: 216484
+			// Token: 0x0402F749 RID: 194377
 			public const int CommonActionInfo = 0;
 
-			// Token: 0x04034DA5 RID: 216485
+			// Token: 0x0402F74A RID: 194378
 			public const int BtnShop = 1;
 
-			// Token: 0x04034DA6 RID: 216486
+			// Token: 0x0402F74B RID: 194379
 			public const int TxtNum = 2;
 
-			// Token: 0x04034DA7 RID: 216487
+			// Token: 0x0402F74C RID: 194380
 			public const int BtnShopRedDot = 3;
 		}
 	}

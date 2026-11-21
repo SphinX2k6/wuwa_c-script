@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A9B RID: 10907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D8F RID: 11663
 	public class ChangeNpcAbpState : ActionParams
 	{
-		// Token: 0x0600EF90 RID: 61328 RVA: 0x0022D2AB File Offset: 0x0022B4AB
+		// Token: 0x0600FE46 RID: 65094 RVA: 0x0024AFB7 File Offset: 0x002491B7
 		public static ChangeNpcAbpState Create(IChangeNpcAbpState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C1C RID: 19484
-		// (get) Token: 0x0600EF91 RID: 61329 RVA: 0x0022D2CA File Offset: 0x0022B4CA
+		// Token: 0x17004FD6 RID: 20438
+		// (get) Token: 0x0600FE47 RID: 65095 RVA: 0x0024AFD6 File Offset: 0x002491D6
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C1D RID: 19485
-		// (get) Token: 0x0600EF92 RID: 61330 RVA: 0x0022D2D7 File Offset: 0x0022B4D7
+		// Token: 0x17004FD7 RID: 20439
+		// (get) Token: 0x0600FE48 RID: 65096 RVA: 0x0024AFE3 File Offset: 0x002491E3
 		public virtual string AbpState
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083C7 RID: 33735
+		// Token: 0x04008ACB RID: 35531
 		private IChangeNpcAbpState Instance;
 	}
 }

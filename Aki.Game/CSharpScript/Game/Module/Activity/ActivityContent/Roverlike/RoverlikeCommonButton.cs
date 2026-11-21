@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006164 RID: 24932
+	// Token: 0x020050E2 RID: 20706
 	public class RoverlikeCommonButton : UiPanelBase
 	{
-		// Token: 0x0603F05F RID: 258143 RVA: 0x00F3A4E8 File Offset: 0x00F386E8
+		// Token: 0x06033D1F RID: 212255 RVA: 0x00E813BC File Offset: 0x00E7F5BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F060 RID: 258144 RVA: 0x00F3A5D0 File Offset: 0x00F387D0
+		// Token: 0x06033D20 RID: 212256 RVA: 0x00E814A4 File Offset: 0x00E7F6A4
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(2);
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603F061 RID: 258145 RVA: 0x00F3A5E4 File Offset: 0x00F387E4
+		// Token: 0x06033D21 RID: 212257 RVA: 0x00E814B8 File Offset: 0x00E7F6B8
 		[NullableContext(1)]
 		public void SetClickCallback(Action callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0603F062 RID: 258146 RVA: 0x00F3A5F0 File Offset: 0x00F387F0
+		// Token: 0x06033D22 RID: 212258 RVA: 0x00E814C4 File Offset: 0x00E7F6C4
 		public void RefreshByDifficulty(int difficulty)
 		{
 			int index = Math.Min(Math.Max(((difficulty == 0) ? 1 : difficulty) - 1, 0), 2);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			sprite.SetColor(RoverlikeCommonButton.CommonButtonColors[index]);
 		}
 
-		// Token: 0x0603F063 RID: 258147 RVA: 0x00F3A62F File Offset: 0x00F3882F
+		// Token: 0x06033D23 RID: 212259 RVA: 0x00E81503 File Offset: 0x00E7F703
 		private void OnClick()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			clickCallback();
 		}
 
-		// Token: 0x04020E09 RID: 134665
+		// Token: 0x0401B736 RID: 112438
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyList<FColor> CommonButtonColors = new List<FColor>
@@ -86,23 +86,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			FColor.FromHex("#f22647")
 		};
 
-		// Token: 0x04020E0A RID: 134666
+		// Token: 0x0401B737 RID: 112439
 		[Nullable(2)]
 		private Action ClickCallback;
 
-		// Token: 0x0200C3C8 RID: 50120
+		// Token: 0x0200ADAF RID: 44463
 		private class ERoverlikeCommonButton
 		{
-			// Token: 0x0403B140 RID: 241984
+			// Token: 0x04035AA1 RID: 219809
 			public const int BtnCommon = 0;
 
-			// Token: 0x0403B141 RID: 241985
+			// Token: 0x04035AA2 RID: 219810
 			public const int TxtName = 1;
 
-			// Token: 0x0403B142 RID: 241986
+			// Token: 0x04035AA3 RID: 219811
 			public const int RedDot = 2;
 
-			// Token: 0x0403B143 RID: 241987
+			// Token: 0x04035AA4 RID: 219812
 			public const int SprColor = 3;
 		}
 	}

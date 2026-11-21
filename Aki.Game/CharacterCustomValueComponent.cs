@@ -6,19 +6,19 @@ using AkiClient.Game.Aki.Data.Fight.Struct;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02003056 RID: 12374
+// Token: 0x020025AC RID: 9644
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterCustomValueComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601A4EE RID: 107758 RVA: 0x006F7C1C File Offset: 0x006F5E1C
+	// Token: 0x06017E8E RID: 97934 RVA: 0x0071ED63 File Offset: 0x0071CF63
 	static CharacterCustomValueComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterCustomValueComponent.CreateStaticDefaultValue), new Action(CharacterCustomValueComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002435 RID: 9269
-	// (get) Token: 0x0601A4EF RID: 107759 RVA: 0x006F7C3B File Offset: 0x006F5E3B
+	// Token: 0x17002554 RID: 9556
+	// (get) Token: 0x06017E8F RID: 97935 RVA: 0x0071ED82 File Offset: 0x0071CF82
 	private static Dictionary<string, Func<TFormulaValue[], TFormulaValue>> BuiltinFormulaFunctions
 	{
 		get
@@ -32,7 +32,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		}
 	}
 
-	// Token: 0x0601A4F0 RID: 107760 RVA: 0x006F7C54 File Offset: 0x006F5E54
+	// Token: 0x06017E90 RID: 97936 RVA: 0x0071ED98 File Offset: 0x0071CF98
 	protected override bool OnStart()
 	{
 		UClassStackOnlyPtr @class = base.Entity.GetComponent<CharacterActorComponent>().Actor.GetClass();
@@ -49,7 +49,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		return true;
 	}
 
-	// Token: 0x0601A4F1 RID: 107761 RVA: 0x006F7CD4 File Offset: 0x006F5ED4
+	// Token: 0x06017E91 RID: 97937 RVA: 0x0071EE18 File Offset: 0x0071D018
 	private unsafe void OnLoadCustomValueFinish([Nullable(2)] UDataTable asset, string path)
 	{
 		if (asset == null)
@@ -121,7 +121,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		}
 	}
 
-	// Token: 0x0601A4F2 RID: 107762 RVA: 0x006F7F8C File Offset: 0x006F618C
+	// Token: 0x06017E92 RID: 97938 RVA: 0x0071F0D0 File Offset: 0x0071D2D0
 	private void OnStartBuiltinFunctions()
 	{
 		if (CharacterCustomValueComponent.BuiltinFormulaFunctions.Count > 0)
@@ -377,7 +377,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		};
 	}
 
-	// Token: 0x0601A4F3 RID: 107763 RVA: 0x006F84F8 File Offset: 0x006F66F8
+	// Token: 0x06017E93 RID: 97939 RVA: 0x0071F63C File Offset: 0x0071D83C
 	private Dictionary<string, TFormulaValue> BuildFormulaArgs()
 	{
 		Dictionary<string, TFormulaValue> dictionary = new Dictionary<string, TFormulaValue>();
@@ -391,7 +391,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		return dictionary;
 	}
 
-	// Token: 0x0601A4F4 RID: 107764 RVA: 0x006F8570 File Offset: 0x006F6770
+	// Token: 0x06017E94 RID: 97940 RVA: 0x0071F6B4 File Offset: 0x0071D8B4
 	public unsafe TFormulaValue GetBlackboard(string key, TFormulaValue defaultValue = default(TFormulaValue))
 	{
 		if (GlobalData.IsPlayInEditor)
@@ -450,7 +450,7 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		return result;
 	}
 
-	// Token: 0x0601A4F5 RID: 107765 RVA: 0x006F8724 File Offset: 0x006F6924
+	// Token: 0x06017E95 RID: 97941 RVA: 0x0071F868 File Offset: 0x0071DA68
 	public unsafe void UpdateCustomValue(string key)
 	{
 		SCustomValueRecordRow scustomValueRecordRow;
@@ -731,19 +731,19 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 		this.Blackboard[key] = value;
 	}
 
-	// Token: 0x0601A4F6 RID: 107766 RVA: 0x006F91D4 File Offset: 0x006F73D4
+	// Token: 0x06017E96 RID: 97942 RVA: 0x00720318 File Offset: 0x0071E518
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterCustomValueComponent._builtinFormulaFunctions = new Dictionary<string, Func<TFormulaValue[], TFormulaValue>>();
 	}
 
-	// Token: 0x0601A4F7 RID: 107767 RVA: 0x006F91E0 File Offset: 0x006F73E0
+	// Token: 0x06017E97 RID: 97943 RVA: 0x00720324 File Offset: 0x0071E524
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterCustomValueComponent._builtinFormulaFunctions = null;
 	}
 
-	// Token: 0x0601A4F8 RID: 107768 RVA: 0x006F91E8 File Offset: 0x006F73E8
+	// Token: 0x06017E98 RID: 97944 RVA: 0x0072032C File Offset: 0x0071E52C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -751,28 +751,35 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 			return false;
 		}
 		CharacterCustomValueComponent characterCustomValueComponent = (CharacterCustomValueComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AssetDataTable"))
+		if (characterCustomValueComponent.AssetDataTable == null)
 		{
-			if (characterCustomValueComponent.AssetDataTable == null)
-			{
-				this.AssetDataTable = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDataTable>(this.AssetDataTable), "AssetDataTable"))
-			{
-				return false;
-			}
+			this.AssetDataTable = null;
 		}
-		return (!base.CanResetComponentProperty("MapCustomValue") || characterCustomValueComponent.MapCustomValue == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SCustomValueRecordRow>>(this.MapCustomValue), "MapCustomValue")) && (!base.CanResetComponentProperty("Blackboard") || characterCustomValueComponent.Blackboard == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, TFormulaValue>>(this.Blackboard), "Blackboard"));
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AssetDataTable), "AssetDataTable"))
+		{
+			return false;
+		}
+		return (characterCustomValueComponent.MapCustomValue == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MapCustomValue), "MapCustomValue")) && (characterCustomValueComponent.Blackboard == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Blackboard), "Blackboard"));
 	}
 
-	// Token: 0x0400C8A5 RID: 51365
+	// Token: 0x17002555 RID: 9557
+	// (get) Token: 0x06017E99 RID: 97945 RVA: 0x007203BB File Offset: 0x0071E5BB
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CC7F RID: 52351
 	[Nullable(2)]
 	private UDataTable AssetDataTable;
 
-	// Token: 0x0400C8A6 RID: 51366
+	// Token: 0x0400CC80 RID: 52352
 	private readonly Dictionary<string, SCustomValueRecordRow> MapCustomValue = new Dictionary<string, SCustomValueRecordRow>();
 
-	// Token: 0x0400C8A7 RID: 51367
+	// Token: 0x0400CC81 RID: 52353
 	[Nullable(new byte[]
 	{
 		2,
@@ -782,6 +789,6 @@ public class CharacterCustomValueComponent : EntityComponent, IStaticVariableRes
 	})]
 	private static Dictionary<string, Func<TFormulaValue[], TFormulaValue>> _builtinFormulaFunctions;
 
-	// Token: 0x0400C8A8 RID: 51368
+	// Token: 0x0400CC82 RID: 52354
 	private readonly Dictionary<string, TFormulaValue> Blackboard = new Dictionary<string, TFormulaValue>();
 }

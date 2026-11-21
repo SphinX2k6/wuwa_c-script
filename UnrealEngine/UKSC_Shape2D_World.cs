@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E3A RID: 7738
+	// Token: 0x02000590 RID: 1424
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Shape2D_World")]
 	[UnrealStructLayout(3248, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3248)]
 	public class UKSC_Shape2D_World : UKSC_World, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D7AB RID: 120747 RVA: 0x002B87D2 File Offset: 0x002B69D2
+		// Token: 0x060080C8 RID: 32968 RVA: 0x000BE2C6 File Offset: 0x000BC4C6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_Shape2D_World._ClassPtr;
 		}
 
-		// Token: 0x0601D7AC RID: 120748 RVA: 0x002B87E0 File Offset: 0x002B69E0
+		// Token: 0x060080C9 RID: 32969 RVA: 0x000BE2D4 File Offset: 0x000BC4D4
 		public UKSC_Shape2D_World() : this(BuiltinUtils.AllocNativeUObject(UKSC_Shape2D_World.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D7AD RID: 120749 RVA: 0x002B8808 File Offset: 0x002B6A08
+		// Token: 0x060080CA RID: 32970 RVA: 0x000BE2FC File Offset: 0x000BC4FC
 		[NullableContext(1)]
 		public UKSC_Shape2D_World(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_Shape2D_World.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170076CA RID: 30410
-		// (get) Token: 0x0601D7AE RID: 120750 RVA: 0x002B883B File Offset: 0x002B6A3B
-		// (set) Token: 0x0601D7AF RID: 120751 RVA: 0x002B884F File Offset: 0x002B6A4F
+		// Token: 0x17001914 RID: 6420
+		// (get) Token: 0x060080CB RID: 32971 RVA: 0x000BE32F File Offset: 0x000BC52F
+		// (set) Token: 0x060080CC RID: 32972 RVA: 0x000BE343 File Offset: 0x000BC543
 		public unsafe UDataTable ShapeMaterialDataTable
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076CB RID: 30411
-		// (get) Token: 0x0601D7B0 RID: 120752 RVA: 0x002B8864 File Offset: 0x002B6A64
-		// (set) Token: 0x0601D7B1 RID: 120753 RVA: 0x002B8878 File Offset: 0x002B6A78
+		// Token: 0x17001915 RID: 6421
+		// (get) Token: 0x060080CD RID: 32973 RVA: 0x000BE358 File Offset: 0x000BC558
+		// (set) Token: 0x060080CE RID: 32974 RVA: 0x000BE36C File Offset: 0x000BC56C
 		public unsafe AKSC_Shape2D_Entity_Player CurrentPlayer
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076CC RID: 30412
-		// (get) Token: 0x0601D7B2 RID: 120754 RVA: 0x002B888D File Offset: 0x002B6A8D
-		// (set) Token: 0x0601D7B3 RID: 120755 RVA: 0x002B88A1 File Offset: 0x002B6AA1
+		// Token: 0x17001916 RID: 6422
+		// (get) Token: 0x060080CF RID: 32975 RVA: 0x000BE381 File Offset: 0x000BC581
+		// (set) Token: 0x060080D0 RID: 32976 RVA: 0x000BE395 File Offset: 0x000BC595
 		public unsafe AKSC_Shape2D_Entity_Player MainPlayer
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076CD RID: 30413
-		// (get) Token: 0x0601D7B4 RID: 120756 RVA: 0x002B88B6 File Offset: 0x002B6AB6
-		// (set) Token: 0x0601D7B5 RID: 120757 RVA: 0x002B88CA File Offset: 0x002B6ACA
+		// Token: 0x17001917 RID: 6423
+		// (get) Token: 0x060080D1 RID: 32977 RVA: 0x000BE3AA File Offset: 0x000BC5AA
+		// (set) Token: 0x060080D2 RID: 32978 RVA: 0x000BE3BE File Offset: 0x000BC5BE
 		public unsafe AKSC_Shape2D_Entity_TeamPlayer TeamPlayer
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076CE RID: 30414
-		// (get) Token: 0x0601D7B6 RID: 120758 RVA: 0x002B88E0 File Offset: 0x002B6AE0
-		// (set) Token: 0x0601D7B7 RID: 120759 RVA: 0x002B8919 File Offset: 0x002B6B19
+		// Token: 0x17001918 RID: 6424
+		// (get) Token: 0x060080D3 RID: 32979 RVA: 0x000BE3D4 File Offset: 0x000BC5D4
+		// (set) Token: 0x060080D4 RID: 32980 RVA: 0x000BE40D File Offset: 0x000BC60D
 		[Nullable(1)]
 		public TArray<AKSC_Shape2D_Entity_Player> TeamPlayerEntities
 		{
@@ -114,9 +114,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076CF RID: 30415
-		// (get) Token: 0x0601D7B8 RID: 120760 RVA: 0x002B8928 File Offset: 0x002B6B28
-		// (set) Token: 0x0601D7B9 RID: 120761 RVA: 0x002B8961 File Offset: 0x002B6B61
+		// Token: 0x17001919 RID: 6425
+		// (get) Token: 0x060080D5 RID: 32981 RVA: 0x000BE41C File Offset: 0x000BC61C
+		// (set) Token: 0x060080D6 RID: 32982 RVA: 0x000BE455 File Offset: 0x000BC655
 		[Nullable(1)]
 		public TArray<int> TeamPlayerEntityIds
 		{
@@ -138,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076D0 RID: 30416
-		// (get) Token: 0x0601D7BA RID: 120762 RVA: 0x002B8970 File Offset: 0x002B6B70
-		// (set) Token: 0x0601D7BB RID: 120763 RVA: 0x002B89A9 File Offset: 0x002B6BA9
+		// Token: 0x1700191A RID: 6426
+		// (get) Token: 0x060080D7 RID: 32983 RVA: 0x000BE464 File Offset: 0x000BC664
+		// (set) Token: 0x060080D8 RID: 32984 RVA: 0x000BE49D File Offset: 0x000BC69D
 		[Nullable(1)]
 		public TArray<int> TeamPlayerEntityIdsOriginal
 		{
@@ -162,9 +162,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076D1 RID: 30417
-		// (get) Token: 0x0601D7BC RID: 120764 RVA: 0x002B89B7 File Offset: 0x002B6BB7
-		// (set) Token: 0x0601D7BD RID: 120765 RVA: 0x002B89CB File Offset: 0x002B6BCB
+		// Token: 0x1700191B RID: 6427
+		// (get) Token: 0x060080D9 RID: 32985 RVA: 0x000BE4AB File Offset: 0x000BC6AB
+		// (set) Token: 0x060080DA RID: 32986 RVA: 0x000BE4BF File Offset: 0x000BC6BF
 		public unsafe UKSC_DA_Shape2D_World DA_Shape2D_World
 		{
 			get
@@ -177,9 +177,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076D2 RID: 30418
-		// (get) Token: 0x0601D7BE RID: 120766 RVA: 0x002B89E0 File Offset: 0x002B6BE0
-		// (set) Token: 0x0601D7BF RID: 120767 RVA: 0x002B89F4 File Offset: 0x002B6BF4
+		// Token: 0x1700191C RID: 6428
+		// (get) Token: 0x060080DB RID: 32987 RVA: 0x000BE4D4 File Offset: 0x000BC6D4
+		// (set) Token: 0x060080DC RID: 32988 RVA: 0x000BE4E8 File Offset: 0x000BC6E8
 		public unsafe UKSC_DA_WorldBounds Temp_DA_WorldBounds
 		{
 			get
@@ -192,33 +192,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076D3 RID: 30419
-		// (get) Token: 0x0601D7C0 RID: 120768 RVA: 0x002B8A0C File Offset: 0x002B6C0C
-		// (set) Token: 0x0601D7C1 RID: 120769 RVA: 0x002B8A45 File Offset: 0x002B6C45
-		[Nullable(1)]
-		public TArray<FKSC_Shape2D_CollisionListenContext> CollisionListenContexts
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKSC_Shape2D_CollisionListenContext> result;
-				if ((result = this._CollisionListenContexts) == null)
-				{
-					result = (this._CollisionListenContexts = new TArray<FKSC_Shape2D_CollisionListenContext>(base.NativePtr + (IntPtr)UKSC_Shape2D_World.__PropertyOffset_CollisionListenContexts, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.CollisionListenContexts.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170076D4 RID: 30420
-		// (get) Token: 0x0601D7C2 RID: 120770 RVA: 0x002B8A53 File Offset: 0x002B6C53
-		// (set) Token: 0x0601D7C3 RID: 120771 RVA: 0x002B8A67 File Offset: 0x002B6C67
+		// Token: 0x1700191D RID: 6429
+		// (get) Token: 0x060080DD RID: 32989 RVA: 0x000BE4FD File Offset: 0x000BC6FD
+		// (set) Token: 0x060080DE RID: 32990 RVA: 0x000BE511 File Offset: 0x000BC711
 		public unsafe UKSC_DamageHandler_WF DamageHandler_WF
 		{
 			get
@@ -231,55 +207,55 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D7C4 RID: 120772 RVA: 0x002B8A7C File Offset: 0x002B6C7C
+		// Token: 0x060080DF RID: 32991 RVA: 0x000BE526 File Offset: 0x000BC726
 		public void SetWorldOrigin(in FVectorDouble NewOrigin)
 		{
 			UKSC_Shape2D_World.__SetWorldOrigin_Internal(base.NativePtr, NewOrigin);
 		}
 
-		// Token: 0x0601D7C5 RID: 120773 RVA: 0x002B8A8A File Offset: 0x002B6C8A
+		// Token: 0x060080E0 RID: 32992 RVA: 0x000BE534 File Offset: 0x000BC734
 		public void SetVictory()
 		{
 			UKSC_Shape2D_World.__SetVictory_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D7C6 RID: 120774 RVA: 0x002B8A97 File Offset: 0x002B6C97
+		// Token: 0x060080E1 RID: 32993 RVA: 0x000BE541 File Offset: 0x000BC741
 		public void SetShapeMaterialDT(UDataTable DataTable)
 		{
 			UKSC_Shape2D_World.__SetShapeMaterialDT_Internal(base.NativePtr, (DataTable != null) ? DataTable.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D7C7 RID: 120775 RVA: 0x002B8AB4 File Offset: 0x002B6CB4
+		// Token: 0x060080E2 RID: 32994 RVA: 0x000BE55E File Offset: 0x000BC75E
 		public void SetShape2DWorldDA(UKSC_DA_Shape2D_World DA_ShapeWorld)
 		{
 			UKSC_Shape2D_World.__SetShape2DWorldDA_Internal(base.NativePtr, (DA_ShapeWorld != null) ? DA_ShapeWorld.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D7C8 RID: 120776 RVA: 0x002B8AD1 File Offset: 0x002B6CD1
+		// Token: 0x060080E3 RID: 32995 RVA: 0x000BE57B File Offset: 0x000BC77B
 		public void SetGameEnd()
 		{
 			UKSC_Shape2D_World.__SetGameEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D7C9 RID: 120777 RVA: 0x002B8ADE File Offset: 0x002B6CDE
+		// Token: 0x060080E4 RID: 32996 RVA: 0x000BE588 File Offset: 0x000BC788
 		public void ReviveTeam()
 		{
 			UKSC_Shape2D_World.__ReviveTeam_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D7CA RID: 120778 RVA: 0x002B8AEB File Offset: 0x002B6CEB
+		// Token: 0x060080E5 RID: 32997 RVA: 0x000BE595 File Offset: 0x000BC795
 		public void RebuildWorldBounds(UKSC_DA_WorldBounds DA_WorldBounds)
 		{
 			UKSC_Shape2D_World.__RebuildWorldBounds_Internal(base.NativePtr, (DA_WorldBounds != null) ? DA_WorldBounds.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D7CB RID: 120779 RVA: 0x002B8B08 File Offset: 0x002B6D08
+		// Token: 0x060080E6 RID: 32998 RVA: 0x000BE5B2 File Offset: 0x000BC7B2
 		public void InitTeamPlayerEntityIds(in TArray<int> PlayerEntityIds)
 		{
 			UKSC_Shape2D_World.__InitTeamPlayerEntityIds_Internal(base.NativePtr, (PlayerEntityIds ?? new TArray<int>()).NativePtr);
 		}
 
-		// Token: 0x0601D7CC RID: 120780 RVA: 0x002B8B25 File Offset: 0x002B6D25
+		// Token: 0x060080E7 RID: 32999 RVA: 0x000BE5CF File Offset: 0x000BC7CF
 		public void GetDamageTotalInfo([Nullable(new byte[]
 		{
 			2,
@@ -289,25 +265,25 @@ namespace UnrealEngine
 			UKSC_Shape2D_World.__GetDamageTotalInfo_Internal(base.NativePtr, (OutInfos ?? new TArray<FKSC_Shape2D_DamageTotalInfo>()).NativePtr);
 		}
 
-		// Token: 0x0601D7CD RID: 120781 RVA: 0x002B8B42 File Offset: 0x002B6D42
+		// Token: 0x060080E8 RID: 33000 RVA: 0x000BE5EC File Offset: 0x000BC7EC
 		public void GetDamageInfo(ref TMap<int, int> OutInfos)
 		{
 			UKSC_Shape2D_World.__GetDamageInfo_Internal(base.NativePtr, (OutInfos ?? new TMap<int, int>()).NativeMapPtr);
 		}
 
-		// Token: 0x0601D7CE RID: 120782 RVA: 0x002B8B5F File Offset: 0x002B6D5F
+		// Token: 0x060080E9 RID: 33001 RVA: 0x000BE609 File Offset: 0x000BC809
 		public void ClearDamageTotalInfo()
 		{
 			UKSC_Shape2D_World.__ClearDamageTotalInfo_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D7CF RID: 120783 RVA: 0x002B8B6C File Offset: 0x002B6D6C
+		// Token: 0x060080EA RID: 33002 RVA: 0x000BE616 File Offset: 0x000BC816
 		public void ClearDamageInfo()
 		{
 			UKSC_Shape2D_World.__ClearDamageInfo_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D7D0 RID: 120784 RVA: 0x002B8B79 File Offset: 0x002B6D79
+		// Token: 0x060080EB RID: 33003 RVA: 0x000BE623 File Offset: 0x000BC823
 		public void AssignWorldUpdateOnce(in FOnWorldUpdateOnce InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -315,7 +291,7 @@ namespace UnrealEngine
 			UKSC_Shape2D_World.__AssignWorldUpdateOnce_Internal(nativePtr, (fonWorldUpdateOnce != null) ? fonWorldUpdateOnce.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601D7D1 RID: 120785 RVA: 0x002B8B95 File Offset: 0x002B6D95
+		// Token: 0x060080EC RID: 33004 RVA: 0x000BE63F File Offset: 0x000BC83F
 		public void AssignTeamAllDead(in FOnTeamAllDead InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -323,7 +299,7 @@ namespace UnrealEngine
 			UKSC_Shape2D_World.__AssignTeamAllDead_Internal(nativePtr, (fonTeamAllDead != null) ? fonTeamAllDead.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601D7D2 RID: 120786 RVA: 0x002B8BB1 File Offset: 0x002B6DB1
+		// Token: 0x060080ED RID: 33005 RVA: 0x000BE65B File Offset: 0x000BC85B
 		public void AssignRelaunchPlayer(in FOnRelaunchPlayer InDelegate)
 		{
 			IntPtr nativePtr = base.NativePtr;
@@ -331,113 +307,113 @@ namespace UnrealEngine
 			UKSC_Shape2D_World.__AssignRelaunchPlayer_Internal(nativePtr, (fonRelaunchPlayer != null) ? fonRelaunchPlayer.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0601D7D3 RID: 120787 RVA: 0x002B8BCD File Offset: 0x002B6DCD
+		// Token: 0x060080EE RID: 33006 RVA: 0x000BE677 File Offset: 0x000BC877
 		public void AddDamageEffectData(int DamageId, in FKSC_Shape2D_DamageEffect Data)
 		{
 			UKSC_Shape2D_World.__AddDamageEffectData_Internal(base.NativePtr, DamageId, (Data ?? new FKSC_Shape2D_DamageEffect()).NativePtr);
 		}
 
-		// Token: 0x0601D7D4 RID: 120788
+		// Token: 0x060080EF RID: 33007
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWorldOrigin_Internal(IntPtr @this, in FVectorDouble NewOrigin);
 
-		// Token: 0x0601D7D5 RID: 120789
+		// Token: 0x060080F0 RID: 33008
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetVictory_Internal(IntPtr @this);
 
-		// Token: 0x0601D7D6 RID: 120790
+		// Token: 0x060080F1 RID: 33009
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShapeMaterialDT_Internal(IntPtr @this, IntPtr DataTable);
 
-		// Token: 0x0601D7D7 RID: 120791
+		// Token: 0x060080F2 RID: 33010
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShape2DWorldDA_Internal(IntPtr @this, IntPtr DA_ShapeWorld);
 
-		// Token: 0x0601D7D8 RID: 120792
+		// Token: 0x060080F3 RID: 33011
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGameEnd_Internal(IntPtr @this);
 
-		// Token: 0x0601D7D9 RID: 120793
+		// Token: 0x060080F4 RID: 33012
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReviveTeam_Internal(IntPtr @this);
 
-		// Token: 0x0601D7DA RID: 120794
+		// Token: 0x060080F5 RID: 33013
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RebuildWorldBounds_Internal(IntPtr @this, IntPtr DA_WorldBounds);
 
-		// Token: 0x0601D7DB RID: 120795
+		// Token: 0x060080F6 RID: 33014
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitTeamPlayerEntityIds_Internal(IntPtr @this, IntPtr PlayerEntityIds);
 
-		// Token: 0x0601D7DC RID: 120796
+		// Token: 0x060080F7 RID: 33015
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetDamageTotalInfo_Internal(IntPtr @this, IntPtr OutInfos);
 
-		// Token: 0x0601D7DD RID: 120797
+		// Token: 0x060080F8 RID: 33016
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetDamageInfo_Internal(IntPtr @this, IntPtr OutInfos);
 
-		// Token: 0x0601D7DE RID: 120798
+		// Token: 0x060080F9 RID: 33017
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearDamageTotalInfo_Internal(IntPtr @this);
 
-		// Token: 0x0601D7DF RID: 120799
+		// Token: 0x060080FA RID: 33018
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearDamageInfo_Internal(IntPtr @this);
 
-		// Token: 0x0601D7E0 RID: 120800
+		// Token: 0x060080FB RID: 33019
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AssignWorldUpdateOnce_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x0601D7E1 RID: 120801
+		// Token: 0x060080FC RID: 33020
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AssignTeamAllDead_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x0601D7E2 RID: 120802
+		// Token: 0x060080FD RID: 33021
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AssignRelaunchPlayer_Internal(IntPtr @this, IntPtr InDelegate);
 
-		// Token: 0x0601D7E3 RID: 120803
+		// Token: 0x060080FE RID: 33022
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddDamageEffectData_Internal(IntPtr @this, int DamageId, IntPtr Data);
 
-		// Token: 0x0601D7E4 RID: 120804 RVA: 0x002B8BEB File Offset: 0x002B6DEB
+		// Token: 0x060080FF RID: 33023 RVA: 0x000BE695 File Offset: 0x000BC895
 		static UKSC_Shape2D_World()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Shape2D_World");
 		}
 
-		// Token: 0x0601D7E5 RID: 120805 RVA: 0x002B8BF9 File Offset: 0x002B6DF9
+		// Token: 0x06008100 RID: 33024 RVA: 0x000BE6A3 File Offset: 0x000BC8A3
 		protected UKSC_Shape2D_World(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FFB2 RID: 65458
+		// Token: 0x0400383A RID: 14394
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Shape2D_World";
 
-		// Token: 0x0400FFB3 RID: 65459
+		// Token: 0x0400383B RID: 14395
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FFB4 RID: 65460
+		// Token: 0x0400383C RID: 14396
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FFB5 RID: 65461
+		// Token: 0x0400383D RID: 14397
 		internal static int __PropertyOffset_ShapeMaterialDataTable;
 
-		// Token: 0x0400FFB6 RID: 65462
+		// Token: 0x0400383E RID: 14398
 		internal static int __PropertyOffset_CurrentPlayer;
 
-		// Token: 0x0400FFB7 RID: 65463
+		// Token: 0x0400383F RID: 14399
 		internal static int __PropertyOffset_MainPlayer;
 
-		// Token: 0x0400FFB8 RID: 65464
+		// Token: 0x04003840 RID: 14400
 		internal static int __PropertyOffset_TeamPlayer;
 
-		// Token: 0x0400FFB9 RID: 65465
+		// Token: 0x04003841 RID: 14401
 		internal static int __PropertyOffset_TeamPlayerEntities;
 
-		// Token: 0x0400FFBA RID: 65466
+		// Token: 0x04003842 RID: 14402
 		[Nullable(new byte[]
 		{
 			2,
@@ -445,36 +421,25 @@ namespace UnrealEngine
 		})]
 		private TArray<AKSC_Shape2D_Entity_Player> _TeamPlayerEntities;
 
-		// Token: 0x0400FFBB RID: 65467
+		// Token: 0x04003843 RID: 14403
 		internal static int __PropertyOffset_TeamPlayerEntityIds;
 
-		// Token: 0x0400FFBC RID: 65468
+		// Token: 0x04003844 RID: 14404
 		private TArray<int> _TeamPlayerEntityIds;
 
-		// Token: 0x0400FFBD RID: 65469
+		// Token: 0x04003845 RID: 14405
 		internal static int __PropertyOffset_TeamPlayerEntityIdsOriginal;
 
-		// Token: 0x0400FFBE RID: 65470
+		// Token: 0x04003846 RID: 14406
 		private TArray<int> _TeamPlayerEntityIdsOriginal;
 
-		// Token: 0x0400FFBF RID: 65471
+		// Token: 0x04003847 RID: 14407
 		internal static int __PropertyOffset_DA_Shape2D_World;
 
-		// Token: 0x0400FFC0 RID: 65472
+		// Token: 0x04003848 RID: 14408
 		internal static int __PropertyOffset_Temp_DA_WorldBounds;
 
-		// Token: 0x0400FFC1 RID: 65473
-		internal static int __PropertyOffset_CollisionListenContexts;
-
-		// Token: 0x0400FFC2 RID: 65474
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKSC_Shape2D_CollisionListenContext> _CollisionListenContexts;
-
-		// Token: 0x0400FFC3 RID: 65475
+		// Token: 0x04003849 RID: 14409
 		internal static int __PropertyOffset_DamageHandler_WF;
 	}
 }

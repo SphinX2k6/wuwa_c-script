@@ -5,13 +5,13 @@ using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
 using Google.Protobuf;
 
-// Token: 0x020030AA RID: 12458
+// Token: 0x02002601 RID: 9729
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DynamicFlowController : ControllerBase
 {
-	// Token: 0x0601AB12 RID: 109330 RVA: 0x00730C78 File Offset: 0x0072EE78
+	// Token: 0x06018520 RID: 99616 RVA: 0x00756178 File Offset: 0x00754378
 	protected override bool OnInit()
 	{
 		this.SetUpDynamicFlowTypePriority();
@@ -20,7 +20,7 @@ public class DynamicFlowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601AB13 RID: 109331 RVA: 0x00730CC4 File Offset: 0x0072EEC4
+	// Token: 0x06018521 RID: 99617 RVA: 0x007561C4 File Offset: 0x007543C4
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.EntityAddBubbleNotify);
@@ -28,7 +28,7 @@ public class DynamicFlowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601AB14 RID: 109332 RVA: 0x00730CE7 File Offset: 0x0072EEE7
+	// Token: 0x06018522 RID: 99618 RVA: 0x007561E7 File Offset: 0x007543E7
 	private void SetUpDynamicFlowTypePriority()
 	{
 		this.DynamicFlowTypePriority[EDynamicFlowType.LevelAi] = 5;
@@ -37,7 +37,7 @@ public class DynamicFlowController : ControllerBase
 		this.DynamicFlowTypePriority[EDynamicFlowType.FlowAction] = 20;
 	}
 
-	// Token: 0x0601AB15 RID: 109333 RVA: 0x00730D20 File Offset: 0x0072EF20
+	// Token: 0x06018523 RID: 99619 RVA: 0x00756220 File Offset: 0x00754420
 	[NullableContext(2)]
 	private void AddDynamicFlowNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -52,7 +52,7 @@ public class DynamicFlowController : ControllerBase
 		this.AddDynamicFlow(data);
 	}
 
-	// Token: 0x0601AB16 RID: 109334 RVA: 0x00730D84 File Offset: 0x0072EF84
+	// Token: 0x06018524 RID: 99620 RVA: 0x00756284 File Offset: 0x00754484
 	[NullableContext(2)]
 	private void ClearDynamicFlowNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -75,7 +75,7 @@ public class DynamicFlowController : ControllerBase
 		this.RemoveDynamicFlow(dynamicFlowActorInfo);
 	}
 
-	// Token: 0x0601AB17 RID: 109335 RVA: 0x00730DF4 File Offset: 0x0072EFF4
+	// Token: 0x06018525 RID: 99621 RVA: 0x007562F4 File Offset: 0x007544F4
 	public CharacterDynamicFlowData CreateCharacterFlowData(AddPlayBubble flowData)
 	{
 		return new CharacterDynamicFlowData
@@ -89,7 +89,7 @@ public class DynamicFlowController : ControllerBase
 		};
 	}
 
-	// Token: 0x0601AB18 RID: 109336 RVA: 0x00730E48 File Offset: 0x0072F048
+	// Token: 0x06018526 RID: 99622 RVA: 0x00756348 File Offset: 0x00754548
 	public CharacterDynamicFlowData CreateCharacterFlowDataForMasterCreatureId(long creatureId, AddPlayBubble flowData)
 	{
 		return new CharacterDynamicFlowData
@@ -103,7 +103,7 @@ public class DynamicFlowController : ControllerBase
 		};
 	}
 
-	// Token: 0x0601AB19 RID: 109337 RVA: 0x00730E84 File Offset: 0x0072F084
+	// Token: 0x06018527 RID: 99623 RVA: 0x00756384 File Offset: 0x00754584
 	public bool AddDynamicFlow(CharacterDynamicFlowData data)
 	{
 		if (((data != null) ? data.BubbleData : null) == null)
@@ -146,7 +146,7 @@ public class DynamicFlowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601AB1A RID: 109338 RVA: 0x00730FA4 File Offset: 0x0072F1A4
+	// Token: 0x06018528 RID: 99624 RVA: 0x007564A4 File Offset: 0x007546A4
 	public bool RemoveDynamicFlow(DynamicFlowActorInfo actorInfo)
 	{
 		DynamicFlowActorInfo masterActorInfoByActorInfo = this.GetMasterActorInfoByActorInfo(actorInfo);
@@ -177,7 +177,7 @@ public class DynamicFlowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601AB1B RID: 109339 RVA: 0x00731028 File Offset: 0x0072F228
+	// Token: 0x06018529 RID: 99625 RVA: 0x00756528 File Offset: 0x00754728
 	protected void UpdateDynamicFlowCache(CharacterDynamicFlowData data, bool isAdd)
 	{
 		DynamicFlowActorInfo masterInfo = data.MasterInfo;
@@ -213,7 +213,7 @@ public class DynamicFlowController : ControllerBase
 		this.CreatureIdFlowActors.Remove(masterInfo.CreatureId);
 	}
 
-	// Token: 0x0601AB1C RID: 109340 RVA: 0x00731184 File Offset: 0x0072F384
+	// Token: 0x0601852A RID: 99626 RVA: 0x00756684 File Offset: 0x00754884
 	[NullableContext(2)]
 	public EntityHandle GetFlowActorEntityHandle(DynamicFlowActorInfo actorInfo)
 	{
@@ -233,7 +233,7 @@ public class DynamicFlowController : ControllerBase
 		return entityHandle;
 	}
 
-	// Token: 0x0601AB1D RID: 109341 RVA: 0x007311D4 File Offset: 0x0072F3D4
+	// Token: 0x0601852B RID: 99627 RVA: 0x007566D4 File Offset: 0x007548D4
 	[NullableContext(2)]
 	public CharacterDynamicFlowData GetDynamicFlowByActorPbDataId(int pbDataId)
 	{
@@ -245,7 +245,7 @@ public class DynamicFlowController : ControllerBase
 		return this.GetDynamicFlowByMasterActorInfo(valueOrDefault);
 	}
 
-	// Token: 0x0601AB1E RID: 109342 RVA: 0x007311FA File Offset: 0x0072F3FA
+	// Token: 0x0601852C RID: 99628 RVA: 0x007566FA File Offset: 0x007548FA
 	[NullableContext(2)]
 	public CharacterDynamicFlowData GetDynamicFlowByMasterActorPbDataId(int masterPbDataId)
 	{
@@ -256,7 +256,7 @@ public class DynamicFlowController : ControllerBase
 		return this.PbDataIdFlowDataMap.GetValueOrDefault(masterPbDataId);
 	}
 
-	// Token: 0x0601AB1F RID: 109343 RVA: 0x00731210 File Offset: 0x0072F410
+	// Token: 0x0601852D RID: 99629 RVA: 0x00756710 File Offset: 0x00754910
 	[return: Nullable(2)]
 	public DynamicFlowActorInfo GetMasterActorInfoByActorInfo(DynamicFlowActorInfo actorInfo)
 	{
@@ -275,7 +275,7 @@ public class DynamicFlowController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x0601AB20 RID: 109344 RVA: 0x0073128C File Offset: 0x0072F48C
+	// Token: 0x0601852E RID: 99630 RVA: 0x0075678C File Offset: 0x0075498C
 	[return: Nullable(2)]
 	public CharacterDynamicFlowData GetDynamicFlowByActorInfo(DynamicFlowActorInfo actorInfo)
 	{
@@ -287,7 +287,7 @@ public class DynamicFlowController : ControllerBase
 		return this.GetDynamicFlowByMasterActorInfo(masterActorInfoByActorInfo);
 	}
 
-	// Token: 0x0601AB21 RID: 109345 RVA: 0x007312BC File Offset: 0x0072F4BC
+	// Token: 0x0601852F RID: 99631 RVA: 0x007567BC File Offset: 0x007549BC
 	[return: Nullable(2)]
 	public CharacterDynamicFlowData GetDynamicFlowByMasterActorInfo(DynamicFlowActorInfo masterInfo)
 	{
@@ -306,7 +306,7 @@ public class DynamicFlowController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x0601AB22 RID: 109346 RVA: 0x0073132E File Offset: 0x0072F52E
+	// Token: 0x06018530 RID: 99632 RVA: 0x0075682E File Offset: 0x00754A2E
 	public int GetDynamicFlowPriority(EDynamicFlowType? type)
 	{
 		if (type == null || !this.DynamicFlowTypePriority.ContainsKey(type.Value))
@@ -316,7 +316,7 @@ public class DynamicFlowController : ControllerBase
 		return this.DynamicFlowTypePriority[type.Value];
 	}
 
-	// Token: 0x0601AB23 RID: 109347 RVA: 0x00731364 File Offset: 0x0072F564
+	// Token: 0x06018531 RID: 99633 RVA: 0x00756864 File Offset: 0x00754A64
 	public FlowRangeInfo GetRangeInfoFromConfig(float minRadius, float maxRadius, [Nullable(2)] IBubbleRangeCylinderConfig config)
 	{
 		FlowRangeInfo flowRangeInfo = new FlowRangeInfo();
@@ -334,8 +334,8 @@ public class DynamicFlowController : ControllerBase
 		return flowRangeInfo;
 	}
 
-	// Token: 0x170024AA RID: 9386
-	// (get) Token: 0x0601AB24 RID: 109348 RVA: 0x007313E3 File Offset: 0x0072F5E3
+	// Token: 0x1700262D RID: 9773
+	// (get) Token: 0x06018532 RID: 99634 RVA: 0x007568E3 File Offset: 0x00754AE3
 	public static DynamicFlowController Instance
 	{
 		get
@@ -344,7 +344,7 @@ public class DynamicFlowController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601AB25 RID: 109349 RVA: 0x007313EA File Offset: 0x0072F5EA
+	// Token: 0x06018533 RID: 99635 RVA: 0x007568EA File Offset: 0x00754AEA
 	public static DynamicFlowController GetOrCreateInstance()
 	{
 		if (DynamicFlowController._Instance == null)
@@ -354,7 +354,7 @@ public class DynamicFlowController : ControllerBase
 		return DynamicFlowController._Instance;
 	}
 
-	// Token: 0x0601AB26 RID: 109350 RVA: 0x007313FE File Offset: 0x0072F5FE
+	// Token: 0x06018534 RID: 99636 RVA: 0x007568FE File Offset: 0x00754AFE
 	public static bool CreateInstance()
 	{
 		if (DynamicFlowController._Instance != null)
@@ -365,51 +365,51 @@ public class DynamicFlowController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601AB27 RID: 109351 RVA: 0x00731414 File Offset: 0x0072F614
+	// Token: 0x06018535 RID: 99637 RVA: 0x00756914 File Offset: 0x00754B14
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601AB28 RID: 109352 RVA: 0x00731416 File Offset: 0x0072F616
+	// Token: 0x06018536 RID: 99638 RVA: 0x00756916 File Offset: 0x00754B16
 	public static void ResetStaticDefaultValue()
 	{
 		DynamicFlowController._Instance = null;
 	}
 
-	// Token: 0x0601AB29 RID: 109353 RVA: 0x0073141E File Offset: 0x0072F61E
+	// Token: 0x06018537 RID: 99639 RVA: 0x0075691E File Offset: 0x00754B1E
 	static DynamicFlowController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DynamicFlowController.CreateStaticDefaultValue), new Action(DynamicFlowController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400CDFC RID: 52732
+	// Token: 0x0400D1E0 RID: 53728
 	public const float DEFAULT_BUBBLE_ENTER_RANGE = 500f;
 
-	// Token: 0x0400CDFD RID: 52733
+	// Token: 0x0400D1E1 RID: 53729
 	public const float DEFAULT_BUBBLE_LEAVE_RANGE = 1500f;
 
-	// Token: 0x0400CDFE RID: 52734
+	// Token: 0x0400D1E2 RID: 53730
 	public const float DEFAULT_BUBBLE_LEAVE_HEIGHT = 3000f;
 
-	// Token: 0x0400CDFF RID: 52735
+	// Token: 0x0400D1E3 RID: 53731
 	private readonly Dictionary<int, CharacterDynamicFlowData> PbDataIdFlowDataMap = new Dictionary<int, CharacterDynamicFlowData>();
 
-	// Token: 0x0400CE00 RID: 52736
+	// Token: 0x0400D1E4 RID: 53732
 	private readonly Dictionary<long, CharacterDynamicFlowData> CreatureIdFlowDataMap = new Dictionary<long, CharacterDynamicFlowData>();
 
-	// Token: 0x0400CE01 RID: 52737
+	// Token: 0x0400D1E5 RID: 53733
 	private readonly Dictionary<int, DynamicFlowActorInfo> PbDataIdFlowActors = new Dictionary<int, DynamicFlowActorInfo>();
 
-	// Token: 0x0400CE02 RID: 52738
+	// Token: 0x0400D1E6 RID: 53734
 	private readonly Dictionary<long, DynamicFlowActorInfo> CreatureIdFlowActors = new Dictionary<long, DynamicFlowActorInfo>();
 
-	// Token: 0x0400CE03 RID: 52739
+	// Token: 0x0400D1E7 RID: 53735
 	private readonly Dictionary<EDynamicFlowType, int> DynamicFlowTypePriority = new Dictionary<EDynamicFlowType, int>();
 
-	// Token: 0x0400CE04 RID: 52740
+	// Token: 0x0400D1E8 RID: 53736
 	private const int DEFAULT_TYPE_PRIORITY = 1;
 
-	// Token: 0x0400CE05 RID: 52741
+	// Token: 0x0400D1E9 RID: 53737
 	[Nullable(2)]
 	private static DynamicFlowController _Instance;
 }

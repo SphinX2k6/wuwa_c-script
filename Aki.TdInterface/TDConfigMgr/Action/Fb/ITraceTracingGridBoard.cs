@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200287A RID: 10362
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B50 RID: 11088
 	public class ITraceTracingGridBoard
 	{
-		// Token: 0x0600E592 RID: 58770 RVA: 0x0021BFB6 File Offset: 0x0021A1B6
+		// Token: 0x0600F3C3 RID: 62403 RVA: 0x00238F0A File Offset: 0x0023710A
 		public static ITraceTracingGridBoard Create(ITraceTracingGridBoard? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004660 RID: 18016
-		// (get) Token: 0x0600E593 RID: 58771 RVA: 0x0021BFD8 File Offset: 0x0021A1D8
+		// Token: 0x170049D1 RID: 18897
+		// (get) Token: 0x0600F3C4 RID: 62404 RVA: 0x00238F2C File Offset: 0x0023712C
 		public virtual List<ETraceTracingGridType> Grids
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004661 RID: 18017
-		// (get) Token: 0x0600E594 RID: 58772 RVA: 0x0021C03C File Offset: 0x0021A23C
+		// Token: 0x170049D2 RID: 18898
+		// (get) Token: 0x0600F3C5 RID: 62405 RVA: 0x00238F90 File Offset: 0x00237190
 		[Nullable(2)]
 		public virtual IVector2 BoardSize
 		{
@@ -63,20 +61,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EF2 RID: 32498
+		// Token: 0x040085B2 RID: 34226
 		private ITraceTracingGridBoard Instance;
 
-		// Token: 0x04007EF3 RID: 32499
+		// Token: 0x040085B3 RID: 34227
 		private List<ETraceTracingGridType> _GridsCache;
 
-		// Token: 0x04007EF4 RID: 32500
+		// Token: 0x040085B4 RID: 34228
 		private bool _GridsInited;
 
-		// Token: 0x04007EF5 RID: 32501
+		// Token: 0x040085B5 RID: 34229
 		[Nullable(2)]
 		private IVector2 _BoardSizeCache;
 
-		// Token: 0x04007EF6 RID: 32502
+		// Token: 0x040085B6 RID: 34230
 		private bool _BoardSizeInited;
 	}
 }

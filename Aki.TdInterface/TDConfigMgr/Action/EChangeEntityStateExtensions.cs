@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022D5 RID: 8917
+	// Token: 0x02002544 RID: 9540
 	public static class EChangeEntityStateExtensions
 	{
-		// Token: 0x0600C33D RID: 49981 RVA: 0x001C8784 File Offset: 0x001C6984
+		// Token: 0x0600CF0C RID: 53004 RVA: 0x001E058C File Offset: 0x001DE78C
 		public static string ToEnumString(this EChangeEntityState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C33E RID: 49982 RVA: 0x001C87CC File Offset: 0x001C69CC
+		// Token: 0x0600CF0D RID: 53005 RVA: 0x001E05D4 File Offset: 0x001DE7D4
 		public static EChangeEntityState FromString(string name)
 		{
 			EChangeEntityState result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C33F RID: 49983 RVA: 0x001C87F8 File Offset: 0x001C69F8
+		// Token: 0x0600CF0E RID: 53006 RVA: 0x001E0600 File Offset: 0x001DE800
 		public static bool TryFromString(string name, out EChangeEntityState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C340 RID: 49984 RVA: 0x001C884E File Offset: 0x001C6A4E
+		// Token: 0x0600CF0F RID: 53007 RVA: 0x001E0656 File Offset: 0x001DE856
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C341 RID: 49985 RVA: 0x001C886E File Offset: 0x001C6A6E
+		// Token: 0x0600CF10 RID: 53008 RVA: 0x001E0676 File Offset: 0x001DE876
 		public static EChangeEntityState[] GetValues()
 		{
 			return new EChangeEntityState[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C342 RID: 49986 RVA: 0x001C887E File Offset: 0x001C6A7E
+		// Token: 0x0600CF11 RID: 53009 RVA: 0x001E0686 File Offset: 0x001DE886
 		public static string[] GetNames()
 		{
 			return new string[]

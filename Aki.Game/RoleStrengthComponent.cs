@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003253 RID: 12883
+// Token: 0x020027C2 RID: 10178
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601BCAF RID: 113839 RVA: 0x007AC10B File Offset: 0x007AA30B
+	// Token: 0x0601986C RID: 104556 RVA: 0x007D461B File Offset: 0x007D281B
 	static RoleStrengthComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleStrengthComponent.CreateStaticDefaultValue), new Action(RoleStrengthComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BCB0 RID: 113840 RVA: 0x007AC12C File Offset: 0x007AA32C
+	// Token: 0x0601986D RID: 104557 RVA: 0x007D463C File Offset: 0x007D283C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -38,7 +38,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BCB1 RID: 113841 RVA: 0x007AC2A0 File Offset: 0x007AA4A0
+	// Token: 0x0601986E RID: 104558 RVA: 0x007D47B0 File Offset: 0x007D29B0
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<ECharMoveState, ECharMoveState>(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<ECharMoveState, ECharMoveState>(this.MoveStateChangeHandler));
@@ -55,12 +55,12 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BCB2 RID: 113842 RVA: 0x007AC391 File Offset: 0x007AA591
+	// Token: 0x0601986F RID: 104559 RVA: 0x007D48A1 File Offset: 0x007D2AA1
 	private void InitStartingGameplayEffect()
 	{
 	}
 
-	// Token: 0x0601BCB3 RID: 113843 RVA: 0x007AC394 File Offset: 0x007AA594
+	// Token: 0x06019870 RID: 104560 RVA: 0x007D48A4 File Offset: 0x007D2AA4
 	private void StrengthEmptyCallback(EFormationAttributeId attrId, bool inInterval, float currentRatio)
 	{
 		CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -109,7 +109,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BCB4 RID: 113844 RVA: 0x007AC480 File Offset: 0x007AA680
+	// Token: 0x06019871 RID: 104561 RVA: 0x007D4990 File Offset: 0x007D2B90
 	private void CheckDrowning()
 	{
 		if (this.UnifiedStateComponent.PositionState == ECharPositionState.Water)
@@ -147,13 +147,13 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BCB5 RID: 113845 RVA: 0x007AC539 File Offset: 0x007AA739
+	// Token: 0x06019872 RID: 104562 RVA: 0x007D4A49 File Offset: 0x007D2C49
 	private void CheckDrowning(int tagId, bool tagExist)
 	{
 		this.CheckDrowning();
 	}
 
-	// Token: 0x0601BCB6 RID: 113846 RVA: 0x007AC544 File Offset: 0x007AA744
+	// Token: 0x06019873 RID: 104563 RVA: 0x007D4A54 File Offset: 0x007D2C54
 	private void SoarStrengthEmptyCallback(EFormationAttributeId attrId, bool inInterval, float currentRatio)
 	{
 		CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -178,7 +178,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BCB7 RID: 113847 RVA: 0x007AC5C7 File Offset: 0x007AA7C7
+	// Token: 0x06019874 RID: 104564 RVA: 0x007D4AD7 File Offset: 0x007D2CD7
 	private void MoveStateChangeHandler(ECharMoveState oldState, ECharMoveState newState)
 	{
 		if (this.UnifiedStateComponent.PositionState == ECharPositionState.Water || !this.ActorComp.IsMoveAutonomousProxy)
@@ -188,7 +188,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		this.NewMoveStateStrengthDecrease(newState);
 	}
 
-	// Token: 0x0601BCB8 RID: 113848 RVA: 0x007AC5EC File Offset: 0x007AA7EC
+	// Token: 0x06019875 RID: 104565 RVA: 0x007D4AFC File Offset: 0x007D2CFC
 	private void SwimStrengthChangeHandler(long newBuff)
 	{
 		this.BuffComp.RemoveBuffByHandle(this.StrengthDecreaseGe, -1, null, null, null, null);
@@ -198,7 +198,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BCB9 RID: 113849 RVA: 0x007AC634 File Offset: 0x007AA834
+	// Token: 0x06019876 RID: 104566 RVA: 0x007D4B44 File Offset: 0x007D2D44
 	private void PositionStateChangeHandler(ECharPositionState oldState, ECharPositionState newState)
 	{
 		float value = FormationAttributeController.Instance.GetValue(EFormationAttributeId.Strength);
@@ -241,13 +241,13 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BCBA RID: 113850 RVA: 0x007AC722 File Offset: 0x007AA922
+	// Token: 0x06019877 RID: 104567 RVA: 0x007D4C32 File Offset: 0x007D2E32
 	[NullableContext(1)]
 	private void StateInheritHandle(Entity oldEntity, bool notInheritMoveAndAnim)
 	{
 	}
 
-	// Token: 0x0601BCBB RID: 113851 RVA: 0x007AC724 File Offset: 0x007AA924
+	// Token: 0x06019878 RID: 104568 RVA: 0x007D4C34 File Offset: 0x007D2E34
 	public void EmptyStrengthPunish()
 	{
 		if (this.BuffComp.HasBuffAuthority() && this.BuffComp.GetBuffTotalStackById(3023L, false) < 1)
@@ -266,7 +266,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		tagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.冲刺保持"]));
 	}
 
-	// Token: 0x0601BCBC RID: 113852 RVA: 0x007AC7AA File Offset: 0x007AA9AA
+	// Token: 0x06019879 RID: 104569 RVA: 0x007D4CBA File Offset: 0x007D2EBA
 	public void UpdateStrengthDecrease(long decreaseBuffId)
 	{
 		this.StrengthDecreaseGe = this.BuffComp.AddBuffLocal(decreaseBuffId, new AddBuffParam
@@ -276,7 +276,7 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601BCBD RID: 113853 RVA: 0x007AC7DF File Offset: 0x007AA9DF
+	// Token: 0x0601987A RID: 104570 RVA: 0x007D4CEF File Offset: 0x007D2EEF
 	private void AddStrengthForbiddenGe(long buffId)
 	{
 		this.StrengthForbiddenGe = this.BuffComp.AddBuffLocal(buffId, new AddBuffParam
@@ -286,13 +286,13 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		});
 	}
 
-	// Token: 0x0601BCBE RID: 113854 RVA: 0x007AC814 File Offset: 0x007AAA14
+	// Token: 0x0601987B RID: 104571 RVA: 0x007D4D24 File Offset: 0x007D2F24
 	private void ClearStrengthForbiddenGe()
 	{
 		this.BuffComp.RemoveBuffByHandle(this.StrengthForbiddenGe, -1, null, null, null, null);
 	}
 
-	// Token: 0x0601BCBF RID: 113855 RVA: 0x007AC850 File Offset: 0x007AAA50
+	// Token: 0x0601987C RID: 104572 RVA: 0x007D4D60 File Offset: 0x007D2F60
 	public void NewMoveStateStrengthDecrease(ECharMoveState newState)
 	{
 		this.BuffComp.RemoveBuffByHandle(this.StrengthDecreaseGe, -1, null, null, null, null);
@@ -318,19 +318,19 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 		this.UpdateStrengthDecrease(1206L);
 	}
 
-	// Token: 0x0601BCC0 RID: 113856 RVA: 0x007AC8F3 File Offset: 0x007AAAF3
+	// Token: 0x0601987D RID: 104573 RVA: 0x007D4E03 File Offset: 0x007D3003
 	public static void CreateStaticDefaultValue()
 	{
 		RoleStrengthComponent.ForbidStrengthRecoveryTimeExtra = 0.5f;
 	}
 
-	// Token: 0x0601BCC1 RID: 113857 RVA: 0x007AC8FF File Offset: 0x007AAAFF
+	// Token: 0x0601987E RID: 104574 RVA: 0x007D4E0F File Offset: 0x007D300F
 	public static void ResetStaticDefaultValue()
 	{
 		RoleStrengthComponent.ForbidStrengthRecoveryTimeExtra = 0.5f;
 	}
 
-	// Token: 0x0601BCC2 RID: 113858 RVA: 0x007AC90C File Offset: 0x007AAB0C
+	// Token: 0x0601987F RID: 104575 RVA: 0x007D4E1C File Offset: 0x007D301C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -339,96 +339,95 @@ public class RoleStrengthComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		RoleStrengthComponent roleStrengthComponent = (RoleStrengthComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (roleStrengthComponent.ActorComp == null)
 		{
-			if (roleStrengthComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("BuffComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (roleStrengthComponent.BuffComp == null)
-			{
-				this.BuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComp), "BuffComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (roleStrengthComponent.BuffComp == null)
 		{
-			if (roleStrengthComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.BuffComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
 		{
-			if (roleStrengthComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (roleStrengthComponent.TagComponent == null)
 		{
-			if (roleStrengthComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("StrengthDecreaseGe"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			this.StrengthDecreaseGe = roleStrengthComponent.StrengthDecreaseGe;
+			return false;
 		}
-		if (base.CanResetComponentProperty("StrengthForbiddenGe"))
+		if (roleStrengthComponent.UnifiedStateComponent == null)
 		{
-			this.StrengthForbiddenGe = roleStrengthComponent.StrengthForbiddenGe;
+			this.UnifiedStateComponent = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
+		{
+			return false;
+		}
+		if (roleStrengthComponent.CreatureDataComponent == null)
+		{
+			this.CreatureDataComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
+		{
+			return false;
+		}
+		this.StrengthDecreaseGe = roleStrengthComponent.StrengthDecreaseGe;
+		this.StrengthForbiddenGe = roleStrengthComponent.StrengthForbiddenGe;
 		return true;
 	}
 
-	// Token: 0x0400DB27 RID: 56103
+	// Token: 0x170028BE RID: 10430
+	// (get) Token: 0x06019880 RID: 104576 RVA: 0x007D4F2B File Offset: 0x007D312B
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028BF RID: 10431
+	// (get) Token: 0x06019881 RID: 104577 RVA: 0x007D4F2E File Offset: 0x007D312E
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DFC6 RID: 57286
 	public const float STRENGTH_TOLERANCE = 0.01f;
 
-	// Token: 0x0400DB28 RID: 56104
+	// Token: 0x0400DFC7 RID: 57287
 	public static float ForbidStrengthRecoveryTimeExtra;
 
-	// Token: 0x0400DB29 RID: 56105
+	// Token: 0x0400DFC8 RID: 57288
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400DB2A RID: 56106
+	// Token: 0x0400DFC9 RID: 57289
 	private CharacterBuffComponent BuffComp;
 
-	// Token: 0x0400DB2B RID: 56107
+	// Token: 0x0400DFCA RID: 57290
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DB2C RID: 56108
+	// Token: 0x0400DFCB RID: 57291
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400DB2D RID: 56109
+	// Token: 0x0400DFCC RID: 57292
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400DB2E RID: 56110
+	// Token: 0x0400DFCD RID: 57293
 	private int StrengthDecreaseGe;
 
-	// Token: 0x0400DB2F RID: 56111
+	// Token: 0x0400DFCE RID: 57294
 	private int StrengthForbiddenGe;
 }

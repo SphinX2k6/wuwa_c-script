@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B86 RID: 27526
+	// Token: 0x020072CC RID: 29388
 	public class IMp4GamepadShakeFadeOutConfigT
 	{
-		// Token: 0x1700CCA1 RID: 52385
-		// (get) Token: 0x06030581 RID: 198017 RVA: 0x006916BE File Offset: 0x0068F8BE
-		// (set) Token: 0x06030582 RID: 198018 RVA: 0x006916C6 File Offset: 0x0068F8C6
+		// Token: 0x1700D786 RID: 55174
+		// (get) Token: 0x060333D9 RID: 209881 RVA: 0x006E9CDE File Offset: 0x006E7EDE
+		// (set) Token: 0x060333DA RID: 209882 RVA: 0x006E9CE6 File Offset: 0x006E7EE6
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700CCA2 RID: 52386
-		// (get) Token: 0x06030583 RID: 198019 RVA: 0x006916CF File Offset: 0x0068F8CF
-		// (set) Token: 0x06030584 RID: 198020 RVA: 0x006916D7 File Offset: 0x0068F8D7
+		// Token: 0x1700D787 RID: 55175
+		// (get) Token: 0x060333DB RID: 209883 RVA: 0x006E9CEF File Offset: 0x006E7EEF
+		// (set) Token: 0x060333DC RID: 209884 RVA: 0x006E9CF7 File Offset: 0x006E7EF7
 		public EMp4GamepadShakeCurve FadeOutCurve { get; set; }
 
-		// Token: 0x1700CCA3 RID: 52387
-		// (get) Token: 0x06030585 RID: 198021 RVA: 0x006916E0 File Offset: 0x0068F8E0
-		// (set) Token: 0x06030586 RID: 198022 RVA: 0x006916E8 File Offset: 0x0068F8E8
+		// Token: 0x1700D788 RID: 55176
+		// (get) Token: 0x060333DD RID: 209885 RVA: 0x006E9D00 File Offset: 0x006E7F00
+		// (set) Token: 0x060333DE RID: 209886 RVA: 0x006E9D08 File Offset: 0x006E7F08
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030587 RID: 198023 RVA: 0x006916F1 File Offset: 0x0068F8F1
+		// Token: 0x060333DF RID: 209887 RVA: 0x006E9D11 File Offset: 0x006E7F11
 		public IMp4GamepadShakeFadeOutConfigT()
 		{
 			this.FadeOutTime = 0f;

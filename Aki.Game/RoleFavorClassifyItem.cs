@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200284A RID: 10314
+// Token: 0x02001DC5 RID: 7621
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RoleFavorClassifyItem : GridProxyAbstract<RoleFavorClassifyDataBase>
 {
-	// Token: 0x06015442 RID: 87106 RVA: 0x0055F44B File Offset: 0x0055D64B
+	// Token: 0x06012E40 RID: 77376 RVA: 0x0058A1A7 File Offset: 0x005883A7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,19 +23,19 @@ public class RoleFavorClassifyItem : GridProxyAbstract<RoleFavorClassifyDataBase
 		};
 	}
 
-	// Token: 0x06015443 RID: 87107 RVA: 0x0055F484 File Offset: 0x0055D684
+	// Token: 0x06012E41 RID: 77377 RVA: 0x0058A1E0 File Offset: 0x005883E0
 	protected override void OnStart()
 	{
 		this.ContentGenericLayout = new GenericLayout<RoleFavorContentItem, RoleFavorContentDataBase>(base.GetVerticalLayout(0), new Func<RoleFavorContentItem>(this.CreateContentItem), null, false, true);
 	}
 
-	// Token: 0x06015444 RID: 87108 RVA: 0x0055F4A7 File Offset: 0x0055D6A7
+	// Token: 0x06012E42 RID: 77378 RVA: 0x0058A203 File Offset: 0x00588403
 	protected override void OnBeforeDestroy()
 	{
 		this.ClassifyData = null;
 	}
 
-	// Token: 0x06015445 RID: 87109 RVA: 0x0055F4B0 File Offset: 0x0055D6B0
+	// Token: 0x06012E43 RID: 77379 RVA: 0x0058A20C File Offset: 0x0058840C
 	public override void Refresh(RoleFavorClassifyDataBase data, bool isSelected, int gridIndex)
 	{
 		this.ClassifyData = data;
@@ -52,13 +52,13 @@ public class RoleFavorClassifyItem : GridProxyAbstract<RoleFavorClassifyDataBase
 		contentGenericLayout.RefreshByData(contentDataList, null, false);
 	}
 
-	// Token: 0x06015446 RID: 87110 RVA: 0x0055F514 File Offset: 0x0055D714
+	// Token: 0x06012E44 RID: 77380 RVA: 0x0058A270 File Offset: 0x00588470
 	public IReadOnlyList<RoleFavorContentItem> GetContentItemList()
 	{
 		return this.ContentItemList;
 	}
 
-	// Token: 0x06015447 RID: 87111 RVA: 0x0055F51C File Offset: 0x0055D71C
+	// Token: 0x06012E45 RID: 77381 RVA: 0x0058A278 File Offset: 0x00588478
 	private RoleFavorContentItem CreateContentItem()
 	{
 		RoleFavorContentItem roleFavorContentItem = new RoleFavorContentItem();
@@ -66,11 +66,11 @@ public class RoleFavorClassifyItem : GridProxyAbstract<RoleFavorClassifyDataBase
 		return roleFavorContentItem;
 	}
 
-	// Token: 0x04009ECF RID: 40655
+	// Token: 0x0400A2B8 RID: 41656
 	[Nullable(2)]
 	private RoleFavorClassifyDataBase ClassifyData;
 
-	// Token: 0x04009ED0 RID: 40656
+	// Token: 0x0400A2B9 RID: 41657
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,16 +79,16 @@ public class RoleFavorClassifyItem : GridProxyAbstract<RoleFavorClassifyDataBase
 	})]
 	public GenericLayout<RoleFavorContentItem, RoleFavorContentDataBase> ContentGenericLayout;
 
-	// Token: 0x04009ED1 RID: 40657
+	// Token: 0x0400A2BA RID: 41658
 	private readonly List<RoleFavorContentItem> ContentItemList = new List<RoleFavorContentItem>();
 
-	// Token: 0x02008E84 RID: 36484
+	// Token: 0x020080CA RID: 32970
 	[NullableContext(0)]
 	private enum ERoleFavorClassifyItemDefine
 	{
-		// Token: 0x0402E38E RID: 189326
+		// Token: 0x04029A88 RID: 170632
 		ContentVerticalLayout,
-		// Token: 0x0402E38F RID: 189327
+		// Token: 0x04029A89 RID: 170633
 		TitleText
 	}
 }

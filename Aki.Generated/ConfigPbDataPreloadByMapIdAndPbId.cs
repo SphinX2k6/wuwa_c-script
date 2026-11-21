@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000649 RID: 1609
+	// Token: 0x02000661 RID: 1633
 	public class ConfigPbDataPreloadByMapIdAndPbId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025C6 RID: 9670 RVA: 0x0012F33F File Offset: 0x0012D53F
+		// Token: 0x06002656 RID: 9814 RVA: 0x00135DBB File Offset: 0x00133FBB
 		static ConfigPbDataPreloadByMapIdAndPbId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPbDataPreloadByMapIdAndPbId.CreateStaticDefaultValue), new Action(ConfigPbDataPreloadByMapIdAndPbId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025C7 RID: 9671 RVA: 0x0012F360 File Offset: 0x0012D560
+		// Token: 0x06002657 RID: 9815 RVA: 0x00135DDC File Offset: 0x00133FDC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPbDataPreloadByMapIdAndPbId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025C8 RID: 9672 RVA: 0x0012F3DF File Offset: 0x0012D5DF
+		// Token: 0x06002658 RID: 9816 RVA: 0x00135E5B File Offset: 0x0013405B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPbDataPreloadByMapIdAndPbId.LogPair = null;
 			ConfigPbDataPreloadByMapIdAndPbId.HandleId = 0;
 		}
 
-		// Token: 0x060025C9 RID: 9673 RVA: 0x0012F3ED File Offset: 0x0012D5ED
+		// Token: 0x06002659 RID: 9817 RVA: 0x00135E69 File Offset: 0x00134069
 		public static void Init()
 		{
 			ConfigPbDataPreloadByMapIdAndPbId.HandleId = ConfigCommon.InitDataStatement(ConfigPbDataPreloadByMapIdAndPbId.HandleId, "db_pbdata_preload.db", "select BinData from `PbDataPreload` where MapId=? AND PbDataId=?");
 		}
 
-		// Token: 0x060025CA RID: 9674 RVA: 0x0012F408 File Offset: 0x0012D608
+		// Token: 0x0600265A RID: 9818 RVA: 0x00135E84 File Offset: 0x00134084
 		public static PbDataPreload? GetConfig(int p0MapId, int p1PbDataId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPbDataPreloadByMapIdAndPbId.HandleId, ConfigPbDataPreloadByMapIdAndPbId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new PbDataPreload?(rootAsPbDataPreload);
 		}
 
-		// Token: 0x04002BE5 RID: 11237
+		// Token: 0x04002C8D RID: 11405
 		private const string DB = "db_pbdata_preload.db";
 
-		// Token: 0x04002BE6 RID: 11238
+		// Token: 0x04002C8E RID: 11406
 		private const string FILE = "Preload/PbDataPreload.csv";
 
-		// Token: 0x04002BE7 RID: 11239
+		// Token: 0x04002C8F RID: 11407
 		private const string TABLE = "PbDataPreload";
 
-		// Token: 0x04002BE8 RID: 11240
+		// Token: 0x04002C90 RID: 11408
 		private const string COMMAND = "select BinData from `PbDataPreload` where MapId=? AND PbDataId=?";
 
-		// Token: 0x04002BE9 RID: 11241
+		// Token: 0x04002C91 RID: 11409
 		private const string KEY_PREFIX = "PbDataPreloadByMapIdAndPbId";
 
-		// Token: 0x04002BEA RID: 11242
+		// Token: 0x04002C92 RID: 11410
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002BEB RID: 11243
+		// Token: 0x04002C93 RID: 11411
 		private static int HandleId;
 	}
 }

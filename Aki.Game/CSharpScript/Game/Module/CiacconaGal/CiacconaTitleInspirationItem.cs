@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF4 RID: 23540
+	// Token: 0x02004BD4 RID: 19412
 	public class CiacconaTitleInspirationItem : UiPanelBase
 	{
-		// Token: 0x0603B7DF RID: 243679 RVA: 0x00E301B6 File Offset: 0x00E2E3B6
+		// Token: 0x0603072A RID: 198442 RVA: 0x00D804C6 File Offset: 0x00D7E6C6
 		[NullableContext(1)]
 		public CiacconaTitleInspirationItem(CiacconaGalActivityData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x0603B7E0 RID: 243680 RVA: 0x00E301C8 File Offset: 0x00E2E3C8
+		// Token: 0x0603072B RID: 198443 RVA: 0x00D804D8 File Offset: 0x00D7E6D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B7E1 RID: 243681 RVA: 0x00E302D4 File Offset: 0x00E2E4D4
+		// Token: 0x0603072C RID: 198444 RVA: 0x00D805E4 File Offset: 0x00D7E7E4
 		protected override void OnStart()
 		{
 			this.Refresh();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Add(EEventName.OnCiacconaInspirationDataUpdate, new Action(this.OnCiacconaInspirationDataUpdate));
 		}
 
-		// Token: 0x0603B7E2 RID: 243682 RVA: 0x00E30332 File Offset: 0x00E2E532
+		// Token: 0x0603072D RID: 198445 RVA: 0x00D80642 File Offset: 0x00D7E842
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TimerHandle != null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Remove(EEventName.OnCiacconaInspirationDataUpdate, new Action(this.OnCiacconaInspirationDataUpdate));
 		}
 
-		// Token: 0x0603B7E3 RID: 243683 RVA: 0x00E30370 File Offset: 0x00E2E570
+		// Token: 0x0603072E RID: 198446 RVA: 0x00D80680 File Offset: 0x00D7E880
 		private void Refresh()
 		{
 			int inspirationCount = this.ActivityData.InspirationCount;
@@ -88,48 +88,48 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.GetItem(3).SetUIActive(inspirationCount < maxInspirationCount);
 		}
 
-		// Token: 0x0603B7E4 RID: 243684 RVA: 0x00E30441 File Offset: 0x00E2E641
+		// Token: 0x0603072F RID: 198447 RVA: 0x00D80751 File Offset: 0x00D7E951
 		private void Tick(float _)
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603B7E5 RID: 243685 RVA: 0x00E30449 File Offset: 0x00E2E649
+		// Token: 0x06030730 RID: 198448 RVA: 0x00D80759 File Offset: 0x00D7E959
 		private void OnCiacconaInspirationDataUpdate()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603B7E6 RID: 243686 RVA: 0x00E30451 File Offset: 0x00E2E651
+		// Token: 0x06030731 RID: 198449 RVA: 0x00D80761 File Offset: 0x00D7E961
 		private void OnClick()
 		{
 			HelpController.Instance.OpenHelpById(250);
 		}
 
-		// Token: 0x0401EFE2 RID: 126946
+		// Token: 0x04019A93 RID: 105107
 		[Nullable(1)]
 		private CiacconaGalActivityData ActivityData;
 
-		// Token: 0x0401EFE3 RID: 126947
+		// Token: 0x04019A94 RID: 105108
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0200BDDD RID: 48605
+		// Token: 0x0200A7E5 RID: 42981
 		private class EInspirationComponentDefine
 		{
-			// Token: 0x040393F8 RID: 234488
+			// Token: 0x04033DBB RID: 212411
 			public const int TextNum = 0;
 
-			// Token: 0x040393F9 RID: 234489
+			// Token: 0x04033DBC RID: 212412
 			public const int TextTime = 1;
 
-			// Token: 0x040393FA RID: 234490
+			// Token: 0x04033DBD RID: 212413
 			public const int SpriteSplitLine = 2;
 
-			// Token: 0x040393FB RID: 234491
+			// Token: 0x04033DBE RID: 212414
 			public const int ItemTime = 3;
 
-			// Token: 0x040393FC RID: 234492
+			// Token: 0x04033DBF RID: 212415
 			public const int BtnSelf = 4;
 		}
 	}

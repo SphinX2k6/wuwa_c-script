@@ -7,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063E6 RID: 25574
+	// Token: 0x02005364 RID: 21348
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourActivityData : ActivityBaseData
 	{
-		// Token: 0x0604052A RID: 263466 RVA: 0x00F8EE6A File Offset: 0x00F8D06A
+		// Token: 0x060351EB RID: 217579 RVA: 0x00ED5E02 File Offset: 0x00ED4002
 		protected override void OnInit(ActivityData data)
 		{
 			this.InitMotorParkourLevel();
 		}
 
-		// Token: 0x0604052B RID: 263467 RVA: 0x00F8EE74 File Offset: 0x00F8D074
+		// Token: 0x060351EC RID: 217580 RVA: 0x00ED5E0C File Offset: 0x00ED400C
 		protected override void PhraseEx(ActivityData data)
 		{
 			MotorParkourActivityInfo motorParkourActivityInfo = data.MotorParkourActivityInfo;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.UpdateMotorParkourLevelList(motorParkourActivityInfo.MotorParkourLevelInfos);
 		}
 
-		// Token: 0x0604052C RID: 263468 RVA: 0x00F8EE98 File Offset: 0x00F8D098
+		// Token: 0x060351ED RID: 217581 RVA: 0x00ED5E30 File Offset: 0x00ED4030
 		public override bool GetExDataRedPointShowState()
 		{
 			foreach (MotorParkourLevelData motorParkourLevelData in this.LevelDataList)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return false;
 		}
 
-		// Token: 0x0604052D RID: 263469 RVA: 0x00F8EEFC File Offset: 0x00F8D0FC
+		// Token: 0x060351EE RID: 217582 RVA: 0x00ED5E94 File Offset: 0x00ED4094
 		protected override bool GetExDataFinishShowState()
 		{
 			using (List<MotorParkourLevelData>.Enumerator enumerator = this.LevelDataList.GetEnumerator())
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return true;
 		}
 
-		// Token: 0x0604052E RID: 263470 RVA: 0x00F8EF58 File Offset: 0x00F8D158
+		// Token: 0x060351EF RID: 217583 RVA: 0x00ED5EF0 File Offset: 0x00ED40F0
 		private void InitMotorParkourLevel()
 		{
 			foreach (MotorParkour config in MotorParkourConfig.Instance.GetMotorParkourLevelByActivityId(base.Id))
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			}
 		}
 
-		// Token: 0x0604052F RID: 263471 RVA: 0x00F8F030 File Offset: 0x00F8D230
+		// Token: 0x060351F0 RID: 217584 RVA: 0x00ED5FC8 File Offset: 0x00ED41C8
 		public void UpdateMotorParkourLevelList(IReadOnlyList<MotorParkourLevelInfo> infoList)
 		{
 			foreach (MotorParkourLevelInfo motorParkourLevelInfo in infoList)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040530 RID: 263472 RVA: 0x00F8F0C4 File Offset: 0x00F8D2C4
+		// Token: 0x060351F1 RID: 217585 RVA: 0x00ED605C File Offset: 0x00ED425C
 		public bool UpdateMotorParkourLevelBestRecordTime(int levelId, int time)
 		{
 			MotorParkourLevelData levelDataById = this.GetLevelDataById(levelId);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return false;
 		}
 
-		// Token: 0x06040531 RID: 263473 RVA: 0x00F8F0F4 File Offset: 0x00F8D2F4
+		// Token: 0x060351F2 RID: 217586 RVA: 0x00ED608C File Offset: 0x00ED428C
 		public MotorParkourLevelData GetSelectedLevelData()
 		{
 			int num = -1;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return this.LevelDataList[this.LevelDataList.Count - 1];
 		}
 
-		// Token: 0x06040532 RID: 263474 RVA: 0x00F8F194 File Offset: 0x00F8D394
+		// Token: 0x060351F3 RID: 217587 RVA: 0x00ED612C File Offset: 0x00ED432C
 		public MotorParkourLevelData GetSelectedLevelDataInRewardView()
 		{
 			int num = -1;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return this.LevelDataList[0];
 		}
 
-		// Token: 0x06040533 RID: 263475 RVA: 0x00F8F1FC File Offset: 0x00F8D3FC
+		// Token: 0x060351F4 RID: 217588 RVA: 0x00ED6194 File Offset: 0x00ED4394
 		public bool RewardHasRedDot()
 		{
 			using (List<MotorParkourLevelData>.Enumerator enumerator = this.LevelDataList.GetEnumerator())
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return false;
 		}
 
-		// Token: 0x06040534 RID: 263476 RVA: 0x00F8F258 File Offset: 0x00F8D458
+		// Token: 0x060351F5 RID: 217589 RVA: 0x00ED61F0 File Offset: 0x00ED43F0
 		public List<MotorParkourLevelData> GetLevelDataList()
 		{
 			return this.LevelDataList;
 		}
 
-		// Token: 0x06040535 RID: 263477 RVA: 0x00F8F260 File Offset: 0x00F8D460
+		// Token: 0x060351F6 RID: 217590 RVA: 0x00ED61F8 File Offset: 0x00ED43F8
 		public MotorParkourLevelData GetLevelDataById(int levelId)
 		{
 			MotorParkourLevelData result;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return result;
 		}
 
-		// Token: 0x06040536 RID: 263478 RVA: 0x00F8F280 File Offset: 0x00F8D480
+		// Token: 0x060351F7 RID: 217591 RVA: 0x00ED6218 File Offset: 0x00ED4418
 		public int GetAllTaskNum()
 		{
 			int num = 0;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return num;
 		}
 
-		// Token: 0x06040537 RID: 263479 RVA: 0x00F8F2D8 File Offset: 0x00F8D4D8
+		// Token: 0x060351F8 RID: 217592 RVA: 0x00ED6270 File Offset: 0x00ED4470
 		public int GetFinishedTaskNum()
 		{
 			int num = 0;
@@ -211,10 +211,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return num;
 		}
 
-		// Token: 0x04021768 RID: 137064
+		// Token: 0x0401C097 RID: 114839
 		private readonly Dictionary<int, MotorParkourLevelData> MotorParkourLevelMap = new Dictionary<int, MotorParkourLevelData>();
 
-		// Token: 0x04021769 RID: 137065
+		// Token: 0x0401C098 RID: 114840
 		private readonly List<MotorParkourLevelData> LevelDataList = new List<MotorParkourLevelData>();
 	}
 }

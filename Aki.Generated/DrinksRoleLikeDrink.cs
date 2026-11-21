@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C09 RID: 3081
+	// Token: 0x02000CEB RID: 3307
 	public struct DrinksRoleLikeDrink : IFlatbufferObject
 	{
-		// Token: 0x17000D90 RID: 3472
-		// (get) Token: 0x060064F9 RID: 25849 RVA: 0x00219F79 File Offset: 0x00218179
+		// Token: 0x17000DDC RID: 3548
+		// (get) Token: 0x06006AD8 RID: 27352 RVA: 0x00239407 File Offset: 0x00237607
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060064FA RID: 25850 RVA: 0x00219F86 File Offset: 0x00218186
+		// Token: 0x06006AD9 RID: 27353 RVA: 0x00239414 File Offset: 0x00237614
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060064FB RID: 25851 RVA: 0x00219F90 File Offset: 0x00218190
+		// Token: 0x06006ADA RID: 27354 RVA: 0x0023941C File Offset: 0x0023761C
 		public static DrinksRoleLikeDrink GetRootAsDrinksRoleLikeDrink(ByteBuffer _bb)
 		{
 			return DrinksRoleLikeDrink.GetRootAsDrinksRoleLikeDrink(_bb, default(DrinksRoleLikeDrink));
 		}
 
-		// Token: 0x060064FC RID: 25852 RVA: 0x00219FAC File Offset: 0x002181AC
+		// Token: 0x06006ADB RID: 27355 RVA: 0x00239438 File Offset: 0x00237638
 		public static DrinksRoleLikeDrink GetRootAsDrinksRoleLikeDrink(ByteBuffer _bb, DrinksRoleLikeDrink obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060064FD RID: 25853 RVA: 0x00219FC9 File Offset: 0x002181C9
+		// Token: 0x06006ADC RID: 27356 RVA: 0x00239455 File Offset: 0x00237655
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060064FE RID: 25854 RVA: 0x00219FD8 File Offset: 0x002181D8
+		// Token: 0x06006ADD RID: 27357 RVA: 0x00239464 File Offset: 0x00237664
 		public DrinksRoleLikeDrink __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000D91 RID: 3473
-		// (get) Token: 0x060064FF RID: 25855 RVA: 0x00219FE8 File Offset: 0x002181E8
+		// Token: 0x17000DDD RID: 3549
+		// (get) Token: 0x06006ADE RID: 27358 RVA: 0x00239474 File Offset: 0x00237674
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D92 RID: 3474
-		// (get) Token: 0x06006500 RID: 25856 RVA: 0x0021A024 File Offset: 0x00218224
+		// Token: 0x17000DDE RID: 3550
+		// (get) Token: 0x06006ADF RID: 27359 RVA: 0x002394B0 File Offset: 0x002376B0
 		public bool LikeStatus
 		{
 			get
@@ -75,7 +75,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006501 RID: 25857 RVA: 0x0021A064 File Offset: 0x00218264
+		// Token: 0x06006AE0 RID: 27360 RVA: 0x002394F0 File Offset: 0x002376F0
 		public int LinkDrinkBase(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -86,8 +86,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D93 RID: 3475
-		// (get) Token: 0x06006502 RID: 25858 RVA: 0x0021A0A4 File Offset: 0x002182A4
+		// Token: 0x17000DDF RID: 3551
+		// (get) Token: 0x06006AE1 RID: 27361 RVA: 0x00239530 File Offset: 0x00237730
 		public int LinkDrinkBaseLength
 		{
 			get
@@ -101,20 +101,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006503 RID: 25859 RVA: 0x0021A0CF File Offset: 0x002182CF
+		// Token: 0x06006AE2 RID: 27362 RVA: 0x0023955B File Offset: 0x0023775B
 		public Span<int> GetLinkDrinkBaseBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06006504 RID: 25860 RVA: 0x0021A0DE File Offset: 0x002182DE
+		// Token: 0x06006AE3 RID: 27363 RVA: 0x0023956A File Offset: 0x0023776A
 		public int[] GetLinkDrinkBaseArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D94 RID: 3476
-		// (get) Token: 0x06006505 RID: 25861 RVA: 0x0021A0F8 File Offset: 0x002182F8
+		// Token: 0x17000DE0 RID: 3552
+		// (get) Token: 0x06006AE4 RID: 27364 RVA: 0x00239584 File Offset: 0x00237784
 		public int DrinkLikePoint
 		{
 			get
@@ -128,7 +128,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006506 RID: 25862 RVA: 0x0021A138 File Offset: 0x00218338
+		// Token: 0x06006AE5 RID: 27365 RVA: 0x002395C4 File Offset: 0x002377C4
 		public int LinkOrnament(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -139,8 +139,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D95 RID: 3477
-		// (get) Token: 0x06006507 RID: 25863 RVA: 0x0021A178 File Offset: 0x00218378
+		// Token: 0x17000DE1 RID: 3553
+		// (get) Token: 0x06006AE6 RID: 27366 RVA: 0x00239604 File Offset: 0x00237804
 		public int LinkOrnamentLength
 		{
 			get
@@ -154,20 +154,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006508 RID: 25864 RVA: 0x0021A1A4 File Offset: 0x002183A4
+		// Token: 0x06006AE7 RID: 27367 RVA: 0x00239630 File Offset: 0x00237830
 		public Span<int> GetLinkOrnamentBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06006509 RID: 25865 RVA: 0x0021A1B4 File Offset: 0x002183B4
+		// Token: 0x06006AE8 RID: 27368 RVA: 0x00239640 File Offset: 0x00237840
 		public int[] GetLinkOrnamentArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D96 RID: 3478
-		// (get) Token: 0x0600650A RID: 25866 RVA: 0x0021A1CC File Offset: 0x002183CC
+		// Token: 0x17000DE2 RID: 3554
+		// (get) Token: 0x06006AE9 RID: 27369 RVA: 0x00239658 File Offset: 0x00237858
 		public int OrnamentLikePoint
 		{
 			get
@@ -181,8 +181,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000D97 RID: 3479
-		// (get) Token: 0x0600650B RID: 25867 RVA: 0x0021A20C File Offset: 0x0021840C
+		// Token: 0x17000DE3 RID: 3555
+		// (get) Token: 0x06006AEA RID: 27370 RVA: 0x00239698 File Offset: 0x00237898
 		public string OrnamentHintId
 		{
 			get
@@ -196,19 +196,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600650C RID: 25868 RVA: 0x0021A244 File Offset: 0x00218444
+		// Token: 0x06006AEB RID: 27371 RVA: 0x002396D0 File Offset: 0x002378D0
 		public Span<byte> GetOrnamentHintIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600650D RID: 25869 RVA: 0x0021A254 File Offset: 0x00218454
+		// Token: 0x06006AEC RID: 27372 RVA: 0x002396E0 File Offset: 0x002378E0
 		public byte[] GetOrnamentHintIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600650E RID: 25870 RVA: 0x0021A26C File Offset: 0x0021846C
+		// Token: 0x06006AED RID: 27373 RVA: 0x002396F8 File Offset: 0x002378F8
 		public int LinkBatching(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -219,8 +219,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000D98 RID: 3480
-		// (get) Token: 0x0600650F RID: 25871 RVA: 0x0021A2AC File Offset: 0x002184AC
+		// Token: 0x17000DE4 RID: 3556
+		// (get) Token: 0x06006AEE RID: 27374 RVA: 0x00239738 File Offset: 0x00237938
 		public int LinkBatchingLength
 		{
 			get
@@ -234,20 +234,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006510 RID: 25872 RVA: 0x0021A2D8 File Offset: 0x002184D8
+		// Token: 0x06006AEF RID: 27375 RVA: 0x00239764 File Offset: 0x00237964
 		public Span<int> GetLinkBatchingBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06006511 RID: 25873 RVA: 0x0021A2E8 File Offset: 0x002184E8
+		// Token: 0x06006AF0 RID: 27376 RVA: 0x00239774 File Offset: 0x00237974
 		public int[] GetLinkBatchingArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000D99 RID: 3481
-		// (get) Token: 0x06006512 RID: 25874 RVA: 0x0021A300 File Offset: 0x00218500
+		// Token: 0x17000DE5 RID: 3557
+		// (get) Token: 0x06006AF1 RID: 27377 RVA: 0x0023978C File Offset: 0x0023798C
 		public int BatchingLikePoint
 		{
 			get
@@ -261,61 +261,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006513 RID: 25875 RVA: 0x0021A340 File Offset: 0x00218540
+		// Token: 0x06006AF2 RID: 27378 RVA: 0x002397C9 File Offset: 0x002379C9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LinkBatchingIter()或GetLinkBatchingBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LinkBatching()
+		public int[] LinkBatching()
 		{
-			DrinksRoleLikeDrink drinksRoleLikeDrink = this;
-			return drinksRoleLikeDrink.GetLinkBatchingArray() ?? Array.Empty<int>();
+			return this.GetLinkBatchingArray();
 		}
 
-		// Token: 0x06006514 RID: 25876 RVA: 0x0021A364 File Offset: 0x00218564
+		// Token: 0x06006AF3 RID: 27379 RVA: 0x002397D1 File Offset: 0x002379D1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LinkBatchingIter()
+		public IEnumerable<int> LinkBatchingIter()
 		{
 			DrinksRoleLikeDrink.<LinkBatchingIter>d__38 <LinkBatchingIter>d__ = new DrinksRoleLikeDrink.<LinkBatchingIter>d__38(-2);
 			<LinkBatchingIter>d__.<>3__<>4__this = this;
 			return <LinkBatchingIter>d__;
 		}
 
-		// Token: 0x06006515 RID: 25877 RVA: 0x0021A37C File Offset: 0x0021857C
+		// Token: 0x06006AF4 RID: 27380 RVA: 0x002397E6 File Offset: 0x002379E6
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LinkDrinkBaseIter()或GetLinkDrinkBaseBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LinkDrinkBase()
+		public int[] LinkDrinkBase()
 		{
-			DrinksRoleLikeDrink drinksRoleLikeDrink = this;
-			return drinksRoleLikeDrink.GetLinkDrinkBaseArray() ?? Array.Empty<int>();
+			return this.GetLinkDrinkBaseArray();
 		}
 
-		// Token: 0x06006516 RID: 25878 RVA: 0x0021A3A0 File Offset: 0x002185A0
+		// Token: 0x06006AF5 RID: 27381 RVA: 0x002397EE File Offset: 0x002379EE
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LinkDrinkBaseIter()
+		public IEnumerable<int> LinkDrinkBaseIter()
 		{
 			DrinksRoleLikeDrink.<LinkDrinkBaseIter>d__40 <LinkDrinkBaseIter>d__ = new DrinksRoleLikeDrink.<LinkDrinkBaseIter>d__40(-2);
 			<LinkDrinkBaseIter>d__.<>3__<>4__this = this;
 			return <LinkDrinkBaseIter>d__;
 		}
 
-		// Token: 0x06006517 RID: 25879 RVA: 0x0021A3B8 File Offset: 0x002185B8
+		// Token: 0x06006AF6 RID: 27382 RVA: 0x00239803 File Offset: 0x00237A03
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LinkOrnamentIter()或GetLinkOrnamentBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LinkOrnament()
+		public int[] LinkOrnament()
 		{
-			DrinksRoleLikeDrink drinksRoleLikeDrink = this;
-			return drinksRoleLikeDrink.GetLinkOrnamentArray() ?? Array.Empty<int>();
+			return this.GetLinkOrnamentArray();
 		}
 
-		// Token: 0x06006518 RID: 25880 RVA: 0x0021A3DC File Offset: 0x002185DC
+		// Token: 0x06006AF7 RID: 27383 RVA: 0x0023980B File Offset: 0x00237A0B
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LinkOrnamentIter()
+		public IEnumerable<int> LinkOrnamentIter()
 		{
 			DrinksRoleLikeDrink.<LinkOrnamentIter>d__42 <LinkOrnamentIter>d__ = new DrinksRoleLikeDrink.<LinkOrnamentIter>d__42(-2);
 			<LinkOrnamentIter>d__.<>3__<>4__this = this;
 			return <LinkOrnamentIter>d__;
 		}
 
-		// Token: 0x04004C45 RID: 19525
+		// Token: 0x04005227 RID: 21031
 		private Table __p;
 	}
 }

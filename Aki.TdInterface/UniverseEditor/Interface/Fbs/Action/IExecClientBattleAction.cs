@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006705 RID: 26373
+	// Token: 0x02006D85 RID: 28037
 	public struct IExecClientBattleAction : IFlatbufferObject
 	{
-		// Token: 0x1700C3F3 RID: 50163
-		// (get) Token: 0x0602DDDF RID: 187871 RVA: 0x00645AAD File Offset: 0x00643CAD
+		// Token: 0x1700CDA9 RID: 52649
+		// (get) Token: 0x06030622 RID: 198178 RVA: 0x00693155 File Offset: 0x00691355
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DDE0 RID: 187872 RVA: 0x00645ABA File Offset: 0x00643CBA
+		// Token: 0x06030623 RID: 198179 RVA: 0x00693162 File Offset: 0x00691362
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DDE1 RID: 187873 RVA: 0x00645AC4 File Offset: 0x00643CC4
+		// Token: 0x06030624 RID: 198180 RVA: 0x0069316C File Offset: 0x0069136C
 		public static IExecClientBattleAction GetRootAsIExecClientBattleAction(ByteBuffer _bb)
 		{
 			return IExecClientBattleAction.GetRootAsIExecClientBattleAction(_bb, default(IExecClientBattleAction));
 		}
 
-		// Token: 0x0602DDE2 RID: 187874 RVA: 0x00645AE0 File Offset: 0x00643CE0
+		// Token: 0x06030625 RID: 198181 RVA: 0x00693188 File Offset: 0x00691388
 		public static IExecClientBattleAction GetRootAsIExecClientBattleAction(ByteBuffer _bb, IExecClientBattleAction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DDE3 RID: 187875 RVA: 0x00645AFD File Offset: 0x00643CFD
+		// Token: 0x06030626 RID: 198182 RVA: 0x006931A5 File Offset: 0x006913A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DDE4 RID: 187876 RVA: 0x00645B0C File Offset: 0x00643D0C
+		// Token: 0x06030627 RID: 198183 RVA: 0x006931B4 File Offset: 0x006913B4
 		public IExecClientBattleAction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C3F4 RID: 50164
-		// (get) Token: 0x0602DDE5 RID: 187877 RVA: 0x00645B1C File Offset: 0x00643D1C
+		// Token: 0x1700CDAA RID: 52650
+		// (get) Token: 0x06030628 RID: 198184 RVA: 0x006931C4 File Offset: 0x006913C4
 		public TExecClientBattleOption ClientBattleOptionType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DDE6 RID: 187878 RVA: 0x00645B58 File Offset: 0x00643D58
+		// Token: 0x06030629 RID: 198185 RVA: 0x00693200 File Offset: 0x00691400
 		public TTable? ClientBattleOption<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,67 +73,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DDE7 RID: 187879 RVA: 0x00645B9C File Offset: 0x00643D9C
+		// Token: 0x0603062A RID: 198186 RVA: 0x00693244 File Offset: 0x00691444
 		public IAssistCharacterMoveToPoint ClientBattleOptionAsIAssistCharacterMoveToPoint()
 		{
 			return this.ClientBattleOption<IAssistCharacterMoveToPoint>().Value;
 		}
 
-		// Token: 0x0602DDE8 RID: 187880 RVA: 0x00645BB8 File Offset: 0x00643DB8
+		// Token: 0x0603062B RID: 198187 RVA: 0x00693260 File Offset: 0x00691460
 		public IAssistCharacterStopMoveToPoint ClientBattleOptionAsIAssistCharacterStopMoveToPoint()
 		{
 			return this.ClientBattleOption<IAssistCharacterStopMoveToPoint>().Value;
 		}
 
-		// Token: 0x0602DDE9 RID: 187881 RVA: 0x00645BD4 File Offset: 0x00643DD4
+		// Token: 0x0603062C RID: 198188 RVA: 0x0069327C File Offset: 0x0069147C
 		public IChangeAnimalEmotionBubble ClientBattleOptionAsIChangeAnimalEmotionBubble()
 		{
 			return this.ClientBattleOption<IChangeAnimalEmotionBubble>().Value;
 		}
 
-		// Token: 0x0602DDEA RID: 187882 RVA: 0x00645BF0 File Offset: 0x00643DF0
+		// Token: 0x0603062D RID: 198189 RVA: 0x00693298 File Offset: 0x00691498
 		public IClientGroupAiCommunicate ClientBattleOptionAsIClientGroupAiCommunicate()
 		{
 			return this.ClientBattleOption<IClientGroupAiCommunicate>().Value;
 		}
 
-		// Token: 0x0602DDEB RID: 187883 RVA: 0x00645C0C File Offset: 0x00643E0C
+		// Token: 0x0603062E RID: 198190 RVA: 0x006932B4 File Offset: 0x006914B4
 		public IClientSendTagEventToControlCharacter ClientBattleOptionAsIClientSendTagEventToControlCharacter()
 		{
 			return this.ClientBattleOption<IClientSendTagEventToControlCharacter>().Value;
 		}
 
-		// Token: 0x0602DDEC RID: 187884 RVA: 0x00645C28 File Offset: 0x00643E28
+		// Token: 0x0603062F RID: 198191 RVA: 0x006932D0 File Offset: 0x006914D0
 		public IFollowShooterSkillSkill ClientBattleOptionAsIFollowShooterSkillSkill()
 		{
 			return this.ClientBattleOption<IFollowShooterSkillSkill>().Value;
 		}
 
-		// Token: 0x0602DDED RID: 187885 RVA: 0x00645C44 File Offset: 0x00643E44
+		// Token: 0x06030630 RID: 198192 RVA: 0x006932EC File Offset: 0x006914EC
+		public IMechExecute ClientBattleOptionAsIMechExecute()
+		{
+			return this.ClientBattleOption<IMechExecute>().Value;
+		}
+
+		// Token: 0x06030631 RID: 198193 RVA: 0x00693308 File Offset: 0x00691508
 		public IMonsterNpcInteract ClientBattleOptionAsIMonsterNpcInteract()
 		{
 			return this.ClientBattleOption<IMonsterNpcInteract>().Value;
 		}
 
-		// Token: 0x0602DDEE RID: 187886 RVA: 0x00645C60 File Offset: 0x00643E60
+		// Token: 0x06030632 RID: 198194 RVA: 0x00693324 File Offset: 0x00691524
 		public IRoboSoldierSpecialTriggerHookSkill ClientBattleOptionAsIRoboSoldierSpecialTriggerHookSkill()
 		{
 			return this.ClientBattleOption<IRoboSoldierSpecialTriggerHookSkill>().Value;
 		}
 
-		// Token: 0x0602DDEF RID: 187887 RVA: 0x00645C7C File Offset: 0x00643E7C
+		// Token: 0x06030633 RID: 198195 RVA: 0x00693340 File Offset: 0x00691540
 		public ITriggerHookPointSkill ClientBattleOptionAsITriggerHookPointSkill()
 		{
 			return this.ClientBattleOption<ITriggerHookPointSkill>().Value;
 		}
 
-		// Token: 0x0602DDF0 RID: 187888 RVA: 0x00645C98 File Offset: 0x00643E98
+		// Token: 0x06030634 RID: 198196 RVA: 0x0069335C File Offset: 0x0069155C
 		public ITriggerMotorSkill ClientBattleOptionAsITriggerMotorSkill()
 		{
 			return this.ClientBattleOption<ITriggerMotorSkill>().Value;
 		}
 
-		// Token: 0x0602DDF1 RID: 187889 RVA: 0x00645CB3 File Offset: 0x00643EB3
+		// Token: 0x06030635 RID: 198197 RVA: 0x00693377 File Offset: 0x00691577
 		public static Offset<IExecClientBattleAction> CreateIExecClientBattleAction(FlatBufferBuilder builder, TExecClientBattleOption ClientBattleOption_type = TExecClientBattleOption.NONE, int ClientBattleOptionOffset = 0)
 		{
 			builder.StartTable(2);
@@ -142,31 +148,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecClientBattleAction.EndIExecClientBattleAction(builder);
 		}
 
-		// Token: 0x0602DDF2 RID: 187890 RVA: 0x00645CD0 File Offset: 0x00643ED0
+		// Token: 0x06030636 RID: 198198 RVA: 0x00693394 File Offset: 0x00691594
 		public static void StartIExecClientBattleAction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DDF3 RID: 187891 RVA: 0x00645CD9 File Offset: 0x00643ED9
+		// Token: 0x06030637 RID: 198199 RVA: 0x0069339D File Offset: 0x0069159D
 		public static void AddClientBattleOptionType(FlatBufferBuilder builder, TExecClientBattleOption clientBattleOptionType)
 		{
 			builder.AddByte(0, (byte)clientBattleOptionType, 0);
 		}
 
-		// Token: 0x0602DDF4 RID: 187892 RVA: 0x00645CE4 File Offset: 0x00643EE4
+		// Token: 0x06030638 RID: 198200 RVA: 0x006933A8 File Offset: 0x006915A8
 		public static void AddClientBattleOption(FlatBufferBuilder builder, int clientBattleOptionOffset)
 		{
 			builder.AddOffset(1, clientBattleOptionOffset, 0);
 		}
 
-		// Token: 0x0602DDF5 RID: 187893 RVA: 0x00645CEF File Offset: 0x00643EEF
+		// Token: 0x06030639 RID: 198201 RVA: 0x006933B3 File Offset: 0x006915B3
 		public static Offset<IExecClientBattleAction> EndIExecClientBattleAction(FlatBufferBuilder builder)
 		{
 			return new Offset<IExecClientBattleAction>(builder.EndTable());
 		}
 
-		// Token: 0x0602DDF6 RID: 187894 RVA: 0x00645CFC File Offset: 0x00643EFC
+		// Token: 0x0603063A RID: 198202 RVA: 0x006933C0 File Offset: 0x006915C0
 		public IExecClientBattleActionT UnPack()
 		{
 			IExecClientBattleActionT execClientBattleActionT = new IExecClientBattleActionT();
@@ -174,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return execClientBattleActionT;
 		}
 
-		// Token: 0x0602DDF7 RID: 187895 RVA: 0x00645D18 File Offset: 0x00643F18
+		// Token: 0x0603063B RID: 198203 RVA: 0x006933DC File Offset: 0x006915DC
 		public void UnPackTo(IExecClientBattleActionT _o)
 		{
 			_o.ClientBattleOption = new TExecClientBattleOptionUnion();
@@ -199,6 +205,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			case TExecClientBattleOption.IFollowShooterSkillSkill:
 				_o.ClientBattleOption.Value = ((this.ClientBattleOption<IFollowShooterSkillSkill>() != null) ? this.ClientBattleOption<IFollowShooterSkillSkill>().Value.UnPack() : null);
 				return;
+			case TExecClientBattleOption.IMechExecute:
+				_o.ClientBattleOption.Value = ((this.ClientBattleOption<IMechExecute>() != null) ? this.ClientBattleOption<IMechExecute>().Value.UnPack() : null);
+				return;
 			case TExecClientBattleOption.IMonsterNpcInteract:
 				_o.ClientBattleOption.Value = ((this.ClientBattleOption<IMonsterNpcInteract>() != null) ? this.ClientBattleOption<IMonsterNpcInteract>().Value.UnPack() : null);
 				return;
@@ -216,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DDF8 RID: 187896 RVA: 0x00645FA4 File Offset: 0x006441A4
+		// Token: 0x0603063C RID: 198204 RVA: 0x006936A4 File Offset: 0x006918A4
 		public static Offset<IExecClientBattleAction> Pack(FlatBufferBuilder builder, IExecClientBattleActionT _o)
 		{
 			if (_o == null)
@@ -228,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExecClientBattleAction.CreateIExecClientBattleAction(builder, clientBattleOption_type, clientBattleOptionOffset);
 		}
 
-		// Token: 0x04010DE2 RID: 69090
+		// Token: 0x04011C13 RID: 72723
 		private Table __p;
 	}
 }

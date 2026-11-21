@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000757 RID: 1879
+	// Token: 0x0200076F RID: 1903
 	public class ConfigPreheatBonusById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C1B RID: 11291 RVA: 0x00152AAF File Offset: 0x00150CAF
+		// Token: 0x06002CAB RID: 11435 RVA: 0x0015952B File Offset: 0x0015772B
 		static ConfigPreheatBonusById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPreheatBonusById.CreateStaticDefaultValue), new Action(ConfigPreheatBonusById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C1C RID: 11292 RVA: 0x00152AD0 File Offset: 0x00150CD0
+		// Token: 0x06002CAC RID: 11436 RVA: 0x0015954C File Offset: 0x0015774C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPreheatBonusById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C1D RID: 11293 RVA: 0x00152B4F File Offset: 0x00150D4F
+		// Token: 0x06002CAD RID: 11437 RVA: 0x001595CB File Offset: 0x001577CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPreheatBonusById.LogPair = null;
 			ConfigPreheatBonusById.HandleId = 0;
 		}
 
-		// Token: 0x06002C1E RID: 11294 RVA: 0x00152B5D File Offset: 0x00150D5D
+		// Token: 0x06002CAE RID: 11438 RVA: 0x001595D9 File Offset: 0x001577D9
 		public static void Init()
 		{
 			ConfigPreheatBonusById.HandleId = ConfigCommon.InitDataStatement(ConfigPreheatBonusById.HandleId, "db_preheat.db", "select BinData from `PreheatBonus` where Id=?");
 		}
 
-		// Token: 0x06002C1F RID: 11295 RVA: 0x00152B78 File Offset: 0x00150D78
+		// Token: 0x06002CAF RID: 11439 RVA: 0x001595F4 File Offset: 0x001577F4
 		public static PreheatBonus? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPreheatBonusById.HandleId, ConfigPreheatBonusById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PreheatBonus?(rootAsPreheatBonus);
 		}
 
-		// Token: 0x04003347 RID: 13127
+		// Token: 0x040033EF RID: 13295
 		private const string DB = "db_preheat.db";
 
-		// Token: 0x04003348 RID: 13128
+		// Token: 0x040033F0 RID: 13296
 		private const string FILE = "y.预热签到活动.xlsx";
 
-		// Token: 0x04003349 RID: 13129
+		// Token: 0x040033F1 RID: 13297
 		private const string TABLE = "PreheatBonus";
 
-		// Token: 0x0400334A RID: 13130
+		// Token: 0x040033F2 RID: 13298
 		private const string COMMAND = "select BinData from `PreheatBonus` where Id=?";
 
-		// Token: 0x0400334B RID: 13131
+		// Token: 0x040033F3 RID: 13299
 		private const string KEY_PREFIX = "PreheatBonusById";
 
-		// Token: 0x0400334C RID: 13132
+		// Token: 0x040033F4 RID: 13300
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400334D RID: 13133
+		// Token: 0x040033F5 RID: 13301
 		private static int HandleId;
 	}
 }

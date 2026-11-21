@@ -11,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200164D RID: 5709
+// Token: 0x02000B05 RID: 2821
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerSettlementView : UiViewBase
 {
-	// Token: 0x0600A042 RID: 41026 RVA: 0x002347C4 File Offset: 0x002329C4
+	// Token: 0x06007420 RID: 29728 RVA: 0x0023E600 File Offset: 0x0023C800
 	[NullableContext(1)]
 	public WheelTowerSettlementView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A043 RID: 41027 RVA: 0x002347D4 File Offset: 0x002329D4
+	// Token: 0x06007421 RID: 29729 RVA: 0x0023E610 File Offset: 0x0023C810
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -58,14 +58,14 @@ public class WheelTowerSettlementView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A044 RID: 41028 RVA: 0x002349AD File Offset: 0x00232BAD
+	// Token: 0x06007422 RID: 29730 RVA: 0x0023E7E9 File Offset: 0x0023C9E9
 	protected override void OnBeforeCreate()
 	{
 		this.GachaSequence = new UiBehaviorGachaSequence();
 		base.AddUiBehavior(this.GachaSequence);
 	}
 
-	// Token: 0x0600A045 RID: 41029 RVA: 0x002349C8 File Offset: 0x00232BC8
+	// Token: 0x06007423 RID: 29731 RVA: 0x0023E804 File Offset: 0x0023CA04
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerSettlementView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -76,7 +76,7 @@ public class WheelTowerSettlementView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A046 RID: 41030 RVA: 0x00234A0C File Offset: 0x00232C0C
+	// Token: 0x06007424 RID: 29732 RVA: 0x0023E848 File Offset: 0x0023CA48
 	private void UpdateShareBtnItem()
 	{
 		if (this.DataInternal == null || this.ShareBtnItem == null)
@@ -105,13 +105,13 @@ public class WheelTowerSettlementView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A047 RID: 41031 RVA: 0x00234A77 File Offset: 0x00232C77
+	// Token: 0x06007425 RID: 29733 RVA: 0x0023E8B3 File Offset: 0x0023CAB3
 	protected override void OnHandleLoadScene()
 	{
 		this.BindGachaSequenceSceneActors();
 	}
 
-	// Token: 0x0600A048 RID: 41032 RVA: 0x00234A80 File Offset: 0x00232C80
+	// Token: 0x06007426 RID: 29734 RVA: 0x0023E8BC File Offset: 0x0023CABC
 	protected override void OnBeforeShow()
 	{
 		this.TryPlayRoleSequence();
@@ -123,7 +123,7 @@ public class WheelTowerSettlementView : UiViewBase
 		uiViewSequence.PlaySequence("Start01", false, null);
 	}
 
-	// Token: 0x0600A049 RID: 41033 RVA: 0x00234AB2 File Offset: 0x00232CB2
+	// Token: 0x06007427 RID: 29735 RVA: 0x0023E8EE File Offset: 0x0023CAEE
 	protected override void OnBeforeDestroy()
 	{
 		LguiIntTween totalScoreTween = this.TotalScoreTween;
@@ -134,7 +134,7 @@ public class WheelTowerSettlementView : UiViewBase
 		totalScoreTween.Destroy();
 	}
 
-	// Token: 0x0600A04A RID: 41034 RVA: 0x00234AC4 File Offset: 0x00232CC4
+	// Token: 0x06007428 RID: 29736 RVA: 0x0023E900 File Offset: 0x0023CB00
 	private void TryPlayRoleSequence()
 	{
 		if (this.IsPlayingRoleSequence)
@@ -153,7 +153,7 @@ public class WheelTowerSettlementView : UiViewBase
 		this.GachaSequence.PlayRoleSequence(this.SequenceRoleId, 0);
 	}
 
-	// Token: 0x0600A04B RID: 41035 RVA: 0x00234B00 File Offset: 0x00232D00
+	// Token: 0x06007429 RID: 29737 RVA: 0x0023E93C File Offset: 0x0023CB3C
 	private void BindGachaSequenceSceneActors()
 	{
 		if (this.SceneSequenceCamera == null)
@@ -175,7 +175,7 @@ public class WheelTowerSettlementView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A04C RID: 41036 RVA: 0x00234B9C File Offset: 0x00232D9C
+	// Token: 0x0600742A RID: 29738 RVA: 0x0023E9D8 File Offset: 0x0023CBD8
 	private void BindTween()
 	{
 		this.TotalScoreTween = new LguiIntTween();
@@ -211,7 +211,7 @@ public class WheelTowerSettlementView : UiViewBase
 		uiViewSequence.AddSequenceFinishEvent("Start01", new Action<string>(this.OnSequenceStartFinish), false);
 	}
 
-	// Token: 0x0600A04D RID: 41037 RVA: 0x00234BF0 File Offset: 0x00232DF0
+	// Token: 0x0600742B RID: 29739 RVA: 0x0023EA2C File Offset: 0x0023CC2C
 	[NullableContext(0)]
 	private ValueTuple<int, int> GetBossRoundAndWave([Nullable(1)] List<IBossItemData> bossInfoList)
 	{
@@ -232,7 +232,7 @@ public class WheelTowerSettlementView : UiViewBase
 		return new ValueTuple<int, int>(num, item);
 	}
 
-	// Token: 0x0600A04E RID: 41038 RVA: 0x00234C90 File Offset: 0x00232E90
+	// Token: 0x0600742C RID: 29740 RVA: 0x0023EACC File Offset: 0x0023CCCC
 	private void UpdateSettlementInfo()
 	{
 		if (this.DataInternal == null)
@@ -345,7 +345,7 @@ public class WheelTowerSettlementView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), seasonTaskRewardConfig.Value.Desc, Array.Empty<object>());
 	}
 
-	// Token: 0x0600A04F RID: 41039 RVA: 0x00234F84 File Offset: 0x00233184
+	// Token: 0x0600742D RID: 29741 RVA: 0x0023EDC0 File Offset: 0x0023CFC0
 	[NullableContext(1)]
 	private void OnSequenceStartFinish(string name)
 	{
@@ -356,28 +356,28 @@ public class WheelTowerSettlementView : UiViewBase
 		this.TotalScoreTween.PlayTween(0, this.DataInternal.TotalScore, 0.4f, null);
 	}
 
-	// Token: 0x0600A050 RID: 41040 RVA: 0x00234FAC File Offset: 0x002331AC
+	// Token: 0x0600742E RID: 29742 RVA: 0x0023EDE8 File Offset: 0x0023CFE8
 	private void OnBtnReBattleClick()
 	{
 		IWheelTowerSettlementViewData dataInternal = this.DataInternal;
 		this.HandleButtonClick((dataInternal != null) ? dataInternal.CenterButtonData : null);
 	}
 
-	// Token: 0x0600A051 RID: 41041 RVA: 0x00234FC6 File Offset: 0x002331C6
+	// Token: 0x0600742F RID: 29743 RVA: 0x0023EE02 File Offset: 0x0023D002
 	private void OnBtnBackClick()
 	{
 		IWheelTowerSettlementViewData dataInternal = this.DataInternal;
 		this.HandleButtonClick((dataInternal != null) ? dataInternal.LeftButtonData : null);
 	}
 
-	// Token: 0x0600A052 RID: 41042 RVA: 0x00234FE0 File Offset: 0x002331E0
+	// Token: 0x06007430 RID: 29744 RVA: 0x0023EE1C File Offset: 0x0023D01C
 	private void OnBtnContinueClick()
 	{
 		IWheelTowerSettlementViewData dataInternal = this.DataInternal;
 		this.HandleButtonClick((dataInternal != null) ? dataInternal.RightButtonData : null);
 	}
 
-	// Token: 0x0600A053 RID: 41043 RVA: 0x00234FFC File Offset: 0x002331FC
+	// Token: 0x06007431 RID: 29745 RVA: 0x0023EE38 File Offset: 0x0023D038
 	private void HandleButtonClick(IWheelTowerSettlementViewButtonData buttonData)
 	{
 		if (buttonData == null)
@@ -399,22 +399,22 @@ public class WheelTowerSettlementView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04004912 RID: 18706
+	// Token: 0x040049B8 RID: 18872
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004913 RID: 18707
+	// Token: 0x040049B9 RID: 18873
 	private WheelTowerModeSettlementTitleItem ModeTitleItem;
 
-	// Token: 0x04004914 RID: 18708
+	// Token: 0x040049BA RID: 18874
 	private WheelTowerSettlementRoundPanel RoundPanel;
 
-	// Token: 0x04004915 RID: 18709
+	// Token: 0x040049BB RID: 18875
 	private WheelTowerSettlementScorePanel ScorePanel;
 
-	// Token: 0x04004916 RID: 18710
+	// Token: 0x040049BC RID: 18876
 	private WheelTowerSettlementBossResultPanel BossResultPanel;
 
-	// Token: 0x04004917 RID: 18711
+	// Token: 0x040049BD RID: 18877
 	[Nullable(new byte[]
 	{
 		2,
@@ -423,42 +423,42 @@ public class WheelTowerSettlementView : UiViewBase
 	})]
 	private GenericLayout<WheelTowerSettlementRoleItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x04004918 RID: 18712
+	// Token: 0x040049BE RID: 18878
 	private ButtonItem ReBattleBtnItem;
 
-	// Token: 0x04004919 RID: 18713
+	// Token: 0x040049BF RID: 18879
 	private ButtonItem BackBtnItem;
 
-	// Token: 0x0400491A RID: 18714
+	// Token: 0x040049C0 RID: 18880
 	private ButtonItem ContinueBtnItem;
 
-	// Token: 0x0400491B RID: 18715
+	// Token: 0x040049C1 RID: 18881
 	private IWheelTowerSettlementViewData DataInternal;
 
-	// Token: 0x0400491C RID: 18716
+	// Token: 0x040049C2 RID: 18882
 	[Nullable(1)]
 	private UiBehaviorGachaSequence GachaSequence;
 
-	// Token: 0x0400491D RID: 18717
+	// Token: 0x040049C3 RID: 18883
 	private AActor SceneSequenceCamera;
 
-	// Token: 0x0400491E RID: 18718
+	// Token: 0x040049C4 RID: 18884
 	private BP_UpdateInteract_C UpdateInteractBp;
 
-	// Token: 0x0400491F RID: 18719
+	// Token: 0x040049C5 RID: 18885
 	private bool IsPlayingRoleSequence;
 
-	// Token: 0x04004920 RID: 18720
+	// Token: 0x040049C6 RID: 18886
 	private int SequenceRoleId;
 
-	// Token: 0x04004921 RID: 18721
+	// Token: 0x040049C7 RID: 18887
 	[Nullable(1)]
 	private LguiIntTween TotalScoreTween;
 
-	// Token: 0x04004922 RID: 18722
+	// Token: 0x040049C8 RID: 18888
 	private int LastScoreLevel = -1;
 
-	// Token: 0x04004923 RID: 18723
+	// Token: 0x040049C9 RID: 18889
 	[Nullable(1)]
 	private ShareBtnItem ShareBtnItem;
 }

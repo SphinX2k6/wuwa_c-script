@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E3 RID: 483
+	// Token: 0x0200020A RID: 522
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAutoLockControl
 	{
-		// Token: 0x060007CC RID: 1996 RVA: 0x000258CC File Offset: 0x00023ACC
-		[NullableContext(1)]
+		// Token: 0x0600083A RID: 2106 RVA: 0x00026FAC File Offset: 0x000251AC
+		[NullableContext(0)]
 		private IAutoLockControl_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007CD RID: 1997 RVA: 0x00025904 File Offset: 0x00023B04
-		[NullableContext(1)]
+		// Token: 0x0600083B RID: 2107 RVA: 0x00026FE4 File Offset: 0x000251E4
+		[NullableContext(0)]
 		public static IAutoLockControl Create([Nullable(2)] IAutoLockControl instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007CE RID: 1998 RVA: 0x00025917 File Offset: 0x00023B17
-		[NullableContext(1)]
+		// Token: 0x0600083C RID: 2108 RVA: 0x00026FF7 File Offset: 0x000251F7
+		[NullableContext(0)]
 		public static IAutoLockControl CreateFromSetValue([Nullable(2)] IAutoLockControl_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007CF RID: 1999 RVA: 0x0002592A File Offset: 0x00023B2A
-		[NullableContext(1)]
+		// Token: 0x0600083D RID: 2109 RVA: 0x0002700A File Offset: 0x0002520A
+		[NullableContext(0)]
 		public IAutoLockControl_SetValue ToSetValue()
 		{
 			return new IAutoLockControl_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700026F RID: 623
-		// (get) Token: 0x060007D0 RID: 2000 RVA: 0x0002594C File Offset: 0x00023B4C
-		// (set) Token: 0x060007D1 RID: 2001 RVA: 0x000259AD File Offset: 0x00023BAD
+		// Token: 0x1700028B RID: 651
+		// (get) Token: 0x0600083E RID: 2110 RVA: 0x0002702C File Offset: 0x0002522C
+		// (set) Token: 0x0600083F RID: 2111 RVA: 0x0002708D File Offset: 0x0002528D
 		public virtual IConditionGroup EnableCondition
 		{
 			get
@@ -95,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000270 RID: 624
-		// (get) Token: 0x060007D2 RID: 2002 RVA: 0x000259C4 File Offset: 0x00023BC4
-		// (set) Token: 0x060007D3 RID: 2003 RVA: 0x00025A25 File Offset: 0x00023C25
+		// Token: 0x1700028C RID: 652
+		// (get) Token: 0x06000840 RID: 2112 RVA: 0x000270A4 File Offset: 0x000252A4
+		// (set) Token: 0x06000841 RID: 2113 RVA: 0x00027105 File Offset: 0x00025305
 		public virtual IConditionGroup DisableCondition
 		{
 			get
@@ -125,24 +125,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008CB RID: 2251
+		// Token: 0x04000952 RID: 2386
 		protected IAutoLockControl FbInstance;
 
-		// Token: 0x040008CC RID: 2252
+		// Token: 0x04000953 RID: 2387
 		protected IAutoLockControl_SetValue PocoInterface;
 
-		// Token: 0x040008CD RID: 2253
-		[Nullable(1)]
+		// Token: 0x04000954 RID: 2388
+		[Nullable(0)]
 		private IConditionGroup _EnableConditionCache;
 
-		// Token: 0x040008CE RID: 2254
+		// Token: 0x04000955 RID: 2389
 		private bool _EnableConditionInited;
 
-		// Token: 0x040008CF RID: 2255
-		[Nullable(1)]
+		// Token: 0x04000956 RID: 2390
+		[Nullable(0)]
 		private IConditionGroup _DisableConditionCache;
 
-		// Token: 0x040008D0 RID: 2256
+		// Token: 0x04000957 RID: 2391
 		private bool _DisableConditionInited;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render.Effect.DebugTools
 {
-	// Token: 0x020045F4 RID: 17908
+	// Token: 0x0200351D RID: 13597
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EffectStatData
 	{
-		// Token: 0x0602E2FF RID: 189183 RVA: 0x00AAD874 File Offset: 0x00AABA74
+		// Token: 0x060229F4 RID: 141812 RVA: 0x009DA010 File Offset: 0x009D8210
 		public string ToCsv()
 		{
 			return string.Join(",", new List<string>
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			});
 		}
 
-		// Token: 0x0602E300 RID: 189184 RVA: 0x00AAD8F2 File Offset: 0x00AABAF2
+		// Token: 0x060229F5 RID: 141813 RVA: 0x009DA08E File Offset: 0x009D828E
 		public EffectStatData(string path, double spawnTime)
 		{
 			this.Path = path;
 			this.SpawnTime = spawnTime;
 		}
 
-		// Token: 0x0602E301 RID: 189185 RVA: 0x00AAD914 File Offset: 0x00AABB14
+		// Token: 0x060229F6 RID: 141814 RVA: 0x009DA0B0 File Offset: 0x009D82B0
 		public void OnStop(double loopTime)
 		{
 			this.LoopTime = loopTime;
@@ -50,25 +50,25 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			}
 		}
 
-		// Token: 0x04018C87 RID: 101511
+		// Token: 0x040132C6 RID: 78534
 		public string Path;
 
-		// Token: 0x04018C88 RID: 101512
+		// Token: 0x040132C7 RID: 78535
 		public double SpawnTime;
 
-		// Token: 0x04018C89 RID: 101513
+		// Token: 0x040132C8 RID: 78536
 		public double MaxUpdateTime;
 
-		// Token: 0x04018C8A RID: 101514
+		// Token: 0x040132C9 RID: 78537
 		public double AvgUpdateTime;
 
-		// Token: 0x04018C8B RID: 101515
+		// Token: 0x040132CA RID: 78538
 		public double LoopTime;
 
-		// Token: 0x04018C8C RID: 101516
+		// Token: 0x040132CB RID: 78539
 		public List<double> UpdateTimeArray = new List<double>();
 
-		// Token: 0x04018C8D RID: 101517
+		// Token: 0x040132CC RID: 78540
 		[StaticVariableRuleIgnore]
 		public static readonly string CsvHeader = "Path,SpawnCost(us),AvgUpdateCost(us),MaxUpdateCost(us),LoopTime(ms)\n";
 	}

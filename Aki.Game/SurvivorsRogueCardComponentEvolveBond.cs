@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AC9 RID: 10953
+// Token: 0x02002045 RID: 8261
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueCardComponentEvolveBond : SurvivorsRogueCardComponent
 {
-	// Token: 0x06016CB4 RID: 93364 RVA: 0x005C9C08 File Offset: 0x005C7E08
+	// Token: 0x060146E5 RID: 83685 RVA: 0x005F675C File Offset: 0x005F495C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class SurvivorsRogueCardComponentEvolveBond : SurvivorsRogueCardComponent
 		};
 	}
 
-	// Token: 0x06016CB5 RID: 93365 RVA: 0x005C9C64 File Offset: 0x005C7E64
+	// Token: 0x060146E6 RID: 83686 RVA: 0x005F67B8 File Offset: 0x005F49B8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueCardComponentEvolveBond.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,19 +33,19 @@ public class SurvivorsRogueCardComponentEvolveBond : SurvivorsRogueCardComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CB6 RID: 93366 RVA: 0x005C9CA7 File Offset: 0x005C7EA7
+	// Token: 0x060146E7 RID: 83687 RVA: 0x005F67FB File Offset: 0x005F49FB
 	protected override string OnGetResourceId()
 	{
 		return "UiItem_SurvivorsCardBind";
 	}
 
-	// Token: 0x06016CB7 RID: 93367 RVA: 0x005C9CAE File Offset: 0x005C7EAE
+	// Token: 0x060146E8 RID: 83688 RVA: 0x005F6802 File Offset: 0x005F4A02
 	public override ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Bottom;
 	}
 
-	// Token: 0x06016CB8 RID: 93368 RVA: 0x005C9CB4 File Offset: 0x005C7EB4
+	// Token: 0x060146E9 RID: 83689 RVA: 0x005F6808 File Offset: 0x005F4A08
 	protected override void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -79,9 +79,9 @@ public class SurvivorsRogueCardComponentEvolveBond : SurvivorsRogueCardComponent
 		this.SetActive(false);
 	}
 
-	// Token: 0x0400A955 RID: 43349
+	// Token: 0x0400AD5B RID: 44379
 	private SurvivorsRogueCardAttributeItem AttributeItemCurrent;
 
-	// Token: 0x0400A956 RID: 43350
+	// Token: 0x0400AD5C RID: 44380
 	private SurvivorsRogueCardAttributeItem AttributeItemBind;
 }

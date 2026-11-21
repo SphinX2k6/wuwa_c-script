@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EBB RID: 7867
+	// Token: 0x020005D9 RID: 1497
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.KuroHarmonyGamePackageInfo")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FKuroHarmonyGamePackageInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601DDB9 RID: 122297 RVA: 0x002C2A68 File Offset: 0x002C0C68
+		// Token: 0x06008485 RID: 33925 RVA: 0x000C4A91 File Offset: 0x000C2C91
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroHarmonyGamePackageInfo._ScriptStructPtr != 0) ? FKuroHarmonyGamePackageInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.KuroHarmonyGamePackageInfo", ref FKuroHarmonyGamePackageInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x170077AC RID: 30636
-		// (get) Token: 0x0601DDBA RID: 122298 RVA: 0x002C2A8C File Offset: 0x002C0C8C
-		// (set) Token: 0x0601DDBB RID: 122299 RVA: 0x002C2A9C File Offset: 0x002C0C9C
+		// Token: 0x1700196B RID: 6507
+		// (get) Token: 0x06008486 RID: 33926 RVA: 0x000C4AB5 File Offset: 0x000C2CB5
+		// (set) Token: 0x06008487 RID: 33927 RVA: 0x000C4AC5 File Offset: 0x000C2CC5
 		public unsafe int MessageType
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077AD RID: 30637
-		// (get) Token: 0x0601DDBC RID: 122300 RVA: 0x002C2AAD File Offset: 0x002C0CAD
-		// (set) Token: 0x0601DDBD RID: 122301 RVA: 0x002C2AC1 File Offset: 0x002C0CC1
+		// Token: 0x1700196C RID: 6508
+		// (get) Token: 0x06008488 RID: 33928 RVA: 0x000C4AD6 File Offset: 0x000C2CD6
+		// (set) Token: 0x06008489 RID: 33929 RVA: 0x000C4AEA File Offset: 0x000C2CEA
 		public unsafe string BundleName
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077AE RID: 30638
-		// (get) Token: 0x0601DDBE RID: 122302 RVA: 0x002C2AD6 File Offset: 0x002C0CD6
-		// (set) Token: 0x0601DDBF RID: 122303 RVA: 0x002C2AEA File Offset: 0x002C0CEA
+		// Token: 0x1700196D RID: 6509
+		// (get) Token: 0x0600848A RID: 33930 RVA: 0x000C4AFF File Offset: 0x000C2CFF
+		// (set) Token: 0x0600848B RID: 33931 RVA: 0x000C4B13 File Offset: 0x000C2D13
 		public unsafe string AppVersion
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077AF RID: 30639
-		// (get) Token: 0x0601DDC0 RID: 122304 RVA: 0x002C2AFF File Offset: 0x002C0CFF
-		// (set) Token: 0x0601DDC1 RID: 122305 RVA: 0x002C2B0F File Offset: 0x002C0D0F
+		// Token: 0x1700196E RID: 6510
+		// (get) Token: 0x0600848C RID: 33932 RVA: 0x000C4B28 File Offset: 0x000C2D28
+		// (set) Token: 0x0600848D RID: 33933 RVA: 0x000C4B38 File Offset: 0x000C2D38
 		public unsafe int EngineType
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077B0 RID: 30640
-		// (get) Token: 0x0601DDC2 RID: 122306 RVA: 0x002C2B20 File Offset: 0x002C0D20
-		// (set) Token: 0x0601DDC3 RID: 122307 RVA: 0x002C2B34 File Offset: 0x002C0D34
+		// Token: 0x1700196F RID: 6511
+		// (get) Token: 0x0600848E RID: 33934 RVA: 0x000C4B49 File Offset: 0x000C2D49
+		// (set) Token: 0x0600848F RID: 33935 RVA: 0x000C4B5D File Offset: 0x000C2D5D
 		public unsafe string EngineVersion
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077B1 RID: 30641
-		// (get) Token: 0x0601DDC4 RID: 122308 RVA: 0x002C2B49 File Offset: 0x002C0D49
-		// (set) Token: 0x0601DDC5 RID: 122309 RVA: 0x002C2B59 File Offset: 0x002C0D59
+		// Token: 0x17001970 RID: 6512
+		// (get) Token: 0x06008490 RID: 33936 RVA: 0x000C4B72 File Offset: 0x000C2D72
+		// (set) Token: 0x06008491 RID: 33937 RVA: 0x000C4B82 File Offset: 0x000C2D82
 		public unsafe int GameType
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077B2 RID: 30642
-		// (get) Token: 0x0601DDC6 RID: 122310 RVA: 0x002C2B6A File Offset: 0x002C0D6A
-		// (set) Token: 0x0601DDC7 RID: 122311 RVA: 0x002C2B7A File Offset: 0x002C0D7A
+		// Token: 0x17001971 RID: 6513
+		// (get) Token: 0x06008492 RID: 33938 RVA: 0x000C4B93 File Offset: 0x000C2D93
+		// (set) Token: 0x06008493 RID: 33939 RVA: 0x000C4BA3 File Offset: 0x000C2DA3
 		public unsafe bool bVulkanSupported
 		{
 			get
@@ -123,77 +123,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DDC8 RID: 122312 RVA: 0x002C2B8B File Offset: 0x002C0D8B
+		// Token: 0x06008494 RID: 33940 RVA: 0x000C4BB4 File Offset: 0x000C2DB4
 		public FKuroHarmonyGamePackageInfo()
 		{
 		}
 
-		// Token: 0x0601DDC9 RID: 122313 RVA: 0x002C2B93 File Offset: 0x002C0D93
-		public FKuroHarmonyGamePackageInfo(int MessageType, string BundleName, string AppVersion, int EngineType, string EngineVersion, int GameType, bool bVulkanSupported)
-		{
-			this.MessageType = MessageType;
-			this.BundleName = BundleName;
-			this.AppVersion = AppVersion;
-			this.EngineType = EngineType;
-			this.EngineVersion = EngineVersion;
-			this.GameType = GameType;
-			this.bVulkanSupported = bVulkanSupported;
-		}
-
-		// Token: 0x0601DDCA RID: 122314 RVA: 0x002C2BD0 File Offset: 0x002C0DD0
+		// Token: 0x06008495 RID: 33941 RVA: 0x000C4BBC File Offset: 0x000C2DBC
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroHarmonyGamePackageInfo.StaticStruct();
 		}
 
-		// Token: 0x0601DDCB RID: 122315 RVA: 0x002C2BDC File Offset: 0x002C0DDC
+		// Token: 0x06008496 RID: 33942 RVA: 0x000C4BC8 File Offset: 0x000C2DC8
 		[NullableContext(2)]
 		public FKuroHarmonyGamePackageInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DDCC RID: 122316 RVA: 0x002C2BE6 File Offset: 0x002C0DE6
+		// Token: 0x06008497 RID: 33943 RVA: 0x000C4BD2 File Offset: 0x000C2DD2
 		public FKuroHarmonyGamePackageInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DDCD RID: 122317 RVA: 0x002C2BF1 File Offset: 0x002C0DF1
+		// Token: 0x06008498 RID: 33944 RVA: 0x000C4BDD File Offset: 0x000C2DDD
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroHarmonyGamePackageInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601DDCE RID: 122318 RVA: 0x002C2BFB File Offset: 0x002C0DFB
+		// Token: 0x06008499 RID: 33945 RVA: 0x000C4BE7 File Offset: 0x000C2DE7
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroHarmonyGamePackageInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040102D3 RID: 66259
+		// Token: 0x040039E9 RID: 14825
 		public const string __ObjectPath = "/Script/KuroUtility.KuroHarmonyGamePackageInfo";
 
-		// Token: 0x040102D4 RID: 66260
+		// Token: 0x040039EA RID: 14826
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040102D5 RID: 66261
+		// Token: 0x040039EB RID: 14827
 		internal static int __PropertyOffset_MessageType;
 
-		// Token: 0x040102D6 RID: 66262
+		// Token: 0x040039EC RID: 14828
 		internal static int __PropertyOffset_BundleName;
 
-		// Token: 0x040102D7 RID: 66263
+		// Token: 0x040039ED RID: 14829
 		internal static int __PropertyOffset_AppVersion;
 
-		// Token: 0x040102D8 RID: 66264
+		// Token: 0x040039EE RID: 14830
 		internal static int __PropertyOffset_EngineType;
 
-		// Token: 0x040102D9 RID: 66265
+		// Token: 0x040039EF RID: 14831
 		internal static int __PropertyOffset_EngineVersion;
 
-		// Token: 0x040102DA RID: 66266
+		// Token: 0x040039F0 RID: 14832
 		internal static int __PropertyOffset_GameType;
 
-		// Token: 0x040102DB RID: 66267
+		// Token: 0x040039F1 RID: 14833
 		internal static int __PropertyOffset_bVulkanSupported;
 	}
 }

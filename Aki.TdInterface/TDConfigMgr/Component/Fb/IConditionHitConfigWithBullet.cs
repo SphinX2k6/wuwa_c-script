@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B8B RID: 2955
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C59 RID: 3161
 	public class IConditionHitConfigWithBullet : IConditionHitConfig
 	{
-		// Token: 0x060043F2 RID: 17394 RVA: 0x000ACCEE File Offset: 0x000AAEEE
+		// Token: 0x0600484B RID: 18507 RVA: 0x000B6DB2 File Offset: 0x000B4FB2
 		public static IConditionHitConfigWithBullet Create(IConditionHitConfigWithBullet? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001299 RID: 4761
-		// (get) Token: 0x060043F3 RID: 17395 RVA: 0x000ACD0D File Offset: 0x000AAF0D
+		// Token: 0x17001394 RID: 5012
+		// (get) Token: 0x0600484C RID: 18508 RVA: 0x000B6DD1 File Offset: 0x000B4FD1
 		[Nullable(2)]
 		public override IConditionGroup Conditions
 		{
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700129A RID: 4762
-		// (get) Token: 0x060043F4 RID: 17396 RVA: 0x000ACD41 File Offset: 0x000AAF41
+		// Token: 0x17001395 RID: 5013
+		// (get) Token: 0x0600484D RID: 18509 RVA: 0x000B6E05 File Offset: 0x000B5005
 		public override string State
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700129B RID: 4763
-		// (get) Token: 0x060043F5 RID: 17397 RVA: 0x000ACD4E File Offset: 0x000AAF4E
+		// Token: 0x17001396 RID: 5014
+		// (get) Token: 0x0600484E RID: 18510 RVA: 0x000B6E12 File Offset: 0x000B5012
 		public virtual IHitBulletType HitBullets
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400264E RID: 9806
+		// Token: 0x04002896 RID: 10390
 		private IConditionHitConfigWithBullet Instance;
 
-		// Token: 0x0400264F RID: 9807
+		// Token: 0x04002897 RID: 10391
 		[Nullable(2)]
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04002650 RID: 9808
+		// Token: 0x04002898 RID: 10392
 		private bool _ConditionsInited;
 
-		// Token: 0x04002651 RID: 9809
+		// Token: 0x04002899 RID: 10393
 		private IHitBulletType _HitBulletsCache;
 
-		// Token: 0x04002652 RID: 9810
+		// Token: 0x0400289A RID: 10394
 		private bool _HitBulletsInited;
 	}
 }

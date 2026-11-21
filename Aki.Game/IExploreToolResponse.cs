@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020021DF RID: 8671
+// Token: 0x020016C3 RID: 5827
 public interface IExploreToolResponse
 {
-	// Token: 0x1700155D RID: 5469
-	// (get) Token: 0x06010E13 RID: 69139
-	// (set) Token: 0x06010E14 RID: 69140
+	// Token: 0x17001594 RID: 5524
+	// (get) Token: 0x0600E2A4 RID: 58020
+	// (set) Token: 0x0600E2A5 RID: 58021
 	ERouletteExploreId PhantomSkillId { get; set; }
 
-	// Token: 0x1700155E RID: 5470
-	// (get) Token: 0x06010E15 RID: 69141
-	// (set) Token: 0x06010E16 RID: 69142
+	// Token: 0x17001595 RID: 5525
+	// (get) Token: 0x0600E2A6 RID: 58022
+	// (set) Token: 0x0600E2A7 RID: 58023
 	[Nullable(new byte[]
 	{
 		0,

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Map.MapDefine;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components.SubComponents;
 using Cysharp.Threading.Tasks;
@@ -10,17 +8,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200553D RID: 21821
+	// Token: 0x0200450F RID: 17679
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaNpcMarkItemSelectHandle : MarkItemSelectHandle
 	{
-		// Token: 0x06037B29 RID: 228137 RVA: 0x00D37A37 File Offset: 0x00D35C37
+		// Token: 0x0602C9F9 RID: 182777 RVA: 0x00C85577 File Offset: 0x00C83777
 		public PhantomArenaNpcMarkItemSelectHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B2A RID: 228138 RVA: 0x00D37A40 File Offset: 0x00D35C40
+		// Token: 0x0602C9FA RID: 182778 RVA: 0x00C85580 File Offset: 0x00C83780
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -36,7 +34,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B2B RID: 228139 RVA: 0x00D37A84 File Offset: 0x00D35C84
+		// Token: 0x0602C9FB RID: 182779 RVA: 0x00C855C4 File Offset: 0x00C837C4
 		protected override MarkSelectComponent GetOrCreateComponent()
 		{
 			MapModel instance = MapModel.Instance;
@@ -65,28 +63,27 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037B2C RID: 228140 RVA: 0x00D37B08 File Offset: 0x00D35D08
+		// Token: 0x0602C9FC RID: 182780 RVA: 0x00C85648 File Offset: 0x00C83848
 		protected override void OnApplyModified()
 		{
-			MarkViewLifeCircleComponent viewLifeCircle = this.Context.MarkItemEntity.ViewLifeCircle;
-			if (viewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Select))
+			if (base.VisibleDirty)
 			{
 				MarkSelectComponent orCreateComponent = this.GetOrCreateComponent();
 				if (!this.IsComponentValid(orCreateComponent))
 				{
 					return;
 				}
-				bool active = viewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Select, false);
-				viewLifeCircle.SetChildViewVisibleClean(EMarkViewComponentType.Select);
-				MarkItemComponentHandle<MarkSelectComponent>.SetComponentActive(orCreateComponent, active);
+				bool visible = base.Visible;
+				base.CleanVisibleDirty();
+				MarkItemComponentHandle<MarkSelectComponent>.SetComponentActive(orCreateComponent, visible);
 			}
 		}
 
-		// Token: 0x0401D43E RID: 119870
+		// Token: 0x04017EC4 RID: 97988
 		[Nullable(2)]
 		private MarkSelectComponent NormalComponent;
 
-		// Token: 0x0401D43F RID: 119871
+		// Token: 0x04017EC5 RID: 97989
 		[Nullable(2)]
 		private PhantomArenaNpcMarkSelectComponent PhantomArenaSelectComponent;
 	}

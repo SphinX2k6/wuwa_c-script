@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026F5 RID: 9973
+// Token: 0x02001BE0 RID: 7136
 [NullableContext(1)]
 public interface IRacingBetsBettingViewData
 {
-	// Token: 0x17001AA6 RID: 6822
-	// (get) Token: 0x06014724 RID: 83748
-	// (set) Token: 0x06014725 RID: 83749
+	// Token: 0x17001ADE RID: 6878
+	// (get) Token: 0x06011C06 RID: 72710
+	// (set) Token: 0x06011C07 RID: 72711
 	int SelectDangoId { get; set; }
 
-	// Token: 0x17001AA7 RID: 6823
-	// (get) Token: 0x06014726 RID: 83750
-	// (set) Token: 0x06014727 RID: 83751
+	// Token: 0x17001ADF RID: 6879
+	// (get) Token: 0x06011C08 RID: 72712
+	// (set) Token: 0x06011C09 RID: 72713
 	RacingBetsLegMatchData LegMatchData { get; set; }
 
-	// Token: 0x17001AA8 RID: 6824
-	// (get) Token: 0x06014728 RID: 83752
-	// (set) Token: 0x06014729 RID: 83753
+	// Token: 0x17001AE0 RID: 6880
+	// (get) Token: 0x06011C0A RID: 72714
+	// (set) Token: 0x06011C0B RID: 72715
 	List<TsUiSceneDangoActor> DangoActorList { get; set; }
 }

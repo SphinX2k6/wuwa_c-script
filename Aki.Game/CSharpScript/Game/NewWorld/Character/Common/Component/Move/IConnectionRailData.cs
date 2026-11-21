@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070ED RID: 28909
+	// Token: 0x0200639D RID: 25501
 	[NullableContext(1)]
 	public interface IConnectionRailData
 	{
-		// Token: 0x17009CC6 RID: 40134
-		// (get) Token: 0x06046943 RID: 289091
-		// (set) Token: 0x06046944 RID: 289092
+		// Token: 0x1700754F RID: 30031
+		// (get) Token: 0x0603DD3C RID: 253244
+		// (set) Token: 0x0603DD3D RID: 253245
 		Vector RotatorFixedDirection { get; set; }
 
-		// Token: 0x17009CC7 RID: 40135
-		// (get) Token: 0x06046945 RID: 289093
-		// (set) Token: 0x06046946 RID: 289094
+		// Token: 0x17007550 RID: 30032
+		// (get) Token: 0x0603DD3E RID: 253246
+		// (set) Token: 0x0603DD3F RID: 253247
 		int ConnectionNextRail { get; set; }
 
-		// Token: 0x17009CC8 RID: 40136
-		// (get) Token: 0x06046947 RID: 289095
-		// (set) Token: 0x06046948 RID: 289096
+		// Token: 0x17007551 RID: 30033
+		// (get) Token: 0x0603DD40 RID: 253248
+		// (set) Token: 0x0603DD41 RID: 253249
 		float ConnectionStartDistance { get; set; }
 	}
 }

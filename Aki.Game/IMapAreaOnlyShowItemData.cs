@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AAA RID: 6826
+// Token: 0x02000F69 RID: 3945
 [NullableContext(1)]
 public interface IMapAreaOnlyShowItemData
 {
-	// Token: 0x170010B0 RID: 4272
-	// (get) Token: 0x0600CA34 RID: 51764
-	// (set) Token: 0x0600CA35 RID: 51765
+	// Token: 0x170010D5 RID: 4309
+	// (get) Token: 0x06009E45 RID: 40517
+	// (set) Token: 0x06009E46 RID: 40518
 	string IconPath { get; set; }
 
-	// Token: 0x170010B1 RID: 4273
-	// (get) Token: 0x0600CA36 RID: 51766
-	// (set) Token: 0x0600CA37 RID: 51767
+	// Token: 0x170010D6 RID: 4310
+	// (get) Token: 0x06009E47 RID: 40519
+	// (set) Token: 0x06009E48 RID: 40520
 	int OpenCount { get; set; }
 
-	// Token: 0x170010B2 RID: 4274
-	// (get) Token: 0x0600CA38 RID: 51768
-	// (set) Token: 0x0600CA39 RID: 51769
+	// Token: 0x170010D7 RID: 4311
+	// (get) Token: 0x06009E49 RID: 40521
+	// (set) Token: 0x06009E4A RID: 40522
 	int NewOpenCount { get; set; }
 }

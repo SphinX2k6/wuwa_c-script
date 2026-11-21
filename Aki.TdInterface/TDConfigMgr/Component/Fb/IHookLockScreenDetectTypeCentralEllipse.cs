@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B19 RID: 2841
+	// Token: 0x02000BE7 RID: 3047
 	public class IHookLockScreenDetectTypeCentralEllipse : IHookLockScreenDetectTypeBase
 	{
-		// Token: 0x06004197 RID: 16791 RVA: 0x000A84DA File Offset: 0x000A66DA
-		[NullableContext(1)]
+		// Token: 0x060045ED RID: 17901 RVA: 0x000B2506 File Offset: 0x000B0706
 		public static IHookLockScreenDetectTypeCentralEllipse Create(IHookLockScreenDetectTypeCentralEllipse? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001122 RID: 4386
-		// (get) Token: 0x06004198 RID: 16792 RVA: 0x000A84F9 File Offset: 0x000A66F9
+		// Token: 0x1700121A RID: 4634
+		// (get) Token: 0x060045EE RID: 17902 RVA: 0x000B2525 File Offset: 0x000B0725
 		public override EHookLockScreenDetectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024F8 RID: 9464
+		// Token: 0x0400273C RID: 10044
 		private IHookLockScreenDetectTypeCentralEllipse Instance;
 	}
 }

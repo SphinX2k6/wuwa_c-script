@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000266 RID: 614
+	// Token: 0x0200026D RID: 621
 	public class IGrayBoxConfig
 	{
-		// Token: 0x040009F1 RID: 2545
+		// Token: 0x04000A3F RID: 2623
 		[Nullable(1)]
 		public List<IGrayBoxItemConfig> Items;
 	}

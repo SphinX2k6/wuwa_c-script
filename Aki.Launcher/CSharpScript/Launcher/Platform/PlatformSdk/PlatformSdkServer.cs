@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000193 RID: 403
+	// Token: 0x02000197 RID: 407
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlatformSdkServer : Singleton
 	{
-		// Token: 0x06000AD6 RID: 2774 RVA: 0x000454B0 File Offset: 0x000436B0
+		// Token: 0x06000B0A RID: 2826 RVA: 0x000478C4 File Offset: 0x00045AC4
 		public void SetLanguage(string lang)
 		{
 			this.Language = lang;
 		}
 
-		// Token: 0x17000115 RID: 277
-		// (get) Token: 0x06000AD7 RID: 2775 RVA: 0x000454B9 File Offset: 0x000436B9
+		// Token: 0x1700011B RID: 283
+		// (get) Token: 0x06000B0B RID: 2827 RVA: 0x000478CD File Offset: 0x00045ACD
 		public bool IsConnected
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x17000116 RID: 278
-		// (get) Token: 0x06000AD8 RID: 2776 RVA: 0x000454C4 File Offset: 0x000436C4
+		// Token: 0x1700011C RID: 284
+		// (get) Token: 0x06000B0C RID: 2828 RVA: 0x000478D8 File Offset: 0x00045AD8
 		public bool? IsReportEnable
 		{
 			get
@@ -48,8 +48,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x17000117 RID: 279
-		// (get) Token: 0x06000AD9 RID: 2777 RVA: 0x00045504 File Offset: 0x00043704
+		// Token: 0x1700011D RID: 285
+		// (get) Token: 0x06000B0D RID: 2829 RVA: 0x00047918 File Offset: 0x00045B18
 		public bool? IsCustomerServiceEnable
 		{
 			get
@@ -68,8 +68,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x17000118 RID: 280
-		// (get) Token: 0x06000ADA RID: 2778 RVA: 0x00045544 File Offset: 0x00043744
+		// Token: 0x1700011E RID: 286
+		// (get) Token: 0x06000B0E RID: 2830 RVA: 0x00047958 File Offset: 0x00045B58
 		public bool? IsPsnLoginEnable
 		{
 			get
@@ -100,8 +100,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x17000119 RID: 281
-		// (get) Token: 0x06000ADB RID: 2779 RVA: 0x000455A0 File Offset: 0x000437A0
+		// Token: 0x1700011F RID: 287
+		// (get) Token: 0x06000B0F RID: 2831 RVA: 0x000479B4 File Offset: 0x00045BB4
 		public bool? IsPsnEmailLoginEnable
 		{
 			get
@@ -132,7 +132,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000ADC RID: 2780 RVA: 0x000455FC File Offset: 0x000437FC
+		// Token: 0x06000B10 RID: 2832 RVA: 0x00047A10 File Offset: 0x00045C10
 		[NullableContext(2)]
 		public string GetUserCenterUrl()
 		{
@@ -149,12 +149,12 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return clientUrl.accCenterUrl;
 		}
 
-		// Token: 0x06000ADD RID: 2781 RVA: 0x0004561A File Offset: 0x0004381A
+		// Token: 0x06000B11 RID: 2833 RVA: 0x00047A2E File Offset: 0x00045C2E
 		public void Initialize()
 		{
 		}
 
-		// Token: 0x06000ADE RID: 2782 RVA: 0x0004561C File Offset: 0x0004381C
+		// Token: 0x06000B12 RID: 2834 RVA: 0x00047A30 File Offset: 0x00045C30
 		public void InitCommonParam(string commonParam)
 		{
 			this.CommonParam = commonParam;
@@ -164,7 +164,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06000ADF RID: 2783 RVA: 0x00045658 File Offset: 0x00043858
+		// Token: 0x06000B13 RID: 2835 RVA: 0x00047A6C File Offset: 0x00045C6C
 		public TMap<string, string> GenerateCommonHeader()
 		{
 			return new TMap<string, string>
@@ -184,7 +184,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000AE0 RID: 2784 RVA: 0x00045698 File Offset: 0x00043898
+		// Token: 0x06000B14 RID: 2836 RVA: 0x00047AAC File Offset: 0x00045CAC
 		public TMap<string, string> GeneratePayHeader(string productId, string version, string sdkVersion)
 		{
 			return new TMap<string, string>
@@ -216,7 +216,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			};
 		}
 
-		// Token: 0x06000AE1 RID: 2785 RVA: 0x00045704 File Offset: 0x00043904
+		// Token: 0x06000B15 RID: 2837 RVA: 0x00047B18 File Offset: 0x00045D18
 		public void SwitchUrl()
 		{
 			this.IsUseSpareUrl = !this.IsUseSpareUrl;
@@ -226,19 +226,19 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06000AE2 RID: 2786 RVA: 0x0004574D File Offset: 0x0004394D
+		// Token: 0x06000B16 RID: 2838 RVA: 0x00047B61 File Offset: 0x00045D61
 		private bool CheckHttpSuccess(bool success, int httpCode)
 		{
 			return success && httpCode == 200;
 		}
 
-		// Token: 0x06000AE3 RID: 2787 RVA: 0x0004575C File Offset: 0x0004395C
+		// Token: 0x06000B17 RID: 2839 RVA: 0x00047B70 File Offset: 0x00045D70
 		private bool CheckHttpHasResult(string data)
 		{
 			return data.Length != 0 && !(data == "{}") && !(data == "[]");
 		}
 
-		// Token: 0x06000AE4 RID: 2788 RVA: 0x00045784 File Offset: 0x00043984
+		// Token: 0x06000B18 RID: 2840 RVA: 0x00047B98 File Offset: 0x00045D98
 		public unsafe void Connect(string param, TSDKConnectCallback callback)
 		{
 			PlatformSdkServer.<>c__DisplayClass25_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass25_0();
@@ -257,7 +257,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text, item, text2, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<Connect>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AE5 RID: 2789 RVA: 0x0004585C File Offset: 0x00043A5C
+		// Token: 0x06000B19 RID: 2841 RVA: 0x00047C70 File Offset: 0x00045E70
 		private unsafe void LoginWithSpecifyUrl(string specifyUrl, string param, TSDKLoginCallback callback)
 		{
 			PlatformSdkServer.<>c__DisplayClass26_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass26_0();
@@ -287,22 +287,23 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			PlatformReportLogin eventData = new PlatformReportLogin();
 			PlatformSdkManagerNew.Instance.GetPlatformSdk().ReportToThirdParty(eventData);
+			HotPatchLogReport.Instance.ReportStartupTiming(EStartupTimingStep.SdkLoginStart, null);
 			UKuroHttp.Post(text, item, text2, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<LoginWithSpecifyUrl>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AE6 RID: 2790 RVA: 0x0004599D File Offset: 0x00043B9D
+		// Token: 0x06000B1A RID: 2842 RVA: 0x00047DBD File Offset: 0x00045FBD
 		public void Login(string param, TSDKLoginCallback callback)
 		{
 			this.LoginWithSpecifyUrl("/v2/login/third/psn.lg", param, callback);
 		}
 
-		// Token: 0x06000AE7 RID: 2791 RVA: 0x000459AC File Offset: 0x00043BAC
+		// Token: 0x06000B1B RID: 2843 RVA: 0x00047DCC File Offset: 0x00045FCC
 		public void BindAccountThenLogin(string param, TSDKLoginCallback callback)
 		{
 			this.LoginWithSpecifyUrl("/v2/login/third/psnBind.lg", param, callback);
 		}
 
-		// Token: 0x06000AE8 RID: 2792 RVA: 0x000459BC File Offset: 0x00043BBC
+		// Token: 0x06000B1C RID: 2844 RVA: 0x00047DDC File Offset: 0x00045FDC
 		public unsafe void GetAccessToken(string loginCode, TSDKGetAccessTokenCallback callback)
 		{
 			PlatformSdkServer.<>c__DisplayClass29_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass29_0();
@@ -332,7 +333,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text2, item, text, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<GetAccessToken>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AE9 RID: 2793 RVA: 0x00045B08 File Offset: 0x00043D08
+		// Token: 0x06000B1D RID: 2845 RVA: 0x00047F28 File Offset: 0x00046128
 		public unsafe void GetSdkRelation(string param, TSDKQuerySdkBlockCallBack callBack)
 		{
 			PlatformSdkServer.<>c__DisplayClass30_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass30_0();
@@ -351,7 +352,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text2, item, text, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<GetSdkRelation>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AEA RID: 2794 RVA: 0x00045BE0 File Offset: 0x00043DE0
+		// Token: 0x06000B1E RID: 2846 RVA: 0x00048000 File Offset: 0x00046200
 		public unsafe void RenewAccessToken(string access_token, TSDKRenewAccessTokenCallback callback)
 		{
 			PlatformSdkServer.<>c__DisplayClass31_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass31_0();
@@ -372,7 +373,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text2, item, text, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<RenewAccessToken>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AEB RID: 2795 RVA: 0x00045CD4 File Offset: 0x00043ED4
+		// Token: 0x06000B1F RID: 2847 RVA: 0x000480F4 File Offset: 0x000462F4
 		public unsafe void RequestEmailAddressCode(string param, TSdkRequestEmailCodeCallback callBack)
 		{
 			PlatformSdkServer.<>c__DisplayClass32_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass32_0();
@@ -393,7 +394,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text2, item, text, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<RequestEmailAddressCode>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AEC RID: 2796 RVA: 0x00045DC4 File Offset: 0x00043FC4
+		// Token: 0x06000B20 RID: 2848 RVA: 0x000481E4 File Offset: 0x000463E4
 		public unsafe void QueryStoreProducts(TMap<string, string> payHeader, TSDKQueryGoodsCallback callback, params object[] keyValPairs)
 		{
 			PlatformSdkServer.<>c__DisplayClass33_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass33_0();
@@ -434,7 +435,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text, payHeader, text4, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<QueryStoreProducts>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AED RID: 2797 RVA: 0x00045F74 File Offset: 0x00044174
+		// Token: 0x06000B21 RID: 2849 RVA: 0x00048394 File Offset: 0x00046594
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -455,7 +456,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return <QueryStoreProductsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000AEE RID: 2798 RVA: 0x00045FC8 File Offset: 0x000441C8
+		// Token: 0x06000B22 RID: 2850 RVA: 0x000483E8 File Offset: 0x000465E8
 		public unsafe void RequestCheckoutProduct(ECheckoutReason reason, int env, TSdkCheckoutProductCallback callback, TMap<string, string> payHeader, params object[] keyValPairs)
 		{
 			PlatformSdkServer.<>c__DisplayClass35_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass35_0();
@@ -502,7 +503,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text, payHeader, text4, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<RequestCheckoutProduct>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x06000AEF RID: 2799 RVA: 0x000461D0 File Offset: 0x000443D0
+		// Token: 0x06000B23 RID: 2851 RVA: 0x000485F0 File Offset: 0x000467F0
 		private string GetReportScene(ECheckoutReason scene)
 		{
 			string result = "";
@@ -521,7 +522,7 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			return result;
 		}
 
-		// Token: 0x06000AF0 RID: 2800 RVA: 0x00046208 File Offset: 0x00044408
+		// Token: 0x06000B24 RID: 2852 RVA: 0x00048628 File Offset: 0x00046828
 		public unsafe void RequestReportData(string accessToken, string param, TSdkReportCallBack callBack)
 		{
 			PlatformSdkServer.<>c__DisplayClass37_0 CS$<>8__locals1 = new PlatformSdkServer.<>c__DisplayClass37_0();
@@ -561,8 +562,8 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			UKuroHttp.Post(text5, item, text4, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<RequestReportData>g__ResponseCallBack|0)), 10f);
 		}
 
-		// Token: 0x1700011A RID: 282
-		// (get) Token: 0x06000AF1 RID: 2801 RVA: 0x000463F4 File Offset: 0x000445F4
+		// Token: 0x17000120 RID: 288
+		// (get) Token: 0x06000B25 RID: 2853 RVA: 0x00048814 File Offset: 0x00046A14
 		public static PlatformSdkServer Instance
 		{
 			get
@@ -576,12 +577,12 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			}
 		}
 
-		// Token: 0x06000AF2 RID: 2802 RVA: 0x00046417 File Offset: 0x00044617
+		// Token: 0x06000B26 RID: 2854 RVA: 0x00048837 File Offset: 0x00046A37
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000AF3 RID: 2803 RVA: 0x00046419 File Offset: 0x00044619
+		// Token: 0x06000B27 RID: 2855 RVA: 0x00048839 File Offset: 0x00046A39
 		public static void ResetStaticDefaultValue()
 		{
 			PlatformSdkServer instance = PlatformSdkServer._instance;
@@ -592,32 +593,32 @@ namespace CSharpScript.Launcher.Platform.PlatformSdk
 			PlatformSdkServer._instance = null;
 		}
 
-		// Token: 0x06000AF4 RID: 2804 RVA: 0x00046432 File Offset: 0x00044632
+		// Token: 0x06000B28 RID: 2856 RVA: 0x00048852 File Offset: 0x00046A52
 		static PlatformSdkServer()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlatformSdkServer.CreateStaticDefaultValue), new Action(PlatformSdkServer.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040006D0 RID: 1744
+		// Token: 0x0400070B RID: 1803
 		private const int HttpTimeout = 10;
 
-		// Token: 0x040006D1 RID: 1745
+		// Token: 0x0400070C RID: 1804
 		private bool IsUseSpareUrl;
 
-		// Token: 0x040006D2 RID: 1746
+		// Token: 0x0400070D RID: 1805
 		private string Language = "en";
 
-		// Token: 0x040006D3 RID: 1747
+		// Token: 0x0400070E RID: 1806
 		private string CommonParam = "";
 
-		// Token: 0x040006D4 RID: 1748
+		// Token: 0x0400070F RID: 1807
 		[Nullable(2)]
 		private IConnectResponseData ConnectData;
 
-		// Token: 0x040006D5 RID: 1749
+		// Token: 0x04000710 RID: 1808
 		private bool IsLogining;
 
-		// Token: 0x040006D6 RID: 1750
+		// Token: 0x04000711 RID: 1809
 		[Nullable(2)]
 		private static PlatformSdkServer _instance;
 	}

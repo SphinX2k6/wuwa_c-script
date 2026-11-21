@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000A14 RID: 2580
+	// Token: 0x02000A03 RID: 2563
 	public sealed class MoonPhaseSelect : IMessage<MoonPhaseSelect>, IMessage, IEquatable<MoonPhaseSelect>, IDeepCloneable<MoonPhaseSelect>, IBufferMessage
 	{
-		// Token: 0x0600E1A4 RID: 57764 RVA: 0x00210B21 File Offset: 0x0020ED21
+		// Token: 0x0600E08A RID: 57482 RVA: 0x0020E92D File Offset: 0x0020CB2D
 		[NullableContext(1)]
 		public static MoonPhaseSelect Create()
 		{
 			return new MoonPhaseSelect();
 		}
 
-		// Token: 0x17002DBD RID: 11709
-		// (get) Token: 0x0600E1A5 RID: 57765 RVA: 0x00210B28 File Offset: 0x0020ED28
+		// Token: 0x17002D7F RID: 11647
+		// (get) Token: 0x0600E08B RID: 57483 RVA: 0x0020E934 File Offset: 0x0020CB34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<MoonPhaseSelect> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DBE RID: 11710
-		// (get) Token: 0x0600E1A6 RID: 57766 RVA: 0x00210B2F File Offset: 0x0020ED2F
+		// Token: 0x17002D80 RID: 11648
+		// (get) Token: 0x0600E08C RID: 57484 RVA: 0x0020E93B File Offset: 0x0020CB3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DBF RID: 11711
-		// (get) Token: 0x0600E1A7 RID: 57767 RVA: 0x00210B32 File Offset: 0x0020ED32
+		// Token: 0x17002D81 RID: 11649
+		// (get) Token: 0x0600E08D RID: 57485 RVA: 0x0020E93E File Offset: 0x0020CB3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E1A8 RID: 57768 RVA: 0x00210B39 File Offset: 0x0020ED39
+		// Token: 0x0600E08E RID: 57486 RVA: 0x0020E945 File Offset: 0x0020CB45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoonPhaseSelect()
 		{
 		}
 
-		// Token: 0x0600E1A9 RID: 57769 RVA: 0x00210B41 File Offset: 0x0020ED41
+		// Token: 0x0600E08F RID: 57487 RVA: 0x0020E94D File Offset: 0x0020CB4D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoonPhaseSelect(MoonPhaseSelect other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600E1AA RID: 57770 RVA: 0x00210B7E File Offset: 0x0020ED7E
+		// Token: 0x0600E090 RID: 57488 RVA: 0x0020E98A File Offset: 0x0020CB8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoonPhaseSelect Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new MoonPhaseSelect(this);
 		}
 
-		// Token: 0x17002DC0 RID: 11712
-		// (get) Token: 0x0600E1AB RID: 57771 RVA: 0x00210B86 File Offset: 0x0020ED86
-		// (set) Token: 0x0600E1AC RID: 57772 RVA: 0x00210B8E File Offset: 0x0020ED8E
+		// Token: 0x17002D82 RID: 11650
+		// (get) Token: 0x0600E091 RID: 57489 RVA: 0x0020E992 File Offset: 0x0020CB92
+		// (set) Token: 0x0600E092 RID: 57490 RVA: 0x0020E99A File Offset: 0x0020CB9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MoonPhaseId
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DC1 RID: 11713
-		// (get) Token: 0x0600E1AD RID: 57773 RVA: 0x00210B97 File Offset: 0x0020ED97
-		// (set) Token: 0x0600E1AE RID: 57774 RVA: 0x00210B9F File Offset: 0x0020ED9F
+		// Token: 0x17002D83 RID: 11651
+		// (get) Token: 0x0600E093 RID: 57491 RVA: 0x0020E9A3 File Offset: 0x0020CBA3
+		// (set) Token: 0x0600E094 RID: 57492 RVA: 0x0020E9AB File Offset: 0x0020CBAB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Label1
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002DC2 RID: 11714
-		// (get) Token: 0x0600E1AF RID: 57775 RVA: 0x00210BA8 File Offset: 0x0020EDA8
-		// (set) Token: 0x0600E1B0 RID: 57776 RVA: 0x00210BB0 File Offset: 0x0020EDB0
+		// Token: 0x17002D84 RID: 11652
+		// (get) Token: 0x0600E095 RID: 57493 RVA: 0x0020E9B4 File Offset: 0x0020CBB4
+		// (set) Token: 0x0600E096 RID: 57494 RVA: 0x0020E9BC File Offset: 0x0020CBBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Label2
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E1B1 RID: 57777 RVA: 0x00210BB9 File Offset: 0x0020EDB9
+		// Token: 0x0600E097 RID: 57495 RVA: 0x0020E9C5 File Offset: 0x0020CBC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MoonPhaseSelect);
 		}
 
-		// Token: 0x0600E1B2 RID: 57778 RVA: 0x00210BC8 File Offset: 0x0020EDC8
+		// Token: 0x0600E098 RID: 57496 RVA: 0x0020E9D4 File Offset: 0x0020CBD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MoonPhaseSelect other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.MoonPhaseId == other.MoonPhaseId && this.Label1 == other.Label1 && this.Label2 == other.Label2 && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600E1B3 RID: 57779 RVA: 0x00210C24 File Offset: 0x0020EE24
+		// Token: 0x0600E099 RID: 57497 RVA: 0x0020EA30 File Offset: 0x0020CC30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E1B4 RID: 57780 RVA: 0x00210C95 File Offset: 0x0020EE95
+		// Token: 0x0600E09A RID: 57498 RVA: 0x0020EAA1 File Offset: 0x0020CCA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600E1B5 RID: 57781 RVA: 0x00210CA2 File Offset: 0x0020EEA2
+		// Token: 0x0600E09B RID: 57499 RVA: 0x0020EAAE File Offset: 0x0020CCAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600E1B6 RID: 57782 RVA: 0x00210CAC File Offset: 0x0020EEAC
+		// Token: 0x0600E09C RID: 57500 RVA: 0x0020EAB8 File Offset: 0x0020CCB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600E1B7 RID: 57783 RVA: 0x00210D20 File Offset: 0x0020EF20
+		// Token: 0x0600E09D RID: 57501 RVA: 0x0020EB2C File Offset: 0x0020CD2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600E1B8 RID: 57784 RVA: 0x00210D90 File Offset: 0x0020EF90
+		// Token: 0x0600E09E RID: 57502 RVA: 0x0020EB9C File Offset: 0x0020CD9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MoonPhaseSelect other)
@@ -262,7 +262,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600E1B9 RID: 57785 RVA: 0x00210DF4 File Offset: 0x0020EFF4
+		// Token: 0x0600E09F RID: 57503 RVA: 0x0020EC00 File Offset: 0x0020CE00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600E1BA RID: 57786 RVA: 0x00210E00 File Offset: 0x0020F000
+		// Token: 0x0600E0A0 RID: 57504 RVA: 0x0020EC0C File Offset: 0x0020CE0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -307,28 +307,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005CB1 RID: 23729
+		// Token: 0x04005CBA RID: 23738
 		private static readonly MessageParser<MoonPhaseSelect> _parser = new MessageParser<MoonPhaseSelect>(() => new MoonPhaseSelect());
 
-		// Token: 0x04005CB2 RID: 23730
+		// Token: 0x04005CBB RID: 23739
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005CB3 RID: 23731
+		// Token: 0x04005CBC RID: 23740
 		public const int MoonPhaseIdFieldNumber = 1;
 
-		// Token: 0x04005CB4 RID: 23732
+		// Token: 0x04005CBD RID: 23741
 		private int moonPhaseId_;
 
-		// Token: 0x04005CB5 RID: 23733
+		// Token: 0x04005CBE RID: 23742
 		public const int Label1FieldNumber = 2;
 
-		// Token: 0x04005CB6 RID: 23734
+		// Token: 0x04005CBF RID: 23743
 		private int label1_;
 
-		// Token: 0x04005CB7 RID: 23735
+		// Token: 0x04005CC0 RID: 23744
 		public const int Label2FieldNumber = 3;
 
-		// Token: 0x04005CB8 RID: 23736
+		// Token: 0x04005CC1 RID: 23745
 		private int label2_;
 	}
 }

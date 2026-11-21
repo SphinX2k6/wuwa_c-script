@@ -8,13 +8,13 @@ using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Plot;
 using UnrealEngine;
 
-// Token: 0x02003517 RID: 13591
+// Token: 0x02002A8C RID: 10892
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class EnvironmentalPerceptionController : ControllerBase
 {
-	// Token: 0x0601DCB2 RID: 122034 RVA: 0x00859ADD File Offset: 0x00857CDD
+	// Token: 0x0601B9CC RID: 113100 RVA: 0x00882085 File Offset: 0x00880285
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -22,7 +22,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DCB3 RID: 122035 RVA: 0x00859B18 File Offset: 0x00857D18
+	// Token: 0x0601B9CD RID: 113101 RVA: 0x008820C0 File Offset: 0x008802C0
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -35,13 +35,13 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DCB4 RID: 122036 RVA: 0x00859B7E File Offset: 0x00857D7E
+	// Token: 0x0601B9CE RID: 113102 RVA: 0x00882126 File Offset: 0x00880326
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x0601DCB5 RID: 122037 RVA: 0x00859B84 File Offset: 0x00857D84
+	// Token: 0x0601B9CF RID: 113103 RVA: 0x0088212C File Offset: 0x0088032C
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (this.TagComp != null)
@@ -58,13 +58,13 @@ public class EnvironmentalPerceptionController : ControllerBase
 		tagComp.AddTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"], new BaseTagComponent.TTagSwitchedCallback(this.OnPlayerEnterFight), null);
 	}
 
-	// Token: 0x0601DCB6 RID: 122038 RVA: 0x00859C17 File Offset: 0x00857E17
+	// Token: 0x0601B9D0 RID: 113104 RVA: 0x008821BF File Offset: 0x008803BF
 	private void OnPlayerEnterFight(int tagId, bool tagExist)
 	{
 		this.IsPlayerInFight = tagExist;
 	}
 
-	// Token: 0x0601DCB7 RID: 122039 RVA: 0x00859C20 File Offset: 0x00857E20
+	// Token: 0x0601B9D1 RID: 113105 RVA: 0x008821C8 File Offset: 0x008803C8
 	protected override void OnTick(float deltaTime)
 	{
 		this.TickRemain -= (int)(deltaTime * CharacterModel.Instance.InverseSelfCenteredTimeDilation);
@@ -95,7 +95,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DCB8 RID: 122040 RVA: 0x00859CEC File Offset: 0x00857EEC
+	// Token: 0x0601B9D2 RID: 113106 RVA: 0x00882294 File Offset: 0x00880494
 	private void CheckIsPlayerInMapPolygon()
 	{
 		if (PlotModel.Instance.IsInPlot)
@@ -120,7 +120,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		UnopenedAreaController.Instance.OnExitUnopenedArea();
 	}
 
-	// Token: 0x0601DCB9 RID: 122041 RVA: 0x00859D44 File Offset: 0x00857F44
+	// Token: 0x0601B9D3 RID: 113107 RVA: 0x008822EC File Offset: 0x008804EC
 	public void InitializeEnvironment()
 	{
 		ushort gridWidth = 3000;
@@ -135,13 +135,13 @@ public class EnvironmentalPerceptionController : ControllerBase
 		UKuroPerceptionInterface.InitializeEnvironment(gridWidth, gridHeight, tmap, true, true);
 	}
 
-	// Token: 0x0601DCBA RID: 122042 RVA: 0x00859DBA File Offset: 0x00857FBA
+	// Token: 0x0601B9D4 RID: 113108 RVA: 0x00882362 File Offset: 0x00880562
 	private static PlayerPerceptionEvent PerceptionEventCreator()
 	{
 		return new PlayerPerceptionEvent();
 	}
 
-	// Token: 0x0601DCBB RID: 122043 RVA: 0x00859DC4 File Offset: 0x00857FC4
+	// Token: 0x0601B9D5 RID: 113109 RVA: 0x0088236C File Offset: 0x0088056C
 	public PlayerPerceptionEvent CreatePlayerPerceptionEvent()
 	{
 		PlayerPerceptionEvent playerPerceptionEvent = this.PerceptionEventPool.Get();
@@ -152,7 +152,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return playerPerceptionEvent;
 	}
 
-	// Token: 0x0601DCBC RID: 122044 RVA: 0x00859DED File Offset: 0x00857FED
+	// Token: 0x0601B9D6 RID: 113110 RVA: 0x00882395 File Offset: 0x00880595
 	[NullableContext(2)]
 	public void DestroyPlayerPerceptionEvent(PlayerPerceptionEvent @event)
 	{
@@ -164,13 +164,13 @@ public class EnvironmentalPerceptionController : ControllerBase
 		this.PerceptionEventPool.Put(@event);
 	}
 
-	// Token: 0x0601DCBD RID: 122045 RVA: 0x00859E06 File Offset: 0x00858006
+	// Token: 0x0601B9D7 RID: 113111 RVA: 0x008823AE File Offset: 0x008805AE
 	private static PerceptionRange PerceptionRangeCreator()
 	{
 		return new PerceptionRange();
 	}
 
-	// Token: 0x0601DCBE RID: 122046 RVA: 0x00859E10 File Offset: 0x00858010
+	// Token: 0x0601B9D8 RID: 113112 RVA: 0x008823B8 File Offset: 0x008805B8
 	public PerceptionRange CreatePerceptionRange()
 	{
 		PerceptionRange perceptionRange = this.PerceptionRangePool.Get();
@@ -181,7 +181,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return perceptionRange;
 	}
 
-	// Token: 0x0601DCBF RID: 122047 RVA: 0x00859E39 File Offset: 0x00858039
+	// Token: 0x0601B9D9 RID: 113113 RVA: 0x008823E1 File Offset: 0x008805E1
 	[NullableContext(2)]
 	public void DestroyPerceptionRange(PerceptionRange range)
 	{
@@ -193,8 +193,8 @@ public class EnvironmentalPerceptionController : ControllerBase
 		this.PerceptionRangePool.Put(range);
 	}
 
-	// Token: 0x1700290E RID: 10510
-	// (get) Token: 0x0601DCC0 RID: 122048 RVA: 0x00859E52 File Offset: 0x00858052
+	// Token: 0x17002CA7 RID: 11431
+	// (get) Token: 0x0601B9DA RID: 113114 RVA: 0x008823FA File Offset: 0x008805FA
 	public static EnvironmentalPerceptionController Instance
 	{
 		get
@@ -203,7 +203,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601DCC1 RID: 122049 RVA: 0x00859E59 File Offset: 0x00858059
+	// Token: 0x0601B9DB RID: 113115 RVA: 0x00882401 File Offset: 0x00880601
 	public static EnvironmentalPerceptionController GetOrCreateInstance()
 	{
 		if (EnvironmentalPerceptionController._Instance == null)
@@ -213,7 +213,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return EnvironmentalPerceptionController._Instance;
 	}
 
-	// Token: 0x0601DCC2 RID: 122050 RVA: 0x00859E6D File Offset: 0x0085806D
+	// Token: 0x0601B9DC RID: 113116 RVA: 0x00882415 File Offset: 0x00880615
 	public static bool CreateInstance()
 	{
 		if (EnvironmentalPerceptionController._Instance != null)
@@ -224,24 +224,24 @@ public class EnvironmentalPerceptionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601DCC3 RID: 122051 RVA: 0x00859E83 File Offset: 0x00858083
+	// Token: 0x0601B9DD RID: 113117 RVA: 0x0088242B File Offset: 0x0088062B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DCC4 RID: 122052 RVA: 0x00859E85 File Offset: 0x00858085
+	// Token: 0x0601B9DE RID: 113118 RVA: 0x0088242D File Offset: 0x0088062D
 	public static void ResetStaticDefaultValue()
 	{
 		EnvironmentalPerceptionController._Instance = null;
 	}
 
-	// Token: 0x0601DCC5 RID: 122053 RVA: 0x00859E8D File Offset: 0x0085808D
+	// Token: 0x0601B9DF RID: 113119 RVA: 0x00882435 File Offset: 0x00880635
 	static EnvironmentalPerceptionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EnvironmentalPerceptionController.CreateStaticDefaultValue), new Action(EnvironmentalPerceptionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DCC6 RID: 122054 RVA: 0x00859EAC File Offset: 0x008580AC
+	// Token: 0x0601B9E0 RID: 113120 RVA: 0x00882454 File Offset: 0x00880654
 	public EnvironmentalPerceptionController()
 	{
 		int capacity = 32;
@@ -261,54 +261,54 @@ public class EnvironmentalPerceptionController : ControllerBase
 		base..ctor();
 	}
 
-	// Token: 0x0400E9DB RID: 59867
+	// Token: 0x0400EE96 RID: 61078
 	private const int TICK_INTERNVAL = 8000;
 
-	// Token: 0x0400E9DC RID: 59868
+	// Token: 0x0400EE97 RID: 61079
 	private const int TICK_DAMPING_RATIO = 80;
 
-	// Token: 0x0400E9DD RID: 59869
+	// Token: 0x0400EE98 RID: 61080
 	private const int TICK_DAMPING_RATIO_INFIGHT = 16;
 
-	// Token: 0x0400E9DE RID: 59870
+	// Token: 0x0400EE99 RID: 61081
 	private const int FORCE_UPDATE_SPEED = 850;
 
-	// Token: 0x0400E9DF RID: 59871
+	// Token: 0x0400EE9A RID: 61082
 	private const int PERCEPTION_EVENT_POOL_CAPACITY = 32;
 
-	// Token: 0x0400E9E0 RID: 59872
+	// Token: 0x0400EE9B RID: 61083
 	private int TickRemain = 8000;
 
-	// Token: 0x0400E9E1 RID: 59873
+	// Token: 0x0400EE9C RID: 61084
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400E9E2 RID: 59874
+	// Token: 0x0400EE9D RID: 61085
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400E9E3 RID: 59875
+	// Token: 0x0400EE9E RID: 61086
 	[Nullable(2)]
 	private Stat CheckIsPlayerInMapPolygonStat;
 
-	// Token: 0x0400E9E4 RID: 59876
+	// Token: 0x0400EE9F RID: 61087
 	private bool IsPlayerInFight;
 
-	// Token: 0x0400E9E5 RID: 59877
+	// Token: 0x0400EEA0 RID: 61088
 	private readonly Pool<PlayerPerceptionEvent> PerceptionEventPool;
 
-	// Token: 0x0400E9E6 RID: 59878
+	// Token: 0x0400EEA1 RID: 61089
 	private readonly Pool<PerceptionRange> PerceptionRangePool;
 
-	// Token: 0x0400E9E7 RID: 59879
+	// Token: 0x0400EEA2 RID: 61090
 	[Nullable(2)]
 	private static EnvironmentalPerceptionController _Instance;
 
-	// Token: 0x020099B9 RID: 39353
+	// Token: 0x02008BD3 RID: 35795
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030E0F RID: 200207
+		// Token: 0x0402C492 RID: 181394
 		[Nullable(new byte[]
 		{
 			0,
@@ -316,7 +316,7 @@ public class EnvironmentalPerceptionController : ControllerBase
 		})]
 		public static Func<PlayerPerceptionEvent> <0>__PerceptionEventCreator;
 
-		// Token: 0x04030E10 RID: 200208
+		// Token: 0x0402C493 RID: 181395
 		[Nullable(new byte[]
 		{
 			0,

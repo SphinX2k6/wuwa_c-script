@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A6D RID: 10861
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D61 RID: 11617
 	public class INpcLookAtPosition : INpcLookAtTypeBase
 	{
-		// Token: 0x0600EED7 RID: 61143 RVA: 0x0022BF56 File Offset: 0x0022A156
+		// Token: 0x0600FD8D RID: 64909 RVA: 0x00249C62 File Offset: 0x00247E62
 		public static INpcLookAtPosition Create(INpcLookAtPosition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BBF RID: 19391
-		// (get) Token: 0x0600EED8 RID: 61144 RVA: 0x0022BF75 File Offset: 0x0022A175
+		// Token: 0x17004F79 RID: 20345
+		// (get) Token: 0x0600FD8E RID: 64910 RVA: 0x00249C81 File Offset: 0x00247E81
 		public override ECommonTargetType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BC0 RID: 19392
-		// (get) Token: 0x0600EED9 RID: 61145 RVA: 0x0022BF82 File Offset: 0x0022A182
+		// Token: 0x17004F7A RID: 20346
+		// (get) Token: 0x0600FD8F RID: 64911 RVA: 0x00249C8E File Offset: 0x00247E8E
 		public virtual VectorInfo Position
 		{
 			get
@@ -50,14 +48,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008363 RID: 33635
+		// Token: 0x04008A67 RID: 35431
 		private INpcLookAtPosition Instance;
 
-		// Token: 0x04008364 RID: 33636
+		// Token: 0x04008A68 RID: 35432
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04008365 RID: 33637
+		// Token: 0x04008A69 RID: 35433
 		private bool _PositionInited;
 	}
 }

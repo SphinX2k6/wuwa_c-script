@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C7 RID: 5319
+	// Token: 0x02001620 RID: 5664
 	public class ChangeActorTalker_SetValue
 	{
-		// Token: 0x04004657 RID: 18007
+		// Token: 0x040049F2 RID: 18930
 		public int ActorIndex;
 
-		// Token: 0x04004658 RID: 18008
+		// Token: 0x040049F3 RID: 18931
 		public int Talker;
 	}
 }

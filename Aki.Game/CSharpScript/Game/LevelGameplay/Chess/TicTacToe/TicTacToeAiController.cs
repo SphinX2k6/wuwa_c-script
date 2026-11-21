@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.AIGearStrategy;
 
 namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 {
-	// Token: 0x02006F39 RID: 28473
+	// Token: 0x020060BA RID: 24762
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TicTacToeAiController : TicTacToeController
 	{
-		// Token: 0x06045454 RID: 283732 RVA: 0x011237C4 File Offset: 0x011219C4
+		// Token: 0x0603B602 RID: 243202 RVA: 0x010CD770 File Offset: 0x010CB970
 		public void InitAi(TicTacToeBoard board, ETicTacToeBoardContent camp, ETicTacToeBoardContent playerCamp)
 		{
 			base.Init(board, camp);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045455 RID: 283733 RVA: 0x01123860 File Offset: 0x01121A60
+		// Token: 0x0603B603 RID: 243203 RVA: 0x010CD80C File Offset: 0x010CBA0C
 		public unsafe override bool MovePiece(int newIndex)
 		{
 			int selectIndex = this.SelectIndex;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return flag;
 		}
 
-		// Token: 0x06045456 RID: 283734 RVA: 0x011238DC File Offset: 0x01121ADC
+		// Token: 0x0603B604 RID: 243204 RVA: 0x010CD888 File Offset: 0x010CBA88
 		public override void OnStartRound()
 		{
 			this.ChessBoard.GetBoardInfo(this.BoardInfo);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.LostWeight *= this.RoundDecay;
 		}
 
-		// Token: 0x06045457 RID: 283735 RVA: 0x011239AF File Offset: 0x01121BAF
+		// Token: 0x0603B605 RID: 243205 RVA: 0x010CD95B File Offset: 0x010CBB5B
 		public override void OnStartGame()
 		{
 			base.OnStartGame();
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.LostWeight = this.SourceLostWeight;
 		}
 
-		// Token: 0x06045458 RID: 283736 RVA: 0x011239CE File Offset: 0x01121BCE
+		// Token: 0x0603B606 RID: 243206 RVA: 0x010CD97A File Offset: 0x010CBB7A
 		private int CalculateHistoryOperateValue(int index, int moveTo)
 		{
 			return index * 100 + moveTo;
 		}
 
-		// Token: 0x06045459 RID: 283737 RVA: 0x011239D8 File Offset: 0x01121BD8
+		// Token: 0x0603B607 RID: 243207 RVA: 0x010CD984 File Offset: 0x010CBB84
 		[NullableContext(0)]
 		private ValueTuple<int, int> CalculateMoveWeight(int index)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return new ValueTuple<int, int>(num, item);
 		}
 
-		// Token: 0x0604545A RID: 283738 RVA: 0x01123BA4 File Offset: 0x01121DA4
+		// Token: 0x0603B608 RID: 243208 RVA: 0x010CDB50 File Offset: 0x010CBD50
 		protected bool CheckGameOver(List<int> infos, int startIndex)
 		{
 			int num = infos[startIndex];
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return false;
 		}
 
-		// Token: 0x0604545B RID: 283739 RVA: 0x01123D24 File Offset: 0x01121F24
+		// Token: 0x0603B609 RID: 243209 RVA: 0x010CDCD0 File Offset: 0x010CBED0
 		private int IterationCalculateWeight(ETicTacToeBoardContent camp, List<int> infos, int iterationCount, int startInteractionCount, bool isPlayerInteraction, ETicTacToeBoardContent selfCamp, ETicTacToeBoardContent targetCamp)
 		{
 			if (iterationCount < 0)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return num5;
 		}
 
-		// Token: 0x0604545C RID: 283740 RVA: 0x011240A4 File Offset: 0x011222A4
+		// Token: 0x0603B60A RID: 243210 RVA: 0x010CE050 File Offset: 0x010CC250
 		public void RefreshAiInfo(BP_AIGearStrategy_C aiInfo)
 		{
 			this.SourceLostWeight = aiInfo.LostWeight;
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.IterationDecay = aiInfo.IterationDecay;
 		}
 
-		// Token: 0x0604545D RID: 283741 RVA: 0x011240E4 File Offset: 0x011222E4
+		// Token: 0x0603B60B RID: 243211 RVA: 0x010CE090 File Offset: 0x010CC290
 		private int CalculateLineWinWeight(List<int> infos, ETicTacToeBoardContent camp, int sourceWinLineCount, bool isCenterEmpty, bool ignoreCenter)
 		{
 			int num = this.SourceWinWeight;
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return Math.Max(num5, num);
 		}
 
-		// Token: 0x0604545E RID: 283742 RVA: 0x01124270 File Offset: 0x01122470
+		// Token: 0x0603B60C RID: 243212 RVA: 0x010CE21C File Offset: 0x010CC41C
 		private int CalcualteDiagonalLineWeight(List<int> infos, int centerIndex)
 		{
 			int num = infos[centerIndex];
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return num2;
 		}
 
-		// Token: 0x0604545F RID: 283743 RVA: 0x0112444C File Offset: 0x0112264C
+		// Token: 0x0603B60D RID: 243213 RVA: 0x010CE3F8 File Offset: 0x010CC5F8
 		private int CalculateWinWeight(List<int> infos, ETicTacToeBoardContent camp)
 		{
 			int centerIndex = this.ChessBoard.CenterIndex;
@@ -496,76 +496,76 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return Math.Max(val2, val3);
 		}
 
-		// Token: 0x040241E8 RID: 147944
+		// Token: 0x0401F49D RID: 128157
 		private const int MAX_AI_ITERATION_COUNT = 20;
 
-		// Token: 0x040241E9 RID: 147945
+		// Token: 0x0401F49E RID: 128158
 		private const int MAX_PLAYER_ITERATION_COUNT = 5;
 
-		// Token: 0x040241EA RID: 147946
+		// Token: 0x0401F49F RID: 128159
 		private ETicTacToeBoardContent PlayerCamp = ETicTacToeBoardContent.White;
 
-		// Token: 0x040241EB RID: 147947
+		// Token: 0x0401F4A0 RID: 128160
 		private readonly List<int> BoardInfo = new List<int>();
 
-		// Token: 0x040241EC RID: 147948
+		// Token: 0x0401F4A1 RID: 128161
 		private readonly List<int> NextPoints = new List<int>();
 
-		// Token: 0x040241ED RID: 147949
+		// Token: 0x0401F4A2 RID: 128162
 		private readonly List<int> PrePoints = new List<int>();
 
-		// Token: 0x040241EE RID: 147950
+		// Token: 0x0401F4A3 RID: 128163
 		private readonly List<int> CirclePoints = new List<int>();
 
-		// Token: 0x040241EF RID: 147951
+		// Token: 0x0401F4A4 RID: 128164
 		private readonly List<int> BoardInfoCopy = new List<int>();
 
-		// Token: 0x040241F0 RID: 147952
+		// Token: 0x0401F4A5 RID: 128165
 		private readonly List<int[]> IterationInfos = new List<int[]>();
 
-		// Token: 0x040241F1 RID: 147953
+		// Token: 0x0401F4A6 RID: 128166
 		private readonly List<int[]> PlayerIterationInfos = new List<int[]>();
 
-		// Token: 0x040241F2 RID: 147954
+		// Token: 0x0401F4A7 RID: 128167
 		private readonly List<int> HistoryOperates = new List<int>();
 
-		// Token: 0x040241F3 RID: 147955
+		// Token: 0x0401F4A8 RID: 128168
 		private readonly int SourceWinWeight = 100;
 
-		// Token: 0x040241F4 RID: 147956
+		// Token: 0x0401F4A9 RID: 128169
 		private readonly int WinWeight = 5;
 
-		// Token: 0x040241F5 RID: 147957
+		// Token: 0x0401F4AA RID: 128170
 		private float SourceLostWeight = -5f;
 
-		// Token: 0x040241F6 RID: 147958
+		// Token: 0x0401F4AB RID: 128171
 		private float LostWeight = -5f;
 
-		// Token: 0x040241F7 RID: 147959
+		// Token: 0x0401F4AC RID: 128172
 		private float RoundDecay = 0.8f;
 
-		// Token: 0x040241F8 RID: 147960
+		// Token: 0x0401F4AD RID: 128173
 		private readonly int CenterBlockWeight = 5;
 
-		// Token: 0x040241F9 RID: 147961
+		// Token: 0x0401F4AE RID: 128174
 		private readonly int LineBlockWeight = 8;
 
-		// Token: 0x040241FA RID: 147962
+		// Token: 0x0401F4AF RID: 128175
 		private readonly int StepCost = 3;
 
-		// Token: 0x040241FB RID: 147963
+		// Token: 0x0401F4B0 RID: 128176
 		private int IterationCount = 3;
 
-		// Token: 0x040241FC RID: 147964
+		// Token: 0x0401F4B1 RID: 128177
 		private int PlayerIterationCount = 2;
 
-		// Token: 0x040241FD RID: 147965
+		// Token: 0x0401F4B2 RID: 128178
 		private float IterationDecay = 0.8f;
 
-		// Token: 0x040241FE RID: 147966
+		// Token: 0x0401F4B3 RID: 128179
 		private readonly int HistoryQueueMemberCount = 5;
 
-		// Token: 0x040241FF RID: 147967
+		// Token: 0x0401F4B4 RID: 128180
 		private readonly int RepeatOperationWeight = -300;
 	}
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200009B RID: 155
+	// Token: 0x020000A0 RID: 160
 	[EnumExtensions]
 	public enum EElementalWellEntryType
 	{
-		// Token: 0x040003B4 RID: 948
+		// Token: 0x040003CD RID: 973
 		Entry,
-		// Token: 0x040003B5 RID: 949
+		// Token: 0x040003CE RID: 974
 		Exit
 	}
 }

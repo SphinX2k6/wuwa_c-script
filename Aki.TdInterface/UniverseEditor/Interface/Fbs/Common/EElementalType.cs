@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CEB RID: 23787
+	// Token: 0x0200631F RID: 25375
 	public enum EElementalType : byte
 	{
-		// Token: 0x0400F612 RID: 62994
+		// Token: 0x04010361 RID: 66401
 		Fire,
-		// Token: 0x0400F613 RID: 62995
+		// Token: 0x04010362 RID: 66402
 		Water,
-		// Token: 0x0400F614 RID: 62996
+		// Token: 0x04010363 RID: 66403
 		Wood
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BFA RID: 7162
+// Token: 0x020010B9 RID: 4281
 public class IBattleTeamEnterContext
 {
-	// Token: 0x040061CD RID: 25037
+	// Token: 0x0400629F RID: 25247
 	public bool CanUseSpecialTrialRole;
 
-	// Token: 0x040061CE RID: 25038
+	// Token: 0x040062A0 RID: 25248
 	[Nullable(1)]
 	public Action RefreshConfirm = delegate()
 	{

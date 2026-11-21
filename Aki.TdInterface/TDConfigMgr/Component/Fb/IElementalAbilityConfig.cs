@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E25 RID: 3621
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F21 RID: 3873
 	public class IElementalAbilityConfig
 	{
-		// Token: 0x060051E6 RID: 20966 RVA: 0x000C9D31 File Offset: 0x000C7F31
+		// Token: 0x0600570D RID: 22285 RVA: 0x000D55F9 File Offset: 0x000D37F9
 		public static IElementalAbilityConfig Create(IElementalAbilityConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B59 RID: 7001
-		// (get) Token: 0x060051E7 RID: 20967 RVA: 0x000C9D50 File Offset: 0x000C7F50
+		// Token: 0x17001CC6 RID: 7366
+		// (get) Token: 0x0600570E RID: 22286 RVA: 0x000D5618 File Offset: 0x000D3818
 		public virtual EElementalType ElementalType
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B5A RID: 7002
-		// (get) Token: 0x060051E8 RID: 20968 RVA: 0x000C9D60 File Offset: 0x000C7F60
+		// Token: 0x17001CC7 RID: 7367
+		// (get) Token: 0x0600570F RID: 22287 RVA: 0x000D5628 File Offset: 0x000D3828
 		public virtual bool? IsInitialActive
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B5B RID: 7003
-		// (get) Token: 0x060051E9 RID: 20969 RVA: 0x000C9D96 File Offset: 0x000C7F96
+		// Token: 0x17001CC8 RID: 7368
+		// (get) Token: 0x06005710 RID: 22288 RVA: 0x000D565E File Offset: 0x000D385E
 		public virtual ITriggerShape Range
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B5C RID: 7004
-		// (get) Token: 0x060051EA RID: 20970 RVA: 0x000C9DC8 File Offset: 0x000C7FC8
+		// Token: 0x17001CC9 RID: 7369
+		// (get) Token: 0x06005711 RID: 22289 RVA: 0x000D5690 File Offset: 0x000D3890
 		public virtual bool? IsEnableEnvEffect
 		{
 			get
@@ -79,19 +77,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B5D RID: 7005
-		// (get) Token: 0x060051EB RID: 20971 RVA: 0x000C9E00 File Offset: 0x000C8000
+		// Token: 0x17001CCA RID: 7370
+		// (get) Token: 0x06005712 RID: 22290 RVA: 0x000D56C8 File Offset: 0x000D38C8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IStateElementalEnableConfig> StateEnableConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -114,24 +112,24 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F2A RID: 12074
+		// Token: 0x040031F2 RID: 12786
 		private IElementalAbilityConfig Instance;
 
-		// Token: 0x04002F2B RID: 12075
+		// Token: 0x040031F3 RID: 12787
 		private ITriggerShape _RangeCache;
 
-		// Token: 0x04002F2C RID: 12076
+		// Token: 0x040031F4 RID: 12788
 		private bool _RangeInited;
 
-		// Token: 0x04002F2D RID: 12077
+		// Token: 0x040031F5 RID: 12789
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IStateElementalEnableConfig> _StateEnableConfigsCache;
 
-		// Token: 0x04002F2E RID: 12078
+		// Token: 0x040031F6 RID: 12790
 		private bool _StateEnableConfigsInited;
 	}
 }

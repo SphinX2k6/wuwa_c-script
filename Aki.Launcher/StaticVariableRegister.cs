@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 [StaticVariableRuleIgnore]
 public static class StaticVariableRegister
 {
-	// Token: 0x06000075 RID: 117 RVA: 0x00006898 File Offset: 0x00004A98
+	// Token: 0x06000075 RID: 117 RVA: 0x000068D0 File Offset: 0x00004AD0
 	[NullableContext(1)]
 	public static void RegisterAndExecute(Action initAction, Action resetAction)
 	{
@@ -23,7 +23,7 @@ public static class StaticVariableRegister
 		}
 	}
 
-	// Token: 0x06000076 RID: 118 RVA: 0x000068F4 File Offset: 0x00004AF4
+	// Token: 0x06000076 RID: 118 RVA: 0x0000692C File Offset: 0x00004B2C
 	public static void CreateRequiredStaticDefaultValue()
 	{
 		string message = "LRX->执行静态变量创建";
@@ -32,7 +32,7 @@ public static class StaticVariableRegister
 		StaticVariableRegistry.CreateRequiredStaticDefaultValue();
 	}
 
-	// Token: 0x06000077 RID: 119 RVA: 0x00006930 File Offset: 0x00004B30
+	// Token: 0x06000077 RID: 119 RVA: 0x00006968 File Offset: 0x00004B68
 	public static void ResetRequiredStaticDefaultValue()
 	{
 		string message = "LRX->执行静态变量重置";

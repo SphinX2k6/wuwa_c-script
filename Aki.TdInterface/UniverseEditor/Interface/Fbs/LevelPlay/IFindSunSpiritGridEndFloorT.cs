@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044BF RID: 17599
+	// Token: 0x02004927 RID: 18727
 	public class IFindSunSpiritGridEndFloorT
 	{
-		// Token: 0x17007C32 RID: 31794
-		// (get) Token: 0x0601A4BC RID: 107708 RVA: 0x003C163E File Offset: 0x003BF83E
-		// (set) Token: 0x0601A4BD RID: 107709 RVA: 0x003C1646 File Offset: 0x003BF846
+		// Token: 0x17008271 RID: 33393
+		// (get) Token: 0x0601BC8D RID: 113805 RVA: 0x003ED84A File Offset: 0x003EBA4A
+		// (set) Token: 0x0601BC8E RID: 113806 RVA: 0x003ED852 File Offset: 0x003EBA52
 		public EFindSunSpiritGridType Type { get; set; }
 
-		// Token: 0x0601A4BE RID: 107710 RVA: 0x003C164F File Offset: 0x003BF84F
+		// Token: 0x0601BC8F RID: 113807 RVA: 0x003ED85B File Offset: 0x003EBA5B
 		public IFindSunSpiritGridEndFloorT()
 		{
 			this.Type = EFindSunSpiritGridType.Empty;

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200068C RID: 1676
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200072D RID: 1837
 	public class IRoleInhalation : IInhalationPerformanceType
 	{
-		// Token: 0x060023E6 RID: 9190 RVA: 0x00061ACC File Offset: 0x0005FCCC
+		// Token: 0x06002702 RID: 9986 RVA: 0x00068A94 File Offset: 0x00066C94
 		private IRoleInhalation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023E7 RID: 9191 RVA: 0x00061B04 File Offset: 0x0005FD04
+		// Token: 0x06002703 RID: 9987 RVA: 0x00068ACC File Offset: 0x00066CCC
 		public static IRoleInhalation Create([Nullable(2)] IRoleInhalation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023E8 RID: 9192 RVA: 0x00061B17 File Offset: 0x0005FD17
+		// Token: 0x06002704 RID: 9988 RVA: 0x00068ADF File Offset: 0x00066CDF
 		public static IRoleInhalation CreateFromSetValue([Nullable(2)] IRoleInhalation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023E9 RID: 9193 RVA: 0x00061B2A File Offset: 0x0005FD2A
+		// Token: 0x06002705 RID: 9989 RVA: 0x00068AF2 File Offset: 0x00066CF2
 		public new IRoleInhalation_SetValue ToSetValue()
 		{
 			return new IRoleInhalation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000980 RID: 2432
-		// (get) Token: 0x060023EA RID: 9194 RVA: 0x00061B3D File Offset: 0x0005FD3D
-		// (set) Token: 0x060023EB RID: 9195 RVA: 0x00061B68 File Offset: 0x0005FD68
+		// Token: 0x17000A3C RID: 2620
+		// (get) Token: 0x06002706 RID: 9990 RVA: 0x00068B05 File Offset: 0x00066D05
+		// (set) Token: 0x06002707 RID: 9991 RVA: 0x00068B30 File Offset: 0x00066D30
 		public override EInhalationPerformanceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018BA RID: 6330
+		// Token: 0x04001AB7 RID: 6839
 		[Nullable(2)]
 		protected new IRoleInhalation FbInstance;
 
-		// Token: 0x040018BB RID: 6331
+		// Token: 0x04001AB8 RID: 6840
 		[Nullable(2)]
 		protected new IRoleInhalation_SetValue PocoInterface;
 	}

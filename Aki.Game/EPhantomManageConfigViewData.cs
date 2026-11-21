@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001FDA RID: 8154
+// Token: 0x020014AD RID: 5293
 public enum EPhantomManageConfigViewData
 {
-	// Token: 0x04007642 RID: 30274
+	// Token: 0x0400772B RID: 30507
 	SelectType,
-	// Token: 0x04007643 RID: 30275
+	// Token: 0x0400772C RID: 30508
 	SelectIndex,
-	// Token: 0x04007644 RID: 30276
+	// Token: 0x0400772D RID: 30509
 	SelectConfig,
-	// Token: 0x04007645 RID: 30277
+	// Token: 0x0400772E RID: 30510
 	EditState,
-	// Token: 0x04007646 RID: 30278
+	// Token: 0x0400772F RID: 30511
 	EditData,
-	// Token: 0x04007647 RID: 30279
+	// Token: 0x04007730 RID: 30512
 	EditSwitch
 }

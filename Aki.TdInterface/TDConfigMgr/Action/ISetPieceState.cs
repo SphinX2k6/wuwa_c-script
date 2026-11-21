@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E3C RID: 7740
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002071 RID: 8305
 	public class ISetPieceState : ISetJigsawFoundationType
 	{
-		// Token: 0x0600A59D RID: 42397 RVA: 0x00177204 File Offset: 0x00175404
+		// Token: 0x0600B055 RID: 45141 RVA: 0x0018CF04 File Offset: 0x0018B104
 		private ISetPieceState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A59E RID: 42398 RVA: 0x0017723C File Offset: 0x0017543C
+		// Token: 0x0600B056 RID: 45142 RVA: 0x0018CF3C File Offset: 0x0018B13C
 		public static ISetPieceState Create([Nullable(2)] ISetPieceState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A59F RID: 42399 RVA: 0x0017724F File Offset: 0x0017544F
+		// Token: 0x0600B057 RID: 45143 RVA: 0x0018CF4F File Offset: 0x0018B14F
 		public static ISetPieceState CreateFromSetValue([Nullable(2)] ISetPieceState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5A0 RID: 42400 RVA: 0x00177262 File Offset: 0x00175462
+		// Token: 0x0600B058 RID: 45144 RVA: 0x0018CF62 File Offset: 0x0018B162
 		public new ISetPieceState_SetValue ToSetValue()
 		{
 			return new ISetPieceState_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032CB RID: 13003
-		// (get) Token: 0x0600A5A1 RID: 42401 RVA: 0x0017728D File Offset: 0x0017548D
-		// (set) Token: 0x0600A5A2 RID: 42402 RVA: 0x001772B8 File Offset: 0x001754B8
+		// Token: 0x1700358F RID: 13711
+		// (get) Token: 0x0600B059 RID: 45145 RVA: 0x0018CF8D File Offset: 0x0018B18D
+		// (set) Token: 0x0600B05A RID: 45146 RVA: 0x0018CFB8 File Offset: 0x0018B1B8
 		public override ESetJigsawFoundationType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032CC RID: 13004
-		// (get) Token: 0x0600A5A3 RID: 42403 RVA: 0x001772C6 File Offset: 0x001754C6
-		// (set) Token: 0x0600A5A4 RID: 42404 RVA: 0x001772F1 File Offset: 0x001754F1
+		// Token: 0x17003590 RID: 13712
+		// (get) Token: 0x0600B05B RID: 45147 RVA: 0x0018CFC6 File Offset: 0x0018B1C6
+		// (set) Token: 0x0600B05C RID: 45148 RVA: 0x0018CFF1 File Offset: 0x0018B1F1
 		public virtual int EntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032CD RID: 13005
-		// (get) Token: 0x0600A5A5 RID: 42405 RVA: 0x00177300 File Offset: 0x00175500
-		// (set) Token: 0x0600A5A6 RID: 42406 RVA: 0x00177393 File Offset: 0x00175593
+		// Token: 0x17003591 RID: 13713
+		// (get) Token: 0x0600B05D RID: 45149 RVA: 0x0018D000 File Offset: 0x0018B200
+		// (set) Token: 0x0600B05E RID: 45150 RVA: 0x0018D093 File Offset: 0x0018B293
 		public virtual List<IJigsawPiece> PieceState
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006306 RID: 25350
+		// Token: 0x040068EA RID: 26858
 		[Nullable(2)]
 		protected new ISetPieceState FbInstance;
 
-		// Token: 0x04006307 RID: 25351
+		// Token: 0x040068EB RID: 26859
 		[Nullable(2)]
 		protected new ISetPieceState_SetValue PocoInterface;
 
-		// Token: 0x04006308 RID: 25352
+		// Token: 0x040068EC RID: 26860
 		private List<IJigsawPiece> _PieceStateCache;
 
-		// Token: 0x04006309 RID: 25353
+		// Token: 0x040068ED RID: 26861
 		private bool _PieceStateInited;
 	}
 }

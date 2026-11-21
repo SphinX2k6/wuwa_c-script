@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076BA RID: 30394
+	// Token: 0x02007EC5 RID: 32453
 	public class TEnterMovieModeDurationTypeUnion
 	{
-		// Token: 0x1700E615 RID: 58901
-		// (get) Token: 0x06037488 RID: 226440 RVA: 0x0077DAD0 File Offset: 0x0077BCD0
-		// (set) Token: 0x06037489 RID: 226441 RVA: 0x0077DAD8 File Offset: 0x0077BCD8
+		// Token: 0x1700F251 RID: 62033
+		// (get) Token: 0x0603A92B RID: 239915 RVA: 0x007E1C24 File Offset: 0x007DFE24
+		// (set) Token: 0x0603A92C RID: 239916 RVA: 0x007E1C2C File Offset: 0x007DFE2C
 		public TEnterMovieModeDurationType Type { get; set; }
 
-		// Token: 0x1700E616 RID: 58902
-		// (get) Token: 0x0603748A RID: 226442 RVA: 0x0077DAE1 File Offset: 0x0077BCE1
-		// (set) Token: 0x0603748B RID: 226443 RVA: 0x0077DAE9 File Offset: 0x0077BCE9
+		// Token: 0x1700F252 RID: 62034
+		// (get) Token: 0x0603A92D RID: 239917 RVA: 0x007E1C35 File Offset: 0x007DFE35
+		// (set) Token: 0x0603A92E RID: 239918 RVA: 0x007E1C3D File Offset: 0x007DFE3D
 		public object Value { get; set; }
 
-		// Token: 0x0603748C RID: 226444 RVA: 0x0077DAF2 File Offset: 0x0077BCF2
+		// Token: 0x0603A92F RID: 239919 RVA: 0x007E1C46 File Offset: 0x007DFE46
 		public TEnterMovieModeDurationTypeUnion()
 		{
 			this.Type = TEnterMovieModeDurationType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603748D RID: 226445 RVA: 0x0077DB08 File Offset: 0x0077BD08
+		// Token: 0x0603A930 RID: 239920 RVA: 0x007E1C5C File Offset: 0x007DFE5C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603748E RID: 226446 RVA: 0x0077DB1A File Offset: 0x0077BD1A
+		// Token: 0x0603A931 RID: 239921 RVA: 0x007E1C6E File Offset: 0x007DFE6E
 		public IWaitMovieModeBorderAnimFinishedT AsIWaitMovieModeBorderAnimFinished()
 		{
 			return this.As<IWaitMovieModeBorderAnimFinishedT>();
 		}
 
-		// Token: 0x0603748F RID: 226447 RVA: 0x0077DB22 File Offset: 0x0077BD22
+		// Token: 0x0603A932 RID: 239922 RVA: 0x007E1C76 File Offset: 0x007DFE76
 		public static TEnterMovieModeDurationTypeUnion FromIWaitMovieModeBorderAnimFinished(IWaitMovieModeBorderAnimFinishedT _iwaitmoviemodeborderanimfinished)
 		{
 			return new TEnterMovieModeDurationTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037490 RID: 226448 RVA: 0x0077DB37 File Offset: 0x0077BD37
+		// Token: 0x0603A933 RID: 239923 RVA: 0x007E1C8B File Offset: 0x007DFE8B
 		public IWaitMovieModeFixedTimeT AsIWaitMovieModeFixedTime()
 		{
 			return this.As<IWaitMovieModeFixedTimeT>();
 		}
 
-		// Token: 0x06037491 RID: 226449 RVA: 0x0077DB3F File Offset: 0x0077BD3F
+		// Token: 0x0603A934 RID: 239924 RVA: 0x007E1C93 File Offset: 0x007DFE93
 		public static TEnterMovieModeDurationTypeUnion FromIWaitMovieModeFixedTime(IWaitMovieModeFixedTimeT _iwaitmoviemodefixedtime)
 		{
 			return new TEnterMovieModeDurationTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037492 RID: 226450 RVA: 0x0077DB54 File Offset: 0x0077BD54
+		// Token: 0x0603A935 RID: 239925 RVA: 0x007E1CA8 File Offset: 0x007DFEA8
 		public static int Pack(FlatBufferBuilder builder, TEnterMovieModeDurationTypeUnion _o)
 		{
 			TEnterMovieModeDurationType type = _o.Type;

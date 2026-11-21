@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021B5 RID: 8629
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002420 RID: 9248
 	public class SetExploreState : ActionParams
 	{
-		// Token: 0x0600BD7A RID: 48506 RVA: 0x001B446C File Offset: 0x001B266C
+		// Token: 0x0600C934 RID: 51508 RVA: 0x001CBAA4 File Offset: 0x001C9CA4
 		private SetExploreState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD7B RID: 48507 RVA: 0x001B44A4 File Offset: 0x001B26A4
+		// Token: 0x0600C935 RID: 51509 RVA: 0x001CBADC File Offset: 0x001C9CDC
 		public static SetExploreState Create([Nullable(2)] SetExploreState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD7C RID: 48508 RVA: 0x001B44B7 File Offset: 0x001B26B7
+		// Token: 0x0600C936 RID: 51510 RVA: 0x001CBAEF File Offset: 0x001C9CEF
 		public static SetExploreState CreateFromSetValue([Nullable(2)] SetExploreState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD7D RID: 48509 RVA: 0x001B44CA File Offset: 0x001B26CA
+		// Token: 0x0600C937 RID: 51511 RVA: 0x001CBB02 File Offset: 0x001C9D02
 		public SetExploreState_SetValue ToSetValue()
 		{
 			return new SetExploreState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700398E RID: 14734
-		// (get) Token: 0x0600BD7E RID: 48510 RVA: 0x001B44E0 File Offset: 0x001B26E0
-		// (set) Token: 0x0600BD7F RID: 48511 RVA: 0x001B4541 File Offset: 0x001B2741
+		// Token: 0x17003C82 RID: 15490
+		// (get) Token: 0x0600C938 RID: 51512 RVA: 0x001CBB18 File Offset: 0x001C9D18
+		// (set) Token: 0x0600C939 RID: 51513 RVA: 0x001CBB79 File Offset: 0x001C9D79
 		public virtual ITeleControlConfig Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007109 RID: 28937
+		// Token: 0x04007751 RID: 30545
 		[Nullable(2)]
 		protected new SetExploreState FbInstance;
 
-		// Token: 0x0400710A RID: 28938
+		// Token: 0x04007752 RID: 30546
 		[Nullable(2)]
 		protected SetExploreState_SetValue PocoInterface;
 
-		// Token: 0x0400710B RID: 28939
+		// Token: 0x04007753 RID: 30547
 		private ITeleControlConfig _ConfigCache;
 
-		// Token: 0x0400710C RID: 28940
+		// Token: 0x04007754 RID: 30548
 		private bool _ConfigInited;
 	}
 }

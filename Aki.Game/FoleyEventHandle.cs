@@ -6,16 +6,16 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 internal class FoleyEventHandle
 {
-	// Token: 0x060012F9 RID: 4857 RVA: 0x0006AFC7 File Offset: 0x000691C7
+	// Token: 0x060012FF RID: 4863 RVA: 0x0006C9D3 File Offset: 0x0006ABD3
 	public FoleyEventHandle(int id, string eventName)
 	{
 		this.Id = id;
 		this.EventName = eventName;
 	}
 
-	// Token: 0x04000DFF RID: 3583
+	// Token: 0x04000E07 RID: 3591
 	public int Id;
 
-	// Token: 0x04000E00 RID: 3584
+	// Token: 0x04000E08 RID: 3592
 	public string EventName = "";
 }

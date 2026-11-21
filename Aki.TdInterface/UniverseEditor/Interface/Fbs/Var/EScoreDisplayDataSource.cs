@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x020039FA RID: 14842
+	// Token: 0x02003DD5 RID: 15829
 	public enum EScoreDisplayDataSource : byte
 	{
-		// Token: 0x0400AE16 RID: 44566
+		// Token: 0x0400B737 RID: 46903
 		Var
 	}
 }

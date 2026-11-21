@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001673 RID: 5747
+// Token: 0x02000B2B RID: 2859
 [NullableContext(1)]
 [Nullable(0)]
 [Obsolete("活动控制管理废弃不使用,直接使用ActivityControllerBase.Instance")]
 public class ActivityControllerHolder : Singleton
 {
-	// Token: 0x17000DA7 RID: 3495
-	// (get) Token: 0x0600A241 RID: 41537 RVA: 0x0023CC78 File Offset: 0x0023AE78
+	// Token: 0x17000DC8 RID: 3528
+	// (get) Token: 0x0600761F RID: 30239 RVA: 0x00246B08 File Offset: 0x00244D08
 	public static ActivityControllerHolder Instance
 	{
 		get
@@ -22,12 +22,12 @@ public class ActivityControllerHolder : Singleton
 		}
 	}
 
-	// Token: 0x0600A242 RID: 41538 RVA: 0x0023CC9B File Offset: 0x0023AE9B
+	// Token: 0x06007620 RID: 30240 RVA: 0x00246B2B File Offset: 0x00244D2B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A243 RID: 41539 RVA: 0x0023CC9D File Offset: 0x0023AE9D
+	// Token: 0x06007621 RID: 30241 RVA: 0x00246B2D File Offset: 0x00244D2D
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityControllerHolder instance = ActivityControllerHolder._instance;
@@ -38,13 +38,13 @@ public class ActivityControllerHolder : Singleton
 		ActivityControllerHolder._instance = null;
 	}
 
-	// Token: 0x0600A244 RID: 41540 RVA: 0x0023CCB6 File Offset: 0x0023AEB6
+	// Token: 0x06007622 RID: 30242 RVA: 0x00246B46 File Offset: 0x00244D46
 	static ActivityControllerHolder()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityControllerHolder.CreateStaticDefaultValue), new Action(ActivityControllerHolder.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040049CC RID: 18892
+	// Token: 0x04004A72 RID: 19058
 	[Nullable(2)]
 	private static ActivityControllerHolder _instance;
 }

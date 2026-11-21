@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028F6 RID: 10486
+	// Token: 0x0200084A RID: 2122
 	public sealed class FUpdateGameCancelHandle : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06026E37 RID: 159287 RVA: 0x003B52AD File Offset: 0x003B34AD
+		// Token: 0x0600B8F1 RID: 47345 RVA: 0x001281B4 File Offset: 0x001263B4
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FUpdateGameCancelHandle.StaticFunctionPtr();
 		}
 
-		// Token: 0x06026E38 RID: 159288 RVA: 0x003B52B9 File Offset: 0x003B34B9
+		// Token: 0x0600B8F2 RID: 47346 RVA: 0x001281C0 File Offset: 0x001263C0
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FUpdateGameCancelHandle._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FUpdateGameCancelHandle._FunctionPtr;
 		}
 
-		// Token: 0x06026E39 RID: 159289 RVA: 0x003B52DC File Offset: 0x003B34DC
+		// Token: 0x0600B8F3 RID: 47347 RVA: 0x001281E3 File Offset: 0x001263E3
 		public FUpdateGameCancelHandle()
 		{
 		}
 
-		// Token: 0x06026E3A RID: 159290 RVA: 0x003B52E4 File Offset: 0x003B34E4
+		// Token: 0x0600B8F4 RID: 47348 RVA: 0x001281EB File Offset: 0x001263EB
 		[NullableContext(2)]
 		public FUpdateGameCancelHandle(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06026E3B RID: 159291 RVA: 0x003B52EE File Offset: 0x003B34EE
+		// Token: 0x0600B8F5 RID: 47349 RVA: 0x001281F5 File Offset: 0x001263F5
 		public FUpdateGameCancelHandle(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06026E3C RID: 159292 RVA: 0x003B52F9 File Offset: 0x003B34F9
+		// Token: 0x0600B8F6 RID: 47350 RVA: 0x00128200 File Offset: 0x00126400
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06026E3D RID: 159293 RVA: 0x003B532B File Offset: 0x003B352B
+		// Token: 0x0600B8F7 RID: 47351 RVA: 0x00128232 File Offset: 0x00126432
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FUpdateGameCancelHandle.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FUpdateGameCancelHandle.RegisterId);
 		}
 
-		// Token: 0x06026E3E RID: 159294 RVA: 0x003B5365 File Offset: 0x003B3565
+		// Token: 0x0600B8F8 RID: 47352 RVA: 0x0012826C File Offset: 0x0012646C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06026E3F RID: 159295 RVA: 0x003B5370 File Offset: 0x003B3570
+		// Token: 0x0600B8F9 RID: 47353 RVA: 0x00128278 File Offset: 0x00126478
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0401559D RID: 87453
+		// Token: 0x04005402 RID: 21506
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401559E RID: 87454
+		// Token: 0x04005403 RID: 21507
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/TapUpdate.UpdateGameCancelHandle__DelegateSignature";
 
-		// Token: 0x0401559F RID: 87455
+		// Token: 0x04005404 RID: 21508
 		private static int RegisterId;
 
-		// Token: 0x02003B57 RID: 15191
+		// Token: 0x020013DA RID: 5082
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D01 RID: 97537
+			// Token: 0x04006846 RID: 26694
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x02000E93 RID: 3731
+// Token: 0x02000348 RID: 840
 public class DropData : IDropData
 {
-	// Token: 0x170006AE RID: 1710
-	// (get) Token: 0x06005B8B RID: 23435 RVA: 0x0010B797 File Offset: 0x00109997
-	// (set) Token: 0x06005B8C RID: 23436 RVA: 0x0010B79F File Offset: 0x0010999F
+	// Token: 0x170006D2 RID: 1746
+	// (get) Token: 0x06002F22 RID: 12066 RVA: 0x0011342F File Offset: 0x0011162F
+	// (set) Token: 0x06002F23 RID: 12067 RVA: 0x00113437 File Offset: 0x00111637
 	public int SubLevelIndex { get; set; }
 
-	// Token: 0x170006AF RID: 1711
-	// (get) Token: 0x06005B8D RID: 23437 RVA: 0x0010B7A8 File Offset: 0x001099A8
-	// (set) Token: 0x06005B8E RID: 23438 RVA: 0x0010B7B0 File Offset: 0x001099B0
+	// Token: 0x170006D3 RID: 1747
+	// (get) Token: 0x06002F24 RID: 12068 RVA: 0x00113440 File Offset: 0x00111640
+	// (set) Token: 0x06002F25 RID: 12069 RVA: 0x00113448 File Offset: 0x00111648
 	public int WaveGroupIndex { get; set; }
 
-	// Token: 0x170006B0 RID: 1712
-	// (get) Token: 0x06005B8F RID: 23439 RVA: 0x0010B7B9 File Offset: 0x001099B9
-	// (set) Token: 0x06005B90 RID: 23440 RVA: 0x0010B7C1 File Offset: 0x001099C1
+	// Token: 0x170006D4 RID: 1748
+	// (get) Token: 0x06002F26 RID: 12070 RVA: 0x00113451 File Offset: 0x00111651
+	// (set) Token: 0x06002F27 RID: 12071 RVA: 0x00113459 File Offset: 0x00111659
 	public int MonsterId { get; set; }
 
-	// Token: 0x170006B1 RID: 1713
-	// (get) Token: 0x06005B91 RID: 23441 RVA: 0x0010B7CA File Offset: 0x001099CA
-	// (set) Token: 0x06005B92 RID: 23442 RVA: 0x0010B7D2 File Offset: 0x001099D2
+	// Token: 0x170006D5 RID: 1749
+	// (get) Token: 0x06002F28 RID: 12072 RVA: 0x00113462 File Offset: 0x00111662
+	// (set) Token: 0x06002F29 RID: 12073 RVA: 0x0011346A File Offset: 0x0011166A
 	public int BuffGateId { get; set; }
 }

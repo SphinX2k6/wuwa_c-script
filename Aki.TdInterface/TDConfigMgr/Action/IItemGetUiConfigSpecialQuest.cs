@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B60 RID: 7008
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001D0D RID: 7437
 	public class IItemGetUiConfigSpecialQuest : IItemGetUiConfigBase
 	{
-		// Token: 0x06009605 RID: 38405 RVA: 0x0015AA64 File Offset: 0x00158C64
-		[NullableContext(1)]
+		// Token: 0x06009DE7 RID: 40423 RVA: 0x0016B610 File Offset: 0x00169810
 		private IItemGetUiConfigSpecialQuest_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009606 RID: 38406 RVA: 0x0015AA9C File Offset: 0x00158C9C
-		[NullableContext(1)]
+		// Token: 0x06009DE8 RID: 40424 RVA: 0x0016B648 File Offset: 0x00169848
 		public static IItemGetUiConfigSpecialQuest Create([Nullable(2)] IItemGetUiConfigSpecialQuest instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009607 RID: 38407 RVA: 0x0015AAAF File Offset: 0x00158CAF
-		[NullableContext(1)]
+		// Token: 0x06009DE9 RID: 40425 RVA: 0x0016B65B File Offset: 0x0016985B
 		public static IItemGetUiConfigSpecialQuest CreateFromSetValue([Nullable(2)] IItemGetUiConfigSpecialQuest_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009608 RID: 38408 RVA: 0x0015AAC2 File Offset: 0x00158CC2
-		[NullableContext(1)]
+		// Token: 0x06009DEA RID: 40426 RVA: 0x0016B66E File Offset: 0x0016986E
 		public new IItemGetUiConfigSpecialQuest_SetValue ToSetValue()
 		{
 			return new IItemGetUiConfigSpecialQuest_SetValue
@@ -65,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F49 RID: 12105
-		// (get) Token: 0x06009609 RID: 38409 RVA: 0x0015AAED File Offset: 0x00158CED
-		// (set) Token: 0x0600960A RID: 38410 RVA: 0x0015AB18 File Offset: 0x00158D18
+		// Token: 0x1700316E RID: 12654
+		// (get) Token: 0x06009DEB RID: 40427 RVA: 0x0016B699 File Offset: 0x00169899
+		// (set) Token: 0x06009DEC RID: 40428 RVA: 0x0016B6C4 File Offset: 0x001698C4
 		public override EItemGetUiType Type
 		{
 			get
@@ -88,11 +82,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F4A RID: 12106
-		// (get) Token: 0x0600960B RID: 38411 RVA: 0x0015AB26 File Offset: 0x00158D26
-		// (set) Token: 0x0600960C RID: 38412 RVA: 0x0015AB4D File Offset: 0x00158D4D
+		// Token: 0x1700316F RID: 12655
+		// (get) Token: 0x06009DED RID: 40429 RVA: 0x0016B6D2 File Offset: 0x001698D2
+		// (set) Token: 0x06009DEE RID: 40430 RVA: 0x0016B6F9 File Offset: 0x001698F9
+		[Nullable(2)]
 		public virtual string Title
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -106,15 +102,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.Title;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().Title = value;
 			}
 		}
 
-		// Token: 0x17002F4B RID: 12107
-		// (get) Token: 0x0600960D RID: 38413 RVA: 0x0015AB5C File Offset: 0x00158D5C
-		// (set) Token: 0x0600960E RID: 38414 RVA: 0x0015AB96 File Offset: 0x00158D96
+		// Token: 0x17003170 RID: 12656
+		// (get) Token: 0x06009DEF RID: 40431 RVA: 0x0016B708 File Offset: 0x00169908
+		// (set) Token: 0x06009DF0 RID: 40432 RVA: 0x0016B742 File Offset: 0x00169942
 		public virtual bool? ShowDetail
 		{
 			get
@@ -136,10 +133,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BC2 RID: 23490
+		// Token: 0x0400605B RID: 24667
+		[Nullable(2)]
 		protected new IItemGetUiConfigSpecialQuest FbInstance;
 
-		// Token: 0x04005BC3 RID: 23491
+		// Token: 0x0400605C RID: 24668
+		[Nullable(2)]
 		protected new IItemGetUiConfigSpecialQuest_SetValue PocoInterface;
 	}
 }

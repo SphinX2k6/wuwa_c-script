@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000194 RID: 404
+	// Token: 0x020001A6 RID: 422
 	public class ConfigConfirmBoxById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600097B RID: 2427 RVA: 0x0008F21C File Offset: 0x0008D41C
+		// Token: 0x060009E7 RID: 2535 RVA: 0x00095154 File Offset: 0x00093354
 		static ConfigConfirmBoxById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigConfirmBoxById.CreateStaticDefaultValue), new Action(ConfigConfirmBoxById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600097C RID: 2428 RVA: 0x0008F23C File Offset: 0x0008D43C
+		// Token: 0x060009E8 RID: 2536 RVA: 0x00095174 File Offset: 0x00093374
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigConfirmBoxById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600097D RID: 2429 RVA: 0x0008F2BB File Offset: 0x0008D4BB
+		// Token: 0x060009E9 RID: 2537 RVA: 0x000951F3 File Offset: 0x000933F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigConfirmBoxById.LogPair = null;
 			ConfigConfirmBoxById.HandleId = 0;
 		}
 
-		// Token: 0x0600097E RID: 2430 RVA: 0x0008F2C9 File Offset: 0x0008D4C9
+		// Token: 0x060009EA RID: 2538 RVA: 0x00095201 File Offset: 0x00093401
 		public static void Init()
 		{
 			ConfigConfirmBoxById.HandleId = ConfigCommon.InitDataStatement(ConfigConfirmBoxById.HandleId, "db_confirmbox.db", "select BinData from `ConfirmBox` where Id=?");
 		}
 
-		// Token: 0x0600097F RID: 2431 RVA: 0x0008F2E4 File Offset: 0x0008D4E4
+		// Token: 0x060009EB RID: 2539 RVA: 0x0009521C File Offset: 0x0009341C
 		public static ConfirmBox? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigConfirmBoxById.HandleId, ConfigConfirmBoxById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ConfirmBox?(rootAsConfirmBox);
 		}
 
-		// Token: 0x04000AF0 RID: 2800
+		// Token: 0x04000B6E RID: 2926
 		private const string DB = "db_confirmbox.db";
 
-		// Token: 0x04000AF1 RID: 2801
+		// Token: 0x04000B6F RID: 2927
 		private const string FILE = "q.确认框.xlsx";
 
-		// Token: 0x04000AF2 RID: 2802
+		// Token: 0x04000B70 RID: 2928
 		private const string TABLE = "ConfirmBox";
 
-		// Token: 0x04000AF3 RID: 2803
+		// Token: 0x04000B71 RID: 2929
 		private const string COMMAND = "select BinData from `ConfirmBox` where Id=?";
 
-		// Token: 0x04000AF4 RID: 2804
+		// Token: 0x04000B72 RID: 2930
 		private const string KEY_PREFIX = "ConfirmBoxById";
 
-		// Token: 0x04000AF5 RID: 2805
+		// Token: 0x04000B73 RID: 2931
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000AF6 RID: 2806
+		// Token: 0x04000B74 RID: 2932
 		private static int HandleId;
 	}
 }

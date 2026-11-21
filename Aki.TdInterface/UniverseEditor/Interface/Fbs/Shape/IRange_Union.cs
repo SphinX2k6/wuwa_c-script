@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C2E RID: 15406
+	// Token: 0x0200403D RID: 16445
 	public enum IRange_Union : byte
 	{
-		// Token: 0x0400B225 RID: 45605
+		// Token: 0x0400BBB5 RID: 48053
 		NONE,
-		// Token: 0x0400B226 RID: 45606
+		// Token: 0x0400BBB6 RID: 48054
 		IRange,
-		// Token: 0x0400B227 RID: 45607
+		// Token: 0x0400BBB7 RID: 48055
 		ICircleRange,
-		// Token: 0x0400B228 RID: 45608
+		// Token: 0x0400BBB8 RID: 48056
 		IBoxRange,
-		// Token: 0x0400B229 RID: 45609
+		// Token: 0x0400BBB9 RID: 48057
 		ICylinder
 	}
 }

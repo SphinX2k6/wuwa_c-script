@@ -12,13 +12,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePanel
 {
-	// Token: 0x02004814 RID: 18452
+	// Token: 0x02003745 RID: 14149
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WeeklyRogueEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x170078E8 RID: 30952
-		// (get) Token: 0x06030501 RID: 197889 RVA: 0x00B35FC8 File Offset: 0x00B341C8
+		// Token: 0x17004BA5 RID: 19365
+		// (get) Token: 0x06024CD1 RID: 150737 RVA: 0x00A65F3C File Offset: 0x00A6413C
 		private InstanceDungeonEntrance? EntranceConfig
 		{
 			get
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x06030502 RID: 197890 RVA: 0x00B36005 File Offset: 0x00B34205
+		// Token: 0x06024CD2 RID: 150738 RVA: 0x00A65F79 File Offset: 0x00A64179
 		public override string GetResourceId()
 		{
 			return "UiView_InstanceEntranceTip_Prefab";
 		}
 
-		// Token: 0x06030503 RID: 197891 RVA: 0x00B3600C File Offset: 0x00B3420C
+		// Token: 0x06024CD3 RID: 150739 RVA: 0x00A65F80 File Offset: 0x00A64180
 		public override UUIItem GetGuideFocusUiItem()
 		{
 			UUIButtonComponent button = base.GetButton(11);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return (UUIItem)obj;
 		}
 
-		// Token: 0x06030504 RID: 197892 RVA: 0x00B36040 File Offset: 0x00B34240
+		// Token: 0x06024CD4 RID: 150740 RVA: 0x00A65FB4 File Offset: 0x00A641B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WeeklyRogueEntrancePanel.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030505 RID: 197893 RVA: 0x00B36084 File Offset: 0x00B34284
+		// Token: 0x06024CD5 RID: 150741 RVA: 0x00A65FF8 File Offset: 0x00A641F8
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnStart();
 		}
 
-		// Token: 0x06030506 RID: 197894 RVA: 0x00B360D5 File Offset: 0x00B342D5
+		// Token: 0x06024CD6 RID: 150742 RVA: 0x00A66049 File Offset: 0x00A64249
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06030507 RID: 197895 RVA: 0x00B360F0 File Offset: 0x00B342F0
+		// Token: 0x06024CD7 RID: 150743 RVA: 0x00A66064 File Offset: 0x00A64264
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x06030508 RID: 197896 RVA: 0x00B36124 File Offset: 0x00B34324
+		// Token: 0x06024CD8 RID: 150744 RVA: 0x00A66098 File Offset: 0x00A64298
 		private ILayoutItem<InstanceDungeonCostTip> OnInstanceRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = new InstanceDungeonCostTip();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			};
 		}
 
-		// Token: 0x06030509 RID: 197897 RVA: 0x00B36158 File Offset: 0x00B34358
+		// Token: 0x06024CD9 RID: 150745 RVA: 0x00A660CC File Offset: 0x00A642CC
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x0603050A RID: 197898 RVA: 0x00B362C5 File Offset: 0x00B344C5
+		// Token: 0x06024CDA RID: 150746 RVA: 0x00A66239 File Offset: 0x00A64439
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceCostTipView.ClearChildren();
 		}
 
-		// Token: 0x0603050B RID: 197899 RVA: 0x00B362D8 File Offset: 0x00B344D8
+		// Token: 0x06024CDB RID: 150747 RVA: 0x00A6624C File Offset: 0x00A6444C
 		protected string GetRemainTime()
 		{
 			double cycleRemainTime = WeeklyRogueModel.Instance.ActivityData.GetCycleRemainTime();
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return TimeUtil.Instance.GetCountDownDataFormat2(cycleRemainTime, new CommonDefine.ETimeType?(timeTypeData[0]), new CommonDefine.ETimeType?(timeTypeData[1])).CountDownText ?? "";
 		}
 
-		// Token: 0x0603050C RID: 197900 RVA: 0x00B36328 File Offset: 0x00B34528
+		// Token: 0x06024CDC RID: 150748 RVA: 0x00A6629C File Offset: 0x00A6449C
 		private void InitView()
 		{
 			InstanceDungeonEntrance? entranceConfig = this.EntranceConfig;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			layoutContext.SetConfirmBtnActive(!flag);
 		}
 
-		// Token: 0x0603050D RID: 197901 RVA: 0x00B36418 File Offset: 0x00B34618
+		// Token: 0x06024CDD RID: 150749 RVA: 0x00A6638C File Offset: 0x00A6458C
 		private void RefreshReward()
 		{
 			List<TItem> previewReward = WeeklyRogueModel.Instance.ActivityData.GetPreviewReward(null);
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x0603050E RID: 197902 RVA: 0x00B364C4 File Offset: 0x00B346C4
+		// Token: 0x06024CDE RID: 150750 RVA: 0x00A66438 File Offset: 0x00A64638
 		private void UpdateInstanceList()
 		{
 			this.RefreshReward();
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603050F RID: 197903 RVA: 0x00B36528 File Offset: 0x00B34728
+		// Token: 0x06024CDF RID: 150751 RVA: 0x00A6649C File Offset: 0x00A6469C
 		private void RefreshTimeItem()
 		{
 			if (WeeklyRogueModel.Instance.ActivityData != null)
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x06030510 RID: 197904 RVA: 0x00B365F8 File Offset: 0x00B347F8
+		// Token: 0x06024CE0 RID: 150752 RVA: 0x00A6656C File Offset: 0x00A6476C
 		private void RefreshShopProgressItem()
 		{
 			WeeklyRogueModel instance = WeeklyRogueModel.Instance;
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x06030511 RID: 197905 RVA: 0x00B36700 File Offset: 0x00B34900
+		// Token: 0x06024CE1 RID: 150753 RVA: 0x00A66674 File Offset: 0x00A64874
 		private CommonDefine.ETimeType[] GetTimeTypeData(double remainTime)
 		{
 			if (remainTime > 86400.0)
@@ -370,24 +370,24 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return new CommonDefine.ETimeType[2];
 		}
 
-		// Token: 0x04019FF6 RID: 106486
+		// Token: 0x040146AA RID: 83626
 		private const string ROGUE_SCORE_KEY = "rougeScore";
 
-		// Token: 0x04019FF7 RID: 106487
+		// Token: 0x040146AB RID: 83627
 		private const string ROGUE_TIME = "rogueTime";
 
-		// Token: 0x04019FF8 RID: 106488
+		// Token: 0x040146AC RID: 83628
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x04019FF9 RID: 106489
+		// Token: 0x040146AD RID: 83629
 		private int EntranceId;
 
-		// Token: 0x04019FFA RID: 106490
+		// Token: 0x040146AE RID: 83630
 		[Nullable(2)]
 		private TeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x04019FFB RID: 106491
+		// Token: 0x040146AF RID: 83631
 		[Nullable(new byte[]
 		{
 			2,
@@ -395,15 +395,15 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 		})]
 		private GenericLayoutAdd<InstanceDungeonCostTip> InstanceCostTipView;
 
-		// Token: 0x04019FFC RID: 106492
+		// Token: 0x040146B0 RID: 83632
 		[Nullable(2)]
 		private TimerHandle TimerId;
 
-		// Token: 0x0200AAE3 RID: 43747
+		// Token: 0x02009494 RID: 38036
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F65 RID: 212837
+			// Token: 0x0402E6E8 RID: 190184
 			public const int WeeklyRoguePanel = 0;
 		}
 	}

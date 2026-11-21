@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000800 RID: 2048
+	// Token: 0x0200081C RID: 2076
 	public class ConfigRiskHarvestActivityInfoByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003012 RID: 12306 RVA: 0x00169078 File Offset: 0x00167278
+		// Token: 0x060030BA RID: 12474 RVA: 0x00170360 File Offset: 0x0016E560
 		static ConfigRiskHarvestActivityInfoByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRiskHarvestActivityInfoByActivityId.CreateStaticDefaultValue), new Action(ConfigRiskHarvestActivityInfoByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003013 RID: 12307 RVA: 0x00169098 File Offset: 0x00167298
+		// Token: 0x060030BB RID: 12475 RVA: 0x00170380 File Offset: 0x0016E580
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRiskHarvestActivityInfoByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003014 RID: 12308 RVA: 0x00169117 File Offset: 0x00167317
+		// Token: 0x060030BC RID: 12476 RVA: 0x001703FF File Offset: 0x0016E5FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRiskHarvestActivityInfoByActivityId.LogPair = null;
 			ConfigRiskHarvestActivityInfoByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06003015 RID: 12309 RVA: 0x00169125 File Offset: 0x00167325
+		// Token: 0x060030BD RID: 12477 RVA: 0x0017040D File Offset: 0x0016E60D
 		public static void Init()
 		{
 			ConfigRiskHarvestActivityInfoByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigRiskHarvestActivityInfoByActivityId.HandleId, "db_riskharvest.db", "select BinData from `RiskHarvestActivityInfo` where ActivityId = ?");
 		}
 
-		// Token: 0x06003016 RID: 12310 RVA: 0x00169140 File Offset: 0x00167340
+		// Token: 0x060030BE RID: 12478 RVA: 0x00170428 File Offset: 0x0016E628
 		public static RiskHarvestActivityInfo? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRiskHarvestActivityInfoByActivityId.HandleId, ConfigRiskHarvestActivityInfoByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RiskHarvestActivityInfo?(rootAsRiskHarvestActivityInfo);
 		}
 
-		// Token: 0x040037E6 RID: 14310
+		// Token: 0x040038AA RID: 14506
 		private const string DB = "db_riskharvest.db";
 
-		// Token: 0x040037E7 RID: 14311
+		// Token: 0x040038AB RID: 14507
 		private const string FILE = "g.割草冒险活动.xlsx";
 
-		// Token: 0x040037E8 RID: 14312
+		// Token: 0x040038AC RID: 14508
 		private const string TABLE = "RiskHarvestActivityInfo";
 
-		// Token: 0x040037E9 RID: 14313
+		// Token: 0x040038AD RID: 14509
 		private const string COMMAND = "select BinData from `RiskHarvestActivityInfo` where ActivityId = ?";
 
-		// Token: 0x040037EA RID: 14314
+		// Token: 0x040038AE RID: 14510
 		private const string KEY_PREFIX = "RiskHarvestActivityInfoByActivityId";
 
-		// Token: 0x040037EB RID: 14315
+		// Token: 0x040038AF RID: 14511
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040037EC RID: 14316
+		// Token: 0x040038B0 RID: 14512
 		private static int HandleId;
 	}
 }

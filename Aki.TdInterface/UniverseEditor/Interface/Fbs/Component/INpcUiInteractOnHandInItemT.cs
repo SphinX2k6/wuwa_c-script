@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005678 RID: 22136
+	// Token: 0x02005C19 RID: 23577
 	public class INpcUiInteractOnHandInItemT
 	{
-		// Token: 0x1700A442 RID: 42050
-		// (get) Token: 0x06024DD3 RID: 150995 RVA: 0x005165AB File Offset: 0x005147AB
-		// (set) Token: 0x06024DD4 RID: 150996 RVA: 0x005165B3 File Offset: 0x005147B3
+		// Token: 0x1700ACD1 RID: 44241
+		// (get) Token: 0x0602700C RID: 159756 RVA: 0x00557147 File Offset: 0x00555347
+		// (set) Token: 0x0602700D RID: 159757 RVA: 0x0055714F File Offset: 0x0055534F
 		public ENpcUiInteractType Type { get; set; }
 
-		// Token: 0x1700A443 RID: 42051
-		// (get) Token: 0x06024DD5 RID: 150997 RVA: 0x005165BC File Offset: 0x005147BC
-		// (set) Token: 0x06024DD6 RID: 150998 RVA: 0x005165C4 File Offset: 0x005147C4
+		// Token: 0x1700ACD2 RID: 44242
+		// (get) Token: 0x0602700E RID: 159758 RVA: 0x00557158 File Offset: 0x00555358
+		// (set) Token: 0x0602700F RID: 159759 RVA: 0x00557160 File Offset: 0x00555360
 		public string EnterMontage { get; set; }
 
-		// Token: 0x1700A444 RID: 42052
-		// (get) Token: 0x06024DD7 RID: 150999 RVA: 0x005165CD File Offset: 0x005147CD
-		// (set) Token: 0x06024DD8 RID: 151000 RVA: 0x005165D5 File Offset: 0x005147D5
+		// Token: 0x1700ACD3 RID: 44243
+		// (get) Token: 0x06027010 RID: 159760 RVA: 0x00557169 File Offset: 0x00555369
+		// (set) Token: 0x06027011 RID: 159761 RVA: 0x00557171 File Offset: 0x00555371
 		public string StandByMontage { get; set; }
 
-		// Token: 0x1700A445 RID: 42053
-		// (get) Token: 0x06024DD9 RID: 151001 RVA: 0x005165DE File Offset: 0x005147DE
-		// (set) Token: 0x06024DDA RID: 151002 RVA: 0x005165E6 File Offset: 0x005147E6
+		// Token: 0x1700ACD4 RID: 44244
+		// (get) Token: 0x06027012 RID: 159762 RVA: 0x0055717A File Offset: 0x0055537A
+		// (set) Token: 0x06027013 RID: 159763 RVA: 0x00557182 File Offset: 0x00555382
 		public string HandInFailedMontage { get; set; }
 
-		// Token: 0x1700A446 RID: 42054
-		// (get) Token: 0x06024DDB RID: 151003 RVA: 0x005165EF File Offset: 0x005147EF
-		// (set) Token: 0x06024DDC RID: 151004 RVA: 0x005165F7 File Offset: 0x005147F7
+		// Token: 0x1700ACD5 RID: 44245
+		// (get) Token: 0x06027014 RID: 159764 RVA: 0x0055718B File Offset: 0x0055538B
+		// (set) Token: 0x06027015 RID: 159765 RVA: 0x00557193 File Offset: 0x00555393
 		public IPlayFlowT EnterFlow { get; set; }
 
-		// Token: 0x1700A447 RID: 42055
-		// (get) Token: 0x06024DDD RID: 151005 RVA: 0x00516600 File Offset: 0x00514800
-		// (set) Token: 0x06024DDE RID: 151006 RVA: 0x00516608 File Offset: 0x00514808
+		// Token: 0x1700ACD6 RID: 44246
+		// (get) Token: 0x06027016 RID: 159766 RVA: 0x0055719C File Offset: 0x0055539C
+		// (set) Token: 0x06027017 RID: 159767 RVA: 0x005571A4 File Offset: 0x005553A4
 		public IPlayFlowT HandInFailedFlow { get; set; }
 
-		// Token: 0x06024DDF RID: 151007 RVA: 0x00516611 File Offset: 0x00514811
+		// Token: 0x06027018 RID: 159768 RVA: 0x005571AD File Offset: 0x005553AD
 		public INpcUiInteractOnHandInItemT()
 		{
 			this.Type = ENpcUiInteractType.HandInItem;

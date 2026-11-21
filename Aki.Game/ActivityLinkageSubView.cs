@@ -10,34 +10,34 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010C2 RID: 4290
+// Token: 0x02000576 RID: 1398
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityLinkageSubView : ActivitySubViewBase
 {
-	// Token: 0x17000975 RID: 2421
-	// (get) Token: 0x06006FB3 RID: 28595 RVA: 0x0016BECB File Offset: 0x0016A0CB
-	// (set) Token: 0x06006FB4 RID: 28596 RVA: 0x0016BED3 File Offset: 0x0016A0D3
+	// Token: 0x17000995 RID: 2453
+	// (get) Token: 0x06004349 RID: 17225 RVA: 0x00174887 File Offset: 0x00172A87
+	// (set) Token: 0x0600434A RID: 17226 RVA: 0x0017488F File Offset: 0x00172A8F
 	protected ActivityLinkageData ActivityData { get; set; }
 
-	// Token: 0x17000976 RID: 2422
-	// (get) Token: 0x06006FB5 RID: 28597 RVA: 0x0016BEDC File Offset: 0x0016A0DC
-	// (set) Token: 0x06006FB6 RID: 28598 RVA: 0x0016BEE4 File Offset: 0x0016A0E4
+	// Token: 0x17000996 RID: 2454
+	// (get) Token: 0x0600434B RID: 17227 RVA: 0x00174898 File Offset: 0x00172A98
+	// (set) Token: 0x0600434C RID: 17228 RVA: 0x001748A0 File Offset: 0x00172AA0
 	private ActivityButtonItem ButtonItem { get; set; }
 
-	// Token: 0x17000977 RID: 2423
-	// (get) Token: 0x06006FB7 RID: 28599 RVA: 0x0016BEED File Offset: 0x0016A0ED
-	// (set) Token: 0x06006FB8 RID: 28600 RVA: 0x0016BEF5 File Offset: 0x0016A0F5
+	// Token: 0x17000997 RID: 2455
+	// (get) Token: 0x0600434D RID: 17229 RVA: 0x001748A9 File Offset: 0x00172AA9
+	// (set) Token: 0x0600434E RID: 17230 RVA: 0x001748B1 File Offset: 0x00172AB1
 	private int TabId { get; set; }
 
-	// Token: 0x17000978 RID: 2424
-	// (get) Token: 0x06006FB9 RID: 28601 RVA: 0x0016BEFE File Offset: 0x0016A0FE
-	// (set) Token: 0x06006FBA RID: 28602 RVA: 0x0016BF06 File Offset: 0x0016A106
+	// Token: 0x17000998 RID: 2456
+	// (get) Token: 0x0600434F RID: 17231 RVA: 0x001748BA File Offset: 0x00172ABA
+	// (set) Token: 0x06004350 RID: 17232 RVA: 0x001748C2 File Offset: 0x00172AC2
 	private ActivityLinkageTabData TabData { get; set; }
 
-	// Token: 0x17000979 RID: 2425
-	// (get) Token: 0x06006FBB RID: 28603 RVA: 0x0016BF0F File Offset: 0x0016A10F
-	// (set) Token: 0x06006FBC RID: 28604 RVA: 0x0016BF17 File Offset: 0x0016A117
+	// Token: 0x17000999 RID: 2457
+	// (get) Token: 0x06004351 RID: 17233 RVA: 0x001748CB File Offset: 0x00172ACB
+	// (set) Token: 0x06004352 RID: 17234 RVA: 0x001748D3 File Offset: 0x00172AD3
 	[Nullable(new byte[]
 	{
 		2,
@@ -53,9 +53,9 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		1
 	})] set; }
 
-	// Token: 0x1700097A RID: 2426
-	// (get) Token: 0x06006FBD RID: 28605 RVA: 0x0016BF20 File Offset: 0x0016A120
-	// (set) Token: 0x06006FBE RID: 28606 RVA: 0x0016BF28 File Offset: 0x0016A128
+	// Token: 0x1700099A RID: 2458
+	// (get) Token: 0x06004353 RID: 17235 RVA: 0x001748DC File Offset: 0x00172ADC
+	// (set) Token: 0x06004354 RID: 17236 RVA: 0x001748E4 File Offset: 0x00172AE4
 	[Nullable(new byte[]
 	{
 		2,
@@ -74,18 +74,18 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		1
 	})] set; }
 
-	// Token: 0x1700097B RID: 2427
-	// (get) Token: 0x06006FBF RID: 28607 RVA: 0x0016BF31 File Offset: 0x0016A131
-	// (set) Token: 0x06006FC0 RID: 28608 RVA: 0x0016BF39 File Offset: 0x0016A139
+	// Token: 0x1700099B RID: 2459
+	// (get) Token: 0x06004355 RID: 17237 RVA: 0x001748ED File Offset: 0x00172AED
+	// (set) Token: 0x06004356 RID: 17238 RVA: 0x001748F5 File Offset: 0x00172AF5
 	private ActivityLinkageUrl? UrlConfig { get; set; }
 
-	// Token: 0x06006FC1 RID: 28609 RVA: 0x0016BF42 File Offset: 0x0016A142
+	// Token: 0x06004357 RID: 17239 RVA: 0x001748FE File Offset: 0x00172AFE
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityLinkageData)this.ActivityBaseData;
 	}
 
-	// Token: 0x06006FC2 RID: 28610 RVA: 0x0016BF58 File Offset: 0x0016A158
+	// Token: 0x06004358 RID: 17240 RVA: 0x00174914 File Offset: 0x00172B14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -115,19 +115,19 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006FC3 RID: 28611 RVA: 0x0016C0CB File Offset: 0x0016A2CB
+	// Token: 0x06004359 RID: 17241 RVA: 0x00174A87 File Offset: 0x00172C87
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x06006FC4 RID: 28612 RVA: 0x0016C0E9 File Offset: 0x0016A2E9
+	// Token: 0x0600435A RID: 17242 RVA: 0x00174AA5 File Offset: 0x00172CA5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRedDot));
 	}
 
-	// Token: 0x06006FC5 RID: 28613 RVA: 0x0016C108 File Offset: 0x0016A308
+	// Token: 0x0600435B RID: 17243 RVA: 0x00174AC4 File Offset: 0x00172CC4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityLinkageSubView.<OnBeforeStartAsync>d__33 <OnBeforeStartAsync>d__;
@@ -138,7 +138,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006FC6 RID: 28614 RVA: 0x0016C14B File Offset: 0x0016A34B
+	// Token: 0x0600435C RID: 17244 RVA: 0x00174B07 File Offset: 0x00172D07
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid InitGridItem()
 	{
@@ -148,7 +148,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06006FC7 RID: 28615 RVA: 0x0016C164 File Offset: 0x0016A364
+	// Token: 0x0600435D RID: 17245 RVA: 0x00174B20 File Offset: 0x00172D20
 	[NullableContext(1)]
 	private ActivityLinkageTabItem InitActivityLinkageTabItem()
 	{
@@ -157,7 +157,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		return activityLinkageTabItem;
 	}
 
-	// Token: 0x06006FC8 RID: 28616 RVA: 0x0016C17D File Offset: 0x0016A37D
+	// Token: 0x0600435E RID: 17246 RVA: 0x00174B39 File Offset: 0x00172D39
 	protected override void OnBeforeShow()
 	{
 		UUIInturnAnimController uiInturnAnimController = base.GetUiInturnAnimController(9);
@@ -168,7 +168,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		uiInturnAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x06006FC9 RID: 28617 RVA: 0x0016C198 File Offset: 0x0016A398
+	// Token: 0x0600435F RID: 17247 RVA: 0x00174B54 File Offset: 0x00172D54
 	[NullableContext(1)]
 	public void TabItemToggleClick(int gridIndex, ActivityLinkageTabData tabData)
 	{
@@ -183,7 +183,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		LogReportController.Instance.LogReport(linkageSwitchModuleEvent);
 	}
 
-	// Token: 0x06006FCA RID: 28618 RVA: 0x0016C214 File Offset: 0x0016A414
+	// Token: 0x06004360 RID: 17248 RVA: 0x00174BD0 File Offset: 0x00172DD0
 	[NullableContext(1)]
 	private void RefreshUi(ActivityLinkageTabData tabData)
 	{
@@ -218,7 +218,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		this.UrlConfig = ConfigActivityLinkageUrlByIdAndIsNational.GetConfig(this.TabId, p1IsNational, true);
 	}
 
-	// Token: 0x06006FCB RID: 28619 RVA: 0x0016C390 File Offset: 0x0016A590
+	// Token: 0x06004361 RID: 17249 RVA: 0x00174D4C File Offset: 0x00172F4C
 	private void RefreshTimerText()
 	{
 		bool show = ConfigActivityLinkageById.GetConfig(this.TabId, true).Value.Show;
@@ -232,7 +232,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06006FCC RID: 28620 RVA: 0x0016C40B File Offset: 0x0016A60B
+	// Token: 0x06004362 RID: 17250 RVA: 0x00174DC7 File Offset: 0x00172FC7
 	private void OnRefreshRedDot(int id)
 	{
 		if (id != this.ActivityData.Id)
@@ -243,7 +243,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		this.RefreshButtonRedDot();
 	}
 
-	// Token: 0x06006FCD RID: 28621 RVA: 0x0016C430 File Offset: 0x0016A630
+	// Token: 0x06004363 RID: 17251 RVA: 0x00174DEC File Offset: 0x00172FEC
 	private void RefreshButtonRedDot()
 	{
 		bool redDotVisible = !this.ActivityData.IsReceiveReward(this.TabId);
@@ -255,7 +255,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		buttonItem.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x06006FCE RID: 28622 RVA: 0x0016C464 File Offset: 0x0016A664
+	// Token: 0x06004364 RID: 17252 RVA: 0x00174E20 File Offset: 0x00173020
 	protected override void OnTimer(float gap)
 	{
 		if (this.ActivityData.IsNeedShowTabsChange())
@@ -269,7 +269,7 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06006FCF RID: 28623 RVA: 0x0016C4D4 File Offset: 0x0016A6D4
+	// Token: 0x06004365 RID: 17253 RVA: 0x00174E90 File Offset: 0x00173090
 	private unsafe void OnClickGotoBtn()
 	{
 		if (string.IsNullOrEmpty(this.UrlConfig.Value.LinkUrl))
@@ -324,38 +324,38 @@ public class ActivityLinkageSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x02007690 RID: 30352
+	// Token: 0x02006824 RID: 26660
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040271FB RID: 160251
+		// Token: 0x04022544 RID: 140612
 		public const int TextureBg = 0;
 
-		// Token: 0x040271FC RID: 160252
+		// Token: 0x04022545 RID: 140613
 		public const int TextureImage = 1;
 
-		// Token: 0x040271FD RID: 160253
+		// Token: 0x04022546 RID: 140614
 		public const int TextStartDate = 2;
 
-		// Token: 0x040271FE RID: 160254
+		// Token: 0x04022547 RID: 140615
 		public const int TextEndDate = 3;
 
-		// Token: 0x040271FF RID: 160255
+		// Token: 0x04022548 RID: 140616
 		public const int TextLeftTime = 4;
 
-		// Token: 0x04027200 RID: 160256
+		// Token: 0x04022549 RID: 140617
 		public const int LayoutTabList = 5;
 
-		// Token: 0x04027201 RID: 160257
+		// Token: 0x0402254A RID: 140618
 		public const int ButtonGoto = 6;
 
-		// Token: 0x04027202 RID: 160258
+		// Token: 0x0402254B RID: 140619
 		public const int LayoutReward = 7;
 
-		// Token: 0x04027203 RID: 160259
+		// Token: 0x0402254C RID: 140620
 		public const int TextTitle = 8;
 
-		// Token: 0x04027204 RID: 160260
+		// Token: 0x0402254D RID: 140621
 		public const int ListAnimController = 9;
 	}
 }

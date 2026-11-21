@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000127 RID: 295
+	// Token: 0x02000138 RID: 312
 	[EnumExtensions]
 	public enum ERenderFlagType
 	{
-		// Token: 0x040005E2 RID: 1506
+		// Token: 0x0400061F RID: 1567
 		Fog,
-		// Token: 0x040005E3 RID: 1507
+		// Token: 0x04000620 RID: 1568
 		Atmosphere,
-		// Token: 0x040005E4 RID: 1508
+		// Token: 0x04000621 RID: 1569
 		InstancedFoliage,
-		// Token: 0x040005E5 RID: 1509
+		// Token: 0x04000622 RID: 1570
 		InstancedGrass,
-		// Token: 0x040005E6 RID: 1510
+		// Token: 0x04000623 RID: 1571
 		VolumetricFog,
-		// Token: 0x040005E7 RID: 1511
+		// Token: 0x04000624 RID: 1572
 		PostProcessing
 	}
 }

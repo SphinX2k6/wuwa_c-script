@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200061E RID: 1566
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006BB RID: 1723
 	public class IPrefabEffectConfig
 	{
-		// Token: 0x0600216A RID: 8554 RVA: 0x0005C864 File Offset: 0x0005AA64
+		// Token: 0x06002470 RID: 9328 RVA: 0x00063578 File Offset: 0x00061778
 		private IPrefabEffectConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600216B RID: 8555 RVA: 0x0005C89C File Offset: 0x0005AA9C
+		// Token: 0x06002471 RID: 9329 RVA: 0x000635B0 File Offset: 0x000617B0
 		public static IPrefabEffectConfig Create([Nullable(2)] IPrefabEffectConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600216C RID: 8556 RVA: 0x0005C8AF File Offset: 0x0005AAAF
+		// Token: 0x06002472 RID: 9330 RVA: 0x000635C3 File Offset: 0x000617C3
 		public static IPrefabEffectConfig CreateFromSetValue([Nullable(2)] IPrefabEffectConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600216D RID: 8557 RVA: 0x0005C8C2 File Offset: 0x0005AAC2
+		// Token: 0x06002473 RID: 9331 RVA: 0x000635D6 File Offset: 0x000617D6
 		public IPrefabEffectConfig_SetValue ToSetValue()
 		{
 			return new IPrefabEffectConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008E7 RID: 2279
-		// (get) Token: 0x0600216E RID: 8558 RVA: 0x0005C8E1 File Offset: 0x0005AAE1
-		// (set) Token: 0x0600216F RID: 8559 RVA: 0x0005C90C File Offset: 0x0005AB0C
+		// Token: 0x1700099E RID: 2462
+		// (get) Token: 0x06002474 RID: 9332 RVA: 0x000635F5 File Offset: 0x000617F5
+		// (set) Token: 0x06002475 RID: 9333 RVA: 0x00063620 File Offset: 0x00061820
 		public virtual int LevelTag
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008E8 RID: 2280
-		// (get) Token: 0x06002170 RID: 8560 RVA: 0x0005C91A File Offset: 0x0005AB1A
-		// (set) Token: 0x06002171 RID: 8561 RVA: 0x0005C945 File Offset: 0x0005AB45
+		// Token: 0x1700099F RID: 2463
+		// (get) Token: 0x06002476 RID: 9334 RVA: 0x0006362E File Offset: 0x0006182E
+		// (set) Token: 0x06002477 RID: 9335 RVA: 0x00063659 File Offset: 0x00061859
 		public virtual ESceneInteractionEffectState SceneInteractionEffectState
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400175B RID: 5979
+		// Token: 0x0400194D RID: 6477
 		[Nullable(2)]
 		protected IPrefabEffectConfig FbInstance;
 
-		// Token: 0x0400175C RID: 5980
+		// Token: 0x0400194E RID: 6478
 		[Nullable(2)]
 		protected IPrefabEffectConfig_SetValue PocoInterface;
 	}

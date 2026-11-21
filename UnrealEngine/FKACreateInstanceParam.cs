@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015DE RID: 5598
+	// Token: 0x020002D2 RID: 722
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KRDataAnalyticsPlugin.KACreateInstanceParam")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 144)]
 	public class FKACreateInstanceParam : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060142E8 RID: 82664 RVA: 0x001DA428 File Offset: 0x001D8628
+		// Token: 0x06004E13 RID: 19987 RVA: 0x0006D2CA File Offset: 0x0006B4CA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKACreateInstanceParam._ScriptStructPtr != 0) ? FKACreateInstanceParam._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KRDataAnalyticsPlugin.KACreateInstanceParam", ref FKACreateInstanceParam._ScriptStructPtr);
 		}
 
-		// Token: 0x17004F24 RID: 20260
-		// (get) Token: 0x060142E9 RID: 82665 RVA: 0x001DA44C File Offset: 0x001D864C
-		// (set) Token: 0x060142EA RID: 82666 RVA: 0x001DA45C File Offset: 0x001D865C
+		// Token: 0x17000EF7 RID: 3831
+		// (get) Token: 0x06004E14 RID: 19988 RVA: 0x0006D2EE File Offset: 0x0006B4EE
+		// (set) Token: 0x06004E15 RID: 19989 RVA: 0x0006D2FE File Offset: 0x0006B4FE
 		public unsafe int Index
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F25 RID: 20261
-		// (get) Token: 0x060142EB RID: 82667 RVA: 0x001DA46D File Offset: 0x001D866D
-		// (set) Token: 0x060142EC RID: 82668 RVA: 0x001DA481 File Offset: 0x001D8681
+		// Token: 0x17000EF8 RID: 3832
+		// (get) Token: 0x06004E16 RID: 19990 RVA: 0x0006D30F File Offset: 0x0006B50F
+		// (set) Token: 0x06004E17 RID: 19991 RVA: 0x0006D323 File Offset: 0x0006B523
 		public unsafe string ServerUrl
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F26 RID: 20262
-		// (get) Token: 0x060142ED RID: 82669 RVA: 0x001DA496 File Offset: 0x001D8696
-		// (set) Token: 0x060142EE RID: 82670 RVA: 0x001DA4AA File Offset: 0x001D86AA
+		// Token: 0x17000EF9 RID: 3833
+		// (get) Token: 0x06004E18 RID: 19992 RVA: 0x0006D338 File Offset: 0x0006B538
+		// (set) Token: 0x06004E19 RID: 19993 RVA: 0x0006D34C File Offset: 0x0006B54C
 		public unsafe string AppId
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F27 RID: 20263
-		// (get) Token: 0x060142EF RID: 82671 RVA: 0x001DA4BF File Offset: 0x001D86BF
-		// (set) Token: 0x060142F0 RID: 82672 RVA: 0x001DA4D3 File Offset: 0x001D86D3
+		// Token: 0x17000EFA RID: 3834
+		// (get) Token: 0x06004E1A RID: 19994 RVA: 0x0006D361 File Offset: 0x0006B561
+		// (set) Token: 0x06004E1B RID: 19995 RVA: 0x0006D375 File Offset: 0x0006B575
 		public unsafe string DistinctId
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F28 RID: 20264
-		// (get) Token: 0x060142F1 RID: 82673 RVA: 0x001DA4E8 File Offset: 0x001D86E8
-		// (set) Token: 0x060142F2 RID: 82674 RVA: 0x001DA4FC File Offset: 0x001D86FC
+		// Token: 0x17000EFB RID: 3835
+		// (get) Token: 0x06004E1C RID: 19996 RVA: 0x0006D38A File Offset: 0x0006B58A
+		// (set) Token: 0x06004E1D RID: 19997 RVA: 0x0006D39E File Offset: 0x0006B59E
 		public unsafe string AccountId
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F29 RID: 20265
-		// (get) Token: 0x060142F3 RID: 82675 RVA: 0x001DA511 File Offset: 0x001D8711
-		// (set) Token: 0x060142F4 RID: 82676 RVA: 0x001DA525 File Offset: 0x001D8725
+		// Token: 0x17000EFC RID: 3836
+		// (get) Token: 0x06004E1E RID: 19998 RVA: 0x0006D3B3 File Offset: 0x0006B5B3
+		// (set) Token: 0x06004E1F RID: 19999 RVA: 0x0006D3C7 File Offset: 0x0006B5C7
 		public unsafe string LogDisplayName
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2A RID: 20266
-		// (get) Token: 0x060142F5 RID: 82677 RVA: 0x001DA53A File Offset: 0x001D873A
-		// (set) Token: 0x060142F6 RID: 82678 RVA: 0x001DA54E File Offset: 0x001D874E
+		// Token: 0x17000EFD RID: 3837
+		// (get) Token: 0x06004E20 RID: 20000 RVA: 0x0006D3DC File Offset: 0x0006B5DC
+		// (set) Token: 0x06004E21 RID: 20001 RVA: 0x0006D3F0 File Offset: 0x0006B5F0
 		public unsafe string SaveDBPath
 		{
 			get
@@ -123,9 +123,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2B RID: 20267
-		// (get) Token: 0x060142F7 RID: 82679 RVA: 0x001DA563 File Offset: 0x001D8763
-		// (set) Token: 0x060142F8 RID: 82680 RVA: 0x001DA573 File Offset: 0x001D8773
+		// Token: 0x17000EFE RID: 3838
+		// (get) Token: 0x06004E22 RID: 20002 RVA: 0x0006D405 File Offset: 0x0006B605
+		// (set) Token: 0x06004E23 RID: 20003 RVA: 0x0006D415 File Offset: 0x0006B615
 		public unsafe int MaxNumInBatch
 		{
 			get
@@ -138,9 +138,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2C RID: 20268
-		// (get) Token: 0x060142F9 RID: 82681 RVA: 0x001DA584 File Offset: 0x001D8784
-		// (set) Token: 0x060142FA RID: 82682 RVA: 0x001DA594 File Offset: 0x001D8794
+		// Token: 0x17000EFF RID: 3839
+		// (get) Token: 0x06004E24 RID: 20004 RVA: 0x0006D426 File Offset: 0x0006B626
+		// (set) Token: 0x06004E25 RID: 20005 RVA: 0x0006D436 File Offset: 0x0006B636
 		public unsafe KAMode Mode
 		{
 			get
@@ -153,9 +153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2D RID: 20269
-		// (get) Token: 0x060142FB RID: 82683 RVA: 0x001DA5A5 File Offset: 0x001D87A5
-		// (set) Token: 0x060142FC RID: 82684 RVA: 0x001DA5B5 File Offset: 0x001D87B5
+		// Token: 0x17000F00 RID: 3840
+		// (get) Token: 0x06004E26 RID: 20006 RVA: 0x0006D447 File Offset: 0x0006B647
+		// (set) Token: 0x06004E27 RID: 20007 RVA: 0x0006D457 File Offset: 0x0006B657
 		public unsafe EKASaveMode SaveMode
 		{
 			get
@@ -168,9 +168,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2E RID: 20270
-		// (get) Token: 0x060142FD RID: 82685 RVA: 0x001DA5C6 File Offset: 0x001D87C6
-		// (set) Token: 0x060142FE RID: 82686 RVA: 0x001DA5D6 File Offset: 0x001D87D6
+		// Token: 0x17000F01 RID: 3841
+		// (get) Token: 0x06004E28 RID: 20008 RVA: 0x0006D468 File Offset: 0x0006B668
+		// (set) Token: 0x06004E29 RID: 20009 RVA: 0x0006D478 File Offset: 0x0006B678
 		public unsafe float FlushTimeInterval
 		{
 			get
@@ -183,9 +183,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F2F RID: 20271
-		// (get) Token: 0x060142FF RID: 82687 RVA: 0x001DA5E7 File Offset: 0x001D87E7
-		// (set) Token: 0x06014300 RID: 82688 RVA: 0x001DA600 File Offset: 0x001D8800
+		// Token: 0x17000F02 RID: 3842
+		// (get) Token: 0x06004E2A RID: 20010 RVA: 0x0006D489 File Offset: 0x0006B689
+		// (set) Token: 0x06004E2B RID: 20011 RVA: 0x0006D4A2 File Offset: 0x0006B6A2
 		public unsafe bool bUseUtf8
 		{
 			get
@@ -198,9 +198,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F30 RID: 20272
-		// (get) Token: 0x06014301 RID: 82689 RVA: 0x001DA630 File Offset: 0x001D8830
-		// (set) Token: 0x06014302 RID: 82690 RVA: 0x001DA649 File Offset: 0x001D8849
+		// Token: 0x17000F03 RID: 3843
+		// (get) Token: 0x06004E2C RID: 20012 RVA: 0x0006D4D2 File Offset: 0x0006B6D2
+		// (set) Token: 0x06004E2D RID: 20013 RVA: 0x0006D4EB File Offset: 0x0006B6EB
 		public unsafe bool bLogInitEnable
 		{
 			get
@@ -213,9 +213,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F31 RID: 20273
-		// (get) Token: 0x06014303 RID: 82691 RVA: 0x001DA679 File Offset: 0x001D8879
-		// (set) Token: 0x06014304 RID: 82692 RVA: 0x001DA692 File Offset: 0x001D8892
+		// Token: 0x17000F04 RID: 3844
+		// (get) Token: 0x06004E2E RID: 20014 RVA: 0x0006D51B File Offset: 0x0006B71B
+		// (set) Token: 0x06004E2F RID: 20015 RVA: 0x0006D534 File Offset: 0x0006B734
 		public unsafe bool bImmediateSave
 		{
 			get
@@ -228,9 +228,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F32 RID: 20274
-		// (get) Token: 0x06014305 RID: 82693 RVA: 0x001DA6C2 File Offset: 0x001D88C2
-		// (set) Token: 0x06014306 RID: 82694 RVA: 0x001DA6DB File Offset: 0x001D88DB
+		// Token: 0x17000F05 RID: 3845
+		// (get) Token: 0x06004E30 RID: 20016 RVA: 0x0006D564 File Offset: 0x0006B764
+		// (set) Token: 0x06004E31 RID: 20017 RVA: 0x0006D57D File Offset: 0x0006B77D
 		public unsafe bool bRuntimeInstance
 		{
 			get
@@ -243,9 +243,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F33 RID: 20275
-		// (get) Token: 0x06014307 RID: 82695 RVA: 0x001DA70B File Offset: 0x001D890B
-		// (set) Token: 0x06014308 RID: 82696 RVA: 0x001DA71B File Offset: 0x001D891B
+		// Token: 0x17000F06 RID: 3846
+		// (get) Token: 0x06004E32 RID: 20018 RVA: 0x0006D5AD File Offset: 0x0006B7AD
+		// (set) Token: 0x06004E33 RID: 20019 RVA: 0x0006D5BD File Offset: 0x0006B7BD
 		public unsafe float ExitWaitTime
 		{
 			get
@@ -258,9 +258,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F34 RID: 20276
-		// (get) Token: 0x06014309 RID: 82697 RVA: 0x001DA72C File Offset: 0x001D892C
-		// (set) Token: 0x0601430A RID: 82698 RVA: 0x001DA73C File Offset: 0x001D893C
+		// Token: 0x17000F07 RID: 3847
+		// (get) Token: 0x06004E34 RID: 20020 RVA: 0x0006D5CE File Offset: 0x0006B7CE
+		// (set) Token: 0x06004E35 RID: 20021 RVA: 0x0006D5DE File Offset: 0x0006B7DE
 		public unsafe int MaxPendingLog
 		{
 			get
@@ -273,9 +273,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F35 RID: 20277
-		// (get) Token: 0x0601430B RID: 82699 RVA: 0x001DA74D File Offset: 0x001D894D
-		// (set) Token: 0x0601430C RID: 82700 RVA: 0x001DA75D File Offset: 0x001D895D
+		// Token: 0x17000F08 RID: 3848
+		// (get) Token: 0x06004E36 RID: 20022 RVA: 0x0006D5EF File Offset: 0x0006B7EF
+		// (set) Token: 0x06004E37 RID: 20023 RVA: 0x0006D5FF File Offset: 0x0006B7FF
 		public unsafe float SendHttpTimeout
 		{
 			get
@@ -288,9 +288,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F36 RID: 20278
-		// (get) Token: 0x0601430D RID: 82701 RVA: 0x001DA76E File Offset: 0x001D896E
-		// (set) Token: 0x0601430E RID: 82702 RVA: 0x001DA787 File Offset: 0x001D8987
+		// Token: 0x17000F09 RID: 3849
+		// (get) Token: 0x06004E38 RID: 20024 RVA: 0x0006D610 File Offset: 0x0006B810
+		// (set) Token: 0x06004E39 RID: 20025 RVA: 0x0006D629 File Offset: 0x0006B829
 		public unsafe bool bExitFlush
 		{
 			get
@@ -303,9 +303,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F37 RID: 20279
-		// (get) Token: 0x0601430F RID: 82703 RVA: 0x001DA7B7 File Offset: 0x001D89B7
-		// (set) Token: 0x06014310 RID: 82704 RVA: 0x001DA7C7 File Offset: 0x001D89C7
+		// Token: 0x17000F0A RID: 3850
+		// (get) Token: 0x06004E3A RID: 20026 RVA: 0x0006D659 File Offset: 0x0006B859
+		// (set) Token: 0x06004E3B RID: 20027 RVA: 0x0006D669 File Offset: 0x0006B869
 		public unsafe float CalibrateIntervalTime
 		{
 			get
@@ -318,9 +318,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F38 RID: 20280
-		// (get) Token: 0x06014311 RID: 82705 RVA: 0x001DA7D8 File Offset: 0x001D89D8
-		// (set) Token: 0x06014312 RID: 82706 RVA: 0x001DA7F1 File Offset: 0x001D89F1
+		// Token: 0x17000F0B RID: 3851
+		// (get) Token: 0x06004E3C RID: 20028 RVA: 0x0006D67A File Offset: 0x0006B87A
+		// (set) Token: 0x06004E3D RID: 20029 RVA: 0x0006D693 File Offset: 0x0006B893
 		public unsafe bool bCalibratedStopTimer
 		{
 			get
@@ -333,9 +333,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F39 RID: 20281
-		// (get) Token: 0x06014313 RID: 82707 RVA: 0x001DA821 File Offset: 0x001D8A21
-		// (set) Token: 0x06014314 RID: 82708 RVA: 0x001DA831 File Offset: 0x001D8A31
+		// Token: 0x17000F0C RID: 3852
+		// (get) Token: 0x06004E3E RID: 20030 RVA: 0x0006D6C3 File Offset: 0x0006B8C3
+		// (set) Token: 0x06004E3F RID: 20031 RVA: 0x0006D6D3 File Offset: 0x0006B8D3
 		public unsafe bool bEnableCompressPlusOneLen
 		{
 			get
@@ -348,155 +348,128 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014315 RID: 82709 RVA: 0x001DA842 File Offset: 0x001D8A42
+		// Token: 0x06004E40 RID: 20032 RVA: 0x0006D6E4 File Offset: 0x0006B8E4
 		public FKACreateInstanceParam()
 		{
 		}
 
-		// Token: 0x06014316 RID: 82710 RVA: 0x001DA84C File Offset: 0x001D8A4C
-		public FKACreateInstanceParam(int Index, string ServerUrl, string AppId, string DistinctId, string AccountId, string LogDisplayName, string SaveDBPath, int MaxNumInBatch, KAMode Mode, EKASaveMode SaveMode, float FlushTimeInterval, bool bUseUtf8, bool bLogInitEnable, bool bImmediateSave, bool bRuntimeInstance, float ExitWaitTime, int MaxPendingLog, float SendHttpTimeout, bool bExitFlush, float CalibrateIntervalTime, bool bCalibratedStopTimer, bool bEnableCompressPlusOneLen)
-		{
-			this.Index = Index;
-			this.ServerUrl = ServerUrl;
-			this.AppId = AppId;
-			this.DistinctId = DistinctId;
-			this.AccountId = AccountId;
-			this.LogDisplayName = LogDisplayName;
-			this.SaveDBPath = SaveDBPath;
-			this.MaxNumInBatch = MaxNumInBatch;
-			this.Mode = Mode;
-			this.SaveMode = SaveMode;
-			this.FlushTimeInterval = FlushTimeInterval;
-			this.bUseUtf8 = bUseUtf8;
-			this.bLogInitEnable = bLogInitEnable;
-			this.bImmediateSave = bImmediateSave;
-			this.bRuntimeInstance = bRuntimeInstance;
-			this.ExitWaitTime = ExitWaitTime;
-			this.MaxPendingLog = MaxPendingLog;
-			this.SendHttpTimeout = SendHttpTimeout;
-			this.bExitFlush = bExitFlush;
-			this.CalibrateIntervalTime = CalibrateIntervalTime;
-			this.bCalibratedStopTimer = bCalibratedStopTimer;
-			this.bEnableCompressPlusOneLen = bEnableCompressPlusOneLen;
-		}
-
-		// Token: 0x06014317 RID: 82711 RVA: 0x001DA90C File Offset: 0x001D8B0C
+		// Token: 0x06004E41 RID: 20033 RVA: 0x0006D6EC File Offset: 0x0006B8EC
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKACreateInstanceParam.StaticStruct();
 		}
 
-		// Token: 0x06014318 RID: 82712 RVA: 0x001DA918 File Offset: 0x001D8B18
+		// Token: 0x06004E42 RID: 20034 RVA: 0x0006D6F8 File Offset: 0x0006B8F8
 		[NullableContext(2)]
 		public FKACreateInstanceParam(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014319 RID: 82713 RVA: 0x001DA922 File Offset: 0x001D8B22
+		// Token: 0x06004E43 RID: 20035 RVA: 0x0006D702 File Offset: 0x0006B902
 		public FKACreateInstanceParam(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601431A RID: 82714 RVA: 0x001DA92D File Offset: 0x001D8B2D
+		// Token: 0x06004E44 RID: 20036 RVA: 0x0006D70D File Offset: 0x0006B90D
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKACreateInstanceParam(Pointer, false, true);
 		}
 
-		// Token: 0x0601431B RID: 82715 RVA: 0x001DA937 File Offset: 0x001D8B37
+		// Token: 0x06004E45 RID: 20037 RVA: 0x0006D717 File Offset: 0x0006B917
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKACreateInstanceParam(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400AF9C RID: 44956
+		// Token: 0x04001F46 RID: 8006
 		public const string __ObjectPath = "/Script/KRDataAnalyticsPlugin.KACreateInstanceParam";
 
-		// Token: 0x0400AF9D RID: 44957
+		// Token: 0x04001F47 RID: 8007
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400AF9E RID: 44958
+		// Token: 0x04001F48 RID: 8008
 		internal static int __PropertyOffset_Index;
 
-		// Token: 0x0400AF9F RID: 44959
+		// Token: 0x04001F49 RID: 8009
 		internal static int __PropertyOffset_ServerUrl;
 
-		// Token: 0x0400AFA0 RID: 44960
+		// Token: 0x04001F4A RID: 8010
 		internal static int __PropertyOffset_AppId;
 
-		// Token: 0x0400AFA1 RID: 44961
+		// Token: 0x04001F4B RID: 8011
 		internal static int __PropertyOffset_DistinctId;
 
-		// Token: 0x0400AFA2 RID: 44962
+		// Token: 0x04001F4C RID: 8012
 		internal static int __PropertyOffset_AccountId;
 
-		// Token: 0x0400AFA3 RID: 44963
+		// Token: 0x04001F4D RID: 8013
 		internal static int __PropertyOffset_LogDisplayName;
 
-		// Token: 0x0400AFA4 RID: 44964
+		// Token: 0x04001F4E RID: 8014
 		internal static int __PropertyOffset_SaveDBPath;
 
-		// Token: 0x0400AFA5 RID: 44965
+		// Token: 0x04001F4F RID: 8015
 		internal static int __PropertyOffset_MaxNumInBatch;
 
-		// Token: 0x0400AFA6 RID: 44966
+		// Token: 0x04001F50 RID: 8016
 		internal static int __PropertyOffset_Mode;
 
-		// Token: 0x0400AFA7 RID: 44967
+		// Token: 0x04001F51 RID: 8017
 		internal static int __PropertyOffset_SaveMode;
 
-		// Token: 0x0400AFA8 RID: 44968
+		// Token: 0x04001F52 RID: 8018
 		internal static int __PropertyOffset_FlushTimeInterval;
 
-		// Token: 0x0400AFA9 RID: 44969
+		// Token: 0x04001F53 RID: 8019
 		internal static int __PropertyOffset_bUseUtf8;
 
-		// Token: 0x0400AFAA RID: 44970
+		// Token: 0x04001F54 RID: 8020
 		internal static byte __PropertyMask_bUseUtf8;
 
-		// Token: 0x0400AFAB RID: 44971
+		// Token: 0x04001F55 RID: 8021
 		internal static int __PropertyOffset_bLogInitEnable;
 
-		// Token: 0x0400AFAC RID: 44972
+		// Token: 0x04001F56 RID: 8022
 		internal static byte __PropertyMask_bLogInitEnable;
 
-		// Token: 0x0400AFAD RID: 44973
+		// Token: 0x04001F57 RID: 8023
 		internal static int __PropertyOffset_bImmediateSave;
 
-		// Token: 0x0400AFAE RID: 44974
+		// Token: 0x04001F58 RID: 8024
 		internal static byte __PropertyMask_bImmediateSave;
 
-		// Token: 0x0400AFAF RID: 44975
+		// Token: 0x04001F59 RID: 8025
 		internal static int __PropertyOffset_bRuntimeInstance;
 
-		// Token: 0x0400AFB0 RID: 44976
+		// Token: 0x04001F5A RID: 8026
 		internal static byte __PropertyMask_bRuntimeInstance;
 
-		// Token: 0x0400AFB1 RID: 44977
+		// Token: 0x04001F5B RID: 8027
 		internal static int __PropertyOffset_ExitWaitTime;
 
-		// Token: 0x0400AFB2 RID: 44978
+		// Token: 0x04001F5C RID: 8028
 		internal static int __PropertyOffset_MaxPendingLog;
 
-		// Token: 0x0400AFB3 RID: 44979
+		// Token: 0x04001F5D RID: 8029
 		internal static int __PropertyOffset_SendHttpTimeout;
 
-		// Token: 0x0400AFB4 RID: 44980
+		// Token: 0x04001F5E RID: 8030
 		internal static int __PropertyOffset_bExitFlush;
 
-		// Token: 0x0400AFB5 RID: 44981
+		// Token: 0x04001F5F RID: 8031
 		internal static byte __PropertyMask_bExitFlush;
 
-		// Token: 0x0400AFB6 RID: 44982
+		// Token: 0x04001F60 RID: 8032
 		internal static int __PropertyOffset_CalibrateIntervalTime;
 
-		// Token: 0x0400AFB7 RID: 44983
+		// Token: 0x04001F61 RID: 8033
 		internal static int __PropertyOffset_bCalibratedStopTimer;
 
-		// Token: 0x0400AFB8 RID: 44984
+		// Token: 0x04001F62 RID: 8034
 		internal static byte __PropertyMask_bCalibratedStopTimer;
 
-		// Token: 0x0400AFB9 RID: 44985
+		// Token: 0x04001F63 RID: 8035
 		internal static int __PropertyOffset_bEnableCompressPlusOneLen;
 	}
 }

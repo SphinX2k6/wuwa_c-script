@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006396 RID: 25494
+	// Token: 0x02005314 RID: 21268
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiMotorMainView : UiTickViewBase
 	{
-		// Token: 0x060401CC RID: 262604 RVA: 0x00F84A17 File Offset: 0x00F82C17
+		// Token: 0x06034E8D RID: 216717 RVA: 0x00ECB98B File Offset: 0x00EC9B8B
 		public MultiMotorMainView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060401CD RID: 262605 RVA: 0x00F84A38 File Offset: 0x00F82C38
+		// Token: 0x06034E8E RID: 216718 RVA: 0x00ECB9AC File Offset: 0x00EC9BAC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060401CE RID: 262606 RVA: 0x00F84BAC File Offset: 0x00F82DAC
+		// Token: 0x06034E8F RID: 216719 RVA: 0x00ECBB20 File Offset: 0x00EC9D20
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.MultiMotorRankInfoRefresh, new Action(this.OnMultiMotorLevelRankBattleUpdate));
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Add<int, int>(EEventName.MultiMotorBuffRefresh, new Action<int, int>(this.OnMultiMotorBuffRefresh));
 		}
 
-		// Token: 0x060401CF RID: 262607 RVA: 0x00F84C2C File Offset: 0x00F82E2C
+		// Token: 0x06034E90 RID: 216720 RVA: 0x00ECBBA0 File Offset: 0x00EC9DA0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.MultiMotorRankInfoRefresh, new Action(this.OnMultiMotorLevelRankBattleUpdate));
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Remove(EEventName.MultiMotorBuffRefresh, new Action<int, int>(this.OnMultiMotorBuffRefresh));
 		}
 
-		// Token: 0x060401D0 RID: 262608 RVA: 0x00F84CAC File Offset: 0x00F82EAC
+		// Token: 0x06034E91 RID: 216721 RVA: 0x00ECBC20 File Offset: 0x00EC9E20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MultiMotorMainView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060401D1 RID: 262609 RVA: 0x00F84CEF File Offset: 0x00F82EEF
+		// Token: 0x06034E92 RID: 216722 RVA: 0x00ECBC63 File Offset: 0x00EC9E63
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearBroadcastTimer();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}), true, true, 0);
 		}
 
-		// Token: 0x060401D2 RID: 262610 RVA: 0x00F84D24 File Offset: 0x00F82F24
+		// Token: 0x06034E93 RID: 216723 RVA: 0x00ECBC98 File Offset: 0x00EC9E98
 		private UniTask InitMoveCurve()
 		{
 			MultiMotorMainView.<InitMoveCurve>d__20 <InitMoveCurve>d__;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <InitMoveCurve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060401D3 RID: 262611 RVA: 0x00F84D68 File Offset: 0x00F82F68
+		// Token: 0x06034E94 RID: 216724 RVA: 0x00ECBCDC File Offset: 0x00EC9EDC
 		private UniTask InitLayout()
 		{
 			MultiMotorMainView.<InitLayout>d__21 <InitLayout>d__;
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <InitLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060401D4 RID: 262612 RVA: 0x00F84DAB File Offset: 0x00F82FAB
+		// Token: 0x06034E95 RID: 216725 RVA: 0x00ECBD1F File Offset: 0x00EC9F1F
 		private void InitGridItemHeight()
 		{
 			this.GridItemHeight = (int)base.GetItem(4).Height;
 		}
 
-		// Token: 0x060401D5 RID: 262613 RVA: 0x00F84DC0 File Offset: 0x00F82FC0
+		// Token: 0x06034E96 RID: 216726 RVA: 0x00ECBD34 File Offset: 0x00EC9F34
 		private UniTask CreateRankItem(int playerId, int index)
 		{
 			MultiMotorMainView.<CreateRankItem>d__23 <CreateRankItem>d__;
@@ -138,14 +138,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return <CreateRankItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060401D6 RID: 262614 RVA: 0x00F84E14 File Offset: 0x00F83014
+		// Token: 0x06034E97 RID: 216727 RVA: 0x00ECBD88 File Offset: 0x00EC9F88
 		private UUIItem CreateItemActor()
 		{
 			UUIItem item = base.GetItem(4);
 			return LguiUtil.Instance.CopyItem(item, base.GetItem(3));
 		}
 
-		// Token: 0x060401D7 RID: 262615 RVA: 0x00F84E3B File Offset: 0x00F8303B
+		// Token: 0x06034E98 RID: 216728 RVA: 0x00ECBDAF File Offset: 0x00EC9FAF
 		protected override void OnStart()
 		{
 			base.GetItem(5).SetUIActive(false);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			MoonTogetherModel.Instance.IsInMoonTogether = true;
 		}
 
-		// Token: 0x060401D8 RID: 262616 RVA: 0x00F84E68 File Offset: 0x00F83068
+		// Token: 0x06034E99 RID: 216729 RVA: 0x00ECBDDC File Offset: 0x00EC9FDC
 		protected override void OnBeforeShow()
 		{
 			MultiMotorController instance = MultiMotorController.Instance;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			instance.OnMultiMotorMainViewOpened();
 		}
 
-		// Token: 0x060401D9 RID: 262617 RVA: 0x00F84E7C File Offset: 0x00F8307C
+		// Token: 0x06034E9A RID: 216730 RVA: 0x00ECBDF0 File Offset: 0x00EC9FF0
 		private void ShowBeforeMatchStart()
 		{
 			Log.Instance.Info(ELogModule.MotorParkour, ELogAuthor.LJQ, "ShowBeforeMatchStart", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetItem(8).SetUIActive(false);
 		}
 
-		// Token: 0x060401DA RID: 262618 RVA: 0x00F84EC4 File Offset: 0x00F830C4
+		// Token: 0x06034E9B RID: 216731 RVA: 0x00ECBE38 File Offset: 0x00ECA038
 		private void ShowAfterMatchStart()
 		{
 			Log instance = Log.Instance;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.StartFlowTime = MultiMotorModel.Instance.StartFlowTime;
 		}
 
-		// Token: 0x060401DB RID: 262619 RVA: 0x00F84F3C File Offset: 0x00F8313C
+		// Token: 0x06034E9C RID: 216732 RVA: 0x00ECBEB0 File Offset: 0x00ECA0B0
 		private void OnMultiMotorPassLine(int playerId)
 		{
 			Dictionary<int, int> levelRankBattleMap = MultiMotorModel.Instance.GetLevelRankBattleMap();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ShowBroadcast(broadcastGroup);
 		}
 
-		// Token: 0x060401DC RID: 262620 RVA: 0x00F84F84 File Offset: 0x00F83184
+		// Token: 0x06034E9D RID: 216733 RVA: 0x00ECBEF8 File Offset: 0x00ECA0F8
 		private void OnMultiMotorBuffRefresh(int playerId, int buffId)
 		{
 			int? id = PlayerInfoModel.Instance.GetId();
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ShowBroadcast(motorBuffById.Value.BroadcastGroup);
 		}
 
-		// Token: 0x060401DD RID: 262621 RVA: 0x00F84FF0 File Offset: 0x00F831F0
+		// Token: 0x06034E9E RID: 216734 RVA: 0x00ECBF64 File Offset: 0x00ECA164
 		private void RefreshRankInfo()
 		{
 			Dictionary<int, int> levelRankBattleMap = MultiMotorModel.Instance.GetLevelRankBattleMap();
@@ -259,13 +259,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401DE RID: 262622 RVA: 0x00F85124 File Offset: 0x00F83324
+		// Token: 0x06034E9F RID: 216735 RVA: 0x00ECC098 File Offset: 0x00ECA298
 		private void OnMultiMotorLevelRankBattleUpdate()
 		{
 			this.RefreshRankInfo();
 		}
 
-		// Token: 0x060401DF RID: 262623 RVA: 0x00F8512C File Offset: 0x00F8332C
+		// Token: 0x06034EA0 RID: 216736 RVA: 0x00ECC0A0 File Offset: 0x00ECA2A0
 		protected override void OnTick(float delta)
 		{
 			this.MapItem.UpdatePlayerPosition();
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401E0 RID: 262624 RVA: 0x00F85198 File Offset: 0x00F83398
+		// Token: 0x06034EA1 RID: 216737 RVA: 0x00ECC10C File Offset: 0x00ECA30C
 		public void ShowBroadcast(int broadcastGroup)
 		{
 			IReadOnlyList<OnlineMotorBroadcast> motorBroadcastByGroup = MultiMotorConfig.Instance.GetMotorBroadcastByGroup(broadcastGroup);
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, 5000f, null, null, true, 1f);
 		}
 
-		// Token: 0x060401E1 RID: 262625 RVA: 0x00F85273 File Offset: 0x00F83473
+		// Token: 0x06034EA2 RID: 216738 RVA: 0x00ECC1E7 File Offset: 0x00ECA3E7
 		private void OnBroadcastSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401E2 RID: 262626 RVA: 0x00F8528F File Offset: 0x00F8348F
+		// Token: 0x06034EA3 RID: 216739 RVA: 0x00ECC203 File Offset: 0x00ECA403
 		private void ClearBroadcastTimer()
 		{
 			if (this.BroadcastTimerHandle != null)
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401E3 RID: 262627 RVA: 0x00F852AC File Offset: 0x00F834AC
+		// Token: 0x06034EA4 RID: 216740 RVA: 0x00ECC220 File Offset: 0x00ECA420
 		private void RefreshTimeText()
 		{
 			if (this.StartFlowTime == 0L)
@@ -348,78 +348,78 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0402167C RID: 136828
+		// Token: 0x0401BFAB RID: 114603
 		private const float TWEEN_DURATION = 0.3f;
 
-		// Token: 0x0402167D RID: 136829
+		// Token: 0x0401BFAC RID: 114604
 		private const int ITEM_HEIGHT_INTERVAL = 20;
 
-		// Token: 0x0402167E RID: 136830
+		// Token: 0x0401BFAD RID: 114605
 		private const int BROADCAST_TIME = 5000;
 
-		// Token: 0x0402167F RID: 136831
+		// Token: 0x0401BFAE RID: 114606
 		private MultiMotorLevelData LevelData;
 
-		// Token: 0x04021680 RID: 136832
+		// Token: 0x0401BFAF RID: 114607
 		private readonly Dictionary<int, MultiMotorRankItem> RankItemMap = new Dictionary<int, MultiMotorRankItem>();
 
-		// Token: 0x04021681 RID: 136833
+		// Token: 0x0401BFB0 RID: 114608
 		private readonly HashSet<int> CreatingRankItemSet = new HashSet<int>();
 
-		// Token: 0x04021682 RID: 136834
+		// Token: 0x0401BFB1 RID: 114609
 		protected UCurveFloat LerpCurve;
 
-		// Token: 0x04021683 RID: 136835
+		// Token: 0x0401BFB2 RID: 114610
 		protected float DefaultOffsetY;
 
-		// Token: 0x04021684 RID: 136836
+		// Token: 0x0401BFB3 RID: 114611
 		protected int GridItemHeight;
 
-		// Token: 0x04021685 RID: 136837
+		// Token: 0x0401BFB4 RID: 114612
 		private MultiMotorParkourMapItem MapItem;
 
-		// Token: 0x04021686 RID: 136838
+		// Token: 0x0401BFB5 RID: 114613
 		private long StartFlowTime;
 
-		// Token: 0x04021687 RID: 136839
+		// Token: 0x0401BFB6 RID: 114614
 		private LevelSequencePlayer BroadcastSequencePlayer;
 
-		// Token: 0x04021688 RID: 136840
+		// Token: 0x0401BFB7 RID: 114615
 		[Nullable(2)]
 		private TimerHandle BroadcastTimerHandle;
 
-		// Token: 0x0200C5A8 RID: 50600
+		// Token: 0x0200AF8F RID: 44943
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BAC4 RID: 244420
+			// Token: 0x04036425 RID: 222245
 			public const int TopMapItem = 0;
 
-			// Token: 0x0403BAC5 RID: 244421
+			// Token: 0x04036426 RID: 222246
 			public const int LapCountText = 1;
 
-			// Token: 0x0403BAC6 RID: 244422
+			// Token: 0x04036427 RID: 222247
 			public const int TimeText = 2;
 
-			// Token: 0x0403BAC7 RID: 244423
+			// Token: 0x04036428 RID: 222248
 			public const int ContentItem = 3;
 
-			// Token: 0x0403BAC8 RID: 244424
+			// Token: 0x04036429 RID: 222249
 			public const int RankTempItem = 4;
 
-			// Token: 0x0403BAC9 RID: 244425
+			// Token: 0x0403642A RID: 222250
 			public const int BroadcastItem = 5;
 
-			// Token: 0x0403BACA RID: 244426
+			// Token: 0x0403642B RID: 222251
 			public const int BroadcastTitleText = 6;
 
-			// Token: 0x0403BACB RID: 244427
+			// Token: 0x0403642C RID: 222252
 			public const int BroadcastDesText = 7;
 
-			// Token: 0x0403BACC RID: 244428
+			// Token: 0x0403642D RID: 222253
 			public const int MissionItem = 8;
 
-			// Token: 0x0403BACD RID: 244429
+			// Token: 0x0403642E RID: 222254
 			public const int TimeItem = 9;
 		}
 	}

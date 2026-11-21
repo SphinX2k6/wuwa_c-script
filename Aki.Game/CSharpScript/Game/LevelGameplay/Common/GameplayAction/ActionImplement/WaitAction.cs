@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 {
-	// Token: 0x02006F32 RID: 28466
+	// Token: 0x020060B3 RID: 24755
 	public class WaitAction : GameplayAction
 	{
-		// Token: 0x17009B1F RID: 39711
-		// (get) Token: 0x0604540D RID: 283661 RVA: 0x01122936 File Offset: 0x01120B36
+		// Token: 0x1700705E RID: 28766
+		// (get) Token: 0x0603B5BB RID: 243131 RVA: 0x010CC8E2 File Offset: 0x010CAAE2
 		protected override bool NeedTickInner
 		{
 			get
@@ -15,23 +15,23 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			}
 		}
 
-		// Token: 0x0604540E RID: 283662 RVA: 0x01122939 File Offset: 0x01120B39
+		// Token: 0x0603B5BC RID: 243132 RVA: 0x010CC8E5 File Offset: 0x010CAAE5
 		public void Init(float waitMillisecond)
 		{
 			this.WaitMillisecond = waitMillisecond;
 		}
 
-		// Token: 0x0604540F RID: 283663 RVA: 0x01122942 File Offset: 0x01120B42
+		// Token: 0x0603B5BD RID: 243133 RVA: 0x010CC8EE File Offset: 0x010CAAEE
 		protected override void OnExecuteAction()
 		{
 		}
 
-		// Token: 0x06045410 RID: 283664 RVA: 0x01122944 File Offset: 0x01120B44
+		// Token: 0x0603B5BE RID: 243134 RVA: 0x010CC8F0 File Offset: 0x010CAAF0
 		protected override void OnInterruptAction()
 		{
 		}
 
-		// Token: 0x06045411 RID: 283665 RVA: 0x01122946 File Offset: 0x01120B46
+		// Token: 0x0603B5BF RID: 243135 RVA: 0x010CC8F2 File Offset: 0x010CAAF2
 		public override void TickAction(float delta)
 		{
 			this.WaitMillisecond -= delta;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			}
 		}
 
-		// Token: 0x040241B5 RID: 147893
+		// Token: 0x0401F46A RID: 128106
 		private float WaitMillisecond;
 	}
 }

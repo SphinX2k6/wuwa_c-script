@@ -8,13 +8,13 @@ using CSharpScript.Core.Extension;
 
 namespace CSharpScript.Game.World.Model
 {
-	// Token: 0x02004529 RID: 17705
+	// Token: 0x0200344E RID: 13390
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class DamageModel : ModelBase
 	{
-		// Token: 0x0602DBB2 RID: 187314 RVA: 0x00A82228 File Offset: 0x00A80428
+		// Token: 0x06022279 RID: 139897 RVA: 0x009AD48E File Offset: 0x009AB68E
 		protected override bool OnInit()
 		{
 			this.UseConfigMapValue = (Info.Instance.IsPs5Platform() || CloudGameManager.Instance.IsCloudGame);
@@ -22,33 +22,28 @@ namespace CSharpScript.Game.World.Model
 			{
 				this.PreloadAllDamageConfigs();
 			}
-			if (Info.Instance.IsPlayInEditor)
-			{
-				this.ReloadCallback = new Action(this.OnConfigReload);
-				ConfigReloadHub.RegisterReloadCallback("db_damage.db", this.ReloadCallback);
-			}
 			return true;
 		}
 
-		// Token: 0x0602DBB3 RID: 187315 RVA: 0x00A82294 File Offset: 0x00A80494
+		// Token: 0x0602227A RID: 139898 RVA: 0x009AD4C0 File Offset: 0x009AB6C0
 		private void PreloadAllDamageConfigs()
 		{
 			Dictionary<long, Damage> dictionary = new Dictionary<long, Damage>();
-			IReadOnlyList<Damage> readOnlyList = Info.Instance.IsPlayInEditor ? ConfigDamageByAll.GetConfigList(false) : ConfigDamageByAll.GetConfigList(true);
-			if (readOnlyList != null)
+			IReadOnlyList<Damage> configList = ConfigDamageByAll.GetConfigList(true);
+			if (configList != null)
 			{
-				using (IEnumerator<Damage> enumerator = readOnlyList.GetEnumerator())
+				using (IEnumerator<Damage> enumerator = configList.GetEnumerator())
 				{
 					while (enumerator.MoveNext())
 					{
 						Damage value = enumerator.Current;
 						dictionary[value.Id] = value;
 					}
-					goto IL_75;
+					goto IL_61;
 				}
 			}
 			Log.Instance.Warn(ELogModule.Battle, ELogAuthor.GHY, "[Damage] 全量预热失败：GetConfigList 返回空，二级缓存未建立", default(ReadOnlySpan<ValueTuple<string, object>>));
-			IL_75:
+			IL_61:
 			this.DamageConfigMap = dictionary;
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Battle;
@@ -58,7 +53,7 @@ namespace CSharpScript.Game.World.Model
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602DBB4 RID: 187316 RVA: 0x00A82360 File Offset: 0x00A80560
+		// Token: 0x0602227B RID: 139899 RVA: 0x009AD578 File Offset: 0x009AB778
 		public void OnConfigReload()
 		{
 			this.DamageSnapshotMap.Clear();
@@ -70,7 +65,7 @@ namespace CSharpScript.Game.World.Model
 			Log.Instance.Info(ELogModule.Battle, ELogAuthor.GHY, "[热更][db_damage.db] 配置热更回调：已清空并重建全量二级缓存", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DBB5 RID: 187317 RVA: 0x00A823A4 File Offset: 0x00A805A4
+		// Token: 0x0602227C RID: 139900 RVA: 0x009AD5BC File Offset: 0x009AB7BC
 		public Damage? GetDamageConfigById(long damageId)
 		{
 			DamageSnapshot damageSnapshotById = this.GetDamageSnapshotById(damageId);
@@ -81,7 +76,7 @@ namespace CSharpScript.Game.World.Model
 			return new Damage?(damageSnapshotById.Config);
 		}
 
-		// Token: 0x0602DBB6 RID: 187318 RVA: 0x00A823D0 File Offset: 0x00A805D0
+		// Token: 0x0602227D RID: 139901 RVA: 0x009AD5E8 File Offset: 0x009AB7E8
 		[NullableContext(2)]
 		public DamageSnapshot GetDamageSnapshotById(long damageId)
 		{
@@ -112,7 +107,7 @@ namespace CSharpScript.Game.World.Model
 			return damageSnapshot;
 		}
 
-		// Token: 0x0602DBB7 RID: 187319 RVA: 0x00A8243B File Offset: 0x00A8063B
+		// Token: 0x0602227E RID: 139902 RVA: 0x009AD653 File Offset: 0x009AB853
 		protected override bool OnClear()
 		{
 			if (this.ReloadCallback != null)
@@ -129,8 +124,8 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x17007512 RID: 29970
-		// (get) Token: 0x0602DBB8 RID: 187320 RVA: 0x00A82479 File Offset: 0x00A80679
+		// Token: 0x170047C5 RID: 18373
+		// (get) Token: 0x0602227F RID: 139903 RVA: 0x009AD691 File Offset: 0x009AB891
 		public static DamageModel Instance
 		{
 			get
@@ -139,7 +134,7 @@ namespace CSharpScript.Game.World.Model
 			}
 		}
 
-		// Token: 0x0602DBB9 RID: 187321 RVA: 0x00A82480 File Offset: 0x00A80680
+		// Token: 0x06022280 RID: 139904 RVA: 0x009AD698 File Offset: 0x009AB898
 		public static DamageModel GetOrCreateInstance()
 		{
 			if (DamageModel._Instance == null)
@@ -149,7 +144,7 @@ namespace CSharpScript.Game.World.Model
 			return DamageModel._Instance;
 		}
 
-		// Token: 0x0602DBBA RID: 187322 RVA: 0x00A82494 File Offset: 0x00A80694
+		// Token: 0x06022281 RID: 139905 RVA: 0x009AD6AC File Offset: 0x009AB8AC
 		public static bool CreateInstance()
 		{
 			if (DamageModel._Instance != null)
@@ -160,41 +155,41 @@ namespace CSharpScript.Game.World.Model
 			return true;
 		}
 
-		// Token: 0x0602DBBB RID: 187323 RVA: 0x00A824AA File Offset: 0x00A806AA
+		// Token: 0x06022282 RID: 139906 RVA: 0x009AD6C2 File Offset: 0x009AB8C2
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DBBC RID: 187324 RVA: 0x00A824AC File Offset: 0x00A806AC
+		// Token: 0x06022283 RID: 139907 RVA: 0x009AD6C4 File Offset: 0x009AB8C4
 		public static void ResetStaticDefaultValue()
 		{
 			DamageModel._Instance = null;
 		}
 
-		// Token: 0x0602DBBD RID: 187325 RVA: 0x00A824B4 File Offset: 0x00A806B4
+		// Token: 0x06022284 RID: 139908 RVA: 0x009AD6CC File Offset: 0x009AB8CC
 		static DamageModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DamageModel.CreateStaticDefaultValue), new Action(DamageModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401869E RID: 99998
+		// Token: 0x04012CC2 RID: 76994
 		private const string DamageDbName = "db_damage.db";
 
-		// Token: 0x0401869F RID: 99999
+		// Token: 0x04012CC3 RID: 76995
 		[Nullable(2)]
 		private Dictionary<long, Damage> DamageConfigMap;
 
-		// Token: 0x040186A0 RID: 100000
+		// Token: 0x04012CC4 RID: 76996
 		private readonly Dictionary<long, DamageSnapshot> DamageSnapshotMap = new Dictionary<long, DamageSnapshot>();
 
-		// Token: 0x040186A1 RID: 100001
+		// Token: 0x04012CC5 RID: 76997
 		[Nullable(2)]
 		private Action ReloadCallback;
 
-		// Token: 0x040186A2 RID: 100002
+		// Token: 0x04012CC6 RID: 76998
 		private bool UseConfigMapValue;
 
-		// Token: 0x040186A3 RID: 100003
+		// Token: 0x04012CC7 RID: 76999
 		[Nullable(2)]
 		private static DamageModel _Instance;
 	}

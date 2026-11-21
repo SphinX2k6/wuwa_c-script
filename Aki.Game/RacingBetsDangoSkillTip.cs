@@ -5,16 +5,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200272A RID: 10026
+// Token: 0x02001C15 RID: 7189
 public class RacingBetsDangoSkillTip : UiViewBase
 {
-	// Token: 0x060148D6 RID: 84182 RVA: 0x00531724 File Offset: 0x0052F924
+	// Token: 0x06011DB8 RID: 73144 RVA: 0x0054043C File Offset: 0x0053E63C
 	[NullableContext(1)]
 	public RacingBetsDangoSkillTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060148D7 RID: 84183 RVA: 0x0053172D File Offset: 0x0052F92D
+	// Token: 0x06011DB9 RID: 73145 RVA: 0x00540445 File Offset: 0x0053E645
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class RacingBetsDangoSkillTip : UiViewBase
 		};
 	}
 
-	// Token: 0x060148D8 RID: 84184 RVA: 0x00531768 File Offset: 0x0052F968
+	// Token: 0x06011DBA RID: 73146 RVA: 0x00540480 File Offset: 0x0053E680
 	protected override void OnBeforeShow()
 	{
 		object[] array = this.OpenParam as object[];
@@ -43,7 +43,7 @@ public class RacingBetsDangoSkillTip : UiViewBase
 		text.SetText(dangoData.GetDangoActiveSkillDesc(), true);
 	}
 
-	// Token: 0x060148D9 RID: 84185 RVA: 0x005317CC File Offset: 0x0052F9CC
+	// Token: 0x06011DBB RID: 73147 RVA: 0x005404E4 File Offset: 0x0053E6E4
 	protected override void OnAfterPlayStartSequence()
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -63,12 +63,12 @@ public class RacingBetsDangoSkillTip : UiViewBase
 		}, null, null);
 	}
 
-	// Token: 0x02008D88 RID: 36232
+	// Token: 0x02007F10 RID: 32528
 	private enum EComponent
 	{
-		// Token: 0x0402DEDB RID: 188123
+		// Token: 0x040291F1 RID: 168433
 		SkillIcon,
-		// Token: 0x0402DEDC RID: 188124
+		// Token: 0x040291F2 RID: 168434
 		SkillText
 	}
 }

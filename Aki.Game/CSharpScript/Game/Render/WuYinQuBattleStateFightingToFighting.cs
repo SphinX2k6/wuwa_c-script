@@ -6,10 +6,10 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004596 RID: 17814
+	// Token: 0x020034BE RID: 13502
 	public class WuYinQuBattleStateFightingToFighting : WuYinQuBattleStateBase
 	{
-		// Token: 0x0602DF04 RID: 188164 RVA: 0x00A9014C File Offset: 0x00A8E34C
+		// Token: 0x060225EE RID: 140782 RVA: 0x009BC36C File Offset: 0x009BA56C
 		[NullableContext(1)]
 		public WuYinQuBattleStateFightingToFighting(WuYinQuBattleActor Owner, EWuYinQuBattleState State, [Nullable(new byte[]
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602DF05 RID: 188165 RVA: 0x00A90160 File Offset: 0x00A8E360
+		// Token: 0x060225EF RID: 140783 RVA: 0x009BC380 File Offset: 0x009BA580
 		protected override void OnEnter(EWuYinQuBattleState? lastState)
 		{
 			AKuroLevelSequenceActor levelSequenceActor = this.Owner.GetKuroLevelSequenceActor();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF06 RID: 188166 RVA: 0x00A90258 File Offset: 0x00A8E458
+		// Token: 0x060225F0 RID: 140784 RVA: 0x009BC478 File Offset: 0x009BA678
 		private void OnEnterAsync()
 		{
 			this.Timer = 0f;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Render
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "进入战斗过度阶段", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602DF07 RID: 188167 RVA: 0x00A904EC File Offset: 0x00A8E6EC
+		// Token: 0x060225F1 RID: 140785 RVA: 0x009BC70C File Offset: 0x009BA90C
 		protected override void OnUpdate(float delta)
 		{
 			EWuYinQuState currentBattleState = this.Owner.GetCurrentBattleState();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Render
 			this.Timer += delta / 1000f;
 		}
 
-		// Token: 0x0602DF08 RID: 188168 RVA: 0x00A90574 File Offset: 0x00A8E774
+		// Token: 0x060225F2 RID: 140786 RVA: 0x009BC794 File Offset: 0x009BA994
 		protected override void OnExit(EWuYinQuBattleState lastState)
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "退出战斗过度阶段", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -189,20 +189,20 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018859 RID: 100441
+		// Token: 0x04012E94 RID: 77460
 		protected float Timer;
 
-		// Token: 0x0401885A RID: 100442
+		// Token: 0x04012E95 RID: 77461
 		protected bool LastUseFlowmapSky;
 
-		// Token: 0x0401885B RID: 100443
+		// Token: 0x04012E96 RID: 77462
 		protected bool CurrentUseFlowmapSky;
 
-		// Token: 0x0401885C RID: 100444
+		// Token: 0x04012E97 RID: 77463
 		[Nullable(2)]
 		private ULevelSequence SeqenceData;
 
-		// Token: 0x0401885D RID: 100445
+		// Token: 0x04012E98 RID: 77464
 		private int SeqenceDataLoading = -1;
 	}
 }

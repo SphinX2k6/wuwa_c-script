@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E30 RID: 7728
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002063 RID: 8291
 	public class ISetNpcGroupPerformType
 	{
-		// Token: 0x0600A54F RID: 42319 RVA: 0x00176840 File Offset: 0x00174A40
+		// Token: 0x0600AFF7 RID: 45047 RVA: 0x0018C248 File Offset: 0x0018A448
 		private ISetNpcGroupPerformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A550 RID: 42320 RVA: 0x00176878 File Offset: 0x00174A78
+		// Token: 0x0600AFF8 RID: 45048 RVA: 0x0018C280 File Offset: 0x0018A480
 		public static ISetNpcGroupPerformType Create([Nullable(2)] ISetNpcGroupPerformType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A551 RID: 42321 RVA: 0x0017688B File Offset: 0x00174A8B
+		// Token: 0x0600AFF9 RID: 45049 RVA: 0x0018C293 File Offset: 0x0018A493
 		public static ISetNpcGroupPerformType CreateFromSetValue([Nullable(2)] ISetNpcGroupPerformType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A552 RID: 42322 RVA: 0x0017689E File Offset: 0x00174A9E
+		// Token: 0x0600AFFA RID: 45050 RVA: 0x0018C2A6 File Offset: 0x0018A4A6
 		public ISetNpcGroupPerformType_SetValue ToSetValue()
 		{
 			return new ISetNpcGroupPerformType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032B6 RID: 12982
-		// (get) Token: 0x0600A553 RID: 42323 RVA: 0x001768B1 File Offset: 0x00174AB1
-		// (set) Token: 0x0600A554 RID: 42324 RVA: 0x001768DC File Offset: 0x00174ADC
+		// Token: 0x17003575 RID: 13685
+		// (get) Token: 0x0600AFFB RID: 45051 RVA: 0x0018C2B9 File Offset: 0x0018A4B9
+		// (set) Token: 0x0600AFFC RID: 45052 RVA: 0x0018C2E4 File Offset: 0x0018A4E4
 		public virtual ENpcGroupPerformType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062DB RID: 25307
+		// Token: 0x040068B2 RID: 26802
 		[Nullable(2)]
 		protected ISetNpcGroupPerformType FbInstance;
 
-		// Token: 0x040062DC RID: 25308
+		// Token: 0x040068B3 RID: 26803
 		[Nullable(2)]
 		protected ISetNpcGroupPerformType_SetValue PocoInterface;
 	}

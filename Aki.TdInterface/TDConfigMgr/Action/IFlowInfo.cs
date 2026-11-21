@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.EditorObject;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A93 RID: 6803
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C28 RID: 7208
 	public class IFlowInfo : IEditorObject
 	{
-		// Token: 0x060091B4 RID: 37300 RVA: 0x00152FB8 File Offset: 0x001511B8
+		// Token: 0x0600991E RID: 39198 RVA: 0x00162EE4 File Offset: 0x001610E4
 		private IFlowInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060091B5 RID: 37301 RVA: 0x00152FF0 File Offset: 0x001511F0
+		// Token: 0x0600991F RID: 39199 RVA: 0x00162F1C File Offset: 0x0016111C
 		public static IFlowInfo Create([Nullable(2)] IFlowInfo instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060091B6 RID: 37302 RVA: 0x00153003 File Offset: 0x00151203
+		// Token: 0x06009920 RID: 39200 RVA: 0x00162F2F File Offset: 0x0016112F
 		public static IFlowInfo CreateFromSetValue([Nullable(2)] IFlowInfo_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060091B7 RID: 37303 RVA: 0x00153018 File Offset: 0x00151218
+		// Token: 0x06009921 RID: 39201 RVA: 0x00162F44 File Offset: 0x00161144
 		public new IFlowInfo_SetValue ToSetValue()
 		{
 			return new IFlowInfo_SetValue
@@ -70,15 +68,16 @@ namespace Aki.TDConfigMgr.Action
 				DungeonId = this.DungeonId,
 				_folded = this._Folded,
 				_selectedStateId = this._SelectedStateId,
+				_selectedStateIds = this._SelectedStateIds,
 				VarContext = this.VarContext,
 				States = this.States,
 				EdIsReserved = this.EdIsReserved
 			};
 		}
 
-		// Token: 0x17002E53 RID: 11859
-		// (get) Token: 0x060091B8 RID: 37304 RVA: 0x001530EA File Offset: 0x001512EA
-		// (set) Token: 0x060091B9 RID: 37305 RVA: 0x00153115 File Offset: 0x00151315
+		// Token: 0x17003060 RID: 12384
+		// (get) Token: 0x06009922 RID: 39202 RVA: 0x00163022 File Offset: 0x00161222
+		// (set) Token: 0x06009923 RID: 39203 RVA: 0x0016304D File Offset: 0x0016124D
 		public new virtual string ObjType
 		{
 			get
@@ -99,20 +98,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E54 RID: 11860
-		// (get) Token: 0x060091BA RID: 37306 RVA: 0x00153123 File Offset: 0x00151323
-		// (set) Token: 0x060091BB RID: 37307 RVA: 0x0015314A File Offset: 0x0015134A
+		// Token: 0x17003061 RID: 12385
+		// (get) Token: 0x06009924 RID: 39204 RVA: 0x0016305B File Offset: 0x0016125B
+		// (set) Token: 0x06009925 RID: 39205 RVA: 0x00163082 File Offset: 0x00161282
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> Children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -130,7 +129,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -138,20 +137,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E55 RID: 11861
-		// (get) Token: 0x060091BC RID: 37308 RVA: 0x00153158 File Offset: 0x00151358
-		// (set) Token: 0x060091BD RID: 37309 RVA: 0x0015317F File Offset: 0x0015137F
+		// Token: 0x17003062 RID: 12386
+		// (get) Token: 0x06009926 RID: 39206 RVA: 0x00163090 File Offset: 0x00161290
+		// (set) Token: 0x06009927 RID: 39207 RVA: 0x001630B7 File Offset: 0x001612B7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> Reference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -169,7 +168,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -177,20 +176,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E56 RID: 11862
-		// (get) Token: 0x060091BE RID: 37310 RVA: 0x0015318D File Offset: 0x0015138D
-		// (set) Token: 0x060091BF RID: 37311 RVA: 0x001531B4 File Offset: 0x001513B4
+		// Token: 0x17003063 RID: 12387
+		// (get) Token: 0x06009928 RID: 39208 RVA: 0x001630C5 File Offset: 0x001612C5
+		// (set) Token: 0x06009929 RID: 39209 RVA: 0x001630EC File Offset: 0x001612EC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> WeakReference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -208,7 +207,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -216,9 +215,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E57 RID: 11863
-		// (get) Token: 0x060091C0 RID: 37312 RVA: 0x001531C2 File Offset: 0x001513C2
-		// (set) Token: 0x060091C1 RID: 37313 RVA: 0x001531D9 File Offset: 0x001513D9
+		// Token: 0x17003064 RID: 12388
+		// (get) Token: 0x0600992A RID: 39210 RVA: 0x001630FA File Offset: 0x001612FA
+		// (set) Token: 0x0600992B RID: 39211 RVA: 0x00163111 File Offset: 0x00161311
 		[Nullable(2)]
 		public override string EdPlannedBranch
 		{
@@ -238,20 +237,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E58 RID: 11864
-		// (get) Token: 0x060091C2 RID: 37314 RVA: 0x001531E7 File Offset: 0x001513E7
-		// (set) Token: 0x060091C3 RID: 37315 RVA: 0x001531FE File Offset: 0x001513FE
+		// Token: 0x17003065 RID: 12389
+		// (get) Token: 0x0600992C RID: 39212 RVA: 0x0016311F File Offset: 0x0016131F
+		// (set) Token: 0x0600992D RID: 39213 RVA: 0x00163136 File Offset: 0x00161336
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> EdTextRef
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -264,7 +263,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -272,20 +271,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E59 RID: 11865
-		// (get) Token: 0x060091C4 RID: 37316 RVA: 0x0015320C File Offset: 0x0015140C
-		// (set) Token: 0x060091C5 RID: 37317 RVA: 0x00153223 File Offset: 0x00151423
+		// Token: 0x17003066 RID: 12390
+		// (get) Token: 0x0600992E RID: 39214 RVA: 0x00163144 File Offset: 0x00161344
+		// (set) Token: 0x0600992F RID: 39215 RVA: 0x0016315B File Offset: 0x0016135B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> _children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -298,7 +297,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -306,20 +305,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5A RID: 11866
-		// (get) Token: 0x060091C6 RID: 37318 RVA: 0x00153231 File Offset: 0x00151431
-		// (set) Token: 0x060091C7 RID: 37319 RVA: 0x00153248 File Offset: 0x00151448
+		// Token: 0x17003067 RID: 12391
+		// (get) Token: 0x06009930 RID: 39216 RVA: 0x00163169 File Offset: 0x00161369
+		// (set) Token: 0x06009931 RID: 39217 RVA: 0x00163180 File Offset: 0x00161380
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<string> _reference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -332,7 +331,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -340,9 +339,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5B RID: 11867
-		// (get) Token: 0x060091C8 RID: 37320 RVA: 0x00153256 File Offset: 0x00151456
-		// (set) Token: 0x060091C9 RID: 37321 RVA: 0x00153281 File Offset: 0x00151481
+		// Token: 0x17003068 RID: 12392
+		// (get) Token: 0x06009932 RID: 39218 RVA: 0x0016318E File Offset: 0x0016138E
+		// (set) Token: 0x06009933 RID: 39219 RVA: 0x001631B9 File Offset: 0x001613B9
 		public virtual int Id
 		{
 			get
@@ -363,9 +362,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5C RID: 11868
-		// (get) Token: 0x060091CA RID: 37322 RVA: 0x0015328F File Offset: 0x0015148F
-		// (set) Token: 0x060091CB RID: 37323 RVA: 0x001532BA File Offset: 0x001514BA
+		// Token: 0x17003069 RID: 12393
+		// (get) Token: 0x06009934 RID: 39220 RVA: 0x001631C7 File Offset: 0x001613C7
+		// (set) Token: 0x06009935 RID: 39221 RVA: 0x001631F2 File Offset: 0x001613F2
 		public virtual string Name
 		{
 			get
@@ -386,9 +385,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5D RID: 11869
-		// (get) Token: 0x060091CC RID: 37324 RVA: 0x001532C8 File Offset: 0x001514C8
-		// (set) Token: 0x060091CD RID: 37325 RVA: 0x00153302 File Offset: 0x00151502
+		// Token: 0x1700306A RID: 12394
+		// (get) Token: 0x06009936 RID: 39222 RVA: 0x00163200 File Offset: 0x00161400
+		// (set) Token: 0x06009937 RID: 39223 RVA: 0x0016323A File Offset: 0x0016143A
 		public virtual int? DungeonId
 		{
 			get
@@ -410,9 +409,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5E RID: 11870
-		// (get) Token: 0x060091CE RID: 37326 RVA: 0x00153310 File Offset: 0x00151510
-		// (set) Token: 0x060091CF RID: 37327 RVA: 0x0015334A File Offset: 0x0015154A
+		// Token: 0x1700306B RID: 12395
+		// (get) Token: 0x06009938 RID: 39224 RVA: 0x00163248 File Offset: 0x00161448
+		// (set) Token: 0x06009939 RID: 39225 RVA: 0x00163282 File Offset: 0x00161482
 		public virtual bool? _Folded
 		{
 			get
@@ -434,9 +433,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E5F RID: 11871
-		// (get) Token: 0x060091D0 RID: 37328 RVA: 0x00153358 File Offset: 0x00151558
-		// (set) Token: 0x060091D1 RID: 37329 RVA: 0x00153392 File Offset: 0x00151592
+		// Token: 0x1700306C RID: 12396
+		// (get) Token: 0x0600993A RID: 39226 RVA: 0x00163290 File Offset: 0x00161490
+		// (set) Token: 0x0600993B RID: 39227 RVA: 0x001632CA File Offset: 0x001614CA
 		public virtual int? _SelectedStateId
 		{
 			get
@@ -458,9 +457,36 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E60 RID: 11872
-		// (get) Token: 0x060091D2 RID: 37330 RVA: 0x001533A0 File Offset: 0x001515A0
-		// (set) Token: 0x060091D3 RID: 37331 RVA: 0x001533C7 File Offset: 0x001515C7
+		// Token: 0x1700306D RID: 12397
+		// (get) Token: 0x0600993C RID: 39228 RVA: 0x001632D8 File Offset: 0x001614D8
+		// (set) Token: 0x0600993D RID: 39229 RVA: 0x001632FF File Offset: 0x001614FF
+		[Nullable(2)]
+		public virtual List<int> _SelectedStateIds
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance._SelectedStateIds;
+				}
+				IFlowInfo_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface._selectedStateIds;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco()._selectedStateIds = value;
+			}
+		}
+
+		// Token: 0x1700306E RID: 12398
+		// (get) Token: 0x0600993E RID: 39230 RVA: 0x0016330D File Offset: 0x0016150D
+		// (set) Token: 0x0600993F RID: 39231 RVA: 0x00163334 File Offset: 0x00161534
 		[Nullable(2)]
 		public virtual IVarContext VarContext
 		{
@@ -485,9 +511,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E61 RID: 11873
-		// (get) Token: 0x060091D4 RID: 37332 RVA: 0x001533D8 File Offset: 0x001515D8
-		// (set) Token: 0x060091D5 RID: 37333 RVA: 0x0015346B File Offset: 0x0015166B
+		// Token: 0x1700306F RID: 12399
+		// (get) Token: 0x06009940 RID: 39232 RVA: 0x00163344 File Offset: 0x00161544
+		// (set) Token: 0x06009941 RID: 39233 RVA: 0x001633D7 File Offset: 0x001615D7
 		public virtual List<IStateInfo> States
 		{
 			get
@@ -523,9 +549,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E62 RID: 11874
-		// (get) Token: 0x060091D6 RID: 37334 RVA: 0x00153480 File Offset: 0x00151680
-		// (set) Token: 0x060091D7 RID: 37335 RVA: 0x001534AA File Offset: 0x001516AA
+		// Token: 0x17003070 RID: 12400
+		// (get) Token: 0x06009942 RID: 39234 RVA: 0x001633EC File Offset: 0x001615EC
+		// (set) Token: 0x06009943 RID: 39235 RVA: 0x00163416 File Offset: 0x00161616
 		public virtual bool? EdIsReserved
 		{
 			get
@@ -542,18 +568,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059CC RID: 22988
+		// Token: 0x04005E31 RID: 24113
 		[Nullable(2)]
 		protected new IFlowInfo FbInstance;
 
-		// Token: 0x040059CD RID: 22989
+		// Token: 0x04005E32 RID: 24114
 		[Nullable(2)]
 		protected new IFlowInfo_SetValue PocoInterface;
 
-		// Token: 0x040059CE RID: 22990
+		// Token: 0x04005E33 RID: 24115
 		private List<IStateInfo> _StatesCache;
 
-		// Token: 0x040059CF RID: 22991
+		// Token: 0x04005E34 RID: 24116
 		private bool _StatesInited;
 	}
 }

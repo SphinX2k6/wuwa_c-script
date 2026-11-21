@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000229 RID: 553
+	// Token: 0x0200023B RID: 571
 	public class ConfigDrinksFlavorRangeByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000CFA RID: 3322 RVA: 0x000A2E70 File Offset: 0x000A1070
+		// Token: 0x06000D66 RID: 3430 RVA: 0x000A8DA8 File Offset: 0x000A6FA8
 		static ConfigDrinksFlavorRangeByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDrinksFlavorRangeByGroupId.CreateStaticDefaultValue), new Action(ConfigDrinksFlavorRangeByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000CFB RID: 3323 RVA: 0x000A2E90 File Offset: 0x000A1090
+		// Token: 0x06000D67 RID: 3431 RVA: 0x000A8DC8 File Offset: 0x000A6FC8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDrinksFlavorRangeByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000CFC RID: 3324 RVA: 0x000A2F0F File Offset: 0x000A110F
+		// Token: 0x06000D68 RID: 3432 RVA: 0x000A8E47 File Offset: 0x000A7047
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDrinksFlavorRangeByGroupId.LogPair = null;
 			ConfigDrinksFlavorRangeByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x06000CFD RID: 3325 RVA: 0x000A2F1D File Offset: 0x000A111D
+		// Token: 0x06000D69 RID: 3433 RVA: 0x000A8E55 File Offset: 0x000A7055
 		public static void Init()
 		{
 			ConfigDrinksFlavorRangeByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigDrinksFlavorRangeByGroupId.HandleId, "db_drinks.db", "select BinData from `DrinksFlavorRange` where FlavorGroupId=?");
 		}
 
-		// Token: 0x06000CFE RID: 3326 RVA: 0x000A2F38 File Offset: 0x000A1138
+		// Token: 0x06000D6A RID: 3434 RVA: 0x000A8E70 File Offset: 0x000A7070
 		[NullableContext(2)]
 		public static IReadOnlyList<DrinksFlavorRange> GetConfigList(int p0FlavorGroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000F03 RID: 3843
+		// Token: 0x04000F81 RID: 3969
 		private const string DB = "db_drinks.db";
 
-		// Token: 0x04000F04 RID: 3844
+		// Token: 0x04000F82 RID: 3970
 		private const string FILE = "t.调饮料.xlsx";
 
-		// Token: 0x04000F05 RID: 3845
+		// Token: 0x04000F83 RID: 3971
 		private const string TABLE = "DrinksFlavorRange";
 
-		// Token: 0x04000F06 RID: 3846
+		// Token: 0x04000F84 RID: 3972
 		private const string COMMAND = "select BinData from `DrinksFlavorRange` where FlavorGroupId=?";
 
-		// Token: 0x04000F07 RID: 3847
+		// Token: 0x04000F85 RID: 3973
 		private const string KEY_PREFIX = "DrinksFlavorRangeByGroupId";
 
-		// Token: 0x04000F08 RID: 3848
+		// Token: 0x04000F86 RID: 3974
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000F09 RID: 3849
+		// Token: 0x04000F87 RID: 3975
 		private static int HandleId;
 	}
 }

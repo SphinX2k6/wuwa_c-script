@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001931 RID: 6449
+	// Token: 0x02001ABA RID: 6842
 	public class IConstantCameraShake_SetValue
 	{
-		// Token: 0x0400567A RID: 22138
+		// Token: 0x04005ACA RID: 23242
 		public ECameraShakeType Type;
 	}
 }

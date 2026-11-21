@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200243D RID: 9277
+	// Token: 0x0200078E RID: 1934
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSpawnable")]
 	[UnrealStructLayout(160, 16, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 160)]
 	public class FMovieSceneSpawnable : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06022C8C RID: 142476 RVA: 0x00336E5F File Offset: 0x0033505F
+		// Token: 0x0600A734 RID: 42804 RVA: 0x000F6CBB File Offset: 0x000F4EBB
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMovieSceneSpawnable._ScriptStructPtr != 0) ? FMovieSceneSpawnable._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/MovieScene.MovieSceneSpawnable", ref FMovieSceneSpawnable._ScriptStructPtr);
 		}
 
-		// Token: 0x170085BE RID: 34238
-		// (get) Token: 0x06022C8D RID: 142477 RVA: 0x00336E83 File Offset: 0x00335083
-		// (set) Token: 0x06022C8E RID: 142478 RVA: 0x00336E97 File Offset: 0x00335097
+		// Token: 0x17001F0E RID: 7950
+		// (get) Token: 0x0600A735 RID: 42805 RVA: 0x000F6CDF File Offset: 0x000F4EDF
+		// (set) Token: 0x0600A736 RID: 42806 RVA: 0x000F6CF3 File Offset: 0x000F4EF3
 		public unsafe FTransform SpawnTransform
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085BF RID: 34239
-		// (get) Token: 0x06022C8F RID: 142479 RVA: 0x00336EAC File Offset: 0x003350AC
-		// (set) Token: 0x06022C90 RID: 142480 RVA: 0x00336EEF File Offset: 0x003350EF
+		// Token: 0x17001F0F RID: 7951
+		// (get) Token: 0x0600A737 RID: 42807 RVA: 0x000F6D08 File Offset: 0x000F4F08
+		// (set) Token: 0x0600A738 RID: 42808 RVA: 0x000F6D4B File Offset: 0x000F4F4B
 		public TArray<FName> Tags
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C0 RID: 34240
-		// (get) Token: 0x06022C91 RID: 142481 RVA: 0x00336EFD File Offset: 0x003350FD
-		// (set) Token: 0x06022C92 RID: 142482 RVA: 0x00336F0D File Offset: 0x0033510D
+		// Token: 0x17001F10 RID: 7952
+		// (get) Token: 0x0600A739 RID: 42809 RVA: 0x000F6D59 File Offset: 0x000F4F59
+		// (set) Token: 0x0600A73A RID: 42810 RVA: 0x000F6D69 File Offset: 0x000F4F69
 		public unsafe bool bContinuouslyRespawn
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C1 RID: 34241
-		// (get) Token: 0x06022C93 RID: 142483 RVA: 0x00336F1E File Offset: 0x0033511E
-		// (set) Token: 0x06022C94 RID: 142484 RVA: 0x00336F2E File Offset: 0x0033512E
+		// Token: 0x17001F11 RID: 7953
+		// (get) Token: 0x0600A73B RID: 42811 RVA: 0x000F6D7A File Offset: 0x000F4F7A
+		// (set) Token: 0x0600A73C RID: 42812 RVA: 0x000F6D8A File Offset: 0x000F4F8A
 		public unsafe bool bEvaluateTracksWhenNotSpawned
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C2 RID: 34242
-		// (get) Token: 0x06022C95 RID: 142485 RVA: 0x00336F3F File Offset: 0x0033513F
-		// (set) Token: 0x06022C96 RID: 142486 RVA: 0x00336F53 File Offset: 0x00335153
+		// Token: 0x17001F12 RID: 7954
+		// (get) Token: 0x0600A73D RID: 42813 RVA: 0x000F6D9B File Offset: 0x000F4F9B
+		// (set) Token: 0x0600A73E RID: 42814 RVA: 0x000F6DAF File Offset: 0x000F4FAF
 		public unsafe FGuid Guid
 		{
 			get
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C3 RID: 34243
-		// (get) Token: 0x06022C97 RID: 142487 RVA: 0x00336F68 File Offset: 0x00335168
-		// (set) Token: 0x06022C98 RID: 142488 RVA: 0x00336F7C File Offset: 0x0033517C
+		// Token: 0x17001F13 RID: 7955
+		// (get) Token: 0x0600A73F RID: 42815 RVA: 0x000F6DC4 File Offset: 0x000F4FC4
+		// (set) Token: 0x0600A740 RID: 42816 RVA: 0x000F6DD8 File Offset: 0x000F4FD8
 		public unsafe string Name
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C4 RID: 34244
-		// (get) Token: 0x06022C99 RID: 142489 RVA: 0x00336F91 File Offset: 0x00335191
-		// (set) Token: 0x06022C9A RID: 142490 RVA: 0x00336FA5 File Offset: 0x003351A5
+		// Token: 0x17001F14 RID: 7956
+		// (get) Token: 0x0600A741 RID: 42817 RVA: 0x000F6DED File Offset: 0x000F4FED
+		// (set) Token: 0x0600A742 RID: 42818 RVA: 0x000F6E01 File Offset: 0x000F5001
 		[Nullable(2)]
 		public unsafe UObject ObjectTemplate
 		{
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C5 RID: 34245
-		// (get) Token: 0x06022C9B RID: 142491 RVA: 0x00336FBC File Offset: 0x003351BC
-		// (set) Token: 0x06022C9C RID: 142492 RVA: 0x00336FFF File Offset: 0x003351FF
+		// Token: 0x17001F15 RID: 7957
+		// (get) Token: 0x0600A743 RID: 42819 RVA: 0x000F6E18 File Offset: 0x000F5018
+		// (set) Token: 0x0600A744 RID: 42820 RVA: 0x000F6E5B File Offset: 0x000F505B
 		public TArray<FGuid> ChildPossessables
 		{
 			get
@@ -154,24 +154,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170085C6 RID: 34246
-		// (get) Token: 0x06022C9D RID: 142493 RVA: 0x0033700D File Offset: 0x0033520D
-		// (set) Token: 0x06022C9E RID: 142494 RVA: 0x0033701D File Offset: 0x0033521D
-		public unsafe ESpawnOwnership Ownership
-		{
-			get
-			{
-				return (ESpawnOwnership)(*(base.NativePtr + (IntPtr)FMovieSceneSpawnable.__PropertyOffset_Ownership));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FMovieSceneSpawnable.__PropertyOffset_Ownership) = (byte)value;
-			}
-		}
-
-		// Token: 0x170085C7 RID: 34247
-		// (get) Token: 0x06022C9F RID: 142495 RVA: 0x0033702E File Offset: 0x0033522E
-		// (set) Token: 0x06022CA0 RID: 142496 RVA: 0x00337042 File Offset: 0x00335242
+		// Token: 0x17001F16 RID: 7958
+		// (get) Token: 0x0600A745 RID: 42821 RVA: 0x000F6E69 File Offset: 0x000F5069
+		// (set) Token: 0x0600A746 RID: 42822 RVA: 0x000F6E7D File Offset: 0x000F507D
 		public unsafe FName LevelName
 		{
 			get
@@ -184,97 +169,79 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022CA1 RID: 142497 RVA: 0x00337057 File Offset: 0x00335257
+		// Token: 0x0600A747 RID: 42823 RVA: 0x000F6E92 File Offset: 0x000F5092
 		public FMovieSceneSpawnable()
 		{
 		}
 
-		// Token: 0x06022CA2 RID: 142498 RVA: 0x00337060 File Offset: 0x00335260
-		public FMovieSceneSpawnable(FTransform SpawnTransform, TArray<FName> Tags, bool bContinuouslyRespawn, bool bEvaluateTracksWhenNotSpawned, FGuid Guid, string Name, UObject ObjectTemplate, TArray<FGuid> ChildPossessables, ESpawnOwnership Ownership, UClassStackOnlyPtr GeneratedClass_DEPRECATED, FName LevelName)
-		{
-			this.SpawnTransform = SpawnTransform;
-			this.Tags = Tags;
-			this.bContinuouslyRespawn = bContinuouslyRespawn;
-			this.bEvaluateTracksWhenNotSpawned = bEvaluateTracksWhenNotSpawned;
-			this.Guid = Guid;
-			this.Name = Name;
-			this.ObjectTemplate = ObjectTemplate;
-			this.ChildPossessables = ChildPossessables;
-			this.Ownership = Ownership;
-			this.LevelName = LevelName;
-		}
-
-		// Token: 0x06022CA3 RID: 142499 RVA: 0x003370C0 File Offset: 0x003352C0
+		// Token: 0x0600A748 RID: 42824 RVA: 0x000F6E9A File Offset: 0x000F509A
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMovieSceneSpawnable.StaticStruct();
 		}
 
-		// Token: 0x06022CA4 RID: 142500 RVA: 0x003370CC File Offset: 0x003352CC
+		// Token: 0x0600A749 RID: 42825 RVA: 0x000F6EA6 File Offset: 0x000F50A6
 		[NullableContext(2)]
 		public FMovieSceneSpawnable(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06022CA5 RID: 142501 RVA: 0x003370D6 File Offset: 0x003352D6
+		// Token: 0x0600A74A RID: 42826 RVA: 0x000F6EB0 File Offset: 0x000F50B0
 		public FMovieSceneSpawnable(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06022CA6 RID: 142502 RVA: 0x003370E1 File Offset: 0x003352E1
+		// Token: 0x0600A74B RID: 42827 RVA: 0x000F6EBB File Offset: 0x000F50BB
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMovieSceneSpawnable(Pointer, false, true);
 		}
 
-		// Token: 0x06022CA7 RID: 142503 RVA: 0x003370EB File Offset: 0x003352EB
+		// Token: 0x0600A74C RID: 42828 RVA: 0x000F6EC5 File Offset: 0x000F50C5
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMovieSceneSpawnable(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04012927 RID: 76071
+		// Token: 0x04004797 RID: 18327
 		public const string __ObjectPath = "/Script/MovieScene.MovieSceneSpawnable";
 
-		// Token: 0x04012928 RID: 76072
+		// Token: 0x04004798 RID: 18328
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04012929 RID: 76073
+		// Token: 0x04004799 RID: 18329
 		internal static int __PropertyOffset_SpawnTransform;
 
-		// Token: 0x0401292A RID: 76074
+		// Token: 0x0400479A RID: 18330
 		internal static int __PropertyOffset_Tags;
 
-		// Token: 0x0401292B RID: 76075
+		// Token: 0x0400479B RID: 18331
 		[Nullable(2)]
 		private TArray<FName> _Tags;
 
-		// Token: 0x0401292C RID: 76076
+		// Token: 0x0400479C RID: 18332
 		internal static int __PropertyOffset_bContinuouslyRespawn;
 
-		// Token: 0x0401292D RID: 76077
+		// Token: 0x0400479D RID: 18333
 		internal static int __PropertyOffset_bEvaluateTracksWhenNotSpawned;
 
-		// Token: 0x0401292E RID: 76078
+		// Token: 0x0400479E RID: 18334
 		internal static int __PropertyOffset_Guid;
 
-		// Token: 0x0401292F RID: 76079
+		// Token: 0x0400479F RID: 18335
 		internal static int __PropertyOffset_Name;
 
-		// Token: 0x04012930 RID: 76080
+		// Token: 0x040047A0 RID: 18336
 		internal static int __PropertyOffset_ObjectTemplate;
 
-		// Token: 0x04012931 RID: 76081
+		// Token: 0x040047A1 RID: 18337
 		internal static int __PropertyOffset_ChildPossessables;
 
-		// Token: 0x04012932 RID: 76082
+		// Token: 0x040047A2 RID: 18338
 		[Nullable(2)]
 		private TArray<FGuid> _ChildPossessables;
 
-		// Token: 0x04012933 RID: 76083
-		internal static int __PropertyOffset_Ownership;
-
-		// Token: 0x04012934 RID: 76084
+		// Token: 0x040047A3 RID: 18339
 		internal static int __PropertyOffset_LevelName;
 	}
 }

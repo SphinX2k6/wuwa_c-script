@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005731 RID: 22321
+	// Token: 0x02005D38 RID: 23864
 	public class IPhysHandleConfigT
 	{
-		// Token: 0x1700A65C RID: 42588
-		// (get) Token: 0x060255D6 RID: 153046 RVA: 0x00527DA0 File Offset: 0x00525FA0
-		// (set) Token: 0x060255D7 RID: 153047 RVA: 0x00527DA8 File Offset: 0x00525FA8
+		// Token: 0x1700AF80 RID: 44928
+		// (get) Token: 0x06027AF6 RID: 162550 RVA: 0x0056DF2C File Offset: 0x0056C12C
+		// (set) Token: 0x06027AF7 RID: 162551 RVA: 0x0056DF34 File Offset: 0x0056C134
 		public int PhysHandleLinearDamping { get; set; }
 
-		// Token: 0x1700A65D RID: 42589
-		// (get) Token: 0x060255D8 RID: 153048 RVA: 0x00527DB1 File Offset: 0x00525FB1
-		// (set) Token: 0x060255D9 RID: 153049 RVA: 0x00527DB9 File Offset: 0x00525FB9
+		// Token: 0x1700AF81 RID: 44929
+		// (get) Token: 0x06027AF8 RID: 162552 RVA: 0x0056DF3D File Offset: 0x0056C13D
+		// (set) Token: 0x06027AF9 RID: 162553 RVA: 0x0056DF45 File Offset: 0x0056C145
 		public int PhysHandleAngularStiffness { get; set; }
 
-		// Token: 0x1700A65E RID: 42590
-		// (get) Token: 0x060255DA RID: 153050 RVA: 0x00527DC2 File Offset: 0x00525FC2
-		// (set) Token: 0x060255DB RID: 153051 RVA: 0x00527DCA File Offset: 0x00525FCA
+		// Token: 0x1700AF82 RID: 44930
+		// (get) Token: 0x06027AFA RID: 162554 RVA: 0x0056DF4E File Offset: 0x0056C14E
+		// (set) Token: 0x06027AFB RID: 162555 RVA: 0x0056DF56 File Offset: 0x0056C156
 		public int PhysHandleLinearStiffness { get; set; }
 
-		// Token: 0x1700A65F RID: 42591
-		// (get) Token: 0x060255DC RID: 153052 RVA: 0x00527DD3 File Offset: 0x00525FD3
-		// (set) Token: 0x060255DD RID: 153053 RVA: 0x00527DDB File Offset: 0x00525FDB
+		// Token: 0x1700AF83 RID: 44931
+		// (get) Token: 0x06027AFC RID: 162556 RVA: 0x0056DF5F File Offset: 0x0056C15F
+		// (set) Token: 0x06027AFD RID: 162557 RVA: 0x0056DF67 File Offset: 0x0056C167
 		public int PhysHandleAngularDamping { get; set; }
 
-		// Token: 0x060255DE RID: 153054 RVA: 0x00527DE4 File Offset: 0x00525FE4
+		// Token: 0x06027AFE RID: 162558 RVA: 0x0056DF70 File Offset: 0x0056C170
 		public IPhysHandleConfigT()
 		{
 			this.PhysHandleLinearDamping = 0;

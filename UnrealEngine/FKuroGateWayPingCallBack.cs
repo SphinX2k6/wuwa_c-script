@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019F4 RID: 6644
+	// Token: 0x0200047A RID: 1146
 	public sealed class FKuroGateWayPingCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018A06 RID: 100870 RVA: 0x00244B5D File Offset: 0x00242D5D
+		// Token: 0x06006C83 RID: 27779 RVA: 0x0009E361 File Offset: 0x0009C561
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroGateWayPingCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018A07 RID: 100871 RVA: 0x00244B69 File Offset: 0x00242D69
+		// Token: 0x06006C84 RID: 27780 RVA: 0x0009E36D File Offset: 0x0009C56D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroGateWayPingCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroGateWayPingCallBack._FunctionPtr;
 		}
 
-		// Token: 0x06018A08 RID: 100872 RVA: 0x00244B8C File Offset: 0x00242D8C
+		// Token: 0x06006C85 RID: 27781 RVA: 0x0009E390 File Offset: 0x0009C590
 		public FKuroGateWayPingCallBack()
 		{
 		}
 
-		// Token: 0x06018A09 RID: 100873 RVA: 0x00244B94 File Offset: 0x00242D94
+		// Token: 0x06006C86 RID: 27782 RVA: 0x0009E398 File Offset: 0x0009C598
 		[NullableContext(2)]
 		public FKuroGateWayPingCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018A0A RID: 100874 RVA: 0x00244B9E File Offset: 0x00242D9E
+		// Token: 0x06006C87 RID: 27783 RVA: 0x0009E3A2 File Offset: 0x0009C5A2
 		public FKuroGateWayPingCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018A0B RID: 100875 RVA: 0x00244BA9 File Offset: 0x00242DA9
+		// Token: 0x06006C88 RID: 27784 RVA: 0x0009E3AD File Offset: 0x0009C5AD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string, int, double, EKuroNetworkPingResponseStatus>) ?? ((Action<string, int, double, EKuroNetworkPingResponseStatus>)Delegate.CreateDelegate(typeof(Action<string, int, double, EKuroNetworkPingResponseStatus>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018A0C RID: 100876 RVA: 0x00244BDB File Offset: 0x00242DDB
+		// Token: 0x06006C89 RID: 27785 RVA: 0x0009E3DF File Offset: 0x0009C5DF
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string, int, double, EKuroNetworkPingResponseStatus> Callback)
 		{
 			if (FKuroGateWayPingCallBack.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroGateWayPingCallBack.RegisterId);
 		}
 
-		// Token: 0x06018A0D RID: 100877 RVA: 0x00244C18 File Offset: 0x00242E18
+		// Token: 0x06006C8A RID: 27786 RVA: 0x0009E41C File Offset: 0x0009C61C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string Address, int Port, double Time, EKuroNetworkPingResponseStatus Result)
 		{
 			FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams* ptr = stackalloc FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroGateWayPingCallBack._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06018A0E RID: 100878 RVA: 0x00244C84 File Offset: 0x00242E84
+		// Token: 0x06006C8B RID: 27787 RVA: 0x0009E488 File Offset: 0x0009C688
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, int, double, EKuroNetworkPingResponseStatus> action = target as Action<string, int, double, EKuroNetworkPingResponseStatus>;
@@ -96,43 +93,43 @@ namespace UnrealEngine
 			action(arg, ((FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams*)__Parameters)->Port, ((FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams*)__Parameters)->Time, ((FKuroGateWayPingCallBack.__FKuroGateWayPingCallBack_DelegateParams*)__Parameters)->Result);
 		}
 
-		// Token: 0x0400D4FA RID: 54522
+		// Token: 0x04002E5C RID: 11868
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D4FB RID: 54523
+		// Token: 0x04002E5D RID: 11869
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.KuroGateWayPingCallBack__DelegateSignature";
 
-		// Token: 0x0400D4FC RID: 54524
+		// Token: 0x04002E5E RID: 11870
 		private static int RegisterId;
 
-		// Token: 0x0200309F RID: 12447
+		// Token: 0x02000B7F RID: 2943
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FKuroGateWayPingCallBack_DelegateParams
+		private ref struct __FKuroGateWayPingCallBack_DelegateParams
 		{
-			// Token: 0x04016DC8 RID: 93640
+			// Token: 0x04005CD9 RID: 23769
 			[FieldOffset(0)]
 			public FString Address;
 
-			// Token: 0x04016DC9 RID: 93641
+			// Token: 0x04005CDA RID: 23770
 			[FieldOffset(16)]
 			public int Port;
 
-			// Token: 0x04016DCA RID: 93642
+			// Token: 0x04005CDB RID: 23771
 			[FieldOffset(24)]
 			public double Time;
 
-			// Token: 0x04016DCB RID: 93643
+			// Token: 0x04005CDC RID: 23772
 			[FieldOffset(32)]
 			public EKuroNetworkPingResponseStatus Result;
 		}
 
-		// Token: 0x020030A0 RID: 12448
+		// Token: 0x02000B80 RID: 2944
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016DCC RID: 93644
+			// Token: 0x04005CDD RID: 23773
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

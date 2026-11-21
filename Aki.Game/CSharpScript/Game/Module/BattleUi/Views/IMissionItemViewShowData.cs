@@ -4,36 +4,36 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D79 RID: 23929
+	// Token: 0x02004D5B RID: 19803
 	[NullableContext(2)]
 	public interface IMissionItemViewShowData
 	{
-		// Token: 0x17008E28 RID: 36392
-		// (get) Token: 0x0603CBBA RID: 248762
+		// Token: 0x170061FA RID: 25082
+		// (get) Token: 0x06031B16 RID: 203542
 		EMissionItemViewDataSource DataSource { get; }
 
-		// Token: 0x17008E29 RID: 36393
-		// (get) Token: 0x0603CBBB RID: 248763
+		// Token: 0x170061FB RID: 25083
+		// (get) Token: 0x06031B17 RID: 203543
 		long Id { get; }
 
-		// Token: 0x17008E2A RID: 36394
-		// (get) Token: 0x0603CBBC RID: 248764
+		// Token: 0x170061FC RID: 25084
+		// (get) Token: 0x06031B18 RID: 203544
 		int ShowPriority { get; }
 
-		// Token: 0x17008E2B RID: 36395
-		// (get) Token: 0x0603CBBD RID: 248765
+		// Token: 0x170061FD RID: 25085
+		// (get) Token: 0x06031B19 RID: 203545
 		int TrackIconConfigId { get; }
 
-		// Token: 0x17008E2C RID: 36396
-		// (get) Token: 0x0603CBBE RID: 248766
+		// Token: 0x170061FE RID: 25086
+		// (get) Token: 0x06031B1A RID: 203546
 		string TitleTextKey { get; }
 
-		// Token: 0x17008E2D RID: 36397
-		// (get) Token: 0x0603CBBF RID: 248767
+		// Token: 0x170061FF RID: 25087
+		// (get) Token: 0x06031B1B RID: 203547
 		MissionViewStepTextInfoBase MainStepInfo { get; }
 
-		// Token: 0x17008E2E RID: 36398
-		// (get) Token: 0x0603CBC0 RID: 248768
+		// Token: 0x17006200 RID: 25088
+		// (get) Token: 0x06031B1C RID: 203548
 		[Nullable(new byte[]
 		{
 			2,
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			1
 		})] get; }
 
-		// Token: 0x17008E2F RID: 36399
-		// (get) Token: 0x0603CBC1 RID: 248769
+		// Token: 0x17006201 RID: 25089
+		// (get) Token: 0x06031B1D RID: 203549
 		long? ParentId { get; }
 	}
 }

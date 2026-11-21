@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F5 RID: 9205
+	// Token: 0x0200268C RID: 9868
 	public static class ERogueRewardReceiveTypeExtensions
 	{
-		// Token: 0x0600C84D RID: 51277 RVA: 0x001D5124 File Offset: 0x001D3324
+		// Token: 0x0600D4D0 RID: 54480 RVA: 0x001EE8D0 File Offset: 0x001ECAD0
 		public static string ToEnumString(this ERogueRewardReceiveType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C84E RID: 51278 RVA: 0x001D515C File Offset: 0x001D335C
+		// Token: 0x0600D4D1 RID: 54481 RVA: 0x001EE908 File Offset: 0x001ECB08
 		public static ERogueRewardReceiveType FromString(string name)
 		{
 			ERogueRewardReceiveType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C84F RID: 51279 RVA: 0x001D5185 File Offset: 0x001D3385
+		// Token: 0x0600D4D2 RID: 54482 RVA: 0x001EE931 File Offset: 0x001ECB31
 		public static bool TryFromString(string name, out ERogueRewardReceiveType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C850 RID: 51280 RVA: 0x001D51BE File Offset: 0x001D33BE
+		// Token: 0x0600D4D3 RID: 54483 RVA: 0x001EE96A File Offset: 0x001ECB6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C851 RID: 51281 RVA: 0x001D51D6 File Offset: 0x001D33D6
+		// Token: 0x0600D4D4 RID: 54484 RVA: 0x001EE982 File Offset: 0x001ECB82
 		public static ERogueRewardReceiveType[] GetValues()
 		{
 			return new ERogueRewardReceiveType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C852 RID: 51282 RVA: 0x001D51E2 File Offset: 0x001D33E2
+		// Token: 0x0600D4D5 RID: 54485 RVA: 0x001EE98E File Offset: 0x001ECB8E
 		public static string[] GetNames()
 		{
 			return new string[]

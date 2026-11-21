@@ -4,24 +4,24 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200131A RID: 4890
+// Token: 0x020007CE RID: 1998
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessHelperViewController
 {
-	// Token: 0x060087A9 RID: 34729 RVA: 0x001CF5D6 File Offset: 0x001CD7D6
+	// Token: 0x06005B44 RID: 23364 RVA: 0x001D8442 File Offset: 0x001D6642
 	public void RegisterView(BusinessHelperView view)
 	{
 		this.View = view;
 	}
 
-	// Token: 0x060087AA RID: 34730 RVA: 0x001CF5DF File Offset: 0x001CD7DF
+	// Token: 0x06005B45 RID: 23365 RVA: 0x001D844B File Offset: 0x001D664B
 	public void Show()
 	{
 		this.View.ShowView(this.InInteractive);
 	}
 
-	// Token: 0x060087AB RID: 34731 RVA: 0x001CF5F4 File Offset: 0x001CD7F4
+	// Token: 0x06005B46 RID: 23366 RVA: 0x001D8460 File Offset: 0x001D6660
 	public UniTask RefreshSpine(int roleId)
 	{
 		BusinessHelperViewController.<RefreshSpine>d__7 <RefreshSpine>d__;
@@ -33,33 +33,33 @@ public class BusinessHelperViewController
 		return <RefreshSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060087AC RID: 34732 RVA: 0x001CF63F File Offset: 0x001CD83F
+	// Token: 0x06005B47 RID: 23367 RVA: 0x001D84AB File Offset: 0x001D66AB
 	public void SkipToHelpPanel()
 	{
 		this.InInteractive = false;
 		this.View.SkipToHelpPanel();
 	}
 
-	// Token: 0x060087AD RID: 34733 RVA: 0x001CF653 File Offset: 0x001CD853
+	// Token: 0x06005B48 RID: 23368 RVA: 0x001D84BF File Offset: 0x001D66BF
 	public void SkipToInteractivePanel()
 	{
 		this.InInteractive = true;
 		this.View.SkipToInteractivePanel();
 	}
 
-	// Token: 0x060087AE RID: 34734 RVA: 0x001CF667 File Offset: 0x001CD867
+	// Token: 0x06005B49 RID: 23369 RVA: 0x001D84D3 File Offset: 0x001D66D3
 	public void SkipToTaskView(EMoonChasingTaskType taskType, int taskId)
 	{
 		MoonChasingController.Instance.OpenTaskView(taskType, taskId, false);
 	}
 
-	// Token: 0x060087AF RID: 34735 RVA: 0x001CF676 File Offset: 0x001CD876
+	// Token: 0x06005B4A RID: 23370 RVA: 0x001D84E2 File Offset: 0x001D66E2
 	public void SkipToBuildingView(int buildingId)
 	{
 		MoonChasingController.Instance.OpenBuildingTipsInfoView(buildingId);
 	}
 
-	// Token: 0x060087B0 RID: 34736 RVA: 0x001CF684 File Offset: 0x001CD884
+	// Token: 0x06005B4B RID: 23371 RVA: 0x001D84F0 File Offset: 0x001D66F0
 	public void SkipToBuildingPreview()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.MoonChasingMainView);
@@ -75,7 +75,7 @@ public class BusinessHelperViewController
 		UiManager.Instance.NormalResetToView(EUiViewName.MoonChasingMainView, null, true);
 	}
 
-	// Token: 0x060087B1 RID: 34737 RVA: 0x001CF6CC File Offset: 0x001CD8CC
+	// Token: 0x06005B4C RID: 23372 RVA: 0x001D8538 File Offset: 0x001D6738
 	public void RefreshInteractivePanel()
 	{
 		if (this.InInteractive)
@@ -84,7 +84,7 @@ public class BusinessHelperViewController
 		}
 	}
 
-	// Token: 0x060087B2 RID: 34738 RVA: 0x001CF6E1 File Offset: 0x001CD8E1
+	// Token: 0x06005B4D RID: 23373 RVA: 0x001D854D File Offset: 0x001D674D
 	public void BackToLastState()
 	{
 		if (this.InInteractive)
@@ -95,7 +95,7 @@ public class BusinessHelperViewController
 		this.View.CloseMe(null);
 	}
 
-	// Token: 0x060087B3 RID: 34739 RVA: 0x001CF6FE File Offset: 0x001CD8FE
+	// Token: 0x06005B4E RID: 23374 RVA: 0x001D856A File Offset: 0x001D676A
 	public void OpenHelpView()
 	{
 		if (this.InInteractive)
@@ -106,18 +106,18 @@ public class BusinessHelperViewController
 		HelpController.Instance.OpenHelpById(105);
 	}
 
-	// Token: 0x04003C7D RID: 15485
+	// Token: 0x04003D15 RID: 15637
 	private const int INTERACTIVE_HELPID = 106;
 
-	// Token: 0x04003C7E RID: 15486
+	// Token: 0x04003D16 RID: 15638
 	private const int HELP_HELPID = 105;
 
-	// Token: 0x04003C7F RID: 15487
+	// Token: 0x04003D17 RID: 15639
 	private BusinessHelperView View;
 
-	// Token: 0x04003C80 RID: 15488
+	// Token: 0x04003D18 RID: 15640
 	private bool InInteractive;
 
-	// Token: 0x04003C81 RID: 15489
+	// Token: 0x04003D19 RID: 15641
 	public int SelectedRoleId;
 }

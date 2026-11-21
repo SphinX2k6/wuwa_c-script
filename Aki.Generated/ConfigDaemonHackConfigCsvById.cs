@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001B6 RID: 438
+	// Token: 0x020001C8 RID: 456
 	public class ConfigDaemonHackConfigCsvById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000A47 RID: 2631 RVA: 0x00093BA1 File Offset: 0x00091DA1
+		// Token: 0x06000AB3 RID: 2739 RVA: 0x00099AD9 File Offset: 0x00097CD9
 		static ConfigDaemonHackConfigCsvById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDaemonHackConfigCsvById.CreateStaticDefaultValue), new Action(ConfigDaemonHackConfigCsvById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A48 RID: 2632 RVA: 0x00093BC0 File Offset: 0x00091DC0
+		// Token: 0x06000AB4 RID: 2740 RVA: 0x00099AF8 File Offset: 0x00097CF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDaemonHackConfigCsvById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000A49 RID: 2633 RVA: 0x00093C3F File Offset: 0x00091E3F
+		// Token: 0x06000AB5 RID: 2741 RVA: 0x00099B77 File Offset: 0x00097D77
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDaemonHackConfigCsvById.LogPair = null;
 			ConfigDaemonHackConfigCsvById.HandleId = 0;
 		}
 
-		// Token: 0x06000A4A RID: 2634 RVA: 0x00093C4D File Offset: 0x00091E4D
+		// Token: 0x06000AB6 RID: 2742 RVA: 0x00099B85 File Offset: 0x00097D85
 		public static void Init()
 		{
 			ConfigDaemonHackConfigCsvById.HandleId = ConfigCommon.InitDataStatement(ConfigDaemonHackConfigCsvById.HandleId, "db_daemonhackconfigcsv.db", "select BinData from `DaemonHackConfigCsv` where Id=?");
 		}
 
-		// Token: 0x06000A4B RID: 2635 RVA: 0x00093C68 File Offset: 0x00091E68
+		// Token: 0x06000AB7 RID: 2743 RVA: 0x00099BA0 File Offset: 0x00097DA0
 		public static DaemonHackConfigCsv? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDaemonHackConfigCsvById.HandleId, ConfigDaemonHackConfigCsvById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DaemonHackConfigCsv?(rootAsDaemonHackConfigCsv);
 		}
 
-		// Token: 0x04000BDE RID: 3038
+		// Token: 0x04000C5C RID: 3164
 		private const string DB = "db_daemonhackconfigcsv.db";
 
-		// Token: 0x04000BDF RID: 3039
+		// Token: 0x04000C5D RID: 3165
 		private const string FILE = "k.可视化编辑/c.Csv/m.魔偶骇入玩法配置/*.csv*";
 
-		// Token: 0x04000BE0 RID: 3040
+		// Token: 0x04000C5E RID: 3166
 		private const string TABLE = "DaemonHackConfigCsv";
 
-		// Token: 0x04000BE1 RID: 3041
+		// Token: 0x04000C5F RID: 3167
 		private const string COMMAND = "select BinData from `DaemonHackConfigCsv` where Id=?";
 
-		// Token: 0x04000BE2 RID: 3042
+		// Token: 0x04000C60 RID: 3168
 		private const string KEY_PREFIX = "DaemonHackConfigCsvById";
 
-		// Token: 0x04000BE3 RID: 3043
+		// Token: 0x04000C61 RID: 3169
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000BE4 RID: 3044
+		// Token: 0x04000C62 RID: 3170
 		private static int HandleId;
 	}
 }

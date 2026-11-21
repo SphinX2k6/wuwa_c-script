@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
@@ -7,12 +8,12 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Util.Json
 {
-	// Token: 0x02000081 RID: 129
+	// Token: 0x02000084 RID: 132
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LauncherJsonWriter
 	{
-		// Token: 0x0600036C RID: 876 RVA: 0x00012638 File Offset: 0x00010838
+		// Token: 0x0600037C RID: 892 RVA: 0x000134F4 File Offset: 0x000116F4
 		public static void Write<[Nullable(2)] T>(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
 		{
 			if (value == null)
@@ -21,20 +22,21 @@ namespace CSharpScript.Launcher.Util.Json
 				return;
 			}
 			Type typeFromHandle = typeof(T);
-			if (LauncherJsonSettings.IsGenericDictionary(typeFromHandle))
+			Type type = value.GetType();
+			if (LauncherJsonSettings.IsGenericDictionary(type))
 			{
-				LauncherJsonWriter.WriteDictionary<T>(writer, value, typeFromHandle);
+				LauncherJsonWriter.WriteDictionary<T>(writer, value, type);
 				return;
 			}
-			if (LauncherJsonSettings.IsGenericHashSet(typeFromHandle))
+			if (LauncherJsonSettings.IsGenericHashSet(type))
 			{
-				LauncherJsonWriter.WriteHashSet<T>(writer, value, typeFromHandle);
+				LauncherJsonWriter.WriteHashSet<T>(writer, value, type);
 				return;
 			}
 			LauncherJsonWriter.WriteScalarValue<T>(writer, value, typeFromHandle);
 		}
 
-		// Token: 0x0600036D RID: 877 RVA: 0x0001268C File Offset: 0x0001088C
+		// Token: 0x0600037D RID: 893 RVA: 0x00013554 File Offset: 0x00011754
 		private static void WriteScalarValue<[Nullable(2)] T>(Utf8JsonWriter writer, T value, Type type)
 		{
 			if (value is long)
@@ -159,25 +161,25 @@ namespace CSharpScript.Launcher.Util.Json
 			}
 		}
 
-		// Token: 0x0600036E RID: 878 RVA: 0x000129C0 File Offset: 0x00010BC0
+		// Token: 0x0600037E RID: 894 RVA: 0x00013888 File Offset: 0x00011A88
 		private static void WriteDictionary<[Nullable(2)] T>(Utf8JsonWriter writer, T value, Type type)
 		{
-			Type[] genericArguments = type.GetGenericArguments();
-			Type inputType = genericArguments[0];
-			Type type2 = genericArguments[1];
 			IDictionary dictionary = value as IDictionary;
 			if (dictionary == null)
 			{
 				throw new JsonException("Failed to serialize Dictionary: " + type.Name + ".");
 			}
+			ValueTuple<Type, Type> dictionaryKeyValueTypes = LauncherJsonWriter.GetDictionaryKeyValueTypes(type);
+			Type item = dictionaryKeyValueTypes.Item1;
+			Type item2 = dictionaryKeyValueTypes.Item2;
 			JsonSerializerOptions jsonSerializerOptions = LauncherJsonSettings.CreateOptionsWithMarkerConverters(LauncherJsonSettings.JsonOptions);
-			if (LauncherJsonSettings.IsGenericDictionary(type2) || LauncherJsonSettings.IsGenericHashSet(type2))
+			if (LauncherJsonSettings.IsGenericDictionary(item2) || LauncherJsonSettings.IsGenericHashSet(item2))
 			{
-				Type type3 = typeof(LauncherJsonConverter<>).MakeGenericType(new Type[]
+				Type type2 = typeof(LauncherJsonConverter<>).MakeGenericType(new Type[]
 				{
-					type2
+					item2
 				});
-				jsonSerializerOptions.Converters.Add((JsonConverter)Activator.CreateInstance(type3));
+				jsonSerializerOptions.Converters.Add((JsonConverter)Activator.CreateInstance(type2));
 			}
 			writer.WriteStartObject();
 			writer.WriteString("___MetaType___", "___Map___");
@@ -187,15 +189,45 @@ namespace CSharpScript.Launcher.Util.Json
 			{
 				DictionaryEntry dictionaryEntry = (DictionaryEntry)obj;
 				writer.WriteStartArray();
-				JsonSerializer.Serialize(writer, dictionaryEntry.Key, inputType, jsonSerializerOptions);
-				JsonSerializer.Serialize(writer, dictionaryEntry.Value, type2, jsonSerializerOptions);
+				JsonSerializer.Serialize(writer, dictionaryEntry.Key, item, jsonSerializerOptions);
+				JsonSerializer.Serialize(writer, dictionaryEntry.Value, item2, jsonSerializerOptions);
 				writer.WriteEndArray();
 			}
 			writer.WriteEndArray();
 			writer.WriteEndObject();
 		}
 
-		// Token: 0x0600036F RID: 879 RVA: 0x00012AF8 File Offset: 0x00010CF8
+		// Token: 0x0600037F RID: 895 RVA: 0x000139C4 File Offset: 0x00011BC4
+		[return: TupleElementNames(new string[]
+		{
+			"Key",
+			"Value"
+		})]
+		[return: Nullable(new byte[]
+		{
+			0,
+			1,
+			1
+		})]
+		private static ValueTuple<Type, Type> GetDictionaryKeyValueTypes(Type type)
+		{
+			foreach (Type type2 in type.GetInterfaces())
+			{
+				if (type2.IsGenericType && type2.GetGenericTypeDefinition() == typeof(IDictionary<, >))
+				{
+					Type[] genericArguments = type2.GetGenericArguments();
+					return new ValueTuple<Type, Type>(genericArguments[0], genericArguments[1]);
+				}
+			}
+			Type[] genericArguments2 = type.GetGenericArguments();
+			if (genericArguments2.Length == 2)
+			{
+				return new ValueTuple<Type, Type>(genericArguments2[0], genericArguments2[1]);
+			}
+			throw new JsonException("Failed to get Dictionary generic arguments for " + type.Name + ".");
+		}
+
+		// Token: 0x06000380 RID: 896 RVA: 0x00013A54 File Offset: 0x00011C54
 		private static void WriteHashSet<[Nullable(2)] T>(Utf8JsonWriter writer, T value, Type type)
 		{
 			JsonSerializerOptions options = LauncherJsonSettings.CreateOptionsWithMarkerConverters(LauncherJsonSettings.JsonOptions);
@@ -206,7 +238,7 @@ namespace CSharpScript.Launcher.Util.Json
 			writer.WriteEndObject();
 		}
 
-		// Token: 0x04000254 RID: 596
+		// Token: 0x04000280 RID: 640
 		private const long JS_MAX_SAFE_INTEGER = 9007199254740991L;
 	}
 }

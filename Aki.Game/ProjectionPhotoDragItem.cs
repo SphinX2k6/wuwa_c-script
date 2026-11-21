@@ -4,18 +4,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000EE7 RID: 3815
+// Token: 0x0200039C RID: 924
 [NullableContext(1)]
 [Nullable(0)]
 public class ProjectionPhotoDragItem : ProjectionPhotoItem
 {
-	// Token: 0x06005F96 RID: 24470 RVA: 0x0011E2CA File Offset: 0x0011C4CA
+	// Token: 0x0600332C RID: 13100 RVA: 0x00126122 File Offset: 0x00124322
 	[NullableContext(2)]
 	public ProjectionPhotoDragItem(string photoPath) : base(photoPath)
 	{
 	}
 
-	// Token: 0x06005F97 RID: 24471 RVA: 0x0011E2D3 File Offset: 0x0011C4D3
+	// Token: 0x0600332D RID: 13101 RVA: 0x0012612B File Offset: 0x0012432B
 	protected override void OnAfterShow()
 	{
 		base.OnAfterShow();
@@ -27,7 +27,7 @@ public class ProjectionPhotoDragItem : ProjectionPhotoItem
 		rootItem.SetRaycastTarget(false);
 	}
 
-	// Token: 0x06005F98 RID: 24472 RVA: 0x0011E2EC File Offset: 0x0011C4EC
+	// Token: 0x0600332E RID: 13102 RVA: 0x00126144 File Offset: 0x00124344
 	public void StartDrag(ProjectionPhotoItem projectionPhotoItem, UTexture texture)
 	{
 		if (this._ownerItem != projectionPhotoItem && this._ownerItem != null)
@@ -43,7 +43,7 @@ public class ProjectionPhotoDragItem : ProjectionPhotoItem
 		EventSystem.Instance.Emit(EEventName.OnProjectionPhotoItemStartDrag);
 	}
 
-	// Token: 0x06005F99 RID: 24473 RVA: 0x0011E368 File Offset: 0x0011C568
+	// Token: 0x0600332F RID: 13103 RVA: 0x001261C0 File Offset: 0x001243C0
 	public void UpdateDrag()
 	{
 		if (this._ownerItem == null)
@@ -62,7 +62,7 @@ public class ProjectionPhotoDragItem : ProjectionPhotoItem
 		rootItem.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06005F9A RID: 24474 RVA: 0x0011E3EE File Offset: 0x0011C5EE
+	// Token: 0x06003330 RID: 13104 RVA: 0x00126246 File Offset: 0x00124446
 	public void StopDrag()
 	{
 		this._ownerItem = null;
@@ -71,13 +71,13 @@ public class ProjectionPhotoDragItem : ProjectionPhotoItem
 		EventSystem.Instance.Emit(EEventName.OnProjectionPhotoItemEndDrag);
 	}
 
-	// Token: 0x04002B4C RID: 11084
+	// Token: 0x04002BE5 RID: 11237
 	private const string START_DRAG_EVENT = "play_interact_Camera_ui_photo_pickup";
 
-	// Token: 0x04002B4D RID: 11085
+	// Token: 0x04002BE6 RID: 11238
 	private const string STOP_DRAG_EVENT = "play_interact_Camera_ui_photo_putdown";
 
-	// Token: 0x04002B4E RID: 11086
+	// Token: 0x04002BE7 RID: 11239
 	[Nullable(2)]
 	private ProjectionPhotoItem _ownerItem;
 }

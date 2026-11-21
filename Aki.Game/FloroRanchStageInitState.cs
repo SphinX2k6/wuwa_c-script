@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B57 RID: 6999
+// Token: 0x02001016 RID: 4118
 public class FloroRanchStageInitState : FloroRanchStateBase
 {
-	// Token: 0x0600CF9C RID: 53148 RVA: 0x002F4A0A File Offset: 0x002F2C0A
+	// Token: 0x0600A3AD RID: 41901 RVA: 0x002FFAE2 File Offset: 0x002FDCE2
 	[NullableContext(1)]
 	public FloroRanchStageInitState(FloroRanchStageFsm stageFsm) : base(stageFsm)
 	{

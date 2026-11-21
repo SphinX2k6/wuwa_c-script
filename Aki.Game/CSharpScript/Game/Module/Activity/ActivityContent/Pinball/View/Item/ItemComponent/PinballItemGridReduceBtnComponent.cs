@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x02006356 RID: 25430
+	// Token: 0x020052D4 RID: 21204
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemGridReduceBtnComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x0603FFEB RID: 262123 RVA: 0x00F7B594 File Offset: 0x00F79794
+		// Token: 0x06034CAC RID: 216236 RVA: 0x00EC24F4 File Offset: 0x00EC06F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,27 +30,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FFEC RID: 262124 RVA: 0x00F7B61C File Offset: 0x00F7981C
+		// Token: 0x06034CAD RID: 216237 RVA: 0x00EC257C File Offset: 0x00EC077C
 		protected override void OnStart()
 		{
 			this.LongPressButton = new LongPressButtonItem(null, null, null);
 			this.LongPressButton.Initialize(base.GetButton(0), new Action<bool>(this.OnLongPressActive), null, null, null);
 		}
 
-		// Token: 0x0603FFED RID: 262125 RVA: 0x00F7B66D File Offset: 0x00F7986D
+		// Token: 0x06034CAE RID: 216238 RVA: 0x00EC25CD File Offset: 0x00EC07CD
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseChoose";
 		}
 
-		// Token: 0x0603FFEE RID: 262126 RVA: 0x00F7B674 File Offset: 0x00F79874
+		// Token: 0x06034CAF RID: 216239 RVA: 0x00EC25D4 File Offset: 0x00EC07D4
 		protected override void OnRefresh(params object[] args)
 		{
 			bool active = (bool)args[0];
 			this.SetActive(active);
 		}
 
-		// Token: 0x0603FFEF RID: 262127 RVA: 0x00F7B691 File Offset: 0x00F79891
+		// Token: 0x06034CB0 RID: 216240 RVA: 0x00EC25F1 File Offset: 0x00EC07F1
 		private void OnLongPressActive(bool isShortPress)
 		{
 			if (this.OnLongPressClickCallback != null)
@@ -59,19 +59,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			}
 		}
 
-		// Token: 0x0603FFF0 RID: 262128 RVA: 0x00F7B6A7 File Offset: 0x00F798A7
+		// Token: 0x06034CB1 RID: 216241 RVA: 0x00EC2607 File Offset: 0x00EC0807
 		public void BindReduceButtonCallback(Action onClickedReduceButton)
 		{
 			this.OnClickedCallback = onClickedReduceButton;
 		}
 
-		// Token: 0x0603FFF1 RID: 262129 RVA: 0x00F7B6B0 File Offset: 0x00F798B0
+		// Token: 0x06034CB2 RID: 216242 RVA: 0x00EC2610 File Offset: 0x00EC0810
 		public void UnBindReduceButtonCallback()
 		{
 			this.OnClickedCallback = null;
 		}
 
-		// Token: 0x0603FFF2 RID: 262130 RVA: 0x00F7B6B9 File Offset: 0x00F798B9
+		// Token: 0x06034CB3 RID: 216243 RVA: 0x00EC2619 File Offset: 0x00EC0819
 		private void OnClickedReduceButton()
 		{
 			if (this.OnClickedCallback != null)
@@ -80,36 +80,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.It
 			}
 		}
 
-		// Token: 0x0603FFF3 RID: 262131 RVA: 0x00F7B6CE File Offset: 0x00F798CE
+		// Token: 0x06034CB4 RID: 216244 RVA: 0x00EC262E File Offset: 0x00EC082E
 		public void BindLongPressCallback(Action<bool> callback)
 		{
 			this.OnLongPressClickCallback = callback;
 		}
 
-		// Token: 0x0603FFF4 RID: 262132 RVA: 0x00F7B6D7 File Offset: 0x00F798D7
+		// Token: 0x06034CB5 RID: 216245 RVA: 0x00EC2637 File Offset: 0x00EC0837
 		public void UnBindLongPressCallback()
 		{
 			this.OnLongPressClickCallback = null;
 			this.LongPressButton.Deactivate();
 		}
 
-		// Token: 0x040215D3 RID: 136659
+		// Token: 0x0401BF02 RID: 114434
 		[Nullable(2)]
 		private Action OnClickedCallback;
 
-		// Token: 0x040215D4 RID: 136660
+		// Token: 0x0401BF03 RID: 114435
 		[Nullable(2)]
 		private LongPressButtonItem LongPressButton;
 
-		// Token: 0x040215D5 RID: 136661
+		// Token: 0x0401BF04 RID: 114436
 		[Nullable(2)]
 		private Action<bool> OnLongPressClickCallback;
 
-		// Token: 0x0200C576 RID: 50550
+		// Token: 0x0200AF5D RID: 44893
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B9A2 RID: 244130
+			// Token: 0x04036304 RID: 221956
 			ReduceButton
 		}
 	}

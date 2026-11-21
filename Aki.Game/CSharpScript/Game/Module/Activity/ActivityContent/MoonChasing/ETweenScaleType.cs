@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006475 RID: 25717
+	// Token: 0x020053F3 RID: 21491
 	public enum ETweenScaleType
 	{
-		// Token: 0x04021975 RID: 137589
+		// Token: 0x0401C2A4 RID: 115364
 		Normal,
-		// Token: 0x04021976 RID: 137590
+		// Token: 0x0401C2A5 RID: 115365
 		PreventOverScaling,
-		// Token: 0x04021977 RID: 137591
+		// Token: 0x0401C2A6 RID: 115366
 		PreventUnderScaling
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD4 RID: 19924
+	// Token: 0x02003D9D RID: 15773
 	public class TipPanel : UiPanelBase
 	{
-		// Token: 0x060336D2 RID: 210642 RVA: 0x00C02664 File Offset: 0x00C00864
+		// Token: 0x0602853F RID: 165183 RVA: 0x00B4BBBC File Offset: 0x00B49DBC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060336D3 RID: 210643 RVA: 0x00C026F0 File Offset: 0x00C008F0
+		// Token: 0x06028540 RID: 165184 RVA: 0x00B4BC48 File Offset: 0x00B49E48
 		public void UpdateNum(int totalNum)
 		{
 			base.GetText(1).SetText(totalNum.ToString(), true);
@@ -53,16 +53,16 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), elementLevelConfigById.Value.TextId, list.ToArray());
 		}
 
-		// Token: 0x0200AF4D RID: 44877
+		// Token: 0x02009982 RID: 39298
 		private class ETipCom
 		{
-			// Token: 0x040353A8 RID: 218024
+			// Token: 0x0402FDDD RID: 196061
 			public const int IconSprite = 0;
 
-			// Token: 0x040353A9 RID: 218025
+			// Token: 0x0402FDDE RID: 196062
 			public const int NumText = 1;
 
-			// Token: 0x040353AA RID: 218026
+			// Token: 0x0402FDDF RID: 196063
 			public const int DescText = 2;
 		}
 	}

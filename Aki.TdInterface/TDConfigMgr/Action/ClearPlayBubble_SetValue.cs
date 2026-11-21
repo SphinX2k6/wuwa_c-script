@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FA RID: 5370
+	// Token: 0x02001653 RID: 5715
 	public class ClearPlayBubble_SetValue
 	{
-		// Token: 0x040046C3 RID: 18115
-		[Nullable(1)]
+		// Token: 0x04004A5E RID: 19038
 		public List<int> EntityIds;
 
-		// Token: 0x040046C4 RID: 18116
+		// Token: 0x04004A5F RID: 19039
 		public bool? OnlyClearRedDot;
 	}
 }

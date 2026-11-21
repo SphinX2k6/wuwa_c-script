@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C38 RID: 23608
+	// Token: 0x02004C18 RID: 19480
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlagChallengeOccupiedSuccessView : UiViewBase
 	{
-		// Token: 0x0603BA5A RID: 244314 RVA: 0x00E3BC62 File Offset: 0x00E39E62
+		// Token: 0x060309A5 RID: 199077 RVA: 0x00D8BFD2 File Offset: 0x00D8A1D2
 		[NullableContext(1)]
 		public FlagChallengeOccupiedSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17008DB5 RID: 36277
-		// (get) Token: 0x0603BA5B RID: 244315 RVA: 0x00E3BC6B File Offset: 0x00E39E6B
+		// Token: 0x17006187 RID: 24967
+		// (get) Token: 0x060309A6 RID: 199078 RVA: 0x00D8BFDB File Offset: 0x00D8A1DB
 		public new FlagChallengeOccupiedSuccessViewParams OpenParam
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA5C RID: 244316 RVA: 0x00E3BC78 File Offset: 0x00E39E78
+		// Token: 0x060309A7 RID: 199079 RVA: 0x00D8BFE8 File Offset: 0x00D8A1E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA5D RID: 244317 RVA: 0x00E3BD04 File Offset: 0x00E39F04
+		// Token: 0x060309A8 RID: 199080 RVA: 0x00D8C074 File Offset: 0x00D8A274
 		protected override void OnStart()
 		{
 			int activityId = this.OpenParam.ActivityId;
@@ -64,12 +64,12 @@ namespace CSharpScript.Game.Module.Battle
 			base.GetItem(2).SetUIActive(strongholdData.IsBossStronghold());
 		}
 
-		// Token: 0x0603BA5E RID: 244318 RVA: 0x00E3BDA5 File Offset: 0x00E39FA5
+		// Token: 0x060309A9 RID: 199081 RVA: 0x00D8C115 File Offset: 0x00D8A315
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x0603BA5F RID: 244319 RVA: 0x00E3BDA7 File Offset: 0x00E39FA7
+		// Token: 0x060309AA RID: 199082 RVA: 0x00D8C117 File Offset: 0x00D8A317
 		protected override void OnAfterShow()
 		{
 			UUIArtText levelText = this.LevelText;
@@ -81,33 +81,33 @@ namespace CSharpScript.Game.Module.Battle
 			this.DelayClose();
 		}
 
-		// Token: 0x0603BA60 RID: 244320 RVA: 0x00E3BDD6 File Offset: 0x00E39FD6
+		// Token: 0x060309AB RID: 199083 RVA: 0x00D8C146 File Offset: 0x00D8A346
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearDelayTimer();
 			this.ClearRollingTimer();
 		}
 
-		// Token: 0x0603BA61 RID: 244321 RVA: 0x00E3BDE4 File Offset: 0x00E39FE4
+		// Token: 0x060309AC RID: 199084 RVA: 0x00D8C154 File Offset: 0x00D8A354
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 		}
 
-		// Token: 0x0603BA62 RID: 244322 RVA: 0x00E3BE02 File Offset: 0x00E3A002
+		// Token: 0x060309AD RID: 199085 RVA: 0x00D8C172 File Offset: 0x00D8A372
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 		}
 
-		// Token: 0x0603BA63 RID: 244323 RVA: 0x00E3BE20 File Offset: 0x00E3A020
+		// Token: 0x060309AE RID: 199086 RVA: 0x00D8C190 File Offset: 0x00D8A390
 		[NullableContext(1)]
 		private void OnSequenceNetworkStart(PlotInfo plotInfo)
 		{
 			this.TryCloseMe();
 		}
 
-		// Token: 0x0603BA64 RID: 244324 RVA: 0x00E3BE28 File Offset: 0x00E3A028
+		// Token: 0x060309AF RID: 199087 RVA: 0x00D8C198 File Offset: 0x00D8A398
 		private void TryCloseMe()
 		{
 			if (!base.IsHideOrHiding)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA65 RID: 244325 RVA: 0x00E3BE39 File Offset: 0x00E3A039
+		// Token: 0x060309B0 RID: 199088 RVA: 0x00D8C1A9 File Offset: 0x00D8A3A9
 		private void DelayClose()
 		{
 			this.ClearDelayTimer();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603BA66 RID: 244326 RVA: 0x00E3BE6A File Offset: 0x00E3A06A
+		// Token: 0x060309B1 RID: 199089 RVA: 0x00D8C1DA File Offset: 0x00D8A3DA
 		private void ClearDelayTimer()
 		{
 			if (this.DelayTimer != null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA67 RID: 244327 RVA: 0x00E3BE8C File Offset: 0x00E3A08C
+		// Token: 0x060309B2 RID: 199090 RVA: 0x00D8C1FC File Offset: 0x00D8A3FC
 		private void ClearRollingTimer()
 		{
 			if (this.RollingTimer != null)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA68 RID: 244328 RVA: 0x00E3BEAE File Offset: 0x00E3A0AE
+		// Token: 0x060309B3 RID: 199091 RVA: 0x00D8C21E File Offset: 0x00D8A41E
 		[NullableContext(1)]
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA69 RID: 244329 RVA: 0x00E3BEC4 File Offset: 0x00E3A0C4
+		// Token: 0x060309B4 RID: 199092 RVA: 0x00D8C234 File Offset: 0x00D8A434
 		private void PlayLevelRolling()
 		{
 			float elapsedTime = 0f;
@@ -193,30 +193,30 @@ namespace CSharpScript.Game.Module.Battle
 			}, 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x0401F0D8 RID: 127192
+		// Token: 0x04019B89 RID: 105353
 		private const float DELAY_CLOSE_TIME = 2000f;
 
-		// Token: 0x0401F0D9 RID: 127193
+		// Token: 0x04019B8A RID: 105354
 		private const float ROLLING_DURATION = 500f;
 
-		// Token: 0x0401F0DA RID: 127194
+		// Token: 0x04019B8B RID: 105355
 		private UUIArtText LevelText;
 
-		// Token: 0x0401F0DB RID: 127195
+		// Token: 0x04019B8C RID: 105356
 		private TimerHandle DelayTimer;
 
-		// Token: 0x0401F0DC RID: 127196
+		// Token: 0x04019B8D RID: 105357
 		private TimerHandle RollingTimer;
 
-		// Token: 0x0200BE2B RID: 48683
+		// Token: 0x0200A833 RID: 43059
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x0403958B RID: 234891
+			// Token: 0x04033F4E RID: 212814
 			LevelText,
-			// Token: 0x0403958C RID: 234892
+			// Token: 0x04033F4F RID: 212815
 			TitleText,
-			// Token: 0x0403958D RID: 234893
+			// Token: 0x04033F50 RID: 212816
 			ClearTipsItem
 		}
 	}

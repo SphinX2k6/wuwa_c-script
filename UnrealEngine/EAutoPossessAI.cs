@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A05 RID: 2565
+	// Token: 0x020001CE RID: 462
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EAutoPossessAI")]
 	public enum EAutoPossessAI : byte
 	{
-		// Token: 0x040044B5 RID: 17589
+		// Token: 0x04000B46 RID: 2886
 		Disabled,
-		// Token: 0x040044B6 RID: 17590
+		// Token: 0x04000B47 RID: 2887
 		PlacedInWorld,
-		// Token: 0x040044B7 RID: 17591
+		// Token: 0x04000B48 RID: 2888
 		Spawned,
-		// Token: 0x040044B8 RID: 17592
+		// Token: 0x04000B49 RID: 2889
 		PlacedInWorldOrSpawned,
-		// Token: 0x040044B9 RID: 17593
+		// Token: 0x04000B4A RID: 2890
 		EAutoPossessAI_MAX
 	}
 }

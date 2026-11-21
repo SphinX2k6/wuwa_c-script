@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027CF RID: 10191
+	// Token: 0x02002AA2 RID: 10914
 	public class ILimitPlayerUI : ILimitPlayerOption
 	{
-		// Token: 0x0600E292 RID: 58002 RVA: 0x002173F2 File Offset: 0x002155F2
-		[NullableContext(1)]
+		// Token: 0x0600F0B4 RID: 61620 RVA: 0x002341C6 File Offset: 0x002323C6
 		public static ILimitPlayerUI Create(ILimitPlayerUI? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044B6 RID: 17590
-		// (get) Token: 0x0600E293 RID: 58003 RVA: 0x00217411 File Offset: 0x00215611
+		// Token: 0x1700481E RID: 18462
+		// (get) Token: 0x0600F0B5 RID: 61621 RVA: 0x002341E5 File Offset: 0x002323E5
 		public override ELimitPlayOperation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DA1 RID: 32161
+		// Token: 0x04008458 RID: 33880
 		private ILimitPlayerUI Instance;
 	}
 }

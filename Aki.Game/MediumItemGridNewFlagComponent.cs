@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001923 RID: 6435
+// Token: 0x02000DDC RID: 3548
 public class MediumItemGridNewFlagComponent : MediumItemGridVisibleComponent
 {
-	// Token: 0x0600BC78 RID: 48248 RVA: 0x002AAAAF File Offset: 0x002A8CAF
+	// Token: 0x06009062 RID: 36962 RVA: 0x002B520B File Offset: 0x002B340B
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{

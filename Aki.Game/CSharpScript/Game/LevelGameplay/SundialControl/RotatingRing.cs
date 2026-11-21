@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SundialControl
 {
-	// Token: 0x02006A07 RID: 27143
+	// Token: 0x02005B64 RID: 23396
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RotatingRing
 	{
-		// Token: 0x06043844 RID: 276548 RVA: 0x01083350 File Offset: 0x01081550
+		// Token: 0x06039890 RID: 235664 RVA: 0x01027974 File Offset: 0x01025B74
 		public RotatingRing(AActor ringActor, float simpleRotateAngle, float rotateSpeed)
 		{
 			this.RingActor = ringActor;
@@ -22,25 +22,25 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			this.InitYaw = relativeRotation.Yaw;
 		}
 
-		// Token: 0x040233E6 RID: 144358
+		// Token: 0x0401E5D8 RID: 124376
 		public AActor RingActor;
 
-		// Token: 0x040233E7 RID: 144359
+		// Token: 0x0401E5D9 RID: 124377
 		public double SimpleRotateAngle;
 
-		// Token: 0x040233E8 RID: 144360
+		// Token: 0x0401E5DA RID: 124378
 		public int TotalSocket;
 
-		// Token: 0x040233E9 RID: 144361
+		// Token: 0x0401E5DB RID: 124379
 		public int CurSocket;
 
-		// Token: 0x040233EA RID: 144362
+		// Token: 0x0401E5DC RID: 124380
 		public bool IsShine;
 
-		// Token: 0x040233EB RID: 144363
+		// Token: 0x0401E5DD RID: 124381
 		public float InitYaw;
 
-		// Token: 0x040233EC RID: 144364
+		// Token: 0x0401E5DE RID: 124382
 		public float RotateSpeed;
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200503A RID: 20538
+	// Token: 0x02005599 RID: 21913
 	public class IConveyorBeltStateT
 	{
-		// Token: 0x17009509 RID: 38153
-		// (get) Token: 0x06020E83 RID: 134787 RVA: 0x00493576 File Offset: 0x00491776
-		// (set) Token: 0x06020E84 RID: 134788 RVA: 0x0049357E File Offset: 0x0049177E
+		// Token: 0x17009CEA RID: 40170
+		// (get) Token: 0x06022DA3 RID: 142755 RVA: 0x004CCFC6 File Offset: 0x004CB1C6
+		// (set) Token: 0x06022DA4 RID: 142756 RVA: 0x004CCFCE File Offset: 0x004CB1CE
 		public string EntityState { get; set; }
 
-		// Token: 0x1700950A RID: 38154
-		// (get) Token: 0x06020E85 RID: 134789 RVA: 0x00493587 File Offset: 0x00491787
-		// (set) Token: 0x06020E86 RID: 134790 RVA: 0x0049358F File Offset: 0x0049178F
+		// Token: 0x17009CEB RID: 40171
+		// (get) Token: 0x06022DA5 RID: 142757 RVA: 0x004CCFD7 File Offset: 0x004CB1D7
+		// (set) Token: 0x06022DA6 RID: 142758 RVA: 0x004CCFDF File Offset: 0x004CB1DF
 		public TConveyorBeltFieldTypeUnion FieldType { get; set; }
 
-		// Token: 0x1700950B RID: 38155
-		// (get) Token: 0x06020E87 RID: 134791 RVA: 0x00493598 File Offset: 0x00491798
-		// (set) Token: 0x06020E88 RID: 134792 RVA: 0x004935A0 File Offset: 0x004917A0
+		// Token: 0x17009CEC RID: 40172
+		// (get) Token: 0x06022DA7 RID: 142759 RVA: 0x004CCFE8 File Offset: 0x004CB1E8
+		// (set) Token: 0x06022DA8 RID: 142760 RVA: 0x004CCFF0 File Offset: 0x004CB1F0
 		public IFixSpeedT MoveType { get; set; }
 
-		// Token: 0x06020E89 RID: 134793 RVA: 0x004935A9 File Offset: 0x004917A9
+		// Token: 0x06022DA9 RID: 142761 RVA: 0x004CCFF9 File Offset: 0x004CB1F9
 		public IConveyorBeltStateT()
 		{
 			this.EntityState = null;

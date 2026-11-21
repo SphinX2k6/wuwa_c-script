@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002134 RID: 8500
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002395 RID: 9109
 	public class Record_Int_ITalkSequenceTransitions
 	{
-		// Token: 0x0600BB38 RID: 47928 RVA: 0x001B071A File Offset: 0x001AE91A
+		// Token: 0x0600C6C6 RID: 50886 RVA: 0x001C78CE File Offset: 0x001C5ACE
 		public static Record_Int_ITalkSequenceTransitions Create([Nullable(2)] Record_Int_ITalkSequenceTransitions instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003929 RID: 14633
-		// (get) Token: 0x0600BB39 RID: 47929 RVA: 0x001B072D File Offset: 0x001AE92D
+		// Token: 0x17003C16 RID: 15382
+		// (get) Token: 0x0600C6C7 RID: 50887 RVA: 0x001C78E1 File Offset: 0x001C5AE1
 		public virtual int Key
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700392A RID: 14634
-		// (get) Token: 0x0600BB3A RID: 47930 RVA: 0x001B073C File Offset: 0x001AE93C
+		// Token: 0x17003C17 RID: 15383
+		// (get) Token: 0x0600C6C8 RID: 50888 RVA: 0x001C78F0 File Offset: 0x001C5AF0
 		public virtual List<ITalkSequenceTransition> Values
 		{
 			get
@@ -60,13 +58,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FFF RID: 28671
+		// Token: 0x04007634 RID: 30260
 		private Record_Int_ITalkSequenceTransitions FbInstance;
 
-		// Token: 0x04007000 RID: 28672
+		// Token: 0x04007635 RID: 30261
 		private List<ITalkSequenceTransition> _ValuesCache;
 
-		// Token: 0x04007001 RID: 28673
+		// Token: 0x04007636 RID: 30262
 		private bool _ValuesInited;
 	}
 }

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001FF6 RID: 8182
+// Token: 0x020014C9 RID: 5321
 public class InterfaceDataUnit
 {
-	// Token: 0x06010082 RID: 65666 RVA: 0x003E8CA3 File Offset: 0x003E6EA3
+	// Token: 0x0600D4EA RID: 54506 RVA: 0x003F529B File Offset: 0x003F349B
 	public InterfaceDataUnit(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x06010083 RID: 65667 RVA: 0x003E8CC0 File Offset: 0x003E6EC0
+	// Token: 0x0600D4EB RID: 54507 RVA: 0x003F52B8 File Offset: 0x003F34B8
 	public int GetMaxCount()
 	{
 		int result = 1;
@@ -27,7 +27,7 @@ public class InterfaceDataUnit
 		return result;
 	}
 
-	// Token: 0x06010084 RID: 65668 RVA: 0x003E8CFC File Offset: 0x003E6EFC
+	// Token: 0x0600D4EC RID: 54508 RVA: 0x003F52F4 File Offset: 0x003F34F4
 	public int GetAddItemTime()
 	{
 		int result = 0;
@@ -42,13 +42,13 @@ public class InterfaceDataUnit
 		return result;
 	}
 
-	// Token: 0x040076A9 RID: 30377
+	// Token: 0x04007792 RID: 30610
 	public int Index;
 
-	// Token: 0x040076AA RID: 30378
+	// Token: 0x04007793 RID: 30611
 	public EPlayMode Mode;
 
-	// Token: 0x040076AB RID: 30379
+	// Token: 0x04007794 RID: 30612
 	[Nullable(1)]
 	public List<ItemRewardInfo> WaitList = new List<ItemRewardInfo>();
 }

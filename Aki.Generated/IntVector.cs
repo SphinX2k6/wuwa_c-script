@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011CF RID: 4559
+	// Token: 0x02001306 RID: 4870
 	public struct IntVector : IFlatbufferObject
 	{
-		// Token: 0x17003EF3 RID: 16115
-		// (get) Token: 0x0600EAA9 RID: 60073 RVA: 0x003487C0 File Offset: 0x003469C0
+		// Token: 0x1700425B RID: 16987
+		// (get) Token: 0x0600F822 RID: 63522 RVA: 0x003734F0 File Offset: 0x003716F0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EAAA RID: 60074 RVA: 0x003487CD File Offset: 0x003469CD
+		// Token: 0x0600F823 RID: 63523 RVA: 0x003734FD File Offset: 0x003716FD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EAAB RID: 60075 RVA: 0x003487D4 File Offset: 0x003469D4
+		// Token: 0x0600F824 RID: 63524 RVA: 0x00373504 File Offset: 0x00371704
 		public static IntVector GetRootAsIntVector(ByteBuffer _bb)
 		{
 			return IntVector.GetRootAsIntVector(_bb, default(IntVector));
 		}
 
-		// Token: 0x0600EAAC RID: 60076 RVA: 0x003487F0 File Offset: 0x003469F0
+		// Token: 0x0600F825 RID: 63525 RVA: 0x00373520 File Offset: 0x00371720
 		public static IntVector GetRootAsIntVector(ByteBuffer _bb, IntVector obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EAAD RID: 60077 RVA: 0x0034880D File Offset: 0x00346A0D
+		// Token: 0x0600F826 RID: 63526 RVA: 0x0037353D File Offset: 0x0037173D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EAAE RID: 60078 RVA: 0x0034881C File Offset: 0x00346A1C
+		// Token: 0x0600F827 RID: 63527 RVA: 0x0037354C File Offset: 0x0037174C
 		public IntVector __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EF4 RID: 16116
-		// (get) Token: 0x0600EAAF RID: 60079 RVA: 0x0034882C File Offset: 0x00346A2C
+		// Token: 0x1700425C RID: 16988
+		// (get) Token: 0x0600F828 RID: 63528 RVA: 0x0037355C File Offset: 0x0037175C
 		public int X
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EF5 RID: 16117
-		// (get) Token: 0x0600EAB0 RID: 60080 RVA: 0x00348868 File Offset: 0x00346A68
+		// Token: 0x1700425D RID: 16989
+		// (get) Token: 0x0600F829 RID: 63529 RVA: 0x00373598 File Offset: 0x00371798
 		public int Y
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EF6 RID: 16118
-		// (get) Token: 0x0600EAB1 RID: 60081 RVA: 0x003488A4 File Offset: 0x00346AA4
+		// Token: 0x1700425E RID: 16990
+		// (get) Token: 0x0600F82A RID: 63530 RVA: 0x003735D4 File Offset: 0x003717D4
 		public int Z
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400533D RID: 21309
+		// Token: 0x04005981 RID: 22913
 		private Table __p;
 	}
 }

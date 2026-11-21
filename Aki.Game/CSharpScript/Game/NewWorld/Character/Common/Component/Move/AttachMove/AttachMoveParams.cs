@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 {
-	// Token: 0x02007104 RID: 28932
+	// Token: 0x020063B4 RID: 25524
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttachMoveParams
 	{
-		// Token: 0x06046A2A RID: 289322 RVA: 0x011C7100 File Offset: 0x011C5300
+		// Token: 0x0603DE29 RID: 253481 RVA: 0x011F6120 File Offset: 0x011F4320
 		[NullableContext(2)]
 		public AttachMoveParams(BP_AttachMoveConfig_C data = null)
 		{
@@ -30,16 +30,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AttachMove
 			}
 		}
 
-		// Token: 0x04025137 RID: 151863
+		// Token: 0x04020DCC RID: 134604
 		public bool Debug;
 
-		// Token: 0x04025138 RID: 151864
+		// Token: 0x04020DCD RID: 134605
 		public List<int> GameplayTagList = new List<int>();
 
-		// Token: 0x04025139 RID: 151865
+		// Token: 0x04020DCE RID: 134606
 		public string AttachSocket = "";
 
-		// Token: 0x0402513A RID: 151866
+		// Token: 0x04020DCF RID: 134607
 		public Transform AttachTransform = Transform.Create();
 	}
 }

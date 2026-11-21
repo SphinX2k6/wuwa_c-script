@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E92 RID: 3730
+	// Token: 0x02000E82 RID: 3714
 	public sealed class RbLaserEmitterPbType : IMessage<RbLaserEmitterPbType>, IMessage, IEquatable<RbLaserEmitterPbType>, IDeepCloneable<RbLaserEmitterPbType>, IBufferMessage
 	{
-		// Token: 0x06014084 RID: 82052 RVA: 0x002EAE74 File Offset: 0x002E9074
+		// Token: 0x06013F9F RID: 81823 RVA: 0x002E97B8 File Offset: 0x002E79B8
 		[NullableContext(1)]
 		public static RbLaserEmitterPbType Create()
 		{
 			return new RbLaserEmitterPbType();
 		}
 
-		// Token: 0x170042A6 RID: 17062
-		// (get) Token: 0x06014085 RID: 82053 RVA: 0x002EAE7B File Offset: 0x002E907B
+		// Token: 0x1700427C RID: 17020
+		// (get) Token: 0x06013FA0 RID: 81824 RVA: 0x002E97BF File Offset: 0x002E79BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170042A7 RID: 17063
-		// (get) Token: 0x06014086 RID: 82054 RVA: 0x002EAE7E File Offset: 0x002E907E
+		// Token: 0x1700427D RID: 17021
+		// (get) Token: 0x06013FA1 RID: 81825 RVA: 0x002E97C2 File Offset: 0x002E79C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014087 RID: 82055 RVA: 0x002EAE85 File Offset: 0x002E9085
+		// Token: 0x06013FA2 RID: 81826 RVA: 0x002E97C9 File Offset: 0x002E79C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbLaserEmitterPbType()
 		{
 		}
 
-		// Token: 0x06014088 RID: 82056 RVA: 0x002EAE98 File Offset: 0x002E9098
+		// Token: 0x06013FA3 RID: 81827 RVA: 0x002E97DC File Offset: 0x002E79DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbLaserEmitterPbType(RbLaserEmitterPbType other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014089 RID: 82057 RVA: 0x002EAEC2 File Offset: 0x002E90C2
+		// Token: 0x06013FA4 RID: 81828 RVA: 0x002E9806 File Offset: 0x002E7A06
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbLaserEmitterPbType Clone()
@@ -66,8 +66,8 @@ namespace Aki.Protocol
 			return new RbLaserEmitterPbType(this);
 		}
 
-		// Token: 0x170042A8 RID: 17064
-		// (get) Token: 0x0601408A RID: 82058 RVA: 0x002EAECA File Offset: 0x002E90CA
+		// Token: 0x1700427E RID: 17022
+		// (get) Token: 0x06013FA5 RID: 81829 RVA: 0x002E980E File Offset: 0x002E7A0E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<Vector> LaserPoints
@@ -78,7 +78,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601408B RID: 82059 RVA: 0x002EAED2 File Offset: 0x002E90D2
+		// Token: 0x06013FA6 RID: 81830 RVA: 0x002E9816 File Offset: 0x002E7A16
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -86,7 +86,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RbLaserEmitterPbType);
 		}
 
-		// Token: 0x0601408C RID: 82060 RVA: 0x002EAEE0 File Offset: 0x002E90E0
+		// Token: 0x06013FA7 RID: 81831 RVA: 0x002E9824 File Offset: 0x002E7A24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RbLaserEmitterPbType other)
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.laserPoints_.Equals(other.laserPoints_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601408D RID: 82061 RVA: 0x002EAF14 File Offset: 0x002E9114
+		// Token: 0x06013FA8 RID: 81832 RVA: 0x002E9858 File Offset: 0x002E7A58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601408E RID: 82062 RVA: 0x002EAF48 File Offset: 0x002E9148
+		// Token: 0x06013FA9 RID: 81833 RVA: 0x002E988C File Offset: 0x002E7A8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601408F RID: 82063 RVA: 0x002EAF55 File Offset: 0x002E9155
+		// Token: 0x06013FAA RID: 81834 RVA: 0x002E9899 File Offset: 0x002E7A99
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014090 RID: 82064 RVA: 0x002EAF5E File Offset: 0x002E915E
+		// Token: 0x06013FAB RID: 81835 RVA: 0x002E98A2 File Offset: 0x002E7AA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014091 RID: 82065 RVA: 0x002EAF88 File Offset: 0x002E9188
+		// Token: 0x06013FAC RID: 81836 RVA: 0x002E98CC File Offset: 0x002E7ACC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014092 RID: 82066 RVA: 0x002EAFC1 File Offset: 0x002E91C1
+		// Token: 0x06013FAD RID: 81837 RVA: 0x002E9905 File Offset: 0x002E7B05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RbLaserEmitterPbType other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014093 RID: 82067 RVA: 0x002EAFEF File Offset: 0x002E91EF
+		// Token: 0x06013FAE RID: 81838 RVA: 0x002E9933 File Offset: 0x002E7B33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014094 RID: 82068 RVA: 0x002EAFF8 File Offset: 0x002E91F8
+		// Token: 0x06013FAF RID: 81839 RVA: 0x002E993C File Offset: 0x002E7B3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -194,16 +194,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007A49 RID: 31305
+		// Token: 0x04007A73 RID: 31347
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007A4A RID: 31306
+		// Token: 0x04007A74 RID: 31348
 		public const int LaserPointsFieldNumber = 1;
 
-		// Token: 0x04007A4B RID: 31307
+		// Token: 0x04007A75 RID: 31349
 		private static readonly FieldCodec<Vector> _repeated_laserPoints_codec = FieldCodec.ForMessage<Vector>(10U, Vector.Parser);
 
-		// Token: 0x04007A4C RID: 31308
+		// Token: 0x04007A76 RID: 31350
 		private readonly RepeatedField<Vector> laserPoints_ = new RepeatedField<Vector>();
 	}
 }

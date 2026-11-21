@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002591 RID: 9617
+// Token: 0x02001A7C RID: 6780
 public enum ERoleMainAnimInstanceType
 {
-	// Token: 0x040092FB RID: 37627
+	// Token: 0x04009453 RID: 37971
 	BaseRole,
-	// Token: 0x040092FC RID: 37628
+	// Token: 0x04009454 RID: 37972
 	CommonAnim
 }

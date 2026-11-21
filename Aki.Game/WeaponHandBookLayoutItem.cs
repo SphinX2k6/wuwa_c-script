@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E49 RID: 7753
+// Token: 0x0200130B RID: 4875
 internal class WeaponHandBookLayoutItem : UiPanelBase
 {
-	// Token: 0x0600EBC4 RID: 60356 RVA: 0x0037F2A2 File Offset: 0x0037D4A2
+	// Token: 0x0600BFE3 RID: 49123 RVA: 0x0038AF32 File Offset: 0x00389132
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,13 +17,13 @@ internal class WeaponHandBookLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EBC5 RID: 60357 RVA: 0x0037F2C5 File Offset: 0x0037D4C5
+	// Token: 0x0600BFE4 RID: 49124 RVA: 0x0038AF55 File Offset: 0x00389155
 	protected override void OnStart()
 	{
 		this.GridLayout = new GenericLayout<WeaponHandBookWeaponItem, WeaponHandBookDynamicLayoutItemData>(base.GetGridLayout(0), new Func<WeaponHandBookWeaponItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x0600EBC6 RID: 60358 RVA: 0x0037F2E8 File Offset: 0x0037D4E8
+	// Token: 0x0600BFE5 RID: 49125 RVA: 0x0038AF78 File Offset: 0x00389178
 	[NullableContext(1)]
 	private WeaponHandBookWeaponItem InitItem()
 	{
@@ -33,7 +33,7 @@ internal class WeaponHandBookLayoutItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EBC7 RID: 60359 RVA: 0x0037F2FB File Offset: 0x0037D4FB
+	// Token: 0x0600BFE6 RID: 49126 RVA: 0x0038AF8B File Offset: 0x0038918B
 	[NullableContext(1)]
 	public void Update(List<WeaponHandBookDynamicLayoutItemData> dataList)
 	{
@@ -56,7 +56,7 @@ internal class WeaponHandBookLayoutItem : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x04006D52 RID: 27986
+	// Token: 0x04006E33 RID: 28211
 	[Nullable(new byte[]
 	{
 		2,
@@ -64,7 +64,7 @@ internal class WeaponHandBookLayoutItem : UiPanelBase
 	})]
 	public Action<UUIExtendToggle, int> OnClickCallBack;
 
-	// Token: 0x04006D53 RID: 27987
+	// Token: 0x04006E34 RID: 28212
 	[Nullable(new byte[]
 	{
 		2,
@@ -73,13 +73,13 @@ internal class WeaponHandBookLayoutItem : UiPanelBase
 	})]
 	private GenericLayout<WeaponHandBookWeaponItem, WeaponHandBookDynamicLayoutItemData> GridLayout;
 
-	// Token: 0x020083FB RID: 33787
+	// Token: 0x02007580 RID: 30080
 	private class EWeaponHandBookLayoutItemDefine
 	{
-		// Token: 0x0402AF62 RID: 175970
+		// Token: 0x04026286 RID: 156294
 		public const int Layout = 0;
 
-		// Token: 0x0402AF63 RID: 175971
+		// Token: 0x04026287 RID: 156295
 		public const int Item = 1;
 	}
 }

@@ -2,32 +2,35 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002395 RID: 9109
+	// Token: 0x02002620 RID: 9760
 	public static class EMotorRadioOperationTypeExtensions
 	{
-		// Token: 0x0600C69D RID: 50845 RVA: 0x001D16C8 File Offset: 0x001CF8C8
+		// Token: 0x0600D2EA RID: 53994 RVA: 0x001EA7F4 File Offset: 0x001E89F4
 		public static string ToEnumString(this EMotorRadioOperationType value)
 		{
 			string result;
-			if (value != EMotorRadioOperationType.EnableAll)
+			switch (value)
 			{
-				if (value != EMotorRadioOperationType.DisableAll)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "DisableAll";
-				}
-			}
-			else
-			{
+			case EMotorRadioOperationType.EnableAll:
 				result = "EnableAll";
+				break;
+			case EMotorRadioOperationType.DisableAll:
+				result = "DisableAll";
+				break;
+			case EMotorRadioOperationType.EnableInRange:
+				result = "EnableInRange";
+				break;
+			case EMotorRadioOperationType.DisableInRange:
+				result = "DisableInRange";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600C69E RID: 50846 RVA: 0x001D1700 File Offset: 0x001CF900
+		// Token: 0x0600D2EB RID: 53995 RVA: 0x001EA848 File Offset: 0x001E8A48
 		public static EMotorRadioOperationType FromString(string name)
 		{
 			EMotorRadioOperationType result;
@@ -38,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C69F RID: 50847 RVA: 0x001D1729 File Offset: 0x001CF929
+		// Token: 0x0600D2EC RID: 53996 RVA: 0x001EA874 File Offset: 0x001E8A74
 		public static bool TryFromString(string name, out EMotorRadioOperationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +54,58 @@ namespace Aki.TDConfigMgr.Action
 				value = EMotorRadioOperationType.EnableAll;
 				return true;
 			}
-			if (!(name == "DisableAll"))
+			if (name == "DisableAll")
+			{
+				value = EMotorRadioOperationType.DisableAll;
+				return true;
+			}
+			if (name == "EnableInRange")
+			{
+				value = EMotorRadioOperationType.EnableInRange;
+				return true;
+			}
+			if (!(name == "DisableInRange"))
 			{
 				value = EMotorRadioOperationType.EnableAll;
 				return false;
 			}
-			value = EMotorRadioOperationType.DisableAll;
+			value = EMotorRadioOperationType.DisableInRange;
 			return true;
 		}
 
-		// Token: 0x0600C6A0 RID: 50848 RVA: 0x001D1762 File Offset: 0x001CF962
+		// Token: 0x0600D2ED RID: 53997 RVA: 0x001EA8DC File Offset: 0x001E8ADC
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"EnableAll",
-				"DisableAll"
+				"DisableAll",
+				"EnableInRange",
+				"DisableInRange"
 			};
 		}
 
-		// Token: 0x0600C6A1 RID: 50849 RVA: 0x001D177A File Offset: 0x001CF97A
+		// Token: 0x0600D2EE RID: 53998 RVA: 0x001EA904 File Offset: 0x001E8B04
 		public static EMotorRadioOperationType[] GetValues()
 		{
 			return new EMotorRadioOperationType[]
 			{
 				EMotorRadioOperationType.EnableAll,
-				EMotorRadioOperationType.DisableAll
+				EMotorRadioOperationType.DisableAll,
+				EMotorRadioOperationType.EnableInRange,
+				EMotorRadioOperationType.DisableInRange
 			};
 		}
 
-		// Token: 0x0600C6A2 RID: 50850 RVA: 0x001D1786 File Offset: 0x001CF986
+		// Token: 0x0600D2EF RID: 53999 RVA: 0x001EA917 File Offset: 0x001E8B17
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"EnableAll",
-				"DisableAll"
+				"DisableAll",
+				"EnableInRange",
+				"DisableInRange"
 			};
 		}
 	}

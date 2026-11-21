@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E15 RID: 24085
+	// Token: 0x02004DFA RID: 19962
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyBarZanni : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D3FE RID: 250878 RVA: 0x00EC272C File Offset: 0x00EC092C
+		// Token: 0x0603238D RID: 205709 RVA: 0x00E13C8C File Offset: 0x00E11E8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D3FF RID: 250879 RVA: 0x00EC2927 File Offset: 0x00EC0B27
+		// Token: 0x0603238E RID: 205710 RVA: 0x00E13E87 File Offset: 0x00E12087
 		protected override void OnInitData()
 		{
 			this.MorphConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(150701);
@@ -60,20 +60,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaxAttributeId = (EAttributeType)this.MorphConfig.MaxAttributeId;
 		}
 
-		// Token: 0x0603D400 RID: 250880 RVA: 0x00EC2965 File Offset: 0x00EC0B65
+		// Token: 0x0603238F RID: 205711 RVA: 0x00E13EC5 File Offset: 0x00E120C5
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagAddOrRemoveChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1ZanniMd10011.技能标识.认真状态"], new BaseTagComponent.TTagSwitchedCallback(this.OnMorphTagChange));
 		}
 
-		// Token: 0x0603D401 RID: 250881 RVA: 0x00EC298E File Offset: 0x00EC0B8E
+		// Token: 0x06032390 RID: 205712 RVA: 0x00E13EEE File Offset: 0x00E120EE
 		private void OnMorphTagChange(int tagId, bool tagExist)
 		{
 			this.SetState(tagExist ? SpecialEnergyBarZanni.EState.Morph : SpecialEnergyBarZanni.EState.Normal, false);
 		}
 
-		// Token: 0x0603D402 RID: 250882 RVA: 0x00EC29A0 File Offset: 0x00EC0BA0
+		// Token: 0x06032391 RID: 205713 RVA: 0x00E13F00 File Offset: 0x00E12100
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarZanni.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D403 RID: 250883 RVA: 0x00EC29E4 File Offset: 0x00EC0BE4
+		// Token: 0x06032392 RID: 205714 RVA: 0x00E13F44 File Offset: 0x00E12144
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarZanni.<InitBarItem>d__16 <InitBarItem>d__;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D404 RID: 250884 RVA: 0x00EC2A28 File Offset: 0x00EC0C28
+		// Token: 0x06032393 RID: 205715 RVA: 0x00E13F88 File Offset: 0x00E12188
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(7);
@@ -112,14 +112,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D405 RID: 250885 RVA: 0x00EC2A7F File Offset: 0x00EC0C7F
+		// Token: 0x06032394 RID: 205716 RVA: 0x00E13FDF File Offset: 0x00E121DF
 		protected override void ClearAllTweenAnim()
 		{
 			base.StopTweenAnim(11);
 			base.ClearAllTweenAnim();
 		}
 
-		// Token: 0x0603D406 RID: 250886 RVA: 0x00EC2A90 File Offset: 0x00EC0C90
+		// Token: 0x06032395 RID: 205717 RVA: 0x00E13FF0 File Offset: 0x00E121F0
 		protected override void OnBarPercentChanged()
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayTweenAnim(flag ? 9 : 10);
 		}
 
-		// Token: 0x0603D407 RID: 250887 RVA: 0x00EC2AF4 File Offset: 0x00EC0CF4
+		// Token: 0x06032396 RID: 205718 RVA: 0x00E14054 File Offset: 0x00E12254
 		private void RefreshState(bool isStart = false)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetState(SpecialEnergyBarZanni.EState.Normal, isStart);
 		}
 
-		// Token: 0x0603D408 RID: 250888 RVA: 0x00EC2B2C File Offset: 0x00EC0D2C
+		// Token: 0x06032397 RID: 205719 RVA: 0x00E1408C File Offset: 0x00E1228C
 		private void SetState(SpecialEnergyBarZanni.EState state, bool isStart = false)
 		{
 			if (state == this.CurState && !isStart)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D409 RID: 250889 RVA: 0x00EC2BC0 File Offset: 0x00EC0DC0
+		// Token: 0x06032398 RID: 205720 RVA: 0x00E14120 File Offset: 0x00E12320
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D40A RID: 250890 RVA: 0x00EC2C5C File Offset: 0x00EC0E5C
+		// Token: 0x06032399 RID: 205721 RVA: 0x00E141BC File Offset: 0x00E123BC
 		private void RefreshBuff()
 		{
 			SpecialEnergyBarInfo morphConfig = this.MorphConfig;
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffHandle = 0;
 		}
 
-		// Token: 0x0603D40B RID: 250891 RVA: 0x00EC2CC9 File Offset: 0x00EC0EC9
+		// Token: 0x0603239A RID: 205722 RVA: 0x00E14229 File Offset: 0x00E12429
 		private void PlayWarnAnim(bool bPlay)
 		{
 			if (this.IsPlayWarnAnim == bPlay)
@@ -287,74 +287,74 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetAlpha(1f);
 		}
 
-		// Token: 0x0401FF0B RID: 130827
+		// Token: 0x0401A9D2 RID: 109010
 		private const int MORPH_CONFIG_ID = 150701;
 
-		// Token: 0x0401FF0C RID: 130828
+		// Token: 0x0401A9D3 RID: 109011
 		private SpecialEnergyBarInfo MorphConfig;
 
-		// Token: 0x0401FF0D RID: 130829
+		// Token: 0x0401A9D4 RID: 109012
 		private SpecialEnergyBarZanniSlot BarItemNormal;
 
-		// Token: 0x0401FF0E RID: 130830
+		// Token: 0x0401A9D5 RID: 109013
 		private SpecialEnergyBarZanniSlot BarItemMorph;
 
-		// Token: 0x0401FF0F RID: 130831
+		// Token: 0x0401A9D6 RID: 109014
 		private SpecialEnergyBarZanni.EState CurState;
 
-		// Token: 0x0401FF10 RID: 130832
+		// Token: 0x0401A9D7 RID: 109015
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FF11 RID: 130833
+		// Token: 0x0401A9D8 RID: 109016
 		private int BuffHandle;
 
-		// Token: 0x0401FF12 RID: 130834
+		// Token: 0x0401A9D9 RID: 109017
 		private bool IsPlayWarnAnim;
 
-		// Token: 0x0401FF13 RID: 130835
+		// Token: 0x0401A9DA RID: 109018
 		private bool InDrive;
 
-		// Token: 0x0200C185 RID: 49541
+		// Token: 0x0200AB94 RID: 43924
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403A79C RID: 239516
+			// Token: 0x0403518E RID: 217486
 			Normal,
-			// Token: 0x0403A79D RID: 239517
+			// Token: 0x0403518F RID: 217487
 			Morph
 		}
 
-		// Token: 0x0200C186 RID: 49542
+		// Token: 0x0200AB95 RID: 43925
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A79F RID: 239519
+			// Token: 0x04035191 RID: 217489
 			SlotBarItemNormal,
-			// Token: 0x0403A7A0 RID: 239520
+			// Token: 0x04035192 RID: 217490
 			BarSprite,
-			// Token: 0x0403A7A1 RID: 239521
+			// Token: 0x04035193 RID: 217491
 			ActivateItem,
-			// Token: 0x0403A7A2 RID: 239522
+			// Token: 0x04035194 RID: 217492
 			SlotBarItemMorph,
-			// Token: 0x0403A7A3 RID: 239523
+			// Token: 0x04035195 RID: 217493
 			ArrowItem,
-			// Token: 0x0403A7A4 RID: 239524
+			// Token: 0x04035196 RID: 217494
 			NormalItem,
-			// Token: 0x0403A7A5 RID: 239525
+			// Token: 0x04035197 RID: 217495
 			MorphItem,
-			// Token: 0x0403A7A6 RID: 239526
+			// Token: 0x04035198 RID: 217496
 			AniMorphIn,
-			// Token: 0x0403A7A7 RID: 239527
+			// Token: 0x04035199 RID: 217497
 			AniMorphOut,
-			// Token: 0x0403A7A8 RID: 239528
+			// Token: 0x0403519A RID: 217498
 			AnimDriveIn,
-			// Token: 0x0403A7A9 RID: 239529
+			// Token: 0x0403519B RID: 217499
 			AnimDriveOut,
-			// Token: 0x0403A7AA RID: 239530
+			// Token: 0x0403519C RID: 217500
 			AnimWarning,
-			// Token: 0x0403A7AB RID: 239531
+			// Token: 0x0403519D RID: 217501
 			DarkLeftItem,
-			// Token: 0x0403A7AC RID: 239532
+			// Token: 0x0403519E RID: 217502
 			DarkRightItem
 		}
 	}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005585 RID: 21893
+	// Token: 0x02005B23 RID: 23331
 	public class IMonsterNpcInteractionConfig_UnionUnion
 	{
-		// Token: 0x1700A1C9 RID: 41417
-		// (get) Token: 0x060243D7 RID: 148439 RVA: 0x005012FD File Offset: 0x004FF4FD
-		// (set) Token: 0x060243D8 RID: 148440 RVA: 0x00501305 File Offset: 0x004FF505
+		// Token: 0x1700AA51 RID: 43601
+		// (get) Token: 0x060265E4 RID: 157156 RVA: 0x00541875 File Offset: 0x0053FA75
+		// (set) Token: 0x060265E5 RID: 157157 RVA: 0x0054187D File Offset: 0x0053FA7D
 		public IMonsterNpcInteractionConfig_Union Type { get; set; }
 
-		// Token: 0x1700A1CA RID: 41418
-		// (get) Token: 0x060243D9 RID: 148441 RVA: 0x0050130E File Offset: 0x004FF50E
-		// (set) Token: 0x060243DA RID: 148442 RVA: 0x00501316 File Offset: 0x004FF516
+		// Token: 0x1700AA52 RID: 43602
+		// (get) Token: 0x060265E6 RID: 157158 RVA: 0x00541886 File Offset: 0x0053FA86
+		// (set) Token: 0x060265E7 RID: 157159 RVA: 0x0054188E File Offset: 0x0053FA8E
 		public object Value { get; set; }
 
-		// Token: 0x060243DB RID: 148443 RVA: 0x0050131F File Offset: 0x004FF51F
+		// Token: 0x060265E8 RID: 157160 RVA: 0x00541897 File Offset: 0x0053FA97
 		public IMonsterNpcInteractionConfig_UnionUnion()
 		{
 			this.Type = IMonsterNpcInteractionConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060243DC RID: 148444 RVA: 0x00501335 File Offset: 0x004FF535
+		// Token: 0x060265E9 RID: 157161 RVA: 0x005418AD File Offset: 0x0053FAAD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060243DD RID: 148445 RVA: 0x00501347 File Offset: 0x004FF547
+		// Token: 0x060265EA RID: 157162 RVA: 0x005418BF File Offset: 0x0053FABF
 		public IMonsterNpcInteractionConfigT AsIMonsterNpcInteractionConfig()
 		{
 			return this.As<IMonsterNpcInteractionConfigT>();
 		}
 
-		// Token: 0x060243DE RID: 148446 RVA: 0x0050134F File Offset: 0x004FF54F
+		// Token: 0x060265EB RID: 157163 RVA: 0x005418C7 File Offset: 0x0053FAC7
 		public static IMonsterNpcInteractionConfig_UnionUnion FromIMonsterNpcInteractionConfig(IMonsterNpcInteractionConfigT _imonsternpcinteractionconfig)
 		{
 			return new IMonsterNpcInteractionConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060243DF RID: 148447 RVA: 0x00501364 File Offset: 0x004FF564
+		// Token: 0x060265EC RID: 157164 RVA: 0x005418DC File Offset: 0x0053FADC
 		public IMonsterNpcInteractionWallRunT AsIMonsterNpcInteractionWallRun()
 		{
 			return this.As<IMonsterNpcInteractionWallRunT>();
 		}
 
-		// Token: 0x060243E0 RID: 148448 RVA: 0x0050136C File Offset: 0x004FF56C
+		// Token: 0x060265ED RID: 157165 RVA: 0x005418E4 File Offset: 0x0053FAE4
 		public static IMonsterNpcInteractionConfig_UnionUnion FromIMonsterNpcInteractionWallRun(IMonsterNpcInteractionWallRunT _imonsternpcinteractionwallrun)
 		{
 			return new IMonsterNpcInteractionConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060243E1 RID: 148449 RVA: 0x00501381 File Offset: 0x004FF581
+		// Token: 0x060265EE RID: 157166 RVA: 0x005418F9 File Offset: 0x0053FAF9
 		public IMonsterNpcInteractionHookT AsIMonsterNpcInteractionHook()
 		{
 			return this.As<IMonsterNpcInteractionHookT>();
 		}
 
-		// Token: 0x060243E2 RID: 148450 RVA: 0x00501389 File Offset: 0x004FF589
+		// Token: 0x060265EF RID: 157167 RVA: 0x00541901 File Offset: 0x0053FB01
 		public static IMonsterNpcInteractionConfig_UnionUnion FromIMonsterNpcInteractionHook(IMonsterNpcInteractionHookT _imonsternpcinteractionhook)
 		{
 			return new IMonsterNpcInteractionConfig_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060243E3 RID: 148451 RVA: 0x0050139E File Offset: 0x004FF59E
+		// Token: 0x060265F0 RID: 157168 RVA: 0x00541916 File Offset: 0x0053FB16
 		public IMonsterNpcInteractionSwordRidingT AsIMonsterNpcInteractionSwordRiding()
 		{
 			return this.As<IMonsterNpcInteractionSwordRidingT>();
 		}
 
-		// Token: 0x060243E4 RID: 148452 RVA: 0x005013A6 File Offset: 0x004FF5A6
+		// Token: 0x060265F1 RID: 157169 RVA: 0x0054191E File Offset: 0x0053FB1E
 		public static IMonsterNpcInteractionConfig_UnionUnion FromIMonsterNpcInteractionSwordRiding(IMonsterNpcInteractionSwordRidingT _imonsternpcinteractionswordriding)
 		{
 			return new IMonsterNpcInteractionConfig_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060243E5 RID: 148453 RVA: 0x005013BB File Offset: 0x004FF5BB
+		// Token: 0x060265F2 RID: 157170 RVA: 0x00541933 File Offset: 0x0053FB33
 		public IMonsterNpcInteractionGazePerformT AsIMonsterNpcInteractionGazePerform()
 		{
 			return this.As<IMonsterNpcInteractionGazePerformT>();
 		}
 
-		// Token: 0x060243E6 RID: 148454 RVA: 0x005013C3 File Offset: 0x004FF5C3
+		// Token: 0x060265F3 RID: 157171 RVA: 0x0054193B File Offset: 0x0053FB3B
 		public static IMonsterNpcInteractionConfig_UnionUnion FromIMonsterNpcInteractionGazePerform(IMonsterNpcInteractionGazePerformT _imonsternpcinteractiongazeperform)
 		{
 			return new IMonsterNpcInteractionConfig_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060243E7 RID: 148455 RVA: 0x005013D8 File Offset: 0x004FF5D8
+		// Token: 0x060265F4 RID: 157172 RVA: 0x00541950 File Offset: 0x0053FB50
 		public static int Pack(FlatBufferBuilder builder, IMonsterNpcInteractionConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

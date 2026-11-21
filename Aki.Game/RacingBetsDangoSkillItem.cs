@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002714 RID: 10004
+// Token: 0x02001BFF RID: 7167
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RacingBetsDangoSkillItem : GridProxyAbstract<RacingBetsDungeonDangoInfo>
 {
-	// Token: 0x0601481B RID: 83995 RVA: 0x0052DC98 File Offset: 0x0052BE98
+	// Token: 0x06011CFD RID: 72957 RVA: 0x0053C9B4 File Offset: 0x0053ABB4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class RacingBetsDangoSkillItem : GridProxyAbstract<RacingBetsDungeonDango
 		};
 	}
 
-	// Token: 0x0601481C RID: 83996 RVA: 0x0052DCF4 File Offset: 0x0052BEF4
+	// Token: 0x06011CFE RID: 72958 RVA: 0x0053CA10 File Offset: 0x0053AC10
 	[NullableContext(1)]
 	public override void Refresh(RacingBetsDungeonDangoInfo data, bool isSelected, int gridIndex)
 	{
@@ -47,16 +47,16 @@ public class RacingBetsDangoSkillItem : GridProxyAbstract<RacingBetsDungeonDango
 		}
 	}
 
-	// Token: 0x02008D69 RID: 36201
+	// Token: 0x02007EF2 RID: 32498
 	private class EComponent
 	{
-		// Token: 0x0402DE2B RID: 187947
+		// Token: 0x04029142 RID: 168258
 		public const int DangoIcon = 0;
 
-		// Token: 0x0402DE2C RID: 187948
+		// Token: 0x04029143 RID: 168259
 		public const int SkillName = 1;
 
-		// Token: 0x0402DE2D RID: 187949
+		// Token: 0x04029144 RID: 168260
 		public const int SkillDesc = 2;
 	}
 }

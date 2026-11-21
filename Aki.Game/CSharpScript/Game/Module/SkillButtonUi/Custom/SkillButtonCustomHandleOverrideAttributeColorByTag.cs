@@ -3,10 +3,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C26 RID: 19494
+	// Token: 0x02003BD7 RID: 15319
 	public class SkillButtonCustomHandleOverrideAttributeColorByTag : SkillButtonCustomHandleBase
 	{
-		// Token: 0x06032729 RID: 206633 RVA: 0x00BC1774 File Offset: 0x00BBF974
+		// Token: 0x060274DC RID: 160988 RVA: 0x00B0638C File Offset: 0x00B0458C
 		public override void Refresh()
 		{
 			if (this.SkillButtonData == null)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			this.CustomHdMarkFrom = 8;
 		}
 
-		// Token: 0x0603272A RID: 206634 RVA: 0x00BC18DA File Offset: 0x00BBFADA
+		// Token: 0x060274DD RID: 160989 RVA: 0x00B064F2 File Offset: 0x00B046F2
 		public override void RefreshByTagChanged()
 		{
 			this.Refresh();

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002252 RID: 8786
+	// Token: 0x02000746 RID: 1862
 	public sealed class FLTweenFloatSetterDynamic : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0602167A RID: 136826 RVA: 0x0031399A File Offset: 0x00311B9A
+		// Token: 0x0600A2B1 RID: 41649 RVA: 0x000F0402 File Offset: 0x000EE602
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLTweenFloatSetterDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x0602167B RID: 136827 RVA: 0x003139A6 File Offset: 0x00311BA6
+		// Token: 0x0600A2B2 RID: 41650 RVA: 0x000F040E File Offset: 0x000EE60E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLTweenFloatSetterDynamic._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLTweenFloatSetterDynamic._FunctionPtr;
 		}
 
-		// Token: 0x0602167C RID: 136828 RVA: 0x003139C9 File Offset: 0x00311BC9
+		// Token: 0x0600A2B3 RID: 41651 RVA: 0x000F0431 File Offset: 0x000EE631
 		public FLTweenFloatSetterDynamic()
 		{
 		}
 
-		// Token: 0x0602167D RID: 136829 RVA: 0x003139D1 File Offset: 0x00311BD1
+		// Token: 0x0600A2B4 RID: 41652 RVA: 0x000F0439 File Offset: 0x000EE639
 		[NullableContext(2)]
 		public FLTweenFloatSetterDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602167E RID: 136830 RVA: 0x003139DB File Offset: 0x00311BDB
+		// Token: 0x0600A2B5 RID: 41653 RVA: 0x000F0443 File Offset: 0x000EE643
 		public FLTweenFloatSetterDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602167F RID: 136831 RVA: 0x003139E6 File Offset: 0x00311BE6
+		// Token: 0x0600A2B6 RID: 41654 RVA: 0x000F044E File Offset: 0x000EE64E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06021680 RID: 136832 RVA: 0x00313A18 File Offset: 0x00311C18
+		// Token: 0x0600A2B7 RID: 41655 RVA: 0x000F0480 File Offset: 0x000EE680
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float> Callback)
 		{
 			if (FLTweenFloatSetterDynamic.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLTweenFloatSetterDynamic.RegisterId);
 		}
 
-		// Token: 0x06021681 RID: 136833 RVA: 0x00313A54 File Offset: 0x00311C54
+		// Token: 0x0600A2B8 RID: 41656 RVA: 0x000F04BC File Offset: 0x000EE6BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float value)
 		{
 			FLTweenFloatSetterDynamic.__FLTweenFloatSetterDynamic_DelegateParams* ptr = stackalloc FLTweenFloatSetterDynamic.__FLTweenFloatSetterDynamic_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FLTweenFloatSetterDynamic.__FLTweenFloatSetterDynamic_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06021682 RID: 136834 RVA: 0x00313A94 File Offset: 0x00311C94
+		// Token: 0x0600A2B9 RID: 41657 RVA: 0x000F04FC File Offset: 0x000EE6FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLTweenFloatSetterDynamic.__FLTweenFloatSetterDynamic_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04011CDB RID: 72923
+		// Token: 0x04004597 RID: 17815
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011CDC RID: 72924
+		// Token: 0x04004598 RID: 17816
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LTween.LTweenFloatSetterDynamic__DelegateSignature";
 
-		// Token: 0x04011CDD RID: 72925
+		// Token: 0x04004599 RID: 17817
 		private static int RegisterId;
 
-		// Token: 0x0200350F RID: 13583
+		// Token: 0x02000F2C RID: 3884
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FLTweenFloatSetterDynamic_DelegateParams
+		private ref struct __FLTweenFloatSetterDynamic_DelegateParams
 		{
-			// Token: 0x04017541 RID: 95553
+			// Token: 0x04006300 RID: 25344
 			[FieldOffset(0)]
 			public float value;
 		}
 
-		// Token: 0x02003510 RID: 13584
+		// Token: 0x02000F2D RID: 3885
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017542 RID: 95554
+			// Token: 0x04006301 RID: 25345
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

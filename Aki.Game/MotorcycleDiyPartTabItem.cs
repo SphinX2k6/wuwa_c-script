@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x0200229B RID: 8859
+// Token: 0x0200177F RID: 6015
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleDiyPartTabItem : CommonTabItemBase
 {
-	// Token: 0x060114EB RID: 70891 RVA: 0x00439884 File Offset: 0x00437A84
+	// Token: 0x0600E983 RID: 59779 RVA: 0x0044647C File Offset: 0x0044467C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		};
 	}
 
-	// Token: 0x060114EC RID: 70892 RVA: 0x00439959 File Offset: 0x00437B59
+	// Token: 0x0600E984 RID: 59780 RVA: 0x00446551 File Offset: 0x00444751
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		bool flag = toggleState == EToggleState.ETT_Checked;
@@ -45,7 +45,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		selectedCallBack(base.GridIndex);
 	}
 
-	// Token: 0x060114ED RID: 70893 RVA: 0x00439984 File Offset: 0x00437B84
+	// Token: 0x0600E985 RID: 59781 RVA: 0x0044657C File Offset: 0x0044477C
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		MotorcycleDiyPartTabItemData motorcycleDiyPartTabItemData = data as MotorcycleDiyPartTabItemData;
@@ -80,25 +80,25 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		this.SetPresetRedDotVisible(false);
 	}
 
-	// Token: 0x060114EE RID: 70894 RVA: 0x00439A39 File Offset: 0x00437C39
+	// Token: 0x0600E986 RID: 59782 RVA: 0x00446631 File Offset: 0x00444831
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x060114EF RID: 70895 RVA: 0x00439A3B File Offset: 0x00437C3B
+	// Token: 0x0600E987 RID: 59783 RVA: 0x00446633 File Offset: 0x00444833
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleStateForce(state, bFire, false, false);
 		this.ChangeTabIcon(state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060114F0 RID: 70896 RVA: 0x00439A57 File Offset: 0x00437C57
+	// Token: 0x0600E988 RID: 59784 RVA: 0x0044664F File Offset: 0x0044484F
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x060114F1 RID: 70897 RVA: 0x00439A60 File Offset: 0x00437C60
+	// Token: 0x0600E989 RID: 59785 RVA: 0x00446658 File Offset: 0x00444858
 	private void ChangeTabIcon(bool selected)
 	{
 		MotorcycleDiyPartTabItemData motorcycleDiyPartTabItemData = this.CurrentData as MotorcycleDiyPartTabItemData;
@@ -131,7 +131,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x060114F2 RID: 70898 RVA: 0x00439B2C File Offset: 0x00437D2C
+	// Token: 0x0600E98A RID: 59786 RVA: 0x00446724 File Offset: 0x00444924
 	public void BindRedDot(ERedDotName redDotName, int typePart)
 	{
 		this.UnBindRedDot();
@@ -141,7 +141,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		RedDotController.Instance.BindRedDot(redDotName, item, null, typePart);
 	}
 
-	// Token: 0x060114F3 RID: 70899 RVA: 0x00439B68 File Offset: 0x00437D68
+	// Token: 0x0600E98B RID: 59787 RVA: 0x00446760 File Offset: 0x00444960
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -152,7 +152,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x060114F4 RID: 70900 RVA: 0x00439BB8 File Offset: 0x00437DB8
+	// Token: 0x0600E98C RID: 59788 RVA: 0x004467B0 File Offset: 0x004449B0
 	public void BindPreviewRedDot(ERedDotName redDotName, int typePart)
 	{
 		this.UnBindPreviewRedDot();
@@ -162,7 +162,7 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		RedDotController.Instance.BindRedDot(redDotName, item, null, typePart);
 	}
 
-	// Token: 0x060114F5 RID: 70901 RVA: 0x00439BF4 File Offset: 0x00437DF4
+	// Token: 0x0600E98D RID: 59789 RVA: 0x004467EC File Offset: 0x004449EC
 	public void UnBindPreviewRedDot()
 	{
 		if (this.PreviewRedDotName != null)
@@ -173,53 +173,53 @@ public class MotorcycleDiyPartTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x060114F6 RID: 70902 RVA: 0x00439C43 File Offset: 0x00437E43
+	// Token: 0x0600E98E RID: 59790 RVA: 0x0044683B File Offset: 0x00444A3B
 	public void SetPreviewRedDotVisible(bool isVisible)
 	{
 		base.GetItem(5).SetUIActive(isVisible);
 	}
 
-	// Token: 0x060114F7 RID: 70903 RVA: 0x00439C52 File Offset: 0x00437E52
+	// Token: 0x0600E98F RID: 59791 RVA: 0x0044684A File Offset: 0x00444A4A
 	public void SetPresetRedDotVisible(bool isVisible)
 	{
 		base.GetItem(6).SetUIActive(isVisible);
 	}
 
-	// Token: 0x04008399 RID: 33689
+	// Token: 0x040084D7 RID: 34007
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0400839A RID: 33690
+	// Token: 0x040084D8 RID: 34008
 	private int TypePart;
 
-	// Token: 0x0400839B RID: 33691
+	// Token: 0x040084D9 RID: 34009
 	private ERedDotName? PreviewRedDotName;
 
-	// Token: 0x0400839C RID: 33692
+	// Token: 0x040084DA RID: 34010
 	private int PreviewTypePart;
 
-	// Token: 0x020087DA RID: 34778
+	// Token: 0x02007963 RID: 31075
 	[NullableContext(0)]
 	private class EMotorDiyPartTabItemComponent
 	{
-		// Token: 0x0402C24A RID: 180810
+		// Token: 0x04027556 RID: 161110
 		public const int TexIcon = 0;
 
-		// Token: 0x0402C24B RID: 180811
+		// Token: 0x04027557 RID: 161111
 		public const int TogItem = 1;
 
-		// Token: 0x0402C24C RID: 180812
+		// Token: 0x04027558 RID: 161112
 		public const int RedDotItem = 2;
 
-		// Token: 0x0402C24D RID: 180813
+		// Token: 0x04027559 RID: 161113
 		public const int NewItem = 3;
 
-		// Token: 0x0402C24E RID: 180814
+		// Token: 0x0402755A RID: 161114
 		public const int LineItem = 4;
 
-		// Token: 0x0402C24F RID: 180815
+		// Token: 0x0402755B RID: 161115
 		public const int PreviewItem = 5;
 
-		// Token: 0x0402C250 RID: 180816
+		// Token: 0x0402755C RID: 161116
 		public const int PresetChangeItem = 6;
 	}
 }

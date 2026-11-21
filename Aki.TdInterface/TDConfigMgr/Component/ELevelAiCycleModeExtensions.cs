@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000988 RID: 2440
+	// Token: 0x02000A3B RID: 2619
 	public static class ELevelAiCycleModeExtensions
 	{
-		// Token: 0x06003695 RID: 13973 RVA: 0x0008E338 File Offset: 0x0008C538
+		// Token: 0x06003A1C RID: 14876 RVA: 0x000962A4 File Offset: 0x000944A4
 		public static string ToEnumString(this ELevelAiCycleMode value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003696 RID: 13974 RVA: 0x0008E360 File Offset: 0x0008C560
+		// Token: 0x06003A1D RID: 14877 RVA: 0x000962CC File Offset: 0x000944CC
 		public static ELevelAiCycleMode FromString(string name)
 		{
 			ELevelAiCycleMode result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003697 RID: 13975 RVA: 0x0008E389 File Offset: 0x0008C589
+		// Token: 0x06003A1E RID: 14878 RVA: 0x000962F5 File Offset: 0x000944F5
 		public static bool TryFromString(string name, out ELevelAiCycleMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003698 RID: 13976 RVA: 0x0008E3AE File Offset: 0x0008C5AE
+		// Token: 0x06003A1F RID: 14879 RVA: 0x0009631A File Offset: 0x0009451A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003699 RID: 13977 RVA: 0x0008E3BE File Offset: 0x0008C5BE
+		// Token: 0x06003A20 RID: 14880 RVA: 0x0009632A File Offset: 0x0009452A
 		public static ELevelAiCycleMode[] GetValues()
 		{
 			return new ELevelAiCycleMode[1];
 		}
 
-		// Token: 0x0600369A RID: 13978 RVA: 0x0008E3C6 File Offset: 0x0008C5C6
+		// Token: 0x06003A21 RID: 14881 RVA: 0x00096332 File Offset: 0x00094532
 		public static string[] GetNames()
 		{
 			return new string[]

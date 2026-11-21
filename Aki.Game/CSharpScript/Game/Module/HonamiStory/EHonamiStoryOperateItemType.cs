@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200592F RID: 22831
+	// Token: 0x02004908 RID: 18696
 	public enum EHonamiStoryOperateItemType
 	{
-		// Token: 0x0401E3D7 RID: 123863
+		// Token: 0x04018E74 RID: 102004
 		Add,
-		// Token: 0x0401E3D8 RID: 123864
+		// Token: 0x04018E75 RID: 102005
 		Update,
-		// Token: 0x0401E3D9 RID: 123865
+		// Token: 0x04018E76 RID: 102006
 		Remove
 	}
 }

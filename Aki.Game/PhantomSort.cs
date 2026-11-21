@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200188D RID: 6285
+// Token: 0x02000D46 RID: 3398
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomSort : CommonSort<EPhantomSortWayType>
 {
-	// Token: 0x0600B80D RID: 47117 RVA: 0x0029ABEC File Offset: 0x00298DEC
+	// Token: 0x06008BF6 RID: 35830 RVA: 0x002A5304 File Offset: 0x002A3504
 	private int SortLevel(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -53,7 +53,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		}
 	}
 
-	// Token: 0x0600B80E RID: 47118 RVA: 0x0029ACE4 File Offset: 0x00298EE4
+	// Token: 0x06008BF7 RID: 35831 RVA: 0x002A53FC File Offset: 0x002A35FC
 	private int SortExp(object a, object b, bool isAscending, object[] param)
 	{
 		ItemDataBase itemDataBase = a as ItemDataBase;
@@ -103,7 +103,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B80F RID: 47119 RVA: 0x0029AE04 File Offset: 0x00299004
+	// Token: 0x06008BF8 RID: 35832 RVA: 0x002A551C File Offset: 0x002A371C
 	private int SortExpFirst(object a, object b, bool isAscending, object[] param)
 	{
 		ItemDataBase itemDataBase = a as ItemDataBase;
@@ -136,7 +136,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B810 RID: 47120 RVA: 0x0029AEAC File Offset: 0x002990AC
+	// Token: 0x06008BF9 RID: 35833 RVA: 0x002A55C4 File Offset: 0x002A37C4
 	private int SortBreach(object a, object b, bool isAscending, object[] param)
 	{
 		if ((a is ItemViewData && b is ItemViewData) || (a is PhantomItemData && b is PhantomItemData))
@@ -182,7 +182,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		}
 	}
 
-	// Token: 0x0600B811 RID: 47121 RVA: 0x0029AFCC File Offset: 0x002991CC
+	// Token: 0x06008BFA RID: 35834 RVA: 0x002A56E4 File Offset: 0x002A38E4
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -230,7 +230,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		}
 	}
 
-	// Token: 0x0600B812 RID: 47122 RVA: 0x0029B0F4 File Offset: 0x002992F4
+	// Token: 0x06008BFB RID: 35835 RVA: 0x002A580C File Offset: 0x002A3A0C
 	private int SortMonsterId(object a, object b, bool isAscending, object[] param)
 	{
 		if ((a is ItemViewData && b is ItemViewData) || (a is PhantomItemData && b is PhantomItemData))
@@ -270,7 +270,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		}
 	}
 
-	// Token: 0x0600B813 RID: 47123 RVA: 0x0029B1F0 File Offset: 0x002993F0
+	// Token: 0x06008BFC RID: 35836 RVA: 0x002A5908 File Offset: 0x002A3B08
 	private int SortUniqueId(object a, object b, bool isAscending, object[] param)
 	{
 		int sortIncrId = this.GetSortIncrId(a);
@@ -328,7 +328,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		}
 	}
 
-	// Token: 0x0600B814 RID: 47124 RVA: 0x0029B34C File Offset: 0x0029954C
+	// Token: 0x06008BFD RID: 35837 RVA: 0x002A5A64 File Offset: 0x002A3C64
 	private int GetSortIncrId(object data)
 	{
 		ItemViewData itemViewData = data as ItemViewData;
@@ -349,7 +349,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B815 RID: 47125 RVA: 0x0029B390 File Offset: 0x00299590
+	// Token: 0x06008BFE RID: 35838 RVA: 0x002A5AA8 File Offset: 0x002A3CA8
 	private int GetPropValue(List<PhantomSortStruct> propData, int propKey, bool ifPercentage = false)
 	{
 		int count = propData.Count;
@@ -370,7 +370,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B816 RID: 47126 RVA: 0x0029B3FC File Offset: 0x002995FC
+	// Token: 0x06008BFF RID: 35839 RVA: 0x002A5B14 File Offset: 0x002A3D14
 	private int SortMainLife(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -384,7 +384,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B817 RID: 47127 RVA: 0x0029B450 File Offset: 0x00299650
+	// Token: 0x06008C00 RID: 35840 RVA: 0x002A5B68 File Offset: 0x002A3D68
 	private int SortMainLifePercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -398,7 +398,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B818 RID: 47128 RVA: 0x0029B4A4 File Offset: 0x002996A4
+	// Token: 0x06008C01 RID: 35841 RVA: 0x002A5BBC File Offset: 0x002A3DBC
 	private int SortMainAttack(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -412,7 +412,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B819 RID: 47129 RVA: 0x0029B4F8 File Offset: 0x002996F8
+	// Token: 0x06008C02 RID: 35842 RVA: 0x002A5C10 File Offset: 0x002A3E10
 	private int SortMainAttackPercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -426,7 +426,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81A RID: 47130 RVA: 0x0029B54C File Offset: 0x0029974C
+	// Token: 0x06008C03 RID: 35843 RVA: 0x002A5C64 File Offset: 0x002A3E64
 	private int SortMainDefense(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -440,7 +440,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81B RID: 47131 RVA: 0x0029B5A0 File Offset: 0x002997A0
+	// Token: 0x06008C04 RID: 35844 RVA: 0x002A5CB8 File Offset: 0x002A3EB8
 	private int SortMainDefensePercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -454,7 +454,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81C RID: 47132 RVA: 0x0029B5F4 File Offset: 0x002997F4
+	// Token: 0x06008C05 RID: 35845 RVA: 0x002A5D0C File Offset: 0x002A3F0C
 	private int SortMainCrit(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -468,7 +468,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81D RID: 47133 RVA: 0x0029B640 File Offset: 0x00299840
+	// Token: 0x06008C06 RID: 35846 RVA: 0x002A5D58 File Offset: 0x002A3F58
 	private int SortMainCritDamage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -482,7 +482,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81E RID: 47134 RVA: 0x0029B68C File Offset: 0x0029988C
+	// Token: 0x06008C07 RID: 35847 RVA: 0x002A5DA4 File Offset: 0x002A3FA4
 	private int SortMainTreat(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -496,7 +496,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B81F RID: 47135 RVA: 0x0029B6D8 File Offset: 0x002998D8
+	// Token: 0x06008C08 RID: 35848 RVA: 0x002A5DF0 File Offset: 0x002A3FF0
 	private int SortMainPhysicsDamage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -510,7 +510,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B820 RID: 47136 RVA: 0x0029B724 File Offset: 0x00299924
+	// Token: 0x06008C09 RID: 35849 RVA: 0x002A5E3C File Offset: 0x002A403C
 	private int SortMainIceAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -524,7 +524,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B821 RID: 47137 RVA: 0x0029B770 File Offset: 0x00299970
+	// Token: 0x06008C0A RID: 35850 RVA: 0x002A5E88 File Offset: 0x002A4088
 	private int SortMainFireAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -538,7 +538,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B822 RID: 47138 RVA: 0x0029B7BC File Offset: 0x002999BC
+	// Token: 0x06008C0B RID: 35851 RVA: 0x002A5ED4 File Offset: 0x002A40D4
 	private int SortMainThunderAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -552,7 +552,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B823 RID: 47139 RVA: 0x0029B808 File Offset: 0x00299A08
+	// Token: 0x06008C0C RID: 35852 RVA: 0x002A5F20 File Offset: 0x002A4120
 	private int SortMainWindAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -566,7 +566,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B824 RID: 47140 RVA: 0x0029B854 File Offset: 0x00299A54
+	// Token: 0x06008C0D RID: 35853 RVA: 0x002A5F6C File Offset: 0x002A416C
 	private int SortMainLightAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -580,7 +580,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B825 RID: 47141 RVA: 0x0029B8A0 File Offset: 0x00299AA0
+	// Token: 0x06008C0E RID: 35854 RVA: 0x002A5FB8 File Offset: 0x002A41B8
 	private int SortMainDarkAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -594,7 +594,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B826 RID: 47142 RVA: 0x0029B8EC File Offset: 0x00299AEC
+	// Token: 0x06008C0F RID: 35855 RVA: 0x002A6004 File Offset: 0x002A4204
 	private int SortMainEnergy(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -608,7 +608,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B827 RID: 47143 RVA: 0x0029B938 File Offset: 0x00299B38
+	// Token: 0x06008C10 RID: 35856 RVA: 0x002A6050 File Offset: 0x002A4250
 	private int SortSubLife(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -622,7 +622,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B828 RID: 47144 RVA: 0x0029B984 File Offset: 0x00299B84
+	// Token: 0x06008C11 RID: 35857 RVA: 0x002A609C File Offset: 0x002A429C
 	private int SortSubLifePercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -636,7 +636,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B829 RID: 47145 RVA: 0x0029B9D0 File Offset: 0x00299BD0
+	// Token: 0x06008C12 RID: 35858 RVA: 0x002A60E8 File Offset: 0x002A42E8
 	private int SortSubAttack(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -650,7 +650,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82A RID: 47146 RVA: 0x0029BA1C File Offset: 0x00299C1C
+	// Token: 0x06008C13 RID: 35859 RVA: 0x002A6134 File Offset: 0x002A4334
 	private int SortSubAttackPercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -664,7 +664,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82B RID: 47147 RVA: 0x0029BA68 File Offset: 0x00299C68
+	// Token: 0x06008C14 RID: 35860 RVA: 0x002A6180 File Offset: 0x002A4380
 	private int SortSubDefense(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -678,7 +678,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82C RID: 47148 RVA: 0x0029BAB4 File Offset: 0x00299CB4
+	// Token: 0x06008C15 RID: 35861 RVA: 0x002A61CC File Offset: 0x002A43CC
 	private int SortSubDefensePercentage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -692,7 +692,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82D RID: 47149 RVA: 0x0029BB00 File Offset: 0x00299D00
+	// Token: 0x06008C16 RID: 35862 RVA: 0x002A6218 File Offset: 0x002A4418
 	private int SortSubCrit(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -706,7 +706,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82E RID: 47150 RVA: 0x0029BB4C File Offset: 0x00299D4C
+	// Token: 0x06008C17 RID: 35863 RVA: 0x002A6264 File Offset: 0x002A4464
 	private int SortSubCritDamage(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -720,13 +720,13 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B82F RID: 47151 RVA: 0x0029BB98 File Offset: 0x00299D98
+	// Token: 0x06008C18 RID: 35864 RVA: 0x002A62B0 File Offset: 0x002A44B0
 	private int SortSubTreat(object a, object b, bool isAscending, object[] param)
 	{
 		return 0;
 	}
 
-	// Token: 0x0600B830 RID: 47152 RVA: 0x0029BB9C File Offset: 0x00299D9C
+	// Token: 0x06008C19 RID: 35865 RVA: 0x002A62B4 File Offset: 0x002A44B4
 	private int SortSubWindAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -740,7 +740,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B831 RID: 47153 RVA: 0x0029BBE8 File Offset: 0x00299DE8
+	// Token: 0x06008C1A RID: 35866 RVA: 0x002A6300 File Offset: 0x002A4500
 	private int SortSubLightAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -754,7 +754,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B832 RID: 47154 RVA: 0x0029BC34 File Offset: 0x00299E34
+	// Token: 0x06008C1B RID: 35867 RVA: 0x002A634C File Offset: 0x002A454C
 	private int SortSubDarkAttr(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -768,7 +768,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B833 RID: 47155 RVA: 0x0029BC80 File Offset: 0x00299E80
+	// Token: 0x06008C1C RID: 35868 RVA: 0x002A6398 File Offset: 0x002A4598
 	private int SortSubEnergy(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -782,7 +782,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B834 RID: 47156 RVA: 0x0029BCCC File Offset: 0x00299ECC
+	// Token: 0x06008C1D RID: 35869 RVA: 0x002A63E4 File Offset: 0x002A45E4
 	private int SortByEquipState(object a, object b, bool isAscending, object[] param)
 	{
 		if ((a is ItemViewData && b is ItemViewData) || (a is PhantomItemData && b is PhantomItemData))
@@ -821,7 +821,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B835 RID: 47157 RVA: 0x0029BDCC File Offset: 0x00299FCC
+	// Token: 0x06008C1E RID: 35870 RVA: 0x002A64E4 File Offset: 0x002A46E4
 	private int SortByCurrentRole(object a, object b, bool isAscending, object[] param)
 	{
 		if (param.Length == 0)
@@ -871,7 +871,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B836 RID: 47158 RVA: 0x0029BEF4 File Offset: 0x0029A0F4
+	// Token: 0x06008C1F RID: 35871 RVA: 0x002A660C File Offset: 0x002A480C
 	private int SortLock(object a, object b, bool isAscending, object[] param)
 	{
 		if ((a is ItemViewData && b is ItemViewData) || (a is PhantomItemData && b is PhantomItemData))
@@ -910,19 +910,19 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B837 RID: 47159 RVA: 0x0029BFE4 File Offset: 0x0029A1E4
+	// Token: 0x06008C20 RID: 35872 RVA: 0x002A66FC File Offset: 0x002A48FC
 	private int SortDeprecateFirst(object a, object b, bool isAscending, object[] param)
 	{
 		return this.SortDeprecate(a, b, isAscending, null);
 	}
 
-	// Token: 0x0600B838 RID: 47160 RVA: 0x0029BFF0 File Offset: 0x0029A1F0
+	// Token: 0x06008C21 RID: 35873 RVA: 0x002A6708 File Offset: 0x002A4908
 	private int SortDeprecateLast(object a, object b, bool isAscending, object[] param)
 	{
 		return this.SortDeprecate(a, b, isAscending, null) * -1;
 	}
 
-	// Token: 0x0600B839 RID: 47161 RVA: 0x0029C000 File Offset: 0x0029A200
+	// Token: 0x06008C22 RID: 35874 RVA: 0x002A6718 File Offset: 0x002A4918
 	private int SortDeprecate(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -947,7 +947,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83A RID: 47162 RVA: 0x0029C0C4 File Offset: 0x0029A2C4
+	// Token: 0x06008C23 RID: 35875 RVA: 0x002A67DC File Offset: 0x002A49DC
 	private int SortRarity(object a, object b, bool isAscending, object[] param)
 	{
 		if ((a is ItemViewData && b is ItemViewData) || (a is PhantomItemData && b is PhantomItemData))
@@ -986,7 +986,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83B RID: 47163 RVA: 0x0029C1C8 File Offset: 0x0029A3C8
+	// Token: 0x06008C24 RID: 35876 RVA: 0x002A68E0 File Offset: 0x002A4AE0
 	private int SortSkin(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -1002,7 +1002,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83C RID: 47164 RVA: 0x0029C228 File Offset: 0x0029A428
+	// Token: 0x06008C25 RID: 35877 RVA: 0x002A6940 File Offset: 0x002A4B40
 	private int SortSubComboHurt(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -1016,7 +1016,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83D RID: 47165 RVA: 0x0029C274 File Offset: 0x0029A474
+	// Token: 0x06008C26 RID: 35878 RVA: 0x002A698C File Offset: 0x002A4B8C
 	private int SortNormalHurt(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -1030,7 +1030,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83E RID: 47166 RVA: 0x0029C2C0 File Offset: 0x0029A4C0
+	// Token: 0x06008C27 RID: 35879 RVA: 0x002A69D8 File Offset: 0x002A4BD8
 	private int SortChargeHurt(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -1044,7 +1044,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B83F RID: 47167 RVA: 0x0029C30C File Offset: 0x0029A50C
+	// Token: 0x06008C28 RID: 35880 RVA: 0x002A6A24 File Offset: 0x002A4C24
 	private int SortComboReleaseHurt(object a, object b, bool isAscending, object[] param)
 	{
 		IPhantomItemData phantomItemData = a as IPhantomItemData;
@@ -1058,7 +1058,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B840 RID: 47168 RVA: 0x0029C358 File Offset: 0x0029A558
+	// Token: 0x06008C29 RID: 35881 RVA: 0x002A6A70 File Offset: 0x002A4C70
 	private int SortQualityDescend(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1068,7 +1068,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return this.SortQuality(a, b, false, null);
 	}
 
-	// Token: 0x0600B841 RID: 47169 RVA: 0x0029C364 File Offset: 0x0029A564
+	// Token: 0x06008C2A RID: 35882 RVA: 0x002A6A7C File Offset: 0x002A4C7C
 	private int SortLevelAscend(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1083,7 +1083,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return this.SortGetExp(a, b, true, null);
 	}
 
-	// Token: 0x0600B842 RID: 47170 RVA: 0x0029C38C File Offset: 0x0029A58C
+	// Token: 0x06008C2B RID: 35883 RVA: 0x002A6AA4 File Offset: 0x002A4CA4
 	private int SortGetExp(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1137,7 +1137,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B843 RID: 47171 RVA: 0x0029C4AC File Offset: 0x0029A6AC
+	// Token: 0x06008C2C RID: 35884 RVA: 0x002A6BC4 File Offset: 0x002A4DC4
 	private int SortIdentifyNum(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1156,7 +1156,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return num;
 	}
 
-	// Token: 0x0600B844 RID: 47172 RVA: 0x0029C4FC File Offset: 0x0029A6FC
+	// Token: 0x06008C2D RID: 35885 RVA: 0x002A6C14 File Offset: 0x002A4E14
 	private int SortIdentifyNumDescend(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1166,7 +1166,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return this.SortIdentifyNum(a, b, false, null);
 	}
 
-	// Token: 0x0600B845 RID: 47173 RVA: 0x0029C508 File Offset: 0x0029A708
+	// Token: 0x06008C2E RID: 35886 RVA: 0x002A6C20 File Offset: 0x002A4E20
 	private int SortNonEquipFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -1190,7 +1190,7 @@ public class PhantomSort : CommonSort<EPhantomSortWayType>
 		return 1;
 	}
 
-	// Token: 0x0600B846 RID: 47174 RVA: 0x0029C568 File Offset: 0x0029A768
+	// Token: 0x06008C2F RID: 35887 RVA: 0x002A6C80 File Offset: 0x002A4E80
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EPhantomSortWayType.Level, new TSortResult(this.SortLevel));

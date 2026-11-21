@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028C2 RID: 10434
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B97 RID: 11159
 	public class AdjustPlayerCameraGravity : ActionParams
 	{
-		// Token: 0x0600E7D5 RID: 59349 RVA: 0x00220A01 File Offset: 0x0021EC01
+		// Token: 0x0600F604 RID: 62980 RVA: 0x0023D981 File Offset: 0x0023BB81
 		public static AdjustPlayerCameraGravity Create(IAdjustPlayerCameraGravity? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004813 RID: 18451
-		// (get) Token: 0x0600E7D6 RID: 59350 RVA: 0x00220A20 File Offset: 0x0021EC20
+		// Token: 0x17004B84 RID: 19332
+		// (get) Token: 0x0600F605 RID: 62981 RVA: 0x0023D9A0 File Offset: 0x0023BBA0
 		public virtual IGravityDirectionType GravityDirection
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004814 RID: 18452
-		// (get) Token: 0x0600E7D7 RID: 59351 RVA: 0x00220A4F File Offset: 0x0021EC4F
+		// Token: 0x17004B85 RID: 19333
+		// (get) Token: 0x0600F606 RID: 62982 RVA: 0x0023D9CF File Offset: 0x0023BBCF
 		public virtual float LerpTime
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004815 RID: 18453
-		// (get) Token: 0x0600E7D8 RID: 59352 RVA: 0x00220A5C File Offset: 0x0021EC5C
+		// Token: 0x17004B86 RID: 19334
+		// (get) Token: 0x0600F607 RID: 62983 RVA: 0x0023D9DC File Offset: 0x0023BBDC
 		[Nullable(2)]
 		public virtual string LerpCurve
 		{
@@ -61,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400802A RID: 32810
+		// Token: 0x040086E9 RID: 34537
 		private IAdjustPlayerCameraGravity Instance;
 
-		// Token: 0x0400802B RID: 32811
+		// Token: 0x040086EA RID: 34538
 		private IGravityDirectionType _GravityDirectionCache;
 
-		// Token: 0x0400802C RID: 32812
+		// Token: 0x040086EB RID: 34539
 		private bool _GravityDirectionInited;
 	}
 }

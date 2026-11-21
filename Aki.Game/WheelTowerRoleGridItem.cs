@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x020015E7 RID: 5607
+// Token: 0x02000A9F RID: 2719
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class WheelTowerRoleGridItem : LoopScrollMediumItemGrid<RoleDataWithBranch>
 {
-	// Token: 0x06009E65 RID: 40549 RVA: 0x00228CAA File Offset: 0x00226EAA
+	// Token: 0x06007243 RID: 29251 RVA: 0x00232A5E File Offset: 0x00230C5E
 	protected override void OnStart()
 	{
 		base.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 	}
 
-	// Token: 0x06009E66 RID: 40550 RVA: 0x00228CD4 File Offset: 0x00226ED4
+	// Token: 0x06007244 RID: 29252 RVA: 0x00232A88 File Offset: 0x00230C88
 	protected override void OnRefresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
 		int roleId = data.RoleId;
@@ -75,13 +75,13 @@ public class WheelTowerRoleGridItem : LoopScrollMediumItemGrid<RoleDataWithBranc
 		this.GetItemGridExtendToggle().SetToggleStateForce(WheelTowerModel.Instance.IsSelectRole(roleId) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06009E67 RID: 40551 RVA: 0x00228F0D File Offset: 0x0022710D
+	// Token: 0x06007245 RID: 29253 RVA: 0x00232CC1 File Offset: 0x00230EC1
 	public void SetToggleClickCallback(Action<int> callback)
 	{
 		this.ToggleClickCallback = callback;
 	}
 
-	// Token: 0x06009E68 RID: 40552 RVA: 0x00228F16 File Offset: 0x00227116
+	// Token: 0x06007246 RID: 29254 RVA: 0x00232CCA File Offset: 0x00230ECA
 	protected override void OnExtendToggleClicked()
 	{
 		Action<int> toggleClickCallback = this.ToggleClickCallback;
@@ -92,10 +92,10 @@ public class WheelTowerRoleGridItem : LoopScrollMediumItemGrid<RoleDataWithBranc
 		toggleClickCallback(this.RoleId);
 	}
 
-	// Token: 0x040046A7 RID: 18087
+	// Token: 0x0400474D RID: 18253
 	private int RoleId;
 
-	// Token: 0x040046A8 RID: 18088
+	// Token: 0x0400474E RID: 18254
 	[Nullable(2)]
 	private Action<int> ToggleClickCallback;
 }

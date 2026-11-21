@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BDB RID: 15323
+	// Token: 0x02003FE7 RID: 16359
 	public enum ETriggerShape : byte
 	{
-		// Token: 0x0400B18E RID: 45454
+		// Token: 0x0400BB19 RID: 47897
 		Box,
-		// Token: 0x0400B18F RID: 45455
+		// Token: 0x0400BB1A RID: 47898
 		Sphere,
-		// Token: 0x0400B190 RID: 45456
+		// Token: 0x0400BB1B RID: 47899
 		HollowSphere,
-		// Token: 0x0400B191 RID: 45457
+		// Token: 0x0400BB1C RID: 47900
 		Cylinder,
-		// Token: 0x0400B192 RID: 45458
+		// Token: 0x0400BB1D RID: 47901
 		HollowCylinder,
-		// Token: 0x0400B193 RID: 45459
+		// Token: 0x0400BB1E RID: 47902
 		Cone,
-		// Token: 0x0400B194 RID: 45460
+		// Token: 0x0400BB1F RID: 47903
 		Volume,
-		// Token: 0x0400B195 RID: 45461
+		// Token: 0x0400BB20 RID: 47904
 		ActorRefVolume,
-		// Token: 0x0400B196 RID: 45462
+		// Token: 0x0400BB21 RID: 47905
 		ActorCollision,
-		// Token: 0x0400B197 RID: 45463
+		// Token: 0x0400BB22 RID: 47906
 		Combination,
-		// Token: 0x0400B198 RID: 45464
+		// Token: 0x0400BB23 RID: 47907
 		Spotlight
 	}
 }

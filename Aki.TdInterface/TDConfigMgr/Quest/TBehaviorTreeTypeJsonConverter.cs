@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012C1 RID: 4801
+	// Token: 0x02001407 RID: 5127
 	public class TBehaviorTreeTypeJsonConverter : JsonConverter<TBehaviorTreeType>
 	{
-		// Token: 0x06006C0D RID: 27661 RVA: 0x0010403C File Offset: 0x0010223C
+		// Token: 0x0600727B RID: 29307 RVA: 0x00112004 File Offset: 0x00110204
 		public override TBehaviorTreeType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return TBehaviorTreeTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006C0E RID: 27662 RVA: 0x00104060 File Offset: 0x00102260
+		// Token: 0x0600727C RID: 29308 RVA: 0x00112028 File Offset: 0x00110228
 		public override void Write(Utf8JsonWriter writer, TBehaviorTreeType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

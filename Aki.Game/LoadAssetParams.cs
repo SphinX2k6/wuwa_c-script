@@ -2,21 +2,21 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000E8A RID: 3722
+// Token: 0x0200033F RID: 831
 public class LoadAssetParams<TD> where TD : UDataAsset
 {
-	// Token: 0x040029A1 RID: 10657
+	// Token: 0x04002A3C RID: 10812
 	[Nullable(2)]
 	public UObject Context;
 
-	// Token: 0x040029A2 RID: 10658
+	// Token: 0x04002A3D RID: 10813
 	public int Id;
 
-	// Token: 0x040029A3 RID: 10659
+	// Token: 0x04002A3E RID: 10814
 	[Nullable(1)]
 	public string Path = "";
 
-	// Token: 0x040029A4 RID: 10660
+	// Token: 0x04002A3F RID: 10815
 	[Nullable(new byte[]
 	{
 		2,
@@ -24,7 +24,7 @@ public class LoadAssetParams<TD> where TD : UDataAsset
 	})]
 	public TMap<TD, int> NativeContainer;
 
-	// Token: 0x040029A5 RID: 10661
+	// Token: 0x04002A40 RID: 10816
 	[Nullable(new byte[]
 	{
 		2,
@@ -32,7 +32,7 @@ public class LoadAssetParams<TD> where TD : UDataAsset
 	})]
 	public Action<TD> Callback;
 
-	// Token: 0x040029A6 RID: 10662
+	// Token: 0x04002A41 RID: 10817
 	[Nullable(new byte[]
 	{
 		2,
@@ -40,6 +40,6 @@ public class LoadAssetParams<TD> where TD : UDataAsset
 	})]
 	public Action<string> FailCallback;
 
-	// Token: 0x040029A7 RID: 10663
+	// Token: 0x04002A42 RID: 10818
 	public int KscWorldHandle;
 }

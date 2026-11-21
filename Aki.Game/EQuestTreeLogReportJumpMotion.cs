@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002698 RID: 9880
+// Token: 0x02001B83 RID: 7043
 public enum EQuestTreeLogReportJumpMotion
 {
-	// Token: 0x04009866 RID: 39014
+	// Token: 0x040099BE RID: 39358
 	PreQuest,
-	// Token: 0x04009867 RID: 39015
+	// Token: 0x040099BF RID: 39359
 	Acceptable,
-	// Token: 0x04009868 RID: 39016
+	// Token: 0x040099C0 RID: 39360
 	Goto,
-	// Token: 0x04009869 RID: 39017
+	// Token: 0x040099C1 RID: 39361
 	UnTrack
 }

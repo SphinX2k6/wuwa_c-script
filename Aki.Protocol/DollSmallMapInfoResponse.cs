@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020003FC RID: 1020
+	// Token: 0x020003E5 RID: 997
 	[NetMessage(EMessageId.DollSmallMapInfoResponse)]
 	public sealed class DollSmallMapInfoResponse : IMessage<DollSmallMapInfoResponse>, IMessage, IEquatable<DollSmallMapInfoResponse>, IDeepCloneable<DollSmallMapInfoResponse>, IBufferMessage
 	{
-		// Token: 0x06006293 RID: 25235 RVA: 0x000ED4DE File Offset: 0x000EB6DE
+		// Token: 0x06006103 RID: 24835 RVA: 0x000EA366 File Offset: 0x000E8566
 		[NullableContext(1)]
 		public static DollSmallMapInfoResponse Create()
 		{
 			return new DollSmallMapInfoResponse();
 		}
 
-		// Token: 0x1700125F RID: 4703
-		// (get) Token: 0x06006294 RID: 25236 RVA: 0x000ED4E5 File Offset: 0x000EB6E5
+		// Token: 0x1700120A RID: 4618
+		// (get) Token: 0x06006104 RID: 24836 RVA: 0x000EA36D File Offset: 0x000E856D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001260 RID: 4704
-		// (get) Token: 0x06006295 RID: 25237 RVA: 0x000ED4E8 File Offset: 0x000EB6E8
+		// Token: 0x1700120B RID: 4619
+		// (get) Token: 0x06006105 RID: 24837 RVA: 0x000EA370 File Offset: 0x000E8570
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006296 RID: 25238 RVA: 0x000ED4EF File Offset: 0x000EB6EF
+		// Token: 0x06006106 RID: 24838 RVA: 0x000EA377 File Offset: 0x000E8577
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollSmallMapInfoResponse()
 		{
 		}
 
-		// Token: 0x06006297 RID: 25239 RVA: 0x000ED510 File Offset: 0x000EB710
+		// Token: 0x06006107 RID: 24839 RVA: 0x000EA398 File Offset: 0x000E8598
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollSmallMapInfoResponse(DollSmallMapInfoResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006298 RID: 25240 RVA: 0x000ED562 File Offset: 0x000EB762
+		// Token: 0x06006108 RID: 24840 RVA: 0x000EA3EA File Offset: 0x000E85EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollSmallMapInfoResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new DollSmallMapInfoResponse(this);
 		}
 
-		// Token: 0x17001261 RID: 4705
-		// (get) Token: 0x06006299 RID: 25241 RVA: 0x000ED56A File Offset: 0x000EB76A
-		// (set) Token: 0x0600629A RID: 25242 RVA: 0x000ED572 File Offset: 0x000EB772
+		// Token: 0x1700120C RID: 4620
+		// (get) Token: 0x06006109 RID: 24841 RVA: 0x000EA3F2 File Offset: 0x000E85F2
+		// (set) Token: 0x0600610A RID: 24842 RVA: 0x000EA3FA File Offset: 0x000E85FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001262 RID: 4706
-		// (get) Token: 0x0600629B RID: 25243 RVA: 0x000ED57B File Offset: 0x000EB77B
+		// Token: 0x1700120D RID: 4621
+		// (get) Token: 0x0600610B RID: 24843 RVA: 0x000EA403 File Offset: 0x000E8603
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SceneUnlimitedScoreInfo> SceneUnlimitedScoreInfos
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001263 RID: 4707
-		// (get) Token: 0x0600629C RID: 25244 RVA: 0x000ED583 File Offset: 0x000EB783
+		// Token: 0x1700120E RID: 4622
+		// (get) Token: 0x0600610C RID: 24844 RVA: 0x000EA40B File Offset: 0x000E860B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<SceneDollDeliveryInfo> SceneDollDeliveryInfos
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600629D RID: 25245 RVA: 0x000ED58B File Offset: 0x000EB78B
+		// Token: 0x0600610D RID: 24845 RVA: 0x000EA413 File Offset: 0x000E8613
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DollSmallMapInfoResponse);
 		}
 
-		// Token: 0x0600629E RID: 25246 RVA: 0x000ED59C File Offset: 0x000EB79C
+		// Token: 0x0600610E RID: 24846 RVA: 0x000EA424 File Offset: 0x000E8624
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DollSmallMapInfoResponse other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.sceneUnlimitedScoreInfos_.Equals(other.sceneUnlimitedScoreInfos_) && this.sceneDollDeliveryInfos_.Equals(other.sceneDollDeliveryInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600629F RID: 25247 RVA: 0x000ED600 File Offset: 0x000EB800
+		// Token: 0x0600610F RID: 24847 RVA: 0x000EA488 File Offset: 0x000E8688
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060062A0 RID: 25248 RVA: 0x000ED661 File Offset: 0x000EB861
+		// Token: 0x06006110 RID: 24848 RVA: 0x000EA4E9 File Offset: 0x000E86E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060062A1 RID: 25249 RVA: 0x000ED66E File Offset: 0x000EB86E
+		// Token: 0x06006111 RID: 24849 RVA: 0x000EA4F6 File Offset: 0x000E86F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,25 +161,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060062A2 RID: 25250 RVA: 0x000ED678 File Offset: 0x000EB878
+		// Token: 0x06006112 RID: 24850 RVA: 0x000EA500 File Offset: 0x000E8700
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(48);
-				output.WriteEnum((int)this.ErrorCode);
-			}
 			this.sceneDollDeliveryInfos_.WriteTo(ref output, DollSmallMapInfoResponse._repeated_sceneDollDeliveryInfos_codec);
 			this.sceneUnlimitedScoreInfos_.WriteTo(ref output, DollSmallMapInfoResponse._repeated_sceneUnlimitedScoreInfos_codec);
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(120);
+				output.WriteEnum((int)this.ErrorCode);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060062A3 RID: 25251 RVA: 0x000ED6D8 File Offset: 0x000EB8D8
+		// Token: 0x06006113 RID: 24851 RVA: 0x000EA560 File Offset: 0x000E8760
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060062A4 RID: 25252 RVA: 0x000ED73C File Offset: 0x000EB93C
+		// Token: 0x06006114 RID: 24852 RVA: 0x000EA5C4 File Offset: 0x000E87C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DollSmallMapInfoResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060062A5 RID: 25253 RVA: 0x000ED79A File Offset: 0x000EB99A
+		// Token: 0x06006115 RID: 24853 RVA: 0x000EA622 File Offset: 0x000E8822
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060062A6 RID: 25254 RVA: 0x000ED7A4 File Offset: 0x000EB9A4
+		// Token: 0x06006116 RID: 24854 RVA: 0x000EA62C File Offset: 0x000E882C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,56 +236,56 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 48U)
+				if (num != 66U)
 				{
-					if (num != 58U)
+					if (num != 98U)
 					{
-						if (num != 106U)
+						if (num != 120U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.sceneUnlimitedScoreInfos_.AddEntriesFrom(ref input, DollSmallMapInfoResponse._repeated_sceneUnlimitedScoreInfos_codec);
+							this.ErrorCode = (ErrorCode)input.ReadEnum();
 						}
 					}
 					else
 					{
-						this.sceneDollDeliveryInfos_.AddEntriesFrom(ref input, DollSmallMapInfoResponse._repeated_sceneDollDeliveryInfos_codec);
+						this.sceneUnlimitedScoreInfos_.AddEntriesFrom(ref input, DollSmallMapInfoResponse._repeated_sceneUnlimitedScoreInfos_codec);
 					}
 				}
 				else
 				{
-					this.ErrorCode = (ErrorCode)input.ReadEnum();
+					this.sceneDollDeliveryInfos_.AddEntriesFrom(ref input, DollSmallMapInfoResponse._repeated_sceneDollDeliveryInfos_codec);
 				}
 			}
 		}
 
-		// Token: 0x040037E1 RID: 14305
+		// Token: 0x040037CE RID: 14286
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040037E2 RID: 14306
-		public const int ErrorCodeFieldNumber = 6;
+		// Token: 0x040037CF RID: 14287
+		public const int ErrorCodeFieldNumber = 15;
 
-		// Token: 0x040037E3 RID: 14307
+		// Token: 0x040037D0 RID: 14288
 		private ErrorCode errorCode_;
 
-		// Token: 0x040037E4 RID: 14308
-		public const int SceneUnlimitedScoreInfosFieldNumber = 13;
+		// Token: 0x040037D1 RID: 14289
+		public const int SceneUnlimitedScoreInfosFieldNumber = 12;
 
-		// Token: 0x040037E5 RID: 14309
-		private static readonly FieldCodec<SceneUnlimitedScoreInfo> _repeated_sceneUnlimitedScoreInfos_codec = FieldCodec.ForMessage<SceneUnlimitedScoreInfo>(106U, SceneUnlimitedScoreInfo.Parser);
+		// Token: 0x040037D2 RID: 14290
+		private static readonly FieldCodec<SceneUnlimitedScoreInfo> _repeated_sceneUnlimitedScoreInfos_codec = FieldCodec.ForMessage<SceneUnlimitedScoreInfo>(98U, SceneUnlimitedScoreInfo.Parser);
 
-		// Token: 0x040037E6 RID: 14310
+		// Token: 0x040037D3 RID: 14291
 		private readonly RepeatedField<SceneUnlimitedScoreInfo> sceneUnlimitedScoreInfos_ = new RepeatedField<SceneUnlimitedScoreInfo>();
 
-		// Token: 0x040037E7 RID: 14311
-		public const int SceneDollDeliveryInfosFieldNumber = 7;
+		// Token: 0x040037D4 RID: 14292
+		public const int SceneDollDeliveryInfosFieldNumber = 8;
 
-		// Token: 0x040037E8 RID: 14312
-		private static readonly FieldCodec<SceneDollDeliveryInfo> _repeated_sceneDollDeliveryInfos_codec = FieldCodec.ForMessage<SceneDollDeliveryInfo>(58U, SceneDollDeliveryInfo.Parser);
+		// Token: 0x040037D5 RID: 14293
+		private static readonly FieldCodec<SceneDollDeliveryInfo> _repeated_sceneDollDeliveryInfos_codec = FieldCodec.ForMessage<SceneDollDeliveryInfo>(66U, SceneDollDeliveryInfo.Parser);
 
-		// Token: 0x040037E9 RID: 14313
+		// Token: 0x040037D6 RID: 14294
 		private readonly RepeatedField<SceneDollDeliveryInfo> sceneDollDeliveryInfos_ = new RepeatedField<SceneDollDeliveryInfo>();
 	}
 }

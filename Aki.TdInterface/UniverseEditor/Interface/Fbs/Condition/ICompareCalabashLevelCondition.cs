@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B86 RID: 19334
+	// Token: 0x0200506D RID: 20589
 	public struct ICompareCalabashLevelCondition : IFlatbufferObject
 	{
-		// Token: 0x17008C50 RID: 35920
-		// (get) Token: 0x0601E790 RID: 124816 RVA: 0x004442C9 File Offset: 0x004424C9
+		// Token: 0x17009360 RID: 37728
+		// (get) Token: 0x0602031E RID: 131870 RVA: 0x00476B15 File Offset: 0x00474D15
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E791 RID: 124817 RVA: 0x004442D6 File Offset: 0x004424D6
+		// Token: 0x0602031F RID: 131871 RVA: 0x00476B22 File Offset: 0x00474D22
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E792 RID: 124818 RVA: 0x004442E0 File Offset: 0x004424E0
+		// Token: 0x06020320 RID: 131872 RVA: 0x00476B2C File Offset: 0x00474D2C
 		public static ICompareCalabashLevelCondition GetRootAsICompareCalabashLevelCondition(ByteBuffer _bb)
 		{
 			return ICompareCalabashLevelCondition.GetRootAsICompareCalabashLevelCondition(_bb, default(ICompareCalabashLevelCondition));
 		}
 
-		// Token: 0x0601E793 RID: 124819 RVA: 0x004442FC File Offset: 0x004424FC
+		// Token: 0x06020321 RID: 131873 RVA: 0x00476B48 File Offset: 0x00474D48
 		public static ICompareCalabashLevelCondition GetRootAsICompareCalabashLevelCondition(ByteBuffer _bb, ICompareCalabashLevelCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E794 RID: 124820 RVA: 0x00444319 File Offset: 0x00442519
+		// Token: 0x06020322 RID: 131874 RVA: 0x00476B65 File Offset: 0x00474D65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E795 RID: 124821 RVA: 0x00444328 File Offset: 0x00442528
+		// Token: 0x06020323 RID: 131875 RVA: 0x00476B74 File Offset: 0x00474D74
 		public ICompareCalabashLevelCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C51 RID: 35921
-		// (get) Token: 0x0601E796 RID: 124822 RVA: 0x00444338 File Offset: 0x00442538
+		// Token: 0x17009361 RID: 37729
+		// (get) Token: 0x06020324 RID: 131876 RVA: 0x00476B84 File Offset: 0x00474D84
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C52 RID: 35922
-		// (get) Token: 0x0601E797 RID: 124823 RVA: 0x00444374 File Offset: 0x00442574
+		// Token: 0x17009362 RID: 37730
+		// (get) Token: 0x06020325 RID: 131877 RVA: 0x00476BC0 File Offset: 0x00474DC0
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C53 RID: 35923
-		// (get) Token: 0x0601E798 RID: 124824 RVA: 0x004443B0 File Offset: 0x004425B0
+		// Token: 0x17009363 RID: 37731
+		// (get) Token: 0x06020326 RID: 131878 RVA: 0x00476BFC File Offset: 0x00474DFC
 		public int CalabashLevel
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E799 RID: 124825 RVA: 0x004443EC File Offset: 0x004425EC
+		// Token: 0x06020327 RID: 131879 RVA: 0x00476C38 File Offset: 0x00474E38
 		public static Offset<ICompareCalabashLevelCondition> CreateICompareCalabashLevelCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECompare Compare = ECompare.Eq, int CalabashLevel = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareCalabashLevelCondition.EndICompareCalabashLevelCondition(builder);
 		}
 
-		// Token: 0x0601E79A RID: 124826 RVA: 0x00444410 File Offset: 0x00442610
+		// Token: 0x06020328 RID: 131880 RVA: 0x00476C5C File Offset: 0x00474E5C
 		public static void StartICompareCalabashLevelCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E79B RID: 124827 RVA: 0x00444419 File Offset: 0x00442619
+		// Token: 0x06020329 RID: 131881 RVA: 0x00476C65 File Offset: 0x00474E65
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E79C RID: 124828 RVA: 0x00444424 File Offset: 0x00442624
+		// Token: 0x0602032A RID: 131882 RVA: 0x00476C70 File Offset: 0x00474E70
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E79D RID: 124829 RVA: 0x0044442F File Offset: 0x0044262F
+		// Token: 0x0602032B RID: 131883 RVA: 0x00476C7B File Offset: 0x00474E7B
 		public static void AddCalabashLevel(FlatBufferBuilder builder, int calabashLevel)
 		{
 			builder.AddInt(2, calabashLevel, 0);
 		}
 
-		// Token: 0x0601E79E RID: 124830 RVA: 0x0044443A File Offset: 0x0044263A
+		// Token: 0x0602032C RID: 131884 RVA: 0x00476C86 File Offset: 0x00474E86
 		public static Offset<ICompareCalabashLevelCondition> EndICompareCalabashLevelCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareCalabashLevelCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E79F RID: 124831 RVA: 0x00444448 File Offset: 0x00442648
+		// Token: 0x0602032D RID: 131885 RVA: 0x00476C94 File Offset: 0x00474E94
 		public ICompareCalabashLevelConditionT UnPack()
 		{
 			ICompareCalabashLevelConditionT compareCalabashLevelConditionT = new ICompareCalabashLevelConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareCalabashLevelConditionT;
 		}
 
-		// Token: 0x0601E7A0 RID: 124832 RVA: 0x00444463 File Offset: 0x00442663
+		// Token: 0x0602032E RID: 131886 RVA: 0x00476CAF File Offset: 0x00474EAF
 		public void UnPackTo(ICompareCalabashLevelConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.CalabashLevel = this.CalabashLevel;
 		}
 
-		// Token: 0x0601E7A1 RID: 124833 RVA: 0x0044448C File Offset: 0x0044268C
+		// Token: 0x0602032F RID: 131887 RVA: 0x00476CD8 File Offset: 0x00474ED8
 		public static Offset<ICompareCalabashLevelCondition> Pack(FlatBufferBuilder builder, ICompareCalabashLevelConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareCalabashLevelCondition.CreateICompareCalabashLevelCondition(builder, _o.Type, _o.Compare, _o.CalabashLevel);
 		}
 
-		// Token: 0x0400D458 RID: 54360
+		// Token: 0x0400DF58 RID: 57176
 		private Table __p;
 	}
 }

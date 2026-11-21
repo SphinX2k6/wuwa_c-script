@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001861 RID: 6241
+// Token: 0x02000D1A RID: 3354
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class QualityToggleGridProxy : GridProxyAbstract<FilterItemData>
 {
-	// Token: 0x0600B701 RID: 46849 RVA: 0x00295A34 File Offset: 0x00293C34
+	// Token: 0x06008AEA RID: 35562 RVA: 0x002A0158 File Offset: 0x0029E358
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -35,7 +35,7 @@ public class QualityToggleGridProxy : GridProxyAbstract<FilterItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B702 RID: 46850 RVA: 0x00295ADC File Offset: 0x00293CDC
+	// Token: 0x06008AEB RID: 35563 RVA: 0x002A0200 File Offset: 0x0029E400
 	private void OnToggleChanged(EToggleState state)
 	{
 		bool isChecked = state == EToggleState.ETT_Checked;
@@ -50,7 +50,7 @@ public class QualityToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B703 RID: 46851 RVA: 0x00295B40 File Offset: 0x00293D40
+	// Token: 0x06008AEC RID: 35564 RVA: 0x002A0264 File Offset: 0x0029E464
 	public override void Refresh(FilterItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -66,13 +66,13 @@ public class QualityToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x0600B704 RID: 46852 RVA: 0x00295B91 File Offset: 0x00293D91
+	// Token: 0x06008AED RID: 35565 RVA: 0x002A02B5 File Offset: 0x0029E4B5
 	public void SetToggleFunction(TQualityToggleFunction func)
 	{
 		this.ToggleFunction = func;
 	}
 
-	// Token: 0x0600B705 RID: 46853 RVA: 0x00295B9C File Offset: 0x00293D9C
+	// Token: 0x06008AEE RID: 35566 RVA: 0x002A02C0 File Offset: 0x0029E4C0
 	public void SetSelectedState(bool isSelected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -82,22 +82,22 @@ public class QualityToggleGridProxy : GridProxyAbstract<FilterItemData>
 		}
 	}
 
-	// Token: 0x040052A1 RID: 21153
+	// Token: 0x0400534C RID: 21324
 	[Nullable(2)]
 	private TQualityToggleFunction ToggleFunction;
 
-	// Token: 0x040052A2 RID: 21154
+	// Token: 0x0400534D RID: 21325
 	[Nullable(2)]
 	public FilterItemData Data;
 
-	// Token: 0x02007E20 RID: 32288
+	// Token: 0x02006FA7 RID: 28583
 	[NullableContext(0)]
 	private class EQualityToggleDefine
 	{
-		// Token: 0x04029482 RID: 169090
+		// Token: 0x040247AF RID: 149423
 		public const int Toggle = 0;
 
-		// Token: 0x04029483 RID: 169091
+		// Token: 0x040247B0 RID: 149424
 		public const int QualityText = 1;
 	}
 }

@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F31 RID: 28465
+	// Token: 0x020076B8 RID: 30392
 	public class ISceneInspectionPointT
 	{
-		// Token: 0x1700D395 RID: 54165
-		// (get) Token: 0x060324B9 RID: 206009 RVA: 0x006CB1C4 File Offset: 0x006C93C4
-		// (set) Token: 0x060324BA RID: 206010 RVA: 0x006CB1CC File Offset: 0x006C93CC
+		// Token: 0x1700DEF1 RID: 57073
+		// (get) Token: 0x06035511 RID: 218385 RVA: 0x0072712C File Offset: 0x0072532C
+		// (set) Token: 0x06035512 RID: 218386 RVA: 0x00727134 File Offset: 0x00725334
 		public IVectorInfoT InteractPointPos { get; set; }
 
-		// Token: 0x1700D396 RID: 54166
-		// (get) Token: 0x060324BB RID: 206011 RVA: 0x006CB1D5 File Offset: 0x006C93D5
-		// (set) Token: 0x060324BC RID: 206012 RVA: 0x006CB1DD File Offset: 0x006C93DD
+		// Token: 0x1700DEF2 RID: 57074
+		// (get) Token: 0x06035513 RID: 218387 RVA: 0x0072713D File Offset: 0x0072533D
+		// (set) Token: 0x06035514 RID: 218388 RVA: 0x00727145 File Offset: 0x00725345
 		public List<IActionInfoT> ActionList { get; set; }
 
-		// Token: 0x060324BD RID: 206013 RVA: 0x006CB1E6 File Offset: 0x006C93E6
+		// Token: 0x06035515 RID: 218389 RVA: 0x0072714E File Offset: 0x0072534E
 		public ISceneInspectionPointT()
 		{
 			this.InteractPointPos = null;

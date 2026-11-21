@@ -15,14 +15,14 @@ using Google.Protobuf.Collections;
 using KuroSimpleCombat.KscAction;
 using UnrealEngine;
 
-// Token: 0x02000E76 RID: 3702
+// Token: 0x0200032B RID: 811
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class KuroSimpleCombatController : ControllerBase
 {
-	// Token: 0x1700067E RID: 1662
-	// (get) Token: 0x06005A24 RID: 23076 RVA: 0x00106DC3 File Offset: 0x00104FC3
+	// Token: 0x170006A2 RID: 1698
+	// (get) Token: 0x06002DBB RID: 11707 RVA: 0x0010EA73 File Offset: 0x0010CC73
 	public bool MapInit
 	{
 		get
@@ -31,8 +31,8 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x1700067F RID: 1663
-	// (get) Token: 0x06005A25 RID: 23077 RVA: 0x00106DCB File Offset: 0x00104FCB
+	// Token: 0x170006A3 RID: 1699
+	// (get) Token: 0x06002DBC RID: 11708 RVA: 0x0010EA7B File Offset: 0x0010CC7B
 	public bool WorldInit
 	{
 		get
@@ -41,13 +41,13 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A26 RID: 23078 RVA: 0x00106DD3 File Offset: 0x00104FD3
+	// Token: 0x06002DBD RID: 11709 RVA: 0x0010EA83 File Offset: 0x0010CC83
 	public void RegisterPendingAdd(long creatureId, KscActionEntityAdd action)
 	{
 		this.PendingAdds[creatureId] = action;
 	}
 
-	// Token: 0x06005A27 RID: 23079 RVA: 0x00106DE4 File Offset: 0x00104FE4
+	// Token: 0x06002DBE RID: 11710 RVA: 0x0010EA94 File Offset: 0x0010CC94
 	public void UnregisterPendingAdd(long creatureId, KscActionEntityAdd action)
 	{
 		KscActionEntityAdd kscActionEntityAdd;
@@ -57,7 +57,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A28 RID: 23080 RVA: 0x00106E14 File Offset: 0x00105014
+	// Token: 0x06002DBF RID: 11711 RVA: 0x0010EAC4 File Offset: 0x0010CCC4
 	private bool CancelPendingAddIfAny(long creatureId)
 	{
 		KscActionEntityAdd kscActionEntityAdd;
@@ -70,7 +70,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A29 RID: 23081 RVA: 0x00106E4C File Offset: 0x0010504C
+	// Token: 0x06002DC0 RID: 11712 RVA: 0x0010EAFC File Offset: 0x0010CCFC
 	private void CancelPendingActionsForEntity(long creatureId)
 	{
 		KscSubModelBase curSubModel = this.CurSubModel;
@@ -86,8 +86,8 @@ public class KuroSimpleCombatController : ControllerBase
 		entityProcessMgr.CancelPendingByName(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x17000680 RID: 1664
-	// (get) Token: 0x06005A2A RID: 23082 RVA: 0x00106E9F File Offset: 0x0010509F
+	// Token: 0x170006A4 RID: 1700
+	// (get) Token: 0x06002DC1 RID: 11713 RVA: 0x0010EB4F File Offset: 0x0010CD4F
 	[Nullable(2)]
 	public KscSubModelBase CurSubModel
 	{
@@ -103,7 +103,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A2B RID: 23083 RVA: 0x00106EB4 File Offset: 0x001050B4
+	// Token: 0x06002DC2 RID: 11714 RVA: 0x0010EB64 File Offset: 0x0010CD64
 	[NullableContext(2)]
 	public KscSubControllerBase GetSubController(EKscGameplayType kscGameplayType)
 	{
@@ -115,7 +115,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x06005A2C RID: 23084 RVA: 0x00106ED4 File Offset: 0x001050D4
+	// Token: 0x06002DC3 RID: 11715 RVA: 0x0010EB84 File Offset: 0x0010CD84
 	[NullableContext(2)]
 	public KscSubModelBase GetSubModel(EKscGameplayType kscGameplayType)
 	{
@@ -127,7 +127,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return subController.Model;
 	}
 
-	// Token: 0x06005A2D RID: 23085 RVA: 0x00106EE8 File Offset: 0x001050E8
+	// Token: 0x06002DC4 RID: 11716 RVA: 0x0010EB98 File Offset: 0x0010CD98
 	protected override bool OnInit()
 	{
 		base.PauseTick();
@@ -148,7 +148,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A2E RID: 23086 RVA: 0x00107068 File Offset: 0x00105268
+	// Token: 0x06002DC5 RID: 11717 RVA: 0x0010ED18 File Offset: 0x0010CF18
 	protected override bool OnClear()
 	{
 		foreach (KscSubControllerBase kscSubControllerBase in this.SubControllerMap.Values)
@@ -169,14 +169,14 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A2F RID: 23087 RVA: 0x0010718C File Offset: 0x0010538C
+	// Token: 0x06002DC6 RID: 11718 RVA: 0x0010EE3C File Offset: 0x0010D03C
 	protected override bool OnLeaveLevel()
 	{
 		this.StopKscHeadStateManager();
 		return true;
 	}
 
-	// Token: 0x06005A30 RID: 23088 RVA: 0x00107198 File Offset: 0x00105398
+	// Token: 0x06002DC7 RID: 11719 RVA: 0x0010EE48 File Offset: 0x0010D048
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -194,25 +194,25 @@ public class KuroSimpleCombatController : ControllerBase
 		return curSubController.OnPreload();
 	}
 
-	// Token: 0x06005A31 RID: 23089 RVA: 0x001071CA File Offset: 0x001053CA
+	// Token: 0x06002DC8 RID: 11720 RVA: 0x0010EE7A File Offset: 0x0010D07A
 	private void ObserveLifecycleStage(EKscObservedLifecycleStage stage, string source)
 	{
 		this.ObservedLifecycleStages.Add(stage);
 	}
 
-	// Token: 0x06005A32 RID: 23090 RVA: 0x001071D8 File Offset: 0x001053D8
+	// Token: 0x06002DC9 RID: 11721 RVA: 0x0010EE88 File Offset: 0x0010D088
 	private void ResetObservedLifecycleStage()
 	{
 		this.ObservedLifecycleStages.Clear();
 	}
 
-	// Token: 0x06005A33 RID: 23091 RVA: 0x001071E5 File Offset: 0x001053E5
+	// Token: 0x06002DCA RID: 11722 RVA: 0x0010EE95 File Offset: 0x0010D095
 	private bool HasObservedLifecycleStage(EKscObservedLifecycleStage stage)
 	{
 		return this.ObservedLifecycleStages.Contains(stage);
 	}
 
-	// Token: 0x06005A34 RID: 23092 RVA: 0x001071F4 File Offset: 0x001053F4
+	// Token: 0x06002DCB RID: 11723 RVA: 0x0010EEA4 File Offset: 0x0010D0A4
 	[NullableContext(2)]
 	private KscSubControllerBase FindSubControllerByInstSubType(int instSubType)
 	{
@@ -226,7 +226,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06005A35 RID: 23093 RVA: 0x00107258 File Offset: 0x00105458
+	// Token: 0x06002DCC RID: 11724 RVA: 0x0010EF08 File Offset: 0x0010D108
 	[NullableContext(2)]
 	private KscSubControllerBase ResolveSubControllerForLifecycle()
 	{
@@ -242,7 +242,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return this.CurSubController;
 	}
 
-	// Token: 0x06005A36 RID: 23094 RVA: 0x001072E4 File Offset: 0x001054E4
+	// Token: 0x06002DCD RID: 11725 RVA: 0x0010EF94 File Offset: 0x0010D194
 	private bool TryInitMap(string source)
 	{
 		KscSubControllerBase kscSubControllerBase = this.ResolveSubControllerForLifecycle();
@@ -255,7 +255,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A37 RID: 23095 RVA: 0x0010730B File Offset: 0x0010550B
+	// Token: 0x06002DCE RID: 11726 RVA: 0x0010EFBB File Offset: 0x0010D1BB
 	private bool TryMapLoaded(string source)
 	{
 		if (this.CurSubController == null)
@@ -267,7 +267,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A38 RID: 23096 RVA: 0x0010732A File Offset: 0x0010552A
+	// Token: 0x06002DCF RID: 11727 RVA: 0x0010EFDA File Offset: 0x0010D1DA
 	private bool TryWorldDone(string source)
 	{
 		if (this.CurSubController == null)
@@ -279,7 +279,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A39 RID: 23097 RVA: 0x00107348 File Offset: 0x00105548
+	// Token: 0x06002DD0 RID: 11728 RVA: 0x0010EFF8 File Offset: 0x0010D1F8
 	private UniTask CatchUpObservedLifecycleAfterOpenAsync(string source, [Nullable(2)] KscSubControllerBase expectedSubController = null)
 	{
 		KuroSimpleCombatController.<CatchUpObservedLifecycleAfterOpenAsync>d__31 <CatchUpObservedLifecycleAfterOpenAsync>d__;
@@ -292,7 +292,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return <CatchUpObservedLifecycleAfterOpenAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005A3A RID: 23098 RVA: 0x0010739B File Offset: 0x0010559B
+	// Token: 0x06002DD1 RID: 11729 RVA: 0x0010F04B File Offset: 0x0010D24B
 	private void TryCatchUpObservedLifecycleAfterOpen(string source)
 	{
 		if (this.ObservedLifecycleStages.Count == 0)
@@ -302,28 +302,28 @@ public class KuroSimpleCombatController : ControllerBase
 		this.CatchUpObservedLifecycleAfterOpenAsync(source, this.CurSubController).Forget();
 	}
 
-	// Token: 0x06005A3B RID: 23099 RVA: 0x001073BD File Offset: 0x001055BD
+	// Token: 0x06002DD2 RID: 11730 RVA: 0x0010F06D File Offset: 0x0010D26D
 	private void OnGameModeDataChange()
 	{
 		this.ObserveLifecycleStage(EKscObservedLifecycleStage.InitMap, "OnSetGameModeDataDone");
 		this.TryInitMap("OnSetGameModeDataDone");
 	}
 
-	// Token: 0x06005A3C RID: 23100 RVA: 0x001073D7 File Offset: 0x001055D7
+	// Token: 0x06002DD3 RID: 11731 RVA: 0x0010F087 File Offset: 0x0010D287
 	private void OnAfterLoadMap()
 	{
 		this.ObserveLifecycleStage(EKscObservedLifecycleStage.MapLoad, "AfterLoadMap");
 		this.TryMapLoaded("AfterLoadMap");
 	}
 
-	// Token: 0x06005A3D RID: 23101 RVA: 0x001073F1 File Offset: 0x001055F1
+	// Token: 0x06002DD4 RID: 11732 RVA: 0x0010F0A1 File Offset: 0x0010D2A1
 	private void OnWorldDone()
 	{
 		this.ObserveLifecycleStage(EKscObservedLifecycleStage.WorldDone, "WorldDoneAndCloseLoading");
 		this.TryWorldDone("WorldDoneAndCloseLoading");
 	}
 
-	// Token: 0x06005A3E RID: 23102 RVA: 0x0010740C File Offset: 0x0010560C
+	// Token: 0x06002DD5 RID: 11733 RVA: 0x0010F0BC File Offset: 0x0010D2BC
 	private void OpenWorldByGameplayType(EKscGameplayType gamePlayType)
 	{
 		if (this.CurSubController != null)
@@ -345,7 +345,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.TryCatchUpObservedLifecycleAfterOpen("OpenWorldByGameplayType");
 	}
 
-	// Token: 0x06005A3F RID: 23103 RVA: 0x0010746C File Offset: 0x0010566C
+	// Token: 0x06002DD6 RID: 11734 RVA: 0x0010F11C File Offset: 0x0010D31C
 	[NullableContext(2)]
 	private void CloseCurrentWorld(KscSubControllerBase expectedSubController = null)
 	{
@@ -363,7 +363,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.OnWorldReset();
 	}
 
-	// Token: 0x06005A40 RID: 23104 RVA: 0x001074DC File Offset: 0x001056DC
+	// Token: 0x06002DD7 RID: 11735 RVA: 0x0010F18C File Offset: 0x0010D38C
 	private void OnWorldReset()
 	{
 		if (this.IsWorldInit)
@@ -401,7 +401,7 @@ public class KuroSimpleCombatController : ControllerBase
 		base.PauseTick();
 	}
 
-	// Token: 0x06005A41 RID: 23105 RVA: 0x00107584 File Offset: 0x00105784
+	// Token: 0x06002DD8 RID: 11736 RVA: 0x0010F234 File Offset: 0x0010D434
 	protected override void OnTick(float delta)
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -418,7 +418,7 @@ public class KuroSimpleCombatController : ControllerBase
 		TowerDefensePlayerController.SyncMainLocations(delta);
 	}
 
-	// Token: 0x06005A42 RID: 23106 RVA: 0x001075C4 File Offset: 0x001057C4
+	// Token: 0x06002DD9 RID: 11737 RVA: 0x0010F274 File Offset: 0x0010D474
 	[NullableContext(2)]
 	public string GetSkillPathDt(int id)
 	{
@@ -430,7 +430,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return valueTuple.Item2;
 	}
 
-	// Token: 0x06005A43 RID: 23107 RVA: 0x001075F0 File Offset: 0x001057F0
+	// Token: 0x06002DDA RID: 11738 RVA: 0x0010F2A0 File Offset: 0x0010D4A0
 	[NullableContext(2)]
 	public FKSCSkillTableRow GetSkillRowDt(int id)
 	{
@@ -442,7 +442,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return valueTuple.Item1;
 	}
 
-	// Token: 0x06005A44 RID: 23108 RVA: 0x0010761C File Offset: 0x0010581C
+	// Token: 0x06002DDB RID: 11739 RVA: 0x0010F2CC File Offset: 0x0010D4CC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -459,7 +459,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return new ValueTuple<FKSCSkillTableRow, string>?(value);
 	}
 
-	// Token: 0x06005A45 RID: 23109 RVA: 0x0010764E File Offset: 0x0010584E
+	// Token: 0x06002DDC RID: 11740 RVA: 0x0010F2FE File Offset: 0x0010D4FE
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -472,7 +472,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return this.CurSubModel.SkillDataDt;
 	}
 
-	// Token: 0x06005A46 RID: 23110 RVA: 0x0010765C File Offset: 0x0010585C
+	// Token: 0x06002DDD RID: 11741 RVA: 0x0010F30C File Offset: 0x0010D50C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -489,7 +489,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return <LoadBuffAssets>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005A47 RID: 23111 RVA: 0x001076A0 File Offset: 0x001058A0
+	// Token: 0x06002DDE RID: 11742 RVA: 0x0010F350 File Offset: 0x0010D550
 	[return: Nullable(2)]
 	public AKSC_Entity AddEntityImpl(UKSC_DA_Entity asset, IKscEntityParam params_)
 	{
@@ -538,7 +538,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06005A48 RID: 23112 RVA: 0x001077E0 File Offset: 0x001059E0
+	// Token: 0x06002DDF RID: 11743 RVA: 0x0010F490 File Offset: 0x0010D690
 	public void AsyncAddEntity(IKscEntityParam params_)
 	{
 		KscActionEntityAdd kscActionEntityAdd = new KscActionEntityAdd(params_);
@@ -550,7 +550,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionEntityAdd.Task);
 	}
 
-	// Token: 0x06005A49 RID: 23113 RVA: 0x00107810 File Offset: 0x00105A10
+	// Token: 0x06002DE0 RID: 11744 RVA: 0x0010F4C0 File Offset: 0x0010D6C0
 	public void RemoveEntityImpl(int kscEntityId, FName removeReason)
 	{
 		KscEntityHandle kscEntityHandle;
@@ -578,7 +578,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.CurSubModel.RemoveLogicProxy(creatureDataId);
 	}
 
-	// Token: 0x06005A4A RID: 23114 RVA: 0x001078D0 File Offset: 0x00105AD0
+	// Token: 0x06002DE1 RID: 11745 RVA: 0x0010F580 File Offset: 0x0010D780
 	public void RemoveEntity(long creatureId, FName removeReason)
 	{
 		if (this.CancelPendingAddIfAny(creatureId))
@@ -596,7 +596,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionEntityRemove.Task);
 	}
 
-	// Token: 0x06005A4B RID: 23115 RVA: 0x00107920 File Offset: 0x00105B20
+	// Token: 0x06002DE2 RID: 11746 RVA: 0x0010F5D0 File Offset: 0x0010D7D0
 	public void RemoveEntityImplByReasonType(int kscEntityId, EKscEntityRemoveReasonType removeReasonType)
 	{
 		KscEntityHandle kscEntityHandle;
@@ -635,7 +635,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.CurSubModel.RemoveLogicProxy(creatureDataId);
 	}
 
-	// Token: 0x06005A4C RID: 23116 RVA: 0x00107A04 File Offset: 0x00105C04
+	// Token: 0x06002DE3 RID: 11747 RVA: 0x0010F6B4 File Offset: 0x0010D8B4
 	public void RemoveEntityByReasonType(long creatureId, EKscEntityRemoveReasonType removeReasonType)
 	{
 		if (this.CancelPendingAddIfAny(creatureId))
@@ -653,7 +653,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionEntityRemove.Task);
 	}
 
-	// Token: 0x06005A4D RID: 23117 RVA: 0x00107A58 File Offset: 0x00105C58
+	// Token: 0x06002DE4 RID: 11748 RVA: 0x0010F708 File Offset: 0x0010D908
 	public unsafe void AddEntityDt(long creatureId, int key, int? propertyId, FTransformDouble transform, Action<AKSC_Entity> callback)
 	{
 		KscLog.EModule flag = KscLog.EModule.Common;
@@ -719,13 +719,13 @@ public class KuroSimpleCombatController : ControllerBase
 		KscUtil.AsyncLoadKscAsset<UKSC_DA_Entity>(loadAssetParams);
 	}
 
-	// Token: 0x06005A4E RID: 23118 RVA: 0x00107B98 File Offset: 0x00105D98
+	// Token: 0x06002DE5 RID: 11749 RVA: 0x0010F848 File Offset: 0x0010DA48
 	public int GetLogicProxy(int creatureId)
 	{
 		return this.CurSubModel.GetLogicProxy((long)creatureId).GetValueOrDefault();
 	}
 
-	// Token: 0x06005A4F RID: 23119 RVA: 0x00107BBC File Offset: 0x00105DBC
+	// Token: 0x06002DE6 RID: 11750 RVA: 0x0010F86C File Offset: 0x0010DA6C
 	private unsafe void ReqSimpleCombatEntityDie(Dictionary<long, SimpleCombatEntityDieContext> requestInfos)
 	{
 		SimpleCombatEntityDieRequest simpleCombatEntityDieRequest = SimpleCombatEntityDieRequest.Create();
@@ -747,7 +747,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06005A50 RID: 23120 RVA: 0x00107C0C File Offset: 0x00105E0C
+	// Token: 0x06002DE7 RID: 11751 RVA: 0x0010F8BC File Offset: 0x0010DABC
 	public void BatchRemove(TArray<FKSC_RemoveContext> contexts)
 	{
 		int num = contexts.Num();
@@ -767,7 +767,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A51 RID: 23121 RVA: 0x00107C74 File Offset: 0x00105E74
+	// Token: 0x06002DE8 RID: 11752 RVA: 0x0010F924 File Offset: 0x0010DB24
 	public void LandFireSpawn(TArray<FKSC_LandFireContext> contexts)
 	{
 		int num = contexts.Num();
@@ -787,7 +787,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A52 RID: 23122 RVA: 0x00107CDC File Offset: 0x00105EDC
+	// Token: 0x06002DE9 RID: 11753 RVA: 0x0010F98C File Offset: 0x0010DB8C
 	private void TryReqRemove(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> request, bool isKscEntityRemoved = false)
 	{
 		if (this.IsDebugOn())
@@ -826,7 +826,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionEntityForget.Task);
 	}
 
-	// Token: 0x06005A53 RID: 23123 RVA: 0x00107DE0 File Offset: 0x00105FE0
+	// Token: 0x06002DEA RID: 11754 RVA: 0x0010FA90 File Offset: 0x0010DC90
 	[NullableContext(2)]
 	private void SimpleCombatEntityBuffUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -842,7 +842,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionBuffUpdate.Task);
 	}
 
-	// Token: 0x06005A54 RID: 23124 RVA: 0x00107E28 File Offset: 0x00106028
+	// Token: 0x06002DEB RID: 11755 RVA: 0x0010FAD8 File Offset: 0x0010DCD8
 	[NullableContext(2)]
 	private void SimpleCombatEntityBuffLayerCountNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -858,7 +858,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionBuffLayoutUpdate.Task);
 	}
 
-	// Token: 0x06005A55 RID: 23125 RVA: 0x00107E70 File Offset: 0x00106070
+	// Token: 0x06002DEC RID: 11756 RVA: 0x0010FB20 File Offset: 0x0010DD20
 	[NullableContext(2)]
 	private void SimpleCombatEntitySubTypeChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -879,7 +879,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionBuffsAdd.Task);
 	}
 
-	// Token: 0x06005A56 RID: 23126 RVA: 0x00107ED0 File Offset: 0x001060D0
+	// Token: 0x06002DED RID: 11757 RVA: 0x0010FB80 File Offset: 0x0010DD80
 	[NullableContext(2)]
 	private void SimpleCombatEntityAttributeUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -894,7 +894,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionAttrUpdate.Task);
 	}
 
-	// Token: 0x06005A57 RID: 23127 RVA: 0x00107F20 File Offset: 0x00106120
+	// Token: 0x06002DEE RID: 11758 RVA: 0x0010FBD0 File Offset: 0x0010DDD0
 	public void ModifyBuffAsync(int kscEntityId, bool isAdd, int buffId)
 	{
 		KscEntityHandle kscEntityHandle;
@@ -917,7 +917,7 @@ public class KuroSimpleCombatController : ControllerBase
 		curSubModel.EntityProcessMgr.RunTask(kscActionBuffModifyLocal.Task);
 	}
 
-	// Token: 0x06005A58 RID: 23128 RVA: 0x00107FA8 File Offset: 0x001061A8
+	// Token: 0x06002DEF RID: 11759 RVA: 0x0010FC58 File Offset: 0x0010DE58
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -938,7 +938,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06005A59 RID: 23129 RVA: 0x00107FFC File Offset: 0x001061FC
+	// Token: 0x06002DF0 RID: 11760 RVA: 0x0010FCAC File Offset: 0x0010DEAC
 	public void PushSimpleCombatEntityHp(long creatureDataId, float hp, float hpMax)
 	{
 		SimpleCombatEntitySyncAttributePush simpleCombatEntitySyncAttributePush = SimpleCombatEntitySyncAttributePush.Create();
@@ -953,26 +953,26 @@ public class KuroSimpleCombatController : ControllerBase
 		Net.Instance.Send(EPushMessageId.SimpleCombatEntitySyncAttributePush, simpleCombatEntitySyncAttributePush);
 	}
 
-	// Token: 0x06005A5A RID: 23130 RVA: 0x00108063 File Offset: 0x00106263
+	// Token: 0x06002DF1 RID: 11761 RVA: 0x0010FD13 File Offset: 0x0010DF13
 	public void SetDebugOn(bool value)
 	{
 		this.IsDebug = value;
 	}
 
-	// Token: 0x06005A5B RID: 23131 RVA: 0x0010806C File Offset: 0x0010626C
+	// Token: 0x06002DF2 RID: 11762 RVA: 0x0010FD1C File Offset: 0x0010DF1C
 	public bool IsDebugOn()
 	{
 		return this.IsDebug;
 	}
 
-	// Token: 0x06005A5C RID: 23132 RVA: 0x00108074 File Offset: 0x00106274
+	// Token: 0x06002DF3 RID: 11763 RVA: 0x0010FD24 File Offset: 0x0010DF24
 	public void ToggleDebug()
 	{
 		this.IsDebug = !this.IsDebug;
 	}
 
-	// Token: 0x17000681 RID: 1665
-	// (get) Token: 0x06005A5D RID: 23133 RVA: 0x00108085 File Offset: 0x00106285
+	// Token: 0x170006A5 RID: 1701
+	// (get) Token: 0x06002DF4 RID: 11764 RVA: 0x0010FD35 File Offset: 0x0010DF35
 	[Nullable(2)]
 	public UKSC_HeadStateManager KscHeadStateManager
 	{
@@ -983,7 +983,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A5E RID: 23134 RVA: 0x0010808D File Offset: 0x0010628D
+	// Token: 0x06002DF5 RID: 11765 RVA: 0x0010FD3D File Offset: 0x0010DF3D
 	public void StartKscHeadStateManager()
 	{
 		if (this.KscHeadStateManagerInternal != null)
@@ -993,7 +993,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.KscHeadStateManagerInternal = UKSC_HeadStateManager.CreateInstance(GlobalData.World);
 	}
 
-	// Token: 0x06005A5F RID: 23135 RVA: 0x001080A8 File Offset: 0x001062A8
+	// Token: 0x06002DF6 RID: 11766 RVA: 0x0010FD58 File Offset: 0x0010DF58
 	public void StopKscHeadStateManager()
 	{
 		if (this.KscHeadStateManagerInternal != null)
@@ -1003,14 +1003,14 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A60 RID: 23136 RVA: 0x001080BE File Offset: 0x001062BE
+	// Token: 0x06002DF7 RID: 11767 RVA: 0x0010FD6E File Offset: 0x0010DF6E
 	[NullableContext(2)]
 	private void SimpleCombatBeginNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		this.OpenWorldByGameplayType(EKscGameplayType.FinalBattle);
 	}
 
-	// Token: 0x06005A61 RID: 23137 RVA: 0x001080C8 File Offset: 0x001062C8
+	// Token: 0x06002DF8 RID: 11768 RVA: 0x0010FD78 File Offset: 0x0010DF78
 	[NullableContext(2)]
 	private void SimpleCombatEndNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -1018,7 +1018,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.CloseCurrentWorld(this.SubControllerMap.TryGetValue(EKscGameplayType.FinalBattle, out kscSubControllerBase) ? kscSubControllerBase : null);
 	}
 
-	// Token: 0x06005A62 RID: 23138 RVA: 0x001080F0 File Offset: 0x001062F0
+	// Token: 0x06002DF9 RID: 11769 RVA: 0x0010FDA0 File Offset: 0x0010DFA0
 	[NullableContext(2)]
 	public AKSC_Entity GetKscEntityHandle(long creatureId)
 	{
@@ -1045,7 +1045,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return curSubModel2.KscPlayerEntity;
 	}
 
-	// Token: 0x06005A63 RID: 23139 RVA: 0x00108160 File Offset: 0x00106360
+	// Token: 0x06002DFA RID: 11770 RVA: 0x0010FE10 File Offset: 0x0010E010
 	public void GmCreateEntity(int simpleCombatId, float distance)
 	{
 		string entityPathById = KuroSimpleCombatController.Instance.CurSubModel.GetEntityPathById(simpleCombatId);
@@ -1086,7 +1086,7 @@ public class KuroSimpleCombatController : ControllerBase
 		});
 	}
 
-	// Token: 0x06005A64 RID: 23140 RVA: 0x001082A8 File Offset: 0x001064A8
+	// Token: 0x06002DFB RID: 11771 RVA: 0x0010FF58 File Offset: 0x0010E158
 	public void GmAddBuff(int kscEntityId, int buffId)
 	{
 		if (kscEntityId == 0)
@@ -1105,7 +1105,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A65 RID: 23141 RVA: 0x001082F8 File Offset: 0x001064F8
+	// Token: 0x06002DFC RID: 11772 RVA: 0x0010FFA8 File Offset: 0x0010E1A8
 	public void GmRemoveBuff(int kscEntityId, int buffId)
 	{
 		if (kscEntityId == 0)
@@ -1124,7 +1124,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A66 RID: 23142 RVA: 0x00108340 File Offset: 0x00106540
+	// Token: 0x06002DFD RID: 11773 RVA: 0x0010FFF0 File Offset: 0x0010E1F0
 	public int GmGetPlayerEntityId()
 	{
 		KscSubModelBase curSubModel = this.CurSubModel;
@@ -1142,7 +1142,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x06005A67 RID: 23143 RVA: 0x00108388 File Offset: 0x00106588
+	// Token: 0x06002DFE RID: 11774 RVA: 0x00110038 File Offset: 0x0010E238
 	public unsafe void GmAddPlayerEntity(IKscGmPlayerEntityParam param)
 	{
 		if (this.CurSubController == null)
@@ -1168,7 +1168,7 @@ public class KuroSimpleCombatController : ControllerBase
 		this.CurSubController.GmAddPlayerEntity(param);
 	}
 
-	// Token: 0x06005A68 RID: 23144 RVA: 0x00108480 File Offset: 0x00106680
+	// Token: 0x06002DFF RID: 11775 RVA: 0x00110130 File Offset: 0x0010E330
 	public void GmPrintInfo()
 	{
 		if (this.CurSubController != null)
@@ -1177,14 +1177,14 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A69 RID: 23145 RVA: 0x00108495 File Offset: 0x00106695
+	// Token: 0x06002E00 RID: 11776 RVA: 0x00110145 File Offset: 0x0010E345
 	public void GmCreateKSCWorld(int GamePlayType)
 	{
 		this.OpenWorldByGameplayType((EKscGameplayType)GamePlayType);
 	}
 
-	// Token: 0x17000682 RID: 1666
-	// (get) Token: 0x06005A6A RID: 23146 RVA: 0x0010849E File Offset: 0x0010669E
+	// Token: 0x170006A6 RID: 1702
+	// (get) Token: 0x06002E01 RID: 11777 RVA: 0x0011014E File Offset: 0x0010E34E
 	public static KuroSimpleCombatController Instance
 	{
 		get
@@ -1193,7 +1193,7 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	}
 
-	// Token: 0x06005A6B RID: 23147 RVA: 0x001084A5 File Offset: 0x001066A5
+	// Token: 0x06002E02 RID: 11778 RVA: 0x00110155 File Offset: 0x0010E355
 	public static KuroSimpleCombatController GetOrCreateInstance()
 	{
 		if (KuroSimpleCombatController._Instance == null)
@@ -1203,7 +1203,7 @@ public class KuroSimpleCombatController : ControllerBase
 		return KuroSimpleCombatController._Instance;
 	}
 
-	// Token: 0x06005A6C RID: 23148 RVA: 0x001084B9 File Offset: 0x001066B9
+	// Token: 0x06002E03 RID: 11779 RVA: 0x00110169 File Offset: 0x0010E369
 	public static bool CreateInstance()
 	{
 		if (KuroSimpleCombatController._Instance != null)
@@ -1214,24 +1214,24 @@ public class KuroSimpleCombatController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06005A6D RID: 23149 RVA: 0x001084CF File Offset: 0x001066CF
+	// Token: 0x06002E04 RID: 11780 RVA: 0x0011017F File Offset: 0x0010E37F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005A6E RID: 23150 RVA: 0x001084D1 File Offset: 0x001066D1
+	// Token: 0x06002E05 RID: 11781 RVA: 0x00110181 File Offset: 0x0010E381
 	public static void ResetStaticDefaultValue()
 	{
 		KuroSimpleCombatController._Instance = null;
 	}
 
-	// Token: 0x06005A6F RID: 23151 RVA: 0x001084D9 File Offset: 0x001066D9
+	// Token: 0x06002E06 RID: 11782 RVA: 0x00110189 File Offset: 0x0010E389
 	static KuroSimpleCombatController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroSimpleCombatController.CreateStaticDefaultValue), new Action(KuroSimpleCombatController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400292D RID: 10541
+	// Token: 0x040029C8 RID: 10696
 	private readonly Dictionary<EKscGameplayType, KscSubControllerBase> SubControllerMap = new Dictionary<EKscGameplayType, KscSubControllerBase>
 	{
 		{
@@ -1260,36 +1260,36 @@ public class KuroSimpleCombatController : ControllerBase
 		}
 	};
 
-	// Token: 0x0400292E RID: 10542
+	// Token: 0x040029C9 RID: 10697
 	[Nullable(2)]
 	public KscSubControllerBase CurSubController;
 
-	// Token: 0x0400292F RID: 10543
+	// Token: 0x040029CA RID: 10698
 	private TArray<FKSC_MiniMapContext> EntityPositions = new TArray<FKSC_MiniMapContext>();
 
-	// Token: 0x04002930 RID: 10544
+	// Token: 0x040029CB RID: 10699
 	private bool IsMapInit;
 
-	// Token: 0x04002931 RID: 10545
+	// Token: 0x040029CC RID: 10700
 	private bool IsWorldInit;
 
-	// Token: 0x04002932 RID: 10546
+	// Token: 0x040029CD RID: 10701
 	private List<EKscObservedLifecycleStage> ObservedLifecycleStages = new List<EKscObservedLifecycleStage>();
 
-	// Token: 0x04002933 RID: 10547
+	// Token: 0x040029CE RID: 10702
 	private readonly Dictionary<long, KscActionEntityAdd> PendingAdds = new Dictionary<long, KscActionEntityAdd>();
 
-	// Token: 0x04002934 RID: 10548
+	// Token: 0x040029CF RID: 10703
 	private readonly KscRemoveContext RemoveContext = new KscRemoveContext();
 
-	// Token: 0x04002935 RID: 10549
+	// Token: 0x040029D0 RID: 10704
 	public bool IsDebug;
 
-	// Token: 0x04002936 RID: 10550
+	// Token: 0x040029D1 RID: 10705
 	[Nullable(2)]
 	private UKSC_HeadStateManager KscHeadStateManagerInternal;
 
-	// Token: 0x04002937 RID: 10551
+	// Token: 0x040029D2 RID: 10706
 	[Nullable(2)]
 	private static KuroSimpleCombatController _Instance;
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 {
-	// Token: 0x02005781 RID: 22401
+	// Token: 0x02004758 RID: 18264
 	public class KurotatoWeaponTagItem : UiPanelBase
 	{
-		// Token: 0x06038E7C RID: 233084 RVA: 0x00D861E0 File Offset: 0x00D843E0
+		// Token: 0x0602DD8C RID: 187788 RVA: 0x00CD4EA0 File Offset: 0x00CD30A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038E7D RID: 233085 RVA: 0x00D862E9 File Offset: 0x00D844E9
+		// Token: 0x0602DD8D RID: 187789 RVA: 0x00CD4FA9 File Offset: 0x00CD31A9
 		private void OnClickTag(EToggleState state)
 		{
 			Action<List<IKurotatoWeaponBuildData>, EToggleState> clickCb = this.ClickCb;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			clickCb(this.DataList, state);
 		}
 
-		// Token: 0x06038E7E RID: 233086 RVA: 0x00D86304 File Offset: 0x00D84504
+		// Token: 0x0602DD8E RID: 187790 RVA: 0x00CD4FC4 File Offset: 0x00CD31C4
 		[NullableContext(1)]
 		public void Refresh(List<IKurotatoWeaponBuildData> dataList)
 		{
@@ -102,27 +102,27 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			}
 		}
 
-		// Token: 0x06038E7F RID: 233087 RVA: 0x00D8648C File Offset: 0x00D8468C
+		// Token: 0x0602DD8F RID: 187791 RVA: 0x00CD514C File Offset: 0x00CD334C
 		[NullableContext(1)]
 		public void SetClickCb(Action<List<IKurotatoWeaponBuildData>, EToggleState> cb)
 		{
 			this.ClickCb = cb;
 		}
 
-		// Token: 0x06038E80 RID: 233088 RVA: 0x00D86498 File Offset: 0x00D84698
+		// Token: 0x0602DD90 RID: 187792 RVA: 0x00CD5158 File Offset: 0x00CD3358
 		public void SetChecked(bool isChecked)
 		{
 			EToggleState state = isChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(2).SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x06038E81 RID: 233089 RVA: 0x00D864BD File Offset: 0x00D846BD
+		// Token: 0x0602DD91 RID: 187793 RVA: 0x00CD517D File Offset: 0x00CD337D
 		public bool IsChecked()
 		{
 			return base.GetExtendToggle(2).GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06038E82 RID: 233090 RVA: 0x00D864CE File Offset: 0x00D846CE
+		// Token: 0x0602DD92 RID: 187794 RVA: 0x00CD518E File Offset: 0x00CD338E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 			return this.DataList;
 		}
 
-		// Token: 0x0401DD59 RID: 122201
+		// Token: 0x040187EF RID: 100335
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private List<IKurotatoWeaponBuildData> DataList;
 
-		// Token: 0x0401DD5A RID: 122202
+		// Token: 0x040187F0 RID: 100336
 		[Nullable(new byte[]
 		{
 			2,
@@ -150,25 +150,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.AttrSelect
 		})]
 		private Action<List<IKurotatoWeaponBuildData>, EToggleState> ClickCb;
 
-		// Token: 0x0401DD5B RID: 122203
+		// Token: 0x040187F1 RID: 100337
 		public bool IsOutside;
 
-		// Token: 0x0200B9A1 RID: 47521
+		// Token: 0x0200A3B9 RID: 41913
 		private class ETagChildComp
 		{
-			// Token: 0x0403820B RID: 229899
+			// Token: 0x04032C00 RID: 207872
 			public const int PanelOffset = 0;
 
-			// Token: 0x0403820C RID: 229900
+			// Token: 0x04032C01 RID: 207873
 			public const int TextName = 1;
 
-			// Token: 0x0403820D RID: 229901
+			// Token: 0x04032C02 RID: 207874
 			public const int Toggle = 2;
 
-			// Token: 0x0403820E RID: 229902
+			// Token: 0x04032C03 RID: 207875
 			public const int TextName2 = 3;
 
-			// Token: 0x0403820F RID: 229903
+			// Token: 0x04032C04 RID: 207876
 			public const int SpriteLine = 4;
 		}
 	}

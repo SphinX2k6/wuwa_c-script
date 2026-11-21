@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014FB RID: 5371
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001654 RID: 5716
 	public class ClientChangeTeamPosition : ActionParams
 	{
-		// Token: 0x06007A1C RID: 31260 RVA: 0x00123C60 File Offset: 0x00121E60
+		// Token: 0x060080E9 RID: 33001 RVA: 0x00132898 File Offset: 0x00130A98
 		private ClientChangeTeamPosition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A1D RID: 31261 RVA: 0x00123C98 File Offset: 0x00121E98
+		// Token: 0x060080EA RID: 33002 RVA: 0x001328D0 File Offset: 0x00130AD0
 		public static ClientChangeTeamPosition Create([Nullable(2)] ClientChangeTeamPosition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A1E RID: 31262 RVA: 0x00123CAB File Offset: 0x00121EAB
+		// Token: 0x060080EB RID: 33003 RVA: 0x001328E3 File Offset: 0x00130AE3
 		public static ClientChangeTeamPosition CreateFromSetValue([Nullable(2)] ClientChangeTeamPosition_SetValue value)
 		{
 			if (value == null)
@@ -50,19 +48,18 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A1F RID: 31263 RVA: 0x00123CBE File Offset: 0x00121EBE
+		// Token: 0x060080EC RID: 33004 RVA: 0x001328F6 File Offset: 0x00130AF6
 		public ClientChangeTeamPosition_SetValue ToSetValue()
 		{
 			return new ClientChangeTeamPosition_SetValue
 			{
-				PositionId = this.PositionId,
-				RestoreToPrevious = this.RestoreToPrevious
+				PositionId = this.PositionId
 			};
 		}
 
-		// Token: 0x170028CD RID: 10445
-		// (get) Token: 0x06007A20 RID: 31264 RVA: 0x00123CDD File Offset: 0x00121EDD
-		// (set) Token: 0x06007A21 RID: 31265 RVA: 0x00123D08 File Offset: 0x00121F08
+		// Token: 0x17002AB7 RID: 10935
+		// (get) Token: 0x060080ED RID: 33005 RVA: 0x00132909 File Offset: 0x00130B09
+		// (set) Token: 0x060080EE RID: 33006 RVA: 0x00132934 File Offset: 0x00130B34
 		public virtual int PositionId
 		{
 			get
@@ -83,35 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028CE RID: 10446
-		// (get) Token: 0x06007A22 RID: 31266 RVA: 0x00123D18 File Offset: 0x00121F18
-		// (set) Token: 0x06007A23 RID: 31267 RVA: 0x00123D52 File Offset: 0x00121F52
-		public virtual bool? RestoreToPrevious
-		{
-			get
-			{
-				if (this.FbInstance != null)
-				{
-					return this.FbInstance.RestoreToPrevious;
-				}
-				ClientChangeTeamPosition_SetValue pocoInterface = this.PocoInterface;
-				if (pocoInterface == null)
-				{
-					return null;
-				}
-				return pocoInterface.RestoreToPrevious;
-			}
-			set
-			{
-				this.GetOrCreatePoco().RestoreToPrevious = value;
-			}
-		}
-
-		// Token: 0x040046C5 RID: 18117
+		// Token: 0x04004A60 RID: 19040
 		[Nullable(2)]
 		protected new ClientChangeTeamPosition FbInstance;
 
-		// Token: 0x040046C6 RID: 18118
+		// Token: 0x04004A61 RID: 19041
 		[Nullable(2)]
 		protected ClientChangeTeamPosition_SetValue PocoInterface;
 	}

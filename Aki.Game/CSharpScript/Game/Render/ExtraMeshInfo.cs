@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A1 RID: 17825
+	// Token: 0x020034C9 RID: 13513
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExtraMeshInfo
 	{
-		// Token: 0x0602DF62 RID: 188258 RVA: 0x00A92660 File Offset: 0x00A90860
+		// Token: 0x0602264C RID: 140876 RVA: 0x009BE880 File Offset: 0x009BCA80
 		public ExtraMeshInfo(USkeletalMeshComponent sourceMeshComp, USkeletalMeshComponent extraMeshComp, string extraMeshName)
 		{
 			this.SourceComponent = sourceMeshComp;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF63 RID: 188259 RVA: 0x00A926F8 File Offset: 0x00A908F8
+		// Token: 0x0602264D RID: 140877 RVA: 0x009BE918 File Offset: 0x009BCB18
 		public void AddUsage()
 		{
 			if (this.UsageCount == 0)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Render
 			this.UsageCount++;
 		}
 
-		// Token: 0x0602DF64 RID: 188260 RVA: 0x00A92748 File Offset: 0x00A90948
+		// Token: 0x0602264E RID: 140878 RVA: 0x009BE968 File Offset: 0x009BCB68
 		public unsafe void RemoveUsage()
 		{
 			if (this.UsageCount <= 0)
@@ -63,18 +63,18 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0401889D RID: 100509
+		// Token: 0x04012ED8 RID: 77528
 		public string Name = string.Empty;
 
-		// Token: 0x0401889E RID: 100510
+		// Token: 0x04012ED9 RID: 77529
 		[Nullable(2)]
 		public USkeletalMeshComponent SourceComponent;
 
-		// Token: 0x0401889F RID: 100511
+		// Token: 0x04012EDA RID: 77530
 		[Nullable(2)]
 		public USkeletalMeshComponent Component;
 
-		// Token: 0x040188A0 RID: 100512
+		// Token: 0x04012EDB RID: 77531
 		public int UsageCount;
 	}
 }

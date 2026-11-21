@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AED RID: 15085
+	// Token: 0x02003EEF RID: 16111
 	public struct ITimeDisplayMaterialParams : IFlatbufferObject
 	{
-		// Token: 0x17006775 RID: 26485
-		// (get) Token: 0x060148D4 RID: 84180 RVA: 0x002FE1E8 File Offset: 0x002FC3E8
+		// Token: 0x17006D10 RID: 27920
+		// (get) Token: 0x06015D7E RID: 89470 RVA: 0x00324478 File Offset: 0x00322678
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060148D5 RID: 84181 RVA: 0x002FE1F5 File Offset: 0x002FC3F5
+		// Token: 0x06015D7F RID: 89471 RVA: 0x00324485 File Offset: 0x00322685
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060148D6 RID: 84182 RVA: 0x002FE1FC File Offset: 0x002FC3FC
+		// Token: 0x06015D80 RID: 89472 RVA: 0x0032448C File Offset: 0x0032268C
 		public static ITimeDisplayMaterialParams GetRootAsITimeDisplayMaterialParams(ByteBuffer _bb)
 		{
 			return ITimeDisplayMaterialParams.GetRootAsITimeDisplayMaterialParams(_bb, default(ITimeDisplayMaterialParams));
 		}
 
-		// Token: 0x060148D7 RID: 84183 RVA: 0x002FE218 File Offset: 0x002FC418
+		// Token: 0x06015D81 RID: 89473 RVA: 0x003244A8 File Offset: 0x003226A8
 		public static ITimeDisplayMaterialParams GetRootAsITimeDisplayMaterialParams(ByteBuffer _bb, ITimeDisplayMaterialParams obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060148D8 RID: 84184 RVA: 0x002FE235 File Offset: 0x002FC435
+		// Token: 0x06015D82 RID: 89474 RVA: 0x003244C5 File Offset: 0x003226C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060148D9 RID: 84185 RVA: 0x002FE244 File Offset: 0x002FC444
+		// Token: 0x06015D83 RID: 89475 RVA: 0x003244D4 File Offset: 0x003226D4
 		public ITimeDisplayMaterialParams __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006776 RID: 26486
-		// (get) Token: 0x060148DA RID: 84186 RVA: 0x002FE254 File Offset: 0x002FC454
+		// Token: 0x17006D11 RID: 27921
+		// (get) Token: 0x06015D84 RID: 89476 RVA: 0x003244E4 File Offset: 0x003226E4
 		public EParamsPreset Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006777 RID: 26487
-		// (get) Token: 0x060148DB RID: 84187 RVA: 0x002FE290 File Offset: 0x002FC490
+		// Token: 0x17006D12 RID: 27922
+		// (get) Token: 0x06015D85 RID: 89477 RVA: 0x00324520 File Offset: 0x00322720
 		public TTimeDisplayParams TimeDisplayParamsType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060148DC RID: 84188 RVA: 0x002FE2CC File Offset: 0x002FC4CC
+		// Token: 0x06015D86 RID: 89478 RVA: 0x0032455C File Offset: 0x0032275C
 		public TTable? TimeDisplayParams<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060148DD RID: 84189 RVA: 0x002FE310 File Offset: 0x002FC510
+		// Token: 0x06015D87 RID: 89479 RVA: 0x003245A0 File Offset: 0x003227A0
 		public ITimeDisplayParamsConstant TimeDisplayParamsAsITimeDisplayParamsConstant()
 		{
 			return this.TimeDisplayParams<ITimeDisplayParamsConstant>().Value;
 		}
 
-		// Token: 0x060148DE RID: 84190 RVA: 0x002FE32C File Offset: 0x002FC52C
+		// Token: 0x06015D88 RID: 89480 RVA: 0x003245BC File Offset: 0x003227BC
 		public ITimeDisplayParamsVar TimeDisplayParamsAsITimeDisplayParamsVar()
 		{
 			return this.TimeDisplayParams<ITimeDisplayParamsVar>().Value;
 		}
 
-		// Token: 0x060148DF RID: 84191 RVA: 0x002FE347 File Offset: 0x002FC547
+		// Token: 0x06015D89 RID: 89481 RVA: 0x003245D7 File Offset: 0x003227D7
 		public static Offset<ITimeDisplayMaterialParams> CreateITimeDisplayMaterialParams(FlatBufferBuilder builder, EParamsPreset Type = EParamsPreset.Decal, TTimeDisplayParams TimeDisplayParams_type = TTimeDisplayParams.NONE, int TimeDisplayParamsOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return ITimeDisplayMaterialParams.EndITimeDisplayMaterialParams(builder);
 		}
 
-		// Token: 0x060148E0 RID: 84192 RVA: 0x002FE36B File Offset: 0x002FC56B
+		// Token: 0x06015D8A RID: 89482 RVA: 0x003245FB File Offset: 0x003227FB
 		public static void StartITimeDisplayMaterialParams(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060148E1 RID: 84193 RVA: 0x002FE374 File Offset: 0x002FC574
+		// Token: 0x06015D8B RID: 89483 RVA: 0x00324604 File Offset: 0x00322804
 		public static void AddType(FlatBufferBuilder builder, EParamsPreset type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060148E2 RID: 84194 RVA: 0x002FE37F File Offset: 0x002FC57F
+		// Token: 0x06015D8C RID: 89484 RVA: 0x0032460F File Offset: 0x0032280F
 		public static void AddTimeDisplayParamsType(FlatBufferBuilder builder, TTimeDisplayParams timeDisplayParamsType)
 		{
 			builder.AddByte(1, (byte)timeDisplayParamsType, 0);
 		}
 
-		// Token: 0x060148E3 RID: 84195 RVA: 0x002FE38A File Offset: 0x002FC58A
+		// Token: 0x06015D8D RID: 89485 RVA: 0x0032461A File Offset: 0x0032281A
 		public static void AddTimeDisplayParams(FlatBufferBuilder builder, int timeDisplayParamsOffset)
 		{
 			builder.AddOffset(2, timeDisplayParamsOffset, 0);
 		}
 
-		// Token: 0x060148E4 RID: 84196 RVA: 0x002FE395 File Offset: 0x002FC595
+		// Token: 0x06015D8E RID: 89486 RVA: 0x00324625 File Offset: 0x00322825
 		public static Offset<ITimeDisplayMaterialParams> EndITimeDisplayMaterialParams(FlatBufferBuilder builder)
 		{
 			return new Offset<ITimeDisplayMaterialParams>(builder.EndTable());
 		}
 
-		// Token: 0x060148E5 RID: 84197 RVA: 0x002FE3A4 File Offset: 0x002FC5A4
+		// Token: 0x06015D8F RID: 89487 RVA: 0x00324634 File Offset: 0x00322834
 		public ITimeDisplayMaterialParamsT UnPack()
 		{
 			ITimeDisplayMaterialParamsT timeDisplayMaterialParamsT = new ITimeDisplayMaterialParamsT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return timeDisplayMaterialParamsT;
 		}
 
-		// Token: 0x060148E6 RID: 84198 RVA: 0x002FE3C0 File Offset: 0x002FC5C0
+		// Token: 0x06015D90 RID: 89488 RVA: 0x00324650 File Offset: 0x00322850
 		public void UnPackTo(ITimeDisplayMaterialParamsT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.TimeDisplayParams.Value = ((this.TimeDisplayParams<ITimeDisplayParamsVar>() != null) ? this.TimeDisplayParams<ITimeDisplayParamsVar>().Value.UnPack() : null);
 		}
 
-		// Token: 0x060148E7 RID: 84199 RVA: 0x002FE470 File Offset: 0x002FC670
+		// Token: 0x06015D91 RID: 89489 RVA: 0x00324700 File Offset: 0x00322900
 		public static Offset<ITimeDisplayMaterialParams> Pack(FlatBufferBuilder builder, ITimeDisplayMaterialParamsT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return ITimeDisplayMaterialParams.CreateITimeDisplayMaterialParams(builder, _o.Type, timeDisplayParams_type, timeDisplayParamsOffset);
 		}
 
-		// Token: 0x0400AFB0 RID: 44976
+		// Token: 0x0400B91D RID: 47389
 		private Table __p;
 	}
 }

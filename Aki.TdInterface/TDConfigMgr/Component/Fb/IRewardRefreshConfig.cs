@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AAC RID: 2732
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B76 RID: 2934
 	public class IRewardRefreshConfig
 	{
-		// Token: 0x06003F01 RID: 16129 RVA: 0x000A12AA File Offset: 0x0009F4AA
+		// Token: 0x0600432B RID: 17195 RVA: 0x000AA89E File Offset: 0x000A8A9E
 		public static IRewardRefreshConfig Create(IRewardRefreshConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F66 RID: 3942
-		// (get) Token: 0x06003F02 RID: 16130 RVA: 0x000A12C9 File Offset: 0x0009F4C9
+		// Token: 0x1700103A RID: 4154
+		// (get) Token: 0x0600432C RID: 17196 RVA: 0x000AA8BD File Offset: 0x000A8ABD
 		public virtual IRefreshConditionBase RefreshCondition
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F67 RID: 3943
-		// (get) Token: 0x06003F03 RID: 16131 RVA: 0x000A12F8 File Offset: 0x0009F4F8
+		// Token: 0x1700103B RID: 4155
+		// (get) Token: 0x0600432D RID: 17197 RVA: 0x000AA8EC File Offset: 0x000A8AEC
 		public virtual IRefreshRule RefreshType
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F68 RID: 3944
-		// (get) Token: 0x06003F04 RID: 16132 RVA: 0x000A1328 File Offset: 0x0009F528
+		// Token: 0x1700103C RID: 4156
+		// (get) Token: 0x0600432E RID: 17198 RVA: 0x000AA91C File Offset: 0x000A8B1C
 		public virtual int? MaxCount
 		{
 			get
@@ -68,19 +65,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022FD RID: 8957
+		// Token: 0x04002519 RID: 9497
 		private IRewardRefreshConfig Instance;
 
-		// Token: 0x040022FE RID: 8958
+		// Token: 0x0400251A RID: 9498
 		private IRefreshConditionBase _RefreshConditionCache;
 
-		// Token: 0x040022FF RID: 8959
+		// Token: 0x0400251B RID: 9499
 		private bool _RefreshConditionInited;
 
-		// Token: 0x04002300 RID: 8960
+		// Token: 0x0400251C RID: 9500
 		private IRefreshRule _RefreshTypeCache;
 
-		// Token: 0x04002301 RID: 8961
+		// Token: 0x0400251D RID: 9501
 		private bool _RefreshTypeInited;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ED1 RID: 3793
+	// Token: 0x02000FE7 RID: 4071
 	public class IAtomicProcessBase_SetValue
 	{
-		// Token: 0x040032B5 RID: 12981
+		// Token: 0x040035C2 RID: 13762
 		public EAtomicProcess Type;
 	}
 }

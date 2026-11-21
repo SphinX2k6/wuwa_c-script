@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D69 RID: 7529
+// Token: 0x0200122B RID: 4651
 [NullableContext(1)]
 [Nullable(0)]
 public class RangeFailedEffectRangeEntitiesHandler : RangeFailedEffectHandler
 {
-	// Token: 0x0600E502 RID: 58626 RVA: 0x0035F2B2 File Offset: 0x0035D4B2
+	// Token: 0x0600B920 RID: 47392 RVA: 0x0036AF06 File Offset: 0x00369106
 	private static bool RangeEntitiesValid(RangeFailedParameterContext context)
 	{
 		return context.IsValid() && context.RangeEntities != null && context.RangeEntities.Count > 0;
 	}
 
-	// Token: 0x0600E503 RID: 58627 RVA: 0x0035F2D4 File Offset: 0x0035D4D4
+	// Token: 0x0600B921 RID: 47393 RVA: 0x0036AF28 File Offset: 0x00369128
 	private static UniTask WaitVolumeAndSpawnEffectThenSetParam(IVolumeTriggerShape shape, IReadOnlyList<IBaseSplinePointType> points, RangeFailedParameterContext context)
 	{
 		RangeFailedEffectRangeEntitiesHandler.<WaitVolumeAndSpawnEffectThenSetParam>d__1 <WaitVolumeAndSpawnEffectThenSetParam>d__;
@@ -32,7 +32,7 @@ public class RangeFailedEffectRangeEntitiesHandler : RangeFailedEffectHandler
 		return <WaitVolumeAndSpawnEffectThenSetParam>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E504 RID: 58628 RVA: 0x0035F328 File Offset: 0x0035D528
+	// Token: 0x0600B922 RID: 47394 RVA: 0x0036AF7C File Offset: 0x0036917C
 	[NullableContext(0)]
 	private static UniTask<int> SpawnEffectAsync(FVectorDouble location, [Nullable(1)] string rangeFailedEffectPath)
 	{
@@ -45,7 +45,7 @@ public class RangeFailedEffectRangeEntitiesHandler : RangeFailedEffectHandler
 		return <SpawnEffectAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E505 RID: 58629 RVA: 0x0035F374 File Offset: 0x0035D574
+	// Token: 0x0600B923 RID: 47395 RVA: 0x0036AFC8 File Offset: 0x003691C8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -61,19 +61,19 @@ public class RangeFailedEffectRangeEntitiesHandler : RangeFailedEffectHandler
 		return <GetVolumeLocationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E506 RID: 58630 RVA: 0x0035F3B7 File Offset: 0x0035D5B7
+	// Token: 0x0600B924 RID: 47396 RVA: 0x0036B00B File Offset: 0x0036920B
 	protected override bool CanHandle(RangeFailedParameterContext context)
 	{
 		return RangeFailedEffectRangeEntitiesHandler.RangeEntitiesValid(context);
 	}
 
-	// Token: 0x0600E507 RID: 58631 RVA: 0x0035F3BF File Offset: 0x0035D5BF
+	// Token: 0x0600B925 RID: 47397 RVA: 0x0036B013 File Offset: 0x00369213
 	protected override bool ShouldStop(RangeFailedParameterContext context)
 	{
 		return RangeFailedEffectRangeEntitiesHandler.RangeEntitiesValid(context);
 	}
 
-	// Token: 0x0600E508 RID: 58632 RVA: 0x0035F3C8 File Offset: 0x0035D5C8
+	// Token: 0x0600B926 RID: 47398 RVA: 0x0036B01C File Offset: 0x0036921C
 	protected unsafe override void ExecuteProcessing(RangeFailedParameterContext context)
 	{
 		foreach (int num in context.RangeEntities)

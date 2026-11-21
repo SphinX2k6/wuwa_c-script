@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007219 RID: 29209
+	// Token: 0x020062CE RID: 25294
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class SceneItemDynamicAttachTargetComponent : EntityComponent, IComponentDependency
+	public class SceneItemDynamicAttachTargetComponent : EntityComponent
 	{
-		// Token: 0x17009E26 RID: 40486
-		// (get) Token: 0x06047816 RID: 292886 RVA: 0x01239F0F File Offset: 0x0123810F
-		public static Type[] Dependencies
+		// Token: 0x170073A2 RID: 29602
+		// (get) Token: 0x0603D13C RID: 250172 RVA: 0x0119361A File Offset: 0x0119181A
+		public override Type[] Dependencies
 		{
 			get
 			{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047817 RID: 292887 RVA: 0x01239F34 File Offset: 0x01238134
+		// Token: 0x0603D13D RID: 250173 RVA: 0x0119363C File Offset: 0x0119183C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047818 RID: 292888 RVA: 0x01239FB8 File Offset: 0x012381B8
+		// Token: 0x0603D13E RID: 250174 RVA: 0x011936C0 File Offset: 0x011918C0
 		protected override void OnActivate()
 		{
 			this.CanAttachTarget = true;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047819 RID: 292889 RVA: 0x01239FD0 File Offset: 0x012381D0
+		// Token: 0x0603D13F RID: 250175 RVA: 0x011936D8 File Offset: 0x011918D8
 		protected override bool OnEnd()
 		{
 			if (this.RegTargetType != SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604781A RID: 292890 RVA: 0x0123A038 File Offset: 0x01238238
+		// Token: 0x0603D140 RID: 250176 RVA: 0x01193740 File Offset: 0x01191940
 		private void HandleTargetAttach()
 		{
 			SceneItemDynamicAttachTargetComponent.ERegTargetType regTargetType = this.RegTargetType;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AttachActorRef();
 		}
 
-		// Token: 0x0604781B RID: 292891 RVA: 0x0123A064 File Offset: 0x01238264
+		// Token: 0x0603D141 RID: 250177 RVA: 0x0119376C File Offset: 0x0119196C
 		private void HandleTargetDetach()
 		{
 			SceneItemDynamicAttachTargetComponent.ERegTargetType regTargetType = this.RegTargetType;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DetachActorRef();
 		}
 
-		// Token: 0x0604781C RID: 292892 RVA: 0x0123A090 File Offset: 0x01238290
+		// Token: 0x0603D142 RID: 250178 RVA: 0x01193798 File Offset: 0x01191998
 		private void AttachEntity()
 		{
 			EntityHandle entityHandle;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604781D RID: 292893 RVA: 0x0123A1B0 File Offset: 0x012383B0
+		// Token: 0x0603D143 RID: 250179 RVA: 0x011938B8 File Offset: 0x01191AB8
 		private void AttachSceneItemEntity(EntityHandle targetHandle)
 		{
 			WorldEntity entity = targetHandle.Entity;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604781E RID: 292894 RVA: 0x0123A298 File Offset: 0x01238498
+		// Token: 0x0603D144 RID: 250180 RVA: 0x011939A0 File Offset: 0x01191BA0
 		private void AttachCharacterEntity(EntityHandle targetHandle)
 		{
 			WorldEntity entity = targetHandle.Entity;
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604781F RID: 292895 RVA: 0x0123A308 File Offset: 0x01238508
+		// Token: 0x0603D145 RID: 250181 RVA: 0x01193A10 File Offset: 0x01191C10
 		private void DetachEntity()
 		{
 			EntityHandle entityHandle;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DetachFromTargetActor(targetActor);
 		}
 
-		// Token: 0x06047820 RID: 292896 RVA: 0x0123A454 File Offset: 0x01238654
+		// Token: 0x0603D146 RID: 250182 RVA: 0x01193B5C File Offset: 0x01191D5C
 		private void OnTargetEntityCreate(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			if (handle == null || !handle.Valid)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AttachEntity();
 		}
 
-		// Token: 0x06047821 RID: 292897 RVA: 0x0123A548 File Offset: 0x01238748
+		// Token: 0x0603D147 RID: 250183 RVA: 0x01193C50 File Offset: 0x01191E50
 		private void OnTargetEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (handle == null || !handle.Valid)
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047822 RID: 292898 RVA: 0x0123A674 File Offset: 0x01238874
+		// Token: 0x0603D148 RID: 250184 RVA: 0x01193D7C File Offset: 0x01191F7C
 		private void OnTargetSceneInteractionLoadCompleted()
 		{
 			EntityHandle entityHandle;
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AttachEntity();
 		}
 
-		// Token: 0x06047823 RID: 292899 RVA: 0x0123A728 File Offset: 0x01238928
+		// Token: 0x0603D149 RID: 250185 RVA: 0x01193E30 File Offset: 0x01192030
 		private void AttachActorRef()
 		{
 			if (string.IsNullOrEmpty(this.TargetActorRef))
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AttachToTargetActor(actor);
 		}
 
-		// Token: 0x06047824 RID: 292900 RVA: 0x0123A7E8 File Offset: 0x012389E8
+		// Token: 0x0603D14A RID: 250186 RVA: 0x01193EF0 File Offset: 0x011920F0
 		private void DetachActorRef()
 		{
 			if (string.IsNullOrEmpty(this.TargetActorRef))
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DetachFromTargetActor(targetActor);
 		}
 
-		// Token: 0x06047825 RID: 292901 RVA: 0x0123A860 File Offset: 0x01238A60
+		// Token: 0x0603D14B RID: 250187 RVA: 0x01193F68 File Offset: 0x01192168
 		private void OnTargetActorRefAdd(FName actorKey)
 		{
 			FName? fname = (this.TargetActorRef != null) ? FNameUtil.GetDynamicFName(this.TargetActorRef) : null;
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AttachToTargetActor(actor);
 		}
 
-		// Token: 0x06047826 RID: 292902 RVA: 0x0123A8E0 File Offset: 0x01238AE0
+		// Token: 0x0603D14C RID: 250188 RVA: 0x01193FE8 File Offset: 0x011921E8
 		[NullableContext(2)]
 		private void AttachToTargetActor(AActor targetActor)
 		{
@@ -676,7 +676,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06047827 RID: 292903 RVA: 0x0123B000 File Offset: 0x01239200
+		// Token: 0x0603D14D RID: 250189 RVA: 0x01194708 File Offset: 0x01192908
 		[NullableContext(2)]
 		private void DetachFromTargetActor(AActor targetActor)
 		{
@@ -702,14 +702,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047828 RID: 292904 RVA: 0x0123B073 File Offset: 0x01239273
+		// Token: 0x0603D14E RID: 250190 RVA: 0x0119477B File Offset: 0x0119297B
 		[NullableContext(2)]
 		private void OnAttachedActorDestroy(AActor destroyedActor)
 		{
 			this.DetachFromTargetActor(destroyedActor);
 		}
 
-		// Token: 0x06047829 RID: 292905 RVA: 0x0123B07C File Offset: 0x0123927C
+		// Token: 0x0603D14F RID: 250191 RVA: 0x01194784 File Offset: 0x01192984
 		private FTransformDouble GetTransformFromConfig(Aki.TDConfigMgr.Action.ITransform configTransform)
 		{
 			FTransformDouble result = new FTransformDouble();
@@ -733,13 +733,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return result;
 		}
 
-		// Token: 0x0604782A RID: 292906 RVA: 0x0123B1EA File Offset: 0x012393EA
+		// Token: 0x0603D150 RID: 250192 RVA: 0x011948F2 File Offset: 0x01192AF2
 		public bool IsRegTarget()
 		{
 			return this.RegTargetType > SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg;
 		}
 
-		// Token: 0x0604782B RID: 292907 RVA: 0x0123B1F8 File Offset: 0x012393F8
+		// Token: 0x0603D151 RID: 250193 RVA: 0x01194900 File Offset: 0x01192B00
 		public unsafe bool RegEntityTarget(int targetPbDataId, [Nullable(2)] string targetAttachPoint, SceneItemDynamicAttachTargetComponent.AttachParam attachParam, string reason)
 		{
 			if (this.RegTargetType != SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg || base.Entity.IsEnd || targetPbDataId == 0)
@@ -790,7 +790,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604782C RID: 292908 RVA: 0x0123B430 File Offset: 0x01239630
+		// Token: 0x0603D152 RID: 250194 RVA: 0x01194B38 File Offset: 0x01192D38
 		public unsafe bool RegEntityTargetByCreatureDataId(long targetCreatureDataId, [Nullable(2)] string targetAttachPoint, SceneItemDynamicAttachTargetComponent.AttachParam attachParam, string reason)
 		{
 			if (this.RegTargetType != SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg || base.Entity.IsEnd || targetCreatureDataId == 0L)
@@ -841,7 +841,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604782D RID: 292909 RVA: 0x0123B668 File Offset: 0x01239868
+		// Token: 0x0603D153 RID: 250195 RVA: 0x01194D70 File Offset: 0x01192F70
 		public unsafe bool RegRefActorTarget(string targetActorRef, SceneItemDynamicAttachTargetComponent.AttachParam attachParam, string reason)
 		{
 			if (this.RegTargetType != SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg || base.Entity.IsEnd || string.IsNullOrEmpty(targetActorRef))
@@ -890,7 +890,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604782E RID: 292910 RVA: 0x0123B884 File Offset: 0x01239A84
+		// Token: 0x0603D154 RID: 250196 RVA: 0x01194F8C File Offset: 0x0119318C
 		public unsafe bool UnRegTarget(string reason)
 		{
 			if (this.RegTargetType == SceneItemDynamicAttachTargetComponent.ERegTargetType.UnReg || base.Entity.IsEnd)
@@ -940,7 +940,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604782F RID: 292911 RVA: 0x0123BAAC File Offset: 0x01239CAC
+		// Token: 0x0603D155 RID: 250197 RVA: 0x011951B4 File Offset: 0x011933B4
 		public void RequestAttachRefActor(string refActorKey, IVector relativePos, IRotator relativeRot)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -973,7 +973,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Call(ERequestMessageId.AttachEntityRequest, attachEntityRequest, null, 0);
 		}
 
-		// Token: 0x06047830 RID: 292912 RVA: 0x0123BBB0 File Offset: 0x01239DB0
+		// Token: 0x0603D156 RID: 250198 RVA: 0x011952B8 File Offset: 0x011934B8
 		public void RequestAttachEntity(int targetConfigId, [Nullable(2)] string targetRefKey, IVector relativePos, IRotator relativeRot)
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1008,7 +1008,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Call(ERequestMessageId.AttachEntityRequest, attachEntityRequest, null, 0);
 		}
 
-		// Token: 0x06047831 RID: 292913 RVA: 0x0123BCDC File Offset: 0x01239EDC
+		// Token: 0x0603D157 RID: 250199 RVA: 0x011953E4 File Offset: 0x011935E4
 		public void RequestDetach()
 		{
 			AttachEntityRequest attachEntityRequest = AttachEntityRequest.Create();
@@ -1017,7 +1017,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Call(ERequestMessageId.AttachEntityRequest, attachEntityRequest, null, 0);
 		}
 
-		// Token: 0x06047832 RID: 292914 RVA: 0x0123BD20 File Offset: 0x01239F20
+		// Token: 0x0603D158 RID: 250200 RVA: 0x01195428 File Offset: 0x01193628
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1025,145 +1025,135 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemDynamicAttachTargetComponent sceneItemDynamicAttachTargetComponent = (SceneItemDynamicAttachTargetComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemDynamicAttachTargetComponent.CreatureDataComp == null)
 			{
-				if (sceneItemDynamicAttachTargetComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemDynamicAttachTargetComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CanAttachTarget"))
+			if (sceneItemDynamicAttachTargetComponent.ActorComp == null)
 			{
-				this.CanAttachTarget = sceneItemDynamicAttachTargetComponent.CanAttachTarget;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("RegTargetType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.RegTargetType = sceneItemDynamicAttachTargetComponent.RegTargetType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurAttachParam"))
+			this.CanAttachTarget = sceneItemDynamicAttachTargetComponent.CanAttachTarget;
+			this.RegTargetType = sceneItemDynamicAttachTargetComponent.RegTargetType;
+			if (sceneItemDynamicAttachTargetComponent.CurAttachParam == null)
 			{
-				if (sceneItemDynamicAttachTargetComponent.CurAttachParam == null)
-				{
-					this.CurAttachParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemDynamicAttachTargetComponent.AttachParam>(this.CurAttachParam), "CurAttachParam"))
-				{
-					return false;
-				}
+				this.CurAttachParam = null;
 			}
-			if (base.CanResetComponentProperty("TargetPbDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurAttachParam), "CurAttachParam"))
 			{
-				this.TargetPbDataId = sceneItemDynamicAttachTargetComponent.TargetPbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetCreatureDataId"))
+			this.TargetPbDataId = sceneItemDynamicAttachTargetComponent.TargetPbDataId;
+			this.TargetCreatureDataId = sceneItemDynamicAttachTargetComponent.TargetCreatureDataId;
+			this.TargetAttachPoint = sceneItemDynamicAttachTargetComponent.TargetAttachPoint;
+			this.TargetActorRef = sceneItemDynamicAttachTargetComponent.TargetActorRef;
+			if (sceneItemDynamicAttachTargetComponent.ActorSubsystem == null)
 			{
-				this.TargetCreatureDataId = sceneItemDynamicAttachTargetComponent.TargetCreatureDataId;
+				this.ActorSubsystem = null;
 			}
-			if (base.CanResetComponentProperty("TargetAttachPoint"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorSubsystem), "ActorSubsystem"))
 			{
-				this.TargetAttachPoint = sceneItemDynamicAttachTargetComponent.TargetAttachPoint;
-			}
-			if (base.CanResetComponentProperty("TargetActorRef"))
-			{
-				this.TargetActorRef = sceneItemDynamicAttachTargetComponent.TargetActorRef;
-			}
-			if (base.CanResetComponentProperty("ActorSubsystem"))
-			{
-				if (sceneItemDynamicAttachTargetComponent.ActorSubsystem == null)
-				{
-					this.ActorSubsystem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroActorSubsystem>(this.ActorSubsystem), "ActorSubsystem"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040259F0 RID: 154096
+		// Token: 0x170073A3 RID: 29603
+		// (get) Token: 0x0603D159 RID: 250201 RVA: 0x0119553C File Offset: 0x0119373C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073A4 RID: 29604
+		// (get) Token: 0x0603D15A RID: 250202 RVA: 0x0119553F File Offset: 0x0119373F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402065F RID: 132703
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040259F1 RID: 154097
+		// Token: 0x04020660 RID: 132704
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040259F2 RID: 154098
+		// Token: 0x04020661 RID: 132705
 		private bool CanAttachTarget;
 
-		// Token: 0x040259F3 RID: 154099
+		// Token: 0x04020662 RID: 132706
 		private SceneItemDynamicAttachTargetComponent.ERegTargetType RegTargetType;
 
-		// Token: 0x040259F4 RID: 154100
+		// Token: 0x04020663 RID: 132707
 		[Nullable(2)]
 		private SceneItemDynamicAttachTargetComponent.AttachParam CurAttachParam;
 
-		// Token: 0x040259F5 RID: 154101
+		// Token: 0x04020664 RID: 132708
 		private int? TargetPbDataId;
 
-		// Token: 0x040259F6 RID: 154102
+		// Token: 0x04020665 RID: 132709
 		private long? TargetCreatureDataId;
 
-		// Token: 0x040259F7 RID: 154103
+		// Token: 0x04020666 RID: 132710
 		[Nullable(2)]
 		private string TargetAttachPoint;
 
-		// Token: 0x040259F8 RID: 154104
+		// Token: 0x04020667 RID: 132711
 		[Nullable(2)]
 		private string TargetActorRef;
 
-		// Token: 0x040259F9 RID: 154105
+		// Token: 0x04020668 RID: 132712
 		[Nullable(2)]
 		private UKuroActorSubsystem ActorSubsystem;
 
-		// Token: 0x0200CF51 RID: 53073
+		// Token: 0x0200BAE6 RID: 47846
 		[NullableContext(0)]
 		private enum ERegTargetType
 		{
-			// Token: 0x0403E524 RID: 255268
+			// Token: 0x0403984A RID: 235594
 			UnReg,
-			// Token: 0x0403E525 RID: 255269
+			// Token: 0x0403984B RID: 235595
 			Entity,
-			// Token: 0x0403E526 RID: 255270
+			// Token: 0x0403984C RID: 235596
 			RefActor
 		}
 
-		// Token: 0x0200CF52 RID: 53074
+		// Token: 0x0200BAE7 RID: 47847
 		[NullableContext(0)]
 		public enum EAttachType
 		{
-			// Token: 0x0403E528 RID: 255272
+			// Token: 0x0403984E RID: 235598
 			InheritRelativeTransform,
-			// Token: 0x0403E529 RID: 255273
+			// Token: 0x0403984F RID: 235599
 			CalcUseCurrentRelation,
-			// Token: 0x0403E52A RID: 255274
+			// Token: 0x04039850 RID: 235600
 			UseZeroRelativeTransform,
-			// Token: 0x0403E52B RID: 255275
+			// Token: 0x04039851 RID: 235601
 			CalcUseInitialRelation
 		}
 
-		// Token: 0x0200CF53 RID: 53075
+		// Token: 0x0200BAE8 RID: 47848
 		[NullableContext(2)]
 		[Nullable(0)]
 		public class AttachParam
 		{
-			// Token: 0x060520AA RID: 336042 RVA: 0x0164BED8 File Offset: 0x0164A0D8
+			// Token: 0x06048855 RID: 297045 RVA: 0x0161DFF0 File Offset: 0x0161C1F0
 			[NullableContext(1)]
 			public void From(SceneItemDynamicAttachTargetComponent.AttachParam srcParam)
 			{
@@ -1206,7 +1196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				this.AttachSocketName = srcParam.AttachSocketName;
 			}
 
-			// Token: 0x060520AB RID: 336043 RVA: 0x0164C02C File Offset: 0x0164A22C
+			// Token: 0x06048856 RID: 297046 RVA: 0x0161E144 File Offset: 0x0161C344
 			public void Reset()
 			{
 				this.PosAttachType = SceneItemDynamicAttachTargetComponent.EAttachType.InheritRelativeTransform;
@@ -1227,25 +1217,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				}
 			}
 
-			// Token: 0x0403E52C RID: 255276
+			// Token: 0x04039852 RID: 235602
 			public SceneItemDynamicAttachTargetComponent.EAttachType PosAttachType;
 
-			// Token: 0x0403E52D RID: 255277
+			// Token: 0x04039853 RID: 235603
 			public IVector PosAttachOffset;
 
-			// Token: 0x0403E52E RID: 255278
+			// Token: 0x04039854 RID: 235604
 			public bool PosAbsolute;
 
-			// Token: 0x0403E52F RID: 255279
+			// Token: 0x04039855 RID: 235605
 			public SceneItemDynamicAttachTargetComponent.EAttachType RotAttachType;
 
-			// Token: 0x0403E530 RID: 255280
+			// Token: 0x04039856 RID: 235606
 			public IRotator RotAttachOffset;
 
-			// Token: 0x0403E531 RID: 255281
+			// Token: 0x04039857 RID: 235607
 			public bool RotAbsolute;
 
-			// Token: 0x0403E532 RID: 255282
+			// Token: 0x04039858 RID: 235608
 			public FName? AttachSocketName;
 		}
 	}

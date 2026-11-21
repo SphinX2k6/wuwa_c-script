@@ -3,37 +3,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006973 RID: 26995
+	// Token: 0x02005ACF RID: 23247
 	public interface IFauxPhysicsRotateParam
 	{
-		// Token: 0x1700980C RID: 38924
-		// (get) Token: 0x06043321 RID: 275233
-		// (set) Token: 0x06043322 RID: 275234
+		// Token: 0x17006CEC RID: 27884
+		// (get) Token: 0x06039359 RID: 234329
+		// (set) Token: 0x0603935A RID: 234330
 		EFauxPhysicsRotateParam Type { get; set; }
 
-		// Token: 0x1700980D RID: 38925
-		// (get) Token: 0x06043323 RID: 275235
-		// (set) Token: 0x06043324 RID: 275236
+		// Token: 0x17006CED RID: 27885
+		// (get) Token: 0x0603935B RID: 234331
+		// (set) Token: 0x0603935C RID: 234332
 		FVector? Origin { get; set; }
 
-		// Token: 0x1700980E RID: 38926
-		// (get) Token: 0x06043325 RID: 275237
-		// (set) Token: 0x06043326 RID: 275238
+		// Token: 0x17006CEE RID: 27886
+		// (get) Token: 0x0603935D RID: 234333
+		// (set) Token: 0x0603935E RID: 234334
 		FVector? RelativeOffset { get; set; }
 
-		// Token: 0x1700980F RID: 38927
-		// (get) Token: 0x06043327 RID: 275239
-		// (set) Token: 0x06043328 RID: 275240
+		// Token: 0x17006CEF RID: 27887
+		// (get) Token: 0x0603935F RID: 234335
+		// (set) Token: 0x06039360 RID: 234336
 		FVector? Force { get; set; }
 
-		// Token: 0x17009810 RID: 38928
-		// (get) Token: 0x06043329 RID: 275241
-		// (set) Token: 0x0604332A RID: 275242
+		// Token: 0x17006CF0 RID: 27888
+		// (get) Token: 0x06039361 RID: 234337
+		// (set) Token: 0x06039362 RID: 234338
 		FVector? Impulse { get; set; }
 
-		// Token: 0x17009811 RID: 38929
-		// (get) Token: 0x0604332B RID: 275243
-		// (set) Token: 0x0604332C RID: 275244
+		// Token: 0x17006CF1 RID: 27889
+		// (get) Token: 0x06039363 RID: 234339
+		// (set) Token: 0x06039364 RID: 234340
 		FVector? Movement { get; set; }
 	}
 }

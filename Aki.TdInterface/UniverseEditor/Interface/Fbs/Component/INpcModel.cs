@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005626 RID: 22054
+	// Token: 0x02005BC4 RID: 23492
 	public struct INpcModel : IFlatbufferObject
 	{
-		// Token: 0x1700A32C RID: 41772
-		// (get) Token: 0x060249AF RID: 149935 RVA: 0x0050CCDB File Offset: 0x0050AEDB
+		// Token: 0x1700ABB4 RID: 43956
+		// (get) Token: 0x06026BBF RID: 158655 RVA: 0x0054D2F3 File Offset: 0x0054B4F3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249B0 RID: 149936 RVA: 0x0050CCE8 File Offset: 0x0050AEE8
+		// Token: 0x06026BC0 RID: 158656 RVA: 0x0054D300 File Offset: 0x0054B500
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060249B1 RID: 149937 RVA: 0x0050CCF0 File Offset: 0x0050AEF0
+		// Token: 0x06026BC1 RID: 158657 RVA: 0x0054D308 File Offset: 0x0054B508
 		public static INpcModel GetRootAsINpcModel(ByteBuffer _bb)
 		{
 			return INpcModel.GetRootAsINpcModel(_bb, default(INpcModel));
 		}
 
-		// Token: 0x060249B2 RID: 149938 RVA: 0x0050CD0C File Offset: 0x0050AF0C
+		// Token: 0x06026BC2 RID: 158658 RVA: 0x0054D324 File Offset: 0x0054B524
 		public static INpcModel GetRootAsINpcModel(ByteBuffer _bb, INpcModel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060249B3 RID: 149939 RVA: 0x0050CD29 File Offset: 0x0050AF29
+		// Token: 0x06026BC3 RID: 158659 RVA: 0x0054D341 File Offset: 0x0054B541
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060249B4 RID: 149940 RVA: 0x0050CD38 File Offset: 0x0050AF38
+		// Token: 0x06026BC4 RID: 158660 RVA: 0x0054D350 File Offset: 0x0054B550
 		public INpcModel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A32D RID: 41773
-		// (get) Token: 0x060249B5 RID: 149941 RVA: 0x0050CD48 File Offset: 0x0050AF48
+		// Token: 0x1700ABB5 RID: 43957
+		// (get) Token: 0x06026BC5 RID: 158661 RVA: 0x0054D360 File Offset: 0x0054B560
 		public EModelType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A32E RID: 41774
-		// (get) Token: 0x060249B6 RID: 149942 RVA: 0x0050CD84 File Offset: 0x0050AF84
+		// Token: 0x1700ABB6 RID: 43958
+		// (get) Token: 0x06026BC6 RID: 158662 RVA: 0x0054D39C File Offset: 0x0054B59C
 		public string BlueprintPath
 		{
 			get
@@ -78,20 +78,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249B7 RID: 149943 RVA: 0x0050CDBB File Offset: 0x0050AFBB
+		// Token: 0x06026BC7 RID: 158663 RVA: 0x0054D3D3 File Offset: 0x0054B5D3
 		public Span<byte> GetBlueprintPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060249B8 RID: 149944 RVA: 0x0050CDCA File Offset: 0x0050AFCA
+		// Token: 0x06026BC8 RID: 158664 RVA: 0x0054D3E2 File Offset: 0x0054B5E2
 		public byte[] GetBlueprintPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700A32F RID: 41775
-		// (get) Token: 0x060249B9 RID: 149945 RVA: 0x0050CDD8 File Offset: 0x0050AFD8
+		// Token: 0x1700ABB7 RID: 43959
+		// (get) Token: 0x06026BC9 RID: 158665 RVA: 0x0054D3F0 File Offset: 0x0054B5F0
 		public TNpcModelType NpcModelType
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249BA RID: 149946 RVA: 0x0050CE14 File Offset: 0x0050B014
+		// Token: 0x06026BCA RID: 158666 RVA: 0x0054D42C File Offset: 0x0054B62C
 		public TTable? NpcModel<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -116,20 +116,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060249BB RID: 149947 RVA: 0x0050CE5C File Offset: 0x0050B05C
+		// Token: 0x06026BCB RID: 158667 RVA: 0x0054D474 File Offset: 0x0054B674
+		public ICombineDaNpcModel NpcModelAsICombineDaNpcModel()
+		{
+			return this.NpcModel<ICombineDaNpcModel>().Value;
+		}
+
+		// Token: 0x06026BCC RID: 158668 RVA: 0x0054D490 File Offset: 0x0054B690
 		public IDaNpcModel NpcModelAsIDaNpcModel()
 		{
 			return this.NpcModel<IDaNpcModel>().Value;
 		}
 
-		// Token: 0x060249BC RID: 149948 RVA: 0x0050CE78 File Offset: 0x0050B078
+		// Token: 0x06026BCD RID: 158669 RVA: 0x0054D4AC File Offset: 0x0054B6AC
 		public IMeshNpcModel NpcModelAsIMeshNpcModel()
 		{
 			return this.NpcModel<IMeshNpcModel>().Value;
 		}
 
-		// Token: 0x1700A330 RID: 41776
-		// (get) Token: 0x060249BD RID: 149949 RVA: 0x0050CE94 File Offset: 0x0050B094
+		// Token: 0x1700ABB8 RID: 43960
+		// (get) Token: 0x06026BCE RID: 158670 RVA: 0x0054D4C8 File Offset: 0x0054B6C8
 		public string Abp
 		{
 			get
@@ -143,19 +149,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249BE RID: 149950 RVA: 0x0050CECC File Offset: 0x0050B0CC
+		// Token: 0x06026BCF RID: 158671 RVA: 0x0054D500 File Offset: 0x0054B700
 		public Span<byte> GetAbpBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060249BF RID: 149951 RVA: 0x0050CEDC File Offset: 0x0050B0DC
+		// Token: 0x06026BD0 RID: 158672 RVA: 0x0054D510 File Offset: 0x0054B710
 		public byte[] GetAbpArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x060249C0 RID: 149952 RVA: 0x0050CEEC File Offset: 0x0050B0EC
+		// Token: 0x06026BD1 RID: 158673 RVA: 0x0054D520 File Offset: 0x0054B720
 		public string BattleSockets(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -166,8 +172,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A331 RID: 41777
-		// (get) Token: 0x060249C1 RID: 149953 RVA: 0x0050CF28 File Offset: 0x0050B128
+		// Token: 0x1700ABB9 RID: 43961
+		// (get) Token: 0x06026BD2 RID: 158674 RVA: 0x0054D55C File Offset: 0x0054B75C
 		public int BattleSocketsLength
 		{
 			get
@@ -181,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249C2 RID: 149954 RVA: 0x0050CF54 File Offset: 0x0050B154
+		// Token: 0x06026BD3 RID: 158675 RVA: 0x0054D588 File Offset: 0x0054B788
 		public string NormalSockets(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -192,8 +198,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A332 RID: 41778
-		// (get) Token: 0x060249C3 RID: 149955 RVA: 0x0050CF90 File Offset: 0x0050B190
+		// Token: 0x1700ABBA RID: 43962
+		// (get) Token: 0x06026BD4 RID: 158676 RVA: 0x0054D5C4 File Offset: 0x0054B7C4
 		public int NormalSocketsLength
 		{
 			get
@@ -207,8 +213,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A333 RID: 41779
-		// (get) Token: 0x060249C4 RID: 149956 RVA: 0x0050CFBC File Offset: 0x0050B1BC
+		// Token: 0x1700ABBB RID: 43963
+		// (get) Token: 0x06026BD5 RID: 158677 RVA: 0x0054D5F0 File Offset: 0x0054B7F0
 		public float LookingUpAngle
 		{
 			get
@@ -222,8 +228,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A334 RID: 41780
-		// (get) Token: 0x060249C5 RID: 149957 RVA: 0x0050D000 File Offset: 0x0050B200
+		// Token: 0x1700ABBC RID: 43964
+		// (get) Token: 0x06026BD6 RID: 158678 RVA: 0x0054D634 File Offset: 0x0054B834
 		public EBodyType BodyType
 		{
 			get
@@ -237,8 +243,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A335 RID: 41781
-		// (get) Token: 0x060249C6 RID: 149958 RVA: 0x0050D040 File Offset: 0x0050B240
+		// Token: 0x1700ABBD RID: 43965
+		// (get) Token: 0x06026BD7 RID: 158679 RVA: 0x0054D674 File Offset: 0x0054B874
 		public float NameZaxisOffset
 		{
 			get
@@ -252,8 +258,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A336 RID: 41782
-		// (get) Token: 0x060249C7 RID: 149959 RVA: 0x0050D084 File Offset: 0x0050B284
+		// Token: 0x1700ABBE RID: 43966
+		// (get) Token: 0x06026BD8 RID: 158680 RVA: 0x0054D6B8 File Offset: 0x0054B8B8
 		public byte NullMask
 		{
 			get
@@ -267,7 +273,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060249C8 RID: 149960 RVA: 0x0050D0C4 File Offset: 0x0050B2C4
+		// Token: 0x06026BD9 RID: 158681 RVA: 0x0054D6F8 File Offset: 0x0054B8F8
 		public static Offset<INpcModel> CreateINpcModel(FlatBufferBuilder builder, EModelType Type = EModelType.LevelPrefab, StringOffset BlueprintPathOffset = default(StringOffset), TNpcModelType NpcModel_type = TNpcModelType.NONE, int NpcModelOffset = 0, StringOffset AbpOffset = default(StringOffset), VectorOffset BattleSocketsOffset = default(VectorOffset), VectorOffset NormalSocketsOffset = default(VectorOffset), float LookingUpAngle = 0f, EBodyType BodyType = EBodyType.None, float NameZaxisOffset = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(11);
@@ -285,49 +291,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcModel.EndINpcModel(builder);
 		}
 
-		// Token: 0x060249C9 RID: 149961 RVA: 0x0050D134 File Offset: 0x0050B334
+		// Token: 0x06026BDA RID: 158682 RVA: 0x0054D768 File Offset: 0x0054B968
 		public static void StartINpcModel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x060249CA RID: 149962 RVA: 0x0050D13E File Offset: 0x0050B33E
+		// Token: 0x06026BDB RID: 158683 RVA: 0x0054D772 File Offset: 0x0054B972
 		public static void AddType(FlatBufferBuilder builder, EModelType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060249CB RID: 149963 RVA: 0x0050D149 File Offset: 0x0050B349
+		// Token: 0x06026BDC RID: 158684 RVA: 0x0054D77D File Offset: 0x0054B97D
 		public static void AddBlueprintPath(FlatBufferBuilder builder, StringOffset blueprintPathOffset)
 		{
 			builder.AddOffset(1, blueprintPathOffset.Value, 0);
 		}
 
-		// Token: 0x060249CC RID: 149964 RVA: 0x0050D159 File Offset: 0x0050B359
+		// Token: 0x06026BDD RID: 158685 RVA: 0x0054D78D File Offset: 0x0054B98D
 		public static void AddNpcModelType(FlatBufferBuilder builder, TNpcModelType npcModelType)
 		{
 			builder.AddByte(2, (byte)npcModelType, 0);
 		}
 
-		// Token: 0x060249CD RID: 149965 RVA: 0x0050D164 File Offset: 0x0050B364
+		// Token: 0x06026BDE RID: 158686 RVA: 0x0054D798 File Offset: 0x0054B998
 		public static void AddNpcModel(FlatBufferBuilder builder, int npcModelOffset)
 		{
 			builder.AddOffset(3, npcModelOffset, 0);
 		}
 
-		// Token: 0x060249CE RID: 149966 RVA: 0x0050D16F File Offset: 0x0050B36F
+		// Token: 0x06026BDF RID: 158687 RVA: 0x0054D7A3 File Offset: 0x0054B9A3
 		public static void AddAbp(FlatBufferBuilder builder, StringOffset abpOffset)
 		{
 			builder.AddOffset(4, abpOffset.Value, 0);
 		}
 
-		// Token: 0x060249CF RID: 149967 RVA: 0x0050D17F File Offset: 0x0050B37F
+		// Token: 0x06026BE0 RID: 158688 RVA: 0x0054D7B3 File Offset: 0x0054B9B3
 		public static void AddBattleSockets(FlatBufferBuilder builder, VectorOffset battleSocketsOffset)
 		{
 			builder.AddOffset(5, battleSocketsOffset.Value, 0);
 		}
 
-		// Token: 0x060249D0 RID: 149968 RVA: 0x0050D190 File Offset: 0x0050B390
+		// Token: 0x06026BE1 RID: 158689 RVA: 0x0054D7C4 File Offset: 0x0054B9C4
 		public static VectorOffset CreateBattleSocketsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -338,7 +344,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D1 RID: 149969 RVA: 0x0050D1D0 File Offset: 0x0050B3D0
+		// Token: 0x06026BE2 RID: 158690 RVA: 0x0054D804 File Offset: 0x0054BA04
 		public static VectorOffset CreateBattleSocketsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -346,7 +352,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D2 RID: 149970 RVA: 0x0050D1EA File Offset: 0x0050B3EA
+		// Token: 0x06026BE3 RID: 158691 RVA: 0x0054D81E File Offset: 0x0054BA1E
 		public static VectorOffset CreateBattleSocketsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -354,7 +360,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D3 RID: 149971 RVA: 0x0050D208 File Offset: 0x0050B408
+		// Token: 0x06026BE4 RID: 158692 RVA: 0x0054D83C File Offset: 0x0054BA3C
 		public static VectorOffset CreateBattleSocketsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -362,19 +368,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D4 RID: 149972 RVA: 0x0050D221 File Offset: 0x0050B421
+		// Token: 0x06026BE5 RID: 158693 RVA: 0x0054D855 File Offset: 0x0054BA55
 		public static void StartBattleSocketsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060249D5 RID: 149973 RVA: 0x0050D22C File Offset: 0x0050B42C
+		// Token: 0x06026BE6 RID: 158694 RVA: 0x0054D860 File Offset: 0x0054BA60
 		public static void AddNormalSockets(FlatBufferBuilder builder, VectorOffset normalSocketsOffset)
 		{
 			builder.AddOffset(6, normalSocketsOffset.Value, 0);
 		}
 
-		// Token: 0x060249D6 RID: 149974 RVA: 0x0050D23C File Offset: 0x0050B43C
+		// Token: 0x06026BE7 RID: 158695 RVA: 0x0054D870 File Offset: 0x0054BA70
 		public static VectorOffset CreateNormalSocketsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -385,7 +391,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D7 RID: 149975 RVA: 0x0050D27C File Offset: 0x0050B47C
+		// Token: 0x06026BE8 RID: 158696 RVA: 0x0054D8B0 File Offset: 0x0054BAB0
 		public static VectorOffset CreateNormalSocketsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -393,7 +399,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D8 RID: 149976 RVA: 0x0050D296 File Offset: 0x0050B496
+		// Token: 0x06026BE9 RID: 158697 RVA: 0x0054D8CA File Offset: 0x0054BACA
 		public static VectorOffset CreateNormalSocketsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -401,7 +407,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249D9 RID: 149977 RVA: 0x0050D2B4 File Offset: 0x0050B4B4
+		// Token: 0x06026BEA RID: 158698 RVA: 0x0054D8E8 File Offset: 0x0054BAE8
 		public static VectorOffset CreateNormalSocketsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -409,43 +415,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060249DA RID: 149978 RVA: 0x0050D2CD File Offset: 0x0050B4CD
+		// Token: 0x06026BEB RID: 158699 RVA: 0x0054D901 File Offset: 0x0054BB01
 		public static void StartNormalSocketsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060249DB RID: 149979 RVA: 0x0050D2D8 File Offset: 0x0050B4D8
+		// Token: 0x06026BEC RID: 158700 RVA: 0x0054D90C File Offset: 0x0054BB0C
 		public static void AddLookingUpAngle(FlatBufferBuilder builder, float lookingUpAngle)
 		{
 			builder.AddFloat(7, lookingUpAngle, 0.0);
 		}
 
-		// Token: 0x060249DC RID: 149980 RVA: 0x0050D2EB File Offset: 0x0050B4EB
+		// Token: 0x06026BED RID: 158701 RVA: 0x0054D91F File Offset: 0x0054BB1F
 		public static void AddBodyType(FlatBufferBuilder builder, EBodyType bodyType)
 		{
 			builder.AddByte(8, (byte)bodyType, 0);
 		}
 
-		// Token: 0x060249DD RID: 149981 RVA: 0x0050D2F6 File Offset: 0x0050B4F6
+		// Token: 0x06026BEE RID: 158702 RVA: 0x0054D92A File Offset: 0x0054BB2A
 		public static void AddNameZaxisOffset(FlatBufferBuilder builder, float nameZaxisOffset)
 		{
 			builder.AddFloat(9, nameZaxisOffset, 0.0);
 		}
 
-		// Token: 0x060249DE RID: 149982 RVA: 0x0050D30A File Offset: 0x0050B50A
+		// Token: 0x06026BEF RID: 158703 RVA: 0x0054D93E File Offset: 0x0054BB3E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(10, nullMask, 0);
 		}
 
-		// Token: 0x060249DF RID: 149983 RVA: 0x0050D316 File Offset: 0x0050B516
+		// Token: 0x06026BF0 RID: 158704 RVA: 0x0054D94A File Offset: 0x0054BB4A
 		public static Offset<INpcModel> EndINpcModel(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcModel>(builder.EndTable());
 		}
 
-		// Token: 0x060249E0 RID: 149984 RVA: 0x0050D324 File Offset: 0x0050B524
+		// Token: 0x06026BF1 RID: 158705 RVA: 0x0054D958 File Offset: 0x0054BB58
 		public INpcModelT UnPack()
 		{
 			INpcModelT npcModelT = new INpcModelT();
@@ -453,24 +459,24 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcModelT;
 		}
 
-		// Token: 0x060249E1 RID: 149985 RVA: 0x0050D340 File Offset: 0x0050B540
+		// Token: 0x06026BF2 RID: 158706 RVA: 0x0054D974 File Offset: 0x0054BB74
 		public void UnPackTo(INpcModelT _o)
 		{
 			_o.Type = this.Type;
 			_o.BlueprintPath = this.BlueprintPath;
 			_o.NpcModel = new TNpcModelTypeUnion();
 			_o.NpcModel.Type = this.NpcModelType;
-			TNpcModelType npcModelType = this.NpcModelType;
-			if (npcModelType != TNpcModelType.IDaNpcModel)
+			switch (this.NpcModelType)
 			{
-				if (npcModelType == TNpcModelType.IMeshNpcModel)
-				{
-					_o.NpcModel.Value = ((this.NpcModel<IMeshNpcModel>() != null) ? this.NpcModel<IMeshNpcModel>().Value.UnPack() : null);
-				}
-			}
-			else
-			{
+			case TNpcModelType.ICombineDaNpcModel:
+				_o.NpcModel.Value = ((this.NpcModel<ICombineDaNpcModel>() != null) ? this.NpcModel<ICombineDaNpcModel>().Value.UnPack() : null);
+				break;
+			case TNpcModelType.IDaNpcModel:
 				_o.NpcModel.Value = ((this.NpcModel<IDaNpcModel>() != null) ? this.NpcModel<IDaNpcModel>().Value.UnPack() : null);
+				break;
+			case TNpcModelType.IMeshNpcModel:
+				_o.NpcModel.Value = ((this.NpcModel<IMeshNpcModel>() != null) ? this.NpcModel<IMeshNpcModel>().Value.UnPack() : null);
+				break;
 			}
 			_o.Abp = this.Abp;
 			_o.BattleSockets = new List<string>();
@@ -489,7 +495,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060249E2 RID: 149986 RVA: 0x0050D4A0 File Offset: 0x0050B6A0
+		// Token: 0x06026BF3 RID: 158707 RVA: 0x0054DB1C File Offset: 0x0054BD1C
 		public static Offset<INpcModel> Pack(FlatBufferBuilder builder, INpcModelT _o)
 		{
 			if (_o == null)
@@ -523,7 +529,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcModel.CreateINpcModel(builder, _o.Type, blueprintPathOffset, npcModel_type, npcModelOffset, abpOffset, battleSocketsOffset, normalSocketsOffset, _o.LookingUpAngle, _o.BodyType, _o.NameZaxisOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E9AA RID: 59818
+		// Token: 0x0400F60D RID: 62989
 		private Table __p;
 	}
 }

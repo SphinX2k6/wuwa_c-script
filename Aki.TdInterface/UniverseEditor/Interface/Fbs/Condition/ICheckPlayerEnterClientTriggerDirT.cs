@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AE5 RID: 19173
+	// Token: 0x02004FBA RID: 20410
 	public class ICheckPlayerEnterClientTriggerDirT
 	{
-		// Token: 0x17008B05 RID: 35589
-		// (get) Token: 0x0601E1FE RID: 123390 RVA: 0x00439C0F File Offset: 0x00437E0F
-		// (set) Token: 0x0601E1FF RID: 123391 RVA: 0x00439C17 File Offset: 0x00437E17
+		// Token: 0x170091FC RID: 37372
+		// (get) Token: 0x0601FD13 RID: 130323 RVA: 0x0046B8BB File Offset: 0x00469ABB
+		// (set) Token: 0x0601FD14 RID: 130324 RVA: 0x0046B8C3 File Offset: 0x00469AC3
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008B06 RID: 35590
-		// (get) Token: 0x0601E200 RID: 123392 RVA: 0x00439C20 File Offset: 0x00437E20
-		// (set) Token: 0x0601E201 RID: 123393 RVA: 0x00439C28 File Offset: 0x00437E28
+		// Token: 0x170091FD RID: 37373
+		// (get) Token: 0x0601FD15 RID: 130325 RVA: 0x0046B8CC File Offset: 0x00469ACC
+		// (set) Token: 0x0601FD16 RID: 130326 RVA: 0x0046B8D4 File Offset: 0x00469AD4
 		public ECheckEnterClientTriggerTargetType TargetType { get; set; }
 
-		// Token: 0x17008B07 RID: 35591
-		// (get) Token: 0x0601E202 RID: 123394 RVA: 0x00439C31 File Offset: 0x00437E31
-		// (set) Token: 0x0601E203 RID: 123395 RVA: 0x00439C39 File Offset: 0x00437E39
+		// Token: 0x170091FE RID: 37374
+		// (get) Token: 0x0601FD17 RID: 130327 RVA: 0x0046B8DD File Offset: 0x00469ADD
+		// (set) Token: 0x0601FD18 RID: 130328 RVA: 0x0046B8E5 File Offset: 0x00469AE5
 		public List<TCheckEnterTriggerDirTypeUnion> DirConfigs { get; set; }
 
-		// Token: 0x17008B08 RID: 35592
-		// (get) Token: 0x0601E204 RID: 123396 RVA: 0x00439C42 File Offset: 0x00437E42
-		// (set) Token: 0x0601E205 RID: 123397 RVA: 0x00439C4A File Offset: 0x00437E4A
+		// Token: 0x170091FF RID: 37375
+		// (get) Token: 0x0601FD19 RID: 130329 RVA: 0x0046B8EE File Offset: 0x00469AEE
+		// (set) Token: 0x0601FD1A RID: 130330 RVA: 0x0046B8F6 File Offset: 0x00469AF6
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601E206 RID: 123398 RVA: 0x00439C53 File Offset: 0x00437E53
+		// Token: 0x0601FD1B RID: 130331 RVA: 0x0046B8FF File Offset: 0x00469AFF
 		public ICheckPlayerEnterClientTriggerDirT()
 		{
 			this.Type = ECondition.CompareVar;

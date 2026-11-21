@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE4 RID: 7652
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FFD RID: 8189
 	public class ISceneItemNewSplineMoveTarget : INewSplineMoveTarget
 	{
-		// Token: 0x0600A3CB RID: 41931 RVA: 0x00173C5C File Offset: 0x00171E5C
+		// Token: 0x0600ADE1 RID: 44513 RVA: 0x001884B4 File Offset: 0x001866B4
 		private ISceneItemNewSplineMoveTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3CC RID: 41932 RVA: 0x00173C94 File Offset: 0x00171E94
+		// Token: 0x0600ADE2 RID: 44514 RVA: 0x001884EC File Offset: 0x001866EC
 		public static ISceneItemNewSplineMoveTarget Create([Nullable(2)] ISceneItemNewSplineMoveTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3CD RID: 41933 RVA: 0x00173CA7 File Offset: 0x00171EA7
+		// Token: 0x0600ADE3 RID: 44515 RVA: 0x001884FF File Offset: 0x001866FF
 		public static ISceneItemNewSplineMoveTarget CreateFromSetValue([Nullable(2)] ISceneItemNewSplineMoveTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3CE RID: 41934 RVA: 0x00173CBA File Offset: 0x00171EBA
+		// Token: 0x0600ADE4 RID: 44516 RVA: 0x00188512 File Offset: 0x00186712
 		public new ISceneItemNewSplineMoveTarget_SetValue ToSetValue()
 		{
 			return new ISceneItemNewSplineMoveTarget_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003266 RID: 12902
-		// (get) Token: 0x0600A3CF RID: 41935 RVA: 0x00173CE5 File Offset: 0x00171EE5
-		// (set) Token: 0x0600A3D0 RID: 41936 RVA: 0x00173D10 File Offset: 0x00171F10
+		// Token: 0x17003503 RID: 13571
+		// (get) Token: 0x0600ADE5 RID: 44517 RVA: 0x0018853D File Offset: 0x0018673D
+		// (set) Token: 0x0600ADE6 RID: 44518 RVA: 0x00188568 File Offset: 0x00186768
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003267 RID: 12903
-		// (get) Token: 0x0600A3D1 RID: 41937 RVA: 0x00173D1E File Offset: 0x00171F1E
-		// (set) Token: 0x0600A3D2 RID: 41938 RVA: 0x00173D49 File Offset: 0x00171F49
+		// Token: 0x17003504 RID: 13572
+		// (get) Token: 0x0600ADE7 RID: 44519 RVA: 0x00188576 File Offset: 0x00186776
+		// (set) Token: 0x0600ADE8 RID: 44520 RVA: 0x001885A1 File Offset: 0x001867A1
 		public virtual int EntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003268 RID: 12904
-		// (get) Token: 0x0600A3D3 RID: 41939 RVA: 0x00173D58 File Offset: 0x00171F58
-		// (set) Token: 0x0600A3D4 RID: 41940 RVA: 0x00173D92 File Offset: 0x00171F92
+		// Token: 0x17003505 RID: 13573
+		// (get) Token: 0x0600ADE9 RID: 44521 RVA: 0x001885B0 File Offset: 0x001867B0
+		// (set) Token: 0x0600ADEA RID: 44522 RVA: 0x001885EA File Offset: 0x001867EA
 		public virtual bool? IsLookDir
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400622B RID: 25131
+		// Token: 0x040067B8 RID: 26552
 		[Nullable(2)]
 		protected new ISceneItemNewSplineMoveTarget FbInstance;
 
-		// Token: 0x0400622C RID: 25132
+		// Token: 0x040067B9 RID: 26553
 		[Nullable(2)]
 		protected new ISceneItemNewSplineMoveTarget_SetValue PocoInterface;
 	}

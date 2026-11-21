@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005626 RID: 22054
+	// Token: 0x020045FC RID: 17916
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupComponentConditionBar : UiPanelBase
 	{
-		// Token: 0x060381BD RID: 229821 RVA: 0x00D4AC9C File Offset: 0x00D48E9C
+		// Token: 0x0602D0BB RID: 184507 RVA: 0x00C989E4 File Offset: 0x00C96BE4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,37 +26,37 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381BE RID: 229822 RVA: 0x00D4AD19 File Offset: 0x00D48F19
+		// Token: 0x0602D0BC RID: 184508 RVA: 0x00C98A61 File Offset: 0x00C96C61
 		public void SetTextByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x060381BF RID: 229823 RVA: 0x00D4AD2E File Offset: 0x00D48F2E
+		// Token: 0x0602D0BD RID: 184509 RVA: 0x00C98A76 File Offset: 0x00C96C76
 		public void SetTextByText(string text)
 		{
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x060381C0 RID: 229824 RVA: 0x00D4AD3E File Offset: 0x00D48F3E
+		// Token: 0x0602D0BE RID: 184510 RVA: 0x00C98A86 File Offset: 0x00C96C86
 		public UUISprite GetIconSprite()
 		{
 			return base.GetSprite(0);
 		}
 
-		// Token: 0x060381C1 RID: 229825 RVA: 0x00D4AD47 File Offset: 0x00D48F47
+		// Token: 0x0602D0BF RID: 184511 RVA: 0x00C98A8F File Offset: 0x00C96C8F
 		public void SetSpriteVisible(bool bVisible)
 		{
 			base.GetSprite(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x060381C2 RID: 229826 RVA: 0x00D4AD58 File Offset: 0x00D48F58
+		// Token: 0x0602D0C0 RID: 184512 RVA: 0x00C98AA0 File Offset: 0x00C96CA0
 		public void SetButtonVisible(bool bVisible)
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(bVisible);
 		}
 
-		// Token: 0x060381C3 RID: 229827 RVA: 0x00D4AD7F File Offset: 0x00D48F7F
+		// Token: 0x0602D0C1 RID: 184513 RVA: 0x00C98AC7 File Offset: 0x00C96CC7
 		private void ButtonCallBackInternal()
 		{
 			Action buttonCallBack = this.ButtonCallBack;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			buttonCallBack();
 		}
 
-		// Token: 0x0401D847 RID: 120903
+		// Token: 0x040182D2 RID: 99026
 		[Nullable(2)]
 		public Action ButtonCallBack;
 	}

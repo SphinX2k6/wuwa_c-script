@@ -6,18 +6,18 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.Input
 {
-	// Token: 0x02006EB3 RID: 28339
+	// Token: 0x02006033 RID: 24627
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ElementalFieldInputLayer : InputLayer
 	{
-		// Token: 0x06045080 RID: 282752 RVA: 0x0110EB64 File Offset: 0x0110CD64
+		// Token: 0x0603B221 RID: 242209 RVA: 0x010B8C40 File Offset: 0x010B6E40
 		public override EInputLayer GetLayerType()
 		{
 			return EInputLayer.ElementalField;
 		}
 
-		// Token: 0x06045081 RID: 282753 RVA: 0x0110EB68 File Offset: 0x0110CD68
+		// Token: 0x0603B222 RID: 242210 RVA: 0x010B8C44 File Offset: 0x010B6E44
 		public override SInputCommand HandlePress(EInputAction action, float time)
 		{
 			if (this.BlockActions.Contains(action))
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.Input
 			return InputLayer.GetSwallowCommand();
 		}
 
-		// Token: 0x06045082 RID: 282754 RVA: 0x0110EC04 File Offset: 0x0110CE04
+		// Token: 0x0603B223 RID: 242211 RVA: 0x010B8CE0 File Offset: 0x010B6EE0
 		public override SInputCommand HandleRelease(EInputAction action, float time)
 		{
 			if (this.BlockActions.Contains(action) || action == EInputAction.技能1)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.Input
 			return null;
 		}
 
-		// Token: 0x06045083 RID: 282755 RVA: 0x0110EC28 File Offset: 0x0110CE28
+		// Token: 0x0603B224 RID: 242212 RVA: 0x010B8D04 File Offset: 0x010B6F04
 		public override SInputCommand HandleHold(EInputAction action, float time)
 		{
 			if (this.BlockActions.Contains(action) || action == EInputAction.技能1)
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField.Input
 			return null;
 		}
 
-		// Token: 0x04023EFA RID: 147194
+		// Token: 0x0401F1AD RID: 127405
 		private const int ELEMENTAL_FIELD_SKILL_ID = 210060;
 
-		// Token: 0x04023EFB RID: 147195
+		// Token: 0x0401F1AE RID: 127406
 		private const int ELEMENTAL_BURST_SKILL_ID = 210064;
 
-		// Token: 0x04023EFC RID: 147196
+		// Token: 0x0401F1AF RID: 127407
 		[Nullable(1)]
 		private readonly HashSet<EInputAction> BlockActions = new HashSet<EInputAction>
 		{

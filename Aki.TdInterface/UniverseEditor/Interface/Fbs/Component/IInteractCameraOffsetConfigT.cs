@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200543E RID: 21566
+	// Token: 0x020059C4 RID: 22980
 	public class IInteractCameraOffsetConfigT
 	{
-		// Token: 0x17009E9B RID: 40603
-		// (get) Token: 0x060236E9 RID: 145129 RVA: 0x004E6C1A File Offset: 0x004E4E1A
-		// (set) Token: 0x060236EA RID: 145130 RVA: 0x004E6C22 File Offset: 0x004E4E22
+		// Token: 0x1700A6D5 RID: 42709
+		// (get) Token: 0x060257A1 RID: 153505 RVA: 0x00523C46 File Offset: 0x00521E46
+		// (set) Token: 0x060257A2 RID: 153506 RVA: 0x00523C4E File Offset: 0x00521E4E
 		public int CenterOffsetPercent { get; set; }
 
-		// Token: 0x17009E9C RID: 40604
-		// (get) Token: 0x060236EB RID: 145131 RVA: 0x004E6C2B File Offset: 0x004E4E2B
-		// (set) Token: 0x060236EC RID: 145132 RVA: 0x004E6C33 File Offset: 0x004E4E33
+		// Token: 0x1700A6D6 RID: 42710
+		// (get) Token: 0x060257A3 RID: 153507 RVA: 0x00523C57 File Offset: 0x00521E57
+		// (set) Token: 0x060257A4 RID: 153508 RVA: 0x00523C5F File Offset: 0x00521E5F
 		public float OffsetZ { get; set; }
 
-		// Token: 0x17009E9D RID: 40605
-		// (get) Token: 0x060236ED RID: 145133 RVA: 0x004E6C3C File Offset: 0x004E4E3C
-		// (set) Token: 0x060236EE RID: 145134 RVA: 0x004E6C44 File Offset: 0x004E4E44
+		// Token: 0x1700A6D7 RID: 42711
+		// (get) Token: 0x060257A5 RID: 153509 RVA: 0x00523C68 File Offset: 0x00521E68
+		// (set) Token: 0x060257A6 RID: 153510 RVA: 0x00523C70 File Offset: 0x00521E70
 		public byte NullMask { get; set; }
 
-		// Token: 0x060236EF RID: 145135 RVA: 0x004E6C4D File Offset: 0x004E4E4D
+		// Token: 0x060257A7 RID: 153511 RVA: 0x00523C79 File Offset: 0x00521E79
 		public IInteractCameraOffsetConfigT()
 		{
 			this.CenterOffsetPercent = 0;

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003249 RID: 12873
+// Token: 0x020027B8 RID: 10168
 [NullableContext(2)]
 public interface ISafetyLocationGetter
 {
-	// Token: 0x0601BC70 RID: 113776
+	// Token: 0x06019825 RID: 104485
 	Vector GetSafetyLocation();
 }

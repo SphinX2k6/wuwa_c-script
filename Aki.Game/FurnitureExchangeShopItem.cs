@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FCD RID: 4045
+// Token: 0x02000482 RID: 1154
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureExchangeShopItem : UiPanelBase
 {
-	// Token: 0x060067F0 RID: 26608 RVA: 0x0014A81C File Offset: 0x00148A1C
+	// Token: 0x06003B88 RID: 15240 RVA: 0x001530E0 File Offset: 0x001512E0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,14 +20,14 @@ public class FurnitureExchangeShopItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060067F1 RID: 26609 RVA: 0x0014A876 File Offset: 0x00148A76
+	// Token: 0x06003B89 RID: 15241 RVA: 0x0015313A File Offset: 0x0015133A
 	protected override void OnStart()
 	{
 		this.PayShopItem = new GameplayShopItem();
 		this.PayShopItem.CreateThenShowByActor(base.GetItem(0).GetOwner(), null);
 	}
 
-	// Token: 0x060067F2 RID: 26610 RVA: 0x0014A89B File Offset: 0x00148A9B
+	// Token: 0x06003B8A RID: 15242 RVA: 0x0015315F File Offset: 0x0015135F
 	public void RefreshByData(FurnitureShopExchangeItemProxy data)
 	{
 		this.ShopItemProxy = data;
@@ -35,16 +35,16 @@ public class FurnitureExchangeShopItem : UiPanelBase
 		this.RefreshAtmosphereText();
 	}
 
-	// Token: 0x060067F3 RID: 26611 RVA: 0x0014A8C0 File Offset: 0x00148AC0
+	// Token: 0x06003B8B RID: 15243 RVA: 0x00153184 File Offset: 0x00151384
 	public void RefreshAtmosphereText()
 	{
 		base.GetText(2).SetText(this.ShopItemProxy.AtmosphereText, true);
 	}
 
-	// Token: 0x04002F64 RID: 12132
+	// Token: 0x04002FFD RID: 12285
 	private FurnitureShopExchangeItemProxy ShopItemProxy = new FurnitureShopExchangeItemProxy();
 
-	// Token: 0x04002F65 RID: 12133
+	// Token: 0x04002FFE RID: 12286
 	[Nullable(2)]
 	private GameplayShopItem PayShopItem;
 }

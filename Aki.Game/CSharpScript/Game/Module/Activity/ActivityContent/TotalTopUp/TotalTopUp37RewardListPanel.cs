@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB4 RID: 24500
+	// Token: 0x02004F9B RID: 20379
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUp37RewardListPanel : UiPanelBase
 	{
-		// Token: 0x0603E1B5 RID: 254389 RVA: 0x00EFF6FC File Offset: 0x00EFD8FC
+		// Token: 0x0603314F RID: 209231 RVA: 0x00E513B8 File Offset: 0x00E4F5B8
 		protected override void OnRegisterComponent()
 		{
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>();
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E1B6 RID: 254390 RVA: 0x00EFF73C File Offset: 0x00EFD93C
+		// Token: 0x06033150 RID: 209232 RVA: 0x00E513F8 File Offset: 0x00E4F5F8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUp37RewardListPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1B7 RID: 254391 RVA: 0x00EFF780 File Offset: 0x00EFD980
+		// Token: 0x06033151 RID: 209233 RVA: 0x00E5143C File Offset: 0x00E4F63C
 		public void Refresh(TotalTopUpPageViewModel viewModel)
 		{
 			List<TotalTopUpPageRewardViewModel> rewardViewModels = viewModel.RewardViewModels;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1B8 RID: 254392 RVA: 0x00EFF7EC File Offset: 0x00EFD9EC
+		// Token: 0x06033152 RID: 209234 RVA: 0x00E514A8 File Offset: 0x00E4F6A8
 		public void MarkPreview(int rewardId)
 		{
 			foreach (TotalTopUp37RewardItem totalTopUp37RewardItem in this.RewardItems)
@@ -64,10 +64,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x04020722 RID: 132898
+		// Token: 0x0401B1F4 RID: 111092
 		private const int ITEM_COUNT = 9;
 
-		// Token: 0x04020723 RID: 132899
+		// Token: 0x0401B1F5 RID: 111093
 		private readonly List<TotalTopUp37RewardItem> RewardItems = new List<TotalTopUp37RewardItem>();
 	}
 }

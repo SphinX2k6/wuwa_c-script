@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001647 RID: 5703
+	// Token: 0x020017B4 RID: 6068
 	public class EnableSplineMoveModel_SetValue
 	{
-		// Token: 0x04004C76 RID: 19574
-		[Nullable(1)]
+		// Token: 0x0400506A RID: 20586
 		public ISplineMoveConfig Config;
 	}
 }

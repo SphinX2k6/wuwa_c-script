@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026E4 RID: 9956
+// Token: 0x02001BCF RID: 7119
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct ERacingBetsAudioState : IEquatable<ERacingBetsAudioState>
 {
-	// Token: 0x060146F2 RID: 83698 RVA: 0x0052B8D4 File Offset: 0x00529AD4
+	// Token: 0x06011BD4 RID: 72660 RVA: 0x0053A5F0 File Offset: 0x005387F0
 	private ERacingBetsAudioState(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x060146F3 RID: 83699 RVA: 0x0052B8DD File Offset: 0x00529ADD
+	// Token: 0x06011BD5 RID: 72661 RVA: 0x0053A5F9 File Offset: 0x005387F9
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x060146F4 RID: 83700 RVA: 0x0052B8E5 File Offset: 0x00529AE5
+	// Token: 0x06011BD6 RID: 72662 RVA: 0x0053A601 File Offset: 0x00538801
 	public bool Equals(ERacingBetsAudioState other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x060146F5 RID: 83701 RVA: 0x0052B8F8 File Offset: 0x00529AF8
+	// Token: 0x06011BD7 RID: 72663 RVA: 0x0053A614 File Offset: 0x00538814
 	[NullableContext(2)]
 	public override bool Equals(object obj)
 	{
@@ -36,7 +36,7 @@ public readonly struct ERacingBetsAudioState : IEquatable<ERacingBetsAudioState>
 		return false;
 	}
 
-	// Token: 0x060146F6 RID: 83702 RVA: 0x0052B91D File Offset: 0x00529B1D
+	// Token: 0x06011BD8 RID: 72664 RVA: 0x0053A639 File Offset: 0x00538839
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -47,33 +47,33 @@ public readonly struct ERacingBetsAudioState : IEquatable<ERacingBetsAudioState>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x060146F7 RID: 83703 RVA: 0x0052B930 File Offset: 0x00529B30
+	// Token: 0x06011BD9 RID: 72665 RVA: 0x0053A64C File Offset: 0x0053884C
 	public static bool operator ==(ERacingBetsAudioState left, ERacingBetsAudioState right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x060146F8 RID: 83704 RVA: 0x0052B93A File Offset: 0x00529B3A
+	// Token: 0x06011BDA RID: 72666 RVA: 0x0053A656 File Offset: 0x00538856
 	public static bool operator !=(ERacingBetsAudioState left, ERacingBetsAudioState right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x0400998B RID: 39307
+	// Token: 0x04009AE3 RID: 39651
 	private readonly string _Value;
 
-	// Token: 0x0400998C RID: 39308
+	// Token: 0x04009AE4 RID: 39652
 	public static readonly ERacingBetsAudioState None = new ERacingBetsAudioState("none");
 
-	// Token: 0x0400998D RID: 39309
+	// Token: 0x04009AE5 RID: 39653
 	public static readonly ERacingBetsAudioState RaceGroupStage = new ERacingBetsAudioState("race_groupstage");
 
-	// Token: 0x0400998E RID: 39310
+	// Token: 0x04009AE6 RID: 39654
 	public static readonly ERacingBetsAudioState RaceFinals = new ERacingBetsAudioState("race_finals");
 
-	// Token: 0x0400998F RID: 39311
+	// Token: 0x04009AE7 RID: 39655
 	public static readonly ERacingBetsAudioState RaceMatchPoint = new ERacingBetsAudioState("race_matchpoint");
 
-	// Token: 0x04009990 RID: 39312
+	// Token: 0x04009AE8 RID: 39656
 	public static readonly ERacingBetsAudioState Complete = new ERacingBetsAudioState("complete");
 }

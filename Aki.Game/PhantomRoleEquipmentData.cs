@@ -1,45 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020023FD RID: 9213
+// Token: 0x020018E2 RID: 6370
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomRoleEquipmentData
 {
-	// Token: 0x060126E0 RID: 75488 RVA: 0x0048C34C File Offset: 0x0048A54C
+	// Token: 0x0600FB92 RID: 64402 RVA: 0x00499834 File Offset: 0x00497A34
 	public PhantomRoleEquipmentData()
 	{
 		this.PhantomItemIncrId = new int[5];
 	}
 
-	// Token: 0x060126E1 RID: 75489 RVA: 0x0048C360 File Offset: 0x0048A560
+	// Token: 0x0600FB93 RID: 64403 RVA: 0x00499848 File Offset: 0x00497A48
 	public void Phrase(object data)
 	{
 		RolePhantomEquipInfo rolePhantomEquipInfo = data as RolePhantomEquipInfo;
-		if (rolePhantomEquipInfo != null)
+		if (rolePhantomEquipInfo == null)
 		{
-			this.RoleId = rolePhantomEquipInfo.RoleId;
-			this.PhantomItemIncrId = ((rolePhantomEquipInfo.PhantomItemIncrId != null) ? rolePhantomEquipInfo.PhantomItemIncrId.ToArray<int>() : new int[5]);
+			RolePhantomPropInfo rolePhantomPropInfo = data as RolePhantomPropInfo;
+			if (rolePhantomPropInfo != null)
+			{
+				this.Prop = rolePhantomPropInfo;
+			}
 			return;
 		}
-		RolePhantomPropInfo rolePhantomPropInfo = data as RolePhantomPropInfo;
-		if (rolePhantomPropInfo != null)
+		this.RoleId = rolePhantomEquipInfo.RoleId;
+		if (rolePhantomEquipInfo.PhantomItemIncrId != null)
 		{
-			this.Prop = rolePhantomPropInfo;
+			int[] array = new int[rolePhantomEquipInfo.PhantomItemIncrId.Count];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = rolePhantomEquipInfo.PhantomItemIncrId[i];
+			}
+			this.PhantomItemIncrId = array;
+			return;
 		}
+		this.PhantomItemIncrId = new int[5];
 	}
 
-	// Token: 0x060126E2 RID: 75490 RVA: 0x0048C3B6 File Offset: 0x0048A5B6
+	// Token: 0x0600FB94 RID: 64404 RVA: 0x004998C7 File Offset: 0x00497AC7
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x060126E3 RID: 75491 RVA: 0x0048C3C0 File Offset: 0x0048A5C0
+	// Token: 0x0600FB95 RID: 64405 RVA: 0x004998D0 File Offset: 0x00497AD0
 	public void RemoveIncrIdLocal(int uniqueId)
 	{
 		if (uniqueId > 0)
@@ -52,32 +61,32 @@ public class PhantomRoleEquipmentData
 		}
 	}
 
-	// Token: 0x060126E4 RID: 75492 RVA: 0x0048C3EB File Offset: 0x0048A5EB
+	// Token: 0x0600FB96 RID: 64406 RVA: 0x004998FB File Offset: 0x00497AFB
 	public List<int> GetIncrIdList()
 	{
-		return this.PhantomItemIncrId.ToList<int>();
+		return new List<int>(this.PhantomItemIncrId);
 	}
 
-	// Token: 0x060126E5 RID: 75493 RVA: 0x0048C3F8 File Offset: 0x0048A5F8
+	// Token: 0x0600FB97 RID: 64407 RVA: 0x00499908 File Offset: 0x00497B08
 	[NullableContext(2)]
 	public RolePhantomPropInfo GetPropData()
 	{
 		return this.Prop;
 	}
 
-	// Token: 0x060126E6 RID: 75494 RVA: 0x0048C400 File Offset: 0x0048A600
+	// Token: 0x0600FB98 RID: 64408 RVA: 0x00499910 File Offset: 0x00497B10
 	public bool CheckPhantomIsMain(int uniqueId)
 	{
 		return this.PhantomItemIncrId.Length != 0 && this.PhantomItemIncrId[0] == uniqueId;
 	}
 
-	// Token: 0x060126E7 RID: 75495 RVA: 0x0048C418 File Offset: 0x0048A618
+	// Token: 0x0600FB99 RID: 64409 RVA: 0x00499928 File Offset: 0x00497B28
 	public bool CheckPhantomIsSub(int uniqueId)
 	{
 		return this.PhantomItemIncrId.Length != 0 && this.PhantomItemIncrId[0] != uniqueId && Array.IndexOf<int>(this.PhantomItemIncrId, uniqueId) >= 0;
 	}
 
-	// Token: 0x060126E8 RID: 75496 RVA: 0x0048C444 File Offset: 0x0048A644
+	// Token: 0x0600FB9A RID: 64410 RVA: 0x00499954 File Offset: 0x00497B54
 	public bool CheckMonsterIsEquip(int monsterId)
 	{
 		int num = this.PhantomItemIncrId.Length;
@@ -92,7 +101,7 @@ public class PhantomRoleEquipmentData
 		return false;
 	}
 
-	// Token: 0x060126E9 RID: 75497 RVA: 0x0048C48C File Offset: 0x0048A68C
+	// Token: 0x0600FB9B RID: 64411 RVA: 0x0049999C File Offset: 0x00497B9C
 	public int GetPhantomIndex(int uniqueId)
 	{
 		int num = this.PhantomItemIncrId.Length;
@@ -106,7 +115,7 @@ public class PhantomRoleEquipmentData
 		return -1;
 	}
 
-	// Token: 0x060126EA RID: 75498 RVA: 0x0048C4BC File Offset: 0x0048A6BC
+	// Token: 0x0600FB9C RID: 64412 RVA: 0x004999CC File Offset: 0x00497BCC
 	public int GetIndexPhantomId(int index)
 	{
 		if (this.PhantomItemIncrId.Length <= index)
@@ -116,7 +125,7 @@ public class PhantomRoleEquipmentData
 		return this.PhantomItemIncrId[index];
 	}
 
-	// Token: 0x060126EB RID: 75499 RVA: 0x0048C4D4 File Offset: 0x0048A6D4
+	// Token: 0x0600FB9D RID: 64413 RVA: 0x004999E4 File Offset: 0x00497BE4
 	public int GetSumEquipLevel()
 	{
 		int num = 0;
@@ -131,7 +140,7 @@ public class PhantomRoleEquipmentData
 		return num;
 	}
 
-	// Token: 0x060126EC RID: 75500 RVA: 0x0048C518 File Offset: 0x0048A718
+	// Token: 0x0600FB9E RID: 64414 RVA: 0x00499A28 File Offset: 0x00497C28
 	public int GetAverageEquipLevel()
 	{
 		int num = this.PhantomItemIncrId.Length;
@@ -142,7 +151,7 @@ public class PhantomRoleEquipmentData
 		return this.GetSumEquipLevel() / num;
 	}
 
-	// Token: 0x060126ED RID: 75501 RVA: 0x0048C53C File Offset: 0x0048A73C
+	// Token: 0x0600FB9F RID: 64415 RVA: 0x00499A4C File Offset: 0x00497C4C
 	public EEquipType GetPhantomOperationState(int index, int uniqueId)
 	{
 		int num = this.PhantomItemIncrId[index];
@@ -157,7 +166,7 @@ public class PhantomRoleEquipmentData
 		return EEquipType.Replace;
 	}
 
-	// Token: 0x060126EE RID: 75502 RVA: 0x0048C560 File Offset: 0x0048A760
+	// Token: 0x0600FBA0 RID: 64416 RVA: 0x00499A70 File Offset: 0x00497C70
 	public int GetCombinationActiveNum(List<int> monsterIdList)
 	{
 		int num = 0;
@@ -177,7 +186,7 @@ public class PhantomRoleEquipmentData
 		return monsterIdList.Count - num;
 	}
 
-	// Token: 0x060126EF RID: 75503 RVA: 0x0048C628 File Offset: 0x0048A828
+	// Token: 0x0600FBA1 RID: 64417 RVA: 0x00499B38 File Offset: 0x00497D38
 	public List<AttrListScrollData> GetPropDetailAttributeList()
 	{
 		IEnumerable<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("VisionMainViewExtraAttribute");
@@ -204,7 +213,7 @@ public class PhantomRoleEquipmentData
 		return list;
 	}
 
-	// Token: 0x060126F0 RID: 75504 RVA: 0x0048C70C File Offset: 0x0048A90C
+	// Token: 0x0600FBA2 RID: 64418 RVA: 0x00499C1C File Offset: 0x00497E1C
 	public List<AttrListScrollData> GetPropShowAttributeList()
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -245,7 +254,7 @@ public class PhantomRoleEquipmentData
 		return list;
 	}
 
-	// Token: 0x060126F1 RID: 75505 RVA: 0x0048C8A4 File Offset: 0x0048AAA4
+	// Token: 0x0600FBA3 RID: 64419 RVA: 0x00499DB4 File Offset: 0x00497FB4
 	public bool CheckHasEmpty()
 	{
 		if (this.PhantomItemIncrId == null)
@@ -255,7 +264,7 @@ public class PhantomRoleEquipmentData
 		return Array.FindIndex<int>(this.PhantomItemIncrId, (int x) => x == 0) >= 0;
 	}
 
-	// Token: 0x060126F2 RID: 75506 RVA: 0x0048C8E0 File Offset: 0x0048AAE0
+	// Token: 0x0600FBA4 RID: 64420 RVA: 0x00499DF0 File Offset: 0x00497FF0
 	public int GetEquippedNum()
 	{
 		if (this.PhantomItemIncrId == null)
@@ -274,13 +283,13 @@ public class PhantomRoleEquipmentData
 		return num;
 	}
 
-	// Token: 0x04008B5B RID: 35675
+	// Token: 0x04008CA2 RID: 36002
 	private int RoleId;
 
-	// Token: 0x04008B5C RID: 35676
+	// Token: 0x04008CA3 RID: 36003
 	private int[] PhantomItemIncrId;
 
-	// Token: 0x04008B5D RID: 35677
+	// Token: 0x04008CA4 RID: 36004
 	[Nullable(2)]
 	private RolePhantomPropInfo Prop;
 }

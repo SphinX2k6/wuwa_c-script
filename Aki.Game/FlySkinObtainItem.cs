@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002A52 RID: 10834
+// Token: 0x02001FCD RID: 8141
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FlySkinObtainItem : GridProxyAbstract<IFlySkinGetWayData>
 {
-	// Token: 0x0601691B RID: 92443 RVA: 0x005B81AC File Offset: 0x005B63AC
+	// Token: 0x0601433C RID: 82748 RVA: 0x005E42F0 File Offset: 0x005E24F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class FlySkinObtainItem : GridProxyAbstract<IFlySkinGetWayData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601691C RID: 92444 RVA: 0x005B82B5 File Offset: 0x005B64B5
+	// Token: 0x0601433D RID: 82749 RVA: 0x005E43F9 File Offset: 0x005E25F9
 	private void OnClick()
 	{
 		if (this.Data.Type == EFlySkinGetWayType.CanJump)
@@ -51,11 +51,16 @@ public class FlySkinObtainItem : GridProxyAbstract<IFlySkinGetWayData>
 		}
 	}
 
-	// Token: 0x0601691D RID: 92445 RVA: 0x005B82E8 File Offset: 0x005B64E8
+	// Token: 0x0601433E RID: 82750 RVA: 0x005E442C File Offset: 0x005E262C
 	public override void Refresh(IFlySkinGetWayData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
 		bool flag = this.Data.Type == EFlySkinGetWayType.CanJump;
+		UUIButtonComponent button = base.GetButton(0);
+		if (button != null)
+		{
+			button.SetSelfInteractive(flag);
+		}
 		UUIItem item = base.GetItem(1);
 		if (item != null)
 		{
@@ -70,22 +75,22 @@ public class FlySkinObtainItem : GridProxyAbstract<IFlySkinGetWayData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.Data.Text, Array.Empty<object>());
 	}
 
-	// Token: 0x0400A781 RID: 42881
+	// Token: 0x0400AB85 RID: 43909
 	private IFlySkinGetWayData Data;
 
-	// Token: 0x02009095 RID: 37013
+	// Token: 0x020082DC RID: 33500
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402ED93 RID: 191891
+		// Token: 0x0402A48D RID: 173197
 		Button,
-		// Token: 0x0402ED94 RID: 191892
+		// Token: 0x0402A48E RID: 173198
 		UnlockItem,
-		// Token: 0x0402ED95 RID: 191893
+		// Token: 0x0402A48F RID: 173199
 		LockItem,
-		// Token: 0x0402ED96 RID: 191894
+		// Token: 0x0402A490 RID: 173200
 		Name,
-		// Token: 0x0402ED97 RID: 191895
+		// Token: 0x0402A491 RID: 173201
 		LockName
 	}
 }

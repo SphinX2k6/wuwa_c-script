@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200642F RID: 25647
+	// Token: 0x020053AD RID: 21421
 	public class MotorFightSuccessView : UiViewBase
 	{
-		// Token: 0x060407C5 RID: 264133 RVA: 0x00F9B41A File Offset: 0x00F9961A
+		// Token: 0x06035486 RID: 218246 RVA: 0x00EE23BA File Offset: 0x00EE05BA
 		[NullableContext(1)]
 		public MotorFightSuccessView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060407C6 RID: 264134 RVA: 0x00F9B424 File Offset: 0x00F99624
+		// Token: 0x06035487 RID: 218247 RVA: 0x00EE23C4 File Offset: 0x00EE05C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060407C7 RID: 264135 RVA: 0x00F9B640 File Offset: 0x00F99840
+		// Token: 0x06035488 RID: 218248 RVA: 0x00EE25E0 File Offset: 0x00EE07E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightSuccessView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -73,26 +73,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407C8 RID: 264136 RVA: 0x00F9B683 File Offset: 0x00F99883
+		// Token: 0x06035489 RID: 218249 RVA: 0x00EE2623 File Offset: 0x00EE0823
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x060407C9 RID: 264137 RVA: 0x00F9B68A File Offset: 0x00F9988A
+		// Token: 0x0603548A RID: 218250 RVA: 0x00EE262A File Offset: 0x00EE082A
 		private void OnReChallengeBtnClick()
 		{
 			MotorFightController.Instance.ReChallengeMotorFightDungeon();
 		}
 
-		// Token: 0x060407CA RID: 264138 RVA: 0x00F9B696 File Offset: 0x00F99896
+		// Token: 0x0603548B RID: 218251 RVA: 0x00EE2636 File Offset: 0x00EE0836
 		private void OnExitBtnClick()
 		{
 			MotorFightController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x04021860 RID: 137312
+		// Token: 0x0401C18F RID: 115087
 		[Nullable(new byte[]
 		{
 			2,
@@ -100,43 +100,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0200C66E RID: 50798
+		// Token: 0x0200B055 RID: 45141
 		private class EComponents
 		{
-			// Token: 0x0403BE85 RID: 245381
+			// Token: 0x040367E2 RID: 223202
 			public const int TextWaveNum = 0;
 
-			// Token: 0x0403BE86 RID: 245382
+			// Token: 0x040367E3 RID: 223203
 			public const int TextWaveScore = 1;
 
-			// Token: 0x0403BE87 RID: 245383
+			// Token: 0x040367E4 RID: 223204
 			public const int TextKillNum = 2;
 
-			// Token: 0x0403BE88 RID: 245384
+			// Token: 0x040367E5 RID: 223205
 			public const int TextKillScore = 3;
 
-			// Token: 0x0403BE89 RID: 245385
+			// Token: 0x040367E6 RID: 223206
 			public const int TextBuffGateNum = 4;
 
-			// Token: 0x0403BE8A RID: 245386
+			// Token: 0x040367E7 RID: 223207
 			public const int TextBuffGateScore = 5;
 
-			// Token: 0x0403BE8B RID: 245387
+			// Token: 0x040367E8 RID: 223208
 			public const int ArtTextTotalScore = 6;
 
-			// Token: 0x0403BE8C RID: 245388
+			// Token: 0x040367E9 RID: 223209
 			public const int ItemNewRecordLabel = 7;
 
-			// Token: 0x0403BE8D RID: 245389
+			// Token: 0x040367EA RID: 223210
 			public const int LayoutReward = 8;
 
-			// Token: 0x0403BE8E RID: 245390
+			// Token: 0x040367EB RID: 223211
 			public const int ItemRewardPanel = 9;
 
-			// Token: 0x0403BE8F RID: 245391
+			// Token: 0x040367EC RID: 223212
 			public const int BtnExit = 10;
 
-			// Token: 0x0403BE90 RID: 245392
+			// Token: 0x040367ED RID: 223213
 			public const int BtnReChallenge = 11;
 		}
 	}

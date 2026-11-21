@@ -5,12 +5,12 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x020000D5 RID: 213
+// Token: 0x020000D7 RID: 215
 [NullableContext(1)]
 [Nullable(0)]
 public class TimerSystemInstance
 {
-	// Token: 0x060006A2 RID: 1698 RVA: 0x0002329C File Offset: 0x0002149C
+	// Token: 0x060006E3 RID: 1763 RVA: 0x0002386C File Offset: 0x00021A6C
 	public unsafe void Tick(double delta)
 	{
 		double num = this.Now + delta;
@@ -59,14 +59,14 @@ public class TimerSystemInstance
 		goto IL_104;
 	}
 
-	// Token: 0x060006A3 RID: 1699 RVA: 0x000233BD File Offset: 0x000215BD
+	// Token: 0x060006E4 RID: 1764 RVA: 0x0002398D File Offset: 0x00021B8D
 	[NullableContext(2)]
 	public bool Has(TimerHandle handle)
 	{
 		return handle != null && this.Timers.ContainsKey(handle.Id);
 	}
 
-	// Token: 0x060006A4 RID: 1700 RVA: 0x000233D5 File Offset: 0x000215D5
+	// Token: 0x060006E5 RID: 1765 RVA: 0x000239A5 File Offset: 0x00021BA5
 	[NullableContext(2)]
 	public TimerHandle Loop([Nullable(1)] TTimerAction action, float interval, int loop, float dilation = 1f, Stat stat = null, string reason = null, bool needCheckMaxInterval = true)
 	{
@@ -77,7 +77,7 @@ public class TimerSystemInstance
 		return this.DoAdd(action, (double)interval, loop, dilation, stat, reason);
 	}
 
-	// Token: 0x060006A5 RID: 1701 RVA: 0x00023407 File Offset: 0x00021607
+	// Token: 0x060006E6 RID: 1766 RVA: 0x000239D7 File Offset: 0x00021BD7
 	[NullableContext(2)]
 	public TimerHandle Forever([Nullable(1)] TTimerAction action, float interval, float dilation = 1f, Stat stat = null, string reason = null, bool needCheckMaxInterval = true)
 	{
@@ -88,7 +88,7 @@ public class TimerSystemInstance
 		return this.DoAdd(action, (double)interval, 0, dilation, stat, reason);
 	}
 
-	// Token: 0x060006A6 RID: 1702 RVA: 0x0002342F File Offset: 0x0002162F
+	// Token: 0x060006E7 RID: 1767 RVA: 0x000239FF File Offset: 0x00021BFF
 	[NullableContext(2)]
 	public TimerHandle Delay([Nullable(1)] TTimerAction action, float interval, Stat stat = null, string reason = null, bool needCheckMaxInterval = true, float dilation = 1f)
 	{
@@ -99,7 +99,7 @@ public class TimerSystemInstance
 		return this.DoAdd(action, (double)interval, 1, dilation, stat, reason);
 	}
 
-	// Token: 0x060006A7 RID: 1703 RVA: 0x00023458 File Offset: 0x00021658
+	// Token: 0x060006E8 RID: 1768 RVA: 0x00023A28 File Offset: 0x00021C28
 	[NullableContext(2)]
 	public TimerHandle EmitOnTime([Nullable(1)] TTimerAction action, double emitTimeStamp, Stat stat = null, string reason = null, bool needCheckMaxInterval = true, float dilation = 1f)
 	{
@@ -111,20 +111,20 @@ public class TimerSystemInstance
 		return this.DoAdd(action, interval, 1, dilation, stat, reason);
 	}
 
-	// Token: 0x060006A8 RID: 1704 RVA: 0x00023493 File Offset: 0x00021693
+	// Token: 0x060006E9 RID: 1769 RVA: 0x00023A63 File Offset: 0x00021C63
 	[NullableContext(2)]
 	public TimerHandle Next([Nullable(1)] TTimerAction action, Stat stat = null, string reason = null)
 	{
 		return this.DoAdd(action, 1.0, 1, 1f, stat, reason);
 	}
 
-	// Token: 0x060006A9 RID: 1705 RVA: 0x000234AD File Offset: 0x000216AD
+	// Token: 0x060006EA RID: 1770 RVA: 0x00023A7D File Offset: 0x00021C7D
 	public void PendingRemove_FinalizerThread(TimerHandle handle, [Nullable(2)] string reason)
 	{
 		this.PendingRemoveQueue.Enqueue(new ValueTuple<TimerHandle, string>(handle, reason));
 	}
 
-	// Token: 0x060006AA RID: 1706 RVA: 0x000234C4 File Offset: 0x000216C4
+	// Token: 0x060006EB RID: 1771 RVA: 0x00023A94 File Offset: 0x00021C94
 	[NullableContext(2)]
 	public bool Remove(TimerHandle handle)
 	{
@@ -136,14 +136,14 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006AB RID: 1707 RVA: 0x000234EC File Offset: 0x000216EC
+	// Token: 0x060006EC RID: 1772 RVA: 0x00023ABC File Offset: 0x00021CBC
 	public bool IsPause(TimerHandle handle)
 	{
 		Timer timer = this.Get(handle);
 		return timer != null && timer.State == EState.Pause;
 	}
 
-	// Token: 0x060006AC RID: 1708 RVA: 0x00023510 File Offset: 0x00021710
+	// Token: 0x060006ED RID: 1773 RVA: 0x00023AE0 File Offset: 0x00021CE0
 	public unsafe bool Pause(TimerHandle handle, [Nullable(2)] string reason = null)
 	{
 		Timer timer = this.Get(handle);
@@ -173,7 +173,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006AD RID: 1709 RVA: 0x000235FC File Offset: 0x000217FC
+	// Token: 0x060006EE RID: 1774 RVA: 0x00023BCC File Offset: 0x00021DCC
 	public unsafe bool Resume(TimerHandle handle)
 	{
 		Timer timer = this.Get(handle);
@@ -199,7 +199,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006AE RID: 1710 RVA: 0x000236B0 File Offset: 0x000218B0
+	// Token: 0x060006EF RID: 1775 RVA: 0x00023C80 File Offset: 0x00021E80
 	public unsafe bool ChangeInterval(TimerHandle handle, float interval, [Nullable(2)] string reason, bool needCheckMaxInterval = true)
 	{
 		if (!TimerSystemInstance.CheckInterval((double)interval, reason, needCheckMaxInterval))
@@ -246,7 +246,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006AF RID: 1711 RVA: 0x00023820 File Offset: 0x00021A20
+	// Token: 0x060006F0 RID: 1776 RVA: 0x00023DF0 File Offset: 0x00021FF0
 	public unsafe bool ChangeDilation(TimerHandle handle, float dilation, [Nullable(2)] string reason = null)
 	{
 		if (!TimerSystemInstance.CheckDilation(dilation))
@@ -291,7 +291,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006B0 RID: 1712 RVA: 0x00023968 File Offset: 0x00021B68
+	// Token: 0x060006F1 RID: 1777 RVA: 0x00023F38 File Offset: 0x00022138
 	public float GetNextRemainTime(TimerHandle handle)
 	{
 		Timer timer = this.Get(handle);
@@ -306,7 +306,7 @@ public class TimerSystemInstance
 		return (float)(timer.Next - this.Now);
 	}
 
-	// Token: 0x060006B1 RID: 1713 RVA: 0x000239A4 File Offset: 0x00021BA4
+	// Token: 0x060006F2 RID: 1778 RVA: 0x00023F74 File Offset: 0x00022174
 	[NullableContext(2)]
 	public UniTask Wait(float delay, Stat stat = null)
 	{
@@ -318,22 +318,21 @@ public class TimerSystemInstance
 		return tcs.Task;
 	}
 
-	// Token: 0x060006B2 RID: 1714 RVA: 0x000239EC File Offset: 0x00021BEC
+	// Token: 0x060006F3 RID: 1779 RVA: 0x00023FBC File Offset: 0x000221BC
 	public void Clear()
 	{
 		foreach (KeyValuePair<int, Timer> keyValuePair in this.Timers)
 		{
 			Timer value = keyValuePair.Value;
-			if (value.Handle != null)
-			{
-				this.Remove(value.Handle);
-			}
+			this.Registry.Unregister(value);
+			value.State = EState.Trash;
+			value.Clear();
 		}
 		this.Timers.Clear();
 		this.Queue.Clear();
 	}
 
-	// Token: 0x060006B3 RID: 1715 RVA: 0x00023A6C File Offset: 0x00021C6C
+	// Token: 0x060006F4 RID: 1780 RVA: 0x00024040 File Offset: 0x00022240
 	[return: Nullable(2)]
 	private Timer Get(TimerHandle handle)
 	{
@@ -345,7 +344,7 @@ public class TimerSystemInstance
 		return this.DoGet(handle.Id);
 	}
 
-	// Token: 0x060006B4 RID: 1716 RVA: 0x00023AA8 File Offset: 0x00021CA8
+	// Token: 0x060006F5 RID: 1781 RVA: 0x0002407C File Offset: 0x0002227C
 	[NullableContext(2)]
 	private Timer DoGet(int id)
 	{
@@ -373,7 +372,7 @@ public class TimerSystemInstance
 		return result;
 	}
 
-	// Token: 0x060006B5 RID: 1717 RVA: 0x00023B24 File Offset: 0x00021D24
+	// Token: 0x060006F6 RID: 1782 RVA: 0x000240F8 File Offset: 0x000222F8
 	[NullableContext(2)]
 	private TimerHandle DoAdd([Nullable(1)] TTimerAction action, double interval, int loop, float dilation, Stat stat, string reason)
 	{
@@ -404,7 +403,7 @@ public class TimerSystemInstance
 		return timerHandle;
 	}
 
-	// Token: 0x060006B6 RID: 1718 RVA: 0x00023C08 File Offset: 0x00021E08
+	// Token: 0x060006F7 RID: 1783 RVA: 0x000241DC File Offset: 0x000223DC
 	private bool DoRemove(Timer timer)
 	{
 		this.Registry.Unregister(timer);
@@ -414,7 +413,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006B7 RID: 1719 RVA: 0x00023C38 File Offset: 0x00021E38
+	// Token: 0x060006F8 RID: 1784 RVA: 0x0002420C File Offset: 0x0002240C
 	[NullableContext(2)]
 	private unsafe static bool CheckInterval(double interval, string reason = null, bool needCheckMaxInterval = true)
 	{
@@ -463,7 +462,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006B8 RID: 1720 RVA: 0x00023E08 File Offset: 0x00022008
+	// Token: 0x060006F9 RID: 1785 RVA: 0x000243DC File Offset: 0x000225DC
 	private unsafe static bool CheckLoop(int loop)
 	{
 		if (loop <= 1 || loop > 10)
@@ -481,7 +480,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006B9 RID: 1721 RVA: 0x00023E80 File Offset: 0x00022080
+	// Token: 0x060006FA RID: 1786 RVA: 0x00024454 File Offset: 0x00022654
 	private static bool CheckDilation(float dilation)
 	{
 		if (dilation <= 0f)
@@ -497,7 +496,7 @@ public class TimerSystemInstance
 		return true;
 	}
 
-	// Token: 0x060006BA RID: 1722 RVA: 0x00023EC4 File Offset: 0x000220C4
+	// Token: 0x060006FB RID: 1787 RVA: 0x00024498 File Offset: 0x00022698
 	public TimerSystemInstance()
 	{
 		Comparison<Timer> compare;
@@ -520,35 +519,35 @@ public class TimerSystemInstance
 		base..ctor();
 	}
 
-	// Token: 0x0400055C RID: 1372
+	// Token: 0x0400056B RID: 1387
 	public const int MIN_TIME = 20;
 
-	// Token: 0x0400055D RID: 1373
+	// Token: 0x0400056C RID: 1388
 	public const int MAX_TIME = 180000;
 
-	// Token: 0x0400055E RID: 1374
+	// Token: 0x0400056D RID: 1389
 	public const int MAX_LOOP = 10;
 
-	// Token: 0x0400055F RID: 1375
+	// Token: 0x0400056E RID: 1390
 	public const int FOREVER = 0;
 
-	// Token: 0x04000560 RID: 1376
+	// Token: 0x0400056F RID: 1391
 	public double Now;
 
-	// Token: 0x04000561 RID: 1377
+	// Token: 0x04000570 RID: 1392
 	public Dictionary<int, Timer> Timers = new Dictionary<int, Timer>();
 
-	// Token: 0x04000562 RID: 1378
+	// Token: 0x04000571 RID: 1393
 	public PriorityQueue<Timer> Queue;
 
-	// Token: 0x04000563 RID: 1379
+	// Token: 0x04000572 RID: 1394
 	[Nullable(2)]
 	public Stat Stat;
 
-	// Token: 0x04000564 RID: 1380
+	// Token: 0x04000573 RID: 1395
 	public Dictionary<MethodInfo, Stat> StatWeakMap;
 
-	// Token: 0x04000565 RID: 1381
+	// Token: 0x04000574 RID: 1396
 	[TupleElementNames(new string[]
 	{
 		"handle",
@@ -563,18 +562,18 @@ public class TimerSystemInstance
 	})]
 	private readonly ConcurrentQueue<ValueTuple<TimerHandle, string>> PendingRemoveQueue;
 
-	// Token: 0x04000566 RID: 1382
+	// Token: 0x04000575 RID: 1397
 	private readonly FinalizationRegistry<Timer, TimerHandle> Registry;
 
-	// Token: 0x04000567 RID: 1383
+	// Token: 0x04000576 RID: 1398
 	[Nullable(2)]
 	private readonly Action<TimerHandle, string> DisposeHandle_FinalizerThread;
 
-	// Token: 0x020001CF RID: 463
+	// Token: 0x020001D4 RID: 468
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0400087F RID: 2175
+		// Token: 0x040008A1 RID: 2209
 		[Nullable(new byte[]
 		{
 			0,

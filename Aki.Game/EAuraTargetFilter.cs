@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002F96 RID: 12182
+// Token: 0x020024EA RID: 9450
 public enum EAuraTargetFilter
 {
-	// Token: 0x0400C35B RID: 50011
+	// Token: 0x0400C704 RID: 50948
 	Instigator,
-	// Token: 0x0400C35C RID: 50012
+	// Token: 0x0400C705 RID: 50949
 	Owner,
-	// Token: 0x0400C35D RID: 50013
+	// Token: 0x0400C706 RID: 50950
 	AllyOfInstigator,
-	// Token: 0x0400C35E RID: 50014
+	// Token: 0x0400C707 RID: 50951
 	EnemyOfInstigator,
-	// Token: 0x0400C35F RID: 50015
+	// Token: 0x0400C708 RID: 50952
 	AllyOfOwner,
-	// Token: 0x0400C360 RID: 50016
+	// Token: 0x0400C709 RID: 50953
 	EnemyOfOwner
 }

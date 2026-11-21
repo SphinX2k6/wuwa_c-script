@@ -6,38 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200265C RID: 9820
+	// Token: 0x020007B8 RID: 1976
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/ProceduralMeshComponent.ProceduralMeshComponent")]
 	[UnrealStructLayout(1728, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1728)]
-	public class UProceduralMeshComponent : UMeshComponent, IUnrealUObject, IUnrealObject, IInterface_CollisionDataProvider, IUnrealNativeInterface, IUnrealInterface
+	public class UProceduralMeshComponent : UMeshComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060247DE RID: 149470 RVA: 0x0036062E File Offset: 0x0035E82E
+		// Token: 0x0600AB7F RID: 43903 RVA: 0x000FCE9E File Offset: 0x000FB09E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UProceduralMeshComponent._ClassPtr;
 		}
 
-		// Token: 0x060247DF RID: 149471 RVA: 0x0036063A File Offset: 0x0035E83A
-		int IInterface_CollisionDataProvider.InterfaceOffset()
-		{
-			return UProceduralMeshComponent.__InterfaceOffset_IInterface_CollisionDataProvider;
-		}
-
-		// Token: 0x060247E0 RID: 149472 RVA: 0x00360644 File Offset: 0x0035E844
+		// Token: 0x0600AB80 RID: 43904 RVA: 0x000FCEAC File Offset: 0x000FB0AC
 		public UProceduralMeshComponent() : this(BuiltinUtils.AllocNativeUObject(UProceduralMeshComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060247E1 RID: 149473 RVA: 0x0036066C File Offset: 0x0035E86C
+		// Token: 0x0600AB81 RID: 43905 RVA: 0x000FCED4 File Offset: 0x000FB0D4
 		public UProceduralMeshComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UProceduralMeshComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008CA5 RID: 36005
-		// (get) Token: 0x060247E2 RID: 149474 RVA: 0x0036069F File Offset: 0x0035E89F
-		// (set) Token: 0x060247E3 RID: 149475 RVA: 0x003606AF File Offset: 0x0035E8AF
+		// Token: 0x17001FF3 RID: 8179
+		// (get) Token: 0x0600AB82 RID: 43906 RVA: 0x000FCF07 File Offset: 0x000FB107
+		// (set) Token: 0x0600AB83 RID: 43907 RVA: 0x000FCF17 File Offset: 0x000FB117
 		public unsafe bool bUseComplexAsSimpleCollision
 		{
 			get
@@ -50,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008CA6 RID: 36006
-		// (get) Token: 0x060247E4 RID: 149476 RVA: 0x003606C0 File Offset: 0x0035E8C0
-		// (set) Token: 0x060247E5 RID: 149477 RVA: 0x003606D0 File Offset: 0x0035E8D0
+		// Token: 0x17001FF4 RID: 8180
+		// (get) Token: 0x0600AB84 RID: 43908 RVA: 0x000FCF28 File Offset: 0x000FB128
+		// (set) Token: 0x0600AB85 RID: 43909 RVA: 0x000FCF38 File Offset: 0x000FB138
 		public unsafe bool bUseAsyncCooking
 		{
 			get
@@ -65,9 +59,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008CA7 RID: 36007
-		// (get) Token: 0x060247E6 RID: 149478 RVA: 0x003606E1 File Offset: 0x0035E8E1
-		// (set) Token: 0x060247E7 RID: 149479 RVA: 0x003606F5 File Offset: 0x0035E8F5
+		// Token: 0x17001FF5 RID: 8181
+		// (get) Token: 0x0600AB86 RID: 43910 RVA: 0x000FCF49 File Offset: 0x000FB149
+		// (set) Token: 0x0600AB87 RID: 43911 RVA: 0x000FCF59 File Offset: 0x000FB159
+		public unsafe bool bUseFullPrecisionUVs
+		{
+			get
+			{
+				return *(base.NativePtr + (IntPtr)UProceduralMeshComponent.__PropertyOffset_bUseFullPrecisionUVs) != 0;
+			}
+			set
+			{
+				*(base.NativePtr + (IntPtr)UProceduralMeshComponent.__PropertyOffset_bUseFullPrecisionUVs) = (value ? 1 : 0);
+			}
+		}
+
+		// Token: 0x17001FF6 RID: 8182
+		// (get) Token: 0x0600AB88 RID: 43912 RVA: 0x000FCF6A File Offset: 0x000FB16A
+		// (set) Token: 0x0600AB89 RID: 43913 RVA: 0x000FCF7E File Offset: 0x000FB17E
 		[Nullable(2)]
 		public unsafe UBodySetup ProcMeshBodySetup
 		{
@@ -83,51 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008CA8 RID: 36008
-		// (get) Token: 0x060247E8 RID: 149480 RVA: 0x0036070C File Offset: 0x0035E90C
-		// (set) Token: 0x060247E9 RID: 149481 RVA: 0x00360745 File Offset: 0x0035E945
-		public TArray<FProcMeshSection> ProcMeshSections
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FProcMeshSection> result;
-				if ((result = this._ProcMeshSections) == null)
-				{
-					result = (this._ProcMeshSections = new TArray<FProcMeshSection>(base.NativePtr + (IntPtr)UProceduralMeshComponent.__PropertyOffset_ProcMeshSections, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ProcMeshSections.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008CA9 RID: 36009
-		// (get) Token: 0x060247EA RID: 149482 RVA: 0x00360754 File Offset: 0x0035E954
-		// (set) Token: 0x060247EB RID: 149483 RVA: 0x0036078D File Offset: 0x0035E98D
-		public TArray<FKConvexElem> CollisionConvexElems
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKConvexElem> result;
-				if ((result = this._CollisionConvexElems) == null)
-				{
-					result = (this._CollisionConvexElems = new TArray<FKConvexElem>(base.NativePtr + (IntPtr)UProceduralMeshComponent.__PropertyOffset_CollisionConvexElems, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.CollisionConvexElems.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17008CAA RID: 36010
-		// (get) Token: 0x060247EC RID: 149484 RVA: 0x0036079B File Offset: 0x0035E99B
-		// (set) Token: 0x060247ED RID: 149485 RVA: 0x003607AF File Offset: 0x0035E9AF
+		// Token: 0x17001FF7 RID: 8183
+		// (get) Token: 0x0600AB8A RID: 43914 RVA: 0x000FCF93 File Offset: 0x000FB193
+		// (set) Token: 0x0600AB8B RID: 43915 RVA: 0x000FCFA7 File Offset: 0x000FB1A7
 		public unsafe FBoxSphereBounds LocalBounds
 		{
 			get
@@ -140,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008CAB RID: 36011
-		// (get) Token: 0x060247EE RID: 149486 RVA: 0x003607C4 File Offset: 0x0035E9C4
-		// (set) Token: 0x060247EF RID: 149487 RVA: 0x003607FD File Offset: 0x0035E9FD
+		// Token: 0x17001FF8 RID: 8184
+		// (get) Token: 0x0600AB8C RID: 43916 RVA: 0x000FCFBC File Offset: 0x000FB1BC
+		// (set) Token: 0x0600AB8D RID: 43917 RVA: 0x000FCFF5 File Offset: 0x000FB1F5
 		public TArray<UBodySetup> AsyncBodySetupQueue
 		{
 			get
@@ -161,213 +128,126 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060247F0 RID: 149488 RVA: 0x0036080C File Offset: 0x0035EA0C
-		[NullableContext(2)]
-		public void UpdateMeshSection_LinearColor(int SectionIndex, in TArray<FVector> Vertices, in TArray<FVector> Normals, in TArray<FVector2D> UV0, in TArray<FVector2D> UV1, in TArray<FVector2D> UV2, in TArray<FVector2D> UV3, in TArray<FLinearColor> VertexColors, [Nullable(new byte[]
+		// Token: 0x0600AB8E RID: 43918 RVA: 0x000FD003 File Offset: 0x000FB203
+		public void SetUseFullPrecisionUVs(bool bNewUseFullPrecisionUVs)
 		{
-			2,
-			1
-		})] in TArray<FProcMeshTangent> Tangents)
-		{
-			UProceduralMeshComponent.__UpdateMeshSection_LinearColor_Internal(base.NativePtr, SectionIndex, (Vertices ?? new TArray<FVector>()).NativePtr, (Normals ?? new TArray<FVector>()).NativePtr, (UV0 ?? new TArray<FVector2D>()).NativePtr, (UV1 ?? new TArray<FVector2D>()).NativePtr, (UV2 ?? new TArray<FVector2D>()).NativePtr, (UV3 ?? new TArray<FVector2D>()).NativePtr, (VertexColors ?? new TArray<FLinearColor>()).NativePtr, (Tangents ?? new TArray<FProcMeshTangent>()).NativePtr);
+			UProceduralMeshComponent.__SetUseFullPrecisionUVs_Internal(base.NativePtr, bNewUseFullPrecisionUVs);
 		}
 
-		// Token: 0x060247F1 RID: 149489 RVA: 0x003608AC File Offset: 0x0035EAAC
-		[NullableContext(2)]
-		public void UpdateMeshSection(int SectionIndex, in TArray<FVector> Vertices, in TArray<FVector> Normals, in TArray<FVector2D> UV0, in TArray<FColor> VertexColors, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FProcMeshTangent> Tangents)
-		{
-			UProceduralMeshComponent.__UpdateMeshSection_Internal(base.NativePtr, SectionIndex, (Vertices ?? new TArray<FVector>()).NativePtr, (Normals ?? new TArray<FVector>()).NativePtr, (UV0 ?? new TArray<FVector2D>()).NativePtr, (VertexColors ?? new TArray<FColor>()).NativePtr, (Tangents ?? new TArray<FProcMeshTangent>()).NativePtr);
-		}
-
-		// Token: 0x060247F2 RID: 149490 RVA: 0x00360918 File Offset: 0x0035EB18
+		// Token: 0x0600AB8F RID: 43919 RVA: 0x000FD011 File Offset: 0x000FB211
 		public void SetMeshSectionVisible(int SectionIndex, bool bNewVisibility)
 		{
 			UProceduralMeshComponent.__SetMeshSectionVisible_Internal(base.NativePtr, SectionIndex, bNewVisibility);
 		}
 
-		// Token: 0x060247F3 RID: 149491 RVA: 0x00360928 File Offset: 0x0035EB28
-		[NullableContext(2)]
-		public void KuroCreateMeshSection(int SectionIndex, in TArray<FVector> Vertices, in TArray<int> Triangles, in TArray<FVector> Normals, in TArray<FVector2D> UV0, in TArray<FVector2D> UV1, in TArray<FVector2D> UV2, in TArray<FVector2D> UV3, in TArray<FVector2D> UV4, in TArray<FVector2D> UV5, in TArray<FVector2D> UV6, in TArray<FVector2D> UV7, in TArray<FColor> VertexColors, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FProcMeshTangent> Tangents, bool bCreateCollision)
-		{
-			UProceduralMeshComponent.__KuroCreateMeshSection_Internal(base.NativePtr, SectionIndex, (Vertices ?? new TArray<FVector>()).NativePtr, (Triangles ?? new TArray<int>()).NativePtr, (Normals ?? new TArray<FVector>()).NativePtr, (UV0 ?? new TArray<FVector2D>()).NativePtr, (UV1 ?? new TArray<FVector2D>()).NativePtr, (UV2 ?? new TArray<FVector2D>()).NativePtr, (UV3 ?? new TArray<FVector2D>()).NativePtr, (UV4 ?? new TArray<FVector2D>()).NativePtr, (UV5 ?? new TArray<FVector2D>()).NativePtr, (UV6 ?? new TArray<FVector2D>()).NativePtr, (UV7 ?? new TArray<FVector2D>()).NativePtr, (VertexColors ?? new TArray<FColor>()).NativePtr, (Tangents ?? new TArray<FProcMeshTangent>()).NativePtr, bCreateCollision);
-		}
-
-		// Token: 0x060247F4 RID: 149492 RVA: 0x00360A1E File Offset: 0x0035EC1E
+		// Token: 0x0600AB90 RID: 43920 RVA: 0x000FD020 File Offset: 0x000FB220
 		public bool IsMeshSectionVisible(int SectionIndex)
 		{
 			return UProceduralMeshComponent.__IsMeshSectionVisible_Internal(base.NativePtr, SectionIndex);
 		}
 
-		// Token: 0x060247F5 RID: 149493 RVA: 0x00360A2C File Offset: 0x0035EC2C
+		// Token: 0x0600AB91 RID: 43921 RVA: 0x000FD02E File Offset: 0x000FB22E
 		public int GetNumSections()
 		{
 			return UProceduralMeshComponent.__GetNumSections_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060247F6 RID: 149494 RVA: 0x00360A3C File Offset: 0x0035EC3C
-		[NullableContext(2)]
-		public void CreateMeshSection_LinearColor(int SectionIndex, in TArray<FVector> Vertices, in TArray<int> Triangles, in TArray<FVector> Normals, in TArray<FVector2D> UV0, in TArray<FVector2D> UV1, in TArray<FVector2D> UV2, in TArray<FVector2D> UV3, in TArray<FLinearColor> VertexColors, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FProcMeshTangent> Tangents, bool bCreateCollision)
-		{
-			UProceduralMeshComponent.__CreateMeshSection_LinearColor_Internal(base.NativePtr, SectionIndex, (Vertices ?? new TArray<FVector>()).NativePtr, (Triangles ?? new TArray<int>()).NativePtr, (Normals ?? new TArray<FVector>()).NativePtr, (UV0 ?? new TArray<FVector2D>()).NativePtr, (UV1 ?? new TArray<FVector2D>()).NativePtr, (UV2 ?? new TArray<FVector2D>()).NativePtr, (UV3 ?? new TArray<FVector2D>()).NativePtr, (VertexColors ?? new TArray<FLinearColor>()).NativePtr, (Tangents ?? new TArray<FProcMeshTangent>()).NativePtr, bCreateCollision);
-		}
-
-		// Token: 0x060247F7 RID: 149495 RVA: 0x00360AF0 File Offset: 0x0035ECF0
-		[NullableContext(2)]
-		public void CreateMeshSection(int SectionIndex, in TArray<FVector> Vertices, in TArray<int> Triangles, in TArray<FVector> Normals, in TArray<FVector2D> UV0, in TArray<FColor> VertexColors, [Nullable(new byte[]
-		{
-			2,
-			1
-		})] in TArray<FProcMeshTangent> Tangents, bool bCreateCollision)
-		{
-			UProceduralMeshComponent.__CreateMeshSection_Internal(base.NativePtr, SectionIndex, (Vertices ?? new TArray<FVector>()).NativePtr, (Triangles ?? new TArray<int>()).NativePtr, (Normals ?? new TArray<FVector>()).NativePtr, (UV0 ?? new TArray<FVector2D>()).NativePtr, (VertexColors ?? new TArray<FColor>()).NativePtr, (Tangents ?? new TArray<FProcMeshTangent>()).NativePtr, bCreateCollision);
-		}
-
-		// Token: 0x060247F8 RID: 149496 RVA: 0x00360B6F File Offset: 0x0035ED6F
+		// Token: 0x0600AB92 RID: 43922 RVA: 0x000FD03B File Offset: 0x000FB23B
 		public void ClearMeshSection(int SectionIndex)
 		{
 			UProceduralMeshComponent.__ClearMeshSection_Internal(base.NativePtr, SectionIndex);
 		}
 
-		// Token: 0x060247F9 RID: 149497 RVA: 0x00360B7D File Offset: 0x0035ED7D
+		// Token: 0x0600AB93 RID: 43923 RVA: 0x000FD049 File Offset: 0x000FB249
 		public void ClearCollisionConvexMeshes()
 		{
 			UProceduralMeshComponent.__ClearCollisionConvexMeshes_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060247FA RID: 149498 RVA: 0x00360B8A File Offset: 0x0035ED8A
+		// Token: 0x0600AB94 RID: 43924 RVA: 0x000FD056 File Offset: 0x000FB256
 		public void ClearAllMeshSections()
 		{
 			UProceduralMeshComponent.__ClearAllMeshSections_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060247FB RID: 149499 RVA: 0x00360B97 File Offset: 0x0035ED97
+		// Token: 0x0600AB95 RID: 43925 RVA: 0x000FD063 File Offset: 0x000FB263
 		[NullableContext(2)]
 		public void AddCollisionConvexMesh(TArray<FVector> ConvexVerts)
 		{
 			UProceduralMeshComponent.__AddCollisionConvexMesh_Internal(base.NativePtr, (ConvexVerts ?? new TArray<FVector>()).NativePtr);
 		}
 
-		// Token: 0x060247FC RID: 149500
+		// Token: 0x0600AB96 RID: 43926
 		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __UpdateMeshSection_LinearColor_Internal(IntPtr @this, int SectionIndex, IntPtr Vertices, IntPtr Normals, IntPtr UV0, IntPtr UV1, IntPtr UV2, IntPtr UV3, IntPtr VertexColors, IntPtr Tangents);
+		private static extern void __SetUseFullPrecisionUVs_Internal(IntPtr @this, bool bNewUseFullPrecisionUVs);
 
-		// Token: 0x060247FD RID: 149501
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __UpdateMeshSection_Internal(IntPtr @this, int SectionIndex, IntPtr Vertices, IntPtr Normals, IntPtr UV0, IntPtr VertexColors, IntPtr Tangents);
-
-		// Token: 0x060247FE RID: 149502
+		// Token: 0x0600AB97 RID: 43927
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetMeshSectionVisible_Internal(IntPtr @this, int SectionIndex, bool bNewVisibility);
 
-		// Token: 0x060247FF RID: 149503
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __KuroCreateMeshSection_Internal(IntPtr @this, int SectionIndex, IntPtr Vertices, IntPtr Triangles, IntPtr Normals, IntPtr UV0, IntPtr UV1, IntPtr UV2, IntPtr UV3, IntPtr UV4, IntPtr UV5, IntPtr UV6, IntPtr UV7, IntPtr VertexColors, IntPtr Tangents, bool bCreateCollision);
-
-		// Token: 0x06024800 RID: 149504
+		// Token: 0x0600AB98 RID: 43928
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMeshSectionVisible_Internal(IntPtr @this, int SectionIndex);
 
-		// Token: 0x06024801 RID: 149505
+		// Token: 0x0600AB99 RID: 43929
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumSections_Internal(IntPtr @this);
 
-		// Token: 0x06024802 RID: 149506
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __CreateMeshSection_LinearColor_Internal(IntPtr @this, int SectionIndex, IntPtr Vertices, IntPtr Triangles, IntPtr Normals, IntPtr UV0, IntPtr UV1, IntPtr UV2, IntPtr UV3, IntPtr VertexColors, IntPtr Tangents, bool bCreateCollision);
-
-		// Token: 0x06024803 RID: 149507
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __CreateMeshSection_Internal(IntPtr @this, int SectionIndex, IntPtr Vertices, IntPtr Triangles, IntPtr Normals, IntPtr UV0, IntPtr VertexColors, IntPtr Tangents, bool bCreateCollision);
-
-		// Token: 0x06024804 RID: 149508
+		// Token: 0x0600AB9A RID: 43930
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearMeshSection_Internal(IntPtr @this, int SectionIndex);
 
-		// Token: 0x06024805 RID: 149509
+		// Token: 0x0600AB9B RID: 43931
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearCollisionConvexMeshes_Internal(IntPtr @this);
 
-		// Token: 0x06024806 RID: 149510
+		// Token: 0x0600AB9C RID: 43932
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearAllMeshSections_Internal(IntPtr @this);
 
-		// Token: 0x06024807 RID: 149511
+		// Token: 0x0600AB9D RID: 43933
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddCollisionConvexMesh_Internal(IntPtr @this, IntPtr ConvexVerts);
 
-		// Token: 0x06024808 RID: 149512 RVA: 0x00360BB3 File Offset: 0x0035EDB3
+		// Token: 0x0600AB9E RID: 43934 RVA: 0x000FD07F File Offset: 0x000FB27F
 		static UProceduralMeshComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/ProceduralMeshComponent.ProceduralMeshComponent");
 		}
 
-		// Token: 0x06024809 RID: 149513 RVA: 0x00360BC1 File Offset: 0x0035EDC1
+		// Token: 0x0600AB9F RID: 43935 RVA: 0x000FD08D File Offset: 0x000FB28D
 		protected UProceduralMeshComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040139AB RID: 80299
-		internal static int __InterfaceOffset_IInterface_CollisionDataProvider;
-
-		// Token: 0x040139AC RID: 80300
+		// Token: 0x040049AC RID: 18860
 		public new const string __ObjectPath = "/Script/ProceduralMeshComponent.ProceduralMeshComponent";
 
-		// Token: 0x040139AD RID: 80301
+		// Token: 0x040049AD RID: 18861
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040139AE RID: 80302
+		// Token: 0x040049AE RID: 18862
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040139AF RID: 80303
+		// Token: 0x040049AF RID: 18863
 		internal static int __PropertyOffset_bUseComplexAsSimpleCollision;
 
-		// Token: 0x040139B0 RID: 80304
+		// Token: 0x040049B0 RID: 18864
 		internal static int __PropertyOffset_bUseAsyncCooking;
 
-		// Token: 0x040139B1 RID: 80305
+		// Token: 0x040049B1 RID: 18865
+		internal static int __PropertyOffset_bUseFullPrecisionUVs;
+
+		// Token: 0x040049B2 RID: 18866
 		internal static int __PropertyOffset_ProcMeshBodySetup;
 
-		// Token: 0x040139B2 RID: 80306
-		internal static int __PropertyOffset_ProcMeshSections;
-
-		// Token: 0x040139B3 RID: 80307
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FProcMeshSection> _ProcMeshSections;
-
-		// Token: 0x040139B4 RID: 80308
-		internal static int __PropertyOffset_CollisionConvexElems;
-
-		// Token: 0x040139B5 RID: 80309
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKConvexElem> _CollisionConvexElems;
-
-		// Token: 0x040139B6 RID: 80310
+		// Token: 0x040049B3 RID: 18867
 		internal static int __PropertyOffset_LocalBounds;
 
-		// Token: 0x040139B7 RID: 80311
+		// Token: 0x040049B4 RID: 18868
 		internal static int __PropertyOffset_AsyncBodySetupQueue;
 
-		// Token: 0x040139B8 RID: 80312
+		// Token: 0x040049B5 RID: 18869
 		[Nullable(new byte[]
 		{
 			2,

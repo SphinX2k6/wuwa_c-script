@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E20 RID: 3616
+// Token: 0x020002D4 RID: 724
 [NullableContext(2)]
 public interface ISDKPayObject
 {
-	// Token: 0x1700063E RID: 1598
-	// (get) Token: 0x060056F2 RID: 22258
-	// (set) Token: 0x060056F3 RID: 22259
+	// Token: 0x17000662 RID: 1634
+	// (get) Token: 0x06002A82 RID: 10882
+	// (set) Token: 0x06002A83 RID: 10883
 	ISDKPayment OrderInfo { get; set; }
 
-	// Token: 0x1700063F RID: 1599
-	// (get) Token: 0x060056F4 RID: 22260
-	// (set) Token: 0x060056F5 RID: 22261
+	// Token: 0x17000663 RID: 1635
+	// (get) Token: 0x06002A84 RID: 10884
+	// (set) Token: 0x06002A85 RID: 10885
 	ISDKPayRole RoleInfo { get; set; }
 }

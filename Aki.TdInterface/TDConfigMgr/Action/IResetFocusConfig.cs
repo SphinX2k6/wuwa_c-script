@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA6 RID: 7590
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FBD RID: 8125
 	public class IResetFocusConfig
 	{
-		// Token: 0x0600A2A7 RID: 41639 RVA: 0x00171CE8 File Offset: 0x0016FEE8
+		// Token: 0x0600ACB1 RID: 44209 RVA: 0x00186410 File Offset: 0x00184610
 		private IResetFocusConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A2A8 RID: 41640 RVA: 0x00171D20 File Offset: 0x0016FF20
+		// Token: 0x0600ACB2 RID: 44210 RVA: 0x00186448 File Offset: 0x00184648
 		public static IResetFocusConfig Create([Nullable(2)] IResetFocusConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2A9 RID: 41641 RVA: 0x00171D33 File Offset: 0x0016FF33
+		// Token: 0x0600ACB3 RID: 44211 RVA: 0x0018645B File Offset: 0x0018465B
 		public static IResetFocusConfig CreateFromSetValue([Nullable(2)] IResetFocusConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A2AA RID: 41642 RVA: 0x00171D46 File Offset: 0x0016FF46
+		// Token: 0x0600ACB4 RID: 44212 RVA: 0x0018646E File Offset: 0x0018466E
 		public IResetFocusConfig_SetValue ToSetValue()
 		{
 			return new IResetFocusConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003231 RID: 12849
-		// (get) Token: 0x0600A2AB RID: 41643 RVA: 0x00171D65 File Offset: 0x0016FF65
-		// (set) Token: 0x0600A2AC RID: 41644 RVA: 0x00171D94 File Offset: 0x0016FF94
+		// Token: 0x170034CB RID: 13515
+		// (get) Token: 0x0600ACB5 RID: 44213 RVA: 0x0018648D File Offset: 0x0018468D
+		// (set) Token: 0x0600ACB6 RID: 44214 RVA: 0x001864BC File Offset: 0x001846BC
 		public virtual float FadeInTime
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003232 RID: 12850
-		// (get) Token: 0x0600A2AD RID: 41645 RVA: 0x00171DA4 File Offset: 0x0016FFA4
-		// (set) Token: 0x0600A2AE RID: 41646 RVA: 0x00171E05 File Offset: 0x00170005
+		// Token: 0x170034CC RID: 13516
+		// (get) Token: 0x0600ACB7 RID: 44215 RVA: 0x001864CC File Offset: 0x001846CC
+		// (set) Token: 0x0600ACB8 RID: 44216 RVA: 0x0018652D File Offset: 0x0018472D
 		public virtual IBaseCurve FadeInCurve
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061A8 RID: 25000
+		// Token: 0x04006730 RID: 26416
 		[Nullable(2)]
 		protected IResetFocusConfig FbInstance;
 
-		// Token: 0x040061A9 RID: 25001
+		// Token: 0x04006731 RID: 26417
 		[Nullable(2)]
 		protected IResetFocusConfig_SetValue PocoInterface;
 
-		// Token: 0x040061AA RID: 25002
+		// Token: 0x04006732 RID: 26418
 		private IBaseCurve _FadeInCurveCache;
 
-		// Token: 0x040061AB RID: 25003
+		// Token: 0x04006733 RID: 26419
 		private bool _FadeInCurveInited;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.HonamiStory.Data;
 
-// Token: 0x02001E73 RID: 7795
+// Token: 0x02001335 RID: 4917
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryPlayerBackpackData
 {
-	// Token: 0x0600ED7D RID: 60797 RVA: 0x00388F04 File Offset: 0x00387104
+	// Token: 0x0600C19C RID: 49564 RVA: 0x00394B10 File Offset: 0x00392D10
 	public void Init(HonamiStoryPlayerBagInfo bagInfo)
 	{
 		if (bagInfo.EquipRack == null)
@@ -23,11 +22,11 @@ public class HonamiStoryPlayerBackpackData
 		}
 		this.Config = HonamiStoryConfig.Instance.GetHonamiStoryBackPack(bagInfo.EquipRack.BagConfigId);
 		this.InitRoleEquipDataList();
-		this.RefreshEquipInfo(bagInfo.HonamiStoryRackInfos.ToList<HonamiStoryRackInfo>());
-		this.RefreshGridItemInfo(bagInfo.EquipRack.HonamiStoryBagItemInfos.ToList<HonamiStoryBagItemInfo>());
+		this.RefreshEquipInfo(bagInfo.HonamiStoryRackInfos);
+		this.RefreshGridItemInfo(bagInfo.EquipRack.HonamiStoryBagItemInfos);
 	}
 
-	// Token: 0x0600ED7E RID: 60798 RVA: 0x00388F84 File Offset: 0x00387184
+	// Token: 0x0600C19D RID: 49565 RVA: 0x00394B84 File Offset: 0x00392D84
 	private void InitRoleEquipDataList()
 	{
 		this.RoleEquipDataList.Clear();
@@ -37,8 +36,8 @@ public class HonamiStoryPlayerBackpackData
 		}
 	}
 
-	// Token: 0x0600ED7F RID: 60799 RVA: 0x00388FBC File Offset: 0x003871BC
-	public void RefreshEquipInfo(List<HonamiStoryRackInfo> roleInfo)
+	// Token: 0x0600C19E RID: 49566 RVA: 0x00394BBC File Offset: 0x00392DBC
+	public void RefreshEquipInfo(IReadOnlyList<HonamiStoryRackInfo> roleInfo)
 	{
 		for (int i = 0; i < roleInfo.Count; i++)
 		{
@@ -54,8 +53,8 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED80 RID: 60800 RVA: 0x00389038 File Offset: 0x00387238
-	public void RefreshRoleInfo(List<int> roleInfo)
+	// Token: 0x0600C19F RID: 49567 RVA: 0x00394C38 File Offset: 0x00392E38
+	public void RefreshRoleInfo(IReadOnlyList<int> roleInfo)
 	{
 		for (int i = 0; i < roleInfo.Count; i++)
 		{
@@ -71,7 +70,7 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED81 RID: 60801 RVA: 0x003890A0 File Offset: 0x003872A0
+	// Token: 0x0600C1A0 RID: 49568 RVA: 0x00394CA0 File Offset: 0x00392EA0
 	public void RefreshRoleInfoByPosition(int roleId, int position)
 	{
 		if (position < 0 || position >= this.RoleEquipDataList.Count)
@@ -88,7 +87,7 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED82 RID: 60802 RVA: 0x00389108 File Offset: 0x00387308
+	// Token: 0x0600C1A1 RID: 49569 RVA: 0x00394D08 File Offset: 0x00392F08
 	public void RefreshWeaponInfoByPosition(int weaponId, int position)
 	{
 		HonamiStoryRoleEquipData roleEquipDataByPosition = this.GetRoleEquipDataByPosition(position);
@@ -106,8 +105,8 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED83 RID: 60803 RVA: 0x00389160 File Offset: 0x00387360
-	public unsafe void RefreshGridItemInfo(List<HonamiStoryBagItemInfo> itemInfoList)
+	// Token: 0x0600C1A2 RID: 49570 RVA: 0x00394D60 File Offset: 0x00392F60
+	public unsafe void RefreshGridItemInfo(IEnumerable<HonamiStoryBagItemInfo> itemInfoList)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (HonamiStoryBagItemInfo honamiStoryBagItemInfo in itemInfoList)
@@ -151,8 +150,8 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED84 RID: 60804 RVA: 0x00389388 File Offset: 0x00387588
-	public void UpdateByContext(List<HonamiStoryBagUpdateInfo> updateInfoList)
+	// Token: 0x0600C1A3 RID: 49571 RVA: 0x00394F84 File Offset: 0x00393184
+	public void UpdateByContext(IEnumerable<HonamiStoryBagUpdateInfo> updateInfoList)
 	{
 		foreach (HonamiStoryBagUpdateInfo honamiStoryBagUpdateInfo in updateInfoList)
 		{
@@ -171,7 +170,7 @@ public class HonamiStoryPlayerBackpackData
 		this.UpdateAllRoleSlots();
 	}
 
-	// Token: 0x0600ED85 RID: 60805 RVA: 0x0038942C File Offset: 0x0038762C
+	// Token: 0x0600C1A4 RID: 49572 RVA: 0x0039501C File Offset: 0x0039321C
 	private void AddItemData(HonamiStoryBagUpdateInfo updateInfo)
 	{
 		HonamiStoryEquipItemData honamiStoryEquipItemData = HonamiStoryModel.Instance.GetItemData(updateInfo.ItemIncrId) as HonamiStoryEquipItemData;
@@ -180,7 +179,7 @@ public class HonamiStoryPlayerBackpackData
 		this.SetRoleItemData(honamiStoryEquipItemData);
 	}
 
-	// Token: 0x0600ED86 RID: 60806 RVA: 0x00389474 File Offset: 0x00387674
+	// Token: 0x0600C1A5 RID: 49573 RVA: 0x00395064 File Offset: 0x00393264
 	private void RemoveItemData(HonamiStoryBagUpdateInfo updateInfo)
 	{
 		int position = updateInfo.OriHonamiStoryPosInfo.Position;
@@ -188,21 +187,21 @@ public class HonamiStoryPlayerBackpackData
 		this.RemoveRoleItemData(position);
 	}
 
-	// Token: 0x0600ED87 RID: 60807 RVA: 0x003894A4 File Offset: 0x003876A4
+	// Token: 0x0600C1A6 RID: 49574 RVA: 0x00395094 File Offset: 0x00393294
 	public void SetRoleItemData(HonamiStoryEquipItemData itemData)
 	{
 		int position = itemData.GetPosition();
 		this.GetRoleItemDataByPosition(position).SetItemData(position, itemData);
 	}
 
-	// Token: 0x0600ED88 RID: 60808 RVA: 0x003894C6 File Offset: 0x003876C6
+	// Token: 0x0600C1A7 RID: 49575 RVA: 0x003950B6 File Offset: 0x003932B6
 	public void RemoveRoleItemData(int position)
 	{
 		this.GetRoleItemDataByPosition(position).RemoveItemData(position);
 	}
 
-	// Token: 0x170012BD RID: 4797
-	// (get) Token: 0x0600ED89 RID: 60809 RVA: 0x003894D8 File Offset: 0x003876D8
+	// Token: 0x170012E7 RID: 4839
+	// (get) Token: 0x0600C1A8 RID: 49576 RVA: 0x003950C8 File Offset: 0x003932C8
 	public int BackpackId
 	{
 		get
@@ -211,13 +210,13 @@ public class HonamiStoryPlayerBackpackData
 		}
 	}
 
-	// Token: 0x0600ED8A RID: 60810 RVA: 0x003894F8 File Offset: 0x003876F8
+	// Token: 0x0600C1A9 RID: 49577 RVA: 0x003950E8 File Offset: 0x003932E8
 	public EHonamiStoryBackpackType GetBackpackType()
 	{
 		return (EHonamiStoryBackpackType)this.Config.Value.Type;
 	}
 
-	// Token: 0x0600ED8B RID: 60811 RVA: 0x00389518 File Offset: 0x00387718
+	// Token: 0x0600C1AA RID: 49578 RVA: 0x00395108 File Offset: 0x00393308
 	public List<HonamiStoryRoleEquipData> GetRoleEquipDataList(bool needUnlock = true)
 	{
 		List<HonamiStoryRoleEquipData> list = new List<HonamiStoryRoleEquipData>();
@@ -238,7 +237,7 @@ public class HonamiStoryPlayerBackpackData
 		return list;
 	}
 
-	// Token: 0x0600ED8C RID: 60812 RVA: 0x003895C0 File Offset: 0x003877C0
+	// Token: 0x0600C1AB RID: 49579 RVA: 0x003951B0 File Offset: 0x003933B0
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleItemDataByPosition(int position)
 	{
@@ -256,7 +255,7 @@ public class HonamiStoryPlayerBackpackData
 		return this.RoleEquipDataList[num];
 	}
 
-	// Token: 0x0600ED8D RID: 60813 RVA: 0x00389634 File Offset: 0x00387834
+	// Token: 0x0600C1AC RID: 49580 RVA: 0x00395224 File Offset: 0x00393424
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleEquipDataByPosition(int position)
 	{
@@ -270,7 +269,7 @@ public class HonamiStoryPlayerBackpackData
 		return null;
 	}
 
-	// Token: 0x0600ED8E RID: 60814 RVA: 0x00389690 File Offset: 0x00387890
+	// Token: 0x0600C1AD RID: 49581 RVA: 0x00395280 File Offset: 0x00393480
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleEquipDataByRoleId(int roleId)
 	{
@@ -284,7 +283,7 @@ public class HonamiStoryPlayerBackpackData
 		return null;
 	}
 
-	// Token: 0x0600ED8F RID: 60815 RVA: 0x003896EC File Offset: 0x003878EC
+	// Token: 0x0600C1AE RID: 49582 RVA: 0x003952DC File Offset: 0x003934DC
 	public int GetPowerLevel(bool isForShow)
 	{
 		int num = 0;
@@ -295,7 +294,7 @@ public class HonamiStoryPlayerBackpackData
 		return num;
 	}
 
-	// Token: 0x0600ED90 RID: 60816 RVA: 0x00389748 File Offset: 0x00387948
+	// Token: 0x0600C1AF RID: 49583 RVA: 0x00395338 File Offset: 0x00393538
 	public void UpdateAllRoleSlots()
 	{
 		HonamiStoryPlayerData playerData = HonamiStoryModel.Instance.GetPlayerData();
@@ -307,7 +306,7 @@ public class HonamiStoryPlayerBackpackData
 		}
 	}
 
-	// Token: 0x0600ED91 RID: 60817 RVA: 0x0038978D File Offset: 0x0038798D
+	// Token: 0x0600C1B0 RID: 49584 RVA: 0x0039537D File Offset: 0x0039357D
 	public int GetCellWidth()
 	{
 		if (HonamiStoryUtil.IsMobileView())
@@ -317,7 +316,7 @@ public class HonamiStoryPlayerBackpackData
 		return 86;
 	}
 
-	// Token: 0x0600ED92 RID: 60818 RVA: 0x0038979E File Offset: 0x0038799E
+	// Token: 0x0600C1B1 RID: 49585 RVA: 0x0039538E File Offset: 0x0039358E
 	public int GetCellHeight()
 	{
 		if (HonamiStoryUtil.IsMobileView())
@@ -327,19 +326,19 @@ public class HonamiStoryPlayerBackpackData
 		return 86;
 	}
 
-	// Token: 0x0600ED93 RID: 60819 RVA: 0x003897AF File Offset: 0x003879AF
+	// Token: 0x0600C1B2 RID: 49586 RVA: 0x0039539F File Offset: 0x0039359F
 	public int GetCellHorizontalInterval()
 	{
 		return 2;
 	}
 
-	// Token: 0x0600ED94 RID: 60820 RVA: 0x003897B2 File Offset: 0x003879B2
+	// Token: 0x0600C1B3 RID: 49587 RVA: 0x003953A2 File Offset: 0x003935A2
 	public int GetCellVerticalInterval()
 	{
 		return 2;
 	}
 
-	// Token: 0x0600ED95 RID: 60821 RVA: 0x003897B8 File Offset: 0x003879B8
+	// Token: 0x0600C1B4 RID: 49588 RVA: 0x003953A8 File Offset: 0x003935A8
 	public bool CheckItemByIncId(int incId)
 	{
 		foreach (HonamiStoryRoleEquipData honamiStoryRoleEquipData in this.RoleEquipDataList)
@@ -355,10 +354,10 @@ public class HonamiStoryPlayerBackpackData
 		return false;
 	}
 
-	// Token: 0x04006E3C RID: 28220
+	// Token: 0x04006F1D RID: 28445
 	private readonly List<HonamiStoryRoleEquipData> RoleEquipDataList = new List<HonamiStoryRoleEquipData>();
 
-	// Token: 0x04006E3D RID: 28221
+	// Token: 0x04006F1E RID: 28446
 	[Nullable(new byte[]
 	{
 		1,
@@ -366,6 +365,6 @@ public class HonamiStoryPlayerBackpackData
 	})]
 	private readonly Dictionary<int, HonamiStoryEquipItemData> GridItemMap = new Dictionary<int, HonamiStoryEquipItemData>();
 
-	// Token: 0x04006E3E RID: 28222
+	// Token: 0x04006F1F RID: 28447
 	protected HonamiStoryBackPack? Config;
 }

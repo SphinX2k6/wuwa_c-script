@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C9 RID: 26569
+	// Token: 0x02005719 RID: 22297
 	public class DangoBrawlBackpackGridData
 	{
-		// Token: 0x060422AF RID: 271023 RVA: 0x0100C27F File Offset: 0x0100A47F
+		// Token: 0x06036E05 RID: 224773 RVA: 0x00F4D64B File Offset: 0x00F4B84B
 		public DangoBrawlBackpackGridData(PanelPos panelPos)
 		{
 			this.PanelPos = panelPos;
 		}
 
-		// Token: 0x170096BD RID: 38589
-		// (get) Token: 0x060422B0 RID: 271024 RVA: 0x0100C29C File Offset: 0x0100A49C
+		// Token: 0x170069FE RID: 27134
+		// (get) Token: 0x06036E06 RID: 224774 RVA: 0x00F4D668 File Offset: 0x00F4B868
 		public PanelPos GridPanelPos
 		{
 			get
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096BE RID: 38590
-		// (get) Token: 0x060422B1 RID: 271025 RVA: 0x0100C2A4 File Offset: 0x0100A4A4
+		// Token: 0x170069FF RID: 27135
+		// (get) Token: 0x06036E07 RID: 224775 RVA: 0x00F4D670 File Offset: 0x00F4B870
 		public EDangoBrawlGridEquipState GridState
 		{
 			get
@@ -31,9 +31,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096BF RID: 38591
-		// (get) Token: 0x060422B2 RID: 271026 RVA: 0x0100C2AC File Offset: 0x0100A4AC
-		// (set) Token: 0x060422B3 RID: 271027 RVA: 0x0100C2B4 File Offset: 0x0100A4B4
+		// Token: 0x17006A00 RID: 27136
+		// (get) Token: 0x06036E08 RID: 224776 RVA: 0x00F4D678 File Offset: 0x00F4B878
+		// (set) Token: 0x06036E09 RID: 224777 RVA: 0x00F4D680 File Offset: 0x00F4B880
 		public int GridEquipBagId
 		{
 			get
@@ -54,9 +54,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096C0 RID: 38592
-		// (get) Token: 0x060422B4 RID: 271028 RVA: 0x0100C2E0 File Offset: 0x0100A4E0
-		// (set) Token: 0x060422B5 RID: 271029 RVA: 0x0100C2E8 File Offset: 0x0100A4E8
+		// Token: 0x17006A01 RID: 27137
+		// (get) Token: 0x06036E0A RID: 224778 RVA: 0x00F4D6AC File Offset: 0x00F4B8AC
+		// (set) Token: 0x06036E0B RID: 224779 RVA: 0x00F4D6B4 File Offset: 0x00F4B8B4
 		public int GridEquipBagItemId
 		{
 			get
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060422B6 RID: 271030 RVA: 0x0100C314 File Offset: 0x0100A514
+		// Token: 0x06036E0C RID: 224780 RVA: 0x00F4D6E0 File Offset: 0x00F4B8E0
 		public bool EquipBagPackItem(int val, EDangoBrawlTemplateType type)
 		{
 			if (type == EDangoBrawlTemplateType.Bag)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x060422B7 RID: 271031 RVA: 0x0100C32A File Offset: 0x0100A52A
+		// Token: 0x06036E0D RID: 224781 RVA: 0x00F4D6F6 File Offset: 0x00F4B8F6
 		public bool UnEquipBagPackItem(EDangoBrawlTemplateType type)
 		{
 			if (type == EDangoBrawlTemplateType.Bag)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x060422B8 RID: 271032 RVA: 0x0100C340 File Offset: 0x0100A540
+		// Token: 0x06036E0E RID: 224782 RVA: 0x00F4D70C File Offset: 0x00F4B90C
 		public bool IsCanEquipBagPackItem(EDangoBrawlTemplateType type)
 		{
 			if (type == EDangoBrawlTemplateType.Bag)
@@ -111,16 +111,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return (this.State & EDangoBrawlGridEquipState.Bag) != EDangoBrawlGridEquipState.Empty && (this.State & EDangoBrawlGridEquipState.BagItem) == EDangoBrawlGridEquipState.Empty;
 		}
 
-		// Token: 0x040228AF RID: 141487
+		// Token: 0x0401D10C RID: 119052
 		private readonly PanelPos PanelPos;
 
-		// Token: 0x040228B0 RID: 141488
+		// Token: 0x0401D10D RID: 119053
 		private EDangoBrawlGridEquipState State;
 
-		// Token: 0x040228B1 RID: 141489
+		// Token: 0x0401D10E RID: 119054
 		private int EquipBagPackId = -1;
 
-		// Token: 0x040228B2 RID: 141490
+		// Token: 0x0401D10F RID: 119055
 		private int EquipItemId = -1;
 	}
 }

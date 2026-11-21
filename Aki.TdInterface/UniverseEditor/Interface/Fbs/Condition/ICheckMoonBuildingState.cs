@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AC9 RID: 19145
+	// Token: 0x02004F9B RID: 20379
 	public struct ICheckMoonBuildingState : IFlatbufferObject
 	{
-		// Token: 0x17008ACC RID: 35532
-		// (get) Token: 0x0601E0F6 RID: 123126 RVA: 0x00437B3A File Offset: 0x00435D3A
+		// Token: 0x170091BE RID: 37310
+		// (get) Token: 0x0601FBF5 RID: 130037 RVA: 0x004695E8 File Offset: 0x004677E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E0F7 RID: 123127 RVA: 0x00437B47 File Offset: 0x00435D47
+		// Token: 0x0601FBF6 RID: 130038 RVA: 0x004695F5 File Offset: 0x004677F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E0F8 RID: 123128 RVA: 0x00437B50 File Offset: 0x00435D50
+		// Token: 0x0601FBF7 RID: 130039 RVA: 0x004695FC File Offset: 0x004677FC
 		public static ICheckMoonBuildingState GetRootAsICheckMoonBuildingState(ByteBuffer _bb)
 		{
 			return ICheckMoonBuildingState.GetRootAsICheckMoonBuildingState(_bb, default(ICheckMoonBuildingState));
 		}
 
-		// Token: 0x0601E0F9 RID: 123129 RVA: 0x00437B6C File Offset: 0x00435D6C
+		// Token: 0x0601FBF8 RID: 130040 RVA: 0x00469618 File Offset: 0x00467818
 		public static ICheckMoonBuildingState GetRootAsICheckMoonBuildingState(ByteBuffer _bb, ICheckMoonBuildingState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E0FA RID: 123130 RVA: 0x00437B89 File Offset: 0x00435D89
+		// Token: 0x0601FBF9 RID: 130041 RVA: 0x00469635 File Offset: 0x00467835
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E0FB RID: 123131 RVA: 0x00437B98 File Offset: 0x00435D98
+		// Token: 0x0601FBFA RID: 130042 RVA: 0x00469644 File Offset: 0x00467844
 		public ICheckMoonBuildingState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008ACD RID: 35533
-		// (get) Token: 0x0601E0FC RID: 123132 RVA: 0x00437BA8 File Offset: 0x00435DA8
+		// Token: 0x170091BF RID: 37311
+		// (get) Token: 0x0601FBFB RID: 130043 RVA: 0x00469654 File Offset: 0x00467854
 		public ECheckSystemStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008ACE RID: 35534
-		// (get) Token: 0x0601E0FD RID: 123133 RVA: 0x00437BE4 File Offset: 0x00435DE4
+		// Token: 0x170091C0 RID: 37312
+		// (get) Token: 0x0601FBFC RID: 130044 RVA: 0x00469690 File Offset: 0x00467890
 		public int BuildingId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008ACF RID: 35535
-		// (get) Token: 0x0601E0FE RID: 123134 RVA: 0x00437C20 File Offset: 0x00435E20
+		// Token: 0x170091C1 RID: 37313
+		// (get) Token: 0x0601FBFD RID: 130045 RVA: 0x004696CC File Offset: 0x004678CC
 		public bool IsBuilt
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E0FF RID: 123135 RVA: 0x00437C5F File Offset: 0x00435E5F
+		// Token: 0x0601FBFE RID: 130046 RVA: 0x0046970B File Offset: 0x0046790B
 		public static Offset<ICheckMoonBuildingState> CreateICheckMoonBuildingState(FlatBufferBuilder builder, ECheckSystemStateType Type = ECheckSystemStateType.TrackMoonBuilding, int BuildingId = 0, bool IsBuilt = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckMoonBuildingState.EndICheckMoonBuildingState(builder);
 		}
 
-		// Token: 0x0601E100 RID: 123136 RVA: 0x00437C83 File Offset: 0x00435E83
+		// Token: 0x0601FBFF RID: 130047 RVA: 0x0046972F File Offset: 0x0046792F
 		public static void StartICheckMoonBuildingState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E101 RID: 123137 RVA: 0x00437C8C File Offset: 0x00435E8C
+		// Token: 0x0601FC00 RID: 130048 RVA: 0x00469738 File Offset: 0x00467938
 		public static void AddType(FlatBufferBuilder builder, ECheckSystemStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E102 RID: 123138 RVA: 0x00437C97 File Offset: 0x00435E97
+		// Token: 0x0601FC01 RID: 130049 RVA: 0x00469743 File Offset: 0x00467943
 		public static void AddBuildingId(FlatBufferBuilder builder, int buildingId)
 		{
 			builder.AddInt(1, buildingId, 0);
 		}
 
-		// Token: 0x0601E103 RID: 123139 RVA: 0x00437CA2 File Offset: 0x00435EA2
+		// Token: 0x0601FC02 RID: 130050 RVA: 0x0046974E File Offset: 0x0046794E
 		public static void AddIsBuilt(FlatBufferBuilder builder, bool isBuilt)
 		{
 			builder.AddBool(2, isBuilt, false);
 		}
 
-		// Token: 0x0601E104 RID: 123140 RVA: 0x00437CAD File Offset: 0x00435EAD
+		// Token: 0x0601FC03 RID: 130051 RVA: 0x00469759 File Offset: 0x00467959
 		public static Offset<ICheckMoonBuildingState> EndICheckMoonBuildingState(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckMoonBuildingState>(builder.EndTable());
 		}
 
-		// Token: 0x0601E105 RID: 123141 RVA: 0x00437CBC File Offset: 0x00435EBC
+		// Token: 0x0601FC04 RID: 130052 RVA: 0x00469768 File Offset: 0x00467968
 		public ICheckMoonBuildingStateT UnPack()
 		{
 			ICheckMoonBuildingStateT checkMoonBuildingStateT = new ICheckMoonBuildingStateT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkMoonBuildingStateT;
 		}
 
-		// Token: 0x0601E106 RID: 123142 RVA: 0x00437CD7 File Offset: 0x00435ED7
+		// Token: 0x0601FC05 RID: 130053 RVA: 0x00469783 File Offset: 0x00467983
 		public void UnPackTo(ICheckMoonBuildingStateT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsBuilt = this.IsBuilt;
 		}
 
-		// Token: 0x0601E107 RID: 123143 RVA: 0x00437D00 File Offset: 0x00435F00
+		// Token: 0x0601FC06 RID: 130054 RVA: 0x004697AC File Offset: 0x004679AC
 		public static Offset<ICheckMoonBuildingState> Pack(FlatBufferBuilder builder, ICheckMoonBuildingStateT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckMoonBuildingState.CreateICheckMoonBuildingState(builder, _o.Type, _o.BuildingId, _o.IsBuilt);
 		}
 
-		// Token: 0x0400D350 RID: 54096
+		// Token: 0x0400DE38 RID: 56888
 		private Table __p;
 	}
 }

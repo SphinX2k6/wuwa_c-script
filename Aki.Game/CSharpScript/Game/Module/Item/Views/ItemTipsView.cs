@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Item.Views
 {
-	// Token: 0x0200582C RID: 22572
+	// Token: 0x02004803 RID: 18435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemTipsView : UiViewBase
 	{
-		// Token: 0x0603957E RID: 234878 RVA: 0x00D99888 File Offset: 0x00D97A88
+		// Token: 0x0602E492 RID: 189586 RVA: 0x00CE871C File Offset: 0x00CE691C
 		public ItemTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603957F RID: 234879 RVA: 0x00D9989C File Offset: 0x00D97A9C
+		// Token: 0x0602E493 RID: 189587 RVA: 0x00CE8730 File Offset: 0x00CE6930
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,102 +35,102 @@ namespace CSharpScript.Game.Module.Item.Views
 			};
 		}
 
-		// Token: 0x06039580 RID: 234880 RVA: 0x00D99934 File Offset: 0x00D97B34
+		// Token: 0x0602E494 RID: 189588 RVA: 0x00CE87C8 File Offset: 0x00CE69C8
 		protected override UniTask OnBeforeStartAsync()
 		{
-			ItemTipsView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
+			ItemTipsView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<ItemTipsView.<OnBeforeStartAsync>d__8>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<ItemTipsView.<OnBeforeStartAsync>d__9>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039581 RID: 234881 RVA: 0x00D99978 File Offset: 0x00D97B78
+		// Token: 0x0602E495 RID: 189589 RVA: 0x00CE880C File Offset: 0x00CE6A0C
 		private UniTask CreateItemTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreateItemTips>d__9 <CreateItemTips>d__;
+			ItemTipsView.<CreateItemTips>d__10 <CreateItemTips>d__;
 			<CreateItemTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateItemTips>d__.<>4__this = this;
 			<CreateItemTips>d__.data = data;
 			<CreateItemTips>d__.<>1__state = -1;
-			<CreateItemTips>d__.<>t__builder.Start<ItemTipsView.<CreateItemTips>d__9>(ref <CreateItemTips>d__);
+			<CreateItemTips>d__.<>t__builder.Start<ItemTipsView.<CreateItemTips>d__10>(ref <CreateItemTips>d__);
 			return <CreateItemTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039582 RID: 234882 RVA: 0x00D999C4 File Offset: 0x00D97BC4
+		// Token: 0x0602E496 RID: 189590 RVA: 0x00CE8858 File Offset: 0x00CE6A58
 		private UniTask CreatePowerTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreatePowerTips>d__10 <CreatePowerTips>d__;
+			ItemTipsView.<CreatePowerTips>d__11 <CreatePowerTips>d__;
 			<CreatePowerTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreatePowerTips>d__.<>4__this = this;
 			<CreatePowerTips>d__.data = data;
 			<CreatePowerTips>d__.<>1__state = -1;
-			<CreatePowerTips>d__.<>t__builder.Start<ItemTipsView.<CreatePowerTips>d__10>(ref <CreatePowerTips>d__);
+			<CreatePowerTips>d__.<>t__builder.Start<ItemTipsView.<CreatePowerTips>d__11>(ref <CreatePowerTips>d__);
 			return <CreatePowerTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039583 RID: 234883 RVA: 0x00D99A10 File Offset: 0x00D97C10
+		// Token: 0x0602E497 RID: 189591 RVA: 0x00CE88A4 File Offset: 0x00CE6AA4
 		private UniTask CreateCardTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreateCardTips>d__11 <CreateCardTips>d__;
+			ItemTipsView.<CreateCardTips>d__12 <CreateCardTips>d__;
 			<CreateCardTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateCardTips>d__.<>4__this = this;
 			<CreateCardTips>d__.data = data;
 			<CreateCardTips>d__.<>1__state = -1;
-			<CreateCardTips>d__.<>t__builder.Start<ItemTipsView.<CreateCardTips>d__11>(ref <CreateCardTips>d__);
+			<CreateCardTips>d__.<>t__builder.Start<ItemTipsView.<CreateCardTips>d__12>(ref <CreateCardTips>d__);
 			return <CreateCardTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039584 RID: 234884 RVA: 0x00D99A5C File Offset: 0x00D97C5C
+		// Token: 0x0602E498 RID: 189592 RVA: 0x00CE88F0 File Offset: 0x00CE6AF0
 		private UniTask CreateHonamiStoryTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreateHonamiStoryTips>d__12 <CreateHonamiStoryTips>d__;
+			ItemTipsView.<CreateHonamiStoryTips>d__13 <CreateHonamiStoryTips>d__;
 			<CreateHonamiStoryTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateHonamiStoryTips>d__.<>4__this = this;
 			<CreateHonamiStoryTips>d__.data = data;
 			<CreateHonamiStoryTips>d__.<>1__state = -1;
-			<CreateHonamiStoryTips>d__.<>t__builder.Start<ItemTipsView.<CreateHonamiStoryTips>d__12>(ref <CreateHonamiStoryTips>d__);
+			<CreateHonamiStoryTips>d__.<>t__builder.Start<ItemTipsView.<CreateHonamiStoryTips>d__13>(ref <CreateHonamiStoryTips>d__);
 			return <CreateHonamiStoryTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039585 RID: 234885 RVA: 0x00D99AA8 File Offset: 0x00D97CA8
+		// Token: 0x0602E499 RID: 189593 RVA: 0x00CE893C File Offset: 0x00CE6B3C
 		private UniTask CreateTitleTips(int titleId)
 		{
-			ItemTipsView.<CreateTitleTips>d__13 <CreateTitleTips>d__;
+			ItemTipsView.<CreateTitleTips>d__14 <CreateTitleTips>d__;
 			<CreateTitleTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateTitleTips>d__.<>4__this = this;
 			<CreateTitleTips>d__.titleId = titleId;
 			<CreateTitleTips>d__.<>1__state = -1;
-			<CreateTitleTips>d__.<>t__builder.Start<ItemTipsView.<CreateTitleTips>d__13>(ref <CreateTitleTips>d__);
+			<CreateTitleTips>d__.<>t__builder.Start<ItemTipsView.<CreateTitleTips>d__14>(ref <CreateTitleTips>d__);
 			return <CreateTitleTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039586 RID: 234886 RVA: 0x00D99AF4 File Offset: 0x00D97CF4
+		// Token: 0x0602E49A RID: 189594 RVA: 0x00CE8988 File Offset: 0x00CE6B88
 		private UniTask CreateFurnitureTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreateFurnitureTips>d__14 <CreateFurnitureTips>d__;
+			ItemTipsView.<CreateFurnitureTips>d__15 <CreateFurnitureTips>d__;
 			<CreateFurnitureTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreateFurnitureTips>d__.<>4__this = this;
 			<CreateFurnitureTips>d__.data = data;
 			<CreateFurnitureTips>d__.<>1__state = -1;
-			<CreateFurnitureTips>d__.<>t__builder.Start<ItemTipsView.<CreateFurnitureTips>d__14>(ref <CreateFurnitureTips>d__);
+			<CreateFurnitureTips>d__.<>t__builder.Start<ItemTipsView.<CreateFurnitureTips>d__15>(ref <CreateFurnitureTips>d__);
 			return <CreateFurnitureTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039587 RID: 234887 RVA: 0x00D99B40 File Offset: 0x00D97D40
+		// Token: 0x0602E49B RID: 189595 RVA: 0x00CE89D4 File Offset: 0x00CE6BD4
 		private UniTask CreatePinballItemTips(ItemTipsData data)
 		{
-			ItemTipsView.<CreatePinballItemTips>d__15 <CreatePinballItemTips>d__;
+			ItemTipsView.<CreatePinballItemTips>d__16 <CreatePinballItemTips>d__;
 			<CreatePinballItemTips>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<CreatePinballItemTips>d__.<>4__this = this;
 			<CreatePinballItemTips>d__.data = data;
 			<CreatePinballItemTips>d__.<>1__state = -1;
-			<CreatePinballItemTips>d__.<>t__builder.Start<ItemTipsView.<CreatePinballItemTips>d__15>(ref <CreatePinballItemTips>d__);
+			<CreatePinballItemTips>d__.<>t__builder.Start<ItemTipsView.<CreatePinballItemTips>d__16>(ref <CreatePinballItemTips>d__);
 			return <CreatePinballItemTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039588 RID: 234888 RVA: 0x00D99B8B File Offset: 0x00D97D8B
+		// Token: 0x0602E49C RID: 189596 RVA: 0x00CE8A1F File Offset: 0x00CE6C1F
 		protected override void OnBeforeShow()
 		{
 			IItemTipsUiProxy tipsProxy = this.TipsProxy;
@@ -141,82 +141,85 @@ namespace CSharpScript.Game.Module.Item.Views
 			tipsProxy.SetActive(true);
 		}
 
-		// Token: 0x06039589 RID: 234889 RVA: 0x00D99B9E File Offset: 0x00D97D9E
+		// Token: 0x0602E49D RID: 189597 RVA: 0x00CE8A32 File Offset: 0x00CE6C32
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EUiTabViewName, int?>(EEventName.ChangeChildView, new Action<EUiTabViewName, int?>(this.OnChangeChildView));
 		}
 
-		// Token: 0x0603958A RID: 234890 RVA: 0x00D99BB9 File Offset: 0x00D97DB9
+		// Token: 0x0602E49E RID: 189598 RVA: 0x00CE8A4D File Offset: 0x00CE6C4D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.ChangeChildView, new Action<EUiTabViewName, int?>(this.OnChangeChildView));
 		}
 
-		// Token: 0x0603958B RID: 234891 RVA: 0x00D99BD4 File Offset: 0x00D97DD4
+		// Token: 0x0602E49F RID: 189599 RVA: 0x00CE8A68 File Offset: 0x00CE6C68
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Emit<int, int>(EEventName.CloseItemTips, this.ConfigId, this.IncId);
 		}
 
-		// Token: 0x0603958C RID: 234892 RVA: 0x00D99BF4 File Offset: 0x00D97DF4
+		// Token: 0x0602E4A0 RID: 189600 RVA: 0x00CE8A88 File Offset: 0x00CE6C88
 		protected override UniTask OnPlayingCloseSequenceAsync()
 		{
-			ItemTipsView.<OnPlayingCloseSequenceAsync>d__20 <OnPlayingCloseSequenceAsync>d__;
+			ItemTipsView.<OnPlayingCloseSequenceAsync>d__21 <OnPlayingCloseSequenceAsync>d__;
 			<OnPlayingCloseSequenceAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnPlayingCloseSequenceAsync>d__.<>4__this = this;
 			<OnPlayingCloseSequenceAsync>d__.<>1__state = -1;
-			<OnPlayingCloseSequenceAsync>d__.<>t__builder.Start<ItemTipsView.<OnPlayingCloseSequenceAsync>d__20>(ref <OnPlayingCloseSequenceAsync>d__);
+			<OnPlayingCloseSequenceAsync>d__.<>t__builder.Start<ItemTipsView.<OnPlayingCloseSequenceAsync>d__21>(ref <OnPlayingCloseSequenceAsync>d__);
 			return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603958D RID: 234893 RVA: 0x00D99C37 File Offset: 0x00D97E37
+		// Token: 0x0602E4A1 RID: 189601 RVA: 0x00CE8ACB File Offset: 0x00CE6CCB
 		private void OnClickCloseBtn()
 		{
 			UiInteractLogReport.ReportSpaceKeyInteract(EUiInteractSpaceKeyType.ItemTips);
 			this.DoCloseMe();
 		}
 
-		// Token: 0x0603958E RID: 234894 RVA: 0x00D99C46 File Offset: 0x00D97E46
+		// Token: 0x0602E4A2 RID: 189602 RVA: 0x00CE8ADA File Offset: 0x00CE6CDA
 		private void OnChangeChildView(EUiTabViewName eUiTabViewName, int? o)
 		{
 			this.DoCloseMe();
 		}
 
-		// Token: 0x0603958F RID: 234895 RVA: 0x00D99C4E File Offset: 0x00D97E4E
+		// Token: 0x0602E4A3 RID: 189603 RVA: 0x00CE8AE2 File Offset: 0x00CE6CE2
 		protected void DoCloseMe()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DFDB RID: 122843
+		// Token: 0x04018A73 RID: 100979
 		protected int IncId;
 
-		// Token: 0x0401DFDC RID: 122844
+		// Token: 0x04018A74 RID: 100980
 		protected int ConfigId;
 
-		// Token: 0x0401DFDD RID: 122845
+		// Token: 0x04018A75 RID: 100981
 		[Nullable(2)]
 		protected object ExtraParam;
 
-		// Token: 0x0401DFDE RID: 122846
+		// Token: 0x04018A76 RID: 100982
+		protected bool HideNum;
+
+		// Token: 0x04018A77 RID: 100983
 		protected ETipsUiType UiTipsType = ETipsUiType.ItemTipsComponent;
 
-		// Token: 0x0401DFDF RID: 122847
+		// Token: 0x04018A78 RID: 100984
 		[Nullable(2)]
 		protected IItemTipsUiProxy TipsProxy;
 
-		// Token: 0x0200BA23 RID: 47651
+		// Token: 0x0200A439 RID: 42041
 		[NullableContext(0)]
 		private class EItemTipsViewDefine
 		{
-			// Token: 0x0403841A RID: 230426
+			// Token: 0x04032E07 RID: 208391
 			public const int MaskCloseBtn = 0;
 
-			// Token: 0x0403841B RID: 230427
+			// Token: 0x04032E08 RID: 208392
 			public const int Content = 1;
 
-			// Token: 0x0403841C RID: 230428
+			// Token: 0x04032E09 RID: 208393
 			public const int CloseBtn = 2;
 		}
 	}

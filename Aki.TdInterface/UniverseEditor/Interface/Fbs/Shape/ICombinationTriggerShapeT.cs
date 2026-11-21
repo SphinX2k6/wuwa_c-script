@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BFF RID: 15359
+	// Token: 0x0200400B RID: 16395
 	public class ICombinationTriggerShapeT
 	{
-		// Token: 0x1700697C RID: 27004
-		// (get) Token: 0x06015259 RID: 86617 RVA: 0x00310827 File Offset: 0x0030EA27
-		// (set) Token: 0x0601525A RID: 86618 RVA: 0x0031082F File Offset: 0x0030EA2F
+		// Token: 0x17006F24 RID: 28452
+		// (get) Token: 0x0601674F RID: 91983 RVA: 0x003373AF File Offset: 0x003355AF
+		// (set) Token: 0x06016750 RID: 91984 RVA: 0x003373B7 File Offset: 0x003355B7
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x1700697D RID: 27005
-		// (get) Token: 0x0601525B RID: 86619 RVA: 0x00310838 File Offset: 0x0030EA38
-		// (set) Token: 0x0601525C RID: 86620 RVA: 0x00310840 File Offset: 0x0030EA40
+		// Token: 0x17006F25 RID: 28453
+		// (get) Token: 0x06016751 RID: 91985 RVA: 0x003373C0 File Offset: 0x003355C0
+		// (set) Token: 0x06016752 RID: 91986 RVA: 0x003373C8 File Offset: 0x003355C8
 		public List<TCombinationTriggerShapeUnion> CombinationShapes { get; set; }
 
-		// Token: 0x0601525D RID: 86621 RVA: 0x00310849 File Offset: 0x0030EA49
+		// Token: 0x06016753 RID: 91987 RVA: 0x003373D1 File Offset: 0x003355D1
 		public ICombinationTriggerShapeT()
 		{
 			this.Type = ETriggerShape.Box;

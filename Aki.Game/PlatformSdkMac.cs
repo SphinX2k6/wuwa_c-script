@@ -7,18 +7,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000E50 RID: 3664
+// Token: 0x02000305 RID: 773
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformSdkMac : PlatformSdkBase
 {
-	// Token: 0x060058EA RID: 22762 RVA: 0x00101AC4 File Offset: 0x000FFCC4
+	// Token: 0x06002C80 RID: 11392 RVA: 0x00109738 File Offset: 0x00107938
 	public PlatformSdkMac()
 	{
 		this.SdkParamCacheMap = new Dictionary<string, string>();
 	}
 
-	// Token: 0x060058EB RID: 22763 RVA: 0x00101AD8 File Offset: 0x000FFCD8
+	// Token: 0x06002C81 RID: 11393 RVA: 0x0010974C File Offset: 0x0010794C
 	protected override void OnInit()
 	{
 		this.CurrentDid = UKuroSDKManager.GetBasicInfo().DeviceId;
@@ -30,14 +30,14 @@ public class PlatformSdkMac : PlatformSdkBase
 		FCrashSightProxy.SetCustomData("SdkChannelId", this.GetChannelId());
 	}
 
-	// Token: 0x060058EC RID: 22764 RVA: 0x00101B2D File Offset: 0x000FFD2D
+	// Token: 0x06002C82 RID: 11394 RVA: 0x001097A1 File Offset: 0x001079A1
 	protected override void BindSpecialEvent()
 	{
 		UKuroSDKManager.Get().CustomerServiceResultDelegate.Clear();
 		UKuroSDKManager.Get().CustomerServiceResultDelegate.Add(new Action<string>(this.CustomerServiceResultCallBack));
 	}
 
-	// Token: 0x060058ED RID: 22765 RVA: 0x00101B5C File Offset: 0x000FFD5C
+	// Token: 0x06002C83 RID: 11395 RVA: 0x001097D0 File Offset: 0x001079D0
 	public void CustomerServiceResultCallBack(string result)
 	{
 		PlatformSdkMac.ISdkCustomerService sdkCustomerService = Json.Parse<PlatformSdkMac.ISdkCustomerService>(result, null);
@@ -48,7 +48,7 @@ public class PlatformSdkMac : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
 	}
 
-	// Token: 0x060058EE RID: 22766 RVA: 0x00101B94 File Offset: 0x000FFD94
+	// Token: 0x06002C84 RID: 11396 RVA: 0x00109808 File Offset: 0x00107A08
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -66,13 +66,13 @@ public class PlatformSdkMac : PlatformSdkBase
 		UKuroSDKManager.OpenCustomerService(JsonSerializer.Serialize<OpenCustomerServiceParamMac>(openCustomerServiceParamMac, KuroSdkJsonOptions.Unescaped));
 	}
 
-	// Token: 0x060058EF RID: 22767 RVA: 0x00101C5B File Offset: 0x000FFE5B
+	// Token: 0x06002C85 RID: 11397 RVA: 0x001098CF File Offset: 0x00107ACF
 	public override string GetChannelId()
 	{
 		return this.GetSdkParamData("channelId");
 	}
 
-	// Token: 0x060058F0 RID: 22768 RVA: 0x00101C68 File Offset: 0x000FFE68
+	// Token: 0x06002C86 RID: 11398 RVA: 0x001098DC File Offset: 0x00107ADC
 	public override void SetFont()
 	{
 		string deviceFontAsset = KuroSdkModel.Instance.GetDeviceFontAsset();
@@ -85,7 +85,7 @@ public class PlatformSdkMac : PlatformSdkBase
 		UKuroSDKManager.SetFont(deviceFontAsset);
 	}
 
-	// Token: 0x060058F1 RID: 22769 RVA: 0x00101CB0 File Offset: 0x000FFEB0
+	// Token: 0x06002C87 RID: 11399 RVA: 0x00109924 File Offset: 0x00107B24
 	private string GetSdkParamData(string needParam)
 	{
 		if (this.SdkParamCacheMap.Count == 0)
@@ -109,24 +109,24 @@ public class PlatformSdkMac : PlatformSdkBase
 		return "";
 	}
 
-	// Token: 0x060058F2 RID: 22770 RVA: 0x00101D36 File Offset: 0x000FFF36
+	// Token: 0x06002C88 RID: 11400 RVA: 0x001099AA File Offset: 0x00107BAA
 	public override void SdkExit()
 	{
 		UKuroSDKManager.ShowExitGameDialog();
 	}
 
-	// Token: 0x040028A8 RID: 10408
+	// Token: 0x04002943 RID: 10563
 	private readonly Dictionary<string, string> SdkParamCacheMap;
 
-	// Token: 0x020074DC RID: 29916
+	// Token: 0x02006670 RID: 26224
 	[NullableContext(0)]
 	private class ISdkCustomerService
 	{
-		// Token: 0x04026B54 RID: 158548
+		// Token: 0x04021E99 RID: 138905
 		[Nullable(1)]
 		public string cuid = "";
 
-		// Token: 0x04026B55 RID: 158549
+		// Token: 0x04021E9A RID: 138906
 		public int isredot;
 	}
 }

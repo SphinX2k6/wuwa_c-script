@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011DA RID: 4570
+// Token: 0x0200068E RID: 1678
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ChessModel : ModelBase
 {
-	// Token: 0x060079B7 RID: 31159 RVA: 0x0019A0E7 File Offset: 0x001982E7
+	// Token: 0x06004D4E RID: 19790 RVA: 0x001A2D97 File Offset: 0x001A0F97
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x060079B8 RID: 31160 RVA: 0x0019A0F0 File Offset: 0x001982F0
+	// Token: 0x06004D4F RID: 19791 RVA: 0x001A2DA0 File Offset: 0x001A0FA0
 	protected override bool OnClear()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x060079B9 RID: 31161 RVA: 0x0019A0FC File Offset: 0x001982FC
+	// Token: 0x06004D50 RID: 19792 RVA: 0x001A2DAC File Offset: 0x001A0FAC
 	public void ClearAll()
 	{
 		this.ChessManager = null;
@@ -36,14 +36,14 @@ public class ChessModel : ModelBase
 		this.CacheRankingItemIdList = null;
 	}
 
-	// Token: 0x060079BA RID: 31162 RVA: 0x0019A180 File Offset: 0x00198380
+	// Token: 0x06004D51 RID: 19793 RVA: 0x001A2E30 File Offset: 0x001A1030
 	[NullableContext(2)]
 	public IChessManager GetChessManager()
 	{
 		return this.ChessManager;
 	}
 
-	// Token: 0x060079BB RID: 31163 RVA: 0x0019A188 File Offset: 0x00198388
+	// Token: 0x06004D52 RID: 19794 RVA: 0x001A2E38 File Offset: 0x001A1038
 	[NullableContext(2)]
 	public ChessItem GetChessItem(int id)
 	{
@@ -55,7 +55,7 @@ public class ChessModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060079BC RID: 31164 RVA: 0x0019A1A8 File Offset: 0x001983A8
+	// Token: 0x06004D53 RID: 19795 RVA: 0x001A2E58 File Offset: 0x001A1058
 	public List<int> GetChessItemIdList([Nullable(new byte[]
 	{
 		2,
@@ -84,7 +84,7 @@ public class ChessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060079BD RID: 31165 RVA: 0x0019A2A8 File Offset: 0x001984A8
+	// Token: 0x06004D54 RID: 19796 RVA: 0x001A2F58 File Offset: 0x001A1158
 	[NullableContext(2)]
 	public ChessboardPoint GetChessboardPoint(int id)
 	{
@@ -96,21 +96,21 @@ public class ChessModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060079BE RID: 31166 RVA: 0x0019A2C8 File Offset: 0x001984C8
+	// Token: 0x06004D55 RID: 19797 RVA: 0x001A2F78 File Offset: 0x001A1178
 	[NullableContext(2)]
 	public ChessboardPoint GetTerminalPoint()
 	{
 		return this.TerminalPoint;
 	}
 
-	// Token: 0x060079BF RID: 31167 RVA: 0x0019A2D0 File Offset: 0x001984D0
+	// Token: 0x06004D56 RID: 19798 RVA: 0x001A2F80 File Offset: 0x001A1180
 	public void UpdateChessMode(EChessMode mode, EChessAgentType agentType = EChessAgentType.EntityComponent)
 	{
 		this.ChessAgentType = agentType;
 		this.ChessManager = ChessManagerCreator.CreateChessManager(mode);
 	}
 
-	// Token: 0x060079C0 RID: 31168 RVA: 0x0019A2E8 File Offset: 0x001984E8
+	// Token: 0x06004D57 RID: 19799 RVA: 0x001A2F98 File Offset: 0x001A1198
 	public void AddChessboardPoint(int id, Vector location, Rotator rotator, [Nullable(2)] Rotator backwardRotation, int sortIndex)
 	{
 		if (this.ChessManager == null)
@@ -123,7 +123,7 @@ public class ChessModel : ModelBase
 		this.ChessboardPoints.Add(id, chessboardPoint);
 	}
 
-	// Token: 0x060079C1 RID: 31169 RVA: 0x0019A344 File Offset: 0x00198544
+	// Token: 0x06004D58 RID: 19800 RVA: 0x001A2FF4 File Offset: 0x001A11F4
 	public void AddChessItem(int id, EntityHandle entityHandle, bool rotationIsForward)
 	{
 		if (this.ChessManager == null)
@@ -142,7 +142,7 @@ public class ChessModel : ModelBase
 		this.ChessItems.Add(id, chessItem);
 	}
 
-	// Token: 0x060079C2 RID: 31170 RVA: 0x0019A3D4 File Offset: 0x001985D4
+	// Token: 0x06004D59 RID: 19801 RVA: 0x001A3084 File Offset: 0x001A1284
 	public void UpdateTerminalPoint(int pointId)
 	{
 		ChessboardPoint terminalPoint;
@@ -154,8 +154,8 @@ public class ChessModel : ModelBase
 		this.TerminalPoint = null;
 	}
 
-	// Token: 0x17000A67 RID: 2663
-	// (get) Token: 0x060079C3 RID: 31171 RVA: 0x0019A400 File Offset: 0x00198600
+	// Token: 0x17000A87 RID: 2695
+	// (get) Token: 0x06004D5A RID: 19802 RVA: 0x001A30B0 File Offset: 0x001A12B0
 	public static ChessModel Instance
 	{
 		get
@@ -164,7 +164,7 @@ public class ChessModel : ModelBase
 		}
 	}
 
-	// Token: 0x060079C4 RID: 31172 RVA: 0x0019A407 File Offset: 0x00198607
+	// Token: 0x06004D5B RID: 19803 RVA: 0x001A30B7 File Offset: 0x001A12B7
 	public static ChessModel GetOrCreateInstance()
 	{
 		if (ChessModel._Instance == null)
@@ -174,7 +174,7 @@ public class ChessModel : ModelBase
 		return ChessModel._Instance;
 	}
 
-	// Token: 0x060079C5 RID: 31173 RVA: 0x0019A41B File Offset: 0x0019861B
+	// Token: 0x06004D5C RID: 19804 RVA: 0x001A30CB File Offset: 0x001A12CB
 	public static bool CreateInstance()
 	{
 		if (ChessModel._Instance != null)
@@ -185,45 +185,45 @@ public class ChessModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060079C6 RID: 31174 RVA: 0x0019A431 File Offset: 0x00198631
+	// Token: 0x06004D5D RID: 19805 RVA: 0x001A30E1 File Offset: 0x001A12E1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060079C7 RID: 31175 RVA: 0x0019A433 File Offset: 0x00198633
+	// Token: 0x06004D5E RID: 19806 RVA: 0x001A30E3 File Offset: 0x001A12E3
 	public static void ResetStaticDefaultValue()
 	{
 		ChessModel._Instance = null;
 	}
 
-	// Token: 0x060079C8 RID: 31176 RVA: 0x0019A43B File Offset: 0x0019863B
+	// Token: 0x06004D5F RID: 19807 RVA: 0x001A30EB File Offset: 0x001A12EB
 	static ChessModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ChessModel.CreateStaticDefaultValue), new Action(ChessModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040037F5 RID: 14325
+	// Token: 0x0400388E RID: 14478
 	[Nullable(2)]
 	private IChessManager ChessManager;
 
-	// Token: 0x040037F6 RID: 14326
+	// Token: 0x0400388F RID: 14479
 	private EChessAgentType ChessAgentType;
 
-	// Token: 0x040037F7 RID: 14327
+	// Token: 0x04003890 RID: 14480
 	private readonly Dictionary<int, ChessboardPoint> ChessboardPoints = new Dictionary<int, ChessboardPoint>();
 
-	// Token: 0x040037F8 RID: 14328
+	// Token: 0x04003891 RID: 14481
 	private readonly Dictionary<int, ChessItem> ChessItems = new Dictionary<int, ChessItem>();
 
-	// Token: 0x040037F9 RID: 14329
+	// Token: 0x04003892 RID: 14482
 	[Nullable(2)]
 	private ChessboardPoint TerminalPoint;
 
-	// Token: 0x040037FA RID: 14330
+	// Token: 0x04003893 RID: 14483
 	[Nullable(2)]
 	public int[] CacheRankingItemIdList;
 
-	// Token: 0x040037FB RID: 14331
+	// Token: 0x04003894 RID: 14484
 	[Nullable(2)]
 	private static ChessModel _Instance;
 }

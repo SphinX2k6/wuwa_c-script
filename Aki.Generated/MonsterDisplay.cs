@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E13 RID: 3603
+	// Token: 0x02000EF8 RID: 3832
 	public struct MonsterDisplay : IFlatbufferObject
 	{
-		// Token: 0x17001F57 RID: 8023
-		// (get) Token: 0x060094D4 RID: 38100 RVA: 0x0028714C File Offset: 0x0028534C
+		// Token: 0x17001FBC RID: 8124
+		// (get) Token: 0x06009AF4 RID: 39668 RVA: 0x002A4F30 File Offset: 0x002A3130
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060094D5 RID: 38101 RVA: 0x00287159 File Offset: 0x00285359
+		// Token: 0x06009AF5 RID: 39669 RVA: 0x002A4F3D File Offset: 0x002A313D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060094D6 RID: 38102 RVA: 0x00287160 File Offset: 0x00285360
+		// Token: 0x06009AF6 RID: 39670 RVA: 0x002A4F44 File Offset: 0x002A3144
 		public static MonsterDisplay GetRootAsMonsterDisplay(ByteBuffer _bb)
 		{
 			return MonsterDisplay.GetRootAsMonsterDisplay(_bb, default(MonsterDisplay));
 		}
 
-		// Token: 0x060094D7 RID: 38103 RVA: 0x0028717C File Offset: 0x0028537C
+		// Token: 0x06009AF7 RID: 39671 RVA: 0x002A4F60 File Offset: 0x002A3160
 		public static MonsterDisplay GetRootAsMonsterDisplay(ByteBuffer _bb, MonsterDisplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060094D8 RID: 38104 RVA: 0x00287199 File Offset: 0x00285399
+		// Token: 0x06009AF8 RID: 39672 RVA: 0x002A4F7D File Offset: 0x002A317D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060094D9 RID: 38105 RVA: 0x002871A8 File Offset: 0x002853A8
+		// Token: 0x06009AF9 RID: 39673 RVA: 0x002A4F8C File Offset: 0x002A318C
 		public MonsterDisplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001F58 RID: 8024
-		// (get) Token: 0x060094DA RID: 38106 RVA: 0x002871B8 File Offset: 0x002853B8
+		// Token: 0x17001FBD RID: 8125
+		// (get) Token: 0x06009AFA RID: 39674 RVA: 0x002A4F9C File Offset: 0x002A319C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F59 RID: 8025
-		// (get) Token: 0x060094DB RID: 38107 RVA: 0x002871F4 File Offset: 0x002853F4
+		// Token: 0x17001FBE RID: 8126
+		// (get) Token: 0x06009AFB RID: 39675 RVA: 0x002A4FD8 File Offset: 0x002A31D8
 		public int NameStringKey
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F5A RID: 8026
-		// (get) Token: 0x060094DC RID: 38108 RVA: 0x00287230 File Offset: 0x00285430
+		// Token: 0x17001FBF RID: 8127
+		// (get) Token: 0x06009AFC RID: 39676 RVA: 0x002A5014 File Offset: 0x002A3214
 		public int Name
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F5B RID: 8027
-		// (get) Token: 0x060094DD RID: 38109 RVA: 0x0028726C File Offset: 0x0028546C
+		// Token: 0x17001FC0 RID: 8128
+		// (get) Token: 0x06009AFD RID: 39677 RVA: 0x002A5050 File Offset: 0x002A3250
 		public int IntroduceStringKey
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F5C RID: 8028
-		// (get) Token: 0x060094DE RID: 38110 RVA: 0x002872AC File Offset: 0x002854AC
+		// Token: 0x17001FC1 RID: 8129
+		// (get) Token: 0x06009AFE RID: 39678 RVA: 0x002A5090 File Offset: 0x002A3290
 		public int Introduce
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001F5D RID: 8029
-		// (get) Token: 0x060094DF RID: 38111 RVA: 0x002872EC File Offset: 0x002854EC
+		// Token: 0x17001FC2 RID: 8130
+		// (get) Token: 0x06009AFF RID: 39679 RVA: 0x002A50D0 File Offset: 0x002A32D0
 		public string MonsterPileIconAsset
 		{
 			get
@@ -137,19 +137,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060094E0 RID: 38112 RVA: 0x00287324 File Offset: 0x00285524
+		// Token: 0x06009B00 RID: 39680 RVA: 0x002A5108 File Offset: 0x002A3308
 		public Span<byte> GetMonsterPileIconAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x060094E1 RID: 38113 RVA: 0x00287334 File Offset: 0x00285534
+		// Token: 0x06009B01 RID: 39681 RVA: 0x002A5118 File Offset: 0x002A3318
 		public byte[] GetMonsterPileIconAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004EB8 RID: 20152
+		// Token: 0x0400549D RID: 21661
 		private Table __p;
 	}
 }

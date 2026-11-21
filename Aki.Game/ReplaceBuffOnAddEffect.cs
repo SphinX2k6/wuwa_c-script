@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F59 RID: 12121
+// Token: 0x020024AC RID: 9388
 [NullableContext(1)]
 [Nullable(0)]
 public class ReplaceBuffOnAddEffect : BuffEffect
 {
-	// Token: 0x06019CBB RID: 105659 RVA: 0x006BA460 File Offset: 0x006B8660
+	// Token: 0x060175C6 RID: 95686 RVA: 0x006E077C File Offset: 0x006DE97C
 	public ReplaceBuffOnAddEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CBC RID: 105660 RVA: 0x006BA47C File Offset: 0x006B867C
+	// Token: 0x060175C7 RID: 95687 RVA: 0x006E0798 File Offset: 0x006DE998
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.ReplaceBuffMap.Clear();
@@ -30,7 +30,7 @@ public class ReplaceBuffOnAddEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CBD RID: 105661 RVA: 0x006BA4F8 File Offset: 0x006B86F8
+	// Token: 0x060175C8 RID: 95688 RVA: 0x006E0814 File Offset: 0x006DEA14
 	public override void OnCreated()
 	{
 		foreach (KeyValuePair<long, long> keyValuePair in this.ReplaceBuffMap)
@@ -48,7 +48,7 @@ public class ReplaceBuffOnAddEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CBE RID: 105662 RVA: 0x006BA590 File Offset: 0x006B8790
+	// Token: 0x060175C9 RID: 95689 RVA: 0x006E08AC File Offset: 0x006DEAAC
 	public override void OnRemoved(bool bPremature)
 	{
 		foreach (KeyValuePair<long, long> keyValuePair in this.ReplaceBuffMap)
@@ -61,14 +61,14 @@ public class ReplaceBuffOnAddEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CBF RID: 105663 RVA: 0x006BA5F8 File Offset: 0x006B87F8
+	// Token: 0x060175CA RID: 95690 RVA: 0x006E0914 File Offset: 0x006DEB14
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CC0 RID: 105664 RVA: 0x006BA5FC File Offset: 0x006B87FC
+	// Token: 0x060175CB RID: 95691 RVA: 0x006E0918 File Offset: 0x006DEB18
 	public override string GetDebugEffectString()
 	{
 		string text = "";
@@ -86,6 +86,6 @@ public class ReplaceBuffOnAddEffect : BuffEffect
 		return text;
 	}
 
-	// Token: 0x0400C270 RID: 49776
+	// Token: 0x0400C612 RID: 50706
 	protected Dictionary<long, long> ReplaceBuffMap = new Dictionary<long, long>();
 }

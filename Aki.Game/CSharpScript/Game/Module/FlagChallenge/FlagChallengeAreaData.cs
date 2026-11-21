@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A24 RID: 23076
+	// Token: 0x02004A00 RID: 18944
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeAreaData
 	{
-		// Token: 0x0603A891 RID: 239761 RVA: 0x00DEECAC File Offset: 0x00DECEAC
+		// Token: 0x0602F7DA RID: 194522 RVA: 0x00D3F230 File Offset: 0x00D3D430
 		public FlagChallengeAreaData(int id, int activityId)
 		{
 			this.Id = id;
@@ -17,37 +17,37 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.Config = FlagChallengeConfig.Instance.GetAreaConfig(id).Value;
 		}
 
-		// Token: 0x0603A892 RID: 239762 RVA: 0x00DEECE6 File Offset: 0x00DECEE6
+		// Token: 0x0602F7DB RID: 194523 RVA: 0x00D3F26A File Offset: 0x00D3D46A
 		public int GetLevelId()
 		{
 			return this.Config.LevelId;
 		}
 
-		// Token: 0x0603A893 RID: 239763 RVA: 0x00DEECF3 File Offset: 0x00DECEF3
+		// Token: 0x0602F7DC RID: 194524 RVA: 0x00D3F277 File Offset: 0x00D3D477
 		public int[] GetStrongholds()
 		{
 			return this.Config.Strongholds();
 		}
 
-		// Token: 0x0603A894 RID: 239764 RVA: 0x00DEED00 File Offset: 0x00DECF00
+		// Token: 0x0602F7DD RID: 194525 RVA: 0x00D3F284 File Offset: 0x00D3D484
 		public int[] GetRecommendLevel()
 		{
 			return this.Config.RecommendLevels();
 		}
 
-		// Token: 0x0603A895 RID: 239765 RVA: 0x00DEED0D File Offset: 0x00DECF0D
+		// Token: 0x0602F7DE RID: 194526 RVA: 0x00D3F291 File Offset: 0x00D3D491
 		public int GetAreaItemPos()
 		{
 			return this.Config.UiPos;
 		}
 
-		// Token: 0x0401E7BC RID: 124860
+		// Token: 0x04019263 RID: 103011
 		public readonly int ActivityId;
 
-		// Token: 0x0401E7BD RID: 124861
+		// Token: 0x04019264 RID: 103012
 		public readonly int Id;
 
-		// Token: 0x0401E7BE RID: 124862
+		// Token: 0x04019265 RID: 103013
 		public FlagChallengeArea Config;
 	}
 }

@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011AE RID: 4526
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012E8 RID: 4840
 	public class ITrackCaptureVisions : ITrackType
 	{
-		// Token: 0x060066C8 RID: 26312 RVA: 0x000F6310 File Offset: 0x000F4510
+		// Token: 0x06006CFF RID: 27903 RVA: 0x00103ADC File Offset: 0x00101CDC
 		private ITrackCaptureVisions_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060066C9 RID: 26313 RVA: 0x000F6348 File Offset: 0x000F4548
+		// Token: 0x06006D00 RID: 27904 RVA: 0x00103B14 File Offset: 0x00101D14
 		public static ITrackCaptureVisions Create([Nullable(2)] ITrackCaptureVisions instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066CA RID: 26314 RVA: 0x000F635B File Offset: 0x000F455B
+		// Token: 0x06006D01 RID: 27905 RVA: 0x00103B27 File Offset: 0x00101D27
 		public static ITrackCaptureVisions CreateFromSetValue([Nullable(2)] ITrackCaptureVisions_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060066CB RID: 26315 RVA: 0x000F636E File Offset: 0x000F456E
+		// Token: 0x06006D02 RID: 27906 RVA: 0x00103B3A File Offset: 0x00101D3A
 		public new ITrackCaptureVisions_SetValue ToSetValue()
 		{
 			return new ITrackCaptureVisions_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002164 RID: 8548
-		// (get) Token: 0x060066CC RID: 26316 RVA: 0x000F6399 File Offset: 0x000F4599
-		// (set) Token: 0x060066CD RID: 26317 RVA: 0x000F63C4 File Offset: 0x000F45C4
+		// Token: 0x17002323 RID: 8995
+		// (get) Token: 0x06006D03 RID: 27907 RVA: 0x00103B65 File Offset: 0x00101D65
+		// (set) Token: 0x06006D04 RID: 27908 RVA: 0x00103B90 File Offset: 0x00101D90
 		public override ETrackType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002165 RID: 8549
-		// (get) Token: 0x060066CE RID: 26318 RVA: 0x000F63D2 File Offset: 0x000F45D2
-		// (set) Token: 0x060066CF RID: 26319 RVA: 0x000F63F9 File Offset: 0x000F45F9
+		// Token: 0x17002324 RID: 8996
+		// (get) Token: 0x06006D05 RID: 27909 RVA: 0x00103B9E File Offset: 0x00101D9E
+		// (set) Token: 0x06006D06 RID: 27910 RVA: 0x00103BC5 File Offset: 0x00101DC5
 		[Nullable(2)]
 		public override IGravityDirectionType GravityDirection
 		{
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002166 RID: 8550
-		// (get) Token: 0x060066D0 RID: 26320 RVA: 0x000F6407 File Offset: 0x000F4607
-		// (set) Token: 0x060066D1 RID: 26321 RVA: 0x000F642E File Offset: 0x000F462E
+		// Token: 0x17002325 RID: 8997
+		// (get) Token: 0x06006D07 RID: 27911 RVA: 0x00103BD3 File Offset: 0x00101DD3
+		// (set) Token: 0x06006D08 RID: 27912 RVA: 0x00103BFA File Offset: 0x00101DFA
 		public virtual List<int> VisionDropEntities
 		{
 			get
@@ -137,11 +135,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DAB RID: 15787
+		// Token: 0x04004113 RID: 16659
 		[Nullable(2)]
 		protected new ITrackCaptureVisions FbInstance;
 
-		// Token: 0x04003DAC RID: 15788
+		// Token: 0x04004114 RID: 16660
 		[Nullable(2)]
 		protected new ITrackCaptureVisions_SetValue PocoInterface;
 	}

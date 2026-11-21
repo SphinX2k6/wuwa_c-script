@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005946 RID: 22854
+	// Token: 0x0200491F RID: 18719
 	public enum EHonamiStoryLoadingTimingType
 	{
-		// Token: 0x0401E424 RID: 123940
+		// Token: 0x04018EC1 RID: 102081
 		MainEnter = 1,
-		// Token: 0x0401E425 RID: 123941
+		// Token: 0x04018EC2 RID: 102082
 		GamePlayEnter,
-		// Token: 0x0401E426 RID: 123942
+		// Token: 0x04018EC3 RID: 102083
 		FailLeave,
-		// Token: 0x0401E427 RID: 123943
+		// Token: 0x04018EC4 RID: 102084
 		SuccessLeave,
-		// Token: 0x0401E428 RID: 123944
+		// Token: 0x04018EC5 RID: 102085
 		MainLeave,
-		// Token: 0x0401E429 RID: 123945
+		// Token: 0x04018EC6 RID: 102086
 		FreeExplore,
-		// Token: 0x0401E42A RID: 123946
+		// Token: 0x04018EC7 RID: 102087
 		Tower,
-		// Token: 0x0401E42B RID: 123947
+		// Token: 0x04018EC8 RID: 102088
 		MapPointTransfer,
-		// Token: 0x0401E42C RID: 123948
+		// Token: 0x04018EC9 RID: 102089
 		LeaveTower
 	}
 }

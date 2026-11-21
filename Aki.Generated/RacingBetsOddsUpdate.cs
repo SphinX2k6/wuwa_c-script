@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F8D RID: 3981
+	// Token: 0x02001074 RID: 4212
 	public struct RacingBetsOddsUpdate : IFlatbufferObject
 	{
-		// Token: 0x17002CBD RID: 11453
-		// (get) Token: 0x0600B86F RID: 47215 RVA: 0x002D604D File Offset: 0x002D424D
+		// Token: 0x17002D35 RID: 11573
+		// (get) Token: 0x0600BEAC RID: 48812 RVA: 0x002F2900 File Offset: 0x002F0B00
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B870 RID: 47216 RVA: 0x002D605A File Offset: 0x002D425A
+		// Token: 0x0600BEAD RID: 48813 RVA: 0x002F290D File Offset: 0x002F0B0D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B871 RID: 47217 RVA: 0x002D6064 File Offset: 0x002D4264
+		// Token: 0x0600BEAE RID: 48814 RVA: 0x002F2914 File Offset: 0x002F0B14
 		public static RacingBetsOddsUpdate GetRootAsRacingBetsOddsUpdate(ByteBuffer _bb)
 		{
 			return RacingBetsOddsUpdate.GetRootAsRacingBetsOddsUpdate(_bb, default(RacingBetsOddsUpdate));
 		}
 
-		// Token: 0x0600B872 RID: 47218 RVA: 0x002D6080 File Offset: 0x002D4280
+		// Token: 0x0600BEAF RID: 48815 RVA: 0x002F2930 File Offset: 0x002F0B30
 		public static RacingBetsOddsUpdate GetRootAsRacingBetsOddsUpdate(ByteBuffer _bb, RacingBetsOddsUpdate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B873 RID: 47219 RVA: 0x002D609D File Offset: 0x002D429D
+		// Token: 0x0600BEB0 RID: 48816 RVA: 0x002F294D File Offset: 0x002F0B4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B874 RID: 47220 RVA: 0x002D60AC File Offset: 0x002D42AC
+		// Token: 0x0600BEB1 RID: 48817 RVA: 0x002F295C File Offset: 0x002F0B5C
 		public RacingBetsOddsUpdate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002CBE RID: 11454
-		// (get) Token: 0x0600B875 RID: 47221 RVA: 0x002D60BC File Offset: 0x002D42BC
+		// Token: 0x17002D36 RID: 11574
+		// (get) Token: 0x0600BEB2 RID: 48818 RVA: 0x002F296C File Offset: 0x002F0B6C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CBF RID: 11455
-		// (get) Token: 0x0600B876 RID: 47222 RVA: 0x002D60F8 File Offset: 0x002D42F8
+		// Token: 0x17002D37 RID: 11575
+		// (get) Token: 0x0600BEB3 RID: 48819 RVA: 0x002F29A8 File Offset: 0x002F0BA8
 		public int IndexId
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B877 RID: 47223 RVA: 0x002D6134 File Offset: 0x002D4334
+		// Token: 0x0600BEB4 RID: 48820 RVA: 0x002F29E4 File Offset: 0x002F0BE4
 		public string OddsUpdatePoint(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CC0 RID: 11456
-		// (get) Token: 0x0600B878 RID: 47224 RVA: 0x002D6170 File Offset: 0x002D4370
+		// Token: 0x17002D38 RID: 11576
+		// (get) Token: 0x0600BEB5 RID: 48821 RVA: 0x002F2A20 File Offset: 0x002F0C20
 		public int OddsUpdatePointLength
 		{
 			get
@@ -106,24 +106,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B879 RID: 47225 RVA: 0x002D619B File Offset: 0x002D439B
+		// Token: 0x0600BEB6 RID: 48822 RVA: 0x002F2A4B File Offset: 0x002F0C4B
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用OddsUpdatePointIter()或GetOddsUpdatePointBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] OddsUpdatePoint()
+		public string[] OddsUpdatePoint()
 		{
 			return this.OddsUpdatePointIter().ToArray<string>();
 		}
 
-		// Token: 0x0600B87A RID: 47226 RVA: 0x002D61A8 File Offset: 0x002D43A8
+		// Token: 0x0600BEB7 RID: 48823 RVA: 0x002F2A58 File Offset: 0x002F0C58
 		[NullableContext(1)]
-		public readonly IEnumerable<string> OddsUpdatePointIter()
+		public IEnumerable<string> OddsUpdatePointIter()
 		{
 			RacingBetsOddsUpdate.<OddsUpdatePointIter>d__16 <OddsUpdatePointIter>d__ = new RacingBetsOddsUpdate.<OddsUpdatePointIter>d__16(-2);
 			<OddsUpdatePointIter>d__.<>3__<>4__this = this;
 			return <OddsUpdatePointIter>d__;
 		}
 
-		// Token: 0x0400505C RID: 20572
+		// Token: 0x04005643 RID: 22083
 		private Table __p;
 	}
 }

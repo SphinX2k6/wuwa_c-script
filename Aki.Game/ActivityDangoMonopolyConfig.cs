@@ -3,37 +3,37 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200121F RID: 4639
+// Token: 0x020006D3 RID: 1747
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityDangoMonopolyConfig : ConfigBase
 {
-	// Token: 0x06007CC6 RID: 31942 RVA: 0x001A651F File Offset: 0x001A471F
+	// Token: 0x0600505C RID: 20572 RVA: 0x001AF1D3 File Offset: 0x001AD3D3
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06007CC7 RID: 31943 RVA: 0x001A6522 File Offset: 0x001A4722
+	// Token: 0x0600505D RID: 20573 RVA: 0x001AF1D6 File Offset: 0x001AD3D6
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x06007CC8 RID: 31944 RVA: 0x001A6525 File Offset: 0x001A4725
+	// Token: 0x0600505E RID: 20574 RVA: 0x001AF1D9 File Offset: 0x001AD3D9
 	public DangoMonopoly? GetInfo(int activityId)
 	{
 		return ConfigDangoMonopolyByActivityId.GetConfig(activityId, true);
 	}
 
-	// Token: 0x06007CC9 RID: 31945 RVA: 0x001A652E File Offset: 0x001A472E
+	// Token: 0x0600505F RID: 20575 RVA: 0x001AF1E2 File Offset: 0x001AD3E2
 	public DangoMonopolyBoard? GetBoard(int id)
 	{
 		return ConfigDangoMonopolyBoardById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007CCA RID: 31946 RVA: 0x001A6537 File Offset: 0x001A4737
+	// Token: 0x06005060 RID: 20576 RVA: 0x001AF1EB File Offset: 0x001AD3EB
 	public DangoMonopolyBoard[] GetBoardList(int groupId)
 	{
 		if (ConfigDangoMonopolyBoardByGroup.GetConfigList(groupId, true) == null)
@@ -43,13 +43,13 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ConfigDangoMonopolyBoardByGroup.GetConfigList(groupId, true).ToArray<DangoMonopolyBoard>();
 	}
 
-	// Token: 0x06007CCB RID: 31947 RVA: 0x001A6554 File Offset: 0x001A4754
+	// Token: 0x06005061 RID: 20577 RVA: 0x001AF208 File Offset: 0x001AD408
 	public DangoMonopolyTask? GetTask(int id)
 	{
 		return ConfigDangoMonopolyTaskById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007CCC RID: 31948 RVA: 0x001A655D File Offset: 0x001A475D
+	// Token: 0x06005062 RID: 20578 RVA: 0x001AF211 File Offset: 0x001AD411
 	public DangoMonopolyTask[] GetTaskList(int groupId)
 	{
 		if (ConfigDangoMonopolyTaskByGroup.GetConfigList(groupId, true) == null)
@@ -59,13 +59,13 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ConfigDangoMonopolyTaskByGroup.GetConfigList(groupId, true).ToArray<DangoMonopolyTask>();
 	}
 
-	// Token: 0x06007CCD RID: 31949 RVA: 0x001A657A File Offset: 0x001A477A
+	// Token: 0x06005063 RID: 20579 RVA: 0x001AF22E File Offset: 0x001AD42E
 	public DangoMonopolyGrid? GetGrid(int id)
 	{
 		return ConfigDangoMonopolyGridById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007CCE RID: 31950 RVA: 0x001A6583 File Offset: 0x001A4783
+	// Token: 0x06005064 RID: 20580 RVA: 0x001AF237 File Offset: 0x001AD437
 	public DangoMonopolyGrid[] GetGridList(int groupId)
 	{
 		if (ConfigDangoMonopolyGridByGroup.GetConfigList(groupId, true) == null)
@@ -75,13 +75,13 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ConfigDangoMonopolyGridByGroup.GetConfigList(groupId, true).ToArray<DangoMonopolyGrid>();
 	}
 
-	// Token: 0x06007CCF RID: 31951 RVA: 0x001A65A0 File Offset: 0x001A47A0
+	// Token: 0x06005065 RID: 20581 RVA: 0x001AF254 File Offset: 0x001AD454
 	public DangoMonopolyProperty? GetProperty(int id)
 	{
 		return ConfigDangoMonopolyPropertyById.GetConfig(id, true);
 	}
 
-	// Token: 0x06007CD0 RID: 31952 RVA: 0x001A65A9 File Offset: 0x001A47A9
+	// Token: 0x06005066 RID: 20582 RVA: 0x001AF25D File Offset: 0x001AD45D
 	public DangoMonopolyMapPoint[] GetGridPoint(int id)
 	{
 		if (ConfigDangoMonopolyMapPointByActivityId.GetConfigList(id, true) == null)
@@ -91,13 +91,13 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ConfigDangoMonopolyMapPointByActivityId.GetConfigList(id, true).ToArray<DangoMonopolyMapPoint>();
 	}
 
-	// Token: 0x06007CD1 RID: 31953 RVA: 0x001A65C6 File Offset: 0x001A47C6
+	// Token: 0x06005067 RID: 20583 RVA: 0x001AF27A File Offset: 0x001AD47A
 	public string GetBattleConfigPath()
 	{
 		return "/Game/Aki/Character/NPC/Tuanzi/CommonConfig/DangoGlobalConfig_Monopoly.DangoGlobalConfig_Monopoly";
 	}
 
-	// Token: 0x06007CD2 RID: 31954 RVA: 0x001A65CD File Offset: 0x001A47CD
+	// Token: 0x06005068 RID: 20584 RVA: 0x001AF281 File Offset: 0x001AD481
 	public int[] GetActiveDangoAniInfo()
 	{
 		if (ConfigCommonParamById.GetIntArrayConfig("DangoMonopolyActiveDangoAni") == null)
@@ -107,7 +107,7 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ConfigCommonParamById.GetIntArrayConfig("DangoMonopolyActiveDangoAni").ToArray<int>();
 	}
 
-	// Token: 0x06007CD3 RID: 31955 RVA: 0x001A65F0 File Offset: 0x001A47F0
+	// Token: 0x06005069 RID: 20585 RVA: 0x001AF2A4 File Offset: 0x001AD4A4
 	public bool GetIsOpenHintShow()
 	{
 		if (this.IsOpenHintShow == null)
@@ -117,44 +117,44 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return this.IsOpenHintShow.Value;
 	}
 
-	// Token: 0x06007CD4 RID: 31956 RVA: 0x001A6632 File Offset: 0x001A4832
+	// Token: 0x0600506A RID: 20586 RVA: 0x001AF2E6 File Offset: 0x001AD4E6
 	public void SetPushHintState(bool state)
 	{
 		this.IsPushHint = state;
 	}
 
-	// Token: 0x06007CD5 RID: 31957 RVA: 0x001A663B File Offset: 0x001A483B
+	// Token: 0x0600506B RID: 20587 RVA: 0x001AF2EF File Offset: 0x001AD4EF
 	public bool GetIsPushHintShow()
 	{
 		return this.IsPushHint && this.GetIsOpenHintShow();
 	}
 
-	// Token: 0x06007CD6 RID: 31958 RVA: 0x001A6654 File Offset: 0x001A4854
+	// Token: 0x0600506C RID: 20588 RVA: 0x001AF308 File Offset: 0x001AD508
 	public int GetDangoMoveInTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonopolyDangoInTime").GetValueOrDefault();
 	}
 
-	// Token: 0x06007CD7 RID: 31959 RVA: 0x001A6674 File Offset: 0x001A4874
+	// Token: 0x0600506D RID: 20589 RVA: 0x001AF328 File Offset: 0x001AD528
 	public int GetDangoMoveOutTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonopolyDangoOutTime").GetValueOrDefault();
 	}
 
-	// Token: 0x06007CD8 RID: 31960 RVA: 0x001A6694 File Offset: 0x001A4894
+	// Token: 0x0600506E RID: 20590 RVA: 0x001AF348 File Offset: 0x001AD548
 	public int GetDangoMoveOutDelayTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonopolyDangoOutDelayTime").GetValueOrDefault();
 	}
 
-	// Token: 0x06007CD9 RID: 31961 RVA: 0x001A66B4 File Offset: 0x001A48B4
+	// Token: 0x0600506F RID: 20591 RVA: 0x001AF368 File Offset: 0x001AD568
 	public int GetDangoChangeCheckTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("MonopolyDangoChangeCheckTime").GetValueOrDefault();
 	}
 
-	// Token: 0x17000A93 RID: 2707
-	// (get) Token: 0x06007CDA RID: 31962 RVA: 0x001A66D3 File Offset: 0x001A48D3
+	// Token: 0x17000AB3 RID: 2739
+	// (get) Token: 0x06005070 RID: 20592 RVA: 0x001AF387 File Offset: 0x001AD587
 	public static ActivityDangoMonopolyConfig Instance
 	{
 		get
@@ -163,7 +163,7 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06007CDB RID: 31963 RVA: 0x001A66DA File Offset: 0x001A48DA
+	// Token: 0x06005071 RID: 20593 RVA: 0x001AF38E File Offset: 0x001AD58E
 	public static ActivityDangoMonopolyConfig GetOrCreateInstance()
 	{
 		if (ActivityDangoMonopolyConfig._Instance == null)
@@ -173,7 +173,7 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return ActivityDangoMonopolyConfig._Instance;
 	}
 
-	// Token: 0x06007CDC RID: 31964 RVA: 0x001A66EE File Offset: 0x001A48EE
+	// Token: 0x06005072 RID: 20594 RVA: 0x001AF3A2 File Offset: 0x001AD5A2
 	public static bool CreateInstance()
 	{
 		if (ActivityDangoMonopolyConfig._Instance != null)
@@ -184,30 +184,30 @@ public class ActivityDangoMonopolyConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06007CDD RID: 31965 RVA: 0x001A6704 File Offset: 0x001A4904
+	// Token: 0x06005073 RID: 20595 RVA: 0x001AF3B8 File Offset: 0x001AD5B8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007CDE RID: 31966 RVA: 0x001A6706 File Offset: 0x001A4906
+	// Token: 0x06005074 RID: 20596 RVA: 0x001AF3BA File Offset: 0x001AD5BA
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityDangoMonopolyConfig._Instance = null;
 	}
 
-	// Token: 0x06007CDF RID: 31967 RVA: 0x001A670E File Offset: 0x001A490E
+	// Token: 0x06005075 RID: 20597 RVA: 0x001AF3C2 File Offset: 0x001AD5C2
 	static ActivityDangoMonopolyConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityDangoMonopolyConfig.CreateStaticDefaultValue), new Action(ActivityDangoMonopolyConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040038F2 RID: 14578
+	// Token: 0x0400398B RID: 14731
 	private bool? IsOpenHintShow;
 
-	// Token: 0x040038F3 RID: 14579
+	// Token: 0x0400398C RID: 14732
 	private bool IsPushHint;
 
-	// Token: 0x040038F4 RID: 14580
+	// Token: 0x0400398D RID: 14733
 	[Nullable(2)]
 	private static ActivityDangoMonopolyConfig _Instance;
 }

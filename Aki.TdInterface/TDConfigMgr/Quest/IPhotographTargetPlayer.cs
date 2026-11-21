@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001049 RID: 4169
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001177 RID: 4471
 	public class IPhotographTargetPlayer : IPhotographTarget
 	{
-		// Token: 0x06005D64 RID: 23908 RVA: 0x000E220C File Offset: 0x000E040C
+		// Token: 0x06006356 RID: 25430 RVA: 0x000EF1E0 File Offset: 0x000ED3E0
 		private IPhotographTargetPlayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D65 RID: 23909 RVA: 0x000E2244 File Offset: 0x000E0444
+		// Token: 0x06006357 RID: 25431 RVA: 0x000EF218 File Offset: 0x000ED418
 		public static IPhotographTargetPlayer Create([Nullable(2)] IPhotographTargetPlayer instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D66 RID: 23910 RVA: 0x000E2257 File Offset: 0x000E0457
+		// Token: 0x06006358 RID: 25432 RVA: 0x000EF22B File Offset: 0x000ED42B
 		public static IPhotographTargetPlayer CreateFromSetValue([Nullable(2)] IPhotographTargetPlayer_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D67 RID: 23911 RVA: 0x000E226A File Offset: 0x000E046A
+		// Token: 0x06006359 RID: 25433 RVA: 0x000EF23E File Offset: 0x000ED43E
 		public new IPhotographTargetPlayer_SetValue ToSetValue()
 		{
 			return new IPhotographTargetPlayer_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EC6 RID: 7878
-		// (get) Token: 0x06005D68 RID: 23912 RVA: 0x000E22A1 File Offset: 0x000E04A1
-		// (set) Token: 0x06005D69 RID: 23913 RVA: 0x000E22CC File Offset: 0x000E04CC
+		// Token: 0x17002075 RID: 8309
+		// (get) Token: 0x0600635A RID: 25434 RVA: 0x000EF275 File Offset: 0x000ED475
+		// (set) Token: 0x0600635B RID: 25435 RVA: 0x000EF2A0 File Offset: 0x000ED4A0
 		public override EPhotographTargetType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EC7 RID: 7879
-		// (get) Token: 0x06005D6A RID: 23914 RVA: 0x000E22DC File Offset: 0x000E04DC
-		// (set) Token: 0x06005D6B RID: 23915 RVA: 0x000E2316 File Offset: 0x000E0516
+		// Token: 0x17002076 RID: 8310
+		// (get) Token: 0x0600635C RID: 25436 RVA: 0x000EF2B0 File Offset: 0x000ED4B0
+		// (set) Token: 0x0600635D RID: 25437 RVA: 0x000EF2EA File Offset: 0x000ED4EA
 		public virtual int? RoleId
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EC8 RID: 7880
-		// (get) Token: 0x06005D6C RID: 23916 RVA: 0x000E2324 File Offset: 0x000E0524
-		// (set) Token: 0x06005D6D RID: 23917 RVA: 0x000E234F File Offset: 0x000E054F
+		// Token: 0x17002077 RID: 8311
+		// (get) Token: 0x0600635E RID: 25438 RVA: 0x000EF2F8 File Offset: 0x000ED4F8
+		// (set) Token: 0x0600635F RID: 25439 RVA: 0x000EF323 File Offset: 0x000ED523
 		public virtual EOnCameraCheckType OnCameraCheckType
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EC9 RID: 7881
-		// (get) Token: 0x06005D6E RID: 23918 RVA: 0x000E2360 File Offset: 0x000E0560
-		// (set) Token: 0x06005D6F RID: 23919 RVA: 0x000E23C1 File Offset: 0x000E05C1
+		// Token: 0x17002078 RID: 8312
+		// (get) Token: 0x06006360 RID: 25440 RVA: 0x000EF334 File Offset: 0x000ED534
+		// (set) Token: 0x06006361 RID: 25441 RVA: 0x000EF395 File Offset: 0x000ED595
 		public virtual IConditionGroup CommonCondition
 		{
 			get
@@ -163,18 +161,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400383D RID: 14397
+		// Token: 0x04003B85 RID: 15237
 		[Nullable(2)]
 		protected new IPhotographTargetPlayer FbInstance;
 
-		// Token: 0x0400383E RID: 14398
+		// Token: 0x04003B86 RID: 15238
 		[Nullable(2)]
 		protected new IPhotographTargetPlayer_SetValue PocoInterface;
 
-		// Token: 0x0400383F RID: 14399
+		// Token: 0x04003B87 RID: 15239
 		private IConditionGroup _CommonConditionCache;
 
-		// Token: 0x04003840 RID: 14400
+		// Token: 0x04003B88 RID: 15240
 		private bool _CommonConditionInited;
 	}
 }

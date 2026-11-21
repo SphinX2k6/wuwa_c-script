@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CC6 RID: 7366
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001ECD RID: 7885
 	public class IPathLineFacingType
 	{
-		// Token: 0x06009E1F RID: 40479 RVA: 0x00169C54 File Offset: 0x00167E54
+		// Token: 0x0600A7CD RID: 42957 RVA: 0x0017D8B4 File Offset: 0x0017BAB4
 		private IPathLineFacingType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E20 RID: 40480 RVA: 0x00169C8C File Offset: 0x00167E8C
+		// Token: 0x0600A7CE RID: 42958 RVA: 0x0017D8EC File Offset: 0x0017BAEC
 		public static IPathLineFacingType Create([Nullable(2)] IPathLineFacingType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E21 RID: 40481 RVA: 0x00169C9F File Offset: 0x00167E9F
+		// Token: 0x0600A7CF RID: 42959 RVA: 0x0017D8FF File Offset: 0x0017BAFF
 		public static IPathLineFacingType CreateFromSetValue([Nullable(2)] IPathLineFacingType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E22 RID: 40482 RVA: 0x00169CB2 File Offset: 0x00167EB2
+		// Token: 0x0600A7D0 RID: 42960 RVA: 0x0017D912 File Offset: 0x0017BB12
 		public IPathLineFacingType_SetValue ToSetValue()
 		{
 			return new IPathLineFacingType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700313D RID: 12605
-		// (get) Token: 0x06009E23 RID: 40483 RVA: 0x00169CC5 File Offset: 0x00167EC5
-		// (set) Token: 0x06009E24 RID: 40484 RVA: 0x00169CF0 File Offset: 0x00167EF0
+		// Token: 0x170033C1 RID: 13249
+		// (get) Token: 0x0600A7D1 RID: 42961 RVA: 0x0017D925 File Offset: 0x0017BB25
+		// (set) Token: 0x0600A7D2 RID: 42962 RVA: 0x0017D950 File Offset: 0x0017BB50
 		public virtual EPathLineFacingType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F9C RID: 24476
+		// Token: 0x040064F8 RID: 25848
 		[Nullable(2)]
 		protected IPathLineFacingType FbInstance;
 
-		// Token: 0x04005F9D RID: 24477
+		// Token: 0x040064F9 RID: 25849
 		[Nullable(2)]
 		protected IPathLineFacingType_SetValue PocoInterface;
 	}

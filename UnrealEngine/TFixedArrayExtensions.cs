@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000073 RID: 115
+	// Token: 0x02000058 RID: 88
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class TFixedArrayExtensions
 	{
-		// Token: 0x06000E1B RID: 3611 RVA: 0x00014BAE File Offset: 0x00012DAE
+		// Token: 0x060009AC RID: 2476 RVA: 0x0000F8AE File Offset: 0x0000DAAE
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -24,14 +24,14 @@ namespace UnrealEngine
 			return new Span<T>(InArr.NativePtr, InArr.Num());
 		}
 
-		// Token: 0x06000E1C RID: 3612 RVA: 0x00014BD3 File Offset: 0x00012DD3
+		// Token: 0x060009AD RID: 2477 RVA: 0x0000F8D3 File Offset: 0x0000DAD3
 		[NullableContext(0)]
 		public unsafe static Span<U> AsSpan<[Nullable(2)] T, [IsUnmanaged] U>([Nullable(1)] this TArray<T> InArr) where U : struct, ValueType
 		{
 			return new Span<U>(InArr.ScriptArray->Data, InArr.ScriptArray->ArrayNum * TArray<T>.Processor.Size / sizeof(U));
 		}
 
-		// Token: 0x06000E1D RID: 3613 RVA: 0x00014C04 File Offset: 0x00012E04
+		// Token: 0x060009AE RID: 2478 RVA: 0x0000F904 File Offset: 0x0000DB04
 		public static T[] ToArray<[Nullable(2)] T>(this TFixedArray<T> InArr)
 		{
 			int num = InArr.Num();
@@ -44,7 +44,7 @@ namespace UnrealEngine
 			return array;
 		}
 
-		// Token: 0x06000E1E RID: 3614 RVA: 0x00014C34 File Offset: 0x00012E34
+		// Token: 0x060009AF RID: 2479 RVA: 0x0000F934 File Offset: 0x0000DB34
 		public static List<T> ToList<[Nullable(2)] T>(this TFixedArray<T> InArr)
 		{
 			int num = InArr.Num();
@@ -67,7 +67,7 @@ namespace UnrealEngine
 			return list;
 		}
 
-		// Token: 0x06000E1F RID: 3615 RVA: 0x00014C91 File Offset: 0x00012E91
+		// Token: 0x060009B0 RID: 2480 RVA: 0x0000F991 File Offset: 0x0000DB91
 		[NullableContext(0)]
 		public static ref T GetRefStruct_Unsafe<[IsUnmanaged] T>([Nullable(new byte[]
 		{
@@ -83,7 +83,7 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000E20 RID: 3616 RVA: 0x00014CBC File Offset: 0x00012EBC
+		// Token: 0x060009B1 RID: 2481 RVA: 0x0000F9BC File Offset: 0x0000DBBC
 		public static T GetRef_Unsafe<T>(this TFixedArray<T> InArray, int Index) where T : class
 		{
 			if (TFixedArray<T>.Processor.CanAsSpan)

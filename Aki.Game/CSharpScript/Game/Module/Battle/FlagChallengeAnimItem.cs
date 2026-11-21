@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C34 RID: 23604
+	// Token: 0x02004C14 RID: 19476
 	public class FlagChallengeAnimItem : UiPanelBase
 	{
-		// Token: 0x0603BA44 RID: 244292 RVA: 0x00E3B644 File Offset: 0x00E39844
+		// Token: 0x0603098F RID: 199055 RVA: 0x00D8B9B4 File Offset: 0x00D89BB4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA45 RID: 244293 RVA: 0x00E3B6CE File Offset: 0x00E398CE
+		// Token: 0x06030990 RID: 199056 RVA: 0x00D8BA3E File Offset: 0x00D89C3E
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEnd), false);
 		}
 
-		// Token: 0x0603BA46 RID: 244294 RVA: 0x00E3B6FE File Offset: 0x00E398FE
+		// Token: 0x06030991 RID: 199057 RVA: 0x00D8BA6E File Offset: 0x00D89C6E
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x0603BA47 RID: 244295 RVA: 0x00E3B707 File Offset: 0x00E39907
+		// Token: 0x06030992 RID: 199058 RVA: 0x00D8BA77 File Offset: 0x00D89C77
 		public void Clear()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0603BA48 RID: 244296 RVA: 0x00E3B71C File Offset: 0x00E3991C
+		// Token: 0x06030993 RID: 199059 RVA: 0x00D8BA8C File Offset: 0x00D89C8C
 		public void PlayStartShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Battle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Morale_32_title_41", Array.Empty<object>());
 		}
 
-		// Token: 0x0603BA49 RID: 244297 RVA: 0x00E3B788 File Offset: 0x00E39988
+		// Token: 0x06030994 RID: 199060 RVA: 0x00D8BAF8 File Offset: 0x00D89CF8
 		public void PlayEndShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Battle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Morale_32_title_42", Array.Empty<object>());
 		}
 
-		// Token: 0x0603BA4A RID: 244298 RVA: 0x00E3B7F0 File Offset: 0x00E399F0
+		// Token: 0x06030995 RID: 199061 RVA: 0x00D8BB60 File Offset: 0x00D89D60
 		public void PlayLevelUpAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Battle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "Morale_32_title_40", Array.Empty<object>());
 		}
 
-		// Token: 0x0603BA4B RID: 244299 RVA: 0x00E3B853 File Offset: 0x00E39A53
+		// Token: 0x06030996 RID: 199062 RVA: 0x00D8BBC3 File Offset: 0x00D89DC3
 		[NullableContext(1)]
 		public void SetText(string text)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Battle
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x0603BA4C RID: 244300 RVA: 0x00E3B868 File Offset: 0x00E39A68
+		// Token: 0x06030997 RID: 199063 RVA: 0x00D8BBD8 File Offset: 0x00D89DD8
 		private void SetArrowVisible(bool visible)
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -131,18 +131,18 @@ namespace CSharpScript.Game.Module.Battle
 			texture.SetUIActive(visible);
 		}
 
-		// Token: 0x0401F0C8 RID: 127176
+		// Token: 0x04019B79 RID: 105337
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BE26 RID: 48678
+		// Token: 0x0200A82E RID: 43054
 		private enum EAnimItemComponentType
 		{
-			// Token: 0x04039575 RID: 234869
+			// Token: 0x04033F38 RID: 212792
 			ArrowTexture,
-			// Token: 0x04039576 RID: 234870
+			// Token: 0x04033F39 RID: 212793
 			BgSprite,
-			// Token: 0x04039577 RID: 234871
+			// Token: 0x04033F3A RID: 212794
 			DescText
 		}
 	}

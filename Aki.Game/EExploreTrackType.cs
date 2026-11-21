@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001AAE RID: 6830
+// Token: 0x02000F6D RID: 3949
 public enum EExploreTrackType
 {
-	// Token: 0x04005D27 RID: 23847
+	// Token: 0x04005DF6 RID: 24054
 	Nearest,
-	// Token: 0x04005D28 RID: 23848
+	// Token: 0x04005DF7 RID: 24055
 	MinId
 }

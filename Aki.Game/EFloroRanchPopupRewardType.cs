@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001B31 RID: 6961
+// Token: 0x02000FF0 RID: 4080
 public enum EFloroRanchPopupRewardType
 {
-	// Token: 0x04005EE9 RID: 24297
+	// Token: 0x04005FB8 RID: 24504
 	Coin,
-	// Token: 0x04005EEA RID: 24298
+	// Token: 0x04005FB9 RID: 24505
 	Diamond,
-	// Token: 0x04005EEB RID: 24299
+	// Token: 0x04005FBA RID: 24506
 	Salary
 }

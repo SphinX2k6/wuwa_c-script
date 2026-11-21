@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000476 RID: 1142
+	// Token: 0x0200048C RID: 1164
 	public class ConfigKSCBasePropertyByKscGameplayType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001ACE RID: 6862 RVA: 0x000F0EF8 File Offset: 0x000EF0F8
+		// Token: 0x06001B52 RID: 6994 RVA: 0x000F764C File Offset: 0x000F584C
 		static ConfigKSCBasePropertyByKscGameplayType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKSCBasePropertyByKscGameplayType.CreateStaticDefaultValue), new Action(ConfigKSCBasePropertyByKscGameplayType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001ACF RID: 6863 RVA: 0x000F0F18 File Offset: 0x000EF118
+		// Token: 0x06001B53 RID: 6995 RVA: 0x000F766C File Offset: 0x000F586C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKSCBasePropertyByKscGameplayType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001AD0 RID: 6864 RVA: 0x000F0F97 File Offset: 0x000EF197
+		// Token: 0x06001B54 RID: 6996 RVA: 0x000F76EB File Offset: 0x000F58EB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKSCBasePropertyByKscGameplayType.LogPair = null;
 			ConfigKSCBasePropertyByKscGameplayType.HandleId = 0;
 		}
 
-		// Token: 0x06001AD1 RID: 6865 RVA: 0x000F0FA5 File Offset: 0x000EF1A5
+		// Token: 0x06001B55 RID: 6997 RVA: 0x000F76F9 File Offset: 0x000F58F9
 		public static void Init()
 		{
 			ConfigKSCBasePropertyByKscGameplayType.HandleId = ConfigCommon.InitDataStatement(ConfigKSCBasePropertyByKscGameplayType.HandleId, "db_kscproperty.db", "select BinData from `KSCBaseProperty` where KscGameplayType=?");
 		}
 
-		// Token: 0x06001AD2 RID: 6866 RVA: 0x000F0FC0 File Offset: 0x000EF1C0
+		// Token: 0x06001B56 RID: 6998 RVA: 0x000F7714 File Offset: 0x000F5914
 		[NullableContext(2)]
 		public static IReadOnlyList<KSCBaseProperty> GetConfigList(int p0KscGameplayType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001F1E RID: 7966
+		// Token: 0x04001FB8 RID: 8120
 		private const string DB = "db_kscproperty.db";
 
-		// Token: 0x04001F1F RID: 7967
+		// Token: 0x04001FB9 RID: 8121
 		private const string FILE = "s.SimpleCombat属性.xlsx";
 
-		// Token: 0x04001F20 RID: 7968
+		// Token: 0x04001FBA RID: 8122
 		private const string TABLE = "KSCBaseProperty";
 
-		// Token: 0x04001F21 RID: 7969
+		// Token: 0x04001FBB RID: 8123
 		private const string COMMAND = "select BinData from `KSCBaseProperty` where KscGameplayType=?";
 
-		// Token: 0x04001F22 RID: 7970
+		// Token: 0x04001FBC RID: 8124
 		private const string KEY_PREFIX = "KSCBasePropertyByKscGameplayType";
 
-		// Token: 0x04001F23 RID: 7971
+		// Token: 0x04001FBD RID: 8125
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F24 RID: 7972
+		// Token: 0x04001FBE RID: 8126
 		private static int HandleId;
 	}
 }

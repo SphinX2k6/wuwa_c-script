@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02002A33 RID: 10803
+// Token: 0x02001FAE RID: 8110
 public class SkinObtainViewData
 {
-	// Token: 0x0400A6FE RID: 42750
+	// Token: 0x0400AAE9 RID: 43753
 	[Nullable(new byte[]
 	{
 		2,
@@ -13,7 +13,7 @@ public class SkinObtainViewData
 	})]
 	public RewardItemData[] ObtainSkinData;
 
-	// Token: 0x0400A6FF RID: 42751
+	// Token: 0x0400AAEA RID: 43754
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006940 RID: 26944
+	// Token: 0x02006FF3 RID: 28659
 	public class IICenterTextShowAllT
 	{
-		// Token: 0x1700C7E9 RID: 51177
-		// (get) Token: 0x0602F0C8 RID: 192712 RVA: 0x00669D22 File Offset: 0x00667F22
-		// (set) Token: 0x0602F0C9 RID: 192713 RVA: 0x00669D2A File Offset: 0x00667F2A
+		// Token: 0x1700D1EC RID: 53740
+		// (get) Token: 0x06031A98 RID: 203416 RVA: 0x006BA20A File Offset: 0x006B840A
+		// (set) Token: 0x06031A99 RID: 203417 RVA: 0x006BA212 File Offset: 0x006B8412
 		public ECenterTextShowAnim Type { get; set; }
 
-		// Token: 0x0602F0CA RID: 192714 RVA: 0x00669D33 File Offset: 0x00667F33
+		// Token: 0x06031A9A RID: 203418 RVA: 0x006BA21B File Offset: 0x006B841B
 		public IICenterTextShowAllT()
 		{
 			this.Type = ECenterTextShowAnim.ShowAll;

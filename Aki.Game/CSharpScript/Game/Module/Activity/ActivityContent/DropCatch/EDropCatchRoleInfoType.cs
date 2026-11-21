@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x0200667E RID: 26238
+	// Token: 0x020055CE RID: 21966
 	public enum EDropCatchRoleInfoType
 	{
-		// Token: 0x0402236A RID: 140138
+		// Token: 0x0401CBC3 RID: 117699
 		MoveSpeed,
-		// Token: 0x0402236B RID: 140139
+		// Token: 0x0401CBC4 RID: 117700
 		Range,
-		// Token: 0x0402236C RID: 140140
+		// Token: 0x0401CBC5 RID: 117701
 		ChargingSpeed
 	}
 }

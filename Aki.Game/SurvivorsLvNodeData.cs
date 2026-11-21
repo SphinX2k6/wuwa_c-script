@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B61 RID: 11105
+// Token: 0x020020DD RID: 8413
 public class SurvivorsLvNodeData : ISurvivorsLvNodeData
 {
-	// Token: 0x17001EB0 RID: 7856
-	// (get) Token: 0x0601704D RID: 94285 RVA: 0x005D82C6 File Offset: 0x005D64C6
-	// (set) Token: 0x0601704E RID: 94286 RVA: 0x005D82CE File Offset: 0x005D64CE
+	// Token: 0x17001F08 RID: 7944
+	// (get) Token: 0x06014A7E RID: 84606 RVA: 0x00604E2E File Offset: 0x0060302E
+	// (set) Token: 0x06014A7F RID: 84607 RVA: 0x00604E36 File Offset: 0x00603036
 	public int Lv { get; set; }
 
-	// Token: 0x17001EB1 RID: 7857
-	// (get) Token: 0x0601704F RID: 94287 RVA: 0x005D82D7 File Offset: 0x005D64D7
-	// (set) Token: 0x06017050 RID: 94288 RVA: 0x005D82DF File Offset: 0x005D64DF
+	// Token: 0x17001F09 RID: 7945
+	// (get) Token: 0x06014A80 RID: 84608 RVA: 0x00604E3F File Offset: 0x0060303F
+	// (set) Token: 0x06014A81 RID: 84609 RVA: 0x00604E47 File Offset: 0x00603047
 	public bool IsImportant { get; set; }
 
-	// Token: 0x17001EB2 RID: 7858
-	// (get) Token: 0x06017051 RID: 94289 RVA: 0x005D82E8 File Offset: 0x005D64E8
-	// (set) Token: 0x06017052 RID: 94290 RVA: 0x005D82F0 File Offset: 0x005D64F0
+	// Token: 0x17001F0A RID: 7946
+	// (get) Token: 0x06014A82 RID: 84610 RVA: 0x00604E50 File Offset: 0x00603050
+	// (set) Token: 0x06014A83 RID: 84611 RVA: 0x00604E58 File Offset: 0x00603058
 	public ESurvivorsLvState State { get; set; }
 }

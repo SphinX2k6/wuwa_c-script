@@ -5,13 +5,13 @@ using CSharpScript.Game.Module.Activity.ActivityContent.ChessGameplay.StackableC
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020011DC RID: 4572
+// Token: 0x02000690 RID: 1680
 [NullableContext(2)]
 [Nullable(0)]
 public class StackableChessItem : ChessItem
 {
-	// Token: 0x17000A68 RID: 2664
-	// (get) Token: 0x060079D1 RID: 31185 RVA: 0x0019A478 File Offset: 0x00198678
+	// Token: 0x17000A88 RID: 2696
+	// (get) Token: 0x06004D68 RID: 19816 RVA: 0x001A3128 File Offset: 0x001A1328
 	protected new IStackableChessAgent Agent
 	{
 		get
@@ -20,13 +20,13 @@ public class StackableChessItem : ChessItem
 		}
 	}
 
-	// Token: 0x060079D2 RID: 31186 RVA: 0x0019A485 File Offset: 0x00198685
+	// Token: 0x06004D69 RID: 19817 RVA: 0x001A3135 File Offset: 0x001A1335
 	public override void OnClear()
 	{
 		this.SetNextItem(null);
 	}
 
-	// Token: 0x060079D3 RID: 31187 RVA: 0x0019A490 File Offset: 0x00198690
+	// Token: 0x06004D6A RID: 19818 RVA: 0x001A3140 File Offset: 0x001A1340
 	public void SetNextItem(StackableChessItem otherItem)
 	{
 		if (this.NextItem != otherItem && this.Agent != null)
@@ -52,13 +52,13 @@ public class StackableChessItem : ChessItem
 		this.NextItem = otherItem;
 	}
 
-	// Token: 0x060079D4 RID: 31188 RVA: 0x0019A4F9 File Offset: 0x001986F9
+	// Token: 0x06004D6B RID: 19819 RVA: 0x001A31A9 File Offset: 0x001A13A9
 	public StackableChessItem GetNextItem()
 	{
 		return this.NextItem;
 	}
 
-	// Token: 0x060079D5 RID: 31189 RVA: 0x0019A501 File Offset: 0x00198701
+	// Token: 0x06004D6C RID: 19820 RVA: 0x001A31B1 File Offset: 0x001A13B1
 	public Vector GetStackableLocation()
 	{
 		IStackableChessAgent agent = this.Agent;
@@ -69,7 +69,7 @@ public class StackableChessItem : ChessItem
 		return agent.GetStackableLocation();
 	}
 
-	// Token: 0x060079D6 RID: 31190 RVA: 0x0019A514 File Offset: 0x00198714
+	// Token: 0x06004D6D RID: 19821 RVA: 0x001A31C4 File Offset: 0x001A13C4
 	public Rotator GetStackableRotator(bool otherIsForward)
 	{
 		IStackableChessAgent agent = this.Agent;
@@ -80,7 +80,7 @@ public class StackableChessItem : ChessItem
 		return agent.GetStackableRotator(base.RotationIsForward() == otherIsForward);
 	}
 
-	// Token: 0x060079D7 RID: 31191 RVA: 0x0019A530 File Offset: 0x00198730
+	// Token: 0x06004D6E RID: 19822 RVA: 0x001A31E0 File Offset: 0x001A13E0
 	[NullableContext(1)]
 	public override UniTask MoveAsync(Vector location, Rotator rotator, bool isForward)
 	{
@@ -95,7 +95,7 @@ public class StackableChessItem : ChessItem
 		return <MoveAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060079D8 RID: 31192 RVA: 0x0019A58C File Offset: 0x0019878C
+	// Token: 0x06004D6F RID: 19823 RVA: 0x001A323C File Offset: 0x001A143C
 	public override UniTask PerformAsync(int type)
 	{
 		StackableChessItem.<PerformAsync>d__9 <PerformAsync>d__;
@@ -107,7 +107,7 @@ public class StackableChessItem : ChessItem
 		return <PerformAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060079D9 RID: 31193 RVA: 0x0019A5D8 File Offset: 0x001987D8
+	// Token: 0x06004D70 RID: 19824 RVA: 0x001A3288 File Offset: 0x001A1488
 	[NullableContext(1)]
 	private void NotifyNextItemsMoveStateChange(IStackableChessAgent agent, bool isMoving, bool isForward)
 	{
@@ -126,7 +126,7 @@ public class StackableChessItem : ChessItem
 		}
 	}
 
-	// Token: 0x060079DA RID: 31194 RVA: 0x0019A640 File Offset: 0x00198840
+	// Token: 0x06004D71 RID: 19825 RVA: 0x001A32F0 File Offset: 0x001A14F0
 	[NullableContext(1)]
 	private void NotifyNextItemsPerformStateChange(IStackableChessAgent agent, int type, bool isPerforming)
 	{
@@ -147,7 +147,7 @@ public class StackableChessItem : ChessItem
 		}
 	}
 
-	// Token: 0x060079DB RID: 31195 RVA: 0x0019A698 File Offset: 0x00198898
+	// Token: 0x06004D72 RID: 19826 RVA: 0x001A3348 File Offset: 0x001A1548
 	public void DetachSelfFromChain()
 	{
 		StackableChessItem nextItem = this.NextItem;
@@ -175,6 +175,6 @@ public class StackableChessItem : ChessItem
 		}
 	}
 
-	// Token: 0x040037FC RID: 14332
+	// Token: 0x04003895 RID: 14485
 	private StackableChessItem NextItem;
 }

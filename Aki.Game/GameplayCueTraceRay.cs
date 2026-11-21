@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FD6 RID: 12246
+// Token: 0x0200252A RID: 9514
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueTraceRay : GameplayCueEffect
 {
-	// Token: 0x06019F60 RID: 106336 RVA: 0x006CB16E File Offset: 0x006C936E
+	// Token: 0x06017872 RID: 96370 RVA: 0x006F1A62 File Offset: 0x006EFC62
 	protected override void OnInit()
 	{
 		base.OnInit();
@@ -17,7 +17,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		this.HitResultDistanceList = new List<GameplayCueTraceRay.HitResultDistance>();
 	}
 
-	// Token: 0x06019F61 RID: 106337 RVA: 0x006CB188 File Offset: 0x006C9388
+	// Token: 0x06017873 RID: 96371 RVA: 0x006F1A7C File Offset: 0x006EFC7C
 	protected override void OnCreate()
 	{
 		base.OnCreate();
@@ -33,7 +33,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019F62 RID: 106338 RVA: 0x006CB214 File Offset: 0x006C9414
+	// Token: 0x06017874 RID: 96372 RVA: 0x006F1B08 File Offset: 0x006EFD08
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -57,7 +57,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019F63 RID: 106339 RVA: 0x006CB282 File Offset: 0x006C9482
+	// Token: 0x06017875 RID: 96373 RVA: 0x006F1B76 File Offset: 0x006EFD76
 	public override void OnEnable()
 	{
 		base.OnEnable();
@@ -70,7 +70,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		hitEffectItem.SetVisible(true);
 	}
 
-	// Token: 0x06019F64 RID: 106340 RVA: 0x006CB2A2 File Offset: 0x006C94A2
+	// Token: 0x06017876 RID: 96374 RVA: 0x006F1B96 File Offset: 0x006EFD96
 	public override void OnDisable()
 	{
 		base.OnDisable();
@@ -83,7 +83,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		hitEffectItem.SetVisible(false);
 	}
 
-	// Token: 0x06019F65 RID: 106341 RVA: 0x006CB2C2 File Offset: 0x006C94C2
+	// Token: 0x06017877 RID: 96375 RVA: 0x006F1BB6 File Offset: 0x006EFDB6
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -93,7 +93,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019F66 RID: 106342 RVA: 0x006CB2DC File Offset: 0x006C94DC
+	// Token: 0x06017878 RID: 96376 RVA: 0x006F1BD0 File Offset: 0x006EFDD0
 	private void InitTrace()
 	{
 		int parametersLength = this.CueConfig.ParametersLength;
@@ -162,7 +162,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		this.TraceDelegate = DelegateUtils.ToManualReleaseDelegate<FAsyncTraceDelegate>(new Action<bool, UTraceBaseElement, double, double>(this.TraceHitResultHandle));
 	}
 
-	// Token: 0x06019F67 RID: 106343 RVA: 0x006CB4A0 File Offset: 0x006C96A0
+	// Token: 0x06017879 RID: 96377 RVA: 0x006F1D94 File Offset: 0x006EFF94
 	private void Trace()
 	{
 		if (this.TraceElement == null)
@@ -205,7 +205,7 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		this.TraceIndex = (double)traceHandle.Index;
 	}
 
-	// Token: 0x06019F68 RID: 106344 RVA: 0x006CB5F0 File Offset: 0x006C97F0
+	// Token: 0x0601787A RID: 96378 RVA: 0x006F1EE4 File Offset: 0x006F00E4
 	[NullableContext(2)]
 	private void TraceHitResultHandle(bool result, UTraceBaseElement element, double frame, double index)
 	{
@@ -294,44 +294,44 @@ public class GameplayCueTraceRay : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x0400C483 RID: 50307
+	// Token: 0x0400C82C RID: 51244
 	private const float DEFAULT_TRACE_LENGTH = 1000f;
 
-	// Token: 0x0400C484 RID: 50308
+	// Token: 0x0400C82D RID: 51245
 	private const float DEFAULT_TRACE_RADIUS = 10f;
 
-	// Token: 0x0400C485 RID: 50309
+	// Token: 0x0400C82E RID: 51246
 	private const string PROFILE_GAMEPLAY_CUE_TRACE_RAY = "ProfileGameplayCueTraceRay";
 
-	// Token: 0x0400C486 RID: 50310
+	// Token: 0x0400C82F RID: 51247
 	[Nullable(2)]
 	private UTraceBaseElement TraceElement;
 
-	// Token: 0x0400C487 RID: 50311
+	// Token: 0x0400C830 RID: 51248
 	private GameplayCueTraceRay.ETraceType TraceType;
 
-	// Token: 0x0400C488 RID: 50312
+	// Token: 0x0400C831 RID: 51249
 	private float TraceLength = 1000f;
 
-	// Token: 0x0400C489 RID: 50313
+	// Token: 0x0400C832 RID: 51250
 	private float TraceRadius = 10f;
 
-	// Token: 0x0400C48A RID: 50314
+	// Token: 0x0400C833 RID: 51251
 	private Vector TraceStartPoint = Vector.Create();
 
-	// Token: 0x0400C48B RID: 50315
+	// Token: 0x0400C834 RID: 51252
 	private Vector TraceEndPoint = Vector.Create();
 
-	// Token: 0x0400C48C RID: 50316
+	// Token: 0x0400C835 RID: 51253
 	private Vector TraceForward = Vector.Create();
 
-	// Token: 0x0400C48D RID: 50317
+	// Token: 0x0400C836 RID: 51254
 	private Transform TraceTransform = Transform.Create();
 
-	// Token: 0x0400C48E RID: 50318
+	// Token: 0x0400C837 RID: 51255
 	private Quat TraceQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C48F RID: 50319
+	// Token: 0x0400C838 RID: 51256
 	[Nullable(new byte[]
 	{
 		0,
@@ -340,17 +340,17 @@ public class GameplayCueTraceRay : GameplayCueEffect
 	})]
 	private OneOf<KuroEffectActorHandle, AActor> EffectActor;
 
-	// Token: 0x0400C490 RID: 50320
+	// Token: 0x0400C839 RID: 51257
 	[Nullable(2)]
 	private GameplayCueEffectCommonItem HitEffectItem;
 
-	// Token: 0x0400C491 RID: 50321
+	// Token: 0x0400C83A RID: 51258
 	private bool HasSocket;
 
-	// Token: 0x0400C492 RID: 50322
+	// Token: 0x0400C83B RID: 51259
 	private Vector HitResultLocation = Vector.Create();
 
-	// Token: 0x0400C493 RID: 50323
+	// Token: 0x0400C83C RID: 51260
 	[Nullable(new byte[]
 	{
 		2,
@@ -358,73 +358,73 @@ public class GameplayCueTraceRay : GameplayCueEffect
 	})]
 	private List<GameplayCueTraceRay.HitResultDistance> HitResultDistanceList;
 
-	// Token: 0x0400C494 RID: 50324
+	// Token: 0x0400C83D RID: 51261
 	private GameplayCueTraceRay.EEffectScaleAxis EffectScaleAxis;
 
-	// Token: 0x0400C495 RID: 50325
+	// Token: 0x0400C83E RID: 51262
 	private Vector EffectScale = Vector.Create(1.0, 1.0, 1.0);
 
-	// Token: 0x0400C496 RID: 50326
+	// Token: 0x0400C83F RID: 51263
 	private double TraceFrame;
 
-	// Token: 0x0400C497 RID: 50327
+	// Token: 0x0400C840 RID: 51264
 	private double TraceIndex;
 
-	// Token: 0x0400C498 RID: 50328
+	// Token: 0x0400C841 RID: 51265
 	[Nullable(2)]
 	private FAsyncTraceDelegate TraceDelegate;
 
-	// Token: 0x0400C499 RID: 50329
+	// Token: 0x0400C842 RID: 51266
 	private bool IsEnable = true;
 
-	// Token: 0x0200961D RID: 38429
+	// Token: 0x0200883E RID: 34878
 	[NullableContext(0)]
 	private enum ETraceType
 	{
-		// Token: 0x040302AD RID: 197293
+		// Token: 0x0402B93A RID: 178490
 		Ray,
-		// Token: 0x040302AE RID: 197294
+		// Token: 0x0402B93B RID: 178491
 		Sphere,
-		// Token: 0x040302AF RID: 197295
+		// Token: 0x0402B93C RID: 178492
 		MAX
 	}
 
-	// Token: 0x0200961E RID: 38430
+	// Token: 0x0200883F RID: 34879
 	[NullableContext(0)]
 	private enum ETraceObjectType
 	{
-		// Token: 0x040302B1 RID: 197297
+		// Token: 0x0402B93E RID: 178494
 		World,
-		// Token: 0x040302B2 RID: 197298
+		// Token: 0x0402B93F RID: 178495
 		Player,
-		// Token: 0x040302B3 RID: 197299
+		// Token: 0x0402B940 RID: 178496
 		Monster,
-		// Token: 0x040302B4 RID: 197300
+		// Token: 0x0402B941 RID: 178497
 		MAX
 	}
 
-	// Token: 0x0200961F RID: 38431
+	// Token: 0x02008840 RID: 34880
 	[NullableContext(0)]
 	private enum EEffectScaleAxis
 	{
-		// Token: 0x040302B6 RID: 197302
+		// Token: 0x0402B943 RID: 178499
 		X,
-		// Token: 0x040302B7 RID: 197303
+		// Token: 0x0402B944 RID: 178500
 		Y,
-		// Token: 0x040302B8 RID: 197304
+		// Token: 0x0402B945 RID: 178501
 		Z,
-		// Token: 0x040302B9 RID: 197305
+		// Token: 0x0402B946 RID: 178502
 		MAX
 	}
 
-	// Token: 0x02009620 RID: 38432
+	// Token: 0x02008841 RID: 34881
 	[NullableContext(0)]
 	private class HitResultDistance
 	{
-		// Token: 0x040302BA RID: 197306
+		// Token: 0x0402B947 RID: 178503
 		public int Index;
 
-		// Token: 0x040302BB RID: 197307
+		// Token: 0x0402B948 RID: 178504
 		public float Distance;
 	}
 }

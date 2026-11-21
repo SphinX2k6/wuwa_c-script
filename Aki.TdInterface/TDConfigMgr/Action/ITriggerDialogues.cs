@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FFA RID: 8186
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002241 RID: 8769
 	public class ITriggerDialogues : IInteractEffect
 	{
-		// Token: 0x0600B406 RID: 46086 RVA: 0x001A2CB0 File Offset: 0x001A0EB0
+		// Token: 0x0600BF1C RID: 48924 RVA: 0x001B921C File Offset: 0x001B741C
 		private ITriggerDialogues_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B407 RID: 46087 RVA: 0x001A2CE8 File Offset: 0x001A0EE8
+		// Token: 0x0600BF1D RID: 48925 RVA: 0x001B9254 File Offset: 0x001B7454
 		public static ITriggerDialogues Create([Nullable(2)] ITriggerDialogues instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B408 RID: 46088 RVA: 0x001A2CFB File Offset: 0x001A0EFB
+		// Token: 0x0600BF1E RID: 48926 RVA: 0x001B9267 File Offset: 0x001B7467
 		public static ITriggerDialogues CreateFromSetValue([Nullable(2)] ITriggerDialogues_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B409 RID: 46089 RVA: 0x001A2D0E File Offset: 0x001A0F0E
+		// Token: 0x0600BF1F RID: 48927 RVA: 0x001B927A File Offset: 0x001B747A
 		public new ITriggerDialogues_SetValue ToSetValue()
 		{
 			return new ITriggerDialogues_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003764 RID: 14180
-		// (get) Token: 0x0600B40A RID: 46090 RVA: 0x001A2D45 File Offset: 0x001A0F45
-		// (set) Token: 0x0600B40B RID: 46091 RVA: 0x001A2D70 File Offset: 0x001A0F70
+		// Token: 0x17003A3C RID: 14908
+		// (get) Token: 0x0600BF20 RID: 48928 RVA: 0x001B92B1 File Offset: 0x001B74B1
+		// (set) Token: 0x0600BF21 RID: 48929 RVA: 0x001B92DC File Offset: 0x001B74DC
 		public override EInteractEffectType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003765 RID: 14181
-		// (get) Token: 0x0600B40C RID: 46092 RVA: 0x001A2D80 File Offset: 0x001A0F80
-		// (set) Token: 0x0600B40D RID: 46093 RVA: 0x001A2DBA File Offset: 0x001A0FBA
+		// Token: 0x17003A3D RID: 14909
+		// (get) Token: 0x0600BF22 RID: 48930 RVA: 0x001B92EC File Offset: 0x001B74EC
+		// (set) Token: 0x0600BF23 RID: 48931 RVA: 0x001B9326 File Offset: 0x001B7526
 		public override float? DelayTime
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003766 RID: 14182
-		// (get) Token: 0x0600B40E RID: 46094 RVA: 0x001A2DC8 File Offset: 0x001A0FC8
-		// (set) Token: 0x0600B40F RID: 46095 RVA: 0x001A2DEF File Offset: 0x001A0FEF
+		// Token: 0x17003A3E RID: 14910
+		// (get) Token: 0x0600BF24 RID: 48932 RVA: 0x001B9334 File Offset: 0x001B7534
+		// (set) Token: 0x0600BF25 RID: 48933 RVA: 0x001B935B File Offset: 0x001B755B
 		public virtual List<string> Talks
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003767 RID: 14183
-		// (get) Token: 0x0600B410 RID: 46096 RVA: 0x001A2E00 File Offset: 0x001A1000
-		// (set) Token: 0x0600B411 RID: 46097 RVA: 0x001A2E61 File Offset: 0x001A1061
+		// Token: 0x17003A3F RID: 14911
+		// (get) Token: 0x0600BF26 RID: 48934 RVA: 0x001B936C File Offset: 0x001B756C
+		// (set) Token: 0x0600BF27 RID: 48935 RVA: 0x001B93CD File Offset: 0x001B75CD
 		[Nullable(2)]
 		public virtual IFocusObject FocusObject
 		{
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C89 RID: 27785
+		// Token: 0x0400728B RID: 29323
 		[Nullable(2)]
 		protected new ITriggerDialogues FbInstance;
 
-		// Token: 0x04006C8A RID: 27786
+		// Token: 0x0400728C RID: 29324
 		[Nullable(2)]
 		protected new ITriggerDialogues_SetValue PocoInterface;
 
-		// Token: 0x04006C8B RID: 27787
+		// Token: 0x0400728D RID: 29325
 		private IFocusObject _FocusObjectCache;
 
-		// Token: 0x04006C8C RID: 27788
+		// Token: 0x0400728E RID: 29326
 		private bool _FocusObjectInited;
 	}
 }

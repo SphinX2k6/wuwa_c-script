@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B8B RID: 7051
+// Token: 0x0200104A RID: 4170
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonData>
 {
-	// Token: 0x0600D1E9 RID: 53737 RVA: 0x003021B0 File Offset: 0x003003B0
+	// Token: 0x0600A5FA RID: 42490 RVA: 0x0030D288 File Offset: 0x0030B488
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -41,7 +41,7 @@ public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D1EA RID: 53738 RVA: 0x003022BC File Offset: 0x003004BC
+	// Token: 0x0600A5FB RID: 42491 RVA: 0x0030D394 File Offset: 0x0030B594
 	public override void Refresh(FloroRanchSubDungeonData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -65,7 +65,7 @@ public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		item.SetUIActive(data.HasRedDot);
 	}
 
-	// Token: 0x0600D1EB RID: 53739 RVA: 0x00302342 File Offset: 0x00300542
+	// Token: 0x0600A5FC RID: 42492 RVA: 0x0030D41A File Offset: 0x0030B61A
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null)
@@ -74,26 +74,26 @@ public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		}
 	}
 
-	// Token: 0x0600D1EC RID: 53740 RVA: 0x0030235D File Offset: 0x0030055D
+	// Token: 0x0600A5FD RID: 42493 RVA: 0x0030D435 File Offset: 0x0030B635
 	public void SetToggleCallBack(Action<FloroRanchSubDungeonData> callBack)
 	{
 		this.OnToggleCallBack = callBack;
 	}
 
-	// Token: 0x0600D1ED RID: 53741 RVA: 0x00302368 File Offset: 0x00300568
+	// Token: 0x0600A5FE RID: 42494 RVA: 0x0030D440 File Offset: 0x0030B640
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600D1EE RID: 53742 RVA: 0x0030238E File Offset: 0x0030058E
+	// Token: 0x0600A5FF RID: 42495 RVA: 0x0030D466 File Offset: 0x0030B666
 	public override object GetKey(FloroRanchSubDungeonData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0600D1EF RID: 53743 RVA: 0x0030239B File Offset: 0x0030059B
+	// Token: 0x0600A600 RID: 42496 RVA: 0x0030D473 File Offset: 0x0030B673
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
@@ -108,16 +108,16 @@ public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonDa
 		}
 	}
 
-	// Token: 0x0600D1F0 RID: 53744 RVA: 0x003023D9 File Offset: 0x003005D9
+	// Token: 0x0600A601 RID: 42497 RVA: 0x0030D4B1 File Offset: 0x0030B6B1
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x04006040 RID: 24640
+	// Token: 0x0400610F RID: 24847
 	private FloroRanchSubDungeonData Data;
 
-	// Token: 0x04006041 RID: 24641
+	// Token: 0x04006110 RID: 24848
 	[Nullable(new byte[]
 	{
 		2,
@@ -125,23 +125,23 @@ public class FloroRanchDifficultyItem : GridProxyAbstract<FloroRanchSubDungeonDa
 	})]
 	protected Action<FloroRanchSubDungeonData> OnToggleCallBack;
 
-	// Token: 0x0200810F RID: 33039
+	// Token: 0x0200729D RID: 29341
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A1F4 RID: 172532
+		// Token: 0x04025528 RID: 152872
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402A1F5 RID: 172533
+		// Token: 0x04025529 RID: 152873
 		public const int TextTitle = 1;
 
-		// Token: 0x0402A1F6 RID: 172534
+		// Token: 0x0402552A RID: 152874
 		public const int SpriteFinished = 2;
 
-		// Token: 0x0402A1F7 RID: 172535
+		// Token: 0x0402552B RID: 152875
 		public const int SpriteLock = 3;
 
-		// Token: 0x0402A1F8 RID: 172536
+		// Token: 0x0402552C RID: 152876
 		public const int ItemRedDot = 4;
 	}
 }

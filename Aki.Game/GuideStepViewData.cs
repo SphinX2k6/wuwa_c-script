@@ -5,13 +5,13 @@ using CSharpScript.Game.Guide.StepInfo;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DC0 RID: 7616
+// Token: 0x02001282 RID: 4738
 [NullableContext(2)]
 [Nullable(0)]
 public class GuideStepViewData
 {
-	// Token: 0x17001274 RID: 4724
-	// (get) Token: 0x0600E772 RID: 59250 RVA: 0x00368E3A File Offset: 0x0036703A
+	// Token: 0x1700129E RID: 4766
+	// (get) Token: 0x0600BB90 RID: 48016 RVA: 0x00374AB2 File Offset: 0x00372CB2
 	public bool IsMultiAttach
 	{
 		get
@@ -20,8 +20,8 @@ public class GuideStepViewData
 		}
 	}
 
-	// Token: 0x17001275 RID: 4725
-	// (get) Token: 0x0600E773 RID: 59251 RVA: 0x00368E48 File Offset: 0x00367048
+	// Token: 0x1700129F RID: 4767
+	// (get) Token: 0x0600BB91 RID: 48017 RVA: 0x00374AC0 File Offset: 0x00372CC0
 	[Nullable(1)]
 	public object ViewConf
 	{
@@ -53,25 +53,25 @@ public class GuideStepViewData
 		}
 	}
 
-	// Token: 0x0600E774 RID: 59252 RVA: 0x00368F2B File Offset: 0x0036712B
+	// Token: 0x0600BB92 RID: 48018 RVA: 0x00374BA3 File Offset: 0x00372DA3
 	public UUIItem GetAttachedUiItem()
 	{
 		return this.AttachedUiItem;
 	}
 
-	// Token: 0x0600E775 RID: 59253 RVA: 0x00368F33 File Offset: 0x00367133
+	// Token: 0x0600BB93 RID: 48019 RVA: 0x00374BAB File Offset: 0x00372DAB
 	public void ResetAttachedUiItem()
 	{
 		this.AttachedUiItem = null;
 	}
 
-	// Token: 0x0600E776 RID: 59254 RVA: 0x00368F3C File Offset: 0x0036713C
+	// Token: 0x0600BB94 RID: 48020 RVA: 0x00374BB4 File Offset: 0x00372DB4
 	public UUIItem GetAttachedUiItemForShow()
 	{
 		return this.AttachedUiItemForShow ?? this.AttachedUiItem;
 	}
 
-	// Token: 0x0600E777 RID: 59255 RVA: 0x00368F4E File Offset: 0x0036714E
+	// Token: 0x0600BB95 RID: 48021 RVA: 0x00374BC6 File Offset: 0x00372DC6
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -82,7 +82,7 @@ public class GuideStepViewData
 		return this.MultiAttachItems;
 	}
 
-	// Token: 0x0600E778 RID: 59256 RVA: 0x00368F58 File Offset: 0x00367158
+	// Token: 0x0600BB96 RID: 48022 RVA: 0x00374BD0 File Offset: 0x00372DD0
 	public void SetAttachedUiItem(UUIItem uiItem)
 	{
 		if (this.Owner.Config.ContentType != 4)
@@ -100,7 +100,7 @@ public class GuideStepViewData
 		this.AttachedUiItem = uiItem;
 	}
 
-	// Token: 0x0600E779 RID: 59257 RVA: 0x00368FD8 File Offset: 0x003671D8
+	// Token: 0x0600BB97 RID: 48023 RVA: 0x00374C50 File Offset: 0x00372E50
 	[NullableContext(1)]
 	public void SetAttachedUiItemForShow(UUIItem uiItem)
 	{
@@ -119,7 +119,7 @@ public class GuideStepViewData
 		this.AttachedUiItemForShow = uiItem;
 	}
 
-	// Token: 0x0600E77A RID: 59258 RVA: 0x00369058 File Offset: 0x00367258
+	// Token: 0x0600BB98 RID: 48024 RVA: 0x00374CD0 File Offset: 0x00372ED0
 	public void SetMultiAttachItems([Nullable(new byte[]
 	{
 		2,
@@ -141,7 +141,7 @@ public class GuideStepViewData
 		this.MultiAttachItems = uiItems;
 	}
 
-	// Token: 0x0600E77B RID: 59259 RVA: 0x003690D5 File Offset: 0x003672D5
+	// Token: 0x0600BB99 RID: 48025 RVA: 0x00374D4D File Offset: 0x00372F4D
 	[NullableContext(1)]
 	public void TryLockScrollView(UUIScrollViewComponent scrollView)
 	{
@@ -150,7 +150,7 @@ public class GuideStepViewData
 		this.ScrollView.SetEnable(false);
 	}
 
-	// Token: 0x0600E77C RID: 59260 RVA: 0x003690FB File Offset: 0x003672FB
+	// Token: 0x0600BB9A RID: 48026 RVA: 0x00374D73 File Offset: 0x00372F73
 	public void TryUnLockScrollView()
 	{
 		if (this.ScrollView == null)
@@ -160,27 +160,27 @@ public class GuideStepViewData
 		this.ScrollView.SetEnable(this.ScrollViewEnable);
 	}
 
-	// Token: 0x0600E77D RID: 59261 RVA: 0x00369117 File Offset: 0x00367317
+	// Token: 0x0600BB9B RID: 48027 RVA: 0x00374D8F File Offset: 0x00372F8F
 	public UiPanelBase GetAttachedView()
 	{
 		return this.AttachedView;
 	}
 
-	// Token: 0x0600E77E RID: 59262 RVA: 0x0036911F File Offset: 0x0036731F
+	// Token: 0x0600BB9C RID: 48028 RVA: 0x00374D97 File Offset: 0x00372F97
 	[NullableContext(1)]
 	public void SetAttachedView(UiPanelBase value)
 	{
 		this.AttachedView = value;
 	}
 
-	// Token: 0x0600E77F RID: 59263 RVA: 0x00369128 File Offset: 0x00367328
+	// Token: 0x0600BB9D RID: 48029 RVA: 0x00374DA0 File Offset: 0x00372FA0
 	[NullableContext(1)]
 	public GuideStepViewData(GuideStepInfo owner)
 	{
 		this.Owner = owner;
 	}
 
-	// Token: 0x0600E780 RID: 59264 RVA: 0x0036913E File Offset: 0x0036733E
+	// Token: 0x0600BB9E RID: 48030 RVA: 0x00374DB6 File Offset: 0x00372FB6
 	public void Clear()
 	{
 		this.TryUnLockScrollView();
@@ -190,19 +190,19 @@ public class GuideStepViewData
 		this.ScrollView = null;
 	}
 
-	// Token: 0x04006B05 RID: 27397
+	// Token: 0x04006BE6 RID: 27622
 	private bool ScrollViewEnable = true;
 
-	// Token: 0x04006B06 RID: 27398
+	// Token: 0x04006BE7 RID: 27623
 	private UUIScrollViewComponent ScrollView;
 
-	// Token: 0x04006B07 RID: 27399
+	// Token: 0x04006BE8 RID: 27624
 	private readonly GuideStepInfo Owner;
 
-	// Token: 0x04006B08 RID: 27400
+	// Token: 0x04006BE9 RID: 27625
 	private object ViewConfInner;
 
-	// Token: 0x04006B09 RID: 27401
+	// Token: 0x04006BEA RID: 27626
 	[Nullable(new byte[]
 	{
 		2,
@@ -210,15 +210,15 @@ public class GuideStepViewData
 	})]
 	private List<UUIItem> MultiAttachItems;
 
-	// Token: 0x04006B0A RID: 27402
+	// Token: 0x04006BEB RID: 27627
 	private UiPanelBase AttachedView;
 
-	// Token: 0x04006B0B RID: 27403
+	// Token: 0x04006BEC RID: 27628
 	public bool IsAttachToBattleView;
 
-	// Token: 0x04006B0C RID: 27404
+	// Token: 0x04006BED RID: 27629
 	private UUIItem AttachedUiItem;
 
-	// Token: 0x04006B0D RID: 27405
+	// Token: 0x04006BEE RID: 27630
 	private UUIItem AttachedUiItemForShow;
 }

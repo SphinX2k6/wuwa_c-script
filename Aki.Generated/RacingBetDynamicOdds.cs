@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F84 RID: 3972
+	// Token: 0x0200106B RID: 4203
 	public struct RacingBetDynamicOdds : IFlatbufferObject
 	{
-		// Token: 0x17002C7E RID: 11390
-		// (get) Token: 0x0600B7C0 RID: 47040 RVA: 0x002D4805 File Offset: 0x002D2A05
+		// Token: 0x17002CF6 RID: 11510
+		// (get) Token: 0x0600BDFD RID: 48637 RVA: 0x002F11B1 File Offset: 0x002EF3B1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7C1 RID: 47041 RVA: 0x002D4812 File Offset: 0x002D2A12
+		// Token: 0x0600BDFE RID: 48638 RVA: 0x002F11BE File Offset: 0x002EF3BE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B7C2 RID: 47042 RVA: 0x002D481C File Offset: 0x002D2A1C
+		// Token: 0x0600BDFF RID: 48639 RVA: 0x002F11C8 File Offset: 0x002EF3C8
 		public static RacingBetDynamicOdds GetRootAsRacingBetDynamicOdds(ByteBuffer _bb)
 		{
 			return RacingBetDynamicOdds.GetRootAsRacingBetDynamicOdds(_bb, default(RacingBetDynamicOdds));
 		}
 
-		// Token: 0x0600B7C3 RID: 47043 RVA: 0x002D4838 File Offset: 0x002D2A38
+		// Token: 0x0600BE00 RID: 48640 RVA: 0x002F11E4 File Offset: 0x002EF3E4
 		public static RacingBetDynamicOdds GetRootAsRacingBetDynamicOdds(ByteBuffer _bb, RacingBetDynamicOdds obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B7C4 RID: 47044 RVA: 0x002D4855 File Offset: 0x002D2A55
+		// Token: 0x0600BE01 RID: 48641 RVA: 0x002F1201 File Offset: 0x002EF401
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B7C5 RID: 47045 RVA: 0x002D4864 File Offset: 0x002D2A64
+		// Token: 0x0600BE02 RID: 48642 RVA: 0x002F1210 File Offset: 0x002EF410
 		public RacingBetDynamicOdds __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002C7F RID: 11391
-		// (get) Token: 0x0600B7C6 RID: 47046 RVA: 0x002D4874 File Offset: 0x002D2A74
+		// Token: 0x17002CF7 RID: 11511
+		// (get) Token: 0x0600BE03 RID: 48643 RVA: 0x002F1220 File Offset: 0x002EF420
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C80 RID: 11392
-		// (get) Token: 0x0600B7C7 RID: 47047 RVA: 0x002D48B0 File Offset: 0x002D2AB0
+		// Token: 0x17002CF8 RID: 11512
+		// (get) Token: 0x0600BE04 RID: 48644 RVA: 0x002F125C File Offset: 0x002EF45C
 		public int LegId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7C8 RID: 47048 RVA: 0x002D48EC File Offset: 0x002D2AEC
+		// Token: 0x0600BE05 RID: 48645 RVA: 0x002F1298 File Offset: 0x002EF498
 		public int Proportion(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002C81 RID: 11393
-		// (get) Token: 0x0600B7C9 RID: 47049 RVA: 0x002D492C File Offset: 0x002D2B2C
+		// Token: 0x17002CF9 RID: 11513
+		// (get) Token: 0x0600BE06 RID: 48646 RVA: 0x002F12D8 File Offset: 0x002EF4D8
 		public int ProportionLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7CA RID: 47050 RVA: 0x002D4957 File Offset: 0x002D2B57
+		// Token: 0x0600BE07 RID: 48647 RVA: 0x002F1303 File Offset: 0x002EF503
 		public Span<int> GetProportionBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600B7CB RID: 47051 RVA: 0x002D4966 File Offset: 0x002D2B66
+		// Token: 0x0600BE08 RID: 48648 RVA: 0x002F1312 File Offset: 0x002EF512
 		public int[] GetProportionArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002C82 RID: 11394
-		// (get) Token: 0x0600B7CC RID: 47052 RVA: 0x002D4980 File Offset: 0x002D2B80
+		// Token: 0x17002CFA RID: 11514
+		// (get) Token: 0x0600BE09 RID: 48649 RVA: 0x002F132C File Offset: 0x002EF52C
 		public int DynamicOdds
 		{
 			get
@@ -132,25 +132,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7CD RID: 47053 RVA: 0x002D49C0 File Offset: 0x002D2BC0
+		// Token: 0x0600BE0A RID: 48650 RVA: 0x002F1369 File Offset: 0x002EF569
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ProportionIter()或GetProportionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Proportion()
+		public int[] Proportion()
 		{
-			RacingBetDynamicOdds racingBetDynamicOdds = this;
-			return racingBetDynamicOdds.GetProportionArray() ?? Array.Empty<int>();
+			return this.GetProportionArray();
 		}
 
-		// Token: 0x0600B7CE RID: 47054 RVA: 0x002D49E4 File Offset: 0x002D2BE4
+		// Token: 0x0600BE0B RID: 48651 RVA: 0x002F1371 File Offset: 0x002EF571
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ProportionIter()
+		public IEnumerable<int> ProportionIter()
 		{
 			RacingBetDynamicOdds.<ProportionIter>d__20 <ProportionIter>d__ = new RacingBetDynamicOdds.<ProportionIter>d__20(-2);
 			<ProportionIter>d__.<>3__<>4__this = this;
 			return <ProportionIter>d__;
 		}
 
-		// Token: 0x04005052 RID: 20562
+		// Token: 0x04005639 RID: 22073
 		private Table __p;
 	}
 }

@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.PlaneYinyou.BP
 {
-	// Token: 0x02003F0B RID: 16139
+	// Token: 0x020031C7 RID: 12743
 	[UnrealObjectPath("/Game/Aki/Data/Level/PlaneYinyou/BP/ABP_Plane.ABP_Plane_C")]
-	[UnrealStructLayout(6592, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 6592)]
+	[UnrealStructLayout(6608, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 6608)]
 	public class ABP_Plane_C : UAnimInstance, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028F22 RID: 167714 RVA: 0x009B8179 File Offset: 0x009B6379
+		// Token: 0x0601F8B5 RID: 129205 RVA: 0x0093014D File Offset: 0x0092E34D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_Plane_C._ClassPtr == IntPtr.Zero)
@@ -23,234 +23,214 @@ namespace AkiClient.Game.Aki.Data.Level.PlaneYinyou.BP
 			return ABP_Plane_C._ClassPtr;
 		}
 
-		// Token: 0x06028F23 RID: 167715 RVA: 0x009B81A0 File Offset: 0x009B63A0
+		// Token: 0x0601F8B6 RID: 129206 RVA: 0x00930174 File Offset: 0x0092E374
 		public ABP_Plane_C() : this(BuiltinUtils.AllocNativeUObject(ABP_Plane_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028F24 RID: 167716 RVA: 0x009B81C8 File Offset: 0x009B63C8
+		// Token: 0x0601F8B7 RID: 129207 RVA: 0x0093019C File Offset: 0x0092E39C
 		[NullableContext(1)]
 		public ABP_Plane_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_Plane_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700608B RID: 24715
-		// (get) Token: 0x06028F25 RID: 167717 RVA: 0x009B81FB File Offset: 0x009B63FB
-		// (set) Token: 0x06028F26 RID: 167718 RVA: 0x009B820B File Offset: 0x009B640B
+		// Token: 0x170039F6 RID: 14838
+		// (get) Token: 0x0601F8B8 RID: 129208 RVA: 0x009301CF File Offset: 0x0092E3CF
+		// (set) Token: 0x0601F8B9 RID: 129209 RVA: 0x009301DF File Offset: 0x0092E3DF
 		public unsafe bool InputRollL
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_44) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollL) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_44) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollL) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700608C RID: 24716
-		// (get) Token: 0x06028F27 RID: 167719 RVA: 0x009B821C File Offset: 0x009B641C
-		// (set) Token: 0x06028F28 RID: 167720 RVA: 0x009B822C File Offset: 0x009B642C
+		// Token: 0x170039F7 RID: 14839
+		// (get) Token: 0x0601F8BA RID: 129210 RVA: 0x009301F0 File Offset: 0x0092E3F0
+		// (set) Token: 0x0601F8BB RID: 129211 RVA: 0x00930200 File Offset: 0x0092E400
 		public unsafe float Direction
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_45);
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Direction);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_45) = value;
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Direction) = value;
 			}
 		}
 
-		// Token: 0x1700608D RID: 24717
-		// (get) Token: 0x06028F29 RID: 167721 RVA: 0x009B823D File Offset: 0x009B643D
-		// (set) Token: 0x06028F2A RID: 167722 RVA: 0x009B824D File Offset: 0x009B644D
+		// Token: 0x170039F8 RID: 14840
+		// (get) Token: 0x0601F8BC RID: 129212 RVA: 0x00930211 File Offset: 0x0092E411
+		// (set) Token: 0x0601F8BD RID: 129213 RVA: 0x00930221 File Offset: 0x0092E421
 		public unsafe bool InputRollR
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_46) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollR) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_46) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollR) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700608E RID: 24718
-		// (get) Token: 0x06028F2B RID: 167723 RVA: 0x009B825E File Offset: 0x009B645E
-		// (set) Token: 0x06028F2C RID: 167724 RVA: 0x009B826E File Offset: 0x009B646E
+		// Token: 0x170039F9 RID: 14841
+		// (get) Token: 0x0601F8BE RID: 129214 RVA: 0x00930232 File Offset: 0x0092E432
+		// (set) Token: 0x0601F8BF RID: 129215 RVA: 0x00930242 File Offset: 0x0092E442
 		public unsafe float Horzontal
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Horzontal);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Horzontal) = value;
 			}
 		}
 
-		// Token: 0x1700608F RID: 24719
-		// (get) Token: 0x06028F2D RID: 167725 RVA: 0x009B827F File Offset: 0x009B647F
-		// (set) Token: 0x06028F2E RID: 167726 RVA: 0x009B828F File Offset: 0x009B648F
+		// Token: 0x170039FA RID: 14842
+		// (get) Token: 0x0601F8C0 RID: 129216 RVA: 0x00930253 File Offset: 0x0092E453
+		// (set) Token: 0x0601F8C1 RID: 129217 RVA: 0x00930263 File Offset: 0x0092E463
 		public unsafe float Jump_0
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_48);
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Jump_0);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_48) = value;
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_Jump_0) = value;
 			}
 		}
 
-		// Token: 0x17006090 RID: 24720
-		// (get) Token: 0x06028F2F RID: 167727 RVA: 0x009B82A0 File Offset: 0x009B64A0
-		// (set) Token: 0x06028F30 RID: 167728 RVA: 0x009B82B0 File Offset: 0x009B64B0
+		// Token: 0x170039FB RID: 14843
+		// (get) Token: 0x0601F8C2 RID: 129218 RVA: 0x00930274 File Offset: 0x0092E474
+		// (set) Token: 0x0601F8C3 RID: 129219 RVA: 0x00930284 File Offset: 0x0092E484
 		public unsafe bool InputJump
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_49) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputJump) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_49) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputJump) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006091 RID: 24721
-		// (get) Token: 0x06028F31 RID: 167729 RVA: 0x009B82C1 File Offset: 0x009B64C1
-		// (set) Token: 0x06028F32 RID: 167730 RVA: 0x009B82D1 File Offset: 0x009B64D1
+		// Token: 0x170039FC RID: 14844
+		// (get) Token: 0x0601F8C4 RID: 129220 RVA: 0x00930295 File Offset: 0x0092E495
+		// (set) Token: 0x0601F8C5 RID: 129221 RVA: 0x009302A5 File Offset: 0x0092E4A5
 		public unsafe bool InputRollL3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_50) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollL3) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_50) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollL3) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006092 RID: 24722
-		// (get) Token: 0x06028F33 RID: 167731 RVA: 0x009B82E2 File Offset: 0x009B64E2
-		// (set) Token: 0x06028F34 RID: 167732 RVA: 0x009B82F2 File Offset: 0x009B64F2
+		// Token: 0x170039FD RID: 14845
+		// (get) Token: 0x0601F8C6 RID: 129222 RVA: 0x009302B6 File Offset: 0x0092E4B6
+		// (set) Token: 0x0601F8C7 RID: 129223 RVA: 0x009302C6 File Offset: 0x0092E4C6
 		public unsafe bool InputRollR3
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_51) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollR3) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_51) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputRollR3) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006093 RID: 24723
-		// (get) Token: 0x06028F35 RID: 167733 RVA: 0x009B8303 File Offset: 0x009B6503
-		// (set) Token: 0x06028F36 RID: 167734 RVA: 0x009B8313 File Offset: 0x009B6513
+		// Token: 0x170039FE RID: 14846
+		// (get) Token: 0x0601F8C8 RID: 129224 RVA: 0x009302D7 File Offset: 0x0092E4D7
+		// (set) Token: 0x0601F8C9 RID: 129225 RVA: 0x009302E7 File Offset: 0x0092E4E7
 		public unsafe float BlendTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_52);
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_BlendTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_52) = value;
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_BlendTime) = value;
 			}
 		}
 
-		// Token: 0x17006094 RID: 24724
-		// (get) Token: 0x06028F37 RID: 167735 RVA: 0x009B8324 File Offset: 0x009B6524
-		// (set) Token: 0x06028F38 RID: 167736 RVA: 0x009B8334 File Offset: 0x009B6534
+		// Token: 0x170039FF RID: 14847
+		// (get) Token: 0x0601F8CA RID: 129226 RVA: 0x009302F8 File Offset: 0x0092E4F8
+		// (set) Token: 0x0601F8CB RID: 129227 RVA: 0x00930308 File Offset: 0x0092E508
 		public unsafe bool InputSwingL
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_53) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputSwingL) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_53) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputSwingL) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006095 RID: 24725
-		// (get) Token: 0x06028F39 RID: 167737 RVA: 0x009B8345 File Offset: 0x009B6545
-		// (set) Token: 0x06028F3A RID: 167738 RVA: 0x009B8355 File Offset: 0x009B6555
+		// Token: 0x17003A00 RID: 14848
+		// (get) Token: 0x0601F8CC RID: 129228 RVA: 0x00930319 File Offset: 0x0092E519
+		// (set) Token: 0x0601F8CD RID: 129229 RVA: 0x00930329 File Offset: 0x0092E529
 		public unsafe bool InputSwingR
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_54) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputSwingR) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_54) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputSwingR) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006096 RID: 24726
-		// (get) Token: 0x06028F3B RID: 167739 RVA: 0x009B8366 File Offset: 0x009B6566
-		// (set) Token: 0x06028F3C RID: 167740 RVA: 0x009B8376 File Offset: 0x009B6576
+		// Token: 0x17003A01 RID: 14849
+		// (get) Token: 0x0601F8CE RID: 129230 RVA: 0x0093033A File Offset: 0x0092E53A
+		// (set) Token: 0x0601F8CF RID: 129231 RVA: 0x0093034A File Offset: 0x0092E54A
 		public unsafe bool InputMoveL
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_55) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputMoveL) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_55) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputMoveL) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006097 RID: 24727
-		// (get) Token: 0x06028F3D RID: 167741 RVA: 0x009B8387 File Offset: 0x009B6587
-		// (set) Token: 0x06028F3E RID: 167742 RVA: 0x009B8397 File Offset: 0x009B6597
+		// Token: 0x17003A02 RID: 14850
+		// (get) Token: 0x0601F8D0 RID: 129232 RVA: 0x0093035B File Offset: 0x0092E55B
+		// (set) Token: 0x0601F8D1 RID: 129233 RVA: 0x0093036B File Offset: 0x0092E56B
 		public unsafe bool InputMoveR
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_56) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputMoveR) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_56) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_Plane_C.__PropertyOffset_InputMoveR) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028F3F RID: 167743 RVA: 0x009B83A8 File Offset: 0x009B65A8
-		[NullableContext(2)]
+		// Token: 0x0601F8D2 RID: 129234 RVA: 0x0093037C File Offset: 0x0092E57C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(ref FPoseLink AnimGraph)
-		{
-			ABP_Plane_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_Plane_C.__AnimGraph_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_Plane_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_Plane_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Plane_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x06028F40 RID: 167744 RVA: 0x009B8430 File Offset: 0x009B6630
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -259,93 +239,79 @@ namespace AkiClient.Game.Aki.Data.Level.PlaneYinyou.BP
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_Plane_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028F41 RID: 167745 RVA: 0x009B8478 File Offset: 0x009B6678
+		// Token: 0x0601F8D3 RID: 129235 RVA: 0x009303C4 File Offset: 0x0092E5C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_Plane_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_Plane_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Plane_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_Plane_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028F42 RID: 167746 RVA: 0x009B84BF File Offset: 0x009B66BF
+		// Token: 0x0601F8D4 RID: 129236 RVA: 0x0093040A File Offset: 0x0092E60A
 		protected ABP_Plane_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014F1B RID: 85787
+		// Token: 0x04010EBB RID: 69307
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/PlaneYinyou/BP/ABP_Plane.ABP_Plane_C";
 
-		// Token: 0x04014F1C RID: 85788
+		// Token: 0x04010EBC RID: 69308
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014F1D RID: 85789
+		// Token: 0x04010EBD RID: 69309
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014F1E RID: 85790
-		internal static int __PropertyOffset_44;
+		// Token: 0x04010EBE RID: 69310
+		internal static int __PropertyOffset_InputRollL;
 
-		// Token: 0x04014F1F RID: 85791
-		internal static int __PropertyOffset_45;
+		// Token: 0x04010EBF RID: 69311
+		internal static int __PropertyOffset_Direction;
 
-		// Token: 0x04014F20 RID: 85792
-		internal static int __PropertyOffset_46;
+		// Token: 0x04010EC0 RID: 69312
+		internal static int __PropertyOffset_InputRollR;
 
-		// Token: 0x04014F21 RID: 85793
-		internal static int __PropertyOffset_47;
+		// Token: 0x04010EC1 RID: 69313
+		internal static int __PropertyOffset_Horzontal;
 
-		// Token: 0x04014F22 RID: 85794
-		internal static int __PropertyOffset_48;
+		// Token: 0x04010EC2 RID: 69314
+		internal static int __PropertyOffset_Jump_0;
 
-		// Token: 0x04014F23 RID: 85795
-		internal static int __PropertyOffset_49;
+		// Token: 0x04010EC3 RID: 69315
+		internal static int __PropertyOffset_InputJump;
 
-		// Token: 0x04014F24 RID: 85796
-		internal static int __PropertyOffset_50;
+		// Token: 0x04010EC4 RID: 69316
+		internal static int __PropertyOffset_InputRollL3;
 
-		// Token: 0x04014F25 RID: 85797
-		internal static int __PropertyOffset_51;
+		// Token: 0x04010EC5 RID: 69317
+		internal static int __PropertyOffset_InputRollR3;
 
-		// Token: 0x04014F26 RID: 85798
-		internal static int __PropertyOffset_52;
+		// Token: 0x04010EC6 RID: 69318
+		internal static int __PropertyOffset_BlendTime;
 
-		// Token: 0x04014F27 RID: 85799
-		internal static int __PropertyOffset_53;
+		// Token: 0x04010EC7 RID: 69319
+		internal static int __PropertyOffset_InputSwingL;
 
-		// Token: 0x04014F28 RID: 85800
-		internal static int __PropertyOffset_54;
+		// Token: 0x04010EC8 RID: 69320
+		internal static int __PropertyOffset_InputSwingR;
 
-		// Token: 0x04014F29 RID: 85801
-		internal static int __PropertyOffset_55;
+		// Token: 0x04010EC9 RID: 69321
+		internal static int __PropertyOffset_InputMoveL;
 
-		// Token: 0x04014F2A RID: 85802
-		internal static int __PropertyOffset_56;
+		// Token: 0x04010ECA RID: 69322
+		internal static int __PropertyOffset_InputMoveR;
 
-		// Token: 0x04014F2B RID: 85803
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x04014F2C RID: 85804
+		// Token: 0x04010ECB RID: 69323
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x0200A2DB RID: 41691
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x0403201F RID: 204831
-			[FieldOffset(0)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A2DC RID: 41692
+		// Token: 0x02008F24 RID: 36644
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x04032020 RID: 204832
+			// Token: 0x0402CC56 RID: 183382
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}

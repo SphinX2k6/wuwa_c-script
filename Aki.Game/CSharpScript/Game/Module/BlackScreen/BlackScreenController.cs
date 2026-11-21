@@ -8,31 +8,31 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BlackScreen
 {
-	// Token: 0x02005C2B RID: 23595
+	// Token: 0x02004C0B RID: 19467
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BlackScreenController : UiControllerBase
 	{
-		// Token: 0x0603B995 RID: 244117 RVA: 0x00E37D35 File Offset: 0x00E35F35
+		// Token: 0x060308E0 RID: 198880 RVA: 0x00D8809D File Offset: 0x00D8629D
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.UiManagerInit, new Action(this.PreloadBlackScreen));
 		}
 
-		// Token: 0x0603B996 RID: 244118 RVA: 0x00E37D50 File Offset: 0x00E35F50
+		// Token: 0x060308E1 RID: 198881 RVA: 0x00D880B8 File Offset: 0x00D862B8
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.UiManagerInit, new Action(this.PreloadBlackScreen));
 		}
 
-		// Token: 0x0603B997 RID: 244119 RVA: 0x00E37D6B File Offset: 0x00E35F6B
+		// Token: 0x060308E2 RID: 198882 RVA: 0x00D880D3 File Offset: 0x00D862D3
 		private void PreloadBlackScreen()
 		{
 			this.GetOrCreateBlackScreen("Default");
 		}
 
-		// Token: 0x0603B998 RID: 244120 RVA: 0x00E37D7C File Offset: 0x00E35F7C
+		// Token: 0x060308E3 RID: 198883 RVA: 0x00D880E4 File Offset: 0x00D862E4
 		private BlackScreenViewBase GetOrCreateBlackScreen(string style)
 		{
 			BlackScreenViewBase blackScreenViewBase;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return blackScreenViewBase;
 		}
 
-		// Token: 0x0603B999 RID: 244121 RVA: 0x00E37DE0 File Offset: 0x00E35FE0
+		// Token: 0x060308E4 RID: 198884 RVA: 0x00D88148 File Offset: 0x00D86348
 		private Dictionary<string, int> GetTagSet(string style)
 		{
 			Dictionary<string, int> dictionary;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return dictionary;
 		}
 
-		// Token: 0x0603B99A RID: 244122 RVA: 0x00E37E14 File Offset: 0x00E36014
+		// Token: 0x060308E5 RID: 198885 RVA: 0x00D8817C File Offset: 0x00D8637C
 		public unsafe void AddBlackScreen(string showAnimType, string tag, string colorType = "Black", string style = "Default")
 		{
 			if (this.PendingDeferredTag == tag)
@@ -80,6 +80,10 @@ namespace CSharpScript.Game.Module.BlackScreen
 			{
 				this.GetOrCreateBlackScreen(style).ShowTemp(showAnimType, colorType);
 			}
+			else if (showAnimType == "None")
+			{
+				this.GetOrCreateBlackScreen(style).CompleteShowImmediately();
+			}
 			int num;
 			if (tagSet.TryGetValue(tag, out num))
 			{
@@ -89,7 +93,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			tagSet[tag] = 1;
 		}
 
-		// Token: 0x0603B99B RID: 244123 RVA: 0x00E37EE8 File Offset: 0x00E360E8
+		// Token: 0x060308E6 RID: 198886 RVA: 0x00D8826C File Offset: 0x00D8646C
 		public void AddBlackScreenDeferred(string showAnimType, string tag)
 		{
 			if (this.GetTagSet("Default").Count > 0)
@@ -113,7 +117,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			this.PendingDeferredAnimType = showAnimType;
 		}
 
-		// Token: 0x0603B99C RID: 244124 RVA: 0x00E37F80 File Offset: 0x00E36180
+		// Token: 0x060308E7 RID: 198887 RVA: 0x00D88304 File Offset: 0x00D86504
 		public void ConsumePendingBlackScreen(string colorType)
 		{
 			if (this.PendingDeferredTag == null)
@@ -131,7 +135,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			this.AddBlackScreen(this.PendingDeferredAnimType, pendingDeferredTag, colorType, "Default");
 		}
 
-		// Token: 0x0603B99D RID: 244125 RVA: 0x00E37FE4 File Offset: 0x00E361E4
+		// Token: 0x060308E8 RID: 198888 RVA: 0x00D88368 File Offset: 0x00D86568
 		public UniTask AddBlackScreenAsync(string showAnimType, string tag, string colorType = "Black", string style = "Default")
 		{
 			BlackScreenController.<AddBlackScreenAsync>d__14 <AddBlackScreenAsync>d__;
@@ -146,7 +150,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return <AddBlackScreenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B99E RID: 244126 RVA: 0x00E38048 File Offset: 0x00E36248
+		// Token: 0x060308E9 RID: 198889 RVA: 0x00D883CC File Offset: 0x00D865CC
 		public unsafe void RemoveBlackScreen(string hideAnimType, string tag, string style = "Default")
 		{
 			if (this.PendingDeferredTag == tag)
@@ -192,7 +196,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			}
 		}
 
-		// Token: 0x0603B99F RID: 244127 RVA: 0x00E3813C File Offset: 0x00E3633C
+		// Token: 0x060308EA RID: 198890 RVA: 0x00D884C0 File Offset: 0x00D866C0
 		public bool IsBlackScreenActive()
 		{
 			using (Dictionary<string, BlackScreenViewBase>.ValueCollection.Enumerator enumerator = this.BlackScreens.Values.GetEnumerator())
@@ -208,7 +212,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return false;
 		}
 
-		// Token: 0x0603B9A0 RID: 244128 RVA: 0x00E3819C File Offset: 0x00E3639C
+		// Token: 0x060308EB RID: 198891 RVA: 0x00D88520 File Offset: 0x00D86720
 		protected override bool OnClear()
 		{
 			this.PendingDeferredTag = null;
@@ -221,8 +225,8 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return true;
 		}
 
-		// Token: 0x17008DAA RID: 36266
-		// (get) Token: 0x0603B9A1 RID: 244129 RVA: 0x00E38210 File Offset: 0x00E36410
+		// Token: 0x1700617C RID: 24956
+		// (get) Token: 0x060308EC RID: 198892 RVA: 0x00D88594 File Offset: 0x00D86794
 		public static BlackScreenController Instance
 		{
 			get
@@ -231,7 +235,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			}
 		}
 
-		// Token: 0x0603B9A2 RID: 244130 RVA: 0x00E38217 File Offset: 0x00E36417
+		// Token: 0x060308ED RID: 198893 RVA: 0x00D8859B File Offset: 0x00D8679B
 		public static BlackScreenController GetOrCreateInstance()
 		{
 			if (BlackScreenController._Instance == null)
@@ -241,7 +245,7 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return BlackScreenController._Instance;
 		}
 
-		// Token: 0x0603B9A3 RID: 244131 RVA: 0x00E3822B File Offset: 0x00E3642B
+		// Token: 0x060308EE RID: 198894 RVA: 0x00D885AF File Offset: 0x00D867AF
 		public static bool CreateInstance()
 		{
 			if (BlackScreenController._Instance != null)
@@ -252,24 +256,24 @@ namespace CSharpScript.Game.Module.BlackScreen
 			return true;
 		}
 
-		// Token: 0x0603B9A4 RID: 244132 RVA: 0x00E38241 File Offset: 0x00E36441
+		// Token: 0x060308EF RID: 198895 RVA: 0x00D885C5 File Offset: 0x00D867C5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B9A5 RID: 244133 RVA: 0x00E38243 File Offset: 0x00E36443
+		// Token: 0x060308F0 RID: 198896 RVA: 0x00D885C7 File Offset: 0x00D867C7
 		public static void ResetStaticDefaultValue()
 		{
 			BlackScreenController._Instance = null;
 		}
 
-		// Token: 0x0603B9A6 RID: 244134 RVA: 0x00E3824B File Offset: 0x00E3644B
+		// Token: 0x060308F1 RID: 198897 RVA: 0x00D885CF File Offset: 0x00D867CF
 		static BlackScreenController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BlackScreenController.CreateStaticDefaultValue), new Action(BlackScreenController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603B9A7 RID: 244135 RVA: 0x00E3826C File Offset: 0x00E3646C
+		// Token: 0x060308F2 RID: 198898 RVA: 0x00D885F0 File Offset: 0x00D867F0
 		public BlackScreenController()
 		{
 			Dictionary<string, BlackScreenController.BlackScreenStyleConfig> dictionary = new Dictionary<string, BlackScreenController.BlackScreenStyleConfig>();
@@ -290,34 +294,34 @@ namespace CSharpScript.Game.Module.BlackScreen
 			base..ctor();
 		}
 
-		// Token: 0x0401F073 RID: 127091
+		// Token: 0x04019B24 RID: 105252
 		private readonly Dictionary<string, BlackScreenController.BlackScreenStyleConfig> BlackScreenStyleConfigs;
 
-		// Token: 0x0401F074 RID: 127092
+		// Token: 0x04019B25 RID: 105253
 		private readonly Dictionary<string, BlackScreenViewBase> BlackScreens;
 
-		// Token: 0x0401F075 RID: 127093
+		// Token: 0x04019B26 RID: 105254
 		private readonly Dictionary<string, Dictionary<string, int>> TagSets;
 
-		// Token: 0x0401F076 RID: 127094
+		// Token: 0x04019B27 RID: 105255
 		[Nullable(2)]
 		private string PendingDeferredTag;
 
-		// Token: 0x0401F077 RID: 127095
+		// Token: 0x04019B28 RID: 105256
 		private string PendingDeferredAnimType;
 
-		// Token: 0x0401F078 RID: 127096
+		// Token: 0x04019B29 RID: 105257
 		[Nullable(2)]
 		private static BlackScreenController _Instance;
 
-		// Token: 0x0200BE15 RID: 48661
+		// Token: 0x0200A81D RID: 43037
 		[Nullable(0)]
 		private class BlackScreenStyleConfig
 		{
-			// Token: 0x04039522 RID: 234786
+			// Token: 0x04033EE5 RID: 212709
 			public string ResourceId = "";
 
-			// Token: 0x04039523 RID: 234787
+			// Token: 0x04033EE6 RID: 212710
 			public Func<BlackScreenViewBase> CreateView;
 		}
 	}

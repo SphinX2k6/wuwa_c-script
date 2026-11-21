@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200292E RID: 10542
+	// Token: 0x02002C0A RID: 11274
 	public class RecoverDurability : ActionParams
 	{
-		// Token: 0x0600E9EB RID: 59883 RVA: 0x002245B7 File Offset: 0x002227B7
-		[NullableContext(1)]
+		// Token: 0x0600F83D RID: 63549 RVA: 0x0024190F File Offset: 0x0023FB0F
 		public static RecoverDurability Create(IRecoverDurability? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004951 RID: 18769
-		// (get) Token: 0x0600E9EC RID: 59884 RVA: 0x002245D6 File Offset: 0x002227D6
+		// Token: 0x17004CD7 RID: 19671
+		// (get) Token: 0x0600F83E RID: 63550 RVA: 0x0024192E File Offset: 0x0023FB2E
 		public virtual int EntityId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008108 RID: 33032
+		// Token: 0x040087D6 RID: 34774
 		private IRecoverDurability Instance;
 	}
 }

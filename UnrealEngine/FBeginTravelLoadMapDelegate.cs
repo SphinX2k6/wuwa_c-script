@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E90 RID: 7824
+	// Token: 0x020005B6 RID: 1462
 	public sealed class FBeginTravelLoadMapDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC30 RID: 121904 RVA: 0x002BF97E File Offset: 0x002BDB7E
+		// Token: 0x0600833C RID: 33596 RVA: 0x000C22D2 File Offset: 0x000C04D2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FBeginTravelLoadMapDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC31 RID: 121905 RVA: 0x002BF98A File Offset: 0x002BDB8A
+		// Token: 0x0600833D RID: 33597 RVA: 0x000C22DE File Offset: 0x000C04DE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FBeginTravelLoadMapDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FBeginTravelLoadMapDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601DC32 RID: 121906 RVA: 0x002BF9AD File Offset: 0x002BDBAD
+		// Token: 0x0600833E RID: 33598 RVA: 0x000C2301 File Offset: 0x000C0501
 		public FBeginTravelLoadMapDelegate()
 		{
 		}
 
-		// Token: 0x0601DC33 RID: 121907 RVA: 0x002BF9B5 File Offset: 0x002BDBB5
+		// Token: 0x0600833F RID: 33599 RVA: 0x000C2309 File Offset: 0x000C0509
 		[NullableContext(2)]
 		public FBeginTravelLoadMapDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC34 RID: 121908 RVA: 0x002BF9BF File Offset: 0x002BDBBF
+		// Token: 0x06008340 RID: 33600 RVA: 0x000C2313 File Offset: 0x000C0513
 		public FBeginTravelLoadMapDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC35 RID: 121909 RVA: 0x002BF9CA File Offset: 0x002BDBCA
+		// Token: 0x06008341 RID: 33601 RVA: 0x000C231E File Offset: 0x000C051E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC36 RID: 121910 RVA: 0x002BF9FC File Offset: 0x002BDBFC
+		// Token: 0x06008342 RID: 33602 RVA: 0x000C2350 File Offset: 0x000C0550
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string> Callback)
 		{
 			if (FBeginTravelLoadMapDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FBeginTravelLoadMapDelegate.RegisterId);
 		}
 
-		// Token: 0x0601DC37 RID: 121911 RVA: 0x002BFA38 File Offset: 0x002BDC38
+		// Token: 0x06008343 RID: 33603 RVA: 0x000C238C File Offset: 0x000C058C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string MapName)
 		{
 			FBeginTravelLoadMapDelegate.__FBeginTravelLoadMapDelegate_DelegateParams* ptr = stackalloc FBeginTravelLoadMapDelegate.__FBeginTravelLoadMapDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FBeginTravelLoadMapDelegate.__FBeginTravelLoadMapDelegate_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FBeginTravelLoadMapDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601DC38 RID: 121912 RVA: 0x002BFA8C File Offset: 0x002BDC8C
+		// Token: 0x06008344 RID: 33604 RVA: 0x000C23E0 File Offset: 0x000C05E0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -93,31 +90,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x040101CF RID: 65999
+		// Token: 0x04003913 RID: 14611
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040101D0 RID: 66000
+		// Token: 0x04003914 RID: 14612
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.BeginTravelLoadMapDelegate__DelegateSignature";
 
-		// Token: 0x040101D1 RID: 66001
+		// Token: 0x04003915 RID: 14613
 		private static int RegisterId;
 
-		// Token: 0x020032DC RID: 13020
+		// Token: 0x02000D39 RID: 3385
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FBeginTravelLoadMapDelegate_DelegateParams
+		private ref struct __FBeginTravelLoadMapDelegate_DelegateParams
 		{
-			// Token: 0x04017189 RID: 94601
+			// Token: 0x04005FD3 RID: 24531
 			[FieldOffset(0)]
 			public FString MapName;
 		}
 
-		// Token: 0x020032DD RID: 13021
+		// Token: 0x02000D3A RID: 3386
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401718A RID: 94602
+			// Token: 0x04005FD4 RID: 24532
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

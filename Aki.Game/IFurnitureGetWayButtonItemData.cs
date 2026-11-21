@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FCF RID: 4047
+// Token: 0x02000484 RID: 1156
 [NullableContext(2)]
 public interface IFurnitureGetWayButtonItemData
 {
-	// Token: 0x1700085B RID: 2139
-	// (get) Token: 0x060067F5 RID: 26613
-	// (set) Token: 0x060067F6 RID: 26614
+	// Token: 0x1700087D RID: 2173
+	// (get) Token: 0x06003B8D RID: 15245
+	// (set) Token: 0x06003B8E RID: 15246
 	string NameTextId { get; set; }
 
-	// Token: 0x1700085C RID: 2140
-	// (get) Token: 0x060067F7 RID: 26615
-	// (set) Token: 0x060067F8 RID: 26616
+	// Token: 0x1700087E RID: 2174
+	// (get) Token: 0x06003B8F RID: 15247
+	// (set) Token: 0x06003B90 RID: 15248
 	[Nullable(new byte[]
 	{
 		2,
@@ -28,8 +28,8 @@ public interface IFurnitureGetWayButtonItemData
 		1
 	})] set; }
 
-	// Token: 0x1700085D RID: 2141
-	// (get) Token: 0x060067F9 RID: 26617
-	// (set) Token: 0x060067FA RID: 26618
+	// Token: 0x1700087F RID: 2175
+	// (get) Token: 0x06003B91 RID: 15249
+	// (set) Token: 0x06003B92 RID: 15250
 	Action JumpFunction { get; set; }
 }

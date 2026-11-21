@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001286 RID: 4742
+	// Token: 0x020013C6 RID: 5062
 	public static class ERollBlockInteractTypeExtensions
 	{
-		// Token: 0x06006B02 RID: 27394 RVA: 0x00100B7C File Offset: 0x000FED7C
+		// Token: 0x06007155 RID: 29013 RVA: 0x0010E878 File Offset: 0x0010CA78
 		public static string ToEnumString(this ERollBlockInteractType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B03 RID: 27395 RVA: 0x00100BC4 File Offset: 0x000FEDC4
+		// Token: 0x06007156 RID: 29014 RVA: 0x0010E8C0 File Offset: 0x0010CAC0
 		public static ERollBlockInteractType FromString(string name)
 		{
 			ERollBlockInteractType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B04 RID: 27396 RVA: 0x00100BF0 File Offset: 0x000FEDF0
+		// Token: 0x06007157 RID: 29015 RVA: 0x0010E8EC File Offset: 0x0010CAEC
 		public static bool TryFromString(string name, out ERollBlockInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B05 RID: 27397 RVA: 0x00100C46 File Offset: 0x000FEE46
+		// Token: 0x06007158 RID: 29016 RVA: 0x0010E942 File Offset: 0x0010CB42
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B06 RID: 27398 RVA: 0x00100C66 File Offset: 0x000FEE66
+		// Token: 0x06007159 RID: 29017 RVA: 0x0010E962 File Offset: 0x0010CB62
 		public static ERollBlockInteractType[] GetValues()
 		{
 			return new ERollBlockInteractType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B07 RID: 27399 RVA: 0x00100C76 File Offset: 0x000FEE76
+		// Token: 0x0600715A RID: 29018 RVA: 0x0010E972 File Offset: 0x0010CB72
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BEE RID: 3054
+	// Token: 0x02000CBD RID: 3261
 	public class INearbyTracking
 	{
-		// Token: 0x06004625 RID: 17957 RVA: 0x000B158F File Offset: 0x000AF78F
-		[NullableContext(1)]
+		// Token: 0x06004A83 RID: 19075 RVA: 0x000BB70B File Offset: 0x000B990B
 		public static INearbyTracking Create(INearbyTracking? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001406 RID: 5126
-		// (get) Token: 0x06004626 RID: 17958 RVA: 0x000B15AE File Offset: 0x000AF7AE
+		// Token: 0x17001504 RID: 5380
+		// (get) Token: 0x06004A84 RID: 19076 RVA: 0x000BB72A File Offset: 0x000B992A
 		public virtual ENearbyTrackingType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027F5 RID: 10229
+		// Token: 0x04002A40 RID: 10816
 		private INearbyTracking Instance;
 	}
 }

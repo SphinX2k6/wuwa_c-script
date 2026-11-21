@@ -4,19 +4,19 @@ using System.Text.Json;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02000E47 RID: 3655
+// Token: 0x020002FC RID: 764
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformCloudSdkWeb : PlatformCloudSdkBase
 {
-	// Token: 0x060057F3 RID: 22515 RVA: 0x000FDA0D File Offset: 0x000FBC0D
+	// Token: 0x06002B83 RID: 11139 RVA: 0x001052FD File Offset: 0x001034FD
 	protected override void BindSpecialEvent()
 	{
 		CloudGameManager.Instance.BindFunction(ECloudGameReceiveDataKey.OnPostRedDotRefresh, new TCloudGameOnReceiveDataFunction(this.AnnounceRedPointCallBack));
 		CloudGameManager.Instance.BindFunction(ECloudGameReceiveDataKey.OnCustomerRedDotRefresh, new TCloudGameOnReceiveDataFunction(this.CustomerServiceResultCallBack));
 	}
 
-	// Token: 0x060057F4 RID: 22516 RVA: 0x000FDA40 File Offset: 0x000FBC40
+	// Token: 0x06002B84 RID: 11140 RVA: 0x00105330 File Offset: 0x00103530
 	public override void AnnounceRedPointCallBack(string result)
 	{
 		if (result.Contains("showRed") && (result.Contains("1") || result.Contains("YES")))
@@ -29,7 +29,7 @@ public class PlatformCloudSdkWeb : PlatformCloudSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
 	}
 
-	// Token: 0x060057F5 RID: 22517 RVA: 0x000FDAAC File Offset: 0x000FBCAC
+	// Token: 0x06002B85 RID: 11141 RVA: 0x0010539C File Offset: 0x0010359C
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -48,7 +48,7 @@ public class PlatformCloudSdkWeb : PlatformCloudSdkBase
 		CloudGameManager.Instance.SendDataByKey(ECloudGameSendData.OpenCustomerService, text ?? "");
 	}
 
-	// Token: 0x060057F6 RID: 22518 RVA: 0x000FDB54 File Offset: 0x000FBD54
+	// Token: 0x06002B86 RID: 11142 RVA: 0x00105444 File Offset: 0x00103644
 	public override void SdkPay(ISDKPayment paymentInfo)
 	{
 		ISDKPayRole sdkPayRoleInfo = KuroSdkControllerTool.GetSdkPayRoleInfo();
@@ -62,11 +62,11 @@ public class PlatformCloudSdkWeb : PlatformCloudSdkBase
 		CloudGameManager.Instance.SendDataByKey(ECloudGameSendData.SDKPay, paymentInfo2);
 	}
 
-	// Token: 0x060057F7 RID: 22519 RVA: 0x000FDBA8 File Offset: 0x000FBDA8
+	// Token: 0x06002B87 RID: 11143 RVA: 0x00105498 File Offset: 0x00103698
 	public override void InitializePostWebView()
 	{
 		string currentSelectServerId = this.GetCurrentSelectServerId();
-		string text = Json.Stringify<InitializePostWebViewParam>(new InitializePostWebViewParam
+		string text = Json.Stringify(new InitializePostWebViewParam
 		{
 			language = LanguageSystem.Instance.PackageLanguage,
 			serverId = currentSelectServerId,

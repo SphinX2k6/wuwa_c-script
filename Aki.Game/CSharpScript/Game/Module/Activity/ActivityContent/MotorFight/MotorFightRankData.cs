@@ -7,23 +7,23 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006401 RID: 25601
+	// Token: 0x0200537F RID: 21375
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightRankData
 	{
-		// Token: 0x17009450 RID: 37968
-		// (get) Token: 0x0604066A RID: 263786 RVA: 0x00F9476C File Offset: 0x00F9296C
-		// (set) Token: 0x0604066B RID: 263787 RVA: 0x00F94774 File Offset: 0x00F92974
+		// Token: 0x170067B2 RID: 26546
+		// (get) Token: 0x0603532B RID: 217899 RVA: 0x00EDB70C File Offset: 0x00ED990C
+		// (set) Token: 0x0603532C RID: 217900 RVA: 0x00EDB714 File Offset: 0x00ED9914
 		public bool IsMyRank { get; set; }
 
-		// Token: 0x0604066C RID: 263788 RVA: 0x00F9477D File Offset: 0x00F9297D
+		// Token: 0x0603532D RID: 217901 RVA: 0x00EDB71D File Offset: 0x00ED991D
 		public MotorFightRankData(bool isMyRank = false)
 		{
 			this.IsMyRank = isMyRank;
 		}
 
-		// Token: 0x0604066D RID: 263789 RVA: 0x00F947B8 File Offset: 0x00F929B8
+		// Token: 0x0603532E RID: 217902 RVA: 0x00EDB758 File Offset: 0x00ED9958
 		public void SetDataByConfig(MotorFightRank data)
 		{
 			RoleInfo? roleConfig = this.GetRoleConfig(data.RoleId);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.HasData = true;
 		}
 
-		// Token: 0x0604066E RID: 263790 RVA: 0x00F94998 File Offset: 0x00F92B98
+		// Token: 0x0603532F RID: 217903 RVA: 0x00EDB938 File Offset: 0x00ED9B38
 		[NullableContext(2)]
 		public void SetDataByServerInfo(MotorFightPlayerRankingInfo data)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.HasData = true;
 		}
 
-		// Token: 0x0604066F RID: 263791 RVA: 0x00F94C3C File Offset: 0x00F92E3C
+		// Token: 0x06035330 RID: 217904 RVA: 0x00EDBBDC File Offset: 0x00ED9DDC
 		private RoleInfo? GetRoleConfig(int roleId)
 		{
 			RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return roleConfig;
 		}
 
-		// Token: 0x06040670 RID: 263792 RVA: 0x00F94C98 File Offset: 0x00F92E98
+		// Token: 0x06035331 RID: 217905 RVA: 0x00EDBC38 File Offset: 0x00ED9E38
 		private int SortItemList(MotorFightItemData a, MotorFightItemData b)
 		{
 			if (a.Type != b.Type)
@@ -150,40 +150,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x040217D2 RID: 137170
+		// Token: 0x0401C101 RID: 114945
 		private const int HIGHEST_QUALITY = 5;
 
-		// Token: 0x040217D3 RID: 137171
+		// Token: 0x0401C102 RID: 114946
 		private const int LOWEST_QUALITY = 3;
 
-		// Token: 0x040217D4 RID: 137172
+		// Token: 0x0401C103 RID: 114947
 		public string Name = "";
 
-		// Token: 0x040217D5 RID: 137173
+		// Token: 0x0401C104 RID: 114948
 		public bool HasData;
 
-		// Token: 0x040217D6 RID: 137174
+		// Token: 0x0401C105 RID: 114949
 		public int Score;
 
-		// Token: 0x040217D7 RID: 137175
+		// Token: 0x0401C106 RID: 114950
 		public string TexturePath = "";
 
-		// Token: 0x040217D8 RID: 137176
+		// Token: 0x0401C107 RID: 114951
 		public int KillNum;
 
-		// Token: 0x040217D9 RID: 137177
+		// Token: 0x0401C108 RID: 114952
 		public int WaveNum;
 
-		// Token: 0x040217DA RID: 137178
+		// Token: 0x0401C109 RID: 114953
 		public int BuffGateNum;
 
-		// Token: 0x040217DB RID: 137179
+		// Token: 0x0401C10A RID: 114954
 		public int DisplayThreshold;
 
-		// Token: 0x040217DC RID: 137180
+		// Token: 0x0401C10B RID: 114955
 		public Dictionary<int, Dictionary<int, int>> ItemNumMap = new Dictionary<int, Dictionary<int, int>>();
 
-		// Token: 0x040217DE RID: 137182
+		// Token: 0x0401C10D RID: 114957
 		public List<MotorFightItemData> ItemList = new List<MotorFightItemData>();
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001277 RID: 4727
+	// Token: 0x020013B7 RID: 5047
 	public class ERecallConditionTypeJsonConverter : JsonConverter<ERecallConditionType>
 	{
-		// Token: 0x06006AC0 RID: 27328 RVA: 0x001000A8 File Offset: 0x000FE2A8
+		// Token: 0x06007113 RID: 28947 RVA: 0x0010DCD4 File Offset: 0x0010BED4
 		public override ERecallConditionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ERecallConditionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006AC1 RID: 27329 RVA: 0x001000CC File Offset: 0x000FE2CC
+		// Token: 0x06007114 RID: 28948 RVA: 0x0010DCF8 File Offset: 0x0010BEF8
 		public override void Write(Utf8JsonWriter writer, ERecallConditionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

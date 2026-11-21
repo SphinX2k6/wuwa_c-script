@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007197 RID: 29079
+	// Token: 0x0200796C RID: 31084
 	public class ISplinePointT
 	{
-		// Token: 0x1700D7FA RID: 55290
-		// (get) Token: 0x060338F0 RID: 211184 RVA: 0x006F1B78 File Offset: 0x006EFD78
-		// (set) Token: 0x060338F1 RID: 211185 RVA: 0x006F1B80 File Offset: 0x006EFD80
+		// Token: 0x1700E3F1 RID: 58353
+		// (get) Token: 0x06036BEC RID: 224236 RVA: 0x00752E08 File Offset: 0x00751008
+		// (set) Token: 0x06036BED RID: 224237 RVA: 0x00752E10 File Offset: 0x00751010
 		public string Spline { get; set; }
 
-		// Token: 0x1700D7FB RID: 55291
-		// (get) Token: 0x060338F2 RID: 211186 RVA: 0x006F1B89 File Offset: 0x006EFD89
-		// (set) Token: 0x060338F3 RID: 211187 RVA: 0x006F1B91 File Offset: 0x006EFD91
+		// Token: 0x1700E3F2 RID: 58354
+		// (get) Token: 0x06036BEE RID: 224238 RVA: 0x00752E19 File Offset: 0x00751019
+		// (set) Token: 0x06036BEF RID: 224239 RVA: 0x00752E21 File Offset: 0x00751021
 		public List<IVectorInfoT> Points { get; set; }
 
-		// Token: 0x060338F4 RID: 211188 RVA: 0x006F1B9A File Offset: 0x006EFD9A
+		// Token: 0x06036BF0 RID: 224240 RVA: 0x00752E2A File Offset: 0x0075102A
 		public ISplinePointT()
 		{
 			this.Spline = null;

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C36 RID: 23606
+	// Token: 0x02004C16 RID: 19478
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeMonsterLevelItem : StateExtraItemBase
 	{
-		// Token: 0x0603BA4F RID: 244303 RVA: 0x00E3B88C File Offset: 0x00E39A8C
+		// Token: 0x0603099A RID: 199066 RVA: 0x00D8BBFC File Offset: 0x00D89DFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA50 RID: 244304 RVA: 0x00E3B918 File Offset: 0x00E39B18
+		// Token: 0x0603099B RID: 199067 RVA: 0x00D8BC88 File Offset: 0x00D89E88
 		protected override UniTask OnCreateAsync()
 		{
 			FlagChallengeMonsterLevelItem.<OnCreateAsync>d__14 <OnCreateAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BA51 RID: 244305 RVA: 0x00E3B95C File Offset: 0x00E39B5C
+		// Token: 0x0603099C RID: 199068 RVA: 0x00D8BCCC File Offset: 0x00D89ECC
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Add(EEventName.OnFlagChallengeTotalLevelChanged, new Action<int, int, int, int>(this.OnFlagChallengeTotalLevelChanged));
 		}
 
-		// Token: 0x0603BA52 RID: 244306 RVA: 0x00E3B9B8 File Offset: 0x00E39BB8
+		// Token: 0x0603099D RID: 199069 RVA: 0x00D8BD28 File Offset: 0x00D89F28
 		protected override void OnBeforeDestroy()
 		{
 			Dictionary<EFlagChallengeLevelDiffType, UTexture> levelDiffTextureMap = this.LevelDiffTextureMap;
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Battle
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603BA53 RID: 244307 RVA: 0x00E3BA09 File Offset: 0x00E39C09
+		// Token: 0x0603099E RID: 199070 RVA: 0x00D8BD79 File Offset: 0x00D89F79
 		private void OnFlagChallengeTotalLevelChanged(int oldLevel, int newLevel, int oldTempLevel, int newTempLevel)
 		{
 			this.SetFlagChallengeLevelDiff(this.FlagChallengeLevel);
 		}
 
-		// Token: 0x0603BA54 RID: 244308 RVA: 0x00E3BA18 File Offset: 0x00E39C18
+		// Token: 0x0603099F RID: 199071 RVA: 0x00D8BD88 File Offset: 0x00D89F88
 		protected override void OnInitExtraParams(ExtraItemParams paramsObj)
 		{
 			FlagChallengeLevelItemParams flagChallengeLevelItemParams = paramsObj as FlagChallengeLevelItemParams;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.SetFlagChallengeLevel(flagChallengeLevel);
 		}
 
-		// Token: 0x0603BA55 RID: 244309 RVA: 0x00E3BA44 File Offset: 0x00E39C44
+		// Token: 0x060309A0 RID: 199072 RVA: 0x00D8BDB4 File Offset: 0x00D89FB4
 		private void SetFlagChallengeLevel(int mosnterLevelId)
 		{
 			int level = FlagChallengeConfig.Instance.GetMonsterLevelConfigById(mosnterLevelId).Value.Level;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.SetFlagChallengeLevelDiff(level);
 		}
 
-		// Token: 0x0603BA56 RID: 244310 RVA: 0x00E3BA94 File Offset: 0x00E39C94
+		// Token: 0x060309A1 RID: 199073 RVA: 0x00D8BE04 File Offset: 0x00D8A004
 		private void SetFlagChallengeLevelDiff(int flagChallengeLevel)
 		{
 			int activityId = FlagChallengeBattleModel.Instance.ActivityId;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA57 RID: 244311 RVA: 0x00E3BBF8 File Offset: 0x00E39DF8
+		// Token: 0x060309A2 RID: 199074 RVA: 0x00D8BF68 File Offset: 0x00D8A168
 		private UniTask LoadLevelDiffSprite(string path, EFlagChallengeLevelDiffType index)
 		{
 			FlagChallengeMonsterLevelItem.<LoadLevelDiffSprite>d__21 <LoadLevelDiffSprite>d__;
@@ -192,25 +192,25 @@ namespace CSharpScript.Game.Module.Battle
 			return <LoadLevelDiffSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401F0CA RID: 127178
+		// Token: 0x04019B7B RID: 105339
 		private const string LEVEL_DIFF_SPRITE_EASY = "/Game/Aki/UI/UIResources/UiFight/Image/Activity/Activity32/Morale/T_EmenyMoraleLevelGreen.T_EmenyMoraleLevelGreen";
 
-		// Token: 0x0401F0CB RID: 127179
+		// Token: 0x04019B7C RID: 105340
 		private const string LEVEL_DIFF_SPRITE_NORMAL = "/Game/Aki/UI/UIResources/UiFight/Image/Activity/Activity32/Morale/T_EmenyMoraleLevelYellow.T_EmenyMoraleLevelYellow";
 
-		// Token: 0x0401F0CC RID: 127180
+		// Token: 0x04019B7D RID: 105341
 		private const string LEVEL_DIFF_SPRITE_HARD = "/Game/Aki/UI/UIResources/UiFight/Image/Activity/Activity32/Morale/T_EmenyMoraleLevelRed.T_EmenyMoraleLevelRed";
 
-		// Token: 0x0401F0CD RID: 127181
+		// Token: 0x04019B7E RID: 105342
 		private const string LEVEL_DIFF_COLOR_EASY = "#8AD797";
 
-		// Token: 0x0401F0CE RID: 127182
+		// Token: 0x04019B7F RID: 105343
 		private const string LEVEL_DIFF_COLOR_NORMAL = "#FF9517";
 
-		// Token: 0x0401F0CF RID: 127183
+		// Token: 0x04019B80 RID: 105344
 		private const string LEVEL_DIFF_COLOR_HARD = "#FF1E18";
 
-		// Token: 0x0401F0D0 RID: 127184
+		// Token: 0x04019B81 RID: 105345
 		[Nullable(new byte[]
 		{
 			2,
@@ -218,33 +218,33 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private Dictionary<EFlagChallengeLevelDiffType, UTexture> LevelDiffTextureMap;
 
-		// Token: 0x0401F0D1 RID: 127185
+		// Token: 0x04019B82 RID: 105346
 		[Nullable(2)]
 		private UUITexture LevelDiffTexture;
 
-		// Token: 0x0401F0D2 RID: 127186
+		// Token: 0x04019B83 RID: 105347
 		[Nullable(2)]
 		private UUITexture LightTexture;
 
-		// Token: 0x0401F0D3 RID: 127187
+		// Token: 0x04019B84 RID: 105348
 		private int FlagChallengeLevel = 1;
 
-		// Token: 0x0401F0D4 RID: 127188
+		// Token: 0x04019B85 RID: 105349
 		private EFlagChallengeLevelDiffType? FlagChallengeLevelDiffType;
 
-		// Token: 0x0401F0D5 RID: 127189
+		// Token: 0x04019B86 RID: 105350
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BE27 RID: 48679
+		// Token: 0x0200A82F RID: 43055
 		[NullableContext(0)]
 		private enum EComponentType
 		{
-			// Token: 0x04039579 RID: 234873
+			// Token: 0x04033F3C RID: 212796
 			LevelText,
-			// Token: 0x0403957A RID: 234874
+			// Token: 0x04033F3D RID: 212797
 			LevelDiffTexture,
-			// Token: 0x0403957B RID: 234875
+			// Token: 0x04033F3E RID: 212798
 			LightTexture
 		}
 	}

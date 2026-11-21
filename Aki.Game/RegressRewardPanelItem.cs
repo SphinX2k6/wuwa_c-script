@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200144C RID: 5196
+// Token: 0x02000900 RID: 2304
 public class RegressRewardPanelItem : GridProxyAbstract<RegressRewardTuple>
 {
-	// Token: 0x060092C2 RID: 37570 RVA: 0x001F7EEC File Offset: 0x001F60EC
+	// Token: 0x06006657 RID: 26199 RVA: 0x00200A28 File Offset: 0x001FEC28
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,7 +20,7 @@ public class RegressRewardPanelItem : GridProxyAbstract<RegressRewardTuple>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060092C3 RID: 37571 RVA: 0x001F7F34 File Offset: 0x001F6134
+	// Token: 0x06006658 RID: 26200 RVA: 0x00200A70 File Offset: 0x001FEC70
 	protected override void OnStart()
 	{
 		AActor owner = base.GetItem(0).GetOwner();
@@ -28,27 +28,27 @@ public class RegressRewardPanelItem : GridProxyAbstract<RegressRewardTuple>
 		this.Grid.Initialize(owner);
 	}
 
-	// Token: 0x060092C4 RID: 37572 RVA: 0x001F7F65 File Offset: 0x001F6165
+	// Token: 0x06006659 RID: 26201 RVA: 0x00200AA1 File Offset: 0x001FECA1
 	public override void Refresh(RegressRewardTuple data, bool isSelected, int gridIndex)
 	{
 		this.Grid.RefreshByConfigId(data.Id, new int?(data.Num), null, false, false);
 		this.Grid.SetReceivedVisible(data.Received);
 	}
 
-	// Token: 0x060092C5 RID: 37573 RVA: 0x001F7F97 File Offset: 0x001F6197
+	// Token: 0x0600665A RID: 26202 RVA: 0x00200AD3 File Offset: 0x001FECD3
 	protected override void OnBeforeDestroy()
 	{
 		this.Grid = null;
 	}
 
-	// Token: 0x04004105 RID: 16645
+	// Token: 0x0400419D RID: 16797
 	[Nullable(2)]
 	private CommonItemSmallItemGrid Grid;
 
-	// Token: 0x02007A87 RID: 31367
+	// Token: 0x02006C0B RID: 27659
 	private class ERegressRewardPanelItem
 	{
-		// Token: 0x04028522 RID: 165154
+		// Token: 0x0402383C RID: 145468
 		public const int ButtonItem = 0;
 	}
 }

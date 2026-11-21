@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AA7 RID: 10919
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D9B RID: 11675
 	public class StartMotorCruise : ActionParams
 	{
-		// Token: 0x0600EFBF RID: 61375 RVA: 0x0022D7BF File Offset: 0x0022B9BF
+		// Token: 0x0600FE75 RID: 65141 RVA: 0x0024B4CB File Offset: 0x002496CB
 		public static StartMotorCruise Create(IStartMotorCruise? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C33 RID: 19507
-		// (get) Token: 0x0600EFC0 RID: 61376 RVA: 0x0022D7DE File Offset: 0x0022B9DE
+		// Token: 0x17004FED RID: 20461
+		// (get) Token: 0x0600FE76 RID: 65142 RVA: 0x0024B4EA File Offset: 0x002496EA
 		public virtual ISplineWayPoint StartPoint
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C34 RID: 19508
-		// (get) Token: 0x0600EFC1 RID: 61377 RVA: 0x0022D812 File Offset: 0x0022BA12
+		// Token: 0x17004FEE RID: 20462
+		// (get) Token: 0x0600FE77 RID: 65143 RVA: 0x0024B51E File Offset: 0x0024971E
 		public virtual ISplineWayPoint EndPoint
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C35 RID: 19509
-		// (get) Token: 0x0600EFC2 RID: 61378 RVA: 0x0022D846 File Offset: 0x0022BA46
+		// Token: 0x17004FEF RID: 20463
+		// (get) Token: 0x0600FE78 RID: 65144 RVA: 0x0024B552 File Offset: 0x00249752
 		public virtual bool AllowSkip
 		{
 			get
@@ -64,21 +62,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083E5 RID: 33765
+		// Token: 0x04008AE9 RID: 35561
 		private IStartMotorCruise Instance;
 
-		// Token: 0x040083E6 RID: 33766
+		// Token: 0x04008AEA RID: 35562
 		[Nullable(2)]
 		private ISplineWayPoint _StartPointCache;
 
-		// Token: 0x040083E7 RID: 33767
+		// Token: 0x04008AEB RID: 35563
 		private bool _StartPointInited;
 
-		// Token: 0x040083E8 RID: 33768
+		// Token: 0x04008AEC RID: 35564
 		[Nullable(2)]
 		private ISplineWayPoint _EndPointCache;
 
-		// Token: 0x040083E9 RID: 33769
+		// Token: 0x04008AED RID: 35565
 		private bool _EndPointInited;
 	}
 }

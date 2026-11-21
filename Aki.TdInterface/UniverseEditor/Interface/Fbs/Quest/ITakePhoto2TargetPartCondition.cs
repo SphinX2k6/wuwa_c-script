@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004199 RID: 16793
+	// Token: 0x020045F2 RID: 17906
 	public struct ITakePhoto2TargetPartCondition : IFlatbufferObject
 	{
-		// Token: 0x1700771F RID: 30495
-		// (get) Token: 0x06018B67 RID: 101223 RVA: 0x0038F176 File Offset: 0x0038D376
+		// Token: 0x17007D4B RID: 32075
+		// (get) Token: 0x0601A2BD RID: 107197 RVA: 0x003BA5CA File Offset: 0x003B87CA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018B68 RID: 101224 RVA: 0x0038F183 File Offset: 0x0038D383
+		// Token: 0x0601A2BE RID: 107198 RVA: 0x003BA5D7 File Offset: 0x003B87D7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018B69 RID: 101225 RVA: 0x0038F18C File Offset: 0x0038D38C
+		// Token: 0x0601A2BF RID: 107199 RVA: 0x003BA5E0 File Offset: 0x003B87E0
 		public static ITakePhoto2TargetPartCondition GetRootAsITakePhoto2TargetPartCondition(ByteBuffer _bb)
 		{
 			return ITakePhoto2TargetPartCondition.GetRootAsITakePhoto2TargetPartCondition(_bb, default(ITakePhoto2TargetPartCondition));
 		}
 
-		// Token: 0x06018B6A RID: 101226 RVA: 0x0038F1A8 File Offset: 0x0038D3A8
+		// Token: 0x0601A2C0 RID: 107200 RVA: 0x003BA5FC File Offset: 0x003B87FC
 		public static ITakePhoto2TargetPartCondition GetRootAsITakePhoto2TargetPartCondition(ByteBuffer _bb, ITakePhoto2TargetPartCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018B6B RID: 101227 RVA: 0x0038F1C5 File Offset: 0x0038D3C5
+		// Token: 0x0601A2C1 RID: 107201 RVA: 0x003BA619 File Offset: 0x003B8819
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018B6C RID: 101228 RVA: 0x0038F1D4 File Offset: 0x0038D3D4
+		// Token: 0x0601A2C2 RID: 107202 RVA: 0x003BA628 File Offset: 0x003B8828
 		public ITakePhoto2TargetPartCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06018B6D RID: 101229 RVA: 0x0038F1E4 File Offset: 0x0038D3E4
+		// Token: 0x0601A2C3 RID: 107203 RVA: 0x003BA638 File Offset: 0x003B8838
 		public string Tags(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17007720 RID: 30496
-		// (get) Token: 0x06018B6E RID: 101230 RVA: 0x0038F220 File Offset: 0x0038D420
+		// Token: 0x17007D4C RID: 32076
+		// (get) Token: 0x0601A2C4 RID: 107204 RVA: 0x003BA674 File Offset: 0x003B8874
 		public int TagsLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018B6F RID: 101231 RVA: 0x0038F24B File Offset: 0x0038D44B
+		// Token: 0x0601A2C5 RID: 107205 RVA: 0x003BA69F File Offset: 0x003B889F
 		public static Offset<ITakePhoto2TargetPartCondition> CreateITakePhoto2TargetPartCondition(FlatBufferBuilder builder, VectorOffset TagsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TargetPartCondition.EndITakePhoto2TargetPartCondition(builder);
 		}
 
-		// Token: 0x06018B70 RID: 101232 RVA: 0x0038F261 File Offset: 0x0038D461
+		// Token: 0x0601A2C6 RID: 107206 RVA: 0x003BA6B5 File Offset: 0x003B88B5
 		public static void StartITakePhoto2TargetPartCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018B71 RID: 101233 RVA: 0x0038F26A File Offset: 0x0038D46A
+		// Token: 0x0601A2C7 RID: 107207 RVA: 0x003BA6BE File Offset: 0x003B88BE
 		public static void AddTags(FlatBufferBuilder builder, VectorOffset tagsOffset)
 		{
 			builder.AddOffset(0, tagsOffset.Value, 0);
 		}
 
-		// Token: 0x06018B72 RID: 101234 RVA: 0x0038F27C File Offset: 0x0038D47C
+		// Token: 0x0601A2C8 RID: 107208 RVA: 0x003BA6D0 File Offset: 0x003B88D0
 		public static VectorOffset CreateTagsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018B73 RID: 101235 RVA: 0x0038F2BC File Offset: 0x0038D4BC
+		// Token: 0x0601A2C9 RID: 107209 RVA: 0x003BA710 File Offset: 0x003B8910
 		public static VectorOffset CreateTagsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018B74 RID: 101236 RVA: 0x0038F2D6 File Offset: 0x0038D4D6
+		// Token: 0x0601A2CA RID: 107210 RVA: 0x003BA72A File Offset: 0x003B892A
 		public static VectorOffset CreateTagsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018B75 RID: 101237 RVA: 0x0038F2F4 File Offset: 0x0038D4F4
+		// Token: 0x0601A2CB RID: 107211 RVA: 0x003BA748 File Offset: 0x003B8948
 		public static VectorOffset CreateTagsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018B76 RID: 101238 RVA: 0x0038F30D File Offset: 0x0038D50D
+		// Token: 0x0601A2CC RID: 107212 RVA: 0x003BA761 File Offset: 0x003B8961
 		public static void StartTagsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06018B77 RID: 101239 RVA: 0x0038F318 File Offset: 0x0038D518
+		// Token: 0x0601A2CD RID: 107213 RVA: 0x003BA76C File Offset: 0x003B896C
 		public static Offset<ITakePhoto2TargetPartCondition> EndITakePhoto2TargetPartCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITakePhoto2TargetPartCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06018B78 RID: 101240 RVA: 0x0038F328 File Offset: 0x0038D528
+		// Token: 0x0601A2CE RID: 107214 RVA: 0x003BA77C File Offset: 0x003B897C
 		public ITakePhoto2TargetPartConditionT UnPack()
 		{
 			ITakePhoto2TargetPartConditionT takePhoto2TargetPartConditionT = new ITakePhoto2TargetPartConditionT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return takePhoto2TargetPartConditionT;
 		}
 
-		// Token: 0x06018B79 RID: 101241 RVA: 0x0038F344 File Offset: 0x0038D544
+		// Token: 0x0601A2CF RID: 107215 RVA: 0x003BA798 File Offset: 0x003B8998
 		public void UnPackTo(ITakePhoto2TargetPartConditionT _o)
 		{
 			_o.Tags = new List<string>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018B7A RID: 101242 RVA: 0x0038F380 File Offset: 0x0038D580
+		// Token: 0x0601A2D0 RID: 107216 RVA: 0x003BA7D4 File Offset: 0x003B89D4
 		public static Offset<ITakePhoto2TargetPartCondition> Pack(FlatBufferBuilder builder, ITakePhoto2TargetPartConditionT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TargetPartCondition.CreateITakePhoto2TargetPartCondition(builder, tagsOffset);
 		}
 
-		// Token: 0x0400BDD3 RID: 48595
+		// Token: 0x0400C7DD RID: 51165
 		private Table __p;
 	}
 }

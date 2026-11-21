@@ -8,30 +8,30 @@ using CSharpScript.Game.LevelGamePlay;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001F2F RID: 7983
+// Token: 0x020013F1 RID: 5105
 [NullableContext(1)]
 [Nullable(0)]
 public class LockExecutionHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F621 RID: 63009 RVA: 0x003B6D38 File Offset: 0x003B4F38
+	// Token: 0x0600CA40 RID: 51776 RVA: 0x003C2824 File Offset: 0x003C0A24
 	protected override void OnInitialize()
 	{
 		this.MinDistanceSquare = (double)ConfigCommonParamById.GetIntConfig("LockExecutionShowDistance").Value;
 	}
 
-	// Token: 0x0600F622 RID: 63010 RVA: 0x003B6D5E File Offset: 0x003B4F5E
+	// Token: 0x0600CA41 RID: 51777 RVA: 0x003C284A File Offset: 0x003C0A4A
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool, int, ECustomOptionType?>(EEventName.OnEnterOrExitExecutionRange, new Action<bool, int, ECustomOptionType?>(this.OnEnterOrExitExecutionRange));
 	}
 
-	// Token: 0x0600F623 RID: 63011 RVA: 0x003B6D7C File Offset: 0x003B4F7C
+	// Token: 0x0600CA42 RID: 51778 RVA: 0x003C2868 File Offset: 0x003C0A68
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<bool, int, ECustomOptionType?>(EEventName.OnEnterOrExitExecutionRange, new Action<bool, int, ECustomOptionType?>(this.OnEnterOrExitExecutionRange));
 	}
 
-	// Token: 0x0600F624 RID: 63012 RVA: 0x003B6D9A File Offset: 0x003B4F9A
+	// Token: 0x0600CA43 RID: 51779 RVA: 0x003C2886 File Offset: 0x003C0A86
 	private void OnEnterOrExitExecutionRange(bool isEnter, int entityId, ECustomOptionType? optionType)
 	{
 		if (isEnter && optionType.GetValueOrDefault() == ECustomOptionType.Execution)
@@ -42,7 +42,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.OnHideExecutionUi(entityId);
 	}
 
-	// Token: 0x0600F625 RID: 63013 RVA: 0x003B6DB8 File Offset: 0x003B4FB8
+	// Token: 0x0600CA44 RID: 51780 RVA: 0x003C28A4 File Offset: 0x003C0AA4
 	private void OnShowExecutionUi(int entityId)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -61,7 +61,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.OnAdd();
 	}
 
-	// Token: 0x0600F626 RID: 63014 RVA: 0x003B6E06 File Offset: 0x003B5006
+	// Token: 0x0600CA45 RID: 51781 RVA: 0x003C28F2 File Offset: 0x003C0AF2
 	private void OnHideExecutionUi(int entityId)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -72,14 +72,14 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.OnRemove();
 	}
 
-	// Token: 0x0600F627 RID: 63015 RVA: 0x003B6E29 File Offset: 0x003B5029
+	// Token: 0x0600CA46 RID: 51782 RVA: 0x003C2915 File Offset: 0x003C0B15
 	private void OnAdd()
 	{
 		this.AddEntityEvents();
 		this.TryActivate();
 	}
 
-	// Token: 0x0600F628 RID: 63016 RVA: 0x003B6E37 File Offset: 0x003B5037
+	// Token: 0x0600CA47 RID: 51783 RVA: 0x003C2923 File Offset: 0x003C0B23
 	private void OnRemove()
 	{
 		this.RemoveEntityEvents();
@@ -88,7 +88,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.EntityHandle = null;
 	}
 
-	// Token: 0x0600F629 RID: 63017 RVA: 0x003B6E53 File Offset: 0x003B5053
+	// Token: 0x0600CA48 RID: 51784 RVA: 0x003C293F File Offset: 0x003C0B3F
 	private void AddEntityEvents()
 	{
 		if (this.EntityHandle == null)
@@ -98,7 +98,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		EventSystem.Instance.AddWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F62A RID: 63018 RVA: 0x003B6E80 File Offset: 0x003B5080
+	// Token: 0x0600CA49 RID: 51785 RVA: 0x003C296C File Offset: 0x003C0B6C
 	private void RemoveEntityEvents()
 	{
 		if (this.EntityHandle == null)
@@ -108,7 +108,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		EventSystem.Instance.RemoveWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F62B RID: 63019 RVA: 0x003B6EAD File Offset: 0x003B50AD
+	// Token: 0x0600CA4A RID: 51786 RVA: 0x003C2999 File Offset: 0x003C0B99
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		if (this.EntityHandle == null)
@@ -118,7 +118,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.OnRemove();
 	}
 
-	// Token: 0x0600F62C RID: 63020 RVA: 0x003B6EBE File Offset: 0x003B50BE
+	// Token: 0x0600CA4B RID: 51787 RVA: 0x003C29AA File Offset: 0x003C0BAA
 	protected override void OnTick(float delta)
 	{
 		if (this.IsLoading)
@@ -138,7 +138,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.LockExecutionUnit.TryHide(true);
 	}
 
-	// Token: 0x0600F62D RID: 63021 RVA: 0x003B6EF8 File Offset: 0x003B50F8
+	// Token: 0x0600CA4C RID: 51788 RVA: 0x003C29E4 File Offset: 0x003C0BE4
 	private void RefreshActiveAndPosition()
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -168,7 +168,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.LockExecutionUnit.GetRootItem().SetAnchorOffset(this.ScreenPos.ToUeVector2D(false));
 	}
 
-	// Token: 0x0600F62E RID: 63022 RVA: 0x003B7005 File Offset: 0x003B5205
+	// Token: 0x0600CA4D RID: 51789 RVA: 0x003C2AF1 File Offset: 0x003C0CF1
 	private void TryActivate()
 	{
 		if (this.LockExecutionUnit == null)
@@ -185,7 +185,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.LockExecutionUnit.TryHide(true);
 	}
 
-	// Token: 0x0600F62F RID: 63023 RVA: 0x003B703C File Offset: 0x003B523C
+	// Token: 0x0600CA4E RID: 51790 RVA: 0x003C2B28 File Offset: 0x003C0D28
 	private void Activate()
 	{
 		if (this.IsLoading)
@@ -211,7 +211,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		});
 	}
 
-	// Token: 0x0600F630 RID: 63024 RVA: 0x003B7077 File Offset: 0x003B5277
+	// Token: 0x0600CA4F RID: 51791 RVA: 0x003C2B63 File Offset: 0x003C0D63
 	private void TryDeactivate()
 	{
 		if (this.LockExecutionUnit == null)
@@ -221,7 +221,7 @@ public class LockExecutionHandle : HudUnitHandleBase
 		this.LockExecutionUnit.TryHide(true);
 	}
 
-	// Token: 0x0600F631 RID: 63025 RVA: 0x003B7090 File Offset: 0x003B5290
+	// Token: 0x0600CA50 RID: 51792 RVA: 0x003C2B7C File Offset: 0x003C0D7C
 	private FVectorDouble? GetWorldLocation()
 	{
 		AActor owner = this.EntityHandle.Entity.GetComponent<BaseActorComponent>().Owner;
@@ -232,26 +232,26 @@ public class LockExecutionHandle : HudUnitHandleBase
 		return new FVectorDouble?((owner as TsBaseCharacter).Mesh.D_GetSocketLocation(LockExecutionHandle._hitCaseSocket));
 	}
 
-	// Token: 0x040071EC RID: 29164
+	// Token: 0x040072CD RID: 29389
 	private static readonly FName _hitCaseSocket = new FName("HitCase");
 
-	// Token: 0x040071ED RID: 29165
+	// Token: 0x040072CE RID: 29390
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x040071EE RID: 29166
+	// Token: 0x040072CF RID: 29391
 	[Nullable(2)]
 	private LockExecutionUnit LockExecutionUnit;
 
-	// Token: 0x040071EF RID: 29167
+	// Token: 0x040072D0 RID: 29392
 	[Nullable(2)]
 	private EntityHandle EntityHandle;
 
-	// Token: 0x040071F0 RID: 29168
+	// Token: 0x040072D1 RID: 29393
 	private bool IsLoading;
 
-	// Token: 0x040071F1 RID: 29169
+	// Token: 0x040072D2 RID: 29394
 	private bool IsActive;
 
-	// Token: 0x040071F2 RID: 29170
+	// Token: 0x040072D3 RID: 29395
 	private double MinDistanceSquare;
 }

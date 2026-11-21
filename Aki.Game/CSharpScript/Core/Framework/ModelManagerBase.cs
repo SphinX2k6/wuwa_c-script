@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Core.Framework
 {
-	// Token: 0x02004520 RID: 17696
+	// Token: 0x02003445 RID: 13381
 	[StaticVariableRuleIgnore]
 	public abstract class ModelManagerBase : IModelManagerBase
 	{
-		// Token: 0x0602D8A6 RID: 186534 RVA: 0x00A47264 File Offset: 0x00A45464
+		// Token: 0x06021F78 RID: 139128 RVA: 0x00973074 File Offset: 0x00971274
 		public bool CreateInstance()
 		{
 			try
@@ -32,7 +32,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D8A7 RID: 186535 RVA: 0x00A47300 File Offset: 0x00A45500
+		// Token: 0x06021F79 RID: 139129 RVA: 0x00973110 File Offset: 0x00971310
 		public bool Init()
 		{
 			try
@@ -58,7 +58,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D8A8 RID: 186536 RVA: 0x00A4739C File Offset: 0x00A4559C
+		// Token: 0x06021F7A RID: 139130 RVA: 0x009731AC File Offset: 0x009713AC
 		public bool Clear()
 		{
 			try
@@ -84,7 +84,7 @@ namespace CSharpScript.Core.Framework
 			return false;
 		}
 
-		// Token: 0x0602D8A9 RID: 186537 RVA: 0x00A47438 File Offset: 0x00A45638
+		// Token: 0x06021F7B RID: 139131 RVA: 0x00973248 File Offset: 0x00971448
 		public bool LeaveLevel()
 		{
 			try
@@ -119,7 +119,7 @@ namespace CSharpScript.Core.Framework
 			return true;
 		}
 
-		// Token: 0x0602D8AA RID: 186538 RVA: 0x00A47500 File Offset: 0x00A45700
+		// Token: 0x06021F7C RID: 139132 RVA: 0x00973310 File Offset: 0x00971510
 		public bool ChangeMode()
 		{
 			try
@@ -154,25 +154,25 @@ namespace CSharpScript.Core.Framework
 			return true;
 		}
 
-		// Token: 0x0602D8AB RID: 186539 RVA: 0x00A475C4 File Offset: 0x00A457C4
+		// Token: 0x06021F7D RID: 139133 RVA: 0x009733D4 File Offset: 0x009715D4
 		protected virtual bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D8AC RID: 186540 RVA: 0x00A475C7 File Offset: 0x00A457C7
+		// Token: 0x06021F7E RID: 139134 RVA: 0x009733D7 File Offset: 0x009715D7
 		protected virtual bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D8AD RID: 186541 RVA: 0x00A475CA File Offset: 0x00A457CA
+		// Token: 0x06021F7F RID: 139135 RVA: 0x009733DA File Offset: 0x009715DA
 		protected virtual bool OnLeaveLevel()
 		{
 			return true;
 		}
 
-		// Token: 0x0602D8AE RID: 186542 RVA: 0x00A475CD File Offset: 0x00A457CD
+		// Token: 0x06021F80 RID: 139136 RVA: 0x009733DD File Offset: 0x009715DD
 		protected virtual bool OnChangeMode()
 		{
 			return true;

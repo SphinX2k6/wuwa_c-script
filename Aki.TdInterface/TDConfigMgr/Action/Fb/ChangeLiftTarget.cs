@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002833 RID: 10291
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B06 RID: 11014
 	public class ChangeLiftTarget : ActionParams
 	{
-		// Token: 0x0600E430 RID: 58416 RVA: 0x002198B4 File Offset: 0x00217AB4
+		// Token: 0x0600F255 RID: 62037 RVA: 0x00236718 File Offset: 0x00234918
 		public static ChangeLiftTarget Create(IChangeLiftTarget? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700458C RID: 17804
-		// (get) Token: 0x0600E431 RID: 58417 RVA: 0x002198D3 File Offset: 0x00217AD3
+		// Token: 0x170048F7 RID: 18679
+		// (get) Token: 0x0600F256 RID: 62038 RVA: 0x00236737 File Offset: 0x00234937
 		public virtual bool IsSelf
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700458D RID: 17805
-		// (get) Token: 0x0600E432 RID: 58418 RVA: 0x002198E0 File Offset: 0x00217AE0
+		// Token: 0x170048F8 RID: 18680
+		// (get) Token: 0x0600F257 RID: 62039 RVA: 0x00236744 File Offset: 0x00234944
 		public virtual ILiftMoveType MoveType
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700458E RID: 17806
-		// (get) Token: 0x0600E433 RID: 58419 RVA: 0x00219910 File Offset: 0x00217B10
+		// Token: 0x170048F9 RID: 18681
+		// (get) Token: 0x0600F258 RID: 62040 RVA: 0x00236774 File Offset: 0x00234974
 		public virtual int? EntityId
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700458F RID: 17807
-		// (get) Token: 0x0600E434 RID: 58420 RVA: 0x00219946 File Offset: 0x00217B46
+		// Token: 0x170048FA RID: 18682
+		// (get) Token: 0x0600F259 RID: 62041 RVA: 0x002367AA File Offset: 0x002349AA
 		public virtual int Location
 		{
 			get
@@ -72,13 +69,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E41 RID: 32321
+		// Token: 0x040084FE RID: 34046
 		private IChangeLiftTarget Instance;
 
-		// Token: 0x04007E42 RID: 32322
+		// Token: 0x040084FF RID: 34047
 		private ILiftMoveType _MoveTypeCache;
 
-		// Token: 0x04007E43 RID: 32323
+		// Token: 0x04008500 RID: 34048
 		private bool _MoveTypeInited;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000951 RID: 2385
+	// Token: 0x02000A04 RID: 2564
 	public class EGearHitAffectTypeJsonConverter : JsonConverter<EGearHitAffectType>
 	{
-		// Token: 0x0600359F RID: 13727 RVA: 0x0008BDDC File Offset: 0x00089FDC
+		// Token: 0x06003926 RID: 14630 RVA: 0x00093D30 File Offset: 0x00091F30
 		public override EGearHitAffectType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EGearHitAffectTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060035A0 RID: 13728 RVA: 0x0008BE00 File Offset: 0x0008A000
+		// Token: 0x06003927 RID: 14631 RVA: 0x00093D54 File Offset: 0x00091F54
 		public override void Write(Utf8JsonWriter writer, EGearHitAffectType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

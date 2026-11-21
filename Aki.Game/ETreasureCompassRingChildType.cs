@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001F67 RID: 8039
+// Token: 0x02001429 RID: 5161
 public enum ETreasureCompassRingChildType
 {
-	// Token: 0x04007433 RID: 29747
+	// Token: 0x04007514 RID: 29972
 	RingItem
 }

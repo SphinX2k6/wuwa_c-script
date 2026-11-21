@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068EB RID: 26859
+	// Token: 0x0200583B RID: 22587
 	public class CoopUpLevelTogItem : UiPanelBase
 	{
-		// Token: 0x06042FFA RID: 274426 RVA: 0x01051EDC File Offset: 0x010500DC
+		// Token: 0x06037B52 RID: 228178 RVA: 0x00F93504 File Offset: 0x00F91704
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FFB RID: 274427 RVA: 0x01051F90 File Offset: 0x01050190
+		// Token: 0x06037B53 RID: 228179 RVA: 0x00F935B8 File Offset: 0x00F917B8
 		[NullableContext(1)]
 		public void RefreshView(CoopLevelData levelData)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.SetRomaNumArtTxt(levelData.Level);
 		}
 
-		// Token: 0x06042FFC RID: 274428 RVA: 0x01051FF3 File Offset: 0x010501F3
+		// Token: 0x06037B54 RID: 228180 RVA: 0x00F9361B File Offset: 0x00F9181B
 		public void SetRomaNumArtTxt(int num)
 		{
 			base.GetArtText(5).SetText(num.ToString());

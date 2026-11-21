@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DEE RID: 19950
+	// Token: 0x020052FB RID: 21243
 	public enum EPetalGrabHandType : byte
 	{
-		// Token: 0x0400DAAF RID: 55983
+		// Token: 0x0400E617 RID: 58903
 		LeftHand,
-		// Token: 0x0400DAB0 RID: 55984
+		// Token: 0x0400E618 RID: 58904
 		RightHand,
-		// Token: 0x0400DAB1 RID: 55985
+		// Token: 0x0400E619 RID: 58905
 		BothHands
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E5B RID: 20059
+	// Token: 0x02003E24 RID: 15908
 	public class FetterItem : GridProxyAbstract<FetterData>
 	{
-		// Token: 0x06033AD7 RID: 211671 RVA: 0x00C197C8 File Offset: 0x00C179C8
+		// Token: 0x06028942 RID: 166210 RVA: 0x00B62CF0 File Offset: 0x00B60EF0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AD8 RID: 211672 RVA: 0x00C19822 File Offset: 0x00C17A22
+		// Token: 0x06028943 RID: 166211 RVA: 0x00B62D4A File Offset: 0x00B60F4A
 		public override void Refresh(FetterData data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x06033AD9 RID: 211673 RVA: 0x00C1982C File Offset: 0x00C17A2C
+		// Token: 0x06028944 RID: 166212 RVA: 0x00B62D54 File Offset: 0x00B60F54
 		public void Refresh(FetterData data)
 		{
 			RogueResBond? rogueResBond = RogueBattleConfig.Instance.GetRogueResBond(data.Id);

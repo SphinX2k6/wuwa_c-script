@@ -1,10 +1,10 @@
 ﻿using System;
 using Aki.Protocol;
 
-// Token: 0x02003149 RID: 12617
+// Token: 0x020026AB RID: 9899
 public class EndSkillInfo
 {
-	// Token: 0x0601B268 RID: 111208 RVA: 0x00762C6E File Offset: 0x00760E6E
+	// Token: 0x06018D19 RID: 101657 RVA: 0x0078957C File Offset: 0x0078777C
 	public void Reset()
 	{
 		this.Reason = EEndSkillReason.Default;
@@ -13,15 +13,15 @@ public class EndSkillInfo
 		this.BulletId = 0L;
 	}
 
-	// Token: 0x0400D32D RID: 54061
+	// Token: 0x0400D76E RID: 55150
 	public EEndSkillReason Reason;
 
-	// Token: 0x0400D32E RID: 54062
+	// Token: 0x0400D76F RID: 55151
 	public long EntityId;
 
-	// Token: 0x0400D32F RID: 54063
+	// Token: 0x0400D770 RID: 55152
 	public int SkillId;
 
-	// Token: 0x0400D330 RID: 54064
+	// Token: 0x0400D771 RID: 55153
 	public long BulletId;
 }

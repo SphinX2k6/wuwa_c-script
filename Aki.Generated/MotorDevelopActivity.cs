@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E36 RID: 3638
+	// Token: 0x02000F1B RID: 3867
 	public struct MotorDevelopActivity : IFlatbufferObject
 	{
-		// Token: 0x17002055 RID: 8277
-		// (get) Token: 0x06009772 RID: 38770 RVA: 0x0028C9C2 File Offset: 0x0028ABC2
+		// Token: 0x170020BA RID: 8378
+		// (get) Token: 0x06009D92 RID: 40338 RVA: 0x002AA642 File Offset: 0x002A8842
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009773 RID: 38771 RVA: 0x0028C9CF File Offset: 0x0028ABCF
+		// Token: 0x06009D93 RID: 40339 RVA: 0x002AA64F File Offset: 0x002A884F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009774 RID: 38772 RVA: 0x0028C9D8 File Offset: 0x0028ABD8
+		// Token: 0x06009D94 RID: 40340 RVA: 0x002AA658 File Offset: 0x002A8858
 		public static MotorDevelopActivity GetRootAsMotorDevelopActivity(ByteBuffer _bb)
 		{
 			return MotorDevelopActivity.GetRootAsMotorDevelopActivity(_bb, default(MotorDevelopActivity));
 		}
 
-		// Token: 0x06009775 RID: 38773 RVA: 0x0028C9F4 File Offset: 0x0028ABF4
+		// Token: 0x06009D95 RID: 40341 RVA: 0x002AA674 File Offset: 0x002A8874
 		public static MotorDevelopActivity GetRootAsMotorDevelopActivity(ByteBuffer _bb, MotorDevelopActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009776 RID: 38774 RVA: 0x0028CA11 File Offset: 0x0028AC11
+		// Token: 0x06009D96 RID: 40342 RVA: 0x002AA691 File Offset: 0x002A8891
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009777 RID: 38775 RVA: 0x0028CA20 File Offset: 0x0028AC20
+		// Token: 0x06009D97 RID: 40343 RVA: 0x002AA6A0 File Offset: 0x002A88A0
 		public MotorDevelopActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002056 RID: 8278
-		// (get) Token: 0x06009778 RID: 38776 RVA: 0x0028CA30 File Offset: 0x0028AC30
+		// Token: 0x170020BB RID: 8379
+		// (get) Token: 0x06009D98 RID: 40344 RVA: 0x002AA6B0 File Offset: 0x002A88B0
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002057 RID: 8279
-		// (get) Token: 0x06009779 RID: 38777 RVA: 0x0028CA6C File Offset: 0x0028AC6C
+		// Token: 0x170020BC RID: 8380
+		// (get) Token: 0x06009D99 RID: 40345 RVA: 0x002AA6EC File Offset: 0x002A88EC
 		public int SkillTreeId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004EDC RID: 20188
+		// Token: 0x040054C1 RID: 21697
 		private Table __p;
 	}
 }

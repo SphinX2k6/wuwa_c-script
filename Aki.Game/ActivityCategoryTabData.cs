@@ -2,33 +2,33 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010BC RID: 4284
+// Token: 0x02000570 RID: 1392
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityCategoryTabData : IActivityCategoryTabData
 {
-	// Token: 0x1700096D RID: 2413
-	// (get) Token: 0x06006F7F RID: 28543 RVA: 0x0016B8A2 File Offset: 0x00169AA2
-	// (set) Token: 0x06006F80 RID: 28544 RVA: 0x0016B8AA File Offset: 0x00169AAA
+	// Token: 0x1700098D RID: 2445
+	// (get) Token: 0x06004315 RID: 17173 RVA: 0x0017421A File Offset: 0x0017241A
+	// (set) Token: 0x06004316 RID: 17174 RVA: 0x00174222 File Offset: 0x00172422
 	public bool IsLineType { get; set; }
 
-	// Token: 0x1700096E RID: 2414
-	// (get) Token: 0x06006F81 RID: 28545 RVA: 0x0016B8B3 File Offset: 0x00169AB3
-	// (set) Token: 0x06006F82 RID: 28546 RVA: 0x0016B8BB File Offset: 0x00169ABB
+	// Token: 0x1700098E RID: 2446
+	// (get) Token: 0x06004317 RID: 17175 RVA: 0x0017422B File Offset: 0x0017242B
+	// (set) Token: 0x06004318 RID: 17176 RVA: 0x00174233 File Offset: 0x00172433
 	public int? Id { get; set; }
 
-	// Token: 0x1700096F RID: 2415
-	// (get) Token: 0x06006F83 RID: 28547 RVA: 0x0016B8C4 File Offset: 0x00169AC4
-	// (set) Token: 0x06006F84 RID: 28548 RVA: 0x0016B8CC File Offset: 0x00169ACC
+	// Token: 0x1700098F RID: 2447
+	// (get) Token: 0x06004319 RID: 17177 RVA: 0x0017423C File Offset: 0x0017243C
+	// (set) Token: 0x0600431A RID: 17178 RVA: 0x00174244 File Offset: 0x00172444
 	public string TextId { get; set; }
 
-	// Token: 0x17000970 RID: 2416
-	// (get) Token: 0x06006F85 RID: 28549 RVA: 0x0016B8D5 File Offset: 0x00169AD5
-	// (set) Token: 0x06006F86 RID: 28550 RVA: 0x0016B8DD File Offset: 0x00169ADD
+	// Token: 0x17000990 RID: 2448
+	// (get) Token: 0x0600431B RID: 17179 RVA: 0x0017424D File Offset: 0x0017244D
+	// (set) Token: 0x0600431C RID: 17180 RVA: 0x00174255 File Offset: 0x00172455
 	public string IconPath { get; set; }
 
-	// Token: 0x17000971 RID: 2417
-	// (get) Token: 0x06006F87 RID: 28551 RVA: 0x0016B8E6 File Offset: 0x00169AE6
-	// (set) Token: 0x06006F88 RID: 28552 RVA: 0x0016B8EE File Offset: 0x00169AEE
+	// Token: 0x17000991 RID: 2449
+	// (get) Token: 0x0600431D RID: 17181 RVA: 0x0017425E File Offset: 0x0017245E
+	// (set) Token: 0x0600431E RID: 17182 RVA: 0x00174266 File Offset: 0x00172466
 	public List<ActivityBaseData> Activities { get; set; }
 }

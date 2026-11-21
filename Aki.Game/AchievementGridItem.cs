@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x02000F23 RID: 3875
+// Token: 0x020003D8 RID: 984
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,25 +12,25 @@ using CSharpScript.Game.Module.Item;
 })]
 public class AchievementGridItem : LoopScrollSmallItemGrid<AchievementGridItemData>
 {
-	// Token: 0x06006222 RID: 25122 RVA: 0x00132C9E File Offset: 0x00130E9E
+	// Token: 0x060035BA RID: 13754 RVA: 0x0013B5C2 File Offset: 0x001397C2
 	protected override void OnRefresh(AchievementGridItemData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data, isSelected, gridIndex);
 	}
 
-	// Token: 0x06006223 RID: 25123 RVA: 0x00132CA9 File Offset: 0x00130EA9
+	// Token: 0x060035BB RID: 13755 RVA: 0x0013B5CD File Offset: 0x001397CD
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x06006224 RID: 25124 RVA: 0x00132CAC File Offset: 0x00130EAC
+	// Token: 0x060035BC RID: 13756 RVA: 0x0013B5D0 File Offset: 0x001397D0
 	protected override void OnExtendToggleClicked()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x06006225 RID: 25125 RVA: 0x00132CC0 File Offset: 0x00130EC0
+	// Token: 0x060035BD RID: 13757 RVA: 0x0013B5E8 File Offset: 0x001397E8
 	public override void Refresh(AchievementGridItemData data, bool isSelected, int gridIndex)
 	{
 		if (data != null && data.Data != null)
@@ -60,6 +60,6 @@ public class AchievementGridItem : LoopScrollSmallItemGrid<AchievementGridItemDa
 		}
 	}
 
-	// Token: 0x04002C92 RID: 11410
+	// Token: 0x04002D2B RID: 11563
 	private int ConfigId;
 }

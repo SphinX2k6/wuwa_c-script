@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000250 RID: 592
+// Token: 0x02000254 RID: 596
 public class MultiTextDefine
 {
-	// Token: 0x040023AD RID: 9133
+	// Token: 0x0400242A RID: 9258
 	[Nullable(1)]
 	public const string MULTI_TEXT_LANG_PLOT_PATH = "../Config/Raw/Tables/w.文本库/剧情";
 
-	// Token: 0x040023AE RID: 9134
+	// Token: 0x0400242B RID: 9259
 	public const int CVS_START_INDEX = 8;
 
-	// Token: 0x040023AF RID: 9135
+	// Token: 0x0400242C RID: 9260
 	public const int CSV_LANG_INDEX = 1;
 
-	// Token: 0x040023B0 RID: 9136
+	// Token: 0x0400242D RID: 9261
 	[Nullable(new byte[]
 	{
 		1,

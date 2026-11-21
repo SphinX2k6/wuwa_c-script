@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200658A RID: 25994
+	// Token: 0x02005508 RID: 21768
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingTimeLimitView : UiTickViewBase
 	{
-		// Token: 0x06041259 RID: 266841 RVA: 0x00FC9DAA File Offset: 0x00FC7FAA
+		// Token: 0x06035F1E RID: 220958 RVA: 0x00F10D5A File Offset: 0x00F0EF5A
 		public FishingTimeLimitView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604125A RID: 266842 RVA: 0x00FC9DDC File Offset: 0x00FC7FDC
+		// Token: 0x06035F1F RID: 220959 RVA: 0x00F10D8C File Offset: 0x00F0EF8C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604125B RID: 266843 RVA: 0x00FC9EA8 File Offset: 0x00FC80A8
+		// Token: 0x06035F20 RID: 220960 RVA: 0x00F10E58 File Offset: 0x00F0F058
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingTimeLimitView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604125C RID: 266844 RVA: 0x00FC9EEC File Offset: 0x00FC80EC
+		// Token: 0x06035F21 RID: 220961 RVA: 0x00F10E9C File Offset: 0x00F0F09C
 		private UniTask InitCaption()
 		{
 			FishingTimeLimitView.<InitCaption>d__12 <InitCaption>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604125D RID: 266845 RVA: 0x00FC9F30 File Offset: 0x00FC8130
+		// Token: 0x06035F22 RID: 220962 RVA: 0x00F10EE0 File Offset: 0x00F0F0E0
 		private UniTask InitTabComponent()
 		{
 			FishingTimeLimitView.<InitTabComponent>d__13 <InitTabComponent>d__;
@@ -74,26 +74,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <InitTabComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604125E RID: 266846 RVA: 0x00FC9F73 File Offset: 0x00FC8173
+		// Token: 0x06035F23 RID: 220963 RVA: 0x00F10F23 File Offset: 0x00F0F123
 		private void InitTabViewComponent()
 		{
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 		}
 
-		// Token: 0x0604125F RID: 266847 RVA: 0x00FC9F88 File Offset: 0x00FC8188
+		// Token: 0x06035F24 RID: 220964 RVA: 0x00F10F38 File Offset: 0x00F0F138
 		protected override void OnStart()
 		{
 			this.RemainTimeText = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
 			this.RefreshTime();
 		}
 
-		// Token: 0x06041260 RID: 266848 RVA: 0x00FC9FA1 File Offset: 0x00FC81A1
+		// Token: 0x06035F25 RID: 220965 RVA: 0x00F10F51 File Offset: 0x00F0F151
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTabItem();
 		}
 
-		// Token: 0x06041261 RID: 266849 RVA: 0x00FC9FAC File Offset: 0x00FC81AC
+		// Token: 0x06035F26 RID: 220966 RVA: 0x00F10F5C File Offset: 0x00F0F15C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FishingTimeLimitRewardListRefresh, new Action(this.RefreshTabItem));
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Add(EEventName.FishingTimeLimitShopRefresh, new Action(this.RefreshTabItem));
 		}
 
-		// Token: 0x06041262 RID: 266850 RVA: 0x00FCA010 File Offset: 0x00FC8210
+		// Token: 0x06035F27 RID: 220967 RVA: 0x00F10FC0 File Offset: 0x00F0F1C0
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingTimeLimitRewardListRefresh, new Action(this.RefreshTabItem));
@@ -109,14 +109,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Remove(EEventName.FishingTimeLimitShopRefresh, new Action(this.RefreshTabItem));
 		}
 
-		// Token: 0x06041263 RID: 266851 RVA: 0x00FCA071 File Offset: 0x00FC8271
+		// Token: 0x06035F28 RID: 220968 RVA: 0x00F11021 File Offset: 0x00F0F221
 		private void InitTabList()
 		{
 			this.TabDataList = this.ActivityDataBase.GetRewardTabList();
 			this.SetTabState(0, true, true);
 		}
 
-		// Token: 0x06041264 RID: 266852 RVA: 0x00FCA090 File Offset: 0x00FC8290
+		// Token: 0x06035F29 RID: 220969 RVA: 0x00F11040 File Offset: 0x00F0F240
 		private void RefreshTabItem()
 		{
 			bool timeLimitRewardRedDotState = this.ActivityDataBase.GetTimeLimitRewardRedDotState();
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.TabItemList[1].SetRedDotVisible(limitTimeShopRedDotState);
 		}
 
-		// Token: 0x06041265 RID: 266853 RVA: 0x00FCA0D1 File Offset: 0x00FC82D1
+		// Token: 0x06035F2A RID: 220970 RVA: 0x00F11081 File Offset: 0x00F0F281
 		private void SetTabState(int index, bool state, bool bFireEvent)
 		{
 			this.TabItemList[index].SetToggleState(state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent);
 		}
 
-		// Token: 0x06041266 RID: 266854 RVA: 0x00FCA0E8 File Offset: 0x00FC82E8
+		// Token: 0x06035F2B RID: 220971 RVA: 0x00F11098 File Offset: 0x00F0F298
 		private void ToggleCallBack(int index)
 		{
 			if (index != this.CurrentTabIndex)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.SwitchTabView(data, index);
 		}
 
-		// Token: 0x06041267 RID: 266855 RVA: 0x00FCA128 File Offset: 0x00FC8328
+		// Token: 0x06035F2C RID: 220972 RVA: 0x00F110D8 File Offset: 0x00F0F2D8
 		private void SwitchTabView(UiDynamicTab data, int index)
 		{
 			EUiTabViewName viewName = (EUiTabViewName)data.ChildViewName;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041268 RID: 266856 RVA: 0x00FCA199 File Offset: 0x00FC8399
+		// Token: 0x06035F2D RID: 220973 RVA: 0x00F11149 File Offset: 0x00F0F349
 		protected override void OnTick(float delta)
 		{
 			if (this.LimitTimeRewardOn)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041269 RID: 266857 RVA: 0x00FCA1AC File Offset: 0x00FC83AC
+		// Token: 0x06035F2E RID: 220974 RVA: 0x00F1115C File Offset: 0x00F0F35C
 		private void RefreshTime()
 		{
 			long limitTimeEndTime = this.ActivityDataBase.GetLimitTimeEndTime();
@@ -184,48 +184,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(4).SetText(remainTimeText, true);
 		}
 
-		// Token: 0x04021EF9 RID: 139001
+		// Token: 0x0401C82A RID: 116778
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021EFA RID: 139002
+		// Token: 0x0401C82B RID: 116779
 		protected FishingRewardMainTabItem[] TabItemList = Array.Empty<FishingRewardMainTabItem>();
 
-		// Token: 0x04021EFB RID: 139003
+		// Token: 0x0401C82C RID: 116780
 		[Nullable(2)]
 		protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04021EFC RID: 139004
+		// Token: 0x0401C82D RID: 116781
 		protected ActivityFishingData ActivityDataBase;
 
-		// Token: 0x04021EFD RID: 139005
+		// Token: 0x0401C82E RID: 116782
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04021EFE RID: 139006
+		// Token: 0x0401C82F RID: 116783
 		private bool LimitTimeRewardOn = true;
 
-		// Token: 0x04021EFF RID: 139007
+		// Token: 0x0401C830 RID: 116784
 		private string RemainTimeText = "";
 
-		// Token: 0x04021F00 RID: 139008
+		// Token: 0x0401C831 RID: 116785
 		private int CurrentTabIndex;
 
-		// Token: 0x0200C785 RID: 51077
+		// Token: 0x0200B16A RID: 45418
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403C471 RID: 246897
+			// Token: 0x04036DC2 RID: 224706
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C472 RID: 246898
+			// Token: 0x04036DC3 RID: 224707
 			public const int ContentItem = 1;
 
-			// Token: 0x0403C473 RID: 246899
+			// Token: 0x04036DC4 RID: 224708
 			public const int ToggleReward = 2;
 
-			// Token: 0x0403C474 RID: 246900
+			// Token: 0x04036DC5 RID: 224709
 			public const int ToggleShop = 3;
 
-			// Token: 0x0403C475 RID: 246901
+			// Token: 0x04036DC6 RID: 224710
 			public const int TxtTime = 4;
 		}
 	}

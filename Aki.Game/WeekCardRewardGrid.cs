@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020023AC RID: 9132
+// Token: 0x02001891 RID: 6289
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class WeekCardRewardGrid : GridProxyAbstract<IWeekRewardData>
 {
-	// Token: 0x06012424 RID: 74788 RVA: 0x0047EF4C File Offset: 0x0047D14C
+	// Token: 0x0600F8D6 RID: 63702 RVA: 0x0048C420 File Offset: 0x0048A620
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class WeekCardRewardGrid : GridProxyAbstract<IWeekRewardData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06012425 RID: 74789 RVA: 0x0047F014 File Offset: 0x0047D214
+	// Token: 0x0600F8D7 RID: 63703 RVA: 0x0048C4E8 File Offset: 0x0048A6E8
 	[NullableContext(1)]
 	public void Refresh(IWeekRewardData rewardData)
 	{
@@ -46,7 +46,7 @@ public class WeekCardRewardGrid : GridProxyAbstract<IWeekRewardData>
 		base.GetText(2).SetText(rewardData.Count.ToString(), true);
 	}
 
-	// Token: 0x06012426 RID: 74790 RVA: 0x0047F065 File Offset: 0x0047D265
+	// Token: 0x0600F8D8 RID: 63704 RVA: 0x0048C539 File Offset: 0x0048A739
 	[NullableContext(2)]
 	public override void Refresh(IWeekRewardData data, bool isSelected, int gridIndex)
 	{
@@ -56,25 +56,25 @@ public class WeekCardRewardGrid : GridProxyAbstract<IWeekRewardData>
 		}
 	}
 
-	// Token: 0x06012427 RID: 74791 RVA: 0x0047F071 File Offset: 0x0047D271
+	// Token: 0x0600F8D9 RID: 63705 RVA: 0x0048C545 File Offset: 0x0048A745
 	private void OnClickReward()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 	}
 
-	// Token: 0x040089E7 RID: 35303
+	// Token: 0x04008B2E RID: 35630
 	private int ItemId;
 
-	// Token: 0x02008948 RID: 35144
+	// Token: 0x02007AD1 RID: 31441
 	private class EComponent
 	{
-		// Token: 0x0402CA08 RID: 182792
+		// Token: 0x04027D23 RID: 163107
 		public const int BtnReward = 0;
 
-		// Token: 0x0402CA09 RID: 182793
+		// Token: 0x04027D24 RID: 163108
 		public const int TextureReward = 1;
 
-		// Token: 0x0402CA0A RID: 182794
+		// Token: 0x04027D25 RID: 163109
 		public const int TextCount = 2;
 	}
 }

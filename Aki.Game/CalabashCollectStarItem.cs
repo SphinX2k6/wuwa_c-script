@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001742 RID: 5954
+// Token: 0x02000BFB RID: 3067
 public class CalabashCollectStarItem : GridProxyAbstract<bool>
 {
-	// Token: 0x0600AC42 RID: 44098 RVA: 0x00269D2D File Offset: 0x00267F2D
+	// Token: 0x06008029 RID: 32809 RVA: 0x00274169 File Offset: 0x00272369
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,7 +15,7 @@ public class CalabashCollectStarItem : GridProxyAbstract<bool>
 		};
 	}
 
-	// Token: 0x0600AC43 RID: 44099 RVA: 0x00269D50 File Offset: 0x00267F50
+	// Token: 0x0600802A RID: 32810 RVA: 0x0027418C File Offset: 0x0027238C
 	public override void Refresh(bool isUnlock, bool isSelected, int gridIndex)
 	{
 		UUIItem item = base.GetItem(0);
@@ -26,10 +26,10 @@ public class CalabashCollectStarItem : GridProxyAbstract<bool>
 		item.SetUIActive(isUnlock);
 	}
 
-	// Token: 0x02007D2B RID: 32043
+	// Token: 0x02006EB1 RID: 28337
 	private enum EComponent
 	{
-		// Token: 0x04028FDF RID: 167903
+		// Token: 0x04024309 RID: 148233
 		UnlockItem
 	}
 }

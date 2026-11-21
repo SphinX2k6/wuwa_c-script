@@ -5,17 +5,17 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028DB RID: 10459
+// Token: 0x02001E56 RID: 7766
 public class RolePhantomAttributeItem : UiPanelBase
 {
-	// Token: 0x0601596E RID: 88430 RVA: 0x00572B95 File Offset: 0x00570D95
+	// Token: 0x06013372 RID: 78706 RVA: 0x0059DA5D File Offset: 0x0059BC5D
 	[NullableContext(1)]
 	public RolePhantomAttributeItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0601596F RID: 88431 RVA: 0x00572BAC File Offset: 0x00570DAC
+	// Token: 0x06013373 RID: 78707 RVA: 0x0059DA74 File Offset: 0x0059BC74
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class RolePhantomAttributeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015970 RID: 88432 RVA: 0x00572C08 File Offset: 0x00570E08
+	// Token: 0x06013374 RID: 78708 RVA: 0x0059DAD0 File Offset: 0x0059BCD0
 	public void ShowTemp(ConfigPropValue attrData)
 	{
 		PropertyIndex? propertyIndexInfo = PropertyIndexConfig.Instance.GetPropertyIndexInfo(attrData.Id);
@@ -40,14 +40,14 @@ public class RolePhantomAttributeItem : UiPanelBase
 		base.GetText(1).SetText(AttributeModel.Instance.GetFormatAttributeValueString(attrData.Id, (double)attrData.Value, false), true);
 	}
 
-	// Token: 0x02008EE9 RID: 36585
+	// Token: 0x02008131 RID: 33073
 	private enum EPhantomAttributeItemDefine
 	{
-		// Token: 0x0402E573 RID: 189811
+		// Token: 0x04029C6E RID: 171118
 		AttrNameText,
-		// Token: 0x0402E574 RID: 189812
+		// Token: 0x04029C6F RID: 171119
 		AttrAddValue,
-		// Token: 0x0402E575 RID: 189813
+		// Token: 0x04029C70 RID: 171120
 		AttrIconTexture
 	}
 }

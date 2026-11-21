@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020023A3 RID: 9123
+// Token: 0x02001888 RID: 6280
 [NullableContext(1)]
 [Nullable(0)]
 public class WeekCostData : IWeekCostData
 {
-	// Token: 0x170017AC RID: 6060
-	// (get) Token: 0x060123F1 RID: 74737 RVA: 0x0047E755 File Offset: 0x0047C955
-	// (set) Token: 0x060123F2 RID: 74738 RVA: 0x0047E75D File Offset: 0x0047C95D
+	// Token: 0x170017E6 RID: 6118
+	// (get) Token: 0x0600F8A3 RID: 63651 RVA: 0x0048BC29 File Offset: 0x00489E29
+	// (set) Token: 0x0600F8A4 RID: 63652 RVA: 0x0048BC31 File Offset: 0x00489E31
 	public string Tips { get; set; }
 
-	// Token: 0x170017AD RID: 6061
-	// (get) Token: 0x060123F3 RID: 74739 RVA: 0x0047E766 File Offset: 0x0047C966
-	// (set) Token: 0x060123F4 RID: 74740 RVA: 0x0047E76E File Offset: 0x0047C96E
+	// Token: 0x170017E7 RID: 6119
+	// (get) Token: 0x0600F8A5 RID: 63653 RVA: 0x0048BC3A File Offset: 0x00489E3A
+	// (set) Token: 0x0600F8A6 RID: 63654 RVA: 0x0048BC42 File Offset: 0x00489E42
 	public int ItemId { get; set; }
 
-	// Token: 0x170017AE RID: 6062
-	// (get) Token: 0x060123F5 RID: 74741 RVA: 0x0047E777 File Offset: 0x0047C977
-	// (set) Token: 0x060123F6 RID: 74742 RVA: 0x0047E77F File Offset: 0x0047C97F
+	// Token: 0x170017E8 RID: 6120
+	// (get) Token: 0x0600F8A7 RID: 63655 RVA: 0x0048BC4B File Offset: 0x00489E4B
+	// (set) Token: 0x0600F8A8 RID: 63656 RVA: 0x0048BC53 File Offset: 0x00489E53
 	public int Count { get; set; }
 }

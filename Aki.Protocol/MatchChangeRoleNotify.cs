@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009B4 RID: 2484
+	// Token: 0x020009A3 RID: 2467
 	[NetMessage(EMessageId.MatchChangeRoleNotify)]
 	public sealed class MatchChangeRoleNotify : IMessage<MatchChangeRoleNotify>, IMessage, IEquatable<MatchChangeRoleNotify>, IDeepCloneable<MatchChangeRoleNotify>, IBufferMessage
 	{
-		// Token: 0x0600D9FD RID: 55805 RVA: 0x0020022E File Offset: 0x001FE42E
+		// Token: 0x0600D8E3 RID: 55523 RVA: 0x001FE03A File Offset: 0x001FC23A
 		[NullableContext(1)]
 		public static MatchChangeRoleNotify Create()
 		{
 			return new MatchChangeRoleNotify();
 		}
 
-		// Token: 0x17002C25 RID: 11301
-		// (get) Token: 0x0600D9FE RID: 55806 RVA: 0x00200235 File Offset: 0x001FE435
+		// Token: 0x17002BE7 RID: 11239
+		// (get) Token: 0x0600D8E4 RID: 55524 RVA: 0x001FE041 File Offset: 0x001FC241
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C26 RID: 11302
-		// (get) Token: 0x0600D9FF RID: 55807 RVA: 0x00200238 File Offset: 0x001FE438
+		// Token: 0x17002BE8 RID: 11240
+		// (get) Token: 0x0600D8E5 RID: 55525 RVA: 0x001FE044 File Offset: 0x001FC244
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DA00 RID: 55808 RVA: 0x0020023F File Offset: 0x001FE43F
+		// Token: 0x0600D8E6 RID: 55526 RVA: 0x001FE04B File Offset: 0x001FC24B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleNotify()
 		{
 		}
 
-		// Token: 0x0600DA01 RID: 55809 RVA: 0x00200252 File Offset: 0x001FE452
+		// Token: 0x0600D8E7 RID: 55527 RVA: 0x001FE05E File Offset: 0x001FC25E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleNotify(MatchChangeRoleNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600DA02 RID: 55810 RVA: 0x00200288 File Offset: 0x001FE488
+		// Token: 0x0600D8E8 RID: 55528 RVA: 0x001FE094 File Offset: 0x001FC294
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MatchChangeRoleNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new MatchChangeRoleNotify(this);
 		}
 
-		// Token: 0x17002C27 RID: 11303
-		// (get) Token: 0x0600DA03 RID: 55811 RVA: 0x00200290 File Offset: 0x001FE490
-		// (set) Token: 0x0600DA04 RID: 55812 RVA: 0x00200298 File Offset: 0x001FE498
+		// Token: 0x17002BE9 RID: 11241
+		// (get) Token: 0x0600D8E9 RID: 55529 RVA: 0x001FE09C File Offset: 0x001FC29C
+		// (set) Token: 0x0600D8EA RID: 55530 RVA: 0x001FE0A4 File Offset: 0x001FC2A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002C28 RID: 11304
-		// (get) Token: 0x0600DA05 RID: 55813 RVA: 0x002002A1 File Offset: 0x001FE4A1
+		// Token: 0x17002BEA RID: 11242
+		// (get) Token: 0x0600D8EB RID: 55531 RVA: 0x001FE0AD File Offset: 0x001FC2AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MatchRoleInfo> RoleInfo
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600DA06 RID: 55814 RVA: 0x002002A9 File Offset: 0x001FE4A9
+		// Token: 0x0600D8EC RID: 55532 RVA: 0x001FE0B5 File Offset: 0x001FC2B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MatchChangeRoleNotify);
 		}
 
-		// Token: 0x0600DA07 RID: 55815 RVA: 0x002002B8 File Offset: 0x001FE4B8
+		// Token: 0x0600D8ED RID: 55533 RVA: 0x001FE0C4 File Offset: 0x001FC2C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MatchChangeRoleNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.roleInfo_.Equals(other.roleInfo_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600DA08 RID: 55816 RVA: 0x00200308 File Offset: 0x001FE508
+		// Token: 0x0600D8EE RID: 55534 RVA: 0x001FE114 File Offset: 0x001FC314
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DA09 RID: 55817 RVA: 0x00200355 File Offset: 0x001FE555
+		// Token: 0x0600D8EF RID: 55535 RVA: 0x001FE161 File Offset: 0x001FC361
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600DA0A RID: 55818 RVA: 0x00200362 File Offset: 0x001FE562
+		// Token: 0x0600D8F0 RID: 55536 RVA: 0x001FE16E File Offset: 0x001FC36E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,24 +147,24 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600DA0B RID: 55819 RVA: 0x0020036C File Offset: 0x001FE56C
+		// Token: 0x0600D8F1 RID: 55537 RVA: 0x001FE178 File Offset: 0x001FC378
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.roleInfo_.WriteTo(ref output, MatchChangeRoleNotify._repeated_roleInfo_codec);
 			if (this.PlayerId != 0)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(120);
 				output.WriteInt32(this.PlayerId);
 			}
-			this.roleInfo_.WriteTo(ref output, MatchChangeRoleNotify._repeated_roleInfo_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600DA0C RID: 55820 RVA: 0x002003BC File Offset: 0x001FE5BC
+		// Token: 0x0600D8F2 RID: 55538 RVA: 0x001FE1C8 File Offset: 0x001FC3C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600DA0D RID: 55821 RVA: 0x00200410 File Offset: 0x001FE610
+		// Token: 0x0600D8F3 RID: 55539 RVA: 0x001FE21C File Offset: 0x001FC41C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MatchChangeRoleNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600DA0E RID: 55822 RVA: 0x0020045D File Offset: 0x001FE65D
+		// Token: 0x0600D8F4 RID: 55540 RVA: 0x001FE269 File Offset: 0x001FC469
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600DA0F RID: 55823 RVA: 0x00200468 File Offset: 0x001FE668
+		// Token: 0x0600D8F5 RID: 55541 RVA: 0x001FE274 File Offset: 0x001FC474
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,40 +219,40 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 32U)
+				if (num != 26U)
 				{
-					if (num != 42U)
+					if (num != 120U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.roleInfo_.AddEntriesFrom(ref input, MatchChangeRoleNotify._repeated_roleInfo_codec);
+						this.PlayerId = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.PlayerId = input.ReadInt32();
+					this.roleInfo_.AddEntriesFrom(ref input, MatchChangeRoleNotify._repeated_roleInfo_codec);
 				}
 			}
 		}
 
-		// Token: 0x04005A94 RID: 23188
+		// Token: 0x04005A9D RID: 23197
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005A95 RID: 23189
-		public const int PlayerIdFieldNumber = 4;
+		// Token: 0x04005A9E RID: 23198
+		public const int PlayerIdFieldNumber = 15;
 
-		// Token: 0x04005A96 RID: 23190
+		// Token: 0x04005A9F RID: 23199
 		private int playerId_;
 
-		// Token: 0x04005A97 RID: 23191
-		public const int RoleInfoFieldNumber = 5;
+		// Token: 0x04005AA0 RID: 23200
+		public const int RoleInfoFieldNumber = 3;
 
-		// Token: 0x04005A98 RID: 23192
-		private static readonly FieldCodec<MatchRoleInfo> _repeated_roleInfo_codec = FieldCodec.ForMessage<MatchRoleInfo>(42U, MatchRoleInfo.Parser);
+		// Token: 0x04005AA1 RID: 23201
+		private static readonly FieldCodec<MatchRoleInfo> _repeated_roleInfo_codec = FieldCodec.ForMessage<MatchRoleInfo>(26U, MatchRoleInfo.Parser);
 
-		// Token: 0x04005A99 RID: 23193
+		// Token: 0x04005AA2 RID: 23202
 		private readonly RepeatedField<MatchRoleInfo> roleInfo_ = new RepeatedField<MatchRoleInfo>();
 	}
 }

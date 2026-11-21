@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049AC RID: 18860
+	// Token: 0x02004E66 RID: 20070
 	public struct ICheckCoopRoleCoopLevel : IFlatbufferObject
 	{
-		// Token: 0x17008858 RID: 34904
-		// (get) Token: 0x0601D6F4 RID: 120564 RVA: 0x00425C8E File Offset: 0x00423E8E
+		// Token: 0x17008F1A RID: 36634
+		// (get) Token: 0x0601F133 RID: 127283 RVA: 0x004563D6 File Offset: 0x004545D6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D6F5 RID: 120565 RVA: 0x00425C9B File Offset: 0x00423E9B
+		// Token: 0x0601F134 RID: 127284 RVA: 0x004563E3 File Offset: 0x004545E3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D6F6 RID: 120566 RVA: 0x00425CA4 File Offset: 0x00423EA4
+		// Token: 0x0601F135 RID: 127285 RVA: 0x004563EC File Offset: 0x004545EC
 		public static ICheckCoopRoleCoopLevel GetRootAsICheckCoopRoleCoopLevel(ByteBuffer _bb)
 		{
 			return ICheckCoopRoleCoopLevel.GetRootAsICheckCoopRoleCoopLevel(_bb, default(ICheckCoopRoleCoopLevel));
 		}
 
-		// Token: 0x0601D6F7 RID: 120567 RVA: 0x00425CC0 File Offset: 0x00423EC0
+		// Token: 0x0601F136 RID: 127286 RVA: 0x00456408 File Offset: 0x00454608
 		public static ICheckCoopRoleCoopLevel GetRootAsICheckCoopRoleCoopLevel(ByteBuffer _bb, ICheckCoopRoleCoopLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D6F8 RID: 120568 RVA: 0x00425CDD File Offset: 0x00423EDD
+		// Token: 0x0601F137 RID: 127287 RVA: 0x00456425 File Offset: 0x00454625
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D6F9 RID: 120569 RVA: 0x00425CEC File Offset: 0x00423EEC
+		// Token: 0x0601F138 RID: 127288 RVA: 0x00456434 File Offset: 0x00454634
 		public ICheckCoopRoleCoopLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008859 RID: 34905
-		// (get) Token: 0x0601D6FA RID: 120570 RVA: 0x00425CFC File Offset: 0x00423EFC
+		// Token: 0x17008F1B RID: 36635
+		// (get) Token: 0x0601F139 RID: 127289 RVA: 0x00456444 File Offset: 0x00454644
 		public ECheckSystemStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700885A RID: 34906
-		// (get) Token: 0x0601D6FB RID: 120571 RVA: 0x00425D38 File Offset: 0x00423F38
+		// Token: 0x17008F1C RID: 36636
+		// (get) Token: 0x0601F13A RID: 127290 RVA: 0x00456480 File Offset: 0x00454680
 		public int CoopRoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700885B RID: 34907
-		// (get) Token: 0x0601D6FC RID: 120572 RVA: 0x00425D74 File Offset: 0x00423F74
+		// Token: 0x17008F1D RID: 36637
+		// (get) Token: 0x0601F13B RID: 127291 RVA: 0x004564BC File Offset: 0x004546BC
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700885C RID: 34908
-		// (get) Token: 0x0601D6FD RID: 120573 RVA: 0x00425DB0 File Offset: 0x00423FB0
+		// Token: 0x17008F1E RID: 36638
+		// (get) Token: 0x0601F13C RID: 127292 RVA: 0x004564F8 File Offset: 0x004546F8
 		public int Level
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601D6FE RID: 120574 RVA: 0x00425DED File Offset: 0x00423FED
+		// Token: 0x0601F13D RID: 127293 RVA: 0x00456535 File Offset: 0x00454735
 		public static Offset<ICheckCoopRoleCoopLevel> CreateICheckCoopRoleCoopLevel(FlatBufferBuilder builder, ECheckSystemStateType Type = ECheckSystemStateType.TrackMoonBuilding, int CoopRoleId = 0, ECompare Compare = ECompare.Eq, int Level = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCoopRoleCoopLevel.EndICheckCoopRoleCoopLevel(builder);
 		}
 
-		// Token: 0x0601D6FF RID: 120575 RVA: 0x00425E19 File Offset: 0x00424019
+		// Token: 0x0601F13E RID: 127294 RVA: 0x00456561 File Offset: 0x00454761
 		public static void StartICheckCoopRoleCoopLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601D700 RID: 120576 RVA: 0x00425E22 File Offset: 0x00424022
+		// Token: 0x0601F13F RID: 127295 RVA: 0x0045656A File Offset: 0x0045476A
 		public static void AddType(FlatBufferBuilder builder, ECheckSystemStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D701 RID: 120577 RVA: 0x00425E2D File Offset: 0x0042402D
+		// Token: 0x0601F140 RID: 127296 RVA: 0x00456575 File Offset: 0x00454775
 		public static void AddCoopRoleId(FlatBufferBuilder builder, int coopRoleId)
 		{
 			builder.AddInt(1, coopRoleId, 0);
 		}
 
-		// Token: 0x0601D702 RID: 120578 RVA: 0x00425E38 File Offset: 0x00424038
+		// Token: 0x0601F141 RID: 127297 RVA: 0x00456580 File Offset: 0x00454780
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601D703 RID: 120579 RVA: 0x00425E43 File Offset: 0x00424043
+		// Token: 0x0601F142 RID: 127298 RVA: 0x0045658B File Offset: 0x0045478B
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(3, level, 0);
 		}
 
-		// Token: 0x0601D704 RID: 120580 RVA: 0x00425E4E File Offset: 0x0042404E
+		// Token: 0x0601F143 RID: 127299 RVA: 0x00456596 File Offset: 0x00454796
 		public static Offset<ICheckCoopRoleCoopLevel> EndICheckCoopRoleCoopLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckCoopRoleCoopLevel>(builder.EndTable());
 		}
 
-		// Token: 0x0601D705 RID: 120581 RVA: 0x00425E5C File Offset: 0x0042405C
+		// Token: 0x0601F144 RID: 127300 RVA: 0x004565A4 File Offset: 0x004547A4
 		public ICheckCoopRoleCoopLevelT UnPack()
 		{
 			ICheckCoopRoleCoopLevelT checkCoopRoleCoopLevelT = new ICheckCoopRoleCoopLevelT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkCoopRoleCoopLevelT;
 		}
 
-		// Token: 0x0601D706 RID: 120582 RVA: 0x00425E77 File Offset: 0x00424077
+		// Token: 0x0601F145 RID: 127301 RVA: 0x004565BF File Offset: 0x004547BF
 		public void UnPackTo(ICheckCoopRoleCoopLevelT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Level = this.Level;
 		}
 
-		// Token: 0x0601D707 RID: 120583 RVA: 0x00425EAC File Offset: 0x004240AC
+		// Token: 0x0601F146 RID: 127302 RVA: 0x004565F4 File Offset: 0x004547F4
 		public static Offset<ICheckCoopRoleCoopLevel> Pack(FlatBufferBuilder builder, ICheckCoopRoleCoopLevelT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckCoopRoleCoopLevel.CreateICheckCoopRoleCoopLevel(builder, _o.Type, _o.CoopRoleId, _o.Compare, _o.Level);
 		}
 
-		// Token: 0x0400D1CC RID: 53708
+		// Token: 0x0400DC98 RID: 56472
 		private Table __p;
 	}
 }

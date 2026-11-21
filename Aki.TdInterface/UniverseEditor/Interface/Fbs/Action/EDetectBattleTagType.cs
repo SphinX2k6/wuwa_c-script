@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F50 RID: 24400
+	// Token: 0x02006594 RID: 26004
 	public enum EDetectBattleTagType : byte
 	{
-		// Token: 0x0400FCF1 RID: 64753
+		// Token: 0x04010A6F RID: 68207
 		MonsterOnTheGround
 	}
 }

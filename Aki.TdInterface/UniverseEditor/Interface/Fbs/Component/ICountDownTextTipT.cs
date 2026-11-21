@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200503D RID: 20541
+	// Token: 0x0200559C RID: 21916
 	public class ICountDownTextTipT
 	{
-		// Token: 0x1700950F RID: 38159
-		// (get) Token: 0x06020E9D RID: 134813 RVA: 0x0049381B File Offset: 0x00491A1B
-		// (set) Token: 0x06020E9E RID: 134814 RVA: 0x00493823 File Offset: 0x00491A23
+		// Token: 0x17009CF0 RID: 40176
+		// (get) Token: 0x06022DBD RID: 142781 RVA: 0x004CD26B File Offset: 0x004CB46B
+		// (set) Token: 0x06022DBE RID: 142782 RVA: 0x004CD273 File Offset: 0x004CB473
 		public ETrampleTipType Type { get; set; }
 
-		// Token: 0x17009510 RID: 38160
-		// (get) Token: 0x06020E9F RID: 134815 RVA: 0x0049382C File Offset: 0x00491A2C
-		// (set) Token: 0x06020EA0 RID: 134816 RVA: 0x00493834 File Offset: 0x00491A34
+		// Token: 0x17009CF1 RID: 40177
+		// (get) Token: 0x06022DBF RID: 142783 RVA: 0x004CD27C File Offset: 0x004CB47C
+		// (set) Token: 0x06022DC0 RID: 142784 RVA: 0x004CD284 File Offset: 0x004CB484
 		public string TidCountDownTip { get; set; }
 
-		// Token: 0x06020EA1 RID: 134817 RVA: 0x0049383D File Offset: 0x00491A3D
+		// Token: 0x06022DC1 RID: 142785 RVA: 0x004CD28D File Offset: 0x004CB48D
 		public ICountDownTextTipT()
 		{
 			this.Type = ETrampleTipType.CountDownTextTip;

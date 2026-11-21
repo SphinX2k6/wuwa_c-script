@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B2D RID: 27437
+	// Token: 0x02005CA5 RID: 23717
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventFocusOnMapMark : LevelEventBase
 	{
-		// Token: 0x06044117 RID: 278807 RVA: 0x010BC982 File Offset: 0x010BAB82
+		// Token: 0x0603A269 RID: 238185 RVA: 0x0106620E File Offset: 0x0106440E
 		public LevelEventFocusOnMapMark(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044118 RID: 278808 RVA: 0x010BC98C File Offset: 0x010BAB8C
+		// Token: 0x0603A26A RID: 238186 RVA: 0x01066218 File Offset: 0x01064418
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			FocusOnMapMarkAction focusOnMapMarkAction = inParams as FocusOnMapMarkAction;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.HandleQuestMapFocus(focusOnMapMarkAction.MapMarkType as IFocusOnQuestMapMark);
 		}
 
-		// Token: 0x06044119 RID: 278809 RVA: 0x010BCA20 File Offset: 0x010BAC20
+		// Token: 0x0603A26B RID: 238187 RVA: 0x010662AC File Offset: 0x010644AC
 		private void HandleCustomMapFocus(IFocusOnCustomMapMark param)
 		{
 			int markId = param.MarkId;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.Finish();
 		}
 
-		// Token: 0x0604411A RID: 278810 RVA: 0x010BCAF4 File Offset: 0x010BACF4
+		// Token: 0x0603A26C RID: 238188 RVA: 0x01066380 File Offset: 0x01064580
 		private void HandleQuestMapFocus(IFocusOnQuestMapMark param)
 		{
 			int questId = param.QuestId;

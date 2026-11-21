@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CDF RID: 7391
+// Token: 0x020011A1 RID: 4513
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 {
-	// Token: 0x17001209 RID: 4617
-	// (get) Token: 0x0600DFFD RID: 57341 RVA: 0x00347815 File Offset: 0x00345A15
+	// Token: 0x17001233 RID: 4659
+	// (get) Token: 0x0600B41A RID: 46106 RVA: 0x0035323D File Offset: 0x0035143D
 	protected override EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason
 	{
 		get
@@ -23,7 +23,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DFFE RID: 57342 RVA: 0x00347820 File Offset: 0x00345A20
+	// Token: 0x0600B41B RID: 46107 RVA: 0x00353248 File Offset: 0x00351448
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleArrowMainViewProxy.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -34,13 +34,13 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFFF RID: 57343 RVA: 0x00347863 File Offset: 0x00345A63
+	// Token: 0x0600B41C RID: 46108 RVA: 0x0035328B File Offset: 0x0035148B
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveScreenEffectFightRoot();
 	}
 
-	// Token: 0x0600E000 RID: 57344 RVA: 0x0034786C File Offset: 0x00345A6C
+	// Token: 0x0600B41D RID: 46109 RVA: 0x00353294 File Offset: 0x00351494
 	private UniTask CreateFightInfoPanel()
 	{
 		MotorcycleArrowMainViewProxy.<CreateFightInfoPanel>d__8 <CreateFightInfoPanel>d__;
@@ -51,7 +51,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <CreateFightInfoPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E001 RID: 57345 RVA: 0x003478B0 File Offset: 0x00345AB0
+	// Token: 0x0600B41E RID: 46110 RVA: 0x003532D8 File Offset: 0x003514D8
 	private UniTask CreateDesktopSkillPanel()
 	{
 		MotorcycleArrowMainViewProxy.<CreateDesktopSkillPanel>d__9 <CreateDesktopSkillPanel>d__;
@@ -62,7 +62,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E002 RID: 57346 RVA: 0x003478F4 File Offset: 0x00345AF4
+	// Token: 0x0600B41F RID: 46111 RVA: 0x0035331C File Offset: 0x0035151C
 	private UniTask CreateMobileSkillPanel()
 	{
 		MotorcycleArrowMainViewProxy.<CreateMobileSkillPanel>d__10 <CreateMobileSkillPanel>d__;
@@ -73,7 +73,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E003 RID: 57347 RVA: 0x00347938 File Offset: 0x00345B38
+	// Token: 0x0600B420 RID: 46112 RVA: 0x00353360 File Offset: 0x00351560
 	private UniTask CreateMobileSkillPanelInner()
 	{
 		MotorcycleArrowMainViewProxy.<CreateMobileSkillPanelInner>d__11 <CreateMobileSkillPanelInner>d__;
@@ -84,7 +84,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <CreateMobileSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E004 RID: 57348 RVA: 0x0034797C File Offset: 0x00345B7C
+	// Token: 0x0600B421 RID: 46113 RVA: 0x003533A4 File Offset: 0x003515A4
 	private UniTask CreateDesktopSkillPanelInner()
 	{
 		MotorcycleArrowMainViewProxy.<CreateDesktopSkillPanelInner>d__12 <CreateDesktopSkillPanelInner>d__;
@@ -95,7 +95,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		return <CreateDesktopSkillPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E005 RID: 57349 RVA: 0x003479C0 File Offset: 0x00345BC0
+	// Token: 0x0600B422 RID: 46114 RVA: 0x003533E8 File Offset: 0x003515E8
 	protected override void OnAfterShow()
 	{
 		this.FightInfoPanel.Show(null);
@@ -112,7 +112,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.Default, EBattleUiChild.MotorcycleMobileSkillButton, false, true, 0);
 	}
 
-	// Token: 0x0600E006 RID: 57350 RVA: 0x00347A14 File Offset: 0x00345C14
+	// Token: 0x0600B423 RID: 46115 RVA: 0x0035343C File Offset: 0x0035163C
 	protected override void OnAfterHide()
 	{
 		this.FightInfoPanel.Hide(null);
@@ -129,7 +129,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.Default, EBattleUiChild.MotorcycleMobileSkillButton, true, true, 0);
 	}
 
-	// Token: 0x0600E007 RID: 57351 RVA: 0x00347A68 File Offset: 0x00345C68
+	// Token: 0x0600B424 RID: 46116 RVA: 0x00353490 File Offset: 0x00351690
 	private void AddScreenEffectFightRoot()
 	{
 		BP_ScreenEffectSystem_C instance = ScreenEffectSystem.GetInstance();
@@ -148,7 +148,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		ScreenEffectModel.Instance.SetFightRootInited(true);
 	}
 
-	// Token: 0x0600E008 RID: 57352 RVA: 0x00347AC7 File Offset: 0x00345CC7
+	// Token: 0x0600B425 RID: 46117 RVA: 0x003534EF File Offset: 0x003516EF
 	private void RemoveScreenEffectFightRoot()
 	{
 		AUIContainerActor screenEffectFightRoot = this.ScreenEffectFightRoot;
@@ -165,7 +165,7 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		instance.SetFightRootInited(false);
 	}
 
-	// Token: 0x0600E009 RID: 57353 RVA: 0x00347B04 File Offset: 0x00345D04
+	// Token: 0x0600B426 RID: 46118 RVA: 0x0035352C File Offset: 0x0035172C
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -198,16 +198,16 @@ public class MotorcycleArrowMainViewProxy : GameMainViewProxy
 		}
 	}
 
-	// Token: 0x04006719 RID: 26393
+	// Token: 0x040067F8 RID: 26616
 	[Nullable(1)]
 	public MotorcycleArrowBattleMain FightInfoPanel;
 
-	// Token: 0x0400671A RID: 26394
+	// Token: 0x040067F9 RID: 26617
 	public MotorcycleArrowSkillPanel MobileSkillPanel;
 
-	// Token: 0x0400671B RID: 26395
+	// Token: 0x040067FA RID: 26618
 	public MotorcycleArrowSkillPanel DesktopSkillPanel;
 
-	// Token: 0x0400671C RID: 26396
+	// Token: 0x040067FB RID: 26619
 	private AUIContainerActor ScreenEffectFightRoot;
 }

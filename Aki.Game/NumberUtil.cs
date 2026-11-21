@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000252 RID: 594
+// Token: 0x02000256 RID: 598
 public class NumberUtil
 {
-	// Token: 0x060023F2 RID: 9202 RVA: 0x000DB640 File Offset: 0x000D9840
+	// Token: 0x060024AA RID: 9386 RVA: 0x000E1B88 File Offset: 0x000DFD88
 	[NullableContext(1)]
 	public static string GetNumberLocalText(int num)
 	{

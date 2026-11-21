@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200099E RID: 2462
+	// Token: 0x02000A51 RID: 2641
 	public static class EMonsterChooseTypeExtensions
 	{
-		// Token: 0x060036F8 RID: 14072 RVA: 0x0008F008 File Offset: 0x0008D208
+		// Token: 0x06003A7F RID: 14975 RVA: 0x00096FB8 File Offset: 0x000951B8
 		public static string ToEnumString(this EMonsterChooseType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036F9 RID: 14073 RVA: 0x0008F030 File Offset: 0x0008D230
+		// Token: 0x06003A80 RID: 14976 RVA: 0x00096FE0 File Offset: 0x000951E0
 		public static EMonsterChooseType FromString(string name)
 		{
 			EMonsterChooseType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036FA RID: 14074 RVA: 0x0008F059 File Offset: 0x0008D259
+		// Token: 0x06003A81 RID: 14977 RVA: 0x00097009 File Offset: 0x00095209
 		public static bool TryFromString(string name, out EMonsterChooseType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060036FB RID: 14075 RVA: 0x0008F07E File Offset: 0x0008D27E
+		// Token: 0x06003A82 RID: 14978 RVA: 0x0009702E File Offset: 0x0009522E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036FC RID: 14076 RVA: 0x0008F08E File Offset: 0x0008D28E
+		// Token: 0x06003A83 RID: 14979 RVA: 0x0009703E File Offset: 0x0009523E
 		public static EMonsterChooseType[] GetValues()
 		{
 			return new EMonsterChooseType[1];
 		}
 
-		// Token: 0x060036FD RID: 14077 RVA: 0x0008F096 File Offset: 0x0008D296
+		// Token: 0x06003A84 RID: 14980 RVA: 0x00097046 File Offset: 0x00095246
 		public static string[] GetNames()
 		{
 			return new string[]

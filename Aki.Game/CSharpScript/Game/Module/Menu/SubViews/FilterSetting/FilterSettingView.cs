@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 {
-	// Token: 0x02005445 RID: 21573
+	// Token: 0x02004428 RID: 17448
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FilterSettingView : UiTickViewBase
 	{
-		// Token: 0x06037132 RID: 225586 RVA: 0x00D0D765 File Offset: 0x00D0B965
+		// Token: 0x0602C07B RID: 180347 RVA: 0x00C5CB7D File Offset: 0x00C5AD7D
 		public FilterSettingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06037133 RID: 225587 RVA: 0x00D0D778 File Offset: 0x00D0B978
+		// Token: 0x0602C07C RID: 180348 RVA: 0x00C5CB90 File Offset: 0x00C5AD90
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			};
 		}
 
-		// Token: 0x06037134 RID: 225588 RVA: 0x00D0DA99 File Offset: 0x00D0BC99
+		// Token: 0x0602C07D RID: 180349 RVA: 0x00C5CEB1 File Offset: 0x00C5B0B1
 		protected override void OnBeforeCreate()
 		{
 			this.VmCache = (this.OpenParam as FilterSettingViewModel);
@@ -77,12 +77,12 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.KuroEnableScreenFilter 1", null);
 		}
 
-		// Token: 0x06037135 RID: 225589 RVA: 0x00D0DAD2 File Offset: 0x00D0BCD2
+		// Token: 0x0602C07E RID: 180350 RVA: 0x00C5CEEA File Offset: 0x00C5B0EA
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06037136 RID: 225590 RVA: 0x00D0DAD4 File Offset: 0x00D0BCD4
+		// Token: 0x0602C07F RID: 180351 RVA: 0x00C5CEEC File Offset: 0x00C5B0EC
 		protected override void OnBeforeShow()
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onViewBeforeShow(this.ViewInfo.Name);
 		}
 
-		// Token: 0x06037137 RID: 225591 RVA: 0x00D0DB00 File Offset: 0x00D0BD00
+		// Token: 0x0602C080 RID: 180352 RVA: 0x00C5CF18 File Offset: 0x00C5B118
 		protected override void OnAfterHide()
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onViewAfterHide(this.ViewInfo.Name);
 		}
 
-		// Token: 0x06037138 RID: 225592 RVA: 0x00D0DB2C File Offset: 0x00D0BD2C
+		// Token: 0x0602C081 RID: 180353 RVA: 0x00C5CF44 File Offset: 0x00C5B144
 		protected override void OnAfterDestroy()
 		{
 			UiLayer.Instance.SetLayerActive(ELayerType.HUD, true);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			instance3.ApplyFilterSetting();
 		}
 
-		// Token: 0x06037139 RID: 225593 RVA: 0x00D0DB80 File Offset: 0x00D0BD80
+		// Token: 0x0602C082 RID: 180354 RVA: 0x00C5CF98 File Offset: 0x00C5B198
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FilterSettingView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603713A RID: 225594 RVA: 0x00D0DBC4 File Offset: 0x00D0BDC4
+		// Token: 0x0602C083 RID: 180355 RVA: 0x00C5CFDC File Offset: 0x00C5B1DC
 		protected override void OnBeforeDestroy()
 		{
 			CircleAttachView<FilterSetting, FilterSettingPixListItem> circleItem = this.CircleItem;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			}
 		}
 
-		// Token: 0x0603713B RID: 225595 RVA: 0x00D0DC74 File Offset: 0x00D0BE74
+		// Token: 0x0602C084 RID: 180356 RVA: 0x00C5D08C File Offset: 0x00C5B28C
 		protected override void OnAddEventListener()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(17);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			InputDistributeController.Instance.BindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x0603713C RID: 225596 RVA: 0x00D0DD88 File Offset: 0x00D0BF88
+		// Token: 0x0602C085 RID: 180357 RVA: 0x00C5D1A0 File Offset: 0x00C5B3A0
 		protected override void OnRemoveEventListener()
 		{
 			UUIDraggableComponent draggable = base.GetDraggable(17);
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			InputDistributeController.Instance.UnBindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 		}
 
-		// Token: 0x0603713D RID: 225597 RVA: 0x00D0DE70 File Offset: 0x00D0C070
+		// Token: 0x0602C086 RID: 180358 RVA: 0x00C5D288 File Offset: 0x00C5B488
 		protected override void OnTick(float delta)
 		{
 			if (this.VmCache == null)
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			base.GetButton(10).SetSelfInteractive(this.VmCache.IsFilterChanged && !this.VmCache.IsApplyClicked);
 		}
 
-		// Token: 0x0603713E RID: 225598 RVA: 0x00D0E3FC File Offset: 0x00D0C5FC
+		// Token: 0x0602C087 RID: 180359 RVA: 0x00C5D814 File Offset: 0x00C5BA14
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			return <LoadCurveResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603713F RID: 225599 RVA: 0x00D0E43F File Offset: 0x00D0C63F
+		// Token: 0x0602C088 RID: 180360 RVA: 0x00C5D857 File Offset: 0x00C5BA57
 		private FilterSeniorParamSliderItem CreateFilterSeniorParamSliderItem()
 		{
 			return new FilterSeniorParamSliderItem
@@ -477,12 +477,12 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			};
 		}
 
-		// Token: 0x06037140 RID: 225600 RVA: 0x00D0E452 File Offset: 0x00D0C652
+		// Token: 0x0602C089 RID: 180361 RVA: 0x00C5D86A File Offset: 0x00C5BA6A
 		protected override void OnDestroy()
 		{
 		}
 
-		// Token: 0x06037141 RID: 225601 RVA: 0x00D0E454 File Offset: 0x00D0C654
+		// Token: 0x0602C08A RID: 180362 RVA: 0x00C5D86C File Offset: 0x00C5BA6C
 		private void OnResetClick()
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onResetClick();
 		}
 
-		// Token: 0x06037142 RID: 225602 RVA: 0x00D0E470 File Offset: 0x00D0C670
+		// Token: 0x0602C08B RID: 180363 RVA: 0x00C5D888 File Offset: 0x00C5BA88
 		private void OnDefaultFilterClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.GameSettingDefaultFilter);
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06037143 RID: 225603 RVA: 0x00D0E4AC File Offset: 0x00D0C6AC
+		// Token: 0x0602C08C RID: 180364 RVA: 0x00C5D8C4 File Offset: 0x00C5BAC4
 		private void OnConfirmClick()
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			circleItem.RefreshItems();
 		}
 
-		// Token: 0x06037144 RID: 225604 RVA: 0x00D0E4E8 File Offset: 0x00D0C6E8
+		// Token: 0x0602C08D RID: 180365 RVA: 0x00C5D900 File Offset: 0x00C5BB00
 		private void OnLeftArrowClick()
 		{
 			CircleAttachView<FilterSetting, FilterSettingPixListItem> circleItem = this.CircleItem;
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onLeftArrowClick();
 		}
 
-		// Token: 0x06037145 RID: 225605 RVA: 0x00D0E516 File Offset: 0x00D0C716
+		// Token: 0x0602C08E RID: 180366 RVA: 0x00C5D92E File Offset: 0x00C5BB2E
 		private void OnRightArrowClick()
 		{
 			CircleAttachView<FilterSetting, FilterSettingPixListItem> circleItem = this.CircleItem;
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onRightArrowClick();
 		}
 
-		// Token: 0x06037146 RID: 225606 RVA: 0x00D0E544 File Offset: 0x00D0C744
+		// Token: 0x0602C08F RID: 180367 RVA: 0x00C5D95C File Offset: 0x00C5BB5C
 		private void OnHideClick(EToggleState state)
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -604,7 +604,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onHideClick();
 		}
 
-		// Token: 0x06037147 RID: 225607 RVA: 0x00D0E560 File Offset: 0x00D0C760
+		// Token: 0x0602C090 RID: 180368 RVA: 0x00C5D978 File Offset: 0x00C5BB78
 		private void OnCloseClick()
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -620,25 +620,25 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onCloseClick();
 		}
 
-		// Token: 0x06037148 RID: 225608 RVA: 0x00D0E57C File Offset: 0x00D0C77C
+		// Token: 0x0602C091 RID: 180369 RVA: 0x00C5D994 File Offset: 0x00C5BB94
 		private void OpenHelpView()
 		{
 			HelpController.Instance.OpenHelpById(323);
 		}
 
-		// Token: 0x06037149 RID: 225609 RVA: 0x00D0E58D File Offset: 0x00D0C78D
+		// Token: 0x0602C092 RID: 180370 RVA: 0x00C5D9A5 File Offset: 0x00C5BBA5
 		private void OnColorPaletteToggleClick(EToggleState state)
 		{
 			this.RefreshOption(true);
 		}
 
-		// Token: 0x0603714A RID: 225610 RVA: 0x00D0E596 File Offset: 0x00D0C796
+		// Token: 0x0602C093 RID: 180371 RVA: 0x00C5D9AE File Offset: 0x00C5BBAE
 		private void OnSeniorParamToggleClick(EToggleState state)
 		{
 			this.RefreshOption(false);
 		}
 
-		// Token: 0x0603714B RID: 225611 RVA: 0x00D0E5A0 File Offset: 0x00D0C7A0
+		// Token: 0x0602C094 RID: 180372 RVA: 0x00C5D9B8 File Offset: 0x00C5BBB8
 		private void RefreshOption(bool isColorPalette)
 		{
 			this.IsColorPalette = isColorPalette;
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			extendToggle2.SetToggleStateForce((!isColorPalette) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603714C RID: 225612 RVA: 0x00D0E618 File Offset: 0x00D0C818
+		// Token: 0x0602C095 RID: 180373 RVA: 0x00C5DA30 File Offset: 0x00C5BC30
 		[NullableContext(2)]
 		private void OnDragMoved(ULGUIPointerEventData eventData)
 		{
@@ -682,7 +682,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onDragMoved(eventData);
 		}
 
-		// Token: 0x0603714D RID: 225613 RVA: 0x00D0E635 File Offset: 0x00D0C835
+		// Token: 0x0602C096 RID: 180374 RVA: 0x00C5DA4D File Offset: 0x00C5BC4D
 		private void OnDragBegin(ULGUIPointerEventData _)
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -698,7 +698,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onDragBegin();
 		}
 
-		// Token: 0x0603714E RID: 225614 RVA: 0x00D0E651 File Offset: 0x00D0C851
+		// Token: 0x0602C097 RID: 180375 RVA: 0x00C5DA69 File Offset: 0x00C5BC69
 		private void OnDragEnded(ULGUIPointerEventData _)
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -714,7 +714,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onDragEnded();
 		}
 
-		// Token: 0x0603714F RID: 225615 RVA: 0x00D0E670 File Offset: 0x00D0C870
+		// Token: 0x0602C098 RID: 180376 RVA: 0x00C5DA88 File Offset: 0x00C5BC88
 		private unsafe void OnInputUiMoveForward(string axisName, float value, InputIdentification _)
 		{
 			if (value > 0f)
@@ -745,7 +745,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onInputUiMoveForward(axisName, value);
 		}
 
-		// Token: 0x06037150 RID: 225616 RVA: 0x00D0E704 File Offset: 0x00D0C904
+		// Token: 0x0602C099 RID: 180377 RVA: 0x00C5DB1C File Offset: 0x00C5BD1C
 		private unsafe void OnInputUiMoveRight(string axisName, float value, InputIdentification _)
 		{
 			if (value > 0f)
@@ -776,7 +776,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onInputUiMoveRight(axisName, value);
 		}
 
-		// Token: 0x06037151 RID: 225617 RVA: 0x00D0E796 File Offset: 0x00D0C996
+		// Token: 0x0602C09A RID: 180378 RVA: 0x00C5DBAE File Offset: 0x00C5BDAE
 		private void OnInputUiLookUp(string axisName, float value, InputIdentification _)
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -792,7 +792,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onInputUiLookUp(axisName, value);
 		}
 
-		// Token: 0x06037152 RID: 225618 RVA: 0x00D0E7B4 File Offset: 0x00D0C9B4
+		// Token: 0x0602C09B RID: 180379 RVA: 0x00C5DBCC File Offset: 0x00C5BDCC
 		private void OnInputUiTurn(string axisName, float value, InputIdentification _)
 		{
 			FilterSettingViewModel vmCache = this.VmCache;
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			onInputUiTurn(axisName, value);
 		}
 
-		// Token: 0x06037153 RID: 225619 RVA: 0x00D0E7D4 File Offset: 0x00D0C9D4
+		// Token: 0x0602C09C RID: 180380 RVA: 0x00C5DBEC File Offset: 0x00C5BDEC
 		private FilterSettingPixListItem CreateCircleItem(AActor actor, int index, int showNum)
 		{
 			FilterSettingPixListItem filterSettingPixListItem = new FilterSettingPixListItem(actor);
@@ -822,22 +822,22 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 			return filterSettingPixListItem;
 		}
 
-		// Token: 0x0401D0F3 RID: 119027
+		// Token: 0x04017B8C RID: 97164
 		[Nullable(2)]
 		public FilterSettingViewModel VmCache;
 
-		// Token: 0x0401D0F4 RID: 119028
+		// Token: 0x04017B8D RID: 97165
 		public bool IsColorPalette = true;
 
-		// Token: 0x0401D0F5 RID: 119029
+		// Token: 0x04017B8E RID: 97166
 		[Nullable(2)]
 		private FilterSettingSliderItem SliderItem;
 
-		// Token: 0x0401D0F6 RID: 119030
+		// Token: 0x04017B8F RID: 97167
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D0F7 RID: 119031
+		// Token: 0x04017B90 RID: 97168
 		[Nullable(new byte[]
 		{
 			2,
@@ -845,7 +845,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private CircleAttachView<FilterSetting, FilterSettingPixListItem> CircleItem;
 
-		// Token: 0x0401D0F8 RID: 119032
+		// Token: 0x04017B91 RID: 97169
 		[Nullable(new byte[]
 		{
 			2,
@@ -853,7 +853,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private GenericLayout<FilterSeniorParamSliderItem, FilterSeniorSetting> SeniorParamLayout;
 
-		// Token: 0x0401D0F9 RID: 119033
+		// Token: 0x04017B92 RID: 97170
 		[Nullable(new byte[]
 		{
 			2,
@@ -861,7 +861,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private LoadAsyncPromise<UCurveFloat> OffsetHandle;
 
-		// Token: 0x0401D0FA RID: 119034
+		// Token: 0x04017B93 RID: 97171
 		[Nullable(new byte[]
 		{
 			2,
@@ -869,7 +869,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private LoadAsyncPromise<UCurveFloat> ScaleHandle;
 
-		// Token: 0x0401D0FB RID: 119035
+		// Token: 0x04017B94 RID: 97172
 		[Nullable(new byte[]
 		{
 			2,
@@ -877,7 +877,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private LoadAsyncPromise<UCurveFloat> AlphaHandle;
 
-		// Token: 0x0401D0FC RID: 119036
+		// Token: 0x04017B95 RID: 97173
 		[Nullable(new byte[]
 		{
 			2,
@@ -885,89 +885,89 @@ namespace CSharpScript.Game.Module.Menu.SubViews.FilterSetting
 		})]
 		private UCurveFloat[] CurvesCache;
 
-		// Token: 0x0200B6BE RID: 46782
+		// Token: 0x0200A0F6 RID: 41206
 		[NullableContext(0)]
 		public class EComponent
 		{
-			// Token: 0x040375BD RID: 226749
+			// Token: 0x04032012 RID: 204818
 			public const int FilterTexture = 0;
 
-			// Token: 0x040375BE RID: 226750
+			// Token: 0x04032013 RID: 204819
 			public const int UpLeftItem = 1;
 
-			// Token: 0x040375BF RID: 226751
+			// Token: 0x04032014 RID: 204820
 			public const int UpRightItem = 2;
 
-			// Token: 0x040375C0 RID: 226752
+			// Token: 0x04032015 RID: 204821
 			public const int DownLeftItem = 3;
 
-			// Token: 0x040375C1 RID: 226753
+			// Token: 0x04032016 RID: 204822
 			public const int DownRightItem = 4;
 
-			// Token: 0x040375C2 RID: 226754
+			// Token: 0x04032017 RID: 204823
 			public const int CoordinatesText = 5;
 
-			// Token: 0x040375C3 RID: 226755
+			// Token: 0x04032018 RID: 204824
 			public const int FilterNameText = 6;
 
-			// Token: 0x040375C4 RID: 226756
+			// Token: 0x04032019 RID: 204825
 			public const int PointSelectionTexture = 7;
 
-			// Token: 0x040375C5 RID: 226757
+			// Token: 0x0403201A RID: 204826
 			public const int SliderRootItem = 8;
 
-			// Token: 0x040375C6 RID: 226758
+			// Token: 0x0403201B RID: 204827
 			public const int ResetFilterParamButton = 9;
 
-			// Token: 0x040375C7 RID: 226759
+			// Token: 0x0403201C RID: 204828
 			public const int ApplyButton = 10;
 
-			// Token: 0x040375C8 RID: 226760
+			// Token: 0x0403201D RID: 204829
 			public const int MiddleTextureItem = 11;
 
-			// Token: 0x040375C9 RID: 226761
+			// Token: 0x0403201E RID: 204830
 			public const int RightArrowButton = 12;
 
-			// Token: 0x040375CA RID: 226762
+			// Token: 0x0403201F RID: 204831
 			public const int LeftArrowButton = 13;
 
-			// Token: 0x040375CB RID: 226763
+			// Token: 0x04032020 RID: 204832
 			public const int CaptionItem = 14;
 
-			// Token: 0x040375CC RID: 226764
+			// Token: 0x04032021 RID: 204833
 			public const int HideToggle = 15;
 
-			// Token: 0x040375CD RID: 226765
+			// Token: 0x04032022 RID: 204834
 			public const int DraggingHideRootItem = 16;
 
-			// Token: 0x040375CE RID: 226766
+			// Token: 0x04032023 RID: 204835
 			public const int ScreenDrag = 17;
 
-			// Token: 0x040375CF RID: 226767
+			// Token: 0x04032024 RID: 204836
 			public const int PointRootItem = 18;
 
-			// Token: 0x040375D0 RID: 226768
+			// Token: 0x04032025 RID: 204837
 			public const int PixListRootItem = 19;
 
-			// Token: 0x040375D1 RID: 226769
+			// Token: 0x04032026 RID: 204838
 			public const int LayoutTab = 20;
 
-			// Token: 0x040375D2 RID: 226770
+			// Token: 0x04032027 RID: 204839
 			public const int ToggleColorPalette = 21;
 
-			// Token: 0x040375D3 RID: 226771
+			// Token: 0x04032028 RID: 204840
 			public const int ToggleSeniorParam = 22;
 
-			// Token: 0x040375D4 RID: 226772
+			// Token: 0x04032029 RID: 204841
 			public const int ItemSeniorParamPanel = 23;
 
-			// Token: 0x040375D5 RID: 226773
+			// Token: 0x0403202A RID: 204842
 			public const int LayoutSeniorParam = 24;
 
-			// Token: 0x040375D6 RID: 226774
+			// Token: 0x0403202B RID: 204843
 			public const int ItemSeniorParamSlider = 25;
 
-			// Token: 0x040375D7 RID: 226775
+			// Token: 0x0403202C RID: 204844
 			public const int BtnDefaultFilter = 26;
 		}
 	}

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FBD RID: 28605
+	// Token: 0x0200613E RID: 24894
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballBattleFeverBarController
 	{
-		// Token: 0x06045834 RID: 284724 RVA: 0x0113F690 File Offset: 0x0113D890
+		// Token: 0x0603B9E4 RID: 244196 RVA: 0x010E9460 File Offset: 0x010E7660
 		[NullableContext(1)]
 		public void Init(BP_Fever_Bar_C feverBar, float dissolveMin, float dissolveMax, [Nullable(2)] UMaterialInstance material)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.DissolveRange = this.DissolveMax - this.DissolveMin;
 		}
 
-		// Token: 0x06045835 RID: 284725 RVA: 0x0113F784 File Offset: 0x0113D984
+		// Token: 0x0603B9E5 RID: 244197 RVA: 0x010E9554 File Offset: 0x010E7754
 		[NullableContext(1)]
 		public void BindAttr(AKSC_Shape2D_Entity_TeamPlayer kscTeamPlayer)
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045836 RID: 284726 RVA: 0x0113F858 File Offset: 0x0113DA58
+		// Token: 0x0603B9E6 RID: 244198 RVA: 0x010E9628 File Offset: 0x010E7828
 		public void Destroy()
 		{
 			this.MaterialParamName = default(FName);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x06045837 RID: 284727 RVA: 0x0113F8F8 File Offset: 0x0113DAF8
+		// Token: 0x0603B9E7 RID: 244199 RVA: 0x010E96C8 File Offset: 0x010E78C8
 		private void UpdateFeverBar()
 		{
 			float num = (this.FeverMaxValue > 0f) ? (this.FeverValue / this.FeverMaxValue) : 0f;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			feverBarMaterial.SetScalarParameterValue(this.MaterialParamName, value);
 		}
 
-		// Token: 0x06045838 RID: 284728 RVA: 0x0113F94E File Offset: 0x0113DB4E
+		// Token: 0x0603B9E8 RID: 244200 RVA: 0x010E971E File Offset: 0x010E791E
 		private void OnFeverAttrChange(EKSC_AttrType attrType, int value)
 		{
 			this.FeverValue = (float)value;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.UpdateFeverBar();
 		}
 
-		// Token: 0x06045839 RID: 284729 RVA: 0x0113F964 File Offset: 0x0113DB64
+		// Token: 0x0603B9E9 RID: 244201 RVA: 0x010E9734 File Offset: 0x010E7934
 		private void OnFeverMaxAttrChange(EKSC_AttrType attrType, int value)
 		{
 			this.FeverMaxValue = (float)value;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.UpdateFeverBar();
 		}
 
-		// Token: 0x0604583A RID: 284730 RVA: 0x0113F97C File Offset: 0x0113DB7C
+		// Token: 0x0603B9EA RID: 244202 RVA: 0x010E974C File Offset: 0x010E794C
 		private void RefreshFever()
 		{
 			bool flag = this.FeverValue <= 0f;
@@ -152,40 +152,40 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x04024457 RID: 148567
+		// Token: 0x0401F70C RID: 128780
 		private UKSC_AttrSet AttrSet;
 
-		// Token: 0x04024458 RID: 148568
+		// Token: 0x0401F70D RID: 128781
 		private UMaterialInstanceDynamic FeverBarMaterial;
 
-		// Token: 0x04024459 RID: 148569
+		// Token: 0x0401F70E RID: 128782
 		private FName MaterialParamName;
 
-		// Token: 0x0402445A RID: 148570
+		// Token: 0x0401F70F RID: 128783
 		private float FeverValue;
 
-		// Token: 0x0402445B RID: 148571
+		// Token: 0x0401F710 RID: 128784
 		private float FeverMaxValue;
 
-		// Token: 0x0402445C RID: 148572
+		// Token: 0x0401F711 RID: 128785
 		private float DissolveMin;
 
-		// Token: 0x0402445D RID: 148573
+		// Token: 0x0401F712 RID: 128786
 		private float DissolveMax = 1f;
 
-		// Token: 0x0402445E RID: 148574
+		// Token: 0x0401F713 RID: 128787
 		private float DissolveRange = 1f;
 
-		// Token: 0x0402445F RID: 148575
+		// Token: 0x0401F714 RID: 128788
 		private FOnKSCAttrChange DelegateFeverAttrChange;
 
-		// Token: 0x04024460 RID: 148576
+		// Token: 0x0401F715 RID: 128789
 		private FOnKSCAttrChange DelegateFeverMaxAttrChange;
 
-		// Token: 0x04024461 RID: 148577
+		// Token: 0x0401F716 RID: 128790
 		private bool IsInProgress;
 
-		// Token: 0x04024462 RID: 148578
+		// Token: 0x0401F717 RID: 128791
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat UpdateStat = Stat.Create("PinballBattlePlayerBarController.UpdateFeverBar", "", "");

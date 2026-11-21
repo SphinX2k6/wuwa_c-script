@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002782 RID: 10114
+	// Token: 0x02002A54 RID: 10836
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFlowActorIndexData
 	{
-		// Token: 0x0600E12D RID: 57645 RVA: 0x00214541 File Offset: 0x00212741
-		[NullableContext(1)]
+		// Token: 0x0600EF4B RID: 61259 RVA: 0x002312D5 File Offset: 0x0022F4D5
+		[NullableContext(0)]
 		public static IFlowActorIndexData Create(IFlowActorIndexData? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043EB RID: 17387
-		// (get) Token: 0x0600E12E RID: 57646 RVA: 0x00214560 File Offset: 0x00212760
+		// Token: 0x17004751 RID: 18257
+		// (get) Token: 0x0600EF4C RID: 61260 RVA: 0x002312F4 File Offset: 0x0022F4F4
 		public virtual int Index
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043EC RID: 17388
-		// (get) Token: 0x0600E12F RID: 57647 RVA: 0x0021456D File Offset: 0x0021276D
+		// Token: 0x17004752 RID: 18258
+		// (get) Token: 0x0600EF4D RID: 61261 RVA: 0x00231301 File Offset: 0x0022F501
 		public virtual PosAndRot Offset
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043ED RID: 17389
-		// (get) Token: 0x0600E130 RID: 57648 RVA: 0x002145A4 File Offset: 0x002127A4
+		// Token: 0x17004753 RID: 18259
+		// (get) Token: 0x0600EF4E RID: 61262 RVA: 0x00231338 File Offset: 0x0022F538
 		public virtual bool? IsUseFixedPosition
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CC2 RID: 31938
+		// Token: 0x04008378 RID: 33656
 		private IFlowActorIndexData Instance;
 
-		// Token: 0x04007CC3 RID: 31939
+		// Token: 0x04008379 RID: 33657
 		private PosAndRot _OffsetCache;
 
-		// Token: 0x04007CC4 RID: 31940
+		// Token: 0x0400837A RID: 33658
 		private bool _OffsetInited;
 	}
 }

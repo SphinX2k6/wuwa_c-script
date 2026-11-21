@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045C6 RID: 17862
+	// Token: 0x02004A2E RID: 18990
 	public struct ITrapDefenseSpawnMonsterConditionCompleted : IFlatbufferObject
 	{
-		// Token: 0x17007EF4 RID: 32500
-		// (get) Token: 0x0601B041 RID: 110657 RVA: 0x003D9E32 File Offset: 0x003D8032
+		// Token: 0x17008535 RID: 34101
+		// (get) Token: 0x0601C816 RID: 116758 RVA: 0x004060CE File Offset: 0x004042CE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B042 RID: 110658 RVA: 0x003D9E3F File Offset: 0x003D803F
+		// Token: 0x0601C817 RID: 116759 RVA: 0x004060DB File Offset: 0x004042DB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B043 RID: 110659 RVA: 0x003D9E48 File Offset: 0x003D8048
+		// Token: 0x0601C818 RID: 116760 RVA: 0x004060E4 File Offset: 0x004042E4
 		public static ITrapDefenseSpawnMonsterConditionCompleted GetRootAsITrapDefenseSpawnMonsterConditionCompleted(ByteBuffer _bb)
 		{
 			return ITrapDefenseSpawnMonsterConditionCompleted.GetRootAsITrapDefenseSpawnMonsterConditionCompleted(_bb, default(ITrapDefenseSpawnMonsterConditionCompleted));
 		}
 
-		// Token: 0x0601B044 RID: 110660 RVA: 0x003D9E64 File Offset: 0x003D8064
+		// Token: 0x0601C819 RID: 116761 RVA: 0x00406100 File Offset: 0x00404300
 		public static ITrapDefenseSpawnMonsterConditionCompleted GetRootAsITrapDefenseSpawnMonsterConditionCompleted(ByteBuffer _bb, ITrapDefenseSpawnMonsterConditionCompleted obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B045 RID: 110661 RVA: 0x003D9E81 File Offset: 0x003D8081
+		// Token: 0x0601C81A RID: 116762 RVA: 0x0040611D File Offset: 0x0040431D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B046 RID: 110662 RVA: 0x003D9E90 File Offset: 0x003D8090
+		// Token: 0x0601C81B RID: 116763 RVA: 0x0040612C File Offset: 0x0040432C
 		public ITrapDefenseSpawnMonsterConditionCompleted __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007EF5 RID: 32501
-		// (get) Token: 0x0601B047 RID: 110663 RVA: 0x003D9EA0 File Offset: 0x003D80A0
+		// Token: 0x17008536 RID: 34102
+		// (get) Token: 0x0601C81C RID: 116764 RVA: 0x0040613C File Offset: 0x0040433C
 		public ETrapDefenseSpawnMonsterCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007EF6 RID: 32502
-		// (get) Token: 0x0601B048 RID: 110664 RVA: 0x003D9EDC File Offset: 0x003D80DC
+		// Token: 0x17008537 RID: 34103
+		// (get) Token: 0x0601C81D RID: 116765 RVA: 0x00406178 File Offset: 0x00404378
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601B049 RID: 110665 RVA: 0x003D9F18 File Offset: 0x003D8118
+		// Token: 0x0601C81E RID: 116766 RVA: 0x004061B4 File Offset: 0x004043B4
 		public static Offset<ITrapDefenseSpawnMonsterConditionCompleted> CreateITrapDefenseSpawnMonsterConditionCompleted(FlatBufferBuilder builder, ETrapDefenseSpawnMonsterCondition Type = ETrapDefenseSpawnMonsterCondition.Completed, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionCompleted.EndITrapDefenseSpawnMonsterConditionCompleted(builder);
 		}
 
-		// Token: 0x0601B04A RID: 110666 RVA: 0x003D9F35 File Offset: 0x003D8135
+		// Token: 0x0601C81F RID: 116767 RVA: 0x004061D1 File Offset: 0x004043D1
 		public static void StartITrapDefenseSpawnMonsterConditionCompleted(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B04B RID: 110667 RVA: 0x003D9F3E File Offset: 0x003D813E
+		// Token: 0x0601C820 RID: 116768 RVA: 0x004061DA File Offset: 0x004043DA
 		public static void AddType(FlatBufferBuilder builder, ETrapDefenseSpawnMonsterCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B04C RID: 110668 RVA: 0x003D9F49 File Offset: 0x003D8149
+		// Token: 0x0601C821 RID: 116769 RVA: 0x004061E5 File Offset: 0x004043E5
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0601B04D RID: 110669 RVA: 0x003D9F54 File Offset: 0x003D8154
+		// Token: 0x0601C822 RID: 116770 RVA: 0x004061F0 File Offset: 0x004043F0
 		public static Offset<ITrapDefenseSpawnMonsterConditionCompleted> EndITrapDefenseSpawnMonsterConditionCompleted(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrapDefenseSpawnMonsterConditionCompleted>(builder.EndTable());
 		}
 
-		// Token: 0x0601B04E RID: 110670 RVA: 0x003D9F64 File Offset: 0x003D8164
+		// Token: 0x0601C823 RID: 116771 RVA: 0x00406200 File Offset: 0x00404400
 		public ITrapDefenseSpawnMonsterConditionCompletedT UnPack()
 		{
 			ITrapDefenseSpawnMonsterConditionCompletedT trapDefenseSpawnMonsterConditionCompletedT = new ITrapDefenseSpawnMonsterConditionCompletedT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return trapDefenseSpawnMonsterConditionCompletedT;
 		}
 
-		// Token: 0x0601B04F RID: 110671 RVA: 0x003D9F7F File Offset: 0x003D817F
+		// Token: 0x0601C824 RID: 116772 RVA: 0x0040621B File Offset: 0x0040441B
 		public void UnPackTo(ITrapDefenseSpawnMonsterConditionCompletedT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0601B050 RID: 110672 RVA: 0x003D9F9C File Offset: 0x003D819C
+		// Token: 0x0601C825 RID: 116773 RVA: 0x00406238 File Offset: 0x00404438
 		public static Offset<ITrapDefenseSpawnMonsterConditionCompleted> Pack(FlatBufferBuilder builder, ITrapDefenseSpawnMonsterConditionCompletedT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ITrapDefenseSpawnMonsterConditionCompleted.CreateITrapDefenseSpawnMonsterConditionCompleted(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400C697 RID: 50839
+		// Token: 0x0400D0C6 RID: 53446
 		private Table __p;
 	}
 }

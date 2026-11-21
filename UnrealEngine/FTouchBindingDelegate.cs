@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001941 RID: 6465
+	// Token: 0x02000423 RID: 1059
 	public sealed class FTouchBindingDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017F66 RID: 98150 RVA: 0x002321BC File Offset: 0x002303BC
+		// Token: 0x0600661A RID: 26138 RVA: 0x0009294C File Offset: 0x00090B4C
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FTouchBindingDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017F67 RID: 98151 RVA: 0x002321C8 File Offset: 0x002303C8
+		// Token: 0x0600661B RID: 26139 RVA: 0x00092958 File Offset: 0x00090B58
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FTouchBindingDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FTouchBindingDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06017F68 RID: 98152 RVA: 0x002321EB File Offset: 0x002303EB
+		// Token: 0x0600661C RID: 26140 RVA: 0x0009297B File Offset: 0x00090B7B
 		public FTouchBindingDelegate()
 		{
 		}
 
-		// Token: 0x06017F69 RID: 98153 RVA: 0x002321F3 File Offset: 0x002303F3
+		// Token: 0x0600661D RID: 26141 RVA: 0x00092983 File Offset: 0x00090B83
 		[NullableContext(2)]
 		public FTouchBindingDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017F6A RID: 98154 RVA: 0x002321FD File Offset: 0x002303FD
+		// Token: 0x0600661E RID: 26142 RVA: 0x0009298D File Offset: 0x00090B8D
 		public FTouchBindingDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017F6B RID: 98155 RVA: 0x00232208 File Offset: 0x00230408
+		// Token: 0x0600661F RID: 26143 RVA: 0x00092998 File Offset: 0x00090B98
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<TEnumAsByte<ETouchIndex>, FVector>) ?? ((Action<TEnumAsByte<ETouchIndex>, FVector>)Delegate.CreateDelegate(typeof(Action<TEnumAsByte<ETouchIndex>, FVector>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017F6C RID: 98156 RVA: 0x0023223A File Offset: 0x0023043A
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006620 RID: 26144 RVA: 0x000929CA File Offset: 0x00090BCA
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,9 +67,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FTouchBindingDelegate.RegisterId);
 		}
 
-		// Token: 0x06017F6D RID: 98157 RVA: 0x00232274 File Offset: 0x00230474
+		// Token: 0x06006621 RID: 26145 RVA: 0x00092A04 File Offset: 0x00090C04
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(ETouchIndex TouchIndex, FVector Position)
 		{
 			FTouchBindingDelegate.__FTouchBindingDelegate_DelegateParams* ptr = stackalloc FTouchBindingDelegate.__FTouchBindingDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FTouchBindingDelegate.__FTouchBindingDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06017F6E RID: 98158 RVA: 0x002322C0 File Offset: 0x002304C0
+		// Token: 0x06006622 RID: 26146 RVA: 0x00092A50 File Offset: 0x00090C50
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TEnumAsByte<ETouchIndex>, FVector> action = target as Action<TEnumAsByte<ETouchIndex>, FVector>;
@@ -94,35 +91,35 @@ namespace UnrealEngine
 			action(((FTouchBindingDelegate.__FTouchBindingDelegate_DelegateParams*)__Parameters)->TouchIndex, ((FTouchBindingDelegate.__FTouchBindingDelegate_DelegateParams*)__Parameters)->Position);
 		}
 
-		// Token: 0x0400CF6C RID: 53100
+		// Token: 0x04002AED RID: 10989
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CF6D RID: 53101
+		// Token: 0x04002AEE RID: 10990
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.TouchBindingDelegate__DelegateSignature";
 
-		// Token: 0x0400CF6E RID: 53102
+		// Token: 0x04002AEF RID: 10991
 		private static int RegisterId;
 
-		// Token: 0x0200300B RID: 12299
+		// Token: 0x02000B1F RID: 2847
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FTouchBindingDelegate_DelegateParams
+		private ref struct __FTouchBindingDelegate_DelegateParams
 		{
-			// Token: 0x04016C29 RID: 93225
+			// Token: 0x04005BD2 RID: 23506
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> TouchIndex;
 
-			// Token: 0x04016C2A RID: 93226
+			// Token: 0x04005BD3 RID: 23507
 			[FieldOffset(4)]
 			public FVector Position;
 		}
 
-		// Token: 0x0200300C RID: 12300
+		// Token: 0x02000B20 RID: 2848
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016C2B RID: 93227
+			// Token: 0x04005BD4 RID: 23508
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

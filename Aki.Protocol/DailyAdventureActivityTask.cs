@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200031D RID: 797
+	// Token: 0x02000324 RID: 804
 	public sealed class DailyAdventureActivityTask : IMessage<DailyAdventureActivityTask>, IMessage, IEquatable<DailyAdventureActivityTask>, IDeepCloneable<DailyAdventureActivityTask>, IBufferMessage
 	{
-		// Token: 0x06005048 RID: 20552 RVA: 0x000C3CCE File Offset: 0x000C1ECE
+		// Token: 0x06005121 RID: 20769 RVA: 0x000C60BE File Offset: 0x000C42BE
 		[NullableContext(1)]
 		public static DailyAdventureActivityTask Create()
 		{
 			return new DailyAdventureActivityTask();
 		}
 
-		// Token: 0x17000E66 RID: 3686
-		// (get) Token: 0x06005049 RID: 20553 RVA: 0x000C3CD5 File Offset: 0x000C1ED5
+		// Token: 0x17000E93 RID: 3731
+		// (get) Token: 0x06005122 RID: 20770 RVA: 0x000C60C5 File Offset: 0x000C42C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<DailyAdventureActivityTask> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E67 RID: 3687
-		// (get) Token: 0x0600504A RID: 20554 RVA: 0x000C3CDC File Offset: 0x000C1EDC
+		// Token: 0x17000E94 RID: 3732
+		// (get) Token: 0x06005123 RID: 20771 RVA: 0x000C60CC File Offset: 0x000C42CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E68 RID: 3688
-		// (get) Token: 0x0600504B RID: 20555 RVA: 0x000C3CDF File Offset: 0x000C1EDF
+		// Token: 0x17000E95 RID: 3733
+		// (get) Token: 0x06005124 RID: 20772 RVA: 0x000C60CF File Offset: 0x000C42CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600504C RID: 20556 RVA: 0x000C3CE6 File Offset: 0x000C1EE6
+		// Token: 0x06005125 RID: 20773 RVA: 0x000C60D6 File Offset: 0x000C42D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyAdventureActivityTask()
 		{
 		}
 
-		// Token: 0x0600504D RID: 20557 RVA: 0x000C3CF0 File Offset: 0x000C1EF0
+		// Token: 0x06005126 RID: 20774 RVA: 0x000C60E0 File Offset: 0x000C42E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyAdventureActivityTask(DailyAdventureActivityTask other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600504E RID: 20558 RVA: 0x000C3D44 File Offset: 0x000C1F44
+		// Token: 0x06005127 RID: 20775 RVA: 0x000C6134 File Offset: 0x000C4334
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyAdventureActivityTask Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new DailyAdventureActivityTask(this);
 		}
 
-		// Token: 0x17000E69 RID: 3689
-		// (get) Token: 0x0600504F RID: 20559 RVA: 0x000C3D4C File Offset: 0x000C1F4C
-		// (set) Token: 0x06005050 RID: 20560 RVA: 0x000C3D54 File Offset: 0x000C1F54
+		// Token: 0x17000E96 RID: 3734
+		// (get) Token: 0x06005128 RID: 20776 RVA: 0x000C613C File Offset: 0x000C433C
+		// (set) Token: 0x06005129 RID: 20777 RVA: 0x000C6144 File Offset: 0x000C4344
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E6A RID: 3690
-		// (get) Token: 0x06005051 RID: 20561 RVA: 0x000C3D5D File Offset: 0x000C1F5D
-		// (set) Token: 0x06005052 RID: 20562 RVA: 0x000C3D65 File Offset: 0x000C1F65
+		// Token: 0x17000E97 RID: 3735
+		// (get) Token: 0x0600512A RID: 20778 RVA: 0x000C614D File Offset: 0x000C434D
+		// (set) Token: 0x0600512B RID: 20779 RVA: 0x000C6155 File Offset: 0x000C4355
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Current
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E6B RID: 3691
-		// (get) Token: 0x06005053 RID: 20563 RVA: 0x000C3D6E File Offset: 0x000C1F6E
-		// (set) Token: 0x06005054 RID: 20564 RVA: 0x000C3D76 File Offset: 0x000C1F76
+		// Token: 0x17000E98 RID: 3736
+		// (get) Token: 0x0600512C RID: 20780 RVA: 0x000C615E File Offset: 0x000C435E
+		// (set) Token: 0x0600512D RID: 20781 RVA: 0x000C6166 File Offset: 0x000C4366
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Target
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E6C RID: 3692
-		// (get) Token: 0x06005055 RID: 20565 RVA: 0x000C3D7F File Offset: 0x000C1F7F
-		// (set) Token: 0x06005056 RID: 20566 RVA: 0x000C3D87 File Offset: 0x000C1F87
+		// Token: 0x17000E99 RID: 3737
+		// (get) Token: 0x0600512E RID: 20782 RVA: 0x000C616F File Offset: 0x000C436F
+		// (set) Token: 0x0600512F RID: 20783 RVA: 0x000C6177 File Offset: 0x000C4377
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyAdventureTaskState Status
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005057 RID: 20567 RVA: 0x000C3D90 File Offset: 0x000C1F90
+		// Token: 0x06005130 RID: 20784 RVA: 0x000C6180 File Offset: 0x000C4380
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -156,7 +156,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DailyAdventureActivityTask);
 		}
 
-		// Token: 0x06005058 RID: 20568 RVA: 0x000C3DA0 File Offset: 0x000C1FA0
+		// Token: 0x06005131 RID: 20785 RVA: 0x000C6190 File Offset: 0x000C4390
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DailyAdventureActivityTask other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Id == other.Id && this.Current == other.Current && this.Target == other.Target && this.Status == other.Status && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005059 RID: 20569 RVA: 0x000C3E0C File Offset: 0x000C200C
+		// Token: 0x06005132 RID: 20786 RVA: 0x000C61FC File Offset: 0x000C43FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600505A RID: 20570 RVA: 0x000C3E9C File Offset: 0x000C209C
+		// Token: 0x06005133 RID: 20787 RVA: 0x000C628C File Offset: 0x000C448C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600505B RID: 20571 RVA: 0x000C3EA9 File Offset: 0x000C20A9
+		// Token: 0x06005134 RID: 20788 RVA: 0x000C6299 File Offset: 0x000C4499
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -211,7 +211,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600505C RID: 20572 RVA: 0x000C3EB4 File Offset: 0x000C20B4
+		// Token: 0x06005135 RID: 20789 RVA: 0x000C62A4 File Offset: 0x000C44A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600505D RID: 20573 RVA: 0x000C3F44 File Offset: 0x000C2144
+		// Token: 0x06005136 RID: 20790 RVA: 0x000C6334 File Offset: 0x000C4534
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -271,7 +271,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600505E RID: 20574 RVA: 0x000C3FCC File Offset: 0x000C21CC
+		// Token: 0x06005137 RID: 20791 RVA: 0x000C63BC File Offset: 0x000C45BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DailyAdventureActivityTask other)
@@ -299,7 +299,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600505F RID: 20575 RVA: 0x000C4044 File Offset: 0x000C2244
+		// Token: 0x06005138 RID: 20792 RVA: 0x000C6434 File Offset: 0x000C4634
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -307,7 +307,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005060 RID: 20576 RVA: 0x000C4050 File Offset: 0x000C2250
+		// Token: 0x06005139 RID: 20793 RVA: 0x000C6440 File Offset: 0x000C4640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -349,34 +349,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400325B RID: 12891
+		// Token: 0x040032F2 RID: 13042
 		private static readonly MessageParser<DailyAdventureActivityTask> _parser = new MessageParser<DailyAdventureActivityTask>(() => new DailyAdventureActivityTask());
 
-		// Token: 0x0400325C RID: 12892
+		// Token: 0x040032F3 RID: 13043
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400325D RID: 12893
+		// Token: 0x040032F4 RID: 13044
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x0400325E RID: 12894
+		// Token: 0x040032F5 RID: 13045
 		private int id_;
 
-		// Token: 0x0400325F RID: 12895
+		// Token: 0x040032F6 RID: 13046
 		public const int CurrentFieldNumber = 2;
 
-		// Token: 0x04003260 RID: 12896
+		// Token: 0x040032F7 RID: 13047
 		private int current_;
 
-		// Token: 0x04003261 RID: 12897
+		// Token: 0x040032F8 RID: 13048
 		public const int TargetFieldNumber = 3;
 
-		// Token: 0x04003262 RID: 12898
+		// Token: 0x040032F9 RID: 13049
 		private int target_;
 
-		// Token: 0x04003263 RID: 12899
+		// Token: 0x040032FA RID: 13050
 		public const int StatusFieldNumber = 4;
 
-		// Token: 0x04003264 RID: 12900
+		// Token: 0x040032FB RID: 13051
 		private DailyAdventureTaskState status_;
 	}
 }

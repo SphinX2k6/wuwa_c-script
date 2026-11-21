@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA9 RID: 2985
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C77 RID: 3191
 	public class ITargetGearGroupConfig
 	{
-		// Token: 0x0600447D RID: 17533 RVA: 0x000ADEA1 File Offset: 0x000AC0A1
+		// Token: 0x060048D6 RID: 18646 RVA: 0x000B7F65 File Offset: 0x000B6165
 		public static ITargetGearGroupConfig Create(ITargetGearGroupConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012E8 RID: 4840
-		// (get) Token: 0x0600447E RID: 17534 RVA: 0x000ADEC0 File Offset: 0x000AC0C0
+		// Token: 0x170013E3 RID: 5091
+		// (get) Token: 0x060048D7 RID: 18647 RVA: 0x000B7F84 File Offset: 0x000B6184
 		public virtual List<int> Entitys
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012E9 RID: 4841
-		// (get) Token: 0x0600447F RID: 17535 RVA: 0x000ADF24 File Offset: 0x000AC124
+		// Token: 0x170013E4 RID: 5092
+		// (get) Token: 0x060048D8 RID: 18648 RVA: 0x000B7FE8 File Offset: 0x000B61E8
 		public virtual ITargetGearGroupSuccessContdion SuccessCondition
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012EA RID: 4842
-		// (get) Token: 0x06004480 RID: 17536 RVA: 0x000ADF53 File Offset: 0x000AC153
+		// Token: 0x170013E5 RID: 5093
+		// (get) Token: 0x060048D9 RID: 18649 RVA: 0x000B8017 File Offset: 0x000B6217
 		public virtual List<ITargetGearGroupFailureCondition> FailureConditions
 		{
 			get
@@ -76,19 +74,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012EB RID: 4843
-		// (get) Token: 0x06004481 RID: 17537 RVA: 0x000ADF84 File Offset: 0x000AC184
+		// Token: 0x170013E6 RID: 5094
+		// (get) Token: 0x060048DA RID: 18650 RVA: 0x000B8048 File Offset: 0x000B6248
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ICheckGearHit> CheckGears
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -111,8 +109,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012EC RID: 4844
-		// (get) Token: 0x06004482 RID: 17538 RVA: 0x000ADFFE File Offset: 0x000AC1FE
+		// Token: 0x170013E7 RID: 5095
+		// (get) Token: 0x060048DB RID: 18651 RVA: 0x000B80C2 File Offset: 0x000B62C2
 		public virtual IGroupFinishConfig FinishConfig
 		{
 			get
@@ -127,42 +125,42 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026AC RID: 9900
+		// Token: 0x040028F4 RID: 10484
 		private ITargetGearGroupConfig Instance;
 
-		// Token: 0x040026AD RID: 9901
+		// Token: 0x040028F5 RID: 10485
 		private List<int> _EntitysCache;
 
-		// Token: 0x040026AE RID: 9902
+		// Token: 0x040028F6 RID: 10486
 		private bool _EntitysInited;
 
-		// Token: 0x040026AF RID: 9903
+		// Token: 0x040028F7 RID: 10487
 		private ITargetGearGroupSuccessContdion _SuccessConditionCache;
 
-		// Token: 0x040026B0 RID: 9904
+		// Token: 0x040028F8 RID: 10488
 		private bool _SuccessConditionInited;
 
-		// Token: 0x040026B1 RID: 9905
+		// Token: 0x040028F9 RID: 10489
 		private List<ITargetGearGroupFailureCondition> _FailureConditionsCache;
 
-		// Token: 0x040026B2 RID: 9906
+		// Token: 0x040028FA RID: 10490
 		private bool _FailureConditionsInited;
 
-		// Token: 0x040026B3 RID: 9907
+		// Token: 0x040028FB RID: 10491
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ICheckGearHit> _CheckGearsCache;
 
-		// Token: 0x040026B4 RID: 9908
+		// Token: 0x040028FC RID: 10492
 		private bool _CheckGearsInited;
 
-		// Token: 0x040026B5 RID: 9909
+		// Token: 0x040028FD RID: 10493
 		private IGroupFinishConfig _FinishConfigCache;
 
-		// Token: 0x040026B6 RID: 9910
+		// Token: 0x040028FE RID: 10494
 		private bool _FinishConfigInited;
 	}
 }

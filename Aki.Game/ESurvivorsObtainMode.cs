@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002AD9 RID: 10969
+// Token: 0x02002055 RID: 8277
 public enum ESurvivorsObtainMode
 {
-	// Token: 0x0400A9A1 RID: 43425
+	// Token: 0x0400ADA7 RID: 44455
 	SingleSelect,
-	// Token: 0x0400A9A2 RID: 43426
+	// Token: 0x0400ADA8 RID: 44456
 	All
 }

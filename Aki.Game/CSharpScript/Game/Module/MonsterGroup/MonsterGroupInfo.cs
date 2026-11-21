@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MonsterGroup
 {
-	// Token: 0x020053C8 RID: 21448
+	// Token: 0x020043AB RID: 17323
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterGroupInfo : IStaticVariableResetter
 	{
-		// Token: 0x06036CC8 RID: 224456 RVA: 0x00CF8769 File Offset: 0x00CF6969
+		// Token: 0x0602BC0E RID: 179214 RVA: 0x00C47811 File Offset: 0x00C45A11
 		static MonsterGroupInfo()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MonsterGroupInfo.CreateStaticDefaultValue), new Action(MonsterGroupInfo.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06036CC9 RID: 224457 RVA: 0x00CF8788 File Offset: 0x00CF6988
+		// Token: 0x0602BC0F RID: 179215 RVA: 0x00C47830 File Offset: 0x00C45A30
 		public static void CreateStaticDefaultValue()
 		{
 			MonsterGroupInfo.CacheVector = global::Vector.Create();
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			MonsterGroupInfo.CachePlayerPlaceholderBasisTransform = global::Transform.Create();
 		}
 
-		// Token: 0x06036CCA RID: 224458 RVA: 0x00CF8809 File Offset: 0x00CF6A09
+		// Token: 0x0602BC10 RID: 179216 RVA: 0x00C478B1 File Offset: 0x00C45AB1
 		public static void ResetStaticDefaultValue()
 		{
 			MonsterGroupInfo.CacheVector = null;
@@ -49,8 +49,8 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			MonsterGroupInfo.CachePlayerPlaceholderBasisTransform = null;
 		}
 
-		// Token: 0x170083BD RID: 33725
-		// (get) Token: 0x06036CCB RID: 224459 RVA: 0x00CF883B File Offset: 0x00CF6A3B
+		// Token: 0x17005789 RID: 22409
+		// (get) Token: 0x0602BC11 RID: 179217 RVA: 0x00C478E3 File Offset: 0x00C45AE3
 		private bool PatrolWrapAround
 		{
 			get
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CCC RID: 224460 RVA: 0x00CF8850 File Offset: 0x00CF6A50
+		// Token: 0x0602BC12 RID: 179218 RVA: 0x00C478F8 File Offset: 0x00C45AF8
 		public MonsterGroupInfo(int groupId)
 		{
 			this.GroupId = groupId;
 		}
 
-		// Token: 0x170083BE RID: 33726
-		// (get) Token: 0x06036CCD RID: 224461 RVA: 0x00CF88BB File Offset: 0x00CF6ABB
+		// Token: 0x1700578A RID: 22410
+		// (get) Token: 0x0602BC13 RID: 179219 RVA: 0x00C47963 File Offset: 0x00C45B63
 		[Nullable(2)]
 		public MonsterPatrolInfo CaptainInfo
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CCE RID: 224462 RVA: 0x00CF88E4 File Offset: 0x00CF6AE4
+		// Token: 0x0602BC14 RID: 179220 RVA: 0x00C4798C File Offset: 0x00C45B8C
 		public bool Init(GroupAiComponent groupComp, IReadOnlyList<int> initialPbDataIds)
 		{
 			if (groupComp.Option.Type != EGroupAiMode.Patrol)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.InitSplineData(groupAiPatrol.SplineEntityId) && this.UpdateGroupInfo(false);
 		}
 
-		// Token: 0x06036CCF RID: 224463 RVA: 0x00CF89A8 File Offset: 0x00CF6BA8
+		// Token: 0x0602BC15 RID: 179221 RVA: 0x00C47A50 File Offset: 0x00C45C50
 		private unsafe bool UpdateGroupInfo(bool keepCurrentCaptain = false)
 		{
 			this.CaptainSplineAnchorValid = false;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CD0 RID: 224464 RVA: 0x00CF8C18 File Offset: 0x00CF6E18
+		// Token: 0x0602BC16 RID: 179222 RVA: 0x00C47CC0 File Offset: 0x00C45EC0
 		public void Clear()
 		{
 			this.ExitPatrol();
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.PlayerPlaceholderRelativeTransform.Reset();
 		}
 
-		// Token: 0x06036CD1 RID: 224465 RVA: 0x00CF8C90 File Offset: 0x00CF6E90
+		// Token: 0x0602BC17 RID: 179223 RVA: 0x00C47D38 File Offset: 0x00C45F38
 		public unsafe bool RemoveMemberByEntityId(int entityId)
 		{
 			MonsterPatrolInfo monsterPatrolInfo;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CD2 RID: 224466 RVA: 0x00CF8DA8 File Offset: 0x00CF6FA8
+		// Token: 0x0602BC18 RID: 179224 RVA: 0x00C47E50 File Offset: 0x00C46050
 		public bool CheckMonsterValid()
 		{
 			List<int> list = new List<int>();
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.GroupInfo.Count > 0;
 		}
 
-		// Token: 0x06036CD3 RID: 224467 RVA: 0x00CF8E80 File Offset: 0x00CF7080
+		// Token: 0x0602BC19 RID: 179225 RVA: 0x00C47F28 File Offset: 0x00C46128
 		public EGroupPatrolState GetAllMonsterInState()
 		{
 			if (this.GroupInfo.Count == 0)
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return egroupPatrolState.GetValueOrDefault(EGroupPatrolState.MAX);
 		}
 
-		// Token: 0x06036CD4 RID: 224468 RVA: 0x00CF8F30 File Offset: 0x00CF7130
+		// Token: 0x0602BC1A RID: 179226 RVA: 0x00C47FD8 File Offset: 0x00C461D8
 		public bool CheckMonsterActive()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CD5 RID: 224469 RVA: 0x00CF8FA0 File Offset: 0x00CF71A0
+		// Token: 0x0602BC1B RID: 179227 RVA: 0x00C48048 File Offset: 0x00C46248
 		public unsafe void TickWatchdog(double nowMs)
 		{
 			bool flag = this.HasMonsterInState(EGroupPatrolState.Patrol);
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.MixedStateBeginTime = 0.0;
 		}
 
-		// Token: 0x06036CD6 RID: 224470 RVA: 0x00CF90C4 File Offset: 0x00CF72C4
+		// Token: 0x0602BC1C RID: 179228 RVA: 0x00C4816C File Offset: 0x00C4636C
 		private bool AnyMemberMoving()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return false;
 		}
 
-		// Token: 0x06036CD7 RID: 224471 RVA: 0x00CF9148 File Offset: 0x00CF7348
+		// Token: 0x0602BC1D RID: 179229 RVA: 0x00C481F0 File Offset: 0x00C463F0
 		public void ReadyToStartPatrol()
 		{
 			this.AddPatrolMoveIgnoreActors();
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CD8 RID: 224472 RVA: 0x00CF921C File Offset: 0x00CF741C
+		// Token: 0x0602BC1E RID: 179230 RVA: 0x00C482C4 File Offset: 0x00C464C4
 		public void PausePatrol()
 		{
 			this.AlignPauseAnchorToCaptain();
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.PatrolEndRequest();
 		}
 
-		// Token: 0x06036CD9 RID: 224473 RVA: 0x00CF92BC File Offset: 0x00CF74BC
+		// Token: 0x0602BC1F RID: 179231 RVA: 0x00C48364 File Offset: 0x00C46564
 		public void ExitPatrol()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.PatrolEndRequest();
 		}
 
-		// Token: 0x06036CDA RID: 224474 RVA: 0x00CF9350 File Offset: 0x00CF7550
+		// Token: 0x0602BC20 RID: 179232 RVA: 0x00C483F8 File Offset: 0x00C465F8
 		public void CheckMonsterMoveSpeed()
 		{
 			global::ECharMoveState captainMoveState = this.GetCaptainMoveState();
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CDB RID: 224475 RVA: 0x00CF942C File Offset: 0x00CF762C
+		// Token: 0x0602BC21 RID: 179233 RVA: 0x00C484D4 File Offset: 0x00C466D4
 		private void GenerateMonsterGroupInfo(IReadOnlyList<int> entities)
 		{
 			foreach (int num in entities)
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CDC RID: 224476 RVA: 0x00CF94C8 File Offset: 0x00CF76C8
+		// Token: 0x0602BC22 RID: 179234 RVA: 0x00C48570 File Offset: 0x00C46770
 		private bool InitSplineData(int splineId)
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(splineId), null);
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CDD RID: 224477 RVA: 0x00CF96D0 File Offset: 0x00CF78D0
+		// Token: 0x0602BC23 RID: 179235 RVA: 0x00C48778 File Offset: 0x00C46978
 		private bool CalculateCaptain()
 		{
 			this.CaptainId = -1;
@@ -617,7 +617,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CDE RID: 224478 RVA: 0x00CF9854 File Offset: 0x00CF7A54
+		// Token: 0x0602BC24 RID: 179236 RVA: 0x00C488FC File Offset: 0x00C46AFC
 		private bool GenerateMonsterRelativeLocation()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -679,7 +679,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CDF RID: 224479 RVA: 0x00CF9A44 File Offset: 0x00CF7C44
+		// Token: 0x0602BC25 RID: 179237 RVA: 0x00C48AEC File Offset: 0x00C46CEC
 		private bool UpdatePauseLocation()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -702,7 +702,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CE0 RID: 224480 RVA: 0x00CF9ABC File Offset: 0x00CF7CBC
+		// Token: 0x0602BC26 RID: 179238 RVA: 0x00C48B64 File Offset: 0x00C46D64
 		private void AlignPauseAnchorToCaptain()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -722,7 +722,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.SplineMoveIndex = nearestPositionIndexAtInputKey;
 		}
 
-		// Token: 0x06036CE1 RID: 224481 RVA: 0x00CF9B38 File Offset: 0x00CF7D38
+		// Token: 0x0602BC27 RID: 179239 RVA: 0x00C48BE0 File Offset: 0x00C46DE0
 		private bool UpdatePauseInfo(MonsterPatrolInfo info)
 		{
 			if (this.Spline == null)
@@ -772,7 +772,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CE2 RID: 224482 RVA: 0x00CF9C9C File Offset: 0x00CF7E9C
+		// Token: 0x0602BC28 RID: 179240 RVA: 0x00C48D44 File Offset: 0x00C46F44
 		private void MoveToInitLocation(MonsterPatrolInfo info)
 		{
 			BaseGroupAiComponent groupAiComp = info.GroupAiComp;
@@ -792,7 +792,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}, "MonsterGroupInfo.MoveToInitLocation");
 		}
 
-		// Token: 0x06036CE3 RID: 224483 RVA: 0x00CF9D3C File Offset: 0x00CF7F3C
+		// Token: 0x0602BC29 RID: 179241 RVA: 0x00C48DE4 File Offset: 0x00C46FE4
 		private unsafe void MoveToInitLocationCallback(ELevelEventState result, MonsterPatrolInfo info)
 		{
 			if (result == ELevelEventState.Success)
@@ -821,7 +821,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CE4 RID: 224484 RVA: 0x00CF9E04 File Offset: 0x00CF8004
+		// Token: 0x0602BC2A RID: 179242 RVA: 0x00C48EAC File Offset: 0x00C470AC
 		private void ChangeRelativeLocation(int index)
 		{
 			if (this.LastPoint == index)
@@ -842,7 +842,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.ChangeMoveDirection = !this.ChangeMoveDirection;
 		}
 
-		// Token: 0x06036CE5 RID: 224485 RVA: 0x00CF9ED0 File Offset: 0x00CF80D0
+		// Token: 0x0602BC2B RID: 179243 RVA: 0x00C48F78 File Offset: 0x00C47178
 		public global::Vector GetTargetPosition(MonsterPatrolInfo info)
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -855,7 +855,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.CalculateFollowerWorldPosition(characterActorComponent, info);
 		}
 
-		// Token: 0x06036CE6 RID: 224486 RVA: 0x00CF9F18 File Offset: 0x00CF8118
+		// Token: 0x0602BC2C RID: 179244 RVA: 0x00C48FC0 File Offset: 0x00C471C0
 		private void StartCaptainPatrol(MonsterPatrolInfo info)
 		{
 			BaseGroupAiComponent groupAiComp = info.GroupAiComp;
@@ -903,7 +903,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.PatrolBeginRequest(this.LastDirection);
 		}
 
-		// Token: 0x06036CE7 RID: 224487 RVA: 0x00CFA018 File Offset: 0x00CF8218
+		// Token: 0x0602BC2D RID: 179245 RVA: 0x00C490C0 File Offset: 0x00C472C0
 		private void OnCaptainResetLocation()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -921,7 +921,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CE8 RID: 224488 RVA: 0x00CFA0A0 File Offset: 0x00CF82A0
+		// Token: 0x0602BC2E RID: 179246 RVA: 0x00C49148 File Offset: 0x00C47348
 		private void CorrectFollowerLocationsAtCaptainPoint()
 		{
 			if (!this.StrictMoveCharacter)
@@ -947,7 +947,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CE9 RID: 224489 RVA: 0x00CFA168 File Offset: 0x00CF8368
+		// Token: 0x0602BC2F RID: 179247 RVA: 0x00C49210 File Offset: 0x00C47410
 		private void StartPatrolEcologyAnimBlueprint()
 		{
 			EGroupAiEcologyGameplayType? ecologyAnimBlueprint = this.EcologyAnimBlueprint;
@@ -965,7 +965,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CEA RID: 224490 RVA: 0x00CFA1EC File Offset: 0x00CF83EC
+		// Token: 0x0602BC30 RID: 179248 RVA: 0x00C49294 File Offset: 0x00C47494
 		private void StopPatrolEcologyAnimBlueprint()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -978,7 +978,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CEB RID: 224491 RVA: 0x00CFA250 File Offset: 0x00CF8450
+		// Token: 0x0602BC31 RID: 179249 RVA: 0x00C492F8 File Offset: 0x00C474F8
 		private void AddPatrolMoveIgnoreActors()
 		{
 			if (!this.StrictMoveCharacter)
@@ -1029,7 +1029,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CEC RID: 224492 RVA: 0x00CFA438 File Offset: 0x00CF8638
+		// Token: 0x0602BC32 RID: 179250 RVA: 0x00C494E0 File Offset: 0x00C476E0
 		private void ReleasePatrolMoveIgnoreActors()
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -1060,7 +1060,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CED RID: 224493 RVA: 0x00CFA5A0 File Offset: 0x00CF87A0
+		// Token: 0x0602BC33 RID: 179251 RVA: 0x00C49648 File Offset: 0x00C47848
 		private void ReleaseMemberPatrolMoveIgnoreActors(MonsterPatrolInfo memberInfo)
 		{
 			CharacterActorComponent actorComp = memberInfo.ActorComp;
@@ -1106,7 +1106,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CEE RID: 224494 RVA: 0x00CFA77C File Offset: 0x00CF897C
+		// Token: 0x0602BC34 RID: 179252 RVA: 0x00C49824 File Offset: 0x00C47A24
 		private void PatrolBeginRequest(bool dir)
 		{
 			if (this.InPatrol)
@@ -1125,7 +1125,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}, 0);
 		}
 
-		// Token: 0x06036CEF RID: 224495 RVA: 0x00CFA804 File Offset: 0x00CF8A04
+		// Token: 0x0602BC35 RID: 179253 RVA: 0x00C498AC File Offset: 0x00C47AAC
 		private void PatrolEndRequest()
 		{
 			this.ReleasePatrolMoveIgnoreActors();
@@ -1143,7 +1143,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}, 0);
 		}
 
-		// Token: 0x06036CF0 RID: 224496 RVA: 0x00CFA888 File Offset: 0x00CF8A88
+		// Token: 0x0602BC36 RID: 179254 RVA: 0x00C49930 File Offset: 0x00C47B30
 		private void DirectionChangeRequest(bool dir)
 		{
 			if (!this.InPatrol || dir == this.LastDirection)
@@ -1160,7 +1160,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}, 0);
 		}
 
-		// Token: 0x06036CF1 RID: 224497 RVA: 0x00CFA910 File Offset: 0x00CF8B10
+		// Token: 0x0602BC37 RID: 179255 RVA: 0x00C499B8 File Offset: 0x00C47BB8
 		private void PushMemberMoveInfoWithPointPos()
 		{
 			if (!this.InPatrol)
@@ -1178,7 +1178,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036CF2 RID: 224498 RVA: 0x00CFA984 File Offset: 0x00CF8B84
+		// Token: 0x0602BC38 RID: 179256 RVA: 0x00C49A2C File Offset: 0x00C47C2C
 		public bool HasMonsterInState(EGroupPatrolState state)
 		{
 			foreach (KeyValuePair<int, MonsterPatrolInfo> keyValuePair in this.GroupInfo)
@@ -1191,7 +1191,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return false;
 		}
 
-		// Token: 0x06036CF3 RID: 224499 RVA: 0x00CFA9E8 File Offset: 0x00CF8BE8
+		// Token: 0x0602BC39 RID: 179257 RVA: 0x00C49A90 File Offset: 0x00C47C90
 		private int CountInState(EGroupPatrolState state)
 		{
 			int num = 0;
@@ -1205,7 +1205,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return num;
 		}
 
-		// Token: 0x06036CF4 RID: 224500 RVA: 0x00CFAA4C File Offset: 0x00CF8C4C
+		// Token: 0x0602BC3A RID: 179258 RVA: 0x00C49AF4 File Offset: 0x00C47CF4
 		public bool ShouldRemove()
 		{
 			if (this.GroupInfo.Count <= 0)
@@ -1222,7 +1222,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CF5 RID: 224501 RVA: 0x00CFAAC0 File Offset: 0x00CF8CC0
+		// Token: 0x0602BC3B RID: 179259 RVA: 0x00C49B68 File Offset: 0x00C47D68
 		public bool TryAddMonster(int pbDataId)
 		{
 			CharacterActorComponent characterActorComponent = this.TryResolveEntity(pbDataId);
@@ -1255,7 +1255,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036CF6 RID: 224502 RVA: 0x00CFAB68 File Offset: 0x00CF8D68
+		// Token: 0x0602BC3C RID: 179260 RVA: 0x00C49C10 File Offset: 0x00C47E10
 		private void PausePatrolForNewJoin(int newEntityId)
 		{
 			this.UpdateWaitLocationForNewJoin(newEntityId);
@@ -1275,7 +1275,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.PatrolEndRequest();
 		}
 
-		// Token: 0x06036CF7 RID: 224503 RVA: 0x00CFAC04 File Offset: 0x00CF8E04
+		// Token: 0x0602BC3D RID: 179261 RVA: 0x00C49CAC File Offset: 0x00C47EAC
 		private unsafe void UpdateWaitLocationForNewJoin(int newEntityId)
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1308,7 +1308,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06036CF8 RID: 224504 RVA: 0x00CFAD40 File Offset: 0x00CF8F40
+		// Token: 0x0602BC3E RID: 179262 RVA: 0x00C49DE8 File Offset: 0x00C47FE8
 		private string GetStateDebugSummary()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(50, 5);
@@ -1329,7 +1329,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06036CF9 RID: 224505 RVA: 0x00CFAE14 File Offset: 0x00CF9014
+		// Token: 0x0602BC3F RID: 179263 RVA: 0x00C49EBC File Offset: 0x00C480BC
 		private string GetCaptainDebugInfo()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1345,7 +1345,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06036CFA RID: 224506 RVA: 0x00CFAE74 File Offset: 0x00CF9074
+		// Token: 0x0602BC40 RID: 179264 RVA: 0x00C49F1C File Offset: 0x00C4811C
 		[NullableContext(2)]
 		private CharacterActorComponent TryResolveEntity(int pbDataId)
 		{
@@ -1375,13 +1375,13 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return component;
 		}
 
-		// Token: 0x06036CFB RID: 224507 RVA: 0x00CFAEEC File Offset: 0x00CF90EC
+		// Token: 0x0602BC41 RID: 179265 RVA: 0x00C49F94 File Offset: 0x00C48194
 		private global::Vector CalculateFollowerWorldPosition(CharacterActorComponent captainActorComp, MonsterPatrolInfo info)
 		{
 			return this.CalculateFormationPosition(captainActorComp, info.RelativeLocation, MonsterGroupInfo.CacheVector);
 		}
 
-		// Token: 0x06036CFC RID: 224508 RVA: 0x00CFAF00 File Offset: 0x00CF9100
+		// Token: 0x0602BC42 RID: 179266 RVA: 0x00C49FA8 File Offset: 0x00C481A8
 		private global::Vector CalculateRelativeWorldPosition(CharacterActorComponent captainActorComp, global::Vector relativeLocation, global::Vector @out)
 		{
 			global::Transform cacheTrans = MonsterGroupInfo.CacheTrans;
@@ -1392,7 +1392,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return @out;
 		}
 
-		// Token: 0x06036CFD RID: 224509 RVA: 0x00CFAF44 File Offset: 0x00CF9144
+		// Token: 0x0602BC43 RID: 179267 RVA: 0x00C49FEC File Offset: 0x00C481EC
 		public global::ECharMoveState GetCaptainMoveState()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1410,7 +1410,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return echarMoveState2.GetValueOrDefault(global::ECharMoveState.Walk);
 		}
 
-		// Token: 0x06036CFE RID: 224510 RVA: 0x00CFAF90 File Offset: 0x00CF9190
+		// Token: 0x0602BC44 RID: 179268 RVA: 0x00C4A038 File Offset: 0x00C48238
 		public float GetCaptainMaxSpeed()
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1428,13 +1428,13 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06036CFF RID: 224511 RVA: 0x00CFAFD3 File Offset: 0x00CF91D3
+		// Token: 0x0602BC45 RID: 179269 RVA: 0x00C4A07B File Offset: 0x00C4827B
 		public bool UsePrecisePlayerFollow()
 		{
 			return this.StrictMoveCharacter;
 		}
 
-		// Token: 0x06036D00 RID: 224512 RVA: 0x00CFAFDC File Offset: 0x00CF91DC
+		// Token: 0x0602BC46 RID: 179270 RVA: 0x00C4A084 File Offset: 0x00C48284
 		private unsafe bool CheckSplineFormationUsable(SplineCurve splineCurve)
 		{
 			global::Vector scale3D = splineCurve.SplineTransform.GetScale3D();
@@ -1467,8 +1467,8 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x170083BF RID: 33727
-		// (get) Token: 0x06036D01 RID: 224513 RVA: 0x00CFB175 File Offset: 0x00CF9375
+		// Token: 0x1700578B RID: 22411
+		// (get) Token: 0x0602BC47 RID: 179271 RVA: 0x00C4A21D File Offset: 0x00C4841D
 		private int MoveDirectionSign
 		{
 			get
@@ -1481,7 +1481,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036D02 RID: 224514 RVA: 0x00CFB18C File Offset: 0x00CF938C
+		// Token: 0x0602BC48 RID: 179272 RVA: 0x00C4A234 File Offset: 0x00C48434
 		private void ResetCaptainSplineAnchorAtPatrolPoint(int pointIndex)
 		{
 			SplineCurve spline = this.Spline;
@@ -1498,7 +1498,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.CaptainSplineAnchorValid = true;
 		}
 
-		// Token: 0x06036D03 RID: 224515 RVA: 0x00CFB22C File Offset: 0x00CF942C
+		// Token: 0x0602BC49 RID: 179273 RVA: 0x00C4A2D4 File Offset: 0x00C484D4
 		private bool RefreshCaptainSplineAnchor()
 		{
 			if (!this.SplineBaseFormation || !this.SplineFormationUsable || this.Spline == null)
@@ -1538,13 +1538,13 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036D04 RID: 224516 RVA: 0x00CFB33D File Offset: 0x00CF953D
+		// Token: 0x0602BC4A RID: 179274 RVA: 0x00C4A3E5 File Offset: 0x00C485E5
 		private bool CanReuseCaptainSplineAnchor(global::Vector captainForward, int moveDirectionSign, double captainMoveDistanceSquared)
 		{
 			return this.CaptainSplineAnchorValid && captainMoveDistanceSquared < 1.0 && moveDirectionSign == this.CaptainAnchorMoveDirectionSign && global::Vector.DotProduct(captainForward, this.CaptainAnchorForward) >= 0.9999;
 		}
 
-		// Token: 0x06036D05 RID: 224517 RVA: 0x00CFB378 File Offset: 0x00CF9578
+		// Token: 0x0602BC4B RID: 179275 RVA: 0x00C4A420 File Offset: 0x00C48620
 		private bool IsCaptainSplineAnchorCandidateContinuous(float candidateDist, global::Vector captainForward, int moveDirectionSign, double captainMoveDistance)
 		{
 			this.Spline.GetDirectionAtDistanceAlongSpline(candidateDist, ESplineCoordinateSpace.World, MonsterGroupInfo.CacheTangent);
@@ -1566,7 +1566,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return (double)num <= num2;
 		}
 
-		// Token: 0x06036D06 RID: 224518 RVA: 0x00CFB420 File Offset: 0x00CF9620
+		// Token: 0x0602BC4C RID: 179276 RVA: 0x00C4A4C8 File Offset: 0x00C486C8
 		private void AdvanceCaptainSplineAnchorFromPrevious(global::Vector captainLoc)
 		{
 			this.Spline.GetDirectionAtDistanceAlongSpline(this.CaptainSplineDist, ESplineCoordinateSpace.World, MonsterGroupInfo.CacheTangent);
@@ -1585,7 +1585,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.CaptainSplineDist = MathUtils.Instance.Clamp(this.CaptainSplineDist, 0f, this.SplineLength);
 		}
 
-		// Token: 0x06036D07 RID: 224519 RVA: 0x00CFB504 File Offset: 0x00CF9704
+		// Token: 0x0602BC4D RID: 179277 RVA: 0x00C4A5AC File Offset: 0x00C487AC
 		private bool CalculateSplineBasedPosition(global::Vector relativeLocation, global::Vector @out)
 		{
 			SplineCurve spline = this.Spline;
@@ -1622,7 +1622,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return true;
 		}
 
-		// Token: 0x06036D08 RID: 224520 RVA: 0x00CFB643 File Offset: 0x00CF9843
+		// Token: 0x0602BC4E RID: 179278 RVA: 0x00C4A6EB File Offset: 0x00C488EB
 		private global::Vector CalculateFormationPosition(CharacterActorComponent captainActorComp, global::Vector relativeLocation, global::Vector @out)
 		{
 			this.FormationFacingYawValid = false;
@@ -1633,13 +1633,13 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return this.CalculateRelativeWorldPosition(captainActorComp, relativeLocation, @out);
 		}
 
-		// Token: 0x06036D09 RID: 224521 RVA: 0x00CFB669 File Offset: 0x00CF9869
+		// Token: 0x0602BC4F RID: 179279 RVA: 0x00C4A711 File Offset: 0x00C48911
 		public bool HasValidPlayerPlaceholder()
 		{
 			return this.HasPlayerPlaceholder;
 		}
 
-		// Token: 0x06036D0A RID: 224522 RVA: 0x00CFB674 File Offset: 0x00CF9874
+		// Token: 0x0602BC50 RID: 179280 RVA: 0x00C4A71C File Offset: 0x00C4891C
 		private unsafe void UpdatePlayerPlaceholderRelativeTransform()
 		{
 			this.HasPlayerPlaceholder = false;
@@ -1696,7 +1696,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			this.HasPlayerPlaceholder = true;
 		}
 
-		// Token: 0x06036D0B RID: 224523 RVA: 0x00CFB98C File Offset: 0x00CF9B8C
+		// Token: 0x0602BC51 RID: 179281 RVA: 0x00C4AA34 File Offset: 0x00C48C34
 		public bool TryGetPlayerPlaceholderWorldLocation(global::Vector @out)
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1710,7 +1710,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return false;
 		}
 
-		// Token: 0x06036D0C RID: 224524 RVA: 0x00CFB9F0 File Offset: 0x00CF9BF0
+		// Token: 0x0602BC52 RID: 179282 RVA: 0x00C4AA98 File Offset: 0x00C48C98
 		public void TickFollowerMovement(float deltaSeconds)
 		{
 			if (!this.StrictMoveCharacter)
@@ -1730,7 +1730,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036D0D RID: 224525 RVA: 0x00CFBA94 File Offset: 0x00CF9C94
+		// Token: 0x0602BC53 RID: 179283 RVA: 0x00C4AB3C File Offset: 0x00C48D3C
 		private float SampleCaptainSpeed(float deltaSeconds)
 		{
 			MonsterPatrolInfo captainInfo = this.CaptainInfo;
@@ -1751,7 +1751,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			return (float)this.SmoothedCaptainSpeed;
 		}
 
-		// Token: 0x06036D0E RID: 224526 RVA: 0x00CFBB20 File Offset: 0x00CF9D20
+		// Token: 0x0602BC54 RID: 179284 RVA: 0x00C4ABC8 File Offset: 0x00C48DC8
 		private void DriveFollower(MonsterPatrolInfo info, float captainSpeed, global::ECharMoveState captainMoveState, float deltaSeconds)
 		{
 			global::Vector targetPosition = this.GetTargetPosition(info);
@@ -1768,7 +1768,7 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			}
 		}
 
-		// Token: 0x06036D0F RID: 224527 RVA: 0x00CFBB94 File Offset: 0x00CF9D94
+		// Token: 0x0602BC55 RID: 179285 RVA: 0x00C4AC3C File Offset: 0x00C48E3C
 		private unsafe void OnFollowerStuck(MonsterPatrolInfo info, global::Vector target)
 		{
 			if (info.GroupPatrolState == EGroupPatrolState.Ready)
@@ -1804,169 +1804,169 @@ namespace CSharpScript.Game.Module.MonsterGroup
 			instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 		}
 
-		// Token: 0x0401CECA RID: 118474
+		// Token: 0x04017962 RID: 96610
 		private const int REPARAM_STEPS = 6;
 
-		// Token: 0x0401CECB RID: 118475
+		// Token: 0x04017963 RID: 96611
 		private const float DEFAULT_TURN_SPEED = 120f;
 
-		// Token: 0x0401CECC RID: 118476
+		// Token: 0x04017964 RID: 96612
 		private const double SPLINE_SCALE_TOLERANCE = 0.01;
 
-		// Token: 0x0401CECD RID: 118477
+		// Token: 0x04017965 RID: 96613
 		private const double CAPTAIN_SPLINE_ANCHOR_MIN_DIRECTION_DOT = 0.5;
 
-		// Token: 0x0401CECE RID: 118478
+		// Token: 0x04017966 RID: 96614
 		private const double CAPTAIN_SPLINE_ANCHOR_MAX_DISTANCE_RATIO = 2.0;
 
-		// Token: 0x0401CECF RID: 118479
+		// Token: 0x04017967 RID: 96615
 		private const double CAPTAIN_SPLINE_ANCHOR_DISTANCE_TOLERANCE = 50.0;
 
-		// Token: 0x0401CED0 RID: 118480
+		// Token: 0x04017968 RID: 96616
 		private const double CAPTAIN_SPLINE_ANCHOR_FORWARD_CACHE_DOT = 0.9999;
 
-		// Token: 0x0401CED1 RID: 118481
+		// Token: 0x04017969 RID: 96617
 		private const float FOLLOW_MAX_DELTA_SECONDS = 1f;
 
-		// Token: 0x0401CED2 RID: 118482
+		// Token: 0x0401796A RID: 96618
 		private const double FOLLOW_POINT_CORRECTION_DISTANCE = 300.0;
 
-		// Token: 0x0401CED3 RID: 118483
+		// Token: 0x0401796B RID: 96619
 		private const string MONSTER_GROUP_PATROL_KEY = "MonsterGroupPatrol";
 
-		// Token: 0x0401CED4 RID: 118484
+		// Token: 0x0401796C RID: 96620
 		private int SplineMoveIndex;
 
-		// Token: 0x0401CED5 RID: 118485
+		// Token: 0x0401796D RID: 96621
 		private int CaptainId = -1;
 
-		// Token: 0x0401CED6 RID: 118486
+		// Token: 0x0401796E RID: 96622
 		private double MinAddMaxRelativeX;
 
-		// Token: 0x0401CED7 RID: 118487
+		// Token: 0x0401796F RID: 96623
 		public Dictionary<int, MonsterPatrolInfo> GroupInfo = new Dictionary<int, MonsterPatrolInfo>();
 
-		// Token: 0x0401CED8 RID: 118488
+		// Token: 0x04017970 RID: 96624
 		private bool InPatrol;
 
-		// Token: 0x0401CED9 RID: 118489
+		// Token: 0x04017971 RID: 96625
 		[Nullable(2)]
 		public Action<int> OnMemberRemoved;
 
-		// Token: 0x0401CEDA RID: 118490
+		// Token: 0x04017972 RID: 96626
 		private readonly int GroupId;
 
-		// Token: 0x0401CEDB RID: 118491
+		// Token: 0x04017973 RID: 96627
 		private int LeaderId;
 
-		// Token: 0x0401CEDC RID: 118492
+		// Token: 0x04017974 RID: 96628
 		private int SplineId;
 
-		// Token: 0x0401CEDD RID: 118493
+		// Token: 0x04017975 RID: 96629
 		[Nullable(2)]
 		private SplineCurve Spline;
 
-		// Token: 0x0401CEDE RID: 118494
+		// Token: 0x04017976 RID: 96630
 		[Nullable(2)]
 		private SplineComponent PatrolConfig;
 
-		// Token: 0x0401CEDF RID: 118495
+		// Token: 0x04017977 RID: 96631
 		private bool PatrolLoop;
 
-		// Token: 0x0401CEE0 RID: 118496
+		// Token: 0x04017978 RID: 96632
 		private bool PatrolCircle;
 
-		// Token: 0x0401CEE1 RID: 118497
+		// Token: 0x04017979 RID: 96633
 		private float PatrolTurnSpeed = 120f;
 
-		// Token: 0x0401CEE2 RID: 118498
+		// Token: 0x0401797A RID: 96634
 		private bool SplineBaseFormation;
 
-		// Token: 0x0401CEE3 RID: 118499
+		// Token: 0x0401797B RID: 96635
 		private bool StrictMoveCharacter;
 
-		// Token: 0x0401CEE4 RID: 118500
+		// Token: 0x0401797C RID: 96636
 		public bool EnableEcologyAnimBlueprint;
 
-		// Token: 0x0401CEE5 RID: 118501
+		// Token: 0x0401797D RID: 96637
 		public EGroupAiEcologyGameplayType? EcologyAnimBlueprint;
 
-		// Token: 0x0401CEE6 RID: 118502
+		// Token: 0x0401797E RID: 96638
 		private static global::Vector CacheVector;
 
-		// Token: 0x0401CEE7 RID: 118503
+		// Token: 0x0401797F RID: 96639
 		private static global::Transform CacheTrans;
 
-		// Token: 0x0401CEE8 RID: 118504
+		// Token: 0x04017980 RID: 96640
 		private static global::Rotator CacheRotator;
 
-		// Token: 0x0401CEE9 RID: 118505
+		// Token: 0x04017981 RID: 96641
 		private static Quat CacheQuat;
 
-		// Token: 0x0401CEEA RID: 118506
+		// Token: 0x04017982 RID: 96642
 		private double MixedStateBeginTime;
 
-		// Token: 0x0401CEEB RID: 118507
+		// Token: 0x04017983 RID: 96643
 		public readonly long WatchdogMixedStateThresholdMs = 8000L;
 
-		// Token: 0x0401CEEC RID: 118508
+		// Token: 0x04017984 RID: 96644
 		private int LastPoint;
 
-		// Token: 0x0401CEED RID: 118509
+		// Token: 0x04017985 RID: 96645
 		private bool ChangeMoveDirection;
 
-		// Token: 0x0401CEEE RID: 118510
+		// Token: 0x04017986 RID: 96646
 		private bool LastDirection;
 
-		// Token: 0x0401CEEF RID: 118511
+		// Token: 0x04017987 RID: 96647
 		private float SplineLength;
 
-		// Token: 0x0401CEF0 RID: 118512
+		// Token: 0x04017988 RID: 96648
 		private bool SplineFormationUsable;
 
-		// Token: 0x0401CEF1 RID: 118513
+		// Token: 0x04017989 RID: 96649
 		private float CaptainSplineDist;
 
-		// Token: 0x0401CEF2 RID: 118514
+		// Token: 0x0401798A RID: 96650
 		private readonly global::Vector CaptainAnchorLocation = global::Vector.Create();
 
-		// Token: 0x0401CEF3 RID: 118515
+		// Token: 0x0401798B RID: 96651
 		private readonly global::Vector CaptainAnchorForward = global::Vector.Create();
 
-		// Token: 0x0401CEF4 RID: 118516
+		// Token: 0x0401798C RID: 96652
 		private int CaptainAnchorMoveDirectionSign = 1;
 
-		// Token: 0x0401CEF5 RID: 118517
+		// Token: 0x0401798D RID: 96653
 		private bool CaptainSplineAnchorValid;
 
-		// Token: 0x0401CEF6 RID: 118518
+		// Token: 0x0401798E RID: 96654
 		private double FormationFacingYaw;
 
-		// Token: 0x0401CEF7 RID: 118519
+		// Token: 0x0401798F RID: 96655
 		private bool FormationFacingYawValid;
 
-		// Token: 0x0401CEF8 RID: 118520
+		// Token: 0x04017990 RID: 96656
 		private static global::Vector CacheTangent;
 
-		// Token: 0x0401CEF9 RID: 118521
+		// Token: 0x04017991 RID: 96657
 		private static global::Vector CacheRight;
 
-		// Token: 0x0401CEFA RID: 118522
+		// Token: 0x04017992 RID: 96658
 		private int PlayerPlaceholderId;
 
-		// Token: 0x0401CEFB RID: 118523
+		// Token: 0x04017993 RID: 96659
 		private readonly global::Transform PlayerPlaceholderRelativeTransform = global::Transform.Create();
 
-		// Token: 0x0401CEFC RID: 118524
+		// Token: 0x04017994 RID: 96660
 		private bool HasPlayerPlaceholder;
 
-		// Token: 0x0401CEFD RID: 118525
+		// Token: 0x04017995 RID: 96661
 		private static global::Transform CachePlayerPlaceholderTransform;
 
-		// Token: 0x0401CEFE RID: 118526
+		// Token: 0x04017996 RID: 96662
 		private static global::Transform CachePlayerPlaceholderBasisTransform;
 
-		// Token: 0x0401CEFF RID: 118527
+		// Token: 0x04017997 RID: 96663
 		private double SmoothedCaptainSpeed;
 	}
 }

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 {
-	// Token: 0x02005155 RID: 20821
+	// Token: 0x02004125 RID: 16677
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,13 +15,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 	})]
 	public class PhantomArenaRoleSkillItem : GridProxyAbstract<PhantomArenaRoleSkillItemData>
 	{
-		// Token: 0x060353A6 RID: 218022 RVA: 0x00C9A557 File Offset: 0x00C98757
+		// Token: 0x0602A2A2 RID: 172706 RVA: 0x00BE7A57 File Offset: 0x00BE5C57
 		public PhantomArenaRoleSkillItem()
 		{
 			base.GridIndex = -1;
 		}
 
-		// Token: 0x060353A7 RID: 218023 RVA: 0x00C9A568 File Offset: 0x00C98768
+		// Token: 0x0602A2A3 RID: 172707 RVA: 0x00BE7A68 File Offset: 0x00BE5C68
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			};
 		}
 
-		// Token: 0x060353A8 RID: 218024 RVA: 0x00C9A5D0 File Offset: 0x00C987D0
+		// Token: 0x0602A2A4 RID: 172708 RVA: 0x00BE7AD0 File Offset: 0x00BE5CD0
 		[NullableContext(1)]
 		public override void Refresh(PhantomArenaRoleSkillItemData data, bool isSelected, int gridIndex)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.SetSelected(isSelected);
 		}
 
-		// Token: 0x060353A9 RID: 218025 RVA: 0x00C9A60F File Offset: 0x00C9880F
+		// Token: 0x0602A2A5 RID: 172709 RVA: 0x00BE7B0F File Offset: 0x00BE5D0F
 		private void OnToggleSelectInternal(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			}
 		}
 
-		// Token: 0x060353AA RID: 218026 RVA: 0x00C9A62B File Offset: 0x00C9882B
+		// Token: 0x0602A2A6 RID: 172710 RVA: 0x00BE7B2B File Offset: 0x00BE5D2B
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			extendToggle.SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060353AB RID: 218027 RVA: 0x00C9A643 File Offset: 0x00C98843
+		// Token: 0x0602A2A7 RID: 172711 RVA: 0x00BE7B43 File Offset: 0x00BE5D43
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060353AC RID: 218028 RVA: 0x00C9A65B File Offset: 0x00C9885B
+		// Token: 0x0602A2A8 RID: 172712 RVA: 0x00BE7B5B File Offset: 0x00BE5D5B
 		public void SetSelected(bool isSelected)
 		{
 			if (this.IsSelected == isSelected)
@@ -97,23 +97,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect
 			this.OnDeselected(false);
 		}
 
-		// Token: 0x0401C534 RID: 116020
+		// Token: 0x04016F69 RID: 94057
 		protected bool IsSelected;
 
-		// Token: 0x0401C535 RID: 116021
+		// Token: 0x04016F6A RID: 94058
 		protected PhantomArenaRoleSkillItemData Data;
 
-		// Token: 0x0401C536 RID: 116022
+		// Token: 0x04016F6B RID: 94059
 		public Action<int> OnToggleSelect;
 
-		// Token: 0x0200B2BA RID: 45754
+		// Token: 0x02009CF3 RID: 40179
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036247 RID: 221767
+			// Token: 0x04030C9C RID: 199836
 			public const int ItemToggle = 0;
 
-			// Token: 0x04036248 RID: 221768
+			// Token: 0x04030C9D RID: 199837
 			public const int SkillTexture = 1;
 		}
 	}

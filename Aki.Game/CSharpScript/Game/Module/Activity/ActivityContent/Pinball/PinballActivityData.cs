@@ -10,12 +10,12 @@ using CSharpScript.Game.Module.PayShop;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 {
-	// Token: 0x020062C6 RID: 25286
+	// Token: 0x02005244 RID: 21060
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballActivityData : ActivityBaseData
 	{
-		// Token: 0x0603F979 RID: 260473 RVA: 0x00F61B98 File Offset: 0x00F5FD98
+		// Token: 0x0603463A RID: 214586 RVA: 0x00EA8AF4 File Offset: 0x00EA6CF4
 		protected override void PhraseEx(ActivityData data)
 		{
 			PinballModel.Instance.SetActivityId(base.Id);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.UpdateRoleWeaponRedDot();
 		}
 
-		// Token: 0x0603F97A RID: 260474 RVA: 0x00F61E00 File Offset: 0x00F60000
+		// Token: 0x0603463B RID: 214587 RVA: 0x00EA8D5C File Offset: 0x00EA6F5C
 		private global::PinballRoleData AddRoleData(int configId)
 		{
 			global::PinballRoleData pinballRoleData = new global::PinballRoleData(configId);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballRoleData;
 		}
 
-		// Token: 0x0603F97B RID: 260475 RVA: 0x00F61E4C File Offset: 0x00F6004C
+		// Token: 0x0603463C RID: 214588 RVA: 0x00EA8DA8 File Offset: 0x00EA6FA8
 		public void UpdateRoleByServerData(Aki.Protocol.PinballRoleData data)
 		{
 			int configId = data.ConfigId;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			pinballRoleDataBase.SetLevel(data.RoleLevel);
 		}
 
-		// Token: 0x0603F97C RID: 260476 RVA: 0x00F61E88 File Offset: 0x00F60088
+		// Token: 0x0603463D RID: 214589 RVA: 0x00EA8DE4 File Offset: 0x00EA6FE4
 		[NullableContext(2)]
 		public global::PinballRoleData GetRoleData(int configId)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return null;
 		}
 
-		// Token: 0x0603F97D RID: 260477 RVA: 0x00F61EB0 File Offset: 0x00F600B0
+		// Token: 0x0603463E RID: 214590 RVA: 0x00EA8E0C File Offset: 0x00EA700C
 		public List<int> GetUnlockRoleList()
 		{
 			List<int> list = new List<int>();
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F97E RID: 260478 RVA: 0x00F61F10 File Offset: 0x00F60110
+		// Token: 0x0603463F RID: 214591 RVA: 0x00EA8E6C File Offset: 0x00EA706C
 		public PinballWeaponData UpdateWeaponData(PinballWeapon data)
 		{
 			PinballWeaponData pinballWeaponData;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballWeaponData;
 		}
 
-		// Token: 0x0603F97F RID: 260479 RVA: 0x00F61F74 File Offset: 0x00F60174
+		// Token: 0x06034640 RID: 214592 RVA: 0x00EA8ED0 File Offset: 0x00EA70D0
 		public void RemoveWeaponData(List<int> incIdList)
 		{
 			foreach (int key in incIdList)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F980 RID: 260480 RVA: 0x00F61FC8 File Offset: 0x00F601C8
+		// Token: 0x06034641 RID: 214593 RVA: 0x00EA8F24 File Offset: 0x00EA7124
 		[NullableContext(2)]
 		public PinballWeaponData GetWeaponDataByIncId(int incId)
 		{
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return result;
 		}
 
-		// Token: 0x0603F981 RID: 260481 RVA: 0x00F61FE8 File Offset: 0x00F601E8
+		// Token: 0x06034642 RID: 214594 RVA: 0x00EA8F44 File Offset: 0x00EA7144
 		public List<PinballWeaponData> GetWeaponDataAll()
 		{
 			List<PinballWeaponData> list = new List<PinballWeaponData>();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F982 RID: 260482 RVA: 0x00F62048 File Offset: 0x00F60248
+		// Token: 0x06034643 RID: 214595 RVA: 0x00EA8FA4 File Offset: 0x00EA71A4
 		public int GetWeaponCountByConfigId(int configId)
 		{
 			int num = 0;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return num;
 		}
 
-		// Token: 0x0603F983 RID: 260483 RVA: 0x00F620A8 File Offset: 0x00F602A8
+		// Token: 0x06034644 RID: 214596 RVA: 0x00EA9004 File Offset: 0x00EA7204
 		public void AddAllGmUnlockChapterId()
 		{
 			foreach (int chapterId in this.ChapterMap.Keys)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F984 RID: 260484 RVA: 0x00F62100 File Offset: 0x00F60300
+		// Token: 0x06034645 RID: 214597 RVA: 0x00EA905C File Offset: 0x00EA725C
 		public void AddGmUnlockChapterId(int chapterId)
 		{
 			if (this.GmUnlockChapterIdList.Contains(chapterId))
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.GmUnlockChapterIdList.Add(chapterId);
 		}
 
-		// Token: 0x0603F985 RID: 260485 RVA: 0x00F62120 File Offset: 0x00F60320
+		// Token: 0x06034646 RID: 214598 RVA: 0x00EA907C File Offset: 0x00EA727C
 		public void RemoveGmUnlockChapterId(int chapterId)
 		{
 			List<int> list = new List<int>();
@@ -220,19 +220,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.GmUnlockChapterIdList = list;
 		}
 
-		// Token: 0x0603F986 RID: 260486 RVA: 0x00F62184 File Offset: 0x00F60384
+		// Token: 0x06034647 RID: 214599 RVA: 0x00EA90E0 File Offset: 0x00EA72E0
 		public void RemoveAllGmUnlockChapterId()
 		{
 			this.GmUnlockChapterIdList = new List<int>();
 		}
 
-		// Token: 0x0603F987 RID: 260487 RVA: 0x00F62191 File Offset: 0x00F60391
+		// Token: 0x06034648 RID: 214600 RVA: 0x00EA90ED File Offset: 0x00EA72ED
 		public bool IsGmUnlockChapter(int chapterId)
 		{
 			return this.GmUnlockChapterIdList.Contains(chapterId);
 		}
 
-		// Token: 0x0603F988 RID: 260488 RVA: 0x00F621A0 File Offset: 0x00F603A0
+		// Token: 0x06034649 RID: 214601 RVA: 0x00EA90FC File Offset: 0x00EA72FC
 		public void SetGmPassedChapter(int chapterId, bool isPassed)
 		{
 			global::PinballChapterData pinballChapterData;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F989 RID: 260489 RVA: 0x00F621F4 File Offset: 0x00F603F4
+		// Token: 0x0603464A RID: 214602 RVA: 0x00EA9150 File Offset: 0x00EA7350
 		public void UpdateChapterData(Aki.Protocol.PinballChapterData data)
 		{
 			global::PinballChapterData pinballChapterData;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.ChapterMap[data.ChapterId] = pinballChapterData;
 		}
 
-		// Token: 0x0603F98A RID: 260490 RVA: 0x00F622D4 File Offset: 0x00F604D4
+		// Token: 0x0603464B RID: 214603 RVA: 0x00EA9230 File Offset: 0x00EA7430
 		public List<global::PinballChapterData> GetMainChapterList()
 		{
 			List<global::PinballChapterData> list = new List<global::PinballChapterData>();
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F98B RID: 260491 RVA: 0x00F62354 File Offset: 0x00F60554
+		// Token: 0x0603464C RID: 214604 RVA: 0x00EA92B0 File Offset: 0x00EA74B0
 		[NullableContext(2)]
 		public global::PinballChapterData GetTowerChapterData()
 		{
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return null;
 		}
 
-		// Token: 0x0603F98C RID: 260492 RVA: 0x00F623CC File Offset: 0x00F605CC
+		// Token: 0x0603464D RID: 214605 RVA: 0x00EA9328 File Offset: 0x00EA7528
 		[NullableContext(2)]
 		public global::PinballChapterData GetDailyChapterData()
 		{
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return null;
 		}
 
-		// Token: 0x0603F98D RID: 260493 RVA: 0x00F62448 File Offset: 0x00F60648
+		// Token: 0x0603464E RID: 214606 RVA: 0x00EA93A4 File Offset: 0x00EA75A4
 		[NullableContext(2)]
 		public global::PinballChapterData GetChapterData(int chapterId)
 		{
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return result;
 		}
 
-		// Token: 0x0603F98E RID: 260494 RVA: 0x00F62468 File Offset: 0x00F60668
+		// Token: 0x0603464F RID: 214607 RVA: 0x00EA93C4 File Offset: 0x00EA75C4
 		public int GetChapterIdByLevel(int levelId)
 		{
 			foreach (global::PinballChapterData pinballChapterData in this.ChapterMap.Values)
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return 0;
 		}
 
-		// Token: 0x0603F98F RID: 260495 RVA: 0x00F624E4 File Offset: 0x00F606E4
+		// Token: 0x06034650 RID: 214608 RVA: 0x00EA9440 File Offset: 0x00EA7640
 		public EPinballChapterLevelLockStatus GetChapterLockStatus(int chapterId)
 		{
 			global::PinballChapterData pinballChapterData;
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return EPinballChapterLevelLockStatus.Activated;
 		}
 
-		// Token: 0x0603F990 RID: 260496 RVA: 0x00F62558 File Offset: 0x00F60758
+		// Token: 0x06034651 RID: 214609 RVA: 0x00EA94B4 File Offset: 0x00EA76B4
 		private void CheckChapterUnlocked()
 		{
 			if (this.ChapterUnlockRecord.Count == 0)
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F991 RID: 260497 RVA: 0x00F625D0 File Offset: 0x00F607D0
+		// Token: 0x06034652 RID: 214610 RVA: 0x00EA952C File Offset: 0x00EA772C
 		public bool IsNewChapterUnlocked(int targetChapterId)
 		{
 			this.UpdateChapterNewUnlockState(targetChapterId);
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return flag;
 		}
 
-		// Token: 0x0603F992 RID: 260498 RVA: 0x00F62604 File Offset: 0x00F60804
+		// Token: 0x06034653 RID: 214611 RVA: 0x00EA9560 File Offset: 0x00EA7760
 		private void UpdateChapterNewUnlockState(int chapterId)
 		{
 			bool flag;
@@ -422,26 +422,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.ChapterUnlockRecord[chapterId] = flag2;
 		}
 
-		// Token: 0x0603F993 RID: 260499 RVA: 0x00F6265D File Offset: 0x00F6085D
+		// Token: 0x06034654 RID: 214612 RVA: 0x00EA95B9 File Offset: 0x00EA77B9
 		private EPinballChapterRedDotState GetChapterRedDotState(int chapterId)
 		{
 			return (EPinballChapterRedDotState)ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, chapterId, 0);
 		}
 
-		// Token: 0x0603F994 RID: 260500 RVA: 0x00F62673 File Offset: 0x00F60873
+		// Token: 0x06034655 RID: 214613 RVA: 0x00EA95CF File Offset: 0x00EA77CF
 		private void SetChapterRedDotState(int chapterId, EPinballChapterRedDotState state)
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 0, chapterId, 0, (int)state);
 		}
 
-		// Token: 0x0603F995 RID: 260501 RVA: 0x00F62689 File Offset: 0x00F60889
+		// Token: 0x06034656 RID: 214614 RVA: 0x00EA95E5 File Offset: 0x00EA77E5
 		public bool HasNewChapterRedDot(int chapterId)
 		{
 			this.UpdateChapterNewUnlockState(chapterId);
 			return this.GetChapterRedDotState(chapterId) == EPinballChapterRedDotState.Unread;
 		}
 
-		// Token: 0x0603F996 RID: 260502 RVA: 0x00F6269C File Offset: 0x00F6089C
+		// Token: 0x06034657 RID: 214615 RVA: 0x00EA95F8 File Offset: 0x00EA77F8
 		public bool HasAnyNewChapterRedDot()
 		{
 			global::PinballChapterData dailyChapterData = this.GetDailyChapterData();
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F997 RID: 260503 RVA: 0x00F62714 File Offset: 0x00F60914
+		// Token: 0x06034658 RID: 214616 RVA: 0x00EA9670 File Offset: 0x00EA7870
 		public bool CheckToSetChapterRedDotAsRead(int chapterId)
 		{
 			if (!this.HasNewChapterRedDot(chapterId))
@@ -467,14 +467,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return true;
 		}
 
-		// Token: 0x0603F998 RID: 260504 RVA: 0x00F62729 File Offset: 0x00F60929
+		// Token: 0x06034659 RID: 214617 RVA: 0x00EA9685 File Offset: 0x00EA7885
 		public void SetChapterRedDotAsRead(int chapterId)
 		{
 			this.SetChapterRedDotState(chapterId, EPinballChapterRedDotState.Read);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603F999 RID: 260505 RVA: 0x00F6274C File Offset: 0x00F6094C
+		// Token: 0x0603465A RID: 214618 RVA: 0x00EA96A8 File Offset: 0x00EA78A8
 		public bool IsChapterPassed(int chapterId)
 		{
 			if (chapterId == 0)
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return true;
 		}
 
-		// Token: 0x0603F99A RID: 260506 RVA: 0x00F62798 File Offset: 0x00F60998
+		// Token: 0x0603465B RID: 214619 RVA: 0x00EA96F4 File Offset: 0x00EA78F4
 		public void AddAllGmUnlockLevelId()
 		{
 			foreach (int levelId in this.LevelRecordMap.Keys)
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F99B RID: 260507 RVA: 0x00F627F0 File Offset: 0x00F609F0
+		// Token: 0x0603465C RID: 214620 RVA: 0x00EA974C File Offset: 0x00EA794C
 		public void AddGmUnlockLevelId(int levelId)
 		{
 			if (this.GmUnlockLevelIdList.Contains(levelId))
@@ -516,19 +516,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.GmUnlockLevelIdList.Add(levelId);
 		}
 
-		// Token: 0x0603F99C RID: 260508 RVA: 0x00F6280D File Offset: 0x00F60A0D
+		// Token: 0x0603465D RID: 214621 RVA: 0x00EA9769 File Offset: 0x00EA7969
 		public void RemoveAllGmUnlockLevelId()
 		{
 			this.GmUnlockLevelIdList = new List<int>();
 		}
 
-		// Token: 0x0603F99D RID: 260509 RVA: 0x00F6281A File Offset: 0x00F60A1A
+		// Token: 0x0603465E RID: 214622 RVA: 0x00EA9776 File Offset: 0x00EA7976
 		public bool IsGmUnlockLevel(int levelId)
 		{
 			return this.GmUnlockLevelIdList.Contains(levelId);
 		}
 
-		// Token: 0x0603F99E RID: 260510 RVA: 0x00F62828 File Offset: 0x00F60A28
+		// Token: 0x0603465F RID: 214623 RVA: 0x00EA9784 File Offset: 0x00EA7984
 		public void UpdateLevelData(PinballLevelData data)
 		{
 			PinballLevelRecordData pinballLevelRecordData;
@@ -617,13 +617,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.LevelRecordMap[data.ConfigId] = pinballLevelRecordData;
 		}
 
-		// Token: 0x0603F99F RID: 260511 RVA: 0x00F62A7A File Offset: 0x00F60C7A
+		// Token: 0x06034660 RID: 214624 RVA: 0x00EA99D6 File Offset: 0x00EA7BD6
 		public int GetDailyConfigId()
 		{
 			return this.DailyConfigId;
 		}
 
-		// Token: 0x0603F9A0 RID: 260512 RVA: 0x00F62A84 File Offset: 0x00F60C84
+		// Token: 0x06034661 RID: 214625 RVA: 0x00EA99E0 File Offset: 0x00EA7BE0
 		public int GetDailyRandomLevelId()
 		{
 			if (this.RandomDailyLevelId == 0)
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return this.RandomDailyLevelId;
 		}
 
-		// Token: 0x0603F9A1 RID: 260513 RVA: 0x00F62AD0 File Offset: 0x00F60CD0
+		// Token: 0x06034662 RID: 214626 RVA: 0x00EA9A2C File Offset: 0x00EA7C2C
 		public int GetCurDailyRewardDropId()
 		{
 			int num = 0;
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return dailyClearDropId;
 		}
 
-		// Token: 0x0603F9A2 RID: 260514 RVA: 0x00F62BAC File Offset: 0x00F60DAC
+		// Token: 0x06034663 RID: 214627 RVA: 0x00EA9B08 File Offset: 0x00EA7D08
 		[NullableContext(2)]
 		public PinballLevelRecordData GetLevelData(int levelId)
 		{
@@ -671,7 +671,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return result;
 		}
 
-		// Token: 0x0603F9A3 RID: 260515 RVA: 0x00F62BCC File Offset: 0x00F60DCC
+		// Token: 0x06034664 RID: 214628 RVA: 0x00EA9B28 File Offset: 0x00EA7D28
 		public List<PinballLevelRecordData> GetLevelDataListInChapter(int levelId)
 		{
 			List<PinballLevelRecordData> list = new List<PinballLevelRecordData>();
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9A4 RID: 260516 RVA: 0x00F62C3C File Offset: 0x00F60E3C
+		// Token: 0x06034665 RID: 214629 RVA: 0x00EA9B98 File Offset: 0x00EA7D98
 		public int GetLevelMaxStarNum(int levelId)
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(levelId);
@@ -707,13 +707,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballLevelConfigById.Value.StarCondLength;
 		}
 
-		// Token: 0x0603F9A5 RID: 260517 RVA: 0x00F62C6F File Offset: 0x00F60E6F
+		// Token: 0x06034666 RID: 214630 RVA: 0x00EA9BCB File Offset: 0x00EA7DCB
 		private bool CheckStarConditionPassedByStarByte(int starByte, int conditionId)
 		{
 			return conditionId > 0 && (starByte & 1 << conditionId) > 0;
 		}
 
-		// Token: 0x0603F9A6 RID: 260518 RVA: 0x00F62C84 File Offset: 0x00F60E84
+		// Token: 0x06034667 RID: 214631 RVA: 0x00EA9BE0 File Offset: 0x00EA7DE0
 		private int[] GetPassedConditionIdsByStarByte(int starByte, int[] conditionIds)
 		{
 			List<int> list = new List<int>();
@@ -727,7 +727,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list.ToArray();
 		}
 
-		// Token: 0x0603F9A7 RID: 260519 RVA: 0x00F62CC4 File Offset: 0x00F60EC4
+		// Token: 0x06034668 RID: 214632 RVA: 0x00EA9C20 File Offset: 0x00EA7E20
 		public int GetLevelMaxScore(int levelId)
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(levelId);
@@ -751,7 +751,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return num;
 		}
 
-		// Token: 0x0603F9A8 RID: 260520 RVA: 0x00F62D3C File Offset: 0x00F60F3C
+		// Token: 0x06034669 RID: 214633 RVA: 0x00EA9C98 File Offset: 0x00EA7E98
 		public EPinballChapterLevelLockStatus GetLevelLockStatus(int levelId)
 		{
 			PinballLevelRecordData pinballLevelRecordData;
@@ -778,7 +778,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return EPinballChapterLevelLockStatus.Activated;
 		}
 
-		// Token: 0x0603F9A9 RID: 260521 RVA: 0x00F62DC0 File Offset: 0x00F60FC0
+		// Token: 0x0603466A RID: 214634 RVA: 0x00EA9D1C File Offset: 0x00EA7F1C
 		public string GetLevelPreConditionLockTexts(int levelId)
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(levelId);
@@ -815,7 +815,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew((num == 1) ? "Pinball_Level_UnlockInfo" : "Pinball_Level_UnlockInfo_01", null), list.ToArray());
 		}
 
-		// Token: 0x0603F9AA RID: 260522 RVA: 0x00F62EAC File Offset: 0x00F610AC
+		// Token: 0x0603466B RID: 214635 RVA: 0x00EA9E08 File Offset: 0x00EA8008
 		public bool IsLevelsPassed(int[] levelIdList)
 		{
 			foreach (int levelId in levelIdList)
@@ -828,7 +828,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return true;
 		}
 
-		// Token: 0x0603F9AB RID: 260523 RVA: 0x00F62EDC File Offset: 0x00F610DC
+		// Token: 0x0603466C RID: 214636 RVA: 0x00EA9E38 File Offset: 0x00EA8038
 		public bool IsLevelPassed(int levelId)
 		{
 			if (levelId == 0)
@@ -840,7 +840,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballLevelRecordData != null && pinballLevelRecordData.PassStatus != EPinballLevelPassStatus.Unfinished;
 		}
 
-		// Token: 0x0603F9AC RID: 260524 RVA: 0x00F62F10 File Offset: 0x00F61110
+		// Token: 0x0603466D RID: 214637 RVA: 0x00EA9E6C File Offset: 0x00EA806C
 		public int GetTitleTipId()
 		{
 			PinballActivity? config = ConfigPinballActivityByActivityId.GetConfig(base.Id, true);
@@ -851,7 +851,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return config.GetValueOrDefault().TitleTipId;
 		}
 
-		// Token: 0x0603F9AD RID: 260525 RVA: 0x00F62F44 File Offset: 0x00F61144
+		// Token: 0x0603466E RID: 214638 RVA: 0x00EA9EA0 File Offset: 0x00EA80A0
 		public bool IsRoleFunctionOpen()
 		{
 			PinballActivity? config = ConfigPinballActivityByActivityId.GetConfig(base.Id, true);
@@ -859,7 +859,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return num == 0 || FunctionModel.Instance.IsOpen(num);
 		}
 
-		// Token: 0x0603F9AE RID: 260526 RVA: 0x00F62F8C File Offset: 0x00F6118C
+		// Token: 0x0603466F RID: 214639 RVA: 0x00EA9EE8 File Offset: 0x00EA80E8
 		public void InitTaskData(List<ConditionTask> taskInfos)
 		{
 			if (taskInfos == null)
@@ -897,7 +897,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F9AF RID: 260527 RVA: 0x00F630F0 File Offset: 0x00F612F0
+		// Token: 0x06034670 RID: 214640 RVA: 0x00EAA04C File Offset: 0x00EA824C
 		public void UpdateTaskData(ConditionTask taskInfo)
 		{
 			PinballTaskData pinballTaskData;
@@ -932,7 +932,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.TaskDataMap[taskInfo.Id] = pinballTaskData2;
 		}
 
-		// Token: 0x0603F9B0 RID: 260528 RVA: 0x00F63200 File Offset: 0x00F61400
+		// Token: 0x06034671 RID: 214641 RVA: 0x00EAA15C File Offset: 0x00EA835C
 		public List<PinballTaskData> GetTaskDataList()
 		{
 			List<PinballTaskData> list = new List<PinballTaskData>();
@@ -943,7 +943,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9B1 RID: 260529 RVA: 0x00F63260 File Offset: 0x00F61460
+		// Token: 0x06034672 RID: 214642 RVA: 0x00EAA1BC File Offset: 0x00EA83BC
 		[NullableContext(2)]
 		public PinballTaskData GetTaskDataById(int taskId)
 		{
@@ -952,7 +952,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return result;
 		}
 
-		// Token: 0x0603F9B2 RID: 260530 RVA: 0x00F63280 File Offset: 0x00F61480
+		// Token: 0x06034673 RID: 214643 RVA: 0x00EAA1DC File Offset: 0x00EA83DC
 		public List<PinballTaskData> GetTaskDataSortList()
 		{
 			List<PinballTaskData> list = new List<PinballTaskData>();
@@ -964,7 +964,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9B3 RID: 260531 RVA: 0x00F632F4 File Offset: 0x00F614F4
+		// Token: 0x06034674 RID: 214644 RVA: 0x00EAA250 File Offset: 0x00EA8450
 		public List<PinballTaskData> GetTimeLimitTaskList()
 		{
 			List<PinballTaskData> list = new List<PinballTaskData>();
@@ -976,7 +976,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9B4 RID: 260532 RVA: 0x00F63368 File Offset: 0x00F61568
+		// Token: 0x06034675 RID: 214645 RVA: 0x00EAA2C4 File Offset: 0x00EA84C4
 		public List<PinballTaskData> GetPermanentTaskList()
 		{
 			List<PinballTaskData> list = new List<PinballTaskData>();
@@ -988,7 +988,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9B5 RID: 260533 RVA: 0x00F633DC File Offset: 0x00F615DC
+		// Token: 0x06034676 RID: 214646 RVA: 0x00EAA338 File Offset: 0x00EA8538
 		private int TaskPriority(PinballTaskData task)
 		{
 			if (task.IsUnclaimed)
@@ -1002,7 +1002,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return 2;
 		}
 
-		// Token: 0x0603F9B6 RID: 260534 RVA: 0x00F633F4 File Offset: 0x00F615F4
+		// Token: 0x06034677 RID: 214647 RVA: 0x00EAA350 File Offset: 0x00EA8550
 		public bool IsExistClaimableTask()
 		{
 			using (Dictionary<int, PinballTaskData>.ValueCollection.Enumerator enumerator = this.TaskDataMap.Values.GetEnumerator())
@@ -1018,13 +1018,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9B7 RID: 260535 RVA: 0x00F63454 File Offset: 0x00F61654
+		// Token: 0x06034678 RID: 214648 RVA: 0x00EAA3B0 File Offset: 0x00EA85B0
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.IsMainHubEntranceHasRedDot();
 		}
 
-		// Token: 0x0603F9B8 RID: 260536 RVA: 0x00F6345C File Offset: 0x00F6165C
+		// Token: 0x06034679 RID: 214649 RVA: 0x00EAA3B8 File Offset: 0x00EA85B8
 		public List<int> GetClaimableTaskIdList()
 		{
 			List<int> list = new List<int>();
@@ -1038,7 +1038,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9B9 RID: 260537 RVA: 0x00F634D0 File Offset: 0x00F616D0
+		// Token: 0x0603467A RID: 214650 RVA: 0x00EAA42C File Offset: 0x00EA862C
 		public List<int> GetClaimablePermanentTaskIdList()
 		{
 			List<int> list = new List<int>();
@@ -1052,7 +1052,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9BA RID: 260538 RVA: 0x00F6354C File Offset: 0x00F6174C
+		// Token: 0x0603467B RID: 214651 RVA: 0x00EAA4A8 File Offset: 0x00EA86A8
 		public List<int> GetClaimableTimeLimitTaskIdListWithoutBigReward()
 		{
 			List<int> list = new List<int>();
@@ -1066,7 +1066,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9BB RID: 260539 RVA: 0x00F635D0 File Offset: 0x00F617D0
+		// Token: 0x0603467C RID: 214652 RVA: 0x00EAA52C File Offset: 0x00EA872C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -1091,7 +1091,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return new ValueTuple<int, int>(num, count);
 		}
 
-		// Token: 0x0603F9BC RID: 260540 RVA: 0x00F63638 File Offset: 0x00F61838
+		// Token: 0x0603467D RID: 214653 RVA: 0x00EAA594 File Offset: 0x00EA8794
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -1116,7 +1116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return new ValueTuple<int, int>(num, count);
 		}
 
-		// Token: 0x0603F9BD RID: 260541 RVA: 0x00F636A0 File Offset: 0x00F618A0
+		// Token: 0x0603467E RID: 214654 RVA: 0x00EAA5FC File Offset: 0x00EA87FC
 		public bool IsTimeLimitTaskHasRedDot()
 		{
 			if (!base.CheckIfInRewardTime())
@@ -1136,7 +1136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9BE RID: 260542 RVA: 0x00F63708 File Offset: 0x00F61908
+		// Token: 0x0603467F RID: 214655 RVA: 0x00EAA664 File Offset: 0x00EA8864
 		public bool IsPermanentTaskHasRedDot()
 		{
 			using (Dictionary<int, PinballTaskData>.ValueCollection.Enumerator enumerator = this.PermanentTaskDataMap.Values.GetEnumerator())
@@ -1152,7 +1152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9BF RID: 260543 RVA: 0x00F63768 File Offset: 0x00F61968
+		// Token: 0x06034680 RID: 214656 RVA: 0x00EAA6C4 File Offset: 0x00EA88C4
 		public bool IsShopEntranceHasRedDot()
 		{
 			if (this.ShopId <= 0)
@@ -1170,7 +1170,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9C0 RID: 260544 RVA: 0x00F637EC File Offset: 0x00F619EC
+		// Token: 0x06034681 RID: 214657 RVA: 0x00EAA748 File Offset: 0x00EA8948
 		public bool IsMainHubEntranceHasRedDot()
 		{
 			if (this.HasAnyNewChapterRedDot())
@@ -1207,7 +1207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9C1 RID: 260545 RVA: 0x00F638A0 File Offset: 0x00F61AA0
+		// Token: 0x06034682 RID: 214658 RVA: 0x00EAA7FC File Offset: 0x00EA89FC
 		public bool IsPreGuideQuestTaskRedDotActive()
 		{
 			List<int> preGuideQuestIds = base.GetPreGuideQuestIds();
@@ -1226,7 +1226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return false;
 		}
 
-		// Token: 0x0603F9C2 RID: 260546 RVA: 0x00F6391C File Offset: 0x00F61B1C
+		// Token: 0x06034683 RID: 214659 RVA: 0x00EAA878 File Offset: 0x00EA8A78
 		protected override bool GetExDataFinishShowState()
 		{
 			Dictionary<int, PinballTaskData> dictionary = base.CheckIfInRewardTime() ? this.TaskDataMap : this.PermanentTaskDataMap;
@@ -1247,7 +1247,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return true;
 		}
 
-		// Token: 0x0603F9C3 RID: 260547 RVA: 0x00F63998 File Offset: 0x00F61B98
+		// Token: 0x06034684 RID: 214660 RVA: 0x00EAA8F4 File Offset: 0x00EA8AF4
 		private void SortAndUpdateRank(List<global::PinballRankData> rankDataList)
 		{
 			rankDataList.Sort(delegate(global::PinballRankData a, global::PinballRankData b)
@@ -1264,13 +1264,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F9C4 RID: 260548 RVA: 0x00F639EA File Offset: 0x00F61BEA
+		// Token: 0x06034685 RID: 214661 RVA: 0x00EAA946 File Offset: 0x00EA8B46
 		private void SortAndUpdateInternalRank()
 		{
 			this.SortAndUpdateRank(this.RankDataList);
 		}
 
-		// Token: 0x0603F9C5 RID: 260549 RVA: 0x00F639F8 File Offset: 0x00F61BF8
+		// Token: 0x06034686 RID: 214662 RVA: 0x00EAA954 File Offset: 0x00EA8B54
 		public void SetRankDataList(List<Aki.Protocol.PinballRankData> rankDataList)
 		{
 			this.RankDataList.Clear();
@@ -1290,7 +1290,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.ConfigRankList = null;
 		}
 
-		// Token: 0x0603F9C6 RID: 260550 RVA: 0x00F63A7C File Offset: 0x00F61C7C
+		// Token: 0x06034687 RID: 214663 RVA: 0x00EAA9D8 File Offset: 0x00EA8BD8
 		public List<global::PinballRankData> GetRankList()
 		{
 			List<global::PinballRankData> list = new List<global::PinballRankData>();
@@ -1314,7 +1314,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9C7 RID: 260551 RVA: 0x00F63B5C File Offset: 0x00F61D5C
+		// Token: 0x06034688 RID: 214664 RVA: 0x00EAAAB8 File Offset: 0x00EA8CB8
 		private List<global::PinballRankData> GetConfigRankList()
 		{
 			if (this.ConfigRankList != null)
@@ -1339,7 +1339,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return this.ConfigRankList;
 		}
 
-		// Token: 0x0603F9C8 RID: 260552 RVA: 0x00F63BFC File Offset: 0x00F61DFC
+		// Token: 0x06034689 RID: 214665 RVA: 0x00EAAB58 File Offset: 0x00EA8D58
 		[NullableContext(2)]
 		public void SetMyRankData(Aki.Protocol.PinballRankData rankData)
 		{
@@ -1347,14 +1347,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.MyRankData.SetMyRankData(rankData);
 		}
 
-		// Token: 0x0603F9C9 RID: 260553 RVA: 0x00F63C16 File Offset: 0x00F61E16
+		// Token: 0x0603468A RID: 214666 RVA: 0x00EAAB72 File Offset: 0x00EA8D72
 		[NullableContext(2)]
 		public global::PinballRankData GetMyRankData()
 		{
 			return this.MyRankData;
 		}
 
-		// Token: 0x0603F9CA RID: 260554 RVA: 0x00F63C20 File Offset: 0x00F61E20
+		// Token: 0x0603468B RID: 214667 RVA: 0x00EAAB7C File Offset: 0x00EA8D7C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -1388,7 +1388,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return new ValueTuple<int, int, int>?(new ValueTuple<int, int, int>(num2, num, item));
 		}
 
-		// Token: 0x0603F9CB RID: 260555 RVA: 0x00F63D04 File Offset: 0x00F61F04
+		// Token: 0x0603468C RID: 214668 RVA: 0x00EAAC60 File Offset: 0x00EA8E60
 		[return: TupleElementNames(new string[]
 		{
 			"RoleId",
@@ -1413,7 +1413,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return list;
 		}
 
-		// Token: 0x0603F9CC RID: 260556 RVA: 0x00F63D54 File Offset: 0x00F61F54
+		// Token: 0x0603468D RID: 214669 RVA: 0x00EAACB0 File Offset: 0x00EA8EB0
 		private int GetFormationGroupFromTowerLevelRecord(int towerLevel)
 		{
 			int num = 0;
@@ -1440,7 +1440,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballLevelConfigById2.GetValueOrDefault().FormationGroup;
 		}
 
-		// Token: 0x0603F9CD RID: 260557 RVA: 0x00F63E28 File Offset: 0x00F62028
+		// Token: 0x0603468E RID: 214670 RVA: 0x00EAAD84 File Offset: 0x00EA8F84
 		private int[] ResolveFormationRoleIdsForRank(int formationGroup)
 		{
 			int[] array;
@@ -1459,7 +1459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return Array.Empty<int>();
 		}
 
-		// Token: 0x0603F9CE RID: 260558 RVA: 0x00F63EA4 File Offset: 0x00F620A4
+		// Token: 0x0603468F RID: 214671 RVA: 0x00EAAE00 File Offset: 0x00EA9000
 		public void TryFillMyRankFormationFromLocal(global::PinballRankData rankData)
 		{
 			if (!rankData.IsMyRank || rankData.Formation.Count > 0)
@@ -1481,7 +1481,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			rankData.Formation = this.BuildRankFormationFromRoleIds(roleIds);
 		}
 
-		// Token: 0x0603F9CF RID: 260559 RVA: 0x00F63F40 File Offset: 0x00F62140
+		// Token: 0x06034690 RID: 214672 RVA: 0x00EAAE9C File Offset: 0x00EA909C
 		public void ApplyLocalTowerRankFallbackToMyRank(global::PinballRankData rankData)
 		{
 			if (rankData.HasData)
@@ -1499,7 +1499,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			rankData.HasData = true;
 		}
 
-		// Token: 0x0603F9D0 RID: 260560 RVA: 0x00F63FAC File Offset: 0x00F621AC
+		// Token: 0x06034691 RID: 214673 RVA: 0x00EAAF08 File Offset: 0x00EA9108
 		private void InitLevelFormationData(List<GroupFormation> dataList)
 		{
 			this.LevelFormationMap.Clear();
@@ -1514,7 +1514,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F9D1 RID: 260561 RVA: 0x00F64048 File Offset: 0x00F62248
+		// Token: 0x06034692 RID: 214674 RVA: 0x00EAAFA4 File Offset: 0x00EA91A4
 		public void UpDateLevelFormationData(GroupFormation data)
 		{
 			int[] array = new int[data.RoleIds.Count];
@@ -1525,13 +1525,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.LevelFormationMap[data.LevelGroup] = array;
 		}
 
-		// Token: 0x0603F9D2 RID: 260562 RVA: 0x00F6409D File Offset: 0x00F6229D
+		// Token: 0x06034693 RID: 214675 RVA: 0x00EAAFF9 File Offset: 0x00EA91F9
 		public string GetRecommendTaskTips()
 		{
 			return "Pinball_Activity_RecommendTaskTips";
 		}
 
-		// Token: 0x0603F9D3 RID: 260563 RVA: 0x00F640A4 File Offset: 0x00F622A4
+		// Token: 0x06034694 RID: 214676 RVA: 0x00EAB000 File Offset: 0x00EA9200
 		public int GetRecommendTaskId()
 		{
 			if (ConfigPinballActivityByActivityId.GetConfig(base.Id, true) == null)
@@ -1542,14 +1542,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return pinballActivity.GetValueOrDefault().RecommendTaskId;
 		}
 
-		// Token: 0x0603F9D4 RID: 260564 RVA: 0x00F640D8 File Offset: 0x00F622D8
+		// Token: 0x06034695 RID: 214677 RVA: 0x00EAB034 File Offset: 0x00EA9234
 		public bool IsRecommendTaskFinished()
 		{
 			int recommendTaskId = this.GetRecommendTaskId();
 			return recommendTaskId == 0 || QuestNewModel.Instance.CheckQuestFinished(recommendTaskId);
 		}
 
-		// Token: 0x0603F9D5 RID: 260565 RVA: 0x00F640FC File Offset: 0x00F622FC
+		// Token: 0x06034696 RID: 214678 RVA: 0x00EAB058 File Offset: 0x00EA9258
 		public string GetRecommendTaskDisplayName()
 		{
 			int recommendTaskId = this.GetRecommendTaskId();
@@ -1571,7 +1571,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return "";
 		}
 
-		// Token: 0x0603F9D6 RID: 260566 RVA: 0x00F64160 File Offset: 0x00F62360
+		// Token: 0x06034697 RID: 214679 RVA: 0x00EAB0BC File Offset: 0x00EA92BC
 		public void UpdateRoleWeaponRedDot()
 		{
 			this.RebuildWeaponMaxIndex();
@@ -1584,7 +1584,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F9D7 RID: 260567 RVA: 0x00F641EC File Offset: 0x00F623EC
+		// Token: 0x06034698 RID: 214680 RVA: 0x00EAB148 File Offset: 0x00EA9348
 		private void RebuildWeaponMaxIndex()
 		{
 			this.CommonTypeMaxQualityMap.Clear();
@@ -1610,7 +1610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F9D8 RID: 260568 RVA: 0x00F642B0 File Offset: 0x00F624B0
+		// Token: 0x06034699 RID: 214681 RVA: 0x00EAB20C File Offset: 0x00EA940C
 		private int CalRoleWeaponMaxQuality(int roleId)
 		{
 			global::PinballRoleData roleData = this.GetRoleData(roleId);
@@ -1633,7 +1633,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return num2;
 		}
 
-		// Token: 0x0603F9D9 RID: 260569 RVA: 0x00F6432C File Offset: 0x00F6252C
+		// Token: 0x0603469A RID: 214682 RVA: 0x00EAB288 File Offset: 0x00EA9488
 		public int GetRoleWeaponMaxQuality(int roleId)
 		{
 			int result;
@@ -1641,74 +1641,74 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			return result;
 		}
 
-		// Token: 0x0603F9DA RID: 260570 RVA: 0x00F64349 File Offset: 0x00F62549
+		// Token: 0x0603469B RID: 214683 RVA: 0x00EAB2A5 File Offset: 0x00EA94A5
 		public bool GetRoleWeaponRedDot(int roleId)
 		{
 			return this.GetRoleWeaponMaxQuality(roleId) > 0;
 		}
 
-		// Token: 0x04021404 RID: 136196
+		// Token: 0x0401BD33 RID: 113971
 		private readonly Dictionary<int, PinballWeaponData> WeaponDataMap = new Dictionary<int, PinballWeaponData>();
 
-		// Token: 0x04021405 RID: 136197
+		// Token: 0x0401BD34 RID: 113972
 		protected Dictionary<int, PinballRoleDataBase> RoleDataMap = new Dictionary<int, PinballRoleDataBase>();
 
-		// Token: 0x04021406 RID: 136198
+		// Token: 0x0401BD35 RID: 113973
 		private readonly Dictionary<int, int> RoleWeaponMaxQualityMap = new Dictionary<int, int>();
 
-		// Token: 0x04021407 RID: 136199
+		// Token: 0x0401BD36 RID: 113974
 		private readonly Dictionary<int, int> CommonTypeMaxQualityMap = new Dictionary<int, int>();
 
-		// Token: 0x04021408 RID: 136200
+		// Token: 0x0401BD37 RID: 113975
 		private readonly Dictionary<int, int> PersonTypeMaxQualityMap = new Dictionary<int, int>();
 
-		// Token: 0x04021409 RID: 136201
+		// Token: 0x0401BD38 RID: 113976
 		private readonly Dictionary<int, global::PinballChapterData> ChapterMap = new Dictionary<int, global::PinballChapterData>();
 
-		// Token: 0x0402140A RID: 136202
+		// Token: 0x0401BD39 RID: 113977
 		private readonly Dictionary<int, bool> ChapterUnlockRecord = new Dictionary<int, bool>();
 
-		// Token: 0x0402140B RID: 136203
+		// Token: 0x0401BD3A RID: 113978
 		private readonly Dictionary<int, bool> ChapterNewUnlockRecord = new Dictionary<int, bool>();
 
-		// Token: 0x0402140C RID: 136204
+		// Token: 0x0401BD3B RID: 113979
 		private List<int> GmUnlockChapterIdList = new List<int>();
 
-		// Token: 0x0402140D RID: 136205
+		// Token: 0x0401BD3C RID: 113980
 		private readonly Dictionary<int, PinballLevelRecordData> LevelRecordMap = new Dictionary<int, PinballLevelRecordData>();
 
-		// Token: 0x0402140E RID: 136206
+		// Token: 0x0401BD3D RID: 113981
 		private int DailyConfigId;
 
-		// Token: 0x0402140F RID: 136207
+		// Token: 0x0401BD3E RID: 113982
 		private int RandomDailyLevelId;
 
-		// Token: 0x04021410 RID: 136208
+		// Token: 0x0401BD3F RID: 113983
 		private List<int> GmUnlockLevelIdList = new List<int>();
 
-		// Token: 0x04021411 RID: 136209
+		// Token: 0x0401BD40 RID: 113984
 		private readonly Dictionary<int, PinballTaskData> TaskDataMap = new Dictionary<int, PinballTaskData>();
 
-		// Token: 0x04021412 RID: 136210
+		// Token: 0x0401BD41 RID: 113985
 		private readonly Dictionary<int, PinballTaskData> TimeLimitTaskDataMap = new Dictionary<int, PinballTaskData>();
 
-		// Token: 0x04021413 RID: 136211
+		// Token: 0x0401BD42 RID: 113986
 		private readonly Dictionary<int, PinballTaskData> PermanentTaskDataMap = new Dictionary<int, PinballTaskData>();
 
-		// Token: 0x04021414 RID: 136212
+		// Token: 0x0401BD43 RID: 113987
 		public int ShopId;
 
-		// Token: 0x04021415 RID: 136213
+		// Token: 0x0401BD44 RID: 113988
 		private const int DEFAULT_SHOP_ID = 5;
 
-		// Token: 0x04021416 RID: 136214
+		// Token: 0x0401BD45 RID: 113989
 		private readonly List<global::PinballRankData> RankDataList = new List<global::PinballRankData>();
 
-		// Token: 0x04021417 RID: 136215
+		// Token: 0x0401BD46 RID: 113990
 		[Nullable(2)]
 		private global::PinballRankData MyRankData;
 
-		// Token: 0x04021418 RID: 136216
+		// Token: 0x0401BD47 RID: 113991
 		[Nullable(new byte[]
 		{
 			2,
@@ -1716,14 +1716,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 		})]
 		private List<global::PinballRankData> ConfigRankList;
 
-		// Token: 0x04021419 RID: 136217
+		// Token: 0x0401BD48 RID: 113992
 		public Dictionary<int, int[]> LevelFormationMap = new Dictionary<int, int[]>();
 
-		// Token: 0x0200C497 RID: 50327
+		// Token: 0x0200AE7E RID: 44670
 		[NullableContext(0)]
 		private enum EStorageKey
 		{
-			// Token: 0x0403B527 RID: 242983
+			// Token: 0x04035E89 RID: 220809
 			ChapterRedDot
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010AC RID: 4268
+	// Token: 0x020011DA RID: 4570
 	public class IQuestScheduleNone_SetValue
 	{
-		// Token: 0x04003A0F RID: 14863
+		// Token: 0x04003D5C RID: 15708
 		public EQuestScheduleType Type;
 	}
 }

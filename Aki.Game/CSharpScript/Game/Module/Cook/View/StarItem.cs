@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B15 RID: 23317
+	// Token: 0x02004AF6 RID: 19190
 	public class StarItem : UiPanelBase
 	{
-		// Token: 0x0603B071 RID: 241777 RVA: 0x00E12634 File Offset: 0x00E10834
+		// Token: 0x0602FFE3 RID: 196579 RVA: 0x00D6334C File Offset: 0x00D6154C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x0603B072 RID: 241778 RVA: 0x00E12687 File Offset: 0x00E10887
+		// Token: 0x0602FFE4 RID: 196580 RVA: 0x00D6339F File Offset: 0x00D6159F
 		public void SetState(bool isReached)
 		{
 			if (isReached)
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetSprite(0).SetUIActive(false);
 		}
 
-		// Token: 0x0200BD50 RID: 48464
+		// Token: 0x0200A759 RID: 42841
 		private enum EStarDefine
 		{
-			// Token: 0x0403918D RID: 233869
+			// Token: 0x04033B59 RID: 211801
 			SprStar
 		}
 	}

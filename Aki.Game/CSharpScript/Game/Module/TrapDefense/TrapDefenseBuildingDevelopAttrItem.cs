@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A97 RID: 19095
+	// Token: 0x02003A3F RID: 14911
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBuildingDevelopAttrItem : GridProxyAbstract<ITrapDefenseBuildingDevelopAttrInfo>
 	{
-		// Token: 0x060317F3 RID: 202739 RVA: 0x00B79138 File Offset: 0x00B77338
+		// Token: 0x06026583 RID: 157059 RVA: 0x00ABD0EC File Offset: 0x00ABB2EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060317F4 RID: 202740 RVA: 0x00B791C4 File Offset: 0x00B773C4
+		// Token: 0x06026584 RID: 157060 RVA: 0x00ABD178 File Offset: 0x00ABB378
 		public override void Refresh(ITrapDefenseBuildingDevelopAttrInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -51,20 +51,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			text.SetText(data.Value.ToString(), true);
 		}
 
-		// Token: 0x0401A762 RID: 108386
+		// Token: 0x040150B4 RID: 86196
 		protected ITrapDefenseBuildingDevelopAttrInfo Data;
 
-		// Token: 0x0200ABF0 RID: 44016
+		// Token: 0x02009610 RID: 38416
 		[NullableContext(0)]
 		private class EAttr
 		{
-			// Token: 0x040343F8 RID: 214008
+			// Token: 0x0402EDA9 RID: 191913
 			public const int Icon = 0;
 
-			// Token: 0x040343F9 RID: 214009
+			// Token: 0x0402EDAA RID: 191914
 			public const int Title = 1;
 
-			// Token: 0x040343FA RID: 214010
+			// Token: 0x0402EDAB RID: 191915
 			public const int Value = 2;
 		}
 	}

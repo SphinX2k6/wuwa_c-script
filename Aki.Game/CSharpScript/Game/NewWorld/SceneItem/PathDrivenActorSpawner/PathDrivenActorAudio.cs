@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071BD RID: 29117
+	// Token: 0x02006272 RID: 25202
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PathDrivenActorAudio
 	{
-		// Token: 0x06047412 RID: 291858 RVA: 0x0121EA74 File Offset: 0x0121CC74
+		// Token: 0x0603CD0D RID: 249101 RVA: 0x01178980 File Offset: 0x01176B80
 		public unsafe PathDrivenActorAudio(IIntervalSplineSpawnAudioConfigBase config, Entity ownerEntity, int? ownerPbDataId)
 		{
 			this.OwnerEntity = ownerEntity;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047413 RID: 291859 RVA: 0x0121EC41 File Offset: 0x0121CE41
+		// Token: 0x0603CD0E RID: 249102 RVA: 0x01178B4D File Offset: 0x01176D4D
 		public void UpdatePositions(IReadOnlyList<IPathDrivenActorRuntimeData> runtimeDataList)
 		{
 			if (this.Disabled)
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047414 RID: 291860 RVA: 0x0121EC5B File Offset: 0x0121CE5B
+		// Token: 0x0603CD0F RID: 249103 RVA: 0x01178B67 File Offset: 0x01176D67
 		public void SetRunning(bool isRunning)
 		{
 			this.IsRunning = isRunning;
 			this.ApplyPlayState();
 		}
 
-		// Token: 0x06047415 RID: 291861 RVA: 0x0121EC6C File Offset: 0x0121CE6C
+		// Token: 0x0603CD10 RID: 249104 RVA: 0x01178B78 File Offset: 0x01176D78
 		public void Stop()
 		{
 			if (this.PlayHandle != 0)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.IsRunning = false;
 		}
 
-		// Token: 0x06047416 RID: 291862 RVA: 0x0121ECF8 File Offset: 0x0121CEF8
+		// Token: 0x0603CD11 RID: 249105 RVA: 0x01178C04 File Offset: 0x01176E04
 		private void UpdateAllActorPositions(IReadOnlyList<IPathDrivenActorRuntimeData> runtimeDataList)
 		{
 			if (!this.EnsureAkComponent())
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.ApplyPlayState();
 		}
 
-		// Token: 0x06047417 RID: 291863 RVA: 0x0121EE20 File Offset: 0x0121D020
+		// Token: 0x0603CD12 RID: 249106 RVA: 0x01178D2C File Offset: 0x01176F2C
 		private void ApplyPlayState()
 		{
 			bool flag = this.IsRunning && this.HasPosition;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			AudioSystem.Instance.ExecuteAction(this.PlayHandle, flag ? EAudioActionType.Resume : EAudioActionType.Pause, null);
 		}
 
-		// Token: 0x06047418 RID: 291864 RVA: 0x0121EEC0 File Offset: 0x0121D0C0
+		// Token: 0x0603CD13 RID: 249107 RVA: 0x01178DCC File Offset: 0x01176FCC
 		private bool EnsureAkComponent()
 		{
 			UAkComponent akComponent = this.AkComponent;
@@ -193,55 +193,55 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x04025792 RID: 153490
+		// Token: 0x04020401 RID: 132097
 		private readonly EIntervalSplineSpawnAudioConfigType ConfigType;
 
-		// Token: 0x04025793 RID: 153491
+		// Token: 0x04020402 RID: 132098
 		[Nullable(2)]
 		private readonly string EventName;
 
-		// Token: 0x04025794 RID: 153492
+		// Token: 0x04020403 RID: 132099
 		private readonly float OffsetX;
 
-		// Token: 0x04025795 RID: 153493
+		// Token: 0x04020404 RID: 132100
 		private readonly float OffsetY;
 
-		// Token: 0x04025796 RID: 153494
+		// Token: 0x04020405 RID: 132101
 		private readonly float OffsetZ;
 
-		// Token: 0x04025797 RID: 153495
+		// Token: 0x04020406 RID: 132102
 		private readonly TArray<FVector> LocationOffsets = new TArray<FVector>();
 
-		// Token: 0x04025798 RID: 153496
+		// Token: 0x04020407 RID: 132103
 		private FVector ScratchOffset = new FVector();
 
-		// Token: 0x04025799 RID: 153497
+		// Token: 0x04020408 RID: 132104
 		[Nullable(2)]
 		private AActor OwnerActor;
 
-		// Token: 0x0402579A RID: 153498
+		// Token: 0x04020409 RID: 132105
 		[Nullable(2)]
 		private UAkComponent AkComponent;
 
-		// Token: 0x0402579B RID: 153499
+		// Token: 0x0402040A RID: 132106
 		private int PlayHandle;
 
-		// Token: 0x0402579C RID: 153500
+		// Token: 0x0402040B RID: 132107
 		private bool Disabled;
 
-		// Token: 0x0402579D RID: 153501
+		// Token: 0x0402040C RID: 132108
 		private bool IsRunning;
 
-		// Token: 0x0402579E RID: 153502
+		// Token: 0x0402040D RID: 132109
 		private bool HasPosition;
 
-		// Token: 0x0402579F RID: 153503
+		// Token: 0x0402040E RID: 132110
 		private bool IsPlaying;
 
-		// Token: 0x040257A0 RID: 153504
+		// Token: 0x0402040F RID: 132111
 		private readonly Entity OwnerEntity;
 
-		// Token: 0x040257A1 RID: 153505
+		// Token: 0x04020410 RID: 132112
 		private readonly int? OwnerPbDataId;
 	}
 }

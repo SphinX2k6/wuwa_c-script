@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions
 {
-	// Token: 0x02006E14 RID: 28180
+	// Token: 0x02005F94 RID: 24468
 	public class GuaranteeActionPreload : GuaranteeActionBase
 	{
-		// Token: 0x06044B6E RID: 281454 RVA: 0x010F5B2C File Offset: 0x010F3D2C
+		// Token: 0x0603ACD5 RID: 240853 RVA: 0x0109FF60 File Offset: 0x0109E160
 		[NullableContext(2)]
 		protected override void OnExecute(ActionParams @params = null)
 		{

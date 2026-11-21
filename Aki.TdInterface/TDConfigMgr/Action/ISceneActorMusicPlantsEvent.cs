@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DD8 RID: 7640
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FF1 RID: 8177
 	public class ISceneActorMusicPlantsEvent : ISceneActorEvent
 	{
-		// Token: 0x0600A391 RID: 41873 RVA: 0x00173500 File Offset: 0x00171700
+		// Token: 0x0600ADA7 RID: 44455 RVA: 0x00187D58 File Offset: 0x00185F58
 		private ISceneActorMusicPlantsEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A392 RID: 41874 RVA: 0x00173538 File Offset: 0x00171738
+		// Token: 0x0600ADA8 RID: 44456 RVA: 0x00187D90 File Offset: 0x00185F90
 		public static ISceneActorMusicPlantsEvent Create([Nullable(2)] ISceneActorMusicPlantsEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A393 RID: 41875 RVA: 0x0017354B File Offset: 0x0017174B
+		// Token: 0x0600ADA9 RID: 44457 RVA: 0x00187DA3 File Offset: 0x00185FA3
 		public static ISceneActorMusicPlantsEvent CreateFromSetValue([Nullable(2)] ISceneActorMusicPlantsEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A394 RID: 41876 RVA: 0x0017355E File Offset: 0x0017175E
+		// Token: 0x0600ADAA RID: 44458 RVA: 0x00187DB6 File Offset: 0x00185FB6
 		public new ISceneActorMusicPlantsEvent_SetValue ToSetValue()
 		{
 			return new ISceneActorMusicPlantsEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700325B RID: 12891
-		// (get) Token: 0x0600A395 RID: 41877 RVA: 0x00173571 File Offset: 0x00171771
-		// (set) Token: 0x0600A396 RID: 41878 RVA: 0x0017359C File Offset: 0x0017179C
+		// Token: 0x170034F8 RID: 13560
+		// (get) Token: 0x0600ADAB RID: 44459 RVA: 0x00187DC9 File Offset: 0x00185FC9
+		// (set) Token: 0x0600ADAC RID: 44460 RVA: 0x00187DF4 File Offset: 0x00185FF4
 		public override ESceneActorEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400620A RID: 25098
+		// Token: 0x04006797 RID: 26519
 		[Nullable(2)]
 		protected new ISceneActorMusicPlantsEvent FbInstance;
 
-		// Token: 0x0400620B RID: 25099
+		// Token: 0x04006798 RID: 26520
 		[Nullable(2)]
 		protected new ISceneActorMusicPlantsEvent_SetValue PocoInterface;
 	}

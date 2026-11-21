@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000EF2 RID: 3826
+// Token: 0x020003A7 RID: 935
 [NullableContext(1)]
 [Nullable(0)]
 public class CloudGameManager : Singleton
 {
-	// Token: 0x06005FF9 RID: 24569 RVA: 0x0012008C File Offset: 0x0011E28C
+	// Token: 0x0600338F RID: 13199 RVA: 0x00127F18 File Offset: 0x00126118
 	public unsafe CloudGameManager()
 	{
 		this.DeviceMargin = "";
@@ -28,8 +28,8 @@ public class CloudGameManager : Singleton
 		this.WaitingForDbSavePath = UKismetSystemLibrary.ConvertToAbsolutePath(UKuroLauncherLibrary.GameSavedDir() + "SaveDownloadDone.json");
 	}
 
-	// Token: 0x1700075A RID: 1882
-	// (get) Token: 0x06005FFA RID: 24570 RVA: 0x00120145 File Offset: 0x0011E345
+	// Token: 0x1700077C RID: 1916
+	// (get) Token: 0x06003390 RID: 13200 RVA: 0x00127FD1 File Offset: 0x001261D1
 	public bool IsCloudGame
 	{
 		get
@@ -38,8 +38,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x1700075B RID: 1883
-	// (get) Token: 0x06005FFB RID: 24571 RVA: 0x00120151 File Offset: 0x0011E351
+	// Token: 0x1700077D RID: 1917
+	// (get) Token: 0x06003391 RID: 13201 RVA: 0x00127FDD File Offset: 0x001261DD
 	public bool IsWebPlatform
 	{
 		get
@@ -48,8 +48,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x1700075C RID: 1884
-	// (get) Token: 0x06005FFC RID: 24572 RVA: 0x00120159 File Offset: 0x0011E359
+	// Token: 0x1700077E RID: 1918
+	// (get) Token: 0x06003392 RID: 13202 RVA: 0x00127FE5 File Offset: 0x001261E5
 	public string CloudGameTraceId
 	{
 		get
@@ -59,9 +59,9 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x1700075D RID: 1885
-	// (get) Token: 0x06005FFD RID: 24573 RVA: 0x00120176 File Offset: 0x0011E376
-	// (set) Token: 0x06005FFE RID: 24574 RVA: 0x00120180 File Offset: 0x0011E380
+	// Token: 0x1700077F RID: 1919
+	// (get) Token: 0x06003393 RID: 13203 RVA: 0x00128002 File Offset: 0x00126202
+	// (set) Token: 0x06003394 RID: 13204 RVA: 0x0012800C File Offset: 0x0012620C
 	public ICloudGameUserInfo CloudUserInfo
 	{
 		get
@@ -80,14 +80,14 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x06005FFF RID: 24575 RVA: 0x001201BE File Offset: 0x0011E3BE
+	// Token: 0x06003395 RID: 13205 RVA: 0x0012804A File Offset: 0x0012624A
 	public ILoginInfo GetCloudGameLoginInfo()
 	{
 		return this.UserInfo.LoginInfo;
 	}
 
-	// Token: 0x1700075E RID: 1886
-	// (get) Token: 0x06006000 RID: 24576 RVA: 0x001201CB File Offset: 0x0011E3CB
+	// Token: 0x17000780 RID: 1920
+	// (get) Token: 0x06003396 RID: 13206 RVA: 0x00128057 File Offset: 0x00126257
 	[Nullable(2)]
 	public ICloudGamePadInfo CloudGamePadInfo
 	{
@@ -98,8 +98,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x1700075F RID: 1887
-	// (get) Token: 0x06006001 RID: 24577 RVA: 0x001201D3 File Offset: 0x0011E3D3
+	// Token: 0x17000781 RID: 1921
+	// (get) Token: 0x06003397 RID: 13207 RVA: 0x0012805F File Offset: 0x0012625F
 	public int CloudGameDpi
 	{
 		get
@@ -108,8 +108,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x17000760 RID: 1888
-	// (get) Token: 0x06006002 RID: 24578 RVA: 0x001201DB File Offset: 0x0011E3DB
+	// Token: 0x17000782 RID: 1922
+	// (get) Token: 0x06003398 RID: 13208 RVA: 0x00128067 File Offset: 0x00126267
 	public int DeviceScreenWidth
 	{
 		get
@@ -118,8 +118,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x17000761 RID: 1889
-	// (get) Token: 0x06006003 RID: 24579 RVA: 0x001201E3 File Offset: 0x0011E3E3
+	// Token: 0x17000783 RID: 1923
+	// (get) Token: 0x06003399 RID: 13209 RVA: 0x0012806F File Offset: 0x0012626F
 	public int DeviceScreenHeight
 	{
 		get
@@ -128,8 +128,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x17000762 RID: 1890
-	// (get) Token: 0x06006004 RID: 24580 RVA: 0x001201EB File Offset: 0x0011E3EB
+	// Token: 0x17000784 RID: 1924
+	// (get) Token: 0x0600339A RID: 13210 RVA: 0x00128077 File Offset: 0x00126277
 	public int ScreenWidth
 	{
 		get
@@ -138,8 +138,8 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x17000763 RID: 1891
-	// (get) Token: 0x06006005 RID: 24581 RVA: 0x001201F3 File Offset: 0x0011E3F3
+	// Token: 0x17000785 RID: 1925
+	// (get) Token: 0x0600339B RID: 13211 RVA: 0x0012807F File Offset: 0x0012627F
 	public int ScreenHeight
 	{
 		get
@@ -148,7 +148,7 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x06006006 RID: 24582 RVA: 0x001201FC File Offset: 0x0011E3FC
+	// Token: 0x0600339C RID: 13212 RVA: 0x00128088 File Offset: 0x00126288
 	public void Init()
 	{
 		string commandLine = UKismetSystemLibrary.GetCommandLine();
@@ -171,6 +171,8 @@ public class CloudGameManager : Singleton
 		ukuroCloudGameWrapper.CloudGameOnChangeResolutionDelegate.Bind(this.OnResolutionChange);
 		this.BindFunction(ECloudGameReceiveDataKey.OnGamePadDeviceChange, new TCloudGameOnReceiveDataFunction(this.OnGamePadDeviceChange));
 		this.BindFunction(ECloudGameReceiveDataKey.OnGameWindowStatusChanged, new TCloudGameOnReceiveDataFunction(this.OnGameWindowStatusChanged));
+		this.BindFunction(ECloudGameReceiveDataKey.OnPostRedDotRefresh, new TCloudGameOnReceiveDataFunction(this.OnPostRedDotRefresh));
+		this.BindFunction(ECloudGameReceiveDataKey.OnCustomerRedDotRefresh, new TCloudGameOnReceiveDataFunction(this.OnCustomerRedDotRefresh));
 		if (CloudGameManagerLauncher.Instance.IsPreLaunch)
 		{
 			this.BindFunction(ECloudGameReceiveDataKey.OnCloudGameLoginPreLaunch, new TCloudGameOnReceiveDataFunction(this.OnUserLoginPreLaunch));
@@ -184,7 +186,7 @@ public class CloudGameManager : Singleton
 		this.InitSettings();
 	}
 
-	// Token: 0x06006007 RID: 24583 RVA: 0x00120334 File Offset: 0x0011E534
+	// Token: 0x0600339D RID: 13213 RVA: 0x001281E4 File Offset: 0x001263E4
 	private void OnGameWindowStatusChanged(string resultJson)
 	{
 		Log instance = Log.Instance;
@@ -201,7 +203,54 @@ public class CloudGameManager : Singleton
 		KuroSdkModel.Instance.OnSdkFocusChange(text == "0");
 	}
 
-	// Token: 0x06006008 RID: 24584 RVA: 0x0012038C File Offset: 0x0011E58C
+	// Token: 0x0600339E RID: 13214 RVA: 0x0012823C File Offset: 0x0012643C
+	private void OnPostRedDotRefresh(string dataJson)
+	{
+		if (KuroSdkController.Instance == null)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.CloudGame;
+			ELogAuthor author = ELogAuthor.TL;
+			string message = "OnPostRedDotRefresh: KuroSdkController未就绪，丢弃推送";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("data", dataJson);
+			instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return;
+		}
+		bool postWebViewRedPointState = !string.IsNullOrEmpty(dataJson) && dataJson.Contains("showRed") && (dataJson.Contains("1") || dataJson.Contains("YES"));
+		KuroSdkController.Instance.SetPostWebViewRedPointState(postWebViewRedPointState);
+		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
+	}
+
+	// Token: 0x0600339F RID: 13215 RVA: 0x001282CC File Offset: 0x001264CC
+	private void OnCustomerRedDotRefresh(string dataJson)
+	{
+		if (KuroSdkController.Instance == null)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.CloudGame;
+			ELogAuthor author = ELogAuthor.TL;
+			string message = "OnCustomerRedDotRefresh: KuroSdkController未就绪，丢弃推送";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("data", dataJson);
+			instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return;
+		}
+		Match match = string.IsNullOrEmpty(dataJson) ? Match.Empty : Regex.Match(dataJson, "\"isredot\"\\s*:\\s*(-?\\d+)");
+		if (!match.Success)
+		{
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.CloudGame;
+			ELogAuthor author2 = ELogAuthor.TL;
+			string message2 = "OnCustomerRedDotRefresh: 未找到isredot字段，丢弃推送";
+			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("data", dataJson);
+			instance2.Warn(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+			return;
+		}
+		bool customerServiceRedPointState = int.Parse(match.Groups[1].Value) > 0;
+		KuroSdkController.Instance.SetCustomerServiceRedPointState(customerServiceRedPointState);
+		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
+	}
+
+	// Token: 0x060033A0 RID: 13216 RVA: 0x00128390 File Offset: 0x00126590
 	[return: Nullable(2)]
 	private string ParseGameWindowStateStatus(string result)
 	{
@@ -230,7 +279,7 @@ public class CloudGameManager : Singleton
 		return gameWindowStateData.status;
 	}
 
-	// Token: 0x06006009 RID: 24585 RVA: 0x00120408 File Offset: 0x0011E608
+	// Token: 0x060033A1 RID: 13217 RVA: 0x0012840C File Offset: 0x0012660C
 	private void InitCloudGamePlatform(string platform)
 	{
 		Platform.Instance.CloudGamePlatform = platform;
@@ -245,14 +294,14 @@ public class CloudGameManager : Singleton
 		this.TryRequestGamePadDevice();
 	}
 
-	// Token: 0x0600600A RID: 24586 RVA: 0x0012047C File Offset: 0x0011E67C
+	// Token: 0x060033A2 RID: 13218 RVA: 0x00128480 File Offset: 0x00126680
 	private void InitSettings()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "wp.Runtime.OverrideMultipleRuntimeGridNames Grid_Near&Grid_Middle&Grid_Middle_Far&Grid_Far&Grid_SuperFar&Grid_SSuperFar&Grid_HLOD_Small&Grid_HLOD_Middle&Grid_HLOD&Grid_HLOD_Volume_Small&Grid_HLOD_Volume_Middle&Grid_HLOD_Volume&GridRuntime_Landscape&GridRuntime_LandscapeHLOD&Grid_Water&Grid_Impostor&Grid_ExtremeFarFoliage&Grid_Foliage_Normal&Grid_ISM_Near&Grid_ISM_Middle&Grid_ISM_Far&Grid_ISM_SuperFar&Grid_Foliage_Near&Grid_Foliage_Grass&Grid_Foliage_Middle&Grid_Foliage_Far&Grid_Foliage_SuperFar&Grid_ReverseMiddle&Grid_ReverseFar&Grid_ReverseSuperFar&Grid_SSuperFarReverse&Grid_EnclosedSpaceNear&Grid_EnclosedSpaceMiddle&Grid_EnclosedSpaceFar&Grid_EnclosedSpaceSuperFar&Grid_EnclosedSpaceSSuperFar&Grid_AudioNear&Grid_AudioMiddle&Grid_AudioFar&Grid_AudioSuperFar&Grid_PcgWater&Grid_Light_Middle&Grid_Light_Far&Grid_HighResLandscape&Grid_MSuperFar&HLOD0_200m_300m&HLOD0_300m_500m&HLOD1_400m_800m&HLOD0_500m_1000m&HLOD0_500m_1500m&HLOD1_600m_1200m&HLOD1_800m_2500m&HLOD1_800m_4000m", null);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "wp.Runtime.OverrideMultipleRuntimeGridLoadingRangeValues 60&85&200&180&650&2600&100&140&170&100&190&250&440&3500&610&450&1300&274&60&83&100&150&40&80&100&100&196&260&430&860&2600&50&80&130&650&860&40&80&252&86&440&120&156&300&1300&260&430&690&860&1300&1040&2160&3460", null);
 	}
 
-	// Token: 0x0600600B RID: 24587 RVA: 0x001204A0 File Offset: 0x0011E6A0
+	// Token: 0x060033A3 RID: 13219 RVA: 0x001284A4 File Offset: 0x001266A4
 	private void OnReceiveData(string dataJson)
 	{
 		Log instance = Log.Instance;
@@ -275,7 +324,7 @@ public class CloudGameManager : Singleton
 		this.FunctionLookup[key](dataJson);
 	}
 
-	// Token: 0x0600600C RID: 24588 RVA: 0x0012052C File Offset: 0x0011E72C
+	// Token: 0x060033A4 RID: 13220 RVA: 0x00128530 File Offset: 0x00126730
 	private unsafe void OnReceiveDataWithKey(string key, string data)
 	{
 		Log instance = Log.Instance;
@@ -302,19 +351,19 @@ public class CloudGameManager : Singleton
 		this.FunctionLookup[key2](data);
 	}
 
-	// Token: 0x0600600D RID: 24589 RVA: 0x00120610 File Offset: 0x0011E810
+	// Token: 0x060033A5 RID: 13221 RVA: 0x00128614 File Offset: 0x00126814
 	public void BindFunction(ECloudGameReceiveDataKey key, TCloudGameOnReceiveDataFunction func)
 	{
 		this.FunctionLookup[key] = func;
 	}
 
-	// Token: 0x0600600E RID: 24590 RVA: 0x0012061F File Offset: 0x0011E81F
+	// Token: 0x060033A6 RID: 13222 RVA: 0x00128623 File Offset: 0x00126823
 	public void UnBindFunction(ECloudGameReceiveDataKey key)
 	{
 		this.FunctionLookup.Remove(key);
 	}
 
-	// Token: 0x0600600F RID: 24591 RVA: 0x00120630 File Offset: 0x0011E830
+	// Token: 0x060033A7 RID: 13223 RVA: 0x00128634 File Offset: 0x00126834
 	public void SendData(ECloudGameSendData data)
 	{
 		Log instance = Log.Instance;
@@ -326,7 +375,7 @@ public class CloudGameManager : Singleton
 		UKuroCloudGameWrapper.SendDataToPipeBinary(data.ToString());
 	}
 
-	// Token: 0x06006010 RID: 24592 RVA: 0x00120680 File Offset: 0x0011E880
+	// Token: 0x060033A8 RID: 13224 RVA: 0x00128684 File Offset: 0x00126884
 	public unsafe void SendDataByKey(ECloudGameSendData key, string data)
 	{
 		Log instance = Log.Instance;
@@ -340,7 +389,7 @@ public class CloudGameManager : Singleton
 		UKuroCloudGameWrapper.SendDataToPipeBinaryWithKey(key.ToString(), data);
 	}
 
-	// Token: 0x06006011 RID: 24593 RVA: 0x001206FB File Offset: 0x0011E8FB
+	// Token: 0x060033A9 RID: 13225 RVA: 0x001286FF File Offset: 0x001268FF
 	public void TryRequestGamePadDevice()
 	{
 		if (!this.IsCloudGame)
@@ -350,7 +399,7 @@ public class CloudGameManager : Singleton
 		this.SendData(ECloudGameSendData.RequestGamePadDevice);
 	}
 
-	// Token: 0x06006012 RID: 24594 RVA: 0x00120710 File Offset: 0x0011E910
+	// Token: 0x060033AA RID: 13226 RVA: 0x00128714 File Offset: 0x00126914
 	public void OnGamePadDeviceChange(string gamePadJson)
 	{
 		CloudGamePadInfo cloudGamePadInfo = Json.Decode<CloudGamePadInfo>(gamePadJson, null);
@@ -371,7 +420,7 @@ public class CloudGameManager : Singleton
 		EventSystem.Instance.Emit<bool, int, int>(EEventName.ControllerConnectChange, flag, cloudGamePadInfo.ProductId, cloudGamePadInfo.VendorId);
 	}
 
-	// Token: 0x06006013 RID: 24595 RVA: 0x00120784 File Offset: 0x0011E984
+	// Token: 0x060033AB RID: 13227 RVA: 0x00128788 File Offset: 0x00126988
 	public void ExitGame(string str)
 	{
 		string data = Json.Encode(new ExitGameInfo
@@ -381,7 +430,7 @@ public class CloudGameManager : Singleton
 		this.SendDataByKey(ECloudGameSendData.ExitGame, data);
 	}
 
-	// Token: 0x06006014 RID: 24596 RVA: 0x001207B0 File Offset: 0x0011E9B0
+	// Token: 0x060033AC RID: 13228 RVA: 0x001287B4 File Offset: 0x001269B4
 	public unsafe void ParseCommandLine()
 	{
 		string commandLine = UKismetSystemLibrary.GetCommandLine();
@@ -450,7 +499,7 @@ public class CloudGameManager : Singleton
 		instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 6));
 	}
 
-	// Token: 0x06006015 RID: 24597 RVA: 0x00120AC4 File Offset: 0x0011ECC4
+	// Token: 0x060033AD RID: 13229 RVA: 0x00128AC8 File Offset: 0x00126CC8
 	public void OnUserLogin(string loginInfoJson)
 	{
 		Log instance = Log.Instance;
@@ -503,7 +552,7 @@ public class CloudGameManager : Singleton
 		LoginController.Instance.OnSdkLogin(this.GetCloudGameLoginInfo());
 	}
 
-	// Token: 0x06006016 RID: 24598 RVA: 0x00120C34 File Offset: 0x0011EE34
+	// Token: 0x060033AE RID: 13230 RVA: 0x00128C38 File Offset: 0x00126E38
 	public void OnSetWebPlatform(string isWeb)
 	{
 		this.IsWeb = (isWeb == "1");
@@ -515,7 +564,7 @@ public class CloudGameManager : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06006017 RID: 24599 RVA: 0x00120C7C File Offset: 0x0011EE7C
+	// Token: 0x060033AF RID: 13231 RVA: 0x00128C80 File Offset: 0x00126E80
 	public unsafe void OnUserLoginPreLaunch(string loginInfoJson)
 	{
 		Log instance = Log.Instance;
@@ -607,7 +656,7 @@ public class CloudGameManager : Singleton
 		}, 500f, 1f, null, null, true);
 	}
 
-	// Token: 0x06006018 RID: 24600 RVA: 0x00120E84 File Offset: 0x0011F084
+	// Token: 0x060033B0 RID: 13232 RVA: 0x00128E88 File Offset: 0x00127088
 	private void OnWaitingForUser()
 	{
 		if (this.WaitingForUserDb == null)
@@ -625,18 +674,18 @@ public class CloudGameManager : Singleton
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06006019 RID: 24601 RVA: 0x00120EF8 File Offset: 0x0011F0F8
+	// Token: 0x060033B1 RID: 13233 RVA: 0x00128EFC File Offset: 0x001270FC
 	public UniTask WaitForUser()
 	{
-		CloudGameManager.<WaitForUser>d__60 <WaitForUser>d__;
+		CloudGameManager.<WaitForUser>d__62 <WaitForUser>d__;
 		<WaitForUser>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<WaitForUser>d__.<>4__this = this;
 		<WaitForUser>d__.<>1__state = -1;
-		<WaitForUser>d__.<>t__builder.Start<CloudGameManager.<WaitForUser>d__60>(ref <WaitForUser>d__);
+		<WaitForUser>d__.<>t__builder.Start<CloudGameManager.<WaitForUser>d__62>(ref <WaitForUser>d__);
 		return <WaitForUser>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600601A RID: 24602 RVA: 0x00120F3C File Offset: 0x0011F13C
+	// Token: 0x060033B2 RID: 13234 RVA: 0x00128F40 File Offset: 0x00127140
 	public void RequestRefreshLogin()
 	{
 		Log.Instance.Info(ELogModule.CloudGame, ELogAuthor.CWC, "RequestRefreshLogin", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -648,7 +697,7 @@ public class CloudGameManager : Singleton
 		this.SendData(ECloudGameSendData.RequestLoginPreLaunch);
 	}
 
-	// Token: 0x0600601B RID: 24603 RVA: 0x00120F8C File Offset: 0x0011F18C
+	// Token: 0x060033B3 RID: 13235 RVA: 0x00128F90 File Offset: 0x00127190
 	public unsafe IReadOnlyList<float> GetCloudGameSafeZone()
 	{
 		if (!this.IsCloudGame)
@@ -677,8 +726,8 @@ public class CloudGameManager : Singleton
 		return readOnlyList;
 	}
 
-	// Token: 0x17000764 RID: 1892
-	// (get) Token: 0x0600601C RID: 24604 RVA: 0x00121095 File Offset: 0x0011F295
+	// Token: 0x17000786 RID: 1926
+	// (get) Token: 0x060033B4 RID: 13236 RVA: 0x00129099 File Offset: 0x00127299
 	public static CloudGameManager Instance
 	{
 		get
@@ -692,12 +741,12 @@ public class CloudGameManager : Singleton
 		}
 	}
 
-	// Token: 0x0600601D RID: 24605 RVA: 0x001210B8 File Offset: 0x0011F2B8
+	// Token: 0x060033B5 RID: 13237 RVA: 0x001290BC File Offset: 0x001272BC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600601E RID: 24606 RVA: 0x001210BA File Offset: 0x0011F2BA
+	// Token: 0x060033B6 RID: 13238 RVA: 0x001290BE File Offset: 0x001272BE
 	public static void ResetStaticDefaultValue()
 	{
 		CloudGameManager instance = CloudGameManager._instance;
@@ -708,69 +757,69 @@ public class CloudGameManager : Singleton
 		CloudGameManager._instance = null;
 	}
 
-	// Token: 0x0600601F RID: 24607 RVA: 0x001210D3 File Offset: 0x0011F2D3
+	// Token: 0x060033B7 RID: 13239 RVA: 0x001290D7 File Offset: 0x001272D7
 	static CloudGameManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CloudGameManager.CreateStaticDefaultValue), new Action(CloudGameManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002BAA RID: 11178
+	// Token: 0x04002C43 RID: 11331
 	[Nullable(2)]
 	public UKuroCloudGameWrapper KuroCloudGameWrapper;
 
-	// Token: 0x04002BAB RID: 11179
+	// Token: 0x04002C44 RID: 11332
 	private readonly Dictionary<ECloudGameReceiveDataKey, TCloudGameOnReceiveDataFunction> FunctionLookup = new Dictionary<ECloudGameReceiveDataKey, TCloudGameOnReceiveDataFunction>();
 
-	// Token: 0x04002BAC RID: 11180
+	// Token: 0x04002C45 RID: 11333
 	[Nullable(2)]
 	private ICloudGameUserInfo UserInfo;
 
-	// Token: 0x04002BAD RID: 11181
+	// Token: 0x04002C46 RID: 11334
 	[Nullable(2)]
 	private ICloudGamePadInfo CloudGamePadInfoInternal;
 
-	// Token: 0x04002BAE RID: 11182
+	// Token: 0x04002C47 RID: 11335
 	private string DeviceMargin;
 
-	// Token: 0x04002BAF RID: 11183
+	// Token: 0x04002C48 RID: 11336
 	private int CloudGameDpiInternal;
 
-	// Token: 0x04002BB0 RID: 11184
+	// Token: 0x04002C49 RID: 11337
 	private bool IsReboot;
 
-	// Token: 0x04002BB1 RID: 11185
+	// Token: 0x04002C4A RID: 11338
 	private bool IsWeb;
 
-	// Token: 0x04002BB2 RID: 11186
+	// Token: 0x04002C4B RID: 11339
 	[Nullable(2)]
 	private CustomPromise WaitingForUserDb;
 
-	// Token: 0x04002BB3 RID: 11187
+	// Token: 0x04002C4C RID: 11340
 	private bool IsRefreshLogin;
 
-	// Token: 0x04002BB4 RID: 11188
+	// Token: 0x04002C4D RID: 11341
 	private readonly string WaitingForDbFlagFilePath;
 
-	// Token: 0x04002BB5 RID: 11189
+	// Token: 0x04002C4E RID: 11342
 	private readonly string WaitingForDbSavePath;
 
-	// Token: 0x04002BB6 RID: 11190
+	// Token: 0x04002C4F RID: 11343
 	private int DeviceScreenWidthInternal;
 
-	// Token: 0x04002BB7 RID: 11191
+	// Token: 0x04002C50 RID: 11344
 	private int DeviceScreenHeightInternal;
 
-	// Token: 0x04002BB8 RID: 11192
+	// Token: 0x04002C51 RID: 11345
 	private int ScreenWidthInternal;
 
-	// Token: 0x04002BB9 RID: 11193
+	// Token: 0x04002C52 RID: 11346
 	private int ScreenHeightInternal;
 
-	// Token: 0x04002BBA RID: 11194
+	// Token: 0x04002C53 RID: 11347
 	[Nullable(2)]
 	private TimerHandle TimeoutTimer;
 
-	// Token: 0x04002BBB RID: 11195
+	// Token: 0x04002C54 RID: 11348
 	private readonly Action<int, int> OnResolutionChange = delegate(int width, int height)
 	{
 		Log instance = Log.Instance;
@@ -787,7 +836,7 @@ public class CloudGameManager : Singleton
 		gameUserSettings.ApplySettings(true);
 	};
 
-	// Token: 0x04002BBC RID: 11196
+	// Token: 0x04002C55 RID: 11349
 	[Nullable(2)]
 	private static CloudGameManager _instance;
 }

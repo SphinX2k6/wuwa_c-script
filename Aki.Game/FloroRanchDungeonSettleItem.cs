@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B8D RID: 7053
+// Token: 0x0200104C RID: 4172
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchDungeonSettleItem : UiPanelBase
 {
-	// Token: 0x0600D205 RID: 53765 RVA: 0x00302930 File Offset: 0x00300B30
+	// Token: 0x0600A616 RID: 42518 RVA: 0x0030DA08 File Offset: 0x0030BC08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 16;
@@ -57,32 +57,32 @@ public class FloroRanchDungeonSettleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D206 RID: 53766 RVA: 0x00302B6F File Offset: 0x00300D6F
+	// Token: 0x0600A617 RID: 42519 RVA: 0x0030DC47 File Offset: 0x0030BE47
 	protected override void OnBeforeShow()
 	{
 		this.OnAddEventListener();
 		this.RewardLayout = new GenericLayout<FloroRanchDungeonSettleRewardItem, FloroRanchSubInsSettleReward>(base.GetHorizontalLayout(12), new Func<FloroRanchDungeonSettleRewardItem>(this.CreateRewardItem), null, false, true);
 	}
 
-	// Token: 0x0600D207 RID: 53767 RVA: 0x00302B99 File Offset: 0x00300D99
+	// Token: 0x0600A618 RID: 42520 RVA: 0x0030DC71 File Offset: 0x0030BE71
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnAnimEvent));
 	}
 
-	// Token: 0x0600D208 RID: 53768 RVA: 0x00302BB7 File Offset: 0x00300DB7
+	// Token: 0x0600A619 RID: 42521 RVA: 0x0030DC8F File Offset: 0x0030BE8F
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnAnimEvent));
 	}
 
-	// Token: 0x0600D209 RID: 53769 RVA: 0x00302BD5 File Offset: 0x00300DD5
+	// Token: 0x0600A61A RID: 42522 RVA: 0x0030DCAD File Offset: 0x0030BEAD
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600D20A RID: 53770 RVA: 0x00302BE0 File Offset: 0x00300DE0
+	// Token: 0x0600A61B RID: 42523 RVA: 0x0030DCB8 File Offset: 0x0030BEB8
 	public UniTask RefreshAsync(FloroRanchPlaySettleData data)
 	{
 		FloroRanchDungeonSettleItem.<RefreshAsync>d__8 <RefreshAsync>d__;
@@ -94,7 +94,7 @@ public class FloroRanchDungeonSettleItem : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D20B RID: 53771 RVA: 0x00302C2C File Offset: 0x00300E2C
+	// Token: 0x0600A61C RID: 42524 RVA: 0x0030DD04 File Offset: 0x0030BF04
 	private void OnAnimEvent(string param)
 	{
 		if (param == EFloroRanchAnimEvent.TagShow.ToString())
@@ -114,69 +114,69 @@ public class FloroRanchDungeonSettleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D20C RID: 53772 RVA: 0x00302CDE File Offset: 0x00300EDE
+	// Token: 0x0600A61D RID: 42525 RVA: 0x0030DDB6 File Offset: 0x0030BFB6
 	private FloroRanchDungeonSettleRewardItem CreateRewardItem()
 	{
 		return new FloroRanchDungeonSettleRewardItem();
 	}
 
-	// Token: 0x04006046 RID: 24646
+	// Token: 0x04006115 RID: 24853
 	private GenericLayout<FloroRanchDungeonSettleRewardItem, FloroRanchSubInsSettleReward> RewardLayout;
 
-	// Token: 0x04006047 RID: 24647
+	// Token: 0x04006116 RID: 24854
 	[Nullable(2)]
 	private FloroRanchPlaySettleData SettleData;
 
-	// Token: 0x02008113 RID: 33043
+	// Token: 0x020072A1 RID: 29345
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402A208 RID: 172552
+		// Token: 0x0402553C RID: 152892
 		public const int CardSpine = 0;
 
-		// Token: 0x0402A209 RID: 172553
+		// Token: 0x0402553D RID: 152893
 		public const int CardNameText = 1;
 
-		// Token: 0x0402A20A RID: 172554
+		// Token: 0x0402553E RID: 152894
 		public const int CardContributionText = 2;
 
-		// Token: 0x0402A20B RID: 172555
+		// Token: 0x0402553F RID: 152895
 		public const int TotalDayText = 3;
 
-		// Token: 0x0402A20C RID: 172556
+		// Token: 0x04025540 RID: 152896
 		public const int NewRecordDayItem = 4;
 
-		// Token: 0x0402A20D RID: 172557
+		// Token: 0x04025541 RID: 152897
 		public const int TotalCoinText = 5;
 
-		// Token: 0x0402A20E RID: 172558
+		// Token: 0x04025542 RID: 152898
 		public const int NewRecordCoinItem = 6;
 
-		// Token: 0x0402A20F RID: 172559
+		// Token: 0x04025543 RID: 152899
 		public const int DayMaxCoinText = 7;
 
-		// Token: 0x0402A210 RID: 172560
+		// Token: 0x04025544 RID: 152900
 		public const int RewardItem = 8;
 
-		// Token: 0x0402A211 RID: 172561
+		// Token: 0x04025545 RID: 152901
 		public const int TechnologyRewardText = 9;
 
-		// Token: 0x0402A212 RID: 172562
+		// Token: 0x04025546 RID: 152902
 		public const int TechnologyUpItem = 10;
 
-		// Token: 0x0402A213 RID: 172563
+		// Token: 0x04025547 RID: 152903
 		public const int UnlockRootItem = 11;
 
-		// Token: 0x0402A214 RID: 172564
+		// Token: 0x04025548 RID: 152904
 		public const int UnlockRewardLayout = 12;
 
-		// Token: 0x0402A215 RID: 172565
+		// Token: 0x04025549 RID: 152905
 		public const int WeekScoreItem = 13;
 
-		// Token: 0x0402A216 RID: 172566
+		// Token: 0x0402554A RID: 152906
 		public const int ScoreText = 14;
 
-		// Token: 0x0402A217 RID: 172567
+		// Token: 0x0402554B RID: 152907
 		public const int EndlessTipText = 15;
 	}
 }

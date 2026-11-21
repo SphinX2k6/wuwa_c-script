@@ -9,9 +9,28 @@ using UnrealEngine.Extension;
 // Token: 0x020000FC RID: 252
 [NullableContext(1)]
 [Nullable(0)]
+[Obsolete("手写数学库已废弃，请改用 UnrealEngine.FRotator")]
 public class Rotator : IRotator, IClearable, ILogFormattedPrint
 {
-	// Token: 0x06000870 RID: 2160 RVA: 0x0002D628 File Offset: 0x0002B828
+	// Token: 0x060008B8 RID: 2232 RVA: 0x0002DE6C File Offset: 0x0002C06C
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator FRotator(global::Rotator v)
+	{
+		if (v != null)
+		{
+			return new FRotator(v.Pitch, v.Yaw, v.Roll);
+		}
+		return default(FRotator);
+	}
+
+	// Token: 0x060008B9 RID: 2233 RVA: 0x0002DE9D File Offset: 0x0002C09D
+	[Obsolete("迁移期隐式转换：请确认不在每帧热点路径上")]
+	public static implicit operator global::Rotator(FRotator v)
+	{
+		return global::Rotator.Create(v.Pitch, v.Yaw, v.Roll);
+	}
+
+	// Token: 0x060008BA RID: 2234 RVA: 0x0002DEB8 File Offset: 0x0002C0B8
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(27, 3);
@@ -25,13 +44,13 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06000871 RID: 2161 RVA: 0x0002D69D File Offset: 0x0002B89D
+	// Token: 0x060008BB RID: 2235 RVA: 0x0002DF2D File Offset: 0x0002C12D
 	public string ToFormattedString()
 	{
 		return this.ToString();
 	}
 
-	// Token: 0x06000872 RID: 2162 RVA: 0x0002D6A8 File Offset: 0x0002B8A8
+	// Token: 0x060008BC RID: 2236 RVA: 0x0002DF38 File Offset: 0x0002C138
 	public void ToFormattedString(UnsafeStringBuilder sb)
 	{
 		UnsafeStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new UnsafeStringBuilder.AppendInterpolatedStringHandler(27, 3, sb);
@@ -45,18 +64,18 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		sb.Append(ref appendInterpolatedStringHandler);
 	}
 
-	// Token: 0x06000873 RID: 2163 RVA: 0x0002D722 File Offset: 0x0002B922
+	// Token: 0x060008BD RID: 2237 RVA: 0x0002DFB2 File Offset: 0x0002C1B2
 	public void Clear()
 	{
 		this.Reset();
 	}
 
-	// Token: 0x06000874 RID: 2164 RVA: 0x0002D72A File Offset: 0x0002B92A
+	// Token: 0x060008BE RID: 2238 RVA: 0x0002DFBA File Offset: 0x0002C1BA
 	public Rotator()
 	{
 	}
 
-	// Token: 0x06000875 RID: 2165 RVA: 0x0002D732 File Offset: 0x0002B932
+	// Token: 0x060008BF RID: 2239 RVA: 0x0002DFC2 File Offset: 0x0002C1C2
 	public Rotator(float inPitch, float inYaw, float inRoll)
 	{
 		this.Pitch = inPitch;
@@ -64,9 +83,9 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inRoll;
 	}
 
-	// Token: 0x170000F2 RID: 242
-	// (get) Token: 0x06000876 RID: 2166 RVA: 0x0002D74F File Offset: 0x0002B94F
-	// (set) Token: 0x06000877 RID: 2167 RVA: 0x0002D757 File Offset: 0x0002B957
+	// Token: 0x17000104 RID: 260
+	// (get) Token: 0x060008C0 RID: 2240 RVA: 0x0002DFDF File Offset: 0x0002C1DF
+	// (set) Token: 0x060008C1 RID: 2241 RVA: 0x0002DFE7 File Offset: 0x0002C1E7
 	float IRotator.Pitch
 	{
 		get
@@ -79,9 +98,9 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x170000F3 RID: 243
-	// (get) Token: 0x06000878 RID: 2168 RVA: 0x0002D760 File Offset: 0x0002B960
-	// (set) Token: 0x06000879 RID: 2169 RVA: 0x0002D768 File Offset: 0x0002B968
+	// Token: 0x17000105 RID: 261
+	// (get) Token: 0x060008C2 RID: 2242 RVA: 0x0002DFF0 File Offset: 0x0002C1F0
+	// (set) Token: 0x060008C3 RID: 2243 RVA: 0x0002DFF8 File Offset: 0x0002C1F8
 	float IRotator.Yaw
 	{
 		get
@@ -94,9 +113,9 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x170000F4 RID: 244
-	// (get) Token: 0x0600087A RID: 2170 RVA: 0x0002D771 File Offset: 0x0002B971
-	// (set) Token: 0x0600087B RID: 2171 RVA: 0x0002D779 File Offset: 0x0002B979
+	// Token: 0x17000106 RID: 262
+	// (get) Token: 0x060008C4 RID: 2244 RVA: 0x0002E001 File Offset: 0x0002C201
+	// (set) Token: 0x060008C5 RID: 2245 RVA: 0x0002E009 File Offset: 0x0002C209
 	float IRotator.Roll
 	{
 		get
@@ -109,7 +128,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		}
 	}
 
-	// Token: 0x0600087C RID: 2172 RVA: 0x0002D782 File Offset: 0x0002B982
+	// Token: 0x060008C6 RID: 2246 RVA: 0x0002E012 File Offset: 0x0002C212
 	public void Set(float inPitch, float inYaw, float inRoll)
 	{
 		this.Pitch = inPitch;
@@ -117,7 +136,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inRoll;
 	}
 
-	// Token: 0x0600087D RID: 2173 RVA: 0x0002D799 File Offset: 0x0002B999
+	// Token: 0x060008C7 RID: 2247 RVA: 0x0002E029 File Offset: 0x0002C229
 	public void FromUeRotator(IRotator inR)
 	{
 		this.Pitch = inR.Pitch;
@@ -125,7 +144,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inR.Roll;
 	}
 
-	// Token: 0x0600087E RID: 2174 RVA: 0x0002D7BF File Offset: 0x0002B9BF
+	// Token: 0x060008C8 RID: 2248 RVA: 0x0002E04F File Offset: 0x0002C24F
 	public void FromUeRotator(Aki.Protocol.Rotator inR)
 	{
 		this.Pitch = inR.Pitch;
@@ -133,7 +152,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inR.Roll;
 	}
 
-	// Token: 0x0600087F RID: 2175 RVA: 0x0002D7E5 File Offset: 0x0002B9E5
+	// Token: 0x060008C9 RID: 2249 RVA: 0x0002E075 File Offset: 0x0002C275
 	public void FromUeRotator(global::Rotator inR)
 	{
 		this.Pitch = inR.Pitch;
@@ -141,7 +160,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inR.Roll;
 	}
 
-	// Token: 0x06000880 RID: 2176 RVA: 0x0002D80B File Offset: 0x0002BA0B
+	// Token: 0x060008CA RID: 2250 RVA: 0x0002E09B File Offset: 0x0002C29B
 	public void FromUeRotator(in FRotator inR)
 	{
 		this.Pitch = inR.Pitch;
@@ -149,31 +168,31 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = inR.Roll;
 	}
 
-	// Token: 0x06000881 RID: 2177 RVA: 0x0002D831 File Offset: 0x0002BA31
+	// Token: 0x060008CB RID: 2251 RVA: 0x0002E0C1 File Offset: 0x0002C2C1
 	public void DeepCopy(IRotator inR)
 	{
 		this.Set(inR.Pitch, inR.Yaw, inR.Roll);
 	}
 
-	// Token: 0x06000882 RID: 2178 RVA: 0x0002D84B File Offset: 0x0002BA4B
+	// Token: 0x060008CC RID: 2252 RVA: 0x0002E0DB File Offset: 0x0002C2DB
 	public void DeepCopy(global::Rotator inR)
 	{
 		this.Set(inR.Pitch, inR.Yaw, inR.Roll);
 	}
 
-	// Token: 0x06000883 RID: 2179 RVA: 0x0002D865 File Offset: 0x0002BA65
+	// Token: 0x060008CD RID: 2253 RVA: 0x0002E0F5 File Offset: 0x0002C2F5
 	public void DeepCopy(in FRotator inR)
 	{
 		this.Set(inR.Pitch, inR.Yaw, inR.Roll);
 	}
 
-	// Token: 0x06000884 RID: 2180 RVA: 0x0002D87F File Offset: 0x0002BA7F
+	// Token: 0x060008CE RID: 2254 RVA: 0x0002E10F File Offset: 0x0002C30F
 	public static global::Rotator Create(float pitch, float yaw, float roll)
 	{
 		return new global::Rotator(pitch, yaw, roll);
 	}
 
-	// Token: 0x06000885 RID: 2181 RVA: 0x0002D889 File Offset: 0x0002BA89
+	// Token: 0x060008CF RID: 2255 RVA: 0x0002E119 File Offset: 0x0002C319
 	public static global::Rotator Create([Nullable(2)] IRotator inR)
 	{
 		if (inR == null)
@@ -183,19 +202,19 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return new global::Rotator(inR.Pitch, inR.Yaw, inR.Roll);
 	}
 
-	// Token: 0x06000886 RID: 2182 RVA: 0x0002D8AB File Offset: 0x0002BAAB
+	// Token: 0x060008D0 RID: 2256 RVA: 0x0002E13B File Offset: 0x0002C33B
 	public static global::Rotator Create()
 	{
 		return new global::Rotator();
 	}
 
-	// Token: 0x06000887 RID: 2183 RVA: 0x0002D8B2 File Offset: 0x0002BAB2
+	// Token: 0x060008D1 RID: 2257 RVA: 0x0002E142 File Offset: 0x0002C342
 	public FRotator ToUeRotator()
 	{
 		return new FRotator(this.Pitch, this.Yaw, this.Roll);
 	}
 
-	// Token: 0x06000888 RID: 2184 RVA: 0x0002D8CC File Offset: 0x0002BACC
+	// Token: 0x060008D2 RID: 2258 RVA: 0x0002E15C File Offset: 0x0002C35C
 	public static float NormalizeAxis(float angle)
 	{
 		float num = global::Rotator.ClampAxis(angle);
@@ -206,7 +225,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return num;
 	}
 
-	// Token: 0x06000889 RID: 2185 RVA: 0x0002D8F4 File Offset: 0x0002BAF4
+	// Token: 0x060008D3 RID: 2259 RVA: 0x0002E184 File Offset: 0x0002C384
 	public static double NormalizeAxis(double angle)
 	{
 		double num = global::Rotator.ClampAxis(angle);
@@ -217,7 +236,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return num;
 	}
 
-	// Token: 0x0600088A RID: 2186 RVA: 0x0002D921 File Offset: 0x0002BB21
+	// Token: 0x060008D4 RID: 2260 RVA: 0x0002E1B1 File Offset: 0x0002C3B1
 	public global::Rotator Normalize(global::Rotator outR)
 	{
 		outR.Pitch = global::Rotator.NormalizeAxis(this.Pitch);
@@ -226,7 +245,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return outR;
 	}
 
-	// Token: 0x0600088B RID: 2187 RVA: 0x0002D958 File Offset: 0x0002BB58
+	// Token: 0x060008D5 RID: 2261 RVA: 0x0002E1E8 File Offset: 0x0002C3E8
 	public static float ClampAxis(float angle)
 	{
 		float num = angle % 360f;
@@ -237,7 +256,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return num;
 	}
 
-	// Token: 0x0600088C RID: 2188 RVA: 0x0002D980 File Offset: 0x0002BB80
+	// Token: 0x060008D6 RID: 2262 RVA: 0x0002E210 File Offset: 0x0002C410
 	public static double ClampAxis(double angle)
 	{
 		double num = angle % 360.0;
@@ -248,7 +267,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return num;
 	}
 
-	// Token: 0x0600088D RID: 2189 RVA: 0x0002D9B2 File Offset: 0x0002BBB2
+	// Token: 0x060008D7 RID: 2263 RVA: 0x0002E242 File Offset: 0x0002C442
 	public global::Rotator Clamp(global::Rotator outR)
 	{
 		outR.Pitch = global::Rotator.ClampAxis(this.Pitch);
@@ -257,7 +276,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return outR;
 	}
 
-	// Token: 0x0600088E RID: 2190 RVA: 0x0002D9E8 File Offset: 0x0002BBE8
+	// Token: 0x060008D8 RID: 2264 RVA: 0x0002E278 File Offset: 0x0002C478
 	public void Vector(global::Vector outV)
 	{
 		float degVal = MathCommon.WrapAngle(this.Pitch);
@@ -273,7 +292,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		outV.Z = z;
 	}
 
-	// Token: 0x0600088F RID: 2191 RVA: 0x0002DA54 File Offset: 0x0002BC54
+	// Token: 0x060008D9 RID: 2265 RVA: 0x0002E2E4 File Offset: 0x0002C4E4
 	public Quat Quaternion([Nullable(2)] Quat outQ = null)
 	{
 		Quat quat = outQ;
@@ -308,26 +327,26 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return quat;
 	}
 
-	// Token: 0x06000890 RID: 2192 RVA: 0x0002DB80 File Offset: 0x0002BD80
+	// Token: 0x060008DA RID: 2266 RVA: 0x0002E410 File Offset: 0x0002C610
 	public bool IsNearlyZero()
 	{
 		float num = 0.0001f;
 		return Math.Abs(global::Rotator.NormalizeAxis(this.Yaw)) <= num && Math.Abs(global::Rotator.NormalizeAxis(this.Pitch)) <= num && Math.Abs(global::Rotator.NormalizeAxis(this.Roll)) <= num;
 	}
 
-	// Token: 0x06000891 RID: 2193 RVA: 0x0002DBD4 File Offset: 0x0002BDD4
+	// Token: 0x060008DB RID: 2267 RVA: 0x0002E464 File Offset: 0x0002C664
 	public bool Equals(global::Rotator b, float tolerance = 0.0001f)
 	{
 		return Math.Abs(global::Rotator.NormalizeAxis(this.Yaw - b.Yaw)) <= tolerance && Math.Abs(global::Rotator.NormalizeAxis(this.Pitch - b.Pitch)) <= tolerance && Math.Abs(global::Rotator.NormalizeAxis(this.Roll - b.Roll)) <= tolerance;
 	}
 
-	// Token: 0x06000892 RID: 2194 RVA: 0x0002DC34 File Offset: 0x0002BE34
+	// Token: 0x060008DC RID: 2268 RVA: 0x0002E4C4 File Offset: 0x0002C6C4
 	public bool Equals2(IRotator inB, float tolerance = 0.0001f)
 	{
 		return Math.Abs(global::Rotator.NormalizeAxis(this.Yaw - inB.Yaw)) <= tolerance && Math.Abs(global::Rotator.NormalizeAxis(this.Pitch - inB.Pitch)) <= tolerance && Math.Abs(global::Rotator.NormalizeAxis(this.Roll - inB.Roll)) <= tolerance;
 	}
 
-	// Token: 0x06000893 RID: 2195 RVA: 0x0002DC94 File Offset: 0x0002BE94
+	// Token: 0x060008DD RID: 2269 RVA: 0x0002E524 File Offset: 0x0002C724
 	public global::Rotator AdditionEqual(IRotator inB)
 	{
 		this.Pitch += inB.Pitch;
@@ -336,7 +355,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x06000894 RID: 2196 RVA: 0x0002DCD0 File Offset: 0x0002BED0
+	// Token: 0x060008DE RID: 2270 RVA: 0x0002E560 File Offset: 0x0002C760
 	public global::Rotator SubtractionEqual(IRotator inB)
 	{
 		this.Pitch -= inB.Pitch;
@@ -345,7 +364,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x06000895 RID: 2197 RVA: 0x0002DD0C File Offset: 0x0002BF0C
+	// Token: 0x060008DF RID: 2271 RVA: 0x0002E59C File Offset: 0x0002C79C
 	public global::Rotator MultiplyEqual(float inV)
 	{
 		this.Pitch *= inV;
@@ -354,7 +373,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return this;
 	}
 
-	// Token: 0x06000896 RID: 2198 RVA: 0x0002DD39 File Offset: 0x0002BF39
+	// Token: 0x060008E0 RID: 2272 RVA: 0x0002E5C9 File Offset: 0x0002C7C9
 	public void UnaryNegation(global::Rotator outV)
 	{
 		outV.Pitch = -this.Pitch;
@@ -362,7 +381,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		outV.Roll = -this.Roll;
 	}
 
-	// Token: 0x06000897 RID: 2199 RVA: 0x0002DD62 File Offset: 0x0002BF62
+	// Token: 0x060008E1 RID: 2273 RVA: 0x0002E5F2 File Offset: 0x0002C7F2
 	public void Reset()
 	{
 		this.Pitch = 0f;
@@ -370,7 +389,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		this.Roll = 0f;
 	}
 
-	// Token: 0x06000898 RID: 2200 RVA: 0x0002DD85 File Offset: 0x0002BF85
+	// Token: 0x060008E2 RID: 2274 RVA: 0x0002E615 File Offset: 0x0002C815
 	public static void UeRotatorCopy(FRotator inR, FRotator outR)
 	{
 		outR.Pitch = inR.Pitch;
@@ -378,7 +397,7 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		outR.Roll = inR.Roll;
 	}
 
-	// Token: 0x06000899 RID: 2201 RVA: 0x0002DDB0 File Offset: 0x0002BFB0
+	// Token: 0x060008E3 RID: 2275 RVA: 0x0002E640 File Offset: 0x0002C840
 	public static void Lerp(global::Rotator from, global::Rotator to, float alpha, global::Rotator outR)
 	{
 		outR.Pitch = to.Pitch - from.Pitch;
@@ -394,13 +413,13 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		MathCommon.VectorNormalizeRotator(outR);
 	}
 
-	// Token: 0x0600089A RID: 2202 RVA: 0x0002DE65 File Offset: 0x0002C065
+	// Token: 0x060008E4 RID: 2276 RVA: 0x0002E6F5 File Offset: 0x0002C8F5
 	public static float AxisLerp(float from, float to, float alpha)
 	{
 		return MathCommon.WrapAngle(MathCommon.WrapAngle(to - from) * alpha + from);
 	}
 
-	// Token: 0x0600089B RID: 2203 RVA: 0x0002DE78 File Offset: 0x0002C078
+	// Token: 0x060008E5 RID: 2277 RVA: 0x0002E708 File Offset: 0x0002C908
 	public Aki.Protocol.Rotator ToProtocolRotator()
 	{
 		Aki.Protocol.Rotator rotator = Aki.Protocol.Rotator.Create();
@@ -410,24 +429,24 @@ public class Rotator : IRotator, IClearable, ILogFormattedPrint
 		return rotator;
 	}
 
-	// Token: 0x0400062A RID: 1578
+	// Token: 0x04000635 RID: 1589
 	public float Pitch;
 
-	// Token: 0x0400062B RID: 1579
+	// Token: 0x04000636 RID: 1590
 	public float Yaw;
 
-	// Token: 0x0400062C RID: 1580
+	// Token: 0x04000637 RID: 1591
 	public float Roll;
 
-	// Token: 0x0400062D RID: 1581
+	// Token: 0x04000638 RID: 1592
 	[Nullable(2)]
 	private Quat QuatInternal;
 
-	// Token: 0x0400062E RID: 1582
+	// Token: 0x04000639 RID: 1593
 	[StaticVariableRuleIgnore]
 	public static readonly global::Rotator ZeroRotatorProxy = new global::Rotator(0f, 0f, 0f);
 
-	// Token: 0x0400062F RID: 1583
+	// Token: 0x0400063A RID: 1594
 	[StaticVariableRuleIgnore]
 	public static readonly FRotator ZeroRotator = new FRotator(0f, 0f, 0f);
 }

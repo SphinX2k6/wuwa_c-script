@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D07 RID: 23815
+	// Token: 0x02004CE9 RID: 19689
 	internal class CommonBossStateViewForDouble : CommonBossStateView
 	{
-		// Token: 0x0603C54F RID: 247119 RVA: 0x00E737CC File Offset: 0x00E719CC
+		// Token: 0x060314A8 RID: 201896 RVA: 0x00DC3E34 File Offset: 0x00DC2034
 		[NullableContext(2)]
 		protected override UniTask InitializeAsync(object param = null)
 		{

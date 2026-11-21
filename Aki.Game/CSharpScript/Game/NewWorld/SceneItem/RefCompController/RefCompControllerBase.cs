@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071B4 RID: 29108
+	// Token: 0x02006269 RID: 25193
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class RefCompControllerBase
 	{
-		// Token: 0x17009DB8 RID: 40376
-		// (get) Token: 0x060473C3 RID: 291779
+		// Token: 0x17007308 RID: 29448
+		// (get) Token: 0x0603CCBE RID: 249022
 		public abstract RefCompDefine.ERefCompControllerType Type { get; }
 
-		// Token: 0x060473C4 RID: 291780 RVA: 0x0121C2F2 File Offset: 0x0121A4F2
+		// Token: 0x0603CCBF RID: 249023 RVA: 0x011761F6 File Offset: 0x011743F6
 		public RefCompControllerBase(Entity entity, long creatureDataId, int pbDataId)
 		{
 			this.Entity = entity;
@@ -23,17 +23,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			this.ActorSubsystem = (UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroActorSubsystem.StaticClass()) as UKuroActorSubsystem);
 		}
 
-		// Token: 0x060473C5 RID: 291781 RVA: 0x0121C32E File Offset: 0x0121A52E
+		// Token: 0x0603CCC0 RID: 249024 RVA: 0x01176232 File Offset: 0x01174432
 		public virtual void OnStart()
 		{
 		}
 
-		// Token: 0x060473C6 RID: 291782 RVA: 0x0121C330 File Offset: 0x0121A530
+		// Token: 0x0603CCC1 RID: 249025 RVA: 0x01176234 File Offset: 0x01174434
 		public virtual void OnEnd()
 		{
 		}
 
-		// Token: 0x060473C7 RID: 291783 RVA: 0x0121C334 File Offset: 0x0121A534
+		// Token: 0x0603CCC2 RID: 249026 RVA: 0x01176238 File Offset: 0x01174438
 		public unsafe void TickController(float delta)
 		{
 			try
@@ -54,12 +54,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			}
 		}
 
-		// Token: 0x060473C8 RID: 291784 RVA: 0x0121C3C0 File Offset: 0x0121A5C0
+		// Token: 0x0603CCC3 RID: 249027 RVA: 0x011762C4 File Offset: 0x011744C4
 		protected virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x060473C9 RID: 291785 RVA: 0x0121C3C4 File Offset: 0x0121A5C4
+		// Token: 0x0603CCC4 RID: 249028 RVA: 0x011762C8 File Offset: 0x011744C8
 		[return: Nullable(2)]
 		protected unsafe AActor GetActorByActorRef(IActorRef actorRef, string reason)
 		{
@@ -85,20 +85,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 			return actorSubsystem.GetActor(dynamicFName ?? FNameUtil.EMPTY);
 		}
 
-		// Token: 0x04025769 RID: 153449
+		// Token: 0x040203D8 RID: 132056
 		public const int PATH_LENGTH = 3;
 
-		// Token: 0x0402576A RID: 153450
+		// Token: 0x040203D9 RID: 132057
 		[Nullable(2)]
 		protected readonly UKuroActorSubsystem ActorSubsystem;
 
-		// Token: 0x0402576B RID: 153451
+		// Token: 0x040203DA RID: 132058
 		protected readonly Entity Entity;
 
-		// Token: 0x0402576C RID: 153452
+		// Token: 0x040203DB RID: 132059
 		protected readonly long CreatureDataId;
 
-		// Token: 0x0402576D RID: 153453
+		// Token: 0x040203DC RID: 132060
 		protected readonly int PbDataId;
 	}
 }

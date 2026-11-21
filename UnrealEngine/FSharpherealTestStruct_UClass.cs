@@ -6,7 +6,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002744 RID: 10052
+	// Token: 0x020007F8 RID: 2040
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,15 +14,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(1000, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 1000)]
 	public class FSharpherealTestStruct_UClass : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06025418 RID: 152600 RVA: 0x003741D8 File Offset: 0x003723D8
+		// Token: 0x0600AEF7 RID: 44791 RVA: 0x00103D21 File Offset: 0x00101F21
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_UClass._ScriptStructPtr != 0) ? FSharpherealTestStruct_UClass._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_UClass", ref FSharpherealTestStruct_UClass._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FE5 RID: 36837
-		// (get) Token: 0x06025419 RID: 152601 RVA: 0x003741FC File Offset: 0x003723FC
-		// (set) Token: 0x0602541A RID: 152602 RVA: 0x0037420C File Offset: 0x0037240C
+		// Token: 0x170020CD RID: 8397
+		// (get) Token: 0x0600AEF8 RID: 44792 RVA: 0x00103D45 File Offset: 0x00101F45
+		// (set) Token: 0x0600AEF9 RID: 44793 RVA: 0x00103D55 File Offset: 0x00101F55
 		public unsafe int DiffKey
 		{
 			get
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FE6 RID: 36838
-		// (get) Token: 0x0602541B RID: 152603 RVA: 0x0037421D File Offset: 0x0037241D
-		// (set) Token: 0x0602541C RID: 152604 RVA: 0x00374231 File Offset: 0x00372431
+		// Token: 0x170020CE RID: 8398
+		// (get) Token: 0x0600AEFA RID: 44794 RVA: 0x00103D66 File Offset: 0x00101F66
+		// (set) Token: 0x0600AEFB RID: 44795 RVA: 0x00103D7A File Offset: 0x00101F7A
 		public unsafe UClassStackOnlyPtr Class
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FE7 RID: 36839
-		// (get) Token: 0x0602541D RID: 152605 RVA: 0x00374246 File Offset: 0x00372446
-		// (set) Token: 0x0602541E RID: 152606 RVA: 0x00374265 File Offset: 0x00372465
+		// Token: 0x170020CF RID: 8399
+		// (get) Token: 0x0600AEFC RID: 44796 RVA: 0x00103D8F File Offset: 0x00101F8F
+		// (set) Token: 0x0600AEFD RID: 44797 RVA: 0x00103DAE File Offset: 0x00101FAE
 		public TSoftClassPtr<USharpherealTestSimpleClass> SoftClass
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FE8 RID: 36840
-		// (get) Token: 0x0602541F RID: 152607 RVA: 0x0037428A File Offset: 0x0037248A
-		// (set) Token: 0x06025420 RID: 152608 RVA: 0x0037429E File Offset: 0x0037249E
+		// Token: 0x170020D0 RID: 8400
+		// (get) Token: 0x0600AEFE RID: 44798 RVA: 0x00103DD3 File Offset: 0x00101FD3
+		// (set) Token: 0x0600AEFF RID: 44799 RVA: 0x00103DE7 File Offset: 0x00101FE7
 		[Nullable(new byte[]
 		{
 			0,
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FE9 RID: 36841
-		// (get) Token: 0x06025421 RID: 152609 RVA: 0x003742B4 File Offset: 0x003724B4
-		// (set) Token: 0x06025422 RID: 152610 RVA: 0x003742F7 File Offset: 0x003724F7
+		// Token: 0x170020D1 RID: 8401
+		// (get) Token: 0x0600AF00 RID: 44800 RVA: 0x00103DFC File Offset: 0x00101FFC
+		// (set) Token: 0x0600AF01 RID: 44801 RVA: 0x00103E3F File Offset: 0x0010203F
 		public FSoftClassPath ClassPath
 		{
 			get
@@ -116,9 +116,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FEA RID: 36842
-		// (get) Token: 0x06025423 RID: 152611 RVA: 0x00374318 File Offset: 0x00372518
-		// (set) Token: 0x06025424 RID: 152612 RVA: 0x0037435B File Offset: 0x0037255B
+		// Token: 0x170020D2 RID: 8402
+		// (get) Token: 0x0600AF02 RID: 44802 RVA: 0x00103E60 File Offset: 0x00102060
+		// (set) Token: 0x0600AF03 RID: 44803 RVA: 0x00103EA3 File Offset: 0x001020A3
 		public TArray<UClass> ClassArray
 		{
 			get
@@ -137,9 +137,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FEB RID: 36843
-		// (get) Token: 0x06025425 RID: 152613 RVA: 0x0037436C File Offset: 0x0037256C
-		// (set) Token: 0x06025426 RID: 152614 RVA: 0x003743AF File Offset: 0x003725AF
+		// Token: 0x170020D3 RID: 8403
+		// (get) Token: 0x0600AF04 RID: 44804 RVA: 0x00103EB4 File Offset: 0x001020B4
+		// (set) Token: 0x0600AF05 RID: 44805 RVA: 0x00103EF7 File Offset: 0x001020F7
 		public TArray<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassArray
 		{
 			get
@@ -158,9 +158,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FEC RID: 36844
-		// (get) Token: 0x06025427 RID: 152615 RVA: 0x003743C0 File Offset: 0x003725C0
-		// (set) Token: 0x06025428 RID: 152616 RVA: 0x00374403 File Offset: 0x00372603
+		// Token: 0x170020D4 RID: 8404
+		// (get) Token: 0x0600AF06 RID: 44806 RVA: 0x00103F08 File Offset: 0x00102108
+		// (set) Token: 0x0600AF07 RID: 44807 RVA: 0x00103F4B File Offset: 0x0010214B
 		[Nullable(new byte[]
 		{
 			1,
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FED RID: 36845
-		// (get) Token: 0x06025429 RID: 152617 RVA: 0x00374414 File Offset: 0x00372614
-		// (set) Token: 0x0602542A RID: 152618 RVA: 0x00374457 File Offset: 0x00372657
+		// Token: 0x170020D5 RID: 8405
+		// (get) Token: 0x0600AF08 RID: 44808 RVA: 0x00103F5C File Offset: 0x0010215C
+		// (set) Token: 0x0600AF09 RID: 44809 RVA: 0x00103F9F File Offset: 0x0010219F
 		public TArray<FSoftClassPath> ClassPathArray
 		{
 			get
@@ -218,9 +218,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FEE RID: 36846
-		// (get) Token: 0x0602542B RID: 152619 RVA: 0x00374468 File Offset: 0x00372668
-		// (set) Token: 0x0602542C RID: 152620 RVA: 0x003744AC File Offset: 0x003726AC
+		// Token: 0x170020D6 RID: 8406
+		// (get) Token: 0x0600AF0A RID: 44810 RVA: 0x00103FB0 File Offset: 0x001021B0
+		// (set) Token: 0x0600AF0B RID: 44811 RVA: 0x00103FF4 File Offset: 0x001021F4
 		public TFixedArray<UClass> ClassFixedArray
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FEF RID: 36847
-		// (get) Token: 0x0602542D RID: 152621 RVA: 0x003744BC File Offset: 0x003726BC
-		// (set) Token: 0x0602542E RID: 152622 RVA: 0x00374500 File Offset: 0x00372700
+		// Token: 0x170020D7 RID: 8407
+		// (get) Token: 0x0600AF0C RID: 44812 RVA: 0x00104004 File Offset: 0x00102204
+		// (set) Token: 0x0600AF0D RID: 44813 RVA: 0x00104048 File Offset: 0x00102248
 		public TFixedArray<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassFixedArray
 		{
 			get
@@ -260,9 +260,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF0 RID: 36848
-		// (get) Token: 0x0602542F RID: 152623 RVA: 0x00374510 File Offset: 0x00372710
-		// (set) Token: 0x06025430 RID: 152624 RVA: 0x00374554 File Offset: 0x00372754
+		// Token: 0x170020D8 RID: 8408
+		// (get) Token: 0x0600AF0E RID: 44814 RVA: 0x00104058 File Offset: 0x00102258
+		// (set) Token: 0x0600AF0F RID: 44815 RVA: 0x0010409C File Offset: 0x0010229C
 		[Nullable(new byte[]
 		{
 			1,
@@ -299,9 +299,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF1 RID: 36849
-		// (get) Token: 0x06025431 RID: 152625 RVA: 0x00374564 File Offset: 0x00372764
-		// (set) Token: 0x06025432 RID: 152626 RVA: 0x003745A8 File Offset: 0x003727A8
+		// Token: 0x170020D9 RID: 8409
+		// (get) Token: 0x0600AF10 RID: 44816 RVA: 0x001040AC File Offset: 0x001022AC
+		// (set) Token: 0x0600AF11 RID: 44817 RVA: 0x001040F0 File Offset: 0x001022F0
 		public TFixedArray<FSoftClassPath> ClassPathFixedArray
 		{
 			get
@@ -320,9 +320,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF2 RID: 36850
-		// (get) Token: 0x06025433 RID: 152627 RVA: 0x003745B8 File Offset: 0x003727B8
-		// (set) Token: 0x06025434 RID: 152628 RVA: 0x003745FB File Offset: 0x003727FB
+		// Token: 0x170020DA RID: 8410
+		// (get) Token: 0x0600AF12 RID: 44818 RVA: 0x00104100 File Offset: 0x00102300
+		// (set) Token: 0x0600AF13 RID: 44819 RVA: 0x00104143 File Offset: 0x00102343
 		public TSet<UClass> ClassSet
 		{
 			get
@@ -341,9 +341,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF3 RID: 36851
-		// (get) Token: 0x06025435 RID: 152629 RVA: 0x0037460C File Offset: 0x0037280C
-		// (set) Token: 0x06025436 RID: 152630 RVA: 0x0037464F File Offset: 0x0037284F
+		// Token: 0x170020DB RID: 8411
+		// (get) Token: 0x0600AF14 RID: 44820 RVA: 0x00104154 File Offset: 0x00102354
+		// (set) Token: 0x0600AF15 RID: 44821 RVA: 0x00104197 File Offset: 0x00102397
 		public TSet<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassSet
 		{
 			get
@@ -362,9 +362,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF4 RID: 36852
-		// (get) Token: 0x06025437 RID: 152631 RVA: 0x00374660 File Offset: 0x00372860
-		// (set) Token: 0x06025438 RID: 152632 RVA: 0x003746A3 File Offset: 0x003728A3
+		// Token: 0x170020DC RID: 8412
+		// (get) Token: 0x0600AF16 RID: 44822 RVA: 0x001041A8 File Offset: 0x001023A8
+		// (set) Token: 0x0600AF17 RID: 44823 RVA: 0x001041EB File Offset: 0x001023EB
 		[Nullable(new byte[]
 		{
 			1,
@@ -401,9 +401,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF5 RID: 36853
-		// (get) Token: 0x06025439 RID: 152633 RVA: 0x003746B4 File Offset: 0x003728B4
-		// (set) Token: 0x0602543A RID: 152634 RVA: 0x003746F7 File Offset: 0x003728F7
+		// Token: 0x170020DD RID: 8413
+		// (get) Token: 0x0600AF18 RID: 44824 RVA: 0x001041FC File Offset: 0x001023FC
+		// (set) Token: 0x0600AF19 RID: 44825 RVA: 0x0010423F File Offset: 0x0010243F
 		public TSet<FSoftClassPath> ClassPathSet
 		{
 			get
@@ -422,9 +422,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF6 RID: 36854
-		// (get) Token: 0x0602543B RID: 152635 RVA: 0x00374708 File Offset: 0x00372908
-		// (set) Token: 0x0602543C RID: 152636 RVA: 0x0037474B File Offset: 0x0037294B
+		// Token: 0x170020DE RID: 8414
+		// (get) Token: 0x0600AF1A RID: 44826 RVA: 0x00104250 File Offset: 0x00102450
+		// (set) Token: 0x0600AF1B RID: 44827 RVA: 0x00104293 File Offset: 0x00102493
 		public TMap<UClass, int> ClassMap
 		{
 			get
@@ -443,9 +443,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF7 RID: 36855
-		// (get) Token: 0x0602543D RID: 152637 RVA: 0x0037475C File Offset: 0x0037295C
-		// (set) Token: 0x0602543E RID: 152638 RVA: 0x0037479F File Offset: 0x0037299F
+		// Token: 0x170020DF RID: 8415
+		// (get) Token: 0x0600AF1C RID: 44828 RVA: 0x001042A4 File Offset: 0x001024A4
+		// (set) Token: 0x0600AF1D RID: 44829 RVA: 0x001042E7 File Offset: 0x001024E7
 		public TMap<TSoftClassPtr<USharpherealTestSimpleClass>, int> SoftClassMap
 		{
 			get
@@ -464,9 +464,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF8 RID: 36856
-		// (get) Token: 0x0602543F RID: 152639 RVA: 0x003747B0 File Offset: 0x003729B0
-		// (set) Token: 0x06025440 RID: 152640 RVA: 0x003747F3 File Offset: 0x003729F3
+		// Token: 0x170020E0 RID: 8416
+		// (get) Token: 0x0600AF1E RID: 44830 RVA: 0x001042F8 File Offset: 0x001024F8
+		// (set) Token: 0x0600AF1F RID: 44831 RVA: 0x0010433B File Offset: 0x0010253B
 		[Nullable(new byte[]
 		{
 			1,
@@ -503,9 +503,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FF9 RID: 36857
-		// (get) Token: 0x06025441 RID: 152641 RVA: 0x00374804 File Offset: 0x00372A04
-		// (set) Token: 0x06025442 RID: 152642 RVA: 0x00374847 File Offset: 0x00372A47
+		// Token: 0x170020E1 RID: 8417
+		// (get) Token: 0x0600AF20 RID: 44832 RVA: 0x0010434C File Offset: 0x0010254C
+		// (set) Token: 0x0600AF21 RID: 44833 RVA: 0x0010438F File Offset: 0x0010258F
 		public TMap<FSoftClassPath, int> ClassPathMap
 		{
 			get
@@ -524,119 +524,69 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025443 RID: 152643 RVA: 0x00374855 File Offset: 0x00372A55
+		// Token: 0x0600AF22 RID: 44834 RVA: 0x0010439D File Offset: 0x0010259D
 		public FSharpherealTestStruct_UClass()
 		{
 		}
 
-		// Token: 0x06025444 RID: 152644 RVA: 0x00374860 File Offset: 0x00372A60
-		public FSharpherealTestStruct_UClass(int DiffKey, UClassStackOnlyPtr Class, TSoftClassPtr<USharpherealTestSimpleClass> SoftClass, [Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<USharpherealTestSimpleClass> SubClass, FSoftClassPath ClassPath, TArray<UClass> ClassArray, TArray<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TArray<TSubclassOf<USharpherealTestSimpleClass>> SubClassArray, TArray<FSoftClassPath> ClassPathArray, TFixedArray<UClass> ClassFixedArray, TFixedArray<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassFixedArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TFixedArray<TSubclassOf<USharpherealTestSimpleClass>> SubClassFixedArray, TFixedArray<FSoftClassPath> ClassPathFixedArray, TSet<UClass> ClassSet, TSet<TSoftClassPtr<USharpherealTestSimpleClass>> SoftClassSet, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TSet<TSubclassOf<USharpherealTestSimpleClass>> SubClassSet, TSet<FSoftClassPath> ClassPathSet, TMap<UClass, int> ClassMap, TMap<TSoftClassPtr<USharpherealTestSimpleClass>, int> SoftClassMap, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TMap<TSubclassOf<USharpherealTestSimpleClass>, int> SubClassMap, TMap<FSoftClassPath, int> ClassPathMap)
-		{
-			this.DiffKey = DiffKey;
-			this.Class = Class;
-			this.SoftClass = SoftClass;
-			this.SubClass = SubClass;
-			this.ClassPath = ClassPath;
-			this.ClassArray = ClassArray;
-			this.SoftClassArray = SoftClassArray;
-			this.SubClassArray = SubClassArray;
-			this.ClassPathArray = ClassPathArray;
-			this.ClassFixedArray = ClassFixedArray;
-			this.SoftClassFixedArray = SoftClassFixedArray;
-			this.SubClassFixedArray = SubClassFixedArray;
-			this.ClassPathFixedArray = ClassPathFixedArray;
-			this.ClassSet = ClassSet;
-			this.SoftClassSet = SoftClassSet;
-			this.SubClassSet = SubClassSet;
-			this.ClassPathSet = ClassPathSet;
-			this.ClassMap = ClassMap;
-			this.SoftClassMap = SoftClassMap;
-			this.SubClassMap = SubClassMap;
-			this.ClassPathMap = ClassPathMap;
-		}
-
-		// Token: 0x06025445 RID: 152645 RVA: 0x00374918 File Offset: 0x00372B18
+		// Token: 0x0600AF23 RID: 44835 RVA: 0x001043A5 File Offset: 0x001025A5
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_UClass.StaticStruct();
 		}
 
-		// Token: 0x06025446 RID: 152646 RVA: 0x00374924 File Offset: 0x00372B24
+		// Token: 0x0600AF24 RID: 44836 RVA: 0x001043B1 File Offset: 0x001025B1
 		[NullableContext(2)]
 		public FSharpherealTestStruct_UClass(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025447 RID: 152647 RVA: 0x0037492E File Offset: 0x00372B2E
+		// Token: 0x0600AF25 RID: 44837 RVA: 0x001043BB File Offset: 0x001025BB
 		public FSharpherealTestStruct_UClass(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025448 RID: 152648 RVA: 0x00374939 File Offset: 0x00372B39
+		// Token: 0x0600AF26 RID: 44838 RVA: 0x001043C6 File Offset: 0x001025C6
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_UClass(Pointer, false, true);
 		}
 
-		// Token: 0x06025449 RID: 152649 RVA: 0x00374943 File Offset: 0x00372B43
+		// Token: 0x0600AF27 RID: 44839 RVA: 0x001043D0 File Offset: 0x001025D0
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_UClass(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014190 RID: 82320
+		// Token: 0x04004BEF RID: 19439
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_UClass";
 
-		// Token: 0x04014191 RID: 82321
+		// Token: 0x04004BF0 RID: 19440
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014192 RID: 82322
+		// Token: 0x04004BF1 RID: 19441
 		internal static int __PropertyOffset_DiffKey;
 
-		// Token: 0x04014193 RID: 82323
+		// Token: 0x04004BF2 RID: 19442
 		internal static int __PropertyOffset_Class;
 
-		// Token: 0x04014194 RID: 82324
+		// Token: 0x04004BF3 RID: 19443
 		internal static int __PropertyOffset_SoftClass;
 
-		// Token: 0x04014195 RID: 82325
+		// Token: 0x04004BF4 RID: 19444
 		internal static int __PropertyOffset_SubClass;
 
-		// Token: 0x04014196 RID: 82326
+		// Token: 0x04004BF5 RID: 19445
 		internal static int __PropertyOffset_ClassPath;
 
-		// Token: 0x04014197 RID: 82327
+		// Token: 0x04004BF6 RID: 19446
 		[Nullable(2)]
 		private FSoftClassPath _ClassPath;
 
-		// Token: 0x04014198 RID: 82328
+		// Token: 0x04004BF7 RID: 19447
 		internal static int __PropertyOffset_ClassArray;
 
-		// Token: 0x04014199 RID: 82329
+		// Token: 0x04004BF8 RID: 19448
 		[Nullable(new byte[]
 		{
 			2,
@@ -644,10 +594,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UClass> _ClassArray;
 
-		// Token: 0x0401419A RID: 82330
+		// Token: 0x04004BF9 RID: 19449
 		internal static int __PropertyOffset_SoftClassArray;
 
-		// Token: 0x0401419B RID: 82331
+		// Token: 0x04004BFA RID: 19450
 		[Nullable(new byte[]
 		{
 			2,
@@ -656,10 +606,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TSoftClassPtr<USharpherealTestSimpleClass>> _SoftClassArray;
 
-		// Token: 0x0401419C RID: 82332
+		// Token: 0x04004BFB RID: 19451
 		internal static int __PropertyOffset_SubClassArray;
 
-		// Token: 0x0401419D RID: 82333
+		// Token: 0x04004BFC RID: 19452
 		[Nullable(new byte[]
 		{
 			2,
@@ -668,10 +618,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TSubclassOf<USharpherealTestSimpleClass>> _SubClassArray;
 
-		// Token: 0x0401419E RID: 82334
+		// Token: 0x04004BFD RID: 19453
 		internal static int __PropertyOffset_ClassPathArray;
 
-		// Token: 0x0401419F RID: 82335
+		// Token: 0x04004BFE RID: 19454
 		[Nullable(new byte[]
 		{
 			2,
@@ -679,10 +629,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSoftClassPath> _ClassPathArray;
 
-		// Token: 0x040141A0 RID: 82336
+		// Token: 0x04004BFF RID: 19455
 		internal static int __PropertyOffset_ClassFixedArray;
 
-		// Token: 0x040141A1 RID: 82337
+		// Token: 0x04004C00 RID: 19456
 		[Nullable(new byte[]
 		{
 			2,
@@ -690,10 +640,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<UClass> _ClassFixedArray;
 
-		// Token: 0x040141A2 RID: 82338
+		// Token: 0x04004C01 RID: 19457
 		internal static int __PropertyOffset_SoftClassFixedArray;
 
-		// Token: 0x040141A3 RID: 82339
+		// Token: 0x04004C02 RID: 19458
 		[Nullable(new byte[]
 		{
 			2,
@@ -702,10 +652,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TSoftClassPtr<USharpherealTestSimpleClass>> _SoftClassFixedArray;
 
-		// Token: 0x040141A4 RID: 82340
+		// Token: 0x04004C03 RID: 19459
 		internal static int __PropertyOffset_SubClassFixedArray;
 
-		// Token: 0x040141A5 RID: 82341
+		// Token: 0x04004C04 RID: 19460
 		[Nullable(new byte[]
 		{
 			2,
@@ -714,10 +664,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TSubclassOf<USharpherealTestSimpleClass>> _SubClassFixedArray;
 
-		// Token: 0x040141A6 RID: 82342
+		// Token: 0x04004C05 RID: 19461
 		internal static int __PropertyOffset_ClassPathFixedArray;
 
-		// Token: 0x040141A7 RID: 82343
+		// Token: 0x04004C06 RID: 19462
 		[Nullable(new byte[]
 		{
 			2,
@@ -725,10 +675,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FSoftClassPath> _ClassPathFixedArray;
 
-		// Token: 0x040141A8 RID: 82344
+		// Token: 0x04004C07 RID: 19463
 		internal static int __PropertyOffset_ClassSet;
 
-		// Token: 0x040141A9 RID: 82345
+		// Token: 0x04004C08 RID: 19464
 		[Nullable(new byte[]
 		{
 			2,
@@ -736,10 +686,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UClass> _ClassSet;
 
-		// Token: 0x040141AA RID: 82346
+		// Token: 0x04004C09 RID: 19465
 		internal static int __PropertyOffset_SoftClassSet;
 
-		// Token: 0x040141AB RID: 82347
+		// Token: 0x04004C0A RID: 19466
 		[Nullable(new byte[]
 		{
 			2,
@@ -748,10 +698,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TSoftClassPtr<USharpherealTestSimpleClass>> _SoftClassSet;
 
-		// Token: 0x040141AC RID: 82348
+		// Token: 0x04004C0B RID: 19467
 		internal static int __PropertyOffset_SubClassSet;
 
-		// Token: 0x040141AD RID: 82349
+		// Token: 0x04004C0C RID: 19468
 		[Nullable(new byte[]
 		{
 			2,
@@ -760,10 +710,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TSubclassOf<USharpherealTestSimpleClass>> _SubClassSet;
 
-		// Token: 0x040141AE RID: 82350
+		// Token: 0x04004C0D RID: 19469
 		internal static int __PropertyOffset_ClassPathSet;
 
-		// Token: 0x040141AF RID: 82351
+		// Token: 0x04004C0E RID: 19470
 		[Nullable(new byte[]
 		{
 			2,
@@ -771,10 +721,10 @@ namespace UnrealEngine
 		})]
 		private TSet<FSoftClassPath> _ClassPathSet;
 
-		// Token: 0x040141B0 RID: 82352
+		// Token: 0x04004C0F RID: 19471
 		internal static int __PropertyOffset_ClassMap;
 
-		// Token: 0x040141B1 RID: 82353
+		// Token: 0x04004C10 RID: 19472
 		[Nullable(new byte[]
 		{
 			2,
@@ -782,10 +732,10 @@ namespace UnrealEngine
 		})]
 		private TMap<UClass, int> _ClassMap;
 
-		// Token: 0x040141B2 RID: 82354
+		// Token: 0x04004C11 RID: 19473
 		internal static int __PropertyOffset_SoftClassMap;
 
-		// Token: 0x040141B3 RID: 82355
+		// Token: 0x04004C12 RID: 19474
 		[Nullable(new byte[]
 		{
 			2,
@@ -794,10 +744,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TSoftClassPtr<USharpherealTestSimpleClass>, int> _SoftClassMap;
 
-		// Token: 0x040141B4 RID: 82356
+		// Token: 0x04004C13 RID: 19475
 		internal static int __PropertyOffset_SubClassMap;
 
-		// Token: 0x040141B5 RID: 82357
+		// Token: 0x04004C14 RID: 19476
 		[Nullable(new byte[]
 		{
 			2,
@@ -806,10 +756,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TSubclassOf<USharpherealTestSimpleClass>, int> _SubClassMap;
 
-		// Token: 0x040141B6 RID: 82358
+		// Token: 0x04004C15 RID: 19477
 		internal static int __PropertyOffset_ClassPathMap;
 
-		// Token: 0x040141B7 RID: 82359
+		// Token: 0x04004C16 RID: 19478
 		[Nullable(new byte[]
 		{
 			2,

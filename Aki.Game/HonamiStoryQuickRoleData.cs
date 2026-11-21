@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory.Data;
 
-// Token: 0x02001E79 RID: 7801
+// Token: 0x0200133B RID: 4923
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryQuickRoleData
 {
-	// Token: 0x0600EDC2 RID: 60866 RVA: 0x00389DF4 File Offset: 0x00387FF4
+	// Token: 0x0600C1E1 RID: 49633 RVA: 0x003959E4 File Offset: 0x00393BE4
 	public void Init(HonamiStoryRoleEquipData roleData)
 	{
 		this.Clear();
@@ -24,7 +24,7 @@ public class HonamiStoryQuickRoleData
 		}
 	}
 
-	// Token: 0x0600EDC3 RID: 60867 RVA: 0x00389E60 File Offset: 0x00388060
+	// Token: 0x0600C1E2 RID: 49634 RVA: 0x00395A50 File Offset: 0x00393C50
 	public void Clear()
 	{
 		this.SortMap.Clear();
@@ -33,7 +33,7 @@ public class HonamiStoryQuickRoleData
 		this.SuitNeedMap.Clear();
 	}
 
-	// Token: 0x0600EDC4 RID: 60868 RVA: 0x00389E90 File Offset: 0x00388090
+	// Token: 0x0600C1E3 RID: 49635 RVA: 0x00395A80 File Offset: 0x00393C80
 	private void InitSuitList()
 	{
 		if (this.RoleData.GetParentRoleId() <= 0)
@@ -63,7 +63,7 @@ public class HonamiStoryQuickRoleData
 		}
 	}
 
-	// Token: 0x0600EDC5 RID: 60869 RVA: 0x00389F70 File Offset: 0x00388170
+	// Token: 0x0600C1E4 RID: 49636 RVA: 0x00395B60 File Offset: 0x00393D60
 	public int GetMaxPower(Dictionary<int, List<HonamiStoryItemDataBase>> itemMap, [Nullable(new byte[]
 	{
 		2,
@@ -114,7 +114,7 @@ public class HonamiStoryQuickRoleData
 		return this.BestPower;
 	}
 
-	// Token: 0x0600EDC6 RID: 60870 RVA: 0x0038A178 File Offset: 0x00388378
+	// Token: 0x0600C1E5 RID: 49637 RVA: 0x00395D68 File Offset: 0x00393F68
 	protected int GetPower(HonamiStoryItemDataBase item, bool needPlus = true)
 	{
 		HonamiStoryEquipItemData honamiStoryEquipItemData = item as HonamiStoryEquipItemData;
@@ -134,7 +134,7 @@ public class HonamiStoryQuickRoleData
 		return num;
 	}
 
-	// Token: 0x0600EDC7 RID: 60871 RVA: 0x0038A1D4 File Offset: 0x003883D4
+	// Token: 0x0600C1E6 RID: 49638 RVA: 0x00395DC4 File Offset: 0x00393FC4
 	private int ItemSort(HonamiStoryItemDataBase a, HonamiStoryItemDataBase b, Dictionary<HonamiStoryItemDataBase, int> itemSortIndexMap)
 	{
 		int power = this.GetPower(b, true);
@@ -173,7 +173,7 @@ public class HonamiStoryQuickRoleData
 		}
 	}
 
-	// Token: 0x0600EDC8 RID: 60872 RVA: 0x0038A264 File Offset: 0x00388464
+	// Token: 0x0600C1E7 RID: 49639 RVA: 0x00395E54 File Offset: 0x00394054
 	private int ItemSortNoPlus(HonamiStoryItemDataBase a, HonamiStoryItemDataBase b)
 	{
 		int power = this.GetPower(b, false);
@@ -181,7 +181,7 @@ public class HonamiStoryQuickRoleData
 		return power - power2;
 	}
 
-	// Token: 0x0600EDC9 RID: 60873 RVA: 0x0038A284 File Offset: 0x00388484
+	// Token: 0x0600C1E8 RID: 49640 RVA: 0x00395E74 File Offset: 0x00394074
 	private int GetBest(List<IHonamiStoryQuickSubType> powerList)
 	{
 		int num = 0;
@@ -225,7 +225,7 @@ public class HonamiStoryQuickRoleData
 		return num;
 	}
 
-	// Token: 0x0600EDCA RID: 60874 RVA: 0x0038A45C File Offset: 0x0038865C
+	// Token: 0x0600C1E9 RID: 49641 RVA: 0x0039604C File Offset: 0x0039424C
 	private List<HonamiStoryEquipItemData> GetBestList(List<HonamiStoryItemDataBase> itemList, int length, HashSet<HonamiStoryItemDataBase> ignoreSet)
 	{
 		int num = 0;
@@ -258,7 +258,7 @@ public class HonamiStoryQuickRoleData
 		return this.CompareList(list, list2, length);
 	}
 
-	// Token: 0x0600EDCB RID: 60875 RVA: 0x0038A508 File Offset: 0x00388708
+	// Token: 0x0600C1EA RID: 49642 RVA: 0x003960F8 File Offset: 0x003942F8
 	private List<HonamiStoryEquipItemData> CompareList(List<HonamiStoryEquipItemData> goodItemList, List<HonamiStoryEquipItemData> badItemList, int length)
 	{
 		List<HonamiStoryEquipItemData> list = new List<HonamiStoryEquipItemData>();
@@ -287,7 +287,7 @@ public class HonamiStoryQuickRoleData
 		return list;
 	}
 
-	// Token: 0x0600EDCC RID: 60876 RVA: 0x0038A5D8 File Offset: 0x003887D8
+	// Token: 0x0600C1EB RID: 49643 RVA: 0x003961C8 File Offset: 0x003943C8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -330,7 +330,7 @@ public class HonamiStoryQuickRoleData
 		return new ValueTuple<HashSet<int>, List<HonamiStoryEquipItemData>>(groupList, list3);
 	}
 
-	// Token: 0x0600EDCD RID: 60877 RVA: 0x0038A6E4 File Offset: 0x003888E4
+	// Token: 0x0600C1EC RID: 49644 RVA: 0x003962D4 File Offset: 0x003944D4
 	public List<int> ApplyQuickEquip(HashSet<HonamiStoryItemDataBase> itemSet, HonamiStoryBagUpdateContext playerContext, HonamiStoryBagUpdateContext bagContext, HonamiStoryBagUpdateContext pickContext)
 	{
 		int honamiStoryPluginPosition = this.RoleData.GetHonamiStoryPluginPosition(0);
@@ -377,36 +377,36 @@ public class HonamiStoryQuickRoleData
 		return list;
 	}
 
-	// Token: 0x04006E4A RID: 28234
+	// Token: 0x04006F2B RID: 28459
 	public int RoleId;
 
-	// Token: 0x04006E4B RID: 28235
+	// Token: 0x04006F2C RID: 28460
 	public HonamiStoryRoleEquipData RoleData;
 
-	// Token: 0x04006E4C RID: 28236
+	// Token: 0x04006F2D RID: 28461
 	public List<int> SuitNeedList = new List<int>();
 
-	// Token: 0x04006E4D RID: 28237
+	// Token: 0x04006F2E RID: 28462
 	public Dictionary<int, List<int>> SuitNeedMap = new Dictionary<int, List<int>>();
 
-	// Token: 0x04006E4E RID: 28238
+	// Token: 0x04006F2F RID: 28463
 	public int SlotUnlockCount;
 
-	// Token: 0x04006E4F RID: 28239
+	// Token: 0x04006F30 RID: 28464
 	private List<int> WeaponTags = new List<int>();
 
-	// Token: 0x04006E50 RID: 28240
+	// Token: 0x04006F31 RID: 28465
 	private readonly Dictionary<int, List<HonamiStoryItemDataBase>> SortMap = new Dictionary<int, List<HonamiStoryItemDataBase>>();
 
-	// Token: 0x04006E51 RID: 28241
+	// Token: 0x04006F32 RID: 28466
 	public List<HonamiStoryItemDataBase> BestResult = new List<HonamiStoryItemDataBase>();
 
-	// Token: 0x04006E52 RID: 28242
+	// Token: 0x04006F33 RID: 28467
 	public int BestPower;
 
-	// Token: 0x04006E53 RID: 28243
+	// Token: 0x04006F34 RID: 28468
 	public int RealBestPower;
 
-	// Token: 0x04006E54 RID: 28244
+	// Token: 0x04006F35 RID: 28469
 	private readonly HonamiSortOrderListClass SortOrder = new HonamiSortOrderListClass();
 }

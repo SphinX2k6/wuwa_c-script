@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000540 RID: 1344
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005A7 RID: 1447
 	public class INavMeshSourceTypeBase
 	{
-		// Token: 0x06001B7C RID: 7036 RVA: 0x0004F7A4 File Offset: 0x0004D9A4
+		// Token: 0x06001D78 RID: 7544 RVA: 0x00054560 File Offset: 0x00052760
 		private INavMeshSourceTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001B7D RID: 7037 RVA: 0x0004F7DC File Offset: 0x0004D9DC
+		// Token: 0x06001D79 RID: 7545 RVA: 0x00054598 File Offset: 0x00052798
 		public static INavMeshSourceTypeBase Create([Nullable(2)] INavMeshSourceTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B7E RID: 7038 RVA: 0x0004F7EF File Offset: 0x0004D9EF
+		// Token: 0x06001D7A RID: 7546 RVA: 0x000545AB File Offset: 0x000527AB
 		public static INavMeshSourceTypeBase CreateFromSetValue([Nullable(2)] INavMeshSourceTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001B7F RID: 7039 RVA: 0x0004F802 File Offset: 0x0004DA02
+		// Token: 0x06001D7B RID: 7547 RVA: 0x000545BE File Offset: 0x000527BE
 		public INavMeshSourceTypeBase_SetValue ToSetValue()
 		{
 			return new INavMeshSourceTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700073D RID: 1853
-		// (get) Token: 0x06001B80 RID: 7040 RVA: 0x0004F815 File Offset: 0x0004DA15
-		// (set) Token: 0x06001B81 RID: 7041 RVA: 0x0004F840 File Offset: 0x0004DA40
+		// Token: 0x170007C0 RID: 1984
+		// (get) Token: 0x06001D7C RID: 7548 RVA: 0x000545D1 File Offset: 0x000527D1
+		// (set) Token: 0x06001D7D RID: 7549 RVA: 0x000545FC File Offset: 0x000527FC
 		public virtual ENavMeshSourceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040013CB RID: 5067
+		// Token: 0x04001535 RID: 5429
 		[Nullable(2)]
 		protected INavMeshSourceTypeBase FbInstance;
 
-		// Token: 0x040013CC RID: 5068
+		// Token: 0x04001536 RID: 5430
 		[Nullable(2)]
 		protected INavMeshSourceTypeBase_SetValue PocoInterface;
 	}

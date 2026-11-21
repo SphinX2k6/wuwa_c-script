@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02002B9A RID: 11162
+// Token: 0x02002116 RID: 8470
 public interface ISurvivorsHandbookWeaponData : ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x17001F27 RID: 7975
-	// (get) Token: 0x06017204 RID: 94724
+	// Token: 0x17001F7F RID: 8063
+	// (get) Token: 0x06014C35 RID: 85045
 	int SortId { get; }
 }

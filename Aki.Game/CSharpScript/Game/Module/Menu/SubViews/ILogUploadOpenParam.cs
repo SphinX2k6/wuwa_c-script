@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005420 RID: 21536
+	// Token: 0x02004403 RID: 17411
 	public interface ILogUploadOpenParam
 	{
-		// Token: 0x17008436 RID: 33846
-		// (get) Token: 0x06037075 RID: 225397
-		// (set) Token: 0x06037076 RID: 225398
+		// Token: 0x17005802 RID: 22530
+		// (get) Token: 0x0602BFBE RID: 180158
+		// (set) Token: 0x0602BFBF RID: 180159
 		EKuroSdkOpenCustomerServerType? OpenSourceType { get; set; }
 
-		// Token: 0x17008437 RID: 33847
-		// (get) Token: 0x06037077 RID: 225399
-		// (set) Token: 0x06037078 RID: 225400
+		// Token: 0x17005803 RID: 22531
+		// (get) Token: 0x0602BFC0 RID: 180160
+		// (set) Token: 0x0602BFC1 RID: 180161
 		bool? AutoStartUpload { get; set; }
 
-		// Token: 0x17008438 RID: 33848
-		// (get) Token: 0x06037079 RID: 225401
-		// (set) Token: 0x0603707A RID: 225402
+		// Token: 0x17005804 RID: 22532
+		// (get) Token: 0x0602BFC2 RID: 180162
+		// (set) Token: 0x0602BFC3 RID: 180163
 		int? ErrorCode { get; set; }
 	}
 }

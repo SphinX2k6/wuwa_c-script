@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Plot;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F88 RID: 28552
+	// Token: 0x02006109 RID: 24841
 	public class LevelFlowFadeInScreen : LevelFlowActionBase
 	{
-		// Token: 0x06045705 RID: 284421 RVA: 0x01138025 File Offset: 0x01136225
+		// Token: 0x0603B8B3 RID: 243891 RVA: 0x010E1E29 File Offset: 0x010E0029
 		[NullableContext(1)]
 		public LevelFlowFadeInScreen Init(FadeInScreen inParams)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045706 RID: 284422 RVA: 0x01138030 File Offset: 0x01136230
+		// Token: 0x0603B8B4 RID: 243892 RVA: 0x010E1E34 File Offset: 0x010E0034
 		protected override void OnExecute()
 		{
 			if (this.InParams == null)
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			EventSystem.Instance.Emit<bool, Action>(EEventName.PlotViewBgFadeBlackScreen, true, new Action(this.OnFadeComplete));
 		}
 
-		// Token: 0x06045707 RID: 284423 RVA: 0x01138207 File Offset: 0x01136407
+		// Token: 0x0603B8B5 RID: 243893 RVA: 0x010E200B File Offset: 0x010E020B
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x040243BA RID: 148410
+		// Token: 0x0401F66F RID: 128623
 		[Nullable(2)]
 		private FadeInScreen InParams;
 	}

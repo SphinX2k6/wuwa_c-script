@@ -18,33 +18,33 @@ using UnrealEngine;
 [Model(0)]
 public class AiModel : ModelBase
 {
-	// Token: 0x06000CAD RID: 3245 RVA: 0x0004274D File Offset: 0x0004094D
+	// Token: 0x06000CB3 RID: 3251 RVA: 0x000432E1 File Offset: 0x000414E1
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add(EEventName.CharHoldingHandsChanged, new Action<int, bool, EHoldingHandsRoleState, global::EHandType>(this.OnCharHoldingHandsChanged));
 		return true;
 	}
 
-	// Token: 0x06000CAE RID: 3246 RVA: 0x0004276C File Offset: 0x0004096C
+	// Token: 0x06000CB4 RID: 3252 RVA: 0x00043300 File Offset: 0x00041500
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.CharHoldingHandsChanged, new Action<int, bool, EHoldingHandsRoleState, global::EHandType>(this.OnCharHoldingHandsChanged));
 		return true;
 	}
 
-	// Token: 0x06000CAF RID: 3247 RVA: 0x0004278B File Offset: 0x0004098B
+	// Token: 0x06000CB5 RID: 3253 RVA: 0x0004331F File Offset: 0x0004151F
 	public void AddAiScore(IScoreUpdateObject scoreObject)
 	{
 		this.AiScoreManager.AddScore(scoreObject, 1);
 	}
 
-	// Token: 0x06000CB0 RID: 3248 RVA: 0x0004279A File Offset: 0x0004099A
+	// Token: 0x06000CB6 RID: 3254 RVA: 0x0004332E File Offset: 0x0004152E
 	public void RemoveObject(IScoreUpdateObject scoreObject)
 	{
 		this.AiScoreManager.RemoveObject(scoreObject);
 	}
 
-	// Token: 0x06000CB1 RID: 3249 RVA: 0x000427A8 File Offset: 0x000409A8
+	// Token: 0x06000CB7 RID: 3255 RVA: 0x0004333C File Offset: 0x0004153C
 	public AiTeam GetAiTeam(int teamLevelId = 1)
 	{
 		AiTeam aiTeam;
@@ -61,7 +61,7 @@ public class AiModel : ModelBase
 		return aiTeam;
 	}
 
-	// Token: 0x06000CB2 RID: 3250 RVA: 0x000427F8 File Offset: 0x000409F8
+	// Token: 0x06000CB8 RID: 3256 RVA: 0x0004338C File Offset: 0x0004158C
 	public void AddActiveAiController(AiController aiController)
 	{
 		int id = aiController.CharAiDesignComp.Entity.Id;
@@ -97,7 +97,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB3 RID: 3251 RVA: 0x000428DC File Offset: 0x00040ADC
+	// Token: 0x06000CB9 RID: 3257 RVA: 0x00043470 File Offset: 0x00041670
 	public void RemoveActiveAiController(AiController aiController)
 	{
 		if (!this.ActiveAiControllers.Remove(aiController.CharAiDesignComp.Entity.Id))
@@ -127,7 +127,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB4 RID: 3252 RVA: 0x00042989 File Offset: 0x00040B89
+	// Token: 0x06000CBA RID: 3258 RVA: 0x0004351D File Offset: 0x0004171D
 	public void OnCharHoldingHandsChanged(int entityId, bool isEnter, EHoldingHandsRoleState state, global::EHandType handType)
 	{
 		if (this.AiBehaviorTreeMap.Count > 0)
@@ -136,7 +136,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB5 RID: 3253 RVA: 0x000429A0 File Offset: 0x00040BA0
+	// Token: 0x06000CBB RID: 3259 RVA: 0x00043534 File Offset: 0x00041734
 	public void CheckAiRemoveCondition()
 	{
 		List<string> list = new List<string>();
@@ -154,7 +154,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB6 RID: 3254 RVA: 0x00042A68 File Offset: 0x00040C68
+	// Token: 0x06000CBC RID: 3260 RVA: 0x000435FC File Offset: 0x000417FC
 	public unsafe void SetAiBehaviorTree(OverrideAiBehaviorTree @params)
 	{
 		if (this.AiBehaviorTreeMap.ContainsKey(@params.Key))
@@ -214,7 +214,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB7 RID: 3255 RVA: 0x00042CA4 File Offset: 0x00040EA4
+	// Token: 0x06000CBD RID: 3261 RVA: 0x00043838 File Offset: 0x00041A38
 	public unsafe void ResetAiBehaviorTree(string key)
 	{
 		if (!this.AiBehaviorTreeMap.ContainsKey(key))
@@ -249,7 +249,7 @@ public class AiModel : ModelBase
 		this.AiBehaviorTreeMap.Remove(key);
 	}
 
-	// Token: 0x06000CB8 RID: 3256 RVA: 0x00042DB8 File Offset: 0x00040FB8
+	// Token: 0x06000CBE RID: 3262 RVA: 0x0004394C File Offset: 0x00041B4C
 	public void UpdateEntityLookAt()
 	{
 		if (Global.BaseCharacter == null || (this.PlotLookAtListener.Count == 0 && this.RangeCheckListener.Count == 0))
@@ -288,7 +288,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CB9 RID: 3257 RVA: 0x00042F64 File Offset: 0x00041164
+	// Token: 0x06000CBF RID: 3263 RVA: 0x00043AF8 File Offset: 0x00041CF8
 	private void UpdateLookAtFlowEntity()
 	{
 		foreach (KeyValuePair<string, List<ValueTuple<int, RangeCheck, IEntityLookAtPerform>>> keyValuePair in this.RangeCheckListener)
@@ -321,7 +321,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CBA RID: 3258 RVA: 0x000430F8 File Offset: 0x000412F8
+	// Token: 0x06000CC0 RID: 3264 RVA: 0x00043C8C File Offset: 0x00041E8C
 	private void UpdateLookAtPlotEntity()
 	{
 		string flowName = FlowController.Instance.GetFlowName();
@@ -347,7 +347,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CBB RID: 3259 RVA: 0x00043220 File Offset: 0x00041420
+	// Token: 0x06000CC1 RID: 3265 RVA: 0x00043DB4 File Offset: 0x00041FB4
 	[NullableContext(2)]
 	private void SetEntityPerform(int entityId, IEntityLookAtPerform perform = null)
 	{
@@ -432,7 +432,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CBC RID: 3260 RVA: 0x00043418 File Offset: 0x00041618
+	// Token: 0x06000CC2 RID: 3266 RVA: 0x00043FAC File Offset: 0x000421AC
 	private void StopEntityPerform(int entityId)
 	{
 		EntityHandle entityById = CreatureModel.Instance.GetEntityById(entityId);
@@ -485,7 +485,7 @@ public class AiModel : ModelBase
 		this.EntityExpressionMap.Remove(entityId);
 	}
 
-	// Token: 0x06000CBD RID: 3261 RVA: 0x00043508 File Offset: 0x00041708
+	// Token: 0x06000CC3 RID: 3267 RVA: 0x0004409C File Offset: 0x0004229C
 	private void SetEntityLookAtTarget(EntityHandle entity, [Nullable(2)] EntityHandle target, bool look, bool first)
 	{
 		WorldEntity entity2 = entity.Entity;
@@ -545,7 +545,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CBE RID: 3262 RVA: 0x000435F6 File Offset: 0x000417F6
+	// Token: 0x06000CC4 RID: 3268 RVA: 0x0004418A File Offset: 0x0004238A
 	private bool SetEntityLookAtBubbleTarget(EntityHandle key, EntityHandle target, [Nullable(2)] IEntityLookAtPerform perform)
 	{
 		WorldEntity entity = target.Entity;
@@ -558,7 +558,7 @@ public class AiModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06000CBF RID: 3263 RVA: 0x00043630 File Offset: 0x00041830
+	// Token: 0x06000CC5 RID: 3269 RVA: 0x000441C4 File Offset: 0x000423C4
 	private void SetEntityLookAtPlotTarget(EntityHandle key, ICheckFlowLookAtTarget param, [Nullable(2)] IEntityLookAtPerform perform)
 	{
 		ECheckFlowLookAtTargetType type = param.Type;
@@ -585,7 +585,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CC0 RID: 3264 RVA: 0x000436C0 File Offset: 0x000418C0
+	// Token: 0x06000CC6 RID: 3270 RVA: 0x00044254 File Offset: 0x00042454
 	public unsafe void EnableEntityLookAt(EnableEntityLookAt param)
 	{
 		this.EntityLookAtMap[param.Key] = new List<EntityHandle>();
@@ -661,7 +661,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CC1 RID: 3265 RVA: 0x00043A20 File Offset: 0x00041C20
+	// Token: 0x06000CC7 RID: 3271 RVA: 0x000445B4 File Offset: 0x000427B4
 	public void DisableEntityLookAt(string key)
 	{
 		List<EntityHandle> list;
@@ -678,8 +678,8 @@ public class AiModel : ModelBase
 		this.RangeCheckListener.Remove(key);
 	}
 
-	// Token: 0x17000253 RID: 595
-	// (get) Token: 0x06000CC2 RID: 3266 RVA: 0x00043AB4 File Offset: 0x00041CB4
+	// Token: 0x17000256 RID: 598
+	// (get) Token: 0x06000CC8 RID: 3272 RVA: 0x00044648 File Offset: 0x00042848
 	public static AiModel Instance
 	{
 		get
@@ -688,7 +688,7 @@ public class AiModel : ModelBase
 		}
 	}
 
-	// Token: 0x06000CC3 RID: 3267 RVA: 0x00043ABB File Offset: 0x00041CBB
+	// Token: 0x06000CC9 RID: 3273 RVA: 0x0004464F File Offset: 0x0004284F
 	public static AiModel GetOrCreateInstance()
 	{
 		if (AiModel._Instance == null)
@@ -698,7 +698,7 @@ public class AiModel : ModelBase
 		return AiModel._Instance;
 	}
 
-	// Token: 0x06000CC4 RID: 3268 RVA: 0x00043ACF File Offset: 0x00041CCF
+	// Token: 0x06000CCA RID: 3274 RVA: 0x00044663 File Offset: 0x00042863
 	public static bool CreateInstance()
 	{
 		if (AiModel._Instance != null)
@@ -709,51 +709,51 @@ public class AiModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06000CC5 RID: 3269 RVA: 0x00043AE5 File Offset: 0x00041CE5
+	// Token: 0x06000CCB RID: 3275 RVA: 0x00044679 File Offset: 0x00042879
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000CC6 RID: 3270 RVA: 0x00043AE7 File Offset: 0x00041CE7
+	// Token: 0x06000CCC RID: 3276 RVA: 0x0004467B File Offset: 0x0004287B
 	public static void ResetStaticDefaultValue()
 	{
 		AiModel._Instance = null;
 	}
 
-	// Token: 0x06000CC7 RID: 3271 RVA: 0x00043AEF File Offset: 0x00041CEF
+	// Token: 0x06000CCD RID: 3277 RVA: 0x00044683 File Offset: 0x00042883
 	static AiModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiModel.CreateStaticDefaultValue), new Action(AiModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000A17 RID: 2583
+	// Token: 0x04000A1F RID: 2591
 	public readonly Dictionary<int, AiTeam> ActiveAiTeams = new Dictionary<int, AiTeam>();
 
-	// Token: 0x04000A18 RID: 2584
+	// Token: 0x04000A20 RID: 2592
 	public readonly Dictionary<int, AiController> ActiveAiControllers = new Dictionary<int, AiController>();
 
-	// Token: 0x04000A19 RID: 2585
+	// Token: 0x04000A21 RID: 2593
 	public readonly ScoreUpdateManager AiScoreManager = new ScoreUpdateManager(0.5f, 5);
 
-	// Token: 0x04000A1A RID: 2586
+	// Token: 0x04000A22 RID: 2594
 	public readonly Dictionary<int, Dictionary<long, HashSet<AiController>>> HatredGroups = new Dictionary<int, Dictionary<long, HashSet<AiController>>>();
 
-	// Token: 0x04000A1B RID: 2587
+	// Token: 0x04000A23 RID: 2595
 	private readonly Dictionary<AiController, int> CampMap = new Dictionary<AiController, int>();
 
-	// Token: 0x04000A1C RID: 2588
+	// Token: 0x04000A24 RID: 2596
 	private int CurrentTeamId;
 
-	// Token: 0x04000A1D RID: 2589
+	// Token: 0x04000A25 RID: 2597
 	private readonly Dictionary<string, OverrideAiBehaviorTree> AiBehaviorTreeMap = new Dictionary<string, OverrideAiBehaviorTree>();
 
-	// Token: 0x04000A1E RID: 2590
+	// Token: 0x04000A26 RID: 2598
 	private readonly Dictionary<string, List<EntityHandle>> EntityLookAtMap = new Dictionary<string, List<EntityHandle>>();
 
-	// Token: 0x04000A1F RID: 2591
+	// Token: 0x04000A27 RID: 2599
 	private readonly Dictionary<int, int> EntityLookAtTargetMap = new Dictionary<int, int>();
 
-	// Token: 0x04000A20 RID: 2592
+	// Token: 0x04000A28 RID: 2600
 	[TupleElementNames(new string[]
 	{
 		"Target",
@@ -769,13 +769,13 @@ public class AiModel : ModelBase
 	})]
 	private readonly Dictionary<EntityHandle, ValueTuple<EntityHandle, IEntityLookAtPerform>> TempEntityLookAtTargetMap = new Dictionary<EntityHandle, ValueTuple<EntityHandle, IEntityLookAtPerform>>();
 
-	// Token: 0x04000A21 RID: 2593
+	// Token: 0x04000A29 RID: 2601
 	private readonly Dictionary<int, int> EntityPlayMontageMap = new Dictionary<int, int>();
 
-	// Token: 0x04000A22 RID: 2594
+	// Token: 0x04000A2A RID: 2602
 	private readonly Dictionary<int, int> EntityExpressionMap = new Dictionary<int, int>();
 
-	// Token: 0x04000A23 RID: 2595
+	// Token: 0x04000A2B RID: 2603
 	[TupleElementNames(new string[]
 	{
 		"PlotName",
@@ -794,7 +794,7 @@ public class AiModel : ModelBase
 	})]
 	private readonly Dictionary<string, List<ValueTuple<string, ICheckFlowLookAtTarget, IEntityLookAtPerform>>> PlotLookAtListener = new Dictionary<string, List<ValueTuple<string, ICheckFlowLookAtTarget, IEntityLookAtPerform>>>();
 
-	// Token: 0x04000A24 RID: 2596
+	// Token: 0x04000A2C RID: 2604
 	[TupleElementNames(new string[]
 	{
 		"Target",
@@ -812,7 +812,7 @@ public class AiModel : ModelBase
 	})]
 	private readonly Dictionary<string, List<ValueTuple<int, RangeCheck, IEntityLookAtPerform>>> RangeCheckListener = new Dictionary<string, List<ValueTuple<int, RangeCheck, IEntityLookAtPerform>>>();
 
-	// Token: 0x04000A25 RID: 2597
+	// Token: 0x04000A2D RID: 2605
 	[Nullable(2)]
 	private static AiModel _Instance;
 }

@@ -6,75 +6,75 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x0200165B RID: 5723
+// Token: 0x02000B13 RID: 2835
 [NullableContext(1)]
 [Nullable(0)]
 public class WuWuLogisticsActivityController : ActivityControllerBase
 {
-	// Token: 0x0600A145 RID: 41285 RVA: 0x00239522 File Offset: 0x00237722
+	// Token: 0x06007523 RID: 29987 RVA: 0x002433BE File Offset: 0x002415BE
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.WuWuTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnWuWuTaskUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.ThemeCeleWuWuTaskNotify, new Action<IMessage, Net.CallbackStatus>(this.OnThemeCeleWuWuTaskNotify));
 	}
 
-	// Token: 0x0600A146 RID: 41286 RVA: 0x0023955C File Offset: 0x0023775C
+	// Token: 0x06007524 RID: 29988 RVA: 0x002433F8 File Offset: 0x002415F8
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.WuWuTaskUpdateNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ThemeCeleWuWuTaskNotify);
 	}
 
-	// Token: 0x0600A147 RID: 41287 RVA: 0x0023957E File Offset: 0x0023777E
+	// Token: 0x06007525 RID: 29989 RVA: 0x0024341A File Offset: 0x0024161A
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnUpdatePackData));
 	}
 
-	// Token: 0x0600A148 RID: 41288 RVA: 0x0023959C File Offset: 0x0023779C
+	// Token: 0x06007526 RID: 29990 RVA: 0x00243438 File Offset: 0x00241638
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnUpdatePackData));
 	}
 
-	// Token: 0x0600A149 RID: 41289 RVA: 0x002395BA File Offset: 0x002377BA
+	// Token: 0x06007527 RID: 29991 RVA: 0x00243456 File Offset: 0x00241656
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x0600A14A RID: 41290 RVA: 0x002395BC File Offset: 0x002377BC
+	// Token: 0x06007528 RID: 29992 RVA: 0x00243458 File Offset: 0x00241658
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_WuwuLogisticsActivityMain";
 	}
 
-	// Token: 0x0600A14B RID: 41291 RVA: 0x002395C3 File Offset: 0x002377C3
+	// Token: 0x06007529 RID: 29993 RVA: 0x0024345F File Offset: 0x0024165F
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new WuWuLogisticsActivitySubView();
 	}
 
-	// Token: 0x0600A14C RID: 41292 RVA: 0x002395CA File Offset: 0x002377CA
+	// Token: 0x0600752A RID: 29994 RVA: 0x00243466 File Offset: 0x00241666
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new WuWuLogisticsActivityData();
 	}
 
-	// Token: 0x0600A14D RID: 41293 RVA: 0x002395DD File Offset: 0x002377DD
+	// Token: 0x0600752B RID: 29995 RVA: 0x00243479 File Offset: 0x00241679
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x0600A14E RID: 41294 RVA: 0x002395E0 File Offset: 0x002377E0
+	// Token: 0x0600752C RID: 29996 RVA: 0x0024347C File Offset: 0x0024167C
 	[NullableContext(2)]
 	public WuWuLogisticsActivityData GetActivityData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.ActivityId) as WuWuLogisticsActivityData;
 	}
 
-	// Token: 0x0600A14F RID: 41295 RVA: 0x002395F8 File Offset: 0x002377F8
+	// Token: 0x0600752D RID: 29997 RVA: 0x00243494 File Offset: 0x00241694
 	[NullableContext(2)]
 	private void OnWuWuTaskUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -93,7 +93,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 	}
 
-	// Token: 0x0600A150 RID: 41296 RVA: 0x00239658 File Offset: 0x00237858
+	// Token: 0x0600752E RID: 29998 RVA: 0x002434F4 File Offset: 0x002416F4
 	[NullableContext(2)]
 	private void OnThemeCeleWuWuTaskNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -112,7 +112,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 	}
 
-	// Token: 0x0600A151 RID: 41297 RVA: 0x002396B8 File Offset: 0x002378B8
+	// Token: 0x0600752F RID: 29999 RVA: 0x00243554 File Offset: 0x00241754
 	private void OnUpdatePackData()
 	{
 		WuWuLogisticsActivityData activityData = this.GetActivityData();
@@ -131,7 +131,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A152 RID: 41298 RVA: 0x00239708 File Offset: 0x00237908
+	// Token: 0x06007530 RID: 30000 RVA: 0x002435A4 File Offset: 0x002417A4
 	public void RequestTaskReward(List<int> taskIds)
 	{
 		WuWuTaskRewardRequest wuWuTaskRewardRequest = new WuWuTaskRewardRequest();
@@ -148,7 +148,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 			}
 			if (wuWuTaskRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(wuWuTaskRewardResponse.ErrorCode, 29886, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(wuWuTaskRewardResponse.ErrorCode, 20425, null, true, true);
 				return;
 			}
 			WuWuLogisticsActivityData activityData = this.GetActivityData();
@@ -169,7 +169,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A153 RID: 41299 RVA: 0x00239798 File Offset: 0x00237998
+	// Token: 0x06007531 RID: 30001 RVA: 0x00243634 File Offset: 0x00241834
 	public void RequestTaskPackageReward(int wrapId)
 	{
 		WuWuPackageRewardRequest wuWuPackageRewardRequest = new WuWuPackageRewardRequest();
@@ -183,7 +183,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 			}
 			if (wuWuPackageRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(wuWuPackageRewardResponse.ErrorCode, 20803, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(wuWuPackageRewardResponse.ErrorCode, 17971, null, true, true);
 				return;
 			}
 			WuWuLogisticsActivityData wuWuLogisticsActivityData = ActivityModel.Instance.GetActivityById(this.ActivityId) as WuWuLogisticsActivityData;
@@ -201,8 +201,8 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17000D99 RID: 3481
-	// (get) Token: 0x0600A154 RID: 41300 RVA: 0x002397E8 File Offset: 0x002379E8
+	// Token: 0x17000DBA RID: 3514
+	// (get) Token: 0x06007532 RID: 30002 RVA: 0x00243684 File Offset: 0x00241884
 	public static WuWuLogisticsActivityController Instance
 	{
 		get
@@ -211,7 +211,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600A155 RID: 41301 RVA: 0x002397EF File Offset: 0x002379EF
+	// Token: 0x06007533 RID: 30003 RVA: 0x0024368B File Offset: 0x0024188B
 	public static WuWuLogisticsActivityController GetOrCreateInstance()
 	{
 		if (WuWuLogisticsActivityController._Instance == null)
@@ -221,7 +221,7 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		return WuWuLogisticsActivityController._Instance;
 	}
 
-	// Token: 0x0600A156 RID: 41302 RVA: 0x00239803 File Offset: 0x00237A03
+	// Token: 0x06007534 RID: 30004 RVA: 0x0024369F File Offset: 0x0024189F
 	public static bool CreateInstance()
 	{
 		if (WuWuLogisticsActivityController._Instance != null)
@@ -232,27 +232,27 @@ public class WuWuLogisticsActivityController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A157 RID: 41303 RVA: 0x00239819 File Offset: 0x00237A19
+	// Token: 0x06007535 RID: 30005 RVA: 0x002436B5 File Offset: 0x002418B5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A158 RID: 41304 RVA: 0x0023981B File Offset: 0x00237A1B
+	// Token: 0x06007536 RID: 30006 RVA: 0x002436B7 File Offset: 0x002418B7
 	public static void ResetStaticDefaultValue()
 	{
 		WuWuLogisticsActivityController._Instance = null;
 	}
 
-	// Token: 0x0600A159 RID: 41305 RVA: 0x00239823 File Offset: 0x00237A23
+	// Token: 0x06007537 RID: 30007 RVA: 0x002436BF File Offset: 0x002418BF
 	static WuWuLogisticsActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WuWuLogisticsActivityController.CreateStaticDefaultValue), new Action(WuWuLogisticsActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400495D RID: 18781
+	// Token: 0x04004A03 RID: 18947
 	public int ActivityId;
 
-	// Token: 0x0400495E RID: 18782
+	// Token: 0x04004A04 RID: 18948
 	[Nullable(2)]
 	private static WuWuLogisticsActivityController _Instance;
 }

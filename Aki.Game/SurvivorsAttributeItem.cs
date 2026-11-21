@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002AFB RID: 11003
+// Token: 0x02002077 RID: 8311
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiData>
 {
-	// Token: 0x06016E2D RID: 93741 RVA: 0x005CE5A8 File Offset: 0x005CC7A8
+	// Token: 0x0601485E RID: 84062 RVA: 0x005FB128 File Offset: 0x005F9328
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiDat
 		};
 	}
 
-	// Token: 0x06016E2E RID: 93742 RVA: 0x005CE630 File Offset: 0x005CC830
+	// Token: 0x0601485F RID: 84063 RVA: 0x005FB1B0 File Offset: 0x005F93B0
 	public override void Refresh(ISurvivorsAttributeUiData data, bool isSelected, int gridIndex)
 	{
 		SurvivorsProperty? propertyConfig = SurvivorsRogueConfig.Instance.GetPropertyConfig(data.AttrId);
@@ -38,13 +38,13 @@ public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiDat
 		this.SetBgVisible(gridIndex % 2 == 0);
 	}
 
-	// Token: 0x06016E2F RID: 93743 RVA: 0x005CE6BC File Offset: 0x005CC8BC
+	// Token: 0x06014860 RID: 84064 RVA: 0x005FB23C File Offset: 0x005F943C
 	public void SetIcon(string icon)
 	{
 		base.SetTextureByPath(icon, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x06016E30 RID: 93744 RVA: 0x005CE6E1 File Offset: 0x005CC8E1
+	// Token: 0x06014861 RID: 84065 RVA: 0x005FB261 File Offset: 0x005F9461
 	public void SetRecommend(bool isRecommend)
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -55,7 +55,7 @@ public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiDat
 		sprite.SetUIActive(isRecommend);
 	}
 
-	// Token: 0x06016E31 RID: 93745 RVA: 0x005CE6F8 File Offset: 0x005CC8F8
+	// Token: 0x06014862 RID: 84066 RVA: 0x005FB278 File Offset: 0x005F9478
 	public void SetValue(double value, bool isPercent = false, bool isAddition = false)
 	{
 		if (isPercent)
@@ -79,7 +79,7 @@ public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiDat
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x06016E32 RID: 93746 RVA: 0x005CE77B File Offset: 0x005CC97B
+	// Token: 0x06014863 RID: 84067 RVA: 0x005FB2FB File Offset: 0x005F94FB
 	public void SetTextByTextId(string textId)
 	{
 		UUIText text = base.GetText(0);
@@ -90,7 +90,7 @@ public class SurvivorsAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiDat
 		text.ShowTextNew(textId);
 	}
 
-	// Token: 0x06016E33 RID: 93747 RVA: 0x005CE78F File Offset: 0x005CC98F
+	// Token: 0x06014864 RID: 84068 RVA: 0x005FB30F File Offset: 0x005F950F
 	public void SetBgVisible(bool visible)
 	{
 		UUISprite sprite = base.GetSprite(3);

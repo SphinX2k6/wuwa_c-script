@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000126 RID: 294
+	// Token: 0x02000135 RID: 309
 	public class ConfigBuffGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006E5 RID: 1765 RVA: 0x000809E3 File Offset: 0x0007EBE3
+		// Token: 0x0600073F RID: 1855 RVA: 0x00086347 File Offset: 0x00084547
 		static ConfigBuffGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuffGroupById.CreateStaticDefaultValue), new Action(ConfigBuffGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006E6 RID: 1766 RVA: 0x00080A04 File Offset: 0x0007EC04
+		// Token: 0x06000740 RID: 1856 RVA: 0x00086368 File Offset: 0x00084568
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuffGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006E7 RID: 1767 RVA: 0x00080A83 File Offset: 0x0007EC83
+		// Token: 0x06000741 RID: 1857 RVA: 0x000863E7 File Offset: 0x000845E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuffGroupById.LogPair = null;
 			ConfigBuffGroupById.HandleId = 0;
 		}
 
-		// Token: 0x060006E8 RID: 1768 RVA: 0x00080A91 File Offset: 0x0007EC91
+		// Token: 0x06000742 RID: 1858 RVA: 0x000863F5 File Offset: 0x000845F5
 		public static void Init()
 		{
 			ConfigBuffGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigBuffGroupById.HandleId, "db_buffgroup.db", "select BinData from `BuffGroup` where Id = ?");
 		}
 
-		// Token: 0x060006E9 RID: 1769 RVA: 0x00080AAC File Offset: 0x0007ECAC
+		// Token: 0x06000743 RID: 1859 RVA: 0x00086410 File Offset: 0x00084610
 		public static BuffGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBuffGroupById.HandleId, ConfigBuffGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BuffGroup?(rootAsBuffGroup);
 		}
 
-		// Token: 0x040007EE RID: 2030
+		// Token: 0x04000857 RID: 2135
 		private const string DB = "db_buffgroup.db";
 
-		// Token: 0x040007EF RID: 2031
+		// Token: 0x04000858 RID: 2136
 		private const string FILE = "b.Buff分组.xlsx";
 
-		// Token: 0x040007F0 RID: 2032
+		// Token: 0x04000859 RID: 2137
 		private const string TABLE = "BuffGroup";
 
-		// Token: 0x040007F1 RID: 2033
+		// Token: 0x0400085A RID: 2138
 		private const string COMMAND = "select BinData from `BuffGroup` where Id = ?";
 
-		// Token: 0x040007F2 RID: 2034
+		// Token: 0x0400085B RID: 2139
 		private const string KEY_PREFIX = "BuffGroupById";
 
-		// Token: 0x040007F3 RID: 2035
+		// Token: 0x0400085C RID: 2140
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007F4 RID: 2036
+		// Token: 0x0400085D RID: 2141
 		private static int HandleId;
 	}
 }

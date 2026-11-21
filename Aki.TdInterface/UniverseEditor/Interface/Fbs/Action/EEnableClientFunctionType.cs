@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F5E RID: 24414
+	// Token: 0x020065A2 RID: 26018
 	public enum EEnableClientFunctionType : byte
 	{
-		// Token: 0x0400FD21 RID: 64801
+		// Token: 0x04010A9F RID: 68255
 		HealthBarDisplay
 	}
 }

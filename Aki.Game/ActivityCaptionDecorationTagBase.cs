@@ -2,9 +2,9 @@
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001684 RID: 5764
+// Token: 0x02000B3C RID: 2876
 public abstract class ActivityCaptionDecorationTagBase : UiPanelBase
 {
-	// Token: 0x0600A311 RID: 41745
+	// Token: 0x060076EF RID: 30447
 	public abstract UniTask OnCaptionTagRefresh(int activityId);
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002582 RID: 9602
+// Token: 0x02001A6D RID: 6765
 public enum EMissionGetType
 {
-	// Token: 0x04009251 RID: 37457
+	// Token: 0x040093A9 RID: 37801
 	Mission,
-	// Token: 0x04009252 RID: 37458
+	// Token: 0x040093AA RID: 37802
 	LevelPlay,
-	// Token: 0x04009253 RID: 37459
+	// Token: 0x040093AB RID: 37803
 	Instance
 }

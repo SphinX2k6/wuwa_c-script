@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x020001FC RID: 508
+	// Token: 0x02000201 RID: 513
 	public class IDownloadResult
 	{
-		// Token: 0x04000838 RID: 2104
+		// Token: 0x04000878 RID: 2168
 		public bool Success;
 
-		// Token: 0x04000839 RID: 2105
+		// Token: 0x04000879 RID: 2169
 		public EDownloadState DownloadState;
 
-		// Token: 0x0400083A RID: 2106
+		// Token: 0x0400087A RID: 2170
 		public int HttpCode;
 	}
 }

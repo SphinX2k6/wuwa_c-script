@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002645 RID: 9797
+	// Token: 0x020007B6 RID: 1974
 	[UnrealObjectPath("/Script/PhysicsCore.PhysicalMaterial")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UPhysicalMaterial : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024677 RID: 149111 RVA: 0x0035E5A9 File Offset: 0x0035C7A9
+		// Token: 0x0600AB4F RID: 43855 RVA: 0x000FCA80 File Offset: 0x000FAC80
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UPhysicalMaterial._ClassPtr;
 		}
 
-		// Token: 0x06024678 RID: 149112 RVA: 0x0035E5B8 File Offset: 0x0035C7B8
+		// Token: 0x0600AB50 RID: 43856 RVA: 0x000FCA8C File Offset: 0x000FAC8C
 		public UPhysicalMaterial() : this(BuiltinUtils.AllocNativeUObject(UPhysicalMaterial.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024679 RID: 149113 RVA: 0x0035E5E0 File Offset: 0x0035C7E0
+		// Token: 0x0600AB51 RID: 43857 RVA: 0x000FCAB4 File Offset: 0x000FACB4
 		[NullableContext(1)]
 		public UPhysicalMaterial(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UPhysicalMaterial.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008C3C RID: 35900
-		// (get) Token: 0x0602467A RID: 149114 RVA: 0x0035E613 File Offset: 0x0035C813
-		// (set) Token: 0x0602467B RID: 149115 RVA: 0x0035E623 File Offset: 0x0035C823
+		// Token: 0x17001FE0 RID: 8160
+		// (get) Token: 0x0600AB52 RID: 43858 RVA: 0x000FCAE7 File Offset: 0x000FACE7
+		// (set) Token: 0x0600AB53 RID: 43859 RVA: 0x000FCAF7 File Offset: 0x000FACF7
 		public unsafe float Friction
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C3D RID: 35901
-		// (get) Token: 0x0602467C RID: 149116 RVA: 0x0035E634 File Offset: 0x0035C834
-		// (set) Token: 0x0602467D RID: 149117 RVA: 0x0035E644 File Offset: 0x0035C844
+		// Token: 0x17001FE1 RID: 8161
+		// (get) Token: 0x0600AB54 RID: 43860 RVA: 0x000FCB08 File Offset: 0x000FAD08
+		// (set) Token: 0x0600AB55 RID: 43861 RVA: 0x000FCB18 File Offset: 0x000FAD18
 		public unsafe float StaticFriction
 		{
 			get
@@ -58,24 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C3E RID: 35902
-		// (get) Token: 0x0602467E RID: 149118 RVA: 0x0035E655 File Offset: 0x0035C855
-		// (set) Token: 0x0602467F RID: 149119 RVA: 0x0035E669 File Offset: 0x0035C869
-		public unsafe TEnumAsByte<EFrictionCombineMode> FrictionCombineMode
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UPhysicalMaterial.__PropertyOffset_FrictionCombineMode);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UPhysicalMaterial.__PropertyOffset_FrictionCombineMode) = value;
-			}
-		}
-
-		// Token: 0x17008C3F RID: 35903
-		// (get) Token: 0x06024680 RID: 149120 RVA: 0x0035E67E File Offset: 0x0035C87E
-		// (set) Token: 0x06024681 RID: 149121 RVA: 0x0035E68E File Offset: 0x0035C88E
+		// Token: 0x17001FE2 RID: 8162
+		// (get) Token: 0x0600AB56 RID: 43862 RVA: 0x000FCB29 File Offset: 0x000FAD29
+		// (set) Token: 0x0600AB57 RID: 43863 RVA: 0x000FCB39 File Offset: 0x000FAD39
 		public unsafe bool bOverrideFrictionCombineMode
 		{
 			get
@@ -88,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C40 RID: 35904
-		// (get) Token: 0x06024682 RID: 149122 RVA: 0x0035E69F File Offset: 0x0035C89F
-		// (set) Token: 0x06024683 RID: 149123 RVA: 0x0035E6AF File Offset: 0x0035C8AF
+		// Token: 0x17001FE3 RID: 8163
+		// (get) Token: 0x0600AB58 RID: 43864 RVA: 0x000FCB4A File Offset: 0x000FAD4A
+		// (set) Token: 0x0600AB59 RID: 43865 RVA: 0x000FCB5A File Offset: 0x000FAD5A
 		public unsafe float Restitution
 		{
 			get
@@ -103,24 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C41 RID: 35905
-		// (get) Token: 0x06024684 RID: 149124 RVA: 0x0035E6C0 File Offset: 0x0035C8C0
-		// (set) Token: 0x06024685 RID: 149125 RVA: 0x0035E6D4 File Offset: 0x0035C8D4
-		public unsafe TEnumAsByte<EFrictionCombineMode> RestitutionCombineMode
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UPhysicalMaterial.__PropertyOffset_RestitutionCombineMode);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UPhysicalMaterial.__PropertyOffset_RestitutionCombineMode) = value;
-			}
-		}
-
-		// Token: 0x17008C42 RID: 35906
-		// (get) Token: 0x06024686 RID: 149126 RVA: 0x0035E6E9 File Offset: 0x0035C8E9
-		// (set) Token: 0x06024687 RID: 149127 RVA: 0x0035E6F9 File Offset: 0x0035C8F9
+		// Token: 0x17001FE4 RID: 8164
+		// (get) Token: 0x0600AB5A RID: 43866 RVA: 0x000FCB6B File Offset: 0x000FAD6B
+		// (set) Token: 0x0600AB5B RID: 43867 RVA: 0x000FCB7B File Offset: 0x000FAD7B
 		public unsafe bool bOverrideRestitutionCombineMode
 		{
 			get
@@ -133,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C43 RID: 35907
-		// (get) Token: 0x06024688 RID: 149128 RVA: 0x0035E70A File Offset: 0x0035C90A
-		// (set) Token: 0x06024689 RID: 149129 RVA: 0x0035E71A File Offset: 0x0035C91A
+		// Token: 0x17001FE5 RID: 8165
+		// (get) Token: 0x0600AB5C RID: 43868 RVA: 0x000FCB8C File Offset: 0x000FAD8C
+		// (set) Token: 0x0600AB5D RID: 43869 RVA: 0x000FCB9C File Offset: 0x000FAD9C
 		public unsafe float Density
 		{
 			get
@@ -148,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C44 RID: 35908
-		// (get) Token: 0x0602468A RID: 149130 RVA: 0x0035E72B File Offset: 0x0035C92B
-		// (set) Token: 0x0602468B RID: 149131 RVA: 0x0035E73B File Offset: 0x0035C93B
+		// Token: 0x17001FE6 RID: 8166
+		// (get) Token: 0x0600AB5E RID: 43870 RVA: 0x000FCBAD File Offset: 0x000FADAD
+		// (set) Token: 0x0600AB5F RID: 43871 RVA: 0x000FCBBD File Offset: 0x000FADBD
 		public unsafe float SleepLinearVelocityThreshold
 		{
 			get
@@ -163,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C45 RID: 35909
-		// (get) Token: 0x0602468C RID: 149132 RVA: 0x0035E74C File Offset: 0x0035C94C
-		// (set) Token: 0x0602468D RID: 149133 RVA: 0x0035E75C File Offset: 0x0035C95C
+		// Token: 0x17001FE7 RID: 8167
+		// (get) Token: 0x0600AB60 RID: 43872 RVA: 0x000FCBCE File Offset: 0x000FADCE
+		// (set) Token: 0x0600AB61 RID: 43873 RVA: 0x000FCBDE File Offset: 0x000FADDE
 		public unsafe float SleepAngularVelocityThreshold
 		{
 			get
@@ -178,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C46 RID: 35910
-		// (get) Token: 0x0602468E RID: 149134 RVA: 0x0035E76D File Offset: 0x0035C96D
-		// (set) Token: 0x0602468F RID: 149135 RVA: 0x0035E77D File Offset: 0x0035C97D
+		// Token: 0x17001FE8 RID: 8168
+		// (get) Token: 0x0600AB62 RID: 43874 RVA: 0x000FCBEF File Offset: 0x000FADEF
+		// (set) Token: 0x0600AB63 RID: 43875 RVA: 0x000FCBFF File Offset: 0x000FADFF
 		public unsafe int SleepCounterThreshold
 		{
 			get
@@ -193,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C47 RID: 35911
-		// (get) Token: 0x06024690 RID: 149136 RVA: 0x0035E78E File Offset: 0x0035C98E
-		// (set) Token: 0x06024691 RID: 149137 RVA: 0x0035E79E File Offset: 0x0035C99E
+		// Token: 0x17001FE9 RID: 8169
+		// (get) Token: 0x0600AB64 RID: 43876 RVA: 0x000FCC10 File Offset: 0x000FAE10
+		// (set) Token: 0x0600AB65 RID: 43877 RVA: 0x000FCC20 File Offset: 0x000FAE20
 		public unsafe float RaiseMassToPower
 		{
 			get
@@ -208,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C48 RID: 35912
-		// (get) Token: 0x06024692 RID: 149138 RVA: 0x0035E7AF File Offset: 0x0035C9AF
-		// (set) Token: 0x06024693 RID: 149139 RVA: 0x0035E7BF File Offset: 0x0035C9BF
+		// Token: 0x17001FEA RID: 8170
+		// (get) Token: 0x0600AB66 RID: 43878 RVA: 0x000FCC31 File Offset: 0x000FAE31
+		// (set) Token: 0x0600AB67 RID: 43879 RVA: 0x000FCC41 File Offset: 0x000FAE41
 		public unsafe float DestructibleDamageThresholdScale
 		{
 			get
@@ -223,27 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C49 RID: 35913
-		// (get) Token: 0x06024694 RID: 149140 RVA: 0x0035E7D0 File Offset: 0x0035C9D0
-		// (set) Token: 0x06024695 RID: 149141 RVA: 0x0035E7E4 File Offset: 0x0035C9E4
-		[Nullable(2)]
-		public unsafe UDEPRECATED_PhysicalMaterialPropertyBase PhysicalMaterialProperty_DEPRECATED
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UDEPRECATED_PhysicalMaterialPropertyBase>(base.NativePtr / (IntPtr)sizeof(void*) + UPhysicalMaterial.__PropertyOffset_PhysicalMaterialProperty_DEPRECATED);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UPhysicalMaterial.__PropertyOffset_PhysicalMaterialProperty_DEPRECATED, value);
-			}
-		}
-
-		// Token: 0x17008C4A RID: 35914
-		// (get) Token: 0x06024696 RID: 149142 RVA: 0x0035E7F9 File Offset: 0x0035C9F9
-		// (set) Token: 0x06024697 RID: 149143 RVA: 0x0035E80D File Offset: 0x0035CA0D
+		// Token: 0x17001FEB RID: 8171
+		// (get) Token: 0x0600AB68 RID: 43880 RVA: 0x000FCC52 File Offset: 0x000FAE52
+		// (set) Token: 0x0600AB69 RID: 43881 RVA: 0x000FCC66 File Offset: 0x000FAE66
 		public unsafe TEnumAsByte<EPhysicalSurface> SurfaceType
 		{
 			get
@@ -256,70 +208,61 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024698 RID: 149144 RVA: 0x0035E822 File Offset: 0x0035CA22
+		// Token: 0x0600AB6A RID: 43882 RVA: 0x000FCC7B File Offset: 0x000FAE7B
 		static UPhysicalMaterial()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/PhysicsCore.PhysicalMaterial");
 		}
 
-		// Token: 0x06024699 RID: 149145 RVA: 0x0035E830 File Offset: 0x0035CA30
+		// Token: 0x0600AB6B RID: 43883 RVA: 0x000FCC89 File Offset: 0x000FAE89
 		protected UPhysicalMaterial(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040138DE RID: 80094
+		// Token: 0x0400498F RID: 18831
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/PhysicsCore.PhysicalMaterial";
 
-		// Token: 0x040138DF RID: 80095
+		// Token: 0x04004990 RID: 18832
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040138E0 RID: 80096
+		// Token: 0x04004991 RID: 18833
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040138E1 RID: 80097
+		// Token: 0x04004992 RID: 18834
 		internal static int __PropertyOffset_Friction;
 
-		// Token: 0x040138E2 RID: 80098
+		// Token: 0x04004993 RID: 18835
 		internal static int __PropertyOffset_StaticFriction;
 
-		// Token: 0x040138E3 RID: 80099
-		internal static int __PropertyOffset_FrictionCombineMode;
-
-		// Token: 0x040138E4 RID: 80100
+		// Token: 0x04004994 RID: 18836
 		internal static int __PropertyOffset_bOverrideFrictionCombineMode;
 
-		// Token: 0x040138E5 RID: 80101
+		// Token: 0x04004995 RID: 18837
 		internal static int __PropertyOffset_Restitution;
 
-		// Token: 0x040138E6 RID: 80102
-		internal static int __PropertyOffset_RestitutionCombineMode;
-
-		// Token: 0x040138E7 RID: 80103
+		// Token: 0x04004996 RID: 18838
 		internal static int __PropertyOffset_bOverrideRestitutionCombineMode;
 
-		// Token: 0x040138E8 RID: 80104
+		// Token: 0x04004997 RID: 18839
 		internal static int __PropertyOffset_Density;
 
-		// Token: 0x040138E9 RID: 80105
+		// Token: 0x04004998 RID: 18840
 		internal static int __PropertyOffset_SleepLinearVelocityThreshold;
 
-		// Token: 0x040138EA RID: 80106
+		// Token: 0x04004999 RID: 18841
 		internal static int __PropertyOffset_SleepAngularVelocityThreshold;
 
-		// Token: 0x040138EB RID: 80107
+		// Token: 0x0400499A RID: 18842
 		internal static int __PropertyOffset_SleepCounterThreshold;
 
-		// Token: 0x040138EC RID: 80108
+		// Token: 0x0400499B RID: 18843
 		internal static int __PropertyOffset_RaiseMassToPower;
 
-		// Token: 0x040138ED RID: 80109
+		// Token: 0x0400499C RID: 18844
 		internal static int __PropertyOffset_DestructibleDamageThresholdScale;
 
-		// Token: 0x040138EE RID: 80110
-		internal static int __PropertyOffset_PhysicalMaterialProperty_DEPRECATED;
-
-		// Token: 0x040138EF RID: 80111
+		// Token: 0x0400499D RID: 18845
 		internal static int __PropertyOffset_SurfaceType;
 	}
 }

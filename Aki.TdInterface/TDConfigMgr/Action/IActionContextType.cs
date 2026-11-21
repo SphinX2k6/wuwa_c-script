@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001756 RID: 5974
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018D7 RID: 6359
 	public class IActionContextType
 	{
-		// Token: 0x06007E79 RID: 32377 RVA: 0x0012EDFC File Offset: 0x0012CFFC
+		// Token: 0x06008569 RID: 34153 RVA: 0x0013E05C File Offset: 0x0013C25C
 		private IActionContextType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E7A RID: 32378 RVA: 0x0012EE34 File Offset: 0x0012D034
+		// Token: 0x0600856A RID: 34154 RVA: 0x0013E094 File Offset: 0x0013C294
 		public static IActionContextType Create([Nullable(2)] IActionContextType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E7B RID: 32379 RVA: 0x0012EE47 File Offset: 0x0012D047
+		// Token: 0x0600856B RID: 34155 RVA: 0x0013E0A7 File Offset: 0x0013C2A7
 		public static IActionContextType CreateFromSetValue([Nullable(2)] IActionContextType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E7C RID: 32380 RVA: 0x0012EE5A File Offset: 0x0012D05A
+		// Token: 0x0600856C RID: 34156 RVA: 0x0013E0BA File Offset: 0x0013C2BA
 		public IActionContextType_SetValue ToSetValue()
 		{
 			return new IActionContextType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002990 RID: 10640
-		// (get) Token: 0x06007E7D RID: 32381 RVA: 0x0012EE6D File Offset: 0x0012D06D
-		// (set) Token: 0x06007E7E RID: 32382 RVA: 0x0012EE98 File Offset: 0x0012D098
+		// Token: 0x17002B7E RID: 11134
+		// (get) Token: 0x0600856D RID: 34157 RVA: 0x0013E0CD File Offset: 0x0013C2CD
+		// (set) Token: 0x0600856E RID: 34158 RVA: 0x0013E0F8 File Offset: 0x0013C2F8
 		public virtual TActionContextType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400508D RID: 20621
+		// Token: 0x040054C3 RID: 21699
 		[Nullable(2)]
 		protected IActionContextType FbInstance;
 
-		// Token: 0x0400508E RID: 20622
+		// Token: 0x040054C4 RID: 21700
 		[Nullable(2)]
 		protected IActionContextType_SetValue PocoInterface;
 	}

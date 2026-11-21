@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052A0 RID: 21152
+	// Token: 0x02005808 RID: 22536
 	public enum IFollowShooterConfig_Union : byte
 	{
-		// Token: 0x0400E416 RID: 58390
+		// Token: 0x0400F01D RID: 61469
 		NONE,
-		// Token: 0x0400E417 RID: 58391
+		// Token: 0x0400F01E RID: 61470
 		IFollowShooterConfig,
-		// Token: 0x0400E418 RID: 58392
+		// Token: 0x0400F01F RID: 61471
 		IFollowShooterJellyFishConfig
 	}
 }

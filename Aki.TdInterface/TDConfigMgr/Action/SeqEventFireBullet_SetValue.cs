@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002190 RID: 8592
+	// Token: 0x020023F9 RID: 9209
 	public class SeqEventFireBullet_SetValue
 	{
-		// Token: 0x040070AE RID: 28846
+		// Token: 0x040076F0 RID: 30448
 		public long BulletId;
 	}
 }

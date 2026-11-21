@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007FA RID: 2042
+	// Token: 0x0200089D RID: 2205
 	public class IWuWaGoEntityBase_SetValue
 	{
-		// Token: 0x04001D5F RID: 7519
+		// Token: 0x04001F6B RID: 8043
 		public EWuWaGoEntityType Type;
 	}
 }

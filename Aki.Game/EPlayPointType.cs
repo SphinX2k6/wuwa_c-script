@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001A9F RID: 6815
+// Token: 0x02000F5E RID: 3934
 public enum EPlayPointType
 {
-	// Token: 0x04005CF2 RID: 23794
+	// Token: 0x04005DC1 RID: 24001
 	Normal,
-	// Token: 0x04005CF3 RID: 23795
+	// Token: 0x04005DC2 RID: 24002
 	Hidden
 }

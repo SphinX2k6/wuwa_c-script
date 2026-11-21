@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029FE RID: 10750
+	// Token: 0x02002CEB RID: 11499
 	public class ISetSpineAnimationType
 	{
-		// Token: 0x0600ED42 RID: 60738 RVA: 0x00229A2D File Offset: 0x00227C2D
-		[NullableContext(1)]
+		// Token: 0x0600FBD9 RID: 64473 RVA: 0x002473B1 File Offset: 0x002455B1
 		public static ISetSpineAnimationType Create(ISetSpineAnimationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B08 RID: 19208
-		// (get) Token: 0x0600ED43 RID: 60739 RVA: 0x00229A4C File Offset: 0x00227C4C
+		// Token: 0x17004EB1 RID: 20145
+		// (get) Token: 0x0600FBDA RID: 64474 RVA: 0x002473D0 File Offset: 0x002455D0
 		public virtual ESetSpineAnimation Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400829E RID: 33438
+		// Token: 0x0400898F RID: 35215
 		private ISetSpineAnimationType Instance;
 	}
 }

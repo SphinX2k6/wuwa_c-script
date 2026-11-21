@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200577E RID: 22398
+	// Token: 0x02005D85 RID: 23941
 	public struct IPrefabStateConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A711 RID: 42769
-		// (get) Token: 0x060258B9 RID: 153785 RVA: 0x0052DF0E File Offset: 0x0052C10E
+		// Token: 0x1700B035 RID: 45109
+		// (get) Token: 0x06027DD9 RID: 163289 RVA: 0x0057409A File Offset: 0x0057229A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060258BA RID: 153786 RVA: 0x0052DF1B File Offset: 0x0052C11B
+		// Token: 0x06027DDA RID: 163290 RVA: 0x005740A7 File Offset: 0x005722A7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060258BB RID: 153787 RVA: 0x0052DF24 File Offset: 0x0052C124
+		// Token: 0x06027DDB RID: 163291 RVA: 0x005740B0 File Offset: 0x005722B0
 		public static IPrefabStateConfig GetRootAsIPrefabStateConfig(ByteBuffer _bb)
 		{
 			return IPrefabStateConfig.GetRootAsIPrefabStateConfig(_bb, default(IPrefabStateConfig));
 		}
 
-		// Token: 0x060258BC RID: 153788 RVA: 0x0052DF40 File Offset: 0x0052C140
+		// Token: 0x06027DDC RID: 163292 RVA: 0x005740CC File Offset: 0x005722CC
 		public static IPrefabStateConfig GetRootAsIPrefabStateConfig(ByteBuffer _bb, IPrefabStateConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060258BD RID: 153789 RVA: 0x0052DF5D File Offset: 0x0052C15D
+		// Token: 0x06027DDD RID: 163293 RVA: 0x005740E9 File Offset: 0x005722E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060258BE RID: 153790 RVA: 0x0052DF6C File Offset: 0x0052C16C
+		// Token: 0x06027DDE RID: 163294 RVA: 0x005740F8 File Offset: 0x005722F8
 		public IPrefabStateConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A712 RID: 42770
-		// (get) Token: 0x060258BF RID: 153791 RVA: 0x0052DF7C File Offset: 0x0052C17C
+		// Token: 0x1700B036 RID: 45110
+		// (get) Token: 0x06027DDF RID: 163295 RVA: 0x00574108 File Offset: 0x00572308
 		public int LevelTag
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A713 RID: 42771
-		// (get) Token: 0x060258C0 RID: 153792 RVA: 0x0052DFB8 File Offset: 0x0052C1B8
+		// Token: 0x1700B037 RID: 45111
+		// (get) Token: 0x06027DE0 RID: 163296 RVA: 0x00574144 File Offset: 0x00572344
 		public ESceneInteractionState SceneInteractionState
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060258C1 RID: 153793 RVA: 0x0052DFF4 File Offset: 0x0052C1F4
+		// Token: 0x06027DE1 RID: 163297 RVA: 0x00574180 File Offset: 0x00572380
 		public static Offset<IPrefabStateConfig> CreateIPrefabStateConfig(FlatBufferBuilder builder, int LevelTag = 0, ESceneInteractionState SceneInteractionState = ESceneInteractionState.State1)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPrefabStateConfig.EndIPrefabStateConfig(builder);
 		}
 
-		// Token: 0x060258C2 RID: 153794 RVA: 0x0052E011 File Offset: 0x0052C211
+		// Token: 0x06027DE2 RID: 163298 RVA: 0x0057419D File Offset: 0x0057239D
 		public static void StartIPrefabStateConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060258C3 RID: 153795 RVA: 0x0052E01A File Offset: 0x0052C21A
+		// Token: 0x06027DE3 RID: 163299 RVA: 0x005741A6 File Offset: 0x005723A6
 		public static void AddLevelTag(FlatBufferBuilder builder, int levelTag)
 		{
 			builder.AddInt(0, levelTag, 0);
 		}
 
-		// Token: 0x060258C4 RID: 153796 RVA: 0x0052E025 File Offset: 0x0052C225
+		// Token: 0x06027DE4 RID: 163300 RVA: 0x005741B1 File Offset: 0x005723B1
 		public static void AddSceneInteractionState(FlatBufferBuilder builder, ESceneInteractionState sceneInteractionState)
 		{
 			builder.AddByte(1, (byte)sceneInteractionState, 0);
 		}
 
-		// Token: 0x060258C5 RID: 153797 RVA: 0x0052E030 File Offset: 0x0052C230
+		// Token: 0x06027DE5 RID: 163301 RVA: 0x005741BC File Offset: 0x005723BC
 		public static Offset<IPrefabStateConfig> EndIPrefabStateConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IPrefabStateConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060258C6 RID: 153798 RVA: 0x0052E040 File Offset: 0x0052C240
+		// Token: 0x06027DE6 RID: 163302 RVA: 0x005741CC File Offset: 0x005723CC
 		public IPrefabStateConfigT UnPack()
 		{
 			IPrefabStateConfigT prefabStateConfigT = new IPrefabStateConfigT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return prefabStateConfigT;
 		}
 
-		// Token: 0x060258C7 RID: 153799 RVA: 0x0052E05B File Offset: 0x0052C25B
+		// Token: 0x06027DE7 RID: 163303 RVA: 0x005741E7 File Offset: 0x005723E7
 		public void UnPackTo(IPrefabStateConfigT _o)
 		{
 			_o.LevelTag = this.LevelTag;
 			_o.SceneInteractionState = this.SceneInteractionState;
 		}
 
-		// Token: 0x060258C8 RID: 153800 RVA: 0x0052E078 File Offset: 0x0052C278
+		// Token: 0x06027DE8 RID: 163304 RVA: 0x00574204 File Offset: 0x00572404
 		public static Offset<IPrefabStateConfig> Pack(FlatBufferBuilder builder, IPrefabStateConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPrefabStateConfig.CreateIPrefabStateConfig(builder, _o.LevelTag, _o.SceneInteractionState);
 		}
 
-		// Token: 0x0400EC2B RID: 60459
+		// Token: 0x0400F916 RID: 63766
 		private Table __p;
 	}
 }

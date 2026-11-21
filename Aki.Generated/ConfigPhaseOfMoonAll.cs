@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006BB RID: 1723
+	// Token: 0x020006D3 RID: 1747
 	public class ConfigPhaseOfMoonAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002872 RID: 10354 RVA: 0x0013E47C File Offset: 0x0013C67C
+		// Token: 0x06002902 RID: 10498 RVA: 0x00144EF8 File Offset: 0x001430F8
 		static ConfigPhaseOfMoonAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhaseOfMoonAll.CreateStaticDefaultValue), new Action(ConfigPhaseOfMoonAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002873 RID: 10355 RVA: 0x0013E49C File Offset: 0x0013C69C
+		// Token: 0x06002903 RID: 10499 RVA: 0x00144F18 File Offset: 0x00143118
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhaseOfMoonAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002874 RID: 10356 RVA: 0x0013E51B File Offset: 0x0013C71B
+		// Token: 0x06002904 RID: 10500 RVA: 0x00144F97 File Offset: 0x00143197
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhaseOfMoonAll.LogPair = null;
 			ConfigPhaseOfMoonAll.HandleId = 0;
 		}
 
-		// Token: 0x06002875 RID: 10357 RVA: 0x0013E529 File Offset: 0x0013C729
+		// Token: 0x06002905 RID: 10501 RVA: 0x00144FA5 File Offset: 0x001431A5
 		public static void Init()
 		{
 			ConfigPhaseOfMoonAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhaseOfMoonAll.HandleId, "db_moonsignin.db", "select BinData from `PhaseOfMoon`");
 		}
 
-		// Token: 0x06002876 RID: 10358 RVA: 0x0013E544 File Offset: 0x0013C744
+		// Token: 0x06002906 RID: 10502 RVA: 0x00144FC0 File Offset: 0x001431C0
 		[NullableContext(2)]
 		public static IReadOnlyList<PhaseOfMoon> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002F03 RID: 12035
+		// Token: 0x04002FAB RID: 12203
 		private const string DB = "db_moonsignin.db";
 
-		// Token: 0x04002F04 RID: 12036
+		// Token: 0x04002FAC RID: 12204
 		private const string FILE = "y.月相活动.xlsx";
 
-		// Token: 0x04002F05 RID: 12037
+		// Token: 0x04002FAD RID: 12205
 		private const string TABLE = "PhaseOfMoon";
 
-		// Token: 0x04002F06 RID: 12038
+		// Token: 0x04002FAE RID: 12206
 		private const string COMMAND = "select BinData from `PhaseOfMoon`";
 
-		// Token: 0x04002F07 RID: 12039
+		// Token: 0x04002FAF RID: 12207
 		private const string KEY_PREFIX = "PhaseOfMoonAll";
 
-		// Token: 0x04002F08 RID: 12040
+		// Token: 0x04002FB0 RID: 12208
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F09 RID: 12041
+		// Token: 0x04002FB1 RID: 12209
 		private static int HandleId;
 	}
 }

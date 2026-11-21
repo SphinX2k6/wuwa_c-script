@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002440 RID: 9280
+// Token: 0x02001925 RID: 6437
 public class VisionFetterDescData
 {
-	// Token: 0x04008C4E RID: 35918
+	// Token: 0x04008D95 RID: 36245
 	public int Key;
 
-	// Token: 0x04008C4F RID: 35919
+	// Token: 0x04008D96 RID: 36246
 	public int Value;
 
-	// Token: 0x04008C50 RID: 35920
+	// Token: 0x04008D97 RID: 36247
 	public int GroupId;
 }

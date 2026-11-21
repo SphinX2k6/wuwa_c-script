@@ -5,14 +5,14 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056C5 RID: 22213
+	// Token: 0x0200469C RID: 18076
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class LevelLoadingModel : ModelBase
 	{
-		// Token: 0x17008796 RID: 34710
-		// (get) Token: 0x060387FD RID: 231421 RVA: 0x00D6C11A File Offset: 0x00D6A31A
+		// Token: 0x17005B5E RID: 23390
+		// (get) Token: 0x0602D70D RID: 186125 RVA: 0x00CBA6D1 File Offset: 0x00CB88D1
 		public bool IsLoading
 		{
 			get
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			}
 		}
 
-		// Token: 0x060387FE RID: 231422 RVA: 0x00D6C122 File Offset: 0x00D6A322
+		// Token: 0x0602D70E RID: 186126 RVA: 0x00CBA6D9 File Offset: 0x00CB88D9
 		protected override bool OnClear()
 		{
 			this.OpenLoadingReason.Clear();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return true;
 		}
 
-		// Token: 0x060387FF RID: 231423 RVA: 0x00D6C13C File Offset: 0x00D6A33C
+		// Token: 0x0602D70F RID: 186127 RVA: 0x00CBA6F4 File Offset: 0x00CB88F4
 		public void SetLoadingState(bool value)
 		{
 			if (this.IsLoadingInternal == value)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			EventSystem.Instance.Emit(EEventName.AddLevelLoadingTimeDilationTag);
 		}
 
-		// Token: 0x06038800 RID: 231424 RVA: 0x00D6C1E4 File Offset: 0x00D6A3E4
+		// Token: 0x0602D710 RID: 186128 RVA: 0x00CBA79C File Offset: 0x00CB899C
 		public void AddLoadingReason(ELoadingReason reason, ELoadingPerform perform)
 		{
 			this.OpenLoadingReason[reason] = perform;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06038801 RID: 231425 RVA: 0x00D6C234 File Offset: 0x00D6A434
+		// Token: 0x0602D711 RID: 186129 RVA: 0x00CBA7EC File Offset: 0x00CB89EC
 		public void RemoveLoadingReason(ELoadingReason reason)
 		{
 			ELoadingPerform? performByReason = this.GetPerformByReason(reason);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06038802 RID: 231426 RVA: 0x00D6C28C File Offset: 0x00D6A48C
+		// Token: 0x0602D712 RID: 186130 RVA: 0x00CBA844 File Offset: 0x00CB8A44
 		public unsafe void AddLoadingPerform(ELoadingPerform perform)
 		{
 			int valueOrDefault = this.LoadingPerforms.GetValueOrDefault(perform, 0);
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06038803 RID: 231427 RVA: 0x00D6C318 File Offset: 0x00D6A518
+		// Token: 0x0602D713 RID: 186131 RVA: 0x00CBA8D0 File Offset: 0x00CB8AD0
 		public void RemoveLoadingPerform(ELoadingPerform? perform)
 		{
 			if (perform == null)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			}
 		}
 
-		// Token: 0x06038804 RID: 231428 RVA: 0x00D6C3A0 File Offset: 0x00D6A5A0
+		// Token: 0x0602D714 RID: 186132 RVA: 0x00CBA958 File Offset: 0x00CB8B58
 		public ELoadingPerform? GetPerformByReason(ELoadingReason reason)
 		{
 			ELoadingPerform value;
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return new ELoadingPerform?(value);
 		}
 
-		// Token: 0x06038805 RID: 231429 RVA: 0x00D6C3D0 File Offset: 0x00D6A5D0
+		// Token: 0x0602D715 RID: 186133 RVA: 0x00CBA988 File Offset: 0x00CB8B88
 		public List<ELoadingReason> GetReasonsByPerform(ELoadingPerform targetPerform)
 		{
 			List<ELoadingReason> list = new List<ELoadingReason>();
@@ -152,34 +152,34 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return list;
 		}
 
-		// Token: 0x06038806 RID: 231430 RVA: 0x00D6C440 File Offset: 0x00D6A640
+		// Token: 0x0602D716 RID: 186134 RVA: 0x00CBA9F8 File Offset: 0x00CB8BF8
 		private void ClearLoadingReason()
 		{
 			this.OpenLoadingReason.Clear();
 			Log.Instance.Info(ELogModule.Loading, ELogAuthor.YSQ, "LevelLoading:ClearLoadingReason", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06038807 RID: 231431 RVA: 0x00D6C474 File Offset: 0x00D6A674
+		// Token: 0x0602D717 RID: 186135 RVA: 0x00CBAA2C File Offset: 0x00CB8C2C
 		public void ClearLoadingPerforms()
 		{
 			this.LoadingPerforms.Clear();
 			Log.Instance.Info(ELogModule.Loading, ELogAuthor.YSQ, "LevelLoading:ClearLoadingPerforms", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06038808 RID: 231432 RVA: 0x00D6C4A8 File Offset: 0x00D6A6A8
+		// Token: 0x0602D718 RID: 186136 RVA: 0x00CBAA60 File Offset: 0x00CB8C60
 		public bool CheckLoadingPerformsEmpty()
 		{
 			return this.LoadingPerforms.Count == 0;
 		}
 
-		// Token: 0x06038809 RID: 231433 RVA: 0x00D6C4B8 File Offset: 0x00D6A6B8
+		// Token: 0x0602D719 RID: 186137 RVA: 0x00CBAA70 File Offset: 0x00CB8C70
 		public bool CheckLoadingPerformExist(ELoadingPerform? perform)
 		{
 			int num;
 			return this.IsLoading && perform != null && (this.LoadingPerforms.TryGetValue(perform.Value, out num) && num > 0);
 		}
 
-		// Token: 0x0603880A RID: 231434 RVA: 0x00D6C4F7 File Offset: 0x00D6A6F7
+		// Token: 0x0602D71A RID: 186138 RVA: 0x00CBAAAF File Offset: 0x00CB8CAF
 		public void FinishCameraShowPromise()
 		{
 			CustomPromise cameraFadeShowPromise = this.CameraFadeShowPromise;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			this.CameraFadeShowPromise = null;
 		}
 
-		// Token: 0x0603880B RID: 231435 RVA: 0x00D6C511 File Offset: 0x00D6A711
+		// Token: 0x0602D71B RID: 186139 RVA: 0x00CBAAC9 File Offset: 0x00CB8CC9
 		public void FinishCameraHidePromise()
 		{
 			CustomPromise cameraFadeHidePromise = this.CameraFadeHidePromise;
@@ -201,8 +201,8 @@ namespace CSharpScript.Game.Module.LevelLoading
 			this.CameraFadeHidePromise = null;
 		}
 
-		// Token: 0x17008797 RID: 34711
-		// (get) Token: 0x0603880C RID: 231436 RVA: 0x00D6C52B File Offset: 0x00D6A72B
+		// Token: 0x17005B5F RID: 23391
+		// (get) Token: 0x0602D71C RID: 186140 RVA: 0x00CBAAE3 File Offset: 0x00CB8CE3
 		public static LevelLoadingModel Instance
 		{
 			get
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			}
 		}
 
-		// Token: 0x0603880D RID: 231437 RVA: 0x00D6C532 File Offset: 0x00D6A732
+		// Token: 0x0602D71D RID: 186141 RVA: 0x00CBAAEA File Offset: 0x00CB8CEA
 		public static LevelLoadingModel GetOrCreateInstance()
 		{
 			if (LevelLoadingModel._Instance == null)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return LevelLoadingModel._Instance;
 		}
 
-		// Token: 0x0603880E RID: 231438 RVA: 0x00D6C546 File Offset: 0x00D6A746
+		// Token: 0x0602D71E RID: 186142 RVA: 0x00CBAAFE File Offset: 0x00CB8CFE
 		public static bool CreateInstance()
 		{
 			if (LevelLoadingModel._Instance != null)
@@ -232,41 +232,41 @@ namespace CSharpScript.Game.Module.LevelLoading
 			return true;
 		}
 
-		// Token: 0x0603880F RID: 231439 RVA: 0x00D6C55C File Offset: 0x00D6A75C
+		// Token: 0x0602D71F RID: 186143 RVA: 0x00CBAB14 File Offset: 0x00CB8D14
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06038810 RID: 231440 RVA: 0x00D6C55E File Offset: 0x00D6A75E
+		// Token: 0x0602D720 RID: 186144 RVA: 0x00CBAB16 File Offset: 0x00CB8D16
 		public static void ResetStaticDefaultValue()
 		{
 			LevelLoadingModel._Instance = null;
 		}
 
-		// Token: 0x06038811 RID: 231441 RVA: 0x00D6C566 File Offset: 0x00D6A766
+		// Token: 0x0602D721 RID: 186145 RVA: 0x00CBAB1E File Offset: 0x00CB8D1E
 		static LevelLoadingModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelLoadingModel.CreateStaticDefaultValue), new Action(LevelLoadingModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DAE7 RID: 121575
+		// Token: 0x0401857D RID: 99709
 		[Nullable(2)]
 		public CustomPromise CameraFadeShowPromise;
 
-		// Token: 0x0401DAE8 RID: 121576
+		// Token: 0x0401857E RID: 99710
 		[Nullable(2)]
 		public CustomPromise CameraFadeHidePromise;
 
-		// Token: 0x0401DAE9 RID: 121577
+		// Token: 0x0401857F RID: 99711
 		private readonly Dictionary<ELoadingReason, ELoadingPerform> OpenLoadingReason = new Dictionary<ELoadingReason, ELoadingPerform>();
 
-		// Token: 0x0401DAEA RID: 121578
+		// Token: 0x04018580 RID: 99712
 		private readonly Dictionary<ELoadingPerform, int> LoadingPerforms = new Dictionary<ELoadingPerform, int>();
 
-		// Token: 0x0401DAEB RID: 121579
+		// Token: 0x04018581 RID: 99713
 		private bool IsLoadingInternal;
 
-		// Token: 0x0401DAEC RID: 121580
+		// Token: 0x04018582 RID: 99714
 		[Nullable(2)]
 		private static LevelLoadingModel _Instance;
 	}

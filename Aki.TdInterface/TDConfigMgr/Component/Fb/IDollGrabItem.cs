@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF3 RID: 3571
+	// Token: 0x02000EEF RID: 3823
 	public class IDollGrabItem
 	{
-		// Token: 0x060050E8 RID: 20712 RVA: 0x000C7C4E File Offset: 0x000C5E4E
-		[NullableContext(1)]
+		// Token: 0x0600560F RID: 22031 RVA: 0x000D3516 File Offset: 0x000D1716
 		public static IDollGrabItem Create(IDollGrabItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001ABF RID: 6847
-		// (get) Token: 0x060050E9 RID: 20713 RVA: 0x000C7C6D File Offset: 0x000C5E6D
+		// Token: 0x17001C2C RID: 7212
+		// (get) Token: 0x06005610 RID: 22032 RVA: 0x000D3535 File Offset: 0x000D1735
 		public virtual int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AC0 RID: 6848
-		// (get) Token: 0x060050EA RID: 20714 RVA: 0x000C7C7A File Offset: 0x000C5E7A
+		// Token: 0x17001C2D RID: 7213
+		// (get) Token: 0x06005611 RID: 22033 RVA: 0x000D3542 File Offset: 0x000D1742
 		public virtual int ItemId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E84 RID: 11908
+		// Token: 0x0400314C RID: 12620
 		private IDollGrabItem Instance;
 	}
 }

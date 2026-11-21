@@ -3,98 +3,98 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020012CA RID: 4810
+// Token: 0x0200077E RID: 1918
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityMapTravelConfig : ConfigBase
 {
-	// Token: 0x06008448 RID: 33864 RVA: 0x001C2A4C File Offset: 0x001C0C4C
+	// Token: 0x060057E3 RID: 22499 RVA: 0x001CB8A8 File Offset: 0x001C9AA8
 	public MapTravelConfig? GetActivityConfig(int activityId)
 	{
 		return ConfigMapTravelConfigByActivityId.GetConfig(activityId, true);
 	}
 
-	// Token: 0x06008449 RID: 33865 RVA: 0x001C2A55 File Offset: 0x001C0C55
+	// Token: 0x060057E4 RID: 22500 RVA: 0x001CB8B1 File Offset: 0x001C9AB1
 	public MapLevelExp? GetLevelExpConfig(int id)
 	{
 		return ConfigMapLevelExpById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600844A RID: 33866 RVA: 0x001C2A5E File Offset: 0x001C0C5E
+	// Token: 0x060057E5 RID: 22501 RVA: 0x001CB8BA File Offset: 0x001C9ABA
 	public IReadOnlyList<MapLevelExp> GetAllLevelExpConfig(int activityId)
 	{
 		return ConfigMapLevelExpByActivityId.GetConfigList(activityId, true) ?? new MapLevelExp[0];
 	}
 
-	// Token: 0x0600844B RID: 33867 RVA: 0x001C2A71 File Offset: 0x001C0C71
+	// Token: 0x060057E6 RID: 22502 RVA: 0x001CB8CD File Offset: 0x001C9ACD
 	public TravelTask? GetTravelTaskConfig(int taskId)
 	{
 		return ConfigTravelTaskByTaskId.GetConfig(taskId, true);
 	}
 
-	// Token: 0x0600844C RID: 33868 RVA: 0x001C2A7A File Offset: 0x001C0C7A
+	// Token: 0x060057E7 RID: 22503 RVA: 0x001CB8D6 File Offset: 0x001C9AD6
 	public IReadOnlyList<TravelTask> GetAllTravelTaskConfig(int activityId)
 	{
 		return ConfigTravelTaskByActivityId.GetConfigList(activityId, true) ?? new TravelTask[0];
 	}
 
-	// Token: 0x0600844D RID: 33869 RVA: 0x001C2A8D File Offset: 0x001C0C8D
+	// Token: 0x060057E8 RID: 22504 RVA: 0x001CB8E9 File Offset: 0x001C9AE9
 	public TravelTaskArea? GetAreaConfig(int id)
 	{
 		return ConfigTravelTaskAreaById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600844E RID: 33870 RVA: 0x001C2A96 File Offset: 0x001C0C96
+	// Token: 0x060057E9 RID: 22505 RVA: 0x001CB8F2 File Offset: 0x001C9AF2
 	public IReadOnlyList<TravelTaskArea> GetAllAreaConfig(int activityId)
 	{
 		return ConfigTravelTaskAreaByActivityId.GetConfigList(activityId, true) ?? new TravelTaskArea[0];
 	}
 
-	// Token: 0x0600844F RID: 33871 RVA: 0x001C2AA9 File Offset: 0x001C0CA9
+	// Token: 0x060057EA RID: 22506 RVA: 0x001CB905 File Offset: 0x001C9B05
 	public TravelPhantomQuest? GetQuestConfig(int id)
 	{
 		return ConfigTravelPhantomQuestById.GetConfig(id, true);
 	}
 
-	// Token: 0x06008450 RID: 33872 RVA: 0x001C2AB2 File Offset: 0x001C0CB2
+	// Token: 0x060057EB RID: 22507 RVA: 0x001CB90E File Offset: 0x001C9B0E
 	public TravelPhantomQuest? GetQuestConfigByMapMarkId(int markId)
 	{
 		return ConfigTravelPhantomQuestByMapMarkId.GetConfig(markId, true);
 	}
 
-	// Token: 0x06008451 RID: 33873 RVA: 0x001C2ABB File Offset: 0x001C0CBB
+	// Token: 0x060057EC RID: 22508 RVA: 0x001CB917 File Offset: 0x001C9B17
 	public IReadOnlyList<TravelPhantomQuest> GetAllQuestConfig(int activityId)
 	{
 		return ConfigTravelPhantomQuestByActivityId.GetConfigList(activityId, true) ?? new TravelPhantomQuest[0];
 	}
 
-	// Token: 0x06008452 RID: 33874 RVA: 0x001C2ACE File Offset: 0x001C0CCE
+	// Token: 0x060057ED RID: 22509 RVA: 0x001CB92A File Offset: 0x001C9B2A
 	public PhantomGain? GetPhantomConfig(int id)
 	{
 		return ConfigPhantomGainById.GetConfig(id, true);
 	}
 
-	// Token: 0x06008453 RID: 33875 RVA: 0x001C2AD7 File Offset: 0x001C0CD7
+	// Token: 0x060057EE RID: 22510 RVA: 0x001CB933 File Offset: 0x001C9B33
 	public IReadOnlyList<PhantomGain> GetAllPhantomConfig(int activityId)
 	{
 		return ConfigPhantomGainByActivityId.GetConfigList(activityId, true) ?? new PhantomGain[0];
 	}
 
-	// Token: 0x06008454 RID: 33876 RVA: 0x001C2AEA File Offset: 0x001C0CEA
+	// Token: 0x060057EF RID: 22511 RVA: 0x001CB946 File Offset: 0x001C9B46
 	public IReadOnlyList<SoarChallenge> GetAllSoarChallengeConfig()
 	{
 		return ConfigSoarChallengeAll.GetConfigList(true) ?? new SoarChallenge[0];
 	}
 
-	// Token: 0x06008455 RID: 33877 RVA: 0x001C2AFC File Offset: 0x001C0CFC
+	// Token: 0x060057F0 RID: 22512 RVA: 0x001CB958 File Offset: 0x001C9B58
 	public SoarChallenge? GetSoarChallengeConfig(int id)
 	{
 		return ConfigSoarChallengeById.GetConfig(id, true);
 	}
 
-	// Token: 0x17000B46 RID: 2886
-	// (get) Token: 0x06008456 RID: 33878 RVA: 0x001C2B05 File Offset: 0x001C0D05
+	// Token: 0x17000B66 RID: 2918
+	// (get) Token: 0x060057F1 RID: 22513 RVA: 0x001CB961 File Offset: 0x001C9B61
 	public static ActivityMapTravelConfig Instance
 	{
 		get
@@ -103,7 +103,7 @@ public class ActivityMapTravelConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06008457 RID: 33879 RVA: 0x001C2B0C File Offset: 0x001C0D0C
+	// Token: 0x060057F2 RID: 22514 RVA: 0x001CB968 File Offset: 0x001C9B68
 	public static ActivityMapTravelConfig GetOrCreateInstance()
 	{
 		if (ActivityMapTravelConfig._Instance == null)
@@ -113,7 +113,7 @@ public class ActivityMapTravelConfig : ConfigBase
 		return ActivityMapTravelConfig._Instance;
 	}
 
-	// Token: 0x06008458 RID: 33880 RVA: 0x001C2B20 File Offset: 0x001C0D20
+	// Token: 0x060057F3 RID: 22515 RVA: 0x001CB97C File Offset: 0x001C9B7C
 	public static bool CreateInstance()
 	{
 		if (ActivityMapTravelConfig._Instance != null)
@@ -124,24 +124,24 @@ public class ActivityMapTravelConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06008459 RID: 33881 RVA: 0x001C2B36 File Offset: 0x001C0D36
+	// Token: 0x060057F4 RID: 22516 RVA: 0x001CB992 File Offset: 0x001C9B92
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600845A RID: 33882 RVA: 0x001C2B38 File Offset: 0x001C0D38
+	// Token: 0x060057F5 RID: 22517 RVA: 0x001CB994 File Offset: 0x001C9B94
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityMapTravelConfig._Instance = null;
 	}
 
-	// Token: 0x0600845B RID: 33883 RVA: 0x001C2B40 File Offset: 0x001C0D40
+	// Token: 0x060057F6 RID: 22518 RVA: 0x001CB99C File Offset: 0x001C9B9C
 	static ActivityMapTravelConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityMapTravelConfig.CreateStaticDefaultValue), new Action(ActivityMapTravelConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003B73 RID: 15219
+	// Token: 0x04003C0B RID: 15371
 	[Nullable(2)]
 	private static ActivityMapTravelConfig _Instance;
 }

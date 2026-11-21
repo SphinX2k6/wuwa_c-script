@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020061A7 RID: 24999
+	// Token: 0x02005125 RID: 20773
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,8 +18,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeTalentTreeNodeRowItem : GridProxyAbstract<RoverlikeTalentTreeNodeRowData>
 	{
-		// Token: 0x17009208 RID: 37384
-		// (get) Token: 0x0603F235 RID: 258613 RVA: 0x00F40A83 File Offset: 0x00F3EC83
+		// Token: 0x1700656A RID: 25962
+		// (get) Token: 0x06033EF5 RID: 212725 RVA: 0x00E8794B File Offset: 0x00E85B4B
 		[Nullable(2)]
 		private RoverlikeTalentTreeData TreeData
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F236 RID: 258614 RVA: 0x00F40A9C File Offset: 0x00F3EC9C
+		// Token: 0x06033EF6 RID: 212726 RVA: 0x00E87964 File Offset: 0x00E85B64
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F237 RID: 258615 RVA: 0x00F40B08 File Offset: 0x00F3ED08
+		// Token: 0x06033EF7 RID: 212727 RVA: 0x00E879D0 File Offset: 0x00E85BD0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeTalentTreeNodeRowItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F238 RID: 258616 RVA: 0x00F40B4B File Offset: 0x00F3ED4B
+		// Token: 0x06033EF8 RID: 212728 RVA: 0x00E87A13 File Offset: 0x00E85C13
 		public override void Refresh(RoverlikeTalentTreeNodeRowData data, bool isSelected, int gridIndex)
 		{
 			this.RefreshVersion++;
 			this.RefreshInternalAsync(data, this.RefreshVersion).Forget();
 		}
 
-		// Token: 0x0603F239 RID: 258617 RVA: 0x00F40B70 File Offset: 0x00F3ED70
+		// Token: 0x06033EF9 RID: 212729 RVA: 0x00E87A38 File Offset: 0x00E85C38
 		public override UniTask RefreshAsync(RoverlikeTalentTreeNodeRowData data, bool isSelected, int gridIndex)
 		{
 			RoverlikeTalentTreeNodeRowItem.<RefreshAsync>d__9 <RefreshAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F23A RID: 258618 RVA: 0x00F40BBC File Offset: 0x00F3EDBC
+		// Token: 0x06033EFA RID: 212730 RVA: 0x00E87A84 File Offset: 0x00E85C84
 		private UniTask RefreshInternalAsync(RoverlikeTalentTreeNodeRowData data, int version)
 		{
 			RoverlikeTalentTreeNodeRowItem.<RefreshInternalAsync>d__10 <RefreshInternalAsync>d__;
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshInternalAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F23B RID: 258619 RVA: 0x00F40C0F File Offset: 0x00F3EE0F
+		// Token: 0x06033EFB RID: 212731 RVA: 0x00E87AD7 File Offset: 0x00E85CD7
 		public override object GetKey(RoverlikeTalentTreeNodeRowData data, int displayIndex)
 		{
 			return data.Row;
 		}
 
-		// Token: 0x0603F23C RID: 258620 RVA: 0x00F40C1C File Offset: 0x00F3EE1C
+		// Token: 0x06033EFC RID: 212732 RVA: 0x00E87AE4 File Offset: 0x00E85CE4
 		private void ResetAllLines()
 		{
 			foreach (UUIItem uuiitem in this.LineList.GetAllLines())
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F23D RID: 258621 RVA: 0x00F40CB8 File Offset: 0x00F3EEB8
+		// Token: 0x06033EFD RID: 212733 RVA: 0x00E87B80 File Offset: 0x00E85D80
 		private void ResetAllNodes()
 		{
 			for (int i = 0; i < 6; i++)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F23E RID: 258622 RVA: 0x00F40CEC File Offset: 0x00F3EEEC
+		// Token: 0x06033EFE RID: 212734 RVA: 0x00E87BB4 File Offset: 0x00E85DB4
 		private void RefreshAllDots()
 		{
 			foreach (UUIItem uuiitem in this.LineList.GetAllDots())
@@ -133,37 +133,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F23F RID: 258623 RVA: 0x00F40D44 File Offset: 0x00F3EF44
+		// Token: 0x06033EFF RID: 212735 RVA: 0x00E87C0C File Offset: 0x00E85E0C
 		[NullableContext(2)]
 		private UUIItem GetSolidLineByIndex(int index)
 		{
 			return this.LineList.GetSolidLineByIndexInLineId(index) ?? this.NodeList.GetSolidLineByIndexInLineId(index);
 		}
 
-		// Token: 0x0603F240 RID: 258624 RVA: 0x00F40D62 File Offset: 0x00F3EF62
+		// Token: 0x06033F00 RID: 212736 RVA: 0x00E87C2A File Offset: 0x00E85E2A
 		[NullableContext(2)]
 		private UUIItem GetDashedLineByIndex(int index)
 		{
 			return this.LineList.GetDashedLineByIndexInLineId(index) ?? this.NodeList.GetDashedLineByIndexInLineId(index);
 		}
 
-		// Token: 0x04020EA0 RID: 134816
+		// Token: 0x0401B7CD RID: 112589
 		private RoverlikeTalentTreeNodeGroupItem NodeList;
 
-		// Token: 0x04020EA1 RID: 134817
+		// Token: 0x0401B7CE RID: 112590
 		private RoverlikeTalentTreeLineGroupItem LineList;
 
-		// Token: 0x04020EA2 RID: 134818
+		// Token: 0x0401B7CF RID: 112591
 		private int RefreshVersion;
 
-		// Token: 0x0200C3F5 RID: 50165
+		// Token: 0x0200ADDC RID: 44508
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403B245 RID: 242245
+			// Token: 0x04035BA6 RID: 220070
 			public const int ItemNodeList = 0;
 
-			// Token: 0x0403B246 RID: 242246
+			// Token: 0x04035BA7 RID: 220071
 			public const int ItemLineList = 1;
 		}
 	}

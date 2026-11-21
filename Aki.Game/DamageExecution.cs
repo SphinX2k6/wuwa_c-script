@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002F89 RID: 12169
+// Token: 0x020024DD RID: 9437
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageExecution : PeriodExecution
 {
-	// Token: 0x06019D8E RID: 105870 RVA: 0x006BEE18 File Offset: 0x006BD018
+	// Token: 0x060176A0 RID: 95904 RVA: 0x006E56F8 File Offset: 0x006E38F8
 	public DamageExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D8F RID: 105871 RVA: 0x006BEE24 File Offset: 0x006BD024
+	// Token: 0x060176A1 RID: 95905 RVA: 0x006E5704 File Offset: 0x006E3904
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -35,7 +35,7 @@ public class DamageExecution : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019D90 RID: 105872 RVA: 0x006BEEB0 File Offset: 0x006BD0B0
+	// Token: 0x060176A2 RID: 95906 RVA: 0x006E5790 File Offset: 0x006E3990
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -95,7 +95,7 @@ public class DamageExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C330 RID: 49968
+	// Token: 0x0400C6D9 RID: 50905
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B6 RID: 22198
+	// Token: 0x0200468C RID: 18060
 	public enum EComponents
 	{
-		// Token: 0x0401DA73 RID: 121459
+		// Token: 0x040184FE RID: 99582
 		ComfirmBtn,
-		// Token: 0x0401DA74 RID: 121460
+		// Token: 0x040184FF RID: 99583
 		ServerName,
-		// Token: 0x0401DA75 RID: 121461
+		// Token: 0x04018500 RID: 99584
 		ServerInfo,
-		// Token: 0x0401DA76 RID: 121462
+		// Token: 0x04018501 RID: 99585
 		Gou,
-		// Token: 0x0401DA77 RID: 121463
+		// Token: 0x04018502 RID: 99586
 		RoleNode,
-		// Token: 0x0401DA78 RID: 121464
+		// Token: 0x04018503 RID: 99587
 		RoleLevel,
-		// Token: 0x0401DA79 RID: 121465
+		// Token: 0x04018504 RID: 99588
 		SuggestLabel = 7
 	}
 }

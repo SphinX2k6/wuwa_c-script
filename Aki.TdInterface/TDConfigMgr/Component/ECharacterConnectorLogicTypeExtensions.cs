@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000908 RID: 2312
+	// Token: 0x020009B1 RID: 2481
 	public static class ECharacterConnectorLogicTypeExtensions
 	{
-		// Token: 0x06003455 RID: 13397 RVA: 0x00085A5C File Offset: 0x00083C5C
+		// Token: 0x060037AF RID: 14255 RVA: 0x0008D2CC File Offset: 0x0008B4CC
 		public static string ToEnumString(this ECharacterConnectorLogicType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003456 RID: 13398 RVA: 0x00085A84 File Offset: 0x00083C84
+		// Token: 0x060037B0 RID: 14256 RVA: 0x0008D2F4 File Offset: 0x0008B4F4
 		public static ECharacterConnectorLogicType FromString(string name)
 		{
 			ECharacterConnectorLogicType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003457 RID: 13399 RVA: 0x00085AAD File Offset: 0x00083CAD
+		// Token: 0x060037B1 RID: 14257 RVA: 0x0008D31D File Offset: 0x0008B51D
 		public static bool TryFromString(string name, out ECharacterConnectorLogicType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003458 RID: 13400 RVA: 0x00085AD2 File Offset: 0x00083CD2
+		// Token: 0x060037B2 RID: 14258 RVA: 0x0008D342 File Offset: 0x0008B542
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003459 RID: 13401 RVA: 0x00085AE2 File Offset: 0x00083CE2
+		// Token: 0x060037B3 RID: 14259 RVA: 0x0008D352 File Offset: 0x0008B552
 		public static ECharacterConnectorLogicType[] GetValues()
 		{
 			return new ECharacterConnectorLogicType[1];
 		}
 
-		// Token: 0x0600345A RID: 13402 RVA: 0x00085AEA File Offset: 0x00083CEA
+		// Token: 0x060037B4 RID: 14260 RVA: 0x0008D35A File Offset: 0x0008B55A
 		public static string[] GetNames()
 		{
 			return new string[]

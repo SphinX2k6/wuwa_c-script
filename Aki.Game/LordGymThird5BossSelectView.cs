@@ -7,13 +7,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021B1 RID: 8625
+// Token: 0x02001695 RID: 5781
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 {
-	// Token: 0x17001553 RID: 5459
-	// (get) Token: 0x06010C72 RID: 68722 RVA: 0x004133F7 File Offset: 0x004115F7
+	// Token: 0x1700158A RID: 5514
+	// (get) Token: 0x0600E103 RID: 57603 RVA: 0x0041FCDF File Offset: 0x0041DEDF
 	protected override string ShopTextId
 	{
 		get
@@ -22,8 +22,8 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		}
 	}
 
-	// Token: 0x17001554 RID: 5460
-	// (get) Token: 0x06010C73 RID: 68723 RVA: 0x004133FE File Offset: 0x004115FE
+	// Token: 0x1700158B RID: 5515
+	// (get) Token: 0x0600E104 RID: 57604 RVA: 0x0041FCE6 File Offset: 0x0041DEE6
 	protected override string ConfirmTextId
 	{
 		get
@@ -32,8 +32,8 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		}
 	}
 
-	// Token: 0x17001555 RID: 5461
-	// (get) Token: 0x06010C74 RID: 68724 RVA: 0x00413405 File Offset: 0x00411605
+	// Token: 0x1700158C RID: 5516
+	// (get) Token: 0x0600E105 RID: 57605 RVA: 0x0041FCED File Offset: 0x0041DEED
 	protected override int ShopTabIndex
 	{
 		get
@@ -42,12 +42,12 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		}
 	}
 
-	// Token: 0x06010C75 RID: 68725 RVA: 0x00413408 File Offset: 0x00411608
+	// Token: 0x0600E106 RID: 57606 RVA: 0x0041FCF0 File Offset: 0x0041DEF0
 	public LordGymThird5BossSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C76 RID: 68726 RVA: 0x00413411 File Offset: 0x00411611
+	// Token: 0x0600E107 RID: 57607 RVA: 0x0041FCF9 File Offset: 0x0041DEF9
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -55,7 +55,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(7, typeof(UUIVerticalLayout)));
 	}
 
-	// Token: 0x06010C77 RID: 68727 RVA: 0x00413450 File Offset: 0x00411650
+	// Token: 0x0600E108 RID: 57608 RVA: 0x0041FD38 File Offset: 0x0041DF38
 	protected override void OpenSelectView()
 	{
 		LordGymModel.Instance.EntranceEntityId = this.SelectedEntranceId;
@@ -71,7 +71,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		});
 	}
 
-	// Token: 0x06010C78 RID: 68728 RVA: 0x004134C4 File Offset: 0x004116C4
+	// Token: 0x0600E109 RID: 57609 RVA: 0x0041FDAC File Offset: 0x0041DFAC
 	protected override void OnStart()
 	{
 		if (this.LordEntranceList != null && this.LordEntranceList.Count > 7)
@@ -104,7 +104,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		this.UiViewSequence.StartSequenceName = "Start01";
 	}
 
-	// Token: 0x06010C79 RID: 68729 RVA: 0x00413588 File Offset: 0x00411788
+	// Token: 0x0600E10A RID: 57610 RVA: 0x0041FE70 File Offset: 0x0041E070
 	public override string GetBlackScreenTypeOnOpenViewLoadScene()
 	{
 		LordGymLordEntranceSelectViewParam lordGymLordEntranceSelectViewParam = this.OpenParam as LordGymLordEntranceSelectViewParam;
@@ -115,12 +115,12 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return "None";
 	}
 
-	// Token: 0x06010C7A RID: 68730 RVA: 0x004135AE File Offset: 0x004117AE
+	// Token: 0x0600E10B RID: 57611 RVA: 0x0041FE96 File Offset: 0x0041E096
 	protected override void InitSelect()
 	{
 	}
 
-	// Token: 0x06010C7B RID: 68731 RVA: 0x004135B0 File Offset: 0x004117B0
+	// Token: 0x0600E10C RID: 57612 RVA: 0x0041FE98 File Offset: 0x0041E098
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymThird5BossSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -131,7 +131,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C7C RID: 68732 RVA: 0x004135F4 File Offset: 0x004117F4
+	// Token: 0x0600E10D RID: 57613 RVA: 0x0041FEDC File Offset: 0x0041E0DC
 	protected UniTask InitSelectAsync()
 	{
 		LordGymThird5BossSelectView.<InitSelectAsync>d__15 <InitSelectAsync>d__;
@@ -142,7 +142,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return <InitSelectAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C7D RID: 68733 RVA: 0x00413637 File Offset: 0x00411837
+	// Token: 0x0600E10E RID: 57614 RVA: 0x0041FF1F File Offset: 0x0041E11F
 	protected override LordGymLordEntranceItem CreateItem()
 	{
 		return new LordGymThirdBossItem
@@ -152,7 +152,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		};
 	}
 
-	// Token: 0x06010C7E RID: 68734 RVA: 0x00413662 File Offset: 0x00411862
+	// Token: 0x0600E10F RID: 57615 RVA: 0x0041FF4A File Offset: 0x0041E14A
 	protected override void ReBuildLordEntranceList()
 	{
 		if (this.LordEntranceList != null && this.LordEntranceList.Count < 2)
@@ -161,7 +161,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		}
 	}
 
-	// Token: 0x06010C7F RID: 68735 RVA: 0x00413688 File Offset: 0x00411888
+	// Token: 0x0600E110 RID: 57616 RVA: 0x0041FF70 File Offset: 0x0041E170
 	protected override void OnHandleLoadScene()
 	{
 		if (!UiSceneManager.Instance.HasLordSkeletalHandle())
@@ -178,7 +178,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		this.HasPlayEffect = true;
 	}
 
-	// Token: 0x06010C80 RID: 68736 RVA: 0x004136FC File Offset: 0x004118FC
+	// Token: 0x0600E111 RID: 57617 RVA: 0x0041FFE4 File Offset: 0x0041E1E4
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
 		LordGymThird5BossSelectView.<OnHandlePostLoadSceneAsync>d__19 <OnHandlePostLoadSceneAsync>d__;
@@ -190,7 +190,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C81 RID: 68737 RVA: 0x00413748 File Offset: 0x00411948
+	// Token: 0x0600E112 RID: 57618 RVA: 0x00420030 File Offset: 0x0041E230
 	protected override UniTask OnHandlePreReleaseSceneAsync(bool isSceneRelease)
 	{
 		LordGymThird5BossSelectView.<OnHandlePreReleaseSceneAsync>d__20 <OnHandlePreReleaseSceneAsync>d__;
@@ -201,13 +201,13 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return <OnHandlePreReleaseSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C82 RID: 68738 RVA: 0x0041378B File Offset: 0x0041198B
+	// Token: 0x0600E113 RID: 57619 RVA: 0x00420073 File Offset: 0x0041E273
 	protected override void OnHandleReleaseScene()
 	{
 		UiSceneManager.Instance.DestroyLordSkeletalHandle();
 	}
 
-	// Token: 0x06010C83 RID: 68739 RVA: 0x00413798 File Offset: 0x00411998
+	// Token: 0x0600E114 RID: 57620 RVA: 0x00420080 File Offset: 0x0041E280
 	public override void SelectLordEntranceByIndex(int index)
 	{
 		int num = this.LordEntranceList[index];
@@ -229,7 +229,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		base.PlaySequence("Switch", null, false);
 	}
 
-	// Token: 0x06010C84 RID: 68740 RVA: 0x004137FC File Offset: 0x004119FC
+	// Token: 0x0600E115 RID: 57621 RVA: 0x004200E4 File Offset: 0x0041E2E4
 	protected UniTask SelectLordEntranceByIndexAsync(int index)
 	{
 		LordGymThird5BossSelectView.<SelectLordEntranceByIndexAsync>d__23 <SelectLordEntranceByIndexAsync>d__;
@@ -241,13 +241,13 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		return <SelectLordEntranceByIndexAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C85 RID: 68741 RVA: 0x00413847 File Offset: 0x00411A47
+	// Token: 0x0600E116 RID: 57622 RVA: 0x0042012F File Offset: 0x0041E32F
 	protected override void OnBeforeDestroy()
 	{
 		InstanceDungeonEntranceController.Instance.RestoreDungeonEntranceEntity();
 	}
 
-	// Token: 0x06010C86 RID: 68742 RVA: 0x00413853 File Offset: 0x00411A53
+	// Token: 0x0600E117 RID: 57623 RVA: 0x0042013B File Offset: 0x0041E33B
 	private void AddHomeBtnExitDungeonCallback()
 	{
 		UiBehaviourHomeBtn uiBehaviourHomeBtn = this.UiBehaviourHomeBtn;
@@ -265,7 +265,7 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		});
 	}
 
-	// Token: 0x06010C87 RID: 68743 RVA: 0x00413884 File Offset: 0x00411A84
+	// Token: 0x0600E118 RID: 57624 RVA: 0x0042016C File Offset: 0x0041E36C
 	private void OnClickClose()
 	{
 		if (LordGymController.Instance.IsInLordGymDungeon())
@@ -285,17 +285,17 @@ public class LordGymThird5BossSelectView : LordGymLordEntranceSelectView
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04007F9C RID: 32668
+	// Token: 0x040080E3 RID: 32995
 	private bool HasPlayEffect;
 
-	// Token: 0x020086E7 RID: 34535
+	// Token: 0x02007872 RID: 30834
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402BE43 RID: 179779
+		// Token: 0x04027164 RID: 160100
 		public const int ShopHotDot = 6;
 
-		// Token: 0x0402BE44 RID: 179780
+		// Token: 0x04027165 RID: 160101
 		public const int Content = 7;
 	}
 }

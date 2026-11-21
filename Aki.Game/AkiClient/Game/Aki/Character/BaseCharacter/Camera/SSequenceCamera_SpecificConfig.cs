@@ -6,159 +6,149 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043D3 RID: 17363
+	// Token: 0x020033EA RID: 13290
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/SSequenceCamera_SpecificConfig.SSequenceCamera_SpecificConfig")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 14)]
 	public class SSequenceCamera_SpecificConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602CFAF RID: 184239 RVA: 0x00A2DAA8 File Offset: 0x00A2BCA8
+		// Token: 0x06021B69 RID: 138089 RVA: 0x0096779C File Offset: 0x0096599C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSequenceCamera_SpecificConfig._ScriptStructPtr != 0) ? SSequenceCamera_SpecificConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/SSequenceCamera_SpecificConfig.SSequenceCamera_SpecificConfig", ref SSequenceCamera_SpecificConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170071E6 RID: 29158
-		// (get) Token: 0x0602CFB0 RID: 184240 RVA: 0x00A2DACC File Offset: 0x00A2BCCC
-		// (set) Token: 0x0602CFB1 RID: 184241 RVA: 0x00A2DAE0 File Offset: 0x00A2BCE0
+		// Token: 0x170045D4 RID: 17876
+		// (get) Token: 0x06021B6A RID: 138090 RVA: 0x009677C0 File Offset: 0x009659C0
+		// (set) Token: 0x06021B6B RID: 138091 RVA: 0x009677D4 File Offset: 0x009659D4
 		public unsafe TEnumAsByte<ESequenceCameraSpecificType> SpecificType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_SpecificType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_SpecificType) = value;
 			}
 		}
 
-		// Token: 0x170071E7 RID: 29159
-		// (get) Token: 0x0602CFB2 RID: 184242 RVA: 0x00A2DAF5 File Offset: 0x00A2BCF5
-		// (set) Token: 0x0602CFB3 RID: 184243 RVA: 0x00A2DB05 File Offset: 0x00A2BD05
+		// Token: 0x170045D5 RID: 17877
+		// (get) Token: 0x06021B6C RID: 138092 RVA: 0x009677E9 File Offset: 0x009659E9
+		// (set) Token: 0x06021B6D RID: 138093 RVA: 0x009677F9 File Offset: 0x009659F9
 		public unsafe float OverrideSequenceTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideSequenceTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideSequenceTime) = value;
 			}
 		}
 
-		// Token: 0x170071E8 RID: 29160
-		// (get) Token: 0x0602CFB4 RID: 184244 RVA: 0x00A2DB16 File Offset: 0x00A2BD16
-		// (set) Token: 0x0602CFB5 RID: 184245 RVA: 0x00A2DB26 File Offset: 0x00A2BD26
+		// Token: 0x170045D6 RID: 17878
+		// (get) Token: 0x06021B6E RID: 138094 RVA: 0x0096780A File Offset: 0x00965A0A
+		// (set) Token: 0x06021B6F RID: 138095 RVA: 0x0096781A File Offset: 0x00965A1A
 		public unsafe float OverrideBlendOutTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideBlendOutTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideBlendOutTime) = value;
 			}
 		}
 
-		// Token: 0x170071E9 RID: 29161
-		// (get) Token: 0x0602CFB6 RID: 184246 RVA: 0x00A2DB37 File Offset: 0x00A2BD37
-		// (set) Token: 0x0602CFB7 RID: 184247 RVA: 0x00A2DB4B File Offset: 0x00A2BD4B
+		// Token: 0x170045D7 RID: 17879
+		// (get) Token: 0x06021B70 RID: 138096 RVA: 0x0096782B File Offset: 0x00965A2B
+		// (set) Token: 0x06021B71 RID: 138097 RVA: 0x0096783F File Offset: 0x00965A3F
 		public unsafe TEnumAsByte<ESequenceCameraAnsEffectiveClientType> OverrideCondition
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideCondition);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_OverrideCondition) = value;
 			}
 		}
 
-		// Token: 0x170071EA RID: 29162
-		// (get) Token: 0x0602CFB8 RID: 184248 RVA: 0x00A2DB60 File Offset: 0x00A2BD60
-		// (set) Token: 0x0602CFB9 RID: 184249 RVA: 0x00A2DB70 File Offset: 0x00A2BD70
+		// Token: 0x170045D8 RID: 17880
+		// (get) Token: 0x06021B72 RID: 138098 RVA: 0x00967854 File Offset: 0x00965A54
+		// (set) Token: 0x06021B73 RID: 138099 RVA: 0x00967864 File Offset: 0x00965A64
 		public unsafe bool IsRecoverRotation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_IsRecoverRotation) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSequenceCamera_SpecificConfig.__PropertyOffset_IsRecoverRotation) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602CFBA RID: 184250 RVA: 0x00A2DB81 File Offset: 0x00A2BD81
+		// Token: 0x06021B74 RID: 138100 RVA: 0x00967875 File Offset: 0x00965A75
 		public SSequenceCamera_SpecificConfig()
 		{
 		}
 
-		// Token: 0x0602CFBB RID: 184251 RVA: 0x00A2DB89 File Offset: 0x00A2BD89
-		public SSequenceCamera_SpecificConfig(TEnumAsByte<ESequenceCameraSpecificType> SpecificType, float OverrideSequenceTime, float OverrideBlendOutTime, TEnumAsByte<ESequenceCameraAnsEffectiveClientType> OverrideCondition, bool IsRecoverRotation)
-		{
-			this.SpecificType = SpecificType;
-			this.OverrideSequenceTime = OverrideSequenceTime;
-			this.OverrideBlendOutTime = OverrideBlendOutTime;
-			this.OverrideCondition = OverrideCondition;
-			this.IsRecoverRotation = IsRecoverRotation;
-		}
-
-		// Token: 0x0602CFBC RID: 184252 RVA: 0x00A2DBB6 File Offset: 0x00A2BDB6
+		// Token: 0x06021B75 RID: 138101 RVA: 0x0096787D File Offset: 0x00965A7D
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSequenceCamera_SpecificConfig.StaticStruct();
 		}
 
-		// Token: 0x0602CFBD RID: 184253 RVA: 0x00A2DBC2 File Offset: 0x00A2BDC2
+		// Token: 0x06021B76 RID: 138102 RVA: 0x00967889 File Offset: 0x00965A89
 		[NullableContext(2)]
 		public SSequenceCamera_SpecificConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602CFBE RID: 184254 RVA: 0x00A2DBCC File Offset: 0x00A2BDCC
+		// Token: 0x06021B77 RID: 138103 RVA: 0x00967893 File Offset: 0x00965A93
 		public SSequenceCamera_SpecificConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602CFBF RID: 184255 RVA: 0x00A2DBD7 File Offset: 0x00A2BDD7
+		// Token: 0x06021B78 RID: 138104 RVA: 0x0096789E File Offset: 0x00965A9E
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSequenceCamera_SpecificConfig(Pointer, false, true);
 		}
 
-		// Token: 0x0602CFC0 RID: 184256 RVA: 0x00A2DBE1 File Offset: 0x00A2BDE1
+		// Token: 0x06021B79 RID: 138105 RVA: 0x009678A8 File Offset: 0x00965AA8
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSequenceCamera_SpecificConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017DDE RID: 97758
+		// Token: 0x0401291F RID: 76063
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/SSequenceCamera_SpecificConfig.SSequenceCamera_SpecificConfig";
 
-		// Token: 0x04017DDF RID: 97759
+		// Token: 0x04012920 RID: 76064
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017DE0 RID: 97760
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012921 RID: 76065
+		internal static int __PropertyOffset_SpecificType;
 
-		// Token: 0x04017DE1 RID: 97761
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012922 RID: 76066
+		internal static int __PropertyOffset_OverrideSequenceTime;
 
-		// Token: 0x04017DE2 RID: 97762
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012923 RID: 76067
+		internal static int __PropertyOffset_OverrideBlendOutTime;
 
-		// Token: 0x04017DE3 RID: 97763
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012924 RID: 76068
+		internal static int __PropertyOffset_OverrideCondition;
 
-		// Token: 0x04017DE4 RID: 97764
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012925 RID: 76069
+		internal static int __PropertyOffset_IsRecoverRotation;
 	}
 }

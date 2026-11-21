@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001967 RID: 6503
+// Token: 0x02000E24 RID: 3620
 public class SmallItemGridReceivableComponent : SmallItemGridVisibleComponent
 {
-	// Token: 0x0600BEA0 RID: 48800 RVA: 0x002B261B File Offset: 0x002B081B
+	// Token: 0x060092A8 RID: 37544 RVA: 0x002BD59F File Offset: 0x002BB79F
 	[NullableContext(2)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemBReceivable";
 	}
 
-	// Token: 0x0600BEA1 RID: 48801 RVA: 0x002B2622 File Offset: 0x002B0822
+	// Token: 0x060092A9 RID: 37545 RVA: 0x002BD5A6 File Offset: 0x002BB7A6
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;

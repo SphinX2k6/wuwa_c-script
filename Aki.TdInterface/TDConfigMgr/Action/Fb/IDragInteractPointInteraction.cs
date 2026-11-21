@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200284E RID: 10318
+	// Token: 0x02002B21 RID: 11041
 	public class IDragInteractPointInteraction : IInteractPointInteraction
 	{
-		// Token: 0x0600E4B4 RID: 58548 RVA: 0x0021A7AE File Offset: 0x002189AE
-		[NullableContext(1)]
+		// Token: 0x0600F2D9 RID: 62169 RVA: 0x00237612 File Offset: 0x00235812
 		public static IDragInteractPointInteraction Create(IDragInteractPointInteraction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045DA RID: 17882
-		// (get) Token: 0x0600E4B5 RID: 58549 RVA: 0x0021A7CD File Offset: 0x002189CD
+		// Token: 0x17004945 RID: 18757
+		// (get) Token: 0x0600F2DA RID: 62170 RVA: 0x00237631 File Offset: 0x00235831
 		public override EInteractPointInteractionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045DB RID: 17883
-		// (get) Token: 0x0600E4B6 RID: 58550 RVA: 0x0021A7DA File Offset: 0x002189DA
+		// Token: 0x17004946 RID: 18758
+		// (get) Token: 0x0600F2DB RID: 62171 RVA: 0x0023763E File Offset: 0x0023583E
 		public virtual int DragItemTag
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045DC RID: 17884
-		// (get) Token: 0x0600E4B7 RID: 58551 RVA: 0x0021A7E8 File Offset: 0x002189E8
+		// Token: 0x17004947 RID: 18759
+		// (get) Token: 0x0600F2DC RID: 62172 RVA: 0x0023764C File Offset: 0x0023584C
 		public virtual float? CheckDistance
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E88 RID: 32392
+		// Token: 0x04008545 RID: 34117
 		private IDragInteractPointInteraction Instance;
 	}
 }

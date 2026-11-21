@@ -7,26 +7,26 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004948 RID: 18760
+	// Token: 0x020038BF RID: 14527
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationViewManager : Singleton
 	{
-		// Token: 0x06030FA2 RID: 200610 RVA: 0x00B5FA3A File Offset: 0x00B5DC3A
+		// Token: 0x06025ACE RID: 154318 RVA: 0x00A9A87E File Offset: 0x00A98A7E
 		public void Initialize()
 		{
 			this.AddEventListener();
 			this.AddTick();
 		}
 
-		// Token: 0x06030FA3 RID: 200611 RVA: 0x00B5FA48 File Offset: 0x00B5DC48
+		// Token: 0x06025ACF RID: 154319 RVA: 0x00A9A88C File Offset: 0x00A98A8C
 		public void Clear()
 		{
 			this.RemoveEventListener();
 			this.RemoveTick();
 		}
 
-		// Token: 0x06030FA4 RID: 200612 RVA: 0x00B5FA56 File Offset: 0x00B5DC56
+		// Token: 0x06025AD0 RID: 154320 RVA: 0x00A9A89A File Offset: 0x00A98A9A
 		private void PrePhysicTick(float deltaTime)
 		{
 			if (this.NeedSkipFindNavigationByCache())
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FindDefaultNavigation();
 		}
 
-		// Token: 0x06030FA5 RID: 200613 RVA: 0x00B5FA67 File Offset: 0x00B5DC67
+		// Token: 0x06025AD1 RID: 154321 RVA: 0x00A9A8AB File Offset: 0x00A98AAB
 		private void EndPhysicTick(float deltaTime)
 		{
 			this.RefreshCurrentPanel();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SetNavigationFocusForViewInternal(this.CacheUiItem, this.CacheCheckDirty);
 		}
 
-		// Token: 0x06030FA6 RID: 200614 RVA: 0x00B5FA9C File Offset: 0x00B5DC9C
+		// Token: 0x06025AD2 RID: 154322 RVA: 0x00A9A8E0 File Offset: 0x00A98AE0
 		private void AddTick()
 		{
 			Ticker ticker = TickSystem.Instance.Add(new Action<float>(this.PrePhysicTick), "UiNavigationViewManager", ETickingGroup.TG_PrePhysics, true, 0, false);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.EndPhysicTickId = ((ticker2 != null) ? ticker2.Id : -1);
 		}
 
-		// Token: 0x06030FA7 RID: 200615 RVA: 0x00B5FB0C File Offset: 0x00B5DD0C
+		// Token: 0x06025AD3 RID: 154323 RVA: 0x00A9A950 File Offset: 0x00A98B50
 		private void RemoveTick()
 		{
 			if (this.PrePhysicsTickId != -1)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FA8 RID: 200616 RVA: 0x00B5FB5C File Offset: 0x00B5DD5C
+		// Token: 0x06025AD4 RID: 154324 RVA: 0x00A9A9A0 File Offset: 0x00A98BA0
 		private void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.NavigationViewCreate, new Action<int, AActor>(this.NavigationViewCreate));
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			EventSystem.Instance.Add(EEventName.ResetNavigationListener, new Action(this.ResetNavigationListener));
 		}
 
-		// Token: 0x06030FA9 RID: 200617 RVA: 0x00B5FBC0 File Offset: 0x00B5DDC0
+		// Token: 0x06025AD5 RID: 154325 RVA: 0x00A9AA04 File Offset: 0x00A98C04
 		private void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.NavigationViewCreate, new Action<int, AActor>(this.NavigationViewCreate));
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			EventSystem.Instance.Remove(EEventName.ResetNavigationListener, new Action(this.ResetNavigationListener));
 		}
 
-		// Token: 0x06030FAA RID: 200618 RVA: 0x00B5FC24 File Offset: 0x00B5DE24
+		// Token: 0x06025AD6 RID: 154326 RVA: 0x00A9AA68 File Offset: 0x00A98C68
 		[NullableContext(2)]
 		private void NavigationViewCreate(int tagId, AActor actor)
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CheckAndInsertPanelConfig(tagId, tsUiNavigationPanelConfig);
 		}
 
-		// Token: 0x06030FAB RID: 200619 RVA: 0x00B5FCA8 File Offset: 0x00B5DEA8
+		// Token: 0x06025AD7 RID: 154327 RVA: 0x00A9AAEC File Offset: 0x00A98CEC
 		private void CheckAndInsertPanelConfig(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			if (panelConfig.ViewName != "弹窗通用")
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FAC RID: 200620 RVA: 0x00B5FDB5 File Offset: 0x00B5DFB5
+		// Token: 0x06025AD8 RID: 154328 RVA: 0x00A9ABF9 File Offset: 0x00A98DF9
 		private void NavigationViewDestroy(int tagId, AActor actor)
 		{
 			if (actor == null)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.MarkCalculateCurrentPanelDirty();
 		}
 
-		// Token: 0x06030FAD RID: 200621 RVA: 0x00B5FDDA File Offset: 0x00B5DFDA
+		// Token: 0x06025AD9 RID: 154329 RVA: 0x00A9AC1E File Offset: 0x00A98E1E
 		private void ResetNavigationListener()
 		{
 			if (this.CurrentHandle == null)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationModel.Instance.MarkMoveInstantly();
 		}
 
-		// Token: 0x06030FAE RID: 200622 RVA: 0x00B5FDFC File Offset: 0x00B5DFFC
+		// Token: 0x06025ADA RID: 154330 RVA: 0x00A9AC40 File Offset: 0x00A98E40
 		private void CreateNavigationViewHandle(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			UiNavigationViewHandle uiNavigationViewHandle = new UiNavigationViewHandle(tagId, panelConfig);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.PanelConfigMap[tagId] = uiNavigationViewHandle;
 		}
 
-		// Token: 0x06030FAF RID: 200623 RVA: 0x00B5FE34 File Offset: 0x00B5E034
+		// Token: 0x06025ADB RID: 154331 RVA: 0x00A9AC78 File Offset: 0x00A98E78
 		private bool IsExistInNavigationViewMap(TsUiNavigationPanelConfig panelConfig)
 		{
 			foreach (UiNavigationViewHandle uiNavigationViewHandle in this.NavigationViewMap.Values)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030FB0 RID: 200624 RVA: 0x00B5FEC8 File Offset: 0x00B5E0C8
+		// Token: 0x06025ADC RID: 154332 RVA: 0x00A9AD0C File Offset: 0x00A98F0C
 		private bool InsertPanelConfigToCurrentHandle(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			UiNavigationViewHandle uiNavigationViewHandle = null;
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return true;
 		}
 
-		// Token: 0x06030FB1 RID: 200625 RVA: 0x00B5FF4C File Offset: 0x00B5E14C
+		// Token: 0x06025ADD RID: 154333 RVA: 0x00A9AD90 File Offset: 0x00A98F90
 		private bool InsertNavigationViewPanelConfig(int tagId, TsUiNavigationPanelConfig panelConfig)
 		{
 			if (UiNavigationGlobalData.NeedCalculateCurrentPanel)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.InsertPanelConfigToCurrentHandle(tagId, panelConfig);
 		}
 
-		// Token: 0x06030FB2 RID: 200626 RVA: 0x00B5FF6C File Offset: 0x00B5E16C
+		// Token: 0x06025ADE RID: 154334 RVA: 0x00A9ADB0 File Offset: 0x00A98FB0
 		private bool DeleteNavigationViewPanelConfig(int tagId)
 		{
 			UiNavigationViewHandle uiNavigationViewHandle;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030FB3 RID: 200627 RVA: 0x00B5FFA8 File Offset: 0x00B5E1A8
+		// Token: 0x06025ADF RID: 154335 RVA: 0x00A9ADEC File Offset: 0x00A98FEC
 		private bool DestroyNavigationViewHandle(int tagId)
 		{
 			UiNavigationViewHandle uiNavigationViewHandle;
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030FB4 RID: 200628 RVA: 0x00B6002C File Offset: 0x00B5E22C
+		// Token: 0x06025AE0 RID: 154336 RVA: 0x00A9AE70 File Offset: 0x00A99070
 		private void ResetCurrentHandle(int tagId)
 		{
 			if (this.CurrentHandle == null)
@@ -296,13 +296,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FB5 RID: 200629 RVA: 0x00B600A1 File Offset: 0x00B5E2A1
+		// Token: 0x06025AE1 RID: 154337 RVA: 0x00A9AEE5 File Offset: 0x00A990E5
 		public void MarkCalculateCurrentPanelDirty()
 		{
 			UiNavigationGlobalData.NeedCalculateCurrentPanel = true;
 		}
 
-		// Token: 0x06030FB6 RID: 200630 RVA: 0x00B600A9 File Offset: 0x00B5E2A9
+		// Token: 0x06025AE2 RID: 154338 RVA: 0x00A9AEED File Offset: 0x00A990ED
 		private void UpdateCurrentPanel()
 		{
 			if (!UiNavigationGlobalData.NeedCalculateCurrentPanel)
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CalculateCurrentPanel();
 		}
 
-		// Token: 0x06030FB7 RID: 200631 RVA: 0x00B600C0 File Offset: 0x00B5E2C0
+		// Token: 0x06025AE3 RID: 154339 RVA: 0x00A9AF04 File Offset: 0x00A99104
 		private bool CheckDepthValid(UiNavigationViewHandle newHandle, UiNavigationViewHandle oldHandle)
 		{
 			int depth = newHandle.GetDepth();
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return depth != -1 && depth2 != -1;
 		}
 
-		// Token: 0x06030FB8 RID: 200632 RVA: 0x00B600E8 File Offset: 0x00B5E2E8
+		// Token: 0x06025AE4 RID: 154340 RVA: 0x00A9AF2C File Offset: 0x00A9912C
 		private void CalculateCurrentPanel()
 		{
 			if (this.NavigationViewMap.Count <= 0)
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FB9 RID: 200633 RVA: 0x00B60248 File Offset: 0x00B5E448
+		// Token: 0x06025AE5 RID: 154341 RVA: 0x00A9B08C File Offset: 0x00A9928C
 		private void FindDefaultNavigation()
 		{
 			if (this.CurrentHandle == null)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentHandle.FindDefaultNavigation();
 		}
 
-		// Token: 0x06030FBA RID: 200634 RVA: 0x00B60260 File Offset: 0x00B5E460
+		// Token: 0x06025AE6 RID: 154342 RVA: 0x00A9B0A4 File Offset: 0x00A992A4
 		private void RefreshCurrentPanel()
 		{
 			if (UiNavigationGlobalData.NeedRefreshPanelId == 0)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentHandle.FindAddPanelConfigNavigation();
 		}
 
-		// Token: 0x06030FBB RID: 200635 RVA: 0x00B602D0 File Offset: 0x00B5E4D0
+		// Token: 0x06025AE7 RID: 154343 RVA: 0x00A9B114 File Offset: 0x00A99314
 		private void HandleCachePanelConfigToCurrentPanel()
 		{
 			if (this.CacheInsertPanelConfigMap.Count <= 0)
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CacheInsertPanelConfigMap.Clear();
 		}
 
-		// Token: 0x06030FBC RID: 200636 RVA: 0x00B6034C File Offset: 0x00B5E54C
+		// Token: 0x06025AE8 RID: 154344 RVA: 0x00A9B190 File Offset: 0x00A99390
 		private void HandleCachePopPanelConfig()
 		{
 			if (this.CacheInsertPopPanelConfigMap.Count <= 0)
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FBD RID: 200637 RVA: 0x00B60470 File Offset: 0x00B5E670
+		// Token: 0x06025AE9 RID: 154345 RVA: 0x00A9B2B4 File Offset: 0x00A994B4
 		private void TickCurrentViewHandle(float deltaTime)
 		{
 			if (this.CurrentHandle == null)
@@ -479,13 +479,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentHandle.TickViewHandle(deltaTime);
 		}
 
-		// Token: 0x06030FBE RID: 200638 RVA: 0x00B60487 File Offset: 0x00B5E687
+		// Token: 0x06025AEA RID: 154346 RVA: 0x00A9B2CB File Offset: 0x00A994CB
 		public UiNavigationViewHandle GetCurrentViewHandle()
 		{
 			return this.CurrentHandle;
 		}
 
-		// Token: 0x06030FBF RID: 200639 RVA: 0x00B6048F File Offset: 0x00B5E68F
+		// Token: 0x06025AEB RID: 154347 RVA: 0x00A9B2D3 File Offset: 0x00A994D3
 		public void RefreshCurrentHotKey()
 		{
 			if (this.CurrentHandle == null)
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentHandle.MarkRefreshHotKeyDirty();
 		}
 
-		// Token: 0x06030FC0 RID: 200640 RVA: 0x00B604A5 File Offset: 0x00B5E6A5
+		// Token: 0x06025AEC RID: 154348 RVA: 0x00A9B2E9 File Offset: 0x00A994E9
 		public void RefreshCurrentHotKeyTextId()
 		{
 			if (this.CurrentHandle == null)
@@ -505,20 +505,20 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentHandle.MarkRefreshHotKeyTextIdDirty();
 		}
 
-		// Token: 0x06030FC1 RID: 200641 RVA: 0x00B604BB File Offset: 0x00B5E6BB
+		// Token: 0x06025AED RID: 154349 RVA: 0x00A9B2FF File Offset: 0x00A994FF
 		public bool CanFocusViewHandle(UiNavigationViewHandle viewHandle)
 		{
 			UiNavigationViewHandle currentHandle = this.CurrentHandle;
 			return currentHandle == null || !currentHandle.HasGamepadControlMouse() || this.CurrentHandle == viewHandle;
 		}
 
-		// Token: 0x06030FC2 RID: 200642 RVA: 0x00B604DD File Offset: 0x00B5E6DD
+		// Token: 0x06025AEE RID: 154350 RVA: 0x00A9B321 File Offset: 0x00A99521
 		public bool NeedSkipFindNavigationByCache()
 		{
 			return this.CacheUiItem != null && this.CacheSuppressDefaultFind;
 		}
 
-		// Token: 0x06030FC3 RID: 200643 RVA: 0x00B604EF File Offset: 0x00B5E6EF
+		// Token: 0x06025AEF RID: 154351 RVA: 0x00A9B333 File Offset: 0x00A99533
 		private void ClearNavigationFocusCache()
 		{
 			this.CacheUiItem = null;
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CacheSuppressDefaultFind = false;
 		}
 
-		// Token: 0x06030FC4 RID: 200644 RVA: 0x00B60508 File Offset: 0x00B5E708
+		// Token: 0x06025AF0 RID: 154352 RVA: 0x00A9B34C File Offset: 0x00A9954C
 		[NullableContext(2)]
 		private void SetNavigationFocusForViewInternal(UUIItem uiItem, bool checkDirty = false)
 		{
@@ -577,7 +577,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FC5 RID: 200645 RVA: 0x00B6059E File Offset: 0x00B5E79E
+		// Token: 0x06025AF1 RID: 154353 RVA: 0x00A9B3E2 File Offset: 0x00A995E2
 		public void SetNavigationFocusForView(UUIItem uiItem, bool checkDirty = false, bool suppressDefaultFind = false)
 		{
 			if (Info.Instance.IsInTouch())
@@ -589,8 +589,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CacheSuppressDefaultFind = suppressDefaultFind;
 		}
 
-		// Token: 0x170079D8 RID: 31192
-		// (get) Token: 0x06030FC6 RID: 200646 RVA: 0x00B605C2 File Offset: 0x00B5E7C2
+		// Token: 0x17004D40 RID: 19776
+		// (get) Token: 0x06025AF2 RID: 154354 RVA: 0x00A9B406 File Offset: 0x00A99606
 		public static UiNavigationViewManager Instance
 		{
 			get
@@ -604,12 +604,12 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030FC7 RID: 200647 RVA: 0x00B605E5 File Offset: 0x00B5E7E5
+		// Token: 0x06025AF3 RID: 154355 RVA: 0x00A9B429 File Offset: 0x00A99629
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06030FC8 RID: 200648 RVA: 0x00B605E7 File Offset: 0x00B5E7E7
+		// Token: 0x06025AF4 RID: 154356 RVA: 0x00A9B42B File Offset: 0x00A9962B
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationViewManager instance = UiNavigationViewManager._instance;
@@ -620,26 +620,26 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationViewManager._instance = null;
 		}
 
-		// Token: 0x06030FC9 RID: 200649 RVA: 0x00B60600 File Offset: 0x00B5E800
+		// Token: 0x06025AF5 RID: 154357 RVA: 0x00A9B444 File Offset: 0x00A99644
 		static UiNavigationViewManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationViewManager.CreateStaticDefaultValue), new Action(UiNavigationViewManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A475 RID: 107637
+		// Token: 0x04014CE8 RID: 85224
 		[Nullable(2)]
 		private UiNavigationViewHandle CurrentHandle;
 
-		// Token: 0x0401A476 RID: 107638
+		// Token: 0x04014CE9 RID: 85225
 		private readonly OrderedDictionary<int, UiNavigationViewHandle> NavigationViewMap = new OrderedDictionary<int, UiNavigationViewHandle>();
 
-		// Token: 0x0401A477 RID: 107639
+		// Token: 0x04014CEA RID: 85226
 		private readonly Dictionary<int, UiNavigationViewHandle> PanelConfigMap = new Dictionary<int, UiNavigationViewHandle>();
 
-		// Token: 0x0401A478 RID: 107640
+		// Token: 0x04014CEB RID: 85227
 		private readonly OrderedDictionary<int, TsUiNavigationPanelConfig> CacheInsertPanelConfigMap = new OrderedDictionary<int, TsUiNavigationPanelConfig>();
 
-		// Token: 0x0401A479 RID: 107641
+		// Token: 0x04014CEC RID: 85228
 		[Nullable(new byte[]
 		{
 			1,
@@ -649,23 +649,23 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private readonly OrderedDictionary<ValueTuple<int, TsUiNavigationPanelConfig>, TsUiNavigationPanelConfig> CacheInsertPopPanelConfigMap = new OrderedDictionary<ValueTuple<int, TsUiNavigationPanelConfig>, TsUiNavigationPanelConfig>();
 
-		// Token: 0x0401A47A RID: 107642
+		// Token: 0x04014CED RID: 85229
 		private int PrePhysicsTickId = -1;
 
-		// Token: 0x0401A47B RID: 107643
+		// Token: 0x04014CEE RID: 85230
 		private int EndPhysicTickId = -1;
 
-		// Token: 0x0401A47C RID: 107644
+		// Token: 0x04014CEF RID: 85231
 		[Nullable(2)]
 		protected UUIItem CacheUiItem;
 
-		// Token: 0x0401A47D RID: 107645
+		// Token: 0x04014CF0 RID: 85232
 		protected bool CacheCheckDirty;
 
-		// Token: 0x0401A47E RID: 107646
+		// Token: 0x04014CF1 RID: 85233
 		protected bool CacheSuppressDefaultFind;
 
-		// Token: 0x0401A47F RID: 107647
+		// Token: 0x04014CF2 RID: 85234
 		[Nullable(2)]
 		private static UiNavigationViewManager _instance;
 	}

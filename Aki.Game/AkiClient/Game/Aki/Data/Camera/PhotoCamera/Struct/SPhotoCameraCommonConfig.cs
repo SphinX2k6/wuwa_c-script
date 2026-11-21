@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera.Struct
 {
-	// Token: 0x02003FB3 RID: 16307
+	// Token: 0x0200323B RID: 12859
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,435 +14,410 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera.Struct
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 144)]
 	public class SPhotoCameraCommonConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029B86 RID: 170886 RVA: 0x009CB090 File Offset: 0x009C9290
+		// Token: 0x060201B6 RID: 131510 RVA: 0x0093D9B4 File Offset: 0x0093BBB4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SPhotoCameraCommonConfig._ScriptStructPtr != 0) ? SPhotoCameraCommonConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Camera/PhotoCamera/Struct/SPhotoCameraCommonConfig.SPhotoCameraCommonConfig", ref SPhotoCameraCommonConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170064F1 RID: 25841
-		// (get) Token: 0x06029B87 RID: 170887 RVA: 0x009CB0B4 File Offset: 0x009C92B4
-		// (set) Token: 0x06029B88 RID: 170888 RVA: 0x009CB0C8 File Offset: 0x009C92C8
+		// Token: 0x17003D58 RID: 15704
+		// (get) Token: 0x060201B7 RID: 131511 RVA: 0x0093D9D8 File Offset: 0x0093BBD8
+		// (set) Token: 0x060201B8 RID: 131512 RVA: 0x0093D9EC File Offset: 0x0093BBEC
 		public unsafe string CenterLocationSocketName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_CenterLocationSocketName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_CenterLocationSocketName)), value);
 			}
 		}
 
-		// Token: 0x170064F2 RID: 25842
-		// (get) Token: 0x06029B89 RID: 170889 RVA: 0x009CB0DD File Offset: 0x009C92DD
-		// (set) Token: 0x06029B8A RID: 170890 RVA: 0x009CB0F1 File Offset: 0x009C92F1
+		// Token: 0x17003D59 RID: 15705
+		// (get) Token: 0x060201B9 RID: 131513 RVA: 0x0093DA01 File Offset: 0x0093BC01
+		// (set) Token: 0x060201BA RID: 131514 RVA: 0x0093DA15 File Offset: 0x0093BC15
 		public unsafe FVector InitCenterOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitCenterOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitCenterOffset) = value;
 			}
 		}
 
-		// Token: 0x170064F3 RID: 25843
-		// (get) Token: 0x06029B8B RID: 170891 RVA: 0x009CB106 File Offset: 0x009C9306
-		// (set) Token: 0x06029B8C RID: 170892 RVA: 0x009CB11A File Offset: 0x009C931A
+		// Token: 0x17003D5A RID: 15706
+		// (get) Token: 0x060201BB RID: 131515 RVA: 0x0093DA2A File Offset: 0x0093BC2A
+		// (set) Token: 0x060201BC RID: 131516 RVA: 0x0093DA3E File Offset: 0x0093BC3E
 		public unsafe FVector InitPosition
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitPosition);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitPosition) = value;
 			}
 		}
 
-		// Token: 0x170064F4 RID: 25844
-		// (get) Token: 0x06029B8D RID: 170893 RVA: 0x009CB12F File Offset: 0x009C932F
-		// (set) Token: 0x06029B8E RID: 170894 RVA: 0x009CB143 File Offset: 0x009C9343
+		// Token: 0x17003D5B RID: 15707
+		// (get) Token: 0x060201BD RID: 131517 RVA: 0x0093DA53 File Offset: 0x0093BC53
+		// (set) Token: 0x060201BE RID: 131518 RVA: 0x0093DA67 File Offset: 0x0093BC67
 		public unsafe FVector InitRotation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitRotation);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitRotation) = value;
 			}
 		}
 
-		// Token: 0x170064F5 RID: 25845
-		// (get) Token: 0x06029B8F RID: 170895 RVA: 0x009CB158 File Offset: 0x009C9358
-		// (set) Token: 0x06029B90 RID: 170896 RVA: 0x009CB168 File Offset: 0x009C9368
+		// Token: 0x17003D5C RID: 15708
+		// (get) Token: 0x060201BF RID: 131519 RVA: 0x0093DA7C File Offset: 0x0093BC7C
+		// (set) Token: 0x060201C0 RID: 131520 RVA: 0x0093DA8C File Offset: 0x0093BC8C
 		public unsafe float InitFov
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitFov);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitFov) = value;
 			}
 		}
 
-		// Token: 0x170064F6 RID: 25846
-		// (get) Token: 0x06029B91 RID: 170897 RVA: 0x009CB179 File Offset: 0x009C9379
-		// (set) Token: 0x06029B92 RID: 170898 RVA: 0x009CB18D File Offset: 0x009C938D
+		// Token: 0x17003D5D RID: 15709
+		// (get) Token: 0x060201C1 RID: 131521 RVA: 0x0093DA9D File Offset: 0x0093BC9D
+		// (set) Token: 0x060201C2 RID: 131522 RVA: 0x0093DAB1 File Offset: 0x0093BCB1
 		public unsafe FVector2D FovRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_FovRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_FovRange) = value;
 			}
 		}
 
-		// Token: 0x170064F7 RID: 25847
-		// (get) Token: 0x06029B93 RID: 170899 RVA: 0x009CB1A2 File Offset: 0x009C93A2
-		// (set) Token: 0x06029B94 RID: 170900 RVA: 0x009CB1B2 File Offset: 0x009C93B2
+		// Token: 0x17003D5E RID: 15710
+		// (get) Token: 0x060201C3 RID: 131523 RVA: 0x0093DAC6 File Offset: 0x0093BCC6
+		// (set) Token: 0x060201C4 RID: 131524 RVA: 0x0093DAD6 File Offset: 0x0093BCD6
 		public unsafe float ZoomSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_ZoomSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_ZoomSpeed) = value;
 			}
 		}
 
-		// Token: 0x170064F8 RID: 25848
-		// (get) Token: 0x06029B95 RID: 170901 RVA: 0x009CB1C3 File Offset: 0x009C93C3
-		// (set) Token: 0x06029B96 RID: 170902 RVA: 0x009CB1D7 File Offset: 0x009C93D7
+		// Token: 0x17003D5F RID: 15711
+		// (get) Token: 0x060201C5 RID: 131525 RVA: 0x0093DAE7 File Offset: 0x0093BCE7
+		// (set) Token: 0x060201C6 RID: 131526 RVA: 0x0093DAFB File Offset: 0x0093BCFB
 		public unsafe FVector2D PitchRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_PitchRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_PitchRange) = value;
 			}
 		}
 
-		// Token: 0x170064F9 RID: 25849
-		// (get) Token: 0x06029B97 RID: 170903 RVA: 0x009CB1EC File Offset: 0x009C93EC
-		// (set) Token: 0x06029B98 RID: 170904 RVA: 0x009CB200 File Offset: 0x009C9400
+		// Token: 0x17003D60 RID: 15712
+		// (get) Token: 0x060201C7 RID: 131527 RVA: 0x0093DB10 File Offset: 0x0093BD10
+		// (set) Token: 0x060201C8 RID: 131528 RVA: 0x0093DB24 File Offset: 0x0093BD24
 		public unsafe FVector2D YawRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_YawRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_YawRange) = value;
 			}
 		}
 
-		// Token: 0x170064FA RID: 25850
-		// (get) Token: 0x06029B99 RID: 170905 RVA: 0x009CB215 File Offset: 0x009C9415
-		// (set) Token: 0x06029B9A RID: 170906 RVA: 0x009CB229 File Offset: 0x009C9429
+		// Token: 0x17003D61 RID: 15713
+		// (get) Token: 0x060201C9 RID: 131529 RVA: 0x0093DB39 File Offset: 0x0093BD39
+		// (set) Token: 0x060201CA RID: 131530 RVA: 0x0093DB4D File Offset: 0x0093BD4D
 		public unsafe FVector2D RollRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_RollRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_RollRange) = value;
 			}
 		}
 
-		// Token: 0x170064FB RID: 25851
-		// (get) Token: 0x06029B9B RID: 170907 RVA: 0x009CB23E File Offset: 0x009C943E
-		// (set) Token: 0x06029B9C RID: 170908 RVA: 0x009CB24E File Offset: 0x009C944E
+		// Token: 0x17003D62 RID: 15714
+		// (get) Token: 0x060201CB RID: 131531 RVA: 0x0093DB62 File Offset: 0x0093BD62
+		// (set) Token: 0x060201CC RID: 131532 RVA: 0x0093DB72 File Offset: 0x0093BD72
 		public unsafe float PitchRotateSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_PitchRotateSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_PitchRotateSpeed) = value;
 			}
 		}
 
-		// Token: 0x170064FC RID: 25852
-		// (get) Token: 0x06029B9D RID: 170909 RVA: 0x009CB25F File Offset: 0x009C945F
-		// (set) Token: 0x06029B9E RID: 170910 RVA: 0x009CB26F File Offset: 0x009C946F
+		// Token: 0x17003D63 RID: 15715
+		// (get) Token: 0x060201CD RID: 131533 RVA: 0x0093DB83 File Offset: 0x0093BD83
+		// (set) Token: 0x060201CE RID: 131534 RVA: 0x0093DB93 File Offset: 0x0093BD93
 		public unsafe float YawRotateSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_YawRotateSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_YawRotateSpeed) = value;
 			}
 		}
 
-		// Token: 0x170064FD RID: 25853
-		// (get) Token: 0x06029B9F RID: 170911 RVA: 0x009CB280 File Offset: 0x009C9480
-		// (set) Token: 0x06029BA0 RID: 170912 RVA: 0x009CB290 File Offset: 0x009C9490
+		// Token: 0x17003D64 RID: 15716
+		// (get) Token: 0x060201CF RID: 131535 RVA: 0x0093DBA4 File Offset: 0x0093BDA4
+		// (set) Token: 0x060201D0 RID: 131536 RVA: 0x0093DBB4 File Offset: 0x0093BDB4
 		public unsafe float RollRotateSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_RollRotateSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_RollRotateSpeed) = value;
 			}
 		}
 
-		// Token: 0x170064FE RID: 25854
-		// (get) Token: 0x06029BA1 RID: 170913 RVA: 0x009CB2A1 File Offset: 0x009C94A1
-		// (set) Token: 0x06029BA2 RID: 170914 RVA: 0x009CB2B1 File Offset: 0x009C94B1
+		// Token: 0x17003D65 RID: 15717
+		// (get) Token: 0x060201D1 RID: 131537 RVA: 0x0093DBC5 File Offset: 0x0093BDC5
+		// (set) Token: 0x060201D2 RID: 131538 RVA: 0x0093DBD5 File Offset: 0x0093BDD5
 		public unsafe bool OpenCameraAdaptive
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_OpenCameraAdaptive) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_OpenCameraAdaptive) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170064FF RID: 25855
-		// (get) Token: 0x06029BA3 RID: 170915 RVA: 0x009CB2C2 File Offset: 0x009C94C2
-		// (set) Token: 0x06029BA4 RID: 170916 RVA: 0x009CB2D2 File Offset: 0x009C94D2
+		// Token: 0x17003D66 RID: 15718
+		// (get) Token: 0x060201D3 RID: 131539 RVA: 0x0093DBE6 File Offset: 0x0093BDE6
+		// (set) Token: 0x060201D4 RID: 131540 RVA: 0x0093DBF6 File Offset: 0x0093BDF6
 		public unsafe float AdaptiveMoveSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_AdaptiveMoveSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_AdaptiveMoveSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006500 RID: 25856
-		// (get) Token: 0x06029BA5 RID: 170917 RVA: 0x009CB2E3 File Offset: 0x009C94E3
-		// (set) Token: 0x06029BA6 RID: 170918 RVA: 0x009CB2F7 File Offset: 0x009C94F7
+		// Token: 0x17003D67 RID: 15719
+		// (get) Token: 0x060201D5 RID: 131541 RVA: 0x0093DC07 File Offset: 0x0093BE07
+		// (set) Token: 0x060201D6 RID: 131542 RVA: 0x0093DC1B File Offset: 0x0093BE1B
 		public unsafe FVector2D CenterRollRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_CenterRollRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_CenterRollRange) = value;
 			}
 		}
 
-		// Token: 0x17006501 RID: 25857
-		// (get) Token: 0x06029BA7 RID: 170919 RVA: 0x009CB30C File Offset: 0x009C950C
-		// (set) Token: 0x06029BA8 RID: 170920 RVA: 0x009CB31C File Offset: 0x009C951C
+		// Token: 0x17003D68 RID: 15720
+		// (get) Token: 0x060201D7 RID: 131543 RVA: 0x0093DC30 File Offset: 0x0093BE30
+		// (set) Token: 0x060201D8 RID: 131544 RVA: 0x0093DC40 File Offset: 0x0093BE40
 		public unsafe bool IsInheritPrevModeCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_16) != 0;
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_IsInheritPrevModeCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_16) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_IsInheritPrevModeCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006502 RID: 25858
-		// (get) Token: 0x06029BA9 RID: 170921 RVA: 0x009CB32D File Offset: 0x009C952D
-		// (set) Token: 0x06029BAA RID: 170922 RVA: 0x009CB341 File Offset: 0x009C9541
+		// Token: 0x17003D69 RID: 15721
+		// (get) Token: 0x060201D9 RID: 131545 RVA: 0x0093DC51 File Offset: 0x0093BE51
+		// (set) Token: 0x060201DA RID: 131546 RVA: 0x0093DC65 File Offset: 0x0093BE65
 		public unsafe FVector InheritCameraLocalOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InheritCameraLocalOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InheritCameraLocalOffset) = value;
 			}
 		}
 
-		// Token: 0x17006503 RID: 25859
-		// (get) Token: 0x06029BAB RID: 170923 RVA: 0x009CB356 File Offset: 0x009C9556
-		// (set) Token: 0x06029BAC RID: 170924 RVA: 0x009CB366 File Offset: 0x009C9566
+		// Token: 0x17003D6A RID: 15722
+		// (get) Token: 0x060201DB RID: 131547 RVA: 0x0093DC7A File Offset: 0x0093BE7A
+		// (set) Token: 0x060201DC RID: 131548 RVA: 0x0093DC8A File Offset: 0x0093BE8A
 		public unsafe float InitFocusDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitFocusDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitFocusDistance) = value;
 			}
 		}
 
-		// Token: 0x17006504 RID: 25860
-		// (get) Token: 0x06029BAD RID: 170925 RVA: 0x009CB377 File Offset: 0x009C9577
-		// (set) Token: 0x06029BAE RID: 170926 RVA: 0x009CB387 File Offset: 0x009C9587
+		// Token: 0x17003D6B RID: 15723
+		// (get) Token: 0x060201DD RID: 131549 RVA: 0x0093DC9B File Offset: 0x0093BE9B
+		// (set) Token: 0x060201DE RID: 131550 RVA: 0x0093DCAB File Offset: 0x0093BEAB
 		public unsafe float InitAperture
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitAperture);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)SPhotoCameraCommonConfig.__PropertyOffset_InitAperture) = value;
 			}
 		}
 
-		// Token: 0x06029BAF RID: 170927 RVA: 0x009CB398 File Offset: 0x009C9598
+		// Token: 0x060201DF RID: 131551 RVA: 0x0093DCBC File Offset: 0x0093BEBC
 		public SPhotoCameraCommonConfig()
 		{
 		}
 
-		// Token: 0x06029BB0 RID: 170928 RVA: 0x009CB3A0 File Offset: 0x009C95A0
-		public SPhotoCameraCommonConfig(string CenterLocationSocketName, FVector InitCenterOffset, FVector InitPosition, FVector InitRotation, float InitFov, FVector2D FovRange, float ZoomSpeed, FVector2D PitchRange, FVector2D YawRange, FVector2D RollRange, float PitchRotateSpeed, float YawRotateSpeed, float RollRotateSpeed, bool OpenCameraAdaptive, float AdaptiveMoveSpeed, FVector2D CenterRollRange, bool IsInheritPrevModeCamera, FVector InheritCameraLocalOffset, float InitFocusDistance, float InitAperture)
-		{
-			this.CenterLocationSocketName = CenterLocationSocketName;
-			this.InitCenterOffset = InitCenterOffset;
-			this.InitPosition = InitPosition;
-			this.InitRotation = InitRotation;
-			this.InitFov = InitFov;
-			this.FovRange = FovRange;
-			this.ZoomSpeed = ZoomSpeed;
-			this.PitchRange = PitchRange;
-			this.YawRange = YawRange;
-			this.RollRange = RollRange;
-			this.PitchRotateSpeed = PitchRotateSpeed;
-			this.YawRotateSpeed = YawRotateSpeed;
-			this.RollRotateSpeed = RollRotateSpeed;
-			this.OpenCameraAdaptive = OpenCameraAdaptive;
-			this.AdaptiveMoveSpeed = AdaptiveMoveSpeed;
-			this.CenterRollRange = CenterRollRange;
-			this.IsInheritPrevModeCamera = IsInheritPrevModeCamera;
-			this.InheritCameraLocalOffset = InheritCameraLocalOffset;
-			this.InitFocusDistance = InitFocusDistance;
-			this.InitAperture = InitAperture;
-		}
-
-		// Token: 0x06029BB1 RID: 170929 RVA: 0x009CB450 File Offset: 0x009C9650
+		// Token: 0x060201E0 RID: 131552 RVA: 0x0093DCC4 File Offset: 0x0093BEC4
 		protected override IntPtr GetUStructPtr()
 		{
 			return SPhotoCameraCommonConfig.StaticStruct();
 		}
 
-		// Token: 0x06029BB2 RID: 170930 RVA: 0x009CB45C File Offset: 0x009C965C
+		// Token: 0x060201E1 RID: 131553 RVA: 0x0093DCD0 File Offset: 0x0093BED0
 		[NullableContext(2)]
 		public SPhotoCameraCommonConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029BB3 RID: 170931 RVA: 0x009CB466 File Offset: 0x009C9666
+		// Token: 0x060201E2 RID: 131554 RVA: 0x0093DCDA File Offset: 0x0093BEDA
 		public SPhotoCameraCommonConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029BB4 RID: 170932 RVA: 0x009CB471 File Offset: 0x009C9671
+		// Token: 0x060201E3 RID: 131555 RVA: 0x0093DCE5 File Offset: 0x0093BEE5
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SPhotoCameraCommonConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06029BB5 RID: 170933 RVA: 0x009CB47B File Offset: 0x009C967B
+		// Token: 0x060201E4 RID: 131556 RVA: 0x0093DCEF File Offset: 0x0093BEEF
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SPhotoCameraCommonConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040156D5 RID: 87765
+		// Token: 0x0401147D RID: 70781
 		public const string __ObjectPath = "/Game/Aki/Data/Camera/PhotoCamera/Struct/SPhotoCameraCommonConfig.SPhotoCameraCommonConfig";
 
-		// Token: 0x040156D6 RID: 87766
+		// Token: 0x0401147E RID: 70782
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040156D7 RID: 87767
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401147F RID: 70783
+		internal static int __PropertyOffset_CenterLocationSocketName;
 
-		// Token: 0x040156D8 RID: 87768
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011480 RID: 70784
+		internal static int __PropertyOffset_InitCenterOffset;
 
-		// Token: 0x040156D9 RID: 87769
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011481 RID: 70785
+		internal static int __PropertyOffset_InitPosition;
 
-		// Token: 0x040156DA RID: 87770
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011482 RID: 70786
+		internal static int __PropertyOffset_InitRotation;
 
-		// Token: 0x040156DB RID: 87771
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011483 RID: 70787
+		internal static int __PropertyOffset_InitFov;
 
-		// Token: 0x040156DC RID: 87772
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011484 RID: 70788
+		internal static int __PropertyOffset_FovRange;
 
-		// Token: 0x040156DD RID: 87773
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011485 RID: 70789
+		internal static int __PropertyOffset_ZoomSpeed;
 
-		// Token: 0x040156DE RID: 87774
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011486 RID: 70790
+		internal static int __PropertyOffset_PitchRange;
 
-		// Token: 0x040156DF RID: 87775
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011487 RID: 70791
+		internal static int __PropertyOffset_YawRange;
 
-		// Token: 0x040156E0 RID: 87776
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011488 RID: 70792
+		internal static int __PropertyOffset_RollRange;
 
-		// Token: 0x040156E1 RID: 87777
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011489 RID: 70793
+		internal static int __PropertyOffset_PitchRotateSpeed;
 
-		// Token: 0x040156E2 RID: 87778
-		internal static int __PropertyOffset_11;
+		// Token: 0x0401148A RID: 70794
+		internal static int __PropertyOffset_YawRotateSpeed;
 
-		// Token: 0x040156E3 RID: 87779
-		internal static int __PropertyOffset_12;
+		// Token: 0x0401148B RID: 70795
+		internal static int __PropertyOffset_RollRotateSpeed;
 
-		// Token: 0x040156E4 RID: 87780
-		internal static int __PropertyOffset_13;
+		// Token: 0x0401148C RID: 70796
+		internal static int __PropertyOffset_OpenCameraAdaptive;
 
-		// Token: 0x040156E5 RID: 87781
-		internal static int __PropertyOffset_14;
+		// Token: 0x0401148D RID: 70797
+		internal static int __PropertyOffset_AdaptiveMoveSpeed;
 
-		// Token: 0x040156E6 RID: 87782
-		internal static int __PropertyOffset_15;
+		// Token: 0x0401148E RID: 70798
+		internal static int __PropertyOffset_CenterRollRange;
 
-		// Token: 0x040156E7 RID: 87783
-		internal static int __PropertyOffset_16;
+		// Token: 0x0401148F RID: 70799
+		internal static int __PropertyOffset_IsInheritPrevModeCamera;
 
-		// Token: 0x040156E8 RID: 87784
-		internal static int __PropertyOffset_17;
+		// Token: 0x04011490 RID: 70800
+		internal static int __PropertyOffset_InheritCameraLocalOffset;
 
-		// Token: 0x040156E9 RID: 87785
-		internal static int __PropertyOffset_18;
+		// Token: 0x04011491 RID: 70801
+		internal static int __PropertyOffset_InitFocusDistance;
 
-		// Token: 0x040156EA RID: 87786
-		internal static int __PropertyOffset_19;
+		// Token: 0x04011492 RID: 70802
+		internal static int __PropertyOffset_InitAperture;
 	}
 }

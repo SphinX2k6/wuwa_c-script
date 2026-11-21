@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200120E RID: 4622
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200134A RID: 4938
 	public class IWarningPreformType
 	{
-		// Token: 0x060068E2 RID: 26850 RVA: 0x000FA2D4 File Offset: 0x000F84D4
+		// Token: 0x06006F23 RID: 28451 RVA: 0x00107BE0 File Offset: 0x00105DE0
 		private IWarningPreformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068E3 RID: 26851 RVA: 0x000FA30C File Offset: 0x000F850C
+		// Token: 0x06006F24 RID: 28452 RVA: 0x00107C18 File Offset: 0x00105E18
 		public static IWarningPreformType Create([Nullable(2)] IWarningPreformType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068E4 RID: 26852 RVA: 0x000FA31F File Offset: 0x000F851F
+		// Token: 0x06006F25 RID: 28453 RVA: 0x00107C2B File Offset: 0x00105E2B
 		public static IWarningPreformType CreateFromSetValue([Nullable(2)] IWarningPreformType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068E5 RID: 26853 RVA: 0x000FA332 File Offset: 0x000F8532
+		// Token: 0x06006F26 RID: 28454 RVA: 0x00107C3E File Offset: 0x00105E3E
 		public IWarningPreformType_SetValue ToSetValue()
 		{
 			return new IWarningPreformType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E1 RID: 8673
-		// (get) Token: 0x060068E6 RID: 26854 RVA: 0x000FA345 File Offset: 0x000F8545
-		// (set) Token: 0x060068E7 RID: 26855 RVA: 0x000FA370 File Offset: 0x000F8570
+		// Token: 0x170023A2 RID: 9122
+		// (get) Token: 0x06006F27 RID: 28455 RVA: 0x00107C51 File Offset: 0x00105E51
+		// (set) Token: 0x06006F28 RID: 28456 RVA: 0x00107C7C File Offset: 0x00105E7C
 		public virtual EWarningPreformType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003EBE RID: 16062
+		// Token: 0x0400422C RID: 16940
 		[Nullable(2)]
 		protected IWarningPreformType FbInstance;
 
-		// Token: 0x04003EBF RID: 16063
+		// Token: 0x0400422D RID: 16941
 		[Nullable(2)]
 		protected IWarningPreformType_SetValue PocoInterface;
 	}

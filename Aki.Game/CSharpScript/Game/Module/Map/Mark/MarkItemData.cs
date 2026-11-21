@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054AF RID: 21679
+	// Token: 0x02004492 RID: 17554
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkItemData : IMarkItemData
 	{
-		// Token: 0x170084CC RID: 33996
-		// (get) Token: 0x0603763D RID: 226877 RVA: 0x00D27AF0 File Offset: 0x00D25CF0
-		// (set) Token: 0x0603763E RID: 226878 RVA: 0x00D27AF8 File Offset: 0x00D25CF8
+		// Token: 0x17005898 RID: 22680
+		// (get) Token: 0x0602C593 RID: 181651 RVA: 0x00C7786C File Offset: 0x00C75A6C
+		// (set) Token: 0x0602C594 RID: 181652 RVA: 0x00C77874 File Offset: 0x00C75A74
 		public int[] ShowRange { get; set; }
 
-		// Token: 0x170084CD RID: 33997
-		// (get) Token: 0x0603763F RID: 226879 RVA: 0x00D27B01 File Offset: 0x00D25D01
-		// (set) Token: 0x06037640 RID: 226880 RVA: 0x00D27B09 File Offset: 0x00D25D09
+		// Token: 0x17005899 RID: 22681
+		// (get) Token: 0x0602C595 RID: 181653 RVA: 0x00C7787D File Offset: 0x00C75A7D
+		// (set) Token: 0x0602C596 RID: 181654 RVA: 0x00C77885 File Offset: 0x00C75A85
 		public string MarkPic { get; set; }
 
-		// Token: 0x170084CE RID: 33998
-		// (get) Token: 0x06037641 RID: 226881 RVA: 0x00D27B12 File Offset: 0x00D25D12
-		// (set) Token: 0x06037642 RID: 226882 RVA: 0x00D27B1A File Offset: 0x00D25D1A
+		// Token: 0x1700589A RID: 22682
+		// (get) Token: 0x0602C597 RID: 181655 RVA: 0x00C7788E File Offset: 0x00C75A8E
+		// (set) Token: 0x0602C598 RID: 181656 RVA: 0x00C77896 File Offset: 0x00C75A96
 		public int? ShowPriority { get; set; }
 
-		// Token: 0x170084CF RID: 33999
-		// (get) Token: 0x06037643 RID: 226883 RVA: 0x00D27B23 File Offset: 0x00D25D23
-		// (set) Token: 0x06037644 RID: 226884 RVA: 0x00D27B2B File Offset: 0x00D25D2B
+		// Token: 0x1700589B RID: 22683
+		// (get) Token: 0x0602C599 RID: 181657 RVA: 0x00C7789F File Offset: 0x00C75A9F
+		// (set) Token: 0x0602C59A RID: 181658 RVA: 0x00C778A7 File Offset: 0x00C75AA7
 		public float? Scale { get; set; }
 
-		// Token: 0x170084D0 RID: 34000
-		// (get) Token: 0x06037645 RID: 226885 RVA: 0x00D27B34 File Offset: 0x00D25D34
-		// (set) Token: 0x06037646 RID: 226886 RVA: 0x00D27B3C File Offset: 0x00D25D3C
+		// Token: 0x1700589C RID: 22684
+		// (get) Token: 0x0602C59B RID: 181659 RVA: 0x00C778B0 File Offset: 0x00C75AB0
+		// (set) Token: 0x0602C59C RID: 181660 RVA: 0x00C778B8 File Offset: 0x00C75AB8
 		public float? CornerScale { get; set; }
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011A9 RID: 4521
+	// Token: 0x020012DF RID: 4831
 	public struct WuWaGoLevelCsv : IFlatbufferObject
 	{
-		// Token: 0x17003E86 RID: 16006
-		// (get) Token: 0x0600E96A RID: 59754 RVA: 0x0034613A File Offset: 0x0034433A
+		// Token: 0x170041EB RID: 16875
+		// (get) Token: 0x0600F6DB RID: 63195 RVA: 0x00370DC6 File Offset: 0x0036EFC6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E96B RID: 59755 RVA: 0x00346147 File Offset: 0x00344347
+		// Token: 0x0600F6DC RID: 63196 RVA: 0x00370DD3 File Offset: 0x0036EFD3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E96C RID: 59756 RVA: 0x00346150 File Offset: 0x00344350
+		// Token: 0x0600F6DD RID: 63197 RVA: 0x00370DDC File Offset: 0x0036EFDC
 		public static WuWaGoLevelCsv GetRootAsWuWaGoLevelCsv(ByteBuffer _bb)
 		{
 			return WuWaGoLevelCsv.GetRootAsWuWaGoLevelCsv(_bb, default(WuWaGoLevelCsv));
 		}
 
-		// Token: 0x0600E96D RID: 59757 RVA: 0x0034616C File Offset: 0x0034436C
+		// Token: 0x0600F6DE RID: 63198 RVA: 0x00370DF8 File Offset: 0x0036EFF8
 		public static WuWaGoLevelCsv GetRootAsWuWaGoLevelCsv(ByteBuffer _bb, WuWaGoLevelCsv obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E96E RID: 59758 RVA: 0x00346189 File Offset: 0x00344389
+		// Token: 0x0600F6DF RID: 63199 RVA: 0x00370E15 File Offset: 0x0036F015
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E96F RID: 59759 RVA: 0x00346198 File Offset: 0x00344398
+		// Token: 0x0600F6E0 RID: 63200 RVA: 0x00370E24 File Offset: 0x0036F024
 		public WuWaGoLevelCsv __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E87 RID: 16007
-		// (get) Token: 0x0600E970 RID: 59760 RVA: 0x003461A8 File Offset: 0x003443A8
+		// Token: 0x170041EC RID: 16876
+		// (get) Token: 0x0600F6E1 RID: 63201 RVA: 0x00370E34 File Offset: 0x0036F034
 		public string Key
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E971 RID: 59761 RVA: 0x003461DF File Offset: 0x003443DF
+		// Token: 0x0600F6E2 RID: 63202 RVA: 0x00370E6B File Offset: 0x0036F06B
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600E972 RID: 59762 RVA: 0x003461EE File Offset: 0x003443EE
+		// Token: 0x0600F6E3 RID: 63203 RVA: 0x00370E7A File Offset: 0x0036F07A
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003E88 RID: 16008
-		// (get) Token: 0x0600E973 RID: 59763 RVA: 0x00346208 File Offset: 0x00344408
+		// Token: 0x170041ED RID: 16877
+		// (get) Token: 0x0600F6E4 RID: 63204 RVA: 0x00370E94 File Offset: 0x0036F094
 		public string RoleList
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E974 RID: 59764 RVA: 0x0034623F File Offset: 0x0034443F
+		// Token: 0x0600F6E5 RID: 63205 RVA: 0x00370ECB File Offset: 0x0036F0CB
 		public Span<byte> GetRoleListBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E975 RID: 59765 RVA: 0x0034624E File Offset: 0x0034444E
+		// Token: 0x0600F6E6 RID: 63206 RVA: 0x00370EDA File Offset: 0x0036F0DA
 		public byte[] GetRoleListArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003E89 RID: 16009
-		// (get) Token: 0x0600E976 RID: 59766 RVA: 0x00346268 File Offset: 0x00344468
+		// Token: 0x170041EE RID: 16878
+		// (get) Token: 0x0600F6E7 RID: 63207 RVA: 0x00370EF4 File Offset: 0x0036F0F4
 		public string GridDatas
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E977 RID: 59767 RVA: 0x0034629F File Offset: 0x0034449F
+		// Token: 0x0600F6E8 RID: 63208 RVA: 0x00370F2B File Offset: 0x0036F12B
 		public Span<byte> GetGridDatasBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600E978 RID: 59768 RVA: 0x003462AE File Offset: 0x003444AE
+		// Token: 0x0600F6E9 RID: 63209 RVA: 0x00370F3A File Offset: 0x0036F13A
 		public byte[] GetGridDatasArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040052F6 RID: 21238
+		// Token: 0x04005939 RID: 22841
 		private Table __p;
 	}
 }

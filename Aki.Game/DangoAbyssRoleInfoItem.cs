@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A59 RID: 6745
+// Token: 0x02000F18 RID: 3864
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssRoleInfoItem : UiPanelBase
 {
-	// Token: 0x0600C679 RID: 50809 RVA: 0x002D2720 File Offset: 0x002D0920
+	// Token: 0x06009A89 RID: 39561 RVA: 0x002DD830 File Offset: 0x002DBA30
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -53,7 +53,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C67A RID: 50810 RVA: 0x002D28F3 File Offset: 0x002D0AF3
+	// Token: 0x06009A8A RID: 39562 RVA: 0x002DDA03 File Offset: 0x002DBC03
 	private void OnDataUpdate(EPluginEquipViewData key)
 	{
 		switch (key)
@@ -69,13 +69,13 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C67B RID: 50811 RVA: 0x002D290E File Offset: 0x002D0B0E
+	// Token: 0x06009A8B RID: 39563 RVA: 0x002DDA1E File Offset: 0x002DBC1E
 	protected override void OnAfterDestroy()
 	{
 		this.ViewModel.UnBind(new TCallback<EPluginEquipViewData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600C67C RID: 50812 RVA: 0x002D2928 File Offset: 0x002D0B28
+	// Token: 0x06009A8C RID: 39564 RVA: 0x002DDA38 File Offset: 0x002DBC38
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssRoleInfoItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -86,28 +86,28 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C67D RID: 50813 RVA: 0x002D296B File Offset: 0x002D0B6B
+	// Token: 0x06009A8D RID: 39565 RVA: 0x002DDA7B File Offset: 0x002DBC7B
 	protected override void OnBeforeShow()
 	{
 		this.ViewModel.Bind(new TCallback<EPluginEquipViewData>(this.OnDataUpdate));
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C67E RID: 50814 RVA: 0x002D298A File Offset: 0x002D0B8A
+	// Token: 0x06009A8E RID: 39566 RVA: 0x002DDA9A File Offset: 0x002DBC9A
 	private void OnAttributeToggleClick(EToggleState toggleState)
 	{
 		this.CurrentViewType = EViewType.Attribute;
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C67F RID: 50815 RVA: 0x002D2999 File Offset: 0x002D0B99
+	// Token: 0x06009A8F RID: 39567 RVA: 0x002DDAA9 File Offset: 0x002DBCA9
 	private void OnPluginToggleClick(EToggleState toggleState)
 	{
 		this.CurrentViewType = EViewType.Plugin;
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C680 RID: 50816 RVA: 0x002D29A8 File Offset: 0x002D0BA8
+	// Token: 0x06009A90 RID: 39568 RVA: 0x002DDAB8 File Offset: 0x002DBCB8
 	private void RefreshToggleStateByCurrentViewType()
 	{
 		EToggleState state = (this.CurrentViewType == EViewType.Plugin) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -116,13 +116,13 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		base.GetExtendToggle(2).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600C681 RID: 50817 RVA: 0x002D29F7 File Offset: 0x002D0BF7
+	// Token: 0x06009A91 RID: 39569 RVA: 0x002DDB07 File Offset: 0x002DBD07
 	public void OnDangoInfoUpdate()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C682 RID: 50818 RVA: 0x002D29FF File Offset: 0x002D0BFF
+	// Token: 0x06009A92 RID: 39570 RVA: 0x002DDB0F File Offset: 0x002DBD0F
 	private void OnDangoIdUpdate()
 	{
 		if (this.ViewModel.GetDangoId() == 0)
@@ -132,7 +132,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C683 RID: 50819 RVA: 0x002D2A18 File Offset: 0x002D0C18
+	// Token: 0x06009A93 RID: 39571 RVA: 0x002DDB28 File Offset: 0x002DBD28
 	public void RefreshView()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
@@ -145,7 +145,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.RefreshViewByViewType();
 	}
 
-	// Token: 0x0600C684 RID: 50820 RVA: 0x002D2A68 File Offset: 0x002D0C68
+	// Token: 0x06009A94 RID: 39572 RVA: 0x002DDB78 File Offset: 0x002DBD78
 	private void RefreshName(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -161,7 +161,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		base.GetText(9).SetUIActive(!data.GetIfLock());
 	}
 
-	// Token: 0x0600C685 RID: 50821 RVA: 0x002D2AF0 File Offset: 0x002D0CF0
+	// Token: 0x06009A95 RID: 39573 RVA: 0x002DDC00 File Offset: 0x002DBE00
 	private void RefreshViewByViewType()
 	{
 		EViewType currentViewType = this.CurrentViewType;
@@ -177,7 +177,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.RefreshAttributeView();
 	}
 
-	// Token: 0x0600C686 RID: 50822 RVA: 0x002D2B19 File Offset: 0x002D0D19
+	// Token: 0x06009A96 RID: 39574 RVA: 0x002DDC29 File Offset: 0x002DBE29
 	private void RefreshPluginView()
 	{
 		base.GetItem(4).SetUIActive(true);
@@ -185,7 +185,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.PluginPanelInstance.Refresh();
 	}
 
-	// Token: 0x0600C687 RID: 50823 RVA: 0x002D2B40 File Offset: 0x002D0D40
+	// Token: 0x06009A97 RID: 39575 RVA: 0x002DDC50 File Offset: 0x002DBE50
 	private void RefreshAttributeView()
 	{
 		base.GetItem(4).SetUIActive(false);
@@ -193,7 +193,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		this.AttributePanelInstance.Refresh();
 	}
 
-	// Token: 0x0600C688 RID: 50824 RVA: 0x002D2B68 File Offset: 0x002D0D68
+	// Token: 0x06009A98 RID: 39576 RVA: 0x002DDC78 File Offset: 0x002DBE78
 	private void RefreshEquipItem(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -220,7 +220,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C689 RID: 50825 RVA: 0x002D2BB4 File Offset: 0x002D0DB4
+	// Token: 0x06009A99 RID: 39577 RVA: 0x002DDCC4 File Offset: 0x002DBEC4
 	private void RefreshInActiveRedItem(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -257,7 +257,7 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C68A RID: 50826 RVA: 0x002D2C2C File Offset: 0x002D0E2C
+	// Token: 0x06009A9A RID: 39578 RVA: 0x002DDD3C File Offset: 0x002DBF3C
 	private void RefreshLevelUpItem(AbyssDangoRoleData data)
 	{
 		if (data == null)
@@ -290,73 +290,73 @@ public class DangoAbyssRoleInfoItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C68B RID: 50827 RVA: 0x002D2C9C File Offset: 0x002D0E9C
+	// Token: 0x06009A9B RID: 39579 RVA: 0x002DDDAC File Offset: 0x002DBFAC
 	private void OnClickLevelUp(int _)
 	{
 		int dangoId = this.ViewModel.GetDangoId();
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssLevelUpView, dangoId, null);
 	}
 
-	// Token: 0x0600C68C RID: 50828 RVA: 0x002D2CCB File Offset: 0x002D0ECB
+	// Token: 0x06009A9C RID: 39580 RVA: 0x002DDDDB File Offset: 0x002DBFDB
 	private void OnClickEquip(int _)
 	{
 		this.ViewModel.SetSlotIndex(1, false);
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssPluginEquipView, this.ViewModel, null);
 	}
 
-	// Token: 0x04005B79 RID: 23417
+	// Token: 0x04005C48 RID: 23624
 	private EViewType CurrentViewType;
 
-	// Token: 0x04005B7A RID: 23418
+	// Token: 0x04005C49 RID: 23625
 	public PluginEquipViewModel ViewModel;
 
-	// Token: 0x04005B7B RID: 23419
+	// Token: 0x04005C4A RID: 23626
 	private AttributePanel AttributePanelInstance;
 
-	// Token: 0x04005B7C RID: 23420
+	// Token: 0x04005C4B RID: 23627
 	private AttributePanel.DangoRolePluginPanel PluginPanelInstance;
 
-	// Token: 0x04005B7D RID: 23421
+	// Token: 0x04005C4C RID: 23628
 	private ButtonItem LevelUpItem;
 
-	// Token: 0x04005B7E RID: 23422
+	// Token: 0x04005C4D RID: 23629
 	private ButtonItem EquipItem;
 
-	// Token: 0x04005B7F RID: 23423
+	// Token: 0x04005C4E RID: 23630
 	private InActiveRedItem InActiveRedItem;
 
-	// Token: 0x02007FA2 RID: 32674
+	// Token: 0x02007131 RID: 28977
 	[NullableContext(0)]
 	private class EInfoPanelComponent
 	{
-		// Token: 0x04029ACC RID: 170700
+		// Token: 0x04024E09 RID: 151049
 		public const int NameText = 0;
 
-		// Token: 0x04029ACD RID: 170701
+		// Token: 0x04024E0A RID: 151050
 		public const int PluginToggle = 1;
 
-		// Token: 0x04029ACE RID: 170702
+		// Token: 0x04024E0B RID: 151051
 		public const int AttributeToggle = 2;
 
-		// Token: 0x04029ACF RID: 170703
+		// Token: 0x04024E0C RID: 151052
 		public const int AttributePanel = 3;
 
-		// Token: 0x04029AD0 RID: 170704
+		// Token: 0x04024E0D RID: 151053
 		public const int PluginPanel = 4;
 
-		// Token: 0x04029AD1 RID: 170705
+		// Token: 0x04024E0E RID: 151054
 		public const int CostItem = 5;
 
-		// Token: 0x04029AD2 RID: 170706
+		// Token: 0x04024E0F RID: 151055
 		public const int EquipItem = 6;
 
-		// Token: 0x04029AD3 RID: 170707
+		// Token: 0x04024E10 RID: 151056
 		public const int InActiveRedItem = 7;
 
-		// Token: 0x04029AD4 RID: 170708
+		// Token: 0x04024E11 RID: 151057
 		public const int LevelUpItem = 8;
 
-		// Token: 0x04029AD5 RID: 170709
+		// Token: 0x04024E12 RID: 151058
 		public const int LevelText = 9;
 	}
 }

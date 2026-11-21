@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057C6 RID: 22470
+	// Token: 0x02005DCD RID: 24013
 	public struct IQuantityRefillCondition : IFlatbufferObject
 	{
-		// Token: 0x1700A7B1 RID: 42929
-		// (get) Token: 0x06025B62 RID: 154466 RVA: 0x00533626 File Offset: 0x00531826
+		// Token: 0x1700B0D5 RID: 45269
+		// (get) Token: 0x06028082 RID: 163970 RVA: 0x005797B2 File Offset: 0x005779B2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025B63 RID: 154467 RVA: 0x00533633 File Offset: 0x00531833
+		// Token: 0x06028083 RID: 163971 RVA: 0x005797BF File Offset: 0x005779BF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025B64 RID: 154468 RVA: 0x0053363C File Offset: 0x0053183C
+		// Token: 0x06028084 RID: 163972 RVA: 0x005797C8 File Offset: 0x005779C8
 		public static IQuantityRefillCondition GetRootAsIQuantityRefillCondition(ByteBuffer _bb)
 		{
 			return IQuantityRefillCondition.GetRootAsIQuantityRefillCondition(_bb, default(IQuantityRefillCondition));
 		}
 
-		// Token: 0x06025B65 RID: 154469 RVA: 0x00533658 File Offset: 0x00531858
+		// Token: 0x06028085 RID: 163973 RVA: 0x005797E4 File Offset: 0x005779E4
 		public static IQuantityRefillCondition GetRootAsIQuantityRefillCondition(ByteBuffer _bb, IQuantityRefillCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025B66 RID: 154470 RVA: 0x00533675 File Offset: 0x00531875
+		// Token: 0x06028086 RID: 163974 RVA: 0x00579801 File Offset: 0x00577A01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025B67 RID: 154471 RVA: 0x00533684 File Offset: 0x00531884
+		// Token: 0x06028087 RID: 163975 RVA: 0x00579810 File Offset: 0x00577A10
 		public IQuantityRefillCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A7B2 RID: 42930
-		// (get) Token: 0x06025B68 RID: 154472 RVA: 0x00533694 File Offset: 0x00531894
+		// Token: 0x1700B0D6 RID: 45270
+		// (get) Token: 0x06028088 RID: 163976 RVA: 0x00579820 File Offset: 0x00577A20
 		public ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A7B3 RID: 42931
-		// (get) Token: 0x06025B69 RID: 154473 RVA: 0x005336D0 File Offset: 0x005318D0
+		// Token: 0x1700B0D7 RID: 45271
+		// (get) Token: 0x06028089 RID: 163977 RVA: 0x0057985C File Offset: 0x00577A5C
 		public int Quantity
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A7B4 RID: 42932
-		// (get) Token: 0x06025B6A RID: 154474 RVA: 0x0053370C File Offset: 0x0053190C
+		// Token: 0x1700B0D8 RID: 45272
+		// (get) Token: 0x0602808A RID: 163978 RVA: 0x00579898 File Offset: 0x00577A98
 		public float DelayRefill
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A7B5 RID: 42933
-		// (get) Token: 0x06025B6B RID: 154475 RVA: 0x0053374C File Offset: 0x0053194C
+		// Token: 0x1700B0D9 RID: 45273
+		// (get) Token: 0x0602808B RID: 163979 RVA: 0x005798D8 File Offset: 0x00577AD8
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025B6C RID: 154476 RVA: 0x00533789 File Offset: 0x00531989
+		// Token: 0x0602808C RID: 163980 RVA: 0x00579915 File Offset: 0x00577B15
 		public static Offset<IQuantityRefillCondition> CreateIQuantityRefillCondition(FlatBufferBuilder builder, ESpawnMonsterCompleteCondition Type = ESpawnMonsterCompleteCondition.AllKill, int Quantity = 0, float DelayRefill = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQuantityRefillCondition.EndIQuantityRefillCondition(builder);
 		}
 
-		// Token: 0x06025B6D RID: 154477 RVA: 0x005337B5 File Offset: 0x005319B5
+		// Token: 0x0602808D RID: 163981 RVA: 0x00579941 File Offset: 0x00577B41
 		public static void StartIQuantityRefillCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06025B6E RID: 154478 RVA: 0x005337BE File Offset: 0x005319BE
+		// Token: 0x0602808E RID: 163982 RVA: 0x0057994A File Offset: 0x00577B4A
 		public static void AddType(FlatBufferBuilder builder, ESpawnMonsterCompleteCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025B6F RID: 154479 RVA: 0x005337C9 File Offset: 0x005319C9
+		// Token: 0x0602808F RID: 163983 RVA: 0x00579955 File Offset: 0x00577B55
 		public static void AddQuantity(FlatBufferBuilder builder, int quantity)
 		{
 			builder.AddInt(1, quantity, 0);
 		}
 
-		// Token: 0x06025B70 RID: 154480 RVA: 0x005337D4 File Offset: 0x005319D4
+		// Token: 0x06028090 RID: 163984 RVA: 0x00579960 File Offset: 0x00577B60
 		public static void AddDelayRefill(FlatBufferBuilder builder, float delayRefill)
 		{
 			builder.AddFloat(2, delayRefill, 0.0);
 		}
 
-		// Token: 0x06025B71 RID: 154481 RVA: 0x005337E7 File Offset: 0x005319E7
+		// Token: 0x06028091 RID: 163985 RVA: 0x00579973 File Offset: 0x00577B73
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06025B72 RID: 154482 RVA: 0x005337F2 File Offset: 0x005319F2
+		// Token: 0x06028092 RID: 163986 RVA: 0x0057997E File Offset: 0x00577B7E
 		public static Offset<IQuantityRefillCondition> EndIQuantityRefillCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuantityRefillCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06025B73 RID: 154483 RVA: 0x00533800 File Offset: 0x00531A00
+		// Token: 0x06028093 RID: 163987 RVA: 0x0057998C File Offset: 0x00577B8C
 		public IQuantityRefillConditionT UnPack()
 		{
 			IQuantityRefillConditionT quantityRefillConditionT = new IQuantityRefillConditionT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return quantityRefillConditionT;
 		}
 
-		// Token: 0x06025B74 RID: 154484 RVA: 0x0053381B File Offset: 0x00531A1B
+		// Token: 0x06028094 RID: 163988 RVA: 0x005799A7 File Offset: 0x00577BA7
 		public void UnPackTo(IQuantityRefillConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025B75 RID: 154485 RVA: 0x00533850 File Offset: 0x00531A50
+		// Token: 0x06028095 RID: 163989 RVA: 0x005799DC File Offset: 0x00577BDC
 		public static Offset<IQuantityRefillCondition> Pack(FlatBufferBuilder builder, IQuantityRefillConditionT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQuantityRefillCondition.CreateIQuantityRefillCondition(builder, _o.Type, _o.Quantity, _o.DelayRefill, _o.NullMask);
 		}
 
-		// Token: 0x0400ECA2 RID: 60578
+		// Token: 0x0400F98D RID: 63885
 		private Table __p;
 	}
 }

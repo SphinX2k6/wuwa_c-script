@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002142 RID: 8514
+// Token: 0x0200161A RID: 5658
 [NullableContext(1)]
 [Nullable(0)]
 public class RecallDownLoadDialogLogEvent : CommonLogData
 {
-	// Token: 0x170014E7 RID: 5351
-	// (get) Token: 0x06010A00 RID: 68096 RVA: 0x0040BDBC File Offset: 0x00409FBC
-	// (set) Token: 0x06010A01 RID: 68097 RVA: 0x0040BDC4 File Offset: 0x00409FC4
+	// Token: 0x17001515 RID: 5397
+	// (get) Token: 0x0600DE73 RID: 56947 RVA: 0x00418504 File Offset: 0x00416704
+	// (set) Token: 0x0600DE74 RID: 56948 RVA: 0x0041850C File Offset: 0x0041670C
 	public override string event_id { get; set; } = "1716";
 
-	// Token: 0x04007D88 RID: 32136
+	// Token: 0x04007E98 RID: 32408
 	public int i_recall_id;
 
-	// Token: 0x04007D89 RID: 32137
+	// Token: 0x04007E99 RID: 32409
 	public bool b_if_storage_alert;
 
-	// Token: 0x04007D8A RID: 32138
+	// Token: 0x04007E9A RID: 32410
 	public int i_required_space;
 
-	// Token: 0x04007D8B RID: 32139
+	// Token: 0x04007E9B RID: 32411
 	public int i_remaining_space;
 
-	// Token: 0x04007D8C RID: 32140
+	// Token: 0x04007E9C RID: 32412
 	public string s_trace_id = "";
 }

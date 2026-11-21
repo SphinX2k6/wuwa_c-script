@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002606 RID: 9734
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028C6 RID: 10438
 	public class CallFunction : ActionParams
 	{
-		// Token: 0x0600DAA2 RID: 55970 RVA: 0x00209379 File Offset: 0x00207579
+		// Token: 0x0600E86F RID: 59503 RVA: 0x00225ACD File Offset: 0x00223CCD
 		public static CallFunction Create(ICallFunction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004058 RID: 16472
-		// (get) Token: 0x0600DAA3 RID: 55971 RVA: 0x00209398 File Offset: 0x00207598
+		// Token: 0x17004391 RID: 17297
+		// (get) Token: 0x0600E870 RID: 59504 RVA: 0x00225AEC File Offset: 0x00223CEC
 		public virtual string Name
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007972 RID: 31090
+		// Token: 0x0400800C RID: 32780
 		private ICallFunction Instance;
 	}
 }

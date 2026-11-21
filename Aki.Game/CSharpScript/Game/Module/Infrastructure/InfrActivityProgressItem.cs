@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590B RID: 22795
+	// Token: 0x020048E4 RID: 18660
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrActivityProgressItem : GridProxyAbstract<List<bool>>
 	{
-		// Token: 0x06039E31 RID: 237105 RVA: 0x00DBFBCC File Offset: 0x00DBDDCC
+		// Token: 0x0602ED54 RID: 191828 RVA: 0x00D0EEC4 File Offset: 0x00D0D0C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039E32 RID: 237106 RVA: 0x00DBFC35 File Offset: 0x00DBDE35
+		// Token: 0x0602ED55 RID: 191829 RVA: 0x00D0EF2D File Offset: 0x00D0D12D
 		[NullableContext(1)]
 		public override void Refresh(List<bool> pointState, bool isSelected, int gridIndex)
 		{
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			base.GetItem(1).SetUIActive(pointState[1]);
 		}
 
-		// Token: 0x0200BB76 RID: 47990
+		// Token: 0x0200A586 RID: 42374
 		private class EComponent
 		{
-			// Token: 0x0403895B RID: 231771
+			// Token: 0x04033343 RID: 209731
 			public const int PanelLeft = 0;
 
-			// Token: 0x0403895C RID: 231772
+			// Token: 0x04033344 RID: 209732
 			public const int PanelRight = 1;
 		}
 	}

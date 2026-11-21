@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200288A RID: 10378
+// Token: 0x02001E05 RID: 7685
 public interface IStrengthUpgradeData
 {
-	// Token: 0x17001CA3 RID: 7331
-	// (get) Token: 0x060155C9 RID: 87497
-	// (set) Token: 0x060155CA RID: 87498
+	// Token: 0x17001CFB RID: 7419
+	// (get) Token: 0x06012FC7 RID: 77767
+	// (set) Token: 0x06012FC8 RID: 77768
 	EFormationAttributeId AttributeId { get; set; }
 
-	// Token: 0x17001CA4 RID: 7332
-	// (get) Token: 0x060155CB RID: 87499
-	// (set) Token: 0x060155CC RID: 87500
+	// Token: 0x17001CFC RID: 7420
+	// (get) Token: 0x06012FC9 RID: 77769
+	// (set) Token: 0x06012FCA RID: 77770
 	int SingleStrengthValue { get; set; }
 
-	// Token: 0x17001CA5 RID: 7333
-	// (get) Token: 0x060155CD RID: 87501
-	// (set) Token: 0x060155CE RID: 87502
+	// Token: 0x17001CFD RID: 7421
+	// (get) Token: 0x06012FCB RID: 77771
+	// (set) Token: 0x06012FCC RID: 77772
 	int MaxSingleStrengthItemCount { get; set; }
 
-	// Token: 0x17001CA6 RID: 7334
-	// (get) Token: 0x060155CF RID: 87503
-	// (set) Token: 0x060155D0 RID: 87504
+	// Token: 0x17001CFE RID: 7422
+	// (get) Token: 0x06012FCD RID: 77773
+	// (set) Token: 0x06012FCE RID: 77774
 	int MaxStrength { get; set; }
 }

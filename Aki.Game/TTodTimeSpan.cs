@@ -1,19 +1,19 @@
 ﻿using System;
 
-// Token: 0x02002BAE RID: 11182
+// Token: 0x0200212A RID: 8490
 public class TTodTimeSpan
 {
-	// Token: 0x17001F48 RID: 8008
-	// (get) Token: 0x060172CC RID: 94924 RVA: 0x005DFC8D File Offset: 0x005DDE8D
-	// (set) Token: 0x060172CD RID: 94925 RVA: 0x005DFC95 File Offset: 0x005DDE95
+	// Token: 0x17001FA0 RID: 8096
+	// (get) Token: 0x06014CFD RID: 85245 RVA: 0x0060C861 File Offset: 0x0060AA61
+	// (set) Token: 0x06014CFE RID: 85246 RVA: 0x0060C869 File Offset: 0x0060AA69
 	public int StartTime { get; set; }
 
-	// Token: 0x17001F49 RID: 8009
-	// (get) Token: 0x060172CE RID: 94926 RVA: 0x005DFC9E File Offset: 0x005DDE9E
-	// (set) Token: 0x060172CF RID: 94927 RVA: 0x005DFCA6 File Offset: 0x005DDEA6
+	// Token: 0x17001FA1 RID: 8097
+	// (get) Token: 0x06014CFF RID: 85247 RVA: 0x0060C872 File Offset: 0x0060AA72
+	// (set) Token: 0x06014D00 RID: 85248 RVA: 0x0060C87A File Offset: 0x0060AA7A
 	public int EndTime { get; set; }
 
-	// Token: 0x060172D0 RID: 94928 RVA: 0x005DFCAF File Offset: 0x005DDEAF
+	// Token: 0x06014D01 RID: 85249 RVA: 0x0060C883 File Offset: 0x0060AA83
 	public TTodTimeSpan(int startTime, int endTime)
 	{
 		this.StartTime = startTime;

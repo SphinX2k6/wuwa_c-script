@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200140F RID: 5135
+// Token: 0x020008C3 RID: 2243
 public enum EPinballWeaponEquipState
 {
-	// Token: 0x04004029 RID: 16425
+	// Token: 0x040040C1 RID: 16577
 	CanEquip,
-	// Token: 0x0400402A RID: 16426
+	// Token: 0x040040C2 RID: 16578
 	IsEquipped,
-	// Token: 0x0400402B RID: 16427
+	// Token: 0x040040C3 RID: 16579
 	CanNotEquip
 }

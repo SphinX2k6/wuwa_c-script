@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE3 RID: 23523
+	// Token: 0x02004BC3 RID: 19395
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalView : UiViewBase
 	{
-		// Token: 0x0603B75F RID: 243551 RVA: 0x00E2D9F7 File Offset: 0x00E2BBF7
+		// Token: 0x060306AA RID: 198314 RVA: 0x00D7DCFF File Offset: 0x00D7BEFF
 		public CiacconaGalView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B760 RID: 243552 RVA: 0x00E2DA00 File Offset: 0x00E2BC00
+		// Token: 0x060306AB RID: 198315 RVA: 0x00D7DD08 File Offset: 0x00D7BF08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -53,14 +53,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B761 RID: 243553 RVA: 0x00E2DB6E File Offset: 0x00E2BD6E
+		// Token: 0x060306AC RID: 198316 RVA: 0x00D7DE76 File Offset: 0x00D7C076
 		protected override void OnBeforeShow()
 		{
 			this.WarmUpIcon();
 			base.GetTexture(3).SetUIActive(false);
 		}
 
-		// Token: 0x0603B762 RID: 243554 RVA: 0x00E2DB84 File Offset: 0x00E2BD84
+		// Token: 0x060306AD RID: 198317 RVA: 0x00D7DE8C File Offset: 0x00D7C08C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B763 RID: 243555 RVA: 0x00E2DBC8 File Offset: 0x00E2BDC8
+		// Token: 0x060306AE RID: 198318 RVA: 0x00D7DED0 File Offset: 0x00D7C0D0
 		protected override void OnStart()
 		{
 			CiacconaGalController.Instance.AddOnStepDataUpdate(new Action<int>(this.OnDataUpdate));
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603B764 RID: 243556 RVA: 0x00E2DC64 File Offset: 0x00E2BE64
+		// Token: 0x060306AF RID: 198319 RVA: 0x00D7DF6C File Offset: 0x00D7C16C
 		protected override void OnBeforeDestroy()
 		{
 			CiacconaGalController.Instance.SetGalViewReady(false);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Emit<bool>(EEventName.OnCiacconaAvgInspirationChoiceShow, false);
 		}
 
-		// Token: 0x0603B765 RID: 243557 RVA: 0x00E2DD30 File Offset: 0x00E2BF30
+		// Token: 0x060306B0 RID: 198320 RVA: 0x00D7E038 File Offset: 0x00D7C238
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnCiacconaAvgReChoose, new Action<CiacconaGalStepData, CiacconaGalChoiceData>(this.OnCiacconaAvgReChoose));
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603B766 RID: 243558 RVA: 0x00E2DDB0 File Offset: 0x00E2BFB0
+		// Token: 0x060306B1 RID: 198321 RVA: 0x00D7E0B8 File Offset: 0x00D7C2B8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCiacconaAvgReChoose, new Action<CiacconaGalStepData, CiacconaGalChoiceData>(this.OnCiacconaAvgReChoose));
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603B767 RID: 243559 RVA: 0x00E2DE30 File Offset: 0x00E2C030
+		// Token: 0x060306B2 RID: 198322 RVA: 0x00D7E138 File Offset: 0x00D7C338
 		private void PlayImageChangeAnim(string imagePath)
 		{
 			this.NextImagePath = imagePath;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Next", false, null, false);
 		}
 
-		// Token: 0x0603B768 RID: 243560 RVA: 0x00E2DE64 File Offset: 0x00E2C064
+		// Token: 0x060306B3 RID: 198323 RVA: 0x00D7E16C File Offset: 0x00D7C36C
 		private UniTask UpdateImageAsync(string path)
 		{
 			CiacconaGalView.<UpdateImageAsync>d__23 <UpdateImageAsync>d__;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <UpdateImageAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B769 RID: 243561 RVA: 0x00E2DEB0 File Offset: 0x00E2C0B0
+		// Token: 0x060306B4 RID: 198324 RVA: 0x00D7E1B8 File Offset: 0x00D7C3B8
 		private void WarmUpIcon()
 		{
 			ResourceSystem.Instance.Load<UTexture>(UiResourceConfig.Instance.GetResourcePath("T_PlotReasoningIcon01"), this.MemoryTag);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			ResourceSystem.Instance.Load<UTexture>(UiResourceConfig.Instance.GetResourcePath("T_PlotReasoningIcon05"), this.MemoryTag);
 		}
 
-		// Token: 0x0603B76A RID: 243562 RVA: 0x00E2DF60 File Offset: 0x00E2C160
+		// Token: 0x060306B5 RID: 198325 RVA: 0x00D7E268 File Offset: 0x00D7C468
 		private void ShowAvg()
 		{
 			this.IsViewHide = false;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.OnGalPlayerStateChange(this.CurState);
 		}
 
-		// Token: 0x0603B76B RID: 243563 RVA: 0x00E2E030 File Offset: 0x00E2C230
+		// Token: 0x060306B6 RID: 198326 RVA: 0x00D7E338 File Offset: 0x00D7C538
 		private void OnDataUpdate(int stepId)
 		{
 			this.GalPanelNormal.Refresh();
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B76C RID: 243564 RVA: 0x00E2E1B4 File Offset: 0x00E2C3B4
+		// Token: 0x060306B7 RID: 198327 RVA: 0x00D7E4BC File Offset: 0x00D7C6BC
 		private void OnGalPlayerStateChange(ECiacconaGalPlayerState state)
 		{
 			this.CurState = state;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.GetItem(5).SetUIActive(state == ECiacconaGalPlayerState.Pausing && !this.IsViewHide);
 		}
 
-		// Token: 0x0603B76D RID: 243565 RVA: 0x00E2E204 File Offset: 0x00E2C404
+		// Token: 0x060306B8 RID: 198328 RVA: 0x00D7E50C File Offset: 0x00D7C70C
 		private void OnClickMask()
 		{
 			if (this.IsViewHide)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalController.Instance.GalPlayer.OnClick(null);
 		}
 
-		// Token: 0x0603B76E RID: 243566 RVA: 0x00E2E238 File Offset: 0x00E2C438
+		// Token: 0x060306B9 RID: 198329 RVA: 0x00D7E540 File Offset: 0x00D7C740
 		private void OnCiacconaAvgReChoose(CiacconaGalStepData stepData, CiacconaGalChoiceData choiceData)
 		{
 			if (this.IsViewHide)
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.IsReChoosing = true;
 		}
 
-		// Token: 0x0603B76F RID: 243567 RVA: 0x00E2E28C File Offset: 0x00E2C48C
+		// Token: 0x060306BA RID: 198330 RVA: 0x00D7E594 File Offset: 0x00D7C794
 		private void OnCiacconaAvgReChooseConfirm(CiacconaGalStepData stepData, CiacconaGalChoiceData choiceData)
 		{
 			if (this.IsViewHide)
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.IsReChoosing = false;
 		}
 
-		// Token: 0x0603B770 RID: 243568 RVA: 0x00E2E303 File Offset: 0x00E2C503
+		// Token: 0x060306BB RID: 198331 RVA: 0x00D7E60B File Offset: 0x00D7C80B
 		private void OnCiacconaAvgReChooseCancel()
 		{
 			if (this.IsViewHide)
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.IsReChoosing = false;
 		}
 
-		// Token: 0x0603B771 RID: 243569 RVA: 0x00E2E33C File Offset: 0x00E2C53C
+		// Token: 0x060306BC RID: 198332 RVA: 0x00D7E644 File Offset: 0x00D7C844
 		private void HideAvg()
 		{
 			this.IsViewHide = true;
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B772 RID: 243570 RVA: 0x00E2E3EC File Offset: 0x00E2C5EC
+		// Token: 0x060306BD RID: 198333 RVA: 0x00D7E6F4 File Offset: 0x00D7C8F4
 		private void OnExit()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.CiacconaAvgExit);
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603B773 RID: 243571 RVA: 0x00E2E428 File Offset: 0x00E2C628
+		// Token: 0x060306BE RID: 198334 RVA: 0x00D7E730 File Offset: 0x00D7C930
 		private void OnActivitySequenceEmitEvent(string eventName)
 		{
 			if (eventName == "Change")
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B774 RID: 243572 RVA: 0x00E2E448 File Offset: 0x00E2C648
+		// Token: 0x060306BF RID: 198335 RVA: 0x00D7E750 File Offset: 0x00D7C950
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -418,68 +418,68 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return null;
 		}
 
-		// Token: 0x0401EFAB RID: 126891
+		// Token: 0x04019A5C RID: 105052
 		private CiacconaGalStepPlayerNormalPanel GalPanelNormal;
 
-		// Token: 0x0401EFAC RID: 126892
+		// Token: 0x04019A5D RID: 105053
 		private CiacconaGalStepPlayerReChoosePanel GalPanelReChoose;
 
-		// Token: 0x0401EFAD RID: 126893
+		// Token: 0x04019A5E RID: 105054
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401EFAE RID: 126894
+		// Token: 0x04019A5F RID: 105055
 		private CiacconaTitleInspirationItem CiacconaTitleItem;
 
-		// Token: 0x0401EFAF RID: 126895
+		// Token: 0x04019A60 RID: 105056
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401EFB0 RID: 126896
+		// Token: 0x04019A61 RID: 105057
 		private int CurStepId;
 
-		// Token: 0x0401EFB1 RID: 126897
+		// Token: 0x04019A62 RID: 105058
 		private int AudioHandle;
 
-		// Token: 0x0401EFB2 RID: 126898
+		// Token: 0x04019A63 RID: 105059
 		private string CurImagePath;
 
-		// Token: 0x0401EFB3 RID: 126899
+		// Token: 0x04019A64 RID: 105060
 		private int MusicHandle;
 
-		// Token: 0x0401EFB4 RID: 126900
+		// Token: 0x04019A65 RID: 105061
 		private string NextImagePath;
 
-		// Token: 0x0401EFB5 RID: 126901
+		// Token: 0x04019A66 RID: 105062
 		private bool IsViewHide;
 
-		// Token: 0x0401EFB6 RID: 126902
+		// Token: 0x04019A67 RID: 105063
 		private bool IsReChoosing;
 
-		// Token: 0x0401EFB7 RID: 126903
+		// Token: 0x04019A68 RID: 105064
 		private ECiacconaGalPlayerState CurState;
 
-		// Token: 0x0200BDC5 RID: 48581
+		// Token: 0x0200A7CE RID: 42958
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403938C RID: 234380
+			// Token: 0x04033D51 RID: 212305
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403938D RID: 234381
+			// Token: 0x04033D52 RID: 212306
 			public const int ItemContent = 1;
 
-			// Token: 0x0403938E RID: 234382
+			// Token: 0x04033D53 RID: 212307
 			public const int BtnMask = 2;
 
-			// Token: 0x0403938F RID: 234383
+			// Token: 0x04033D54 RID: 212308
 			public const int TextureImage = 3;
 
-			// Token: 0x04039390 RID: 234384
+			// Token: 0x04033D55 RID: 212309
 			public const int ItemOnGoing = 4;
 
-			// Token: 0x04039391 RID: 234385
+			// Token: 0x04033D56 RID: 212310
 			public const int ItemContinue = 5;
 
-			// Token: 0x04039392 RID: 234386
+			// Token: 0x04033D57 RID: 212311
 			public const int BtnHide = 6;
 		}
 	}

@@ -5,7 +5,7 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000060 RID: 96
+	// Token: 0x02000045 RID: 69
 	[Nullable(new byte[]
 	{
 		0,
@@ -14,7 +14,7 @@ namespace UnrealEngine
 	})]
 	public sealed class TSubclassOfArrayProcessor<T> : PodBaseWithEqualityOperatorsArrayProcessor<TSubclassOf<T>> where T : IUnrealUObject
 	{
-		// Token: 0x06000924 RID: 2340 RVA: 0x000113C2 File Offset: 0x0000F5C2
+		// Token: 0x060008A9 RID: 2217 RVA: 0x0000DC2E File Offset: 0x0000BE2E
 		public TSubclassOfArrayProcessor()
 		{
 			this.HasGetTypeHash = true;
@@ -22,7 +22,7 @@ namespace UnrealEngine
 			this.MinAlignment = IntPtrHelper.Size;
 		}
 
-		// Token: 0x06000925 RID: 2341 RVA: 0x000113E7 File Offset: 0x0000F5E7
+		// Token: 0x060008AA RID: 2218 RVA: 0x0000DC53 File Offset: 0x0000BE53
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void* GetElementPtr([Nullable(new byte[]
 		{

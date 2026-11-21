@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041F6 RID: 16886
+	// Token: 0x0200464F RID: 17999
 	public struct ITrackEffectType : IFlatbufferObject
 	{
-		// Token: 0x170077DB RID: 30683
-		// (get) Token: 0x06018E9C RID: 102044 RVA: 0x00395B80 File Offset: 0x00393D80
+		// Token: 0x17007E09 RID: 32265
+		// (get) Token: 0x0601A5F6 RID: 108022 RVA: 0x003C10E0 File Offset: 0x003BF2E0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018E9D RID: 102045 RVA: 0x00395B8D File Offset: 0x00393D8D
+		// Token: 0x0601A5F7 RID: 108023 RVA: 0x003C10ED File Offset: 0x003BF2ED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018E9E RID: 102046 RVA: 0x00395B94 File Offset: 0x00393D94
+		// Token: 0x0601A5F8 RID: 108024 RVA: 0x003C10F4 File Offset: 0x003BF2F4
 		public static ITrackEffectType GetRootAsITrackEffectType(ByteBuffer _bb)
 		{
 			return ITrackEffectType.GetRootAsITrackEffectType(_bb, default(ITrackEffectType));
 		}
 
-		// Token: 0x06018E9F RID: 102047 RVA: 0x00395BB0 File Offset: 0x00393DB0
+		// Token: 0x0601A5F9 RID: 108025 RVA: 0x003C1110 File Offset: 0x003BF310
 		public static ITrackEffectType GetRootAsITrackEffectType(ByteBuffer _bb, ITrackEffectType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018EA0 RID: 102048 RVA: 0x00395BCD File Offset: 0x00393DCD
+		// Token: 0x0601A5FA RID: 108026 RVA: 0x003C112D File Offset: 0x003BF32D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018EA1 RID: 102049 RVA: 0x00395BDC File Offset: 0x00393DDC
+		// Token: 0x0601A5FB RID: 108027 RVA: 0x003C113C File Offset: 0x003BF33C
 		public ITrackEffectType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077DC RID: 30684
-		// (get) Token: 0x06018EA2 RID: 102050 RVA: 0x00395BEC File Offset: 0x00393DEC
+		// Token: 0x17007E0A RID: 32266
+		// (get) Token: 0x0601A5FC RID: 108028 RVA: 0x003C114C File Offset: 0x003BF34C
 		public ETrackEffectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018EA3 RID: 102051 RVA: 0x00395C28 File Offset: 0x00393E28
+		// Token: 0x0601A5FD RID: 108029 RVA: 0x003C1188 File Offset: 0x003BF388
 		public static Offset<ITrackEffectType> CreateITrackEffectType(FlatBufferBuilder builder, ETrackEffectType Type = ETrackEffectType.AutoChange)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackEffectType.EndITrackEffectType(builder);
 		}
 
-		// Token: 0x06018EA4 RID: 102052 RVA: 0x00395C3E File Offset: 0x00393E3E
+		// Token: 0x0601A5FE RID: 108030 RVA: 0x003C119E File Offset: 0x003BF39E
 		public static void StartITrackEffectType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018EA5 RID: 102053 RVA: 0x00395C47 File Offset: 0x00393E47
+		// Token: 0x0601A5FF RID: 108031 RVA: 0x003C11A7 File Offset: 0x003BF3A7
 		public static void AddType(FlatBufferBuilder builder, ETrackEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018EA6 RID: 102054 RVA: 0x00395C52 File Offset: 0x00393E52
+		// Token: 0x0601A600 RID: 108032 RVA: 0x003C11B2 File Offset: 0x003BF3B2
 		public static Offset<ITrackEffectType> EndITrackEffectType(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrackEffectType>(builder.EndTable());
 		}
 
-		// Token: 0x06018EA7 RID: 102055 RVA: 0x00395C60 File Offset: 0x00393E60
+		// Token: 0x0601A601 RID: 108033 RVA: 0x003C11C0 File Offset: 0x003BF3C0
 		public ITrackEffectTypeT UnPack()
 		{
 			ITrackEffectTypeT trackEffectTypeT = new ITrackEffectTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trackEffectTypeT;
 		}
 
-		// Token: 0x06018EA8 RID: 102056 RVA: 0x00395C7B File Offset: 0x00393E7B
+		// Token: 0x0601A602 RID: 108034 RVA: 0x003C11DB File Offset: 0x003BF3DB
 		public void UnPackTo(ITrackEffectTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06018EA9 RID: 102057 RVA: 0x00395C8C File Offset: 0x00393E8C
+		// Token: 0x0601A603 RID: 108035 RVA: 0x003C11EC File Offset: 0x003BF3EC
 		public static Offset<ITrackEffectType> Pack(FlatBufferBuilder builder, ITrackEffectTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackEffectType.CreateITrackEffectType(builder, _o.Type);
 		}
 
-		// Token: 0x0400BE54 RID: 48724
+		// Token: 0x0400C85F RID: 51295
 		private Table __p;
 	}
 }

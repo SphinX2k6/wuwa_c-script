@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006087 RID: 24711
+	// Token: 0x02005005 RID: 20485
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorBrochureView : UiViewBase
 	{
-		// Token: 0x0603E7A2 RID: 255906 RVA: 0x00F199C6 File Offset: 0x00F17BC6
+		// Token: 0x06033466 RID: 210022 RVA: 0x00E6078A File Offset: 0x00E5E98A
 		public SpringManorBrochureView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E7A3 RID: 255907 RVA: 0x00F199D0 File Offset: 0x00F17BD0
+		// Token: 0x06033467 RID: 210023 RVA: 0x00E60794 File Offset: 0x00E5E994
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E7A4 RID: 255908 RVA: 0x00F19A6C File Offset: 0x00F17C6C
+		// Token: 0x06033468 RID: 210024 RVA: 0x00E60830 File Offset: 0x00E5EA30
 		protected override void OnStart()
 		{
 			AUIBaseActor rootActor = this.RootActor;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ScrollList = new GenericScrollViewNew<SpringManorBrochureItem, BrochureItemData>(base.GetScrollViewWithScrollbar(1), new Func<SpringManorBrochureItem>(this.InitDeTermItem), null, false, null);
 		}
 
-		// Token: 0x0603E7A5 RID: 255909 RVA: 0x00F19B04 File Offset: 0x00F17D04
+		// Token: 0x06033469 RID: 210025 RVA: 0x00E608C8 File Offset: 0x00E5EAC8
 		protected override void OnBeforeShow()
 		{
 			SpringManorBrochureViewOpenParam springManorBrochureViewOpenParam = this.OpenParam as SpringManorBrochureViewOpenParam;
@@ -70,19 +70,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshBrochureItem();
 		}
 
-		// Token: 0x0603E7A6 RID: 255910 RVA: 0x00F19B8D File Offset: 0x00F17D8D
+		// Token: 0x0603346A RID: 210026 RVA: 0x00E60951 File Offset: 0x00E5EB51
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E7A7 RID: 255911 RVA: 0x00F19BAB File Offset: 0x00F17DAB
+		// Token: 0x0603346B RID: 210027 RVA: 0x00E6096F File Offset: 0x00E5EB6F
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnBrochureBookItemStateUpdate, new Action(this.OnBrochureBookItemStateUpdate));
 		}
 
-		// Token: 0x0603E7A8 RID: 255912 RVA: 0x00F19BCC File Offset: 0x00F17DCC
+		// Token: 0x0603346C RID: 210028 RVA: 0x00E60990 File Offset: 0x00E5EB90
 		private void OnPlaySequenceEvent(string sequenceName, string eventName)
 		{
 			if (eventName == "Sequence_Content_In")
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7A9 RID: 255913 RVA: 0x00F19C29 File Offset: 0x00F17E29
+		// Token: 0x0603346D RID: 210029 RVA: 0x00E609ED File Offset: 0x00E5EBED
 		private SpringManorBrochureItem InitDeTermItem()
 		{
 			SpringManorBrochureItem springManorBrochureItem = new SpringManorBrochureItem();
@@ -115,14 +115,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return springManorBrochureItem;
 		}
 
-		// Token: 0x0603E7AA RID: 255914 RVA: 0x00F19C54 File Offset: 0x00F17E54
+		// Token: 0x0603346E RID: 210030 RVA: 0x00E60A18 File Offset: 0x00E5EC18
 		private void OnClickMoreButton()
 		{
 			int helpId = ActivityModel.Instance.GetActivityById(this.ActivityId).GetHelpId();
 			HelpController.Instance.OpenHelpById(helpId);
 		}
 
-		// Token: 0x0603E7AB RID: 255915 RVA: 0x00F19C84 File Offset: 0x00F17E84
+		// Token: 0x0603346F RID: 210031 RVA: 0x00E60A48 File Offset: 0x00E5EC48
 		[NullableContext(2)]
 		private void ClickGetButton(BrochureItemData tabData)
 		{
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7AC RID: 255916 RVA: 0x00F19CD4 File Offset: 0x00F17ED4
+		// Token: 0x06033470 RID: 210032 RVA: 0x00E60A98 File Offset: 0x00E5EC98
 		[NullableContext(2)]
 		public void ClickItem(BrochureItemData tabData)
 		{
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			UiManager.Instance.OpenView(EUiViewName.SpringManorBrochureDetailView, param, null);
 		}
 
-		// Token: 0x0603E7AD RID: 255917 RVA: 0x00F19D22 File Offset: 0x00F17F22
+		// Token: 0x06033471 RID: 210033 RVA: 0x00E60AE6 File Offset: 0x00E5ECE6
 		private void OnBrochureBookItemStateUpdate()
 		{
 			this.RefreshBrochureItem();
 		}
 
-		// Token: 0x0603E7AE RID: 255918 RVA: 0x00F19D2C File Offset: 0x00F17F2C
+		// Token: 0x06033472 RID: 210034 RVA: 0x00E60AF0 File Offset: 0x00E5ECF0
 		private void RefreshBrochureItem()
 		{
 			Brochure? springManorBrochureByActivityAndType = SpringManorConfig.Instance.GetSpringManorBrochureByActivityAndType(this.ActivityId, EBrochureType.Brochure);
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			scrollList.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603E7AF RID: 255919 RVA: 0x00F19EA8 File Offset: 0x00F180A8
+		// Token: 0x06033473 RID: 210035 RVA: 0x00E60C6C File Offset: 0x00E5EE6C
 		private void CheckAllItemPlayedSequence()
 		{
 			GenericScrollViewNew<SpringManorBrochureItem, BrochureItemData> scrollList = this.ScrollList;
@@ -224,11 +224,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x04020B03 RID: 133891
+		// Token: 0x0401B430 RID: 111664
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020B04 RID: 133892
+		// Token: 0x0401B431 RID: 111665
 		[Nullable(new byte[]
 		{
 			2,
@@ -237,13 +237,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<SpringManorBrochureItem, BrochureItemData> ScrollList;
 
-		// Token: 0x04020B05 RID: 133893
+		// Token: 0x0401B432 RID: 111666
 		private int ActivityId;
 
-		// Token: 0x04020B06 RID: 133894
+		// Token: 0x0401B433 RID: 111667
 		private int ScrollToTargetIndex;
 
-		// Token: 0x04020B07 RID: 133895
+		// Token: 0x0401B434 RID: 111668
 		private bool IsHideReward;
 	}
 }

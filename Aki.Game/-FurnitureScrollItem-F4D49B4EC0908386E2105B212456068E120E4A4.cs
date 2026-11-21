@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x02000FE5 RID: 4069
+// Token: 0x0200049A RID: 1178
 internal enum <FurnitureScrollItem>F4D49B4EC0908386E2105B212456068E120E4A485DCD2480DB9B58CC52EF67DE8__EComponent
 {
-	// Token: 0x04002FC4 RID: 12228
+	// Token: 0x0400305D RID: 12381
 	ItemToggle,
-	// Token: 0x04002FC5 RID: 12229
+	// Token: 0x0400305E RID: 12382
 	QualityLineSprite,
-	// Token: 0x04002FC6 RID: 12230
+	// Token: 0x0400305F RID: 12383
 	FurnitureIconTexture,
-	// Token: 0x04002FC7 RID: 12231
+	// Token: 0x04003060 RID: 12384
 	BanItem,
-	// Token: 0x04002FC8 RID: 12232
+	// Token: 0x04003061 RID: 12385
 	CheckItem,
-	// Token: 0x04002FC9 RID: 12233
+	// Token: 0x04003062 RID: 12386
 	RoleIconTexture,
-	// Token: 0x04002FCA RID: 12234
+	// Token: 0x04003063 RID: 12387
 	CountItem,
-	// Token: 0x04002FCB RID: 12235
+	// Token: 0x04003064 RID: 12388
 	CountText,
-	// Token: 0x04002FCC RID: 12236
+	// Token: 0x04003065 RID: 12389
 	AtmosphereItem,
-	// Token: 0x04002FCD RID: 12237
+	// Token: 0x04003066 RID: 12390
 	AtmosphereText,
-	// Token: 0x04002FCE RID: 12238
+	// Token: 0x04003067 RID: 12391
 	LockItem,
-	// Token: 0x04002FCF RID: 12239
+	// Token: 0x04003068 RID: 12392
 	RedDotItem,
-	// Token: 0x04002FD0 RID: 12240
+	// Token: 0x04003069 RID: 12393
 	RoleIconItem
 }

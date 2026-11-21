@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AA5 RID: 19109
+	// Token: 0x02004F74 RID: 20340
 	public struct ICheckIsTrackingQuest : IFlatbufferObject
 	{
-		// Token: 0x17008A79 RID: 35449
-		// (get) Token: 0x0601DFB8 RID: 122808 RVA: 0x0043590D File Offset: 0x00433B0D
+		// Token: 0x17009166 RID: 37222
+		// (get) Token: 0x0601FAA1 RID: 129697 RVA: 0x0046712D File Offset: 0x0046532D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DFB9 RID: 122809 RVA: 0x0043591A File Offset: 0x00433B1A
+		// Token: 0x0601FAA2 RID: 129698 RVA: 0x0046713A File Offset: 0x0046533A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DFBA RID: 122810 RVA: 0x00435924 File Offset: 0x00433B24
+		// Token: 0x0601FAA3 RID: 129699 RVA: 0x00467144 File Offset: 0x00465344
 		public static ICheckIsTrackingQuest GetRootAsICheckIsTrackingQuest(ByteBuffer _bb)
 		{
 			return ICheckIsTrackingQuest.GetRootAsICheckIsTrackingQuest(_bb, default(ICheckIsTrackingQuest));
 		}
 
-		// Token: 0x0601DFBB RID: 122811 RVA: 0x00435940 File Offset: 0x00433B40
+		// Token: 0x0601FAA4 RID: 129700 RVA: 0x00467160 File Offset: 0x00465360
 		public static ICheckIsTrackingQuest GetRootAsICheckIsTrackingQuest(ByteBuffer _bb, ICheckIsTrackingQuest obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DFBC RID: 122812 RVA: 0x0043595D File Offset: 0x00433B5D
+		// Token: 0x0601FAA5 RID: 129701 RVA: 0x0046717D File Offset: 0x0046537D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DFBD RID: 122813 RVA: 0x0043596C File Offset: 0x00433B6C
+		// Token: 0x0601FAA6 RID: 129702 RVA: 0x0046718C File Offset: 0x0046538C
 		public ICheckIsTrackingQuest __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A7A RID: 35450
-		// (get) Token: 0x0601DFBE RID: 122814 RVA: 0x0043597C File Offset: 0x00433B7C
+		// Token: 0x17009167 RID: 37223
+		// (get) Token: 0x0601FAA7 RID: 129703 RVA: 0x0046719C File Offset: 0x0046539C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A7B RID: 35451
-		// (get) Token: 0x0601DFBF RID: 122815 RVA: 0x004359B8 File Offset: 0x00433BB8
+		// Token: 0x17009168 RID: 37224
+		// (get) Token: 0x0601FAA8 RID: 129704 RVA: 0x004671D8 File Offset: 0x004653D8
 		public int QuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A7C RID: 35452
-		// (get) Token: 0x0601DFC0 RID: 122816 RVA: 0x004359F4 File Offset: 0x00433BF4
+		// Token: 0x17009169 RID: 37225
+		// (get) Token: 0x0601FAA9 RID: 129705 RVA: 0x00467214 File Offset: 0x00465414
 		public bool IsTracking
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DFC1 RID: 122817 RVA: 0x00435A33 File Offset: 0x00433C33
+		// Token: 0x0601FAAA RID: 129706 RVA: 0x00467253 File Offset: 0x00465453
 		public static Offset<ICheckIsTrackingQuest> CreateICheckIsTrackingQuest(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int QuestId = 0, bool IsTracking = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsTrackingQuest.EndICheckIsTrackingQuest(builder);
 		}
 
-		// Token: 0x0601DFC2 RID: 122818 RVA: 0x00435A57 File Offset: 0x00433C57
+		// Token: 0x0601FAAB RID: 129707 RVA: 0x00467277 File Offset: 0x00465477
 		public static void StartICheckIsTrackingQuest(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601DFC3 RID: 122819 RVA: 0x00435A60 File Offset: 0x00433C60
+		// Token: 0x0601FAAC RID: 129708 RVA: 0x00467280 File Offset: 0x00465480
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DFC4 RID: 122820 RVA: 0x00435A6B File Offset: 0x00433C6B
+		// Token: 0x0601FAAD RID: 129709 RVA: 0x0046728B File Offset: 0x0046548B
 		public static void AddQuestId(FlatBufferBuilder builder, int questId)
 		{
 			builder.AddInt(1, questId, 0);
 		}
 
-		// Token: 0x0601DFC5 RID: 122821 RVA: 0x00435A76 File Offset: 0x00433C76
+		// Token: 0x0601FAAE RID: 129710 RVA: 0x00467296 File Offset: 0x00465496
 		public static void AddIsTracking(FlatBufferBuilder builder, bool isTracking)
 		{
 			builder.AddBool(2, isTracking, false);
 		}
 
-		// Token: 0x0601DFC6 RID: 122822 RVA: 0x00435A81 File Offset: 0x00433C81
+		// Token: 0x0601FAAF RID: 129711 RVA: 0x004672A1 File Offset: 0x004654A1
 		public static Offset<ICheckIsTrackingQuest> EndICheckIsTrackingQuest(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsTrackingQuest>(builder.EndTable());
 		}
 
-		// Token: 0x0601DFC7 RID: 122823 RVA: 0x00435A90 File Offset: 0x00433C90
+		// Token: 0x0601FAB0 RID: 129712 RVA: 0x004672B0 File Offset: 0x004654B0
 		public ICheckIsTrackingQuestT UnPack()
 		{
 			ICheckIsTrackingQuestT checkIsTrackingQuestT = new ICheckIsTrackingQuestT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsTrackingQuestT;
 		}
 
-		// Token: 0x0601DFC8 RID: 122824 RVA: 0x00435AAB File Offset: 0x00433CAB
+		// Token: 0x0601FAB1 RID: 129713 RVA: 0x004672CB File Offset: 0x004654CB
 		public void UnPackTo(ICheckIsTrackingQuestT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsTracking = this.IsTracking;
 		}
 
-		// Token: 0x0601DFC9 RID: 122825 RVA: 0x00435AD4 File Offset: 0x00433CD4
+		// Token: 0x0601FAB2 RID: 129714 RVA: 0x004672F4 File Offset: 0x004654F4
 		public static Offset<ICheckIsTrackingQuest> Pack(FlatBufferBuilder builder, ICheckIsTrackingQuestT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsTrackingQuest.CreateICheckIsTrackingQuest(builder, _o.Type, _o.QuestId, _o.IsTracking);
 		}
 
-		// Token: 0x0400D31B RID: 54043
+		// Token: 0x0400DE00 RID: 56832
 		private Table __p;
 	}
 }

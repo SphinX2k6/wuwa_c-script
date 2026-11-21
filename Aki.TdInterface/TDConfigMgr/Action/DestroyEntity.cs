@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200155E RID: 5470
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020016BC RID: 5820
 	public class DestroyEntity : ActionParams
 	{
-		// Token: 0x06007B91 RID: 31633 RVA: 0x00129AD0 File Offset: 0x00127CD0
+		// Token: 0x0600826F RID: 33391 RVA: 0x00138B7C File Offset: 0x00136D7C
 		private DestroyEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007B92 RID: 31634 RVA: 0x00129B08 File Offset: 0x00127D08
+		// Token: 0x06008270 RID: 33392 RVA: 0x00138BB4 File Offset: 0x00136DB4
 		public static DestroyEntity Create([Nullable(2)] DestroyEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B93 RID: 31635 RVA: 0x00129B1B File Offset: 0x00127D1B
+		// Token: 0x06008271 RID: 33393 RVA: 0x00138BC7 File Offset: 0x00136DC7
 		public static DestroyEntity CreateFromSetValue([Nullable(2)] DestroyEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007B94 RID: 31636 RVA: 0x00129B2E File Offset: 0x00127D2E
+		// Token: 0x06008272 RID: 33394 RVA: 0x00138BDA File Offset: 0x00136DDA
 		public DestroyEntity_SetValue ToSetValue()
 		{
 			return new DestroyEntity_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028F6 RID: 10486
-		// (get) Token: 0x06007B95 RID: 31637 RVA: 0x00129B4D File Offset: 0x00127D4D
-		// (set) Token: 0x06007B96 RID: 31638 RVA: 0x00129B74 File Offset: 0x00127D74
+		// Token: 0x17002AE1 RID: 10977
+		// (get) Token: 0x06008273 RID: 33395 RVA: 0x00138BF9 File Offset: 0x00136DF9
+		// (set) Token: 0x06008274 RID: 33396 RVA: 0x00138C20 File Offset: 0x00136E20
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028F7 RID: 10487
-		// (get) Token: 0x06007B97 RID: 31639 RVA: 0x00129B84 File Offset: 0x00127D84
-		// (set) Token: 0x06007B98 RID: 31640 RVA: 0x00129BBE File Offset: 0x00127DBE
+		// Token: 0x17002AE2 RID: 10978
+		// (get) Token: 0x06008275 RID: 33397 RVA: 0x00138C30 File Offset: 0x00136E30
+		// (set) Token: 0x06008276 RID: 33398 RVA: 0x00138C6A File Offset: 0x00136E6A
 		public virtual bool? DelayDestroy
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400472A RID: 18218
+		// Token: 0x04004ACA RID: 19146
 		[Nullable(2)]
 		protected new DestroyEntity FbInstance;
 
-		// Token: 0x0400472B RID: 18219
+		// Token: 0x04004ACB RID: 19147
 		[Nullable(2)]
 		protected DestroyEntity_SetValue PocoInterface;
 	}

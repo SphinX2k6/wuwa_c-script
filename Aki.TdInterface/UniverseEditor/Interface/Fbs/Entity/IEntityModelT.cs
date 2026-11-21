@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047B2 RID: 18354
+	// Token: 0x02004C1A RID: 19482
 	public class IEntityModelT
 	{
-		// Token: 0x170083D4 RID: 33748
-		// (get) Token: 0x0601C547 RID: 116039 RVA: 0x0040292E File Offset: 0x00400B2E
-		// (set) Token: 0x0601C548 RID: 116040 RVA: 0x00402936 File Offset: 0x00400B36
+		// Token: 0x17008A15 RID: 35349
+		// (get) Token: 0x0601DD1C RID: 122140 RVA: 0x0042EBCA File Offset: 0x0042CDCA
+		// (set) Token: 0x0601DD1D RID: 122141 RVA: 0x0042EBD2 File Offset: 0x0042CDD2
 		public string BluePrintId { get; set; }
 
-		// Token: 0x170083D5 RID: 33749
-		// (get) Token: 0x0601C549 RID: 116041 RVA: 0x0040293F File Offset: 0x00400B3F
-		// (set) Token: 0x0601C54A RID: 116042 RVA: 0x00402947 File Offset: 0x00400B47
+		// Token: 0x17008A16 RID: 35350
+		// (get) Token: 0x0601DD1E RID: 122142 RVA: 0x0042EBDB File Offset: 0x0042CDDB
+		// (set) Token: 0x0601DD1F RID: 122143 RVA: 0x0042EBE3 File Offset: 0x0042CDE3
 		public string BluePrintClass { get; set; }
 
-		// Token: 0x170083D6 RID: 33750
-		// (get) Token: 0x0601C54B RID: 116043 RVA: 0x00402950 File Offset: 0x00400B50
-		// (set) Token: 0x0601C54C RID: 116044 RVA: 0x00402958 File Offset: 0x00400B58
+		// Token: 0x17008A17 RID: 35351
+		// (get) Token: 0x0601DD20 RID: 122144 RVA: 0x0042EBEC File Offset: 0x0042CDEC
+		// (set) Token: 0x0601DD21 RID: 122145 RVA: 0x0042EBF4 File Offset: 0x0042CDF4
 		public string MeshPath { get; set; }
 
-		// Token: 0x170083D7 RID: 33751
-		// (get) Token: 0x0601C54D RID: 116045 RVA: 0x00402961 File Offset: 0x00400B61
-		// (set) Token: 0x0601C54E RID: 116046 RVA: 0x00402969 File Offset: 0x00400B69
+		// Token: 0x17008A18 RID: 35352
+		// (get) Token: 0x0601DD22 RID: 122146 RVA: 0x0042EBFD File Offset: 0x0042CDFD
+		// (set) Token: 0x0601DD23 RID: 122147 RVA: 0x0042EC05 File Offset: 0x0042CE05
 		public string AnimPath { get; set; }
 
-		// Token: 0x170083D8 RID: 33752
-		// (get) Token: 0x0601C54F RID: 116047 RVA: 0x00402972 File Offset: 0x00400B72
-		// (set) Token: 0x0601C550 RID: 116048 RVA: 0x0040297A File Offset: 0x00400B7A
+		// Token: 0x17008A19 RID: 35353
+		// (get) Token: 0x0601DD24 RID: 122148 RVA: 0x0042EC0E File Offset: 0x0042CE0E
+		// (set) Token: 0x0601DD25 RID: 122149 RVA: 0x0042EC16 File Offset: 0x0042CE16
 		public List<string> Materials { get; set; }
 
-		// Token: 0x0601C551 RID: 116049 RVA: 0x00402983 File Offset: 0x00400B83
+		// Token: 0x0601DD26 RID: 122150 RVA: 0x0042EC1F File Offset: 0x0042CE1F
 		public IEntityModelT()
 		{
 			this.BluePrintId = null;

@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000242 RID: 578
+	// Token: 0x02000283 RID: 643
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICircumnutation_SetValue
 	{
-		// Token: 0x04000A56 RID: 2646
+		// Token: 0x04000B32 RID: 2866
 		public EThrowMotion Type;
 
-		// Token: 0x04000A57 RID: 2647
+		// Token: 0x04000B33 RID: 2867
 		public float Velocity;
 
-		// Token: 0x04000A58 RID: 2648
+		// Token: 0x04000B34 RID: 2868
 		public string VelocityCurve;
 
-		// Token: 0x04000A59 RID: 2649
+		// Token: 0x04000B35 RID: 2869
 		public EDirection Direction;
 
-		// Token: 0x04000A5A RID: 2650
+		// Token: 0x04000B36 RID: 2870
 		public float AngularVelocity;
 
-		// Token: 0x04000A5B RID: 2651
+		// Token: 0x04000B37 RID: 2871
 		public float RotationSpeed;
 
-		// Token: 0x04000A5C RID: 2652
+		// Token: 0x04000B38 RID: 2872
 		public string AngularVelocityCurve;
 
-		// Token: 0x04000A5D RID: 2653
+		// Token: 0x04000B39 RID: 2873
 		public IRenderTrajectoryConfig RenderTrajectoryConfig;
 	}
 }

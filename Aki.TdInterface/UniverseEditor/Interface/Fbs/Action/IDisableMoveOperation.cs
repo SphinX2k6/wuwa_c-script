@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065EB RID: 26091
+	// Token: 0x02006C56 RID: 27734
 	public struct IDisableMoveOperation : IFlatbufferObject
 	{
-		// Token: 0x1700C1BD RID: 49597
-		// (get) Token: 0x0602D467 RID: 185447 RVA: 0x00634A9D File Offset: 0x00632C9D
+		// Token: 0x1700CB55 RID: 52053
+		// (get) Token: 0x0602FC14 RID: 195604 RVA: 0x00681318 File Offset: 0x0067F518
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D468 RID: 185448 RVA: 0x00634AAA File Offset: 0x00632CAA
+		// Token: 0x0602FC15 RID: 195605 RVA: 0x00681325 File Offset: 0x0067F525
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D469 RID: 185449 RVA: 0x00634AB4 File Offset: 0x00632CB4
+		// Token: 0x0602FC16 RID: 195606 RVA: 0x0068132C File Offset: 0x0067F52C
 		public static IDisableMoveOperation GetRootAsIDisableMoveOperation(ByteBuffer _bb)
 		{
 			return IDisableMoveOperation.GetRootAsIDisableMoveOperation(_bb, default(IDisableMoveOperation));
 		}
 
-		// Token: 0x0602D46A RID: 185450 RVA: 0x00634AD0 File Offset: 0x00632CD0
+		// Token: 0x0602FC17 RID: 195607 RVA: 0x00681348 File Offset: 0x0067F548
 		public static IDisableMoveOperation GetRootAsIDisableMoveOperation(ByteBuffer _bb, IDisableMoveOperation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D46B RID: 185451 RVA: 0x00634AED File Offset: 0x00632CED
+		// Token: 0x0602FC18 RID: 195608 RVA: 0x00681365 File Offset: 0x0067F565
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D46C RID: 185452 RVA: 0x00634AFC File Offset: 0x00632CFC
+		// Token: 0x0602FC19 RID: 195609 RVA: 0x00681374 File Offset: 0x0067F574
 		public IDisableMoveOperation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C1BE RID: 49598
-		// (get) Token: 0x0602D46D RID: 185453 RVA: 0x00634B0C File Offset: 0x00632D0C
+		// Token: 0x1700CB56 RID: 52054
+		// (get) Token: 0x0602FC1A RID: 195610 RVA: 0x00681384 File Offset: 0x0067F584
 		public EMoveOperationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1BF RID: 49599
-		// (get) Token: 0x0602D46E RID: 185454 RVA: 0x00634B48 File Offset: 0x00632D48
+		// Token: 0x1700CB57 RID: 52055
+		// (get) Token: 0x0602FC1B RID: 195611 RVA: 0x006813C0 File Offset: 0x0067F5C0
 		public bool Forward
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C0 RID: 49600
-		// (get) Token: 0x0602D46F RID: 185455 RVA: 0x00634B88 File Offset: 0x00632D88
+		// Token: 0x1700CB58 RID: 52056
+		// (get) Token: 0x0602FC1C RID: 195612 RVA: 0x00681400 File Offset: 0x0067F600
 		public bool Back
 		{
 			get
@@ -84,8 +84,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C1 RID: 49601
-		// (get) Token: 0x0602D470 RID: 185456 RVA: 0x00634BC8 File Offset: 0x00632DC8
+		// Token: 0x1700CB59 RID: 52057
+		// (get) Token: 0x0602FC1D RID: 195613 RVA: 0x00681440 File Offset: 0x0067F640
 		public bool Left
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C2 RID: 49602
-		// (get) Token: 0x0602D471 RID: 185457 RVA: 0x00634C08 File Offset: 0x00632E08
+		// Token: 0x1700CB5A RID: 52058
+		// (get) Token: 0x0602FC1E RID: 195614 RVA: 0x00681480 File Offset: 0x0067F680
 		public bool Right
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C3 RID: 49603
-		// (get) Token: 0x0602D472 RID: 185458 RVA: 0x00634C48 File Offset: 0x00632E48
+		// Token: 0x1700CB5B RID: 52059
+		// (get) Token: 0x0602FC1F RID: 195615 RVA: 0x006814C0 File Offset: 0x0067F6C0
 		public bool ForceWalk
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C4 RID: 49604
-		// (get) Token: 0x0602D473 RID: 185459 RVA: 0x00634C88 File Offset: 0x00632E88
+		// Token: 0x1700CB5C RID: 52060
+		// (get) Token: 0x0602FC20 RID: 195616 RVA: 0x00681500 File Offset: 0x0067F700
 		public bool ForceJog
 		{
 			get
@@ -128,8 +128,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C5 RID: 49605
-		// (get) Token: 0x0602D474 RID: 185460 RVA: 0x00634CC8 File Offset: 0x00632EC8
+		// Token: 0x1700CB5D RID: 52061
+		// (get) Token: 0x0602FC21 RID: 195617 RVA: 0x00681540 File Offset: 0x0067F740
 		public bool ForbidSprint
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C6 RID: 49606
-		// (get) Token: 0x0602D475 RID: 185461 RVA: 0x00634D08 File Offset: 0x00632F08
+		// Token: 0x1700CB5E RID: 52062
+		// (get) Token: 0x0602FC22 RID: 195618 RVA: 0x00681580 File Offset: 0x0067F780
 		public bool ForbidAndDisableSprint
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C7 RID: 49607
-		// (get) Token: 0x0602D476 RID: 185462 RVA: 0x00634D48 File Offset: 0x00632F48
+		// Token: 0x1700CB5F RID: 52063
+		// (get) Token: 0x0602FC23 RID: 195619 RVA: 0x006815C0 File Offset: 0x0067F7C0
 		public bool ForbidAndDisableMotorcycleSprint
 		{
 			get
@@ -161,8 +161,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C8 RID: 49608
-		// (get) Token: 0x0602D477 RID: 185463 RVA: 0x00634D88 File Offset: 0x00632F88
+		// Token: 0x1700CB60 RID: 52064
+		// (get) Token: 0x0602FC24 RID: 195620 RVA: 0x00681600 File Offset: 0x0067F800
 		public bool DisableClimbAndStep
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1C9 RID: 49609
-		// (get) Token: 0x0602D478 RID: 185464 RVA: 0x00634DC8 File Offset: 0x00632FC8
+		// Token: 0x1700CB61 RID: 52065
+		// (get) Token: 0x0602FC25 RID: 195621 RVA: 0x00681640 File Offset: 0x0067F840
 		public byte NullMask
 		{
 			get
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D479 RID: 185465 RVA: 0x00634E08 File Offset: 0x00633008
+		// Token: 0x0602FC26 RID: 195622 RVA: 0x00681680 File Offset: 0x0067F880
 		public static Offset<IDisableMoveOperation> CreateIDisableMoveOperation(FlatBufferBuilder builder, EMoveOperationType Type = EMoveOperationType.Enable, bool Forward = false, bool Back = false, bool Left = false, bool Right = false, bool ForceWalk = false, bool ForceJog = false, bool ForbidSprint = false, bool ForbidAndDisableSprint = false, bool ForbidAndDisableMotorcycleSprint = false, bool DisableClimbAndStep = false, byte NullMask = 0)
 		{
 			builder.StartTable(12);
@@ -206,91 +206,91 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableMoveOperation.EndIDisableMoveOperation(builder);
 		}
 
-		// Token: 0x0602D47A RID: 185466 RVA: 0x00634E80 File Offset: 0x00633080
+		// Token: 0x0602FC27 RID: 195623 RVA: 0x006816F8 File Offset: 0x0067F8F8
 		public static void StartIDisableMoveOperation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(12);
 		}
 
-		// Token: 0x0602D47B RID: 185467 RVA: 0x00634E8A File Offset: 0x0063308A
+		// Token: 0x0602FC28 RID: 195624 RVA: 0x00681702 File Offset: 0x0067F902
 		public static void AddType(FlatBufferBuilder builder, EMoveOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D47C RID: 185468 RVA: 0x00634E95 File Offset: 0x00633095
+		// Token: 0x0602FC29 RID: 195625 RVA: 0x0068170D File Offset: 0x0067F90D
 		public static void AddForward(FlatBufferBuilder builder, bool forward)
 		{
 			builder.AddBool(1, forward, false);
 		}
 
-		// Token: 0x0602D47D RID: 185469 RVA: 0x00634EA0 File Offset: 0x006330A0
+		// Token: 0x0602FC2A RID: 195626 RVA: 0x00681718 File Offset: 0x0067F918
 		public static void AddBack(FlatBufferBuilder builder, bool back)
 		{
 			builder.AddBool(2, back, false);
 		}
 
-		// Token: 0x0602D47E RID: 185470 RVA: 0x00634EAB File Offset: 0x006330AB
+		// Token: 0x0602FC2B RID: 195627 RVA: 0x00681723 File Offset: 0x0067F923
 		public static void AddLeft(FlatBufferBuilder builder, bool left)
 		{
 			builder.AddBool(3, left, false);
 		}
 
-		// Token: 0x0602D47F RID: 185471 RVA: 0x00634EB6 File Offset: 0x006330B6
+		// Token: 0x0602FC2C RID: 195628 RVA: 0x0068172E File Offset: 0x0067F92E
 		public static void AddRight(FlatBufferBuilder builder, bool right)
 		{
 			builder.AddBool(4, right, false);
 		}
 
-		// Token: 0x0602D480 RID: 185472 RVA: 0x00634EC1 File Offset: 0x006330C1
+		// Token: 0x0602FC2D RID: 195629 RVA: 0x00681739 File Offset: 0x0067F939
 		public static void AddForceWalk(FlatBufferBuilder builder, bool forceWalk)
 		{
 			builder.AddBool(5, forceWalk, false);
 		}
 
-		// Token: 0x0602D481 RID: 185473 RVA: 0x00634ECC File Offset: 0x006330CC
+		// Token: 0x0602FC2E RID: 195630 RVA: 0x00681744 File Offset: 0x0067F944
 		public static void AddForceJog(FlatBufferBuilder builder, bool forceJog)
 		{
 			builder.AddBool(6, forceJog, false);
 		}
 
-		// Token: 0x0602D482 RID: 185474 RVA: 0x00634ED7 File Offset: 0x006330D7
+		// Token: 0x0602FC2F RID: 195631 RVA: 0x0068174F File Offset: 0x0067F94F
 		public static void AddForbidSprint(FlatBufferBuilder builder, bool forbidSprint)
 		{
 			builder.AddBool(7, forbidSprint, false);
 		}
 
-		// Token: 0x0602D483 RID: 185475 RVA: 0x00634EE2 File Offset: 0x006330E2
+		// Token: 0x0602FC30 RID: 195632 RVA: 0x0068175A File Offset: 0x0067F95A
 		public static void AddForbidAndDisableSprint(FlatBufferBuilder builder, bool forbidAndDisableSprint)
 		{
 			builder.AddBool(8, forbidAndDisableSprint, false);
 		}
 
-		// Token: 0x0602D484 RID: 185476 RVA: 0x00634EED File Offset: 0x006330ED
+		// Token: 0x0602FC31 RID: 195633 RVA: 0x00681765 File Offset: 0x0067F965
 		public static void AddForbidAndDisableMotorcycleSprint(FlatBufferBuilder builder, bool forbidAndDisableMotorcycleSprint)
 		{
 			builder.AddBool(9, forbidAndDisableMotorcycleSprint, false);
 		}
 
-		// Token: 0x0602D485 RID: 185477 RVA: 0x00634EF9 File Offset: 0x006330F9
+		// Token: 0x0602FC32 RID: 195634 RVA: 0x00681771 File Offset: 0x0067F971
 		public static void AddDisableClimbAndStep(FlatBufferBuilder builder, bool disableClimbAndStep)
 		{
 			builder.AddBool(10, disableClimbAndStep, false);
 		}
 
-		// Token: 0x0602D486 RID: 185478 RVA: 0x00634F05 File Offset: 0x00633105
+		// Token: 0x0602FC33 RID: 195635 RVA: 0x0068177D File Offset: 0x0067F97D
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(11, nullMask, 0);
 		}
 
-		// Token: 0x0602D487 RID: 185479 RVA: 0x00634F11 File Offset: 0x00633111
+		// Token: 0x0602FC34 RID: 195636 RVA: 0x00681789 File Offset: 0x0067F989
 		public static Offset<IDisableMoveOperation> EndIDisableMoveOperation(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableMoveOperation>(builder.EndTable());
 		}
 
-		// Token: 0x0602D488 RID: 185480 RVA: 0x00634F20 File Offset: 0x00633120
+		// Token: 0x0602FC35 RID: 195637 RVA: 0x00681798 File Offset: 0x0067F998
 		public IDisableMoveOperationT UnPack()
 		{
 			IDisableMoveOperationT disableMoveOperationT = new IDisableMoveOperationT();
@@ -298,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return disableMoveOperationT;
 		}
 
-		// Token: 0x0602D489 RID: 185481 RVA: 0x00634F3C File Offset: 0x0063313C
+		// Token: 0x0602FC36 RID: 195638 RVA: 0x006817B4 File Offset: 0x0067F9B4
 		public void UnPackTo(IDisableMoveOperationT _o)
 		{
 			_o.Type = this.Type;
@@ -315,7 +315,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D48A RID: 185482 RVA: 0x00634FDC File Offset: 0x006331DC
+		// Token: 0x0602FC37 RID: 195639 RVA: 0x00681854 File Offset: 0x0067FA54
 		public static Offset<IDisableMoveOperation> Pack(FlatBufferBuilder builder, IDisableMoveOperationT _o)
 		{
 			if (_o == null)
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableMoveOperation.CreateIDisableMoveOperation(builder, _o.Type, _o.Forward, _o.Back, _o.Left, _o.Right, _o.ForceWalk, _o.ForceJog, _o.ForbidSprint, _o.ForbidAndDisableSprint, _o.ForbidAndDisableMotorcycleSprint, _o.DisableClimbAndStep, _o.NullMask);
 		}
 
-		// Token: 0x04010C5E RID: 68702
+		// Token: 0x04011A75 RID: 72309
 		private Table __p;
 	}
 }

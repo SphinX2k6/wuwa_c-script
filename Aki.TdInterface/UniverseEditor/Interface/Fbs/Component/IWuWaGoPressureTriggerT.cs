@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BCE RID: 23502
+	// Token: 0x020061E4 RID: 25060
 	public class IWuWaGoPressureTriggerT
 	{
-		// Token: 0x1700B196 RID: 45462
-		// (get) Token: 0x06028445 RID: 164933 RVA: 0x00588626 File Offset: 0x00586826
-		// (set) Token: 0x06028446 RID: 164934 RVA: 0x0058862E File Offset: 0x0058682E
+		// Token: 0x1700BADE RID: 47838
+		// (get) Token: 0x0602AA09 RID: 174601 RVA: 0x005D00B6 File Offset: 0x005CE2B6
+		// (set) Token: 0x0602AA0A RID: 174602 RVA: 0x005D00BE File Offset: 0x005CE2BE
 		public EWuWaGoEntityType Type { get; set; }
 
-		// Token: 0x1700B197 RID: 45463
-		// (get) Token: 0x06028447 RID: 164935 RVA: 0x00588637 File Offset: 0x00586837
-		// (set) Token: 0x06028448 RID: 164936 RVA: 0x0058863F File Offset: 0x0058683F
+		// Token: 0x1700BADF RID: 47839
+		// (get) Token: 0x0602AA0B RID: 174603 RVA: 0x005D00C7 File Offset: 0x005CE2C7
+		// (set) Token: 0x0602AA0C RID: 174604 RVA: 0x005D00CF File Offset: 0x005CE2CF
 		public IWuWaGoGridLinkDataT LinkData { get; set; }
 
-		// Token: 0x1700B198 RID: 45464
-		// (get) Token: 0x06028449 RID: 164937 RVA: 0x00588648 File Offset: 0x00586848
-		// (set) Token: 0x0602844A RID: 164938 RVA: 0x00588650 File Offset: 0x00586850
+		// Token: 0x1700BAE0 RID: 47840
+		// (get) Token: 0x0602AA0D RID: 174605 RVA: 0x005D00D8 File Offset: 0x005CE2D8
+		// (set) Token: 0x0602AA0E RID: 174606 RVA: 0x005D00E0 File Offset: 0x005CE2E0
 		public List<IActionInfoT> EnterActionList { get; set; }
 
-		// Token: 0x1700B199 RID: 45465
-		// (get) Token: 0x0602844B RID: 164939 RVA: 0x00588659 File Offset: 0x00586859
-		// (set) Token: 0x0602844C RID: 164940 RVA: 0x00588661 File Offset: 0x00586861
+		// Token: 0x1700BAE1 RID: 47841
+		// (get) Token: 0x0602AA0F RID: 174607 RVA: 0x005D00E9 File Offset: 0x005CE2E9
+		// (set) Token: 0x0602AA10 RID: 174608 RVA: 0x005D00F1 File Offset: 0x005CE2F1
 		public List<IActionInfoT> ExitActionList { get; set; }
 
-		// Token: 0x0602844D RID: 164941 RVA: 0x0058866A File Offset: 0x0058686A
+		// Token: 0x0602AA11 RID: 174609 RVA: 0x005D00FA File Offset: 0x005CE2FA
 		public IWuWaGoPressureTriggerT()
 		{
 			this.Type = EWuWaGoEntityType.LevelCenter;

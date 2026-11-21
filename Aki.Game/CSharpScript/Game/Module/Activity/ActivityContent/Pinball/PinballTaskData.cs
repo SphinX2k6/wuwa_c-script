@@ -7,59 +7,59 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 {
-	// Token: 0x020062C5 RID: 25285
+	// Token: 0x02005243 RID: 21059
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballTaskData
 	{
-		// Token: 0x1700927A RID: 37498
-		// (get) Token: 0x0603F960 RID: 260448 RVA: 0x00F61946 File Offset: 0x00F5FB46
-		// (set) Token: 0x0603F961 RID: 260449 RVA: 0x00F6194E File Offset: 0x00F5FB4E
+		// Token: 0x170065DC RID: 26076
+		// (get) Token: 0x06034621 RID: 214561 RVA: 0x00EA88A2 File Offset: 0x00EA6AA2
+		// (set) Token: 0x06034622 RID: 214562 RVA: 0x00EA88AA File Offset: 0x00EA6AAA
 		[Nullable(2)]
 		public ConditionTask Data { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700927B RID: 37499
-		// (get) Token: 0x0603F962 RID: 260450 RVA: 0x00F61957 File Offset: 0x00F5FB57
-		// (set) Token: 0x0603F963 RID: 260451 RVA: 0x00F6195F File Offset: 0x00F5FB5F
+		// Token: 0x170065DD RID: 26077
+		// (get) Token: 0x06034623 RID: 214563 RVA: 0x00EA88B3 File Offset: 0x00EA6AB3
+		// (set) Token: 0x06034624 RID: 214564 RVA: 0x00EA88BB File Offset: 0x00EA6ABB
 		public EPinballTaskState Status { get; set; }
 
-		// Token: 0x1700927C RID: 37500
-		// (get) Token: 0x0603F964 RID: 260452 RVA: 0x00F61968 File Offset: 0x00F5FB68
-		// (set) Token: 0x0603F965 RID: 260453 RVA: 0x00F61970 File Offset: 0x00F5FB70
+		// Token: 0x170065DE RID: 26078
+		// (get) Token: 0x06034625 RID: 214565 RVA: 0x00EA88C4 File Offset: 0x00EA6AC4
+		// (set) Token: 0x06034626 RID: 214566 RVA: 0x00EA88CC File Offset: 0x00EA6ACC
 		public List<TItem> RewardList { get; set; } = new List<TItem>();
 
-		// Token: 0x1700927D RID: 37501
-		// (get) Token: 0x0603F966 RID: 260454 RVA: 0x00F61979 File Offset: 0x00F5FB79
-		// (set) Token: 0x0603F967 RID: 260455 RVA: 0x00F61981 File Offset: 0x00F5FB81
+		// Token: 0x170065DF RID: 26079
+		// (get) Token: 0x06034627 RID: 214567 RVA: 0x00EA88D5 File Offset: 0x00EA6AD5
+		// (set) Token: 0x06034628 RID: 214568 RVA: 0x00EA88DD File Offset: 0x00EA6ADD
 		public int Current { get; set; }
 
-		// Token: 0x1700927E RID: 37502
-		// (get) Token: 0x0603F968 RID: 260456 RVA: 0x00F6198A File Offset: 0x00F5FB8A
-		// (set) Token: 0x0603F969 RID: 260457 RVA: 0x00F61992 File Offset: 0x00F5FB92
+		// Token: 0x170065E0 RID: 26080
+		// (get) Token: 0x06034629 RID: 214569 RVA: 0x00EA88E6 File Offset: 0x00EA6AE6
+		// (set) Token: 0x0603462A RID: 214570 RVA: 0x00EA88EE File Offset: 0x00EA6AEE
 		public int Target { get; set; } = 1;
 
-		// Token: 0x1700927F RID: 37503
-		// (get) Token: 0x0603F96A RID: 260458 RVA: 0x00F6199B File Offset: 0x00F5FB9B
-		// (set) Token: 0x0603F96B RID: 260459 RVA: 0x00F619A3 File Offset: 0x00F5FBA3
+		// Token: 0x170065E1 RID: 26081
+		// (get) Token: 0x0603462B RID: 214571 RVA: 0x00EA88F7 File Offset: 0x00EA6AF7
+		// (set) Token: 0x0603462C RID: 214572 RVA: 0x00EA88FF File Offset: 0x00EA6AFF
 		public string QuestName { get; set; } = "";
 
-		// Token: 0x17009280 RID: 37504
-		// (get) Token: 0x0603F96C RID: 260460 RVA: 0x00F619AC File Offset: 0x00F5FBAC
-		// (set) Token: 0x0603F96D RID: 260461 RVA: 0x00F619B4 File Offset: 0x00F5FBB4
+		// Token: 0x170065E2 RID: 26082
+		// (get) Token: 0x0603462D RID: 214573 RVA: 0x00EA8908 File Offset: 0x00EA6B08
+		// (set) Token: 0x0603462E RID: 214574 RVA: 0x00EA8910 File Offset: 0x00EA6B10
 		[Nullable(2)]
 		public string QuestNameTextKey { [NullableContext(2)] get; [NullableContext(2)] set; } = "";
 
-		// Token: 0x17009281 RID: 37505
-		// (get) Token: 0x0603F96E RID: 260462 RVA: 0x00F619BD File Offset: 0x00F5FBBD
-		// (set) Token: 0x0603F96F RID: 260463 RVA: 0x00F619C5 File Offset: 0x00F5FBC5
+		// Token: 0x170065E3 RID: 26083
+		// (get) Token: 0x0603462F RID: 214575 RVA: 0x00EA8919 File Offset: 0x00EA6B19
+		// (set) Token: 0x06034630 RID: 214576 RVA: 0x00EA8921 File Offset: 0x00EA6B21
 		public int DropId { get; set; }
 
-		// Token: 0x17009282 RID: 37506
-		// (get) Token: 0x0603F970 RID: 260464 RVA: 0x00F619CE File Offset: 0x00F5FBCE
-		// (set) Token: 0x0603F971 RID: 260465 RVA: 0x00F619D6 File Offset: 0x00F5FBD6
+		// Token: 0x170065E4 RID: 26084
+		// (get) Token: 0x06034631 RID: 214577 RVA: 0x00EA892A File Offset: 0x00EA6B2A
+		// (set) Token: 0x06034632 RID: 214578 RVA: 0x00EA8932 File Offset: 0x00EA6B32
 		public EPinballTaskTab TaskTab { get; set; }
 
-		// Token: 0x0603F972 RID: 260466 RVA: 0x00F619E0 File Offset: 0x00F5FBE0
+		// Token: 0x06034633 RID: 214579 RVA: 0x00EA893C File Offset: 0x00EA6B3C
 		public PinballTaskData(ConditionTask taskData)
 		{
 			this.Data = taskData;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.RewardList = new List<TItem>();
 		}
 
-		// Token: 0x0603F973 RID: 260467 RVA: 0x00F61A6C File Offset: 0x00F5FC6C
+		// Token: 0x06034634 RID: 214580 RVA: 0x00EA89C8 File Offset: 0x00EA6BC8
 		public void UpdateTaskData(ConditionTask taskData)
 		{
 			this.Data = taskData;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			this.Target = taskData.Target;
 		}
 
-		// Token: 0x0603F974 RID: 260468 RVA: 0x00F61AA0 File Offset: 0x00F5FCA0
+		// Token: 0x06034635 RID: 214581 RVA: 0x00EA89FC File Offset: 0x00EA6BFC
 		public void SetRewardList(int dropId)
 		{
 			this.DropId = dropId;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x0603F975 RID: 260469 RVA: 0x00F61B58 File Offset: 0x00F5FD58
+		// Token: 0x06034636 RID: 214582 RVA: 0x00EA8AB4 File Offset: 0x00EA6CB4
 		private static EPinballTaskState ConvertTaskState(ConditionTaskState state)
 		{
 			switch (state)
@@ -122,8 +122,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x17009283 RID: 37507
-		// (get) Token: 0x0603F976 RID: 260470 RVA: 0x00F61B75 File Offset: 0x00F5FD75
+		// Token: 0x170065E5 RID: 26085
+		// (get) Token: 0x06034637 RID: 214583 RVA: 0x00EA8AD1 File Offset: 0x00EA6CD1
 		public bool IsDoing
 		{
 			get
@@ -132,8 +132,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x17009284 RID: 37508
-		// (get) Token: 0x0603F977 RID: 260471 RVA: 0x00F61B80 File Offset: 0x00F5FD80
+		// Token: 0x170065E6 RID: 26086
+		// (get) Token: 0x06034638 RID: 214584 RVA: 0x00EA8ADC File Offset: 0x00EA6CDC
 		public bool IsUnclaimed
 		{
 			get
@@ -142,8 +142,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 			}
 		}
 
-		// Token: 0x17009285 RID: 37509
-		// (get) Token: 0x0603F978 RID: 260472 RVA: 0x00F61B8B File Offset: 0x00F5FD8B
+		// Token: 0x170065E7 RID: 26087
+		// (get) Token: 0x06034639 RID: 214585 RVA: 0x00EA8AE7 File Offset: 0x00EA6CE7
 		public bool IsFinished
 		{
 			get

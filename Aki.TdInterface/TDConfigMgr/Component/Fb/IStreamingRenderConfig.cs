@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E31 RID: 3633
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F2D RID: 3885
 	public class IStreamingRenderConfig : IPortalRenderConfig
 	{
-		// Token: 0x06005221 RID: 21025 RVA: 0x000CA5BC File Offset: 0x000C87BC
+		// Token: 0x06005748 RID: 22344 RVA: 0x000D5E84 File Offset: 0x000D4084
 		public static IStreamingRenderConfig Create(IStreamingRenderConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B7C RID: 7036
-		// (get) Token: 0x06005222 RID: 21026 RVA: 0x000CA5DB File Offset: 0x000C87DB
+		// Token: 0x17001CE9 RID: 7401
+		// (get) Token: 0x06005749 RID: 22345 RVA: 0x000D5EA3 File Offset: 0x000D40A3
 		public override IViewDistanceMode ViewDistance
 		{
 			get
@@ -40,19 +38,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B7D RID: 7037
-		// (get) Token: 0x06005223 RID: 21027 RVA: 0x000CA60C File Offset: 0x000C880C
+		// Token: 0x17001CEA RID: 7402
+		// (get) Token: 0x0600574A RID: 22346 RVA: 0x000D5ED4 File Offset: 0x000D40D4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IActorRef> ForceRenderActors
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -75,19 +73,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B7E RID: 7038
-		// (get) Token: 0x06005224 RID: 21028 RVA: 0x000CA688 File Offset: 0x000C8888
+		// Token: 0x17001CEB RID: 7403
+		// (get) Token: 0x0600574B RID: 22347 RVA: 0x000D5F50 File Offset: 0x000D4150
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IRenderFlag> SetRenderFlags
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -110,8 +108,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B7F RID: 7039
-		// (get) Token: 0x06005225 RID: 21029 RVA: 0x000CA702 File Offset: 0x000C8902
+		// Token: 0x17001CEC RID: 7404
+		// (get) Token: 0x0600574C RID: 22348 RVA: 0x000D5FCA File Offset: 0x000D41CA
 		public virtual IStreamingRtEffectRef RtEffectRef
 		{
 			get
@@ -126,8 +124,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B80 RID: 7040
-		// (get) Token: 0x06005226 RID: 21030 RVA: 0x000CA736 File Offset: 0x000C8936
+		// Token: 0x17001CED RID: 7405
+		// (get) Token: 0x0600574D RID: 22349 RVA: 0x000D5FFE File Offset: 0x000D41FE
 		public virtual IRtSize RtData
 		{
 			get
@@ -142,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B81 RID: 7041
-		// (get) Token: 0x06005227 RID: 21031 RVA: 0x000CA76A File Offset: 0x000C896A
+		// Token: 0x17001CEE RID: 7406
+		// (get) Token: 0x0600574E RID: 22350 RVA: 0x000D6032 File Offset: 0x000D4232
 		public virtual string FallbackCubeMapTexturePath
 		{
 			get
@@ -152,8 +150,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B82 RID: 7042
-		// (get) Token: 0x06005228 RID: 21032 RVA: 0x000CA777 File Offset: 0x000C8977
+		// Token: 0x17001CEF RID: 7407
+		// (get) Token: 0x0600574F RID: 22351 RVA: 0x000D603F File Offset: 0x000D423F
 		public virtual string FallbackCubeMapKey
 		{
 			get
@@ -162,49 +160,49 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F4E RID: 12110
+		// Token: 0x04003216 RID: 12822
 		private IStreamingRenderConfig Instance;
 
-		// Token: 0x04002F4F RID: 12111
+		// Token: 0x04003217 RID: 12823
 		private IViewDistanceMode _ViewDistanceCache;
 
-		// Token: 0x04002F50 RID: 12112
+		// Token: 0x04003218 RID: 12824
 		private bool _ViewDistanceInited;
 
-		// Token: 0x04002F51 RID: 12113
+		// Token: 0x04003219 RID: 12825
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IActorRef> _ForceRenderActorsCache;
 
-		// Token: 0x04002F52 RID: 12114
+		// Token: 0x0400321A RID: 12826
 		private bool _ForceRenderActorsInited;
 
-		// Token: 0x04002F53 RID: 12115
+		// Token: 0x0400321B RID: 12827
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IRenderFlag> _SetRenderFlagsCache;
 
-		// Token: 0x04002F54 RID: 12116
+		// Token: 0x0400321C RID: 12828
 		private bool _SetRenderFlagsInited;
 
-		// Token: 0x04002F55 RID: 12117
+		// Token: 0x0400321D RID: 12829
 		[Nullable(2)]
 		private IStreamingRtEffectRef _RtEffectRefCache;
 
-		// Token: 0x04002F56 RID: 12118
+		// Token: 0x0400321E RID: 12830
 		private bool _RtEffectRefInited;
 
-		// Token: 0x04002F57 RID: 12119
+		// Token: 0x0400321F RID: 12831
 		[Nullable(2)]
 		private IRtSize _RtDataCache;
 
-		// Token: 0x04002F58 RID: 12120
+		// Token: 0x04003220 RID: 12832
 		private bool _RtDataInited;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002992 RID: 10642
+	// Token: 0x02002C79 RID: 11385
 	public class RemoveTrialFollowShooter : ActionParams
 	{
-		// Token: 0x0600EB9C RID: 60316 RVA: 0x0022748A File Offset: 0x0022568A
-		[NullableContext(1)]
+		// Token: 0x0600FA1A RID: 64026 RVA: 0x00244C16 File Offset: 0x00242E16
 		public static RemoveTrialFollowShooter Create(IRemoveTrialFollowShooter? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A3A RID: 19002
-		// (get) Token: 0x0600EB9D RID: 60317 RVA: 0x002274A9 File Offset: 0x002256A9
+		// Token: 0x17004DD6 RID: 19926
+		// (get) Token: 0x0600FA1B RID: 64027 RVA: 0x00244C35 File Offset: 0x00242E35
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081C2 RID: 33218
+		// Token: 0x040088A7 RID: 34983
 		private IRemoveTrialFollowShooter Instance;
 	}
 }

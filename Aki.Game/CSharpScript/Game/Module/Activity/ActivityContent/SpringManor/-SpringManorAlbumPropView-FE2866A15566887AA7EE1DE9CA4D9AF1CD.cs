@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006075 RID: 24693
+	// Token: 0x02004FF3 RID: 20467
 	internal enum <SpringManorAlbumPropView>FE2866A15566887AA7EE1DE9CA4D9AF1CD6D804CCF89B37C65558B4929FDA5003__EComponents
 	{
-		// Token: 0x04020A6A RID: 133738
+		// Token: 0x0401B397 RID: 111511
 		BtnClick,
-		// Token: 0x04020A6B RID: 133739
+		// Token: 0x0401B398 RID: 111512
 		TexIcon,
-		// Token: 0x04020A6C RID: 133740
+		// Token: 0x0401B399 RID: 111513
 		TxtDescri,
-		// Token: 0x04020A6D RID: 133741
+		// Token: 0x0401B39A RID: 111514
 		TxtName
 	}
 }

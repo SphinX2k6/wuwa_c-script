@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001811 RID: 6161
+	// Token: 0x0200199C RID: 6556
 	public class IBlendFunction_SetValue
 	{
-		// Token: 0x040053B8 RID: 21432
+		// Token: 0x04005803 RID: 22531
 		public EViewTargetBlendFunction Type;
 
-		// Token: 0x040053B9 RID: 21433
+		// Token: 0x04005804 RID: 22532
 		public float BlendExp;
 
-		// Token: 0x040053BA RID: 21434
+		// Token: 0x04005805 RID: 22533
 		[Nullable(2)]
 		public string CurveAsset;
 	}

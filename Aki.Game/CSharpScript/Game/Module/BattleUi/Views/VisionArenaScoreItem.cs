@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DBC RID: 23996
+	// Token: 0x02004DA0 RID: 19872
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VisionArenaScoreItem : BaseScoreItem
 	{
-		// Token: 0x0603CF97 RID: 249751 RVA: 0x00EA8788 File Offset: 0x00EA6988
+		// Token: 0x06031F0E RID: 204558 RVA: 0x00DF9664 File Offset: 0x00DF7864
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CF98 RID: 249752 RVA: 0x00EA8898 File Offset: 0x00EA6A98
+		// Token: 0x06031F0F RID: 204559 RVA: 0x00DF9774 File Offset: 0x00DF7974
 		protected override UniTask OnCreateAsync()
 		{
 			VisionArenaScoreItem.<OnCreateAsync>d__10 <OnCreateAsync>d__;
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF99 RID: 249753 RVA: 0x00EA88DB File Offset: 0x00EA6ADB
+		// Token: 0x06031F10 RID: 204560 RVA: 0x00DF97B7 File Offset: 0x00DF79B7
 		[NullableContext(1)]
 		private void OnAnimationClose(string sequenceName)
 		{
 		}
 
-		// Token: 0x0603CF9A RID: 249754 RVA: 0x00EA88E0 File Offset: 0x00EA6AE0
+		// Token: 0x06031F11 RID: 204561 RVA: 0x00DF97BC File Offset: 0x00DF79BC
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF9B RID: 249755 RVA: 0x00EA89CC File Offset: 0x00EA6BCC
+		// Token: 0x06031F12 RID: 204562 RVA: 0x00DF98A8 File Offset: 0x00DF7AA8
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603CF9C RID: 249756 RVA: 0x00EA89EC File Offset: 0x00EA6BEC
+		// Token: 0x06031F13 RID: 204563 RVA: 0x00DF98C8 File Offset: 0x00DF7AC8
 		[NullableContext(1)]
 		private UniTask LoadNiagara(string path)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CF9D RID: 249757 RVA: 0x00EA8A38 File Offset: 0x00EA6C38
+		// Token: 0x06031F14 RID: 204564 RVA: 0x00DF9914 File Offset: 0x00DF7B14
 		protected override void OnBattleScoreChanged(int scoreId, int score)
 		{
 			if (base.IsHideOrHiding)
@@ -161,14 +161,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CF9E RID: 249758 RVA: 0x00EA8B38 File Offset: 0x00EA6D38
+		// Token: 0x06031F15 RID: 204565 RVA: 0x00DF9A14 File Offset: 0x00DF7C14
 		public override bool IsValidScore(int scoreId)
 		{
 			BattleScoreConf? scoreConfig = BattleScoreModel.Instance.GetScoreConfig(scoreId, true);
 			return scoreConfig != null && scoreConfig.Value.Type == 8;
 		}
 
-		// Token: 0x0603CF9F RID: 249759 RVA: 0x00EA8B70 File Offset: 0x00EA6D70
+		// Token: 0x06031F16 RID: 204566 RVA: 0x00DF9A4C File Offset: 0x00DF7C4C
 		public override void ShowScore()
 		{
 			base.ShowScore();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603CFA0 RID: 249760 RVA: 0x00EA8BE3 File Offset: 0x00EA6DE3
+		// Token: 0x06031F17 RID: 204567 RVA: 0x00DF9ABF File Offset: 0x00DF7CBF
 		public override void HideScore()
 		{
 			base.HideScore();
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.<HideScore>g__HideAfterAnimation|18_0().Forget();
 		}
 
-		// Token: 0x0603CFA1 RID: 249761 RVA: 0x00EA8C1C File Offset: 0x00EA6E1C
+		// Token: 0x06031F18 RID: 204568 RVA: 0x00DF9AF8 File Offset: 0x00DF7CF8
 		private void UpdateCurrentLevel(int score)
 		{
 			if (this.ScoreLevelConfigList == null)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFA2 RID: 249762 RVA: 0x00EA8CB0 File Offset: 0x00EA6EB0
+		// Token: 0x06031F19 RID: 204569 RVA: 0x00DF9B8C File Offset: 0x00DF7D8C
 		private void UpdateSpine()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFA3 RID: 249763 RVA: 0x00EA8E48 File Offset: 0x00EA7048
+		// Token: 0x06031F1A RID: 204570 RVA: 0x00DF9D24 File Offset: 0x00DF7F24
 		private unsafe void UpdateWaveEffect()
 		{
 			bool uiactive = this.CurrentLevel > 1;
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CFA5 RID: 249765 RVA: 0x00EA90A8 File Offset: 0x00EA72A8
+		// Token: 0x06031F1C RID: 204572 RVA: 0x00DF9F84 File Offset: 0x00DF8184
 		[CompilerGenerated]
 		private UniTask <HideScore>g__HideAfterAnimation|18_0()
 		{
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <<HideScore>g__HideAfterAnimation|18_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CFAA RID: 249770 RVA: 0x00EA92DC File Offset: 0x00EA74DC
+		// Token: 0x06031F21 RID: 204577 RVA: 0x00DFA1B8 File Offset: 0x00DF83B8
 		[CompilerGenerated]
 		internal static void <UpdateWaveEffect>g__Func|21_0(UUINiagara niagara, in JsonElement configData)
 		{
@@ -501,48 +501,48 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FC5A RID: 130138
+		// Token: 0x0401A717 RID: 108311
 		[Nullable(1)]
 		private const string WAVE_NIAGARA_PATH = "/Game/Aki/Effect/UI/Niagaras/Shengyuan/NI_Fx_LGUI_SoundRing.NI_Fx_LGUI_SoundRing";
 
-		// Token: 0x0401FC5B RID: 130139
+		// Token: 0x0401A718 RID: 108312
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FC5C RID: 130140
+		// Token: 0x0401A719 RID: 108313
 		private UNiagaraSystem WaveNiagara;
 
-		// Token: 0x0401FC5D RID: 130141
+		// Token: 0x0401A71A RID: 108314
 		private UUINiagara WaveUiNiagara;
 
-		// Token: 0x0401FC5E RID: 130142
+		// Token: 0x0401A71B RID: 108315
 		private IReadOnlyList<BattleScoreLevelConf> ScoreLevelConfigList;
 
-		// Token: 0x0401FC5F RID: 130143
+		// Token: 0x0401A71C RID: 108316
 		private BattleScoreLevelConf? CurrentLevelConfig;
 
-		// Token: 0x0401FC60 RID: 130144
+		// Token: 0x0401A71D RID: 108317
 		private bool IsDirty;
 
-		// Token: 0x0401FC61 RID: 130145
+		// Token: 0x0401A71E RID: 108318
 		private int CurrentLevel;
 
-		// Token: 0x0200C0B1 RID: 49329
+		// Token: 0x0200AABA RID: 43706
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A256 RID: 238166
+			// Token: 0x04034C28 RID: 216104
 			WaveNiagara,
-			// Token: 0x0403A257 RID: 238167
+			// Token: 0x04034C29 RID: 216105
 			NowSprite,
-			// Token: 0x0403A258 RID: 238168
+			// Token: 0x04034C2A RID: 216106
 			TextureBg,
-			// Token: 0x0403A259 RID: 238169
+			// Token: 0x04034C2B RID: 216107
 			ProgressNiagara,
-			// Token: 0x0403A25A RID: 238170
+			// Token: 0x04034C2C RID: 216108
 			BurstNiagara,
-			// Token: 0x0403A25B RID: 238171
+			// Token: 0x04034C2D RID: 216109
 			BurstAnimationActor,
-			// Token: 0x0403A25C RID: 238172
+			// Token: 0x04034C2E RID: 216110
 			NextSprite
 		}
 	}

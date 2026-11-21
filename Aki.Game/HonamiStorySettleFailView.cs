@@ -8,16 +8,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F14 RID: 7956
+// Token: 0x020013D6 RID: 5078
 public class HonamiStorySettleFailView : UiViewBase
 {
-	// Token: 0x0600F527 RID: 62759 RVA: 0x003B27EF File Offset: 0x003B09EF
+	// Token: 0x0600C946 RID: 51526 RVA: 0x003BE2DB File Offset: 0x003BC4DB
 	[NullableContext(1)]
 	public HonamiStorySettleFailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F528 RID: 62760 RVA: 0x003B27F8 File Offset: 0x003B09F8
+	// Token: 0x0600C947 RID: 51527 RVA: 0x003BE2E4 File Offset: 0x003BC4E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -48,13 +48,13 @@ public class HonamiStorySettleFailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F529 RID: 62761 RVA: 0x003B2943 File Offset: 0x003B0B43
+	// Token: 0x0600C948 RID: 51528 RVA: 0x003BE42F File Offset: 0x003BC62F
 	protected override void OnStart()
 	{
 		this.ScrollView = new GenericScrollViewNew<HonamiStorySettleItem, IHonamiStorySettleItemParams>(base.GetScrollViewWithScrollbar(0), new Func<HonamiStorySettleItem>(this.InitItem), null, false, null);
 	}
 
-	// Token: 0x0600F52A RID: 62762 RVA: 0x003B2968 File Offset: 0x003B0B68
+	// Token: 0x0600C949 RID: 51529 RVA: 0x003BE454 File Offset: 0x003BC654
 	protected override void OnBeforeShow()
 	{
 		IHonamiStorySettleFailViewParams honamiStorySettleFailViewParams = this.OpenParam as IHonamiStorySettleFailViewParams;
@@ -86,27 +86,27 @@ public class HonamiStorySettleFailView : UiViewBase
 		this.SetDialogAndSound();
 	}
 
-	// Token: 0x0600F52B RID: 62763 RVA: 0x003B2A26 File Offset: 0x003B0C26
+	// Token: 0x0600C94A RID: 51530 RVA: 0x003BE512 File Offset: 0x003BC712
 	[NullableContext(1)]
 	private HonamiStorySettleItem InitItem()
 	{
 		return new HonamiStorySettleItem();
 	}
 
-	// Token: 0x0600F52C RID: 62764 RVA: 0x003B2A2D File Offset: 0x003B0C2D
+	// Token: 0x0600C94B RID: 51531 RVA: 0x003BE519 File Offset: 0x003BC719
 	private void OnConfirmClick()
 	{
 		HonamiStoryController.Instance.LeaveHonamiDungeon();
 	}
 
-	// Token: 0x0600F52D RID: 62765 RVA: 0x003B2A3C File Offset: 0x003B0C3C
+	// Token: 0x0600C94C RID: 51532 RVA: 0x003BE528 File Offset: 0x003BC728
 	private void SetDialogAndSound()
 	{
 		HonamiStoryOutDialog? randomDialogData = HonamiStoryModel.Instance.GetRandomDialogData(3);
 		AudioSystem.Instance.PostEvent(randomDialogData.Value.AudioEvent);
 	}
 
-	// Token: 0x04007165 RID: 29029
+	// Token: 0x04007246 RID: 29254
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,22 +115,22 @@ public class HonamiStorySettleFailView : UiViewBase
 	})]
 	private GenericScrollViewNew<HonamiStorySettleItem, IHonamiStorySettleItemParams> ScrollView;
 
-	// Token: 0x02008523 RID: 34083
+	// Token: 0x020076A8 RID: 30376
 	private enum EComponentType
 	{
-		// Token: 0x0402B552 RID: 177490
+		// Token: 0x04026876 RID: 157814
 		ScrollView,
-		// Token: 0x0402B553 RID: 177491
+		// Token: 0x04026877 RID: 157815
 		RewardText,
-		// Token: 0x0402B554 RID: 177492
+		// Token: 0x04026878 RID: 157816
 		NewRecordItem,
-		// Token: 0x0402B555 RID: 177493
+		// Token: 0x04026879 RID: 157817
 		ConfirmButton,
-		// Token: 0x0402B556 RID: 177494
+		// Token: 0x0402687A RID: 157818
 		FailItem,
-		// Token: 0x0402B557 RID: 177495
+		// Token: 0x0402687B RID: 157819
 		FailItemValueText,
-		// Token: 0x0402B558 RID: 177496
+		// Token: 0x0402687C RID: 157820
 		BottomArrowItem
 	}
 }

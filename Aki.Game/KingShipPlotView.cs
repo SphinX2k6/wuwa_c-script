@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002045 RID: 8261
+// Token: 0x02001518 RID: 5400
 public class KingShipPlotView : UiViewBase
 {
-	// Token: 0x060103B1 RID: 66481 RVA: 0x003F5C3C File Offset: 0x003F3E3C
+	// Token: 0x0600D819 RID: 55321 RVA: 0x00402234 File Offset: 0x00400434
 	[NullableContext(1)]
 	public KingShipPlotView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060103B2 RID: 66482 RVA: 0x003F5C45 File Offset: 0x003F3E45
+	// Token: 0x0600D81A RID: 55322 RVA: 0x0040223D File Offset: 0x0040043D
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class KingShipPlotView : UiViewBase
 		};
 	}
 
-	// Token: 0x060103B3 RID: 66483 RVA: 0x003F5C80 File Offset: 0x003F3E80
+	// Token: 0x0600D81B RID: 55323 RVA: 0x00402278 File Offset: 0x00400478
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KingShipPlotView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class KingShipPlotView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060103B4 RID: 66484 RVA: 0x003F5CC4 File Offset: 0x003F3EC4
+	// Token: 0x0600D81C RID: 55324 RVA: 0x004022BC File Offset: 0x004004BC
 	protected override void OnStart()
 	{
 		IKingShipPlotViewData kingShipPlotViewData = (IKingShipPlotViewData)this.OpenParam;
@@ -48,13 +48,13 @@ public class KingShipPlotView : UiViewBase
 		base.SetTextureByPath(kingShipPlotViewData.Path, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x060103B5 RID: 66485 RVA: 0x003F5D11 File Offset: 0x003F3F11
+	// Token: 0x0600D81D RID: 55325 RVA: 0x00402309 File Offset: 0x00400509
 	protected override void OnBeforeDestroy()
 	{
 		((IKingShipPlotViewData)this.OpenParam).OnCloseCallBack();
 	}
 
-	// Token: 0x060103B6 RID: 66486 RVA: 0x003F5D28 File Offset: 0x003F3F28
+	// Token: 0x0600D81E RID: 55326 RVA: 0x00402320 File Offset: 0x00400520
 	protected override UniTask OnPlayingCloseSequenceAsync()
 	{
 		KingShipPlotView.<OnPlayingCloseSequenceAsync>d__7 <OnPlayingCloseSequenceAsync>d__;
@@ -65,17 +65,17 @@ public class KingShipPlotView : UiViewBase
 		return <OnPlayingCloseSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04007817 RID: 30743
+	// Token: 0x04007900 RID: 30976
 	[Nullable(2)]
 	private KingShipPlotItem KingShipPlotItem;
 
-	// Token: 0x0200863D RID: 34365
+	// Token: 0x020077C4 RID: 30660
 	private class EComponentDefine
 	{
-		// Token: 0x0402BB06 RID: 178950
+		// Token: 0x04026E15 RID: 159253
 		public const int BgTexture = 0;
 
-		// Token: 0x0402BB07 RID: 178951
+		// Token: 0x04026E16 RID: 159254
 		public const int PlotItem = 1;
 	}
 }

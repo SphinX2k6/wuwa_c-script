@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BFB RID: 3067
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CCB RID: 3275
 	public class SkyboxComponent : IComponentBase
 	{
-		// Token: 0x0600466C RID: 18028 RVA: 0x000B1DC4 File Offset: 0x000AFFC4
+		// Token: 0x06004ACF RID: 19151 RVA: 0x000BBF90 File Offset: 0x000BA190
 		public static SkyboxComponent Create(ISkyboxComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001433 RID: 5171
-		// (get) Token: 0x0600466D RID: 18029 RVA: 0x000B1DE4 File Offset: 0x000AFFE4
+		// Token: 0x17001534 RID: 5428
+		// (get) Token: 0x06004AD0 RID: 19152 RVA: 0x000BBFB0 File Offset: 0x000BA1B0
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001434 RID: 5172
-		// (get) Token: 0x0600466E RID: 18030 RVA: 0x000B1E1C File Offset: 0x000B001C
+		// Token: 0x17001535 RID: 5429
+		// (get) Token: 0x06004AD1 RID: 19153 RVA: 0x000BBFE8 File Offset: 0x000BA1E8
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001435 RID: 5173
-		// (get) Token: 0x0600466F RID: 18031 RVA: 0x000B1E32 File Offset: 0x000B0032
+		// Token: 0x17001536 RID: 5430
+		// (get) Token: 0x06004AD2 RID: 19154 RVA: 0x000BBFFE File Offset: 0x000BA1FE
 		[Nullable(2)]
 		public virtual string WeatherDataAsset
 		{
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001436 RID: 5174
-		// (get) Token: 0x06004670 RID: 18032 RVA: 0x000B1E3F File Offset: 0x000B003F
+		// Token: 0x17001537 RID: 5431
+		// (get) Token: 0x06004AD3 RID: 19155 RVA: 0x000BC00B File Offset: 0x000BA20B
 		[Nullable(2)]
 		public virtual string PPTODDataAsset
 		{
@@ -70,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001437 RID: 5175
-		// (get) Token: 0x06004671 RID: 18033 RVA: 0x000B1E4C File Offset: 0x000B004C
+		// Token: 0x17001538 RID: 5432
+		// (get) Token: 0x06004AD4 RID: 19156 RVA: 0x000BC018 File Offset: 0x000BA218
 		public virtual int? SkyboxSetting
 		{
 			get
@@ -84,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001438 RID: 5176
-		// (get) Token: 0x06004672 RID: 18034 RVA: 0x000B1E84 File Offset: 0x000B0084
+		// Token: 0x17001539 RID: 5433
+		// (get) Token: 0x06004AD5 RID: 19157 RVA: 0x000BC050 File Offset: 0x000BA250
 		public virtual float? FadeTime
 		{
 			get
@@ -98,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001439 RID: 5177
-		// (get) Token: 0x06004673 RID: 18035 RVA: 0x000B1EBC File Offset: 0x000B00BC
+		// Token: 0x1700153A RID: 5434
+		// (get) Token: 0x06004AD6 RID: 19158 RVA: 0x000BC088 File Offset: 0x000BA288
 		public virtual float? Priority
 		{
 			get
@@ -112,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700143A RID: 5178
-		// (get) Token: 0x06004674 RID: 18036 RVA: 0x000B1EF2 File Offset: 0x000B00F2
+		// Token: 0x1700153B RID: 5435
+		// (get) Token: 0x06004AD7 RID: 19159 RVA: 0x000BC0BE File Offset: 0x000BA2BE
 		public virtual ISkyboxTrigger TriggerMode
 		{
 			get
@@ -128,13 +126,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002814 RID: 10260
+		// Token: 0x04002A60 RID: 10848
 		private ISkyboxComponent Instance;
 
-		// Token: 0x04002815 RID: 10261
+		// Token: 0x04002A61 RID: 10849
 		private ISkyboxTrigger _TriggerModeCache;
 
-		// Token: 0x04002816 RID: 10262
+		// Token: 0x04002A62 RID: 10850
 		private bool _TriggerModeInited;
 	}
 }

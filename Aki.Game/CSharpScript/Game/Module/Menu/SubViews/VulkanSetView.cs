@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Util;
@@ -11,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005441 RID: 21569
+	// Token: 0x02004424 RID: 17444
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VulkanSetView : UiViewBase
 	{
-		// Token: 0x06037121 RID: 225569 RVA: 0x00D0D179 File Offset: 0x00D0B379
+		// Token: 0x0602C06A RID: 180330 RVA: 0x00C5C599 File Offset: 0x00C5A799
 		public VulkanSetView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06037122 RID: 225570 RVA: 0x00D0D1AC File Offset: 0x00D0B3AC
+		// Token: 0x0602C06B RID: 180331 RVA: 0x00C5C5CC File Offset: 0x00C5A7CC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x06037123 RID: 225571 RVA: 0x00D0D234 File Offset: 0x00D0B434
+		// Token: 0x0602C06C RID: 180332 RVA: 0x00C5C654 File Offset: 0x00C5A854
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VulkanSetView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037124 RID: 225572 RVA: 0x00D0D278 File Offset: 0x00D0B478
+		// Token: 0x0602C06D RID: 180333 RVA: 0x00C5C698 File Offset: 0x00C5A898
 		private ISetItemData[] InitData()
 		{
 			List<ISetItemData> list = new List<ISetItemData>();
@@ -53,11 +52,11 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			MenuConfig value = MenuBaseConfig.Instance.GetMenuConfigByFunctionId(20360).Value;
 			string[] array = value.OptionsName();
 			int[] array2 = value.OptionsValue();
-			int num2 = array2.ToList<int>().IndexOf(num);
+			int num2 = Array.IndexOf<int>(array2, num);
 			if (num2 < 0)
 			{
 				num = value.OptionsDefault;
-				num2 = array2.ToList<int>().IndexOf(num);
+				num2 = Array.IndexOf<int>(array2, num);
 			}
 			this.CurrentIndex = num2;
 			this.SelectValue = num;
@@ -73,14 +72,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return list.ToArray();
 		}
 
-		// Token: 0x06037125 RID: 225573 RVA: 0x00D0D350 File Offset: 0x00D0B550
+		// Token: 0x0602C06E RID: 180334 RVA: 0x00C5C766 File Offset: 0x00C5A966
 		protected override void OnBeforeShow()
 		{
 			base.GetItem(4).SetUIActive(this.IsNeedTipsActive());
 			this.ScrollView.SelectGridProxy(this.CurrentIndex, false);
 		}
 
-		// Token: 0x06037126 RID: 225574 RVA: 0x00D0D376 File Offset: 0x00D0B576
+		// Token: 0x0602C06F RID: 180335 RVA: 0x00C5C78C File Offset: 0x00C5A98C
 		private SetItem InitSetItem()
 		{
 			return new SetItem
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x06037127 RID: 225575 RVA: 0x00D0D38F File Offset: 0x00D0B58F
+		// Token: 0x0602C070 RID: 180336 RVA: 0x00C5C7A5 File Offset: 0x00C5A9A5
 		private void OnClickItemToggle(ISetItemData data)
 		{
 			this.SelectValue = data.Value;
@@ -97,13 +96,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.GetItem(4).SetUIActive(this.IsNeedTipsActive());
 		}
 
-		// Token: 0x06037128 RID: 225576 RVA: 0x00D0D3C1 File Offset: 0x00D0B5C1
+		// Token: 0x0602C071 RID: 180337 RVA: 0x00C5C7D7 File Offset: 0x00C5A9D7
 		private void OnClickCancel(int _)
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06037129 RID: 225577 RVA: 0x00D0D3CA File Offset: 0x00D0B5CA
+		// Token: 0x0602C072 RID: 180338 RVA: 0x00C5C7E0 File Offset: 0x00C5A9E0
 		private void OnClickConfirm(int _)
 		{
 			if (this.SelectValue < 0)
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603712A RID: 225578 RVA: 0x00D0D3F4 File Offset: 0x00D0B5F4
+		// Token: 0x0602C073 RID: 180339 RVA: 0x00C5C80C File Offset: 0x00C5AA0C
 		private bool IsNeedTipsActive()
 		{
 			string a = this.mobileRhiNameList[this.SelectValue];
@@ -122,35 +121,35 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return a != rhiname;
 		}
 
-		// Token: 0x0401D0E4 RID: 119012
+		// Token: 0x04017B7D RID: 97149
 		private const EFunction vulkanFunctionId = EFunction.Vulkan;
 
-		// Token: 0x0401D0E5 RID: 119013
+		// Token: 0x04017B7E RID: 97150
 		private string[] mobileRhiNameList = new string[]
 		{
 			"OpenGL",
 			"Vulkan"
 		};
 
-		// Token: 0x0401D0E6 RID: 119014
+		// Token: 0x04017B7F RID: 97151
 		private int CurrentIndex = -1;
 
-		// Token: 0x0401D0E7 RID: 119015
+		// Token: 0x04017B80 RID: 97152
 		private int SelectValue = -1;
 
-		// Token: 0x0401D0E8 RID: 119016
+		// Token: 0x04017B81 RID: 97153
 		[Nullable(2)]
 		private ButtonItem BtnCancel;
 
-		// Token: 0x0401D0E9 RID: 119017
+		// Token: 0x04017B82 RID: 97154
 		[Nullable(2)]
 		private ButtonItem BtnConfirm;
 
-		// Token: 0x0401D0EA RID: 119018
+		// Token: 0x04017B83 RID: 97155
 		[Nullable(2)]
 		private TipsItem ItemTips;
 
-		// Token: 0x0401D0EB RID: 119019
+		// Token: 0x04017B84 RID: 97156
 		[Nullable(new byte[]
 		{
 			2,

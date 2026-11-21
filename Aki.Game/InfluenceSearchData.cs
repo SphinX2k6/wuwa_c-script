@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F7E RID: 8062
+// Token: 0x02001440 RID: 5184
 public struct InfluenceSearchData
 {
-	// Token: 0x0400748E RID: 29838
+	// Token: 0x0400756F RID: 30063
 	public bool HasResult;
 
-	// Token: 0x0400748F RID: 29839
+	// Token: 0x04007570 RID: 30064
 	[Nullable(new byte[]
 	{
 		1,

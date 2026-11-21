@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C87 RID: 3207
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D69 RID: 3433
 	public class ReboundComponent : IComponentBase
 	{
-		// Token: 0x06004963 RID: 18787 RVA: 0x000B8001 File Offset: 0x000B6201
+		// Token: 0x06004E11 RID: 19985 RVA: 0x000C2A11 File Offset: 0x000C0C11
 		public static ReboundComponent Create(IReboundComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001612 RID: 5650
-		// (get) Token: 0x06004964 RID: 18788 RVA: 0x000B8020 File Offset: 0x000B6220
+		// Token: 0x1700173A RID: 5946
+		// (get) Token: 0x06004E12 RID: 19986 RVA: 0x000C2A30 File Offset: 0x000C0C30
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001613 RID: 5651
-		// (get) Token: 0x06004965 RID: 18789 RVA: 0x000B8058 File Offset: 0x000B6258
+		// Token: 0x1700173B RID: 5947
+		// (get) Token: 0x06004E13 RID: 19987 RVA: 0x000C2A68 File Offset: 0x000C0C68
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001614 RID: 5652
-		// (get) Token: 0x06004966 RID: 18790 RVA: 0x000B806E File Offset: 0x000B626E
+		// Token: 0x1700173C RID: 5948
+		// (get) Token: 0x06004E14 RID: 19988 RVA: 0x000C2A7E File Offset: 0x000C0C7E
 		public virtual long BulletId
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001615 RID: 5653
-		// (get) Token: 0x06004967 RID: 18791 RVA: 0x000B807B File Offset: 0x000B627B
+		// Token: 0x1700173D RID: 5949
+		// (get) Token: 0x06004E15 RID: 19989 RVA: 0x000C2A8B File Offset: 0x000C0C8B
 		public virtual IForwardFrontRebound Option
 		{
 			get
@@ -72,14 +70,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029DC RID: 10716
+		// Token: 0x04002C56 RID: 11350
 		private IReboundComponent Instance;
 
-		// Token: 0x040029DD RID: 10717
+		// Token: 0x04002C57 RID: 11351
 		[Nullable(2)]
 		private IForwardFrontRebound _OptionCache;
 
-		// Token: 0x040029DE RID: 10718
+		// Token: 0x04002C58 RID: 11352
 		private bool _OptionInited;
 	}
 }

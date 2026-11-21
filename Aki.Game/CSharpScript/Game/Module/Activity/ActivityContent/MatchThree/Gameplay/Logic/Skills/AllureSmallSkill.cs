@@ -4,34 +4,34 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic.Skills
 {
-	// Token: 0x02006503 RID: 25859
+	// Token: 0x02005481 RID: 21633
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class AllureSmallSkill : ISkill
 	{
-		// Token: 0x06040E8C RID: 265868 RVA: 0x00FBB2BC File Offset: 0x00FB94BC
+		// Token: 0x06035B50 RID: 219984 RVA: 0x00F022EC File Offset: 0x00F004EC
 		public AllureSmallSkill(MatchThreeSkill cfg)
 		{
 		}
 
-		// Token: 0x1700950F RID: 38159
-		// (get) Token: 0x06040E8D RID: 265869 RVA: 0x00FBB2F8 File Offset: 0x00FB94F8
+		// Token: 0x17006871 RID: 26737
+		// (get) Token: 0x06035B51 RID: 219985 RVA: 0x00F02328 File Offset: 0x00F00528
 		public int Id { get; } = cfg.Id;
 
-		// Token: 0x17009510 RID: 38160
-		// (get) Token: 0x06040E8E RID: 265870 RVA: 0x00FBB300 File Offset: 0x00FB9500
+		// Token: 0x17006872 RID: 26738
+		// (get) Token: 0x06035B52 RID: 219986 RVA: 0x00F02330 File Offset: 0x00F00530
 		public int EnergyNode { get; } = cfg.Energy;
 
-		// Token: 0x17009511 RID: 38161
-		// (get) Token: 0x06040E8F RID: 265871 RVA: 0x00FBB308 File Offset: 0x00FB9508
+		// Token: 0x17006873 RID: 26739
+		// (get) Token: 0x06035B53 RID: 219987 RVA: 0x00F02338 File Offset: 0x00F00538
 		public string Icon { get; } = cfg.Icon;
 
-		// Token: 0x17009512 RID: 38162
-		// (get) Token: 0x06040E90 RID: 265872 RVA: 0x00FBB310 File Offset: 0x00FB9510
+		// Token: 0x17006874 RID: 26740
+		// (get) Token: 0x06035B54 RID: 219988 RVA: 0x00F02340 File Offset: 0x00F00540
 		public string Name { get; } = cfg.Name;
 
-		// Token: 0x17009513 RID: 38163
-		// (get) Token: 0x06040E91 RID: 265873 RVA: 0x00FBB318 File Offset: 0x00FB9518
+		// Token: 0x17006875 RID: 26741
+		// (get) Token: 0x06035B55 RID: 219989 RVA: 0x00F02348 File Offset: 0x00F00548
 		public ESkillCastEffect CastEffect
 		{
 			get
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E92 RID: 265874 RVA: 0x00FBB31B File Offset: 0x00FB951B
+		// Token: 0x06035B56 RID: 219990 RVA: 0x00F0234B File Offset: 0x00F0054B
 		[NullableContext(1)]
 		public void Release(ISkillContext ctx)
 		{

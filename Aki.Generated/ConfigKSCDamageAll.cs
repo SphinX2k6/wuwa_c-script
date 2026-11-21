@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000479 RID: 1145
+	// Token: 0x0200048F RID: 1167
 	public class ConfigKSCDamageAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001AE0 RID: 6880 RVA: 0x000F150C File Offset: 0x000EF70C
+		// Token: 0x06001B64 RID: 7012 RVA: 0x000F7C60 File Offset: 0x000F5E60
 		static ConfigKSCDamageAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKSCDamageAll.CreateStaticDefaultValue), new Action(ConfigKSCDamageAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001AE1 RID: 6881 RVA: 0x000F152C File Offset: 0x000EF72C
+		// Token: 0x06001B65 RID: 7013 RVA: 0x000F7C80 File Offset: 0x000F5E80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKSCDamageAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001AE2 RID: 6882 RVA: 0x000F15AB File Offset: 0x000EF7AB
+		// Token: 0x06001B66 RID: 7014 RVA: 0x000F7CFF File Offset: 0x000F5EFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKSCDamageAll.LogPair = null;
 			ConfigKSCDamageAll.HandleId = 0;
 		}
 
-		// Token: 0x06001AE3 RID: 6883 RVA: 0x000F15B9 File Offset: 0x000EF7B9
+		// Token: 0x06001B67 RID: 7015 RVA: 0x000F7D0D File Offset: 0x000F5F0D
 		public static void Init()
 		{
 			ConfigKSCDamageAll.HandleId = ConfigCommon.InitDataStatement(ConfigKSCDamageAll.HandleId, "db_kscdamage.db", "select BinData from `KSCDamage`");
 		}
 
-		// Token: 0x06001AE4 RID: 6884 RVA: 0x000F15D4 File Offset: 0x000EF7D4
+		// Token: 0x06001B68 RID: 7016 RVA: 0x000F7D28 File Offset: 0x000F5F28
 		[NullableContext(2)]
 		public static IReadOnlyList<KSCDamage> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001F33 RID: 7987
+		// Token: 0x04001FCD RID: 8141
 		private const string DB = "db_kscdamage.db";
 
-		// Token: 0x04001F34 RID: 7988
+		// Token: 0x04001FCE RID: 8142
 		private const string FILE = "s.SimpleCombat结算.xlsx";
 
-		// Token: 0x04001F35 RID: 7989
+		// Token: 0x04001FCF RID: 8143
 		private const string TABLE = "KSCDamage";
 
-		// Token: 0x04001F36 RID: 7990
+		// Token: 0x04001FD0 RID: 8144
 		private const string COMMAND = "select BinData from `KSCDamage`";
 
-		// Token: 0x04001F37 RID: 7991
+		// Token: 0x04001FD1 RID: 8145
 		private const string KEY_PREFIX = "KSCDamageAll";
 
-		// Token: 0x04001F38 RID: 7992
+		// Token: 0x04001FD2 RID: 8146
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F39 RID: 7993
+		// Token: 0x04001FD3 RID: 8147
 		private static int HandleId;
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02001C54 RID: 7252
+// Token: 0x02001113 RID: 4371
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateRewardData
 {
-	// Token: 0x0600DABD RID: 55997 RVA: 0x0032CA0C File Offset: 0x0032AC0C
+	// Token: 0x0600AED3 RID: 44755 RVA: 0x00337E14 File Offset: 0x00336014
 	public RewardItemData[] GetRewardItemList()
 	{
 		List<RewardItemData> list = new List<RewardItemData>();
@@ -21,7 +21,7 @@ public class GachaAccumulateRewardData
 		return list.ToArray();
 	}
 
-	// Token: 0x0600DABE RID: 55998 RVA: 0x0032CA88 File Offset: 0x0032AC88
+	// Token: 0x0600AED4 RID: 44756 RVA: 0x00337E90 File Offset: 0x00336090
 	public bool GetIfResonantGift()
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in this.RewardContent)
@@ -44,13 +44,13 @@ public class GachaAccumulateRewardData
 		return false;
 	}
 
-	// Token: 0x0600DABF RID: 55999 RVA: 0x0032CB6C File Offset: 0x0032AD6C
+	// Token: 0x0600AED5 RID: 44757 RVA: 0x00337F74 File Offset: 0x00336174
 	public bool GetIfCyclic()
 	{
 		return this.CycleCount != 0;
 	}
 
-	// Token: 0x0600DAC0 RID: 56000 RVA: 0x0032CB78 File Offset: 0x0032AD78
+	// Token: 0x0600AED6 RID: 44758 RVA: 0x00337F80 File Offset: 0x00336180
 	public int GetCyclicPendingClaimCount(int currentGachaNum, int baseGachaNum)
 	{
 		if (!this.GetIfCyclic())
@@ -76,30 +76,30 @@ public class GachaAccumulateRewardData
 		return num2;
 	}
 
-	// Token: 0x0400640E RID: 25614
+	// Token: 0x040064E0 RID: 25824
 	public int Id;
 
-	// Token: 0x0400640F RID: 25615
+	// Token: 0x040064E1 RID: 25825
 	public int GroupId;
 
-	// Token: 0x04006410 RID: 25616
+	// Token: 0x040064E2 RID: 25826
 	public int GachaNum;
 
-	// Token: 0x04006411 RID: 25617
+	// Token: 0x040064E3 RID: 25827
 	public readonly Dictionary<int, int> RewardContent = new Dictionary<int, int>();
 
-	// Token: 0x04006412 RID: 25618
+	// Token: 0x040064E4 RID: 25828
 	public EGachaAccumulateRewardStatus Status;
 
-	// Token: 0x04006413 RID: 25619
+	// Token: 0x040064E5 RID: 25829
 	public bool IsBigReward;
 
-	// Token: 0x04006414 RID: 25620
+	// Token: 0x040064E6 RID: 25830
 	public int CycleCount;
 
-	// Token: 0x04006415 RID: 25621
+	// Token: 0x040064E7 RID: 25831
 	public int CycleRewardedTimes;
 
-	// Token: 0x04006416 RID: 25622
+	// Token: 0x040064E8 RID: 25832
 	public bool IsPreView;
 }

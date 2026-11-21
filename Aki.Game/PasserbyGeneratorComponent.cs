@@ -7,12 +7,12 @@ using CSharpScript.Game;
 using CSharpScript.Game.LevelGamePlay.Common;
 using Google.Protobuf;
 
-// Token: 0x020031E8 RID: 12776
+// Token: 0x02002757 RID: 10071
 [NullableContext(1)]
 [Nullable(0)]
 public class PasserbyGeneratorComponent : EntityComponent
 {
-	// Token: 0x0601B909 RID: 112905 RVA: 0x00790968 File Offset: 0x0078EB68
+	// Token: 0x0601948C RID: 103564 RVA: 0x007B90A8 File Offset: 0x007B72A8
 	protected unsafe override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -24,37 +24,47 @@ public class PasserbyGeneratorComponent : EntityComponent
 			return true;
 		}
 		this.MinDistanceSquared = (double)(component.SpawnConfig.MinDistance.Value * component.SpawnConfig.MinDistance.Value);
-		foreach (IPasserbyNpcSpline passerbyNpcSpline in component.MoveConfig.Routes)
+		IPasserbyNpcMoveBase moveConfig = component.MoveConfig;
+		if (moveConfig != null && moveConfig.Type <= EPasserbyNpcMoveType.Spline)
 		{
-			int splineEntityId = passerbyNpcSpline.SplineEntityId;
-			GameSplineComponent gameSplineComponent = new GameSplineComponent(splineEntityId);
-			if (!gameSplineComponent.Initialize())
+			IPasserbyNpcSplineMove passerbyNpcSplineMove = component.MoveConfig as IPasserbyNpcSplineMove;
+			if (passerbyNpcSplineMove != null && passerbyNpcSplineMove.Routes != null)
 			{
-				Log instance = Log.Instance;
-				ELogModule module = ELogModule.NPC;
-				ELogAuthor author = ELogAuthor.YJX;
-				string message = "行人生成器获取样条信息错误";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0);
-				string item = "PbDataId";
-				CreatureDataComponent creatureDataComp = this.CreatureDataComp;
-				ptr = new ValueTuple<string, object>(item, (creatureDataComp != null) ? new int?(creatureDataComp.GetPbDataId()) : null);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("SplinePbDataId", splineEntityId);
-				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-			}
-			else if (gameSplineComponent.GetNumberOfSplinePoints() != 0)
-			{
-				this.SplineInfos.Add(new SplineStateInfo(splineEntityId, gameSplineComponent.GetWorldLocationAtSplinePoint(0)));
+				foreach (IPasserbyNpcSpline passerbyNpcSpline in passerbyNpcSplineMove.Routes)
+				{
+					int splineEntityId = passerbyNpcSpline.SplineEntityId;
+					GameSplineComponent gameSplineComponent = new GameSplineComponent(splineEntityId);
+					if (!gameSplineComponent.Initialize())
+					{
+						Log instance = Log.Instance;
+						ELogModule module = ELogModule.NPC;
+						ELogAuthor author = ELogAuthor.YJX;
+						string message = "行人生成器获取样条信息错误";
+						<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+						ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0);
+						string item = "PbDataId";
+						CreatureDataComponent creatureDataComp = this.CreatureDataComp;
+						ptr = new ValueTuple<string, object>(item, (creatureDataComp != null) ? new int?(creatureDataComp.GetPbDataId()) : null);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("SplinePbDataId", splineEntityId);
+						instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+					}
+					else if (gameSplineComponent.GetNumberOfSplinePoints() != 0)
+					{
+						this.SplineInfos.Add(new SplineStateInfo(splineEntityId, gameSplineComponent.GetWorldLocationAtSplinePoint(0)));
+					}
+				}
+				if (this.SplineInfos.Count == 0)
+				{
+					this.NeedCheckRange = false;
+				}
+				return true;
 			}
 		}
-		if (this.SplineInfos.Count == 0)
-		{
-			this.NeedCheckRange = false;
-		}
+		this.NeedCheckRange = false;
 		return true;
 	}
 
-	// Token: 0x0601B90A RID: 112906 RVA: 0x00790B38 File Offset: 0x0078ED38
+	// Token: 0x0601948D RID: 103565 RVA: 0x007B92AC File Offset: 0x007B74AC
 	protected override void OnTick(float delta)
 	{
 		if (!this.NeedCheckRange)
@@ -79,7 +89,7 @@ public class PasserbyGeneratorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B90B RID: 112907 RVA: 0x00790BD8 File Offset: 0x0078EDD8
+	// Token: 0x0601948E RID: 103566 RVA: 0x007B934C File Offset: 0x007B754C
 	private bool IsNearestPlayerInRange(global::Vector checkLocation)
 	{
 		double num = 3.402823466E+38;
@@ -99,7 +109,7 @@ public class PasserbyGeneratorComponent : EntityComponent
 		return num < this.MinDistanceSquared;
 	}
 
-	// Token: 0x0601B90C RID: 112908 RVA: 0x00790C48 File Offset: 0x0078EE48
+	// Token: 0x0601948F RID: 103567 RVA: 0x007B93BC File Offset: 0x007B75BC
 	private unsafe void CreateAndSendRequest(int splineId, bool inRange)
 	{
 		AccessPasserbyNpcSpawnerRequest accessPasserbyNpcSpawnerRequest = AccessPasserbyNpcSpawnerRequest.Create();
@@ -131,7 +141,7 @@ public class PasserbyGeneratorComponent : EntityComponent
 		}, 0);
 	}
 
-	// Token: 0x0601B90D RID: 112909 RVA: 0x00790CC0 File Offset: 0x0078EEC0
+	// Token: 0x06019490 RID: 103568 RVA: 0x007B9434 File Offset: 0x007B7634
 	[return: TupleElementNames(new string[]
 	{
 		"PlayerEntity",
@@ -170,7 +180,7 @@ public class PasserbyGeneratorComponent : EntityComponent
 		return new ValueTuple<EntityHandle, double>(item, num);
 	}
 
-	// Token: 0x0601B90E RID: 112910 RVA: 0x00790D98 File Offset: 0x0078EF98
+	// Token: 0x06019491 RID: 103569 RVA: 0x007B950C File Offset: 0x007B770C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -178,60 +188,68 @@ public class PasserbyGeneratorComponent : EntityComponent
 			return false;
 		}
 		PasserbyGeneratorComponent passerbyGeneratorComponent = (PasserbyGeneratorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (passerbyGeneratorComponent.ActorComp == null)
 		{
-			if (passerbyGeneratorComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComp"))
-		{
-			if (passerbyGeneratorComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SplineInfos") && passerbyGeneratorComponent.SplineInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<SplineStateInfo>>(this.SplineInfos), "SplineInfos"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MinDistanceSquared"))
+		if (passerbyGeneratorComponent.CreatureDataComp == null)
 		{
-			this.MinDistanceSquared = passerbyGeneratorComponent.MinDistanceSquared;
+			this.CreatureDataComp = null;
 		}
-		if (base.CanResetComponentProperty("NeedCheckRange"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 		{
-			this.NeedCheckRange = passerbyGeneratorComponent.NeedCheckRange;
+			return false;
 		}
-		return !base.CanResetComponentProperty("VectorCache") || passerbyGeneratorComponent.VectorCache == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VectorCache), "VectorCache");
+		if (passerbyGeneratorComponent.SplineInfos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineInfos), "SplineInfos"))
+		{
+			return false;
+		}
+		this.MinDistanceSquared = passerbyGeneratorComponent.MinDistanceSquared;
+		this.NeedCheckRange = passerbyGeneratorComponent.NeedCheckRange;
+		return passerbyGeneratorComponent.VectorCache == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.VectorCache), "VectorCache");
 	}
 
-	// Token: 0x0400D8A9 RID: 55465
+	// Token: 0x1700285A RID: 10330
+	// (get) Token: 0x06019492 RID: 103570 RVA: 0x007B95DE File Offset: 0x007B77DE
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700285B RID: 10331
+	// (get) Token: 0x06019493 RID: 103571 RVA: 0x007B95E1 File Offset: 0x007B77E1
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DD47 RID: 56647
 	[Nullable(2)]
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x0400D8AA RID: 55466
+	// Token: 0x0400DD48 RID: 56648
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400D8AB RID: 55467
+	// Token: 0x0400DD49 RID: 56649
 	private readonly List<SplineStateInfo> SplineInfos = new List<SplineStateInfo>();
 
-	// Token: 0x0400D8AC RID: 55468
+	// Token: 0x0400DD4A RID: 56650
 	private double MinDistanceSquared;
 
-	// Token: 0x0400D8AD RID: 55469
+	// Token: 0x0400DD4B RID: 56651
 	private bool NeedCheckRange = true;
 
-	// Token: 0x0400D8AE RID: 55470
+	// Token: 0x0400DD4C RID: 56652
 	private readonly global::Vector VectorCache = global::Vector.Create();
 }

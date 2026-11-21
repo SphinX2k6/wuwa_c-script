@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006900 RID: 26880
+	// Token: 0x02005850 RID: 22608
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BossRushLevelDetailView : UiTabViewBase
 	{
-		// Token: 0x06043085 RID: 274565 RVA: 0x01054390 File Offset: 0x01052590
+		// Token: 0x06037BDD RID: 228317 RVA: 0x00F959B8 File Offset: 0x00F93BB8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			};
 		}
 
-		// Token: 0x06043086 RID: 274566 RVA: 0x010544C0 File Offset: 0x010526C0
+		// Token: 0x06037BDE RID: 228318 RVA: 0x00F95AE8 File Offset: 0x00F93CE8
 		private void OnClickHelpBtn()
 		{
 			if (this.CurrentTeamInfo == null || this.CurrentTeamInfo.GetCurrentSelectLevel() == null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}, null);
 		}
 
-		// Token: 0x06043087 RID: 274567 RVA: 0x0105452C File Offset: 0x0105272C
+		// Token: 0x06037BDF RID: 228319 RVA: 0x00F95B54 File Offset: 0x00F93D54
 		private void OnClickConfirmButton()
 		{
 			if (this.CurrentTeamInfo == null || this.CurrentTeamInfo.LevelInfo == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043088 RID: 274568 RVA: 0x01054664 File Offset: 0x01052864
+		// Token: 0x06037BE0 RID: 228320 RVA: 0x00F95C8C File Offset: 0x00F93E8C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossRushLevelDetailView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043089 RID: 274569 RVA: 0x010546A8 File Offset: 0x010528A8
+		// Token: 0x06037BE1 RID: 228321 RVA: 0x00F95CD0 File Offset: 0x00F93ED0
 		private void TryShowAnimation()
 		{
 			string sequenceName = "Start";
@@ -144,27 +144,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			BossRushModel.Instance.PlayBackAnimation = false;
 		}
 
-		// Token: 0x0604308A RID: 274570 RVA: 0x010546F7 File Offset: 0x010528F7
+		// Token: 0x06037BE2 RID: 228322 RVA: 0x00F95D1F File Offset: 0x00F93F1F
 		private void OnSelectBuff()
 		{
 			this.RefreshBuffEntry();
 		}
 
-		// Token: 0x0604308B RID: 274571 RVA: 0x010546FF File Offset: 0x010528FF
+		// Token: 0x06037BE3 RID: 228323 RVA: 0x00F95D27 File Offset: 0x00F93F27
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnChangeBossRushBuff, new Action(this.OnSelectBuff));
 			EventSystem.Instance.Add(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 		}
 
-		// Token: 0x0604308C RID: 274572 RVA: 0x01054739 File Offset: 0x01052939
+		// Token: 0x06037BE4 RID: 228324 RVA: 0x00F95D61 File Offset: 0x00F93F61
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnChangeBossRushBuff, new Action(this.OnSelectBuff));
 			EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 		}
 
-		// Token: 0x0604308D RID: 274573 RVA: 0x01054774 File Offset: 0x01052974
+		// Token: 0x06037BE5 RID: 228325 RVA: 0x00F95D9C File Offset: 0x00F93F9C
 		private void OnRoleChangeEnd()
 		{
 			RoleModel instance = RoleModel.Instance;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.OnSelectTeamRole();
 		}
 
-		// Token: 0x0604308E RID: 274574 RVA: 0x010547E8 File Offset: 0x010529E8
+		// Token: 0x06037BE6 RID: 228326 RVA: 0x00F95E10 File Offset: 0x00F94010
 		protected override void OnBeforeShow()
 		{
 			this.CurrentTeamInfo = BossRushModel.Instance.CurrentTeamInfo;
@@ -211,14 +211,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshBuffEntry();
 		}
 
-		// Token: 0x0604308F RID: 274575 RVA: 0x0105487D File Offset: 0x01052A7D
+		// Token: 0x06037BE7 RID: 228327 RVA: 0x00F95EA5 File Offset: 0x00F940A5
 		private void OnSelectTeamRole()
 		{
 			this.RefreshLowLevelTips();
 			this.RefreshTeamRole();
 		}
 
-		// Token: 0x06043090 RID: 274576 RVA: 0x0105488C File Offset: 0x01052A8C
+		// Token: 0x06037BE8 RID: 228328 RVA: 0x00F95EB4 File Offset: 0x00F940B4
 		private void RefreshLowLevelTips()
 		{
 			if (this.CurrentTeamInfo == null)
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetText(6).SetUIActive(ifLevelTooLow);
 		}
 
-		// Token: 0x06043091 RID: 274577 RVA: 0x010548BC File Offset: 0x01052ABC
+		// Token: 0x06037BE9 RID: 228329 RVA: 0x00F95EE4 File Offset: 0x00F940E4
 		private void RefreshMonsterInfo()
 		{
 			if (this.CurrentTeamInfo == null || this.CurrentTeamInfo.GetCurrentSelectLevel() == null)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.SetTextureByPath(currentSelectLevel.GetBigMonsterTexturePath(), base.GetTexture(0), new EUiViewName?(EUiViewName.BossRushMainView), null);
 		}
 
-		// Token: 0x06043092 RID: 274578 RVA: 0x0105490C File Offset: 0x01052B0C
+		// Token: 0x06037BEA RID: 228330 RVA: 0x00F95F34 File Offset: 0x00F94134
 		private void RefreshLevelBossNumText()
 		{
 			BossRushTeamInfo currentTeamInfo = this.CurrentTeamInfo;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "BossRushNumTips", new <>z__ReadOnlySingleElementList<object>(num2));
 		}
 
-		// Token: 0x06043093 RID: 274579 RVA: 0x010549C0 File Offset: 0x01052BC0
+		// Token: 0x06037BEB RID: 228331 RVA: 0x00F95FE8 File Offset: 0x00F941E8
 		private void RefreshScore()
 		{
 			BossRushData bossRushData = ActivityModel.Instance.GetActivityById(BossRushModel.Instance.CurrentSelectActivityId) as BossRushData;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			item2.SetUIActive(true);
 		}
 
-		// Token: 0x06043094 RID: 274580 RVA: 0x01054AB8 File Offset: 0x01052CB8
+		// Token: 0x06037BEC RID: 228332 RVA: 0x00F960E0 File Offset: 0x00F942E0
 		private void RefreshTeamItem()
 		{
 			if (this.TeamItem != null && this.CurrentTeamInfo != null)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043095 RID: 274581 RVA: 0x01054ADB File Offset: 0x01052CDB
+		// Token: 0x06037BED RID: 228333 RVA: 0x00F96103 File Offset: 0x00F94303
 		private void RefreshTeamRole()
 		{
 			if (this.TeamItem != null && this.CurrentTeamInfo != null)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x06043096 RID: 274582 RVA: 0x01054B00 File Offset: 0x01052D00
+		// Token: 0x06037BEE RID: 228334 RVA: 0x00F96128 File Offset: 0x00F94328
 		private void RefreshBuffEntry()
 		{
 			if (this.CurrentTeamInfo == null)
@@ -372,48 +372,48 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x04022E52 RID: 142930
+		// Token: 0x0401D6AE RID: 120494
 		private BossRushTeamInfo CurrentTeamInfo;
 
-		// Token: 0x04022E53 RID: 142931
+		// Token: 0x0401D6AF RID: 120495
 		private TeamItem TeamItem;
 
-		// Token: 0x04022E54 RID: 142932
+		// Token: 0x0401D6B0 RID: 120496
 		private BuffEntry BuffEntryItem1;
 
-		// Token: 0x04022E55 RID: 142933
+		// Token: 0x0401D6B1 RID: 120497
 		private BuffEntry BuffEntryItem2;
 
-		// Token: 0x04022E56 RID: 142934
+		// Token: 0x0401D6B2 RID: 120498
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04022E57 RID: 142935
+		// Token: 0x0401D6B3 RID: 120499
 		[Nullable(1)]
 		private readonly List<BuffEntry> BuffEntryItemArray = new List<BuffEntry>();
 
-		// Token: 0x0200CAB3 RID: 51891
+		// Token: 0x0200B47B RID: 46203
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D42D RID: 250925
+			// Token: 0x04037D07 RID: 228615
 			MonsterTexture,
-			// Token: 0x0403D42E RID: 250926
+			// Token: 0x04037D08 RID: 228616
 			HelpBtn,
-			// Token: 0x0403D42F RID: 250927
+			// Token: 0x04037D09 RID: 228617
 			LevelTipsText,
-			// Token: 0x0403D430 RID: 250928
+			// Token: 0x04037D0A RID: 228618
 			BuffEntryItem1,
-			// Token: 0x0403D431 RID: 250929
+			// Token: 0x04037D0B RID: 228619
 			BuffEntryItem2,
-			// Token: 0x0403D432 RID: 250930
+			// Token: 0x04037D0C RID: 228620
 			TeamItem,
-			// Token: 0x0403D433 RID: 250931
+			// Token: 0x04037D0D RID: 228621
 			LowLevelTipsText,
-			// Token: 0x0403D434 RID: 250932
+			// Token: 0x04037D0E RID: 228622
 			ConfirmButton,
-			// Token: 0x0403D435 RID: 250933
+			// Token: 0x04037D0F RID: 228623
 			ScoreText,
-			// Token: 0x0403D436 RID: 250934
+			// Token: 0x04037D10 RID: 228624
 			UnFinishItem
 		}
 	}

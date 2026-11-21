@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200431B RID: 17179
+	// Token: 0x0200477A RID: 18298
 	public class TSurvivorsRougeConditionStepUnion
 	{
-		// Token: 0x17007974 RID: 31092
-		// (get) Token: 0x0601979F RID: 104351 RVA: 0x003A6842 File Offset: 0x003A4A42
-		// (set) Token: 0x060197A0 RID: 104352 RVA: 0x003A684A File Offset: 0x003A4A4A
+		// Token: 0x17007FA7 RID: 32679
+		// (get) Token: 0x0601AF21 RID: 110369 RVA: 0x003D2172 File Offset: 0x003D0372
+		// (set) Token: 0x0601AF22 RID: 110370 RVA: 0x003D217A File Offset: 0x003D037A
 		public TSurvivorsRougeConditionStep Type { get; set; }
 
-		// Token: 0x17007975 RID: 31093
-		// (get) Token: 0x060197A1 RID: 104353 RVA: 0x003A6853 File Offset: 0x003A4A53
-		// (set) Token: 0x060197A2 RID: 104354 RVA: 0x003A685B File Offset: 0x003A4A5B
+		// Token: 0x17007FA8 RID: 32680
+		// (get) Token: 0x0601AF23 RID: 110371 RVA: 0x003D2183 File Offset: 0x003D0383
+		// (set) Token: 0x0601AF24 RID: 110372 RVA: 0x003D218B File Offset: 0x003D038B
 		public object Value { get; set; }
 
-		// Token: 0x060197A3 RID: 104355 RVA: 0x003A6864 File Offset: 0x003A4A64
+		// Token: 0x0601AF25 RID: 110373 RVA: 0x003D2194 File Offset: 0x003D0394
 		public TSurvivorsRougeConditionStepUnion()
 		{
 			this.Type = TSurvivorsRougeConditionStep.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060197A4 RID: 104356 RVA: 0x003A687A File Offset: 0x003A4A7A
+		// Token: 0x0601AF26 RID: 110374 RVA: 0x003D21AA File Offset: 0x003D03AA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060197A5 RID: 104357 RVA: 0x003A688C File Offset: 0x003A4A8C
+		// Token: 0x0601AF27 RID: 110375 RVA: 0x003D21BC File Offset: 0x003D03BC
 		public ISurvivorsRougeConditionStepBattleT AsISurvivorsRougeConditionStepBattle()
 		{
 			return this.As<ISurvivorsRougeConditionStepBattleT>();
 		}
 
-		// Token: 0x060197A6 RID: 104358 RVA: 0x003A6894 File Offset: 0x003A4A94
+		// Token: 0x0601AF28 RID: 110376 RVA: 0x003D21C4 File Offset: 0x003D03C4
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepBattle(ISurvivorsRougeConditionStepBattleT _isurvivorsrougeconditionstepbattle)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197A7 RID: 104359 RVA: 0x003A68A9 File Offset: 0x003A4AA9
+		// Token: 0x0601AF29 RID: 110377 RVA: 0x003D21D9 File Offset: 0x003D03D9
 		public ISurvivorsRougeConditionStepChestRewardT AsISurvivorsRougeConditionStepChestReward()
 		{
 			return this.As<ISurvivorsRougeConditionStepChestRewardT>();
 		}
 
-		// Token: 0x060197A8 RID: 104360 RVA: 0x003A68B1 File Offset: 0x003A4AB1
+		// Token: 0x0601AF2A RID: 110378 RVA: 0x003D21E1 File Offset: 0x003D03E1
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepChestReward(ISurvivorsRougeConditionStepChestRewardT _isurvivorsrougeconditionstepchestreward)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197A9 RID: 104361 RVA: 0x003A68C6 File Offset: 0x003A4AC6
+		// Token: 0x0601AF2B RID: 110379 RVA: 0x003D21F6 File Offset: 0x003D03F6
 		public ISurvivorsRougeConditionStepChooseItemT AsISurvivorsRougeConditionStepChooseItem()
 		{
 			return this.As<ISurvivorsRougeConditionStepChooseItemT>();
 		}
 
-		// Token: 0x060197AA RID: 104362 RVA: 0x003A68CE File Offset: 0x003A4ACE
+		// Token: 0x0601AF2C RID: 110380 RVA: 0x003D21FE File Offset: 0x003D03FE
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepChooseItem(ISurvivorsRougeConditionStepChooseItemT _isurvivorsrougeconditionstepchooseitem)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197AB RID: 104363 RVA: 0x003A68E3 File Offset: 0x003A4AE3
+		// Token: 0x0601AF2D RID: 110381 RVA: 0x003D2213 File Offset: 0x003D0413
 		public ISurvivorsRougeConditionStepChooseWeaponT AsISurvivorsRougeConditionStepChooseWeapon()
 		{
 			return this.As<ISurvivorsRougeConditionStepChooseWeaponT>();
 		}
 
-		// Token: 0x060197AC RID: 104364 RVA: 0x003A68EB File Offset: 0x003A4AEB
+		// Token: 0x0601AF2E RID: 110382 RVA: 0x003D221B File Offset: 0x003D041B
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepChooseWeapon(ISurvivorsRougeConditionStepChooseWeaponT _isurvivorsrougeconditionstepchooseweapon)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197AD RID: 104365 RVA: 0x003A6900 File Offset: 0x003A4B00
+		// Token: 0x0601AF2F RID: 110383 RVA: 0x003D2230 File Offset: 0x003D0430
 		public ISurvivorsRougeConditionStepEndT AsISurvivorsRougeConditionStepEnd()
 		{
 			return this.As<ISurvivorsRougeConditionStepEndT>();
 		}
 
-		// Token: 0x060197AE RID: 104366 RVA: 0x003A6908 File Offset: 0x003A4B08
+		// Token: 0x0601AF30 RID: 110384 RVA: 0x003D2238 File Offset: 0x003D0438
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepEnd(ISurvivorsRougeConditionStepEndT _isurvivorsrougeconditionstepend)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197AF RID: 104367 RVA: 0x003A691D File Offset: 0x003A4B1D
+		// Token: 0x0601AF31 RID: 110385 RVA: 0x003D224D File Offset: 0x003D044D
 		public ISurvivorsRougeConditionStepPrepareT AsISurvivorsRougeConditionStepPrepare()
 		{
 			return this.As<ISurvivorsRougeConditionStepPrepareT>();
 		}
 
-		// Token: 0x060197B0 RID: 104368 RVA: 0x003A6925 File Offset: 0x003A4B25
+		// Token: 0x0601AF32 RID: 110386 RVA: 0x003D2255 File Offset: 0x003D0455
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepPrepare(ISurvivorsRougeConditionStepPrepareT _isurvivorsrougeconditionstepprepare)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197B1 RID: 104369 RVA: 0x003A693A File Offset: 0x003A4B3A
+		// Token: 0x0601AF33 RID: 110387 RVA: 0x003D226A File Offset: 0x003D046A
 		public ISurvivorsRougeConditionStepShoppingT AsISurvivorsRougeConditionStepShopping()
 		{
 			return this.As<ISurvivorsRougeConditionStepShoppingT>();
 		}
 
-		// Token: 0x060197B2 RID: 104370 RVA: 0x003A6942 File Offset: 0x003A4B42
+		// Token: 0x0601AF34 RID: 110388 RVA: 0x003D2272 File Offset: 0x003D0472
 		public static TSurvivorsRougeConditionStepUnion FromISurvivorsRougeConditionStepShopping(ISurvivorsRougeConditionStepShoppingT _isurvivorsrougeconditionstepshopping)
 		{
 			return new TSurvivorsRougeConditionStepUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197B3 RID: 104371 RVA: 0x003A6958 File Offset: 0x003A4B58
+		// Token: 0x0601AF35 RID: 110389 RVA: 0x003D2288 File Offset: 0x003D0488
 		public static int Pack(FlatBufferBuilder builder, TSurvivorsRougeConditionStepUnion _o)
 		{
 			switch (_o.Type)

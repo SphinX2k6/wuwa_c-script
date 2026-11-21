@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055D0 RID: 21968
+	// Token: 0x020045A6 RID: 17830
 	internal enum <GridEventCompChoice>F83F802F989CC52577B2E93AF7C2CBF054F6135676AFD426B275F6242A073E756__EChooseComponents
 	{
-		// Token: 0x0401D67E RID: 120446
+		// Token: 0x04018109 RID: 98569
 		PanelText,
-		// Token: 0x0401D67F RID: 120447
+		// Token: 0x0401810A RID: 98570
 		ItemTag,
-		// Token: 0x0401D680 RID: 120448
+		// Token: 0x0401810B RID: 98571
 		TxtTitle,
-		// Token: 0x0401D681 RID: 120449
+		// Token: 0x0401810C RID: 98572
 		SpriteTitle,
-		// Token: 0x0401D682 RID: 120450
+		// Token: 0x0401810D RID: 98573
 		TxtDesc,
-		// Token: 0x0401D683 RID: 120451
+		// Token: 0x0401810E RID: 98574
 		LayoutToggle,
-		// Token: 0x0401D684 RID: 120452
+		// Token: 0x0401810F RID: 98575
 		ToggleItem,
-		// Token: 0x0401D685 RID: 120453
+		// Token: 0x04018110 RID: 98576
 		FinishItem
 	}
 }

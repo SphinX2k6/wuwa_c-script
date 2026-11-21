@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058D7 RID: 22743
+	// Token: 0x02005EE4 RID: 24292
 	public class ISceneItemSequenceEventDataT
 	{
-		// Token: 0x1700AA54 RID: 43604
-		// (get) Token: 0x06026650 RID: 157264 RVA: 0x0054A93E File Offset: 0x00548B3E
-		// (set) Token: 0x06026651 RID: 157265 RVA: 0x0054A946 File Offset: 0x00548B46
+		// Token: 0x1700B384 RID: 45956
+		// (get) Token: 0x06028BB2 RID: 166834 RVA: 0x0059148A File Offset: 0x0058F68A
+		// (set) Token: 0x06028BB3 RID: 166835 RVA: 0x00591492 File Offset: 0x0058F692
 		public string SeqGuid { get; set; }
 
-		// Token: 0x1700AA55 RID: 43605
-		// (get) Token: 0x06026652 RID: 157266 RVA: 0x0054A94F File Offset: 0x00548B4F
-		// (set) Token: 0x06026653 RID: 157267 RVA: 0x0054A957 File Offset: 0x00548B57
+		// Token: 0x1700B385 RID: 45957
+		// (get) Token: 0x06028BB4 RID: 166836 RVA: 0x0059149B File Offset: 0x0058F69B
+		// (set) Token: 0x06028BB5 RID: 166837 RVA: 0x005914A3 File Offset: 0x0058F6A3
 		public string SeqPath { get; set; }
 
-		// Token: 0x1700AA56 RID: 43606
-		// (get) Token: 0x06026654 RID: 157268 RVA: 0x0054A960 File Offset: 0x00548B60
-		// (set) Token: 0x06026655 RID: 157269 RVA: 0x0054A968 File Offset: 0x00548B68
+		// Token: 0x1700B386 RID: 45958
+		// (get) Token: 0x06028BB6 RID: 166838 RVA: 0x005914AC File Offset: 0x0058F6AC
+		// (set) Token: 0x06028BB7 RID: 166839 RVA: 0x005914B4 File Offset: 0x0058F6B4
 		public List<TSceneItemSeqEventCbTypeUnion> EventCallbacks { get; set; }
 
-		// Token: 0x06026656 RID: 157270 RVA: 0x0054A971 File Offset: 0x00548B71
+		// Token: 0x06028BB8 RID: 166840 RVA: 0x005914BD File Offset: 0x0058F6BD
 		public ISceneItemSequenceEventDataT()
 		{
 			this.SeqGuid = null;

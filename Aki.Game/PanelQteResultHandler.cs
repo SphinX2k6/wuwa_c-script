@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Data.Fight.UI;
 using CSharpScript.Game;
 using UnrealEngine;
 
-// Token: 0x02002301 RID: 8961
+// Token: 0x020017E5 RID: 6117
 [NullableContext(1)]
 [Nullable(0)]
 public class PanelQteResultHandler
 {
-	// Token: 0x06011AE0 RID: 72416 RVA: 0x00458254 File Offset: 0x00456454
+	// Token: 0x0600EF78 RID: 61304 RVA: 0x00464F34 File Offset: 0x00463134
 	public void Handle(PanelQteContext context)
 	{
 		TArray<SPanelQteAction> tarray = context.Success ? context.Config.SuccessActions : context.Config.FailActions;
@@ -22,7 +22,7 @@ public class PanelQteResultHandler
 		}
 	}
 
-	// Token: 0x06011AE1 RID: 72417 RVA: 0x004582A8 File Offset: 0x004564A8
+	// Token: 0x0600EF79 RID: 61305 RVA: 0x00464F88 File Offset: 0x00463188
 	private void HandleAction(SPanelQteAction action, PanelQteContext context)
 	{
 		Entity entity;
@@ -102,7 +102,7 @@ public class PanelQteResultHandler
 		}
 	}
 
-	// Token: 0x06011AE2 RID: 72418 RVA: 0x004584B8 File Offset: 0x004566B8
+	// Token: 0x0600EF7A RID: 61306 RVA: 0x00465198 File Offset: 0x00463398
 	private void HandleCustomAction(int customAction, PanelQteContext context, Entity entity)
 	{
 		switch (customAction)
@@ -186,7 +186,7 @@ public class PanelQteResultHandler
 		}
 	}
 
-	// Token: 0x06011AE3 RID: 72419 RVA: 0x004585C0 File Offset: 0x004567C0
+	// Token: 0x0600EF7B RID: 61307 RVA: 0x004652A0 File Offset: 0x004634A0
 	private void TryChangeRole()
 	{
 		SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;
@@ -232,7 +232,7 @@ public class PanelQteResultHandler
 		}
 	}
 
-	// Token: 0x06011AE4 RID: 72420 RVA: 0x00458680 File Offset: 0x00456880
+	// Token: 0x0600EF7C RID: 61308 RVA: 0x00465360 File Offset: 0x00463560
 	[NullableContext(2)]
 	private Entity GetSelfEntity()
 	{
@@ -249,9 +249,9 @@ public class PanelQteResultHandler
 		return characterActorComponent.Entity;
 	}
 
-	// Token: 0x04008624 RID: 34340
+	// Token: 0x04008762 RID: 34658
 	private const int RUSH_SKILL_ID = 100001;
 
-	// Token: 0x04008625 RID: 34341
+	// Token: 0x04008763 RID: 34659
 	private const int HOOK_SKILL_ID = 100020;
 }

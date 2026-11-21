@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x0200546B RID: 21611
+	// Token: 0x0200444E RID: 17486
 	public class PsGamepadItem : GamepadItemBase
 	{
-		// Token: 0x060372AB RID: 225963 RVA: 0x00D14DFC File Offset: 0x00D12FFC
+		// Token: 0x0602C1F4 RID: 180724 RVA: 0x00C64214 File Offset: 0x00C62414
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x060372AC RID: 225964 RVA: 0x00D14F94 File Offset: 0x00D13194
+		// Token: 0x0602C1F5 RID: 180725 RVA: 0x00C643AC File Offset: 0x00C625AC
 		protected override void OnStart()
 		{
 			base.AddKeySprite(EKey.GenericUSBController_Axis1, base.GetSprite(0));
@@ -85,58 +85,58 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			base.AddKeySprite(EKey.Gamepad_Special_Right, base.GetSprite(15));
 		}
 
-		// Token: 0x0200B6E8 RID: 46824
+		// Token: 0x0200A120 RID: 41248
 		public class EChildType
 		{
-			// Token: 0x04037694 RID: 226964
+			// Token: 0x040320E9 RID: 205033
 			public const int LeftStickSprite = 0;
 
-			// Token: 0x04037695 RID: 226965
+			// Token: 0x040320EA RID: 205034
 			public const int RightStickSprite = 1;
 
-			// Token: 0x04037696 RID: 226966
+			// Token: 0x040320EB RID: 205035
 			public const int UpSprite = 2;
 
-			// Token: 0x04037697 RID: 226967
+			// Token: 0x040320EC RID: 205036
 			public const int DownSprite = 3;
 
-			// Token: 0x04037698 RID: 226968
+			// Token: 0x040320ED RID: 205037
 			public const int LeftSprite = 4;
 
-			// Token: 0x04037699 RID: 226969
+			// Token: 0x040320EE RID: 205038
 			public const int RightSprite = 5;
 
-			// Token: 0x0403769A RID: 226970
+			// Token: 0x040320EF RID: 205039
 			public const int TopButtonSprite = 6;
 
-			// Token: 0x0403769B RID: 226971
+			// Token: 0x040320F0 RID: 205040
 			public const int BottomButtonSprite = 7;
 
-			// Token: 0x0403769C RID: 226972
+			// Token: 0x040320F1 RID: 205041
 			public const int LeftButtonSprite = 8;
 
-			// Token: 0x0403769D RID: 226973
+			// Token: 0x040320F2 RID: 205042
 			public const int RightButtonSprite = 9;
 
-			// Token: 0x0403769E RID: 226974
+			// Token: 0x040320F3 RID: 205043
 			public const int LaSprite = 10;
 
-			// Token: 0x0403769F RID: 226975
+			// Token: 0x040320F4 RID: 205044
 			public const int LbSprite = 11;
 
-			// Token: 0x040376A0 RID: 226976
+			// Token: 0x040320F5 RID: 205045
 			public const int RaSprite = 12;
 
-			// Token: 0x040376A1 RID: 226977
+			// Token: 0x040320F6 RID: 205046
 			public const int RbSprite = 13;
 
-			// Token: 0x040376A2 RID: 226978
+			// Token: 0x040320F7 RID: 205047
 			public const int HomeButtonSprite = 14;
 
-			// Token: 0x040376A3 RID: 226979
+			// Token: 0x040320F8 RID: 205048
 			public const int MiniRightButtonSprite = 15;
 
-			// Token: 0x040376A4 RID: 226980
+			// Token: 0x040320F9 RID: 205049
 			public const int MiniLeftButtonSprite = 16;
 		}
 	}

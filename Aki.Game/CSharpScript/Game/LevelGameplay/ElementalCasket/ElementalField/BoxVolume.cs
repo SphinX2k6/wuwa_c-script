@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E94 RID: 28308
+	// Token: 0x02006014 RID: 24596
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BoxVolume : IElementalFieldVolume
 	{
-		// Token: 0x06044FD9 RID: 282585 RVA: 0x0110D25C File Offset: 0x0110B45C
+		// Token: 0x0603B17A RID: 242042 RVA: 0x010B7338 File Offset: 0x010B5538
 		public BoxVolume(double centerX, double centerY, double centerZ, double halfX, double halfY, double halfZ)
 		{
 			this.Center.Set(centerX, centerY, centerZ);
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.FeatureSize = Math.Min(Math.Min(halfX, halfY), halfZ) * 2.0;
 		}
 
-		// Token: 0x06044FDA RID: 282586 RVA: 0x0110D2C4 File Offset: 0x0110B4C4
+		// Token: 0x0603B17B RID: 242043 RVA: 0x010B73A0 File Offset: 0x010B55A0
 		public bool ContainsPoint(Vector point)
 		{
 			return Math.Abs(point.X - this.Center.X) <= this.HalfSize.X && Math.Abs(point.Y - this.Center.Y) <= this.HalfSize.Y && Math.Abs(point.Z - this.Center.Z) <= this.HalfSize.Z;
 		}
 
-		// Token: 0x06044FDB RID: 282587 RVA: 0x0110D344 File Offset: 0x0110B544
+		// Token: 0x0603B17C RID: 242044 RVA: 0x010B7420 File Offset: 0x010B5620
 		public bool IntersectsSegment(Vector a, Vector b)
 		{
 			Vector tempSamplePoint = BoxVolume.TempSamplePoint;
@@ -43,26 +43,26 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return false;
 		}
 
-		// Token: 0x06044FDC RID: 282588 RVA: 0x0110D3DC File Offset: 0x0110B5DC
+		// Token: 0x0603B17D RID: 242045 RVA: 0x010B74B8 File Offset: 0x010B56B8
 		public void DebugDraw()
 		{
 			UKismetSystemLibrary.D_DrawDebugBox(GlobalData.World, this.Center.ToUeVector(false), this.HalfSize.ToUeVector(false), ElementalCasketDefine.activeVolumeDebugDrawColor, default(FRotator), 0.2f, 1f);
 		}
 
-		// Token: 0x04023EC4 RID: 147140
+		// Token: 0x0401F177 RID: 127351
 		[StaticVariableRuleIgnore]
 		private static readonly Stat boxIntersectsSegmentStat = Stat.Create("ElementalFieldVolume.Box.IntersectsSegment", "", "");
 
-		// Token: 0x04023EC5 RID: 147141
+		// Token: 0x0401F178 RID: 127352
 		private readonly Vector Center = Vector.Create();
 
-		// Token: 0x04023EC6 RID: 147142
+		// Token: 0x0401F179 RID: 127353
 		private readonly Vector HalfSize = Vector.Create();
 
-		// Token: 0x04023EC7 RID: 147143
+		// Token: 0x0401F17A RID: 127354
 		private readonly double FeatureSize;
 
-		// Token: 0x04023EC8 RID: 147144
+		// Token: 0x0401F17B RID: 127355
 		[StaticVariableRuleIgnore]
 		private static readonly Vector TempSamplePoint = Vector.Create();
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E02 RID: 24066
+	// Token: 0x02004DE7 RID: 19943
 	public class SpecialEnergyBarSuizhe : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D309 RID: 250633 RVA: 0x00EBD4A0 File Offset: 0x00EBB6A0
+		// Token: 0x06032298 RID: 205464 RVA: 0x00E0EA00 File Offset: 0x00E0CC00
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
@@ -20,14 +20,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D30A RID: 250634 RVA: 0x00EBD4DF File Offset: 0x00EBB6DF
+		// Token: 0x06032299 RID: 205465 RVA: 0x00E0EA3F File Offset: 0x00E0CC3F
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagAddOrRemoveChanged(SpecialEnergyBarSuizhe.AdvanceStateTagId, new BaseTagComponent.TTagSwitchedCallback(this.OnStateChanged));
 		}
 
-		// Token: 0x0603D30B RID: 250635 RVA: 0x00EBD500 File Offset: 0x00EBB700
+		// Token: 0x0603229A RID: 205466 RVA: 0x00E0EA60 File Offset: 0x00E0CC60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarSuizhe.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D30C RID: 250636 RVA: 0x00EBD544 File Offset: 0x00EBB744
+		// Token: 0x0603229B RID: 205467 RVA: 0x00E0EAA4 File Offset: 0x00E0CCA4
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarSuizhe.<InitBarItem>d__8 <InitBarItem>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D30D RID: 250637 RVA: 0x00EBD588 File Offset: 0x00EBB788
+		// Token: 0x0603229C RID: 205468 RVA: 0x00E0EAE8 File Offset: 0x00E0CCE8
 		protected override void OnStart()
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetState(state);
 		}
 
-		// Token: 0x0603D30E RID: 250638 RVA: 0x00EBD5BA File Offset: 0x00EBB7BA
+		// Token: 0x0603229D RID: 205469 RVA: 0x00E0EB1A File Offset: 0x00E0CD1A
 		private void OnStateChanged(int tagId, bool tagExist)
 		{
 			this.SetState(tagExist ? SpecialEnergyBarSuizhe.EState.Advance : SpecialEnergyBarSuizhe.EState.Normal);
 		}
 
-		// Token: 0x0603D30F RID: 250639 RVA: 0x00EBD5C9 File Offset: 0x00EBB7C9
+		// Token: 0x0603229E RID: 205470 RVA: 0x00E0EB29 File Offset: 0x00E0CD29
 		private void SetState(SpecialEnergyBarSuizhe.EState state)
 		{
 			base.GetItem(1).SetUIActive(state == SpecialEnergyBarSuizhe.EState.Advance);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barSlotB.SetUiActive(state == SpecialEnergyBarSuizhe.EState.Advance);
 		}
 
-		// Token: 0x0603D310 RID: 250640 RVA: 0x00EBD604 File Offset: 0x00EBB804
+		// Token: 0x0603229F RID: 205471 RVA: 0x00E0EB64 File Offset: 0x00E0CD64
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -97,39 +97,39 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barSlotB.Tick(delta);
 		}
 
-		// Token: 0x0401FE81 RID: 130689
+		// Token: 0x0401A948 RID: 108872
 		[StaticVariableRuleIgnore]
 		private static readonly int AdvanceStateTagId = GameplayTagDefine.EGameplayTagId["怪物.MB1SuiZheMd00501.状态.登神解放状态"];
 
-		// Token: 0x0401FE82 RID: 130690
+		// Token: 0x0401A949 RID: 108873
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarSlotA;
 
-		// Token: 0x0401FE83 RID: 130691
+		// Token: 0x0401A94A RID: 108874
 		[Nullable(2)]
 		private SpecialEnergyBarSlot BarSlotB;
 
-		// Token: 0x0200C158 RID: 49496
+		// Token: 0x0200AB67 RID: 43879
 		private enum EChildType
 		{
-			// Token: 0x0403A686 RID: 239238
+			// Token: 0x04035078 RID: 217208
 			BgNormal,
-			// Token: 0x0403A687 RID: 239239
+			// Token: 0x04035079 RID: 217209
 			BgFull,
-			// Token: 0x0403A688 RID: 239240
+			// Token: 0x0403507A RID: 217210
 			SlotBarItemA,
-			// Token: 0x0403A689 RID: 239241
+			// Token: 0x0403507B RID: 217211
 			SlotBarItemB,
-			// Token: 0x0403A68A RID: 239242
+			// Token: 0x0403507C RID: 217212
 			MaxCount
 		}
 
-		// Token: 0x0200C159 RID: 49497
+		// Token: 0x0200AB68 RID: 43880
 		private enum EState
 		{
-			// Token: 0x0403A68C RID: 239244
+			// Token: 0x0403507E RID: 217214
 			Normal,
-			// Token: 0x0403A68D RID: 239245
+			// Token: 0x0403507F RID: 217215
 			Advance
 		}
 	}

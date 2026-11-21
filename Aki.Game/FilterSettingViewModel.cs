@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Menu;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200220A RID: 8714
+// Token: 0x020016EE RID: 5870
 [NullableContext(2)]
 [Nullable(0)]
 public class FilterSettingViewModel
 {
-	// Token: 0x17001590 RID: 5520
-	// (get) Token: 0x06010FBD RID: 69565 RVA: 0x004242A0 File Offset: 0x004224A0
+	// Token: 0x170015C7 RID: 5575
+	// (get) Token: 0x0600E452 RID: 58450 RVA: 0x00430E34 File Offset: 0x0042F034
 	public float ControlCameraRate
 	{
 		get
@@ -26,8 +27,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001591 RID: 5521
-	// (get) Token: 0x06010FBE RID: 69566 RVA: 0x004242FA File Offset: 0x004224FA
+	// Token: 0x170015C8 RID: 5576
+	// (get) Token: 0x0600E453 RID: 58451 RVA: 0x00430E8E File Offset: 0x0042F08E
 	[Nullable(1)]
 	public string CoordinateTextId
 	{
@@ -38,9 +39,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001592 RID: 5522
-	// (get) Token: 0x06010FBF RID: 69567 RVA: 0x00424301 File Offset: 0x00422501
-	// (set) Token: 0x06010FC0 RID: 69568 RVA: 0x00424314 File Offset: 0x00422514
+	// Token: 0x170015C9 RID: 5577
+	// (get) Token: 0x0600E454 RID: 58452 RVA: 0x00430E95 File Offset: 0x0042F095
+	// (set) Token: 0x0600E455 RID: 58453 RVA: 0x00430EA8 File Offset: 0x0042F0A8
 	public float IntensityNormalized
 	{
 		get
@@ -58,8 +59,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001593 RID: 5523
-	// (get) Token: 0x06010FC1 RID: 69569 RVA: 0x00424358 File Offset: 0x00422558
+	// Token: 0x170015CA RID: 5578
+	// (get) Token: 0x0600E456 RID: 58454 RVA: 0x00430EEC File Offset: 0x0042F0EC
 	[Nullable(1)]
 	public string IntensityString
 	{
@@ -70,9 +71,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001594 RID: 5524
-	// (get) Token: 0x06010FC2 RID: 69570 RVA: 0x0042437F File Offset: 0x0042257F
-	// (set) Token: 0x06010FC3 RID: 69571 RVA: 0x00424394 File Offset: 0x00422594
+	// Token: 0x170015CB RID: 5579
+	// (get) Token: 0x0600E457 RID: 58455 RVA: 0x00430F13 File Offset: 0x0042F113
+	// (set) Token: 0x0600E458 RID: 58456 RVA: 0x00430F28 File Offset: 0x0042F128
 	public float HorizontalNormalized
 	{
 		get
@@ -92,7 +93,7 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x06010FC4 RID: 69572 RVA: 0x00424414 File Offset: 0x00422614
+	// Token: 0x0600E459 RID: 58457 RVA: 0x00430FA8 File Offset: 0x0042F1A8
 	private void SetHorizontalNormalized(float value)
 	{
 		float? horizontalNormalizedInternal = this.HorizontalNormalizedInternal;
@@ -103,8 +104,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001595 RID: 5525
-	// (get) Token: 0x06010FC5 RID: 69573 RVA: 0x0042446C File Offset: 0x0042266C
+	// Token: 0x170015CC RID: 5580
+	// (get) Token: 0x0600E45A RID: 58458 RVA: 0x00431000 File Offset: 0x0042F200
 	[Nullable(1)]
 	public string HorizontalString
 	{
@@ -115,9 +116,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001596 RID: 5526
-	// (get) Token: 0x06010FC6 RID: 69574 RVA: 0x004244A1 File Offset: 0x004226A1
-	// (set) Token: 0x06010FC7 RID: 69575 RVA: 0x004244B4 File Offset: 0x004226B4
+	// Token: 0x170015CD RID: 5581
+	// (get) Token: 0x0600E45B RID: 58459 RVA: 0x00431035 File Offset: 0x0042F235
+	// (set) Token: 0x0600E45C RID: 58460 RVA: 0x00431048 File Offset: 0x0042F248
 	public float VerticalNormalized
 	{
 		get
@@ -137,7 +138,7 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x06010FC8 RID: 69576 RVA: 0x00424534 File Offset: 0x00422734
+	// Token: 0x0600E45D RID: 58461 RVA: 0x004310C8 File Offset: 0x0042F2C8
 	private void SetVerticalNormalized(float value)
 	{
 		float? verticalNormalizedInternal = this.VerticalNormalizedInternal;
@@ -148,8 +149,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001597 RID: 5527
-	// (get) Token: 0x06010FC9 RID: 69577 RVA: 0x0042458C File Offset: 0x0042278C
+	// Token: 0x170015CE RID: 5582
+	// (get) Token: 0x0600E45E RID: 58462 RVA: 0x00431120 File Offset: 0x0042F320
 	[Nullable(1)]
 	public string VerticalString
 	{
@@ -160,9 +161,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001598 RID: 5528
-	// (get) Token: 0x06010FCA RID: 69578 RVA: 0x004245C4 File Offset: 0x004227C4
-	// (set) Token: 0x06010FCB RID: 69579 RVA: 0x00424640 File Offset: 0x00422840
+	// Token: 0x170015CF RID: 5583
+	// (get) Token: 0x0600E45F RID: 58463 RVA: 0x00431158 File Offset: 0x0042F358
+	// (set) Token: 0x0600E460 RID: 58464 RVA: 0x004311D4 File Offset: 0x0042F3D4
 	public float? HorizontalReal
 	{
 		get
@@ -189,9 +190,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x17001599 RID: 5529
-	// (get) Token: 0x06010FCC RID: 69580 RVA: 0x004246E0 File Offset: 0x004228E0
-	// (set) Token: 0x06010FCD RID: 69581 RVA: 0x0042475C File Offset: 0x0042295C
+	// Token: 0x170015D0 RID: 5584
+	// (get) Token: 0x0600E461 RID: 58465 RVA: 0x00431274 File Offset: 0x0042F474
+	// (set) Token: 0x0600E462 RID: 58466 RVA: 0x004312F0 File Offset: 0x0042F4F0
 	public float? VerticalReal
 	{
 		get
@@ -218,9 +219,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159A RID: 5530
-	// (get) Token: 0x06010FCE RID: 69582 RVA: 0x004247FB File Offset: 0x004229FB
-	// (set) Token: 0x06010FCF RID: 69583 RVA: 0x00424803 File Offset: 0x00422A03
+	// Token: 0x170015D1 RID: 5585
+	// (get) Token: 0x0600E463 RID: 58467 RVA: 0x0043138F File Offset: 0x0042F58F
+	// (set) Token: 0x0600E464 RID: 58468 RVA: 0x00431397 File Offset: 0x0042F597
 	public string FilterNameTextId
 	{
 		get
@@ -237,9 +238,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159B RID: 5531
-	// (get) Token: 0x06010FD0 RID: 69584 RVA: 0x00424829 File Offset: 0x00422A29
-	// (set) Token: 0x06010FD1 RID: 69585 RVA: 0x00424831 File Offset: 0x00422A31
+	// Token: 0x170015D2 RID: 5586
+	// (get) Token: 0x0600E465 RID: 58469 RVA: 0x004313BD File Offset: 0x0042F5BD
+	// (set) Token: 0x0600E466 RID: 58470 RVA: 0x004313C5 File Offset: 0x0042F5C5
 	public string FilterPadTexturePath
 	{
 		get
@@ -256,9 +257,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159C RID: 5532
-	// (get) Token: 0x06010FD2 RID: 69586 RVA: 0x00424857 File Offset: 0x00422A57
-	// (set) Token: 0x06010FD3 RID: 69587 RVA: 0x0042485F File Offset: 0x00422A5F
+	// Token: 0x170015D3 RID: 5587
+	// (get) Token: 0x0600E467 RID: 58471 RVA: 0x004313EB File Offset: 0x0042F5EB
+	// (set) Token: 0x0600E468 RID: 58472 RVA: 0x004313F3 File Offset: 0x0042F5F3
 	public bool IsHideByPad
 	{
 		get
@@ -276,9 +277,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159D RID: 5533
-	// (get) Token: 0x06010FD4 RID: 69588 RVA: 0x0042488E File Offset: 0x00422A8E
-	// (set) Token: 0x06010FD5 RID: 69589 RVA: 0x00424896 File Offset: 0x00422A96
+	// Token: 0x170015D4 RID: 5588
+	// (get) Token: 0x0600E469 RID: 58473 RVA: 0x00431422 File Offset: 0x0042F622
+	// (set) Token: 0x0600E46A RID: 58474 RVA: 0x0043142A File Offset: 0x0042F62A
 	public bool IsHideByClick
 	{
 		get
@@ -296,9 +297,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159E RID: 5534
-	// (get) Token: 0x06010FD6 RID: 69590 RVA: 0x004248C8 File Offset: 0x00422AC8
-	// (set) Token: 0x06010FD7 RID: 69591 RVA: 0x004248D0 File Offset: 0x00422AD0
+	// Token: 0x170015D5 RID: 5589
+	// (get) Token: 0x0600E46B RID: 58475 RVA: 0x0043145C File Offset: 0x0042F65C
+	// (set) Token: 0x0600E46C RID: 58476 RVA: 0x00431464 File Offset: 0x0042F664
 	public bool IsSliderActive
 	{
 		get
@@ -315,9 +316,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x1700159F RID: 5535
-	// (get) Token: 0x06010FD8 RID: 69592 RVA: 0x004248F4 File Offset: 0x00422AF4
-	// (set) Token: 0x06010FD9 RID: 69593 RVA: 0x004248FC File Offset: 0x00422AFC
+	// Token: 0x170015D6 RID: 5590
+	// (get) Token: 0x0600E46D RID: 58477 RVA: 0x00431488 File Offset: 0x0042F688
+	// (set) Token: 0x0600E46E RID: 58478 RVA: 0x00431490 File Offset: 0x0042F690
 	public bool IsSeniorParamRefresh
 	{
 		get
@@ -334,9 +335,9 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x170015A0 RID: 5536
-	// (get) Token: 0x06010FDA RID: 69594 RVA: 0x0042491A File Offset: 0x00422B1A
-	// (set) Token: 0x06010FDB RID: 69595 RVA: 0x00424922 File Offset: 0x00422B22
+	// Token: 0x170015D7 RID: 5591
+	// (get) Token: 0x0600E46F RID: 58479 RVA: 0x004314AE File Offset: 0x0042F6AE
+	// (set) Token: 0x0600E470 RID: 58480 RVA: 0x004314B6 File Offset: 0x0042F6B6
 	public bool IsFilterChanged
 	{
 		get
@@ -354,8 +355,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x170015A1 RID: 5537
-	// (get) Token: 0x06010FDC RID: 69596 RVA: 0x0042494F File Offset: 0x00422B4F
+	// Token: 0x170015D8 RID: 5592
+	// (get) Token: 0x0600E471 RID: 58481 RVA: 0x004314E3 File Offset: 0x0042F6E3
 	public bool IsOtherViewOpen
 	{
 		get
@@ -364,8 +365,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x170015A2 RID: 5538
-	// (get) Token: 0x06010FDD RID: 69597 RVA: 0x00424960 File Offset: 0x00422B60
+	// Token: 0x170015D9 RID: 5593
+	// (get) Token: 0x0600E472 RID: 58482 RVA: 0x004314F4 File Offset: 0x0042F6F4
 	[Nullable(1)]
 	public FilterSetting[] FilterList
 	{
@@ -392,8 +393,8 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x170015A3 RID: 5539
-	// (get) Token: 0x06010FDE RID: 69598 RVA: 0x004249C8 File Offset: 0x00422BC8
+	// Token: 0x170015DA RID: 5594
+	// (get) Token: 0x0600E473 RID: 58483 RVA: 0x0043155C File Offset: 0x0042F75C
 	public bool IsDirty
 	{
 		get
@@ -402,146 +403,146 @@ public class FilterSettingViewModel
 		}
 	}
 
-	// Token: 0x06010FDF RID: 69599 RVA: 0x004249D3 File Offset: 0x00422BD3
+	// Token: 0x0600E474 RID: 58484 RVA: 0x00431567 File Offset: 0x0042F767
 	public bool IsPropertyDirty(int flag)
 	{
 		return (this.DirtyFlags & flag) != 0;
 	}
 
-	// Token: 0x06010FE0 RID: 69600 RVA: 0x004249E0 File Offset: 0x00422BE0
+	// Token: 0x0600E475 RID: 58485 RVA: 0x00431574 File Offset: 0x0042F774
 	public void CleanDirty()
 	{
 		this.DirtyFlags = 0;
 	}
 
-	// Token: 0x0400811E RID: 33054
+	// Token: 0x0400825C RID: 33372
 	private int DirtyFlags;
 
-	// Token: 0x0400811F RID: 33055
+	// Token: 0x0400825D RID: 33373
 	private float? ControlCameraRateInternal;
 
-	// Token: 0x04008120 RID: 33056
+	// Token: 0x0400825E RID: 33374
 	private float? IntensityNormalizedInternal;
 
-	// Token: 0x04008121 RID: 33057
+	// Token: 0x0400825F RID: 33375
 	private float? HorizontalNormalizedInternal;
 
-	// Token: 0x04008122 RID: 33058
+	// Token: 0x04008260 RID: 33376
 	private float? VerticalNormalizedInternal;
 
-	// Token: 0x04008123 RID: 33059
+	// Token: 0x04008261 RID: 33377
 	private float? HorizontalRealInternal;
 
-	// Token: 0x04008124 RID: 33060
+	// Token: 0x04008262 RID: 33378
 	private float? VerticalRealInternal;
 
-	// Token: 0x04008125 RID: 33061
+	// Token: 0x04008263 RID: 33379
 	private string FilterNameTextIdInternal;
 
-	// Token: 0x04008126 RID: 33062
+	// Token: 0x04008264 RID: 33380
 	private string FilterPadTexturePathInternal;
 
-	// Token: 0x04008127 RID: 33063
+	// Token: 0x04008265 RID: 33381
 	private bool IsHideByPadInternal;
 
-	// Token: 0x04008128 RID: 33064
+	// Token: 0x04008266 RID: 33382
 	private bool IsHideByClickInternal;
 
-	// Token: 0x04008129 RID: 33065
+	// Token: 0x04008267 RID: 33383
 	private bool IsSliderActiveInternal = true;
 
-	// Token: 0x0400812A RID: 33066
+	// Token: 0x04008268 RID: 33384
 	private bool IsSeniorParamRefreshInternal;
 
-	// Token: 0x0400812B RID: 33067
+	// Token: 0x04008269 RID: 33385
 	public bool IsApplyClicked;
 
-	// Token: 0x0400812C RID: 33068
+	// Token: 0x0400826A RID: 33386
 	private bool IsFilterChangedInternal;
 
-	// Token: 0x0400812D RID: 33069
+	// Token: 0x0400826B RID: 33387
 	public bool IsLeftStickHorizontalMoved;
 
-	// Token: 0x0400812E RID: 33070
+	// Token: 0x0400826C RID: 33388
 	public bool IsLeftStickVerticalMoved;
 
-	// Token: 0x0400812F RID: 33071
+	// Token: 0x0400826D RID: 33389
 	public FVector? LastMoveVector;
 
-	// Token: 0x04008130 RID: 33072
+	// Token: 0x0400826E RID: 33390
 	public FVector? UpLeftPos;
 
-	// Token: 0x04008131 RID: 33073
+	// Token: 0x0400826F RID: 33391
 	public FVector? UpRightPos;
 
-	// Token: 0x04008132 RID: 33074
+	// Token: 0x04008270 RID: 33392
 	public FVector? DownLeftPos;
 
-	// Token: 0x04008133 RID: 33075
-	public UiCameraPhotographerStructure UiCameraPhotographerStructure;
+	// Token: 0x04008271 RID: 33393
+	public UiCameraPhotographerComponent PhotographerComponent;
 
-	// Token: 0x04008134 RID: 33076
+	// Token: 0x04008272 RID: 33394
 	[Nullable(1)]
 	public readonly Dictionary<EPhotoSetupValueType, float> PhotographOptionMap = new Dictionary<EPhotoSetupValueType, float>();
 
-	// Token: 0x04008135 RID: 33077
+	// Token: 0x04008273 RID: 33395
 	public int? EntityDisableId = new int?(0);
 
-	// Token: 0x04008136 RID: 33078
+	// Token: 0x04008274 RID: 33396
 	public EntityHandle SetDisableEntity;
 
-	// Token: 0x04008137 RID: 33079
+	// Token: 0x04008275 RID: 33397
 	public bool CameraRotationLock;
 
-	// Token: 0x04008138 RID: 33080
+	// Token: 0x04008276 RID: 33398
 	public bool PadLock;
 
-	// Token: 0x04008139 RID: 33081
+	// Token: 0x04008277 RID: 33399
 	public int InitFilterIndex;
 
-	// Token: 0x0400813A RID: 33082
+	// Token: 0x04008278 RID: 33400
 	private FilterSetting[] FilterListInternal;
 
-	// Token: 0x0400813B RID: 33083
+	// Token: 0x04008279 RID: 33401
 	public Action OnHideClick;
 
-	// Token: 0x0400813C RID: 33084
+	// Token: 0x0400827A RID: 33402
 	public Action OnResetClick;
 
-	// Token: 0x0400813D RID: 33085
+	// Token: 0x0400827B RID: 33403
 	public Action OnResetPointClick;
 
-	// Token: 0x0400813E RID: 33086
+	// Token: 0x0400827C RID: 33404
 	public Action OnResetAllSeniorParamClick;
 
-	// Token: 0x0400813F RID: 33087
+	// Token: 0x0400827D RID: 33405
 	public Action<EFilterSettingValueIndex> OnResetSingleParamClick;
 
-	// Token: 0x04008140 RID: 33088
+	// Token: 0x0400827E RID: 33406
 	public Action OnConfirmClick;
 
-	// Token: 0x04008141 RID: 33089
+	// Token: 0x0400827F RID: 33407
 	public Action OnCloseClick;
 
-	// Token: 0x04008142 RID: 33090
+	// Token: 0x04008280 RID: 33408
 	public Action OnPadChanged;
 
-	// Token: 0x04008143 RID: 33091
+	// Token: 0x04008281 RID: 33409
 	public Action OnPadChangeStop;
 
-	// Token: 0x04008144 RID: 33092
+	// Token: 0x04008282 RID: 33410
 	public Action OnSliderChanged;
 
-	// Token: 0x04008145 RID: 33093
+	// Token: 0x04008283 RID: 33411
 	public Action<EFilterSettingValueIndex, float> OnSeniorSliderChanged;
 
-	// Token: 0x04008146 RID: 33094
+	// Token: 0x04008284 RID: 33412
 	public Action OnViewBeforeCreate;
 
-	// Token: 0x04008147 RID: 33095
+	// Token: 0x04008285 RID: 33413
 	public Action OnViewBeforeStart;
 
-	// Token: 0x04008148 RID: 33096
+	// Token: 0x04008286 RID: 33414
 	[Nullable(new byte[]
 	{
 		2,
@@ -549,7 +550,7 @@ public class FilterSettingViewModel
 	})]
 	public Action<string> OnViewBeforeShow;
 
-	// Token: 0x04008149 RID: 33097
+	// Token: 0x04008287 RID: 33415
 	[Nullable(new byte[]
 	{
 		2,
@@ -557,19 +558,19 @@ public class FilterSettingViewModel
 	})]
 	public Action<string> OnViewAfterHide;
 
-	// Token: 0x0400814A RID: 33098
+	// Token: 0x04008288 RID: 33416
 	public Action OnViewDestroy;
 
-	// Token: 0x0400814B RID: 33099
+	// Token: 0x04008289 RID: 33417
 	public Action<ULGUIPointerEventData> OnDragMoved;
 
-	// Token: 0x0400814C RID: 33100
+	// Token: 0x0400828A RID: 33418
 	public Action OnDragBegin;
 
-	// Token: 0x0400814D RID: 33101
+	// Token: 0x0400828B RID: 33419
 	public Action OnDragEnded;
 
-	// Token: 0x0400814E RID: 33102
+	// Token: 0x0400828C RID: 33420
 	[Nullable(new byte[]
 	{
 		2,
@@ -577,7 +578,7 @@ public class FilterSettingViewModel
 	})]
 	public Action<string, float> OnInputUiLookUp;
 
-	// Token: 0x0400814F RID: 33103
+	// Token: 0x0400828D RID: 33421
 	[Nullable(new byte[]
 	{
 		2,
@@ -585,7 +586,7 @@ public class FilterSettingViewModel
 	})]
 	public Action<string, float> OnInputUiTurn;
 
-	// Token: 0x04008150 RID: 33104
+	// Token: 0x0400828E RID: 33422
 	[Nullable(new byte[]
 	{
 		2,
@@ -593,7 +594,7 @@ public class FilterSettingViewModel
 	})]
 	public Action<string, float> OnInputUiMoveForward;
 
-	// Token: 0x04008151 RID: 33105
+	// Token: 0x0400828F RID: 33423
 	[Nullable(new byte[]
 	{
 		2,
@@ -601,47 +602,47 @@ public class FilterSettingViewModel
 	})]
 	public Action<string, float> OnInputUiMoveRight;
 
-	// Token: 0x04008152 RID: 33106
+	// Token: 0x04008290 RID: 33424
 	public Action<int> OnIndexChanged;
 
-	// Token: 0x04008153 RID: 33107
+	// Token: 0x04008291 RID: 33425
 	public Action OnLeftArrowClick;
 
-	// Token: 0x04008154 RID: 33108
+	// Token: 0x04008292 RID: 33426
 	public Action OnRightArrowClick;
 
-	// Token: 0x02008745 RID: 34629
+	// Token: 0x020078CE RID: 30926
 	[NullableContext(0)]
 	public static class Flags
 	{
-		// Token: 0x0402BF90 RID: 180112
+		// Token: 0x040272A8 RID: 160424
 		public const int PointTexturePosition = 1;
 
-		// Token: 0x0402BF91 RID: 180113
+		// Token: 0x040272A9 RID: 160425
 		public const int IntensityNormalized = 2;
 
-		// Token: 0x0402BF92 RID: 180114
+		// Token: 0x040272AA RID: 160426
 		public const int HorizontalNormalized = 4;
 
-		// Token: 0x0402BF93 RID: 180115
+		// Token: 0x040272AB RID: 160427
 		public const int VerticalNormalized = 8;
 
-		// Token: 0x0402BF94 RID: 180116
+		// Token: 0x040272AC RID: 160428
 		public const int FilterNameTextId = 16;
 
-		// Token: 0x0402BF95 RID: 180117
+		// Token: 0x040272AD RID: 160429
 		public const int FilterPadTexturePath = 32;
 
-		// Token: 0x0402BF96 RID: 180118
+		// Token: 0x040272AE RID: 160430
 		public const int IsHideByPad = 64;
 
-		// Token: 0x0402BF97 RID: 180119
+		// Token: 0x040272AF RID: 160431
 		public const int IsHideByClick = 128;
 
-		// Token: 0x0402BF98 RID: 180120
+		// Token: 0x040272B0 RID: 160432
 		public const int IsSliderActive = 256;
 
-		// Token: 0x0402BF99 RID: 180121
+		// Token: 0x040272B1 RID: 160433
 		public const int IsSeniorParamRefresh = 512;
 	}
 }

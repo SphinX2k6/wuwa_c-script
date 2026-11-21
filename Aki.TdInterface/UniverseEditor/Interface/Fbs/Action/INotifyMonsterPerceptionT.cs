@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BAD RID: 27565
+	// Token: 0x020072F9 RID: 29433
 	public class INotifyMonsterPerceptionT
 	{
-		// Token: 0x1700CCE1 RID: 52449
-		// (get) Token: 0x060306C1 RID: 198337 RVA: 0x00693892 File Offset: 0x00691A92
-		// (set) Token: 0x060306C2 RID: 198338 RVA: 0x0069389A File Offset: 0x00691A9A
+		// Token: 0x1700D7CD RID: 55245
+		// (get) Token: 0x0603353B RID: 210235 RVA: 0x006EC232 File Offset: 0x006EA432
+		// (set) Token: 0x0603353C RID: 210236 RVA: 0x006EC23A File Offset: 0x006EA43A
 		public ESetBattleStateType Type { get; set; }
 
-		// Token: 0x1700CCE2 RID: 52450
-		// (get) Token: 0x060306C3 RID: 198339 RVA: 0x006938A3 File Offset: 0x00691AA3
-		// (set) Token: 0x060306C4 RID: 198340 RVA: 0x006938AB File Offset: 0x00691AAB
+		// Token: 0x1700D7CE RID: 55246
+		// (get) Token: 0x0603353D RID: 210237 RVA: 0x006EC243 File Offset: 0x006EA443
+		// (set) Token: 0x0603353E RID: 210238 RVA: 0x006EC24B File Offset: 0x006EA44B
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700CCE3 RID: 52451
-		// (get) Token: 0x060306C5 RID: 198341 RVA: 0x006938B4 File Offset: 0x00691AB4
-		// (set) Token: 0x060306C6 RID: 198342 RVA: 0x006938BC File Offset: 0x00691ABC
+		// Token: 0x1700D7CF RID: 55247
+		// (get) Token: 0x0603353F RID: 210239 RVA: 0x006EC254 File Offset: 0x006EA454
+		// (set) Token: 0x06033540 RID: 210240 RVA: 0x006EC25C File Offset: 0x006EA45C
 		public TBattleStatePerceptionBehaviorUnion PerceptionBehaviorOption { get; set; }
 
-		// Token: 0x060306C7 RID: 198343 RVA: 0x006938C5 File Offset: 0x00691AC5
+		// Token: 0x06033541 RID: 210241 RVA: 0x006EC265 File Offset: 0x006EA465
 		public INotifyMonsterPerceptionT()
 		{
 			this.Type = ESetBattleStateType.SetBattleTag;

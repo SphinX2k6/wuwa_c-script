@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B2D RID: 23341
+	// Token: 0x02004B0E RID: 19214
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AmountItem : UiPanelBase
 	{
-		// Token: 0x0603B193 RID: 242067 RVA: 0x00E17F38 File Offset: 0x00E16138
+		// Token: 0x06030105 RID: 196869 RVA: 0x00D68C50 File Offset: 0x00D66E50
 		public AmountItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B194 RID: 242068 RVA: 0x00E17F54 File Offset: 0x00E16154
+		// Token: 0x06030106 RID: 196870 RVA: 0x00D68C6C File Offset: 0x00D66E6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B195 RID: 242069 RVA: 0x00E18082 File Offset: 0x00E16282
+		// Token: 0x06030107 RID: 196871 RVA: 0x00D68D9A File Offset: 0x00D66F9A
 		protected override void OnStart()
 		{
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x0603B196 RID: 242070 RVA: 0x00E1809C File Offset: 0x00E1629C
+		// Token: 0x06030108 RID: 196872 RVA: 0x00D68DB4 File Offset: 0x00D66FB4
 		private UniTask InitCommonItemCountPanel()
 		{
 			AmountItem.<InitCommonItemCountPanel>d__7 <InitCommonItemCountPanel>d__;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <InitCommonItemCountPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B197 RID: 242071 RVA: 0x00E180E0 File Offset: 0x00E162E0
+		// Token: 0x06030109 RID: 196873 RVA: 0x00D68DF8 File Offset: 0x00D66FF8
 		private void SetSumText(int sum)
 		{
 			int maxCallback = this.GetMaxCallback();
@@ -93,33 +93,33 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.RefreshAddAndDelButton();
 		}
 
-		// Token: 0x0603B198 RID: 242072 RVA: 0x00E18149 File Offset: 0x00E16349
+		// Token: 0x0603010A RID: 196874 RVA: 0x00D68E61 File Offset: 0x00D67061
 		public void ResetSum()
 		{
 			this.Sum = 1;
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x0603B199 RID: 242073 RVA: 0x00E1816C File Offset: 0x00E1636C
+		// Token: 0x0603010B RID: 196875 RVA: 0x00D68E84 File Offset: 0x00D67084
 		public void RefreshAddAndDelButton()
 		{
 			((base.GetButton(1).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup).SetInteractable(this.Sum != 1);
 			((base.GetButton(0).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup).SetInteractable(this.Sum < this.GetMaxCallback());
 		}
 
-		// Token: 0x0603B19A RID: 242074 RVA: 0x00E181E7 File Offset: 0x00E163E7
+		// Token: 0x0603010C RID: 196876 RVA: 0x00D68EFF File Offset: 0x00D670FF
 		public void BindGetMaxCallback(Func<int> onGetMaxCallback)
 		{
 			this.OnGetMaxCallback = onGetMaxCallback;
 		}
 
-		// Token: 0x0603B19B RID: 242075 RVA: 0x00E181F0 File Offset: 0x00E163F0
+		// Token: 0x0603010D RID: 196877 RVA: 0x00D68F08 File Offset: 0x00D67108
 		public void BindSetSumCallback(Action<int> onSetSumCallback)
 		{
 			this.OnSetSumCallback = onSetSumCallback;
 		}
 
-		// Token: 0x0603B19C RID: 242076 RVA: 0x00E181FC File Offset: 0x00E163FC
+		// Token: 0x0603010E RID: 196878 RVA: 0x00D68F14 File Offset: 0x00D67114
 		private int GetMaxCallback()
 		{
 			if (this.OnGetMaxCallback != null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return 1;
 		}
 
-		// Token: 0x0603B19D RID: 242077 RVA: 0x00E18224 File Offset: 0x00E16424
+		// Token: 0x0603010F RID: 196879 RVA: 0x00D68F3C File Offset: 0x00D6713C
 		private void OnAdd()
 		{
 			this.Sum++;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x0603B19E RID: 242078 RVA: 0x00E18278 File Offset: 0x00E16478
+		// Token: 0x06030110 RID: 196880 RVA: 0x00D68F90 File Offset: 0x00D67190
 		private void OnDel()
 		{
 			this.Sum--;
@@ -157,13 +157,13 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x0603B19F RID: 242079 RVA: 0x00E182CA File Offset: 0x00E164CA
+		// Token: 0x06030111 RID: 196881 RVA: 0x00D68FE2 File Offset: 0x00D671E2
 		private void OnShowBtnClick()
 		{
 			this.OnShowCommonItemCountPanel().Forget();
 		}
 
-		// Token: 0x0603B1A0 RID: 242080 RVA: 0x00E182D8 File Offset: 0x00E164D8
+		// Token: 0x06030112 RID: 196882 RVA: 0x00D68FF0 File Offset: 0x00D671F0
 		private UniTask OnShowCommonItemCountPanel()
 		{
 			AmountItem.<OnShowCommonItemCountPanel>d__17 <OnShowCommonItemCountPanel>d__;
@@ -174,18 +174,18 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <OnShowCommonItemCountPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401ED03 RID: 126211
+		// Token: 0x040197BF RID: 104383
 		private int Sum = 1;
 
-		// Token: 0x0401ED04 RID: 126212
+		// Token: 0x040197C0 RID: 104384
 		[Nullable(2)]
 		private Func<int> OnGetMaxCallback;
 
-		// Token: 0x0401ED05 RID: 126213
+		// Token: 0x040197C1 RID: 104385
 		[Nullable(2)]
 		private Action<int> OnSetSumCallback;
 
-		// Token: 0x0401ED06 RID: 126214
+		// Token: 0x040197C2 RID: 104386
 		[Nullable(2)]
 		private CommonItemCountPanel CommonItemCountPanel;
 	}

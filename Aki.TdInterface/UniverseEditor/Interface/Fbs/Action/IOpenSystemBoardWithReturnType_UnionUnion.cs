@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C40 RID: 27712
+	// Token: 0x020073A7 RID: 29607
 	public class IOpenSystemBoardWithReturnType_UnionUnion
 	{
-		// Token: 0x1700CE63 RID: 52835
-		// (get) Token: 0x06030CFA RID: 199930 RVA: 0x006A1895 File Offset: 0x0069FA95
-		// (set) Token: 0x06030CFB RID: 199931 RVA: 0x006A189D File Offset: 0x0069FA9D
+		// Token: 0x1700D97E RID: 55678
+		// (get) Token: 0x06033C53 RID: 212051 RVA: 0x006FBD55 File Offset: 0x006F9F55
+		// (set) Token: 0x06033C54 RID: 212052 RVA: 0x006FBD5D File Offset: 0x006F9F5D
 		public IOpenSystemBoardWithReturnType_Union Type { get; set; }
 
-		// Token: 0x1700CE64 RID: 52836
-		// (get) Token: 0x06030CFC RID: 199932 RVA: 0x006A18A6 File Offset: 0x0069FAA6
-		// (set) Token: 0x06030CFD RID: 199933 RVA: 0x006A18AE File Offset: 0x0069FAAE
+		// Token: 0x1700D97F RID: 55679
+		// (get) Token: 0x06033C55 RID: 212053 RVA: 0x006FBD66 File Offset: 0x006F9F66
+		// (set) Token: 0x06033C56 RID: 212054 RVA: 0x006FBD6E File Offset: 0x006F9F6E
 		public object Value { get; set; }
 
-		// Token: 0x06030CFE RID: 199934 RVA: 0x006A18B7 File Offset: 0x0069FAB7
+		// Token: 0x06033C57 RID: 212055 RVA: 0x006FBD77 File Offset: 0x006F9F77
 		public IOpenSystemBoardWithReturnType_UnionUnion()
 		{
 			this.Type = IOpenSystemBoardWithReturnType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06030CFF RID: 199935 RVA: 0x006A18CD File Offset: 0x0069FACD
+		// Token: 0x06033C58 RID: 212056 RVA: 0x006FBD8D File Offset: 0x006F9F8D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06030D00 RID: 199936 RVA: 0x006A18DF File Offset: 0x0069FADF
+		// Token: 0x06033C59 RID: 212057 RVA: 0x006FBD9F File Offset: 0x006F9F9F
 		public IOpenSystemBoardWithReturnTypeT AsIOpenSystemBoardWithReturnType()
 		{
 			return this.As<IOpenSystemBoardWithReturnTypeT>();
 		}
 
-		// Token: 0x06030D01 RID: 199937 RVA: 0x006A18E7 File Offset: 0x0069FAE7
+		// Token: 0x06033C5A RID: 212058 RVA: 0x006FBDA7 File Offset: 0x006F9FA7
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenSystemBoardWithReturnType(IOpenSystemBoardWithReturnTypeT _iopensystemboardwithreturntype)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D02 RID: 199938 RVA: 0x006A18FC File Offset: 0x0069FAFC
+		// Token: 0x06033C5B RID: 212059 RVA: 0x006FBDBC File Offset: 0x006F9FBC
 		public IOpenConfirmBoxWithReturnT AsIOpenConfirmBoxWithReturn()
 		{
 			return this.As<IOpenConfirmBoxWithReturnT>();
 		}
 
-		// Token: 0x06030D03 RID: 199939 RVA: 0x006A1904 File Offset: 0x0069FB04
+		// Token: 0x06033C5C RID: 212060 RVA: 0x006FBDC4 File Offset: 0x006F9FC4
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenConfirmBoxWithReturn(IOpenConfirmBoxWithReturnT _iopenconfirmboxwithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D04 RID: 199940 RVA: 0x006A1919 File Offset: 0x0069FB19
+		// Token: 0x06033C5D RID: 212061 RVA: 0x006FBDD9 File Offset: 0x006F9FD9
 		public IOpenConfirmBox2WithReturnT AsIOpenConfirmBox2WithReturn()
 		{
 			return this.As<IOpenConfirmBox2WithReturnT>();
 		}
 
-		// Token: 0x06030D05 RID: 199941 RVA: 0x006A1921 File Offset: 0x0069FB21
+		// Token: 0x06033C5E RID: 212062 RVA: 0x006FBDE1 File Offset: 0x006F9FE1
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenConfirmBox2WithReturn(IOpenConfirmBox2WithReturnT _iopenconfirmbox2withreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D06 RID: 199942 RVA: 0x006A1936 File Offset: 0x0069FB36
+		// Token: 0x06033C5F RID: 212063 RVA: 0x006FBDF6 File Offset: 0x006F9FF6
 		public IOpenSoaringChallengeResultWithReturnT AsIOpenSoaringChallengeResultWithReturn()
 		{
 			return this.As<IOpenSoaringChallengeResultWithReturnT>();
 		}
 
-		// Token: 0x06030D07 RID: 199943 RVA: 0x006A193E File Offset: 0x0069FB3E
+		// Token: 0x06033C60 RID: 212064 RVA: 0x006FBDFE File Offset: 0x006F9FFE
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenSoaringChallengeResultWithReturn(IOpenSoaringChallengeResultWithReturnT _iopensoaringchallengeresultwithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D08 RID: 199944 RVA: 0x006A1953 File Offset: 0x0069FB53
+		// Token: 0x06033C61 RID: 212065 RVA: 0x006FBE13 File Offset: 0x006FA013
 		public IOpenMotorRaceChallengeResultWithReturnT AsIOpenMotorRaceChallengeResultWithReturn()
 		{
 			return this.As<IOpenMotorRaceChallengeResultWithReturnT>();
 		}
 
-		// Token: 0x06030D09 RID: 199945 RVA: 0x006A195B File Offset: 0x0069FB5B
+		// Token: 0x06033C62 RID: 212066 RVA: 0x006FBE1B File Offset: 0x006FA01B
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenMotorRaceChallengeResultWithReturn(IOpenMotorRaceChallengeResultWithReturnT _iopenmotorracechallengeresultwithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -109,13 +109,29 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D0A RID: 199946 RVA: 0x006A1970 File Offset: 0x0069FB70
+		// Token: 0x06033C63 RID: 212067 RVA: 0x006FBE30 File Offset: 0x006FA030
+		public IOpenMechaStuntTrackChallengeResultWithReturnT AsIOpenMechaStuntTrackChallengeResultWithReturn()
+		{
+			return this.As<IOpenMechaStuntTrackChallengeResultWithReturnT>();
+		}
+
+		// Token: 0x06033C64 RID: 212068 RVA: 0x006FBE38 File Offset: 0x006FA038
+		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenMechaStuntTrackChallengeResultWithReturn(IOpenMechaStuntTrackChallengeResultWithReturnT _iopenmechastunttrackchallengeresultwithreturn)
+		{
+			return new IOpenSystemBoardWithReturnType_UnionUnion
+			{
+				Type = IOpenSystemBoardWithReturnType_Union.IOpenMechaStuntTrackChallengeResultWithReturn,
+				Value = _iopenmechastunttrackchallengeresultwithreturn
+			};
+		}
+
+		// Token: 0x06033C65 RID: 212069 RVA: 0x006FBE4D File Offset: 0x006FA04D
 		public IOpenFishingItemDeliveryWithReturnT AsIOpenFishingItemDeliveryWithReturn()
 		{
 			return this.As<IOpenFishingItemDeliveryWithReturnT>();
 		}
 
-		// Token: 0x06030D0B RID: 199947 RVA: 0x006A1978 File Offset: 0x0069FB78
+		// Token: 0x06033C66 RID: 212070 RVA: 0x006FBE55 File Offset: 0x006FA055
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenFishingItemDeliveryWithReturn(IOpenFishingItemDeliveryWithReturnT _iopenfishingitemdeliverywithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -125,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D0C RID: 199948 RVA: 0x006A198D File Offset: 0x0069FB8D
+		// Token: 0x06033C67 RID: 212071 RVA: 0x006FBE6A File Offset: 0x006FA06A
 		public IOpenInfrastructureItemDeliveryWithReturnT AsIOpenInfrastructureItemDeliveryWithReturn()
 		{
 			return this.As<IOpenInfrastructureItemDeliveryWithReturnT>();
 		}
 
-		// Token: 0x06030D0D RID: 199949 RVA: 0x006A1995 File Offset: 0x0069FB95
+		// Token: 0x06033C68 RID: 212072 RVA: 0x006FBE72 File Offset: 0x006FA072
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenInfrastructureItemDeliveryWithReturn(IOpenInfrastructureItemDeliveryWithReturnT _iopeninfrastructureitemdeliverywithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -141,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D0E RID: 199950 RVA: 0x006A19AA File Offset: 0x0069FBAA
+		// Token: 0x06033C69 RID: 212073 RVA: 0x006FBE87 File Offset: 0x006FA087
 		public IOpenVillageInfrDeliveryWithReturnT AsIOpenVillageInfrDeliveryWithReturn()
 		{
 			return this.As<IOpenVillageInfrDeliveryWithReturnT>();
 		}
 
-		// Token: 0x06030D0F RID: 199951 RVA: 0x006A19B2 File Offset: 0x0069FBB2
+		// Token: 0x06033C6A RID: 212074 RVA: 0x006FBE8F File Offset: 0x006FA08F
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenVillageInfrDeliveryWithReturn(IOpenVillageInfrDeliveryWithReturnT _iopenvillageinfrdeliverywithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -157,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D10 RID: 199952 RVA: 0x006A19C7 File Offset: 0x0069FBC7
+		// Token: 0x06033C6B RID: 212075 RVA: 0x006FBEA5 File Offset: 0x006FA0A5
 		public IOpenGreatSwordChallengeResultT AsIOpenGreatSwordChallengeResult()
 		{
 			return this.As<IOpenGreatSwordChallengeResultT>();
 		}
 
-		// Token: 0x06030D11 RID: 199953 RVA: 0x006A19CF File Offset: 0x0069FBCF
+		// Token: 0x06033C6C RID: 212076 RVA: 0x006FBEAD File Offset: 0x006FA0AD
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenGreatSwordChallengeResult(IOpenGreatSwordChallengeResultT _iopengreatswordchallengeresult)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -173,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D12 RID: 199954 RVA: 0x006A19E5 File Offset: 0x0069FBE5
+		// Token: 0x06033C6D RID: 212077 RVA: 0x006FBEC3 File Offset: 0x006FA0C3
 		public IOpenGiantDeliveryWithReturnT AsIOpenGiantDeliveryWithReturn()
 		{
 			return this.As<IOpenGiantDeliveryWithReturnT>();
 		}
 
-		// Token: 0x06030D13 RID: 199955 RVA: 0x006A19ED File Offset: 0x0069FBED
+		// Token: 0x06033C6E RID: 212078 RVA: 0x006FBECB File Offset: 0x006FA0CB
 		public static IOpenSystemBoardWithReturnType_UnionUnion FromIOpenGiantDeliveryWithReturn(IOpenGiantDeliveryWithReturnT _iopengiantdeliverywithreturn)
 		{
 			return new IOpenSystemBoardWithReturnType_UnionUnion
@@ -189,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030D14 RID: 199956 RVA: 0x006A1A04 File Offset: 0x0069FC04
+		// Token: 0x06033C6F RID: 212079 RVA: 0x006FBEE4 File Offset: 0x006FA0E4
 		public static int Pack(FlatBufferBuilder builder, IOpenSystemBoardWithReturnType_UnionUnion _o)
 		{
 			switch (_o.Type)
@@ -204,6 +220,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				return IOpenSoaringChallengeResultWithReturn.Pack(builder, _o.AsIOpenSoaringChallengeResultWithReturn()).Value;
 			case IOpenSystemBoardWithReturnType_Union.IOpenMotorRaceChallengeResultWithReturn:
 				return IOpenMotorRaceChallengeResultWithReturn.Pack(builder, _o.AsIOpenMotorRaceChallengeResultWithReturn()).Value;
+			case IOpenSystemBoardWithReturnType_Union.IOpenMechaStuntTrackChallengeResultWithReturn:
+				return IOpenMechaStuntTrackChallengeResultWithReturn.Pack(builder, _o.AsIOpenMechaStuntTrackChallengeResultWithReturn()).Value;
 			case IOpenSystemBoardWithReturnType_Union.IOpenFishingItemDeliveryWithReturn:
 				return IOpenFishingItemDeliveryWithReturn.Pack(builder, _o.AsIOpenFishingItemDeliveryWithReturn()).Value;
 			case IOpenSystemBoardWithReturnType_Union.IOpenInfrastructureItemDeliveryWithReturn:

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E4D RID: 3661
+	// Token: 0x02000F32 RID: 3890
 	public struct MotorFightRole : IFlatbufferObject
 	{
-		// Token: 0x17002113 RID: 8467
-		// (get) Token: 0x06009927 RID: 39207 RVA: 0x00290A1C File Offset: 0x0028EC1C
+		// Token: 0x17002178 RID: 8568
+		// (get) Token: 0x06009F47 RID: 40775 RVA: 0x002AE5AC File Offset: 0x002AC7AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009928 RID: 39208 RVA: 0x00290A29 File Offset: 0x0028EC29
+		// Token: 0x06009F48 RID: 40776 RVA: 0x002AE5B9 File Offset: 0x002AC7B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009929 RID: 39209 RVA: 0x00290A30 File Offset: 0x0028EC30
+		// Token: 0x06009F49 RID: 40777 RVA: 0x002AE5C0 File Offset: 0x002AC7C0
 		public static MotorFightRole GetRootAsMotorFightRole(ByteBuffer _bb)
 		{
 			return MotorFightRole.GetRootAsMotorFightRole(_bb, default(MotorFightRole));
 		}
 
-		// Token: 0x0600992A RID: 39210 RVA: 0x00290A4C File Offset: 0x0028EC4C
+		// Token: 0x06009F4A RID: 40778 RVA: 0x002AE5DC File Offset: 0x002AC7DC
 		public static MotorFightRole GetRootAsMotorFightRole(ByteBuffer _bb, MotorFightRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600992B RID: 39211 RVA: 0x00290A69 File Offset: 0x0028EC69
+		// Token: 0x06009F4B RID: 40779 RVA: 0x002AE5F9 File Offset: 0x002AC7F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600992C RID: 39212 RVA: 0x00290A78 File Offset: 0x0028EC78
+		// Token: 0x06009F4C RID: 40780 RVA: 0x002AE608 File Offset: 0x002AC808
 		public MotorFightRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002114 RID: 8468
-		// (get) Token: 0x0600992D RID: 39213 RVA: 0x00290A88 File Offset: 0x0028EC88
+		// Token: 0x17002179 RID: 8569
+		// (get) Token: 0x06009F4D RID: 40781 RVA: 0x002AE618 File Offset: 0x002AC818
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002115 RID: 8469
-		// (get) Token: 0x0600992E RID: 39214 RVA: 0x00290AC4 File Offset: 0x0028ECC4
+		// Token: 0x1700217A RID: 8570
+		// (get) Token: 0x06009F4E RID: 40782 RVA: 0x002AE654 File Offset: 0x002AC854
 		public int ActivityId
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002116 RID: 8470
-		// (get) Token: 0x0600992F RID: 39215 RVA: 0x00290B00 File Offset: 0x0028ED00
+		// Token: 0x1700217B RID: 8571
+		// (get) Token: 0x06009F4F RID: 40783 RVA: 0x002AE690 File Offset: 0x002AC890
 		public int Type
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002117 RID: 8471
-		// (get) Token: 0x06009930 RID: 39216 RVA: 0x00290B3C File Offset: 0x0028ED3C
+		// Token: 0x1700217C RID: 8572
+		// (get) Token: 0x06009F50 RID: 40784 RVA: 0x002AE6CC File Offset: 0x002AC8CC
 		public int UnlockCondition
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002118 RID: 8472
-		// (get) Token: 0x06009931 RID: 39217 RVA: 0x00290B7C File Offset: 0x0028ED7C
+		// Token: 0x1700217D RID: 8573
+		// (get) Token: 0x06009F51 RID: 40785 RVA: 0x002AE70C File Offset: 0x002AC90C
 		public int TrialRole
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002119 RID: 8473
-		// (get) Token: 0x06009932 RID: 39218 RVA: 0x00290BBC File Offset: 0x0028EDBC
+		// Token: 0x1700217E RID: 8574
+		// (get) Token: 0x06009F52 RID: 40786 RVA: 0x002AE74C File Offset: 0x002AC94C
 		public int Effect
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700211A RID: 8474
-		// (get) Token: 0x06009933 RID: 39219 RVA: 0x00290BFC File Offset: 0x0028EDFC
+		// Token: 0x1700217F RID: 8575
+		// (get) Token: 0x06009F53 RID: 40787 RVA: 0x002AE78C File Offset: 0x002AC98C
 		public string BuffName
 		{
 			get
@@ -155,20 +155,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009934 RID: 39220 RVA: 0x00290C34 File Offset: 0x0028EE34
+		// Token: 0x06009F54 RID: 40788 RVA: 0x002AE7C4 File Offset: 0x002AC9C4
 		public Span<byte> GetBuffNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06009935 RID: 39221 RVA: 0x00290C44 File Offset: 0x0028EE44
+		// Token: 0x06009F55 RID: 40789 RVA: 0x002AE7D4 File Offset: 0x002AC9D4
 		public byte[] GetBuffNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700211B RID: 8475
-		// (get) Token: 0x06009936 RID: 39222 RVA: 0x00290C5C File Offset: 0x0028EE5C
+		// Token: 0x17002180 RID: 8576
+		// (get) Token: 0x06009F56 RID: 40790 RVA: 0x002AE7EC File Offset: 0x002AC9EC
 		public string BuffDesc
 		{
 			get
@@ -182,19 +182,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009937 RID: 39223 RVA: 0x00290C94 File Offset: 0x0028EE94
+		// Token: 0x06009F57 RID: 40791 RVA: 0x002AE824 File Offset: 0x002ACA24
 		public Span<byte> GetBuffDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06009938 RID: 39224 RVA: 0x00290CA4 File Offset: 0x0028EEA4
+		// Token: 0x06009F58 RID: 40792 RVA: 0x002AE834 File Offset: 0x002ACA34
 		public byte[] GetBuffDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009939 RID: 39225 RVA: 0x00290CBC File Offset: 0x0028EEBC
+		// Token: 0x06009F59 RID: 40793 RVA: 0x002AE84C File Offset: 0x002ACA4C
 		public string BuffDescParam(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -205,8 +205,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700211C RID: 8476
-		// (get) Token: 0x0600993A RID: 39226 RVA: 0x00290CF8 File Offset: 0x0028EEF8
+		// Token: 0x17002181 RID: 8577
+		// (get) Token: 0x06009F5A RID: 40794 RVA: 0x002AE888 File Offset: 0x002ACA88
 		public int BuffDescParamLength
 		{
 			get
@@ -220,8 +220,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700211D RID: 8477
-		// (get) Token: 0x0600993B RID: 39227 RVA: 0x00290D24 File Offset: 0x0028EF24
+		// Token: 0x17002182 RID: 8578
+		// (get) Token: 0x06009F5B RID: 40795 RVA: 0x002AE8B4 File Offset: 0x002ACAB4
 		public string GenreDesc
 		{
 			get
@@ -235,20 +235,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600993C RID: 39228 RVA: 0x00290D5C File Offset: 0x0028EF5C
+		// Token: 0x06009F5C RID: 40796 RVA: 0x002AE8EC File Offset: 0x002ACAEC
 		public Span<byte> GetGenreDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600993D RID: 39229 RVA: 0x00290D6C File Offset: 0x0028EF6C
+		// Token: 0x06009F5D RID: 40797 RVA: 0x002AE8FC File Offset: 0x002ACAFC
 		public byte[] GetGenreDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700211E RID: 8478
-		// (get) Token: 0x0600993E RID: 39230 RVA: 0x00290D84 File Offset: 0x0028EF84
+		// Token: 0x17002183 RID: 8579
+		// (get) Token: 0x06009F5E RID: 40798 RVA: 0x002AE914 File Offset: 0x002ACB14
 		public string RolePicture
 		{
 			get
@@ -262,20 +262,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600993F RID: 39231 RVA: 0x00290DBC File Offset: 0x0028EFBC
+		// Token: 0x06009F5F RID: 40799 RVA: 0x002AE94C File Offset: 0x002ACB4C
 		public Span<byte> GetRolePictureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x06009940 RID: 39232 RVA: 0x00290DCC File Offset: 0x0028EFCC
+		// Token: 0x06009F60 RID: 40800 RVA: 0x002AE95C File Offset: 0x002ACB5C
 		public byte[] GetRolePictureArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700211F RID: 8479
-		// (get) Token: 0x06009941 RID: 39233 RVA: 0x00290DE4 File Offset: 0x0028EFE4
+		// Token: 0x17002184 RID: 8580
+		// (get) Token: 0x06009F61 RID: 40801 RVA: 0x002AE974 File Offset: 0x002ACB74
 		public string RankRolePicture
 		{
 			get
@@ -289,20 +289,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009942 RID: 39234 RVA: 0x00290E1C File Offset: 0x0028F01C
+		// Token: 0x06009F62 RID: 40802 RVA: 0x002AE9AC File Offset: 0x002ACBAC
 		public Span<byte> GetRankRolePictureBytes()
 		{
 			return this.__p.__vector_as_span<byte>(26, 1);
 		}
 
-		// Token: 0x06009943 RID: 39235 RVA: 0x00290E2C File Offset: 0x0028F02C
+		// Token: 0x06009F63 RID: 40803 RVA: 0x002AE9BC File Offset: 0x002ACBBC
 		public byte[] GetRankRolePictureArray()
 		{
 			return this.__p.__vector_as_array<byte>(26) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17002120 RID: 8480
-		// (get) Token: 0x06009944 RID: 39236 RVA: 0x00290E44 File Offset: 0x0028F044
+		// Token: 0x17002185 RID: 8581
+		// (get) Token: 0x06009F64 RID: 40804 RVA: 0x002AE9D4 File Offset: 0x002ACBD4
 		public string MotorStandAnimPath
 		{
 			get
@@ -316,36 +316,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009945 RID: 39237 RVA: 0x00290E7C File Offset: 0x0028F07C
+		// Token: 0x06009F65 RID: 40805 RVA: 0x002AEA0C File Offset: 0x002ACC0C
 		public Span<byte> GetMotorStandAnimPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(28, 1);
 		}
 
-		// Token: 0x06009946 RID: 39238 RVA: 0x00290E8C File Offset: 0x0028F08C
+		// Token: 0x06009F66 RID: 40806 RVA: 0x002AEA1C File Offset: 0x002ACC1C
 		public byte[] GetMotorStandAnimPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(28) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009947 RID: 39239 RVA: 0x00290EA4 File Offset: 0x0028F0A4
+		// Token: 0x06009F67 RID: 40807 RVA: 0x002AEA34 File Offset: 0x002ACC34
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BuffDescParamIter()或GetBuffDescParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] BuffDescParam()
+		public string[] BuffDescParam()
 		{
 			return this.BuffDescParamIter().ToArray<string>();
 		}
 
-		// Token: 0x06009948 RID: 39240 RVA: 0x00290EB1 File Offset: 0x0028F0B1
+		// Token: 0x06009F68 RID: 40808 RVA: 0x002AEA41 File Offset: 0x002ACC41
 		[NullableContext(1)]
-		public readonly IEnumerable<string> BuffDescParamIter()
+		public IEnumerable<string> BuffDescParamIter()
 		{
 			MotorFightRole.<BuffDescParamIter>d__48 <BuffDescParamIter>d__ = new MotorFightRole.<BuffDescParamIter>d__48(-2);
 			<BuffDescParamIter>d__.<>3__<>4__this = this;
 			return <BuffDescParamIter>d__;
 		}
 
-		// Token: 0x04004EF6 RID: 20214
+		// Token: 0x040054DB RID: 21723
 		private Table __p;
 	}
 }

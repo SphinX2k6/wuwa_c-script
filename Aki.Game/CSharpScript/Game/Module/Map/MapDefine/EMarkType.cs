@@ -2,108 +2,108 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200555F RID: 21855
+	// Token: 0x02004531 RID: 17713
 	public enum EMarkType
 	{
-		// Token: 0x0401D49E RID: 119966
+		// Token: 0x04017F27 RID: 98087
 		None,
-		// Token: 0x0401D49F RID: 119967
+		// Token: 0x04017F28 RID: 98088
 		AreaMark,
-		// Token: 0x0401D4A0 RID: 119968
+		// Token: 0x04017F29 RID: 98089
 		FloorMark,
-		// Token: 0x0401D4A1 RID: 119969
+		// Token: 0x04017F2A RID: 98090
 		PlateArea,
-		// Token: 0x0401D4A2 RID: 119970
+		// Token: 0x04017F2B RID: 98091
 		SpecialArea,
-		// Token: 0x0401D4A3 RID: 119971
+		// Token: 0x04017F2C RID: 98092
 		BigTeleport,
-		// Token: 0x0401D4A4 RID: 119972
+		// Token: 0x04017F2D RID: 98093
 		SmallTeleport,
-		// Token: 0x0401D4A5 RID: 119973
+		// Token: 0x04017F2E RID: 98094
 		Entity,
-		// Token: 0x0401D4A6 RID: 119974
+		// Token: 0x04017F2F RID: 98095
 		NPC,
-		// Token: 0x0401D4A7 RID: 119975
+		// Token: 0x04017F30 RID: 98096
 		Custom,
-		// Token: 0x0401D4A8 RID: 119976
+		// Token: 0x04017F31 RID: 98097
 		SceneGameplay,
-		// Token: 0x0401D4A9 RID: 119977
+		// Token: 0x04017F32 RID: 98098
 		OtherPlayers,
-		// Token: 0x0401D4AA RID: 119978
+		// Token: 0x04017F33 RID: 98099
 		Quest,
-		// Token: 0x0401D4AB RID: 119979
+		// Token: 0x04017F34 RID: 98100
 		Parkour,
-		// Token: 0x0401D4AC RID: 119980
+		// Token: 0x04017F35 RID: 98101
 		TemporaryTeleport = 15,
-		// Token: 0x0401D4AD RID: 119981
+		// Token: 0x04017F36 RID: 98102
 		SoundBox,
-		// Token: 0x0401D4AE RID: 119982
+		// Token: 0x04017F37 RID: 98103
 		TreasureBoxDetector,
-		// Token: 0x0401D4AF RID: 119983
+		// Token: 0x04017F38 RID: 98104
 		TreasureBox,
-		// Token: 0x0401D4B0 RID: 119984
+		// Token: 0x04017F39 RID: 98105
 		FixedSceneGameplay,
-		// Token: 0x0401D4B1 RID: 119985
+		// Token: 0x04017F3A RID: 98106
 		LandscapeMark,
-		// Token: 0x0401D4B2 RID: 119986
+		// Token: 0x04017F3B RID: 98107
 		CalmingWindBell,
-		// Token: 0x0401D4B3 RID: 119987
+		// Token: 0x04017F3C RID: 98108
 		EnrichmentArea,
-		// Token: 0x0401D4B4 RID: 119988
+		// Token: 0x04017F3D RID: 98109
 		EnrichmentCollectProduct,
-		// Token: 0x0401D4B5 RID: 119989
+		// Token: 0x04017F3E RID: 98110
 		CorniceMeeting,
-		// Token: 0x0401D4B6 RID: 119990
+		// Token: 0x04017F3F RID: 98111
 		PunishReport,
-		// Token: 0x0401D4B7 RID: 119991
+		// Token: 0x04017F40 RID: 98112
 		CaveHole,
-		// Token: 0x0401D4B8 RID: 119992
+		// Token: 0x04017F41 RID: 98113
 		DreamLinkRun,
-		// Token: 0x0401D4B9 RID: 119993
+		// Token: 0x04017F42 RID: 98114
 		LevelPlayReport,
-		// Token: 0x0401D4BA RID: 119994
+		// Token: 0x04017F43 RID: 98115
 		CommonGamePlay,
-		// Token: 0x0401D4BB RID: 119995
+		// Token: 0x04017F44 RID: 98116
 		MapTravelQuest,
-		// Token: 0x0401D4BC RID: 119996
+		// Token: 0x04017F45 RID: 98117
 		FishingShip,
-		// Token: 0x0401D4BD RID: 119997
+		// Token: 0x04017F46 RID: 98118
 		FishingPoint,
-		// Token: 0x0401D4BE RID: 119998
+		// Token: 0x04017F47 RID: 98119
 		FishingCage,
-		// Token: 0x0401D4BF RID: 119999
+		// Token: 0x04017F48 RID: 98120
 		FishingDock,
-		// Token: 0x0401D4C0 RID: 120000
+		// Token: 0x04017F49 RID: 98121
 		MoraleExploreBox,
-		// Token: 0x0401D4C1 RID: 120001
+		// Token: 0x04017F4A RID: 98122
 		SightSpot,
-		// Token: 0x0401D4C2 RID: 120002
+		// Token: 0x04017F4B RID: 98123
 		FlyingHunter,
-		// Token: 0x0401D4C3 RID: 120003
+		// Token: 0x04017F4C RID: 98124
 		Frostbite,
-		// Token: 0x0401D4C4 RID: 120004
+		// Token: 0x04017F4D RID: 98125
 		HonamiScan,
-		// Token: 0x0401D4C5 RID: 120005
+		// Token: 0x04017F4E RID: 98126
 		HonamiScanItem,
-		// Token: 0x0401D4C6 RID: 120006
+		// Token: 0x04017F4F RID: 98127
 		GreatSwordChallenge = 42,
-		// Token: 0x0401D4C7 RID: 120007
+		// Token: 0x04017F50 RID: 98128
 		InfrRoad,
-		// Token: 0x0401D4C8 RID: 120008
+		// Token: 0x04017F51 RID: 98129
 		InfrObservatory,
-		// Token: 0x0401D4C9 RID: 120009
+		// Token: 0x04017F52 RID: 98130
 		PhantomArenaNpc,
-		// Token: 0x0401D4CA RID: 120010
+		// Token: 0x04017F53 RID: 98131
 		FloatLightForest,
-		// Token: 0x0401D4CB RID: 120011
+		// Token: 0x04017F54 RID: 98132
 		VillageInfr,
-		// Token: 0x0401D4CC RID: 120012
+		// Token: 0x04017F55 RID: 98133
 		VillageInfrTree,
-		// Token: 0x0401D4CD RID: 120013
+		// Token: 0x04017F56 RID: 98134
 		SheriffAnomaly,
-		// Token: 0x0401D4CE RID: 120014
+		// Token: 0x04017F57 RID: 98135
 		SheriffQuest,
-		// Token: 0x0401D4CF RID: 120015
+		// Token: 0x04017F58 RID: 98136
 		DollGrabMachine
 	}
 }

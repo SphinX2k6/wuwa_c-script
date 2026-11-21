@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000D4 RID: 212
+	// Token: 0x020000D7 RID: 215
 	public interface IHotFixLayoutData
 	{
-		// Token: 0x170000D6 RID: 214
-		// (get) Token: 0x060006FA RID: 1786
-		// (set) Token: 0x060006FB RID: 1787
+		// Token: 0x170000D8 RID: 216
+		// (get) Token: 0x06000716 RID: 1814
+		// (set) Token: 0x06000717 RID: 1815
 		int? Index { get; set; }
 	}
 }

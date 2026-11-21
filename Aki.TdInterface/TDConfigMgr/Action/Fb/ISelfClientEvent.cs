@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A3F RID: 10815
+	// Token: 0x02002D2C RID: 11564
 	public class ISelfClientEvent : IClientEventTarget
 	{
-		// Token: 0x0600EE24 RID: 60964 RVA: 0x0022AF61 File Offset: 0x00229161
-		[NullableContext(1)]
+		// Token: 0x0600FCBC RID: 64700 RVA: 0x00248915 File Offset: 0x00246B15
 		public static ISelfClientEvent Create(ISelfClientEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B68 RID: 19304
-		// (get) Token: 0x0600EE25 RID: 60965 RVA: 0x0022AF80 File Offset: 0x00229180
+		// Token: 0x17004F12 RID: 20242
+		// (get) Token: 0x0600FCBD RID: 64701 RVA: 0x00248934 File Offset: 0x00246B34
 		public override EClientEventTarget Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400830D RID: 33549
+		// Token: 0x04008A00 RID: 35328
 		private ISelfClientEvent Instance;
 	}
 }

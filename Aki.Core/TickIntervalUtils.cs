@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public static class TickIntervalUtils
 {
-	// Token: 0x060009C9 RID: 2505 RVA: 0x000322F4 File Offset: 0x000304F4
+	// Token: 0x06000A1A RID: 2586 RVA: 0x00032C50 File Offset: 0x00030E50
 	private static int GetTickInterval(double distance, double radio, TickIntervalConfig config)
 	{
 		if (distance < (double)config.TickPerFrameThreshold && radio < config.TickPerFrameThresholdRadio)
@@ -28,46 +28,46 @@ public static class TickIntervalUtils
 		return (int)Math.Min(num * num2, (double)config.MaxInterval);
 	}
 
-	// Token: 0x060009CA RID: 2506 RVA: 0x0003238B File Offset: 0x0003058B
+	// Token: 0x06000A1B RID: 2587 RVA: 0x00032CE7 File Offset: 0x00030EE7
 	public static double GetCharacterTickInterval(double distance, double radio)
 	{
 		return (double)TickIntervalUtils.GetTickInterval(distance, radio, TickIntervalUtils.characterConfig);
 	}
 
-	// Token: 0x060009CB RID: 2507 RVA: 0x0003239A File Offset: 0x0003059A
+	// Token: 0x06000A1C RID: 2588 RVA: 0x00032CF6 File Offset: 0x00030EF6
 	public static double GetCommonNpcTickInterval(double distance, double radio)
 	{
 		return (double)TickIntervalUtils.GetTickInterval(distance, radio, TickIntervalUtils.commonNpcConfig);
 	}
 
-	// Token: 0x060009CC RID: 2508 RVA: 0x000323A9 File Offset: 0x000305A9
+	// Token: 0x06000A1D RID: 2589 RVA: 0x00032D05 File Offset: 0x00030F05
 	public static int GetSimpleNpcTickInterval(double distance, double radio)
 	{
 		return TickIntervalUtils.GetTickInterval(distance, radio, TickIntervalUtils.simpleNpcConfig);
 	}
 
-	// Token: 0x060009CD RID: 2509 RVA: 0x000323B7 File Offset: 0x000305B7
+	// Token: 0x06000A1E RID: 2590 RVA: 0x00032D13 File Offset: 0x00030F13
 	public static int GetSceneItemTickInterval(double distance, double radio)
 	{
 		return TickIntervalUtils.GetTickInterval(distance, radio, TickIntervalUtils.sceneItemConfig);
 	}
 
-	// Token: 0x04000686 RID: 1670
+	// Token: 0x04000691 RID: 1681
 	private const int MAX_INTERVAL = 60;
 
-	// Token: 0x04000687 RID: 1671
+	// Token: 0x04000692 RID: 1682
 	[StaticVariableRuleIgnore]
 	private static readonly TickIntervalConfig characterConfig = new TickIntervalConfig(5000, 5000, 1.3089969158172607, 0.1745329201221466, 60);
 
-	// Token: 0x04000688 RID: 1672
+	// Token: 0x04000693 RID: 1683
 	[StaticVariableRuleIgnore]
 	private static readonly TickIntervalConfig commonNpcConfig = new TickIntervalConfig(5000, 5000, 1.3089969158172607, 0.1745329201221466, 60);
 
-	// Token: 0x04000689 RID: 1673
+	// Token: 0x04000694 RID: 1684
 	[StaticVariableRuleIgnore]
 	private static readonly TickIntervalConfig simpleNpcConfig = new TickIntervalConfig(5000, 3500, 1.3089969158172607, 0.1745329201221466, 60);
 
-	// Token: 0x0400068A RID: 1674
+	// Token: 0x04000695 RID: 1685
 	[StaticVariableRuleIgnore]
 	private static readonly TickIntervalConfig sceneItemConfig = new TickIntervalConfig(1500, 1000, 1.3089969158172607, 0.1745329201221466, 60);
 }

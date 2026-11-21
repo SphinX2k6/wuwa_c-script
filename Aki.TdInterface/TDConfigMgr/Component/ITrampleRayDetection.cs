@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200079D RID: 1949
+	// Token: 0x0200083E RID: 2110
 	public class ITrampleRayDetection
 	{
-		// Token: 0x06002A46 RID: 10822 RVA: 0x0006EFF7 File Offset: 0x0006D1F7
-		[NullableContext(1)]
+		// Token: 0x06002D6E RID: 11630 RVA: 0x0007629F File Offset: 0x0007449F
 		public static ITrampleRayDetection Create([Nullable(2)] ITrampleRayDetection instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x04001C40 RID: 7232
+		// Token: 0x04001E49 RID: 7753
 		[Nullable(2)]
 		protected ITrampleRayDetection FbInstance;
 	}

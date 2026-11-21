@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B9 RID: 9913
+	// Token: 0x0200297C RID: 10620
 	public class ISafePos : ITeleportConfig
 	{
-		// Token: 0x0600DDC3 RID: 56771 RVA: 0x0020ED55 File Offset: 0x0020CF55
-		[NullableContext(1)]
+		// Token: 0x0600EB9A RID: 60314 RVA: 0x0022B4F5 File Offset: 0x002296F5
 		public static ISafePos Create(ISafePos? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004213 RID: 16915
-		// (get) Token: 0x0600DDC4 RID: 56772 RVA: 0x0020ED74 File Offset: 0x0020CF74
+		// Token: 0x17004550 RID: 17744
+		// (get) Token: 0x0600EB9B RID: 60315 RVA: 0x0022B514 File Offset: 0x00229714
 		public override ETeleportType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004214 RID: 16916
-		// (get) Token: 0x0600DDC5 RID: 56773 RVA: 0x0020ED84 File Offset: 0x0020CF84
+		// Token: 0x17004551 RID: 17745
+		// (get) Token: 0x0600EB9C RID: 60316 RVA: 0x0022B524 File Offset: 0x00229724
 		public virtual int? FinalSafePosEntityId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B1F RID: 31519
+		// Token: 0x040081BC RID: 33212
 		private ISafePos Instance;
 	}
 }

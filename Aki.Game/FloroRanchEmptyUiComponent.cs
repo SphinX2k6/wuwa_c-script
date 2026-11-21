@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B13 RID: 6931
+// Token: 0x02000FD2 RID: 4050
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchEmptyUiComponent)]
 public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 {
-	// Token: 0x0600CDA4 RID: 52644 RVA: 0x002ED56C File Offset: 0x002EB76C
+	// Token: 0x0600A1B5 RID: 41397 RVA: 0x002F8658 File Offset: 0x002F6858
 	[NullableContext(2)]
 	public override FloroRanchUiItemBase GetUiItem()
 	{
@@ -20,7 +20,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return null;
 	}
 
-	// Token: 0x0600CDA5 RID: 52645 RVA: 0x002ED5B4 File Offset: 0x002EB7B4
+	// Token: 0x0600A1B6 RID: 41398 RVA: 0x002F86A0 File Offset: 0x002F68A0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -35,7 +35,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CDA6 RID: 52646 RVA: 0x002ED5F0 File Offset: 0x002EB7F0
+	// Token: 0x0600A1B7 RID: 41399 RVA: 0x002F86DC File Offset: 0x002F68DC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -50,7 +50,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return <CreateUiItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CDA7 RID: 52647 RVA: 0x002ED62C File Offset: 0x002EB82C
+	// Token: 0x0600A1B8 RID: 41400 RVA: 0x002F8718 File Offset: 0x002F6918
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchEmptyUiComponent.<PlayHideAnim>d__3 <PlayHideAnim>d__;
@@ -60,7 +60,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CDA8 RID: 52648 RVA: 0x002ED668 File Offset: 0x002EB868
+	// Token: 0x0600A1B9 RID: 41401 RVA: 0x002F8754 File Offset: 0x002F6954
 	public override UniTask PlayNormalAnim()
 	{
 		FloroRanchEmptyUiComponent.<PlayNormalAnim>d__4 <PlayNormalAnim>d__;
@@ -70,7 +70,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return <PlayNormalAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CDA9 RID: 52649 RVA: 0x002ED6A4 File Offset: 0x002EB8A4
+	// Token: 0x0600A1BA RID: 41402 RVA: 0x002F8790 File Offset: 0x002F6990
 	public override UniTask ShowUiItem()
 	{
 		FloroRanchEmptyUiComponent.<ShowUiItem>d__5 <ShowUiItem>d__;
@@ -80,7 +80,7 @@ public class FloroRanchEmptyUiComponent : FloroRanchUiItemBaseComponent
 		return <ShowUiItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CDAA RID: 52650 RVA: 0x002ED6E0 File Offset: 0x002EB8E0
+	// Token: 0x0600A1BB RID: 41403 RVA: 0x002F87CC File Offset: 0x002F69CC
 	public override UniTask HideUiItem()
 	{
 		FloroRanchEmptyUiComponent.<HideUiItem>d__6 <HideUiItem>d__;

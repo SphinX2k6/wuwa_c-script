@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A29 RID: 10793
+	// Token: 0x02002D16 RID: 11542
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBvbSelectCard : IBvbPlayerOperationType
 	{
-		// Token: 0x0600EDD8 RID: 60888 RVA: 0x0022A901 File Offset: 0x00228B01
-		[NullableContext(1)]
+		// Token: 0x0600FC70 RID: 64624 RVA: 0x002482B5 File Offset: 0x002464B5
+		[NullableContext(0)]
 		public static IBvbSelectCard Create(IBvbSelectCard? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B48 RID: 19272
-		// (get) Token: 0x0600EDD9 RID: 60889 RVA: 0x0022A920 File Offset: 0x00228B20
+		// Token: 0x17004EF2 RID: 20210
+		// (get) Token: 0x0600FC71 RID: 64625 RVA: 0x002482D4 File Offset: 0x002464D4
 		public override EBvbPlayerOperationType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B49 RID: 19273
-		// (get) Token: 0x0600EDDA RID: 60890 RVA: 0x0022A930 File Offset: 0x00228B30
+		// Token: 0x17004EF3 RID: 20211
+		// (get) Token: 0x0600FC72 RID: 64626 RVA: 0x002482E4 File Offset: 0x002464E4
 		public virtual List<int> CardIdList
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082E9 RID: 33513
+		// Token: 0x040089DC RID: 35292
 		private IBvbSelectCard Instance;
 
-		// Token: 0x040082EA RID: 33514
+		// Token: 0x040089DD RID: 35293
 		private List<int> _CardIdListCache;
 
-		// Token: 0x040082EB RID: 33515
+		// Token: 0x040089DE RID: 35294
 		private bool _CardIdListInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ADB RID: 19163
+	// Token: 0x02004FB0 RID: 20400
 	public struct ICheckPlayerCanJoinActivityType : IFlatbufferObject
 	{
-		// Token: 0x17008AF1 RID: 35569
-		// (get) Token: 0x0601E19E RID: 123294 RVA: 0x0043906C File Offset: 0x0043726C
+		// Token: 0x170091E8 RID: 37352
+		// (get) Token: 0x0601FCB3 RID: 130227 RVA: 0x0046AD18 File Offset: 0x00468F18
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E19F RID: 123295 RVA: 0x00439079 File Offset: 0x00437279
+		// Token: 0x0601FCB4 RID: 130228 RVA: 0x0046AD25 File Offset: 0x00468F25
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E1A0 RID: 123296 RVA: 0x00439080 File Offset: 0x00437280
+		// Token: 0x0601FCB5 RID: 130229 RVA: 0x0046AD2C File Offset: 0x00468F2C
 		public static ICheckPlayerCanJoinActivityType GetRootAsICheckPlayerCanJoinActivityType(ByteBuffer _bb)
 		{
 			return ICheckPlayerCanJoinActivityType.GetRootAsICheckPlayerCanJoinActivityType(_bb, default(ICheckPlayerCanJoinActivityType));
 		}
 
-		// Token: 0x0601E1A1 RID: 123297 RVA: 0x0043909C File Offset: 0x0043729C
+		// Token: 0x0601FCB6 RID: 130230 RVA: 0x0046AD48 File Offset: 0x00468F48
 		public static ICheckPlayerCanJoinActivityType GetRootAsICheckPlayerCanJoinActivityType(ByteBuffer _bb, ICheckPlayerCanJoinActivityType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E1A2 RID: 123298 RVA: 0x004390B9 File Offset: 0x004372B9
+		// Token: 0x0601FCB7 RID: 130231 RVA: 0x0046AD65 File Offset: 0x00468F65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E1A3 RID: 123299 RVA: 0x004390C8 File Offset: 0x004372C8
+		// Token: 0x0601FCB8 RID: 130232 RVA: 0x0046AD74 File Offset: 0x00468F74
 		public ICheckPlayerCanJoinActivityType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AF2 RID: 35570
-		// (get) Token: 0x0601E1A4 RID: 123300 RVA: 0x004390D8 File Offset: 0x004372D8
+		// Token: 0x170091E9 RID: 37353
+		// (get) Token: 0x0601FCB9 RID: 130233 RVA: 0x0046AD84 File Offset: 0x00468F84
 		public ECheckPlayerCanJoinActivityType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AF3 RID: 35571
-		// (get) Token: 0x0601E1A5 RID: 123301 RVA: 0x00439114 File Offset: 0x00437314
+		// Token: 0x170091EA RID: 37354
+		// (get) Token: 0x0601FCBA RID: 130234 RVA: 0x0046ADC0 File Offset: 0x00468FC0
 		public bool CanJoin
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E1A6 RID: 123302 RVA: 0x00439153 File Offset: 0x00437353
+		// Token: 0x0601FCBB RID: 130235 RVA: 0x0046ADFF File Offset: 0x00468FFF
 		public static Offset<ICheckPlayerCanJoinActivityType> CreateICheckPlayerCanJoinActivityType(FlatBufferBuilder builder, ECheckPlayerCanJoinActivityType Type = ECheckPlayerCanJoinActivityType.Rogue, bool CanJoin = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerCanJoinActivityType.EndICheckPlayerCanJoinActivityType(builder);
 		}
 
-		// Token: 0x0601E1A7 RID: 123303 RVA: 0x00439170 File Offset: 0x00437370
+		// Token: 0x0601FCBC RID: 130236 RVA: 0x0046AE1C File Offset: 0x0046901C
 		public static void StartICheckPlayerCanJoinActivityType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E1A8 RID: 123304 RVA: 0x00439179 File Offset: 0x00437379
+		// Token: 0x0601FCBD RID: 130237 RVA: 0x0046AE25 File Offset: 0x00469025
 		public static void AddType(FlatBufferBuilder builder, ECheckPlayerCanJoinActivityType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E1A9 RID: 123305 RVA: 0x00439184 File Offset: 0x00437384
+		// Token: 0x0601FCBE RID: 130238 RVA: 0x0046AE30 File Offset: 0x00469030
 		public static void AddCanJoin(FlatBufferBuilder builder, bool canJoin)
 		{
 			builder.AddBool(1, canJoin, false);
 		}
 
-		// Token: 0x0601E1AA RID: 123306 RVA: 0x0043918F File Offset: 0x0043738F
+		// Token: 0x0601FCBF RID: 130239 RVA: 0x0046AE3B File Offset: 0x0046903B
 		public static Offset<ICheckPlayerCanJoinActivityType> EndICheckPlayerCanJoinActivityType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerCanJoinActivityType>(builder.EndTable());
 		}
 
-		// Token: 0x0601E1AB RID: 123307 RVA: 0x0043919C File Offset: 0x0043739C
+		// Token: 0x0601FCC0 RID: 130240 RVA: 0x0046AE48 File Offset: 0x00469048
 		public ICheckPlayerCanJoinActivityTypeT UnPack()
 		{
 			ICheckPlayerCanJoinActivityTypeT checkPlayerCanJoinActivityTypeT = new ICheckPlayerCanJoinActivityTypeT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerCanJoinActivityTypeT;
 		}
 
-		// Token: 0x0601E1AC RID: 123308 RVA: 0x004391B7 File Offset: 0x004373B7
+		// Token: 0x0601FCC1 RID: 130241 RVA: 0x0046AE63 File Offset: 0x00469063
 		public void UnPackTo(ICheckPlayerCanJoinActivityTypeT _o)
 		{
 			_o.Type = this.Type;
 			_o.CanJoin = this.CanJoin;
 		}
 
-		// Token: 0x0601E1AD RID: 123309 RVA: 0x004391D4 File Offset: 0x004373D4
+		// Token: 0x0601FCC2 RID: 130242 RVA: 0x0046AE80 File Offset: 0x00469080
 		public static Offset<ICheckPlayerCanJoinActivityType> Pack(FlatBufferBuilder builder, ICheckPlayerCanJoinActivityTypeT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerCanJoinActivityType.CreateICheckPlayerCanJoinActivityType(builder, _o.Type, _o.CanJoin);
 		}
 
-		// Token: 0x0400D365 RID: 54117
+		// Token: 0x0400DE50 RID: 56912
 		private Table __p;
 	}
 }

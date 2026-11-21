@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005ED0 RID: 24272
+	// Token: 0x02006513 RID: 25875
 	public class ICommonBtTaskT
 	{
-		// Token: 0x1700B58F RID: 46479
-		// (get) Token: 0x06029B0A RID: 170762 RVA: 0x005B904A File Offset: 0x005B724A
-		// (set) Token: 0x06029B0B RID: 170763 RVA: 0x005B9052 File Offset: 0x005B7252
+		// Token: 0x1700BEFA RID: 48890
+		// (get) Token: 0x0602C1BE RID: 180670 RVA: 0x0060252E File Offset: 0x0060072E
+		// (set) Token: 0x0602C1BF RID: 180671 RVA: 0x00602536 File Offset: 0x00600736
 		public ECommonBtNodeType Type { get; set; }
 
-		// Token: 0x1700B590 RID: 46480
-		// (get) Token: 0x06029B0C RID: 170764 RVA: 0x005B905B File Offset: 0x005B725B
-		// (set) Token: 0x06029B0D RID: 170765 RVA: 0x005B9063 File Offset: 0x005B7263
+		// Token: 0x1700BEFB RID: 48891
+		// (get) Token: 0x0602C1C0 RID: 180672 RVA: 0x0060253F File Offset: 0x0060073F
+		// (set) Token: 0x0602C1C1 RID: 180673 RVA: 0x00602547 File Offset: 0x00600747
 		public int Id { get; set; }
 
-		// Token: 0x1700B591 RID: 46481
-		// (get) Token: 0x06029B0E RID: 170766 RVA: 0x005B906C File Offset: 0x005B726C
-		// (set) Token: 0x06029B0F RID: 170767 RVA: 0x005B9074 File Offset: 0x005B7274
+		// Token: 0x1700BEFC RID: 48892
+		// (get) Token: 0x0602C1C2 RID: 180674 RVA: 0x00602550 File Offset: 0x00600750
+		// (set) Token: 0x0602C1C3 RID: 180675 RVA: 0x00602558 File Offset: 0x00600758
 		public string Desc { get; set; }
 
-		// Token: 0x1700B592 RID: 46482
-		// (get) Token: 0x06029B10 RID: 170768 RVA: 0x005B907D File Offset: 0x005B727D
-		// (set) Token: 0x06029B11 RID: 170769 RVA: 0x005B9085 File Offset: 0x005B7285
+		// Token: 0x1700BEFD RID: 48893
+		// (get) Token: 0x0602C1C4 RID: 180676 RVA: 0x00602561 File Offset: 0x00600761
+		// (set) Token: 0x0602C1C5 RID: 180677 RVA: 0x00602569 File Offset: 0x00600769
 		public List<TCommonBtDecoratorUnion> Decorators { get; set; }
 
-		// Token: 0x1700B593 RID: 46483
-		// (get) Token: 0x06029B12 RID: 170770 RVA: 0x005B908E File Offset: 0x005B728E
-		// (set) Token: 0x06029B13 RID: 170771 RVA: 0x005B9096 File Offset: 0x005B7296
+		// Token: 0x1700BEFE RID: 48894
+		// (get) Token: 0x0602C1C6 RID: 180678 RVA: 0x00602572 File Offset: 0x00600772
+		// (set) Token: 0x0602C1C7 RID: 180679 RVA: 0x0060257A File Offset: 0x0060077A
 		public bool _FoldedForTree { get; set; }
 
-		// Token: 0x1700B594 RID: 46484
-		// (get) Token: 0x06029B14 RID: 170772 RVA: 0x005B909F File Offset: 0x005B729F
-		// (set) Token: 0x06029B15 RID: 170773 RVA: 0x005B90A7 File Offset: 0x005B72A7
+		// Token: 0x1700BEFF RID: 48895
+		// (get) Token: 0x0602C1C8 RID: 180680 RVA: 0x00602583 File Offset: 0x00600783
+		// (set) Token: 0x0602C1C9 RID: 180681 RVA: 0x0060258B File Offset: 0x0060078B
 		public ICommonBtActionInfoT ActionInfo { get; set; }
 
-		// Token: 0x1700B595 RID: 46485
-		// (get) Token: 0x06029B16 RID: 170774 RVA: 0x005B90B0 File Offset: 0x005B72B0
-		// (set) Token: 0x06029B17 RID: 170775 RVA: 0x005B90B8 File Offset: 0x005B72B8
+		// Token: 0x1700BF00 RID: 48896
+		// (get) Token: 0x0602C1CA RID: 180682 RVA: 0x00602594 File Offset: 0x00600794
+		// (set) Token: 0x0602C1CB RID: 180683 RVA: 0x0060259C File Offset: 0x0060079C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06029B18 RID: 170776 RVA: 0x005B90C1 File Offset: 0x005B72C1
+		// Token: 0x0602C1CC RID: 180684 RVA: 0x006025A5 File Offset: 0x006007A5
 		public ICommonBtTaskT()
 		{
 			this.Type = ECommonBtNodeType.Start;

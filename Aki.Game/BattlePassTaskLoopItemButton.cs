@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002334 RID: 9012
+// Token: 0x02001819 RID: 6169
 internal class BattlePassTaskLoopItemButton : UiPanelBase
 {
-	// Token: 0x06011D64 RID: 73060 RVA: 0x004651FC File Offset: 0x004633FC
+	// Token: 0x0600F214 RID: 61972 RVA: 0x004722C4 File Offset: 0x004704C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -24,21 +24,21 @@ internal class BattlePassTaskLoopItemButton : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06011D65 RID: 73061 RVA: 0x00465286 File Offset: 0x00463486
+	// Token: 0x0600F215 RID: 61973 RVA: 0x0047234E File Offset: 0x0047054E
 	[NullableContext(2)]
 	public void RefreshTextByTextId(string textId)
 	{
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x020088B6 RID: 34998
+	// Token: 0x02007A3F RID: 31295
 	private enum EButtonComponent
 	{
-		// Token: 0x0402C6EC RID: 181996
+		// Token: 0x04027A00 RID: 162304
 		Button,
-		// Token: 0x0402C6ED RID: 181997
+		// Token: 0x04027A01 RID: 162305
 		Text,
-		// Token: 0x0402C6EE RID: 181998
+		// Token: 0x04027A02 RID: 162306
 		RedDotItem
 	}
 }

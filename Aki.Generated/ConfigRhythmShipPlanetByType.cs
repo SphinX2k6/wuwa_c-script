@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007F9 RID: 2041
+	// Token: 0x02000815 RID: 2069
 	public class ConfigRhythmShipPlanetByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002FE8 RID: 12264 RVA: 0x00168010 File Offset: 0x00166210
+		// Token: 0x06003090 RID: 12432 RVA: 0x0016F2F8 File Offset: 0x0016D4F8
 		static ConfigRhythmShipPlanetByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRhythmShipPlanetByType.CreateStaticDefaultValue), new Action(ConfigRhythmShipPlanetByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002FE9 RID: 12265 RVA: 0x00168030 File Offset: 0x00166230
+		// Token: 0x06003091 RID: 12433 RVA: 0x0016F318 File Offset: 0x0016D518
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRhythmShipPlanetByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002FEA RID: 12266 RVA: 0x001680AF File Offset: 0x001662AF
+		// Token: 0x06003092 RID: 12434 RVA: 0x0016F397 File Offset: 0x0016D597
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRhythmShipPlanetByType.LogPair = null;
 			ConfigRhythmShipPlanetByType.HandleId = 0;
 		}
 
-		// Token: 0x06002FEB RID: 12267 RVA: 0x001680BD File Offset: 0x001662BD
+		// Token: 0x06003093 RID: 12435 RVA: 0x0016F3A5 File Offset: 0x0016D5A5
 		public static void Init()
 		{
 			ConfigRhythmShipPlanetByType.HandleId = ConfigCommon.InitDataStatement(ConfigRhythmShipPlanetByType.HandleId, "db_rhythmship.db", "select BinData from `RhythmShipPlanet` where Type=?");
 		}
 
-		// Token: 0x06002FEC RID: 12268 RVA: 0x001680D8 File Offset: 0x001662D8
+		// Token: 0x06003094 RID: 12436 RVA: 0x0016F3C0 File Offset: 0x0016D5C0
 		[NullableContext(2)]
 		public static IReadOnlyList<RhythmShipPlanet> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040037B5 RID: 14261
+		// Token: 0x04003879 RID: 14457
 		private const string DB = "db_rhythmship.db";
 
-		// Token: 0x040037B6 RID: 14262
+		// Token: 0x0400387A RID: 14458
 		private const string FILE = "j.节奏飞船_局外.xlsx";
 
-		// Token: 0x040037B7 RID: 14263
+		// Token: 0x0400387B RID: 14459
 		private const string TABLE = "RhythmShipPlanet";
 
-		// Token: 0x040037B8 RID: 14264
+		// Token: 0x0400387C RID: 14460
 		private const string COMMAND = "select BinData from `RhythmShipPlanet` where Type=?";
 
-		// Token: 0x040037B9 RID: 14265
+		// Token: 0x0400387D RID: 14461
 		private const string KEY_PREFIX = "RhythmShipPlanetByType";
 
-		// Token: 0x040037BA RID: 14266
+		// Token: 0x0400387E RID: 14462
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040037BB RID: 14267
+		// Token: 0x0400387F RID: 14463
 		private static int HandleId;
 	}
 }

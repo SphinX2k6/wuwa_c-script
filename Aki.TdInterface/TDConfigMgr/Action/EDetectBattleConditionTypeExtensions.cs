@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022FF RID: 8959
+	// Token: 0x0200256E RID: 9582
 	public static class EDetectBattleConditionTypeExtensions
 	{
-		// Token: 0x0600C3FA RID: 50170 RVA: 0x001C9E2C File Offset: 0x001C802C
+		// Token: 0x0600CFC9 RID: 53193 RVA: 0x001E1CF4 File Offset: 0x001DFEF4
 		public static string ToEnumString(this EDetectBattleConditionType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3FB RID: 50171 RVA: 0x001C9E54 File Offset: 0x001C8054
+		// Token: 0x0600CFCA RID: 53194 RVA: 0x001E1D1C File Offset: 0x001DFF1C
 		public static EDetectBattleConditionType FromString(string name)
 		{
 			EDetectBattleConditionType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C3FC RID: 50172 RVA: 0x001C9E7D File Offset: 0x001C807D
+		// Token: 0x0600CFCB RID: 53195 RVA: 0x001E1D45 File Offset: 0x001DFF45
 		public static bool TryFromString(string name, out EDetectBattleConditionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C3FD RID: 50173 RVA: 0x001C9EA2 File Offset: 0x001C80A2
+		// Token: 0x0600CFCC RID: 53196 RVA: 0x001E1D6A File Offset: 0x001DFF6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C3FE RID: 50174 RVA: 0x001C9EB2 File Offset: 0x001C80B2
+		// Token: 0x0600CFCD RID: 53197 RVA: 0x001E1D7A File Offset: 0x001DFF7A
 		public static EDetectBattleConditionType[] GetValues()
 		{
 			return new EDetectBattleConditionType[1];
 		}
 
-		// Token: 0x0600C3FF RID: 50175 RVA: 0x001C9EBA File Offset: 0x001C80BA
+		// Token: 0x0600CFCE RID: 53198 RVA: 0x001E1D82 File Offset: 0x001DFF82
 		public static string[] GetNames()
 		{
 			return new string[]

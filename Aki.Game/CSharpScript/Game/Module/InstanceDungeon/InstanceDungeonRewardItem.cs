@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587E RID: 22654
+	// Token: 0x02004856 RID: 18518
 	public class InstanceDungeonRewardItem : GridProxyAbstract<ValueTuple<int, int>>
 	{
-		// Token: 0x06039A81 RID: 236161 RVA: 0x00DB3CFC File Offset: 0x00DB1EFC
+		// Token: 0x0602E9A4 RID: 190884 RVA: 0x00D02C10 File Offset: 0x00D00E10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -27,20 +27,20 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039A82 RID: 236162 RVA: 0x00DB3D86 File Offset: 0x00DB1F86
+		// Token: 0x0602E9A5 RID: 190885 RVA: 0x00D02C9A File Offset: 0x00D00E9A
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetGridLayout(2), new Func<CommonItemSmallItemGrid>(this.OnRewardLayoutUpdater), null, false, true);
 		}
 
-		// Token: 0x06039A83 RID: 236163 RVA: 0x00DB3DA9 File Offset: 0x00DB1FA9
+		// Token: 0x0602E9A6 RID: 190886 RVA: 0x00D02CBD File Offset: 0x00D00EBD
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid OnRewardLayoutUpdater()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06039A84 RID: 236164 RVA: 0x00DB3DB0 File Offset: 0x00DB1FB0
+		// Token: 0x0602E9A7 RID: 190887 RVA: 0x00D02CC4 File Offset: 0x00D00EC4
 		public override void Refresh(ValueTuple<int, int> data, bool isSelected, int gridIndex)
 		{
 			Dictionary<int, int> dropShowInfo = AdventureGuideConfig.Instance.GetDropShowInfo(data.Item2);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.SelfLevel = data.Item1;
 		}
 
-		// Token: 0x06039A85 RID: 236165 RVA: 0x00DB3E80 File Offset: 0x00DB2080
+		// Token: 0x0602E9A8 RID: 190888 RVA: 0x00D02D94 File Offset: 0x00D00F94
 		public void SetCurrentItem(int currentItemLevel)
 		{
 			UUIItem item = base.GetItem(1);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item.SetUIActive(this.SelfLevel == currentItemLevel);
 		}
 
-		// Token: 0x0401E213 RID: 123411
+		// Token: 0x04018CB0 RID: 101552
 		[Nullable(new byte[]
 		{
 			2,
@@ -78,19 +78,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> Layout;
 
-		// Token: 0x0401E214 RID: 123412
+		// Token: 0x04018CB1 RID: 101553
 		private int SelfLevel = -1;
 
-		// Token: 0x0200BAD9 RID: 47833
+		// Token: 0x0200A4F2 RID: 42226
 		private static class EChildType
 		{
-			// Token: 0x0403876B RID: 231275
+			// Token: 0x0403316C RID: 209260
 			public const int TitleText = 0;
 
-			// Token: 0x0403876C RID: 231276
+			// Token: 0x0403316D RID: 209261
 			public const int CurrentItem = 1;
 
-			// Token: 0x0403876D RID: 231277
+			// Token: 0x0403316E RID: 209262
 			public const int RewardLayout = 2;
 		}
 	}

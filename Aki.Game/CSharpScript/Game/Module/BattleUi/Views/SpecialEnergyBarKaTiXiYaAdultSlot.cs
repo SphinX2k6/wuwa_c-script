@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE4 RID: 24036
+	// Token: 0x02004DC8 RID: 19912
 	public class SpecialEnergyBarKaTiXiYaAdultSlot : SpecialEnergyBarSlot
 	{
 	}

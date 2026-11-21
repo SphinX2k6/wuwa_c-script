@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D20 RID: 15648
+	// Token: 0x02004137 RID: 16695
 	public class IAtomicProcessStoveCoreFallT
 	{
-		// Token: 0x17006B56 RID: 27478
-		// (get) Token: 0x0601598B RID: 88459 RVA: 0x0031E4A7 File Offset: 0x0031C6A7
-		// (set) Token: 0x0601598C RID: 88460 RVA: 0x0031E4AF File Offset: 0x0031C6AF
+		// Token: 0x17007110 RID: 28944
+		// (get) Token: 0x06016EC3 RID: 93891 RVA: 0x0034571F File Offset: 0x0034391F
+		// (set) Token: 0x06016EC4 RID: 93892 RVA: 0x00345727 File Offset: 0x00343927
 		public EAtomicProcess Type { get; set; }
 
-		// Token: 0x17006B57 RID: 27479
-		// (get) Token: 0x0601598D RID: 88461 RVA: 0x0031E4B8 File Offset: 0x0031C6B8
-		// (set) Token: 0x0601598E RID: 88462 RVA: 0x0031E4C0 File Offset: 0x0031C6C0
+		// Token: 0x17007111 RID: 28945
+		// (get) Token: 0x06016EC5 RID: 93893 RVA: 0x00345730 File Offset: 0x00343930
+		// (set) Token: 0x06016EC6 RID: 93894 RVA: 0x00345738 File Offset: 0x00343938
 		public List<int> SplineEntityIds { get; set; }
 
-		// Token: 0x0601598F RID: 88463 RVA: 0x0031E4C9 File Offset: 0x0031C6C9
+		// Token: 0x06016EC7 RID: 93895 RVA: 0x00345741 File Offset: 0x00343941
 		public IAtomicProcessStoveCoreFallT()
 		{
 			this.Type = EAtomicProcess.StoveCoreFall;

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F6A RID: 8042
+// Token: 0x0200142C RID: 5164
 [NullableContext(2)]
 [Nullable(0)]
 public class TreasureCompassArrow : UiPanelBase
 {
-	// Token: 0x0600F975 RID: 63861 RVA: 0x003C7234 File Offset: 0x003C5434
+	// Token: 0x0600CD94 RID: 52628 RVA: 0x003D2D20 File Offset: 0x003D0F20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -26,7 +26,7 @@ public class TreasureCompassArrow : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F976 RID: 63862 RVA: 0x003C72A0 File Offset: 0x003C54A0
+	// Token: 0x0600CD95 RID: 52629 RVA: 0x003D2D8C File Offset: 0x003D0F8C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -51,7 +51,7 @@ public class TreasureCompassArrow : UiPanelBase
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F977 RID: 63863 RVA: 0x003C731B File Offset: 0x003C551B
+	// Token: 0x0600CD96 RID: 52630 RVA: 0x003D2E07 File Offset: 0x003D1007
 	public void Clean()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -62,7 +62,7 @@ public class TreasureCompassArrow : UiPanelBase
 		this.LevelSequencePlayer = null;
 	}
 
-	// Token: 0x0600F978 RID: 63864 RVA: 0x003C7338 File Offset: 0x003C5538
+	// Token: 0x0600CD97 RID: 52631 RVA: 0x003D2E24 File Offset: 0x003D1024
 	public void SetVisible(bool isVisible)
 	{
 		if (isVisible == this.IsVisible)
@@ -98,7 +98,7 @@ public class TreasureCompassArrow : UiPanelBase
 		levelSequencePlayer3.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F979 RID: 63865 RVA: 0x003C73C0 File Offset: 0x003C55C0
+	// Token: 0x0600CD98 RID: 52632 RVA: 0x003D2EAC File Offset: 0x003D10AC
 	private UniTask PlayCloseAsync()
 	{
 		TreasureCompassArrow.<PlayCloseAsync>d__10 <PlayCloseAsync>d__;
@@ -109,7 +109,7 @@ public class TreasureCompassArrow : UiPanelBase
 		return <PlayCloseAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F97A RID: 63866 RVA: 0x003C7403 File Offset: 0x003C5603
+	// Token: 0x0600CD99 RID: 52633 RVA: 0x003D2EEF File Offset: 0x003D10EF
 	public void SetRotation(FRotator rotator)
 	{
 		UUIItem rootItem = this.RootItem;
@@ -120,7 +120,7 @@ public class TreasureCompassArrow : UiPanelBase
 		rootItem.SetUIRelativeRotation(rotator);
 	}
 
-	// Token: 0x0600F97B RID: 63867 RVA: 0x003C7417 File Offset: 0x003C5617
+	// Token: 0x0600CD9A RID: 52634 RVA: 0x003D2F03 File Offset: 0x003D1103
 	public void SetArrowScale(double scale)
 	{
 		this.ScaleVec.X = scale;
@@ -133,7 +133,7 @@ public class TreasureCompassArrow : UiPanelBase
 		arrowItem.SetUIItemScale(this.ScaleVec.ToUeVectorOld());
 	}
 
-	// Token: 0x0600F97C RID: 63868 RVA: 0x003C744C File Offset: 0x003C564C
+	// Token: 0x0600CD9B RID: 52635 RVA: 0x003D2F38 File Offset: 0x003D1138
 	public void SetHighLight(bool isHighLight)
 	{
 		if (isHighLight == this.IsHighLight)
@@ -164,22 +164,22 @@ public class TreasureCompassArrow : UiPanelBase
 		levelSequencePlayer2.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0400743F RID: 29759
+	// Token: 0x04007520 RID: 29984
 	private UUIItem ArrowItem;
 
-	// Token: 0x04007440 RID: 29760
+	// Token: 0x04007521 RID: 29985
 	private UUIItem HighLightArrowItem;
 
-	// Token: 0x04007441 RID: 29761
+	// Token: 0x04007522 RID: 29986
 	[Nullable(1)]
 	private readonly Vector ScaleVec = Vector.Create();
 
-	// Token: 0x04007442 RID: 29762
+	// Token: 0x04007523 RID: 29987
 	private bool IsHighLight;
 
-	// Token: 0x04007443 RID: 29763
+	// Token: 0x04007524 RID: 29988
 	private bool IsVisible = true;
 
-	// Token: 0x04007444 RID: 29764
+	// Token: 0x04007525 RID: 29989
 	private LevelSequencePlayer LevelSequencePlayer;
 }

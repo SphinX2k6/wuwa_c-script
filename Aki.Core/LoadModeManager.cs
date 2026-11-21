@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x020000BF RID: 191
+// Token: 0x020000C1 RID: 193
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadModeManager : Singleton
 {
 	// Token: 0x14000001 RID: 1
-	// (add) Token: 0x060005E2 RID: 1506 RVA: 0x0001F528 File Offset: 0x0001D728
-	// (remove) Token: 0x060005E3 RID: 1507 RVA: 0x0001F560 File Offset: 0x0001D760
+	// (add) Token: 0x06000623 RID: 1571 RVA: 0x0001FA8C File Offset: 0x0001DC8C
+	// (remove) Token: 0x06000624 RID: 1572 RVA: 0x0001FAC4 File Offset: 0x0001DCC4
 	[Nullable(2)]
 	[method: NullableContext(2)]
 	[Nullable(2)]
 	public event Action<ELoadMode> LoadModeApplied;
 
-	// Token: 0x060005E4 RID: 1508 RVA: 0x0001F598 File Offset: 0x0001D798
+	// Token: 0x06000625 RID: 1573 RVA: 0x0001FAFC File Offset: 0x0001DCFC
 	private ILoadModeHandler GetHandlerByLoadMode(ELoadMode mode)
 	{
 		LoadModeManager.LoadModeData loadModeData = this.LoadModeToDataRecord[mode];
@@ -29,31 +28,27 @@ public class LoadModeManager : Singleton
 		return loadModeData.HandlerInstance;
 	}
 
-	// Token: 0x060005E5 RID: 1509 RVA: 0x0001F5D8 File Offset: 0x0001D7D8
+	// Token: 0x06000626 RID: 1574 RVA: 0x0001FB3C File Offset: 0x0001DD3C
 	private void CheckAndUpdateLoadMode()
 	{
 		this.UpdateLoadMode(this.GetTargetLoadMode());
 	}
 
-	// Token: 0x060005E6 RID: 1510 RVA: 0x0001F5E8 File Offset: 0x0001D7E8
+	// Token: 0x06000627 RID: 1575 RVA: 0x0001FB4C File Offset: 0x0001DD4C
 	private ELoadMode GetTargetLoadMode()
 	{
-		ELoadMode targetLoadMode = ELoadMode.InGame;
-		IEnumerable<ELoadMode> values = this.ReasonToLoadMode.Values;
-		Func<ELoadMode, bool> <>9__0;
-		Func<ELoadMode, bool> predicate;
-		if ((predicate = <>9__0) == null)
+		ELoadMode eloadMode = ELoadMode.InGame;
+		foreach (ELoadMode eloadMode2 in this.ReasonToLoadMode.Values)
 		{
-			predicate = (<>9__0 = ((ELoadMode mode) => this.LoadModeToDataRecord[mode].Priority > this.LoadModeToDataRecord[targetLoadMode].Priority));
+			if (this.LoadModeToDataRecord[eloadMode2].Priority > this.LoadModeToDataRecord[eloadMode].Priority)
+			{
+				eloadMode = eloadMode2;
+			}
 		}
-		foreach (ELoadMode targetLoadMode2 in values.Where(predicate))
-		{
-			targetLoadMode = targetLoadMode2;
-		}
-		return targetLoadMode;
+		return eloadMode;
 	}
 
-	// Token: 0x060005E7 RID: 1511 RVA: 0x0001F678 File Offset: 0x0001D878
+	// Token: 0x06000628 RID: 1576 RVA: 0x0001FBC8 File Offset: 0x0001DDC8
 	private unsafe void UpdateLoadMode(ELoadMode newLoadMode)
 	{
 		if (newLoadMode == this.LoadMode)
@@ -80,7 +75,7 @@ public class LoadModeManager : Singleton
 		loadModeApplied(newLoadMode);
 	}
 
-	// Token: 0x060005E8 RID: 1512 RVA: 0x0001F740 File Offset: 0x0001D940
+	// Token: 0x06000629 RID: 1577 RVA: 0x0001FC90 File Offset: 0x0001DE90
 	private void AfterUpdateLoadMode()
 	{
 		this.DisableLoadModeResetTimer();
@@ -91,7 +86,7 @@ public class LoadModeManager : Singleton
 		}
 	}
 
-	// Token: 0x060005E9 RID: 1513 RVA: 0x0001F775 File Offset: 0x0001D975
+	// Token: 0x0600062A RID: 1578 RVA: 0x0001FCC5 File Offset: 0x0001DEC5
 	private void EnableLoadModeResetTimer(int timeLimit)
 	{
 		this.DisableLoadModeResetTimer();
@@ -108,7 +103,7 @@ public class LoadModeManager : Singleton
 		}, (float)timeLimit, null, "LoadModeResetTimer", false, 1f);
 	}
 
-	// Token: 0x060005EA RID: 1514 RVA: 0x0001F7A7 File Offset: 0x0001D9A7
+	// Token: 0x0600062B RID: 1579 RVA: 0x0001FCF7 File Offset: 0x0001DEF7
 	private void DisableLoadModeResetTimer()
 	{
 		if (this.LoadModeResetTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.LoadModeResetTimerHandle))
@@ -118,13 +113,13 @@ public class LoadModeManager : Singleton
 		this.LoadModeResetTimerHandle = null;
 	}
 
-	// Token: 0x060005EB RID: 1515 RVA: 0x0001F7DB File Offset: 0x0001D9DB
+	// Token: 0x0600062C RID: 1580 RVA: 0x0001FD2B File Offset: 0x0001DF2B
 	public ELoadMode GetLoadMode()
 	{
 		return this.LoadMode;
 	}
 
-	// Token: 0x060005EC RID: 1516 RVA: 0x0001F7E4 File Offset: 0x0001D9E4
+	// Token: 0x0600062D RID: 1581 RVA: 0x0001FD34 File Offset: 0x0001DF34
 	public unsafe void SetLoadModeByReason(ELoadMode mode, ELoadModeReason reason)
 	{
 		Log instance = Log.Instance;
@@ -169,19 +164,19 @@ public class LoadModeManager : Singleton
 		this.CheckAndUpdateLoadMode();
 	}
 
-	// Token: 0x060005ED RID: 1517 RVA: 0x0001F947 File Offset: 0x0001DB47
+	// Token: 0x0600062E RID: 1582 RVA: 0x0001FE97 File Offset: 0x0001E097
 	public void ResetLoadModeByReason(ELoadModeReason reason)
 	{
 		this.SetLoadModeByReason(ELoadMode.InGame, reason);
 	}
 
-	// Token: 0x060005EE RID: 1518 RVA: 0x0001F951 File Offset: 0x0001DB51
+	// Token: 0x0600062F RID: 1583 RVA: 0x0001FEA1 File Offset: 0x0001E0A1
 	public bool IsReasonTargetNotDefault(ELoadModeReason reason)
 	{
 		return this.ReasonToLoadMode.GetValueOrDefault(reason, ELoadMode.InGame) != ELoadMode.InGame;
 	}
 
-	// Token: 0x060005EF RID: 1519 RVA: 0x0001F968 File Offset: 0x0001DB68
+	// Token: 0x06000630 RID: 1584 RVA: 0x0001FEB8 File Offset: 0x0001E0B8
 	public unsafe void ClearReasonAndResetLoadMode(string debugReason)
 	{
 		if (this.ReasonToLoadMode.Count > 0 || this.GetLoadMode() != ELoadMode.InGame)
@@ -200,15 +195,15 @@ public class LoadModeManager : Singleton
 		this.CheckAndUpdateLoadMode();
 	}
 
-	// Token: 0x060005F0 RID: 1520 RVA: 0x0001FA18 File Offset: 0x0001DC18
+	// Token: 0x06000631 RID: 1585 RVA: 0x0001FF68 File Offset: 0x0001E168
 	public bool IsLoadModeInGameOrForceInGame()
 	{
 		ELoadMode loadMode = this.LoadMode;
 		return loadMode == ELoadMode.InGame || loadMode == ELoadMode.ForceInGame;
 	}
 
-	// Token: 0x170000CB RID: 203
-	// (get) Token: 0x060005F1 RID: 1521 RVA: 0x0001FA3B File Offset: 0x0001DC3B
+	// Token: 0x170000DD RID: 221
+	// (get) Token: 0x06000632 RID: 1586 RVA: 0x0001FF8B File Offset: 0x0001E18B
 	public static LoadModeManager Instance
 	{
 		get
@@ -222,12 +217,12 @@ public class LoadModeManager : Singleton
 		}
 	}
 
-	// Token: 0x060005F2 RID: 1522 RVA: 0x0001FA5E File Offset: 0x0001DC5E
+	// Token: 0x06000633 RID: 1587 RVA: 0x0001FFAE File Offset: 0x0001E1AE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060005F3 RID: 1523 RVA: 0x0001FA60 File Offset: 0x0001DC60
+	// Token: 0x06000634 RID: 1588 RVA: 0x0001FFB0 File Offset: 0x0001E1B0
 	public static void ResetStaticDefaultValue()
 	{
 		LoadModeManager instance = LoadModeManager._instance;
@@ -238,13 +233,13 @@ public class LoadModeManager : Singleton
 		LoadModeManager._instance = null;
 	}
 
-	// Token: 0x060005F4 RID: 1524 RVA: 0x0001FA79 File Offset: 0x0001DC79
+	// Token: 0x06000635 RID: 1589 RVA: 0x0001FFC9 File Offset: 0x0001E1C9
 	static LoadModeManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoadModeManager.CreateStaticDefaultValue), new Action(LoadModeManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060005F5 RID: 1525 RVA: 0x0001FA98 File Offset: 0x0001DC98
+	// Token: 0x06000636 RID: 1590 RVA: 0x0001FFE8 File Offset: 0x0001E1E8
 	public LoadModeManager()
 	{
 		Dictionary<ELoadMode, LoadModeManager.LoadModeData> dictionary = new Dictionary<ELoadMode, LoadModeManager.LoadModeData>();
@@ -263,13 +258,13 @@ public class LoadModeManager : Singleton
 		ELoadMode key3 = ELoadMode.InGameLoading;
 		LoadModeManager.LoadModeData loadModeData3 = new LoadModeManager.LoadModeData();
 		loadModeData3.Priority = 5;
-		loadModeData3.SharedStayTimeLimit = (Info.Instance.IsPlayInEditor ? 900000 : 180000);
+		loadModeData3.SharedStayTimeLimit = 180000;
 		loadModeData3.HandlerCtor = (() => new LoadModeHandlerInGameLoading());
 		dictionary.Add(key3, loadModeData3);
 		ELoadMode key4 = ELoadMode.Loading;
 		LoadModeManager.LoadModeData loadModeData4 = new LoadModeManager.LoadModeData();
 		loadModeData4.Priority = 10;
-		loadModeData4.SharedStayTimeLimit = (Info.Instance.IsPlayInEditor ? 900000 : 180000);
+		loadModeData4.SharedStayTimeLimit = 180000;
 		loadModeData4.HandlerCtor = (() => new LoadModeHandlerLoading());
 		dictionary.Add(key4, loadModeData4);
 		ELoadMode key5 = ELoadMode.ForceInGame;
@@ -283,53 +278,53 @@ public class LoadModeManager : Singleton
 		base..ctor();
 	}
 
-	// Token: 0x040004CA RID: 1226
+	// Token: 0x040004D8 RID: 1240
 	private const int RESET_TIME = 180000;
 
-	// Token: 0x040004CB RID: 1227
+	// Token: 0x040004D9 RID: 1241
 	private const int RESET_TIME_PIE = 900000;
 
-	// Token: 0x040004CC RID: 1228
+	// Token: 0x040004DA RID: 1242
 	private readonly Dictionary<ELoadMode, LoadModeManager.LoadModeData> LoadModeToDataRecord;
 
-	// Token: 0x040004CD RID: 1229
+	// Token: 0x040004DB RID: 1243
 	private ELoadMode LoadMode;
 
-	// Token: 0x040004CF RID: 1231
+	// Token: 0x040004DD RID: 1245
 	private readonly Dictionary<ELoadModeReason, ELoadMode> ReasonToLoadMode;
 
-	// Token: 0x040004D0 RID: 1232
+	// Token: 0x040004DE RID: 1246
 	[Nullable(2)]
 	private TimerHandle LoadModeResetTimerHandle;
 
-	// Token: 0x040004D1 RID: 1233
+	// Token: 0x040004DF RID: 1247
 	[Nullable(2)]
 	private static LoadModeManager _instance;
 
-	// Token: 0x020001C2 RID: 450
+	// Token: 0x020001C8 RID: 456
 	[NullableContext(0)]
 	[RequiredMember]
 	private class LoadModeData
 	{
-		// Token: 0x06000D42 RID: 3394 RVA: 0x0003E4AE File Offset: 0x0003C6AE
+		// Token: 0x06000DAD RID: 3501 RVA: 0x0003F382 File Offset: 0x0003D582
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public LoadModeData()
 		{
 		}
 
-		// Token: 0x0400084B RID: 2123
+		// Token: 0x04000870 RID: 2160
 		public int Priority;
 
-		// Token: 0x0400084C RID: 2124
+		// Token: 0x04000871 RID: 2161
 		public int SharedStayTimeLimit;
 
-		// Token: 0x0400084D RID: 2125
+		// Token: 0x04000872 RID: 2162
 		[Nullable(1)]
 		[RequiredMember]
 		public Func<ILoadModeHandler> HandlerCtor;
 
-		// Token: 0x0400084E RID: 2126
+		// Token: 0x04000873 RID: 2163
 		[Nullable(2)]
 		public ILoadModeHandler HandlerInstance;
 	}

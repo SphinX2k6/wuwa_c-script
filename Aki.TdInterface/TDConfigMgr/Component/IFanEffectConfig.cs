@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000372 RID: 882
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003BB RID: 955
 	public class IFanEffectConfig
 	{
-		// Token: 0x06001183 RID: 4483 RVA: 0x0003B144 File Offset: 0x00039344
+		// Token: 0x060012C7 RID: 4807 RVA: 0x0003E428 File Offset: 0x0003C628
 		private IFanEffectConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001184 RID: 4484 RVA: 0x0003B17C File Offset: 0x0003937C
+		// Token: 0x060012C8 RID: 4808 RVA: 0x0003E460 File Offset: 0x0003C660
 		public static IFanEffectConfig Create([Nullable(2)] IFanEffectConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001185 RID: 4485 RVA: 0x0003B18F File Offset: 0x0003938F
+		// Token: 0x060012C9 RID: 4809 RVA: 0x0003E473 File Offset: 0x0003C673
 		public static IFanEffectConfig CreateFromSetValue([Nullable(2)] IFanEffectConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001186 RID: 4486 RVA: 0x0003B1A2 File Offset: 0x000393A2
+		// Token: 0x060012CA RID: 4810 RVA: 0x0003E486 File Offset: 0x0003C686
 		public IFanEffectConfig_SetValue ToSetValue()
 		{
 			return new IFanEffectConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004F4 RID: 1268
-		// (get) Token: 0x06001187 RID: 4487 RVA: 0x0003B1CD File Offset: 0x000393CD
-		// (set) Token: 0x06001188 RID: 4488 RVA: 0x0003B1F8 File Offset: 0x000393F8
+		// Token: 0x17000548 RID: 1352
+		// (get) Token: 0x060012CB RID: 4811 RVA: 0x0003E4B1 File Offset: 0x0003C6B1
+		// (set) Token: 0x060012CC RID: 4812 RVA: 0x0003E4DC File Offset: 0x0003C6DC
 		public virtual string EffectPath
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F5 RID: 1269
-		// (get) Token: 0x06001189 RID: 4489 RVA: 0x0003B206 File Offset: 0x00039406
-		// (set) Token: 0x0600118A RID: 4490 RVA: 0x0003B235 File Offset: 0x00039435
+		// Token: 0x17000549 RID: 1353
+		// (get) Token: 0x060012CD RID: 4813 RVA: 0x0003E4EA File Offset: 0x0003C6EA
+		// (set) Token: 0x060012CE RID: 4814 RVA: 0x0003E519 File Offset: 0x0003C719
 		public virtual float DefaultEffectLength
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F6 RID: 1270
-		// (get) Token: 0x0600118B RID: 4491 RVA: 0x0003B243 File Offset: 0x00039443
-		// (set) Token: 0x0600118C RID: 4492 RVA: 0x0003B26A File Offset: 0x0003946A
+		// Token: 0x1700054A RID: 1354
+		// (get) Token: 0x060012CF RID: 4815 RVA: 0x0003E527 File Offset: 0x0003C727
+		// (set) Token: 0x060012D0 RID: 4816 RVA: 0x0003E54E File Offset: 0x0003C74E
 		[Nullable(2)]
 		public virtual string HitEffectPath
 		{
@@ -134,11 +132,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E5F RID: 3679
+		// Token: 0x04000F56 RID: 3926
 		[Nullable(2)]
 		protected IFanEffectConfig FbInstance;
 
-		// Token: 0x04000E60 RID: 3680
+		// Token: 0x04000F57 RID: 3927
 		[Nullable(2)]
 		protected IFanEffectConfig_SetValue PocoInterface;
 	}

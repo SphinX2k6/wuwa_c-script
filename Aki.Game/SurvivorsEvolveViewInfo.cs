@@ -1,49 +1,49 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002AE1 RID: 10977
+// Token: 0x0200205D RID: 8285
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsEvolveViewInfo : ISurvivorsEvolveViewInfo
 {
-	// Token: 0x17001E69 RID: 7785
-	// (get) Token: 0x06016D7F RID: 93567 RVA: 0x005CC54C File Offset: 0x005CA74C
-	// (set) Token: 0x06016D80 RID: 93568 RVA: 0x005CC554 File Offset: 0x005CA754
+	// Token: 0x17001EC1 RID: 7873
+	// (get) Token: 0x060147B0 RID: 83888 RVA: 0x005F909C File Offset: 0x005F729C
+	// (set) Token: 0x060147B1 RID: 83889 RVA: 0x005F90A4 File Offset: 0x005F72A4
 	public ESurvivorsRogueItemType SourceType { get; set; }
 
-	// Token: 0x17001E6A RID: 7786
-	// (get) Token: 0x06016D81 RID: 93569 RVA: 0x005CC55D File Offset: 0x005CA75D
-	// (set) Token: 0x06016D82 RID: 93570 RVA: 0x005CC565 File Offset: 0x005CA765
+	// Token: 0x17001EC2 RID: 7874
+	// (get) Token: 0x060147B2 RID: 83890 RVA: 0x005F90AD File Offset: 0x005F72AD
+	// (set) Token: 0x060147B3 RID: 83891 RVA: 0x005F90B5 File Offset: 0x005F72B5
 	public int SourceId { get; set; }
 
-	// Token: 0x17001E6B RID: 7787
-	// (get) Token: 0x06016D83 RID: 93571 RVA: 0x005CC56E File Offset: 0x005CA76E
-	// (set) Token: 0x06016D84 RID: 93572 RVA: 0x005CC576 File Offset: 0x005CA776
+	// Token: 0x17001EC3 RID: 7875
+	// (get) Token: 0x060147B4 RID: 83892 RVA: 0x005F90BE File Offset: 0x005F72BE
+	// (set) Token: 0x060147B5 RID: 83893 RVA: 0x005F90C6 File Offset: 0x005F72C6
 	public string TitleId { get; set; } = "";
 
-	// Token: 0x17001E6C RID: 7788
-	// (get) Token: 0x06016D85 RID: 93573 RVA: 0x005CC57F File Offset: 0x005CA77F
-	// (set) Token: 0x06016D86 RID: 93574 RVA: 0x005CC587 File Offset: 0x005CA787
+	// Token: 0x17001EC4 RID: 7876
+	// (get) Token: 0x060147B6 RID: 83894 RVA: 0x005F90CF File Offset: 0x005F72CF
+	// (set) Token: 0x060147B7 RID: 83895 RVA: 0x005F90D7 File Offset: 0x005F72D7
 	public int EvolveId { get; set; }
 
-	// Token: 0x17001E6D RID: 7789
-	// (get) Token: 0x06016D87 RID: 93575 RVA: 0x005CC590 File Offset: 0x005CA790
-	// (set) Token: 0x06016D88 RID: 93576 RVA: 0x005CC598 File Offset: 0x005CA798
+	// Token: 0x17001EC5 RID: 7877
+	// (get) Token: 0x060147B8 RID: 83896 RVA: 0x005F90E0 File Offset: 0x005F72E0
+	// (set) Token: 0x060147B9 RID: 83897 RVA: 0x005F90E8 File Offset: 0x005F72E8
 	public ESurvivorsRogueItemType? BondType { get; set; }
 
-	// Token: 0x17001E6E RID: 7790
-	// (get) Token: 0x06016D89 RID: 93577 RVA: 0x005CC5A1 File Offset: 0x005CA7A1
-	// (set) Token: 0x06016D8A RID: 93578 RVA: 0x005CC5A9 File Offset: 0x005CA7A9
+	// Token: 0x17001EC6 RID: 7878
+	// (get) Token: 0x060147BA RID: 83898 RVA: 0x005F90F1 File Offset: 0x005F72F1
+	// (set) Token: 0x060147BB RID: 83899 RVA: 0x005F90F9 File Offset: 0x005F72F9
 	public int? BondId { get; set; }
 
-	// Token: 0x17001E6F RID: 7791
-	// (get) Token: 0x06016D8B RID: 93579 RVA: 0x005CC5B2 File Offset: 0x005CA7B2
-	// (set) Token: 0x06016D8C RID: 93580 RVA: 0x005CC5BA File Offset: 0x005CA7BA
+	// Token: 0x17001EC7 RID: 7879
+	// (get) Token: 0x060147BC RID: 83900 RVA: 0x005F9102 File Offset: 0x005F7302
+	// (set) Token: 0x060147BD RID: 83901 RVA: 0x005F910A File Offset: 0x005F730A
 	public bool? PlayTween { get; set; }
 
-	// Token: 0x17001E70 RID: 7792
-	// (get) Token: 0x06016D8D RID: 93581 RVA: 0x005CC5C3 File Offset: 0x005CA7C3
-	// (set) Token: 0x06016D8E RID: 93582 RVA: 0x005CC5CB File Offset: 0x005CA7CB
+	// Token: 0x17001EC8 RID: 7880
+	// (get) Token: 0x060147BE RID: 83902 RVA: 0x005F9113 File Offset: 0x005F7313
+	// (set) Token: 0x060147BF RID: 83903 RVA: 0x005F911B File Offset: 0x005F731B
 	[Nullable(2)]
 	public int[] WeaponEvolveIds { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

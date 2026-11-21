@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B55 RID: 2901
+	// Token: 0x02000C23 RID: 3107
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TeleControl2 : IComponentBase
 	{
-		// Token: 0x060042C8 RID: 17096 RVA: 0x000AA661 File Offset: 0x000A8861
-		[NullableContext(1)]
+		// Token: 0x06004721 RID: 18209 RVA: 0x000B4725 File Offset: 0x000B2925
+		[NullableContext(0)]
 		public static TeleControl2 Create(ITeleControl2? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011DB RID: 4571
-		// (get) Token: 0x060042C9 RID: 17097 RVA: 0x000AA680 File Offset: 0x000A8880
+		// Token: 0x170012D6 RID: 4822
+		// (get) Token: 0x06004722 RID: 18210 RVA: 0x000B4744 File Offset: 0x000B2944
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011DC RID: 4572
-		// (get) Token: 0x060042CA RID: 17098 RVA: 0x000AA6B8 File Offset: 0x000A88B8
+		// Token: 0x170012D7 RID: 4823
+		// (get) Token: 0x06004723 RID: 18211 RVA: 0x000B477C File Offset: 0x000B297C
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,12 +49,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011DD RID: 4573
-		// (get) Token: 0x060042CB RID: 17099 RVA: 0x000AA6CE File Offset: 0x000A88CE
-		[Nullable(1)]
+		// Token: 0x170012D8 RID: 4824
+		// (get) Token: 0x06004724 RID: 18212 RVA: 0x000B4792 File Offset: 0x000B2992
+		[Nullable(0)]
 		public virtual ITeleControlBaseCfg BaseCfg
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._BaseCfgInited)
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011DE RID: 4574
-		// (get) Token: 0x060042CC RID: 17100 RVA: 0x000AA702 File Offset: 0x000A8902
+		// Token: 0x170012D9 RID: 4825
+		// (get) Token: 0x06004725 RID: 18213 RVA: 0x000B47C6 File Offset: 0x000B29C6
 		public virtual ISearchTargetCfg SearchTargetCfg
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011DF RID: 4575
-		// (get) Token: 0x060042CD RID: 17101 RVA: 0x000AA736 File Offset: 0x000A8936
+		// Token: 0x170012DA RID: 4826
+		// (get) Token: 0x06004726 RID: 18214 RVA: 0x000B47FA File Offset: 0x000B29FA
 		public virtual IBulletCfg BulletCfg
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E0 RID: 4576
-		// (get) Token: 0x060042CE RID: 17102 RVA: 0x000AA76A File Offset: 0x000A896A
+		// Token: 0x170012DB RID: 4827
+		// (get) Token: 0x06004727 RID: 18215 RVA: 0x000B482E File Offset: 0x000B2A2E
 		public virtual IDestroyCfg DestroyCfg
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E1 RID: 4577
-		// (get) Token: 0x060042CF RID: 17103 RVA: 0x000AA79E File Offset: 0x000A899E
+		// Token: 0x170012DC RID: 4828
+		// (get) Token: 0x06004728 RID: 18216 RVA: 0x000B4862 File Offset: 0x000B2A62
 		public virtual IHoldCfg HoldCfg
 		{
 			get
@@ -131,12 +131,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E2 RID: 4578
-		// (get) Token: 0x060042D0 RID: 17104 RVA: 0x000AA7D2 File Offset: 0x000A89D2
-		[Nullable(1)]
+		// Token: 0x170012DD RID: 4829
+		// (get) Token: 0x06004729 RID: 18217 RVA: 0x000B4896 File Offset: 0x000B2A96
+		[Nullable(0)]
 		public virtual IThrowCfg ThrowCfg
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ThrowCfgInited)
@@ -149,8 +149,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E3 RID: 4579
-		// (get) Token: 0x060042D1 RID: 17105 RVA: 0x000AA808 File Offset: 0x000A8A08
+		// Token: 0x170012DE RID: 4830
+		// (get) Token: 0x0600472A RID: 18218 RVA: 0x000B48CC File Offset: 0x000B2ACC
 		public virtual int? PlayerStateRestritionId
 		{
 			get
@@ -163,19 +163,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E4 RID: 4580
-		// (get) Token: 0x060042D2 RID: 17106 RVA: 0x000AA83E File Offset: 0x000A8A3E
+		// Token: 0x170012DF RID: 4831
+		// (get) Token: 0x0600472B RID: 18219 RVA: 0x000B4902 File Offset: 0x000B2B02
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -193,12 +193,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E5 RID: 4581
-		// (get) Token: 0x060042D3 RID: 17107 RVA: 0x000AA87E File Offset: 0x000A8A7E
-		[Nullable(1)]
+		// Token: 0x170012E0 RID: 4832
+		// (get) Token: 0x0600472C RID: 18220 RVA: 0x000B4942 File Offset: 0x000B2B42
+		[Nullable(0)]
 		public virtual ITeleCtrlTriggerConfig TriggerCfg
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._TriggerCfgInited)
@@ -211,61 +211,61 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400259A RID: 9626
+		// Token: 0x040027E2 RID: 10210
 		private ITeleControl2 Instance;
 
-		// Token: 0x0400259B RID: 9627
+		// Token: 0x040027E3 RID: 10211
 		private ITeleControlBaseCfg _BaseCfgCache;
 
-		// Token: 0x0400259C RID: 9628
+		// Token: 0x040027E4 RID: 10212
 		private bool _BaseCfgInited;
 
-		// Token: 0x0400259D RID: 9629
+		// Token: 0x040027E5 RID: 10213
 		private ISearchTargetCfg _SearchTargetCfgCache;
 
-		// Token: 0x0400259E RID: 9630
+		// Token: 0x040027E6 RID: 10214
 		private bool _SearchTargetCfgInited;
 
-		// Token: 0x0400259F RID: 9631
+		// Token: 0x040027E7 RID: 10215
 		private IBulletCfg _BulletCfgCache;
 
-		// Token: 0x040025A0 RID: 9632
+		// Token: 0x040027E8 RID: 10216
 		private bool _BulletCfgInited;
 
-		// Token: 0x040025A1 RID: 9633
+		// Token: 0x040027E9 RID: 10217
 		private IDestroyCfg _DestroyCfgCache;
 
-		// Token: 0x040025A2 RID: 9634
+		// Token: 0x040027EA RID: 10218
 		private bool _DestroyCfgInited;
 
-		// Token: 0x040025A3 RID: 9635
+		// Token: 0x040027EB RID: 10219
 		private IHoldCfg _HoldCfgCache;
 
-		// Token: 0x040025A4 RID: 9636
+		// Token: 0x040027EC RID: 10220
 		private bool _HoldCfgInited;
 
-		// Token: 0x040025A5 RID: 9637
+		// Token: 0x040027ED RID: 10221
 		private IThrowCfg _ThrowCfgCache;
 
-		// Token: 0x040025A6 RID: 9638
+		// Token: 0x040027EE RID: 10222
 		private bool _ThrowCfgInited;
 
-		// Token: 0x040025A7 RID: 9639
+		// Token: 0x040027EF RID: 10223
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IMatchRoleType> _MatchRoleOptionCache;
 
-		// Token: 0x040025A8 RID: 9640
+		// Token: 0x040027F0 RID: 10224
 		private bool _MatchRoleOptionInited;
 
-		// Token: 0x040025A9 RID: 9641
-		[Nullable(1)]
+		// Token: 0x040027F1 RID: 10225
+		[Nullable(0)]
 		private ITeleCtrlTriggerConfig _TriggerCfgCache;
 
-		// Token: 0x040025AA RID: 9642
+		// Token: 0x040027F2 RID: 10226
 		private bool _TriggerCfgInited;
 	}
 }

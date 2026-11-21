@@ -5,10 +5,10 @@ using AkiClient.Game.Aki.Render.RuntimeBP.RenderData;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x0200348D RID: 13453
+// Token: 0x02002A01 RID: 10753
 public class ItemMaterialParameterCollectionController
 {
-	// Token: 0x0601D33C RID: 119612 RVA: 0x00821970 File Offset: 0x0081FB70
+	// Token: 0x0601B042 RID: 110658 RVA: 0x00848C04 File Offset: 0x00846E04
 	[NullableContext(1)]
 	public static void UpdateMaterialParameterCollection(ItemMaterialControllerMPCData_C Data, UMaterialParameterCollection Collection)
 	{

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200752C RID: 29996
+	// Token: 0x02007D22 RID: 32034
 	public struct IVehiclePlayPassengerVoice : IFlatbufferObject
 	{
-		// Token: 0x1700E3A1 RID: 58273
-		// (get) Token: 0x06036925 RID: 223525 RVA: 0x0076A1F4 File Offset: 0x007683F4
+		// Token: 0x1700EFCB RID: 61387
+		// (get) Token: 0x06039D3B RID: 236859 RVA: 0x007CD49C File Offset: 0x007CB69C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036926 RID: 223526 RVA: 0x0076A201 File Offset: 0x00768401
+		// Token: 0x06039D3C RID: 236860 RVA: 0x007CD4A9 File Offset: 0x007CB6A9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036927 RID: 223527 RVA: 0x0076A208 File Offset: 0x00768408
+		// Token: 0x06039D3D RID: 236861 RVA: 0x007CD4B0 File Offset: 0x007CB6B0
 		public static IVehiclePlayPassengerVoice GetRootAsIVehiclePlayPassengerVoice(ByteBuffer _bb)
 		{
 			return IVehiclePlayPassengerVoice.GetRootAsIVehiclePlayPassengerVoice(_bb, default(IVehiclePlayPassengerVoice));
 		}
 
-		// Token: 0x06036928 RID: 223528 RVA: 0x0076A224 File Offset: 0x00768424
+		// Token: 0x06039D3E RID: 236862 RVA: 0x007CD4CC File Offset: 0x007CB6CC
 		public static IVehiclePlayPassengerVoice GetRootAsIVehiclePlayPassengerVoice(ByteBuffer _bb, IVehiclePlayPassengerVoice obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036929 RID: 223529 RVA: 0x0076A241 File Offset: 0x00768441
+		// Token: 0x06039D3F RID: 236863 RVA: 0x007CD4E9 File Offset: 0x007CB6E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603692A RID: 223530 RVA: 0x0076A250 File Offset: 0x00768450
+		// Token: 0x06039D40 RID: 236864 RVA: 0x007CD4F8 File Offset: 0x007CB6F8
 		public IVehiclePlayPassengerVoice __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E3A2 RID: 58274
-		// (get) Token: 0x0603692B RID: 223531 RVA: 0x0076A260 File Offset: 0x00768460
+		// Token: 0x1700EFCC RID: 61388
+		// (get) Token: 0x06039D41 RID: 236865 RVA: 0x007CD508 File Offset: 0x007CB708
 		public EGondolaVoiceTriggeredType TriggerType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E3A3 RID: 58275
-		// (get) Token: 0x0603692C RID: 223532 RVA: 0x0076A29C File Offset: 0x0076849C
+		// Token: 0x1700EFCD RID: 61389
+		// (get) Token: 0x06039D42 RID: 236866 RVA: 0x007CD544 File Offset: 0x007CB744
 		public IPlayVoicePassengersConfig? TriggerPassengers
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603692D RID: 223533 RVA: 0x0076A2FC File Offset: 0x007684FC
+		// Token: 0x06039D43 RID: 236867 RVA: 0x007CD5A4 File Offset: 0x007CB7A4
 		public float TriggerParams(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700E3A4 RID: 58276
-		// (get) Token: 0x0603692E RID: 223534 RVA: 0x0076A340 File Offset: 0x00768540
+		// Token: 0x1700EFCE RID: 61390
+		// (get) Token: 0x06039D44 RID: 236868 RVA: 0x007CD5E8 File Offset: 0x007CB7E8
 		public int TriggerParamsLength
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603692F RID: 223535 RVA: 0x0076A36B File Offset: 0x0076856B
+		// Token: 0x06039D45 RID: 236869 RVA: 0x007CD613 File Offset: 0x007CB813
 		public Span<float> GetTriggerParamsBytes()
 		{
 			return this.__p.__vector_as_span<float>(8, 4);
 		}
 
-		// Token: 0x06036930 RID: 223536 RVA: 0x0076A37A File Offset: 0x0076857A
+		// Token: 0x06039D46 RID: 236870 RVA: 0x007CD622 File Offset: 0x007CB822
 		public float[] GetTriggerParamsArray()
 		{
 			return this.__p.__vector_as_array<float>(8);
 		}
 
-		// Token: 0x1700E3A5 RID: 58277
-		// (get) Token: 0x06036931 RID: 223537 RVA: 0x0076A388 File Offset: 0x00768588
+		// Token: 0x1700EFCF RID: 61391
+		// (get) Token: 0x06039D47 RID: 236871 RVA: 0x007CD630 File Offset: 0x007CB830
 		public byte NullMask
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036932 RID: 223538 RVA: 0x0076A3C5 File Offset: 0x007685C5
+		// Token: 0x06039D48 RID: 236872 RVA: 0x007CD66D File Offset: 0x007CB86D
 		public static Offset<IVehiclePlayPassengerVoice> CreateIVehiclePlayPassengerVoice(FlatBufferBuilder builder, EGondolaVoiceTriggeredType TriggerType = EGondolaVoiceTriggeredType.FindTreasure, Offset<IPlayVoicePassengersConfig> TriggerPassengersOffset = default(Offset<IPlayVoicePassengersConfig>), VectorOffset TriggerParamsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -142,31 +142,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehiclePlayPassengerVoice.EndIVehiclePlayPassengerVoice(builder);
 		}
 
-		// Token: 0x06036933 RID: 223539 RVA: 0x0076A3F1 File Offset: 0x007685F1
+		// Token: 0x06039D49 RID: 236873 RVA: 0x007CD699 File Offset: 0x007CB899
 		public static void StartIVehiclePlayPassengerVoice(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06036934 RID: 223540 RVA: 0x0076A3FA File Offset: 0x007685FA
+		// Token: 0x06039D4A RID: 236874 RVA: 0x007CD6A2 File Offset: 0x007CB8A2
 		public static void AddTriggerType(FlatBufferBuilder builder, EGondolaVoiceTriggeredType triggerType)
 		{
 			builder.AddByte(0, (byte)triggerType, 0);
 		}
 
-		// Token: 0x06036935 RID: 223541 RVA: 0x0076A405 File Offset: 0x00768605
+		// Token: 0x06039D4B RID: 236875 RVA: 0x007CD6AD File Offset: 0x007CB8AD
 		public static void AddTriggerPassengers(FlatBufferBuilder builder, Offset<IPlayVoicePassengersConfig> triggerPassengersOffset)
 		{
 			builder.AddOffset(1, triggerPassengersOffset.Value, 0);
 		}
 
-		// Token: 0x06036936 RID: 223542 RVA: 0x0076A415 File Offset: 0x00768615
+		// Token: 0x06039D4C RID: 236876 RVA: 0x007CD6BD File Offset: 0x007CB8BD
 		public static void AddTriggerParams(FlatBufferBuilder builder, VectorOffset triggerParamsOffset)
 		{
 			builder.AddOffset(2, triggerParamsOffset.Value, 0);
 		}
 
-		// Token: 0x06036937 RID: 223543 RVA: 0x0076A428 File Offset: 0x00768628
+		// Token: 0x06039D4D RID: 236877 RVA: 0x007CD6D0 File Offset: 0x007CB8D0
 		public static VectorOffset CreateTriggerParamsVector(FlatBufferBuilder builder, float[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06036938 RID: 223544 RVA: 0x0076A45F File Offset: 0x0076865F
+		// Token: 0x06039D4E RID: 236878 RVA: 0x007CD707 File Offset: 0x007CB907
 		public static VectorOffset CreateTriggerParamsVectorBlock(FlatBufferBuilder builder, float[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06036939 RID: 223545 RVA: 0x0076A479 File Offset: 0x00768679
+		// Token: 0x06039D4F RID: 236879 RVA: 0x007CD721 File Offset: 0x007CB921
 		public static VectorOffset CreateTriggerParamsVectorBlock(FlatBufferBuilder builder, ArraySegment<float> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603693A RID: 223546 RVA: 0x0076A497 File Offset: 0x00768697
+		// Token: 0x06039D50 RID: 236880 RVA: 0x007CD73F File Offset: 0x007CB93F
 		public static VectorOffset CreateTriggerParamsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -201,25 +201,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603693B RID: 223547 RVA: 0x0076A4B0 File Offset: 0x007686B0
+		// Token: 0x06039D51 RID: 236881 RVA: 0x007CD758 File Offset: 0x007CB958
 		public static void StartTriggerParamsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0603693C RID: 223548 RVA: 0x0076A4BB File Offset: 0x007686BB
+		// Token: 0x06039D52 RID: 236882 RVA: 0x007CD763 File Offset: 0x007CB963
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0603693D RID: 223549 RVA: 0x0076A4C6 File Offset: 0x007686C6
+		// Token: 0x06039D53 RID: 236883 RVA: 0x007CD76E File Offset: 0x007CB96E
 		public static Offset<IVehiclePlayPassengerVoice> EndIVehiclePlayPassengerVoice(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehiclePlayPassengerVoice>(builder.EndTable());
 		}
 
-		// Token: 0x0603693E RID: 223550 RVA: 0x0076A4D4 File Offset: 0x007686D4
+		// Token: 0x06039D54 RID: 236884 RVA: 0x007CD77C File Offset: 0x007CB97C
 		public IVehiclePlayPassengerVoiceT UnPack()
 		{
 			IVehiclePlayPassengerVoiceT vehiclePlayPassengerVoiceT = new IVehiclePlayPassengerVoiceT();
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return vehiclePlayPassengerVoiceT;
 		}
 
-		// Token: 0x0603693F RID: 223551 RVA: 0x0076A4F0 File Offset: 0x007686F0
+		// Token: 0x06039D55 RID: 236885 RVA: 0x007CD798 File Offset: 0x007CB998
 		public void UnPackTo(IVehiclePlayPassengerVoiceT _o)
 		{
 			_o.TriggerType = this.TriggerType;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036940 RID: 223552 RVA: 0x0076A574 File Offset: 0x00768774
+		// Token: 0x06039D56 RID: 236886 RVA: 0x007CD81C File Offset: 0x007CBA1C
 		public static Offset<IVehiclePlayPassengerVoice> Pack(FlatBufferBuilder builder, IVehiclePlayPassengerVoiceT _o)
 		{
 			if (_o == null)
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehiclePlayPassengerVoice.CreateIVehiclePlayPassengerVoice(builder, _o.TriggerType, triggerPassengersOffset, triggerParamsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401241F RID: 74783
+		// Token: 0x04013450 RID: 78928
 		private Table __p;
 	}
 }

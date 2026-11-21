@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030C9 RID: 12489
+// Token: 0x02002621 RID: 9761
 [NullableContext(2)]
 [Nullable(0)]
 public class OverShoulderInputLayer : InputLayer
 {
-	// Token: 0x0601ABED RID: 109549 RVA: 0x007359C5 File Offset: 0x00733BC5
+	// Token: 0x06018601 RID: 99841 RVA: 0x0075B661 File Offset: 0x00759861
 	[NullableContext(1)]
 	public void Init(Entity entity)
 	{
 		this.InputComp = entity.GetComponent<CharacterInputComponent>();
 	}
 
-	// Token: 0x0601ABEE RID: 109550 RVA: 0x007359D3 File Offset: 0x00733BD3
+	// Token: 0x06018602 RID: 99842 RVA: 0x0075B66F File Offset: 0x0075986F
 	public override void Clear()
 	{
 		this.InputComp = null;
 	}
 
-	// Token: 0x0601ABEF RID: 109551 RVA: 0x007359DC File Offset: 0x00733BDC
+	// Token: 0x06018603 RID: 99843 RVA: 0x0075B678 File Offset: 0x00759878
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.OverShoulder;
 	}
 
-	// Token: 0x0601ABF0 RID: 109552 RVA: 0x007359E0 File Offset: 0x00733BE0
+	// Token: 0x06018604 RID: 99844 RVA: 0x0075B67C File Offset: 0x0075987C
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		if (action == 5)
@@ -42,7 +42,7 @@ public class OverShoulderInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABF1 RID: 109553 RVA: 0x00735A03 File Offset: 0x00733C03
+	// Token: 0x06018605 RID: 99845 RVA: 0x0075B69F File Offset: 0x0075989F
 	public override SInputCommand HandleHold(EInputAction action, float time)
 	{
 		if (action == 5)
@@ -52,7 +52,7 @@ public class OverShoulderInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601ABF2 RID: 109554 RVA: 0x00735A15 File Offset: 0x00733C15
+	// Token: 0x06018606 RID: 99846 RVA: 0x0075B6B1 File Offset: 0x007598B1
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (action == 5)
@@ -62,6 +62,6 @@ public class OverShoulderInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0400CE81 RID: 52865
+	// Token: 0x0400D271 RID: 53873
 	protected CharacterInputComponent InputComp;
 }

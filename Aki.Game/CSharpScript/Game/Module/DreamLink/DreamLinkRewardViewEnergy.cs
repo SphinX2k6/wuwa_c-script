@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -12,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA9 RID: 23209
+	// Token: 0x02004A85 RID: 19077
 	public class DreamLinkRewardViewEnergy : UiViewBase
 	{
-		// Token: 0x0603ACA5 RID: 240805 RVA: 0x00E01C6F File Offset: 0x00DFFE6F
+		// Token: 0x0602FBF1 RID: 195569 RVA: 0x00D52223 File Offset: 0x00D50423
 		[NullableContext(1)]
 		public DreamLinkRewardViewEnergy(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603ACA6 RID: 240806 RVA: 0x00E01C78 File Offset: 0x00DFFE78
+		// Token: 0x0602FBF2 RID: 195570 RVA: 0x00D5222C File Offset: 0x00D5042C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ACA7 RID: 240807 RVA: 0x00E01D04 File Offset: 0x00DFFF04
+		// Token: 0x0602FBF3 RID: 195571 RVA: 0x00D522B8 File Offset: 0x00D504B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkRewardViewEnergy.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -48,54 +47,52 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACA8 RID: 240808 RVA: 0x00E01D47 File Offset: 0x00DFFF47
+		// Token: 0x0602FBF4 RID: 195572 RVA: 0x00D522FB File Offset: 0x00D504FB
 		protected override void OnStart()
 		{
 			this.ActivityDataBase = DreamLinkController.Instance.GetCurrentActivityData();
 		}
 
-		// Token: 0x0603ACA9 RID: 240809 RVA: 0x00E01D59 File Offset: 0x00DFFF59
+		// Token: 0x0602FBF5 RID: 195573 RVA: 0x00D5230D File Offset: 0x00D5050D
 		protected override void OnBeforeShow()
 		{
 			this.RefreshLayout();
 			this.RefreshEnergy();
 		}
 
-		// Token: 0x0603ACAA RID: 240810 RVA: 0x00E01D68 File Offset: 0x00DFFF68
+		// Token: 0x0602FBF6 RID: 195574 RVA: 0x00D5231C File Offset: 0x00D5051C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.DreamLinkRewardRefresh, new Action(this.OnLayoutRefresh));
 		}
 
-		// Token: 0x0603ACAB RID: 240811 RVA: 0x00E01D86 File Offset: 0x00DFFF86
+		// Token: 0x0602FBF7 RID: 195575 RVA: 0x00D5233A File Offset: 0x00D5053A
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.DreamLinkRewardRefresh, new Action(this.OnLayoutRefresh));
 		}
 
-		// Token: 0x0603ACAC RID: 240812 RVA: 0x00E01DA4 File Offset: 0x00DFFFA4
+		// Token: 0x0602FBF8 RID: 195576 RVA: 0x00D52358 File Offset: 0x00D50558
 		[NullableContext(1)]
 		private DreamLinkRewardEnergyItem CreateTaskItem()
 		{
 			DreamLinkRewardEnergyItem dreamLinkRewardEnergyItem = new DreamLinkRewardEnergyItem();
 			dreamLinkRewardEnergyItem.SetBtnClickCallback(delegate
 			{
-				List<DreamLinkRewardData> energyRewardDataList = this.ActivityDataBase.GetEnergyRewardDataList();
-				DreamLinkController.Instance.MultiEnergyRewardRequest((from data in energyRewardDataList
-				where data.Status == EActivityTaskState.FinishedAndUnclaimed
-				select data.Id).ToArray<int>());
+				int[] ids = NoLinq.WhereSelectToArray<DreamLinkRewardData, int>(this.ActivityDataBase.GetEnergyRewardDataList(), (DreamLinkRewardData data) => data.Status == EActivityTaskState.FinishedAndUnclaimed, (DreamLinkRewardData data) => data.Id);
+				DreamLinkController.Instance.MultiEnergyRewardRequest(ids);
 			});
 			return dreamLinkRewardEnergyItem;
 		}
 
-		// Token: 0x0603ACAD RID: 240813 RVA: 0x00E01DBD File Offset: 0x00DFFFBD
+		// Token: 0x0602FBF9 RID: 195577 RVA: 0x00D52371 File Offset: 0x00D50571
 		private void OnLayoutRefresh()
 		{
 			this.RefreshLayout();
 			EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.ActivityDataBase.Id);
 		}
 
-		// Token: 0x0603ACAE RID: 240814 RVA: 0x00E01DE4 File Offset: 0x00DFFFE4
+		// Token: 0x0602FBFA RID: 195578 RVA: 0x00D52398 File Offset: 0x00D50598
 		private UniTask RefreshLayout()
 		{
 			DreamLinkRewardViewEnergy.<RefreshLayout>d__13 <RefreshLayout>d__;
@@ -106,7 +103,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <RefreshLayout>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ACAF RID: 240815 RVA: 0x00E01E28 File Offset: 0x00E00028
+		// Token: 0x0602FBFB RID: 195579 RVA: 0x00D523DC File Offset: 0x00D505DC
 		private void RefreshEnergy()
 		{
 			int maxEnergy = this.ActivityDataBase.MaxEnergy;
@@ -118,15 +115,15 @@ namespace CSharpScript.Game.Module.DreamLink
 			}));
 		}
 
-		// Token: 0x0401EAF0 RID: 125680
+		// Token: 0x04019597 RID: 103831
 		[Nullable(2)]
 		private DreamLinkData ActivityDataBase;
 
-		// Token: 0x0401EAF1 RID: 125681
+		// Token: 0x04019598 RID: 103832
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x0401EAF2 RID: 125682
+		// Token: 0x04019599 RID: 103833
 		[Nullable(new byte[]
 		{
 			2,
@@ -135,16 +132,16 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private GenericScrollViewNew<DreamLinkRewardEnergyItem, DreamLinkRewardData> TaskLayout;
 
-		// Token: 0x0200BCED RID: 48365
+		// Token: 0x0200A6F6 RID: 42742
 		private class EComponentDefine
 		{
-			// Token: 0x04038FB4 RID: 233396
+			// Token: 0x0403397F RID: 211327
 			public const int Layout = 0;
 
-			// Token: 0x04038FB5 RID: 233397
+			// Token: 0x04033980 RID: 211328
 			public const int CaptionItem = 1;
 
-			// Token: 0x04038FB6 RID: 233398
+			// Token: 0x04033981 RID: 211329
 			public const int Text = 2;
 		}
 	}

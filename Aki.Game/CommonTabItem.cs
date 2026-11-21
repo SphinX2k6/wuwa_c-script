@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020019B8 RID: 6584
+// Token: 0x02000E76 RID: 3702
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonTabItem : CommonTabItemBase
 {
-	// Token: 0x0600C042 RID: 49218 RVA: 0x002B59F0 File Offset: 0x002B3BF0
+	// Token: 0x0600944C RID: 37964 RVA: 0x002C0980 File Offset: 0x002BEB80
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,7 +34,7 @@ public class CommonTabItem : CommonTabItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C043 RID: 49219 RVA: 0x002B5AD8 File Offset: 0x002B3CD8
+	// Token: 0x0600944D RID: 37965 RVA: 0x002C0A68 File Offset: 0x002BEC68
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -52,7 +52,7 @@ public class CommonTabItem : CommonTabItemBase
 		base.GetItem(2).SetUIActive(false);
 	}
 
-	// Token: 0x0600C044 RID: 49220 RVA: 0x002B5B28 File Offset: 0x002B3D28
+	// Token: 0x0600944E RID: 37966 RVA: 0x002C0AB8 File Offset: 0x002BECB8
 	protected override void OnBeforeDestroy()
 	{
 		if (this.NeedUnBindAll)
@@ -63,7 +63,7 @@ public class CommonTabItem : CommonTabItemBase
 		this.UnBindGivenUid(this.RedDotUid);
 	}
 
-	// Token: 0x0600C045 RID: 49221 RVA: 0x002B5B48 File Offset: 0x002B3D48
+	// Token: 0x0600944F RID: 37967 RVA: 0x002C0AD8 File Offset: 0x002BECD8
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		CommonTabData data2 = data.Data;
@@ -84,7 +84,7 @@ public class CommonTabItem : CommonTabItemBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600C046 RID: 49222 RVA: 0x002B5BCB File Offset: 0x002B3DCB
+	// Token: 0x06009450 RID: 37968 RVA: 0x002C0B5B File Offset: 0x002BED5B
 	private void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -93,13 +93,13 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C047 RID: 49223 RVA: 0x002B5BE4 File Offset: 0x002B3DE4
+	// Token: 0x06009451 RID: 37969 RVA: 0x002C0B74 File Offset: 0x002BED74
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SelectedCallBack(base.GridIndex);
 	}
 
-	// Token: 0x0600C048 RID: 49224 RVA: 0x002B5BF8 File Offset: 0x002B3DF8
+	// Token: 0x06009452 RID: 37970 RVA: 0x002C0B88 File Offset: 0x002BED88
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 		if (iconPath != "")
@@ -108,7 +108,7 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C049 RID: 49225 RVA: 0x002B5C38 File Offset: 0x002B3E38
+	// Token: 0x06009453 RID: 37971 RVA: 0x002C0BC8 File Offset: 0x002BEDC8
 	protected void RefreshTransition(bool result)
 	{
 		UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition = base.GetUiExtendToggleSpriteTransition(3);
@@ -118,37 +118,37 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C04A RID: 49226 RVA: 0x002B5C62 File Offset: 0x002B3E62
+	// Token: 0x06009454 RID: 37972 RVA: 0x002C0BF2 File Offset: 0x002BEDF2
 	public void SetToggleStateForce(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleStateForce(state, bFire, false, false);
 	}
 
-	// Token: 0x0600C04B RID: 49227 RVA: 0x002B5C74 File Offset: 0x002B3E74
+	// Token: 0x06009455 RID: 37973 RVA: 0x002C0C04 File Offset: 0x002BEE04
 	public void SetCanClickWhenDisable(bool state)
 	{
 		base.GetExtendToggle(1).SetCanClickWhenDisable(state);
 	}
 
-	// Token: 0x0600C04C RID: 49228 RVA: 0x002B5C83 File Offset: 0x002B3E83
+	// Token: 0x06009456 RID: 37974 RVA: 0x002C0C13 File Offset: 0x002BEE13
 	public void SetOnUndeterminedClick(Action call)
 	{
 		this.OnUndeterminedClick = call;
 	}
 
-	// Token: 0x0600C04D RID: 49229 RVA: 0x002B5C8C File Offset: 0x002B3E8C
+	// Token: 0x06009457 RID: 37975 RVA: 0x002C0C1C File Offset: 0x002BEE1C
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x0600C04E RID: 49230 RVA: 0x002B5C9F File Offset: 0x002B3E9F
+	// Token: 0x06009458 RID: 37976 RVA: 0x002C0C2F File Offset: 0x002BEE2F
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x0600C04F RID: 49231 RVA: 0x002B5CA8 File Offset: 0x002B3EA8
+	// Token: 0x06009459 RID: 37977 RVA: 0x002C0C38 File Offset: 0x002BEE38
 	public virtual void BindRedDot(ERedDotName redDotName, int? uId = 0)
 	{
 		this.RedDotName = new ERedDotName?(redDotName);
@@ -158,7 +158,7 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C050 RID: 49232 RVA: 0x002B5CDD File Offset: 0x002B3EDD
+	// Token: 0x0600945A RID: 37978 RVA: 0x002C0C6D File Offset: 0x002BEE6D
 	public virtual void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -168,7 +168,7 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C051 RID: 49233 RVA: 0x002B5D0D File Offset: 0x002B3F0D
+	// Token: 0x0600945B RID: 37979 RVA: 0x002C0C9D File Offset: 0x002BEE9D
 	protected void UnBindGivenUid(int? uid = 0)
 	{
 		if (this.RedDotName != null)
@@ -178,7 +178,7 @@ public class CommonTabItem : CommonTabItemBase
 		}
 	}
 
-	// Token: 0x0600C052 RID: 49234 RVA: 0x002B5D4B File Offset: 0x002B3F4B
+	// Token: 0x0600945C RID: 37980 RVA: 0x002C0CDB File Offset: 0x002BEEDB
 	public void SetRedDotState(bool bVisible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -189,45 +189,45 @@ public class CommonTabItem : CommonTabItemBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600C053 RID: 49235 RVA: 0x002B5D5F File Offset: 0x002B3F5F
+	// Token: 0x0600945D RID: 37981 RVA: 0x002C0CEF File Offset: 0x002BEEEF
 	public UUISprite GetIconSprite()
 	{
 		return base.GetSprite(0);
 	}
 
-	// Token: 0x0600C054 RID: 49236 RVA: 0x002B5D68 File Offset: 0x002B3F68
+	// Token: 0x0600945E RID: 37982 RVA: 0x002C0CF8 File Offset: 0x002BEEF8
 	protected override void OnClear()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x0400565F RID: 22111
+	// Token: 0x04005711 RID: 22289
 	[Nullable(2)]
 	private Action OnUndeterminedClick;
 
-	// Token: 0x04005660 RID: 22112
+	// Token: 0x04005712 RID: 22290
 	protected ERedDotName? RedDotName;
 
-	// Token: 0x04005661 RID: 22113
+	// Token: 0x04005713 RID: 22291
 	protected int? RedDotUid;
 
-	// Token: 0x04005662 RID: 22114
+	// Token: 0x04005714 RID: 22292
 	protected bool NeedUnBindAll = true;
 
-	// Token: 0x02007EE7 RID: 32487
+	// Token: 0x02007076 RID: 28790
 	[NullableContext(0)]
 	private class ECommonTabItem
 	{
-		// Token: 0x0402976C RID: 169836
+		// Token: 0x04024AA9 RID: 150185
 		public const int Icon = 0;
 
-		// Token: 0x0402976D RID: 169837
+		// Token: 0x04024AAA RID: 150186
 		public const int Toggle = 1;
 
-		// Token: 0x0402976E RID: 169838
+		// Token: 0x04024AAB RID: 150187
 		public const int RedDot = 2;
 
-		// Token: 0x0402976F RID: 169839
+		// Token: 0x04024AAC RID: 150188
 		public const int Transition = 3;
 	}
 }

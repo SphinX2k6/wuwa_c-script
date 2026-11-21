@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E11 RID: 7697
+	// Token: 0x02002044 RID: 8260
 	public class ISetAreaTimeUnLock_SetValue
 	{
-		// Token: 0x04006292 RID: 25234
+		// Token: 0x04006869 RID: 26729
 		public ESetAreaTime Type;
 
-		// Token: 0x04006293 RID: 25235
-		[Nullable(1)]
+		// Token: 0x0400686A RID: 26730
 		public List<int> AreaIds;
 	}
 }

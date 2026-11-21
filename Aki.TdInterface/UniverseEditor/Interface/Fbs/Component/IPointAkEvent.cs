@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200574B RID: 22347
+	// Token: 0x02005D52 RID: 23890
 	public struct IPointAkEvent : IFlatbufferObject
 	{
-		// Token: 0x1700A6B7 RID: 42679
-		// (get) Token: 0x06025719 RID: 153369 RVA: 0x0052ABB5 File Offset: 0x00528DB5
+		// Token: 0x1700AFDB RID: 45019
+		// (get) Token: 0x06027C39 RID: 162873 RVA: 0x00570D41 File Offset: 0x0056EF41
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602571A RID: 153370 RVA: 0x0052ABC2 File Offset: 0x00528DC2
+		// Token: 0x06027C3A RID: 162874 RVA: 0x00570D4E File Offset: 0x0056EF4E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602571B RID: 153371 RVA: 0x0052ABCC File Offset: 0x00528DCC
+		// Token: 0x06027C3B RID: 162875 RVA: 0x00570D58 File Offset: 0x0056EF58
 		public static IPointAkEvent GetRootAsIPointAkEvent(ByteBuffer _bb)
 		{
 			return IPointAkEvent.GetRootAsIPointAkEvent(_bb, default(IPointAkEvent));
 		}
 
-		// Token: 0x0602571C RID: 153372 RVA: 0x0052ABE8 File Offset: 0x00528DE8
+		// Token: 0x06027C3C RID: 162876 RVA: 0x00570D74 File Offset: 0x0056EF74
 		public static IPointAkEvent GetRootAsIPointAkEvent(ByteBuffer _bb, IPointAkEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602571D RID: 153373 RVA: 0x0052AC05 File Offset: 0x00528E05
+		// Token: 0x06027C3D RID: 162877 RVA: 0x00570D91 File Offset: 0x0056EF91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602571E RID: 153374 RVA: 0x0052AC14 File Offset: 0x00528E14
+		// Token: 0x06027C3E RID: 162878 RVA: 0x00570DA0 File Offset: 0x0056EFA0
 		public IPointAkEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A6B8 RID: 42680
-		// (get) Token: 0x0602571F RID: 153375 RVA: 0x0052AC24 File Offset: 0x00528E24
+		// Token: 0x1700AFDC RID: 45020
+		// (get) Token: 0x06027C3F RID: 162879 RVA: 0x00570DB0 File Offset: 0x0056EFB0
 		public EAkEventType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025720 RID: 153376 RVA: 0x0052AC60 File Offset: 0x00528E60
+		// Token: 0x06027C40 RID: 162880 RVA: 0x00570DEC File Offset: 0x0056EFEC
 		public int PointIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A6B9 RID: 42681
-		// (get) Token: 0x06025721 RID: 153377 RVA: 0x0052ACA0 File Offset: 0x00528EA0
+		// Token: 0x1700AFDD RID: 45021
+		// (get) Token: 0x06027C41 RID: 162881 RVA: 0x00570E2C File Offset: 0x0056F02C
 		public int PointIdsLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025722 RID: 153378 RVA: 0x0052ACCB File Offset: 0x00528ECB
+		// Token: 0x06027C42 RID: 162882 RVA: 0x00570E57 File Offset: 0x0056F057
 		public Span<int> GetPointIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06025723 RID: 153379 RVA: 0x0052ACDA File Offset: 0x00528EDA
+		// Token: 0x06027C43 RID: 162883 RVA: 0x00570E66 File Offset: 0x0056F066
 		public int[] GetPointIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700A6BA RID: 42682
-		// (get) Token: 0x06025724 RID: 153380 RVA: 0x0052ACE8 File Offset: 0x00528EE8
+		// Token: 0x1700AFDE RID: 45022
+		// (get) Token: 0x06027C44 RID: 162884 RVA: 0x00570E74 File Offset: 0x0056F074
 		public bool UseListenerCone
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6BB RID: 42683
-		// (get) Token: 0x06025725 RID: 153381 RVA: 0x0052AD28 File Offset: 0x00528F28
+		// Token: 0x1700AFDF RID: 45023
+		// (get) Token: 0x06027C45 RID: 162885 RVA: 0x00570EB4 File Offset: 0x0056F0B4
 		public bool EnableOcclusion
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6BC RID: 42684
-		// (get) Token: 0x06025726 RID: 153382 RVA: 0x0052AD68 File Offset: 0x00528F68
+		// Token: 0x1700AFE0 RID: 45024
+		// (get) Token: 0x06027C46 RID: 162886 RVA: 0x00570EF4 File Offset: 0x0056F0F4
 		public byte NullMask
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025727 RID: 153383 RVA: 0x0052ADA5 File Offset: 0x00528FA5
+		// Token: 0x06027C47 RID: 162887 RVA: 0x00570F31 File Offset: 0x0056F131
 		public static Offset<IPointAkEvent> CreateIPointAkEvent(FlatBufferBuilder builder, EAkEventType Type = EAkEventType.Point, VectorOffset PointIdsOffset = default(VectorOffset), bool UseListenerCone = false, bool EnableOcclusion = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -150,25 +150,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPointAkEvent.EndIPointAkEvent(builder);
 		}
 
-		// Token: 0x06025728 RID: 153384 RVA: 0x0052ADD9 File Offset: 0x00528FD9
+		// Token: 0x06027C48 RID: 162888 RVA: 0x00570F65 File Offset: 0x0056F165
 		public static void StartIPointAkEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06025729 RID: 153385 RVA: 0x0052ADE2 File Offset: 0x00528FE2
+		// Token: 0x06027C49 RID: 162889 RVA: 0x00570F6E File Offset: 0x0056F16E
 		public static void AddType(FlatBufferBuilder builder, EAkEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602572A RID: 153386 RVA: 0x0052ADED File Offset: 0x00528FED
+		// Token: 0x06027C4A RID: 162890 RVA: 0x00570F79 File Offset: 0x0056F179
 		public static void AddPointIds(FlatBufferBuilder builder, VectorOffset pointIdsOffset)
 		{
 			builder.AddOffset(1, pointIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602572B RID: 153387 RVA: 0x0052AE00 File Offset: 0x00529000
+		// Token: 0x06027C4B RID: 162891 RVA: 0x00570F8C File Offset: 0x0056F18C
 		public static VectorOffset CreatePointIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602572C RID: 153388 RVA: 0x0052AE37 File Offset: 0x00529037
+		// Token: 0x06027C4C RID: 162892 RVA: 0x00570FC3 File Offset: 0x0056F1C3
 		public static VectorOffset CreatePointIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602572D RID: 153389 RVA: 0x0052AE51 File Offset: 0x00529051
+		// Token: 0x06027C4D RID: 162893 RVA: 0x00570FDD File Offset: 0x0056F1DD
 		public static VectorOffset CreatePointIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602572E RID: 153390 RVA: 0x0052AE6F File Offset: 0x0052906F
+		// Token: 0x06027C4E RID: 162894 RVA: 0x00570FFB File Offset: 0x0056F1FB
 		public static VectorOffset CreatePointIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -203,37 +203,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602572F RID: 153391 RVA: 0x0052AE88 File Offset: 0x00529088
+		// Token: 0x06027C4F RID: 162895 RVA: 0x00571014 File Offset: 0x0056F214
 		public static void StartPointIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025730 RID: 153392 RVA: 0x0052AE93 File Offset: 0x00529093
+		// Token: 0x06027C50 RID: 162896 RVA: 0x0057101F File Offset: 0x0056F21F
 		public static void AddUseListenerCone(FlatBufferBuilder builder, bool useListenerCone)
 		{
 			builder.AddBool(2, useListenerCone, false);
 		}
 
-		// Token: 0x06025731 RID: 153393 RVA: 0x0052AE9E File Offset: 0x0052909E
+		// Token: 0x06027C51 RID: 162897 RVA: 0x0057102A File Offset: 0x0056F22A
 		public static void AddEnableOcclusion(FlatBufferBuilder builder, bool enableOcclusion)
 		{
 			builder.AddBool(3, enableOcclusion, false);
 		}
 
-		// Token: 0x06025732 RID: 153394 RVA: 0x0052AEA9 File Offset: 0x005290A9
+		// Token: 0x06027C52 RID: 162898 RVA: 0x00571035 File Offset: 0x0056F235
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06025733 RID: 153395 RVA: 0x0052AEB4 File Offset: 0x005290B4
+		// Token: 0x06027C53 RID: 162899 RVA: 0x00571040 File Offset: 0x0056F240
 		public static Offset<IPointAkEvent> EndIPointAkEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IPointAkEvent>(builder.EndTable());
 		}
 
-		// Token: 0x06025734 RID: 153396 RVA: 0x0052AEC4 File Offset: 0x005290C4
+		// Token: 0x06027C54 RID: 162900 RVA: 0x00571050 File Offset: 0x0056F250
 		public IPointAkEventT UnPack()
 		{
 			IPointAkEventT pointAkEventT = new IPointAkEventT();
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pointAkEventT;
 		}
 
-		// Token: 0x06025735 RID: 153397 RVA: 0x0052AEE0 File Offset: 0x005290E0
+		// Token: 0x06027C55 RID: 162901 RVA: 0x0057106C File Offset: 0x0056F26C
 		public void UnPackTo(IPointAkEventT _o)
 		{
 			_o.Type = this.Type;
@@ -255,7 +255,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025736 RID: 153398 RVA: 0x0052AF4C File Offset: 0x0052914C
+		// Token: 0x06027C56 RID: 162902 RVA: 0x005710D8 File Offset: 0x0056F2D8
 		public static Offset<IPointAkEvent> Pack(FlatBufferBuilder builder, IPointAkEventT _o)
 		{
 			if (_o == null)
@@ -271,7 +271,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPointAkEvent.CreateIPointAkEvent(builder, _o.Type, pointIdsOffset, _o.UseListenerCone, _o.EnableOcclusion, _o.NullMask);
 		}
 
-		// Token: 0x0400EBE7 RID: 60391
+		// Token: 0x0400F8D2 RID: 63698
 		private Table __p;
 	}
 }

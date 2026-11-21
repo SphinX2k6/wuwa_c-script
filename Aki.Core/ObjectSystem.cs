@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000B6 RID: 182
+// Token: 0x020000B8 RID: 184
 [NullableContext(1)]
 [Nullable(0)]
 public class ObjectSystem : Singleton
 {
-	// Token: 0x060005BD RID: 1469 RVA: 0x0001EAEE File Offset: 0x0001CCEE
+	// Token: 0x060005FE RID: 1534 RVA: 0x0001F192 File Offset: 0x0001D392
 	public bool Initialize()
 	{
 		this.Objects.Clear();
@@ -16,7 +16,7 @@ public class ObjectSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x060005BE RID: 1470 RVA: 0x0001EB14 File Offset: 0x0001CD14
+	// Token: 0x060005FF RID: 1535 RVA: 0x0001F1B8 File Offset: 0x0001D3B8
 	[NullableContext(2)]
 	public bool IsValid(ObjectBase obj)
 	{
@@ -29,38 +29,25 @@ public class ObjectSystem : Singleton
 			return false;
 		}
 		ObjectBase objectBase = this.Objects[obj.Index];
-		if (objectBase == null)
-		{
-			return false;
-		}
-		int? num = (objectBase != null) ? new int?(objectBase.Id) : null;
-		int id = obj.Id;
-		return num.GetValueOrDefault() == id & num != null;
+		return objectBase != null && objectBase.Id == obj.Id;
 	}
 
-	// Token: 0x060005BF RID: 1471 RVA: 0x0001EB94 File Offset: 0x0001CD94
-	[NullableContext(0)]
+	// Token: 0x06000600 RID: 1536 RVA: 0x0001F210 File Offset: 0x0001D410
 	[return: Nullable(2)]
-	public unsafe T Create<T>() where T : ObjectBase
+	public unsafe ObjectBase Create(Type type)
 	{
-		Stat value = null;
-		if (Stat.Enable && !this.StatWeakMap.TryGetValue(typeof(T), out value))
-		{
-			value = null;
-			this.StatWeakMap[typeof(T)] = value;
-		}
-		T t = default(T);
 		int num;
+		ObjectBase objectBase;
 		int num2;
 		if (this.Objects.Count <= 32767)
 		{
 			num = this.Objects.Count;
-			t = (T)((object)Activator.CreateInstance(typeof(T), new object[]
+			objectBase = (ObjectBase)Activator.CreateInstance(type, new object[]
 			{
 				0,
 				num
-			}));
-			this.Objects.Add(t);
+			});
+			this.Objects.Add(objectBase);
 			this.Versions.Add(1);
 			num2 = 1;
 		}
@@ -76,16 +63,16 @@ public class ObjectSystem : Singleton
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("MaxIndex", 32767);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Effects.length", this.Objects.Count);
 				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				return default(T);
+				return null;
 			}
 			num = this.Indexes[this.Indexes.Count - 1];
 			this.Indexes.RemoveAt(this.Indexes.Count - 1);
-			t = (T)((object)Activator.CreateInstance(typeof(T), new object[]
+			objectBase = (ObjectBase)Activator.CreateInstance(type, new object[]
 			{
 				0,
 				num
-			}));
-			this.Objects[num] = t;
+			});
+			this.Objects[num] = objectBase;
 			List<int> versions = this.Versions;
 			int index = num;
 			int num3 = versions[index] + 1;
@@ -98,12 +85,12 @@ public class ObjectSystem : Singleton
 			}
 		}
 		int id = num << 16 | num2;
-		t.Id = id;
-		return t;
+		objectBase.Id = id;
+		return objectBase;
 	}
 
-	// Token: 0x060005C0 RID: 1472 RVA: 0x0001EDA0 File Offset: 0x0001CFA0
-	public unsafe bool CreateExternal<[Nullable(0)] T>(T obj) where T : ObjectBase
+	// Token: 0x06000601 RID: 1537 RVA: 0x0001F3AC File Offset: 0x0001D5AC
+	public unsafe bool CreateExternal(ObjectBase obj)
 	{
 		int num;
 		int num2;
@@ -148,7 +135,8 @@ public class ObjectSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x060005C1 RID: 1473 RVA: 0x0001EF0C File Offset: 0x0001D10C
+	// Token: 0x06000602 RID: 1538 RVA: 0x0001F500 File Offset: 0x0001D700
+	[NullableContext(2)]
 	public bool Destroy(ObjectBase obj)
 	{
 		if (!this.IsValid(obj))
@@ -157,7 +145,7 @@ public class ObjectSystem : Singleton
 			ELogModule module = ELogModule.Object;
 			ELogAuthor author = ELogAuthor.LCC;
 			string message = "对象重复销毁";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("class", obj.GetType().Name);
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("class", (obj != null) ? obj.GetType() : null);
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return false;
 		}
@@ -166,8 +154,8 @@ public class ObjectSystem : Singleton
 		return true;
 	}
 
-	// Token: 0x170000C8 RID: 200
-	// (get) Token: 0x060005C2 RID: 1474 RVA: 0x0001EF78 File Offset: 0x0001D178
+	// Token: 0x170000DA RID: 218
+	// (get) Token: 0x06000603 RID: 1539 RVA: 0x0001F56D File Offset: 0x0001D76D
 	public static ObjectSystem Instance
 	{
 		get
@@ -181,12 +169,12 @@ public class ObjectSystem : Singleton
 		}
 	}
 
-	// Token: 0x060005C3 RID: 1475 RVA: 0x0001EF9B File Offset: 0x0001D19B
+	// Token: 0x06000604 RID: 1540 RVA: 0x0001F590 File Offset: 0x0001D790
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060005C4 RID: 1476 RVA: 0x0001EF9D File Offset: 0x0001D19D
+	// Token: 0x06000605 RID: 1541 RVA: 0x0001F592 File Offset: 0x0001D792
 	public static void ResetStaticDefaultValue()
 	{
 		ObjectSystem instance = ObjectSystem._instance;
@@ -197,40 +185,45 @@ public class ObjectSystem : Singleton
 		ObjectSystem._instance = null;
 	}
 
-	// Token: 0x060005C5 RID: 1477 RVA: 0x0001EFB6 File Offset: 0x0001D1B6
+	// Token: 0x06000606 RID: 1542 RVA: 0x0001F5AB File Offset: 0x0001D7AB
 	static ObjectSystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ObjectSystem.CreateStaticDefaultValue), new Action(ObjectSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040004A0 RID: 1184
+	// Token: 0x040004AE RID: 1198
 	private readonly Dictionary<Type, Stat> StatWeakMap = new Dictionary<Type, Stat>();
 
-	// Token: 0x040004A1 RID: 1185
+	// Token: 0x040004AF RID: 1199
 	private const int Digit = 32;
 
-	// Token: 0x040004A2 RID: 1186
+	// Token: 0x040004B0 RID: 1200
 	private const int IndexDigit = 16;
 
-	// Token: 0x040004A3 RID: 1187
+	// Token: 0x040004B1 RID: 1201
 	public const int VersionDigit = 16;
 
-	// Token: 0x040004A4 RID: 1188
+	// Token: 0x040004B2 RID: 1202
 	private const int MaxIndex = 32767;
 
-	// Token: 0x040004A5 RID: 1189
+	// Token: 0x040004B3 RID: 1203
 	private const int MaxVersion = 65535;
 
-	// Token: 0x040004A6 RID: 1190
+	// Token: 0x040004B4 RID: 1204
+	[Nullable(new byte[]
+	{
+		1,
+		2
+	})]
 	public readonly List<ObjectBase> Objects = new List<ObjectBase>();
 
-	// Token: 0x040004A7 RID: 1191
+	// Token: 0x040004B5 RID: 1205
 	private readonly List<int> Versions = new List<int>();
 
-	// Token: 0x040004A8 RID: 1192
+	// Token: 0x040004B6 RID: 1206
 	private readonly List<int> Indexes = new List<int>();
 
-	// Token: 0x040004A9 RID: 1193
+	// Token: 0x040004B7 RID: 1207
 	[Nullable(2)]
 	private static ObjectSystem _instance;
 }

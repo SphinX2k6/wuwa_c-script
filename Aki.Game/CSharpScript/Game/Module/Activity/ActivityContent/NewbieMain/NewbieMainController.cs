@@ -7,25 +7,25 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x0200637C RID: 25468
+	// Token: 0x020052FA RID: 21242
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class NewbieMainController : ActivityControllerBase
 	{
-		// Token: 0x060400EB RID: 262379 RVA: 0x00F7FDEE File Offset: 0x00F7DFEE
+		// Token: 0x06034DAC RID: 216492 RVA: 0x00EC6D52 File Offset: 0x00EC4F52
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.NewbieMainTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnNewbieMainTaskUpdate));
 		}
 
-		// Token: 0x060400EC RID: 262380 RVA: 0x00F7FE0C File Offset: 0x00F7E00C
+		// Token: 0x06034DAD RID: 216493 RVA: 0x00EC6D70 File Offset: 0x00EC4F70
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.NewbieMainTaskUpdateNotify);
 		}
 
-		// Token: 0x060400ED RID: 262381 RVA: 0x00F7FE20 File Offset: 0x00F7E020
+		// Token: 0x06034DAE RID: 216494 RVA: 0x00EC6D84 File Offset: 0x00EC4F84
 		[NullableContext(2)]
 		private void OnNewbieMainTaskUpdate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			EventSystem.Instance.Emit(EEventName.OnNewbieMainTaskUpdate);
 		}
 
-		// Token: 0x060400EE RID: 262382 RVA: 0x00F7FE94 File Offset: 0x00F7E094
+		// Token: 0x06034DAF RID: 216495 RVA: 0x00EC6DF8 File Offset: 0x00EC4FF8
 		public static void RequestFetchScoreRewardAsync(int activityId, List<int> rewardIds, Action<bool> callback)
 		{
 			NewbieFetchScoreRewardRequest newbieFetchScoreRewardRequest = NewbieFetchScoreRewardRequest.Create();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 				}
 				else if (newbieFetchScoreRewardResponse.Code != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(newbieFetchScoreRewardResponse.Code, 22454, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(newbieFetchScoreRewardResponse.Code, 29217, null, true, true);
 					Action<bool> callback3 = callback;
 					if (callback3 == null)
 					{
@@ -92,37 +92,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}, 0);
 		}
 
-		// Token: 0x060400EF RID: 262383 RVA: 0x00F7FEFC File Offset: 0x00F7E0FC
+		// Token: 0x06034DB0 RID: 216496 RVA: 0x00EC6E60 File Offset: 0x00EC5060
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x060400F0 RID: 262384 RVA: 0x00F7FEFE File Offset: 0x00F7E0FE
+		// Token: 0x06034DB1 RID: 216497 RVA: 0x00EC6E62 File Offset: 0x00EC5062
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_NewcomerMainSignin";
 		}
 
-		// Token: 0x060400F1 RID: 262385 RVA: 0x00F7FF05 File Offset: 0x00F7E105
+		// Token: 0x06034DB2 RID: 216498 RVA: 0x00EC6E69 File Offset: 0x00EC5069
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new NewbieMainSubView();
 		}
 
-		// Token: 0x060400F2 RID: 262386 RVA: 0x00F7FF0C File Offset: 0x00F7E10C
+		// Token: 0x06034DB3 RID: 216499 RVA: 0x00EC6E70 File Offset: 0x00EC5070
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new NewbieMainData();
 		}
 
-		// Token: 0x060400F3 RID: 262387 RVA: 0x00F7FF13 File Offset: 0x00F7E113
+		// Token: 0x06034DB4 RID: 216500 RVA: 0x00EC6E77 File Offset: 0x00EC5077
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x17009350 RID: 37712
-		// (get) Token: 0x060400F4 RID: 262388 RVA: 0x00F7FF16 File Offset: 0x00F7E116
+		// Token: 0x170066B2 RID: 26290
+		// (get) Token: 0x06034DB5 RID: 216501 RVA: 0x00EC6E7A File Offset: 0x00EC507A
 		public static NewbieMainController Instance
 		{
 			get
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x060400F5 RID: 262389 RVA: 0x00F7FF1D File Offset: 0x00F7E11D
+		// Token: 0x06034DB6 RID: 216502 RVA: 0x00EC6E81 File Offset: 0x00EC5081
 		public static NewbieMainController GetOrCreateInstance()
 		{
 			if (NewbieMainController._Instance == null)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return NewbieMainController._Instance;
 		}
 
-		// Token: 0x060400F6 RID: 262390 RVA: 0x00F7FF31 File Offset: 0x00F7E131
+		// Token: 0x06034DB7 RID: 216503 RVA: 0x00EC6E95 File Offset: 0x00EC5095
 		public static bool CreateInstance()
 		{
 			if (NewbieMainController._Instance != null)
@@ -152,24 +152,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return true;
 		}
 
-		// Token: 0x060400F7 RID: 262391 RVA: 0x00F7FF47 File Offset: 0x00F7E147
+		// Token: 0x06034DB8 RID: 216504 RVA: 0x00EC6EAB File Offset: 0x00EC50AB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060400F8 RID: 262392 RVA: 0x00F7FF49 File Offset: 0x00F7E149
+		// Token: 0x06034DB9 RID: 216505 RVA: 0x00EC6EAD File Offset: 0x00EC50AD
 		public static void ResetStaticDefaultValue()
 		{
 			NewbieMainController._Instance = null;
 		}
 
-		// Token: 0x060400F9 RID: 262393 RVA: 0x00F7FF51 File Offset: 0x00F7E151
+		// Token: 0x06034DBA RID: 216506 RVA: 0x00EC6EB5 File Offset: 0x00EC50B5
 		static NewbieMainController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(NewbieMainController.CreateStaticDefaultValue), new Action(NewbieMainController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021616 RID: 136726
+		// Token: 0x0401BF45 RID: 114501
 		[Nullable(2)]
 		private static NewbieMainController _Instance;
 	}

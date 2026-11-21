@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200209E RID: 8350
+	// Token: 0x020022EF RID: 8943
 	public class IVisualNovelPortraitPosPreset_SetValue
 	{
-		// Token: 0x04006E39 RID: 28217
-		[Nullable(1)]
+		// Token: 0x0400744F RID: 29775
 		public string Name;
 
-		// Token: 0x04006E3A RID: 28218
+		// Token: 0x04007450 RID: 29776
 		public int PosX;
 
-		// Token: 0x04006E3B RID: 28219
+		// Token: 0x04007451 RID: 29777
 		public int PosY;
 	}
 }

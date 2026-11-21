@@ -1,30 +1,30 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033DF RID: 13279
+// Token: 0x02002951 RID: 10577
 public class RedDotMotorcycleDiyStickerTab : RedDotBase
 {
-	// Token: 0x0601CC4A RID: 117834 RVA: 0x00809C5A File Offset: 0x00807E5A
+	// Token: 0x0601A942 RID: 108866 RVA: 0x0083021E File Offset: 0x0082E41E
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CC4B RID: 117835 RVA: 0x00809C5D File Offset: 0x00807E5D
+	// Token: 0x0601A943 RID: 108867 RVA: 0x00830221 File Offset: 0x0082E421
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDiyInfoUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Add(EEventName.MotorDiyInfoRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC4C RID: 117836 RVA: 0x00809C97 File Offset: 0x00807E97
+	// Token: 0x0601A944 RID: 108868 RVA: 0x0083025B File Offset: 0x0082E45B
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDiyInfoUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Remove(EEventName.MotorDiyInfoRedDotUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC4D RID: 117837 RVA: 0x00809CD1 File Offset: 0x00807ED1
+	// Token: 0x0601A945 RID: 108869 RVA: 0x00830295 File Offset: 0x0082E495
 	protected override bool OnCheck(int uId = 0)
 	{
 		return !MotorcycleDiyModel.Instance.RedDotIsPreviewInAnyPart(EOutlookType.Sticker) && MotorcycleDiyModel.Instance.RedDotHasNewStickerByAnyPart();

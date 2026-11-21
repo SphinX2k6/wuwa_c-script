@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D91 RID: 3473
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E8D RID: 3725
 	public class IWindDirectional : IWindSourceBase
 	{
-		// Token: 0x06004EFA RID: 20218 RVA: 0x000C3D50 File Offset: 0x000C1F50
+		// Token: 0x0600541F RID: 21535 RVA: 0x000CF5A0 File Offset: 0x000CD7A0
 		public static IWindDirectional Create(IWindDirectional? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001995 RID: 6549
-		// (get) Token: 0x06004EFB RID: 20219 RVA: 0x000C3D6F File Offset: 0x000C1F6F
+		// Token: 0x17001B00 RID: 6912
+		// (get) Token: 0x06005420 RID: 21536 RVA: 0x000CF5BF File Offset: 0x000CD7BF
 		public override EWindSourceType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001996 RID: 6550
-		// (get) Token: 0x06004EFC RID: 20220 RVA: 0x000C3D7C File Offset: 0x000C1F7C
+		// Token: 0x17001B01 RID: 6913
+		// (get) Token: 0x06005421 RID: 21537 RVA: 0x000CF5CC File Offset: 0x000CD7CC
 		public virtual VectorInfo Rot
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001997 RID: 6551
-		// (get) Token: 0x06004EFD RID: 20221 RVA: 0x000C3DB0 File Offset: 0x000C1FB0
+		// Token: 0x17001B02 RID: 6914
+		// (get) Token: 0x06005422 RID: 21538 RVA: 0x000CF600 File Offset: 0x000CD800
 		public virtual List<IWindDirectionalStateGrade> Grades
 		{
 			get
@@ -71,20 +69,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D64 RID: 11620
+		// Token: 0x0400302A RID: 12330
 		private IWindDirectional Instance;
 
-		// Token: 0x04002D65 RID: 11621
+		// Token: 0x0400302B RID: 12331
 		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x04002D66 RID: 11622
+		// Token: 0x0400302C RID: 12332
 		private bool _RotInited;
 
-		// Token: 0x04002D67 RID: 11623
+		// Token: 0x0400302D RID: 12333
 		private List<IWindDirectionalStateGrade> _GradesCache;
 
-		// Token: 0x04002D68 RID: 11624
+		// Token: 0x0400302E RID: 12334
 		private bool _GradesInited;
 	}
 }

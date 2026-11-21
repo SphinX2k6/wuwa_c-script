@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019DD RID: 6621
+// Token: 0x02000E9C RID: 3740
 [NullableContext(1)]
 [Nullable(0)]
 public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 {
-	// Token: 0x0600C157 RID: 49495 RVA: 0x002B9BC2 File Offset: 0x002B7DC2
+	// Token: 0x06009564 RID: 38244 RVA: 0x002C4B9A File Offset: 0x002C2D9A
 	public ConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C158 RID: 49496 RVA: 0x002B9BE4 File Offset: 0x002B7DE4
+	// Token: 0x06009565 RID: 38245 RVA: 0x002C4BBC File Offset: 0x002C2DBC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -59,7 +59,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C159 RID: 49497 RVA: 0x002B9DB8 File Offset: 0x002B7FB8
+	// Token: 0x06009566 RID: 38246 RVA: 0x002C4D90 File Offset: 0x002C2F90
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param)
 	{
@@ -70,21 +70,21 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		return (param as ConfirmBoxDataNew).CustomPopType;
 	}
 
-	// Token: 0x0600C15A RID: 49498 RVA: 0x002B9DDD File Offset: 0x002B7FDD
+	// Token: 0x06009567 RID: 38247 RVA: 0x002C4DB5 File Offset: 0x002C2FB5
 	public string GetExtraResourceId([Nullable(2)] object param)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = param as ConfirmBoxDataNew;
 		return ((confirmBoxDataNew != null) ? confirmBoxDataNew.CustomResourceId : null) ?? "";
 	}
 
-	// Token: 0x0600C15B RID: 49499 RVA: 0x002B9DFA File Offset: 0x002B7FFA
+	// Token: 0x06009568 RID: 38248 RVA: 0x002C4DD2 File Offset: 0x002C2FD2
 	protected void OnClose()
 	{
 		this.SelectedIndex = -1;
 		this.ConfirmBoxButtonClick();
 	}
 
-	// Token: 0x0600C15C RID: 49500 RVA: 0x002B9E0C File Offset: 0x002B800C
+	// Token: 0x06009569 RID: 38249 RVA: 0x002C4DE4 File Offset: 0x002C2FE4
 	protected void ConfirmBoxButtonClick()
 	{
 		ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -112,7 +112,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600C15D RID: 49501 RVA: 0x002B9E7C File Offset: 0x002B807C
+	// Token: 0x0600956A RID: 38250 RVA: 0x002C4E54 File Offset: 0x002C3054
 	private void TryUploadLog()
 	{
 		UiManager instance = UiManager.Instance;
@@ -125,7 +125,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		instance.OpenView(logUploadView, logUploadOpenParam, null);
 	}
 
-	// Token: 0x0600C15E RID: 49502 RVA: 0x002B9ED8 File Offset: 0x002B80D8
+	// Token: 0x0600956B RID: 38251 RVA: 0x002C4EB0 File Offset: 0x002C30B0
 	private void HandleSelectedIndexWhenClose()
 	{
 		if (this.SelectedIndex != -1)
@@ -140,7 +140,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		this.SelectedIndex = 0;
 	}
 
-	// Token: 0x0600C15F RID: 49503 RVA: 0x002B9F30 File Offset: 0x002B8130
+	// Token: 0x0600956C RID: 38252 RVA: 0x002C4F08 File Offset: 0x002C3108
 	protected override float OnGetTimeDilation()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = this.OpenParam as ConfirmBoxDataNew;
@@ -152,7 +152,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		return (float)((confirmBoxConfig != null) ? confirmBoxConfig.GetValueOrDefault().TimeDilation : 1);
 	}
 
-	// Token: 0x0600C160 RID: 49504 RVA: 0x002B9F80 File Offset: 0x002B8180
+	// Token: 0x0600956D RID: 38253 RVA: 0x002C4F58 File Offset: 0x002C3158
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ConfirmBoxView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -163,7 +163,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C161 RID: 49505 RVA: 0x002B9FC4 File Offset: 0x002B81C4
+	// Token: 0x0600956E RID: 38254 RVA: 0x002C4F9C File Offset: 0x002C319C
 	protected override void OnStart()
 	{
 		UiViewBase attachView = (this.OpenParam as ConfirmBoxDataNew).AttachView;
@@ -174,7 +174,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600C162 RID: 49506 RVA: 0x002BA018 File Offset: 0x002B8218
+	// Token: 0x0600956F RID: 38255 RVA: 0x002C4FF0 File Offset: 0x002C31F0
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -247,7 +247,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600C163 RID: 49507 RVA: 0x002BA16D File Offset: 0x002B836D
+	// Token: 0x06009570 RID: 38256 RVA: 0x002C5145 File Offset: 0x002C3345
 	protected override void OnAfterShow()
 	{
 		Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -258,7 +258,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		afterShowFunction();
 	}
 
-	// Token: 0x0600C164 RID: 49508 RVA: 0x002BA184 File Offset: 0x002B8384
+	// Token: 0x06009571 RID: 38257 RVA: 0x002C515C File Offset: 0x002C335C
 	protected override void OnBeforeHide()
 	{
 		if (this.LastHide)
@@ -277,7 +277,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600C165 RID: 49509 RVA: 0x002BA1A8 File Offset: 0x002B83A8
+	// Token: 0x06009572 RID: 38258 RVA: 0x002C5180 File Offset: 0x002C3380
 	protected UniTask InitButton()
 	{
 		ConfirmBoxView.<InitButton>d__23 <InitButton>d__;
@@ -288,7 +288,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		return <InitButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C166 RID: 49510 RVA: 0x002BA1EC File Offset: 0x002B83EC
+	// Token: 0x06009573 RID: 38259 RVA: 0x002C51C4 File Offset: 0x002C33C4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -307,7 +307,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C167 RID: 49511 RVA: 0x002BA248 File Offset: 0x002B8448
+	// Token: 0x06009574 RID: 38260 RVA: 0x002C5220 File Offset: 0x002C3420
 	private void ResetButtonList()
 	{
 		int i = 0;
@@ -320,7 +320,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		this.ButtonList = new ConfirmBoxButton[0];
 	}
 
-	// Token: 0x0600C168 RID: 49512 RVA: 0x002BA284 File Offset: 0x002B8484
+	// Token: 0x06009575 RID: 38261 RVA: 0x002C525C File Offset: 0x002C345C
 	protected void InitPropItem()
 	{
 		ULGUIBehaviour scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(3);
@@ -342,7 +342,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		this.PropScrollView.RefreshByData<ValueTuple<int, int>>(list, null);
 	}
 
-	// Token: 0x0600C169 RID: 49513 RVA: 0x002BA344 File Offset: 0x002B8544
+	// Token: 0x06009576 RID: 38262 RVA: 0x002C531C File Offset: 0x002C351C
 	private ILayoutItem<CommonItemSmallItemGrid> CreatePropItem(object tempData, UUIItem uiItem, int index)
 	{
 		ValueTuple<int, int> valueTuple = (ValueTuple<int, int>)tempData;
@@ -356,7 +356,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		};
 	}
 
-	// Token: 0x0600C16A RID: 49514 RVA: 0x002BA39C File Offset: 0x002B859C
+	// Token: 0x06009577 RID: 38263 RVA: 0x002C5374 File Offset: 0x002C3574
 	private void ToggleClick(EToggleState toggleState)
 	{
 		if (this.ToggleFunction != null)
@@ -365,7 +365,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600C16B RID: 49515 RVA: 0x002BA3B8 File Offset: 0x002B85B8
+	// Token: 0x06009578 RID: 38264 RVA: 0x002C5390 File Offset: 0x002C3590
 	private void InitToggle()
 	{
 		ConfirmBoxDataNew data = this.OpenParam as ConfirmBoxDataNew;
@@ -432,7 +432,7 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		this.ToggleFunction = data.GetToggleFunction();
 	}
 
-	// Token: 0x0600C16C RID: 49516 RVA: 0x002BA574 File Offset: 0x002B8774
+	// Token: 0x06009579 RID: 38265 RVA: 0x002C554C File Offset: 0x002C374C
 	protected override void OnBeforeDestroy()
 	{
 		this.ResetButtonList();
@@ -476,10 +476,10 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 		overPowerCurrencyItem.Destroy(null);
 	}
 
-	// Token: 0x0400591B RID: 22811
+	// Token: 0x040059EA RID: 23018
 	protected ConfirmBoxButton[] ButtonList = Array.Empty<ConfirmBoxButton>();
 
-	// Token: 0x0400591C RID: 22812
+	// Token: 0x040059EB RID: 23019
 	[Nullable(new byte[]
 	{
 		2,
@@ -487,66 +487,66 @@ public class ConfirmBoxView : UiViewBase, IExtraUiPopFrameType, IUiViewResource
 	})]
 	protected GenericScrollView<CommonItemSmallItemGrid> PropScrollView;
 
-	// Token: 0x0400591D RID: 22813
+	// Token: 0x040059EC RID: 23020
 	protected ConfirmBox? Config;
 
-	// Token: 0x0400591E RID: 22814
+	// Token: 0x040059ED RID: 23021
 	[Nullable(2)]
 	protected ConfirmBoxDataNew ConfirmBoxData;
 
-	// Token: 0x0400591F RID: 22815
+	// Token: 0x040059EE RID: 23022
 	protected int SelectedIndex;
 
-	// Token: 0x04005920 RID: 22816
+	// Token: 0x040059EF RID: 23023
 	protected readonly List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-	// Token: 0x04005921 RID: 22817
+	// Token: 0x040059F0 RID: 23024
 	[Nullable(2)]
 	private PowerCurrencyItem PowerCurrencyItem;
 
-	// Token: 0x04005922 RID: 22818
+	// Token: 0x040059F1 RID: 23025
 	[Nullable(2)]
 	private PowerCurrencyItem OverPowerCurrencyItem;
 
-	// Token: 0x04005923 RID: 22819
+	// Token: 0x040059F2 RID: 23026
 	[Nullable(2)]
 	protected Action<bool> ToggleFunction;
 
-	// Token: 0x02007EFD RID: 32509
+	// Token: 0x0200708C RID: 28812
 	[NullableContext(0)]
 	private class EConfirmBoxViewDefine
 	{
-		// Token: 0x040297C9 RID: 169929
+		// Token: 0x04024B06 RID: 150278
 		public const int TitleText = 0;
 
-		// Token: 0x040297CA RID: 169930
+		// Token: 0x04024B07 RID: 150279
 		public const int ContentText = 1;
 
-		// Token: 0x040297CB RID: 169931
+		// Token: 0x04024B08 RID: 150280
 		public const int ButtonRootItem = 2;
 
-		// Token: 0x040297CC RID: 169932
+		// Token: 0x04024B09 RID: 150281
 		public const int PropScrollView = 3;
 
-		// Token: 0x040297CD RID: 169933
+		// Token: 0x04024B0A RID: 150282
 		public const int ButtonCancel = 4;
 
-		// Token: 0x040297CE RID: 169934
+		// Token: 0x04024B0B RID: 150283
 		public const int ButtonConfirm = 5;
 
-		// Token: 0x040297CF RID: 169935
+		// Token: 0x04024B0C RID: 150284
 		public const int Toggle = 6;
 
-		// Token: 0x040297D0 RID: 169936
+		// Token: 0x04024B0D RID: 150285
 		public const int ToggleText = 7;
 
-		// Token: 0x040297D1 RID: 169937
+		// Token: 0x04024B0E RID: 150286
 		public const int TipBar = 8;
 
-		// Token: 0x040297D2 RID: 169938
+		// Token: 0x04024B0F RID: 150287
 		public const int TipTxt = 9;
 
-		// Token: 0x040297D3 RID: 169939
+		// Token: 0x04024B10 RID: 150288
 		public const int SprTipBarBg = 10;
 	}
 }

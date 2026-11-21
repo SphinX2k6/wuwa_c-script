@@ -21,25 +21,15 @@ using CSharpScript.Game.NewWorld.SceneItem.Elevator;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200304C RID: 12364
+// Token: 0x020025A2 RID: 9634
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDependency
+public class CharacterAnimationComponent : BaseAnimationComponent
 {
-	// Token: 0x17002426 RID: 9254
-	// (get) Token: 0x0601A3E9 RID: 107497 RVA: 0x006EBCDF File Offset: 0x006E9EDF
-	[Nullable(new byte[]
+	// Token: 0x17002528 RID: 9512
+	// (get) Token: 0x06017D69 RID: 97641 RVA: 0x007133C7 File Offset: 0x007115C7
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -50,8 +40,8 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x17002427 RID: 9255
-	// (get) Token: 0x0601A3EA RID: 107498 RVA: 0x006EBD01 File Offset: 0x006E9F01
+	// Token: 0x17002529 RID: 9513
+	// (get) Token: 0x06017D6A RID: 97642 RVA: 0x007133E9 File Offset: 0x007115E9
 	[Nullable(2)]
 	protected new CharacterActorComponent ActorComp
 	{
@@ -62,8 +52,8 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x17002428 RID: 9256
-	// (get) Token: 0x0601A3EB RID: 107499 RVA: 0x006EBD0E File Offset: 0x006E9F0E
+	// Token: 0x1700252A RID: 9514
+	// (get) Token: 0x06017D6B RID: 97643 RVA: 0x007133F6 File Offset: 0x007115F6
 	public float DegMovementSlope
 	{
 		get
@@ -72,9 +62,9 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x17002429 RID: 9257
-	// (get) Token: 0x0601A3EC RID: 107500 RVA: 0x006EBD16 File Offset: 0x006E9F16
-	// (set) Token: 0x0601A3ED RID: 107501 RVA: 0x006EBD1E File Offset: 0x006E9F1E
+	// Token: 0x1700252B RID: 9515
+	// (get) Token: 0x06017D6C RID: 97644 RVA: 0x007133FE File Offset: 0x007115FE
+	// (set) Token: 0x06017D6D RID: 97645 RVA: 0x00713406 File Offset: 0x00711606
 	public float IkMeshOffset
 	{
 		get
@@ -87,8 +77,8 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x1700242A RID: 9258
-	// (get) Token: 0x0601A3EE RID: 107502 RVA: 0x006EBD27 File Offset: 0x006E9F27
+	// Token: 0x1700252C RID: 9516
+	// (get) Token: 0x06017D6E RID: 97646 RVA: 0x0071340F File Offset: 0x0071160F
 	public global::Vector MovementTerrainNormal
 	{
 		get
@@ -97,8 +87,8 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x1700242B RID: 9259
-	// (get) Token: 0x0601A3EF RID: 107503 RVA: 0x006EBD2F File Offset: 0x006E9F2F
+	// Token: 0x1700252D RID: 9517
+	// (get) Token: 0x06017D6F RID: 97647 RVA: 0x00713417 File Offset: 0x00711617
 	public float BattleIdleEndTime
 	{
 		get
@@ -107,28 +97,19 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x1700242C RID: 9260
-	// (get) Token: 0x0601A3F0 RID: 107504 RVA: 0x006EBD38 File Offset: 0x006E9F38
-	public bool HasKuroRootMotion
+	// Token: 0x1700252E RID: 9518
+	// (get) Token: 0x06017D70 RID: 97648 RVA: 0x0071341F File Offset: 0x0071161F
+	public bool IsTemporaryHidden
 	{
 		get
 		{
-			if (base.ShellAnimInstance == null)
-			{
-				return false;
-			}
-			if (this.CachedHasKuroRootMotionFrame != Time.Instance.Frame)
-			{
-				this.CachedHasKuroRootMotion = base.ShellAnimInstance.HasKuroRootMotionAnim();
-				this.CachedHasKuroRootMotionFrame = Time.Instance.Frame;
-			}
-			return this.CachedHasKuroRootMotion;
+			return this.HiddenCount >= 0;
 		}
 	}
 
-	// Token: 0x1700242D RID: 9261
-	// (get) Token: 0x0601A3F1 RID: 107505 RVA: 0x006EBD88 File Offset: 0x006E9F88
-	// (set) Token: 0x0601A3F2 RID: 107506 RVA: 0x006EBD90 File Offset: 0x006E9F90
+	// Token: 0x1700252F RID: 9519
+	// (get) Token: 0x06017D71 RID: 97649 RVA: 0x0071342D File Offset: 0x0071162D
+	// (set) Token: 0x06017D72 RID: 97650 RVA: 0x00713435 File Offset: 0x00711635
 	private bool OnMovingElevator
 	{
 		get
@@ -149,28 +130,28 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A3F3 RID: 107507 RVA: 0x006EBDC5 File Offset: 0x006E9FC5
+	// Token: 0x06017D73 RID: 97651 RVA: 0x0071346A File Offset: 0x0071166A
 	public void ResetSightSpeedRate()
 	{
 		this.TurnSpeedInternal = 0.36f;
 		this.TurnRatioInternal = 0.04f;
 	}
 
-	// Token: 0x0601A3F4 RID: 107508 RVA: 0x006EBDDD File Offset: 0x006E9FDD
+	// Token: 0x06017D74 RID: 97652 RVA: 0x00713482 File Offset: 0x00711682
 	public void SetSightSpeedRate(float rate)
 	{
 		this.TurnSpeedInternal = 0.36f * rate;
 		this.TurnRatioInternal = MathUtils.Instance.Clamp((float)Math.Pow(0.03999999910593033, (double)rate), 0f, 1f);
 	}
 
-	// Token: 0x0601A3F5 RID: 107509 RVA: 0x006EBE17 File Offset: 0x006EA017
+	// Token: 0x06017D75 RID: 97653 RVA: 0x007134BC File Offset: 0x007116BC
 	public void SetSightSpeedAndRatio(float speed, float ratio)
 	{
 		this.TurnSpeedInternal = speed;
 		this.TurnRatioInternal = ratio;
 	}
 
-	// Token: 0x0601A3F6 RID: 107510 RVA: 0x006EBE28 File Offset: 0x006EA028
+	// Token: 0x06017D76 RID: 97654 RVA: 0x007134CC File Offset: 0x007116CC
 	private void OnStateInheritResetSetter(UKuroAnimInstanceChar animInstance)
 	{
 		if (this.AnimLogicParamsSetter == null)
@@ -190,7 +171,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.AnimLogicParamsSetter.StandUpDirect = logicParams.StandUpDirect;
 	}
 
-	// Token: 0x0601A3F7 RID: 107511 RVA: 0x006EBEC8 File Offset: 0x006EA0C8
+	// Token: 0x06017D77 RID: 97655 RVA: 0x0071356C File Offset: 0x0071176C
 	private void OnStateInherit(Entity other, bool notInheritMoveAndAnim)
 	{
 		if (other == null || !other.Valid)
@@ -269,7 +250,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.TemporaryHidden();
 	}
 
-	// Token: 0x0601A3F8 RID: 107512 RVA: 0x006EC054 File Offset: 0x006EA254
+	// Token: 0x06017D78 RID: 97656 RVA: 0x007136F8 File Offset: 0x007118F8
 	private void TemporaryHidden()
 	{
 		int? temporaryHiddenHandle = this.TemporaryHiddenHandle;
@@ -294,7 +275,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0601A3F9 RID: 107513 RVA: 0x006EC11C File Offset: 0x006EA31C
+	// Token: 0x06017D79 RID: 97657 RVA: 0x007137C0 File Offset: 0x007119C0
 	private void ResetTemporaryHidden()
 	{
 		if (this.HiddenCount > 0)
@@ -316,7 +297,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A3FA RID: 107514 RVA: 0x006EC1AC File Offset: 0x006EA3AC
+	// Token: 0x06017D7A RID: 97658 RVA: 0x00713850 File Offset: 0x00711A50
 	private void ResetPerformance()
 	{
 		if (this.PerformanceConditionParams != null)
@@ -340,7 +321,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A3FB RID: 107515 RVA: 0x006EC25C File Offset: 0x006EA45C
+	// Token: 0x06017D7B RID: 97659 RVA: 0x00713900 File Offset: 0x00711B00
 	private void OnChangeMeshAnim()
 	{
 		this.GetAnimInstanceFromMesh();
@@ -360,7 +341,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		component2.RefreshCharacterAnimInstance();
 	}
 
-	// Token: 0x0601A3FC RID: 107516 RVA: 0x006EC2AD File Offset: 0x006EA4AD
+	// Token: 0x06017D7C RID: 97660 RVA: 0x00713951 File Offset: 0x00711B51
 	private void OnTeleportStart(bool loading)
 	{
 		if (loading)
@@ -374,13 +355,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.ResetAnimVariable();
 	}
 
-	// Token: 0x0601A3FD RID: 107517 RVA: 0x006EC2CB File Offset: 0x006EA4CB
+	// Token: 0x06017D7D RID: 97661 RVA: 0x0071396F File Offset: 0x00711B6F
 	private void OnTeleportOpenLoadingEnd()
 	{
 		this.ResetAnimVariable();
 	}
 
-	// Token: 0x0601A3FE RID: 107518 RVA: 0x006EC2D3 File Offset: 0x006EA4D3
+	// Token: 0x06017D7E RID: 97662 RVA: 0x00713977 File Offset: 0x00711B77
 	private void OnCharRoleDown(bool isDrowning)
 	{
 		if (isDrowning)
@@ -390,7 +371,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.ResetAnimVariable();
 	}
 
-	// Token: 0x0601A3FF RID: 107519 RVA: 0x006EC2DF File Offset: 0x006EA4DF
+	// Token: 0x06017D7F RID: 97663 RVA: 0x00713983 File Offset: 0x00711B83
 	private void OnPreSetActorHidden(int entityId, bool active)
 	{
 		if (entityId != base.Entity.Id)
@@ -404,13 +385,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A400 RID: 107520 RVA: 0x006EC303 File Offset: 0x006EA503
+	// Token: 0x06017D80 RID: 97664 RVA: 0x007139A7 File Offset: 0x00711BA7
 	private void OnRequestClearMeshRotationBuffer()
 	{
 		this.StopModelBuffer();
 	}
 
-	// Token: 0x0601A401 RID: 107521 RVA: 0x006EC30B File Offset: 0x006EA50B
+	// Token: 0x06017D81 RID: 97665 RVA: 0x007139AF File Offset: 0x00711BAF
 	private void ResetAnimVariable()
 	{
 		this.BattleIdleEndTimeInternal = 0f;
@@ -420,19 +401,19 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A402 RID: 107522 RVA: 0x006EC33F File Offset: 0x006EA53F
+	// Token: 0x06017D82 RID: 97666 RVA: 0x007139E3 File Offset: 0x00711BE3
 	private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		this.BattleIdleEndTimeInternal = 0f;
 	}
 
-	// Token: 0x0601A403 RID: 107523 RVA: 0x006EC34C File Offset: 0x006EA54C
+	// Token: 0x06017D83 RID: 97667 RVA: 0x007139F0 File Offset: 0x00711BF0
 	private void OnBeHit(global::HitInformation hitData, HitContext hitContext)
 	{
 		this.BattleIdleEndTimeInternal = 0f;
 	}
 
-	// Token: 0x0601A404 RID: 107524 RVA: 0x006EC359 File Offset: 0x006EA559
+	// Token: 0x06017D84 RID: 97668 RVA: 0x007139FD File Offset: 0x00711BFD
 	private void OnUnifiedMoveStateChanged(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 	{
 		if (!this.StopBattleIdleEndTimeMoveStates.Contains(newMoveState))
@@ -441,7 +422,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A405 RID: 107525 RVA: 0x006EC374 File Offset: 0x006EA574
+	// Token: 0x06017D85 RID: 97669 RVA: 0x00713A18 File Offset: 0x00711C18
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -450,7 +431,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A406 RID: 107526 RVA: 0x006EC398 File Offset: 0x006EA598
+	// Token: 0x06017D86 RID: 97670 RVA: 0x00713A3C File Offset: 0x00711C3C
 	protected override bool OnClear()
 	{
 		if (UKuroStaticLibrary.IsObjectClassByName(this.MainAnimInstanceInternal, CharacterNameDefines.Instance.ABP_BASEROLE))
@@ -502,7 +483,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A407 RID: 107527 RVA: 0x006EC5FC File Offset: 0x006EA7FC
+	// Token: 0x06017D87 RID: 97671 RVA: 0x00713CA0 File Offset: 0x00711EA0
 	protected override bool OnInit()
 	{
 		this.PerformancePositionValid = new bool[3];
@@ -528,7 +509,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A408 RID: 107528 RVA: 0x006EC704 File Offset: 0x006EA904
+	// Token: 0x06017D88 RID: 97672 RVA: 0x00713DA8 File Offset: 0x00711FA8
 	protected unsafe override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -656,7 +637,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A409 RID: 107529 RVA: 0x006ECB98 File Offset: 0x006EAD98
+	// Token: 0x06017D89 RID: 97673 RVA: 0x0071423C File Offset: 0x0071243C
 	protected unsafe override void InitBaseInfo()
 	{
 		this.WalkRunMix = 1f;
@@ -695,6 +676,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.RoleId = this.ActorComp.CreatureData.GetRoleId();
 		this.SightDirect.DeepCopy(global::Vector.RightVectorProxy);
 		this.SightDirect2.DeepCopy(global::Vector.RightVectorProxy);
+		this.PendingSightSnap = false;
 		if (!entityType)
 		{
 			this.IsPlayer = true;
@@ -706,7 +688,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.InitAnimOptimizationParams(true);
 	}
 
-	// Token: 0x0601A40A RID: 107530 RVA: 0x006ECDA7 File Offset: 0x006EAFA7
+	// Token: 0x06017D8A RID: 97674 RVA: 0x00714452 File Offset: 0x00712652
 	protected override void GetAnimInstanceFromMesh()
 	{
 		base.GetAnimInstanceFromMesh();
@@ -716,7 +698,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A40B RID: 107531 RVA: 0x006ECDD0 File Offset: 0x006EAFD0
+	// Token: 0x06017D8B RID: 97675 RVA: 0x00714478 File Offset: 0x00712678
 	protected override void OnChangeTimeDilation(float timeDilation)
 	{
 		if (this.AnimationComp == null)
@@ -748,7 +730,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.BufferNowScale = inverseSelfCenteredTimeDilation;
 	}
 
-	// Token: 0x0601A40C RID: 107532 RVA: 0x006ECEAC File Offset: 0x006EB0AC
+	// Token: 0x06017D8C RID: 97676 RVA: 0x00714554 File Offset: 0x00712754
 	private void AddEvents()
 	{
 		if (this.AddedEvents)
@@ -772,7 +754,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		EventSystem.Instance.AddWithTarget<int, bool>(this.Handle, EEventName.OnPreSetActorHidden, new Action<int, bool>(this.OnPreSetActorHidden));
 	}
 
-	// Token: 0x0601A40D RID: 107533 RVA: 0x006ED034 File Offset: 0x006EB234
+	// Token: 0x06017D8D RID: 97677 RVA: 0x007146DC File Offset: 0x007128DC
 	private void RemoveEvents()
 	{
 		if (!this.AddedEvents)
@@ -795,7 +777,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		EventSystem.Instance.RemoveWithTarget<int, bool>(this.Handle, EEventName.OnPreSetActorHidden, new Action<int, bool>(this.OnPreSetActorHidden));
 	}
 
-	// Token: 0x0601A40E RID: 107534 RVA: 0x006ED1A7 File Offset: 0x006EB3A7
+	// Token: 0x06017D8E RID: 97678 RVA: 0x0071484F File Offset: 0x00712A4F
 	protected override bool OnEnd()
 	{
 		if (this.ShowActorDisableAnimOptimizationCount > 0)
@@ -809,7 +791,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A40F RID: 107535 RVA: 0x006ED1E4 File Offset: 0x006EB3E4
+	// Token: 0x06017D8F RID: 97679 RVA: 0x0071488C File Offset: 0x00712A8C
 	protected override void OnActivate()
 	{
 		base.StartAnimInstance();
@@ -834,7 +816,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A410 RID: 107536 RVA: 0x006ED28C File Offset: 0x006EB48C
+	// Token: 0x06017D90 RID: 97680 RVA: 0x00714934 File Offset: 0x00712B34
 	protected unsafe override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -939,13 +921,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A411 RID: 107537 RVA: 0x006ED758 File Offset: 0x006EB958
+	// Token: 0x06017D91 RID: 97681 RVA: 0x00714E00 File Offset: 0x00713000
 	protected override void OnForceAfterTick(float delta)
 	{
 		this.UpdateModelBuffer(delta);
 	}
 
-	// Token: 0x0601A412 RID: 107538 RVA: 0x006ED761 File Offset: 0x006EB961
+	// Token: 0x06017D92 RID: 97682 RVA: 0x00714E09 File Offset: 0x00713009
 	protected override void OnEnable()
 	{
 		if (this.Mesh != null)
@@ -955,7 +937,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		base.OnEnable();
 	}
 
-	// Token: 0x0601A413 RID: 107539 RVA: 0x006ED780 File Offset: 0x006EB980
+	// Token: 0x06017D93 RID: 97683 RVA: 0x00714E28 File Offset: 0x00713028
 	protected override void OnDisable(string reason)
 	{
 		if (this.Mesh != null)
@@ -991,10 +973,11 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 		this.SightDirect.DeepCopy(global::Vector.RightVectorProxy);
 		this.SightDirect2.DeepCopy(global::Vector.RightVectorProxy);
+		this.PendingSightSnap = false;
 		base.OnDisable(reason);
 	}
 
-	// Token: 0x0601A414 RID: 107540 RVA: 0x006ED8A4 File Offset: 0x006EBAA4
+	// Token: 0x06017D94 RID: 97684 RVA: 0x00714F54 File Offset: 0x00713154
 	public void OnPostEndAnimNotify(float delta)
 	{
 		this.TickProcessId = 0;
@@ -1019,13 +1002,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.ConsumeRootMotion();
 	}
 
-	// Token: 0x0601A415 RID: 107541 RVA: 0x006ED910 File Offset: 0x006EBB10
+	// Token: 0x06017D95 RID: 97685 RVA: 0x00714FC0 File Offset: 0x007131C0
 	public void EndAnimNotifyStates(float delta)
 	{
 		UKuroAnimLibrary.EndAnimNotifyStates(this.MainAnimInstanceInternal);
 	}
 
-	// Token: 0x0601A416 RID: 107542 RVA: 0x006ED920 File Offset: 0x006EBB20
+	// Token: 0x06017D96 RID: 97686 RVA: 0x00714FD0 File Offset: 0x007131D0
 	private void SetMeshAnimInstanceLOD()
 	{
 		int num = Info.Instance.IsPcPlatform() ? 3000 : 1500;
@@ -1048,7 +1031,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A417 RID: 107543 RVA: 0x006ED9A4 File Offset: 0x006EBBA4
+	// Token: 0x06017D97 RID: 97687 RVA: 0x00715054 File Offset: 0x00713254
 	public void SetBlendSpaceLookAt(bool bEnable)
 	{
 		this.EnableBlendSpaceLookAtInner = bEnable;
@@ -1056,13 +1039,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.LookAtBlendSpaceVector2D.Y = (double)MathUtils.Instance.Clamp((float)Math.Asin(this.SightDirect.Z) * 57.29578f, (float)CharacterAnimationComponent.limitBlendSpaceY[0], (float)CharacterAnimationComponent.limitBlendSpaceY[1]);
 	}
 
-	// Token: 0x0601A418 RID: 107544 RVA: 0x006EDA39 File Offset: 0x006EBC39
+	// Token: 0x06017D98 RID: 97688 RVA: 0x007150E9 File Offset: 0x007132E9
 	public void EnterBattleIdle(int? number = null)
 	{
 		this.BattleIdleEndTimeInternal = (float)number.GetValueOrDefault(5000);
 	}
 
-	// Token: 0x0601A419 RID: 107545 RVA: 0x006EDA50 File Offset: 0x006EBC50
+	// Token: 0x06017D99 RID: 97689 RVA: 0x00715100 File Offset: 0x00713300
 	public float OnJump()
 	{
 		IBPI_Animation_C ibpi_Animation_C = this.MainAnimInstanceInternal as IBPI_Animation_C;
@@ -1075,19 +1058,19 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return 0f;
 	}
 
-	// Token: 0x0601A41A RID: 107546 RVA: 0x006EDA81 File Offset: 0x006EBC81
+	// Token: 0x06017D9A RID: 97690 RVA: 0x00715131 File Offset: 0x00713331
 	public void SimulateJump(float speed)
 	{
 		(this.MainAnimInstanceInternal as IBPI_Animation_C).InterfaceSimulateJump(speed);
 	}
 
-	// Token: 0x0601A41B RID: 107547 RVA: 0x006EDA94 File Offset: 0x006EBC94
+	// Token: 0x06017D9B RID: 97691 RVA: 0x00715144 File Offset: 0x00713344
 	public bool AnimCanTurn()
 	{
 		return !this.MainAnimInstanceInternal.HasKuroRootMotionAnim() || this.MainAnimInstanceInternal.GetCurveValue(CharacterNameDefines.Instance.ROOT_ROTATABLE) >= 0.5f;
 	}
 
-	// Token: 0x0601A41C RID: 107548 RVA: 0x006EDAC4 File Offset: 0x006EBCC4
+	// Token: 0x06017D9C RID: 97692 RVA: 0x00715174 File Offset: 0x00713374
 	public void ClimbDash()
 	{
 		if (UKuroStaticLibrary.IsObjectClassByName(this.MainAnimInstanceInternal, CharacterNameDefines.Instance.ABP_BASEROLE))
@@ -1096,7 +1079,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A41D RID: 107549 RVA: 0x006EDAED File Offset: 0x006EBCED
+	// Token: 0x06017D9D RID: 97693 RVA: 0x0071519D File Offset: 0x0071339D
 	public void MontageSetPosition(float position)
 	{
 		if (this.MainAnimInstanceInternal != null)
@@ -1105,7 +1088,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A41E RID: 107550 RVA: 0x006EDB0E File Offset: 0x006EBD0E
+	// Token: 0x06017D9E RID: 97694 RVA: 0x007151BE File Offset: 0x007133BE
 	public float MontageGetPosition()
 	{
 		if (this.MainAnimInstanceInternal != null)
@@ -1115,7 +1098,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return 0f;
 	}
 
-	// Token: 0x0601A41F RID: 107551 RVA: 0x006EDB34 File Offset: 0x006EBD34
+	// Token: 0x06017D9F RID: 97695 RVA: 0x007151E4 File Offset: 0x007133E4
 	public void AddModelQuat(Quat quat, bool lockCenter)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1140,7 +1123,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601A420 RID: 107552 RVA: 0x006EDBE4 File Offset: 0x006EBDE4
+	// Token: 0x06017DA0 RID: 97696 RVA: 0x00715294 File Offset: 0x00713494
 	public void AddModelLocation(global::Vector offset)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1160,7 +1143,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601A421 RID: 107553 RVA: 0x006EDC74 File Offset: 0x006EBE74
+	// Token: 0x06017DA1 RID: 97697 RVA: 0x00715324 File Offset: 0x00713524
 	public unsafe void SetOriginLocation(global::Vector location)
 	{
 		if (location.X != 0.0 || location.Y != 0.0)
@@ -1221,7 +1204,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A422 RID: 107554 RVA: 0x006EDF18 File Offset: 0x006EC118
+	// Token: 0x06017DA2 RID: 97698 RVA: 0x007155C8 File Offset: 0x007137C8
 	public void ResetModelQuat()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1241,7 +1224,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601A423 RID: 107555 RVA: 0x006EDFB0 File Offset: 0x006EC1B0
+	// Token: 0x06017DA3 RID: 97699 RVA: 0x00715660 File Offset: 0x00713860
 	public void ResetModelLocation()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1260,7 +1243,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601A424 RID: 107556 RVA: 0x006EE028 File Offset: 0x006EC228
+	// Token: 0x06017DA4 RID: 97700 RVA: 0x007156D8 File Offset: 0x007138D8
 	public unsafe bool CheckAndResetModel()
 	{
 		global::Transform tmpTransform = this.TmpTransform;
@@ -1301,7 +1284,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return flag;
 	}
 
-	// Token: 0x0601A425 RID: 107557 RVA: 0x006EE24C File Offset: 0x006EC44C
+	// Token: 0x06017DA5 RID: 97701 RVA: 0x007158FC File Offset: 0x00713AFC
 	private void GetTransformOffsetInWorld(FTransformDouble child, BaseActorComponent parent, global::Transform out_)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1328,7 +1311,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		out_.SetRotation(this.TmpQuat);
 	}
 
-	// Token: 0x0601A426 RID: 107558 RVA: 0x006EE358 File Offset: 0x006EC558
+	// Token: 0x06017DA6 RID: 97702 RVA: 0x00715A08 File Offset: 0x00713C08
 	public unsafe void SetTransformWithModelBuffer(FTransformDouble newTransform, float timeLength, ESetRotationPriority? priority = null, bool sweep = true)
 	{
 		if (this.Mesh == null)
@@ -1389,7 +1372,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601A427 RID: 107559 RVA: 0x006EE4EC File Offset: 0x006EC6EC
+	// Token: 0x06017DA7 RID: 97703 RVA: 0x00715B9C File Offset: 0x00713D9C
 	public unsafe void SetLocationAndRotatorWithModelBuffer(FVectorDouble newLocation, FRotator newRotator, float timeLength, string context, ESetRotationPriority priority = ESetRotationPriority.Anim, bool sweep = true)
 	{
 		if (this.Mesh == null)
@@ -1449,7 +1432,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601A428 RID: 107560 RVA: 0x006EE6AC File Offset: 0x006EC8AC
+	// Token: 0x06017DA8 RID: 97704 RVA: 0x00715D5C File Offset: 0x00713F5C
 	public void SetLocationAndRotatorWithKeepingModelBuffer(FVectorDouble newLocation, FRotator newRotator, float timeLength, string context, ESetRotationPriority priority = ESetRotationPriority.Anim)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1494,7 +1477,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601A429 RID: 107561 RVA: 0x006EE840 File Offset: 0x006ECA40
+	// Token: 0x06017DA9 RID: 97705 RVA: 0x00715EF0 File Offset: 0x007140F0
 	public unsafe void SetModelBuffer(FTransformDouble modelWorldTransform, float timeLength)
 	{
 		if (this.Mesh == null)
@@ -1563,7 +1546,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601A42A RID: 107562 RVA: 0x006EEA24 File Offset: 0x006ECC24
+	// Token: 0x06017DAA RID: 97706 RVA: 0x007160D4 File Offset: 0x007142D4
 	protected void UpdateModelBuffer(float delta)
 	{
 		if (this.BufferNowTime < this.BufferTimeLength)
@@ -1600,7 +1583,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A42B RID: 107563 RVA: 0x006EEBEC File Offset: 0x006ECDEC
+	// Token: 0x06017DAB RID: 97707 RVA: 0x0071629C File Offset: 0x0071449C
 	public void StopModelBuffer()
 	{
 		if (Info.Instance.EnableForceTick)
@@ -1627,7 +1610,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		animationComp2.SetComponentTickEnabled(false);
 	}
 
-	// Token: 0x0601A42C RID: 107564 RVA: 0x006EEC60 File Offset: 0x006ECE60
+	// Token: 0x06017DAC RID: 97708 RVA: 0x00716310 File Offset: 0x00714510
 	public bool HasModelBuffer()
 	{
 		if (Info.Instance.EnableForceTick)
@@ -1637,13 +1620,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return this.AnimationComp.BufferTimeLength > 0f;
 	}
 
-	// Token: 0x0601A42D RID: 107565 RVA: 0x006EEC8E File Offset: 0x006ECE8E
+	// Token: 0x06017DAD RID: 97709 RVA: 0x0071633E File Offset: 0x0071453E
 	public bool HasLocationModelBuffer()
 	{
 		return this.HasModelBuffer() && this.BufferLocation;
 	}
 
-	// Token: 0x0601A42E RID: 107566 RVA: 0x006EECA0 File Offset: 0x006ECEA0
+	// Token: 0x06017DAE RID: 97710 RVA: 0x00716350 File Offset: 0x00714550
 	public bool TryGetModelBufferLerpWorldRotation(Quat outStart, Quat outTarget)
 	{
 		if (this.Mesh == null || this.ActorComp == null || !this.HasModelBuffer())
@@ -1655,7 +1638,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A42F RID: 107567 RVA: 0x006EED00 File Offset: 0x006ECF00
+	// Token: 0x06017DAF RID: 97711 RVA: 0x007163B0 File Offset: 0x007145B0
 	public void ClearModelBuffer()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1678,13 +1661,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A430 RID: 107568 RVA: 0x006EED65 File Offset: 0x006ECF65
+	// Token: 0x06017DB0 RID: 97712 RVA: 0x00716415 File Offset: 0x00714615
 	public float GetWalkRunMix()
 	{
 		return this.WalkRunMix;
 	}
 
-	// Token: 0x0601A431 RID: 107569 RVA: 0x006EED70 File Offset: 0x006ECF70
+	// Token: 0x06017DB1 RID: 97713 RVA: 0x00716420 File Offset: 0x00714620
 	protected void UpdateWalkRunMix(float deltaTime)
 	{
 		BaseTagComponent tagComp = this.TagComp;
@@ -1696,13 +1679,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.WalkRunMix += (this.GetSlopeScale() - this.WalkRunMix) * (1f - (float)Math.Pow(0.9950000047683716, (double)deltaTime));
 	}
 
-	// Token: 0x0601A432 RID: 107570 RVA: 0x006EEDEE File Offset: 0x006ECFEE
+	// Token: 0x06017DB2 RID: 97714 RVA: 0x0071649E File Offset: 0x0071469E
 	protected float GetSlopeScale()
 	{
 		return MathUtils.Instance.Clamp(this.SlopeStepPeriodicCurve.GetFloatValue(this.DegMovementSlopeInternal) * this.SlopeStepSizeCurve.GetFloatValue(this.DegMovementSlopeInternal), 0.5f, 1f);
 	}
 
-	// Token: 0x0601A433 RID: 107571 RVA: 0x006EEE28 File Offset: 0x006ED028
+	// Token: 0x06017DB3 RID: 97715 RVA: 0x007164D8 File Offset: 0x007146D8
 	private void CalculateCurrentSlope()
 	{
 		if (this.MoveComp == null || this.MoveComp.CharacterMovement == null)
@@ -1760,7 +1743,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.LastLocation.FromUeVector(actorLocationProxy);
 	}
 
-	// Token: 0x0601A434 RID: 107572 RVA: 0x006EF0B8 File Offset: 0x006ED2B8
+	// Token: 0x06017DB4 RID: 97716 RVA: 0x00716768 File Offset: 0x00714968
 	private void UpdateHeadRotation(float delta)
 	{
 		if (!this.EnableSightDirectInternal || this.IsSelfieSightActive)
@@ -1801,7 +1784,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A435 RID: 107573 RVA: 0x006EF188 File Offset: 0x006ED388
+	// Token: 0x06017DB5 RID: 97717 RVA: 0x00716838 File Offset: 0x00714A38
 	private bool UpdatePlayerHeadRotation(float delta)
 	{
 		if (PlotModel.Instance.IsInTemplate())
@@ -1915,7 +1898,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return true;
 	}
 
-	// Token: 0x0601A436 RID: 107574 RVA: 0x006EF524 File Offset: 0x006ED724
+	// Token: 0x06017DB6 RID: 97718 RVA: 0x00716BD4 File Offset: 0x00714DD4
 	public unsafe void SetDirectlySightEnableState(bool bEnable, string reason)
 	{
 		Log instance = Log.Instance;
@@ -1929,7 +1912,17 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.IsEnableDirectlySight = bEnable;
 	}
 
-	// Token: 0x0601A437 RID: 107575 RVA: 0x006EF590 File Offset: 0x006ED790
+	// Token: 0x06017DB7 RID: 97719 RVA: 0x00716C40 File Offset: 0x00714E40
+	public void SnapSightToTarget()
+	{
+		this.PendingSightSnap = true;
+		if (this.Mesh != null)
+		{
+			this.UpdateHeadRotation(0f);
+		}
+	}
+
+	// Token: 0x06017DB8 RID: 97720 RVA: 0x00716C5C File Offset: 0x00714E5C
 	public bool IsSightDirectReachTarget(float toleranceDegree = 0f)
 	{
 		if (toleranceDegree <= 0f)
@@ -1939,7 +1932,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return MathUtils.Instance.GetAngleByVectorDot(this.SightDirect, this.TmpTargetSight) <= (double)toleranceDegree;
 	}
 
-	// Token: 0x0601A438 RID: 107576 RVA: 0x006EF5E8 File Offset: 0x006ED7E8
+	// Token: 0x06017DB9 RID: 97721 RVA: 0x00716CC0 File Offset: 0x00714EC0
 	public unsafe void SetSightBoneLimit(float yawMin, float yawMax, float pitchMin, float pitchMax, float assistLimit, FVector sightDirectInSightBone, FVector upAxisInSightBone)
 	{
 		Log instance = Log.Instance;
@@ -1972,7 +1965,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A439 RID: 107577 RVA: 0x006EF764 File Offset: 0x006ED964
+	// Token: 0x06017DBA RID: 97722 RVA: 0x00716E3C File Offset: 0x0071503C
 	[NullableContext(2)]
 	public SightLockData GetSightLockData()
 	{
@@ -1994,13 +1987,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}, abp_BaseRole_C.SightLockAssitLimit, new FVector(abp_BaseRole_C.SightDirectInSightBone.X, abp_BaseRole_C.SightDirectInSightBone.Y, abp_BaseRole_C.SightDirectInSightBone.Z), new FVector(abp_BaseRole_C.UpAxisInSightBone.X, abp_BaseRole_C.UpAxisInSightBone.Y, abp_BaseRole_C.UpAxisInSightBone.Z));
 	}
 
-	// Token: 0x0601A43A RID: 107578 RVA: 0x006EF82A File Offset: 0x006EDA2A
+	// Token: 0x06017DBB RID: 97723 RVA: 0x00716F02 File Offset: 0x00715102
 	public void RestoreSightBoneLimit()
 	{
 		this.SetSightBoneLimit(-23f, 23f, -10f, 13f, 5f, CharacterAnimationComponent.SightDirectInSightBone, CharacterAnimationComponent.UpAxisInSightBone);
 	}
 
-	// Token: 0x0601A43B RID: 107579 RVA: 0x006EF858 File Offset: 0x006EDA58
+	// Token: 0x06017DBC RID: 97724 RVA: 0x00716F30 File Offset: 0x00715130
 	private unsafe void LerpSightDirect(float delta)
 	{
 		this.TmpDirect.FromUeVector(this.TmpTargetSight);
@@ -2011,16 +2004,27 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		if (this.IsEnableDirectlySight)
 		{
 			this.SightDirect.DeepCopy(this.TmpTargetSight);
+			this.PendingSightSnap = false;
 			return;
 		}
 		base.ClampSightDirect(this.TmpTargetSight, this.TmpTargetSight);
-		if (this.SightDirectIsEqual && this.TmpTargetSight.Equals(this.SightDirect, 9.999999747378752E-05))
+		if (this.PendingSightSnap)
 		{
-			return;
+			this.PendingSightSnap = false;
+			this.SightDirect.DeepCopy(this.TmpTargetSight);
+			this.SightDirect2.DeepCopy(this.TmpTargetSight);
+			this.SightDirectIsEqual = true;
 		}
-		BaseAnimationComponent.LerpDirect2dByMaxAngle(this.SightDirect2, this.TmpTargetSight, delta * this.TurnSpeedInternal, this.SightDirect2, this.NoLimitForXAngle);
-		BaseAnimationComponent.LerpVector2dByAlpha(this.SightDirect, this.SightDirect2, 1f - (float)Math.Pow((double)this.TurnRatioInternal, (double)(delta * 0.001f)), this.SightDirect, this.NoLimitForXAngle);
-		this.SightDirectIsEqual = this.SightDirect.Equals(this.SightDirect2, 9.999999747378752E-05);
+		else
+		{
+			if (this.SightDirectIsEqual && this.TmpTargetSight.Equals(this.SightDirect, 9.999999747378752E-05))
+			{
+				return;
+			}
+			BaseAnimationComponent.LerpDirect2dByMaxAngle(this.SightDirect2, this.TmpTargetSight, delta * this.TurnSpeedInternal, this.SightDirect2, this.NoLimitForXAngle);
+			BaseAnimationComponent.LerpVector2dByAlpha(this.SightDirect, this.SightDirect2, 1f - (float)Math.Pow((double)this.TurnRatioInternal, (double)(delta * 0.001f)), this.SightDirect, this.NoLimitForXAngle);
+			this.SightDirectIsEqual = this.SightDirect.Equals(this.SightDirect2, 9.999999747378752E-05);
+		}
 		if (this.SightDirect.ContainsNaN())
 		{
 			Log instance = Log.Instance;
@@ -2049,7 +2053,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A43C RID: 107580 RVA: 0x006EFBD8 File Offset: 0x006EDDD8
+	// Token: 0x06017DBD RID: 97725 RVA: 0x007172F4 File Offset: 0x007154F4
 	private void LerpHeadBaseYaw(float delta)
 	{
 		if (MathUtils.Instance.IsNearlyEqual((double)this.HeadBaseYawBuffer, (double)this.HeadBaseYaw, null))
@@ -2060,7 +2064,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.HeadBaseYawBuffer = MathUtils.Instance.RotatorAxisInterpTo(this.HeadBaseYawBuffer, this.HeadBaseYaw, delta * 0.001f, 5f);
 	}
 
-	// Token: 0x0601A43D RID: 107581 RVA: 0x006EFC40 File Offset: 0x006EDE40
+	// Token: 0x06017DBE RID: 97726 RVA: 0x0071735C File Offset: 0x0071555C
 	private void UpdateAiRotation(global::Vector out_)
 	{
 		CharacterAiComponent aiComp = this.AiComp;
@@ -2097,7 +2101,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(out_);
 	}
 
-	// Token: 0x0601A43E RID: 107582 RVA: 0x006EFD44 File Offset: 0x006EDF44
+	// Token: 0x06017DBF RID: 97727 RVA: 0x00717460 File Offset: 0x00715660
 	private void UpdatePerformSightTarget(global::Vector out_)
 	{
 		global::Vector sightTarget = PerformModel.Instance.GetSightTarget(base.Entity.Id);
@@ -2116,7 +2120,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(out_);
 	}
 
-	// Token: 0x0601A43F RID: 107583 RVA: 0x006EFDD4 File Offset: 0x006EDFD4
+	// Token: 0x06017DC0 RID: 97728 RVA: 0x007174F0 File Offset: 0x007156F0
 	private bool GetSightTargetLocation(global::Vector outVector)
 	{
 		if (this.SightTargetPoint != null)
@@ -2140,7 +2144,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return false;
 	}
 
-	// Token: 0x0601A440 RID: 107584 RVA: 0x006EFE2C File Offset: 0x006EE02C
+	// Token: 0x06017DC1 RID: 97729 RVA: 0x00717548 File Offset: 0x00715748
 	private void UpdateSightTargetRotation(global::Vector outVector)
 	{
 		if (!this.GetSightTargetLocation(this.TmpDirect))
@@ -2166,7 +2170,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(outVector);
 	}
 
-	// Token: 0x0601A441 RID: 107585 RVA: 0x006EFEF0 File Offset: 0x006EE0F0
+	// Token: 0x06017DC2 RID: 97730 RVA: 0x0071760C File Offset: 0x0071580C
 	private void FindSightTargetItem()
 	{
 		if (Time.Instance.Now < this.NextFindSightTargetItemTime)
@@ -2179,7 +2183,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.FindMaxPriorityActor(list);
 	}
 
-	// Token: 0x0601A442 RID: 107586 RVA: 0x006EFF50 File Offset: 0x006EE150
+	// Token: 0x06017DC3 RID: 97731 RVA: 0x0071766C File Offset: 0x0071586C
 	private void FindMaxPriorityActor(List<EntityHandle> handles)
 	{
 		global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -2239,37 +2243,52 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A443 RID: 107587 RVA: 0x006F015C File Offset: 0x006EE35C
+	// Token: 0x06017DC4 RID: 97732 RVA: 0x00717878 File Offset: 0x00715A78
 	protected void UpdateStaticRotation(global::Vector out_)
 	{
 		if (this.NextWatchCameraTime < Time.Instance.WorldTime)
 		{
-			APlayerCameraManager characterCameraManager = Global.CharacterCameraManager;
-			FVectorDouble cameraLocation = characterCameraManager.D_GetCameraLocation();
-			ECameraState ecameraState = this.CameraLocationState(cameraLocation);
-			if (ecameraState == ECameraState.Forward)
-			{
-				this.CameraLocation.FromUeVector(cameraLocation);
-				global::Vector socketLocation = this.SocketLocation;
-				FVectorDouble fvectorDouble = this.Mesh.D_GetSocketLocation(CharacterNameDefines.Instance.BIP_001_HEAD);
-				socketLocation.FromUeVector(fvectorDouble);
-				this.CameraLocation.Subtraction(this.SocketLocation, out_);
-				out_.Normalize(9.99999993922529E-09);
-				this.SightFix(out_);
-				return;
-			}
-			if (ecameraState == ECameraState.BackWard)
-			{
-				FVector actorForwardVector = characterCameraManager.GetActorForwardVector();
-				out_.FromUeVector(actorForwardVector);
-				this.SightFix(out_);
-				return;
-			}
+			this.UpdateCameraFacingRotation(out_, Global.CharacterCameraManager.D_GetCameraLocation());
+			return;
 		}
 		out_.DeepCopy(this.ActorComp.ActorForwardProxy);
 	}
 
-	// Token: 0x0601A444 RID: 107588 RVA: 0x006F0220 File Offset: 0x006EE420
+	// Token: 0x06017DC5 RID: 97733 RVA: 0x007178B0 File Offset: 0x00715AB0
+	private void UpdateCameraFacingRotation(global::Vector outVector, FVectorDouble cameraLocation)
+	{
+		ECameraState ecameraState = this.CameraLocationState(cameraLocation);
+		if (ecameraState == ECameraState.Forward)
+		{
+			this.CameraLocation.FromUeVector(cameraLocation);
+			global::Vector socketLocation = this.SocketLocation;
+			FVectorDouble fvectorDouble = this.Mesh.D_GetSocketLocation(CharacterNameDefines.Instance.BIP_001_HEAD);
+			socketLocation.FromUeVector(fvectorDouble);
+			this.CameraLocation.Subtraction(this.SocketLocation, outVector);
+			if (outVector.IsNearlyZero(9.999999747378752E-05))
+			{
+				outVector.DeepCopy(this.ActorComp.ActorForwardProxy);
+				return;
+			}
+			outVector.Normalize(9.99999993922529E-09);
+			this.SightFix(outVector);
+			return;
+		}
+		else
+		{
+			if (ecameraState == ECameraState.BackWard)
+			{
+				FVector actorForwardVector = Global.CharacterCameraManager.GetActorForwardVector();
+				outVector.FromUeVector(actorForwardVector);
+				this.SightFix(outVector);
+				return;
+			}
+			outVector.DeepCopy(this.ActorComp.ActorForwardProxy);
+			return;
+		}
+	}
+
+	// Token: 0x06017DC6 RID: 97734 RVA: 0x00717978 File Offset: 0x00715B78
 	private void UpdateMovingRotation(global::Vector out_)
 	{
 		float num = 0.017453292f * this.DegMovementSlopeInternal;
@@ -2290,14 +2309,14 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(out_);
 	}
 
-	// Token: 0x0601A445 RID: 107589 RVA: 0x006F02D8 File Offset: 0x006EE4D8
+	// Token: 0x06017DC7 RID: 97735 RVA: 0x00717A30 File Offset: 0x00715C30
 	private void UpdateSightCameraRotation(global::Vector outVector, SightCameraData sightData)
 	{
-		FVectorDouble fvectorDouble = Global.CharacterCameraManager.D_GetCameraLocation();
-		this.CameraLocation.FromUeVector(fvectorDouble);
+		FVectorDouble cameraLocation = Global.CharacterCameraManager.D_GetCameraLocation();
+		this.CameraLocation.FromUeVector(cameraLocation);
 		global::Vector socketLocation = this.SocketLocation;
-		FVectorDouble fvectorDouble2 = this.Mesh.D_GetSocketLocation(CharacterNameDefines.Instance.BIP_001_HEAD);
-		socketLocation.FromUeVector(fvectorDouble2);
+		FVectorDouble fvectorDouble = this.Mesh.D_GetSocketLocation(CharacterNameDefines.Instance.BIP_001_HEAD);
+		socketLocation.FromUeVector(fvectorDouble);
 		this.CameraLocation.Subtraction(this.SocketLocation, outVector);
 		double num = outVector.Size();
 		global::Vector actorForwardProxy = this.ActorComp.ActorForwardProxy;
@@ -2326,11 +2345,10 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 			outVector.DeepCopy(actorForwardProxy);
 			return;
 		}
-		outVector.Normalize(9.99999993922529E-09);
-		this.SightFix(outVector);
+		this.UpdateCameraFacingRotation(outVector, cameraLocation);
 	}
 
-	// Token: 0x0601A446 RID: 107590 RVA: 0x006F0448 File Offset: 0x006EE648
+	// Token: 0x06017DC8 RID: 97736 RVA: 0x00717B94 File Offset: 0x00715D94
 	private void UpdateSightCameraDirectly(global::Vector outVector)
 	{
 		FVector actorForwardVector = Global.CharacterCameraManager.GetActorForwardVector();
@@ -2338,7 +2356,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightFix(outVector);
 	}
 
-	// Token: 0x0601A447 RID: 107591 RVA: 0x006F0470 File Offset: 0x006EE670
+	// Token: 0x06017DC9 RID: 97737 RVA: 0x00717BBC File Offset: 0x00715DBC
 	private bool UpdateSelfieSightRotation(global::Vector outVector)
 	{
 		if (!this.HasSelfieCameraWorldLocation)
@@ -2357,21 +2375,21 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return !outVector.ContainsNaN();
 	}
 
-	// Token: 0x0601A448 RID: 107592 RVA: 0x006F04F7 File Offset: 0x006EE6F7
+	// Token: 0x06017DCA RID: 97738 RVA: 0x00717C43 File Offset: 0x00715E43
 	public void EnableSelfieSight()
 	{
 		this.HasSelfieCameraWorldLocation = false;
 		this.IsSelfieSightActive = true;
 	}
 
-	// Token: 0x0601A449 RID: 107593 RVA: 0x006F0507 File Offset: 0x006EE707
+	// Token: 0x06017DCB RID: 97739 RVA: 0x00717C53 File Offset: 0x00715E53
 	public void DisableSelfieSight()
 	{
 		this.HasSelfieCameraWorldLocation = false;
 		this.IsSelfieSightActive = false;
 	}
 
-	// Token: 0x0601A44A RID: 107594 RVA: 0x006F0518 File Offset: 0x006EE718
+	// Token: 0x06017DCC RID: 97740 RVA: 0x00717C64 File Offset: 0x00715E64
 	public void SetSelfieCameraWorldLocation(global::Vector cameraWorldLocation)
 	{
 		if (this.Mesh == null)
@@ -2384,13 +2402,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.HasSelfieCameraWorldLocation = true;
 	}
 
-	// Token: 0x0601A44B RID: 107595 RVA: 0x006F0564 File Offset: 0x006EE764
+	// Token: 0x06017DCD RID: 97741 RVA: 0x00717CB0 File Offset: 0x00715EB0
 	public void ClearSelfieCameraWorldLocation()
 	{
 		this.HasSelfieCameraWorldLocation = false;
 	}
 
-	// Token: 0x0601A44C RID: 107596 RVA: 0x006F056D File Offset: 0x006EE76D
+	// Token: 0x06017DCE RID: 97742 RVA: 0x00717CB9 File Offset: 0x00715EB9
 	public global::Vector GetSightDirectForLogicParams(out bool isSelfieSightActive)
 	{
 		isSelfieSightActive = this.IsSelfieSightActive;
@@ -2398,7 +2416,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return this.SightDirect;
 	}
 
-	// Token: 0x0601A44D RID: 107597 RVA: 0x006F0584 File Offset: 0x006EE784
+	// Token: 0x06017DCF RID: 97743 RVA: 0x00717CD0 File Offset: 0x00715ED0
 	private void UpdateSelfieSightDirect()
 	{
 		if (!this.IsSelfieSightActive || this.Mesh == null)
@@ -2421,7 +2439,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.SightDirectIsEqual = true;
 	}
 
-	// Token: 0x0601A44E RID: 107598 RVA: 0x006F0628 File Offset: 0x006EE828
+	// Token: 0x06017DD0 RID: 97744 RVA: 0x00717D74 File Offset: 0x00715F74
 	private ECameraState CameraLocationState(FVectorDouble cameraLocation)
 	{
 		this.CameraLocation.FromUeVector(cameraLocation);
@@ -2438,13 +2456,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return ECameraState.Disable;
 	}
 
-	// Token: 0x0601A44F RID: 107599 RVA: 0x006F069E File Offset: 0x006EE89E
+	// Token: 0x06017DD1 RID: 97745 RVA: 0x00717DEA File Offset: 0x00715FEA
 	public FTransformDouble GetMeshTransform()
 	{
 		return base.Actor.Mesh.D_K2_GetComponentToWorld();
 	}
 
-	// Token: 0x0601A450 RID: 107600 RVA: 0x006F06B0 File Offset: 0x006EE8B0
+	// Token: 0x06017DD2 RID: 97746 RVA: 0x00717DFC File Offset: 0x00715FFC
 	public int GetRandomStandActionIndex()
 	{
 		if (this.ActorComp.CreatureData.GetEntityType() != EEntityType.Player)
@@ -2479,7 +2497,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return unlockActionIndexList[num - 1];
 	}
 
-	// Token: 0x0601A451 RID: 107601 RVA: 0x006F072C File Offset: 0x006EE92C
+	// Token: 0x06017DD3 RID: 97747 RVA: 0x00717E78 File Offset: 0x00716078
 	private void SightFix(global::Vector sightDirect)
 	{
 		if (this.SightFixQuat == null)
@@ -2492,7 +2510,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.ActorComp.ActorQuatProxy.RotateVector(sightDirect, sightDirect);
 	}
 
-	// Token: 0x0601A452 RID: 107602 RVA: 0x006F0784 File Offset: 0x006EE984
+	// Token: 0x06017DD4 RID: 97748 RVA: 0x00717ED0 File Offset: 0x007160D0
 	public unsafe void HideBone(FName boneName, bool hide, bool sync = true)
 	{
 		CombatLog instance = CombatLog.Instance;
@@ -2531,14 +2549,14 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A453 RID: 107603 RVA: 0x006F08D7 File Offset: 0x006EEAD7
+	// Token: 0x06017DD5 RID: 97749 RVA: 0x00718023 File Offset: 0x00716223
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.BoneVisibleChangeNotify, true, false)]
 	public static void BoneVisibleChangeNotify(Entity entity, [Nullable(1)] BoneVisibleChangeNotify data, CombatCommon combatCommon = null)
 	{
 	}
 
-	// Token: 0x0601A454 RID: 107604 RVA: 0x006F08DC File Offset: 0x006EEADC
+	// Token: 0x06017DD6 RID: 97750 RVA: 0x00718028 File Offset: 0x00716228
 	private void InitAnimOptimizationParams(bool bUseDistanceMap = true)
 	{
 		bool flag = Info.Instance.IsMobilePlatform();
@@ -2604,13 +2622,13 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		base.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601A455 RID: 107605 RVA: 0x006F0AF1 File Offset: 0x006EECF1
+	// Token: 0x06017DD7 RID: 97751 RVA: 0x0071823D File Offset: 0x0071643D
 	public void SetAnimParamsInFight(bool inFight)
 	{
 		base.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601A456 RID: 107606 RVA: 0x006F0AFC File Offset: 0x006EECFC
+	// Token: 0x06017DD8 RID: 97752 RVA: 0x00718248 File Offset: 0x00716448
 	public void GetCameraPosition(global::Vector out_)
 	{
 		ECameraPositionType cameraPositionType = this.CameraPositionType;
@@ -2630,7 +2648,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		out_.FromUeVector(fvectorDouble);
 	}
 
-	// Token: 0x0601A457 RID: 107607 RVA: 0x006F0BAC File Offset: 0x006EEDAC
+	// Token: 0x06017DD9 RID: 97753 RVA: 0x007182F8 File Offset: 0x007164F8
 	public FTransformDouble GetCameraTransform()
 	{
 		ECameraPositionType cameraPositionType = this.CameraPositionType;
@@ -2645,7 +2663,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return this.Mesh.D_GetSocketTransform(CharacterAnimationComponent.HitCase, ERelativeTransformSpace.RTS_World);
 	}
 
-	// Token: 0x0601A458 RID: 107608 RVA: 0x006F0BF8 File Offset: 0x006EEDF8
+	// Token: 0x06017DDA RID: 97754 RVA: 0x00718344 File Offset: 0x00716544
 	public void ConsumeRootMotion()
 	{
 		USkeletalMeshComponent mesh = this.Mesh;
@@ -2669,7 +2687,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A459 RID: 107609 RVA: 0x006F0C64 File Offset: 0x006EEE64
+	// Token: 0x06017DDB RID: 97755 RVA: 0x007183B0 File Offset: 0x007165B0
 	protected void TagChanged(int tagId, bool tagExist)
 	{
 		if (this.PerformanceConditionParams == null)
@@ -2698,7 +2716,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A45A RID: 107610 RVA: 0x006F0CD0 File Offset: 0x006EEED0
+	// Token: 0x06017DDC RID: 97756 RVA: 0x0071841C File Offset: 0x0071661C
 	protected void RefreshPerformancePosition()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -2783,7 +2801,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A45B RID: 107611 RVA: 0x006F100C File Offset: 0x006EF20C
+	// Token: 0x06017DDD RID: 97757 RVA: 0x00718758 File Offset: 0x00716958
 	protected void RefreshPerformanceAnimBlueprint()
 	{
 		if (this.MainAnimInstanceRole == null)
@@ -2800,7 +2818,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A45C RID: 107612 RVA: 0x006F1069 File Offset: 0x006EF269
+	// Token: 0x06017DDE RID: 97758 RVA: 0x007187B5 File Offset: 0x007169B5
 	public void EnablePerformanceAnim()
 	{
 		if (this.MainAnimInstanceRole == null)
@@ -2810,7 +2828,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.MainAnimInstanceRole.bAllowManualPerformance = true;
 	}
 
-	// Token: 0x0601A45D RID: 107613 RVA: 0x006F1080 File Offset: 0x006EF280
+	// Token: 0x06017DDF RID: 97759 RVA: 0x007187CC File Offset: 0x007169CC
 	public void SetPerformanceIndex(int index, bool loop)
 	{
 		if (this.MainAnimInstanceRole == null)
@@ -2821,7 +2839,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.MainAnimInstanceRole.bAllowManualPerformanceLoop = loop;
 	}
 
-	// Token: 0x0601A45E RID: 107614 RVA: 0x006F10A4 File Offset: 0x006EF2A4
+	// Token: 0x06017DE0 RID: 97760 RVA: 0x007187F0 File Offset: 0x007169F0
 	public void DisablePerformanceAnim()
 	{
 		if (this.MainAnimInstanceRole == null)
@@ -2834,7 +2852,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		this.MainAnimInstanceRole.PerformanceCountDown = 25f + MathUtils.Instance.GetRandomFloatNumber(-5f, 5f);
 	}
 
-	// Token: 0x0601A45F RID: 107615 RVA: 0x006F1104 File Offset: 0x006EF304
+	// Token: 0x06017DE1 RID: 97761 RVA: 0x00718850 File Offset: 0x00716A50
 	private void RecoverLogicParams()
 	{
 		if (this.AnimLogicParamsSetter == null)
@@ -2889,7 +2907,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		uabpLogicParams.IsLeavingVehicle = animLogicParamsSetter.IsLeavingVehicle;
 	}
 
-	// Token: 0x0601A460 RID: 107616 RVA: 0x006F1314 File Offset: 0x006EF514
+	// Token: 0x06017DE2 RID: 97762 RVA: 0x00718A60 File Offset: 0x00716C60
 	[NullableContext(2)]
 	public UAnimInstance GetAnimInstance()
 	{
@@ -2908,7 +2926,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return this.MainAnimInstanceInternal;
 	}
 
-	// Token: 0x0601A461 RID: 107617 RVA: 0x006F1370 File Offset: 0x006EF570
+	// Token: 0x06017DE3 RID: 97763 RVA: 0x00718ABC File Offset: 0x00716CBC
 	private float GetInverseSelfCenteredTimeDilation()
 	{
 		CharacterModel instance = CharacterModel.Instance;
@@ -2919,14 +2937,14 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return instance.InverseSelfCenteredTimeDilation;
 	}
 
-	// Token: 0x0601A462 RID: 107618 RVA: 0x006F1386 File Offset: 0x006EF586
+	// Token: 0x06017DE4 RID: 97764 RVA: 0x00718AD2 File Offset: 0x00716CD2
 	[NullableContext(2)]
 	public void SetSightCameraData(SightCameraData data)
 	{
 		this.SightData = data;
 	}
 
-	// Token: 0x0601A463 RID: 107619 RVA: 0x006F138F File Offset: 0x006EF58F
+	// Token: 0x06017DE5 RID: 97765 RVA: 0x00718ADB File Offset: 0x00716CDB
 	public void SetHumanIkMode(KuroHumanIKMode mode)
 	{
 		if (this.MainAnimInstanceRole != null)
@@ -2935,14 +2953,14 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A464 RID: 107620 RVA: 0x006F13A5 File Offset: 0x006EF5A5
+	// Token: 0x06017DE6 RID: 97766 RVA: 0x00718AF1 File Offset: 0x00716CF1
 	[NullableContext(2)]
 	public SightCameraData GetSightCameraData()
 	{
 		return this.SightData;
 	}
 
-	// Token: 0x0601A465 RID: 107621 RVA: 0x006F13B0 File Offset: 0x006EF5B0
+	// Token: 0x06017DE7 RID: 97767 RVA: 0x00718AFC File Offset: 0x00716CFC
 	private void InitAbpExtendConfig()
 	{
 		this.InitExtendConfig = true;
@@ -2963,7 +2981,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	}
 
-	// Token: 0x0601A466 RID: 107622 RVA: 0x006F143B File Offset: 0x006EF63B
+	// Token: 0x06017DE8 RID: 97768 RVA: 0x00718B87 File Offset: 0x00716D87
 	public AbpExtendConfigCsv? GetExtendConfig()
 	{
 		if (!this.InitExtendConfig)
@@ -2973,7 +2991,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		return this.ExtendConfig;
 	}
 
-	// Token: 0x0601A467 RID: 107623 RVA: 0x006F1454 File Offset: 0x006EF654
+	// Token: 0x06017DE9 RID: 97769 RVA: 0x00718BA0 File Offset: 0x00716DA0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -2981,583 +2999,496 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 			return false;
 		}
 		CharacterAnimationComponent characterAnimationComponent = (CharacterAnimationComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (characterAnimationComponent.MoveComp == null)
 		{
-			if (characterAnimationComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("AiComp"))
-		{
-			if (characterAnimationComponent.AiComp == null)
-			{
-				this.AiComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAiComponent>(this.AiComp), "AiComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterAnimationComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WeaponComp"))
-		{
-			if (characterAnimationComponent.WeaponComp == null)
-			{
-				this.WeaponComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterWeaponComponent>(this.WeaponComp), "WeaponComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformComp"))
-		{
-			if (characterAnimationComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BasePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FloatingComp"))
-		{
-			if (characterAnimationComponent.FloatingComp == null)
-			{
-				this.FloatingComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFloatingComponent>(this.FloatingComp), "FloatingComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DriveVehicleComp"))
-		{
-			if (characterAnimationComponent.DriveVehicleComp == null)
-			{
-				this.DriveVehicleComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterDriveVehicleComponent>(this.DriveVehicleComp), "DriveVehicleComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimationComp"))
-		{
-			if (characterAnimationComponent.AnimationComp == null)
-			{
-				this.AnimationComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroCharacterAnimationComponent>(this.AnimationComp), "AnimationComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("WalkRunMix"))
-		{
-			this.WalkRunMix = characterAnimationComponent.WalkRunMix;
-		}
-		if (base.CanResetComponentProperty("SlopeStepPeriodicCurve"))
-		{
-			if (characterAnimationComponent.SlopeStepPeriodicCurve == null)
-			{
-				this.SlopeStepPeriodicCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SlopeStepPeriodicCurve), "SlopeStepPeriodicCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SlopeStepSizeCurve"))
-		{
-			if (characterAnimationComponent.SlopeStepSizeCurve == null)
-			{
-				this.SlopeStepSizeCurve = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.SlopeStepSizeCurve), "SlopeStepSizeCurve"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DegMovementSlopeInternal"))
-		{
-			this.DegMovementSlopeInternal = characterAnimationComponent.DegMovementSlopeInternal;
-		}
-		if (base.CanResetComponentProperty("IkMeshOffsetInternal"))
-		{
-			this.IkMeshOffsetInternal = characterAnimationComponent.IkMeshOffsetInternal;
-		}
-		if (base.CanResetComponentProperty("MovementTerrainNormalInternal") && characterAnimationComponent.MovementTerrainNormalInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MovementTerrainNormalInternal), "MovementTerrainNormalInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NextFindSightTargetItemTime"))
+		if (characterAnimationComponent.AiComp == null)
 		{
-			this.NextFindSightTargetItemTime = characterAnimationComponent.NextFindSightTargetItemTime;
+			this.AiComp = null;
 		}
-		if (base.CanResetComponentProperty("TmpTargetSight") && characterAnimationComponent.TmpTargetSight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpTargetSight), "TmpTargetSight"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("SelfieCameraWorldLocation") && characterAnimationComponent.SelfieCameraWorldLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SelfieCameraWorldLocation), "SelfieCameraWorldLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiComp), "AiComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SelfieHeadWorldLocation") && characterAnimationComponent.SelfieHeadWorldLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SelfieHeadWorldLocation), "SelfieHeadWorldLocation"))
+		if (characterAnimationComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("HasSelfieCameraWorldLocation"))
+		if (characterAnimationComponent.WeaponComp == null)
 		{
-			this.HasSelfieCameraWorldLocation = characterAnimationComponent.HasSelfieCameraWorldLocation;
+			this.WeaponComp = null;
 		}
-		if (base.CanResetComponentProperty("IsSelfieSightActive"))
-		{
-			this.IsSelfieSightActive = characterAnimationComponent.IsSelfieSightActive;
-		}
-		if (base.CanResetComponentProperty("SightFixQuat"))
-		{
-			if (characterAnimationComponent.SightFixQuat == null)
-			{
-				this.SightFixQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.SightFixQuat), "SightFixQuat"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SightData"))
-		{
-			if (characterAnimationComponent.SightData == null)
-			{
-				this.SightData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SightCameraData>(this.SightData), "SightData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsEnableDirectlySight"))
-		{
-			this.IsEnableDirectlySight = characterAnimationComponent.IsEnableDirectlySight;
-		}
-		if (base.CanResetComponentProperty("EnableLowerBlend"))
-		{
-			this.EnableLowerBlend = characterAnimationComponent.EnableLowerBlend;
-		}
-		if (base.CanResetComponentProperty("EnableLeftArmBlend"))
-		{
-			this.EnableLeftArmBlend = characterAnimationComponent.EnableLeftArmBlend;
-		}
-		if (base.CanResetComponentProperty("EnableRightArmBlend"))
-		{
-			this.EnableRightArmBlend = characterAnimationComponent.EnableRightArmBlend;
-		}
-		if (base.CanResetComponentProperty("TmpTransform") && characterAnimationComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTransform), "TmpTransform"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaponComp), "WeaponComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTransform2") && characterAnimationComponent.TmpTransform2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TmpTransform2), "TmpTransform2"))
+		if (characterAnimationComponent.PerformComp == null)
+		{
+			this.PerformComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat") && characterAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+		if (characterAnimationComponent.FloatingComp == null)
+		{
+			this.FloatingComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FloatingComp), "FloatingComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat2") && characterAnimationComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"))
+		if (characterAnimationComponent.DriveVehicleComp == null)
+		{
+			this.DriveVehicleComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DriveVehicleComp), "DriveVehicleComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpPos") && characterAnimationComponent.TmpPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpPos), "TmpPos"))
+		if (characterAnimationComponent.AnimationComp == null)
+		{
+			this.AnimationComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimationComp), "AnimationComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpPos2") && characterAnimationComponent.TmpPos2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpPos2), "TmpPos2"))
+		this.WalkRunMix = characterAnimationComponent.WalkRunMix;
+		if (characterAnimationComponent.SlopeStepPeriodicCurve == null)
+		{
+			this.SlopeStepPeriodicCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlopeStepPeriodicCurve), "SlopeStepPeriodicCurve"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect") && characterAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpDirect), "TmpDirect"))
+		if (characterAnimationComponent.SlopeStepSizeCurve == null)
+		{
+			this.SlopeStepSizeCurve = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlopeStepSizeCurve), "SlopeStepSizeCurve"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect2") && characterAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpDirect2), "TmpDirect2"))
+		this.DegMovementSlopeInternal = characterAnimationComponent.DegMovementSlopeInternal;
+		this.IkMeshOffsetInternal = characterAnimationComponent.IkMeshOffsetInternal;
+		if (characterAnimationComponent.MovementTerrainNormalInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementTerrainNormalInternal), "MovementTerrainNormalInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect3") && characterAnimationComponent.TmpDirect3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpDirect3), "TmpDirect3"))
+		this.NextFindSightTargetItemTime = characterAnimationComponent.NextFindSightTargetItemTime;
+		if (characterAnimationComponent.TmpTargetSight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTargetSight), "TmpTargetSight"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NextWatchCameraTime"))
-		{
-			this.NextWatchCameraTime = characterAnimationComponent.NextWatchCameraTime;
-		}
-		if (base.CanResetComponentProperty("BufferModelTransform"))
-		{
-			if (characterAnimationComponent.BufferModelTransform == null)
-			{
-				this.BufferModelTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.BufferModelTransform), "BufferModelTransform"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BufferOriginTransform"))
-		{
-			if (characterAnimationComponent.BufferOriginTransform == null)
-			{
-				this.BufferOriginTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.BufferOriginTransform), "BufferOriginTransform"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BufferShowTransform"))
-		{
-			if (characterAnimationComponent.BufferShowTransform == null)
-			{
-				this.BufferShowTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.BufferShowTransform), "BufferShowTransform"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BufferNowTime"))
-		{
-			this.BufferNowTime = characterAnimationComponent.BufferNowTime;
-		}
-		if (base.CanResetComponentProperty("BufferTimeLength"))
-		{
-			this.BufferTimeLength = characterAnimationComponent.BufferTimeLength;
-		}
-		if (base.CanResetComponentProperty("LastRemainBufferFrame"))
-		{
-			this.LastRemainBufferFrame = characterAnimationComponent.LastRemainBufferFrame;
-		}
-		if (base.CanResetComponentProperty("RemainBufferTime"))
-		{
-			this.RemainBufferTime = characterAnimationComponent.RemainBufferTime;
-		}
-		if (base.CanResetComponentProperty("BufferNowScale"))
-		{
-			this.BufferNowScale = characterAnimationComponent.BufferNowScale;
-		}
-		if (base.CanResetComponentProperty("HasPlayerEvent"))
-		{
-			this.HasPlayerEvent = characterAnimationComponent.HasPlayerEvent;
-		}
-		if (base.CanResetComponentProperty("BufferLocation"))
-		{
-			this.BufferLocation = characterAnimationComponent.BufferLocation;
-		}
-		if (base.CanResetComponentProperty("LastLocation") && characterAnimationComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastLocation), "LastLocation"))
+		if (characterAnimationComponent.SelfieCameraWorldLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfieCameraWorldLocation), "SelfieCameraWorldLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CameraLocation") && characterAnimationComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CameraLocation), "CameraLocation"))
+		if (characterAnimationComponent.SelfieHeadWorldLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfieHeadWorldLocation), "SelfieHeadWorldLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SocketLocation") && characterAnimationComponent.SocketLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SocketLocation), "SocketLocation"))
+		this.HasSelfieCameraWorldLocation = characterAnimationComponent.HasSelfieCameraWorldLocation;
+		this.IsSelfieSightActive = characterAnimationComponent.IsSelfieSightActive;
+		if (characterAnimationComponent.SightFixQuat == null)
+		{
+			this.SightFixQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightFixQuat), "SightFixQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastTickFrame"))
+		if (characterAnimationComponent.SightData == null)
 		{
-			this.LastTickFrame = characterAnimationComponent.LastTickFrame;
+			this.SightData = null;
 		}
-		if (base.CanResetComponentProperty("BattleIdleEndTimeInternal"))
-		{
-			this.BattleIdleEndTimeInternal = characterAnimationComponent.BattleIdleEndTimeInternal;
-		}
-		if (base.CanResetComponentProperty("TemporaryHiddenHandle"))
-		{
-			this.TemporaryHiddenHandle = characterAnimationComponent.TemporaryHiddenHandle;
-		}
-		if (base.CanResetComponentProperty("CachedHasKuroRootMotionFrame"))
-		{
-			this.CachedHasKuroRootMotionFrame = characterAnimationComponent.CachedHasKuroRootMotionFrame;
-		}
-		if (base.CanResetComponentProperty("CachedHasKuroRootMotion"))
-		{
-			this.CachedHasKuroRootMotion = characterAnimationComponent.CachedHasKuroRootMotion;
-		}
-		if (base.CanResetComponentProperty("RoleId"))
-		{
-			this.RoleId = characterAnimationComponent.RoleId;
-		}
-		if (base.CanResetComponentProperty("HiddenCount"))
-		{
-			this.HiddenCount = characterAnimationComponent.HiddenCount;
-		}
-		if (base.CanResetComponentProperty("CameraPositionType"))
-		{
-			this.CameraPositionType = characterAnimationComponent.CameraPositionType;
-		}
-		if (base.CanResetComponentProperty("CameraPositionOffset") && characterAnimationComponent.CameraPositionOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CameraPositionOffset), "CameraPositionOffset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightData), "SightData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AnimLogicParamsSetter"))
-		{
-			if (characterAnimationComponent.AnimLogicParamsSetter == null)
-			{
-				this.AnimLogicParamsSetter = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AnimLogicParamsSetter>(this.AnimLogicParamsSetter), "AnimLogicParamsSetter"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Handle"))
-		{
-			if (characterAnimationComponent.Handle == null)
-			{
-				this.Handle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.Handle), "Handle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MeshLocationOffset") && characterAnimationComponent.MeshLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MeshLocationOffset), "MeshLocationOffset"))
+		this.IsEnableDirectlySight = characterAnimationComponent.IsEnableDirectlySight;
+		this.PendingSightSnap = characterAnimationComponent.PendingSightSnap;
+		this.EnableLowerBlend = characterAnimationComponent.EnableLowerBlend;
+		this.EnableLeftArmBlend = characterAnimationComponent.EnableLeftArmBlend;
+		this.EnableRightArmBlend = characterAnimationComponent.EnableRightArmBlend;
+		if (characterAnimationComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform), "TmpTransform"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CacheKuroAnimInstanceLod"))
-		{
-			this.CacheKuroAnimInstanceLod = characterAnimationComponent.CacheKuroAnimInstanceLod;
-		}
-		if (base.CanResetComponentProperty("RotateBonesToTargetMgr"))
-		{
-			if (characterAnimationComponent.RotateBonesToTargetMgr == null)
-			{
-				this.RotateBonesToTargetMgr = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RotateBonesToTargetManager>(this.RotateBonesToTargetMgr), "RotateBonesToTargetMgr"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformanceConditionParams"))
-		{
-			if (characterAnimationComponent.PerformanceConditionParams == null)
-			{
-				this.PerformanceConditionParams = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PerformanceConditionParams>(this.PerformanceConditionParams), "PerformanceConditionParams"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformancePositionValid"))
-		{
-			if (characterAnimationComponent.PerformancePositionValid == null)
-			{
-				this.PerformancePositionValid = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<bool[]>(this.PerformancePositionValid), "PerformancePositionValid"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformanceTagSet"))
-		{
-			if (characterAnimationComponent.PerformanceTagSet == null)
-			{
-				this.PerformanceTagSet = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HashSet<int>[]>(this.PerformanceTagSet), "PerformanceTagSet"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MainAnimInstanceRole"))
-		{
-			if (characterAnimationComponent.MainAnimInstanceRole == null)
-			{
-				this.MainAnimInstanceRole = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroAnimInstanceRole>(this.MainAnimInstanceRole), "MainAnimInstanceRole"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastRefreshPerformanceLocation") && characterAnimationComponent.LastRefreshPerformanceLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastRefreshPerformanceLocation), "LastRefreshPerformanceLocation"))
+		if (characterAnimationComponent.TmpTransform2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform2), "TmpTransform2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NextRefreshPerformanceTime"))
-		{
-			this.NextRefreshPerformanceTime = characterAnimationComponent.NextRefreshPerformanceTime;
-		}
-		if (base.CanResetComponentProperty("OnMovingElevatorInternal"))
-		{
-			this.OnMovingElevatorInternal = characterAnimationComponent.OnMovingElevatorInternal;
-		}
-		if (base.CanResetComponentProperty("IsDengDengDoll"))
-		{
-			this.IsDengDengDoll = characterAnimationComponent.IsDengDengDoll;
-		}
-		if (base.CanResetComponentProperty("CacheDengDengBone") && characterAnimationComponent.CacheDengDengBone != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheDengDengBone), "CacheDengDengBone"))
+		if (characterAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsLuosela"))
-		{
-			this.IsLuosela = characterAnimationComponent.IsLuosela;
-		}
-		if (base.CanResetComponentProperty("CacheWeaponCase0"))
-		{
-			if (characterAnimationComponent.CacheWeaponCase0 == null)
-			{
-				this.CacheWeaponCase0 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.CacheWeaponCase0), "CacheWeaponCase0"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LuoselaLogCount"))
-		{
-			this.LuoselaLogCount = characterAnimationComponent.LuoselaLogCount;
-		}
-		if (base.CanResetComponentProperty("AddedEvents"))
-		{
-			this.AddedEvents = characterAnimationComponent.AddedEvents;
-		}
-		if (base.CanResetComponentProperty("TurnSpeedInternal"))
-		{
-			this.TurnSpeedInternal = characterAnimationComponent.TurnSpeedInternal;
-		}
-		if (base.CanResetComponentProperty("TurnRatioInternal"))
-		{
-			this.TurnRatioInternal = characterAnimationComponent.TurnRatioInternal;
-		}
-		if (base.CanResetComponentProperty("ShowActorDisableAnimOptimizationCount"))
-		{
-			this.ShowActorDisableAnimOptimizationCount = characterAnimationComponent.ShowActorDisableAnimOptimizationCount;
-		}
-		if (base.CanResetComponentProperty("StopBattleIdleEndTimeMoveStates") && characterAnimationComponent.StopBattleIdleEndTimeMoveStates != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::ECharMoveState>(this.StopBattleIdleEndTimeMoveStates), "StopBattleIdleEndTimeMoveStates"))
+		if (characterAnimationComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TickProcessId"))
+		if (characterAnimationComponent.TmpPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpPos), "TmpPos"))
 		{
-			this.TickProcessId = characterAnimationComponent.TickProcessId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("InitExtendConfig"))
+		if (characterAnimationComponent.TmpPos2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpPos2), "TmpPos2"))
 		{
-			this.InitExtendConfig = characterAnimationComponent.InitExtendConfig;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ExtendConfig"))
+		if (characterAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect), "TmpDirect"))
 		{
-			this.ExtendConfig = characterAnimationComponent.ExtendConfig;
+			return false;
 		}
+		if (characterAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect2), "TmpDirect2"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.TmpDirect3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect3), "TmpDirect3"))
+		{
+			return false;
+		}
+		this.NextWatchCameraTime = characterAnimationComponent.NextWatchCameraTime;
+		if (characterAnimationComponent.BufferModelTransform == null)
+		{
+			this.BufferModelTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferModelTransform), "BufferModelTransform"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.BufferOriginTransform == null)
+		{
+			this.BufferOriginTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferOriginTransform), "BufferOriginTransform"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.BufferShowTransform == null)
+		{
+			this.BufferShowTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferShowTransform), "BufferShowTransform"))
+		{
+			return false;
+		}
+		this.BufferNowTime = characterAnimationComponent.BufferNowTime;
+		this.BufferTimeLength = characterAnimationComponent.BufferTimeLength;
+		this.LastRemainBufferFrame = characterAnimationComponent.LastRemainBufferFrame;
+		this.RemainBufferTime = characterAnimationComponent.RemainBufferTime;
+		this.BufferNowScale = characterAnimationComponent.BufferNowScale;
+		this.HasPlayerEvent = characterAnimationComponent.HasPlayerEvent;
+		this.BufferLocation = characterAnimationComponent.BufferLocation;
+		if (characterAnimationComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraLocation), "CameraLocation"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.SocketLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SocketLocation), "SocketLocation"))
+		{
+			return false;
+		}
+		this.LastTickFrame = characterAnimationComponent.LastTickFrame;
+		this.BattleIdleEndTimeInternal = characterAnimationComponent.BattleIdleEndTimeInternal;
+		this.TemporaryHiddenHandle = characterAnimationComponent.TemporaryHiddenHandle;
+		this.RoleId = characterAnimationComponent.RoleId;
+		this.HiddenCount = characterAnimationComponent.HiddenCount;
+		this.CameraPositionType = characterAnimationComponent.CameraPositionType;
+		if (characterAnimationComponent.CameraPositionOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraPositionOffset), "CameraPositionOffset"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.AnimLogicParamsSetter == null)
+		{
+			this.AnimLogicParamsSetter = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimLogicParamsSetter), "AnimLogicParamsSetter"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.Handle == null)
+		{
+			this.Handle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Handle), "Handle"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.MeshLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshLocationOffset), "MeshLocationOffset"))
+		{
+			return false;
+		}
+		this.CacheKuroAnimInstanceLod = characterAnimationComponent.CacheKuroAnimInstanceLod;
+		if (characterAnimationComponent.RotateBonesToTargetMgr == null)
+		{
+			this.RotateBonesToTargetMgr = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RotateBonesToTargetMgr), "RotateBonesToTargetMgr"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.PerformanceConditionParams == null)
+		{
+			this.PerformanceConditionParams = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformanceConditionParams), "PerformanceConditionParams"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.PerformancePositionValid == null)
+		{
+			this.PerformancePositionValid = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformancePositionValid), "PerformancePositionValid"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.PerformanceTagSet == null)
+		{
+			this.PerformanceTagSet = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformanceTagSet), "PerformanceTagSet"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.MainAnimInstanceRole == null)
+		{
+			this.MainAnimInstanceRole = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainAnimInstanceRole), "MainAnimInstanceRole"))
+		{
+			return false;
+		}
+		if (characterAnimationComponent.LastRefreshPerformanceLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastRefreshPerformanceLocation), "LastRefreshPerformanceLocation"))
+		{
+			return false;
+		}
+		this.NextRefreshPerformanceTime = characterAnimationComponent.NextRefreshPerformanceTime;
+		this.OnMovingElevatorInternal = characterAnimationComponent.OnMovingElevatorInternal;
+		this.IsDengDengDoll = characterAnimationComponent.IsDengDengDoll;
+		if (characterAnimationComponent.CacheDengDengBone != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheDengDengBone), "CacheDengDengBone"))
+		{
+			return false;
+		}
+		this.IsLuosela = characterAnimationComponent.IsLuosela;
+		if (characterAnimationComponent.CacheWeaponCase0 == null)
+		{
+			this.CacheWeaponCase0 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheWeaponCase0), "CacheWeaponCase0"))
+		{
+			return false;
+		}
+		this.LuoselaLogCount = characterAnimationComponent.LuoselaLogCount;
+		this.AddedEvents = characterAnimationComponent.AddedEvents;
+		this.TurnSpeedInternal = characterAnimationComponent.TurnSpeedInternal;
+		this.TurnRatioInternal = characterAnimationComponent.TurnRatioInternal;
+		this.ShowActorDisableAnimOptimizationCount = characterAnimationComponent.ShowActorDisableAnimOptimizationCount;
+		if (characterAnimationComponent.StopBattleIdleEndTimeMoveStates != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::ECharMoveState>(this.StopBattleIdleEndTimeMoveStates), "StopBattleIdleEndTimeMoveStates"))
+		{
+			return false;
+		}
+		this.TickProcessId = characterAnimationComponent.TickProcessId;
+		this.InitExtendConfig = characterAnimationComponent.InitExtendConfig;
+		this.ExtendConfig = characterAnimationComponent.ExtendConfig;
 		return true;
 	}
 
-	// Token: 0x0400C7D1 RID: 51153
+	// Token: 0x17002530 RID: 9520
+	// (get) Token: 0x06017DEA RID: 97770 RVA: 0x0071942F File Offset: 0x0071762F
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002531 RID: 9521
+	// (get) Token: 0x06017DEB RID: 97771 RVA: 0x00719432 File Offset: 0x00717632
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002532 RID: 9522
+	// (get) Token: 0x06017DEC RID: 97772 RVA: 0x00719435 File Offset: 0x00717635
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002533 RID: 9523
+	// (get) Token: 0x06017DED RID: 97773 RVA: 0x00719438 File Offset: 0x00717638
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002534 RID: 9524
+	// (get) Token: 0x06017DEE RID: 97774 RVA: 0x0071943B File Offset: 0x0071763B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002535 RID: 9525
+	// (get) Token: 0x06017DEF RID: 97775 RVA: 0x0071943E File Offset: 0x0071763E
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002536 RID: 9526
+	// (get) Token: 0x06017DF0 RID: 97776 RVA: 0x00719441 File Offset: 0x00717641
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002537 RID: 9527
+	// (get) Token: 0x06017DF1 RID: 97777 RVA: 0x00719444 File Offset: 0x00717644
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002538 RID: 9528
+	// (get) Token: 0x06017DF2 RID: 97778 RVA: 0x00719447 File Offset: 0x00717647
+	public override bool NeedForceAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002539 RID: 9529
+	// (get) Token: 0x06017DF3 RID: 97779 RVA: 0x0071944A File Offset: 0x0071764A
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CBAB RID: 52139
 	public const int PERFORMANCE_COUNT = 3;
 
-	// Token: 0x0400C7D2 RID: 51154
+	// Token: 0x0400CBAC RID: 52140
 	private const float ROTATABLE_THREADHOLD = 0.5f;
 
-	// Token: 0x0400C7D3 RID: 51155
+	// Token: 0x0400CBAD RID: 52141
 	private const float MIN_SCLOPE_SCALE = 0.5f;
 
-	// Token: 0x0400C7D4 RID: 51156
+	// Token: 0x0400CBAE RID: 52142
 	private const float MAX_SCLOPE_SCALE = 1f;
 
-	// Token: 0x0400C7D5 RID: 51157
+	// Token: 0x0400CBAF RID: 52143
 	private const float BLINK_MOVE_MIN_TIME = 5f;
 
-	// Token: 0x0400C7D6 RID: 51158
+	// Token: 0x0400CBB0 RID: 52144
 	private const float CAMERA_INFEED_ME = 0.3f;
 
-	// Token: 0x0400C7D7 RID: 51159
+	// Token: 0x0400CBB1 RID: 52145
 	private const float TURN_SPEED = 0.36f;
 
-	// Token: 0x0400C7D8 RID: 51160
+	// Token: 0x0400CBB2 RID: 52146
 	private const float TURN_RATIO = 0.04f;
 
-	// Token: 0x0400C7D9 RID: 51161
+	// Token: 0x0400CBB3 RID: 52147
 	private const int WATCH_CAMERA_TIME = 1000;
 
-	// Token: 0x0400C7DA RID: 51162
+	// Token: 0x0400CBB4 RID: 52148
 	private const int WATCH_CAMERA_TIME_2 = 3000;
 
-	// Token: 0x0400C7DB RID: 51163
+	// Token: 0x0400CBB5 RID: 52149
 	private const int HEAD_INTERP_SPEED = 5;
 
-	// Token: 0x0400C7DC RID: 51164
+	// Token: 0x0400CBB6 RID: 52150
 	private const int FIND_SIGHT_TARGET_ITEM_PERIOD = 1000;
 
-	// Token: 0x0400C7DD RID: 51165
+	// Token: 0x0400CBB7 RID: 52151
 	private const int SIGHT_TARGET_ITEM_DISTANCE_THREAHOLD = 2000;
 
-	// Token: 0x0400C7DE RID: 51166
+	// Token: 0x0400CBB8 RID: 52152
 	private const int SQUARE_SIGHT_TARGET_ITEM_DISTANCE_THREAHOLD = 4000000;
 
-	// Token: 0x0400C7DF RID: 51167
+	// Token: 0x0400CBB9 RID: 52153
 	private const float SIGHT_LOCK_YAW_MIN = -23f;
 
-	// Token: 0x0400C7E0 RID: 51168
+	// Token: 0x0400CBBA RID: 52154
 	private const float SIGHT_LOCK_YAW_MAX = 23f;
 
-	// Token: 0x0400C7E1 RID: 51169
+	// Token: 0x0400CBBB RID: 52155
 	private const float SIGHT_LOCK_PITCH_MIN = -10f;
 
-	// Token: 0x0400C7E2 RID: 51170
+	// Token: 0x0400CBBC RID: 52156
 	private const float SIGHT_LOCK_PITCH_MAX = 13f;
 
-	// Token: 0x0400C7E3 RID: 51171
+	// Token: 0x0400CBBD RID: 52157
 	private const float SIGHT_LOCK_ASSIT_LIMIT = 5f;
 
-	// Token: 0x0400C7E4 RID: 51172
+	// Token: 0x0400CBBE RID: 52158
 	[StaticVariableRuleIgnore]
 	public static readonly FVector SightDirectInSightBone = new FVector(0.3f, -1f, 0f);
 
-	// Token: 0x0400C7E5 RID: 51173
+	// Token: 0x0400CBBF RID: 52159
 	[StaticVariableRuleIgnore]
 	public static readonly FVector UpAxisInSightBone = new FVector(1f, 0.3f, 0f);
 
-	// Token: 0x0400C7E6 RID: 51174
+	// Token: 0x0400CBC0 RID: 52160
 	public const int MIN_BUFFER_TIME_LENGTH = 10;
 
-	// Token: 0x0400C7E7 RID: 51175
+	// Token: 0x0400CBC1 RID: 52161
 	private const int MAX_BUFFER_TIME_LENGTH = 60000;
 
-	// Token: 0x0400C7E8 RID: 51176
+	// Token: 0x0400CBC2 RID: 52162
 	private const int BATLLE_IDLE_TIME = 5000;
 
-	// Token: 0x0400C7E9 RID: 51177
+	// Token: 0x0400CBC3 RID: 52163
 	private const int REFRESH_PERFORMANCE_PERIOD = 5000;
 
-	// Token: 0x0400C7EA RID: 51178
+	// Token: 0x0400CBC4 RID: 52164
 	private const int REFRESH_PERFORMANCE_PERIOD_NOT_MOVE = 5000;
 
-	// Token: 0x0400C7EB RID: 51179
+	// Token: 0x0400CBC5 RID: 52165
 	[StaticVariableRuleIgnore]
 	private static readonly int[][] priorityToMaxSquareDistance = new int[][]
 	{
@@ -3578,16 +3509,16 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		}
 	};
 
-	// Token: 0x0400C7EC RID: 51180
+	// Token: 0x0400CBC6 RID: 52166
 	private const float WALK_RUN_MIX_LERP = 0.995f;
 
-	// Token: 0x0400C7ED RID: 51181
+	// Token: 0x0400CBC7 RID: 52167
 	private const float DEFAULT_CAMERA_HEIGHT_RATE = 0.33333334f;
 
-	// Token: 0x0400C7EE RID: 51182
+	// Token: 0x0400CBC8 RID: 52168
 	private const float MODEL_BUFFER_SMOOTH_FACTOR = 0.75f;
 
-	// Token: 0x0400C7EF RID: 51183
+	// Token: 0x0400CBC9 RID: 52169
 	[StaticVariableRuleIgnore]
 	private static readonly int[] limitBlendSpaceY = new int[]
 	{
@@ -3595,7 +3526,7 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		30
 	};
 
-	// Token: 0x0400C7F0 RID: 51184
+	// Token: 0x0400CBCA RID: 52170
 	[StaticVariableRuleIgnore]
 	private static readonly int[] limitBlendSpaceX = new int[]
 	{
@@ -3603,227 +3534,224 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		90
 	};
 
-	// Token: 0x0400C7F1 RID: 51185
+	// Token: 0x0400CBCB RID: 52171
 	private const string PROFILE_KEY = "CharacterAnimationComponent_Performance";
 
-	// Token: 0x0400C7F2 RID: 51186
+	// Token: 0x0400CBCC RID: 52172
 	public static readonly FName CameraPosition = new FName("CameraPosition");
 
-	// Token: 0x0400C7F3 RID: 51187
+	// Token: 0x0400CBCD RID: 52173
 	public static readonly FName HitCase = new FName("HitCase");
 
-	// Token: 0x0400C7F4 RID: 51188
+	// Token: 0x0400CBCE RID: 52174
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C7F5 RID: 51189
+	// Token: 0x0400CBCF RID: 52175
 	[Nullable(2)]
 	private CharacterAiComponent AiComp;
 
-	// Token: 0x0400C7F6 RID: 51190
+	// Token: 0x0400CBD0 RID: 52176
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C7F7 RID: 51191
+	// Token: 0x0400CBD1 RID: 52177
 	[Nullable(2)]
 	private CharacterWeaponComponent WeaponComp;
 
-	// Token: 0x0400C7F8 RID: 51192
+	// Token: 0x0400CBD2 RID: 52178
 	[Nullable(2)]
 	private BasePerformComponent PerformComp;
 
-	// Token: 0x0400C7F9 RID: 51193
+	// Token: 0x0400CBD3 RID: 52179
 	[Nullable(2)]
 	private CharacterFloatingComponent FloatingComp;
 
-	// Token: 0x0400C7FA RID: 51194
+	// Token: 0x0400CBD4 RID: 52180
 	[Nullable(2)]
 	private CharacterDriveVehicleComponent DriveVehicleComp;
 
-	// Token: 0x0400C7FB RID: 51195
+	// Token: 0x0400CBD5 RID: 52181
 	[Nullable(2)]
 	private UKuroCharacterAnimationComponent AnimationComp;
 
-	// Token: 0x0400C7FC RID: 51196
+	// Token: 0x0400CBD6 RID: 52182
 	private float WalkRunMix = --0f;
 
-	// Token: 0x0400C7FD RID: 51197
+	// Token: 0x0400CBD7 RID: 52183
 	[Nullable(2)]
 	protected UCurveFloat SlopeStepPeriodicCurve;
 
-	// Token: 0x0400C7FE RID: 51198
+	// Token: 0x0400CBD8 RID: 52184
 	[Nullable(2)]
 	protected UCurveFloat SlopeStepSizeCurve;
 
-	// Token: 0x0400C7FF RID: 51199
+	// Token: 0x0400CBD9 RID: 52185
 	private float DegMovementSlopeInternal;
 
-	// Token: 0x0400C800 RID: 51200
+	// Token: 0x0400CBDA RID: 52186
 	private float IkMeshOffsetInternal;
 
-	// Token: 0x0400C801 RID: 51201
+	// Token: 0x0400CBDB RID: 52187
 	private readonly global::Vector MovementTerrainNormalInternal = global::Vector.Create();
 
-	// Token: 0x0400C802 RID: 51202
+	// Token: 0x0400CBDC RID: 52188
 	private double NextFindSightTargetItemTime;
 
-	// Token: 0x0400C803 RID: 51203
+	// Token: 0x0400CBDD RID: 52189
 	private readonly global::Vector TmpTargetSight = global::Vector.Create();
 
-	// Token: 0x0400C804 RID: 51204
+	// Token: 0x0400CBDE RID: 52190
 	private readonly global::Vector SelfieCameraWorldLocation = global::Vector.Create();
 
-	// Token: 0x0400C805 RID: 51205
+	// Token: 0x0400CBDF RID: 52191
 	private readonly global::Vector SelfieHeadWorldLocation = global::Vector.Create();
 
-	// Token: 0x0400C806 RID: 51206
+	// Token: 0x0400CBE0 RID: 52192
 	private bool HasSelfieCameraWorldLocation;
 
-	// Token: 0x0400C807 RID: 51207
+	// Token: 0x0400CBE1 RID: 52193
 	private bool IsSelfieSightActive;
 
-	// Token: 0x0400C808 RID: 51208
+	// Token: 0x0400CBE2 RID: 52194
 	[Nullable(2)]
 	private Quat SightFixQuat;
 
-	// Token: 0x0400C809 RID: 51209
+	// Token: 0x0400CBE3 RID: 52195
 	[Nullable(2)]
 	private SightCameraData SightData;
 
-	// Token: 0x0400C80A RID: 51210
+	// Token: 0x0400CBE4 RID: 52196
 	private bool IsEnableDirectlySight;
 
-	// Token: 0x0400C80B RID: 51211
+	// Token: 0x0400CBE5 RID: 52197
+	private bool PendingSightSnap;
+
+	// Token: 0x0400CBE6 RID: 52198
 	public bool EnableLowerBlend;
 
-	// Token: 0x0400C80C RID: 51212
+	// Token: 0x0400CBE7 RID: 52199
 	public bool EnableLeftArmBlend;
 
-	// Token: 0x0400C80D RID: 51213
+	// Token: 0x0400CBE8 RID: 52200
 	public bool EnableRightArmBlend;
 
-	// Token: 0x0400C80E RID: 51214
+	// Token: 0x0400CBE9 RID: 52201
 	private readonly global::Transform TmpTransform = global::Transform.Create();
 
-	// Token: 0x0400C80F RID: 51215
+	// Token: 0x0400CBEA RID: 52202
 	private readonly global::Transform TmpTransform2 = global::Transform.Create();
 
-	// Token: 0x0400C810 RID: 51216
+	// Token: 0x0400CBEB RID: 52203
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C811 RID: 51217
+	// Token: 0x0400CBEC RID: 52204
 	private readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C812 RID: 51218
+	// Token: 0x0400CBED RID: 52205
 	private readonly global::Vector TmpPos = global::Vector.Create();
 
-	// Token: 0x0400C813 RID: 51219
+	// Token: 0x0400CBEE RID: 52206
 	private readonly global::Vector TmpPos2 = global::Vector.Create();
 
-	// Token: 0x0400C814 RID: 51220
+	// Token: 0x0400CBEF RID: 52207
 	private readonly global::Vector TmpDirect = global::Vector.Create();
 
-	// Token: 0x0400C815 RID: 51221
+	// Token: 0x0400CBF0 RID: 52208
 	private readonly global::Vector TmpDirect2 = global::Vector.Create();
 
-	// Token: 0x0400C816 RID: 51222
+	// Token: 0x0400CBF1 RID: 52209
 	private readonly global::Vector TmpDirect3 = global::Vector.Create();
 
-	// Token: 0x0400C817 RID: 51223
+	// Token: 0x0400CBF2 RID: 52210
 	private double NextWatchCameraTime;
 
-	// Token: 0x0400C818 RID: 51224
+	// Token: 0x0400CBF3 RID: 52211
 	protected global::Transform BufferModelTransform = global::Transform.Create();
 
-	// Token: 0x0400C819 RID: 51225
+	// Token: 0x0400CBF4 RID: 52212
 	protected global::Transform BufferOriginTransform = global::Transform.Create();
 
-	// Token: 0x0400C81A RID: 51226
+	// Token: 0x0400CBF5 RID: 52213
 	protected global::Transform BufferShowTransform = global::Transform.Create();
 
-	// Token: 0x0400C81B RID: 51227
+	// Token: 0x0400CBF6 RID: 52214
 	protected float BufferNowTime;
 
-	// Token: 0x0400C81C RID: 51228
+	// Token: 0x0400CBF7 RID: 52215
 	protected float BufferTimeLength;
 
-	// Token: 0x0400C81D RID: 51229
+	// Token: 0x0400CBF8 RID: 52216
 	protected int LastRemainBufferFrame;
 
-	// Token: 0x0400C81E RID: 51230
+	// Token: 0x0400CBF9 RID: 52217
 	protected float RemainBufferTime;
 
-	// Token: 0x0400C81F RID: 51231
+	// Token: 0x0400CBFA RID: 52218
 	protected float BufferNowScale = 1f;
 
-	// Token: 0x0400C820 RID: 51232
+	// Token: 0x0400CBFB RID: 52219
 	private bool HasPlayerEvent;
 
-	// Token: 0x0400C821 RID: 51233
+	// Token: 0x0400CBFC RID: 52220
 	protected bool BufferLocation;
 
-	// Token: 0x0400C822 RID: 51234
+	// Token: 0x0400CBFD RID: 52221
 	private readonly global::Vector LastLocation = global::Vector.Create();
 
-	// Token: 0x0400C823 RID: 51235
+	// Token: 0x0400CBFE RID: 52222
 	private readonly global::Vector CameraLocation = global::Vector.Create();
 
-	// Token: 0x0400C824 RID: 51236
+	// Token: 0x0400CBFF RID: 52223
 	private readonly global::Vector SocketLocation = global::Vector.Create();
 
-	// Token: 0x0400C825 RID: 51237
+	// Token: 0x0400CC00 RID: 52224
 	private int LastTickFrame = -1;
 
-	// Token: 0x0400C826 RID: 51238
+	// Token: 0x0400CC01 RID: 52225
 	private float BattleIdleEndTimeInternal;
 
-	// Token: 0x0400C827 RID: 51239
+	// Token: 0x0400CC02 RID: 52226
 	private int? TemporaryHiddenHandle = new int?(0);
 
-	// Token: 0x0400C828 RID: 51240
-	private int CachedHasKuroRootMotionFrame = -1;
-
-	// Token: 0x0400C829 RID: 51241
-	private bool CachedHasKuroRootMotion;
-
-	// Token: 0x0400C82A RID: 51242
+	// Token: 0x0400CC03 RID: 52227
 	private int RoleId;
 
-	// Token: 0x0400C82B RID: 51243
+	// Token: 0x0400CC04 RID: 52228
 	private int HiddenCount = -1;
 
-	// Token: 0x0400C82C RID: 51244
+	// Token: 0x0400CC05 RID: 52229
 	private ECameraPositionType CameraPositionType = ECameraPositionType.Default;
 
-	// Token: 0x0400C82D RID: 51245
+	// Token: 0x0400CC06 RID: 52230
 	private readonly global::Vector CameraPositionOffset = global::Vector.Create();
 
-	// Token: 0x0400C82E RID: 51246
+	// Token: 0x0400CC07 RID: 52231
 	[Nullable(2)]
 	public AnimLogicParamsSetter AnimLogicParamsSetter;
 
-	// Token: 0x0400C82F RID: 51247
+	// Token: 0x0400CC08 RID: 52232
 	[Nullable(2)]
 	private EntityHandle Handle;
 
-	// Token: 0x0400C830 RID: 51248
+	// Token: 0x0400CC09 RID: 52233
 	private readonly global::Vector MeshLocationOffset = global::Vector.Create();
 
-	// Token: 0x0400C831 RID: 51249
+	// Token: 0x0400CC0A RID: 52234
 	private int CacheKuroAnimInstanceLod;
 
-	// Token: 0x0400C832 RID: 51250
+	// Token: 0x0400CC0B RID: 52235
 	[Nullable(2)]
 	public RotateBonesToTargetManager RotateBonesToTargetMgr;
 
-	// Token: 0x0400C833 RID: 51251
+	// Token: 0x0400CC0C RID: 52236
 	[Nullable(2)]
 	private PerformanceConditionParams PerformanceConditionParams;
 
-	// Token: 0x0400C834 RID: 51252
+	// Token: 0x0400CC0D RID: 52237
 	private bool[] PerformancePositionValid = new bool[3];
 
-	// Token: 0x0400C835 RID: 51253
+	// Token: 0x0400CC0E RID: 52238
 	private HashSet<int>[] PerformanceTagSet = new HashSet<int>[]
 	{
 		new HashSet<int>(),
@@ -3831,51 +3759,51 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		new HashSet<int>()
 	};
 
-	// Token: 0x0400C836 RID: 51254
+	// Token: 0x0400CC0F RID: 52239
 	[Nullable(2)]
 	protected UKuroAnimInstanceRole MainAnimInstanceRole;
 
-	// Token: 0x0400C837 RID: 51255
+	// Token: 0x0400CC10 RID: 52240
 	private readonly global::Vector LastRefreshPerformanceLocation = global::Vector.Create(-100000000.0, -100000000.0, -100000000.0);
 
-	// Token: 0x0400C838 RID: 51256
+	// Token: 0x0400CC11 RID: 52241
 	private double NextRefreshPerformanceTime;
 
-	// Token: 0x0400C839 RID: 51257
+	// Token: 0x0400CC12 RID: 52242
 	private bool OnMovingElevatorInternal;
 
-	// Token: 0x0400C83A RID: 51258
+	// Token: 0x0400CC13 RID: 52243
 	private bool IsDengDengDoll;
 
-	// Token: 0x0400C83B RID: 51259
+	// Token: 0x0400CC14 RID: 52244
 	private static readonly FName DengDengBoneName = new FName("DD_Bip001Pelvis");
 
-	// Token: 0x0400C83C RID: 51260
+	// Token: 0x0400CC15 RID: 52245
 	private readonly global::Vector CacheDengDengBone = global::Vector.Create();
 
-	// Token: 0x0400C83D RID: 51261
+	// Token: 0x0400CC16 RID: 52246
 	private bool IsLuosela;
 
-	// Token: 0x0400C83E RID: 51262
+	// Token: 0x0400CC17 RID: 52247
 	[Nullable(2)]
 	private USkeletalMeshComponent CacheWeaponCase0;
 
-	// Token: 0x0400C83F RID: 51263
+	// Token: 0x0400CC18 RID: 52248
 	private int LuoselaLogCount;
 
-	// Token: 0x0400C840 RID: 51264
+	// Token: 0x0400CC19 RID: 52249
 	private bool AddedEvents;
 
-	// Token: 0x0400C841 RID: 51265
+	// Token: 0x0400CC1A RID: 52250
 	private float TurnSpeedInternal = 0.36f;
 
-	// Token: 0x0400C842 RID: 51266
+	// Token: 0x0400CC1B RID: 52251
 	private float TurnRatioInternal = 0.04f;
 
-	// Token: 0x0400C843 RID: 51267
+	// Token: 0x0400CC1C RID: 52252
 	private int ShowActorDisableAnimOptimizationCount;
 
-	// Token: 0x0400C844 RID: 51268
+	// Token: 0x0400CC1D RID: 52253
 	private readonly HashSet<global::ECharMoveState> StopBattleIdleEndTimeMoveStates = new HashSet<global::ECharMoveState>
 	{
 		global::ECharMoveState.Walk,
@@ -3885,12 +3813,12 @@ public class CharacterAnimationComponent : BaseAnimationComponent, IComponentDep
 		global::ECharMoveState.SprintStop
 	};
 
-	// Token: 0x0400C845 RID: 51269
+	// Token: 0x0400CC1E RID: 52254
 	private int TickProcessId;
 
-	// Token: 0x0400C846 RID: 51270
+	// Token: 0x0400CC1F RID: 52255
 	private bool InitExtendConfig;
 
-	// Token: 0x0400C847 RID: 51271
+	// Token: 0x0400CC20 RID: 52256
 	private AbpExtendConfigCsv? ExtendConfig;
 }

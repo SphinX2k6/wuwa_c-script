@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FAF RID: 28591
+	// Token: 0x02007775 RID: 30581
 	public class ISetAreaTimeUnLockT
 	{
-		// Token: 0x1700D450 RID: 54352
-		// (get) Token: 0x06032889 RID: 206985 RVA: 0x006D1DCF File Offset: 0x006CFFCF
-		// (set) Token: 0x0603288A RID: 206986 RVA: 0x006D1DD7 File Offset: 0x006CFFD7
+		// Token: 0x1700E01F RID: 57375
+		// (get) Token: 0x06035AD9 RID: 219865 RVA: 0x00731787 File Offset: 0x0072F987
+		// (set) Token: 0x06035ADA RID: 219866 RVA: 0x0073178F File Offset: 0x0072F98F
 		public ESetAreaTime Type { get; set; }
 
-		// Token: 0x1700D451 RID: 54353
-		// (get) Token: 0x0603288B RID: 206987 RVA: 0x006D1DE0 File Offset: 0x006CFFE0
-		// (set) Token: 0x0603288C RID: 206988 RVA: 0x006D1DE8 File Offset: 0x006CFFE8
+		// Token: 0x1700E020 RID: 57376
+		// (get) Token: 0x06035ADB RID: 219867 RVA: 0x00731798 File Offset: 0x0072F998
+		// (set) Token: 0x06035ADC RID: 219868 RVA: 0x007317A0 File Offset: 0x0072F9A0
 		public List<int> AreaIds { get; set; }
 
-		// Token: 0x0603288D RID: 206989 RVA: 0x006D1DF1 File Offset: 0x006CFFF1
+		// Token: 0x06035ADD RID: 219869 RVA: 0x007317A9 File Offset: 0x0072F9A9
 		public ISetAreaTimeUnLockT()
 		{
 			this.Type = ESetAreaTime.Lock;

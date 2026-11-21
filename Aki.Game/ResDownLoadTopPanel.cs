@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Module.BattleUi.Views;
@@ -10,10 +9,10 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200275F RID: 10079
+// Token: 0x02001C4A RID: 7242
 public class ResDownLoadTopPanel : BattleVisibleChildView
 {
-	// Token: 0x06014AC6 RID: 84678 RVA: 0x0053AC34 File Offset: 0x00538E34
+	// Token: 0x06011FA9 RID: 73641 RVA: 0x00549AC8 File Offset: 0x00547CC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -36,7 +35,7 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014AC7 RID: 84679 RVA: 0x0053ACFB File Offset: 0x00538EFB
+	// Token: 0x06011FAA RID: 73642 RVA: 0x00549B8F File Offset: 0x00547D8F
 	[NullableContext(1)]
 	public override void Initialize(object param = null)
 	{
@@ -45,44 +44,29 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		base.SetVisible(1, false);
 	}
 
-	// Token: 0x06014AC8 RID: 84680 RVA: 0x0053AD13 File Offset: 0x00538F13
+	// Token: 0x06011FAB RID: 73643 RVA: 0x00549BA7 File Offset: 0x00547DA7
 	public override void Reset()
 	{
 		base.Reset();
 	}
 
-	// Token: 0x06014AC9 RID: 84681 RVA: 0x0053AD1B File Offset: 0x00538F1B
+	// Token: 0x06011FAC RID: 73644 RVA: 0x00549BAF File Offset: 0x00547DAF
 	private void AddEventListeners()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackDownLoadState, new Action(this.ResDownLoadStateRefresh));
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackageDownLoadByPriority, new Action(this.ResDownLoadStateRefresh));
 	}
 
-	// Token: 0x06014ACA RID: 84682 RVA: 0x0053AD55 File Offset: 0x00538F55
+	// Token: 0x06011FAD RID: 73645 RVA: 0x00549BE9 File Offset: 0x00547DE9
 	private void RemoveEventListeners()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackDownLoadState, new Action(this.ResDownLoadStateRefresh));
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackageDownLoadByPriority, new Action(this.ResDownLoadStateRefresh));
 	}
 
-	// Token: 0x06014ACB RID: 84683 RVA: 0x0053AD90 File Offset: 0x00538F90
+	// Token: 0x06011FAE RID: 73646 RVA: 0x00549C24 File Offset: 0x00547E24
 	private void OnDownLoadBtnClick()
 	{
-		if (Info.Instance.IsPcPlatform())
-		{
-			string text = ((double)SubPackageDownLoadModel.Instance.GetDynamicRecallTotalSize() / 1073741824.0).ToString("F2");
-			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RecallResourceDownLoadingTips);
-			confirmBoxDataNew.FunctionMap.Add(2, delegate
-			{
-				ConfirmBoxController.Instance.CloseConfirmBoxView();
-			});
-			confirmBoxDataNew.SetTextArgs(new string[]
-			{
-				text
-			});
-			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
-			return;
-		}
 		if (RecallQuestModel.Instance.IsInRecallInstance())
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("Download_BanDownloadSystem", Array.Empty<object>());
@@ -94,7 +78,7 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		}
 	}
 
-	// Token: 0x06014ACC RID: 84684 RVA: 0x0053AE62 File Offset: 0x00539062
+	// Token: 0x06011FAF RID: 73647 RVA: 0x00549C74 File Offset: 0x00547E74
 	private void ResDownLoadStateRefresh()
 	{
 		if (!SubPackageDownLoadModel.Instance.NeedShowBattleViewButton())
@@ -105,13 +89,13 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		this.Update();
 	}
 
-	// Token: 0x06014ACD RID: 84685 RVA: 0x0053AE7D File Offset: 0x0053907D
+	// Token: 0x06011FB0 RID: 73648 RVA: 0x00549C8F File Offset: 0x00547E8F
 	public void Update()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x06014ACE RID: 84686 RVA: 0x0053AE88 File Offset: 0x00539088
+	// Token: 0x06011FB1 RID: 73649 RVA: 0x00549C98 File Offset: 0x00547E98
 	public void Refresh()
 	{
 		if (SubPackageDownLoadModel.Instance.DownLoadingSubPackageId == 0 && SubPackageDownLoadModel.Instance.PauseSubPackageId == 0)
@@ -141,7 +125,7 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		base.GetText(2).SetText(Math.Floor((double)valueTuple.Item1 * 100.0).ToString() + "%", true);
 	}
 
-	// Token: 0x06014ACF RID: 84687 RVA: 0x0053AF98 File Offset: 0x00539198
+	// Token: 0x06011FB2 RID: 73650 RVA: 0x00549DA8 File Offset: 0x00547FA8
 	public void StartShow()
 	{
 		this.Update();
@@ -157,7 +141,7 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		}, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 	}
 
-	// Token: 0x06014AD0 RID: 84688 RVA: 0x0053B002 File Offset: 0x00539202
+	// Token: 0x06011FB3 RID: 73651 RVA: 0x00549E12 File Offset: 0x00548012
 	public void EndShow()
 	{
 		base.SetVisible(1, false);
@@ -168,13 +152,13 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		}
 	}
 
-	// Token: 0x06014AD1 RID: 84689 RVA: 0x0053B02C File Offset: 0x0053922C
+	// Token: 0x06011FB4 RID: 73652 RVA: 0x00549E3C File Offset: 0x0054803C
 	public void SetOtherHide(bool isHide)
 	{
 		base.SetVisible(2, !isHide);
 	}
 
-	// Token: 0x06014AD2 RID: 84690 RVA: 0x0053B039 File Offset: 0x00539239
+	// Token: 0x06011FB5 RID: 73653 RVA: 0x00549E49 File Offset: 0x00548049
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TimerHandle != null)
@@ -184,42 +168,39 @@ public class ResDownLoadTopPanel : BattleVisibleChildView
 		}
 	}
 
-	// Token: 0x06014AD3 RID: 84691 RVA: 0x0053B05B File Offset: 0x0053925B
+	// Token: 0x06011FB6 RID: 73654 RVA: 0x00549E6B File Offset: 0x0054806B
 	protected override void OnBeforeShow()
 	{
 		this.AddEventListeners();
 	}
 
-	// Token: 0x06014AD4 RID: 84692 RVA: 0x0053B063 File Offset: 0x00539263
+	// Token: 0x06011FB7 RID: 73655 RVA: 0x00549E73 File Offset: 0x00548073
 	protected override void OnBeforeHide()
 	{
 		this.RemoveEventListeners();
 	}
 
-	// Token: 0x04009B5C RID: 39772
-	private const long GB_BYTES = 1073741824L;
-
-	// Token: 0x04009B5D RID: 39773
+	// Token: 0x04009CB5 RID: 40117
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x02008DC4 RID: 36292
+	// Token: 0x02007F4D RID: 32589
 	private enum EVisibleReason
 	{
-		// Token: 0x0402E027 RID: 188455
+		// Token: 0x0402933E RID: 168766
 		Default = 1,
-		// Token: 0x0402E028 RID: 188456
+		// Token: 0x0402933F RID: 168767
 		Other
 	}
 
-	// Token: 0x02008DC5 RID: 36293
+	// Token: 0x02007F4E RID: 32590
 	private enum EComponentDefine
 	{
-		// Token: 0x0402E02A RID: 188458
+		// Token: 0x04029341 RID: 168769
 		DownLoadBarTexture,
-		// Token: 0x0402E02B RID: 188459
+		// Token: 0x04029342 RID: 168770
 		DownLoadBtn,
-		// Token: 0x0402E02C RID: 188460
+		// Token: 0x04029343 RID: 168771
 		Text
 	}
 }

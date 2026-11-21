@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FEB RID: 4075
+// Token: 0x020004A0 RID: 1184
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureShopView : UiViewBase
 {
-	// Token: 0x06006897 RID: 26775 RVA: 0x0014C983 File Offset: 0x0014AB83
+	// Token: 0x06003C2F RID: 15407 RVA: 0x00155247 File Offset: 0x00153447
 	public FurnitureShopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006898 RID: 26776 RVA: 0x0014C998 File Offset: 0x0014AB98
+	// Token: 0x06003C30 RID: 15408 RVA: 0x0015525C File Offset: 0x0015345C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class FurnitureShopView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006899 RID: 26777 RVA: 0x0014CA34 File Offset: 0x0014AC34
+	// Token: 0x06003C31 RID: 15409 RVA: 0x001552F8 File Offset: 0x001534F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurnitureShopView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class FurnitureShopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600689A RID: 26778 RVA: 0x0014CA77 File Offset: 0x0014AC77
+	// Token: 0x06003C32 RID: 15410 RVA: 0x0015533B File Offset: 0x0015353B
 	protected override void OnBeforeShow()
 	{
 		this.PauseTimeDilation();
@@ -54,7 +54,7 @@ public class FurnitureShopView : UiViewBase
 		this.EnableSpareShopNpcEntity();
 	}
 
-	// Token: 0x0600689B RID: 26779 RVA: 0x0014CA94 File Offset: 0x0014AC94
+	// Token: 0x06003C33 RID: 15411 RVA: 0x00155358 File Offset: 0x00153558
 	protected override void OnAfterShow()
 	{
 		IFurnitureShopViewOpenData furnitureShopViewOpenData = this.OpenParam as IFurnitureShopViewOpenData;
@@ -70,7 +70,7 @@ public class FurnitureShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600689C RID: 26780 RVA: 0x0014CAE8 File Offset: 0x0014ACE8
+	// Token: 0x06003C34 RID: 15412 RVA: 0x001553AC File Offset: 0x001535AC
 	protected override void OnBeforeHide()
 	{
 		this.ResumeTimeDilation();
@@ -78,31 +78,31 @@ public class FurnitureShopView : UiViewBase
 		this.DisableSpareShopNpcEntity();
 	}
 
-	// Token: 0x0600689D RID: 26781 RVA: 0x0014CAFC File Offset: 0x0014ACFC
+	// Token: 0x06003C35 RID: 15413 RVA: 0x001553C0 File Offset: 0x001535C0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ActivityPayShopGoodsBuy, new Action<int, IReadOnlyList<ActivityBuyItem>, string>(this.OnRefreshShop));
 	}
 
-	// Token: 0x0600689E RID: 26782 RVA: 0x0014CB1A File Offset: 0x0014AD1A
+	// Token: 0x06003C36 RID: 15414 RVA: 0x001553DE File Offset: 0x001535DE
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ActivityPayShopGoodsBuy, new Action<int, IReadOnlyList<ActivityBuyItem>, string>(this.OnRefreshShop));
 	}
 
-	// Token: 0x0600689F RID: 26783 RVA: 0x0014CB38 File Offset: 0x0014AD38
+	// Token: 0x06003C37 RID: 15415 RVA: 0x001553FC File Offset: 0x001535FC
 	protected virtual void PauseTimeDilation()
 	{
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag("FurnitureShopView");
 	}
 
-	// Token: 0x060068A0 RID: 26784 RVA: 0x0014CB49 File Offset: 0x0014AD49
+	// Token: 0x06003C38 RID: 15416 RVA: 0x0015540D File Offset: 0x0015360D
 	protected virtual void ResumeTimeDilation()
 	{
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("FurnitureShopView");
 	}
 
-	// Token: 0x060068A1 RID: 26785 RVA: 0x0014CB5C File Offset: 0x0014AD5C
+	// Token: 0x06003C39 RID: 15417 RVA: 0x00155420 File Offset: 0x00153620
 	private void HideCharacter()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -112,7 +112,7 @@ public class FurnitureShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060068A2 RID: 26786 RVA: 0x0014CB90 File Offset: 0x0014AD90
+	// Token: 0x06003C3A RID: 15418 RVA: 0x00155454 File Offset: 0x00153654
 	private void ShowCharacter()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -122,7 +122,7 @@ public class FurnitureShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060068A3 RID: 26787 RVA: 0x0014CBC4 File Offset: 0x0014ADC4
+	// Token: 0x06003C3B RID: 15419 RVA: 0x00155488 File Offset: 0x00153688
 	private void EnableSpareShopNpcEntity()
 	{
 		IFurnitureShopViewOpenData furnitureShopViewOpenData = this.OpenParam as IFurnitureShopViewOpenData;
@@ -133,7 +133,7 @@ public class FurnitureShopView : UiViewBase
 		FurnitureModel.Instance.FurnitureEntityVisibleManager.EnableSpareShopNpcEntity();
 	}
 
-	// Token: 0x060068A4 RID: 26788 RVA: 0x0014CBF8 File Offset: 0x0014ADF8
+	// Token: 0x06003C3C RID: 15420 RVA: 0x001554BC File Offset: 0x001536BC
 	private void DisableSpareShopNpcEntity()
 	{
 		IFurnitureShopViewOpenData furnitureShopViewOpenData = this.OpenParam as IFurnitureShopViewOpenData;
@@ -144,7 +144,7 @@ public class FurnitureShopView : UiViewBase
 		FurnitureModel.Instance.FurnitureEntityVisibleManager.DisableSpareShopNpcEntity();
 	}
 
-	// Token: 0x060068A5 RID: 26789 RVA: 0x0014CC2C File Offset: 0x0014AE2C
+	// Token: 0x06003C3D RID: 15421 RVA: 0x001554F0 File Offset: 0x001536F0
 	private void PlayNpcPerformance()
 	{
 		IFurnitureShopViewOpenData furnitureShopViewOpenData = this.OpenParam as IFurnitureShopViewOpenData;
@@ -170,20 +170,20 @@ public class FurnitureShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x060068A6 RID: 26790 RVA: 0x0014CCE1 File Offset: 0x0014AEE1
+	// Token: 0x06003C3E RID: 15422 RVA: 0x001555A5 File Offset: 0x001537A5
 	private void OnRefreshShop(int payShopId, IReadOnlyList<ActivityBuyItem> buyItems, string version)
 	{
 		this.RefreshShop();
 	}
 
-	// Token: 0x060068A7 RID: 26791 RVA: 0x0014CCEC File Offset: 0x0014AEEC
+	// Token: 0x06003C3F RID: 15423 RVA: 0x001555B0 File Offset: 0x001537B0
 	private void RefreshShop()
 	{
 		UiAsyncTask task = new UiAsyncTask("RefreshShop", new Func<UniTask>(this.RefreshShopAsync), null);
 		base.RunAsyncTask(task).Forget();
 	}
 
-	// Token: 0x060068A8 RID: 26792 RVA: 0x0014CD20 File Offset: 0x0014AF20
+	// Token: 0x06003C40 RID: 15424 RVA: 0x001555E4 File Offset: 0x001537E4
 	private UniTask RefreshShopAsync()
 	{
 		FurnitureShopView.<RefreshShopAsync>d__23 <RefreshShopAsync>d__;
@@ -194,37 +194,37 @@ public class FurnitureShopView : UiViewBase
 		return <RefreshShopAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060068A9 RID: 26793 RVA: 0x0014CD63 File Offset: 0x0014AF63
+	// Token: 0x06003C41 RID: 15425 RVA: 0x00155627 File Offset: 0x00153827
 	private void OnDropDownSelect(int index, FurnitureFilterConfig data)
 	{
 		this.CurrentFilterConfig = new FurnitureFilterConfig?(this.FilterConfigList[index]);
 		this.RefreshShop();
 	}
 
-	// Token: 0x060068AA RID: 26794 RVA: 0x0014CD82 File Offset: 0x0014AF82
+	// Token: 0x06003C42 RID: 15426 RVA: 0x00155646 File Offset: 0x00153846
 	private void OnClickBack()
 	{
 		FurnitureController.Instance.SetAllFurnitureShopItemRedDotAsRead();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04002FE7 RID: 12263
+	// Token: 0x04003080 RID: 12416
 	private int ShopId;
 
-	// Token: 0x04002FE8 RID: 12264
+	// Token: 0x04003081 RID: 12417
 	private FurnitureFilterConfig? CurrentFilterConfig;
 
-	// Token: 0x04002FE9 RID: 12265
+	// Token: 0x04003082 RID: 12418
 	private IReadOnlyList<FurnitureFilterConfig> FilterConfigList = new List<FurnitureFilterConfig>();
 
-	// Token: 0x04002FEA RID: 12266
+	// Token: 0x04003083 RID: 12419
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x04002FEB RID: 12267
+	// Token: 0x04003084 RID: 12420
 	[Nullable(2)]
 	private FurnitureShopScrollItem ShopScrollItem;
 
-	// Token: 0x04002FEC RID: 12268
+	// Token: 0x04003085 RID: 12421
 	[Nullable(new byte[]
 	{
 		2,

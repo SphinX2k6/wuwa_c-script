@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x0200671E RID: 26398
+	// Token: 0x0200566E RID: 22126
 	public class AddTimeCommand : IDropCatchCommand
 	{
-		// Token: 0x06041E9A RID: 269978 RVA: 0x00FFCB0C File Offset: 0x00FFAD0C
+		// Token: 0x060369E6 RID: 223718 RVA: 0x00F3DED8 File Offset: 0x00F3C0D8
 		[NullableContext(1)]
 		public void Execute(ICommandContext context, [Nullable(2)] object @params)
 		{

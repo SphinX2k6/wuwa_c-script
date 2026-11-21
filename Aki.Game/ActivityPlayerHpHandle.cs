@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000EBE RID: 3774
+// Token: 0x02000373 RID: 883
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityPlayerHpHandle
 {
-	// Token: 0x06005D90 RID: 23952 RVA: 0x001146A8 File Offset: 0x001128A8
+	// Token: 0x06003127 RID: 12583 RVA: 0x0011C388 File Offset: 0x0011A588
 	public void Init(long? lowHpCueId = null, float? lowHpPercent = null, long? hurtCueId = null, int? duration = null)
 	{
 		this.IsInit = true;
@@ -35,7 +35,7 @@ public class ActivityPlayerHpHandle
 		this.CueComp = entityHandle.Entity.GetComponent<CharacterGameplayCueComponent>();
 	}
 
-	// Token: 0x06005D91 RID: 23953 RVA: 0x0011474C File Offset: 0x0011294C
+	// Token: 0x06003128 RID: 12584 RVA: 0x0011C42C File Offset: 0x0011A62C
 	[NullableContext(1)]
 	public void OnPlayerHpChange(KscHeadStateData kscPlayerHeadStateData)
 	{
@@ -60,7 +60,7 @@ public class ActivityPlayerHpHandle
 		this.RemoveLowHpGameplayCue();
 	}
 
-	// Token: 0x06005D92 RID: 23954 RVA: 0x001147C0 File Offset: 0x001129C0
+	// Token: 0x06003129 RID: 12585 RVA: 0x0011C4A0 File Offset: 0x0011A6A0
 	private void AddLowHpGameplayCue()
 	{
 		if (this.LowHpCueHandleId > 0)
@@ -73,7 +73,7 @@ public class ActivityPlayerHpHandle
 		}
 	}
 
-	// Token: 0x06005D93 RID: 23955 RVA: 0x00114809 File Offset: 0x00112A09
+	// Token: 0x0600312A RID: 12586 RVA: 0x0011C4E9 File Offset: 0x0011A6E9
 	private void RemoveLowHpGameplayCue()
 	{
 		if (this.LowHpCueHandleId <= 0)
@@ -88,7 +88,7 @@ public class ActivityPlayerHpHandle
 		this.LowHpCueHandleId = 0;
 	}
 
-	// Token: 0x06005D94 RID: 23956 RVA: 0x00114834 File Offset: 0x00112A34
+	// Token: 0x0600312B RID: 12587 RVA: 0x0011C514 File Offset: 0x0011A714
 	private void AddHurtGameplayCue()
 	{
 		if (this.HurtCueHandleId > 0)
@@ -102,7 +102,7 @@ public class ActivityPlayerHpHandle
 		}
 	}
 
-	// Token: 0x06005D95 RID: 23957 RVA: 0x00114883 File Offset: 0x00112A83
+	// Token: 0x0600312C RID: 12588 RVA: 0x0011C563 File Offset: 0x0011A763
 	private void RemoveHurtGameplayCue()
 	{
 		if (this.HurtCueHandleId <= 0)
@@ -117,13 +117,13 @@ public class ActivityPlayerHpHandle
 		this.HurtCueHandleId = 0;
 	}
 
-	// Token: 0x06005D96 RID: 23958 RVA: 0x001148AE File Offset: 0x00112AAE
+	// Token: 0x0600312D RID: 12589 RVA: 0x0011C58E File Offset: 0x0011A78E
 	private void AddTimer()
 	{
 		this.TimerId = TimerSystem.Instance.Delay(new TTimerAction(this.OnTimer), (float)this.Duration, null, null, true, 1f);
 	}
 
-	// Token: 0x06005D97 RID: 23959 RVA: 0x001148DB File Offset: 0x00112ADB
+	// Token: 0x0600312E RID: 12590 RVA: 0x0011C5BB File Offset: 0x0011A7BB
 	private void RemoveTimer()
 	{
 		if (this.TimerId != null)
@@ -133,14 +133,14 @@ public class ActivityPlayerHpHandle
 		}
 	}
 
-	// Token: 0x06005D98 RID: 23960 RVA: 0x001148FD File Offset: 0x00112AFD
+	// Token: 0x0600312F RID: 12591 RVA: 0x0011C5DD File Offset: 0x0011A7DD
 	private void OnTimer(float time)
 	{
 		this.TimerId = null;
 		this.RemoveHurtGameplayCue();
 	}
 
-	// Token: 0x06005D99 RID: 23961 RVA: 0x0011490C File Offset: 0x00112B0C
+	// Token: 0x06003130 RID: 12592 RVA: 0x0011C5EC File Offset: 0x0011A7EC
 	public void Clear()
 	{
 		this.RemoveLowHpGameplayCue();
@@ -149,33 +149,33 @@ public class ActivityPlayerHpHandle
 		this.IsInit = false;
 	}
 
-	// Token: 0x04002A9E RID: 10910
+	// Token: 0x04002B39 RID: 11065
 	private bool IsInit;
 
-	// Token: 0x04002A9F RID: 10911
+	// Token: 0x04002B3A RID: 11066
 	private float LastHp;
 
-	// Token: 0x04002AA0 RID: 10912
+	// Token: 0x04002B3B RID: 11067
 	private CharacterGameplayCueComponent CueComp;
 
-	// Token: 0x04002AA1 RID: 10913
+	// Token: 0x04002B3C RID: 11068
 	private int LowHpCueHandleId;
 
-	// Token: 0x04002AA2 RID: 10914
+	// Token: 0x04002B3D RID: 11069
 	private int HurtCueHandleId;
 
-	// Token: 0x04002AA3 RID: 10915
+	// Token: 0x04002B3E RID: 11070
 	private TimerHandle TimerId;
 
-	// Token: 0x04002AA4 RID: 10916
+	// Token: 0x04002B3F RID: 11071
 	private int Duration = 500;
 
-	// Token: 0x04002AA5 RID: 10917
+	// Token: 0x04002B40 RID: 11072
 	public long LowHpCueId = (long)((ulong)-1584967294);
 
-	// Token: 0x04002AA6 RID: 10918
+	// Token: 0x04002B41 RID: 11073
 	public long HurtCueId = (long)((ulong)-1584967295);
 
-	// Token: 0x04002AA7 RID: 10919
+	// Token: 0x04002B42 RID: 11074
 	public float LowHpPercent = 0.3f;
 }

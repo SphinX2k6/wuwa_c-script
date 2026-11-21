@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 
-// Token: 0x02002DB0 RID: 11696
+// Token: 0x0200230A RID: 8970
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataObstacle
 {
-	// Token: 0x17002197 RID: 8599
-	// (get) Token: 0x06018983 RID: 100739 RVA: 0x006490CE File Offset: 0x006472CE
+	// Token: 0x170021F3 RID: 8691
+	// (get) Token: 0x0601622B RID: 90667 RVA: 0x0066EEBE File Offset: 0x0066D0BE
 	public Vector Center
 	{
 		get
@@ -21,8 +21,8 @@ public class BulletDataObstacle
 		}
 	}
 
-	// Token: 0x17002198 RID: 8600
-	// (get) Token: 0x06018984 RID: 100740 RVA: 0x006490F9 File Offset: 0x006472F9
+	// Token: 0x170021F4 RID: 8692
+	// (get) Token: 0x0601622C RID: 90668 RVA: 0x0066EEE9 File Offset: 0x0066D0E9
 	public float Radius
 	{
 		get
@@ -35,13 +35,13 @@ public class BulletDataObstacle
 		}
 	}
 
-	// Token: 0x06018985 RID: 100741 RVA: 0x00649129 File Offset: 0x00647329
+	// Token: 0x0601622D RID: 90669 RVA: 0x0066EF19 File Offset: 0x0066D119
 	public BulletDataObstacle(SReBulletDataObstacles data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018986 RID: 100742 RVA: 0x00649138 File Offset: 0x00647338
+	// Token: 0x0601622E RID: 90670 RVA: 0x0066EF28 File Offset: 0x0066D128
 	public bool Preload()
 	{
 		Vector center = this.Center;
@@ -49,13 +49,13 @@ public class BulletDataObstacle
 		return true;
 	}
 
-	// Token: 0x0400B6B0 RID: 46768
+	// Token: 0x0400BA2A RID: 47658
 	private readonly SReBulletDataObstacles Data;
 
-	// Token: 0x0400B6B1 RID: 46769
+	// Token: 0x0400BA2B RID: 47659
 	[Nullable(2)]
 	private Vector CenterInternal;
 
-	// Token: 0x0400B6B2 RID: 46770
+	// Token: 0x0400BA2C RID: 47660
 	private float? RadiusInternal;
 }

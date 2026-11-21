@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200779C RID: 30620
+	// Token: 0x02007FD4 RID: 32724
 	public class TSplineMoveModelUnion
 	{
-		// Token: 0x1700E6AB RID: 59051
-		// (get) Token: 0x06037936 RID: 227638 RVA: 0x00784D5E File Offset: 0x00782F5E
-		// (set) Token: 0x06037937 RID: 227639 RVA: 0x00784D66 File Offset: 0x00782F66
+		// Token: 0x1700F305 RID: 62213
+		// (get) Token: 0x0603AEB1 RID: 241329 RVA: 0x007EA25E File Offset: 0x007E845E
+		// (set) Token: 0x0603AEB2 RID: 241330 RVA: 0x007EA266 File Offset: 0x007E8466
 		public TSplineMoveModel Type { get; set; }
 
-		// Token: 0x1700E6AC RID: 59052
-		// (get) Token: 0x06037938 RID: 227640 RVA: 0x00784D6F File Offset: 0x00782F6F
-		// (set) Token: 0x06037939 RID: 227641 RVA: 0x00784D77 File Offset: 0x00782F77
+		// Token: 0x1700F306 RID: 62214
+		// (get) Token: 0x0603AEB3 RID: 241331 RVA: 0x007EA26F File Offset: 0x007E846F
+		// (set) Token: 0x0603AEB4 RID: 241332 RVA: 0x007EA277 File Offset: 0x007E8477
 		public object Value { get; set; }
 
-		// Token: 0x0603793A RID: 227642 RVA: 0x00784D80 File Offset: 0x00782F80
+		// Token: 0x0603AEB5 RID: 241333 RVA: 0x007EA280 File Offset: 0x007E8480
 		public TSplineMoveModelUnion()
 		{
 			this.Type = TSplineMoveModel.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603793B RID: 227643 RVA: 0x00784D96 File Offset: 0x00782F96
+		// Token: 0x0603AEB6 RID: 241334 RVA: 0x007EA296 File Offset: 0x007E8496
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603793C RID: 227644 RVA: 0x00784DA8 File Offset: 0x00782FA8
+		// Token: 0x0603AEB7 RID: 241335 RVA: 0x007EA2A8 File Offset: 0x007E84A8
 		public ICloseSplineMoveT AsICloseSplineMove()
 		{
 			return this.As<ICloseSplineMoveT>();
 		}
 
-		// Token: 0x0603793D RID: 227645 RVA: 0x00784DB0 File Offset: 0x00782FB0
+		// Token: 0x0603AEB8 RID: 241336 RVA: 0x007EA2B0 File Offset: 0x007E84B0
 		public static TSplineMoveModelUnion FromICloseSplineMove(ICloseSplineMoveT _iclosesplinemove)
 		{
 			return new TSplineMoveModelUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603793E RID: 227646 RVA: 0x00784DC5 File Offset: 0x00782FC5
+		// Token: 0x0603AEB9 RID: 241337 RVA: 0x007EA2C5 File Offset: 0x007E84C5
 		public IOpenSplineMoveT AsIOpenSplineMove()
 		{
 			return this.As<IOpenSplineMoveT>();
 		}
 
-		// Token: 0x0603793F RID: 227647 RVA: 0x00784DCD File Offset: 0x00782FCD
+		// Token: 0x0603AEBA RID: 241338 RVA: 0x007EA2CD File Offset: 0x007E84CD
 		public static TSplineMoveModelUnion FromIOpenSplineMove(IOpenSplineMoveT _iopensplinemove)
 		{
 			return new TSplineMoveModelUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037940 RID: 227648 RVA: 0x00784DE4 File Offset: 0x00782FE4
+		// Token: 0x0603AEBB RID: 241339 RVA: 0x007EA2E4 File Offset: 0x007E84E4
 		public static int Pack(FlatBufferBuilder builder, TSplineMoveModelUnion _o)
 		{
 			TSplineMoveModel type = _o.Type;

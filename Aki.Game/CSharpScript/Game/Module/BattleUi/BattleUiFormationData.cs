@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C8D RID: 23693
+	// Token: 0x02004C6E RID: 19566
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiFormationData
 	{
-		// Token: 0x0603BD7D RID: 245117 RVA: 0x00E4AEB8 File Offset: 0x00E490B8
+		// Token: 0x06030CCB RID: 199883 RVA: 0x00D9B434 File Offset: 0x00D99634
 		public void Init()
 		{
 			this.IsInit = true;
@@ -46,12 +46,12 @@ namespace CSharpScript.Game.Module.BattleUi
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0603BD7E RID: 245118 RVA: 0x00E4AEF6 File Offset: 0x00E490F6
+		// Token: 0x06030CCC RID: 199884 RVA: 0x00D9B472 File Offset: 0x00D99672
 		public void OnLeaveLevel()
 		{
 		}
 
-		// Token: 0x0603BD7F RID: 245119 RVA: 0x00E4AEF8 File Offset: 0x00E490F8
+		// Token: 0x06030CCD RID: 199885 RVA: 0x00D9B474 File Offset: 0x00D99674
 		public void Clear()
 		{
 			this.IsInit = false;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.AutoMovingSettingEnable = false;
 		}
 
-		// Token: 0x0603BD80 RID: 245120 RVA: 0x00E4AF2B File Offset: 0x00E4912B
+		// Token: 0x06030CCE RID: 199886 RVA: 0x00D9B4A7 File Offset: 0x00D996A7
 		[NullableContext(2)]
 		public SUiEnvironmentProperty GetUiEnvironmentProperty(int formationPropertyId)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.UiEnvironmentPropertyMap.GetValueOrDefault(formationPropertyId);
 		}
 
-		// Token: 0x0603BD81 RID: 245121 RVA: 0x00E4AF60 File Offset: 0x00E49160
+		// Token: 0x06030CCF RID: 199887 RVA: 0x00D9B4DC File Offset: 0x00D996DC
 		public void AddFollower(EntityHandle handle)
 		{
 			if (handle == this.FollowerEntityHandle)
@@ -125,20 +125,20 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.SetFollowerEnable(component != null && component.GetEnable());
 		}
 
-		// Token: 0x0603BD82 RID: 245122 RVA: 0x00E4B062 File Offset: 0x00E49262
+		// Token: 0x06030CD0 RID: 199888 RVA: 0x00D9B5DE File Offset: 0x00D997DE
 		public void RefreshFollowerConfig(EntityHandle entityHandle)
 		{
 			this.ClearFollowerEntity();
 			this.AddFollower(entityHandle);
 		}
 
-		// Token: 0x0603BD83 RID: 245123 RVA: 0x00E4B071 File Offset: 0x00E49271
+		// Token: 0x06030CD1 RID: 199889 RVA: 0x00D9B5ED File Offset: 0x00D997ED
 		public void RemoveFollower()
 		{
 			this.ClearFollowerEntity();
 		}
 
-		// Token: 0x0603BD84 RID: 245124 RVA: 0x00E4B079 File Offset: 0x00E49279
+		// Token: 0x06030CD2 RID: 199890 RVA: 0x00D9B5F5 File Offset: 0x00D997F5
 		public void ChangePlayerFollowerEnable(bool isEnable)
 		{
 			if (this.FollowerEntityHandle == null)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.SetFollowerEnable(isEnable);
 		}
 
-		// Token: 0x0603BD85 RID: 245125 RVA: 0x00E4B08C File Offset: 0x00E4928C
+		// Token: 0x06030CD3 RID: 199891 RVA: 0x00D9B608 File Offset: 0x00D99808
 		private void SetFollowerEnable(bool value)
 		{
 			if (this.FollowerEnable == value)
@@ -168,38 +168,38 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD86 RID: 245126 RVA: 0x00E4B102 File Offset: 0x00E49302
+		// Token: 0x06030CD4 RID: 199892 RVA: 0x00D9B67E File Offset: 0x00D9987E
 		public EFollowType GetFollowType()
 		{
 			return this.FollowType;
 		}
 
-		// Token: 0x0603BD87 RID: 245127 RVA: 0x00E4B10A File Offset: 0x00E4930A
+		// Token: 0x06030CD5 RID: 199893 RVA: 0x00D9B686 File Offset: 0x00D99886
 		public string GetSightResId()
 		{
 			return this.SightResId;
 		}
 
-		// Token: 0x0603BD88 RID: 245128 RVA: 0x00E4B112 File Offset: 0x00E49312
+		// Token: 0x06030CD6 RID: 199894 RVA: 0x00D9B68E File Offset: 0x00D9988E
 		public bool GetFollowerAiming()
 		{
 			return this.FollowerEnable && this.FollowType != EFollowType.FollowNoAim;
 		}
 
-		// Token: 0x0603BD89 RID: 245129 RVA: 0x00E4B12A File Offset: 0x00E4932A
+		// Token: 0x06030CD7 RID: 199895 RVA: 0x00D9B6A6 File Offset: 0x00D998A6
 		public bool GetFollowerEnable()
 		{
 			return this.FollowerEnable;
 		}
 
-		// Token: 0x0603BD8A RID: 245130 RVA: 0x00E4B132 File Offset: 0x00E49332
+		// Token: 0x06030CD8 RID: 199896 RVA: 0x00D9B6AE File Offset: 0x00D998AE
 		[NullableContext(2)]
 		public EntityHandle GetFollowerEntityHandle()
 		{
 			return this.FollowerEntityHandle;
 		}
 
-		// Token: 0x0603BD8B RID: 245131 RVA: 0x00E4B13C File Offset: 0x00E4933C
+		// Token: 0x06030CD9 RID: 199897 RVA: 0x00D9B6B8 File Offset: 0x00D998B8
 		private void ClearFollowerEntity()
 		{
 			if (this.FollowerEnable)
@@ -215,9 +215,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.FollowType = EFollowType.Default;
 		}
 
-		// Token: 0x17008DE3 RID: 36323
-		// (get) Token: 0x0603BD8C RID: 245132 RVA: 0x00E4B18A File Offset: 0x00E4938A
-		// (set) Token: 0x0603BD8D RID: 245133 RVA: 0x00E4B192 File Offset: 0x00E49392
+		// Token: 0x170061B5 RID: 25013
+		// (get) Token: 0x06030CDA RID: 199898 RVA: 0x00D9B706 File Offset: 0x00D99906
+		// (set) Token: 0x06030CDB RID: 199899 RVA: 0x00D9B70E File Offset: 0x00D9990E
 		public bool AutoMovingSettingEnable
 		{
 			get
@@ -235,9 +235,9 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x17008DE4 RID: 36324
-		// (get) Token: 0x0603BD8E RID: 245134 RVA: 0x00E4B1B6 File Offset: 0x00E493B6
-		// (set) Token: 0x0603BD8F RID: 245135 RVA: 0x00E4B1BE File Offset: 0x00E493BE
+		// Token: 0x170061B6 RID: 25014
+		// (get) Token: 0x06030CDC RID: 199900 RVA: 0x00D9B732 File Offset: 0x00D99932
+		// (set) Token: 0x06030CDD RID: 199901 RVA: 0x00D9B73A File Offset: 0x00D9993A
 		public bool AutoSprintSettingEnable
 		{
 			get
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD91 RID: 245137 RVA: 0x00E4B20C File Offset: 0x00E4940C
+		// Token: 0x06030CDF RID: 199903 RVA: 0x00D9B788 File Offset: 0x00D99988
 		// Note: this type is marked as 'beforefieldinit'.
 		static BattleUiFormationData()
 		{
@@ -274,44 +274,44 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiFormationData.FollowTypeToHudInfo = dictionary2;
 		}
 
-		// Token: 0x0401F332 RID: 127794
+		// Token: 0x04019DE8 RID: 105960
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, EFollowType> FollowerMap;
 
-		// Token: 0x0401F333 RID: 127795
+		// Token: 0x04019DE9 RID: 105961
 		[StaticVariableRuleIgnore]
 		private static readonly IReadOnlyDictionary<EFollowType, FollowHudInfo> FollowTypeToHudInfo;
 
-		// Token: 0x0401F334 RID: 127796
+		// Token: 0x04019DEA RID: 105962
 		[Nullable(2)]
 		private UDataTable EnvironmentPropertyDataTable;
 
-		// Token: 0x0401F335 RID: 127797
+		// Token: 0x04019DEB RID: 105963
 		public List<int> EnvironmentPropertyList = new List<int>();
 
-		// Token: 0x0401F336 RID: 127798
+		// Token: 0x04019DEC RID: 105964
 		public Dictionary<int, SUiEnvironmentProperty> UiEnvironmentPropertyMap = new Dictionary<int, SUiEnvironmentProperty>();
 
-		// Token: 0x0401F337 RID: 127799
+		// Token: 0x04019DED RID: 105965
 		private bool IsInit;
 
-		// Token: 0x0401F338 RID: 127800
+		// Token: 0x04019DEE RID: 105966
 		[Nullable(2)]
 		private EntityHandle FollowerEntityHandle;
 
-		// Token: 0x0401F339 RID: 127801
+		// Token: 0x04019DEF RID: 105967
 		private EFollowType FollowType;
 
-		// Token: 0x0401F33A RID: 127802
+		// Token: 0x04019DF0 RID: 105968
 		private string SightResId = string.Empty;
 
-		// Token: 0x0401F33B RID: 127803
+		// Token: 0x04019DF1 RID: 105969
 		private bool FollowerEnable;
 
-		// Token: 0x0401F33C RID: 127804
+		// Token: 0x04019DF2 RID: 105970
 		private bool AutoMovingSettingInternal;
 
-		// Token: 0x0401F33D RID: 127805
+		// Token: 0x04019DF3 RID: 105971
 		private bool AutoSprintSettingInternal;
 	}
 }

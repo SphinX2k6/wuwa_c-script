@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E6E RID: 7790
+// Token: 0x02001330 RID: 4912
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 {
-	// Token: 0x0600ED37 RID: 60727 RVA: 0x00388450 File Offset: 0x00386650
+	// Token: 0x0600C156 RID: 49494 RVA: 0x0039405C File Offset: 0x0039225C
 	public virtual void Init(HonamiStoryItemInfo itemInfo)
 	{
 		this.IncId = itemInfo.IncrId;
@@ -19,13 +19,13 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		this.ItemType = (EHonamiStoryItemType)this.GetBaseConfig(this.ItemId).Value.ItemType;
 	}
 
-	// Token: 0x0600ED38 RID: 60728 RVA: 0x003884A3 File Offset: 0x003866A3
+	// Token: 0x0600C157 RID: 49495 RVA: 0x003940AF File Offset: 0x003922AF
 	public bool IsLock()
 	{
 		return (this.FuncValue & 1) > 0;
 	}
 
-	// Token: 0x0600ED39 RID: 60729 RVA: 0x003884B0 File Offset: 0x003866B0
+	// Token: 0x0600C158 RID: 49496 RVA: 0x003940BC File Offset: 0x003922BC
 	public void SetIsLock(bool value)
 	{
 		if (value)
@@ -36,13 +36,13 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		this.FuncValue &= -2;
 	}
 
-	// Token: 0x0600ED3A RID: 60730 RVA: 0x003884D3 File Offset: 0x003866D3
+	// Token: 0x0600C159 RID: 49497 RVA: 0x003940DF File Offset: 0x003922DF
 	public HonamiStoryItem? GetBaseConfig(int id)
 	{
 		return HonamiStoryConfig.Instance.GetHonamiStoryItem(this.ItemId);
 	}
 
-	// Token: 0x0600ED3B RID: 60731 RVA: 0x003884E8 File Offset: 0x003866E8
+	// Token: 0x0600C15A RID: 49498 RVA: 0x003940F4 File Offset: 0x003922F4
 	[NullableContext(2)]
 	public void UpdatePositionInfo(HonamiStoryPosInfo posInfo)
 	{
@@ -60,37 +60,37 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		this.FillPositionList.Clear();
 	}
 
-	// Token: 0x0600ED3C RID: 60732 RVA: 0x00388548 File Offset: 0x00386748
+	// Token: 0x0600C15B RID: 49499 RVA: 0x00394154 File Offset: 0x00392354
 	private void InitGridFillPositionList()
 	{
 		this.FillPositionList = this.GetGridFillPositionByPosition(this.Position, this.IsCross);
 	}
 
-	// Token: 0x0600ED3D RID: 60733 RVA: 0x00388562 File Offset: 0x00386762
+	// Token: 0x0600C15C RID: 49500 RVA: 0x0039416E File Offset: 0x0039236E
 	public void SetBackpackWidth(int width)
 	{
 		this.BackpackWidth = width;
 	}
 
-	// Token: 0x0600ED3E RID: 60734 RVA: 0x0038856B File Offset: 0x0038676B
+	// Token: 0x0600C15D RID: 49501 RVA: 0x00394177 File Offset: 0x00392377
 	public int GetItemId()
 	{
 		return this.ItemId;
 	}
 
-	// Token: 0x0600ED3F RID: 60735 RVA: 0x00388573 File Offset: 0x00386773
+	// Token: 0x0600C15E RID: 49502 RVA: 0x0039417F File Offset: 0x0039237F
 	public int GetIncId()
 	{
 		return this.IncId;
 	}
 
-	// Token: 0x0600ED40 RID: 60736 RVA: 0x0038857C File Offset: 0x0038677C
+	// Token: 0x0600C15F RID: 49503 RVA: 0x00394188 File Offset: 0x00392388
 	public string GetName()
 	{
 		return this.GetBaseConfig(this.ItemId).Value.Name;
 	}
 
-	// Token: 0x0600ED41 RID: 60737 RVA: 0x003885A8 File Offset: 0x003867A8
+	// Token: 0x0600C160 RID: 49504 RVA: 0x003941B4 File Offset: 0x003923B4
 	public int GetQuality()
 	{
 		if (this.QualityId == -1)
@@ -100,26 +100,26 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.QualityId;
 	}
 
-	// Token: 0x0600ED42 RID: 60738 RVA: 0x003885E8 File Offset: 0x003867E8
+	// Token: 0x0600C161 RID: 49505 RVA: 0x003941F4 File Offset: 0x003923F4
 	public HonamiStoryItemQuality? GetQualityConfig()
 	{
 		HonamiStoryItem? baseConfig = this.GetBaseConfig(this.ItemId);
 		return HonamiStoryConfig.Instance.GetHonamiStoryQuality(baseConfig.Value.QualityId);
 	}
 
-	// Token: 0x0600ED43 RID: 60739 RVA: 0x0038861C File Offset: 0x0038681C
+	// Token: 0x0600C162 RID: 49506 RVA: 0x00394228 File Offset: 0x00392428
 	public string GetDesc()
 	{
 		return this.GetBaseConfig(this.ItemId).Value.AttributesDescription;
 	}
 
-	// Token: 0x0600ED44 RID: 60740 RVA: 0x00388645 File Offset: 0x00386845
+	// Token: 0x0600C163 RID: 49507 RVA: 0x00394251 File Offset: 0x00392451
 	public EHonamiStoryItemType GetItemType()
 	{
 		return this.ItemType;
 	}
 
-	// Token: 0x0600ED45 RID: 60741 RVA: 0x00388650 File Offset: 0x00386850
+	// Token: 0x0600C164 RID: 49508 RVA: 0x0039425C File Offset: 0x0039245C
 	public int GetSellPrice()
 	{
 		if (this.SellPrice == -1)
@@ -129,7 +129,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.SellPrice;
 	}
 
-	// Token: 0x0600ED46 RID: 60742 RVA: 0x00388690 File Offset: 0x00386890
+	// Token: 0x0600C165 RID: 49509 RVA: 0x0039429C File Offset: 0x0039249C
 	public string GetItemTypeText()
 	{
 		string result;
@@ -140,7 +140,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return "";
 	}
 
-	// Token: 0x0600ED47 RID: 60743 RVA: 0x003886C0 File Offset: 0x003868C0
+	// Token: 0x0600C166 RID: 49510 RVA: 0x003942CC File Offset: 0x003924CC
 	public int GetSubType()
 	{
 		if (this.SubType == -1)
@@ -150,43 +150,43 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.SubType;
 	}
 
-	// Token: 0x0600ED48 RID: 60744 RVA: 0x003886FE File Offset: 0x003868FE
+	// Token: 0x0600C167 RID: 49511 RVA: 0x0039430A File Offset: 0x0039250A
 	public int GetPosition()
 	{
 		return this.Position;
 	}
 
-	// Token: 0x0600ED49 RID: 60745 RVA: 0x00388706 File Offset: 0x00386906
+	// Token: 0x0600C168 RID: 49512 RVA: 0x00394312 File Offset: 0x00392512
 	public bool GetIsCross()
 	{
 		return this.IsCross;
 	}
 
-	// Token: 0x0600ED4A RID: 60746 RVA: 0x0038870E File Offset: 0x0038690E
+	// Token: 0x0600C169 RID: 49513 RVA: 0x0039431A File Offset: 0x0039251A
 	public bool GetIsDragCross()
 	{
 		return this.IsDragCross;
 	}
 
-	// Token: 0x0600ED4B RID: 60747 RVA: 0x00388716 File Offset: 0x00386916
+	// Token: 0x0600C16A RID: 49514 RVA: 0x00394322 File Offset: 0x00392522
 	public void SetIsDragCross(bool value)
 	{
 		this.IsDragCross = value;
 	}
 
-	// Token: 0x0600ED4C RID: 60748 RVA: 0x0038871F File Offset: 0x0038691F
+	// Token: 0x0600C16B RID: 49515 RVA: 0x0039432B File Offset: 0x0039252B
 	public bool GetOldCross()
 	{
 		return this.OldCross;
 	}
 
-	// Token: 0x0600ED4D RID: 60749 RVA: 0x00388727 File Offset: 0x00386927
+	// Token: 0x0600C16C RID: 49516 RVA: 0x00394333 File Offset: 0x00392533
 	public void SetOldCross(bool value)
 	{
 		this.OldCross = value;
 	}
 
-	// Token: 0x0600ED4E RID: 60750 RVA: 0x00388730 File Offset: 0x00386930
+	// Token: 0x0600C16D RID: 49517 RVA: 0x0039433C File Offset: 0x0039253C
 	public int GetGridHeight()
 	{
 		if (this.BaseWidth == -1 || this.BaseHeight == -1)
@@ -202,7 +202,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.BaseWidth;
 	}
 
-	// Token: 0x0600ED4F RID: 60751 RVA: 0x003887A0 File Offset: 0x003869A0
+	// Token: 0x0600C16E RID: 49518 RVA: 0x003943AC File Offset: 0x003925AC
 	public int GetGridWidth()
 	{
 		if (this.BaseWidth == -1 || this.BaseHeight == -1)
@@ -218,7 +218,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.BaseHeight;
 	}
 
-	// Token: 0x0600ED50 RID: 60752 RVA: 0x00388810 File Offset: 0x00386A10
+	// Token: 0x0600C16F RID: 49519 RVA: 0x0039441C File Offset: 0x0039261C
 	public int GetBaseGridHeight(bool isCross)
 	{
 		if (this.BaseWidth == -1 || this.BaseHeight == -1)
@@ -234,7 +234,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.BaseWidth;
 	}
 
-	// Token: 0x0600ED51 RID: 60753 RVA: 0x00388878 File Offset: 0x00386A78
+	// Token: 0x0600C170 RID: 49520 RVA: 0x00394484 File Offset: 0x00392684
 	public int GetBaseGridWidth(bool isCross)
 	{
 		if (this.BaseWidth == -1 || this.BaseHeight == -1)
@@ -250,19 +250,19 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.BaseHeight;
 	}
 
-	// Token: 0x0600ED52 RID: 60754 RVA: 0x003888E0 File Offset: 0x00386AE0
+	// Token: 0x0600C171 RID: 49521 RVA: 0x003944EC File Offset: 0x003926EC
 	public int GetRow()
 	{
 		return (int)Math.Floor((double)this.GetPosition() / (double)this.BackpackWidth);
 	}
 
-	// Token: 0x0600ED53 RID: 60755 RVA: 0x003888F7 File Offset: 0x00386AF7
+	// Token: 0x0600C172 RID: 49522 RVA: 0x00394503 File Offset: 0x00392703
 	public int GetColumn()
 	{
 		return this.GetPosition() % this.BackpackWidth;
 	}
 
-	// Token: 0x0600ED54 RID: 60756 RVA: 0x00388906 File Offset: 0x00386B06
+	// Token: 0x0600C173 RID: 49523 RVA: 0x00394512 File Offset: 0x00392712
 	public List<int> GetGridFillPositionList()
 	{
 		if (this.FillPositionList.Count <= 0)
@@ -272,7 +272,7 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return this.FillPositionList;
 	}
 
-	// Token: 0x0600ED55 RID: 60757 RVA: 0x00388924 File Offset: 0x00386B24
+	// Token: 0x0600C174 RID: 49524 RVA: 0x00394530 File Offset: 0x00392730
 	public List<int> GetGridFillPositionByPosition(int position, bool isCross)
 	{
 		List<int> list = new List<int>();
@@ -286,43 +286,43 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return list;
 	}
 
-	// Token: 0x0600ED56 RID: 60758 RVA: 0x00388970 File Offset: 0x00386B70
+	// Token: 0x0600C175 RID: 49525 RVA: 0x0039457C File Offset: 0x0039277C
 	public string GetIconTexture()
 	{
 		return this.GetBaseConfig(this.ItemId).Value.Icon;
 	}
 
-	// Token: 0x0600ED57 RID: 60759 RVA: 0x0038899C File Offset: 0x00386B9C
+	// Token: 0x0600C176 RID: 49526 RVA: 0x003945A8 File Offset: 0x003927A8
 	public string GetIconBackpack()
 	{
 		return this.GetBaseConfig(this.ItemId).Value.IconBackpack;
 	}
 
-	// Token: 0x0600ED58 RID: 60760 RVA: 0x003889C5 File Offset: 0x00386BC5
+	// Token: 0x0600C177 RID: 49527 RVA: 0x003945D1 File Offset: 0x003927D1
 	public bool GetIsSelected()
 	{
 		return this.IsSelected;
 	}
 
-	// Token: 0x0600ED59 RID: 60761 RVA: 0x003889CD File Offset: 0x00386BCD
+	// Token: 0x0600C178 RID: 49528 RVA: 0x003945D9 File Offset: 0x003927D9
 	public void SetIsSelected(bool value)
 	{
 		this.IsSelected = value;
 	}
 
-	// Token: 0x0600ED5A RID: 60762 RVA: 0x003889D6 File Offset: 0x00386BD6
+	// Token: 0x0600C179 RID: 49529 RVA: 0x003945E2 File Offset: 0x003927E2
 	public bool GetNewInBackpack()
 	{
 		return this.IsNewInBackpack;
 	}
 
-	// Token: 0x0600ED5B RID: 60763 RVA: 0x003889DE File Offset: 0x00386BDE
+	// Token: 0x0600C17A RID: 49530 RVA: 0x003945EA File Offset: 0x003927EA
 	public void SetNewInBackpack(bool value)
 	{
 		this.IsNewInBackpack = value;
 	}
 
-	// Token: 0x0600ED5C RID: 60764 RVA: 0x003889E8 File Offset: 0x00386BE8
+	// Token: 0x0600C17B RID: 49531 RVA: 0x003945F4 File Offset: 0x003927F4
 	public int GetTransPosIndex(int oldIndex)
 	{
 		bool isDragCross = this.IsDragCross;
@@ -330,54 +330,54 @@ public class HonamiStoryItemDataBase : IHonamiStoryGridItemData
 		return oldIndex % this.GetBaseGridHeight(isDragCross) * this.GetBaseGridWidth(isDragCross) + num;
 	}
 
-	// Token: 0x04006E20 RID: 28192
+	// Token: 0x04006F01 RID: 28417
 	private int IncId;
 
-	// Token: 0x04006E21 RID: 28193
+	// Token: 0x04006F02 RID: 28418
 	private int ItemId;
 
-	// Token: 0x04006E22 RID: 28194
+	// Token: 0x04006F03 RID: 28419
 	private EHonamiStoryItemType ItemType = EHonamiStoryItemType.Normal;
 
-	// Token: 0x04006E23 RID: 28195
+	// Token: 0x04006F04 RID: 28420
 	protected int Position;
 
-	// Token: 0x04006E24 RID: 28196
+	// Token: 0x04006F05 RID: 28421
 	protected int QualityId = -1;
 
-	// Token: 0x04006E25 RID: 28197
+	// Token: 0x04006F06 RID: 28422
 	protected int SubType = -1;
 
-	// Token: 0x04006E26 RID: 28198
+	// Token: 0x04006F07 RID: 28423
 	protected int SellPrice = -1;
 
-	// Token: 0x04006E27 RID: 28199
+	// Token: 0x04006F08 RID: 28424
 	protected bool IsCross;
 
-	// Token: 0x04006E28 RID: 28200
+	// Token: 0x04006F09 RID: 28425
 	protected bool OldCross;
 
-	// Token: 0x04006E29 RID: 28201
+	// Token: 0x04006F0A RID: 28426
 	protected bool IsDragCross;
 
-	// Token: 0x04006E2A RID: 28202
+	// Token: 0x04006F0B RID: 28427
 	protected List<int> FillPositionList = new List<int>();
 
-	// Token: 0x04006E2B RID: 28203
+	// Token: 0x04006F0C RID: 28428
 	protected int BackpackWidth;
 
-	// Token: 0x04006E2C RID: 28204
+	// Token: 0x04006F0D RID: 28429
 	protected int FuncValue;
 
-	// Token: 0x04006E2D RID: 28205
+	// Token: 0x04006F0E RID: 28430
 	protected bool IsSelected;
 
-	// Token: 0x04006E2E RID: 28206
+	// Token: 0x04006F0F RID: 28431
 	protected int BaseWidth = -1;
 
-	// Token: 0x04006E2F RID: 28207
+	// Token: 0x04006F10 RID: 28432
 	protected int BaseHeight = -1;
 
-	// Token: 0x04006E30 RID: 28208
+	// Token: 0x04006F11 RID: 28433
 	protected bool IsNewInBackpack;
 }

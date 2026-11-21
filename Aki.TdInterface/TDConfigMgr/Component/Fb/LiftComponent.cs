@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD8 RID: 3032
+	// Token: 0x02000CA7 RID: 3239
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LiftComponent : IComponentBase
 	{
-		// Token: 0x060045B0 RID: 17840 RVA: 0x000B0606 File Offset: 0x000AE806
-		[NullableContext(1)]
+		// Token: 0x06004A0E RID: 18958 RVA: 0x000BA782 File Offset: 0x000B8982
+		[NullableContext(0)]
 		public static LiftComponent Create(ILiftComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013BD RID: 5053
-		// (get) Token: 0x060045B1 RID: 17841 RVA: 0x000B0628 File Offset: 0x000AE828
+		// Token: 0x170014BB RID: 5307
+		// (get) Token: 0x06004A0F RID: 18959 RVA: 0x000BA7A4 File Offset: 0x000B89A4
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013BE RID: 5054
-		// (get) Token: 0x060045B2 RID: 17842 RVA: 0x000B0660 File Offset: 0x000AE860
+		// Token: 0x170014BC RID: 5308
+		// (get) Token: 0x06004A10 RID: 18960 RVA: 0x000BA7DC File Offset: 0x000B89DC
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013BF RID: 5055
-		// (get) Token: 0x060045B3 RID: 17843 RVA: 0x000B0676 File Offset: 0x000AE876
+		// Token: 0x170014BD RID: 5309
+		// (get) Token: 0x06004A11 RID: 18961 RVA: 0x000BA7F2 File Offset: 0x000B89F2
 		public virtual int InitialFloor
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C0 RID: 5056
-		// (get) Token: 0x060045B4 RID: 17844 RVA: 0x000B0684 File Offset: 0x000AE884
+		// Token: 0x170014BE RID: 5310
+		// (get) Token: 0x06004A12 RID: 18962 RVA: 0x000BA800 File Offset: 0x000B8A00
 		public virtual bool? UseFloorSeqMarkMapping
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C1 RID: 5057
-		// (get) Token: 0x060045B5 RID: 17845 RVA: 0x000B06BC File Offset: 0x000AE8BC
+		// Token: 0x170014BF RID: 5311
+		// (get) Token: 0x06004A13 RID: 18963 RVA: 0x000BA838 File Offset: 0x000B8A38
 		public virtual ELiftBuffType? CustomLiftBuffType
 		{
 			get
@@ -87,12 +87,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C2 RID: 5058
-		// (get) Token: 0x060045B6 RID: 17846 RVA: 0x000B06F4 File Offset: 0x000AE8F4
-		[Nullable(1)]
+		// Token: 0x170014C0 RID: 5312
+		// (get) Token: 0x06004A14 RID: 18964 RVA: 0x000BA870 File Offset: 0x000B8A70
+		[Nullable(0)]
 		public virtual List<VectorInfo> StayPositions
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._StayPositionsInited)
@@ -110,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C3 RID: 5059
-		// (get) Token: 0x060045B7 RID: 17847 RVA: 0x000B075D File Offset: 0x000AE95D
+		// Token: 0x170014C1 RID: 5313
+		// (get) Token: 0x06004A15 RID: 18965 RVA: 0x000BA8D9 File Offset: 0x000B8AD9
 		public virtual IAutoConfig AutoConfig
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C4 RID: 5060
-		// (get) Token: 0x060045B8 RID: 17848 RVA: 0x000B0791 File Offset: 0x000AE991
+		// Token: 0x170014C2 RID: 5314
+		// (get) Token: 0x06004A16 RID: 18966 RVA: 0x000BA90D File Offset: 0x000B8B0D
 		public virtual int MaxSpeed
 		{
 			get
@@ -136,8 +136,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C5 RID: 5061
-		// (get) Token: 0x060045B9 RID: 17849 RVA: 0x000B079E File Offset: 0x000AE99E
+		// Token: 0x170014C3 RID: 5315
+		// (get) Token: 0x06004A17 RID: 18967 RVA: 0x000BA91A File Offset: 0x000B8B1A
 		public virtual bool UniformMovement
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C6 RID: 5062
-		// (get) Token: 0x060045BA RID: 17850 RVA: 0x000B07AB File Offset: 0x000AE9AB
+		// Token: 0x170014C4 RID: 5316
+		// (get) Token: 0x06004A18 RID: 18968 RVA: 0x000BA927 File Offset: 0x000B8B27
 		public virtual float TurnTime
 		{
 			get
@@ -156,8 +156,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C7 RID: 5063
-		// (get) Token: 0x060045BB RID: 17851 RVA: 0x000B07B8 File Offset: 0x000AE9B8
+		// Token: 0x170014C5 RID: 5317
+		// (get) Token: 0x06004A19 RID: 18969 RVA: 0x000BA934 File Offset: 0x000B8B34
 		public virtual VectorInfo SafePoint
 		{
 			get
@@ -172,8 +172,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C8 RID: 5064
-		// (get) Token: 0x060045BC RID: 17852 RVA: 0x000B07EC File Offset: 0x000AE9EC
+		// Token: 0x170014C6 RID: 5318
+		// (get) Token: 0x06004A1A RID: 18970 RVA: 0x000BA968 File Offset: 0x000B8B68
 		public virtual bool? IsAffectedByTimeDilation
 		{
 			get
@@ -186,8 +186,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013C9 RID: 5065
-		// (get) Token: 0x060045BD RID: 17853 RVA: 0x000B0824 File Offset: 0x000AEA24
+		// Token: 0x170014C7 RID: 5319
+		// (get) Token: 0x06004A1B RID: 18971 RVA: 0x000BA9A0 File Offset: 0x000B8BA0
 		public virtual bool? IsSendEventOnArrive
 		{
 			get
@@ -200,26 +200,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027B1 RID: 10161
+		// Token: 0x040029FC RID: 10748
 		private ILiftComponent Instance;
 
-		// Token: 0x040027B2 RID: 10162
-		[Nullable(1)]
+		// Token: 0x040029FD RID: 10749
+		[Nullable(0)]
 		private List<VectorInfo> _StayPositionsCache;
 
-		// Token: 0x040027B3 RID: 10163
+		// Token: 0x040029FE RID: 10750
 		private bool _StayPositionsInited;
 
-		// Token: 0x040027B4 RID: 10164
+		// Token: 0x040029FF RID: 10751
 		private IAutoConfig _AutoConfigCache;
 
-		// Token: 0x040027B5 RID: 10165
+		// Token: 0x04002A00 RID: 10752
 		private bool _AutoConfigInited;
 
-		// Token: 0x040027B6 RID: 10166
+		// Token: 0x04002A01 RID: 10753
 		private VectorInfo _SafePointCache;
 
-		// Token: 0x040027B7 RID: 10167
+		// Token: 0x04002A02 RID: 10754
 		private bool _SafePointInited;
 	}
 }

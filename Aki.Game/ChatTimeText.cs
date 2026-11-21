@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017A8 RID: 6056
+// Token: 0x02000C61 RID: 3169
 public class ChatTimeText : UiPanelBase
 {
-	// Token: 0x0600B07C RID: 45180 RVA: 0x0027E414 File Offset: 0x0027C614
+	// Token: 0x06008464 RID: 33892 RVA: 0x002889AC File Offset: 0x00286BAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ public class ChatTimeText : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B07D RID: 45181 RVA: 0x0027E45C File Offset: 0x0027C65C
+	// Token: 0x06008465 RID: 33893 RVA: 0x002889F4 File Offset: 0x00286BF4
 	public void Refresh(double timeStamp)
 	{
 		UUIText text = base.GetText(0);
@@ -27,10 +27,10 @@ public class ChatTimeText : UiPanelBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x02007DB9 RID: 32185
+	// Token: 0x02006F3F RID: 28479
 	private class EChildType
 	{
-		// Token: 0x04029288 RID: 168584
+		// Token: 0x040245B3 RID: 148915
 		public const int TimeText = 0;
 	}
 }

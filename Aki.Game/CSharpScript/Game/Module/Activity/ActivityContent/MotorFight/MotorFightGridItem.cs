@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200640F RID: 25615
+	// Token: 0x0200538D RID: 21389
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightGridItem : SyncGridProxyAbstract<MotorFightItemData>
 	{
-		// Token: 0x060406E2 RID: 263906 RVA: 0x00F96080 File Offset: 0x00F94280
+		// Token: 0x060353A3 RID: 218019 RVA: 0x00EDD020 File Offset: 0x00EDB220
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060406E3 RID: 263907 RVA: 0x00F960C8 File Offset: 0x00F942C8
+		// Token: 0x060353A4 RID: 218020 RVA: 0x00EDD068 File Offset: 0x00EDB268
 		protected override void OnStart()
 		{
 			this.GridItem = new MotorFightGridMediumItemGrid();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.GridItem.OnClickCallBack = this.OnClickCb;
 		}
 
-		// Token: 0x060406E4 RID: 263908 RVA: 0x00F96100 File Offset: 0x00F94300
+		// Token: 0x060353A5 RID: 218021 RVA: 0x00EDD0A0 File Offset: 0x00EDB2A0
 		public override void Refresh(MotorFightItemData data)
 		{
 			this.Data = data;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			gridItem2.SetToggleState(toggleState);
 		}
 
-		// Token: 0x060406E5 RID: 263909 RVA: 0x00F96149 File Offset: 0x00F94349
+		// Token: 0x060353A6 RID: 218022 RVA: 0x00EDD0E9 File Offset: 0x00EDB2E9
 		public void SetToggleState(bool state)
 		{
 			MotorFightGridMediumItemGrid gridItem = this.GridItem;
@@ -64,25 +64,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			gridItem.SetToggleState(state);
 		}
 
-		// Token: 0x04021804 RID: 137220
+		// Token: 0x0401C133 RID: 114995
 		[Nullable(2)]
 		public MotorFightItemData Data;
 
-		// Token: 0x04021805 RID: 137221
+		// Token: 0x0401C134 RID: 114996
 		public Func<int, bool> IsSelected = (int id) => false;
 
-		// Token: 0x04021806 RID: 137222
+		// Token: 0x0401C135 RID: 114997
 		[Nullable(2)]
 		private MotorFightGridMediumItemGrid GridItem;
 
-		// Token: 0x04021807 RID: 137223
+		// Token: 0x0401C136 RID: 114998
 		public Action<MotorFightItemData> OnClickCb;
 
-		// Token: 0x0200C631 RID: 50737
+		// Token: 0x0200B018 RID: 45080
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BD5C RID: 245084
+			// Token: 0x040366B9 RID: 222905
 			public const int ItemBaseGrid = 0;
 		}
 	}

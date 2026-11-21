@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BD6 RID: 3030
+	// Token: 0x02000CB8 RID: 3256
 	public struct DangoMonopoly : IFlatbufferObject
 	{
-		// Token: 0x17000BDB RID: 3035
-		// (get) Token: 0x0600604E RID: 24654 RVA: 0x0020F460 File Offset: 0x0020D660
+		// Token: 0x17000C21 RID: 3105
+		// (get) Token: 0x06006627 RID: 26151 RVA: 0x0022EAE4 File Offset: 0x0022CCE4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600604F RID: 24655 RVA: 0x0020F46D File Offset: 0x0020D66D
+		// Token: 0x06006628 RID: 26152 RVA: 0x0022EAF1 File Offset: 0x0022CCF1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006050 RID: 24656 RVA: 0x0020F474 File Offset: 0x0020D674
+		// Token: 0x06006629 RID: 26153 RVA: 0x0022EAF8 File Offset: 0x0022CCF8
 		public static DangoMonopoly GetRootAsDangoMonopoly(ByteBuffer _bb)
 		{
 			return DangoMonopoly.GetRootAsDangoMonopoly(_bb, default(DangoMonopoly));
 		}
 
-		// Token: 0x06006051 RID: 24657 RVA: 0x0020F490 File Offset: 0x0020D690
+		// Token: 0x0600662A RID: 26154 RVA: 0x0022EB14 File Offset: 0x0022CD14
 		public static DangoMonopoly GetRootAsDangoMonopoly(ByteBuffer _bb, DangoMonopoly obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006052 RID: 24658 RVA: 0x0020F4AD File Offset: 0x0020D6AD
+		// Token: 0x0600662B RID: 26155 RVA: 0x0022EB31 File Offset: 0x0022CD31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006053 RID: 24659 RVA: 0x0020F4BC File Offset: 0x0020D6BC
+		// Token: 0x0600662C RID: 26156 RVA: 0x0022EB40 File Offset: 0x0022CD40
 		public DangoMonopoly __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000BDC RID: 3036
-		// (get) Token: 0x06006054 RID: 24660 RVA: 0x0020F4CC File Offset: 0x0020D6CC
+		// Token: 0x17000C22 RID: 3106
+		// (get) Token: 0x0600662D RID: 26157 RVA: 0x0022EB50 File Offset: 0x0022CD50
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BDD RID: 3037
-		// (get) Token: 0x06006055 RID: 24661 RVA: 0x0020F508 File Offset: 0x0020D708
+		// Token: 0x17000C23 RID: 3107
+		// (get) Token: 0x0600662E RID: 26158 RVA: 0x0022EB8C File Offset: 0x0022CD8C
 		public int BoardGroupId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BDE RID: 3038
-		// (get) Token: 0x06006056 RID: 24662 RVA: 0x0020F544 File Offset: 0x0020D744
+		// Token: 0x17000C24 RID: 3108
+		// (get) Token: 0x0600662F RID: 26159 RVA: 0x0022EBC8 File Offset: 0x0022CDC8
 		public int TaskGroupId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BDF RID: 3039
-		// (get) Token: 0x06006057 RID: 24663 RVA: 0x0020F580 File Offset: 0x0020D780
+		// Token: 0x17000C25 RID: 3109
+		// (get) Token: 0x06006630 RID: 26160 RVA: 0x0022EC04 File Offset: 0x0022CE04
 		public int InstId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BE0 RID: 3040
-		// (get) Token: 0x06006058 RID: 24664 RVA: 0x0020F5C0 File Offset: 0x0020D7C0
+		// Token: 0x17000C26 RID: 3110
+		// (get) Token: 0x06006631 RID: 26161 RVA: 0x0022EC44 File Offset: 0x0022CE44
 		public int MaleDangoId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BE1 RID: 3041
-		// (get) Token: 0x06006059 RID: 24665 RVA: 0x0020F600 File Offset: 0x0020D800
+		// Token: 0x17000C27 RID: 3111
+		// (get) Token: 0x06006632 RID: 26162 RVA: 0x0022EC84 File Offset: 0x0022CE84
 		public int FeMaleDangoId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000BE2 RID: 3042
-		// (get) Token: 0x0600605A RID: 24666 RVA: 0x0020F640 File Offset: 0x0020D840
+		// Token: 0x17000C28 RID: 3112
+		// (get) Token: 0x06006633 RID: 26163 RVA: 0x0022ECC4 File Offset: 0x0022CEC4
 		public int DiceId
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C03 RID: 19459
+		// Token: 0x040051E5 RID: 20965
 		private Table __p;
 	}
 }

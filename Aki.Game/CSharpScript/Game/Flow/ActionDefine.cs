@@ -3,60 +3,60 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007242 RID: 29250
+	// Token: 0x020063C1 RID: 25537
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActionDefine
 	{
-		// Token: 0x04025B75 RID: 154485
+		// Token: 0x04020E33 RID: 134707
 		public const string ChangeRandomState = "ChangeRandomState";
 
-		// Token: 0x04025B76 RID: 154486
+		// Token: 0x04020E34 RID: 134708
 		public const string ChangeState = "ChangeState";
 
-		// Token: 0x04025B77 RID: 154487
+		// Token: 0x04020E35 RID: 134709
 		public const string FinishState = "FinishState";
 
-		// Token: 0x04025B78 RID: 154488
+		// Token: 0x04020E36 RID: 134710
 		public const string JumpTalk = "JumpTalk";
 
-		// Token: 0x04025B79 RID: 154489
+		// Token: 0x04020E37 RID: 134711
 		public const string Log = "Log";
 
-		// Token: 0x04025B7A RID: 154490
+		// Token: 0x04020E38 RID: 134712
 		public const string PlayCustomSequence = "PlayCustomSequence";
 
-		// Token: 0x04025B7B RID: 154491
+		// Token: 0x04020E39 RID: 134713
 		public const string PlayMovie = "PlayMovie";
 
-		// Token: 0x04025B7C RID: 154492
+		// Token: 0x04020E3A RID: 134714
 		public const string PlaySequenceData = "PlaySequenceData";
 
-		// Token: 0x04025B7D RID: 154493
+		// Token: 0x04020E3B RID: 134715
 		public const string SetCameraMode = "SetCameraMode";
 
-		// Token: 0x04025B7E RID: 154494
+		// Token: 0x04020E3C RID: 134716
 		public const string SetFlowBoolOption = "SetFlowBoolOption";
 
-		// Token: 0x04025B7F RID: 154495
+		// Token: 0x04020E3D RID: 134717
 		public const string SetHeadIconVisible = "SetHeadIconVisible";
 
-		// Token: 0x04025B80 RID: 154496
+		// Token: 0x04020E3E RID: 134718
 		public const string SetPlotMode = "SetPlotMode";
 
-		// Token: 0x04025B81 RID: 154497
+		// Token: 0x04020E3F RID: 134719
 		public const string ShowCenterText = "ShowCenterText";
 
-		// Token: 0x04025B82 RID: 154498
+		// Token: 0x04020E40 RID: 134720
 		public const string ShowMessage = "ShowMessage";
 
-		// Token: 0x04025B83 RID: 154499
+		// Token: 0x04020E41 RID: 134721
 		public const string ShowOption = "ShowOption";
 
-		// Token: 0x04025B84 RID: 154500
+		// Token: 0x04020E42 RID: 134722
 		public const string ShowTalk = "ShowTalk";
 
-		// Token: 0x04025B85 RID: 154501
+		// Token: 0x04020E43 RID: 134723
 		public const string Wait = "Wait";
 	}
 }

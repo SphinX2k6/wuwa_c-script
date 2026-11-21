@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x0200634D RID: 25421
+	// Token: 0x020052CB RID: 21195
 	public class PinballItemTipComponent : UiPanelBase, IItemTipsUiProxy
 	{
-		// Token: 0x0603FF84 RID: 262020 RVA: 0x00F79FD0 File Offset: 0x00F781D0
+		// Token: 0x06034C45 RID: 216133 RVA: 0x00EC0F30 File Offset: 0x00EBF130
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FF85 RID: 262021 RVA: 0x00F7A018 File Offset: 0x00F78218
+		// Token: 0x06034C46 RID: 216134 RVA: 0x00EC0F78 File Offset: 0x00EBF178
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballItemTipComponent.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -35,19 +35,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF86 RID: 262022 RVA: 0x00F7A05B File Offset: 0x00F7825B
+		// Token: 0x06034C47 RID: 216135 RVA: 0x00EC0FBB File Offset: 0x00EBF1BB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603FF87 RID: 262023 RVA: 0x00F7A06E File Offset: 0x00F7826E
+		// Token: 0x06034C48 RID: 216136 RVA: 0x00EC0FCE File Offset: 0x00EBF1CE
 		protected override void OnBeforeShow()
 		{
 			this.PlayStartSequence();
 		}
 
-		// Token: 0x0603FF88 RID: 262024 RVA: 0x00F7A078 File Offset: 0x00F78278
+		// Token: 0x06034C49 RID: 216137 RVA: 0x00EC0FD8 File Offset: 0x00EBF1D8
 		private void PlayStartSequence()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 		}
 
-		// Token: 0x0603FF89 RID: 262025 RVA: 0x00F7A0A8 File Offset: 0x00F782A8
+		// Token: 0x06034C4A RID: 216138 RVA: 0x00EC1008 File Offset: 0x00EBF208
 		public UniTask PlayCloseSequence()
 		{
 			PinballItemTipComponent.<PlayCloseSequence>d__8 <PlayCloseSequence>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <PlayCloseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF8A RID: 262026 RVA: 0x00F7A0EB File Offset: 0x00F782EB
+		// Token: 0x06034C4B RID: 216139 RVA: 0x00EC104B File Offset: 0x00EBF24B
 		[NullableContext(1)]
 		public void Refresh(ItemTipsData data)
 		{
@@ -81,18 +81,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			content.Refresh(data);
 		}
 
-		// Token: 0x040215B0 RID: 136624
+		// Token: 0x0401BEDF RID: 114399
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040215B1 RID: 136625
+		// Token: 0x0401BEE0 RID: 114400
 		[Nullable(2)]
 		private PinballItemTipsComponentContentComponent Content;
 
-		// Token: 0x0200C567 RID: 50535
+		// Token: 0x0200AF4E RID: 44878
 		private enum EPinballItemTipComponent
 		{
-			// Token: 0x0403B94B RID: 244043
+			// Token: 0x040362AD RID: 221869
 			Item
 		}
 	}

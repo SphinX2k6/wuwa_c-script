@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CA6 RID: 3238
+	// Token: 0x02000D8A RID: 3466
 	public struct FloroRanchChoiceType : IFlatbufferObject
 	{
-		// Token: 0x170012D6 RID: 4822
-		// (get) Token: 0x0600730F RID: 29455 RVA: 0x0023A705 File Offset: 0x00238905
+		// Token: 0x17001333 RID: 4915
+		// (get) Token: 0x0600791A RID: 31002 RVA: 0x002595D9 File Offset: 0x002577D9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007310 RID: 29456 RVA: 0x0023A712 File Offset: 0x00238912
+		// Token: 0x0600791B RID: 31003 RVA: 0x002595E6 File Offset: 0x002577E6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007311 RID: 29457 RVA: 0x0023A71C File Offset: 0x0023891C
+		// Token: 0x0600791C RID: 31004 RVA: 0x002595F0 File Offset: 0x002577F0
 		public static FloroRanchChoiceType GetRootAsFloroRanchChoiceType(ByteBuffer _bb)
 		{
 			return FloroRanchChoiceType.GetRootAsFloroRanchChoiceType(_bb, default(FloroRanchChoiceType));
 		}
 
-		// Token: 0x06007312 RID: 29458 RVA: 0x0023A738 File Offset: 0x00238938
+		// Token: 0x0600791D RID: 31005 RVA: 0x0025960C File Offset: 0x0025780C
 		public static FloroRanchChoiceType GetRootAsFloroRanchChoiceType(ByteBuffer _bb, FloroRanchChoiceType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007313 RID: 29459 RVA: 0x0023A755 File Offset: 0x00238955
+		// Token: 0x0600791E RID: 31006 RVA: 0x00259629 File Offset: 0x00257829
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007314 RID: 29460 RVA: 0x0023A764 File Offset: 0x00238964
+		// Token: 0x0600791F RID: 31007 RVA: 0x00259638 File Offset: 0x00257838
 		public FloroRanchChoiceType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170012D7 RID: 4823
-		// (get) Token: 0x06007315 RID: 29461 RVA: 0x0023A774 File Offset: 0x00238974
+		// Token: 0x17001334 RID: 4916
+		// (get) Token: 0x06007920 RID: 31008 RVA: 0x00259648 File Offset: 0x00257848
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D08 RID: 19720
+		// Token: 0x040052EC RID: 21228
 		private Table __p;
 	}
 }

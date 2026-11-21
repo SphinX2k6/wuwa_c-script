@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F2B RID: 12075
+// Token: 0x0200247E RID: 9342
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectDamageAugment : BuffEffect
 {
-	// Token: 0x06019BA6 RID: 105382 RVA: 0x006B31EF File Offset: 0x006B13EF
+	// Token: 0x060174B1 RID: 95409 RVA: 0x006D9507 File Offset: 0x006D7707
 	public ExtraEffectDamageAugment(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BA7 RID: 105383 RVA: 0x006B3200 File Offset: 0x006B1400
+	// Token: 0x060174B2 RID: 95410 RVA: 0x006D9518 File Offset: 0x006D7718
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -25,7 +25,7 @@ public class ExtraEffectDamageAugment : BuffEffect
 		this.RefParam2 = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters2, level, 0f);
 	}
 
-	// Token: 0x06019BA8 RID: 105384 RVA: 0x006B326C File Offset: 0x006B146C
+	// Token: 0x060174B3 RID: 95411 RVA: 0x006D9584 File Offset: 0x006D7784
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -61,7 +61,7 @@ public class ExtraEffectDamageAugment : BuffEffect
 		return Math.Max(num2 * num + refParam2, 0f);
 	}
 
-	// Token: 0x06019BA9 RID: 105385 RVA: 0x006B32F8 File Offset: 0x006B14F8
+	// Token: 0x060174B4 RID: 95412 RVA: 0x006D9610 File Offset: 0x006D7810
 	public static float ApplyEffects(RequirementPayload requirements, SnapshotPayload snapshots)
 	{
 		BaseBuffComponent ownerBuffComponent = snapshots.Attacker.OwnerBuffComponent;
@@ -77,15 +77,15 @@ public class ExtraEffectDamageAugment : BuffEffect
 		return num;
 	}
 
-	// Token: 0x0400C1E8 RID: 49640
+	// Token: 0x0400C58A RID: 50570
 	private EAttributeType AttrId;
 
-	// Token: 0x0400C1E9 RID: 49641
+	// Token: 0x0400C58B RID: 50571
 	private float RefParam1;
 
-	// Token: 0x0400C1EA RID: 49642
+	// Token: 0x0400C58C RID: 50572
 	private float RefParam2;
 
-	// Token: 0x0400C1EB RID: 49643
+	// Token: 0x0400C58D RID: 50573
 	private EAttributeRefType RefValueType;
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A1C RID: 18972
+	// Token: 0x02004EDC RID: 20188
 	public class ICheckEntityTypeT
 	{
-		// Token: 0x1700895B RID: 35163
-		// (get) Token: 0x0601DB03 RID: 121603 RVA: 0x0042D3EA File Offset: 0x0042B5EA
-		// (set) Token: 0x0601DB04 RID: 121604 RVA: 0x0042D3F2 File Offset: 0x0042B5F2
+		// Token: 0x1700902B RID: 36907
+		// (get) Token: 0x0601F576 RID: 128374 RVA: 0x0045E056 File Offset: 0x0045C256
+		// (set) Token: 0x0601F577 RID: 128375 RVA: 0x0045E05E File Offset: 0x0045C25E
 		public ECheckEntity Type { get; set; }
 
-		// Token: 0x0601DB05 RID: 121605 RVA: 0x0042D3FB File Offset: 0x0042B5FB
+		// Token: 0x0601F578 RID: 128376 RVA: 0x0045E067 File Offset: 0x0045C267
 		public ICheckEntityTypeT()
 		{
 			this.Type = ECheckEntity.OnlinePlayer;

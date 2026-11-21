@@ -14,11 +14,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x0200453E RID: 17726
+	// Token: 0x02003466 RID: 13414
 	[Controller(0)]
 	public class SubLevelController : ControllerWithAssistantBase
 	{
-		// Token: 0x0602DCF9 RID: 187641 RVA: 0x00A86DE2 File Offset: 0x00A84FE2
+		// Token: 0x060223DB RID: 140251 RVA: 0x009B260A File Offset: 0x009B080A
 		protected override bool OnInit()
 		{
 			bool result = base.OnInit();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.World.Controller
 			return result;
 		}
 
-		// Token: 0x0602DCFA RID: 187642 RVA: 0x00A86DF6 File Offset: 0x00A84FF6
+		// Token: 0x060223DC RID: 140252 RVA: 0x009B261E File Offset: 0x009B081E
 		protected override bool OnClear()
 		{
 			bool result = base.OnClear();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.World.Controller
 			return result;
 		}
 
-		// Token: 0x0602DCFB RID: 187643 RVA: 0x00A86E16 File Offset: 0x00A85016
+		// Token: 0x060223DD RID: 140253 RVA: 0x009B263E File Offset: 0x009B083E
 		protected override void OnRegisterNetEvent()
 		{
 			base.OnRegisterNetEvent();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.World.Controller
 			Net.Instance.Register(ENotifyMessageId.SceneSubLevelsNotify, new Action<IMessage, Net.CallbackStatus>(this.SceneSubLevelsNotify));
 		}
 
-		// Token: 0x0602DCFC RID: 187644 RVA: 0x00A86E56 File Offset: 0x00A85056
+		// Token: 0x060223DE RID: 140254 RVA: 0x009B267E File Offset: 0x009B087E
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SceneSubLevelsChangedNotify);
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.World.Controller
 			base.OnUnRegisterNetEvent();
 		}
 
-		// Token: 0x0602DCFD RID: 187645 RVA: 0x00A86E7E File Offset: 0x00A8507E
+		// Token: 0x060223DF RID: 140255 RVA: 0x009B26A6 File Offset: 0x009B08A6
 		protected override void RegisterAssistant()
 		{
 			base.AddAssistant(0, new SubLevelVisibleAssistant());
 		}
 
-		// Token: 0x0602DCFE RID: 187646 RVA: 0x00A86E8C File Offset: 0x00A8508C
+		// Token: 0x060223E0 RID: 140256 RVA: 0x009B26B4 File Offset: 0x009B08B4
 		[NullableContext(1)]
 		private T GetAssistant<[Nullable(0)] T>(SubLevelController.EAssistantType type) where T : ControllerAssistantBase
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.World.Controller
 			return controllerAssistantBase as T;
 		}
 
-		// Token: 0x0602DCFF RID: 187647 RVA: 0x00A86EB4 File Offset: 0x00A850B4
+		// Token: 0x060223E1 RID: 140257 RVA: 0x009B26DC File Offset: 0x009B08DC
 		[NullableContext(2)]
 		private unsafe void SceneSubLevelsChangedNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.World.Controller
 			}, sceneSubLevelsChangedNotify.HideSubLevels, null);
 		}
 
-		// Token: 0x0602DD00 RID: 187648 RVA: 0x00A87184 File Offset: 0x00A85384
+		// Token: 0x060223E2 RID: 140258 RVA: 0x009B29AC File Offset: 0x009B0BAC
 		[NullableContext(2)]
 		private void SceneSubLevelsNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -186,57 +186,32 @@ namespace CSharpScript.Game.World.Controller
 			this.LoadOrUnloadSubLevel(sceneSubLevelsNotify.CurLoaded, sceneSubLevelsNotify.CurHideLoaded);
 		}
 
-		// Token: 0x0602DD01 RID: 187649 RVA: 0x00A871AC File Offset: 0x00A853AC
+		// Token: 0x060223E3 RID: 140259 RVA: 0x009B29D4 File Offset: 0x009B0BD4
 		[NullableContext(1)]
 		public void LoadOrUnloadSubLevel(IList<string> subLevels, IList<string> hiddenSubLevels)
 		{
 			SubLevelController.<>c__DisplayClass10_0 CS$<>8__locals1 = new SubLevelController.<>c__DisplayClass10_0();
-			CS$<>8__locals1.<>4__this = this;
+			CS$<>8__locals1.subLevels = subLevels;
 			CS$<>8__locals1.hiddenSubLevels = hiddenSubLevels;
-			if (subLevels == null || subLevels.Count == 0)
+			CS$<>8__locals1.<>4__this = this;
+			if (CS$<>8__locals1.subLevels == null || CS$<>8__locals1.subLevels.Count == 0)
 			{
 				return;
 			}
-			Dictionary<string, SubLevel> allSubLevels = SubLevelModel.Instance.GetAllSubLevels();
-			CS$<>8__locals1.unloads = new List<string>();
-			CS$<>8__locals1.newLoads = new List<string>();
-			HashSet<string> hashSet = new HashSet<string>();
-			foreach (string text in subLevels)
-			{
-				hashSet.Add(text);
-				SubLevel subLevel = SubLevelModel.Instance.GetSubLevel(text);
-				if (subLevel == null || subLevel.IsVisible != !CS$<>8__locals1.hiddenSubLevels.Contains(text))
-				{
-					CS$<>8__locals1.newLoads.Add(text);
-				}
-			}
-			foreach (string item in allSubLevels.Keys)
-			{
-				if (!hashSet.Contains(item))
-				{
-					CS$<>8__locals1.unloads.Add(item);
-				}
-			}
-			if (CS$<>8__locals1.unloads.Count == 0 && CS$<>8__locals1.newLoads.Count == 0)
-			{
-				return;
-			}
-			GameModeModel.Instance.AddLoadMapHandle("LoadOrUnloadSubLevel");
-			CS$<>8__locals1.handleReleased = false;
 			AsyncTask task = new AsyncTask("LoadOrUnloadSubLevel", delegate()
 			{
-				SubLevelController.<>c__DisplayClass10_0.<<LoadOrUnloadSubLevel>b__2>d <<LoadOrUnloadSubLevel>b__2>d;
-				<<LoadOrUnloadSubLevel>b__2>d.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
-				<<LoadOrUnloadSubLevel>b__2>d.<>4__this = CS$<>8__locals1;
-				<<LoadOrUnloadSubLevel>b__2>d.<>1__state = -1;
-				<<LoadOrUnloadSubLevel>b__2>d.<>t__builder.Start<SubLevelController.<>c__DisplayClass10_0.<<LoadOrUnloadSubLevel>b__2>d>(ref <<LoadOrUnloadSubLevel>b__2>d);
-				return <<LoadOrUnloadSubLevel>b__2>d.<>t__builder.Task;
+				SubLevelController.<>c__DisplayClass10_0.<<LoadOrUnloadSubLevel>b__0>d <<LoadOrUnloadSubLevel>b__0>d;
+				<<LoadOrUnloadSubLevel>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
+				<<LoadOrUnloadSubLevel>b__0>d.<>4__this = CS$<>8__locals1;
+				<<LoadOrUnloadSubLevel>b__0>d.<>1__state = -1;
+				<<LoadOrUnloadSubLevel>b__0>d.<>t__builder.Start<SubLevelController.<>c__DisplayClass10_0.<<LoadOrUnloadSubLevel>b__0>d>(ref <<LoadOrUnloadSubLevel>b__0>d);
+				return <<LoadOrUnloadSubLevel>b__0>d.<>t__builder.Task;
 			}, null, null, null);
 			TaskSystem.Instance.AddTask(task);
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x0602DD02 RID: 187650 RVA: 0x00A87334 File Offset: 0x00A85534
+		// Token: 0x060223E4 RID: 140260 RVA: 0x009B2A44 File Offset: 0x009B0C44
 		[NullableContext(2)]
 		public void ChangeSubLevel([Nullable(1)] IList<string> unloadLevels, [Nullable(1)] IList<string> levels, EScreenEffectType screenEffect, global::Vector location = null, global::Rotator rotator = null, Action<bool> callback = null, [Nullable(new byte[]
 		{
@@ -269,7 +244,7 @@ namespace CSharpScript.Game.World.Controller
 			this.ExecuteSubLevelProcess();
 		}
 
-		// Token: 0x0602DD03 RID: 187651 RVA: 0x00A87404 File Offset: 0x00A85604
+		// Token: 0x060223E5 RID: 140261 RVA: 0x009B2B14 File Offset: 0x009B0D14
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		private UniTask<bool> ChangeSubLevelInternal([Nullable(new byte[]
@@ -292,7 +267,7 @@ namespace CSharpScript.Game.World.Controller
 			return <ChangeSubLevelInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD04 RID: 187652 RVA: 0x00A8747C File Offset: 0x00A8567C
+		// Token: 0x060223E6 RID: 140262 RVA: 0x009B2B8C File Offset: 0x009B0D8C
 		[NullableContext(2)]
 		private UniTask SetLocationAndRotatorInChangeSubLevel(global::Vector location = null, global::Rotator rotator = null, Action beforeWaitTeam = null)
 		{
@@ -306,7 +281,7 @@ namespace CSharpScript.Game.World.Controller
 			return <SetLocationAndRotatorInChangeSubLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD05 RID: 187653 RVA: 0x00A874D0 File Offset: 0x00A856D0
+		// Token: 0x060223E7 RID: 140263 RVA: 0x009B2BE0 File Offset: 0x009B0DE0
 		public UniTask<bool> PreloadSubLevel([Nullable(1)] IEnumerable<string> levels)
 		{
 			SubLevelController.<PreloadSubLevel>d__14 <PreloadSubLevel>d__;
@@ -318,7 +293,7 @@ namespace CSharpScript.Game.World.Controller
 			return <PreloadSubLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD06 RID: 187654 RVA: 0x00A8751C File Offset: 0x00A8571C
+		// Token: 0x060223E8 RID: 140264 RVA: 0x009B2C2C File Offset: 0x009B0E2C
 		private UniTask<bool> PreloadLevelImp([Nullable(1)] IEnumerable<string> levelPath)
 		{
 			SubLevelController.<PreloadLevelImp>d__15 <PreloadLevelImp>d__;
@@ -329,7 +304,7 @@ namespace CSharpScript.Game.World.Controller
 			return <PreloadLevelImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD07 RID: 187655 RVA: 0x00A87560 File Offset: 0x00A85760
+		// Token: 0x060223E9 RID: 140265 RVA: 0x009B2C70 File Offset: 0x009B0E70
 		public UniTask<bool> CheckLoadSubLevels([Nullable(1)] SceneInformation sceneInformation)
 		{
 			SubLevelController.<CheckLoadSubLevels>d__16 <CheckLoadSubLevels>d__;
@@ -341,7 +316,7 @@ namespace CSharpScript.Game.World.Controller
 			return <CheckLoadSubLevels>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD08 RID: 187656 RVA: 0x00A875AC File Offset: 0x00A857AC
+		// Token: 0x060223EA RID: 140266 RVA: 0x009B2CBC File Offset: 0x009B0EBC
 		public UniTask<bool> LoadSubLevel([Nullable(1)] string levelPath, bool bVisibleAfterLoad)
 		{
 			SubLevelController.<LoadSubLevel>d__17 <LoadSubLevel>d__;
@@ -353,7 +328,7 @@ namespace CSharpScript.Game.World.Controller
 			return <LoadSubLevel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD09 RID: 187657 RVA: 0x00A875F8 File Offset: 0x00A857F8
+		// Token: 0x060223EB RID: 140267 RVA: 0x009B2D08 File Offset: 0x009B0F08
 		public UniTask<bool> LoadSubLevels([Nullable(1)] Dictionary<string, bool> levelPath)
 		{
 			SubLevelController.<LoadSubLevels>d__18 <LoadSubLevels>d__;
@@ -365,7 +340,7 @@ namespace CSharpScript.Game.World.Controller
 			return <LoadSubLevels>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD0A RID: 187658 RVA: 0x00A87644 File Offset: 0x00A85844
+		// Token: 0x060223EC RID: 140268 RVA: 0x009B2D54 File Offset: 0x009B0F54
 		public UniTask<bool> WaitSubLevelsLoad()
 		{
 			SubLevelController.<WaitSubLevelsLoad>d__19 <WaitSubLevelsLoad>d__;
@@ -375,7 +350,7 @@ namespace CSharpScript.Game.World.Controller
 			return <WaitSubLevelsLoad>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD0B RID: 187659 RVA: 0x00A87680 File Offset: 0x00A85880
+		// Token: 0x060223ED RID: 140269 RVA: 0x009B2D90 File Offset: 0x009B0F90
 		public UniTask<bool> WaitSubLevelsUnLoad()
 		{
 			SubLevelController.<WaitSubLevelsUnLoad>d__20 <WaitSubLevelsUnLoad>d__;
@@ -385,7 +360,7 @@ namespace CSharpScript.Game.World.Controller
 			return <WaitSubLevelsUnLoad>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD0C RID: 187660 RVA: 0x00A876BC File Offset: 0x00A858BC
+		// Token: 0x060223EE RID: 140270 RVA: 0x009B2DCC File Offset: 0x009B0FCC
 		[NullableContext(1)]
 		public unsafe void OnLoadSubLevel(int linkId, string levelPath, ULevelStreaming level)
 		{
@@ -458,7 +433,7 @@ namespace CSharpScript.Game.World.Controller
 			});
 		}
 
-		// Token: 0x0602DD0D RID: 187661 RVA: 0x00A878B8 File Offset: 0x00A85AB8
+		// Token: 0x060223EF RID: 140271 RVA: 0x009B2FC8 File Offset: 0x009B11C8
 		[NullableContext(1)]
 		public unsafe void OnUnLoadSubLevel(int linkId, string levelPath)
 		{
@@ -489,7 +464,7 @@ namespace CSharpScript.Game.World.Controller
 			instance3.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x0602DD0E RID: 187662 RVA: 0x00A879BC File Offset: 0x00A85BBC
+		// Token: 0x060223F0 RID: 140272 RVA: 0x009B30CC File Offset: 0x009B12CC
 		private void ExecuteSubLevelProcess()
 		{
 			if (this.TaskQueue == null || this.TaskQueue.Empty)
@@ -500,7 +475,7 @@ namespace CSharpScript.Game.World.Controller
 			this.ExecuteSubLevelProcessImp(front);
 		}
 
-		// Token: 0x0602DD0F RID: 187663 RVA: 0x00A879F4 File Offset: 0x00A85BF4
+		// Token: 0x060223F1 RID: 140273 RVA: 0x009B3104 File Offset: 0x009B1304
 		[NullableContext(1)]
 		private UniTask ExecuteSubLevelProcessImp(SubLevelProcess process)
 		{
@@ -513,7 +488,7 @@ namespace CSharpScript.Game.World.Controller
 			return <ExecuteSubLevelProcessImp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DD10 RID: 187664 RVA: 0x00A87A40 File Offset: 0x00A85C40
+		// Token: 0x060223F2 RID: 140274 RVA: 0x009B3150 File Offset: 0x009B1350
 		private void OnExecuteFinish(bool result)
 		{
 			Queue<SubLevelProcess> taskQueue = this.TaskQueue;
@@ -538,7 +513,7 @@ namespace CSharpScript.Game.World.Controller
 			this.ExecuteSubLevelProcess();
 		}
 
-		// Token: 0x0602DD11 RID: 187665 RVA: 0x00A87AA8 File Offset: 0x00A85CA8
+		// Token: 0x060223F3 RID: 140275 RVA: 0x009B31B8 File Offset: 0x009B13B8
 		[NullableContext(1)]
 		public void SetSubLevelVisible(SetSubLevelVisibleParams parameters)
 		{
@@ -552,8 +527,8 @@ namespace CSharpScript.Game.World.Controller
 			this.ExecuteSubLevelProcess();
 		}
 
-		// Token: 0x17007549 RID: 30025
-		// (get) Token: 0x0602DD12 RID: 187666 RVA: 0x00A87AE8 File Offset: 0x00A85CE8
+		// Token: 0x17004800 RID: 18432
+		// (get) Token: 0x060223F4 RID: 140276 RVA: 0x009B31F8 File Offset: 0x009B13F8
 		[Nullable(1)]
 		public static SubLevelController Instance
 		{
@@ -564,7 +539,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DD13 RID: 187667 RVA: 0x00A87AEF File Offset: 0x00A85CEF
+		// Token: 0x060223F5 RID: 140277 RVA: 0x009B31FF File Offset: 0x009B13FF
 		[NullableContext(1)]
 		public static SubLevelController GetOrCreateInstance()
 		{
@@ -575,7 +550,7 @@ namespace CSharpScript.Game.World.Controller
 			return SubLevelController._Instance;
 		}
 
-		// Token: 0x0602DD14 RID: 187668 RVA: 0x00A87B03 File Offset: 0x00A85D03
+		// Token: 0x060223F6 RID: 140278 RVA: 0x009B3213 File Offset: 0x009B1413
 		public static bool CreateInstance()
 		{
 			if (SubLevelController._Instance != null)
@@ -586,24 +561,24 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DD15 RID: 187669 RVA: 0x00A87B19 File Offset: 0x00A85D19
+		// Token: 0x060223F7 RID: 140279 RVA: 0x009B3229 File Offset: 0x009B1429
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DD16 RID: 187670 RVA: 0x00A87B1B File Offset: 0x00A85D1B
+		// Token: 0x060223F8 RID: 140280 RVA: 0x009B322B File Offset: 0x009B142B
 		public static void ResetStaticDefaultValue()
 		{
 			SubLevelController._Instance = null;
 		}
 
-		// Token: 0x0602DD17 RID: 187671 RVA: 0x00A87B23 File Offset: 0x00A85D23
+		// Token: 0x060223F9 RID: 140281 RVA: 0x009B3233 File Offset: 0x009B1433
 		static SubLevelController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SubLevelController.CreateStaticDefaultValue), new Action(SubLevelController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018768 RID: 100200
+		// Token: 0x04012DA2 RID: 77218
 		[Nullable(new byte[]
 		{
 			2,
@@ -611,14 +586,14 @@ namespace CSharpScript.Game.World.Controller
 		})]
 		private Queue<SubLevelProcess> TaskQueue;
 
-		// Token: 0x04018769 RID: 100201
+		// Token: 0x04012DA3 RID: 77219
 		[Nullable(2)]
 		private static SubLevelController _Instance;
 
-		// Token: 0x0200A807 RID: 43015
+		// Token: 0x020091BD RID: 37309
 		private enum EAssistantType
 		{
-			// Token: 0x040332D7 RID: 209623
+			// Token: 0x0402DA61 RID: 186977
 			SubLevelVisible
 		}
 	}

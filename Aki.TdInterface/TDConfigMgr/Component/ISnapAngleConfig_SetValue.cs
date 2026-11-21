@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E1 RID: 1761
+	// Token: 0x02000782 RID: 1922
 	public class ISnapAngleConfig_SetValue
 	{
-		// Token: 0x040019DA RID: 6618
+		// Token: 0x04001BD9 RID: 7129
 		public float Angle;
 
-		// Token: 0x040019DB RID: 6619
+		// Token: 0x04001BDA RID: 7130
 		public float Range;
 	}
 }

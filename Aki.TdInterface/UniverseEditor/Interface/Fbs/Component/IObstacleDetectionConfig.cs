@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005692 RID: 22162
+	// Token: 0x02005C33 RID: 23603
 	public struct IObstacleDetectionConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A4CB RID: 42187
-		// (get) Token: 0x06024FA1 RID: 151457 RVA: 0x0051B4EE File Offset: 0x005196EE
+		// Token: 0x1700AD5A RID: 44378
+		// (get) Token: 0x060271DA RID: 160218 RVA: 0x0055C08A File Offset: 0x0055A28A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FA2 RID: 151458 RVA: 0x0051B4FB File Offset: 0x005196FB
+		// Token: 0x060271DB RID: 160219 RVA: 0x0055C097 File Offset: 0x0055A297
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06024FA3 RID: 151459 RVA: 0x0051B504 File Offset: 0x00519704
+		// Token: 0x060271DC RID: 160220 RVA: 0x0055C0A0 File Offset: 0x0055A2A0
 		public static IObstacleDetectionConfig GetRootAsIObstacleDetectionConfig(ByteBuffer _bb)
 		{
 			return IObstacleDetectionConfig.GetRootAsIObstacleDetectionConfig(_bb, default(IObstacleDetectionConfig));
 		}
 
-		// Token: 0x06024FA4 RID: 151460 RVA: 0x0051B520 File Offset: 0x00519720
+		// Token: 0x060271DD RID: 160221 RVA: 0x0055C0BC File Offset: 0x0055A2BC
 		public static IObstacleDetectionConfig GetRootAsIObstacleDetectionConfig(ByteBuffer _bb, IObstacleDetectionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06024FA5 RID: 151461 RVA: 0x0051B53D File Offset: 0x0051973D
+		// Token: 0x060271DE RID: 160222 RVA: 0x0055C0D9 File Offset: 0x0055A2D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024FA6 RID: 151462 RVA: 0x0051B54C File Offset: 0x0051974C
+		// Token: 0x060271DF RID: 160223 RVA: 0x0055C0E8 File Offset: 0x0055A2E8
 		public IObstacleDetectionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A4CC RID: 42188
-		// (get) Token: 0x06024FA7 RID: 151463 RVA: 0x0051B55C File Offset: 0x0051975C
+		// Token: 0x1700AD5B RID: 44379
+		// (get) Token: 0x060271E0 RID: 160224 RVA: 0x0055C0F8 File Offset: 0x0055A2F8
 		public ITrafficMatchTarget? ObstacleDetectionType
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A4CD RID: 42189
-		// (get) Token: 0x06024FA8 RID: 151464 RVA: 0x0051B5BC File Offset: 0x005197BC
+		// Token: 0x1700AD5C RID: 44380
+		// (get) Token: 0x060271E1 RID: 160225 RVA: 0x0055C158 File Offset: 0x0055A358
 		public TTriggerShape ExtraObstacleDetectionRangeType
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FA9 RID: 151465 RVA: 0x0051B5F8 File Offset: 0x005197F8
+		// Token: 0x060271E2 RID: 160226 RVA: 0x0055C194 File Offset: 0x0055A394
 		public TTable? ExtraObstacleDetectionRange<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -90,73 +90,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06024FAA RID: 151466 RVA: 0x0051B63C File Offset: 0x0051983C
+		// Token: 0x060271E3 RID: 160227 RVA: 0x0055C1D8 File Offset: 0x0055A3D8
 		public IActorCollisionTriggerShape ExtraObstacleDetectionRangeAsIActorCollisionTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IActorCollisionTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FAB RID: 151467 RVA: 0x0051B658 File Offset: 0x00519858
+		// Token: 0x060271E4 RID: 160228 RVA: 0x0055C1F4 File Offset: 0x0055A3F4
 		public IActorRefVolume ExtraObstacleDetectionRangeAsIActorRefVolume()
 		{
 			return this.ExtraObstacleDetectionRange<IActorRefVolume>().Value;
 		}
 
-		// Token: 0x06024FAC RID: 151468 RVA: 0x0051B674 File Offset: 0x00519874
+		// Token: 0x060271E5 RID: 160229 RVA: 0x0055C210 File Offset: 0x0055A410
 		public IBoxTriggerShape ExtraObstacleDetectionRangeAsIBoxTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IBoxTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FAD RID: 151469 RVA: 0x0051B690 File Offset: 0x00519890
+		// Token: 0x060271E6 RID: 160230 RVA: 0x0055C22C File Offset: 0x0055A42C
 		public ICombinationTriggerShape ExtraObstacleDetectionRangeAsICombinationTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<ICombinationTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FAE RID: 151470 RVA: 0x0051B6AC File Offset: 0x005198AC
+		// Token: 0x060271E7 RID: 160231 RVA: 0x0055C248 File Offset: 0x0055A448
 		public IConeTriggerShape ExtraObstacleDetectionRangeAsIConeTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IConeTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FAF RID: 151471 RVA: 0x0051B6C8 File Offset: 0x005198C8
+		// Token: 0x060271E8 RID: 160232 RVA: 0x0055C264 File Offset: 0x0055A464
 		public ICylinderTriggerShape ExtraObstacleDetectionRangeAsICylinderTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<ICylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB0 RID: 151472 RVA: 0x0051B6E4 File Offset: 0x005198E4
+		// Token: 0x060271E9 RID: 160233 RVA: 0x0055C280 File Offset: 0x0055A480
 		public IHollowCylinderTriggerShape ExtraObstacleDetectionRangeAsIHollowCylinderTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IHollowCylinderTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB1 RID: 151473 RVA: 0x0051B700 File Offset: 0x00519900
+		// Token: 0x060271EA RID: 160234 RVA: 0x0055C29C File Offset: 0x0055A49C
 		public IHollowSphereTriggerShape ExtraObstacleDetectionRangeAsIHollowSphereTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IHollowSphereTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB2 RID: 151474 RVA: 0x0051B71C File Offset: 0x0051991C
+		// Token: 0x060271EB RID: 160235 RVA: 0x0055C2B8 File Offset: 0x0055A4B8
 		public ISphereTriggerShape ExtraObstacleDetectionRangeAsISphereTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<ISphereTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB3 RID: 151475 RVA: 0x0051B738 File Offset: 0x00519938
+		// Token: 0x060271EC RID: 160236 RVA: 0x0055C2D4 File Offset: 0x0055A4D4
 		public ISpotlightTriggerShape ExtraObstacleDetectionRangeAsISpotlightTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<ISpotlightTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB4 RID: 151476 RVA: 0x0051B754 File Offset: 0x00519954
+		// Token: 0x060271ED RID: 160237 RVA: 0x0055C2F0 File Offset: 0x0055A4F0
 		public IVolumeTriggerShape ExtraObstacleDetectionRangeAsIVolumeTriggerShape()
 		{
 			return this.ExtraObstacleDetectionRange<IVolumeTriggerShape>().Value;
 		}
 
-		// Token: 0x06024FB5 RID: 151477 RVA: 0x0051B76F File Offset: 0x0051996F
+		// Token: 0x060271EE RID: 160238 RVA: 0x0055C30B File Offset: 0x0055A50B
 		public static Offset<IObstacleDetectionConfig> CreateIObstacleDetectionConfig(FlatBufferBuilder builder, Offset<ITrafficMatchTarget> ObstacleDetectionTypeOffset = default(Offset<ITrafficMatchTarget>), TTriggerShape ExtraObstacleDetectionRange_type = TTriggerShape.NONE, int ExtraObstacleDetectionRangeOffset = 0)
 		{
 			builder.StartTable(3);
@@ -166,37 +166,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IObstacleDetectionConfig.EndIObstacleDetectionConfig(builder);
 		}
 
-		// Token: 0x06024FB6 RID: 151478 RVA: 0x0051B793 File Offset: 0x00519993
+		// Token: 0x060271EF RID: 160239 RVA: 0x0055C32F File Offset: 0x0055A52F
 		public static void StartIObstacleDetectionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06024FB7 RID: 151479 RVA: 0x0051B79C File Offset: 0x0051999C
+		// Token: 0x060271F0 RID: 160240 RVA: 0x0055C338 File Offset: 0x0055A538
 		public static void AddObstacleDetectionType(FlatBufferBuilder builder, Offset<ITrafficMatchTarget> obstacleDetectionTypeOffset)
 		{
 			builder.AddOffset(0, obstacleDetectionTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06024FB8 RID: 151480 RVA: 0x0051B7AC File Offset: 0x005199AC
+		// Token: 0x060271F1 RID: 160241 RVA: 0x0055C348 File Offset: 0x0055A548
 		public static void AddExtraObstacleDetectionRangeType(FlatBufferBuilder builder, TTriggerShape extraObstacleDetectionRangeType)
 		{
 			builder.AddByte(1, (byte)extraObstacleDetectionRangeType, 0);
 		}
 
-		// Token: 0x06024FB9 RID: 151481 RVA: 0x0051B7B7 File Offset: 0x005199B7
+		// Token: 0x060271F2 RID: 160242 RVA: 0x0055C353 File Offset: 0x0055A553
 		public static void AddExtraObstacleDetectionRange(FlatBufferBuilder builder, int extraObstacleDetectionRangeOffset)
 		{
 			builder.AddOffset(2, extraObstacleDetectionRangeOffset, 0);
 		}
 
-		// Token: 0x06024FBA RID: 151482 RVA: 0x0051B7C2 File Offset: 0x005199C2
+		// Token: 0x060271F3 RID: 160243 RVA: 0x0055C35E File Offset: 0x0055A55E
 		public static Offset<IObstacleDetectionConfig> EndIObstacleDetectionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IObstacleDetectionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06024FBB RID: 151483 RVA: 0x0051B7D0 File Offset: 0x005199D0
+		// Token: 0x060271F4 RID: 160244 RVA: 0x0055C36C File Offset: 0x0055A56C
 		public IObstacleDetectionConfigT UnPack()
 		{
 			IObstacleDetectionConfigT obstacleDetectionConfigT = new IObstacleDetectionConfigT();
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return obstacleDetectionConfigT;
 		}
 
-		// Token: 0x06024FBC RID: 151484 RVA: 0x0051B7EC File Offset: 0x005199EC
+		// Token: 0x060271F5 RID: 160245 RVA: 0x0055C388 File Offset: 0x0055A588
 		public void UnPackTo(IObstacleDetectionConfigT _o)
 		{
 			_o.ObstacleDetectionType = ((this.ObstacleDetectionType != null) ? this.ObstacleDetectionType.Value.UnPack() : null);
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024FBD RID: 151485 RVA: 0x0051BAE8 File Offset: 0x00519CE8
+		// Token: 0x060271F6 RID: 160246 RVA: 0x0055C684 File Offset: 0x0055A884
 		public static Offset<IObstacleDetectionConfig> Pack(FlatBufferBuilder builder, IObstacleDetectionConfigT _o)
 		{
 			if (_o == null)
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IObstacleDetectionConfig.CreateIObstacleDetectionConfig(builder, obstacleDetectionTypeOffset, extraObstacleDetectionRange_type, extraObstacleDetectionRangeOffset);
 		}
 
-		// Token: 0x0400EAB2 RID: 60082
+		// Token: 0x0400F71B RID: 63259
 		private Table __p;
 	}
 }

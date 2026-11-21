@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F7D RID: 8061
+	// Token: 0x020021B8 RID: 8632
 	public class ITalkOptionQteFailedDelayExec_SetValue
 	{
-		// Token: 0x04006B42 RID: 27458
+		// Token: 0x0400712A RID: 28970
 		public ETalkOptionParamType Type;
 	}
 }

@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000175 RID: 373
+	// Token: 0x02000179 RID: 377
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DouyinParam
 	{
-		// Token: 0x17000106 RID: 262
-		// (get) Token: 0x06000A85 RID: 2693 RVA: 0x000450ED File Offset: 0x000432ED
-		// (set) Token: 0x06000A86 RID: 2694 RVA: 0x000450F5 File Offset: 0x000432F5
+		// Token: 0x1700010C RID: 268
+		// (get) Token: 0x06000AB9 RID: 2745 RVA: 0x00047501 File Offset: 0x00045701
+		// (set) Token: 0x06000ABA RID: 2746 RVA: 0x00047509 File Offset: 0x00045709
 		public string appId { get; set; }
 
-		// Token: 0x17000107 RID: 263
-		// (get) Token: 0x06000A87 RID: 2695 RVA: 0x000450FE File Offset: 0x000432FE
-		// (set) Token: 0x06000A88 RID: 2696 RVA: 0x00045106 File Offset: 0x00043306
+		// Token: 0x1700010D RID: 269
+		// (get) Token: 0x06000ABB RID: 2747 RVA: 0x00047512 File Offset: 0x00045712
+		// (set) Token: 0x06000ABC RID: 2748 RVA: 0x0004751A File Offset: 0x0004571A
 		public string appKey { get; set; }
 	}
 }

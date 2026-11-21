@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Compose
 {
-	// Token: 0x02005661 RID: 22113
+	// Token: 0x02004637 RID: 17975
 	public class IStructureData : IBaseItemData
 	{
-		// Token: 0x1700875E RID: 34654
-		// (get) Token: 0x06038414 RID: 230420 RVA: 0x00D5569C File Offset: 0x00D5389C
-		// (set) Token: 0x06038415 RID: 230421 RVA: 0x00D556A4 File Offset: 0x00D538A4
+		// Token: 0x17005B25 RID: 23333
+		// (get) Token: 0x0602D312 RID: 185106 RVA: 0x00CA361C File Offset: 0x00CA181C
+		// (set) Token: 0x0602D313 RID: 185107 RVA: 0x00CA3624 File Offset: 0x00CA1824
 		public ESubStructureDataType SubType { get; set; }
 
-		// Token: 0x1700875F RID: 34655
-		// (get) Token: 0x06038416 RID: 230422 RVA: 0x00D556AD File Offset: 0x00D538AD
-		// (set) Token: 0x06038417 RID: 230423 RVA: 0x00D556B5 File Offset: 0x00D538B5
+		// Token: 0x17005B26 RID: 23334
+		// (get) Token: 0x0602D314 RID: 185108 RVA: 0x00CA362D File Offset: 0x00CA182D
+		// (set) Token: 0x0602D315 RID: 185109 RVA: 0x00CA3635 File Offset: 0x00CA1835
 		public int StructureCount { get; set; }
 
-		// Token: 0x17008760 RID: 34656
-		// (get) Token: 0x06038418 RID: 230424 RVA: 0x00D556BE File Offset: 0x00D538BE
-		// (set) Token: 0x06038419 RID: 230425 RVA: 0x00D556C6 File Offset: 0x00D538C6
+		// Token: 0x17005B27 RID: 23335
+		// (get) Token: 0x0602D316 RID: 185110 RVA: 0x00CA363E File Offset: 0x00CA183E
+		// (set) Token: 0x0602D317 RID: 185111 RVA: 0x00CA3646 File Offset: 0x00CA1846
 		public int LastRoleId { get; set; }
 	}
 }

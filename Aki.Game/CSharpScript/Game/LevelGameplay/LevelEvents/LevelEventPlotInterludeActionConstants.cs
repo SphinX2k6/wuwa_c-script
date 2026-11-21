@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B57 RID: 27479
+	// Token: 0x02005CCF RID: 23759
 	internal static class LevelEventPlotInterludeActionConstants
 	{
-		// Token: 0x04023937 RID: 145719
+		// Token: 0x0401EBD9 RID: 125913
 		public const int INTERLUDE_DELAY_MILLISECOND = 2000;
 	}
 }

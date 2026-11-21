@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200021B RID: 539
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000242 RID: 578
 	public class ICategoryMatchingAnimationBase
 	{
-		// Token: 0x06000936 RID: 2358 RVA: 0x000288F8 File Offset: 0x00026AF8
+		// Token: 0x060009AA RID: 2474 RVA: 0x0002A0B8 File Offset: 0x000282B8
 		private ICategoryMatchingAnimationBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000937 RID: 2359 RVA: 0x00028930 File Offset: 0x00026B30
+		// Token: 0x060009AB RID: 2475 RVA: 0x0002A0F0 File Offset: 0x000282F0
 		public static ICategoryMatchingAnimationBase Create([Nullable(2)] ICategoryMatchingAnimationBase instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000938 RID: 2360 RVA: 0x00028943 File Offset: 0x00026B43
+		// Token: 0x060009AC RID: 2476 RVA: 0x0002A103 File Offset: 0x00028303
 		public static ICategoryMatchingAnimationBase CreateFromSetValue([Nullable(2)] ICategoryMatchingAnimationBase_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000939 RID: 2361 RVA: 0x00028956 File Offset: 0x00026B56
+		// Token: 0x060009AD RID: 2477 RVA: 0x0002A116 File Offset: 0x00028316
 		public ICategoryMatchingAnimationBase_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingAnimationBase_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002D0 RID: 720
-		// (get) Token: 0x0600093A RID: 2362 RVA: 0x00028984 File Offset: 0x00026B84
-		// (set) Token: 0x0600093B RID: 2363 RVA: 0x000289E5 File Offset: 0x00026BE5
+		// Token: 0x170002EF RID: 751
+		// (get) Token: 0x060009AE RID: 2478 RVA: 0x0002A144 File Offset: 0x00028344
+		// (set) Token: 0x060009AF RID: 2479 RVA: 0x0002A1A5 File Offset: 0x000283A5
 		public virtual VectorInfo MatchPos
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D1 RID: 721
-		// (get) Token: 0x0600093C RID: 2364 RVA: 0x000289FC File Offset: 0x00026BFC
-		// (set) Token: 0x0600093D RID: 2365 RVA: 0x00028A5D File Offset: 0x00026C5D
+		// Token: 0x170002F0 RID: 752
+		// (get) Token: 0x060009B0 RID: 2480 RVA: 0x0002A1BC File Offset: 0x000283BC
+		// (set) Token: 0x060009B1 RID: 2481 RVA: 0x0002A21D File Offset: 0x0002841D
 		public virtual VectorInfo MatchRot
 		{
 			get
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002D2 RID: 722
-		// (get) Token: 0x0600093E RID: 2366 RVA: 0x00028A72 File Offset: 0x00026C72
-		// (set) Token: 0x0600093F RID: 2367 RVA: 0x00028A99 File Offset: 0x00026C99
+		// Token: 0x170002F1 RID: 753
+		// (get) Token: 0x060009B2 RID: 2482 RVA: 0x0002A232 File Offset: 0x00028432
+		// (set) Token: 0x060009B3 RID: 2483 RVA: 0x0002A259 File Offset: 0x00028459
 		[Nullable(2)]
 		public virtual string MatchReferenceKey
 		{
@@ -149,24 +147,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400099E RID: 2462
+		// Token: 0x04000A28 RID: 2600
 		[Nullable(2)]
 		protected ICategoryMatchingAnimationBase FbInstance;
 
-		// Token: 0x0400099F RID: 2463
+		// Token: 0x04000A29 RID: 2601
 		[Nullable(2)]
 		protected ICategoryMatchingAnimationBase_SetValue PocoInterface;
 
-		// Token: 0x040009A0 RID: 2464
+		// Token: 0x04000A2A RID: 2602
 		private VectorInfo _MatchPosCache;
 
-		// Token: 0x040009A1 RID: 2465
+		// Token: 0x04000A2B RID: 2603
 		private bool _MatchPosInited;
 
-		// Token: 0x040009A2 RID: 2466
+		// Token: 0x04000A2C RID: 2604
 		private VectorInfo _MatchRotCache;
 
-		// Token: 0x040009A3 RID: 2467
+		// Token: 0x04000A2D RID: 2605
 		private bool _MatchRotInited;
 	}
 }

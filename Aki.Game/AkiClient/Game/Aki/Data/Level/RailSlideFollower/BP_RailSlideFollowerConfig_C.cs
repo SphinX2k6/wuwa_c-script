@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.RailSlideFollower
 {
-	// Token: 0x02003F0A RID: 16138
+	// Token: 0x020031C6 RID: 12742
 	[UnrealObjectPath("/Game/Aki/Data/Level/RailSlideFollower/BP_RailSlideFollowerConfig.BP_RailSlideFollowerConfig_C")]
 	[UnrealStructLayout(120, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 120)]
 	public class BP_RailSlideFollowerConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028F0C RID: 167692 RVA: 0x009B7FBE File Offset: 0x009B61BE
+		// Token: 0x0601F89F RID: 129183 RVA: 0x0092FF92 File Offset: 0x0092E192
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_RailSlideFollowerConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,192 +22,192 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlideFollower
 			return BP_RailSlideFollowerConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028F0D RID: 167693 RVA: 0x009B7FE4 File Offset: 0x009B61E4
+		// Token: 0x0601F8A0 RID: 129184 RVA: 0x0092FFB8 File Offset: 0x0092E1B8
 		public BP_RailSlideFollowerConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_RailSlideFollowerConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028F0E RID: 167694 RVA: 0x009B800C File Offset: 0x009B620C
+		// Token: 0x0601F8A1 RID: 129185 RVA: 0x0092FFE0 File Offset: 0x0092E1E0
 		[NullableContext(1)]
 		public BP_RailSlideFollowerConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_RailSlideFollowerConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006082 RID: 24706
-		// (get) Token: 0x06028F0F RID: 167695 RVA: 0x009B803F File Offset: 0x009B623F
-		// (set) Token: 0x06028F10 RID: 167696 RVA: 0x009B804F File Offset: 0x009B624F
+		// Token: 0x170039ED RID: 14829
+		// (get) Token: 0x0601F8A2 RID: 129186 RVA: 0x00930013 File Offset: 0x0092E213
+		// (set) Token: 0x0601F8A3 RID: 129187 RVA: 0x00930023 File Offset: 0x0092E223
 		public unsafe bool FollowOnRight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowOnRight) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowOnRight) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006083 RID: 24707
-		// (get) Token: 0x06028F11 RID: 167697 RVA: 0x009B8060 File Offset: 0x009B6260
-		// (set) Token: 0x06028F12 RID: 167698 RVA: 0x009B8070 File Offset: 0x009B6270
+		// Token: 0x170039EE RID: 14830
+		// (get) Token: 0x0601F8A4 RID: 129188 RVA: 0x00930034 File Offset: 0x0092E234
+		// (set) Token: 0x0601F8A5 RID: 129189 RVA: 0x00930044 File Offset: 0x0092E244
 		public unsafe int DelayStartFollow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_DelayStartFollow);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_DelayStartFollow) = value;
 			}
 		}
 
-		// Token: 0x17006084 RID: 24708
-		// (get) Token: 0x06028F13 RID: 167699 RVA: 0x009B8081 File Offset: 0x009B6281
-		// (set) Token: 0x06028F14 RID: 167700 RVA: 0x009B8091 File Offset: 0x009B6291
+		// Token: 0x170039EF RID: 14831
+		// (get) Token: 0x0601F8A6 RID: 129190 RVA: 0x00930055 File Offset: 0x0092E255
+		// (set) Token: 0x0601F8A7 RID: 129191 RVA: 0x00930065 File Offset: 0x0092E265
 		public unsafe int FrontDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FrontDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FrontDistance) = value;
 			}
 		}
 
-		// Token: 0x17006085 RID: 24709
-		// (get) Token: 0x06028F15 RID: 167701 RVA: 0x009B80A2 File Offset: 0x009B62A2
-		// (set) Token: 0x06028F16 RID: 167702 RVA: 0x009B80B2 File Offset: 0x009B62B2
+		// Token: 0x170039F0 RID: 14832
+		// (get) Token: 0x0601F8A8 RID: 129192 RVA: 0x00930076 File Offset: 0x0092E276
+		// (set) Token: 0x0601F8A9 RID: 129193 RVA: 0x00930086 File Offset: 0x0092E286
 		public unsafe bool AutoChangeSide
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_AutoChangeSide) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_AutoChangeSide) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006086 RID: 24710
-		// (get) Token: 0x06028F17 RID: 167703 RVA: 0x009B80C3 File Offset: 0x009B62C3
-		// (set) Token: 0x06028F18 RID: 167704 RVA: 0x009B80D3 File Offset: 0x009B62D3
+		// Token: 0x170039F1 RID: 14833
+		// (get) Token: 0x0601F8AA RID: 129194 RVA: 0x00930097 File Offset: 0x0092E297
+		// (set) Token: 0x0601F8AB RID: 129195 RVA: 0x009300A7 File Offset: 0x0092E2A7
 		public unsafe int ToleranceDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_ToleranceDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_ToleranceDistance) = value;
 			}
 		}
 
-		// Token: 0x17006087 RID: 24711
-		// (get) Token: 0x06028F19 RID: 167705 RVA: 0x009B80E4 File Offset: 0x009B62E4
-		// (set) Token: 0x06028F1A RID: 167706 RVA: 0x009B80F8 File Offset: 0x009B62F8
+		// Token: 0x170039F2 RID: 14834
+		// (get) Token: 0x0601F8AC RID: 129196 RVA: 0x009300B8 File Offset: 0x0092E2B8
+		// (set) Token: 0x0601F8AD RID: 129197 RVA: 0x009300CC File Offset: 0x0092E2CC
 		public unsafe FVector2D SideDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_SideDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_SideDistance) = value;
 			}
 		}
 
-		// Token: 0x17006088 RID: 24712
-		// (get) Token: 0x06028F1B RID: 167707 RVA: 0x009B810D File Offset: 0x009B630D
-		// (set) Token: 0x06028F1C RID: 167708 RVA: 0x009B811D File Offset: 0x009B631D
+		// Token: 0x170039F3 RID: 14835
+		// (get) Token: 0x0601F8AE RID: 129198 RVA: 0x009300E1 File Offset: 0x0092E2E1
+		// (set) Token: 0x0601F8AF RID: 129199 RVA: 0x009300F1 File Offset: 0x0092E2F1
 		public unsafe int DynamicDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_DynamicDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_DynamicDistance) = value;
 			}
 		}
 
-		// Token: 0x17006089 RID: 24713
-		// (get) Token: 0x06028F1D RID: 167709 RVA: 0x009B812E File Offset: 0x009B632E
-		// (set) Token: 0x06028F1E RID: 167710 RVA: 0x009B813E File Offset: 0x009B633E
+		// Token: 0x170039F4 RID: 14836
+		// (get) Token: 0x0601F8B0 RID: 129200 RVA: 0x00930102 File Offset: 0x0092E302
+		// (set) Token: 0x0601F8B1 RID: 129201 RVA: 0x00930112 File Offset: 0x0092E312
 		public unsafe int FollowerLerpSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowerLerpSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowerLerpSpeed) = value;
 			}
 		}
 
-		// Token: 0x1700608A RID: 24714
-		// (get) Token: 0x06028F1F RID: 167711 RVA: 0x009B814F File Offset: 0x009B634F
-		// (set) Token: 0x06028F20 RID: 167712 RVA: 0x009B815F File Offset: 0x009B635F
+		// Token: 0x170039F5 RID: 14837
+		// (get) Token: 0x0601F8B2 RID: 129202 RVA: 0x00930123 File Offset: 0x0092E323
+		// (set) Token: 0x0601F8B3 RID: 129203 RVA: 0x00930133 File Offset: 0x0092E333
 		public unsafe float FollowSpeedStepRate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowSpeedStepRate);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideFollowerConfig_C.__PropertyOffset_FollowSpeedStepRate) = value;
 			}
 		}
 
-		// Token: 0x06028F21 RID: 167713 RVA: 0x009B8170 File Offset: 0x009B6370
+		// Token: 0x0601F8B4 RID: 129204 RVA: 0x00930144 File Offset: 0x0092E344
 		protected BP_RailSlideFollowerConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014F0F RID: 85775
+		// Token: 0x04010EAF RID: 69295
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/RailSlideFollower/BP_RailSlideFollowerConfig.BP_RailSlideFollowerConfig_C";
 
-		// Token: 0x04014F10 RID: 85776
+		// Token: 0x04010EB0 RID: 69296
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014F11 RID: 85777
+		// Token: 0x04010EB1 RID: 69297
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014F12 RID: 85778
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010EB2 RID: 69298
+		internal static int __PropertyOffset_FollowOnRight;
 
-		// Token: 0x04014F13 RID: 85779
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010EB3 RID: 69299
+		internal static int __PropertyOffset_DelayStartFollow;
 
-		// Token: 0x04014F14 RID: 85780
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010EB4 RID: 69300
+		internal static int __PropertyOffset_FrontDistance;
 
-		// Token: 0x04014F15 RID: 85781
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010EB5 RID: 69301
+		internal static int __PropertyOffset_AutoChangeSide;
 
-		// Token: 0x04014F16 RID: 85782
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010EB6 RID: 69302
+		internal static int __PropertyOffset_ToleranceDistance;
 
-		// Token: 0x04014F17 RID: 85783
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010EB7 RID: 69303
+		internal static int __PropertyOffset_SideDistance;
 
-		// Token: 0x04014F18 RID: 85784
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010EB8 RID: 69304
+		internal static int __PropertyOffset_DynamicDistance;
 
-		// Token: 0x04014F19 RID: 85785
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010EB9 RID: 69305
+		internal static int __PropertyOffset_FollowerLerpSpeed;
 
-		// Token: 0x04014F1A RID: 85786
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010EBA RID: 69306
+		internal static int __PropertyOffset_FollowSpeedStepRate;
 	}
 }

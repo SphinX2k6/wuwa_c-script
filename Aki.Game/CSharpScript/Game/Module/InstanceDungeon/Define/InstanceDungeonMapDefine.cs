@@ -7,13 +7,13 @@ using CSharpScript.Game.Module.AdventureGuide;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058E3 RID: 22755
+	// Token: 0x020048BB RID: 18619
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonMapDefine : IStaticVariableResetter
 	{
-		// Token: 0x17008AC4 RID: 35524
-		// (get) Token: 0x06039CDA RID: 236762 RVA: 0x00DBB394 File Offset: 0x00DB9594
+		// Token: 0x17005E90 RID: 24208
+		// (get) Token: 0x0602EBFD RID: 191485 RVA: 0x00D0A2EC File Offset: 0x00D084EC
 		public static Dictionary<EDungeonSubType, InstanceDetectItemGetterData> InstanceDetectItemGetterDataMap
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			}
 		}
 
-		// Token: 0x17008AC5 RID: 35525
-		// (get) Token: 0x06039CDB RID: 236763 RVA: 0x00DBB442 File Offset: 0x00DB9642
+		// Token: 0x17005E91 RID: 24209
+		// (get) Token: 0x0602EBFE RID: 191486 RVA: 0x00D0A39A File Offset: 0x00D0859A
 		public static Dictionary<EInstanceEntranceFlowType, InstanceDungeonEntranceViewGetterData> InstanceDungeonEntranceViewGetterDataMap
 		{
 			get
@@ -57,25 +57,25 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			}
 		}
 
-		// Token: 0x06039CDC RID: 236764 RVA: 0x00DBB47D File Offset: 0x00DB967D
+		// Token: 0x0602EBFF RID: 191487 RVA: 0x00D0A3D5 File Offset: 0x00D085D5
 		static InstanceDungeonMapDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonMapDefine.CreateStaticDefaultValue), new Action(InstanceDungeonMapDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06039CDD RID: 236765 RVA: 0x00DBB49C File Offset: 0x00DB969C
+		// Token: 0x0602EC00 RID: 191488 RVA: 0x00D0A3F4 File Offset: 0x00D085F4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039CDE RID: 236766 RVA: 0x00DBB49E File Offset: 0x00DB969E
+		// Token: 0x0602EC01 RID: 191489 RVA: 0x00D0A3F6 File Offset: 0x00D085F6
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonMapDefine._InstanceDetectItemGetterDataMap = null;
 			InstanceDungeonMapDefine._InstanceDungeonEntranceViewGetterDataMap = null;
 		}
 
-		// Token: 0x0401E2C7 RID: 123591
+		// Token: 0x04018D64 RID: 101732
 		[Nullable(new byte[]
 		{
 			2,
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 		})]
 		private static Dictionary<EDungeonSubType, InstanceDetectItemGetterData> _InstanceDetectItemGetterDataMap;
 
-		// Token: 0x0401E2C8 RID: 123592
+		// Token: 0x04018D65 RID: 101733
 		[Nullable(new byte[]
 		{
 			2,

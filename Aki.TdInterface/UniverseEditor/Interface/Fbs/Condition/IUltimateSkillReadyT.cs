@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D0A RID: 19722
+	// Token: 0x02005206 RID: 20998
 	public class IUltimateSkillReadyT
 	{
-		// Token: 0x17008F10 RID: 36624
-		// (get) Token: 0x0601F4E0 RID: 128224 RVA: 0x0045DCAA File Offset: 0x0045BEAA
-		// (set) Token: 0x0601F4E1 RID: 128225 RVA: 0x0045DCB2 File Offset: 0x0045BEB2
+		// Token: 0x17009649 RID: 38473
+		// (get) Token: 0x06021125 RID: 135461 RVA: 0x00491BFA File Offset: 0x0048FDFA
+		// (set) Token: 0x06021126 RID: 135462 RVA: 0x00491C02 File Offset: 0x0048FE02
 		public ESkillReadyType Type { get; set; }
 
-		// Token: 0x0601F4E2 RID: 128226 RVA: 0x0045DCBB File Offset: 0x0045BEBB
+		// Token: 0x06021127 RID: 135463 RVA: 0x00491C0B File Offset: 0x0048FE0B
 		public IUltimateSkillReadyT()
 		{
 			this.Type = ESkillReadyType.UltimateSkill;

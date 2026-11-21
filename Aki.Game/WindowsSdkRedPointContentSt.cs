@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02000E57 RID: 3671
+// Token: 0x0200030C RID: 780
 public class WindowsSdkRedPointContentSt
 {
-	// Token: 0x040028C4 RID: 10436
+	// Token: 0x0400295F RID: 10591
 	public bool showRed;
 }

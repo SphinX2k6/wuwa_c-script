@@ -4,24 +4,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A8C RID: 27276
+	// Token: 0x02005BE9 RID: 23529
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActorBinding
 	{
-		// Token: 0x06043C75 RID: 277621 RVA: 0x010970C8 File Offset: 0x010952C8
+		// Token: 0x06039CC3 RID: 236739 RVA: 0x0103B91C File Offset: 0x01039B1C
 		public ActorBinding(AActor Actor)
 		{
 			this.Actor = Actor;
 		}
 
-		// Token: 0x06043C76 RID: 277622 RVA: 0x010970D7 File Offset: 0x010952D7
+		// Token: 0x06039CC4 RID: 236740 RVA: 0x0103B92B File Offset: 0x01039B2B
 		public bool IsValid()
 		{
 			return this.Actor.IsValid();
 		}
 
-		// Token: 0x0402369A RID: 145050
+		// Token: 0x0401E88C RID: 125068
 		public readonly AActor Actor;
 	}
 }

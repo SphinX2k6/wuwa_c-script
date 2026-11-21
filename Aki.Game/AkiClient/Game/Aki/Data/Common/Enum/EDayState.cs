@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Common.Enum
 {
-	// Token: 0x02003FA6 RID: 16294
+	// Token: 0x0200322F RID: 12847
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Common/Enum/EDayState.EDayState")]
 	public enum EDayState : byte
 	{
-		// Token: 0x040155CC RID: 87500
+		// Token: 0x040113F1 RID: 70641
 		白天,
-		// Token: 0x040155CD RID: 87501
+		// Token: 0x040113F2 RID: 70642
 		晚上,
-		// Token: 0x040155CE RID: 87502
+		// Token: 0x040113F3 RID: 70643
 		EDayState_MAX
 	}
 }

@@ -7,12 +7,12 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x020027B8 RID: 10168
+// Token: 0x02001D33 RID: 7475
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleDataBase
 {
-	// Token: 0x06014E9F RID: 85663 RVA: 0x0054FAB0 File Offset: 0x0054DCB0
+	// Token: 0x0601289E RID: 75934 RVA: 0x0057A7D4 File Offset: 0x005789D4
 	public RoleDataBase(int id)
 	{
 		this.Id = id;
@@ -20,7 +20,7 @@ public abstract class RoleDataBase
 		this.InitModelData();
 	}
 
-	// Token: 0x06014EA0 RID: 85664 RVA: 0x0054FB70 File Offset: 0x0054DD70
+	// Token: 0x0601289F RID: 75935 RVA: 0x0057A894 File Offset: 0x00578A94
 	private void InitModelData()
 	{
 		int roleId = this.GetRoleId();
@@ -33,55 +33,55 @@ public abstract class RoleDataBase
 		}
 	}
 
-	// Token: 0x06014EA1 RID: 85665 RVA: 0x0054FBC3 File Offset: 0x0054DDC3
+	// Token: 0x060128A0 RID: 75936 RVA: 0x0057A8E7 File Offset: 0x00578AE7
 	public RoleLevelData GetLevelData()
 	{
 		return (RoleLevelData)this.ModelDataMap[typeof(RoleLevelData)];
 	}
 
-	// Token: 0x06014EA2 RID: 85666 RVA: 0x0054FBDF File Offset: 0x0054DDDF
+	// Token: 0x060128A1 RID: 75937 RVA: 0x0057A903 File Offset: 0x00578B03
 	public RoleAttributeData GetAttributeData()
 	{
 		return (RoleAttributeData)this.ModelDataMap[typeof(RoleAttributeData)];
 	}
 
-	// Token: 0x06014EA3 RID: 85667 RVA: 0x0054FBFB File Offset: 0x0054DDFB
+	// Token: 0x060128A2 RID: 75938 RVA: 0x0057A91F File Offset: 0x00578B1F
 	public RoleSkillData GetSkillData()
 	{
 		return (RoleSkillData)this.ModelDataMap[typeof(RoleSkillData)];
 	}
 
-	// Token: 0x06014EA4 RID: 85668 RVA: 0x0054FC17 File Offset: 0x0054DE17
+	// Token: 0x060128A3 RID: 75939 RVA: 0x0057A93B File Offset: 0x00578B3B
 	public RoleResonanceData GetResonanceData()
 	{
 		return (RoleResonanceData)this.ModelDataMap[typeof(RoleResonanceData)];
 	}
 
-	// Token: 0x06014EA5 RID: 85669 RVA: 0x0054FC33 File Offset: 0x0054DE33
+	// Token: 0x060128A4 RID: 75940 RVA: 0x0057A957 File Offset: 0x00578B57
 	public RolePhantomData GetPhantomData()
 	{
 		return (RolePhantomData)this.ModelDataMap[typeof(RolePhantomData)];
 	}
 
-	// Token: 0x06014EA6 RID: 85670 RVA: 0x0054FC4F File Offset: 0x0054DE4F
+	// Token: 0x060128A5 RID: 75941 RVA: 0x0057A973 File Offset: 0x00578B73
 	public RoleAudioData GetAudioData()
 	{
 		return (RoleAudioData)this.ModelDataMap[typeof(RoleAudioData)];
 	}
 
-	// Token: 0x06014EA7 RID: 85671 RVA: 0x0054FC6B File Offset: 0x0054DE6B
+	// Token: 0x060128A6 RID: 75942 RVA: 0x0057A98F File Offset: 0x00578B8F
 	public RoleFavorData GetFavorData()
 	{
 		return (RoleFavorData)this.ModelDataMap[typeof(RoleFavorData)];
 	}
 
-	// Token: 0x06014EA8 RID: 85672 RVA: 0x0054FC87 File Offset: 0x0054DE87
+	// Token: 0x060128A7 RID: 75943 RVA: 0x0057A9AB File Offset: 0x00578BAB
 	public void SetRoleSkinId(int skinId)
 	{
 		this.SkinId = skinId;
 	}
 
-	// Token: 0x06014EA9 RID: 85673 RVA: 0x0054FC90 File Offset: 0x0054DE90
+	// Token: 0x060128A8 RID: 75944 RVA: 0x0057A9B4 File Offset: 0x00578BB4
 	public virtual int GetRoleSkinId()
 	{
 		if (this.SkinId <= 0)
@@ -91,39 +91,39 @@ public abstract class RoleDataBase
 		return this.SkinId;
 	}
 
-	// Token: 0x06014EAA RID: 85674 RVA: 0x0054FCBB File Offset: 0x0054DEBB
+	// Token: 0x060128A9 RID: 75945 RVA: 0x0057A9DF File Offset: 0x00578BDF
 	public void SetBackgroundMusicEnabled(bool bEnable)
 	{
 		this.BackgroundMusicEnable = bEnable;
 	}
 
-	// Token: 0x06014EAB RID: 85675 RVA: 0x0054FCC4 File Offset: 0x0054DEC4
+	// Token: 0x060128AA RID: 75946 RVA: 0x0057A9E8 File Offset: 0x00578BE8
 	public bool GetBackgroundMusicEnabled()
 	{
 		return this.BackgroundMusicEnable;
 	}
 
-	// Token: 0x06014EAC RID: 85676 RVA: 0x0054FCCC File Offset: 0x0054DECC
+	// Token: 0x060128AB RID: 75947 RVA: 0x0057A9F0 File Offset: 0x00578BF0
 	public ElementInfo? GetElementInfo()
 	{
 		RoleInfo roleConfig = this.GetRoleConfig();
 		return ElementInfoConfig.Instance.GetElementInfo(roleConfig.ElementId);
 	}
 
-	// Token: 0x06014EAD RID: 85677 RVA: 0x0054FCF4 File Offset: 0x0054DEF4
+	// Token: 0x060128AC RID: 75948 RVA: 0x0057AA18 File Offset: 0x00578C18
 	public RoleQualityInfo GetQualityConfig()
 	{
 		RoleInfo roleConfig = this.GetRoleConfig();
 		return RoleConfig.Instance.GetRoleQualityInfo(roleConfig.QualityId).Value;
 	}
 
-	// Token: 0x06014EAE RID: 85678 RVA: 0x0054FD24 File Offset: 0x0054DF24
+	// Token: 0x060128AD RID: 75949 RVA: 0x0057AA48 File Offset: 0x00578C48
 	public RoleInfo GetRoleConfig()
 	{
 		return RoleConfig.Instance.GetRoleConfig(this.GetRoleId()).Value;
 	}
 
-	// Token: 0x06014EAF RID: 85679 RVA: 0x0054FD4C File Offset: 0x0054DF4C
+	// Token: 0x060128AE RID: 75950 RVA: 0x0057AA70 File Offset: 0x00578C70
 	[NullableContext(2)]
 	public IReadOnlyList<SkillTree> GetRoleSkillTreeConfig()
 	{
@@ -135,13 +135,13 @@ public abstract class RoleDataBase
 		return RoleSkillConfig.Instance.GetSkillTreeNodeListByGroupId(roleConfig.Value.SkillTreeGroupId);
 	}
 
-	// Token: 0x06014EB0 RID: 85680 RVA: 0x0054FD8E File Offset: 0x0054DF8E
+	// Token: 0x060128AF RID: 75951 RVA: 0x0057AAB2 File Offset: 0x00578CB2
 	public int GetDataId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06014EB1 RID: 85681 RVA: 0x0054FD98 File Offset: 0x0054DF98
+	// Token: 0x060128B0 RID: 75952 RVA: 0x0057AABC File Offset: 0x00578CBC
 	public List<AttrListScrollData> GetShowAttrList()
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -183,7 +183,7 @@ public abstract class RoleDataBase
 		return list;
 	}
 
-	// Token: 0x06014EB2 RID: 85682 RVA: 0x0054FEE8 File Offset: 0x0054E0E8
+	// Token: 0x060128B1 RID: 75953 RVA: 0x0057AC0C File Offset: 0x00578E0C
 	private FormationAttrListScrollData[] GetTeamAttribute()
 	{
 		List<FormationAttrListScrollData> list = new List<FormationAttrListScrollData>();
@@ -206,7 +206,7 @@ public abstract class RoleDataBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06014EB3 RID: 85683 RVA: 0x0054FFB0 File Offset: 0x0054E1B0
+	// Token: 0x060128B2 RID: 75954 RVA: 0x0057ACD4 File Offset: 0x00578ED4
 	public unsafe virtual float GetShowAttributeValueById(int id)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)this.Id, new GetTeamItemOptions
@@ -269,7 +269,7 @@ public abstract class RoleDataBase
 		return num;
 	}
 
-	// Token: 0x06014EB4 RID: 85684 RVA: 0x005500FC File Offset: 0x0054E2FC
+	// Token: 0x060128B3 RID: 75955 RVA: 0x0057AE20 File Offset: 0x00579020
 	public float GetBaseAttributeValueById(int id)
 	{
 		SceneTeamItem teamItem = SceneTeamModel.Instance.GetTeamItem((long)this.Id, new GetTeamItemOptions
@@ -290,7 +290,7 @@ public abstract class RoleDataBase
 		return result;
 	}
 
-	// Token: 0x06014EB5 RID: 85685 RVA: 0x0055016C File Offset: 0x0054E36C
+	// Token: 0x060128B4 RID: 75956 RVA: 0x0057AE90 File Offset: 0x00579090
 	protected int SortAttrList(AttrListScrollData dataA, AttrListScrollData dataB)
 	{
 		bool flag = dataA.Priority != 0;
@@ -310,47 +310,47 @@ public abstract class RoleDataBase
 		return dataA.Id - dataB.Id;
 	}
 
-	// Token: 0x06014EB6 RID: 85686
+	// Token: 0x060128B5 RID: 75957
 	public abstract bool IsTrialRole();
 
-	// Token: 0x06014EB7 RID: 85687
+	// Token: 0x060128B6 RID: 75958
 	public abstract bool IsOnlineRole();
 
-	// Token: 0x06014EB8 RID: 85688
+	// Token: 0x060128B7 RID: 75959
 	public abstract int GetRoleId();
 
-	// Token: 0x06014EB9 RID: 85689
+	// Token: 0x060128B8 RID: 75960
 	public abstract string GetName(int? playerId = null);
 
-	// Token: 0x06014EBA RID: 85690
+	// Token: 0x060128B9 RID: 75961
 	public abstract bool CanChangeName();
 
-	// Token: 0x06014EBB RID: 85691
+	// Token: 0x060128BA RID: 75962
 	public abstract int GetRoleCreateTime();
 
-	// Token: 0x06014EBC RID: 85692
+	// Token: 0x060128BB RID: 75963
 	public abstract bool GetIsNew();
 
-	// Token: 0x06014EBD RID: 85693 RVA: 0x005501B7 File Offset: 0x0054E3B7
+	// Token: 0x060128BC RID: 75964 RVA: 0x0057AEDB File Offset: 0x005790DB
 	public virtual bool TryRemoveNewFlag()
 	{
 		return false;
 	}
 
-	// Token: 0x04009D17 RID: 40215
+	// Token: 0x0400A0FA RID: 41210
 	protected int Id;
 
-	// Token: 0x04009D18 RID: 40216
+	// Token: 0x0400A0FB RID: 41211
 	protected string Name;
 
-	// Token: 0x04009D19 RID: 40217
+	// Token: 0x0400A0FC RID: 41212
 	[Nullable(2)]
 	protected SModelConfig RoleModelConfig;
 
-	// Token: 0x04009D1A RID: 40218
+	// Token: 0x0400A0FD RID: 41213
 	private readonly Dictionary<Type, RoleModuleDataBase> ModelDataMap = new Dictionary<Type, RoleModuleDataBase>();
 
-	// Token: 0x04009D1B RID: 40219
+	// Token: 0x0400A0FE RID: 41214
 	private readonly Type[] ModelDataList = new Type[]
 	{
 		typeof(RoleLevelData),
@@ -362,9 +362,9 @@ public abstract class RoleDataBase
 		typeof(RoleFavorData)
 	};
 
-	// Token: 0x04009D1C RID: 40220
+	// Token: 0x0400A0FF RID: 41215
 	private int SkinId = -1;
 
-	// Token: 0x04009D1D RID: 40221
+	// Token: 0x0400A100 RID: 41216
 	private bool BackgroundMusicEnable = true;
 }

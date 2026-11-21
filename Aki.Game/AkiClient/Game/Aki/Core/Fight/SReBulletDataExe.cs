@@ -7,82 +7,82 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02004012 RID: 16402
+	// Token: 0x02003273 RID: 12915
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/SReBulletDataExe.SReBulletDataExe")]
 	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 216)]
 	public class SReBulletDataExe : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602A05F RID: 172127 RVA: 0x009D38E4 File Offset: 0x009D1AE4
+		// Token: 0x06020410 RID: 132112 RVA: 0x00941178 File Offset: 0x0093F378
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SReBulletDataExe._ScriptStructPtr != 0) ? SReBulletDataExe._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Core/Fight/SReBulletDataExe.SReBulletDataExe", ref SReBulletDataExe._ScriptStructPtr);
 		}
 
-		// Token: 0x17006658 RID: 26200
-		// (get) Token: 0x0602A060 RID: 172128 RVA: 0x009D3908 File Offset: 0x009D1B08
-		// (set) Token: 0x0602A061 RID: 172129 RVA: 0x009D391C File Offset: 0x009D1B1C
+		// Token: 0x17003E1F RID: 15903
+		// (get) Token: 0x06020411 RID: 132113 RVA: 0x0094119C File Offset: 0x0093F39C
+		// (set) Token: 0x06020412 RID: 132114 RVA: 0x009411B0 File Offset: 0x0093F3B0
 		public unsafe FGameplayTag 生成时对攻击者发射GameplayEvent标签
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_生成时对攻击者发射GameplayEvent标签);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_生成时对攻击者发射GameplayEvent标签) = value;
 			}
 		}
 
-		// Token: 0x17006659 RID: 26201
-		// (get) Token: 0x0602A062 RID: 172130 RVA: 0x009D3931 File Offset: 0x009D1B31
-		// (set) Token: 0x0602A063 RID: 172131 RVA: 0x009D3945 File Offset: 0x009D1B45
+		// Token: 0x17003E20 RID: 15904
+		// (get) Token: 0x06020413 RID: 132115 RVA: 0x009411C5 File Offset: 0x0093F3C5
+		// (set) Token: 0x06020414 RID: 132116 RVA: 0x009411D9 File Offset: 0x0093F3D9
 		public unsafe FGameplayTag 命中后对攻击者发射GameplayEvent标签
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对攻击者发射GameplayEvent标签);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对攻击者发射GameplayEvent标签) = value;
 			}
 		}
 
-		// Token: 0x1700665A RID: 26202
-		// (get) Token: 0x0602A064 RID: 172132 RVA: 0x009D395A File Offset: 0x009D1B5A
-		// (set) Token: 0x0602A065 RID: 172133 RVA: 0x009D396E File Offset: 0x009D1B6E
+		// Token: 0x17003E21 RID: 15905
+		// (get) Token: 0x06020415 RID: 132117 RVA: 0x009411EE File Offset: 0x0093F3EE
+		// (set) Token: 0x06020416 RID: 132118 RVA: 0x00941202 File Offset: 0x0093F402
 		public unsafe FGameplayTag 命中后对受击者发射GameplayEvent标签
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对受击者发射GameplayEvent标签);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对受击者发射GameplayEvent标签) = value;
 			}
 		}
 
-		// Token: 0x1700665B RID: 26203
-		// (get) Token: 0x0602A066 RID: 172134 RVA: 0x009D3983 File Offset: 0x009D1B83
-		// (set) Token: 0x0602A067 RID: 172135 RVA: 0x009D3997 File Offset: 0x009D1B97
+		// Token: 0x17003E22 RID: 15906
+		// (get) Token: 0x06020417 RID: 132119 RVA: 0x00941217 File Offset: 0x0093F417
+		// (set) Token: 0x06020418 RID: 132120 RVA: 0x0094122B File Offset: 0x0093F42B
 		public unsafe FGameplayTag 结束时对攻击者发射GameplayEvent标签
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_结束时对攻击者发射GameplayEvent标签);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_结束时对攻击者发射GameplayEvent标签) = value;
 			}
 		}
 
-		// Token: 0x1700665C RID: 26204
-		// (get) Token: 0x0602A068 RID: 172136 RVA: 0x009D39AC File Offset: 0x009D1BAC
-		// (set) Token: 0x0602A069 RID: 172137 RVA: 0x009D39EF File Offset: 0x009D1BEF
+		// Token: 0x17003E23 RID: 15907
+		// (get) Token: 0x06020419 RID: 132121 RVA: 0x00941240 File Offset: 0x0093F440
+		// (set) Token: 0x0602041A RID: 132122 RVA: 0x00941283 File Offset: 0x0093F483
 		public TArray<long> 命中后对攻击者应用GE的Id
 		{
 			get
@@ -91,7 +91,7 @@ namespace AkiClient.Game.Aki.Core.Fight
 				TArray<long> result;
 				if ((result = this._命中后对攻击者应用GE的Id) == null)
 				{
-					result = (this._命中后对攻击者应用GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._命中后对攻击者应用GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对攻击者应用GE的Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -101,9 +101,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			}
 		}
 
-		// Token: 0x1700665D RID: 26205
-		// (get) Token: 0x0602A06A RID: 172138 RVA: 0x009D3A00 File Offset: 0x009D1C00
-		// (set) Token: 0x0602A06B RID: 172139 RVA: 0x009D3A43 File Offset: 0x009D1C43
+		// Token: 0x17003E24 RID: 15908
+		// (get) Token: 0x0602041B RID: 132123 RVA: 0x00941294 File Offset: 0x0093F494
+		// (set) Token: 0x0602041C RID: 132124 RVA: 0x009412D7 File Offset: 0x0093F4D7
 		public TArray<long> 命中后对受击者应用GE的Id
 		{
 			get
@@ -112,7 +112,7 @@ namespace AkiClient.Game.Aki.Core.Fight
 				TArray<long> result;
 				if ((result = this._命中后对受击者应用GE的Id) == null)
 				{
-					result = (this._命中后对受击者应用GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._命中后对受击者应用GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对受击者应用GE的Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -122,9 +122,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			}
 		}
 
-		// Token: 0x1700665E RID: 26206
-		// (get) Token: 0x0602A06C RID: 172140 RVA: 0x009D3A54 File Offset: 0x009D1C54
-		// (set) Token: 0x0602A06D RID: 172141 RVA: 0x009D3A97 File Offset: 0x009D1C97
+		// Token: 0x17003E25 RID: 15909
+		// (get) Token: 0x0602041D RID: 132125 RVA: 0x009412E8 File Offset: 0x0093F4E8
+		// (set) Token: 0x0602041E RID: 132126 RVA: 0x0094132B File Offset: 0x0093F52B
 		public TArray<long> 能量恢复类GE数组的Id
 		{
 			get
@@ -133,7 +133,7 @@ namespace AkiClient.Game.Aki.Core.Fight
 				TArray<long> result;
 				if ((result = this._能量恢复类GE数组的Id) == null)
 				{
-					result = (this._能量恢复类GE数组的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._能量恢复类GE数组的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_能量恢复类GE数组的Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -143,9 +143,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			}
 		}
 
-		// Token: 0x1700665F RID: 26207
-		// (get) Token: 0x0602A06E RID: 172142 RVA: 0x009D3AA8 File Offset: 0x009D1CA8
-		// (set) Token: 0x0602A06F RID: 172143 RVA: 0x009D3AEB File Offset: 0x009D1CEB
+		// Token: 0x17003E26 RID: 15910
+		// (get) Token: 0x0602041F RID: 132127 RVA: 0x0094133C File Offset: 0x0093F53C
+		// (set) Token: 0x06020420 RID: 132128 RVA: 0x0094137F File Offset: 0x0093F57F
 		public TArray<long> 命中后对在场上角色应用的GE的Id
 		{
 			get
@@ -154,7 +154,7 @@ namespace AkiClient.Game.Aki.Core.Fight
 				TArray<long> result;
 				if ((result = this._命中后对在场上角色应用的GE的Id) == null)
 				{
-					result = (this._命中后对在场上角色应用的GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._命中后对在场上角色应用的GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_命中后对在场上角色应用的GE的Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -164,9 +164,9 @@ namespace AkiClient.Game.Aki.Core.Fight
 			}
 		}
 
-		// Token: 0x17006660 RID: 26208
-		// (get) Token: 0x0602A070 RID: 172144 RVA: 0x009D3AFC File Offset: 0x009D1CFC
-		// (set) Token: 0x0602A071 RID: 172145 RVA: 0x009D3B3F File Offset: 0x009D1D3F
+		// Token: 0x17003E27 RID: 15911
+		// (get) Token: 0x06020421 RID: 132129 RVA: 0x00941390 File Offset: 0x0093F590
+		// (set) Token: 0x06020422 RID: 132130 RVA: 0x009413D3 File Offset: 0x0093F5D3
 		public TArray<long> 受击对象进入应用的GE的Id
 		{
 			get
@@ -175,7 +175,7 @@ namespace AkiClient.Game.Aki.Core.Fight
 				TArray<long> result;
 				if ((result = this._受击对象进入应用的GE的Id) == null)
 				{
-					result = (this._受击对象进入应用的GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_8, base.MemoryOwner ?? this));
+					result = (this._受击对象进入应用的GE的Id = new TArray<long>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_受击对象进入应用的GE的Id, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -185,24 +185,24 @@ namespace AkiClient.Game.Aki.Core.Fight
 			}
 		}
 
-		// Token: 0x17006661 RID: 26209
-		// (get) Token: 0x0602A072 RID: 172146 RVA: 0x009D3B4D File Offset: 0x009D1D4D
-		// (set) Token: 0x0602A073 RID: 172147 RVA: 0x009D3B5D File Offset: 0x009D1D5D
+		// Token: 0x17003E28 RID: 15912
+		// (get) Token: 0x06020423 RID: 132131 RVA: 0x009413E1 File Offset: 0x0093F5E1
+		// (set) Token: 0x06020424 RID: 132132 RVA: 0x009413F1 File Offset: 0x0093F5F1
 		public unsafe bool 等待回包过程中不重复触发进入GE
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_等待回包过程中不重复触发进入GE) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_等待回包过程中不重复触发进入GE) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006662 RID: 26210
-		// (get) Token: 0x0602A074 RID: 172148 RVA: 0x009D3B70 File Offset: 0x009D1D70
-		// (set) Token: 0x0602A075 RID: 172149 RVA: 0x009D3BB3 File Offset: 0x009D1DB3
+		// Token: 0x17003E29 RID: 15913
+		// (get) Token: 0x06020425 RID: 132133 RVA: 0x00941404 File Offset: 0x0093F604
+		// (set) Token: 0x06020426 RID: 132134 RVA: 0x00941447 File Offset: 0x0093F647
 		public FGameplayTagContainer 受击对象进入添加Tag
 		{
 			get
@@ -211,146 +211,129 @@ namespace AkiClient.Game.Aki.Core.Fight
 				FGameplayTagContainer result;
 				if ((result = this._受击对象进入添加Tag) == null)
 				{
-					result = (this._受击对象进入添加Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_10, base.MemoryOwner ?? this));
+					result = (this._受击对象进入添加Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_受击对象进入添加Tag, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_10, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_受击对象进入添加Tag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006663 RID: 26211
-		// (get) Token: 0x0602A076 RID: 172150 RVA: 0x009D3BD4 File Offset: 0x009D1DD4
-		// (set) Token: 0x0602A077 RID: 172151 RVA: 0x009D3BF3 File Offset: 0x009D1DF3
+		// Token: 0x17003E2A RID: 15914
+		// (get) Token: 0x06020427 RID: 132135 RVA: 0x00941468 File Offset: 0x0093F668
+		// (set) Token: 0x06020428 RID: 132136 RVA: 0x00941487 File Offset: 0x0093F687
 		public TSoftObjectPtr<UKuroBpDataAssetGroup> GB组
 		{
 			get
 			{
-				return new TSoftObjectPtr<UKuroBpDataAssetGroup>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_11, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UKuroBpDataAssetGroup>(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_GB组, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_11, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SReBulletDataExe.__PropertyOffset_GB组, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x0602A078 RID: 172152 RVA: 0x009D3C18 File Offset: 0x009D1E18
+		// Token: 0x06020429 RID: 132137 RVA: 0x009414AC File Offset: 0x0093F6AC
 		public SReBulletDataExe()
 		{
 		}
 
-		// Token: 0x0602A079 RID: 172153 RVA: 0x009D3C20 File Offset: 0x009D1E20
-		public SReBulletDataExe(FGameplayTag 生成时对攻击者发射GameplayEvent标签, FGameplayTag 命中后对攻击者发射GameplayEvent标签, FGameplayTag 命中后对受击者发射GameplayEvent标签, FGameplayTag 结束时对攻击者发射GameplayEvent标签, TArray<long> 命中后对攻击者应用GE的Id, TArray<long> 命中后对受击者应用GE的Id, TArray<long> 能量恢复类GE数组的Id, TArray<long> 命中后对在场上角色应用的GE的Id, TArray<long> 受击对象进入应用的GE的Id, bool 等待回包过程中不重复触发进入GE, FGameplayTagContainer 受击对象进入添加Tag, TSoftObjectPtr<UKuroBpDataAssetGroup> GB组)
-		{
-			this.生成时对攻击者发射GameplayEvent标签 = 生成时对攻击者发射GameplayEvent标签;
-			this.命中后对攻击者发射GameplayEvent标签 = 命中后对攻击者发射GameplayEvent标签;
-			this.命中后对受击者发射GameplayEvent标签 = 命中后对受击者发射GameplayEvent标签;
-			this.结束时对攻击者发射GameplayEvent标签 = 结束时对攻击者发射GameplayEvent标签;
-			this.命中后对攻击者应用GE的Id = 命中后对攻击者应用GE的Id;
-			this.命中后对受击者应用GE的Id = 命中后对受击者应用GE的Id;
-			this.能量恢复类GE数组的Id = 能量恢复类GE数组的Id;
-			this.命中后对在场上角色应用的GE的Id = 命中后对在场上角色应用的GE的Id;
-			this.受击对象进入应用的GE的Id = 受击对象进入应用的GE的Id;
-			this.等待回包过程中不重复触发进入GE = 等待回包过程中不重复触发进入GE;
-			this.受击对象进入添加Tag = 受击对象进入添加Tag;
-			this.GB组 = GB组;
-		}
-
-		// Token: 0x0602A07A RID: 172154 RVA: 0x009D3C90 File Offset: 0x009D1E90
+		// Token: 0x0602042A RID: 132138 RVA: 0x009414B4 File Offset: 0x0093F6B4
 		protected override IntPtr GetUStructPtr()
 		{
 			return SReBulletDataExe.StaticStruct();
 		}
 
-		// Token: 0x0602A07B RID: 172155 RVA: 0x009D3C9C File Offset: 0x009D1E9C
+		// Token: 0x0602042B RID: 132139 RVA: 0x009414C0 File Offset: 0x0093F6C0
 		[NullableContext(2)]
 		public SReBulletDataExe(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602A07C RID: 172156 RVA: 0x009D3CA6 File Offset: 0x009D1EA6
+		// Token: 0x0602042C RID: 132140 RVA: 0x009414CA File Offset: 0x0093F6CA
 		public SReBulletDataExe(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602A07D RID: 172157 RVA: 0x009D3CB1 File Offset: 0x009D1EB1
+		// Token: 0x0602042D RID: 132141 RVA: 0x009414D5 File Offset: 0x0093F6D5
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SReBulletDataExe(Pointer, false, true);
 		}
 
-		// Token: 0x0602A07E RID: 172158 RVA: 0x009D3CBB File Offset: 0x009D1EBB
+		// Token: 0x0602042E RID: 132142 RVA: 0x009414DF File Offset: 0x0093F6DF
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SReBulletDataExe(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015A3F RID: 88639
+		// Token: 0x04011692 RID: 71314
 		public const string __ObjectPath = "/Game/Aki/Core/Fight/SReBulletDataExe.SReBulletDataExe";
 
-		// Token: 0x04015A40 RID: 88640
+		// Token: 0x04011693 RID: 71315
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015A41 RID: 88641
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011694 RID: 71316
+		internal static int __PropertyOffset_生成时对攻击者发射GameplayEvent标签;
 
-		// Token: 0x04015A42 RID: 88642
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011695 RID: 71317
+		internal static int __PropertyOffset_命中后对攻击者发射GameplayEvent标签;
 
-		// Token: 0x04015A43 RID: 88643
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011696 RID: 71318
+		internal static int __PropertyOffset_命中后对受击者发射GameplayEvent标签;
 
-		// Token: 0x04015A44 RID: 88644
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011697 RID: 71319
+		internal static int __PropertyOffset_结束时对攻击者发射GameplayEvent标签;
 
-		// Token: 0x04015A45 RID: 88645
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011698 RID: 71320
+		internal static int __PropertyOffset_命中后对攻击者应用GE的Id;
 
-		// Token: 0x04015A46 RID: 88646
+		// Token: 0x04011699 RID: 71321
 		[Nullable(2)]
 		private TArray<long> _命中后对攻击者应用GE的Id;
 
-		// Token: 0x04015A47 RID: 88647
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401169A RID: 71322
+		internal static int __PropertyOffset_命中后对受击者应用GE的Id;
 
-		// Token: 0x04015A48 RID: 88648
+		// Token: 0x0401169B RID: 71323
 		[Nullable(2)]
 		private TArray<long> _命中后对受击者应用GE的Id;
 
-		// Token: 0x04015A49 RID: 88649
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401169C RID: 71324
+		internal static int __PropertyOffset_能量恢复类GE数组的Id;
 
-		// Token: 0x04015A4A RID: 88650
+		// Token: 0x0401169D RID: 71325
 		[Nullable(2)]
 		private TArray<long> _能量恢复类GE数组的Id;
 
-		// Token: 0x04015A4B RID: 88651
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401169E RID: 71326
+		internal static int __PropertyOffset_命中后对在场上角色应用的GE的Id;
 
-		// Token: 0x04015A4C RID: 88652
+		// Token: 0x0401169F RID: 71327
 		[Nullable(2)]
 		private TArray<long> _命中后对在场上角色应用的GE的Id;
 
-		// Token: 0x04015A4D RID: 88653
-		internal static int __PropertyOffset_8;
+		// Token: 0x040116A0 RID: 71328
+		internal static int __PropertyOffset_受击对象进入应用的GE的Id;
 
-		// Token: 0x04015A4E RID: 88654
+		// Token: 0x040116A1 RID: 71329
 		[Nullable(2)]
 		private TArray<long> _受击对象进入应用的GE的Id;
 
-		// Token: 0x04015A4F RID: 88655
-		internal static int __PropertyOffset_9;
+		// Token: 0x040116A2 RID: 71330
+		internal static int __PropertyOffset_等待回包过程中不重复触发进入GE;
 
-		// Token: 0x04015A50 RID: 88656
-		internal static int __PropertyOffset_10;
+		// Token: 0x040116A3 RID: 71331
+		internal static int __PropertyOffset_受击对象进入添加Tag;
 
-		// Token: 0x04015A51 RID: 88657
+		// Token: 0x040116A4 RID: 71332
 		[Nullable(2)]
 		private FGameplayTagContainer _受击对象进入添加Tag;
 
-		// Token: 0x04015A52 RID: 88658
-		internal static int __PropertyOffset_11;
+		// Token: 0x040116A5 RID: 71333
+		internal static int __PropertyOffset_GB组;
 	}
 }

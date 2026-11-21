@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000FEF RID: 4079
+// Token: 0x020004A4 RID: 1188
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class GolemHackingConfig : ConfigBase
 {
-	// Token: 0x060068CA RID: 26826 RVA: 0x0014DA70 File Offset: 0x0014BC70
+	// Token: 0x06003C62 RID: 15458 RVA: 0x00156334 File Offset: 0x00154534
 	public DaemonHackConfigCsv? GetPlayConfig(int configId)
 	{
 		DaemonHackConfigCsv? config = ConfigDaemonHackConfigCsvById.GetConfig(configId, true);
@@ -24,8 +24,8 @@ public class GolemHackingConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x17000879 RID: 2169
-	// (get) Token: 0x060068CB RID: 26827 RVA: 0x0014DABE File Offset: 0x0014BCBE
+	// Token: 0x1700089B RID: 2203
+	// (get) Token: 0x06003C63 RID: 15459 RVA: 0x00156382 File Offset: 0x00154582
 	public static GolemHackingConfig Instance
 	{
 		get
@@ -34,7 +34,7 @@ public class GolemHackingConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060068CC RID: 26828 RVA: 0x0014DAC5 File Offset: 0x0014BCC5
+	// Token: 0x06003C64 RID: 15460 RVA: 0x00156389 File Offset: 0x00154589
 	public static GolemHackingConfig GetOrCreateInstance()
 	{
 		if (GolemHackingConfig._Instance == null)
@@ -44,7 +44,7 @@ public class GolemHackingConfig : ConfigBase
 		return GolemHackingConfig._Instance;
 	}
 
-	// Token: 0x060068CD RID: 26829 RVA: 0x0014DAD9 File Offset: 0x0014BCD9
+	// Token: 0x06003C65 RID: 15461 RVA: 0x0015639D File Offset: 0x0015459D
 	public static bool CreateInstance()
 	{
 		if (GolemHackingConfig._Instance != null)
@@ -55,24 +55,24 @@ public class GolemHackingConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060068CE RID: 26830 RVA: 0x0014DAEF File Offset: 0x0014BCEF
+	// Token: 0x06003C66 RID: 15462 RVA: 0x001563B3 File Offset: 0x001545B3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060068CF RID: 26831 RVA: 0x0014DAF1 File Offset: 0x0014BCF1
+	// Token: 0x06003C67 RID: 15463 RVA: 0x001563B5 File Offset: 0x001545B5
 	public static void ResetStaticDefaultValue()
 	{
 		GolemHackingConfig._Instance = null;
 	}
 
-	// Token: 0x060068D0 RID: 26832 RVA: 0x0014DAF9 File Offset: 0x0014BCF9
+	// Token: 0x06003C68 RID: 15464 RVA: 0x001563BD File Offset: 0x001545BD
 	static GolemHackingConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GolemHackingConfig.CreateStaticDefaultValue), new Action(GolemHackingConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002FFA RID: 12282
+	// Token: 0x04003093 RID: 12435
 	[Nullable(2)]
 	private static GolemHackingConfig _Instance;
 }

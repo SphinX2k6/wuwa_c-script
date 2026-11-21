@@ -4,22 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001639 RID: 5689
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017A6 RID: 6054
 	public class EnableEntityLookAt_SetValue
 	{
-		// Token: 0x04004C54 RID: 19540
+		// Token: 0x04005048 RID: 20552
 		public string Key;
 
-		// Token: 0x04004C55 RID: 19541
+		// Token: 0x04005049 RID: 20553
 		public IDefaultLookAtType DefaultLookAtType;
 
-		// Token: 0x04004C56 RID: 19542
+		// Token: 0x0400504A RID: 20554
 		[Nullable(2)]
 		public ICheckFlowLookAt OverrideLookAtType;
 
-		// Token: 0x04004C57 RID: 19543
+		// Token: 0x0400504B RID: 20555
 		public List<int> EntityIds;
 	}
 }

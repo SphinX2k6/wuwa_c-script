@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F87 RID: 3975
+	// Token: 0x0200106E RID: 4206
 	public struct RacingBetsActionTime : IFlatbufferObject
 	{
-		// Token: 0x17002C8B RID: 11403
-		// (get) Token: 0x0600B7E1 RID: 47073 RVA: 0x002D4C44 File Offset: 0x002D2E44
+		// Token: 0x17002D03 RID: 11523
+		// (get) Token: 0x0600BE1E RID: 48670 RVA: 0x002F15D0 File Offset: 0x002EF7D0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7E2 RID: 47074 RVA: 0x002D4C51 File Offset: 0x002D2E51
+		// Token: 0x0600BE1F RID: 48671 RVA: 0x002F15DD File Offset: 0x002EF7DD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B7E3 RID: 47075 RVA: 0x002D4C58 File Offset: 0x002D2E58
+		// Token: 0x0600BE20 RID: 48672 RVA: 0x002F15E4 File Offset: 0x002EF7E4
 		public static RacingBetsActionTime GetRootAsRacingBetsActionTime(ByteBuffer _bb)
 		{
 			return RacingBetsActionTime.GetRootAsRacingBetsActionTime(_bb, default(RacingBetsActionTime));
 		}
 
-		// Token: 0x0600B7E4 RID: 47076 RVA: 0x002D4C74 File Offset: 0x002D2E74
+		// Token: 0x0600BE21 RID: 48673 RVA: 0x002F1600 File Offset: 0x002EF800
 		public static RacingBetsActionTime GetRootAsRacingBetsActionTime(ByteBuffer _bb, RacingBetsActionTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B7E5 RID: 47077 RVA: 0x002D4C91 File Offset: 0x002D2E91
+		// Token: 0x0600BE22 RID: 48674 RVA: 0x002F161D File Offset: 0x002EF81D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B7E6 RID: 47078 RVA: 0x002D4CA0 File Offset: 0x002D2EA0
+		// Token: 0x0600BE23 RID: 48675 RVA: 0x002F162C File Offset: 0x002EF82C
 		public RacingBetsActionTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002C8C RID: 11404
-		// (get) Token: 0x0600B7E7 RID: 47079 RVA: 0x002D4CB0 File Offset: 0x002D2EB0
+		// Token: 0x17002D04 RID: 11524
+		// (get) Token: 0x0600BE24 RID: 48676 RVA: 0x002F163C File Offset: 0x002EF83C
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005055 RID: 20565
+		// Token: 0x0400563C RID: 22076
 		private Table __p;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200420F RID: 16911
+	// Token: 0x0200466B RID: 18027
 	public class ITrackRuleFindFirstNotMatchStateT
 	{
-		// Token: 0x17007823 RID: 30755
-		// (get) Token: 0x06018FDB RID: 102363 RVA: 0x00398CFB File Offset: 0x00396EFB
-		// (set) Token: 0x06018FDC RID: 102364 RVA: 0x00398D03 File Offset: 0x00396F03
+		// Token: 0x17007E54 RID: 32340
+		// (get) Token: 0x0601A747 RID: 108359 RVA: 0x003C43D3 File Offset: 0x003C25D3
+		// (set) Token: 0x0601A748 RID: 108360 RVA: 0x003C43DB File Offset: 0x003C25DB
 		public ETrackRuleType Type { get; set; }
 
-		// Token: 0x17007824 RID: 30756
-		// (get) Token: 0x06018FDD RID: 102365 RVA: 0x00398D0C File Offset: 0x00396F0C
-		// (set) Token: 0x06018FDE RID: 102366 RVA: 0x00398D14 File Offset: 0x00396F14
+		// Token: 0x17007E55 RID: 32341
+		// (get) Token: 0x0601A749 RID: 108361 RVA: 0x003C43E4 File Offset: 0x003C25E4
+		// (set) Token: 0x0601A74A RID: 108362 RVA: 0x003C43EC File Offset: 0x003C25EC
 		public string State { get; set; }
 
-		// Token: 0x06018FDF RID: 102367 RVA: 0x00398D1D File Offset: 0x00396F1D
+		// Token: 0x0601A74B RID: 108363 RVA: 0x003C43F5 File Offset: 0x003C25F5
 		public ITrackRuleFindFirstNotMatchStateT()
 		{
 			this.Type = ETrackRuleType.FindLastMatchState;

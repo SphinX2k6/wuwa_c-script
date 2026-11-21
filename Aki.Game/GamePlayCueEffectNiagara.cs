@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FBC RID: 12220
+// Token: 0x02002510 RID: 9488
 public class GamePlayCueEffectNiagara : GameplayCueEffect
 {
-	// Token: 0x06019E90 RID: 106128 RVA: 0x006C67D4 File Offset: 0x006C49D4
+	// Token: 0x060177A2 RID: 96162 RVA: 0x006ED0A0 File Offset: 0x006EB2A0
 	protected unsafe override void OnSetMagnitude(float value)
 	{
 		EffectParameterNiagara effectParameterNiagara = new EffectParameterNiagara();

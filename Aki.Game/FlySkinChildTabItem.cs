@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A45 RID: 10821
+// Token: 0x02001FC0 RID: 8128
 public class FlySkinChildTabItem : UiPanelBase
 {
-	// Token: 0x060168BB RID: 92347 RVA: 0x005B7260 File Offset: 0x005B5460
+	// Token: 0x060142DC RID: 82652 RVA: 0x005E33A4 File Offset: 0x005E15A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,13 +25,13 @@ public class FlySkinChildTabItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060168BC RID: 92348 RVA: 0x005B72EA File Offset: 0x005B54EA
+	// Token: 0x060142DD RID: 82653 RVA: 0x005E342E File Offset: 0x005E162E
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x060168BD RID: 92349 RVA: 0x005B72F4 File Offset: 0x005B54F4
+	// Token: 0x060142DE RID: 82654 RVA: 0x005E3438 File Offset: 0x005E1638
 	public void Update(EFlySkinType skinType)
 	{
 		this.SkinType = skinType;
@@ -41,51 +41,51 @@ public class FlySkinChildTabItem : UiPanelBase
 		this.BindRedDot();
 	}
 
-	// Token: 0x060168BE RID: 92350 RVA: 0x005B7338 File Offset: 0x005B5538
+	// Token: 0x060142DF RID: 82655 RVA: 0x005E347C File Offset: 0x005E167C
 	private void BindRedDot()
 	{
 		UUIItem item = base.GetItem(2);
 		RedDotController.Instance.BindRedDot(ERedDotName.FlySkinChildTab, item, null, (int)this.SkinType);
 	}
 
-	// Token: 0x060168BF RID: 92351 RVA: 0x005B7364 File Offset: 0x005B5564
+	// Token: 0x060142E0 RID: 82656 RVA: 0x005E34A8 File Offset: 0x005E16A8
 	private void UnBindRedDot()
 	{
 		UUIItem item = base.GetItem(2);
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.FlySkinChildTab, item, (int)this.SkinType);
 	}
 
-	// Token: 0x060168C0 RID: 92352 RVA: 0x005B738C File Offset: 0x005B558C
+	// Token: 0x060142E1 RID: 82657 RVA: 0x005E34D0 File Offset: 0x005E16D0
 	public void SetItemToggleState(EToggleState state, bool? bFireEvent = null)
 	{
 		base.GetExtendToggle(1).SetToggleState(state, bFireEvent != null && bFireEvent.Value, false, false);
 	}
 
-	// Token: 0x060168C1 RID: 92353 RVA: 0x005B73B1 File Offset: 0x005B55B1
+	// Token: 0x060142E2 RID: 82658 RVA: 0x005E34F5 File Offset: 0x005E16F5
 	[NullableContext(1)]
 	public void AddItemToggleStateChange(Action<EToggleState> stateChangeCallback)
 	{
 		base.GetExtendToggle(1).OnStateChange.Add(stateChangeCallback);
 	}
 
-	// Token: 0x060168C2 RID: 92354 RVA: 0x005B73C5 File Offset: 0x005B55C5
+	// Token: 0x060142E3 RID: 82659 RVA: 0x005E3509 File Offset: 0x005E1709
 	[NullableContext(1)]
 	public void SetCanItemToggleStateChange(Func<bool> canChangeCallBack)
 	{
 		base.GetExtendToggle(1).CanExecuteChange.Bind(canChangeCallBack);
 	}
 
-	// Token: 0x0400A75E RID: 42846
+	// Token: 0x0400AB62 RID: 43874
 	private EFlySkinType SkinType = EFlySkinType.Paragliding;
 
-	// Token: 0x0200908F RID: 37007
+	// Token: 0x020082D6 RID: 33494
 	private enum EComponent
 	{
-		// Token: 0x0402ED87 RID: 191879
+		// Token: 0x0402A481 RID: 173185
 		NameText,
-		// Token: 0x0402ED88 RID: 191880
+		// Token: 0x0402A482 RID: 173186
 		ItemToggle,
-		// Token: 0x0402ED89 RID: 191881
+		// Token: 0x0402A483 RID: 173187
 		RedDotItem
 	}
 }

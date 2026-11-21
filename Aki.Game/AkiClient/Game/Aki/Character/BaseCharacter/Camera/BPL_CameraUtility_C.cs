@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x0200439C RID: 17308
+	// Token: 0x020033BC RID: 13244
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/BPL_CameraUtility.BPL_CameraUtility_C")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class BPL_CameraUtility_C : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CD40 RID: 183616 RVA: 0x00A2998E File Offset: 0x00A27B8E
+		// Token: 0x06021954 RID: 137556 RVA: 0x009646B3 File Offset: 0x009628B3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BPL_CameraUtility_C._ClassPtr == IntPtr.Zero)
@@ -23,21 +23,20 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			return BPL_CameraUtility_C._ClassPtr;
 		}
 
-		// Token: 0x0602CD41 RID: 183617 RVA: 0x00A299B4 File Offset: 0x00A27BB4
+		// Token: 0x06021955 RID: 137557 RVA: 0x009646D8 File Offset: 0x009628D8
 		public BPL_CameraUtility_C() : this(BuiltinUtils.AllocNativeUObject(BPL_CameraUtility_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CD42 RID: 183618 RVA: 0x00A299DC File Offset: 0x00A27BDC
+		// Token: 0x06021956 RID: 137558 RVA: 0x00964700 File Offset: 0x00962900
 		[NullableContext(1)]
 		public BPL_CameraUtility_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BPL_CameraUtility_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0602CD43 RID: 183619 RVA: 0x00A29A10 File Offset: 0x00A27C10
+		// Token: 0x06021957 RID: 137559 RVA: 0x00964734 File Offset: 0x00962934
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void DtGetCameraConfigList([Nullable(new byte[]
 		{
 			2,
@@ -63,10 +62,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			UnrealReflectionUtils.DestroyStruct(BPL_CameraUtility_C.__DtGetCameraConfigList_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602CD44 RID: 183620 RVA: 0x00A29ABC File Offset: 0x00A27CBC
+		// Token: 0x06021958 RID: 137560 RVA: 0x009647E0 File Offset: 0x009629E0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void DtGetCameraConfigs([Nullable(new byte[]
 		{
 			2,
@@ -92,59 +90,59 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 			UnrealReflectionUtils.DestroyStruct(BPL_CameraUtility_C.__DtGetCameraConfigs_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602CD45 RID: 183621 RVA: 0x00A29B68 File Offset: 0x00A27D68
+		// Token: 0x06021959 RID: 137561 RVA: 0x0096488C File Offset: 0x00962A8C
 		protected BPL_CameraUtility_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017A74 RID: 96884
+		// Token: 0x040125EF RID: 75247
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/BPL_CameraUtility.BPL_CameraUtility_C";
 
-		// Token: 0x04017A75 RID: 96885
+		// Token: 0x040125F0 RID: 75248
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017A76 RID: 96886
+		// Token: 0x040125F1 RID: 75249
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017A77 RID: 96887
+		// Token: 0x040125F2 RID: 75250
 		private static IntPtr __DtGetCameraConfigList_NativeFunctionPtr;
 
-		// Token: 0x04017A78 RID: 96888
+		// Token: 0x040125F3 RID: 75251
 		private static IntPtr __DtGetCameraConfigs_NativeFunctionPtr;
 
-		// Token: 0x0200A673 RID: 42611
+		// Token: 0x02009086 RID: 36998
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2232)]
 		protected ref struct __DtGetCameraConfigList_FunctionParams
 		{
-			// Token: 0x040325B3 RID: 206259
+			// Token: 0x0402CE9F RID: 183967
 			[FieldOffset(0)]
 			public byte CameraSettings;
 
-			// Token: 0x040325B4 RID: 206260
+			// Token: 0x0402CEA0 RID: 183968
 			[FieldOffset(16)]
 			public IntPtr DataTable;
 
-			// Token: 0x040325B5 RID: 206261
+			// Token: 0x0402CEA1 RID: 183969
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 		}
 
-		// Token: 0x0200A674 RID: 42612
+		// Token: 0x02009087 RID: 36999
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 272)]
 		protected ref struct __DtGetCameraConfigs_FunctionParams
 		{
-			// Token: 0x040325B6 RID: 206262
+			// Token: 0x0402CEA2 RID: 183970
 			[FieldOffset(0)]
 			public byte CameraSettings;
 
-			// Token: 0x040325B7 RID: 206263
+			// Token: 0x0402CEA3 RID: 183971
 			[FieldOffset(16)]
 			public IntPtr DataTable;
 
-			// Token: 0x040325B8 RID: 206264
+			// Token: 0x0402CEA4 RID: 183972
 			[FieldOffset(24)]
 			public IntPtr __WorldContext;
 		}

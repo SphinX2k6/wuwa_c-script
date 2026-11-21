@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200271F RID: 10015
+// Token: 0x02001C0A RID: 7178
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class RacingBetsRankItem : GridProxyAbstract<IRacingBetsRankData>
 {
-	// Token: 0x06014863 RID: 84067 RVA: 0x0052E8C8 File Offset: 0x0052CAC8
+	// Token: 0x06011D45 RID: 73029 RVA: 0x0053D5E4 File Offset: 0x0053B7E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ public class RacingBetsRankItem : GridProxyAbstract<IRacingBetsRankData>
 		};
 	}
 
-	// Token: 0x06014864 RID: 84068 RVA: 0x0052E97A File Offset: 0x0052CB7A
+	// Token: 0x06011D46 RID: 73030 RVA: 0x0053D696 File Offset: 0x0053B896
 	public override void Refresh(IRacingBetsRankData data, bool isSelected, int gridIndex)
 	{
 		this.PlayerData = data;
 		this.UpdateItem();
 	}
 
-	// Token: 0x06014865 RID: 84069 RVA: 0x0052E98C File Offset: 0x0052CB8C
+	// Token: 0x06011D47 RID: 73031 RVA: 0x0053D6A8 File Offset: 0x0053B8A8
 	private void UpdateItem()
 	{
 		if (this.PlayerData == null)
@@ -89,11 +89,11 @@ public class RacingBetsRankItem : GridProxyAbstract<IRacingBetsRankData>
 		sprite.SetColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x04009A5B RID: 39515
+	// Token: 0x04009BB3 RID: 39859
 	[Nullable(2)]
 	private IRacingBetsRankData PlayerData;
 
-	// Token: 0x04009A5C RID: 39516
+	// Token: 0x04009BB4 RID: 39860
 	[StaticVariableRuleIgnore]
 	protected static readonly string[] ColorValueList = new string[]
 	{
@@ -103,23 +103,23 @@ public class RacingBetsRankItem : GridProxyAbstract<IRacingBetsRankData>
 		"0084ffff"
 	};
 
-	// Token: 0x02008D72 RID: 36210
+	// Token: 0x02007EFB RID: 32507
 	[NullableContext(0)]
 	private enum EItemComponents
 	{
-		// Token: 0x0402DE4C RID: 187980
+		// Token: 0x04029163 RID: 168291
 		RankText,
-		// Token: 0x0402DE4D RID: 187981
+		// Token: 0x04029164 RID: 168292
 		HeadPhoto,
-		// Token: 0x0402DE4E RID: 187982
+		// Token: 0x04029165 RID: 168293
 		NameText,
-		// Token: 0x0402DE4F RID: 187983
+		// Token: 0x04029166 RID: 168294
 		BgSprite,
-		// Token: 0x0402DE50 RID: 187984
+		// Token: 0x04029167 RID: 168295
 		ObjectText,
-		// Token: 0x0402DE51 RID: 187985
+		// Token: 0x04029168 RID: 168296
 		RankScoreText,
-		// Token: 0x0402DE52 RID: 187986
+		// Token: 0x04029169 RID: 168297
 		PlayerItemButton
 	}
 }

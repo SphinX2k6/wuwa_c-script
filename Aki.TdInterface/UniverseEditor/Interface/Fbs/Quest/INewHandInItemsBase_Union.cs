@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F53 RID: 16211
+	// Token: 0x02004391 RID: 17297
 	public enum INewHandInItemsBase_Union : byte
 	{
-		// Token: 0x0400B964 RID: 47460
+		// Token: 0x0400C342 RID: 49986
 		NONE,
-		// Token: 0x0400B965 RID: 47461
+		// Token: 0x0400C343 RID: 49987
 		INewHandInItemsBase,
-		// Token: 0x0400B966 RID: 47462
+		// Token: 0x0400C344 RID: 49988
 		INewHandInItemsProjectionMachine
 	}
 }

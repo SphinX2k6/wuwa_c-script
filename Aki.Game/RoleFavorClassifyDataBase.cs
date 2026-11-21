@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200283E RID: 10302
+// Token: 0x02001DB9 RID: 7609
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class RoleFavorClassifyDataBase
 {
-	// Token: 0x060153F6 RID: 87030 RVA: 0x0055ED30 File Offset: 0x0055CF30
+	// Token: 0x06012DF4 RID: 77300 RVA: 0x00589A8C File Offset: 0x00587C8C
 	public RoleFavorClassifyDataBase(string titleTableId, int roleId)
 	{
 		this.TitleTableId = titleTableId;
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x060153F7 RID: 87031
+	// Token: 0x06012DF5 RID: 77301
 	protected abstract void InitContentDataList();
 
-	// Token: 0x060153F8 RID: 87032 RVA: 0x0055ED5C File Offset: 0x0055CF5C
+	// Token: 0x06012DF6 RID: 77302 RVA: 0x00589AB8 File Offset: 0x00587CB8
 	public List<RoleFavorContentDataBase> GetContentDataList()
 	{
 		if (this.ContentDataList.Count == 0)
@@ -27,7 +27,7 @@ public abstract class RoleFavorClassifyDataBase
 		return this.ContentDataList;
 	}
 
-	// Token: 0x060153F9 RID: 87033 RVA: 0x0055ED77 File Offset: 0x0055CF77
+	// Token: 0x06012DF7 RID: 77303 RVA: 0x00589AD3 File Offset: 0x00587CD3
 	[NullableContext(2)]
 	public RoleFavorContentDataBase GetContentDataByIndex(int index)
 	{
@@ -38,7 +38,7 @@ public abstract class RoleFavorClassifyDataBase
 		return this.ContentDataList[index];
 	}
 
-	// Token: 0x060153FA RID: 87034 RVA: 0x0055ED99 File Offset: 0x0055CF99
+	// Token: 0x06012DF8 RID: 77304 RVA: 0x00589AF5 File Offset: 0x00587CF5
 	protected void SortContentDataList()
 	{
 		this.ContentDataList.Sort(delegate(RoleFavorContentDataBase a, RoleFavorContentDataBase b)
@@ -53,7 +53,7 @@ public abstract class RoleFavorClassifyDataBase
 		});
 	}
 
-	// Token: 0x060153FB RID: 87035 RVA: 0x0055EDB4 File Offset: 0x0055CFB4
+	// Token: 0x06012DF9 RID: 77305 RVA: 0x00589B10 File Offset: 0x00587D10
 	protected EFavorItemStatus GetItemStatus(RoleFavorContentDataBase contentData)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RoleId);
@@ -69,15 +69,15 @@ public abstract class RoleFavorClassifyDataBase
 		return favorData.GetFavorItemState(contentData.ConfigId, contentData.FavorContentType);
 	}
 
-	// Token: 0x060153FC RID: 87036
+	// Token: 0x06012DFA RID: 77306
 	protected abstract EFavorTabType GetFavorTabType();
 
-	// Token: 0x04009EBD RID: 40637
+	// Token: 0x0400A2A6 RID: 41638
 	protected int RoleId;
 
-	// Token: 0x04009EBE RID: 40638
+	// Token: 0x0400A2A7 RID: 41639
 	public string TitleTableId = "";
 
-	// Token: 0x04009EBF RID: 40639
+	// Token: 0x0400A2A8 RID: 41640
 	protected List<RoleFavorContentDataBase> ContentDataList = new List<RoleFavorContentDataBase>();
 }

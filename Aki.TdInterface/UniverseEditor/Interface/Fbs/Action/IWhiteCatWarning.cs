@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007604 RID: 30212
+	// Token: 0x02007E12 RID: 32274
 	public struct IWhiteCatWarning : IFlatbufferObject
 	{
-		// Token: 0x1700E57F RID: 58751
-		// (get) Token: 0x0603708A RID: 225418 RVA: 0x0077761D File Offset: 0x0077581D
+		// Token: 0x1700F1BD RID: 61885
+		// (get) Token: 0x0603A52F RID: 238895 RVA: 0x007DB719 File Offset: 0x007D9919
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603708B RID: 225419 RVA: 0x0077762A File Offset: 0x0077582A
+		// Token: 0x0603A530 RID: 238896 RVA: 0x007DB726 File Offset: 0x007D9926
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603708C RID: 225420 RVA: 0x00777634 File Offset: 0x00775834
+		// Token: 0x0603A531 RID: 238897 RVA: 0x007DB730 File Offset: 0x007D9930
 		public static IWhiteCatWarning GetRootAsIWhiteCatWarning(ByteBuffer _bb)
 		{
 			return IWhiteCatWarning.GetRootAsIWhiteCatWarning(_bb, default(IWhiteCatWarning));
 		}
 
-		// Token: 0x0603708D RID: 225421 RVA: 0x00777650 File Offset: 0x00775850
+		// Token: 0x0603A532 RID: 238898 RVA: 0x007DB74C File Offset: 0x007D994C
 		public static IWhiteCatWarning GetRootAsIWhiteCatWarning(ByteBuffer _bb, IWhiteCatWarning obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603708E RID: 225422 RVA: 0x0077766D File Offset: 0x0077586D
+		// Token: 0x0603A533 RID: 238899 RVA: 0x007DB769 File Offset: 0x007D9969
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603708F RID: 225423 RVA: 0x0077767C File Offset: 0x0077587C
+		// Token: 0x0603A534 RID: 238900 RVA: 0x007DB778 File Offset: 0x007D9978
 		public IWhiteCatWarning __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E580 RID: 58752
-		// (get) Token: 0x06037090 RID: 225424 RVA: 0x0077768C File Offset: 0x0077588C
+		// Token: 0x1700F1BE RID: 61886
+		// (get) Token: 0x0603A535 RID: 238901 RVA: 0x007DB788 File Offset: 0x007D9988
 		public ECommonTipType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E581 RID: 58753
-		// (get) Token: 0x06037091 RID: 225425 RVA: 0x007776C8 File Offset: 0x007758C8
+		// Token: 0x1700F1BF RID: 61887
+		// (get) Token: 0x0603A536 RID: 238902 RVA: 0x007DB7C4 File Offset: 0x007D99C4
 		public string WarningText
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037092 RID: 225426 RVA: 0x007776FF File Offset: 0x007758FF
+		// Token: 0x0603A537 RID: 238903 RVA: 0x007DB7FB File Offset: 0x007D99FB
 		public Span<byte> GetWarningTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06037093 RID: 225427 RVA: 0x0077770E File Offset: 0x0077590E
+		// Token: 0x0603A538 RID: 238904 RVA: 0x007DB80A File Offset: 0x007D9A0A
 		public byte[] GetWarningTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06037094 RID: 225428 RVA: 0x0077771C File Offset: 0x0077591C
+		// Token: 0x0603A539 RID: 238905 RVA: 0x007DB818 File Offset: 0x007D9A18
 		public static Offset<IWhiteCatWarning> CreateIWhiteCatWarning(FlatBufferBuilder builder, ECommonTipType Type = ECommonTipType.ChallengeCondition, StringOffset WarningTextOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWhiteCatWarning.EndIWhiteCatWarning(builder);
 		}
 
-		// Token: 0x06037095 RID: 225429 RVA: 0x00777739 File Offset: 0x00775939
+		// Token: 0x0603A53A RID: 238906 RVA: 0x007DB835 File Offset: 0x007D9A35
 		public static void StartIWhiteCatWarning(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06037096 RID: 225430 RVA: 0x00777742 File Offset: 0x00775942
+		// Token: 0x0603A53B RID: 238907 RVA: 0x007DB83E File Offset: 0x007D9A3E
 		public static void AddType(FlatBufferBuilder builder, ECommonTipType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06037097 RID: 225431 RVA: 0x0077774D File Offset: 0x0077594D
+		// Token: 0x0603A53C RID: 238908 RVA: 0x007DB849 File Offset: 0x007D9A49
 		public static void AddWarningText(FlatBufferBuilder builder, StringOffset warningTextOffset)
 		{
 			builder.AddOffset(1, warningTextOffset.Value, 0);
 		}
 
-		// Token: 0x06037098 RID: 225432 RVA: 0x0077775D File Offset: 0x0077595D
+		// Token: 0x0603A53D RID: 238909 RVA: 0x007DB859 File Offset: 0x007D9A59
 		public static Offset<IWhiteCatWarning> EndIWhiteCatWarning(FlatBufferBuilder builder)
 		{
 			return new Offset<IWhiteCatWarning>(builder.EndTable());
 		}
 
-		// Token: 0x06037099 RID: 225433 RVA: 0x0077776C File Offset: 0x0077596C
+		// Token: 0x0603A53E RID: 238910 RVA: 0x007DB868 File Offset: 0x007D9A68
 		public IWhiteCatWarningT UnPack()
 		{
 			IWhiteCatWarningT whiteCatWarningT = new IWhiteCatWarningT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return whiteCatWarningT;
 		}
 
-		// Token: 0x0603709A RID: 225434 RVA: 0x00777787 File Offset: 0x00775987
+		// Token: 0x0603A53F RID: 238911 RVA: 0x007DB883 File Offset: 0x007D9A83
 		public void UnPackTo(IWhiteCatWarningT _o)
 		{
 			_o.Type = this.Type;
 			_o.WarningText = this.WarningText;
 		}
 
-		// Token: 0x0603709B RID: 225435 RVA: 0x007777A4 File Offset: 0x007759A4
+		// Token: 0x0603A540 RID: 238912 RVA: 0x007DB8A0 File Offset: 0x007D9AA0
 		public static Offset<IWhiteCatWarning> Pack(FlatBufferBuilder builder, IWhiteCatWarningT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWhiteCatWarning.CreateIWhiteCatWarning(builder, _o.Type, warningTextOffset);
 		}
 
-		// Token: 0x04012576 RID: 75126
+		// Token: 0x040135C0 RID: 79296
 		private Table __p;
 	}
 }

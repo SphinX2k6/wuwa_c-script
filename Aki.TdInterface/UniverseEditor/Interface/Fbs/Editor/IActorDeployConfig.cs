@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200481A RID: 18458
+	// Token: 0x02004C82 RID: 19586
 	public struct IActorDeployConfig : IFlatbufferObject
 	{
-		// Token: 0x1700846C RID: 33900
-		// (get) Token: 0x0601C819 RID: 116761 RVA: 0x00408318 File Offset: 0x00406518
+		// Token: 0x17008AB7 RID: 35511
+		// (get) Token: 0x0601E016 RID: 122902 RVA: 0x00434C68 File Offset: 0x00432E68
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C81A RID: 116762 RVA: 0x00408325 File Offset: 0x00406525
+		// Token: 0x0601E017 RID: 122903 RVA: 0x00434C75 File Offset: 0x00432E75
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C81B RID: 116763 RVA: 0x0040832C File Offset: 0x0040652C
+		// Token: 0x0601E018 RID: 122904 RVA: 0x00434C7C File Offset: 0x00432E7C
 		public static IActorDeployConfig GetRootAsIActorDeployConfig(ByteBuffer _bb)
 		{
 			return IActorDeployConfig.GetRootAsIActorDeployConfig(_bb, default(IActorDeployConfig));
 		}
 
-		// Token: 0x0601C81C RID: 116764 RVA: 0x00408348 File Offset: 0x00406548
+		// Token: 0x0601E019 RID: 122905 RVA: 0x00434C98 File Offset: 0x00432E98
 		public static IActorDeployConfig GetRootAsIActorDeployConfig(ByteBuffer _bb, IActorDeployConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C81D RID: 116765 RVA: 0x00408365 File Offset: 0x00406565
+		// Token: 0x0601E01A RID: 122906 RVA: 0x00434CB5 File Offset: 0x00432EB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C81E RID: 116766 RVA: 0x00408374 File Offset: 0x00406574
+		// Token: 0x0601E01B RID: 122907 RVA: 0x00434CC4 File Offset: 0x00432EC4
 		public IActorDeployConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700846D RID: 33901
-		// (get) Token: 0x0601C81F RID: 116767 RVA: 0x00408384 File Offset: 0x00406584
+		// Token: 0x17008AB8 RID: 35512
+		// (get) Token: 0x0601E01C RID: 122908 RVA: 0x00434CD4 File Offset: 0x00432ED4
 		public string Folder
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C820 RID: 116768 RVA: 0x004083BB File Offset: 0x004065BB
+		// Token: 0x0601E01D RID: 122909 RVA: 0x00434D0B File Offset: 0x00432F0B
 		public Span<byte> GetFolderBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601C821 RID: 116769 RVA: 0x004083CA File Offset: 0x004065CA
+		// Token: 0x0601E01E RID: 122910 RVA: 0x00434D1A File Offset: 0x00432F1A
 		public byte[] GetFolderArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700846E RID: 33902
-		// (get) Token: 0x0601C822 RID: 116770 RVA: 0x004083D8 File Offset: 0x004065D8
+		// Token: 0x17008AB9 RID: 35513
+		// (get) Token: 0x0601E01F RID: 122911 RVA: 0x00434D28 File Offset: 0x00432F28
 		public string SubFolder
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C823 RID: 116771 RVA: 0x0040840F File Offset: 0x0040660F
+		// Token: 0x0601E020 RID: 122912 RVA: 0x00434D5F File Offset: 0x00432F5F
 		public Span<byte> GetSubFolderBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601C824 RID: 116772 RVA: 0x0040841E File Offset: 0x0040661E
+		// Token: 0x0601E021 RID: 122913 RVA: 0x00434D6E File Offset: 0x00432F6E
 		public byte[] GetSubFolderArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601C825 RID: 116773 RVA: 0x0040842C File Offset: 0x0040662C
+		// Token: 0x0601E022 RID: 122914 RVA: 0x00434D7C File Offset: 0x00432F7C
 		public static Offset<IActorDeployConfig> CreateIActorDeployConfig(FlatBufferBuilder builder, StringOffset FolderOffset = default(StringOffset), StringOffset SubFolderOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IActorDeployConfig.EndIActorDeployConfig(builder);
 		}
 
-		// Token: 0x0601C826 RID: 116774 RVA: 0x00408449 File Offset: 0x00406649
+		// Token: 0x0601E023 RID: 122915 RVA: 0x00434D99 File Offset: 0x00432F99
 		public static void StartIActorDeployConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601C827 RID: 116775 RVA: 0x00408452 File Offset: 0x00406652
+		// Token: 0x0601E024 RID: 122916 RVA: 0x00434DA2 File Offset: 0x00432FA2
 		public static void AddFolder(FlatBufferBuilder builder, StringOffset folderOffset)
 		{
 			builder.AddOffset(0, folderOffset.Value, 0);
 		}
 
-		// Token: 0x0601C828 RID: 116776 RVA: 0x00408462 File Offset: 0x00406662
+		// Token: 0x0601E025 RID: 122917 RVA: 0x00434DB2 File Offset: 0x00432FB2
 		public static void AddSubFolder(FlatBufferBuilder builder, StringOffset subFolderOffset)
 		{
 			builder.AddOffset(1, subFolderOffset.Value, 0);
 		}
 
-		// Token: 0x0601C829 RID: 116777 RVA: 0x00408472 File Offset: 0x00406672
+		// Token: 0x0601E026 RID: 122918 RVA: 0x00434DC2 File Offset: 0x00432FC2
 		public static Offset<IActorDeployConfig> EndIActorDeployConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorDeployConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601C82A RID: 116778 RVA: 0x00408480 File Offset: 0x00406680
+		// Token: 0x0601E027 RID: 122919 RVA: 0x00434DD0 File Offset: 0x00432FD0
 		public IActorDeployConfigT UnPack()
 		{
 			IActorDeployConfigT actorDeployConfigT = new IActorDeployConfigT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return actorDeployConfigT;
 		}
 
-		// Token: 0x0601C82B RID: 116779 RVA: 0x0040849B File Offset: 0x0040669B
+		// Token: 0x0601E028 RID: 122920 RVA: 0x00434DEB File Offset: 0x00432FEB
 		public void UnPackTo(IActorDeployConfigT _o)
 		{
 			_o.Folder = this.Folder;
 			_o.SubFolder = this.SubFolder;
 		}
 
-		// Token: 0x0601C82C RID: 116780 RVA: 0x004084B8 File Offset: 0x004066B8
+		// Token: 0x0601E029 RID: 122921 RVA: 0x00434E08 File Offset: 0x00433008
 		public static Offset<IActorDeployConfig> Pack(FlatBufferBuilder builder, IActorDeployConfigT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IActorDeployConfig.CreateIActorDeployConfig(builder, folderOffset, subFolderOffset);
 		}
 
-		// Token: 0x0400CD32 RID: 52530
+		// Token: 0x0400D76D RID: 55149
 		private Table __p;
 	}
 }

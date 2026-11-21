@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02000DD6 RID: 3542
+// Token: 0x02000288 RID: 648
 public enum EViewLockWorldRenderType
 {
-	// Token: 0x04002699 RID: 9881
+	// Token: 0x04002724 RID: 10020
 	Default,
-	// Token: 0x0400269A RID: 9882
+	// Token: 0x04002725 RID: 10021
 	ForceLock,
-	// Token: 0x0400269B RID: 9883
+	// Token: 0x04002726 RID: 10022
 	Ignore,
-	// Token: 0x0400269C RID: 9884
+	// Token: 0x04002727 RID: 10023
 	SeqLock
 }

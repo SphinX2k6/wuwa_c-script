@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A69 RID: 2665
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B33 RID: 2867
 	public class SphereFactoryComponent : IComponentBase
 	{
-		// Token: 0x06003D6C RID: 15724 RVA: 0x0009DBA5 File Offset: 0x0009BDA5
+		// Token: 0x06004195 RID: 16789 RVA: 0x000A715D File Offset: 0x000A535D
 		public static SphereFactoryComponent Create(ISphereFactoryComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E57 RID: 3671
-		// (get) Token: 0x06003D6D RID: 15725 RVA: 0x0009DBC4 File Offset: 0x0009BDC4
+		// Token: 0x17000F2A RID: 3882
+		// (get) Token: 0x06004196 RID: 16790 RVA: 0x000A717C File Offset: 0x000A537C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E58 RID: 3672
-		// (get) Token: 0x06003D6E RID: 15726 RVA: 0x0009DBFC File Offset: 0x0009BDFC
+		// Token: 0x17000F2B RID: 3883
+		// (get) Token: 0x06004197 RID: 16791 RVA: 0x000A71B4 File Offset: 0x000A53B4
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E59 RID: 3673
-		// (get) Token: 0x06003D6F RID: 15727 RVA: 0x0009DC12 File Offset: 0x0009BE12
+		// Token: 0x17000F2C RID: 3884
+		// (get) Token: 0x06004198 RID: 16792 RVA: 0x000A71CA File Offset: 0x000A53CA
 		public virtual VectorInfo SphereLocation
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E5A RID: 3674
-		// (get) Token: 0x06003D70 RID: 15728 RVA: 0x0009DC46 File Offset: 0x0009BE46
+		// Token: 0x17000F2D RID: 3885
+		// (get) Token: 0x06004199 RID: 16793 RVA: 0x000A71FE File Offset: 0x000A53FE
 		public virtual string SphereGuid
 		{
 			get
@@ -73,14 +71,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002238 RID: 8760
+		// Token: 0x04002454 RID: 9300
 		private ISphereFactoryComponent Instance;
 
-		// Token: 0x04002239 RID: 8761
+		// Token: 0x04002455 RID: 9301
 		[Nullable(2)]
 		private VectorInfo _SphereLocationCache;
 
-		// Token: 0x0400223A RID: 8762
+		// Token: 0x04002456 RID: 9302
 		private bool _SphereLocationInited;
 	}
 }

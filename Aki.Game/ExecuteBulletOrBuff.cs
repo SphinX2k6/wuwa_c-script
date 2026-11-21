@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002F91 RID: 12177
+// Token: 0x020024E5 RID: 9445
 [NullableContext(1)]
 [Nullable(0)]
 public class ExecuteBulletOrBuff : PeriodExecution
 {
-	// Token: 0x06019DA0 RID: 105888 RVA: 0x006BFABE File Offset: 0x006BDCBE
+	// Token: 0x060176B2 RID: 95922 RVA: 0x006E639E File Offset: 0x006E459E
 	public ExecuteBulletOrBuff(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DA1 RID: 105889 RVA: 0x006BFAD4 File Offset: 0x006BDCD4
+	// Token: 0x060176B3 RID: 95923 RVA: 0x006E63B4 File Offset: 0x006E45B4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -24,13 +22,13 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		}
 		this.TargetType = EExecutionTargetType.Self;
 		this.GoalType = (EPassiveEffectGoalType)int.Parse(extraEffectParameters_[0]);
-		IEnumerable<string> source = extraEffectParameters_[1].Split('#', StringSplitOptions.None);
-		Func<string, long> selector;
-		if ((selector = ExecuteBulletOrBuff.<>O.<0>__Parse) == null)
+		string[] array = extraEffectParameters_[1].Split('#', StringSplitOptions.None);
+		Converter<string, long> converter;
+		if ((converter = ExecuteBulletOrBuff.<>O.<0>__Parse) == null)
 		{
-			selector = (ExecuteBulletOrBuff.<>O.<0>__Parse = new Func<string, long>(long.Parse));
+			converter = (ExecuteBulletOrBuff.<>O.<0>__Parse = new Converter<string, long>(long.Parse));
 		}
-		this.Ids = source.Select(selector).ToArray<long>();
+		this.Ids = Array.ConvertAll<string, long>(array, converter);
 		double[] times;
 		if (extraEffectParameters_.Length <= 2 || string.IsNullOrEmpty(extraEffectParameters_[2]))
 		{
@@ -38,13 +36,13 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		}
 		else
 		{
-			IEnumerable<string> source2 = extraEffectParameters_[2].Split('#', StringSplitOptions.None);
-			Func<string, double> selector2;
-			if ((selector2 = ExecuteBulletOrBuff.<>O.<1>__Parse) == null)
+			string[] array2 = extraEffectParameters_[2].Split('#', StringSplitOptions.None);
+			Converter<string, double> converter2;
+			if ((converter2 = ExecuteBulletOrBuff.<>O.<1>__Parse) == null)
 			{
-				selector2 = (ExecuteBulletOrBuff.<>O.<1>__Parse = new Func<string, double>(double.Parse));
+				converter2 = (ExecuteBulletOrBuff.<>O.<1>__Parse = new Converter<string, double>(double.Parse));
 			}
-			times = source2.Select(selector2).ToArray<double>();
+			times = Array.ConvertAll<string, double>(array2, converter2);
 		}
 		this.Times = times;
 		this.UseCustomTimes = (extraEffectParameters_.Length > 3 && !string.IsNullOrEmpty(extraEffectParameters_[3]) && int.Parse(extraEffectParameters_[3]) == 1);
@@ -55,7 +53,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DA2 RID: 105890 RVA: 0x006BFBF8 File Offset: 0x006BDDF8
+	// Token: 0x060176B4 RID: 95924 RVA: 0x006E64CC File Offset: 0x006E46CC
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -74,7 +72,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DA3 RID: 105891 RVA: 0x006BFC5C File Offset: 0x006BDE5C
+	// Token: 0x060176B5 RID: 95925 RVA: 0x006E6530 File Offset: 0x006E4730
 	[NullableContext(2)]
 	protected IBuffComponent GetBulletTarget()
 	{
@@ -100,7 +98,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return result;
 	}
 
-	// Token: 0x06019DA4 RID: 105892 RVA: 0x006BFCB0 File Offset: 0x006BDEB0
+	// Token: 0x060176B6 RID: 95926 RVA: 0x006E6584 File Offset: 0x006E4784
 	[NullableContext(2)]
 	protected IBuffComponent GetBuffHolderSkillTarget()
 	{
@@ -136,7 +134,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return entity2.CheckGetComponent<BaseBuffComponent>();
 	}
 
-	// Token: 0x06019DA5 RID: 105893 RVA: 0x006BFD04 File Offset: 0x006BDF04
+	// Token: 0x060176B7 RID: 95927 RVA: 0x006E65D8 File Offset: 0x006E47D8
 	protected void ExecutePerId(Action<long, float, IBuffComponent> execFunction)
 	{
 		for (int i = 0; i < this.Ids.Length; i++)
@@ -158,7 +156,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DA6 RID: 105894 RVA: 0x006BFD68 File Offset: 0x006BDF68
+	// Token: 0x060176B8 RID: 95928 RVA: 0x006E663C File Offset: 0x006E483C
 	protected unsafe void ProcessBulletId(long id, float times, IBuffComponent target)
 	{
 		IBuffComponent bulletTarget = this.GetBulletTarget();
@@ -225,7 +223,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DA7 RID: 105895 RVA: 0x006BFE98 File Offset: 0x006BE098
+	// Token: 0x060176B9 RID: 95929 RVA: 0x006E676C File Offset: 0x006E496C
 	private void ProcessBuffId(long id, float stackNum, IBuffComponent target)
 	{
 		IActiveBuff buff = this.Buff;
@@ -238,7 +236,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		target.AddIterativeBuff(id, buff, stackCount, isIterable, defaultInterpolatedStringHandler.ToStringAndClear(), null, null);
 	}
 
-	// Token: 0x06019DA8 RID: 105896 RVA: 0x006BFEFC File Offset: 0x006BE0FC
+	// Token: 0x060176BA RID: 95930 RVA: 0x006E67D0 File Offset: 0x006E49D0
 	private void ProcessBuffRemoveId(long id, float stackNum, IBuffComponent target)
 	{
 		int stackCount = (int)stackNum;
@@ -253,7 +251,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		target.RemoveBuff(id, stackCount, reason, preMessageId, isServerRequest, (buff != null) ? buff.InstigatorId : null);
 	}
 
-	// Token: 0x06019DA9 RID: 105897 RVA: 0x006BFF74 File Offset: 0x006BE174
+	// Token: 0x060176BB RID: 95931 RVA: 0x006E6848 File Offset: 0x006E4A48
 	private float GetTimes(int index)
 	{
 		if (this.UseCustomTimes)
@@ -283,7 +281,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return result;
 	}
 
-	// Token: 0x06019DAA RID: 105898 RVA: 0x006C0010 File Offset: 0x006BE210
+	// Token: 0x060176BC RID: 95932 RVA: 0x006E68E4 File Offset: 0x006E4AE4
 	private float? GetCustomTimes()
 	{
 		CustomTimesConfig customTimesConfig = Array.Find<CustomTimesConfig>(this.CustomTimesConfigs ?? Array.Empty<CustomTimesConfig>(), (CustomTimesConfig v) => v != null && v.CalcType == ECustomTimesCalcType.DependAttribute);
@@ -305,7 +303,7 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return new float?(CustomTimesConfigParser.CalcCustomTimes(customTimesConfig, customTimesAttributeComponent));
 	}
 
-	// Token: 0x06019DAB RID: 105899 RVA: 0x006C00B8 File Offset: 0x006BE2B8
+	// Token: 0x060176BD RID: 95933 RVA: 0x006E698C File Offset: 0x006E4B8C
 	[NullableContext(2)]
 	private BaseAttributeComponent GetCustomTimesAttributeComponent(ECustomTimesValueTarget valueTarget)
 	{
@@ -330,39 +328,39 @@ public class ExecuteBulletOrBuff : PeriodExecution
 		return result;
 	}
 
-	// Token: 0x0400C34B RID: 49995
+	// Token: 0x0400C6F4 RID: 50932
 	public EPassiveEffectGoalType GoalType;
 
-	// Token: 0x0400C34C RID: 49996
+	// Token: 0x0400C6F5 RID: 50933
 	public long[] Ids = Array.Empty<long>();
 
-	// Token: 0x0400C34D RID: 49997
+	// Token: 0x0400C6F6 RID: 50934
 	[Nullable(2)]
 	public double[] Times;
 
-	// Token: 0x0400C34E RID: 49998
+	// Token: 0x0400C6F7 RID: 50935
 	public bool UseCustomTimes;
 
-	// Token: 0x0400C34F RID: 49999
+	// Token: 0x0400C6F8 RID: 50936
 	[Nullable(2)]
 	private CustomTimesConfig[] CustomTimesConfigs;
 
-	// Token: 0x0400C350 RID: 50000
+	// Token: 0x0400C6F9 RID: 50937
 	public EPassiveEffectTargetType BulletPosType;
 
-	// Token: 0x0400C351 RID: 50001
+	// Token: 0x0400C6FA RID: 50938
 	private const int DEFAULT_PASSIVE_BUFF_REMOVE_TIMES = -1;
 
-	// Token: 0x0200960D RID: 38413
+	// Token: 0x0200882E RID: 34862
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04030279 RID: 197241
+		// Token: 0x0402B906 RID: 178438
 		[Nullable(0)]
-		public static Func<string, long> <0>__Parse;
+		public static Converter<string, long> <0>__Parse;
 
-		// Token: 0x0403027A RID: 197242
+		// Token: 0x0402B907 RID: 178439
 		[Nullable(0)]
-		public static Func<string, double> <1>__Parse;
+		public static Converter<string, double> <1>__Parse;
 	}
 }

@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019BB RID: 6587
+	// Token: 0x02000455 RID: 1109
 	[UnrealObjectPath("/Script/KuroLogAnalyzer.KuroLogAnalyzerLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroLogAnalyzerLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060187FF RID: 100351 RVA: 0x00241956 File Offset: 0x0023FB56
+		// Token: 0x06006B14 RID: 27412 RVA: 0x0009BE91 File Offset: 0x0009A091
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroLogAnalyzerLibrary._ClassPtr;
 		}
 
-		// Token: 0x06018800 RID: 100352 RVA: 0x00241964 File Offset: 0x0023FB64
+		// Token: 0x06006B15 RID: 27413 RVA: 0x0009BEA0 File Offset: 0x0009A0A0
 		public UKuroLogAnalyzerLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroLogAnalyzerLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018801 RID: 100353 RVA: 0x0024198C File Offset: 0x0023FB8C
+		// Token: 0x06006B16 RID: 27414 RVA: 0x0009BEC8 File Offset: 0x0009A0C8
 		[NullableContext(1)]
 		public UKuroLogAnalyzerLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroLogAnalyzerLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06018802 RID: 100354
+		// Token: 0x06006B17 RID: 27415
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetEnable(bool bEnable);
 
-		// Token: 0x06018803 RID: 100355 RVA: 0x002419BF File Offset: 0x0023FBBF
+		// Token: 0x06006B18 RID: 27416 RVA: 0x0009BEFB File Offset: 0x0009A0FB
 		[NullableContext(2)]
 		public static bool Initialize(int InVerbosity, in FLogDelegate InLogDelegate, int InMessageMaxSize = 4096)
 		{
@@ -40,33 +40,33 @@ namespace UnrealEngine
 			return UKuroLogAnalyzerLibrary.__Initialize_Internal(InVerbosity, (flogDelegate != null) ? flogDelegate.NativePtr : ((IntPtr)0), InMessageMaxSize);
 		}
 
-		// Token: 0x06018804 RID: 100356
+		// Token: 0x06006B19 RID: 27417
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool Clear();
 
-		// Token: 0x06018805 RID: 100357
+		// Token: 0x06006B1A RID: 27418
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __Initialize_Internal(int InVerbosity, IntPtr InLogDelegate, int InMessageMaxSize);
 
-		// Token: 0x06018806 RID: 100358 RVA: 0x002419D7 File Offset: 0x0023FBD7
+		// Token: 0x06006B1B RID: 27419 RVA: 0x0009BF13 File Offset: 0x0009A113
 		static UKuroLogAnalyzerLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroLogAnalyzer.KuroLogAnalyzerLibrary");
 		}
 
-		// Token: 0x06018807 RID: 100359 RVA: 0x002419E5 File Offset: 0x0023FBE5
+		// Token: 0x06006B1C RID: 27420 RVA: 0x0009BF21 File Offset: 0x0009A121
 		protected UKuroLogAnalyzerLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D3BC RID: 54204
+		// Token: 0x04002D69 RID: 11625
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroLogAnalyzer.KuroLogAnalyzerLibrary";
 
-		// Token: 0x0400D3BD RID: 54205
+		// Token: 0x04002D6A RID: 11626
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D3BE RID: 54206
+		// Token: 0x04002D6B RID: 11627
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F77 RID: 3959
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010A1 RID: 4257
 	public class IFinishFlipperCondition : IQuestCondition
 	{
-		// Token: 0x06005802 RID: 22530 RVA: 0x000D6E34 File Offset: 0x000D5034
+		// Token: 0x06005DD6 RID: 24022 RVA: 0x000E38A0 File Offset: 0x000E1AA0
 		private IFinishFlipperCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005803 RID: 22531 RVA: 0x000D6E6C File Offset: 0x000D506C
+		// Token: 0x06005DD7 RID: 24023 RVA: 0x000E38D8 File Offset: 0x000E1AD8
 		public static IFinishFlipperCondition Create([Nullable(2)] IFinishFlipperCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005804 RID: 22532 RVA: 0x000D6E7F File Offset: 0x000D507F
+		// Token: 0x06005DD8 RID: 24024 RVA: 0x000E38EB File Offset: 0x000E1AEB
 		public static IFinishFlipperCondition CreateFromSetValue([Nullable(2)] IFinishFlipperCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005805 RID: 22533 RVA: 0x000D6E92 File Offset: 0x000D5092
+		// Token: 0x06005DD9 RID: 24025 RVA: 0x000E38FE File Offset: 0x000E1AFE
 		public new IFinishFlipperCondition_SetValue ToSetValue()
 		{
 			return new IFinishFlipperCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D50 RID: 7504
-		// (get) Token: 0x06005806 RID: 22534 RVA: 0x000D6EBD File Offset: 0x000D50BD
-		// (set) Token: 0x06005807 RID: 22535 RVA: 0x000D6EE8 File Offset: 0x000D50E8
+		// Token: 0x17001EF6 RID: 7926
+		// (get) Token: 0x06005DDA RID: 24026 RVA: 0x000E3929 File Offset: 0x000E1B29
+		// (set) Token: 0x06005DDB RID: 24027 RVA: 0x000E3954 File Offset: 0x000E1B54
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D51 RID: 7505
-		// (get) Token: 0x06005808 RID: 22536 RVA: 0x000D6EF8 File Offset: 0x000D50F8
-		// (set) Token: 0x06005809 RID: 22537 RVA: 0x000D6F59 File Offset: 0x000D5159
+		// Token: 0x17001EF7 RID: 7927
+		// (get) Token: 0x06005DDC RID: 24028 RVA: 0x000E3964 File Offset: 0x000E1B64
+		// (set) Token: 0x06005DDD RID: 24029 RVA: 0x000E39C5 File Offset: 0x000E1BC5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D52 RID: 7506
-		// (get) Token: 0x0600580A RID: 22538 RVA: 0x000D6F70 File Offset: 0x000D5170
-		// (set) Token: 0x0600580B RID: 22539 RVA: 0x000D6FD1 File Offset: 0x000D51D1
+		// Token: 0x17001EF8 RID: 7928
+		// (get) Token: 0x06005DDE RID: 24030 RVA: 0x000E39DC File Offset: 0x000E1BDC
+		// (set) Token: 0x06005DDF RID: 24031 RVA: 0x000E3A3D File Offset: 0x000E1C3D
 		public virtual IFlipperConditionStepFight Step
 		{
 			get
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400352B RID: 13611
+		// Token: 0x0400385C RID: 14428
 		[Nullable(2)]
 		protected new IFinishFlipperCondition FbInstance;
 
-		// Token: 0x0400352C RID: 13612
+		// Token: 0x0400385D RID: 14429
 		[Nullable(2)]
 		protected new IFinishFlipperCondition_SetValue PocoInterface;
 
-		// Token: 0x0400352D RID: 13613
+		// Token: 0x0400385E RID: 14430
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400352E RID: 13614
+		// Token: 0x0400385F RID: 14431
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400352F RID: 13615
+		// Token: 0x04003860 RID: 14432
 		private IFlipperConditionStepFight _StepCache;
 
-		// Token: 0x04003530 RID: 13616
+		// Token: 0x04003861 RID: 14433
 		private bool _StepInited;
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000F4E RID: 3918
+	// Token: 0x02000F3E RID: 3902
 	[NetMessage(EMessageId.RhythmSubLevelUpdateNotify)]
 	public sealed class RhythmSubLevelUpdateNotify : IMessage<RhythmSubLevelUpdateNotify>, IMessage, IEquatable<RhythmSubLevelUpdateNotify>, IDeepCloneable<RhythmSubLevelUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06014F69 RID: 85865 RVA: 0x0030AACE File Offset: 0x00308CCE
+		// Token: 0x06014E84 RID: 85636 RVA: 0x00309412 File Offset: 0x00307612
 		[NullableContext(1)]
 		public static RhythmSubLevelUpdateNotify Create()
 		{
 			return new RhythmSubLevelUpdateNotify();
 		}
 
-		// Token: 0x170045BC RID: 17852
-		// (get) Token: 0x06014F6A RID: 85866 RVA: 0x0030AAD5 File Offset: 0x00308CD5
+		// Token: 0x17004592 RID: 17810
+		// (get) Token: 0x06014E85 RID: 85637 RVA: 0x00309419 File Offset: 0x00307619
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170045BD RID: 17853
-		// (get) Token: 0x06014F6B RID: 85867 RVA: 0x0030AAD8 File Offset: 0x00308CD8
+		// Token: 0x17004593 RID: 17811
+		// (get) Token: 0x06014E86 RID: 85638 RVA: 0x0030941C File Offset: 0x0030761C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F6C RID: 85868 RVA: 0x0030AADF File Offset: 0x00308CDF
+		// Token: 0x06014E87 RID: 85639 RVA: 0x00309423 File Offset: 0x00307623
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmSubLevelUpdateNotify()
 		{
 		}
 
-		// Token: 0x06014F6D RID: 85869 RVA: 0x0030AAF2 File Offset: 0x00308CF2
+		// Token: 0x06014E88 RID: 85640 RVA: 0x00309436 File Offset: 0x00307636
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmSubLevelUpdateNotify(RhythmSubLevelUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014F6E RID: 85870 RVA: 0x0030AB1C File Offset: 0x00308D1C
+		// Token: 0x06014E89 RID: 85641 RVA: 0x00309460 File Offset: 0x00307660
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RhythmSubLevelUpdateNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new RhythmSubLevelUpdateNotify(this);
 		}
 
-		// Token: 0x170045BE RID: 17854
-		// (get) Token: 0x06014F6F RID: 85871 RVA: 0x0030AB24 File Offset: 0x00308D24
+		// Token: 0x17004594 RID: 17812
+		// (get) Token: 0x06014E8A RID: 85642 RVA: 0x00309468 File Offset: 0x00307668
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RhythmSubLevelPb> UpdateSubLevelPb
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F70 RID: 85872 RVA: 0x0030AB2C File Offset: 0x00308D2C
+		// Token: 0x06014E8B RID: 85643 RVA: 0x00309470 File Offset: 0x00307670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RhythmSubLevelUpdateNotify);
 		}
 
-		// Token: 0x06014F71 RID: 85873 RVA: 0x0030AB3A File Offset: 0x00308D3A
+		// Token: 0x06014E8C RID: 85644 RVA: 0x0030947E File Offset: 0x0030767E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RhythmSubLevelUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.updateSubLevelPb_.Equals(other.updateSubLevelPb_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06014F72 RID: 85874 RVA: 0x0030AB70 File Offset: 0x00308D70
+		// Token: 0x06014E8D RID: 85645 RVA: 0x003094B4 File Offset: 0x003076B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014F73 RID: 85875 RVA: 0x0030ABA4 File Offset: 0x00308DA4
+		// Token: 0x06014E8E RID: 85646 RVA: 0x003094E8 File Offset: 0x003076E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06014F74 RID: 85876 RVA: 0x0030ABB1 File Offset: 0x00308DB1
+		// Token: 0x06014E8F RID: 85647 RVA: 0x003094F5 File Offset: 0x003076F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06014F75 RID: 85877 RVA: 0x0030ABBA File Offset: 0x00308DBA
+		// Token: 0x06014E90 RID: 85648 RVA: 0x003094FE File Offset: 0x003076FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014F76 RID: 85878 RVA: 0x0030ABE4 File Offset: 0x00308DE4
+		// Token: 0x06014E91 RID: 85649 RVA: 0x00309528 File Offset: 0x00307728
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06014F77 RID: 85879 RVA: 0x0030AC1D File Offset: 0x00308E1D
+		// Token: 0x06014E92 RID: 85650 RVA: 0x00309561 File Offset: 0x00307761
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RhythmSubLevelUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06014F78 RID: 85880 RVA: 0x0030AC4B File Offset: 0x00308E4B
+		// Token: 0x06014E93 RID: 85651 RVA: 0x0030958F File Offset: 0x0030778F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06014F79 RID: 85881 RVA: 0x0030AC54 File Offset: 0x00308E54
+		// Token: 0x06014E94 RID: 85652 RVA: 0x00309598 File Offset: 0x00307798
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007E65 RID: 32357
+		// Token: 0x04007E8F RID: 32399
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007E66 RID: 32358
+		// Token: 0x04007E90 RID: 32400
 		public const int UpdateSubLevelPbFieldNumber = 14;
 
-		// Token: 0x04007E67 RID: 32359
+		// Token: 0x04007E91 RID: 32401
 		private static readonly FieldCodec<RhythmSubLevelPb> _repeated_updateSubLevelPb_codec = FieldCodec.ForMessage<RhythmSubLevelPb>(114U, RhythmSubLevelPb.Parser);
 
-		// Token: 0x04007E68 RID: 32360
+		// Token: 0x04007E92 RID: 32402
 		private readonly RepeatedField<RhythmSubLevelPb> updateSubLevelPb_ = new RepeatedField<RhythmSubLevelPb>();
 	}
 }

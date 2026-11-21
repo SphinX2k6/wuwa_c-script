@@ -23,30 +23,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007081 RID: 28801
+	// Token: 0x02006202 RID: 25090
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonConnectComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06046224 RID: 287268 RVA: 0x01182A65 File Offset: 0x01180C65
+		// Token: 0x0603C434 RID: 246836 RVA: 0x0112C1C6 File Offset: 0x0112A3C6
 		static CommonConnectComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonConnectComponent.CreateStaticDefaultValue), new Action(CommonConnectComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046225 RID: 287269 RVA: 0x01182A99 File Offset: 0x01180C99
+		// Token: 0x0603C435 RID: 246837 RVA: 0x0112C1FA File Offset: 0x0112A3FA
 		public static void CreateStaticDefaultValue()
 		{
 			CommonConnectComponent.DrawTraceDebug = false;
 		}
 
-		// Token: 0x06046226 RID: 287270 RVA: 0x01182AA1 File Offset: 0x01180CA1
+		// Token: 0x0603C436 RID: 246838 RVA: 0x0112C202 File Offset: 0x0112A402
 		public static void ResetStaticDefaultValue()
 		{
 			CommonConnectComponent.DrawTraceDebug = false;
 		}
 
-		// Token: 0x06046227 RID: 287271 RVA: 0x01182AAC File Offset: 0x01180CAC
+		// Token: 0x0603C437 RID: 246839 RVA: 0x0112C20C File Offset: 0x0112A40C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.CharacterInitData(p);
 		}
 
-		// Token: 0x06046228 RID: 287272 RVA: 0x01182AE4 File Offset: 0x01180CE4
+		// Token: 0x0603C438 RID: 246840 RVA: 0x0112C244 File Offset: 0x0112A444
 		protected override bool OnStart()
 		{
 			CommonConnectComponent.EEntityType entityType = this.EntityType;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.SceneItemStart();
 		}
 
-		// Token: 0x06046229 RID: 287273 RVA: 0x01182B14 File Offset: 0x01180D14
+		// Token: 0x0603C439 RID: 246841 RVA: 0x0112C274 File Offset: 0x0112A474
 		protected override void OnActivate()
 		{
 			CommonConnectComponent.EEntityType entityType = this.EntityType;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.CharacterActivate();
 		}
 
-		// Token: 0x0604622A RID: 287274 RVA: 0x01182B40 File Offset: 0x01180D40
+		// Token: 0x0603C43A RID: 246842 RVA: 0x0112C2A0 File Offset: 0x0112A4A0
 		protected override void OnTick(float delta)
 		{
 			CommonConnectComponent.EEntityType entityType = this.EntityType;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.CharacterTick(delta);
 		}
 
-		// Token: 0x0604622B RID: 287275 RVA: 0x01182B6C File Offset: 0x01180D6C
+		// Token: 0x0603C43B RID: 246843 RVA: 0x0112C2CC File Offset: 0x0112A4CC
 		protected override void OnDisable(string reason)
 		{
 			if (this.EntityType == CommonConnectComponent.EEntityType.Character)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604622C RID: 287276 RVA: 0x01182B7D File Offset: 0x01180D7D
+		// Token: 0x0603C43C RID: 246844 RVA: 0x0112C2DD File Offset: 0x0112A4DD
 		protected override void OnEnable()
 		{
 			if (this.EntityType == CommonConnectComponent.EEntityType.Character)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604622D RID: 287277 RVA: 0x01182B90 File Offset: 0x01180D90
+		// Token: 0x0603C43D RID: 246845 RVA: 0x0112C2F0 File Offset: 0x0112A4F0
 		protected override bool OnEnd()
 		{
 			this.ClearEffectSplines();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return this.SceneItemEnd();
 		}
 
-		// Token: 0x0604622E RID: 287278 RVA: 0x01182BC4 File Offset: 0x01180DC4
+		// Token: 0x0603C43E RID: 246846 RVA: 0x0112C324 File Offset: 0x0112A524
 		protected void GetNeedBeProcessingEntity(List<Entity> inRangeEntity, [Nullable(new byte[]
 		{
 			2,
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604622F RID: 287279 RVA: 0x01182C84 File Offset: 0x01180E84
+		// Token: 0x0603C43F RID: 246847 RVA: 0x0112C3E4 File Offset: 0x0112A5E4
 		[NullableContext(0)]
 		protected ValueTuple<bool, bool> CheckEntityMatchCondition([Nullable(new byte[]
 		{
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return new ValueTuple<bool, bool>(false, false);
 		}
 
-		// Token: 0x06046230 RID: 287280 RVA: 0x01182E88 File Offset: 0x01181088
+		// Token: 0x0603C440 RID: 246848 RVA: 0x0112C5E8 File Offset: 0x0112A7E8
 		protected void TryStartConnect()
 		{
 			if (this.NeedBeProcessingEntity.Count <= 0)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequestConnect(base.Entity, this.TmpTryStartConnect, true);
 		}
 
-		// Token: 0x06046231 RID: 287281 RVA: 0x01182FCC File Offset: 0x011811CC
+		// Token: 0x0603C441 RID: 246849 RVA: 0x0112C72C File Offset: 0x0112A92C
 		public unsafe void ServerConnectEntities(IList<long> targets)
 		{
 			global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			instance3.AddConnectedRelation(base.Entity.Id, list);
 		}
 
-		// Token: 0x06046232 RID: 287282 RVA: 0x011831F8 File Offset: 0x011813F8
+		// Token: 0x0603C442 RID: 246850 RVA: 0x0112C958 File Offset: 0x0112AB58
 		private void GenerateNormalSplineEffect(global::Vector selfLoc, TArray<FVectorDouble> points, BaseActorComponent targetActorComp)
 		{
 			points.Empty(true);
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			points.Add(vector2.ToUeVector(false));
 		}
 
-		// Token: 0x06046233 RID: 287283 RVA: 0x011832F0 File Offset: 0x011814F0
+		// Token: 0x0603C443 RID: 246851 RVA: 0x0112CA50 File Offset: 0x0112AC50
 		private void GeneratePassThroughPortalSplineEffect(global::Vector selfLoc, TArray<FVectorDouble> points, BaseActorComponent targetActorComp, long portalPairId, bool bA2B)
 		{
 			points.Empty(true);
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046234 RID: 287284 RVA: 0x0118363C File Offset: 0x0118183C
+		// Token: 0x0603C444 RID: 246852 RVA: 0x0112CD9C File Offset: 0x0112AF9C
 		private void AfterGeneratePassThroughPortalSplineEffect(TArray<FVectorDouble> points, BaseActorComponent targetActorComp, global::Vector selfLoc, int id)
 		{
 			TArray<FVectorDouble> tarray = new TArray<FVectorDouble>();
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046235 RID: 287285 RVA: 0x01183724 File Offset: 0x01181924
+		// Token: 0x0603C445 RID: 246853 RVA: 0x0112CE84 File Offset: 0x0112B084
 		private void TryCancelConnect(List<int> targetIds)
 		{
 			List<ValueTuple<Entity, List<long>>> list = new List<ValueTuple<Entity, List<long>>>();
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequestConnect(base.Entity, list, false);
 		}
 
-		// Token: 0x06046236 RID: 287286 RVA: 0x011837BC File Offset: 0x011819BC
+		// Token: 0x0603C446 RID: 246854 RVA: 0x0112CF1C File Offset: 0x0112B11C
 		protected void TryCancelAllConnect()
 		{
 			ConnectGamePlayModel instance = ConnectGamePlayModel.Instance;
@@ -515,7 +515,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequestConnect(base.Entity, list, false);
 		}
 
-		// Token: 0x06046237 RID: 287287 RVA: 0x01183884 File Offset: 0x01181A84
+		// Token: 0x0603C447 RID: 246855 RVA: 0x0112CFE4 File Offset: 0x0112B1E4
 		public void ServerDisconnectEntities(IList<long> targets)
 		{
 			foreach (long creatureDataId in targets)
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046238 RID: 287288 RVA: 0x01183940 File Offset: 0x01181B40
+		// Token: 0x0603C448 RID: 246856 RVA: 0x0112D0A0 File Offset: 0x0112B2A0
 		protected void ClearEffectSplines()
 		{
 			foreach (KeyValuePair<int, List<IGuideEffectSpline>> keyValuePair in this.EffectSplines)
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.EffectSplines.Clear();
 		}
 
-		// Token: 0x06046239 RID: 287289 RVA: 0x01183A38 File Offset: 0x01181C38
+		// Token: 0x0603C449 RID: 246857 RVA: 0x0112D198 File Offset: 0x0112B398
 		protected void RemoveSpecificSpline(int entityId)
 		{
 			List<IGuideEffectSpline> list;
@@ -583,7 +583,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.EffectSplines.Remove(entityId);
 		}
 
-		// Token: 0x0604623A RID: 287290 RVA: 0x01183B04 File Offset: 0x01181D04
+		// Token: 0x0603C44A RID: 246858 RVA: 0x0112D264 File Offset: 0x0112B464
 		[NullableContext(2)]
 		protected void UpdateConnectorRange(float exitDistance, [Nullable(new byte[]
 		{
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.TryCancelConnect(list);
 		}
 
-		// Token: 0x0604623B RID: 287291 RVA: 0x01183DC8 File Offset: 0x01181FC8
+		// Token: 0x0603C44B RID: 246859 RVA: 0x0112D528 File Offset: 0x0112B728
 		private bool LineTraceToEntity(int entityId, CharacterManipulateComponent.EPassThroughPortalType? inType = null, long? portalId = null)
 		{
 			if (this.LineTrace == null)
@@ -830,7 +830,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604623C RID: 287292 RVA: 0x0118420C File Offset: 0x0118240C
+		// Token: 0x0603C44C RID: 246860 RVA: 0x0112D96C File Offset: 0x0112BB6C
 		private bool IsPointInBoxExtent(global::Vector point, FTransformDouble transform, FVectorDouble center, FVector extent)
 		{
 			transform.SetLocation(center);
@@ -839,7 +839,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return Math.Abs(fvectorDouble2.Y) <= (double)extent.Y && Math.Abs(fvectorDouble2.Z) <= (double)extent.Z;
 		}
 
-		// Token: 0x0604623D RID: 287293 RVA: 0x01184264 File Offset: 0x01182464
+		// Token: 0x0603C44D RID: 246861 RVA: 0x0112D9C4 File Offset: 0x0112BBC4
 		private bool ProcessLineTraceResult(BaseActorComponent targetActorComp)
 		{
 			if (this.LineTrace.HitResult.bBlockingHit)
@@ -876,7 +876,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604623E RID: 287294 RVA: 0x01184330 File Offset: 0x01182530
+		// Token: 0x0603C44E RID: 246862 RVA: 0x0112DA90 File Offset: 0x0112BC90
 		[NullableContext(2)]
 		private bool ProcessLineTraceResultWithPortal(BaseActorComponent targetActorComp = null)
 		{
@@ -912,7 +912,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604623F RID: 287295 RVA: 0x01184404 File Offset: 0x01182604
+		// Token: 0x0603C44F RID: 246863 RVA: 0x0112DB64 File Offset: 0x0112BD64
 		private float CalcDistancePassThroughPortal(int entityId, bool bA2B, long? portalPairId = null)
 		{
 			ConnectGamePlayModel instance = ConnectGamePlayModel.Instance;
@@ -957,7 +957,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return (float)global::Vector.Dist(vector2, actorLocationProxy);
 		}
 
-		// Token: 0x06046240 RID: 287296 RVA: 0x01184588 File Offset: 0x01182788
+		// Token: 0x0603C450 RID: 246864 RVA: 0x0112DCE8 File Offset: 0x0112BEE8
 		protected unsafe void UpdateSplineEffect()
 		{
 			global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -1048,7 +1048,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046241 RID: 287297 RVA: 0x011848CC File Offset: 0x01182ACC
+		// Token: 0x0603C451 RID: 246865 RVA: 0x0112E02C File Offset: 0x0112C22C
 		protected void RequestConnect(Entity initiator, [TupleElementNames(new string[]
 		{
 			"Target",
@@ -1103,7 +1103,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}, 0);
 		}
 
-		// Token: 0x06046242 RID: 287298 RVA: 0x01184A2C File Offset: 0x01182C2C
+		// Token: 0x0603C452 RID: 246866 RVA: 0x0112E18C File Offset: 0x0112C38C
 		private void InitLineTraceInfo()
 		{
 			this.LineTrace = new UTraceLineElement();
@@ -1118,7 +1118,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			TraceElementCommon.Instance.SetTraceHitColor(this.LineTrace, ColorUtils.LinearGreen);
 		}
 
-		// Token: 0x06046243 RID: 287299 RVA: 0x01184AD4 File Offset: 0x01182CD4
+		// Token: 0x0603C453 RID: 246867 RVA: 0x0112E234 File Offset: 0x0112C434
 		private bool CharacterInitData(CreateEntityData data)
 		{
 			this.EntityType = CommonConnectComponent.EEntityType.Character;
@@ -1127,7 +1127,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046244 RID: 287300 RVA: 0x01184AFC File Offset: 0x01182CFC
+		// Token: 0x0603C454 RID: 246868 RVA: 0x0112E25C File Offset: 0x0112C45C
 		private bool CharacterStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -1147,7 +1147,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046245 RID: 287301 RVA: 0x01184BD0 File Offset: 0x01182DD0
+		// Token: 0x0603C455 RID: 246869 RVA: 0x0112E330 File Offset: 0x0112C530
 		private void CharacterActivate()
 		{
 			if (this.TryConnectTimer != null)
@@ -1170,7 +1170,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.NearbyInfo = this.PawnSensoryComp.AddSensoryInfo(connectNearbySensory);
 		}
 
-		// Token: 0x06046246 RID: 287302 RVA: 0x01184C8C File Offset: 0x01182E8C
+		// Token: 0x0603C456 RID: 246870 RVA: 0x0112E3EC File Offset: 0x0112C5EC
 		private void CharacterEnable()
 		{
 			if (this.TryConnectTimer != null)
@@ -1184,7 +1184,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}, (float)ConnectGamePlayModel.Instance.TryConnectInterval, 1f, null, null, true);
 		}
 
-		// Token: 0x06046247 RID: 287303 RVA: 0x01184CE8 File Offset: 0x01182EE8
+		// Token: 0x0603C457 RID: 246871 RVA: 0x0112E448 File Offset: 0x0112C648
 		private void CharacterDisable()
 		{
 			if (this.TryConnectTimer != null)
@@ -1195,7 +1195,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046248 RID: 287304 RVA: 0x01184D10 File Offset: 0x01182F10
+		// Token: 0x0603C458 RID: 246872 RVA: 0x0112E470 File Offset: 0x0112C670
 		private void CharacterTick(float delta)
 		{
 			CharacterConnectorComponent characterConfig = this.CharacterConfig;
@@ -1211,7 +1211,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046249 RID: 287305 RVA: 0x01184D68 File Offset: 0x01182F68
+		// Token: 0x0603C459 RID: 246873 RVA: 0x0112E4C8 File Offset: 0x0112C6C8
 		private bool CharacterEnd()
 		{
 			if (this.NearbyInfo >= 0)
@@ -1232,7 +1232,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604624A RID: 287306 RVA: 0x01184DC4 File Offset: 0x01182FC4
+		// Token: 0x0603C45A RID: 246874 RVA: 0x0112E524 File Offset: 0x0112C724
 		private bool ExtraCondition(int entityId)
 		{
 			using (HashSet<int>.Enumerator enumerator = this.CurInRangeEntities.GetEnumerator())
@@ -1248,7 +1248,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x0604624B RID: 287307 RVA: 0x01184E1C File Offset: 0x0118301C
+		// Token: 0x0603C45B RID: 246875 RVA: 0x0112E57C File Offset: 0x0112C77C
 		private void TryStartCharacterConnect()
 		{
 			this.NeedBeProcessingEntity.Clear();
@@ -1310,7 +1310,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.LastCanInteractEntityNum = this.CanInteractEntity.Count;
 		}
 
-		// Token: 0x0604624C RID: 287308 RVA: 0x0118500C File Offset: 0x0118320C
+		// Token: 0x0603C45C RID: 246876 RVA: 0x0112E76C File Offset: 0x0112C96C
 		private void NotifyServerCanInteract(bool canInteract)
 		{
 			ConnectorCanConnectRequest connectorCanConnectRequest = ConnectorCanConnectRequest.Create();
@@ -1327,7 +1327,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}, 0);
 		}
 
-		// Token: 0x0604624D RID: 287309 RVA: 0x01185070 File Offset: 0x01183270
+		// Token: 0x0603C45D RID: 246877 RVA: 0x0112E7D0 File Offset: 0x0112C9D0
 		private bool CheckStartConnectTagCondition()
 		{
 			CharacterConnectorComponent characterConfig = this.CharacterConfig;
@@ -1352,7 +1352,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604624E RID: 287310 RVA: 0x01185104 File Offset: 0x01183304
+		// Token: 0x0603C45E RID: 246878 RVA: 0x0112E864 File Offset: 0x0112CA64
 		private void CharacterFindEntityPassThroughPortal(long pathwayPortalPairId, bool pathwayPortalA2B)
 		{
 			if (pathwayPortalPairId == 0L)
@@ -1467,7 +1467,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604624F RID: 287311 RVA: 0x011854D0 File Offset: 0x011836D0
+		// Token: 0x0603C45F RID: 246879 RVA: 0x0112EC30 File Offset: 0x0112CE30
 		[NullableContext(0)]
 		private ValueTuple<bool, bool> CheckCondition([Nullable(1)] Entity entity)
 		{
@@ -1507,7 +1507,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return new ValueTuple<bool, bool>(false, false);
 		}
 
-		// Token: 0x06046250 RID: 287312 RVA: 0x011855B7 File Offset: 0x011837B7
+		// Token: 0x0603C460 RID: 246880 RVA: 0x0112ED17 File Offset: 0x0112CF17
 		private bool OnEnterSensoryRange(Entity entity)
 		{
 			if (entity.GetComponent<CommonConnectComponent>() != null)
@@ -1517,7 +1517,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046251 RID: 287313 RVA: 0x011855D4 File Offset: 0x011837D4
+		// Token: 0x0603C461 RID: 246881 RVA: 0x0112ED34 File Offset: 0x0112CF34
 		private void OnExitSensoryRange(int entityId)
 		{
 			this.CurInRangeEntities.Remove(entityId);
@@ -1529,7 +1529,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			sensoryInfo.OnEntityExitConnectRange(entityId);
 		}
 
-		// Token: 0x06046252 RID: 287314 RVA: 0x011855F4 File Offset: 0x011837F4
+		// Token: 0x0603C462 RID: 246882 RVA: 0x0112ED54 File Offset: 0x0112CF54
 		private bool SceneItemInitData(CreateEntityData data)
 		{
 			this.EntityType = CommonConnectComponent.EEntityType.SceneItem;
@@ -1551,7 +1551,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046253 RID: 287315 RVA: 0x01185668 File Offset: 0x01183868
+		// Token: 0x0603C463 RID: 246883 RVA: 0x0112EDC8 File Offset: 0x0112CFC8
 		private bool SceneItemStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -1607,7 +1607,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046254 RID: 287316 RVA: 0x01185838 File Offset: 0x01183A38
+		// Token: 0x0603C464 RID: 246884 RVA: 0x0112EF98 File Offset: 0x0112D198
 		private void SceneItemActivate()
 		{
 			if (this.CheckActiveState())
@@ -1624,7 +1624,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046255 RID: 287317 RVA: 0x011858A4 File Offset: 0x01183AA4
+		// Token: 0x0603C465 RID: 246885 RVA: 0x0112F004 File Offset: 0x0112D204
 		private void SceneItemTick(float delta)
 		{
 			ConnectorComponent sceneItemConfig = this.SceneItemConfig;
@@ -1646,7 +1646,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046256 RID: 287318 RVA: 0x0118590C File Offset: 0x01183B0C
+		// Token: 0x0603C466 RID: 246886 RVA: 0x0112F06C File Offset: 0x0112D26C
 		private bool SceneItemEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -1662,7 +1662,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046257 RID: 287319 RVA: 0x01185980 File Offset: 0x01183B80
+		// Token: 0x0603C467 RID: 246887 RVA: 0x0112F0E0 File Offset: 0x0112D2E0
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			if (!this.CheckActiveState() && this.TryConnectTimer != null)
@@ -1681,7 +1681,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046258 RID: 287320 RVA: 0x011859FB File Offset: 0x01183BFB
+		// Token: 0x0603C468 RID: 246888 RVA: 0x0112F15B File Offset: 0x0112D35B
 		public void WithdrawPathAdvance()
 		{
 			PathAdvanceConnectDriver pathAdvanceDriver = this.PathAdvanceDriver;
@@ -1692,7 +1692,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			pathAdvanceDriver.Withdraw();
 		}
 
-		// Token: 0x06046259 RID: 287321 RVA: 0x01185A10 File Offset: 0x01183C10
+		// Token: 0x0603C469 RID: 246889 RVA: 0x0112F170 File Offset: 0x0112D370
 		private unsafe void OnPathAdvanceReachEnd(int targetPbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(targetPbDataId);
@@ -1717,7 +1717,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequestConnect(entity, list, true);
 		}
 
-		// Token: 0x0604625A RID: 287322 RVA: 0x01185AA4 File Offset: 0x01183CA4
+		// Token: 0x0603C46A RID: 246890 RVA: 0x0112F204 File Offset: 0x0112D404
 		private unsafe void OnPathAdvanceWithdraw(int targetPbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(targetPbDataId);
@@ -1736,7 +1736,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RequestConnect(entity, list, false);
 		}
 
-		// Token: 0x0604625B RID: 287323 RVA: 0x01185B0C File Offset: 0x01183D0C
+		// Token: 0x0603C46B RID: 246891 RVA: 0x0112F26C File Offset: 0x0112D46C
 		private bool CheckActiveState()
 		{
 			bool flag = this.StateComp == null;
@@ -1754,14 +1754,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return stateTagId == activeCheckState.GetValueOrDefault() & activeCheckState != null;
 		}
 
-		// Token: 0x0604625C RID: 287324 RVA: 0x01185B6F File Offset: 0x01183D6F
+		// Token: 0x0603C46C RID: 246892 RVA: 0x0112F2CF File Offset: 0x0112D4CF
 		private void TryStartSceneItemConnect()
 		{
 			this.ScanNearbySceneItems();
 			this.TryStartConnect();
 		}
 
-		// Token: 0x0604625D RID: 287325 RVA: 0x01185B80 File Offset: 0x01183D80
+		// Token: 0x0603C46D RID: 246893 RVA: 0x0112F2E0 File Offset: 0x0112D4E0
 		private void ScanNearbySceneItems()
 		{
 			if (this.ActorComp == null)
@@ -1787,7 +1787,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.GetNeedBeProcessingEntity(list, connectorRange.MatchConditions);
 		}
 
-		// Token: 0x0604625E RID: 287326 RVA: 0x01185C48 File Offset: 0x01183E48
+		// Token: 0x0603C46E RID: 246894 RVA: 0x0112F3A8 File Offset: 0x0112D5A8
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1795,243 +1795,240 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			CommonConnectComponent commonConnectComponent = (CommonConnectComponent)componentTemplate;
-			if (base.CanResetComponentProperty("EntityType"))
+			this.EntityType = commonConnectComponent.EntityType;
+			if (commonConnectComponent.ActorComp == null)
 			{
-				this.EntityType = commonConnectComponent.EntityType;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (commonConnectComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ConnectedEffectPath"))
-			{
-				this.ConnectedEffectPath = commonConnectComponent.ConnectedEffectPath;
-			}
-			if (base.CanResetComponentProperty("ConnectedEffectStartPoint"))
-			{
-				this.ConnectedEffectStartPoint = commonConnectComponent.ConnectedEffectStartPoint;
-			}
-			if (base.CanResetComponentProperty("ConnectedEffectEndPoint"))
-			{
-				this.ConnectedEffectEndPoint = commonConnectComponent.ConnectedEffectEndPoint;
-			}
-			if (base.CanResetComponentProperty("EffectSplines") && commonConnectComponent.EffectSplines != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, List<IGuideEffectSpline>>>(this.EffectSplines), "EffectSplines"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ScanDistance"))
-			{
-				this.ScanDistance = commonConnectComponent.ScanDistance;
-			}
-			if (base.CanResetComponentProperty("ExitDistance"))
-			{
-				this.ExitDistance = commonConnectComponent.ExitDistance;
-			}
-			if (base.CanResetComponentProperty("TryConnectTimer"))
-			{
-				if (commonConnectComponent.TryConnectTimer == null)
-				{
-					this.TryConnectTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.TryConnectTimer), "TryConnectTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TmpTryStartConnect") && commonConnectComponent.TmpTryStartConnect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<Entity, List<long>>>>(this.TmpTryStartConnect), "TmpTryStartConnect"))
+			this.ConnectedEffectPath = commonConnectComponent.ConnectedEffectPath;
+			this.ConnectedEffectStartPoint = commonConnectComponent.ConnectedEffectStartPoint;
+			this.ConnectedEffectEndPoint = commonConnectComponent.ConnectedEffectEndPoint;
+			if (commonConnectComponent.EffectSplines != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectSplines), "EffectSplines"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastCanInteractEntityNum"))
+			this.ScanDistance = commonConnectComponent.ScanDistance;
+			this.ExitDistance = commonConnectComponent.ExitDistance;
+			if (commonConnectComponent.TryConnectTimer == null)
 			{
-				this.LastCanInteractEntityNum = commonConnectComponent.LastCanInteractEntityNum;
+				this.TryConnectTimer = null;
 			}
-			if (base.CanResetComponentProperty("NeedBeProcessingEntity") && commonConnectComponent.NeedBeProcessingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<Entity, PassThroughPortalParam>>(this.NeedBeProcessingEntity), "NeedBeProcessingEntity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TryConnectTimer), "TryConnectTimer"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CanInteractEntity") && commonConnectComponent.CanInteractEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.CanInteractEntity), "CanInteractEntity"))
+			if (commonConnectComponent.TmpTryStartConnect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTryStartConnect), "TmpTryStartConnect"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ServerProcessingEntities") && commonConnectComponent.ServerProcessingEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ServerProcessingEntities), "ServerProcessingEntities"))
+			this.LastCanInteractEntityNum = commonConnectComponent.LastCanInteractEntityNum;
+			if (commonConnectComponent.NeedBeProcessingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.NeedBeProcessingEntity), "NeedBeProcessingEntity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ServerProcessingEntitiesParams") && commonConnectComponent.ServerProcessingEntitiesParams != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, CharacterManipulateComponent.EPassThroughPortalType>>(this.ServerProcessingEntitiesParams), "ServerProcessingEntitiesParams"))
+			if (commonConnectComponent.CanInteractEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.CanInteractEntity), "CanInteractEntity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CharacterConfig"))
-			{
-				if (commonConnectComponent.CharacterConfig == null)
-				{
-					this.CharacterConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterConnectorComponent>(this.CharacterConfig), "CharacterConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PawnSensoryComp"))
-			{
-				if (commonConnectComponent.PawnSensoryComp == null)
-				{
-					this.PawnSensoryComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryComponent>(this.PawnSensoryComp), "PawnSensoryComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CharTagComp"))
-			{
-				if (commonConnectComponent.CharTagComp == null)
-				{
-					this.CharTagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.CharTagComp), "CharTagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CharMovementSyncComp"))
-			{
-				if (commonConnectComponent.CharMovementSyncComp == null)
-				{
-					this.CharMovementSyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMovementSyncComponent>(this.CharMovementSyncComp), "CharMovementSyncComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NearbyInfo"))
-			{
-				this.NearbyInfo = commonConnectComponent.NearbyInfo;
-			}
-			if (base.CanResetComponentProperty("SensoryInfo"))
-			{
-				if (commonConnectComponent.SensoryInfo == null)
-				{
-					this.SensoryInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ConnectNearbySensory>(this.SensoryInfo), "SensoryInfo"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LineTrace"))
-			{
-				if (commonConnectComponent.LineTrace == null)
-				{
-					this.LineTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.LineTrace), "LineTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurInRangeEntities") && commonConnectComponent.CurInRangeEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurInRangeEntities), "CurInRangeEntities"))
+			if (commonConnectComponent.ServerProcessingEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ServerProcessingEntities), "ServerProcessingEntities"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SceneItemConfig"))
-			{
-				if (commonConnectComponent.SceneItemConfig == null)
-				{
-					this.SceneItemConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ConnectorComponent>(this.SceneItemConfig), "SceneItemConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PathAdvanceServerConnected"))
-			{
-				this.PathAdvanceServerConnected = commonConnectComponent.PathAdvanceServerConnected;
-			}
-			if (base.CanResetComponentProperty("QueryEntityResultCache") && commonConnectComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			if (commonConnectComponent.ServerProcessingEntitiesParams != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ServerProcessingEntitiesParams), "ServerProcessingEntitiesParams"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
+			if (commonConnectComponent.CharacterConfig == null)
 			{
-				if (commonConnectComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
+				this.CharacterConfig = null;
 			}
-			if (base.CanResetComponentProperty("ActiveCheckState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterConfig), "CharacterConfig"))
 			{
-				this.ActiveCheckState = commonConnectComponent.ActiveCheckState;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PathAdvanceDriver"))
+			if (commonConnectComponent.PawnSensoryComp == null)
 			{
-				if (commonConnectComponent.PathAdvanceDriver == null)
-				{
-					this.PathAdvanceDriver = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PathAdvanceConnectDriver>(this.PathAdvanceDriver), "PathAdvanceDriver"))
-				{
-					return false;
-				}
+				this.PawnSensoryComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryComp), "PawnSensoryComp"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.CharTagComp == null)
+			{
+				this.CharTagComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharTagComp), "CharTagComp"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.CharMovementSyncComp == null)
+			{
+				this.CharMovementSyncComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharMovementSyncComp), "CharMovementSyncComp"))
+			{
+				return false;
+			}
+			this.NearbyInfo = commonConnectComponent.NearbyInfo;
+			if (commonConnectComponent.SensoryInfo == null)
+			{
+				this.SensoryInfo = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SensoryInfo), "SensoryInfo"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.LineTrace == null)
+			{
+				this.LineTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LineTrace), "LineTrace"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.CurInRangeEntities != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurInRangeEntities), "CurInRangeEntities"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.SceneItemConfig == null)
+			{
+				this.SceneItemConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneItemConfig), "SceneItemConfig"))
+			{
+				return false;
+			}
+			this.PathAdvanceServerConnected = commonConnectComponent.PathAdvanceServerConnected;
+			if (commonConnectComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.QueryEntityResultCache), "QueryEntityResultCache"))
+			{
+				return false;
+			}
+			if (commonConnectComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+			{
+				return false;
+			}
+			this.ActiveCheckState = commonConnectComponent.ActiveCheckState;
+			if (commonConnectComponent.PathAdvanceDriver == null)
+			{
+				this.PathAdvanceDriver = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PathAdvanceDriver), "PathAdvanceDriver"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024BD7 RID: 150487
+		// Token: 0x170071B9 RID: 29113
+		// (get) Token: 0x0603C46F RID: 246895 RVA: 0x0112F729 File Offset: 0x0112D929
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071BA RID: 29114
+		// (get) Token: 0x0603C470 RID: 246896 RVA: 0x0112F72C File Offset: 0x0112D92C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071BB RID: 29115
+		// (get) Token: 0x0603C471 RID: 246897 RVA: 0x0112F72F File Offset: 0x0112D92F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071BC RID: 29116
+		// (get) Token: 0x0603C472 RID: 246898 RVA: 0x0112F732 File Offset: 0x0112D932
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071BD RID: 29117
+		// (get) Token: 0x0603C473 RID: 246899 RVA: 0x0112F735 File Offset: 0x0112D935
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071BE RID: 29118
+		// (get) Token: 0x0603C474 RID: 246900 RVA: 0x0112F738 File Offset: 0x0112D938
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FE92 RID: 130706
 		private const string PROFILE_KEY = "CommonConnectComponent_LineTrace";
 
-		// Token: 0x04024BD8 RID: 150488
+		// Token: 0x0401FE93 RID: 130707
 		[StaticVariableRuleIgnore]
 		private static readonly FName TRACE_CHECK_PRESET_NAME = new FName("被控物检测_Normal");
 
-		// Token: 0x04024BD9 RID: 150489
+		// Token: 0x0401FE94 RID: 130708
 		private CommonConnectComponent.EEntityType EntityType;
 
-		// Token: 0x04024BDA RID: 150490
+		// Token: 0x0401FE95 RID: 130709
 		[Nullable(2)]
 		public BaseActorComponent ActorComp;
 
-		// Token: 0x04024BDB RID: 150491
+		// Token: 0x0401FE96 RID: 130710
 		[Nullable(2)]
 		protected string ConnectedEffectPath;
 
-		// Token: 0x04024BDC RID: 150492
+		// Token: 0x0401FE97 RID: 130711
 		protected FName? ConnectedEffectStartPoint;
 
-		// Token: 0x04024BDD RID: 150493
+		// Token: 0x0401FE98 RID: 130712
 		protected FName? ConnectedEffectEndPoint;
 
-		// Token: 0x04024BDE RID: 150494
+		// Token: 0x0401FE99 RID: 130713
 		protected readonly Dictionary<int, List<IGuideEffectSpline>> EffectSplines = new Dictionary<int, List<IGuideEffectSpline>>();
 
-		// Token: 0x04024BDF RID: 150495
+		// Token: 0x0401FE9A RID: 130714
 		private float ScanDistance;
 
-		// Token: 0x04024BE0 RID: 150496
+		// Token: 0x0401FE9B RID: 130715
 		private float ExitDistance = float.MaxValue;
 
-		// Token: 0x04024BE1 RID: 150497
+		// Token: 0x0401FE9C RID: 130716
 		[Nullable(2)]
 		private TimerHandle TryConnectTimer;
 
-		// Token: 0x04024BE2 RID: 150498
+		// Token: 0x0401FE9D RID: 130717
 		public static bool DrawTraceDebug = false;
 
-		// Token: 0x04024BE3 RID: 150499
+		// Token: 0x0401FE9E RID: 130718
 		[TupleElementNames(new string[]
 		{
 			"Target",
@@ -2046,84 +2043,84 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private readonly List<ValueTuple<Entity, List<long>>> TmpTryStartConnect = new List<ValueTuple<Entity, List<long>>>();
 
-		// Token: 0x04024BE4 RID: 150500
+		// Token: 0x0401FE9F RID: 130719
 		private int LastCanInteractEntityNum;
 
-		// Token: 0x04024BE5 RID: 150501
+		// Token: 0x0401FEA0 RID: 130720
 		protected readonly Dictionary<Entity, PassThroughPortalParam> NeedBeProcessingEntity = new Dictionary<Entity, PassThroughPortalParam>();
 
-		// Token: 0x04024BE6 RID: 150502
+		// Token: 0x0401FEA1 RID: 130721
 		protected readonly HashSet<Entity> CanInteractEntity = new HashSet<Entity>();
 
-		// Token: 0x04024BE7 RID: 150503
+		// Token: 0x0401FEA2 RID: 130722
 		protected readonly HashSet<int> ServerProcessingEntities = new HashSet<int>();
 
-		// Token: 0x04024BE8 RID: 150504
+		// Token: 0x0401FEA3 RID: 130723
 		protected readonly Dictionary<int, CharacterManipulateComponent.EPassThroughPortalType> ServerProcessingEntitiesParams = new Dictionary<int, CharacterManipulateComponent.EPassThroughPortalType>();
 
-		// Token: 0x04024BE9 RID: 150505
+		// Token: 0x0401FEA4 RID: 130724
 		private readonly int CanInteractTag = GameplayTagDefine.EGameplayTagId["辅助机.黑海岸.进入污染交互范围"];
 
-		// Token: 0x04024BEA RID: 150506
+		// Token: 0x0401FEA5 RID: 130725
 		[Nullable(2)]
 		private CharacterConnectorComponent CharacterConfig;
 
-		// Token: 0x04024BEB RID: 150507
+		// Token: 0x0401FEA6 RID: 130726
 		[Nullable(2)]
 		private PawnSensoryComponent PawnSensoryComp;
 
-		// Token: 0x04024BEC RID: 150508
+		// Token: 0x0401FEA7 RID: 130727
 		[Nullable(2)]
 		private BaseTagComponent CharTagComp;
 
-		// Token: 0x04024BED RID: 150509
+		// Token: 0x0401FEA8 RID: 130728
 		[Nullable(2)]
 		private BaseMovementSyncComponent CharMovementSyncComp;
 
-		// Token: 0x04024BEE RID: 150510
+		// Token: 0x0401FEA9 RID: 130729
 		private int NearbyInfo = -1;
 
-		// Token: 0x04024BEF RID: 150511
+		// Token: 0x0401FEAA RID: 130730
 		[Nullable(2)]
 		private ConnectNearbySensory SensoryInfo;
 
-		// Token: 0x04024BF0 RID: 150512
+		// Token: 0x0401FEAB RID: 130731
 		[Nullable(2)]
 		private UTraceLineElement LineTrace;
 
-		// Token: 0x04024BF1 RID: 150513
+		// Token: 0x0401FEAC RID: 130732
 		private readonly HashSet<int> CurInRangeEntities = new HashSet<int>();
 
-		// Token: 0x04024BF2 RID: 150514
+		// Token: 0x0401FEAD RID: 130733
 		[Nullable(2)]
 		private ConnectorComponent SceneItemConfig;
 
-		// Token: 0x04024BF3 RID: 150515
+		// Token: 0x0401FEAE RID: 130734
 		private bool PathAdvanceServerConnected;
 
-		// Token: 0x04024BF4 RID: 150516
+		// Token: 0x0401FEAF RID: 130735
 		private readonly List<EntityHandle> QueryEntityResultCache = new List<EntityHandle>();
 
-		// Token: 0x04024BF5 RID: 150517
+		// Token: 0x0401FEB0 RID: 130736
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04024BF6 RID: 150518
+		// Token: 0x0401FEB1 RID: 130737
 		private int? ActiveCheckState;
 
-		// Token: 0x04024BF7 RID: 150519
+		// Token: 0x0401FEB2 RID: 130738
 		[Nullable(2)]
 		private PathAdvanceConnectDriver PathAdvanceDriver;
 
-		// Token: 0x0200CE3B RID: 52795
+		// Token: 0x0200BA2C RID: 47660
 		[NullableContext(0)]
 		private enum EEntityType
 		{
-			// Token: 0x0403E1B7 RID: 254391
+			// Token: 0x040395E2 RID: 234978
 			None,
-			// Token: 0x0403E1B8 RID: 254392
+			// Token: 0x040395E3 RID: 234979
 			SceneItem,
-			// Token: 0x0403E1B9 RID: 254393
+			// Token: 0x040395E4 RID: 234980
 			Character
 		}
 	}

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200094B RID: 2379
+	// Token: 0x0200093A RID: 2362
 	[NetMessage(EMessageId.LoginRequest)]
 	public sealed class LoginRequest : IMessage<LoginRequest>, IMessage, IEquatable<LoginRequest>, IDeepCloneable<LoginRequest>, IBufferMessage
 	{
-		// Token: 0x0600D17C RID: 53628 RVA: 0x001ED050 File Offset: 0x001EB250
+		// Token: 0x0600D060 RID: 53344 RVA: 0x001EAD7C File Offset: 0x001E8F7C
 		[NullableContext(1)]
 		public static LoginRequest Create()
 		{
 			return new LoginRequest();
 		}
 
-		// Token: 0x17002A52 RID: 10834
-		// (get) Token: 0x0600D17D RID: 53629 RVA: 0x001ED057 File Offset: 0x001EB257
+		// Token: 0x17002A13 RID: 10771
+		// (get) Token: 0x0600D061 RID: 53345 RVA: 0x001EAD83 File Offset: 0x001E8F83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A53 RID: 10835
-		// (get) Token: 0x0600D17E RID: 53630 RVA: 0x001ED05A File Offset: 0x001EB25A
+		// Token: 0x17002A14 RID: 10772
+		// (get) Token: 0x0600D062 RID: 53346 RVA: 0x001EAD86 File Offset: 0x001E8F86
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D17F RID: 53631 RVA: 0x001ED064 File Offset: 0x001EB264
+		// Token: 0x0600D063 RID: 53347 RVA: 0x001EAD90 File Offset: 0x001E8F90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LoginRequest()
 		{
 		}
 
-		// Token: 0x0600D180 RID: 53632 RVA: 0x001ED128 File Offset: 0x001EB328
+		// Token: 0x0600D064 RID: 53348 RVA: 0x001EAE60 File Offset: 0x001E9060
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LoginRequest(LoginRequest other) : this()
@@ -84,10 +84,11 @@ namespace Aki.Protocol
 			this.xboxAccountId_ = other.xboxAccountId_;
 			this.xboxSocialState_ = other.xboxSocialState_;
 			this.xstsToken_ = other.xstsToken_;
+			this.gradedResourceVersion_ = other.gradedResourceVersion_;
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D181 RID: 53633 RVA: 0x001ED2ED File Offset: 0x001EB4ED
+		// Token: 0x0600D065 RID: 53349 RVA: 0x001EB031 File Offset: 0x001E9231
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LoginRequest Clone()
@@ -95,9 +96,9 @@ namespace Aki.Protocol
 			return new LoginRequest(this);
 		}
 
-		// Token: 0x17002A54 RID: 10836
-		// (get) Token: 0x0600D182 RID: 53634 RVA: 0x001ED2F5 File Offset: 0x001EB4F5
-		// (set) Token: 0x0600D183 RID: 53635 RVA: 0x001ED2FD File Offset: 0x001EB4FD
+		// Token: 0x17002A15 RID: 10773
+		// (get) Token: 0x0600D066 RID: 53350 RVA: 0x001EB039 File Offset: 0x001E9239
+		// (set) Token: 0x0600D067 RID: 53351 RVA: 0x001EB041 File Offset: 0x001E9241
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Id
@@ -112,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A55 RID: 10837
-		// (get) Token: 0x0600D184 RID: 53636 RVA: 0x001ED306 File Offset: 0x001EB506
-		// (set) Token: 0x0600D185 RID: 53637 RVA: 0x001ED30E File Offset: 0x001EB50E
+		// Token: 0x17002A16 RID: 10774
+		// (get) Token: 0x0600D068 RID: 53352 RVA: 0x001EB04A File Offset: 0x001E924A
+		// (set) Token: 0x0600D069 RID: 53353 RVA: 0x001EB052 File Offset: 0x001E9252
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Account
@@ -129,9 +130,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A56 RID: 10838
-		// (get) Token: 0x0600D186 RID: 53638 RVA: 0x001ED321 File Offset: 0x001EB521
-		// (set) Token: 0x0600D187 RID: 53639 RVA: 0x001ED329 File Offset: 0x001EB529
+		// Token: 0x17002A17 RID: 10775
+		// (get) Token: 0x0600D06A RID: 53354 RVA: 0x001EB065 File Offset: 0x001E9265
+		// (set) Token: 0x0600D06B RID: 53355 RVA: 0x001EB06D File Offset: 0x001E926D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string LoginTraceId
@@ -146,9 +147,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A57 RID: 10839
-		// (get) Token: 0x0600D188 RID: 53640 RVA: 0x001ED33C File Offset: 0x001EB53C
-		// (set) Token: 0x0600D189 RID: 53641 RVA: 0x001ED344 File Offset: 0x001EB544
+		// Token: 0x17002A18 RID: 10776
+		// (get) Token: 0x0600D06C RID: 53356 RVA: 0x001EB080 File Offset: 0x001E9280
+		// (set) Token: 0x0600D06D RID: 53357 RVA: 0x001EB088 File Offset: 0x001E9288
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Token
@@ -163,9 +164,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A58 RID: 10840
-		// (get) Token: 0x0600D18A RID: 53642 RVA: 0x001ED357 File Offset: 0x001EB557
-		// (set) Token: 0x0600D18B RID: 53643 RVA: 0x001ED35F File Offset: 0x001EB55F
+		// Token: 0x17002A19 RID: 10777
+		// (get) Token: 0x0600D06E RID: 53358 RVA: 0x001EB09B File Offset: 0x001E929B
+		// (set) Token: 0x0600D06F RID: 53359 RVA: 0x001EB0A3 File Offset: 0x001E92A3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string AppVersion
@@ -180,9 +181,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A59 RID: 10841
-		// (get) Token: 0x0600D18C RID: 53644 RVA: 0x001ED372 File Offset: 0x001EB572
-		// (set) Token: 0x0600D18D RID: 53645 RVA: 0x001ED37A File Offset: 0x001EB57A
+		// Token: 0x17002A1A RID: 10778
+		// (get) Token: 0x0600D070 RID: 53360 RVA: 0x001EB0B6 File Offset: 0x001E92B6
+		// (set) Token: 0x0600D071 RID: 53361 RVA: 0x001EB0BE File Offset: 0x001E92BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string LauncherVersion
@@ -197,9 +198,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5A RID: 10842
-		// (get) Token: 0x0600D18E RID: 53646 RVA: 0x001ED38D File Offset: 0x001EB58D
-		// (set) Token: 0x0600D18F RID: 53647 RVA: 0x001ED395 File Offset: 0x001EB595
+		// Token: 0x17002A1B RID: 10779
+		// (get) Token: 0x0600D072 RID: 53362 RVA: 0x001EB0D1 File Offset: 0x001E92D1
+		// (set) Token: 0x0600D073 RID: 53363 RVA: 0x001EB0D9 File Offset: 0x001E92D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string ResourceVersion
@@ -214,9 +215,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5B RID: 10843
-		// (get) Token: 0x0600D190 RID: 53648 RVA: 0x001ED3A8 File Offset: 0x001EB5A8
-		// (set) Token: 0x0600D191 RID: 53649 RVA: 0x001ED3B0 File Offset: 0x001EB5B0
+		// Token: 0x17002A1C RID: 10780
+		// (get) Token: 0x0600D074 RID: 53364 RVA: 0x001EB0EC File Offset: 0x001E92EC
+		// (set) Token: 0x0600D075 RID: 53365 RVA: 0x001EB0F4 File Offset: 0x001E92F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientBasicInfo ClientBasicInfo
@@ -231,9 +232,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5C RID: 10844
-		// (get) Token: 0x0600D192 RID: 53650 RVA: 0x001ED3B9 File Offset: 0x001EB5B9
-		// (set) Token: 0x0600D193 RID: 53651 RVA: 0x001ED3C1 File Offset: 0x001EB5C1
+		// Token: 0x17002A1D RID: 10781
+		// (get) Token: 0x0600D076 RID: 53366 RVA: 0x001EB0FD File Offset: 0x001E92FD
+		// (set) Token: 0x0600D077 RID: 53367 RVA: 0x001EB105 File Offset: 0x001E9305
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DevLoginCheckData DevLoginCheckData
@@ -248,9 +249,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5D RID: 10845
-		// (get) Token: 0x0600D194 RID: 53652 RVA: 0x001ED3CA File Offset: 0x001EB5CA
-		// (set) Token: 0x0600D195 RID: 53653 RVA: 0x001ED3D2 File Offset: 0x001EB5D2
+		// Token: 0x17002A1E RID: 10782
+		// (get) Token: 0x0600D078 RID: 53368 RVA: 0x001EB10E File Offset: 0x001E930E
+		// (set) Token: 0x0600D079 RID: 53369 RVA: 0x001EB116 File Offset: 0x001E9316
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PublicResourceVersionInfo PublicResourceVersionInfo
@@ -265,9 +266,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5E RID: 10846
-		// (get) Token: 0x0600D196 RID: 53654 RVA: 0x001ED3DB File Offset: 0x001EB5DB
-		// (set) Token: 0x0600D197 RID: 53655 RVA: 0x001ED3E3 File Offset: 0x001EB5E3
+		// Token: 0x17002A1F RID: 10783
+		// (get) Token: 0x0600D07A RID: 53370 RVA: 0x001EB11F File Offset: 0x001E931F
+		// (set) Token: 0x0600D07B RID: 53371 RVA: 0x001EB127 File Offset: 0x001E9327
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AceBlackProductAccountInfo AceBlackProductAccountInfo
@@ -282,9 +283,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A5F RID: 10847
-		// (get) Token: 0x0600D198 RID: 53656 RVA: 0x001ED3EC File Offset: 0x001EB5EC
-		// (set) Token: 0x0600D199 RID: 53657 RVA: 0x001ED3F4 File Offset: 0x001EB5F4
+		// Token: 0x17002A20 RID: 10784
+		// (get) Token: 0x0600D07C RID: 53372 RVA: 0x001EB130 File Offset: 0x001E9330
+		// (set) Token: 0x0600D07D RID: 53373 RVA: 0x001EB138 File Offset: 0x001E9338
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool PushIsOpen
@@ -299,9 +300,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A60 RID: 10848
-		// (get) Token: 0x0600D19A RID: 53658 RVA: 0x001ED3FD File Offset: 0x001EB5FD
-		// (set) Token: 0x0600D19B RID: 53659 RVA: 0x001ED405 File Offset: 0x001EB605
+		// Token: 0x17002A21 RID: 10785
+		// (get) Token: 0x0600D07E RID: 53374 RVA: 0x001EB141 File Offset: 0x001E9341
+		// (set) Token: 0x0600D07F RID: 53375 RVA: 0x001EB149 File Offset: 0x001E9349
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string GeTuiDeviceId
@@ -316,9 +317,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A61 RID: 10849
-		// (get) Token: 0x0600D19C RID: 53660 RVA: 0x001ED418 File Offset: 0x001EB618
-		// (set) Token: 0x0600D19D RID: 53661 RVA: 0x001ED420 File Offset: 0x001EB620
+		// Token: 0x17002A22 RID: 10786
+		// (get) Token: 0x0600D080 RID: 53376 RVA: 0x001EB15C File Offset: 0x001E935C
+		// (set) Token: 0x0600D081 RID: 53377 RVA: 0x001EB164 File Offset: 0x001E9364
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PsnUserId
@@ -333,9 +334,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A62 RID: 10850
-		// (get) Token: 0x0600D19E RID: 53662 RVA: 0x001ED433 File Offset: 0x001EB633
-		// (set) Token: 0x0600D19F RID: 53663 RVA: 0x001ED43B File Offset: 0x001EB63B
+		// Token: 0x17002A23 RID: 10787
+		// (get) Token: 0x0600D082 RID: 53378 RVA: 0x001EB177 File Offset: 0x001E9377
+		// (set) Token: 0x0600D083 RID: 53379 RVA: 0x001EB17F File Offset: 0x001E937F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PsnOnlineId
@@ -350,9 +351,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A63 RID: 10851
-		// (get) Token: 0x0600D1A0 RID: 53664 RVA: 0x001ED44E File Offset: 0x001EB64E
-		// (set) Token: 0x0600D1A1 RID: 53665 RVA: 0x001ED456 File Offset: 0x001EB656
+		// Token: 0x17002A24 RID: 10788
+		// (get) Token: 0x0600D084 RID: 53380 RVA: 0x001EB192 File Offset: 0x001E9392
+		// (set) Token: 0x0600D085 RID: 53381 RVA: 0x001EB19A File Offset: 0x001E939A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string PsnAccountId
@@ -367,9 +368,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A64 RID: 10852
-		// (get) Token: 0x0600D1A2 RID: 53666 RVA: 0x001ED469 File Offset: 0x001EB669
-		// (set) Token: 0x0600D1A3 RID: 53667 RVA: 0x001ED471 File Offset: 0x001EB671
+		// Token: 0x17002A25 RID: 10789
+		// (get) Token: 0x0600D086 RID: 53382 RVA: 0x001EB1AD File Offset: 0x001E93AD
+		// (set) Token: 0x0600D087 RID: 53383 RVA: 0x001EB1B5 File Offset: 0x001E93B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string FightDataDigest
@@ -384,9 +385,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A65 RID: 10853
-		// (get) Token: 0x0600D1A4 RID: 53668 RVA: 0x001ED484 File Offset: 0x001EB684
-		// (set) Token: 0x0600D1A5 RID: 53669 RVA: 0x001ED48C File Offset: 0x001EB68C
+		// Token: 0x17002A26 RID: 10790
+		// (get) Token: 0x0600D088 RID: 53384 RVA: 0x001EB1C8 File Offset: 0x001E93C8
+		// (set) Token: 0x0600D089 RID: 53385 RVA: 0x001EB1D0 File Offset: 0x001E93D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PsnSocialState
@@ -401,9 +402,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A66 RID: 10854
-		// (get) Token: 0x0600D1A6 RID: 53670 RVA: 0x001ED495 File Offset: 0x001EB695
-		// (set) Token: 0x0600D1A7 RID: 53671 RVA: 0x001ED49D File Offset: 0x001EB69D
+		// Token: 0x17002A27 RID: 10791
+		// (get) Token: 0x0600D08A RID: 53386 RVA: 0x001EB1D9 File Offset: 0x001E93D9
+		// (set) Token: 0x0600D08B RID: 53387 RVA: 0x001EB1E1 File Offset: 0x001E93E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FsmVersion
@@ -418,9 +419,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A67 RID: 10855
-		// (get) Token: 0x0600D1A8 RID: 53672 RVA: 0x001ED4A6 File Offset: 0x001EB6A6
-		// (set) Token: 0x0600D1A9 RID: 53673 RVA: 0x001ED4AE File Offset: 0x001EB6AE
+		// Token: 0x17002A28 RID: 10792
+		// (get) Token: 0x0600D08C RID: 53388 RVA: 0x001EB1EA File Offset: 0x001E93EA
+		// (set) Token: 0x0600D08D RID: 53389 RVA: 0x001EB1F2 File Offset: 0x001E93F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool ConfirmQuestResource
@@ -435,9 +436,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A68 RID: 10856
-		// (get) Token: 0x0600D1AA RID: 53674 RVA: 0x001ED4B7 File Offset: 0x001EB6B7
-		// (set) Token: 0x0600D1AB RID: 53675 RVA: 0x001ED4BF File Offset: 0x001EB6BF
+		// Token: 0x17002A29 RID: 10793
+		// (get) Token: 0x0600D08E RID: 53390 RVA: 0x001EB1FB File Offset: 0x001E93FB
+		// (set) Token: 0x0600D08F RID: 53391 RVA: 0x001EB203 File Offset: 0x001E9403
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int QuestResourceState
@@ -452,9 +453,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A69 RID: 10857
-		// (get) Token: 0x0600D1AC RID: 53676 RVA: 0x001ED4C8 File Offset: 0x001EB6C8
-		// (set) Token: 0x0600D1AD RID: 53677 RVA: 0x001ED4D0 File Offset: 0x001EB6D0
+		// Token: 0x17002A2A RID: 10794
+		// (get) Token: 0x0600D090 RID: 53392 RVA: 0x001EB20C File Offset: 0x001E940C
+		// (set) Token: 0x0600D091 RID: 53393 RVA: 0x001EB214 File Offset: 0x001E9414
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsLowMemoryPlatform
@@ -469,9 +470,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6A RID: 10858
-		// (get) Token: 0x0600D1AE RID: 53678 RVA: 0x001ED4D9 File Offset: 0x001EB6D9
-		// (set) Token: 0x0600D1AF RID: 53679 RVA: 0x001ED4E1 File Offset: 0x001EB6E1
+		// Token: 0x17002A2B RID: 10795
+		// (get) Token: 0x0600D092 RID: 53394 RVA: 0x001EB21D File Offset: 0x001E941D
+		// (set) Token: 0x0600D093 RID: 53395 RVA: 0x001EB225 File Offset: 0x001E9425
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ESceneBlockSwithState SwitchState
@@ -486,8 +487,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6B RID: 10859
-		// (get) Token: 0x0600D1B0 RID: 53680 RVA: 0x001ED4EA File Offset: 0x001EB6EA
+		// Token: 0x17002A2C RID: 10796
+		// (get) Token: 0x0600D094 RID: 53396 RVA: 0x001EB22E File Offset: 0x001E942E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> DownloadResourceQuestId
@@ -498,9 +499,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6C RID: 10860
-		// (get) Token: 0x0600D1B1 RID: 53681 RVA: 0x001ED4F2 File Offset: 0x001EB6F2
-		// (set) Token: 0x0600D1B2 RID: 53682 RVA: 0x001ED4FA File Offset: 0x001EB6FA
+		// Token: 0x17002A2D RID: 10797
+		// (get) Token: 0x0600D095 RID: 53397 RVA: 0x001EB236 File Offset: 0x001E9436
+		// (set) Token: 0x0600D096 RID: 53398 RVA: 0x001EB23E File Offset: 0x001E943E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string XboxUserId
@@ -515,9 +516,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6D RID: 10861
-		// (get) Token: 0x0600D1B3 RID: 53683 RVA: 0x001ED50D File Offset: 0x001EB70D
-		// (set) Token: 0x0600D1B4 RID: 53684 RVA: 0x001ED515 File Offset: 0x001EB715
+		// Token: 0x17002A2E RID: 10798
+		// (get) Token: 0x0600D097 RID: 53399 RVA: 0x001EB251 File Offset: 0x001E9451
+		// (set) Token: 0x0600D098 RID: 53400 RVA: 0x001EB259 File Offset: 0x001E9459
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string XboxOnlineId
@@ -532,9 +533,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6E RID: 10862
-		// (get) Token: 0x0600D1B5 RID: 53685 RVA: 0x001ED528 File Offset: 0x001EB728
-		// (set) Token: 0x0600D1B6 RID: 53686 RVA: 0x001ED530 File Offset: 0x001EB730
+		// Token: 0x17002A2F RID: 10799
+		// (get) Token: 0x0600D099 RID: 53401 RVA: 0x001EB26C File Offset: 0x001E946C
+		// (set) Token: 0x0600D09A RID: 53402 RVA: 0x001EB274 File Offset: 0x001E9474
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string XboxAccountId
@@ -549,9 +550,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A6F RID: 10863
-		// (get) Token: 0x0600D1B7 RID: 53687 RVA: 0x001ED543 File Offset: 0x001EB743
-		// (set) Token: 0x0600D1B8 RID: 53688 RVA: 0x001ED54B File Offset: 0x001EB74B
+		// Token: 0x17002A30 RID: 10800
+		// (get) Token: 0x0600D09B RID: 53403 RVA: 0x001EB287 File Offset: 0x001E9487
+		// (set) Token: 0x0600D09C RID: 53404 RVA: 0x001EB28F File Offset: 0x001E948F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int XboxSocialState
@@ -566,9 +567,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002A70 RID: 10864
-		// (get) Token: 0x0600D1B9 RID: 53689 RVA: 0x001ED554 File Offset: 0x001EB754
-		// (set) Token: 0x0600D1BA RID: 53690 RVA: 0x001ED55C File Offset: 0x001EB75C
+		// Token: 0x17002A31 RID: 10801
+		// (get) Token: 0x0600D09D RID: 53405 RVA: 0x001EB298 File Offset: 0x001E9498
+		// (set) Token: 0x0600D09E RID: 53406 RVA: 0x001EB2A0 File Offset: 0x001E94A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string XstsToken
@@ -583,7 +584,24 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D1BB RID: 53691 RVA: 0x001ED56F File Offset: 0x001EB76F
+		// Token: 0x17002A32 RID: 10802
+		// (get) Token: 0x0600D09F RID: 53407 RVA: 0x001EB2B3 File Offset: 0x001E94B3
+		// (set) Token: 0x0600D0A0 RID: 53408 RVA: 0x001EB2BB File Offset: 0x001E94BB
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public string GradedResourceVersion
+		{
+			get
+			{
+				return this.gradedResourceVersion_;
+			}
+			set
+			{
+				this.gradedResourceVersion_ = ProtoPreconditions.CheckNotNull<string>(value, "value");
+			}
+		}
+
+		// Token: 0x0600D0A1 RID: 53409 RVA: 0x001EB2CE File Offset: 0x001E94CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -591,15 +609,15 @@ namespace Aki.Protocol
 			return this.Equals(other as LoginRequest);
 		}
 
-		// Token: 0x0600D1BC RID: 53692 RVA: 0x001ED580 File Offset: 0x001EB780
+		// Token: 0x0600D0A2 RID: 53410 RVA: 0x001EB2DC File Offset: 0x001E94DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(LoginRequest other)
 		{
-			return other != null && (other == this || (this.Id == other.Id && !(this.Account != other.Account) && !(this.LoginTraceId != other.LoginTraceId) && !(this.Token != other.Token) && !(this.AppVersion != other.AppVersion) && !(this.LauncherVersion != other.LauncherVersion) && !(this.ResourceVersion != other.ResourceVersion) && object.Equals(this.ClientBasicInfo, other.ClientBasicInfo) && object.Equals(this.DevLoginCheckData, other.DevLoginCheckData) && object.Equals(this.PublicResourceVersionInfo, other.PublicResourceVersionInfo) && object.Equals(this.AceBlackProductAccountInfo, other.AceBlackProductAccountInfo) && this.PushIsOpen == other.PushIsOpen && !(this.GeTuiDeviceId != other.GeTuiDeviceId) && !(this.PsnUserId != other.PsnUserId) && !(this.PsnOnlineId != other.PsnOnlineId) && !(this.PsnAccountId != other.PsnAccountId) && !(this.FightDataDigest != other.FightDataDigest) && this.PsnSocialState == other.PsnSocialState && this.FsmVersion == other.FsmVersion && this.ConfirmQuestResource == other.ConfirmQuestResource && this.QuestResourceState == other.QuestResourceState && this.IsLowMemoryPlatform == other.IsLowMemoryPlatform && this.SwitchState == other.SwitchState && this.downloadResourceQuestId_.Equals(other.downloadResourceQuestId_) && !(this.XboxUserId != other.XboxUserId) && !(this.XboxOnlineId != other.XboxOnlineId) && !(this.XboxAccountId != other.XboxAccountId) && this.XboxSocialState == other.XboxSocialState && !(this.XstsToken != other.XstsToken) && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (this.Id == other.Id && !(this.Account != other.Account) && !(this.LoginTraceId != other.LoginTraceId) && !(this.Token != other.Token) && !(this.AppVersion != other.AppVersion) && !(this.LauncherVersion != other.LauncherVersion) && !(this.ResourceVersion != other.ResourceVersion) && object.Equals(this.ClientBasicInfo, other.ClientBasicInfo) && object.Equals(this.DevLoginCheckData, other.DevLoginCheckData) && object.Equals(this.PublicResourceVersionInfo, other.PublicResourceVersionInfo) && object.Equals(this.AceBlackProductAccountInfo, other.AceBlackProductAccountInfo) && this.PushIsOpen == other.PushIsOpen && !(this.GeTuiDeviceId != other.GeTuiDeviceId) && !(this.PsnUserId != other.PsnUserId) && !(this.PsnOnlineId != other.PsnOnlineId) && !(this.PsnAccountId != other.PsnAccountId) && !(this.FightDataDigest != other.FightDataDigest) && this.PsnSocialState == other.PsnSocialState && this.FsmVersion == other.FsmVersion && this.ConfirmQuestResource == other.ConfirmQuestResource && this.QuestResourceState == other.QuestResourceState && this.IsLowMemoryPlatform == other.IsLowMemoryPlatform && this.SwitchState == other.SwitchState && this.downloadResourceQuestId_.Equals(other.downloadResourceQuestId_) && !(this.XboxUserId != other.XboxUserId) && !(this.XboxOnlineId != other.XboxOnlineId) && !(this.XboxAccountId != other.XboxAccountId) && this.XboxSocialState == other.XboxSocialState && !(this.XstsToken != other.XstsToken) && !(this.GradedResourceVersion != other.GradedResourceVersion) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D1BD RID: 53693 RVA: 0x001ED7E0 File Offset: 0x001EB9E0
+		// Token: 0x0600D0A3 RID: 53411 RVA: 0x001EB550 File Offset: 0x001E9750
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -718,6 +736,10 @@ namespace Aki.Protocol
 			{
 				num ^= this.XstsToken.GetHashCode();
 			}
+			if (this.GradedResourceVersion.Length != 0)
+			{
+				num ^= this.GradedResourceVersion.GetHashCode();
+			}
 			if (this._unknownFields != null)
 			{
 				num ^= this._unknownFields.GetHashCode();
@@ -725,7 +747,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D1BE RID: 53694 RVA: 0x001EDAE8 File Offset: 0x001EBCE8
+		// Token: 0x0600D0A4 RID: 53412 RVA: 0x001EB873 File Offset: 0x001E9A73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -733,7 +755,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D1BF RID: 53695 RVA: 0x001EDAF5 File Offset: 0x001EBCF5
+		// Token: 0x0600D0A5 RID: 53413 RVA: 0x001EB880 File Offset: 0x001E9A80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -741,7 +763,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D1C0 RID: 53696 RVA: 0x001EDB00 File Offset: 0x001EBD00
+		// Token: 0x0600D0A6 RID: 53414 RVA: 0x001EB88C File Offset: 0x001E9A8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -887,13 +909,18 @@ namespace Aki.Protocol
 				output.WriteRawTag(242, 1);
 				output.WriteString(this.XstsToken);
 			}
+			if (this.GradedResourceVersion.Length != 0)
+			{
+				output.WriteRawTag(250, 1);
+				output.WriteString(this.GradedResourceVersion);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600D1C1 RID: 53697 RVA: 0x001EDEC0 File Offset: 0x001EC0C0
+		// Token: 0x0600D0A7 RID: 53415 RVA: 0x001EBC74 File Offset: 0x001E9E74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -1012,6 +1039,10 @@ namespace Aki.Protocol
 			{
 				num += 2 + CodedOutputStream.ComputeStringSize(this.XstsToken);
 			}
+			if (this.GradedResourceVersion.Length != 0)
+			{
+				num += 2 + CodedOutputStream.ComputeStringSize(this.GradedResourceVersion);
+			}
 			if (this._unknownFields != null)
 			{
 				num += this._unknownFields.CalculateSize();
@@ -1019,7 +1050,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D1C2 RID: 53698 RVA: 0x001EE1C0 File Offset: 0x001EC3C0
+		// Token: 0x0600D0A8 RID: 53416 RVA: 0x001EBF94 File Offset: 0x001EA194
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(LoginRequest other)
@@ -1157,10 +1188,14 @@ namespace Aki.Protocol
 			{
 				this.XstsToken = other.XstsToken;
 			}
+			if (other.GradedResourceVersion.Length != 0)
+			{
+				this.GradedResourceVersion = other.GradedResourceVersion;
+			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D1C3 RID: 53699 RVA: 0x001EE4D4 File Offset: 0x001EC6D4
+		// Token: 0x0600D0A9 RID: 53417 RVA: 0x001EC2C1 File Offset: 0x001EA4C1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -1168,7 +1203,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D1C4 RID: 53700 RVA: 0x001EE4E0 File Offset: 0x001EC6E0
+		// Token: 0x0600D0AA RID: 53418 RVA: 0x001EC2CC File Offset: 0x001EA4CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -1301,291 +1336,302 @@ namespace Aki.Protocol
 						}
 					}
 				}
-				else if (num <= 176U)
+				else if (num <= 184U)
 				{
-					if (num <= 144U)
+					if (num <= 152U)
 					{
-						if (num == 130U)
+						if (num <= 138U)
 						{
-							this.PsnAccountId = input.ReadString();
-							continue;
+							if (num == 130U)
+							{
+								this.PsnAccountId = input.ReadString();
+								continue;
+							}
+							if (num == 138U)
+							{
+								this.FightDataDigest = input.ReadString();
+								continue;
+							}
 						}
-						if (num == 138U)
+						else
 						{
-							this.FightDataDigest = input.ReadString();
-							continue;
-						}
-						if (num == 144U)
-						{
-							this.PsnSocialState = input.ReadInt32();
-							continue;
+							if (num == 144U)
+							{
+								this.PsnSocialState = input.ReadInt32();
+								continue;
+							}
+							if (num == 152U)
+							{
+								this.FsmVersion = input.ReadInt32();
+								continue;
+							}
 						}
 					}
-					else if (num <= 160U)
+					else if (num <= 168U)
 					{
-						if (num == 152U)
-						{
-							this.FsmVersion = input.ReadInt32();
-							continue;
-						}
 						if (num == 160U)
 						{
 							this.ConfirmQuestResource = input.ReadBool();
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 168U)
 						{
 							this.QuestResourceState = input.ReadInt32();
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 176U)
 						{
 							this.IsLowMemoryPlatform = input.ReadBool();
 							continue;
 						}
+						if (num == 184U)
+						{
+							this.SwitchState = (ESceneBlockSwithState)input.ReadEnum();
+							continue;
+						}
 					}
 				}
-				else
+				else if (num <= 210U)
 				{
-					if (num <= 202U)
+					if (num <= 194U)
 					{
-						if (num <= 192U)
+						if (num == 192U || num == 194U)
 						{
-							if (num == 184U)
-							{
-								this.SwitchState = (ESceneBlockSwithState)input.ReadEnum();
-								continue;
-							}
-							if (num != 192U)
-							{
-								goto IL_1B3;
-							}
-						}
-						else if (num != 194U)
-						{
-							if (num != 202U)
-							{
-								goto IL_1B3;
-							}
-							this.XboxUserId = input.ReadString();
-							continue;
-						}
-						this.downloadResourceQuestId_.AddEntriesFrom(ref input, LoginRequest._repeated_downloadResourceQuestId_codec);
-						continue;
-					}
-					if (num <= 218U)
-					{
-						if (num == 210U)
-						{
-							this.XboxOnlineId = input.ReadString();
-							continue;
-						}
-						if (num == 218U)
-						{
-							this.XboxAccountId = input.ReadString();
+							this.downloadResourceQuestId_.AddEntriesFrom(ref input, LoginRequest._repeated_downloadResourceQuestId_codec);
 							continue;
 						}
 					}
 					else
 					{
-						if (num == 224U)
+						if (num == 202U)
 						{
-							this.XboxSocialState = input.ReadInt32();
+							this.XboxUserId = input.ReadString();
 							continue;
 						}
-						if (num == 242U)
+						if (num == 210U)
 						{
-							this.XstsToken = input.ReadString();
+							this.XboxOnlineId = input.ReadString();
 							continue;
 						}
 					}
 				}
-				IL_1B3:
+				else if (num <= 224U)
+				{
+					if (num == 218U)
+					{
+						this.XboxAccountId = input.ReadString();
+						continue;
+					}
+					if (num == 224U)
+					{
+						this.XboxSocialState = input.ReadInt32();
+						continue;
+					}
+				}
+				else
+				{
+					if (num == 242U)
+					{
+						this.XstsToken = input.ReadString();
+						continue;
+					}
+					if (num == 250U)
+					{
+						this.GradedResourceVersion = input.ReadString();
+						continue;
+					}
+				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04005810 RID: 22544
+		// Token: 0x04005817 RID: 22551
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005811 RID: 22545
+		// Token: 0x04005818 RID: 22552
 		public const int IdFieldNumber = 1;
 
-		// Token: 0x04005812 RID: 22546
+		// Token: 0x04005819 RID: 22553
 		private int id_;
 
-		// Token: 0x04005813 RID: 22547
+		// Token: 0x0400581A RID: 22554
 		public const int AccountFieldNumber = 2;
 
-		// Token: 0x04005814 RID: 22548
+		// Token: 0x0400581B RID: 22555
 		private string account_ = "";
 
-		// Token: 0x04005815 RID: 22549
+		// Token: 0x0400581C RID: 22556
 		public const int LoginTraceIdFieldNumber = 3;
 
-		// Token: 0x04005816 RID: 22550
+		// Token: 0x0400581D RID: 22557
 		private string loginTraceId_ = "";
 
-		// Token: 0x04005817 RID: 22551
+		// Token: 0x0400581E RID: 22558
 		public const int TokenFieldNumber = 4;
 
-		// Token: 0x04005818 RID: 22552
+		// Token: 0x0400581F RID: 22559
 		private string token_ = "";
 
-		// Token: 0x04005819 RID: 22553
+		// Token: 0x04005820 RID: 22560
 		public const int AppVersionFieldNumber = 5;
 
-		// Token: 0x0400581A RID: 22554
+		// Token: 0x04005821 RID: 22561
 		private string appVersion_ = "";
 
-		// Token: 0x0400581B RID: 22555
+		// Token: 0x04005822 RID: 22562
 		public const int LauncherVersionFieldNumber = 6;
 
-		// Token: 0x0400581C RID: 22556
+		// Token: 0x04005823 RID: 22563
 		private string launcherVersion_ = "";
 
-		// Token: 0x0400581D RID: 22557
+		// Token: 0x04005824 RID: 22564
 		public const int ResourceVersionFieldNumber = 7;
 
-		// Token: 0x0400581E RID: 22558
+		// Token: 0x04005825 RID: 22565
 		private string resourceVersion_ = "";
 
-		// Token: 0x0400581F RID: 22559
+		// Token: 0x04005826 RID: 22566
 		public const int ClientBasicInfoFieldNumber = 8;
 
-		// Token: 0x04005820 RID: 22560
+		// Token: 0x04005827 RID: 22567
 		private ClientBasicInfo clientBasicInfo_;
 
-		// Token: 0x04005821 RID: 22561
+		// Token: 0x04005828 RID: 22568
 		public const int DevLoginCheckDataFieldNumber = 9;
 
-		// Token: 0x04005822 RID: 22562
+		// Token: 0x04005829 RID: 22569
 		private DevLoginCheckData devLoginCheckData_;
 
-		// Token: 0x04005823 RID: 22563
+		// Token: 0x0400582A RID: 22570
 		public const int PublicResourceVersionInfoFieldNumber = 10;
 
-		// Token: 0x04005824 RID: 22564
+		// Token: 0x0400582B RID: 22571
 		private PublicResourceVersionInfo publicResourceVersionInfo_;
 
-		// Token: 0x04005825 RID: 22565
+		// Token: 0x0400582C RID: 22572
 		public const int AceBlackProductAccountInfoFieldNumber = 11;
 
-		// Token: 0x04005826 RID: 22566
+		// Token: 0x0400582D RID: 22573
 		private AceBlackProductAccountInfo aceBlackProductAccountInfo_;
 
-		// Token: 0x04005827 RID: 22567
+		// Token: 0x0400582E RID: 22574
 		public const int PushIsOpenFieldNumber = 12;
 
-		// Token: 0x04005828 RID: 22568
+		// Token: 0x0400582F RID: 22575
 		private bool pushIsOpen_;
 
-		// Token: 0x04005829 RID: 22569
+		// Token: 0x04005830 RID: 22576
 		public const int GeTuiDeviceIdFieldNumber = 13;
 
-		// Token: 0x0400582A RID: 22570
+		// Token: 0x04005831 RID: 22577
 		private string geTuiDeviceId_ = "";
 
-		// Token: 0x0400582B RID: 22571
+		// Token: 0x04005832 RID: 22578
 		public const int PsnUserIdFieldNumber = 14;
 
-		// Token: 0x0400582C RID: 22572
+		// Token: 0x04005833 RID: 22579
 		private string psnUserId_ = "";
 
-		// Token: 0x0400582D RID: 22573
+		// Token: 0x04005834 RID: 22580
 		public const int PsnOnlineIdFieldNumber = 15;
 
-		// Token: 0x0400582E RID: 22574
+		// Token: 0x04005835 RID: 22581
 		private string psnOnlineId_ = "";
 
-		// Token: 0x0400582F RID: 22575
+		// Token: 0x04005836 RID: 22582
 		public const int PsnAccountIdFieldNumber = 16;
 
-		// Token: 0x04005830 RID: 22576
+		// Token: 0x04005837 RID: 22583
 		private string psnAccountId_ = "";
 
-		// Token: 0x04005831 RID: 22577
+		// Token: 0x04005838 RID: 22584
 		public const int FightDataDigestFieldNumber = 17;
 
-		// Token: 0x04005832 RID: 22578
+		// Token: 0x04005839 RID: 22585
 		private string fightDataDigest_ = "";
 
-		// Token: 0x04005833 RID: 22579
+		// Token: 0x0400583A RID: 22586
 		public const int PsnSocialStateFieldNumber = 18;
 
-		// Token: 0x04005834 RID: 22580
+		// Token: 0x0400583B RID: 22587
 		private int psnSocialState_;
 
-		// Token: 0x04005835 RID: 22581
+		// Token: 0x0400583C RID: 22588
 		public const int FsmVersionFieldNumber = 19;
 
-		// Token: 0x04005836 RID: 22582
+		// Token: 0x0400583D RID: 22589
 		private int fsmVersion_;
 
-		// Token: 0x04005837 RID: 22583
+		// Token: 0x0400583E RID: 22590
 		public const int ConfirmQuestResourceFieldNumber = 20;
 
-		// Token: 0x04005838 RID: 22584
+		// Token: 0x0400583F RID: 22591
 		private bool confirmQuestResource_;
 
-		// Token: 0x04005839 RID: 22585
+		// Token: 0x04005840 RID: 22592
 		public const int QuestResourceStateFieldNumber = 21;
 
-		// Token: 0x0400583A RID: 22586
+		// Token: 0x04005841 RID: 22593
 		private int questResourceState_;
 
-		// Token: 0x0400583B RID: 22587
+		// Token: 0x04005842 RID: 22594
 		public const int IsLowMemoryPlatformFieldNumber = 22;
 
-		// Token: 0x0400583C RID: 22588
+		// Token: 0x04005843 RID: 22595
 		private bool isLowMemoryPlatform_;
 
-		// Token: 0x0400583D RID: 22589
+		// Token: 0x04005844 RID: 22596
 		public const int SwitchStateFieldNumber = 23;
 
-		// Token: 0x0400583E RID: 22590
+		// Token: 0x04005845 RID: 22597
 		private ESceneBlockSwithState switchState_;
 
-		// Token: 0x0400583F RID: 22591
+		// Token: 0x04005846 RID: 22598
 		public const int DownloadResourceQuestIdFieldNumber = 24;
 
-		// Token: 0x04005840 RID: 22592
+		// Token: 0x04005847 RID: 22599
 		private static readonly FieldCodec<int> _repeated_downloadResourceQuestId_codec = FieldCodec.ForInt32(194U);
 
-		// Token: 0x04005841 RID: 22593
+		// Token: 0x04005848 RID: 22600
 		private readonly RepeatedField<int> downloadResourceQuestId_ = new RepeatedField<int>();
 
-		// Token: 0x04005842 RID: 22594
+		// Token: 0x04005849 RID: 22601
 		public const int XboxUserIdFieldNumber = 25;
 
-		// Token: 0x04005843 RID: 22595
+		// Token: 0x0400584A RID: 22602
 		private string xboxUserId_ = "";
 
-		// Token: 0x04005844 RID: 22596
+		// Token: 0x0400584B RID: 22603
 		public const int XboxOnlineIdFieldNumber = 26;
 
-		// Token: 0x04005845 RID: 22597
+		// Token: 0x0400584C RID: 22604
 		private string xboxOnlineId_ = "";
 
-		// Token: 0x04005846 RID: 22598
+		// Token: 0x0400584D RID: 22605
 		public const int XboxAccountIdFieldNumber = 27;
 
-		// Token: 0x04005847 RID: 22599
+		// Token: 0x0400584E RID: 22606
 		private string xboxAccountId_ = "";
 
-		// Token: 0x04005848 RID: 22600
+		// Token: 0x0400584F RID: 22607
 		public const int XboxSocialStateFieldNumber = 28;
 
-		// Token: 0x04005849 RID: 22601
+		// Token: 0x04005850 RID: 22608
 		private int xboxSocialState_;
 
-		// Token: 0x0400584A RID: 22602
+		// Token: 0x04005851 RID: 22609
 		public const int XstsTokenFieldNumber = 30;
 
-		// Token: 0x0400584B RID: 22603
+		// Token: 0x04005852 RID: 22610
 		private string xstsToken_ = "";
+
+		// Token: 0x04005853 RID: 22611
+		public const int GradedResourceVersionFieldNumber = 31;
+
+		// Token: 0x04005854 RID: 22612
+		private string gradedResourceVersion_ = "";
 	}
 }

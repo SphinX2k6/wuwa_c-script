@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200225A RID: 8794
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C7 RID: 9415
 	public class TriggerGamepadShake : ActionParams
 	{
-		// Token: 0x0600C0F8 RID: 49400 RVA: 0x001BB100 File Offset: 0x001B9300
+		// Token: 0x0600CCBE RID: 52414 RVA: 0x001D2884 File Offset: 0x001D0A84
 		private TriggerGamepadShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C0F9 RID: 49401 RVA: 0x001BB138 File Offset: 0x001B9338
+		// Token: 0x0600CCBF RID: 52415 RVA: 0x001D28BC File Offset: 0x001D0ABC
 		public static TriggerGamepadShake Create([Nullable(2)] TriggerGamepadShake instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0FA RID: 49402 RVA: 0x001BB14B File Offset: 0x001B934B
+		// Token: 0x0600CCC0 RID: 52416 RVA: 0x001D28CF File Offset: 0x001D0ACF
 		public static TriggerGamepadShake CreateFromSetValue([Nullable(2)] TriggerGamepadShake_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C0FB RID: 49403 RVA: 0x001BB15E File Offset: 0x001B935E
+		// Token: 0x0600CCC1 RID: 52417 RVA: 0x001D28E2 File Offset: 0x001D0AE2
 		public TriggerGamepadShake_SetValue ToSetValue()
 		{
 			return new TriggerGamepadShake_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A62 RID: 14946
-		// (get) Token: 0x0600C0FC RID: 49404 RVA: 0x001BB17D File Offset: 0x001B937D
-		// (set) Token: 0x0600C0FD RID: 49405 RVA: 0x001BB1A8 File Offset: 0x001B93A8
+		// Token: 0x17003D59 RID: 15705
+		// (get) Token: 0x0600CCC2 RID: 52418 RVA: 0x001D2901 File Offset: 0x001D0B01
+		// (set) Token: 0x0600CCC3 RID: 52419 RVA: 0x001D292C File Offset: 0x001D0B2C
 		public virtual string KuroForceFeedbackEffect
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A63 RID: 14947
-		// (get) Token: 0x0600C0FE RID: 49406 RVA: 0x001BB1B6 File Offset: 0x001B93B6
-		// (set) Token: 0x0600C0FF RID: 49407 RVA: 0x001BB1DD File Offset: 0x001B93DD
+		// Token: 0x17003D5A RID: 15706
+		// (get) Token: 0x0600CCC4 RID: 52420 RVA: 0x001D293A File Offset: 0x001D0B3A
+		// (set) Token: 0x0600CCC5 RID: 52421 RVA: 0x001D2961 File Offset: 0x001D0B61
 		public virtual IGamepadShakeConfig GamepadShakeConfig
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007306 RID: 29446
+		// Token: 0x04007953 RID: 31059
 		[Nullable(2)]
 		protected new TriggerGamepadShake FbInstance;
 
-		// Token: 0x04007307 RID: 29447
+		// Token: 0x04007954 RID: 31060
 		[Nullable(2)]
 		protected TriggerGamepadShake_SetValue PocoInterface;
 	}

@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Extension
 {
-	// Token: 0x02000017 RID: 23
+	// Token: 0x02000018 RID: 24
 	public static class DelegateExtensions
 	{
-		// Token: 0x060000AC RID: 172 RVA: 0x0000AB34 File Offset: 0x00008D34
+		// Token: 0x06000119 RID: 281 RVA: 0x0000E2DC File Offset: 0x0000C4DC
 		[NullableContext(1)]
 		public static string GetDelegateInfo(this Delegate delegateObj)
 		{

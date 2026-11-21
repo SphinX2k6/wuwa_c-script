@@ -1,12 +1,12 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002023 RID: 8227
+// Token: 0x020014F6 RID: 5366
 public interface IItemTipsUiProxy
 {
-	// Token: 0x06010201 RID: 66049
+	// Token: 0x0600D669 RID: 54889
 	void SetActive(bool visibility);
 
-	// Token: 0x06010202 RID: 66050
+	// Token: 0x0600D66A RID: 54890
 	UniTask PlayCloseSequence();
 }

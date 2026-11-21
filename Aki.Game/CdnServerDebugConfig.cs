@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A83 RID: 6787
+// Token: 0x02000F42 RID: 3906
 [NullableContext(1)]
 [Nullable(0)]
 public class CdnServerDebugConfig : Singleton
 {
-	// Token: 0x0600C807 RID: 51207 RVA: 0x002D9233 File Offset: 0x002D7433
+	// Token: 0x06009C17 RID: 39959 RVA: 0x002E434F File Offset: 0x002E254F
 	[NullableContext(2)]
 	public string TryGetMarqueeDebugUrl(string normalHttp)
 	{
@@ -17,7 +17,7 @@ public class CdnServerDebugConfig : Singleton
 		return normalHttp;
 	}
 
-	// Token: 0x0600C808 RID: 51208 RVA: 0x002D9260 File Offset: 0x002D7460
+	// Token: 0x06009C18 RID: 39960 RVA: 0x002E437C File Offset: 0x002E257C
 	public string TryGetGachaDetailDebugUrl(string urlPattern, string prefix, string serverId)
 	{
 		if (this.IsOpenDebug)
@@ -38,7 +38,7 @@ public class CdnServerDebugConfig : Singleton
 		});
 	}
 
-	// Token: 0x0600C809 RID: 51209 RVA: 0x002D92C0 File Offset: 0x002D74C0
+	// Token: 0x06009C19 RID: 39961 RVA: 0x002E43DC File Offset: 0x002E25DC
 	public string TryGetGachaRecordDebugUrl(string urlPattern, string prefix, string serverId)
 	{
 		if (this.IsOpenDebug)
@@ -59,7 +59,7 @@ public class CdnServerDebugConfig : Singleton
 		});
 	}
 
-	// Token: 0x0600C80A RID: 51210 RVA: 0x002D9320 File Offset: 0x002D7520
+	// Token: 0x06009C1A RID: 39962 RVA: 0x002E443C File Offset: 0x002E263C
 	public string TryGetGachaInfoDebugUrl(string urlPattern, string prefix, string serverId)
 	{
 		if (this.IsOpenDebug)
@@ -80,7 +80,7 @@ public class CdnServerDebugConfig : Singleton
 		});
 	}
 
-	// Token: 0x0600C80B RID: 51211 RVA: 0x002D9380 File Offset: 0x002D7580
+	// Token: 0x06009C1B RID: 39963 RVA: 0x002E449C File Offset: 0x002E269C
 	[return: Nullable(2)]
 	public string TryGetNoticeServerPrefixAddress(string cdn)
 	{
@@ -96,8 +96,8 @@ public class CdnServerDebugConfig : Singleton
 		return address.NoticeServerPrefixAddress;
 	}
 
-	// Token: 0x1700106E RID: 4206
-	// (get) Token: 0x0600C80C RID: 51212 RVA: 0x002D939D File Offset: 0x002D759D
+	// Token: 0x17001093 RID: 4243
+	// (get) Token: 0x06009C1C RID: 39964 RVA: 0x002E44B9 File Offset: 0x002E26B9
 	public static CdnServerDebugConfig Instance
 	{
 		get
@@ -111,12 +111,12 @@ public class CdnServerDebugConfig : Singleton
 		}
 	}
 
-	// Token: 0x0600C80D RID: 51213 RVA: 0x002D93C0 File Offset: 0x002D75C0
+	// Token: 0x06009C1D RID: 39965 RVA: 0x002E44DC File Offset: 0x002E26DC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C80E RID: 51214 RVA: 0x002D93C2 File Offset: 0x002D75C2
+	// Token: 0x06009C1E RID: 39966 RVA: 0x002E44DE File Offset: 0x002E26DE
 	public static void ResetStaticDefaultValue()
 	{
 		CdnServerDebugConfig instance = CdnServerDebugConfig._instance;
@@ -127,20 +127,20 @@ public class CdnServerDebugConfig : Singleton
 		CdnServerDebugConfig._instance = null;
 	}
 
-	// Token: 0x0600C80F RID: 51215 RVA: 0x002D93DB File Offset: 0x002D75DB
+	// Token: 0x06009C1F RID: 39967 RVA: 0x002E44F7 File Offset: 0x002E26F7
 	static CdnServerDebugConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CdnServerDebugConfig.CreateStaticDefaultValue), new Action(CdnServerDebugConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C5A RID: 23642
+	// Token: 0x04005D29 RID: 23849
 	private bool IsOpenDebug;
 
-	// Token: 0x04005C5B RID: 23643
+	// Token: 0x04005D2A RID: 23850
 	[Nullable(2)]
 	private ICdnServerAddress Address;
 
-	// Token: 0x04005C5C RID: 23644
+	// Token: 0x04005D2B RID: 23851
 	[Nullable(2)]
 	private static CdnServerDebugConfig _instance;
 }

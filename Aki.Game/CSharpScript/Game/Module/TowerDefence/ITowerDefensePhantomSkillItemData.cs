@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B2D RID: 19245
+	// Token: 0x02003AD5 RID: 15061
 	[NullableContext(1)]
 	public interface ITowerDefensePhantomSkillItemData
 	{
-		// Token: 0x17007B5D RID: 31581
-		// (get) Token: 0x06031D74 RID: 204148
-		// (set) Token: 0x06031D75 RID: 204149
+		// Token: 0x17004F0A RID: 20234
+		// (get) Token: 0x06026B04 RID: 158468
+		// (set) Token: 0x06026B05 RID: 158469
 		string SkillTextId { get; set; }
 
-		// Token: 0x17007B5E RID: 31582
-		// (get) Token: 0x06031D76 RID: 204150
-		// (set) Token: 0x06031D77 RID: 204151
+		// Token: 0x17004F0B RID: 20235
+		// (get) Token: 0x06026B06 RID: 158470
+		// (set) Token: 0x06026B07 RID: 158471
 		string Level { get; set; }
 
-		// Token: 0x17007B5F RID: 31583
-		// (get) Token: 0x06031D78 RID: 204152
-		// (set) Token: 0x06031D79 RID: 204153
+		// Token: 0x17004F0C RID: 20236
+		// (get) Token: 0x06026B08 RID: 158472
+		// (set) Token: 0x06026B09 RID: 158473
 		string DescriptionTextId { get; set; }
 
-		// Token: 0x17007B60 RID: 31584
-		// (get) Token: 0x06031D7A RID: 204154
-		// (set) Token: 0x06031D7B RID: 204155
+		// Token: 0x17004F0D RID: 20237
+		// (get) Token: 0x06026B0A RID: 158474
+		// (set) Token: 0x06026B0B RID: 158475
 		[Nullable(new byte[]
 		{
 			2,

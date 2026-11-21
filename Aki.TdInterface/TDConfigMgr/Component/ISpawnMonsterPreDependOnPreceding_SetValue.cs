@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006EF RID: 1775
+	// Token: 0x02000790 RID: 1936
 	public class ISpawnMonsterPreDependOnPreceding_SetValue
 	{
-		// Token: 0x040019FC RID: 6652
+		// Token: 0x04001BFB RID: 7163
 		public ESpawnMonsterPreCondition Type;
 
-		// Token: 0x040019FD RID: 6653
-		[Nullable(1)]
+		// Token: 0x04001BFC RID: 7164
 		public List<int> Ids;
 	}
 }

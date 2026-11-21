@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E8C RID: 20108
+	// Token: 0x020053A6 RID: 21414
 	public struct IAirWallSpawnerComponent : IFlatbufferObject
 	{
-		// Token: 0x1700902B RID: 36907
-		// (get) Token: 0x0601FA1E RID: 129566 RVA: 0x00467DB1 File Offset: 0x00465FB1
+		// Token: 0x17009773 RID: 38771
+		// (get) Token: 0x060216AB RID: 136875 RVA: 0x0049C479 File Offset: 0x0049A679
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA1F RID: 129567 RVA: 0x00467DBE File Offset: 0x00465FBE
+		// Token: 0x060216AC RID: 136876 RVA: 0x0049C486 File Offset: 0x0049A686
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FA20 RID: 129568 RVA: 0x00467DC8 File Offset: 0x00465FC8
+		// Token: 0x060216AD RID: 136877 RVA: 0x0049C490 File Offset: 0x0049A690
 		public static IAirWallSpawnerComponent GetRootAsIAirWallSpawnerComponent(ByteBuffer _bb)
 		{
 			return IAirWallSpawnerComponent.GetRootAsIAirWallSpawnerComponent(_bb, default(IAirWallSpawnerComponent));
 		}
 
-		// Token: 0x0601FA21 RID: 129569 RVA: 0x00467DE4 File Offset: 0x00465FE4
+		// Token: 0x060216AE RID: 136878 RVA: 0x0049C4AC File Offset: 0x0049A6AC
 		public static IAirWallSpawnerComponent GetRootAsIAirWallSpawnerComponent(ByteBuffer _bb, IAirWallSpawnerComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FA22 RID: 129570 RVA: 0x00467E01 File Offset: 0x00466001
+		// Token: 0x060216AF RID: 136879 RVA: 0x0049C4C9 File Offset: 0x0049A6C9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FA23 RID: 129571 RVA: 0x00467E10 File Offset: 0x00466010
+		// Token: 0x060216B0 RID: 136880 RVA: 0x0049C4D8 File Offset: 0x0049A6D8
 		public IAirWallSpawnerComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700902C RID: 36908
-		// (get) Token: 0x0601FA24 RID: 129572 RVA: 0x00467E20 File Offset: 0x00466020
+		// Token: 0x17009774 RID: 38772
+		// (get) Token: 0x060216B1 RID: 136881 RVA: 0x0049C4E8 File Offset: 0x0049A6E8
 		public bool Disabled
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700902D RID: 36909
-		// (get) Token: 0x0601FA25 RID: 129573 RVA: 0x00467E60 File Offset: 0x00466060
+		// Token: 0x17009775 RID: 38773
+		// (get) Token: 0x060216B2 RID: 136882 RVA: 0x0049C528 File Offset: 0x0049A728
 		public int SplineEntity
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700902E RID: 36910
-		// (get) Token: 0x0601FA26 RID: 129574 RVA: 0x00467E9C File Offset: 0x0046609C
+		// Token: 0x17009776 RID: 38774
+		// (get) Token: 0x060216B3 RID: 136883 RVA: 0x0049C564 File Offset: 0x0049A764
 		public string WallName
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA27 RID: 129575 RVA: 0x00467ED3 File Offset: 0x004660D3
+		// Token: 0x060216B4 RID: 136884 RVA: 0x0049C59B File Offset: 0x0049A79B
 		public Span<byte> GetWallNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601FA28 RID: 129576 RVA: 0x00467EE2 File Offset: 0x004660E2
+		// Token: 0x060216B5 RID: 136885 RVA: 0x0049C5AA File Offset: 0x0049A7AA
 		public byte[] GetWallNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700902F RID: 36911
-		// (get) Token: 0x0601FA29 RID: 129577 RVA: 0x00467EF0 File Offset: 0x004660F0
+		// Token: 0x17009777 RID: 38775
+		// (get) Token: 0x060216B6 RID: 136886 RVA: 0x0049C5B8 File Offset: 0x0049A7B8
 		public float Thickness
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009030 RID: 36912
-		// (get) Token: 0x0601FA2A RID: 129578 RVA: 0x00467F34 File Offset: 0x00466134
+		// Token: 0x17009778 RID: 38776
+		// (get) Token: 0x060216B7 RID: 136887 RVA: 0x0049C5FC File Offset: 0x0049A7FC
 		public float Height
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009031 RID: 36913
-		// (get) Token: 0x0601FA2B RID: 129579 RVA: 0x00467F78 File Offset: 0x00466178
+		// Token: 0x17009779 RID: 38777
+		// (get) Token: 0x060216B8 RID: 136888 RVA: 0x0049C640 File Offset: 0x0049A840
 		public EBiasDirection BiasDirection
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009032 RID: 36914
-		// (get) Token: 0x0601FA2C RID: 129580 RVA: 0x00467FB8 File Offset: 0x004661B8
+		// Token: 0x1700977A RID: 38778
+		// (get) Token: 0x060216B9 RID: 136889 RVA: 0x0049C680 File Offset: 0x0049A880
 		public bool IsExtend
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009033 RID: 36915
-		// (get) Token: 0x0601FA2D RID: 129581 RVA: 0x00467FF8 File Offset: 0x004661F8
+		// Token: 0x1700977B RID: 38779
+		// (get) Token: 0x060216BA RID: 136890 RVA: 0x0049C6C0 File Offset: 0x0049A8C0
 		public bool HasCover
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA2E RID: 129582 RVA: 0x00468038 File Offset: 0x00466238
+		// Token: 0x060216BB RID: 136891 RVA: 0x0049C700 File Offset: 0x0049A900
 		public IActorRef? WallActorsRef(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -180,8 +180,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActorRef?(default(IActorRef).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009034 RID: 36916
-		// (get) Token: 0x0601FA2F RID: 129583 RVA: 0x0046809C File Offset: 0x0046629C
+		// Token: 0x1700977C RID: 38780
+		// (get) Token: 0x060216BC RID: 136892 RVA: 0x0049C764 File Offset: 0x0049A964
 		public int WallActorsRefLength
 		{
 			get
@@ -195,13 +195,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009035 RID: 36917
-		// (get) Token: 0x0601FA30 RID: 129584 RVA: 0x004680C8 File Offset: 0x004662C8
-		public byte NullMask
+		// Token: 0x1700977D RID: 38781
+		// (get) Token: 0x060216BD RID: 136893 RVA: 0x0049C790 File Offset: 0x0049A990
+		public IAirWallWholeSpawnMode? SpawnMode
 		{
 			get
 			{
 				int num = this.__p.__offset(22);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new IAirWallWholeSpawnMode?(default(IAirWallWholeSpawnMode).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x1700977E RID: 38782
+		// (get) Token: 0x060216BE RID: 136894 RVA: 0x0049C7F0 File Offset: 0x0049A9F0
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(24);
 				if (num == 0)
 				{
 					return 0;
@@ -210,10 +225,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FA31 RID: 129585 RVA: 0x00468108 File Offset: 0x00466308
-		public static Offset<IAirWallSpawnerComponent> CreateIAirWallSpawnerComponent(FlatBufferBuilder builder, bool Disabled = false, int SplineEntity = 0, StringOffset WallNameOffset = default(StringOffset), float Thickness = 0f, float Height = 0f, EBiasDirection BiasDirection = EBiasDirection.Inner, bool IsExtend = false, bool HasCover = false, VectorOffset WallActorsRefOffset = default(VectorOffset), byte NullMask = 0)
+		// Token: 0x060216BF RID: 136895 RVA: 0x0049C830 File Offset: 0x0049AA30
+		public static Offset<IAirWallSpawnerComponent> CreateIAirWallSpawnerComponent(FlatBufferBuilder builder, bool Disabled = false, int SplineEntity = 0, StringOffset WallNameOffset = default(StringOffset), float Thickness = 0f, float Height = 0f, EBiasDirection BiasDirection = EBiasDirection.Inner, bool IsExtend = false, bool HasCover = false, VectorOffset WallActorsRefOffset = default(VectorOffset), Offset<IAirWallWholeSpawnMode> SpawnModeOffset = default(Offset<IAirWallWholeSpawnMode>), byte NullMask = 0)
 		{
-			builder.StartTable(10);
+			builder.StartTable(11);
+			IAirWallSpawnerComponent.AddSpawnMode(builder, SpawnModeOffset);
 			IAirWallSpawnerComponent.AddWallActorsRef(builder, WallActorsRefOffset);
 			IAirWallSpawnerComponent.AddHeight(builder, Height);
 			IAirWallSpawnerComponent.AddThickness(builder, Thickness);
@@ -227,67 +243,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAirWallSpawnerComponent.EndIAirWallSpawnerComponent(builder);
 		}
 
-		// Token: 0x0601FA32 RID: 129586 RVA: 0x00468170 File Offset: 0x00466370
+		// Token: 0x060216C0 RID: 136896 RVA: 0x0049C8A0 File Offset: 0x0049AAA0
 		public static void StartIAirWallSpawnerComponent(FlatBufferBuilder builder)
 		{
-			builder.StartTable(10);
+			builder.StartTable(11);
 		}
 
-		// Token: 0x0601FA33 RID: 129587 RVA: 0x0046817A File Offset: 0x0046637A
+		// Token: 0x060216C1 RID: 136897 RVA: 0x0049C8AA File Offset: 0x0049AAAA
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0601FA34 RID: 129588 RVA: 0x00468185 File Offset: 0x00466385
+		// Token: 0x060216C2 RID: 136898 RVA: 0x0049C8B5 File Offset: 0x0049AAB5
 		public static void AddSplineEntity(FlatBufferBuilder builder, int splineEntity)
 		{
 			builder.AddInt(1, splineEntity, 0);
 		}
 
-		// Token: 0x0601FA35 RID: 129589 RVA: 0x00468190 File Offset: 0x00466390
+		// Token: 0x060216C3 RID: 136899 RVA: 0x0049C8C0 File Offset: 0x0049AAC0
 		public static void AddWallName(FlatBufferBuilder builder, StringOffset wallNameOffset)
 		{
 			builder.AddOffset(2, wallNameOffset.Value, 0);
 		}
 
-		// Token: 0x0601FA36 RID: 129590 RVA: 0x004681A0 File Offset: 0x004663A0
+		// Token: 0x060216C4 RID: 136900 RVA: 0x0049C8D0 File Offset: 0x0049AAD0
 		public static void AddThickness(FlatBufferBuilder builder, float thickness)
 		{
 			builder.AddFloat(3, thickness, 0.0);
 		}
 
-		// Token: 0x0601FA37 RID: 129591 RVA: 0x004681B3 File Offset: 0x004663B3
+		// Token: 0x060216C5 RID: 136901 RVA: 0x0049C8E3 File Offset: 0x0049AAE3
 		public static void AddHeight(FlatBufferBuilder builder, float height)
 		{
 			builder.AddFloat(4, height, 0.0);
 		}
 
-		// Token: 0x0601FA38 RID: 129592 RVA: 0x004681C6 File Offset: 0x004663C6
+		// Token: 0x060216C6 RID: 136902 RVA: 0x0049C8F6 File Offset: 0x0049AAF6
 		public static void AddBiasDirection(FlatBufferBuilder builder, EBiasDirection biasDirection)
 		{
 			builder.AddByte(5, (byte)biasDirection, 0);
 		}
 
-		// Token: 0x0601FA39 RID: 129593 RVA: 0x004681D1 File Offset: 0x004663D1
+		// Token: 0x060216C7 RID: 136903 RVA: 0x0049C901 File Offset: 0x0049AB01
 		public static void AddIsExtend(FlatBufferBuilder builder, bool isExtend)
 		{
 			builder.AddBool(6, isExtend, false);
 		}
 
-		// Token: 0x0601FA3A RID: 129594 RVA: 0x004681DC File Offset: 0x004663DC
+		// Token: 0x060216C8 RID: 136904 RVA: 0x0049C90C File Offset: 0x0049AB0C
 		public static void AddHasCover(FlatBufferBuilder builder, bool hasCover)
 		{
 			builder.AddBool(7, hasCover, false);
 		}
 
-		// Token: 0x0601FA3B RID: 129595 RVA: 0x004681E7 File Offset: 0x004663E7
+		// Token: 0x060216C9 RID: 136905 RVA: 0x0049C917 File Offset: 0x0049AB17
 		public static void AddWallActorsRef(FlatBufferBuilder builder, VectorOffset wallActorsRefOffset)
 		{
 			builder.AddOffset(8, wallActorsRefOffset.Value, 0);
 		}
 
-		// Token: 0x0601FA3C RID: 129596 RVA: 0x004681F8 File Offset: 0x004663F8
+		// Token: 0x060216CA RID: 136906 RVA: 0x0049C928 File Offset: 0x0049AB28
 		public static VectorOffset CreateWallActorsRefVector(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -298,7 +314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FA3D RID: 129597 RVA: 0x00468238 File Offset: 0x00466438
+		// Token: 0x060216CB RID: 136907 RVA: 0x0049C968 File Offset: 0x0049AB68
 		public static VectorOffset CreateWallActorsRefVectorBlock(FlatBufferBuilder builder, Offset<IActorRef>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -306,7 +322,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FA3E RID: 129598 RVA: 0x00468252 File Offset: 0x00466452
+		// Token: 0x060216CC RID: 136908 RVA: 0x0049C982 File Offset: 0x0049AB82
 		public static VectorOffset CreateWallActorsRefVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActorRef>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -314,7 +330,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FA3F RID: 129599 RVA: 0x00468270 File Offset: 0x00466470
+		// Token: 0x060216CD RID: 136909 RVA: 0x0049C9A0 File Offset: 0x0049ABA0
 		public static VectorOffset CreateWallActorsRefVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -322,25 +338,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601FA40 RID: 129600 RVA: 0x00468289 File Offset: 0x00466489
+		// Token: 0x060216CE RID: 136910 RVA: 0x0049C9B9 File Offset: 0x0049ABB9
 		public static void StartWallActorsRefVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601FA41 RID: 129601 RVA: 0x00468294 File Offset: 0x00466494
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x060216CF RID: 136911 RVA: 0x0049C9C4 File Offset: 0x0049ABC4
+		public static void AddSpawnMode(FlatBufferBuilder builder, Offset<IAirWallWholeSpawnMode> spawnModeOffset)
 		{
-			builder.AddByte(9, nullMask, 0);
+			builder.AddOffset(9, spawnModeOffset.Value, 0);
 		}
 
-		// Token: 0x0601FA42 RID: 129602 RVA: 0x004682A0 File Offset: 0x004664A0
+		// Token: 0x060216D0 RID: 136912 RVA: 0x0049C9D5 File Offset: 0x0049ABD5
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(10, nullMask, 0);
+		}
+
+		// Token: 0x060216D1 RID: 136913 RVA: 0x0049C9E1 File Offset: 0x0049ABE1
 		public static Offset<IAirWallSpawnerComponent> EndIAirWallSpawnerComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IAirWallSpawnerComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0601FA43 RID: 129603 RVA: 0x004682B0 File Offset: 0x004664B0
+		// Token: 0x060216D2 RID: 136914 RVA: 0x0049C9F0 File Offset: 0x0049ABF0
 		public IAirWallSpawnerComponentT UnPack()
 		{
 			IAirWallSpawnerComponentT airWallSpawnerComponentT = new IAirWallSpawnerComponentT();
@@ -348,7 +370,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return airWallSpawnerComponentT;
 		}
 
-		// Token: 0x0601FA44 RID: 129604 RVA: 0x004682CC File Offset: 0x004664CC
+		// Token: 0x060216D3 RID: 136915 RVA: 0x0049CA0C File Offset: 0x0049AC0C
 		public void UnPackTo(IAirWallSpawnerComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -364,10 +386,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			{
 				_o.WallActorsRef.Add((this.WallActorsRef(i) != null) ? this.WallActorsRef(i).Value.UnPack() : null);
 			}
+			_o.SpawnMode = ((this.SpawnMode != null) ? this.SpawnMode.Value.UnPack() : null);
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601FA45 RID: 129605 RVA: 0x00468398 File Offset: 0x00466598
+		// Token: 0x060216D4 RID: 136916 RVA: 0x0049CB08 File Offset: 0x0049AD08
 		public static Offset<IAirWallSpawnerComponent> Pack(FlatBufferBuilder builder, IAirWallSpawnerComponentT _o)
 		{
 			if (_o == null)
@@ -385,10 +408,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				}
 				wallActorsRefOffset = IAirWallSpawnerComponent.CreateWallActorsRefVector(builder, array);
 			}
-			return IAirWallSpawnerComponent.CreateIAirWallSpawnerComponent(builder, _o.Disabled, _o.SplineEntity, wallNameOffset, _o.Thickness, _o.Height, _o.BiasDirection, _o.IsExtend, _o.HasCover, wallActorsRefOffset, _o.NullMask);
+			Offset<IAirWallWholeSpawnMode> spawnModeOffset = (_o.SpawnMode == null) ? default(Offset<IAirWallWholeSpawnMode>) : IAirWallWholeSpawnMode.Pack(builder, _o.SpawnMode);
+			return IAirWallSpawnerComponent.CreateIAirWallSpawnerComponent(builder, _o.Disabled, _o.SplineEntity, wallNameOffset, _o.Thickness, _o.Height, _o.BiasDirection, _o.IsExtend, _o.HasCover, wallActorsRefOffset, spawnModeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DC5A RID: 56410
+		// Token: 0x0400E7DD RID: 59357
 		private Table __p;
 	}
 }

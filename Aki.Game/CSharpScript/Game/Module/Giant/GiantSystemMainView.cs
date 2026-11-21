@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -17,17 +16,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005973 RID: 22899
+	// Token: 0x0200494C RID: 18764
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantSystemMainView : UiViewBase
 	{
-		// Token: 0x0603A1BB RID: 238011 RVA: 0x00DCFD74 File Offset: 0x00DCDF74
+		// Token: 0x0602F0E1 RID: 192737 RVA: 0x00D1F02C File Offset: 0x00D1D22C
 		public GiantSystemMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603A1BC RID: 238012 RVA: 0x00DCFD90 File Offset: 0x00DCDF90
+		// Token: 0x0602F0E2 RID: 192738 RVA: 0x00D1F048 File Offset: 0x00D1D248
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 33;
@@ -110,14 +109,14 @@ namespace CSharpScript.Game.Module.Giant
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A1BD RID: 238013 RVA: 0x00DD0250 File Offset: 0x00DCE450
+		// Token: 0x0602F0E3 RID: 192739 RVA: 0x00D1F508 File Offset: 0x00D1D708
 		protected override void OnBeforeCreate()
 		{
 			IGiantSystemMainOpenParam giantSystemMainOpenParam = this.OpenParam as IGiantSystemMainOpenParam;
 			this.ActivityId = giantSystemMainOpenParam.ActivityId;
 		}
 
-		// Token: 0x0603A1BE RID: 238014 RVA: 0x00DD0278 File Offset: 0x00DCE478
+		// Token: 0x0602F0E4 RID: 192740 RVA: 0x00D1F530 File Offset: 0x00D1D730
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GiantSystemMainView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -128,7 +127,7 @@ namespace CSharpScript.Game.Module.Giant
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A1BF RID: 238015 RVA: 0x00DD02BC File Offset: 0x00DCE4BC
+		// Token: 0x0602F0E5 RID: 192741 RVA: 0x00D1F574 File Offset: 0x00D1D774
 		protected override void OnStart()
 		{
 			this.Caption = new PopupCaptionItem(base.GetItem(0));
@@ -145,7 +144,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.Refresh();
 		}
 
-		// Token: 0x0603A1C0 RID: 238016 RVA: 0x00DD0348 File Offset: 0x00DCE548
+		// Token: 0x0602F0E6 RID: 192742 RVA: 0x00D1F600 File Offset: 0x00D1D800
 		protected override void OnBeforeDestroy()
 		{
 			TimerHandle picSwitchTimer = this.PicSwitchTimer;
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.Module.Giant
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.GiantInteract, base.GetItem(21), 0);
 		}
 
-		// Token: 0x0603A1C1 RID: 238017 RVA: 0x00DD0400 File Offset: 0x00DCE600
+		// Token: 0x0602F0E7 RID: 192743 RVA: 0x00D1F6B8 File Offset: 0x00D1D8B8
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.AddWithTarget<GiantEcoNetType?, double, double>(this, EEventName.OnGiantStableValueChange, delegate(GiantEcoNetType? _, double _, double _)
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshSelectedNode();
 		}
 
-		// Token: 0x0603A1C2 RID: 238018 RVA: 0x00DD04BC File Offset: 0x00DCE6BC
+		// Token: 0x0602F0E8 RID: 192744 RVA: 0x00D1F774 File Offset: 0x00D1D974
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.RemoveTargetEvents(this);
@@ -208,13 +207,13 @@ namespace CSharpScript.Game.Module.Giant
 			rewardPopup.SetActive(false);
 		}
 
-		// Token: 0x0603A1C3 RID: 238019 RVA: 0x00DD04F3 File Offset: 0x00DCE6F3
+		// Token: 0x0602F0E9 RID: 192745 RVA: 0x00D1F7AB File Offset: 0x00D1D9AB
 		private void OnGiantDataChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603A1C4 RID: 238020 RVA: 0x00DD04FB File Offset: 0x00DCE6FB
+		// Token: 0x0602F0EA RID: 192746 RVA: 0x00D1F7B3 File Offset: 0x00D1D9B3
 		private void Refresh()
 		{
 			this.RefreshMindsetEntries();
@@ -225,7 +224,7 @@ namespace CSharpScript.Game.Module.Giant
 			int activityId = this.ActivityId;
 		}
 
-		// Token: 0x0603A1C5 RID: 238021 RVA: 0x00DD0524 File Offset: 0x00DCE724
+		// Token: 0x0602F0EB RID: 192747 RVA: 0x00D1F7DC File Offset: 0x00D1D9DC
 		private void RefreshMindsetEntries()
 		{
 			GiantModel instance = GiantModel.Instance;
@@ -242,27 +241,29 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1C6 RID: 238022 RVA: 0x00DD0598 File Offset: 0x00DCE798
+		// Token: 0x0602F0EC RID: 192748 RVA: 0x00D1F850 File Offset: 0x00D1DA50
 		private void RefreshTotalProgress()
 		{
 			GiantModel instance = GiantModel.Instance;
 			double totalStableValue = instance.GetTotalStableValue();
 			GiantTotalProgress[] totalNodes = GiantConfig.GetTotalNodes();
 			int[] array;
-			if (totalNodes.Length == 0)
+			if (totalNodes.Length != 0)
 			{
-				array = GiantConfig.GetTotalNodeGoals();
+				array = new int[totalNodes.Length];
+				for (int i = 0; i < totalNodes.Length; i++)
+				{
+					array[i] = totalNodes[i].Goal;
+				}
 			}
 			else
 			{
-				array = (from node in totalNodes
-				select node.Goal).ToArray<int>();
+				array = GiantConfig.GetTotalNodeGoals();
 			}
-			int[] array2 = array;
 			UUISliderComponent slider = base.GetSlider(23);
 			if (slider != null)
 			{
-				slider.SetValue((float)this.GetProgressFillByNode(totalStableValue, array2), true);
+				slider.SetValue((float)this.GetProgressFillByNode(totalStableValue, array), true);
 			}
 			UUIText text = base.GetText(22);
 			if (text != null)
@@ -272,23 +273,23 @@ namespace CSharpScript.Game.Module.Giant
 			int reachedNodeIndex = this.GetReachedNodeIndex();
 			int activatedNodeIndex = this.GetActivatedNodeIndex();
 			List<IGiantNodeScaleData> list = new List<IGiantNodeScaleData>();
-			for (int i = 0; i < array2.Length; i++)
+			for (int j = 0; j < array.Length; j++)
 			{
-				int num = array2[i];
-				EGiantNodeScaleState state = (i == reachedNodeIndex) ? EGiantNodeScaleState.Current : ((i < reachedNodeIndex) ? EGiantNodeScaleState.Expired : EGiantNodeScaleState.Lock);
-				object obj = (i < totalNodes.Length) ? totalNodes[i].DropId : 0;
-				int num2 = (i < totalNodes.Length) ? totalNodes[i].Id : 0;
+				int num = array[j];
+				EGiantNodeScaleState state = (j == reachedNodeIndex) ? EGiantNodeScaleState.Current : ((j < reachedNodeIndex) ? EGiantNodeScaleState.Expired : EGiantNodeScaleState.Lock);
+				object obj = (j < totalNodes.Length) ? totalNodes[j].DropId : 0;
+				int num2 = (j < totalNodes.Length) ? totalNodes[j].Id : 0;
 				object obj2 = obj;
 				bool flag = obj2 > 0 && instance.GetRewardGot(num2);
 				bool canClaim = obj2 > 0 && !flag && totalStableValue >= (double)num && instance.IsNodeInteracted(num2);
 				list.Add(new GiantNodeScaleData
 				{
-					NodeIndex = i,
+					NodeIndex = j,
 					Value = num,
 					State = state,
 					IsGot = flag,
 					CanClaim = canClaim,
-					ShowCurrentMark = (i == activatedNodeIndex),
+					ShowCurrentMark = (j == activatedNodeIndex),
 					OnClick = new Action<int, bool, UUIItem>(this.OnClickNode)
 				});
 			}
@@ -308,7 +309,7 @@ namespace CSharpScript.Game.Module.Giant
 			}, false);
 		}
 
-		// Token: 0x0603A1C7 RID: 238023 RVA: 0x00DD073C File Offset: 0x00DCE93C
+		// Token: 0x0602F0ED RID: 192749 RVA: 0x00D1F9F8 File Offset: 0x00D1DBF8
 		private double GetProgressFillByNode(double total, int[] goals)
 		{
 			int num = goals.Length;
@@ -331,7 +332,7 @@ namespace CSharpScript.Game.Module.Giant
 			return 1.0;
 		}
 
-		// Token: 0x0603A1C8 RID: 238024 RVA: 0x00DD07BD File Offset: 0x00DCE9BD
+		// Token: 0x0602F0EE RID: 192750 RVA: 0x00D1FA79 File Offset: 0x00D1DC79
 		private void OnClaimNodeReward()
 		{
 			GiantController.Instance.SendGiantStableValueActivityRequest(delegate(GiantStableValueActivityResponse _)
@@ -340,7 +341,7 @@ namespace CSharpScript.Game.Module.Giant
 			});
 		}
 
-		// Token: 0x0603A1C9 RID: 238025 RVA: 0x00DD07D8 File Offset: 0x00DCE9D8
+		// Token: 0x0602F0EF RID: 192751 RVA: 0x00D1FA94 File Offset: 0x00D1DC94
 		private void OnClickNode(int nodeIndex, bool canClaim, UUIItem mountItem)
 		{
 			if (canClaim)
@@ -387,7 +388,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.OnPreviewNodeReward(nodeIndex, mountItem);
 		}
 
-		// Token: 0x0603A1CA RID: 238026 RVA: 0x00DD0894 File Offset: 0x00DCEA94
+		// Token: 0x0602F0F0 RID: 192752 RVA: 0x00D1FB50 File Offset: 0x00D1DD50
 		private void OnPreviewNodeReward(int nodeIndex, UUIItem mountItem)
 		{
 			GiantTotalProgress[] totalNodes = GiantConfig.GetTotalNodes();
@@ -396,17 +397,21 @@ namespace CSharpScript.Game.Module.Giant
 			{
 				return;
 			}
-			bool isGot = GiantModel.Instance.GetRewardGot((nodeIndex < totalNodes.Length) ? totalNodes[nodeIndex].Id : 0);
-			List<DailyActivityDefine.RewardTuple> list = (from item in CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemListByIdList(new List<int>
+			bool rewardGot = GiantModel.Instance.GetRewardGot((nodeIndex < totalNodes.Length) ? totalNodes[nodeIndex].Id : 0);
+			List<TItem> dropPackagePreviewItemListByIdList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemListByIdList(new List<int>
 			{
 				num
-			})
-			select new DailyActivityDefine.RewardTuple
+			});
+			List<DailyActivityDefine.RewardTuple> list = new List<DailyActivityDefine.RewardTuple>();
+			foreach (TItem titem in dropPackagePreviewItemListByIdList)
 			{
-				Id = item.ItemData.ItemId,
-				Num = item.Count,
-				Received = isGot
-			}).ToList<DailyActivityDefine.RewardTuple>();
+				list.Add(new DailyActivityDefine.RewardTuple
+				{
+					Id = titem.ItemData.ItemId,
+					Num = titem.Count,
+					Received = rewardGot
+				});
+			}
 			if (list.Count == 0)
 			{
 				return;
@@ -425,7 +430,7 @@ namespace CSharpScript.Game.Module.Giant
 			rewardPopup.Refresh(data);
 		}
 
-		// Token: 0x0603A1CB RID: 238027 RVA: 0x00DD096C File Offset: 0x00DCEB6C
+		// Token: 0x0602F0F1 RID: 192753 RVA: 0x00D1FC78 File Offset: 0x00D1DE78
 		private void RefreshSelectedNode()
 		{
 			int num = (this.SelectedNodeIndex < 0) ? 0 : this.SelectedNodeIndex;
@@ -485,7 +490,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1CC RID: 238028 RVA: 0x00DD0A90 File Offset: 0x00DCEC90
+		// Token: 0x0602F0F2 RID: 192754 RVA: 0x00D1FD9C File Offset: 0x00D1DF9C
 		[NullableContext(2)]
 		private string GetMindsetIconPath(int level)
 		{
@@ -499,7 +504,7 @@ namespace CSharpScript.Game.Module.Giant
 			return instance.GetResourcePath(mindsetAttitudeIconsByLevel[num]);
 		}
 
-		// Token: 0x0603A1CD RID: 238029 RVA: 0x00DD0ACC File Offset: 0x00DCECCC
+		// Token: 0x0602F0F3 RID: 192755 RVA: 0x00D1FDD8 File Offset: 0x00D1DFD8
 		private void RefreshSilhouetteNarrative()
 		{
 			int level = (int)(GiantModel.Instance.GetStage(this.CurrentPicEco) + 1);
@@ -511,7 +516,7 @@ namespace CSharpScript.Game.Module.Giant
 			text.SetText(GiantConfig.GetSilhouetteNarrative(this.CurrentPicEco, level), true);
 		}
 
-		// Token: 0x0603A1CE RID: 238030 RVA: 0x00DD0B0C File Offset: 0x00DCED0C
+		// Token: 0x0602F0F4 RID: 192756 RVA: 0x00D1FE18 File Offset: 0x00D1E018
 		private void RefreshGiantPic()
 		{
 			List<int> list = new List<int>
@@ -532,7 +537,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshSilhouetteNarrative();
 		}
 
-		// Token: 0x0603A1CF RID: 238031 RVA: 0x00DD0B78 File Offset: 0x00DCED78
+		// Token: 0x0602F0F5 RID: 192757 RVA: 0x00D1FE84 File Offset: 0x00D1E084
 		private void RefreshRedDots()
 		{
 			bool flag = GiantConfig.HasReachedUninteractedNode();
@@ -544,7 +549,7 @@ namespace CSharpScript.Game.Module.Giant
 			text.SetText(GiantConfig.ResolveLocalTextOrKey(flag ? GiantConfig.GetTextKeyGoBtnActive() : GiantConfig.GetTextKeyGoBtnNormal()), true);
 		}
 
-		// Token: 0x0603A1D0 RID: 238032 RVA: 0x00DD0BB2 File Offset: 0x00DCEDB2
+		// Token: 0x0602F0F6 RID: 192758 RVA: 0x00D1FEBE File Offset: 0x00D1E0BE
 		private void StartPicSwitchTimer()
 		{
 			TimerHandle picSwitchTimer = this.PicSwitchTimer;
@@ -558,7 +563,7 @@ namespace CSharpScript.Game.Module.Giant
 			}, (float)GiantConfig.GetMainViewPicSwitchIntervalMs(), 1f, null, null, true);
 		}
 
-		// Token: 0x0603A1D1 RID: 238033 RVA: 0x00DD0BF0 File Offset: 0x00DCEDF0
+		// Token: 0x0602F0F7 RID: 192759 RVA: 0x00D1FEFC File Offset: 0x00D1E0FC
 		private UniTask SwitchGiantPicAsync()
 		{
 			GiantSystemMainView.<SwitchGiantPicAsync>d__34 <SwitchGiantPicAsync>d__;
@@ -569,30 +574,37 @@ namespace CSharpScript.Game.Module.Giant
 			return <SwitchGiantPicAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A1D2 RID: 238034 RVA: 0x00DD0C34 File Offset: 0x00DCEE34
+		// Token: 0x0602F0F8 RID: 192760 RVA: 0x00D1FF40 File Offset: 0x00D1E140
 		private GiantEcoNetType PickWeightedPicEco()
 		{
-			GiantModel model = GiantModel.Instance;
-			int[] array = (from eco in GiantSystemMainView.PicEcoList
-			select GiantConfig.GetPicWeight(eco, (int)(model.GetStage(eco) + 1))).ToArray<int>();
-			int num = array.Aggregate(0, (int sum, int w) => sum + w);
+			GiantModel instance = GiantModel.Instance;
+			int[] array = new int[GiantSystemMainView.PicEcoList.Length];
+			for (int i = 0; i < GiantSystemMainView.PicEcoList.Length; i++)
+			{
+				array[i] = GiantConfig.GetPicWeight(GiantSystemMainView.PicEcoList[i], (int)(instance.GetStage(GiantSystemMainView.PicEcoList[i]) + 1));
+			}
+			int num = 0;
+			foreach (int num2 in array)
+			{
+				num += num2;
+			}
 			if (num <= 0)
 			{
 				return GiantSystemMainView.PicEcoList[0];
 			}
-			double num2 = MathUtils.Instance.GetRandomRange(0.0, 1.0) * (double)num;
-			for (int i = 0; i < GiantSystemMainView.PicEcoList.Length; i++)
+			double num3 = MathUtils.Instance.GetRandomRange(0.0, 1.0) * (double)num;
+			for (int k = 0; k < GiantSystemMainView.PicEcoList.Length; k++)
 			{
-				num2 -= (double)array[i];
-				if (num2 < 0.0)
+				num3 -= (double)array[k];
+				if (num3 < 0.0)
 				{
-					return GiantSystemMainView.PicEcoList[i];
+					return GiantSystemMainView.PicEcoList[k];
 				}
 			}
 			return GiantSystemMainView.PicEcoList[GiantSystemMainView.PicEcoList.Length - 1];
 		}
 
-		// Token: 0x0603A1D3 RID: 238035 RVA: 0x00DD0D04 File Offset: 0x00DCEF04
+		// Token: 0x0602F0F9 RID: 192761 RVA: 0x00D2002C File Offset: 0x00D1E22C
 		private bool IsNodePendingActivate(int nodeIndex)
 		{
 			GiantModel instance = GiantModel.Instance;
@@ -605,7 +617,7 @@ namespace CSharpScript.Game.Module.Giant
 			return instance.GetTotalStableValue() >= (double)giantTotalProgress.Goal && !instance.IsNodeInteracted(giantTotalProgress.Id);
 		}
 
-		// Token: 0x0603A1D4 RID: 238036 RVA: 0x00DD0D54 File Offset: 0x00DCEF54
+		// Token: 0x0602F0FA RID: 192762 RVA: 0x00D2007C File Offset: 0x00D1E27C
 		private int GetActivatedNodeIndex()
 		{
 			GiantModel instance = GiantModel.Instance;
@@ -622,7 +634,7 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A1D5 RID: 238037 RVA: 0x00DD0DB4 File Offset: 0x00DCEFB4
+		// Token: 0x0602F0FB RID: 192763 RVA: 0x00D200DC File Offset: 0x00D1E2DC
 		private int GetReachedNodeIndex()
 		{
 			double totalStableValue = GiantModel.Instance.GetTotalStableValue();
@@ -638,13 +650,13 @@ namespace CSharpScript.Game.Module.Giant
 			return result;
 		}
 
-		// Token: 0x0603A1D6 RID: 238038 RVA: 0x00DD0DEC File Offset: 0x00DCEFEC
+		// Token: 0x0602F0FC RID: 192764 RVA: 0x00D20114 File Offset: 0x00D1E314
 		private bool IsNodeLocked(int nodeIndex)
 		{
 			return nodeIndex > this.GetReachedNodeIndex();
 		}
 
-		// Token: 0x0603A1D7 RID: 238039 RVA: 0x00DD0DF8 File Offset: 0x00DCEFF8
+		// Token: 0x0602F0FD RID: 192765 RVA: 0x00D20120 File Offset: 0x00D1E320
 		private void OnClickMindsetEntry(GiantEcoNetType eco)
 		{
 			GiantSystemQuestOpenParam param = new GiantSystemQuestOpenParam
@@ -654,7 +666,7 @@ namespace CSharpScript.Game.Module.Giant
 			UiManager.Instance.OpenView(EUiViewName.GiantSystemQuestView, param, null);
 		}
 
-		// Token: 0x0603A1D8 RID: 238040 RVA: 0x00DD0E24 File Offset: 0x00DCF024
+		// Token: 0x0602F0FE RID: 192766 RVA: 0x00D2014C File Offset: 0x00D1E34C
 		private void OnClickBtnGotoInteract()
 		{
 			GiantModel.Instance.MarkActivatedNodesInteractRead();
@@ -668,7 +680,7 @@ namespace CSharpScript.Game.Module.Giant
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603A1D9 RID: 238041 RVA: 0x00DD0E78 File Offset: 0x00DCF078
+		// Token: 0x0602F0FF RID: 192767 RVA: 0x00D201A0 File Offset: 0x00D1E3A0
 		private void OnClickAttitudeRow()
 		{
 			int selectedNodeIndex = this.SelectedNodeIndex;
@@ -690,7 +702,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0401E502 RID: 124162
+		// Token: 0x04018FA0 RID: 102304
 		[StaticVariableRuleIgnore]
 		private static readonly GiantEcoNetType[] EntryEcoList = new GiantEcoNetType[]
 		{
@@ -699,7 +711,7 @@ namespace CSharpScript.Game.Module.Giant
 			GiantEcoNetType.Water
 		};
 
-		// Token: 0x0401E503 RID: 124163
+		// Token: 0x04018FA1 RID: 102305
 		[StaticVariableRuleIgnore]
 		private static readonly GiantEcoNetType[] PicEcoList = new GiantEcoNetType[]
 		{
@@ -708,30 +720,30 @@ namespace CSharpScript.Game.Module.Giant
 			GiantEcoNetType.Water
 		};
 
-		// Token: 0x0401E504 RID: 124164
+		// Token: 0x04018FA2 RID: 102306
 		private int ActivityId;
 
-		// Token: 0x0401E505 RID: 124165
+		// Token: 0x04018FA3 RID: 102307
 		private GiantEcoNetType CurrentPicEco;
 
-		// Token: 0x0401E506 RID: 124166
+		// Token: 0x04018FA4 RID: 102308
 		private int SelectedNodeIndex = -1;
 
-		// Token: 0x0401E507 RID: 124167
+		// Token: 0x04018FA5 RID: 102309
 		private bool HasUserSelectedNode;
 
-		// Token: 0x0401E508 RID: 124168
+		// Token: 0x04018FA6 RID: 102310
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401E509 RID: 124169
+		// Token: 0x04018FA7 RID: 102311
 		private readonly List<GiantMindsetEntryItem> MindsetEntries = new List<GiantMindsetEntryItem>();
 
-		// Token: 0x0401E50A RID: 124170
+		// Token: 0x04018FA8 RID: 102312
 		[Nullable(2)]
 		private GiantAttitudeRowItem AttitudeRow;
 
-		// Token: 0x0401E50B RID: 124171
+		// Token: 0x04018FA9 RID: 102313
 		[Nullable(new byte[]
 		{
 			2,
@@ -740,11 +752,11 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private GenericLayout<GiantNodeScaleItem, IGiantNodeScaleData> NodeScaleLayout;
 
-		// Token: 0x0401E50C RID: 124172
+		// Token: 0x04018FAA RID: 102314
 		[Nullable(2)]
 		private TimerHandle PicSwitchTimer;
 
-		// Token: 0x0401E50D RID: 124173
+		// Token: 0x04018FAB RID: 102315
 		[Nullable(2)]
 		private CommonRewardPopup RewardPopup;
 	}

@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015D8 RID: 5592
+	// Token: 0x0200164A RID: 5706
 	public enum RollBlockGameActionType
 	{
-		// Token: 0x0400BD92 RID: 48530
+		// Token: 0x0400C286 RID: 49798
 		[OriginalName("RbMidWayExit")]
 		RbMidWayExit,
-		// Token: 0x0400BD93 RID: 48531
+		// Token: 0x0400C287 RID: 49799
 		[OriginalName("RbPass")]
 		RbPass,
-		// Token: 0x0400BD94 RID: 48532
+		// Token: 0x0400C288 RID: 49800
 		[OriginalName("RbEnter")]
 		RbEnter
 	}

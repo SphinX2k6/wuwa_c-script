@@ -5,17 +5,17 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Condition
 {
-	// Token: 0x0200733A RID: 29498
+	// Token: 0x020064BD RID: 25789
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineConditionCheckInstState : AiStateMachineCondition
 	{
-		// Token: 0x06048623 RID: 296483 RVA: 0x0129E9BD File Offset: 0x0129CBBD
+		// Token: 0x0603EA70 RID: 256624 RVA: 0x01241445 File Offset: 0x0123F645
 		public AiStateMachineConditionCheckInstState(AiStateMachineTransition transition, CombatStateMachineDefine.Fsm.Condition condition, int index) : base(transition, condition, index)
 		{
 		}
 
-		// Token: 0x06048624 RID: 296484 RVA: 0x0129E9D4 File Offset: 0x0129CBD4
+		// Token: 0x0603EA71 RID: 256625 RVA: 0x0124145C File Offset: 0x0123F65C
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Condition condition)
 		{
 			this.TagId = condition.CondInstStateChange.TagId;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			return true;
 		}
 
-		// Token: 0x06048625 RID: 296485 RVA: 0x0129EA50 File Offset: 0x0129CC50
+		// Token: 0x0603EA72 RID: 256626 RVA: 0x012414D8 File Offset: 0x0123F6D8
 		private void OnTagChange(int tagId, bool tagExists)
 		{
 			this.ResultSelf = tagExists;
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			}
 		}
 
-		// Token: 0x06048626 RID: 296486 RVA: 0x0129EA9E File Offset: 0x0129CC9E
+		// Token: 0x0603EA73 RID: 256627 RVA: 0x01241526 File Offset: 0x0123F726
 		protected override void OnClear()
 		{
 			this.Handle.EndTask();
 			this.Handle = null;
 		}
 
-		// Token: 0x06048627 RID: 296487 RVA: 0x0129EAB4 File Offset: 0x0129CCB4
+		// Token: 0x0603EA74 RID: 256628 RVA: 0x0124153C File Offset: 0x0123F73C
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			base.ToString(outBuilder, depth);
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.AI.StateMachine.Condition
 			outBuilder.Append(ref appendInterpolatedStringHandler);
 		}
 
-		// Token: 0x0402645C RID: 156764
+		// Token: 0x04021749 RID: 137033
 		public string TagName = "";
 
-		// Token: 0x0402645D RID: 156765
+		// Token: 0x0402174A RID: 137034
 		public int TagId;
 
-		// Token: 0x0402645E RID: 156766
+		// Token: 0x0402174B RID: 137035
 		[Nullable(2)]
 		private ITagTask Handle;
 	}

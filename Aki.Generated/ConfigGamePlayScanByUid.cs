@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200037F RID: 895
+	// Token: 0x02000394 RID: 916
 	public class ConfigGamePlayScanByUid : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001500 RID: 5376 RVA: 0x000D0610 File Offset: 0x000CE810
+		// Token: 0x0600157E RID: 5502 RVA: 0x000D6B1C File Offset: 0x000D4D1C
 		static ConfigGamePlayScanByUid()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGamePlayScanByUid.CreateStaticDefaultValue), new Action(ConfigGamePlayScanByUid.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001501 RID: 5377 RVA: 0x000D0630 File Offset: 0x000CE830
+		// Token: 0x0600157F RID: 5503 RVA: 0x000D6B3C File Offset: 0x000D4D3C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGamePlayScanByUid.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001502 RID: 5378 RVA: 0x000D06AF File Offset: 0x000CE8AF
+		// Token: 0x06001580 RID: 5504 RVA: 0x000D6BBB File Offset: 0x000D4DBB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGamePlayScanByUid.LogPair = null;
 			ConfigGamePlayScanByUid.HandleId = 0;
 		}
 
-		// Token: 0x06001503 RID: 5379 RVA: 0x000D06BD File Offset: 0x000CE8BD
+		// Token: 0x06001581 RID: 5505 RVA: 0x000D6BC9 File Offset: 0x000D4DC9
 		public static void Init()
 		{
 			ConfigGamePlayScanByUid.HandleId = ConfigCommon.InitDataStatement(ConfigGamePlayScanByUid.HandleId, "db_levelgameplay.db", "select BinData from `GamePlayScan` where UID=?");
 		}
 
-		// Token: 0x06001504 RID: 5380 RVA: 0x000D06D8 File Offset: 0x000CE8D8
+		// Token: 0x06001582 RID: 5506 RVA: 0x000D6BE4 File Offset: 0x000D4DE4
 		public static GamePlayScan? GetConfig(int p0UId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGamePlayScanByUid.HandleId, ConfigGamePlayScanByUid.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GamePlayScan?(rootAsGamePlayScan);
 		}
 
-		// Token: 0x0400185D RID: 6237
+		// Token: 0x040018F0 RID: 6384
 		private const string DB = "db_levelgameplay.db";
 
-		// Token: 0x0400185E RID: 6238
+		// Token: 0x040018F1 RID: 6385
 		private const string FILE = "g.关卡玩法数据.xlsx";
 
-		// Token: 0x0400185F RID: 6239
+		// Token: 0x040018F2 RID: 6386
 		private const string TABLE = "GamePlayScan";
 
-		// Token: 0x04001860 RID: 6240
+		// Token: 0x040018F3 RID: 6387
 		private const string COMMAND = "select BinData from `GamePlayScan` where UID=?";
 
-		// Token: 0x04001861 RID: 6241
+		// Token: 0x040018F4 RID: 6388
 		private const string KEY_PREFIX = "GamePlayScanByUid";
 
-		// Token: 0x04001862 RID: 6242
+		// Token: 0x040018F5 RID: 6389
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001863 RID: 6243
+		// Token: 0x040018F6 RID: 6390
 		private static int HandleId;
 	}
 }

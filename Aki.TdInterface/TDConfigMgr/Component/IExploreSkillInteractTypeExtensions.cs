@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000351 RID: 849
+	// Token: 0x0200039A RID: 922
 	public static class IExploreSkillInteractTypeExtensions
 	{
-		// Token: 0x060010DC RID: 4316 RVA: 0x00039D68 File Offset: 0x00037F68
-		[NullableContext(1)]
+		// Token: 0x06001220 RID: 4640 RVA: 0x0003D034 File Offset: 0x0003B234
 		public static IReadOnlyList<ActionInfo> GetActions(this IExploreSkillInteractType p)
 		{
 			IExploreSkillPullGiant exploreSkillPullGiant = p as IExploreSkillPullGiant;
@@ -31,9 +29,17 @@ namespace Aki.TDConfigMgr.Component
 								IExploreSkillEavesdrop exploreSkillEavesdrop = p as IExploreSkillEavesdrop;
 								if (exploreSkillEavesdrop == null)
 								{
-									throw new NotImplementedException("获取类型:" + p.GetType().Name + "的Actions的字段失败");
+									IExploreSkillGraffitiPuzzle exploreSkillGraffitiPuzzle = p as IExploreSkillGraffitiPuzzle;
+									if (exploreSkillGraffitiPuzzle == null)
+									{
+										throw new NotImplementedException("获取类型:" + p.GetType().Name + "的Actions的字段失败");
+									}
+									actions = exploreSkillGraffitiPuzzle.Actions;
 								}
-								actions = exploreSkillEavesdrop.Actions;
+								else
+								{
+									actions = exploreSkillEavesdrop.Actions;
+								}
 							}
 							else
 							{

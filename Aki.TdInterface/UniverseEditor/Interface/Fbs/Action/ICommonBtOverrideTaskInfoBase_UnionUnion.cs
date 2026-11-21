@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006472 RID: 25714
+	// Token: 0x02006ADA RID: 27354
 	public class ICommonBtOverrideTaskInfoBase_UnionUnion
 	{
-		// Token: 0x1700BF56 RID: 48982
-		// (get) Token: 0x0602C891 RID: 182417 RVA: 0x0061D5B9 File Offset: 0x0061B7B9
-		// (set) Token: 0x0602C892 RID: 182418 RVA: 0x0061D5C1 File Offset: 0x0061B7C1
+		// Token: 0x1700C8D8 RID: 51416
+		// (get) Token: 0x0602EFE2 RID: 192482 RVA: 0x00668BC5 File Offset: 0x00666DC5
+		// (set) Token: 0x0602EFE3 RID: 192483 RVA: 0x00668BCD File Offset: 0x00666DCD
 		public ICommonBtOverrideTaskInfoBase_Union Type { get; set; }
 
-		// Token: 0x1700BF57 RID: 48983
-		// (get) Token: 0x0602C893 RID: 182419 RVA: 0x0061D5CA File Offset: 0x0061B7CA
-		// (set) Token: 0x0602C894 RID: 182420 RVA: 0x0061D5D2 File Offset: 0x0061B7D2
+		// Token: 0x1700C8D9 RID: 51417
+		// (get) Token: 0x0602EFE4 RID: 192484 RVA: 0x00668BD6 File Offset: 0x00666DD6
+		// (set) Token: 0x0602EFE5 RID: 192485 RVA: 0x00668BDE File Offset: 0x00666DDE
 		public object Value { get; set; }
 
-		// Token: 0x0602C895 RID: 182421 RVA: 0x0061D5DB File Offset: 0x0061B7DB
+		// Token: 0x0602EFE6 RID: 192486 RVA: 0x00668BE7 File Offset: 0x00666DE7
 		public ICommonBtOverrideTaskInfoBase_UnionUnion()
 		{
 			this.Type = ICommonBtOverrideTaskInfoBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602C896 RID: 182422 RVA: 0x0061D5F1 File Offset: 0x0061B7F1
+		// Token: 0x0602EFE7 RID: 192487 RVA: 0x00668BFD File Offset: 0x00666DFD
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602C897 RID: 182423 RVA: 0x0061D603 File Offset: 0x0061B803
+		// Token: 0x0602EFE8 RID: 192488 RVA: 0x00668C0F File Offset: 0x00666E0F
 		public ICommonBtOverrideTaskInfoBaseT AsICommonBtOverrideTaskInfoBase()
 		{
 			return this.As<ICommonBtOverrideTaskInfoBaseT>();
 		}
 
-		// Token: 0x0602C898 RID: 182424 RVA: 0x0061D60B File Offset: 0x0061B80B
+		// Token: 0x0602EFE9 RID: 192489 RVA: 0x00668C17 File Offset: 0x00666E17
 		public static ICommonBtOverrideTaskInfoBase_UnionUnion FromICommonBtOverrideTaskInfoBase(ICommonBtOverrideTaskInfoBaseT _icommonbtoverridetaskinfobase)
 		{
 			return new ICommonBtOverrideTaskInfoBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C899 RID: 182425 RVA: 0x0061D620 File Offset: 0x0061B820
+		// Token: 0x0602EFEA RID: 192490 RVA: 0x00668C2C File Offset: 0x00666E2C
 		public ICommonBtOverrideActionInfoT AsICommonBtOverrideActionInfo()
 		{
 			return this.As<ICommonBtOverrideActionInfoT>();
 		}
 
-		// Token: 0x0602C89A RID: 182426 RVA: 0x0061D628 File Offset: 0x0061B828
+		// Token: 0x0602EFEB RID: 192491 RVA: 0x00668C34 File Offset: 0x00666E34
 		public static ICommonBtOverrideTaskInfoBase_UnionUnion FromICommonBtOverrideActionInfo(ICommonBtOverrideActionInfoT _icommonbtoverrideactioninfo)
 		{
 			return new ICommonBtOverrideTaskInfoBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C89B RID: 182427 RVA: 0x0061D63D File Offset: 0x0061B83D
+		// Token: 0x0602EFEC RID: 192492 RVA: 0x00668C49 File Offset: 0x00666E49
 		public ICommonBtOverrideConditionInfoT AsICommonBtOverrideConditionInfo()
 		{
 			return this.As<ICommonBtOverrideConditionInfoT>();
 		}
 
-		// Token: 0x0602C89C RID: 182428 RVA: 0x0061D645 File Offset: 0x0061B845
+		// Token: 0x0602EFED RID: 192493 RVA: 0x00668C51 File Offset: 0x00666E51
 		public static ICommonBtOverrideTaskInfoBase_UnionUnion FromICommonBtOverrideConditionInfo(ICommonBtOverrideConditionInfoT _icommonbtoverrideconditioninfo)
 		{
 			return new ICommonBtOverrideTaskInfoBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602C89D RID: 182429 RVA: 0x0061D65C File Offset: 0x0061B85C
+		// Token: 0x0602EFEE RID: 192494 RVA: 0x00668C68 File Offset: 0x00666E68
 		public static int Pack(FlatBufferBuilder builder, ICommonBtOverrideTaskInfoBase_UnionUnion _o)
 		{
 			switch (_o.Type)

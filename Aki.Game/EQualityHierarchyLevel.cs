@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020034DC RID: 13532
+// Token: 0x02002A50 RID: 10832
 public enum EQualityHierarchyLevel
 {
-	// Token: 0x0400E883 RID: 59523
+	// Token: 0x0400ED3A RID: 60730
 	Low,
-	// Token: 0x0400E884 RID: 59524
+	// Token: 0x0400ED3B RID: 60731
 	Medium,
-	// Token: 0x0400E885 RID: 59525
+	// Token: 0x0400ED3C RID: 60732
 	High,
-	// Token: 0x0400E886 RID: 59526
+	// Token: 0x0400ED3D RID: 60733
 	Highest
 }

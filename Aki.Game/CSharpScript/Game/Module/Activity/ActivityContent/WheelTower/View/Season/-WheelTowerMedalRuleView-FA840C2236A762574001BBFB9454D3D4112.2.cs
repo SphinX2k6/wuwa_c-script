@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F5B RID: 24411
+	// Token: 0x02004F42 RID: 20290
 	internal enum <WheelTowerMedalRuleView>FA840C2236A762574001BBFB9454D3D41124F531A3F3D4AB315F6965BECB79B03__EWheelTowerMedalRuleItemComponent
 	{
-		// Token: 0x040205B9 RID: 132537
+		// Token: 0x0401B08B RID: 110731
 		TextureIcon,
-		// Token: 0x040205BA RID: 132538
+		// Token: 0x0401B08C RID: 110732
 		TextDesc,
-		// Token: 0x040205BB RID: 132539
+		// Token: 0x0401B08D RID: 110733
 		ItemFinishPanel,
-		// Token: 0x040205BC RID: 132540
+		// Token: 0x0401B08E RID: 110734
 		TextUnFinish,
-		// Token: 0x040205BD RID: 132541
+		// Token: 0x0401B08F RID: 110735
 		TextureBg
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200007F RID: 127
+	// Token: 0x02000080 RID: 128
 	[NetMessage(EMessageId.ActiveDragonPoolRequest)]
 	public sealed class ActiveDragonPoolRequest : IMessage<ActiveDragonPoolRequest>, IMessage, IEquatable<ActiveDragonPoolRequest>, IDeepCloneable<ActiveDragonPoolRequest>, IBufferMessage
 	{
-		// Token: 0x060018A7 RID: 6311 RVA: 0x000406FB File Offset: 0x0003E8FB
+		// Token: 0x060018EA RID: 6378 RVA: 0x000410AB File Offset: 0x0003F2AB
 		[NullableContext(1)]
 		public static ActiveDragonPoolRequest Create()
 		{
 			return new ActiveDragonPoolRequest();
 		}
 
-		// Token: 0x17000213 RID: 531
-		// (get) Token: 0x060018A8 RID: 6312 RVA: 0x00040702 File Offset: 0x0003E902
+		// Token: 0x17000219 RID: 537
+		// (get) Token: 0x060018EB RID: 6379 RVA: 0x000410B2 File Offset: 0x0003F2B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000214 RID: 532
-		// (get) Token: 0x060018A9 RID: 6313 RVA: 0x00040705 File Offset: 0x0003E905
+		// Token: 0x1700021A RID: 538
+		// (get) Token: 0x060018EC RID: 6380 RVA: 0x000410B5 File Offset: 0x0003F2B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060018AA RID: 6314 RVA: 0x0004070C File Offset: 0x0003E90C
+		// Token: 0x060018ED RID: 6381 RVA: 0x000410BC File Offset: 0x0003F2BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActiveDragonPoolRequest()
 		{
 		}
 
-		// Token: 0x060018AB RID: 6315 RVA: 0x00040714 File Offset: 0x0003E914
+		// Token: 0x060018EE RID: 6382 RVA: 0x000410C4 File Offset: 0x0003F2C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActiveDragonPoolRequest(ActiveDragonPoolRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060018AC RID: 6316 RVA: 0x00040739 File Offset: 0x0003E939
+		// Token: 0x060018EF RID: 6383 RVA: 0x000410E9 File Offset: 0x0003F2E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActiveDragonPoolRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new ActiveDragonPoolRequest(this);
 		}
 
-		// Token: 0x17000215 RID: 533
-		// (get) Token: 0x060018AD RID: 6317 RVA: 0x00040741 File Offset: 0x0003E941
-		// (set) Token: 0x060018AE RID: 6318 RVA: 0x00040749 File Offset: 0x0003E949
+		// Token: 0x1700021B RID: 539
+		// (get) Token: 0x060018F0 RID: 6384 RVA: 0x000410F1 File Offset: 0x0003F2F1
+		// (set) Token: 0x060018F1 RID: 6385 RVA: 0x000410F9 File Offset: 0x0003F2F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DragonPoolId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060018AF RID: 6319 RVA: 0x00040752 File Offset: 0x0003E952
+		// Token: 0x060018F2 RID: 6386 RVA: 0x00041102 File Offset: 0x0003F302
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ActiveDragonPoolRequest);
 		}
 
-		// Token: 0x060018B0 RID: 6320 RVA: 0x00040760 File Offset: 0x0003E960
+		// Token: 0x060018F3 RID: 6387 RVA: 0x00041110 File Offset: 0x0003F310
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ActiveDragonPoolRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DragonPoolId == other.DragonPoolId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060018B1 RID: 6321 RVA: 0x00040790 File Offset: 0x0003E990
+		// Token: 0x060018F4 RID: 6388 RVA: 0x00041140 File Offset: 0x0003F340
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060018B2 RID: 6322 RVA: 0x000407CF File Offset: 0x0003E9CF
+		// Token: 0x060018F5 RID: 6389 RVA: 0x0004117F File Offset: 0x0003F37F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060018B3 RID: 6323 RVA: 0x000407DC File Offset: 0x0003E9DC
+		// Token: 0x060018F6 RID: 6390 RVA: 0x0004118C File Offset: 0x0003F38C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060018B4 RID: 6324 RVA: 0x000407E5 File Offset: 0x0003E9E5
+		// Token: 0x060018F7 RID: 6391 RVA: 0x00041195 File Offset: 0x0003F395
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.DragonPoolId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.DragonPoolId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060018B5 RID: 6325 RVA: 0x00040818 File Offset: 0x0003EA18
+		// Token: 0x060018F8 RID: 6392 RVA: 0x000411C8 File Offset: 0x0003F3C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060018B6 RID: 6326 RVA: 0x00040856 File Offset: 0x0003EA56
+		// Token: 0x060018F9 RID: 6393 RVA: 0x00041206 File Offset: 0x0003F406
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ActiveDragonPoolRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060018B7 RID: 6327 RVA: 0x00040887 File Offset: 0x0003EA87
+		// Token: 0x060018FA RID: 6394 RVA: 0x00041237 File Offset: 0x0003F437
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060018B8 RID: 6328 RVA: 0x00040890 File Offset: 0x0003EA90
+		// Token: 0x060018FB RID: 6395 RVA: 0x00041240 File Offset: 0x0003F440
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 72U)
+				if (num != 48U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400218C RID: 8588
+		// Token: 0x040021EB RID: 8683
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400218D RID: 8589
-		public const int DragonPoolIdFieldNumber = 9;
+		// Token: 0x040021EC RID: 8684
+		public const int DragonPoolIdFieldNumber = 6;
 
-		// Token: 0x0400218E RID: 8590
+		// Token: 0x040021ED RID: 8685
 		private int dragonPoolId_;
 	}
 }

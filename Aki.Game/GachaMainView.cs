@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C81 RID: 7297
+// Token: 0x02001140 RID: 4416
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaMainView : UiTickViewBase
 {
-	// Token: 0x0600DBFF RID: 56319 RVA: 0x0033392F File Offset: 0x00331B2F
+	// Token: 0x0600B015 RID: 45077 RVA: 0x0033ED8F File Offset: 0x0033CF8F
 	public GachaMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DC00 RID: 56320 RVA: 0x00333968 File Offset: 0x00331B68
+	// Token: 0x0600B016 RID: 45078 RVA: 0x0033EDC8 File Offset: 0x0033CFC8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -39,7 +38,7 @@ public class GachaMainView : UiTickViewBase
 		return <GetActorByPoolType>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC01 RID: 56321 RVA: 0x003339B4 File Offset: 0x00331BB4
+	// Token: 0x0600B017 RID: 45079 RVA: 0x0033EE14 File Offset: 0x0033D014
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -57,8 +56,8 @@ public class GachaMainView : UiTickViewBase
 		return <GetSpineActorByResourceId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170011E4 RID: 4580
-	// (get) Token: 0x0600DC02 RID: 56322 RVA: 0x00333A07 File Offset: 0x00331C07
+	// Token: 0x1700120A RID: 4618
+	// (get) Token: 0x0600B018 RID: 45080 RVA: 0x0033EE67 File Offset: 0x0033D067
 	private new int? OpenParam
 	{
 		get
@@ -67,8 +66,8 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x170011E5 RID: 4581
-	// (get) Token: 0x0600DC03 RID: 56323 RVA: 0x00333A19 File Offset: 0x00331C19
+	// Token: 0x1700120B RID: 4619
+	// (get) Token: 0x0600B019 RID: 45081 RVA: 0x0033EE79 File Offset: 0x0033D079
 	private ProtoGachaInfo CurGachaInfo
 	{
 		get
@@ -77,8 +76,8 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x170011E6 RID: 4582
-	// (get) Token: 0x0600DC04 RID: 56324 RVA: 0x00333A26 File Offset: 0x00331C26
+	// Token: 0x1700120C RID: 4620
+	// (get) Token: 0x0600B01A RID: 45082 RVA: 0x0033EE86 File Offset: 0x0033D086
 	private int CurShowPoolId
 	{
 		get
@@ -87,8 +86,8 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x170011E7 RID: 4583
-	// (get) Token: 0x0600DC05 RID: 56325 RVA: 0x00333A38 File Offset: 0x00331C38
+	// Token: 0x1700120D RID: 4621
+	// (get) Token: 0x0600B01B RID: 45083 RVA: 0x0033EE98 File Offset: 0x0033D098
 	private ProtoGachaPoolInfo CurShowPoolInfo
 	{
 		get
@@ -97,8 +96,8 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x170011E8 RID: 4584
-	// (get) Token: 0x0600DC06 RID: 56326 RVA: 0x00333A48 File Offset: 0x00331C48
+	// Token: 0x1700120E RID: 4622
+	// (get) Token: 0x0600B01C RID: 45084 RVA: 0x0033EEA8 File Offset: 0x0033D0A8
 	[Nullable(2)]
 	private GachaPoolData CurGachaPoolData
 	{
@@ -114,8 +113,8 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x170011E9 RID: 4585
-	// (get) Token: 0x0600DC07 RID: 56327 RVA: 0x00333A87 File Offset: 0x00331C87
+	// Token: 0x1700120F RID: 4623
+	// (get) Token: 0x0600B01D RID: 45085 RVA: 0x0033EEE7 File Offset: 0x0033D0E7
 	private bool IsLock
 	{
 		get
@@ -124,13 +123,13 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC08 RID: 56328 RVA: 0x00333A8F File Offset: 0x00331C8F
+	// Token: 0x0600B01E RID: 45086 RVA: 0x0033EEEF File Offset: 0x0033D0EF
 	private void Lock()
 	{
 		this.Operating = true;
 	}
 
-	// Token: 0x0600DC09 RID: 56329 RVA: 0x00333A98 File Offset: 0x00331C98
+	// Token: 0x0600B01F RID: 45087 RVA: 0x0033EEF8 File Offset: 0x0033D0F8
 	private void Unlock()
 	{
 		this.Operating = false;
@@ -159,7 +158,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC0A RID: 56330 RVA: 0x00333B0C File Offset: 0x00331D0C
+	// Token: 0x0600B020 RID: 45088 RVA: 0x0033EF6C File Offset: 0x0033D16C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.ItemExChangeResponse, new Action<int, int>(this.OnItemExChangeResponse));
@@ -171,7 +170,7 @@ public class GachaMainView : UiTickViewBase
 		EventSystem.Instance.Add<int>(EEventName.GachaAccumulateRewardClaimed, new Action<int>(this.OnGachaAccumulateRewardClaimed));
 	}
 
-	// Token: 0x0600DC0B RID: 56331 RVA: 0x00333BE0 File Offset: 0x00331DE0
+	// Token: 0x0600B021 RID: 45089 RVA: 0x0033F040 File Offset: 0x0033D240
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ItemExChangeResponse, new Action<int, int>(this.OnItemExChangeResponse));
@@ -183,7 +182,7 @@ public class GachaMainView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.GachaAccumulateRewardClaimed, new Action<int>(this.OnGachaAccumulateRewardClaimed));
 	}
 
-	// Token: 0x0600DC0C RID: 56332 RVA: 0x00333CB4 File Offset: 0x00331EB4
+	// Token: 0x0600B022 RID: 45090 RVA: 0x0033F114 File Offset: 0x0033D314
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 35;
@@ -278,7 +277,7 @@ public class GachaMainView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DC0D RID: 56333 RVA: 0x00334243 File Offset: 0x00332443
+	// Token: 0x0600B023 RID: 45091 RVA: 0x0033F6A3 File Offset: 0x0033D8A3
 	protected override void OnStart()
 	{
 		this.CountDownTimerHandle = TimerSystem.Instance.Forever(new TTimerAction(this.OnCountDown), 1000f, 1f, null, null, true);
@@ -290,7 +289,7 @@ public class GachaMainView : UiTickViewBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600DC0E RID: 56334 RVA: 0x00334284 File Offset: 0x00332484
+	// Token: 0x0600B024 RID: 45092 RVA: 0x0033F6E4 File Offset: 0x0033D8E4
 	private void OnCountDown(float delta)
 	{
 		ProtoGachaInfo curGachaInfo = this.CurGachaInfo;
@@ -309,7 +308,7 @@ public class GachaMainView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), "Text_GachaRemainingTime_Text", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText));
 	}
 
-	// Token: 0x0600DC0F RID: 56335 RVA: 0x003342F5 File Offset: 0x003324F5
+	// Token: 0x0600B025 RID: 45093 RVA: 0x0033F755 File Offset: 0x0033D955
 	private void OnPlaySequenceEventByStringParam(string name)
 	{
 		if (name != "ListAni")
@@ -319,7 +318,7 @@ public class GachaMainView : UiTickViewBase
 		base.GetUiInturnAnimController(30).Play("", -1, false);
 	}
 
-	// Token: 0x0600DC10 RID: 56336 RVA: 0x0033431C File Offset: 0x0033251C
+	// Token: 0x0600B026 RID: 45094 RVA: 0x0033F77C File Offset: 0x0033D97C
 	private void OnCrossDay()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.GachaRefresh);
@@ -330,7 +329,7 @@ public class GachaMainView : UiTickViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600DC11 RID: 56337 RVA: 0x00334368 File Offset: 0x00332568
+	// Token: 0x0600B027 RID: 45095 RVA: 0x0033F7C8 File Offset: 0x0033D9C8
 	private void OnHelpBtnClick()
 	{
 		if (this.CurGachaInfo == null)
@@ -350,7 +349,7 @@ public class GachaMainView : UiTickViewBase
 		LogReportController.Instance.LogReport(onClickGachaOperationLogEvent);
 	}
 
-	// Token: 0x0600DC12 RID: 56338 RVA: 0x00334410 File Offset: 0x00332610
+	// Token: 0x0600B028 RID: 45096 RVA: 0x0033F870 File Offset: 0x0033DA70
 	private void OnShopBtnClick()
 	{
 		int gachaJumpShopTabId = CommonConfig.Instance.GetGachaJumpShopTabId();
@@ -361,7 +360,7 @@ public class GachaMainView : UiTickViewBase
 		LogReportController.Instance.LogReport(onClickGachaOperationLogEvent);
 	}
 
-	// Token: 0x0600DC13 RID: 56339 RVA: 0x00334460 File Offset: 0x00332660
+	// Token: 0x0600B029 RID: 45097 RVA: 0x0033F8C0 File Offset: 0x0033DAC0
 	private void OnRecordBtnClick()
 	{
 		GachaRecordClickLogEvent logData = new GachaRecordClickLogEvent();
@@ -426,13 +425,13 @@ public class GachaMainView : UiTickViewBase
 		LogReportController.Instance.LogReport(onClickGachaOperationLogEvent);
 	}
 
-	// Token: 0x0600DC14 RID: 56340 RVA: 0x00334656 File Offset: 0x00332856
+	// Token: 0x0600B02A RID: 45098 RVA: 0x0033FAB6 File Offset: 0x0033DCB6
 	private void OnBackBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600DC15 RID: 56341 RVA: 0x00334660 File Offset: 0x00332860
+	// Token: 0x0600B02B RID: 45099 RVA: 0x0033FAC0 File Offset: 0x0033DCC0
 	private void OnPreviewBtnClick()
 	{
 		GachaViewInfo? gachaViewInfo = GachaConfig.Instance.GetGachaViewInfo(this.CurShowPoolId);
@@ -442,7 +441,27 @@ public class GachaMainView : UiTickViewBase
 		}
 		int type = gachaViewInfo.Value.Type;
 		int[] previewIdList = this.CurShowPoolInfo.PreviewIdList;
-		if (GachaConfig.Instance.GetGachaRolePreviewTypeList().Contains(type))
+		IReadOnlyList<int> gachaRolePreviewTypeList = GachaConfig.Instance.GetGachaRolePreviewTypeList();
+		bool flag = false;
+		for (int i = 0; i < gachaRolePreviewTypeList.Count; i++)
+		{
+			if (gachaRolePreviewTypeList[i] == type)
+			{
+				flag = true;
+				break;
+			}
+		}
+		IReadOnlyList<int> gachaWeaponPreviewTypeList = GachaConfig.Instance.GetGachaWeaponPreviewTypeList();
+		bool flag2 = false;
+		for (int j = 0; j < gachaWeaponPreviewTypeList.Count; j++)
+		{
+			if (gachaWeaponPreviewTypeList[j] == type)
+			{
+				flag2 = true;
+				break;
+			}
+		}
+		if (flag)
 		{
 			List<int> list = new List<int>();
 			foreach (int itemId in previewIdList)
@@ -451,7 +470,7 @@ public class GachaMainView : UiTickViewBase
 			}
 			RoleController.Instance.OpenRoleMainView(ERoleAgentType.Preview, 0, list, null, null);
 		}
-		else if (GachaConfig.Instance.GetGachaWeaponPreviewTypeList().Contains(type))
+		else if (flag2)
 		{
 			List<WeaponTrialData> list2 = new List<WeaponTrialData>();
 			foreach (int itemId2 in previewIdList)
@@ -474,13 +493,13 @@ public class GachaMainView : UiTickViewBase
 		LogReportController.Instance.LogReport(onClickGachaOperationLogEvent);
 	}
 
-	// Token: 0x0600DC16 RID: 56342 RVA: 0x003347E7 File Offset: 0x003329E7
+	// Token: 0x0600B02C RID: 45100 RVA: 0x0033FC98 File Offset: 0x0033DE98
 	private void OnClickSelectPoolButton(int _)
 	{
 		this.OnChangeBtnClick();
 	}
 
-	// Token: 0x0600DC17 RID: 56343 RVA: 0x003347F0 File Offset: 0x003329F0
+	// Token: 0x0600B02D RID: 45101 RVA: 0x0033FCA0 File Offset: 0x0033DEA0
 	private void OnChangeBtnClick()
 	{
 		ProtoGachaInfo curGachaInfo = this.CurGachaInfo;
@@ -491,7 +510,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC18 RID: 56344 RVA: 0x00334818 File Offset: 0x00332A18
+	// Token: 0x0600B02E RID: 45102 RVA: 0x0033FCC8 File Offset: 0x0033DEC8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GachaMainView.<OnBeforeStartAsync>d__55 <OnBeforeStartAsync>d__;
@@ -502,7 +521,7 @@ public class GachaMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC19 RID: 56345 RVA: 0x0033485C File Offset: 0x00332A5C
+	// Token: 0x0600B02F RID: 45103 RVA: 0x0033FD0C File Offset: 0x0033DF0C
 	protected override void OnBeforeShow()
 	{
 		if (!this.IsViewFirstShow)
@@ -525,7 +544,7 @@ public class GachaMainView : UiTickViewBase
 		curPoolItem.PlayStartSeq();
 	}
 
-	// Token: 0x0600DC1A RID: 56346 RVA: 0x003348C6 File Offset: 0x00332AC6
+	// Token: 0x0600B030 RID: 45104 RVA: 0x0033FD76 File Offset: 0x0033DF76
 	protected override void OnTick(float delta)
 	{
 		if (Time.Instance.ServerTimeStamp - this.LastRefreshTime >= 300000.0)
@@ -535,7 +554,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC1B RID: 56347 RVA: 0x00334900 File Offset: 0x00332B00
+	// Token: 0x0600B031 RID: 45105 RVA: 0x0033FDB0 File Offset: 0x0033DFB0
 	public void RefreshLeftTime()
 	{
 		ProtoGachaInfo curGachaInfo = this.CurGachaInfo;
@@ -568,20 +587,20 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC1C RID: 56348 RVA: 0x003349D9 File Offset: 0x00332BD9
+	// Token: 0x0600B032 RID: 45106 RVA: 0x0033FE89 File Offset: 0x0033E089
 	private void RefreshGachaMainView()
 	{
 		this.RefreshGachaTag();
 		this.RefreshGachaBtn();
 	}
 
-	// Token: 0x0600DC1D RID: 56349 RVA: 0x003349E7 File Offset: 0x00332BE7
+	// Token: 0x0600B033 RID: 45107 RVA: 0x0033FE97 File Offset: 0x0033E097
 	private void OnItemExChangeResponse(int i, int i1)
 	{
 		this.RefreshGachaInfo();
 	}
 
-	// Token: 0x0600DC1E RID: 56350 RVA: 0x003349F0 File Offset: 0x00332BF0
+	// Token: 0x0600B034 RID: 45108 RVA: 0x0033FEA0 File Offset: 0x0033E0A0
 	private void RefreshGachaInfo()
 	{
 		if (this.IsLock)
@@ -594,7 +613,7 @@ public class GachaMainView : UiTickViewBase
 		this.RefreshGachaInfoAsync(false).ContinueWith(new Action(this.Unlock)).Forget();
 	}
 
-	// Token: 0x0600DC1F RID: 56351 RVA: 0x00334A40 File Offset: 0x00332C40
+	// Token: 0x0600B035 RID: 45109 RVA: 0x0033FEF0 File Offset: 0x0033E0F0
 	private UniTask RefreshGachaInfoAsync(bool gachaAccumulateAnimate = true)
 	{
 		GachaMainView.<RefreshGachaInfoAsync>d__62 <RefreshGachaInfoAsync>d__;
@@ -606,7 +625,7 @@ public class GachaMainView : UiTickViewBase
 		return <RefreshGachaInfoAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC20 RID: 56352 RVA: 0x00334A8C File Offset: 0x00332C8C
+	// Token: 0x0600B036 RID: 45110 RVA: 0x0033FF3C File Offset: 0x0033E13C
 	private UniTask RefreshGachaAccumulateBtn(bool needAnimate = true)
 	{
 		GachaMainView.<RefreshGachaAccumulateBtn>d__63 <RefreshGachaAccumulateBtn>d__;
@@ -618,7 +637,7 @@ public class GachaMainView : UiTickViewBase
 		return <RefreshGachaAccumulateBtn>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC21 RID: 56353 RVA: 0x00334AD8 File Offset: 0x00332CD8
+	// Token: 0x0600B037 RID: 45111 RVA: 0x0033FF88 File Offset: 0x0033E188
 	private void AutoOpenGachaAccumulateTips()
 	{
 		int gachaAccumulateId = this.CurGachaInfo.GachaAccumulateId;
@@ -633,7 +652,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC22 RID: 56354 RVA: 0x00334B24 File Offset: 0x00332D24
+	// Token: 0x0600B038 RID: 45112 RVA: 0x0033FFD4 File Offset: 0x0033E1D4
 	private void OnGachaAccumulateRewardClaimed(int accumulateId)
 	{
 		this.RefreshGachaAccumulateBtn(false).Forget();
@@ -649,7 +668,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC23 RID: 56355 RVA: 0x00334BA4 File Offset: 0x00332DA4
+	// Token: 0x0600B039 RID: 45113 RVA: 0x00340054 File Offset: 0x0033E254
 	private void OnGachaPoolSelectResponse(int _1, int _2)
 	{
 		int selectedGridIndex = this.GachaTagScrollView.GetGenericLayout().GetSelectedGridIndex();
@@ -677,7 +696,7 @@ public class GachaMainView : UiTickViewBase
 		this.PlaySwitchAnim();
 	}
 
-	// Token: 0x0600DC24 RID: 56356 RVA: 0x00334C38 File Offset: 0x00332E38
+	// Token: 0x0600B03A RID: 45114 RVA: 0x003400E8 File Offset: 0x0033E2E8
 	private UniTask RefreshCurrency()
 	{
 		GachaMainView.<RefreshCurrency>d__67 <RefreshCurrency>d__;
@@ -688,7 +707,7 @@ public class GachaMainView : UiTickViewBase
 		return <RefreshCurrency>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC25 RID: 56357 RVA: 0x00334C7C File Offset: 0x00332E7C
+	// Token: 0x0600B03B RID: 45115 RVA: 0x0034012C File Offset: 0x0033E32C
 	private void RefreshGachaBtn()
 	{
 		if (this.CurGachaPoolData == null)
@@ -745,7 +764,7 @@ public class GachaMainView : UiTickViewBase
 		this.RefreshDiscountList().Forget();
 	}
 
-	// Token: 0x0600DC26 RID: 56358 RVA: 0x00334E38 File Offset: 0x00333038
+	// Token: 0x0600B03C RID: 45116 RVA: 0x003402E8 File Offset: 0x0033E4E8
 	private void RefreshSelectBtnTag(bool isShowSelectPoolButton)
 	{
 		UUIItem item = base.GetItem(34);
@@ -778,7 +797,7 @@ public class GachaMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600DC27 RID: 56359 RVA: 0x00334F24 File Offset: 0x00333124
+	// Token: 0x0600B03D RID: 45117 RVA: 0x003403D4 File Offset: 0x0033E5D4
 	private UniTask RefreshDiscountList()
 	{
 		GachaMainView.<RefreshDiscountList>d__70 <RefreshDiscountList>d__;
@@ -789,7 +808,7 @@ public class GachaMainView : UiTickViewBase
 		return <RefreshDiscountList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC28 RID: 56360 RVA: 0x00334F68 File Offset: 0x00333168
+	// Token: 0x0600B03E RID: 45118 RVA: 0x00340418 File Offset: 0x0033E618
 	private UniTask EnsureDiscountItems(int count)
 	{
 		GachaMainView.<EnsureDiscountItems>d__71 <EnsureDiscountItems>d__;
@@ -801,7 +820,7 @@ public class GachaMainView : UiTickViewBase
 		return <EnsureDiscountItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC29 RID: 56361 RVA: 0x00334FB4 File Offset: 0x003331B4
+	// Token: 0x0600B03F RID: 45119 RVA: 0x00340464 File Offset: 0x0033E664
 	private void RefreshTimesText()
 	{
 		List<TableTextArgNew> list = new List<TableTextArgNew>();
@@ -838,10 +857,10 @@ public class GachaMainView : UiTickViewBase
 			}));
 			list.Add(item3);
 		}
-		this.TimesTextLayout.RefreshByData(list.ToList<TableTextArgNew>(), null, false);
+		this.TimesTextLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600DC2A RID: 56362 RVA: 0x003350E0 File Offset: 0x003332E0
+	// Token: 0x0600B040 RID: 45120 RVA: 0x0034058C File Offset: 0x0033E78C
 	private void AfterOpenCommonWeaponSelectView()
 	{
 		ProtoGachaPoolInfo curShowPoolInfo = this.CurShowPoolInfo;
@@ -864,7 +883,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC2B RID: 56363 RVA: 0x00335168 File Offset: 0x00333368
+	// Token: 0x0600B041 RID: 45121 RVA: 0x00340614 File Offset: 0x0033E814
 	private UniTask InitBackGroundItem()
 	{
 		GachaMainView.<InitBackGroundItem>d__74 <InitBackGroundItem>d__;
@@ -875,7 +894,7 @@ public class GachaMainView : UiTickViewBase
 		return <InitBackGroundItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC2C RID: 56364 RVA: 0x003351AC File Offset: 0x003333AC
+	// Token: 0x0600B042 RID: 45122 RVA: 0x00340658 File Offset: 0x0033E858
 	private UniTask InitSpineBackgroundItem(string resourceId)
 	{
 		GachaMainView.<InitSpineBackgroundItem>d__75 <InitSpineBackgroundItem>d__;
@@ -887,7 +906,7 @@ public class GachaMainView : UiTickViewBase
 		return <InitSpineBackgroundItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC2D RID: 56365 RVA: 0x003351F8 File Offset: 0x003333F8
+	// Token: 0x0600B043 RID: 45123 RVA: 0x003406A4 File Offset: 0x0033E8A4
 	private void PlaySwitchAnim()
 	{
 		GachaPoolItem curPoolItem = this.CurPoolItem;
@@ -911,7 +930,7 @@ public class GachaMainView : UiTickViewBase
 		curPoolItem2.PlaySwitchSeq();
 	}
 
-	// Token: 0x0600DC2E RID: 56366 RVA: 0x00335268 File Offset: 0x00333468
+	// Token: 0x0600B044 RID: 45124 RVA: 0x00340714 File Offset: 0x0033E914
 	private void RefreshDetail()
 	{
 		ProtoGachaInfo curGachaInfo = this.CurGachaInfo;
@@ -958,7 +977,7 @@ public class GachaMainView : UiTickViewBase
 			GenericLayout<GachaSmallItemGrid, int> upItemLayout = this.UpItemLayout;
 			if (upItemLayout != null)
 			{
-				upItemLayout.RefreshByData(upList.ToList<int>(), null, false);
+				upItemLayout.RefreshByData(upList, null, false);
 			}
 			string textStringId = flag ? "Text_GachaUpList1_Text" : "Text_GachaUpList2_Text";
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(16), textStringId, Array.Empty<object>());
@@ -1013,7 +1032,7 @@ public class GachaMainView : UiTickViewBase
 		scrollViewWithScrollbar.SetScrollProgress(0f);
 	}
 
-	// Token: 0x0600DC2F RID: 56367 RVA: 0x00335530 File Offset: 0x00333730
+	// Token: 0x0600B045 RID: 45125 RVA: 0x003409D8 File Offset: 0x0033EBD8
 	private void RefreshGachaTag()
 	{
 		if (this.IsLock)
@@ -1026,7 +1045,7 @@ public class GachaMainView : UiTickViewBase
 		this.RefreshGachaTagAsync().ContinueWith(new Action(this.Unlock)).Forget();
 	}
 
-	// Token: 0x0600DC30 RID: 56368 RVA: 0x0033557C File Offset: 0x0033377C
+	// Token: 0x0600B046 RID: 45126 RVA: 0x00340A24 File Offset: 0x0033EC24
 	private UniTask RefreshGachaTagAsync()
 	{
 		GachaMainView.<RefreshGachaTagAsync>d__79 <RefreshGachaTagAsync>d__;
@@ -1037,7 +1056,7 @@ public class GachaMainView : UiTickViewBase
 		return <RefreshGachaTagAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC31 RID: 56369 RVA: 0x003355BF File Offset: 0x003337BF
+	// Token: 0x0600B047 RID: 45127 RVA: 0x00340A67 File Offset: 0x0033EC67
 	private GachaTagItem CreateGachaTagItem()
 	{
 		return new GachaTagItem
@@ -1047,19 +1066,19 @@ public class GachaMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600DC32 RID: 56370 RVA: 0x003355EA File Offset: 0x003337EA
+	// Token: 0x0600B048 RID: 45128 RVA: 0x00340A92 File Offset: 0x0033EC92
 	private CommonTextItem InitTimesTextItem()
 	{
 		return new CommonTextItem();
 	}
 
-	// Token: 0x0600DC33 RID: 56371 RVA: 0x003355F1 File Offset: 0x003337F1
+	// Token: 0x0600B049 RID: 45129 RVA: 0x00340A99 File Offset: 0x0033EC99
 	private GachaSmallItemGrid InitUpItem()
 	{
 		return new GachaSmallItemGrid();
 	}
 
-	// Token: 0x0600DC34 RID: 56372 RVA: 0x003355F8 File Offset: 0x003337F8
+	// Token: 0x0600B04A RID: 45130 RVA: 0x00340AA0 File Offset: 0x0033ECA0
 	private void SelectGachaTagByIndex(int gridIndex)
 	{
 		if (this.IsLock)
@@ -1072,7 +1091,7 @@ public class GachaMainView : UiTickViewBase
 		this.SelectGachaTagByIndexAsync(gridIndex).ContinueWith(new Action(this.Unlock)).Forget();
 	}
 
-	// Token: 0x0600DC35 RID: 56373 RVA: 0x0033564C File Offset: 0x0033384C
+	// Token: 0x0600B04B RID: 45131 RVA: 0x00340AF4 File Offset: 0x0033ECF4
 	private UniTask SelectGachaTagByIndexAsync(int gridIndex)
 	{
 		GachaMainView.<SelectGachaTagByIndexAsync>d__84 <SelectGachaTagByIndexAsync>d__;
@@ -1084,7 +1103,7 @@ public class GachaMainView : UiTickViewBase
 		return <SelectGachaTagByIndexAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC36 RID: 56374 RVA: 0x00335698 File Offset: 0x00333898
+	// Token: 0x0600B04C RID: 45132 RVA: 0x00340B40 File Offset: 0x0033ED40
 	private bool CanToggleChange(int gridIndex)
 	{
 		GenericScrollViewNew<GachaTagItem, GachaPoolData> gachaTagScrollView = this.GachaTagScrollView;
@@ -1102,7 +1121,7 @@ public class GachaMainView : UiTickViewBase
 		return !(gridIndex == num2.GetValueOrDefault() & num2 != null);
 	}
 
-	// Token: 0x0600DC37 RID: 56375 RVA: 0x003356F0 File Offset: 0x003338F0
+	// Token: 0x0600B04D RID: 45133 RVA: 0x00340B98 File Offset: 0x0033ED98
 	private void OpenExChangeTokenView(int _)
 	{
 		ProtoGachaInfo curGachaInfo = this.CurGachaInfo;
@@ -1124,13 +1143,13 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC38 RID: 56376 RVA: 0x00335765 File Offset: 0x00333965
+	// Token: 0x0600B04E RID: 45134 RVA: 0x00340C0D File Offset: 0x0033EE0D
 	private void OnPrimaryCurrencyClick(int _)
 	{
 		PayShopController.Instance.OpenPayShopViewToRecharge();
 	}
 
-	// Token: 0x0600DC39 RID: 56377 RVA: 0x00335774 File Offset: 0x00333974
+	// Token: 0x0600B04F RID: 45135 RVA: 0x00340C1C File Offset: 0x0033EE1C
 	private void OpenExChangeSecondCurrencyView(int _)
 	{
 		int? num = GachaConfig.Instance.SecondCurrency();
@@ -1169,7 +1188,7 @@ public class GachaMainView : UiTickViewBase
 		ItemExchangeController.Instance.OpenExchangeViewByData(exchangeData);
 	}
 
-	// Token: 0x0600DC3A RID: 56378 RVA: 0x003357E2 File Offset: 0x003339E2
+	// Token: 0x0600B050 RID: 45136 RVA: 0x00340C8A File Offset: 0x0033EE8A
 	protected override void OnAfterHide()
 	{
 		if (this.TimerHandle != null)
@@ -1179,7 +1198,7 @@ public class GachaMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600DC3B RID: 56379 RVA: 0x00335804 File Offset: 0x00333A04
+	// Token: 0x0600B051 RID: 45137 RVA: 0x00340CAC File Offset: 0x0033EEAC
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CountDownTimerHandle != null)
@@ -1195,7 +1214,7 @@ public class GachaMainView : UiTickViewBase
 		captionItem.Destroy(null);
 	}
 
-	// Token: 0x0600DC3C RID: 56380 RVA: 0x00335838 File Offset: 0x00333A38
+	// Token: 0x0600B052 RID: 45138 RVA: 0x00340CE0 File Offset: 0x0033EEE0
 	public bool SelectGachaTagById(int gachaId)
 	{
 		int num = Array.FindIndex<GachaPoolData>(this.TagDataList, (GachaPoolData data) => data.GachaInfo.Id == gachaId);
@@ -1207,7 +1226,7 @@ public class GachaMainView : UiTickViewBase
 		return false;
 	}
 
-	// Token: 0x0600DC3D RID: 56381 RVA: 0x00335884 File Offset: 0x00333A84
+	// Token: 0x0600B053 RID: 45139 RVA: 0x00340D2C File Offset: 0x0033EF2C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1234,17 +1253,17 @@ public class GachaMainView : UiTickViewBase
 		return null;
 	}
 
-	// Token: 0x040064F6 RID: 25846
+	// Token: 0x040065C8 RID: 26056
 	[Nullable(2)]
 	private GachaAccumulateTipsItem GachaAccumulateTipsItem;
 
-	// Token: 0x040064F7 RID: 25847
+	// Token: 0x040065C9 RID: 26057
 	private readonly Dictionary<GachaDefine.EGachaViewType, GachaPoolItem> GachaPoolItemMap = new Dictionary<GachaDefine.EGachaViewType, GachaPoolItem>();
 
-	// Token: 0x040064F8 RID: 25848
+	// Token: 0x040065CA RID: 26058
 	private readonly Dictionary<int, GachaPoolItem> SpineGachaPoolItemMap = new Dictionary<int, GachaPoolItem>();
 
-	// Token: 0x040064F9 RID: 25849
+	// Token: 0x040065CB RID: 26059
 	[Nullable(new byte[]
 	{
 		2,
@@ -1253,7 +1272,7 @@ public class GachaMainView : UiTickViewBase
 	})]
 	private GenericScrollViewNew<GachaTagItem, GachaPoolData> GachaTagScrollView;
 
-	// Token: 0x040064FA RID: 25850
+	// Token: 0x040065CC RID: 26060
 	[Nullable(new byte[]
 	{
 		2,
@@ -1261,7 +1280,7 @@ public class GachaMainView : UiTickViewBase
 	})]
 	private GachaPoolData[] TagDataList;
 
-	// Token: 0x040064FB RID: 25851
+	// Token: 0x040065CD RID: 26061
 	[Nullable(new byte[]
 	{
 		2,
@@ -1270,7 +1289,7 @@ public class GachaMainView : UiTickViewBase
 	})]
 	private GenericLayout<CommonTextItem, TableTextArgNew> TimesTextLayout;
 
-	// Token: 0x040064FC RID: 25852
+	// Token: 0x040065CE RID: 26062
 	[Nullable(new byte[]
 	{
 		2,
@@ -1278,161 +1297,161 @@ public class GachaMainView : UiTickViewBase
 	})]
 	private GenericLayout<GachaSmallItemGrid, int> UpItemLayout;
 
-	// Token: 0x040064FD RID: 25853
+	// Token: 0x040065CF RID: 26063
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040064FE RID: 25854
+	// Token: 0x040065D0 RID: 26064
 	[Nullable(2)]
 	private GachaButton GachaBtn1;
 
-	// Token: 0x040064FF RID: 25855
+	// Token: 0x040065D1 RID: 26065
 	[Nullable(2)]
 	private GachaButton GachaBtn10;
 
-	// Token: 0x04006500 RID: 25856
+	// Token: 0x040065D2 RID: 26066
 	[Nullable(2)]
 	private ButtonItem SelectPoolButton;
 
-	// Token: 0x04006501 RID: 25857
+	// Token: 0x040065D3 RID: 26067
 	[Nullable(2)]
 	private GachaDiscountTagItem SelectBtnTagItemA;
 
-	// Token: 0x04006502 RID: 25858
+	// Token: 0x040065D4 RID: 26068
 	[Nullable(2)]
 	private GachaDiscountTagItem SelectBtnTagItemB;
 
-	// Token: 0x04006503 RID: 25859
+	// Token: 0x040065D5 RID: 26069
 	private readonly List<GachaDiscountTimesItem> DiscountItems = new List<GachaDiscountTimesItem>();
 
-	// Token: 0x04006504 RID: 25860
+	// Token: 0x040065D6 RID: 26070
 	[Nullable(2)]
 	private GachaPoolItem CurPoolItem;
 
-	// Token: 0x04006505 RID: 25861
+	// Token: 0x040065D7 RID: 26071
 	private bool IsViewFirstShow;
 
-	// Token: 0x04006506 RID: 25862
+	// Token: 0x040065D8 RID: 26072
 	private double LastRefreshTime;
 
-	// Token: 0x04006507 RID: 25863
+	// Token: 0x040065D9 RID: 26073
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04006508 RID: 25864
+	// Token: 0x040065DA RID: 26074
 	[Nullable(2)]
 	private TimerHandle CountDownTimerHandle;
 
-	// Token: 0x04006509 RID: 25865
+	// Token: 0x040065DB RID: 26075
 	private readonly Queue<GachaMainView.OperationParam> GachaOperationQueue = new Queue<GachaMainView.OperationParam>(4);
 
-	// Token: 0x0400650A RID: 25866
+	// Token: 0x040065DC RID: 26076
 	private bool Operating;
 
-	// Token: 0x02008243 RID: 33347
+	// Token: 0x020073CC RID: 29644
 	[NullableContext(0)]
 	private enum EOperationType
 	{
-		// Token: 0x0402A7FD RID: 174077
+		// Token: 0x04025B23 RID: 154403
 		RefreshGachaTag,
-		// Token: 0x0402A7FE RID: 174078
+		// Token: 0x04025B24 RID: 154404
 		RefreshGachaInfo,
-		// Token: 0x0402A7FF RID: 174079
+		// Token: 0x04025B25 RID: 154405
 		SelectGachaTagByIndex
 	}
 
-	// Token: 0x02008244 RID: 33348
+	// Token: 0x020073CD RID: 29645
 	[NullableContext(2)]
 	[Nullable(0)]
 	private class OperationParam
 	{
-		// Token: 0x0604A2A3 RID: 303779 RVA: 0x0134700A File Offset: 0x0134520A
+		// Token: 0x060406A6 RID: 263846 RVA: 0x012EA48E File Offset: 0x012E868E
 		public OperationParam(GachaMainView.EOperationType operationType, object param = null)
 		{
 			this.OperationType = operationType;
 			this.Param = param;
 		}
 
-		// Token: 0x0402A800 RID: 174080
+		// Token: 0x04025B26 RID: 154406
 		public GachaMainView.EOperationType OperationType;
 
-		// Token: 0x0402A801 RID: 174081
+		// Token: 0x04025B27 RID: 154407
 		public object Param;
 	}
 
-	// Token: 0x02008245 RID: 33349
+	// Token: 0x020073CE RID: 29646
 	[NullableContext(0)]
 	private enum EGachaMainCom
 	{
-		// Token: 0x0402A803 RID: 174083
+		// Token: 0x04025B29 RID: 154409
 		CaptionItem,
-		// Token: 0x0402A804 RID: 174084
+		// Token: 0x04025B2A RID: 154410
 		ShopBtn,
-		// Token: 0x0402A805 RID: 174085
+		// Token: 0x04025B2B RID: 154411
 		PreviewBtn,
-		// Token: 0x0402A806 RID: 174086
+		// Token: 0x04025B2C RID: 154412
 		HelpBtn,
-		// Token: 0x0402A807 RID: 174087
+		// Token: 0x04025B2D RID: 154413
 		RecordBtn,
-		// Token: 0x0402A808 RID: 174088
+		// Token: 0x04025B2E RID: 154414
 		GachaBtnItem1,
-		// Token: 0x0402A809 RID: 174089
+		// Token: 0x04025B2F RID: 154415
 		GachaBtnItem10,
-		// Token: 0x0402A80A RID: 174090
+		// Token: 0x04025B30 RID: 154416
 		GachaPoolParentItem,
-		// Token: 0x0402A80B RID: 174091
+		// Token: 0x04025B31 RID: 154417
 		GachaPoolScrollView,
-		// Token: 0x0402A80C RID: 174092
+		// Token: 0x04025B32 RID: 154418
 		TypeText,
-		// Token: 0x0402A80D RID: 174093
+		// Token: 0x04025B33 RID: 154419
 		TitleText,
-		// Token: 0x0402A80E RID: 174094
+		// Token: 0x04025B34 RID: 154420
 		DateItem,
-		// Token: 0x0402A80F RID: 174095
+		// Token: 0x04025B35 RID: 154421
 		DateText,
-		// Token: 0x0402A810 RID: 174096
+		// Token: 0x04025B36 RID: 154422
 		DetailText,
-		// Token: 0x0402A811 RID: 174097
+		// Token: 0x04025B37 RID: 154423
 		TimesTextLayout,
-		// Token: 0x0402A812 RID: 174098
+		// Token: 0x04025B38 RID: 154424
 		UpItemRootItem,
-		// Token: 0x0402A813 RID: 174099
+		// Token: 0x04025B39 RID: 154425
 		UpItemTipText,
-		// Token: 0x0402A814 RID: 174100
+		// Token: 0x04025B3A RID: 154426
 		UpItemLayout,
-		// Token: 0x0402A815 RID: 174101
+		// Token: 0x04025B3B RID: 154427
 		ChangeBtn,
-		// Token: 0x0402A816 RID: 174102
+		// Token: 0x04025B3C RID: 154428
 		BgTexture,
-		// Token: 0x0402A817 RID: 174103
+		// Token: 0x04025B3D RID: 154429
 		ThemeTextMaskTexture,
-		// Token: 0x0402A818 RID: 174104
+		// Token: 0x04025B3E RID: 154430
 		RoleBgTexture,
-		// Token: 0x0402A819 RID: 174105
+		// Token: 0x04025B3F RID: 154431
 		SelectTipsItem,
-		// Token: 0x0402A81A RID: 174106
+		// Token: 0x04025B40 RID: 154432
 		SelectPoolButton,
-		// Token: 0x0402A81B RID: 174107
+		// Token: 0x04025B41 RID: 154433
 		TxtTips,
-		// Token: 0x0402A81C RID: 174108
+		// Token: 0x04025B42 RID: 154434
 		GuaranteedItem,
-		// Token: 0x0402A81D RID: 174109
+		// Token: 0x04025B43 RID: 154435
 		GuaranteedNumText,
-		// Token: 0x0402A81E RID: 174110
+		// Token: 0x04025B44 RID: 154436
 		GuaranteedText,
-		// Token: 0x0402A81F RID: 174111
+		// Token: 0x04025B45 RID: 154437
 		GachaComplianceText,
-		// Token: 0x0402A820 RID: 174112
+		// Token: 0x04025B46 RID: 154438
 		TextScroller,
-		// Token: 0x0402A821 RID: 174113
+		// Token: 0x04025B47 RID: 154439
 		LayoutTurnAniController,
-		// Token: 0x0402A822 RID: 174114
+		// Token: 0x04025B48 RID: 154440
 		GachaAccumulateTipsItem,
-		// Token: 0x0402A823 RID: 174115
+		// Token: 0x04025B49 RID: 154441
 		DiscountList,
-		// Token: 0x0402A824 RID: 174116
+		// Token: 0x04025B4A RID: 154442
 		DiscountTemplate,
-		// Token: 0x0402A825 RID: 174117
+		// Token: 0x04025B4B RID: 154443
 		SelectBtnTagRoot
 	}
 }

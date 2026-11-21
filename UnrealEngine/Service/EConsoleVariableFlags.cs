@@ -2,53 +2,53 @@
 
 namespace UnrealEngine.Service
 {
-	// Token: 0x02002AFC RID: 11004
+	// Token: 0x020008AC RID: 2220
 	[Flags]
 	public enum EConsoleVariableFlags : uint
 	{
-		// Token: 0x040162A7 RID: 90791
+		// Token: 0x040056BF RID: 22207
 		ECVF_FlagMask = 65535U,
-		// Token: 0x040162A8 RID: 90792
+		// Token: 0x040056C0 RID: 22208
 		ECVF_Default = 0U,
-		// Token: 0x040162A9 RID: 90793
+		// Token: 0x040056C1 RID: 22209
 		ECVF_Cheat = 1U,
-		// Token: 0x040162AA RID: 90794
+		// Token: 0x040056C2 RID: 22210
 		ECVF_ReadOnly = 4U,
-		// Token: 0x040162AB RID: 90795
+		// Token: 0x040056C3 RID: 22211
 		ECVF_Unregistered = 8U,
-		// Token: 0x040162AC RID: 90796
+		// Token: 0x040056C4 RID: 22212
 		ECVF_CreatedFromIni = 16U,
-		// Token: 0x040162AD RID: 90797
+		// Token: 0x040056C5 RID: 22213
 		ECVF_RenderThreadSafe = 32U,
-		// Token: 0x040162AE RID: 90798
+		// Token: 0x040056C6 RID: 22214
 		ECVF_Scalability = 64U,
-		// Token: 0x040162AF RID: 90799
+		// Token: 0x040056C7 RID: 22215
 		ECVF_ScalabilityGroup = 128U,
-		// Token: 0x040162B0 RID: 90800
+		// Token: 0x040056C8 RID: 22216
 		ECVF_SetFlagMask = 16711680U,
-		// Token: 0x040162B1 RID: 90801
+		// Token: 0x040056C9 RID: 22217
 		ECVF_Set_NoSinkCall_Unsafe = 65536U,
-		// Token: 0x040162B2 RID: 90802
+		// Token: 0x040056CA RID: 22218
 		ECVF_SetByMask = 4278190080U,
-		// Token: 0x040162B3 RID: 90803
+		// Token: 0x040056CB RID: 22219
 		ECVF_SetByConstructor = 0U,
-		// Token: 0x040162B4 RID: 90804
+		// Token: 0x040056CC RID: 22220
 		ECVF_SetByScalability = 16777216U,
-		// Token: 0x040162B5 RID: 90805
+		// Token: 0x040056CD RID: 22221
 		ECVF_SetByGameSetting = 33554432U,
-		// Token: 0x040162B6 RID: 90806
+		// Token: 0x040056CE RID: 22222
 		ECVF_SetByProjectSetting = 50331648U,
-		// Token: 0x040162B7 RID: 90807
+		// Token: 0x040056CF RID: 22223
 		ECVF_SetBySystemSettingsIni = 67108864U,
-		// Token: 0x040162B8 RID: 90808
+		// Token: 0x040056D0 RID: 22224
 		ECVF_SetByDeviceProfile = 83886080U,
-		// Token: 0x040162B9 RID: 90809
+		// Token: 0x040056D1 RID: 22225
 		ECVF_SetByConsoleVariablesIni = 100663296U,
-		// Token: 0x040162BA RID: 90810
+		// Token: 0x040056D2 RID: 22226
 		ECVF_SetByCommandline = 117440512U,
-		// Token: 0x040162BB RID: 90811
+		// Token: 0x040056D3 RID: 22227
 		ECVF_SetByCode = 134217728U,
-		// Token: 0x040162BC RID: 90812
+		// Token: 0x040056D4 RID: 22228
 		ECVF_SetByConsole = 150994944U
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069D3 RID: 27091
+	// Token: 0x02007083 RID: 28803
 	public class IJigsawPieceT
 	{
-		// Token: 0x1700C909 RID: 51465
-		// (get) Token: 0x0602F5C1 RID: 193985 RVA: 0x006731DB File Offset: 0x006713DB
-		// (set) Token: 0x0602F5C2 RID: 193986 RVA: 0x006731E3 File Offset: 0x006713E3
+		// Token: 0x1700D309 RID: 54025
+		// (get) Token: 0x06031F81 RID: 204673 RVA: 0x006C3533 File Offset: 0x006C1733
+		// (set) Token: 0x06031F82 RID: 204674 RVA: 0x006C353B File Offset: 0x006C173B
 		public IPieceIndexT Index { get; set; }
 
-		// Token: 0x1700C90A RID: 51466
-		// (get) Token: 0x0602F5C3 RID: 193987 RVA: 0x006731EC File Offset: 0x006713EC
-		// (set) Token: 0x0602F5C4 RID: 193988 RVA: 0x006731F4 File Offset: 0x006713F4
+		// Token: 0x1700D30A RID: 54026
+		// (get) Token: 0x06031F83 RID: 204675 RVA: 0x006C3544 File Offset: 0x006C1744
+		// (set) Token: 0x06031F84 RID: 204676 RVA: 0x006C354C File Offset: 0x006C174C
 		public bool Active { get; set; }
 
-		// Token: 0x1700C90B RID: 51467
-		// (get) Token: 0x0602F5C5 RID: 193989 RVA: 0x006731FD File Offset: 0x006713FD
-		// (set) Token: 0x0602F5C6 RID: 193990 RVA: 0x00673205 File Offset: 0x00671405
+		// Token: 0x1700D30B RID: 54027
+		// (get) Token: 0x06031F85 RID: 204677 RVA: 0x006C3555 File Offset: 0x006C1755
+		// (set) Token: 0x06031F86 RID: 204678 RVA: 0x006C355D File Offset: 0x006C175D
 		public bool IsCorrect { get; set; }
 
-		// Token: 0x1700C90C RID: 51468
-		// (get) Token: 0x0602F5C7 RID: 193991 RVA: 0x0067320E File Offset: 0x0067140E
-		// (set) Token: 0x0602F5C8 RID: 193992 RVA: 0x00673216 File Offset: 0x00671416
+		// Token: 0x1700D30C RID: 54028
+		// (get) Token: 0x06031F87 RID: 204679 RVA: 0x006C3566 File Offset: 0x006C1766
+		// (set) Token: 0x06031F88 RID: 204680 RVA: 0x006C356E File Offset: 0x006C176E
 		public EJigsawPieceState InitState { get; set; }
 
-		// Token: 0x0602F5C9 RID: 193993 RVA: 0x0067321F File Offset: 0x0067141F
+		// Token: 0x06031F89 RID: 204681 RVA: 0x006C3577 File Offset: 0x006C1777
 		public IJigsawPieceT()
 		{
 			this.Index = null;

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.View
 {
-	// Token: 0x02004720 RID: 18208
+	// Token: 0x02003650 RID: 13904
 	public class CaptionItem : UiPanelBase
 	{
-		// Token: 0x0602F954 RID: 194900 RVA: 0x00B05650 File Offset: 0x00B03850
+		// Token: 0x0602411A RID: 147738 RVA: 0x00A35320 File Offset: 0x00A33520
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602F955 RID: 194901 RVA: 0x00B0575C File Offset: 0x00B0395C
+		// Token: 0x0602411B RID: 147739 RVA: 0x00A3542C File Offset: 0x00A3362C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CaptionItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F956 RID: 194902 RVA: 0x00B0579F File Offset: 0x00B0399F
+		// Token: 0x0602411C RID: 147740 RVA: 0x00A3546F File Offset: 0x00A3366F
 		private void OnHelpInfoButtonClick()
 		{
 			HelpController.Instance.OpenHelpById(WuWaGoGlobal.Setting.HelpId);
 		}
 
-		// Token: 0x0602F957 RID: 194903 RVA: 0x00B057B5 File Offset: 0x00B039B5
+		// Token: 0x0602411D RID: 147741 RVA: 0x00A35485 File Offset: 0x00A33685
 		private void OnCloseButtonClick()
 		{
 			if (WuWaGoController.Instance.IsDamageBatchActive())
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			UiManager.Instance.OpenView(EUiViewName.WuWaGoPauseView, null, null);
 		}
 
-		// Token: 0x0602F958 RID: 194904 RVA: 0x00B057D5 File Offset: 0x00B039D5
+		// Token: 0x0602411E RID: 147742 RVA: 0x00A354A5 File Offset: 0x00A336A5
 		public void SetCloseButtonInteractive(bool interactive)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			button.SetSelfInteractive(interactive);
 		}
 
-		// Token: 0x0602F959 RID: 194905 RVA: 0x00B057EC File Offset: 0x00B039EC
+		// Token: 0x0602411F RID: 147743 RVA: 0x00A354BC File Offset: 0x00A336BC
 		public void SetRightTopButtonsVisible(bool visible)
 		{
 			UUIButtonComponent button = base.GetButton(3);
@@ -93,16 +93,16 @@ namespace CSharpScript.Game.Module.WuwaGo.View
 			uuiitem.SetUIActive(visible);
 		}
 
-		// Token: 0x0200A96C RID: 43372
+		// Token: 0x02009326 RID: 37670
 		private enum EViewComponent
 		{
-			// Token: 0x04033919 RID: 211225
+			// Token: 0x0402E0A9 RID: 188585
 			SpriteTitleIcon,
-			// Token: 0x0403391A RID: 211226
+			// Token: 0x0402E0AA RID: 188586
 			TitleText,
-			// Token: 0x0403391B RID: 211227
+			// Token: 0x0402E0AB RID: 188587
 			HelpInfoButton,
-			// Token: 0x0403391C RID: 211228
+			// Token: 0x0402E0AC RID: 188588
 			CloseButton
 		}
 	}

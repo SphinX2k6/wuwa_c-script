@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F44 RID: 16196
+	// Token: 0x02004382 RID: 17282
 	public struct IMotorFightSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x170070A1 RID: 28833
-		// (get) Token: 0x06017051 RID: 94289 RVA: 0x00351CFE File Offset: 0x0034FEFE
+		// Token: 0x17007692 RID: 30354
+		// (get) Token: 0x060186B3 RID: 100019 RVA: 0x0037B172 File Offset: 0x00379372
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017052 RID: 94290 RVA: 0x00351D0B File Offset: 0x0034FF0B
+		// Token: 0x060186B4 RID: 100020 RVA: 0x0037B17F File Offset: 0x0037937F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017053 RID: 94291 RVA: 0x00351D14 File Offset: 0x0034FF14
+		// Token: 0x060186B5 RID: 100021 RVA: 0x0037B188 File Offset: 0x00379388
 		public static IMotorFightSystemConfig GetRootAsIMotorFightSystemConfig(ByteBuffer _bb)
 		{
 			return IMotorFightSystemConfig.GetRootAsIMotorFightSystemConfig(_bb, default(IMotorFightSystemConfig));
 		}
 
-		// Token: 0x06017054 RID: 94292 RVA: 0x00351D30 File Offset: 0x0034FF30
+		// Token: 0x060186B6 RID: 100022 RVA: 0x0037B1A4 File Offset: 0x003793A4
 		public static IMotorFightSystemConfig GetRootAsIMotorFightSystemConfig(ByteBuffer _bb, IMotorFightSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017055 RID: 94293 RVA: 0x00351D4D File Offset: 0x0034FF4D
+		// Token: 0x060186B7 RID: 100023 RVA: 0x0037B1C1 File Offset: 0x003793C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017056 RID: 94294 RVA: 0x00351D5C File Offset: 0x0034FF5C
+		// Token: 0x060186B8 RID: 100024 RVA: 0x0037B1D0 File Offset: 0x003793D0
 		public IMotorFightSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170070A2 RID: 28834
-		// (get) Token: 0x06017057 RID: 94295 RVA: 0x00351D6C File Offset: 0x0034FF6C
+		// Token: 0x17007693 RID: 30355
+		// (get) Token: 0x060186B9 RID: 100025 RVA: 0x0037B1E0 File Offset: 0x003793E0
 		public EEnableSystemType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017058 RID: 94296 RVA: 0x00351DA8 File Offset: 0x0034FFA8
+		// Token: 0x060186BA RID: 100026 RVA: 0x0037B21C File Offset: 0x0037941C
 		public IMotorFightSystemVar? Vars(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IMotorFightSystemVar?(default(IMotorFightSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170070A3 RID: 28835
-		// (get) Token: 0x06017059 RID: 94297 RVA: 0x00351E08 File Offset: 0x00350008
+		// Token: 0x17007694 RID: 30356
+		// (get) Token: 0x060186BB RID: 100027 RVA: 0x0037B27C File Offset: 0x0037947C
 		public int VarsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601705A RID: 94298 RVA: 0x00351E33 File Offset: 0x00350033
+		// Token: 0x060186BC RID: 100028 RVA: 0x0037B2A7 File Offset: 0x003794A7
 		public static Offset<IMotorFightSystemConfig> CreateIMotorFightSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem, VectorOffset VarsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMotorFightSystemConfig.EndIMotorFightSystemConfig(builder);
 		}
 
-		// Token: 0x0601705B RID: 94299 RVA: 0x00351E50 File Offset: 0x00350050
+		// Token: 0x060186BD RID: 100029 RVA: 0x0037B2C4 File Offset: 0x003794C4
 		public static void StartIMotorFightSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601705C RID: 94300 RVA: 0x00351E59 File Offset: 0x00350059
+		// Token: 0x060186BE RID: 100030 RVA: 0x0037B2CD File Offset: 0x003794CD
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601705D RID: 94301 RVA: 0x00351E64 File Offset: 0x00350064
+		// Token: 0x060186BF RID: 100031 RVA: 0x0037B2D8 File Offset: 0x003794D8
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(1, varsOffset.Value, 0);
 		}
 
-		// Token: 0x0601705E RID: 94302 RVA: 0x00351E74 File Offset: 0x00350074
+		// Token: 0x060186C0 RID: 100032 RVA: 0x0037B2E8 File Offset: 0x003794E8
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, Offset<IMotorFightSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601705F RID: 94303 RVA: 0x00351EB4 File Offset: 0x003500B4
+		// Token: 0x060186C1 RID: 100033 RVA: 0x0037B328 File Offset: 0x00379528
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, Offset<IMotorFightSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017060 RID: 94304 RVA: 0x00351ECE File Offset: 0x003500CE
+		// Token: 0x060186C2 RID: 100034 RVA: 0x0037B342 File Offset: 0x00379542
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IMotorFightSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017061 RID: 94305 RVA: 0x00351EEC File Offset: 0x003500EC
+		// Token: 0x060186C3 RID: 100035 RVA: 0x0037B360 File Offset: 0x00379560
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017062 RID: 94306 RVA: 0x00351F05 File Offset: 0x00350105
+		// Token: 0x060186C4 RID: 100036 RVA: 0x0037B379 File Offset: 0x00379579
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017063 RID: 94307 RVA: 0x00351F10 File Offset: 0x00350110
+		// Token: 0x060186C5 RID: 100037 RVA: 0x0037B384 File Offset: 0x00379584
 		public static Offset<IMotorFightSystemConfig> EndIMotorFightSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorFightSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06017064 RID: 94308 RVA: 0x00351F20 File Offset: 0x00350120
+		// Token: 0x060186C6 RID: 100038 RVA: 0x0037B394 File Offset: 0x00379594
 		public IMotorFightSystemConfigT UnPack()
 		{
 			IMotorFightSystemConfigT motorFightSystemConfigT = new IMotorFightSystemConfigT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return motorFightSystemConfigT;
 		}
 
-		// Token: 0x06017065 RID: 94309 RVA: 0x00351F3C File Offset: 0x0035013C
+		// Token: 0x060186C7 RID: 100039 RVA: 0x0037B3B0 File Offset: 0x003795B0
 		public void UnPackTo(IMotorFightSystemConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017066 RID: 94310 RVA: 0x00351FA8 File Offset: 0x003501A8
+		// Token: 0x060186C8 RID: 100040 RVA: 0x0037B41C File Offset: 0x0037961C
 		public static Offset<IMotorFightSystemConfig> Pack(FlatBufferBuilder builder, IMotorFightSystemConfigT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMotorFightSystemConfig.CreateIMotorFightSystemConfig(builder, _o.Type, varsOffset);
 		}
 
-		// Token: 0x0400B954 RID: 47444
+		// Token: 0x0400C332 RID: 49970
 		private Table __p;
 	}
 }

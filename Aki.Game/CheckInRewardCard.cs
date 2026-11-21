@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011C8 RID: 4552
+// Token: 0x0200067C RID: 1660
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckInRewardCard : ActivitySubViewBase
 {
-	// Token: 0x06007945 RID: 31045 RVA: 0x0019918C File Offset: 0x0019738C
+	// Token: 0x06004CDC RID: 19676 RVA: 0x001A1E3C File Offset: 0x001A003C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -49,7 +49,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007946 RID: 31046 RVA: 0x0019933C File Offset: 0x0019753C
+	// Token: 0x06004CDD RID: 19677 RVA: 0x001A1FEC File Offset: 0x001A01EC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CheckInRewardCard.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -60,12 +60,12 @@ public class CheckInRewardCard : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007947 RID: 31047 RVA: 0x0019937F File Offset: 0x0019757F
+	// Token: 0x06004CDE RID: 19678 RVA: 0x001A202F File Offset: 0x001A022F
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06007948 RID: 31048 RVA: 0x00199381 File Offset: 0x00197581
+	// Token: 0x06004CDF RID: 19679 RVA: 0x001A2031 File Offset: 0x001A0231
 	public void Refresh(TimePointRewardData data)
 	{
 		this.Data = data;
@@ -74,7 +74,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		this.RefreshLockedAndReceived();
 	}
 
-	// Token: 0x06007949 RID: 31049 RVA: 0x0019939C File Offset: 0x0019759C
+	// Token: 0x06004CE0 RID: 19680 RVA: 0x001A204C File Offset: 0x001A024C
 	private void RefreshItem()
 	{
 		TimePointRewardActivity? timePointRewardById = ActivityTimePointRewardConfig.Instance.GetTimePointRewardById(this.Data.Id);
@@ -85,7 +85,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600794A RID: 31050 RVA: 0x0019942C File Offset: 0x0019762C
+	// Token: 0x06004CE1 RID: 19681 RVA: 0x001A20DC File Offset: 0x001A02DC
 	private void RefreshTxtTime()
 	{
 		int currentCheckInCount = this.Data.CurrentCheckInCount;
@@ -116,7 +116,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		base.GetText(3).SetText(newText, true);
 	}
 
-	// Token: 0x0600794B RID: 31051 RVA: 0x00199510 File Offset: 0x00197710
+	// Token: 0x06004CE2 RID: 19682 RVA: 0x001A21C0 File Offset: 0x001A03C0
 	private void RefreshLockedAndReceived()
 	{
 		TimePointRewardData data = this.Data;
@@ -243,7 +243,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600794C RID: 31052 RVA: 0x00199784 File Offset: 0x00197984
+	// Token: 0x06004CE3 RID: 19683 RVA: 0x001A2434 File Offset: 0x001A0634
 	public void SetItemTexturePath(int cardIndex = 0)
 	{
 		if (cardIndex == 0)
@@ -260,7 +260,7 @@ public class CheckInRewardCard : ActivitySubViewBase
 		this.ItemTexture2Nor = "T_Welfare37Icon03Nor";
 	}
 
-	// Token: 0x0600794D RID: 31053 RVA: 0x001997ED File Offset: 0x001979ED
+	// Token: 0x06004CE4 RID: 19684 RVA: 0x001A249D File Offset: 0x001A069D
 	private void OnClickedButton()
 	{
 		TimePointRewardData data = this.Data;
@@ -275,11 +275,11 @@ public class CheckInRewardCard : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x040037B7 RID: 14263
+	// Token: 0x04003850 RID: 14416
 	[Nullable(2)]
 	private TimePointRewardData Data;
 
-	// Token: 0x040037B8 RID: 14264
+	// Token: 0x04003851 RID: 14417
 	[Nullable(new byte[]
 	{
 		2,
@@ -287,51 +287,51 @@ public class CheckInRewardCard : ActivitySubViewBase
 	})]
 	private CheckInRewardItem[] CheckInRewardItems;
 
-	// Token: 0x040037B9 RID: 14265
+	// Token: 0x04003852 RID: 14418
 	public Action OnClickAction;
 
-	// Token: 0x040037BA RID: 14266
+	// Token: 0x04003853 RID: 14419
 	private string ItemTexture1Hor = "";
 
-	// Token: 0x040037BB RID: 14267
+	// Token: 0x04003854 RID: 14420
 	private string ItemTexture1Nor = "";
 
-	// Token: 0x040037BC RID: 14268
+	// Token: 0x04003855 RID: 14421
 	private string ItemTexture2Hor = "";
 
-	// Token: 0x040037BD RID: 14269
+	// Token: 0x04003856 RID: 14422
 	private string ItemTexture2Nor = "";
 
-	// Token: 0x040037BE RID: 14270
+	// Token: 0x04003857 RID: 14423
 	private readonly int[] BtnComponentIds = new int[]
 	{
 		1,
 		2
 	};
 
-	// Token: 0x020077B9 RID: 30649
+	// Token: 0x02006944 RID: 26948
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027799 RID: 161689
+		// Token: 0x04022ACB RID: 142027
 		Uiltem_Commonhongdian_Prefab,
-		// Token: 0x0402779A RID: 161690
+		// Token: 0x04022ACC RID: 142028
 		BtnReward1,
-		// Token: 0x0402779B RID: 161691
+		// Token: 0x04022ACD RID: 142029
 		BtnReward2,
-		// Token: 0x0402779C RID: 161692
+		// Token: 0x04022ACE RID: 142030
 		TxtTime,
-		// Token: 0x0402779D RID: 161693
+		// Token: 0x04022ACF RID: 142031
 		TxtReward,
-		// Token: 0x0402779E RID: 161694
+		// Token: 0x04022AD0 RID: 142032
 		BtnWelfare37Card,
-		// Token: 0x0402779F RID: 161695
+		// Token: 0x04022AD1 RID: 142033
 		PnlNor,
-		// Token: 0x040277A0 RID: 161696
+		// Token: 0x04022AD2 RID: 142034
 		PnlReceive,
-		// Token: 0x040277A1 RID: 161697
+		// Token: 0x04022AD3 RID: 142035
 		PnlFinish,
-		// Token: 0x040277A2 RID: 161698
+		// Token: 0x04022AD4 RID: 142036
 		PnlFinishBgMask
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001014 RID: 4116
+	// Token: 0x020010FC RID: 4348
 	public struct RogueResSynergyType : IFlatbufferObject
 	{
-		// Token: 0x170030C9 RID: 12489
-		// (get) Token: 0x0600C3FE RID: 50174 RVA: 0x002EFDF1 File Offset: 0x002EDFF1
+		// Token: 0x17003144 RID: 12612
+		// (get) Token: 0x0600CA48 RID: 51784 RVA: 0x0030BEB1 File Offset: 0x0030A0B1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C3FF RID: 50175 RVA: 0x002EFDFE File Offset: 0x002EDFFE
+		// Token: 0x0600CA49 RID: 51785 RVA: 0x0030BEBE File Offset: 0x0030A0BE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C400 RID: 50176 RVA: 0x002EFE08 File Offset: 0x002EE008
+		// Token: 0x0600CA4A RID: 51786 RVA: 0x0030BEC8 File Offset: 0x0030A0C8
 		public static RogueResSynergyType GetRootAsRogueResSynergyType(ByteBuffer _bb)
 		{
 			return RogueResSynergyType.GetRootAsRogueResSynergyType(_bb, default(RogueResSynergyType));
 		}
 
-		// Token: 0x0600C401 RID: 50177 RVA: 0x002EFE24 File Offset: 0x002EE024
+		// Token: 0x0600CA4B RID: 51787 RVA: 0x0030BEE4 File Offset: 0x0030A0E4
 		public static RogueResSynergyType GetRootAsRogueResSynergyType(ByteBuffer _bb, RogueResSynergyType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C402 RID: 50178 RVA: 0x002EFE41 File Offset: 0x002EE041
+		// Token: 0x0600CA4C RID: 51788 RVA: 0x0030BF01 File Offset: 0x0030A101
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C403 RID: 50179 RVA: 0x002EFE50 File Offset: 0x002EE050
+		// Token: 0x0600CA4D RID: 51789 RVA: 0x0030BF10 File Offset: 0x0030A110
 		public RogueResSynergyType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170030CA RID: 12490
-		// (get) Token: 0x0600C404 RID: 50180 RVA: 0x002EFE60 File Offset: 0x002EE060
+		// Token: 0x17003145 RID: 12613
+		// (get) Token: 0x0600CA4E RID: 51790 RVA: 0x0030BF20 File Offset: 0x0030A120
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170030CB RID: 12491
-		// (get) Token: 0x0600C405 RID: 50181 RVA: 0x002EFE9C File Offset: 0x002EE09C
+		// Token: 0x17003146 RID: 12614
+		// (get) Token: 0x0600CA4F RID: 51791 RVA: 0x0030BF5C File Offset: 0x0030A15C
 		public string SynergyTypeName
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C406 RID: 50182 RVA: 0x002EFED3 File Offset: 0x002EE0D3
+		// Token: 0x0600CA50 RID: 51792 RVA: 0x0030BF93 File Offset: 0x0030A193
 		public Span<byte> GetSynergyTypeNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600C407 RID: 50183 RVA: 0x002EFEE2 File Offset: 0x002EE0E2
+		// Token: 0x0600CA51 RID: 51793 RVA: 0x0030BFA2 File Offset: 0x0030A1A2
 		public byte[] GetSynergyTypeNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005102 RID: 20738
+		// Token: 0x040056EA RID: 22250
 		private Table __p;
 	}
 }

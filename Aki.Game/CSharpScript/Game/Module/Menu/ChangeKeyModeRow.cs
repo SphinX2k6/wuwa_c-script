@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053FB RID: 21499
+	// Token: 0x020043DE RID: 17374
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeKeyModeRow : IChangeKeyModeRow
 	{
-		// Token: 0x17008413 RID: 33811
-		// (get) Token: 0x06036F25 RID: 225061 RVA: 0x00D04E51 File Offset: 0x00D03051
-		// (set) Token: 0x06036F26 RID: 225062 RVA: 0x00D04E59 File Offset: 0x00D03059
+		// Token: 0x170057DF RID: 22495
+		// (get) Token: 0x0602BE6D RID: 179821 RVA: 0x00C54295 File Offset: 0x00C52495
+		// (set) Token: 0x0602BE6E RID: 179822 RVA: 0x00C5429D File Offset: 0x00C5249D
 		public string RowSpriteResourceId { get; set; } = "";
 
-		// Token: 0x17008414 RID: 33812
-		// (get) Token: 0x06036F27 RID: 225063 RVA: 0x00D04E62 File Offset: 0x00D03062
-		// (set) Token: 0x06036F28 RID: 225064 RVA: 0x00D04E6A File Offset: 0x00D0306A
+		// Token: 0x170057E0 RID: 22496
+		// (get) Token: 0x0602BE6F RID: 179823 RVA: 0x00C542A6 File Offset: 0x00C524A6
+		// (set) Token: 0x0602BE70 RID: 179824 RVA: 0x00C542AE File Offset: 0x00C524AE
 		public string DescriptionA { get; set; } = "";
 
-		// Token: 0x17008415 RID: 33813
-		// (get) Token: 0x06036F29 RID: 225065 RVA: 0x00D04E73 File Offset: 0x00D03073
-		// (set) Token: 0x06036F2A RID: 225066 RVA: 0x00D04E7B File Offset: 0x00D0307B
+		// Token: 0x170057E1 RID: 22497
+		// (get) Token: 0x0602BE71 RID: 179825 RVA: 0x00C542B7 File Offset: 0x00C524B7
+		// (set) Token: 0x0602BE72 RID: 179826 RVA: 0x00C542BF File Offset: 0x00C524BF
 		[Nullable(new byte[]
 		{
 			2,
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.Menu
 			1
 		})] set; }
 
-		// Token: 0x17008416 RID: 33814
-		// (get) Token: 0x06036F2B RID: 225067 RVA: 0x00D04E84 File Offset: 0x00D03084
-		// (set) Token: 0x06036F2C RID: 225068 RVA: 0x00D04E8C File Offset: 0x00D0308C
+		// Token: 0x170057E2 RID: 22498
+		// (get) Token: 0x0602BE73 RID: 179827 RVA: 0x00C542C8 File Offset: 0x00C524C8
+		// (set) Token: 0x0602BE74 RID: 179828 RVA: 0x00C542D0 File Offset: 0x00C524D0
 		public string DescriptionB { get; set; } = "";
 
-		// Token: 0x17008417 RID: 33815
-		// (get) Token: 0x06036F2D RID: 225069 RVA: 0x00D04E95 File Offset: 0x00D03095
-		// (set) Token: 0x06036F2E RID: 225070 RVA: 0x00D04E9D File Offset: 0x00D0309D
+		// Token: 0x170057E3 RID: 22499
+		// (get) Token: 0x0602BE75 RID: 179829 RVA: 0x00C542D9 File Offset: 0x00C524D9
+		// (set) Token: 0x0602BE76 RID: 179830 RVA: 0x00C542E1 File Offset: 0x00C524E1
 		[Nullable(new byte[]
 		{
 			2,

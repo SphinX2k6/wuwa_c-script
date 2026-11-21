@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001138 RID: 4408
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001266 RID: 4710
 	public class IShowUiCondition : IQuestCondition
 	{
-		// Token: 0x06006414 RID: 25620 RVA: 0x000F0D68 File Offset: 0x000EEF68
+		// Token: 0x06006A0F RID: 27151 RVA: 0x000FDEDC File Offset: 0x000FC0DC
 		private IShowUiCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006415 RID: 25621 RVA: 0x000F0DA0 File Offset: 0x000EEFA0
+		// Token: 0x06006A10 RID: 27152 RVA: 0x000FDF14 File Offset: 0x000FC114
 		public static IShowUiCondition Create([Nullable(2)] IShowUiCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006416 RID: 25622 RVA: 0x000F0DB3 File Offset: 0x000EEFB3
+		// Token: 0x06006A11 RID: 27153 RVA: 0x000FDF27 File Offset: 0x000FC127
 		public static IShowUiCondition CreateFromSetValue([Nullable(2)] IShowUiCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006417 RID: 25623 RVA: 0x000F0DC6 File Offset: 0x000EEFC6
+		// Token: 0x06006A12 RID: 27154 RVA: 0x000FDF3A File Offset: 0x000FC13A
 		public new IShowUiCondition_SetValue ToSetValue()
 		{
 			return new IShowUiCondition_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020BB RID: 8379
-		// (get) Token: 0x06006418 RID: 25624 RVA: 0x000F0DFD File Offset: 0x000EEFFD
-		// (set) Token: 0x06006419 RID: 25625 RVA: 0x000F0E28 File Offset: 0x000EF028
+		// Token: 0x1700226E RID: 8814
+		// (get) Token: 0x06006A13 RID: 27155 RVA: 0x000FDF71 File Offset: 0x000FC171
+		// (set) Token: 0x06006A14 RID: 27156 RVA: 0x000FDF9C File Offset: 0x000FC19C
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020BC RID: 8380
-		// (get) Token: 0x0600641A RID: 25626 RVA: 0x000F0E38 File Offset: 0x000EF038
-		// (set) Token: 0x0600641B RID: 25627 RVA: 0x000F0E99 File Offset: 0x000EF099
+		// Token: 0x1700226F RID: 8815
+		// (get) Token: 0x06006A15 RID: 27157 RVA: 0x000FDFAC File Offset: 0x000FC1AC
+		// (set) Token: 0x06006A16 RID: 27158 RVA: 0x000FE00D File Offset: 0x000FC20D
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020BD RID: 8381
-		// (get) Token: 0x0600641C RID: 25628 RVA: 0x000F0EAE File Offset: 0x000EF0AE
-		// (set) Token: 0x0600641D RID: 25629 RVA: 0x000F0ED5 File Offset: 0x000EF0D5
+		// Token: 0x17002270 RID: 8816
+		// (get) Token: 0x06006A17 RID: 27159 RVA: 0x000FE022 File Offset: 0x000FC222
+		// (set) Token: 0x06006A18 RID: 27160 RVA: 0x000FE049 File Offset: 0x000FC249
 		public virtual IShowUi UiType
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020BE RID: 8382
-		// (get) Token: 0x0600641E RID: 25630 RVA: 0x000F0EE4 File Offset: 0x000EF0E4
-		// (set) Token: 0x0600641F RID: 25631 RVA: 0x000F0F1E File Offset: 0x000EF11E
+		// Token: 0x17002271 RID: 8817
+		// (get) Token: 0x06006A19 RID: 27161 RVA: 0x000FE058 File Offset: 0x000FC258
+		// (set) Token: 0x06006A1A RID: 27162 RVA: 0x000FE092 File Offset: 0x000FC292
 		public virtual bool? KeepUiOpen
 		{
 			get
@@ -167,18 +165,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C2E RID: 15406
+		// Token: 0x04003F7C RID: 16252
 		[Nullable(2)]
 		protected new IShowUiCondition FbInstance;
 
-		// Token: 0x04003C2F RID: 15407
+		// Token: 0x04003F7D RID: 16253
 		[Nullable(2)]
 		protected new IShowUiCondition_SetValue PocoInterface;
 
-		// Token: 0x04003C30 RID: 15408
+		// Token: 0x04003F7E RID: 16254
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003C31 RID: 15409
+		// Token: 0x04003F7F RID: 16255
 		private bool _PreConditionsInited;
 	}
 }

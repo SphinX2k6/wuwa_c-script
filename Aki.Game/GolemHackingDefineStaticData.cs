@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001000 RID: 4096
+// Token: 0x020004B4 RID: 1204
 public class GolemHackingDefineStaticData : IStaticVariableResetter
 {
-	// Token: 0x060068FA RID: 26874 RVA: 0x0014DDFD File Offset: 0x0014BFFD
+	// Token: 0x06003C8D RID: 15501 RVA: 0x00156697 File Offset: 0x00154897
 	static GolemHackingDefineStaticData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GolemHackingDefineStaticData.CreateStaticDefaultValue), new Action(GolemHackingDefineStaticData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060068FB RID: 26875 RVA: 0x0014DE1C File Offset: 0x0014C01C
+	// Token: 0x06003C8E RID: 15502 RVA: 0x001566B8 File Offset: 0x001548B8
 	public static void CreateStaticDefaultValue()
 	{
 		GolemHackingDefineStaticData.GolemHackingTexResourceMap = new Dictionary<EGolemHackingGroupState, string[]>
@@ -55,13 +55,13 @@ public class GolemHackingDefineStaticData : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x060068FC RID: 26876 RVA: 0x0014DEC9 File Offset: 0x0014C0C9
+	// Token: 0x06003C8F RID: 15503 RVA: 0x00156765 File Offset: 0x00154965
 	public static void ResetStaticDefaultValue()
 	{
 		GolemHackingDefineStaticData.GolemHackingTexResourceMap = null;
 	}
 
-	// Token: 0x04003039 RID: 12345
+	// Token: 0x040030D0 RID: 12496
 	[Nullable(1)]
 	public static Dictionary<EGolemHackingGroupState, string[]> GolemHackingTexResourceMap;
 }

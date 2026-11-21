@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027A3 RID: 10147
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A75 RID: 10869
 	public class ISetSubScreenData
 	{
-		// Token: 0x0600E1C7 RID: 57799 RVA: 0x00215AD6 File Offset: 0x00213CD6
+		// Token: 0x0600EFE5 RID: 61413 RVA: 0x0023286A File Offset: 0x00230A6A
 		public static ISetSubScreenData Create(ISetSubScreenData? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004443 RID: 17475
-		// (get) Token: 0x0600E1C8 RID: 57800 RVA: 0x00215AF5 File Offset: 0x00213CF5
+		// Token: 0x170047A9 RID: 18345
+		// (get) Token: 0x0600EFE6 RID: 61414 RVA: 0x00232889 File Offset: 0x00230A89
 		public virtual IScreenType TargetScreen
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004444 RID: 17476
-		// (get) Token: 0x0600E1C9 RID: 57801 RVA: 0x00215B24 File Offset: 0x00213D24
+		// Token: 0x170047AA RID: 18346
+		// (get) Token: 0x0600EFE7 RID: 61415 RVA: 0x002328B8 File Offset: 0x00230AB8
 		public virtual ISubScreenConfig TargetSubScreenConfig
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004445 RID: 17477
-		// (get) Token: 0x0600E1CA RID: 57802 RVA: 0x00215B58 File Offset: 0x00213D58
+		// Token: 0x170047AB RID: 18347
+		// (get) Token: 0x0600EFE8 RID: 61416 RVA: 0x002328EC File Offset: 0x00230AEC
 		public virtual ISubScreenTransition Transition
 		{
 			get
@@ -70,27 +68,27 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D2F RID: 32047
+		// Token: 0x040083E5 RID: 33765
 		private ISetSubScreenData Instance;
 
-		// Token: 0x04007D30 RID: 32048
+		// Token: 0x040083E6 RID: 33766
 		private IScreenType _TargetScreenCache;
 
-		// Token: 0x04007D31 RID: 32049
+		// Token: 0x040083E7 RID: 33767
 		private bool _TargetScreenInited;
 
-		// Token: 0x04007D32 RID: 32050
+		// Token: 0x040083E8 RID: 33768
 		[Nullable(2)]
 		private ISubScreenConfig _TargetSubScreenConfigCache;
 
-		// Token: 0x04007D33 RID: 32051
+		// Token: 0x040083E9 RID: 33769
 		private bool _TargetSubScreenConfigInited;
 
-		// Token: 0x04007D34 RID: 32052
+		// Token: 0x040083EA RID: 33770
 		[Nullable(2)]
 		private ISubScreenTransition _TransitionCache;
 
-		// Token: 0x04007D35 RID: 32053
+		// Token: 0x040083EB RID: 33771
 		private bool _TransitionInited;
 	}
 }

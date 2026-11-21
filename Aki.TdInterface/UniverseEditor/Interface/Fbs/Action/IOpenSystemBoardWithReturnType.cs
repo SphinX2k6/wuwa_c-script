@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C3C RID: 27708
+	// Token: 0x020073A3 RID: 29603
 	public struct IOpenSystemBoardWithReturnType : IFlatbufferObject
 	{
-		// Token: 0x1700CE60 RID: 52832
-		// (get) Token: 0x06030CE8 RID: 199912 RVA: 0x006A171D File Offset: 0x0069F91D
+		// Token: 0x1700D97B RID: 55675
+		// (get) Token: 0x06033C41 RID: 212033 RVA: 0x006FBBDD File Offset: 0x006F9DDD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030CE9 RID: 199913 RVA: 0x006A172A File Offset: 0x0069F92A
+		// Token: 0x06033C42 RID: 212034 RVA: 0x006FBBEA File Offset: 0x006F9DEA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030CEA RID: 199914 RVA: 0x006A1734 File Offset: 0x0069F934
+		// Token: 0x06033C43 RID: 212035 RVA: 0x006FBBF4 File Offset: 0x006F9DF4
 		public static IOpenSystemBoardWithReturnType GetRootAsIOpenSystemBoardWithReturnType(ByteBuffer _bb)
 		{
 			return IOpenSystemBoardWithReturnType.GetRootAsIOpenSystemBoardWithReturnType(_bb, default(IOpenSystemBoardWithReturnType));
 		}
 
-		// Token: 0x06030CEB RID: 199915 RVA: 0x006A1750 File Offset: 0x0069F950
+		// Token: 0x06033C44 RID: 212036 RVA: 0x006FBC10 File Offset: 0x006F9E10
 		public static IOpenSystemBoardWithReturnType GetRootAsIOpenSystemBoardWithReturnType(ByteBuffer _bb, IOpenSystemBoardWithReturnType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030CEC RID: 199916 RVA: 0x006A176D File Offset: 0x0069F96D
+		// Token: 0x06033C45 RID: 212037 RVA: 0x006FBC2D File Offset: 0x006F9E2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030CED RID: 199917 RVA: 0x006A177C File Offset: 0x0069F97C
+		// Token: 0x06033C46 RID: 212038 RVA: 0x006FBC3C File Offset: 0x006F9E3C
 		public IOpenSystemBoardWithReturnType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CE61 RID: 52833
-		// (get) Token: 0x06030CEE RID: 199918 RVA: 0x006A178C File Offset: 0x0069F98C
+		// Token: 0x1700D97C RID: 55676
+		// (get) Token: 0x06033C47 RID: 212039 RVA: 0x006FBC4C File Offset: 0x006F9E4C
 		public ESystemType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030CEF RID: 199919 RVA: 0x006A17C8 File Offset: 0x0069F9C8
+		// Token: 0x06033C48 RID: 212040 RVA: 0x006FBC88 File Offset: 0x006F9E88
 		public static Offset<IOpenSystemBoardWithReturnType> CreateIOpenSystemBoardWithReturnType(FlatBufferBuilder builder, ESystemType Type = ESystemType.Shop)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSystemBoardWithReturnType.EndIOpenSystemBoardWithReturnType(builder);
 		}
 
-		// Token: 0x06030CF0 RID: 199920 RVA: 0x006A17DE File Offset: 0x0069F9DE
+		// Token: 0x06033C49 RID: 212041 RVA: 0x006FBC9E File Offset: 0x006F9E9E
 		public static void StartIOpenSystemBoardWithReturnType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06030CF1 RID: 199921 RVA: 0x006A17E7 File Offset: 0x0069F9E7
+		// Token: 0x06033C4A RID: 212042 RVA: 0x006FBCA7 File Offset: 0x006F9EA7
 		public static void AddType(FlatBufferBuilder builder, ESystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030CF2 RID: 199922 RVA: 0x006A17F2 File Offset: 0x0069F9F2
+		// Token: 0x06033C4B RID: 212043 RVA: 0x006FBCB2 File Offset: 0x006F9EB2
 		public static Offset<IOpenSystemBoardWithReturnType> EndIOpenSystemBoardWithReturnType(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenSystemBoardWithReturnType>(builder.EndTable());
 		}
 
-		// Token: 0x06030CF3 RID: 199923 RVA: 0x006A1800 File Offset: 0x0069FA00
+		// Token: 0x06033C4C RID: 212044 RVA: 0x006FBCC0 File Offset: 0x006F9EC0
 		public IOpenSystemBoardWithReturnTypeT UnPack()
 		{
 			IOpenSystemBoardWithReturnTypeT openSystemBoardWithReturnTypeT = new IOpenSystemBoardWithReturnTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openSystemBoardWithReturnTypeT;
 		}
 
-		// Token: 0x06030CF4 RID: 199924 RVA: 0x006A181B File Offset: 0x0069FA1B
+		// Token: 0x06033C4D RID: 212045 RVA: 0x006FBCDB File Offset: 0x006F9EDB
 		public void UnPackTo(IOpenSystemBoardWithReturnTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06030CF5 RID: 199925 RVA: 0x006A182C File Offset: 0x0069FA2C
+		// Token: 0x06033C4E RID: 212046 RVA: 0x006FBCEC File Offset: 0x006F9EEC
 		public static Offset<IOpenSystemBoardWithReturnType> Pack(FlatBufferBuilder builder, IOpenSystemBoardWithReturnTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenSystemBoardWithReturnType.CreateIOpenSystemBoardWithReturnType(builder, _o.Type);
 		}
 
-		// Token: 0x0401156F RID: 71023
+		// Token: 0x040124C6 RID: 74950
 		private Table __p;
 	}
 }

@@ -1,54 +1,54 @@
 ﻿using System;
 
-// Token: 0x02001FCB RID: 8139
+// Token: 0x0200149E RID: 5278
 internal enum EChildComponentType
 {
-	// Token: 0x040075D6 RID: 30166
+	// Token: 0x040076BF RID: 30399
 	ItemContent,
-	// Token: 0x040075D7 RID: 30167
+	// Token: 0x040076C0 RID: 30400
 	CommonTabComponent,
-	// Token: 0x040075D8 RID: 30168
+	// Token: 0x040076C1 RID: 30401
 	CapacityText,
-	// Token: 0x040075D9 RID: 30169
+	// Token: 0x040076C2 RID: 30402
 	DescriptionPanel,
-	// Token: 0x040075DA RID: 30170
+	// Token: 0x040076C3 RID: 30403
 	EmptyItem,
-	// Token: 0x040075DB RID: 30171
+	// Token: 0x040076C4 RID: 30404
 	CapacityNameText,
-	// Token: 0x040075DC RID: 30172
+	// Token: 0x040076C5 RID: 30405
 	ItemScrollView,
-	// Token: 0x040075DD RID: 30173
+	// Token: 0x040076C6 RID: 30406
 	SourceItemView,
-	// Token: 0x040075DE RID: 30174
+	// Token: 0x040076C7 RID: 30407
 	ItemViewPort,
-	// Token: 0x040075DF RID: 30175
+	// Token: 0x040076C8 RID: 30408
 	CurrencyItem1,
-	// Token: 0x040075E0 RID: 30176
+	// Token: 0x040076C9 RID: 30409
 	CurrencyItem2,
-	// Token: 0x040075E1 RID: 30177
+	// Token: 0x040076CA RID: 30410
 	ItemTipsNew,
-	// Token: 0x040075E2 RID: 30178
+	// Token: 0x040076CB RID: 30411
 	FilterSortEntrance,
-	// Token: 0x040075E3 RID: 30179
+	// Token: 0x040076CC RID: 30412
 	DestroyEnterButton,
-	// Token: 0x040075E4 RID: 30180
+	// Token: 0x040076CD RID: 30413
 	DestroyExitButton,
-	// Token: 0x040075E5 RID: 30181
+	// Token: 0x040076CE RID: 30414
 	RedBg,
-	// Token: 0x040075E6 RID: 30182
+	// Token: 0x040076CF RID: 30415
 	TextTips1,
-	// Token: 0x040075E7 RID: 30183
+	// Token: 0x040076D0 RID: 30416
 	TextTips2,
-	// Token: 0x040075E8 RID: 30184
+	// Token: 0x040076D1 RID: 30417
 	ToggleAllSelect,
-	// Token: 0x040075E9 RID: 30185
+	// Token: 0x040076D2 RID: 30418
 	NumberSelect,
-	// Token: 0x040075EA RID: 30186
+	// Token: 0x040076D3 RID: 30419
 	DestroyExecuteButton,
-	// Token: 0x040075EB RID: 30187
+	// Token: 0x040076D4 RID: 30420
 	BtnManage,
-	// Token: 0x040075EC RID: 30188
+	// Token: 0x040076D5 RID: 30421
 	BtnRecovery,
-	// Token: 0x040075ED RID: 30189
+	// Token: 0x040076D6 RID: 30422
 	BtnPhantomPlan
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003E6 RID: 998
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200043F RID: 1087
 	public class IGraph3dNormal : IGraph3dBase
 	{
-		// Token: 0x0600140F RID: 5135 RVA: 0x00040708 File Offset: 0x0003E908
+		// Token: 0x060015A9 RID: 5545 RVA: 0x00044450 File Offset: 0x00042650
 		private IGraph3dNormal_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001410 RID: 5136 RVA: 0x00040740 File Offset: 0x0003E940
+		// Token: 0x060015AA RID: 5546 RVA: 0x00044488 File Offset: 0x00042688
 		public static IGraph3dNormal Create([Nullable(2)] IGraph3dNormal instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001411 RID: 5137 RVA: 0x00040753 File Offset: 0x0003E953
+		// Token: 0x060015AB RID: 5547 RVA: 0x0004449B File Offset: 0x0004269B
 		public static IGraph3dNormal CreateFromSetValue([Nullable(2)] IGraph3dNormal_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001412 RID: 5138 RVA: 0x00040766 File Offset: 0x0003E966
+		// Token: 0x060015AC RID: 5548 RVA: 0x000444AE File Offset: 0x000426AE
 		public new IGraph3dNormal_SetValue ToSetValue()
 		{
 			return new IGraph3dNormal_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700058C RID: 1420
-		// (get) Token: 0x06001413 RID: 5139 RVA: 0x00040791 File Offset: 0x0003E991
-		// (set) Token: 0x06001414 RID: 5140 RVA: 0x000407BC File Offset: 0x0003E9BC
+		// Token: 0x170005F3 RID: 1523
+		// (get) Token: 0x060015AD RID: 5549 RVA: 0x000444D9 File Offset: 0x000426D9
+		// (set) Token: 0x060015AE RID: 5550 RVA: 0x00044504 File Offset: 0x00042704
 		public override EGraph3dType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700058D RID: 1421
-		// (get) Token: 0x06001415 RID: 5141 RVA: 0x000407CC File Offset: 0x0003E9CC
-		// (set) Token: 0x06001416 RID: 5142 RVA: 0x0004085F File Offset: 0x0003EA5F
+		// Token: 0x170005F4 RID: 1524
+		// (get) Token: 0x060015AF RID: 5551 RVA: 0x00044514 File Offset: 0x00042714
+		// (set) Token: 0x060015B0 RID: 5552 RVA: 0x000445A7 File Offset: 0x000427A7
 		public override List<IGraph3dNodeBase> Nodes
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700058E RID: 1422
-		// (get) Token: 0x06001417 RID: 5143 RVA: 0x00040874 File Offset: 0x0003EA74
-		// (set) Token: 0x06001418 RID: 5144 RVA: 0x00040907 File Offset: 0x0003EB07
+		// Token: 0x170005F5 RID: 1525
+		// (get) Token: 0x060015B1 RID: 5553 RVA: 0x000445BC File Offset: 0x000427BC
+		// (set) Token: 0x060015B2 RID: 5554 RVA: 0x0004464F File Offset: 0x0004284F
 		public override List<IGraph3dEdgeBase> Edges
 		{
 			get
@@ -161,24 +159,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FD7 RID: 4055
+		// Token: 0x040010F9 RID: 4345
 		[Nullable(2)]
 		protected new IGraph3dNormal FbInstance;
 
-		// Token: 0x04000FD8 RID: 4056
+		// Token: 0x040010FA RID: 4346
 		[Nullable(2)]
 		protected new IGraph3dNormal_SetValue PocoInterface;
 
-		// Token: 0x04000FD9 RID: 4057
+		// Token: 0x040010FB RID: 4347
 		private List<IGraph3dNodeBase> _NodesCache;
 
-		// Token: 0x04000FDA RID: 4058
+		// Token: 0x040010FC RID: 4348
 		private bool _NodesInited;
 
-		// Token: 0x04000FDB RID: 4059
+		// Token: 0x040010FD RID: 4349
 		private List<IGraph3dEdgeBase> _EdgesCache;
 
-		// Token: 0x04000FDC RID: 4060
+		// Token: 0x040010FE RID: 4350
 		private bool _EdgesInited;
 	}
 }

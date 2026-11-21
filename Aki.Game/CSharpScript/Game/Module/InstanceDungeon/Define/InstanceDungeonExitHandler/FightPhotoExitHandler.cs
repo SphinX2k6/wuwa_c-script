@@ -5,10 +5,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058EA RID: 22762
+	// Token: 0x020048C2 RID: 18626
 	public class FightPhotoExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D09 RID: 236809 RVA: 0x00DBB85C File Offset: 0x00DB9A5C
+		// Token: 0x0602EC2C RID: 191532 RVA: 0x00D0A7B4 File Offset: 0x00D089B4
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && config.Value.InstSubType == 42;
 		}
 
-		// Token: 0x06039D0A RID: 236810 RVA: 0x00DBB8B0 File Offset: 0x00DB9AB0
+		// Token: 0x0602EC2D RID: 191533 RVA: 0x00D0A808 File Offset: 0x00D08A08
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

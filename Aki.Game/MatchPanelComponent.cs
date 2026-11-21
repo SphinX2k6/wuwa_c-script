@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02001BD6 RID: 7126
+// Token: 0x02001095 RID: 4245
 [NullableContext(1)]
 [Nullable(0)]
 public class MatchPanelComponent
 {
-	// Token: 0x0600D470 RID: 54384 RVA: 0x0030E337 File Offset: 0x0030C537
+	// Token: 0x0600A882 RID: 43138 RVA: 0x003194AB File Offset: 0x003176AB
 	public MatchPanelComponent(Func<List<FormationRoleSlot>> getRoleSlots)
 	{
 		this.GetRoleSlots = getRoleSlots;
 	}
 
-	// Token: 0x0600D471 RID: 54385 RVA: 0x0030E348 File Offset: 0x0030C548
+	// Token: 0x0600A883 RID: 43139 RVA: 0x003194BC File Offset: 0x003176BC
 	public void Refresh(bool isMatching)
 	{
 		List<FormationRoleSlot> list = this.GetRoleSlots();
@@ -89,7 +89,7 @@ public class MatchPanelComponent
 		InstanceDungeonEntranceController.Instance.StartMatchTimer(new Action(this.MatchHandle));
 	}
 
-	// Token: 0x0600D472 RID: 54386 RVA: 0x0030E59C File Offset: 0x0030C79C
+	// Token: 0x0600A884 RID: 43140 RVA: 0x00319710 File Offset: 0x00317910
 	private void MatchHandle()
 	{
 		int matchingTime = InstanceDungeonEntranceModel.Instance.MatchingTime;
@@ -99,6 +99,6 @@ public class MatchPanelComponent
 		}
 	}
 
-	// Token: 0x04006113 RID: 24851
+	// Token: 0x040061E2 RID: 25058
 	private readonly Func<List<FormationRoleSlot>> GetRoleSlots;
 }

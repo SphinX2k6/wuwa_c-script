@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Utils;
 
-// Token: 0x02002FF1 RID: 12273
+// Token: 0x02002546 RID: 9542
 [NullableContext(1)]
 [Nullable(0)]
 public class BuffInstigatorTrigger : Trigger
 {
-	// Token: 0x0601A023 RID: 106531 RVA: 0x006CF24E File Offset: 0x006CD44E
+	// Token: 0x06017957 RID: 96599 RVA: 0x006F70EA File Offset: 0x006F52EA
 	[NullableContext(2)]
 	public BuffInstigatorTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A024 RID: 106532 RVA: 0x006CF26C File Offset: 0x006CD46C
+	// Token: 0x06017958 RID: 96600 RVA: 0x006F7108 File Offset: 0x006F5308
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -43,7 +43,7 @@ public class BuffInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A025 RID: 106533 RVA: 0x006CF370 File Offset: 0x006CD570
+	// Token: 0x06017959 RID: 96601 RVA: 0x006F720C File Offset: 0x006F540C
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -57,7 +57,7 @@ public class BuffInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A026 RID: 106534 RVA: 0x006CF3F8 File Offset: 0x006CD5F8
+	// Token: 0x0601795A RID: 96602 RVA: 0x006F7294 File Offset: 0x006F5494
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -71,7 +71,7 @@ public class BuffInstigatorTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A027 RID: 106535 RVA: 0x006CF480 File Offset: 0x006CD680
+	// Token: 0x0601795B RID: 96603 RVA: 0x006F731C File Offset: 0x006F551C
 	private void OnEvent(long buffId, Entity victim, Entity attacker, bool? bornBuff)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -89,18 +89,18 @@ public class BuffInstigatorTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x0601A028 RID: 106536 RVA: 0x006CF4F3 File Offset: 0x006CD6F3
+	// Token: 0x0601795C RID: 96604 RVA: 0x006F738F File Offset: 0x006F558F
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4D3 RID: 50387
+	// Token: 0x0400C89B RID: 51355
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4D4 RID: 50388
+	// Token: 0x0400C89C RID: 51356
 	protected readonly HashSet<long> ListenBuffIds = new HashSet<long>();
 
-	// Token: 0x0400C4D5 RID: 50389
+	// Token: 0x0400C89D RID: 51357
 	protected bool NotIncludeBornBuff;
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F54 RID: 16212
+	// Token: 0x02004392 RID: 17298
 	public class INewHandInItemsBase_UnionUnion
 	{
-		// Token: 0x170070BA RID: 28858
-		// (get) Token: 0x060170D2 RID: 94418 RVA: 0x00352CE5 File Offset: 0x00350EE5
-		// (set) Token: 0x060170D3 RID: 94419 RVA: 0x00352CED File Offset: 0x00350EED
+		// Token: 0x170076AB RID: 30379
+		// (get) Token: 0x06018734 RID: 100148 RVA: 0x0037C159 File Offset: 0x0037A359
+		// (set) Token: 0x06018735 RID: 100149 RVA: 0x0037C161 File Offset: 0x0037A361
 		public INewHandInItemsBase_Union Type { get; set; }
 
-		// Token: 0x170070BB RID: 28859
-		// (get) Token: 0x060170D4 RID: 94420 RVA: 0x00352CF6 File Offset: 0x00350EF6
-		// (set) Token: 0x060170D5 RID: 94421 RVA: 0x00352CFE File Offset: 0x00350EFE
+		// Token: 0x170076AC RID: 30380
+		// (get) Token: 0x06018736 RID: 100150 RVA: 0x0037C16A File Offset: 0x0037A36A
+		// (set) Token: 0x06018737 RID: 100151 RVA: 0x0037C172 File Offset: 0x0037A372
 		public object Value { get; set; }
 
-		// Token: 0x060170D6 RID: 94422 RVA: 0x00352D07 File Offset: 0x00350F07
+		// Token: 0x06018738 RID: 100152 RVA: 0x0037C17B File Offset: 0x0037A37B
 		public INewHandInItemsBase_UnionUnion()
 		{
 			this.Type = INewHandInItemsBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060170D7 RID: 94423 RVA: 0x00352D1D File Offset: 0x00350F1D
+		// Token: 0x06018739 RID: 100153 RVA: 0x0037C191 File Offset: 0x0037A391
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060170D8 RID: 94424 RVA: 0x00352D2F File Offset: 0x00350F2F
+		// Token: 0x0601873A RID: 100154 RVA: 0x0037C1A3 File Offset: 0x0037A3A3
 		public INewHandInItemsBaseT AsINewHandInItemsBase()
 		{
 			return this.As<INewHandInItemsBaseT>();
 		}
 
-		// Token: 0x060170D9 RID: 94425 RVA: 0x00352D37 File Offset: 0x00350F37
+		// Token: 0x0601873B RID: 100155 RVA: 0x0037C1AB File Offset: 0x0037A3AB
 		public static INewHandInItemsBase_UnionUnion FromINewHandInItemsBase(INewHandInItemsBaseT _inewhandinitemsbase)
 		{
 			return new INewHandInItemsBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060170DA RID: 94426 RVA: 0x00352D4C File Offset: 0x00350F4C
+		// Token: 0x0601873C RID: 100156 RVA: 0x0037C1C0 File Offset: 0x0037A3C0
 		public INewHandInItemsProjectionMachineT AsINewHandInItemsProjectionMachine()
 		{
 			return this.As<INewHandInItemsProjectionMachineT>();
 		}
 
-		// Token: 0x060170DB RID: 94427 RVA: 0x00352D54 File Offset: 0x00350F54
+		// Token: 0x0601873D RID: 100157 RVA: 0x0037C1C8 File Offset: 0x0037A3C8
 		public static INewHandInItemsBase_UnionUnion FromINewHandInItemsProjectionMachine(INewHandInItemsProjectionMachineT _inewhandinitemsprojectionmachine)
 		{
 			return new INewHandInItemsBase_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060170DC RID: 94428 RVA: 0x00352D6C File Offset: 0x00350F6C
+		// Token: 0x0601873E RID: 100158 RVA: 0x0037C1E0 File Offset: 0x0037A3E0
 		public static int Pack(FlatBufferBuilder builder, INewHandInItemsBase_UnionUnion _o)
 		{
 			INewHandInItemsBase_Union type = _o.Type;

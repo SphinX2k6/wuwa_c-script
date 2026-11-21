@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C80 RID: 7296
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E85 RID: 7813
 	public class INpcSwingGetUp : INpcLeisureInteractType
 	{
-		// Token: 0x06009C7D RID: 40061 RVA: 0x00166E1C File Offset: 0x0016501C
+		// Token: 0x0600A617 RID: 42519 RVA: 0x0017A810 File Offset: 0x00178A10
 		private INpcSwingGetUp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C7E RID: 40062 RVA: 0x00166E54 File Offset: 0x00165054
+		// Token: 0x0600A618 RID: 42520 RVA: 0x0017A848 File Offset: 0x00178A48
 		public static INpcSwingGetUp Create([Nullable(2)] INpcSwingGetUp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C7F RID: 40063 RVA: 0x00166E67 File Offset: 0x00165067
+		// Token: 0x0600A619 RID: 42521 RVA: 0x0017A85B File Offset: 0x00178A5B
 		public static INpcSwingGetUp CreateFromSetValue([Nullable(2)] INpcSwingGetUp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C80 RID: 40064 RVA: 0x00166E7A File Offset: 0x0016507A
+		// Token: 0x0600A61A RID: 42522 RVA: 0x0017A86E File Offset: 0x00178A6E
 		public new INpcSwingGetUp_SetValue ToSetValue()
 		{
 			return new INpcSwingGetUp_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030D5 RID: 12501
-		// (get) Token: 0x06009C81 RID: 40065 RVA: 0x00166EA5 File Offset: 0x001650A5
-		// (set) Token: 0x06009C82 RID: 40066 RVA: 0x00166ED0 File Offset: 0x001650D0
+		// Token: 0x17003352 RID: 13138
+		// (get) Token: 0x0600A61B RID: 42523 RVA: 0x0017A899 File Offset: 0x00178A99
+		// (set) Token: 0x0600A61C RID: 42524 RVA: 0x0017A8C4 File Offset: 0x00178AC4
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030D6 RID: 12502
-		// (get) Token: 0x06009C83 RID: 40067 RVA: 0x00166EE0 File Offset: 0x001650E0
-		// (set) Token: 0x06009C84 RID: 40068 RVA: 0x00166F1A File Offset: 0x0016511A
+		// Token: 0x17003353 RID: 13139
+		// (get) Token: 0x0600A61D RID: 42525 RVA: 0x0017A8D4 File Offset: 0x00178AD4
+		// (set) Token: 0x0600A61E RID: 42526 RVA: 0x0017A90E File Offset: 0x00178B0E
 		public override bool? KeepState
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030D7 RID: 12503
-		// (get) Token: 0x06009C85 RID: 40069 RVA: 0x00166F28 File Offset: 0x00165128
-		// (set) Token: 0x06009C86 RID: 40070 RVA: 0x00166F53 File Offset: 0x00165153
+		// Token: 0x17003354 RID: 13140
+		// (get) Token: 0x0600A61F RID: 42527 RVA: 0x0017A91C File Offset: 0x00178B1C
+		// (set) Token: 0x0600A620 RID: 42528 RVA: 0x0017A947 File Offset: 0x00178B47
 		public virtual int TargetNpcId
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EE2 RID: 24290
+		// Token: 0x04006435 RID: 25653
 		[Nullable(2)]
 		protected new INpcSwingGetUp FbInstance;
 
-		// Token: 0x04005EE3 RID: 24291
+		// Token: 0x04006436 RID: 25654
 		[Nullable(2)]
 		protected new INpcSwingGetUp_SetValue PocoInterface;
 	}

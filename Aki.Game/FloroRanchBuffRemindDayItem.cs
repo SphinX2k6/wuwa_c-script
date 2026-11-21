@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B7E RID: 7038
+// Token: 0x0200103D RID: 4157
 public class FloroRanchBuffRemindDayItem : UiPanelBase
 {
-	// Token: 0x0600D176 RID: 53622 RVA: 0x00300118 File Offset: 0x002FE318
+	// Token: 0x0600A587 RID: 42375 RVA: 0x0030B1F0 File Offset: 0x003093F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,7 +20,7 @@ public class FloroRanchBuffRemindDayItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D177 RID: 53623 RVA: 0x00300160 File Offset: 0x002FE360
+	// Token: 0x0600A588 RID: 42376 RVA: 0x0030B238 File Offset: 0x00309438
 	[NullableContext(2)]
 	public void Refresh(FloroRanchBuffData buffData)
 	{
@@ -33,10 +33,10 @@ public class FloroRanchBuffRemindDayItem : UiPanelBase
 		base.GetRootItem().SetUIActive(true);
 	}
 
-	// Token: 0x02008102 RID: 33026
+	// Token: 0x02007290 RID: 29328
 	private class EComponent
 	{
-		// Token: 0x0402A1A4 RID: 172452
+		// Token: 0x040254D8 RID: 152792
 		public const int RemindTimeText = 0;
 	}
 }

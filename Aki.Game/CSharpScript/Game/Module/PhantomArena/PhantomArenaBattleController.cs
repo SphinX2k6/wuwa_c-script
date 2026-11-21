@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -24,27 +23,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005102 RID: 20738
+	// Token: 0x020040D2 RID: 16594
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class PhantomArenaBattleController : UiControllerBase
 	{
-		// Token: 0x06035009 RID: 217097 RVA: 0x00C8DF13 File Offset: 0x00C8C113
+		// Token: 0x06029F02 RID: 171778 RVA: 0x00BDB1EF File Offset: 0x00BD93EF
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 			EventSystem.Instance.Add(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnEntityCreated));
 		}
 
-		// Token: 0x0603500A RID: 217098 RVA: 0x00C8DF4D File Offset: 0x00C8C14D
+		// Token: 0x06029F03 RID: 171779 RVA: 0x00BDB229 File Offset: 0x00BD9429
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 			EventSystem.Instance.Remove(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnEntityCreated));
 		}
 
-		// Token: 0x0603500B RID: 217099 RVA: 0x00C8DF88 File Offset: 0x00C8C188
+		// Token: 0x06029F04 RID: 171780 RVA: 0x00BDB264 File Offset: 0x00BD9464
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.PhantomBattleBoardInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.PhantomBattleBoardInfoNotify));
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			Net.Instance.Register(ENotifyMessageId.PhantomBattleSkillEffectFailNotify, new Action<IMessage, Net.CallbackStatus>(this.PhantomBattleSkillEffectFailNotify));
 		}
 
-		// Token: 0x0603500C RID: 217100 RVA: 0x00C8E298 File Offset: 0x00C8C498
+		// Token: 0x06029F05 RID: 171781 RVA: 0x00BDB574 File Offset: 0x00BD9774
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.PhantomBattleBoardInfoNotify);
@@ -113,20 +112,20 @@ namespace CSharpScript.Game.Module.PhantomArena
 			Net.Instance.UnRegister(ENotifyMessageId.PhantomBattleCardDurableEmptyNotify);
 		}
 
-		// Token: 0x0603500D RID: 217101 RVA: 0x00C8E435 File Offset: 0x00C8C635
+		// Token: 0x06029F06 RID: 171782 RVA: 0x00BDB711 File Offset: 0x00BD9911
 		protected override bool OnLeaveLevel()
 		{
 			PhantomArenaAssetManager.Clear();
 			return true;
 		}
 
-		// Token: 0x0603500E RID: 217102 RVA: 0x00C8E43D File Offset: 0x00C8C63D
+		// Token: 0x06029F07 RID: 171783 RVA: 0x00BDB719 File Offset: 0x00BD9919
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x0603500F RID: 217103 RVA: 0x00C8E440 File Offset: 0x00C8C640
+		// Token: 0x06029F08 RID: 171784 RVA: 0x00BDB71C File Offset: 0x00BD991C
 		private void OnWorldDoneAndCloseLoading()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleModel.Instance.SetPhantomBattleBoardSettleNotify(null);
 		}
 
-		// Token: 0x06035010 RID: 217104 RVA: 0x00C8E4B8 File Offset: 0x00C8C6B8
+		// Token: 0x06029F09 RID: 171785 RVA: 0x00BDB794 File Offset: 0x00BD9994
 		private static void PerformanceOptimizationCharacter()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035011 RID: 217105 RVA: 0x00C8E5EC File Offset: 0x00C8C7EC
+		// Token: 0x06029F0A RID: 171786 RVA: 0x00BDB8C8 File Offset: 0x00BD9AC8
 		private void PhantomBattleBoardInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleBoardInfoNotify phantomBattleBoardInfoNotify = (PhantomBattleBoardInfoNotify)msg;
@@ -236,7 +235,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035012 RID: 217106 RVA: 0x00C8E740 File Offset: 0x00C8C940
+		// Token: 0x06029F0B RID: 171787 RVA: 0x00BDBA1C File Offset: 0x00BD9C1C
 		private void PhantomBattleRoundChangeNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleRoundChangeNotify phantomBattleRoundChangeNotify = (PhantomBattleRoundChangeNotify)msg;
@@ -271,7 +270,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035013 RID: 217107 RVA: 0x00C8E854 File Offset: 0x00C8CA54
+		// Token: 0x06029F0C RID: 171788 RVA: 0x00BDBB30 File Offset: 0x00BD9D30
 		private void PhantomBattleHandCardInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleHandCardInfoUpdateNotify phantomBattleHandCardInfoUpdateNotify = (PhantomBattleHandCardInfoUpdateNotify)msg;
@@ -280,10 +279,13 @@ namespace CSharpScript.Game.Module.PhantomArena
 				return;
 			}
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "手牌更新,同步手牌状态", default(ReadOnlySpan<ValueTuple<string, object>>));
-			PhantomArenaBattleModel.Instance.OwnData.AddHandDataList(phantomBattleHandCardInfoUpdateNotify.PhantomBattleHandCardInfo.ToArray<PhantomBattleHandCardInfo>(), true);
+			PhantomArenaBattleModel instance = PhantomArenaBattleModel.Instance;
+			PhantomBattleHandCardInfo[] array = new PhantomBattleHandCardInfo[phantomBattleHandCardInfoUpdateNotify.PhantomBattleHandCardInfo.Count];
+			phantomBattleHandCardInfoUpdateNotify.PhantomBattleHandCardInfo.CopyTo(array, 0);
+			instance.OwnData.AddHandDataList(array, true);
 		}
 
-		// Token: 0x06035014 RID: 217108 RVA: 0x00C8E8A8 File Offset: 0x00C8CAA8
+		// Token: 0x06029F0D RID: 171789 RVA: 0x00BDBB98 File Offset: 0x00BD9D98
 		private void NpcPhantomBattleFightInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			NpcPhantomBattleFightInfoNotify npcPhantomBattleFightInfoNotify = (NpcPhantomBattleFightInfoNotify)msg;
@@ -297,16 +299,19 @@ namespace CSharpScript.Game.Module.PhantomArena
 			string message = "Npc战斗信息通知";
 			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("操作数量", npcPhantomBattleFightInfoNotify.PhantomBattleFightInfos.Count);
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			PhantomArenaBattleModel.Instance.OpponentData.InitNpcAiOperationData(npcPhantomBattleFightInfoNotify.PhantomBattleFightInfos.ToArray<NpcPhantomBattleFightInfo>());
+			PhantomArenaBattleModel instance2 = PhantomArenaBattleModel.Instance;
+			NpcPhantomBattleFightInfo[] array = new NpcPhantomBattleFightInfo[npcPhantomBattleFightInfoNotify.PhantomBattleFightInfos.Count];
+			npcPhantomBattleFightInfoNotify.PhantomBattleFightInfos.CopyTo(array, 0);
+			instance2.OpponentData.InitNpcAiOperationData(array);
 		}
 
-		// Token: 0x06035015 RID: 217109 RVA: 0x00C8E914 File Offset: 0x00C8CB14
+		// Token: 0x06029F0E RID: 171790 RVA: 0x00BDBC18 File Offset: 0x00BD9E18
 		private void PhantomBattleDeployNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "玩家进入部署", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06035016 RID: 217110 RVA: 0x00C8E940 File Offset: 0x00C8CB40
+		// Token: 0x06029F0F RID: 171791 RVA: 0x00BDBC44 File Offset: 0x00BD9E44
 		private void PhantomBattleGamerStatusInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleGamerStatusInfoNotify phantomBattleGamerStatusInfoNotify = (PhantomBattleGamerStatusInfoNotify)msg;
@@ -317,17 +322,17 @@ namespace CSharpScript.Game.Module.PhantomArena
 			if (phantomBattleGamerStatusInfoNotify.GamerIndex == 0)
 			{
 				Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "Npc战斗资源变化通知", default(ReadOnlySpan<ValueTuple<string, object>>));
-				PhantomArenaBattleModel.Instance.OpponentData.RefreshBattleStatus(phantomBattleGamerStatusInfoNotify.BattleStatus.ToDictionary<int, int>());
+				PhantomArenaBattleModel.Instance.OpponentData.RefreshBattleStatus(new Dictionary<int, int>(phantomBattleGamerStatusInfoNotify.BattleStatus));
 				return;
 			}
 			if (phantomBattleGamerStatusInfoNotify.GamerIndex == 1)
 			{
 				Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "玩家战斗资源变化通知", default(ReadOnlySpan<ValueTuple<string, object>>));
-				PhantomArenaBattleModel.Instance.OwnData.RefreshBattleStatus(phantomBattleGamerStatusInfoNotify.BattleStatus.ToDictionary<int, int>());
+				PhantomArenaBattleModel.Instance.OwnData.RefreshBattleStatus(new Dictionary<int, int>(phantomBattleGamerStatusInfoNotify.BattleStatus));
 			}
 		}
 
-		// Token: 0x06035017 RID: 217111 RVA: 0x00C8E9DC File Offset: 0x00C8CBDC
+		// Token: 0x06029F10 RID: 171792 RVA: 0x00BDBCE0 File Offset: 0x00BD9EE0
 		private void PhantomBattleCardAttrInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleCardAttrInfoNotify phantomBattleCardAttrInfoNotify = (PhantomBattleCardAttrInfoNotify)msg;
@@ -337,7 +342,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "卡牌战斗属性变化通知", default(ReadOnlySpan<ValueTuple<string, object>>));
 			PhantomArenaBattleModel instance = PhantomArenaBattleModel.Instance;
-			instance.RefreshFighterAttr(phantomBattleCardAttrInfoNotify.CardFighterUId, phantomBattleCardAttrInfoNotify.BattleStatus.ToDictionary<int, int>());
+			instance.RefreshFighterAttr(phantomBattleCardAttrInfoNotify.CardFighterUId, new Dictionary<int, int>(phantomBattleCardAttrInfoNotify.BattleStatus));
 			PhantomCardData cardDataByFightId = instance.OwnData.GetCardDataByFightId(phantomBattleCardAttrInfoNotify.CardFighterUId);
 			if (cardDataByFightId != null && cardDataByFightId.LastEffectCount != cardDataByFightId.CurEffectCount)
 			{
@@ -349,7 +354,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035018 RID: 217112 RVA: 0x00C8EA88 File Offset: 0x00C8CC88
+		// Token: 0x06029F11 RID: 171793 RVA: 0x00BDBD8C File Offset: 0x00BD9F8C
 		public static void PhantomBattleDealCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleDealCardNotify phantomBattleDealCardNotify = (PhantomBattleDealCardNotify)msg;
@@ -365,7 +370,9 @@ namespace CSharpScript.Game.Module.PhantomArena
 				return;
 			}
 			instance.OwnData.RefreshCardLibraryNum(phantomBattleDealCardNotify.CurCardLibraryNum);
-			instance.OwnData.InitHandData(phantomBattleDealCardNotify.PhantomBattleHandCardInfos.ToArray<PhantomBattleHandCardInfo>());
+			PhantomBattleHandCardInfo[] array = new PhantomBattleHandCardInfo[phantomBattleDealCardNotify.PhantomBattleHandCardInfos.Count];
+			phantomBattleDealCardNotify.PhantomBattleHandCardInfos.CopyTo(array, 0);
+			instance.OwnData.InitHandData(array);
 			AudioSystem.Instance.SetState("arena_battle", "none", true);
 			UiManager.Instance.CloseView(EUiViewName.PhantomArenaBattleDetailsView, delegate(bool _)
 			{
@@ -373,7 +380,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			});
 		}
 
-		// Token: 0x06035019 RID: 217113 RVA: 0x00C8EB40 File Offset: 0x00C8CD40
+		// Token: 0x06029F12 RID: 171794 RVA: 0x00BDBE58 File Offset: 0x00BDA058
 		private void PhantomBattleDealCardReplaceNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleDealCardReplaceNotify phantomBattleDealCardReplaceNotify = (PhantomBattleDealCardReplaceNotify)msg;
@@ -390,12 +397,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 			else
 			{
-				instance.ReplaceCardData.SetReplaceCardData(phantomBattleDealCardReplaceNotify.PhantomBattleHandCardInfos.ToArray<PhantomBattleHandCardInfo>());
+				PhantomBattleHandCardInfo[] array = new PhantomBattleHandCardInfo[phantomBattleDealCardReplaceNotify.PhantomBattleHandCardInfos.Count];
+				phantomBattleDealCardReplaceNotify.PhantomBattleHandCardInfos.CopyTo(array, 0);
+				instance.ReplaceCardData.SetReplaceCardData(array);
 			}
 			PhantomArenaBattleController.Instance.SwitchPhantomArenaBattleViewState(EPlayingCardProcessState.TimeStart);
 		}
 
-		// Token: 0x0603501A RID: 217114 RVA: 0x00C8EBC8 File Offset: 0x00C8CDC8
+		// Token: 0x06029F13 RID: 171795 RVA: 0x00BDBEF4 File Offset: 0x00BDA0F4
 		private void PhantomBattleSelectTargetEffectNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleSelectTargetEffectNotify phantomBattleSelectTargetEffectNotify = (PhantomBattleSelectTargetEffectNotify)msg;
@@ -411,7 +420,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603501B RID: 217115 RVA: 0x00C8EC28 File Offset: 0x00C8CE28
+		// Token: 0x06029F14 RID: 171796 RVA: 0x00BDBF54 File Offset: 0x00BDA154
 		private void PhantomBattleSkillTriggerInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleSkillTriggerInfoNotify phantomBattleSkillTriggerInfoNotify = (PhantomBattleSkillTriggerInfoNotify)msg;
@@ -420,10 +429,12 @@ namespace CSharpScript.Game.Module.PhantomArena
 				return;
 			}
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场被动技能触发通知", default(ReadOnlySpan<ValueTuple<string, object>>));
-			PhantomArenaBattleModel.Instance.BuffEffectData.PushBuffEffectDataBySkillList(phantomBattleSkillTriggerInfoNotify.PhantomBattleSkillTriggerInfos.ToArray<PhantomBattleSkillTriggerInfo>(), ENotifyMessageId.PhantomBattleSkillTriggerInfoNotify);
+			PhantomBattleSkillTriggerInfo[] array = new PhantomBattleSkillTriggerInfo[phantomBattleSkillTriggerInfoNotify.PhantomBattleSkillTriggerInfos.Count];
+			phantomBattleSkillTriggerInfoNotify.PhantomBattleSkillTriggerInfos.CopyTo(array, 0);
+			PhantomArenaBattleModel.Instance.BuffEffectData.PushBuffEffectDataBySkillList(array, ENotifyMessageId.PhantomBattleSkillTriggerInfoNotify);
 		}
 
-		// Token: 0x0603501C RID: 217116 RVA: 0x00C8EC80 File Offset: 0x00C8CE80
+		// Token: 0x06029F15 RID: 171797 RVA: 0x00BDBFC0 File Offset: 0x00BDA1C0
 		private void PhantomBattleBuffTriggerInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleBuffTriggerInfoNotify phantomBattleBuffTriggerInfoNotify = (PhantomBattleBuffTriggerInfoNotify)msg;
@@ -432,10 +443,12 @@ namespace CSharpScript.Game.Module.PhantomArena
 				return;
 			}
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场卡牌buff触发通知", default(ReadOnlySpan<ValueTuple<string, object>>));
-			PhantomArenaBattleModel.Instance.BuffEffectData.PushBuffEffectDataByEffectList(phantomBattleBuffTriggerInfoNotify.PhantomBattleBuffTriggerInfo.ToArray<PhantomBattleBuffTriggerInfo>(), ENotifyMessageId.PhantomBattleBuffTriggerInfoNotify);
+			PhantomBattleBuffTriggerInfo[] array = new PhantomBattleBuffTriggerInfo[phantomBattleBuffTriggerInfoNotify.PhantomBattleBuffTriggerInfo.Count];
+			phantomBattleBuffTriggerInfoNotify.PhantomBattleBuffTriggerInfo.CopyTo(array, 0);
+			PhantomArenaBattleModel.Instance.BuffEffectData.PushBuffEffectDataByEffectList(array, ENotifyMessageId.PhantomBattleBuffTriggerInfoNotify);
 		}
 
-		// Token: 0x0603501D RID: 217117 RVA: 0x00C8ECD8 File Offset: 0x00C8CED8
+		// Token: 0x06029F16 RID: 171798 RVA: 0x00BDC02C File Offset: 0x00BDA22C
 		private void PhantomBattleBvbLoadingNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleBvBLoadingNotify phantomBattleBvBLoadingNotify = (PhantomBattleBvBLoadingNotify)msg;
@@ -446,12 +459,12 @@ namespace CSharpScript.Game.Module.PhantomArena
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "BVB部署完成 通知loading", default(ReadOnlySpan<ValueTuple<string, object>>));
 			PhantomArenaBattleData battleData = PhantomArenaBattleModel.Instance.BattleData;
 			battleData.Clear();
-			battleData.SetNpcMonsterEntityData(phantomBattleBvBLoadingNotify.NpcMonsterEntityIncId.ToDictionary<int, long>());
-			battleData.SetPlayerEntityData(phantomBattleBvBLoadingNotify.PlayerMonsterEntityIncId.ToDictionary<int, long>());
+			battleData.SetNpcMonsterEntityData(new Dictionary<int, long>(phantomBattleBvBLoadingNotify.NpcMonsterEntityIncId));
+			battleData.SetPlayerEntityData(new Dictionary<int, long>(phantomBattleBvBLoadingNotify.PlayerMonsterEntityIncId));
 			battleData.FinishPrepareLoadingPromise();
 		}
 
-		// Token: 0x0603501E RID: 217118 RVA: 0x00C8ED48 File Offset: 0x00C8CF48
+		// Token: 0x06029F17 RID: 171799 RVA: 0x00BDC09C File Offset: 0x00BDA29C
 		private void PhantomBattleBvbFightNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "唤醒实体AI", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -473,7 +486,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603501F RID: 217119 RVA: 0x00C8EE5C File Offset: 0x00C8D05C
+		// Token: 0x06029F18 RID: 171800 RVA: 0x00BDC1B0 File Offset: 0x00BDA3B0
 		private void PhantomBattleBvbSettleNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleBvBSettleNotify phantomBattleBvBSettleNotify = (PhantomBattleBvBSettleNotify)msg;
@@ -487,7 +500,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			EventSystem.Instance.Emit<PhantomBattleBvBSettleNotify>(EEventName.PhantomArenaStartTurnResult, phantomBattleBvBSettleNotify);
 		}
 
-		// Token: 0x06035020 RID: 217120 RVA: 0x00C8EEBF File Offset: 0x00C8D0BF
+		// Token: 0x06029F19 RID: 171801 RVA: 0x00BDC213 File Offset: 0x00BDA413
 		[NullableContext(1)]
 		public static void TestBattleSettleResultForGm(PhantomBattleBoardSettleNotify notify)
 		{
@@ -495,7 +508,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleController.Instance.PhantomBattleBoardSettleNotify(notify, null);
 		}
 
-		// Token: 0x06035021 RID: 217121 RVA: 0x00C8EED8 File Offset: 0x00C8D0D8
+		// Token: 0x06029F1A RID: 171802 RVA: 0x00BDC22C File Offset: 0x00BDA42C
 		public static void TriggerPhantomBattleBoardSettle()
 		{
 			PhantomBattleBoardSettleNotify phantomBattleSettleNotify = PhantomArenaBattleModel.Instance.GetPhantomBattleSettleNotify();
@@ -506,7 +519,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035022 RID: 217122 RVA: 0x00C8EF0C File Offset: 0x00C8D10C
+		// Token: 0x06029F1B RID: 171803 RVA: 0x00BDC260 File Offset: 0x00BDA460
 		private void PhantomBattleBoardSettleNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleBoardSettleNotify phantomBattleBoardSettleNotify = (PhantomBattleBoardSettleNotify)msg;
@@ -532,7 +545,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleController.Instance.TriggerPhantomBattleResultShow(phantomBattleBoardSettleNotify);
 		}
 
-		// Token: 0x06035023 RID: 217123 RVA: 0x00C8EFBC File Offset: 0x00C8D1BC
+		// Token: 0x06029F1C RID: 171804 RVA: 0x00BDC310 File Offset: 0x00BDA510
 		[NullableContext(1)]
 		private void PhantomBattleResultShowLevel(PhantomBattleBoardSettleNotify notify, [Nullable(2)] Action<bool> callbackClose)
 		{
@@ -546,7 +559,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			UiManager.Instance.OpenView(name, param, null);
 		}
 
-		// Token: 0x06035024 RID: 217124 RVA: 0x00C8F00C File Offset: 0x00C8D20C
+		// Token: 0x06029F1D RID: 171805 RVA: 0x00BDC360 File Offset: 0x00BDA560
 		[NullableContext(1)]
 		public void TriggerPhantomBattleResultShow(PhantomBattleBoardSettleNotify notify)
 		{
@@ -560,7 +573,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			this.PhantomBattleResultShowLevel(CS$<>8__locals1.notify, new Action<bool>(CS$<>8__locals1.<TriggerPhantomBattleResultShow>g__showCardsOnCloseLevel|2));
 		}
 
-		// Token: 0x06035025 RID: 217125 RVA: 0x00C8F064 File Offset: 0x00C8D264
+		// Token: 0x06029F1E RID: 171806 RVA: 0x00BDC3B8 File Offset: 0x00BDA5B8
 		[NullableContext(1)]
 		public void PhantomBattleResultShowCards(List<int> cardIdList, [Nullable(2)] Action callbackClose)
 		{
@@ -575,7 +588,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaCardsRewardView, param, null);
 		}
 
-		// Token: 0x06035026 RID: 217126 RVA: 0x00C8F0C4 File Offset: 0x00C8D2C4
+		// Token: 0x06029F1F RID: 171807 RVA: 0x00BDC418 File Offset: 0x00BDA618
 		[NullableContext(1)]
 		private void PhantomBattleResultShowReward(PhantomBattleBoardSettleNotify notify)
 		{
@@ -608,7 +621,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			ItemRewardController.Instance.OpenExploreRewardViewNew(exploreRewardViewData);
 		}
 
-		// Token: 0x06035027 RID: 217127 RVA: 0x00C8F19C File Offset: 0x00C8D39C
+		// Token: 0x06029F20 RID: 171808 RVA: 0x00BDC4F0 File Offset: 0x00BDA6F0
 		private void PhantomBattleDiscardCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleDiscardCardNotify phantomBattleDiscardCardNotify = (PhantomBattleDiscardCardNotify)msg;
@@ -624,7 +637,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035028 RID: 217128 RVA: 0x00C8F1FC File Offset: 0x00C8D3FC
+		// Token: 0x06029F21 RID: 171809 RVA: 0x00BDC550 File Offset: 0x00BDA750
 		private void PhantomBattleFourCostTaskInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleFourCTaskInfoUpdateNotify phantomBattleFourCTaskInfoUpdateNotify = (PhantomBattleFourCTaskInfoUpdateNotify)msg;
@@ -636,7 +649,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleModel.Instance.RefreshTaskData(phantomBattleFourCTaskInfoUpdateNotify.PhantomBattleGamerFourCTaskInfo);
 		}
 
-		// Token: 0x06035029 RID: 217129 RVA: 0x00C8F244 File Offset: 0x00C8D444
+		// Token: 0x06029F22 RID: 171810 RVA: 0x00BDC598 File Offset: 0x00BDA798
 		private void PhantomBattleFourCostTaskDealCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleFourCTaskDealCardNotify phantomBattleFourCTaskDealCardNotify = (PhantomBattleFourCTaskDealCardNotify)msg;
@@ -658,7 +671,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleModel.Instance.OwnData.AddFourCostCard(phantomBattleFourCTaskDealCardNotify.PhantomBattleHandCardInfo);
 		}
 
-		// Token: 0x0603502A RID: 217130 RVA: 0x00C8F2D0 File Offset: 0x00C8D4D0
+		// Token: 0x06029F23 RID: 171811 RVA: 0x00BDC624 File Offset: 0x00BDA824
 		private void PhantomBattleCardUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleCardUpdateNotify phantomBattleCardUpdateNotify = (PhantomBattleCardUpdateNotify)msg;
@@ -671,17 +684,17 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomCardData cardDataByFightId = instance.OpponentData.GetCardDataByFightId(phantomBattleCardUpdateNotify.CardUId);
 			if (cardDataByFightId != null)
 			{
-				cardDataByFightId.NotifyRefreshCardData(phantomBattleCardUpdateNotify.Factors.ToDictionary<int, int>(), phantomBattleCardUpdateNotify.LockFactors.ToList<int>(), phantomBattleCardUpdateNotify.CanUnlimitedEvolve);
+				cardDataByFightId.NotifyRefreshCardData(new Dictionary<int, int>(phantomBattleCardUpdateNotify.Factors), phantomBattleCardUpdateNotify.LockFactors, phantomBattleCardUpdateNotify.CanUnlimitedEvolve);
 				return;
 			}
 			PhantomCardData cardDataByFightId2 = instance.OwnData.GetCardDataByFightId(phantomBattleCardUpdateNotify.CardUId);
 			if (cardDataByFightId2 != null)
 			{
-				cardDataByFightId2.NotifyRefreshCardData(phantomBattleCardUpdateNotify.Factors.ToDictionary<int, int>(), phantomBattleCardUpdateNotify.LockFactors.ToList<int>(), phantomBattleCardUpdateNotify.CanUnlimitedEvolve);
+				cardDataByFightId2.NotifyRefreshCardData(new Dictionary<int, int>(phantomBattleCardUpdateNotify.Factors), phantomBattleCardUpdateNotify.LockFactors, phantomBattleCardUpdateNotify.CanUnlimitedEvolve);
 			}
 		}
 
-		// Token: 0x0603502B RID: 217131 RVA: 0x00C8F380 File Offset: 0x00C8D580
+		// Token: 0x06029F24 RID: 171812 RVA: 0x00BDC6C8 File Offset: 0x00BDA8C8
 		private void PhantomBattleCardPosChangeNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleCardPosChangeNotify phantomBattleCardPosChangeNotify = (PhantomBattleCardPosChangeNotify)msg;
@@ -693,13 +706,19 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleModel instance = PhantomArenaBattleModel.Instance;
 			if (phantomBattleCardPosChangeNotify.GamerIndex == 0)
 			{
-				instance.OpponentData.NotifyExchangeBattleCard(phantomBattleCardPosChangeNotify.ChangeInfo.ToArray<PhantomBattleCardPosChangeInfo>());
+				PhantomArenaOpponentData opponentData = instance.OpponentData;
+				PhantomBattleCardPosChangeInfo[] array = new PhantomBattleCardPosChangeInfo[phantomBattleCardPosChangeNotify.ChangeInfo.Count];
+				phantomBattleCardPosChangeNotify.ChangeInfo.CopyTo(array, 0);
+				opponentData.NotifyExchangeBattleCard(array);
 				return;
 			}
-			instance.OwnData.NotifyExchangeBattleCard(phantomBattleCardPosChangeNotify.ChangeInfo.ToArray<PhantomBattleCardPosChangeInfo>());
+			PhantomArenaOwnData ownData = instance.OwnData;
+			PhantomBattleCardPosChangeInfo[] array2 = new PhantomBattleCardPosChangeInfo[phantomBattleCardPosChangeNotify.ChangeInfo.Count];
+			phantomBattleCardPosChangeNotify.ChangeInfo.CopyTo(array2, 0);
+			ownData.NotifyExchangeBattleCard(array2);
 		}
 
-		// Token: 0x0603502C RID: 217132 RVA: 0x00C8F3F4 File Offset: 0x00C8D5F4
+		// Token: 0x06029F25 RID: 171813 RVA: 0x00BDC768 File Offset: 0x00BDA968
 		private void PhantomBattleSelectReserveCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleSelectReserveCardNotify phantomBattleSelectReserveCardNotify = (PhantomBattleSelectReserveCardNotify)msg;
@@ -715,14 +734,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603502D RID: 217133 RVA: 0x00C8F454 File Offset: 0x00C8D654
+		// Token: 0x06029F26 RID: 171814 RVA: 0x00BDC7C8 File Offset: 0x00BDA9C8
 		private void PhantomBattleBurnBuffNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场开始燃血buff", default(ReadOnlySpan<ValueTuple<string, object>>));
 			ScrollingTipsController.Instance.ShowTipsByTextId("PhantomBattle_1107", Array.Empty<object>());
 		}
 
-		// Token: 0x0603502E RID: 217134 RVA: 0x00C8F494 File Offset: 0x00C8D694
+		// Token: 0x06029F27 RID: 171815 RVA: 0x00BDC808 File Offset: 0x00BDAA08
 		private void PhantomBattleCallCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleCallCardNotify phantomBattleCallCardNotify = (PhantomBattleCallCardNotify)msg;
@@ -738,7 +757,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603502F RID: 217135 RVA: 0x00C8F4F4 File Offset: 0x00C8D6F4
+		// Token: 0x06029F28 RID: 171816 RVA: 0x00BDC868 File Offset: 0x00BDAA68
 		private void PhantomBattleCardDurableEmptyNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleCardDurableEmptyNotify phantomBattleCardDurableEmptyNotify = (PhantomBattleCardDurableEmptyNotify)msg;
@@ -754,7 +773,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035030 RID: 217136 RVA: 0x00C8F554 File Offset: 0x00C8D754
+		// Token: 0x06029F29 RID: 171817 RVA: 0x00BDC8C8 File Offset: 0x00BDAAC8
 		private void PhantomBattleReconstructCardNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleReconstructCardNotify phantomBattleReconstructCardNotify = (PhantomBattleReconstructCardNotify)msg;
@@ -770,7 +789,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035031 RID: 217137 RVA: 0x00C8F5B4 File Offset: 0x00C8D7B4
+		// Token: 0x06029F2A RID: 171818 RVA: 0x00BDC928 File Offset: 0x00BDAB28
 		private void PhantomBattleSkillEffectFailNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			PhantomBattleSkillEffectFailNotify phantomBattleSkillEffectFailNotify = (PhantomBattleSkillEffectFailNotify)msg;
@@ -783,16 +802,16 @@ namespace CSharpScript.Game.Module.PhantomArena
 				return;
 			}
 			Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场技能效果失败通知", default(ReadOnlySpan<ValueTuple<string, object>>));
-			ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleSkillEffectFailNotify.ErrorCode, 23479, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleSkillEffectFailNotify.ErrorCode, 29240, null, true, true);
 		}
 
-		// Token: 0x06035032 RID: 217138 RVA: 0x00C8F60C File Offset: 0x00C8D80C
+		// Token: 0x06029F2B RID: 171819 RVA: 0x00BDC980 File Offset: 0x00BDAB80
 		private static bool CheckCardType(EPhantomArenaCardRoleType type, EPlayerGender gender)
 		{
 			return (gender == EPlayerGender.Female && type == EPhantomArenaCardRoleType.MainRoleFemale) || (gender == EPlayerGender.Male && type == EPhantomArenaCardRoleType.MainRoleMale);
 		}
 
-		// Token: 0x06035033 RID: 217139 RVA: 0x00C8F624 File Offset: 0x00C8D824
+		// Token: 0x06029F2C RID: 171820 RVA: 0x00BDC998 File Offset: 0x00BDAB98
 		private static int GetGenderRoleId(int cardRoleId)
 		{
 			PhantomBattleCardRole phantomBattleCardRole = PhantomArenaConfig.Instance.GetPhantomBattleCardRole(cardRoleId);
@@ -810,7 +829,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return cardRoleId;
 		}
 
-		// Token: 0x06035034 RID: 217140 RVA: 0x00C8F6B4 File Offset: 0x00C8D8B4
+		// Token: 0x06029F2D RID: 171821 RVA: 0x00BDCA28 File Offset: 0x00BDAC28
 		public static UniTask RequestEnterPhantomArenaBattleAsync(int challengeId, int cardRoleId, int cardGroupIndex)
 		{
 			PhantomArenaBattleController.<RequestEnterPhantomArenaBattleAsync>d__43 <RequestEnterPhantomArenaBattleAsync>d__;
@@ -823,13 +842,13 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestEnterPhantomArenaBattleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035035 RID: 217141 RVA: 0x00C8F707 File Offset: 0x00C8D907
+		// Token: 0x06029F2E RID: 171822 RVA: 0x00BDCA7B File Offset: 0x00BDAC7B
 		public static void OpenPhantomArenaChangeCardView()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaChangeCardView, null, null);
 		}
 
-		// Token: 0x06035036 RID: 217142 RVA: 0x00C8F71C File Offset: 0x00C8D91C
+		// Token: 0x06029F2F RID: 171823 RVA: 0x00BDCA90 File Offset: 0x00BDAC90
 		public unsafe static void OpenPhantomArenaBattleLoading()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaBattleLoading, null, null);
@@ -842,7 +861,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			TeleportController.Instance.TeleportToPositionNoLoading(vector.ToUeVector(false), new FRotator?(rotator.ToUeRotator()), "OnPhantomBvbStart", true);
 		}
 
-		// Token: 0x06035037 RID: 217143 RVA: 0x00C8F7DC File Offset: 0x00C8D9DC
+		// Token: 0x06029F30 RID: 171824 RVA: 0x00BDCB50 File Offset: 0x00BDAD50
 		public static void OpenPhantomArenaCoreCardView(Action callback)
 		{
 			PhantomArenaCoreCardData param = new PhantomArenaCoreCardData
@@ -852,14 +871,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaCoreCardView, param, null);
 		}
 
-		// Token: 0x06035038 RID: 217144 RVA: 0x00C8F807 File Offset: 0x00C8DA07
+		// Token: 0x06029F31 RID: 171825 RVA: 0x00BDCB7B File Offset: 0x00BDAD7B
 		[NullableContext(1)]
 		public static void OpenPhantomArenaStartView(PhantomArenaStartViewData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaStartView, data, null);
 		}
 
-		// Token: 0x06035039 RID: 217145 RVA: 0x00C8F81C File Offset: 0x00C8DA1C
+		// Token: 0x06029F32 RID: 171826 RVA: 0x00BDCB90 File Offset: 0x00BDAD90
 		public void SwitchPhantomArenaBattleViewState(EPlayingCardProcessState state)
 		{
 			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.PhantomArenaBattleView);
@@ -869,7 +888,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603503A RID: 217146 RVA: 0x00C8F854 File Offset: 0x00C8DA54
+		// Token: 0x06029F33 RID: 171827 RVA: 0x00BDCBC8 File Offset: 0x00BDADC8
 		[NullableContext(1)]
 		public void ShowTimeEndConfirm(Action confirmFunc)
 		{
@@ -882,13 +901,13 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.OpenPhantomArenaConfirmBoxView(confirmBoxDataNew, isNew);
 		}
 
-		// Token: 0x0603503B RID: 217147 RVA: 0x00C8F8B7 File Offset: 0x00C8DAB7
+		// Token: 0x06029F34 RID: 171828 RVA: 0x00BDCC2B File Offset: 0x00BDAE2B
 		private void RecordNeedShowTimeEndConfirm(bool isSelectOn)
 		{
 			PhantomArenaBattleModel.Instance.IsNeedShowTimeEndConfirm = !isSelectOn;
 		}
 
-		// Token: 0x0603503C RID: 217148 RVA: 0x00C8F8C8 File Offset: 0x00C8DAC8
+		// Token: 0x06029F35 RID: 171829 RVA: 0x00BDCC3C File Offset: 0x00BDAE3C
 		public static void RequestPhantomBattleStart()
 		{
 			PhantomBattleStartRequest message = PhantomBattleStartRequest.Create();
@@ -902,14 +921,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleStartResponse.ErrorCode, 24441, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleStartResponse.ErrorCode, 26552, null, true, true);
 					return;
 				}
 				Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场开始对局返回成功", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}, 0);
 		}
 
-		// Token: 0x0603503D RID: 217149 RVA: 0x00C8F92C File Offset: 0x00C8DB2C
+		// Token: 0x06029F36 RID: 171830 RVA: 0x00BDCCA0 File Offset: 0x00BDAEA0
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleDealCardReplace([Nullable(1)] List<int> idList)
 		{
@@ -921,7 +940,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleDealCardReplace>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603503E RID: 217150 RVA: 0x00C8F970 File Offset: 0x00C8DB70
+		// Token: 0x06029F37 RID: 171831 RVA: 0x00BDCCE4 File Offset: 0x00BDAEE4
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleEnterSlot(int id, int index)
 		{
@@ -934,7 +953,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleEnterSlot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603503F RID: 217151 RVA: 0x00C8F9BC File Offset: 0x00C8DBBC
+		// Token: 0x06029F38 RID: 171832 RVA: 0x00BDCD30 File Offset: 0x00BDAF30
 		public static UniTask RequestPhantomBattleLeaveSlot(int index)
 		{
 			PhantomArenaBattleController.<RequestPhantomBattleLeaveSlot>d__54 <RequestPhantomBattleLeaveSlot>d__;
@@ -945,7 +964,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleLeaveSlot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035040 RID: 217152 RVA: 0x00C8FA00 File Offset: 0x00C8DC00
+		// Token: 0x06029F39 RID: 171833 RVA: 0x00BDCD74 File Offset: 0x00BDAF74
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleSlotInstead(int startIndex, int targetIndex)
 		{
@@ -958,7 +977,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleSlotInstead>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035041 RID: 217153 RVA: 0x00C8FA4C File Offset: 0x00C8DC4C
+		// Token: 0x06029F3A RID: 171834 RVA: 0x00BDCDC0 File Offset: 0x00BDAFC0
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleEvolve(int id, int index)
 		{
@@ -971,7 +990,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleEvolve>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035042 RID: 217154 RVA: 0x00C8FA98 File Offset: 0x00C8DC98
+		// Token: 0x06029F3B RID: 171835 RVA: 0x00BDCE0C File Offset: 0x00BDB00C
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleSelectTarget([Nullable(1)] List<int> fightIdList)
 		{
@@ -983,7 +1002,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleSelectTarget>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035043 RID: 217155 RVA: 0x00C8FADC File Offset: 0x00C8DCDC
+		// Token: 0x06029F3C RID: 171836 RVA: 0x00BDCE50 File Offset: 0x00BDB050
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleBackLibrary(int cardId)
 		{
@@ -995,7 +1014,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleBackLibrary>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035044 RID: 217156 RVA: 0x00C8FB20 File Offset: 0x00C8DD20
+		// Token: 0x06029F3D RID: 171837 RVA: 0x00BDCE94 File Offset: 0x00BDB094
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleBackSlotCardLibrary(int cardId)
 		{
@@ -1007,7 +1026,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleBackSlotCardLibrary>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035045 RID: 217157 RVA: 0x00C8FB64 File Offset: 0x00C8DD64
+		// Token: 0x06029F3E RID: 171838 RVA: 0x00BDCED8 File Offset: 0x00BDB0D8
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleRoundOver()
 		{
@@ -1018,7 +1037,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleRoundOver>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035046 RID: 217158 RVA: 0x00C8FBA0 File Offset: 0x00C8DDA0
+		// Token: 0x06029F3F RID: 171839 RVA: 0x00BDCF14 File Offset: 0x00BDB114
 		public static UniTask RequestPhantomBattleNpcShowOverRequest()
 		{
 			PhantomArenaBattleController.<RequestPhantomBattleNpcShowOverRequest>d__61 <RequestPhantomBattleNpcShowOverRequest>d__;
@@ -1028,7 +1047,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleNpcShowOverRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035047 RID: 217159 RVA: 0x00C8FBDC File Offset: 0x00C8DDDC
+		// Token: 0x06029F40 RID: 171840 RVA: 0x00BDCF50 File Offset: 0x00BDB150
 		public static void RequestBvbLoadingFinish()
 		{
 			PhantomBattleBvBLoadingFinishRequest message = PhantomBattleBvBLoadingFinishRequest.Create();
@@ -1042,14 +1061,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleBvBLoadingFinishResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleBvBLoadingFinishResponse.ErrorCode, 24562, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleBvBLoadingFinishResponse.ErrorCode, 29345, null, true, true);
 					return;
 				}
 				Log.Instance.Info(ELogModule.PhantomArena, ELogAuthor.XXJ, "声骸竞技场Bvb战斗请求返回成功", default(ReadOnlySpan<ValueTuple<string, object>>));
 			}, 0);
 		}
 
-		// Token: 0x06035048 RID: 217160 RVA: 0x00C8FC40 File Offset: 0x00C8DE40
+		// Token: 0x06029F41 RID: 171841 RVA: 0x00BDCFB4 File Offset: 0x00BDB1B4
 		[NullableContext(0)]
 		public static UniTask<bool> RequestBattleCardRoleSkill(int skillId, [Nullable(1)] List<int> fighterIdList)
 		{
@@ -1062,7 +1081,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestBattleCardRoleSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035049 RID: 217161 RVA: 0x00C8FC8C File Offset: 0x00C8DE8C
+		// Token: 0x06029F42 RID: 171842 RVA: 0x00BDD000 File Offset: 0x00BDB200
 		private static void TryHandleFieldSkillEffect(int cardId)
 		{
 			PhantomArenaFieldData fieldData = PhantomArenaBattleModel.Instance.OwnData.FieldData;
@@ -1087,7 +1106,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603504A RID: 217162 RVA: 0x00C8FD0C File Offset: 0x00C8DF0C
+		// Token: 0x06029F43 RID: 171843 RVA: 0x00BDD080 File Offset: 0x00BDB280
 		[NullableContext(0)]
 		public static UniTask<bool> RequestBattleCardSkill(int cardId, [Nullable(1)] List<int> fighterIdList)
 		{
@@ -1100,7 +1119,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestBattleCardSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603504B RID: 217163 RVA: 0x00C8FD58 File Offset: 0x00C8DF58
+		// Token: 0x06029F44 RID: 171844 RVA: 0x00BDD0CC File Offset: 0x00BDB2CC
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleDiscardCard([Nullable(1)] List<int> cardIdList)
 		{
@@ -1112,7 +1131,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleDiscardCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603504C RID: 217164 RVA: 0x00C8FD9C File Offset: 0x00C8DF9C
+		// Token: 0x06029F45 RID: 171845 RVA: 0x00BDD110 File Offset: 0x00BDB310
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -1132,7 +1151,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleCallCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603504D RID: 217165 RVA: 0x00C8FDF0 File Offset: 0x00C8DFF0
+		// Token: 0x06029F46 RID: 171846 RVA: 0x00BDD164 File Offset: 0x00BDB364
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -1150,7 +1169,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleReconstructCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603504E RID: 217166 RVA: 0x00C8FE3C File Offset: 0x00C8E03C
+		// Token: 0x06029F47 RID: 171847 RVA: 0x00BDD1B0 File Offset: 0x00BDB3B0
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleCardTargetInfo(int cardId, int skillId, bool isFight, bool isClickInteract)
 		{
@@ -1165,7 +1184,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleCardTargetInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603504F RID: 217167 RVA: 0x00C8FE98 File Offset: 0x00C8E098
+		// Token: 0x06029F48 RID: 171848 RVA: 0x00BDD20C File Offset: 0x00BDB40C
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleCardRoleTargetInfo(int skillId)
 		{
@@ -1177,7 +1196,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleCardRoleTargetInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035050 RID: 217168 RVA: 0x00C8FEDC File Offset: 0x00C8E0DC
+		// Token: 0x06029F49 RID: 171849 RVA: 0x00BDD250 File Offset: 0x00BDB450
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleCardSelect([Nullable(1)] List<int> cardIdList)
 		{
@@ -1189,7 +1208,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleCardSelect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035051 RID: 217169 RVA: 0x00C8FF20 File Offset: 0x00C8E120
+		// Token: 0x06029F4A RID: 171850 RVA: 0x00BDD294 File Offset: 0x00BDB494
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleSelectReserveCard([Nullable(1)] List<int> saveCardIdList)
 		{
@@ -1201,7 +1220,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleSelectReserveCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035052 RID: 217170 RVA: 0x00C8FF64 File Offset: 0x00C8E164
+		// Token: 0x06029F4B RID: 171851 RVA: 0x00BDD2D8 File Offset: 0x00BDB4D8
 		[NullableContext(1)]
 		private void OnEntityCreated(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
@@ -1229,7 +1248,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035053 RID: 217171 RVA: 0x00C90000 File Offset: 0x00C8E200
+		// Token: 0x06029F4C RID: 171852 RVA: 0x00BDD374 File Offset: 0x00BDB574
 		[NullableContext(0)]
 		public static UniTask<bool> RequestPhantomBattleSlotCardSkill(int cardId, [Nullable(1)] List<int> fighterIdList, int skillId, bool isClickInteract)
 		{
@@ -1244,7 +1263,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <RequestPhantomBattleSlotCardSkill>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035054 RID: 217172 RVA: 0x00C9005C File Offset: 0x00C8E25C
+		// Token: 0x06029F4D RID: 171853 RVA: 0x00BDD3D0 File Offset: 0x00BDB5D0
 		public static void OpenPhantomArenaMapEntrance(int? challengeId = null, bool? isNeedSelect = null)
 		{
 			MapChallengeIdAndMarkIdData mapChallengeIdAndMarkIdData = null;
@@ -1296,7 +1315,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			WorldMapController.Instance.OpenExtraUi(EWorldMapExtraUiPanelName.PhantomArenaMapEntrance, mapOpenParam, phantomArenaMapEntrancePanelParam);
 		}
 
-		// Token: 0x06035055 RID: 217173 RVA: 0x00C901B0 File Offset: 0x00C8E3B0
+		// Token: 0x06029F4E RID: 171854 RVA: 0x00BDD524 File Offset: 0x00BDB724
 		public static void TryTeleportChallenge(int challengeId, TOnTelSuccessCallBack successCallback = null)
 		{
 			PhantomBattleChallenge phantomBattleChallenge = PhantomArenaConfig.Instance.GetPhantomBattleChallenge(challengeId);
@@ -1308,7 +1327,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleController.HandleFirstTeleport(phantomBattleChallenge.TeleporterId, phantomBattleChallenge.QuestId, successCallback);
 		}
 
-		// Token: 0x06035056 RID: 217174 RVA: 0x00C90204 File Offset: 0x00C8E404
+		// Token: 0x06029F4F RID: 171855 RVA: 0x00BDD578 File Offset: 0x00BDB778
 		private static void HandleFirstTeleport(int teleporterId, int questId, TOnTelSuccessCallBack successCallback = null)
 		{
 			EQuestState questState = QuestNewModel.Instance.GetQuestState(questId);
@@ -1321,7 +1340,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			WorldMapController.Instance.TryTeleport(teleporterId, successCallback);
 		}
 
-		// Token: 0x06035057 RID: 217175 RVA: 0x00C90278 File Offset: 0x00C8E478
+		// Token: 0x06029F50 RID: 171856 RVA: 0x00BDD5EC File Offset: 0x00BDB7EC
 		private static void HandleReChallengeTeleport(int teleporterId, int reChallengeQuestId, TOnTelSuccessCallBack successCallback = null)
 		{
 			EQuestState questState = QuestNewModel.Instance.GetQuestState(reChallengeQuestId);
@@ -1338,8 +1357,8 @@ namespace CSharpScript.Game.Module.PhantomArena
 			WorldMapController.Instance.TryTeleport(teleporterId, successCallback);
 		}
 
-		// Token: 0x17008099 RID: 32921
-		// (get) Token: 0x06035058 RID: 217176 RVA: 0x00C902F3 File Offset: 0x00C8E4F3
+		// Token: 0x17005459 RID: 21593
+		// (get) Token: 0x06029F51 RID: 171857 RVA: 0x00BDD667 File Offset: 0x00BDB867
 		[Nullable(1)]
 		public static PhantomArenaBattleController Instance
 		{
@@ -1350,7 +1369,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035059 RID: 217177 RVA: 0x00C902FA File Offset: 0x00C8E4FA
+		// Token: 0x06029F52 RID: 171858 RVA: 0x00BDD66E File Offset: 0x00BDB86E
 		[NullableContext(1)]
 		public static PhantomArenaBattleController GetOrCreateInstance()
 		{
@@ -1361,7 +1380,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return PhantomArenaBattleController._Instance;
 		}
 
-		// Token: 0x0603505A RID: 217178 RVA: 0x00C9030E File Offset: 0x00C8E50E
+		// Token: 0x06029F53 RID: 171859 RVA: 0x00BDD682 File Offset: 0x00BDB882
 		public static bool CreateInstance()
 		{
 			if (PhantomArenaBattleController._Instance != null)
@@ -1372,31 +1391,31 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return true;
 		}
 
-		// Token: 0x0603505B RID: 217179 RVA: 0x00C90324 File Offset: 0x00C8E524
+		// Token: 0x06029F54 RID: 171860 RVA: 0x00BDD698 File Offset: 0x00BDB898
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603505C RID: 217180 RVA: 0x00C90326 File Offset: 0x00C8E526
+		// Token: 0x06029F55 RID: 171861 RVA: 0x00BDD69A File Offset: 0x00BDB89A
 		public static void ResetStaticDefaultValue()
 		{
 			PhantomArenaBattleController._Instance = null;
 		}
 
-		// Token: 0x0603505D RID: 217181 RVA: 0x00C9032E File Offset: 0x00C8E52E
+		// Token: 0x06029F56 RID: 171862 RVA: 0x00BDD6A2 File Offset: 0x00BDB8A2
 		static PhantomArenaBattleController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PhantomArenaBattleController.CreateStaticDefaultValue), new Action(PhantomArenaBattleController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C390 RID: 115600
+		// Token: 0x04016DC3 RID: 93635
 		private static PhantomArenaBattleController _Instance;
 
-		// Token: 0x0200B25A RID: 45658
+		// Token: 0x02009C93 RID: 40083
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403611D RID: 221469
+			// Token: 0x04030B72 RID: 199538
 			[Nullable(new byte[]
 			{
 				0,

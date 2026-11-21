@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FFF RID: 4095
+	// Token: 0x020010E7 RID: 4327
 	public struct RogueResEvent : IFlatbufferObject
 	{
-		// Token: 0x1700302B RID: 12331
-		// (get) Token: 0x0600C202 RID: 49666 RVA: 0x002EB929 File Offset: 0x002E9B29
+		// Token: 0x170030A6 RID: 12454
+		// (get) Token: 0x0600C84C RID: 51276 RVA: 0x00307B71 File Offset: 0x00305D71
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C203 RID: 49667 RVA: 0x002EB936 File Offset: 0x002E9B36
+		// Token: 0x0600C84D RID: 51277 RVA: 0x00307B7E File Offset: 0x00305D7E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C204 RID: 49668 RVA: 0x002EB940 File Offset: 0x002E9B40
+		// Token: 0x0600C84E RID: 51278 RVA: 0x00307B88 File Offset: 0x00305D88
 		public static RogueResEvent GetRootAsRogueResEvent(ByteBuffer _bb)
 		{
 			return RogueResEvent.GetRootAsRogueResEvent(_bb, default(RogueResEvent));
 		}
 
-		// Token: 0x0600C205 RID: 49669 RVA: 0x002EB95C File Offset: 0x002E9B5C
+		// Token: 0x0600C84F RID: 51279 RVA: 0x00307BA4 File Offset: 0x00305DA4
 		public static RogueResEvent GetRootAsRogueResEvent(ByteBuffer _bb, RogueResEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C206 RID: 49670 RVA: 0x002EB979 File Offset: 0x002E9B79
+		// Token: 0x0600C850 RID: 51280 RVA: 0x00307BC1 File Offset: 0x00305DC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C207 RID: 49671 RVA: 0x002EB988 File Offset: 0x002E9B88
+		// Token: 0x0600C851 RID: 51281 RVA: 0x00307BD0 File Offset: 0x00305DD0
 		public RogueResEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700302C RID: 12332
-		// (get) Token: 0x0600C208 RID: 49672 RVA: 0x002EB998 File Offset: 0x002E9B98
+		// Token: 0x170030A7 RID: 12455
+		// (get) Token: 0x0600C852 RID: 51282 RVA: 0x00307BE0 File Offset: 0x00305DE0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700302D RID: 12333
-		// (get) Token: 0x0600C209 RID: 49673 RVA: 0x002EB9D4 File Offset: 0x002E9BD4
+		// Token: 0x170030A8 RID: 12456
+		// (get) Token: 0x0600C853 RID: 51283 RVA: 0x00307C1C File Offset: 0x00305E1C
 		public string TextId
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C20A RID: 49674 RVA: 0x002EBA0B File Offset: 0x002E9C0B
+		// Token: 0x0600C854 RID: 51284 RVA: 0x00307C53 File Offset: 0x00305E53
 		public Span<byte> GetTextIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600C20B RID: 49675 RVA: 0x002EBA1A File Offset: 0x002E9C1A
+		// Token: 0x0600C855 RID: 51285 RVA: 0x00307C62 File Offset: 0x00305E62
 		public byte[] GetTextIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700302E RID: 12334
-		// (get) Token: 0x0600C20C RID: 49676 RVA: 0x002EBA34 File Offset: 0x002E9C34
+		// Token: 0x170030A9 RID: 12457
+		// (get) Token: 0x0600C856 RID: 51286 RVA: 0x00307C7C File Offset: 0x00305E7C
 		public string Title
 		{
 			get
@@ -106,20 +106,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C20D RID: 49677 RVA: 0x002EBA6B File Offset: 0x002E9C6B
+		// Token: 0x0600C857 RID: 51287 RVA: 0x00307CB3 File Offset: 0x00305EB3
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C20E RID: 49678 RVA: 0x002EBA7A File Offset: 0x002E9C7A
+		// Token: 0x0600C858 RID: 51288 RVA: 0x00307CC2 File Offset: 0x00305EC2
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700302F RID: 12335
-		// (get) Token: 0x0600C20F RID: 49679 RVA: 0x002EBA94 File Offset: 0x002E9C94
+		// Token: 0x170030AA RID: 12458
+		// (get) Token: 0x0600C859 RID: 51289 RVA: 0x00307CDC File Offset: 0x00305EDC
 		public int Condition
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003030 RID: 12336
-		// (get) Token: 0x0600C210 RID: 49680 RVA: 0x002EBAD4 File Offset: 0x002E9CD4
+		// Token: 0x170030AB RID: 12459
+		// (get) Token: 0x0600C85A RID: 51290 RVA: 0x00307D1C File Offset: 0x00305F1C
 		public int EventType
 		{
 			get
@@ -148,7 +148,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C211 RID: 49681 RVA: 0x002EBB14 File Offset: 0x002E9D14
+		// Token: 0x0600C85B RID: 51291 RVA: 0x00307D5C File Offset: 0x00305F5C
 		public int Args(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -159,8 +159,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003031 RID: 12337
-		// (get) Token: 0x0600C212 RID: 49682 RVA: 0x002EBB54 File Offset: 0x002E9D54
+		// Token: 0x170030AC RID: 12460
+		// (get) Token: 0x0600C85C RID: 51292 RVA: 0x00307D9C File Offset: 0x00305F9C
 		public int ArgsLength
 		{
 			get
@@ -174,20 +174,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C213 RID: 49683 RVA: 0x002EBB80 File Offset: 0x002E9D80
+		// Token: 0x0600C85D RID: 51293 RVA: 0x00307DC8 File Offset: 0x00305FC8
 		public Span<int> GetArgsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600C214 RID: 49684 RVA: 0x002EBB90 File Offset: 0x002E9D90
+		// Token: 0x0600C85E RID: 51294 RVA: 0x00307DD8 File Offset: 0x00305FD8
 		public int[] GetArgsArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003032 RID: 12338
-		// (get) Token: 0x0600C215 RID: 49685 RVA: 0x002EBBA8 File Offset: 0x002E9DA8
+		// Token: 0x170030AD RID: 12461
+		// (get) Token: 0x0600C85F RID: 51295 RVA: 0x00307DF0 File Offset: 0x00305FF0
 		public string FlowListName
 		{
 			get
@@ -201,20 +201,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C216 RID: 49686 RVA: 0x002EBBE0 File Offset: 0x002E9DE0
+		// Token: 0x0600C860 RID: 51296 RVA: 0x00307E28 File Offset: 0x00306028
 		public Span<byte> GetFlowListNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600C217 RID: 49687 RVA: 0x002EBBF0 File Offset: 0x002E9DF0
+		// Token: 0x0600C861 RID: 51297 RVA: 0x00307E38 File Offset: 0x00306038
 		public byte[] GetFlowListNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003033 RID: 12339
-		// (get) Token: 0x0600C218 RID: 49688 RVA: 0x002EBC08 File Offset: 0x002E9E08
+		// Token: 0x170030AE RID: 12462
+		// (get) Token: 0x0600C862 RID: 51298 RVA: 0x00307E50 File Offset: 0x00306050
 		public int FlowId
 		{
 			get
@@ -228,8 +228,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003034 RID: 12340
-		// (get) Token: 0x0600C219 RID: 49689 RVA: 0x002EBC48 File Offset: 0x002E9E48
+		// Token: 0x170030AF RID: 12463
+		// (get) Token: 0x0600C863 RID: 51299 RVA: 0x00307E90 File Offset: 0x00306090
 		public int StateId
 		{
 			get
@@ -243,8 +243,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003035 RID: 12341
-		// (get) Token: 0x0600C21A RID: 49690 RVA: 0x002EBC88 File Offset: 0x002E9E88
+		// Token: 0x170030B0 RID: 12464
+		// (get) Token: 0x0600C864 RID: 51300 RVA: 0x00307ED0 File Offset: 0x003060D0
 		public bool IsCopyCamera
 		{
 			get
@@ -254,25 +254,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C21B RID: 49691 RVA: 0x002EBCC8 File Offset: 0x002E9EC8
+		// Token: 0x0600C865 RID: 51301 RVA: 0x00307F10 File Offset: 0x00306110
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ArgsIter()或GetArgsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Args()
+		public int[] Args()
 		{
-			RogueResEvent rogueResEvent = this;
-			return rogueResEvent.GetArgsArray() ?? Array.Empty<int>();
+			return this.GetArgsArray();
 		}
 
-		// Token: 0x0600C21C RID: 49692 RVA: 0x002EBCEC File Offset: 0x002E9EEC
+		// Token: 0x0600C866 RID: 51302 RVA: 0x00307F18 File Offset: 0x00306118
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ArgsIter()
+		public IEnumerable<int> ArgsIter()
 		{
 			RogueResEvent.<ArgsIter>d__38 <ArgsIter>d__ = new RogueResEvent.<ArgsIter>d__38(-2);
 			<ArgsIter>d__.<>3__<>4__this = this;
 			return <ArgsIter>d__;
 		}
 
-		// Token: 0x040050E7 RID: 20711
+		// Token: 0x040056CF RID: 22223
 		private Table __p;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020031DA RID: 12762
+// Token: 0x02002749 RID: 10057
 public enum EForceUpdateSourceAnimation
 {
-	// Token: 0x0400D833 RID: 55347
+	// Token: 0x0400DCC5 RID: 56517
 	NpcEnterVehicle,
-	// Token: 0x0400D834 RID: 55348
+	// Token: 0x0400DCC6 RID: 56518
 	NpcExitVehicle
 }

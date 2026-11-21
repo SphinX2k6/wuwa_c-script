@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200527F RID: 21119
+	// Token: 0x020057E7 RID: 22503
 	public struct IFlowerPollutionComponent : IFlatbufferObject
 	{
-		// Token: 0x17009AC5 RID: 39621
-		// (get) Token: 0x06022613 RID: 140819 RVA: 0x004C3FBF File Offset: 0x004C21BF
+		// Token: 0x1700A2C3 RID: 41667
+		// (get) Token: 0x060245AD RID: 148909 RVA: 0x004FEB2F File Offset: 0x004FCD2F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022614 RID: 140820 RVA: 0x004C3FCC File Offset: 0x004C21CC
+		// Token: 0x060245AE RID: 148910 RVA: 0x004FEB3C File Offset: 0x004FCD3C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022615 RID: 140821 RVA: 0x004C3FD4 File Offset: 0x004C21D4
+		// Token: 0x060245AF RID: 148911 RVA: 0x004FEB44 File Offset: 0x004FCD44
 		public static IFlowerPollutionComponent GetRootAsIFlowerPollutionComponent(ByteBuffer _bb)
 		{
 			return IFlowerPollutionComponent.GetRootAsIFlowerPollutionComponent(_bb, default(IFlowerPollutionComponent));
 		}
 
-		// Token: 0x06022616 RID: 140822 RVA: 0x004C3FF0 File Offset: 0x004C21F0
+		// Token: 0x060245B0 RID: 148912 RVA: 0x004FEB60 File Offset: 0x004FCD60
 		public static IFlowerPollutionComponent GetRootAsIFlowerPollutionComponent(ByteBuffer _bb, IFlowerPollutionComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022617 RID: 140823 RVA: 0x004C400D File Offset: 0x004C220D
+		// Token: 0x060245B1 RID: 148913 RVA: 0x004FEB7D File Offset: 0x004FCD7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022618 RID: 140824 RVA: 0x004C401C File Offset: 0x004C221C
+		// Token: 0x060245B2 RID: 148914 RVA: 0x004FEB8C File Offset: 0x004FCD8C
 		public IFlowerPollutionComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009AC6 RID: 39622
-		// (get) Token: 0x06022619 RID: 140825 RVA: 0x004C402C File Offset: 0x004C222C
+		// Token: 0x1700A2C4 RID: 41668
+		// (get) Token: 0x060245B3 RID: 148915 RVA: 0x004FEB9C File Offset: 0x004FCD9C
 		public bool Disabled
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AC7 RID: 39623
-		// (get) Token: 0x0602261A RID: 140826 RVA: 0x004C406C File Offset: 0x004C226C
+		// Token: 0x1700A2C5 RID: 41669
+		// (get) Token: 0x060245B4 RID: 148916 RVA: 0x004FEBDC File Offset: 0x004FCDDC
 		public IFlowerPollutionSplineConfig? SplineConfigs
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009AC8 RID: 39624
-		// (get) Token: 0x0602261B RID: 140827 RVA: 0x004C40CC File Offset: 0x004C22CC
+		// Token: 0x1700A2C6 RID: 41670
+		// (get) Token: 0x060245B5 RID: 148917 RVA: 0x004FEC3C File Offset: 0x004FCE3C
 		public IFlowerPollutionPointLightConfig? PointLightConfig
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602261C RID: 140828 RVA: 0x004C412C File Offset: 0x004C232C
+		// Token: 0x060245B6 RID: 148918 RVA: 0x004FEC9C File Offset: 0x004FCE9C
 		public int ObstacleEntityIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009AC9 RID: 39625
-		// (get) Token: 0x0602261D RID: 140829 RVA: 0x004C416C File Offset: 0x004C236C
+		// Token: 0x1700A2C7 RID: 41671
+		// (get) Token: 0x060245B7 RID: 148919 RVA: 0x004FECDC File Offset: 0x004FCEDC
 		public int ObstacleEntityIdsLength
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602261E RID: 140830 RVA: 0x004C4198 File Offset: 0x004C2398
+		// Token: 0x060245B8 RID: 148920 RVA: 0x004FED08 File Offset: 0x004FCF08
 		public Span<int> GetObstacleEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0602261F RID: 140831 RVA: 0x004C41A8 File Offset: 0x004C23A8
+		// Token: 0x060245B9 RID: 148921 RVA: 0x004FED18 File Offset: 0x004FCF18
 		public int[] GetObstacleEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x06022620 RID: 140832 RVA: 0x004C41B8 File Offset: 0x004C23B8
+		// Token: 0x060245BA RID: 148922 RVA: 0x004FED28 File Offset: 0x004FCF28
 		public int PollutionSourceEntityIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009ACA RID: 39626
-		// (get) Token: 0x06022621 RID: 140833 RVA: 0x004C41F8 File Offset: 0x004C23F8
+		// Token: 0x1700A2C8 RID: 41672
+		// (get) Token: 0x060245BB RID: 148923 RVA: 0x004FED68 File Offset: 0x004FCF68
 		public int PollutionSourceEntityIdsLength
 		{
 			get
@@ -154,19 +154,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022622 RID: 140834 RVA: 0x004C4224 File Offset: 0x004C2424
+		// Token: 0x060245BC RID: 148924 RVA: 0x004FED94 File Offset: 0x004FCF94
 		public Span<int> GetPollutionSourceEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06022623 RID: 140835 RVA: 0x004C4234 File Offset: 0x004C2434
+		// Token: 0x060245BD RID: 148925 RVA: 0x004FEDA4 File Offset: 0x004FCFA4
 		public int[] GetPollutionSourceEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12);
 		}
 
-		// Token: 0x06022624 RID: 140836 RVA: 0x004C4244 File Offset: 0x004C2444
+		// Token: 0x060245BE RID: 148926 RVA: 0x004FEDB4 File Offset: 0x004FCFB4
 		public IActionInfo? OnEnterPollutionRangeActions(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -177,8 +177,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009ACB RID: 39627
-		// (get) Token: 0x06022625 RID: 140837 RVA: 0x004C42A8 File Offset: 0x004C24A8
+		// Token: 0x1700A2C9 RID: 41673
+		// (get) Token: 0x060245BF RID: 148927 RVA: 0x004FEE18 File Offset: 0x004FD018
 		public int OnEnterPollutionRangeActionsLength
 		{
 			get
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022626 RID: 140838 RVA: 0x004C42D4 File Offset: 0x004C24D4
+		// Token: 0x060245C0 RID: 148928 RVA: 0x004FEE44 File Offset: 0x004FD044
 		public IActionInfo? OnLeavePollutionRangeActions(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -203,8 +203,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009ACC RID: 39628
-		// (get) Token: 0x06022627 RID: 140839 RVA: 0x004C4338 File Offset: 0x004C2538
+		// Token: 0x1700A2CA RID: 41674
+		// (get) Token: 0x060245C1 RID: 148929 RVA: 0x004FEEA8 File Offset: 0x004FD0A8
 		public int OnLeavePollutionRangeActionsLength
 		{
 			get
@@ -218,8 +218,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009ACD RID: 39629
-		// (get) Token: 0x06022628 RID: 140840 RVA: 0x004C4364 File Offset: 0x004C2564
+		// Token: 0x1700A2CB RID: 41675
+		// (get) Token: 0x060245C2 RID: 148930 RVA: 0x004FEED4 File Offset: 0x004FD0D4
 		public string BakeData
 		{
 			get
@@ -233,20 +233,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022629 RID: 140841 RVA: 0x004C439C File Offset: 0x004C259C
+		// Token: 0x060245C3 RID: 148931 RVA: 0x004FEF0C File Offset: 0x004FD10C
 		public Span<byte> GetBakeDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0602262A RID: 140842 RVA: 0x004C43AC File Offset: 0x004C25AC
+		// Token: 0x060245C4 RID: 148932 RVA: 0x004FEF1C File Offset: 0x004FD11C
 		public byte[] GetBakeDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x17009ACE RID: 39630
-		// (get) Token: 0x0602262B RID: 140843 RVA: 0x004C43BC File Offset: 0x004C25BC
+		// Token: 0x1700A2CC RID: 41676
+		// (get) Token: 0x060245C5 RID: 148933 RVA: 0x004FEF2C File Offset: 0x004FD12C
 		public byte NullMask
 		{
 			get
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602262C RID: 140844 RVA: 0x004C43FC File Offset: 0x004C25FC
+		// Token: 0x060245C6 RID: 148934 RVA: 0x004FEF6C File Offset: 0x004FD16C
 		public static Offset<IFlowerPollutionComponent> CreateIFlowerPollutionComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IFlowerPollutionSplineConfig> SplineConfigsOffset = default(Offset<IFlowerPollutionSplineConfig>), Offset<IFlowerPollutionPointLightConfig> PointLightConfigOffset = default(Offset<IFlowerPollutionPointLightConfig>), VectorOffset ObstacleEntityIdsOffset = default(VectorOffset), VectorOffset PollutionSourceEntityIdsOffset = default(VectorOffset), VectorOffset OnEnterPollutionRangeActionsOffset = default(VectorOffset), VectorOffset OnLeavePollutionRangeActionsOffset = default(VectorOffset), StringOffset BakeDataOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(9);
@@ -276,37 +276,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFlowerPollutionComponent.EndIFlowerPollutionComponent(builder);
 		}
 
-		// Token: 0x0602262D RID: 140845 RVA: 0x004C445C File Offset: 0x004C265C
+		// Token: 0x060245C7 RID: 148935 RVA: 0x004FEFCC File Offset: 0x004FD1CC
 		public static void StartIFlowerPollutionComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(9);
 		}
 
-		// Token: 0x0602262E RID: 140846 RVA: 0x004C4466 File Offset: 0x004C2666
+		// Token: 0x060245C8 RID: 148936 RVA: 0x004FEFD6 File Offset: 0x004FD1D6
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0602262F RID: 140847 RVA: 0x004C4471 File Offset: 0x004C2671
+		// Token: 0x060245C9 RID: 148937 RVA: 0x004FEFE1 File Offset: 0x004FD1E1
 		public static void AddSplineConfigs(FlatBufferBuilder builder, Offset<IFlowerPollutionSplineConfig> splineConfigsOffset)
 		{
 			builder.AddOffset(1, splineConfigsOffset.Value, 0);
 		}
 
-		// Token: 0x06022630 RID: 140848 RVA: 0x004C4481 File Offset: 0x004C2681
+		// Token: 0x060245CA RID: 148938 RVA: 0x004FEFF1 File Offset: 0x004FD1F1
 		public static void AddPointLightConfig(FlatBufferBuilder builder, Offset<IFlowerPollutionPointLightConfig> pointLightConfigOffset)
 		{
 			builder.AddOffset(2, pointLightConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06022631 RID: 140849 RVA: 0x004C4491 File Offset: 0x004C2691
+		// Token: 0x060245CB RID: 148939 RVA: 0x004FF001 File Offset: 0x004FD201
 		public static void AddObstacleEntityIds(FlatBufferBuilder builder, VectorOffset obstacleEntityIdsOffset)
 		{
 			builder.AddOffset(3, obstacleEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06022632 RID: 140850 RVA: 0x004C44A4 File Offset: 0x004C26A4
+		// Token: 0x060245CC RID: 148940 RVA: 0x004FF014 File Offset: 0x004FD214
 		public static VectorOffset CreateObstacleEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022633 RID: 140851 RVA: 0x004C44DB File Offset: 0x004C26DB
+		// Token: 0x060245CD RID: 148941 RVA: 0x004FF04B File Offset: 0x004FD24B
 		public static VectorOffset CreateObstacleEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -325,7 +325,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022634 RID: 140852 RVA: 0x004C44F5 File Offset: 0x004C26F5
+		// Token: 0x060245CE RID: 148942 RVA: 0x004FF065 File Offset: 0x004FD265
 		public static VectorOffset CreateObstacleEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -333,7 +333,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022635 RID: 140853 RVA: 0x004C4513 File Offset: 0x004C2713
+		// Token: 0x060245CF RID: 148943 RVA: 0x004FF083 File Offset: 0x004FD283
 		public static VectorOffset CreateObstacleEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -341,19 +341,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022636 RID: 140854 RVA: 0x004C452C File Offset: 0x004C272C
+		// Token: 0x060245D0 RID: 148944 RVA: 0x004FF09C File Offset: 0x004FD29C
 		public static void StartObstacleEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022637 RID: 140855 RVA: 0x004C4537 File Offset: 0x004C2737
+		// Token: 0x060245D1 RID: 148945 RVA: 0x004FF0A7 File Offset: 0x004FD2A7
 		public static void AddPollutionSourceEntityIds(FlatBufferBuilder builder, VectorOffset pollutionSourceEntityIdsOffset)
 		{
 			builder.AddOffset(4, pollutionSourceEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06022638 RID: 140856 RVA: 0x004C4548 File Offset: 0x004C2748
+		// Token: 0x060245D2 RID: 148946 RVA: 0x004FF0B8 File Offset: 0x004FD2B8
 		public static VectorOffset CreatePollutionSourceEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -364,7 +364,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022639 RID: 140857 RVA: 0x004C457F File Offset: 0x004C277F
+		// Token: 0x060245D3 RID: 148947 RVA: 0x004FF0EF File Offset: 0x004FD2EF
 		public static VectorOffset CreatePollutionSourceEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -372,7 +372,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602263A RID: 140858 RVA: 0x004C4599 File Offset: 0x004C2799
+		// Token: 0x060245D4 RID: 148948 RVA: 0x004FF109 File Offset: 0x004FD309
 		public static VectorOffset CreatePollutionSourceEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -380,7 +380,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602263B RID: 140859 RVA: 0x004C45B7 File Offset: 0x004C27B7
+		// Token: 0x060245D5 RID: 148949 RVA: 0x004FF127 File Offset: 0x004FD327
 		public static VectorOffset CreatePollutionSourceEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -388,19 +388,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602263C RID: 140860 RVA: 0x004C45D0 File Offset: 0x004C27D0
+		// Token: 0x060245D6 RID: 148950 RVA: 0x004FF140 File Offset: 0x004FD340
 		public static void StartPollutionSourceEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602263D RID: 140861 RVA: 0x004C45DB File Offset: 0x004C27DB
+		// Token: 0x060245D7 RID: 148951 RVA: 0x004FF14B File Offset: 0x004FD34B
 		public static void AddOnEnterPollutionRangeActions(FlatBufferBuilder builder, VectorOffset onEnterPollutionRangeActionsOffset)
 		{
 			builder.AddOffset(5, onEnterPollutionRangeActionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602263E RID: 140862 RVA: 0x004C45EC File Offset: 0x004C27EC
+		// Token: 0x060245D8 RID: 148952 RVA: 0x004FF15C File Offset: 0x004FD35C
 		public static VectorOffset CreateOnEnterPollutionRangeActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -411,7 +411,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602263F RID: 140863 RVA: 0x004C462C File Offset: 0x004C282C
+		// Token: 0x060245D9 RID: 148953 RVA: 0x004FF19C File Offset: 0x004FD39C
 		public static VectorOffset CreateOnEnterPollutionRangeActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -419,7 +419,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022640 RID: 140864 RVA: 0x004C4646 File Offset: 0x004C2846
+		// Token: 0x060245DA RID: 148954 RVA: 0x004FF1B6 File Offset: 0x004FD3B6
 		public static VectorOffset CreateOnEnterPollutionRangeActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -427,7 +427,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022641 RID: 140865 RVA: 0x004C4664 File Offset: 0x004C2864
+		// Token: 0x060245DB RID: 148955 RVA: 0x004FF1D4 File Offset: 0x004FD3D4
 		public static VectorOffset CreateOnEnterPollutionRangeActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -435,19 +435,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022642 RID: 140866 RVA: 0x004C467D File Offset: 0x004C287D
+		// Token: 0x060245DC RID: 148956 RVA: 0x004FF1ED File Offset: 0x004FD3ED
 		public static void StartOnEnterPollutionRangeActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022643 RID: 140867 RVA: 0x004C4688 File Offset: 0x004C2888
+		// Token: 0x060245DD RID: 148957 RVA: 0x004FF1F8 File Offset: 0x004FD3F8
 		public static void AddOnLeavePollutionRangeActions(FlatBufferBuilder builder, VectorOffset onLeavePollutionRangeActionsOffset)
 		{
 			builder.AddOffset(6, onLeavePollutionRangeActionsOffset.Value, 0);
 		}
 
-		// Token: 0x06022644 RID: 140868 RVA: 0x004C4698 File Offset: 0x004C2898
+		// Token: 0x060245DE RID: 148958 RVA: 0x004FF208 File Offset: 0x004FD408
 		public static VectorOffset CreateOnLeavePollutionRangeActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -458,7 +458,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022645 RID: 140869 RVA: 0x004C46D8 File Offset: 0x004C28D8
+		// Token: 0x060245DF RID: 148959 RVA: 0x004FF248 File Offset: 0x004FD448
 		public static VectorOffset CreateOnLeavePollutionRangeActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -466,7 +466,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022646 RID: 140870 RVA: 0x004C46F2 File Offset: 0x004C28F2
+		// Token: 0x060245E0 RID: 148960 RVA: 0x004FF262 File Offset: 0x004FD462
 		public static VectorOffset CreateOnLeavePollutionRangeActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -474,7 +474,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022647 RID: 140871 RVA: 0x004C4710 File Offset: 0x004C2910
+		// Token: 0x060245E1 RID: 148961 RVA: 0x004FF280 File Offset: 0x004FD480
 		public static VectorOffset CreateOnLeavePollutionRangeActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -482,31 +482,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022648 RID: 140872 RVA: 0x004C4729 File Offset: 0x004C2929
+		// Token: 0x060245E2 RID: 148962 RVA: 0x004FF299 File Offset: 0x004FD499
 		public static void StartOnLeavePollutionRangeActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022649 RID: 140873 RVA: 0x004C4734 File Offset: 0x004C2934
+		// Token: 0x060245E3 RID: 148963 RVA: 0x004FF2A4 File Offset: 0x004FD4A4
 		public static void AddBakeData(FlatBufferBuilder builder, StringOffset bakeDataOffset)
 		{
 			builder.AddOffset(7, bakeDataOffset.Value, 0);
 		}
 
-		// Token: 0x0602264A RID: 140874 RVA: 0x004C4744 File Offset: 0x004C2944
+		// Token: 0x060245E4 RID: 148964 RVA: 0x004FF2B4 File Offset: 0x004FD4B4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x0602264B RID: 140875 RVA: 0x004C474F File Offset: 0x004C294F
+		// Token: 0x060245E5 RID: 148965 RVA: 0x004FF2BF File Offset: 0x004FD4BF
 		public static Offset<IFlowerPollutionComponent> EndIFlowerPollutionComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowerPollutionComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602264C RID: 140876 RVA: 0x004C475C File Offset: 0x004C295C
+		// Token: 0x060245E6 RID: 148966 RVA: 0x004FF2CC File Offset: 0x004FD4CC
 		public IFlowerPollutionComponentT UnPack()
 		{
 			IFlowerPollutionComponentT flowerPollutionComponentT = new IFlowerPollutionComponentT();
@@ -514,7 +514,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return flowerPollutionComponentT;
 		}
 
-		// Token: 0x0602264D RID: 140877 RVA: 0x004C4778 File Offset: 0x004C2978
+		// Token: 0x060245E7 RID: 148967 RVA: 0x004FF2E8 File Offset: 0x004FD4E8
 		public void UnPackTo(IFlowerPollutionComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -544,7 +544,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602264E RID: 140878 RVA: 0x004C4924 File Offset: 0x004C2B24
+		// Token: 0x060245E8 RID: 148968 RVA: 0x004FF494 File Offset: 0x004FD694
 		public static Offset<IFlowerPollutionComponent> Pack(FlatBufferBuilder builder, IFlowerPollutionComponentT _o)
 		{
 			if (_o == null)
@@ -589,7 +589,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFlowerPollutionComponent.CreateIFlowerPollutionComponent(builder, _o.Disabled, splineConfigsOffset, pointLightConfigOffset, obstacleEntityIdsOffset, pollutionSourceEntityIdsOffset, onEnterPollutionRangeActionsOffset, onLeavePollutionRangeActionsOffset, bakeDataOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E3DF RID: 58335
+		// Token: 0x0400EFE6 RID: 61414
 		private Table __p;
 	}
 }

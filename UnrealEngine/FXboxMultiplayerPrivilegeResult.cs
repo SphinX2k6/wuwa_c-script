@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F18 RID: 7960
+	// Token: 0x02000622 RID: 1570
 	[UnrealObjectPath("/Script/KuroUtility.XboxMultiplayerPrivilegeResult")]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 12)]
 	public class FXboxMultiplayerPrivilegeResult : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E346 RID: 123718 RVA: 0x002CE775 File Offset: 0x002CC975
+		// Token: 0x06008956 RID: 35158 RVA: 0x000CF232 File Offset: 0x000CD432
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxMultiplayerPrivilegeResult._ScriptStructPtr != 0) ? FXboxMultiplayerPrivilegeResult._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxMultiplayerPrivilegeResult", ref FXboxMultiplayerPrivilegeResult._ScriptStructPtr);
 		}
 
-		// Token: 0x170077F6 RID: 30710
-		// (get) Token: 0x0601E347 RID: 123719 RVA: 0x002CE799 File Offset: 0x002CC999
-		// (set) Token: 0x0601E348 RID: 123720 RVA: 0x002CE7A9 File Offset: 0x002CC9A9
+		// Token: 0x170019A1 RID: 6561
+		// (get) Token: 0x06008957 RID: 35159 RVA: 0x000CF256 File Offset: 0x000CD456
+		// (set) Token: 0x06008958 RID: 35160 RVA: 0x000CF266 File Offset: 0x000CD466
 		public unsafe bool bHasPrivilege
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077F7 RID: 30711
-		// (get) Token: 0x0601E349 RID: 123721 RVA: 0x002CE7BA File Offset: 0x002CC9BA
-		// (set) Token: 0x0601E34A RID: 123722 RVA: 0x002CE7CA File Offset: 0x002CC9CA
+		// Token: 0x170019A2 RID: 6562
+		// (get) Token: 0x06008959 RID: 35161 RVA: 0x000CF277 File Offset: 0x000CD477
+		// (set) Token: 0x0600895A RID: 35162 RVA: 0x000CF287 File Offset: 0x000CD487
 		public unsafe int HResult
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077F8 RID: 30712
-		// (get) Token: 0x0601E34B RID: 123723 RVA: 0x002CE7DB File Offset: 0x002CC9DB
-		// (set) Token: 0x0601E34C RID: 123724 RVA: 0x002CE7EB File Offset: 0x002CC9EB
+		// Token: 0x170019A3 RID: 6563
+		// (get) Token: 0x0600895B RID: 35163 RVA: 0x000CF298 File Offset: 0x000CD498
+		// (set) Token: 0x0600895C RID: 35164 RVA: 0x000CF2A8 File Offset: 0x000CD4A8
 		public unsafe int DenyReason
 		{
 			get
@@ -61,64 +61,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E34D RID: 123725 RVA: 0x002CE7FC File Offset: 0x002CC9FC
+		// Token: 0x0600895D RID: 35165 RVA: 0x000CF2B9 File Offset: 0x000CD4B9
 		public FXboxMultiplayerPrivilegeResult()
 		{
 		}
 
-		// Token: 0x0601E34E RID: 123726 RVA: 0x002CE804 File Offset: 0x002CCA04
-		public FXboxMultiplayerPrivilegeResult(bool bHasPrivilege, int HResult, int DenyReason)
-		{
-			this.bHasPrivilege = bHasPrivilege;
-			this.HResult = HResult;
-			this.DenyReason = DenyReason;
-		}
-
-		// Token: 0x0601E34F RID: 123727 RVA: 0x002CE821 File Offset: 0x002CCA21
+		// Token: 0x0600895E RID: 35166 RVA: 0x000CF2C1 File Offset: 0x000CD4C1
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxMultiplayerPrivilegeResult.StaticStruct();
 		}
 
-		// Token: 0x0601E350 RID: 123728 RVA: 0x002CE82D File Offset: 0x002CCA2D
+		// Token: 0x0600895F RID: 35167 RVA: 0x000CF2CD File Offset: 0x000CD4CD
 		[NullableContext(2)]
 		public FXboxMultiplayerPrivilegeResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E351 RID: 123729 RVA: 0x002CE837 File Offset: 0x002CCA37
+		// Token: 0x06008960 RID: 35168 RVA: 0x000CF2D7 File Offset: 0x000CD4D7
 		public FXboxMultiplayerPrivilegeResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E352 RID: 123730 RVA: 0x002CE842 File Offset: 0x002CCA42
+		// Token: 0x06008961 RID: 35169 RVA: 0x000CF2E2 File Offset: 0x000CD4E2
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxMultiplayerPrivilegeResult(Pointer, false, true);
 		}
 
-		// Token: 0x0601E353 RID: 123731 RVA: 0x002CE84C File Offset: 0x002CCA4C
+		// Token: 0x06008962 RID: 35170 RVA: 0x000CF2EC File Offset: 0x000CD4EC
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxMultiplayerPrivilegeResult(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104D7 RID: 66775
+		// Token: 0x04003B9B RID: 15259
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.XboxMultiplayerPrivilegeResult";
 
-		// Token: 0x040104D8 RID: 66776
+		// Token: 0x04003B9C RID: 15260
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104D9 RID: 66777
+		// Token: 0x04003B9D RID: 15261
 		internal static int __PropertyOffset_bHasPrivilege;
 
-		// Token: 0x040104DA RID: 66778
+		// Token: 0x04003B9E RID: 15262
 		internal static int __PropertyOffset_HResult;
 
-		// Token: 0x040104DB RID: 66779
+		// Token: 0x04003B9F RID: 15263
 		internal static int __PropertyOffset_DenyReason;
 	}
 }

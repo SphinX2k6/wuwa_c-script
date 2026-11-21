@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RecallQuest.Views
 {
-	// Token: 0x02004F1A RID: 20250
+	// Token: 0x02003EE3 RID: 16099
 	public class RecallFunctionItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06033EBE RID: 212670 RVA: 0x00C2B304 File Offset: 0x00C29504
+		// Token: 0x06028D29 RID: 167209 RVA: 0x00B74978 File Offset: 0x00B72B78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033EBF RID: 212671 RVA: 0x00C2B3EC File Offset: 0x00C295EC
+		// Token: 0x06028D2A RID: 167210 RVA: 0x00B74A60 File Offset: 0x00B72C60
 		private void ButtonClick()
 		{
 			if (this.FunctionId != 0)
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			}
 		}
 
-		// Token: 0x06033EC0 RID: 212672 RVA: 0x00C2B406 File Offset: 0x00C29606
+		// Token: 0x06028D2B RID: 167211 RVA: 0x00B74A7A File Offset: 0x00B72C7A
 		public override void Refresh(int recallFunctionId, bool isSelected, int gridIndex)
 		{
 			this.UpdateItem(recallFunctionId);
 		}
 
-		// Token: 0x06033EC1 RID: 212673 RVA: 0x00C2B410 File Offset: 0x00C29610
+		// Token: 0x06028D2C RID: 167212 RVA: 0x00B74A84 File Offset: 0x00B72C84
 		public void UpdateItem(int recallFunctionId)
 		{
 			this.FunctionId = RecallQuestConfig.Instance.GetRecallFunctionConfig(recallFunctionId).Value.FunctionId;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x06033EC2 RID: 212674 RVA: 0x00C2B4C2 File Offset: 0x00C296C2
+		// Token: 0x06028D2D RID: 167213 RVA: 0x00B74B36 File Offset: 0x00B72D36
 		protected override void OnBeforeDestroy()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -78,22 +78,22 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			button.OnPointExitCallBack.Unbind();
 		}
 
-		// Token: 0x0401B976 RID: 113014
+		// Token: 0x04016349 RID: 90953
 		protected int FunctionId;
 
-		// Token: 0x0200B061 RID: 45153
+		// Token: 0x02009A91 RID: 39569
 		private class EFunctionItemDefine
 		{
-			// Token: 0x0403586E RID: 219246
+			// Token: 0x04030299 RID: 197273
 			public const int FunctionName = 0;
 
-			// Token: 0x0403586F RID: 219247
+			// Token: 0x0403029A RID: 197274
 			public const int Button = 1;
 
-			// Token: 0x04035870 RID: 219248
+			// Token: 0x0403029B RID: 197275
 			public const int IconSpriteTransition = 2;
 
-			// Token: 0x04035871 RID: 219249
+			// Token: 0x0403029C RID: 197276
 			public const int RedDotItem = 3;
 		}
 	}

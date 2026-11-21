@@ -6,94 +6,79 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001919 RID: 6425
+	// Token: 0x02000407 RID: 1031
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroTransportNetworkSubsystem")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class UKuroTransportNetworkSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017D6B RID: 97643 RVA: 0x0022E9A2 File Offset: 0x0022CBA2
+		// Token: 0x060064E4 RID: 25828 RVA: 0x0008FFD1 File Offset: 0x0008E1D1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroTransportNetworkSubsystem._ClassPtr;
 		}
 
-		// Token: 0x06017D6C RID: 97644 RVA: 0x0022E9B0 File Offset: 0x0022CBB0
+		// Token: 0x060064E5 RID: 25829 RVA: 0x0008FFE0 File Offset: 0x0008E1E0
 		public UKuroTransportNetworkSubsystem() : this(BuiltinUtils.AllocNativeUObject(UKuroTransportNetworkSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017D6D RID: 97645 RVA: 0x0022E9D8 File Offset: 0x0022CBD8
+		// Token: 0x060064E6 RID: 25830 RVA: 0x00090008 File Offset: 0x0008E208
 		[NullableContext(1)]
 		public UKuroTransportNetworkSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroTransportNetworkSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FD3 RID: 24531
-		// (get) Token: 0x06017D6E RID: 97646 RVA: 0x0022EA0B File Offset: 0x0022CC0B
-		// (set) Token: 0x06017D6F RID: 97647 RVA: 0x0022EA1F File Offset: 0x0022CC1F
-		public unsafe ATransportNetwork TransportNetwork
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ATransportNetwork>(base.NativePtr / (IntPtr)sizeof(void*) + UKuroTransportNetworkSubsystem.__PropertyOffset_TransportNetwork);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UKuroTransportNetworkSubsystem.__PropertyOffset_TransportNetwork, value);
-			}
-		}
-
-		// Token: 0x06017D70 RID: 97648 RVA: 0x0022EA34 File Offset: 0x0022CC34
+		// Token: 0x060064E7 RID: 25831 RVA: 0x0009003B File Offset: 0x0008E23B
 		public void SetRoadwayEnable(TArray<int> RoadwayIds, bool bEnable)
 		{
 			UKuroTransportNetworkSubsystem.__SetRoadwayEnable_Internal(base.NativePtr, (RoadwayIds ?? new TArray<int>()).NativePtr, bEnable);
 		}
 
-		// Token: 0x06017D71 RID: 97649 RVA: 0x0022EA51 File Offset: 0x0022CC51
+		// Token: 0x060064E8 RID: 25832 RVA: 0x00090058 File Offset: 0x0008E258
 		public void InitTransportNetwork()
 		{
 			UKuroTransportNetworkSubsystem.__InitTransportNetwork_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017D72 RID: 97650 RVA: 0x0022EA5E File Offset: 0x0022CC5E
+		// Token: 0x060064E9 RID: 25833 RVA: 0x00090065 File Offset: 0x0008E265
 		public bool GetRoadwaysAtSameIntersection(int InstersectionId, ref TArray<int> OutputRoads)
 		{
 			return UKuroTransportNetworkSubsystem.__GetRoadwaysAtSameIntersection_Internal(base.NativePtr, InstersectionId, (OutputRoads ?? new TArray<int>()).NativePtr);
 		}
 
-		// Token: 0x06017D73 RID: 97651 RVA: 0x0022EA7C File Offset: 0x0022CC7C
+		// Token: 0x060064EA RID: 25834 RVA: 0x00090083 File Offset: 0x0008E283
 		public UKuroRoadwayIntersection GetRoadWayIntersection(int RoadwayId)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroRoadwayIntersection>(UKuroTransportNetworkSubsystem.__GetRoadWayIntersection_Internal(base.NativePtr, RoadwayId));
 		}
 
-		// Token: 0x06017D74 RID: 97652 RVA: 0x0022EA8F File Offset: 0x0022CC8F
+		// Token: 0x060064EB RID: 25835 RVA: 0x00090096 File Offset: 0x0008E296
 		public UKuroRoadway GetRoadWay(int RoadwayId)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroRoadway>(UKuroTransportNetworkSubsystem.__GetRoadWay_Internal(base.NativePtr, RoadwayId));
 		}
 
-		// Token: 0x06017D75 RID: 97653 RVA: 0x0022EAA2 File Offset: 0x0022CCA2
+		// Token: 0x060064EC RID: 25836 RVA: 0x000900A9 File Offset: 0x0008E2A9
 		public int GetIntersectionId(int RoadwayId)
 		{
 			return UKuroTransportNetworkSubsystem.__GetIntersectionId_Internal(base.NativePtr, RoadwayId);
 		}
 
-		// Token: 0x06017D76 RID: 97654 RVA: 0x0022EAB0 File Offset: 0x0022CCB0
+		// Token: 0x060064ED RID: 25837 RVA: 0x000900B7 File Offset: 0x0008E2B7
 		public bool GetCrossingRoads(int RoadwayId, ref TArray<int> OutputCrossingRoads)
 		{
 			return UKuroTransportNetworkSubsystem.__GetCrossingRoads_Internal(base.NativePtr, RoadwayId, (OutputCrossingRoads ?? new TArray<int>()).NativePtr);
 		}
 
-		// Token: 0x06017D77 RID: 97655 RVA: 0x0022EACE File Offset: 0x0022CCCE
+		// Token: 0x060064EE RID: 25838 RVA: 0x000900D5 File Offset: 0x0008E2D5
 		public UAutopilotRoute GetAssembleAutopilotRoute(TArray<int> RoadwayIds, bool bClosedLoop = true, bool bDebugDraw = false, float DebugLifeTime = 60f)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UAutopilotRoute>(UKuroTransportNetworkSubsystem.__GetAssembleAutopilotRoute_Internal(base.NativePtr, (RoadwayIds ?? new TArray<int>()).NativePtr, bClosedLoop, bDebugDraw, DebugLifeTime));
 		}
 
-		// Token: 0x06017D78 RID: 97656 RVA: 0x0022EAF4 File Offset: 0x0022CCF4
+		// Token: 0x060064EF RID: 25839 RVA: 0x000900FC File Offset: 0x0008E2FC
 		public unsafe UKuroRoadway D_GetNearestRoadwayAtWorldPosition(FVectorDouble WorldPosition, ref FVectorDouble OutputNearestPosition, ref float OutputNearestPointKey, ref float OutputDistance, bool bForAutopilot = true, int MaxSearExtent = 5000)
 		{
 			fixed (FVectorDouble* ptr = &OutputNearestPosition)
@@ -111,7 +96,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017D79 RID: 97657 RVA: 0x0022EB30 File Offset: 0x0022CD30
+		// Token: 0x060064F0 RID: 25840 RVA: 0x00090138 File Offset: 0x0008E338
 		public unsafe float D_FindPathForAutopilotRoute(FVectorDouble Source, FVectorDouble Destination, ref FVectorDouble RoadStartPoint, ref FVectorDouble RoadEndPoint, [Nullable(new byte[]
 		{
 			2,
@@ -129,7 +114,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017D7A RID: 97658 RVA: 0x0022EB70 File Offset: 0x0022CD70
+		// Token: 0x060064F1 RID: 25841 RVA: 0x00090178 File Offset: 0x0008E378
 		public unsafe void D_FindPath(FVectorDouble Source, FVectorDouble Destination, ref FVectorDouble RoadStartPoint, ref FVectorDouble RoadEndPoint, [Nullable(new byte[]
 		{
 			2,
@@ -148,92 +133,89 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017D7B RID: 97659 RVA: 0x0022EBB3 File Offset: 0x0022CDB3
+		// Token: 0x060064F2 RID: 25842 RVA: 0x000901BB File Offset: 0x0008E3BB
 		public void CleanUpTransportNetwork()
 		{
 			UKuroTransportNetworkSubsystem.__CleanUpTransportNetwork_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06017D7C RID: 97660 RVA: 0x0022EBC0 File Offset: 0x0022CDC0
+		// Token: 0x060064F3 RID: 25843 RVA: 0x000901C8 File Offset: 0x0008E3C8
 		public void AddRoadwayData(ref FRoadwayCreateParam Param)
 		{
 			UKuroTransportNetworkSubsystem.__AddRoadwayData_Internal(base.NativePtr, (Param ?? new FRoadwayCreateParam()).NativePtr);
 		}
 
-		// Token: 0x06017D7D RID: 97661
+		// Token: 0x060064F4 RID: 25844
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRoadwayEnable_Internal(IntPtr @this, IntPtr RoadwayIds, bool bEnable);
 
-		// Token: 0x06017D7E RID: 97662
+		// Token: 0x060064F5 RID: 25845
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitTransportNetwork_Internal(IntPtr @this);
 
-		// Token: 0x06017D7F RID: 97663
+		// Token: 0x060064F6 RID: 25846
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetRoadwaysAtSameIntersection_Internal(IntPtr @this, int InstersectionId, IntPtr OutputRoads);
 
-		// Token: 0x06017D80 RID: 97664
+		// Token: 0x060064F7 RID: 25847
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRoadWayIntersection_Internal(IntPtr @this, int RoadwayId);
 
-		// Token: 0x06017D81 RID: 97665
+		// Token: 0x060064F8 RID: 25848
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRoadWay_Internal(IntPtr @this, int RoadwayId);
 
-		// Token: 0x06017D82 RID: 97666
+		// Token: 0x060064F9 RID: 25849
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetIntersectionId_Internal(IntPtr @this, int RoadwayId);
 
-		// Token: 0x06017D83 RID: 97667
+		// Token: 0x060064FA RID: 25850
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetCrossingRoads_Internal(IntPtr @this, int RoadwayId, IntPtr OutputCrossingRoads);
 
-		// Token: 0x06017D84 RID: 97668
+		// Token: 0x060064FB RID: 25851
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetAssembleAutopilotRoute_Internal(IntPtr @this, IntPtr RoadwayIds, bool bClosedLoop, bool bDebugDraw, float DebugLifeTime);
 
-		// Token: 0x06017D85 RID: 97669
+		// Token: 0x060064FC RID: 25852
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __D_GetNearestRoadwayAtWorldPosition_Internal(IntPtr @this, FVectorDouble WorldPosition, ref FVectorDouble OutputNearestPosition, ref float OutputNearestPointKey, ref float OutputDistance, bool bForAutopilot, int MaxSearExtent);
 
-		// Token: 0x06017D86 RID: 97670
+		// Token: 0x060064FD RID: 25853
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __D_FindPathForAutopilotRoute_Internal(IntPtr @this, FVectorDouble Source, FVectorDouble Destination, ref FVectorDouble RoadStartPoint, ref FVectorDouble RoadEndPoint, IntPtr OutputPaths, bool bDebugDraw, float DebugLifeTime);
 
-		// Token: 0x06017D87 RID: 97671
+		// Token: 0x060064FE RID: 25854
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_FindPath_Internal(IntPtr @this, FVectorDouble Source, FVectorDouble Destination, ref FVectorDouble RoadStartPoint, ref FVectorDouble RoadEndPoint, IntPtr OutputPaths, bool bDebugDraw, float DebugLifeTime);
 
-		// Token: 0x06017D88 RID: 97672
+		// Token: 0x060064FF RID: 25855
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CleanUpTransportNetwork_Internal(IntPtr @this);
 
-		// Token: 0x06017D89 RID: 97673
+		// Token: 0x06006500 RID: 25856
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddRoadwayData_Internal(IntPtr @this, IntPtr Param);
 
-		// Token: 0x06017D8A RID: 97674 RVA: 0x0022EBDD File Offset: 0x0022CDDD
+		// Token: 0x06006501 RID: 25857 RVA: 0x000901E5 File Offset: 0x0008E3E5
 		static UKuroTransportNetworkSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroTransportNetworkSubsystem");
 		}
 
-		// Token: 0x06017D8B RID: 97675 RVA: 0x0022EBEB File Offset: 0x0022CDEB
+		// Token: 0x06006502 RID: 25858 RVA: 0x000901F3 File Offset: 0x0008E3F3
 		protected UKuroTransportNetworkSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CEB9 RID: 52921
+		// Token: 0x04002A80 RID: 10880
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroTransportNetworkSubsystem";
 
-		// Token: 0x0400CEBA RID: 52922
+		// Token: 0x04002A81 RID: 10881
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CEBB RID: 52923
+		// Token: 0x04002A82 RID: 10882
 		private static IntPtr _ClassDefaultObjectPtr;
-
-		// Token: 0x0400CEBC RID: 52924
-		internal static int __PropertyOffset_TransportNetwork;
 	}
 }

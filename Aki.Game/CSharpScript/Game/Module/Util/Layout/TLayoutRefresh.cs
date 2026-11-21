@@ -4,8 +4,8 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util.Layout
 {
-	// Token: 0x020048E4 RID: 18660
-	// (Invoke) Token: 0x06030C93 RID: 199827
+	// Token: 0x0200385B RID: 14427
+	// (Invoke) Token: 0x060257C0 RID: 153536
 	[return: Nullable(new byte[]
 	{
 		2,

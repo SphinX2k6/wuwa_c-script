@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F76 RID: 3958
+	// Token: 0x0200105D RID: 4189
 	public struct QuestReviewTree : IFlatbufferObject
 	{
-		// Token: 0x17002BE3 RID: 11235
-		// (get) Token: 0x0600B61B RID: 46619 RVA: 0x002D0D54 File Offset: 0x002CEF54
+		// Token: 0x17002C5B RID: 11355
+		// (get) Token: 0x0600BC58 RID: 48216 RVA: 0x002ED8F0 File Offset: 0x002EBAF0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B61C RID: 46620 RVA: 0x002D0D61 File Offset: 0x002CEF61
+		// Token: 0x0600BC59 RID: 48217 RVA: 0x002ED8FD File Offset: 0x002EBAFD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B61D RID: 46621 RVA: 0x002D0D68 File Offset: 0x002CEF68
+		// Token: 0x0600BC5A RID: 48218 RVA: 0x002ED904 File Offset: 0x002EBB04
 		public static QuestReviewTree GetRootAsQuestReviewTree(ByteBuffer _bb)
 		{
 			return QuestReviewTree.GetRootAsQuestReviewTree(_bb, default(QuestReviewTree));
 		}
 
-		// Token: 0x0600B61E RID: 46622 RVA: 0x002D0D84 File Offset: 0x002CEF84
+		// Token: 0x0600BC5B RID: 48219 RVA: 0x002ED920 File Offset: 0x002EBB20
 		public static QuestReviewTree GetRootAsQuestReviewTree(ByteBuffer _bb, QuestReviewTree obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B61F RID: 46623 RVA: 0x002D0DA1 File Offset: 0x002CEFA1
+		// Token: 0x0600BC5C RID: 48220 RVA: 0x002ED93D File Offset: 0x002EBB3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B620 RID: 46624 RVA: 0x002D0DB0 File Offset: 0x002CEFB0
+		// Token: 0x0600BC5D RID: 48221 RVA: 0x002ED94C File Offset: 0x002EBB4C
 		public QuestReviewTree __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002BE4 RID: 11236
-		// (get) Token: 0x0600B621 RID: 46625 RVA: 0x002D0DC0 File Offset: 0x002CEFC0
+		// Token: 0x17002C5C RID: 11356
+		// (get) Token: 0x0600BC5E RID: 48222 RVA: 0x002ED95C File Offset: 0x002EBB5C
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B622 RID: 46626 RVA: 0x002D0DFC File Offset: 0x002CEFFC
+		// Token: 0x0600BC5F RID: 48223 RVA: 0x002ED998 File Offset: 0x002EBB98
 		public int QuestLines(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002BE5 RID: 11237
-		// (get) Token: 0x0600B623 RID: 46627 RVA: 0x002D0E3C File Offset: 0x002CF03C
+		// Token: 0x17002C5D RID: 11357
+		// (get) Token: 0x0600BC60 RID: 48224 RVA: 0x002ED9D8 File Offset: 0x002EBBD8
 		public int QuestLinesLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B624 RID: 46628 RVA: 0x002D0E67 File Offset: 0x002CF067
+		// Token: 0x0600BC61 RID: 48225 RVA: 0x002EDA03 File Offset: 0x002EBC03
 		public Span<int> GetQuestLinesBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600B625 RID: 46629 RVA: 0x002D0E76 File Offset: 0x002CF076
+		// Token: 0x0600BC62 RID: 48226 RVA: 0x002EDA12 File Offset: 0x002EBC12
 		public int[] GetQuestLinesArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600B626 RID: 46630 RVA: 0x002D0E90 File Offset: 0x002CF090
+		// Token: 0x0600BC63 RID: 48227 RVA: 0x002EDA29 File Offset: 0x002EBC29
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用QuestLinesIter()或GetQuestLinesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] QuestLines()
+		public int[] QuestLines()
 		{
-			QuestReviewTree questReviewTree = this;
-			return questReviewTree.GetQuestLinesArray() ?? Array.Empty<int>();
+			return this.GetQuestLinesArray();
 		}
 
-		// Token: 0x0600B627 RID: 46631 RVA: 0x002D0EB4 File Offset: 0x002CF0B4
+		// Token: 0x0600BC64 RID: 48228 RVA: 0x002EDA31 File Offset: 0x002EBC31
 		[NullableContext(1)]
-		public readonly IEnumerable<int> QuestLinesIter()
+		public IEnumerable<int> QuestLinesIter()
 		{
 			QuestReviewTree.<QuestLinesIter>d__16 <QuestLinesIter>d__ = new QuestReviewTree.<QuestLinesIter>d__16(-2);
 			<QuestLinesIter>d__.<>3__<>4__this = this;
 			return <QuestLinesIter>d__;
 		}
 
-		// Token: 0x04005044 RID: 20548
+		// Token: 0x0400562B RID: 22059
 		private Table __p;
 	}
 }

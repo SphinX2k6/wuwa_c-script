@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005450 RID: 21584
+	// Token: 0x020059D6 RID: 22998
 	public class IInteractEntityPartPrefabBindT
 	{
-		// Token: 0x17009EEA RID: 40682
-		// (get) Token: 0x06023809 RID: 145417 RVA: 0x004E9933 File Offset: 0x004E7B33
-		// (set) Token: 0x0602380A RID: 145418 RVA: 0x004E993B File Offset: 0x004E7B3B
+		// Token: 0x1700A724 RID: 42788
+		// (get) Token: 0x060258C1 RID: 153793 RVA: 0x005269A7 File Offset: 0x00524BA7
+		// (set) Token: 0x060258C2 RID: 153794 RVA: 0x005269AF File Offset: 0x00524BAF
 		public EInteractEntityPartBindType Type { get; set; }
 
-		// Token: 0x17009EEB RID: 40683
-		// (get) Token: 0x0602380B RID: 145419 RVA: 0x004E9944 File Offset: 0x004E7B44
-		// (set) Token: 0x0602380C RID: 145420 RVA: 0x004E994C File Offset: 0x004E7B4C
+		// Token: 0x1700A725 RID: 42789
+		// (get) Token: 0x060258C3 RID: 153795 RVA: 0x005269B8 File Offset: 0x00524BB8
+		// (set) Token: 0x060258C4 RID: 153796 RVA: 0x005269C0 File Offset: 0x00524BC0
 		public List<IInteractEntityPartPrefabOptionPointT> OptionPoints { get; set; }
 
-		// Token: 0x0602380D RID: 145421 RVA: 0x004E9955 File Offset: 0x004E7B55
+		// Token: 0x060258C5 RID: 153797 RVA: 0x005269C9 File Offset: 0x00524BC9
 		public IInteractEntityPartPrefabBindT()
 		{
 			this.Type = EInteractEntityPartBindType.Prefab;

@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C8D RID: 7309
+// Token: 0x0200114C RID: 4428
 [NullableContext(2)]
 [Nullable(0)]
 public class SpineRoleGachaPoolItem : GachaPoolItem
 {
-	// Token: 0x0600DC90 RID: 56464 RVA: 0x00337423 File Offset: 0x00335623
+	// Token: 0x0600B0A6 RID: 45222 RVA: 0x00342947 File Offset: 0x00340B47
 	public SpineRoleGachaPoolItem(GachaDefine.EGachaViewType gachaType) : base(gachaType)
 	{
 	}
 
-	// Token: 0x0600DC91 RID: 56465 RVA: 0x0033742C File Offset: 0x0033562C
+	// Token: 0x0600B0A7 RID: 45223 RVA: 0x00342950 File Offset: 0x00340B50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DC92 RID: 56466 RVA: 0x003374B8 File Offset: 0x003356B8
+	// Token: 0x0600B0A8 RID: 45224 RVA: 0x003429DC File Offset: 0x00340BDC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpineRoleGachaPoolItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC93 RID: 56467 RVA: 0x003374FC File Offset: 0x003356FC
+	// Token: 0x0600B0A9 RID: 45225 RVA: 0x00342A20 File Offset: 0x00340C20
 	private UniTask AddDesc()
 	{
 		SpineRoleGachaPoolItem.<AddDesc>d__5 <AddDesc>d__;
@@ -56,7 +56,7 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		return <AddDesc>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC94 RID: 56468 RVA: 0x00337540 File Offset: 0x00335740
+	// Token: 0x0600B0AA RID: 45226 RVA: 0x00342A64 File Offset: 0x00340C64
 	private UniTask AddButton()
 	{
 		SpineRoleGachaPoolItem.<AddButton>d__6 <AddButton>d__;
@@ -67,7 +67,7 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		return <AddButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC95 RID: 56469 RVA: 0x00337584 File Offset: 0x00335784
+	// Token: 0x0600B0AB RID: 45227 RVA: 0x00342AA8 File Offset: 0x00340CA8
 	public override void Refresh()
 	{
 		if (this.GachaViewInfo == null)
@@ -90,19 +90,19 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		buttonFunctionComponent.SetUiActive(this.GachaViewInfo.Value.JumpId > 0 || (this.GachaViewInfo.Value.TrialActivityId > 0 && flag));
 	}
 
-	// Token: 0x0600DC96 RID: 56470 RVA: 0x0033767B File Offset: 0x0033587B
+	// Token: 0x0600B0AC RID: 45228 RVA: 0x00342B9F File Offset: 0x00340D9F
 	public void SetDescUiActive(bool bActive)
 	{
 		this.DescComponent.SetUiActive(bActive);
 	}
 
-	// Token: 0x0600DC97 RID: 56471 RVA: 0x00337689 File Offset: 0x00335889
+	// Token: 0x0600B0AD RID: 45229 RVA: 0x00342BAD File Offset: 0x00340DAD
 	public void RefreshAnimation()
 	{
 		base.GetSpine(2).SetAnimation(0, EDreamLinkSpineDefine.Idle.ToString(), true);
 	}
 
-	// Token: 0x0600DC98 RID: 56472 RVA: 0x003376AC File Offset: 0x003358AC
+	// Token: 0x0600B0AE RID: 45230 RVA: 0x00342BD0 File Offset: 0x00340DD0
 	private void OnSkipButtonClick()
 	{
 		if (this.GachaViewInfo.Value.JumpId > 0)
@@ -122,9 +122,9 @@ public class SpineRoleGachaPoolItem : GachaPoolItem
 		LogReportController.Instance.LogReport(onClickGachaTryRoleLogEvent);
 	}
 
-	// Token: 0x0400652A RID: 25898
+	// Token: 0x040065FC RID: 26108
 	private RoleDescribeComponent DescComponent;
 
-	// Token: 0x0400652B RID: 25899
+	// Token: 0x040065FD RID: 26109
 	private ButtonFunctionComponent ButtonFunctionComponent;
 }

@@ -4,26 +4,26 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.KuroSimpleCombat.PB
 {
-	// Token: 0x02006FBE RID: 28606
+	// Token: 0x0200613F RID: 24895
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleLaunchDirectionController
 	{
-		// Token: 0x0604583D RID: 284733 RVA: 0x0113FA32 File Offset: 0x0113DC32
+		// Token: 0x0603B9ED RID: 244205 RVA: 0x010E9802 File Offset: 0x010E7A02
 		public void Init(PinballBattleLaunchDirectionItem directionItem)
 		{
 			this.DirectionItem = directionItem;
 			this.DirectionActor = directionItem.GetRootActor();
 		}
 
-		// Token: 0x0604583E RID: 284734 RVA: 0x0113FA47 File Offset: 0x0113DC47
+		// Token: 0x0603B9EE RID: 244206 RVA: 0x010E9817 File Offset: 0x010E7A17
 		public void Destroy()
 		{
 			this.DirectionItem = null;
 			this.DirectionActor = null;
 		}
 
-		// Token: 0x0604583F RID: 284735 RVA: 0x0113FA58 File Offset: 0x0113DC58
+		// Token: 0x0603B9EF RID: 244207 RVA: 0x010E9828 File Offset: 0x010E7A28
 		[NullableContext(2)]
 		public void Update(AKSC_Shape2D_Entity_Bar leftBar, AKSC_Shape2D_Entity_Bar rightBar)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			this.ShowLaunchDirection(true, new FVector?(aksc_Shape2D_Entity_Bar.LaunchStartPoint), aksc_Shape2D_Entity_Bar.LaunchRotation);
 		}
 
-		// Token: 0x06045840 RID: 284736 RVA: 0x0113FAB4 File Offset: 0x0113DCB4
+		// Token: 0x0603B9F0 RID: 244208 RVA: 0x010E9884 File Offset: 0x010E7A84
 		private void ShowLaunchDirection(bool isShow, FVector? location = null, float rotation = 0f)
 		{
 			if (isShow && location != null)
@@ -84,21 +84,21 @@ namespace CSharpScript.Game.KuroSimpleCombat.PB
 			}
 		}
 
-		// Token: 0x04024463 RID: 148579
+		// Token: 0x0401F718 RID: 128792
 		[Nullable(2)]
 		private PinballBattleLaunchDirectionItem DirectionItem;
 
-		// Token: 0x04024464 RID: 148580
+		// Token: 0x0401F719 RID: 128793
 		[Nullable(2)]
 		private AActor DirectionActor;
 
-		// Token: 0x04024465 RID: 148581
+		// Token: 0x0401F71A RID: 128794
 		private bool IsShowLaunchDirection;
 
-		// Token: 0x04024466 RID: 148582
+		// Token: 0x0401F71B RID: 128795
 		private readonly Rotator Rotation = Rotator.Create(0f, 0f, 0f);
 
-		// Token: 0x04024467 RID: 148583
+		// Token: 0x0401F71C RID: 128796
 		[StaticVariableRuleIgnore]
 		private static readonly Stat UpdateStat = Stat.Create("PinballBattleLaunchDirectionController.Update", "", "");
 	}

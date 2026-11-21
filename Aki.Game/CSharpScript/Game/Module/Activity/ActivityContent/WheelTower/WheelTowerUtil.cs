@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F4F RID: 24399
+	// Token: 0x02004F36 RID: 20278
 	public static class WheelTowerUtil
 	{
-		// Token: 0x0603DFE0 RID: 253920 RVA: 0x00EF5E0C File Offset: 0x00EF400C
+		// Token: 0x06032F7B RID: 208763 RVA: 0x00E47B38 File Offset: 0x00E45D38
 		public static NewTowerMedal? GetLastMedalConfigByGroupId(int groupId)
 		{
 			IReadOnlyList<NewTowerMedal> medalConfigListByGroupId = WheelTowerConfig.Instance.GetMedalConfigListByGroupId(groupId);

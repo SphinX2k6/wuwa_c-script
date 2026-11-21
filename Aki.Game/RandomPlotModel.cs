@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200273F RID: 10047
+// Token: 0x02001C2A RID: 7210
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RandomPlotModel : ModelBase
 {
-	// Token: 0x17001AFD RID: 6909
-	// (get) Token: 0x060149CC RID: 84428 RVA: 0x005376D4 File Offset: 0x005358D4
+	// Token: 0x17001B35 RID: 6965
+	// (get) Token: 0x06011EAE RID: 73390 RVA: 0x005463E0 File Offset: 0x005445E0
 	public static RandomPlotModel Instance
 	{
 		get
@@ -18,7 +18,7 @@ public class RandomPlotModel : ModelBase
 		}
 	}
 
-	// Token: 0x060149CD RID: 84429 RVA: 0x005376DB File Offset: 0x005358DB
+	// Token: 0x06011EAF RID: 73391 RVA: 0x005463E7 File Offset: 0x005445E7
 	public static RandomPlotModel GetOrCreateInstance()
 	{
 		if (RandomPlotModel._Instance == null)
@@ -28,7 +28,7 @@ public class RandomPlotModel : ModelBase
 		return RandomPlotModel._Instance;
 	}
 
-	// Token: 0x060149CE RID: 84430 RVA: 0x005376EF File Offset: 0x005358EF
+	// Token: 0x06011EB0 RID: 73392 RVA: 0x005463FB File Offset: 0x005445FB
 	public static bool CreateInstance()
 	{
 		if (RandomPlotModel._Instance != null)
@@ -39,30 +39,30 @@ public class RandomPlotModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060149CF RID: 84431 RVA: 0x00537705 File Offset: 0x00535905
+	// Token: 0x06011EB1 RID: 73393 RVA: 0x00546411 File Offset: 0x00544611
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060149D0 RID: 84432 RVA: 0x00537707 File Offset: 0x00535907
+	// Token: 0x06011EB2 RID: 73394 RVA: 0x00546413 File Offset: 0x00544613
 	public static void ResetStaticDefaultValue()
 	{
 		RandomPlotModel._Instance = null;
 	}
 
-	// Token: 0x060149D1 RID: 84433 RVA: 0x0053770F File Offset: 0x0053590F
+	// Token: 0x06011EB3 RID: 73395 RVA: 0x0054641B File Offset: 0x0054461B
 	static RandomPlotModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RandomPlotModel.CreateStaticDefaultValue), new Action(RandomPlotModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009ADC RID: 39644
+	// Token: 0x04009C34 RID: 39988
 	public Dictionary<int, RandomPlotItem> RandomPlotMap = new Dictionary<int, RandomPlotItem>();
 
-	// Token: 0x04009ADD RID: 39645
+	// Token: 0x04009C35 RID: 39989
 	public Dictionary<int, int[]> InstanceTriggerGroupMap = new Dictionary<int, int[]>();
 
-	// Token: 0x04009ADE RID: 39646
+	// Token: 0x04009C36 RID: 39990
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,7 +70,7 @@ public class RandomPlotModel : ModelBase
 	})]
 	public Dictionary<int, IRandomPlotCondition> InstanceConditionMap;
 
-	// Token: 0x04009ADF RID: 39647
+	// Token: 0x04009C37 RID: 39991
 	[Nullable(2)]
 	private static RandomPlotModel _Instance;
 }

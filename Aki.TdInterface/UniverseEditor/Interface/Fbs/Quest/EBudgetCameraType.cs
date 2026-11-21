@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C91 RID: 15505
+	// Token: 0x020040A3 RID: 16547
 	public enum EBudgetCameraType : byte
 	{
-		// Token: 0x0400B315 RID: 45845
+		// Token: 0x0400BCAC RID: 48300
 		Role
 	}
 }

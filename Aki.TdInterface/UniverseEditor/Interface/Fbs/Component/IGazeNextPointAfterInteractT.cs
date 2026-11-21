@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052F2 RID: 21234
+	// Token: 0x02005875 RID: 22645
 	public class IGazeNextPointAfterInteractT
 	{
-		// Token: 0x17009BD9 RID: 39897
-		// (get) Token: 0x06022AB2 RID: 142002 RVA: 0x004CE1DF File Offset: 0x004CC3DF
-		// (set) Token: 0x06022AB3 RID: 142003 RVA: 0x004CE1E7 File Offset: 0x004CC3E7
+		// Token: 0x1700A40A RID: 41994
+		// (get) Token: 0x06024B4C RID: 150348 RVA: 0x0050AD0B File Offset: 0x00508F0B
+		// (set) Token: 0x06024B4D RID: 150349 RVA: 0x0050AD13 File Offset: 0x00508F13
 		public IGazeConditionT GazeCondition { get; set; }
 
-		// Token: 0x17009BDA RID: 39898
-		// (get) Token: 0x06022AB4 RID: 142004 RVA: 0x004CE1F0 File Offset: 0x004CC3F0
-		// (set) Token: 0x06022AB5 RID: 142005 RVA: 0x004CE1F8 File Offset: 0x004CC3F8
+		// Token: 0x1700A40B RID: 41995
+		// (get) Token: 0x06024B4E RID: 150350 RVA: 0x0050AD1C File Offset: 0x00508F1C
+		// (set) Token: 0x06024B4F RID: 150351 RVA: 0x0050AD24 File Offset: 0x00508F24
 		public IGazePerformanceT GazePerformance { get; set; }
 
-		// Token: 0x06022AB6 RID: 142006 RVA: 0x004CE201 File Offset: 0x004CC401
+		// Token: 0x06024B50 RID: 150352 RVA: 0x0050AD2D File Offset: 0x00508F2D
 		public IGazeNextPointAfterInteractT()
 		{
 			this.GazeCondition = null;

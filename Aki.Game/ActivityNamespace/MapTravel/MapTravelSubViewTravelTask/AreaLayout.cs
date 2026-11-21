@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,7 +11,7 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 {
-	// Token: 0x020044D7 RID: 17623
+	// Token: 0x02002F64 RID: 12132
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,13 +20,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 	})]
 	internal class AreaLayout : GridProxyAbstract<MapTravelAreaData>
 	{
-		// Token: 0x0602D67E RID: 185982 RVA: 0x00A3F452 File Offset: 0x00A3D652
+		// Token: 0x0601CBBC RID: 117692 RVA: 0x008C50B2 File Offset: 0x008C32B2
 		public AreaLayout(ActivityMapTravelData ActivityBaseData)
 		{
 			this.ActivityBaseData = ActivityBaseData;
 		}
 
-		// Token: 0x0602D67F RID: 185983 RVA: 0x00A3F464 File Offset: 0x00A3D664
+		// Token: 0x0601CBBD RID: 117693 RVA: 0x008C50C4 File Offset: 0x008C32C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -53,7 +52,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D680 RID: 185984 RVA: 0x00A3F594 File Offset: 0x00A3D794
+		// Token: 0x0601CBBE RID: 117694 RVA: 0x008C51F4 File Offset: 0x008C33F4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AreaLayout.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -64,27 +63,26 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D681 RID: 185985 RVA: 0x00A3F5D7 File Offset: 0x00A3D7D7
+		// Token: 0x0601CBBF RID: 117695 RVA: 0x008C5237 File Offset: 0x008C3437
 		protected override void OnStart()
 		{
 			this.TaskLayout = new GenericLayout<TaskNormalItem, ActivityTaskData>(base.GetVerticalLayout(1), new Func<TaskNormalItem>(this.InitItem), null, false, true);
 		}
 
-		// Token: 0x0602D682 RID: 185986 RVA: 0x00A3F5FA File Offset: 0x00A3D7FA
+		// Token: 0x0601CBC0 RID: 117696 RVA: 0x008C525A File Offset: 0x008C345A
 		private TaskNormalItem InitItem()
 		{
 			TaskNormalItem taskNormalItem = new TaskNormalItem(this.ActivityBaseData);
 			taskNormalItem.SetBtnClickCallback(delegate
 			{
-				GenericLayout<TaskNormalItem, ActivityTaskData> taskLayout = this.TaskLayout;
 				List<int> list;
-				if (taskLayout == null)
+				if (this.TaskLayout != null)
 				{
-					list = null;
+					list = new List<ActivityTaskData>(this.TaskLayout.GetDatas()).FindAll((ActivityTaskData data) => data.Status == EActivityTaskState.FinishedAndUnclaimed).ConvertAll<int>((ActivityTaskData data) => data.Id);
 				}
 				else
 				{
-					list = taskLayout.GetDatas().ToList<ActivityTaskData>().FindAll((ActivityTaskData data) => data.Status == EActivityTaskState.FinishedAndUnclaimed).ConvertAll<int>((ActivityTaskData data) => data.Id);
+					list = null;
 				}
 				List<int> list2 = list;
 				if (list2 != null)
@@ -95,7 +93,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return taskNormalItem;
 		}
 
-		// Token: 0x0602D683 RID: 185987 RVA: 0x00A3F61C File Offset: 0x00A3D81C
+		// Token: 0x0601CBC1 RID: 117697 RVA: 0x008C527C File Offset: 0x008C347C
 		public override void Refresh(MapTravelAreaData data, bool isSelected, int gridIndex)
 		{
 			this.IsLoading = true;
@@ -152,7 +150,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			}, false);
 		}
 
-		// Token: 0x0602D684 RID: 185988 RVA: 0x00A3F7FC File Offset: 0x00A3D9FC
+		// Token: 0x0601CBC2 RID: 117698 RVA: 0x008C545C File Offset: 0x008C365C
 		public UniTask WaitRefreshDone()
 		{
 			AreaLayout.<WaitRefreshDone>d__14 <WaitRefreshDone>d__;
@@ -163,7 +161,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return <WaitRefreshDone>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D685 RID: 185989 RVA: 0x00A3F840 File Offset: 0x00A3DA40
+		// Token: 0x0601CBC3 RID: 117699 RVA: 0x008C54A0 File Offset: 0x008C36A0
 		private void TryUnlockArea(MapTravelAreaData data)
 		{
 			if (this.ActivityBaseData.GetAreaNewUnlockState(data.AreaId))
@@ -173,7 +171,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			}
 		}
 
-		// Token: 0x0602D686 RID: 185990 RVA: 0x00A3F88E File Offset: 0x00A3DA8E
+		// Token: 0x0601CBC4 RID: 117700 RVA: 0x008C54EE File Offset: 0x008C36EE
 		[NullableContext(2)]
 		public UUIItem GetFirstItem()
 		{
@@ -189,10 +187,10 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			return lockItem.GetRootItem();
 		}
 
-		// Token: 0x0401848A RID: 99466
+		// Token: 0x0400F232 RID: 62002
 		private ActivityMapTravelData ActivityBaseData;
 
-		// Token: 0x0401848B RID: 99467
+		// Token: 0x0400F233 RID: 62003
 		[Nullable(new byte[]
 		{
 			2,
@@ -201,50 +199,50 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 		})]
 		protected GenericLayout<TaskNormalItem, ActivityTaskData> TaskLayout;
 
-		// Token: 0x0401848C RID: 99468
+		// Token: 0x0400F234 RID: 62004
 		[Nullable(2)]
 		private TaskLockItem LockItem;
 
-		// Token: 0x0401848D RID: 99469
+		// Token: 0x0400F235 RID: 62005
 		[Nullable(2)]
 		private CustomPromise LoadingPromise;
 
-		// Token: 0x0401848E RID: 99470
+		// Token: 0x0400F236 RID: 62006
 		private bool IsLoading;
 
-		// Token: 0x0401848F RID: 99471
+		// Token: 0x0400F237 RID: 62007
 		private bool IsUnlock;
 
-		// Token: 0x04018490 RID: 99472
+		// Token: 0x0400F238 RID: 62008
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200A724 RID: 42788
+		// Token: 0x02008BFA RID: 35834
 		[NullableContext(0)]
 		private class ELayoutDefine
 		{
-			// Token: 0x040327A2 RID: 206754
+			// Token: 0x0402C570 RID: 181616
 			public const int Title = 0;
 
-			// Token: 0x040327A3 RID: 206755
+			// Token: 0x0402C571 RID: 181617
 			public const int Layout = 1;
 
-			// Token: 0x040327A4 RID: 206756
+			// Token: 0x0402C572 RID: 181618
 			public const int TaskItem = 2;
 
-			// Token: 0x040327A5 RID: 206757
+			// Token: 0x0402C573 RID: 181619
 			public const int LockTaskItem = 3;
 
-			// Token: 0x040327A6 RID: 206758
+			// Token: 0x0402C574 RID: 181620
 			public const int PanelTitle = 4;
 
-			// Token: 0x040327A7 RID: 206759
+			// Token: 0x0402C575 RID: 181621
 			public const int LockItem = 5;
 
-			// Token: 0x040327A8 RID: 206760
+			// Token: 0x0402C576 RID: 181622
 			public const int FinishedItem = 6;
 
-			// Token: 0x040327A9 RID: 206761
+			// Token: 0x0402C577 RID: 181623
 			public const int TexIcon = 7;
 		}
 	}

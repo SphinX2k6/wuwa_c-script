@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Core.Common;
 
-// Token: 0x020022DD RID: 8925
+// Token: 0x020017C1 RID: 6081
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineHallData : IOnlinePlayerData, IPlayerData
 {
-	// Token: 0x17001660 RID: 5728
-	// (get) Token: 0x0601190C RID: 71948 RVA: 0x0044EFE4 File Offset: 0x0044D1E4
+	// Token: 0x17001697 RID: 5783
+	// (get) Token: 0x0600EDA4 RID: 60836 RVA: 0x0045BCB0 File Offset: 0x00459EB0
 	public int CurUsingCardId
 	{
 		get
@@ -19,8 +19,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001661 RID: 5729
-	// (get) Token: 0x0601190D RID: 71949 RVA: 0x0044EFEC File Offset: 0x0044D1EC
+	// Token: 0x17001698 RID: 5784
+	// (get) Token: 0x0600EDA5 RID: 60837 RVA: 0x0045BCB8 File Offset: 0x00459EB8
 	public List<PersonalCardData> CardUnlockList
 	{
 		get
@@ -29,7 +29,7 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x0601190E RID: 71950 RVA: 0x0044EFF4 File Offset: 0x0044D1F4
+	// Token: 0x0600EDA6 RID: 60838 RVA: 0x0045BCC0 File Offset: 0x00459EC0
 	public OnlineHallData(PlayerDetails playerDetails)
 	{
 		this.PlayerDetailsInternal = playerDetails;
@@ -40,7 +40,7 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		this.CurUsingCardIdInternal = playerDetails.CurCard;
 	}
 
-	// Token: 0x0601190F RID: 71951 RVA: 0x0044F074 File Offset: 0x0044D274
+	// Token: 0x0600EDA7 RID: 60839 RVA: 0x0045BD40 File Offset: 0x00459F40
 	public void SetApplyTime(double time)
 	{
 		if (time <= 0.0)
@@ -50,8 +50,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		this.RefuseTimestampInternal = time;
 	}
 
-	// Token: 0x17001662 RID: 5730
-	// (get) Token: 0x06011910 RID: 71952 RVA: 0x0044F08A File Offset: 0x0044D28A
+	// Token: 0x17001699 RID: 5785
+	// (get) Token: 0x0600EDA8 RID: 60840 RVA: 0x0045BD56 File Offset: 0x00459F56
 	public double ApplyTimeLeftTime
 	{
 		get
@@ -60,8 +60,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001663 RID: 5731
-	// (get) Token: 0x06011911 RID: 71953 RVA: 0x0044F09D File Offset: 0x0044D29D
+	// Token: 0x1700169A RID: 5786
+	// (get) Token: 0x0600EDA9 RID: 60841 RVA: 0x0045BD69 File Offset: 0x00459F69
 	public int PlayerId
 	{
 		get
@@ -70,8 +70,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001664 RID: 5732
-	// (get) Token: 0x06011912 RID: 71954 RVA: 0x0044F0AA File Offset: 0x0044D2AA
+	// Token: 0x1700169B RID: 5787
+	// (get) Token: 0x0600EDAA RID: 60842 RVA: 0x0045BD76 File Offset: 0x00459F76
 	public int HeadId
 	{
 		get
@@ -80,8 +80,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001665 RID: 5733
-	// (get) Token: 0x06011913 RID: 71955 RVA: 0x0044F0B7 File Offset: 0x0044D2B7
+	// Token: 0x1700169C RID: 5788
+	// (get) Token: 0x0600EDAB RID: 60843 RVA: 0x0045BD83 File Offset: 0x00459F83
 	public int Level
 	{
 		get
@@ -90,8 +90,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001666 RID: 5734
-	// (get) Token: 0x06011914 RID: 71956 RVA: 0x0044F0C4 File Offset: 0x0044D2C4
+	// Token: 0x1700169D RID: 5789
+	// (get) Token: 0x0600EDAC RID: 60844 RVA: 0x0045BD90 File Offset: 0x00459F90
 	public int PlayerCount
 	{
 		get
@@ -100,8 +100,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001667 RID: 5735
-	// (get) Token: 0x06011915 RID: 71957 RVA: 0x0044F0D1 File Offset: 0x0044D2D1
+	// Token: 0x1700169E RID: 5790
+	// (get) Token: 0x0600EDAD RID: 60845 RVA: 0x0045BD9D File Offset: 0x00459F9D
 	public int WorldLevel
 	{
 		get
@@ -110,8 +110,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001668 RID: 5736
-	// (get) Token: 0x06011916 RID: 71958 RVA: 0x0044F0DE File Offset: 0x0044D2DE
+	// Token: 0x1700169F RID: 5791
+	// (get) Token: 0x0600EDAE RID: 60846 RVA: 0x0045BDAA File Offset: 0x00459FAA
 	public string Name
 	{
 		get
@@ -120,8 +120,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001669 RID: 5737
-	// (get) Token: 0x06011917 RID: 71959 RVA: 0x0044F0EB File Offset: 0x0044D2EB
+	// Token: 0x170016A0 RID: 5792
+	// (get) Token: 0x0600EDAF RID: 60847 RVA: 0x0045BDB7 File Offset: 0x00459FB7
 	public string PlayerName
 	{
 		get
@@ -130,8 +130,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166A RID: 5738
-	// (get) Token: 0x06011918 RID: 71960 RVA: 0x0044F0F8 File Offset: 0x0044D2F8
+	// Token: 0x170016A1 RID: 5793
+	// (get) Token: 0x0600EDB0 RID: 60848 RVA: 0x0045BDC4 File Offset: 0x00459FC4
 	public string Signature
 	{
 		get
@@ -140,8 +140,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166B RID: 5739
-	// (get) Token: 0x06011919 RID: 71961 RVA: 0x0044F105 File Offset: 0x0044D305
+	// Token: 0x170016A2 RID: 5794
+	// (get) Token: 0x0600EDB1 RID: 60849 RVA: 0x0045BDD1 File Offset: 0x00459FD1
 	public int PlayerCard
 	{
 		get
@@ -150,8 +150,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166C RID: 5740
-	// (get) Token: 0x0601191A RID: 71962 RVA: 0x0044F112 File Offset: 0x0044D312
+	// Token: 0x170016A3 RID: 5795
+	// (get) Token: 0x0600EDB2 RID: 60850 RVA: 0x0045BDDE File Offset: 0x00459FDE
 	public int PlayerTitleId
 	{
 		get
@@ -160,8 +160,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166D RID: 5741
-	// (get) Token: 0x0601191B RID: 71963 RVA: 0x0044F11F File Offset: 0x0044D31F
+	// Token: 0x170016A4 RID: 5796
+	// (get) Token: 0x0600EDB3 RID: 60851 RVA: 0x0045BDEB File Offset: 0x00459FEB
 	public int PlayerTitleStarLevel
 	{
 		get
@@ -170,8 +170,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166E RID: 5742
-	// (get) Token: 0x0601191C RID: 71964 RVA: 0x0044F12C File Offset: 0x0044D32C
+	// Token: 0x170016A5 RID: 5797
+	// (get) Token: 0x0600EDB4 RID: 60852 RVA: 0x0045BDF8 File Offset: 0x00459FF8
 	public int Sex
 	{
 		get
@@ -180,8 +180,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x1700166F RID: 5743
-	// (get) Token: 0x0601191D RID: 71965 RVA: 0x0044F139 File Offset: 0x0044D339
+	// Token: 0x170016A6 RID: 5798
+	// (get) Token: 0x0600EDB5 RID: 60853 RVA: 0x0045BE05 File Offset: 0x0045A005
 	public PlayerDetails PlayerDetails
 	{
 		get
@@ -190,8 +190,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001670 RID: 5744
-	// (get) Token: 0x0601191E RID: 71966 RVA: 0x0044F141 File Offset: 0x0044D341
+	// Token: 0x170016A7 RID: 5799
+	// (get) Token: 0x0600EDB6 RID: 60854 RVA: 0x0045BE0D File Offset: 0x0045A00D
 	public int PlayerOriginWorldLevel
 	{
 		get
@@ -200,8 +200,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001671 RID: 5745
-	// (get) Token: 0x0601191F RID: 71967 RVA: 0x0044F14E File Offset: 0x0044D34E
+	// Token: 0x170016A8 RID: 5800
+	// (get) Token: 0x0600EDB7 RID: 60855 RVA: 0x0045BE1A File Offset: 0x0045A01A
 	public bool Deactivation
 	{
 		get
@@ -210,8 +210,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001672 RID: 5746
-	// (get) Token: 0x06011920 RID: 71968 RVA: 0x0044F15B File Offset: 0x0044D35B
+	// Token: 0x170016A9 RID: 5801
+	// (get) Token: 0x0600EDB8 RID: 60856 RVA: 0x0045BE27 File Offset: 0x0045A027
 	public long PlayerLastOfflineTime
 	{
 		get
@@ -220,8 +220,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001673 RID: 5747
-	// (get) Token: 0x06011921 RID: 71969 RVA: 0x0044F168 File Offset: 0x0044D368
+	// Token: 0x170016AA RID: 5802
+	// (get) Token: 0x0600EDB9 RID: 60857 RVA: 0x0045BE34 File Offset: 0x0045A034
 	public string ThirdPartyUserId
 	{
 		get
@@ -234,8 +234,8 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x17001674 RID: 5748
-	// (get) Token: 0x06011922 RID: 71970 RVA: 0x0044F18D File Offset: 0x0044D38D
+	// Token: 0x170016AB RID: 5803
+	// (get) Token: 0x0600EDBA RID: 60858 RVA: 0x0045BE59 File Offset: 0x0045A059
 	public string ThirdAvoidId
 	{
 		get
@@ -248,7 +248,7 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		}
 	}
 
-	// Token: 0x06011923 RID: 71971 RVA: 0x0044F1B2 File Offset: 0x0044D3B2
+	// Token: 0x0600EDBB RID: 60859 RVA: 0x0045BE7E File Offset: 0x0045A07E
 	public bool GetIfCanShowInHallList([Nullable(new byte[]
 	{
 		2,
@@ -258,15 +258,15 @@ public class OnlineHallData : IOnlinePlayerData, IPlayerData
 		return (!KuroSdkController.Instance.PlayOnly() || !(this.ThirdAvoidId == "")) && (blockMap == null || !blockMap.ContainsKey(this.ThirdAvoidId));
 	}
 
-	// Token: 0x04008556 RID: 34134
+	// Token: 0x04008694 RID: 34452
 	private readonly PlayerDetails PlayerDetailsInternal;
 
-	// Token: 0x04008557 RID: 34135
+	// Token: 0x04008695 RID: 34453
 	private List<PersonalCardData> _cardUnlockList = new List<PersonalCardData>();
 
-	// Token: 0x04008558 RID: 34136
+	// Token: 0x04008696 RID: 34454
 	private int CurUsingCardIdInternal;
 
-	// Token: 0x04008559 RID: 34137
+	// Token: 0x04008697 RID: 34455
 	private double RefuseTimestampInternal;
 }

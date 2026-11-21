@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200586A RID: 22634
+	// Token: 0x02005E77 RID: 24183
 	public struct IRewardRefreshConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A94A RID: 43338
-		// (get) Token: 0x0602621F RID: 156191 RVA: 0x00542084 File Offset: 0x00540284
+		// Token: 0x1700B27A RID: 45690
+		// (get) Token: 0x06028781 RID: 165761 RVA: 0x00588BD0 File Offset: 0x00586DD0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026220 RID: 156192 RVA: 0x00542091 File Offset: 0x00540291
+		// Token: 0x06028782 RID: 165762 RVA: 0x00588BDD File Offset: 0x00586DDD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026221 RID: 156193 RVA: 0x00542098 File Offset: 0x00540298
+		// Token: 0x06028783 RID: 165763 RVA: 0x00588BE4 File Offset: 0x00586DE4
 		public static IRewardRefreshConfig GetRootAsIRewardRefreshConfig(ByteBuffer _bb)
 		{
 			return IRewardRefreshConfig.GetRootAsIRewardRefreshConfig(_bb, default(IRewardRefreshConfig));
 		}
 
-		// Token: 0x06026222 RID: 156194 RVA: 0x005420B4 File Offset: 0x005402B4
+		// Token: 0x06028784 RID: 165764 RVA: 0x00588C00 File Offset: 0x00586E00
 		public static IRewardRefreshConfig GetRootAsIRewardRefreshConfig(ByteBuffer _bb, IRewardRefreshConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026223 RID: 156195 RVA: 0x005420D1 File Offset: 0x005402D1
+		// Token: 0x06028785 RID: 165765 RVA: 0x00588C1D File Offset: 0x00586E1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026224 RID: 156196 RVA: 0x005420E0 File Offset: 0x005402E0
+		// Token: 0x06028786 RID: 165766 RVA: 0x00588C2C File Offset: 0x00586E2C
 		public IRewardRefreshConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A94B RID: 43339
-		// (get) Token: 0x06026225 RID: 156197 RVA: 0x005420F0 File Offset: 0x005402F0
+		// Token: 0x1700B27B RID: 45691
+		// (get) Token: 0x06028787 RID: 165767 RVA: 0x00588C3C File Offset: 0x00586E3C
 		public TRefreshCondition RefreshConditionType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026226 RID: 156198 RVA: 0x0054212C File Offset: 0x0054032C
+		// Token: 0x06028788 RID: 165768 RVA: 0x00588C78 File Offset: 0x00586E78
 		public TTable? RefreshCondition<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026227 RID: 156199 RVA: 0x00542170 File Offset: 0x00540370
+		// Token: 0x06028789 RID: 165769 RVA: 0x00588CBC File Offset: 0x00586EBC
 		public IRefreshOnDeath RefreshConditionAsIRefreshOnDeath()
 		{
 			return this.RefreshCondition<IRefreshOnDeath>().Value;
 		}
 
-		// Token: 0x06026228 RID: 156200 RVA: 0x0054218C File Offset: 0x0054038C
+		// Token: 0x0602878A RID: 165770 RVA: 0x00588CD8 File Offset: 0x00586ED8
 		public IRefreshOnHostInteract RefreshConditionAsIRefreshOnHostInteract()
 		{
 			return this.RefreshCondition<IRefreshOnHostInteract>().Value;
 		}
 
-		// Token: 0x1700A94C RID: 43340
-		// (get) Token: 0x06026229 RID: 156201 RVA: 0x005421A8 File Offset: 0x005403A8
+		// Token: 0x1700B27C RID: 45692
+		// (get) Token: 0x0602878B RID: 165771 RVA: 0x00588CF4 File Offset: 0x00586EF4
 		public TRefreshRule RefreshTypeType
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602622A RID: 156202 RVA: 0x005421E4 File Offset: 0x005403E4
+		// Token: 0x0602878C RID: 165772 RVA: 0x00588D30 File Offset: 0x00586F30
 		public TTable? RefreshType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -111,26 +111,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602622B RID: 156203 RVA: 0x0054222C File Offset: 0x0054042C
+		// Token: 0x0602878D RID: 165773 RVA: 0x00588D78 File Offset: 0x00586F78
 		public ICdRefreshRule RefreshTypeAsICdRefreshRule()
 		{
 			return this.RefreshType<ICdRefreshRule>().Value;
 		}
 
-		// Token: 0x0602622C RID: 156204 RVA: 0x00542248 File Offset: 0x00540448
+		// Token: 0x0602878E RID: 165774 RVA: 0x00588D94 File Offset: 0x00586F94
 		public IFixedDateTimeRefreshRule RefreshTypeAsIFixedDateTimeRefreshRule()
 		{
 			return this.RefreshType<IFixedDateTimeRefreshRule>().Value;
 		}
 
-		// Token: 0x0602622D RID: 156205 RVA: 0x00542264 File Offset: 0x00540464
+		// Token: 0x0602878F RID: 165775 RVA: 0x00588DB0 File Offset: 0x00586FB0
 		public IRandomNpcRule RefreshTypeAsIRandomNpcRule()
 		{
 			return this.RefreshType<IRandomNpcRule>().Value;
 		}
 
-		// Token: 0x1700A94D RID: 43341
-		// (get) Token: 0x0602622E RID: 156206 RVA: 0x00542280 File Offset: 0x00540480
+		// Token: 0x1700B27D RID: 45693
+		// (get) Token: 0x06028790 RID: 165776 RVA: 0x00588DCC File Offset: 0x00586FCC
 		public int MaxCount
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A94E RID: 43342
-		// (get) Token: 0x0602622F RID: 156207 RVA: 0x005422C0 File Offset: 0x005404C0
+		// Token: 0x1700B27E RID: 45694
+		// (get) Token: 0x06028791 RID: 165777 RVA: 0x00588E0C File Offset: 0x0058700C
 		public byte NullMask
 		{
 			get
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026230 RID: 156208 RVA: 0x005422FD File Offset: 0x005404FD
+		// Token: 0x06028792 RID: 165778 RVA: 0x00588E49 File Offset: 0x00587049
 		public static Offset<IRewardRefreshConfig> CreateIRewardRefreshConfig(FlatBufferBuilder builder, TRefreshCondition RefreshCondition_type = TRefreshCondition.NONE, int RefreshConditionOffset = 0, TRefreshRule RefreshType_type = TRefreshRule.NONE, int RefreshTypeOffset = 0, int MaxCount = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -172,55 +172,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRewardRefreshConfig.EndIRewardRefreshConfig(builder);
 		}
 
-		// Token: 0x06026231 RID: 156209 RVA: 0x00542339 File Offset: 0x00540539
+		// Token: 0x06028793 RID: 165779 RVA: 0x00588E85 File Offset: 0x00587085
 		public static void StartIRewardRefreshConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06026232 RID: 156210 RVA: 0x00542342 File Offset: 0x00540542
+		// Token: 0x06028794 RID: 165780 RVA: 0x00588E8E File Offset: 0x0058708E
 		public static void AddRefreshConditionType(FlatBufferBuilder builder, TRefreshCondition refreshConditionType)
 		{
 			builder.AddByte(0, (byte)refreshConditionType, 0);
 		}
 
-		// Token: 0x06026233 RID: 156211 RVA: 0x0054234D File Offset: 0x0054054D
+		// Token: 0x06028795 RID: 165781 RVA: 0x00588E99 File Offset: 0x00587099
 		public static void AddRefreshCondition(FlatBufferBuilder builder, int refreshConditionOffset)
 		{
 			builder.AddOffset(1, refreshConditionOffset, 0);
 		}
 
-		// Token: 0x06026234 RID: 156212 RVA: 0x00542358 File Offset: 0x00540558
+		// Token: 0x06028796 RID: 165782 RVA: 0x00588EA4 File Offset: 0x005870A4
 		public static void AddRefreshTypeType(FlatBufferBuilder builder, TRefreshRule refreshTypeType)
 		{
 			builder.AddByte(2, (byte)refreshTypeType, 0);
 		}
 
-		// Token: 0x06026235 RID: 156213 RVA: 0x00542363 File Offset: 0x00540563
+		// Token: 0x06028797 RID: 165783 RVA: 0x00588EAF File Offset: 0x005870AF
 		public static void AddRefreshType(FlatBufferBuilder builder, int refreshTypeOffset)
 		{
 			builder.AddOffset(3, refreshTypeOffset, 0);
 		}
 
-		// Token: 0x06026236 RID: 156214 RVA: 0x0054236E File Offset: 0x0054056E
+		// Token: 0x06028798 RID: 165784 RVA: 0x00588EBA File Offset: 0x005870BA
 		public static void AddMaxCount(FlatBufferBuilder builder, int maxCount)
 		{
 			builder.AddInt(4, maxCount, 0);
 		}
 
-		// Token: 0x06026237 RID: 156215 RVA: 0x00542379 File Offset: 0x00540579
+		// Token: 0x06028799 RID: 165785 RVA: 0x00588EC5 File Offset: 0x005870C5
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06026238 RID: 156216 RVA: 0x00542384 File Offset: 0x00540584
+		// Token: 0x0602879A RID: 165786 RVA: 0x00588ED0 File Offset: 0x005870D0
 		public static Offset<IRewardRefreshConfig> EndIRewardRefreshConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IRewardRefreshConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026239 RID: 156217 RVA: 0x00542394 File Offset: 0x00540594
+		// Token: 0x0602879B RID: 165787 RVA: 0x00588EE0 File Offset: 0x005870E0
 		public IRewardRefreshConfigT UnPack()
 		{
 			IRewardRefreshConfigT rewardRefreshConfigT = new IRewardRefreshConfigT();
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return rewardRefreshConfigT;
 		}
 
-		// Token: 0x0602623A RID: 156218 RVA: 0x005423B0 File Offset: 0x005405B0
+		// Token: 0x0602879C RID: 165788 RVA: 0x00588EFC File Offset: 0x005870FC
 		public void UnPackTo(IRewardRefreshConfigT _o)
 		{
 			_o.RefreshCondition = new TRefreshConditionUnion();
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602623B RID: 156219 RVA: 0x00542554 File Offset: 0x00540754
+		// Token: 0x0602879D RID: 165789 RVA: 0x005890A0 File Offset: 0x005872A0
 		public static Offset<IRewardRefreshConfig> Pack(FlatBufferBuilder builder, IRewardRefreshConfigT _o)
 		{
 			if (_o == null)
@@ -277,7 +277,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRewardRefreshConfig.CreateIRewardRefreshConfig(builder, refreshCondition_type, refreshConditionOffset, refreshType_type, refreshTypeOffset, _o.MaxCount, _o.NullMask);
 		}
 
-		// Token: 0x0400EDAC RID: 60844
+		// Token: 0x0400FA9F RID: 64159
 		private Table __p;
 	}
 }

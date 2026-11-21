@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.PathLine.Pathline_EdgeWall;
 using UnrealEngine;
 
-// Token: 0x020021F9 RID: 8697
+// Token: 0x020016DD RID: 5853
 [NullableContext(1)]
 [Nullable(0)]
 public class PointInPolygonTest
 {
-	// Token: 0x06010EAF RID: 69295 RVA: 0x0041D46C File Offset: 0x0041B66C
+	// Token: 0x0600E342 RID: 58178 RVA: 0x00429E10 File Offset: 0x00428010
 	public void InitSpline()
 	{
 		string testPath = this.TestPath;
@@ -25,7 +25,7 @@ public class PointInPolygonTest
 		}, 100, "Ui.MapUi");
 	}
 
-	// Token: 0x06010EB0 RID: 69296 RVA: 0x0041D4A8 File Offset: 0x0041B6A8
+	// Token: 0x0600E343 RID: 58179 RVA: 0x00429E4C File Offset: 0x0042804C
 	private void InitSplineAsset(UClass splineClass)
 	{
 		AActor aactor = ActorSystem.Instance.Get<AActor>(splineClass.ClassStackOnlyPtr, MathUtils.Instance.DefaultTransformDouble, null, true);
@@ -49,7 +49,7 @@ public class PointInPolygonTest
 		aactor.K2_DestroyActor();
 	}
 
-	// Token: 0x06010EB1 RID: 69297 RVA: 0x0041D568 File Offset: 0x0041B768
+	// Token: 0x0600E344 RID: 58180 RVA: 0x00429F0C File Offset: 0x0042810C
 	private void TrapBound(int index, int count, double vertexX0, double vertexX1, BinSet binSet)
 	{
 		double num = vertexX0;
@@ -71,13 +71,13 @@ public class PointInPolygonTest
 		binSet.Bins[index].EdgeSet[count].MaxX = num2;
 	}
 
-	// Token: 0x06010EB2 RID: 69298 RVA: 0x0041D5F0 File Offset: 0x0041B7F0
+	// Token: 0x0600E345 RID: 58181 RVA: 0x00429F94 File Offset: 0x00428194
 	public bool BinTest(Vector inputP)
 	{
 		return this.BinTest(new Vector2D(inputP.X, inputP.Y));
 	}
 
-	// Token: 0x06010EB3 RID: 69299 RVA: 0x0041D60C File Offset: 0x0041B80C
+	// Token: 0x0600E346 RID: 58182 RVA: 0x00429FB0 File Offset: 0x004281B0
 	public bool BinTest(Vector2D inputP)
 	{
 		if (!this.IsSplineInit)
@@ -144,7 +144,7 @@ public class PointInPolygonTest
 		return flag;
 	}
 
-	// Token: 0x06010EB4 RID: 69300 RVA: 0x0041D848 File Offset: 0x0041BA48
+	// Token: 0x0600E347 RID: 58183 RVA: 0x0042A1EC File Offset: 0x004283EC
 	private void BinSetup(List<Vector2D> polygon, int binNum, BinSet binSet)
 	{
 		int[] array = new int[binNum];
@@ -293,18 +293,18 @@ public class PointInPolygonTest
 		}
 	}
 
-	// Token: 0x04008086 RID: 32902
+	// Token: 0x040081C4 RID: 33220
 	private readonly string TestPath = "/Game/Aki/Data/PathLine/Pathline_EdgeWall/BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C";
 
-	// Token: 0x04008087 RID: 32903
+	// Token: 0x040081C5 RID: 33221
 	public bool IsSplineInit;
 
-	// Token: 0x04008088 RID: 32904
+	// Token: 0x040081C6 RID: 33222
 	private readonly BinSet BinSet = new BinSet();
 
-	// Token: 0x04008089 RID: 32905
+	// Token: 0x040081C7 RID: 33223
 	private readonly List<Vector2D> TestPoints = new List<Vector2D>();
 
-	// Token: 0x0400808A RID: 32906
+	// Token: 0x040081C8 RID: 33224
 	private readonly Vector2D VectorProxy = Vector2D.Create();
 }

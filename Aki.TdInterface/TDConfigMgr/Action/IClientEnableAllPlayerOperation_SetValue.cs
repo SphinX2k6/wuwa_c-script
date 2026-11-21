@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018A5 RID: 6309
+	// Token: 0x02001A30 RID: 6704
 	public class IClientEnableAllPlayerOperation_SetValue
 	{
-		// Token: 0x04005540 RID: 21824
+		// Token: 0x0400598D RID: 22925
 		public EPlayerOperationType Type;
 	}
 }

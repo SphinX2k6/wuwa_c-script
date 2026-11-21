@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000B0 RID: 176
+	// Token: 0x020000B8 RID: 184
 	public class ConfigAreaTerminalGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000421 RID: 1057 RVA: 0x00071084 File Offset: 0x0006F284
+		// Token: 0x06000451 RID: 1105 RVA: 0x00075938 File Offset: 0x00073B38
 		static ConfigAreaTerminalGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaTerminalGroupById.CreateStaticDefaultValue), new Action(ConfigAreaTerminalGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000422 RID: 1058 RVA: 0x000710A4 File Offset: 0x0006F2A4
+		// Token: 0x06000452 RID: 1106 RVA: 0x00075958 File Offset: 0x00073B58
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaTerminalGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000423 RID: 1059 RVA: 0x00071123 File Offset: 0x0006F323
+		// Token: 0x06000453 RID: 1107 RVA: 0x000759D7 File Offset: 0x00073BD7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaTerminalGroupById.LogPair = null;
 			ConfigAreaTerminalGroupById.HandleId = 0;
 		}
 
-		// Token: 0x06000424 RID: 1060 RVA: 0x00071131 File Offset: 0x0006F331
+		// Token: 0x06000454 RID: 1108 RVA: 0x000759E5 File Offset: 0x00073BE5
 		public static void Init()
 		{
 			ConfigAreaTerminalGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigAreaTerminalGroupById.HandleId, "db_areaterminal.db", "select BinData from `AreaTerminalGroup` where Id=?");
 		}
 
-		// Token: 0x06000425 RID: 1061 RVA: 0x0007114C File Offset: 0x0006F34C
+		// Token: 0x06000455 RID: 1109 RVA: 0x00075A00 File Offset: 0x00073C00
 		public static AreaTerminalGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaTerminalGroupById.HandleId, ConfigAreaTerminalGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AreaTerminalGroup?(rootAsAreaTerminalGroup);
 		}
 
-		// Token: 0x040004B4 RID: 1204
+		// Token: 0x040004EC RID: 1260
 		private const string DB = "db_areaterminal.db";
 
-		// Token: 0x040004B5 RID: 1205
+		// Token: 0x040004ED RID: 1261
 		private const string FILE = "q.区域终端.xlsx";
 
-		// Token: 0x040004B6 RID: 1206
+		// Token: 0x040004EE RID: 1262
 		private const string TABLE = "AreaTerminalGroup";
 
-		// Token: 0x040004B7 RID: 1207
+		// Token: 0x040004EF RID: 1263
 		private const string COMMAND = "select BinData from `AreaTerminalGroup` where Id=?";
 
-		// Token: 0x040004B8 RID: 1208
+		// Token: 0x040004F0 RID: 1264
 		private const string KEY_PREFIX = "AreaTerminalGroupById";
 
-		// Token: 0x040004B9 RID: 1209
+		// Token: 0x040004F1 RID: 1265
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040004BA RID: 1210
+		// Token: 0x040004F2 RID: 1266
 		private static int HandleId;
 	}
 }

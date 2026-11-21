@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004556 RID: 17750
+	// Token: 0x0200347E RID: 13438
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TraceUtils
 	{
-		// Token: 0x0602DDB0 RID: 187824 RVA: 0x00A8BEC4 File Offset: 0x00A8A0C4
+		// Token: 0x06022492 RID: 140434 RVA: 0x009B75DC File Offset: 0x009B57DC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Utils
 			return new ValueTuple<bool, UKuroHitResult>(item, hitResult);
 		}
 
-		// Token: 0x040187EA RID: 100330
+		// Token: 0x04012E24 RID: 77348
 		private const string PROFILE_KEY = "TraceUtil";
 	}
 }

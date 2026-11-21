@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200215B RID: 8539
+	// Token: 0x020023BC RID: 9148
 	public class RequestSystemFunction_SetValue
 	{
-		// Token: 0x0400704B RID: 28747
-		[Nullable(1)]
+		// Token: 0x04007680 RID: 30336
 		public IBuyGoods SystemFunction;
 	}
 }

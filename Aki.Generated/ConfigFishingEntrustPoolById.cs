@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002D8 RID: 728
+	// Token: 0x020002ED RID: 749
 	public class ConfigFishingEntrustPoolById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001115 RID: 4373 RVA: 0x000B9F67 File Offset: 0x000B8167
+		// Token: 0x06001193 RID: 4499 RVA: 0x000C0473 File Offset: 0x000BE673
 		static ConfigFishingEntrustPoolById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingEntrustPoolById.CreateStaticDefaultValue), new Action(ConfigFishingEntrustPoolById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001116 RID: 4374 RVA: 0x000B9F88 File Offset: 0x000B8188
+		// Token: 0x06001194 RID: 4500 RVA: 0x000C0494 File Offset: 0x000BE694
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingEntrustPoolById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001117 RID: 4375 RVA: 0x000BA007 File Offset: 0x000B8207
+		// Token: 0x06001195 RID: 4501 RVA: 0x000C0513 File Offset: 0x000BE713
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingEntrustPoolById.LogPair = null;
 			ConfigFishingEntrustPoolById.HandleId = 0;
 		}
 
-		// Token: 0x06001118 RID: 4376 RVA: 0x000BA015 File Offset: 0x000B8215
+		// Token: 0x06001196 RID: 4502 RVA: 0x000C0521 File Offset: 0x000BE721
 		public static void Init()
 		{
 			ConfigFishingEntrustPoolById.HandleId = ConfigCommon.InitDataStatement(ConfigFishingEntrustPoolById.HandleId, "db_fishing.db", "select BinData from `FishingEntrustPool` where Id=?");
 		}
 
-		// Token: 0x06001119 RID: 4377 RVA: 0x000BA030 File Offset: 0x000B8230
+		// Token: 0x06001197 RID: 4503 RVA: 0x000C053C File Offset: 0x000BE73C
 		public static FishingEntrustPool? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingEntrustPoolById.HandleId, ConfigFishingEntrustPoolById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingEntrustPool?(rootAsFishingEntrustPool);
 		}
 
-		// Token: 0x040013CC RID: 5068
+		// Token: 0x0400145F RID: 5215
 		private const string DB = "db_fishing.db";
 
-		// Token: 0x040013CD RID: 5069
+		// Token: 0x04001460 RID: 5216
 		private const string FILE = "b.捕鱼委托.xlsx";
 
-		// Token: 0x040013CE RID: 5070
+		// Token: 0x04001461 RID: 5217
 		private const string TABLE = "FishingEntrustPool";
 
-		// Token: 0x040013CF RID: 5071
+		// Token: 0x04001462 RID: 5218
 		private const string COMMAND = "select BinData from `FishingEntrustPool` where Id=?";
 
-		// Token: 0x040013D0 RID: 5072
+		// Token: 0x04001463 RID: 5219
 		private const string KEY_PREFIX = "FishingEntrustPoolById";
 
-		// Token: 0x040013D1 RID: 5073
+		// Token: 0x04001464 RID: 5220
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040013D2 RID: 5074
+		// Token: 0x04001465 RID: 5221
 		private static int HandleId;
 	}
 }

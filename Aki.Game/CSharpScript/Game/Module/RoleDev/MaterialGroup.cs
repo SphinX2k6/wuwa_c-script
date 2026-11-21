@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CBD RID: 19645
+	// Token: 0x02003C6E RID: 15470
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MaterialGroup : IMaterialGroup
 	{
-		// Token: 0x17007D23 RID: 32035
-		// (get) Token: 0x06032B8A RID: 207754 RVA: 0x00BD511B File Offset: 0x00BD331B
-		// (set) Token: 0x06032B8B RID: 207755 RVA: 0x00BD5123 File Offset: 0x00BD3323
+		// Token: 0x170050CD RID: 20685
+		// (get) Token: 0x0602793E RID: 162110 RVA: 0x00B19EB3 File Offset: 0x00B180B3
+		// (set) Token: 0x0602793F RID: 162111 RVA: 0x00B19EBB File Offset: 0x00B180BB
 		public int Type { get; set; }
 
-		// Token: 0x17007D24 RID: 32036
-		// (get) Token: 0x06032B8C RID: 207756 RVA: 0x00BD512C File Offset: 0x00BD332C
-		// (set) Token: 0x06032B8D RID: 207757 RVA: 0x00BD5134 File Offset: 0x00BD3334
+		// Token: 0x170050CE RID: 20686
+		// (get) Token: 0x06027940 RID: 162112 RVA: 0x00B19EC4 File Offset: 0x00B180C4
+		// (set) Token: 0x06027941 RID: 162113 RVA: 0x00B19ECC File Offset: 0x00B180CC
 		public List<IItemMaterial> Materials { get; set; }
 	}
 }

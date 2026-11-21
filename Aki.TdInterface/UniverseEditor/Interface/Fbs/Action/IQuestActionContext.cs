@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DF8 RID: 28152
+	// Token: 0x02007573 RID: 30067
 	public struct IQuestActionContext : IFlatbufferObject
 	{
-		// Token: 0x1700D1D2 RID: 53714
-		// (get) Token: 0x06031BA9 RID: 203689 RVA: 0x006BBC4C File Offset: 0x006B9E4C
+		// Token: 0x1700DD1A RID: 56602
+		// (get) Token: 0x06034BA5 RID: 215973 RVA: 0x00717334 File Offset: 0x00715534
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031BAA RID: 203690 RVA: 0x006BBC59 File Offset: 0x006B9E59
+		// Token: 0x06034BA6 RID: 215974 RVA: 0x00717341 File Offset: 0x00715541
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031BAB RID: 203691 RVA: 0x006BBC60 File Offset: 0x006B9E60
+		// Token: 0x06034BA7 RID: 215975 RVA: 0x00717348 File Offset: 0x00715548
 		public static IQuestActionContext GetRootAsIQuestActionContext(ByteBuffer _bb)
 		{
 			return IQuestActionContext.GetRootAsIQuestActionContext(_bb, default(IQuestActionContext));
 		}
 
-		// Token: 0x06031BAC RID: 203692 RVA: 0x006BBC7C File Offset: 0x006B9E7C
+		// Token: 0x06034BA8 RID: 215976 RVA: 0x00717364 File Offset: 0x00715564
 		public static IQuestActionContext GetRootAsIQuestActionContext(ByteBuffer _bb, IQuestActionContext obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031BAD RID: 203693 RVA: 0x006BBC99 File Offset: 0x006B9E99
+		// Token: 0x06034BA9 RID: 215977 RVA: 0x00717381 File Offset: 0x00715581
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031BAE RID: 203694 RVA: 0x006BBCA8 File Offset: 0x006B9EA8
+		// Token: 0x06034BAA RID: 215978 RVA: 0x00717390 File Offset: 0x00715590
 		public IQuestActionContext __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D1D3 RID: 53715
-		// (get) Token: 0x06031BAF RID: 203695 RVA: 0x006BBCB8 File Offset: 0x006B9EB8
+		// Token: 0x1700DD1B RID: 56603
+		// (get) Token: 0x06034BAB RID: 215979 RVA: 0x007173A0 File Offset: 0x007155A0
 		public string Type
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031BB0 RID: 203696 RVA: 0x006BBCEF File Offset: 0x006B9EEF
+		// Token: 0x06034BAC RID: 215980 RVA: 0x007173D7 File Offset: 0x007155D7
 		public Span<byte> GetTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06031BB1 RID: 203697 RVA: 0x006BBCFE File Offset: 0x006B9EFE
+		// Token: 0x06034BAD RID: 215981 RVA: 0x007173E6 File Offset: 0x007155E6
 		public byte[] GetTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700D1D4 RID: 53716
-		// (get) Token: 0x06031BB2 RID: 203698 RVA: 0x006BBD0C File Offset: 0x006B9F0C
+		// Token: 0x1700DD1C RID: 56604
+		// (get) Token: 0x06034BAE RID: 215982 RVA: 0x007173F4 File Offset: 0x007155F4
 		public bool IsChildQuestOfDungeon
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D1D5 RID: 53717
-		// (get) Token: 0x06031BB3 RID: 203699 RVA: 0x006BBD4C File Offset: 0x006B9F4C
+		// Token: 0x1700DD1D RID: 56605
+		// (get) Token: 0x06034BAF RID: 215983 RVA: 0x00717434 File Offset: 0x00715634
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031BB4 RID: 203700 RVA: 0x006BBD88 File Offset: 0x006B9F88
+		// Token: 0x06034BB0 RID: 215984 RVA: 0x00717470 File Offset: 0x00715670
 		public static Offset<IQuestActionContext> CreateIQuestActionContext(FlatBufferBuilder builder, StringOffset TypeOffset = default(StringOffset), bool IsChildQuestOfDungeon = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQuestActionContext.EndIQuestActionContext(builder);
 		}
 
-		// Token: 0x06031BB5 RID: 203701 RVA: 0x006BBDAC File Offset: 0x006B9FAC
+		// Token: 0x06034BB1 RID: 215985 RVA: 0x00717494 File Offset: 0x00715694
 		public static void StartIQuestActionContext(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06031BB6 RID: 203702 RVA: 0x006BBDB5 File Offset: 0x006B9FB5
+		// Token: 0x06034BB2 RID: 215986 RVA: 0x0071749D File Offset: 0x0071569D
 		public static void AddType(FlatBufferBuilder builder, StringOffset typeOffset)
 		{
 			builder.AddOffset(0, typeOffset.Value, 0);
 		}
 
-		// Token: 0x06031BB7 RID: 203703 RVA: 0x006BBDC5 File Offset: 0x006B9FC5
+		// Token: 0x06034BB3 RID: 215987 RVA: 0x007174AD File Offset: 0x007156AD
 		public static void AddIsChildQuestOfDungeon(FlatBufferBuilder builder, bool isChildQuestOfDungeon)
 		{
 			builder.AddBool(1, isChildQuestOfDungeon, false);
 		}
 
-		// Token: 0x06031BB8 RID: 203704 RVA: 0x006BBDD0 File Offset: 0x006B9FD0
+		// Token: 0x06034BB4 RID: 215988 RVA: 0x007174B8 File Offset: 0x007156B8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06031BB9 RID: 203705 RVA: 0x006BBDDB File Offset: 0x006B9FDB
+		// Token: 0x06034BB5 RID: 215989 RVA: 0x007174C3 File Offset: 0x007156C3
 		public static Offset<IQuestActionContext> EndIQuestActionContext(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestActionContext>(builder.EndTable());
 		}
 
-		// Token: 0x06031BBA RID: 203706 RVA: 0x006BBDE8 File Offset: 0x006B9FE8
+		// Token: 0x06034BB6 RID: 215990 RVA: 0x007174D0 File Offset: 0x007156D0
 		public IQuestActionContextT UnPack()
 		{
 			IQuestActionContextT questActionContextT = new IQuestActionContextT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return questActionContextT;
 		}
 
-		// Token: 0x06031BBB RID: 203707 RVA: 0x006BBE03 File Offset: 0x006BA003
+		// Token: 0x06034BB7 RID: 215991 RVA: 0x007174EB File Offset: 0x007156EB
 		public void UnPackTo(IQuestActionContextT _o)
 		{
 			_o.Type = this.Type;
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06031BBC RID: 203708 RVA: 0x006BBE2C File Offset: 0x006BA02C
+		// Token: 0x06034BB8 RID: 215992 RVA: 0x00717514 File Offset: 0x00715714
 		public static Offset<IQuestActionContext> Pack(FlatBufferBuilder builder, IQuestActionContextT _o)
 		{
 			if (_o == null)
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQuestActionContext.CreateIQuestActionContext(builder, typeOffset, _o.IsChildQuestOfDungeon, _o.NullMask);
 		}
 
-		// Token: 0x040117D6 RID: 71638
+		// Token: 0x04012752 RID: 75602
 		private Table __p;
 	}
 }

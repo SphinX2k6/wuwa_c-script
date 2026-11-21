@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200580C RID: 22540
+	// Token: 0x02005E13 RID: 24083
 	public class IReboundComponentT
 	{
-		// Token: 0x1700A864 RID: 43108
-		// (get) Token: 0x06025E5B RID: 155227 RVA: 0x00539F27 File Offset: 0x00538127
-		// (set) Token: 0x06025E5C RID: 155228 RVA: 0x00539F2F File Offset: 0x0053812F
+		// Token: 0x1700B188 RID: 45448
+		// (get) Token: 0x0602837B RID: 164731 RVA: 0x005800B3 File Offset: 0x0057E2B3
+		// (set) Token: 0x0602837C RID: 164732 RVA: 0x005800BB File Offset: 0x0057E2BB
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A865 RID: 43109
-		// (get) Token: 0x06025E5D RID: 155229 RVA: 0x00539F38 File Offset: 0x00538138
-		// (set) Token: 0x06025E5E RID: 155230 RVA: 0x00539F40 File Offset: 0x00538140
+		// Token: 0x1700B189 RID: 45449
+		// (get) Token: 0x0602837D RID: 164733 RVA: 0x005800C4 File Offset: 0x0057E2C4
+		// (set) Token: 0x0602837E RID: 164734 RVA: 0x005800CC File Offset: 0x0057E2CC
 		public long BulletId { get; set; }
 
-		// Token: 0x1700A866 RID: 43110
-		// (get) Token: 0x06025E5F RID: 155231 RVA: 0x00539F49 File Offset: 0x00538149
-		// (set) Token: 0x06025E60 RID: 155232 RVA: 0x00539F51 File Offset: 0x00538151
+		// Token: 0x1700B18A RID: 45450
+		// (get) Token: 0x0602837F RID: 164735 RVA: 0x005800D5 File Offset: 0x0057E2D5
+		// (set) Token: 0x06028380 RID: 164736 RVA: 0x005800DD File Offset: 0x0057E2DD
 		public IForwardFrontReboundT Option { get; set; }
 
-		// Token: 0x1700A867 RID: 43111
-		// (get) Token: 0x06025E61 RID: 155233 RVA: 0x00539F5A File Offset: 0x0053815A
-		// (set) Token: 0x06025E62 RID: 155234 RVA: 0x00539F62 File Offset: 0x00538162
+		// Token: 0x1700B18B RID: 45451
+		// (get) Token: 0x06028381 RID: 164737 RVA: 0x005800E6 File Offset: 0x0057E2E6
+		// (set) Token: 0x06028382 RID: 164738 RVA: 0x005800EE File Offset: 0x0057E2EE
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025E63 RID: 155235 RVA: 0x00539F6B File Offset: 0x0053816B
+		// Token: 0x06028383 RID: 164739 RVA: 0x005800F7 File Offset: 0x0057E2F7
 		public IReboundComponentT()
 		{
 			this.Disabled = false;

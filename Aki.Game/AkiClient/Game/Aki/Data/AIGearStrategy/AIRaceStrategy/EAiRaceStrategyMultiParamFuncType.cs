@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.AIGearStrategy.AIRaceStrategy
 {
-	// Token: 0x02003FC3 RID: 16323
+	// Token: 0x02003248 RID: 12872
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/AIGearStrategy/AIRaceStrategy/EAiRaceStrategyMultiParamFuncType.EAiRaceStrategyMultiParamFuncType")]
 	public enum EAiRaceStrategyMultiParamFuncType : byte
 	{
-		// Token: 0x0401576C RID: 87916
+		// Token: 0x040114FD RID: 70909
 		Sum,
-		// Token: 0x0401576D RID: 87917
+		// Token: 0x040114FE RID: 70910
 		Max,
-		// Token: 0x0401576E RID: 87918
+		// Token: 0x040114FF RID: 70911
 		Min,
-		// Token: 0x0401576F RID: 87919
+		// Token: 0x04011500 RID: 70912
 		Avg,
-		// Token: 0x04015770 RID: 87920
+		// Token: 0x04011501 RID: 70913
 		EAiRaceStrategyMultiParamFuncType_MAX
 	}
 }

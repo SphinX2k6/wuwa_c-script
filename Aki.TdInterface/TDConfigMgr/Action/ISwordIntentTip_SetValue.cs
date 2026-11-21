@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F0E RID: 7950
+	// Token: 0x02002147 RID: 8519
 	public class ISwordIntentTip_SetValue
 	{
-		// Token: 0x0400650C RID: 25868
+		// Token: 0x04006AFB RID: 27387
 		public ECommonTipType Type;
 	}
 }

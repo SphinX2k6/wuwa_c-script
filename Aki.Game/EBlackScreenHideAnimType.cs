@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200170A RID: 5898
+// Token: 0x02000BC2 RID: 3010
 [NullableContext(1)]
 [Nullable(0)]
 public static class EBlackScreenHideAnimType
 {
-	// Token: 0x04004D24 RID: 19748
+	// Token: 0x04004DCB RID: 19915
 	public const string None = "None";
 
-	// Token: 0x04004D25 RID: 19749
+	// Token: 0x04004DCC RID: 19916
 	public const string Close = "Close";
 
-	// Token: 0x04004D26 RID: 19750
+	// Token: 0x04004DCD RID: 19917
 	public const string LoadingClose = "LoadingClose";
 }

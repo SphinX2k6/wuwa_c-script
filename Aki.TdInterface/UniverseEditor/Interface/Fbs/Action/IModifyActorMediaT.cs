@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AB9 RID: 27321
+	// Token: 0x020071EA RID: 29162
 	public class IModifyActorMediaT
 	{
-		// Token: 0x1700CABA RID: 51898
-		// (get) Token: 0x0602FE14 RID: 196116 RVA: 0x00683555 File Offset: 0x00681755
-		// (set) Token: 0x0602FE15 RID: 196117 RVA: 0x0068355D File Offset: 0x0068175D
+		// Token: 0x1700D57D RID: 54653
+		// (get) Token: 0x06032BB0 RID: 207792 RVA: 0x006DA47D File Offset: 0x006D867D
+		// (set) Token: 0x06032BB1 RID: 207793 RVA: 0x006DA485 File Offset: 0x006D8685
 		public IChangeMediaPlayDaT Config { get; set; }
 
-		// Token: 0x0602FE16 RID: 196118 RVA: 0x00683566 File Offset: 0x00681766
+		// Token: 0x06032BB2 RID: 207794 RVA: 0x006DA48E File Offset: 0x006D868E
 		public IModifyActorMediaT()
 		{
 			this.Config = null;

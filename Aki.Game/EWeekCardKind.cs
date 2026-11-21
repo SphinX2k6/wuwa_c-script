@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020023A8 RID: 9128
+// Token: 0x0200188D RID: 6285
 public enum EWeekCardKind
 {
-	// Token: 0x040089D6 RID: 35286
+	// Token: 0x04008B1D RID: 35613
 	Normal,
-	// Token: 0x040089D7 RID: 35287
+	// Token: 0x04008B1E RID: 35614
 	NewPlayer
 }

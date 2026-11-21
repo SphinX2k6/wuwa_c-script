@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003BA RID: 954
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000405 RID: 1029
 	public class IFoxJumpingPoint : IHookInteractType
 	{
-		// Token: 0x06001305 RID: 4869 RVA: 0x0003E188 File Offset: 0x0003C388
+		// Token: 0x0600145B RID: 5211 RVA: 0x00041728 File Offset: 0x0003F928
 		private IFoxJumpingPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001306 RID: 4870 RVA: 0x0003E1C0 File Offset: 0x0003C3C0
+		// Token: 0x0600145C RID: 5212 RVA: 0x00041760 File Offset: 0x0003F960
 		public static IFoxJumpingPoint Create([Nullable(2)] IFoxJumpingPoint instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001307 RID: 4871 RVA: 0x0003E1D3 File Offset: 0x0003C3D3
+		// Token: 0x0600145D RID: 5213 RVA: 0x00041773 File Offset: 0x0003F973
 		public static IFoxJumpingPoint CreateFromSetValue([Nullable(2)] IFoxJumpingPoint_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001308 RID: 4872 RVA: 0x0003E1E8 File Offset: 0x0003C3E8
+		// Token: 0x0600145E RID: 5214 RVA: 0x00041788 File Offset: 0x0003F988
 		public new IFoxJumpingPoint_SetValue ToSetValue()
 		{
 			return new IFoxJumpingPoint_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000549 RID: 1353
-		// (get) Token: 0x06001309 RID: 4873 RVA: 0x0003E236 File Offset: 0x0003C436
-		// (set) Token: 0x0600130A RID: 4874 RVA: 0x0003E261 File Offset: 0x0003C461
+		// Token: 0x170005A3 RID: 1443
+		// (get) Token: 0x0600145F RID: 5215 RVA: 0x000417D6 File Offset: 0x0003F9D6
+		// (set) Token: 0x06001460 RID: 5216 RVA: 0x00041801 File Offset: 0x0003FA01
 		public override EHookInteractType Type
 		{
 			get
@@ -89,20 +87,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700054A RID: 1354
-		// (get) Token: 0x0600130B RID: 4875 RVA: 0x0003E270 File Offset: 0x0003C470
-		// (set) Token: 0x0600130C RID: 4876 RVA: 0x0003E303 File Offset: 0x0003C503
+		// Token: 0x170005A4 RID: 1444
+		// (get) Token: 0x06001461 RID: 5217 RVA: 0x00041810 File Offset: 0x0003FA10
+		// (set) Token: 0x06001462 RID: 5218 RVA: 0x000418A3 File Offset: 0x0003FAA3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -133,7 +131,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -142,20 +140,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700054B RID: 1355
-		// (get) Token: 0x0600130D RID: 4877 RVA: 0x0003E318 File Offset: 0x0003C518
-		// (set) Token: 0x0600130E RID: 4878 RVA: 0x0003E3AB File Offset: 0x0003C5AB
+		// Token: 0x170005A5 RID: 1445
+		// (get) Token: 0x06001463 RID: 5219 RVA: 0x000418B8 File Offset: 0x0003FAB8
+		// (set) Token: 0x06001464 RID: 5220 RVA: 0x0004194B File Offset: 0x0003FB4B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -186,7 +184,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -195,20 +193,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700054C RID: 1356
-		// (get) Token: 0x0600130F RID: 4879 RVA: 0x0003E3C0 File Offset: 0x0003C5C0
-		// (set) Token: 0x06001310 RID: 4880 RVA: 0x0003E453 File Offset: 0x0003C653
+		// Token: 0x170005A6 RID: 1446
+		// (get) Token: 0x06001465 RID: 5221 RVA: 0x00041960 File Offset: 0x0003FB60
+		// (set) Token: 0x06001466 RID: 5222 RVA: 0x000419F3 File Offset: 0x0003FBF3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<Aki.TDConfigMgr.Action.ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -239,7 +237,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -248,9 +246,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700054D RID: 1357
-		// (get) Token: 0x06001311 RID: 4881 RVA: 0x0003E468 File Offset: 0x0003C668
-		// (set) Token: 0x06001312 RID: 4882 RVA: 0x0003E4C9 File Offset: 0x0003C6C9
+		// Token: 0x170005A7 RID: 1447
+		// (get) Token: 0x06001467 RID: 5223 RVA: 0x00041A08 File Offset: 0x0003FC08
+		// (set) Token: 0x06001468 RID: 5224 RVA: 0x00041A69 File Offset: 0x0003FC69
 		[Nullable(2)]
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
@@ -281,51 +279,51 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F2E RID: 3886
+		// Token: 0x0400102F RID: 4143
 		[Nullable(2)]
 		protected new IFoxJumpingPoint FbInstance;
 
-		// Token: 0x04000F2F RID: 3887
+		// Token: 0x04001030 RID: 4144
 		[Nullable(2)]
 		protected new IFoxJumpingPoint_SetValue PocoInterface;
 
-		// Token: 0x04000F30 RID: 3888
+		// Token: 0x04001031 RID: 4145
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _HookActionsCache;
 
-		// Token: 0x04000F31 RID: 3889
+		// Token: 0x04001032 RID: 4146
 		private bool _HookActionsInited;
 
-		// Token: 0x04000F32 RID: 3890
+		// Token: 0x04001033 RID: 4147
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x04000F33 RID: 3891
+		// Token: 0x04001034 RID: 4148
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x04000F34 RID: 3892
+		// Token: 0x04001035 RID: 4149
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _FinishActionsCache;
 
-		// Token: 0x04000F35 RID: 3893
+		// Token: 0x04001036 RID: 4150
 		private bool _FinishActionsInited;
 
-		// Token: 0x04000F36 RID: 3894
+		// Token: 0x04001037 RID: 4151
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x04000F37 RID: 3895
+		// Token: 0x04001038 RID: 4152
 		private bool _ClientHookActionConfigInited;
 	}
 }

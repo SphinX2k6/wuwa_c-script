@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002141 RID: 8513
+	// Token: 0x020023A2 RID: 9122
 	public class ReignsSetPropertyVisible_SetValue
 	{
-		// Token: 0x04007015 RID: 28693
+		// Token: 0x0400764A RID: 30282
 		public int PropertyId;
 
-		// Token: 0x04007016 RID: 28694
+		// Token: 0x0400764B RID: 30283
 		public bool IsVisible;
 	}
 }

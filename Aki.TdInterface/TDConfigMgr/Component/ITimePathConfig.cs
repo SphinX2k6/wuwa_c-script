@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000779 RID: 1913
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200081A RID: 2074
 	public class ITimePathConfig
 	{
-		// Token: 0x06002978 RID: 10616 RVA: 0x0006D6A0 File Offset: 0x0006B8A0
+		// Token: 0x06002C9C RID: 11420 RVA: 0x00074848 File Offset: 0x00072A48
 		private ITimePathConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002979 RID: 10617 RVA: 0x0006D6D8 File Offset: 0x0006B8D8
+		// Token: 0x06002C9D RID: 11421 RVA: 0x00074880 File Offset: 0x00072A80
 		public static ITimePathConfig Create([Nullable(2)] ITimePathConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600297A RID: 10618 RVA: 0x0006D6EB File Offset: 0x0006B8EB
+		// Token: 0x06002C9E RID: 11422 RVA: 0x00074893 File Offset: 0x00072A93
 		public static ITimePathConfig CreateFromSetValue([Nullable(2)] ITimePathConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600297B RID: 10619 RVA: 0x0006D6FE File Offset: 0x0006B8FE
+		// Token: 0x06002C9F RID: 11423 RVA: 0x000748A6 File Offset: 0x00072AA6
 		public ITimePathConfig_SetValue ToSetValue()
 		{
 			return new ITimePathConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AE8 RID: 2792
-		// (get) Token: 0x0600297C RID: 10620 RVA: 0x0006D71D File Offset: 0x0006B91D
-		// (set) Token: 0x0600297D RID: 10621 RVA: 0x0006D74C File Offset: 0x0006B94C
+		// Token: 0x17000BA8 RID: 2984
+		// (get) Token: 0x06002CA0 RID: 11424 RVA: 0x000748C5 File Offset: 0x00072AC5
+		// (set) Token: 0x06002CA1 RID: 11425 RVA: 0x000748F4 File Offset: 0x00072AF4
 		public virtual float TotalTime
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE9 RID: 2793
-		// (get) Token: 0x0600297E RID: 10622 RVA: 0x0006D75A File Offset: 0x0006B95A
-		// (set) Token: 0x0600297F RID: 10623 RVA: 0x0006D785 File Offset: 0x0006B985
+		// Token: 0x17000BA9 RID: 2985
+		// (get) Token: 0x06002CA2 RID: 11426 RVA: 0x00074902 File Offset: 0x00072B02
+		// (set) Token: 0x06002CA3 RID: 11427 RVA: 0x0007492D File Offset: 0x00072B2D
 		public virtual string TimePathCurve
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BCF RID: 7119
+		// Token: 0x04001DD4 RID: 7636
 		[Nullable(2)]
 		protected ITimePathConfig FbInstance;
 
-		// Token: 0x04001BD0 RID: 7120
+		// Token: 0x04001DD5 RID: 7637
 		[Nullable(2)]
 		protected ITimePathConfig_SetValue PocoInterface;
 	}

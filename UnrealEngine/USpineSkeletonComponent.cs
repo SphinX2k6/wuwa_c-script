@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028B1 RID: 10417
+	// Token: 0x02000840 RID: 2112
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SpinePlugin.SpineSkeletonComponent")]
 	[UnrealStructLayout(368, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 368)]
 	public class USpineSkeletonComponent : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06026A16 RID: 158230 RVA: 0x003AF2CE File Offset: 0x003AD4CE
+		// Token: 0x0600B804 RID: 47108 RVA: 0x0012702A File Offset: 0x0012522A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USpineSkeletonComponent._ClassPtr;
 		}
 
-		// Token: 0x06026A17 RID: 158231 RVA: 0x003AF2DC File Offset: 0x003AD4DC
+		// Token: 0x0600B805 RID: 47109 RVA: 0x00127038 File Offset: 0x00125238
 		public USpineSkeletonComponent() : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026A18 RID: 158232 RVA: 0x003AF304 File Offset: 0x003AD504
+		// Token: 0x0600B806 RID: 47110 RVA: 0x00127060 File Offset: 0x00125260
 		public USpineSkeletonComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USpineSkeletonComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170094EA RID: 38122
-		// (get) Token: 0x06026A19 RID: 158233 RVA: 0x003AF337 File Offset: 0x003AD537
-		// (set) Token: 0x06026A1A RID: 158234 RVA: 0x003AF34B File Offset: 0x003AD54B
+		// Token: 0x17002255 RID: 8789
+		// (get) Token: 0x0600B807 RID: 47111 RVA: 0x00127093 File Offset: 0x00125293
+		// (set) Token: 0x0600B808 RID: 47112 RVA: 0x001270A7 File Offset: 0x001252A7
 		[Nullable(2)]
 		public unsafe USpineAtlasAsset Atlas
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094EB RID: 38123
-		// (get) Token: 0x06026A1B RID: 158235 RVA: 0x003AF360 File Offset: 0x003AD560
-		// (set) Token: 0x06026A1C RID: 158236 RVA: 0x003AF374 File Offset: 0x003AD574
+		// Token: 0x17002256 RID: 8790
+		// (get) Token: 0x0600B809 RID: 47113 RVA: 0x001270BC File Offset: 0x001252BC
+		// (set) Token: 0x0600B80A RID: 47114 RVA: 0x001270D0 File Offset: 0x001252D0
 		[Nullable(2)]
 		public unsafe USpineSkeletonDataAsset SkeletonData
 		{
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094EC RID: 38124
-		// (get) Token: 0x06026A1D RID: 158237 RVA: 0x003AF38C File Offset: 0x003AD58C
-		// (set) Token: 0x06026A1E RID: 158238 RVA: 0x003AF3C5 File Offset: 0x003AD5C5
+		// Token: 0x17002257 RID: 8791
+		// (get) Token: 0x0600B80B RID: 47115 RVA: 0x001270E8 File Offset: 0x001252E8
+		// (set) Token: 0x0600B80C RID: 47116 RVA: 0x00127121 File Offset: 0x00125321
 		public FSpineBeforeUpdateWorldTransformDelegate BeforeUpdateWorldTransform
 		{
 			get
@@ -86,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170094ED RID: 38125
-		// (get) Token: 0x06026A1F RID: 158239 RVA: 0x003AF3E8 File Offset: 0x003AD5E8
-		// (set) Token: 0x06026A20 RID: 158240 RVA: 0x003AF421 File Offset: 0x003AD621
+		// Token: 0x17002258 RID: 8792
+		// (get) Token: 0x0600B80D RID: 47117 RVA: 0x00127144 File Offset: 0x00125344
+		// (set) Token: 0x0600B80E RID: 47118 RVA: 0x0012717D File Offset: 0x0012537D
 		public FSpineAfterUpdateWorldTransformDelegate AfterUpdateWorldTransform
 		{
 			get
@@ -107,25 +107,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06026A21 RID: 158241 RVA: 0x003AF442 File Offset: 0x003AD642
+		// Token: 0x0600B80F RID: 47119 RVA: 0x0012719E File Offset: 0x0012539E
 		public void UpdateWorldTransform()
 		{
 			USpineSkeletonComponent.__UpdateWorldTransform_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A22 RID: 158242 RVA: 0x003AF44F File Offset: 0x003AD64F
+		// Token: 0x0600B810 RID: 47120 RVA: 0x001271AB File Offset: 0x001253AB
 		public void SetToSetupPose()
 		{
 			USpineSkeletonComponent.__SetToSetupPose_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A23 RID: 158243 RVA: 0x003AF45C File Offset: 0x003AD65C
+		// Token: 0x0600B811 RID: 47121 RVA: 0x001271B8 File Offset: 0x001253B8
 		public void SetSlotsToSetupPose()
 		{
 			USpineSkeletonComponent.__SetSlotsToSetupPose_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A24 RID: 158244 RVA: 0x003AF46C File Offset: 0x003AD66C
+		// Token: 0x0600B812 RID: 47122 RVA: 0x001271C8 File Offset: 0x001253C8
 		public unsafe void SetSlotColor(string SlotName, FColor color)
 		{
 			FString fstring = FString.AllocTemp(SlotName);
@@ -133,7 +133,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06026A25 RID: 158245 RVA: 0x003AF497 File Offset: 0x003AD697
+		// Token: 0x0600B813 RID: 47123 RVA: 0x001271F3 File Offset: 0x001253F3
 		public bool SetSkins([Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace UnrealEngine
 			return USpineSkeletonComponent.__SetSkins_Internal(base.NativePtr, (SkinNames ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x06026A26 RID: 158246 RVA: 0x003AF4B4 File Offset: 0x003AD6B4
+		// Token: 0x0600B814 RID: 47124 RVA: 0x00127210 File Offset: 0x00125410
 		public unsafe bool SetSkin(string SkinName)
 		{
 			FString fstring = FString.AllocTemp(SkinName);
@@ -152,19 +152,19 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A27 RID: 158247 RVA: 0x003AF4DE File Offset: 0x003AD6DE
+		// Token: 0x0600B815 RID: 47125 RVA: 0x0012723A File Offset: 0x0012543A
 		public void SetScaleY(float scaleY)
 		{
 			USpineSkeletonComponent.__SetScaleY_Internal(base.NativePtr, scaleY);
 		}
 
-		// Token: 0x06026A28 RID: 158248 RVA: 0x003AF4EC File Offset: 0x003AD6EC
+		// Token: 0x0600B816 RID: 47126 RVA: 0x00127248 File Offset: 0x00125448
 		public void SetScaleX(float scaleX)
 		{
 			USpineSkeletonComponent.__SetScaleX_Internal(base.NativePtr, scaleX);
 		}
 
-		// Token: 0x06026A29 RID: 158249 RVA: 0x003AF4FC File Offset: 0x003AD6FC
+		// Token: 0x0600B817 RID: 47127 RVA: 0x00127258 File Offset: 0x00125458
 		public unsafe void SetBoneWorldPosition(string BoneName, in FVector position)
 		{
 			FString fstring = FString.AllocTemp(BoneName);
@@ -172,13 +172,13 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06026A2A RID: 158250 RVA: 0x003AF527 File Offset: 0x003AD727
+		// Token: 0x0600B818 RID: 47128 RVA: 0x00127283 File Offset: 0x00125483
 		public void SetBonesToSetupPose()
 		{
 			USpineSkeletonComponent.__SetBonesToSetupPose_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A2B RID: 158251 RVA: 0x003AF534 File Offset: 0x003AD734
+		// Token: 0x0600B819 RID: 47129 RVA: 0x00127290 File Offset: 0x00125490
 		public unsafe bool SetAttachment(string slotName, string attachmentName)
 		{
 			FString fstring = FString.AllocTemp(slotName);
@@ -189,7 +189,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A2C RID: 158252 RVA: 0x003AF570 File Offset: 0x003AD770
+		// Token: 0x0600B81A RID: 47130 RVA: 0x001272CC File Offset: 0x001254CC
 		public unsafe bool HasSlot(string SlotName)
 		{
 			FString fstring = FString.AllocTemp(SlotName);
@@ -198,7 +198,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A2D RID: 158253 RVA: 0x003AF59C File Offset: 0x003AD79C
+		// Token: 0x0600B81B RID: 47131 RVA: 0x001272F8 File Offset: 0x001254F8
 		public unsafe bool HasSkin(string SkinName)
 		{
 			FString fstring = FString.AllocTemp(SkinName);
@@ -207,7 +207,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A2E RID: 158254 RVA: 0x003AF5C8 File Offset: 0x003AD7C8
+		// Token: 0x0600B81C RID: 47132 RVA: 0x00127324 File Offset: 0x00125524
 		public unsafe bool HasBone(string BoneName)
 		{
 			FString fstring = FString.AllocTemp(BoneName);
@@ -216,7 +216,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A2F RID: 158255 RVA: 0x003AF5F4 File Offset: 0x003AD7F4
+		// Token: 0x0600B81D RID: 47133 RVA: 0x00127350 File Offset: 0x00125550
 		public unsafe bool HasAnimation(string AnimationName)
 		{
 			FString fstring = FString.AllocTemp(AnimationName);
@@ -225,7 +225,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A30 RID: 158256 RVA: 0x003AF61E File Offset: 0x003AD81E
+		// Token: 0x0600B81E RID: 47134 RVA: 0x0012737A File Offset: 0x0012557A
 		public void GetSlots([Nullable(new byte[]
 		{
 			2,
@@ -235,7 +235,7 @@ namespace UnrealEngine
 			USpineSkeletonComponent.__GetSlots_Internal(base.NativePtr, (Slots ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x06026A31 RID: 158257 RVA: 0x003AF63B File Offset: 0x003AD83B
+		// Token: 0x0600B81F RID: 47135 RVA: 0x00127397 File Offset: 0x00125597
 		public void GetSkins([Nullable(new byte[]
 		{
 			2,
@@ -245,19 +245,19 @@ namespace UnrealEngine
 			USpineSkeletonComponent.__GetSkins_Internal(base.NativePtr, (Skins ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x06026A32 RID: 158258 RVA: 0x003AF658 File Offset: 0x003AD858
+		// Token: 0x0600B820 RID: 47136 RVA: 0x001273B4 File Offset: 0x001255B4
 		public float GetScaleY()
 		{
 			return USpineSkeletonComponent.__GetScaleY_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A33 RID: 158259 RVA: 0x003AF665 File Offset: 0x003AD865
+		// Token: 0x0600B821 RID: 47137 RVA: 0x001273C1 File Offset: 0x001255C1
 		public float GetScaleX()
 		{
 			return USpineSkeletonComponent.__GetScaleX_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06026A34 RID: 158260 RVA: 0x003AF674 File Offset: 0x003AD874
+		// Token: 0x0600B822 RID: 47138 RVA: 0x001273D0 File Offset: 0x001255D0
 		public unsafe FTransform GetBoneWorldTransform(string BoneName)
 		{
 			FString fstring = FString.AllocTemp(BoneName);
@@ -266,7 +266,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A35 RID: 158261 RVA: 0x003AF69E File Offset: 0x003AD89E
+		// Token: 0x0600B823 RID: 47139 RVA: 0x001273FA File Offset: 0x001255FA
 		public void GetBones([Nullable(new byte[]
 		{
 			2,
@@ -276,7 +276,7 @@ namespace UnrealEngine
 			USpineSkeletonComponent.__GetBones_Internal(base.NativePtr, (Bones ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x06026A36 RID: 158262 RVA: 0x003AF6BB File Offset: 0x003AD8BB
+		// Token: 0x0600B824 RID: 47140 RVA: 0x00127417 File Offset: 0x00125617
 		public void GetAnimations([Nullable(new byte[]
 		{
 			2,
@@ -286,7 +286,7 @@ namespace UnrealEngine
 			USpineSkeletonComponent.__GetAnimations_Internal(base.NativePtr, (Animations ?? new TArray<string>()).NativePtr);
 		}
 
-		// Token: 0x06026A37 RID: 158263 RVA: 0x003AF6D8 File Offset: 0x003AD8D8
+		// Token: 0x0600B825 RID: 47141 RVA: 0x00127434 File Offset: 0x00125634
 		public unsafe float GetAnimationDuration(string AnimationName)
 		{
 			FString fstring = FString.AllocTemp(AnimationName);
@@ -295,135 +295,135 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06026A38 RID: 158264
+		// Token: 0x0600B826 RID: 47142
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateWorldTransform_Internal(IntPtr @this);
 
-		// Token: 0x06026A39 RID: 158265
+		// Token: 0x0600B827 RID: 47143
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetToSetupPose_Internal(IntPtr @this);
 
-		// Token: 0x06026A3A RID: 158266
+		// Token: 0x0600B828 RID: 47144
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSlotsToSetupPose_Internal(IntPtr @this);
 
-		// Token: 0x06026A3B RID: 158267
+		// Token: 0x0600B829 RID: 47145
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSlotColor_Internal(IntPtr @this, in FString SlotName, FColor color);
 
-		// Token: 0x06026A3C RID: 158268
+		// Token: 0x0600B82A RID: 47146
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetSkins_Internal(IntPtr @this, IntPtr SkinNames);
 
-		// Token: 0x06026A3D RID: 158269
+		// Token: 0x0600B82B RID: 47147
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetSkin_Internal(IntPtr @this, in FString SkinName);
 
-		// Token: 0x06026A3E RID: 158270
+		// Token: 0x0600B82C RID: 47148
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScaleY_Internal(IntPtr @this, float scaleY);
 
-		// Token: 0x06026A3F RID: 158271
+		// Token: 0x0600B82D RID: 47149
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetScaleX_Internal(IntPtr @this, float scaleX);
 
-		// Token: 0x06026A40 RID: 158272
+		// Token: 0x0600B82E RID: 47150
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoneWorldPosition_Internal(IntPtr @this, in FString BoneName, in FVector position);
 
-		// Token: 0x06026A41 RID: 158273
+		// Token: 0x0600B82F RID: 47151
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBonesToSetupPose_Internal(IntPtr @this);
 
-		// Token: 0x06026A42 RID: 158274
+		// Token: 0x0600B830 RID: 47152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetAttachment_Internal(IntPtr @this, in FString slotName, in FString attachmentName);
 
-		// Token: 0x06026A43 RID: 158275
+		// Token: 0x0600B831 RID: 47153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasSlot_Internal(IntPtr @this, in FString SlotName);
 
-		// Token: 0x06026A44 RID: 158276
+		// Token: 0x0600B832 RID: 47154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasSkin_Internal(IntPtr @this, in FString SkinName);
 
-		// Token: 0x06026A45 RID: 158277
+		// Token: 0x0600B833 RID: 47155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasBone_Internal(IntPtr @this, in FString BoneName);
 
-		// Token: 0x06026A46 RID: 158278
+		// Token: 0x0600B834 RID: 47156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasAnimation_Internal(IntPtr @this, in FString AnimationName);
 
-		// Token: 0x06026A47 RID: 158279
+		// Token: 0x0600B835 RID: 47157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetSlots_Internal(IntPtr @this, IntPtr Slots);
 
-		// Token: 0x06026A48 RID: 158280
+		// Token: 0x0600B836 RID: 47158
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetSkins_Internal(IntPtr @this, IntPtr Skins);
 
-		// Token: 0x06026A49 RID: 158281
+		// Token: 0x0600B837 RID: 47159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetScaleY_Internal(IntPtr @this);
 
-		// Token: 0x06026A4A RID: 158282
+		// Token: 0x0600B838 RID: 47160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetScaleX_Internal(IntPtr @this);
 
-		// Token: 0x06026A4B RID: 158283
+		// Token: 0x0600B839 RID: 47161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetBoneWorldTransform_Internal(IntPtr @this, in FString BoneName);
 
-		// Token: 0x06026A4C RID: 158284
+		// Token: 0x0600B83A RID: 47162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetBones_Internal(IntPtr @this, IntPtr Bones);
 
-		// Token: 0x06026A4D RID: 158285
+		// Token: 0x0600B83B RID: 47163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetAnimations_Internal(IntPtr @this, IntPtr Animations);
 
-		// Token: 0x06026A4E RID: 158286
+		// Token: 0x0600B83C RID: 47164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAnimationDuration_Internal(IntPtr @this, in FString AnimationName);
 
-		// Token: 0x06026A4F RID: 158287 RVA: 0x003AF702 File Offset: 0x003AD902
+		// Token: 0x0600B83D RID: 47165 RVA: 0x0012745E File Offset: 0x0012565E
 		static USpineSkeletonComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SpinePlugin.SpineSkeletonComponent");
 		}
 
-		// Token: 0x06026A50 RID: 158288 RVA: 0x003AF710 File Offset: 0x003AD910
+		// Token: 0x0600B83E RID: 47166 RVA: 0x0012746C File Offset: 0x0012566C
 		protected USpineSkeletonComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401536F RID: 86895
+		// Token: 0x04005399 RID: 21401
 		public new const string __ObjectPath = "/Script/SpinePlugin.SpineSkeletonComponent";
 
-		// Token: 0x04015370 RID: 86896
+		// Token: 0x0400539A RID: 21402
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015371 RID: 86897
+		// Token: 0x0400539B RID: 21403
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015372 RID: 86898
+		// Token: 0x0400539C RID: 21404
 		internal static int __PropertyOffset_Atlas;
 
-		// Token: 0x04015373 RID: 86899
+		// Token: 0x0400539D RID: 21405
 		internal static int __PropertyOffset_SkeletonData;
 
-		// Token: 0x04015374 RID: 86900
+		// Token: 0x0400539E RID: 21406
 		internal static int __PropertyOffset_BeforeUpdateWorldTransform;
 
-		// Token: 0x04015375 RID: 86901
+		// Token: 0x0400539F RID: 21407
 		[Nullable(2)]
 		private FSpineBeforeUpdateWorldTransformDelegate _BeforeUpdateWorldTransform;
 
-		// Token: 0x04015376 RID: 86902
+		// Token: 0x040053A0 RID: 21408
 		internal static int __PropertyOffset_AfterUpdateWorldTransform;
 
-		// Token: 0x04015377 RID: 86903
+		// Token: 0x040053A1 RID: 21409
 		[Nullable(2)]
 		private FSpineAfterUpdateWorldTransformDelegate _AfterUpdateWorldTransform;
 	}

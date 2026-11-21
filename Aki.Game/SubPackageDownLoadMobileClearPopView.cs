@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AAA RID: 10922
+// Token: 0x02002026 RID: 8230
 [NullableContext(1)]
 [Nullable(0)]
 public class SubPackageDownLoadMobileClearPopView : UiViewBase
 {
-	// Token: 0x06016BDF RID: 93151 RVA: 0x005C4F29 File Offset: 0x005C3129
+	// Token: 0x0601460E RID: 83470 RVA: 0x005F19C9 File Offset: 0x005EFBC9
 	public SubPackageDownLoadMobileClearPopView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06016BE0 RID: 93152 RVA: 0x005C4F48 File Offset: 0x005C3148
+	// Token: 0x0601460F RID: 83471 RVA: 0x005F19E8 File Offset: 0x005EFBE8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016BE1 RID: 93153 RVA: 0x005C4FF4 File Offset: 0x005C31F4
+	// Token: 0x06014610 RID: 83472 RVA: 0x005F1A94 File Offset: 0x005EFC94
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SubPackageDownLoadMobileClearPopView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016BE2 RID: 93154 RVA: 0x005C5038 File Offset: 0x005C3238
+	// Token: 0x06014611 RID: 83473 RVA: 0x005F1AD8 File Offset: 0x005EFCD8
 	protected override void OnStart()
 	{
 		this.SubPackageScrollView = new GenericScrollViewNew<SubPackageDownLoadMobileClearItem, ISubPackageDownLoadMobileClearData>(base.GetScrollViewWithScrollbar(2), new Func<SubPackageDownLoadMobileClearItem>(this.InitSubPackageDownLoadMobileClearItem), null, false, null);
@@ -65,7 +65,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		SubPackageController.Instance.ReportInitialMobileResCleanUpViewLogEvent((int)(this.AllCanClearSpace / 1048576L), 3);
 	}
 
-	// Token: 0x06016BE3 RID: 93155 RVA: 0x005C50E0 File Offset: 0x005C32E0
+	// Token: 0x06014612 RID: 83474 RVA: 0x005F1B80 File Offset: 0x005EFD80
 	private List<ISubPackageDownLoadMobileClearData> GetScrollViewDataList()
 	{
 		List<ISubPackageDownLoadMobileClearData> list = new List<ISubPackageDownLoadMobileClearData>();
@@ -90,7 +90,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06016BE4 RID: 93156 RVA: 0x005C5158 File Offset: 0x005C3358
+	// Token: 0x06014613 RID: 83475 RVA: 0x005F1BF8 File Offset: 0x005EFDF8
 	private List<int> GetSceneData()
 	{
 		List<int> list = new List<int>();
@@ -110,7 +110,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06016BE5 RID: 93157 RVA: 0x005C51E8 File Offset: 0x005C33E8
+	// Token: 0x06014614 RID: 83476 RVA: 0x005F1C88 File Offset: 0x005EFE88
 	private bool GetPlotData()
 	{
 		long canCleanVideoSpace = SubPackageDownLoadModel.Instance.GetCanCleanVideoSpace();
@@ -118,7 +118,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		return canCleanVideoSpace > 0L;
 	}
 
-	// Token: 0x06016BE6 RID: 93158 RVA: 0x005C5214 File Offset: 0x005C3414
+	// Token: 0x06014615 RID: 83477 RVA: 0x005F1CB4 File Offset: 0x005EFEB4
 	private List<string> GetVoiceData()
 	{
 		List<string> list = new List<string>();
@@ -153,7 +153,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06016BE7 RID: 93159 RVA: 0x005C530C File Offset: 0x005C350C
+	// Token: 0x06014616 RID: 83478 RVA: 0x005F1DAC File Offset: 0x005EFFAC
 	private void DealRoleLangCustom()
 	{
 		if (!LocalStorage.HasPlayerId())
@@ -168,7 +168,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		instance.CheckAndApplyPlayerVoiceAll();
 	}
 
-	// Token: 0x06016BE8 RID: 93160 RVA: 0x005C5325 File Offset: 0x005C3525
+	// Token: 0x06014617 RID: 83479 RVA: 0x005F1DC5 File Offset: 0x005EFFC5
 	private SubPackageDownLoadMobileClearItem InitSubPackageDownLoadMobileClearItem()
 	{
 		return new SubPackageDownLoadMobileClearItem
@@ -178,7 +178,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016BE9 RID: 93161 RVA: 0x005C5350 File Offset: 0x005C3550
+	// Token: 0x06014618 RID: 83480 RVA: 0x005F1DF0 File Offset: 0x005EFFF0
 	private void OnClickAutoClearToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -192,7 +192,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016BEA RID: 93162 RVA: 0x005C5374 File Offset: 0x005C3574
+	// Token: 0x06014619 RID: 83481 RVA: 0x005F1E14 File Offset: 0x005F0014
 	private void OnClickConfirmBtn()
 	{
 		if (this.CurrentSelectInfoIdSet.Count <= 0)
@@ -215,7 +215,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		}
 		if (GameModeModel.Instance.IsMulti)
 		{
-			ScrollingTipsController.Instance.ShowTipsByTextId("ConnectBanCleanResource", Array.Empty<object>());
+			SubPackageDownLoadModel.Instance.OpenMultiBanCleanConfirm();
 			return;
 		}
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ClearBlockSubPackageConfirm);
@@ -246,7 +246,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 	}
 
-	// Token: 0x06016BEB RID: 93163 RVA: 0x005C5484 File Offset: 0x005C3684
+	// Token: 0x0601461A RID: 83482 RVA: 0x005F1F18 File Offset: 0x005F0118
 	[NullableContext(2)]
 	private void OnSelectSubItem(int? sceneId, bool isVideo, EToggleState state, string voiceCode)
 	{
@@ -280,7 +280,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		this.RefreshButton();
 	}
 
-	// Token: 0x06016BEC RID: 93164 RVA: 0x005C5534 File Offset: 0x005C3734
+	// Token: 0x0601461B RID: 83483 RVA: 0x005F1FC8 File Offset: 0x005F01C8
 	private void RefreshButton()
 	{
 		base.GetButton(0).SetSelfInteractive(this.CurrentSelectInfoIdSet.Count > 0 || this.HaveSelectVideo || this.SelectVoiceCodeSet.Count > 0);
@@ -301,7 +301,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		}));
 	}
 
-	// Token: 0x06016BED RID: 93165 RVA: 0x005C5670 File Offset: 0x005C3870
+	// Token: 0x0601461C RID: 83484 RVA: 0x005F2104 File Offset: 0x005F0304
 	private void OnClickHelpBtn(int type, UUIItem item)
 	{
 		SubPackageDownLoadVersionTipsView versionTipsView = this.VersionTipsView;
@@ -317,7 +317,7 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 		versionTipsView2.SetUiActive(true);
 	}
 
-	// Token: 0x0400A8CA RID: 43210
+	// Token: 0x0400ACD0 RID: 44240
 	[Nullable(new byte[]
 	{
 		2,
@@ -326,39 +326,39 @@ public class SubPackageDownLoadMobileClearPopView : UiViewBase
 	})]
 	private GenericScrollViewNew<SubPackageDownLoadMobileClearItem, ISubPackageDownLoadMobileClearData> SubPackageScrollView;
 
-	// Token: 0x0400A8CB RID: 43211
+	// Token: 0x0400ACD1 RID: 44241
 	private readonly HashSet<int> CurrentSelectInfoIdSet = new HashSet<int>();
 
-	// Token: 0x0400A8CC RID: 43212
+	// Token: 0x0400ACD2 RID: 44242
 	private bool HaveSelectVideo;
 
-	// Token: 0x0400A8CD RID: 43213
+	// Token: 0x0400ACD3 RID: 44243
 	private readonly HashSet<string> SelectVoiceCodeSet = new HashSet<string>();
 
-	// Token: 0x0400A8CE RID: 43214
+	// Token: 0x0400ACD4 RID: 44244
 	[Nullable(2)]
 	private SubPackageDownLoadVersionTipsView VersionTipsView;
 
-	// Token: 0x0400A8CF RID: 43215
+	// Token: 0x0400ACD5 RID: 44245
 	private long AllCanClearSpace;
 
-	// Token: 0x0400A8D0 RID: 43216
+	// Token: 0x0400ACD6 RID: 44246
 	private const long MB_SIZE = 1048576L;
 
-	// Token: 0x020090D8 RID: 37080
+	// Token: 0x0200831C RID: 33564
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402EEDD RID: 192221
+		// Token: 0x0402A5E2 RID: 173538
 		public const int ConfirmBtn = 0;
 
-		// Token: 0x0402EEDE RID: 192222
+		// Token: 0x0402A5E3 RID: 173539
 		public const int AutoClearToggle = 1;
 
-		// Token: 0x0402EEDF RID: 192223
+		// Token: 0x0402A5E4 RID: 173540
 		public const int ScrollView = 2;
 
-		// Token: 0x0402EEE0 RID: 192224
+		// Token: 0x0402A5E5 RID: 173541
 		public const int ConfirmBoxText = 5;
 	}
 }

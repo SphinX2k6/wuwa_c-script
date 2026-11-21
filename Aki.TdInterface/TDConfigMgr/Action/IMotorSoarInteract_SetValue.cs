@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C25 RID: 7205
+	// Token: 0x02001E1C RID: 7708
 	public class IMotorSoarInteract_SetValue
 	{
-		// Token: 0x04005E00 RID: 24064
+		// Token: 0x04006337 RID: 25399
 		public ELeisureInteract Type;
 	}
 }

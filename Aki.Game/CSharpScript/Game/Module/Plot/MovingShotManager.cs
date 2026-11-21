@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD7 RID: 20439
+	// Token: 0x02003FA1 RID: 16289
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MovingShotManager
 	{
-		// Token: 0x060344C7 RID: 214215 RVA: 0x00C484B8 File Offset: 0x00C466B8
+		// Token: 0x0602934C RID: 168780 RVA: 0x00B92214 File Offset: 0x00B90414
 		public void Play(IShowTalkCameraMotion param)
 		{
 			this.Stop();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344C8 RID: 214216 RVA: 0x00C48546 File Offset: 0x00C46746
+		// Token: 0x0602934D RID: 168781 RVA: 0x00B922A2 File Offset: 0x00B904A2
 		public void Stop()
 		{
 			this.SequencePlayer.Stop();
@@ -50,19 +50,19 @@ namespace CSharpScript.Game.Module.Plot
 			this.ShakePlayer.Stop();
 		}
 
-		// Token: 0x060344C9 RID: 214217 RVA: 0x00C48569 File Offset: 0x00C46769
+		// Token: 0x0602934E RID: 168782 RVA: 0x00B922C5 File Offset: 0x00B904C5
 		public void OnTick(double delta)
 		{
 			this.CurvePlayer.OnTick(delta);
 		}
 
-		// Token: 0x0401BD12 RID: 113938
+		// Token: 0x040166ED RID: 91885
 		private readonly CameraSequencePlayer SequencePlayer = new CameraSequencePlayer();
 
-		// Token: 0x0401BD13 RID: 113939
+		// Token: 0x040166EE RID: 91886
 		private readonly CameraCurvePlayer CurvePlayer = new CameraCurvePlayer();
 
-		// Token: 0x0401BD14 RID: 113940
+		// Token: 0x040166EF RID: 91887
 		private readonly CameraShakePlayer ShakePlayer = new CameraShakePlayer();
 	}
 }

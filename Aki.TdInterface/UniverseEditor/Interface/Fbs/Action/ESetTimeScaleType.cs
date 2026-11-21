@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FFB RID: 24571
+	// Token: 0x02006659 RID: 26201
 	public enum ESetTimeScaleType : byte
 	{
-		// Token: 0x0400FFD6 RID: 65494
+		// Token: 0x04010DB3 RID: 69043
 		Open,
-		// Token: 0x0400FFD7 RID: 65495
+		// Token: 0x04010DB4 RID: 69044
 		Close
 	}
 }

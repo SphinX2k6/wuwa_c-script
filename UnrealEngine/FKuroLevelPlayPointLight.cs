@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018F0 RID: 6384
+	// Token: 0x020003F3 RID: 1011
 	[UnrealObjectPath("/Script/KuroGameplay.KuroLevelPlayPointLight")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FKuroLevelPlayPointLight : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06017AD0 RID: 96976 RVA: 0x0022B286 File Offset: 0x00229486
+		// Token: 0x06006375 RID: 25461 RVA: 0x0008E369 File Offset: 0x0008C569
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroLevelPlayPointLight._ScriptStructPtr != 0) ? FKuroLevelPlayPointLight._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroLevelPlayPointLight", ref FKuroLevelPlayPointLight._ScriptStructPtr);
 		}
 
-		// Token: 0x17005F64 RID: 24420
-		// (get) Token: 0x06017AD1 RID: 96977 RVA: 0x0022B2AA File Offset: 0x002294AA
-		// (set) Token: 0x06017AD2 RID: 96978 RVA: 0x0022B2BA File Offset: 0x002294BA
+		// Token: 0x17001405 RID: 5125
+		// (get) Token: 0x06006376 RID: 25462 RVA: 0x0008E38D File Offset: 0x0008C58D
+		// (set) Token: 0x06006377 RID: 25463 RVA: 0x0008E39D File Offset: 0x0008C59D
 		public unsafe float Radius
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F65 RID: 24421
-		// (get) Token: 0x06017AD3 RID: 96979 RVA: 0x0022B2CB File Offset: 0x002294CB
-		// (set) Token: 0x06017AD4 RID: 96980 RVA: 0x0022B2DB File Offset: 0x002294DB
+		// Token: 0x17001406 RID: 5126
+		// (get) Token: 0x06006378 RID: 25464 RVA: 0x0008E3AE File Offset: 0x0008C5AE
+		// (set) Token: 0x06006379 RID: 25465 RVA: 0x0008E3BE File Offset: 0x0008C5BE
 		public unsafe bool bLit
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F66 RID: 24422
-		// (get) Token: 0x06017AD5 RID: 96981 RVA: 0x0022B2EC File Offset: 0x002294EC
-		// (set) Token: 0x06017AD6 RID: 96982 RVA: 0x0022B300 File Offset: 0x00229500
+		// Token: 0x17001407 RID: 5127
+		// (get) Token: 0x0600637A RID: 25466 RVA: 0x0008E3CF File Offset: 0x0008C5CF
+		// (set) Token: 0x0600637B RID: 25467 RVA: 0x0008E3E3 File Offset: 0x0008C5E3
 		public unsafe FVectorDouble Position
 		{
 			get
@@ -61,64 +61,56 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017AD7 RID: 96983 RVA: 0x0022B315 File Offset: 0x00229515
+		// Token: 0x0600637C RID: 25468 RVA: 0x0008E3F8 File Offset: 0x0008C5F8
 		public FKuroLevelPlayPointLight()
 		{
 		}
 
-		// Token: 0x06017AD8 RID: 96984 RVA: 0x0022B31D File Offset: 0x0022951D
-		public FKuroLevelPlayPointLight(float Radius, bool bLit, FVectorDouble Position)
-		{
-			this.Radius = Radius;
-			this.bLit = bLit;
-			this.Position = Position;
-		}
-
-		// Token: 0x06017AD9 RID: 96985 RVA: 0x0022B33A File Offset: 0x0022953A
+		// Token: 0x0600637D RID: 25469 RVA: 0x0008E400 File Offset: 0x0008C600
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroLevelPlayPointLight.StaticStruct();
 		}
 
-		// Token: 0x06017ADA RID: 96986 RVA: 0x0022B346 File Offset: 0x00229546
+		// Token: 0x0600637E RID: 25470 RVA: 0x0008E40C File Offset: 0x0008C60C
 		[NullableContext(2)]
 		public FKuroLevelPlayPointLight(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017ADB RID: 96987 RVA: 0x0022B350 File Offset: 0x00229550
+		// Token: 0x0600637F RID: 25471 RVA: 0x0008E416 File Offset: 0x0008C616
 		public FKuroLevelPlayPointLight(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017ADC RID: 96988 RVA: 0x0022B35B File Offset: 0x0022955B
+		// Token: 0x06006380 RID: 25472 RVA: 0x0008E421 File Offset: 0x0008C621
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroLevelPlayPointLight(Pointer, false, true);
 		}
 
-		// Token: 0x06017ADD RID: 96989 RVA: 0x0022B365 File Offset: 0x00229565
+		// Token: 0x06006381 RID: 25473 RVA: 0x0008E42B File Offset: 0x0008C62B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroLevelPlayPointLight(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CDB7 RID: 52663
+		// Token: 0x04002A08 RID: 10760
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroLevelPlayPointLight";
 
-		// Token: 0x0400CDB8 RID: 52664
+		// Token: 0x04002A09 RID: 10761
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CDB9 RID: 52665
+		// Token: 0x04002A0A RID: 10762
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0400CDBA RID: 52666
+		// Token: 0x04002A0B RID: 10763
 		internal static int __PropertyOffset_bLit;
 
-		// Token: 0x0400CDBB RID: 52667
+		// Token: 0x04002A0C RID: 10764
 		internal static int __PropertyOffset_Position;
 	}
 }

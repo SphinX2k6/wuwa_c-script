@@ -4,48 +4,48 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043B1 RID: 17329
+	// Token: 0x020033CF RID: 13263
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EFightCameraGuide.EFightCameraGuide")]
 	public enum EFightCameraGuide : byte
 	{
-		// Token: 0x04017BFF RID: 97279
+		// Token: 0x04012772 RID: 75634
 		None,
-		// Token: 0x04017C00 RID: 97280
+		// Token: 0x04012773 RID: 75635
 		修正角度Min,
-		// Token: 0x04017C01 RID: 97281
+		// Token: 0x04012774 RID: 75636
 		修正角度Max,
-		// Token: 0x04017C02 RID: 97282
+		// Token: 0x04012775 RID: 75637
 		额外臂长系数_目标水平距离_,
-		// Token: 0x04017C03 RID: 97283
+		// Token: 0x04012776 RID: 75638
 		额外臂长系数_目标高度差_,
-		// Token: 0x04017C04 RID: 97284
+		// Token: 0x04012777 RID: 75639
 		额外臂长限制,
-		// Token: 0x04017C05 RID: 97285
+		// Token: 0x04012778 RID: 75640
 		额外臂水平偏移系数_目标水平距离_,
-		// Token: 0x04017C06 RID: 97286
+		// Token: 0x04012779 RID: 75641
 		额外臂水平偏移上限,
-		// Token: 0x04017C07 RID: 97287
+		// Token: 0x0401277A RID: 75642
 		额外臂垂直偏移系数_目标高度差_,
-		// Token: 0x04017C08 RID: 97288
+		// Token: 0x0401277B RID: 75643
 		额外臂垂直偏移上限,
-		// Token: 0x04017C09 RID: 97289
+		// Token: 0x0401277C RID: 75644
 		InRangeMin,
-		// Token: 0x04017C0A RID: 97290
+		// Token: 0x0401277D RID: 75645
 		InRangeMax,
-		// Token: 0x04017C0B RID: 97291
+		// Token: 0x0401277E RID: 75646
 		OutRangeMin,
-		// Token: 0x04017C0C RID: 97292
+		// Token: 0x0401277F RID: 75647
 		OutRangeMax,
-		// Token: 0x04017C0D RID: 97293
+		// Token: 0x04012780 RID: 75648
 		CameraPitchMin,
-		// Token: 0x04017C0E RID: 97294
+		// Token: 0x04012781 RID: 75649
 		CameraPitchMax,
-		// Token: 0x04017C0F RID: 97295
+		// Token: 0x04012782 RID: 75650
 		CameraPitchOffset,
-		// Token: 0x04017C10 RID: 97296
+		// Token: 0x04012783 RID: 75651
 		NearerRange,
-		// Token: 0x04017C11 RID: 97297
+		// Token: 0x04012784 RID: 75652
 		EFightCameraGuide_MAX
 	}
 }

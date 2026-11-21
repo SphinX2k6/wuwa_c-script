@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001FDF RID: 8159
+// Token: 0x020014B2 RID: 5298
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageViewData>
 {
-	// Token: 0x0600FFBB RID: 65467 RVA: 0x003E4928 File Offset: 0x003E2B28
+	// Token: 0x0600D423 RID: 54307 RVA: 0x003F0F28 File Offset: 0x003EF128
 	public PhantomManageViewModel()
 	{
 		HashSet<int> value = new HashSet<int>();
@@ -16,7 +16,7 @@ public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageV
 		this.DataMap.Add(EPhantomManageViewData.ItemDataList, value2);
 	}
 
-	// Token: 0x0600FFBC RID: 65468 RVA: 0x003E4964 File Offset: 0x003E2B64
+	// Token: 0x0600D424 RID: 54308 RVA: 0x003F0F64 File Offset: 0x003EF164
 	public void SetSelectState(int uniqueId, bool add, bool notNotify = false)
 	{
 		HashSet<int> selectSet = this.GetSelectSet();
@@ -31,7 +31,7 @@ public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageV
 		this.SetSelectSet(selectSet, notNotify);
 	}
 
-	// Token: 0x0600FFBD RID: 65469 RVA: 0x003E49AC File Offset: 0x003E2BAC
+	// Token: 0x0600D425 RID: 54309 RVA: 0x003F0FAC File Offset: 0x003EF1AC
 	public void SwitchSelectState(int uniqueId, bool notNotify = false)
 	{
 		HashSet<int> selectSet = this.GetSelectSet();
@@ -46,7 +46,7 @@ public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageV
 		this.SetSelectSet(selectSet, notNotify);
 	}
 
-	// Token: 0x0600FFBE RID: 65470 RVA: 0x003E49E4 File Offset: 0x003E2BE4
+	// Token: 0x0600D426 RID: 54310 RVA: 0x003F0FE4 File Offset: 0x003EF1E4
 	public HashSet<int> GetSelectSet()
 	{
 		object data = base.GetData(EPhantomManageViewData.SelectSet);
@@ -57,7 +57,7 @@ public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageV
 		return data as HashSet<int>;
 	}
 
-	// Token: 0x0600FFBF RID: 65471 RVA: 0x003E4A08 File Offset: 0x003E2C08
+	// Token: 0x0600D427 RID: 54311 RVA: 0x003F1008 File Offset: 0x003EF208
 	[NullableContext(2)]
 	private void SetSelectSet(HashSet<int> selectSet, bool notNotify = false)
 	{
@@ -65,19 +65,19 @@ public class PhantomManageViewModel : PhantomManageViewModelBase<EPhantomManageV
 		InventoryModel.Instance.SetPhantomManageSelectSet(selectSet);
 	}
 
-	// Token: 0x0600FFC0 RID: 65472 RVA: 0x003E4A1E File Offset: 0x003E2C1E
+	// Token: 0x0600D428 RID: 54312 RVA: 0x003F101E File Offset: 0x003EF21E
 	public void ClearSelectSet()
 	{
 		this.SetSelectSet(null, false);
 	}
 
-	// Token: 0x0600FFC1 RID: 65473 RVA: 0x003E4A28 File Offset: 0x003E2C28
+	// Token: 0x0600D429 RID: 54313 RVA: 0x003F1028 File Offset: 0x003EF228
 	public void SetItemDataList(ItemViewData[] itemDataList, bool notNotify = false)
 	{
 		base.SetData(EPhantomManageViewData.ItemDataList, itemDataList, notNotify);
 	}
 
-	// Token: 0x0600FFC2 RID: 65474 RVA: 0x003E4A33 File Offset: 0x003E2C33
+	// Token: 0x0600D42A RID: 54314 RVA: 0x003F1033 File Offset: 0x003EF233
 	public ItemViewData[] GetItemDataList()
 	{
 		return base.GetData(EPhantomManageViewData.ItemDataList) as ItemViewData[];

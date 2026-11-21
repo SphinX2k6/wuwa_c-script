@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006834 RID: 26676
+	// Token: 0x02006EBA RID: 28346
 	public struct IFlyingFeatherScanEffect : IFlatbufferObject
 	{
-		// Token: 0x1700C629 RID: 50729
-		// (get) Token: 0x0602E81F RID: 190495 RVA: 0x00658AA8 File Offset: 0x00656CA8
+		// Token: 0x1700CFED RID: 53229
+		// (get) Token: 0x060310A7 RID: 200871 RVA: 0x006A69E8 File Offset: 0x006A4BE8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E820 RID: 190496 RVA: 0x00658AB5 File Offset: 0x00656CB5
+		// Token: 0x060310A8 RID: 200872 RVA: 0x006A69F5 File Offset: 0x006A4BF5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E821 RID: 190497 RVA: 0x00658ABC File Offset: 0x00656CBC
+		// Token: 0x060310A9 RID: 200873 RVA: 0x006A69FC File Offset: 0x006A4BFC
 		public static IFlyingFeatherScanEffect GetRootAsIFlyingFeatherScanEffect(ByteBuffer _bb)
 		{
 			return IFlyingFeatherScanEffect.GetRootAsIFlyingFeatherScanEffect(_bb, default(IFlyingFeatherScanEffect));
 		}
 
-		// Token: 0x0602E822 RID: 190498 RVA: 0x00658AD8 File Offset: 0x00656CD8
+		// Token: 0x060310AA RID: 200874 RVA: 0x006A6A18 File Offset: 0x006A4C18
 		public static IFlyingFeatherScanEffect GetRootAsIFlyingFeatherScanEffect(ByteBuffer _bb, IFlyingFeatherScanEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E823 RID: 190499 RVA: 0x00658AF5 File Offset: 0x00656CF5
+		// Token: 0x060310AB RID: 200875 RVA: 0x006A6A35 File Offset: 0x006A4C35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E824 RID: 190500 RVA: 0x00658B04 File Offset: 0x00656D04
+		// Token: 0x060310AC RID: 200876 RVA: 0x006A6A44 File Offset: 0x006A4C44
 		public IFlyingFeatherScanEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C62A RID: 50730
-		// (get) Token: 0x0602E825 RID: 190501 RVA: 0x00658B14 File Offset: 0x00656D14
+		// Token: 0x1700CFEE RID: 53230
+		// (get) Token: 0x060310AD RID: 200877 RVA: 0x006A6A54 File Offset: 0x006A4C54
 		public ESpecificScanType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C62B RID: 50731
-		// (get) Token: 0x0602E826 RID: 190502 RVA: 0x00658B50 File Offset: 0x00656D50
+		// Token: 0x1700CFEF RID: 53231
+		// (get) Token: 0x060310AE RID: 200878 RVA: 0x006A6A90 File Offset: 0x006A4C90
 		public int TriggerPosEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E827 RID: 190503 RVA: 0x00658B8C File Offset: 0x00656D8C
+		// Token: 0x060310AF RID: 200879 RVA: 0x006A6ACC File Offset: 0x006A4CCC
 		public static Offset<IFlyingFeatherScanEffect> CreateIFlyingFeatherScanEffect(FlatBufferBuilder builder, ESpecificScanType Type = ESpecificScanType.None, int TriggerPosEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlyingFeatherScanEffect.EndIFlyingFeatherScanEffect(builder);
 		}
 
-		// Token: 0x0602E828 RID: 190504 RVA: 0x00658BA9 File Offset: 0x00656DA9
+		// Token: 0x060310B0 RID: 200880 RVA: 0x006A6AE9 File Offset: 0x006A4CE9
 		public static void StartIFlyingFeatherScanEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E829 RID: 190505 RVA: 0x00658BB2 File Offset: 0x00656DB2
+		// Token: 0x060310B1 RID: 200881 RVA: 0x006A6AF2 File Offset: 0x006A4CF2
 		public static void AddType(FlatBufferBuilder builder, ESpecificScanType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E82A RID: 190506 RVA: 0x00658BBD File Offset: 0x00656DBD
+		// Token: 0x060310B2 RID: 200882 RVA: 0x006A6AFD File Offset: 0x006A4CFD
 		public static void AddTriggerPosEntityId(FlatBufferBuilder builder, int triggerPosEntityId)
 		{
 			builder.AddInt(1, triggerPosEntityId, 0);
 		}
 
-		// Token: 0x0602E82B RID: 190507 RVA: 0x00658BC8 File Offset: 0x00656DC8
+		// Token: 0x060310B3 RID: 200883 RVA: 0x006A6B08 File Offset: 0x006A4D08
 		public static Offset<IFlyingFeatherScanEffect> EndIFlyingFeatherScanEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlyingFeatherScanEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602E82C RID: 190508 RVA: 0x00658BD8 File Offset: 0x00656DD8
+		// Token: 0x060310B4 RID: 200884 RVA: 0x006A6B18 File Offset: 0x006A4D18
 		public IFlyingFeatherScanEffectT UnPack()
 		{
 			IFlyingFeatherScanEffectT flyingFeatherScanEffectT = new IFlyingFeatherScanEffectT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flyingFeatherScanEffectT;
 		}
 
-		// Token: 0x0602E82D RID: 190509 RVA: 0x00658BF3 File Offset: 0x00656DF3
+		// Token: 0x060310B5 RID: 200885 RVA: 0x006A6B33 File Offset: 0x006A4D33
 		public void UnPackTo(IFlyingFeatherScanEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.TriggerPosEntityId = this.TriggerPosEntityId;
 		}
 
-		// Token: 0x0602E82E RID: 190510 RVA: 0x00658C10 File Offset: 0x00656E10
+		// Token: 0x060310B6 RID: 200886 RVA: 0x006A6B50 File Offset: 0x006A4D50
 		public static Offset<IFlyingFeatherScanEffect> Pack(FlatBufferBuilder builder, IFlyingFeatherScanEffectT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlyingFeatherScanEffect.CreateIFlyingFeatherScanEffect(builder, _o.Type, _o.TriggerPosEntityId);
 		}
 
-		// Token: 0x04010F7A RID: 69498
+		// Token: 0x04011DB4 RID: 73140
 		private Table __p;
 	}
 }

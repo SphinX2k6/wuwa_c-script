@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FC5 RID: 8133
+	// Token: 0x0200220A RID: 8714
 	public class ITimeLimitOptionGroupDefault_SetValue
 	{
-		// Token: 0x04006C00 RID: 27648
+		// Token: 0x040071FF RID: 29183
 		public ETimeLimitOptionGroupStyle Type;
 
-		// Token: 0x04006C01 RID: 27649
+		// Token: 0x04007200 RID: 29184
 		public int TimeoutOptionIndex;
 
-		// Token: 0x04006C02 RID: 27650
+		// Token: 0x04007201 RID: 29185
 		public float TimeLimit;
 	}
 }

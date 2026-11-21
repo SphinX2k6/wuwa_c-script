@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C6 RID: 8902
+	// Token: 0x02002535 RID: 9525
 	public class EBvbPlayDialogTypeJsonConverter : JsonConverter<EBvbPlayDialogType>
 	{
-		// Token: 0x0600C2FB RID: 49915 RVA: 0x001C7D24 File Offset: 0x001C5F24
+		// Token: 0x0600CECA RID: 52938 RVA: 0x001DFB2C File Offset: 0x001DDD2C
 		public override EBvbPlayDialogType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EBvbPlayDialogTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C2FC RID: 49916 RVA: 0x001C7D48 File Offset: 0x001C5F48
+		// Token: 0x0600CECB RID: 52939 RVA: 0x001DFB50 File Offset: 0x001DDD50
 		public override void Write(Utf8JsonWriter writer, EBvbPlayDialogType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

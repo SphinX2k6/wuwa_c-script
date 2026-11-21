@@ -5,18 +5,18 @@ using CSharpScript.Game.Common.Event;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200331D RID: 13085
+// Token: 0x0200288F RID: 10383
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotUiAssetManager
 {
-	// Token: 0x0601C7FE RID: 116734 RVA: 0x007FE857 File Offset: 0x007FCA57
+	// Token: 0x0601A4F7 RID: 107767 RVA: 0x00824DC3 File Offset: 0x00822FC3
 	public void Init()
 	{
 		EventSystem.Instance.Add(EEventName.RestartHangingPreloadTask, new Action(this.RestartHangingPreloadTask));
 	}
 
-	// Token: 0x0601C7FF RID: 116735 RVA: 0x007FE878 File Offset: 0x007FCA78
+	// Token: 0x0601A4F8 RID: 107768 RVA: 0x00824DE4 File Offset: 0x00822FE4
 	[return: Nullable(2)]
 	public PlotUiAsset GetPlotUiAsset(string plotId)
 	{
@@ -28,7 +28,7 @@ public class PlotUiAssetManager
 		return null;
 	}
 
-	// Token: 0x0601C800 RID: 116736 RVA: 0x007FE898 File Offset: 0x007FCA98
+	// Token: 0x0601A4F9 RID: 107769 RVA: 0x00824E04 File Offset: 0x00823004
 	public void Clear()
 	{
 		this.PlotIdUiAssetMap.Clear();
@@ -36,7 +36,7 @@ public class PlotUiAssetManager
 		EventSystem.Instance.Remove(EEventName.RestartHangingPreloadTask, new Action(this.RestartHangingPreloadTask));
 	}
 
-	// Token: 0x0601C801 RID: 116737 RVA: 0x007FE8CC File Offset: 0x007FCACC
+	// Token: 0x0601A4FA RID: 107770 RVA: 0x00824E38 File Offset: 0x00823038
 	public UniTask PreloadPlotUiAssetAsync(string flowListName, int flowId, int stateId)
 	{
 		PlotUiAssetManager.<PreloadPlotUiAssetAsync>d__5 <PreloadPlotUiAssetAsync>d__;
@@ -50,7 +50,7 @@ public class PlotUiAssetManager
 		return <PreloadPlotUiAssetAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601C802 RID: 116738 RVA: 0x007FE928 File Offset: 0x007FCB28
+	// Token: 0x0601A4FB RID: 107771 RVA: 0x00824E94 File Offset: 0x00823094
 	public void RemovePlotUiAsset(string plotId)
 	{
 		foreach (KeyValuePair<string, PlotUiAsset> keyValuePair in this.PlotIdUiAssetMap)
@@ -80,7 +80,7 @@ public class PlotUiAssetManager
 		CommonQteController.Instance.ClearPreloadQteRes();
 	}
 
-	// Token: 0x0601C803 RID: 116739 RVA: 0x007FE9DC File Offset: 0x007FCBDC
+	// Token: 0x0601A4FC RID: 107772 RVA: 0x00824F48 File Offset: 0x00823148
 	public UniTask WaitForPlotUiAsset(string plotId)
 	{
 		PlotUiAssetManager.<WaitForPlotUiAsset>d__7 <WaitForPlotUiAsset>d__;
@@ -92,20 +92,20 @@ public class PlotUiAssetManager
 		return <WaitForPlotUiAsset>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601C804 RID: 116740 RVA: 0x007FEA28 File Offset: 0x007FCC28
+	// Token: 0x0601A4FD RID: 107773 RVA: 0x00824F94 File Offset: 0x00823194
 	public bool IsLoading(string plotId)
 	{
 		PlotUiAsset plotUiAsset;
 		return this.PlotIdUiAssetMap.TryGetValue(plotId, out plotUiAsset) && plotUiAsset.IsLoading();
 	}
 
-	// Token: 0x0601C805 RID: 116741 RVA: 0x007FEA4D File Offset: 0x007FCC4D
+	// Token: 0x0601A4FE RID: 107774 RVA: 0x00824FB9 File Offset: 0x008231B9
 	public bool IsHanging(string plotId)
 	{
 		return this.HangingPlotIdSet.Contains(plotId);
 	}
 
-	// Token: 0x0601C806 RID: 116742 RVA: 0x007FEA5C File Offset: 0x007FCC5C
+	// Token: 0x0601A4FF RID: 107775 RVA: 0x00824FC8 File Offset: 0x008231C8
 	public bool HasPreloadQte(List<int> qteIds)
 	{
 		using (Dictionary<string, PlotUiAsset>.ValueCollection.Enumerator enumerator = this.PlotIdUiAssetMap.Values.GetEnumerator())
@@ -121,7 +121,7 @@ public class PlotUiAssetManager
 		return false;
 	}
 
-	// Token: 0x0601C807 RID: 116743 RVA: 0x007FEABC File Offset: 0x007FCCBC
+	// Token: 0x0601A500 RID: 107776 RVA: 0x00825028 File Offset: 0x00823228
 	public void CancelHangingTask(string plotId)
 	{
 		if (this.IsHanging(plotId))
@@ -136,7 +136,7 @@ public class PlotUiAssetManager
 		}
 	}
 
-	// Token: 0x0601C808 RID: 116744 RVA: 0x007FEB08 File Offset: 0x007FCD08
+	// Token: 0x0601A501 RID: 107777 RVA: 0x00825074 File Offset: 0x00823274
 	private void RestartHangingPreloadTask()
 	{
 		List<UniTask> list = new List<UniTask>();
@@ -155,9 +155,9 @@ public class PlotUiAssetManager
 		UniTask.WhenAll(list).Forget();
 	}
 
-	// Token: 0x0400E272 RID: 57970
+	// Token: 0x0400E723 RID: 59171
 	private readonly Dictionary<string, PlotUiAsset> PlotIdUiAssetMap = new Dictionary<string, PlotUiAsset>();
 
-	// Token: 0x0400E273 RID: 57971
+	// Token: 0x0400E724 RID: 59172
 	private readonly HashSet<string> HangingPlotIdSet = new HashSet<string>();
 }

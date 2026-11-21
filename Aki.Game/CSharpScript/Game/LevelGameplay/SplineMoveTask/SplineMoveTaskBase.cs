@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A2D RID: 27181
+	// Token: 0x02005B8A RID: 23434
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SplineMoveTaskBase
 	{
-		// Token: 0x060439A9 RID: 276905 RVA: 0x0108B128 File Offset: 0x01089328
+		// Token: 0x060399F7 RID: 236023 RVA: 0x0102F958 File Offset: 0x0102DB58
 		protected SplineMoveTaskBase(EntityHandle entityHandle)
 		{
 			this.EntityHandle = entityHandle;
 		}
 
-		// Token: 0x060439AA RID: 276906 RVA: 0x0108B138 File Offset: 0x01089338
+		// Token: 0x060399F8 RID: 236024 RVA: 0x0102F968 File Offset: 0x0102DB68
 		public void StartTask()
 		{
 			if ((this.TaskState & ESplineMoveTaskState.Start) != ESplineMoveTaskState.None)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			this.TaskState |= ESplineMoveTaskState.Start;
 		}
 
-		// Token: 0x060439AB RID: 276907 RVA: 0x0108B1E0 File Offset: 0x010893E0
+		// Token: 0x060399F9 RID: 236025 RVA: 0x0102FA10 File Offset: 0x0102DC10
 		public unsafe void EndTask(bool success)
 		{
 			if ((this.TaskState & ESplineMoveTaskState.End) != ESplineMoveTaskState.None)
@@ -61,31 +61,31 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			this.TaskState |= ESplineMoveTaskState.End;
 		}
 
-		// Token: 0x060439AC RID: 276908 RVA: 0x0108B280 File Offset: 0x01089480
+		// Token: 0x060399FA RID: 236026 RVA: 0x0102FAB0 File Offset: 0x0102DCB0
 		public void TickTask(double delta)
 		{
 			this.OnTickTask(delta);
 		}
 
-		// Token: 0x060439AD RID: 276909 RVA: 0x0108B289 File Offset: 0x01089489
+		// Token: 0x060399FB RID: 236027 RVA: 0x0102FAB9 File Offset: 0x0102DCB9
 		protected virtual void OnStartTask()
 		{
 		}
 
-		// Token: 0x060439AE RID: 276910 RVA: 0x0108B28B File Offset: 0x0108948B
+		// Token: 0x060399FC RID: 236028 RVA: 0x0102FABB File Offset: 0x0102DCBB
 		protected virtual void OnEndTask(bool success)
 		{
 		}
 
-		// Token: 0x060439AF RID: 276911 RVA: 0x0108B28D File Offset: 0x0108948D
+		// Token: 0x060399FD RID: 236029 RVA: 0x0102FABD File Offset: 0x0102DCBD
 		protected virtual void OnTickTask(double delta)
 		{
 		}
 
-		// Token: 0x040234C1 RID: 144577
+		// Token: 0x0401E6B3 RID: 124595
 		public readonly EntityHandle EntityHandle;
 
-		// Token: 0x040234C2 RID: 144578
+		// Token: 0x0401E6B4 RID: 124596
 		private ESplineMoveTaskState TaskState;
 	}
 }

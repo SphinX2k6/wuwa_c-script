@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.Vehicle
 {
-	// Token: 0x02003EFB RID: 16123
+	// Token: 0x020031B8 RID: 12728
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Level/Vehicle/BP_MotorConfig.BP_MotorConfig_C")]
 	[UnrealStructLayout(976, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 976)]
 	public class BP_MotorConfig_C : BP_VehicleConfig_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028DB6 RID: 167350 RVA: 0x009B607B File Offset: 0x009B427B
+		// Token: 0x0601F753 RID: 128851 RVA: 0x0092E143 File Offset: 0x0092C343
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_MotorConfig_C._ClassPtr == IntPtr.Zero)
@@ -25,37 +25,37 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			return BP_MotorConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028DB7 RID: 167351 RVA: 0x009B60A0 File Offset: 0x009B42A0
+		// Token: 0x0601F754 RID: 128852 RVA: 0x0092E168 File Offset: 0x0092C368
 		public BP_MotorConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_MotorConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028DB8 RID: 167352 RVA: 0x009B60C8 File Offset: 0x009B42C8
+		// Token: 0x0601F755 RID: 128853 RVA: 0x0092E190 File Offset: 0x0092C390
 		public BP_MotorConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_MotorConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FFC RID: 24572
-		// (get) Token: 0x06028DB9 RID: 167353 RVA: 0x009B60FB File Offset: 0x009B42FB
-		// (set) Token: 0x06028DBA RID: 167354 RVA: 0x009B610F File Offset: 0x009B430F
+		// Token: 0x17003969 RID: 14697
+		// (get) Token: 0x0601F756 RID: 128854 RVA: 0x0092E1C3 File Offset: 0x0092C3C3
+		// (set) Token: 0x0601F757 RID: 128855 RVA: 0x0092E1D7 File Offset: 0x0092C3D7
 		[Nullable(2)]
 		public unsafe UDataTable ConfigDataTable
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_ConfigDataTable);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_ConfigDataTable, value);
 			}
 		}
 
-		// Token: 0x17005FFD RID: 24573
-		// (get) Token: 0x06028DBB RID: 167355 RVA: 0x009B6124 File Offset: 0x009B4324
-		// (set) Token: 0x06028DBC RID: 167356 RVA: 0x009B615D File Offset: 0x009B435D
+		// Token: 0x1700396A RID: 14698
+		// (get) Token: 0x0601F758 RID: 128856 RVA: 0x0092E1EC File Offset: 0x0092C3EC
+		// (set) Token: 0x0601F759 RID: 128857 RVA: 0x0092E225 File Offset: 0x0092C425
 		public TArray<SFloatThresholdAndBuff> 非加速状态buff
 		{
 			get
@@ -64,7 +64,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndBuff> result;
 				if ((result = this._非加速状态buff) == null)
 				{
-					result = (this._非加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_1, this));
+					result = (this._非加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_非加速状态buff, this));
 				}
 				return result;
 			}
@@ -74,9 +74,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17005FFE RID: 24574
-		// (get) Token: 0x06028DBD RID: 167357 RVA: 0x009B616C File Offset: 0x009B436C
-		// (set) Token: 0x06028DBE RID: 167358 RVA: 0x009B61A5 File Offset: 0x009B43A5
+		// Token: 0x1700396B RID: 14699
+		// (get) Token: 0x0601F75A RID: 128858 RVA: 0x0092E234 File Offset: 0x0092C434
+		// (set) Token: 0x0601F75B RID: 128859 RVA: 0x0092E26D File Offset: 0x0092C46D
 		public TArray<SFloatThresholdAndBuff> 加速状态buff
 		{
 			get
@@ -85,7 +85,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndBuff> result;
 				if ((result = this._加速状态buff) == null)
 				{
-					result = (this._加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_2, this));
+					result = (this._加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_加速状态buff, this));
 				}
 				return result;
 			}
@@ -95,9 +95,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17005FFF RID: 24575
-		// (get) Token: 0x06028DBF RID: 167359 RVA: 0x009B61B4 File Offset: 0x009B43B4
-		// (set) Token: 0x06028DC0 RID: 167360 RVA: 0x009B61ED File Offset: 0x009B43ED
+		// Token: 0x1700396C RID: 14700
+		// (get) Token: 0x0601F75C RID: 128860 RVA: 0x0092E27C File Offset: 0x0092C47C
+		// (set) Token: 0x0601F75D RID: 128861 RVA: 0x0092E2B5 File Offset: 0x0092C4B5
 		public TArray<SFloatThresholdAndBuff> 翱翔加速状态buff
 		{
 			get
@@ -106,7 +106,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndBuff> result;
 				if ((result = this._翱翔加速状态buff) == null)
 				{
-					result = (this._翱翔加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_3, this));
+					result = (this._翱翔加速状态buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_翱翔加速状态buff, this));
 				}
 				return result;
 			}
@@ -116,24 +116,24 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006000 RID: 24576
-		// (get) Token: 0x06028DC1 RID: 167361 RVA: 0x009B61FB File Offset: 0x009B43FB
-		// (set) Token: 0x06028DC2 RID: 167362 RVA: 0x009B620B File Offset: 0x009B440B
+		// Token: 0x1700396D RID: 14701
+		// (get) Token: 0x0601F75E RID: 128862 RVA: 0x0092E2C3 File Offset: 0x0092C4C3
+		// (set) Token: 0x0601F75F RID: 128863 RVA: 0x0092E2D3 File Offset: 0x0092C4D3
 		public unsafe long 常驻buff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_常驻buff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_常驻buff) = value;
 			}
 		}
 
-		// Token: 0x17006001 RID: 24577
-		// (get) Token: 0x06028DC3 RID: 167363 RVA: 0x009B621C File Offset: 0x009B441C
-		// (set) Token: 0x06028DC4 RID: 167364 RVA: 0x009B6255 File Offset: 0x009B4455
+		// Token: 0x1700396E RID: 14702
+		// (get) Token: 0x0601F760 RID: 128864 RVA: 0x0092E2E4 File Offset: 0x0092C4E4
+		// (set) Token: 0x0601F761 RID: 128865 RVA: 0x0092E31D File Offset: 0x0092C51D
 		public TArray<SFloatThresholdAndBuff> 时段buff
 		{
 			get
@@ -142,7 +142,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<SFloatThresholdAndBuff> result;
 				if ((result = this._时段buff) == null)
 				{
-					result = (this._时段buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_5, this));
+					result = (this._时段buff = new TArray<SFloatThresholdAndBuff>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_时段buff, this));
 				}
 				return result;
 			}
@@ -152,39 +152,39 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006002 RID: 24578
-		// (get) Token: 0x06028DC5 RID: 167365 RVA: 0x009B6263 File Offset: 0x009B4463
-		// (set) Token: 0x06028DC6 RID: 167366 RVA: 0x009B6273 File Offset: 0x009B4473
+		// Token: 0x1700396F RID: 14703
+		// (get) Token: 0x0601F762 RID: 128866 RVA: 0x0092E32B File Offset: 0x0092C52B
+		// (set) Token: 0x0601F763 RID: 128867 RVA: 0x0092E33B File Offset: 0x0092C53B
 		public unsafe long 漂移buff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_漂移buff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_漂移buff) = value;
 			}
 		}
 
-		// Token: 0x17006003 RID: 24579
-		// (get) Token: 0x06028DC7 RID: 167367 RVA: 0x009B6284 File Offset: 0x009B4484
-		// (set) Token: 0x06028DC8 RID: 167368 RVA: 0x009B6294 File Offset: 0x009B4494
+		// Token: 0x17003970 RID: 14704
+		// (get) Token: 0x0601F764 RID: 128868 RVA: 0x0092E34C File Offset: 0x0092C54C
+		// (set) Token: 0x0601F765 RID: 128869 RVA: 0x0092E35C File Offset: 0x0092C55C
 		public unsafe long 倒车buff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_倒车buff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_倒车buff) = value;
 			}
 		}
 
-		// Token: 0x17006004 RID: 24580
-		// (get) Token: 0x06028DC9 RID: 167369 RVA: 0x009B62A8 File Offset: 0x009B44A8
-		// (set) Token: 0x06028DCA RID: 167370 RVA: 0x009B62E1 File Offset: 0x009B44E1
+		// Token: 0x17003971 RID: 14705
+		// (get) Token: 0x0601F766 RID: 128870 RVA: 0x0092E370 File Offset: 0x0092C570
+		// (set) Token: 0x0601F767 RID: 128871 RVA: 0x0092E3A9 File Offset: 0x0092C5A9
 		public TMap<EMotorPart, long> 撞击buff
 		{
 			get
@@ -193,7 +193,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TMap<EMotorPart, long> result;
 				if ((result = this._撞击buff) == null)
 				{
-					result = (this._撞击buff = new TMap<EMotorPart, long>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_8, this));
+					result = (this._撞击buff = new TMap<EMotorPart, long>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_撞击buff, this));
 				}
 				return result;
 			}
@@ -203,57 +203,57 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006005 RID: 24581
-		// (get) Token: 0x06028DCB RID: 167371 RVA: 0x009B62EF File Offset: 0x009B44EF
-		// (set) Token: 0x06028DCC RID: 167372 RVA: 0x009B62FF File Offset: 0x009B44FF
+		// Token: 0x17003972 RID: 14706
+		// (get) Token: 0x0601F768 RID: 128872 RVA: 0x0092E3B7 File Offset: 0x0092C5B7
+		// (set) Token: 0x0601F769 RID: 128873 RVA: 0x0092E3C7 File Offset: 0x0092C5C7
 		public unsafe float 叠加速度衰减时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_叠加速度衰减时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_叠加速度衰减时间) = value;
 			}
 		}
 
-		// Token: 0x17006006 RID: 24582
-		// (get) Token: 0x06028DCD RID: 167373 RVA: 0x009B6310 File Offset: 0x009B4510
-		// (set) Token: 0x06028DCE RID: 167374 RVA: 0x009B6320 File Offset: 0x009B4520
+		// Token: 0x17003973 RID: 14707
+		// (get) Token: 0x0601F76A RID: 128874 RVA: 0x0092E3D8 File Offset: 0x0092C5D8
+		// (set) Token: 0x0601F76B RID: 128875 RVA: 0x0092E3E8 File Offset: 0x0092C5E8
 		public unsafe float 载具速度叠加比例
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_载具速度叠加比例);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_载具速度叠加比例) = value;
 			}
 		}
 
-		// Token: 0x17006007 RID: 24583
-		// (get) Token: 0x06028DCF RID: 167375 RVA: 0x009B6331 File Offset: 0x009B4531
-		// (set) Token: 0x06028DD0 RID: 167376 RVA: 0x009B6345 File Offset: 0x009B4545
+		// Token: 0x17003974 RID: 14708
+		// (get) Token: 0x0601F76C RID: 128876 RVA: 0x0092E3F9 File Offset: 0x0092C5F9
+		// (set) Token: 0x0601F76D RID: 128877 RVA: 0x0092E40D File Offset: 0x0092C60D
 		[Nullable(2)]
 		public unsafe UCurveFloat 叠加速度衰减曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_叠加速度衰减曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_MotorConfig_C.__PropertyOffset_叠加速度衰减曲线, value);
 			}
 		}
 
-		// Token: 0x17006008 RID: 24584
-		// (get) Token: 0x06028DD1 RID: 167377 RVA: 0x009B635C File Offset: 0x009B455C
-		// (set) Token: 0x06028DD2 RID: 167378 RVA: 0x009B6395 File Offset: 0x009B4595
+		// Token: 0x17003975 RID: 14709
+		// (get) Token: 0x0601F76E RID: 128878 RVA: 0x0092E424 File Offset: 0x0092C624
+		// (set) Token: 0x0601F76F RID: 128879 RVA: 0x0092E45D File Offset: 0x0092C65D
 		public TArray<long> 常驻buffs
 		{
 			get
@@ -262,7 +262,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 				TArray<long> result;
 				if ((result = this._常驻buffs) == null)
 				{
-					result = (this._常驻buffs = new TArray<long>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_12, this));
+					result = (this._常驻buffs = new TArray<long>(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_常驻buffs, this));
 				}
 				return result;
 			}
@@ -272,9 +272,9 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			}
 		}
 
-		// Token: 0x17006009 RID: 24585
-		// (get) Token: 0x06028DD3 RID: 167379 RVA: 0x009B63A3 File Offset: 0x009B45A3
-		// (set) Token: 0x06028DD4 RID: 167380 RVA: 0x009B63B7 File Offset: 0x009B45B7
+		// Token: 0x17003976 RID: 14710
+		// (get) Token: 0x0601F770 RID: 128880 RVA: 0x0092E46B File Offset: 0x0092C66B
+		// (set) Token: 0x0601F771 RID: 128881 RVA: 0x0092E47F File Offset: 0x0092C67F
 		[Nullable(new byte[]
 		{
 			0,
@@ -289,7 +289,7 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			})]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_冲刺震屏);
 			}
 			[param: Nullable(new byte[]
 			{
@@ -298,106 +298,106 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			})]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_冲刺震屏) = value;
 			}
 		}
 
-		// Token: 0x1700600A RID: 24586
-		// (get) Token: 0x06028DD5 RID: 167381 RVA: 0x009B63CC File Offset: 0x009B45CC
-		// (set) Token: 0x06028DD6 RID: 167382 RVA: 0x009B63DC File Offset: 0x009B45DC
+		// Token: 0x17003977 RID: 14711
+		// (get) Token: 0x0601F772 RID: 128882 RVA: 0x0092E494 File Offset: 0x0092C694
+		// (set) Token: 0x0601F773 RID: 128883 RVA: 0x0092E4A4 File Offset: 0x0092C6A4
 		public unsafe long 和小物件重合时的特效Buff
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_和小物件重合时的特效Buff);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorConfig_C.__PropertyOffset_和小物件重合时的特效Buff) = value;
 			}
 		}
 
-		// Token: 0x06028DD7 RID: 167383 RVA: 0x009B63ED File Offset: 0x009B45ED
+		// Token: 0x0601F774 RID: 128884 RVA: 0x0092E4B5 File Offset: 0x0092C6B5
 		protected BP_MotorConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014E40 RID: 85568
+		// Token: 0x04010DE5 RID: 69093
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/Vehicle/BP_MotorConfig.BP_MotorConfig_C";
 
-		// Token: 0x04014E41 RID: 85569
+		// Token: 0x04010DE6 RID: 69094
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014E42 RID: 85570
+		// Token: 0x04010DE7 RID: 69095
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014E43 RID: 85571
-		internal new static int __PropertyOffset_0;
+		// Token: 0x04010DE8 RID: 69096
+		internal static int __PropertyOffset_ConfigDataTable;
 
-		// Token: 0x04014E44 RID: 85572
-		internal new static int __PropertyOffset_1;
+		// Token: 0x04010DE9 RID: 69097
+		internal static int __PropertyOffset_非加速状态buff;
 
-		// Token: 0x04014E45 RID: 85573
+		// Token: 0x04010DEA RID: 69098
 		[Nullable(2)]
 		private TArray<SFloatThresholdAndBuff> _非加速状态buff;
 
-		// Token: 0x04014E46 RID: 85574
-		internal new static int __PropertyOffset_2;
+		// Token: 0x04010DEB RID: 69099
+		internal static int __PropertyOffset_加速状态buff;
 
-		// Token: 0x04014E47 RID: 85575
+		// Token: 0x04010DEC RID: 69100
 		[Nullable(2)]
 		private TArray<SFloatThresholdAndBuff> _加速状态buff;
 
-		// Token: 0x04014E48 RID: 85576
-		internal new static int __PropertyOffset_3;
+		// Token: 0x04010DED RID: 69101
+		internal static int __PropertyOffset_翱翔加速状态buff;
 
-		// Token: 0x04014E49 RID: 85577
+		// Token: 0x04010DEE RID: 69102
 		[Nullable(2)]
 		private TArray<SFloatThresholdAndBuff> _翱翔加速状态buff;
 
-		// Token: 0x04014E4A RID: 85578
-		internal new static int __PropertyOffset_4;
+		// Token: 0x04010DEF RID: 69103
+		internal static int __PropertyOffset_常驻buff;
 
-		// Token: 0x04014E4B RID: 85579
-		internal new static int __PropertyOffset_5;
+		// Token: 0x04010DF0 RID: 69104
+		internal static int __PropertyOffset_时段buff;
 
-		// Token: 0x04014E4C RID: 85580
+		// Token: 0x04010DF1 RID: 69105
 		[Nullable(2)]
 		private TArray<SFloatThresholdAndBuff> _时段buff;
 
-		// Token: 0x04014E4D RID: 85581
-		internal new static int __PropertyOffset_6;
+		// Token: 0x04010DF2 RID: 69106
+		internal static int __PropertyOffset_漂移buff;
 
-		// Token: 0x04014E4E RID: 85582
-		internal new static int __PropertyOffset_7;
+		// Token: 0x04010DF3 RID: 69107
+		internal static int __PropertyOffset_倒车buff;
 
-		// Token: 0x04014E4F RID: 85583
-		internal new static int __PropertyOffset_8;
+		// Token: 0x04010DF4 RID: 69108
+		internal static int __PropertyOffset_撞击buff;
 
-		// Token: 0x04014E50 RID: 85584
+		// Token: 0x04010DF5 RID: 69109
 		[Nullable(2)]
 		private TMap<EMotorPart, long> _撞击buff;
 
-		// Token: 0x04014E51 RID: 85585
-		internal new static int __PropertyOffset_9;
+		// Token: 0x04010DF6 RID: 69110
+		internal static int __PropertyOffset_叠加速度衰减时间;
 
-		// Token: 0x04014E52 RID: 85586
-		internal new static int __PropertyOffset_10;
+		// Token: 0x04010DF7 RID: 69111
+		internal static int __PropertyOffset_载具速度叠加比例;
 
-		// Token: 0x04014E53 RID: 85587
-		internal new static int __PropertyOffset_11;
+		// Token: 0x04010DF8 RID: 69112
+		internal static int __PropertyOffset_叠加速度衰减曲线;
 
-		// Token: 0x04014E54 RID: 85588
-		internal new static int __PropertyOffset_12;
+		// Token: 0x04010DF9 RID: 69113
+		internal static int __PropertyOffset_常驻buffs;
 
-		// Token: 0x04014E55 RID: 85589
+		// Token: 0x04010DFA RID: 69114
 		[Nullable(2)]
 		private TArray<long> _常驻buffs;
 
-		// Token: 0x04014E56 RID: 85590
-		internal new static int __PropertyOffset_13;
+		// Token: 0x04010DFB RID: 69115
+		internal static int __PropertyOffset_冲刺震屏;
 
-		// Token: 0x04014E57 RID: 85591
-		internal new static int __PropertyOffset_14;
+		// Token: 0x04010DFC RID: 69116
+		internal static int __PropertyOffset_和小物件重合时的特效Buff;
 	}
 }

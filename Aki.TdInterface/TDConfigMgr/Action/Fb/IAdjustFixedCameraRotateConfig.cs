@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028B2 RID: 10418
+	// Token: 0x02002B87 RID: 11143
 	public class IAdjustFixedCameraRotateConfig
 	{
-		// Token: 0x0600E701 RID: 59137 RVA: 0x0021EDC2 File Offset: 0x0021CFC2
-		[NullableContext(1)]
+		// Token: 0x0600F530 RID: 62768 RVA: 0x0023BD42 File Offset: 0x00239F42
 		public static IAdjustFixedCameraRotateConfig Create(IAdjustFixedCameraRotateConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700475F RID: 18271
-		// (get) Token: 0x0600E702 RID: 59138 RVA: 0x0021EDE1 File Offset: 0x0021CFE1
+		// Token: 0x17004AD0 RID: 19152
+		// (get) Token: 0x0600F531 RID: 62769 RVA: 0x0023BD61 File Offset: 0x00239F61
 		public virtual float YawLimitMin
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004760 RID: 18272
-		// (get) Token: 0x0600E703 RID: 59139 RVA: 0x0021EDEE File Offset: 0x0021CFEE
+		// Token: 0x17004AD1 RID: 19153
+		// (get) Token: 0x0600F532 RID: 62770 RVA: 0x0023BD6E File Offset: 0x00239F6E
 		public virtual float YawLimitMax
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004761 RID: 18273
-		// (get) Token: 0x0600E704 RID: 59140 RVA: 0x0021EDFB File Offset: 0x0021CFFB
+		// Token: 0x17004AD2 RID: 19154
+		// (get) Token: 0x0600F533 RID: 62771 RVA: 0x0023BD7B File Offset: 0x00239F7B
 		public virtual float PitchLimitMin
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004762 RID: 18274
-		// (get) Token: 0x0600E705 RID: 59141 RVA: 0x0021EE08 File Offset: 0x0021D008
+		// Token: 0x17004AD3 RID: 19155
+		// (get) Token: 0x0600F534 RID: 62772 RVA: 0x0023BD88 File Offset: 0x00239F88
 		public virtual float PitchLimitMax
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004763 RID: 18275
-		// (get) Token: 0x0600E706 RID: 59142 RVA: 0x0021EE15 File Offset: 0x0021D015
+		// Token: 0x17004AD4 RID: 19156
+		// (get) Token: 0x0600F535 RID: 62773 RVA: 0x0023BD95 File Offset: 0x00239F95
 		public virtual float YawRotateSpeed
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004764 RID: 18276
-		// (get) Token: 0x0600E707 RID: 59143 RVA: 0x0021EE22 File Offset: 0x0021D022
+		// Token: 0x17004AD5 RID: 19157
+		// (get) Token: 0x0600F536 RID: 62774 RVA: 0x0023BDA2 File Offset: 0x00239FA2
 		public virtual float PitchRotateSpeed
 		{
 			get
@@ -81,7 +79,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007FAA RID: 32682
+		// Token: 0x04008669 RID: 34409
 		private IAdjustFixedCameraRotateConfig Instance;
 	}
 }

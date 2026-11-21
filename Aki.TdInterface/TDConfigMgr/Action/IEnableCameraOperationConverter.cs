@@ -5,23 +5,17 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200152F RID: 5423
-	[NullableContext(1)]
-	[Nullable(new byte[]
-	{
-		0,
-		1
-	})]
+	// Token: 0x02001689 RID: 5769
 	public class IEnableCameraOperationConverter : JsonConverter<IEnableCameraOperation>
 	{
-		// Token: 0x06007AFB RID: 31483 RVA: 0x001286FC File Offset: 0x001268FC
+		// Token: 0x060081C9 RID: 33225 RVA: 0x00137575 File Offset: 0x00135775
 		[return: Nullable(2)]
 		public override IEnableCameraOperation Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			return IEnableCameraOperation.CreateFromSetValue(JsonSerializer.Deserialize<IEnableCameraOperation_SetValue>(ref reader, options));
 		}
 
-		// Token: 0x06007AFC RID: 31484 RVA: 0x0012870A File Offset: 0x0012690A
+		// Token: 0x060081CA RID: 33226 RVA: 0x00137583 File Offset: 0x00135783
 		public override void Write(Utf8JsonWriter writer, IEnableCameraOperation value, JsonSerializerOptions options)
 		{
 			JsonSerializer.Serialize<IEnableCameraOperation_SetValue>(writer, value.ToSetValue(), options);

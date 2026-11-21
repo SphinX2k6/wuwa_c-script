@@ -6,19 +6,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Input.BattleInputData
 {
-	// Token: 0x02006FDD RID: 28637
+	// Token: 0x0200615E RID: 24926
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class BattleInputData
 	{
-		// Token: 0x06045A27 RID: 285223 RVA: 0x0114ABCC File Offset: 0x01148DCC
+		// Token: 0x0603BBD8 RID: 244696 RVA: 0x010F49C0 File Offset: 0x010F2BC0
 		public BattleInputData(EInputDataType type, EInputBindingType bindType = EInputBindingType.Original)
 		{
 			this.Type = type;
 			this.KeyBindingType = bindType;
 		}
 
-		// Token: 0x06045A28 RID: 285224 RVA: 0x0114ABE4 File Offset: 0x01148DE4
+		// Token: 0x0603BBD9 RID: 244697 RVA: 0x010F49D8 File Offset: 0x010F2BD8
 		public EInputAction? GetAction(string actionName)
 		{
 			Dictionary<string, EInputAction> dictionary = this.OnGetActionMap();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return null;
 		}
 
-		// Token: 0x06045A29 RID: 285225 RVA: 0x0114AC18 File Offset: 0x01148E18
+		// Token: 0x0603BBDA RID: 244698 RVA: 0x010F4A0C File Offset: 0x010F2C0C
 		public EInputAxis? GetAxis(string axisName)
 		{
 			Dictionary<string, EInputAxis> dictionary = this.OnGetAxisMap();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return null;
 		}
 
-		// Token: 0x06045A2A RID: 285226 RVA: 0x0114AC4C File Offset: 0x01148E4C
+		// Token: 0x0603BBDB RID: 244699 RVA: 0x010F4A40 File Offset: 0x010F2C40
 		public string[] GetActionNameList()
 		{
 			Dictionary<string, EInputAction> dictionary = this.OnGetActionMap();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return array;
 		}
 
-		// Token: 0x06045A2B RID: 285227 RVA: 0x0114ACB4 File Offset: 0x01148EB4
+		// Token: 0x0603BBDC RID: 244700 RVA: 0x010F4AA8 File Offset: 0x010F2CA8
 		public string[] GetAxisNameList()
 		{
 			Dictionary<string, EInputAxis> dictionary = this.OnGetAxisMap();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return array;
 		}
 
-		// Token: 0x06045A2C RID: 285228 RVA: 0x0114AD1C File Offset: 0x01148F1C
+		// Token: 0x0603BBDD RID: 244701 RVA: 0x010F4B10 File Offset: 0x010F2D10
 		[NullableContext(2)]
 		public string GetActionNameByInputAction(EInputAction inputAction)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return null;
 		}
 
-		// Token: 0x06045A2D RID: 285229 RVA: 0x0114AD84 File Offset: 0x01148F84
+		// Token: 0x0603BBDE RID: 244702 RVA: 0x010F4B78 File Offset: 0x010F2D78
 		public string[] GetMoveAxisList()
 		{
 			Dictionary<string, EInputAxis> dictionary = this.OnGetAxisMap();
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return array;
 		}
 
-		// Token: 0x06045A2E RID: 285230 RVA: 0x0114AE38 File Offset: 0x01149038
+		// Token: 0x0603BBDF RID: 244703 RVA: 0x010F4C2C File Offset: 0x010F2E2C
 		public string[] GetCameraAxisList()
 		{
 			Dictionary<string, EInputAxis> dictionary = this.OnGetAxisMap();
@@ -122,40 +122,40 @@ namespace CSharpScript.Game.Input.BattleInputData
 			return array;
 		}
 
-		// Token: 0x06045A2F RID: 285231 RVA: 0x0114AF00 File Offset: 0x01149100
+		// Token: 0x0603BBE0 RID: 244704 RVA: 0x010F4CF4 File Offset: 0x010F2EF4
 		public bool CheckActionInAllowFightActionNameList(string actionName, InputActionHandle inputActionHandle)
 		{
 			return this.OnCheckActionInAllowFightActionNameList(actionName, inputActionHandle);
 		}
 
-		// Token: 0x06045A30 RID: 285232 RVA: 0x0114AF0A File Offset: 0x0114910A
+		// Token: 0x0603BBE1 RID: 244705 RVA: 0x010F4CFE File Offset: 0x010F2EFE
 		public bool CheckAxisInAllowFightAxisNameList(string axisName, InputAxisHandle inputAxisHandle)
 		{
 			return this.OnCheckAxisInAllowFightAxisNameList(axisName, inputAxisHandle);
 		}
 
-		// Token: 0x06045A31 RID: 285233
+		// Token: 0x0603BBE2 RID: 244706
 		protected abstract Dictionary<string, EInputAction> OnGetActionMap();
 
-		// Token: 0x06045A32 RID: 285234
+		// Token: 0x0603BBE3 RID: 244707
 		protected abstract Dictionary<string, EInputAxis> OnGetAxisMap();
 
-		// Token: 0x06045A33 RID: 285235 RVA: 0x0114AF14 File Offset: 0x01149114
+		// Token: 0x0603BBE4 RID: 244708 RVA: 0x010F4D08 File Offset: 0x010F2F08
 		protected virtual bool OnCheckActionInAllowFightActionNameList(string actionName, InputActionHandle inputActionHandle)
 		{
 			return true;
 		}
 
-		// Token: 0x06045A34 RID: 285236 RVA: 0x0114AF17 File Offset: 0x01149117
+		// Token: 0x0603BBE5 RID: 244709 RVA: 0x010F4D0B File Offset: 0x010F2F0B
 		protected virtual bool OnCheckAxisInAllowFightAxisNameList(string axisName, InputAxisHandle inputAxisHandle)
 		{
 			return true;
 		}
 
-		// Token: 0x04024580 RID: 148864
+		// Token: 0x0401F835 RID: 129077
 		public EInputDataType Type;
 
-		// Token: 0x04024581 RID: 148865
+		// Token: 0x0401F836 RID: 129078
 		public EInputBindingType KeyBindingType;
 	}
 }

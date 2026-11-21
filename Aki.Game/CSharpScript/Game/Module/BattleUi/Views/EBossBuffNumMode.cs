@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D03 RID: 23811
+	// Token: 0x02004CE5 RID: 19685
 	public enum EBossBuffNumMode
 	{
-		// Token: 0x0401F6B8 RID: 128696
+		// Token: 0x0401A171 RID: 106865
 		StackMode,
-		// Token: 0x0401F6B9 RID: 128697
+		// Token: 0x0401A172 RID: 106866
 		PresenceMode
 	}
 }

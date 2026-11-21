@@ -9,23 +9,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B55 RID: 27477
+	// Token: 0x02005CCD RID: 23757
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPlayRegisteredMontage : LevelEventBase
 	{
-		// Token: 0x060441C4 RID: 278980 RVA: 0x010C3030 File Offset: 0x010C1230
+		// Token: 0x0603A316 RID: 238358 RVA: 0x0106CBE4 File Offset: 0x0106ADE4
 		public LevelEventPlayRegisteredMontage(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441C5 RID: 278981 RVA: 0x010C3039 File Offset: 0x010C1239
+		// Token: 0x0603A317 RID: 238359 RVA: 0x0106CBED File Offset: 0x0106ADED
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441C6 RID: 278982 RVA: 0x010C3044 File Offset: 0x010C1244
+		// Token: 0x0603A318 RID: 238360 RVA: 0x0106CBF8 File Offset: 0x0106ADF8
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PlayRegisteredMontage playRegisteredMontage = inParams as PlayRegisteredMontage;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(playRegisteredMontage.EntityId);
 		}
 
-		// Token: 0x060441C7 RID: 278983 RVA: 0x010C306C File Offset: 0x010C126C
+		// Token: 0x0603A319 RID: 238361 RVA: 0x0106CC20 File Offset: 0x0106AE20
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			LevelEventPlayRegisteredMontage.<>c__DisplayClass5_0 CS$<>8__locals1 = new LevelEventPlayRegisteredMontage.<>c__DisplayClass5_0();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441C8 RID: 278984 RVA: 0x010C332C File Offset: 0x010C152C
+		// Token: 0x0603A31A RID: 238362 RVA: 0x0106CEE0 File Offset: 0x0106B0E0
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.EntityHandle != handle)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441C9 RID: 278985 RVA: 0x010C33C4 File Offset: 0x010C15C4
+		// Token: 0x0603A31B RID: 238363 RVA: 0x0106CF78 File Offset: 0x0106B178
 		[NullableContext(2)]
 		private void OnEnd(UAnimMontage p1, bool p2)
 		{
@@ -173,18 +173,18 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441CA RID: 278986 RVA: 0x010C344D File Offset: 0x010C164D
+		// Token: 0x0603A31C RID: 238364 RVA: 0x0106D001 File Offset: 0x0106B201
 		protected override void OnReset()
 		{
 			this.EventParam = null;
 			this.EntityHandle = null;
 		}
 
-		// Token: 0x04023932 RID: 145714
+		// Token: 0x0401EBD4 RID: 125908
 		[Nullable(2)]
 		private PlayRegisteredMontage EventParam;
 
-		// Token: 0x04023933 RID: 145715
+		// Token: 0x0401EBD5 RID: 125909
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 	}

@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002146 RID: 8518
+// Token: 0x0200161E RID: 5662
 [NullableContext(1)]
 [Nullable(0)]
 public class OnJumpInShortMessageLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014EB RID: 5355
-	// (get) Token: 0x06010A0C RID: 68108 RVA: 0x0040BE57 File Offset: 0x0040A057
-	// (set) Token: 0x06010A0D RID: 68109 RVA: 0x0040BE5F File Offset: 0x0040A05F
+	// Token: 0x17001519 RID: 5401
+	// (get) Token: 0x0600DE7F RID: 56959 RVA: 0x0041859F File Offset: 0x0041679F
+	// (set) Token: 0x0600DE80 RID: 56960 RVA: 0x004185A7 File Offset: 0x004167A7
 	public override string event_id { get; set; } = "1817";
 
-	// Token: 0x04007D99 RID: 32153
+	// Token: 0x04007EA9 RID: 32425
 	public int i_id;
 
-	// Token: 0x04007D9A RID: 32154
+	// Token: 0x04007EAA RID: 32426
 	public int i_type;
 
-	// Token: 0x04007D9B RID: 32155
+	// Token: 0x04007EAB RID: 32427
 	public int i_role_id;
 
-	// Token: 0x04007D9C RID: 32156
+	// Token: 0x04007EAC RID: 32428
 	public long l_received_time;
 
-	// Token: 0x04007D9D RID: 32157
+	// Token: 0x04007EAD RID: 32429
 	public int i_trigger_type;
 
-	// Token: 0x04007D9E RID: 32158
+	// Token: 0x04007EAE RID: 32430
 	public int i_config_id;
 }

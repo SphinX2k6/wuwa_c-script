@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BB0 RID: 2992
+	// Token: 0x02000C7E RID: 3198
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcStandbyShowFinitelyInfo
 	{
-		// Token: 0x0600449D RID: 17565 RVA: 0x000AE392 File Offset: 0x000AC592
-		[NullableContext(1)]
+		// Token: 0x060048F6 RID: 18678 RVA: 0x000B8456 File Offset: 0x000B6656
+		[NullableContext(0)]
 		public static INpcStandbyShowFinitelyInfo Create(INpcStandbyShowFinitelyInfo? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012FA RID: 4858
-		// (get) Token: 0x0600449E RID: 17566 RVA: 0x000AE3B1 File Offset: 0x000AC5B1
+		// Token: 0x170013F5 RID: 5109
+		// (get) Token: 0x060048F7 RID: 18679 RVA: 0x000B8475 File Offset: 0x000B6675
 		public virtual string Montage
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012FB RID: 4859
-		// (get) Token: 0x0600449F RID: 17567 RVA: 0x000AE3BE File Offset: 0x000AC5BE
+		// Token: 0x170013F6 RID: 5110
+		// (get) Token: 0x060048F8 RID: 18680 RVA: 0x000B8482 File Offset: 0x000B6682
 		public virtual IMontageId RegisteredMontageId
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012FC RID: 4860
-		// (get) Token: 0x060044A0 RID: 17568 RVA: 0x000AE3F4 File Offset: 0x000AC5F4
+		// Token: 0x170013F7 RID: 5111
+		// (get) Token: 0x060048F9 RID: 18681 RVA: 0x000B84B8 File Offset: 0x000B66B8
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012FD RID: 4861
-		// (get) Token: 0x060044A1 RID: 17569 RVA: 0x000AE42A File Offset: 0x000AC62A
+		// Token: 0x170013F8 RID: 5112
+		// (get) Token: 0x060048FA RID: 18682 RVA: 0x000B84EE File Offset: 0x000B66EE
 		public virtual int Time
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012FE RID: 4862
-		// (get) Token: 0x060044A2 RID: 17570 RVA: 0x000AE437 File Offset: 0x000AC637
+		// Token: 0x170013F9 RID: 5113
+		// (get) Token: 0x060048FB RID: 18683 RVA: 0x000B84FB File Offset: 0x000B66FB
 		public virtual IIgnoreEntityIdsCollision IgnoreEntityCollision
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026C9 RID: 9929
+		// Token: 0x04002911 RID: 10513
 		private INpcStandbyShowFinitelyInfo Instance;
 
-		// Token: 0x040026CA RID: 9930
+		// Token: 0x04002912 RID: 10514
 		private IMontageId _RegisteredMontageIdCache;
 
-		// Token: 0x040026CB RID: 9931
+		// Token: 0x04002913 RID: 10515
 		private bool _RegisteredMontageIdInited;
 
-		// Token: 0x040026CC RID: 9932
+		// Token: 0x04002914 RID: 10516
 		private IIgnoreEntityIdsCollision _IgnoreEntityCollisionCache;
 
-		// Token: 0x040026CD RID: 9933
+		// Token: 0x04002915 RID: 10517
 		private bool _IgnoreEntityCollisionInited;
 	}
 }

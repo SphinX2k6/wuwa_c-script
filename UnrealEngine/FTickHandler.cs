@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F0B RID: 7947
+	// Token: 0x02000616 RID: 1558
 	public sealed class FTickHandler : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E28A RID: 123530 RVA: 0x002CD766 File Offset: 0x002CB966
+		// Token: 0x060088B3 RID: 34995 RVA: 0x000CE48E File Offset: 0x000CC68E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FTickHandler.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E28B RID: 123531 RVA: 0x002CD772 File Offset: 0x002CB972
+		// Token: 0x060088B4 RID: 34996 RVA: 0x000CE49A File Offset: 0x000CC69A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FTickHandler._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FTickHandler._FunctionPtr;
 		}
 
-		// Token: 0x0601E28C RID: 123532 RVA: 0x002CD795 File Offset: 0x002CB995
+		// Token: 0x060088B5 RID: 34997 RVA: 0x000CE4BD File Offset: 0x000CC6BD
 		public FTickHandler()
 		{
 		}
 
-		// Token: 0x0601E28D RID: 123533 RVA: 0x002CD79D File Offset: 0x002CB99D
+		// Token: 0x060088B6 RID: 34998 RVA: 0x000CE4C5 File Offset: 0x000CC6C5
 		[NullableContext(2)]
 		public FTickHandler(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E28E RID: 123534 RVA: 0x002CD7A7 File Offset: 0x002CB9A7
+		// Token: 0x060088B7 RID: 34999 RVA: 0x000CE4CF File Offset: 0x000CC6CF
 		public FTickHandler(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E28F RID: 123535 RVA: 0x002CD7B2 File Offset: 0x002CB9B2
+		// Token: 0x060088B8 RID: 35000 RVA: 0x000CE4DA File Offset: 0x000CC6DA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E290 RID: 123536 RVA: 0x002CD7E4 File Offset: 0x002CB9E4
+		// Token: 0x060088B9 RID: 35001 RVA: 0x000CE50C File Offset: 0x000CC70C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float> Callback)
 		{
 			if (FTickHandler.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FTickHandler.RegisterId);
 		}
 
-		// Token: 0x0601E291 RID: 123537 RVA: 0x002CD820 File Offset: 0x002CBA20
+		// Token: 0x060088BA RID: 35002 RVA: 0x000CE548 File Offset: 0x000CC748
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float DeltaSeconds)
 		{
 			FTickHandler.__FTickHandler_DelegateParams* ptr = stackalloc FTickHandler.__FTickHandler_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FTickHandler.__FTickHandler_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E292 RID: 123538 RVA: 0x002CD860 File Offset: 0x002CBA60
+		// Token: 0x060088BB RID: 35003 RVA: 0x000CE588 File Offset: 0x000CC788
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FTickHandler.__FTickHandler_DelegateParams*)__Parameters)->DeltaSeconds);
 		}
 
-		// Token: 0x0401048F RID: 66703
+		// Token: 0x04003B5A RID: 15194
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010490 RID: 66704
+		// Token: 0x04003B5B RID: 15195
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.TickHandler__DelegateSignature";
 
-		// Token: 0x04010491 RID: 66705
+		// Token: 0x04003B5C RID: 15196
 		private static int RegisterId;
 
-		// Token: 0x020033FB RID: 13307
+		// Token: 0x02000E48 RID: 3656
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FTickHandler_DelegateParams
+		private ref struct __FTickHandler_DelegateParams
 		{
-			// Token: 0x040173B5 RID: 95157
+			// Token: 0x040061E2 RID: 25058
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x020033FC RID: 13308
+		// Token: 0x02000E49 RID: 3657
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173B6 RID: 95158
+			// Token: 0x040061E3 RID: 25059
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

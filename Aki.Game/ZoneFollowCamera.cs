@@ -6,12 +6,12 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 using UnrealEngine;
 
-// Token: 0x02000223 RID: 547
+// Token: 0x02000227 RID: 551
 [NullableContext(1)]
 [Nullable(0)]
 public class ZoneFollowCamera : ISpecialGameplayCamera
 {
-	// Token: 0x06002172 RID: 8562 RVA: 0x000C1219 File Offset: 0x000BF419
+	// Token: 0x06002220 RID: 8736 RVA: 0x000C8539 File Offset: 0x000C6739
 	public void OnInit(ACameraActor camera, CameraModelInstance cameraModel)
 	{
 		this.CameraActor = camera;
@@ -19,7 +19,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		this.FightCameraLogicComp = ((fightCamera != null) ? fightCamera.LogicComponent : null);
 	}
 
-	// Token: 0x06002173 RID: 8563 RVA: 0x000C123C File Offset: 0x000BF43C
+	// Token: 0x06002221 RID: 8737 RVA: 0x000C855C File Offset: 0x000C675C
 	public void Update(float deltaTime)
 	{
 		ACameraActor cameraActor = this.CameraActor;
@@ -39,7 +39,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		this.LerpCameraToTarget(deltaTime);
 	}
 
-	// Token: 0x06002174 RID: 8564 RVA: 0x000C12B8 File Offset: 0x000BF4B8
+	// Token: 0x06002222 RID: 8738 RVA: 0x000C85D8 File Offset: 0x000C67D8
 	public void OnDestroy()
 	{
 		this.IsSettingsValid = false;
@@ -55,7 +55,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		this.CurrentFov = null;
 	}
 
-	// Token: 0x06002175 RID: 8565 RVA: 0x000C1348 File Offset: 0x000BF548
+	// Token: 0x06002223 RID: 8739 RVA: 0x000C8668 File Offset: 0x000C6868
 	public void SetCameraSettings(SZoneFollowCameraSettings settings)
 	{
 		this.LerpSpeed = settings.LerpSpeed;
@@ -107,7 +107,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		this.HasLastPlayerPosition = false;
 	}
 
-	// Token: 0x06002176 RID: 8566 RVA: 0x000C14D4 File Offset: 0x000BF6D4
+	// Token: 0x06002224 RID: 8740 RVA: 0x000C87F4 File Offset: 0x000C69F4
 	public void ApplyInitialTransform()
 	{
 		ACameraActor cameraActor = this.CameraActor;
@@ -141,13 +141,13 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x06002177 RID: 8567 RVA: 0x000C15E7 File Offset: 0x000BF7E7
+	// Token: 0x06002225 RID: 8741 RVA: 0x000C8907 File Offset: 0x000C6B07
 	public void UpdateExternalPlayerPosition(Vector position)
 	{
 		this.ExternalPlayerPosition.DeepCopy(position);
 	}
 
-	// Token: 0x06002178 RID: 8568 RVA: 0x000C15F5 File Offset: 0x000BF7F5
+	// Token: 0x06002226 RID: 8742 RVA: 0x000C8915 File Offset: 0x000C6B15
 	public void EnableExternalPlayerPosition(bool isUseExternal)
 	{
 		if (this.UseExternalPlayerPosition == isUseExternal)
@@ -162,7 +162,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		this.UseExternalPlayerPosition = isUseExternal;
 	}
 
-	// Token: 0x06002179 RID: 8569 RVA: 0x000C1630 File Offset: 0x000BF830
+	// Token: 0x06002227 RID: 8743 RVA: 0x000C8950 File Offset: 0x000C6B50
 	private Vector GetCurrentPlayerPosition()
 	{
 		if (this.UseExternalPlayerPosition)
@@ -172,7 +172,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		return this.FightCameraLogicComp.PlayerLocation;
 	}
 
-	// Token: 0x0600217A RID: 8570 RVA: 0x000C164C File Offset: 0x000BF84C
+	// Token: 0x06002228 RID: 8744 RVA: 0x000C896C File Offset: 0x000C6B6C
 	private void LerpCameraToTarget(float deltaTime)
 	{
 		ACameraActor cameraActor = this.CameraActor;
@@ -197,7 +197,7 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x0600217B RID: 8571 RVA: 0x000C1790 File Offset: 0x000BF990
+	// Token: 0x06002229 RID: 8745 RVA: 0x000C8AB0 File Offset: 0x000C6CB0
 	private void FindActorInZone(Vector curPosition)
 	{
 		this.ZoneIndexListCache.Clear();
@@ -211,14 +211,14 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x0600217C RID: 8572 RVA: 0x000C17F4 File Offset: 0x000BF9F4
+	// Token: 0x0600222A RID: 8746 RVA: 0x000C8B14 File Offset: 0x000C6D14
 	private bool IsPointInBoxWithTransform(Vector point, Transform boxWorldTransform, Vector boxExtent)
 	{
 		boxWorldTransform.InverseTransformPosition(point, this.TempVec2);
 		return Math.Abs(this.TempVec2.X) <= Math.Abs(boxExtent.X) && Math.Abs(this.TempVec2.Y) <= Math.Abs(boxExtent.Y) && Math.Abs(this.TempVec2.Z) <= Math.Abs(boxExtent.Z);
 	}
 
-	// Token: 0x0600217D RID: 8573 RVA: 0x000C186C File Offset: 0x000BFA6C
+	// Token: 0x0600222B RID: 8747 RVA: 0x000C8B8C File Offset: 0x000C6D8C
 	private void UpdateTargetCameraPositionAndRotation(Vector curPosition)
 	{
 		this.FindActorInZone(curPosition);
@@ -262,84 +262,84 @@ public class ZoneFollowCamera : ISpecialGameplayCamera
 		}
 	}
 
-	// Token: 0x0600217E RID: 8574 RVA: 0x000C1A40 File Offset: 0x000BFC40
+	// Token: 0x0600222C RID: 8748 RVA: 0x000C8D60 File Offset: 0x000C6F60
 	private void UpdateTargetPositionFromPlayerPosition(Vector playerPosition)
 	{
 		playerPosition.Addition(this.DefaultCameraOffset, this.TargetCameraPosition);
 		this.TargetCameraRotation.DeepCopy(this.DefaultCameraRotation);
 	}
 
-	// Token: 0x04001612 RID: 5650
+	// Token: 0x04001654 RID: 5716
 	[Nullable(2)]
 	private ACameraActor CameraActor;
 
-	// Token: 0x04001613 RID: 5651
+	// Token: 0x04001655 RID: 5717
 	[Nullable(2)]
 	private FightCameraLogicComponent FightCameraLogicComp;
 
-	// Token: 0x04001614 RID: 5652
+	// Token: 0x04001656 RID: 5718
 	private bool IsSettingsValid;
 
-	// Token: 0x04001615 RID: 5653
+	// Token: 0x04001657 RID: 5719
 	private float LerpSpeed;
 
-	// Token: 0x04001616 RID: 5654
+	// Token: 0x04001658 RID: 5720
 	private readonly Vector DefaultCameraOffset = Vector.Create();
 
-	// Token: 0x04001617 RID: 5655
+	// Token: 0x04001659 RID: 5721
 	private readonly Rotator DefaultCameraRotation = Rotator.Create();
 
-	// Token: 0x04001618 RID: 5656
+	// Token: 0x0400165A RID: 5722
 	private readonly List<ZoneSnapshot> CachedZoneConfigs = new List<ZoneSnapshot>();
 
-	// Token: 0x04001619 RID: 5657
+	// Token: 0x0400165B RID: 5723
 	private float? TargetFov;
 
-	// Token: 0x0400161A RID: 5658
+	// Token: 0x0400165C RID: 5724
 	private float? CurrentFov;
 
-	// Token: 0x0400161B RID: 5659
+	// Token: 0x0400165D RID: 5725
 	private readonly Vector TargetCameraPosition = Vector.Create();
 
-	// Token: 0x0400161C RID: 5660
+	// Token: 0x0400165E RID: 5726
 	private readonly Rotator TargetCameraRotation = Rotator.Create();
 
-	// Token: 0x0400161D RID: 5661
+	// Token: 0x0400165F RID: 5727
 	private readonly Vector TempVec0 = Vector.Create();
 
-	// Token: 0x0400161E RID: 5662
+	// Token: 0x04001660 RID: 5728
 	private readonly Vector TempVec1 = Vector.Create();
 
-	// Token: 0x0400161F RID: 5663
+	// Token: 0x04001661 RID: 5729
 	private readonly Vector TempVec2 = Vector.Create();
 
-	// Token: 0x04001620 RID: 5664
+	// Token: 0x04001662 RID: 5730
 	private readonly Vector TempVec3 = Vector.Create();
 
-	// Token: 0x04001621 RID: 5665
+	// Token: 0x04001663 RID: 5731
 	private readonly Rotator TempRot0 = Rotator.Create();
 
-	// Token: 0x04001622 RID: 5666
+	// Token: 0x04001664 RID: 5732
 	private readonly Vector CurPositionCache = Vector.Create();
 
-	// Token: 0x04001623 RID: 5667
+	// Token: 0x04001665 RID: 5733
 	private readonly Rotator CurRotationCache = Rotator.Create();
 
-	// Token: 0x04001624 RID: 5668
+	// Token: 0x04001666 RID: 5734
 	private readonly List<int> ZoneIndexListCache = new List<int>();
 
-	// Token: 0x04001625 RID: 5669
+	// Token: 0x04001667 RID: 5735
 	private readonly List<float> DistanceListCache = new List<float>();
 
-	// Token: 0x04001626 RID: 5670
+	// Token: 0x04001668 RID: 5736
 	private readonly Vector LastPlayerPosition = Vector.Create();
 
-	// Token: 0x04001627 RID: 5671
+	// Token: 0x04001669 RID: 5737
 	private bool HasLastPlayerPosition;
 
-	// Token: 0x04001628 RID: 5672
+	// Token: 0x0400166A RID: 5738
 	private readonly Vector ExternalPlayerPosition = Vector.Create();
 
-	// Token: 0x04001629 RID: 5673
+	// Token: 0x0400166B RID: 5739
 	private bool UseExternalPlayerPosition;
 }

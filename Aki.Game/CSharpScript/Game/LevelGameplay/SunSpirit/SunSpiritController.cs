@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.NPC.GPUNPC.BP.CrowdAi;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay.SunSpirit.SunSpiritPerform;
@@ -17,14 +16,14 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069ED RID: 27117
+	// Token: 0x02005B4A RID: 23370
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SunSpiritController : ControllerBase
 	{
-		// Token: 0x17009883 RID: 39043
-		// (get) Token: 0x0604374E RID: 276302 RVA: 0x0107C954 File Offset: 0x0107AB54
+		// Token: 0x17006D64 RID: 28004
+		// (get) Token: 0x06039797 RID: 235415 RVA: 0x0102102C File Offset: 0x0101F22C
 		private bool IsInDebugMode
 		{
 			get
@@ -39,21 +38,13 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604374F RID: 276303 RVA: 0x0107C970 File Offset: 0x0107AB70
+		// Token: 0x06039798 RID: 235416 RVA: 0x01021048 File Offset: 0x0101F248
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.SunSpiritListNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSunSpiritListNotify));
 			Net.Instance.Register(ENotifyMessageId.SunSpiritCollectNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSunSpiritCollectNotify));
 			Net.Instance.Register(ENotifyMessageId.SunSpiritUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSunSpiritUpdateNotify));
 			Net.Instance.Register(ENotifyMessageId.SunSpiritActionOperationNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSunSpiritActionOperationNotify));
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				SundryModel instance = SundryModel.Instance;
-				if (instance != null)
-				{
-					instance.ChangeModuleDebugLevel("SunSpirit", 1);
-				}
-			}
 			if (!EventSystem.Instance.Has(EEventName.WorldDone, new Action(this.OnWorldDone)))
 			{
 				EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -62,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return true;
 		}
 
-		// Token: 0x06043750 RID: 276304 RVA: 0x0107CA68 File Offset: 0x0107AC68
+		// Token: 0x06039799 RID: 235417 RVA: 0x0102111C File Offset: 0x0101F31C
 		private void OnWorldDone()
 		{
 			CreatureModel instance = CreatureModel.Instance;
@@ -88,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.UpdateSunSpiritEnable();
 		}
 
-		// Token: 0x06043751 RID: 276305 RVA: 0x0107CB14 File Offset: 0x0107AD14
+		// Token: 0x0603979A RID: 235418 RVA: 0x010211C8 File Offset: 0x0101F3C8
 		private void OnSunSpiritEnableUpdate()
 		{
 			bool newEnable = SunSpiritModel.Instance.GetIsSunSpiritEnable();
@@ -135,7 +126,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			EventSystem.Instance.Emit<bool>(EEventName.OnSunSpiritEnableUpdated, newEnable);
 		}
 
-		// Token: 0x06043752 RID: 276306 RVA: 0x0107CBD0 File Offset: 0x0107ADD0
+		// Token: 0x0603979B RID: 235419 RVA: 0x01021284 File Offset: 0x0101F484
 		private void TryOpenHintView()
 		{
 			if (this.SunSpiritHintView == null)
@@ -150,7 +141,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043753 RID: 276307 RVA: 0x0107CC3D File Offset: 0x0107AE3D
+		// Token: 0x0603979C RID: 235420 RVA: 0x010212F1 File Offset: 0x0101F4F1
 		private void TryCloseHintView()
 		{
 			if (this.SunSpiritHintView != null)
@@ -165,7 +156,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043754 RID: 276308 RVA: 0x0107CC78 File Offset: 0x0107AE78
+		// Token: 0x0603979D RID: 235421 RVA: 0x0102132C File Offset: 0x0101F52C
 		private void UpdateSunSpiritEnable()
 		{
 			CreatureModel instance = CreatureModel.Instance;
@@ -186,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.SetSunSpiritEnable(flag);
 		}
 
-		// Token: 0x06043755 RID: 276309 RVA: 0x0107CCF4 File Offset: 0x0107AEF4
+		// Token: 0x0603979E RID: 235422 RVA: 0x010213A8 File Offset: 0x0101F5A8
 		public void SetSunSpiritEnable(bool targetEnable)
 		{
 			bool isSunSpiritEnable = SunSpiritModel.Instance.GetIsSunSpiritEnable();
@@ -201,7 +192,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043756 RID: 276310 RVA: 0x0107CD30 File Offset: 0x0107AF30
+		// Token: 0x0603979F RID: 235423 RVA: 0x010213E4 File Offset: 0x0101F5E4
 		public void SetGmOverrideSunSpiritEnable(bool bIsEnable)
 		{
 			bool isSunSpiritEnable = SunSpiritModel.Instance.GetIsSunSpiritEnable();
@@ -214,7 +205,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043757 RID: 276311 RVA: 0x0107CD74 File Offset: 0x0107AF74
+		// Token: 0x060397A0 RID: 235424 RVA: 0x01021428 File Offset: 0x0101F628
 		public void ClearGmOverrideSunSpiritEnable()
 		{
 			bool isSunSpiritEnable = SunSpiritModel.Instance.GetIsSunSpiritEnable();
@@ -227,7 +218,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043758 RID: 276312 RVA: 0x0107CDB8 File Offset: 0x0107AFB8
+		// Token: 0x060397A1 RID: 235425 RVA: 0x0102146C File Offset: 0x0101F66C
 		private void RefreshSunSpiritsStateFromCachedProto(bool bDoIfSameState)
 		{
 			this.TempSunSpiritList.Clear();
@@ -247,13 +238,13 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.TempSunSpiritList.Clear();
 		}
 
-		// Token: 0x06043759 RID: 276313 RVA: 0x0107CE94 File Offset: 0x0107B094
+		// Token: 0x060397A2 RID: 235426 RVA: 0x01021548 File Offset: 0x0101F748
 		private void OnEnableTagAddOrRemove(int tagId, bool tagExist)
 		{
 			this.UpdateSunSpiritEnable();
 		}
 
-		// Token: 0x0604375A RID: 276314 RVA: 0x0107CE9C File Offset: 0x0107B09C
+		// Token: 0x060397A3 RID: 235427 RVA: 0x01021550 File Offset: 0x0101F750
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SunSpiritListNotify);
@@ -275,14 +266,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return true;
 		}
 
-		// Token: 0x0604375B RID: 276315 RVA: 0x0107CFA0 File Offset: 0x0107B1A0
+		// Token: 0x060397A4 RID: 235428 RVA: 0x01021654 File Offset: 0x0101F854
 		protected override void OnTick(float delta)
 		{
 			this.TickSunSpirits((double)delta);
 			this.TickView(delta);
 		}
 
-		// Token: 0x0604375C RID: 276316 RVA: 0x0107CFB1 File Offset: 0x0107B1B1
+		// Token: 0x060397A5 RID: 235429 RVA: 0x01021665 File Offset: 0x0101F865
 		private void TickView(float delta)
 		{
 			if (this.SunSpiritHintView != null)
@@ -295,7 +286,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604375D RID: 276317 RVA: 0x0107CFDC File Offset: 0x0107B1DC
+		// Token: 0x060397A6 RID: 235430 RVA: 0x01021690 File Offset: 0x0101F890
 		private void TickSunSpirits(double delta)
 		{
 			this.DeltaFromLastTick += delta;
@@ -322,7 +313,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.TempSunSpiritList.Clear();
 		}
 
-		// Token: 0x0604375E RID: 276318 RVA: 0x0107D0FC File Offset: 0x0107B2FC
+		// Token: 0x060397A7 RID: 235431 RVA: 0x010217B0 File Offset: 0x0101F9B0
 		[NullableContext(2)]
 		private void OnSunSpiritListNotify(IMessage msg, Net.CallbackStatus status = null)
 		{
@@ -350,7 +341,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604375F RID: 276319 RVA: 0x0107D1B8 File Offset: 0x0107B3B8
+		// Token: 0x060397A8 RID: 235432 RVA: 0x0102186C File Offset: 0x0101FA6C
 		[NullableContext(2)]
 		private void OnSunSpiritCollectNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -373,7 +364,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			instance2.AddOrUpdateSunSpiritDataByPb(spiritInfo, true);
 		}
 
-		// Token: 0x06043760 RID: 276320 RVA: 0x0107D21C File Offset: 0x0107B41C
+		// Token: 0x060397A9 RID: 235433 RVA: 0x010218D0 File Offset: 0x0101FAD0
 		[NullableContext(2)]
 		private void OnSunSpiritUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -401,7 +392,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043761 RID: 276321 RVA: 0x0107D2D8 File Offset: 0x0107B4D8
+		// Token: 0x060397AA RID: 235434 RVA: 0x0102198C File Offset: 0x0101FB8C
 		public void OnEntityInitSetSunSpirit(IEnumerable<SunSpiritPb> data)
 		{
 			if (this.IsInDebugMode)
@@ -427,7 +418,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043762 RID: 276322 RVA: 0x0107D380 File Offset: 0x0107B580
+		// Token: 0x060397AB RID: 235435 RVA: 0x01021A34 File Offset: 0x0101FC34
 		[NullableContext(2)]
 		private unsafe void OnSunSpiritActionOperationNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -467,7 +458,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.HandleSunSpiritActionOperationNotifyBack(sunSpiritActionOperationNotify);
 		}
 
-		// Token: 0x06043763 RID: 276323 RVA: 0x0107D494 File Offset: 0x0107B694
+		// Token: 0x060397AC RID: 235436 RVA: 0x01021B48 File Offset: 0x0101FD48
 		private void HandleSunSpiritActionOperationNotifyFly(SunSpiritActionOperationNotify notify)
 		{
 			SunSpiritController.<>c__DisplayClass30_0 CS$<>8__locals1 = new SunSpiritController.<>c__DisplayClass30_0();
@@ -619,7 +610,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043764 RID: 276324 RVA: 0x0107D5A0 File Offset: 0x0107B7A0
+		// Token: 0x060397AD RID: 235437 RVA: 0x01021C54 File Offset: 0x0101FE54
 		private void HandleSunSpiritActionOperationNotifyBack(SunSpiritActionOperationNotify notify)
 		{
 			SunSpiritController.<>c__DisplayClass31_0 CS$<>8__locals1 = new SunSpiritController.<>c__DisplayClass31_0();
@@ -766,7 +757,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}, 60000, true, false);
 		}
 
-		// Token: 0x06043765 RID: 276325 RVA: 0x0107D698 File Offset: 0x0107B898
+		// Token: 0x060397AE RID: 235438 RVA: 0x01021D4C File Offset: 0x0101FF4C
 		private void HandleSunSpiritFlyFromPlayerToGear(SunSpiritActionOperationNotify notify, SunSpiritPb singleSunSpiritPb, float waitBeforeFlyingDuration, float flyingDuration)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -802,7 +793,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			sunSpiritData.StopAllAndSetNextSunSpiritState(newState, false);
 		}
 
-		// Token: 0x06043766 RID: 276326 RVA: 0x0107D7E0 File Offset: 0x0107B9E0
+		// Token: 0x060397AF RID: 235439 RVA: 0x01021E94 File Offset: 0x01020094
 		private void HandleSunSpiritFlyFromGearToPlayer(SunSpiritActionOperationNotify notify, SunSpiritPb singleSunSpiritPb, float waitBeforeFlyingDuration, float flyingDuration)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -838,7 +829,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			sunSpiritData.StopAllAndSetNextSunSpiritState(newState, false);
 		}
 
-		// Token: 0x06043767 RID: 276327 RVA: 0x0107D928 File Offset: 0x0107BB28
+		// Token: 0x060397B0 RID: 235440 RVA: 0x01021FDC File Offset: 0x010201DC
 		private unsafe void PushSunSpiritActionOperationEnd(SunSpiritActionOperationNotify reqData)
 		{
 			if (this.IsInDebugMode)
@@ -869,7 +860,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			Net.Instance.Send(EPushMessageId.SunSpiritActionOperationEndPush, sunSpiritActionOperationEndPush);
 		}
 
-		// Token: 0x06043768 RID: 276328 RVA: 0x0107DA38 File Offset: 0x0107BC38
+		// Token: 0x060397B1 RID: 235441 RVA: 0x010220EC File Offset: 0x010202EC
 		private unsafe void OnActionOperationChildTaskFinish(SunSpiritActionOperationNotify notify, SunSpiritPb childTaskPb)
 		{
 			HashSet<SunSpiritPb> hashSet;
@@ -927,7 +918,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043769 RID: 276329 RVA: 0x0107DC88 File Offset: 0x0107BE88
+		// Token: 0x060397B2 RID: 235442 RVA: 0x0102233C File Offset: 0x0102053C
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			SunSpiritModel instance = SunSpiritModel.Instance;
@@ -952,8 +943,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x17009884 RID: 39044
-		// (get) Token: 0x0604376A RID: 276330 RVA: 0x0107DD78 File Offset: 0x0107BF78
+		// Token: 0x17006D65 RID: 28005
+		// (get) Token: 0x060397B3 RID: 235443 RVA: 0x0102242C File Offset: 0x0102062C
 		public static SunSpiritController Instance
 		{
 			get
@@ -962,7 +953,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604376B RID: 276331 RVA: 0x0107DD7F File Offset: 0x0107BF7F
+		// Token: 0x060397B4 RID: 235444 RVA: 0x01022433 File Offset: 0x01020633
 		public static SunSpiritController GetOrCreateInstance()
 		{
 			if (SunSpiritController._Instance == null)
@@ -972,7 +963,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return SunSpiritController._Instance;
 		}
 
-		// Token: 0x0604376C RID: 276332 RVA: 0x0107DD93 File Offset: 0x0107BF93
+		// Token: 0x060397B5 RID: 235445 RVA: 0x01022447 File Offset: 0x01020647
 		public static bool CreateInstance()
 		{
 			if (SunSpiritController._Instance != null)
@@ -983,57 +974,57 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			return true;
 		}
 
-		// Token: 0x0604376D RID: 276333 RVA: 0x0107DDA9 File Offset: 0x0107BFA9
+		// Token: 0x060397B6 RID: 235446 RVA: 0x0102245D File Offset: 0x0102065D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604376E RID: 276334 RVA: 0x0107DDAB File Offset: 0x0107BFAB
+		// Token: 0x060397B7 RID: 235447 RVA: 0x0102245F File Offset: 0x0102065F
 		public static void ResetStaticDefaultValue()
 		{
 			SunSpiritController._Instance = null;
 		}
 
-		// Token: 0x0604376F RID: 276335 RVA: 0x0107DDB3 File Offset: 0x0107BFB3
+		// Token: 0x060397B8 RID: 235448 RVA: 0x01022467 File Offset: 0x01020667
 		static SunSpiritController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SunSpiritController.CreateStaticDefaultValue), new Action(SunSpiritController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402335A RID: 144218
+		// Token: 0x0401E54C RID: 124236
 		public const string DEBUG_KEY = "SunSpirit";
 
-		// Token: 0x0402335B RID: 144219
+		// Token: 0x0401E54D RID: 124237
 		public const int TICK_INTERVAL = 33;
 
-		// Token: 0x0402335C RID: 144220
+		// Token: 0x0401E54E RID: 124238
 		[StaticVariableRuleIgnore]
 		public readonly int[] ENABLE_TAGS = new int[]
 		{
 			GameplayTagDefine.EGameplayTagId["关卡.日灵.3_0浮光林POI日灵"]
 		};
 
-		// Token: 0x0402335D RID: 144221
+		// Token: 0x0401E54F RID: 124239
 		[Nullable(2)]
 		private SunSpiritHintView SunSpiritHintView;
 
-		// Token: 0x0402335E RID: 144222
+		// Token: 0x0401E550 RID: 124240
 		[Nullable(2)]
 		private SunSpiritLauncherHintView SunSpiritLauncherHintView;
 
-		// Token: 0x0402335F RID: 144223
+		// Token: 0x0401E551 RID: 124241
 		private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-		// Token: 0x04023360 RID: 144224
+		// Token: 0x0401E552 RID: 124242
 		private double DeltaFromLastTick;
 
-		// Token: 0x04023361 RID: 144225
+		// Token: 0x0401E553 RID: 124243
 		private readonly List<SunSpiritData> TempSunSpiritList = new List<SunSpiritData>();
 
-		// Token: 0x04023362 RID: 144226
+		// Token: 0x0401E554 RID: 124244
 		private readonly Dictionary<SunSpiritActionOperationNotify, HashSet<SunSpiritPb>> ActiveActionOperationNotifyHandlerMap = new Dictionary<SunSpiritActionOperationNotify, HashSet<SunSpiritPb>>();
 
-		// Token: 0x04023363 RID: 144227
+		// Token: 0x0401E555 RID: 124245
 		[Nullable(2)]
 		private static SunSpiritController _Instance;
 	}

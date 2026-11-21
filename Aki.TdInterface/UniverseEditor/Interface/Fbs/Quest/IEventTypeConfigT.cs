@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E13 RID: 15891
+	// Token: 0x0200424E RID: 16974
 	public class IEventTypeConfigT
 	{
-		// Token: 0x17006DD7 RID: 28119
-		// (get) Token: 0x060163E0 RID: 91104 RVA: 0x00335E5E File Offset: 0x0033405E
-		// (set) Token: 0x060163E1 RID: 91105 RVA: 0x00335E66 File Offset: 0x00334066
+		// Token: 0x170073BD RID: 29629
+		// (get) Token: 0x06017A0D RID: 96781 RVA: 0x0035EA56 File Offset: 0x0035CC56
+		// (set) Token: 0x06017A0E RID: 96782 RVA: 0x0035EA5E File Offset: 0x0035CC5E
 		public ECommonEventType Type { get; set; }
 
-		// Token: 0x060163E2 RID: 91106 RVA: 0x00335E6F File Offset: 0x0033406F
+		// Token: 0x06017A0F RID: 96783 RVA: 0x0035EA67 File Offset: 0x0035CC67
 		public IEventTypeConfigT()
 		{
 			this.Type = ECommonEventType.VarValueChange;

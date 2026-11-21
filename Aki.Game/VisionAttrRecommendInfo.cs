@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200244F RID: 9295
+// Token: 0x02001934 RID: 6452
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionAttrRecommendInfo
 {
-	// Token: 0x06012A49 RID: 76361 RVA: 0x0049969C File Offset: 0x0049789C
+	// Token: 0x0600FF00 RID: 65280 RVA: 0x004A6CA4 File Offset: 0x004A4EA4
 	public VisionAttrRecommendInfo()
 	{
 		this.MainAttrRecommendInfo = new List<AttrRecommendInfo>();
@@ -18,43 +18,43 @@ public class VisionAttrRecommendInfo
 		this.UsageSubAttrRecommendInfo = new List<AttrRecommendInfo>();
 	}
 
-	// Token: 0x06012A4A RID: 76362 RVA: 0x004996F1 File Offset: 0x004978F1
+	// Token: 0x0600FF01 RID: 65281 RVA: 0x004A6CF9 File Offset: 0x004A4EF9
 	public List<AttrRecommendInfo> GetMainAttrRecommendInfo()
 	{
 		return this.MainAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A4B RID: 76363 RVA: 0x004996F9 File Offset: 0x004978F9
+	// Token: 0x0600FF02 RID: 65282 RVA: 0x004A6D01 File Offset: 0x004A4F01
 	public List<AttrRecommendInfo> GetSubAttrRecommendInfo()
 	{
 		return this.SubAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A4C RID: 76364 RVA: 0x00499701 File Offset: 0x00497901
+	// Token: 0x0600FF03 RID: 65283 RVA: 0x004A6D09 File Offset: 0x004A4F09
 	public List<AttrRecommendInfo> GetOfficialMainAttrRecommendInfo()
 	{
 		return this.OfficialMainAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A4D RID: 76365 RVA: 0x00499709 File Offset: 0x00497909
+	// Token: 0x0600FF04 RID: 65284 RVA: 0x004A6D11 File Offset: 0x004A4F11
 	public List<AttrRecommendInfo> GetOfficialSubAttrRecommendInfo()
 	{
 		return this.OfficialSubAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A4E RID: 76366 RVA: 0x00499711 File Offset: 0x00497911
+	// Token: 0x0600FF05 RID: 65285 RVA: 0x004A6D19 File Offset: 0x004A4F19
 	public List<AttrRecommendInfo> GetUsageMainAttrRecommendInfo()
 	{
 		return this.UsageMainAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A4F RID: 76367 RVA: 0x00499719 File Offset: 0x00497919
+	// Token: 0x0600FF06 RID: 65286 RVA: 0x004A6D21 File Offset: 0x004A4F21
 	public List<AttrRecommendInfo> GetUsageSubAttrRecommendInfo()
 	{
 		return this.UsageSubAttrRecommendInfo;
 	}
 
-	// Token: 0x06012A50 RID: 76368 RVA: 0x00499724 File Offset: 0x00497924
+	// Token: 0x0600FF07 RID: 65287 RVA: 0x004A6D2C File Offset: 0x004A4F2C
 	public void BuildPlanLists()
 	{
 		this.OfficialMainAttrRecommendInfo.Clear();
@@ -85,21 +85,21 @@ public class VisionAttrRecommendInfo
 		}
 	}
 
-	// Token: 0x04008C74 RID: 35956
+	// Token: 0x04008DBB RID: 36283
 	private readonly List<AttrRecommendInfo> MainAttrRecommendInfo;
 
-	// Token: 0x04008C75 RID: 35957
+	// Token: 0x04008DBC RID: 36284
 	private readonly List<AttrRecommendInfo> SubAttrRecommendInfo;
 
-	// Token: 0x04008C76 RID: 35958
+	// Token: 0x04008DBD RID: 36285
 	private readonly List<AttrRecommendInfo> OfficialMainAttrRecommendInfo;
 
-	// Token: 0x04008C77 RID: 35959
+	// Token: 0x04008DBE RID: 36286
 	private readonly List<AttrRecommendInfo> OfficialSubAttrRecommendInfo;
 
-	// Token: 0x04008C78 RID: 35960
+	// Token: 0x04008DBF RID: 36287
 	private readonly List<AttrRecommendInfo> UsageMainAttrRecommendInfo;
 
-	// Token: 0x04008C79 RID: 35961
+	// Token: 0x04008DC0 RID: 36288
 	private readonly List<AttrRecommendInfo> UsageSubAttrRecommendInfo;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072B6 RID: 29366
+	// Token: 0x02007A8B RID: 31371
 	public struct ITalkEffectType : IFlatbufferObject
 	{
-		// Token: 0x1700D9D7 RID: 55767
-		// (get) Token: 0x060341CB RID: 213451 RVA: 0x00701144 File Offset: 0x006FF344
+		// Token: 0x1700E5D0 RID: 58832
+		// (get) Token: 0x060374CF RID: 226511 RVA: 0x007624E0 File Offset: 0x007606E0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060341CC RID: 213452 RVA: 0x00701151 File Offset: 0x006FF351
+		// Token: 0x060374D0 RID: 226512 RVA: 0x007624ED File Offset: 0x007606ED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060341CD RID: 213453 RVA: 0x00701158 File Offset: 0x006FF358
+		// Token: 0x060374D1 RID: 226513 RVA: 0x007624F4 File Offset: 0x007606F4
 		public static ITalkEffectType GetRootAsITalkEffectType(ByteBuffer _bb)
 		{
 			return ITalkEffectType.GetRootAsITalkEffectType(_bb, default(ITalkEffectType));
 		}
 
-		// Token: 0x060341CE RID: 213454 RVA: 0x00701174 File Offset: 0x006FF374
+		// Token: 0x060374D2 RID: 226514 RVA: 0x00762510 File Offset: 0x00760710
 		public static ITalkEffectType GetRootAsITalkEffectType(ByteBuffer _bb, ITalkEffectType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060341CF RID: 213455 RVA: 0x00701191 File Offset: 0x006FF391
+		// Token: 0x060374D3 RID: 226515 RVA: 0x0076252D File Offset: 0x0076072D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060341D0 RID: 213456 RVA: 0x007011A0 File Offset: 0x006FF3A0
+		// Token: 0x060374D4 RID: 226516 RVA: 0x0076253C File Offset: 0x0076073C
 		public ITalkEffectType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D9D8 RID: 55768
-		// (get) Token: 0x060341D1 RID: 213457 RVA: 0x007011B0 File Offset: 0x006FF3B0
+		// Token: 0x1700E5D1 RID: 58833
+		// (get) Token: 0x060374D5 RID: 226517 RVA: 0x0076254C File Offset: 0x0076074C
 		public ETalkEffectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060341D2 RID: 213458 RVA: 0x007011EC File Offset: 0x006FF3EC
+		// Token: 0x060374D6 RID: 226518 RVA: 0x00762588 File Offset: 0x00760788
 		public static Offset<ITalkEffectType> CreateITalkEffectType(FlatBufferBuilder builder, ETalkEffectType Type = ETalkEffectType.Effect)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkEffectType.EndITalkEffectType(builder);
 		}
 
-		// Token: 0x060341D3 RID: 213459 RVA: 0x00701202 File Offset: 0x006FF402
+		// Token: 0x060374D7 RID: 226519 RVA: 0x0076259E File Offset: 0x0076079E
 		public static void StartITalkEffectType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060341D4 RID: 213460 RVA: 0x0070120B File Offset: 0x006FF40B
+		// Token: 0x060374D8 RID: 226520 RVA: 0x007625A7 File Offset: 0x007607A7
 		public static void AddType(FlatBufferBuilder builder, ETalkEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060341D5 RID: 213461 RVA: 0x00701216 File Offset: 0x006FF416
+		// Token: 0x060374D9 RID: 226521 RVA: 0x007625B2 File Offset: 0x007607B2
 		public static Offset<ITalkEffectType> EndITalkEffectType(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkEffectType>(builder.EndTable());
 		}
 
-		// Token: 0x060341D6 RID: 213462 RVA: 0x00701224 File Offset: 0x006FF424
+		// Token: 0x060374DA RID: 226522 RVA: 0x007625C0 File Offset: 0x007607C0
 		public ITalkEffectTypeT UnPack()
 		{
 			ITalkEffectTypeT talkEffectTypeT = new ITalkEffectTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkEffectTypeT;
 		}
 
-		// Token: 0x060341D7 RID: 213463 RVA: 0x0070123F File Offset: 0x006FF43F
+		// Token: 0x060374DB RID: 226523 RVA: 0x007625DB File Offset: 0x007607DB
 		public void UnPackTo(ITalkEffectTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060341D8 RID: 213464 RVA: 0x00701250 File Offset: 0x006FF450
+		// Token: 0x060374DC RID: 226524 RVA: 0x007625EC File Offset: 0x007607EC
 		public static Offset<ITalkEffectType> Pack(FlatBufferBuilder builder, ITalkEffectTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkEffectType.CreateITalkEffectType(builder, _o.Type);
 		}
 
-		// Token: 0x04011DD7 RID: 73175
+		// Token: 0x04012DDA RID: 77274
 		private Table __p;
 	}
 }

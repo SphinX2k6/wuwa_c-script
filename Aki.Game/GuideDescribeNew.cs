@@ -6,19 +6,19 @@ using Aki.Config;
 using CSharpScript.Game.InputSetting;
 using UnrealEngine;
 
-// Token: 0x02001DC5 RID: 7621
+// Token: 0x02001287 RID: 4743
 [NullableContext(1)]
 [Nullable(0)]
 public class GuideDescribeNew
 {
-	// Token: 0x0600E7B3 RID: 59315 RVA: 0x00369E6D File Offset: 0x0036806D
+	// Token: 0x0600BBD2 RID: 48082 RVA: 0x00375B01 File Offset: 0x00373D01
 	public GuideDescribeNew(UUIText uiText)
 	{
 		this.GuideDescribe = uiText;
 		this.GuideDescribe.SetRichText(true);
 	}
 
-	// Token: 0x0600E7B4 RID: 59316 RVA: 0x00369EA0 File Offset: 0x003680A0
+	// Token: 0x0600BBD3 RID: 48083 RVA: 0x00375B34 File Offset: 0x00373D34
 	public unsafe void SetUpText(string descTextId, params string[] actionNames)
 	{
 		UUIText guideDescribe = this.GuideDescribe;
@@ -94,7 +94,7 @@ public class GuideDescribeNew
 		LguiUtil.Instance.SetLocalTextNew(guideDescribe, descTextId, list.ToArray());
 	}
 
-	// Token: 0x0600E7B5 RID: 59317 RVA: 0x0036A12C File Offset: 0x0036832C
+	// Token: 0x0600BBD4 RID: 48084 RVA: 0x00375DC0 File Offset: 0x00373FC0
 	private string ParseKeyContent(string keyName, string keyIconPath)
 	{
 		if (!StringUtils.IsEmpty(keyIconPath))
@@ -104,16 +104,16 @@ public class GuideDescribeNew
 		return "(" + keyName + ")";
 	}
 
-	// Token: 0x04006B29 RID: 27433
+	// Token: 0x04006C0A RID: 27658
 	private const string LINKER = "+";
 
-	// Token: 0x04006B2A RID: 27434
+	// Token: 0x04006C0B RID: 27659
 	[Nullable(2)]
 	private readonly UUIText GuideDescribe;
 
-	// Token: 0x04006B2B RID: 27435
+	// Token: 0x04006C0C RID: 27660
 	private readonly float Factor = 1.6f;
 
-	// Token: 0x04006B2C RID: 27436
+	// Token: 0x04006C0D RID: 27661
 	private readonly InputKeyDisplayData KeyDisplayDataBuffer = new InputKeyDisplayData();
 }

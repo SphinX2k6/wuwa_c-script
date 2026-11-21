@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017A0 RID: 6048
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001921 RID: 6433
 	public class IActorTurnToTalkerData : IActorTurnToData
 	{
-		// Token: 0x06008001 RID: 32769 RVA: 0x00131AA4 File Offset: 0x0012FCA4
+		// Token: 0x060086F1 RID: 34545 RVA: 0x00140D04 File Offset: 0x0013EF04
 		private IActorTurnToTalkerData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008002 RID: 32770 RVA: 0x00131ADC File Offset: 0x0012FCDC
+		// Token: 0x060086F2 RID: 34546 RVA: 0x00140D3C File Offset: 0x0013EF3C
 		public static IActorTurnToTalkerData Create([Nullable(2)] IActorTurnToTalkerData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008003 RID: 32771 RVA: 0x00131AEF File Offset: 0x0012FCEF
+		// Token: 0x060086F3 RID: 34547 RVA: 0x00140D4F File Offset: 0x0013EF4F
 		public static IActorTurnToTalkerData CreateFromSetValue([Nullable(2)] IActorTurnToTalkerData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008004 RID: 32772 RVA: 0x00131B02 File Offset: 0x0012FD02
+		// Token: 0x060086F4 RID: 34548 RVA: 0x00140D62 File Offset: 0x0013EF62
 		public new IActorTurnToTalkerData_SetValue ToSetValue()
 		{
 			return new IActorTurnToTalkerData_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029E5 RID: 10725
-		// (get) Token: 0x06008005 RID: 32773 RVA: 0x00131B15 File Offset: 0x0012FD15
-		// (set) Token: 0x06008006 RID: 32774 RVA: 0x00131B40 File Offset: 0x0012FD40
+		// Token: 0x17002BD3 RID: 11219
+		// (get) Token: 0x060086F5 RID: 34549 RVA: 0x00140D75 File Offset: 0x0013EF75
+		// (set) Token: 0x060086F6 RID: 34550 RVA: 0x00140DA0 File Offset: 0x0013EFA0
 		public override EActorTurnToMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005146 RID: 20806
+		// Token: 0x0400557C RID: 21884
 		[Nullable(2)]
 		protected new IActorTurnToTalkerData FbInstance;
 
-		// Token: 0x04005147 RID: 20807
+		// Token: 0x0400557D RID: 21885
 		[Nullable(2)]
 		protected new IActorTurnToTalkerData_SetValue PocoInterface;
 	}

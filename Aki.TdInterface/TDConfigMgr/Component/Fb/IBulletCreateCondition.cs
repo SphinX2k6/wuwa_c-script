@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B38 RID: 2872
+	// Token: 0x02000C06 RID: 3078
 	public class IBulletCreateCondition
 	{
-		// Token: 0x06004249 RID: 16969 RVA: 0x000A9C0E File Offset: 0x000A7E0E
-		[NullableContext(1)]
+		// Token: 0x060046A2 RID: 18082 RVA: 0x000B3CD2 File Offset: 0x000B1ED2
 		public static IBulletCreateCondition Create(IBulletCreateCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001196 RID: 4502
-		// (get) Token: 0x0600424A RID: 16970 RVA: 0x000A9C2D File Offset: 0x000A7E2D
+		// Token: 0x17001291 RID: 4753
+		// (get) Token: 0x060046A3 RID: 18083 RVA: 0x000B3CF1 File Offset: 0x000B1EF1
 		public virtual EBulletCreateCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001197 RID: 4503
-		// (get) Token: 0x0600424B RID: 16971 RVA: 0x000A9C3A File Offset: 0x000A7E3A
+		// Token: 0x17001292 RID: 4754
+		// (get) Token: 0x060046A4 RID: 18084 RVA: 0x000B3CFE File Offset: 0x000B1EFE
 		public virtual long BulletId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002561 RID: 9569
+		// Token: 0x040027A9 RID: 10153
 		private IBulletCreateCondition Instance;
 	}
 }

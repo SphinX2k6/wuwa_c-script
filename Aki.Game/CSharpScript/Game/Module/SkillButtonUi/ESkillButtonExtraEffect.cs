@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C13 RID: 19475
+	// Token: 0x02003BC4 RID: 15300
 	public enum ESkillButtonExtraEffect
 	{
-		// Token: 0x0401AD27 RID: 109863
+		// Token: 0x04015683 RID: 87683
 		None,
-		// Token: 0x0401AD28 RID: 109864
+		// Token: 0x04015684 RID: 87684
 		Rhythm
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002405 RID: 9221
+	// Token: 0x020026A4 RID: 9892
 	public static class ESetEntityTagTypeExtensions
 	{
-		// Token: 0x0600C895 RID: 51349 RVA: 0x001D5ACC File Offset: 0x001D3CCC
+		// Token: 0x0600D53C RID: 54588 RVA: 0x001EF6C8 File Offset: 0x001ED8C8
 		public static string ToEnumString(this ESetEntityTagType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C896 RID: 51350 RVA: 0x001D5B04 File Offset: 0x001D3D04
+		// Token: 0x0600D53D RID: 54589 RVA: 0x001EF700 File Offset: 0x001ED900
 		public static ESetEntityTagType FromString(string name)
 		{
 			ESetEntityTagType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C897 RID: 51351 RVA: 0x001D5B2D File Offset: 0x001D3D2D
+		// Token: 0x0600D53E RID: 54590 RVA: 0x001EF729 File Offset: 0x001ED929
 		public static bool TryFromString(string name, out ESetEntityTagType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C898 RID: 51352 RVA: 0x001D5B66 File Offset: 0x001D3D66
+		// Token: 0x0600D53F RID: 54591 RVA: 0x001EF762 File Offset: 0x001ED962
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C899 RID: 51353 RVA: 0x001D5B7E File Offset: 0x001D3D7E
+		// Token: 0x0600D540 RID: 54592 RVA: 0x001EF77A File Offset: 0x001ED97A
 		public static ESetEntityTagType[] GetValues()
 		{
 			return new ESetEntityTagType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C89A RID: 51354 RVA: 0x001D5B8A File Offset: 0x001D3D8A
+		// Token: 0x0600D541 RID: 54593 RVA: 0x001EF786 File Offset: 0x001ED986
 		public static string[] GetNames()
 		{
 			return new string[]

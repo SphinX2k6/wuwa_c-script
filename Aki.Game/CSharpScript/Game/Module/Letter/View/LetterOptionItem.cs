@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Letter.View
 {
-	// Token: 0x020056CE RID: 22222
+	// Token: 0x020046A5 RID: 18085
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Letter.View
 	})]
 	public class LetterOptionItem : GridProxyAbstract<ITalkOption>
 	{
-		// Token: 0x06038855 RID: 231509 RVA: 0x00D6CE80 File Offset: 0x00D6B080
+		// Token: 0x0602D765 RID: 186213 RVA: 0x00CBB438 File Offset: 0x00CB9638
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Letter.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038856 RID: 231510 RVA: 0x00D6CF28 File Offset: 0x00D6B128
+		// Token: 0x0602D766 RID: 186214 RVA: 0x00CBB4E0 File Offset: 0x00CB96E0
 		public override void Refresh(ITalkOption data, bool isSelected, int gridIndex)
 		{
 			this.CurData = data;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Module.Letter.View
 			}
 		}
 
-		// Token: 0x06038857 RID: 231511 RVA: 0x00D6CF80 File Offset: 0x00D6B180
+		// Token: 0x0602D767 RID: 186215 RVA: 0x00CBB538 File Offset: 0x00CB9738
 		public void SetOnClick(Action<ITalkOption> callback)
 		{
 			this.OnClickCallback = callback;
 		}
 
-		// Token: 0x06038858 RID: 231512 RVA: 0x00D6CF89 File Offset: 0x00D6B189
+		// Token: 0x0602D768 RID: 186216 RVA: 0x00CBB541 File Offset: 0x00CB9741
 		private void OnClickToggle(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked || this.CurData == null)
@@ -75,11 +75,11 @@ namespace CSharpScript.Game.Module.Letter.View
 			onClickCallback(this.CurData);
 		}
 
-		// Token: 0x0401DB09 RID: 121609
+		// Token: 0x0401859F RID: 99743
 		[Nullable(2)]
 		private ITalkOption CurData;
 
-		// Token: 0x0401DB0A RID: 121610
+		// Token: 0x040185A0 RID: 99744
 		[Nullable(new byte[]
 		{
 			2,
@@ -87,14 +87,14 @@ namespace CSharpScript.Game.Module.Letter.View
 		})]
 		private Action<ITalkOption> OnClickCallback;
 
-		// Token: 0x0200B8A7 RID: 47271
+		// Token: 0x0200A2CE RID: 41678
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04037E01 RID: 228865
+			// Token: 0x0403281B RID: 206875
 			public const int TxtOption = 0;
 
-			// Token: 0x04037E02 RID: 228866
+			// Token: 0x0403281C RID: 206876
 			public const int TogOption = 1;
 		}
 	}

@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001A41 RID: 6721
+// Token: 0x02000F00 RID: 3840
 public class DangoAbyssItemPropMediumItemGrid : SelectablePropMediumItemGrid
 {
-	// Token: 0x0600C5B8 RID: 50616 RVA: 0x002CE730 File Offset: 0x002CC930
+	// Token: 0x060099C8 RID: 39368 RVA: 0x002D9844 File Offset: 0x002D7A44
 	[NullableContext(1)]
 	public override void RefreshUi(SelectablePropData data)
 	{
@@ -47,7 +47,7 @@ public class DangoAbyssItemPropMediumItemGrid : SelectablePropMediumItemGrid
 		base.Apply<PropMediumItemGrid>(propMediumItemGrid);
 	}
 
-	// Token: 0x0600C5B9 RID: 50617 RVA: 0x002CE848 File Offset: 0x002CCA48
+	// Token: 0x060099C9 RID: 39369 RVA: 0x002D995C File Offset: 0x002D7B5C
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -67,6 +67,6 @@ public class DangoAbyssItemPropMediumItemGrid : SelectablePropMediumItemGrid
 		}
 	}
 
-	// Token: 0x04005B25 RID: 23333
+	// Token: 0x04005BF4 RID: 23540
 	public bool StateForEquip = true;
 }

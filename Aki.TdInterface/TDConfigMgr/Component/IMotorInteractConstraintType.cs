@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200052C RID: 1324
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000593 RID: 1427
 	public class IMotorInteractConstraintType
 	{
-		// Token: 0x06001AEC RID: 6892 RVA: 0x0004E12C File Offset: 0x0004C32C
+		// Token: 0x06001CE8 RID: 7400 RVA: 0x00052EE8 File Offset: 0x000510E8
 		private IMotorInteractConstraintType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001AED RID: 6893 RVA: 0x0004E164 File Offset: 0x0004C364
+		// Token: 0x06001CE9 RID: 7401 RVA: 0x00052F20 File Offset: 0x00051120
 		public static IMotorInteractConstraintType Create([Nullable(2)] IMotorInteractConstraintType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001AEE RID: 6894 RVA: 0x0004E177 File Offset: 0x0004C377
+		// Token: 0x06001CEA RID: 7402 RVA: 0x00052F33 File Offset: 0x00051133
 		public static IMotorInteractConstraintType CreateFromSetValue([Nullable(2)] IMotorInteractConstraintType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001AEF RID: 6895 RVA: 0x0004E18A File Offset: 0x0004C38A
+		// Token: 0x06001CEB RID: 7403 RVA: 0x00052F46 File Offset: 0x00051146
 		public IMotorInteractConstraintType_SetValue ToSetValue()
 		{
 			return new IMotorInteractConstraintType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000713 RID: 1811
-		// (get) Token: 0x06001AF0 RID: 6896 RVA: 0x0004E19D File Offset: 0x0004C39D
-		// (set) Token: 0x06001AF1 RID: 6897 RVA: 0x0004E1C8 File Offset: 0x0004C3C8
+		// Token: 0x17000796 RID: 1942
+		// (get) Token: 0x06001CEC RID: 7404 RVA: 0x00052F59 File Offset: 0x00051159
+		// (set) Token: 0x06001CED RID: 7405 RVA: 0x00052F84 File Offset: 0x00051184
 		public virtual EMotorInteractConstraintType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400136D RID: 4973
+		// Token: 0x040014D7 RID: 5335
 		[Nullable(2)]
 		protected IMotorInteractConstraintType FbInstance;
 
-		// Token: 0x0400136E RID: 4974
+		// Token: 0x040014D8 RID: 5336
 		[Nullable(2)]
 		protected IMotorInteractConstraintType_SetValue PocoInterface;
 	}

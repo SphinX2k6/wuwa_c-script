@@ -3,45 +3,45 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056FF RID: 22271
+	// Token: 0x02005CEE RID: 23790
 	public class IPathDrivenActorSplineMoveT
 	{
-		// Token: 0x1700A5C8 RID: 42440
-		// (get) Token: 0x0602539B RID: 152475 RVA: 0x005231FD File Offset: 0x005213FD
-		// (set) Token: 0x0602539C RID: 152476 RVA: 0x00523205 File Offset: 0x00521405
+		// Token: 0x1700AECB RID: 44747
+		// (get) Token: 0x06027802 RID: 161794 RVA: 0x00567C49 File Offset: 0x00565E49
+		// (set) Token: 0x06027803 RID: 161795 RVA: 0x00567C51 File Offset: 0x00565E51
 		public EPathDrivenActorMoveType Type { get; set; }
 
-		// Token: 0x1700A5C9 RID: 42441
-		// (get) Token: 0x0602539D RID: 152477 RVA: 0x0052320E File Offset: 0x0052140E
-		// (set) Token: 0x0602539E RID: 152478 RVA: 0x00523216 File Offset: 0x00521416
+		// Token: 0x1700AECC RID: 44748
+		// (get) Token: 0x06027804 RID: 161796 RVA: 0x00567C5A File Offset: 0x00565E5A
+		// (set) Token: 0x06027805 RID: 161797 RVA: 0x00567C62 File Offset: 0x00565E62
 		public List<int> SplineEntityIds { get; set; }
 
-		// Token: 0x1700A5CA RID: 42442
-		// (get) Token: 0x0602539F RID: 152479 RVA: 0x0052321F File Offset: 0x0052141F
-		// (set) Token: 0x060253A0 RID: 152480 RVA: 0x00523227 File Offset: 0x00521427
+		// Token: 0x1700AECD RID: 44749
+		// (get) Token: 0x06027806 RID: 161798 RVA: 0x00567C6B File Offset: 0x00565E6B
+		// (set) Token: 0x06027807 RID: 161799 RVA: 0x00567C73 File Offset: 0x00565E73
 		public bool IsRandomSpline { get; set; }
 
-		// Token: 0x1700A5CB RID: 42443
-		// (get) Token: 0x060253A1 RID: 152481 RVA: 0x00523230 File Offset: 0x00521430
-		// (set) Token: 0x060253A2 RID: 152482 RVA: 0x00523238 File Offset: 0x00521438
+		// Token: 0x1700AECE RID: 44750
+		// (get) Token: 0x06027808 RID: 161800 RVA: 0x00567C7C File Offset: 0x00565E7C
+		// (set) Token: 0x06027809 RID: 161801 RVA: 0x00567C84 File Offset: 0x00565E84
 		public bool IsChainedSpline { get; set; }
 
-		// Token: 0x1700A5CC RID: 42444
-		// (get) Token: 0x060253A3 RID: 152483 RVA: 0x00523241 File Offset: 0x00521441
-		// (set) Token: 0x060253A4 RID: 152484 RVA: 0x00523249 File Offset: 0x00521449
+		// Token: 0x1700AECF RID: 44751
+		// (get) Token: 0x0602780A RID: 161802 RVA: 0x00567C8D File Offset: 0x00565E8D
+		// (set) Token: 0x0602780B RID: 161803 RVA: 0x00567C95 File Offset: 0x00565E95
 		public bool IsLoop { get; set; }
 
-		// Token: 0x1700A5CD RID: 42445
-		// (get) Token: 0x060253A5 RID: 152485 RVA: 0x00523252 File Offset: 0x00521452
-		// (set) Token: 0x060253A6 RID: 152486 RVA: 0x0052325A File Offset: 0x0052145A
+		// Token: 0x1700AED0 RID: 44752
+		// (get) Token: 0x0602780C RID: 161804 RVA: 0x00567C9E File Offset: 0x00565E9E
+		// (set) Token: 0x0602780D RID: 161805 RVA: 0x00567CA6 File Offset: 0x00565EA6
 		public bool IsFollowSplineDir { get; set; }
 
-		// Token: 0x1700A5CE RID: 42446
-		// (get) Token: 0x060253A7 RID: 152487 RVA: 0x00523263 File Offset: 0x00521463
-		// (set) Token: 0x060253A8 RID: 152488 RVA: 0x0052326B File Offset: 0x0052146B
+		// Token: 0x1700AED1 RID: 44753
+		// (get) Token: 0x0602780E RID: 161806 RVA: 0x00567CAF File Offset: 0x00565EAF
+		// (set) Token: 0x0602780F RID: 161807 RVA: 0x00567CB7 File Offset: 0x00565EB7
 		public byte NullMask { get; set; }
 
-		// Token: 0x060253A9 RID: 152489 RVA: 0x00523274 File Offset: 0x00521474
+		// Token: 0x06027810 RID: 161808 RVA: 0x00567CC0 File Offset: 0x00565EC0
 		public IPathDrivenActorSplineMoveT()
 		{
 			this.Type = EPathDrivenActorMoveType.Spline;

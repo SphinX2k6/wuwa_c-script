@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E7A RID: 20090
+	// Token: 0x02003E43 RID: 15939
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleMapRoleLayoutGrid : LoopScrollMediumItemGrid<IRogueBattleMapRoleGridInfo>
 	{
-		// Token: 0x06033B2E RID: 211758 RVA: 0x00C1B99C File Offset: 0x00C19B9C
+		// Token: 0x06028999 RID: 166297 RVA: 0x00B64EC0 File Offset: 0x00B630C0
 		protected override void OnRefresh(IRogueBattleMapRoleGridInfo data, bool isSelected, int gridIndex)
 		{
 			this.RoleData = data;
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetBottomStarTextVisible(data);
 		}
 
-		// Token: 0x06033B2F RID: 211759 RVA: 0x00C1BAE8 File Offset: 0x00C19CE8
+		// Token: 0x0602899A RID: 166298 RVA: 0x00B6500C File Offset: 0x00B6320C
 		public void SetBottomStarTextVisible(IRogueBattleMapRoleGridInfo data)
 		{
 			ItemGridComponent component = base.RefreshComponent(typeof(MediumItemGridRogueRoleLevelComponent), new bool?(true), data);
 			base.SetComponentVisible(component, RogueBattleModel.Instance.IsRoleGot(data.ConfigId));
 		}
 
-		// Token: 0x06033B30 RID: 211760 RVA: 0x00C1BB24 File Offset: 0x00C19D24
+		// Token: 0x0602899B RID: 166299 RVA: 0x00B65048 File Offset: 0x00B63248
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B6FE RID: 112382
+		// Token: 0x040160D1 RID: 90321
 		private IRogueBattleMapRoleGridInfo RoleData;
 	}
 }

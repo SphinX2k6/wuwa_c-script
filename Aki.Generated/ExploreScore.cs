@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C54 RID: 3156
+	// Token: 0x02000D37 RID: 3383
 	public struct ExploreScore : IFlatbufferObject
 	{
-		// Token: 0x17001004 RID: 4100
-		// (get) Token: 0x06006BDD RID: 27613 RVA: 0x00229380 File Offset: 0x00227580
+		// Token: 0x1700105D RID: 4189
+		// (get) Token: 0x060071DF RID: 29151 RVA: 0x0024860C File Offset: 0x0024680C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BDE RID: 27614 RVA: 0x0022938D File Offset: 0x0022758D
+		// Token: 0x060071E0 RID: 29152 RVA: 0x00248619 File Offset: 0x00246819
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006BDF RID: 27615 RVA: 0x00229394 File Offset: 0x00227594
+		// Token: 0x060071E1 RID: 29153 RVA: 0x00248620 File Offset: 0x00246820
 		public static ExploreScore GetRootAsExploreScore(ByteBuffer _bb)
 		{
 			return ExploreScore.GetRootAsExploreScore(_bb, default(ExploreScore));
 		}
 
-		// Token: 0x06006BE0 RID: 27616 RVA: 0x002293B0 File Offset: 0x002275B0
+		// Token: 0x060071E2 RID: 29154 RVA: 0x0024863C File Offset: 0x0024683C
 		public static ExploreScore GetRootAsExploreScore(ByteBuffer _bb, ExploreScore obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006BE1 RID: 27617 RVA: 0x002293CD File Offset: 0x002275CD
+		// Token: 0x060071E3 RID: 29155 RVA: 0x00248659 File Offset: 0x00246859
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006BE2 RID: 27618 RVA: 0x002293DC File Offset: 0x002275DC
+		// Token: 0x060071E4 RID: 29156 RVA: 0x00248668 File Offset: 0x00246868
 		public ExploreScore __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001005 RID: 4101
-		// (get) Token: 0x06006BE3 RID: 27619 RVA: 0x002293EC File Offset: 0x002275EC
+		// Token: 0x1700105E RID: 4190
+		// (get) Token: 0x060071E5 RID: 29157 RVA: 0x00248678 File Offset: 0x00246878
 		public int Area
 		{
 			get
@@ -66,7 +66,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BE4 RID: 27620 RVA: 0x00229428 File Offset: 0x00227628
+		// Token: 0x060071E6 RID: 29158 RVA: 0x002486B4 File Offset: 0x002468B4
 		public DicIntInt? Score(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -77,8 +77,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001006 RID: 4102
-		// (get) Token: 0x06006BE5 RID: 27621 RVA: 0x00229488 File Offset: 0x00227688
+		// Token: 0x1700105F RID: 4191
+		// (get) Token: 0x060071E7 RID: 29159 RVA: 0x00248714 File Offset: 0x00246914
 		public int ScoreLength
 		{
 			get
@@ -92,24 +92,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006BE6 RID: 27622 RVA: 0x002294B4 File Offset: 0x002276B4
+		// Token: 0x060071E8 RID: 29160 RVA: 0x00248740 File Offset: 0x00246940
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ScoreFrozenDict()缓存字典，遍历请使用ScoreIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Score()
+		public Dictionary<int, int> Score()
 		{
 			return this.ScoreIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006BE7 RID: 27623 RVA: 0x0022950A File Offset: 0x0022770A
+		// Token: 0x060071E9 RID: 29161 RVA: 0x00248796 File Offset: 0x00246996
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ScoreIter()
+		public IEnumerable<DicIntInt> ScoreIter()
 		{
 			ExploreScore.<ScoreIter>d__14 <ScoreIter>d__ = new ExploreScore.<ScoreIter>d__14(-2);
 			<ScoreIter>d__.<>3__<>4__this = this;
 			return <ScoreIter>d__;
 		}
 
-		// Token: 0x06006BE8 RID: 27624 RVA: 0x00229520 File Offset: 0x00227720
+		// Token: 0x060071EA RID: 29162 RVA: 0x002487AC File Offset: 0x002469AC
 		public int? GetScore(int key)
 		{
 			this.EnsureScoreCacheIfNeeded();
@@ -121,7 +120,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006BE9 RID: 27625 RVA: 0x00229554 File Offset: 0x00227754
+		// Token: 0x060071EB RID: 29163 RVA: 0x002487E0 File Offset: 0x002469E0
 		private void EnsureScoreCacheIfNeeded()
 		{
 			if (this.ScoreCache != null)
@@ -131,18 +130,18 @@ namespace Aki.Config
 			this.ScoreCache = this.ScoreIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006BEA RID: 27626 RVA: 0x002295BA File Offset: 0x002277BA
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetScoreFrozenDict(int key)
+		// Token: 0x060071EC RID: 29164 RVA: 0x00248846 File Offset: 0x00246A46
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetScoreFrozenDict()
 		{
 			this.EnsureScoreCacheIfNeeded();
 			return this.ScoreCache;
 		}
 
-		// Token: 0x04004C9B RID: 19611
+		// Token: 0x0400527E RID: 21118
 		private Table __p;
 
-		// Token: 0x04004C9C RID: 19612
+		// Token: 0x0400527F RID: 21119
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ScoreCache;
 	}

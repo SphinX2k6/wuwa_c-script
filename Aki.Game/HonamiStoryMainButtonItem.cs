@@ -5,12 +5,12 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EFA RID: 7930
+// Token: 0x020013BC RID: 5052
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryMainButtonItem : UiPanelBase
 {
-	// Token: 0x0600F414 RID: 62484 RVA: 0x003AE248 File Offset: 0x003AC448
+	// Token: 0x0600C833 RID: 51251 RVA: 0x003B9D3C File Offset: 0x003B7F3C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,13 +25,13 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F415 RID: 62485 RVA: 0x003AE2C5 File Offset: 0x003AC4C5
+	// Token: 0x0600C834 RID: 51252 RVA: 0x003B9DB9 File Offset: 0x003B7FB9
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600F416 RID: 62486 RVA: 0x003AE2D8 File Offset: 0x003AC4D8
+	// Token: 0x0600C835 RID: 51253 RVA: 0x003B9DCC File Offset: 0x003B7FCC
 	[NullableContext(1)]
 	public void SetConfigData(IHonamiStoryMainButtonConfig config)
 	{
@@ -68,20 +68,20 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F417 RID: 62487 RVA: 0x003AE3BE File Offset: 0x003AC5BE
+	// Token: 0x0600C836 RID: 51254 RVA: 0x003B9EB2 File Offset: 0x003B80B2
 	[NullableContext(1)]
 	public void SetClickCallback(Action callback)
 	{
 		this.ClickCallBack = callback;
 	}
 
-	// Token: 0x0600F418 RID: 62488 RVA: 0x003AE3C7 File Offset: 0x003AC5C7
+	// Token: 0x0600C837 RID: 51255 RVA: 0x003B9EBB File Offset: 0x003B80BB
 	public bool CheckIsSpecialSet()
 	{
 		return this.ShowRedDotCallback != null && this.ShowRedDotCallback() && this.SpecialSequenceName != null;
 	}
 
-	// Token: 0x0600F419 RID: 62489 RVA: 0x003AE3EC File Offset: 0x003AC5EC
+	// Token: 0x0600C838 RID: 51256 RVA: 0x003B9EE0 File Offset: 0x003B80E0
 	public void SetButtonState()
 	{
 		bool flag = FunctionModel.Instance.IsOpen(this.FunctionId);
@@ -101,7 +101,7 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F41A RID: 62490 RVA: 0x003AE487 File Offset: 0x003AC687
+	// Token: 0x0600C839 RID: 51257 RVA: 0x003B9F7B File Offset: 0x003B817B
 	public void SetText()
 	{
 		if (this.SetTextCallback != null)
@@ -112,7 +112,7 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		base.GetText(1).SetText("", true);
 	}
 
-	// Token: 0x0600F41B RID: 62491 RVA: 0x003AE4B6 File Offset: 0x003AC6B6
+	// Token: 0x0600C83A RID: 51258 RVA: 0x003B9FAA File Offset: 0x003B81AA
 	public void SetRedDot()
 	{
 		if (this.ShowRedDotCallback != null)
@@ -123,7 +123,7 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		base.GetItem(2).SetUIActive(false);
 	}
 
-	// Token: 0x0600F41C RID: 62492 RVA: 0x003AE4E5 File Offset: 0x003AC6E5
+	// Token: 0x0600C83B RID: 51259 RVA: 0x003B9FD9 File Offset: 0x003B81D9
 	public void Clear()
 	{
 		this.ClickCallBack = null;
@@ -134,7 +134,7 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		this.SpecialSequenceName = null;
 	}
 
-	// Token: 0x0600F41D RID: 62493 RVA: 0x003AE511 File Offset: 0x003AC711
+	// Token: 0x0600C83C RID: 51260 RVA: 0x003BA005 File Offset: 0x003B8205
 	private void OnBtnClick()
 	{
 		Action clickCallBack = this.ClickCallBack;
@@ -145,39 +145,39 @@ public class HonamiStoryMainButtonItem : UiPanelBase
 		clickCallBack();
 	}
 
-	// Token: 0x040070FC RID: 28924
+	// Token: 0x040071DD RID: 29149
 	private int FunctionId;
 
-	// Token: 0x040070FD RID: 28925
+	// Token: 0x040071DE RID: 29150
 	private Action ClickCallBack;
 
-	// Token: 0x040070FE RID: 28926
+	// Token: 0x040071DF RID: 29151
 	private Func<bool> ShowCallback;
 
-	// Token: 0x040070FF RID: 28927
+	// Token: 0x040071E0 RID: 29152
 	private Action<UUIText> SetTextCallback;
 
-	// Token: 0x04007100 RID: 28928
+	// Token: 0x040071E1 RID: 29153
 	private Func<bool> ShowRedDotCallback;
 
-	// Token: 0x04007101 RID: 28929
+	// Token: 0x040071E2 RID: 29154
 	public string SpecialParamName;
 
-	// Token: 0x04007102 RID: 28930
+	// Token: 0x040071E3 RID: 29155
 	public string SpecialSequenceName;
 
-	// Token: 0x04007103 RID: 28931
+	// Token: 0x040071E4 RID: 29156
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020084F7 RID: 34039
+	// Token: 0x0200767C RID: 30332
 	[NullableContext(0)]
 	private enum EHonamiStoryMainButtonItemComponent
 	{
-		// Token: 0x0402B457 RID: 177239
+		// Token: 0x0402677B RID: 157563
 		Button,
-		// Token: 0x0402B458 RID: 177240
+		// Token: 0x0402677C RID: 157564
 		ProgressText,
-		// Token: 0x0402B459 RID: 177241
+		// Token: 0x0402677D RID: 157565
 		RedDotItem
 	}
 }

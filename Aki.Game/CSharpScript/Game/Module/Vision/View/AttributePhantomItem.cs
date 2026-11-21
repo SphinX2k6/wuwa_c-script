@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Vision.View
 {
-	// Token: 0x020050FD RID: 20733
+	// Token: 0x020040CD RID: 16589
 	public class AttributePhantomItem : UiPanelBase
 	{
-		// Token: 0x06034FFE RID: 217086 RVA: 0x00C8DB63 File Offset: 0x00C8BD63
+		// Token: 0x06029EF7 RID: 171767 RVA: 0x00BDAE3F File Offset: 0x00BD903F
 		[NullableContext(1)]
 		public AttributePhantomItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x06034FFF RID: 217087 RVA: 0x00C8DB78 File Offset: 0x00C8BD78
+		// Token: 0x06029EF8 RID: 171768 RVA: 0x00BDAE54 File Offset: 0x00BD9054
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Vision.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06035000 RID: 217088 RVA: 0x00C8DC81 File Offset: 0x00C8BE81
+		// Token: 0x06029EF9 RID: 171769 RVA: 0x00BDAF5D File Offset: 0x00BD915D
 		private void ClickButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomBattleFettersObtainView, this.CurrentFetter, null);
 		}
 
-		// Token: 0x06035001 RID: 217089 RVA: 0x00C8DCA0 File Offset: 0x00C8BEA0
+		// Token: 0x06029EFA RID: 171770 RVA: 0x00BDAF7C File Offset: 0x00BD917C
 		public void Update(int monsterId, PhantomFetter fetterConfig)
 		{
 			this.CurrentFetter = new PhantomFetter?(fetterConfig);
@@ -70,21 +70,21 @@ namespace CSharpScript.Game.Module.Vision.View
 			base.GetSprite(2).useChangeColor = true;
 		}
 
-		// Token: 0x0401C386 RID: 115590
+		// Token: 0x04016DB9 RID: 93625
 		private PhantomFetter? CurrentFetter;
 
-		// Token: 0x0200B257 RID: 45655
+		// Token: 0x02009C90 RID: 40080
 		private enum EAttributePhantomItem
 		{
-			// Token: 0x04036110 RID: 221456
+			// Token: 0x04030B65 RID: 199525
 			EmptySprite,
-			// Token: 0x04036111 RID: 221457
+			// Token: 0x04030B66 RID: 199526
 			Texture,
-			// Token: 0x04036112 RID: 221458
+			// Token: 0x04030B67 RID: 199527
 			BgSprite,
-			// Token: 0x04036113 RID: 221459
+			// Token: 0x04030B68 RID: 199528
 			EquipSprite,
-			// Token: 0x04036114 RID: 221460
+			// Token: 0x04030B69 RID: 199529
 			Button
 		}
 	}

@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D5A RID: 3418
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000E54 RID: 3668
 	public class IGroupAiMonsterMember
 	{
-		// Token: 0x06004DE3 RID: 19939 RVA: 0x000C18B6 File Offset: 0x000BFAB6
-		[NullableContext(1)]
+		// Token: 0x060052FF RID: 21247 RVA: 0x000CCFFA File Offset: 0x000CB1FA
 		public static IGroupAiMonsterMember Create(IGroupAiMonsterMember? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018EC RID: 6380
-		// (get) Token: 0x06004DE4 RID: 19940 RVA: 0x000C18D5 File Offset: 0x000BFAD5
+		// Token: 0x17001A52 RID: 6738
+		// (get) Token: 0x06005300 RID: 21248 RVA: 0x000CD019 File Offset: 0x000CB219
 		public virtual int EntityId
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018ED RID: 6381
-		// (get) Token: 0x06004DE5 RID: 19941 RVA: 0x000C18E2 File Offset: 0x000BFAE2
-		[Nullable(1)]
+		// Token: 0x17001A53 RID: 6739
+		// (get) Token: 0x06005301 RID: 21249 RVA: 0x000CD026 File Offset: 0x000CB226
 		public virtual PosAndRot RelativeTransform
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._RelativeTransformInited)
@@ -52,10 +47,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018EE RID: 6382
-		// (get) Token: 0x06004DE6 RID: 19942 RVA: 0x000C1916 File Offset: 0x000BFB16
+		// Token: 0x17001A54 RID: 6740
+		// (get) Token: 0x06005302 RID: 21250 RVA: 0x000CD05A File Offset: 0x000CB25A
+		[Nullable(2)]
 		public virtual IGroupAiMonsterMemberActionTagAttach ActionTagAttach
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ActionTagAttachInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CA1 RID: 11425
+		// Token: 0x04002F61 RID: 12129
 		private IGroupAiMonsterMember Instance;
 
-		// Token: 0x04002CA2 RID: 11426
+		// Token: 0x04002F62 RID: 12130
+		[Nullable(2)]
 		private PosAndRot _RelativeTransformCache;
 
-		// Token: 0x04002CA3 RID: 11427
+		// Token: 0x04002F63 RID: 12131
 		private bool _RelativeTransformInited;
 
-		// Token: 0x04002CA4 RID: 11428
+		// Token: 0x04002F64 RID: 12132
+		[Nullable(2)]
 		private IGroupAiMonsterMemberActionTagAttach _ActionTagAttachCache;
 
-		// Token: 0x04002CA5 RID: 11429
+		// Token: 0x04002F65 RID: 12133
 		private bool _ActionTagAttachInited;
 	}
 }

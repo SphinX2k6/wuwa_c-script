@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004570 RID: 17776
+	// Token: 0x020049D8 RID: 18904
 	public class IRollBlockGridGoalT
 	{
-		// Token: 0x17007E34 RID: 32308
-		// (get) Token: 0x0601AD03 RID: 109827 RVA: 0x003D37A3 File Offset: 0x003D19A3
-		// (set) Token: 0x0601AD04 RID: 109828 RVA: 0x003D37AB File Offset: 0x003D19AB
+		// Token: 0x17008475 RID: 33909
+		// (get) Token: 0x0601C4D8 RID: 115928 RVA: 0x003FFA3F File Offset: 0x003FDC3F
+		// (set) Token: 0x0601C4D9 RID: 115929 RVA: 0x003FFA47 File Offset: 0x003FDC47
 		public ERollBlockGridType Type { get; set; }
 
-		// Token: 0x17007E35 RID: 32309
-		// (get) Token: 0x0601AD05 RID: 109829 RVA: 0x003D37B4 File Offset: 0x003D19B4
-		// (set) Token: 0x0601AD06 RID: 109830 RVA: 0x003D37BC File Offset: 0x003D19BC
+		// Token: 0x17008476 RID: 33910
+		// (get) Token: 0x0601C4DA RID: 115930 RVA: 0x003FFA50 File Offset: 0x003FDC50
+		// (set) Token: 0x0601C4DB RID: 115931 RVA: 0x003FFA58 File Offset: 0x003FDC58
 		public TRollBlockUnion Block { get; set; }
 
-		// Token: 0x17007E36 RID: 32310
-		// (get) Token: 0x0601AD07 RID: 109831 RVA: 0x003D37C5 File Offset: 0x003D19C5
-		// (set) Token: 0x0601AD08 RID: 109832 RVA: 0x003D37CD File Offset: 0x003D19CD
+		// Token: 0x17008477 RID: 33911
+		// (get) Token: 0x0601C4DC RID: 115932 RVA: 0x003FFA61 File Offset: 0x003FDC61
+		// (set) Token: 0x0601C4DD RID: 115933 RVA: 0x003FFA69 File Offset: 0x003FDC69
 		public List<TRollBlockItemUnion> Items { get; set; }
 
-		// Token: 0x17007E37 RID: 32311
-		// (get) Token: 0x0601AD09 RID: 109833 RVA: 0x003D37D6 File Offset: 0x003D19D6
-		// (set) Token: 0x0601AD0A RID: 109834 RVA: 0x003D37DE File Offset: 0x003D19DE
+		// Token: 0x17008478 RID: 33912
+		// (get) Token: 0x0601C4DE RID: 115934 RVA: 0x003FFA72 File Offset: 0x003FDC72
+		// (set) Token: 0x0601C4DF RID: 115935 RVA: 0x003FFA7A File Offset: 0x003FDC7A
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AD0B RID: 109835 RVA: 0x003D37E7 File Offset: 0x003D19E7
+		// Token: 0x0601C4E0 RID: 115936 RVA: 0x003FFA83 File Offset: 0x003FDC83
 		public IRollBlockGridGoalT()
 		{
 			this.Type = ERollBlockGridType.Empty;

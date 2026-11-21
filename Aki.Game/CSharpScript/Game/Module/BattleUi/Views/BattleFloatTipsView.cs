@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E3E RID: 24126
+	// Token: 0x02004E23 RID: 20003
 	public class BattleFloatTipsView : UiViewBase
 	{
-		// Token: 0x0603D590 RID: 251280 RVA: 0x00ECA01C File Offset: 0x00EC821C
+		// Token: 0x06032520 RID: 206112 RVA: 0x00E1B588 File Offset: 0x00E19788
 		[NullableContext(1)]
 		public BattleFloatTipsView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603D591 RID: 251281 RVA: 0x00ECA028 File Offset: 0x00EC8228
+		// Token: 0x06032521 RID: 206113 RVA: 0x00E1B594 File Offset: 0x00E19794
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D592 RID: 251282 RVA: 0x00ECA0B4 File Offset: 0x00EC82B4
+		// Token: 0x06032522 RID: 206114 RVA: 0x00E1B620 File Offset: 0x00E19820
 		protected override void OnStart()
 		{
 			if (this.Timer == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitText();
 		}
 
-		// Token: 0x0603D593 RID: 251283 RVA: 0x00ECA125 File Offset: 0x00EC8325
+		// Token: 0x06032523 RID: 206115 RVA: 0x00E1B691 File Offset: 0x00E19891
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Timer != null)
@@ -64,19 +64,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D594 RID: 251284 RVA: 0x00ECA147 File Offset: 0x00EC8347
+		// Token: 0x06032524 RID: 206116 RVA: 0x00E1B6B3 File Offset: 0x00E198B3
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiFloatTipUpdate, new Action(this.OnBattleUiFloatTipUpdate));
 		}
 
-		// Token: 0x0603D595 RID: 251285 RVA: 0x00ECA165 File Offset: 0x00EC8365
+		// Token: 0x06032525 RID: 206117 RVA: 0x00E1B6D1 File Offset: 0x00E198D1
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiFloatTipUpdate, new Action(this.OnBattleUiFloatTipUpdate));
 		}
 
-		// Token: 0x0603D596 RID: 251286 RVA: 0x00ECA184 File Offset: 0x00EC8384
+		// Token: 0x06032526 RID: 206118 RVA: 0x00E1B6F0 File Offset: 0x00E198F0
 		public void OnTimerUpdate(float _)
 		{
 			if (this.CurTip == null || (double)this.CurTip.EndTime <= Time.Instance.WorldTimeSeconds)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D597 RID: 251287 RVA: 0x00ECA228 File Offset: 0x00EC8428
+		// Token: 0x06032527 RID: 206119 RVA: 0x00E1B794 File Offset: 0x00E19994
 		private void OnBattleUiFloatTipUpdate()
 		{
 			BattleUiFloatTipsData floatTipsData = BattleUiModel.Instance.FloatTipsData;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitText();
 		}
 
-		// Token: 0x0603D598 RID: 251288 RVA: 0x00ECA254 File Offset: 0x00EC8454
+		// Token: 0x06032528 RID: 206120 RVA: 0x00E1B7C0 File Offset: 0x00E199C0
 		private void TryPlayNextTip()
 		{
 			BattleUiFloatTip nextFloatTip = BattleUiModel.Instance.FloatTipsData.GetNextFloatTip();
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitText();
 		}
 
-		// Token: 0x0603D599 RID: 251289 RVA: 0x00ECA28C File Offset: 0x00EC848C
+		// Token: 0x06032529 RID: 206121 RVA: 0x00E1B7F8 File Offset: 0x00E199F8
 		private void InitText()
 		{
 			EBattleUiFloatTip type = this.CurTip.Type;
@@ -137,32 +137,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetItem(2).SetUIActive(true);
 		}
 
-		// Token: 0x0401FFFF RID: 131071
+		// Token: 0x0401AAC6 RID: 109254
 		private const int TIMER_INTERVAL = 100;
 
-		// Token: 0x04020000 RID: 131072
+		// Token: 0x0401AAC7 RID: 109255
 		[Nullable(1)]
 		private const string COUNTDOWN_TEXT_KEY = "BattleTipCountdown";
 
-		// Token: 0x04020001 RID: 131073
+		// Token: 0x0401AAC8 RID: 109256
 		[Nullable(2)]
 		private BattleUiFloatTip CurTip;
 
-		// Token: 0x04020002 RID: 131074
+		// Token: 0x0401AAC9 RID: 109257
 		private int CurSeconds;
 
-		// Token: 0x04020003 RID: 131075
+		// Token: 0x0401AACA RID: 109258
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0200C1BE RID: 49598
+		// Token: 0x0200ABCD RID: 43981
 		private enum EChildType
 		{
-			// Token: 0x0403A8C4 RID: 239812
+			// Token: 0x040352B6 RID: 217782
 			TxtTip,
-			// Token: 0x0403A8C5 RID: 239813
+			// Token: 0x040352B7 RID: 217783
 			TxtTime,
-			// Token: 0x0403A8C6 RID: 239814
+			// Token: 0x040352B8 RID: 217784
 			IconItem
 		}
 	}

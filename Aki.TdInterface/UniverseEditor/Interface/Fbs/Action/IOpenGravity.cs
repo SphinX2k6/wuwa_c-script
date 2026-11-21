@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C03 RID: 27651
+	// Token: 0x02007367 RID: 29543
 	public struct IOpenGravity : IFlatbufferObject
 	{
-		// Token: 0x1700CD9F RID: 52639
-		// (get) Token: 0x060309C6 RID: 199110 RVA: 0x0069940C File Offset: 0x0069760C
+		// Token: 0x1700D8AD RID: 55469
+		// (get) Token: 0x060338E6 RID: 211174 RVA: 0x006F2DA0 File Offset: 0x006F0FA0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309C7 RID: 199111 RVA: 0x00699419 File Offset: 0x00697619
+		// Token: 0x060338E7 RID: 211175 RVA: 0x006F2DAD File Offset: 0x006F0FAD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060309C8 RID: 199112 RVA: 0x00699420 File Offset: 0x00697620
+		// Token: 0x060338E8 RID: 211176 RVA: 0x006F2DB4 File Offset: 0x006F0FB4
 		public static IOpenGravity GetRootAsIOpenGravity(ByteBuffer _bb)
 		{
 			return IOpenGravity.GetRootAsIOpenGravity(_bb, default(IOpenGravity));
 		}
 
-		// Token: 0x060309C9 RID: 199113 RVA: 0x0069943C File Offset: 0x0069763C
+		// Token: 0x060338E9 RID: 211177 RVA: 0x006F2DD0 File Offset: 0x006F0FD0
 		public static IOpenGravity GetRootAsIOpenGravity(ByteBuffer _bb, IOpenGravity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060309CA RID: 199114 RVA: 0x00699459 File Offset: 0x00697659
+		// Token: 0x060338EA RID: 211178 RVA: 0x006F2DED File Offset: 0x006F0FED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060309CB RID: 199115 RVA: 0x00699468 File Offset: 0x00697668
+		// Token: 0x060338EB RID: 211179 RVA: 0x006F2DFC File Offset: 0x006F0FFC
 		public IOpenGravity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDA0 RID: 52640
-		// (get) Token: 0x060309CC RID: 199116 RVA: 0x00699478 File Offset: 0x00697678
+		// Token: 0x1700D8AE RID: 55470
+		// (get) Token: 0x060338EC RID: 211180 RVA: 0x006F2E0C File Offset: 0x006F100C
 		public ESetTeleControlType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDA1 RID: 52641
-		// (get) Token: 0x060309CD RID: 199117 RVA: 0x006994B4 File Offset: 0x006976B4
+		// Token: 0x1700D8AF RID: 55471
+		// (get) Token: 0x060338ED RID: 211181 RVA: 0x006F2E48 File Offset: 0x006F1048
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDA2 RID: 52642
-		// (get) Token: 0x060309CE RID: 199118 RVA: 0x006994F0 File Offset: 0x006976F0
+		// Token: 0x1700D8B0 RID: 55472
+		// (get) Token: 0x060338EE RID: 211182 RVA: 0x006F2E84 File Offset: 0x006F1084
 		public int PositionEntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDA3 RID: 52643
-		// (get) Token: 0x060309CF RID: 199119 RVA: 0x0069952C File Offset: 0x0069772C
+		// Token: 0x1700D8B1 RID: 55473
+		// (get) Token: 0x060338EF RID: 211183 RVA: 0x006F2EC0 File Offset: 0x006F10C0
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309D0 RID: 199120 RVA: 0x00699569 File Offset: 0x00697769
+		// Token: 0x060338F0 RID: 211184 RVA: 0x006F2EFD File Offset: 0x006F10FD
 		public static Offset<IOpenGravity> CreateIOpenGravity(FlatBufferBuilder builder, ESetTeleControlType Type = ESetTeleControlType.OpenGravity, int EntityId = 0, int PositionEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGravity.EndIOpenGravity(builder);
 		}
 
-		// Token: 0x060309D1 RID: 199121 RVA: 0x00699595 File Offset: 0x00697795
+		// Token: 0x060338F1 RID: 211185 RVA: 0x006F2F29 File Offset: 0x006F1129
 		public static void StartIOpenGravity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060309D2 RID: 199122 RVA: 0x0069959E File Offset: 0x0069779E
+		// Token: 0x060338F2 RID: 211186 RVA: 0x006F2F32 File Offset: 0x006F1132
 		public static void AddType(FlatBufferBuilder builder, ESetTeleControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060309D3 RID: 199123 RVA: 0x006995A9 File Offset: 0x006977A9
+		// Token: 0x060338F3 RID: 211187 RVA: 0x006F2F3D File Offset: 0x006F113D
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x060309D4 RID: 199124 RVA: 0x006995B4 File Offset: 0x006977B4
+		// Token: 0x060338F4 RID: 211188 RVA: 0x006F2F48 File Offset: 0x006F1148
 		public static void AddPositionEntityId(FlatBufferBuilder builder, int positionEntityId)
 		{
 			builder.AddInt(2, positionEntityId, 0);
 		}
 
-		// Token: 0x060309D5 RID: 199125 RVA: 0x006995BF File Offset: 0x006977BF
+		// Token: 0x060338F5 RID: 211189 RVA: 0x006F2F53 File Offset: 0x006F1153
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060309D6 RID: 199126 RVA: 0x006995CA File Offset: 0x006977CA
+		// Token: 0x060338F6 RID: 211190 RVA: 0x006F2F5E File Offset: 0x006F115E
 		public static Offset<IOpenGravity> EndIOpenGravity(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenGravity>(builder.EndTable());
 		}
 
-		// Token: 0x060309D7 RID: 199127 RVA: 0x006995D8 File Offset: 0x006977D8
+		// Token: 0x060338F7 RID: 211191 RVA: 0x006F2F6C File Offset: 0x006F116C
 		public IOpenGravityT UnPack()
 		{
 			IOpenGravityT openGravityT = new IOpenGravityT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openGravityT;
 		}
 
-		// Token: 0x060309D8 RID: 199128 RVA: 0x006995F3 File Offset: 0x006977F3
+		// Token: 0x060338F8 RID: 211192 RVA: 0x006F2F87 File Offset: 0x006F1187
 		public void UnPackTo(IOpenGravityT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060309D9 RID: 199129 RVA: 0x00699628 File Offset: 0x00697828
+		// Token: 0x060338F9 RID: 211193 RVA: 0x006F2FBC File Offset: 0x006F11BC
 		public static Offset<IOpenGravity> Pack(FlatBufferBuilder builder, IOpenGravityT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGravity.CreateIOpenGravity(builder, _o.Type, _o.EntityId, _o.PositionEntityId, _o.NullMask);
 		}
 
-		// Token: 0x04011500 RID: 70912
+		// Token: 0x04012450 RID: 74832
 		private Table __p;
 	}
 }

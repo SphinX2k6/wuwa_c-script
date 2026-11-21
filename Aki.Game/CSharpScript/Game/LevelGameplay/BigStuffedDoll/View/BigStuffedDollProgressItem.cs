@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F55 RID: 28501
+	// Token: 0x020060D6 RID: 24790
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BigStuffedDollProgressItem : UiPanelBase
 	{
-		// Token: 0x06045568 RID: 284008 RVA: 0x01128338 File Offset: 0x01126538
+		// Token: 0x0603B716 RID: 243478 RVA: 0x010D2118 File Offset: 0x010D0318
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045569 RID: 284009 RVA: 0x011283E4 File Offset: 0x011265E4
+		// Token: 0x0603B717 RID: 243479 RVA: 0x010D21C4 File Offset: 0x010D03C4
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.CurrentPerformanceScore = 0f;
 		}
 
-		// Token: 0x0604556A RID: 284010 RVA: 0x01128448 File Offset: 0x01126648
+		// Token: 0x0603B718 RID: 243480 RVA: 0x010D2228 File Offset: 0x010D0428
 		public void Init(BrokenRockConfig config)
 		{
 			this.ScoreMax = (float)((config.ScoreMax != 0) ? config.ScoreMax : 100);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			item.SetAnchorOffsetX(this.ProgressBarWidth * -0.5f);
 		}
 
-		// Token: 0x0604556B RID: 284011 RVA: 0x011284C8 File Offset: 0x011266C8
+		// Token: 0x0603B719 RID: 243481 RVA: 0x010D22A8 File Offset: 0x010D04A8
 		public void Init(BrokenRockConfig config)
 		{
 			this.ScoreMax = (float)((config.ScoreMax != 0) ? config.ScoreMax : 100);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			item.SetAnchorOffsetX(this.ProgressBarWidth * -0.5f);
 		}
 
-		// Token: 0x0604556C RID: 284012 RVA: 0x01128544 File Offset: 0x01126744
+		// Token: 0x0603B71A RID: 243482 RVA: 0x010D2324 File Offset: 0x010D0524
 		public void OnTick(float delta)
 		{
 			if (BigStuffedDollModel.Instance.GetGameStage() != EGameStage.GamePlaying)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.ProcessProgressEvent();
 		}
 
-		// Token: 0x0604556D RID: 284013 RVA: 0x01128590 File Offset: 0x01126790
+		// Token: 0x0603B71B RID: 243483 RVA: 0x010D2370 File Offset: 0x010D0570
 		public void AddScore(float score, bool playAnim = true)
 		{
 			BigStuffedDollModel instance = BigStuffedDollModel.Instance;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			base.GetSprite(0).SetFillAmount(num);
 		}
 
-		// Token: 0x0604556E RID: 284014 RVA: 0x01128654 File Offset: 0x01126854
+		// Token: 0x0603B71C RID: 243484 RVA: 0x010D2434 File Offset: 0x010D0634
 		private void UpdateAddItem(float deltaSecond)
 		{
 			float currentProgress = this.GetCurrentProgress();
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			item2.SetAnchorOffsetX(this.ProgressBarWidth * (progress - 0.5f));
 		}
 
-		// Token: 0x0604556F RID: 284015 RVA: 0x011286F4 File Offset: 0x011268F4
+		// Token: 0x0603B71D RID: 243485 RVA: 0x010D24D4 File Offset: 0x010D06D4
 		private void ProcessProgressEvent()
 		{
 			BigStuffedDollModel instance = BigStuffedDollModel.Instance;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LastProgress = currentProgress;
 		}
 
-		// Token: 0x06045570 RID: 284016 RVA: 0x011287C4 File Offset: 0x011269C4
+		// Token: 0x0603B71E RID: 243486 RVA: 0x010D25A4 File Offset: 0x010D07A4
 		private float UpdateProgressText()
 		{
 			UUIText text = base.GetText(2);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return currentProgress;
 		}
 
-		// Token: 0x06045571 RID: 284017 RVA: 0x01128841 File Offset: 0x01126A41
+		// Token: 0x0603B71F RID: 243487 RVA: 0x010D2621 File Offset: 0x010D0821
 		public float GetCurrentProgress()
 		{
 			if (this.ScoreMax == 0f)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return this.GetProgress(BigStuffedDollModel.Instance.CurrentScore);
 		}
 
-		// Token: 0x06045572 RID: 284018 RVA: 0x01128866 File Offset: 0x01126A66
+		// Token: 0x0603B720 RID: 243488 RVA: 0x010D2646 File Offset: 0x010D0846
 		public int GetCurrentProgressPercent()
 		{
 			if (this.ScoreMax == 0f)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return Math.Min(100, (int)Math.Floor((double)(this.GetCurrentProgress() * 100f)));
 		}
 
-		// Token: 0x06045573 RID: 284019 RVA: 0x01128892 File Offset: 0x01126A92
+		// Token: 0x0603B721 RID: 243489 RVA: 0x010D2672 File Offset: 0x010D0872
 		private float GetProgress(float score)
 		{
 			if (this.ScoreMax == 0f)
@@ -210,72 +210,72 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return score / this.ScoreMax;
 		}
 
-		// Token: 0x0402429F RID: 148127
+		// Token: 0x0401F554 RID: 128340
 		private const string ADD_SCORE_ANIMNAME = "Add";
 
-		// Token: 0x040242A0 RID: 148128
+		// Token: 0x0401F555 RID: 128341
 		private const string SUB_SCORE_ANIMNAME = "Subtract";
 
-		// Token: 0x040242A1 RID: 148129
+		// Token: 0x0401F556 RID: 128342
 		private const string QTE_EVENTKEY1 = "BrokenRockEventKey1";
 
-		// Token: 0x040242A2 RID: 148130
+		// Token: 0x0401F557 RID: 128343
 		private const string QTE_EVENTKEY2 = "BrokenRockEventKey2";
 
-		// Token: 0x040242A3 RID: 148131
+		// Token: 0x0401F558 RID: 128344
 		private const string QTE_EVENTKEY3 = "BrokenRockEventKey3";
 
-		// Token: 0x040242A4 RID: 148132
+		// Token: 0x0401F559 RID: 128345
 		private const string QTE_EVENTKEY4 = "BrokenRockEventKey4";
 
-		// Token: 0x040242A5 RID: 148133
+		// Token: 0x0401F55A RID: 128346
 		private const string QTE_EVENTKEY5 = "BrokenRockEventKey5";
 
-		// Token: 0x040242A6 RID: 148134
+		// Token: 0x0401F55B RID: 128347
 		private const float QTE_EVENTKEY_PROGRESS2 = 0.2f;
 
-		// Token: 0x040242A7 RID: 148135
+		// Token: 0x0401F55C RID: 128348
 		private const float QTE_EVENTKEY_PROGRESS3 = 0.4f;
 
-		// Token: 0x040242A8 RID: 148136
+		// Token: 0x0401F55D RID: 128349
 		private const float QTE_EVENTKEY_PROGRESS4 = 0.6f;
 
-		// Token: 0x040242A9 RID: 148137
+		// Token: 0x0401F55E RID: 128350
 		private const float QTE_EVENTKEY_PROGRESS5 = 0.8f;
 
-		// Token: 0x040242AA RID: 148138
+		// Token: 0x0401F55F RID: 128351
 		private float ProgressBarWidth;
 
-		// Token: 0x040242AB RID: 148139
+		// Token: 0x0401F560 RID: 128352
 		private float CurrentPerformanceScore;
 
-		// Token: 0x040242AC RID: 148140
+		// Token: 0x0401F561 RID: 128353
 		public float ScoreMax;
 
-		// Token: 0x040242AD RID: 148141
+		// Token: 0x0401F562 RID: 128354
 		public float AutoIncreaseScore;
 
-		// Token: 0x040242AE RID: 148142
+		// Token: 0x0401F563 RID: 128355
 		private float LastProgress;
 
-		// Token: 0x040242AF RID: 148143
+		// Token: 0x0401F564 RID: 128356
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200CD8C RID: 52620
+		// Token: 0x0200B97E RID: 47486
 		[NullableContext(0)]
 		private class EViewComponent
 		{
-			// Token: 0x0403DEFA RID: 253690
+			// Token: 0x04039329 RID: 234281
 			public const int ProgressSprite = 0;
 
-			// Token: 0x0403DEFB RID: 253691
+			// Token: 0x0403932A RID: 234282
 			public const int AdditionItem = 1;
 
-			// Token: 0x0403DEFC RID: 253692
+			// Token: 0x0403932B RID: 234283
 			public const int ProgressText = 2;
 
-			// Token: 0x0403DEFD RID: 253693
+			// Token: 0x0403932C RID: 234284
 			public const int Effect = 3;
 		}
 	}

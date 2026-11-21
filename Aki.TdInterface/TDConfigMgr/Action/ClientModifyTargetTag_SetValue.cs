@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001500 RID: 5376
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200165B RID: 5723
 	public class ClientModifyTargetTag_SetValue
 	{
-		// Token: 0x040046CF RID: 18127
+		// Token: 0x04004A6E RID: 19054
 		public bool IsAddTag;
 
-		// Token: 0x040046D0 RID: 18128
+		// Token: 0x04004A6F RID: 19055
 		public IClientModifyTarget Target;
 
-		// Token: 0x040046D1 RID: 18129
+		// Token: 0x04004A70 RID: 19056
 		public List<string> PerformanceTag;
 	}
 }

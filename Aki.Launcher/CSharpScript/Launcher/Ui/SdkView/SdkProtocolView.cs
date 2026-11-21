@@ -8,19 +8,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.SdkView
 {
-	// Token: 0x020000C6 RID: 198
+	// Token: 0x020000C9 RID: 201
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SdkProtocolView : LaunchComponentsAction
 	{
-		// Token: 0x0600068D RID: 1677 RVA: 0x00037D74 File Offset: 0x00035F74
+		// Token: 0x060006A9 RID: 1705 RVA: 0x000398A4 File Offset: 0x00037AA4
 		[NullableContext(1)]
 		public void SetViewData(SdkProtocolViewData data)
 		{
 			this.ViewData = data;
 		}
 
-		// Token: 0x0600068E RID: 1678 RVA: 0x00037D80 File Offset: 0x00035F80
+		// Token: 0x060006AA RID: 1706 RVA: 0x000398B0 File Offset: 0x00037AB0
 		[NullableContext(1)]
 		public UniTask Init(UObject worldContext, [Nullable(2)] USceneComponent root)
 		{
@@ -34,14 +34,14 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600068F RID: 1679 RVA: 0x00037DD3 File Offset: 0x00035FD3
+		// Token: 0x060006AB RID: 1707 RVA: 0x00039903 File Offset: 0x00037B03
 		[NullableContext(1)]
 		private void OnViewLoadCallback(AActor actor)
 		{
 			base.SetRootActorLaunchComponentsAction(actor);
 		}
 
-		// Token: 0x06000690 RID: 1680 RVA: 0x00037DDC File Offset: 0x00035FDC
+		// Token: 0x060006AC RID: 1708 RVA: 0x0003990C File Offset: 0x00037B0C
 		protected override void OnStart()
 		{
 			this.DescText = base.GetText(3);
@@ -77,7 +77,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			this.RefreshView();
 		}
 
-		// Token: 0x06000691 RID: 1681 RVA: 0x00037F61 File Offset: 0x00036161
+		// Token: 0x060006AD RID: 1709 RVA: 0x00039A91 File Offset: 0x00037C91
 		public void RefreshView()
 		{
 			this.RefreshDesc();
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			this.RefreshLayout();
 		}
 
-		// Token: 0x06000692 RID: 1682 RVA: 0x00037F75 File Offset: 0x00036175
+		// Token: 0x060006AE RID: 1710 RVA: 0x00039AA5 File Offset: 0x00037CA5
 		private void OnClickEnterButton()
 		{
 			SdkProtocolViewData viewData = this.ViewData;
@@ -101,7 +101,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			enterCallback();
 		}
 
-		// Token: 0x06000693 RID: 1683 RVA: 0x00037F91 File Offset: 0x00036191
+		// Token: 0x060006AF RID: 1711 RVA: 0x00039AC1 File Offset: 0x00037CC1
 		private void OnClickCancelButton()
 		{
 			SdkProtocolViewData viewData = this.ViewData;
@@ -117,7 +117,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			cancelCallback();
 		}
 
-		// Token: 0x06000694 RID: 1684 RVA: 0x00037FB0 File Offset: 0x000361B0
+		// Token: 0x060006B0 RID: 1712 RVA: 0x00039AE0 File Offset: 0x00037CE0
 		private void RefreshLayout()
 		{
 			SdkProtocolViewData viewData = this.ViewData;
@@ -135,7 +135,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			}
 		}
 
-		// Token: 0x06000695 RID: 1685 RVA: 0x00038043 File Offset: 0x00036243
+		// Token: 0x060006B1 RID: 1713 RVA: 0x00039B73 File Offset: 0x00037D73
 		private void RefreshTitle()
 		{
 			if (this.ViewData != null && this.TitleText != null)
@@ -144,7 +144,7 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			}
 		}
 
-		// Token: 0x06000696 RID: 1686 RVA: 0x00038070 File Offset: 0x00036270
+		// Token: 0x060006B2 RID: 1714 RVA: 0x00039BA0 File Offset: 0x00037DA0
 		private void RefreshDesc()
 		{
 			if (this.ViewData != null && this.DescText != null)
@@ -153,88 +153,88 @@ namespace CSharpScript.Launcher.Ui.SdkView
 			}
 		}
 
-		// Token: 0x06000697 RID: 1687 RVA: 0x0003809D File Offset: 0x0003629D
+		// Token: 0x060006B3 RID: 1715 RVA: 0x00039BCD File Offset: 0x00037DCD
 		protected override void OnBeforeDestroy()
 		{
 			this.CurrentCopyProtocolArray.Clear();
 		}
 
-		// Token: 0x040003EF RID: 1007
+		// Token: 0x0400041E RID: 1054
 		private SdkProtocolViewData ViewData;
 
-		// Token: 0x040003F0 RID: 1008
+		// Token: 0x0400041F RID: 1055
 		private UUIText DescText;
 
-		// Token: 0x040003F1 RID: 1009
+		// Token: 0x04000420 RID: 1056
 		private UUIText TitleText;
 
-		// Token: 0x040003F2 RID: 1010
+		// Token: 0x04000421 RID: 1057
 		private UUIButtonComponent EnterButton;
 
-		// Token: 0x040003F3 RID: 1011
+		// Token: 0x04000422 RID: 1058
 		private UUIButtonComponent CancelButton;
 
-		// Token: 0x040003F4 RID: 1012
+		// Token: 0x04000423 RID: 1059
 		private UUIButtonComponent ButtonL1;
 
-		// Token: 0x040003F5 RID: 1013
+		// Token: 0x04000424 RID: 1060
 		private UUIButtonComponent ButtonR1;
 
-		// Token: 0x040003F6 RID: 1014
+		// Token: 0x04000425 RID: 1061
 		private UUIButtonComponent ButtonTriangle;
 
-		// Token: 0x040003F7 RID: 1015
+		// Token: 0x04000426 RID: 1062
 		private UUIButtonComponent ButtonL2;
 
-		// Token: 0x040003F8 RID: 1016
+		// Token: 0x04000427 RID: 1063
 		private UUIButtonComponent ButtonR2;
 
-		// Token: 0x040003F9 RID: 1017
+		// Token: 0x04000428 RID: 1064
 		[Nullable(1)]
 		private readonly List<UUIButtonComponent> LayoutButtonList = new List<UUIButtonComponent>();
 
-		// Token: 0x040003FA RID: 1018
+		// Token: 0x04000429 RID: 1065
 		[Nullable(1)]
 		private readonly List<ProtocolItem> CurrentCopyProtocolArray = new List<ProtocolItem>();
 
-		// Token: 0x0200035C RID: 860
+		// Token: 0x02000367 RID: 871
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04001148 RID: 4424
+			// Token: 0x040011AA RID: 4522
 			public const int EnterButton = 0;
 
-			// Token: 0x04001149 RID: 4425
+			// Token: 0x040011AB RID: 4523
 			public const int CancelButton = 1;
 
-			// Token: 0x0400114A RID: 4426
+			// Token: 0x040011AC RID: 4524
 			public const int ButtonL1 = 2;
 
-			// Token: 0x0400114B RID: 4427
+			// Token: 0x040011AD RID: 4525
 			public const int DescText = 3;
 
-			// Token: 0x0400114C RID: 4428
+			// Token: 0x040011AE RID: 4526
 			public const int VerticalLayout = 4;
 
-			// Token: 0x0400114D RID: 4429
+			// Token: 0x040011AF RID: 4527
 			public const int TitleText = 5;
 
-			// Token: 0x0400114E RID: 4430
+			// Token: 0x040011B0 RID: 4528
 			public const int ButtonR1 = 6;
 
-			// Token: 0x0400114F RID: 4431
+			// Token: 0x040011B1 RID: 4529
 			public const int ButtonTriangle = 7;
 
-			// Token: 0x04001150 RID: 4432
+			// Token: 0x040011B2 RID: 4530
 			public const int ButtonL2 = 8;
 
-			// Token: 0x04001151 RID: 4433
+			// Token: 0x040011B3 RID: 4531
 			public const int ButtonR2 = 9;
 
-			// Token: 0x04001152 RID: 4434
+			// Token: 0x040011B4 RID: 4532
 			public const int LeftButtonText = 10;
 
-			// Token: 0x04001153 RID: 4435
+			// Token: 0x040011B5 RID: 4533
 			public const int RightButtonText = 11;
 		}
 	}

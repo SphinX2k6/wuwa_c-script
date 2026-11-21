@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B2B RID: 23339
+	// Token: 0x02004B0C RID: 19212
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenCookRoleButton : UiPanelBase
 	{
-		// Token: 0x0603B18C RID: 242060 RVA: 0x00E17DD8 File Offset: 0x00E15FD8
+		// Token: 0x060300FE RID: 196862 RVA: 0x00D68AF0 File Offset: 0x00D66CF0
 		public OpenCookRoleButton(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B18D RID: 242061 RVA: 0x00E17DF0 File Offset: 0x00E15FF0
+		// Token: 0x060300FF RID: 196863 RVA: 0x00D68B08 File Offset: 0x00D66D08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,26 +44,26 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B18E RID: 242062 RVA: 0x00E17EB8 File Offset: 0x00E160B8
+		// Token: 0x06030100 RID: 196864 RVA: 0x00D68BD0 File Offset: 0x00D66DD0
 		public void RefreshIcon(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
 			base.SetRoleIcon(roleDataById.GetRoleConfig().RoleHeadIcon, base.GetTexture(1), roleId, null, null);
 		}
 
-		// Token: 0x0603B18F RID: 242063 RVA: 0x00E17EF8 File Offset: 0x00E160F8
+		// Token: 0x06030101 RID: 196865 RVA: 0x00D68C10 File Offset: 0x00D66E10
 		public void RefreshRedDot(int roleId, int itemId)
 		{
 			base.GetItem(2).SetUIActive(CookController.Instance.CheckIsBuffEx(roleId, itemId));
 		}
 
-		// Token: 0x0603B190 RID: 242064 RVA: 0x00E17F12 File Offset: 0x00E16112
+		// Token: 0x06030102 RID: 196866 RVA: 0x00D68C2A File Offset: 0x00D66E2A
 		public void BindOnCallback(Action onCallback)
 		{
 			this.OnCallback = onCallback;
 		}
 
-		// Token: 0x0603B191 RID: 242065 RVA: 0x00E17F1B File Offset: 0x00E1611B
+		// Token: 0x06030103 RID: 196867 RVA: 0x00D68C33 File Offset: 0x00D66E33
 		private void OpenCookRole()
 		{
 			if (this.OnCallback != null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0401ECFD RID: 126205
+		// Token: 0x040197B9 RID: 104377
 		[Nullable(2)]
 		private Action OnCallback;
 	}

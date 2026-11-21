@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 	[Nullable(0)]
 	public class HotFixDownSubPackageDownLoadMobileClearPopView : LaunchComponentsAction
 	{
-		// Token: 0x060001C4 RID: 452 RVA: 0x0000994C File Offset: 0x00007B4C
+		// Token: 0x060001C4 RID: 452 RVA: 0x00009984 File Offset: 0x00007B84
 		public UniTask OnInitTipsView()
 		{
 			HotFixDownSubPackageDownLoadMobileClearPopView.<OnInitTipsView>d__13 <OnInitTipsView>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return <OnInitTipsView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060001C5 RID: 453 RVA: 0x00009990 File Offset: 0x00007B90
+		// Token: 0x060001C5 RID: 453 RVA: 0x000099C8 File Offset: 0x00007BC8
 		protected override void OnStart()
 		{
 			base.AttachElement<HotFixBtnUiItem>(0).BindClickCallback(new Action(this.OnClickConfirmBtn));
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			HotFixManager.SetLocalText(base.GetText(7), "HotFixSubPackageClearTipsTitle_AutoClear", Array.Empty<string>());
 		}
 
-		// Token: 0x060001C6 RID: 454 RVA: 0x00009A84 File Offset: 0x00007C84
+		// Token: 0x060001C6 RID: 454 RVA: 0x00009ABC File Offset: 0x00007CBC
 		protected override void OnHide()
 		{
 			HotPatchInputManager.Instance.UnRegisterInputAction("手柄左摇杆上", new TInputAction(this.InputAction));
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			InputDevice.Instance.UnRegisterInputChangeDelegate(new Action<EInputControllerType, EInputControllerType>(this.OnInputChange));
 		}
 
-		// Token: 0x060001C7 RID: 455 RVA: 0x00009B30 File Offset: 0x00007D30
+		// Token: 0x060001C7 RID: 455 RVA: 0x00009B68 File Offset: 0x00007D68
 		protected override void OnShow()
 		{
 			this.RefreshView();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			InputDevice.Instance.RegisterInputChangeDelegate(new Action<EInputControllerType, EInputControllerType>(this.OnInputChange));
 		}
 
-		// Token: 0x060001C8 RID: 456 RVA: 0x00009BE8 File Offset: 0x00007DE8
+		// Token: 0x060001C8 RID: 456 RVA: 0x00009C20 File Offset: 0x00007E20
 		private void OnClickConfirmBtn()
 		{
 			LauncherLog.Instance.Info("HotFixDownSubPackageDownLoadMobileClearPopView ConfirmBtn", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			base.SetActive(false);
 		}
 
-		// Token: 0x060001C9 RID: 457 RVA: 0x00009CDC File Offset: 0x00007EDC
+		// Token: 0x060001C9 RID: 457 RVA: 0x00009D14 File Offset: 0x00007F14
 		private List<ISubPackageDownLoadMobileClearData> GetScrollViewDataList()
 		{
 			this.AllCanClearSpace = 0L;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return list;
 		}
 
-		// Token: 0x060001CA RID: 458 RVA: 0x00009DCC File Offset: 0x00007FCC
+		// Token: 0x060001CA RID: 458 RVA: 0x00009E04 File Offset: 0x00008004
 		private List<int> GetSceneData()
 		{
 			List<int> list = new List<int>();
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return list;
 		}
 
-		// Token: 0x060001CB RID: 459 RVA: 0x00009E68 File Offset: 0x00008068
+		// Token: 0x060001CB RID: 459 RVA: 0x00009EA0 File Offset: 0x000080A0
 		private bool GetPlotData()
 		{
 			long canCleanVideoSpace = HotFixManager.GetCanCleanVideoSpace();
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return canCleanVideoSpace > 0L;
 		}
 
-		// Token: 0x060001CC RID: 460 RVA: 0x00009EAC File Offset: 0x000080AC
+		// Token: 0x060001CC RID: 460 RVA: 0x00009EE4 File Offset: 0x000080E4
 		private List<string> GetVoiceData()
 		{
 			List<string> list = new List<string>();
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return list;
 		}
 
-		// Token: 0x060001CD RID: 461 RVA: 0x00009FB4 File Offset: 0x000081B4
+		// Token: 0x060001CD RID: 461 RVA: 0x00009FEC File Offset: 0x000081EC
 		private void RefreshView()
 		{
 			HotFixLayout<SubPackageDownLoadMobileClearItem, ISubPackageDownLoadMobileClearData> hotFixPackageLayout = this.HotFixPackageLayout;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			subPackageDownLoadMobileClearItem3.UnSelectItem();
 		}
 
-		// Token: 0x060001CE RID: 462 RVA: 0x0000A058 File Offset: 0x00008258
+		// Token: 0x060001CE RID: 462 RVA: 0x0000A090 File Offset: 0x00008290
 		[NullableContext(2)]
 		private void OnSelectSubItem(int? sceneId, bool isVideo, EToggleState state, string voiceCode = null)
 		{
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			this.RefreshButton();
 		}
 
-		// Token: 0x060001CF RID: 463 RVA: 0x0000A0EC File Offset: 0x000082EC
+		// Token: 0x060001CF RID: 463 RVA: 0x0000A124 File Offset: 0x00008324
 		private void RefreshButton()
 		{
 			base.GetButton(0).SetSelfInteractive(this.CurrentSelectInfoIdSet.Count > 0 || this.HaveSelectVideo || this.SelectVoiceCodeSet.Count > 0);
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			});
 		}
 
-		// Token: 0x060001D0 RID: 464 RVA: 0x0000A208 File Offset: 0x00008408
+		// Token: 0x060001D0 RID: 464 RVA: 0x0000A240 File Offset: 0x00008440
 		private void OnClickHelpBtn(int type, UUIItem item)
 		{
 			HotFixSubPackageDownLoadVersionTipsView versionTipsView = this.VersionTipsView;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			versionTipsView3.SetActive(true);
 		}
 
-		// Token: 0x060001D1 RID: 465 RVA: 0x0000A27C File Offset: 0x0000847C
+		// Token: 0x060001D1 RID: 465 RVA: 0x0000A2B4 File Offset: 0x000084B4
 		private void InputAction(bool bPress, string actionName)
 		{
 			if (!bPress)
@@ -384,19 +384,19 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			}
 		}
 
-		// Token: 0x060001D2 RID: 466 RVA: 0x0000A2CD File Offset: 0x000084CD
+		// Token: 0x060001D2 RID: 466 RVA: 0x0000A305 File Offset: 0x00008505
 		private void FocusPrev()
 		{
 			this.SelectCanSelectIndex(Math.Max(0, this.SelectIndex - 1));
 		}
 
-		// Token: 0x060001D3 RID: 467 RVA: 0x0000A2E3 File Offset: 0x000084E3
+		// Token: 0x060001D3 RID: 467 RVA: 0x0000A31B File Offset: 0x0000851B
 		private void FocusNext()
 		{
 			this.SelectCanSelectIndex(Math.Min(this.AllCanSelectItemCount - 1, this.SelectIndex + 1));
 		}
 
-		// Token: 0x060001D4 RID: 468 RVA: 0x0000A300 File Offset: 0x00008500
+		// Token: 0x060001D4 RID: 468 RVA: 0x0000A338 File Offset: 0x00008538
 		private int GetLayoutIndex(int selectIndex)
 		{
 			if (selectIndex <= this.PlotAndSceneSplitIndex)
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return 2;
 		}
 
-		// Token: 0x060001D5 RID: 469 RVA: 0x0000A319 File Offset: 0x00008519
+		// Token: 0x060001D5 RID: 469 RVA: 0x0000A351 File Offset: 0x00008551
 		private int GetSubIndex(int selectIndex)
 		{
 			if (selectIndex <= this.PlotAndSceneSplitIndex)
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			return selectIndex - (this.SceneAndVoiceSplitIndex + 1);
 		}
 
-		// Token: 0x060001D6 RID: 470 RVA: 0x0000A344 File Offset: 0x00008544
+		// Token: 0x060001D6 RID: 470 RVA: 0x0000A37C File Offset: 0x0000857C
 		private unsafe void SelectCanSelectIndex(int index)
 		{
 			if (this.SelectIndex == index)
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			uiScrollbarComponent.SetValue(inValue, true);
 		}
 
-		// Token: 0x060001D7 RID: 471 RVA: 0x0000A468 File Offset: 0x00008668
+		// Token: 0x060001D7 RID: 471 RVA: 0x0000A4A0 File Offset: 0x000086A0
 		private void OnGamePadClick(bool bPress, string actionName)
 		{
 			if (bPress)
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			}
 		}
 
-		// Token: 0x060001D8 RID: 472 RVA: 0x0000A4E8 File Offset: 0x000086E8
+		// Token: 0x060001D8 RID: 472 RVA: 0x0000A520 File Offset: 0x00008720
 		private void OnInputChange(EInputControllerType oldControllerType, EInputControllerType newControllerType)
 		{
 			if (InputDevice.Instance.IsInGamepad())
@@ -539,7 +539,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 			subPackageDownLoadMobileClearItem6.UnSelectItem();
 		}
 
-		// Token: 0x040000D1 RID: 209
+		// Token: 0x040000D2 RID: 210
 		[Nullable(new byte[]
 		{
 			2,
@@ -548,27 +548,27 @@ namespace CSharpScript.Game.Module.Launcher.Action
 		})]
 		private HotFixLayout<SubPackageDownLoadMobileClearItem, ISubPackageDownLoadMobileClearData> HotFixPackageLayout;
 
-		// Token: 0x040000D2 RID: 210
+		// Token: 0x040000D3 RID: 211
 		private readonly HashSet<int> CurrentSelectInfoIdSet = new HashSet<int>();
 
-		// Token: 0x040000D3 RID: 211
+		// Token: 0x040000D4 RID: 212
 		private bool HaveSelectVideo;
 
-		// Token: 0x040000D4 RID: 212
+		// Token: 0x040000D5 RID: 213
 		private readonly HashSet<string> SelectVoiceCodeSet = new HashSet<string>();
 
-		// Token: 0x040000D5 RID: 213
+		// Token: 0x040000D6 RID: 214
 		[Nullable(2)]
 		private HotFixSubPackageDownLoadVersionTipsView VersionTipsView;
 
-		// Token: 0x040000D6 RID: 214
+		// Token: 0x040000D7 RID: 215
 		private long AllCanClearSpace;
 
-		// Token: 0x040000D7 RID: 215
+		// Token: 0x040000D8 RID: 216
 		[Nullable(2)]
 		public Action OnCloseCallBack;
 
-		// Token: 0x040000D8 RID: 216
+		// Token: 0x040000D9 RID: 217
 		[Nullable(new byte[]
 		{
 			2,
@@ -576,50 +576,50 @@ namespace CSharpScript.Game.Module.Launcher.Action
 		})]
 		public Action<Action> ShowConfirmBox;
 
-		// Token: 0x040000D9 RID: 217
+		// Token: 0x040000DA RID: 218
 		private int SelectIndex;
 
-		// Token: 0x040000DA RID: 218
+		// Token: 0x040000DB RID: 219
 		private int AllCanSelectItemCount;
 
-		// Token: 0x040000DB RID: 219
+		// Token: 0x040000DC RID: 220
 		private int PlotAndSceneSplitIndex;
 
-		// Token: 0x040000DC RID: 220
+		// Token: 0x040000DD RID: 221
 		private int SceneAndVoiceSplitIndex;
 
-		// Token: 0x020002AA RID: 682
+		// Token: 0x020002B3 RID: 691
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04000A76 RID: 2678
+			// Token: 0x04000AC6 RID: 2758
 			public const int ConfirmBtn = 0;
 
-			// Token: 0x04000A77 RID: 2679
+			// Token: 0x04000AC7 RID: 2759
 			public const int AutoClearToggle = 1;
 
-			// Token: 0x04000A78 RID: 2680
+			// Token: 0x04000AC8 RID: 2760
 			public const int ScrollLayout = 2;
 
-			// Token: 0x04000A79 RID: 2681
+			// Token: 0x04000AC9 RID: 2761
 			public const int ScrollItem = 3;
 
-			// Token: 0x04000A7A RID: 2682
+			// Token: 0x04000ACA RID: 2762
 			public const int ConfirmBoxText = 5;
 
-			// Token: 0x04000A7B RID: 2683
+			// Token: 0x04000ACB RID: 2763
 			public const int TitleText = 6;
 
-			// Token: 0x04000A7C RID: 2684
+			// Token: 0x04000ACC RID: 2764
 			public const int AutoClearText = 7;
 
-			// Token: 0x04000A7D RID: 2685
+			// Token: 0x04000ACD RID: 2765
 			public const int CloseBtn = 9;
 
-			// Token: 0x04000A7E RID: 2686
+			// Token: 0x04000ACE RID: 2766
 			public const int ScrollBar = 10;
 
-			// Token: 0x04000A7F RID: 2687
+			// Token: 0x04000ACF RID: 2767
 			public const int ClearSubPackageTipsPop = 100;
 		}
 	}

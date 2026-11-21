@@ -8,25 +8,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070CC RID: 28876
+	// Token: 0x02006330 RID: 25392
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class CharacterMeshDitherDetectComponent : EntityComponent, IComponentDependency
+	public class CharacterMeshDitherDetectComponent : EntityComponent
 	{
-		// Token: 0x17009CAB RID: 40107
-		// (get) Token: 0x06046758 RID: 288600 RVA: 0x011B0816 File Offset: 0x011AEA16
-		[Nullable(new byte[]
+		// Token: 0x170074BC RID: 29884
+		// (get) Token: 0x0603D84C RID: 251980 RVA: 0x011CFB92 File Offset: 0x011CDD92
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -37,7 +27,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046759 RID: 288601 RVA: 0x011B0838 File Offset: 0x011AEA38
+		// Token: 0x0603D84D RID: 251981 RVA: 0x011CFBB4 File Offset: 0x011CDDB4
 		private static int CompareMeshDitherDetectConfigPriority(MeshDitherDetectConfig a, MeshDitherDetectConfig b)
 		{
 			if (a.Priority == b.Priority)
@@ -47,8 +37,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return b.Priority - a.Priority;
 		}
 
-		// Token: 0x17009CAC RID: 40108
-		// (get) Token: 0x0604675A RID: 288602 RVA: 0x011B0858 File Offset: 0x011AEA58
+		// Token: 0x170074BD RID: 29885
+		// (get) Token: 0x0603D84E RID: 251982 RVA: 0x011CFBD4 File Offset: 0x011CDDD4
 		public float TraceCapsuleWidth
 		{
 			get
@@ -72,8 +62,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x17009CAD RID: 40109
-		// (get) Token: 0x0604675B RID: 288603 RVA: 0x011B08C8 File Offset: 0x011AEAC8
+		// Token: 0x170074BE RID: 29886
+		// (get) Token: 0x0603D84F RID: 251983 RVA: 0x011CFC44 File Offset: 0x011CDE44
 		public float TraceCapsuleHeight
 		{
 			get
@@ -97,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x0604675C RID: 288604 RVA: 0x011B0938 File Offset: 0x011AEB38
+		// Token: 0x0603D850 RID: 251984 RVA: 0x011CFCB4 File Offset: 0x011CDEB4
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -108,7 +98,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604675D RID: 288605 RVA: 0x011B0998 File Offset: 0x011AEB98
+		// Token: 0x0603D851 RID: 251985 RVA: 0x011CFD14 File Offset: 0x011CDF14
 		public int EnableDetectDither(SMeshDitherDetectConfig config)
 		{
 			int num = this.MeshDitherDetectConfigId + 1;
@@ -120,7 +110,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return meshDitherDetectConfig.Id;
 		}
 
-		// Token: 0x0604675E RID: 288606 RVA: 0x011B09E8 File Offset: 0x011AEBE8
+		// Token: 0x0603D852 RID: 251986 RVA: 0x011CFD64 File Offset: 0x011CDF64
 		public void DisableDetectDither(int id)
 		{
 			MeshDitherDetectConfig meshDitherDetectConfig;
@@ -132,7 +122,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.UpdateValidMeshDitherDetectConfig();
 		}
 
-		// Token: 0x0604675F RID: 288607 RVA: 0x011B0A14 File Offset: 0x011AEC14
+		// Token: 0x0603D853 RID: 251987 RVA: 0x011CFD90 File Offset: 0x011CDF90
 		protected override void OnTick(float delta)
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -157,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.UpdateDitherCharacterValue();
 		}
 
-		// Token: 0x06046760 RID: 288608 RVA: 0x011B0A8C File Offset: 0x011AEC8C
+		// Token: 0x0603D854 RID: 251988 RVA: 0x011CFE08 File Offset: 0x011CE008
 		private void InitTraceElement()
 		{
 			if (this.TraceElement != null)
@@ -174,7 +164,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TraceElement.AddObjectTypeQuery(KuroObjectTypeQuery.Vehicle);
 		}
 
-		// Token: 0x06046761 RID: 288609 RVA: 0x011B0B28 File Offset: 0x011AED28
+		// Token: 0x0603D855 RID: 251989 RVA: 0x011CFEA4 File Offset: 0x011CE0A4
 		private void UpdateTraceElement()
 		{
 			if (!this.MoveComp.IsStandardGravity)
@@ -226,7 +216,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.TraceElement.HalfHeight = this.TraceCapsuleHeight;
 		}
 
-		// Token: 0x06046762 RID: 288610 RVA: 0x011B0E80 File Offset: 0x011AF080
+		// Token: 0x0603D856 RID: 251990 RVA: 0x011D01FC File Offset: 0x011CE3FC
 		private void UpdateDitherDistance(UKuroHitResult hitResult)
 		{
 			int hitCount = hitResult.GetHitCount();
@@ -249,7 +239,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			}
 		}
 
-		// Token: 0x06046763 RID: 288611 RVA: 0x011B0F3C File Offset: 0x011AF13C
+		// Token: 0x0603D857 RID: 251991 RVA: 0x011D02B8 File Offset: 0x011CE4B8
 		private void UpdateValidMeshDitherDetectConfig()
 		{
 			MeshDitherDetectConfig meshDitherDetectConfig = this.GetMeshDitherDetectConfig();
@@ -273,7 +263,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			CameraController.Instance.MainModel.FightCamera.LogicComponent.SetIsDitherEffectEnable(true);
 		}
 
-		// Token: 0x06046764 RID: 288612 RVA: 0x011B0FE8 File Offset: 0x011AF1E8
+		// Token: 0x0603D858 RID: 251992 RVA: 0x011D0364 File Offset: 0x011CE564
 		[NullableContext(2)]
 		private MeshDitherDetectConfig GetMeshDitherDetectConfig()
 		{
@@ -294,14 +284,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return null;
 		}
 
-		// Token: 0x06046765 RID: 288613 RVA: 0x011B1040 File Offset: 0x011AF240
+		// Token: 0x0603D859 RID: 251993 RVA: 0x011D03BC File Offset: 0x011CE5BC
 		private void UpdateDitherCharacterValue()
 		{
 			float dither = this.MeshDitherDetectConfig.OverrideDitherConfig ? MathUtils.Instance.RangeClamp(this.CharacterDitherDistance, this.MeshDitherDetectConfig.CompleteHideDistance, this.MeshDitherDetectConfig.StartHideDistance, 0.01f, this.MeshDitherDetectConfig.StartDitherValue) : MathUtils.Instance.RangeClamp(this.CharacterDitherDistance, this.ActorComp.CompleteHideDistance, this.ActorComp.StartHideDistance, 0.01f, this.ActorComp.StartDitherValue);
 			this.ActorComp.Actor.SetDitherEffect(dither, ECharacterDitherType.Fight);
 		}
 
-		// Token: 0x06046766 RID: 288614 RVA: 0x011B10DB File Offset: 0x011AF2DB
+		// Token: 0x0603D85A RID: 251994 RVA: 0x011D0457 File Offset: 0x011CE657
 		private void RecoverDither()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -312,7 +302,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			actorComp.Actor.SetDitherEffect(1f, ECharacterDitherType.Fight);
 		}
 
-		// Token: 0x06046767 RID: 288615 RVA: 0x011B10F8 File Offset: 0x011AF2F8
+		// Token: 0x0603D85B RID: 251995 RVA: 0x011D0474 File Offset: 0x011CE674
 		private void ClearMeshDitherDetectConfig()
 		{
 			this.MeshDitherDetectConfig = null;
@@ -320,7 +310,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.MeshDitherDetectConfigMap.Clear();
 		}
 
-		// Token: 0x06046768 RID: 288616 RVA: 0x011B1117 File Offset: 0x011AF317
+		// Token: 0x0603D85C RID: 251996 RVA: 0x011D0493 File Offset: 0x011CE693
 		protected override bool OnEnd()
 		{
 			base.OnEnd();
@@ -330,7 +320,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046769 RID: 288617 RVA: 0x011B1138 File Offset: 0x011AF338
+		// Token: 0x0603D85D RID: 251997 RVA: 0x011D04B4 File Offset: 0x011CE6B4
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -338,89 +328,92 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			CharacterMeshDitherDetectComponent characterMeshDitherDetectComponent = (CharacterMeshDitherDetectComponent)componentTemplate;
-			if (base.CanResetComponentProperty("MeshDitherDetectConfig"))
+			if (characterMeshDitherDetectComponent.MeshDitherDetectConfig == null)
 			{
-				if (characterMeshDitherDetectComponent.MeshDitherDetectConfig == null)
-				{
-					this.MeshDitherDetectConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MeshDitherDetectConfig>(this.MeshDitherDetectConfig), "MeshDitherDetectConfig"))
-				{
-					return false;
-				}
+				this.MeshDitherDetectConfig = null;
 			}
-			if (base.CanResetComponentProperty("MeshDitherDetectConfigId"))
-			{
-				this.MeshDitherDetectConfigId = characterMeshDitherDetectComponent.MeshDitherDetectConfigId;
-			}
-			if (base.CanResetComponentProperty("MeshDitherDetectConfigMap") && characterMeshDitherDetectComponent.MeshDitherDetectConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, MeshDitherDetectConfig>>(this.MeshDitherDetectConfigMap), "MeshDitherDetectConfigMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshDitherDetectConfig), "MeshDitherDetectConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MeshDitherDetectConfigList") && characterMeshDitherDetectComponent.MeshDitherDetectConfigList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<PriorityQueue<MeshDitherDetectConfig>>(this.MeshDitherDetectConfigList), "MeshDitherDetectConfigList"))
+			this.MeshDitherDetectConfigId = characterMeshDitherDetectComponent.MeshDitherDetectConfigId;
+			if (characterMeshDitherDetectComponent.MeshDitherDetectConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshDitherDetectConfigMap), "MeshDitherDetectConfigMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EntityHandle"))
+			if (characterMeshDitherDetectComponent.MeshDitherDetectConfigList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshDitherDetectConfigList), "MeshDitherDetectConfigList"))
 			{
-				if (characterMeshDitherDetectComponent.EntityHandle == null)
-				{
-					this.EntityHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.EntityHandle), "EntityHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterMeshDitherDetectComponent.EntityHandle == null)
 			{
-				if (characterMeshDitherDetectComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.EntityHandle = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityHandle), "EntityHandle"))
 			{
-				if (characterMeshDitherDetectComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TraceElement"))
+			if (characterMeshDitherDetectComponent.ActorComp == null)
 			{
-				if (characterMeshDitherDetectComponent.TraceElement == null)
-				{
-					this.TraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceCapsuleElement>(this.TraceElement), "TraceElement"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ComponentDisableHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.ComponentDisableHandle = characterMeshDitherDetectComponent.ComponentDisableHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("EnableDither"))
+			if (characterMeshDitherDetectComponent.MoveComp == null)
 			{
-				this.EnableDither = characterMeshDitherDetectComponent.EnableDither;
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("CharacterDitherDistance"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				this.CharacterDitherDistance = characterMeshDitherDetectComponent.CharacterDitherDistance;
+				return false;
 			}
-			return (!base.CanResetComponentProperty("GravityQuat") || characterMeshDitherDetectComponent.GravityQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityQuat), "GravityQuat")) && (!base.CanResetComponentProperty("GravityQuatInverse") || characterMeshDitherDetectComponent.GravityQuatInverse == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityQuatInverse), "GravityQuatInverse")) && (!base.CanResetComponentProperty("GravityQuat1") || characterMeshDitherDetectComponent.GravityQuat1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityQuat1), "GravityQuat1")) && (!base.CanResetComponentProperty("GravityQuatInverse1") || characterMeshDitherDetectComponent.GravityQuatInverse1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.GravityQuatInverse1), "GravityQuatInverse1")) && (!base.CanResetComponentProperty("TraceStartLocation") || characterMeshDitherDetectComponent.TraceStartLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TraceStartLocation), "TraceStartLocation")) && (!base.CanResetComponentProperty("TraceEndLocation") || characterMeshDitherDetectComponent.TraceEndLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TraceEndLocation), "TraceEndLocation")) && (!base.CanResetComponentProperty("TmpVector") || characterMeshDitherDetectComponent.TmpVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector), "TmpVector")) && (!base.CanResetComponentProperty("TmpVector1") || characterMeshDitherDetectComponent.TmpVector1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector1), "TmpVector1")) && (!base.CanResetComponentProperty("TmpVector2") || characterMeshDitherDetectComponent.TmpVector2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector2), "TmpVector2")) && (!base.CanResetComponentProperty("TmpRotator") || characterMeshDitherDetectComponent.TmpRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator), "TmpRotator")) && (!base.CanResetComponentProperty("TmpRotator1") || characterMeshDitherDetectComponent.TmpRotator1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator1), "TmpRotator1")) && (!base.CanResetComponentProperty("TmpRotator2") || characterMeshDitherDetectComponent.TmpRotator2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator2), "TmpRotator2")) && (!base.CanResetComponentProperty("TmpQuat2") || characterMeshDitherDetectComponent.TmpQuat2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"));
+			if (characterMeshDitherDetectComponent.TraceElement == null)
+			{
+				this.TraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
+			{
+				return false;
+			}
+			this.ComponentDisableHandle = characterMeshDitherDetectComponent.ComponentDisableHandle;
+			this.EnableDither = characterMeshDitherDetectComponent.EnableDither;
+			this.CharacterDitherDistance = characterMeshDitherDetectComponent.CharacterDitherDistance;
+			return (characterMeshDitherDetectComponent.GravityQuat == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityQuat), "GravityQuat")) && (characterMeshDitherDetectComponent.GravityQuatInverse == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityQuatInverse), "GravityQuatInverse")) && (characterMeshDitherDetectComponent.GravityQuat1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityQuat1), "GravityQuat1")) && (characterMeshDitherDetectComponent.GravityQuatInverse1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityQuatInverse1), "GravityQuatInverse1")) && (characterMeshDitherDetectComponent.TraceStartLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceStartLocation), "TraceStartLocation")) && (characterMeshDitherDetectComponent.TraceEndLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceEndLocation), "TraceEndLocation")) && (characterMeshDitherDetectComponent.TmpVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector")) && (characterMeshDitherDetectComponent.TmpVector1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1")) && (characterMeshDitherDetectComponent.TmpVector2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2")) && (characterMeshDitherDetectComponent.TmpRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator")) && (characterMeshDitherDetectComponent.TmpRotator1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator1), "TmpRotator1")) && (characterMeshDitherDetectComponent.TmpRotator2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator2), "TmpRotator2")) && (characterMeshDitherDetectComponent.TmpQuat2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"));
 		}
 
-		// Token: 0x0604676A RID: 288618 RVA: 0x011B1598 File Offset: 0x011AF798
+		// Token: 0x170074BF RID: 29887
+		// (get) Token: 0x0603D85E RID: 251998 RVA: 0x011D07D9 File Offset: 0x011CE9D9
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C0 RID: 29888
+		// (get) Token: 0x0603D85F RID: 251999 RVA: 0x011D07DC File Offset: 0x011CE9DC
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170074C1 RID: 29889
+		// (get) Token: 0x0603D860 RID: 252000 RVA: 0x011D07DF File Offset: 0x011CE9DF
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603D861 RID: 252001 RVA: 0x011D07E4 File Offset: 0x011CE9E4
 		public CharacterMeshDitherDetectComponent()
 		{
 			Comparison<MeshDitherDetectConfig> compare;
@@ -447,100 +440,100 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			base..ctor();
 		}
 
-		// Token: 0x04024ECD RID: 151245
+		// Token: 0x04020A0C RID: 133644
 		private const float MIN_DITHER = 0.01f;
 
-		// Token: 0x04024ECE RID: 151246
+		// Token: 0x04020A0D RID: 133645
 		private const float MAX_VALUE = 9999999f;
 
-		// Token: 0x04024ECF RID: 151247
+		// Token: 0x04020A0E RID: 133646
 		private const int COMPONENT_DISABLE_KEY = -1;
 
-		// Token: 0x04024ED0 RID: 151248
+		// Token: 0x04020A0F RID: 133647
 		private const string PROFILE_KEY = "MeshDitherDetectTrace";
 
-		// Token: 0x04024ED1 RID: 151249
+		// Token: 0x04020A10 RID: 133648
 		[Nullable(2)]
 		public MeshDitherDetectConfig MeshDitherDetectConfig;
 
-		// Token: 0x04024ED2 RID: 151250
+		// Token: 0x04020A11 RID: 133649
 		private int MeshDitherDetectConfigId;
 
-		// Token: 0x04024ED3 RID: 151251
+		// Token: 0x04020A12 RID: 133650
 		private readonly Dictionary<int, MeshDitherDetectConfig> MeshDitherDetectConfigMap = new Dictionary<int, MeshDitherDetectConfig>();
 
-		// Token: 0x04024ED4 RID: 151252
+		// Token: 0x04020A13 RID: 133651
 		private readonly PriorityQueue<MeshDitherDetectConfig> MeshDitherDetectConfigList;
 
-		// Token: 0x04024ED5 RID: 151253
+		// Token: 0x04020A14 RID: 133652
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x04024ED6 RID: 151254
+		// Token: 0x04020A15 RID: 133653
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024ED7 RID: 151255
+		// Token: 0x04020A16 RID: 133654
 		[Nullable(2)]
 		private CharacterMoveComponent MoveComp;
 
-		// Token: 0x04024ED8 RID: 151256
+		// Token: 0x04020A17 RID: 133655
 		[Nullable(2)]
 		private UTraceCapsuleElement TraceElement;
 
-		// Token: 0x04024ED9 RID: 151257
+		// Token: 0x04020A18 RID: 133656
 		private int ComponentDisableHandle;
 
-		// Token: 0x04024EDA RID: 151258
+		// Token: 0x04020A19 RID: 133657
 		private bool EnableDither;
 
-		// Token: 0x04024EDB RID: 151259
+		// Token: 0x04020A1A RID: 133658
 		private float CharacterDitherDistance;
 
-		// Token: 0x04024EDC RID: 151260
+		// Token: 0x04020A1B RID: 133659
 		private readonly Quat GravityQuat;
 
-		// Token: 0x04024EDD RID: 151261
+		// Token: 0x04020A1C RID: 133660
 		private readonly Quat GravityQuatInverse;
 
-		// Token: 0x04024EDE RID: 151262
+		// Token: 0x04020A1D RID: 133661
 		private readonly Quat GravityQuat1;
 
-		// Token: 0x04024EDF RID: 151263
+		// Token: 0x04020A1E RID: 133662
 		private readonly Quat GravityQuatInverse1;
 
-		// Token: 0x04024EE0 RID: 151264
+		// Token: 0x04020A1F RID: 133663
 		private readonly Vector TraceStartLocation;
 
-		// Token: 0x04024EE1 RID: 151265
+		// Token: 0x04020A20 RID: 133664
 		private readonly Vector TraceEndLocation;
 
-		// Token: 0x04024EE2 RID: 151266
+		// Token: 0x04020A21 RID: 133665
 		private readonly Vector TmpVector;
 
-		// Token: 0x04024EE3 RID: 151267
+		// Token: 0x04020A22 RID: 133666
 		private readonly Vector TmpVector1;
 
-		// Token: 0x04024EE4 RID: 151268
+		// Token: 0x04020A23 RID: 133667
 		private readonly Vector TmpVector2;
 
-		// Token: 0x04024EE5 RID: 151269
+		// Token: 0x04020A24 RID: 133668
 		private readonly Rotator TmpRotator;
 
-		// Token: 0x04024EE6 RID: 151270
+		// Token: 0x04020A25 RID: 133669
 		private readonly Rotator TmpRotator1;
 
-		// Token: 0x04024EE7 RID: 151271
+		// Token: 0x04020A26 RID: 133670
 		private readonly Rotator TmpRotator2;
 
-		// Token: 0x04024EE8 RID: 151272
+		// Token: 0x04020A27 RID: 133671
 		private readonly Quat TmpQuat2;
 
-		// Token: 0x0200CE6C RID: 52844
+		// Token: 0x0200BB41 RID: 47937
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E246 RID: 254534
+			// Token: 0x0403997A RID: 235898
 			[Nullable(new byte[]
 			{
 				0,

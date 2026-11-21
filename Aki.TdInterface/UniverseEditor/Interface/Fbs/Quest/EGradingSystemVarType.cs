@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CA0 RID: 15520
+	// Token: 0x020040B4 RID: 16564
 	public enum EGradingSystemVarType : byte
 	{
-		// Token: 0x0400B3D4 RID: 46036
+		// Token: 0x0400BD76 RID: 48502
 		Score,
-		// Token: 0x0400B3D5 RID: 46037
+		// Token: 0x0400BD77 RID: 48503
 		Grade,
-		// Token: 0x0400B3D6 RID: 46038
+		// Token: 0x0400BD78 RID: 48504
 		Wave,
-		// Token: 0x0400B3D7 RID: 46039
+		// Token: 0x0400BD79 RID: 48505
 		CustomVar
 	}
 }

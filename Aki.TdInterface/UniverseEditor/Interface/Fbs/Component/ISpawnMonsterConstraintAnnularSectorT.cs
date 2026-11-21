@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005954 RID: 22868
+	// Token: 0x02005F61 RID: 24417
 	public class ISpawnMonsterConstraintAnnularSectorT
 	{
-		// Token: 0x1700ABAC RID: 43948
-		// (get) Token: 0x06026B5B RID: 158555 RVA: 0x00554B2C File Offset: 0x00552D2C
-		// (set) Token: 0x06026B5C RID: 158556 RVA: 0x00554B34 File Offset: 0x00552D34
+		// Token: 0x1700B4E0 RID: 46304
+		// (get) Token: 0x060290C5 RID: 168133 RVA: 0x0059B798 File Offset: 0x00599998
+		// (set) Token: 0x060290C6 RID: 168134 RVA: 0x0059B7A0 File Offset: 0x005999A0
 		public ESpawnMonsterConstraint Type { get; set; }
 
-		// Token: 0x1700ABAD RID: 43949
-		// (get) Token: 0x06026B5D RID: 158557 RVA: 0x00554B3D File Offset: 0x00552D3D
-		// (set) Token: 0x06026B5E RID: 158558 RVA: 0x00554B45 File Offset: 0x00552D45
+		// Token: 0x1700B4E1 RID: 46305
+		// (get) Token: 0x060290C7 RID: 168135 RVA: 0x0059B7A9 File Offset: 0x005999A9
+		// (set) Token: 0x060290C8 RID: 168136 RVA: 0x0059B7B1 File Offset: 0x005999B1
 		public float InnerRadius { get; set; }
 
-		// Token: 0x1700ABAE RID: 43950
-		// (get) Token: 0x06026B5F RID: 158559 RVA: 0x00554B4E File Offset: 0x00552D4E
-		// (set) Token: 0x06026B60 RID: 158560 RVA: 0x00554B56 File Offset: 0x00552D56
+		// Token: 0x1700B4E2 RID: 46306
+		// (get) Token: 0x060290C9 RID: 168137 RVA: 0x0059B7BA File Offset: 0x005999BA
+		// (set) Token: 0x060290CA RID: 168138 RVA: 0x0059B7C2 File Offset: 0x005999C2
 		public float OuterRadius { get; set; }
 
-		// Token: 0x1700ABAF RID: 43951
-		// (get) Token: 0x06026B61 RID: 158561 RVA: 0x00554B5F File Offset: 0x00552D5F
-		// (set) Token: 0x06026B62 RID: 158562 RVA: 0x00554B67 File Offset: 0x00552D67
+		// Token: 0x1700B4E3 RID: 46307
+		// (get) Token: 0x060290CB RID: 168139 RVA: 0x0059B7CB File Offset: 0x005999CB
+		// (set) Token: 0x060290CC RID: 168140 RVA: 0x0059B7D3 File Offset: 0x005999D3
 		public float Angle { get; set; }
 
-		// Token: 0x06026B63 RID: 158563 RVA: 0x00554B70 File Offset: 0x00552D70
+		// Token: 0x060290CD RID: 168141 RVA: 0x0059B7DC File Offset: 0x005999DC
 		public ISpawnMonsterConstraintAnnularSectorT()
 		{
 			this.Type = ESpawnMonsterConstraint.CharacterForwardAnnularSector;

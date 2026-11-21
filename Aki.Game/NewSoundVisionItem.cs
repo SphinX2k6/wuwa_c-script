@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,10 +9,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016B0 RID: 5808
+// Token: 0x02000B68 RID: 2920
 public class NewSoundVisionItem : UiPanelBase, INewSoundItem
 {
-	// Token: 0x0600A5AC RID: 42412 RVA: 0x00250964 File Offset: 0x0024EB64
+	// Token: 0x0600798C RID: 31116 RVA: 0x0025AD78 File Offset: 0x00258F78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -35,13 +34,13 @@ public class NewSoundVisionItem : UiPanelBase, INewSoundItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A5AD RID: 42413 RVA: 0x00250A51 File Offset: 0x0024EC51
+	// Token: 0x0600798D RID: 31117 RVA: 0x0025AE65 File Offset: 0x00259065
 	protected override void OnStart()
 	{
 		this.PhantomLayout = new GenericLayout<NewSoundNormaPhantomItem, int>(base.GetVerticalLayout(3), new Func<NewSoundNormaPhantomItem>(this.OnPhantomInit), null, false, true);
 	}
 
-	// Token: 0x0600A5AE RID: 42414 RVA: 0x00250A74 File Offset: 0x0024EC74
+	// Token: 0x0600798E RID: 31118 RVA: 0x0025AE88 File Offset: 0x00259088
 	[NullableContext(1)]
 	public void Update(NewSoundDetectItemData sourceData)
 	{
@@ -125,12 +124,12 @@ public class NewSoundVisionItem : UiPanelBase, INewSoundItem
 			{
 				return;
 			}
-			phantomLayout4.RefreshByData(detectRecordData.PhantomId.ToList<int>(), null, false);
+			phantomLayout4.RefreshByData(detectRecordData.PhantomId, null, false);
 			return;
 		}
 	}
 
-	// Token: 0x0600A5AF RID: 42415 RVA: 0x00250CC4 File Offset: 0x0024EEC4
+	// Token: 0x0600798F RID: 31119 RVA: 0x0025B0D4 File Offset: 0x002592D4
 	[NullableContext(1)]
 	private void RefreshTraceItemState(NewSoundDetectItemData data)
 	{
@@ -144,14 +143,14 @@ public class NewSoundVisionItem : UiPanelBase, INewSoundItem
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600A5B0 RID: 42416 RVA: 0x00250D01 File Offset: 0x0024EF01
+	// Token: 0x06007990 RID: 31120 RVA: 0x0025B111 File Offset: 0x00259311
 	[NullableContext(1)]
 	private NewSoundNormaPhantomItem OnPhantomInit()
 	{
 		return new NewSoundNormaPhantomItem();
 	}
 
-	// Token: 0x04004AE3 RID: 19171
+	// Token: 0x04004B8A RID: 19338
 	[Nullable(new byte[]
 	{
 		2,
@@ -159,20 +158,20 @@ public class NewSoundVisionItem : UiPanelBase, INewSoundItem
 	})]
 	private GenericLayout<NewSoundNormaPhantomItem, int> PhantomLayout;
 
-	// Token: 0x02007C86 RID: 31878
+	// Token: 0x02006E0B RID: 28171
 	private enum EChildType
 	{
-		// Token: 0x04028DAC RID: 167340
+		// Token: 0x040240D5 RID: 147669
 		NameText,
-		// Token: 0x04028DAD RID: 167341
+		// Token: 0x040240D6 RID: 147670
 		IconTexture,
-		// Token: 0x04028DAE RID: 167342
+		// Token: 0x040240D7 RID: 147671
 		DesText,
-		// Token: 0x04028DAF RID: 167343
+		// Token: 0x040240D8 RID: 147672
 		PhantomLayout,
-		// Token: 0x04028DB0 RID: 167344
+		// Token: 0x040240D9 RID: 147673
 		SpriteIcon,
-		// Token: 0x04028DB1 RID: 167345
+		// Token: 0x040240DA RID: 147674
 		TrackIcon
 	}
 }

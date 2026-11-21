@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006111 RID: 24849
+	// Token: 0x02006773 RID: 26483
 	public class IActorVisibilityT
 	{
-		// Token: 0x1700B722 RID: 46882
-		// (get) Token: 0x0602A757 RID: 173911 RVA: 0x005D943B File Offset: 0x005D763B
-		// (set) Token: 0x0602A758 RID: 173912 RVA: 0x005D9443 File Offset: 0x005D7643
+		// Token: 0x1700C08D RID: 49293
+		// (get) Token: 0x0602CE38 RID: 183864 RVA: 0x006233E3 File Offset: 0x006215E3
+		// (set) Token: 0x0602CE39 RID: 183865 RVA: 0x006233EB File Offset: 0x006215EB
 		public int ActorIndex { get; set; }
 
-		// Token: 0x1700B723 RID: 46883
-		// (get) Token: 0x0602A759 RID: 173913 RVA: 0x005D944C File Offset: 0x005D764C
-		// (set) Token: 0x0602A75A RID: 173914 RVA: 0x005D9454 File Offset: 0x005D7654
+		// Token: 0x1700C08E RID: 49294
+		// (get) Token: 0x0602CE3A RID: 183866 RVA: 0x006233F4 File Offset: 0x006215F4
+		// (set) Token: 0x0602CE3B RID: 183867 RVA: 0x006233FC File Offset: 0x006215FC
 		public EActorVisibilityPlayMode PlayMode { get; set; }
 
-		// Token: 0x1700B724 RID: 46884
-		// (get) Token: 0x0602A75B RID: 173915 RVA: 0x005D945D File Offset: 0x005D765D
-		// (set) Token: 0x0602A75C RID: 173916 RVA: 0x005D9465 File Offset: 0x005D7665
+		// Token: 0x1700C08F RID: 49295
+		// (get) Token: 0x0602CE3C RID: 183868 RVA: 0x00623405 File Offset: 0x00621605
+		// (set) Token: 0x0602CE3D RID: 183869 RVA: 0x0062340D File Offset: 0x0062160D
 		public IActorVisibilityEffectDefaultT Effect { get; set; }
 
-		// Token: 0x1700B725 RID: 46885
-		// (get) Token: 0x0602A75D RID: 173917 RVA: 0x005D946E File Offset: 0x005D766E
-		// (set) Token: 0x0602A75E RID: 173918 RVA: 0x005D9476 File Offset: 0x005D7676
+		// Token: 0x1700C090 RID: 49296
+		// (get) Token: 0x0602CE3E RID: 183870 RVA: 0x00623416 File Offset: 0x00621616
+		// (set) Token: 0x0602CE3F RID: 183871 RVA: 0x0062341E File Offset: 0x0062161E
 		public float FadeDuration { get; set; }
 
-		// Token: 0x1700B726 RID: 46886
-		// (get) Token: 0x0602A75F RID: 173919 RVA: 0x005D947F File Offset: 0x005D767F
-		// (set) Token: 0x0602A760 RID: 173920 RVA: 0x005D9487 File Offset: 0x005D7687
+		// Token: 0x1700C091 RID: 49297
+		// (get) Token: 0x0602CE40 RID: 183872 RVA: 0x00623427 File Offset: 0x00621627
+		// (set) Token: 0x0602CE41 RID: 183873 RVA: 0x0062342F File Offset: 0x0062162F
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700B727 RID: 46887
-		// (get) Token: 0x0602A761 RID: 173921 RVA: 0x005D9490 File Offset: 0x005D7690
-		// (set) Token: 0x0602A762 RID: 173922 RVA: 0x005D9498 File Offset: 0x005D7698
+		// Token: 0x1700C092 RID: 49298
+		// (get) Token: 0x0602CE42 RID: 183874 RVA: 0x00623438 File Offset: 0x00621638
+		// (set) Token: 0x0602CE43 RID: 183875 RVA: 0x00623440 File Offset: 0x00621640
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A763 RID: 173923 RVA: 0x005D94A1 File Offset: 0x005D76A1
+		// Token: 0x0602CE44 RID: 183876 RVA: 0x00623449 File Offset: 0x00621649
 		public IActorVisibilityT()
 		{
 			this.ActorIndex = 0;

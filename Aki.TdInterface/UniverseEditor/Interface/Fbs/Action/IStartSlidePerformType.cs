@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071B7 RID: 29111
+	// Token: 0x0200798C RID: 31116
 	public struct IStartSlidePerformType : IFlatbufferObject
 	{
-		// Token: 0x1700D835 RID: 55349
-		// (get) Token: 0x060339F0 RID: 211440 RVA: 0x006F39E9 File Offset: 0x006F1BE9
+		// Token: 0x1700E42C RID: 58412
+		// (get) Token: 0x06036CEE RID: 224494 RVA: 0x00754CB5 File Offset: 0x00752EB5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060339F1 RID: 211441 RVA: 0x006F39F6 File Offset: 0x006F1BF6
+		// Token: 0x06036CEF RID: 224495 RVA: 0x00754CC2 File Offset: 0x00752EC2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060339F2 RID: 211442 RVA: 0x006F3A00 File Offset: 0x006F1C00
+		// Token: 0x06036CF0 RID: 224496 RVA: 0x00754CCC File Offset: 0x00752ECC
 		public static IStartSlidePerformType GetRootAsIStartSlidePerformType(ByteBuffer _bb)
 		{
 			return IStartSlidePerformType.GetRootAsIStartSlidePerformType(_bb, default(IStartSlidePerformType));
 		}
 
-		// Token: 0x060339F3 RID: 211443 RVA: 0x006F3A1C File Offset: 0x006F1C1C
+		// Token: 0x06036CF1 RID: 224497 RVA: 0x00754CE8 File Offset: 0x00752EE8
 		public static IStartSlidePerformType GetRootAsIStartSlidePerformType(ByteBuffer _bb, IStartSlidePerformType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060339F4 RID: 211444 RVA: 0x006F3A39 File Offset: 0x006F1C39
+		// Token: 0x06036CF2 RID: 224498 RVA: 0x00754D05 File Offset: 0x00752F05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060339F5 RID: 211445 RVA: 0x006F3A48 File Offset: 0x006F1C48
+		// Token: 0x06036CF3 RID: 224499 RVA: 0x00754D14 File Offset: 0x00752F14
 		public IStartSlidePerformType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D836 RID: 55350
-		// (get) Token: 0x060339F6 RID: 211446 RVA: 0x006F3A58 File Offset: 0x006F1C58
+		// Token: 0x1700E42D RID: 58413
+		// (get) Token: 0x06036CF4 RID: 224500 RVA: 0x00754D24 File Offset: 0x00752F24
 		public ESlidePerformType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060339F7 RID: 211447 RVA: 0x006F3A94 File Offset: 0x006F1C94
+		// Token: 0x06036CF5 RID: 224501 RVA: 0x00754D60 File Offset: 0x00752F60
 		public static Offset<IStartSlidePerformType> CreateIStartSlidePerformType(FlatBufferBuilder builder, ESlidePerformType Type = ESlidePerformType.SlopeSlide)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStartSlidePerformType.EndIStartSlidePerformType(builder);
 		}
 
-		// Token: 0x060339F8 RID: 211448 RVA: 0x006F3AAA File Offset: 0x006F1CAA
+		// Token: 0x06036CF6 RID: 224502 RVA: 0x00754D76 File Offset: 0x00752F76
 		public static void StartIStartSlidePerformType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060339F9 RID: 211449 RVA: 0x006F3AB3 File Offset: 0x006F1CB3
+		// Token: 0x06036CF7 RID: 224503 RVA: 0x00754D7F File Offset: 0x00752F7F
 		public static void AddType(FlatBufferBuilder builder, ESlidePerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060339FA RID: 211450 RVA: 0x006F3ABE File Offset: 0x006F1CBE
+		// Token: 0x06036CF8 RID: 224504 RVA: 0x00754D8A File Offset: 0x00752F8A
 		public static Offset<IStartSlidePerformType> EndIStartSlidePerformType(FlatBufferBuilder builder)
 		{
 			return new Offset<IStartSlidePerformType>(builder.EndTable());
 		}
 
-		// Token: 0x060339FB RID: 211451 RVA: 0x006F3ACC File Offset: 0x006F1CCC
+		// Token: 0x06036CF9 RID: 224505 RVA: 0x00754D98 File Offset: 0x00752F98
 		public IStartSlidePerformTypeT UnPack()
 		{
 			IStartSlidePerformTypeT startSlidePerformTypeT = new IStartSlidePerformTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return startSlidePerformTypeT;
 		}
 
-		// Token: 0x060339FC RID: 211452 RVA: 0x006F3AE7 File Offset: 0x006F1CE7
+		// Token: 0x06036CFA RID: 224506 RVA: 0x00754DB3 File Offset: 0x00752FB3
 		public void UnPackTo(IStartSlidePerformTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060339FD RID: 211453 RVA: 0x006F3AF8 File Offset: 0x006F1CF8
+		// Token: 0x06036CFB RID: 224507 RVA: 0x00754DC4 File Offset: 0x00752FC4
 		public static Offset<IStartSlidePerformType> Pack(FlatBufferBuilder builder, IStartSlidePerformTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStartSlidePerformType.CreateIStartSlidePerformType(builder, _o.Type);
 		}
 
-		// Token: 0x04011C83 RID: 72835
+		// Token: 0x04012C84 RID: 76932
 		private Table __p;
 	}
 }

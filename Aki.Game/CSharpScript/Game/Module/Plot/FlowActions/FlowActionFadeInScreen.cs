@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B7 RID: 20663
+	// Token: 0x02004087 RID: 16519
 	public class FlowActionFadeInScreen : FlowActionBase
 	{
-		// Token: 0x06034ECD RID: 216781 RVA: 0x00C893C0 File Offset: 0x00C875C0
+		// Token: 0x06029DC6 RID: 171462 RVA: 0x00BD66A8 File Offset: 0x00BD48A8
 		protected override void OnExecute()
 		{
 			FlowController.Instance.EnableSkip(false);
@@ -64,20 +64,20 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.RecordAction(null);
 		}
 
-		// Token: 0x06034ECE RID: 216782 RVA: 0x00C8956F File Offset: 0x00C8776F
+		// Token: 0x06029DC7 RID: 171463 RVA: 0x00BD6857 File Offset: 0x00BD4A57
 		protected override void OnBackgroundExecute()
 		{
 			PlotModel.Instance.IsFadeIn = true;
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034ECF RID: 216783 RVA: 0x00C89584 File Offset: 0x00C87784
+		// Token: 0x06029DC8 RID: 171464 RVA: 0x00BD686C File Offset: 0x00BD4A6C
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034ED0 RID: 216784 RVA: 0x00C89590 File Offset: 0x00C87790
+		// Token: 0x06029DC9 RID: 171465 RVA: 0x00BD6878 File Offset: 0x00BD4A78
 		[NullableContext(1)]
 		protected override void OnRollback(ActionRecord actionInfo, FlowContext context)
 		{

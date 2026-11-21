@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000225 RID: 549
+	// Token: 0x0200024C RID: 588
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICategoryMatchingSucceed : ICategoryMatchingSucceedBase
 	{
-		// Token: 0x06000972 RID: 2418 RVA: 0x00029244 File Offset: 0x00027444
-		[NullableContext(1)]
+		// Token: 0x060009E6 RID: 2534 RVA: 0x0002AA04 File Offset: 0x00028C04
+		[NullableContext(0)]
 		private ICategoryMatchingSucceed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000973 RID: 2419 RVA: 0x0002927C File Offset: 0x0002747C
-		[NullableContext(1)]
+		// Token: 0x060009E7 RID: 2535 RVA: 0x0002AA3C File Offset: 0x00028C3C
+		[NullableContext(0)]
 		public static ICategoryMatchingSucceed Create([Nullable(2)] ICategoryMatchingSucceed instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000974 RID: 2420 RVA: 0x0002928F File Offset: 0x0002748F
-		[NullableContext(1)]
+		// Token: 0x060009E8 RID: 2536 RVA: 0x0002AA4F File Offset: 0x00028C4F
+		[NullableContext(0)]
 		public static ICategoryMatchingSucceed CreateFromSetValue([Nullable(2)] ICategoryMatchingSucceed_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000975 RID: 2421 RVA: 0x000292A4 File Offset: 0x000274A4
-		[NullableContext(1)]
+		// Token: 0x060009E9 RID: 2537 RVA: 0x0002AA64 File Offset: 0x00028C64
+		[NullableContext(0)]
 		public new ICategoryMatchingSucceed_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingSucceed_SetValue
@@ -72,9 +72,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002DF RID: 735
-		// (get) Token: 0x06000976 RID: 2422 RVA: 0x00029330 File Offset: 0x00027530
-		// (set) Token: 0x06000977 RID: 2423 RVA: 0x0002936A File Offset: 0x0002756A
+		// Token: 0x170002FE RID: 766
+		// (get) Token: 0x060009EA RID: 2538 RVA: 0x0002AAF0 File Offset: 0x00028CF0
+		// (set) Token: 0x060009EB RID: 2539 RVA: 0x0002AB2A File Offset: 0x00028D2A
 		public override bool? IsSilent
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E0 RID: 736
-		// (get) Token: 0x06000978 RID: 2424 RVA: 0x00029378 File Offset: 0x00027578
-		// (set) Token: 0x06000979 RID: 2425 RVA: 0x000293B2 File Offset: 0x000275B2
+		// Token: 0x170002FF RID: 767
+		// (get) Token: 0x060009EC RID: 2540 RVA: 0x0002AB38 File Offset: 0x00028D38
+		// (set) Token: 0x060009ED RID: 2541 RVA: 0x0002AB72 File Offset: 0x00028D72
 		public override bool? IsDestroy
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E1 RID: 737
-		// (get) Token: 0x0600097A RID: 2426 RVA: 0x000293C0 File Offset: 0x000275C0
-		// (set) Token: 0x0600097B RID: 2427 RVA: 0x000293FA File Offset: 0x000275FA
+		// Token: 0x17000300 RID: 768
+		// (get) Token: 0x060009EE RID: 2542 RVA: 0x0002AB80 File Offset: 0x00028D80
+		// (set) Token: 0x060009EF RID: 2543 RVA: 0x0002ABBA File Offset: 0x00028DBA
 		public override bool? SyncAdsorbatePerformance
 		{
 			get
@@ -144,9 +144,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E2 RID: 738
-		// (get) Token: 0x0600097C RID: 2428 RVA: 0x00029408 File Offset: 0x00027608
-		// (set) Token: 0x0600097D RID: 2429 RVA: 0x0002942F File Offset: 0x0002762F
+		// Token: 0x17000301 RID: 769
+		// (get) Token: 0x060009F0 RID: 2544 RVA: 0x0002ABC8 File Offset: 0x00028DC8
+		// (set) Token: 0x060009F1 RID: 2545 RVA: 0x0002ABEF File Offset: 0x00028DEF
 		public override string ChangeSelfState
 		{
 			get
@@ -168,9 +168,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E3 RID: 739
-		// (get) Token: 0x0600097E RID: 2430 RVA: 0x00029440 File Offset: 0x00027640
-		// (set) Token: 0x0600097F RID: 2431 RVA: 0x000294A1 File Offset: 0x000276A1
+		// Token: 0x17000302 RID: 770
+		// (get) Token: 0x060009F2 RID: 2546 RVA: 0x0002AC00 File Offset: 0x00028E00
+		// (set) Token: 0x060009F3 RID: 2547 RVA: 0x0002AC61 File Offset: 0x00028E61
 		public override IEntityState ChangeItemState
 		{
 			get
@@ -198,9 +198,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E4 RID: 740
-		// (get) Token: 0x06000980 RID: 2432 RVA: 0x000294B8 File Offset: 0x000276B8
-		// (set) Token: 0x06000981 RID: 2433 RVA: 0x000294F2 File Offset: 0x000276F2
+		// Token: 0x17000303 RID: 771
+		// (get) Token: 0x060009F4 RID: 2548 RVA: 0x0002AC78 File Offset: 0x00028E78
+		// (set) Token: 0x060009F5 RID: 2549 RVA: 0x0002ACB2 File Offset: 0x00028EB2
 		public override int? DelayDischarge
 		{
 			get
@@ -222,9 +222,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E5 RID: 741
-		// (get) Token: 0x06000982 RID: 2434 RVA: 0x00029500 File Offset: 0x00027700
-		// (set) Token: 0x06000983 RID: 2435 RVA: 0x00029561 File Offset: 0x00027761
+		// Token: 0x17000304 RID: 772
+		// (get) Token: 0x060009F6 RID: 2550 RVA: 0x0002ACC0 File Offset: 0x00028EC0
+		// (set) Token: 0x060009F7 RID: 2551 RVA: 0x0002AD21 File Offset: 0x00028F21
 		public override IEntityState ChangeItemStateAfterDischarged
 		{
 			get
@@ -252,9 +252,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E6 RID: 742
-		// (get) Token: 0x06000984 RID: 2436 RVA: 0x00029576 File Offset: 0x00027776
-		// (set) Token: 0x06000985 RID: 2437 RVA: 0x0002959D File Offset: 0x0002779D
+		// Token: 0x17000305 RID: 773
+		// (get) Token: 0x060009F8 RID: 2552 RVA: 0x0002AD36 File Offset: 0x00028F36
+		// (set) Token: 0x060009F9 RID: 2553 RVA: 0x0002AD5D File Offset: 0x00028F5D
 		public override string ChangeSelfStateAfterDischarged
 		{
 			get
@@ -276,9 +276,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E7 RID: 743
-		// (get) Token: 0x06000986 RID: 2438 RVA: 0x000295AC File Offset: 0x000277AC
-		// (set) Token: 0x06000987 RID: 2439 RVA: 0x0002960D File Offset: 0x0002780D
+		// Token: 0x17000306 RID: 774
+		// (get) Token: 0x060009FA RID: 2554 RVA: 0x0002AD6C File Offset: 0x00028F6C
+		// (set) Token: 0x060009FB RID: 2555 RVA: 0x0002ADCD File Offset: 0x00028FCD
 		public virtual IItemChangeAdsorbateState ChangeAdsorbateState
 		{
 			get
@@ -306,9 +306,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002E8 RID: 744
-		// (get) Token: 0x06000988 RID: 2440 RVA: 0x00029622 File Offset: 0x00027822
-		// (set) Token: 0x06000989 RID: 2441 RVA: 0x00029649 File Offset: 0x00027849
+		// Token: 0x17000307 RID: 775
+		// (get) Token: 0x060009FC RID: 2556 RVA: 0x0002ADE2 File Offset: 0x00028FE2
+		// (set) Token: 0x060009FD RID: 2557 RVA: 0x0002AE09 File Offset: 0x00029009
 		public virtual string DischargeSequence
 		{
 			get
@@ -330,31 +330,31 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009CD RID: 2509
+		// Token: 0x04000A57 RID: 2647
 		protected new ICategoryMatchingSucceed FbInstance;
 
-		// Token: 0x040009CE RID: 2510
+		// Token: 0x04000A58 RID: 2648
 		protected new ICategoryMatchingSucceed_SetValue PocoInterface;
 
-		// Token: 0x040009CF RID: 2511
-		[Nullable(1)]
+		// Token: 0x04000A59 RID: 2649
+		[Nullable(0)]
 		private IEntityState _ChangeItemStateCache;
 
-		// Token: 0x040009D0 RID: 2512
+		// Token: 0x04000A5A RID: 2650
 		private bool _ChangeItemStateInited;
 
-		// Token: 0x040009D1 RID: 2513
-		[Nullable(1)]
+		// Token: 0x04000A5B RID: 2651
+		[Nullable(0)]
 		private IEntityState _ChangeItemStateAfterDischargedCache;
 
-		// Token: 0x040009D2 RID: 2514
+		// Token: 0x04000A5C RID: 2652
 		private bool _ChangeItemStateAfterDischargedInited;
 
-		// Token: 0x040009D3 RID: 2515
-		[Nullable(1)]
+		// Token: 0x04000A5D RID: 2653
+		[Nullable(0)]
 		private IItemChangeAdsorbateState _ChangeAdsorbateStateCache;
 
-		// Token: 0x040009D4 RID: 2516
+		// Token: 0x04000A5E RID: 2654
 		private bool _ChangeAdsorbateStateInited;
 	}
 }

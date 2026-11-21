@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001140 RID: 4416
+	// Token: 0x0200126E RID: 4718
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IShowUiSynthetic : IShowUiCrafting
 	{
-		// Token: 0x06006446 RID: 25670 RVA: 0x000F12F0 File Offset: 0x000EF4F0
-		[NullableContext(1)]
+		// Token: 0x06006A41 RID: 27201 RVA: 0x000FE464 File Offset: 0x000FC664
+		[NullableContext(0)]
 		private IShowUiSynthetic_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006447 RID: 25671 RVA: 0x000F1328 File Offset: 0x000EF528
-		[NullableContext(1)]
+		// Token: 0x06006A42 RID: 27202 RVA: 0x000FE49C File Offset: 0x000FC69C
+		[NullableContext(0)]
 		public static IShowUiSynthetic Create([Nullable(2)] IShowUiSynthetic instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006448 RID: 25672 RVA: 0x000F133B File Offset: 0x000EF53B
-		[NullableContext(1)]
+		// Token: 0x06006A43 RID: 27203 RVA: 0x000FE4AF File Offset: 0x000FC6AF
+		[NullableContext(0)]
 		public static IShowUiSynthetic CreateFromSetValue([Nullable(2)] IShowUiSynthetic_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006449 RID: 25673 RVA: 0x000F134E File Offset: 0x000EF54E
-		[NullableContext(1)]
+		// Token: 0x06006A44 RID: 27204 RVA: 0x000FE4C2 File Offset: 0x000FC6C2
+		[NullableContext(0)]
 		public new IShowUiSynthetic_SetValue ToSetValue()
 		{
 			return new IShowUiSynthetic_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020C8 RID: 8392
-		// (get) Token: 0x0600644A RID: 25674 RVA: 0x000F1379 File Offset: 0x000EF579
-		// (set) Token: 0x0600644B RID: 25675 RVA: 0x000F13A4 File Offset: 0x000EF5A4
+		// Token: 0x1700227B RID: 8827
+		// (get) Token: 0x06006A45 RID: 27205 RVA: 0x000FE4ED File Offset: 0x000FC6ED
+		// (set) Token: 0x06006A46 RID: 27206 RVA: 0x000FE518 File Offset: 0x000FC718
 		public override EShowUiType Type
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020C9 RID: 8393
-		// (get) Token: 0x0600644C RID: 25676 RVA: 0x000F13B2 File Offset: 0x000EF5B2
-		// (set) Token: 0x0600644D RID: 25677 RVA: 0x000F13D9 File Offset: 0x000EF5D9
+		// Token: 0x1700227C RID: 8828
+		// (get) Token: 0x06006A47 RID: 27207 RVA: 0x000FE526 File Offset: 0x000FC726
+		// (set) Token: 0x06006A48 RID: 27208 RVA: 0x000FE54D File Offset: 0x000FC74D
 		public override List<int> EntityIds
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020CA RID: 8394
-		// (get) Token: 0x0600644E RID: 25678 RVA: 0x000F13E7 File Offset: 0x000EF5E7
-		// (set) Token: 0x0600644F RID: 25679 RVA: 0x000F140E File Offset: 0x000EF60E
+		// Token: 0x1700227D RID: 8829
+		// (get) Token: 0x06006A49 RID: 27209 RVA: 0x000FE55B File Offset: 0x000FC75B
+		// (set) Token: 0x06006A4A RID: 27210 RVA: 0x000FE582 File Offset: 0x000FC782
 		public override List<int> ProductIds
 		{
 			get
@@ -137,10 +137,10 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C45 RID: 15429
+		// Token: 0x04003F93 RID: 16275
 		protected new IShowUiSynthetic FbInstance;
 
-		// Token: 0x04003C46 RID: 15430
+		// Token: 0x04003F94 RID: 16276
 		protected new IShowUiSynthetic_SetValue PocoInterface;
 	}
 }

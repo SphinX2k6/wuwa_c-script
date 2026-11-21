@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073F3 RID: 29683
+	// Token: 0x02007BDD RID: 31709
 	public static class IToggleAirWallType_UnionVerify
 	{
-		// Token: 0x06035EB4 RID: 220852 RVA: 0x00756740 File Offset: 0x00754940
+		// Token: 0x06039267 RID: 234087 RVA: 0x007B8EB4 File Offset: 0x007B70B4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

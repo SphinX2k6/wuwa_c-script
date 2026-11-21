@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004335 RID: 17205
+	// Token: 0x02004797 RID: 18327
 	public enum TVisionSystemQuest : byte
 	{
-		// Token: 0x0400C107 RID: 49415
+		// Token: 0x0400CB25 RID: 52005
 		NONE,
-		// Token: 0x0400C108 RID: 49416
+		// Token: 0x0400CB26 RID: 52006
 		IVisionSystemQuestDoIdentify,
-		// Token: 0x0400C109 RID: 49417
+		// Token: 0x0400CB27 RID: 52007
 		IVisionSystemQuestSetActivated,
-		// Token: 0x0400C10A RID: 49418
+		// Token: 0x0400CB28 RID: 52008
 		IVisionSystemQuestTargetLevel
 	}
 }

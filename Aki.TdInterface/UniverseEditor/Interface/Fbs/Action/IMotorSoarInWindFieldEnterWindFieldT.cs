@@ -3,45 +3,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B3D RID: 27453
+	// Token: 0x02007283 RID: 29315
 	public class IMotorSoarInWindFieldEnterWindFieldT
 	{
-		// Token: 0x1700CBFC RID: 52220
-		// (get) Token: 0x060302FB RID: 197371 RVA: 0x0068C8E2 File Offset: 0x0068AAE2
-		// (set) Token: 0x060302FC RID: 197372 RVA: 0x0068C8EA File Offset: 0x0068AAEA
+		// Token: 0x1700D6E1 RID: 55009
+		// (get) Token: 0x06033152 RID: 209234 RVA: 0x006E4E9E File Offset: 0x006E309E
+		// (set) Token: 0x06033153 RID: 209235 RVA: 0x006E4EA6 File Offset: 0x006E30A6
 		public EMotorSoarInWindFieldControlType Type { get; set; }
 
-		// Token: 0x1700CBFD RID: 52221
-		// (get) Token: 0x060302FD RID: 197373 RVA: 0x0068C8F3 File Offset: 0x0068AAF3
-		// (set) Token: 0x060302FE RID: 197374 RVA: 0x0068C8FB File Offset: 0x0068AAFB
+		// Token: 0x1700D6E2 RID: 55010
+		// (get) Token: 0x06033154 RID: 209236 RVA: 0x006E4EAF File Offset: 0x006E30AF
+		// (set) Token: 0x06033155 RID: 209237 RVA: 0x006E4EB7 File Offset: 0x006E30B7
 		public IVectorInfoT Direction { get; set; }
 
-		// Token: 0x1700CBFE RID: 52222
-		// (get) Token: 0x060302FF RID: 197375 RVA: 0x0068C904 File Offset: 0x0068AB04
-		// (set) Token: 0x06030300 RID: 197376 RVA: 0x0068C90C File Offset: 0x0068AB0C
+		// Token: 0x1700D6E3 RID: 55011
+		// (get) Token: 0x06033156 RID: 209238 RVA: 0x006E4EC0 File Offset: 0x006E30C0
+		// (set) Token: 0x06033157 RID: 209239 RVA: 0x006E4EC8 File Offset: 0x006E30C8
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x1700CBFF RID: 52223
-		// (get) Token: 0x06030301 RID: 197377 RVA: 0x0068C915 File Offset: 0x0068AB15
-		// (set) Token: 0x06030302 RID: 197378 RVA: 0x0068C91D File Offset: 0x0068AB1D
+		// Token: 0x1700D6E4 RID: 55012
+		// (get) Token: 0x06033158 RID: 209240 RVA: 0x006E4ED1 File Offset: 0x006E30D1
+		// (set) Token: 0x06033159 RID: 209241 RVA: 0x006E4ED9 File Offset: 0x006E30D9
 		public float WindFieldDepth { get; set; }
 
-		// Token: 0x1700CC00 RID: 52224
-		// (get) Token: 0x06030303 RID: 197379 RVA: 0x0068C926 File Offset: 0x0068AB26
-		// (set) Token: 0x06030304 RID: 197380 RVA: 0x0068C92E File Offset: 0x0068AB2E
+		// Token: 0x1700D6E5 RID: 55013
+		// (get) Token: 0x0603315A RID: 209242 RVA: 0x006E4EE2 File Offset: 0x006E30E2
+		// (set) Token: 0x0603315B RID: 209243 RVA: 0x006E4EEA File Offset: 0x006E30EA
 		public float MaxAdditionalSpeed { get; set; }
 
-		// Token: 0x1700CC01 RID: 52225
-		// (get) Token: 0x06030305 RID: 197381 RVA: 0x0068C937 File Offset: 0x0068AB37
-		// (set) Token: 0x06030306 RID: 197382 RVA: 0x0068C93F File Offset: 0x0068AB3F
+		// Token: 0x1700D6E6 RID: 55014
+		// (get) Token: 0x0603315C RID: 209244 RVA: 0x006E4EF3 File Offset: 0x006E30F3
+		// (set) Token: 0x0603315D RID: 209245 RVA: 0x006E4EFB File Offset: 0x006E30FB
 		public string SpeedCurve { get; set; }
 
-		// Token: 0x1700CC02 RID: 52226
-		// (get) Token: 0x06030307 RID: 197383 RVA: 0x0068C948 File Offset: 0x0068AB48
-		// (set) Token: 0x06030308 RID: 197384 RVA: 0x0068C950 File Offset: 0x0068AB50
+		// Token: 0x1700D6E7 RID: 55015
+		// (get) Token: 0x0603315E RID: 209246 RVA: 0x006E4F04 File Offset: 0x006E3104
+		// (set) Token: 0x0603315F RID: 209247 RVA: 0x006E4F0C File Offset: 0x006E310C
 		public float SpeedTolerance { get; set; }
 
-		// Token: 0x06030309 RID: 197385 RVA: 0x0068C95C File Offset: 0x0068AB5C
+		// Token: 0x06033160 RID: 209248 RVA: 0x006E4F18 File Offset: 0x006E3118
 		public IMotorSoarInWindFieldEnterWindFieldT()
 		{
 			this.Type = EMotorSoarInWindFieldControlType.EnterWindField;

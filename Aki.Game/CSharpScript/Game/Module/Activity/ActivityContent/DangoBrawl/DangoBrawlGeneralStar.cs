@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067FF RID: 26623
+	// Token: 0x0200574F RID: 22351
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlGeneralStar : UiPanelBase
 	{
-		// Token: 0x06042676 RID: 271990 RVA: 0x0102002C File Offset: 0x0101E22C
+		// Token: 0x060371CB RID: 225739 RVA: 0x00F61570 File Offset: 0x00F5F770
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,19 +26,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042677 RID: 271991 RVA: 0x01020095 File Offset: 0x0101E295
+		// Token: 0x060371CC RID: 225740 RVA: 0x00F615D9 File Offset: 0x00F5F7D9
 		protected override void OnStart()
 		{
 			this.CreateSequencePlayer();
 		}
 
-		// Token: 0x06042678 RID: 271992 RVA: 0x0102009D File Offset: 0x0101E29D
+		// Token: 0x060371CD RID: 225741 RVA: 0x00F615E1 File Offset: 0x00F5F7E1
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x06042679 RID: 271993 RVA: 0x010200A8 File Offset: 0x0101E2A8
+		// Token: 0x060371CE RID: 225742 RVA: 0x00F615EC File Offset: 0x00F5F7EC
 		private void CreateSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEnd));
 		}
 
-		// Token: 0x0604267A RID: 271994 RVA: 0x010200E9 File Offset: 0x0101E2E9
+		// Token: 0x060371CF RID: 225743 RVA: 0x00F6162D File Offset: 0x00F5F82D
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnActiveSeqEnd = null;
 		}
 
-		// Token: 0x0604267B RID: 271995 RVA: 0x0102010A File Offset: 0x0101E30A
+		// Token: 0x060371D0 RID: 225744 RVA: 0x00F6164E File Offset: 0x00F5F84E
 		[NullableContext(1)]
 		private void OnSequenceEnd(string seqKey)
 		{
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604267C RID: 271996 RVA: 0x01020134 File Offset: 0x0101E334
+		// Token: 0x060371D1 RID: 225745 RVA: 0x00F61678 File Offset: 0x00F5F878
 		public void PlayActiveSeq(Action onEnd = null)
 		{
 			if (this.SequencePlayer == null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer.PlaySequence("Activate", false, null);
 		}
 
-		// Token: 0x0604267D RID: 271997 RVA: 0x01020174 File Offset: 0x0101E374
+		// Token: 0x060371D2 RID: 225746 RVA: 0x00F616B8 File Offset: 0x00F5F8B8
 		public void SetUiRelativeLocation(FVector2D val)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			rootItem.SetUIRelativeLocation(new FVector(val.X, val.Y, 0f));
 		}
 
-		// Token: 0x0604267E RID: 271998 RVA: 0x0102019C File Offset: 0x0101E39C
+		// Token: 0x060371D3 RID: 225747 RVA: 0x00F616E0 File Offset: 0x00F5F8E0
 		public void SetStarVisible(bool val)
 		{
 			UUIItem item = base.GetItem(1);
@@ -115,19 +115,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(val);
 		}
 
-		// Token: 0x040229C6 RID: 141766
+		// Token: 0x0401D223 RID: 119331
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040229C7 RID: 141767
+		// Token: 0x0401D224 RID: 119332
 		private Action OnActiveSeqEnd;
 
-		// Token: 0x0200C970 RID: 51568
+		// Token: 0x0200B33D RID: 45885
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x0403CD3F RID: 249151
+			// Token: 0x0403762C RID: 226860
 			SprStarBag,
-			// Token: 0x0403CD40 RID: 249152
+			// Token: 0x0403762D RID: 226861
 			SprStar
 		}
 	}

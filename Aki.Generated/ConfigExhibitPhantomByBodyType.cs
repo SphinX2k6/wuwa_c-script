@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200028F RID: 655
+	// Token: 0x020002A3 RID: 675
 	public class ConfigExhibitPhantomByBodyType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F5F RID: 3935 RVA: 0x000B067C File Offset: 0x000AE87C
+		// Token: 0x06000FD7 RID: 4055 RVA: 0x000B6940 File Offset: 0x000B4B40
 		static ConfigExhibitPhantomByBodyType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExhibitPhantomByBodyType.CreateStaticDefaultValue), new Action(ConfigExhibitPhantomByBodyType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F60 RID: 3936 RVA: 0x000B069C File Offset: 0x000AE89C
+		// Token: 0x06000FD8 RID: 4056 RVA: 0x000B6960 File Offset: 0x000B4B60
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExhibitPhantomByBodyType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F61 RID: 3937 RVA: 0x000B071B File Offset: 0x000AE91B
+		// Token: 0x06000FD9 RID: 4057 RVA: 0x000B69DF File Offset: 0x000B4BDF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExhibitPhantomByBodyType.LogPair = null;
 			ConfigExhibitPhantomByBodyType.HandleId = 0;
 		}
 
-		// Token: 0x06000F62 RID: 3938 RVA: 0x000B0729 File Offset: 0x000AE929
+		// Token: 0x06000FDA RID: 4058 RVA: 0x000B69ED File Offset: 0x000B4BED
 		public static void Init()
 		{
 			ConfigExhibitPhantomByBodyType.HandleId = ConfigCommon.InitDataStatement(ConfigExhibitPhantomByBodyType.HandleId, "db_spring26.db", "select BinData from `ExhibitPhantom` where BodyType=?");
 		}
 
-		// Token: 0x06000F63 RID: 3939 RVA: 0x000B0744 File Offset: 0x000AE944
+		// Token: 0x06000FDB RID: 4059 RVA: 0x000B6A08 File Offset: 0x000B4C08
 		[NullableContext(2)]
 		public static IReadOnlyList<ExhibitPhantom> GetConfigList(int p0BodyType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040011CD RID: 4557
+		// Token: 0x04001259 RID: 4697
 		private const string DB = "db_spring26.db";
 
-		// Token: 0x040011CE RID: 4558
+		// Token: 0x0400125A RID: 4698
 		private const string FILE = "z.展台.xlsx";
 
-		// Token: 0x040011CF RID: 4559
+		// Token: 0x0400125B RID: 4699
 		private const string TABLE = "ExhibitPhantom";
 
-		// Token: 0x040011D0 RID: 4560
+		// Token: 0x0400125C RID: 4700
 		private const string COMMAND = "select BinData from `ExhibitPhantom` where BodyType=?";
 
-		// Token: 0x040011D1 RID: 4561
+		// Token: 0x0400125D RID: 4701
 		private const string KEY_PREFIX = "ExhibitPhantomByBodyType";
 
-		// Token: 0x040011D2 RID: 4562
+		// Token: 0x0400125E RID: 4702
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040011D3 RID: 4563
+		// Token: 0x0400125F RID: 4703
 		private static int HandleId;
 	}
 }

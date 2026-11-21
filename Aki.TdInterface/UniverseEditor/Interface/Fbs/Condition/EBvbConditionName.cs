@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004922 RID: 18722
+	// Token: 0x02004DD5 RID: 19925
 	public enum EBvbConditionName : byte
 	{
-		// Token: 0x0400CFB8 RID: 53176
+		// Token: 0x0400DA67 RID: 55911
 		AITurnEnd,
-		// Token: 0x0400CFB9 RID: 53177
+		// Token: 0x0400DA68 RID: 55912
 		PlayerTurnEnd,
-		// Token: 0x0400CFBA RID: 53178
+		// Token: 0x0400DA69 RID: 55913
 		AIWipedOut,
-		// Token: 0x0400CFBB RID: 53179
+		// Token: 0x0400DA6A RID: 55914
 		PlayerWipedOut,
-		// Token: 0x0400CFBC RID: 53180
+		// Token: 0x0400DA6B RID: 55915
 		PlayerWin,
-		// Token: 0x0400CFBD RID: 53181
+		// Token: 0x0400DA6C RID: 55916
 		PlayerLose,
-		// Token: 0x0400CFBE RID: 53182
+		// Token: 0x0400DA6D RID: 55917
 		SelectCardsEnd
 	}
 }

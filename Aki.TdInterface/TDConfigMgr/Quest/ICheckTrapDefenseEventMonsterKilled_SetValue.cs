@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F09 RID: 3849
+	// Token: 0x0200101F RID: 4127
 	public class ICheckTrapDefenseEventMonsterKilled_SetValue
 	{
-		// Token: 0x0400335E RID: 13150
+		// Token: 0x0400366B RID: 13931
 		public ECheckTrapDefenseEvent Type;
 
-		// Token: 0x0400335F RID: 13151
+		// Token: 0x0400366C RID: 13932
 		public int Id;
 	}
 }

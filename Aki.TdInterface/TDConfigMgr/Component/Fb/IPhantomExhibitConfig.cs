@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD6 RID: 3542
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000ED2 RID: 3794
 	public class IPhantomExhibitConfig : IExhibitItemType
 	{
-		// Token: 0x0600505B RID: 20571 RVA: 0x000C68AF File Offset: 0x000C4AAF
-		[NullableContext(1)]
+		// Token: 0x06005580 RID: 21888 RVA: 0x000D20FF File Offset: 0x000D02FF
 		public static IPhantomExhibitConfig Create(IPhantomExhibitConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A6C RID: 6764
-		// (get) Token: 0x0600505C RID: 20572 RVA: 0x000C68CE File Offset: 0x000C4ACE
+		// Token: 0x17001BD7 RID: 7127
+		// (get) Token: 0x06005581 RID: 21889 RVA: 0x000D211E File Offset: 0x000D031E
 		public override EExhibitItemType Type
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A6D RID: 6765
-		// (get) Token: 0x0600505D RID: 20573 RVA: 0x000C68DB File Offset: 0x000C4ADB
+		// Token: 0x17001BD8 RID: 7128
+		// (get) Token: 0x06005582 RID: 21890 RVA: 0x000D212B File Offset: 0x000D032B
 		public virtual EPhantomExhibitSizeType PhantomSize
 		{
 			get
@@ -44,12 +41,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A6E RID: 6766
-		// (get) Token: 0x0600505E RID: 20574 RVA: 0x000C68E8 File Offset: 0x000C4AE8
-		[Nullable(1)]
+		// Token: 0x17001BD9 RID: 7129
+		// (get) Token: 0x06005583 RID: 21891 RVA: 0x000D2138 File Offset: 0x000D0338
 		public virtual VectorInfo Offset
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._OffsetInited)
@@ -62,10 +57,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A6F RID: 6767
-		// (get) Token: 0x0600505F RID: 20575 RVA: 0x000C691C File Offset: 0x000C4B1C
+		// Token: 0x17001BDA RID: 7130
+		// (get) Token: 0x06005584 RID: 21892 RVA: 0x000D216C File Offset: 0x000D036C
+		[Nullable(2)]
 		public virtual IExhibitEffect ActiveEffect
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._ActiveEffectInited)
@@ -78,19 +75,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E1D RID: 11805
+		// Token: 0x040030E3 RID: 12515
 		private IPhantomExhibitConfig Instance;
 
-		// Token: 0x04002E1E RID: 11806
+		// Token: 0x040030E4 RID: 12516
+		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002E1F RID: 11807
+		// Token: 0x040030E5 RID: 12517
 		private bool _OffsetInited;
 
-		// Token: 0x04002E20 RID: 11808
+		// Token: 0x040030E6 RID: 12518
+		[Nullable(2)]
 		private IExhibitEffect _ActiveEffectCache;
 
-		// Token: 0x04002E21 RID: 11809
+		// Token: 0x040030E7 RID: 12519
 		private bool _ActiveEffectInited;
 	}
 }

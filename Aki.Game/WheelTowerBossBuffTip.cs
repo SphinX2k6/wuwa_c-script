@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200160C RID: 5644
+// Token: 0x02000AC4 RID: 2756
 public class WheelTowerBossBuffTip : UiViewBase
 {
-	// Token: 0x06009EED RID: 40685 RVA: 0x0022C12C File Offset: 0x0022A32C
+	// Token: 0x060072CB RID: 29387 RVA: 0x00235F5C File Offset: 0x0023415C
 	[NullableContext(1)]
 	public WheelTowerBossBuffTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009EEE RID: 40686 RVA: 0x0022C138 File Offset: 0x0022A338
+	// Token: 0x060072CC RID: 29388 RVA: 0x00235F68 File Offset: 0x00234168
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class WheelTowerBossBuffTip : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009EEF RID: 40687 RVA: 0x0022C1E0 File Offset: 0x0022A3E0
+	// Token: 0x060072CD RID: 29389 RVA: 0x00236010 File Offset: 0x00234210
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerBossBuffTip.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ public class WheelTowerBossBuffTip : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009EF0 RID: 40688 RVA: 0x0022C223 File Offset: 0x0022A423
+	// Token: 0x060072CE RID: 29390 RVA: 0x00236053 File Offset: 0x00234253
 	private void OnMaskBtnClick()
 	{
 		base.CloseMe(null);

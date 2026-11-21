@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006108 RID: 24840
+	// Token: 0x02005086 RID: 20614
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeActionSubViewManager
 	{
-		// Token: 0x0603ECBB RID: 257211 RVA: 0x00F2A07C File Offset: 0x00F2827C
+		// Token: 0x0603397D RID: 211325 RVA: 0x00E70E90 File Offset: 0x00E6F090
 		public void RegisterHost(UUIItem hostViewItem)
 		{
 			this.HostParentItem = hostViewItem;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.PendingTaskMap.Clear();
 		}
 
-		// Token: 0x0603ECBC RID: 257212 RVA: 0x00F2A0FC File Offset: 0x00F282FC
+		// Token: 0x0603397E RID: 211326 RVA: 0x00E70F10 File Offset: 0x00E6F110
 		public void UnregisterHost()
 		{
 			this.FinishAllSubView();
@@ -35,20 +35,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ActionTopPanel = null;
 		}
 
-		// Token: 0x0603ECBD RID: 257213 RVA: 0x00F2A120 File Offset: 0x00F28320
+		// Token: 0x0603397F RID: 211327 RVA: 0x00E70F34 File Offset: 0x00E6F134
 		public void RegisterTopPanel(RoverlikeBattleTopPanel panel)
 		{
 			this.ActionTopPanel = panel;
 		}
 
-		// Token: 0x0603ECBE RID: 257214 RVA: 0x00F2A129 File Offset: 0x00F28329
+		// Token: 0x06033980 RID: 211328 RVA: 0x00E70F3D File Offset: 0x00E6F13D
 		[NullableContext(2)]
 		public RoverlikeBattleTopPanel GetActionTopPanel()
 		{
 			return this.ActionTopPanel;
 		}
 
-		// Token: 0x0603ECBF RID: 257215 RVA: 0x00F2A134 File Offset: 0x00F28334
+		// Token: 0x06033981 RID: 211329 RVA: 0x00E70F48 File Offset: 0x00E6F148
 		[NullableContext(2)]
 		public int AddSubView(ERoverActionSubViewType type, object openParam = null)
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return CS$<>8__locals1.incId;
 		}
 
-		// Token: 0x0603ECC0 RID: 257216 RVA: 0x00F2A264 File Offset: 0x00F28464
+		// Token: 0x06033982 RID: 211330 RVA: 0x00E71078 File Offset: 0x00E6F278
 		public void FinishSubView(int incId)
 		{
 			RoverlikeActionSubViewManager.<>c__DisplayClass16_0 CS$<>8__locals1 = new RoverlikeActionSubViewManager.<>c__DisplayClass16_0();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TaskManager.RunTask(task);
 		}
 
-		// Token: 0x0603ECC1 RID: 257217 RVA: 0x00F2A2FC File Offset: 0x00F284FC
+		// Token: 0x06033983 RID: 211331 RVA: 0x00E71110 File Offset: 0x00E6F310
 		public unsafe void FinishAllSubView()
 		{
 			if (this.IsDisposed)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ECC2 RID: 257218 RVA: 0x00F2A40D File Offset: 0x00F2860D
+		// Token: 0x06033984 RID: 211332 RVA: 0x00E71221 File Offset: 0x00E6F421
 		[NullableContext(2)]
 		public RoverlikeActionSubViewBase GetCurrentSubView()
 		{
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.SubViewStack[this.SubViewStack.Count - 1];
 		}
 
-		// Token: 0x0603ECC3 RID: 257219 RVA: 0x00F2A438 File Offset: 0x00F28638
+		// Token: 0x06033985 RID: 211333 RVA: 0x00E7124C File Offset: 0x00E6F44C
 		[NullableContext(2)]
 		public RoverlikeActionSubViewBase GetSubViewByIncId(int incId)
 		{
@@ -194,14 +194,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603ECC4 RID: 257220 RVA: 0x00F2A455 File Offset: 0x00F28655
+		// Token: 0x06033986 RID: 211334 RVA: 0x00E71269 File Offset: 0x00E6F469
 		public bool HasSubViews()
 		{
 			return this.SubViewStack.Count > 0;
 		}
 
-		// Token: 0x17009175 RID: 37237
-		// (get) Token: 0x0603ECC5 RID: 257221 RVA: 0x00F2A465 File Offset: 0x00F28665
+		// Token: 0x170064D7 RID: 25815
+		// (get) Token: 0x06033987 RID: 211335 RVA: 0x00E71279 File Offset: 0x00E6F479
 		public bool HostReady
 		{
 			get
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ECC6 RID: 257222 RVA: 0x00F2A470 File Offset: 0x00F28670
+		// Token: 0x06033988 RID: 211336 RVA: 0x00E71284 File Offset: 0x00E6F484
 		public void Dispose()
 		{
 			if (this.IsDisposed)
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.OnAllSubViewsFinished = null;
 		}
 
-		// Token: 0x0603ECC7 RID: 257223 RVA: 0x00F2A4E0 File Offset: 0x00F286E0
+		// Token: 0x06033989 RID: 211337 RVA: 0x00E712F4 File Offset: 0x00E6F4F4
 		[NullableContext(2)]
 		private RoverlikeActionSubViewBase GetTopActiveSubView()
 		{
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603ECC8 RID: 257224 RVA: 0x00F2A526 File Offset: 0x00F28726
+		// Token: 0x0603398A RID: 211338 RVA: 0x00E7133A File Offset: 0x00E6F53A
 		private void CheckAllFinished()
 		{
 			if (this.SubViewStack.Count > 0)
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.UnregisterHost();
 		}
 
-		// Token: 0x0603ECC9 RID: 257225 RVA: 0x00F2A550 File Offset: 0x00F28750
+		// Token: 0x0603398B RID: 211339 RVA: 0x00E71364 File Offset: 0x00E6F564
 		private unsafe void FinishWaitingSubView(RoverlikeActionSubViewBase subView)
 		{
 			int incId = subView.IncId;
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0603ECCA RID: 257226 RVA: 0x00F2A670 File Offset: 0x00F28870
+		// Token: 0x0603398C RID: 211340 RVA: 0x00E71484 File Offset: 0x00E6F684
 		private void RemoveFromStack(RoverlikeActionSubViewBase subView)
 		{
 			int num = -1;
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SubViewMap.Remove(subView.IncId);
 		}
 
-		// Token: 0x0603ECCB RID: 257227 RVA: 0x00F2A6CA File Offset: 0x00F288CA
+		// Token: 0x0603398D RID: 211341 RVA: 0x00E714DE File Offset: 0x00E6F6DE
 		[NullableContext(2)]
 		private RoverlikeActionStack GetActionStack()
 		{
@@ -329,39 +329,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return instance.ActionStack;
 		}
 
-		// Token: 0x04020CEF RID: 134383
+		// Token: 0x0401B61C RID: 112156
 		private readonly List<RoverlikeActionSubViewBase> SubViewStack = new List<RoverlikeActionSubViewBase>();
 
-		// Token: 0x04020CF0 RID: 134384
+		// Token: 0x0401B61D RID: 112157
 		private readonly Dictionary<int, RoverlikeActionSubViewBase> SubViewMap = new Dictionary<int, RoverlikeActionSubViewBase>();
 
-		// Token: 0x04020CF1 RID: 134385
+		// Token: 0x0401B61E RID: 112158
 		private readonly UiAsyncTaskManager TaskManager = new UiAsyncTaskManager();
 
-		// Token: 0x04020CF2 RID: 134386
+		// Token: 0x0401B61F RID: 112159
 		private readonly List<UiAsyncTask> PendingTasks = new List<UiAsyncTask>();
 
-		// Token: 0x04020CF3 RID: 134387
+		// Token: 0x0401B620 RID: 112160
 		private readonly Dictionary<int, UiAsyncTask> PendingTaskMap = new Dictionary<int, UiAsyncTask>();
 
-		// Token: 0x04020CF4 RID: 134388
+		// Token: 0x0401B621 RID: 112161
 		private int NextIncId = 1;
 
-		// Token: 0x04020CF5 RID: 134389
+		// Token: 0x0401B622 RID: 112162
 		public bool IsDisposed;
 
-		// Token: 0x04020CF6 RID: 134390
+		// Token: 0x0401B623 RID: 112163
 		[Nullable(2)]
 		private UUIItem HostParentItem;
 
-		// Token: 0x04020CF7 RID: 134391
+		// Token: 0x0401B624 RID: 112164
 		private bool IsHostReadyInternal;
 
-		// Token: 0x04020CF8 RID: 134392
+		// Token: 0x0401B625 RID: 112165
 		[Nullable(2)]
 		private RoverlikeBattleTopPanel ActionTopPanel;
 
-		// Token: 0x04020CF9 RID: 134393
+		// Token: 0x0401B626 RID: 112166
 		[Nullable(2)]
 		public Action OnAllSubViewsFinished;
 	}

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006389 RID: 25481
+	// Token: 0x020069FA RID: 27130
 	public class IClearPlayBubbleT
 	{
-		// Token: 0x1700BDF8 RID: 48632
-		// (get) Token: 0x0602C134 RID: 180532 RVA: 0x0060DCC1 File Offset: 0x0060BEC1
-		// (set) Token: 0x0602C135 RID: 180533 RVA: 0x0060DCC9 File Offset: 0x0060BEC9
+		// Token: 0x1700C780 RID: 51072
+		// (get) Token: 0x0602E89E RID: 190622 RVA: 0x00658E15 File Offset: 0x00657015
+		// (set) Token: 0x0602E89F RID: 190623 RVA: 0x00658E1D File Offset: 0x0065701D
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x1700BDF9 RID: 48633
-		// (get) Token: 0x0602C136 RID: 180534 RVA: 0x0060DCD2 File Offset: 0x0060BED2
-		// (set) Token: 0x0602C137 RID: 180535 RVA: 0x0060DCDA File Offset: 0x0060BEDA
+		// Token: 0x1700C781 RID: 51073
+		// (get) Token: 0x0602E8A0 RID: 190624 RVA: 0x00658E26 File Offset: 0x00657026
+		// (set) Token: 0x0602E8A1 RID: 190625 RVA: 0x00658E2E File Offset: 0x0065702E
 		public bool OnlyClearRedDot { get; set; }
 
-		// Token: 0x1700BDFA RID: 48634
-		// (get) Token: 0x0602C138 RID: 180536 RVA: 0x0060DCE3 File Offset: 0x0060BEE3
-		// (set) Token: 0x0602C139 RID: 180537 RVA: 0x0060DCEB File Offset: 0x0060BEEB
+		// Token: 0x1700C782 RID: 51074
+		// (get) Token: 0x0602E8A2 RID: 190626 RVA: 0x00658E37 File Offset: 0x00657037
+		// (set) Token: 0x0602E8A3 RID: 190627 RVA: 0x00658E3F File Offset: 0x0065703F
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C13A RID: 180538 RVA: 0x0060DCF4 File Offset: 0x0060BEF4
+		// Token: 0x0602E8A4 RID: 190628 RVA: 0x00658E48 File Offset: 0x00657048
 		public IClearPlayBubbleT()
 		{
 			this.EntityIds = null;

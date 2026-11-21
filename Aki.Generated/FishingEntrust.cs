@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C7C RID: 3196
+	// Token: 0x02000D60 RID: 3424
 	public struct FishingEntrust : IFlatbufferObject
 	{
-		// Token: 0x17001144 RID: 4420
-		// (get) Token: 0x06006F04 RID: 28420 RVA: 0x002304A0 File Offset: 0x0022E6A0
+		// Token: 0x170011A1 RID: 4513
+		// (get) Token: 0x0600750F RID: 29967 RVA: 0x0024F66C File Offset: 0x0024D86C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F05 RID: 28421 RVA: 0x002304AD File Offset: 0x0022E6AD
+		// Token: 0x06007510 RID: 29968 RVA: 0x0024F679 File Offset: 0x0024D879
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006F06 RID: 28422 RVA: 0x002304B4 File Offset: 0x0022E6B4
+		// Token: 0x06007511 RID: 29969 RVA: 0x0024F680 File Offset: 0x0024D880
 		public static FishingEntrust GetRootAsFishingEntrust(ByteBuffer _bb)
 		{
 			return FishingEntrust.GetRootAsFishingEntrust(_bb, default(FishingEntrust));
 		}
 
-		// Token: 0x06006F07 RID: 28423 RVA: 0x002304D0 File Offset: 0x0022E6D0
+		// Token: 0x06007512 RID: 29970 RVA: 0x0024F69C File Offset: 0x0024D89C
 		public static FishingEntrust GetRootAsFishingEntrust(ByteBuffer _bb, FishingEntrust obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006F08 RID: 28424 RVA: 0x002304ED File Offset: 0x0022E6ED
+		// Token: 0x06007513 RID: 29971 RVA: 0x0024F6B9 File Offset: 0x0024D8B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006F09 RID: 28425 RVA: 0x002304FC File Offset: 0x0022E6FC
+		// Token: 0x06007514 RID: 29972 RVA: 0x0024F6C8 File Offset: 0x0024D8C8
 		public FishingEntrust __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001145 RID: 4421
-		// (get) Token: 0x06006F0A RID: 28426 RVA: 0x0023050C File Offset: 0x0022E70C
+		// Token: 0x170011A2 RID: 4514
+		// (get) Token: 0x06007515 RID: 29973 RVA: 0x0024F6D8 File Offset: 0x0024D8D8
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001146 RID: 4422
-		// (get) Token: 0x06006F0B RID: 28427 RVA: 0x00230548 File Offset: 0x0022E748
+		// Token: 0x170011A3 RID: 4515
+		// (get) Token: 0x06007516 RID: 29974 RVA: 0x0024F714 File Offset: 0x0024D914
 		public string Name
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F0C RID: 28428 RVA: 0x0023057F File Offset: 0x0022E77F
+		// Token: 0x06007517 RID: 29975 RVA: 0x0024F74B File Offset: 0x0024D94B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06006F0D RID: 28429 RVA: 0x0023058E File Offset: 0x0022E78E
+		// Token: 0x06007518 RID: 29976 RVA: 0x0024F75A File Offset: 0x0024D95A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001147 RID: 4423
-		// (get) Token: 0x06006F0E RID: 28430 RVA: 0x002305A8 File Offset: 0x0022E7A8
+		// Token: 0x170011A4 RID: 4516
+		// (get) Token: 0x06007519 RID: 29977 RVA: 0x0024F774 File Offset: 0x0024D974
 		public bool IsNight
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001148 RID: 4424
-		// (get) Token: 0x06006F0F RID: 28431 RVA: 0x002305E8 File Offset: 0x0022E7E8
+		// Token: 0x170011A5 RID: 4517
+		// (get) Token: 0x0600751A RID: 29978 RVA: 0x0024F7B4 File Offset: 0x0024D9B4
 		public string Desc
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F10 RID: 28432 RVA: 0x00230620 File Offset: 0x0022E820
+		// Token: 0x0600751B RID: 29979 RVA: 0x0024F7EC File Offset: 0x0024D9EC
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06006F11 RID: 28433 RVA: 0x00230630 File Offset: 0x0022E830
+		// Token: 0x0600751C RID: 29980 RVA: 0x0024F7FC File Offset: 0x0024D9FC
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001149 RID: 4425
-		// (get) Token: 0x06006F12 RID: 28434 RVA: 0x00230648 File Offset: 0x0022E848
+		// Token: 0x170011A6 RID: 4518
+		// (get) Token: 0x0600751D RID: 29981 RVA: 0x0024F814 File Offset: 0x0024DA14
 		public int PreviewItem
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700114A RID: 4426
-		// (get) Token: 0x06006F13 RID: 28435 RVA: 0x00230688 File Offset: 0x0022E888
+		// Token: 0x170011A7 RID: 4519
+		// (get) Token: 0x0600751E RID: 29982 RVA: 0x0024F854 File Offset: 0x0024DA54
 		public int Star
 		{
 			get
@@ -161,8 +161,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700114B RID: 4427
-		// (get) Token: 0x06006F14 RID: 28436 RVA: 0x002306C8 File Offset: 0x0022E8C8
+		// Token: 0x170011A8 RID: 4520
+		// (get) Token: 0x0600751F RID: 29983 RVA: 0x0024F894 File Offset: 0x0024DA94
 		public int EntrustType
 		{
 			get
@@ -176,8 +176,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700114C RID: 4428
-		// (get) Token: 0x06006F15 RID: 28437 RVA: 0x00230708 File Offset: 0x0022E908
+		// Token: 0x170011A9 RID: 4521
+		// (get) Token: 0x06007520 RID: 29984 RVA: 0x0024F8D4 File Offset: 0x0024DAD4
 		public int EntrustPool
 		{
 			get
@@ -191,8 +191,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700114D RID: 4429
-		// (get) Token: 0x06006F16 RID: 28438 RVA: 0x00230748 File Offset: 0x0022E948
+		// Token: 0x170011AA RID: 4522
+		// (get) Token: 0x06007521 RID: 29985 RVA: 0x0024F914 File Offset: 0x0024DB14
 		public int UnlockCondition
 		{
 			get
@@ -206,7 +206,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F17 RID: 28439 RVA: 0x00230788 File Offset: 0x0022E988
+		// Token: 0x06007522 RID: 29986 RVA: 0x0024F954 File Offset: 0x0024DB54
 		public DicIntInt? EntrustTarget(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -217,8 +217,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700114E RID: 4430
-		// (get) Token: 0x06006F18 RID: 28440 RVA: 0x002307EC File Offset: 0x0022E9EC
+		// Token: 0x170011AB RID: 4523
+		// (get) Token: 0x06007523 RID: 29987 RVA: 0x0024F9B8 File Offset: 0x0024DBB8
 		public int EntrustTargetLength
 		{
 			get
@@ -232,8 +232,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700114F RID: 4431
-		// (get) Token: 0x06006F19 RID: 28441 RVA: 0x00230818 File Offset: 0x0022EA18
+		// Token: 0x170011AC RID: 4524
+		// (get) Token: 0x06007524 RID: 29988 RVA: 0x0024F9E4 File Offset: 0x0024DBE4
 		public int EntrustDestination
 		{
 			get
@@ -247,7 +247,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F1A RID: 28442 RVA: 0x00230858 File Offset: 0x0022EA58
+		// Token: 0x06007525 RID: 29989 RVA: 0x0024FA24 File Offset: 0x0024DC24
 		public DicIntInt? EntrustReward(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -258,8 +258,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001150 RID: 4432
-		// (get) Token: 0x06006F1B RID: 28443 RVA: 0x002308BC File Offset: 0x0022EABC
+		// Token: 0x170011AD RID: 4525
+		// (get) Token: 0x06007526 RID: 29990 RVA: 0x0024FA88 File Offset: 0x0024DC88
 		public int EntrustRewardLength
 		{
 			get
@@ -273,8 +273,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001151 RID: 4433
-		// (get) Token: 0x06006F1C RID: 28444 RVA: 0x002308E8 File Offset: 0x0022EAE8
+		// Token: 0x170011AE RID: 4526
+		// (get) Token: 0x06007527 RID: 29991 RVA: 0x0024FAB4 File Offset: 0x0024DCB4
 		public int AccessPath
 		{
 			get
@@ -288,7 +288,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F1D RID: 28445 RVA: 0x00230928 File Offset: 0x0022EB28
+		// Token: 0x06007528 RID: 29992 RVA: 0x0024FAF4 File Offset: 0x0024DCF4
 		public DicIntString? TargetDesText(int j)
 		{
 			int num = this.__p.__offset(30);
@@ -299,8 +299,8 @@ namespace Aki.Config
 			return new DicIntString?(default(DicIntString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17001152 RID: 4434
-		// (get) Token: 0x06006F1E RID: 28446 RVA: 0x0023098C File Offset: 0x0022EB8C
+		// Token: 0x170011AF RID: 4527
+		// (get) Token: 0x06007529 RID: 29993 RVA: 0x0024FB58 File Offset: 0x0024DD58
 		public int TargetDesTextLength
 		{
 			get
@@ -314,58 +314,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006F1F RID: 28447 RVA: 0x002309B8 File Offset: 0x0022EBB8
+		// Token: 0x0600752A RID: 29994 RVA: 0x0024FB84 File Offset: 0x0024DD84
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用EntrustRewardFrozenDict()缓存字典，遍历请使用EntrustRewardIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> EntrustReward()
+		public Dictionary<int, int> EntrustReward()
 		{
 			return this.EntrustRewardIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006F20 RID: 28448 RVA: 0x00230A0E File Offset: 0x0022EC0E
+		// Token: 0x0600752B RID: 29995 RVA: 0x0024FBDA File Offset: 0x0024DDDA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> EntrustRewardIter()
+		public IEnumerable<DicIntInt> EntrustRewardIter()
 		{
 			FishingEntrust.<EntrustRewardIter>d__44 <EntrustRewardIter>d__ = new FishingEntrust.<EntrustRewardIter>d__44(-2);
 			<EntrustRewardIter>d__.<>3__<>4__this = this;
 			return <EntrustRewardIter>d__;
 		}
 
-		// Token: 0x06006F21 RID: 28449 RVA: 0x00230A24 File Offset: 0x0022EC24
+		// Token: 0x0600752C RID: 29996 RVA: 0x0024FBF0 File Offset: 0x0024DDF0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用EntrustTargetFrozenDict()缓存字典，遍历请使用EntrustTargetIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> EntrustTarget()
+		public Dictionary<int, int> EntrustTarget()
 		{
 			return this.EntrustTargetIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006F22 RID: 28450 RVA: 0x00230A7A File Offset: 0x0022EC7A
+		// Token: 0x0600752D RID: 29997 RVA: 0x0024FC46 File Offset: 0x0024DE46
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> EntrustTargetIter()
+		public IEnumerable<DicIntInt> EntrustTargetIter()
 		{
 			FishingEntrust.<EntrustTargetIter>d__46 <EntrustTargetIter>d__ = new FishingEntrust.<EntrustTargetIter>d__46(-2);
 			<EntrustTargetIter>d__.<>3__<>4__this = this;
 			return <EntrustTargetIter>d__;
 		}
 
-		// Token: 0x06006F23 RID: 28451 RVA: 0x00230A90 File Offset: 0x0022EC90
+		// Token: 0x0600752E RID: 29998 RVA: 0x0024FC5C File Offset: 0x0024DE5C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TargetDesTextFrozenDict()缓存字典，遍历请使用TargetDesTextIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, string> TargetDesText()
+		public Dictionary<int, string> TargetDesText()
 		{
 			return this.TargetDesTextIter().ToDictionary((DicIntString element) => element.Key, (DicIntString element) => element.Value);
 		}
 
-		// Token: 0x06006F24 RID: 28452 RVA: 0x00230AE6 File Offset: 0x0022ECE6
+		// Token: 0x0600752F RID: 29999 RVA: 0x0024FCB2 File Offset: 0x0024DEB2
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntString> TargetDesTextIter()
+		public IEnumerable<DicIntString> TargetDesTextIter()
 		{
 			FishingEntrust.<TargetDesTextIter>d__48 <TargetDesTextIter>d__ = new FishingEntrust.<TargetDesTextIter>d__48(-2);
 			<TargetDesTextIter>d__.<>3__<>4__this = this;
 			return <TargetDesTextIter>d__;
 		}
 
-		// Token: 0x06006F25 RID: 28453 RVA: 0x00230AFC File Offset: 0x0022ECFC
+		// Token: 0x06007530 RID: 30000 RVA: 0x0024FCC8 File Offset: 0x0024DEC8
 		public int? GetEntrustReward(int key)
 		{
 			this.EnsureEntrustRewardCacheIfNeeded();
@@ -377,7 +374,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006F26 RID: 28454 RVA: 0x00230B30 File Offset: 0x0022ED30
+		// Token: 0x06007531 RID: 30001 RVA: 0x0024FCFC File Offset: 0x0024DEFC
 		public int? GetEntrustTarget(int key)
 		{
 			this.EnsureEntrustTargetCacheIfNeeded();
@@ -389,7 +386,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006F27 RID: 28455 RVA: 0x00230B64 File Offset: 0x0022ED64
+		// Token: 0x06007532 RID: 30002 RVA: 0x0024FD30 File Offset: 0x0024DF30
 		[NullableContext(2)]
 		public string GetTargetDesText(int key)
 		{
@@ -402,7 +399,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x06006F28 RID: 28456 RVA: 0x00230B8C File Offset: 0x0022ED8C
+		// Token: 0x06007533 RID: 30003 RVA: 0x0024FD58 File Offset: 0x0024DF58
 		private void EnsureEntrustRewardCacheIfNeeded()
 		{
 			if (this.EntrustRewardCache != null)
@@ -412,7 +409,7 @@ namespace Aki.Config
 			this.EntrustRewardCache = this.EntrustRewardIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006F29 RID: 28457 RVA: 0x00230BF4 File Offset: 0x0022EDF4
+		// Token: 0x06007534 RID: 30004 RVA: 0x0024FDC0 File Offset: 0x0024DFC0
 		private void EnsureEntrustTargetCacheIfNeeded()
 		{
 			if (this.EntrustTargetCache != null)
@@ -422,7 +419,7 @@ namespace Aki.Config
 			this.EntrustTargetCache = this.EntrustTargetIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006F2A RID: 28458 RVA: 0x00230C5C File Offset: 0x0022EE5C
+		// Token: 0x06007535 RID: 30005 RVA: 0x0024FE28 File Offset: 0x0024E028
 		private void EnsureTargetDesTextCacheIfNeeded()
 		{
 			if (this.TargetDesTextCache != null)
@@ -432,46 +429,42 @@ namespace Aki.Config
 			this.TargetDesTextCache = this.TargetDesTextIter().ToFrozenDictionary((DicIntString kvp) => kvp.Key, (DicIntString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006F2B RID: 28459 RVA: 0x00230CC2 File Offset: 0x0022EEC2
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetEntrustRewardFrozenDict(int key)
+		// Token: 0x06007536 RID: 30006 RVA: 0x0024FE8E File Offset: 0x0024E08E
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetEntrustRewardFrozenDict()
 		{
 			this.EnsureEntrustRewardCacheIfNeeded();
 			return this.EntrustRewardCache;
 		}
 
-		// Token: 0x06006F2C RID: 28460 RVA: 0x00230CD0 File Offset: 0x0022EED0
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetEntrustTargetFrozenDict(int key)
+		// Token: 0x06007537 RID: 30007 RVA: 0x0024FE9C File Offset: 0x0024E09C
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetEntrustTargetFrozenDict()
 		{
 			this.EnsureEntrustTargetCacheIfNeeded();
 			return this.EntrustTargetCache;
 		}
 
-		// Token: 0x06006F2D RID: 28461 RVA: 0x00230CDE File Offset: 0x0022EEDE
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		public FrozenDictionary<int, string> GetTargetDesTextFrozenDict(int key)
+		// Token: 0x06007538 RID: 30008 RVA: 0x0024FEAA File Offset: 0x0024E0AA
+		[NullableContext(1)]
+		public FrozenDictionary<int, string> GetTargetDesTextFrozenDict()
 		{
 			this.EnsureTargetDesTextCacheIfNeeded();
 			return this.TargetDesTextCache;
 		}
 
-		// Token: 0x04004CC8 RID: 19656
+		// Token: 0x040052AC RID: 21164
 		private Table __p;
 
-		// Token: 0x04004CC9 RID: 19657
+		// Token: 0x040052AD RID: 21165
 		[Nullable(2)]
 		private FrozenDictionary<int, int> EntrustRewardCache;
 
-		// Token: 0x04004CCA RID: 19658
+		// Token: 0x040052AE RID: 21166
 		[Nullable(2)]
 		private FrozenDictionary<int, int> EntrustTargetCache;
 
-		// Token: 0x04004CCB RID: 19659
+		// Token: 0x040052AF RID: 21167
 		[Nullable(new byte[]
 		{
 			2,

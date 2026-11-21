@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011FD RID: 4605
+	// Token: 0x02001239 RID: 4665
 	[NetMessage(EMessageId.ShortMessageChatCharmChangeRequest)]
 	public sealed class ShortMessageChatCharmChangeRequest : IMessage<ShortMessageChatCharmChangeRequest>, IMessage, IEquatable<ShortMessageChatCharmChangeRequest>, IDeepCloneable<ShortMessageChatCharmChangeRequest>, IBufferMessage
 	{
-		// Token: 0x060188CD RID: 100557 RVA: 0x00392070 File Offset: 0x00390270
+		// Token: 0x06018EA7 RID: 102055 RVA: 0x003A1F10 File Offset: 0x003A0110
 		[NullableContext(1)]
 		public static ShortMessageChatCharmChangeRequest Create()
 		{
 			return new ShortMessageChatCharmChangeRequest();
 		}
 
-		// Token: 0x170052B3 RID: 21171
-		// (get) Token: 0x060188CE RID: 100558 RVA: 0x00392077 File Offset: 0x00390277
+		// Token: 0x17005430 RID: 21552
+		// (get) Token: 0x06018EA8 RID: 102056 RVA: 0x003A1F17 File Offset: 0x003A0117
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170052B4 RID: 21172
-		// (get) Token: 0x060188CF RID: 100559 RVA: 0x0039207A File Offset: 0x0039027A
+		// Token: 0x17005431 RID: 21553
+		// (get) Token: 0x06018EA9 RID: 102057 RVA: 0x003A1F1A File Offset: 0x003A011A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060188D0 RID: 100560 RVA: 0x00392081 File Offset: 0x00390281
+		// Token: 0x06018EAA RID: 102058 RVA: 0x003A1F21 File Offset: 0x003A0121
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageChatCharmChangeRequest()
 		{
 		}
 
-		// Token: 0x060188D1 RID: 100561 RVA: 0x00392089 File Offset: 0x00390289
+		// Token: 0x06018EAB RID: 102059 RVA: 0x003A1F29 File Offset: 0x003A0129
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageChatCharmChangeRequest(ShortMessageChatCharmChangeRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060188D2 RID: 100562 RVA: 0x003920AE File Offset: 0x003902AE
+		// Token: 0x06018EAC RID: 102060 RVA: 0x003A1F4E File Offset: 0x003A014E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShortMessageChatCharmChangeRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new ShortMessageChatCharmChangeRequest(this);
 		}
 
-		// Token: 0x170052B5 RID: 21173
-		// (get) Token: 0x060188D3 RID: 100563 RVA: 0x003920B6 File Offset: 0x003902B6
-		// (set) Token: 0x060188D4 RID: 100564 RVA: 0x003920BE File Offset: 0x003902BE
+		// Token: 0x17005432 RID: 21554
+		// (get) Token: 0x06018EAD RID: 102061 RVA: 0x003A1F56 File Offset: 0x003A0156
+		// (set) Token: 0x06018EAE RID: 102062 RVA: 0x003A1F5E File Offset: 0x003A015E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChatCharmId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060188D5 RID: 100565 RVA: 0x003920C7 File Offset: 0x003902C7
+		// Token: 0x06018EAF RID: 102063 RVA: 0x003A1F67 File Offset: 0x003A0167
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ShortMessageChatCharmChangeRequest);
 		}
 
-		// Token: 0x060188D6 RID: 100566 RVA: 0x003920D5 File Offset: 0x003902D5
+		// Token: 0x06018EB0 RID: 102064 RVA: 0x003A1F75 File Offset: 0x003A0175
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ShortMessageChatCharmChangeRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChatCharmId == other.ChatCharmId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060188D7 RID: 100567 RVA: 0x00392104 File Offset: 0x00390304
+		// Token: 0x06018EB1 RID: 102065 RVA: 0x003A1FA4 File Offset: 0x003A01A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060188D8 RID: 100568 RVA: 0x00392143 File Offset: 0x00390343
+		// Token: 0x06018EB2 RID: 102066 RVA: 0x003A1FE3 File Offset: 0x003A01E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060188D9 RID: 100569 RVA: 0x00392150 File Offset: 0x00390350
+		// Token: 0x06018EB3 RID: 102067 RVA: 0x003A1FF0 File Offset: 0x003A01F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060188DA RID: 100570 RVA: 0x00392159 File Offset: 0x00390359
+		// Token: 0x06018EB4 RID: 102068 RVA: 0x003A1FF9 File Offset: 0x003A01F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ChatCharmId != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.ChatCharmId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060188DB RID: 100571 RVA: 0x0039218C File Offset: 0x0039038C
+		// Token: 0x06018EB5 RID: 102069 RVA: 0x003A202C File Offset: 0x003A022C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060188DC RID: 100572 RVA: 0x003921CA File Offset: 0x003903CA
+		// Token: 0x06018EB6 RID: 102070 RVA: 0x003A206A File Offset: 0x003A026A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ShortMessageChatCharmChangeRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060188DD RID: 100573 RVA: 0x003921FB File Offset: 0x003903FB
+		// Token: 0x06018EB7 RID: 102071 RVA: 0x003A209B File Offset: 0x003A029B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060188DE RID: 100574 RVA: 0x00392204 File Offset: 0x00390404
+		// Token: 0x06018EB8 RID: 102072 RVA: 0x003A20A4 File Offset: 0x003A02A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 112U)
+				if (num != 80U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400911A RID: 37146
+		// Token: 0x040093CB RID: 37835
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400911B RID: 37147
-		public const int ChatCharmIdFieldNumber = 14;
+		// Token: 0x040093CC RID: 37836
+		public const int ChatCharmIdFieldNumber = 10;
 
-		// Token: 0x0400911C RID: 37148
+		// Token: 0x040093CD RID: 37837
 		private int chatCharmId_;
 	}
 }

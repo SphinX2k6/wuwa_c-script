@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A78 RID: 2680
+	// Token: 0x02000B42 RID: 2882
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IInteractPointIconConfig
 	{
-		// Token: 0x06003DB6 RID: 15798 RVA: 0x0009E3E5 File Offset: 0x0009C5E5
-		[NullableContext(1)]
+		// Token: 0x060041DF RID: 16863 RVA: 0x000A799D File Offset: 0x000A5B9D
+		[NullableContext(0)]
 		public static IInteractPointIconConfig Create(IInteractPointIconConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E83 RID: 3715
-		// (get) Token: 0x06003DB7 RID: 15799 RVA: 0x0009E404 File Offset: 0x0009C604
+		// Token: 0x17000F56 RID: 3926
+		// (get) Token: 0x060041E0 RID: 16864 RVA: 0x000A79BC File Offset: 0x000A5BBC
 		public virtual float MaxShowDistance
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E84 RID: 3716
-		// (get) Token: 0x06003DB8 RID: 15800 RVA: 0x0009E411 File Offset: 0x0009C611
+		// Token: 0x17000F57 RID: 3927
+		// (get) Token: 0x060041E1 RID: 16865 RVA: 0x000A79C9 File Offset: 0x000A5BC9
 		public virtual VectorInfo Offset
 		{
 			get
@@ -50,13 +50,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400225D RID: 8797
+		// Token: 0x04002479 RID: 9337
 		private IInteractPointIconConfig Instance;
 
-		// Token: 0x0400225E RID: 8798
+		// Token: 0x0400247A RID: 9338
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x0400225F RID: 8799
+		// Token: 0x0400247B RID: 9339
 		private bool _OffsetInited;
 	}
 }

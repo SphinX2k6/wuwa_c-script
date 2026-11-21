@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E42 RID: 7746
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002077 RID: 8311
 	public class ISetSpineAnimationType
 	{
-		// Token: 0x0600A5BF RID: 42431 RVA: 0x001775FC File Offset: 0x001757FC
+		// Token: 0x0600B077 RID: 45175 RVA: 0x0018D2FC File Offset: 0x0018B4FC
 		private ISetSpineAnimationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5C0 RID: 42432 RVA: 0x00177634 File Offset: 0x00175834
+		// Token: 0x0600B078 RID: 45176 RVA: 0x0018D334 File Offset: 0x0018B534
 		public static ISetSpineAnimationType Create([Nullable(2)] ISetSpineAnimationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5C1 RID: 42433 RVA: 0x00177647 File Offset: 0x00175847
+		// Token: 0x0600B079 RID: 45177 RVA: 0x0018D347 File Offset: 0x0018B547
 		public static ISetSpineAnimationType CreateFromSetValue([Nullable(2)] ISetSpineAnimationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5C2 RID: 42434 RVA: 0x0017765A File Offset: 0x0017585A
+		// Token: 0x0600B07A RID: 45178 RVA: 0x0018D35A File Offset: 0x0018B55A
 		public ISetSpineAnimationType_SetValue ToSetValue()
 		{
 			return new ISetSpineAnimationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032D3 RID: 13011
-		// (get) Token: 0x0600A5C3 RID: 42435 RVA: 0x0017766D File Offset: 0x0017586D
-		// (set) Token: 0x0600A5C4 RID: 42436 RVA: 0x00177698 File Offset: 0x00175898
+		// Token: 0x17003597 RID: 13719
+		// (get) Token: 0x0600B07B RID: 45179 RVA: 0x0018D36D File Offset: 0x0018B56D
+		// (set) Token: 0x0600B07C RID: 45180 RVA: 0x0018D398 File Offset: 0x0018B598
 		public virtual ESetSpineAnimation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006316 RID: 25366
+		// Token: 0x040068FA RID: 26874
 		[Nullable(2)]
 		protected ISetSpineAnimationType FbInstance;
 
-		// Token: 0x04006317 RID: 25367
+		// Token: 0x040068FB RID: 26875
 		[Nullable(2)]
 		protected ISetSpineAnimationType_SetValue PocoInterface;
 	}

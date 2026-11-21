@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DEF RID: 28143
+	// Token: 0x0200756A RID: 30058
 	public struct IQiuyuanQinggongStraight : IFlatbufferObject
 	{
-		// Token: 0x1700D1BD RID: 53693
-		// (get) Token: 0x06031B49 RID: 203593 RVA: 0x006BB14D File Offset: 0x006B934D
+		// Token: 0x1700DD05 RID: 56581
+		// (get) Token: 0x06034B45 RID: 215877 RVA: 0x00716835 File Offset: 0x00714A35
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B4A RID: 203594 RVA: 0x006BB15A File Offset: 0x006B935A
+		// Token: 0x06034B46 RID: 215878 RVA: 0x00716842 File Offset: 0x00714A42
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031B4B RID: 203595 RVA: 0x006BB164 File Offset: 0x006B9364
+		// Token: 0x06034B47 RID: 215879 RVA: 0x0071684C File Offset: 0x00714A4C
 		public static IQiuyuanQinggongStraight GetRootAsIQiuyuanQinggongStraight(ByteBuffer _bb)
 		{
 			return IQiuyuanQinggongStraight.GetRootAsIQiuyuanQinggongStraight(_bb, default(IQiuyuanQinggongStraight));
 		}
 
-		// Token: 0x06031B4C RID: 203596 RVA: 0x006BB180 File Offset: 0x006B9380
+		// Token: 0x06034B48 RID: 215880 RVA: 0x00716868 File Offset: 0x00714A68
 		public static IQiuyuanQinggongStraight GetRootAsIQiuyuanQinggongStraight(ByteBuffer _bb, IQiuyuanQinggongStraight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031B4D RID: 203597 RVA: 0x006BB19D File Offset: 0x006B939D
+		// Token: 0x06034B49 RID: 215881 RVA: 0x00716885 File Offset: 0x00714A85
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031B4E RID: 203598 RVA: 0x006BB1AC File Offset: 0x006B93AC
+		// Token: 0x06034B4A RID: 215882 RVA: 0x00716894 File Offset: 0x00714A94
 		public IQiuyuanQinggongStraight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D1BE RID: 53694
-		// (get) Token: 0x06031B4F RID: 203599 RVA: 0x006BB1BC File Offset: 0x006B93BC
+		// Token: 0x1700DD06 RID: 56582
+		// (get) Token: 0x06034B4B RID: 215883 RVA: 0x007168A4 File Offset: 0x00714AA4
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031B50 RID: 203600 RVA: 0x006BB1F8 File Offset: 0x006B93F8
+		// Token: 0x06034B4C RID: 215884 RVA: 0x007168E0 File Offset: 0x00714AE0
 		public static Offset<IQiuyuanQinggongStraight> CreateIQiuyuanQinggongStraight(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQiuyuanQinggongStraight.EndIQiuyuanQinggongStraight(builder);
 		}
 
-		// Token: 0x06031B51 RID: 203601 RVA: 0x006BB20E File Offset: 0x006B940E
+		// Token: 0x06034B4D RID: 215885 RVA: 0x007168F6 File Offset: 0x00714AF6
 		public static void StartIQiuyuanQinggongStraight(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031B52 RID: 203602 RVA: 0x006BB217 File Offset: 0x006B9417
+		// Token: 0x06034B4E RID: 215886 RVA: 0x007168FF File Offset: 0x00714AFF
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031B53 RID: 203603 RVA: 0x006BB222 File Offset: 0x006B9422
+		// Token: 0x06034B4F RID: 215887 RVA: 0x0071690A File Offset: 0x00714B0A
 		public static Offset<IQiuyuanQinggongStraight> EndIQiuyuanQinggongStraight(FlatBufferBuilder builder)
 		{
 			return new Offset<IQiuyuanQinggongStraight>(builder.EndTable());
 		}
 
-		// Token: 0x06031B54 RID: 203604 RVA: 0x006BB230 File Offset: 0x006B9430
+		// Token: 0x06034B50 RID: 215888 RVA: 0x00716918 File Offset: 0x00714B18
 		public IQiuyuanQinggongStraightT UnPack()
 		{
 			IQiuyuanQinggongStraightT qiuyuanQinggongStraightT = new IQiuyuanQinggongStraightT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return qiuyuanQinggongStraightT;
 		}
 
-		// Token: 0x06031B55 RID: 203605 RVA: 0x006BB24B File Offset: 0x006B944B
+		// Token: 0x06034B51 RID: 215889 RVA: 0x00716933 File Offset: 0x00714B33
 		public void UnPackTo(IQiuyuanQinggongStraightT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06031B56 RID: 203606 RVA: 0x006BB25C File Offset: 0x006B945C
+		// Token: 0x06034B52 RID: 215890 RVA: 0x00716944 File Offset: 0x00714B44
 		public static Offset<IQiuyuanQinggongStraight> Pack(FlatBufferBuilder builder, IQiuyuanQinggongStraightT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IQiuyuanQinggongStraight.CreateIQiuyuanQinggongStraight(builder, _o.Type);
 		}
 
-		// Token: 0x040117CA RID: 71626
+		// Token: 0x04012746 RID: 75590
 		private Table __p;
 	}
 }

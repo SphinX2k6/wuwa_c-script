@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.RoleUi;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C01 RID: 7169
+// Token: 0x020010C0 RID: 4288
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationEditView : UiViewBase
 {
-	// Token: 0x0600D604 RID: 54788 RVA: 0x0031706C File Offset: 0x0031526C
+	// Token: 0x0600AA17 RID: 43543 RVA: 0x00322344 File Offset: 0x00320544
 	public FormationEditView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D605 RID: 54789 RVA: 0x003170CC File Offset: 0x003152CC
+	// Token: 0x0600AA18 RID: 43544 RVA: 0x003223A4 File Offset: 0x003205A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -54,13 +53,13 @@ public class FormationEditView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D606 RID: 54790 RVA: 0x0031723A File Offset: 0x0031543A
+	// Token: 0x0600AA19 RID: 43545 RVA: 0x00322512 File Offset: 0x00320712
 	protected override bool OnCheckIfNeedScene()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.Formation3DView);
 	}
 
-	// Token: 0x0600D607 RID: 54791 RVA: 0x0031724C File Offset: 0x0031544C
+	// Token: 0x0600AA1A RID: 43546 RVA: 0x00322524 File Offset: 0x00320724
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FormationEditView.<OnBeforeStartAsync>d__36 <OnBeforeStartAsync>d__;
@@ -71,7 +70,7 @@ public class FormationEditView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D608 RID: 54792 RVA: 0x00317290 File Offset: 0x00315490
+	// Token: 0x0600AA1B RID: 43547 RVA: 0x00322568 File Offset: 0x00320768
 	protected override void OnStart()
 	{
 		IFormationEditViewData formationEditViewData = this.OpenParam as IFormationEditViewData;
@@ -93,7 +92,7 @@ public class FormationEditView : UiViewBase
 		base.RefreshUiBlurBehaviour();
 	}
 
-	// Token: 0x0600D609 RID: 54793 RVA: 0x003173F8 File Offset: 0x003155F8
+	// Token: 0x0600AA1C RID: 43548 RVA: 0x003226D0 File Offset: 0x003208D0
 	private FormationEditItem CreateFormationItem()
 	{
 		return new FormationEditItem
@@ -106,7 +105,7 @@ public class FormationEditView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D60A RID: 54794 RVA: 0x00317460 File Offset: 0x00315660
+	// Token: 0x0600AA1D RID: 43549 RVA: 0x00322738 File Offset: 0x00320938
 	protected override void OnBeforeDestroy()
 	{
 		if (this.IsGamePadSort)
@@ -130,7 +129,7 @@ public class FormationEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D60B RID: 54795 RVA: 0x003174C0 File Offset: 0x003156C0
+	// Token: 0x0600AA1E RID: 43550 RVA: 0x00322798 File Offset: 0x00320998
 	protected override void OnAfterDestroy()
 	{
 		Action closeCallback = this.CloseCallback;
@@ -150,7 +149,7 @@ public class FormationEditView : UiViewBase
 		this.ConfirmCallback = null;
 	}
 
-	// Token: 0x0600D60C RID: 54796 RVA: 0x003174FC File Offset: 0x003156FC
+	// Token: 0x0600AA1F RID: 43551 RVA: 0x003227D4 File Offset: 0x003209D4
 	private void RefreshFormationList(bool hideUntilScrolled = false)
 	{
 		List<int> formationIdList = this.DisplayFormationIds;
@@ -177,7 +176,7 @@ public class FormationEditView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600D60D RID: 54797 RVA: 0x0031758C File Offset: 0x0031578C
+	// Token: 0x0600AA20 RID: 43552 RVA: 0x00322864 File Offset: 0x00320A64
 	private static List<int> BuildFormationIdList()
 	{
 		List<int> list = new List<int>();
@@ -189,7 +188,7 @@ public class FormationEditView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x0600D60E RID: 54798 RVA: 0x003175BE File Offset: 0x003157BE
+	// Token: 0x0600AA21 RID: 43553 RVA: 0x00322896 File Offset: 0x00320A96
 	private bool OnFormationItemSelect(int formationId, int gridIndex)
 	{
 		if (this.SwitchFormationCallback != null && !this.SwitchFormationCallback(formationId))
@@ -202,7 +201,7 @@ public class FormationEditView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600D60F RID: 54799 RVA: 0x003175F4 File Offset: 0x003157F4
+	// Token: 0x0600AA22 RID: 43554 RVA: 0x003228CC File Offset: 0x00320ACC
 	private void OnItemDragBegin(FormationEditItem item, [Nullable(2)] ULGUIPointerEventData eventData)
 	{
 		if (this.DraggingItem != null || this.IsReorderRequesting || eventData == null || this.FormationScrollView == null)
@@ -238,7 +237,7 @@ public class FormationEditView : UiViewBase
 		this.ScrollComp.OnLateUpdate.Bind(new Action<float>(this.OnDragTick));
 	}
 
-	// Token: 0x0600D610 RID: 54800 RVA: 0x00317740 File Offset: 0x00315940
+	// Token: 0x0600AA23 RID: 43555 RVA: 0x00322A18 File Offset: 0x00320C18
 	[NullableContext(2)]
 	private void OnItemDragMove(ULGUIPointerEventData eventData)
 	{
@@ -259,7 +258,7 @@ public class FormationEditView : UiViewBase
 		this.ApplyDragTargetSlot();
 	}
 
-	// Token: 0x0600D611 RID: 54801 RVA: 0x00317810 File Offset: 0x00315A10
+	// Token: 0x0600AA24 RID: 43556 RVA: 0x00322AE8 File Offset: 0x00320CE8
 	private void OnItemDragEnd()
 	{
 		if (this.DraggingItem == null || this.FormationScrollView == null)
@@ -281,7 +280,7 @@ public class FormationEditView : UiViewBase
 		this.TryRequestReorder();
 	}
 
-	// Token: 0x0600D612 RID: 54802 RVA: 0x00317898 File Offset: 0x00315A98
+	// Token: 0x0600AA25 RID: 43557 RVA: 0x00322B70 File Offset: 0x00320D70
 	private bool SnapshotDragSlots()
 	{
 		this.DragSlotCenters.Clear();
@@ -301,7 +300,7 @@ public class FormationEditView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600D613 RID: 54803 RVA: 0x00317938 File Offset: 0x00315B38
+	// Token: 0x0600AA26 RID: 43558 RVA: 0x00322C10 File Offset: 0x00320E10
 	private void RestoreDragSlotOffsets()
 	{
 		for (int i = 0; i < this.DragSlotOffsetYs.Count; i++)
@@ -315,7 +314,7 @@ public class FormationEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D614 RID: 54804 RVA: 0x00317990 File Offset: 0x00315B90
+	// Token: 0x0600AA27 RID: 43559 RVA: 0x00322C68 File Offset: 0x00320E68
 	private void TryRequestReorder()
 	{
 		int num = this.DisplayFormationIds[this.DragCurSlot];
@@ -327,7 +326,7 @@ public class FormationEditView : UiViewBase
 		this.RequestReorderFormation(num, num2);
 	}
 
-	// Token: 0x0600D615 RID: 54805 RVA: 0x003179C8 File Offset: 0x00315BC8
+	// Token: 0x0600AA28 RID: 43560 RVA: 0x00322CA0 File Offset: 0x00320EA0
 	private UniTask RequestReorderFormation(int formationId, int targetId)
 	{
 		FormationEditView.<RequestReorderFormation>d__50 <RequestReorderFormation>d__;
@@ -340,7 +339,7 @@ public class FormationEditView : UiViewBase
 		return <RequestReorderFormation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D616 RID: 54806 RVA: 0x00317A1B File Offset: 0x00315C1B
+	// Token: 0x0600AA29 RID: 43561 RVA: 0x00322CF3 File Offset: 0x00320EF3
 	private static int GetReorderedId(int oldId, int fromId, int targetId)
 	{
 		if (oldId == fromId)
@@ -358,7 +357,7 @@ public class FormationEditView : UiViewBase
 		return oldId;
 	}
 
-	// Token: 0x0600D617 RID: 54807 RVA: 0x00317A44 File Offset: 0x00315C44
+	// Token: 0x0600AA2A RID: 43562 RVA: 0x00322D1C File Offset: 0x00320F1C
 	private void ApplyDragTargetSlot()
 	{
 		double num = (double)this.ScrollComp.ContentUIItem.Get().GetUIWorldPosition().Z - this.DragContentStartZ;
@@ -384,7 +383,7 @@ public class FormationEditView : UiViewBase
 		this.RefreshDragOverlayArrow();
 	}
 
-	// Token: 0x0600D618 RID: 54808 RVA: 0x00317B0D File Offset: 0x00315D0D
+	// Token: 0x0600AA2B RID: 43563 RVA: 0x00322DE5 File Offset: 0x00320FE5
 	private void RefreshDragOverlayArrow()
 	{
 		FormationEditItem dragOverlayItem = this.DragOverlayItem;
@@ -395,14 +394,14 @@ public class FormationEditView : UiViewBase
 		dragOverlayItem.SetArrowVisible(this.DragCurSlot > 0, this.DragCurSlot < this.DisplayFormationIds.Count - 1);
 	}
 
-	// Token: 0x0600D619 RID: 54809 RVA: 0x00317B3D File Offset: 0x00315D3D
+	// Token: 0x0600AA2C RID: 43564 RVA: 0x00322E15 File Offset: 0x00321015
 	private void RefreshDragPointerWorldZ(ULGUIPointerEventData eventData)
 	{
 		LguiUtil.Instance.ConvertPointerPositionToLguiCenterPosition(eventData.pointerPosition, this.DragPointerPos);
 		this.DragPointerWorldZ = this.DragPointerPos.Y + (double)UiLayer.Instance.UiRootItem.GetUIWorldPosition().Z;
 	}
 
-	// Token: 0x0600D61A RID: 54810 RVA: 0x00317B7C File Offset: 0x00315D7C
+	// Token: 0x0600AA2D RID: 43565 RVA: 0x00322E54 File Offset: 0x00321054
 	private void RefreshAutoScrollDir()
 	{
 		this.AutoScrollDir = 0;
@@ -424,7 +423,7 @@ public class FormationEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D61B RID: 54811 RVA: 0x00317C04 File Offset: 0x00315E04
+	// Token: 0x0600AA2E RID: 43566 RVA: 0x00322EDC File Offset: 0x003210DC
 	private void OnDragTick(float deltaTime)
 	{
 		if (this.DraggingItem == null)
@@ -445,7 +444,7 @@ public class FormationEditView : UiViewBase
 		this.ApplyDragTargetSlot();
 	}
 
-	// Token: 0x0600D61C RID: 54812 RVA: 0x00317C90 File Offset: 0x00315E90
+	// Token: 0x0600AA2F RID: 43567 RVA: 0x00322F68 File Offset: 0x00321168
 	private void UpdateShiftAnimation(float deltaTime)
 	{
 		double num = 1.0 - Math.Exp((double)(-(double)deltaTime) / 0.06);
@@ -470,7 +469,7 @@ public class FormationEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D61D RID: 54813 RVA: 0x00317D6B File Offset: 0x00315F6B
+	// Token: 0x0600AA30 RID: 43568 RVA: 0x00323043 File Offset: 0x00321243
 	public bool CanBeginGamePadSort()
 	{
 		if (this.DraggingItem == null && !this.IsReorderRequesting)
@@ -481,7 +480,7 @@ public class FormationEditView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600D61E RID: 54814 RVA: 0x00317DA0 File Offset: 0x00315FA0
+	// Token: 0x0600AA31 RID: 43569 RVA: 0x00323078 File Offset: 0x00321278
 	public void BeginGamePadSort()
 	{
 		GenericScrollViewNew<FormationEditItem, int> formationScrollView = this.FormationScrollView;
@@ -506,7 +505,7 @@ public class FormationEditView : UiViewBase
 		UiNavigationNewController.Instance.SetNavigationFocusForView(base.GetItem(6), false, true, false);
 	}
 
-	// Token: 0x0600D61F RID: 54815 RVA: 0x00317E6E File Offset: 0x0031606E
+	// Token: 0x0600AA32 RID: 43570 RVA: 0x00323146 File Offset: 0x00321346
 	private void OnSortTick(float deltaTime)
 	{
 		this.UpdateShiftAnimation(deltaTime);
@@ -515,7 +514,7 @@ public class FormationEditView : UiViewBase
 		this.RefreshSortOverlayPos();
 	}
 
-	// Token: 0x0600D620 RID: 54816 RVA: 0x00317E8C File Offset: 0x0031608C
+	// Token: 0x0600AA33 RID: 43571 RVA: 0x00323164 File Offset: 0x00321364
 	public void MoveGamePadSort(int delta)
 	{
 		if (!this.IsGamePadSort)
@@ -537,7 +536,7 @@ public class FormationEditView : UiViewBase
 		UiNavigationModel.Instance.RepeatMove();
 	}
 
-	// Token: 0x0600D621 RID: 54817 RVA: 0x00317F20 File Offset: 0x00316120
+	// Token: 0x0600AA34 RID: 43572 RVA: 0x003231F8 File Offset: 0x003213F8
 	public void EndGamePadSort(bool isCancel)
 	{
 		if (!this.IsGamePadSort)
@@ -586,7 +585,7 @@ public class FormationEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D622 RID: 54818 RVA: 0x00317FE8 File Offset: 0x003161E8
+	// Token: 0x0600AA35 RID: 43573 RVA: 0x003232C0 File Offset: 0x003214C0
 	private void SnapSortGridToCurSlot()
 	{
 		UUIItem sortGridItem = this.GetSortGridItem();
@@ -598,7 +597,7 @@ public class FormationEditView : UiViewBase
 		sortGridItem.SetAnchorOffset(new FVector2D(anchorOffset.X, (float)this.DragSlotOffsetYs[this.DragCurSlot]));
 	}
 
-	// Token: 0x0600D623 RID: 54819 RVA: 0x0031802C File Offset: 0x0031622C
+	// Token: 0x0600AA36 RID: 43574 RVA: 0x00323304 File Offset: 0x00321504
 	[NullableContext(2)]
 	private UUIItem GetSortGridItem()
 	{
@@ -615,7 +614,7 @@ public class FormationEditView : UiViewBase
 		return formationScrollView.GetItemByIndex(index);
 	}
 
-	// Token: 0x0600D624 RID: 54820 RVA: 0x00318064 File Offset: 0x00316264
+	// Token: 0x0600AA37 RID: 43575 RVA: 0x0032333C File Offset: 0x0032153C
 	private void ScrollToSortSlotIfNeeded()
 	{
 		UUIItem sortGridItem = this.GetSortGridItem();
@@ -626,7 +625,7 @@ public class FormationEditView : UiViewBase
 		this.FormationScrollView.ScrollTo(sortGridItem, false);
 	}
 
-	// Token: 0x0600D625 RID: 54821 RVA: 0x0031809C File Offset: 0x0031629C
+	// Token: 0x0600AA38 RID: 43576 RVA: 0x00323374 File Offset: 0x00321574
 	private void RefreshSortOverlayPos()
 	{
 		UUIItem sortGridItem = this.GetSortGridItem();
@@ -641,7 +640,7 @@ public class FormationEditView : UiViewBase
 		item.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x0600D626 RID: 54822 RVA: 0x003180E8 File Offset: 0x003162E8
+	// Token: 0x0600AA39 RID: 43577 RVA: 0x003233C0 File Offset: 0x003215C0
 	private void OnClickQuickSelect()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.QuickRoleSelectView))
@@ -664,7 +663,7 @@ public class FormationEditView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D627 RID: 54823 RVA: 0x00318170 File Offset: 0x00316370
+	// Token: 0x0600AA3A RID: 43578 RVA: 0x00323448 File Offset: 0x00321648
 	private void OnQuickSelectConfirm(int[] roleIdList)
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -690,13 +689,13 @@ public class FormationEditView : UiViewBase
 		this.RefreshConfirmButton();
 	}
 
-	// Token: 0x0600D628 RID: 54824 RVA: 0x003181F3 File Offset: 0x003163F3
+	// Token: 0x0600AA3B RID: 43579 RVA: 0x003234CB File Offset: 0x003216CB
 	private void OnQuickSelectHideFinish()
 	{
 		this.RefreshFormationList(false);
 	}
 
-	// Token: 0x0600D629 RID: 54825 RVA: 0x003181FC File Offset: 0x003163FC
+	// Token: 0x0600AA3C RID: 43580 RVA: 0x003234D4 File Offset: 0x003216D4
 	private void OnClickConfirm()
 	{
 		if (this.IsConfirming || !this.IsAllowConfirm())
@@ -707,13 +706,13 @@ public class FormationEditView : UiViewBase
 		this.OnClickClose();
 	}
 
-	// Token: 0x0600D62A RID: 54826 RVA: 0x0031821C File Offset: 0x0031641C
+	// Token: 0x0600AA3D RID: 43581 RVA: 0x003234F4 File Offset: 0x003216F4
 	private void OnClickClose()
 	{
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600D62B RID: 54827 RVA: 0x00318234 File Offset: 0x00316434
+	// Token: 0x0600AA3E RID: 43582 RVA: 0x0032350C File Offset: 0x0032170C
 	private void RefreshConfirmButton()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -727,19 +726,23 @@ public class FormationEditView : UiViewBase
 		bool flag2 = flag;
 		if (flag2 && !this.CanUseSpecialTrailRole)
 		{
-			IEnumerable<int> editingRoleIdList = instance.GetEditingRoleIdList(this.SelectFormationId);
-			Func<int, bool> predicate;
-			if ((predicate = FormationEditView.<>O.<0>__IsSpecialTrialRole) == null)
+			int[] editingRoleIdList = instance.GetEditingRoleIdList(this.SelectFormationId);
+			bool flag3 = false;
+			for (int i = 0; i < editingRoleIdList.Length; i++)
 			{
-				predicate = (FormationEditView.<>O.<0>__IsSpecialTrialRole = new Func<int, bool>(RoleUtils.IsSpecialTrialRole));
+				if (RoleUtils.IsSpecialTrialRole(editingRoleIdList[i]))
+				{
+					flag3 = true;
+					break;
+				}
 			}
-			flag2 = !editingRoleIdList.Any(predicate);
+			flag2 = !flag3;
 		}
 		this.BtnConfirm.SetEnableClick(flag2);
 		this.BtnConfirm.SetLocalText(flag ? "EditBattleTeamFight" : "EditBattleTeamFighting", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D62C RID: 54828 RVA: 0x003182E0 File Offset: 0x003164E0
+	// Token: 0x0600AA3F RID: 43583 RVA: 0x003235C4 File Offset: 0x003217C4
 	private bool IsAllowConfirm()
 	{
 		FormationModel instance = FormationModel.Instance;
@@ -749,7 +752,16 @@ public class FormationEditView : UiViewBase
 			ScrollingTipsController.Instance.ShowTipsById("EditBattleTeamNoRole", Array.Empty<object>());
 			return false;
 		}
-		if (editingRoleIdList.All(new Func<int, bool>(instance.IsRoleDead)))
+		bool flag = true;
+		for (int i = 0; i < editingRoleIdList.Length; i++)
+		{
+			if (!instance.IsRoleDead(editingRoleIdList[i]))
+			{
+				flag = false;
+				break;
+			}
+		}
+		if (flag)
 		{
 			ScrollingTipsController.Instance.ShowTipsById("EditFormationAllDead", Array.Empty<object>());
 			return false;
@@ -757,30 +769,30 @@ public class FormationEditView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x040061E6 RID: 25062
+	// Token: 0x040062B8 RID: 25272
 	private const double DRAG_SHIFT_SMOOTH_TIME = 0.06;
 
-	// Token: 0x040061E7 RID: 25063
+	// Token: 0x040062B9 RID: 25273
 	private const double DRAG_SHIFT_SNAP_DISTANCE = 0.5;
 
-	// Token: 0x040061E8 RID: 25064
+	// Token: 0x040062BA RID: 25274
 	private const float DRAG_SOURCE_ALPHA = 0f;
 
-	// Token: 0x040061E9 RID: 25065
+	// Token: 0x040062BB RID: 25275
 	private const double AUTO_SCROLL_EDGE_SIZE = 100.0;
 
-	// Token: 0x040061EA RID: 25066
+	// Token: 0x040062BC RID: 25276
 	private const double AUTO_SCROLL_SPEED = 800.0;
 
-	// Token: 0x040061EB RID: 25067
+	// Token: 0x040062BD RID: 25277
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040061EC RID: 25068
+	// Token: 0x040062BE RID: 25278
 	[Nullable(2)]
 	private ButtonItem BtnConfirm;
 
-	// Token: 0x040061ED RID: 25069
+	// Token: 0x040062BF RID: 25279
 	[Nullable(new byte[]
 	{
 		2,
@@ -788,112 +800,103 @@ public class FormationEditView : UiViewBase
 	})]
 	private GenericScrollViewNew<FormationEditItem, int> FormationScrollView;
 
-	// Token: 0x040061EE RID: 25070
+	// Token: 0x040062C0 RID: 25280
 	private int SelectFormationId;
 
-	// Token: 0x040061EF RID: 25071
+	// Token: 0x040062C1 RID: 25281
 	private bool CanUseSpecialTrailRole = true;
 
-	// Token: 0x040061F0 RID: 25072
+	// Token: 0x040062C2 RID: 25282
 	[Nullable(2)]
 	private Func<int, bool> SwitchFormationCallback;
 
-	// Token: 0x040061F1 RID: 25073
+	// Token: 0x040062C3 RID: 25283
 	[Nullable(2)]
 	private Action<int> RenameFormationCallback;
 
-	// Token: 0x040061F2 RID: 25074
+	// Token: 0x040062C4 RID: 25284
 	[Nullable(2)]
 	private Action CloseCallback;
 
-	// Token: 0x040061F3 RID: 25075
+	// Token: 0x040062C5 RID: 25285
 	[Nullable(2)]
 	private Action ConfirmCallback;
 
-	// Token: 0x040061F4 RID: 25076
+	// Token: 0x040062C6 RID: 25286
 	private bool IsConfirming;
 
-	// Token: 0x040061F5 RID: 25077
+	// Token: 0x040062C7 RID: 25287
 	private List<int> DisplayFormationIds = new List<int>();
 
-	// Token: 0x040061F6 RID: 25078
+	// Token: 0x040062C8 RID: 25288
 	private bool IsReorderRequesting;
 
-	// Token: 0x040061F7 RID: 25079
+	// Token: 0x040062C9 RID: 25289
 	[Nullable(2)]
 	private FormationEditItem DragOverlayItem;
 
-	// Token: 0x040061F8 RID: 25080
+	// Token: 0x040062CA RID: 25290
 	[Nullable(2)]
 	private FormationEditItem DraggingItem;
 
-	// Token: 0x040061F9 RID: 25081
+	// Token: 0x040062CB RID: 25291
 	private int DragCurSlot;
 
-	// Token: 0x040061FA RID: 25082
+	// Token: 0x040062CC RID: 25292
 	private readonly List<double> DragSlotCenters = new List<double>();
 
-	// Token: 0x040061FB RID: 25083
+	// Token: 0x040062CD RID: 25293
 	private double DragContentStartZ;
 
-	// Token: 0x040061FC RID: 25084
+	// Token: 0x040062CE RID: 25294
 	private readonly List<double> DragSlotOffsetYs = new List<double>();
 
-	// Token: 0x040061FD RID: 25085
+	// Token: 0x040062CF RID: 25295
 	private readonly Dictionary<int, int> DragGridIndexByFormationId = new Dictionary<int, int>();
 
-	// Token: 0x040061FE RID: 25086
+	// Token: 0x040062D0 RID: 25296
 	private int AutoScrollDir;
 
-	// Token: 0x040061FF RID: 25087
+	// Token: 0x040062D1 RID: 25297
 	[Nullable(2)]
 	private UUIScrollViewWithScrollbarComponent ScrollComp;
 
-	// Token: 0x04006200 RID: 25088
+	// Token: 0x040062D2 RID: 25298
 	[Nullable(2)]
 	private UUILayoutBase ContentLayout;
 
-	// Token: 0x04006201 RID: 25089
+	// Token: 0x040062D3 RID: 25299
 	private readonly Vector2D DragPointerPos = Vector2D.Create();
 
-	// Token: 0x04006202 RID: 25090
+	// Token: 0x040062D4 RID: 25300
 	private double DragPointerWorldZ;
 
-	// Token: 0x04006203 RID: 25091
+	// Token: 0x040062D5 RID: 25301
 	private double DragOverlayGrabOffsetZ;
 
-	// Token: 0x04006204 RID: 25092
+	// Token: 0x040062D6 RID: 25302
 	private readonly Vector2D DragTempOffset = Vector2D.Create();
 
-	// Token: 0x04006205 RID: 25093
+	// Token: 0x040062D7 RID: 25303
 	public bool IsGamePadSort;
 
-	// Token: 0x020081A6 RID: 33190
+	// Token: 0x02007331 RID: 29489
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402A4E9 RID: 173289
+		// Token: 0x04025814 RID: 153620
 		ScrollInfo,
-		// Token: 0x0402A4EA RID: 173290
+		// Token: 0x04025815 RID: 153621
 		ScrollItem,
-		// Token: 0x0402A4EB RID: 173291
+		// Token: 0x04025816 RID: 153622
 		CaptionItem,
-		// Token: 0x0402A4EC RID: 173292
+		// Token: 0x04025817 RID: 153623
 		BtnQuickSelect,
-		// Token: 0x0402A4ED RID: 173293
+		// Token: 0x04025818 RID: 153624
 		BtnConfirm,
-		// Token: 0x0402A4EE RID: 173294
+		// Token: 0x04025819 RID: 153625
 		BtnClose,
-		// Token: 0x0402A4EF RID: 173295
+		// Token: 0x0402581A RID: 153626
 		DragItem
-	}
-
-	// Token: 0x020081A7 RID: 33191
-	[CompilerGenerated]
-	private static class <>O
-	{
-		// Token: 0x0402A4F0 RID: 173296
-		[Nullable(0)]
-		public static Func<int, bool> <0>__IsSpecialTrialRole;
 	}
 }

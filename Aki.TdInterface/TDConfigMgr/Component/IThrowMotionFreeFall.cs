@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200076C RID: 1900
+	// Token: 0x0200080D RID: 2061
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IThrowMotionFreeFall : IThrowMotion
 	{
-		// Token: 0x0600290F RID: 10511 RVA: 0x0006C834 File Offset: 0x0006AA34
-		[NullableContext(1)]
+		// Token: 0x06002C33 RID: 11315 RVA: 0x000739DC File Offset: 0x00071BDC
+		[NullableContext(0)]
 		private IThrowMotionFreeFall_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002910 RID: 10512 RVA: 0x0006C86C File Offset: 0x0006AA6C
-		[NullableContext(1)]
+		// Token: 0x06002C34 RID: 11316 RVA: 0x00073A14 File Offset: 0x00071C14
+		[NullableContext(0)]
 		public static IThrowMotionFreeFall Create([Nullable(2)] IThrowMotionFreeFall instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002911 RID: 10513 RVA: 0x0006C87F File Offset: 0x0006AA7F
-		[NullableContext(1)]
+		// Token: 0x06002C35 RID: 11317 RVA: 0x00073A27 File Offset: 0x00071C27
+		[NullableContext(0)]
 		public static IThrowMotionFreeFall CreateFromSetValue([Nullable(2)] IThrowMotionFreeFall_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002912 RID: 10514 RVA: 0x0006C892 File Offset: 0x0006AA92
-		[NullableContext(1)]
+		// Token: 0x06002C36 RID: 11318 RVA: 0x00073A3A File Offset: 0x00071C3A
+		[NullableContext(0)]
 		public new IThrowMotionFreeFall_SetValue ToSetValue()
 		{
 			return new IThrowMotionFreeFall_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AC6 RID: 2758
-		// (get) Token: 0x06002913 RID: 10515 RVA: 0x0006C8BD File Offset: 0x0006AABD
-		// (set) Token: 0x06002914 RID: 10516 RVA: 0x0006C8E8 File Offset: 0x0006AAE8
+		// Token: 0x17000B86 RID: 2950
+		// (get) Token: 0x06002C37 RID: 11319 RVA: 0x00073A65 File Offset: 0x00071C65
+		// (set) Token: 0x06002C38 RID: 11320 RVA: 0x00073A90 File Offset: 0x00071C90
 		public override EThrowMotion Type
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC7 RID: 2759
-		// (get) Token: 0x06002915 RID: 10517 RVA: 0x0006C8F8 File Offset: 0x0006AAF8
-		// (set) Token: 0x06002916 RID: 10518 RVA: 0x0006C959 File Offset: 0x0006AB59
+		// Token: 0x17000B87 RID: 2951
+		// (get) Token: 0x06002C39 RID: 11321 RVA: 0x00073AA0 File Offset: 0x00071CA0
+		// (set) Token: 0x06002C3A RID: 11322 RVA: 0x00073B01 File Offset: 0x00071D01
 		public virtual VectorInfo Velocity
 		{
 			get
@@ -119,9 +119,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AC8 RID: 2760
-		// (get) Token: 0x06002917 RID: 10519 RVA: 0x0006C970 File Offset: 0x0006AB70
-		// (set) Token: 0x06002918 RID: 10520 RVA: 0x0006C9D1 File Offset: 0x0006ABD1
+		// Token: 0x17000B88 RID: 2952
+		// (get) Token: 0x06002C3B RID: 11323 RVA: 0x00073B18 File Offset: 0x00071D18
+		// (set) Token: 0x06002C3C RID: 11324 RVA: 0x00073B79 File Offset: 0x00071D79
 		public virtual IAngularVelocityConfig AngularVelocity
 		{
 			get
@@ -149,24 +149,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B95 RID: 7061
+		// Token: 0x04001D9A RID: 7578
 		protected new IThrowMotionFreeFall FbInstance;
 
-		// Token: 0x04001B96 RID: 7062
+		// Token: 0x04001D9B RID: 7579
 		protected new IThrowMotionFreeFall_SetValue PocoInterface;
 
-		// Token: 0x04001B97 RID: 7063
-		[Nullable(1)]
+		// Token: 0x04001D9C RID: 7580
+		[Nullable(0)]
 		private VectorInfo _VelocityCache;
 
-		// Token: 0x04001B98 RID: 7064
+		// Token: 0x04001D9D RID: 7581
 		private bool _VelocityInited;
 
-		// Token: 0x04001B99 RID: 7065
-		[Nullable(1)]
+		// Token: 0x04001D9E RID: 7582
+		[Nullable(0)]
 		private IAngularVelocityConfig _AngularVelocityCache;
 
-		// Token: 0x04001B9A RID: 7066
+		// Token: 0x04001D9F RID: 7583
 		private bool _AngularVelocityInited;
 	}
 }

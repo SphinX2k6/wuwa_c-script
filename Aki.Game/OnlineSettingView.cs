@@ -6,16 +6,16 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022F6 RID: 8950
+// Token: 0x020017DA RID: 6106
 public class OnlineSettingView : UiViewBase
 {
-	// Token: 0x06011A5D RID: 72285 RVA: 0x004556F6 File Offset: 0x004538F6
+	// Token: 0x0600EEF5 RID: 61173 RVA: 0x004623C2 File Offset: 0x004605C2
 	[NullableContext(1)]
 	public OnlineSettingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011A5E RID: 72286 RVA: 0x00455700 File Offset: 0x00453900
+	// Token: 0x0600EEF6 RID: 61174 RVA: 0x004623CC File Offset: 0x004605CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -38,14 +38,14 @@ public class OnlineSettingView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011A5F RID: 72287 RVA: 0x004557C7 File Offset: 0x004539C7
+	// Token: 0x0600EEF7 RID: 61175 RVA: 0x00462493 File Offset: 0x00460693
 	protected override void OnBeforeShow()
 	{
 		this.EditSetting = OnlineModel.Instance.CurrentPermissionsSetting;
 		this.InitSettingToggle();
 	}
 
-	// Token: 0x06011A60 RID: 72288 RVA: 0x004557DF File Offset: 0x004539DF
+	// Token: 0x0600EEF8 RID: 61176 RVA: 0x004624AB File Offset: 0x004606AB
 	protected override void OnBeforeDestroy()
 	{
 		if (this.SettingButtonType != null)
@@ -55,7 +55,7 @@ public class OnlineSettingView : UiViewBase
 		this.SettingButtonType = null;
 	}
 
-	// Token: 0x06011A61 RID: 72289 RVA: 0x004557FC File Offset: 0x004539FC
+	// Token: 0x0600EEF9 RID: 61177 RVA: 0x004624C8 File Offset: 0x004606C8
 	private void InitSettingToggle()
 	{
 		this.SettingButtonType = new Dictionary<int, OnlineHallSettingButton>();
@@ -81,7 +81,7 @@ public class OnlineSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011A62 RID: 72290 RVA: 0x004558D4 File Offset: 0x00453AD4
+	// Token: 0x0600EEFA RID: 61178 RVA: 0x004625A0 File Offset: 0x004607A0
 	[NullableContext(1)]
 	private void CreateSettingButton(AActor uiContainerActor, int type)
 	{
@@ -91,20 +91,20 @@ public class OnlineSettingView : UiViewBase
 		this.SettingButtonType.Add(type, onlineHallSettingButton);
 	}
 
-	// Token: 0x06011A63 RID: 72291 RVA: 0x0045591A File Offset: 0x00453B1A
+	// Token: 0x0600EEFB RID: 61179 RVA: 0x004625E6 File Offset: 0x004607E6
 	private bool CanToggleChange(WorldEnterPermission type)
 	{
 		return this.EditSetting != type;
 	}
 
-	// Token: 0x06011A64 RID: 72292 RVA: 0x00455928 File Offset: 0x00453B28
+	// Token: 0x0600EEFC RID: 61180 RVA: 0x004625F4 File Offset: 0x004607F4
 	private void OnClickSettingConfirmBtn()
 	{
 		OnlineController.Instance.WorldEnterPermissionsRequest(this.EditSetting);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011A65 RID: 72293 RVA: 0x00455944 File Offset: 0x00453B44
+	// Token: 0x0600EEFD RID: 61181 RVA: 0x00462610 File Offset: 0x00460810
 	private void OnClickSettingBtn(WorldEnterPermission type)
 	{
 		this.EditSetting = type;
@@ -121,13 +121,13 @@ public class OnlineSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x040085E1 RID: 34273
+	// Token: 0x0400871F RID: 34591
 	private const int SETTING_COUNT_ID = 4;
 
-	// Token: 0x040085E2 RID: 34274
+	// Token: 0x04008720 RID: 34592
 	private WorldEnterPermission EditSetting;
 
-	// Token: 0x040085E3 RID: 34275
+	// Token: 0x04008721 RID: 34593
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,14 +135,14 @@ public class OnlineSettingView : UiViewBase
 	})]
 	private Dictionary<int, OnlineHallSettingButton> SettingButtonType;
 
-	// Token: 0x02008878 RID: 34936
+	// Token: 0x020079FC RID: 31228
 	private enum EOnlineSettingView
 	{
-		// Token: 0x0402C5A6 RID: 181670
+		// Token: 0x040278A8 RID: 161960
 		SettingToggleGroup,
-		// Token: 0x0402C5A7 RID: 181671
+		// Token: 0x040278A9 RID: 161961
 		SettingToggle,
-		// Token: 0x0402C5A8 RID: 181672
+		// Token: 0x040278AA RID: 161962
 		SettingConfirm
 	}
 }

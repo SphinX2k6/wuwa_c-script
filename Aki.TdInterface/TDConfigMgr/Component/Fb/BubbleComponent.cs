@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BED RID: 3053
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CBC RID: 3260
 	public class BubbleComponent : IComponentBase
 	{
-		// Token: 0x06004617 RID: 17943 RVA: 0x000B12E1 File Offset: 0x000AF4E1
+		// Token: 0x06004A75 RID: 19061 RVA: 0x000BB45D File Offset: 0x000B965D
 		public static BubbleComponent Create(IBubbleComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013FA RID: 5114
-		// (get) Token: 0x06004618 RID: 17944 RVA: 0x000B1300 File Offset: 0x000AF500
+		// Token: 0x170014F8 RID: 5368
+		// (get) Token: 0x06004A76 RID: 19062 RVA: 0x000BB47C File Offset: 0x000B967C
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013FB RID: 5115
-		// (get) Token: 0x06004619 RID: 17945 RVA: 0x000B1338 File Offset: 0x000AF538
+		// Token: 0x170014F9 RID: 5369
+		// (get) Token: 0x06004A77 RID: 19063 RVA: 0x000BB4B4 File Offset: 0x000B96B4
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013FC RID: 5116
-		// (get) Token: 0x0600461A RID: 17946 RVA: 0x000B1350 File Offset: 0x000AF550
+		// Token: 0x170014FA RID: 5370
+		// (get) Token: 0x06004A78 RID: 19064 RVA: 0x000BB4CC File Offset: 0x000B96CC
 		public virtual List<int> NpcIds
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013FD RID: 5117
-		// (get) Token: 0x0600461B RID: 17947 RVA: 0x000B13B4 File Offset: 0x000AF5B4
+		// Token: 0x170014FB RID: 5371
+		// (get) Token: 0x06004A79 RID: 19065 RVA: 0x000BB530 File Offset: 0x000B9730
 		public virtual float EnterRange
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013FE RID: 5118
-		// (get) Token: 0x0600461C RID: 17948 RVA: 0x000B13C1 File Offset: 0x000AF5C1
+		// Token: 0x170014FC RID: 5372
+		// (get) Token: 0x06004A7A RID: 19066 RVA: 0x000BB53D File Offset: 0x000B973D
 		public virtual float LeaveRange
 		{
 			get
@@ -89,8 +87,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013FF RID: 5119
-		// (get) Token: 0x0600461D RID: 17949 RVA: 0x000B13D0 File Offset: 0x000AF5D0
+		// Token: 0x170014FD RID: 5373
+		// (get) Token: 0x06004A7B RID: 19067 RVA: 0x000BB54C File Offset: 0x000B974C
 		public virtual bool? IsRangeFollowEntity
 		{
 			get
@@ -103,8 +101,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001400 RID: 5120
-		// (get) Token: 0x0600461E RID: 17950 RVA: 0x000B1408 File Offset: 0x000AF608
+		// Token: 0x170014FE RID: 5374
+		// (get) Token: 0x06004A7C RID: 19068 RVA: 0x000BB584 File Offset: 0x000B9784
 		public virtual List<IConditionBubbleData> Flows
 		{
 			get
@@ -124,8 +122,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001401 RID: 5121
-		// (get) Token: 0x0600461F RID: 17951 RVA: 0x000B1474 File Offset: 0x000AF674
+		// Token: 0x170014FF RID: 5375
+		// (get) Token: 0x06004A7D RID: 19069 RVA: 0x000BB5F0 File Offset: 0x000B97F0
 		public virtual int? TimberId
 		{
 			get
@@ -138,8 +136,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001402 RID: 5122
-		// (get) Token: 0x06004620 RID: 17952 RVA: 0x000B14AC File Offset: 0x000AF6AC
+		// Token: 0x17001500 RID: 5376
+		// (get) Token: 0x06004A7E RID: 19070 RVA: 0x000BB628 File Offset: 0x000B9828
 		public virtual float? Scale
 		{
 			get
@@ -152,8 +150,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001403 RID: 5123
-		// (get) Token: 0x06004621 RID: 17953 RVA: 0x000B14E4 File Offset: 0x000AF6E4
+		// Token: 0x17001501 RID: 5377
+		// (get) Token: 0x06004A7F RID: 19071 RVA: 0x000BB660 File Offset: 0x000B9860
 		public virtual bool? IsAudioOccludedByScene
 		{
 			get
@@ -166,8 +164,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001404 RID: 5124
-		// (get) Token: 0x06004622 RID: 17954 RVA: 0x000B151B File Offset: 0x000AF71B
+		// Token: 0x17001502 RID: 5378
+		// (get) Token: 0x06004A80 RID: 19072 RVA: 0x000BB697 File Offset: 0x000B9897
 		[Nullable(2)]
 		public virtual IBubbleRangeCylinderConfig TriggerCylinderConfig
 		{
@@ -184,8 +182,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001405 RID: 5125
-		// (get) Token: 0x06004623 RID: 17955 RVA: 0x000B1550 File Offset: 0x000AF750
+		// Token: 0x17001503 RID: 5379
+		// (get) Token: 0x06004A81 RID: 19073 RVA: 0x000BB6CC File Offset: 0x000B98CC
 		public virtual bool? IsPlayMouthAnim
 		{
 			get
@@ -198,26 +196,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027EE RID: 10222
+		// Token: 0x04002A39 RID: 10809
 		private IBubbleComponent Instance;
 
-		// Token: 0x040027EF RID: 10223
+		// Token: 0x04002A3A RID: 10810
 		private List<int> _NpcIdsCache;
 
-		// Token: 0x040027F0 RID: 10224
+		// Token: 0x04002A3B RID: 10811
 		private bool _NpcIdsInited;
 
-		// Token: 0x040027F1 RID: 10225
+		// Token: 0x04002A3C RID: 10812
 		private List<IConditionBubbleData> _FlowsCache;
 
-		// Token: 0x040027F2 RID: 10226
+		// Token: 0x04002A3D RID: 10813
 		private bool _FlowsInited;
 
-		// Token: 0x040027F3 RID: 10227
+		// Token: 0x04002A3E RID: 10814
 		[Nullable(2)]
 		private IBubbleRangeCylinderConfig _TriggerCylinderConfigCache;
 
-		// Token: 0x040027F4 RID: 10228
+		// Token: 0x04002A3F RID: 10815
 		private bool _TriggerCylinderConfigInited;
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02001031 RID: 4145
+// Token: 0x020004E5 RID: 1253
 public class GuessJokerRoleData
 {
-	// Token: 0x06006A73 RID: 27251 RVA: 0x00155D23 File Offset: 0x00153F23
+	// Token: 0x06003E08 RID: 15880 RVA: 0x0015E64B File Offset: 0x0015C84B
 	public GuessJokerRoleData(EGuessJokerPlayerType playerType, int maxHp)
 	{
 		this.PlayerTypeInternal = playerType;
@@ -11,7 +11,7 @@ public class GuessJokerRoleData
 		this.MaxHpInternal = maxHp;
 	}
 
-	// Token: 0x06006A74 RID: 27252 RVA: 0x00155D40 File Offset: 0x00153F40
+	// Token: 0x06003E09 RID: 15881 RVA: 0x0015E668 File Offset: 0x0015C868
 	public void RemoveHp(int value)
 	{
 		int num = this.HpInternal - value;
@@ -26,7 +26,7 @@ public class GuessJokerRoleData
 		this.HpInternal = num;
 	}
 
-	// Token: 0x06006A75 RID: 27253 RVA: 0x00155D74 File Offset: 0x00153F74
+	// Token: 0x06003E0A RID: 15882 RVA: 0x0015E69C File Offset: 0x0015C89C
 	public void SetHp(int value)
 	{
 		int hpInternal = value;
@@ -41,30 +41,30 @@ public class GuessJokerRoleData
 		this.HpInternal = hpInternal;
 	}
 
-	// Token: 0x06006A76 RID: 27254 RVA: 0x00155DA0 File Offset: 0x00153FA0
+	// Token: 0x06003E0B RID: 15883 RVA: 0x0015E6C8 File Offset: 0x0015C8C8
 	public int GetHp()
 	{
 		return this.HpInternal;
 	}
 
-	// Token: 0x06006A77 RID: 27255 RVA: 0x00155DA8 File Offset: 0x00153FA8
+	// Token: 0x06003E0C RID: 15884 RVA: 0x0015E6D0 File Offset: 0x0015C8D0
 	public int GetMaxHp()
 	{
 		return this.MaxHpInternal;
 	}
 
-	// Token: 0x06006A78 RID: 27256 RVA: 0x00155DB0 File Offset: 0x00153FB0
+	// Token: 0x06003E0D RID: 15885 RVA: 0x0015E6D8 File Offset: 0x0015C8D8
 	public EGuessJokerPlayerType GetPlayerType()
 	{
 		return this.PlayerTypeInternal;
 	}
 
-	// Token: 0x0400310F RID: 12559
+	// Token: 0x040031A8 RID: 12712
 	private readonly EGuessJokerPlayerType PlayerTypeInternal;
 
-	// Token: 0x04003110 RID: 12560
+	// Token: 0x040031A9 RID: 12713
 	private int HpInternal;
 
-	// Token: 0x04003111 RID: 12561
+	// Token: 0x040031AA RID: 12714
 	private readonly int MaxHpInternal;
 }

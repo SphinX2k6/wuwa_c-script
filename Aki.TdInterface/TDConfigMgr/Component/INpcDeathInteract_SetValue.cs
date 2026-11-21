@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200055B RID: 1371
+	// Token: 0x020005C2 RID: 1474
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class INpcDeathInteract_SetValue
 	{
-		// Token: 0x04001417 RID: 5143
+		// Token: 0x04001581 RID: 5505
 		public IMontageId Montage;
 
-		// Token: 0x04001418 RID: 5144
+		// Token: 0x04001582 RID: 5506
 		public string MaterialDa;
 	}
 }

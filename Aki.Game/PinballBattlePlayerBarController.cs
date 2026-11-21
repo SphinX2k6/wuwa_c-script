@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.KuroSimpleCombat.PB;
 using UnrealEngine;
 
-// Token: 0x02000EAB RID: 3755
+// Token: 0x02000360 RID: 864
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattlePlayerBarController
 {
-	// Token: 0x06005CB8 RID: 23736 RVA: 0x00110FC8 File Offset: 0x0010F1C8
+	// Token: 0x0600304F RID: 12367 RVA: 0x00118C64 File Offset: 0x00116E64
 	public void Init(AKSC_Shape2D_Entity_Bar playerBar, PinballBattleSubModel model)
 	{
 		this.Model = model;
@@ -69,7 +69,7 @@ public class PinballBattlePlayerBarController
 		this.ResetPlayerBar();
 	}
 
-	// Token: 0x06005CB9 RID: 23737 RVA: 0x001111F5 File Offset: 0x0010F3F5
+	// Token: 0x06003050 RID: 12368 RVA: 0x00118E91 File Offset: 0x00117091
 	public void Destroy()
 	{
 		this.Model = null;
@@ -82,7 +82,7 @@ public class PinballBattlePlayerBarController
 		this.FullComboEffect = null;
 	}
 
-	// Token: 0x06005CBA RID: 23738 RVA: 0x00111224 File Offset: 0x0010F424
+	// Token: 0x06003051 RID: 12369 RVA: 0x00118EC0 File Offset: 0x001170C0
 	public void Update()
 	{
 		if (this.Model == null)
@@ -109,7 +109,7 @@ public class PinballBattlePlayerBarController
 		}
 	}
 
-	// Token: 0x06005CBB RID: 23739 RVA: 0x0011128C File Offset: 0x0010F48C
+	// Token: 0x06003052 RID: 12370 RVA: 0x00118F28 File Offset: 0x00117128
 	private void UpdatePlayerBar()
 	{
 		for (int i = 1; i < this.LevelComboCounts.Length; i++)
@@ -140,7 +140,7 @@ public class PinballBattlePlayerBarController
 		}
 	}
 
-	// Token: 0x06005CBC RID: 23740 RVA: 0x00111358 File Offset: 0x0010F558
+	// Token: 0x06003053 RID: 12371 RVA: 0x00118FF4 File Offset: 0x001171F4
 	private void ResetPlayerBar()
 	{
 		if (this.MaterialMap != null)
@@ -152,7 +152,7 @@ public class PinballBattlePlayerBarController
 		}
 	}
 
-	// Token: 0x06005CBD RID: 23741 RVA: 0x001113C0 File Offset: 0x0010F5C0
+	// Token: 0x06003054 RID: 12372 RVA: 0x0011905C File Offset: 0x0011725C
 	private void ShowFullComboEffect(bool isShow)
 	{
 		if (isShow == this.IsShowFullComboEffect)
@@ -168,22 +168,22 @@ public class PinballBattlePlayerBarController
 		fullComboEffect.SetHiddenInGame(!isShow, false);
 	}
 
-	// Token: 0x04002A49 RID: 10825
+	// Token: 0x04002AE4 RID: 10980
 	private FName MaterialParamName;
 
-	// Token: 0x04002A4A RID: 10826
+	// Token: 0x04002AE5 RID: 10981
 	private int Combo;
 
-	// Token: 0x04002A4B RID: 10827
+	// Token: 0x04002AE6 RID: 10982
 	private int ComboLevel;
 
-	// Token: 0x04002A4C RID: 10828
+	// Token: 0x04002AE7 RID: 10983
 	private int[] LevelComboCounts = Array.Empty<int>();
 
-	// Token: 0x04002A4D RID: 10829
+	// Token: 0x04002AE8 RID: 10984
 	private int MaxCombo;
 
-	// Token: 0x04002A4E RID: 10830
+	// Token: 0x04002AE9 RID: 10985
 	[Nullable(new byte[]
 	{
 		2,
@@ -191,18 +191,18 @@ public class PinballBattlePlayerBarController
 	})]
 	private Dictionary<int, UMaterialInstanceDynamic> MaterialMap;
 
-	// Token: 0x04002A4F RID: 10831
+	// Token: 0x04002AEA RID: 10986
 	[Nullable(2)]
 	private UNiagaraComponent FullComboEffect;
 
-	// Token: 0x04002A50 RID: 10832
+	// Token: 0x04002AEB RID: 10987
 	private bool IsShowFullComboEffect;
 
-	// Token: 0x04002A51 RID: 10833
+	// Token: 0x04002AEC RID: 10988
 	[Nullable(2)]
 	private PinballBattleSubModel Model;
 
-	// Token: 0x04002A52 RID: 10834
+	// Token: 0x04002AED RID: 10989
 	[StaticVariableRuleIgnore]
 	private static readonly Stat UpdateStat = Stat.Create("PinballBattlePlayerBarController.UpdatePlayerBar", "", "");
 }

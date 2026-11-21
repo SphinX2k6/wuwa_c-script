@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000253 RID: 595
+	// Token: 0x02000258 RID: 600
 	[EnumExtensions]
 	public enum TConfigVersionKey
 	{
-		// Token: 0x04000989 RID: 2441
+		// Token: 0x040009D1 RID: 2513
 		FsmVersion,
-		// Token: 0x0400098A RID: 2442
+		// Token: 0x040009D2 RID: 2514
 		MiscVersion,
-		// Token: 0x0400098B RID: 2443
+		// Token: 0x040009D3 RID: 2515
 		PublicJsonVersion,
-		// Token: 0x0400098C RID: 2444
+		// Token: 0x040009D4 RID: 2516
 		UniverseEditorVersion
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000771 RID: 1905
+	// Token: 0x0200078B RID: 1931
 	public class ConfigQuestBranchConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002CB7 RID: 11447 RVA: 0x00155EA8 File Offset: 0x001540A8
+		// Token: 0x06002D53 RID: 11603 RVA: 0x0015CDB4 File Offset: 0x0015AFB4
 		static ConfigQuestBranchConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestBranchConfigById.CreateStaticDefaultValue), new Action(ConfigQuestBranchConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002CB8 RID: 11448 RVA: 0x00155EC8 File Offset: 0x001540C8
+		// Token: 0x06002D54 RID: 11604 RVA: 0x0015CDD4 File Offset: 0x0015AFD4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestBranchConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002CB9 RID: 11449 RVA: 0x00155F47 File Offset: 0x00154147
+		// Token: 0x06002D55 RID: 11605 RVA: 0x0015CE53 File Offset: 0x0015B053
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestBranchConfigById.LogPair = null;
 			ConfigQuestBranchConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06002CBA RID: 11450 RVA: 0x00155F55 File Offset: 0x00154155
+		// Token: 0x06002D56 RID: 11606 RVA: 0x0015CE61 File Offset: 0x0015B061
 		public static void Init()
 		{
 			ConfigQuestBranchConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigQuestBranchConfigById.HandleId, "db_questmultiline.db", "select BinData from `QuestBranchConfig` where Id=?");
 		}
 
-		// Token: 0x06002CBB RID: 11451 RVA: 0x00155F70 File Offset: 0x00154170
+		// Token: 0x06002D57 RID: 11607 RVA: 0x0015CE7C File Offset: 0x0015B07C
 		public static QuestBranchConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestBranchConfigById.HandleId, ConfigQuestBranchConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QuestBranchConfig?(rootAsQuestBranchConfig);
 		}
 
-		// Token: 0x040033FD RID: 13309
+		// Token: 0x040034B3 RID: 13491
 		private const string DB = "db_questmultiline.db";
 
-		// Token: 0x040033FE RID: 13310
+		// Token: 0x040034B4 RID: 13492
 		private const string FILE = "r.任务分线.xlsx";
 
-		// Token: 0x040033FF RID: 13311
+		// Token: 0x040034B5 RID: 13493
 		private const string TABLE = "QuestBranchConfig";
 
-		// Token: 0x04003400 RID: 13312
+		// Token: 0x040034B6 RID: 13494
 		private const string COMMAND = "select BinData from `QuestBranchConfig` where Id=?";
 
-		// Token: 0x04003401 RID: 13313
+		// Token: 0x040034B7 RID: 13495
 		private const string KEY_PREFIX = "QuestBranchConfigById";
 
-		// Token: 0x04003402 RID: 13314
+		// Token: 0x040034B8 RID: 13496
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003403 RID: 13315
+		// Token: 0x040034B9 RID: 13497
 		private static int HandleId;
 	}
 }

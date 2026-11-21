@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026DF RID: 9951
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029A3 RID: 10659
 	public class ISetEntityTag
 	{
-		// Token: 0x0600DE52 RID: 56914 RVA: 0x0020FC77 File Offset: 0x0020DE77
+		// Token: 0x0600EC2E RID: 60462 RVA: 0x0022C4B7 File Offset: 0x0022A6B7
 		public static ISetEntityTag Create(ISetEntityTag? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004256 RID: 16982
-		// (get) Token: 0x0600DE53 RID: 56915 RVA: 0x0020FC96 File Offset: 0x0020DE96
+		// Token: 0x17004596 RID: 17814
+		// (get) Token: 0x0600EC2F RID: 60463 RVA: 0x0022C4D6 File Offset: 0x0022A6D6
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004257 RID: 16983
-		// (get) Token: 0x0600DE54 RID: 56916 RVA: 0x0020FCA3 File Offset: 0x0020DEA3
+		// Token: 0x17004597 RID: 17815
+		// (get) Token: 0x0600EC30 RID: 60464 RVA: 0x0022C4E3 File Offset: 0x0022A6E3
 		public virtual string GameplayTag
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004258 RID: 16984
-		// (get) Token: 0x0600DE55 RID: 56917 RVA: 0x0020FCB0 File Offset: 0x0020DEB0
+		// Token: 0x17004598 RID: 17816
+		// (get) Token: 0x0600EC31 RID: 60465 RVA: 0x0022C4F0 File Offset: 0x0022A6F0
 		public virtual ESetEntityTagType SetType
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004259 RID: 16985
-		// (get) Token: 0x0600DE56 RID: 56918 RVA: 0x0020FCC0 File Offset: 0x0020DEC0
+		// Token: 0x17004599 RID: 17817
+		// (get) Token: 0x0600EC32 RID: 60466 RVA: 0x0022C500 File Offset: 0x0022A700
 		public virtual float? DelayTime
 		{
 			get
@@ -66,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700425A RID: 16986
-		// (get) Token: 0x0600DE57 RID: 56919 RVA: 0x0020FCF8 File Offset: 0x0020DEF8
+		// Token: 0x1700459A RID: 17818
+		// (get) Token: 0x0600EC33 RID: 60467 RVA: 0x0022C538 File Offset: 0x0022A738
 		public virtual bool? BeforeHide
 		{
 			get
@@ -80,7 +77,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B6B RID: 31595
+		// Token: 0x0400820B RID: 33291
 		private ISetEntityTag Instance;
 	}
 }

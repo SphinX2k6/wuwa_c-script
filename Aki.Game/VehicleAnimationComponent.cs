@@ -8,14 +8,14 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
 using UnrealEngine;
 
-// Token: 0x020032C5 RID: 12997
+// Token: 0x02002836 RID: 10294
 [NullableContext(1)]
 [Nullable(0)]
-public class VehicleAnimationComponent : EntityComponent, IComponentDependency
+public class VehicleAnimationComponent : EntityComponent
 {
-	// Token: 0x1700272C RID: 10028
-	// (get) Token: 0x0601C38E RID: 115598 RVA: 0x007DC830 File Offset: 0x007DAA30
-	public static Type[] Dependencies
+	// Token: 0x17002A31 RID: 10801
+	// (get) Token: 0x06019FE9 RID: 106473 RVA: 0x00803764 File Offset: 0x00801964
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -27,8 +27,8 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x1700272D RID: 10029
-	// (get) Token: 0x0601C38F RID: 115599 RVA: 0x007DC852 File Offset: 0x007DAA52
+	// Token: 0x17002A32 RID: 10802
+	// (get) Token: 0x06019FEA RID: 106474 RVA: 0x00803786 File Offset: 0x00801986
 	[Nullable(2)]
 	public UAnimInstance MainAnimInstance
 	{
@@ -39,8 +39,8 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x1700272E RID: 10030
-	// (get) Token: 0x0601C390 RID: 115600 RVA: 0x007DC85A File Offset: 0x007DAA5A
+	// Token: 0x17002A33 RID: 10803
+	// (get) Token: 0x06019FEB RID: 106475 RVA: 0x0080378E File Offset: 0x0080198E
 	[Nullable(2)]
 	public UAnimInstance SpecialAnimInstance
 	{
@@ -51,7 +51,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C391 RID: 115601 RVA: 0x007DC862 File Offset: 0x007DAA62
+	// Token: 0x06019FEC RID: 106476 RVA: 0x00803796 File Offset: 0x00801996
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -60,13 +60,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C392 RID: 115602 RVA: 0x007DC886 File Offset: 0x007DAA86
+	// Token: 0x06019FED RID: 106477 RVA: 0x008037BA File Offset: 0x008019BA
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C393 RID: 115603 RVA: 0x007DC88C File Offset: 0x007DAA8C
+	// Token: 0x06019FEE RID: 106478 RVA: 0x008037C0 File Offset: 0x008019C0
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.CheckGetComponent<VehicleActorComponent>();
@@ -139,7 +139,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C394 RID: 115604 RVA: 0x007DCA84 File Offset: 0x007DAC84
+	// Token: 0x06019FEF RID: 106479 RVA: 0x008039B8 File Offset: 0x00801BB8
 	private void InitBaseInfo()
 	{
 		Transform bufferOriginTransform = this.BufferOriginTransform;
@@ -150,13 +150,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		bufferShowTransform.FromUeTransform(ftransformDouble);
 	}
 
-	// Token: 0x0601C395 RID: 115605 RVA: 0x007DCAC3 File Offset: 0x007DACC3
+	// Token: 0x06019FF0 RID: 106480 RVA: 0x008039F7 File Offset: 0x00801BF7
 	protected override void OnActivate()
 	{
 		this.StartAnimInstance();
 	}
 
-	// Token: 0x0601C396 RID: 115606 RVA: 0x007DCACC File Offset: 0x007DACCC
+	// Token: 0x06019FF1 RID: 106481 RVA: 0x00803A00 File Offset: 0x00801C00
 	protected override void OnTick(float delta)
 	{
 		if (this.ShowActorDisableAnimOptimizationCount > 0)
@@ -175,13 +175,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C397 RID: 115607 RVA: 0x007DCB20 File Offset: 0x007DAD20
+	// Token: 0x06019FF2 RID: 106482 RVA: 0x00803A54 File Offset: 0x00801C54
 	protected override void OnForceAfterTick(float delta)
 	{
 		this.UpdateModelBuffer(delta);
 	}
 
-	// Token: 0x0601C398 RID: 115608 RVA: 0x007DCB29 File Offset: 0x007DAD29
+	// Token: 0x06019FF3 RID: 106483 RVA: 0x00803A5D File Offset: 0x00801C5D
 	protected override bool OnEnd()
 	{
 		if (this.ShowActorDisableAnimOptimizationCount > 0)
@@ -194,13 +194,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C399 RID: 115609 RVA: 0x007DCB4F File Offset: 0x007DAD4F
+	// Token: 0x06019FF4 RID: 106484 RVA: 0x00803A83 File Offset: 0x00801C83
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C39A RID: 115610 RVA: 0x007DCB54 File Offset: 0x007DAD54
+	// Token: 0x06019FF5 RID: 106485 RVA: 0x00803A88 File Offset: 0x00801C88
 	protected override void OnDisable(string reason)
 	{
 		if (this.HiddenCount >= 0)
@@ -239,12 +239,12 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C39B RID: 115611 RVA: 0x007DCC0A File Offset: 0x007DAE0A
+	// Token: 0x06019FF6 RID: 106486 RVA: 0x00803B3E File Offset: 0x00801D3E
 	protected override void OnEnable()
 	{
 	}
 
-	// Token: 0x0601C39C RID: 115612 RVA: 0x007DCC0C File Offset: 0x007DAE0C
+	// Token: 0x06019FF7 RID: 106487 RVA: 0x00803B40 File Offset: 0x00801D40
 	protected void GetAnimInstanceFromMesh()
 	{
 		this.CheckLinkAnimInstance();
@@ -256,7 +256,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.SpecialAnimInstanceInternal = this.Mesh.GetLinkedAnimGraphInstanceByTag(CharacterNameDefines.Instance.ABP_SPECIAL);
 	}
 
-	// Token: 0x0601C39D RID: 115613 RVA: 0x007DCC70 File Offset: 0x007DAE70
+	// Token: 0x06019FF8 RID: 106488 RVA: 0x00803BA4 File Offset: 0x00801DA4
 	protected void StartAnimInstance()
 	{
 		UKuroAnimInstance ukuroAnimInstance = this.MainAnimInstanceInternal as UKuroAnimInstance;
@@ -275,7 +275,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.StartAllAttachedAnimInstance();
 	}
 
-	// Token: 0x0601C39E RID: 115614 RVA: 0x007DCCB8 File Offset: 0x007DAEB8
+	// Token: 0x06019FF9 RID: 106489 RVA: 0x00803BEC File Offset: 0x00801DEC
 	private void StartAllAttachedAnimInstance()
 	{
 		TArray<UActorComponent> tarray = this.ActorComp.Actor.K2_GetComponentsByClass(USkeletalMeshComponent.StaticClass());
@@ -306,7 +306,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C39F RID: 115615 RVA: 0x007DCD5C File Offset: 0x007DAF5C
+	// Token: 0x06019FFA RID: 106490 RVA: 0x00803C90 File Offset: 0x00801E90
 	private unsafe void CheckLinkAnimInstance()
 	{
 		if (this.Actor.Mesh.GetLinkedAnimGraphInstanceByTag(FNameUtil.NONE) != null)
@@ -322,13 +322,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3A0 RID: 115616 RVA: 0x007DCDEC File Offset: 0x007DAFEC
+	// Token: 0x06019FFB RID: 106491 RVA: 0x00803D20 File Offset: 0x00801F20
 	public bool IsMontagePlaying()
 	{
 		return this.MainAnimInstanceInternal.IsAnyMontagePlaying();
 	}
 
-	// Token: 0x0601C3A1 RID: 115617 RVA: 0x007DCDF9 File Offset: 0x007DAFF9
+	// Token: 0x06019FFC RID: 106492 RVA: 0x00803D2D File Offset: 0x00801F2D
 	public int LoadAsync(string path, [Nullable(new byte[]
 	{
 		1,
@@ -339,7 +339,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return ResourceSystem.Instance.LoadAsync<UAnimMontage>(path, callback, 100, "js_undefined");
 	}
 
-	// Token: 0x0601C3A2 RID: 115618 RVA: 0x007DCE0E File Offset: 0x007DB00E
+	// Token: 0x06019FFD RID: 106493 RVA: 0x00803D42 File Offset: 0x00801F42
 	public void Play(UAnimMontage asset, [Nullable(2)] Action<UAnimMontage, bool> onEnded = null)
 	{
 		this.MainAnimInstanceInternal.Montage_Play(asset, 1f, EMontagePlayReturnType.MontageLength, 0f, true);
@@ -349,7 +349,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3A3 RID: 115619 RVA: 0x007DCE40 File Offset: 0x007DB040
+	// Token: 0x06019FFE RID: 106494 RVA: 0x00803D74 File Offset: 0x00801F74
 	[NullableContext(2)]
 	public void PlayOnce(UAnimMontage asset, Action<UAnimMontage, bool> onEnded = null)
 	{
@@ -361,7 +361,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3A4 RID: 115620 RVA: 0x007DCE9C File Offset: 0x007DB09C
+	// Token: 0x06019FFF RID: 106495 RVA: 0x00803DD0 File Offset: 0x00801FD0
 	public void PlayFromLoop(UAnimMontage asset, [Nullable(2)] Action<UAnimMontage, bool> onEnded = null)
 	{
 		this.MainAnimInstanceInternal.Montage_Play(asset, 1f, EMontagePlayReturnType.MontageLength, 0f, true);
@@ -372,7 +372,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3A5 RID: 115621 RVA: 0x007DCEEC File Offset: 0x007DB0EC
+	// Token: 0x0601A000 RID: 106496 RVA: 0x00803E20 File Offset: 0x00802020
 	public void PlayFromEnd(UAnimMontage asset, [Nullable(2)] Action<UAnimMontage, bool> onEnded = null)
 	{
 		this.MainAnimInstanceInternal.Montage_Play(asset, 1f, EMontagePlayReturnType.MontageLength, 0f, true);
@@ -383,7 +383,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3A6 RID: 115622 RVA: 0x007DCF3C File Offset: 0x007DB13C
+	// Token: 0x0601A001 RID: 106497 RVA: 0x00803E70 File Offset: 0x00802070
 	[NullableContext(2)]
 	public void Stop(bool immediately = false, UAnimMontage asset = null)
 	{
@@ -395,20 +395,20 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.MainAnimInstanceInternal.Montage_SetNextSection(CharacterNameDefines.Instance.LOOP_SECTION, CharacterNameDefines.Instance.END_SECTION, asset);
 	}
 
-	// Token: 0x0601C3A7 RID: 115623 RVA: 0x007DCF78 File Offset: 0x007DB178
+	// Token: 0x0601A002 RID: 106498 RVA: 0x00803EAC File Offset: 0x008020AC
 	public void StopMontage(float blendOutTime = 0f)
 	{
 		this.MainAnimInstanceInternal.Montage_Stop(blendOutTime, null);
 	}
 
-	// Token: 0x0601C3A8 RID: 115624 RVA: 0x007DCF87 File Offset: 0x007DB187
+	// Token: 0x0601A003 RID: 106499 RVA: 0x00803EBB File Offset: 0x008020BB
 	[NullableContext(2)]
 	public void ForceStop(float? blendOutTime = null, UAnimMontage asset = null)
 	{
 		this.MainAnimInstanceInternal.Montage_Stop(blendOutTime.GetValueOrDefault(), asset);
 	}
 
-	// Token: 0x0601C3A9 RID: 115625 RVA: 0x007DCF9C File Offset: 0x007DB19C
+	// Token: 0x0601A004 RID: 106500 RVA: 0x00803ED0 File Offset: 0x008020D0
 	public void ForceStopWithBlendOut(float blendOutTime, UAnimMontage asset)
 	{
 		float num = this.MainAnimInstanceInternal.Montage_GetPosition(asset);
@@ -422,7 +422,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.MainAnimInstanceInternal.Montage_SetNextSection(CharacterNameDefines.Instance.LOOP_SECTION, CharacterNameDefines.Instance.END_SECTION, asset);
 	}
 
-	// Token: 0x0601C3AA RID: 115626 RVA: 0x007DCFFC File Offset: 0x007DB1FC
+	// Token: 0x0601A005 RID: 106501 RVA: 0x00803F30 File Offset: 0x00802130
 	[NullableContext(2)]
 	public void AddOnMontageEnded(Action<UAnimMontage, bool> onEnded = null)
 	{
@@ -437,7 +437,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3AB RID: 115627 RVA: 0x007DD017 File Offset: 0x007DB217
+	// Token: 0x0601A006 RID: 106502 RVA: 0x00803F4B File Offset: 0x0080214B
 	[NullableContext(2)]
 	public void RemoveOnMontageEnded(Action<UAnimMontage, bool> onEnded = null)
 	{
@@ -452,7 +452,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3AC RID: 115628 RVA: 0x007DD032 File Offset: 0x007DB232
+	// Token: 0x0601A007 RID: 106503 RVA: 0x00803F66 File Offset: 0x00802166
 	public void ClearOnMontageEnded()
 	{
 		UAnimInstance mainAnimInstanceInternal = this.MainAnimInstanceInternal;
@@ -467,13 +467,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3AD RID: 115629 RVA: 0x007DD05D File Offset: 0x007DB25D
+	// Token: 0x0601A008 RID: 106504 RVA: 0x00803F91 File Offset: 0x00802191
 	public FName GetCurrentSection()
 	{
 		return this.MainAnimInstanceInternal.Montage_GetCurrentSection(null);
 	}
 
-	// Token: 0x0601C3AE RID: 115630 RVA: 0x007DD06C File Offset: 0x007DB26C
+	// Token: 0x0601A009 RID: 106505 RVA: 0x00803FA0 File Offset: 0x008021A0
 	public bool PlayMontageById(IMontageId montage, [Nullable(new byte[]
 	{
 		1,
@@ -493,7 +493,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return montageConfig != null && this.LoadAsync(montageConfig.ActionMontage, callback) != -1;
 	}
 
-	// Token: 0x0601C3AF RID: 115631 RVA: 0x007DD0C9 File Offset: 0x007DB2C9
+	// Token: 0x0601A00A RID: 106506 RVA: 0x00803FFD File Offset: 0x008021FD
 	private void OnSetActorHidden(int entityId, bool active)
 	{
 		if (entityId != base.Entity.Id)
@@ -507,13 +507,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3B0 RID: 115632 RVA: 0x007DD0ED File Offset: 0x007DB2ED
+	// Token: 0x0601A00B RID: 106507 RVA: 0x00804021 File Offset: 0x00802221
 	public EVisibilityBasedAnimTickOption GetAnimDefaultTickOption()
 	{
 		return this.DefaultVisibilityBasedAnimTickOption;
 	}
 
-	// Token: 0x0601C3B1 RID: 115633 RVA: 0x007DD0F5 File Offset: 0x007DB2F5
+	// Token: 0x0601A00C RID: 106508 RVA: 0x00804029 File Offset: 0x00802229
 	public void ChangeAnimDefaultTickOption(EVisibilityBasedAnimTickOption option)
 	{
 		if (this.DefaultVisibilityBasedAnimTickOption == option)
@@ -524,7 +524,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601C3B2 RID: 115634 RVA: 0x007DD110 File Offset: 0x007DB310
+	// Token: 0x0601A00D RID: 106509 RVA: 0x00804044 File Offset: 0x00802244
 	public bool StartForceDisableAnimOptimization(EForceDisableAnimOptimization reason, bool enableAutoCancel = true)
 	{
 		if (this.ForceDisableAnimOptimizationSet.Contains(reason))
@@ -555,7 +555,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C3B3 RID: 115635 RVA: 0x007DD1E8 File Offset: 0x007DB3E8
+	// Token: 0x0601A00E RID: 106510 RVA: 0x0080411C File Offset: 0x0080231C
 	public bool StartForceDisableAnimOptimization2(EForceDisableAnimOptimization reason)
 	{
 		if (this.ForceDisableAnimOptimizationSet.Contains(reason))
@@ -573,7 +573,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C3B4 RID: 115636 RVA: 0x007DD248 File Offset: 0x007DB448
+	// Token: 0x0601A00F RID: 106511 RVA: 0x0080417C File Offset: 0x0080237C
 	public void CancelForceDisableAnimOptimization(EForceDisableAnimOptimization reason)
 	{
 		if (!this.ForceDisableAnimOptimizationSet.Remove(reason))
@@ -589,7 +589,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.RefreshAnimOptimization();
 	}
 
-	// Token: 0x0601C3B5 RID: 115637 RVA: 0x007DD298 File Offset: 0x007DB498
+	// Token: 0x0601A010 RID: 106512 RVA: 0x008041CC File Offset: 0x008023CC
 	public void RefreshAnimOptimization()
 	{
 		CharacterUnifiedStateComponent component = base.Entity.GetComponent<CharacterUnifiedStateComponent>();
@@ -605,7 +605,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3B6 RID: 115638 RVA: 0x007DD320 File Offset: 0x007DB520
+	// Token: 0x0601A011 RID: 106513 RVA: 0x00804254 File Offset: 0x00802454
 	protected EVisibilityBasedAnimTickOption RefreshVisibilityBasedAnimTickOption(bool forceDisableAnimOptimization, bool inFight)
 	{
 		EVisibilityBasedAnimTickOption evisibilityBasedAnimTickOption = this.DefaultVisibilityBasedAnimTickOption;
@@ -624,7 +624,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return evisibilityBasedAnimTickOption;
 	}
 
-	// Token: 0x0601C3B7 RID: 115639 RVA: 0x007DD398 File Offset: 0x007DB598
+	// Token: 0x0601A012 RID: 106514 RVA: 0x008042CC File Offset: 0x008024CC
 	private void SetAnimParams(bool bUseDistanceMap = true)
 	{
 		bool flag = Info.Instance.IsMobilePlatform();
@@ -662,7 +662,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3B8 RID: 115640 RVA: 0x007DD50C File Offset: 0x007DB70C
+	// Token: 0x0601A013 RID: 106515 RVA: 0x00804440 File Offset: 0x00802640
 	protected void ResetTemporaryHidden()
 	{
 		if (this.HiddenCount > 0)
@@ -685,7 +685,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3B9 RID: 115641 RVA: 0x007DD5B8 File Offset: 0x007DB7B8
+	// Token: 0x0601A014 RID: 106516 RVA: 0x008044EC File Offset: 0x008026EC
 	public void AddModelQuat(Quat quat, bool lockCenter)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -710,7 +710,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601C3BA RID: 115642 RVA: 0x007DD668 File Offset: 0x007DB868
+	// Token: 0x0601A015 RID: 106517 RVA: 0x0080459C File Offset: 0x0080279C
 	public void AddModelLocation(Vector offset)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -730,7 +730,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601C3BB RID: 115643 RVA: 0x007DD6F8 File Offset: 0x007DB8F8
+	// Token: 0x0601A016 RID: 106518 RVA: 0x0080462C File Offset: 0x0080282C
 	public void ResetModelQuat()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -750,7 +750,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601C3BC RID: 115644 RVA: 0x007DD790 File Offset: 0x007DB990
+	// Token: 0x0601A017 RID: 106519 RVA: 0x008046C4 File Offset: 0x008028C4
 	public void ResetModelLocation()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -769,7 +769,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		mesh.D_K2_SetRelativeTransform(ftransformDouble, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601C3BD RID: 115645 RVA: 0x007DD808 File Offset: 0x007DBA08
+	// Token: 0x0601A018 RID: 106520 RVA: 0x0080473C File Offset: 0x0080293C
 	private void GetTransformOffsetInWorld(FTransformDouble child, BaseActorComponent parent, Transform output, bool useLocalRotation = false)
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -796,7 +796,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		output.SetRotation(this.TmpQuat);
 	}
 
-	// Token: 0x0601C3BE RID: 115646 RVA: 0x007DD918 File Offset: 0x007DBB18
+	// Token: 0x0601A019 RID: 106521 RVA: 0x0080484C File Offset: 0x00802A4C
 	public void SetTransformWithModelBuffer(FTransformDouble newTransform, float timeLength, ESetRotationPriority? priority = null)
 	{
 		if (timeLength < 10f)
@@ -827,7 +827,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601C3BF RID: 115647 RVA: 0x007DDA40 File Offset: 0x007DBC40
+	// Token: 0x0601A01A RID: 106522 RVA: 0x00804974 File Offset: 0x00802B74
 	public void SetLocationAndRotatorWithModelBuffer(FVectorDouble newLocation, FRotator newRotator, float timeLength, string context, ESetRotationPriority priority = ESetRotationPriority.Anim)
 	{
 		if (timeLength < 10f)
@@ -858,7 +858,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601C3C0 RID: 115648 RVA: 0x007DDB74 File Offset: 0x007DBD74
+	// Token: 0x0601A01B RID: 106523 RVA: 0x00804AA8 File Offset: 0x00802CA8
 	public void SetLocationAndRotatorWithKeepingModelBuffer(FVectorDouble newLocation, FRotator newRotator, float timeLength, string context, ESetRotationPriority priority = ESetRotationPriority.Anim)
 	{
 		if (timeLength < 10f)
@@ -887,7 +887,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601C3C1 RID: 115649 RVA: 0x007DDCB8 File Offset: 0x007DBEB8
+	// Token: 0x0601A01C RID: 106524 RVA: 0x00804BEC File Offset: 0x00802DEC
 	public void SetModelBuffer(FTransformDouble modelWorldTransform, float timeLength)
 	{
 		if (timeLength < 10f)
@@ -914,7 +914,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.BufferLocation = !this.BufferModelTransform.GetLocation().Equals(this.BufferShowTransform.GetLocation(), 10.0);
 	}
 
-	// Token: 0x0601C3C2 RID: 115650 RVA: 0x007DDDC8 File Offset: 0x007DBFC8
+	// Token: 0x0601A01D RID: 106525 RVA: 0x00804CFC File Offset: 0x00802EFC
 	protected void UpdateModelBuffer(float delta)
 	{
 		if (this.BufferNowTime < this.BufferTimeLength)
@@ -951,7 +951,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3C3 RID: 115651 RVA: 0x007DDF90 File Offset: 0x007DC190
+	// Token: 0x0601A01E RID: 106526 RVA: 0x00804EC4 File Offset: 0x008030C4
 	public void StopModelBuffer()
 	{
 		if (Info.Instance.EnableForceTick)
@@ -978,7 +978,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		animationComp2.SetComponentTickEnabled(false);
 	}
 
-	// Token: 0x0601C3C4 RID: 115652 RVA: 0x007DE004 File Offset: 0x007DC204
+	// Token: 0x0601A01F RID: 106527 RVA: 0x00804F38 File Offset: 0x00803138
 	public bool HasModelBuffer()
 	{
 		if (Info.Instance.EnableForceTick)
@@ -988,13 +988,13 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return this.AnimationComp.BufferTimeLength > 0f;
 	}
 
-	// Token: 0x0601C3C5 RID: 115653 RVA: 0x007DE032 File Offset: 0x007DC232
+	// Token: 0x0601A020 RID: 106528 RVA: 0x00804F66 File Offset: 0x00803166
 	public bool HasLocationModelBuffer()
 	{
 		return this.HasModelBuffer() && this.BufferLocation;
 	}
 
-	// Token: 0x0601C3C6 RID: 115654 RVA: 0x007DE044 File Offset: 0x007DC244
+	// Token: 0x0601A021 RID: 106529 RVA: 0x00804F78 File Offset: 0x00803178
 	public bool TryGetModelBufferLerpWorldRotation(Quat outStart, Quat outTarget)
 	{
 		if (this.Mesh == null || this.ActorComp == null || !this.HasModelBuffer())
@@ -1006,7 +1006,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601C3C7 RID: 115655 RVA: 0x007DE0A4 File Offset: 0x007DC2A4
+	// Token: 0x0601A022 RID: 106530 RVA: 0x00804FD8 File Offset: 0x008031D8
 	public void ClearModelBuffer()
 	{
 		if (!Info.Instance.EnableForceTick)
@@ -1029,33 +1029,33 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3C8 RID: 115656 RVA: 0x007DE109 File Offset: 0x007DC309
+	// Token: 0x0601A023 RID: 106531 RVA: 0x0080503D File Offset: 0x0080323D
 	public FTransformDouble GetMeshTransform()
 	{
 		return this.Actor.Mesh.D_K2_GetComponentToWorld();
 	}
 
-	// Token: 0x0601C3C9 RID: 115657 RVA: 0x007DE11B File Offset: 0x007DC31B
+	// Token: 0x0601A024 RID: 106532 RVA: 0x0080504F File Offset: 0x0080324F
 	protected void OnRequestClearMeshRotationBuffer()
 	{
 		this.StopModelBuffer();
 	}
 
-	// Token: 0x0601C3CA RID: 115658 RVA: 0x007DE124 File Offset: 0x007DC324
+	// Token: 0x0601A025 RID: 106533 RVA: 0x00805058 File Offset: 0x00803258
 	protected void AddEvents()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.RequestClearMeshRotationBuffer, new Action(this.OnRequestClearMeshRotationBuffer));
 		EventSystem.Instance.AddWithTarget<int, bool>(this.Handle, EEventName.OnSetActorHidden, new Action<int, bool>(this.OnSetActorHidden));
 	}
 
-	// Token: 0x0601C3CB RID: 115659 RVA: 0x007DE178 File Offset: 0x007DC378
+	// Token: 0x0601A026 RID: 106534 RVA: 0x008050AC File Offset: 0x008032AC
 	protected void RemoveEvents()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.RequestClearMeshRotationBuffer, new Action(this.OnRequestClearMeshRotationBuffer));
 		EventSystem.Instance.RemoveWithTarget<int, bool>(this.Handle, EEventName.OnSetActorHidden, new Action<int, bool>(this.OnSetActorHidden));
 	}
 
-	// Token: 0x0601C3CC RID: 115660 RVA: 0x007DE1CC File Offset: 0x007DC3CC
+	// Token: 0x0601A027 RID: 106535 RVA: 0x00805100 File Offset: 0x00803300
 	public void ConsumeRootMotion()
 	{
 		USkeletalMeshComponent mesh = this.Mesh;
@@ -1079,7 +1079,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601C3CD RID: 115661 RVA: 0x007DE238 File Offset: 0x007DC438
+	// Token: 0x0601A028 RID: 106536 RVA: 0x0080516C File Offset: 0x0080336C
 	private void CalculateMoveNormal()
 	{
 		if (this.MoveComp.VehicleMovement.MovementMode != EKuroVehicleMovementMode.KURO_VEHICLE_MOVE_Shipping)
@@ -1111,7 +1111,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.LastLocation.FromUeVector(actorLocationProxy);
 	}
 
-	// Token: 0x0601C3CE RID: 115662 RVA: 0x007DE384 File Offset: 0x007DC584
+	// Token: 0x0601A029 RID: 106537 RVA: 0x008052B8 File Offset: 0x008034B8
 	public virtual void GetCameraPosition(Vector output, FName? socketName = null)
 	{
 		if (!FNameUtil.IsEmpty(socketName))
@@ -1140,7 +1140,7 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 		this.ActorComp.ActorLocationProxy.Addition(this.TmpDirect, output);
 	}
 
-	// Token: 0x0601C3CF RID: 115663 RVA: 0x007DE4D0 File Offset: 0x007DC6D0
+	// Token: 0x0601A02A RID: 106538 RVA: 0x00805404 File Offset: 0x00803604
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1148,386 +1148,404 @@ public class VehicleAnimationComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		VehicleAnimationComponent vehicleAnimationComponent = (VehicleAnimationComponent)componentTemplate;
-		if (base.CanResetComponentProperty("Actor"))
+		if (vehicleAnimationComponent.Actor == null)
 		{
-			if (vehicleAnimationComponent.Actor == null)
-			{
-				this.Actor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseVehicle>(this.Actor), "Actor"))
-			{
-				return false;
-			}
+			this.Actor = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (vehicleAnimationComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (vehicleAnimationComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformComp"))
-		{
-			if (vehicleAnimationComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Mesh"))
-		{
-			if (vehicleAnimationComponent.Mesh == null)
-			{
-				this.Mesh = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.Mesh), "Mesh"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimationComp"))
-		{
-			if (vehicleAnimationComponent.AnimationComp == null)
-			{
-				this.AnimationComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroCharacterAnimationComponent>(this.AnimationComp), "AnimationComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MainAnimInstanceInternal"))
-		{
-			if (vehicleAnimationComponent.MainAnimInstanceInternal == null)
-			{
-				this.MainAnimInstanceInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SpecialAnimInstanceInternal"))
-		{
-			if (vehicleAnimationComponent.SpecialAnimInstanceInternal == null)
-			{
-				this.SpecialAnimInstanceInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsPlayer"))
-		{
-			this.IsPlayer = vehicleAnimationComponent.IsPlayer;
-		}
-		if (base.CanResetComponentProperty("AnimLogicParamsSetter"))
-		{
-			if (vehicleAnimationComponent.AnimLogicParamsSetter == null)
-			{
-				this.AnimLogicParamsSetter = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AnimLogicParamsSetter>(this.AnimLogicParamsSetter), "AnimLogicParamsSetter"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastTickFrame"))
-		{
-			this.LastTickFrame = vehicleAnimationComponent.LastTickFrame;
-		}
-		if (base.CanResetComponentProperty("LastLocation") && vehicleAnimationComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLocation), "LastLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Actor), "Actor"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MovementNormal") && vehicleAnimationComponent.MovementNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MovementNormal), "MovementNormal"))
+		if (vehicleAnimationComponent.ActorComp == null)
+		{
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BufferModelTransform"))
+		if (vehicleAnimationComponent.MoveComp == null)
 		{
-			if (vehicleAnimationComponent.BufferModelTransform == null)
-			{
-				this.BufferModelTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.BufferModelTransform), "BufferModelTransform"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("BufferOriginTransform"))
-		{
-			if (vehicleAnimationComponent.BufferOriginTransform == null)
-			{
-				this.BufferOriginTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.BufferOriginTransform), "BufferOriginTransform"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BufferShowTransform"))
-		{
-			if (vehicleAnimationComponent.BufferShowTransform == null)
-			{
-				this.BufferShowTransform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.BufferShowTransform), "BufferShowTransform"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BufferNowTime"))
-		{
-			this.BufferNowTime = vehicleAnimationComponent.BufferNowTime;
-		}
-		if (base.CanResetComponentProperty("BufferTimeLength"))
-		{
-			this.BufferTimeLength = vehicleAnimationComponent.BufferTimeLength;
-		}
-		if (base.CanResetComponentProperty("RemainBufferTime"))
-		{
-			this.RemainBufferTime = vehicleAnimationComponent.RemainBufferTime;
-		}
-		if (base.CanResetComponentProperty("MeshLocationOffset") && vehicleAnimationComponent.MeshLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MeshLocationOffset), "MeshLocationOffset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BufferLocation"))
+		if (vehicleAnimationComponent.PerformComp == null)
 		{
-			this.BufferLocation = vehicleAnimationComponent.BufferLocation;
+			this.PerformComp = null;
 		}
-		if (base.CanResetComponentProperty("Handle"))
-		{
-			if (vehicleAnimationComponent.Handle == null)
-			{
-				this.Handle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.Handle), "Handle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ForceDisableAnimOptimizationSet") && vehicleAnimationComponent.ForceDisableAnimOptimizationSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimOptimization>(this.ForceDisableAnimOptimizationSet), "ForceDisableAnimOptimizationSet"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DefaultVisibilityBasedAnimTickOption"))
+		if (vehicleAnimationComponent.Mesh == null)
 		{
-			this.DefaultVisibilityBasedAnimTickOption = vehicleAnimationComponent.DefaultVisibilityBasedAnimTickOption;
+			this.Mesh = null;
 		}
-		if (base.CanResetComponentProperty("TemporaryHiddenHandle"))
-		{
-			this.TemporaryHiddenHandle = vehicleAnimationComponent.TemporaryHiddenHandle;
-		}
-		if (base.CanResetComponentProperty("HiddenCount"))
-		{
-			this.HiddenCount = vehicleAnimationComponent.HiddenCount;
-		}
-		if (base.CanResetComponentProperty("CameraPositionType"))
-		{
-			this.CameraPositionType = vehicleAnimationComponent.CameraPositionType;
-		}
-		if (base.CanResetComponentProperty("CameraPositionOffset") && vehicleAnimationComponent.CameraPositionOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraPositionOffset), "CameraPositionOffset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Mesh), "Mesh"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTransform") && vehicleAnimationComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTransform), "TmpTransform"))
+		if (vehicleAnimationComponent.AnimationComp == null)
+		{
+			this.AnimationComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimationComp), "AnimationComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTransform2") && vehicleAnimationComponent.TmpTransform2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTransform2), "TmpTransform2"))
+		if (vehicleAnimationComponent.MainAnimInstanceInternal == null)
+		{
+			this.MainAnimInstanceInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainAnimInstanceInternal), "MainAnimInstanceInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat") && vehicleAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+		if (vehicleAnimationComponent.SpecialAnimInstanceInternal == null)
+		{
+			this.SpecialAnimInstanceInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpecialAnimInstanceInternal), "SpecialAnimInstanceInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat2") && vehicleAnimationComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"))
+		this.IsPlayer = vehicleAnimationComponent.IsPlayer;
+		if (vehicleAnimationComponent.AnimLogicParamsSetter == null)
+		{
+			this.AnimLogicParamsSetter = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimLogicParamsSetter), "AnimLogicParamsSetter"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect") && vehicleAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpDirect), "TmpDirect"))
+		this.LastTickFrame = vehicleAnimationComponent.LastTickFrame;
+		if (vehicleAnimationComponent.LastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect2") && vehicleAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpDirect2), "TmpDirect2"))
+		if (vehicleAnimationComponent.MovementNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MovementNormal), "MovementNormal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpDirect3") && vehicleAnimationComponent.TmpDirect3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpDirect3), "TmpDirect3"))
+		if (vehicleAnimationComponent.BufferModelTransform == null)
+		{
+			this.BufferModelTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferModelTransform), "BufferModelTransform"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ShowActorDisableAnimOptimizationCount"))
+		if (vehicleAnimationComponent.BufferOriginTransform == null)
 		{
-			this.ShowActorDisableAnimOptimizationCount = vehicleAnimationComponent.ShowActorDisableAnimOptimizationCount;
+			this.BufferOriginTransform = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferOriginTransform), "BufferOriginTransform"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.BufferShowTransform == null)
+		{
+			this.BufferShowTransform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BufferShowTransform), "BufferShowTransform"))
+		{
+			return false;
+		}
+		this.BufferNowTime = vehicleAnimationComponent.BufferNowTime;
+		this.BufferTimeLength = vehicleAnimationComponent.BufferTimeLength;
+		this.RemainBufferTime = vehicleAnimationComponent.RemainBufferTime;
+		if (vehicleAnimationComponent.MeshLocationOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshLocationOffset), "MeshLocationOffset"))
+		{
+			return false;
+		}
+		this.BufferLocation = vehicleAnimationComponent.BufferLocation;
+		if (vehicleAnimationComponent.Handle == null)
+		{
+			this.Handle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Handle), "Handle"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.ForceDisableAnimOptimizationSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForceDisableAnimOptimization>(this.ForceDisableAnimOptimizationSet), "ForceDisableAnimOptimizationSet"))
+		{
+			return false;
+		}
+		this.DefaultVisibilityBasedAnimTickOption = vehicleAnimationComponent.DefaultVisibilityBasedAnimTickOption;
+		this.TemporaryHiddenHandle = vehicleAnimationComponent.TemporaryHiddenHandle;
+		this.HiddenCount = vehicleAnimationComponent.HiddenCount;
+		this.CameraPositionType = vehicleAnimationComponent.CameraPositionType;
+		if (vehicleAnimationComponent.CameraPositionOffset != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraPositionOffset), "CameraPositionOffset"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform), "TmpTransform"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpTransform2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTransform2), "TmpTransform2"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect), "TmpDirect"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpDirect2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect2), "TmpDirect2"))
+		{
+			return false;
+		}
+		if (vehicleAnimationComponent.TmpDirect3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpDirect3), "TmpDirect3"))
+		{
+			return false;
+		}
+		this.ShowActorDisableAnimOptimizationCount = vehicleAnimationComponent.ShowActorDisableAnimOptimizationCount;
 		return true;
 	}
 
-	// Token: 0x0400DF44 RID: 57156
+	// Token: 0x17002A34 RID: 10804
+	// (get) Token: 0x0601A02B RID: 106539 RVA: 0x0080586F File Offset: 0x00803A6F
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A35 RID: 10805
+	// (get) Token: 0x0601A02C RID: 106540 RVA: 0x00805872 File Offset: 0x00803A72
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A36 RID: 10806
+	// (get) Token: 0x0601A02D RID: 106541 RVA: 0x00805875 File Offset: 0x00803A75
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A37 RID: 10807
+	// (get) Token: 0x0601A02E RID: 106542 RVA: 0x00805878 File Offset: 0x00803A78
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A38 RID: 10808
+	// (get) Token: 0x0601A02F RID: 106543 RVA: 0x0080587B File Offset: 0x00803A7B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A39 RID: 10809
+	// (get) Token: 0x0601A030 RID: 106544 RVA: 0x0080587E File Offset: 0x00803A7E
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A3A RID: 10810
+	// (get) Token: 0x0601A031 RID: 106545 RVA: 0x00805881 File Offset: 0x00803A81
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A3B RID: 10811
+	// (get) Token: 0x0601A032 RID: 106546 RVA: 0x00805884 File Offset: 0x00803A84
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A3C RID: 10812
+	// (get) Token: 0x0601A033 RID: 106547 RVA: 0x00805887 File Offset: 0x00803A87
+	public override bool NeedForceAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E3E7 RID: 58343
 	private const float FORCE_DISABLE_ANIM_OPTIMIZATION_TIME = 100f;
 
-	// Token: 0x0400DF45 RID: 57157
+	// Token: 0x0400E3E8 RID: 58344
 	private const float MIN_BUFFER_TIME_LENGTH = 10f;
 
-	// Token: 0x0400DF46 RID: 57158
+	// Token: 0x0400E3E9 RID: 58345
 	public const float DEFAULT_CAMERA_HEIGHT_RATE = 0.5f;
 
-	// Token: 0x0400DF47 RID: 57159
+	// Token: 0x0400E3EA RID: 58346
 	public static readonly FName CameraPosition = new FName("CameraPosition");
 
-	// Token: 0x0400DF48 RID: 57160
+	// Token: 0x0400E3EB RID: 58347
 	public static readonly FName SeatProp01 = new FName("SeatProp01");
 
-	// Token: 0x0400DF49 RID: 57161
+	// Token: 0x0400E3EC RID: 58348
 	[Nullable(2)]
 	protected TsBaseVehicle Actor;
 
-	// Token: 0x0400DF4A RID: 57162
+	// Token: 0x0400E3ED RID: 58349
 	[Nullable(2)]
 	protected VehicleActorComponent ActorComp;
 
-	// Token: 0x0400DF4B RID: 57163
+	// Token: 0x0400E3EE RID: 58350
 	[Nullable(2)]
 	protected VehicleMoveComponent MoveComp;
 
-	// Token: 0x0400DF4C RID: 57164
+	// Token: 0x0400E3EF RID: 58351
 	[Nullable(2)]
 	protected VehiclePerformComponent PerformComp;
 
-	// Token: 0x0400DF4D RID: 57165
+	// Token: 0x0400E3F0 RID: 58352
 	[Nullable(2)]
 	protected USkeletalMeshComponent Mesh;
 
-	// Token: 0x0400DF4E RID: 57166
+	// Token: 0x0400E3F1 RID: 58353
 	[Nullable(2)]
 	protected UKuroCharacterAnimationComponent AnimationComp;
 
-	// Token: 0x0400DF4F RID: 57167
+	// Token: 0x0400E3F2 RID: 58354
 	[Nullable(2)]
 	protected UAnimInstance MainAnimInstanceInternal;
 
-	// Token: 0x0400DF50 RID: 57168
+	// Token: 0x0400E3F3 RID: 58355
 	[Nullable(2)]
 	protected UAnimInstance SpecialAnimInstanceInternal;
 
-	// Token: 0x0400DF51 RID: 57169
+	// Token: 0x0400E3F4 RID: 58356
 	protected bool IsPlayer;
 
-	// Token: 0x0400DF52 RID: 57170
+	// Token: 0x0400E3F5 RID: 58357
 	[Nullable(2)]
 	public AnimLogicParamsSetter AnimLogicParamsSetter;
 
-	// Token: 0x0400DF53 RID: 57171
+	// Token: 0x0400E3F6 RID: 58358
 	private long LastTickFrame = -1L;
 
-	// Token: 0x0400DF54 RID: 57172
+	// Token: 0x0400E3F7 RID: 58359
 	private readonly Vector LastLocation = Vector.Create();
 
-	// Token: 0x0400DF55 RID: 57173
+	// Token: 0x0400E3F8 RID: 58360
 	public readonly Vector MovementNormal = Vector.Create();
 
-	// Token: 0x0400DF56 RID: 57174
+	// Token: 0x0400E3F9 RID: 58361
 	protected Transform BufferModelTransform = Transform.Create();
 
-	// Token: 0x0400DF57 RID: 57175
+	// Token: 0x0400E3FA RID: 58362
 	protected Transform BufferOriginTransform = Transform.Create();
 
-	// Token: 0x0400DF58 RID: 57176
+	// Token: 0x0400E3FB RID: 58363
 	protected Transform BufferShowTransform = Transform.Create();
 
-	// Token: 0x0400DF59 RID: 57177
+	// Token: 0x0400E3FC RID: 58364
 	protected float BufferNowTime;
 
-	// Token: 0x0400DF5A RID: 57178
+	// Token: 0x0400E3FD RID: 58365
 	protected float BufferTimeLength;
 
-	// Token: 0x0400DF5B RID: 57179
+	// Token: 0x0400E3FE RID: 58366
 	protected float RemainBufferTime;
 
-	// Token: 0x0400DF5C RID: 57180
+	// Token: 0x0400E3FF RID: 58367
 	protected readonly Vector MeshLocationOffset = Vector.Create();
 
-	// Token: 0x0400DF5D RID: 57181
+	// Token: 0x0400E400 RID: 58368
 	protected bool BufferLocation;
 
-	// Token: 0x0400DF5E RID: 57182
+	// Token: 0x0400E401 RID: 58369
 	[Nullable(2)]
 	protected EntityHandle Handle;
 
-	// Token: 0x0400DF5F RID: 57183
+	// Token: 0x0400E402 RID: 58370
 	protected readonly HashSet<EForceDisableAnimOptimization> ForceDisableAnimOptimizationSet = new HashSet<EForceDisableAnimOptimization>();
 
-	// Token: 0x0400DF60 RID: 57184
+	// Token: 0x0400E403 RID: 58371
 	protected EVisibilityBasedAnimTickOption DefaultVisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.OnlyTickPoseWhenRendered;
 
-	// Token: 0x0400DF61 RID: 57185
+	// Token: 0x0400E404 RID: 58372
 	protected int? TemporaryHiddenHandle = new int?(0);
 
-	// Token: 0x0400DF62 RID: 57186
+	// Token: 0x0400E405 RID: 58373
 	protected int HiddenCount = -1;
 
-	// Token: 0x0400DF63 RID: 57187
+	// Token: 0x0400E406 RID: 58374
 	protected VehicleAnimationComponent.ECameraPositionType CameraPositionType = VehicleAnimationComponent.ECameraPositionType.Default;
 
-	// Token: 0x0400DF64 RID: 57188
+	// Token: 0x0400E407 RID: 58375
 	protected readonly Vector CameraPositionOffset = Vector.Create();
 
-	// Token: 0x0400DF65 RID: 57189
+	// Token: 0x0400E408 RID: 58376
 	protected readonly Transform TmpTransform = Transform.Create();
 
-	// Token: 0x0400DF66 RID: 57190
+	// Token: 0x0400E409 RID: 58377
 	protected readonly Transform TmpTransform2 = Transform.Create();
 
-	// Token: 0x0400DF67 RID: 57191
+	// Token: 0x0400E40A RID: 58378
 	protected readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DF68 RID: 57192
+	// Token: 0x0400E40B RID: 58379
 	protected readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DF69 RID: 57193
+	// Token: 0x0400E40C RID: 58380
 	protected readonly Vector TmpDirect = Vector.Create();
 
-	// Token: 0x0400DF6A RID: 57194
+	// Token: 0x0400E40D RID: 58381
 	protected readonly Vector TmpDirect2 = Vector.Create();
 
-	// Token: 0x0400DF6B RID: 57195
+	// Token: 0x0400E40E RID: 58382
 	protected readonly Vector TmpDirect3 = Vector.Create();
 
-	// Token: 0x0400DF6C RID: 57196
+	// Token: 0x0400E40F RID: 58383
 	private int ShowActorDisableAnimOptimizationCount;
 
-	// Token: 0x0200976C RID: 38764
+	// Token: 0x0200898F RID: 35215
 	[NullableContext(0)]
 	public enum ECameraPositionType
 	{
-		// Token: 0x040306AD RID: 198317
+		// Token: 0x0402BD3A RID: 179514
 		CameraPosition,
-		// Token: 0x040306AE RID: 198318
+		// Token: 0x0402BD3B RID: 179515
 		SeatProp01,
-		// Token: 0x040306AF RID: 198319
+		// Token: 0x0402BD3C RID: 179516
 		Default
 	}
 }

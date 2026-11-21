@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000B1 RID: 177
+	// Token: 0x020000B9 RID: 185
 	[EnumExtensions]
 	public enum EGraph3dType
 	{
-		// Token: 0x04000404 RID: 1028
+		// Token: 0x04000428 RID: 1064
 		Normal
 	}
 }

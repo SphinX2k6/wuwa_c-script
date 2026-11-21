@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066BD RID: 26301
+	// Token: 0x0200560D RID: 22029
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DropCatchLevelSelectView : UiViewBase
 	{
-		// Token: 0x06041C7E RID: 269438 RVA: 0x00FF3B5F File Offset: 0x00FF1D5F
+		// Token: 0x060367CA RID: 223178 RVA: 0x00F34F63 File Offset: 0x00F33163
 		[NullableContext(1)]
 		public DropCatchLevelSelectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06041C7F RID: 269439 RVA: 0x00FF3B74 File Offset: 0x00FF1D74
+		// Token: 0x060367CB RID: 223179 RVA: 0x00F34F78 File Offset: 0x00F33178
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			};
 		}
 
-		// Token: 0x06041C80 RID: 269440 RVA: 0x00FF3DBC File Offset: 0x00FF1FBC
+		// Token: 0x060367CC RID: 223180 RVA: 0x00F351C0 File Offset: 0x00F333C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DropCatchLevelSelectView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041C81 RID: 269441 RVA: 0x00FF3E00 File Offset: 0x00FF2000
+		// Token: 0x060367CD RID: 223181 RVA: 0x00F35204 File Offset: 0x00F33404
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			base.GetSpine(18).SetAnimation(0, EDropCatchRobotAnimState.IdleRight.ToEnumString(), true);
 		}
 
-		// Token: 0x06041C82 RID: 269442 RVA: 0x00FF3E80 File Offset: 0x00FF2080
+		// Token: 0x060367CE RID: 223182 RVA: 0x00F35284 File Offset: 0x00F33484
 		protected override void OnBeforeShow()
 		{
 			this.Data = (ActivityModel.Instance.GetActivityById(DropCatchActivityController.Instance.ActivityId) as DropCatchActivityData);
@@ -98,27 +98,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.UpdateRoleInfo().Forget();
 		}
 
-		// Token: 0x06041C83 RID: 269443 RVA: 0x00FF3EFE File Offset: 0x00FF20FE
+		// Token: 0x060367CF RID: 223183 RVA: 0x00F35302 File Offset: 0x00F33502
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.DropCatchActivityRewardUpdate, new Action(this.UpdateCurLevelContent));
 			EventSystem.Instance.Add(EEventName.ActivityCrossDayRefresh, new Action(this.UpdateCurLevelContent));
 		}
 
-		// Token: 0x06041C84 RID: 269444 RVA: 0x00FF3F38 File Offset: 0x00FF2138
+		// Token: 0x060367D0 RID: 223184 RVA: 0x00F3533C File Offset: 0x00F3353C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.DropCatchActivityRewardUpdate, new Action(this.UpdateCurLevelContent));
 			EventSystem.Instance.Remove(EEventName.ActivityCrossDayRefresh, new Action(this.UpdateCurLevelContent));
 		}
 
-		// Token: 0x06041C85 RID: 269445 RVA: 0x00FF3F72 File Offset: 0x00FF2172
+		// Token: 0x060367D1 RID: 223185 RVA: 0x00F35376 File Offset: 0x00F33576
 		protected override void OnBeforeHide()
 		{
 			this.ClearCountdownTimer();
 		}
 
-		// Token: 0x06041C86 RID: 269446 RVA: 0x00FF3F7C File Offset: 0x00FF217C
+		// Token: 0x060367D2 RID: 223186 RVA: 0x00F35380 File Offset: 0x00F33580
 		private UniTask UpdateRoleInfo()
 		{
 			DropCatchLevelSelectView.<UpdateRoleInfo>d__18 <UpdateRoleInfo>d__;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return <UpdateRoleInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041C87 RID: 269447 RVA: 0x00FF3FC0 File Offset: 0x00FF21C0
+		// Token: 0x060367D3 RID: 223187 RVA: 0x00F353C4 File Offset: 0x00F335C4
 		private void OnClickChallenge()
 		{
 			DropCatchActivityData data = this.Data;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			DropCatchGameplayController.Instance.StartGameplay(this.CurLevelCfgId);
 		}
 
-		// Token: 0x06041C88 RID: 269448 RVA: 0x00FF4028 File Offset: 0x00FF2228
+		// Token: 0x060367D4 RID: 223188 RVA: 0x00F3542C File Offset: 0x00F3362C
 		private void OnClickCustom()
 		{
 			DropCatchGameplay? dropCatchGameplayById = DropCatchConfig.Instance.GetDropCatchGameplayById(this.CurLevelCfgId);
@@ -164,14 +164,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			UiManager.Instance.OpenView(EUiViewName.DropCatchRoleDetailView, param, null);
 		}
 
-		// Token: 0x06041C89 RID: 269449 RVA: 0x00FF4086 File Offset: 0x00FF2286
+		// Token: 0x060367D5 RID: 223189 RVA: 0x00F3548A File Offset: 0x00F3368A
 		private void UpdateCurLevelContent()
 		{
 			this.RefreshLevelItems();
 			this.SwitchContent(this.CurLevelCfgId);
 		}
 
-		// Token: 0x06041C8A RID: 269450 RVA: 0x00FF409C File Offset: 0x00FF229C
+		// Token: 0x060367D6 RID: 223190 RVA: 0x00F354A0 File Offset: 0x00F336A0
 		private void InitCaption()
 		{
 			UUIItem item = base.GetItem(0);
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C8B RID: 269451 RVA: 0x00FF40F3 File Offset: 0x00FF22F3
+		// Token: 0x060367D7 RID: 223191 RVA: 0x00F354F7 File Offset: 0x00F336F7
 		[NullableContext(1)]
 		private DropCatchLevelItem InitLevelItem()
 		{
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return dropCatchLevelItem;
 		}
 
-		// Token: 0x06041C8C RID: 269452 RVA: 0x00FF410C File Offset: 0x00FF230C
+		// Token: 0x060367D8 RID: 223192 RVA: 0x00F35510 File Offset: 0x00F33710
 		[NullableContext(1)]
 		private DropCatchRewardPreviewItem InitPreviewItem()
 		{
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return dropCatchRewardPreviewItem;
 		}
 
-		// Token: 0x06041C8D RID: 269453 RVA: 0x00FF4128 File Offset: 0x00FF2328
+		// Token: 0x060367D9 RID: 223193 RVA: 0x00F3552C File Offset: 0x00F3372C
 		private void OnClickMoreButton()
 		{
 			DropCatchActivityData data = this.Data;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			HelpController.Instance.OpenHelpById(num.GetValueOrDefault());
 		}
 
-		// Token: 0x06041C8E RID: 269454 RVA: 0x00FF4166 File Offset: 0x00FF2366
+		// Token: 0x060367DA RID: 223194 RVA: 0x00F3556A File Offset: 0x00F3376A
 		private void OnPreviewItemClick(int _)
 		{
 			DropCatchActivityData data = this.Data;
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			DropCatchActivityController.Instance.RequestLevelReward(this.CurLevelCfgId);
 		}
 
-		// Token: 0x06041C8F RID: 269455 RVA: 0x00FF41A4 File Offset: 0x00FF23A4
+		// Token: 0x060367DB RID: 223195 RVA: 0x00F355A8 File Offset: 0x00F337A8
 		private void OnLevelItemClick(int cfgId, int index)
 		{
 			this.CurLevelCfgId = cfgId;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.UpdateRoleInfo().Forget();
 		}
 
-		// Token: 0x06041C90 RID: 269456 RVA: 0x00FF4238 File Offset: 0x00FF2438
+		// Token: 0x060367DC RID: 223196 RVA: 0x00F3563C File Offset: 0x00F3383C
 		private void RefreshLevelItems()
 		{
 			IReadOnlyList<DropCatchGameplay> dropCatchGameplayByActivityId = DropCatchConfig.Instance.GetDropCatchGameplayByActivityId(this.Data.Id);
@@ -330,14 +330,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}, false);
 		}
 
-		// Token: 0x06041C91 RID: 269457 RVA: 0x00FF4370 File Offset: 0x00FF2570
+		// Token: 0x060367DD RID: 223197 RVA: 0x00F35774 File Offset: 0x00F33974
 		private void SwitchContent(int cfgId)
 		{
 			this.RefreshCenterContent();
 			this.RefreshPreviewContent(cfgId);
 		}
 
-		// Token: 0x06041C92 RID: 269458 RVA: 0x00FF437F File Offset: 0x00FF257F
+		// Token: 0x060367DE RID: 223198 RVA: 0x00F35783 File Offset: 0x00F33983
 		private IDropCatchLevelItemData GetCurShowLevelInfo()
 		{
 			if (this.LevelDataList != null && this.CurLevelIndex < this.LevelDataList.Count)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return null;
 		}
 
-		// Token: 0x06041C93 RID: 269459 RVA: 0x00FF43B0 File Offset: 0x00FF25B0
+		// Token: 0x060367DF RID: 223199 RVA: 0x00F357B4 File Offset: 0x00F339B4
 		private void RefreshCenterContent()
 		{
 			this.ClearCountdownTimer();
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C94 RID: 269460 RVA: 0x00FF45E0 File Offset: 0x00FF27E0
+		// Token: 0x060367E0 RID: 223200 RVA: 0x00F359E4 File Offset: 0x00F33BE4
 		private void RefreshPreviewContent(int cfgId)
 		{
 			DropCatchGameplay? dropCatchGameplayById = DropCatchConfig.Instance.GetDropCatchGameplayById(cfgId);
@@ -439,7 +439,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			previewLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06041C95 RID: 269461 RVA: 0x00FF46CC File Offset: 0x00FF28CC
+		// Token: 0x060367E1 RID: 223201 RVA: 0x00F35AD0 File Offset: 0x00F33CD0
 		private void RefreshLockTips(int configId)
 		{
 			DropCatchActivityData data = this.Data;
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C96 RID: 269462 RVA: 0x00FF4760 File Offset: 0x00FF2960
+		// Token: 0x060367E2 RID: 223202 RVA: 0x00F35B64 File Offset: 0x00F33D64
 		private void UpdateUnlockText(int configId)
 		{
 			string levelUnlockHintText = this.Data.GetLevelUnlockHintText(configId);
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C97 RID: 269463 RVA: 0x00FF478C File Offset: 0x00FF298C
+		// Token: 0x060367E3 RID: 223203 RVA: 0x00F35B90 File Offset: 0x00F33D90
 		private void ClearCountdownTimer()
 		{
 			if (TimerSystem.GameplayTimeInstance.Has(this.CountdownTimerHandle))
@@ -480,13 +480,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.CountdownTimerHandle = null;
 		}
 
-		// Token: 0x04022443 RID: 140355
+		// Token: 0x0401CC9C RID: 117916
 		protected DropCatchActivityData Data;
 
-		// Token: 0x04022444 RID: 140356
+		// Token: 0x0401CC9D RID: 117917
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022445 RID: 140357
+		// Token: 0x0401CC9E RID: 117918
 		[Nullable(new byte[]
 		{
 			2,
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 		})]
 		private GenericScrollViewNew<DropCatchLevelItem, IDropCatchLevelItemData> LevelScrollView;
 
-		// Token: 0x04022446 RID: 140358
+		// Token: 0x0401CC9F RID: 117919
 		[Nullable(new byte[]
 		{
 			2,
@@ -504,23 +504,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 		})]
 		private GenericLayout<DropCatchRewardPreviewItem, IDropCatchRewardPreviewData> PreviewLayout;
 
-		// Token: 0x04022447 RID: 140359
+		// Token: 0x0401CCA0 RID: 117920
 		private int CurLevelCfgId;
 
-		// Token: 0x04022448 RID: 140360
+		// Token: 0x0401CCA1 RID: 117921
 		private int CurLevelIndex;
 
-		// Token: 0x04022449 RID: 140361
+		// Token: 0x0401CCA2 RID: 117922
 		[Nullable(1)]
 		private readonly List<IDropCatchLevelItemData> LevelDataList = new List<IDropCatchLevelItemData>();
 
-		// Token: 0x0402244A RID: 140362
+		// Token: 0x0401CCA3 RID: 117923
 		private TimerHandle CountdownTimerHandle;
 
-		// Token: 0x0402244B RID: 140363
+		// Token: 0x0401CCA4 RID: 117924
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0402244C RID: 140364
+		// Token: 0x0401CCA5 RID: 117925
 		private DropCatchGameplayRoleView RoleView;
 	}
 }

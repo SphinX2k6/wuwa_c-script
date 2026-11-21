@@ -1,32 +1,32 @@
 ﻿using System;
 
-// Token: 0x0200164C RID: 5708
+// Token: 0x02000B04 RID: 2820
 internal enum <WheelTowerSettlementView>F66EDDF47EEF3C7B0141BB7D79F79E5BF9D37BFB735C383C3AF6EC39ED5E6A45A__EWheelTowerSettlementViewComponent
 {
-	// Token: 0x04004905 RID: 18693
+	// Token: 0x040049AB RID: 18859
 	CaptionItem,
-	// Token: 0x04004906 RID: 18694
+	// Token: 0x040049AC RID: 18860
 	BgModeTitle,
-	// Token: 0x04004907 RID: 18695
+	// Token: 0x040049AD RID: 18861
 	BgRoundPoints,
-	// Token: 0x04004908 RID: 18696
+	// Token: 0x040049AE RID: 18862
 	BgScore,
-	// Token: 0x04004909 RID: 18697
+	// Token: 0x040049AF RID: 18863
 	BgBattleBoss,
-	// Token: 0x0400490A RID: 18698
+	// Token: 0x040049B0 RID: 18864
 	TxtMissionDesc,
-	// Token: 0x0400490B RID: 18699
+	// Token: 0x040049B1 RID: 18865
 	RoleLayout,
-	// Token: 0x0400490C RID: 18700
+	// Token: 0x040049B2 RID: 18866
 	RoleItem,
-	// Token: 0x0400490D RID: 18701
+	// Token: 0x040049B3 RID: 18867
 	BtnReBattle,
-	// Token: 0x0400490E RID: 18702
+	// Token: 0x040049B4 RID: 18868
 	BtnBack,
-	// Token: 0x0400490F RID: 18703
+	// Token: 0x040049B5 RID: 18869
 	BtnContinue,
-	// Token: 0x04004910 RID: 18704
+	// Token: 0x040049B6 RID: 18870
 	BgSeasonTask,
-	// Token: 0x04004911 RID: 18705
+	// Token: 0x040049B7 RID: 18871
 	ShareBtnItem
 }

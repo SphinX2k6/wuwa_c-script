@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,13 +13,13 @@ using CSharpScript.Utils;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002E72 RID: 11890
+// Token: 0x020023C4 RID: 9156
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseDamageComponent : EntityComponent
 {
-	// Token: 0x170022F3 RID: 8947
-	// (get) Token: 0x0601968A RID: 104074 RVA: 0x0068CE19 File Offset: 0x0068B019
+	// Token: 0x17002372 RID: 9074
+	// (get) Token: 0x06016F51 RID: 94033 RVA: 0x006B320D File Offset: 0x006B140D
 	[Nullable(2)]
 	public CharacterBuffComponent OwnerBuffComponent
 	{
@@ -31,7 +30,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601968B RID: 104075 RVA: 0x0068CE24 File Offset: 0x0068B024
+	// Token: 0x06016F52 RID: 94034 RVA: 0x006B3218 File Offset: 0x006B1418
 	protected override bool OnStart()
 	{
 		this.AttributeComponent = base.Entity.CheckGetComponent<BaseAttributeComponent>();
@@ -45,14 +44,14 @@ public class BaseDamageComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601968C RID: 104076 RVA: 0x0068CEBA File Offset: 0x0068B0BA
+	// Token: 0x06016F53 RID: 94035 RVA: 0x006B32AE File Offset: 0x006B14AE
 	protected override bool OnClear()
 	{
 		this.RemoveListeningRageTask();
 		return true;
 	}
 
-	// Token: 0x0601968D RID: 104077 RVA: 0x0068CEC3 File Offset: 0x0068B0C3
+	// Token: 0x06016F54 RID: 94036 RVA: 0x006B32B7 File Offset: 0x006B14B7
 	private void RemoveListeningRageTask()
 	{
 		if (this.HitInAirFinishTask != null)
@@ -62,7 +61,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601968E RID: 104078 RVA: 0x0068CEE0 File Offset: 0x0068B0E0
+	// Token: 0x06016F55 RID: 94037 RVA: 0x006B32D4 File Offset: 0x006B14D4
 	public unsafe BulletDamageResult ExecuteBulletDamage(int bulletEntityId, IBulletDamageParam damageParam, long contextId)
 	{
 		DamageModel instance = DamageModel.Instance;
@@ -156,7 +155,7 @@ public class BaseDamageComponent : EntityComponent
 		return bulletDamageResult;
 	}
 
-	// Token: 0x0601968F RID: 104079 RVA: 0x0068D2D0 File Offset: 0x0068B4D0
+	// Token: 0x06016F56 RID: 94038 RVA: 0x006B36C4 File Offset: 0x006B18C4
 	public unsafe float ExecuteKuroBulletDamage(IBulletDamageParam damageParam, FWorldEntityBulletParam extraParam)
 	{
 		DamageModel instance = DamageModel.Instance;
@@ -251,7 +250,7 @@ public class BaseDamageComponent : EntityComponent
 		return this.ProcessDamage(requirementPayload, inputParam, null);
 	}
 
-	// Token: 0x06019690 RID: 104080 RVA: 0x0068D684 File Offset: 0x0068B884
+	// Token: 0x06016F57 RID: 94039 RVA: 0x006B3A78 File Offset: 0x006B1C78
 	public unsafe void ExecuteBuffDamage(IBuffDamageParam damageParam, Partial_RequirementPayload payload, long contextId)
 	{
 		DamageSnapshot damageSnapshotById = DamageModel.Instance.GetDamageSnapshotById(damageParam.DamageDataId);
@@ -317,7 +316,7 @@ public class BaseDamageComponent : EntityComponent
 		this.ProcessDamage(requirementPayload, inputParam, null);
 	}
 
-	// Token: 0x06019691 RID: 104081 RVA: 0x0068D8B4 File Offset: 0x0068BAB4
+	// Token: 0x06016F58 RID: 94040 RVA: 0x006B3CA8 File Offset: 0x006B1EA8
 	public unsafe void ExecuteBuffShareDamage(IBuffDamageParam damageParam, Partial_RequirementPayload payload, float extraRate, long contextId)
 	{
 		DamageModel instance = DamageModel.Instance;
@@ -380,7 +379,7 @@ public class BaseDamageComponent : EntityComponent
 		this.ProcessDamage(requirementPayload, inputParam, null);
 	}
 
-	// Token: 0x06019692 RID: 104082 RVA: 0x0068DAB4 File Offset: 0x0068BCB4
+	// Token: 0x06016F59 RID: 94041 RVA: 0x006B3EA8 File Offset: 0x006B20A8
 	public float ProcessDamage(RequirementPayload partialRequirements, TDamageParam inputParam, [Nullable(2)] BulletDamageResult result)
 	{
 		if (this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.无敌"]) && inputParam.DamageData.ImmuneType == 0)
@@ -416,8 +415,20 @@ public class BaseDamageComponent : EntityComponent
 			CharacterPartComponent component = base.Entity.GetComponent<CharacterPartComponent>();
 			part = ((component != null) ? component.GetPartByIndex(inputParam.PartId) : null);
 		}
+		bool flag = false;
 		IReadOnlyList<ESkillGenre> skillGenres = partialRequirements.SkillGenres;
-		float extraToughRate = ((skillGenres != null && skillGenres.Contains(ESkillGenre.极限闪避反击5)) ? this.GetExtraToughRate("ToughRateOnCounter") : this.GetExtraToughRate("ToughRate")) / 10000f;
+		if (skillGenres != null)
+		{
+			for (int i = 0; i < skillGenres.Count; i++)
+			{
+				if (skillGenres[i] == ESkillGenre.极限闪避反击5)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		float extraToughRate = (flag ? this.GetExtraToughRate("ToughRateOnCounter") : this.GetExtraToughRate("ToughRate")) / 10000f;
 		EventSystem.Instance.EmitWithTarget<int>(base.Entity, EEventName.MonsterDebug, attacker.Entity.Id);
 		this.GetServerDamage(inputParam, partialRequirements, inputParam.ContextId, part);
 		float num2 = this.CalculateToughReduce(inputParam, snapshotPayload, extraToughRate);
@@ -426,7 +437,7 @@ public class BaseDamageComponent : EntityComponent
 		return num2;
 	}
 
-	// Token: 0x06019693 RID: 104083 RVA: 0x0068DCD4 File Offset: 0x0068BED4
+	// Token: 0x06016F5A RID: 94042 RVA: 0x006B40EC File Offset: 0x006B22EC
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.DamageExecuteNotify, false, false)]
 	public static void OnDamageExecuteNotify(Entity entity, [Nullable(1)] DamageExecuteNotify data, CombatCommon combatCommon = null)
@@ -450,7 +461,7 @@ public class BaseDamageComponent : EntityComponent
 		obj2.ProcessRemoteDamage(data);
 	}
 
-	// Token: 0x06019694 RID: 104084 RVA: 0x0068DD0C File Offset: 0x0068BF0C
+	// Token: 0x06016F5B RID: 94043 RVA: 0x006B4124 File Offset: 0x006B2324
 	public unsafe void ProcessRemoteDamage(DamageExecuteNotify data)
 	{
 		DamageContext damageContext = data.DamageContext ?? new DamageContext();
@@ -546,7 +557,7 @@ public class BaseDamageComponent : EntityComponent
 		this.ExecPostDamageExtraEffect(damageResult, baseDamageComponent2, requirementPayload);
 	}
 
-	// Token: 0x06019695 RID: 104085 RVA: 0x0068E0C4 File Offset: 0x0068C2C4
+	// Token: 0x06016F5C RID: 94044 RVA: 0x006B44DC File Offset: 0x006B26DC
 	private SnapshotPayload AllocateSnapshot(BaseDamageComponent attacker, TDamageParam inputParam)
 	{
 		CharacterFollowComponent followComponent = attacker.FollowComponent;
@@ -587,7 +598,7 @@ public class BaseDamageComponent : EntityComponent
 		};
 	}
 
-	// Token: 0x06019696 RID: 104086 RVA: 0x0068E22C File Offset: 0x0068C42C
+	// Token: 0x06016F5D RID: 94045 RVA: 0x006B4644 File Offset: 0x006B2844
 	[return: Nullable(2)]
 	private BaseDamageComponent ReplaceAttacker(BaseDamageComponent attacker)
 	{
@@ -603,7 +614,7 @@ public class BaseDamageComponent : EntityComponent
 		return entity.GetComponent<BaseDamageComponent>();
 	}
 
-	// Token: 0x06019697 RID: 104087 RVA: 0x0068E26C File Offset: 0x0068C46C
+	// Token: 0x06016F5E RID: 94046 RVA: 0x006B4684 File Offset: 0x006B2884
 	private void ProcessWhenCounter(RequirementPayload partialRequirements, TDamageParam inputParam, SnapshotPayload payload)
 	{
 		if (inputParam.IsCounterAttack)
@@ -613,13 +624,25 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x06019698 RID: 104088 RVA: 0x0068E2B8 File Offset: 0x0068C4B8
+	// Token: 0x06016F5F RID: 94047 RVA: 0x006B46D0 File Offset: 0x006B28D0
 	private unsafe void GetServerDamage(TDamageParam inputParam, RequirementPayload partialRequirements, long preContextId, [Nullable(2)] CharacterPart part)
 	{
 		BaseDamageComponent attacker = inputParam.Attacker;
 		Damage damageData = inputParam.DamageData;
+		bool flag = false;
 		IReadOnlyList<ESkillGenre> skillGenres = partialRequirements.SkillGenres;
-		bool isBreakWeakness = skillGenres != null && skillGenres.Contains(ESkillGenre.破弱技能13) && this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点状态"]);
+		if (skillGenres != null)
+		{
+			for (int i = 0; i < skillGenres.Count; i++)
+			{
+				if (skillGenres[i] == ESkillGenre.破弱技能13)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		bool isBreakWeakness = flag && this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.弱点机制.弱点状态"]);
 		DamageExecuteRequest request = new DamageExecuteRequest();
 		request.DamageId = MathUtils.Instance.NumberToLong(damageData.Id);
 		request.SkillLevel = inputParam.SkillLevel;
@@ -647,7 +670,7 @@ public class BaseDamageComponent : EntityComponent
 		if (shouldLogOnline)
 		{
 			CombatLog instance = CombatLog.Instance;
-			CombatLog.EDebugModule flag = CombatLog.EDebugModule.Damage;
+			CombatLog.EDebugModule flag2 = CombatLog.EDebugModule.Damage;
 			Entity entity = base.Entity;
 			string message = "发起结算请求";
 			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
@@ -655,7 +678,7 @@ public class BaseDamageComponent : EntityComponent
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("受击方", MathUtils.Instance.BigIntToLong(request.TargetEntityId));
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("结算id", damageData.Id);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("BulletId", partialRequirements.BulletId.GetValueOrDefault());
-			instance.Info(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
+			instance.Info(flag2, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 		CombatNet.Instance.Call(ERequestMessageId.DamageExecuteRequest, base.Entity, request, delegate(IMessage msg)
 		{
@@ -665,14 +688,14 @@ public class BaseDamageComponent : EntityComponent
 				if (shouldLogOnline)
 				{
 					CombatLog instance2 = CombatLog.Instance;
-					CombatLog.EDebugModule flag2 = CombatLog.EDebugModule.Damage;
+					CombatLog.EDebugModule flag3 = CombatLog.EDebugModule.Damage;
 					Entity entity2 = this.Entity;
 					string message2 = "EDamageImmune_Invincible";
 					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray3<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("攻击方", request.AttackerEntityId);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("受击方", request.TargetEntityId);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("结算id", damageData.Id);
-					instance2.Info(flag2, entity2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
+					instance2.Info(flag3, entity2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 				}
 				return;
 			}
@@ -698,7 +721,7 @@ public class BaseDamageComponent : EntityComponent
 			if (shouldLogOnline)
 			{
 				CombatLog instance3 = CombatLog.Instance;
-				CombatLog.EDebugModule flag3 = CombatLog.EDebugModule.Damage;
+				CombatLog.EDebugModule flag4 = CombatLog.EDebugModule.Damage;
 				Entity entity3 = this.Entity;
 				string message3 = "收到结算回包";
 				<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray5<ValueTuple<string, object>>);
@@ -707,7 +730,7 @@ public class BaseDamageComponent : EntityComponent
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("结算id", damageData.Id);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 3) = new ValueTuple<string, object>("伤害值", damageResult.Damage);
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 4) = new ValueTuple<string, object>("errorCode", damageExecuteResponse.ErrorCode);
-				instance3.Info(flag3, entity3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 5));
+				instance3.Info(flag4, entity3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 5));
 			}
 			if (damageExecuteResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
@@ -717,7 +740,7 @@ public class BaseDamageComponent : EntityComponent
 		}, new long?(preContextId), null, null, null);
 	}
 
-	// Token: 0x06019699 RID: 104089 RVA: 0x0068E694 File Offset: 0x0068C894
+	// Token: 0x06016F60 RID: 94048 RVA: 0x006B4AD4 File Offset: 0x006B2CD4
 	private void GetServerDamageCallBack(RequirementPayload requirements, TDamageParam inputParam, DamageResult serverResult, [Nullable(2)] CharacterPart part)
 	{
 		Entity entity = base.Entity;
@@ -747,14 +770,14 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601969A RID: 104090 RVA: 0x0068E727 File Offset: 0x0068C927
+	// Token: 0x06016F61 RID: 94049 RVA: 0x006B4B67 File Offset: 0x006B2D67
 	private void ExecDamageEffect(DamageResult result, TDamageParam inputParam, RequirementPayload requirements)
 	{
 		this.ExecEnergyCharge(inputParam, requirements);
 		this.ExecPostDamageExtraEffect(result, inputParam.Attacker, requirements);
 	}
 
-	// Token: 0x0601969B RID: 104091 RVA: 0x0068E740 File Offset: 0x0068C940
+	// Token: 0x06016F62 RID: 94050 RVA: 0x006B4B80 File Offset: 0x006B2D80
 	private void ExecDamageEvent(DamageResult damageResult, DamageEventInfo inputParam, RequirementPayload requirements)
 	{
 		Entity entity = inputParam.Attacker.Entity;
@@ -784,7 +807,7 @@ public class BaseDamageComponent : EntityComponent
 		EventSystem.Instance.Emit<Entity, Entity, RequirementPayload, DamageResult, FVectorDouble>(EEventName.GlobalCharDamage, entity, entity2, requirements, damageResult, inputParam.HitPosition);
 	}
 
-	// Token: 0x0601969C RID: 104092 RVA: 0x0068E824 File Offset: 0x0068CA24
+	// Token: 0x06016F63 RID: 94051 RVA: 0x006B4C64 File Offset: 0x006B2E64
 	private void ExecPostDamageExtraEffect(DamageResult damageResult, BaseDamageComponent attackerDamageComp, RequirementPayload requirements)
 	{
 		if (this.BuffComponent == null)
@@ -821,7 +844,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601969D RID: 104093 RVA: 0x0068E8C8 File Offset: 0x0068CAC8
+	// Token: 0x06016F64 RID: 94052 RVA: 0x006B4D08 File Offset: 0x006B2F08
 	private void ExecEnergyCharge(TDamageParam inputParam, RequirementPayload requirements)
 	{
 		BaseDamageComponent attacker = inputParam.Attacker;
@@ -854,7 +877,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601969E RID: 104094 RVA: 0x0068E9A8 File Offset: 0x0068CBA8
+	// Token: 0x06016F65 RID: 94053 RVA: 0x006B4DE8 File Offset: 0x006B2FE8
 	private float CalculateToughReduce(TDamageParam inputParam, SnapshotPayload snapshots, float extraToughRate = 1f)
 	{
 		AttributeSnapshot attackerSnapshot = snapshots.AttackerSnapshot;
@@ -863,7 +886,7 @@ public class BaseDamageComponent : EntityComponent
 		return Calculation.ToughCalculation(attackerSnapshot, targetSnapshot, (float)levelValue * extraToughRate);
 	}
 
-	// Token: 0x0601969F RID: 104095 RVA: 0x0068E9E8 File Offset: 0x0068CBE8
+	// Token: 0x06016F66 RID: 94054 RVA: 0x006B4E28 File Offset: 0x006B3028
 	private void ExecToughReduceRedirection(TDamageParam inputParam, SnapshotPayload snapshots, double toughResult)
 	{
 		if (!snapshots.HasDamageTransfer)
@@ -882,7 +905,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196A0 RID: 104096 RVA: 0x0068EA90 File Offset: 0x0068CC90
+	// Token: 0x06016F67 RID: 94055 RVA: 0x006B4ED0 File Offset: 0x006B30D0
 	private void ExecToughReduce(TDamageParam inputParam, float toughRecoverDelayTime, float weakTime, float toughResult)
 	{
 		BaseDamageComponent attacker = inputParam.Attacker;
@@ -945,7 +968,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196A1 RID: 104097 RVA: 0x0068EC08 File Offset: 0x0068CE08
+	// Token: 0x06016F68 RID: 94056 RVA: 0x006B5048 File Offset: 0x006B3248
 	private void RequestWeakTime(bool isStart)
 	{
 		if (isStart)
@@ -967,7 +990,7 @@ public class BaseDamageComponent : EntityComponent
 		CombatNet.Instance.Call(ERequestMessageId.FragileChangeRequest, base.Entity, fragileChangeRequest, new Action<IMessage>(this.<RequestWeakTime>g__Response|50_0), null, null, null, null);
 	}
 
-	// Token: 0x060196A2 RID: 104098 RVA: 0x0068ECD4 File Offset: 0x0068CED4
+	// Token: 0x06016F69 RID: 94057 RVA: 0x006B5114 File Offset: 0x006B3314
 	private void ListenForHitInAirFinishTask()
 	{
 		this.HitInAirFinishTask = this.TagComponent.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["行为状态.动作状态.受击.击飞"]), delegate(int tagId, bool tagExists)
@@ -979,7 +1002,7 @@ public class BaseDamageComponent : EntityComponent
 		}, null);
 	}
 
-	// Token: 0x060196A3 RID: 104099 RVA: 0x0068ED08 File Offset: 0x0068CF08
+	// Token: 0x06016F6A RID: 94058 RVA: 0x006B5148 File Offset: 0x006B3348
 	public void TryExitWeakTime()
 	{
 		if (!this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["Damage.Vulnerable"]))
@@ -994,7 +1017,7 @@ public class BaseDamageComponent : EntityComponent
 		this.RequestWeakTime(false);
 	}
 
-	// Token: 0x060196A4 RID: 104100 RVA: 0x0068ED5C File Offset: 0x0068CF5C
+	// Token: 0x06016F6B RID: 94059 RVA: 0x006B519C File Offset: 0x006B339C
 	private void ReviseInputSkillLevel(TDamageParam inputParam)
 	{
 		long id = inputParam.DamageData.Id;
@@ -1030,7 +1053,7 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196A5 RID: 104101 RVA: 0x0068EE60 File Offset: 0x0068D060
+	// Token: 0x06016F6C RID: 94060 RVA: 0x006B52A0 File Offset: 0x006B34A0
 	public void AddToughModifier(string key, float value)
 	{
 		if (!this.ToughModifiers.ContainsKey(key))
@@ -1041,7 +1064,7 @@ public class BaseDamageComponent : EntityComponent
 		dictionary[value] = 1 + (dictionary.ContainsKey(value) ? dictionary[value] : 0);
 	}
 
-	// Token: 0x060196A6 RID: 104102 RVA: 0x0068EEB8 File Offset: 0x0068D0B8
+	// Token: 0x06016F6D RID: 94061 RVA: 0x006B52F8 File Offset: 0x006B34F8
 	public void RemoveToughModifier(string key, float value)
 	{
 		if (!this.ToughModifiers.ContainsKey(key))
@@ -1062,7 +1085,7 @@ public class BaseDamageComponent : EntityComponent
 		dictionary.Remove(value);
 	}
 
-	// Token: 0x060196A7 RID: 104103 RVA: 0x0068EF0C File Offset: 0x0068D10C
+	// Token: 0x06016F6E RID: 94062 RVA: 0x006B534C File Offset: 0x006B354C
 	protected float GetExtraToughRate(string key)
 	{
 		if (!this.ToughModifiers.ContainsKey(key))
@@ -1081,7 +1104,7 @@ public class BaseDamageComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x060196A8 RID: 104104 RVA: 0x0068EFA4 File Offset: 0x0068D1A4
+	// Token: 0x06016F6F RID: 94063 RVA: 0x006B53E4 File Offset: 0x006B35E4
 	private void ProcessDamageOptimize(RequirementPayload partialRequirements, TDamageParam inputParam, SnapshotPayload snapshots)
 	{
 		this.ProcessWhenCounter(partialRequirements, inputParam, snapshots);
@@ -1089,7 +1112,7 @@ public class BaseDamageComponent : EntityComponent
 		SnapModifier.PostCriticalModify(partialRequirements, snapshots);
 	}
 
-	// Token: 0x060196A9 RID: 104105 RVA: 0x0068EFC0 File Offset: 0x0068D1C0
+	// Token: 0x06016F70 RID: 94064 RVA: 0x006B5400 File Offset: 0x006B3600
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1097,131 +1120,118 @@ public class BaseDamageComponent : EntityComponent
 			return false;
 		}
 		BaseDamageComponent baseDamageComponent = (BaseDamageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AttributeComponent"))
+		if (baseDamageComponent.AttributeComponent == null)
 		{
-			if (baseDamageComponent.AttributeComponent == null)
-			{
-				this.AttributeComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComponent), "AttributeComponent"))
-			{
-				return false;
-			}
+			this.AttributeComponent = null;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComponent), "AttributeComponent"))
 		{
-			if (baseDamageComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffComponent"))
+		if (baseDamageComponent.TagComponent == null)
 		{
-			if (baseDamageComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("FollowComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (baseDamageComponent.FollowComponent == null)
-			{
-				this.FollowComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFollowComponent>(this.FollowComponent), "FollowComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("RoleGrowComponent"))
+		if (baseDamageComponent.BuffComponent == null)
 		{
-			if (baseDamageComponent.RoleGrowComponent == null)
-			{
-				this.RoleGrowComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RoleGrowComponent>(this.RoleGrowComponent), "RoleGrowComponent"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("SkillComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
-			if (baseDamageComponent.SkillComponent == null)
-			{
-				this.SkillComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComponent), "SkillComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (baseDamageComponent.FollowComponent == null)
 		{
-			if (baseDamageComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.FollowComponent = null;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowComponent), "FollowComponent"))
 		{
-			if (baseDamageComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("HitInAirFinishTask"))
+		if (baseDamageComponent.RoleGrowComponent == null)
 		{
-			if (baseDamageComponent.HitInAirFinishTask == null)
-			{
-				this.HitInAirFinishTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.HitInAirFinishTask), "HitInAirFinishTask"))
-			{
-				return false;
-			}
+			this.RoleGrowComponent = null;
 		}
-		if (base.CanResetComponentProperty("WeakTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleGrowComponent), "RoleGrowComponent"))
 		{
-			if (baseDamageComponent.WeakTimer == null)
-			{
-				this.WeakTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.WeakTimer), "WeakTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ToughModifiers"))
+		if (baseDamageComponent.SkillComponent == null)
 		{
-			if (baseDamageComponent.ToughModifiers == null)
-			{
-				this.ToughModifiers = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<float, int>>>(this.ToughModifiers), "ToughModifiers"))
-			{
-				return false;
-			}
+			this.SkillComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
+		{
+			return false;
+		}
+		if (baseDamageComponent.ActorComponent == null)
+		{
+			this.ActorComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
+		{
+			return false;
+		}
+		if (baseDamageComponent.CreatureDataComponent == null)
+		{
+			this.CreatureDataComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
+		{
+			return false;
+		}
+		if (baseDamageComponent.HitInAirFinishTask == null)
+		{
+			this.HitInAirFinishTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitInAirFinishTask), "HitInAirFinishTask"))
+		{
+			return false;
+		}
+		if (baseDamageComponent.WeakTimer == null)
+		{
+			this.WeakTimer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeakTimer), "WeakTimer"))
+		{
+			return false;
+		}
+		if (baseDamageComponent.ToughModifiers == null)
+		{
+			this.ToughModifiers = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ToughModifiers), "ToughModifiers"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x060196AD RID: 104109 RVA: 0x0068F3EC File Offset: 0x0068D5EC
+	// Token: 0x17002373 RID: 9075
+	// (get) Token: 0x06016F71 RID: 94065 RVA: 0x006B55F9 File Offset: 0x006B37F9
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002374 RID: 9076
+	// (get) Token: 0x06016F72 RID: 94066 RVA: 0x006B55FC File Offset: 0x006B37FC
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06016F76 RID: 94070 RVA: 0x006B57A4 File Offset: 0x006B39A4
 	[NullableContext(2)]
 	[CompilerGenerated]
 	private void <RequestWeakTime>g__Response|50_0(IMessage msg)
@@ -1247,107 +1257,107 @@ public class BaseDamageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0400BCBB RID: 48315
+	// Token: 0x0400C050 RID: 49232
 	[Nullable(2)]
 	protected BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400BCBC RID: 48316
+	// Token: 0x0400C051 RID: 49233
 	[Nullable(2)]
 	protected BaseTagComponent TagComponent;
 
-	// Token: 0x0400BCBD RID: 48317
+	// Token: 0x0400C052 RID: 49234
 	[Nullable(2)]
 	protected CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400BCBE RID: 48318
+	// Token: 0x0400C053 RID: 49235
 	[Nullable(2)]
 	private CharacterFollowComponent FollowComponent;
 
-	// Token: 0x0400BCBF RID: 48319
+	// Token: 0x0400C054 RID: 49236
 	[Nullable(2)]
 	private RoleGrowComponent RoleGrowComponent;
 
-	// Token: 0x0400BCC0 RID: 48320
+	// Token: 0x0400C055 RID: 49237
 	[Nullable(2)]
 	private BaseSkillComponent SkillComponent;
 
-	// Token: 0x0400BCC1 RID: 48321
+	// Token: 0x0400C056 RID: 49238
 	[Nullable(2)]
 	public BaseActorComponent ActorComponent;
 
-	// Token: 0x0400BCC2 RID: 48322
+	// Token: 0x0400C057 RID: 49239
 	[Nullable(2)]
 	protected CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400BCC3 RID: 48323
+	// Token: 0x0400C058 RID: 49240
 	[Nullable(2)]
 	private ITagTask HitInAirFinishTask;
 
-	// Token: 0x0400BCC4 RID: 48324
+	// Token: 0x0400C059 RID: 49241
 	[Nullable(2)]
 	private TimerHandle WeakTimer;
 
-	// Token: 0x0400BCC5 RID: 48325
+	// Token: 0x0400C05A RID: 49242
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteBulletDamageStat1 = Stat.Create("ExecuteBulletDamage1", "", "");
 
-	// Token: 0x0400BCC6 RID: 48326
+	// Token: 0x0400C05B RID: 49243
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteBulletDamageStat2 = Stat.Create("ExecuteBulletDamage2", "", "");
 
-	// Token: 0x0400BCC7 RID: 48327
+	// Token: 0x0400C05C RID: 49244
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecuteBulletDamageStat3 = Stat.Create("ExecuteBulletDamage3", "", "");
 
-	// Token: 0x0400BCC8 RID: 48328
+	// Token: 0x0400C05D RID: 49245
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ProcessDamageStat = Stat.Create("ProcessDamage", "", "");
 
-	// Token: 0x0400BCC9 RID: 48329
+	// Token: 0x0400C05E RID: 49246
 	[StaticVariableRuleIgnore]
 	private static readonly Stat EventCharDamageStat = Stat.Create("EventCharDamage", "", "");
 
-	// Token: 0x0400BCCA RID: 48330
+	// Token: 0x0400C05F RID: 49247
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PostExecDamageResultStat1 = Stat.Create("PostExecDamageResult1", "", "");
 
-	// Token: 0x0400BCCB RID: 48331
+	// Token: 0x0400C060 RID: 49248
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PostExecDamageResultStat2 = Stat.Create("PostExecDamageResult2", "", "");
 
-	// Token: 0x0400BCCC RID: 48332
+	// Token: 0x0400C061 RID: 49249
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PostExecDamageResultStat3 = Stat.Create("PostExecDamageResult3", "", "");
 
-	// Token: 0x0400BCCD RID: 48333
+	// Token: 0x0400C062 RID: 49250
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecToughReduceStat1 = Stat.Create("ExecToughReduce1", "", "");
 
-	// Token: 0x0400BCCE RID: 48334
+	// Token: 0x0400C063 RID: 49251
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecToughReduceStat2 = Stat.Create("ExecToughReduce2", "", "");
 
-	// Token: 0x0400BCCF RID: 48335
+	// Token: 0x0400C064 RID: 49252
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecToughReduceStat3 = Stat.Create("ExecToughReduce3", "", "");
 
-	// Token: 0x0400BCD0 RID: 48336
+	// Token: 0x0400C065 RID: 49253
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ExecToughReduceStat4 = Stat.Create("ExecToughReduce4", "", "");
 
-	// Token: 0x0400BCD1 RID: 48337
+	// Token: 0x0400C066 RID: 49254
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DamageDamageOptimizeStat = Stat.Create("DamageDamageOptimize", "", "");
 
-	// Token: 0x0400BCD2 RID: 48338
+	// Token: 0x0400C067 RID: 49255
 	private const float PER_TEN_THOUSAND = 10000f;
 
-	// Token: 0x0400BCD3 RID: 48339
+	// Token: 0x0400C068 RID: 49256
 	private const long NULL_INSTIGATOR_ID = -1L;
 
-	// Token: 0x0400BCD4 RID: 48340
+	// Token: 0x0400C069 RID: 49257
 	private const int DEFAULT_WEAPON_TYPE_NOT_PASS = -1;
 
-	// Token: 0x0400BCD5 RID: 48341
+	// Token: 0x0400C06A RID: 49258
 	private Dictionary<string, Dictionary<float, int>> ToughModifiers = new Dictionary<string, Dictionary<float, int>>();
 }

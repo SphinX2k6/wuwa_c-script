@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000706 RID: 1798
+	// Token: 0x0200071E RID: 1822
 	public class ConfigPhysicsAssetConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002A34 RID: 10804 RVA: 0x00147E20 File Offset: 0x00146020
+		// Token: 0x06002AC4 RID: 10948 RVA: 0x0014E89C File Offset: 0x0014CA9C
 		static ConfigPhysicsAssetConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhysicsAssetConfigById.CreateStaticDefaultValue), new Action(ConfigPhysicsAssetConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002A35 RID: 10805 RVA: 0x00147E40 File Offset: 0x00146040
+		// Token: 0x06002AC5 RID: 10949 RVA: 0x0014E8BC File Offset: 0x0014CABC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhysicsAssetConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002A36 RID: 10806 RVA: 0x00147EBF File Offset: 0x001460BF
+		// Token: 0x06002AC6 RID: 10950 RVA: 0x0014E93B File Offset: 0x0014CB3B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhysicsAssetConfigById.LogPair = null;
 			ConfigPhysicsAssetConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06002A37 RID: 10807 RVA: 0x00147ECD File Offset: 0x001460CD
+		// Token: 0x06002AC7 RID: 10951 RVA: 0x0014E949 File Offset: 0x0014CB49
 		public static void Init()
 		{
 			ConfigPhysicsAssetConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigPhysicsAssetConfigById.HandleId, "db_physics_asset.db", "select BinData from `PhysicsAssetConfig` where id=?");
 		}
 
-		// Token: 0x06002A38 RID: 10808 RVA: 0x00147EE8 File Offset: 0x001460E8
+		// Token: 0x06002AC8 RID: 10952 RVA: 0x0014E964 File Offset: 0x0014CB64
 		public static PhysicsAssetConfig? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhysicsAssetConfigById.HandleId, ConfigPhysicsAssetConfigById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new PhysicsAssetConfig?(rootAsPhysicsAssetConfig);
 		}
 
-		// Token: 0x04003110 RID: 12560
+		// Token: 0x040031B8 RID: 12728
 		private const string DB = "db_physics_asset.db";
 
-		// Token: 0x04003111 RID: 12561
+		// Token: 0x040031B9 RID: 12729
 		private const string FILE = "j.角色物理资产.xlsx";
 
-		// Token: 0x04003112 RID: 12562
+		// Token: 0x040031BA RID: 12730
 		private const string TABLE = "PhysicsAssetConfig";
 
-		// Token: 0x04003113 RID: 12563
+		// Token: 0x040031BB RID: 12731
 		private const string COMMAND = "select BinData from `PhysicsAssetConfig` where id=?";
 
-		// Token: 0x04003114 RID: 12564
+		// Token: 0x040031BC RID: 12732
 		private const string KEY_PREFIX = "PhysicsAssetConfigById";
 
-		// Token: 0x04003115 RID: 12565
+		// Token: 0x040031BD RID: 12733
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003116 RID: 12566
+		// Token: 0x040031BE RID: 12734
 		private static int HandleId;
 	}
 }

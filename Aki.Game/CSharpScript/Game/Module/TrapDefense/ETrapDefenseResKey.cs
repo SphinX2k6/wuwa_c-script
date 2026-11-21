@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A3E RID: 19006
+	// Token: 0x020039E6 RID: 14822
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct ETrapDefenseResKey : IEquatable<ETrapDefenseResKey>
 	{
-		// Token: 0x06031585 RID: 202117 RVA: 0x00B72233 File Offset: 0x00B70433
+		// Token: 0x06026315 RID: 156437 RVA: 0x00AB61B7 File Offset: 0x00AB43B7
 		private ETrapDefenseResKey(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x06031586 RID: 202118 RVA: 0x00B7223C File Offset: 0x00B7043C
+		// Token: 0x06026316 RID: 156438 RVA: 0x00AB61C0 File Offset: 0x00AB43C0
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x06031587 RID: 202119 RVA: 0x00B72244 File Offset: 0x00B70444
+		// Token: 0x06026317 RID: 156439 RVA: 0x00AB61C8 File Offset: 0x00AB43C8
 		public bool Equals(ETrapDefenseResKey other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x06031588 RID: 202120 RVA: 0x00B72258 File Offset: 0x00B70458
+		// Token: 0x06026318 RID: 156440 RVA: 0x00AB61DC File Offset: 0x00AB43DC
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x06031589 RID: 202121 RVA: 0x00B7227D File Offset: 0x00B7047D
+		// Token: 0x06026319 RID: 156441 RVA: 0x00AB6201 File Offset: 0x00AB4401
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -49,34 +49,34 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return value.GetHashCode();
 		}
 
-		// Token: 0x0603158A RID: 202122 RVA: 0x00B72290 File Offset: 0x00B70490
+		// Token: 0x0602631A RID: 156442 RVA: 0x00AB6214 File Offset: 0x00AB4414
 		public static bool operator ==(ETrapDefenseResKey left, ETrapDefenseResKey right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x0603158B RID: 202123 RVA: 0x00B7229A File Offset: 0x00B7049A
+		// Token: 0x0602631B RID: 156443 RVA: 0x00AB621E File Offset: 0x00AB441E
 		public static bool operator !=(ETrapDefenseResKey left, ETrapDefenseResKey right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x0401A607 RID: 108039
+		// Token: 0x04014F59 RID: 85849
 		private readonly string _Value;
 
-		// Token: 0x0401A608 RID: 108040
+		// Token: 0x04014F5A RID: 85850
 		public static readonly ETrapDefenseResKey BdProgressArrowQualityPurple = new ETrapDefenseResKey("SP_ArrowPurple");
 
-		// Token: 0x0401A609 RID: 108041
+		// Token: 0x04014F5B RID: 85851
 		public static readonly ETrapDefenseResKey BdProgressArrowQualityGold = new ETrapDefenseResKey("SP_ArrowGold");
 
-		// Token: 0x0401A60A RID: 108042
+		// Token: 0x04014F5C RID: 85852
 		public static readonly ETrapDefenseResKey MonsterTagUnStateIcon = new ETrapDefenseResKey("MonsterTagUnStateIcon");
 
-		// Token: 0x0401A60B RID: 108043
+		// Token: 0x04014F5D RID: 85853
 		public static readonly ETrapDefenseResKey LevelTargetHp = new ETrapDefenseResKey("TrapDefenseLevelTargetHp");
 
-		// Token: 0x0401A60C RID: 108044
+		// Token: 0x04014F5E RID: 85854
 		public static readonly ETrapDefenseResKey LevelTargetWave = new ETrapDefenseResKey("TrapDefenseLevelTargetWave");
 	}
 }

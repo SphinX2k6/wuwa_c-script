@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000521 RID: 1313
+	// Token: 0x02000588 RID: 1416
 	public class IMotorAutoEjectPositionEntityConfig_SetValue
 	{
-		// Token: 0x04001336 RID: 4918
+		// Token: 0x040014A0 RID: 5280
 		public EMotorAutoEjectType Type;
 
-		// Token: 0x04001337 RID: 4919
+		// Token: 0x040014A1 RID: 5281
 		public int EntityId;
 	}
 }

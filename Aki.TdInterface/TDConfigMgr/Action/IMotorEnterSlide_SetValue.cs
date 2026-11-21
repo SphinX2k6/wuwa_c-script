@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C1B RID: 7195
+	// Token: 0x02001E0A RID: 7690
 	public class IMotorEnterSlide_SetValue
 	{
-		// Token: 0x04005DEC RID: 24044
+		// Token: 0x04006313 RID: 25363
 		public ELeisureInteract Type;
 
-		// Token: 0x04005DED RID: 24045
+		// Token: 0x04006314 RID: 25364
 		public int EntityId;
 
-		// Token: 0x04005DEE RID: 24046
+		// Token: 0x04006315 RID: 25365
 		public EMotorEnterSlideMode? EnterMode;
 	}
 }

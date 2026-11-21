@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055BA RID: 21946
+	// Token: 0x02005B58 RID: 23384
 	public struct IMotorHookEndDir : IFlatbufferObject
 	{
-		// Token: 0x1700A233 RID: 41523
-		// (get) Token: 0x060245AF RID: 148911 RVA: 0x00504DE3 File Offset: 0x00502FE3
+		// Token: 0x1700AABB RID: 43707
+		// (get) Token: 0x060267BC RID: 157628 RVA: 0x0054535B File Offset: 0x0054355B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060245B0 RID: 148912 RVA: 0x00504DF0 File Offset: 0x00502FF0
+		// Token: 0x060267BD RID: 157629 RVA: 0x00545368 File Offset: 0x00543568
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060245B1 RID: 148913 RVA: 0x00504DF8 File Offset: 0x00502FF8
+		// Token: 0x060267BE RID: 157630 RVA: 0x00545370 File Offset: 0x00543570
 		public static IMotorHookEndDir GetRootAsIMotorHookEndDir(ByteBuffer _bb)
 		{
 			return IMotorHookEndDir.GetRootAsIMotorHookEndDir(_bb, default(IMotorHookEndDir));
 		}
 
-		// Token: 0x060245B2 RID: 148914 RVA: 0x00504E14 File Offset: 0x00503014
+		// Token: 0x060267BF RID: 157631 RVA: 0x0054538C File Offset: 0x0054358C
 		public static IMotorHookEndDir GetRootAsIMotorHookEndDir(ByteBuffer _bb, IMotorHookEndDir obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060245B3 RID: 148915 RVA: 0x00504E31 File Offset: 0x00503031
+		// Token: 0x060267C0 RID: 157632 RVA: 0x005453A9 File Offset: 0x005435A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060245B4 RID: 148916 RVA: 0x00504E40 File Offset: 0x00503040
+		// Token: 0x060267C1 RID: 157633 RVA: 0x005453B8 File Offset: 0x005435B8
 		public IMotorHookEndDir __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A234 RID: 41524
-		// (get) Token: 0x060245B5 RID: 148917 RVA: 0x00504E50 File Offset: 0x00503050
+		// Token: 0x1700AABC RID: 43708
+		// (get) Token: 0x060267C2 RID: 157634 RVA: 0x005453C8 File Offset: 0x005435C8
 		public IVectorInfo? EndRot
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A235 RID: 41525
-		// (get) Token: 0x060245B6 RID: 148918 RVA: 0x00504EB0 File Offset: 0x005030B0
+		// Token: 0x1700AABD RID: 43709
+		// (get) Token: 0x060267C3 RID: 157635 RVA: 0x00545428 File Offset: 0x00543628
 		public string TransitionCurve
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060245B7 RID: 148919 RVA: 0x00504EE7 File Offset: 0x005030E7
+		// Token: 0x060267C4 RID: 157636 RVA: 0x0054545F File Offset: 0x0054365F
 		public Span<byte> GetTransitionCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060245B8 RID: 148920 RVA: 0x00504EF6 File Offset: 0x005030F6
+		// Token: 0x060267C5 RID: 157637 RVA: 0x0054546E File Offset: 0x0054366E
 		public byte[] GetTransitionCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060245B9 RID: 148921 RVA: 0x00504F04 File Offset: 0x00503104
+		// Token: 0x060267C6 RID: 157638 RVA: 0x0054547C File Offset: 0x0054367C
 		public static Offset<IMotorHookEndDir> CreateIMotorHookEndDir(FlatBufferBuilder builder, Offset<IVectorInfo> EndRotOffset = default(Offset<IVectorInfo>), StringOffset TransitionCurveOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorHookEndDir.EndIMotorHookEndDir(builder);
 		}
 
-		// Token: 0x060245BA RID: 148922 RVA: 0x00504F21 File Offset: 0x00503121
+		// Token: 0x060267C7 RID: 157639 RVA: 0x00545499 File Offset: 0x00543699
 		public static void StartIMotorHookEndDir(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060245BB RID: 148923 RVA: 0x00504F2A File Offset: 0x0050312A
+		// Token: 0x060267C8 RID: 157640 RVA: 0x005454A2 File Offset: 0x005436A2
 		public static void AddEndRot(FlatBufferBuilder builder, Offset<IVectorInfo> endRotOffset)
 		{
 			builder.AddOffset(0, endRotOffset.Value, 0);
 		}
 
-		// Token: 0x060245BC RID: 148924 RVA: 0x00504F3A File Offset: 0x0050313A
+		// Token: 0x060267C9 RID: 157641 RVA: 0x005454B2 File Offset: 0x005436B2
 		public static void AddTransitionCurve(FlatBufferBuilder builder, StringOffset transitionCurveOffset)
 		{
 			builder.AddOffset(1, transitionCurveOffset.Value, 0);
 		}
 
-		// Token: 0x060245BD RID: 148925 RVA: 0x00504F4A File Offset: 0x0050314A
+		// Token: 0x060267CA RID: 157642 RVA: 0x005454C2 File Offset: 0x005436C2
 		public static Offset<IMotorHookEndDir> EndIMotorHookEndDir(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorHookEndDir>(builder.EndTable());
 		}
 
-		// Token: 0x060245BE RID: 148926 RVA: 0x00504F58 File Offset: 0x00503158
+		// Token: 0x060267CB RID: 157643 RVA: 0x005454D0 File Offset: 0x005436D0
 		public IMotorHookEndDirT UnPack()
 		{
 			IMotorHookEndDirT motorHookEndDirT = new IMotorHookEndDirT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return motorHookEndDirT;
 		}
 
-		// Token: 0x060245BF RID: 148927 RVA: 0x00504F74 File Offset: 0x00503174
+		// Token: 0x060267CC RID: 157644 RVA: 0x005454EC File Offset: 0x005436EC
 		public void UnPackTo(IMotorHookEndDirT _o)
 		{
 			_o.EndRot = ((this.EndRot != null) ? this.EndRot.Value.UnPack() : null);
 			_o.TransitionCurve = this.TransitionCurve;
 		}
 
-		// Token: 0x060245C0 RID: 148928 RVA: 0x00504FBC File Offset: 0x005031BC
+		// Token: 0x060267CD RID: 157645 RVA: 0x00545534 File Offset: 0x00543734
 		public static Offset<IMotorHookEndDir> Pack(FlatBufferBuilder builder, IMotorHookEndDirT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMotorHookEndDir.CreateIMotorHookEndDir(builder, endRotOffset, transitionCurveOffset);
 		}
 
-		// Token: 0x0400E901 RID: 59649
+		// Token: 0x0400F563 RID: 62819
 		private Table __p;
 	}
 }

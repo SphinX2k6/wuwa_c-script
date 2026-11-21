@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024D1 RID: 9425
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002776 RID: 10102
 	public class ActionInfo
 	{
-		// Token: 0x0600D286 RID: 53894 RVA: 0x001F3C63 File Offset: 0x001F1E63
+		// Token: 0x0600DFDB RID: 57307 RVA: 0x0020F4BF File Offset: 0x0020D6BF
 		public static ActionInfo Create(IActionInfo? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AA6 RID: 15014
-		// (get) Token: 0x0600D287 RID: 53895 RVA: 0x001F3C82 File Offset: 0x001F1E82
+		// Token: 0x17003D9D RID: 15773
+		// (get) Token: 0x0600DFDC RID: 57308 RVA: 0x0020F4DE File Offset: 0x0020D6DE
 		public virtual EAction Name
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA7 RID: 15015
-		// (get) Token: 0x0600D288 RID: 53896 RVA: 0x001F3C90 File Offset: 0x001F1E90
+		// Token: 0x17003D9E RID: 15774
+		// (get) Token: 0x0600DFDD RID: 57309 RVA: 0x0020F4EC File Offset: 0x0020D6EC
 		public virtual bool? Async
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA8 RID: 15016
-		// (get) Token: 0x0600D289 RID: 53897 RVA: 0x001F3CC6 File Offset: 0x001F1EC6
+		// Token: 0x17003D9F RID: 15775
+		// (get) Token: 0x0600DFDE RID: 57310 RVA: 0x0020F522 File Offset: 0x0020D722
 		public virtual ActionParams Params
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA9 RID: 15017
-		// (get) Token: 0x0600D28A RID: 53898 RVA: 0x001F3CF8 File Offset: 0x001F1EF8
+		// Token: 0x17003DA0 RID: 15776
+		// (get) Token: 0x0600DFDF RID: 57311 RVA: 0x0020F554 File Offset: 0x0020D754
 		public virtual int? ActionId
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AAA RID: 15018
-		// (get) Token: 0x0600D28B RID: 53899 RVA: 0x001F3D30 File Offset: 0x001F1F30
+		// Token: 0x17003DA1 RID: 15777
+		// (get) Token: 0x0600DFE0 RID: 57312 RVA: 0x0020F58C File Offset: 0x0020D78C
 		public virtual bool? Disabled
 		{
 			get
@@ -90,8 +88,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AAB RID: 15019
-		// (get) Token: 0x0600D28C RID: 53900 RVA: 0x001F3D66 File Offset: 0x001F1F66
+		// Token: 0x17003DA2 RID: 15778
+		// (get) Token: 0x0600DFE1 RID: 57313 RVA: 0x0020F5C2 File Offset: 0x0020D7C2
 		[Nullable(2)]
 		public virtual string ActionGuid
 		{
@@ -102,8 +100,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AAC RID: 15020
-		// (get) Token: 0x0600D28D RID: 53901 RVA: 0x001F3D74 File Offset: 0x001F1F74
+		// Token: 0x17003DA3 RID: 15779
+		// (get) Token: 0x0600DFE2 RID: 57314 RVA: 0x0020F5D0 File Offset: 0x0020D7D0
 		public virtual float? Timeout
 		{
 			get
@@ -116,8 +114,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AAD RID: 15021
-		// (get) Token: 0x0600D28E RID: 53902 RVA: 0x001F3DAC File Offset: 0x001F1FAC
+		// Token: 0x17003DA4 RID: 15780
+		// (get) Token: 0x0600DFE3 RID: 57315 RVA: 0x0020F608 File Offset: 0x0020D808
 		public virtual bool? EdLocalDisabled
 		{
 			get
@@ -126,8 +124,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AAE RID: 15022
-		// (get) Token: 0x0600D28F RID: 53903 RVA: 0x001F3DC2 File Offset: 0x001F1FC2
+		// Token: 0x17003DA5 RID: 15781
+		// (get) Token: 0x0600DFE4 RID: 57316 RVA: 0x0020F61E File Offset: 0x0020D81E
 		[Nullable(2)]
 		public virtual string EdNote
 		{
@@ -138,13 +136,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400737B RID: 29563
+		// Token: 0x040079C8 RID: 31176
 		private IActionInfo Instance;
 
-		// Token: 0x0400737C RID: 29564
+		// Token: 0x040079C9 RID: 31177
 		private ActionParams _ParamsCache;
 
-		// Token: 0x0400737D RID: 29565
+		// Token: 0x040079CA RID: 31178
 		private bool _ParamsInited;
 	}
 }

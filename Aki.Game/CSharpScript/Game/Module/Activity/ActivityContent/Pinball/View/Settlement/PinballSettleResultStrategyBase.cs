@@ -9,48 +9,48 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F5 RID: 25333
+	// Token: 0x02005273 RID: 21107
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballSettleResultStrategyBase : IPinballSettleResultStrategy
 	{
-		// Token: 0x170092AE RID: 37550
-		// (get) Token: 0x0603FBE5 RID: 261093 RVA: 0x00F6C627 File Offset: 0x00F6A827
-		// (set) Token: 0x0603FBE6 RID: 261094 RVA: 0x00F6C62F File Offset: 0x00F6A82F
+		// Token: 0x17006610 RID: 26128
+		// (get) Token: 0x060348A6 RID: 215206 RVA: 0x00EB3583 File Offset: 0x00EB1783
+		// (set) Token: 0x060348A7 RID: 215207 RVA: 0x00EB358B File Offset: 0x00EB178B
 		public IPinballSettleResultViewContext Context { get; set; }
 
-		// Token: 0x0603FBE7 RID: 261095 RVA: 0x00F6C638 File Offset: 0x00F6A838
+		// Token: 0x060348A8 RID: 215208 RVA: 0x00EB3594 File Offset: 0x00EB1794
 		public virtual bool GetIsNeedRewardView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603FBE8 RID: 261096 RVA: 0x00F6C63B File Offset: 0x00F6A83B
+		// Token: 0x060348A9 RID: 215209 RVA: 0x00EB3597 File Offset: 0x00EB1797
 		public virtual bool GetIsNeedProgressRewardView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603FBE9 RID: 261097 RVA: 0x00F6C63E File Offset: 0x00F6A83E
+		// Token: 0x060348AA RID: 215210 RVA: 0x00EB359A File Offset: 0x00EB179A
 		public virtual bool GetIsNeedFailTipsView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603FBEA RID: 261098 RVA: 0x00F6C641 File Offset: 0x00F6A841
+		// Token: 0x060348AB RID: 215211 RVA: 0x00EB359D File Offset: 0x00EB179D
 		public virtual bool GetIsNeedUnlockTipsView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603FBEB RID: 261099 RVA: 0x00F6C644 File Offset: 0x00F6A844
+		// Token: 0x060348AC RID: 215212 RVA: 0x00EB35A0 File Offset: 0x00EB17A0
 		public virtual bool GetIsNeedDialogView()
 		{
 			return false;
 		}
 
-		// Token: 0x170092AF RID: 37551
-		// (get) Token: 0x0603FBEC RID: 261100 RVA: 0x00F6C647 File Offset: 0x00F6A847
+		// Token: 0x17006611 RID: 26129
+		// (get) Token: 0x060348AD RID: 215213 RVA: 0x00EB35A3 File Offset: 0x00EB17A3
 		public virtual bool HasCustomRefreshTitle
 		{
 			get
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x170092B0 RID: 37552
-		// (get) Token: 0x0603FBED RID: 261101 RVA: 0x00F6C64A File Offset: 0x00F6A84A
+		// Token: 0x17006612 RID: 26130
+		// (get) Token: 0x060348AE RID: 215214 RVA: 0x00EB35A6 File Offset: 0x00EB17A6
 		public virtual bool HasCustomRefreshFailTips
 		{
 			get
@@ -69,8 +69,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x170092B1 RID: 37553
-		// (get) Token: 0x0603FBEE RID: 261102 RVA: 0x00F6C64D File Offset: 0x00F6A84D
+		// Token: 0x17006613 RID: 26131
+		// (get) Token: 0x060348AF RID: 215215 RVA: 0x00EB35A9 File Offset: 0x00EB17A9
 		public virtual bool HasCustomRefreshDialog
 		{
 			get
@@ -79,62 +79,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x0603FBEF RID: 261103 RVA: 0x00F6C650 File Offset: 0x00F6A850
+		// Token: 0x060348B0 RID: 215216 RVA: 0x00EB35AC File Offset: 0x00EB17AC
 		public virtual void RefreshTitle()
 		{
 		}
 
-		// Token: 0x0603FBF0 RID: 261104 RVA: 0x00F6C652 File Offset: 0x00F6A852
+		// Token: 0x060348B1 RID: 215217 RVA: 0x00EB35AE File Offset: 0x00EB17AE
 		public virtual void RefreshStarLayout()
 		{
 		}
 
-		// Token: 0x0603FBF1 RID: 261105 RVA: 0x00F6C654 File Offset: 0x00F6A854
+		// Token: 0x060348B2 RID: 215218 RVA: 0x00EB35B0 File Offset: 0x00EB17B0
 		public virtual void RefreshRewards()
 		{
 		}
 
-		// Token: 0x0603FBF2 RID: 261106 RVA: 0x00F6C656 File Offset: 0x00F6A856
+		// Token: 0x060348B3 RID: 215219 RVA: 0x00EB35B2 File Offset: 0x00EB17B2
 		public virtual void RefreshButtons()
 		{
 		}
 
-		// Token: 0x0603FBF3 RID: 261107 RVA: 0x00F6C658 File Offset: 0x00F6A858
+		// Token: 0x060348B4 RID: 215220 RVA: 0x00EB35B4 File Offset: 0x00EB17B4
 		public virtual void RefreshProgressRewards()
 		{
 		}
 
-		// Token: 0x0603FBF4 RID: 261108 RVA: 0x00F6C65A File Offset: 0x00F6A85A
+		// Token: 0x060348B5 RID: 215221 RVA: 0x00EB35B6 File Offset: 0x00EB17B6
 		public virtual void RefreshUnlockTips()
 		{
 		}
 
-		// Token: 0x0603FBF5 RID: 261109 RVA: 0x00F6C65C File Offset: 0x00F6A85C
+		// Token: 0x060348B6 RID: 215222 RVA: 0x00EB35B8 File Offset: 0x00EB17B8
 		public virtual void RefreshFailTips()
 		{
 		}
 
-		// Token: 0x0603FBF6 RID: 261110 RVA: 0x00F6C65E File Offset: 0x00F6A85E
+		// Token: 0x060348B7 RID: 215223 RVA: 0x00EB35BA File Offset: 0x00EB17BA
 		public virtual void RefreshDialog()
 		{
 		}
 
-		// Token: 0x0603FBF7 RID: 261111 RVA: 0x00F6C660 File Offset: 0x00F6A860
+		// Token: 0x060348B8 RID: 215224 RVA: 0x00EB35BC File Offset: 0x00EB17BC
 		public virtual void OnClickBtnRestart(Action callback)
 		{
 		}
 
-		// Token: 0x0603FBF8 RID: 261112 RVA: 0x00F6C662 File Offset: 0x00F6A862
+		// Token: 0x060348B9 RID: 215225 RVA: 0x00EB35BE File Offset: 0x00EB17BE
 		public virtual void OnClickBtnNext(Action callback)
 		{
 		}
 
-		// Token: 0x0603FBF9 RID: 261113 RVA: 0x00F6C664 File Offset: 0x00F6A864
+		// Token: 0x060348BA RID: 215226 RVA: 0x00EB35C0 File Offset: 0x00EB17C0
 		public virtual void OnClickBtnBack(Action callback)
 		{
 		}
 
-		// Token: 0x0603FBFA RID: 261114 RVA: 0x00F6C668 File Offset: 0x00F6A868
+		// Token: 0x060348BB RID: 215227 RVA: 0x00EB35C4 File Offset: 0x00EB17C4
 		protected void RestartImmediate()
 		{
 			List<int> list = new List<int>();
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			PinballBattleSubController.RequestEnterInst(levelId, list);
 		}
 
-		// Token: 0x0603FBFB RID: 261115 RVA: 0x00F6C744 File Offset: 0x00F6A944
+		// Token: 0x060348BC RID: 215228 RVA: 0x00EB36A0 File Offset: 0x00EB18A0
 		protected void OpenFormationView()
 		{
 			int levelId = this.Context.GetOpenParam().LevelId;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			UiManager.Instance.OpenView(EUiViewName.PinballFormationView, param, null);
 		}
 
-		// Token: 0x0603FBFC RID: 261116 RVA: 0x00F6C78C File Offset: 0x00F6A98C
+		// Token: 0x060348BD RID: 215229 RVA: 0x00EB36E8 File Offset: 0x00EB18E8
 		protected void OpenMainRootView()
 		{
 			PinballMainRootViewOpenParam openParam = new PinballMainRootViewOpenParam

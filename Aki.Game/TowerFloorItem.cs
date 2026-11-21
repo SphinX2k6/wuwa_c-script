@@ -7,12 +7,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BF1 RID: 11249
+// Token: 0x0200216C RID: 8556
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFloorItem : GridProxyAbstract<int>
 {
-	// Token: 0x060175C8 RID: 95688 RVA: 0x005F11F4 File Offset: 0x005EF3F4
+	// Token: 0x06014FF9 RID: 86009 RVA: 0x0061DD48 File Offset: 0x0061BF48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ public class TowerFloorItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060175C9 RID: 95689 RVA: 0x005F1340 File Offset: 0x005EF540
+	// Token: 0x06014FFA RID: 86010 RVA: 0x0061DE94 File Offset: 0x0061C094
 	protected override void OnStart()
 	{
 		this.StarLayout = new GenericLayout<TowerStarsSimpleItem, bool>(base.GetHorizontalLayout(3), new Func<TowerStarsSimpleItem>(this.InitStarItem), null, false, true);
@@ -51,7 +51,7 @@ public class TowerFloorItem : GridProxyAbstract<int>
 		this.SetToggleState(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x060175CA RID: 95690 RVA: 0x005F1398 File Offset: 0x005EF598
+	// Token: 0x06014FFB RID: 86011 RVA: 0x0061DEEC File Offset: 0x0061C0EC
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.TowerId = data;
@@ -105,13 +105,13 @@ public class TowerFloorItem : GridProxyAbstract<int>
 		goto IL_FF;
 	}
 
-	// Token: 0x060175CB RID: 95691 RVA: 0x005F1550 File Offset: 0x005EF750
+	// Token: 0x06014FFC RID: 86012 RVA: 0x0061E0A4 File Offset: 0x0061C2A4
 	public void BindOnClickToggle(Action<int, bool> onClickToggle)
 	{
 		this.OnClickToggleHandle = onClickToggle;
 	}
 
-	// Token: 0x060175CC RID: 95692 RVA: 0x005F1559 File Offset: 0x005EF759
+	// Token: 0x06014FFD RID: 86013 RVA: 0x0061E0AD File Offset: 0x0061C2AD
 	private void OnClickToggle(EToggleState state)
 	{
 		if (this.OnClickToggleHandle != null && state == EToggleState.ETT_Checked)
@@ -120,7 +120,7 @@ public class TowerFloorItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060175CD RID: 95693 RVA: 0x005F157E File Offset: 0x005EF77E
+	// Token: 0x06014FFE RID: 86014 RVA: 0x0061E0D2 File Offset: 0x0061C2D2
 	protected override void OnBeforeDestroy()
 	{
 		this.OnClickToggleHandle = null;
@@ -128,38 +128,38 @@ public class TowerFloorItem : GridProxyAbstract<int>
 		this.RoleLayout = null;
 	}
 
-	// Token: 0x060175CE RID: 95694 RVA: 0x005F1595 File Offset: 0x005EF795
+	// Token: 0x06014FFF RID: 86015 RVA: 0x0061E0E9 File Offset: 0x0061C2E9
 	private TowerStarsSimpleItem InitStarItem()
 	{
 		return new TowerStarsSimpleItem();
 	}
 
-	// Token: 0x060175CF RID: 95695 RVA: 0x005F159C File Offset: 0x005EF79C
+	// Token: 0x06015000 RID: 86016 RVA: 0x0061E0F0 File Offset: 0x0061C2F0
 	private TowerRoleSimpleItem InitRoleItem()
 	{
 		return new TowerRoleSimpleItem();
 	}
 
-	// Token: 0x060175D0 RID: 95696 RVA: 0x005F15A3 File Offset: 0x005EF7A3
+	// Token: 0x06015001 RID: 86017 RVA: 0x0061E0F7 File Offset: 0x0061C2F7
 	public void SetToggleState(EToggleState state)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0400AED2 RID: 44754
+	// Token: 0x0400B2D7 RID: 45783
 	[Nullable(2)]
 	private Action<int, bool> OnClickToggleHandle;
 
-	// Token: 0x0400AED3 RID: 44755
+	// Token: 0x0400B2D8 RID: 45784
 	private int TowerId = -1;
 
-	// Token: 0x0400AED4 RID: 44756
+	// Token: 0x0400B2D9 RID: 45785
 	private bool IsLock;
 
-	// Token: 0x0400AED5 RID: 44757
+	// Token: 0x0400B2DA RID: 45786
 	private int Star = -1;
 
-	// Token: 0x0400AED6 RID: 44758
+	// Token: 0x0400B2DB RID: 45787
 	[Nullable(new byte[]
 	{
 		2,
@@ -167,7 +167,7 @@ public class TowerFloorItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<TowerStarsSimpleItem, bool> StarLayout;
 
-	// Token: 0x0400AED7 RID: 44759
+	// Token: 0x0400B2DC RID: 45788
 	[Nullable(new byte[]
 	{
 		2,
@@ -176,23 +176,23 @@ public class TowerFloorItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<TowerRoleSimpleItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x020091AF RID: 37295
+	// Token: 0x020083F2 RID: 33778
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F226 RID: 193062
+		// Token: 0x0402A927 RID: 174375
 		FloorToggle,
-		// Token: 0x0402F227 RID: 193063
+		// Token: 0x0402A928 RID: 174376
 		BgTexture,
-		// Token: 0x0402F228 RID: 193064
+		// Token: 0x0402A929 RID: 174377
 		FloorNumberText,
-		// Token: 0x0402F229 RID: 193065
+		// Token: 0x0402A92A RID: 174378
 		StarRootLayout,
-		// Token: 0x0402F22A RID: 193066
+		// Token: 0x0402A92B RID: 174379
 		RoleRootLayout,
-		// Token: 0x0402F22B RID: 193067
+		// Token: 0x0402A92C RID: 174380
 		LockToggle,
-		// Token: 0x0402F22C RID: 193068
+		// Token: 0x0402A92D RID: 174381
 		QuickPassItem
 	}
 }

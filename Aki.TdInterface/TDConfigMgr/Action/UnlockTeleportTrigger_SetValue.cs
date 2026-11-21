@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002268 RID: 8808
+	// Token: 0x020024D5 RID: 9429
 	public class UnlockTeleportTrigger_SetValue
 	{
-		// Token: 0x0400731C RID: 29468
+		// Token: 0x04007969 RID: 31081
 		public int TeleportId;
 	}
 }

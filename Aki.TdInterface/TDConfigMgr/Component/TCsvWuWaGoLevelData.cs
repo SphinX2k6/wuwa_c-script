@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008BB RID: 2235
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200095E RID: 2398
 	public class TCsvWuWaGoLevelData
 	{
-		// Token: 0x06003236 RID: 12854 RVA: 0x00080BB5 File Offset: 0x0007EDB5
+		// Token: 0x06003572 RID: 13682 RVA: 0x0008809D File Offset: 0x0008629D
 		public static TCsvWuWaGoLevelData Create([Nullable(2)] TCsvWuWaGoLevelData instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D68 RID: 3432
-		// (get) Token: 0x06003237 RID: 12855 RVA: 0x00080BC8 File Offset: 0x0007EDC8
+		// Token: 0x17000E31 RID: 3633
+		// (get) Token: 0x06003573 RID: 13683 RVA: 0x000880B0 File Offset: 0x000862B0
 		public virtual string Key
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D69 RID: 3433
-		// (get) Token: 0x06003238 RID: 12856 RVA: 0x00080BD8 File Offset: 0x0007EDD8
+		// Token: 0x17000E32 RID: 3634
+		// (get) Token: 0x06003574 RID: 13684 RVA: 0x000880C0 File Offset: 0x000862C0
 		public virtual List<IWuWaGoGridData> GridDatas
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D6A RID: 3434
-		// (get) Token: 0x06003239 RID: 12857 RVA: 0x00080C54 File Offset: 0x0007EE54
+		// Token: 0x17000E33 RID: 3635
+		// (get) Token: 0x06003575 RID: 13685 RVA: 0x0008813C File Offset: 0x0008633C
 		public virtual List<IWuWaGoRoleInfo> RoleList
 		{
 			get
@@ -87,19 +85,19 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040020E9 RID: 8425
+		// Token: 0x040022FB RID: 8955
 		private TCsvWuWaGoLevelData FbInstance;
 
-		// Token: 0x040020EA RID: 8426
+		// Token: 0x040022FC RID: 8956
 		private List<IWuWaGoGridData> _GridDatasCache;
 
-		// Token: 0x040020EB RID: 8427
+		// Token: 0x040022FD RID: 8957
 		private bool _GridDatasInited;
 
-		// Token: 0x040020EC RID: 8428
+		// Token: 0x040022FE RID: 8958
 		private List<IWuWaGoRoleInfo> _RoleListCache;
 
-		// Token: 0x040020ED RID: 8429
+		// Token: 0x040022FF RID: 8959
 		private bool _RoleListInited;
 	}
 }

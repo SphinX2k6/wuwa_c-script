@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000634 RID: 1588
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006D1 RID: 1745
 	public class IPulseDeviceFoundation : IItemFoundationType
 	{
-		// Token: 0x060021EE RID: 8686 RVA: 0x0005D8A4 File Offset: 0x0005BAA4
+		// Token: 0x060024F4 RID: 9460 RVA: 0x000645B8 File Offset: 0x000627B8
 		private IPulseDeviceFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060021EF RID: 8687 RVA: 0x0005D8DC File Offset: 0x0005BADC
+		// Token: 0x060024F5 RID: 9461 RVA: 0x000645F0 File Offset: 0x000627F0
 		public static IPulseDeviceFoundation Create([Nullable(2)] IPulseDeviceFoundation instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021F0 RID: 8688 RVA: 0x0005D8EF File Offset: 0x0005BAEF
+		// Token: 0x060024F6 RID: 9462 RVA: 0x00064603 File Offset: 0x00062803
 		public static IPulseDeviceFoundation CreateFromSetValue([Nullable(2)] IPulseDeviceFoundation_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060021F1 RID: 8689 RVA: 0x0005D902 File Offset: 0x0005BB02
+		// Token: 0x060024F7 RID: 9463 RVA: 0x00064616 File Offset: 0x00062816
 		public new IPulseDeviceFoundation_SetValue ToSetValue()
 		{
 			return new IPulseDeviceFoundation_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000908 RID: 2312
-		// (get) Token: 0x060021F2 RID: 8690 RVA: 0x0005D915 File Offset: 0x0005BB15
-		// (set) Token: 0x060021F3 RID: 8691 RVA: 0x0005D940 File Offset: 0x0005BB40
+		// Token: 0x170009BF RID: 2495
+		// (get) Token: 0x060024F8 RID: 9464 RVA: 0x00064629 File Offset: 0x00062829
+		// (set) Token: 0x060024F9 RID: 9465 RVA: 0x00064654 File Offset: 0x00062854
 		public override EItemFoundation Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400179E RID: 6046
+		// Token: 0x04001990 RID: 6544
 		[Nullable(2)]
 		protected new IPulseDeviceFoundation FbInstance;
 
-		// Token: 0x0400179F RID: 6047
+		// Token: 0x04001991 RID: 6545
 		[Nullable(2)]
 		protected new IPulseDeviceFoundation_SetValue PocoInterface;
 	}

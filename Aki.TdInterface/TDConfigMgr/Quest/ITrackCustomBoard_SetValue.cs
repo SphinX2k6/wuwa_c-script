@@ -4,30 +4,33 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011B1 RID: 4529
+	// Token: 0x020012EB RID: 4843
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackCustomBoard_SetValue
 	{
-		// Token: 0x04003DC0 RID: 15808
+		// Token: 0x0400412A RID: 16682
 		public IPhoneMessageBoardConfig TrackPhoneMessageBoard;
 
-		// Token: 0x04003DC1 RID: 15809
+		// Token: 0x0400412B RID: 16683
 		public ITrackQuestBranchBoardConfig TrackQuestBranchBoard;
 
-		// Token: 0x04003DC2 RID: 15810
+		// Token: 0x0400412C RID: 16684
 		public ISheriffAnomalyProgressBoardConfig SheriffAnomalyProgressBoard;
 
-		// Token: 0x04003DC3 RID: 15811
+		// Token: 0x0400412D RID: 16685
 		public ISheriffReasoningBoardConfig SheriffReasoningBoard;
 
-		// Token: 0x04003DC4 RID: 15812
+		// Token: 0x0400412E RID: 16686
 		public ISheriffMainBoardConfig SheriffMainBoard;
 
-		// Token: 0x04003DC5 RID: 15813
+		// Token: 0x0400412F RID: 16687
 		public ISheriffClueDetailBoardConfig SheriffClueDetailBoard;
 
-		// Token: 0x04003DC6 RID: 15814
+		// Token: 0x04004130 RID: 16688
 		public ITrackReturnDungeon TrackReturnDungeon;
+
+		// Token: 0x04004131 RID: 16689
+		public ITrackHandBookBoardConfig TrackHandBookBoard;
 	}
 }

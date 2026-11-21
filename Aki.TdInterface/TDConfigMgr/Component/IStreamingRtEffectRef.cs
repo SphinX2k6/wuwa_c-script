@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000727 RID: 1831
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007C8 RID: 1992
 	public class IStreamingRtEffectRef
 	{
-		// Token: 0x0600278F RID: 10127 RVA: 0x00069448 File Offset: 0x00067648
+		// Token: 0x06002AB3 RID: 10931 RVA: 0x000705F0 File Offset: 0x0006E7F0
 		private IStreamingRtEffectRef_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002790 RID: 10128 RVA: 0x00069480 File Offset: 0x00067680
+		// Token: 0x06002AB4 RID: 10932 RVA: 0x00070628 File Offset: 0x0006E828
 		public static IStreamingRtEffectRef Create([Nullable(2)] IStreamingRtEffectRef instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002791 RID: 10129 RVA: 0x00069493 File Offset: 0x00067693
+		// Token: 0x06002AB5 RID: 10933 RVA: 0x0007063B File Offset: 0x0006E83B
 		public static IStreamingRtEffectRef CreateFromSetValue([Nullable(2)] IStreamingRtEffectRef_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002792 RID: 10130 RVA: 0x000694A6 File Offset: 0x000676A6
+		// Token: 0x06002AB6 RID: 10934 RVA: 0x0007064E File Offset: 0x0006E84E
 		public IStreamingRtEffectRef_SetValue ToSetValue()
 		{
 			return new IStreamingRtEffectRef_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A6D RID: 2669
-		// (get) Token: 0x06002793 RID: 10131 RVA: 0x000694B9 File Offset: 0x000676B9
-		// (set) Token: 0x06002794 RID: 10132 RVA: 0x000694E4 File Offset: 0x000676E4
+		// Token: 0x17000B2D RID: 2861
+		// (get) Token: 0x06002AB7 RID: 10935 RVA: 0x00070661 File Offset: 0x0006E861
+		// (set) Token: 0x06002AB8 RID: 10936 RVA: 0x0007068C File Offset: 0x0006E88C
 		public virtual string ActorRefKey
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AB5 RID: 6837
+		// Token: 0x04001CBA RID: 7354
 		[Nullable(2)]
 		protected IStreamingRtEffectRef FbInstance;
 
-		// Token: 0x04001AB6 RID: 6838
+		// Token: 0x04001CBB RID: 7355
 		[Nullable(2)]
 		protected IStreamingRtEffectRef_SetValue PocoInterface;
 	}

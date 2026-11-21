@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002700 RID: 9984
+// Token: 0x02001BEB RID: 7147
 public class RacingBetsRedDotState : IRacingBetsRedDotState
 {
-	// Token: 0x17001ADE RID: 6878
-	// (get) Token: 0x06014799 RID: 83865 RVA: 0x0052BC4D File Offset: 0x00529E4D
-	// (set) Token: 0x0601479A RID: 83866 RVA: 0x0052BC55 File Offset: 0x00529E55
+	// Token: 0x17001B16 RID: 6934
+	// (get) Token: 0x06011C7B RID: 72827 RVA: 0x0053A969 File Offset: 0x00538B69
+	// (set) Token: 0x06011C7C RID: 72828 RVA: 0x0053A971 File Offset: 0x00538B71
 	public bool HasViewed { get; set; }
 
-	// Token: 0x17001ADF RID: 6879
-	// (get) Token: 0x0601479B RID: 83867 RVA: 0x0052BC5E File Offset: 0x00529E5E
-	// (set) Token: 0x0601479C RID: 83868 RVA: 0x0052BC66 File Offset: 0x00529E66
+	// Token: 0x17001B17 RID: 6935
+	// (get) Token: 0x06011C7D RID: 72829 RVA: 0x0053A97A File Offset: 0x00538B7A
+	// (set) Token: 0x06011C7E RID: 72830 RVA: 0x0053A982 File Offset: 0x00538B82
 	public long LastViewedData { get; set; }
 }

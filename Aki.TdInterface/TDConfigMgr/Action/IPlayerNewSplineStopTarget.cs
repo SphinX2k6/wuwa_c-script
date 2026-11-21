@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D08 RID: 7432
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F19 RID: 7961
 	public class IPlayerNewSplineStopTarget : INewSplineStopTarget
 	{
-		// Token: 0x06009F7F RID: 40831 RVA: 0x0016C510 File Offset: 0x0016A710
+		// Token: 0x0600A969 RID: 43369 RVA: 0x001808B0 File Offset: 0x0017EAB0
 		private IPlayerNewSplineStopTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F80 RID: 40832 RVA: 0x0016C548 File Offset: 0x0016A748
+		// Token: 0x0600A96A RID: 43370 RVA: 0x001808E8 File Offset: 0x0017EAE8
 		public static IPlayerNewSplineStopTarget Create([Nullable(2)] IPlayerNewSplineStopTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F81 RID: 40833 RVA: 0x0016C55B File Offset: 0x0016A75B
+		// Token: 0x0600A96B RID: 43371 RVA: 0x001808FB File Offset: 0x0017EAFB
 		public static IPlayerNewSplineStopTarget CreateFromSetValue([Nullable(2)] IPlayerNewSplineStopTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F82 RID: 40834 RVA: 0x0016C56E File Offset: 0x0016A76E
+		// Token: 0x0600A96C RID: 43372 RVA: 0x0018090E File Offset: 0x0017EB0E
 		public new IPlayerNewSplineStopTarget_SetValue ToSetValue()
 		{
 			return new IPlayerNewSplineStopTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700318A RID: 12682
-		// (get) Token: 0x06009F83 RID: 40835 RVA: 0x0016C581 File Offset: 0x0016A781
-		// (set) Token: 0x06009F84 RID: 40836 RVA: 0x0016C5AC File Offset: 0x0016A7AC
+		// Token: 0x1700341D RID: 13341
+		// (get) Token: 0x0600A96D RID: 43373 RVA: 0x00180921 File Offset: 0x0017EB21
+		// (set) Token: 0x0600A96E RID: 43374 RVA: 0x0018094C File Offset: 0x0017EB4C
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006041 RID: 24641
+		// Token: 0x040065BA RID: 26042
 		[Nullable(2)]
 		protected new IPlayerNewSplineStopTarget FbInstance;
 
-		// Token: 0x04006042 RID: 24642
+		// Token: 0x040065BB RID: 26043
 		[Nullable(2)]
 		protected new IPlayerNewSplineStopTarget_SetValue PocoInterface;
 	}

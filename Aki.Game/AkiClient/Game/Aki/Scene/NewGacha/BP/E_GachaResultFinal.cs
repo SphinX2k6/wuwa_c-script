@@ -4,60 +4,60 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Scene.NewGacha.BP
 {
-	// Token: 0x02003A4A RID: 14922
+	// Token: 0x02003088 RID: 12424
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Scene/NewGacha/BP/E_GachaResultFinal.E_GachaResultFinal")]
 	public enum E_GachaResultFinal : byte
 	{
-		// Token: 0x0400F292 RID: 62098
+		// Token: 0x0400FAC7 RID: 64199
 		WeaponNormal,
-		// Token: 0x0400F293 RID: 62099
+		// Token: 0x0400FAC8 RID: 64200
 		WeaponPurple,
-		// Token: 0x0400F294 RID: 62100
+		// Token: 0x0400FAC9 RID: 64201
 		WeaponGolden,
-		// Token: 0x0400F295 RID: 62101
+		// Token: 0x0400FACA RID: 64202
 		CharacterPurple,
-		// Token: 0x0400F296 RID: 62102
+		// Token: 0x0400FACB RID: 64203
 		CharacterGolden,
-		// Token: 0x0400F297 RID: 62103
+		// Token: 0x0400FACC RID: 64204
 		Yinlin,
-		// Token: 0x0400F298 RID: 62104
+		// Token: 0x0400FACD RID: 64205
 		Anke,
-		// Token: 0x0400F299 RID: 62105
+		// Token: 0x0400FACE RID: 64206
 		Awu,
-		// Token: 0x0400F29A RID: 62106
+		// Token: 0x0400FACF RID: 64207
 		Kakaluo,
-		// Token: 0x0400F29B RID: 62107
+		// Token: 0x0400FAD0 RID: 64208
 		Chun,
-		// Token: 0x0400F29C RID: 62108
+		// Token: 0x0400FAD1 RID: 64209
 		Jiyan,
-		// Token: 0x0400F29D RID: 62109
+		// Token: 0x0400FAD2 RID: 64210
 		Jueyuan,
-		// Token: 0x0400F29E RID: 62110
+		// Token: 0x0400FAD3 RID: 64211
 		Baer,
-		// Token: 0x0400F29F RID: 62111
+		// Token: 0x0400FAD4 RID: 64212
 		Bailian,
-		// Token: 0x0400F2A0 RID: 62112
+		// Token: 0x0400FAD5 RID: 64213
 		Jianxin,
-		// Token: 0x0400F2A1 RID: 62113
+		// Token: 0x0400FAD6 RID: 64214
 		Maxiaofang,
-		// Token: 0x0400F2A2 RID: 62114
+		// Token: 0x0400FAD7 RID: 64215
 		Micai,
-		// Token: 0x0400F2A3 RID: 62115
+		// Token: 0x0400FAD8 RID: 64216
 		Qiushui,
-		// Token: 0x0400F2A4 RID: 62116
+		// Token: 0x0400FAD9 RID: 64217
 		Sanhua,
-		// Token: 0x0400F2A5 RID: 62117
+		// Token: 0x0400FADA RID: 64218
 		Taoqi,
-		// Token: 0x0400F2A6 RID: 62118
+		// Token: 0x0400FADB RID: 64219
 		Yangyang,
-		// Token: 0x0400F2A7 RID: 62119
+		// Token: 0x0400FADC RID: 64220
 		Yuanwu,
-		// Token: 0x0400F2A8 RID: 62120
+		// Token: 0x0400FADD RID: 64221
 		Jinxi,
-		// Token: 0x0400F2A9 RID: 62121
+		// Token: 0x0400FADE RID: 64222
 		Changli,
-		// Token: 0x0400F2AA RID: 62122
+		// Token: 0x0400FADF RID: 64223
 		E_MAX
 	}
 }

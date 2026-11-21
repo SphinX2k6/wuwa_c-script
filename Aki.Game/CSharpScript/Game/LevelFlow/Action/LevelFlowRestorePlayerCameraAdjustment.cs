@@ -6,12 +6,12 @@ using CSharpScript.Game.Utils;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9B RID: 28571
+	// Token: 0x0200611C RID: 24860
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelFlowRestorePlayerCameraAdjustment : LevelFlowActionBase
 	{
-		// Token: 0x06045764 RID: 284516 RVA: 0x0113A91B File Offset: 0x01138B1B
+		// Token: 0x0603B912 RID: 243986 RVA: 0x010E471F File Offset: 0x010E291F
 		[NullableContext(1)]
 		public LevelFlowRestorePlayerCameraAdjustment Init(RestorePlayerCameraAdjustment param)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045765 RID: 284517 RVA: 0x0113A928 File Offset: 0x01138B28
+		// Token: 0x0603B913 RID: 243987 RVA: 0x010E472C File Offset: 0x010E292C
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045766 RID: 284518 RVA: 0x0113AA7B File Offset: 0x01138C7B
+		// Token: 0x0603B914 RID: 243988 RVA: 0x010E487F File Offset: 0x010E2A7F
 		protected override void OnComplete(bool isSuccess)
 		{
 			if (this.TimerHandle != null)
@@ -77,10 +77,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x040243E9 RID: 148457
+		// Token: 0x0401F69E RID: 128670
 		private RestorePlayerCameraAdjustment Params;
 
-		// Token: 0x040243EA RID: 148458
+		// Token: 0x0401F69F RID: 128671
 		private TimerHandle TimerHandle;
 	}
 }

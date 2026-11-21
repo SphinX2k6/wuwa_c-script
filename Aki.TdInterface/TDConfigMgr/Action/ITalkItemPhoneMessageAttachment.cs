@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F4A RID: 8010
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002183 RID: 8579
 	public class ITalkItemPhoneMessageAttachment : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600AE44 RID: 44612 RVA: 0x00191730 File Offset: 0x0018F930
+		// Token: 0x0600B916 RID: 47382 RVA: 0x001A7728 File Offset: 0x001A5928
 		private ITalkItemPhoneMessageAttachment_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AE45 RID: 44613 RVA: 0x00191768 File Offset: 0x0018F968
+		// Token: 0x0600B917 RID: 47383 RVA: 0x001A7760 File Offset: 0x001A5960
 		public static ITalkItemPhoneMessageAttachment Create([Nullable(2)] ITalkItemPhoneMessageAttachment instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE46 RID: 44614 RVA: 0x0019177B File Offset: 0x0018F97B
+		// Token: 0x0600B918 RID: 47384 RVA: 0x001A7773 File Offset: 0x001A5973
 		public static ITalkItemPhoneMessageAttachment CreateFromSetValue([Nullable(2)] ITalkItemPhoneMessageAttachment_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE47 RID: 44615 RVA: 0x0019178E File Offset: 0x0018F98E
+		// Token: 0x0600B919 RID: 47385 RVA: 0x001A7786 File Offset: 0x001A5986
 		public new ITalkItemPhoneMessageAttachment_SetValue ToSetValue()
 		{
 			return new ITalkItemPhoneMessageAttachment_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700358B RID: 13707
-		// (get) Token: 0x0600AE48 RID: 44616 RVA: 0x001917AD File Offset: 0x0018F9AD
-		// (set) Token: 0x0600AE49 RID: 44617 RVA: 0x001917D8 File Offset: 0x0018F9D8
+		// Token: 0x17003856 RID: 14422
+		// (get) Token: 0x0600B91A RID: 47386 RVA: 0x001A77A5 File Offset: 0x001A59A5
+		// (set) Token: 0x0600B91B RID: 47387 RVA: 0x001A77D0 File Offset: 0x001A59D0
 		public override EPhoneMessageType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700358C RID: 13708
-		// (get) Token: 0x0600AE4A RID: 44618 RVA: 0x001917E6 File Offset: 0x0018F9E6
-		// (set) Token: 0x0600AE4B RID: 44619 RVA: 0x00191811 File Offset: 0x0018FA11
+		// Token: 0x17003857 RID: 14423
+		// (get) Token: 0x0600B91C RID: 47388 RVA: 0x001A77DE File Offset: 0x001A59DE
+		// (set) Token: 0x0600B91D RID: 47389 RVA: 0x001A7809 File Offset: 0x001A5A09
 		public virtual int AttachmentId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040068C7 RID: 26823
+		// Token: 0x04006EB6 RID: 28342
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageAttachment FbInstance;
 
-		// Token: 0x040068C8 RID: 26824
+		// Token: 0x04006EB7 RID: 28343
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageAttachment_SetValue PocoInterface;
 	}

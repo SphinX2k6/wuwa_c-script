@@ -9,12 +9,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 {
-	// Token: 0x02004117 RID: 16663
+	// Token: 0x020032AC RID: 12972
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/ABP_Gameplay/ABP_BaseRole_Gameplay_Poker.ABP_BaseRole_Gameplay_Poker_C")]
-	[UnrealStructLayout(14080, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 14074)]
+	[UnrealStructLayout(14096, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 14090)]
 	public class ABP_BaseRole_Gameplay_Poker_C : UKuroAnimInstance, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602AE58 RID: 175704 RVA: 0x009EF019 File Offset: 0x009ED219
+		// Token: 0x060209FE RID: 133630 RVA: 0x0094B447 File Offset: 0x00949647
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (ABP_BaseRole_Gameplay_Poker_C._ClassPtr == IntPtr.Zero)
@@ -24,182 +24,161 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			return ABP_BaseRole_Gameplay_Poker_C._ClassPtr;
 		}
 
-		// Token: 0x0602AE59 RID: 175705 RVA: 0x009EF040 File Offset: 0x009ED240
+		// Token: 0x060209FF RID: 133631 RVA: 0x0094B46C File Offset: 0x0094966C
 		public ABP_BaseRole_Gameplay_Poker_C() : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRole_Gameplay_Poker_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602AE5A RID: 175706 RVA: 0x009EF068 File Offset: 0x009ED268
+		// Token: 0x06020A00 RID: 133632 RVA: 0x0094B494 File Offset: 0x00949694
 		[NullableContext(1)]
 		public ABP_BaseRole_Gameplay_Poker_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ABP_BaseRole_Gameplay_Poker_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006995 RID: 27029
-		// (get) Token: 0x0602AE5B RID: 175707 RVA: 0x009EF09B File Offset: 0x009ED29B
-		// (set) Token: 0x0602AE5C RID: 175708 RVA: 0x009EF0AF File Offset: 0x009ED2AF
+		// Token: 0x17004019 RID: 16409
+		// (get) Token: 0x06020A01 RID: 133633 RVA: 0x0094B4C7 File Offset: 0x009496C7
+		// (set) Token: 0x06020A02 RID: 133634 RVA: 0x0094B4DB File Offset: 0x009496DB
 		public unsafe TEnumAsByte<EPokerStateType> PokerState
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_115);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_PokerState);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_115) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_PokerState) = value;
 			}
 		}
 
-		// Token: 0x17006996 RID: 27030
-		// (get) Token: 0x0602AE5D RID: 175709 RVA: 0x009EF0C4 File Offset: 0x009ED2C4
-		// (set) Token: 0x0602AE5E RID: 175710 RVA: 0x009EF0D4 File Offset: 0x009ED2D4
+		// Token: 0x1700401A RID: 16410
+		// (get) Token: 0x06020A03 RID: 133635 RVA: 0x0094B4F0 File Offset: 0x009496F0
+		// (set) Token: 0x06020A04 RID: 133636 RVA: 0x0094B500 File Offset: 0x00949700
 		public unsafe float 猜鬼牌表演倒计时
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_116);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_猜鬼牌表演倒计时);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_116) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_猜鬼牌表演倒计时) = value;
 			}
 		}
 
-		// Token: 0x17006997 RID: 27031
-		// (get) Token: 0x0602AE5F RID: 175711 RVA: 0x009EF0E5 File Offset: 0x009ED2E5
-		// (set) Token: 0x0602AE60 RID: 175712 RVA: 0x009EF0F5 File Offset: 0x009ED2F5
+		// Token: 0x1700401B RID: 16411
+		// (get) Token: 0x06020A05 RID: 133637 RVA: 0x0094B511 File Offset: 0x00949711
+		// (set) Token: 0x06020A06 RID: 133638 RVA: 0x0094B521 File Offset: 0x00949721
 		public unsafe int PokerPerformanceIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_117);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_PokerPerformanceIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_117) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_PokerPerformanceIndex) = value;
 			}
 		}
 
-		// Token: 0x17006998 RID: 27032
-		// (get) Token: 0x0602AE61 RID: 175713 RVA: 0x009EF106 File Offset: 0x009ED306
-		// (set) Token: 0x0602AE62 RID: 175714 RVA: 0x009EF116 File Offset: 0x009ED316
+		// Token: 0x1700401C RID: 16412
+		// (get) Token: 0x06020A07 RID: 133639 RVA: 0x0094B532 File Offset: 0x00949732
+		// (set) Token: 0x06020A08 RID: 133640 RVA: 0x0094B542 File Offset: 0x00949742
 		public unsafe float DeltaTimeX
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_118);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_DeltaTimeX);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_118) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_DeltaTimeX) = value;
 			}
 		}
 
-		// Token: 0x17006999 RID: 27033
-		// (get) Token: 0x0602AE63 RID: 175715 RVA: 0x009EF127 File Offset: 0x009ED327
-		// (set) Token: 0x0602AE64 RID: 175716 RVA: 0x009EF13B File Offset: 0x009ED33B
+		// Token: 0x1700401D RID: 16413
+		// (get) Token: 0x06020A09 RID: 133641 RVA: 0x0094B553 File Offset: 0x00949753
+		// (set) Token: 0x06020A0A RID: 133642 RVA: 0x0094B567 File Offset: 0x00949767
 		public unsafe TEnumAsByte<EPokerIdleState> IdleState
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_119);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_IdleState);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_119) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_IdleState) = value;
 			}
 		}
 
-		// Token: 0x1700699A RID: 27034
-		// (get) Token: 0x0602AE65 RID: 175717 RVA: 0x009EF150 File Offset: 0x009ED350
-		// (set) Token: 0x0602AE66 RID: 175718 RVA: 0x009EF160 File Offset: 0x009ED360
+		// Token: 0x1700401E RID: 16414
+		// (get) Token: 0x06020A0B RID: 133643 RVA: 0x0094B57C File Offset: 0x0094977C
+		// (set) Token: 0x06020A0C RID: 133644 RVA: 0x0094B58C File Offset: 0x0094978C
 		public unsafe bool bIdleTimerActive
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_120) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bIdleTimerActive) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_120) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bIdleTimerActive) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700699B RID: 27035
-		// (get) Token: 0x0602AE67 RID: 175719 RVA: 0x009EF171 File Offset: 0x009ED371
-		// (set) Token: 0x0602AE68 RID: 175720 RVA: 0x009EF181 File Offset: 0x009ED381
+		// Token: 0x1700401F RID: 16415
+		// (get) Token: 0x06020A0D RID: 133645 RVA: 0x0094B59D File Offset: 0x0094979D
+		// (set) Token: 0x06020A0E RID: 133646 RVA: 0x0094B5AD File Offset: 0x009497AD
 		public unsafe int BeChooseEmotionIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_121);
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_BeChooseEmotionIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_121) = value;
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_BeChooseEmotionIndex) = value;
 			}
 		}
 
-		// Token: 0x1700699C RID: 27036
-		// (get) Token: 0x0602AE69 RID: 175721 RVA: 0x009EF192 File Offset: 0x009ED392
-		// (set) Token: 0x0602AE6A RID: 175722 RVA: 0x009EF1A2 File Offset: 0x009ED3A2
+		// Token: 0x17004020 RID: 16416
+		// (get) Token: 0x06020A0F RID: 133647 RVA: 0x0094B5BE File Offset: 0x009497BE
+		// (set) Token: 0x06020A10 RID: 133648 RVA: 0x0094B5CE File Offset: 0x009497CE
 		public unsafe bool bPlayerInteractiveStage
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_122) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bPlayerInteractiveStage) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_122) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bPlayerInteractiveStage) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700699D RID: 27037
-		// (get) Token: 0x0602AE6B RID: 175723 RVA: 0x009EF1B3 File Offset: 0x009ED3B3
-		// (set) Token: 0x0602AE6C RID: 175724 RVA: 0x009EF1C3 File Offset: 0x009ED3C3
+		// Token: 0x17004021 RID: 16417
+		// (get) Token: 0x06020A11 RID: 133649 RVA: 0x0094B5DF File Offset: 0x009497DF
+		// (set) Token: 0x06020A12 RID: 133650 RVA: 0x0094B5EF File Offset: 0x009497EF
 		public unsafe bool bForceEndLoop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_123) != 0;
+				return *(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bForceEndLoop) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_123) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)ABP_BaseRole_Gameplay_Poker_C.__PropertyOffset_bForceEndLoop) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602AE6D RID: 175725 RVA: 0x009EF1D4 File Offset: 0x009ED3D4
-		[NullableContext(2)]
+		// Token: 0x06020A13 RID: 133651 RVA: 0x0094B600 File Offset: 0x00949800
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void AnimGraph(ref FPoseLink AnimGraph)
-		{
-			ABP_BaseRole_Gameplay_Poker_C.__AnimGraph_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__AnimGraph_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__AnimGraph_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(ABP_BaseRole_Gameplay_Poker_C.__AnimGraph_NativeFunctionPtr, (void*)ptr, 1);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), &ptr->AnimGraph, AnimGraph.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__AnimGraph_NativeFunctionPtr, (void*)ptr);
-			if (AnimGraph != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FPoseLink.StaticStruct(), AnimGraph.NativePtr, &ptr->AnimGraph, 1, false);
-			}
-		}
-
-		// Token: 0x0602AE6E RID: 175726 RVA: 0x009EF25B File Offset: 0x009ED45B
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void InitPerformanceTickTime()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__InitPerformanceTickTime_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602AE6F RID: 175727 RVA: 0x009EF270 File Offset: 0x009ED470
+		// Token: 0x06020A14 RID: 133652 RVA: 0x0094B614 File Offset: 0x00949814
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPlayerInteractiveStage(bool isInteractive)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__SetPlayerInteractiveStage_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__SetPlayerInteractiveStage_FunctionParams[(UIntPtr)18] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__SetPlayerInteractiveStage_FunctionParams) & -16L;
@@ -208,9 +187,8 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__SetPlayerInteractiveStage_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE70 RID: 175728 RVA: 0x009EF2B8 File Offset: 0x009ED4B8
+		// Token: 0x06020A15 RID: 133653 RVA: 0x0094B65C File Offset: 0x0094985C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetBeChooseEmotionIndex(int index)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__SetBeChooseEmotionIndex_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__SetBeChooseEmotionIndex_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__SetBeChooseEmotionIndex_FunctionParams) & -16L;
@@ -219,17 +197,15 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__SetBeChooseEmotionIndex_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE71 RID: 175729 RVA: 0x009EF2FE File Offset: 0x009ED4FE
+		// Token: 0x06020A16 RID: 133654 RVA: 0x0094B6A2 File Offset: 0x009498A2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void ReturnIdel()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__ReturnIdel_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602AE72 RID: 175730 RVA: 0x009EF314 File Offset: 0x009ED514
+		// Token: 0x06020A17 RID: 133655 RVA: 0x0094B6B8 File Offset: 0x009498B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPokerIdleState(EPokerIdleState IdleState)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__SetPokerIdleState_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__SetPokerIdleState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__SetPokerIdleState_FunctionParams) & -16L;
@@ -238,9 +214,8 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__SetPokerIdleState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE73 RID: 175731 RVA: 0x009EF360 File Offset: 0x009ED560
+		// Token: 0x06020A18 RID: 133656 RVA: 0x0094B704 File Offset: 0x00949904
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPokerState(EPokerStateType PokerState)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__SetPokerState_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__SetPokerState_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__SetPokerState_FunctionParams) & -16L;
@@ -249,17 +224,15 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__SetPokerState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE74 RID: 175732 RVA: 0x009EF3AB File Offset: 0x009ED5AB
+		// Token: 0x06020A19 RID: 133657 RVA: 0x0094B74F File Offset: 0x0094994F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void 设置猜鬼牌表演倒计时()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__设置猜鬼牌表演倒计时_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602AE75 RID: 175733 RVA: 0x009EF3C0 File Offset: 0x009ED5C0
+		// Token: 0x06020A1A RID: 133658 RVA: 0x0094B764 File Offset: 0x00949964
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void BlueprintUpdateAnimation(float DeltaTimeX)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
@@ -268,142 +241,128 @@ namespace AkiClient.Game.Aki.Character.Role.Common.ABP_Gameplay
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE76 RID: 175734 RVA: 0x009EF408 File Offset: 0x009ED608
+		// Token: 0x06020A1B RID: 133659 RVA: 0x0094B7AC File Offset: 0x009499AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void BlueprintUpdateAnimation_Implementation(float DeltaTimeX)
 		{
 			ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams* ptr = stackalloc ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTimeX = DeltaTimeX;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, ABP_BaseRole_Gameplay_Poker_C.__BlueprintUpdateAnimation_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602AE77 RID: 175735 RVA: 0x009EF44F File Offset: 0x009ED64F
+		// Token: 0x06020A1C RID: 133660 RVA: 0x0094B7F2 File Offset: 0x009499F2
 		protected ABP_BaseRole_Gameplay_Poker_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040163BE RID: 91070
+		// Token: 0x04011A4C RID: 72268
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/Role/Common/ABP_Gameplay/ABP_BaseRole_Gameplay_Poker.ABP_BaseRole_Gameplay_Poker_C";
 
-		// Token: 0x040163BF RID: 91071
+		// Token: 0x04011A4D RID: 72269
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040163C0 RID: 91072
+		// Token: 0x04011A4E RID: 72270
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040163C1 RID: 91073
-		internal static int __PropertyOffset_115;
+		// Token: 0x04011A4F RID: 72271
+		internal static int __PropertyOffset_PokerState;
 
-		// Token: 0x040163C2 RID: 91074
-		internal static int __PropertyOffset_116;
+		// Token: 0x04011A50 RID: 72272
+		internal static int __PropertyOffset_猜鬼牌表演倒计时;
 
-		// Token: 0x040163C3 RID: 91075
-		internal static int __PropertyOffset_117;
+		// Token: 0x04011A51 RID: 72273
+		internal static int __PropertyOffset_PokerPerformanceIndex;
 
-		// Token: 0x040163C4 RID: 91076
-		internal static int __PropertyOffset_118;
+		// Token: 0x04011A52 RID: 72274
+		internal static int __PropertyOffset_DeltaTimeX;
 
-		// Token: 0x040163C5 RID: 91077
-		internal static int __PropertyOffset_119;
+		// Token: 0x04011A53 RID: 72275
+		internal static int __PropertyOffset_IdleState;
 
-		// Token: 0x040163C6 RID: 91078
-		internal static int __PropertyOffset_120;
+		// Token: 0x04011A54 RID: 72276
+		internal static int __PropertyOffset_bIdleTimerActive;
 
-		// Token: 0x040163C7 RID: 91079
-		internal static int __PropertyOffset_121;
+		// Token: 0x04011A55 RID: 72277
+		internal static int __PropertyOffset_BeChooseEmotionIndex;
 
-		// Token: 0x040163C8 RID: 91080
-		internal static int __PropertyOffset_122;
+		// Token: 0x04011A56 RID: 72278
+		internal static int __PropertyOffset_bPlayerInteractiveStage;
 
-		// Token: 0x040163C9 RID: 91081
-		internal static int __PropertyOffset_123;
+		// Token: 0x04011A57 RID: 72279
+		internal static int __PropertyOffset_bForceEndLoop;
 
-		// Token: 0x040163CA RID: 91082
-		private static IntPtr __AnimGraph_NativeFunctionPtr;
-
-		// Token: 0x040163CB RID: 91083
+		// Token: 0x04011A58 RID: 72280
 		private static IntPtr __InitPerformanceTickTime_NativeFunctionPtr;
 
-		// Token: 0x040163CC RID: 91084
+		// Token: 0x04011A59 RID: 72281
 		private static IntPtr __SetPlayerInteractiveStage_NativeFunctionPtr;
 
-		// Token: 0x040163CD RID: 91085
+		// Token: 0x04011A5A RID: 72282
 		private static IntPtr __SetBeChooseEmotionIndex_NativeFunctionPtr;
 
-		// Token: 0x040163CE RID: 91086
+		// Token: 0x04011A5B RID: 72283
 		private static IntPtr __ReturnIdel_NativeFunctionPtr;
 
-		// Token: 0x040163CF RID: 91087
+		// Token: 0x04011A5C RID: 72284
 		private static IntPtr __SetPokerIdleState_NativeFunctionPtr;
 
-		// Token: 0x040163D0 RID: 91088
+		// Token: 0x04011A5D RID: 72285
 		private static IntPtr __SetPokerState_NativeFunctionPtr;
 
-		// Token: 0x040163D1 RID: 91089
+		// Token: 0x04011A5E RID: 72286
 		private static IntPtr __设置猜鬼牌表演倒计时_NativeFunctionPtr;
 
-		// Token: 0x040163D2 RID: 91090
+		// Token: 0x04011A5F RID: 72287
 		private static IntPtr __BlueprintUpdateAnimation_NativeFunctionPtr;
 
-		// Token: 0x0200A425 RID: 42021
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __AnimGraph_FunctionParams
-		{
-			// Token: 0x0403225F RID: 205407
-			[FieldOffset(0)]
-			public byte AnimGraph;
-		}
-
-		// Token: 0x0200A426 RID: 42022
+		// Token: 0x02008F9A RID: 36762
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 3)]
 		protected ref struct __SetPlayerInteractiveStage_FunctionParams
 		{
-			// Token: 0x04032260 RID: 205408
+			// Token: 0x0402CD3A RID: 183610
 			[FieldOffset(0)]
 			public bool isInteractive;
 		}
 
-		// Token: 0x0200A427 RID: 42023
+		// Token: 0x02008F9B RID: 36763
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetBeChooseEmotionIndex_FunctionParams
 		{
-			// Token: 0x04032261 RID: 205409
+			// Token: 0x0402CD3B RID: 183611
 			[FieldOffset(0)]
 			public int index;
 		}
 
-		// Token: 0x0200A428 RID: 42024
+		// Token: 0x02008F9C RID: 36764
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetPokerIdleState_FunctionParams
 		{
-			// Token: 0x04032262 RID: 205410
+			// Token: 0x0402CD3C RID: 183612
 			[FieldOffset(0)]
 			public TEnumAsByte<EPokerIdleState> IdleState;
 		}
 
-		// Token: 0x0200A429 RID: 42025
+		// Token: 0x02008F9D RID: 36765
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __SetPokerState_FunctionParams
 		{
-			// Token: 0x04032263 RID: 205411
+			// Token: 0x0402CD3D RID: 183613
 			[FieldOffset(0)]
 			public TEnumAsByte<EPokerStateType> PokerState;
 		}
 
-		// Token: 0x0200A42A RID: 42026
+		// Token: 0x02008F9E RID: 36766
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __BlueprintUpdateAnimation_FunctionParams
 		{
-			// Token: 0x04032264 RID: 205412
+			// Token: 0x0402CD3E RID: 183614
 			[FieldOffset(0)]
 			public float DeltaTimeX;
 		}

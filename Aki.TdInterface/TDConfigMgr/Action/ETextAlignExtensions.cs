@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200246B RID: 9323
+	// Token: 0x0200270C RID: 9996
 	public static class ETextAlignExtensions
 	{
-		// Token: 0x0600CA60 RID: 51808 RVA: 0x001DC9F8 File Offset: 0x001DABF8
+		// Token: 0x0600D710 RID: 55056 RVA: 0x001F6AAC File Offset: 0x001F4CAC
 		public static string ToEnumString(this ETextAlign value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA61 RID: 51809 RVA: 0x001DCA40 File Offset: 0x001DAC40
+		// Token: 0x0600D711 RID: 55057 RVA: 0x001F6AF4 File Offset: 0x001F4CF4
 		public static ETextAlign FromString(string name)
 		{
 			ETextAlign result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA62 RID: 51810 RVA: 0x001DCA6C File Offset: 0x001DAC6C
+		// Token: 0x0600D712 RID: 55058 RVA: 0x001F6B20 File Offset: 0x001F4D20
 		public static bool TryFromString(string name, out ETextAlign value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA63 RID: 51811 RVA: 0x001DCAC2 File Offset: 0x001DACC2
+		// Token: 0x0600D713 RID: 55059 RVA: 0x001F6B76 File Offset: 0x001F4D76
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA64 RID: 51812 RVA: 0x001DCAE2 File Offset: 0x001DACE2
+		// Token: 0x0600D714 RID: 55060 RVA: 0x001F6B96 File Offset: 0x001F4D96
 		public static ETextAlign[] GetValues()
 		{
 			return new ETextAlign[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA65 RID: 51813 RVA: 0x001DCAF2 File Offset: 0x001DACF2
+		// Token: 0x0600D715 RID: 55061 RVA: 0x001F6BA6 File Offset: 0x001F4DA6
 		public static string[] GetNames()
 		{
 			return new string[]

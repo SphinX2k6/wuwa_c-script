@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F6C RID: 8044
+// Token: 0x0200142E RID: 5166
 public class HudUnitPositionUtil
 {
-	// Token: 0x0600F990 RID: 63888 RVA: 0x003C7CBC File Offset: 0x003C5EBC
+	// Token: 0x0600CDAF RID: 52655 RVA: 0x003D37A8 File Offset: 0x003D19A8
 	[NullableContext(1)]
 	public bool ProjectWorldToScreen(FVectorDouble worldLocation, Vector2D outScreenPosition)
 	{
@@ -23,13 +23,13 @@ public class HudUnitPositionUtil
 		return true;
 	}
 
-	// Token: 0x0600F991 RID: 63889 RVA: 0x003C7D2B File Offset: 0x003C5F2B
+	// Token: 0x0600CDB0 RID: 52656 RVA: 0x003D3817 File Offset: 0x003D1A17
 	public void LogViewPortInfo()
 	{
 		UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
 		BattleUiModel.Instance.UpdateViewPortSize();
 	}
 
-	// Token: 0x04007456 RID: 29782
+	// Token: 0x04007537 RID: 30007
 	private FVector2D ScreenPositionRef = new FVector2D();
 }

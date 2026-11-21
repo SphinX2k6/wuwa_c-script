@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C1D RID: 15389
+	// Token: 0x02004029 RID: 16425
 	public class IHollowCylinderTriggerShapeT
 	{
-		// Token: 0x170069E5 RID: 27109
-		// (get) Token: 0x060153A3 RID: 86947 RVA: 0x00312F7D File Offset: 0x0031117D
-		// (set) Token: 0x060153A4 RID: 86948 RVA: 0x00312F85 File Offset: 0x00311185
+		// Token: 0x17006F8D RID: 28557
+		// (get) Token: 0x06016899 RID: 92313 RVA: 0x00339B05 File Offset: 0x00337D05
+		// (set) Token: 0x0601689A RID: 92314 RVA: 0x00339B0D File Offset: 0x00337D0D
 		public ETriggerShape Type { get; set; }
 
-		// Token: 0x170069E6 RID: 27110
-		// (get) Token: 0x060153A5 RID: 86949 RVA: 0x00312F8E File Offset: 0x0031118E
-		// (set) Token: 0x060153A6 RID: 86950 RVA: 0x00312F96 File Offset: 0x00311196
+		// Token: 0x17006F8E RID: 28558
+		// (get) Token: 0x0601689B RID: 92315 RVA: 0x00339B16 File Offset: 0x00337D16
+		// (set) Token: 0x0601689C RID: 92316 RVA: 0x00339B1E File Offset: 0x00337D1E
 		public IVectorInfoT Center { get; set; }
 
-		// Token: 0x170069E7 RID: 27111
-		// (get) Token: 0x060153A7 RID: 86951 RVA: 0x00312F9F File Offset: 0x0031119F
-		// (set) Token: 0x060153A8 RID: 86952 RVA: 0x00312FA7 File Offset: 0x003111A7
+		// Token: 0x17006F8F RID: 28559
+		// (get) Token: 0x0601689D RID: 92317 RVA: 0x00339B27 File Offset: 0x00337D27
+		// (set) Token: 0x0601689E RID: 92318 RVA: 0x00339B2F File Offset: 0x00337D2F
 		public int Radius { get; set; }
 
-		// Token: 0x170069E8 RID: 27112
-		// (get) Token: 0x060153A9 RID: 86953 RVA: 0x00312FB0 File Offset: 0x003111B0
-		// (set) Token: 0x060153AA RID: 86954 RVA: 0x00312FB8 File Offset: 0x003111B8
+		// Token: 0x17006F90 RID: 28560
+		// (get) Token: 0x0601689F RID: 92319 RVA: 0x00339B38 File Offset: 0x00337D38
+		// (set) Token: 0x060168A0 RID: 92320 RVA: 0x00339B40 File Offset: 0x00337D40
 		public int Height { get; set; }
 
-		// Token: 0x170069E9 RID: 27113
-		// (get) Token: 0x060153AB RID: 86955 RVA: 0x00312FC1 File Offset: 0x003111C1
-		// (set) Token: 0x060153AC RID: 86956 RVA: 0x00312FC9 File Offset: 0x003111C9
+		// Token: 0x17006F91 RID: 28561
+		// (get) Token: 0x060168A1 RID: 92321 RVA: 0x00339B49 File Offset: 0x00337D49
+		// (set) Token: 0x060168A2 RID: 92322 RVA: 0x00339B51 File Offset: 0x00337D51
 		public int InnerRadius { get; set; }
 
-		// Token: 0x060153AD RID: 86957 RVA: 0x00312FD2 File Offset: 0x003111D2
+		// Token: 0x060168A3 RID: 92323 RVA: 0x00339B5A File Offset: 0x00337D5A
 		public IHollowCylinderTriggerShapeT()
 		{
 			this.Type = ETriggerShape.Box;

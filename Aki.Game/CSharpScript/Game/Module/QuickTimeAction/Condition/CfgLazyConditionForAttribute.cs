@@ -3,37 +3,37 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F55 RID: 20309
+	// Token: 0x02003F1E RID: 16158
 	public class CfgLazyConditionForAttribute : CfgLazyConditionBase
 	{
-		// Token: 0x06034102 RID: 213250 RVA: 0x00C35FA2 File Offset: 0x00C341A2
+		// Token: 0x06028F70 RID: 167792 RVA: 0x00B7F742 File Offset: 0x00B7D942
 		public CfgLazyConditionForAttribute()
 		{
 			this.ConditionType = new ELazyConditionType?(ELazyConditionType.属性检测);
 		}
 
-		// Token: 0x0401BA88 RID: 113288
+		// Token: 0x0401645D RID: 91229
 		public ESkillBehaviorComparisonLogic ComparisonLogic;
 
-		// Token: 0x0401BA89 RID: 113289
+		// Token: 0x0401645E RID: 91230
 		public int Value;
 
-		// Token: 0x0401BA8A RID: 113290
+		// Token: 0x0401645F RID: 91231
 		public int RangeL;
 
-		// Token: 0x0401BA8B RID: 113291
+		// Token: 0x04016460 RID: 91232
 		public int RangeR;
 
-		// Token: 0x0401BA8C RID: 113292
+		// Token: 0x04016461 RID: 91233
 		public int AttributeId1;
 
-		// Token: 0x0401BA8D RID: 113293
+		// Token: 0x04016462 RID: 91234
 		public int AttributeId2;
 
-		// Token: 0x0401BA8E RID: 113294
+		// Token: 0x04016463 RID: 91235
 		public int AttributeRate;
 
-		// Token: 0x0401BA8F RID: 113295
+		// Token: 0x04016464 RID: 91236
 		public bool Reverse;
 	}
 }

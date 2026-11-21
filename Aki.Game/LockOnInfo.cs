@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020030D5 RID: 12501
+// Token: 0x0200262D RID: 9773
 [NullableContext(1)]
 [Nullable(0)]
 public class LockOnInfo
 {
-	// Token: 0x0601AC36 RID: 109622 RVA: 0x0073649C File Offset: 0x0073469C
+	// Token: 0x0601864B RID: 99915 RVA: 0x0075C1B8 File Offset: 0x0075A3B8
 	public LockOnInfo([Nullable(2)] EntityHandle entityHandle = null, string socketName = "")
 	{
 		this.EntityHandle = entityHandle;
 		this.SocketName = socketName;
 	}
 
-	// Token: 0x0601AC37 RID: 109623 RVA: 0x007364BD File Offset: 0x007346BD
+	// Token: 0x0601864C RID: 99916 RVA: 0x0075C1D9 File Offset: 0x0075A3D9
 	public void Copy(LockOnInfo info)
 	{
 		this.EntityHandle = info.EntityHandle;
 		this.SocketName = info.SocketName;
 	}
 
-	// Token: 0x0601AC38 RID: 109624 RVA: 0x007364D8 File Offset: 0x007346D8
+	// Token: 0x0601864D RID: 99917 RVA: 0x0075C1F4 File Offset: 0x0075A3F4
 	public bool Equal(LockOnInfo info)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -30,16 +30,16 @@ public class LockOnInfo
 		return (num.GetValueOrDefault() == num2.GetValueOrDefault() & num != null == (num2 != null)) && this.SocketName == info.SocketName;
 	}
 
-	// Token: 0x0601AC39 RID: 109625 RVA: 0x0073655C File Offset: 0x0073475C
+	// Token: 0x0601864E RID: 99918 RVA: 0x0075C278 File Offset: 0x0075A478
 	public bool Different(LockOnInfo info)
 	{
 		return this.EntityHandle != info.EntityHandle || (this.SocketName != info.SocketName && !string.IsNullOrEmpty(info.SocketName) && !string.IsNullOrEmpty(this.SocketName));
 	}
 
-	// Token: 0x0400CE9A RID: 52890
+	// Token: 0x0400D28A RID: 53898
 	[Nullable(2)]
 	public EntityHandle EntityHandle;
 
-	// Token: 0x0400CE9B RID: 52891
+	// Token: 0x0400D28B RID: 53899
 	public string SocketName = "";
 }

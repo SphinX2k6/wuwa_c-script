@@ -5,19 +5,19 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200279F RID: 10143
+// Token: 0x02001D19 RID: 7449
 [NullableContext(1)]
 [Nullable(0)]
 public class UiSceneActorEffectsManagementComponent
 {
-	// Token: 0x06014D3D RID: 85309 RVA: 0x00548D54 File Offset: 0x00546F54
+	// Token: 0x06012712 RID: 75538 RVA: 0x00572EB0 File Offset: 0x005710B0
 	public int PlayEffect(string effectId, USceneComponent parent, FTransformDouble? transform = null, FName? socketName = null, [Nullable(2)] Action<ELoadEffectResult, int> callback = null)
 	{
 		string effectPath = EffectUtil.GetEffectPath(effectId);
 		return this.PlayEffectByPath(effectPath, parent, transform, socketName, callback);
 	}
 
-	// Token: 0x06014D3E RID: 85310 RVA: 0x00548D78 File Offset: 0x00546F78
+	// Token: 0x06012713 RID: 75539 RVA: 0x00572ED4 File Offset: 0x005710D4
 	public int PlayEffectByPath(string effectPath, USceneComponent parent, FTransformDouble? transform = null, FName? socketName = null, [Nullable(2)] Action<ELoadEffectResult, int> callback = null)
 	{
 		EffectSystem instance = EffectSystem.Instance;
@@ -41,7 +41,7 @@ public class UiSceneActorEffectsManagementComponent
 		return num;
 	}
 
-	// Token: 0x06014D3F RID: 85311 RVA: 0x00548E48 File Offset: 0x00547048
+	// Token: 0x06012714 RID: 75540 RVA: 0x00572FA4 File Offset: 0x005711A4
 	public void PlayEffectList(TArray<TSoftObjectPtr<UObject>> effects, USceneComponent parent, FTransformDouble? transform = null, FName? socketName = null)
 	{
 		if (effects == null)
@@ -55,13 +55,13 @@ public class UiSceneActorEffectsManagementComponent
 		}
 	}
 
-	// Token: 0x06014D40 RID: 85312 RVA: 0x00548E84 File Offset: 0x00547084
+	// Token: 0x06012715 RID: 75541 RVA: 0x00572FE0 File Offset: 0x005711E0
 	public void AttachEffect(int effectHandle)
 	{
 		this.EffectCacheList.Add(effectHandle);
 	}
 
-	// Token: 0x06014D41 RID: 85313 RVA: 0x00548E94 File Offset: 0x00547094
+	// Token: 0x06012716 RID: 75542 RVA: 0x00572FF0 File Offset: 0x005711F0
 	public void DestroyEffect()
 	{
 		if (this.EffectCacheList == null || this.EffectCacheList.Count == 0)
@@ -75,13 +75,13 @@ public class UiSceneActorEffectsManagementComponent
 		this.EffectCacheList.Clear();
 	}
 
-	// Token: 0x06014D42 RID: 85314 RVA: 0x00548F1C File Offset: 0x0054711C
+	// Token: 0x06012717 RID: 75543 RVA: 0x00573078 File Offset: 0x00571278
 	public void StopEffect(int effectHandle)
 	{
 		EffectSystem.Instance.StopEffectById(effectHandle, "[RoleAnimStateEffectManager.StopEffect]", true, null);
 	}
 
-	// Token: 0x06014D43 RID: 85315 RVA: 0x00548F44 File Offset: 0x00547144
+	// Token: 0x06012718 RID: 75544 RVA: 0x005730A0 File Offset: 0x005712A0
 	public UiSceneActorEffectsManagementComponent()
 	{
 		FRotator frotator = new FRotator(0f, 0f, 0f);
@@ -93,12 +93,12 @@ public class UiSceneActorEffectsManagementComponent
 		base..ctor();
 	}
 
-	// Token: 0x04009CC3 RID: 40131
+	// Token: 0x0400A091 RID: 41105
 	private readonly List<int> EffectCacheList = new List<int>();
 
-	// Token: 0x04009CC4 RID: 40132
+	// Token: 0x0400A092 RID: 41106
 	private readonly FTransformDouble CacheTransform;
 
-	// Token: 0x04009CC5 RID: 40133
+	// Token: 0x0400A093 RID: 41107
 	private readonly FName DefaultSocketName;
 }

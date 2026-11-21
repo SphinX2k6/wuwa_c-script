@@ -27,25 +27,25 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02001713 RID: 5907
+// Token: 0x02000BCB RID: 3019
 [UClass("/Game/Aki/TypeScript/Game/Module/BpBridge/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/BpBridge/UiBlueprintFunctionLibrary.UiBlueprintFunctionLibrary_C")]
 public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0600A984 RID: 43396 RVA: 0x00262747 File Offset: 0x00260947
+	// Token: 0x06007D67 RID: 32103 RVA: 0x0026CC97 File Offset: 0x0026AE97
 	static UiBlueprintFunctionLibrary()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiBlueprintFunctionLibrary.CreateStaticDefaultValue), new Action(UiBlueprintFunctionLibrary.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600A985 RID: 43397 RVA: 0x00262766 File Offset: 0x00260966
+	// Token: 0x06007D68 RID: 32104 RVA: 0x0026CCB6 File Offset: 0x0026AEB6
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsGameInited()
 	{
 		return GameProcedure.GameProcedureDefine.Inited;
 	}
 
-	// Token: 0x0600A986 RID: 43398 RVA: 0x0026276D File Offset: 0x0026096D
+	// Token: 0x06007D69 RID: 32105 RVA: 0x0026CCBD File Offset: 0x0026AEBD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TempModuleStart()
 	{
@@ -53,28 +53,28 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		ControllerManager.Instance.Init();
 	}
 
-	// Token: 0x0600A987 RID: 43399 RVA: 0x00262785 File Offset: 0x00260985
+	// Token: 0x06007D6A RID: 32106 RVA: 0x0026CCD5 File Offset: 0x0026AED5
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EndGachaScene()
 	{
 		EventSystem.Instance.Emit(EEventName.EndGachaScene);
 	}
 
-	// Token: 0x0600A988 RID: 43400 RVA: 0x00262797 File Offset: 0x00260997
+	// Token: 0x06007D6B RID: 32107 RVA: 0x0026CCE7 File Offset: 0x0026AEE7
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void GachaClick(bool isPress)
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.GachaClick, isPress);
 	}
 
-	// Token: 0x0600A989 RID: 43401 RVA: 0x002627AA File Offset: 0x002609AA
+	// Token: 0x06007D6C RID: 32108 RVA: 0x0026CCFA File Offset: 0x0026AEFA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void GachaInteractFinish()
 	{
 		EventSystem.Instance.Emit(EEventName.GachaInteractFinish);
 	}
 
-	// Token: 0x0600A98A RID: 43402 RVA: 0x002627BC File Offset: 0x002609BC
+	// Token: 0x06007D6D RID: 32109 RVA: 0x0026CD0C File Offset: 0x0026AF0C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlaySequenceEventByStringParam(string param)
@@ -82,7 +82,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		EventSystem.Instance.Emit<string>(EEventName.PlaySequenceEventByStringParam, param);
 	}
 
-	// Token: 0x0600A98B RID: 43403 RVA: 0x002627CF File Offset: 0x002609CF
+	// Token: 0x06007D6E RID: 32110 RVA: 0x0026CD1F File Offset: 0x0026AF1F
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ActivitySequenceEmitEvent(string param)
@@ -90,14 +90,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		EventSystem.Instance.Emit<string>(EEventName.OnActivitySequenceEmitEvent, param);
 	}
 
-	// Token: 0x0600A98C RID: 43404 RVA: 0x002627E2 File Offset: 0x002609E2
+	// Token: 0x06007D6F RID: 32111 RVA: 0x0026CD32 File Offset: 0x0026AF32
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AreaEndOverlap(float areaId)
 	{
 		AreaController.Instance.EndOverlap((int)areaId);
 	}
 
-	// Token: 0x0600A98D RID: 43405 RVA: 0x002627F0 File Offset: 0x002609F0
+	// Token: 0x06007D70 RID: 32112 RVA: 0x0026CD40 File Offset: 0x0026AF40
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<TsBaseCharacter> GetAllFormationRole()
@@ -115,20 +115,20 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return tarray;
 	}
 
-	// Token: 0x0600A98E RID: 43406 RVA: 0x00262868 File Offset: 0x00260A68
+	// Token: 0x06007D71 RID: 32113 RVA: 0x0026CDB8 File Offset: 0x0026AFB8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeRole(bool bUseGoBattleSkill, int position)
 	{
 	}
 
-	// Token: 0x0600A98F RID: 43407 RVA: 0x0026286A File Offset: 0x00260A6A
+	// Token: 0x06007D72 RID: 32114 RVA: 0x0026CDBA File Offset: 0x0026AFBA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void InitializeOfflineFormationInstance(int aConfigId, int bConfigId, int cConfigId)
 	{
 		SceneTeamModel.Instance.InitializeOfflineSceneTeam(aConfigId, bConfigId, cConfigId);
 	}
 
-	// Token: 0x0600A990 RID: 43408 RVA: 0x00262879 File Offset: 0x00260A79
+	// Token: 0x06007D73 RID: 32115 RVA: 0x0026CDC9 File Offset: 0x0026AFC9
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenBattleView()
 	{
@@ -140,7 +140,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.<OpenBattleView>g__FinallyCallback|12_0();
 	}
 
-	// Token: 0x0600A991 RID: 43409 RVA: 0x002628AC File Offset: 0x00260AAC
+	// Token: 0x06007D74 RID: 32116 RVA: 0x0026CDFC File Offset: 0x0026AFFC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetCurrentRoleConfigId()
 	{
@@ -152,7 +152,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return 0;
 	}
 
-	// Token: 0x0600A992 RID: 43410 RVA: 0x002628CF File Offset: 0x00260ACF
+	// Token: 0x06007D75 RID: 32117 RVA: 0x0026CE1F File Offset: 0x0026B01F
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool CheckGuideStatus(int guideGroupId, int status, string inOperator)
@@ -160,48 +160,48 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return GuideModel.Instance.CheckGroupStatus(guideGroupId, (EGuideGroupState)status, inOperator);
 	}
 
-	// Token: 0x0600A993 RID: 43411 RVA: 0x002628DE File Offset: 0x00260ADE
+	// Token: 0x06007D76 RID: 32118 RVA: 0x0026CE2E File Offset: 0x0026B02E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool CheckTeleport(int teleportId)
 	{
 		return MapModel.Instance.CheckTeleportUnlocked(teleportId);
 	}
 
-	// Token: 0x0600A994 RID: 43412 RVA: 0x002628EB File Offset: 0x00260AEB
+	// Token: 0x06007D77 RID: 32119 RVA: 0x0026CE3B File Offset: 0x0026B03B
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UnLockedTeleport(int teleportId)
 	{
 	}
 
-	// Token: 0x0600A995 RID: 43413 RVA: 0x002628ED File Offset: 0x00260AED
+	// Token: 0x06007D78 RID: 32120 RVA: 0x0026CE3D File Offset: 0x0026B03D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetItemCountByConfigId(int itemConfigId)
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(itemConfigId, 0);
 	}
 
-	// Token: 0x0600A996 RID: 43414 RVA: 0x002628FB File Offset: 0x00260AFB
+	// Token: 0x06007D79 RID: 32121 RVA: 0x0026CE4B File Offset: 0x0026B04B
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void InitUiRoot()
 	{
 		UiManager.Instance.Initialize();
 	}
 
-	// Token: 0x0600A997 RID: 43415 RVA: 0x00262908 File Offset: 0x00260B08
+	// Token: 0x06007D7A RID: 32122 RVA: 0x0026CE58 File Offset: 0x0026B058
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetPlayerLevel()
 	{
 		return PlayerInfoModel.Instance.GetNumberPropById(EPlayerInfoNumber.Level).GetValueOrDefault();
 	}
 
-	// Token: 0x0600A998 RID: 43416 RVA: 0x00262928 File Offset: 0x00260B28
+	// Token: 0x06007D7B RID: 32123 RVA: 0x0026CE78 File Offset: 0x0026B078
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetPlayerId()
 	{
 		return PlayerInfoModel.Instance.GetId().GetValueOrDefault();
 	}
 
-	// Token: 0x0600A999 RID: 43417 RVA: 0x00262947 File Offset: 0x00260B47
+	// Token: 0x06007D7C RID: 32124 RVA: 0x0026CE97 File Offset: 0x0026B097
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetAccount()
@@ -209,7 +209,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return "";
 	}
 
-	// Token: 0x0600A99A RID: 43418 RVA: 0x0026294E File Offset: 0x00260B4E
+	// Token: 0x06007D7D RID: 32125 RVA: 0x0026CE9E File Offset: 0x0026B09E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetUiRootActive(bool value)
 	{
@@ -217,14 +217,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiLayer.Instance.SetWorldUiActive(value);
 	}
 
-	// Token: 0x0600A99B RID: 43419 RVA: 0x00262966 File Offset: 0x00260B66
+	// Token: 0x06007D7E RID: 32126 RVA: 0x0026CEB6 File Offset: 0x0026B0B6
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenShop(float shopId)
 	{
 		ShopController.Instance.OpenShop((int)shopId, null, null);
 	}
 
-	// Token: 0x0600A99C RID: 43420 RVA: 0x00262977 File Offset: 0x00260B77
+	// Token: 0x06007D7F RID: 32127 RVA: 0x0026CEC7 File Offset: 0x0026B0C7
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseShop()
 	{
@@ -234,55 +234,55 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		}
 	}
 
-	// Token: 0x0600A99D RID: 43421 RVA: 0x0026299A File Offset: 0x00260B9A
+	// Token: 0x06007D80 RID: 32128 RVA: 0x0026CEEA File Offset: 0x0026B0EA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenWorldMapView()
 	{
 		WorldMapController.Instance.OpenView(EOpenMapType.Other, false, null, null);
 	}
 
-	// Token: 0x0600A99E RID: 43422 RVA: 0x002629AA File Offset: 0x00260BAA
+	// Token: 0x06007D81 RID: 32129 RVA: 0x0026CEFA File Offset: 0x0026B0FA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenDragonPoolView(int dragonPoolId)
 	{
 		MingSuController.OpenView(dragonPoolId, null);
 	}
 
-	// Token: 0x0600A99F RID: 43423 RVA: 0x002629B4 File Offset: 0x00260BB4
+	// Token: 0x06007D82 RID: 32130 RVA: 0x0026CF04 File Offset: 0x0026B104
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ConnectServer(string httpResult)
 	{
 	}
 
-	// Token: 0x0600A9A0 RID: 43424 RVA: 0x002629B6 File Offset: 0x00260BB6
+	// Token: 0x06007D83 RID: 32131 RVA: 0x0026CF06 File Offset: 0x0026B106
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ApplyUiCameraAnimationSettings(string uniqueName)
 	{
 	}
 
-	// Token: 0x0600A9A1 RID: 43425 RVA: 0x002629B8 File Offset: 0x00260BB8
+	// Token: 0x06007D84 RID: 32132 RVA: 0x0026CF08 File Offset: 0x0026B108
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ResetUiCameraAnimationHandle(string uniqueName)
 	{
 	}
 
-	// Token: 0x0600A9A2 RID: 43426 RVA: 0x002629BA File Offset: 0x00260BBA
+	// Token: 0x06007D85 RID: 32133 RVA: 0x0026CF0A File Offset: 0x0026B10A
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearAllUiCameraAnimationHandles()
 	{
 	}
 
-	// Token: 0x0600A9A3 RID: 43427 RVA: 0x002629BC File Offset: 0x00260BBC
+	// Token: 0x06007D86 RID: 32134 RVA: 0x0026CF0C File Offset: 0x0026B10C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayPlayUiCameraBlendAnimationFromCurrentHandle(string targetAnimationHandleUniqueName, string animationBlendDataUniqueName)
 	{
 	}
 
-	// Token: 0x0600A9A4 RID: 43428 RVA: 0x002629BE File Offset: 0x00260BBE
+	// Token: 0x06007D87 RID: 32135 RVA: 0x0026CF0E File Offset: 0x0026B10E
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenUiScene(string uiScenePath)
@@ -290,14 +290,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiSceneManager.Instance.OpenUiScene(uiScenePath, null);
 	}
 
-	// Token: 0x0600A9A5 RID: 43429 RVA: 0x002629CD File Offset: 0x00260BCD
+	// Token: 0x06007D88 RID: 32136 RVA: 0x0026CF1D File Offset: 0x0026B11D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void CloseUiScene()
 	{
 		UiSceneManager.Instance.CloseUiScene();
 	}
 
-	// Token: 0x0600A9A6 RID: 43430 RVA: 0x002629D9 File Offset: 0x00260BD9
+	// Token: 0x06007D89 RID: 32137 RVA: 0x0026CF29 File Offset: 0x0026B129
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void BeginScreenEffect(string effectPath, float priority)
@@ -305,7 +305,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		FullScreenEffectController.Instance.BeginEffect(effectPath, (int)priority);
 	}
 
-	// Token: 0x0600A9A7 RID: 43431 RVA: 0x002629E9 File Offset: 0x00260BE9
+	// Token: 0x06007D8A RID: 32138 RVA: 0x0026CF39 File Offset: 0x0026B139
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EndScreenEffect(string effectPath)
@@ -313,7 +313,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		FullScreenEffectController.Instance.EndEffect(effectPath);
 	}
 
-	// Token: 0x0600A9A8 RID: 43432 RVA: 0x002629F8 File Offset: 0x00260BF8
+	// Token: 0x06007D8B RID: 32139 RVA: 0x0026CF48 File Offset: 0x0026B148
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetPartStateVisible(float entityId, string boneName, bool bVisible)
@@ -322,7 +322,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		EventSystem.Instance.Emit<int, FName?, bool>(EEventName.OnSetPartStateVisible, (int)entityId, dynamicFName, bVisible);
 	}
 
-	// Token: 0x0600A9A9 RID: 43433 RVA: 0x00262A20 File Offset: 0x00260C20
+	// Token: 0x06007D8C RID: 32140 RVA: 0x0026CF70 File Offset: 0x0026B170
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetRoleMeshId(int roleInfoId)
 	{
@@ -334,7 +334,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return 0f;
 	}
 
-	// Token: 0x0600A9AA RID: 43434 RVA: 0x00262A58 File Offset: 0x00260C58
+	// Token: 0x06007D8D RID: 32141 RVA: 0x0026CFA8 File Offset: 0x0026B1A8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetRoleEntityId(int roleInfoId)
 	{
@@ -346,7 +346,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return 0f;
 	}
 
-	// Token: 0x0600A9AB RID: 43435 RVA: 0x00262A90 File Offset: 0x00260C90
+	// Token: 0x06007D8E RID: 32142 RVA: 0x0026CFE0 File Offset: 0x0026B1E0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TMap<int, float> GetRoleBaseAttrList(int roleInfoId)
@@ -365,7 +365,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return tmap;
 	}
 
-	// Token: 0x0600A9AC RID: 43436 RVA: 0x00262B10 File Offset: 0x00260D10
+	// Token: 0x06007D8F RID: 32143 RVA: 0x0026D060 File Offset: 0x0026B260
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TMap<int, float> GetRoleAddAttrList(int roleInfoId)
@@ -384,7 +384,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return tmap;
 	}
 
-	// Token: 0x0600A9AD RID: 43437 RVA: 0x00262B90 File Offset: 0x00260D90
+	// Token: 0x06007D90 RID: 32144 RVA: 0x0026D0E0 File Offset: 0x0026B2E0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetRoleCameraConfig(int roleInfoId)
@@ -392,14 +392,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return RoleConfig.Instance.GetRoleConfig(roleInfoId).Value.CameraConfig;
 	}
 
-	// Token: 0x0600A9AE RID: 43438 RVA: 0x00262BB8 File Offset: 0x00260DB8
+	// Token: 0x06007D91 RID: 32145 RVA: 0x0026D108 File Offset: 0x0026B308
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetRoleProperty(int roleInfoId)
 	{
 		return (float)RoleConfig.Instance.GetRoleConfig(roleInfoId).Value.PropertyId;
 	}
 
-	// Token: 0x0600A9AF RID: 43439 RVA: 0x00262BE4 File Offset: 0x00260DE4
+	// Token: 0x06007D92 RID: 32146 RVA: 0x0026D134 File Offset: 0x0026B334
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetRoleDamageData(int damageId)
@@ -414,7 +414,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return tarray;
 	}
 
-	// Token: 0x0600A9B0 RID: 43440 RVA: 0x00262C38 File Offset: 0x00260E38
+	// Token: 0x06007D93 RID: 32147 RVA: 0x0026D188 File Offset: 0x0026B388
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void OpenGmView()
 	{
@@ -429,7 +429,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		}
 	}
 
-	// Token: 0x0600A9B1 RID: 43441 RVA: 0x00262C84 File Offset: 0x00260E84
+	// Token: 0x06007D94 RID: 32148 RVA: 0x0026D1D4 File Offset: 0x0026B3D4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void BackLoginView()
 	{
@@ -440,28 +440,28 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		ReConnectController.Instance.Logout(ELogoutReason.GmBackLoginView);
 	}
 
-	// Token: 0x0600A9B2 RID: 43442 RVA: 0x00262CB4 File Offset: 0x00260EB4
+	// Token: 0x06007D95 RID: 32149 RVA: 0x0026D204 File Offset: 0x0026B404
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetDamageViewVisible(bool bVisible)
 	{
 		Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "蓝图设置伤害飘字可见性（该接口已废弃）", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600A9B3 RID: 43443 RVA: 0x00262CE0 File Offset: 0x00260EE0
+	// Token: 0x06007D96 RID: 32150 RVA: 0x0026D230 File Offset: 0x0026B430
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetHeadStateVisible(bool bVisible)
 	{
 		Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "蓝图设置头顶状态条可见性（该接口已废弃）", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600A9B4 RID: 43444 RVA: 0x00262D0C File Offset: 0x00260F0C
+	// Token: 0x06007D97 RID: 32151 RVA: 0x0026D25C File Offset: 0x0026B45C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBossStateVisible(bool bVisible)
 	{
 		Log.Instance.Error(ELogModule.Battle, ELogAuthor.CFT, "蓝图设置Boss状态条可见性（该接口已废弃）", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600A9B5 RID: 43445 RVA: 0x00262D35 File Offset: 0x00260F35
+	// Token: 0x06007D98 RID: 32152 RVA: 0x0026D285 File Offset: 0x0026B485
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayBattleNormalTip(string textKey, float duration)
@@ -469,7 +469,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		BattleUiModel.Instance.FloatTipsData.PlayNormalFloatTip(textKey, (float)((int)duration));
 	}
 
-	// Token: 0x0600A9B6 RID: 43446 RVA: 0x00262D4A File Offset: 0x00260F4A
+	// Token: 0x06007D99 RID: 32153 RVA: 0x0026D29A File Offset: 0x0026B49A
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayBattleCountdownTip(string textKey, float duration, float countdown)
@@ -477,7 +477,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		BattleUiModel.Instance.FloatTipsData.PlayCountdownFloatTip(textKey, (float)((int)duration), (float)((int)countdown));
 	}
 
-	// Token: 0x0600A9B7 RID: 43447 RVA: 0x00262D62 File Offset: 0x00260F62
+	// Token: 0x06007D9A RID: 32154 RVA: 0x0026D2B2 File Offset: 0x0026B4B2
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetTempLocation(FVector cameraLocation)
 	{
@@ -487,14 +487,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		}
 	}
 
-	// Token: 0x0600A9B8 RID: 43448 RVA: 0x00262D7B File Offset: 0x00260F7B
+	// Token: 0x06007D9B RID: 32155 RVA: 0x0026D2CB File Offset: 0x0026B4CB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetIsSilentLogin(bool value)
 	{
 		PublicUtil.Instance.SetIsSilentLogin(value);
 	}
 
-	// Token: 0x0600A9B9 RID: 43449 RVA: 0x00262D88 File Offset: 0x00260F88
+	// Token: 0x06007D9C RID: 32156 RVA: 0x0026D2D8 File Offset: 0x0026B4D8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneLogin(string levelName)
@@ -591,7 +591,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.<TestSceneLogin>g__FinallyCallback|56_1();
 	}
 
-	// Token: 0x0600A9BA RID: 43450 RVA: 0x00263050 File Offset: 0x00261250
+	// Token: 0x06007D9D RID: 32157 RVA: 0x0026D5A0 File Offset: 0x0026B7A0
 	private static void CheckReLogin()
 	{
 		if (LoginModel.Instance.IsLoginStatus(LoginDefine.ELoginStatus.Init))
@@ -604,7 +604,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		}
 	}
 
-	// Token: 0x0600A9BB RID: 43451 RVA: 0x002630A8 File Offset: 0x002612A8
+	// Token: 0x06007D9E RID: 32158 RVA: 0x0026D5F8 File Offset: 0x0026B7F8
 	private static void CheckWorldDone(float _)
 	{
 		if (GameModeModel.Instance.WorldDone)
@@ -623,14 +623,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		}
 	}
 
-	// Token: 0x0600A9BC RID: 43452 RVA: 0x00263110 File Offset: 0x00261310
+	// Token: 0x06007D9F RID: 32159 RVA: 0x0026D660 File Offset: 0x0026B860
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool TestSceneLoadNetMode()
 	{
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().IsNetMode;
 	}
 
-	// Token: 0x0600A9BD RID: 43453 RVA: 0x0026311C File Offset: 0x0026131C
+	// Token: 0x06007DA0 RID: 32160 RVA: 0x0026D66C File Offset: 0x0026B86C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneSaveNetMode(bool value)
 	{
@@ -639,7 +639,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TestSaveSceneData(adaptEditorStartConfig);
 	}
 
-	// Token: 0x0600A9BE RID: 43454 RVA: 0x00263130 File Offset: 0x00261330
+	// Token: 0x06007DA1 RID: 32161 RVA: 0x0026D680 File Offset: 0x0026B880
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string TestSceneLoadAccount()
@@ -647,7 +647,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().Account;
 	}
 
-	// Token: 0x0600A9BF RID: 43455 RVA: 0x0026313C File Offset: 0x0026133C
+	// Token: 0x06007DA2 RID: 32162 RVA: 0x0026D68C File Offset: 0x0026B88C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneSaveAccount(string account)
@@ -657,7 +657,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TestSaveSceneData(adaptEditorStartConfig);
 	}
 
-	// Token: 0x0600A9C0 RID: 43456 RVA: 0x00263150 File Offset: 0x00261350
+	// Token: 0x06007DA3 RID: 32163 RVA: 0x0026D6A0 File Offset: 0x0026B8A0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string TestSceneLoadServerIp()
@@ -665,7 +665,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().ServerIp;
 	}
 
-	// Token: 0x0600A9C1 RID: 43457 RVA: 0x0026315C File Offset: 0x0026135C
+	// Token: 0x06007DA4 RID: 32164 RVA: 0x0026D6AC File Offset: 0x0026B8AC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneSaveServerIp(string serverIp)
@@ -675,7 +675,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TestSaveSceneData(adaptEditorStartConfig);
 	}
 
-	// Token: 0x0600A9C2 RID: 43458 RVA: 0x00263170 File Offset: 0x00261370
+	// Token: 0x06007DA5 RID: 32165 RVA: 0x0026D6C0 File Offset: 0x0026B8C0
 	public static EBornMode TestSceneLoadBornMode()
 	{
 		if (!UiBlueprintFunctionLibrary.TestLoadSceneData().IsBornAtCamera)
@@ -685,7 +685,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return EBornMode.PlayLocationCurrentCameraLocation;
 	}
 
-	// Token: 0x0600A9C3 RID: 43459 RVA: 0x00263181 File Offset: 0x00261381
+	// Token: 0x06007DA6 RID: 32166 RVA: 0x0026D6D1 File Offset: 0x0026B8D1
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneSaveBornMode1(bool mode)
 	{
@@ -694,7 +694,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TestSaveSceneData(adaptEditorStartConfig);
 	}
 
-	// Token: 0x0600A9C4 RID: 43460 RVA: 0x00263198 File Offset: 0x00261398
+	// Token: 0x06007DA7 RID: 32167 RVA: 0x0026D6E8 File Offset: 0x0026B8E8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVector TestSceneLoadBornLocation()
 	{
@@ -707,21 +707,21 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		};
 	}
 
-	// Token: 0x0600A9C5 RID: 43461 RVA: 0x00263201 File Offset: 0x00261401
+	// Token: 0x06007DA8 RID: 32168 RVA: 0x0026D751 File Offset: 0x0026B951
 	[NullableContext(1)]
 	public static string TestSceneLoadPlayer()
 	{
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().CustomPlayerName;
 	}
 
-	// Token: 0x0600A9C6 RID: 43462 RVA: 0x0026320D File Offset: 0x0026140D
+	// Token: 0x06007DA9 RID: 32169 RVA: 0x0026D75D File Offset: 0x0026B95D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool TestSceneLoadGender()
 	{
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().IsMale;
 	}
 
-	// Token: 0x0600A9C7 RID: 43463 RVA: 0x00263219 File Offset: 0x00261419
+	// Token: 0x06007DAA RID: 32170 RVA: 0x0026D769 File Offset: 0x0026B969
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSceneSaveGender(bool isMale)
 	{
@@ -730,20 +730,20 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TestSaveSceneData(adaptEditorStartConfig);
 	}
 
-	// Token: 0x0600A9C8 RID: 43464 RVA: 0x0026322D File Offset: 0x0026142D
+	// Token: 0x06007DAB RID: 32171 RVA: 0x0026D77D File Offset: 0x0026B97D
 	public static bool IsUseTempData()
 	{
 		return UiBlueprintFunctionLibrary.TestLoadSceneData().UseTemp;
 	}
 
-	// Token: 0x0600A9C9 RID: 43465 RVA: 0x00263239 File Offset: 0x00261439
+	// Token: 0x06007DAC RID: 32172 RVA: 0x0026D789 File Offset: 0x0026B989
 	[NullableContext(1)]
 	private static string GetLocalGameDataPath()
 	{
 		return UBlueprintPathsLibrary.ProjectDir() + "../Config/Raw/Tables/k.可视化编辑/__Temp__/EditorStartConfig.json";
 	}
 
-	// Token: 0x0600A9CA RID: 43466 RVA: 0x0026324C File Offset: 0x0026144C
+	// Token: 0x06007DAD RID: 32173 RVA: 0x0026D79C File Offset: 0x0026B99C
 	[NullableContext(1)]
 	private static AdaptEditorStartConfig TestLoadSceneData()
 	{
@@ -772,7 +772,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return adaptEditorStartConfig;
 	}
 
-	// Token: 0x0600A9CB RID: 43467 RVA: 0x002632D8 File Offset: 0x002614D8
+	// Token: 0x06007DAE RID: 32174 RVA: 0x0026D828 File Offset: 0x0026BA28
 	[NullableContext(1)]
 	private static AdaptEditorStartConfig TestSaveSceneData([Nullable(2)] AdaptEditorStartConfig data = null)
 	{
@@ -790,7 +790,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		{
 			adaptEditorStartConfig = data;
 		}
-		string text = Json.Stringify<AdaptEditorStartConfig>(adaptEditorStartConfig, null);
+		string text = Json.Stringify(adaptEditorStartConfig, null);
 		if (text == null)
 		{
 			Log.Instance.Error(ELogModule.Temp, ELogAuthor.ZJC, "localGameData反序列化失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -801,28 +801,28 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return adaptEditorStartConfig;
 	}
 
-	// Token: 0x0600A9CC RID: 43468 RVA: 0x00263375 File Offset: 0x00261575
+	// Token: 0x06007DAF RID: 32175 RVA: 0x0026D8C5 File Offset: 0x0026BAC5
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RefreshInputTag()
 	{
 		InputDistributeController.Instance.RefreshInputTag();
 	}
 
-	// Token: 0x0600A9CD RID: 43469 RVA: 0x00263381 File Offset: 0x00261581
+	// Token: 0x06007DB0 RID: 32176 RVA: 0x0026D8D1 File Offset: 0x0026BAD1
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerLookAtCameraInPhoto()
 	{
 		return PhotographController.Instance.IsPlayerLookAtCamera();
 	}
 
-	// Token: 0x0600A9CE RID: 43470 RVA: 0x0026338D File Offset: 0x0026158D
+	// Token: 0x06007DB1 RID: 32177 RVA: 0x0026D8DD File Offset: 0x0026BADD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsOpenPhotograph()
 	{
 		return PhotographController.Instance.IsOpenPhotograph();
 	}
 
-	// Token: 0x0600A9CF RID: 43471 RVA: 0x0026339C File Offset: 0x0026159C
+	// Token: 0x06007DB2 RID: 32178 RVA: 0x0026D8EC File Offset: 0x0026BAEC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EnablePhotographTimeDilation(float timeDilation)
 	{
@@ -840,7 +840,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		instance2.SetPhotographTimeDilation(timeDilation);
 	}
 
-	// Token: 0x0600A9D0 RID: 43472 RVA: 0x002633E8 File Offset: 0x002615E8
+	// Token: 0x06007DB3 RID: 32179 RVA: 0x0026D938 File Offset: 0x0026BB38
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DisablePhotographTimeDilation()
 	{
@@ -853,7 +853,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		instance.SetPhotographTimeDilation(1f);
 	}
 
-	// Token: 0x0600A9D1 RID: 43473 RVA: 0x00263428 File Offset: 0x00261628
+	// Token: 0x06007DB4 RID: 32180 RVA: 0x0026D978 File Offset: 0x0026BB78
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FText GetTopViewName()
@@ -874,14 +874,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return new FText(text);
 	}
 
-	// Token: 0x0600A9D2 RID: 43474 RVA: 0x002634E9 File Offset: 0x002616E9
+	// Token: 0x06007DB5 RID: 32181 RVA: 0x0026DA39 File Offset: 0x0026BC39
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetUiStartSequenceFrame(float frame)
 	{
 		UiSceneManager.Instance.SetUiStartSequenceFrame((int)frame);
 	}
 
-	// Token: 0x0600A9D3 RID: 43475 RVA: 0x002634F7 File Offset: 0x002616F7
+	// Token: 0x06007DB6 RID: 32182 RVA: 0x0026DA47 File Offset: 0x0026BC47
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetUiEndSequenceFrame(float frame)
 	{
@@ -889,7 +889,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		EventSystem.Instance.Emit(EEventName.UiRoleSequenceEndKeyFrame);
 	}
 
-	// Token: 0x0600A9D4 RID: 43476 RVA: 0x00263515 File Offset: 0x00261715
+	// Token: 0x06007DB7 RID: 32183 RVA: 0x0026DA65 File Offset: 0x0026BC65
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetUiWeaponBreachLevel(USkeletalMeshComponent weaponMesh)
@@ -898,7 +898,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return (float)((instance != null) ? instance.GetWeaponBreachLevelForMesh(weaponMesh) : 0);
 	}
 
-	// Token: 0x0600A9D5 RID: 43477 RVA: 0x0026352A File Offset: 0x0026172A
+	// Token: 0x06007DB8 RID: 32184 RVA: 0x0026DA7A File Offset: 0x0026BC7A
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetUiWeaponEquippedRoleId()
 	{
@@ -906,7 +906,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return (float)((instance != null) ? instance.BlueprintWeaponEquippedRoleId : 0);
 	}
 
-	// Token: 0x0600A9D6 RID: 43478 RVA: 0x0026353E File Offset: 0x0026173E
+	// Token: 0x06007DB9 RID: 32185 RVA: 0x0026DA8E File Offset: 0x0026BC8E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static EWeaponViewName GetWeaponViewName()
 	{
@@ -918,28 +918,28 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return instance.GetCurSelectViewName();
 	}
 
-	// Token: 0x0600A9D7 RID: 43479 RVA: 0x00263550 File Offset: 0x00261750
+	// Token: 0x06007DBA RID: 32186 RVA: 0x0026DAA0 File Offset: 0x0026BCA0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsGamepadNow()
 	{
 		return Info.Instance.IsInGamepad();
 	}
 
-	// Token: 0x0600A9D8 RID: 43480 RVA: 0x0026355C File Offset: 0x0026175C
+	// Token: 0x06007DBB RID: 32187 RVA: 0x0026DAAC File Offset: 0x0026BCAC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsMobileNow()
 	{
 		return Info.Instance.IsInTouch();
 	}
 
-	// Token: 0x0600A9D9 RID: 43481 RVA: 0x00263568 File Offset: 0x00261768
+	// Token: 0x06007DBC RID: 32188 RVA: 0x0026DAB8 File Offset: 0x0026BCB8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsLongPressExploreButton()
 	{
 		return BattleUiModel.Instance.IsLongPressExploreButton;
 	}
 
-	// Token: 0x0600A9DA RID: 43482 RVA: 0x00263574 File Offset: 0x00261774
+	// Token: 0x06007DBD RID: 32189 RVA: 0x0026DAC4 File Offset: 0x0026BCC4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowGenericPrompt(string id)
@@ -947,14 +947,14 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		GenericPromptController.Instance.ShowPromptByCode(id, Array.Empty<object>());
 	}
 
-	// Token: 0x0600A9DB RID: 43483 RVA: 0x00263586 File Offset: 0x00261786
+	// Token: 0x06007DBE RID: 32190 RVA: 0x0026DAD6 File Offset: 0x0026BCD6
 	public static void CreateStaticDefaultValue()
 	{
 		UiBlueprintFunctionLibrary.TempLocation = global::Vector.Create();
 		UiBlueprintFunctionLibrary.TempRotator = global::Rotator.Create();
 	}
 
-	// Token: 0x0600A9DC RID: 43484 RVA: 0x0026359C File Offset: 0x0026179C
+	// Token: 0x06007DBF RID: 32191 RVA: 0x0026DAEC File Offset: 0x0026BCEC
 	public static void ResetStaticDefaultValue()
 	{
 		UiBlueprintFunctionLibrary.TempLocation = null;
@@ -962,7 +962,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TimerId = null;
 	}
 
-	// Token: 0x0600A9DD RID: 43485 RVA: 0x002635B0 File Offset: 0x002617B0
+	// Token: 0x06007DC0 RID: 32192 RVA: 0x0026DB00 File Offset: 0x0026BD00
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (UiBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -972,71 +972,71 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		return UiBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0600A9DE RID: 43486 RVA: 0x002635D4 File Offset: 0x002617D4
+	// Token: 0x06007DC1 RID: 32193 RVA: 0x0026DB24 File Offset: 0x0026BD24
 	public UiBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UiBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600A9DF RID: 43487 RVA: 0x002635FC File Offset: 0x002617FC
+	// Token: 0x06007DC2 RID: 32194 RVA: 0x0026DB4C File Offset: 0x0026BD4C
 	[NullableContext(1)]
 	public UiBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UiBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600A9E0 RID: 43488 RVA: 0x0026362F File Offset: 0x0026182F
+	// Token: 0x06007DC3 RID: 32195 RVA: 0x0026DB7F File Offset: 0x0026BD7F
 	protected UiBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600A9E1 RID: 43489 RVA: 0x00263638 File Offset: 0x00261838
+	// Token: 0x06007DC4 RID: 32196 RVA: 0x0026DB88 File Offset: 0x0026BD88
 	protected unsafe static void __CPPCALL_IsGameInited_Implementation(UiBlueprintFunctionLibrary.__IsGameInited_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsGameInited();
 	}
 
-	// Token: 0x0600A9E2 RID: 43490 RVA: 0x00263645 File Offset: 0x00261845
+	// Token: 0x06007DC5 RID: 32197 RVA: 0x0026DB95 File Offset: 0x0026BD95
 	protected unsafe static void __CPPCALL_TempModuleStart_Implementation(UiBlueprintFunctionLibrary.__TempModuleStart_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TempModuleStart();
 	}
 
-	// Token: 0x0600A9E3 RID: 43491 RVA: 0x0026364C File Offset: 0x0026184C
+	// Token: 0x06007DC6 RID: 32198 RVA: 0x0026DB9C File Offset: 0x0026BD9C
 	protected unsafe static void __CPPCALL_EndGachaScene_Implementation(UiBlueprintFunctionLibrary.__EndGachaScene_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.EndGachaScene();
 	}
 
-	// Token: 0x0600A9E4 RID: 43492 RVA: 0x00263653 File Offset: 0x00261853
+	// Token: 0x06007DC7 RID: 32199 RVA: 0x0026DBA3 File Offset: 0x0026BDA3
 	protected unsafe static void __CPPCALL_GachaClick_Implementation(UiBlueprintFunctionLibrary.__GachaClick_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.GachaClick(__Params->isPress);
 	}
 
-	// Token: 0x0600A9E5 RID: 43493 RVA: 0x00263660 File Offset: 0x00261860
+	// Token: 0x06007DC8 RID: 32200 RVA: 0x0026DBB0 File Offset: 0x0026BDB0
 	protected unsafe static void __CPPCALL_GachaInteractFinish_Implementation(UiBlueprintFunctionLibrary.__GachaInteractFinish_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.GachaInteractFinish();
 	}
 
-	// Token: 0x0600A9E6 RID: 43494 RVA: 0x00263667 File Offset: 0x00261867
+	// Token: 0x06007DC9 RID: 32201 RVA: 0x0026DBB7 File Offset: 0x0026BDB7
 	protected unsafe static void __CPPCALL_PlaySequenceEventByStringParam_Implementation(UiBlueprintFunctionLibrary.__PlaySequenceEventByStringParam_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.PlaySequenceEventByStringParam(FString.ToString((void*)(&__Params->param)));
 	}
 
-	// Token: 0x0600A9E7 RID: 43495 RVA: 0x0026367A File Offset: 0x0026187A
+	// Token: 0x06007DCA RID: 32202 RVA: 0x0026DBCA File Offset: 0x0026BDCA
 	protected unsafe static void __CPPCALL_ActivitySequenceEmitEvent_Implementation(UiBlueprintFunctionLibrary.__ActivitySequenceEmitEvent_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ActivitySequenceEmitEvent(FString.ToString((void*)(&__Params->param)));
 	}
 
-	// Token: 0x0600A9E8 RID: 43496 RVA: 0x0026368D File Offset: 0x0026188D
+	// Token: 0x06007DCB RID: 32203 RVA: 0x0026DBDD File Offset: 0x0026BDDD
 	protected unsafe static void __CPPCALL_AreaEndOverlap_Implementation(UiBlueprintFunctionLibrary.__AreaEndOverlap_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.AreaEndOverlap(__Params->areaId);
 	}
 
-	// Token: 0x0600A9E9 RID: 43497 RVA: 0x0026369C File Offset: 0x0026189C
+	// Token: 0x06007DCC RID: 32204 RVA: 0x0026DBEC File Offset: 0x0026BDEC
 	protected unsafe static void __CPPCALL_GetAllFormationRole_Implementation(UiBlueprintFunctionLibrary.__GetAllFormationRole_FunctionParams* __Params)
 	{
 		TArray<TsBaseCharacter> allFormationRole = UiBlueprintFunctionLibrary.GetAllFormationRole();
@@ -1047,134 +1047,134 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		allFormationRole.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0600A9EA RID: 43498 RVA: 0x002636C8 File Offset: 0x002618C8
+	// Token: 0x06007DCD RID: 32205 RVA: 0x0026DC18 File Offset: 0x0026BE18
 	protected unsafe static void __CPPCALL_ChangeRole_Implementation(UiBlueprintFunctionLibrary.__ChangeRole_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ChangeRole(__Params->bUseGoBattleSkill, __Params->position);
 	}
 
-	// Token: 0x0600A9EB RID: 43499 RVA: 0x002636DB File Offset: 0x002618DB
+	// Token: 0x06007DCE RID: 32206 RVA: 0x0026DC2B File Offset: 0x0026BE2B
 	protected unsafe static void __CPPCALL_InitializeOfflineFormationInstance_Implementation(UiBlueprintFunctionLibrary.__InitializeOfflineFormationInstance_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.InitializeOfflineFormationInstance(__Params->aConfigId, __Params->bConfigId, __Params->cConfigId);
 	}
 
-	// Token: 0x0600A9EC RID: 43500 RVA: 0x002636F4 File Offset: 0x002618F4
+	// Token: 0x06007DCF RID: 32207 RVA: 0x0026DC44 File Offset: 0x0026BE44
 	protected unsafe static void __CPPCALL_OpenBattleView_Implementation(UiBlueprintFunctionLibrary.__OpenBattleView_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenBattleView();
 	}
 
-	// Token: 0x0600A9ED RID: 43501 RVA: 0x002636FB File Offset: 0x002618FB
+	// Token: 0x06007DD0 RID: 32208 RVA: 0x0026DC4B File Offset: 0x0026BE4B
 	protected unsafe static void __CPPCALL_GetCurrentRoleConfigId_Implementation(UiBlueprintFunctionLibrary.__GetCurrentRoleConfigId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetCurrentRoleConfigId();
 	}
 
-	// Token: 0x0600A9EE RID: 43502 RVA: 0x00263708 File Offset: 0x00261908
+	// Token: 0x06007DD1 RID: 32209 RVA: 0x0026DC58 File Offset: 0x0026BE58
 	protected unsafe static void __CPPCALL_CheckGuideStatus_Implementation(UiBlueprintFunctionLibrary.__CheckGuideStatus_FunctionParams* __Params)
 	{
 		string inOperator = FString.ToString((void*)(&__Params->inOperator));
 		__Params->__Result = UiBlueprintFunctionLibrary.CheckGuideStatus(__Params->guideGroupId, __Params->status, inOperator);
 	}
 
-	// Token: 0x0600A9EF RID: 43503 RVA: 0x0026373A File Offset: 0x0026193A
+	// Token: 0x06007DD2 RID: 32210 RVA: 0x0026DC8A File Offset: 0x0026BE8A
 	protected unsafe static void __CPPCALL_CheckTeleport_Implementation(UiBlueprintFunctionLibrary.__CheckTeleport_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.CheckTeleport(__Params->teleportId);
 	}
 
-	// Token: 0x0600A9F0 RID: 43504 RVA: 0x0026374D File Offset: 0x0026194D
+	// Token: 0x06007DD3 RID: 32211 RVA: 0x0026DC9D File Offset: 0x0026BE9D
 	protected unsafe static void __CPPCALL_UnLockedTeleport_Implementation(UiBlueprintFunctionLibrary.__UnLockedTeleport_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.UnLockedTeleport(__Params->teleportId);
 	}
 
-	// Token: 0x0600A9F1 RID: 43505 RVA: 0x0026375A File Offset: 0x0026195A
+	// Token: 0x06007DD4 RID: 32212 RVA: 0x0026DCAA File Offset: 0x0026BEAA
 	protected unsafe static void __CPPCALL_GetItemCountByConfigId_Implementation(UiBlueprintFunctionLibrary.__GetItemCountByConfigId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetItemCountByConfigId(__Params->itemConfigId);
 	}
 
-	// Token: 0x0600A9F2 RID: 43506 RVA: 0x0026376D File Offset: 0x0026196D
+	// Token: 0x06007DD5 RID: 32213 RVA: 0x0026DCBD File Offset: 0x0026BEBD
 	protected unsafe static void __CPPCALL_InitUiRoot_Implementation(UiBlueprintFunctionLibrary.__InitUiRoot_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.InitUiRoot();
 	}
 
-	// Token: 0x0600A9F3 RID: 43507 RVA: 0x00263774 File Offset: 0x00261974
+	// Token: 0x06007DD6 RID: 32214 RVA: 0x0026DCC4 File Offset: 0x0026BEC4
 	protected unsafe static void __CPPCALL_GetPlayerLevel_Implementation(UiBlueprintFunctionLibrary.__GetPlayerLevel_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetPlayerLevel();
 	}
 
-	// Token: 0x0600A9F4 RID: 43508 RVA: 0x00263781 File Offset: 0x00261981
+	// Token: 0x06007DD7 RID: 32215 RVA: 0x0026DCD1 File Offset: 0x0026BED1
 	protected unsafe static void __CPPCALL_GetPlayerId_Implementation(UiBlueprintFunctionLibrary.__GetPlayerId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetPlayerId();
 	}
 
-	// Token: 0x0600A9F5 RID: 43509 RVA: 0x0026378E File Offset: 0x0026198E
+	// Token: 0x06007DD8 RID: 32216 RVA: 0x0026DCDE File Offset: 0x0026BEDE
 	protected unsafe static void __CPPCALL_GetAccount_Implementation(UiBlueprintFunctionLibrary.__GetAccount_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), UiBlueprintFunctionLibrary.GetAccount());
 	}
 
-	// Token: 0x0600A9F6 RID: 43510 RVA: 0x002637A1 File Offset: 0x002619A1
+	// Token: 0x06007DD9 RID: 32217 RVA: 0x0026DCF1 File Offset: 0x0026BEF1
 	protected unsafe static void __CPPCALL_SetUiRootActive_Implementation(UiBlueprintFunctionLibrary.__SetUiRootActive_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetUiRootActive(__Params->value);
 	}
 
-	// Token: 0x0600A9F7 RID: 43511 RVA: 0x002637AE File Offset: 0x002619AE
+	// Token: 0x06007DDA RID: 32218 RVA: 0x0026DCFE File Offset: 0x0026BEFE
 	protected unsafe static void __CPPCALL_OpenShop_Implementation(UiBlueprintFunctionLibrary.__OpenShop_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenShop(__Params->shopId);
 	}
 
-	// Token: 0x0600A9F8 RID: 43512 RVA: 0x002637BB File Offset: 0x002619BB
+	// Token: 0x06007DDB RID: 32219 RVA: 0x0026DD0B File Offset: 0x0026BF0B
 	protected unsafe static void __CPPCALL_CloseShop_Implementation(UiBlueprintFunctionLibrary.__CloseShop_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.CloseShop();
 	}
 
-	// Token: 0x0600A9F9 RID: 43513 RVA: 0x002637C2 File Offset: 0x002619C2
+	// Token: 0x06007DDC RID: 32220 RVA: 0x0026DD12 File Offset: 0x0026BF12
 	protected unsafe static void __CPPCALL_OpenWorldMapView_Implementation(UiBlueprintFunctionLibrary.__OpenWorldMapView_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenWorldMapView();
 	}
 
-	// Token: 0x0600A9FA RID: 43514 RVA: 0x002637C9 File Offset: 0x002619C9
+	// Token: 0x06007DDD RID: 32221 RVA: 0x0026DD19 File Offset: 0x0026BF19
 	protected unsafe static void __CPPCALL_OpenDragonPoolView_Implementation(UiBlueprintFunctionLibrary.__OpenDragonPoolView_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenDragonPoolView(__Params->dragonPoolId);
 	}
 
-	// Token: 0x0600A9FB RID: 43515 RVA: 0x002637D6 File Offset: 0x002619D6
+	// Token: 0x06007DDE RID: 32222 RVA: 0x0026DD26 File Offset: 0x0026BF26
 	protected unsafe static void __CPPCALL_ConnectServer_Implementation(UiBlueprintFunctionLibrary.__ConnectServer_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ConnectServer(FString.ToString((void*)(&__Params->httpResult)));
 	}
 
-	// Token: 0x0600A9FC RID: 43516 RVA: 0x002637E9 File Offset: 0x002619E9
+	// Token: 0x06007DDF RID: 32223 RVA: 0x0026DD39 File Offset: 0x0026BF39
 	protected unsafe static void __CPPCALL_ApplyUiCameraAnimationSettings_Implementation(UiBlueprintFunctionLibrary.__ApplyUiCameraAnimationSettings_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ApplyUiCameraAnimationSettings(FString.ToString((void*)(&__Params->uniqueName)));
 	}
 
-	// Token: 0x0600A9FD RID: 43517 RVA: 0x002637FC File Offset: 0x002619FC
+	// Token: 0x06007DE0 RID: 32224 RVA: 0x0026DD4C File Offset: 0x0026BF4C
 	protected unsafe static void __CPPCALL_ResetUiCameraAnimationHandle_Implementation(UiBlueprintFunctionLibrary.__ResetUiCameraAnimationHandle_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ResetUiCameraAnimationHandle(FString.ToString((void*)(&__Params->uniqueName)));
 	}
 
-	// Token: 0x0600A9FE RID: 43518 RVA: 0x0026380F File Offset: 0x00261A0F
+	// Token: 0x06007DE1 RID: 32225 RVA: 0x0026DD5F File Offset: 0x0026BF5F
 	protected unsafe static void __CPPCALL_ClearAllUiCameraAnimationHandles_Implementation(UiBlueprintFunctionLibrary.__ClearAllUiCameraAnimationHandles_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ClearAllUiCameraAnimationHandles();
 	}
 
-	// Token: 0x0600A9FF RID: 43519 RVA: 0x00263818 File Offset: 0x00261A18
+	// Token: 0x06007DE2 RID: 32226 RVA: 0x0026DD68 File Offset: 0x0026BF68
 	protected unsafe static void __CPPCALL_PlayPlayUiCameraBlendAnimationFromCurrentHandle_Implementation(UiBlueprintFunctionLibrary.__PlayPlayUiCameraBlendAnimationFromCurrentHandle_FunctionParams* __Params)
 	{
 		string targetAnimationHandleUniqueName = FString.ToString((void*)(&__Params->targetAnimationHandleUniqueName));
@@ -1182,50 +1182,50 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.PlayPlayUiCameraBlendAnimationFromCurrentHandle(targetAnimationHandleUniqueName, animationBlendDataUniqueName);
 	}
 
-	// Token: 0x0600AA00 RID: 43520 RVA: 0x00263844 File Offset: 0x00261A44
+	// Token: 0x06007DE3 RID: 32227 RVA: 0x0026DD94 File Offset: 0x0026BF94
 	protected unsafe static void __CPPCALL_OpenUiScene_Implementation(UiBlueprintFunctionLibrary.__OpenUiScene_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenUiScene(FString.ToString((void*)(&__Params->uiScenePath)));
 	}
 
-	// Token: 0x0600AA01 RID: 43521 RVA: 0x00263857 File Offset: 0x00261A57
+	// Token: 0x06007DE4 RID: 32228 RVA: 0x0026DDA7 File Offset: 0x0026BFA7
 	protected unsafe static void __CPPCALL_CloseUiScene_Implementation(UiBlueprintFunctionLibrary.__CloseUiScene_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.CloseUiScene();
 	}
 
-	// Token: 0x0600AA02 RID: 43522 RVA: 0x0026385E File Offset: 0x00261A5E
+	// Token: 0x06007DE5 RID: 32229 RVA: 0x0026DDAE File Offset: 0x0026BFAE
 	protected unsafe static void __CPPCALL_BeginScreenEffect_Implementation(UiBlueprintFunctionLibrary.__BeginScreenEffect_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.BeginScreenEffect(FString.ToString((void*)(&__Params->effectPath)), __Params->priority);
 	}
 
-	// Token: 0x0600AA03 RID: 43523 RVA: 0x00263877 File Offset: 0x00261A77
+	// Token: 0x06007DE6 RID: 32230 RVA: 0x0026DDC7 File Offset: 0x0026BFC7
 	protected unsafe static void __CPPCALL_EndScreenEffect_Implementation(UiBlueprintFunctionLibrary.__EndScreenEffect_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.EndScreenEffect(FString.ToString((void*)(&__Params->effectPath)));
 	}
 
-	// Token: 0x0600AA04 RID: 43524 RVA: 0x0026388C File Offset: 0x00261A8C
+	// Token: 0x06007DE7 RID: 32231 RVA: 0x0026DDDC File Offset: 0x0026BFDC
 	protected unsafe static void __CPPCALL_SetPartStateVisible_Implementation(UiBlueprintFunctionLibrary.__SetPartStateVisible_FunctionParams* __Params)
 	{
 		string boneName = FString.ToString((void*)(&__Params->boneName));
 		UiBlueprintFunctionLibrary.SetPartStateVisible(__Params->entityId, boneName, __Params->bVisible);
 	}
 
-	// Token: 0x0600AA05 RID: 43525 RVA: 0x002638B8 File Offset: 0x00261AB8
+	// Token: 0x06007DE8 RID: 32232 RVA: 0x0026DE08 File Offset: 0x0026C008
 	protected unsafe static void __CPPCALL_GetRoleMeshId_Implementation(UiBlueprintFunctionLibrary.__GetRoleMeshId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetRoleMeshId(__Params->roleInfoId);
 	}
 
-	// Token: 0x0600AA06 RID: 43526 RVA: 0x002638CB File Offset: 0x00261ACB
+	// Token: 0x06007DE9 RID: 32233 RVA: 0x0026DE1B File Offset: 0x0026C01B
 	protected unsafe static void __CPPCALL_GetRoleEntityId_Implementation(UiBlueprintFunctionLibrary.__GetRoleEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetRoleEntityId(__Params->roleInfoId);
 	}
 
-	// Token: 0x0600AA07 RID: 43527 RVA: 0x002638E0 File Offset: 0x00261AE0
+	// Token: 0x06007DEA RID: 32234 RVA: 0x0026DE30 File Offset: 0x0026C030
 	protected unsafe static void __CPPCALL_GetRoleBaseAttrList_Implementation(UiBlueprintFunctionLibrary.__GetRoleBaseAttrList_FunctionParams* __Params)
 	{
 		TMap<int, float> roleBaseAttrList = UiBlueprintFunctionLibrary.GetRoleBaseAttrList(__Params->roleInfoId);
@@ -1236,7 +1236,7 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		roleBaseAttrList.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0600AA08 RID: 43528 RVA: 0x00263914 File Offset: 0x00261B14
+	// Token: 0x06007DEB RID: 32235 RVA: 0x0026DE64 File Offset: 0x0026C064
 	protected unsafe static void __CPPCALL_GetRoleAddAttrList_Implementation(UiBlueprintFunctionLibrary.__GetRoleAddAttrList_FunctionParams* __Params)
 	{
 		TMap<int, float> roleAddAttrList = UiBlueprintFunctionLibrary.GetRoleAddAttrList(__Params->roleInfoId);
@@ -1247,19 +1247,19 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		roleAddAttrList.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0600AA09 RID: 43529 RVA: 0x00263946 File Offset: 0x00261B46
+	// Token: 0x06007DEC RID: 32236 RVA: 0x0026DE96 File Offset: 0x0026C096
 	protected unsafe static void __CPPCALL_GetRoleCameraConfig_Implementation(UiBlueprintFunctionLibrary.__GetRoleCameraConfig_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), UiBlueprintFunctionLibrary.GetRoleCameraConfig(__Params->roleInfoId));
 	}
 
-	// Token: 0x0600AA0A RID: 43530 RVA: 0x0026395F File Offset: 0x00261B5F
+	// Token: 0x06007DED RID: 32237 RVA: 0x0026DEAF File Offset: 0x0026C0AF
 	protected unsafe static void __CPPCALL_GetRoleProperty_Implementation(UiBlueprintFunctionLibrary.__GetRoleProperty_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetRoleProperty(__Params->roleInfoId);
 	}
 
-	// Token: 0x0600AA0B RID: 43531 RVA: 0x00263974 File Offset: 0x00261B74
+	// Token: 0x06007DEE RID: 32238 RVA: 0x0026DEC4 File Offset: 0x0026C0C4
 	protected unsafe static void __CPPCALL_GetRoleDamageData_Implementation(UiBlueprintFunctionLibrary.__GetRoleDamageData_FunctionParams* __Params)
 	{
 		TArray<int> roleDamageData = UiBlueprintFunctionLibrary.GetRoleDamageData(__Params->damageId);
@@ -1270,157 +1270,157 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		roleDamageData.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0600AA0C RID: 43532 RVA: 0x002639A6 File Offset: 0x00261BA6
+	// Token: 0x06007DEF RID: 32239 RVA: 0x0026DEF6 File Offset: 0x0026C0F6
 	protected unsafe static void __CPPCALL_OpenGmView_Implementation(UiBlueprintFunctionLibrary.__OpenGmView_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.OpenGmView();
 	}
 
-	// Token: 0x0600AA0D RID: 43533 RVA: 0x002639AD File Offset: 0x00261BAD
+	// Token: 0x06007DF0 RID: 32240 RVA: 0x0026DEFD File Offset: 0x0026C0FD
 	protected unsafe static void __CPPCALL_BackLoginView_Implementation(UiBlueprintFunctionLibrary.__BackLoginView_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.BackLoginView();
 	}
 
-	// Token: 0x0600AA0E RID: 43534 RVA: 0x002639B4 File Offset: 0x00261BB4
+	// Token: 0x06007DF1 RID: 32241 RVA: 0x0026DF04 File Offset: 0x0026C104
 	protected unsafe static void __CPPCALL_SetDamageViewVisible_Implementation(UiBlueprintFunctionLibrary.__SetDamageViewVisible_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetDamageViewVisible(__Params->bVisible);
 	}
 
-	// Token: 0x0600AA0F RID: 43535 RVA: 0x002639C1 File Offset: 0x00261BC1
+	// Token: 0x06007DF2 RID: 32242 RVA: 0x0026DF11 File Offset: 0x0026C111
 	protected unsafe static void __CPPCALL_SetHeadStateVisible_Implementation(UiBlueprintFunctionLibrary.__SetHeadStateVisible_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetHeadStateVisible(__Params->bVisible);
 	}
 
-	// Token: 0x0600AA10 RID: 43536 RVA: 0x002639CE File Offset: 0x00261BCE
+	// Token: 0x06007DF3 RID: 32243 RVA: 0x0026DF1E File Offset: 0x0026C11E
 	protected unsafe static void __CPPCALL_SetBossStateVisible_Implementation(UiBlueprintFunctionLibrary.__SetBossStateVisible_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetBossStateVisible(__Params->bVisible);
 	}
 
-	// Token: 0x0600AA11 RID: 43537 RVA: 0x002639DB File Offset: 0x00261BDB
+	// Token: 0x06007DF4 RID: 32244 RVA: 0x0026DF2B File Offset: 0x0026C12B
 	protected unsafe static void __CPPCALL_PlayBattleNormalTip_Implementation(UiBlueprintFunctionLibrary.__PlayBattleNormalTip_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.PlayBattleNormalTip(FString.ToString((void*)(&__Params->textKey)), __Params->duration);
 	}
 
-	// Token: 0x0600AA12 RID: 43538 RVA: 0x002639F4 File Offset: 0x00261BF4
+	// Token: 0x06007DF5 RID: 32245 RVA: 0x0026DF44 File Offset: 0x0026C144
 	protected unsafe static void __CPPCALL_PlayBattleCountdownTip_Implementation(UiBlueprintFunctionLibrary.__PlayBattleCountdownTip_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.PlayBattleCountdownTip(FString.ToString((void*)(&__Params->textKey)), __Params->duration, __Params->countdown);
 	}
 
-	// Token: 0x0600AA13 RID: 43539 RVA: 0x00263A13 File Offset: 0x00261C13
+	// Token: 0x06007DF6 RID: 32246 RVA: 0x0026DF63 File Offset: 0x0026C163
 	protected unsafe static void __CPPCALL_SetTempLocation_Implementation(UiBlueprintFunctionLibrary.__SetTempLocation_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetTempLocation(__Params->cameraLocation);
 	}
 
-	// Token: 0x0600AA14 RID: 43540 RVA: 0x00263A20 File Offset: 0x00261C20
+	// Token: 0x06007DF7 RID: 32247 RVA: 0x0026DF70 File Offset: 0x0026C170
 	protected unsafe static void __CPPCALL_SetIsSilentLogin_Implementation(UiBlueprintFunctionLibrary.__SetIsSilentLogin_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetIsSilentLogin(__Params->value);
 	}
 
-	// Token: 0x0600AA15 RID: 43541 RVA: 0x00263A2D File Offset: 0x00261C2D
+	// Token: 0x06007DF8 RID: 32248 RVA: 0x0026DF7D File Offset: 0x0026C17D
 	protected unsafe static void __CPPCALL_TestSceneLogin_Implementation(UiBlueprintFunctionLibrary.__TestSceneLogin_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneLogin(FString.ToString((void*)(&__Params->levelName)));
 	}
 
-	// Token: 0x0600AA16 RID: 43542 RVA: 0x00263A40 File Offset: 0x00261C40
+	// Token: 0x06007DF9 RID: 32249 RVA: 0x0026DF90 File Offset: 0x0026C190
 	protected unsafe static void __CPPCALL_TestSceneLoadNetMode_Implementation(UiBlueprintFunctionLibrary.__TestSceneLoadNetMode_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.TestSceneLoadNetMode();
 	}
 
-	// Token: 0x0600AA17 RID: 43543 RVA: 0x00263A4D File Offset: 0x00261C4D
+	// Token: 0x06007DFA RID: 32250 RVA: 0x0026DF9D File Offset: 0x0026C19D
 	protected unsafe static void __CPPCALL_TestSceneSaveNetMode_Implementation(UiBlueprintFunctionLibrary.__TestSceneSaveNetMode_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneSaveNetMode(__Params->value);
 	}
 
-	// Token: 0x0600AA18 RID: 43544 RVA: 0x00263A5A File Offset: 0x00261C5A
+	// Token: 0x06007DFB RID: 32251 RVA: 0x0026DFAA File Offset: 0x0026C1AA
 	protected unsafe static void __CPPCALL_TestSceneLoadAccount_Implementation(UiBlueprintFunctionLibrary.__TestSceneLoadAccount_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), UiBlueprintFunctionLibrary.TestSceneLoadAccount());
 	}
 
-	// Token: 0x0600AA19 RID: 43545 RVA: 0x00263A6D File Offset: 0x00261C6D
+	// Token: 0x06007DFC RID: 32252 RVA: 0x0026DFBD File Offset: 0x0026C1BD
 	protected unsafe static void __CPPCALL_TestSceneSaveAccount_Implementation(UiBlueprintFunctionLibrary.__TestSceneSaveAccount_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneSaveAccount(FString.ToString((void*)(&__Params->account)));
 	}
 
-	// Token: 0x0600AA1A RID: 43546 RVA: 0x00263A80 File Offset: 0x00261C80
+	// Token: 0x06007DFD RID: 32253 RVA: 0x0026DFD0 File Offset: 0x0026C1D0
 	protected unsafe static void __CPPCALL_TestSceneLoadServerIp_Implementation(UiBlueprintFunctionLibrary.__TestSceneLoadServerIp_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), UiBlueprintFunctionLibrary.TestSceneLoadServerIp());
 	}
 
-	// Token: 0x0600AA1B RID: 43547 RVA: 0x00263A93 File Offset: 0x00261C93
+	// Token: 0x06007DFE RID: 32254 RVA: 0x0026DFE3 File Offset: 0x0026C1E3
 	protected unsafe static void __CPPCALL_TestSceneSaveServerIp_Implementation(UiBlueprintFunctionLibrary.__TestSceneSaveServerIp_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneSaveServerIp(FString.ToString((void*)(&__Params->serverIp)));
 	}
 
-	// Token: 0x0600AA1C RID: 43548 RVA: 0x00263AA6 File Offset: 0x00261CA6
+	// Token: 0x06007DFF RID: 32255 RVA: 0x0026DFF6 File Offset: 0x0026C1F6
 	protected unsafe static void __CPPCALL_TestSceneSaveBornMode1_Implementation(UiBlueprintFunctionLibrary.__TestSceneSaveBornMode1_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneSaveBornMode1(__Params->mode);
 	}
 
-	// Token: 0x0600AA1D RID: 43549 RVA: 0x00263AB3 File Offset: 0x00261CB3
+	// Token: 0x06007E00 RID: 32256 RVA: 0x0026E003 File Offset: 0x0026C203
 	protected unsafe static void __CPPCALL_TestSceneLoadBornLocation_Implementation(UiBlueprintFunctionLibrary.__TestSceneLoadBornLocation_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.TestSceneLoadBornLocation();
 	}
 
-	// Token: 0x0600AA1E RID: 43550 RVA: 0x00263AC0 File Offset: 0x00261CC0
+	// Token: 0x06007E01 RID: 32257 RVA: 0x0026E010 File Offset: 0x0026C210
 	protected unsafe static void __CPPCALL_TestSceneLoadGender_Implementation(UiBlueprintFunctionLibrary.__TestSceneLoadGender_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.TestSceneLoadGender();
 	}
 
-	// Token: 0x0600AA1F RID: 43551 RVA: 0x00263ACD File Offset: 0x00261CCD
+	// Token: 0x06007E02 RID: 32258 RVA: 0x0026E01D File Offset: 0x0026C21D
 	protected unsafe static void __CPPCALL_TestSceneSaveGender_Implementation(UiBlueprintFunctionLibrary.__TestSceneSaveGender_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.TestSceneSaveGender(__Params->isMale);
 	}
 
-	// Token: 0x0600AA20 RID: 43552 RVA: 0x00263ADA File Offset: 0x00261CDA
+	// Token: 0x06007E03 RID: 32259 RVA: 0x0026E02A File Offset: 0x0026C22A
 	protected unsafe static void __CPPCALL_RefreshInputTag_Implementation(UiBlueprintFunctionLibrary.__RefreshInputTag_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.RefreshInputTag();
 	}
 
-	// Token: 0x0600AA21 RID: 43553 RVA: 0x00263AE1 File Offset: 0x00261CE1
+	// Token: 0x06007E04 RID: 32260 RVA: 0x0026E031 File Offset: 0x0026C231
 	protected unsafe static void __CPPCALL_IsPlayerLookAtCameraInPhoto_Implementation(UiBlueprintFunctionLibrary.__IsPlayerLookAtCameraInPhoto_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsPlayerLookAtCameraInPhoto();
 	}
 
-	// Token: 0x0600AA22 RID: 43554 RVA: 0x00263AEE File Offset: 0x00261CEE
+	// Token: 0x06007E05 RID: 32261 RVA: 0x0026E03E File Offset: 0x0026C23E
 	protected unsafe static void __CPPCALL_IsOpenPhotograph_Implementation(UiBlueprintFunctionLibrary.__IsOpenPhotograph_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsOpenPhotograph();
 	}
 
-	// Token: 0x0600AA23 RID: 43555 RVA: 0x00263AFB File Offset: 0x00261CFB
+	// Token: 0x06007E06 RID: 32262 RVA: 0x0026E04B File Offset: 0x0026C24B
 	protected unsafe static void __CPPCALL_EnablePhotographTimeDilation_Implementation(UiBlueprintFunctionLibrary.__EnablePhotographTimeDilation_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.EnablePhotographTimeDilation(__Params->timeDilation);
 	}
 
-	// Token: 0x0600AA24 RID: 43556 RVA: 0x00263B08 File Offset: 0x00261D08
+	// Token: 0x06007E07 RID: 32263 RVA: 0x0026E058 File Offset: 0x0026C258
 	protected unsafe static void __CPPCALL_DisablePhotographTimeDilation_Implementation(UiBlueprintFunctionLibrary.__DisablePhotographTimeDilation_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.DisablePhotographTimeDilation();
 	}
 
-	// Token: 0x0600AA25 RID: 43557 RVA: 0x00263B0F File Offset: 0x00261D0F
+	// Token: 0x06007E08 RID: 32264 RVA: 0x0026E05F File Offset: 0x0026C25F
 	protected unsafe static void __CPPCALL_GetTopViewName_Implementation(UiBlueprintFunctionLibrary.__GetTopViewName_FunctionParams* __Params)
 	{
 		void* dest = (void*)(&__Params->__Result);
@@ -1428,69 +1428,69 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		FText.NativeCopy(dest, (topViewName != null) ? topViewName.NativePtr : null, 1);
 	}
 
-	// Token: 0x0600AA26 RID: 43558 RVA: 0x00263B30 File Offset: 0x00261D30
+	// Token: 0x06007E09 RID: 32265 RVA: 0x0026E080 File Offset: 0x0026C280
 	protected unsafe static void __CPPCALL_SetUiStartSequenceFrame_Implementation(UiBlueprintFunctionLibrary.__SetUiStartSequenceFrame_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetUiStartSequenceFrame(__Params->frame);
 	}
 
-	// Token: 0x0600AA27 RID: 43559 RVA: 0x00263B3D File Offset: 0x00261D3D
+	// Token: 0x06007E0A RID: 32266 RVA: 0x0026E08D File Offset: 0x0026C28D
 	protected unsafe static void __CPPCALL_SetUiEndSequenceFrame_Implementation(UiBlueprintFunctionLibrary.__SetUiEndSequenceFrame_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.SetUiEndSequenceFrame(__Params->frame);
 	}
 
-	// Token: 0x0600AA28 RID: 43560 RVA: 0x00263B4C File Offset: 0x00261D4C
+	// Token: 0x06007E0B RID: 32267 RVA: 0x0026E09C File Offset: 0x0026C29C
 	protected unsafe static void __CPPCALL_GetUiWeaponBreachLevel_Implementation(UiBlueprintFunctionLibrary.__GetUiWeaponBreachLevel_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->weaponMesh);
 		__Params->__Result = UiBlueprintFunctionLibrary.GetUiWeaponBreachLevel(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0600AA29 RID: 43561 RVA: 0x00263B71 File Offset: 0x00261D71
+	// Token: 0x06007E0C RID: 32268 RVA: 0x0026E0C1 File Offset: 0x0026C2C1
 	protected unsafe static void __CPPCALL_GetUiWeaponEquippedRoleId_Implementation(UiBlueprintFunctionLibrary.__GetUiWeaponEquippedRoleId_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.GetUiWeaponEquippedRoleId();
 	}
 
-	// Token: 0x0600AA2A RID: 43562 RVA: 0x00263B7E File Offset: 0x00261D7E
+	// Token: 0x06007E0D RID: 32269 RVA: 0x0026E0CE File Offset: 0x0026C2CE
 	protected unsafe static void __CPPCALL_GetWeaponViewName_Implementation(UiBlueprintFunctionLibrary.__GetWeaponViewName_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)UiBlueprintFunctionLibrary.GetWeaponViewName();
 	}
 
-	// Token: 0x0600AA2B RID: 43563 RVA: 0x00263B8D File Offset: 0x00261D8D
+	// Token: 0x06007E0E RID: 32270 RVA: 0x0026E0DD File Offset: 0x0026C2DD
 	protected unsafe static void __CPPCALL_IsGamepadNow_Implementation(UiBlueprintFunctionLibrary.__IsGamepadNow_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsGamepadNow();
 	}
 
-	// Token: 0x0600AA2C RID: 43564 RVA: 0x00263B9A File Offset: 0x00261D9A
+	// Token: 0x06007E0F RID: 32271 RVA: 0x0026E0EA File Offset: 0x0026C2EA
 	protected unsafe static void __CPPCALL_IsMobileNow_Implementation(UiBlueprintFunctionLibrary.__IsMobileNow_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsMobileNow();
 	}
 
-	// Token: 0x0600AA2D RID: 43565 RVA: 0x00263BA7 File Offset: 0x00261DA7
+	// Token: 0x06007E10 RID: 32272 RVA: 0x0026E0F7 File Offset: 0x0026C2F7
 	protected unsafe static void __CPPCALL_IsLongPressExploreButton_Implementation(UiBlueprintFunctionLibrary.__IsLongPressExploreButton_FunctionParams* __Params)
 	{
 		__Params->__Result = UiBlueprintFunctionLibrary.IsLongPressExploreButton();
 	}
 
-	// Token: 0x0600AA2E RID: 43566 RVA: 0x00263BB4 File Offset: 0x00261DB4
+	// Token: 0x06007E11 RID: 32273 RVA: 0x0026E104 File Offset: 0x0026C304
 	protected unsafe static void __CPPCALL_ShowGenericPrompt_Implementation(UiBlueprintFunctionLibrary.__ShowGenericPrompt_FunctionParams* __Params)
 	{
 		UiBlueprintFunctionLibrary.ShowGenericPrompt(FString.ToString((void*)(&__Params->id)));
 	}
 
-	// Token: 0x0600AA2F RID: 43567 RVA: 0x00263BC7 File Offset: 0x00261DC7
+	// Token: 0x06007E12 RID: 32274 RVA: 0x0026E117 File Offset: 0x0026C317
 	[CompilerGenerated]
 	internal static void <OpenBattleView>g__FinallyCallback|12_0()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BattleView, null, null);
 	}
 
-	// Token: 0x0600AA30 RID: 43568 RVA: 0x00263BDC File Offset: 0x00261DDC
+	// Token: 0x06007E13 RID: 32275 RVA: 0x0026E12C File Offset: 0x0026C32C
 	[CompilerGenerated]
 	internal static void <TestSceneLogin>g__FinallyCallback|56_1()
 	{
@@ -1513,1168 +1513,1168 @@ public class UiBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IStaticVari
 		UiBlueprintFunctionLibrary.TimerId = instance2.Forever(action, (float)TimeUtil.Instance.InverseMillisecond, 1f, null, null, true);
 	}
 
-	// Token: 0x04004D48 RID: 19784
+	// Token: 0x04004DF0 RID: 19952
 	[Nullable(1)]
 	public static global::Vector TempLocation;
 
-	// Token: 0x04004D49 RID: 19785
+	// Token: 0x04004DF1 RID: 19953
 	[Nullable(1)]
 	public static global::Rotator TempRotator;
 
-	// Token: 0x04004D4A RID: 19786
+	// Token: 0x04004DF2 RID: 19954
 	[Nullable(2)]
 	private static TimerHandle TimerId;
 
-	// Token: 0x04004D4B RID: 19787
+	// Token: 0x04004DF3 RID: 19955
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/BpBridge/UiBlueprintFunctionLibrary.UiBlueprintFunctionLibrary_C";
 
-	// Token: 0x04004D4C RID: 19788
+	// Token: 0x04004DF4 RID: 19956
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04004D4D RID: 19789
+	// Token: 0x04004DF5 RID: 19957
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02007CC6 RID: 31942
+	// Token: 0x02006E4B RID: 28235
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsGameInited_FunctionParams
 	{
-		// Token: 0x04028ED4 RID: 167636
+		// Token: 0x040241FD RID: 147965
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028ED5 RID: 167637
+		// Token: 0x040241FE RID: 147966
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007CC7 RID: 31943
+	// Token: 0x02006E4C RID: 28236
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __TempModuleStart_FunctionParams
 	{
-		// Token: 0x04028ED6 RID: 167638
+		// Token: 0x040241FF RID: 147967
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CC8 RID: 31944
+	// Token: 0x02006E4D RID: 28237
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __EndGachaScene_FunctionParams
 	{
-		// Token: 0x04028ED7 RID: 167639
+		// Token: 0x04024200 RID: 147968
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CC9 RID: 31945
+	// Token: 0x02006E4E RID: 28238
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GachaClick_FunctionParams
 	{
-		// Token: 0x04028ED8 RID: 167640
+		// Token: 0x04024201 RID: 147969
 		[FieldOffset(0)]
 		public bool isPress;
 
-		// Token: 0x04028ED9 RID: 167641
+		// Token: 0x04024202 RID: 147970
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CCA RID: 31946
+	// Token: 0x02006E4F RID: 28239
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __GachaInteractFinish_FunctionParams
 	{
-		// Token: 0x04028EDA RID: 167642
+		// Token: 0x04024203 RID: 147971
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CCB RID: 31947
+	// Token: 0x02006E50 RID: 28240
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __PlaySequenceEventByStringParam_FunctionParams
 	{
-		// Token: 0x04028EDB RID: 167643
+		// Token: 0x04024204 RID: 147972
 		[FieldOffset(0)]
 		public FString param;
 
-		// Token: 0x04028EDC RID: 167644
+		// Token: 0x04024205 RID: 147973
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CCC RID: 31948
+	// Token: 0x02006E51 RID: 28241
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ActivitySequenceEmitEvent_FunctionParams
 	{
-		// Token: 0x04028EDD RID: 167645
+		// Token: 0x04024206 RID: 147974
 		[FieldOffset(0)]
 		public FString param;
 
-		// Token: 0x04028EDE RID: 167646
+		// Token: 0x04024207 RID: 147975
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CCD RID: 31949
+	// Token: 0x02006E52 RID: 28242
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AreaEndOverlap_FunctionParams
 	{
-		// Token: 0x04028EDF RID: 167647
+		// Token: 0x04024208 RID: 147976
 		[FieldOffset(0)]
 		public float areaId;
 
-		// Token: 0x04028EE0 RID: 167648
+		// Token: 0x04024209 RID: 147977
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CCE RID: 31950
+	// Token: 0x02006E53 RID: 28243
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAllFormationRole_FunctionParams
 	{
-		// Token: 0x04028EE1 RID: 167649
+		// Token: 0x0402420A RID: 147978
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EE2 RID: 167650
+		// Token: 0x0402420B RID: 147979
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007CCF RID: 31951
+	// Token: 0x02006E54 RID: 28244
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ChangeRole_FunctionParams
 	{
-		// Token: 0x04028EE3 RID: 167651
+		// Token: 0x0402420C RID: 147980
 		[FieldOffset(0)]
 		public bool bUseGoBattleSkill;
 
-		// Token: 0x04028EE4 RID: 167652
+		// Token: 0x0402420D RID: 147981
 		[FieldOffset(4)]
 		public int position;
 
-		// Token: 0x04028EE5 RID: 167653
+		// Token: 0x0402420E RID: 147982
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CD0 RID: 31952
+	// Token: 0x02006E55 RID: 28245
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __InitializeOfflineFormationInstance_FunctionParams
 	{
-		// Token: 0x04028EE6 RID: 167654
+		// Token: 0x0402420F RID: 147983
 		[FieldOffset(0)]
 		public int aConfigId;
 
-		// Token: 0x04028EE7 RID: 167655
+		// Token: 0x04024210 RID: 147984
 		[FieldOffset(4)]
 		public int bConfigId;
 
-		// Token: 0x04028EE8 RID: 167656
+		// Token: 0x04024211 RID: 147985
 		[FieldOffset(8)]
 		public int cConfigId;
 
-		// Token: 0x04028EE9 RID: 167657
+		// Token: 0x04024212 RID: 147986
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CD1 RID: 31953
+	// Token: 0x02006E56 RID: 28246
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __OpenBattleView_FunctionParams
 	{
-		// Token: 0x04028EEA RID: 167658
+		// Token: 0x04024213 RID: 147987
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CD2 RID: 31954
+	// Token: 0x02006E57 RID: 28247
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetCurrentRoleConfigId_FunctionParams
 	{
-		// Token: 0x04028EEB RID: 167659
+		// Token: 0x04024214 RID: 147988
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EEC RID: 167660
+		// Token: 0x04024215 RID: 147989
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02007CD3 RID: 31955
+	// Token: 0x02006E58 RID: 28248
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __CheckGuideStatus_FunctionParams
 	{
-		// Token: 0x04028EED RID: 167661
+		// Token: 0x04024216 RID: 147990
 		[FieldOffset(0)]
 		public int guideGroupId;
 
-		// Token: 0x04028EEE RID: 167662
+		// Token: 0x04024217 RID: 147991
 		[FieldOffset(4)]
 		public int status;
 
-		// Token: 0x04028EEF RID: 167663
+		// Token: 0x04024218 RID: 147992
 		[FieldOffset(8)]
 		public FString inOperator;
 
-		// Token: 0x04028EF0 RID: 167664
+		// Token: 0x04024219 RID: 147993
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EF1 RID: 167665
+		// Token: 0x0402421A RID: 147994
 		[FieldOffset(32)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007CD4 RID: 31956
+	// Token: 0x02006E59 RID: 28249
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CheckTeleport_FunctionParams
 	{
-		// Token: 0x04028EF2 RID: 167666
+		// Token: 0x0402421B RID: 147995
 		[FieldOffset(0)]
 		public int teleportId;
 
-		// Token: 0x04028EF3 RID: 167667
+		// Token: 0x0402421C RID: 147996
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EF4 RID: 167668
+		// Token: 0x0402421D RID: 147997
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007CD5 RID: 31957
+	// Token: 0x02006E5A RID: 28250
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UnLockedTeleport_FunctionParams
 	{
-		// Token: 0x04028EF5 RID: 167669
+		// Token: 0x0402421E RID: 147998
 		[FieldOffset(0)]
 		public int teleportId;
 
-		// Token: 0x04028EF6 RID: 167670
+		// Token: 0x0402421F RID: 147999
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CD6 RID: 31958
+	// Token: 0x02006E5B RID: 28251
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetItemCountByConfigId_FunctionParams
 	{
-		// Token: 0x04028EF7 RID: 167671
+		// Token: 0x04024220 RID: 148000
 		[FieldOffset(0)]
 		public int itemConfigId;
 
-		// Token: 0x04028EF8 RID: 167672
+		// Token: 0x04024221 RID: 148001
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EF9 RID: 167673
+		// Token: 0x04024222 RID: 148002
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02007CD7 RID: 31959
+	// Token: 0x02006E5C RID: 28252
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __InitUiRoot_FunctionParams
 	{
-		// Token: 0x04028EFA RID: 167674
+		// Token: 0x04024223 RID: 148003
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CD8 RID: 31960
+	// Token: 0x02006E5D RID: 28253
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetPlayerLevel_FunctionParams
 	{
-		// Token: 0x04028EFB RID: 167675
+		// Token: 0x04024224 RID: 148004
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EFC RID: 167676
+		// Token: 0x04024225 RID: 148005
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02007CD9 RID: 31961
+	// Token: 0x02006E5E RID: 28254
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetPlayerId_FunctionParams
 	{
-		// Token: 0x04028EFD RID: 167677
+		// Token: 0x04024226 RID: 148006
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028EFE RID: 167678
+		// Token: 0x04024227 RID: 148007
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02007CDA RID: 31962
+	// Token: 0x02006E5F RID: 28255
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAccount_FunctionParams
 	{
-		// Token: 0x04028EFF RID: 167679
+		// Token: 0x04024228 RID: 148008
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F00 RID: 167680
+		// Token: 0x04024229 RID: 148009
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x02007CDB RID: 31963
+	// Token: 0x02006E60 RID: 28256
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetUiRootActive_FunctionParams
 	{
-		// Token: 0x04028F01 RID: 167681
+		// Token: 0x0402422A RID: 148010
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x04028F02 RID: 167682
+		// Token: 0x0402422B RID: 148011
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CDC RID: 31964
+	// Token: 0x02006E61 RID: 28257
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OpenShop_FunctionParams
 	{
-		// Token: 0x04028F03 RID: 167683
+		// Token: 0x0402422C RID: 148012
 		[FieldOffset(0)]
 		public float shopId;
 
-		// Token: 0x04028F04 RID: 167684
+		// Token: 0x0402422D RID: 148013
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CDD RID: 31965
+	// Token: 0x02006E62 RID: 28258
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __CloseShop_FunctionParams
 	{
-		// Token: 0x04028F05 RID: 167685
+		// Token: 0x0402422E RID: 148014
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CDE RID: 31966
+	// Token: 0x02006E63 RID: 28259
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __OpenWorldMapView_FunctionParams
 	{
-		// Token: 0x04028F06 RID: 167686
+		// Token: 0x0402422F RID: 148015
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CDF RID: 31967
+	// Token: 0x02006E64 RID: 28260
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OpenDragonPoolView_FunctionParams
 	{
-		// Token: 0x04028F07 RID: 167687
+		// Token: 0x04024230 RID: 148016
 		[FieldOffset(0)]
 		public int dragonPoolId;
 
-		// Token: 0x04028F08 RID: 167688
+		// Token: 0x04024231 RID: 148017
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE0 RID: 31968
+	// Token: 0x02006E65 RID: 28261
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ConnectServer_FunctionParams
 	{
-		// Token: 0x04028F09 RID: 167689
+		// Token: 0x04024232 RID: 148018
 		[FieldOffset(0)]
 		public FString httpResult;
 
-		// Token: 0x04028F0A RID: 167690
+		// Token: 0x04024233 RID: 148019
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE1 RID: 31969
+	// Token: 0x02006E66 RID: 28262
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ApplyUiCameraAnimationSettings_FunctionParams
 	{
-		// Token: 0x04028F0B RID: 167691
+		// Token: 0x04024234 RID: 148020
 		[FieldOffset(0)]
 		public FString uniqueName;
 
-		// Token: 0x04028F0C RID: 167692
+		// Token: 0x04024235 RID: 148021
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE2 RID: 31970
+	// Token: 0x02006E67 RID: 28263
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ResetUiCameraAnimationHandle_FunctionParams
 	{
-		// Token: 0x04028F0D RID: 167693
+		// Token: 0x04024236 RID: 148022
 		[FieldOffset(0)]
 		public FString uniqueName;
 
-		// Token: 0x04028F0E RID: 167694
+		// Token: 0x04024237 RID: 148023
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE3 RID: 31971
+	// Token: 0x02006E68 RID: 28264
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ClearAllUiCameraAnimationHandles_FunctionParams
 	{
-		// Token: 0x04028F0F RID: 167695
+		// Token: 0x04024238 RID: 148024
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE4 RID: 31972
+	// Token: 0x02006E69 RID: 28265
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __PlayPlayUiCameraBlendAnimationFromCurrentHandle_FunctionParams
 	{
-		// Token: 0x04028F10 RID: 167696
+		// Token: 0x04024239 RID: 148025
 		[FieldOffset(0)]
 		public FString targetAnimationHandleUniqueName;
 
-		// Token: 0x04028F11 RID: 167697
+		// Token: 0x0402423A RID: 148026
 		[FieldOffset(16)]
 		public FString animationBlendDataUniqueName;
 
-		// Token: 0x04028F12 RID: 167698
+		// Token: 0x0402423B RID: 148027
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE5 RID: 31973
+	// Token: 0x02006E6A RID: 28266
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __OpenUiScene_FunctionParams
 	{
-		// Token: 0x04028F13 RID: 167699
+		// Token: 0x0402423C RID: 148028
 		[FieldOffset(0)]
 		public FString uiScenePath;
 
-		// Token: 0x04028F14 RID: 167700
+		// Token: 0x0402423D RID: 148029
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE6 RID: 31974
+	// Token: 0x02006E6B RID: 28267
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __CloseUiScene_FunctionParams
 	{
-		// Token: 0x04028F15 RID: 167701
+		// Token: 0x0402423E RID: 148030
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE7 RID: 31975
+	// Token: 0x02006E6C RID: 28268
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __BeginScreenEffect_FunctionParams
 	{
-		// Token: 0x04028F16 RID: 167702
+		// Token: 0x0402423F RID: 148031
 		[FieldOffset(0)]
 		public FString effectPath;
 
-		// Token: 0x04028F17 RID: 167703
+		// Token: 0x04024240 RID: 148032
 		[FieldOffset(16)]
 		public float priority;
 
-		// Token: 0x04028F18 RID: 167704
+		// Token: 0x04024241 RID: 148033
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE8 RID: 31976
+	// Token: 0x02006E6D RID: 28269
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __EndScreenEffect_FunctionParams
 	{
-		// Token: 0x04028F19 RID: 167705
+		// Token: 0x04024242 RID: 148034
 		[FieldOffset(0)]
 		public FString effectPath;
 
-		// Token: 0x04028F1A RID: 167706
+		// Token: 0x04024243 RID: 148035
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CE9 RID: 31977
+	// Token: 0x02006E6E RID: 28270
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetPartStateVisible_FunctionParams
 	{
-		// Token: 0x04028F1B RID: 167707
+		// Token: 0x04024244 RID: 148036
 		[FieldOffset(0)]
 		public float entityId;
 
-		// Token: 0x04028F1C RID: 167708
+		// Token: 0x04024245 RID: 148037
 		[FieldOffset(8)]
 		public FString boneName;
 
-		// Token: 0x04028F1D RID: 167709
+		// Token: 0x04024246 RID: 148038
 		[FieldOffset(24)]
 		public bool bVisible;
 
-		// Token: 0x04028F1E RID: 167710
+		// Token: 0x04024247 RID: 148039
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CEA RID: 31978
+	// Token: 0x02006E6F RID: 28271
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleMeshId_FunctionParams
 	{
-		// Token: 0x04028F1F RID: 167711
+		// Token: 0x04024248 RID: 148040
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F20 RID: 167712
+		// Token: 0x04024249 RID: 148041
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F21 RID: 167713
+		// Token: 0x0402424A RID: 148042
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02007CEB RID: 31979
+	// Token: 0x02006E70 RID: 28272
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleEntityId_FunctionParams
 	{
-		// Token: 0x04028F22 RID: 167714
+		// Token: 0x0402424B RID: 148043
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F23 RID: 167715
+		// Token: 0x0402424C RID: 148044
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F24 RID: 167716
+		// Token: 0x0402424D RID: 148045
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02007CEC RID: 31980
+	// Token: 0x02006E71 RID: 28273
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __GetRoleBaseAttrList_FunctionParams
 	{
-		// Token: 0x04028F25 RID: 167717
+		// Token: 0x0402424E RID: 148046
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F26 RID: 167718
+		// Token: 0x0402424F RID: 148047
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F27 RID: 167719
+		// Token: 0x04024250 RID: 148048
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007CED RID: 31981
+	// Token: 0x02006E72 RID: 28274
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __GetRoleAddAttrList_FunctionParams
 	{
-		// Token: 0x04028F28 RID: 167720
+		// Token: 0x04024251 RID: 148049
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F29 RID: 167721
+		// Token: 0x04024252 RID: 148050
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F2A RID: 167722
+		// Token: 0x04024253 RID: 148051
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007CEE RID: 31982
+	// Token: 0x02006E73 RID: 28275
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetRoleCameraConfig_FunctionParams
 	{
-		// Token: 0x04028F2B RID: 167723
+		// Token: 0x04024254 RID: 148052
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F2C RID: 167724
+		// Token: 0x04024255 RID: 148053
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F2D RID: 167725
+		// Token: 0x04024256 RID: 148054
 		[FieldOffset(16)]
 		public FString __Result;
 	}
 
-	// Token: 0x02007CEF RID: 31983
+	// Token: 0x02006E74 RID: 28276
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleProperty_FunctionParams
 	{
-		// Token: 0x04028F2E RID: 167726
+		// Token: 0x04024257 RID: 148055
 		[FieldOffset(0)]
 		public int roleInfoId;
 
-		// Token: 0x04028F2F RID: 167727
+		// Token: 0x04024258 RID: 148056
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F30 RID: 167728
+		// Token: 0x04024259 RID: 148057
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02007CF0 RID: 31984
+	// Token: 0x02006E75 RID: 28277
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetRoleDamageData_FunctionParams
 	{
-		// Token: 0x04028F31 RID: 167729
+		// Token: 0x0402425A RID: 148058
 		[FieldOffset(0)]
 		public int damageId;
 
-		// Token: 0x04028F32 RID: 167730
+		// Token: 0x0402425B RID: 148059
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F33 RID: 167731
+		// Token: 0x0402425C RID: 148060
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007CF1 RID: 31985
+	// Token: 0x02006E76 RID: 28278
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __OpenGmView_FunctionParams
 	{
-		// Token: 0x04028F34 RID: 167732
+		// Token: 0x0402425D RID: 148061
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF2 RID: 31986
+	// Token: 0x02006E77 RID: 28279
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __BackLoginView_FunctionParams
 	{
-		// Token: 0x04028F35 RID: 167733
+		// Token: 0x0402425E RID: 148062
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF3 RID: 31987
+	// Token: 0x02006E78 RID: 28280
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetDamageViewVisible_FunctionParams
 	{
-		// Token: 0x04028F36 RID: 167734
+		// Token: 0x0402425F RID: 148063
 		[FieldOffset(0)]
 		public bool bVisible;
 
-		// Token: 0x04028F37 RID: 167735
+		// Token: 0x04024260 RID: 148064
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF4 RID: 31988
+	// Token: 0x02006E79 RID: 28281
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetHeadStateVisible_FunctionParams
 	{
-		// Token: 0x04028F38 RID: 167736
+		// Token: 0x04024261 RID: 148065
 		[FieldOffset(0)]
 		public bool bVisible;
 
-		// Token: 0x04028F39 RID: 167737
+		// Token: 0x04024262 RID: 148066
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF5 RID: 31989
+	// Token: 0x02006E7A RID: 28282
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetBossStateVisible_FunctionParams
 	{
-		// Token: 0x04028F3A RID: 167738
+		// Token: 0x04024263 RID: 148067
 		[FieldOffset(0)]
 		public bool bVisible;
 
-		// Token: 0x04028F3B RID: 167739
+		// Token: 0x04024264 RID: 148068
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF6 RID: 31990
+	// Token: 0x02006E7B RID: 28283
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __PlayBattleNormalTip_FunctionParams
 	{
-		// Token: 0x04028F3C RID: 167740
+		// Token: 0x04024265 RID: 148069
 		[FieldOffset(0)]
 		public FString textKey;
 
-		// Token: 0x04028F3D RID: 167741
+		// Token: 0x04024266 RID: 148070
 		[FieldOffset(16)]
 		public float duration;
 
-		// Token: 0x04028F3E RID: 167742
+		// Token: 0x04024267 RID: 148071
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF7 RID: 31991
+	// Token: 0x02006E7C RID: 28284
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __PlayBattleCountdownTip_FunctionParams
 	{
-		// Token: 0x04028F3F RID: 167743
+		// Token: 0x04024268 RID: 148072
 		[FieldOffset(0)]
 		public FString textKey;
 
-		// Token: 0x04028F40 RID: 167744
+		// Token: 0x04024269 RID: 148073
 		[FieldOffset(16)]
 		public float duration;
 
-		// Token: 0x04028F41 RID: 167745
+		// Token: 0x0402426A RID: 148074
 		[FieldOffset(20)]
 		public float countdown;
 
-		// Token: 0x04028F42 RID: 167746
+		// Token: 0x0402426B RID: 148075
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF8 RID: 31992
+	// Token: 0x02006E7D RID: 28285
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetTempLocation_FunctionParams
 	{
-		// Token: 0x04028F43 RID: 167747
+		// Token: 0x0402426C RID: 148076
 		[FieldOffset(0)]
 		public FVector cameraLocation;
 
-		// Token: 0x04028F44 RID: 167748
+		// Token: 0x0402426D RID: 148077
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CF9 RID: 31993
+	// Token: 0x02006E7E RID: 28286
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetIsSilentLogin_FunctionParams
 	{
-		// Token: 0x04028F45 RID: 167749
+		// Token: 0x0402426E RID: 148078
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x04028F46 RID: 167750
+		// Token: 0x0402426F RID: 148079
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CFA RID: 31994
+	// Token: 0x02006E7F RID: 28287
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneLogin_FunctionParams
 	{
-		// Token: 0x04028F47 RID: 167751
+		// Token: 0x04024270 RID: 148080
 		[FieldOffset(0)]
 		public FString levelName;
 
-		// Token: 0x04028F48 RID: 167752
+		// Token: 0x04024271 RID: 148081
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CFB RID: 31995
+	// Token: 0x02006E80 RID: 28288
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestSceneLoadNetMode_FunctionParams
 	{
-		// Token: 0x04028F49 RID: 167753
+		// Token: 0x04024272 RID: 148082
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F4A RID: 167754
+		// Token: 0x04024273 RID: 148083
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007CFC RID: 31996
+	// Token: 0x02006E81 RID: 28289
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestSceneSaveNetMode_FunctionParams
 	{
-		// Token: 0x04028F4B RID: 167755
+		// Token: 0x04024274 RID: 148084
 		[FieldOffset(0)]
 		public bool value;
 
-		// Token: 0x04028F4C RID: 167756
+		// Token: 0x04024275 RID: 148085
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CFD RID: 31997
+	// Token: 0x02006E82 RID: 28290
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneLoadAccount_FunctionParams
 	{
-		// Token: 0x04028F4D RID: 167757
+		// Token: 0x04024276 RID: 148086
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F4E RID: 167758
+		// Token: 0x04024277 RID: 148087
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x02007CFE RID: 31998
+	// Token: 0x02006E83 RID: 28291
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneSaveAccount_FunctionParams
 	{
-		// Token: 0x04028F4F RID: 167759
+		// Token: 0x04024278 RID: 148088
 		[FieldOffset(0)]
 		public FString account;
 
-		// Token: 0x04028F50 RID: 167760
+		// Token: 0x04024279 RID: 148089
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007CFF RID: 31999
+	// Token: 0x02006E84 RID: 28292
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneLoadServerIp_FunctionParams
 	{
-		// Token: 0x04028F51 RID: 167761
+		// Token: 0x0402427A RID: 148090
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F52 RID: 167762
+		// Token: 0x0402427B RID: 148091
 		[FieldOffset(8)]
 		public FString __Result;
 	}
 
-	// Token: 0x02007D00 RID: 32000
+	// Token: 0x02006E85 RID: 28293
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneSaveServerIp_FunctionParams
 	{
-		// Token: 0x04028F53 RID: 167763
+		// Token: 0x0402427C RID: 148092
 		[FieldOffset(0)]
 		public FString serverIp;
 
-		// Token: 0x04028F54 RID: 167764
+		// Token: 0x0402427D RID: 148093
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D01 RID: 32001
+	// Token: 0x02006E86 RID: 28294
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestSceneSaveBornMode1_FunctionParams
 	{
-		// Token: 0x04028F55 RID: 167765
+		// Token: 0x0402427E RID: 148094
 		[FieldOffset(0)]
 		public bool mode;
 
-		// Token: 0x04028F56 RID: 167766
+		// Token: 0x0402427F RID: 148095
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D02 RID: 32002
+	// Token: 0x02006E87 RID: 28295
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __TestSceneLoadBornLocation_FunctionParams
 	{
-		// Token: 0x04028F57 RID: 167767
+		// Token: 0x04024280 RID: 148096
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F58 RID: 167768
+		// Token: 0x04024281 RID: 148097
 		[FieldOffset(8)]
 		public FVector __Result;
 	}
 
-	// Token: 0x02007D03 RID: 32003
+	// Token: 0x02006E88 RID: 28296
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestSceneLoadGender_FunctionParams
 	{
-		// Token: 0x04028F59 RID: 167769
+		// Token: 0x04024282 RID: 148098
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F5A RID: 167770
+		// Token: 0x04024283 RID: 148099
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D04 RID: 32004
+	// Token: 0x02006E89 RID: 28297
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __TestSceneSaveGender_FunctionParams
 	{
-		// Token: 0x04028F5B RID: 167771
+		// Token: 0x04024284 RID: 148100
 		[FieldOffset(0)]
 		public bool isMale;
 
-		// Token: 0x04028F5C RID: 167772
+		// Token: 0x04024285 RID: 148101
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D05 RID: 32005
+	// Token: 0x02006E8A RID: 28298
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __RefreshInputTag_FunctionParams
 	{
-		// Token: 0x04028F5D RID: 167773
+		// Token: 0x04024286 RID: 148102
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D06 RID: 32006
+	// Token: 0x02006E8B RID: 28299
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPlayerLookAtCameraInPhoto_FunctionParams
 	{
-		// Token: 0x04028F5E RID: 167774
+		// Token: 0x04024287 RID: 148103
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F5F RID: 167775
+		// Token: 0x04024288 RID: 148104
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D07 RID: 32007
+	// Token: 0x02006E8C RID: 28300
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsOpenPhotograph_FunctionParams
 	{
-		// Token: 0x04028F60 RID: 167776
+		// Token: 0x04024289 RID: 148105
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F61 RID: 167777
+		// Token: 0x0402428A RID: 148106
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D08 RID: 32008
+	// Token: 0x02006E8D RID: 28301
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EnablePhotographTimeDilation_FunctionParams
 	{
-		// Token: 0x04028F62 RID: 167778
+		// Token: 0x0402428B RID: 148107
 		[FieldOffset(0)]
 		public float timeDilation;
 
-		// Token: 0x04028F63 RID: 167779
+		// Token: 0x0402428C RID: 148108
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D09 RID: 32009
+	// Token: 0x02006E8E RID: 28302
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __DisablePhotographTimeDilation_FunctionParams
 	{
-		// Token: 0x04028F64 RID: 167780
+		// Token: 0x0402428D RID: 148109
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D0A RID: 32010
+	// Token: 0x02006E8F RID: 28303
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetTopViewName_FunctionParams
 	{
-		// Token: 0x04028F65 RID: 167781
+		// Token: 0x0402428E RID: 148110
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F66 RID: 167782
+		// Token: 0x0402428F RID: 148111
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007D0B RID: 32011
+	// Token: 0x02006E90 RID: 28304
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetUiStartSequenceFrame_FunctionParams
 	{
-		// Token: 0x04028F67 RID: 167783
+		// Token: 0x04024290 RID: 148112
 		[FieldOffset(0)]
 		public float frame;
 
-		// Token: 0x04028F68 RID: 167784
+		// Token: 0x04024291 RID: 148113
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D0C RID: 32012
+	// Token: 0x02006E91 RID: 28305
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetUiEndSequenceFrame_FunctionParams
 	{
-		// Token: 0x04028F69 RID: 167785
+		// Token: 0x04024292 RID: 148114
 		[FieldOffset(0)]
 		public float frame;
 
-		// Token: 0x04028F6A RID: 167786
+		// Token: 0x04024293 RID: 148115
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D0D RID: 32013
+	// Token: 0x02006E92 RID: 28306
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetUiWeaponBreachLevel_FunctionParams
 	{
-		// Token: 0x04028F6B RID: 167787
+		// Token: 0x04024294 RID: 148116
 		[FieldOffset(0)]
 		public IntPtr weaponMesh;
 
-		// Token: 0x04028F6C RID: 167788
+		// Token: 0x04024295 RID: 148117
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F6D RID: 167789
+		// Token: 0x04024296 RID: 148118
 		[FieldOffset(16)]
 		public float __Result;
 	}
 
-	// Token: 0x02007D0E RID: 32014
+	// Token: 0x02006E93 RID: 28307
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetUiWeaponEquippedRoleId_FunctionParams
 	{
-		// Token: 0x04028F6E RID: 167790
+		// Token: 0x04024297 RID: 148119
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F6F RID: 167791
+		// Token: 0x04024298 RID: 148120
 		[FieldOffset(8)]
 		public float __Result;
 	}
 
-	// Token: 0x02007D0F RID: 32015
+	// Token: 0x02006E94 RID: 28308
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetWeaponViewName_FunctionParams
 	{
-		// Token: 0x04028F70 RID: 167792
+		// Token: 0x04024299 RID: 148121
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F71 RID: 167793
+		// Token: 0x0402429A RID: 148122
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x02007D10 RID: 32016
+	// Token: 0x02006E95 RID: 28309
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsGamepadNow_FunctionParams
 	{
-		// Token: 0x04028F72 RID: 167794
+		// Token: 0x0402429B RID: 148123
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F73 RID: 167795
+		// Token: 0x0402429C RID: 148124
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D11 RID: 32017
+	// Token: 0x02006E96 RID: 28310
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsMobileNow_FunctionParams
 	{
-		// Token: 0x04028F74 RID: 167796
+		// Token: 0x0402429D RID: 148125
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F75 RID: 167797
+		// Token: 0x0402429E RID: 148126
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D12 RID: 32018
+	// Token: 0x02006E97 RID: 28311
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsLongPressExploreButton_FunctionParams
 	{
-		// Token: 0x04028F76 RID: 167798
+		// Token: 0x0402429F RID: 148127
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04028F77 RID: 167799
+		// Token: 0x040242A0 RID: 148128
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007D13 RID: 32019
+	// Token: 0x02006E98 RID: 28312
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ShowGenericPrompt_FunctionParams
 	{
-		// Token: 0x04028F78 RID: 167800
+		// Token: 0x040242A1 RID: 148129
 		[FieldOffset(0)]
 		public FString id;
 
-		// Token: 0x04028F79 RID: 167801
+		// Token: 0x040242A2 RID: 148130
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007D14 RID: 32020
+	// Token: 0x02006E99 RID: 28313
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04028F7A RID: 167802
+		// Token: 0x040242A3 RID: 148131
 		public static Action <0>__CheckReLogin;
 
-		// Token: 0x04028F7B RID: 167803
+		// Token: 0x040242A4 RID: 148132
 		public static TTimerAction <1>__CheckWorldDone;
 	}
 }

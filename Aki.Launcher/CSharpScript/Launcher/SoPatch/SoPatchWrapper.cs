@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x0200010A RID: 266
+	// Token: 0x0200010E RID: 270
 	public class SoPatchWrapper
 	{
-		// Token: 0x06000895 RID: 2197 RVA: 0x0003F85C File Offset: 0x0003DA5C
+		// Token: 0x060008C9 RID: 2249 RVA: 0x00041BFC File Offset: 0x0003FDFC
 		[NullableContext(1)]
 		[return: TupleElementNames(new string[]
 		{

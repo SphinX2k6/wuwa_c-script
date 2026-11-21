@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E65 RID: 20069
+	// Token: 0x02005376 RID: 21366
 	public struct IAdsorptionMatchingAnimation : IFlatbufferObject
 	{
-		// Token: 0x17008FA6 RID: 36774
-		// (get) Token: 0x0601F830 RID: 129072 RVA: 0x004638D6 File Offset: 0x00461AD6
+		// Token: 0x170096DF RID: 38623
+		// (get) Token: 0x0602147B RID: 136315 RVA: 0x004978EE File Offset: 0x00495AEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F831 RID: 129073 RVA: 0x004638E3 File Offset: 0x00461AE3
+		// Token: 0x0602147C RID: 136316 RVA: 0x004978FB File Offset: 0x00495AFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F832 RID: 129074 RVA: 0x004638EC File Offset: 0x00461AEC
+		// Token: 0x0602147D RID: 136317 RVA: 0x00497904 File Offset: 0x00495B04
 		public static IAdsorptionMatchingAnimation GetRootAsIAdsorptionMatchingAnimation(ByteBuffer _bb)
 		{
 			return IAdsorptionMatchingAnimation.GetRootAsIAdsorptionMatchingAnimation(_bb, default(IAdsorptionMatchingAnimation));
 		}
 
-		// Token: 0x0601F833 RID: 129075 RVA: 0x00463908 File Offset: 0x00461B08
+		// Token: 0x0602147E RID: 136318 RVA: 0x00497920 File Offset: 0x00495B20
 		public static IAdsorptionMatchingAnimation GetRootAsIAdsorptionMatchingAnimation(ByteBuffer _bb, IAdsorptionMatchingAnimation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F834 RID: 129076 RVA: 0x00463925 File Offset: 0x00461B25
+		// Token: 0x0602147F RID: 136319 RVA: 0x0049793D File Offset: 0x00495B3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F835 RID: 129077 RVA: 0x00463934 File Offset: 0x00461B34
+		// Token: 0x06021480 RID: 136320 RVA: 0x0049794C File Offset: 0x00495B4C
 		public IAdsorptionMatchingAnimation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FA7 RID: 36775
-		// (get) Token: 0x0601F836 RID: 129078 RVA: 0x00463944 File Offset: 0x00461B44
+		// Token: 0x170096E0 RID: 38624
+		// (get) Token: 0x06021481 RID: 136321 RVA: 0x0049795C File Offset: 0x00495B5C
 		public IVectorInfo? MatchPos
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FA8 RID: 36776
-		// (get) Token: 0x0601F837 RID: 129079 RVA: 0x004639A4 File Offset: 0x00461BA4
+		// Token: 0x170096E1 RID: 38625
+		// (get) Token: 0x06021482 RID: 136322 RVA: 0x004979BC File Offset: 0x00495BBC
 		public IVectorInfo? MatchRot
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FA9 RID: 36777
-		// (get) Token: 0x0601F838 RID: 129080 RVA: 0x00463A04 File Offset: 0x00461C04
+		// Token: 0x170096E2 RID: 38626
+		// (get) Token: 0x06021483 RID: 136323 RVA: 0x00497A1C File Offset: 0x00495C1C
 		public string MatchReferenceKey
 		{
 			get
@@ -93,20 +93,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F839 RID: 129081 RVA: 0x00463A3B File Offset: 0x00461C3B
+		// Token: 0x06021484 RID: 136324 RVA: 0x00497A53 File Offset: 0x00495C53
 		public Span<byte> GetMatchReferenceKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601F83A RID: 129082 RVA: 0x00463A4A File Offset: 0x00461C4A
+		// Token: 0x06021485 RID: 136325 RVA: 0x00497A62 File Offset: 0x00495C62
 		public byte[] GetMatchReferenceKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x17008FAA RID: 36778
-		// (get) Token: 0x0601F83B RID: 129083 RVA: 0x00463A58 File Offset: 0x00461C58
+		// Token: 0x170096E3 RID: 38627
+		// (get) Token: 0x06021486 RID: 136326 RVA: 0x00497A70 File Offset: 0x00495C70
 		public string MoveCurve
 		{
 			get
@@ -120,19 +120,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F83C RID: 129084 RVA: 0x00463A90 File Offset: 0x00461C90
+		// Token: 0x06021487 RID: 136327 RVA: 0x00497AA8 File Offset: 0x00495CA8
 		public Span<byte> GetMoveCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0601F83D RID: 129085 RVA: 0x00463AA0 File Offset: 0x00461CA0
+		// Token: 0x06021488 RID: 136328 RVA: 0x00497AB8 File Offset: 0x00495CB8
 		public byte[] GetMoveCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x0601F83E RID: 129086 RVA: 0x00463AAF File Offset: 0x00461CAF
+		// Token: 0x06021489 RID: 136329 RVA: 0x00497AC7 File Offset: 0x00495CC7
 		public static Offset<IAdsorptionMatchingAnimation> CreateIAdsorptionMatchingAnimation(FlatBufferBuilder builder, Offset<IVectorInfo> MatchPosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> MatchRotOffset = default(Offset<IVectorInfo>), StringOffset MatchReferenceKeyOffset = default(StringOffset), StringOffset MoveCurveOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -143,43 +143,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAdsorptionMatchingAnimation.EndIAdsorptionMatchingAnimation(builder);
 		}
 
-		// Token: 0x0601F83F RID: 129087 RVA: 0x00463ADB File Offset: 0x00461CDB
+		// Token: 0x0602148A RID: 136330 RVA: 0x00497AF3 File Offset: 0x00495CF3
 		public static void StartIAdsorptionMatchingAnimation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601F840 RID: 129088 RVA: 0x00463AE4 File Offset: 0x00461CE4
+		// Token: 0x0602148B RID: 136331 RVA: 0x00497AFC File Offset: 0x00495CFC
 		public static void AddMatchPos(FlatBufferBuilder builder, Offset<IVectorInfo> matchPosOffset)
 		{
 			builder.AddOffset(0, matchPosOffset.Value, 0);
 		}
 
-		// Token: 0x0601F841 RID: 129089 RVA: 0x00463AF4 File Offset: 0x00461CF4
+		// Token: 0x0602148C RID: 136332 RVA: 0x00497B0C File Offset: 0x00495D0C
 		public static void AddMatchRot(FlatBufferBuilder builder, Offset<IVectorInfo> matchRotOffset)
 		{
 			builder.AddOffset(1, matchRotOffset.Value, 0);
 		}
 
-		// Token: 0x0601F842 RID: 129090 RVA: 0x00463B04 File Offset: 0x00461D04
+		// Token: 0x0602148D RID: 136333 RVA: 0x00497B1C File Offset: 0x00495D1C
 		public static void AddMatchReferenceKey(FlatBufferBuilder builder, StringOffset matchReferenceKeyOffset)
 		{
 			builder.AddOffset(2, matchReferenceKeyOffset.Value, 0);
 		}
 
-		// Token: 0x0601F843 RID: 129091 RVA: 0x00463B14 File Offset: 0x00461D14
+		// Token: 0x0602148E RID: 136334 RVA: 0x00497B2C File Offset: 0x00495D2C
 		public static void AddMoveCurve(FlatBufferBuilder builder, StringOffset moveCurveOffset)
 		{
 			builder.AddOffset(3, moveCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0601F844 RID: 129092 RVA: 0x00463B24 File Offset: 0x00461D24
+		// Token: 0x0602148F RID: 136335 RVA: 0x00497B3C File Offset: 0x00495D3C
 		public static Offset<IAdsorptionMatchingAnimation> EndIAdsorptionMatchingAnimation(FlatBufferBuilder builder)
 		{
 			return new Offset<IAdsorptionMatchingAnimation>(builder.EndTable());
 		}
 
-		// Token: 0x0601F845 RID: 129093 RVA: 0x00463B34 File Offset: 0x00461D34
+		// Token: 0x06021490 RID: 136336 RVA: 0x00497B4C File Offset: 0x00495D4C
 		public IAdsorptionMatchingAnimationT UnPack()
 		{
 			IAdsorptionMatchingAnimationT adsorptionMatchingAnimationT = new IAdsorptionMatchingAnimationT();
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return adsorptionMatchingAnimationT;
 		}
 
-		// Token: 0x0601F846 RID: 129094 RVA: 0x00463B50 File Offset: 0x00461D50
+		// Token: 0x06021491 RID: 136337 RVA: 0x00497B68 File Offset: 0x00495D68
 		public void UnPackTo(IAdsorptionMatchingAnimationT _o)
 		{
 			_o.MatchPos = ((this.MatchPos != null) ? this.MatchPos.Value.UnPack() : null);
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.MoveCurve = this.MoveCurve;
 		}
 
-		// Token: 0x0601F847 RID: 129095 RVA: 0x00463BD4 File Offset: 0x00461DD4
+		// Token: 0x06021492 RID: 136338 RVA: 0x00497BEC File Offset: 0x00495DEC
 		public static Offset<IAdsorptionMatchingAnimation> Pack(FlatBufferBuilder builder, IAdsorptionMatchingAnimationT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAdsorptionMatchingAnimation.CreateIAdsorptionMatchingAnimation(builder, matchPosOffset, matchRotOffset, matchReferenceKeyOffset, moveCurveOffset);
 		}
 
-		// Token: 0x0400DC0C RID: 56332
+		// Token: 0x0400E786 RID: 59270
 		private Table __p;
 	}
 }

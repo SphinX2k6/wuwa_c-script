@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F9 RID: 2553
+	// Token: 0x02000ABE RID: 2750
 	public class ERoadNetworkNavigationTypeJsonConverter : JsonConverter<ERoadNetworkNavigationType>
 	{
-		// Token: 0x06003893 RID: 14483 RVA: 0x0009279C File Offset: 0x0009099C
+		// Token: 0x06003C6B RID: 15467 RVA: 0x0009B08C File Offset: 0x0009928C
 		public override ERoadNetworkNavigationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERoadNetworkNavigationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003894 RID: 14484 RVA: 0x000927C0 File Offset: 0x000909C0
+		// Token: 0x06003C6C RID: 15468 RVA: 0x0009B0B0 File Offset: 0x000992B0
 		public override void Write(Utf8JsonWriter writer, ERoadNetworkNavigationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -8,31 +8,31 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public class AppLinksLog
 	{
-		// Token: 0x04000133 RID: 307
+		// Token: 0x0400013A RID: 314
 		public string event_id = "16";
 
-		// Token: 0x04000134 RID: 308
+		// Token: 0x0400013B RID: 315
 		public string event_time = "";
 
-		// Token: 0x04000135 RID: 309
+		// Token: 0x0400013C RID: 316
 		public string s_step_id = "";
 
-		// Token: 0x04000136 RID: 310
+		// Token: 0x0400013D RID: 317
 		[Nullable(2)]
 		public string s_deepvalue;
 
-		// Token: 0x04000137 RID: 311
+		// Token: 0x0400013E RID: 318
 		[Nullable(2)]
 		public string s_source;
 
-		// Token: 0x04000138 RID: 312
+		// Token: 0x0400013F RID: 319
 		[Nullable(2)]
 		public string device_id;
 
-		// Token: 0x04000139 RID: 313
+		// Token: 0x04000140 RID: 320
 		public string client_platform = "";
 
-		// Token: 0x0400013A RID: 314
+		// Token: 0x04000141 RID: 321
 		public string s_client_version = "";
 	}
 }

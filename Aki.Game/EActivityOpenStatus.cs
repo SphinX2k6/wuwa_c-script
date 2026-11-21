@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001674 RID: 5748
+// Token: 0x02000B2C RID: 2860
 public enum EActivityOpenStatus
 {
-	// Token: 0x040049CE RID: 18894
+	// Token: 0x04004A74 RID: 19060
 	Unlocked,
-	// Token: 0x040049CF RID: 18895
+	// Token: 0x04004A75 RID: 19061
 	PreGuideQuestPending,
-	// Token: 0x040049D0 RID: 18896
+	// Token: 0x04004A76 RID: 19062
 	CanPreOpen,
-	// Token: 0x040049D1 RID: 18897
+	// Token: 0x04004A77 RID: 19063
 	Locked
 }

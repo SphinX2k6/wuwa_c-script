@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005182 RID: 20866
+	// Token: 0x02004152 RID: 16722
 	public interface IDeckBuilderCardDeleteFilterItemData
 	{
-		// Token: 0x17008139 RID: 33081
-		// (get) Token: 0x06035603 RID: 218627
+		// Token: 0x170054F9 RID: 21753
+		// (get) Token: 0x0602A4FE RID: 173310
 		ECardElement Element { get; }
 
-		// Token: 0x1700813A RID: 33082
-		// (get) Token: 0x06035604 RID: 218628
+		// Token: 0x170054FA RID: 21754
+		// (get) Token: 0x0602A4FF RID: 173311
 		bool Enabled { get; }
 
-		// Token: 0x1700813B RID: 33083
-		// (get) Token: 0x06035605 RID: 218629
+		// Token: 0x170054FB RID: 21755
+		// (get) Token: 0x0602A500 RID: 173312
 		bool Selected { get; }
 	}
 }

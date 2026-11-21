@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000186 RID: 390
+	// Token: 0x0200019D RID: 413
 	public class Graph3dComponent_SetValue
 	{
-		// Token: 0x0400076E RID: 1902
+		// Token: 0x040007C4 RID: 1988
 		public bool? Disabled;
 
-		// Token: 0x0400076F RID: 1903
+		// Token: 0x040007C5 RID: 1989
 		public bool? EdIsLocked;
 
-		// Token: 0x04000770 RID: 1904
-		[Nullable(1)]
+		// Token: 0x040007C6 RID: 1990
 		public IGraph3dNormal GraphConfig;
 	}
 }

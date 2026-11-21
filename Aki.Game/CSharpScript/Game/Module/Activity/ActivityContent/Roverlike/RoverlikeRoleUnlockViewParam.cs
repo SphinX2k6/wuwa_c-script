@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200616F RID: 24943
+	// Token: 0x020050ED RID: 20717
 	public class RoverlikeRoleUnlockViewParam
 	{
-		// Token: 0x04020E2E RID: 134702
+		// Token: 0x0401B75B RID: 112475
 		public int BlessRoleId;
 
-		// Token: 0x04020E2F RID: 134703
+		// Token: 0x0401B75C RID: 112476
 		[Nullable(2)]
 		public Action OnClosed;
 	}

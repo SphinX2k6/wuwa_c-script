@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C4 RID: 29380
+	// Token: 0x02006446 RID: 25670
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CameraNearClipController : ControllerBase
 	{
-		// Token: 0x0604812B RID: 295211 RVA: 0x0127AED8 File Offset: 0x012790D8
+		// Token: 0x0603E51F RID: 255263 RVA: 0x0121D270 File Offset: 0x0121B470
 		public CameraNearClipController()
 		{
 			this.CameraNearClipConfigList = new PriorityQueue<CameraNearClipConfig>(new Comparison<CameraNearClipConfig>(this.CompareCameraNearClipConfigPriority));
 		}
 
-		// Token: 0x0604812C RID: 295212 RVA: 0x0127AF0D File Offset: 0x0127910D
+		// Token: 0x0603E520 RID: 255264 RVA: 0x0121D2A5 File Offset: 0x0121B4A5
 		private int CompareCameraNearClipConfigPriority(CameraNearClipConfig a, CameraNearClipConfig b)
 		{
 			if (a.Priority == b.Priority)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Camera
 			return b.Priority - a.Priority;
 		}
 
-		// Token: 0x0604812D RID: 295213 RVA: 0x0127AF2C File Offset: 0x0127912C
+		// Token: 0x0603E521 RID: 255265 RVA: 0x0121D2C4 File Offset: 0x0121B4C4
 		public int EnableRelativeNearClip(int priority, float distance)
 		{
 			CameraNearClipConfig cameraNearClipConfig = new CameraNearClipConfig(priority);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Camera
 			return cameraNearClipConfig.Id;
 		}
 
-		// Token: 0x0604812E RID: 295214 RVA: 0x0127AF74 File Offset: 0x01279174
+		// Token: 0x0603E522 RID: 255266 RVA: 0x0121D30C File Offset: 0x0121B50C
 		public int EnableAbsoluteNearClip(int priority, float distance)
 		{
 			CameraNearClipConfig cameraNearClipConfig = new CameraNearClipConfig(priority);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Camera
 			return cameraNearClipConfig.Id;
 		}
 
-		// Token: 0x0604812F RID: 295215 RVA: 0x0127AFBC File Offset: 0x012791BC
+		// Token: 0x0603E523 RID: 255267 RVA: 0x0121D354 File Offset: 0x0121B554
 		public void DisableCameraNearClip(int id)
 		{
 			CameraNearClipConfig cameraNearClipConfig;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateCameraNearClip();
 		}
 
-		// Token: 0x06048130 RID: 295216 RVA: 0x0127B02C File Offset: 0x0127922C
+		// Token: 0x0603E524 RID: 255268 RVA: 0x0121D3C4 File Offset: 0x0121B5C4
 		[NullableContext(2)]
 		public CameraNearClipConfig GetCameraNearClipConfig()
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Camera
 			return null;
 		}
 
-		// Token: 0x06048131 RID: 295217 RVA: 0x0127B08C File Offset: 0x0127928C
+		// Token: 0x0603E525 RID: 255269 RVA: 0x0121D424 File Offset: 0x0121B624
 		public void ClearLevelEventAdjustPlayerCameraNearClip()
 		{
 			if (this.LevelEventAdjustPlayerCameraNearClipId <= 0)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Camera
 			this.LevelEventAdjustPlayerCameraNearClipId = 0;
 		}
 
-		// Token: 0x06048132 RID: 295218 RVA: 0x0127B0AC File Offset: 0x012792AC
+		// Token: 0x0603E526 RID: 255270 RVA: 0x0121D444 File Offset: 0x0121B644
 		public void EnableLevelEventAdjustPlayerCameraNearClip(float? nearClipDistanceToTarget)
 		{
 			this.ClearLevelEventAdjustPlayerCameraNearClip();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Camera
 			this.LevelEventAdjustPlayerCameraNearClipId = this.EnableRelativeNearClip(1000, nearClipDistanceToTarget.Value);
 		}
 
-		// Token: 0x06048133 RID: 295219 RVA: 0x0127B12D File Offset: 0x0127932D
+		// Token: 0x0603E527 RID: 255271 RVA: 0x0121D4C5 File Offset: 0x0121B6C5
 		public void ClearSequenceCameraPlayerComponentNearClip()
 		{
 			if (this.SequenceCameraPlayerComponentNearClipId <= 0)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Camera
 			this.SequenceCameraPlayerComponentNearClipId = 0;
 		}
 
-		// Token: 0x06048134 RID: 295220 RVA: 0x0127B14C File Offset: 0x0127934C
+		// Token: 0x0603E528 RID: 255272 RVA: 0x0121D4E4 File Offset: 0x0121B6E4
 		public void EnableSequenceCameraPlayerComponentNearClip(float clipDistance)
 		{
 			this.ClearSequenceCameraPlayerComponentNearClip();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Camera
 			this.SequenceCameraPlayerComponentNearClipId = this.EnableAbsoluteNearClip(2000, clipDistance);
 		}
 
-		// Token: 0x06048135 RID: 295221 RVA: 0x0127B1A6 File Offset: 0x012793A6
+		// Token: 0x0603E529 RID: 255273 RVA: 0x0121D53E File Offset: 0x0121B73E
 		public void ClearTsAnimNotifyStateNearClip()
 		{
 			if (this.TsAnimNotifyStateNearClipId <= 0)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Camera
 			this.TsAnimNotifyStateNearClipId = 0;
 		}
 
-		// Token: 0x06048136 RID: 295222 RVA: 0x0127B1C8 File Offset: 0x012793C8
+		// Token: 0x0603E52A RID: 255274 RVA: 0x0121D560 File Offset: 0x0121B760
 		public void EnableTsAnimNotifyStateNearClip(float clipDistance)
 		{
 			this.ClearTsAnimNotifyStateNearClip();
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Camera
 			this.TsAnimNotifyStateNearClipId = this.EnableAbsoluteNearClip(500, clipDistance);
 		}
 
-		// Token: 0x06048137 RID: 295223 RVA: 0x0127B224 File Offset: 0x01279424
+		// Token: 0x0603E52B RID: 255275 RVA: 0x0121D5BC File Offset: 0x0121B7BC
 		private void UpdateCameraNearClip()
 		{
 			CameraNearClipConfig cameraNearClipConfig = this.GetCameraNearClipConfig();
@@ -239,14 +239,14 @@ namespace CSharpScript.Game.Camera
 			this.CurrentNearClipAction = cameraNearClipAction;
 		}
 
-		// Token: 0x06048138 RID: 295224 RVA: 0x0127B362 File Offset: 0x01279562
+		// Token: 0x0603E52C RID: 255276 RVA: 0x0121D6FA File Offset: 0x0121B8FA
 		protected override bool OnClear()
 		{
 			this.ClearAll("CameraNearClipController触发OnClear");
 			return true;
 		}
 
-		// Token: 0x06048139 RID: 295225 RVA: 0x0127B370 File Offset: 0x01279570
+		// Token: 0x0603E52D RID: 255277 RVA: 0x0121D708 File Offset: 0x0121B908
 		private void ClearCurrent(string reason)
 		{
 			Log instance = Log.Instance;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Camera
 			UKuroCameraFunctionLibrary.DelaySetNearClipPlane(10f);
 		}
 
-		// Token: 0x0604813A RID: 295226 RVA: 0x0127B3BC File Offset: 0x012795BC
+		// Token: 0x0603E52E RID: 255278 RVA: 0x0121D754 File Offset: 0x0121B954
 		public void ClearAll(string reason)
 		{
 			this.ClearCurrent(reason);
@@ -273,8 +273,8 @@ namespace CSharpScript.Game.Camera
 			this.CameraNearClipConfigList.Clear();
 		}
 
-		// Token: 0x17009F2F RID: 40751
-		// (get) Token: 0x0604813B RID: 295227 RVA: 0x0127B43C File Offset: 0x0127963C
+		// Token: 0x17007696 RID: 30358
+		// (get) Token: 0x0603E52F RID: 255279 RVA: 0x0121D7D4 File Offset: 0x0121B9D4
 		public static CameraNearClipController Instance
 		{
 			get
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604813C RID: 295228 RVA: 0x0127B443 File Offset: 0x01279643
+		// Token: 0x0603E530 RID: 255280 RVA: 0x0121D7DB File Offset: 0x0121B9DB
 		public static CameraNearClipController GetOrCreateInstance()
 		{
 			if (CameraNearClipController._Instance == null)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Camera
 			return CameraNearClipController._Instance;
 		}
 
-		// Token: 0x0604813D RID: 295229 RVA: 0x0127B457 File Offset: 0x01279657
+		// Token: 0x0603E531 RID: 255281 RVA: 0x0121D7EF File Offset: 0x0121B9EF
 		public static bool CreateInstance()
 		{
 			if (CameraNearClipController._Instance != null)
@@ -304,27 +304,27 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x0604813E RID: 295230 RVA: 0x0127B46D File Offset: 0x0127966D
+		// Token: 0x0603E532 RID: 255282 RVA: 0x0121D805 File Offset: 0x0121BA05
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604813F RID: 295231 RVA: 0x0127B46F File Offset: 0x0127966F
+		// Token: 0x0603E533 RID: 255283 RVA: 0x0121D807 File Offset: 0x0121BA07
 		public static void ResetStaticDefaultValue()
 		{
 			CameraNearClipController._Instance = null;
 		}
 
-		// Token: 0x06048140 RID: 295232 RVA: 0x0127B477 File Offset: 0x01279677
+		// Token: 0x0603E534 RID: 255284 RVA: 0x0121D80F File Offset: 0x0121BA0F
 		static CameraNearClipController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CameraNearClipController.CreateStaticDefaultValue), new Action(CameraNearClipController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402606A RID: 155754
+		// Token: 0x0402134A RID: 136010
 		private int CurrentNearClipId;
 
-		// Token: 0x0402606B RID: 155755
+		// Token: 0x0402134B RID: 136011
 		[Nullable(new byte[]
 		{
 			2,
@@ -332,25 +332,25 @@ namespace CSharpScript.Game.Camera
 		})]
 		private ICameraNearClipAction<CameraBaseNearClipConfig> CurrentNearClipAction;
 
-		// Token: 0x0402606C RID: 155756
+		// Token: 0x0402134C RID: 136012
 		private readonly Dictionary<CameraNearClipConfig, ICameraNearClipAction<CameraBaseNearClipConfig>> CurrentNearClipActionMap = new Dictionary<CameraNearClipConfig, ICameraNearClipAction<CameraBaseNearClipConfig>>();
 
-		// Token: 0x0402606D RID: 155757
+		// Token: 0x0402134D RID: 136013
 		private readonly Dictionary<int, CameraNearClipConfig> CameraNearClipConfigMap = new Dictionary<int, CameraNearClipConfig>();
 
-		// Token: 0x0402606E RID: 155758
+		// Token: 0x0402134E RID: 136014
 		private readonly PriorityQueue<CameraNearClipConfig> CameraNearClipConfigList;
 
-		// Token: 0x0402606F RID: 155759
+		// Token: 0x0402134F RID: 136015
 		public int LevelEventAdjustPlayerCameraNearClipId;
 
-		// Token: 0x04026070 RID: 155760
+		// Token: 0x04021350 RID: 136016
 		public int SequenceCameraPlayerComponentNearClipId;
 
-		// Token: 0x04026071 RID: 155761
+		// Token: 0x04021351 RID: 136017
 		public int TsAnimNotifyStateNearClipId;
 
-		// Token: 0x04026072 RID: 155762
+		// Token: 0x04021352 RID: 136018
 		[Nullable(2)]
 		private static CameraNearClipController _Instance;
 	}

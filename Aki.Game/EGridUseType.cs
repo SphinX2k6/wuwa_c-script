@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002929 RID: 10537
+// Token: 0x02001EA4 RID: 7844
 public enum EGridUseType
 {
-	// Token: 0x0400A1FC RID: 41468
+	// Token: 0x0400A5E7 RID: 42471
 	SwitchOnly,
-	// Token: 0x0400A1FD RID: 41469
+	// Token: 0x0400A5E8 RID: 42472
 	FunctionOnly
 }

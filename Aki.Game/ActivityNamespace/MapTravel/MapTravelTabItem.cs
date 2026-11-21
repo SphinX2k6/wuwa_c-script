@@ -5,16 +5,16 @@ using CSharpScript.Game.Module.Area;
 
 namespace ActivityNamespace.MapTravel
 {
-	// Token: 0x020044D3 RID: 17619
+	// Token: 0x02002F60 RID: 12128
 	public class MapTravelTabItem : MapTravelTabItemBase
 	{
-		// Token: 0x0602D65D RID: 185949 RVA: 0x00A3EA36 File Offset: 0x00A3CC36
+		// Token: 0x0601CB9B RID: 117659 RVA: 0x008C4696 File Offset: 0x008C2896
 		[NullableContext(1)]
 		public MapTravelTabItem(ActivityMapTravelData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0602D65E RID: 185950 RVA: 0x00A3EA40 File Offset: 0x00A3CC40
+		// Token: 0x0601CB9C RID: 117660 RVA: 0x008C46A0 File Offset: 0x008C28A0
 		[NullableContext(1)]
 		public override void RefreshByData(MapTravelAreaData data, int index)
 		{
@@ -28,22 +28,22 @@ namespace ActivityNamespace.MapTravel
 			base.GetItem(4).SetUIActive(areaRewardState);
 		}
 
-		// Token: 0x0200A719 RID: 42777
+		// Token: 0x02008BEF RID: 35823
 		private new class ETabComponents
 		{
-			// Token: 0x0403276F RID: 206703
+			// Token: 0x0402C53D RID: 181565
 			public const int Toggle = 0;
 
-			// Token: 0x04032770 RID: 206704
+			// Token: 0x0402C53E RID: 181566
 			public const int Name = 1;
 
-			// Token: 0x04032771 RID: 206705
+			// Token: 0x0402C53F RID: 181567
 			public const int SpriteDone = 2;
 
-			// Token: 0x04032772 RID: 206706
+			// Token: 0x0402C540 RID: 181568
 			public const int SpriteLock = 3;
 
-			// Token: 0x04032773 RID: 206707
+			// Token: 0x0402C541 RID: 181569
 			public const int RedDot = 4;
 		}
 	}

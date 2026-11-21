@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002A93 RID: 10899
+// Token: 0x0200200F RID: 8207
 public enum ESubPackageDownLoadPackageType
 {
-	// Token: 0x0400A863 RID: 43107
+	// Token: 0x0400AC69 RID: 44137
 	Key = 1,
-	// Token: 0x0400A864 RID: 43108
+	// Token: 0x0400AC6A RID: 44138
 	OptionalScene,
-	// Token: 0x0400A865 RID: 43109
+	// Token: 0x0400AC6B RID: 44139
 	OptionalPlot,
-	// Token: 0x0400A866 RID: 43110
+	// Token: 0x0400AC6C RID: 44140
 	Expand,
-	// Token: 0x0400A867 RID: 43111
+	// Token: 0x0400AC6D RID: 44141
 	Voice
 }

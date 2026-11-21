@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004285 RID: 17029
+	// Token: 0x020032E6 RID: 13030
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/DAC_BatchCreateBulletCircle.DAC_BatchCreateBulletCircle_C")]
 	[UnrealStructLayout(248, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 248)]
 	public class DAC_BatchCreateBulletCircle_C : DAC_BatchCreateBullet_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602C382 RID: 181122 RVA: 0x00A1A516 File Offset: 0x00A18716
+		// Token: 0x060211BF RID: 135615 RVA: 0x009596A8 File Offset: 0x009578A8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (DAC_BatchCreateBulletCircle_C._ClassPtr == IntPtr.Zero)
@@ -24,19 +24,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			return DAC_BatchCreateBulletCircle_C._ClassPtr;
 		}
 
-		// Token: 0x0602C383 RID: 181123 RVA: 0x00A1A53C File Offset: 0x00A1873C
+		// Token: 0x060211C0 RID: 135616 RVA: 0x009596CC File Offset: 0x009578CC
 		public DAC_BatchCreateBulletCircle_C() : this(BuiltinUtils.AllocNativeUObject(DAC_BatchCreateBulletCircle_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602C384 RID: 181124 RVA: 0x00A1A564 File Offset: 0x00A18764
+		// Token: 0x060211C1 RID: 135617 RVA: 0x009596F4 File Offset: 0x009578F4
 		public DAC_BatchCreateBulletCircle_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(DAC_BatchCreateBulletCircle_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006E3B RID: 28219
-		// (get) Token: 0x0602C385 RID: 181125 RVA: 0x00A1A598 File Offset: 0x00A18798
-		// (set) Token: 0x0602C386 RID: 181126 RVA: 0x00A1A5D1 File Offset: 0x00A187D1
+		// Token: 0x170042A6 RID: 17062
+		// (get) Token: 0x060211C2 RID: 135618 RVA: 0x00959728 File Offset: 0x00957928
+		// (set) Token: 0x060211C3 RID: 135619 RVA: 0x00959761 File Offset: 0x00957961
 		public SBatchBulletPositionCircle Shape
 		{
 			get
@@ -45,34 +45,34 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				SBatchBulletPositionCircle result;
 				if ((result = this._Shape) == null)
 				{
-					result = (this._Shape = new SBatchBulletPositionCircle(base.NativePtr + (IntPtr)DAC_BatchCreateBulletCircle_C.__PropertyOffset_0, this));
+					result = (this._Shape = new SBatchBulletPositionCircle(base.NativePtr + (IntPtr)DAC_BatchCreateBulletCircle_C.__PropertyOffset_Shape, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SBatchBulletPositionCircle.StaticStruct(), base.NativePtr + (IntPtr)DAC_BatchCreateBulletCircle_C.__PropertyOffset_0, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SBatchBulletPositionCircle.StaticStruct(), base.NativePtr + (IntPtr)DAC_BatchCreateBulletCircle_C.__PropertyOffset_Shape, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602C387 RID: 181127 RVA: 0x00A1A5F2 File Offset: 0x00A187F2
+		// Token: 0x060211C4 RID: 135620 RVA: 0x00959782 File Offset: 0x00957982
 		protected DAC_BatchCreateBulletCircle_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401725B RID: 94811
+		// Token: 0x04011F79 RID: 73593
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/DAC_BatchCreateBulletCircle.DAC_BatchCreateBulletCircle_C";
 
-		// Token: 0x0401725C RID: 94812
+		// Token: 0x04011F7A RID: 73594
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401725D RID: 94813
+		// Token: 0x04011F7B RID: 73595
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401725E RID: 94814
-		internal new static int __PropertyOffset_0;
+		// Token: 0x04011F7C RID: 73596
+		internal static int __PropertyOffset_Shape;
 
-		// Token: 0x0401725F RID: 94815
+		// Token: 0x04011F7D RID: 73597
 		[Nullable(2)]
 		private SBatchBulletPositionCircle _Shape;
 	}

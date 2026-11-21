@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B4A RID: 23370
+	// Token: 0x02006160 RID: 24928
 	public struct IWalkingPatternStayAwayConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B074 RID: 45172
-		// (get) Token: 0x06027F59 RID: 163673 RVA: 0x0057E7E3 File Offset: 0x0057C9E3
+		// Token: 0x1700B9BC RID: 47548
+		// (get) Token: 0x0602A51D RID: 173341 RVA: 0x005C6273 File Offset: 0x005C4473
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027F5A RID: 163674 RVA: 0x0057E7F0 File Offset: 0x0057C9F0
+		// Token: 0x0602A51E RID: 173342 RVA: 0x005C6280 File Offset: 0x005C4480
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027F5B RID: 163675 RVA: 0x0057E7F8 File Offset: 0x0057C9F8
+		// Token: 0x0602A51F RID: 173343 RVA: 0x005C6288 File Offset: 0x005C4488
 		public static IWalkingPatternStayAwayConfig GetRootAsIWalkingPatternStayAwayConfig(ByteBuffer _bb)
 		{
 			return IWalkingPatternStayAwayConfig.GetRootAsIWalkingPatternStayAwayConfig(_bb, default(IWalkingPatternStayAwayConfig));
 		}
 
-		// Token: 0x06027F5C RID: 163676 RVA: 0x0057E814 File Offset: 0x0057CA14
+		// Token: 0x0602A520 RID: 173344 RVA: 0x005C62A4 File Offset: 0x005C44A4
 		public static IWalkingPatternStayAwayConfig GetRootAsIWalkingPatternStayAwayConfig(ByteBuffer _bb, IWalkingPatternStayAwayConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027F5D RID: 163677 RVA: 0x0057E831 File Offset: 0x0057CA31
+		// Token: 0x0602A521 RID: 173345 RVA: 0x005C62C1 File Offset: 0x005C44C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027F5E RID: 163678 RVA: 0x0057E840 File Offset: 0x0057CA40
+		// Token: 0x0602A522 RID: 173346 RVA: 0x005C62D0 File Offset: 0x005C44D0
 		public IWalkingPatternStayAwayConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B075 RID: 45173
-		// (get) Token: 0x06027F5F RID: 163679 RVA: 0x0057E850 File Offset: 0x0057CA50
+		// Token: 0x1700B9BD RID: 47549
+		// (get) Token: 0x0602A523 RID: 173347 RVA: 0x005C62E0 File Offset: 0x005C44E0
 		public int SplineDistance
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B076 RID: 45174
-		// (get) Token: 0x06027F60 RID: 163680 RVA: 0x0057E88C File Offset: 0x0057CA8C
+		// Token: 0x1700B9BE RID: 47550
+		// (get) Token: 0x0602A524 RID: 173348 RVA: 0x005C631C File Offset: 0x005C451C
 		public int StayAwayTime
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B077 RID: 45175
-		// (get) Token: 0x06027F61 RID: 163681 RVA: 0x0057E8C8 File Offset: 0x0057CAC8
+		// Token: 0x1700B9BF RID: 47551
+		// (get) Token: 0x0602A525 RID: 173349 RVA: 0x005C6358 File Offset: 0x005C4558
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027F62 RID: 163682 RVA: 0x0057E904 File Offset: 0x0057CB04
+		// Token: 0x0602A526 RID: 173350 RVA: 0x005C6394 File Offset: 0x005C4594
 		public static Offset<IWalkingPatternStayAwayConfig> CreateIWalkingPatternStayAwayConfig(FlatBufferBuilder builder, int SplineDistance = 0, int StayAwayTime = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWalkingPatternStayAwayConfig.EndIWalkingPatternStayAwayConfig(builder);
 		}
 
-		// Token: 0x06027F63 RID: 163683 RVA: 0x0057E928 File Offset: 0x0057CB28
+		// Token: 0x0602A527 RID: 173351 RVA: 0x005C63B8 File Offset: 0x005C45B8
 		public static void StartIWalkingPatternStayAwayConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027F64 RID: 163684 RVA: 0x0057E931 File Offset: 0x0057CB31
+		// Token: 0x0602A528 RID: 173352 RVA: 0x005C63C1 File Offset: 0x005C45C1
 		public static void AddSplineDistance(FlatBufferBuilder builder, int splineDistance)
 		{
 			builder.AddInt(0, splineDistance, 0);
 		}
 
-		// Token: 0x06027F65 RID: 163685 RVA: 0x0057E93C File Offset: 0x0057CB3C
+		// Token: 0x0602A529 RID: 173353 RVA: 0x005C63CC File Offset: 0x005C45CC
 		public static void AddStayAwayTime(FlatBufferBuilder builder, int stayAwayTime)
 		{
 			builder.AddInt(1, stayAwayTime, 0);
 		}
 
-		// Token: 0x06027F66 RID: 163686 RVA: 0x0057E947 File Offset: 0x0057CB47
+		// Token: 0x0602A52A RID: 173354 RVA: 0x005C63D7 File Offset: 0x005C45D7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06027F67 RID: 163687 RVA: 0x0057E952 File Offset: 0x0057CB52
+		// Token: 0x0602A52B RID: 173355 RVA: 0x005C63E2 File Offset: 0x005C45E2
 		public static Offset<IWalkingPatternStayAwayConfig> EndIWalkingPatternStayAwayConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWalkingPatternStayAwayConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06027F68 RID: 163688 RVA: 0x0057E960 File Offset: 0x0057CB60
+		// Token: 0x0602A52C RID: 173356 RVA: 0x005C63F0 File Offset: 0x005C45F0
 		public IWalkingPatternStayAwayConfigT UnPack()
 		{
 			IWalkingPatternStayAwayConfigT walkingPatternStayAwayConfigT = new IWalkingPatternStayAwayConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return walkingPatternStayAwayConfigT;
 		}
 
-		// Token: 0x06027F69 RID: 163689 RVA: 0x0057E97B File Offset: 0x0057CB7B
+		// Token: 0x0602A52D RID: 173357 RVA: 0x005C640B File Offset: 0x005C460B
 		public void UnPackTo(IWalkingPatternStayAwayConfigT _o)
 		{
 			_o.SplineDistance = this.SplineDistance;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027F6A RID: 163690 RVA: 0x0057E9A4 File Offset: 0x0057CBA4
+		// Token: 0x0602A52E RID: 173358 RVA: 0x005C6434 File Offset: 0x005C4634
 		public static Offset<IWalkingPatternStayAwayConfig> Pack(FlatBufferBuilder builder, IWalkingPatternStayAwayConfigT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWalkingPatternStayAwayConfig.CreateIWalkingPatternStayAwayConfig(builder, _o.SplineDistance, _o.StayAwayTime, _o.NullMask);
 		}
 
-		// Token: 0x0400F282 RID: 62082
+		// Token: 0x0400FF88 RID: 65416
 		private Table __p;
 	}
 }

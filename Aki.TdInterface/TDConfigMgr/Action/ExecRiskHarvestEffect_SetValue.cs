@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001712 RID: 5906
+	// Token: 0x0200188F RID: 6287
 	public class ExecRiskHarvestEffect_SetValue
 	{
-		// Token: 0x04004FE7 RID: 20455
+		// Token: 0x04005416 RID: 21526
 		public int Id;
 	}
 }

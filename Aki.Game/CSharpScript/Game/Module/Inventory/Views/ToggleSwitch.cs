@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Inventory.Views
 {
-	// Token: 0x0200583A RID: 22586
+	// Token: 0x02004811 RID: 18449
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ToggleSwitch : UiPanelBase
 	{
-		// Token: 0x06039676 RID: 235126 RVA: 0x00D9F67C File Offset: 0x00D9D87C
+		// Token: 0x0602E589 RID: 189833 RVA: 0x00CEE510 File Offset: 0x00CEC710
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,13 +26,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			};
 		}
 
-		// Token: 0x06039677 RID: 235127 RVA: 0x00D9F6E3 File Offset: 0x00D9D8E3
+		// Token: 0x0602E58A RID: 189834 RVA: 0x00CEE577 File Offset: 0x00CEC777
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.CheckCanChange));
 		}
 
-		// Token: 0x06039678 RID: 235128 RVA: 0x00D9F704 File Offset: 0x00D9D904
+		// Token: 0x0602E58B RID: 189835 RVA: 0x00CEE598 File Offset: 0x00CEC798
 		private bool CheckCanChange()
 		{
 			if (this.OnCheckCanChange != null)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return true;
 		}
 
-		// Token: 0x06039679 RID: 235129 RVA: 0x00D9F734 File Offset: 0x00D9D934
+		// Token: 0x0602E58C RID: 189836 RVA: 0x00CEE5C8 File Offset: 0x00CEC7C8
 		private void OnClickedBtnSwitch(EToggleState toggleState)
 		{
 			if (this.OnClickedSwitch != null)
@@ -53,24 +53,24 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603967A RID: 235130 RVA: 0x00D9F764 File Offset: 0x00D9D964
+		// Token: 0x0602E58D RID: 189837 RVA: 0x00CEE5F8 File Offset: 0x00CEC7F8
 		public void SetConfigType(PhantomSettingType type)
 		{
 			string textStringId = (type == PhantomSettingType.AutoLock) ? "PhantomProject_LockProjectTip" : "PhantomProject_DiscardProjectTip";
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603967B RID: 235131 RVA: 0x00D9F798 File Offset: 0x00D9D998
+		// Token: 0x0602E58E RID: 189838 RVA: 0x00CEE62C File Offset: 0x00CEC82C
 		public void SetConfigState(bool isOn)
 		{
 			EToggleState state = isOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0401E04E RID: 122958
+		// Token: 0x04018AE7 RID: 101095
 		public Action<EToggleState> OnClickedSwitch;
 
-		// Token: 0x0401E04F RID: 122959
+		// Token: 0x04018AE8 RID: 101096
 		public Func<EToggleState, bool> OnCheckCanChange;
 	}
 }

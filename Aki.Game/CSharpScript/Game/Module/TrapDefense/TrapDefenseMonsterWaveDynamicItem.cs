@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AC4 RID: 19140
+	// Token: 0x02003A6C RID: 14956
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMonsterWaveDynamicItem : UiPanelBase, IDynamicScrollBaseItem<TrapDefenseMonsterWaveData>
 	{
-		// Token: 0x06031969 RID: 203113 RVA: 0x00B7F9A0 File Offset: 0x00B7DBA0
+		// Token: 0x060266F9 RID: 157433 RVA: 0x00AC3954 File Offset: 0x00AC1B54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603196A RID: 203114 RVA: 0x00B7FB7C File Offset: 0x00B7DD7C
+		// Token: 0x060266FA RID: 157434 RVA: 0x00AC3B30 File Offset: 0x00AC1D30
 		public FVector2D GetItemSize(TrapDefenseMonsterWaveData data)
 		{
 			if (this.VectorValue == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603196B RID: 203115 RVA: 0x00B7FC10 File Offset: 0x00B7DE10
+		// Token: 0x060266FB RID: 157435 RVA: 0x00AC3BC4 File Offset: 0x00AC1DC4
 		private void CalcValue()
 		{
 			if (this.ItemRootWidth > 0f)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ColCount = (int)Math.Floor((double)((this.ItemRootWidth - padding.Left - padding.Right + spacing.X) / this.CellHeight));
 		}
 
-		// Token: 0x0603196C RID: 203116 RVA: 0x00B7FCF0 File Offset: 0x00B7DEF0
+		// Token: 0x060266FC RID: 157436 RVA: 0x00AC3CA4 File Offset: 0x00AC1EA4
 		public UniTask Init(UUIItem actor)
 		{
 			TrapDefenseMonsterWaveDynamicItem.<Init>d__9 <Init>d__;
@@ -99,27 +99,27 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603196D RID: 203117 RVA: 0x00B7FD3B File Offset: 0x00B7DF3B
+		// Token: 0x060266FD RID: 157437 RVA: 0x00AC3CEF File Offset: 0x00AC1EEF
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401A7E0 RID: 108512
+		// Token: 0x04015132 RID: 86322
 		private Vector2D VectorValue;
 
-		// Token: 0x0401A7E1 RID: 108513
+		// Token: 0x04015133 RID: 86323
 		private float ItemRootWidth;
 
-		// Token: 0x0401A7E2 RID: 108514
+		// Token: 0x04015134 RID: 86324
 		private float ItemRootHeight;
 
-		// Token: 0x0401A7E3 RID: 108515
+		// Token: 0x04015135 RID: 86325
 		private float EndlessTotalHeight;
 
-		// Token: 0x0401A7E4 RID: 108516
+		// Token: 0x04015136 RID: 86326
 		private int ColCount;
 
-		// Token: 0x0401A7E5 RID: 108517
+		// Token: 0x04015137 RID: 86327
 		private float CellHeight;
 	}
 }

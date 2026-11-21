@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005921 RID: 22817
+	// Token: 0x020048FA RID: 18682
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrRoadNetworkMarkItem : UiPanelBase
 	{
-		// Token: 0x06039F43 RID: 237379 RVA: 0x00DC6F54 File Offset: 0x00DC5154
+		// Token: 0x0602EE66 RID: 192102 RVA: 0x00D1627C File Offset: 0x00D1447C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x17008AE0 RID: 35552
-		// (get) Token: 0x06039F44 RID: 237380 RVA: 0x00DC7104 File Offset: 0x00DC5304
+		// Token: 0x17005EAC RID: 24236
+		// (get) Token: 0x0602EE67 RID: 192103 RVA: 0x00D1642C File Offset: 0x00D1462C
 		private InfrRoadBuild Config
 		{
 			get
@@ -61,14 +61,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F45 RID: 237381 RVA: 0x00DC7129 File Offset: 0x00DC5329
+		// Token: 0x0602EE68 RID: 192104 RVA: 0x00D16451 File Offset: 0x00D14651
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 			this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x06039F46 RID: 237382 RVA: 0x00DC7154 File Offset: 0x00DC5354
+		// Token: 0x0602EE69 RID: 192105 RVA: 0x00D1647C File Offset: 0x00D1467C
 		protected override void OnAfterShow()
 		{
 			if (!this.NeedPlayFinishSeq)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F47 RID: 237383 RVA: 0x00DC7189 File Offset: 0x00DC5389
+		// Token: 0x0602EE6A RID: 192106 RVA: 0x00D164B1 File Offset: 0x00D146B1
 		public void Refresh(int roadId)
 		{
 			this.RoadId = roadId;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06039F48 RID: 237384 RVA: 0x00DC71A4 File Offset: 0x00DC53A4
+		// Token: 0x0602EE6B RID: 192107 RVA: 0x00D164CC File Offset: 0x00D146CC
 		private void RefreshDifficulty()
 		{
 			InfrastructureDefine.IInfrRoadData roadDataByRoadId = InfrastructureModel.Instance.GetRoadDataByRoadId(this.RoadId);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x06039F49 RID: 237385 RVA: 0x00DC7244 File Offset: 0x00DC5444
+		// Token: 0x0602EE6C RID: 192108 RVA: 0x00D1656C File Offset: 0x00D1476C
 		private void RefreshTopRightIcon()
 		{
 			InfrastructureModel instance = InfrastructureModel.Instance;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F4A RID: 237386 RVA: 0x00DC7320 File Offset: 0x00DC5520
+		// Token: 0x0602EE6D RID: 192109 RVA: 0x00D16648 File Offset: 0x00D14848
 		private void RefreshPanel()
 		{
 			InfrastructureDefine.IInfrRoadData roadDataByRoadId = InfrastructureModel.Instance.GetRoadDataByRoadId(this.RoadId);
@@ -242,13 +242,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			item7.SetUIActive(roadMaterialEnough && infrStatusPb == InfrStatusPb.InfrStatusProgress);
 		}
 
-		// Token: 0x06039F4B RID: 237387 RVA: 0x00DC744C File Offset: 0x00DC564C
+		// Token: 0x0602EE6E RID: 192110 RVA: 0x00D16774 File Offset: 0x00D14974
 		public void SetOnClickToggleCb(Action<int> cb)
 		{
 			this.OnClickToggleCb = cb;
 		}
 
-		// Token: 0x06039F4C RID: 237388 RVA: 0x00DC7455 File Offset: 0x00DC5655
+		// Token: 0x0602EE6F RID: 192111 RVA: 0x00D1677D File Offset: 0x00D1497D
 		private void OnClickBtnToggle(EToggleState _)
 		{
 			Action<int> onClickToggleCb = this.OnClickToggleCb;
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickToggleCb(this.RoadId);
 		}
 
-		// Token: 0x06039F4D RID: 237389 RVA: 0x00DC746D File Offset: 0x00DC566D
+		// Token: 0x0602EE70 RID: 192112 RVA: 0x00D16795 File Offset: 0x00D14995
 		public void SetSelected(bool selected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -278,14 +278,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F4E RID: 237390 RVA: 0x00DC74A5 File Offset: 0x00DC56A5
+		// Token: 0x0602EE71 RID: 192113 RVA: 0x00D167CD File Offset: 0x00D149CD
 		public void SetNeedPlayFinishSeq(bool needPlayFinishSeq, int finishId)
 		{
 			this.NeedPlayFinishSeq = needPlayFinishSeq;
 			this.FinishId = finishId;
 		}
 
-		// Token: 0x06039F4F RID: 237391 RVA: 0x00DC74B8 File Offset: 0x00DC56B8
+		// Token: 0x0602EE72 RID: 192114 RVA: 0x00D167E0 File Offset: 0x00D149E0
 		public void ShowMarkFinish(Action cb)
 		{
 			this.NeedPlayFinishSeq = false;
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.OnFinishPlayEnd = cb;
 		}
 
-		// Token: 0x06039F50 RID: 237392 RVA: 0x00DC74FC File Offset: 0x00DC56FC
+		// Token: 0x0602EE73 RID: 192115 RVA: 0x00D16824 File Offset: 0x00D14A24
 		public void ShowMarkUnlock(Action cb)
 		{
 			InfrastructureModel.Instance.SetUnlockRoadMarkPlaySeq(this.RoadId);
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.OnUnlockPlayEnd = cb;
 		}
 
-		// Token: 0x06039F51 RID: 237393 RVA: 0x00DC7544 File Offset: 0x00DC5744
+		// Token: 0x0602EE74 RID: 192116 RVA: 0x00D1686C File Offset: 0x00D14A6C
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Finish")
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039F52 RID: 237394 RVA: 0x00DC759C File Offset: 0x00DC579C
+		// Token: 0x0602EE75 RID: 192117 RVA: 0x00D168C4 File Offset: 0x00D14AC4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -355,59 +355,59 @@ namespace CSharpScript.Game.Module.Infrastructure
 			};
 		}
 
-		// Token: 0x0401E36E RID: 123758
+		// Token: 0x04018E0B RID: 101899
 		private int RoadId;
 
-		// Token: 0x0401E36F RID: 123759
+		// Token: 0x04018E0C RID: 101900
 		private bool NeedPlayFinishSeq;
 
-		// Token: 0x0401E370 RID: 123760
+		// Token: 0x04018E0D RID: 101901
 		private int FinishId;
 
-		// Token: 0x0401E371 RID: 123761
+		// Token: 0x04018E0E RID: 101902
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401E372 RID: 123762
+		// Token: 0x04018E0F RID: 101903
 		private Action<int> OnClickToggleCb;
 
-		// Token: 0x0401E373 RID: 123763
+		// Token: 0x04018E10 RID: 101904
 		private Action OnFinishPlayEnd;
 
-		// Token: 0x0401E374 RID: 123764
+		// Token: 0x04018E11 RID: 101905
 		private Action OnUnlockPlayEnd;
 
-		// Token: 0x0200BBBF RID: 48063
+		// Token: 0x0200A5CE RID: 42446
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038B09 RID: 232201
+			// Token: 0x040334EB RID: 210155
 			public const int Toggle = 0;
 
-			// Token: 0x04038B0A RID: 232202
+			// Token: 0x040334EC RID: 210156
 			public const int PanelIcon = 1;
 
-			// Token: 0x04038B0B RID: 232203
+			// Token: 0x040334ED RID: 210157
 			public const int PanelNor = 2;
 
-			// Token: 0x04038B0C RID: 232204
+			// Token: 0x040334EE RID: 210158
 			public const int SpriteTarget = 3;
 
-			// Token: 0x04038B0D RID: 232205
+			// Token: 0x040334EF RID: 210159
 			public const int SpriteRecommend = 4;
 
-			// Token: 0x04038B0E RID: 232206
+			// Token: 0x040334F0 RID: 210160
 			public const int SpriteStar = 5;
 
-			// Token: 0x04038B0F RID: 232207
+			// Token: 0x040334F1 RID: 210161
 			public const int PanelDone = 6;
 
-			// Token: 0x04038B10 RID: 232208
+			// Token: 0x040334F2 RID: 210162
 			public const int NiagaraUnlock = 7;
 
-			// Token: 0x04038B11 RID: 232209
+			// Token: 0x040334F3 RID: 210163
 			public const int PanelLock = 8;
 
-			// Token: 0x04038B12 RID: 232210
+			// Token: 0x040334F4 RID: 210164
 			public const int PanelUpgrade = 9;
 		}
 	}

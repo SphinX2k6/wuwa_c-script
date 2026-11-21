@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x0200020A RID: 522
+	// Token: 0x0200020F RID: 527
 	public enum EVideoResSizeType
 	{
-		// Token: 0x0400086C RID: 2156
+		// Token: 0x040008AD RID: 2221
 		NoSize,
-		// Token: 0x0400086D RID: 2157
+		// Token: 0x040008AE RID: 2222
 		StartMaxNeed,
-		// Token: 0x0400086E RID: 2158
+		// Token: 0x040008AF RID: 2223
 		StartMinNeed,
-		// Token: 0x0400086F RID: 2159
+		// Token: 0x040008B0 RID: 2224
 		FemalePrepare,
-		// Token: 0x04000870 RID: 2160
+		// Token: 0x040008B1 RID: 2225
 		MalePrepare,
-		// Token: 0x04000871 RID: 2161
+		// Token: 0x040008B2 RID: 2226
 		LoginPrepare,
-		// Token: 0x04000872 RID: 2162
+		// Token: 0x040008B3 RID: 2227
 		Custom
 	}
 }

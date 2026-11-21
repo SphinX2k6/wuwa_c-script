@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067ED RID: 26605
+	// Token: 0x0200573D RID: 22333
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlCombineViewGrid : GridProxyAbstract<DangoBrawlCombineViewGridData>
 	{
-		// Token: 0x17009706 RID: 38662
-		// (get) Token: 0x060424A0 RID: 271520 RVA: 0x01017D22 File Offset: 0x01015F22
+		// Token: 0x17006A47 RID: 27207
+		// (get) Token: 0x06036FF5 RID: 225269 RVA: 0x00F591D8 File Offset: 0x00F573D8
 		public int ItemId
 		{
 			get
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424A1 RID: 271521 RVA: 0x01017D38 File Offset: 0x01015F38
+		// Token: 0x06036FF6 RID: 225270 RVA: 0x00F591EC File Offset: 0x00F573EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060424A2 RID: 271522 RVA: 0x01017EC8 File Offset: 0x010160C8
+		// Token: 0x06036FF7 RID: 225271 RVA: 0x00F5937C File Offset: 0x00F5757C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlCombineViewGrid.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -80,27 +80,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060424A3 RID: 271523 RVA: 0x01017F0B File Offset: 0x0101610B
+		// Token: 0x06036FF8 RID: 225272 RVA: 0x00F593BF File Offset: 0x00F575BF
 		protected override void OnBeforeDestroy()
 		{
 			this.BlurGridPool.Clear();
 		}
 
-		// Token: 0x060424A4 RID: 271524 RVA: 0x01017F18 File Offset: 0x01016118
+		// Token: 0x06036FF9 RID: 225273 RVA: 0x00F593CC File Offset: 0x00F575CC
 		private bool OnCanExecuteChange()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
 			return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060424A5 RID: 271525 RVA: 0x01017F3E File Offset: 0x0101613E
+		// Token: 0x06036FFA RID: 225274 RVA: 0x00F593F2 File Offset: 0x00F575F2
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlCombineViewGridData data, bool isSelected, int gridIndex)
 		{
 			this.RefreshByGridData(data);
 		}
 
-		// Token: 0x060424A6 RID: 271526 RVA: 0x01017F48 File Offset: 0x01016148
+		// Token: 0x06036FFB RID: 225275 RVA: 0x00F593FC File Offset: 0x00F575FC
 		[NullableContext(1)]
 		public void RefreshByGridData(DangoBrawlCombineViewGridData data)
 		{
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshBlurGrids(posList);
 		}
 
-		// Token: 0x060424A7 RID: 271527 RVA: 0x01018064 File Offset: 0x01016264
+		// Token: 0x06036FFC RID: 225276 RVA: 0x00F59518 File Offset: 0x00F57718
 		[NullableContext(1)]
 		private void RefreshBlurGrids(PanelPos[] posList)
 		{
@@ -164,19 +164,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424A8 RID: 271528 RVA: 0x010181A2 File Offset: 0x010163A2
+		// Token: 0x06036FFD RID: 225277 RVA: 0x00F59656 File Offset: 0x00F57856
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true);
 		}
 
-		// Token: 0x060424A9 RID: 271529 RVA: 0x010181AB File Offset: 0x010163AB
+		// Token: 0x06036FFE RID: 225278 RVA: 0x00F5965F File Offset: 0x00F5785F
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false);
 		}
 
-		// Token: 0x060424AA RID: 271530 RVA: 0x010181B4 File Offset: 0x010163B4
+		// Token: 0x06036FFF RID: 225279 RVA: 0x00F59668 File Offset: 0x00F57868
 		public void SetSelected(bool selected)
 		{
 			EToggleState state = selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x060424AB RID: 271531 RVA: 0x010181E0 File Offset: 0x010163E0
+		// Token: 0x06037000 RID: 225280 RVA: 0x00F59694 File Offset: 0x00F57894
 		public UUIItem GetNavigationItem()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return extendToggle.RootUIComp.Get();
 		}
 
-		// Token: 0x060424AC RID: 271532 RVA: 0x01018207 File Offset: 0x01016407
+		// Token: 0x06037001 RID: 225281 RVA: 0x00F596BB File Offset: 0x00F578BB
 		private void OnToggleClick(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -218,45 +218,45 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onGridClick(this.Data.ItemId, this.GetNavigationItem());
 		}
 
-		// Token: 0x0402295B RID: 141659
+		// Token: 0x0401D1B8 RID: 119224
 		public Action<int, UUIItem> OnGridClick;
 
-		// Token: 0x0402295C RID: 141660
+		// Token: 0x0401D1B9 RID: 119225
 		public Func<int, bool> IsSelected;
 
-		// Token: 0x0402295D RID: 141661
+		// Token: 0x0401D1BA RID: 119226
 		private DangoBrawlViewCost CostItem;
 
-		// Token: 0x0402295E RID: 141662
+		// Token: 0x0401D1BB RID: 119227
 		private DangoBrawlCombineViewGridData Data;
 
-		// Token: 0x0402295F RID: 141663
+		// Token: 0x0401D1BC RID: 119228
 		[Nullable(1)]
 		private readonly List<UUIItem> BlurGridPool = new List<UUIItem>();
 
-		// Token: 0x0200C929 RID: 51497
+		// Token: 0x0200B2F7 RID: 45815
 		[NullableContext(0)]
 		private enum EHandBookItemComponent
 		{
-			// Token: 0x0403CBB4 RID: 248756
+			// Token: 0x040374A5 RID: 226469
 			TexQuality,
-			// Token: 0x0403CBB5 RID: 248757
+			// Token: 0x040374A6 RID: 226470
 			TexIcon,
-			// Token: 0x0403CBB6 RID: 248758
+			// Token: 0x040374A7 RID: 226471
 			GridContent,
-			// Token: 0x0403CBB7 RID: 248759
+			// Token: 0x040374A8 RID: 226472
 			SprGrid,
-			// Token: 0x0403CBB8 RID: 248760
+			// Token: 0x040374A9 RID: 226473
 			TogItem,
-			// Token: 0x0403CBB9 RID: 248761
+			// Token: 0x040374AA RID: 226474
 			CostItem,
-			// Token: 0x0403CBBA RID: 248762
+			// Token: 0x040374AB RID: 226475
 			FinishItem,
-			// Token: 0x0403CBBB RID: 248763
+			// Token: 0x040374AC RID: 226476
 			ShopItem,
-			// Token: 0x0403CBBC RID: 248764
+			// Token: 0x040374AD RID: 226477
 			Num,
-			// Token: 0x0403CBBD RID: 248765
+			// Token: 0x040374AE RID: 226478
 			UniqueWeaponItem
 		}
 	}

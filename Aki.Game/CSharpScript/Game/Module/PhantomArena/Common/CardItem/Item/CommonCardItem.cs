@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D6 RID: 20950
+	// Token: 0x020041A6 RID: 16806
 	public class CommonCardItem : CommonBaseCardItem<int>
 	{
-		// Token: 0x060359E5 RID: 219621 RVA: 0x00CB4130 File Offset: 0x00CB2330
+		// Token: 0x0602A8E0 RID: 174304 RVA: 0x00C0176C File Offset: 0x00BFF96C
 		protected override void OnRegisterCardComponent()
 		{
 			if (PhantomArenaBattleModel.Instance.IsOldBvb)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359E6 RID: 219622 RVA: 0x00CB41A8 File Offset: 0x00CB23A8
+		// Token: 0x0602A8E1 RID: 174305 RVA: 0x00C017E4 File Offset: 0x00BFF9E4
 		public override void Refresh(int cardId)
 		{
 			PhantomBattleCard phantomBattleCardConfig = PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(cardId);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			component.Refresh(data2);
 		}
 
-		// Token: 0x060359E7 RID: 219623 RVA: 0x00CB42A2 File Offset: 0x00CB24A2
+		// Token: 0x0602A8E2 RID: 174306 RVA: 0x00C018DE File Offset: 0x00BFFADE
 		[NullableContext(1)]
 		private ICommonBaseCardComponent GetCommonBaseCardComponent()
 		{

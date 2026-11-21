@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 {
-	// Token: 0x02007093 RID: 28819
+	// Token: 0x020062F8 RID: 25336
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class NpcTurnToLookAtUtils
 	{
-		// Token: 0x0604639E RID: 287646 RVA: 0x011920B8 File Offset: 0x011902B8
+		// Token: 0x0603D489 RID: 251017 RVA: 0x011B51BC File Offset: 0x011B33BC
 		public static bool ShouldUseLookAtForSmallAngle(CharacterActorComponent actorComp, Vector targetPoint, int threshold = 30)
 		{
 			Vector vector = Vector.Create(targetPoint);
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			return MathUtils.Instance.GetAngleByVectorDot(vector2, vector) < (double)threshold;
 		}
 
-		// Token: 0x0604639F RID: 287647 RVA: 0x0119215C File Offset: 0x0119035C
+		// Token: 0x0603D48A RID: 251018 RVA: 0x011B5268 File Offset: 0x011B3468
 		public static ETurnToTargetResult TurnToTargetOrLookAtForSmallAngle(Entity entity, CharacterActorComponent actorComp, Vector targetPoint, float turnSpeed, bool containZ = false, float minTurnTimeSeconds = 0f, bool useLookAtForThisTurn = false, [Nullable(new byte[]
 		{
 			0,
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			return ETurnToTargetResult.TurnToTarget;
 		}
 
-		// Token: 0x060463A0 RID: 287648 RVA: 0x011921B0 File Offset: 0x011903B0
+		// Token: 0x0603D48B RID: 251019 RVA: 0x011B52BC File Offset: 0x011B34BC
 		[NullableContext(2)]
 		public static void ClearSmallAngleTurnToLookAt(Entity entity)
 		{
@@ -64,10 +64,10 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Logics
 			commonNpcPerformComponent.SightTarget(null, EStareActionType.TurnToTargetForSmallAngle);
 		}
 
-		// Token: 0x04024CC0 RID: 150720
+		// Token: 0x04020812 RID: 133138
 		public const int SMALL_ANGLE_TURN_TO_LOOK_AT_THRESHOLD = 30;
 
-		// Token: 0x04024CC1 RID: 150721
+		// Token: 0x04020813 RID: 133139
 		public const EStareActionType SMALL_ANGLE_TURN_TO_LOOK_AT_CONTEXT = EStareActionType.TurnToTargetForSmallAngle;
 	}
 }

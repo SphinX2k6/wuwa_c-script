@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200432A RID: 17194
+	// Token: 0x0200478C RID: 18316
 	public class TTrackTypeUnion
 	{
-		// Token: 0x1700797E RID: 31102
-		// (get) Token: 0x060197EB RID: 104427 RVA: 0x003A6F5E File Offset: 0x003A515E
-		// (set) Token: 0x060197EC RID: 104428 RVA: 0x003A6F66 File Offset: 0x003A5166
+		// Token: 0x17007FB3 RID: 32691
+		// (get) Token: 0x0601AF79 RID: 110457 RVA: 0x003D2986 File Offset: 0x003D0B86
+		// (set) Token: 0x0601AF7A RID: 110458 RVA: 0x003D298E File Offset: 0x003D0B8E
 		public TTrackType Type { get; set; }
 
-		// Token: 0x1700797F RID: 31103
-		// (get) Token: 0x060197ED RID: 104429 RVA: 0x003A6F6F File Offset: 0x003A516F
-		// (set) Token: 0x060197EE RID: 104430 RVA: 0x003A6F77 File Offset: 0x003A5177
+		// Token: 0x17007FB4 RID: 32692
+		// (get) Token: 0x0601AF7B RID: 110459 RVA: 0x003D2997 File Offset: 0x003D0B97
+		// (set) Token: 0x0601AF7C RID: 110460 RVA: 0x003D299F File Offset: 0x003D0B9F
 		public object Value { get; set; }
 
-		// Token: 0x060197EF RID: 104431 RVA: 0x003A6F80 File Offset: 0x003A5180
+		// Token: 0x0601AF7D RID: 110461 RVA: 0x003D29A8 File Offset: 0x003D0BA8
 		public TTrackTypeUnion()
 		{
 			this.Type = TTrackType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060197F0 RID: 104432 RVA: 0x003A6F96 File Offset: 0x003A5196
+		// Token: 0x0601AF7E RID: 110462 RVA: 0x003D29BE File Offset: 0x003D0BBE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060197F1 RID: 104433 RVA: 0x003A6FA8 File Offset: 0x003A51A8
+		// Token: 0x0601AF7F RID: 110463 RVA: 0x003D29D0 File Offset: 0x003D0BD0
 		public ITrackCaptureVisionsT AsITrackCaptureVisions()
 		{
 			return this.As<ITrackCaptureVisionsT>();
 		}
 
-		// Token: 0x060197F2 RID: 104434 RVA: 0x003A6FB0 File Offset: 0x003A51B0
+		// Token: 0x0601AF80 RID: 110464 RVA: 0x003D29D8 File Offset: 0x003D0BD8
 		public static TTrackTypeUnion FromITrackCaptureVisions(ITrackCaptureVisionsT _itrackcapturevisions)
 		{
 			return new TTrackTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197F3 RID: 104435 RVA: 0x003A6FC5 File Offset: 0x003A51C5
+		// Token: 0x0601AF81 RID: 110465 RVA: 0x003D29ED File Offset: 0x003D0BED
 		public ITrackEntitiesT AsITrackEntities()
 		{
 			return this.As<ITrackEntitiesT>();
 		}
 
-		// Token: 0x060197F4 RID: 104436 RVA: 0x003A6FCD File Offset: 0x003A51CD
+		// Token: 0x0601AF82 RID: 110466 RVA: 0x003D29F5 File Offset: 0x003D0BF5
 		public static TTrackTypeUnion FromITrackEntities(ITrackEntitiesT _itrackentities)
 		{
 			return new TTrackTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197F5 RID: 104437 RVA: 0x003A6FE2 File Offset: 0x003A51E2
+		// Token: 0x0601AF83 RID: 110467 RVA: 0x003D2A0A File Offset: 0x003D0C0A
 		public ITrackEntityGroupT AsITrackEntityGroup()
 		{
 			return this.As<ITrackEntityGroupT>();
 		}
 
-		// Token: 0x060197F6 RID: 104438 RVA: 0x003A6FEA File Offset: 0x003A51EA
+		// Token: 0x0601AF84 RID: 110468 RVA: 0x003D2A12 File Offset: 0x003D0C12
 		public static TTrackTypeUnion FromITrackEntityGroup(ITrackEntityGroupT _itrackentitygroup)
 		{
 			return new TTrackTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197F7 RID: 104439 RVA: 0x003A6FFF File Offset: 0x003A51FF
+		// Token: 0x0601AF85 RID: 110469 RVA: 0x003D2A27 File Offset: 0x003D0C27
 		public ITrackLevelPlayT AsITrackLevelPlay()
 		{
 			return this.As<ITrackLevelPlayT>();
 		}
 
-		// Token: 0x060197F8 RID: 104440 RVA: 0x003A7007 File Offset: 0x003A5207
+		// Token: 0x0601AF86 RID: 110470 RVA: 0x003D2A2F File Offset: 0x003D0C2F
 		public static TTrackTypeUnion FromITrackLevelPlay(ITrackLevelPlayT _itracklevelplay)
 		{
 			return new TTrackTypeUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197F9 RID: 104441 RVA: 0x003A701C File Offset: 0x003A521C
+		// Token: 0x0601AF87 RID: 110471 RVA: 0x003D2A44 File Offset: 0x003D0C44
 		public ITrackLocationsT AsITrackLocations()
 		{
 			return this.As<ITrackLocationsT>();
 		}
 
-		// Token: 0x060197FA RID: 104442 RVA: 0x003A7024 File Offset: 0x003A5224
+		// Token: 0x0601AF88 RID: 110472 RVA: 0x003D2A4C File Offset: 0x003D0C4C
 		public static TTrackTypeUnion FromITrackLocations(ITrackLocationsT _itracklocations)
 		{
 			return new TTrackTypeUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060197FB RID: 104443 RVA: 0x003A703C File Offset: 0x003A523C
+		// Token: 0x0601AF89 RID: 110473 RVA: 0x003D2A64 File Offset: 0x003D0C64
 		public static int Pack(FlatBufferBuilder builder, TTrackTypeUnion _o)
 		{
 			switch (_o.Type)

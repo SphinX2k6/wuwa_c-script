@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000095 RID: 149
+// Token: 0x02000097 RID: 151
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5> : IEventArgs
 {
-	// Token: 0x06000474 RID: 1140 RVA: 0x00019F73 File Offset: 0x00018173
+	// Token: 0x060004B5 RID: 1205 RVA: 0x0001A6D7 File Offset: 0x000188D7
 	public EventArgs(T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 	{
 		this.<p1>P = p1;
@@ -16,7 +16,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		this.<p5>P = p5;
 	}
 
-	// Token: 0x06000475 RID: 1141 RVA: 0x00019F9C File Offset: 0x0001819C
+	// Token: 0x060004B6 RID: 1206 RVA: 0x0001A700 File Offset: 0x00018900
 	public bool Invoke(Enum name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4, T5> action = handle as Action<T1, T2, T3, T4, T5>;
@@ -44,7 +44,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x06000476 RID: 1142 RVA: 0x0001A04C File Offset: 0x0001824C
+	// Token: 0x060004B7 RID: 1207 RVA: 0x0001A7B0 File Offset: 0x000189B0
 	public bool Invoke(long name, Delegate handle)
 	{
 		Action<T1, T2, T3, T4, T5> action = handle as Action<T1, T2, T3, T4, T5>;
@@ -72,23 +72,23 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2
 		return true;
 	}
 
-	// Token: 0x040003F9 RID: 1017
+	// Token: 0x04000407 RID: 1031
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x040003FA RID: 1018
+	// Token: 0x04000408 RID: 1032
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 
-	// Token: 0x040003FB RID: 1019
+	// Token: 0x04000409 RID: 1033
 	[CompilerGenerated]
 	private readonly T3 <p3>P;
 
-	// Token: 0x040003FC RID: 1020
+	// Token: 0x0400040A RID: 1034
 	[CompilerGenerated]
 	private readonly T4 <p4>P;
 
-	// Token: 0x040003FD RID: 1021
+	// Token: 0x0400040B RID: 1035
 	[CompilerGenerated]
 	private readonly T5 <p5>P;
 }

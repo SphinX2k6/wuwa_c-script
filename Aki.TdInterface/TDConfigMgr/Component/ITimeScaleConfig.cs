@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200077F RID: 1919
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000820 RID: 2080
 	public class ITimeScaleConfig
 	{
-		// Token: 0x060029A2 RID: 10658 RVA: 0x0006DCC8 File Offset: 0x0006BEC8
+		// Token: 0x06002CC6 RID: 11462 RVA: 0x00074E70 File Offset: 0x00073070
 		private ITimeScaleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060029A3 RID: 10659 RVA: 0x0006DD00 File Offset: 0x0006BF00
+		// Token: 0x06002CC7 RID: 11463 RVA: 0x00074EA8 File Offset: 0x000730A8
 		public static ITimeScaleConfig Create([Nullable(2)] ITimeScaleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029A4 RID: 10660 RVA: 0x0006DD13 File Offset: 0x0006BF13
+		// Token: 0x06002CC8 RID: 11464 RVA: 0x00074EBB File Offset: 0x000730BB
 		public static ITimeScaleConfig CreateFromSetValue([Nullable(2)] ITimeScaleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060029A5 RID: 10661 RVA: 0x0006DD26 File Offset: 0x0006BF26
+		// Token: 0x06002CC9 RID: 11465 RVA: 0x00074ECE File Offset: 0x000730CE
 		public ITimeScaleConfig_SetValue ToSetValue()
 		{
 			return new ITimeScaleConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AF4 RID: 2804
-		// (get) Token: 0x060029A6 RID: 10662 RVA: 0x0006DD39 File Offset: 0x0006BF39
-		// (set) Token: 0x060029A7 RID: 10663 RVA: 0x0006DD64 File Offset: 0x0006BF64
+		// Token: 0x17000BB4 RID: 2996
+		// (get) Token: 0x06002CCA RID: 11466 RVA: 0x00074EE1 File Offset: 0x000730E1
+		// (set) Token: 0x06002CCB RID: 11467 RVA: 0x00074F0C File Offset: 0x0007310C
 		public virtual bool IgnoreGlobalTimeScale
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BEB RID: 7147
+		// Token: 0x04001DF0 RID: 7664
 		[Nullable(2)]
 		protected ITimeScaleConfig FbInstance;
 
-		// Token: 0x04001BEC RID: 7148
+		// Token: 0x04001DF1 RID: 7665
 		[Nullable(2)]
 		protected ITimeScaleConfig_SetValue PocoInterface;
 	}

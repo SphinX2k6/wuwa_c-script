@@ -4,21 +4,21 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Mode
 {
-	// Token: 0x02006879 RID: 26745
+	// Token: 0x020057C9 RID: 22473
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlInteractionModeCtrl
 	{
-		// Token: 0x170097A5 RID: 38821
-		// (get) Token: 0x06042C77 RID: 273527 RVA: 0x0104106D File Offset: 0x0103F26D
+		// Token: 0x17006AE6 RID: 27366
+		// (get) Token: 0x060377CE RID: 227278 RVA: 0x00F8254D File Offset: 0x00F8074D
 		public NormalInteractionMode Normal { get; }
 
-		// Token: 0x170097A6 RID: 38822
-		// (get) Token: 0x06042C78 RID: 273528 RVA: 0x01041075 File Offset: 0x0103F275
+		// Token: 0x17006AE7 RID: 27367
+		// (get) Token: 0x060377CF RID: 227279 RVA: 0x00F82555 File Offset: 0x00F80755
 		public LayerInteractionMode Layer { get; }
 
-		// Token: 0x170097A7 RID: 38823
-		// (get) Token: 0x06042C79 RID: 273529 RVA: 0x01041080 File Offset: 0x0103F280
+		// Token: 0x17006AE8 RID: 27368
+		// (get) Token: 0x060377D0 RID: 227280 RVA: 0x00F82560 File Offset: 0x00F80760
 		public IInteractionMode Current
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			}
 		}
 
-		// Token: 0x06042C7A RID: 273530 RVA: 0x010410AB File Offset: 0x0103F2AB
+		// Token: 0x060377D1 RID: 227281 RVA: 0x00F8258B File Offset: 0x00F8078B
 		public DangoBrawlInteractionModeCtrl(ActivityDangoBrawlData data, DropResolver resolver, InteractionStateMachine fsm)
 		{
 			this.Normal = new NormalInteractionMode(data);

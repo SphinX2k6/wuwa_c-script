@@ -8,10 +8,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028E0 RID: 10464
+// Token: 0x02001E5B RID: 7771
 public class RoleResonanceTabViewNew : UiTabViewBase
 {
-	// Token: 0x06015997 RID: 88471 RVA: 0x005738C0 File Offset: 0x00571AC0
+	// Token: 0x0601339B RID: 78747 RVA: 0x0059E788 File Offset: 0x0059C988
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,7 +25,7 @@ public class RoleResonanceTabViewNew : UiTabViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015998 RID: 88472 RVA: 0x00573929 File Offset: 0x00571B29
+	// Token: 0x0601339C RID: 78748 RVA: 0x0059E7F1 File Offset: 0x0059C9F1
 	protected void UnBindRedDot()
 	{
 		if (this.RoleInstance.IsTrialRole())
@@ -35,13 +35,13 @@ public class RoleResonanceTabViewNew : UiTabViewBase
 		RedDotController.Instance.UnBindRedDot(ERedDotName.RoleResonanceTabHole);
 	}
 
-	// Token: 0x06015999 RID: 88473 RVA: 0x00573945 File Offset: 0x00571B45
+	// Token: 0x0601339D RID: 78749 RVA: 0x0059E80D File Offset: 0x0059CA0D
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.ChangeRoleEvent));
 	}
 
-	// Token: 0x0601599A RID: 88474 RVA: 0x00573964 File Offset: 0x00571B64
+	// Token: 0x0601339E RID: 78750 RVA: 0x0059E82C File Offset: 0x0059CA2C
 	protected override void OnStart()
 	{
 		this.RoleViewAgent = (this.OpenParam as RoleViewAgent);
@@ -59,19 +59,19 @@ public class RoleResonanceTabViewNew : UiTabViewBase
 		this.PlayMontageStart();
 	}
 
-	// Token: 0x0601599B RID: 88475 RVA: 0x005739CD File Offset: 0x00571BCD
+	// Token: 0x0601339F RID: 78751 RVA: 0x0059E895 File Offset: 0x0059CA95
 	protected void PlayMontageStart()
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Resonance, false, false, false);
 	}
 
-	// Token: 0x0601599C RID: 88476 RVA: 0x005739DD File Offset: 0x00571BDD
+	// Token: 0x060133A0 RID: 78752 RVA: 0x0059E8A5 File Offset: 0x0059CAA5
 	protected override void OnBeforeShow()
 	{
 		this.UpdateView();
 	}
 
-	// Token: 0x0601599D RID: 88477 RVA: 0x005739E8 File Offset: 0x00571BE8
+	// Token: 0x060133A1 RID: 78753 RVA: 0x0059E8B0 File Offset: 0x0059CAB0
 	private void UpdateView()
 	{
 		RoleInfo roleConfig = this.RoleInstance.GetRoleConfig();
@@ -90,7 +90,7 @@ public class RoleResonanceTabViewNew : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601599E RID: 88478 RVA: 0x00573AAD File Offset: 0x00571CAD
+	// Token: 0x060133A2 RID: 78754 RVA: 0x0059E975 File Offset: 0x0059CB75
 	private void ChangeRoleEvent(int roleId)
 	{
 		this.RoleInstance = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -98,32 +98,32 @@ public class RoleResonanceTabViewNew : UiTabViewBase
 		this.UpdateView();
 	}
 
-	// Token: 0x0601599F RID: 88479 RVA: 0x00573ACD File Offset: 0x00571CCD
+	// Token: 0x060133A3 RID: 78755 RVA: 0x0059E995 File Offset: 0x0059CB95
 	protected override void OnBeforeHide()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x060159A0 RID: 88480 RVA: 0x00573AD5 File Offset: 0x00571CD5
+	// Token: 0x060133A4 RID: 78756 RVA: 0x0059E99D File Offset: 0x0059CB9D
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RoleSystemChangeRole, new Action<int>(this.ChangeRoleEvent));
 	}
 
-	// Token: 0x0400A0BD RID: 41149
+	// Token: 0x0400A4A7 RID: 42151
 	[Nullable(2)]
 	private RoleViewAgent RoleViewAgent;
 
-	// Token: 0x0400A0BE RID: 41150
+	// Token: 0x0400A4A8 RID: 42152
 	[Nullable(2)]
 	private RoleDataBase RoleInstance;
 
-	// Token: 0x02008EEE RID: 36590
+	// Token: 0x02008136 RID: 33078
 	private enum ERoleResonanceTabViewDefine
 	{
-		// Token: 0x0402E592 RID: 189842
+		// Token: 0x04029C8D RID: 171149
 		UnlockText,
-		// Token: 0x0402E593 RID: 189843
+		// Token: 0x04029C8E RID: 171150
 		UnLockRootItem
 	}
 }

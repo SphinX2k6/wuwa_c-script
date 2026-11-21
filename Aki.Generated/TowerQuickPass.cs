@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001142 RID: 4418
+	// Token: 0x02001278 RID: 4728
 	public struct TowerQuickPass : IFlatbufferObject
 	{
-		// Token: 0x17003B02 RID: 15106
-		// (get) Token: 0x0600E05C RID: 57436 RVA: 0x003314D8 File Offset: 0x0032F6D8
+		// Token: 0x17003E66 RID: 15974
+		// (get) Token: 0x0600EDCA RID: 60874 RVA: 0x0035C940 File Offset: 0x0035AB40
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E05D RID: 57437 RVA: 0x003314E5 File Offset: 0x0032F6E5
+		// Token: 0x0600EDCB RID: 60875 RVA: 0x0035C94D File Offset: 0x0035AB4D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E05E RID: 57438 RVA: 0x003314EC File Offset: 0x0032F6EC
+		// Token: 0x0600EDCC RID: 60876 RVA: 0x0035C954 File Offset: 0x0035AB54
 		public static TowerQuickPass GetRootAsTowerQuickPass(ByteBuffer _bb)
 		{
 			return TowerQuickPass.GetRootAsTowerQuickPass(_bb, default(TowerQuickPass));
 		}
 
-		// Token: 0x0600E05F RID: 57439 RVA: 0x00331508 File Offset: 0x0032F708
+		// Token: 0x0600EDCD RID: 60877 RVA: 0x0035C970 File Offset: 0x0035AB70
 		public static TowerQuickPass GetRootAsTowerQuickPass(ByteBuffer _bb, TowerQuickPass obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E060 RID: 57440 RVA: 0x00331525 File Offset: 0x0032F725
+		// Token: 0x0600EDCE RID: 60878 RVA: 0x0035C98D File Offset: 0x0035AB8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E061 RID: 57441 RVA: 0x00331534 File Offset: 0x0032F734
+		// Token: 0x0600EDCF RID: 60879 RVA: 0x0035C99C File Offset: 0x0035AB9C
 		public TowerQuickPass __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B03 RID: 15107
-		// (get) Token: 0x0600E062 RID: 57442 RVA: 0x00331544 File Offset: 0x0032F744
+		// Token: 0x17003E67 RID: 15975
+		// (get) Token: 0x0600EDD0 RID: 60880 RVA: 0x0035C9AC File Offset: 0x0035ABAC
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B04 RID: 15108
-		// (get) Token: 0x0600E063 RID: 57443 RVA: 0x00331580 File Offset: 0x0032F780
+		// Token: 0x17003E68 RID: 15976
+		// (get) Token: 0x0600EDD1 RID: 60881 RVA: 0x0035C9E8 File Offset: 0x0035ABE8
 		public int Num
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E064 RID: 57444 RVA: 0x003315BC File Offset: 0x0032F7BC
+		// Token: 0x0600EDD2 RID: 60882 RVA: 0x0035CA24 File Offset: 0x0035AC24
 		public string QuickPassInst(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003B05 RID: 15109
-		// (get) Token: 0x0600E065 RID: 57445 RVA: 0x003315F8 File Offset: 0x0032F7F8
+		// Token: 0x17003E69 RID: 15977
+		// (get) Token: 0x0600EDD3 RID: 60883 RVA: 0x0035CA60 File Offset: 0x0035AC60
 		public int QuickPassInstLength
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B06 RID: 15110
-		// (get) Token: 0x0600E066 RID: 57446 RVA: 0x00331624 File Offset: 0x0032F824
+		// Token: 0x17003E6A RID: 15978
+		// (get) Token: 0x0600EDD4 RID: 60884 RVA: 0x0035CA8C File Offset: 0x0035AC8C
 		public string TipText
 		{
 			get
@@ -121,36 +121,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E067 RID: 57447 RVA: 0x0033165C File Offset: 0x0032F85C
+		// Token: 0x0600EDD5 RID: 60885 RVA: 0x0035CAC4 File Offset: 0x0035ACC4
 		public Span<byte> GetTipTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600E068 RID: 57448 RVA: 0x0033166C File Offset: 0x0032F86C
+		// Token: 0x0600EDD6 RID: 60886 RVA: 0x0035CAD4 File Offset: 0x0035ACD4
 		public byte[] GetTipTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600E069 RID: 57449 RVA: 0x00331684 File Offset: 0x0032F884
+		// Token: 0x0600EDD7 RID: 60887 RVA: 0x0035CAEC File Offset: 0x0035ACEC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用QuickPassInstIter()或GetQuickPassInstBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] QuickPassInst()
+		public string[] QuickPassInst()
 		{
 			return this.QuickPassInstIter().ToArray<string>();
 		}
 
-		// Token: 0x0600E06A RID: 57450 RVA: 0x00331691 File Offset: 0x0032F891
+		// Token: 0x0600EDD8 RID: 60888 RVA: 0x0035CAF9 File Offset: 0x0035ACF9
 		[NullableContext(1)]
-		public readonly IEnumerable<string> QuickPassInstIter()
+		public IEnumerable<string> QuickPassInstIter()
 		{
 			TowerQuickPass.<QuickPassInstIter>d__20 <QuickPassInstIter>d__ = new TowerQuickPass.<QuickPassInstIter>d__20(-2);
 			<QuickPassInstIter>d__.<>3__<>4__this = this;
 			return <QuickPassInstIter>d__;
 		}
 
-		// Token: 0x04005284 RID: 21124
+		// Token: 0x040058C7 RID: 22727
 		private Table __p;
 	}
 }

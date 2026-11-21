@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F5E RID: 28510
+	// Token: 0x02007721 RID: 30497
 	public class ISendAiEventT
 	{
-		// Token: 0x1700D3D2 RID: 54226
-		// (get) Token: 0x060325E1 RID: 206305 RVA: 0x006CCCD2 File Offset: 0x006CAED2
-		// (set) Token: 0x060325E2 RID: 206306 RVA: 0x006CCCDA File Offset: 0x006CAEDA
+		// Token: 0x1700DF9E RID: 57246
+		// (get) Token: 0x0603581F RID: 219167 RVA: 0x0072C512 File Offset: 0x0072A712
+		// (set) Token: 0x06035820 RID: 219168 RVA: 0x0072C51A File Offset: 0x0072A71A
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D3D3 RID: 54227
-		// (get) Token: 0x060325E3 RID: 206307 RVA: 0x006CCCE3 File Offset: 0x006CAEE3
-		// (set) Token: 0x060325E4 RID: 206308 RVA: 0x006CCCEB File Offset: 0x006CAEEB
+		// Token: 0x1700DF9F RID: 57247
+		// (get) Token: 0x06035821 RID: 219169 RVA: 0x0072C523 File Offset: 0x0072A723
+		// (set) Token: 0x06035822 RID: 219170 RVA: 0x0072C52B File Offset: 0x0072A72B
 		public EAiEventType EventType { get; set; }
 
-		// Token: 0x1700D3D4 RID: 54228
-		// (get) Token: 0x060325E5 RID: 206309 RVA: 0x006CCCF4 File Offset: 0x006CAEF4
-		// (set) Token: 0x060325E6 RID: 206310 RVA: 0x006CCCFC File Offset: 0x006CAEFC
+		// Token: 0x1700DFA0 RID: 57248
+		// (get) Token: 0x06035823 RID: 219171 RVA: 0x0072C534 File Offset: 0x0072A734
+		// (set) Token: 0x06035824 RID: 219172 RVA: 0x0072C53C File Offset: 0x0072A73C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060325E7 RID: 206311 RVA: 0x006CCD05 File Offset: 0x006CAF05
+		// Token: 0x06035825 RID: 219173 RVA: 0x0072C545 File Offset: 0x0072A745
 		public ISendAiEventT()
 		{
 			this.EntityId = 0;

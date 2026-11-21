@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AFF RID: 6911
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CAE RID: 7342
 	public class IHideMapMark : ToggleMapMarkState
 	{
-		// Token: 0x06009400 RID: 37888 RVA: 0x00157098 File Offset: 0x00155298
+		// Token: 0x06009BEA RID: 39914 RVA: 0x00167D74 File Offset: 0x00165F74
 		private IHideMapMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009401 RID: 37889 RVA: 0x001570D0 File Offset: 0x001552D0
+		// Token: 0x06009BEB RID: 39915 RVA: 0x00167DAC File Offset: 0x00165FAC
 		public static IHideMapMark Create([Nullable(2)] IHideMapMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009402 RID: 37890 RVA: 0x001570E3 File Offset: 0x001552E3
+		// Token: 0x06009BEC RID: 39916 RVA: 0x00167DBF File Offset: 0x00165FBF
 		public static IHideMapMark CreateFromSetValue([Nullable(2)] IHideMapMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009403 RID: 37891 RVA: 0x001570F6 File Offset: 0x001552F6
+		// Token: 0x06009BED RID: 39917 RVA: 0x00167DD2 File Offset: 0x00165FD2
 		public new IHideMapMark_SetValue ToSetValue()
 		{
 			return new IHideMapMark_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ED7 RID: 11991
-		// (get) Token: 0x06009404 RID: 37892 RVA: 0x00157115 File Offset: 0x00155315
-		// (set) Token: 0x06009405 RID: 37893 RVA: 0x00157140 File Offset: 0x00155340
+		// Token: 0x170030FD RID: 12541
+		// (get) Token: 0x06009BEE RID: 39918 RVA: 0x00167DF1 File Offset: 0x00165FF1
+		// (set) Token: 0x06009BEF RID: 39919 RVA: 0x00167E1C File Offset: 0x0016601C
 		public override EMapMarkState Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002ED8 RID: 11992
-		// (get) Token: 0x06009406 RID: 37894 RVA: 0x0015714E File Offset: 0x0015534E
-		// (set) Token: 0x06009407 RID: 37895 RVA: 0x00157179 File Offset: 0x00155379
+		// Token: 0x170030FE RID: 12542
+		// (get) Token: 0x06009BF0 RID: 39920 RVA: 0x00167E2A File Offset: 0x0016602A
+		// (set) Token: 0x06009BF1 RID: 39921 RVA: 0x00167E55 File Offset: 0x00166055
 		public virtual int MarkId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AD4 RID: 23252
+		// Token: 0x04005F72 RID: 24434
 		[Nullable(2)]
 		protected new IHideMapMark FbInstance;
 
-		// Token: 0x04005AD5 RID: 23253
+		// Token: 0x04005F73 RID: 24435
 		[Nullable(2)]
 		protected new IHideMapMark_SetValue PocoInterface;
 	}

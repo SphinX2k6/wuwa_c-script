@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FCA RID: 8138
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200220F RID: 8719
 	public class IToggleAndHighlightItem : ToggleHighlightExploreUi
 	{
-		// Token: 0x0600B2FE RID: 45822 RVA: 0x001A0E50 File Offset: 0x0019F050
+		// Token: 0x0600BE0C RID: 48652 RVA: 0x001B7300 File Offset: 0x001B5500
 		private IToggleAndHighlightItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2FF RID: 45823 RVA: 0x001A0E88 File Offset: 0x0019F088
+		// Token: 0x0600BE0D RID: 48653 RVA: 0x001B7338 File Offset: 0x001B5538
 		public static IToggleAndHighlightItem Create([Nullable(2)] IToggleAndHighlightItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B300 RID: 45824 RVA: 0x001A0E9B File Offset: 0x0019F09B
+		// Token: 0x0600BE0E RID: 48654 RVA: 0x001B734B File Offset: 0x001B554B
 		public static IToggleAndHighlightItem CreateFromSetValue([Nullable(2)] IToggleAndHighlightItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B301 RID: 45825 RVA: 0x001A0EB0 File Offset: 0x0019F0B0
+		// Token: 0x0600BE0F RID: 48655 RVA: 0x001B7360 File Offset: 0x001B5560
 		public new IToggleAndHighlightItem_SetValue ToSetValue()
 		{
 			return new IToggleAndHighlightItem_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003728 RID: 14120
-		// (get) Token: 0x0600B302 RID: 45826 RVA: 0x001A0F0A File Offset: 0x0019F10A
-		// (set) Token: 0x0600B303 RID: 45827 RVA: 0x001A0F35 File Offset: 0x0019F135
+		// Token: 0x170039FF RID: 14847
+		// (get) Token: 0x0600BE10 RID: 48656 RVA: 0x001B73BA File Offset: 0x001B55BA
+		// (set) Token: 0x0600BE11 RID: 48657 RVA: 0x001B73E5 File Offset: 0x001B55E5
 		public override EHighlightExploreSkillIconType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003729 RID: 14121
-		// (get) Token: 0x0600B304 RID: 45828 RVA: 0x001A0F44 File Offset: 0x0019F144
-		// (set) Token: 0x0600B305 RID: 45829 RVA: 0x001A0F7E File Offset: 0x0019F17E
+		// Token: 0x17003A00 RID: 14848
+		// (get) Token: 0x0600BE12 RID: 48658 RVA: 0x001B73F4 File Offset: 0x001B55F4
+		// (set) Token: 0x0600BE13 RID: 48659 RVA: 0x001B742E File Offset: 0x001B562E
 		public override EHighlightType? HighlightType
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700372A RID: 14122
-		// (get) Token: 0x0600B306 RID: 45830 RVA: 0x001A0F8C File Offset: 0x0019F18C
-		// (set) Token: 0x0600B307 RID: 45831 RVA: 0x001A0FB7 File Offset: 0x0019F1B7
+		// Token: 0x17003A01 RID: 14849
+		// (get) Token: 0x0600BE14 RID: 48660 RVA: 0x001B743C File Offset: 0x001B563C
+		// (set) Token: 0x0600BE15 RID: 48661 RVA: 0x001B7467 File Offset: 0x001B5667
 		public virtual int ItemId
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700372B RID: 14123
-		// (get) Token: 0x0600B308 RID: 45832 RVA: 0x001A0FC5 File Offset: 0x0019F1C5
-		// (set) Token: 0x0600B309 RID: 45833 RVA: 0x001A0FF0 File Offset: 0x0019F1F0
+		// Token: 0x17003A02 RID: 14850
+		// (get) Token: 0x0600BE16 RID: 48662 RVA: 0x001B7475 File Offset: 0x001B5675
+		// (set) Token: 0x0600BE17 RID: 48663 RVA: 0x001B74A0 File Offset: 0x001B56A0
 		public virtual int SkillType
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700372C RID: 14124
-		// (get) Token: 0x0600B30A RID: 45834 RVA: 0x001A1000 File Offset: 0x0019F200
-		// (set) Token: 0x0600B30B RID: 45835 RVA: 0x001A103A File Offset: 0x0019F23A
+		// Token: 0x17003A03 RID: 14851
+		// (get) Token: 0x0600BE18 RID: 48664 RVA: 0x001B74B0 File Offset: 0x001B56B0
+		// (set) Token: 0x0600BE19 RID: 48665 RVA: 0x001B74EA File Offset: 0x001B56EA
 		public virtual bool? IsShowTips
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700372D RID: 14125
-		// (get) Token: 0x0600B30C RID: 45836 RVA: 0x001A1048 File Offset: 0x0019F248
-		// (set) Token: 0x0600B30D RID: 45837 RVA: 0x001A1082 File Offset: 0x0019F282
+		// Token: 0x17003A04 RID: 14852
+		// (get) Token: 0x0600BE1A RID: 48666 RVA: 0x001B74F8 File Offset: 0x001B56F8
+		// (set) Token: 0x0600BE1B RID: 48667 RVA: 0x001B7532 File Offset: 0x001B5732
 		public virtual bool? IsSwitchBack
 		{
 			get
@@ -205,11 +203,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C09 RID: 27657
+		// Token: 0x04007208 RID: 29192
 		[Nullable(2)]
 		protected new IToggleAndHighlightItem FbInstance;
 
-		// Token: 0x04006C0A RID: 27658
+		// Token: 0x04007209 RID: 29193
 		[Nullable(2)]
 		protected new IToggleAndHighlightItem_SetValue PocoInterface;
 	}

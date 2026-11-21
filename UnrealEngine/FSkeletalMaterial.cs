@@ -6,22 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020010F2 RID: 4338
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200027D RID: 637
 	[UnrealObjectPath("/Script/Engine.SkeletalMaterial")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class FSkeletalMaterial : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600F8D4 RID: 63700 RVA: 0x0017003E File Offset: 0x0016E23E
+		// Token: 0x06004200 RID: 16896 RVA: 0x0005E56E File Offset: 0x0005C76E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSkeletalMaterial._ScriptStructPtr != 0) ? FSkeletalMaterial._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.SkeletalMaterial", ref FSkeletalMaterial._ScriptStructPtr);
 		}
 
-		// Token: 0x17003C99 RID: 15513
-		// (get) Token: 0x0600F8D5 RID: 63701 RVA: 0x00170062 File Offset: 0x0016E262
-		// (set) Token: 0x0600F8D6 RID: 63702 RVA: 0x00170076 File Offset: 0x0016E276
+		// Token: 0x17000C22 RID: 3106
+		// (get) Token: 0x06004201 RID: 16897 RVA: 0x0005E592 File Offset: 0x0005C792
+		// (set) Token: 0x06004202 RID: 16898 RVA: 0x0005E5A6 File Offset: 0x0005C7A6
 		[Nullable(2)]
 		public unsafe UMaterialInterface MaterialInterface
 		{
@@ -37,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C9A RID: 15514
-		// (get) Token: 0x0600F8D7 RID: 63703 RVA: 0x0017008B File Offset: 0x0016E28B
-		// (set) Token: 0x0600F8D8 RID: 63704 RVA: 0x0017009F File Offset: 0x0016E29F
+		// Token: 0x17000C23 RID: 3107
+		// (get) Token: 0x06004203 RID: 16899 RVA: 0x0005E5BB File Offset: 0x0005C7BB
+		// (set) Token: 0x06004204 RID: 16900 RVA: 0x0005E5CF File Offset: 0x0005C7CF
 		public unsafe FName MaterialSlotName
 		{
 			get
@@ -52,86 +50,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C9B RID: 15515
-		// (get) Token: 0x0600F8D9 RID: 63705 RVA: 0x001700B4 File Offset: 0x0016E2B4
-		// (set) Token: 0x0600F8DA RID: 63706 RVA: 0x001700F7 File Offset: 0x0016E2F7
-		public FMeshUVChannelInfo UVChannelData
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FMeshUVChannelInfo result;
-				if ((result = this._UVChannelData) == null)
-				{
-					result = (this._UVChannelData = new FMeshUVChannelInfo(base.NativePtr + (IntPtr)FSkeletalMaterial.__PropertyOffset_UVChannelData, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FMeshUVChannelInfo.StaticStruct(), base.NativePtr + (IntPtr)FSkeletalMaterial.__PropertyOffset_UVChannelData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0600F8DB RID: 63707 RVA: 0x00170118 File Offset: 0x0016E318
+		// Token: 0x06004205 RID: 16901 RVA: 0x0005E5E4 File Offset: 0x0005C7E4
 		public FSkeletalMaterial()
 		{
 		}
 
-		// Token: 0x0600F8DC RID: 63708 RVA: 0x00170120 File Offset: 0x0016E320
-		public FSkeletalMaterial(UMaterialInterface MaterialInterface, FName MaterialSlotName, bool bEnableShadowCasting_DEPRECATED, bool bRecomputeTangent_DEPRECATED, FName ImportedMaterialSlotName, FMeshUVChannelInfo UVChannelData)
-		{
-			this.MaterialInterface = MaterialInterface;
-			this.MaterialSlotName = MaterialSlotName;
-			this.UVChannelData = UVChannelData;
-		}
-
-		// Token: 0x0600F8DD RID: 63709 RVA: 0x0017013E File Offset: 0x0016E33E
+		// Token: 0x06004206 RID: 16902 RVA: 0x0005E5EC File Offset: 0x0005C7EC
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSkeletalMaterial.StaticStruct();
 		}
 
-		// Token: 0x0600F8DE RID: 63710 RVA: 0x0017014A File Offset: 0x0016E34A
+		// Token: 0x06004207 RID: 16903 RVA: 0x0005E5F8 File Offset: 0x0005C7F8
 		[NullableContext(2)]
 		public FSkeletalMaterial(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600F8DF RID: 63711 RVA: 0x00170154 File Offset: 0x0016E354
+		// Token: 0x06004208 RID: 16904 RVA: 0x0005E602 File Offset: 0x0005C802
 		public FSkeletalMaterial(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600F8E0 RID: 63712 RVA: 0x0017015F File Offset: 0x0016E35F
+		// Token: 0x06004209 RID: 16905 RVA: 0x0005E60D File Offset: 0x0005C80D
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSkeletalMaterial(Pointer, false, true);
 		}
 
-		// Token: 0x0600F8E1 RID: 63713 RVA: 0x00170169 File Offset: 0x0016E369
+		// Token: 0x0600420A RID: 16906 RVA: 0x0005E617 File Offset: 0x0005C817
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSkeletalMaterial(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400866D RID: 34413
+		// Token: 0x040019D1 RID: 6609
+		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.SkeletalMaterial";
 
-		// Token: 0x0400866E RID: 34414
+		// Token: 0x040019D2 RID: 6610
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400866F RID: 34415
+		// Token: 0x040019D3 RID: 6611
 		internal static int __PropertyOffset_MaterialInterface;
 
-		// Token: 0x04008670 RID: 34416
+		// Token: 0x040019D4 RID: 6612
 		internal static int __PropertyOffset_MaterialSlotName;
-
-		// Token: 0x04008671 RID: 34417
-		internal static int __PropertyOffset_UVChannelData;
-
-		// Token: 0x04008672 RID: 34418
-		[Nullable(2)]
-		private FMeshUVChannelInfo _UVChannelData;
 	}
 }

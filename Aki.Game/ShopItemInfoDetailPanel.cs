@@ -14,14 +14,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029F8 RID: 10744
+// Token: 0x02001F73 RID: 8051
 [NullableContext(2)]
 [Nullable(0)]
 public class ShopItemInfoDetailPanel : UiPanelBase
 {
-	// Token: 0x17001DC3 RID: 7619
-	// (get) Token: 0x06016494 RID: 91284 RVA: 0x005A34B3 File Offset: 0x005A16B3
-	// (set) Token: 0x06016495 RID: 91285 RVA: 0x005A34BC File Offset: 0x005A16BC
+	// Token: 0x17001E1C RID: 7708
+	// (get) Token: 0x06013E9B RID: 81563 RVA: 0x005CE48B File Offset: 0x005CC68B
+	// (set) Token: 0x06013E9C RID: 81564 RVA: 0x005CE494 File Offset: 0x005CC694
 	private int BuyCount
 	{
 		get
@@ -48,7 +48,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016496 RID: 91286 RVA: 0x005A35E0 File Offset: 0x005A17E0
+	// Token: 0x06013E9D RID: 81565 RVA: 0x005CE5B8 File Offset: 0x005CC7B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -91,7 +91,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016497 RID: 91287 RVA: 0x005A38E0 File Offset: 0x005A1AE0
+	// Token: 0x06013E9E RID: 81566 RVA: 0x005CE8B8 File Offset: 0x005CCAB8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShopItemInfoDetailPanel.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -102,7 +102,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016498 RID: 91288 RVA: 0x005A3924 File Offset: 0x005A1B24
+	// Token: 0x06013E9F RID: 81567 RVA: 0x005CE8FC File Offset: 0x005CCAFC
 	protected override void OnStart()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -133,26 +133,26 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		base.GetItem(29).SetUIActive(false);
 	}
 
-	// Token: 0x06016499 RID: 91289 RVA: 0x005A3A1A File Offset: 0x005A1C1A
+	// Token: 0x06013EA0 RID: 81568 RVA: 0x005CE9F2 File Offset: 0x005CCBF2
 	private void ValueChangeFunction(int selectValue)
 	{
 		this.BuyCount = selectValue;
 	}
 
-	// Token: 0x0601649A RID: 91290 RVA: 0x005A3A23 File Offset: 0x005A1C23
+	// Token: 0x06013EA1 RID: 81569 RVA: 0x005CE9FB File Offset: 0x005CCBFB
 	[NullableContext(1)]
 	private AttributeItem InitDetail()
 	{
 		return new AttributeItem();
 	}
 
-	// Token: 0x0601649B RID: 91291 RVA: 0x005A3A2A File Offset: 0x005A1C2A
+	// Token: 0x06013EA2 RID: 81570 RVA: 0x005CEA02 File Offset: 0x005CCC02
 	private void UpdateAttribute()
 	{
 		this.AttributeVertical.RefreshByData(this.CommonTipsData.AttributeList, null, false);
 	}
 
-	// Token: 0x0601649C RID: 91292 RVA: 0x005A3A44 File Offset: 0x005A1C44
+	// Token: 0x06013EA3 RID: 81571 RVA: 0x005CEA1C File Offset: 0x005CCC1C
 	[NullableContext(1)]
 	private void SequenceEvent(string sequenceName, string eventName)
 	{
@@ -167,7 +167,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601649D RID: 91293 RVA: 0x005A3A78 File Offset: 0x005A1C78
+	// Token: 0x06013EA4 RID: 81572 RVA: 0x005CEA50 File Offset: 0x005CCC50
 	protected override void OnBeforeDestroy()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -182,7 +182,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601649E RID: 91294 RVA: 0x005A3AB8 File Offset: 0x005A1CB8
+	// Token: 0x06013EA5 RID: 81573 RVA: 0x005CEA90 File Offset: 0x005CCC90
 	public void UpdatePanel(ShopPanelData panelData = null)
 	{
 		this.ShopPanelData = ((panelData != null) ? panelData : this.ShopPanelData);
@@ -258,7 +258,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		this.UpdateItemTips(itemDataTypeByConfigId);
 	}
 
-	// Token: 0x0601649F RID: 91295 RVA: 0x005A3E58 File Offset: 0x005A2058
+	// Token: 0x06013EA6 RID: 81574 RVA: 0x005CEE30 File Offset: 0x005CD030
 	protected int GetMaxCanBuyCount()
 	{
 		int num = InventoryModel.Instance.GetItemCountByConfigId(this.ShopPanelData.CurrencyId, 0) / this.ShopPanelData.SingleBuyPrice;
@@ -269,7 +269,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		return num;
 	}
 
-	// Token: 0x060164A0 RID: 91296 RVA: 0x005A3EBC File Offset: 0x005A20BC
+	// Token: 0x06013EA7 RID: 81575 RVA: 0x005CEE94 File Offset: 0x005CD094
 	protected void UpdateItemTips(InventoryDefine.EItemDataType itemType)
 	{
 		this.CloseUiItem();
@@ -299,7 +299,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060164A1 RID: 91297 RVA: 0x005A3F34 File Offset: 0x005A2134
+	// Token: 0x06013EA8 RID: 81576 RVA: 0x005CEF0C File Offset: 0x005CD10C
 	protected void CloseUiItem()
 	{
 		UUIVerticalLayout verticalLayout = base.GetVerticalLayout(20);
@@ -310,7 +310,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		base.GetItem(17).SetUIActive(false);
 	}
 
-	// Token: 0x060164A2 RID: 91298 RVA: 0x005A3F68 File Offset: 0x005A2168
+	// Token: 0x06013EA9 RID: 81577 RVA: 0x005CEF40 File Offset: 0x005CD140
 	[NullableContext(1)]
 	protected void UpdateLockState(ShopPanelData panelData)
 	{
@@ -358,7 +358,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060164A3 RID: 91299 RVA: 0x005A4114 File Offset: 0x005A2314
+	// Token: 0x06013EAA RID: 81578 RVA: 0x005CF0EC File Offset: 0x005CD2EC
 	protected void SetWeaponTips()
 	{
 		base.GetItem(17).SetUIActive(true);
@@ -374,7 +374,7 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		this.TipsWeaponItem.UpdateItem(weaponConfigByItemId.Value, weaponTipsData.ResonanceLevel, localTextNew);
 	}
 
-	// Token: 0x060164A4 RID: 91300 RVA: 0x005A4190 File Offset: 0x005A2390
+	// Token: 0x06013EAB RID: 81579 RVA: 0x005CF168 File Offset: 0x005CD368
 	private void BuyClick()
 	{
 		if (InventoryModel.Instance.GetItemCountByConfigId(this.ShopPanelData.CurrencyId, 0) >= this.ShopPanelData.SingleBuyPrice * this.Count)
@@ -397,13 +397,13 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		ScrollingTipsController.Instance.ShowTipsByText(text);
 	}
 
-	// Token: 0x060164A5 RID: 91301 RVA: 0x005A4262 File Offset: 0x005A2462
+	// Token: 0x06013EAC RID: 81580 RVA: 0x005CF23A File Offset: 0x005CD43A
 	private void OnCurrencyNodeButtonClick()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ShopPanelData.CurrencyId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ShopPanelData.CurrencyId, true, null, false);
 	}
 
-	// Token: 0x060164A6 RID: 91302 RVA: 0x005A427B File Offset: 0x005A247B
+	// Token: 0x06013EAD RID: 81581 RVA: 0x005CF254 File Offset: 0x005CD454
 	public object GetParams()
 	{
 		ShopPanelData shopPanelData = this.ShopPanelData;
@@ -414,28 +414,28 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 		return shopPanelData.ParamData;
 	}
 
-	// Token: 0x0400A5D0 RID: 42448
+	// Token: 0x0400A9BA RID: 43450
 	private readonly FColor soldOutColor = FColor.FromHex("FFFFFFFF");
 
-	// Token: 0x0400A5D1 RID: 42449
+	// Token: 0x0400A9BB RID: 43451
 	private readonly FColor coinNotEnoughColor = FColor.FromHex("9D2437FF");
 
-	// Token: 0x0400A5D2 RID: 42450
+	// Token: 0x0400A9BC RID: 43452
 	private const int SECONDS_PER_DAY = 86400;
 
-	// Token: 0x0400A5D3 RID: 42451
+	// Token: 0x0400A9BD RID: 43453
 	private ShopPanelData ShopPanelData;
 
-	// Token: 0x0400A5D4 RID: 42452
+	// Token: 0x0400A9BE RID: 43454
 	protected CommonTipsData CommonTipsData;
 
-	// Token: 0x0400A5D5 RID: 42453
+	// Token: 0x0400A9BF RID: 43455
 	private int Count;
 
-	// Token: 0x0400A5D6 RID: 42454
+	// Token: 0x0400A9C0 RID: 43456
 	private TipsWeaponItem TipsWeaponItem;
 
-	// Token: 0x0400A5D7 RID: 42455
+	// Token: 0x0400A9C1 RID: 43457
 	[Nullable(new byte[]
 	{
 		2,
@@ -444,81 +444,81 @@ public class ShopItemInfoDetailPanel : UiPanelBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeVertical;
 
-	// Token: 0x0400A5D8 RID: 42456
+	// Token: 0x0400A9C2 RID: 43458
 	private UUIInteractionGroup BuyButtonInteractGroup;
 
-	// Token: 0x0400A5D9 RID: 42457
+	// Token: 0x0400A9C3 RID: 43459
 	private FColor? PurchaseTextOriginColor;
 
-	// Token: 0x0400A5DA RID: 42458
+	// Token: 0x0400A9C4 RID: 43460
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x0400A5DB RID: 42459
+	// Token: 0x0400A9C5 RID: 43461
 	private int BuyCountMax;
 
-	// Token: 0x0200902F RID: 36911
+	// Token: 0x02008276 RID: 33398
 	[NullableContext(0)]
 	private enum EShopItemInfoDetailViewDefine
 	{
-		// Token: 0x0402EAEB RID: 191211
+		// Token: 0x0402A1E3 RID: 172515
 		Name,
-		// Token: 0x0402EAEC RID: 191212
+		// Token: 0x0402A1E4 RID: 172516
 		Type,
-		// Token: 0x0402EAED RID: 191213
+		// Token: 0x0402A1E5 RID: 172517
 		EffectDescribe,
-		// Token: 0x0402EAEE RID: 191214
+		// Token: 0x0402A1E6 RID: 172518
 		Describe,
-		// Token: 0x0402EAEF RID: 191215
+		// Token: 0x0402A1E7 RID: 172519
 		LimitCountText,
-		// Token: 0x0402EAF0 RID: 191216
+		// Token: 0x0402A1E8 RID: 172520
 		CurrencyIcon,
-		// Token: 0x0402EAF1 RID: 191217
+		// Token: 0x0402A1E9 RID: 172521
 		PurchaseText,
-		// Token: 0x0402EAF2 RID: 191218
+		// Token: 0x0402A1EA RID: 172522
 		BuyButton,
-		// Token: 0x0402EAF3 RID: 191219
+		// Token: 0x0402A1EB RID: 172523
 		BuyLimitItem,
-		// Token: 0x0402EAF4 RID: 191220
+		// Token: 0x0402A1EC RID: 172524
 		CalculatorItem,
-		// Token: 0x0402EAF5 RID: 191221
+		// Token: 0x0402A1ED RID: 172525
 		NumberSelectItem,
-		// Token: 0x0402EAF6 RID: 191222
+		// Token: 0x0402A1EE RID: 172526
 		LockItem,
-		// Token: 0x0402EAF7 RID: 191223
+		// Token: 0x0402A1EF RID: 172527
 		LockCondition,
-		// Token: 0x0402EAF8 RID: 191224
+		// Token: 0x0402A1F0 RID: 172528
 		LockConditionText,
-		// Token: 0x0402EAF9 RID: 191225
+		// Token: 0x0402A1F1 RID: 172529
 		LockLimitItem,
-		// Token: 0x0402EAFA RID: 191226
+		// Token: 0x0402A1F2 RID: 172530
 		CurrencyNodeButton,
-		// Token: 0x0402EAFB RID: 191227
+		// Token: 0x0402A1F3 RID: 172531
 		HaveText,
-		// Token: 0x0402EAFC RID: 191228
+		// Token: 0x0402A1F4 RID: 172532
 		WeaponItem,
-		// Token: 0x0402EAFD RID: 191229
+		// Token: 0x0402A1F5 RID: 172533
 		LevelText,
-		// Token: 0x0402EAFE RID: 191230
+		// Token: 0x0402A1F6 RID: 172534
 		StarRootItem,
-		// Token: 0x0402EAFF RID: 191231
+		// Token: 0x0402A1F7 RID: 172535
 		DetailVerticalLayout,
-		// Token: 0x0402EB00 RID: 191232
+		// Token: 0x0402A1F8 RID: 172536
 		VerticalScroll,
-		// Token: 0x0402EB01 RID: 191233
+		// Token: 0x0402A1F9 RID: 172537
 		DetailItem,
-		// Token: 0x0402EB02 RID: 191234
+		// Token: 0x0402A1FA RID: 172538
 		OriginPriceText,
-		// Token: 0x0402EB03 RID: 191235
+		// Token: 0x0402A1FB RID: 172539
 		LimitTimePanel,
-		// Token: 0x0402EB04 RID: 191236
+		// Token: 0x0402A1FC RID: 172540
 		LimitTimeText,
-		// Token: 0x0402EB05 RID: 191237
+		// Token: 0x0402A1FD RID: 172541
 		PanelCost,
-		// Token: 0x0402EB06 RID: 191238
+		// Token: 0x0402A1FE RID: 172542
 		TextCost,
-		// Token: 0x0402EB07 RID: 191239
+		// Token: 0x0402A1FF RID: 172543
 		PnlLimitedTime,
-		// Token: 0x0402EB08 RID: 191240
+		// Token: 0x0402A200 RID: 172544
 		PnlAactived
 	}
 }

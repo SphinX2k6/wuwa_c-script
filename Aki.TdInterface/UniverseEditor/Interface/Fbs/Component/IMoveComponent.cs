@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055D5 RID: 21973
+	// Token: 0x02005B73 RID: 23411
 	public struct IMoveComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A28B RID: 41611
-		// (get) Token: 0x060246EB RID: 149227 RVA: 0x00507818 File Offset: 0x00505A18
+		// Token: 0x1700AB13 RID: 43795
+		// (get) Token: 0x060268F8 RID: 157944 RVA: 0x00547D90 File Offset: 0x00545F90
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060246EC RID: 149228 RVA: 0x00507825 File Offset: 0x00505A25
+		// Token: 0x060268F9 RID: 157945 RVA: 0x00547D9D File Offset: 0x00545F9D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060246ED RID: 149229 RVA: 0x0050782C File Offset: 0x00505A2C
+		// Token: 0x060268FA RID: 157946 RVA: 0x00547DA4 File Offset: 0x00545FA4
 		public static IMoveComponent GetRootAsIMoveComponent(ByteBuffer _bb)
 		{
 			return IMoveComponent.GetRootAsIMoveComponent(_bb, default(IMoveComponent));
 		}
 
-		// Token: 0x060246EE RID: 149230 RVA: 0x00507848 File Offset: 0x00505A48
+		// Token: 0x060268FB RID: 157947 RVA: 0x00547DC0 File Offset: 0x00545FC0
 		public static IMoveComponent GetRootAsIMoveComponent(ByteBuffer _bb, IMoveComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060246EF RID: 149231 RVA: 0x00507865 File Offset: 0x00505A65
+		// Token: 0x060268FC RID: 157948 RVA: 0x00547DDD File Offset: 0x00545FDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060246F0 RID: 149232 RVA: 0x00507874 File Offset: 0x00505A74
+		// Token: 0x060268FD RID: 157949 RVA: 0x00547DEC File Offset: 0x00545FEC
 		public IMoveComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A28C RID: 41612
-		// (get) Token: 0x060246F1 RID: 149233 RVA: 0x00507884 File Offset: 0x00505A84
+		// Token: 0x1700AB14 RID: 43796
+		// (get) Token: 0x060268FE RID: 157950 RVA: 0x00547DFC File Offset: 0x00545FFC
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A28D RID: 41613
-		// (get) Token: 0x060246F2 RID: 149234 RVA: 0x005078C4 File Offset: 0x00505AC4
+		// Token: 0x1700AB15 RID: 43797
+		// (get) Token: 0x060268FF RID: 157951 RVA: 0x00547E3C File Offset: 0x0054603C
 		public float InitSpeed
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A28E RID: 41614
-		// (get) Token: 0x060246F3 RID: 149235 RVA: 0x00507904 File Offset: 0x00505B04
+		// Token: 0x1700AB16 RID: 43798
+		// (get) Token: 0x06026900 RID: 157952 RVA: 0x00547E7C File Offset: 0x0054607C
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060246F4 RID: 149236 RVA: 0x00507940 File Offset: 0x00505B40
+		// Token: 0x06026901 RID: 157953 RVA: 0x00547EB8 File Offset: 0x005460B8
 		public static Offset<IMoveComponent> CreateIMoveComponent(FlatBufferBuilder builder, bool Disabled = false, float InitSpeed = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMoveComponent.EndIMoveComponent(builder);
 		}
 
-		// Token: 0x060246F5 RID: 149237 RVA: 0x00507964 File Offset: 0x00505B64
+		// Token: 0x06026902 RID: 157954 RVA: 0x00547EDC File Offset: 0x005460DC
 		public static void StartIMoveComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060246F6 RID: 149238 RVA: 0x0050796D File Offset: 0x00505B6D
+		// Token: 0x06026903 RID: 157955 RVA: 0x00547EE5 File Offset: 0x005460E5
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060246F7 RID: 149239 RVA: 0x00507978 File Offset: 0x00505B78
+		// Token: 0x06026904 RID: 157956 RVA: 0x00547EF0 File Offset: 0x005460F0
 		public static void AddInitSpeed(FlatBufferBuilder builder, float initSpeed)
 		{
 			builder.AddFloat(1, initSpeed, 0.0);
 		}
 
-		// Token: 0x060246F8 RID: 149240 RVA: 0x0050798B File Offset: 0x00505B8B
+		// Token: 0x06026905 RID: 157957 RVA: 0x00547F03 File Offset: 0x00546103
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060246F9 RID: 149241 RVA: 0x00507996 File Offset: 0x00505B96
+		// Token: 0x06026906 RID: 157958 RVA: 0x00547F0E File Offset: 0x0054610E
 		public static Offset<IMoveComponent> EndIMoveComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IMoveComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060246FA RID: 149242 RVA: 0x005079A4 File Offset: 0x00505BA4
+		// Token: 0x06026907 RID: 157959 RVA: 0x00547F1C File Offset: 0x0054611C
 		public IMoveComponentT UnPack()
 		{
 			IMoveComponentT moveComponentT = new IMoveComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return moveComponentT;
 		}
 
-		// Token: 0x060246FB RID: 149243 RVA: 0x005079BF File Offset: 0x00505BBF
+		// Token: 0x06026908 RID: 157960 RVA: 0x00547F37 File Offset: 0x00546137
 		public void UnPackTo(IMoveComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060246FC RID: 149244 RVA: 0x005079E8 File Offset: 0x00505BE8
+		// Token: 0x06026909 RID: 157961 RVA: 0x00547F60 File Offset: 0x00546160
 		public static Offset<IMoveComponent> Pack(FlatBufferBuilder builder, IMoveComponentT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMoveComponent.CreateIMoveComponent(builder, _o.Disabled, _o.InitSpeed, _o.NullMask);
 		}
 
-		// Token: 0x0400E936 RID: 59702
+		// Token: 0x0400F598 RID: 62872
 		private Table __p;
 	}
 }

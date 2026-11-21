@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F4F RID: 28495
+	// Token: 0x020060D0 RID: 24784
 	public class ContinuousArea : Area
 	{
-		// Token: 0x06045519 RID: 283929 RVA: 0x01126487 File Offset: 0x01124687
+		// Token: 0x0603B6C7 RID: 243399 RVA: 0x010D0433 File Offset: 0x010CE633
 		public ContinuousArea(int ContinuousIndex, int StartCellIndex, int EndCellIndex, EArrowDirection ArrowDirection) : base(StartCellIndex, EndCellIndex, ArrowDirection)
 		{
 			this.ContinuousIndex = ContinuousIndex;
 		}
 
-		// Token: 0x0402426F RID: 148079
+		// Token: 0x0401F524 RID: 128292
 		public int ContinuousIndex;
 	}
 }

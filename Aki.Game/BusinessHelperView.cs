@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001319 RID: 4889
+// Token: 0x020007CD RID: 1997
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessHelperView : UiViewBase
 {
-	// Token: 0x06008798 RID: 34712 RVA: 0x001CF1BF File Offset: 0x001CD3BF
+	// Token: 0x06005B33 RID: 23347 RVA: 0x001D802B File Offset: 0x001D622B
 	public BusinessHelperView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008799 RID: 34713 RVA: 0x001CF1D4 File Offset: 0x001CD3D4
+	// Token: 0x06005B34 RID: 23348 RVA: 0x001D8040 File Offset: 0x001D6240
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class BusinessHelperView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600879A RID: 34714 RVA: 0x001CF270 File Offset: 0x001CD470
+	// Token: 0x06005B35 RID: 23349 RVA: 0x001D80DC File Offset: 0x001D62DC
 	private UniTask InitHelperPanel()
 	{
 		BusinessHelperView.<InitHelperPanel>d__7 <InitHelperPanel>d__;
@@ -42,7 +42,7 @@ public class BusinessHelperView : UiViewBase
 		return <InitHelperPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600879B RID: 34715 RVA: 0x001CF2B4 File Offset: 0x001CD4B4
+	// Token: 0x06005B36 RID: 23350 RVA: 0x001D8120 File Offset: 0x001D6320
 	private UniTask InitInteractivePanel()
 	{
 		BusinessHelperView.<InitInteractivePanel>d__8 <InitInteractivePanel>d__;
@@ -53,7 +53,7 @@ public class BusinessHelperView : UiViewBase
 		return <InitInteractivePanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600879C RID: 34716 RVA: 0x001CF2F8 File Offset: 0x001CD4F8
+	// Token: 0x06005B37 RID: 23351 RVA: 0x001D8164 File Offset: 0x001D6364
 	private UniTask InitCaptionItem()
 	{
 		BusinessHelperView.<InitCaptionItem>d__9 <InitCaptionItem>d__;
@@ -64,7 +64,7 @@ public class BusinessHelperView : UiViewBase
 		return <InitCaptionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600879D RID: 34717 RVA: 0x001CF33C File Offset: 0x001CD53C
+	// Token: 0x06005B38 RID: 23352 RVA: 0x001D81A8 File Offset: 0x001D63A8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessHelperView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -75,26 +75,26 @@ public class BusinessHelperView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600879E RID: 34718 RVA: 0x001CF37F File Offset: 0x001CD57F
+	// Token: 0x06005B39 RID: 23353 RVA: 0x001D81EB File Offset: 0x001D63EB
 	protected override void OnBeforeShow()
 	{
 		this.Vc.Show();
 		ActivityMoonChasingController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x0600879F RID: 34719 RVA: 0x001CF396 File Offset: 0x001CD596
+	// Token: 0x06005B3A RID: 23354 RVA: 0x001D8202 File Offset: 0x001D6402
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OpenTipsShopView, new Action(this.Vc.RefreshInteractivePanel));
 	}
 
-	// Token: 0x060087A0 RID: 34720 RVA: 0x001CF3B9 File Offset: 0x001CD5B9
+	// Token: 0x06005B3B RID: 23355 RVA: 0x001D8225 File Offset: 0x001D6425
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OpenTipsShopView, new Action(this.Vc.RefreshInteractivePanel));
 	}
 
-	// Token: 0x060087A1 RID: 34721 RVA: 0x001CF3DC File Offset: 0x001CD5DC
+	// Token: 0x06005B3C RID: 23356 RVA: 0x001D8248 File Offset: 0x001D6448
 	public UniTask RefreshSpine(int roleId)
 	{
 		BusinessHelperView.<RefreshSpine>d__14 <RefreshSpine>d__;
@@ -106,7 +106,7 @@ public class BusinessHelperView : UiViewBase
 		return <RefreshSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060087A2 RID: 34722 RVA: 0x001CF428 File Offset: 0x001CD628
+	// Token: 0x06005B3D RID: 23357 RVA: 0x001D8294 File Offset: 0x001D6494
 	public void SkipToHelpPanel()
 	{
 		BusinessHelperPanel helperPanel = this.HelperPanel;
@@ -126,7 +126,7 @@ public class BusinessHelperView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x060087A3 RID: 34723 RVA: 0x001CF488 File Offset: 0x001CD688
+	// Token: 0x06005B3E RID: 23358 RVA: 0x001D82F4 File Offset: 0x001D64F4
 	public void SkipToInteractivePanel()
 	{
 		BusinessInteractivePanel interactivePanel = this.InteractivePanel;
@@ -146,7 +146,7 @@ public class BusinessHelperView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x060087A4 RID: 34724 RVA: 0x001CF4E8 File Offset: 0x001CD6E8
+	// Token: 0x06005B3F RID: 23359 RVA: 0x001D8354 File Offset: 0x001D6554
 	public void RefreshInteractivePanel()
 	{
 		BusinessInteractivePanel interactivePanel = this.InteractivePanel;
@@ -157,7 +157,7 @@ public class BusinessHelperView : UiViewBase
 		interactivePanel.Refresh().Forget();
 	}
 
-	// Token: 0x060087A5 RID: 34725 RVA: 0x001CF500 File Offset: 0x001CD700
+	// Token: 0x06005B40 RID: 23360 RVA: 0x001D836C File Offset: 0x001D656C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -194,7 +194,7 @@ public class BusinessHelperView : UiViewBase
 		}
 	}
 
-	// Token: 0x060087A6 RID: 34726 RVA: 0x001CF569 File Offset: 0x001CD769
+	// Token: 0x06005B41 RID: 23361 RVA: 0x001D83D5 File Offset: 0x001D65D5
 	public void ShowView(bool inInInteractive)
 	{
 		if (MoonChasingModel.Instance.CheckRoleFosterTipsRedDotState())
@@ -212,41 +212,41 @@ public class BusinessHelperView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003C79 RID: 15481
+	// Token: 0x04003D11 RID: 15633
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003C7A RID: 15482
+	// Token: 0x04003D12 RID: 15634
 	[Nullable(2)]
 	protected BusinessHelperPanel HelperPanel;
 
-	// Token: 0x04003C7B RID: 15483
+	// Token: 0x04003D13 RID: 15635
 	[Nullable(2)]
 	protected BusinessInteractivePanel InteractivePanel;
 
-	// Token: 0x04003C7C RID: 15484
+	// Token: 0x04003D14 RID: 15636
 	private readonly BusinessHelperViewController Vc = new BusinessHelperViewController();
 
-	// Token: 0x02007966 RID: 31078
+	// Token: 0x02006AF0 RID: 27376
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027FB8 RID: 163768
+		// Token: 0x040232E5 RID: 144101
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027FB9 RID: 163769
+		// Token: 0x040232E6 RID: 144102
 		public const int HelperItem = 1;
 
-		// Token: 0x04027FBA RID: 163770
+		// Token: 0x040232E7 RID: 144103
 		public const int InteractiveItem = 2;
 
-		// Token: 0x04027FBB RID: 163771
+		// Token: 0x040232E8 RID: 144104
 		public const int RoleSpineItem = 3;
 
-		// Token: 0x04027FBC RID: 163772
+		// Token: 0x040232E9 RID: 144105
 		public const int RoleSpine = 4;
 
-		// Token: 0x04027FBD RID: 163773
+		// Token: 0x040232EA RID: 144106
 		public const int LockItem = 5;
 	}
 }

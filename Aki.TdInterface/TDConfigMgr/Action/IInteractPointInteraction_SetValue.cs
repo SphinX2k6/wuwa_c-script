@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B57 RID: 6999
+	// Token: 0x02001D06 RID: 7430
 	public class IInteractPointInteraction_SetValue
 	{
-		// Token: 0x04005BB1 RID: 23473
+		// Token: 0x04006050 RID: 24656
 		public EInteractPointInteractionType Type;
 	}
 }

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 {
-	// Token: 0x02006A6E RID: 27246
+	// Token: 0x02005BCB RID: 23499
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractBoxQueryManager : Singleton
 	{
-		// Token: 0x06043BC7 RID: 277447 RVA: 0x01094530 File Offset: 0x01092730
-		public List<int> RegisterSnapshot(Vector baseLocation, Quat baseRotation, List<IBoxDesc> boxes)
+		// Token: 0x06039C15 RID: 236565 RVA: 0x01038D64 File Offset: 0x01036F64
+		public List<int> RegisterSnapshot(Vector baseLocation, Quat baseRotation, IEnumerable<IBoxDesc> boxes)
 		{
 			List<int> list = new List<int>();
 			foreach (IBoxDesc desc in boxes)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return list;
 		}
 
-		// Token: 0x06043BC8 RID: 277448 RVA: 0x010945C4 File Offset: 0x010927C4
+		// Token: 0x06039C16 RID: 236566 RVA: 0x01038DF0 File Offset: 0x01036FF0
 		public void AddRef(int id)
 		{
 			SolidBox solidBox;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BC9 RID: 277449 RVA: 0x010945F4 File Offset: 0x010927F4
+		// Token: 0x06039C17 RID: 236567 RVA: 0x01038E20 File Offset: 0x01037020
 		public void Release(int id)
 		{
 			SolidBox solidBox;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BCA RID: 277450 RVA: 0x0109463C File Offset: 0x0109283C
+		// Token: 0x06039C18 RID: 236568 RVA: 0x01038E68 File Offset: 0x01037068
 		public void QueryAll(Vector point, HashSet<int> outResult)
 		{
 			foreach (KeyValuePair<int, SolidBox> keyValuePair in this.Boxes)
@@ -69,21 +69,21 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BCB RID: 277451 RVA: 0x010946AC File Offset: 0x010928AC
+		// Token: 0x06039C19 RID: 236569 RVA: 0x01038ED8 File Offset: 0x010370D8
 		[NullableContext(2)]
 		public IBoxSnapshot GetBoxSnapshot(int id)
 		{
 			return this.Boxes.GetValueOrDefault(id);
 		}
 
-		// Token: 0x06043BCC RID: 277452 RVA: 0x010946BA File Offset: 0x010928BA
+		// Token: 0x06039C1A RID: 236570 RVA: 0x01038EE6 File Offset: 0x010370E6
 		public void Clear()
 		{
 			this.Boxes.Clear();
 			this.NextId = 1;
 		}
 
-		// Token: 0x06043BCD RID: 277453 RVA: 0x010946D0 File Offset: 0x010928D0
+		// Token: 0x06039C1B RID: 236571 RVA: 0x01038EFC File Offset: 0x010370FC
 		private void RefreshBox(SolidBox box, Vector baseLocation, Quat baseRotation, IBoxDesc desc)
 		{
 			box.Position.DeepCopy(baseLocation);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			worldAabbMax.Z = worldPosition.Z + num3;
 		}
 
-		// Token: 0x06043BCE RID: 277454 RVA: 0x010948C4 File Offset: 0x01092AC4
+		// Token: 0x06039C1C RID: 236572 RVA: 0x010390F0 File Offset: 0x010372F0
 		private bool ContainsInBox(SolidBox box, Vector point)
 		{
 			Vector worldAabbMin = box.WorldAabbMin;
@@ -138,8 +138,8 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			return num <= halfExtent.X && num2 <= halfExtent.Y && num3 <= halfExtent.Z;
 		}
 
-		// Token: 0x1700992F RID: 39215
-		// (get) Token: 0x06043BCF RID: 277455 RVA: 0x010949B8 File Offset: 0x01092BB8
+		// Token: 0x17006E14 RID: 28180
+		// (get) Token: 0x06039C1D RID: 236573 RVA: 0x010391E4 File Offset: 0x010373E4
 		public static InteractBoxQueryManager Instance
 		{
 			get
@@ -153,12 +153,12 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			}
 		}
 
-		// Token: 0x06043BD0 RID: 277456 RVA: 0x010949DB File Offset: 0x01092BDB
+		// Token: 0x06039C1E RID: 236574 RVA: 0x01039207 File Offset: 0x01037407
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043BD1 RID: 277457 RVA: 0x010949DD File Offset: 0x01092BDD
+		// Token: 0x06039C1F RID: 236575 RVA: 0x01039209 File Offset: 0x01037409
 		public static void ResetStaticDefaultValue()
 		{
 			InteractBoxQueryManager instance = InteractBoxQueryManager._instance;
@@ -169,28 +169,28 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract
 			InteractBoxQueryManager._instance = null;
 		}
 
-		// Token: 0x06043BD2 RID: 277458 RVA: 0x010949F6 File Offset: 0x01092BF6
+		// Token: 0x06039C20 RID: 236576 RVA: 0x01039222 File Offset: 0x01037422
 		static InteractBoxQueryManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InteractBoxQueryManager.CreateStaticDefaultValue), new Action(InteractBoxQueryManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023637 RID: 144951
+		// Token: 0x0401E829 RID: 124969
 		private int NextId = 1;
 
-		// Token: 0x04023638 RID: 144952
+		// Token: 0x0401E82A RID: 124970
 		private readonly Dictionary<int, SolidBox> Boxes = new Dictionary<int, SolidBox>();
 
-		// Token: 0x04023639 RID: 144953
+		// Token: 0x0401E82B RID: 124971
 		private readonly Vector TempVector1 = Vector.Create();
 
-		// Token: 0x0402363A RID: 144954
+		// Token: 0x0401E82C RID: 124972
 		private readonly Vector TempVector2 = Vector.Create();
 
-		// Token: 0x0402363B RID: 144955
+		// Token: 0x0401E82D RID: 124973
 		private readonly Vector TempVector3 = Vector.Create();
 
-		// Token: 0x0402363C RID: 144956
+		// Token: 0x0401E82E RID: 124974
 		[Nullable(2)]
 		private static InteractBoxQueryManager _instance;
 	}

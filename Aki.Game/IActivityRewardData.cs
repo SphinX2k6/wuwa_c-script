@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010A8 RID: 4264
+// Token: 0x0200055C RID: 1372
 [NullableContext(2)]
 public interface IActivityRewardData
 {
-	// Token: 0x17000927 RID: 2343
-	// (get) Token: 0x06006ED6 RID: 28374
-	// (set) Token: 0x06006ED7 RID: 28375
+	// Token: 0x17000947 RID: 2375
+	// (get) Token: 0x0600426C RID: 17004
+	// (set) Token: 0x0600426D RID: 17005
 	int? Id { get; set; }
 
-	// Token: 0x17000928 RID: 2344
-	// (get) Token: 0x06006ED8 RID: 28376
-	// (set) Token: 0x06006ED9 RID: 28377
+	// Token: 0x17000948 RID: 2376
+	// (get) Token: 0x0600426E RID: 17006
+	// (set) Token: 0x0600426F RID: 17007
 	[Nullable(1)]
 	string NameText { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000929 RID: 2345
-	// (get) Token: 0x06006EDA RID: 28378
-	// (set) Token: 0x06006EDB RID: 28379
+	// Token: 0x17000949 RID: 2377
+	// (get) Token: 0x06004270 RID: 17008
+	// (set) Token: 0x06004271 RID: 17009
 	string NameTextId { get; set; }
 
-	// Token: 0x1700092A RID: 2346
-	// (get) Token: 0x06006EDC RID: 28380
-	// (set) Token: 0x06006EDD RID: 28381
+	// Token: 0x1700094A RID: 2378
+	// (get) Token: 0x06004272 RID: 17010
+	// (set) Token: 0x06004273 RID: 17011
 	[Nullable(new byte[]
 	{
 		2,
@@ -39,43 +39,43 @@ public interface IActivityRewardData
 		1
 	})] set; }
 
-	// Token: 0x1700092B RID: 2347
-	// (get) Token: 0x06006EDE RID: 28382
-	// (set) Token: 0x06006EDF RID: 28383
+	// Token: 0x1700094B RID: 2379
+	// (get) Token: 0x06004274 RID: 17012
+	// (set) Token: 0x06004275 RID: 17013
 	TItem[] RewardList { get; set; }
 
-	// Token: 0x1700092C RID: 2348
-	// (get) Token: 0x06006EE0 RID: 28384
-	// (set) Token: 0x06006EE1 RID: 28385
+	// Token: 0x1700094C RID: 2380
+	// (get) Token: 0x06004276 RID: 17014
+	// (set) Token: 0x06004277 RID: 17015
 	EActivityRewardState RewardState { get; set; }
 
-	// Token: 0x1700092D RID: 2349
-	// (get) Token: 0x06006EE2 RID: 28386
-	// (set) Token: 0x06006EE3 RID: 28387
+	// Token: 0x1700094D RID: 2381
+	// (get) Token: 0x06004278 RID: 17016
+	// (set) Token: 0x06004279 RID: 17017
 	string RewardButtonTextId { get; set; }
 
-	// Token: 0x1700092E RID: 2350
-	// (get) Token: 0x06006EE4 RID: 28388
-	// (set) Token: 0x06006EE5 RID: 28389
+	// Token: 0x1700094E RID: 2382
+	// (get) Token: 0x0600427A RID: 17018
+	// (set) Token: 0x0600427B RID: 17019
 	string RewardButtonText { get; set; }
 
-	// Token: 0x1700092F RID: 2351
-	// (get) Token: 0x06006EE6 RID: 28390
-	// (set) Token: 0x06006EE7 RID: 28391
+	// Token: 0x1700094F RID: 2383
+	// (get) Token: 0x0600427C RID: 17020
+	// (set) Token: 0x0600427D RID: 17021
 	bool? RewardButtonRedDot { get; set; }
 
-	// Token: 0x17000930 RID: 2352
-	// (get) Token: 0x06006EE8 RID: 28392
-	// (set) Token: 0x06006EE9 RID: 28393
+	// Token: 0x17000950 RID: 2384
+	// (get) Token: 0x0600427E RID: 17022
+	// (set) Token: 0x0600427F RID: 17023
 	Action ClickFunction { get; set; }
 
-	// Token: 0x17000931 RID: 2353
-	// (get) Token: 0x06006EEA RID: 28394
-	// (set) Token: 0x06006EEB RID: 28395
+	// Token: 0x17000951 RID: 2385
+	// (get) Token: 0x06004280 RID: 17024
+	// (set) Token: 0x06004281 RID: 17025
 	bool? ClickFunctionAndCloseSelf { get; set; }
 
-	// Token: 0x17000932 RID: 2354
-	// (get) Token: 0x06006EEC RID: 28396
-	// (set) Token: 0x06006EED RID: 28397
+	// Token: 0x17000952 RID: 2386
+	// (get) Token: 0x06004282 RID: 17026
+	// (set) Token: 0x06004283 RID: 17027
 	string ProgressText { get; set; }
 }

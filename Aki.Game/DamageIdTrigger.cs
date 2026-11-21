@@ -6,18 +6,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FF5 RID: 12277
+// Token: 0x0200254A RID: 9546
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageIdTrigger : Trigger
 {
-	// Token: 0x0601A03D RID: 106557 RVA: 0x006CFDC6 File Offset: 0x006CDFC6
+	// Token: 0x06017971 RID: 96625 RVA: 0x006F7C62 File Offset: 0x006F5E62
 	[NullableContext(2)]
 	public DamageIdTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x0601A03E RID: 106558 RVA: 0x006CFDE4 File Offset: 0x006CDFE4
+	// Token: 0x06017972 RID: 96626 RVA: 0x006F7C80 File Offset: 0x006F5E80
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -35,7 +35,7 @@ public class DamageIdTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A03F RID: 106559 RVA: 0x006CFE74 File Offset: 0x006CE074
+	// Token: 0x06017973 RID: 96627 RVA: 0x006F7D10 File Offset: 0x006F5F10
 	protected override void OnActive()
 	{
 		if (this.TargetType == ETriggerTargetType.Enemy)
@@ -51,7 +51,7 @@ public class DamageIdTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A040 RID: 106560 RVA: 0x006CFEFC File Offset: 0x006CE0FC
+	// Token: 0x06017974 RID: 96628 RVA: 0x006F7D98 File Offset: 0x006F5F98
 	protected override void OnInactive()
 	{
 		if (this.TargetType == ETriggerTargetType.Enemy)
@@ -67,7 +67,7 @@ public class DamageIdTrigger : Trigger
 		}
 	}
 
-	// Token: 0x0601A041 RID: 106561 RVA: 0x006CFF84 File Offset: 0x006CE184
+	// Token: 0x06017975 RID: 96629 RVA: 0x006F7E20 File Offset: 0x006F6020
 	private void OnEvent(Entity attacker, Entity victim, RequirementPayload req, DamageResult result, FVectorDouble hitPos)
 	{
 		long id = result.DamageData.Id;
@@ -169,18 +169,18 @@ public class DamageIdTrigger : Trigger
 		base.EvaluateAndExecute(null);
 	}
 
-	// Token: 0x0601A042 RID: 106562 RVA: 0x006D012D File Offset: 0x006CE32D
+	// Token: 0x06017976 RID: 96630 RVA: 0x006F7FC9 File Offset: 0x006F61C9
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4E1 RID: 50401
+	// Token: 0x0400C8A9 RID: 51369
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4E2 RID: 50402
+	// Token: 0x0400C8AA RID: 51370
 	protected double DistSquared;
 
-	// Token: 0x0400C4E3 RID: 50403
+	// Token: 0x0400C8AB RID: 51371
 	protected readonly List<long> ListenDamageIds = new List<long>();
 }

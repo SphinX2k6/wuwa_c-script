@@ -2,10 +2,10 @@
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003367 RID: 13159
+// Token: 0x020028D9 RID: 10457
 public class RedDotBattleViewGachaButton : RedDotBase
 {
-	// Token: 0x0601CA24 RID: 117284 RVA: 0x00805910 File Offset: 0x00803B10
+	// Token: 0x0601A71C RID: 108316 RVA: 0x0082BED4 File Offset: 0x0082A0D4
 	protected override bool OnCheck(int uId = 0)
 	{
 		bool flag = GachaModel.Instance.CheckNewGachaPool();
@@ -14,7 +14,7 @@ public class RedDotBattleViewGachaButton : RedDotBase
 		return flag || flag2 || flag3;
 	}
 
-	// Token: 0x0601CA25 RID: 117285 RVA: 0x0080593C File Offset: 0x00803B3C
+	// Token: 0x0601A71D RID: 108317 RVA: 0x0082BF00 File Offset: 0x0082A100
 	private bool CheckNeedShowWeaponSelectRedDot()
 	{
 		ProtoGachaInfo[] gachaInfoArray = GachaModel.Instance.GachaInfoArray;
@@ -38,7 +38,7 @@ public class RedDotBattleViewGachaButton : RedDotBase
 		return false;
 	}
 
-	// Token: 0x0601CA26 RID: 117286 RVA: 0x008059A4 File Offset: 0x00803BA4
+	// Token: 0x0601A71E RID: 108318 RVA: 0x0082BF68 File Offset: 0x0082A168
 	private bool CheckGachaAccumulateRedDot()
 	{
 		ProtoGachaInfo[] gachaInfoArray = GachaModel.Instance.GachaInfoArray;
@@ -60,7 +60,7 @@ public class RedDotBattleViewGachaButton : RedDotBase
 		return false;
 	}
 
-	// Token: 0x0601CA27 RID: 117287 RVA: 0x00805A04 File Offset: 0x00803C04
+	// Token: 0x0601A71F RID: 108319 RVA: 0x0082BFC8 File Offset: 0x0082A1C8
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnOpenGachaChanged, new Action(base.EventCheck));
@@ -68,7 +68,7 @@ public class RedDotBattleViewGachaButton : RedDotBase
 		EventSystem.Instance.Add(EEventName.GachaAccumulateRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CA28 RID: 117288 RVA: 0x00805A68 File Offset: 0x00803C68
+	// Token: 0x0601A720 RID: 108320 RVA: 0x0082C02C File Offset: 0x0082A22C
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnOpenGachaChanged, new Action(base.EventCheck));

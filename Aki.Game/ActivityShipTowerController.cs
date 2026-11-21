@@ -3,64 +3,64 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001502 RID: 5378
+// Token: 0x020009BA RID: 2490
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityShipTowerController : ActivityControllerBase
 {
-	// Token: 0x06009963 RID: 39267 RVA: 0x00213485 File Offset: 0x00211685
+	// Token: 0x06006D3D RID: 27965 RVA: 0x0021D19D File Offset: 0x0021B39D
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06009964 RID: 39268 RVA: 0x00213488 File Offset: 0x00211688
+	// Token: 0x06006D3E RID: 27966 RVA: 0x0021D1A0 File Offset: 0x0021B3A0
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06009965 RID: 39269 RVA: 0x0021348A File Offset: 0x0021168A
+	// Token: 0x06006D3F RID: 27967 RVA: 0x0021D1A2 File Offset: 0x0021B3A2
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityMowingTower2";
 	}
 
-	// Token: 0x06009966 RID: 39270 RVA: 0x00213491 File Offset: 0x00211691
+	// Token: 0x06006D40 RID: 27968 RVA: 0x0021D1A9 File Offset: 0x0021B3A9
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewShipTower();
 	}
 
-	// Token: 0x06009967 RID: 39271 RVA: 0x00213498 File Offset: 0x00211698
+	// Token: 0x06006D41 RID: 27969 RVA: 0x0021D1B0 File Offset: 0x0021B3B0
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.Data = new ActivityShipTowerData();
 		return this.Data;
 	}
 
-	// Token: 0x06009968 RID: 39272 RVA: 0x002134AB File Offset: 0x002116AB
+	// Token: 0x06006D42 RID: 27970 RVA: 0x0021D1C3 File Offset: 0x0021B3C3
 	protected override void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06009969 RID: 39273 RVA: 0x002134AD File Offset: 0x002116AD
+	// Token: 0x06006D43 RID: 27971 RVA: 0x0021D1C5 File Offset: 0x0021B3C5
 	protected override void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x0600996A RID: 39274 RVA: 0x002134AF File Offset: 0x002116AF
+	// Token: 0x06006D44 RID: 27972 RVA: 0x0021D1C7 File Offset: 0x0021B3C7
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OpenActivityViewShipTower, new Action(this.OpenMainView));
 	}
 
-	// Token: 0x0600996B RID: 39275 RVA: 0x002134CD File Offset: 0x002116CD
+	// Token: 0x06006D45 RID: 27973 RVA: 0x0021D1E5 File Offset: 0x0021B3E5
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OpenActivityViewShipTower, new Action(this.OpenMainView));
 	}
 
-	// Token: 0x0600996C RID: 39276 RVA: 0x002134EB File Offset: 0x002116EB
+	// Token: 0x06006D46 RID: 27974 RVA: 0x0021D203 File Offset: 0x0021B403
 	private void OpenMainView()
 	{
 		ActivityController instance = ActivityController.Instance;
@@ -68,7 +68,7 @@ public class ActivityShipTowerController : ActivityControllerBase
 		instance.OpenActivityById((data != null) ? data.Id : 0, EActivityViewOpenType.Other, null, null);
 	}
 
-	// Token: 0x0600996D RID: 39277 RVA: 0x00213510 File Offset: 0x00211710
+	// Token: 0x06006D47 RID: 27975 RVA: 0x0021D228 File Offset: 0x0021B428
 	public static void RefreshActivityRedDot()
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(ActivityType.SlashAndTowerLevelPlay))
@@ -77,8 +77,8 @@ public class ActivityShipTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000D2E RID: 3374
-	// (get) Token: 0x0600996E RID: 39278 RVA: 0x00213578 File Offset: 0x00211778
+	// Token: 0x17000D4F RID: 3407
+	// (get) Token: 0x06006D48 RID: 27976 RVA: 0x0021D290 File Offset: 0x0021B490
 	public static ActivityShipTowerController Instance
 	{
 		get
@@ -87,7 +87,7 @@ public class ActivityShipTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600996F RID: 39279 RVA: 0x0021357F File Offset: 0x0021177F
+	// Token: 0x06006D49 RID: 27977 RVA: 0x0021D297 File Offset: 0x0021B497
 	public static ActivityShipTowerController GetOrCreateInstance()
 	{
 		if (ActivityShipTowerController._Instance == null)
@@ -97,7 +97,7 @@ public class ActivityShipTowerController : ActivityControllerBase
 		return ActivityShipTowerController._Instance;
 	}
 
-	// Token: 0x06009970 RID: 39280 RVA: 0x00213593 File Offset: 0x00211793
+	// Token: 0x06006D4A RID: 27978 RVA: 0x0021D2AB File Offset: 0x0021B4AB
 	public static bool CreateInstance()
 	{
 		if (ActivityShipTowerController._Instance != null)
@@ -108,28 +108,28 @@ public class ActivityShipTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009971 RID: 39281 RVA: 0x002135A9 File Offset: 0x002117A9
+	// Token: 0x06006D4B RID: 27979 RVA: 0x0021D2C1 File Offset: 0x0021B4C1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009972 RID: 39282 RVA: 0x002135AB File Offset: 0x002117AB
+	// Token: 0x06006D4C RID: 27980 RVA: 0x0021D2C3 File Offset: 0x0021B4C3
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityShipTowerController._Instance = null;
 	}
 
-	// Token: 0x06009973 RID: 39283 RVA: 0x002135B3 File Offset: 0x002117B3
+	// Token: 0x06006D4D RID: 27981 RVA: 0x0021D2CB File Offset: 0x0021B4CB
 	static ActivityShipTowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityShipTowerController.CreateStaticDefaultValue), new Action(ActivityShipTowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400436E RID: 17262
+	// Token: 0x04004413 RID: 17427
 	[Nullable(2)]
 	public ActivityShipTowerData Data;
 
-	// Token: 0x0400436F RID: 17263
+	// Token: 0x04004414 RID: 17428
 	[Nullable(2)]
 	private static ActivityShipTowerController _Instance;
 }

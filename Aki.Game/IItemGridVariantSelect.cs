@@ -2,40 +2,40 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018C2 RID: 6338
+// Token: 0x02000D7B RID: 3451
 [NullableContext(2)]
 public interface IItemGridVariantSelect
 {
-	// Token: 0x17000F60 RID: 3936
-	// (get) Token: 0x0600B9D4 RID: 47572
+	// Token: 0x17000F83 RID: 3971
+	// (get) Token: 0x06008DBD RID: 36285
 	bool IsItemGridVariantSelect { get; }
 
-	// Token: 0x0600B9D5 RID: 47573
+	// Token: 0x06008DBE RID: 36286
 	void RefreshItemShowState(bool stateState);
 
-	// Token: 0x0600B9D6 RID: 47574
+	// Token: 0x06008DBF RID: 36287
 	void RefreshReduceButtonShowState(bool stateState);
 
-	// Token: 0x0600B9D7 RID: 47575
+	// Token: 0x06008DC0 RID: 36288
 	UUIItem GetFinishSelectItem();
 
-	// Token: 0x0600B9D8 RID: 47576
+	// Token: 0x06008DC1 RID: 36289
 	UUIItem GetFinishMiddleItem();
 
-	// Token: 0x0600B9D9 RID: 47577
+	// Token: 0x06008DC2 RID: 36290
 	UUIItem GetControlItem();
 
-	// Token: 0x0600B9DA RID: 47578
+	// Token: 0x06008DC3 RID: 36291
 	UUIButtonComponent GetReduceButton();
 
-	// Token: 0x0600B9DB RID: 47579
+	// Token: 0x06008DC4 RID: 36292
 	UUIButtonComponent GetAddButton();
 
-	// Token: 0x0600B9DC RID: 47580
+	// Token: 0x06008DC5 RID: 36293
 	[NullableContext(1)]
 	void SetAddButtonCallBack(Action call);
 
-	// Token: 0x0600B9DD RID: 47581
+	// Token: 0x06008DC6 RID: 36294
 	[NullableContext(1)]
 	void SetReduceClickEvent(Action call);
 }

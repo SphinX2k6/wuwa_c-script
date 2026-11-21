@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F69 RID: 20329
+	// Token: 0x02003F32 RID: 16178
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackTagHighlightManager : QuickHackHighlightManager
 	{
-		// Token: 0x06034138 RID: 213304 RVA: 0x00C36E00 File Offset: 0x00C35000
+		// Token: 0x06028FA6 RID: 167846 RVA: 0x00B805A0 File Offset: 0x00B7E7A0
 		public override void Init(QuickHackDevice config)
 		{
 			base.Init(config);
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x06034139 RID: 213305 RVA: 0x00C36E4C File Offset: 0x00C3504C
+		// Token: 0x06028FA7 RID: 167847 RVA: 0x00B805EC File Offset: 0x00B7E7EC
 		public override void RefreshTargetsHighlight(IEnumerable<EntityHandle> lockTargets, IEnumerable<EntityHandle> onScreenTargets)
 		{
 			IQuickHackHighlightPreProcessResult quickHackHighlightPreProcessResult = base.PreProcessSelectAndOnScreenTargets(lockTargets, onScreenTargets);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603413A RID: 213306 RVA: 0x00C36EA4 File Offset: 0x00C350A4
+		// Token: 0x06028FA8 RID: 167848 RVA: 0x00B80644 File Offset: 0x00B7E844
 		public override void RemoveAllHighlight()
 		{
 			if (this.OnScreenTargetTagId != 0)
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603413B RID: 213307 RVA: 0x00C36EDC File Offset: 0x00C350DC
+		// Token: 0x06028FA9 RID: 167849 RVA: 0x00B8067C File Offset: 0x00B7E87C
 		private void RefreshTargetsTag(int tagId, HashSet<EntityHandle> newTargetSet, HashSet<EntityHandle> currentTargetSet)
 		{
 			List<EntityHandle> list = new List<EntityHandle>();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603413C RID: 213308 RVA: 0x00C3701C File Offset: 0x00C3521C
+		// Token: 0x06028FAA RID: 167850 RVA: 0x00B807BC File Offset: 0x00B7E9BC
 		private void ClearTargetsTag(int tagId, HashSet<EntityHandle> targetSet)
 		{
 			foreach (EntityHandle entityHandle in targetSet)
@@ -109,16 +109,16 @@ namespace CSharpScript.Game.Module.QuickHack
 			targetSet.Clear();
 		}
 
-		// Token: 0x0401BAA7 RID: 113319
+		// Token: 0x0401647C RID: 91260
 		private int LockTargetTagId;
 
-		// Token: 0x0401BAA8 RID: 113320
+		// Token: 0x0401647D RID: 91261
 		private int OnScreenTargetTagId;
 
-		// Token: 0x0401BAA9 RID: 113321
+		// Token: 0x0401647E RID: 91262
 		private readonly HashSet<EntityHandle> LockTargetSet = new HashSet<EntityHandle>();
 
-		// Token: 0x0401BAAA RID: 113322
+		// Token: 0x0401647F RID: 91263
 		private readonly HashSet<EntityHandle> OnScreenTargetSet = new HashSet<EntityHandle>();
 	}
 }

@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000535 RID: 1333
+	// Token: 0x0200059C RID: 1436
 	public class IMovablePlatformVehicleFeature_SetValue
 	{
-		// Token: 0x040013A2 RID: 5026
+		// Token: 0x0400150C RID: 5388
 		public EVehicleFeatureFlag Type;
 
-		// Token: 0x040013A3 RID: 5027
-		[Nullable(1)]
+		// Token: 0x0400150D RID: 5389
 		public List<int> PlayerAttachTags;
 
-		// Token: 0x040013A4 RID: 5028
+		// Token: 0x0400150E RID: 5390
 		public int SafePointId;
 	}
 }

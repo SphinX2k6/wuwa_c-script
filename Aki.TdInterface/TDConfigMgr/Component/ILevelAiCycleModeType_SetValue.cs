@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004B7 RID: 1207
+	// Token: 0x02000510 RID: 1296
 	public class ILevelAiCycleModeType_SetValue
 	{
-		// Token: 0x04001210 RID: 4624
+		// Token: 0x04001332 RID: 4914
 		public ELevelAiCycleMode Type;
 	}
 }

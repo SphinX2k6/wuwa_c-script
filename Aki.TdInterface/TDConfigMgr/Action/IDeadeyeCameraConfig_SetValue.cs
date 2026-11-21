@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001971 RID: 6513
+	// Token: 0x02001AFC RID: 6908
 	public class IDeadeyeCameraConfig_SetValue
 	{
-		// Token: 0x04005704 RID: 22276
+		// Token: 0x04005B59 RID: 23385
 		public int LookAtPointId;
 
-		// Token: 0x04005705 RID: 22277
+		// Token: 0x04005B5A RID: 23386
 		public int? SubLensTag;
 
-		// Token: 0x04005706 RID: 22278
+		// Token: 0x04005B5B RID: 23387
 		public float TransitionTime;
 	}
 }

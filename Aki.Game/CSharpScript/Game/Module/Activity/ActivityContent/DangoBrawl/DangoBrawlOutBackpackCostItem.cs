@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006827 RID: 26663
+	// Token: 0x02005777 RID: 22391
 	public class DangoBrawlOutBackpackCostItem : UiPanelBase
 	{
-		// Token: 0x060428A6 RID: 272550 RVA: 0x0102B9E8 File Offset: 0x01029BE8
+		// Token: 0x060373FA RID: 226298 RVA: 0x00F6CF24 File Offset: 0x00F6B124
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060428A7 RID: 272551 RVA: 0x0102BA54 File Offset: 0x01029C54
+		// Token: 0x060373FB RID: 226299 RVA: 0x00F6CF90 File Offset: 0x00F6B190
 		[NullableContext(1)]
 		public void SetCostIcon(string iconPath)
 		{
 			this.SetSpriteByPath(iconPath, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x060428A8 RID: 272552 RVA: 0x0102BA7A File Offset: 0x01029C7A
+		// Token: 0x060373FC RID: 226300 RVA: 0x00F6CFB6 File Offset: 0x00F6B1B6
 		public void SetCostNum(int costNum)
 		{
 			UUIText text = base.GetText(1);
@@ -42,12 +42,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			text.SetText(costNum.ToString(), true);
 		}
 
-		// Token: 0x0200C9CF RID: 51663
+		// Token: 0x0200B39B RID: 45979
 		private enum EComponents
 		{
-			// Token: 0x0403CF7E RID: 249726
+			// Token: 0x04037868 RID: 227432
 			SprCost,
-			// Token: 0x0403CF7F RID: 249727
+			// Token: 0x04037869 RID: 227433
 			TextCost
 		}
 	}

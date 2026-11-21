@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x0200184D RID: 6221
+// Token: 0x02000D06 RID: 3334
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class FilterConfig : ConfigBase
 {
-	// Token: 0x0600B634 RID: 46644 RVA: 0x002933CF File Offset: 0x002915CF
+	// Token: 0x06008A1D RID: 35357 RVA: 0x0029DADF File Offset: 0x0029BCDF
 	protected override bool OnInit()
 	{
 		this.Phantom4cMainProperty = ConfigCommonParamById.GetIntArrayConfig("Phantom4CMainProperty");
@@ -19,25 +19,25 @@ public class FilterConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B635 RID: 46645 RVA: 0x00293402 File Offset: 0x00291602
+	// Token: 0x06008A1E RID: 35358 RVA: 0x0029DB12 File Offset: 0x0029BD12
 	public Filter? GetFilterConfig(int id)
 	{
 		return ConfigFilterById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600B636 RID: 46646 RVA: 0x0029340B File Offset: 0x0029160B
+	// Token: 0x06008A1F RID: 35359 RVA: 0x0029DB1B File Offset: 0x0029BD1B
 	public FilterRule? GetFilterRuleConfig(int id)
 	{
 		return ConfigFilterRuleById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600B637 RID: 46647 RVA: 0x00293414 File Offset: 0x00291614
+	// Token: 0x06008A20 RID: 35360 RVA: 0x0029DB24 File Offset: 0x0029BD24
 	public int GetFilterId(EFilterSortGroupId groupId)
 	{
 		return ConfigFilterSortGroupById.GetConfig((int)groupId, true).Value.FilterId;
 	}
 
-	// Token: 0x0600B638 RID: 46648 RVA: 0x00293438 File Offset: 0x00291638
+	// Token: 0x06008A21 RID: 35361 RVA: 0x0029DB48 File Offset: 0x0029BD48
 	public IReadOnlyList<int> GetCostByMainMainProp(int mainPropId)
 	{
 		List<int> list = new List<int>();
@@ -56,7 +56,7 @@ public class FilterConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600B639 RID: 46649 RVA: 0x0029348E File Offset: 0x0029168E
+	// Token: 0x06008A22 RID: 35362 RVA: 0x0029DB9E File Offset: 0x0029BD9E
 	public IReadOnlyList<int> GetMainPropIdsByCost(int cost)
 	{
 		switch (cost)
@@ -71,8 +71,8 @@ public class FilterConfig : ConfigBase
 		return Array.Empty<int>();
 	}
 
-	// Token: 0x17000F2C RID: 3884
-	// (get) Token: 0x0600B63A RID: 46650 RVA: 0x002934C4 File Offset: 0x002916C4
+	// Token: 0x17000F4F RID: 3919
+	// (get) Token: 0x06008A23 RID: 35363 RVA: 0x0029DBD4 File Offset: 0x0029BDD4
 	public static FilterConfig Instance
 	{
 		get
@@ -81,7 +81,7 @@ public class FilterConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B63B RID: 46651 RVA: 0x002934CB File Offset: 0x002916CB
+	// Token: 0x06008A24 RID: 35364 RVA: 0x0029DBDB File Offset: 0x0029BDDB
 	public static FilterConfig GetOrCreateInstance()
 	{
 		if (FilterConfig._Instance == null)
@@ -91,7 +91,7 @@ public class FilterConfig : ConfigBase
 		return FilterConfig._Instance;
 	}
 
-	// Token: 0x0600B63C RID: 46652 RVA: 0x002934DF File Offset: 0x002916DF
+	// Token: 0x06008A25 RID: 35365 RVA: 0x0029DBEF File Offset: 0x0029BDEF
 	public static bool CreateInstance()
 	{
 		if (FilterConfig._Instance != null)
@@ -102,42 +102,42 @@ public class FilterConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B63D RID: 46653 RVA: 0x002934F5 File Offset: 0x002916F5
+	// Token: 0x06008A26 RID: 35366 RVA: 0x0029DC05 File Offset: 0x0029BE05
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B63E RID: 46654 RVA: 0x002934F7 File Offset: 0x002916F7
+	// Token: 0x06008A27 RID: 35367 RVA: 0x0029DC07 File Offset: 0x0029BE07
 	public static void ResetStaticDefaultValue()
 	{
 		FilterConfig._Instance = null;
 	}
 
-	// Token: 0x0600B63F RID: 46655 RVA: 0x002934FF File Offset: 0x002916FF
+	// Token: 0x06008A28 RID: 35368 RVA: 0x0029DC0F File Offset: 0x0029BE0F
 	static FilterConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FilterConfig.CreateStaticDefaultValue), new Action(FilterConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400525A RID: 21082
+	// Token: 0x04005305 RID: 21253
 	private const int COST_4C = 4;
 
-	// Token: 0x0400525B RID: 21083
+	// Token: 0x04005306 RID: 21254
 	private const int COST_3C = 3;
 
-	// Token: 0x0400525C RID: 21084
+	// Token: 0x04005307 RID: 21255
 	private const int COST_1C = 1;
 
-	// Token: 0x0400525D RID: 21085
+	// Token: 0x04005308 RID: 21256
 	private IReadOnlyList<int> Phantom4cMainProperty;
 
-	// Token: 0x0400525E RID: 21086
+	// Token: 0x04005309 RID: 21257
 	private IReadOnlyList<int> Phantom3cMainProperty;
 
-	// Token: 0x0400525F RID: 21087
+	// Token: 0x0400530A RID: 21258
 	private IReadOnlyList<int> Phantom1cMainProperty;
 
-	// Token: 0x04005260 RID: 21088
+	// Token: 0x0400530B RID: 21259
 	[Nullable(2)]
 	private static FilterConfig _Instance;
 }

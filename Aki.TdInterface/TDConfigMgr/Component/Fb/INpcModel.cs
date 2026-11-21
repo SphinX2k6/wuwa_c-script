@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CE5 RID: 3301
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DDD RID: 3549
 	public class INpcModel : IModelConfig
 	{
-		// Token: 0x06004B63 RID: 19299 RVA: 0x000BC458 File Offset: 0x000BA658
+		// Token: 0x06005070 RID: 20592 RVA: 0x000C790D File Offset: 0x000C5B0D
 		public static INpcModel Create(INpcModel? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001756 RID: 5974
-		// (get) Token: 0x06004B64 RID: 19300 RVA: 0x000BC477 File Offset: 0x000BA677
+		// Token: 0x170018B1 RID: 6321
+		// (get) Token: 0x06005071 RID: 20593 RVA: 0x000C792C File Offset: 0x000C5B2C
 		public override EModelType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001757 RID: 5975
-		// (get) Token: 0x06004B65 RID: 19301 RVA: 0x000BC484 File Offset: 0x000BA684
+		// Token: 0x170018B2 RID: 6322
+		// (get) Token: 0x06005072 RID: 20594 RVA: 0x000C7939 File Offset: 0x000C5B39
 		public virtual string BlueprintPath
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001758 RID: 5976
-		// (get) Token: 0x06004B66 RID: 19302 RVA: 0x000BC491 File Offset: 0x000BA691
+		// Token: 0x170018B3 RID: 6323
+		// (get) Token: 0x06005073 RID: 20595 RVA: 0x000C7946 File Offset: 0x000C5B46
 		public virtual INpcModelConfig NpcModel
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001759 RID: 5977
-		// (get) Token: 0x06004B67 RID: 19303 RVA: 0x000BC4C0 File Offset: 0x000BA6C0
+		// Token: 0x170018B4 RID: 6324
+		// (get) Token: 0x06005074 RID: 20596 RVA: 0x000C7975 File Offset: 0x000C5B75
 		public virtual string Abp
 		{
 			get
@@ -69,19 +67,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700175A RID: 5978
-		// (get) Token: 0x06004B68 RID: 19304 RVA: 0x000BC4D0 File Offset: 0x000BA6D0
+		// Token: 0x170018B5 RID: 6325
+		// (get) Token: 0x06005075 RID: 20597 RVA: 0x000C7984 File Offset: 0x000C5B84
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> BattleSockets
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -104,19 +102,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700175B RID: 5979
-		// (get) Token: 0x06004B69 RID: 19305 RVA: 0x000BC548 File Offset: 0x000BA748
+		// Token: 0x170018B6 RID: 6326
+		// (get) Token: 0x06005076 RID: 20598 RVA: 0x000C79FC File Offset: 0x000C5BFC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> NormalSockets
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -139,8 +137,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700175C RID: 5980
-		// (get) Token: 0x06004B6A RID: 19306 RVA: 0x000BC5C0 File Offset: 0x000BA7C0
+		// Token: 0x170018B7 RID: 6327
+		// (get) Token: 0x06005077 RID: 20599 RVA: 0x000C7A74 File Offset: 0x000C5C74
 		public virtual float? LookingUpAngle
 		{
 			get
@@ -153,8 +151,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700175D RID: 5981
-		// (get) Token: 0x06004B6B RID: 19307 RVA: 0x000BC5F8 File Offset: 0x000BA7F8
+		// Token: 0x170018B8 RID: 6328
+		// (get) Token: 0x06005078 RID: 20600 RVA: 0x000C7AAC File Offset: 0x000C5CAC
 		public virtual EBodyType? BodyType
 		{
 			get
@@ -167,8 +165,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700175E RID: 5982
-		// (get) Token: 0x06004B6C RID: 19308 RVA: 0x000BC630 File Offset: 0x000BA830
+		// Token: 0x170018B9 RID: 6329
+		// (get) Token: 0x06005079 RID: 20601 RVA: 0x000C7AE4 File Offset: 0x000C5CE4
 		public virtual float? NameZaxisOffset
 		{
 			get
@@ -181,35 +179,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B1C RID: 11036
+		// Token: 0x04002DD4 RID: 11732
 		private INpcModel Instance;
 
-		// Token: 0x04002B1D RID: 11037
+		// Token: 0x04002DD5 RID: 11733
 		private INpcModelConfig _NpcModelCache;
 
-		// Token: 0x04002B1E RID: 11038
+		// Token: 0x04002DD6 RID: 11734
 		private bool _NpcModelInited;
 
-		// Token: 0x04002B1F RID: 11039
+		// Token: 0x04002DD7 RID: 11735
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _BattleSocketsCache;
 
-		// Token: 0x04002B20 RID: 11040
+		// Token: 0x04002DD8 RID: 11736
 		private bool _BattleSocketsInited;
 
-		// Token: 0x04002B21 RID: 11041
+		// Token: 0x04002DD9 RID: 11737
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _NormalSocketsCache;
 
-		// Token: 0x04002B22 RID: 11042
+		// Token: 0x04002DDA RID: 11738
 		private bool _NormalSocketsInited;
 	}
 }

@@ -6,30 +6,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006990 RID: 27024
+	// Token: 0x02005AEC RID: 23276
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionBase
 	{
-		// Token: 0x06043413 RID: 275475 RVA: 0x01064FED File Offset: 0x010631ED
+		// Token: 0x0603944B RID: 234571 RVA: 0x01009255 File Offset: 0x01007455
 		public virtual bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			return false;
 		}
 
-		// Token: 0x06043414 RID: 275476 RVA: 0x01064FF0 File Offset: 0x010631F0
+		// Token: 0x0603944C RID: 234572 RVA: 0x01009258 File Offset: 0x01007458
 		public virtual bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			return false;
 		}
 
-		// Token: 0x06043415 RID: 275477 RVA: 0x01064FF3 File Offset: 0x010631F3
+		// Token: 0x0603944D RID: 234573 RVA: 0x0100925B File Offset: 0x0100745B
 		public virtual bool ShouldSkip(EConditionCheckMode mode, ICondition2 conditionInfo)
 		{
 			return false;
 		}
 
-		// Token: 0x06043416 RID: 275478 RVA: 0x01064FF8 File Offset: 0x010631F8
+		// Token: 0x0603944E RID: 234574 RVA: 0x01009260 File Offset: 0x01007460
 		[NullableContext(2)]
 		protected bool CheckCompareValue(string compareType, double checkValue = 0.0, double targetValue = 0.0)
 		{

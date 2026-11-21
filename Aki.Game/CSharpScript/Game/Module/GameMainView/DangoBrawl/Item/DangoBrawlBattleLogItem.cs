@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A0F RID: 23055
+	// Token: 0x020049EB RID: 18923
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 	})]
 	public class DangoBrawlBattleLogItem : GridProxyAbstract<DangoBrawlBattleLogInfo>
 	{
-		// Token: 0x0603A777 RID: 239479 RVA: 0x00DE9764 File Offset: 0x00DE7964
+		// Token: 0x0602F6C0 RID: 194240 RVA: 0x00D39CE4 File Offset: 0x00D37EE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A778 RID: 239480 RVA: 0x00DE9830 File Offset: 0x00DE7A30
+		// Token: 0x0602F6C1 RID: 194241 RVA: 0x00D39DB0 File Offset: 0x00D37FB0
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.DpsTickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnDpsTick), 100f, 1f, null, null, true);
 		}
 
-		// Token: 0x0603A779 RID: 239481 RVA: 0x00DE9861 File Offset: 0x00DE7A61
+		// Token: 0x0602F6C2 RID: 194242 RVA: 0x00D39DE1 File Offset: 0x00D37FE1
 		protected override void OnBeforeDestroy()
 		{
 			if (this.DpsTickHandle != null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603A77A RID: 239482 RVA: 0x00DE989C File Offset: 0x00DE7A9C
+		// Token: 0x0602F6C3 RID: 194243 RVA: 0x00D39E1C File Offset: 0x00D3801C
 		private void OnDpsTick(float delta)
 		{
 			if (this.CurData == null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.SetNumText(this.CurData, dangoBrawlFightingClock.FightingElapsed);
 		}
 
-		// Token: 0x0603A77B RID: 239483 RVA: 0x00DE98EC File Offset: 0x00DE7AEC
+		// Token: 0x0602F6C4 RID: 194244 RVA: 0x00D39E6C File Offset: 0x00D3806C
 		private void SetNumText(DangoBrawlBattleLogInfo data, float elapsedMs)
 		{
 			UUIText text = base.GetText(4);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603A77C RID: 239484 RVA: 0x00DE9928 File Offset: 0x00DE7B28
+		// Token: 0x0602F6C5 RID: 194245 RVA: 0x00D39EA8 File Offset: 0x00D380A8
 		public override void Refresh(DangoBrawlBattleLogInfo data, bool isSelected, int gridIndex)
 		{
 			this.CurData = data;
@@ -168,30 +168,30 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0401E766 RID: 124774
+		// Token: 0x0401920D RID: 102925
 		private const float DPS_TICK_INTERVAL = 100f;
 
-		// Token: 0x0401E767 RID: 124775
+		// Token: 0x0401920E RID: 102926
 		[Nullable(2)]
 		private DangoBrawlBattleLogInfo CurData;
 
-		// Token: 0x0401E768 RID: 124776
+		// Token: 0x0401920F RID: 102927
 		[Nullable(2)]
 		private TimerHandle DpsTickHandle;
 
-		// Token: 0x0200BC7D RID: 48253
+		// Token: 0x0200A686 RID: 42630
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04038DE4 RID: 232932
+			// Token: 0x040337B0 RID: 210864
 			TexQuality,
-			// Token: 0x04038DE5 RID: 232933
+			// Token: 0x040337B1 RID: 210865
 			TexIcon,
-			// Token: 0x04038DE6 RID: 232934
+			// Token: 0x040337B2 RID: 210866
 			Bar,
-			// Token: 0x04038DE7 RID: 232935
+			// Token: 0x040337B3 RID: 210867
 			TxtItemName,
-			// Token: 0x04038DE8 RID: 232936
+			// Token: 0x040337B4 RID: 210868
 			TxtNum
 		}
 	}

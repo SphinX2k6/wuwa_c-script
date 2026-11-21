@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051B4 RID: 20916
+	// Token: 0x02004184 RID: 16772
 	public class CollectRewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x060358DD RID: 219357 RVA: 0x00CAF628 File Offset: 0x00CAD828
+		// Token: 0x0602A7D8 RID: 174040 RVA: 0x00BFCC64 File Offset: 0x00BFAE64
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358DE RID: 219358 RVA: 0x00CAF740 File Offset: 0x00CAD940
+		// Token: 0x0602A7D9 RID: 174041 RVA: 0x00BFCD7C File Offset: 0x00BFAF7C
 		public override void Refresh(int rewardId, bool isSelected, int gridIndex)
 		{
 			this.RewardId = rewardId;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			base.GetText(9).SetText(num.ToString(), true);
 		}
 
-		// Token: 0x060358DF RID: 219359 RVA: 0x00CAF874 File Offset: 0x00CADA74
+		// Token: 0x0602A7DA RID: 174042 RVA: 0x00BFCEB0 File Offset: 0x00BFB0B0
 		private void OnClickReward()
 		{
 			if (this.CallbackClickReward != null)
@@ -100,47 +100,47 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			}
 		}
 
-		// Token: 0x0401C6E4 RID: 116452
+		// Token: 0x04017119 RID: 94489
 		private int RewardId = -1;
 
-		// Token: 0x0401C6E5 RID: 116453
+		// Token: 0x0401711A RID: 94490
 		public ECollectRewardType RewardType;
 
-		// Token: 0x0401C6E6 RID: 116454
+		// Token: 0x0401711B RID: 94491
 		[Nullable(1)]
 		public Action<int, UUIItem> CallbackClickReward;
 
-		// Token: 0x0200B33B RID: 45883
+		// Token: 0x02009D73 RID: 40307
 		private static class EComponents
 		{
-			// Token: 0x0403651E RID: 222494
+			// Token: 0x04030F71 RID: 200561
 			public const int BtnReward = 0;
 
-			// Token: 0x0403651F RID: 222495
+			// Token: 0x04030F72 RID: 200562
 			public const int SpriteBg = 1;
 
-			// Token: 0x04036520 RID: 222496
+			// Token: 0x04030F73 RID: 200563
 			public const int SpriteBgFinish = 2;
 
-			// Token: 0x04036521 RID: 222497
+			// Token: 0x04030F74 RID: 200564
 			public const int SpriteBoxTaken = 3;
 
-			// Token: 0x04036522 RID: 222498
+			// Token: 0x04030F75 RID: 200565
 			public const int SpriteBoxFinish = 4;
 
-			// Token: 0x04036523 RID: 222499
+			// Token: 0x04030F76 RID: 200566
 			public const int SpriteBoxPending = 5;
 
-			// Token: 0x04036524 RID: 222500
+			// Token: 0x04030F77 RID: 200567
 			public const int SpriteIconTaken = 6;
 
-			// Token: 0x04036525 RID: 222501
+			// Token: 0x04030F78 RID: 200568
 			public const int SpriteCubePending = 7;
 
-			// Token: 0x04036526 RID: 222502
+			// Token: 0x04030F79 RID: 200569
 			public const int SpriteCubeTaken = 8;
 
-			// Token: 0x04036527 RID: 222503
+			// Token: 0x04030F7A RID: 200570
 			public const int TextCount = 9;
 		}
 	}

@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E3E RID: 20030
+	// Token: 0x02003E07 RID: 15879
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,33 +20,33 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoleSelectItem : GridProxyAbstract<RogueGainEntry>
 	{
-		// Token: 0x06033A37 RID: 211511 RVA: 0x00C15F9E File Offset: 0x00C1419E
+		// Token: 0x060288A2 RID: 166050 RVA: 0x00B5F4C6 File Offset: 0x00B5D6C6
 		public override void Refresh(RogueGainEntry data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x06033A38 RID: 211512 RVA: 0x00C15FA7 File Offset: 0x00C141A7
+		// Token: 0x060288A3 RID: 166051 RVA: 0x00B5F4CF File Offset: 0x00B5D6CF
 		public void Update(RogueGainEntry rogueGainEntry)
 		{
 			this.RogueGainEntry = rogueGainEntry;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06033A39 RID: 211513 RVA: 0x00C15FB6 File Offset: 0x00C141B6
+		// Token: 0x060288A4 RID: 166052 RVA: 0x00B5F4DE File Offset: 0x00B5D6DE
 		public void SetLevelUpItem(bool bActive)
 		{
 			base.GetItem(7).SetUIActive(bActive);
 		}
 
-		// Token: 0x06033A3A RID: 211514 RVA: 0x00C15FC5 File Offset: 0x00C141C5
+		// Token: 0x060288A5 RID: 166053 RVA: 0x00B5F4ED File Offset: 0x00B5D6ED
 		public void SetSecondColorForAttrItem(HashSet<long> affixEntryId)
 		{
 			this.NewAffixEntryIdList = affixEntryId;
 			this.RefreshAffixEntryList();
 		}
 
-		// Token: 0x06033A3B RID: 211515 RVA: 0x00C15FD4 File Offset: 0x00C141D4
+		// Token: 0x060288A6 RID: 166054 RVA: 0x00B5F4FC File Offset: 0x00B5D6FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033A3C RID: 211516 RVA: 0x00C16206 File Offset: 0x00C14406
+		// Token: 0x060288A7 RID: 166055 RVA: 0x00B5F72E File Offset: 0x00B5D92E
 		protected override void OnStart()
 		{
 			this.RoleAttrLayout = new GenericLayout<RoleAttrItem, AffixEntry>(base.GetVerticalLayout(12), this.CreateRoleAttrItem, null, false, true);
 		}
 
-		// Token: 0x06033A3D RID: 211517 RVA: 0x00C16224 File Offset: 0x00C14424
+		// Token: 0x060288A8 RID: 166056 RVA: 0x00B5F74C File Offset: 0x00B5D94C
 		public void RefreshPanel()
 		{
 			this.RefreshRole();
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshEmptyItem();
 		}
 
-		// Token: 0x06033A3E RID: 211518 RVA: 0x00C16238 File Offset: 0x00C14438
+		// Token: 0x060288A9 RID: 166057 RVA: 0x00B5F760 File Offset: 0x00B5D960
 		private void RefreshRole()
 		{
 			if (RoguelikeConfig.Instance.GetRogueCharacterConfig(this.RogueGainEntry.ConfigId) == null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetTextureByPath(formationRoleCard, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x06033A3F RID: 211519 RVA: 0x00C1639C File Offset: 0x00C1459C
+		// Token: 0x060288AA RID: 166058 RVA: 0x00B5F8C4 File Offset: 0x00B5DAC4
 		private void RefreshAffixEntryList()
 		{
 			this.RoleAttrLayout.RefreshByDataAsync(this.RogueGainEntry.AffixEntryList ?? new List<AffixEntry>(), false, null).ContinueWith(delegate()
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x06033A40 RID: 211520 RVA: 0x00C163E4 File Offset: 0x00C145E4
+		// Token: 0x060288AB RID: 166059 RVA: 0x00B5F90C File Offset: 0x00B5DB0C
 		private void RefreshEmptyItem()
 		{
 			UUIItem item = base.GetItem(8);
@@ -199,67 +199,67 @@ namespace CSharpScript.Game.Module.Roguelike
 			item.SetUIActive(((affixEntryList != null) ? affixEntryList.Count : 0) <= 0);
 		}
 
-		// Token: 0x0401B624 RID: 112164
+		// Token: 0x04015FF7 RID: 90103
 		private RogueGainEntry RogueGainEntry;
 
-		// Token: 0x0401B625 RID: 112165
+		// Token: 0x04015FF8 RID: 90104
 		private GenericLayout<RoleAttrItem, AffixEntry> RoleAttrLayout;
 
-		// Token: 0x0401B626 RID: 112166
+		// Token: 0x04015FF9 RID: 90105
 		private HashSet<long> NewAffixEntryIdList;
 
-		// Token: 0x0401B627 RID: 112167
+		// Token: 0x04015FFA RID: 90106
 		private readonly Action DetailBtn = delegate()
 		{
 		};
 
-		// Token: 0x0401B628 RID: 112168
+		// Token: 0x04015FFB RID: 90107
 		private readonly Func<RoleAttrItem> CreateRoleAttrItem = () => new RoleAttrItem();
 
-		// Token: 0x0200AFF7 RID: 45047
+		// Token: 0x02009A29 RID: 39465
 		[NullableContext(0)]
 		public static class ERoleSelectItemCom
 		{
-			// Token: 0x040356BE RID: 218814
+			// Token: 0x040300EE RID: 196846
 			public const int QualityBgTexture = 0;
 
-			// Token: 0x040356BF RID: 218815
+			// Token: 0x040300EF RID: 196847
 			public const int RoleTexture = 1;
 
-			// Token: 0x040356C0 RID: 218816
+			// Token: 0x040300F0 RID: 196848
 			public const int LineTexture = 2;
 
-			// Token: 0x040356C1 RID: 218817
+			// Token: 0x040300F1 RID: 196849
 			public const int BorderSprite = 3;
 
-			// Token: 0x040356C2 RID: 218818
+			// Token: 0x040300F2 RID: 196850
 			public const int RoleNameText = 4;
 
-			// Token: 0x040356C3 RID: 218819
+			// Token: 0x040300F3 RID: 196851
 			public const int DetailBtn = 5;
 
-			// Token: 0x040356C4 RID: 218820
+			// Token: 0x040300F4 RID: 196852
 			public const int AttrItem = 6;
 
-			// Token: 0x040356C5 RID: 218821
+			// Token: 0x040300F5 RID: 196853
 			public const int LevelUpItem = 7;
 
-			// Token: 0x040356C6 RID: 218822
+			// Token: 0x040300F6 RID: 196854
 			public const int EmptyItem = 8;
 
-			// Token: 0x040356C7 RID: 218823
+			// Token: 0x040300F7 RID: 196855
 			public const int QualityNiagara = 9;
 
-			// Token: 0x040356C8 RID: 218824
+			// Token: 0x040300F8 RID: 196856
 			public const int ViewportItem = 10;
 
-			// Token: 0x040356C9 RID: 218825
+			// Token: 0x040300F9 RID: 196857
 			public const int ContentItem = 11;
 
-			// Token: 0x040356CA RID: 218826
+			// Token: 0x040300FA RID: 196858
 			public const int AttrLayout = 12;
 
-			// Token: 0x040356CB RID: 218827
+			// Token: 0x040300FB RID: 196859
 			public const int ScrollComponent = 13;
 		}
 	}

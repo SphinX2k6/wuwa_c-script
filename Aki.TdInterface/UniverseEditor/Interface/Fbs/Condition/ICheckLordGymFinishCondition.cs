@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AC6 RID: 19142
+	// Token: 0x02004F95 RID: 20373
 	public struct ICheckLordGymFinishCondition : IFlatbufferObject
 	{
-		// Token: 0x17008AC7 RID: 35527
-		// (get) Token: 0x0601E0E0 RID: 123104 RVA: 0x0043793C File Offset: 0x00435B3C
+		// Token: 0x170091B4 RID: 37300
+		// (get) Token: 0x0601FBC9 RID: 129993 RVA: 0x0046915C File Offset: 0x0046735C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E0E1 RID: 123105 RVA: 0x00437949 File Offset: 0x00435B49
+		// Token: 0x0601FBCA RID: 129994 RVA: 0x00469169 File Offset: 0x00467369
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E0E2 RID: 123106 RVA: 0x00437950 File Offset: 0x00435B50
+		// Token: 0x0601FBCB RID: 129995 RVA: 0x00469170 File Offset: 0x00467370
 		public static ICheckLordGymFinishCondition GetRootAsICheckLordGymFinishCondition(ByteBuffer _bb)
 		{
 			return ICheckLordGymFinishCondition.GetRootAsICheckLordGymFinishCondition(_bb, default(ICheckLordGymFinishCondition));
 		}
 
-		// Token: 0x0601E0E3 RID: 123107 RVA: 0x0043796C File Offset: 0x00435B6C
+		// Token: 0x0601FBCC RID: 129996 RVA: 0x0046918C File Offset: 0x0046738C
 		public static ICheckLordGymFinishCondition GetRootAsICheckLordGymFinishCondition(ByteBuffer _bb, ICheckLordGymFinishCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E0E4 RID: 123108 RVA: 0x00437989 File Offset: 0x00435B89
+		// Token: 0x0601FBCD RID: 129997 RVA: 0x004691A9 File Offset: 0x004673A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E0E5 RID: 123109 RVA: 0x00437998 File Offset: 0x00435B98
+		// Token: 0x0601FBCE RID: 129998 RVA: 0x004691B8 File Offset: 0x004673B8
 		public ICheckLordGymFinishCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AC8 RID: 35528
-		// (get) Token: 0x0601E0E6 RID: 123110 RVA: 0x004379A8 File Offset: 0x00435BA8
+		// Token: 0x170091B5 RID: 37301
+		// (get) Token: 0x0601FBCF RID: 129999 RVA: 0x004691C8 File Offset: 0x004673C8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AC9 RID: 35529
-		// (get) Token: 0x0601E0E7 RID: 123111 RVA: 0x004379E4 File Offset: 0x00435BE4
+		// Token: 0x170091B6 RID: 37302
+		// (get) Token: 0x0601FBD0 RID: 130000 RVA: 0x00469204 File Offset: 0x00467404
 		public int LordGymId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E0E8 RID: 123112 RVA: 0x00437A20 File Offset: 0x00435C20
+		// Token: 0x0601FBD1 RID: 130001 RVA: 0x00469240 File Offset: 0x00467440
 		public static Offset<ICheckLordGymFinishCondition> CreateICheckLordGymFinishCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int LordGymId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckLordGymFinishCondition.EndICheckLordGymFinishCondition(builder);
 		}
 
-		// Token: 0x0601E0E9 RID: 123113 RVA: 0x00437A3D File Offset: 0x00435C3D
+		// Token: 0x0601FBD2 RID: 130002 RVA: 0x0046925D File Offset: 0x0046745D
 		public static void StartICheckLordGymFinishCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E0EA RID: 123114 RVA: 0x00437A46 File Offset: 0x00435C46
+		// Token: 0x0601FBD3 RID: 130003 RVA: 0x00469266 File Offset: 0x00467466
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E0EB RID: 123115 RVA: 0x00437A51 File Offset: 0x00435C51
+		// Token: 0x0601FBD4 RID: 130004 RVA: 0x00469271 File Offset: 0x00467471
 		public static void AddLordGymId(FlatBufferBuilder builder, int lordGymId)
 		{
 			builder.AddInt(1, lordGymId, 0);
 		}
 
-		// Token: 0x0601E0EC RID: 123116 RVA: 0x00437A5C File Offset: 0x00435C5C
+		// Token: 0x0601FBD5 RID: 130005 RVA: 0x0046927C File Offset: 0x0046747C
 		public static Offset<ICheckLordGymFinishCondition> EndICheckLordGymFinishCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckLordGymFinishCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E0ED RID: 123117 RVA: 0x00437A6C File Offset: 0x00435C6C
+		// Token: 0x0601FBD6 RID: 130006 RVA: 0x0046928C File Offset: 0x0046748C
 		public ICheckLordGymFinishConditionT UnPack()
 		{
 			ICheckLordGymFinishConditionT checkLordGymFinishConditionT = new ICheckLordGymFinishConditionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkLordGymFinishConditionT;
 		}
 
-		// Token: 0x0601E0EE RID: 123118 RVA: 0x00437A87 File Offset: 0x00435C87
+		// Token: 0x0601FBD7 RID: 130007 RVA: 0x004692A7 File Offset: 0x004674A7
 		public void UnPackTo(ICheckLordGymFinishConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.LordGymId = this.LordGymId;
 		}
 
-		// Token: 0x0601E0EF RID: 123119 RVA: 0x00437AA4 File Offset: 0x00435CA4
+		// Token: 0x0601FBD8 RID: 130008 RVA: 0x004692C4 File Offset: 0x004674C4
 		public static Offset<ICheckLordGymFinishCondition> Pack(FlatBufferBuilder builder, ICheckLordGymFinishConditionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckLordGymFinishCondition.CreateICheckLordGymFinishCondition(builder, _o.Type, _o.LordGymId);
 		}
 
-		// Token: 0x0400D34D RID: 54093
+		// Token: 0x0400DE32 RID: 56882
 		private Table __p;
 	}
 }

@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E59 RID: 20057
+	// Token: 0x02003E22 RID: 15906
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleFetterLvUpItem : GridProxyAbstract<IRogueBattleRoleBondUpdateInfo>
 	{
-		// Token: 0x06033AD3 RID: 211667 RVA: 0x00C19624 File Offset: 0x00C17824
+		// Token: 0x0602893E RID: 166206 RVA: 0x00B62B4C File Offset: 0x00B60D4C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AD4 RID: 211668 RVA: 0x00C19680 File Offset: 0x00C17880
+		// Token: 0x0602893F RID: 166207 RVA: 0x00B62BA8 File Offset: 0x00B60DA8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleFetterLvUpItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033AD5 RID: 211669 RVA: 0x00C196C4 File Offset: 0x00C178C4
+		// Token: 0x06028940 RID: 166208 RVA: 0x00B62BEC File Offset: 0x00B60DEC
 		[NullableContext(1)]
 		public override void Refresh(IRogueBattleRoleBondUpdateInfo data, bool isSelected, int gridIndex)
 		{
@@ -71,10 +71,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.FetterAfter.Refresh(data3);
 		}
 
-		// Token: 0x0401B689 RID: 112265
+		// Token: 0x0401605C RID: 90204
 		private FetterItem FetterBefore;
 
-		// Token: 0x0401B68A RID: 112266
+		// Token: 0x0401605D RID: 90205
 		private FetterItem FetterAfter;
 	}
 }

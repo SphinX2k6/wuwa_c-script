@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 [RequiredMember]
 public class AkMarkerCbLabelSoundTrackEffect : AkMarkerCbLabel
 {
-	// Token: 0x0600008B RID: 139 RVA: 0x00005A6D File Offset: 0x00003C6D
+	// Token: 0x0600008B RID: 139 RVA: 0x00005769 File Offset: 0x00003969
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public AkMarkerCbLabelSoundTrackEffect()

@@ -3,31 +3,31 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001643 RID: 5699
+	// Token: 0x020016BA RID: 5818
 	public enum ShowViewType
 	{
-		// Token: 0x0400C0C2 RID: 49346
+		// Token: 0x0400C5CD RID: 50637
 		[OriginalName("None")]
 		None,
-		// Token: 0x0400C0C3 RID: 49347
+		// Token: 0x0400C5CE RID: 50638
 		[OriginalName("GridTake")]
 		GridTake,
-		// Token: 0x0400C0C4 RID: 49348
+		// Token: 0x0400C5CF RID: 50639
 		[OriginalName("RogueResAddRole")]
 		RogueResAddRole,
-		// Token: 0x0400C0C5 RID: 49349
+		// Token: 0x0400C5D0 RID: 50640
 		[OriginalName("PhantomEntryUnlock")]
 		PhantomEntryUnlock,
-		// Token: 0x0400C0C6 RID: 49350
+		// Token: 0x0400C5D1 RID: 50641
 		[OriginalName("RoleBuffUnlock")]
 		RoleBuffUnlock,
-		// Token: 0x0400C0C7 RID: 49351
+		// Token: 0x0400C5D2 RID: 50642
 		[OriginalName("InstResult")]
 		InstResult,
-		// Token: 0x0400C0C8 RID: 49352
+		// Token: 0x0400C5D3 RID: 50643
 		[OriginalName("RoleBond")]
 		RoleBond,
-		// Token: 0x0400C0C9 RID: 49353
+		// Token: 0x0400C5D4 RID: 50644
 		[OriginalName("AddToken")]
 		AddToken
 	}

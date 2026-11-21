@@ -6,33 +6,33 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 internal class FixOffsetParams
 {
-	// Token: 0x04000DE5 RID: 3557
+	// Token: 0x04000DED RID: 3565
 	public readonly Vector DeltaPos = Vector.Create();
 
-	// Token: 0x04000DE6 RID: 3558
+	// Token: 0x04000DEE RID: 3566
 	public float DeltaYaw;
 
-	// Token: 0x04000DE7 RID: 3559
+	// Token: 0x04000DEF RID: 3567
 	public float TotalDuration;
 
-	// Token: 0x04000DE8 RID: 3560
+	// Token: 0x04000DF0 RID: 3568
 	public readonly CurveChannel ChX = new CurveChannel();
 
-	// Token: 0x04000DE9 RID: 3561
+	// Token: 0x04000DF1 RID: 3569
 	public readonly CurveChannel ChY = new CurveChannel();
 
-	// Token: 0x04000DEA RID: 3562
+	// Token: 0x04000DF2 RID: 3570
 	public readonly CurveChannel ChZ = new CurveChannel();
 
-	// Token: 0x04000DEB RID: 3563
+	// Token: 0x04000DF3 RID: 3571
 	public readonly CurveChannel ChLook = new CurveChannel();
 
-	// Token: 0x04000DEC RID: 3564
+	// Token: 0x04000DF4 RID: 3572
 	public float AppliedX;
 
-	// Token: 0x04000DED RID: 3565
+	// Token: 0x04000DF5 RID: 3573
 	public float AppliedY;
 
-	// Token: 0x04000DEE RID: 3566
+	// Token: 0x04000DF6 RID: 3574
 	public float AppliedZ;
 }

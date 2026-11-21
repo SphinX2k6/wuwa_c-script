@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200251C RID: 9500
+// Token: 0x02001A03 RID: 6659
 [NullableContext(1)]
 [Nullable(0)]
 public class PhoneMsgSettingView : UiViewBase
 {
-	// Token: 0x06013196 RID: 78230 RVA: 0x004BC4C0 File Offset: 0x004BA6C0
+	// Token: 0x06010655 RID: 67157 RVA: 0x004CA1B8 File Offset: 0x004C83B8
 	public PhoneMsgSettingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06013197 RID: 78231 RVA: 0x004BC51C File Offset: 0x004BA71C
+	// Token: 0x06010656 RID: 67158 RVA: 0x004CA214 File Offset: 0x004C8414
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -62,7 +62,7 @@ public class PhoneMsgSettingView : UiViewBase
 		};
 	}
 
-	// Token: 0x06013198 RID: 78232 RVA: 0x004BC81C File Offset: 0x004BAA1C
+	// Token: 0x06010657 RID: 67159 RVA: 0x004CA514 File Offset: 0x004C8714
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhoneMsgSettingView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -73,20 +73,20 @@ public class PhoneMsgSettingView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013199 RID: 78233 RVA: 0x004BC85F File Offset: 0x004BAA5F
+	// Token: 0x06010658 RID: 67160 RVA: 0x004CA557 File Offset: 0x004C8757
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.AfterDialogAndBgUpdate));
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601319A RID: 78234 RVA: 0x004BC883 File Offset: 0x004BAA83
+	// Token: 0x06010659 RID: 67161 RVA: 0x004CA57B File Offset: 0x004C877B
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.PhoneMsgDialogBgThemeCharmUpdate, new Action(this.AfterDialogAndBgUpdate));
 	}
 
-	// Token: 0x0601319B RID: 78235 RVA: 0x004BC8A4 File Offset: 0x004BAAA4
+	// Token: 0x0601065A RID: 67162 RVA: 0x004CA59C File Offset: 0x004C879C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.AfterChatShowChange));
@@ -94,7 +94,7 @@ public class PhoneMsgSettingView : UiViewBase
 		EventSystem.Instance.Add(EEventName.PhoneMsgDialogBgThemeCharmRedDotUpdate, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601319C RID: 78236 RVA: 0x004BC908 File Offset: 0x004BAB08
+	// Token: 0x0601065B RID: 67163 RVA: 0x004CA600 File Offset: 0x004C8800
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhoneMsgChatShowChange, new Action(this.AfterChatShowChange));
@@ -102,7 +102,7 @@ public class PhoneMsgSettingView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.PhoneMsgDialogBgThemeCharmRedDotUpdate, new Action(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601319D RID: 78237 RVA: 0x004BC969 File Offset: 0x004BAB69
+	// Token: 0x0601065C RID: 67164 RVA: 0x004CA661 File Offset: 0x004C8861
 	protected override void OnBeforeShow()
 	{
 		this.BuildDialogItemDataList();
@@ -114,14 +114,14 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0601319E RID: 78238 RVA: 0x004BC996 File Offset: 0x004BAB96
+	// Token: 0x0601065D RID: 67165 RVA: 0x004CA68E File Offset: 0x004C888E
 	private void OnNameChange()
 	{
 		this.RightChatItem.OnNameChange();
 		this.TopicPanel.RightChatItem.OnNameChange();
 	}
 
-	// Token: 0x0601319F RID: 78239 RVA: 0x004BC9B3 File Offset: 0x004BABB3
+	// Token: 0x0601065E RID: 67166 RVA: 0x004CA6AB File Offset: 0x004C88AB
 	private void AfterChatShowChange()
 	{
 		this.BuildDialogItemDataList();
@@ -132,7 +132,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshConfirmBtnOrGetLinkBtnShow();
 	}
 
-	// Token: 0x060131A0 RID: 78240 RVA: 0x004BC9DA File Offset: 0x004BABDA
+	// Token: 0x0601065F RID: 67167 RVA: 0x004CA6D2 File Offset: 0x004C88D2
 	private void AfterDialogAndBgUpdate()
 	{
 		this.BuildDialogItemDataList();
@@ -143,7 +143,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshConfirmBtnOrGetLinkBtnShow();
 	}
 
-	// Token: 0x060131A1 RID: 78241 RVA: 0x004BCA04 File Offset: 0x004BAC04
+	// Token: 0x06010660 RID: 67168 RVA: 0x004CA6FC File Offset: 0x004C88FC
 	private void RefreshRedDot()
 	{
 		List<IMultiTemplateGridData> dialogItemDataList = this.DialogItemDataList;
@@ -196,7 +196,7 @@ public class PhoneMsgSettingView : UiViewBase
 		base.GetItem(23).SetUIActive(uiactive4);
 	}
 
-	// Token: 0x060131A2 RID: 78242 RVA: 0x004BCBB8 File Offset: 0x004BADB8
+	// Token: 0x06010661 RID: 67169 RVA: 0x004CA8B0 File Offset: 0x004C8AB0
 	private void OnClickDialogTab(EToggleState toggleState)
 	{
 		PhoneMsgSettingView.ETarget? curTarget = this.CurTarget;
@@ -207,7 +207,7 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131A3 RID: 78243 RVA: 0x004BCBE9 File Offset: 0x004BADE9
+	// Token: 0x06010662 RID: 67170 RVA: 0x004CA8E1 File Offset: 0x004C8AE1
 	private void OnClickBgTab(EToggleState toggleState)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Bg)
@@ -216,7 +216,7 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131A4 RID: 78244 RVA: 0x004BCC00 File Offset: 0x004BAE00
+	// Token: 0x06010663 RID: 67171 RVA: 0x004CA8F8 File Offset: 0x004C8AF8
 	private void OnClickThemeTab(EToggleState toggleState)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Theme)
@@ -225,7 +225,7 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131A5 RID: 78245 RVA: 0x004BCC17 File Offset: 0x004BAE17
+	// Token: 0x06010664 RID: 67172 RVA: 0x004CA90F File Offset: 0x004C8B0F
 	private void OnClickCharmTab(EToggleState toggleState)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Charm)
@@ -234,7 +234,7 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131A6 RID: 78246 RVA: 0x004BCC30 File Offset: 0x004BAE30
+	// Token: 0x06010665 RID: 67173 RVA: 0x004CA928 File Offset: 0x004C8B28
 	private void RefreshDataAndScrollView(bool isNeedRefreshSelect = true)
 	{
 		if (this.CurTarget == null)
@@ -374,7 +374,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.TopicPanel.RightChatItem.RefreshSpeakerNameTextColor(this.CurPreviewBgId);
 	}
 
-	// Token: 0x060131A7 RID: 78247 RVA: 0x004BD03C File Offset: 0x004BB23C
+	// Token: 0x06010666 RID: 67174 RVA: 0x004CAD34 File Offset: 0x004C8F34
 	private void SwitchTarget(PhoneMsgSettingView.ETarget target)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(2);
@@ -443,7 +443,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshConfirmBtnOrGetLinkBtnShow();
 	}
 
-	// Token: 0x060131A8 RID: 78248 RVA: 0x004BD268 File Offset: 0x004BB468
+	// Token: 0x06010667 RID: 67175 RVA: 0x004CAF60 File Offset: 0x004C9160
 	private void BuildDialogItemDataList()
 	{
 		this.DialogItemDataList.Clear();
@@ -485,7 +485,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.CurSelectedDialogIndex = this.FindDialogIndexById(this.CurPreviewDialogId);
 	}
 
-	// Token: 0x060131A9 RID: 78249 RVA: 0x004BD3A8 File Offset: 0x004BB5A8
+	// Token: 0x06010668 RID: 67176 RVA: 0x004CB0A0 File Offset: 0x004C92A0
 	private void BuildBgItemDataList()
 	{
 		this.BgItemDataList.Clear();
@@ -527,7 +527,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.CurSelectedBgIndex = this.FindBgIndexById(this.CurPreviewBgId);
 	}
 
-	// Token: 0x060131AA RID: 78250 RVA: 0x004BD4E8 File Offset: 0x004BB6E8
+	// Token: 0x06010669 RID: 67177 RVA: 0x004CB1E0 File Offset: 0x004C93E0
 	private void BuildThemeItemDataList()
 	{
 		this.ThemeItemDataList.Clear();
@@ -569,7 +569,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.CurSelectedThemeIndex = this.FindThemeIndexById(this.CurPreviewThemeId);
 	}
 
-	// Token: 0x060131AB RID: 78251 RVA: 0x004BD628 File Offset: 0x004BB828
+	// Token: 0x0601066A RID: 67178 RVA: 0x004CB320 File Offset: 0x004C9520
 	private void BuildCharmItemDataList()
 	{
 		this.CharmItemDataList.Clear();
@@ -611,7 +611,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.CurSelectedCharmIndex = this.FindCharmIndexById(this.CurPreviewCharmId);
 	}
 
-	// Token: 0x060131AC RID: 78252 RVA: 0x004BD766 File Offset: 0x004BB966
+	// Token: 0x0601066B RID: 67179 RVA: 0x004CB45E File Offset: 0x004C965E
 	private void SortItemDataListBySortId<[Nullable(0)] T>(List<T> list) where T : IMultiTemplateGridData
 	{
 		list.Sort(delegate(T a, T b)
@@ -688,7 +688,7 @@ public class PhoneMsgSettingView : UiViewBase
 		});
 	}
 
-	// Token: 0x060131AD RID: 78253 RVA: 0x004BD790 File Offset: 0x004BB990
+	// Token: 0x0601066C RID: 67180 RVA: 0x004CB488 File Offset: 0x004C9688
 	private void RefreshDialog()
 	{
 		ChatDialog? chatDialogConfig = PhoneMsgConfig.Instance.GetChatDialogConfig(this.CurPreviewDialogId);
@@ -703,7 +703,7 @@ public class PhoneMsgSettingView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), chatDialogConfig.Value.GetWay, Array.Empty<object>());
 	}
 
-	// Token: 0x060131AE RID: 78254 RVA: 0x004BD854 File Offset: 0x004BBA54
+	// Token: 0x0601066D RID: 67181 RVA: 0x004CB54C File Offset: 0x004C974C
 	private void RefreshBg()
 	{
 		ChatBg? chatBgConfig = PhoneMsgConfig.Instance.GetChatBgConfig(this.CurPreviewBgId);
@@ -723,7 +723,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.TopicPanel.RightChatItem.RefreshSpeakerNameTextColor(this.CurPreviewBgId);
 	}
 
-	// Token: 0x060131AF RID: 78255 RVA: 0x004BD980 File Offset: 0x004BBB80
+	// Token: 0x0601066E RID: 67182 RVA: 0x004CB678 File Offset: 0x004C9878
 	private void RefreshTheme()
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(this.CurPreviewThemeId);
@@ -749,7 +749,7 @@ public class PhoneMsgSettingView : UiViewBase
 		texture2.SetUIActive(!flag);
 	}
 
-	// Token: 0x060131B0 RID: 78256 RVA: 0x004BDA68 File Offset: 0x004BBC68
+	// Token: 0x0601066F RID: 67183 RVA: 0x004CB760 File Offset: 0x004C9960
 	private void RefreshCharm()
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(this.CurPreviewCharmId);
@@ -763,7 +763,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.TopicPanel.SetSpineByCharmId(this.CurPreviewCharmId);
 	}
 
-	// Token: 0x060131B1 RID: 78257 RVA: 0x004BDB14 File Offset: 0x004BBD14
+	// Token: 0x06010670 RID: 67184 RVA: 0x004CB80C File Offset: 0x004C9A0C
 	private void RefreshConfirmBtnOrGetLinkBtnShow()
 	{
 		bool flag = false;
@@ -859,7 +859,7 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131B2 RID: 78258 RVA: 0x004BDE20 File Offset: 0x004BC020
+	// Token: 0x06010671 RID: 67185 RVA: 0x004CBB18 File Offset: 0x004C9D18
 	private void DialogItemToggleClick(int gridIndex, PhoneMsgDialogItemData newDialogData)
 	{
 		if (this.CurSelectedDialogIndex >= 0)
@@ -884,7 +884,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshDialog();
 	}
 
-	// Token: 0x060131B3 RID: 78259 RVA: 0x004BDEBC File Offset: 0x004BC0BC
+	// Token: 0x06010672 RID: 67186 RVA: 0x004CBBB4 File Offset: 0x004C9DB4
 	private void BgItemToggleClick(int gridIndex, PhoneMsgBgItemData newBgData)
 	{
 		if (this.CurSelectedBgIndex >= 0)
@@ -909,7 +909,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshBg();
 	}
 
-	// Token: 0x060131B4 RID: 78260 RVA: 0x004BDF58 File Offset: 0x004BC158
+	// Token: 0x06010673 RID: 67187 RVA: 0x004CBC50 File Offset: 0x004C9E50
 	private void ThemeItemToggleClick(int gridIndex, PhoneMsgThemeItemData newThemeData)
 	{
 		if (this.CurSelectedThemeIndex >= 0)
@@ -934,7 +934,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshTheme();
 	}
 
-	// Token: 0x060131B5 RID: 78261 RVA: 0x004BDFF4 File Offset: 0x004BC1F4
+	// Token: 0x06010674 RID: 67188 RVA: 0x004CBCEC File Offset: 0x004C9EEC
 	private void CharmItemToggleClick(int gridIndex, PhoneMsgCharmItemData newCharmData)
 	{
 		if (this.CurSelectedCharmIndex >= 0)
@@ -959,7 +959,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshCharm();
 	}
 
-	// Token: 0x060131B6 RID: 78262 RVA: 0x004BE090 File Offset: 0x004BC290
+	// Token: 0x06010675 RID: 67189 RVA: 0x004CBD88 File Offset: 0x004C9F88
 	private void OnBtnConfirmClick(int _)
 	{
 		PhoneMsgModel instance = PhoneMsgModel.Instance;
@@ -1039,19 +1039,19 @@ public class PhoneMsgSettingView : UiViewBase
 		}
 	}
 
-	// Token: 0x060131B7 RID: 78263 RVA: 0x004BE22D File Offset: 0x004BC42D
+	// Token: 0x06010676 RID: 67190 RVA: 0x004CBF25 File Offset: 0x004CA125
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060131B8 RID: 78264 RVA: 0x004BE236 File Offset: 0x004BC436
+	// Token: 0x06010677 RID: 67191 RVA: 0x004CBF2E File Offset: 0x004CA12E
 	private bool HandleOpenParamJump()
 	{
 		return this.OpenParam != null && this.JumpToTargetById(Convert.ToInt32(this.OpenParam));
 	}
 
-	// Token: 0x060131B9 RID: 78265 RVA: 0x004BE254 File Offset: 0x004BC454
+	// Token: 0x06010678 RID: 67192 RVA: 0x004CBF4C File Offset: 0x004CA14C
 	public bool JumpToTargetById(int targetId)
 	{
 		if (targetId <= 0)
@@ -1097,7 +1097,7 @@ public class PhoneMsgSettingView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x060131BA RID: 78266 RVA: 0x004BE31C File Offset: 0x004BC51C
+	// Token: 0x06010679 RID: 67193 RVA: 0x004CC014 File Offset: 0x004CA214
 	private int FindDialogIndexById(int dialogId)
 	{
 		for (int i = 0; i < this.DialogItemDataList.Count; i++)
@@ -1110,7 +1110,7 @@ public class PhoneMsgSettingView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x060131BB RID: 78267 RVA: 0x004BE35C File Offset: 0x004BC55C
+	// Token: 0x0601067A RID: 67194 RVA: 0x004CC054 File Offset: 0x004CA254
 	private int FindBgIndexById(int bgId)
 	{
 		for (int i = 0; i < this.BgItemDataList.Count; i++)
@@ -1123,7 +1123,7 @@ public class PhoneMsgSettingView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x060131BC RID: 78268 RVA: 0x004BE39C File Offset: 0x004BC59C
+	// Token: 0x0601067B RID: 67195 RVA: 0x004CC094 File Offset: 0x004CA294
 	private int FindThemeIndexById(int themeId)
 	{
 		for (int i = 0; i < this.ThemeItemDataList.Count; i++)
@@ -1136,7 +1136,7 @@ public class PhoneMsgSettingView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x060131BD RID: 78269 RVA: 0x004BE3DC File Offset: 0x004BC5DC
+	// Token: 0x0601067C RID: 67196 RVA: 0x004CC0D4 File Offset: 0x004CA2D4
 	private int FindCharmIndexById(int charmId)
 	{
 		for (int i = 0; i < this.CharmItemDataList.Count; i++)
@@ -1149,7 +1149,7 @@ public class PhoneMsgSettingView : UiViewBase
 		return -1;
 	}
 
-	// Token: 0x060131BE RID: 78270 RVA: 0x004BE41C File Offset: 0x004BC61C
+	// Token: 0x0601067D RID: 67197 RVA: 0x004CC114 File Offset: 0x004CA314
 	private void SwitchToDialogTabAndSelect(int index)
 	{
 		PhoneMsgSettingView.ETarget? curTarget = this.CurTarget;
@@ -1163,7 +1163,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.SelectDialogItemByIndex(index);
 	}
 
-	// Token: 0x060131BF RID: 78271 RVA: 0x004BE45C File Offset: 0x004BC65C
+	// Token: 0x0601067E RID: 67198 RVA: 0x004CC154 File Offset: 0x004CA354
 	private void SwitchToBgTabAndSelect(int index)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Bg)
@@ -1173,7 +1173,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.SelectBgItemByIndex(index);
 	}
 
-	// Token: 0x060131C0 RID: 78272 RVA: 0x004BE47A File Offset: 0x004BC67A
+	// Token: 0x0601067F RID: 67199 RVA: 0x004CC172 File Offset: 0x004CA372
 	private void SwitchToThemeTabAndSelect(int index)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Theme)
@@ -1183,7 +1183,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.SelectThemeItemByIndex(index);
 	}
 
-	// Token: 0x060131C1 RID: 78273 RVA: 0x004BE498 File Offset: 0x004BC698
+	// Token: 0x06010680 RID: 67200 RVA: 0x004CC190 File Offset: 0x004CA390
 	private void SwitchToCharmTabAndSelect(int index)
 	{
 		if (this.CurTarget.GetValueOrDefault() != PhoneMsgSettingView.ETarget.Charm)
@@ -1193,7 +1193,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.SelectCharmItemByIndex(index);
 	}
 
-	// Token: 0x060131C2 RID: 78274 RVA: 0x004BE4B8 File Offset: 0x004BC6B8
+	// Token: 0x06010681 RID: 67201 RVA: 0x004CC1B0 File Offset: 0x004CA3B0
 	private void SelectDialogItemByIndex(int index)
 	{
 		if (index < 0 || index >= this.DialogItemDataList.Count)
@@ -1221,7 +1221,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshDialog();
 	}
 
-	// Token: 0x060131C3 RID: 78275 RVA: 0x004BE5A4 File Offset: 0x004BC7A4
+	// Token: 0x06010682 RID: 67202 RVA: 0x004CC29C File Offset: 0x004CA49C
 	private void SelectBgItemByIndex(int index)
 	{
 		if (index < 0 || index >= this.BgItemDataList.Count)
@@ -1249,7 +1249,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshBg();
 	}
 
-	// Token: 0x060131C4 RID: 78276 RVA: 0x004BE690 File Offset: 0x004BC890
+	// Token: 0x06010683 RID: 67203 RVA: 0x004CC388 File Offset: 0x004CA588
 	private void SelectThemeItemByIndex(int index)
 	{
 		if (index < 0 || index >= this.ThemeItemDataList.Count)
@@ -1277,7 +1277,7 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshTheme();
 	}
 
-	// Token: 0x060131C5 RID: 78277 RVA: 0x004BE77C File Offset: 0x004BC97C
+	// Token: 0x06010684 RID: 67204 RVA: 0x004CC474 File Offset: 0x004CA674
 	private void SelectCharmItemByIndex(int index)
 	{
 		if (index < 0 || index >= this.CharmItemDataList.Count)
@@ -1305,146 +1305,146 @@ public class PhoneMsgSettingView : UiViewBase
 		this.RefreshCharm();
 	}
 
-	// Token: 0x04009033 RID: 36915
+	// Token: 0x04009188 RID: 37256
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009034 RID: 36916
+	// Token: 0x04009189 RID: 37257
 	private PhoneMsgSettingView.ETarget? CurTarget;
 
-	// Token: 0x04009035 RID: 36917
+	// Token: 0x0400918A RID: 37258
 	[Nullable(2)]
 	private MultiTemplateScrollView LeftScrollView;
 
-	// Token: 0x04009036 RID: 36918
+	// Token: 0x0400918B RID: 37259
 	[Nullable(2)]
 	private ButtonItem ConfirmBtn;
 
-	// Token: 0x04009037 RID: 36919
+	// Token: 0x0400918C RID: 37260
 	[Nullable(2)]
 	private GetLinkBtn GetLinkBtn;
 
-	// Token: 0x04009038 RID: 36920
+	// Token: 0x0400918D RID: 37261
 	[Nullable(2)]
 	private SettingPanelChatItem LeftChatItem;
 
-	// Token: 0x04009039 RID: 36921
+	// Token: 0x0400918E RID: 37262
 	[Nullable(2)]
 	private SettingPanelChatRightItem RightChatItem;
 
-	// Token: 0x0400903A RID: 36922
+	// Token: 0x0400918F RID: 37263
 	[Nullable(2)]
 	private PhoneSystemTopic TopicPanel;
 
-	// Token: 0x0400903B RID: 36923
+	// Token: 0x04009190 RID: 37264
 	private readonly List<IMultiTemplateGridData> DialogItemDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400903C RID: 36924
+	// Token: 0x04009191 RID: 37265
 	private readonly List<IMultiTemplateGridData> BgItemDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400903D RID: 36925
+	// Token: 0x04009192 RID: 37266
 	private readonly List<IMultiTemplateGridData> ThemeItemDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400903E RID: 36926
+	// Token: 0x04009193 RID: 37267
 	private readonly List<IMultiTemplateGridData> CharmItemDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400903F RID: 36927
+	// Token: 0x04009194 RID: 37268
 	private int CurPreviewDialogId;
 
-	// Token: 0x04009040 RID: 36928
+	// Token: 0x04009195 RID: 37269
 	private int CurSelectedDialogIndex = -1;
 
-	// Token: 0x04009041 RID: 36929
+	// Token: 0x04009196 RID: 37270
 	private int CurPreviewBgId;
 
-	// Token: 0x04009042 RID: 36930
+	// Token: 0x04009197 RID: 37271
 	private int CurSelectedBgIndex = -1;
 
-	// Token: 0x04009043 RID: 36931
+	// Token: 0x04009198 RID: 37272
 	private int CurPreviewThemeId;
 
-	// Token: 0x04009044 RID: 36932
+	// Token: 0x04009199 RID: 37273
 	private int CurSelectedThemeIndex = -1;
 
-	// Token: 0x04009045 RID: 36933
+	// Token: 0x0400919A RID: 37274
 	private int CurPreviewCharmId;
 
-	// Token: 0x04009046 RID: 36934
+	// Token: 0x0400919B RID: 37275
 	private int CurSelectedCharmIndex = -1;
 
-	// Token: 0x02008AAB RID: 35499
+	// Token: 0x02007C32 RID: 31794
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D082 RID: 184450
+		// Token: 0x04028396 RID: 164758
 		ItemCaption,
-		// Token: 0x0402D083 RID: 184451
+		// Token: 0x04028397 RID: 164759
 		PanelHLayout,
-		// Token: 0x0402D084 RID: 184452
+		// Token: 0x04028398 RID: 164760
 		TogDialogTab,
-		// Token: 0x0402D085 RID: 184453
+		// Token: 0x04028399 RID: 164761
 		TogBgTab,
-		// Token: 0x0402D086 RID: 184454
+		// Token: 0x0402839A RID: 164762
 		LeftScroll,
-		// Token: 0x0402D087 RID: 184455
+		// Token: 0x0402839B RID: 164763
 		Content,
-		// Token: 0x0402D088 RID: 184456
+		// Token: 0x0402839C RID: 164764
 		TogBgItem,
-		// Token: 0x0402D089 RID: 184457
+		// Token: 0x0402839D RID: 164765
 		TogDialogItem,
-		// Token: 0x0402D08A RID: 184458
+		// Token: 0x0402839E RID: 164766
 		BtnConfirm,
-		// Token: 0x0402D08B RID: 184459
+		// Token: 0x0402839F RID: 164767
 		TxtTitle,
-		// Token: 0x0402D08C RID: 184460
+		// Token: 0x040283A0 RID: 164768
 		TexBg,
-		// Token: 0x0402D08D RID: 184461
+		// Token: 0x040283A1 RID: 164769
 		TxtDesc,
-		// Token: 0x0402D08E RID: 184462
+		// Token: 0x040283A2 RID: 164770
 		TxtGetWay,
-		// Token: 0x0402D08F RID: 184463
+		// Token: 0x040283A3 RID: 164771
 		PlayerChatItem,
-		// Token: 0x0402D090 RID: 184464
+		// Token: 0x040283A4 RID: 164772
 		TexChatBgDefault,
-		// Token: 0x0402D091 RID: 184465
+		// Token: 0x040283A5 RID: 164773
 		PanelGetLink,
-		// Token: 0x0402D092 RID: 184466
+		// Token: 0x040283A6 RID: 164774
 		BtnGetLink,
-		// Token: 0x0402D093 RID: 184467
+		// Token: 0x040283A7 RID: 164775
 		NpcChatItem,
-		// Token: 0x0402D094 RID: 184468
+		// Token: 0x040283A8 RID: 164776
 		TogDialogTabRedDot,
-		// Token: 0x0402D095 RID: 184469
+		// Token: 0x040283A9 RID: 164777
 		TogBgTabRedDot,
-		// Token: 0x0402D096 RID: 184470
+		// Token: 0x040283AA RID: 164778
 		TogThemeTab,
-		// Token: 0x0402D097 RID: 184471
+		// Token: 0x040283AB RID: 164779
 		TogCharmTab,
-		// Token: 0x0402D098 RID: 184472
+		// Token: 0x040283AC RID: 164780
 		TogThemeTabRedDot,
-		// Token: 0x0402D099 RID: 184473
+		// Token: 0x040283AD RID: 164781
 		TogCharmTabRedDot,
-		// Token: 0x0402D09A RID: 184474
+		// Token: 0x040283AE RID: 164782
 		PnlWindow,
-		// Token: 0x0402D09B RID: 184475
+		// Token: 0x040283AF RID: 164783
 		PnlPhoneSystemTopic,
-		// Token: 0x0402D09C RID: 184476
+		// Token: 0x040283B0 RID: 164784
 		TexSkinBg,
-		// Token: 0x0402D09D RID: 184477
+		// Token: 0x040283B1 RID: 164785
 		TexSkinBgTopic
 	}
 
-	// Token: 0x02008AAC RID: 35500
+	// Token: 0x02007C33 RID: 31795
 	[NullableContext(0)]
 	private enum ETarget
 	{
-		// Token: 0x0402D09F RID: 184479
+		// Token: 0x040283B3 RID: 164787
 		Dialog,
-		// Token: 0x0402D0A0 RID: 184480
+		// Token: 0x040283B4 RID: 164788
 		Bg,
-		// Token: 0x0402D0A1 RID: 184481
+		// Token: 0x040283B5 RID: 164789
 		Theme,
-		// Token: 0x0402D0A2 RID: 184482
+		// Token: 0x040283B6 RID: 164790
 		Charm
 	}
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001463 RID: 5219
+	// Token: 0x020014D6 RID: 5334
 	[NetMessage(EMessageId.TreasureChestCountIncrementNotify)]
 	public sealed class TreasureChestCountIncrementNotify : IMessage<TreasureChestCountIncrementNotify>, IMessage, IEquatable<TreasureChestCountIncrementNotify>, IDeepCloneable<TreasureChestCountIncrementNotify>, IBufferMessage
 	{
-		// Token: 0x0601BA1C RID: 113180 RVA: 0x003FFB82 File Offset: 0x003FDD82
+		// Token: 0x0601C4A7 RID: 115879 RVA: 0x0041AE52 File Offset: 0x00419052
 		[NullableContext(1)]
 		public static TreasureChestCountIncrementNotify Create()
 		{
 			return new TreasureChestCountIncrementNotify();
 		}
 
-		// Token: 0x17005D2A RID: 23850
-		// (get) Token: 0x0601BA1D RID: 113181 RVA: 0x003FFB89 File Offset: 0x003FDD89
+		// Token: 0x17005FBF RID: 24511
+		// (get) Token: 0x0601C4A8 RID: 115880 RVA: 0x0041AE59 File Offset: 0x00419059
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D2B RID: 23851
-		// (get) Token: 0x0601BA1E RID: 113182 RVA: 0x003FFB8C File Offset: 0x003FDD8C
+		// Token: 0x17005FC0 RID: 24512
+		// (get) Token: 0x0601C4A9 RID: 115881 RVA: 0x0041AE5C File Offset: 0x0041905C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA1F RID: 113183 RVA: 0x003FFB93 File Offset: 0x003FDD93
+		// Token: 0x0601C4AA RID: 115882 RVA: 0x0041AE63 File Offset: 0x00419063
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountIncrementNotify()
 		{
 		}
 
-		// Token: 0x0601BA20 RID: 113184 RVA: 0x003FFBB4 File Offset: 0x003FDDB4
+		// Token: 0x0601C4AB RID: 115883 RVA: 0x0041AE84 File Offset: 0x00419084
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountIncrementNotify(TreasureChestCountIncrementNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601BA21 RID: 113185 RVA: 0x003FFC06 File Offset: 0x003FDE06
+		// Token: 0x0601C4AC RID: 115884 RVA: 0x0041AED6 File Offset: 0x004190D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestCountIncrementNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new TreasureChestCountIncrementNotify(this);
 		}
 
-		// Token: 0x17005D2C RID: 23852
-		// (get) Token: 0x0601BA22 RID: 113186 RVA: 0x003FFC0E File Offset: 0x003FDE0E
-		// (set) Token: 0x0601BA23 RID: 113187 RVA: 0x003FFC16 File Offset: 0x003FDE16
+		// Token: 0x17005FC1 RID: 24513
+		// (get) Token: 0x0601C4AD RID: 115885 RVA: 0x0041AEDE File Offset: 0x004190DE
+		// (set) Token: 0x0601C4AE RID: 115886 RVA: 0x0041AEE6 File Offset: 0x004190E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TreasureChestStatType StatType
@@ -86,8 +86,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D2D RID: 23853
-		// (get) Token: 0x0601BA24 RID: 113188 RVA: 0x003FFC1F File Offset: 0x003FDE1F
+		// Token: 0x17005FC2 RID: 24514
+		// (get) Token: 0x0601C4AF RID: 115887 RVA: 0x0041AEEF File Offset: 0x004190EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> InstanceIdList
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005D2E RID: 23854
-		// (get) Token: 0x0601BA25 RID: 113189 RVA: 0x003FFC27 File Offset: 0x003FDE27
+		// Token: 0x17005FC3 RID: 24515
+		// (get) Token: 0x0601C4B0 RID: 115888 RVA: 0x0041AEF7 File Offset: 0x004190F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> AreaIdList
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601BA26 RID: 113190 RVA: 0x003FFC2F File Offset: 0x003FDE2F
+		// Token: 0x0601C4B1 RID: 115889 RVA: 0x0041AEFF File Offset: 0x004190FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TreasureChestCountIncrementNotify);
 		}
 
-		// Token: 0x0601BA27 RID: 113191 RVA: 0x003FFC40 File Offset: 0x003FDE40
+		// Token: 0x0601C4B2 RID: 115890 RVA: 0x0041AF10 File Offset: 0x00419110
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TreasureChestCountIncrementNotify other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.StatType == other.StatType && this.instanceIdList_.Equals(other.instanceIdList_) && this.areaIdList_.Equals(other.areaIdList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601BA28 RID: 113192 RVA: 0x003FFCA4 File Offset: 0x003FDEA4
+		// Token: 0x0601C4B3 RID: 115891 RVA: 0x0041AF74 File Offset: 0x00419174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA29 RID: 113193 RVA: 0x003FFD05 File Offset: 0x003FDF05
+		// Token: 0x0601C4B4 RID: 115892 RVA: 0x0041AFD5 File Offset: 0x004191D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601BA2A RID: 113194 RVA: 0x003FFD12 File Offset: 0x003FDF12
+		// Token: 0x0601C4B5 RID: 115893 RVA: 0x0041AFE2 File Offset: 0x004191E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,25 +161,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601BA2B RID: 113195 RVA: 0x003FFD1C File Offset: 0x003FDF1C
+		// Token: 0x0601C4B6 RID: 115894 RVA: 0x0041AFEC File Offset: 0x004191EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			this.areaIdList_.WriteTo(ref output, TreasureChestCountIncrementNotify._repeated_areaIdList_codec);
+			this.instanceIdList_.WriteTo(ref output, TreasureChestCountIncrementNotify._repeated_instanceIdList_codec);
 			if (this.StatType != TreasureChestStatType.OneTime)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(104);
 				output.WriteEnum((int)this.StatType);
 			}
-			this.instanceIdList_.WriteTo(ref output, TreasureChestCountIncrementNotify._repeated_instanceIdList_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601BA2C RID: 113196 RVA: 0x003FFD7C File Offset: 0x003FDF7C
+		// Token: 0x0601C4B7 RID: 115895 RVA: 0x0041B04C File Offset: 0x0041924C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601BA2D RID: 113197 RVA: 0x003FFDE0 File Offset: 0x003FDFE0
+		// Token: 0x0601C4B8 RID: 115896 RVA: 0x0041B0B0 File Offset: 0x004192B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TreasureChestCountIncrementNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601BA2E RID: 113198 RVA: 0x003FFE3E File Offset: 0x003FE03E
+		// Token: 0x0601C4B9 RID: 115897 RVA: 0x0041B10E File Offset: 0x0041930E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601BA2F RID: 113199 RVA: 0x003FFE48 File Offset: 0x003FE048
+		// Token: 0x0601C4BA RID: 115898 RVA: 0x0041B118 File Offset: 0x00419318
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 10U)
+				if (num <= 34U)
 				{
-					if (num == 8U || num == 10U)
+					if (num == 32U || num == 34U)
 					{
 						this.areaIdList_.AddEntriesFrom(ref input, TreasureChestCountIncrementNotify._repeated_areaIdList_codec);
 						continue;
@@ -246,14 +246,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 56U)
-					{
-						this.StatType = (TreasureChestStatType)input.ReadEnum();
-						continue;
-					}
 					if (num == 80U || num == 82U)
 					{
 						this.instanceIdList_.AddEntriesFrom(ref input, TreasureChestCountIncrementNotify._repeated_instanceIdList_codec);
+						continue;
+					}
+					if (num == 104U)
+					{
+						this.StatType = (TreasureChestStatType)input.ReadEnum();
 						continue;
 					}
 				}
@@ -261,31 +261,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009F34 RID: 40756
+		// Token: 0x0400A37B RID: 41851
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009F35 RID: 40757
-		public const int StatTypeFieldNumber = 7;
+		// Token: 0x0400A37C RID: 41852
+		public const int StatTypeFieldNumber = 13;
 
-		// Token: 0x04009F36 RID: 40758
+		// Token: 0x0400A37D RID: 41853
 		private TreasureChestStatType statType_;
 
-		// Token: 0x04009F37 RID: 40759
+		// Token: 0x0400A37E RID: 41854
 		public const int InstanceIdListFieldNumber = 10;
 
-		// Token: 0x04009F38 RID: 40760
+		// Token: 0x0400A37F RID: 41855
 		private static readonly FieldCodec<int> _repeated_instanceIdList_codec = FieldCodec.ForInt32(82U);
 
-		// Token: 0x04009F39 RID: 40761
+		// Token: 0x0400A380 RID: 41856
 		private readonly RepeatedField<int> instanceIdList_ = new RepeatedField<int>();
 
-		// Token: 0x04009F3A RID: 40762
-		public const int AreaIdListFieldNumber = 1;
+		// Token: 0x0400A381 RID: 41857
+		public const int AreaIdListFieldNumber = 4;
 
-		// Token: 0x04009F3B RID: 40763
-		private static readonly FieldCodec<int> _repeated_areaIdList_codec = FieldCodec.ForInt32(10U);
+		// Token: 0x0400A382 RID: 41858
+		private static readonly FieldCodec<int> _repeated_areaIdList_codec = FieldCodec.ForInt32(34U);
 
-		// Token: 0x04009F3C RID: 40764
+		// Token: 0x0400A383 RID: 41859
 		private readonly RepeatedField<int> areaIdList_ = new RepeatedField<int>();
 	}
 }

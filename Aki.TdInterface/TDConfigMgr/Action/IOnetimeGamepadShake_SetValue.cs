@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C8B RID: 7307
+	// Token: 0x02001E90 RID: 7824
 	public class IOnetimeGamepadShake_SetValue
 	{
-		// Token: 0x04005EFF RID: 24319
+		// Token: 0x04006452 RID: 25682
 		public EGamepadShakeType Type;
 
-		// Token: 0x04005F00 RID: 24320
+		// Token: 0x04006453 RID: 25683
 		public bool? IsIgnoreTimeDilation;
 
-		// Token: 0x04005F01 RID: 24321
+		// Token: 0x04006454 RID: 25684
 		[Nullable(2)]
 		public string GamepadShakeTag;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072A1 RID: 29345
+	// Token: 0x02007A76 RID: 31350
 	public struct ITalkBackgroundSpineImage : IFlatbufferObject
 	{
-		// Token: 0x1700D9A4 RID: 55716
-		// (get) Token: 0x06034105 RID: 213253 RVA: 0x006FFAF1 File Offset: 0x006FDCF1
+		// Token: 0x1700E59D RID: 58781
+		// (get) Token: 0x06037409 RID: 226313 RVA: 0x00760E8D File Offset: 0x0075F08D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06034106 RID: 213254 RVA: 0x006FFAFE File Offset: 0x006FDCFE
+		// Token: 0x0603740A RID: 226314 RVA: 0x00760E9A File Offset: 0x0075F09A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06034107 RID: 213255 RVA: 0x006FFB08 File Offset: 0x006FDD08
+		// Token: 0x0603740B RID: 226315 RVA: 0x00760EA4 File Offset: 0x0075F0A4
 		public static ITalkBackgroundSpineImage GetRootAsITalkBackgroundSpineImage(ByteBuffer _bb)
 		{
 			return ITalkBackgroundSpineImage.GetRootAsITalkBackgroundSpineImage(_bb, default(ITalkBackgroundSpineImage));
 		}
 
-		// Token: 0x06034108 RID: 213256 RVA: 0x006FFB24 File Offset: 0x006FDD24
+		// Token: 0x0603740C RID: 226316 RVA: 0x00760EC0 File Offset: 0x0075F0C0
 		public static ITalkBackgroundSpineImage GetRootAsITalkBackgroundSpineImage(ByteBuffer _bb, ITalkBackgroundSpineImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06034109 RID: 213257 RVA: 0x006FFB41 File Offset: 0x006FDD41
+		// Token: 0x0603740D RID: 226317 RVA: 0x00760EDD File Offset: 0x0075F0DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603410A RID: 213258 RVA: 0x006FFB50 File Offset: 0x006FDD50
+		// Token: 0x0603740E RID: 226318 RVA: 0x00760EEC File Offset: 0x0075F0EC
 		public ITalkBackgroundSpineImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D9A5 RID: 55717
-		// (get) Token: 0x0603410B RID: 213259 RVA: 0x006FFB60 File Offset: 0x006FDD60
+		// Token: 0x1700E59E RID: 58782
+		// (get) Token: 0x0603740F RID: 226319 RVA: 0x00760EFC File Offset: 0x0075F0FC
 		public ETalkBackgroundType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D9A6 RID: 55718
-		// (get) Token: 0x0603410C RID: 213260 RVA: 0x006FFB9C File Offset: 0x006FDD9C
+		// Token: 0x1700E59F RID: 58783
+		// (get) Token: 0x06037410 RID: 226320 RVA: 0x00760F38 File Offset: 0x0075F138
 		public int Id
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D9A7 RID: 55719
-		// (get) Token: 0x0603410D RID: 213261 RVA: 0x006FFBD8 File Offset: 0x006FDDD8
+		// Token: 0x1700E5A0 RID: 58784
+		// (get) Token: 0x06037411 RID: 226321 RVA: 0x00760F74 File Offset: 0x0075F174
 		public bool IsLoop
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D9A8 RID: 55720
-		// (get) Token: 0x0603410E RID: 213262 RVA: 0x006FFC18 File Offset: 0x006FDE18
+		// Token: 0x1700E5A1 RID: 58785
+		// (get) Token: 0x06037412 RID: 226322 RVA: 0x00760FB4 File Offset: 0x0075F1B4
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603410F RID: 213263 RVA: 0x006FFC55 File Offset: 0x006FDE55
+		// Token: 0x06037413 RID: 226323 RVA: 0x00760FF1 File Offset: 0x0075F1F1
 		public static Offset<ITalkBackgroundSpineImage> CreateITalkBackgroundSpineImage(FlatBufferBuilder builder, ETalkBackgroundType Type = ETalkBackgroundType.Clean, int Id = 0, bool IsLoop = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkBackgroundSpineImage.EndITalkBackgroundSpineImage(builder);
 		}
 
-		// Token: 0x06034110 RID: 213264 RVA: 0x006FFC81 File Offset: 0x006FDE81
+		// Token: 0x06037414 RID: 226324 RVA: 0x0076101D File Offset: 0x0075F21D
 		public static void StartITalkBackgroundSpineImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06034111 RID: 213265 RVA: 0x006FFC8A File Offset: 0x006FDE8A
+		// Token: 0x06037415 RID: 226325 RVA: 0x00761026 File Offset: 0x0075F226
 		public static void AddType(FlatBufferBuilder builder, ETalkBackgroundType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06034112 RID: 213266 RVA: 0x006FFC95 File Offset: 0x006FDE95
+		// Token: 0x06037416 RID: 226326 RVA: 0x00761031 File Offset: 0x0075F231
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06034113 RID: 213267 RVA: 0x006FFCA0 File Offset: 0x006FDEA0
+		// Token: 0x06037417 RID: 226327 RVA: 0x0076103C File Offset: 0x0075F23C
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(2, isLoop, false);
 		}
 
-		// Token: 0x06034114 RID: 213268 RVA: 0x006FFCAB File Offset: 0x006FDEAB
+		// Token: 0x06037418 RID: 226328 RVA: 0x00761047 File Offset: 0x0075F247
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06034115 RID: 213269 RVA: 0x006FFCB6 File Offset: 0x006FDEB6
+		// Token: 0x06037419 RID: 226329 RVA: 0x00761052 File Offset: 0x0075F252
 		public static Offset<ITalkBackgroundSpineImage> EndITalkBackgroundSpineImage(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkBackgroundSpineImage>(builder.EndTable());
 		}
 
-		// Token: 0x06034116 RID: 213270 RVA: 0x006FFCC4 File Offset: 0x006FDEC4
+		// Token: 0x0603741A RID: 226330 RVA: 0x00761060 File Offset: 0x0075F260
 		public ITalkBackgroundSpineImageT UnPack()
 		{
 			ITalkBackgroundSpineImageT talkBackgroundSpineImageT = new ITalkBackgroundSpineImageT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkBackgroundSpineImageT;
 		}
 
-		// Token: 0x06034117 RID: 213271 RVA: 0x006FFCDF File Offset: 0x006FDEDF
+		// Token: 0x0603741B RID: 226331 RVA: 0x0076107B File Offset: 0x0075F27B
 		public void UnPackTo(ITalkBackgroundSpineImageT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06034118 RID: 213272 RVA: 0x006FFD14 File Offset: 0x006FDF14
+		// Token: 0x0603741C RID: 226332 RVA: 0x007610B0 File Offset: 0x0075F2B0
 		public static Offset<ITalkBackgroundSpineImage> Pack(FlatBufferBuilder builder, ITalkBackgroundSpineImageT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkBackgroundSpineImage.CreateITalkBackgroundSpineImage(builder, _o.Type, _o.Id, _o.IsLoop, _o.NullMask);
 		}
 
-		// Token: 0x04011DAC RID: 73132
+		// Token: 0x04012DAF RID: 77231
 		private Table __p;
 	}
 }

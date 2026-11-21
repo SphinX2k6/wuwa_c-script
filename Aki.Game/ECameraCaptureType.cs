@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200258F RID: 9615
+// Token: 0x02001A7A RID: 6778
 public enum ECameraCaptureType
 {
-	// Token: 0x040092EE RID: 37614
+	// Token: 0x04009446 RID: 37958
 	NormalCamera,
-	// Token: 0x040092EF RID: 37615
+	// Token: 0x04009447 RID: 37959
 	EntityCamera,
-	// Token: 0x040092F0 RID: 37616
+	// Token: 0x04009448 RID: 37960
 	TogetherCamera,
-	// Token: 0x040092F1 RID: 37617
+	// Token: 0x04009449 RID: 37961
 	FightPhotographCamera
 }

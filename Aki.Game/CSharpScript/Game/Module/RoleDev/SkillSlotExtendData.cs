@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CCD RID: 19661
+	// Token: 0x02003C7E RID: 15486
 	public class SkillSlotExtendData : ISkillSlotExtendData
 	{
-		// Token: 0x17007D6B RID: 32107
-		// (get) Token: 0x06032C20 RID: 207904 RVA: 0x00BD537C File Offset: 0x00BD357C
-		// (set) Token: 0x06032C21 RID: 207905 RVA: 0x00BD5384 File Offset: 0x00BD3584
+		// Token: 0x17005115 RID: 20757
+		// (get) Token: 0x060279D4 RID: 162260 RVA: 0x00B1A114 File Offset: 0x00B18314
+		// (set) Token: 0x060279D5 RID: 162261 RVA: 0x00B1A11C File Offset: 0x00B1831C
 		public int RoleId { get; set; }
 
-		// Token: 0x17007D6C RID: 32108
-		// (get) Token: 0x06032C22 RID: 207906 RVA: 0x00BD538D File Offset: 0x00BD358D
-		// (set) Token: 0x06032C23 RID: 207907 RVA: 0x00BD5395 File Offset: 0x00BD3595
+		// Token: 0x17005116 RID: 20758
+		// (get) Token: 0x060279D6 RID: 162262 RVA: 0x00B1A125 File Offset: 0x00B18325
+		// (set) Token: 0x060279D7 RID: 162263 RVA: 0x00B1A12D File Offset: 0x00B1832D
 		public int SkillNodeId { get; set; }
 
-		// Token: 0x17007D6D RID: 32109
-		// (get) Token: 0x06032C24 RID: 207908 RVA: 0x00BD539E File Offset: 0x00BD359E
-		// (set) Token: 0x06032C25 RID: 207909 RVA: 0x00BD53A6 File Offset: 0x00BD35A6
+		// Token: 0x17005117 RID: 20759
+		// (get) Token: 0x060279D8 RID: 162264 RVA: 0x00B1A136 File Offset: 0x00B18336
+		// (set) Token: 0x060279D9 RID: 162265 RVA: 0x00B1A13E File Offset: 0x00B1833E
 		public int IconId { get; set; }
 
-		// Token: 0x17007D6E RID: 32110
-		// (get) Token: 0x06032C26 RID: 207910 RVA: 0x00BD53AF File Offset: 0x00BD35AF
-		// (set) Token: 0x06032C27 RID: 207911 RVA: 0x00BD53B7 File Offset: 0x00BD35B7
+		// Token: 0x17005118 RID: 20760
+		// (get) Token: 0x060279DA RID: 162266 RVA: 0x00B1A147 File Offset: 0x00B18347
+		// (set) Token: 0x060279DB RID: 162267 RVA: 0x00B1A14F File Offset: 0x00B1834F
 		public int CurrentLevel { get; set; }
 
-		// Token: 0x17007D6F RID: 32111
-		// (get) Token: 0x06032C28 RID: 207912 RVA: 0x00BD53C0 File Offset: 0x00BD35C0
-		// (set) Token: 0x06032C29 RID: 207913 RVA: 0x00BD53C8 File Offset: 0x00BD35C8
+		// Token: 0x17005119 RID: 20761
+		// (get) Token: 0x060279DC RID: 162268 RVA: 0x00B1A158 File Offset: 0x00B18358
+		// (set) Token: 0x060279DD RID: 162269 RVA: 0x00B1A160 File Offset: 0x00B18360
 		public int NormalTargetLevel { get; set; }
 
-		// Token: 0x17007D70 RID: 32112
-		// (get) Token: 0x06032C2A RID: 207914 RVA: 0x00BD53D1 File Offset: 0x00BD35D1
-		// (set) Token: 0x06032C2B RID: 207915 RVA: 0x00BD53D9 File Offset: 0x00BD35D9
+		// Token: 0x1700511A RID: 20762
+		// (get) Token: 0x060279DE RID: 162270 RVA: 0x00B1A169 File Offset: 0x00B18369
+		// (set) Token: 0x060279DF RID: 162271 RVA: 0x00B1A171 File Offset: 0x00B18371
 		public int PerfectTargetLevel { get; set; }
 
-		// Token: 0x17007D71 RID: 32113
-		// (get) Token: 0x06032C2C RID: 207916 RVA: 0x00BD53E2 File Offset: 0x00BD35E2
-		// (set) Token: 0x06032C2D RID: 207917 RVA: 0x00BD53EA File Offset: 0x00BD35EA
+		// Token: 0x1700511B RID: 20763
+		// (get) Token: 0x060279E0 RID: 162272 RVA: 0x00B1A17A File Offset: 0x00B1837A
+		// (set) Token: 0x060279E1 RID: 162273 RVA: 0x00B1A182 File Offset: 0x00B18382
 		public ESkillType SkillType { get; set; }
 
-		// Token: 0x17007D72 RID: 32114
-		// (get) Token: 0x06032C2E RID: 207918 RVA: 0x00BD53F3 File Offset: 0x00BD35F3
-		// (set) Token: 0x06032C2F RID: 207919 RVA: 0x00BD53FB File Offset: 0x00BD35FB
+		// Token: 0x1700511C RID: 20764
+		// (get) Token: 0x060279E2 RID: 162274 RVA: 0x00B1A18B File Offset: 0x00B1838B
+		// (set) Token: 0x060279E3 RID: 162275 RVA: 0x00B1A193 File Offset: 0x00B18393
 		public int NodeIndex { get; set; }
 	}
 }

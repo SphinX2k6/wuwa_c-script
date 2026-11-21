@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200467C RID: 18044
+	// Token: 0x02004AE4 RID: 19172
 	public class IOpenFuncT
 	{
-		// Token: 0x17008023 RID: 32803
-		// (get) Token: 0x0601B651 RID: 112209 RVA: 0x003E4B30 File Offset: 0x003E2D30
-		// (set) Token: 0x0601B652 RID: 112210 RVA: 0x003E4B38 File Offset: 0x003E2D38
+		// Token: 0x17008664 RID: 34404
+		// (get) Token: 0x0601CE26 RID: 118310 RVA: 0x00410DCC File Offset: 0x0040EFCC
+		// (set) Token: 0x0601CE27 RID: 118311 RVA: 0x00410DD4 File Offset: 0x0040EFD4
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x17008024 RID: 32804
-		// (get) Token: 0x0601B653 RID: 112211 RVA: 0x003E4B41 File Offset: 0x003E2D41
-		// (set) Token: 0x0601B654 RID: 112212 RVA: 0x003E4B49 File Offset: 0x003E2D49
+		// Token: 0x17008665 RID: 34405
+		// (get) Token: 0x0601CE28 RID: 118312 RVA: 0x00410DDD File Offset: 0x0040EFDD
+		// (set) Token: 0x0601CE29 RID: 118313 RVA: 0x00410DE5 File Offset: 0x0040EFE5
 		public int FuncId { get; set; }
 
-		// Token: 0x0601B655 RID: 112213 RVA: 0x003E4B52 File Offset: 0x003E2D52
+		// Token: 0x0601CE2A RID: 118314 RVA: 0x00410DEE File Offset: 0x0040EFEE
 		public IOpenFuncT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002851 RID: 10321
+// Token: 0x02001DCC RID: 7628
 public enum EFavorTabType
 {
-	// Token: 0x04009EE4 RID: 40676
+	// Token: 0x0400A2CD RID: 41677
 	Voice,
-	// Token: 0x04009EE5 RID: 40677
+	// Token: 0x0400A2CE RID: 41678
 	Experience,
-	// Token: 0x04009EE6 RID: 40678
+	// Token: 0x0400A2CF RID: 41679
 	Action,
-	// Token: 0x04009EE7 RID: 40679
+	// Token: 0x0400A2D0 RID: 41680
 	PreciousItem
 }

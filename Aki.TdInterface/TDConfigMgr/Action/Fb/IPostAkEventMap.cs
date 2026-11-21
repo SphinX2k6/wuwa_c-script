@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002821 RID: 10273
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AF4 RID: 10996
 	public class IPostAkEventMap : IPostAkEventType
 	{
-		// Token: 0x0600E3D7 RID: 58327 RVA: 0x00218F73 File Offset: 0x00217173
+		// Token: 0x0600F1FC RID: 61948 RVA: 0x00235DD7 File Offset: 0x00233FD7
 		public static IPostAkEventMap Create(IPostAkEventMap? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004557 RID: 17751
-		// (get) Token: 0x0600E3D8 RID: 58328 RVA: 0x00218F92 File Offset: 0x00217192
+		// Token: 0x170048C2 RID: 18626
+		// (get) Token: 0x0600F1FD RID: 61949 RVA: 0x00235DF6 File Offset: 0x00233FF6
 		public override EPostAkEvent Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004558 RID: 17752
-		// (get) Token: 0x0600E3D9 RID: 58329 RVA: 0x00218F9F File Offset: 0x0021719F
+		// Token: 0x170048C3 RID: 18627
+		// (get) Token: 0x0600F1FE RID: 61950 RVA: 0x00235E03 File Offset: 0x00234003
 		public virtual IPlayMapMusic MapEventType
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004559 RID: 17753
-		// (get) Token: 0x0600E3DA RID: 58330 RVA: 0x00218FD3 File Offset: 0x002171D3
+		// Token: 0x170048C4 RID: 18628
+		// (get) Token: 0x0600F1FF RID: 61951 RVA: 0x00235E37 File Offset: 0x00234037
 		public virtual string AkEvent
 		{
 			get
@@ -58,14 +56,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E19 RID: 32281
+		// Token: 0x040084D6 RID: 34006
 		private IPostAkEventMap Instance;
 
-		// Token: 0x04007E1A RID: 32282
+		// Token: 0x040084D7 RID: 34007
 		[Nullable(2)]
 		private IPlayMapMusic _MapEventTypeCache;
 
-		// Token: 0x04007E1B RID: 32283
+		// Token: 0x040084D8 RID: 34008
 		private bool _MapEventTypeInited;
 	}
 }

@@ -4,34 +4,34 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000276 RID: 630
+	// Token: 0x020000D1 RID: 209
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/AkAudio.EAkCurveInterpolation")]
 	public enum EAkCurveInterpolation : byte
 	{
-		// Token: 0x04000CFA RID: 3322
+		// Token: 0x0400032C RID: 812
 		Log3,
-		// Token: 0x04000CFB RID: 3323
+		// Token: 0x0400032D RID: 813
 		Sine,
-		// Token: 0x04000CFC RID: 3324
+		// Token: 0x0400032E RID: 814
 		Log1,
-		// Token: 0x04000CFD RID: 3325
+		// Token: 0x0400032F RID: 815
 		InvSCurve,
-		// Token: 0x04000CFE RID: 3326
+		// Token: 0x04000330 RID: 816
 		Linear,
-		// Token: 0x04000CFF RID: 3327
+		// Token: 0x04000331 RID: 817
 		SCurve,
-		// Token: 0x04000D00 RID: 3328
+		// Token: 0x04000332 RID: 818
 		Exp1,
-		// Token: 0x04000D01 RID: 3329
+		// Token: 0x04000333 RID: 819
 		SineRecip,
-		// Token: 0x04000D02 RID: 3330
+		// Token: 0x04000334 RID: 820
 		Exp3,
-		// Token: 0x04000D03 RID: 3331
+		// Token: 0x04000335 RID: 821
 		LastFadeCurve = 8,
-		// Token: 0x04000D04 RID: 3332
+		// Token: 0x04000336 RID: 822
 		Constant,
-		// Token: 0x04000D05 RID: 3333
+		// Token: 0x04000337 RID: 823
 		EAkCurveInterpolation_MAX
 	}
 }

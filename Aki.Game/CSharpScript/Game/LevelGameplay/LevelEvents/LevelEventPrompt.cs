@@ -15,15 +15,15 @@ using CSharpScript.Game.Ui.Common.HudOnlyPopup;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B5B RID: 27483
+	// Token: 0x02005CD3 RID: 23763
 	public class LevelEventPrompt : LevelEventBase
 	{
-		// Token: 0x060441E0 RID: 279008 RVA: 0x010C400E File Offset: 0x010C220E
+		// Token: 0x0603A332 RID: 238386 RVA: 0x0106DBC2 File Offset: 0x0106BDC2
 		public LevelEventPrompt(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441E1 RID: 279009 RVA: 0x010C4018 File Offset: 0x010C2218
+		// Token: 0x0603A333 RID: 238387 RVA: 0x0106DBCC File Offset: 0x0106BDCC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -77,6 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				case (ECommonTipType)8:
 				case ECommonTipType.TrapDefenseTip:
 				case ECommonTipType.Flipper:
+				case ECommonTipType.RedNameMonster:
 					return;
 				case ECommonTipType.ChallengeSuccess:
 					text = (commonTipType as ICommonTipChallengeSuccess).TidMainText;
@@ -337,6 +338,9 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				}
 				case ECommonTipType.SwordIntentTip:
 					SwordControlGroundController.OpenTemporary(3000f);
+					return;
+				case ECommonTipType.RoleTowerStrongEnemyWarning:
+					RoleTowerModel.Instance.OpenBossTipsView(commonTipType as IRoleTowerStrongEnemyWarning);
 					return;
 				default:
 					return;

@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AcceptEntrustResponse)]
 	public sealed class AcceptEntrustResponse : IMessage<AcceptEntrustResponse>, IMessage, IEquatable<AcceptEntrustResponse>, IDeepCloneable<AcceptEntrustResponse>, IBufferMessage
 	{
-		// Token: 0x0600148E RID: 5262 RVA: 0x00036ED4 File Offset: 0x000350D4
+		// Token: 0x060014B9 RID: 5305 RVA: 0x0003748C File Offset: 0x0003568C
 		[NullableContext(1)]
 		public static AcceptEntrustResponse Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000130 RID: 304
-		// (get) Token: 0x0600148F RID: 5263 RVA: 0x00036EDB File Offset: 0x000350DB
+		// (get) Token: 0x060014BA RID: 5306 RVA: 0x00037493 File Offset: 0x00035693
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000131 RID: 305
-		// (get) Token: 0x06001490 RID: 5264 RVA: 0x00036EDE File Offset: 0x000350DE
+		// (get) Token: 0x060014BB RID: 5307 RVA: 0x00037496 File Offset: 0x00035696
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001491 RID: 5265 RVA: 0x00036EE5 File Offset: 0x000350E5
+		// Token: 0x060014BC RID: 5308 RVA: 0x0003749D File Offset: 0x0003569D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptEntrustResponse()
 		{
 		}
 
-		// Token: 0x06001492 RID: 5266 RVA: 0x00036F04 File Offset: 0x00035104
+		// Token: 0x060014BD RID: 5309 RVA: 0x000374BC File Offset: 0x000356BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptEntrustResponse(AcceptEntrustResponse other) : this()
@@ -68,7 +68,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001493 RID: 5267 RVA: 0x00036FBA File Offset: 0x000351BA
+		// Token: 0x060014BE RID: 5310 RVA: 0x00037572 File Offset: 0x00035772
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AcceptEntrustResponse Clone()
@@ -77,8 +77,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000132 RID: 306
-		// (get) Token: 0x06001494 RID: 5268 RVA: 0x00036FC2 File Offset: 0x000351C2
-		// (set) Token: 0x06001495 RID: 5269 RVA: 0x00036FCA File Offset: 0x000351CA
+		// (get) Token: 0x060014BF RID: 5311 RVA: 0x0003757A File Offset: 0x0003577A
+		// (set) Token: 0x060014C0 RID: 5312 RVA: 0x00037582 File Offset: 0x00035782
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool TriggerIdea
@@ -94,8 +94,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000133 RID: 307
-		// (get) Token: 0x06001496 RID: 5270 RVA: 0x00036FD3 File Offset: 0x000351D3
-		// (set) Token: 0x06001497 RID: 5271 RVA: 0x00036FDB File Offset: 0x000351DB
+		// (get) Token: 0x060014C1 RID: 5313 RVA: 0x0003758B File Offset: 0x0003578B
+		// (set) Token: 0x060014C2 RID: 5314 RVA: 0x00037593 File Offset: 0x00035793
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EvaluationLevel
@@ -111,7 +111,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000134 RID: 308
-		// (get) Token: 0x06001498 RID: 5272 RVA: 0x00036FE4 File Offset: 0x000351E4
+		// (get) Token: 0x060014C3 RID: 5315 RVA: 0x0003759C File Offset: 0x0003579C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RoleProperSettle> RoleProperSettle
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000135 RID: 309
-		// (get) Token: 0x06001499 RID: 5273 RVA: 0x00036FEC File Offset: 0x000351EC
+		// (get) Token: 0x060014C4 RID: 5316 RVA: 0x000375A4 File Offset: 0x000357A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RoleGood> RoleGoods
@@ -135,8 +135,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000136 RID: 310
-		// (get) Token: 0x0600149A RID: 5274 RVA: 0x00036FF4 File Offset: 0x000351F4
-		// (set) Token: 0x0600149B RID: 5275 RVA: 0x00036FFC File Offset: 0x000351FC
+		// (get) Token: 0x060014C5 RID: 5317 RVA: 0x000375AC File Offset: 0x000357AC
+		// (set) Token: 0x060014C6 RID: 5318 RVA: 0x000375B4 File Offset: 0x000357B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Gold
@@ -152,8 +152,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000137 RID: 311
-		// (get) Token: 0x0600149C RID: 5276 RVA: 0x00037005 File Offset: 0x00035205
-		// (set) Token: 0x0600149D RID: 5277 RVA: 0x0003700D File Offset: 0x0003520D
+		// (get) Token: 0x060014C7 RID: 5319 RVA: 0x000375BD File Offset: 0x000357BD
+		// (set) Token: 0x060014C8 RID: 5320 RVA: 0x000375C5 File Offset: 0x000357C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Wish
@@ -169,8 +169,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000138 RID: 312
-		// (get) Token: 0x0600149E RID: 5278 RVA: 0x00037016 File Offset: 0x00035216
-		// (set) Token: 0x0600149F RID: 5279 RVA: 0x0003701E File Offset: 0x0003521E
+		// (get) Token: 0x060014C9 RID: 5321 RVA: 0x000375CE File Offset: 0x000357CE
+		// (set) Token: 0x060014CA RID: 5322 RVA: 0x000375D6 File Offset: 0x000357D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Heat
@@ -186,8 +186,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000139 RID: 313
-		// (get) Token: 0x060014A0 RID: 5280 RVA: 0x00037027 File Offset: 0x00035227
-		// (set) Token: 0x060014A1 RID: 5281 RVA: 0x0003702F File Offset: 0x0003522F
+		// (get) Token: 0x060014CB RID: 5323 RVA: 0x000375DF File Offset: 0x000357DF
+		// (set) Token: 0x060014CC RID: 5324 RVA: 0x000375E7 File Offset: 0x000357E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TriggerIdeaRole
@@ -203,8 +203,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700013A RID: 314
-		// (get) Token: 0x060014A2 RID: 5282 RVA: 0x00037038 File Offset: 0x00035238
-		// (set) Token: 0x060014A3 RID: 5283 RVA: 0x00037040 File Offset: 0x00035240
+		// (get) Token: 0x060014CD RID: 5325 RVA: 0x000375F0 File Offset: 0x000357F0
+		// (set) Token: 0x060014CE RID: 5326 RVA: 0x000375F8 File Offset: 0x000357F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntrustInfo AddEntrust
@@ -220,8 +220,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700013B RID: 315
-		// (get) Token: 0x060014A4 RID: 5284 RVA: 0x00037049 File Offset: 0x00035249
-		// (set) Token: 0x060014A5 RID: 5285 RVA: 0x00037051 File Offset: 0x00035251
+		// (get) Token: 0x060014CF RID: 5327 RVA: 0x00037601 File Offset: 0x00035801
+		// (set) Token: 0x060014D0 RID: 5328 RVA: 0x00037609 File Offset: 0x00035809
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -236,7 +236,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060014A6 RID: 5286 RVA: 0x0003705A File Offset: 0x0003525A
+		// Token: 0x060014D1 RID: 5329 RVA: 0x00037612 File Offset: 0x00035812
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AcceptEntrustResponse);
 		}
 
-		// Token: 0x060014A7 RID: 5287 RVA: 0x00037068 File Offset: 0x00035268
+		// Token: 0x060014D2 RID: 5330 RVA: 0x00037620 File Offset: 0x00035820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AcceptEntrustResponse other)
@@ -252,7 +252,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TriggerIdea == other.TriggerIdea && this.EvaluationLevel == other.EvaluationLevel && this.roleProperSettle_.Equals(other.roleProperSettle_) && this.roleGoods_.Equals(other.roleGoods_) && this.Gold == other.Gold && this.Wish == other.Wish && this.Heat == other.Heat && this.TriggerIdeaRole == other.TriggerIdeaRole && object.Equals(this.AddEntrust, other.AddEntrust) && this.ErrorCode == other.ErrorCode && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060014A8 RID: 5288 RVA: 0x00037140 File Offset: 0x00035340
+		// Token: 0x060014D3 RID: 5331 RVA: 0x000376F8 File Offset: 0x000358F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -299,7 +299,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060014A9 RID: 5289 RVA: 0x0003724D File Offset: 0x0003544D
+		// Token: 0x060014D4 RID: 5332 RVA: 0x00037805 File Offset: 0x00035A05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -307,7 +307,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060014AA RID: 5290 RVA: 0x0003725A File Offset: 0x0003545A
+		// Token: 0x060014D5 RID: 5333 RVA: 0x00037812 File Offset: 0x00035A12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -315,52 +315,52 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060014AB RID: 5291 RVA: 0x00037264 File Offset: 0x00035464
+		// Token: 0x060014D6 RID: 5334 RVA: 0x0003781C File Offset: 0x00035A1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.addEntrust_ != null)
+			{
+				output.WriteRawTag(10);
+				output.WriteMessage(this.AddEntrust);
+			}
 			if (this.ErrorCode != ErrorCode.Success)
 			{
 				output.WriteRawTag(16);
 				output.WriteEnum((int)this.ErrorCode);
 			}
-			if (this.Gold != 0)
+			this.roleProperSettle_.WriteTo(ref output, AcceptEntrustResponse._repeated_roleProperSettle_codec);
+			if (this.TriggerIdeaRole != 0)
 			{
-				output.WriteRawTag(32);
-				output.WriteInt32(this.Gold);
-			}
-			this.roleGoods_.WriteTo(ref output, AcceptEntrustResponse._repeated_roleGoods_codec);
-			if (this.TriggerIdea)
-			{
-				output.WriteRawTag(56);
-				output.WriteBool(this.TriggerIdea);
-			}
-			if (this.EvaluationLevel != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.EvaluationLevel);
-			}
-			if (this.addEntrust_ != null)
-			{
-				output.WriteRawTag(74);
-				output.WriteMessage(this.AddEntrust);
+				output.WriteRawTag(40);
+				output.WriteInt32(this.TriggerIdeaRole);
 			}
 			if (this.Wish != 0)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.Wish);
 			}
-			if (this.TriggerIdeaRole != 0)
+			if (this.Gold != 0)
 			{
-				output.WriteRawTag(104);
-				output.WriteInt32(this.TriggerIdeaRole);
+				output.WriteRawTag(64);
+				output.WriteInt32(this.Gold);
 			}
-			this.roleProperSettle_.WriteTo(ref output, AcceptEntrustResponse._repeated_roleProperSettle_codec);
 			if (this.Heat != 0)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(96);
 				output.WriteInt32(this.Heat);
+			}
+			if (this.TriggerIdea)
+			{
+				output.WriteRawTag(104);
+				output.WriteBool(this.TriggerIdea);
+			}
+			this.roleGoods_.WriteTo(ref output, AcceptEntrustResponse._repeated_roleGoods_codec);
+			if (this.EvaluationLevel != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.EvaluationLevel);
 			}
 			if (this._unknownFields != null)
 			{
@@ -368,7 +368,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060014AC RID: 5292 RVA: 0x00037388 File Offset: 0x00035588
+		// Token: 0x060014D7 RID: 5335 RVA: 0x00037940 File Offset: 0x00035B40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -415,7 +415,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060014AD RID: 5293 RVA: 0x00037488 File Offset: 0x00035688
+		// Token: 0x060014D8 RID: 5336 RVA: 0x00037A40 File Offset: 0x00035C40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AcceptEntrustResponse other)
@@ -465,7 +465,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060014AE RID: 5294 RVA: 0x0003758A File Offset: 0x0003578A
+		// Token: 0x060014D9 RID: 5337 RVA: 0x00037B42 File Offset: 0x00035D42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -473,7 +473,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060014AF RID: 5295 RVA: 0x00037594 File Offset: 0x00035794
+		// Token: 0x060014DA RID: 5338 RVA: 0x00037B4C File Offset: 0x00035D4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -485,54 +485,54 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 64U)
+				if (num <= 56U)
 				{
-					if (num <= 32U)
+					if (num <= 16U)
 					{
+						if (num == 10U)
+						{
+							if (this.addEntrust_ == null)
+							{
+								this.AddEntrust = new EntrustInfo();
+							}
+							input.ReadMessage(this.AddEntrust);
+							continue;
+						}
 						if (num == 16U)
 						{
 							this.ErrorCode = (ErrorCode)input.ReadEnum();
 							continue;
 						}
-						if (num == 32U)
-						{
-							this.Gold = input.ReadInt32();
-							continue;
-						}
 					}
 					else
 					{
-						if (num == 42U)
+						if (num == 34U)
 						{
-							this.roleGoods_.AddEntriesFrom(ref input, AcceptEntrustResponse._repeated_roleGoods_codec);
+							this.roleProperSettle_.AddEntriesFrom(ref input, AcceptEntrustResponse._repeated_roleProperSettle_codec);
+							continue;
+						}
+						if (num == 40U)
+						{
+							this.TriggerIdeaRole = input.ReadInt32();
 							continue;
 						}
 						if (num == 56U)
 						{
-							this.TriggerIdea = input.ReadBool();
-							continue;
-						}
-						if (num == 64U)
-						{
-							this.EvaluationLevel = input.ReadInt32();
+							this.Wish = input.ReadInt32();
 							continue;
 						}
 					}
 				}
-				else if (num <= 80U)
+				else if (num <= 96U)
 				{
-					if (num == 74U)
+					if (num == 64U)
 					{
-						if (this.addEntrust_ == null)
-						{
-							this.AddEntrust = new EntrustInfo();
-						}
-						input.ReadMessage(this.AddEntrust);
+						this.Gold = input.ReadInt32();
 						continue;
 					}
-					if (num == 80U)
+					if (num == 96U)
 					{
-						this.Wish = input.ReadInt32();
+						this.Heat = input.ReadInt32();
 						continue;
 					}
 				}
@@ -540,17 +540,17 @@ namespace Aki.Protocol
 				{
 					if (num == 104U)
 					{
-						this.TriggerIdeaRole = input.ReadInt32();
+						this.TriggerIdea = input.ReadBool();
 						continue;
 					}
 					if (num == 114U)
 					{
-						this.roleProperSettle_.AddEntriesFrom(ref input, AcceptEntrustResponse._repeated_roleProperSettle_codec);
+						this.roleGoods_.AddEntriesFrom(ref input, AcceptEntrustResponse._repeated_roleGoods_codec);
 						continue;
 					}
 					if (num == 120U)
 					{
-						this.Heat = input.ReadInt32();
+						this.EvaluationLevel = input.ReadInt32();
 						continue;
 					}
 				}
@@ -558,73 +558,73 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400205C RID: 8284
+		// Token: 0x040020B2 RID: 8370
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400205D RID: 8285
-		public const int TriggerIdeaFieldNumber = 7;
+		// Token: 0x040020B3 RID: 8371
+		public const int TriggerIdeaFieldNumber = 13;
 
-		// Token: 0x0400205E RID: 8286
+		// Token: 0x040020B4 RID: 8372
 		private bool triggerIdea_;
 
-		// Token: 0x0400205F RID: 8287
-		public const int EvaluationLevelFieldNumber = 8;
+		// Token: 0x040020B5 RID: 8373
+		public const int EvaluationLevelFieldNumber = 15;
 
-		// Token: 0x04002060 RID: 8288
+		// Token: 0x040020B6 RID: 8374
 		private int evaluationLevel_;
 
-		// Token: 0x04002061 RID: 8289
-		public const int RoleProperSettleFieldNumber = 14;
+		// Token: 0x040020B7 RID: 8375
+		public const int RoleProperSettleFieldNumber = 4;
 
-		// Token: 0x04002062 RID: 8290
-		private static readonly FieldCodec<RoleProperSettle> _repeated_roleProperSettle_codec = FieldCodec.ForMessage<RoleProperSettle>(114U, Aki.Protocol.RoleProperSettle.Parser);
+		// Token: 0x040020B8 RID: 8376
+		private static readonly FieldCodec<RoleProperSettle> _repeated_roleProperSettle_codec = FieldCodec.ForMessage<RoleProperSettle>(34U, Aki.Protocol.RoleProperSettle.Parser);
 
-		// Token: 0x04002063 RID: 8291
+		// Token: 0x040020B9 RID: 8377
 		private readonly RepeatedField<RoleProperSettle> roleProperSettle_ = new RepeatedField<RoleProperSettle>();
 
-		// Token: 0x04002064 RID: 8292
-		public const int RoleGoodsFieldNumber = 5;
+		// Token: 0x040020BA RID: 8378
+		public const int RoleGoodsFieldNumber = 14;
 
-		// Token: 0x04002065 RID: 8293
-		private static readonly FieldCodec<RoleGood> _repeated_roleGoods_codec = FieldCodec.ForMessage<RoleGood>(42U, RoleGood.Parser);
+		// Token: 0x040020BB RID: 8379
+		private static readonly FieldCodec<RoleGood> _repeated_roleGoods_codec = FieldCodec.ForMessage<RoleGood>(114U, RoleGood.Parser);
 
-		// Token: 0x04002066 RID: 8294
+		// Token: 0x040020BC RID: 8380
 		private readonly RepeatedField<RoleGood> roleGoods_ = new RepeatedField<RoleGood>();
 
-		// Token: 0x04002067 RID: 8295
-		public const int GoldFieldNumber = 4;
+		// Token: 0x040020BD RID: 8381
+		public const int GoldFieldNumber = 8;
 
-		// Token: 0x04002068 RID: 8296
+		// Token: 0x040020BE RID: 8382
 		private int gold_;
 
-		// Token: 0x04002069 RID: 8297
-		public const int WishFieldNumber = 10;
+		// Token: 0x040020BF RID: 8383
+		public const int WishFieldNumber = 7;
 
-		// Token: 0x0400206A RID: 8298
+		// Token: 0x040020C0 RID: 8384
 		private int wish_;
 
-		// Token: 0x0400206B RID: 8299
-		public const int HeatFieldNumber = 15;
+		// Token: 0x040020C1 RID: 8385
+		public const int HeatFieldNumber = 12;
 
-		// Token: 0x0400206C RID: 8300
+		// Token: 0x040020C2 RID: 8386
 		private int heat_;
 
-		// Token: 0x0400206D RID: 8301
-		public const int TriggerIdeaRoleFieldNumber = 13;
+		// Token: 0x040020C3 RID: 8387
+		public const int TriggerIdeaRoleFieldNumber = 5;
 
-		// Token: 0x0400206E RID: 8302
+		// Token: 0x040020C4 RID: 8388
 		private int triggerIdeaRole_;
 
-		// Token: 0x0400206F RID: 8303
-		public const int AddEntrustFieldNumber = 9;
+		// Token: 0x040020C5 RID: 8389
+		public const int AddEntrustFieldNumber = 1;
 
-		// Token: 0x04002070 RID: 8304
+		// Token: 0x040020C6 RID: 8390
 		private EntrustInfo addEntrust_;
 
-		// Token: 0x04002071 RID: 8305
+		// Token: 0x040020C7 RID: 8391
 		public const int ErrorCodeFieldNumber = 2;
 
-		// Token: 0x04002072 RID: 8306
+		// Token: 0x040020C8 RID: 8392
 		private ErrorCode errorCode_;
 	}
 }

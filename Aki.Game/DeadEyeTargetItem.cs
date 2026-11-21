@@ -8,20 +8,20 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A81 RID: 6785
+// Token: 0x02000F40 RID: 3904
 [NullableContext(2)]
 [Nullable(0)]
 public class DeadEyeTargetItem : CommonMarkItem
 {
-	// Token: 0x0600C7EE RID: 51182 RVA: 0x002D8C79 File Offset: 0x002D6E79
+	// Token: 0x06009BFE RID: 39934 RVA: 0x002E3D95 File Offset: 0x002E1F95
 	[NullableContext(1)]
 	public DeadEyeTargetItem(in FVectorDouble TargetLocation, Vector2D AimRange, [Nullable(2)] EntityHandle TargetEntity = null) : base(TargetLocation, null)
 	{
 	}
 
-	// Token: 0x17001065 RID: 4197
-	// (get) Token: 0x0600C7EF RID: 51183 RVA: 0x002D8C91 File Offset: 0x002D6E91
-	// (set) Token: 0x0600C7F0 RID: 51184 RVA: 0x002D8C99 File Offset: 0x002D6E99
+	// Token: 0x1700108A RID: 4234
+	// (get) Token: 0x06009BFF RID: 39935 RVA: 0x002E3DAD File Offset: 0x002E1FAD
+	// (set) Token: 0x06009C00 RID: 39936 RVA: 0x002E3DB5 File Offset: 0x002E1FB5
 	public bool IsLocked
 	{
 		get
@@ -35,7 +35,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x0600C7F1 RID: 51185 RVA: 0x002D8CAC File Offset: 0x002D6EAC
+	// Token: 0x06009C01 RID: 39937 RVA: 0x002E3DC8 File Offset: 0x002E1FC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -59,7 +59,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600C7F2 RID: 51186 RVA: 0x002D8DBC File Offset: 0x002D6FBC
+	// Token: 0x06009C02 RID: 39938 RVA: 0x002E3ED8 File Offset: 0x002E20D8
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(1);
@@ -72,13 +72,13 @@ public class DeadEyeTargetItem : CommonMarkItem
 		this.IsLocked = false;
 	}
 
-	// Token: 0x0600C7F3 RID: 51187 RVA: 0x002D8E12 File Offset: 0x002D7012
+	// Token: 0x06009C03 RID: 39939 RVA: 0x002E3F2E File Offset: 0x002E212E
 	protected override void OnAfterShow()
 	{
 		this.InRangeStateChanged(base.IsInRange(), true);
 	}
 
-	// Token: 0x0600C7F4 RID: 51188 RVA: 0x002D8E24 File Offset: 0x002D7024
+	// Token: 0x06009C04 RID: 39940 RVA: 0x002E3F40 File Offset: 0x002E2140
 	protected override UniTask OnBeforeHideAsync()
 	{
 		DeadEyeTargetItem.<OnBeforeHideAsync>d__15 <OnBeforeHideAsync>d__;
@@ -89,12 +89,12 @@ public class DeadEyeTargetItem : CommonMarkItem
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7F5 RID: 51189 RVA: 0x002D8E67 File Offset: 0x002D7067
+	// Token: 0x06009C05 RID: 39941 RVA: 0x002E3F83 File Offset: 0x002E2183
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600C7F6 RID: 51190 RVA: 0x002D8E6C File Offset: 0x002D706C
+	// Token: 0x06009C06 RID: 39942 RVA: 0x002E3F88 File Offset: 0x002E2188
 	public override void OnTick(float delta)
 	{
 		if (this.RootItem == null || !base.GetActive() || !DeadEyeModeModel.Instance.ViewStartSequenceFinish)
@@ -110,7 +110,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x0600C7F7 RID: 51191 RVA: 0x002D8EC4 File Offset: 0x002D70C4
+	// Token: 0x06009C07 RID: 39943 RVA: 0x002E3FE0 File Offset: 0x002E21E0
 	public UniTask PlayClickSequence()
 	{
 		DeadEyeTargetItem.<PlayClickSequence>d__18 <PlayClickSequence>d__;
@@ -121,7 +121,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		return <PlayClickSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C7F8 RID: 51192 RVA: 0x002D8F08 File Offset: 0x002D7108
+	// Token: 0x06009C08 RID: 39944 RVA: 0x002E4024 File Offset: 0x002E2224
 	protected override void OnScreenPositionChanged(bool bInRange)
 	{
 		UUIItem item = base.GetItem(4);
@@ -134,7 +134,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x0600C7F9 RID: 51193 RVA: 0x002D8F5C File Offset: 0x002D715C
+	// Token: 0x06009C09 RID: 39945 RVA: 0x002E4078 File Offset: 0x002E2278
 	protected override void InRangeStateChanged(bool bInRange, bool bFirst = false)
 	{
 		UUIItem item = base.GetItem(3);
@@ -205,7 +205,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x0600C7FA RID: 51194 RVA: 0x002D9093 File Offset: 0x002D7293
+	// Token: 0x06009C0A RID: 39946 RVA: 0x002E41AF File Offset: 0x002E23AF
 	private void OnHoverStateChanged(bool bHover)
 	{
 		this.IsHover = bHover;
@@ -213,7 +213,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		this.LockTarget();
 	}
 
-	// Token: 0x0600C7FB RID: 51195 RVA: 0x002D90B8 File Offset: 0x002D72B8
+	// Token: 0x06009C0B RID: 39947 RVA: 0x002E41D4 File Offset: 0x002E23D4
 	private bool CheckIsHover(in FVector2D offset)
 	{
 		double num = this.AimRange.X * 0.5;
@@ -221,7 +221,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		return (double)offset.X >= -num && (double)offset.X <= num && (double)offset.Y >= -num2 && (double)offset.Y <= num2;
 	}
 
-	// Token: 0x0600C7FC RID: 51196 RVA: 0x002D9120 File Offset: 0x002D7320
+	// Token: 0x06009C0C RID: 39948 RVA: 0x002E423C File Offset: 0x002E243C
 	private void LockTarget()
 	{
 		if (this.IsLocked)
@@ -247,7 +247,7 @@ public class DeadEyeTargetItem : CommonMarkItem
 		lockedSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600C7FD RID: 51197 RVA: 0x002D91B0 File Offset: 0x002D73B0
+	// Token: 0x06009C0D RID: 39949 RVA: 0x002E42CC File Offset: 0x002E24CC
 	private void OnLockStateChange(bool bLock)
 	{
 		UUIItem item = base.GetItem(1);
@@ -276,51 +276,51 @@ public class DeadEyeTargetItem : CommonMarkItem
 		}
 	}
 
-	// Token: 0x04005C53 RID: 23635
+	// Token: 0x04005D22 RID: 23842
 	private bool IsHover;
 
-	// Token: 0x04005C54 RID: 23636
+	// Token: 0x04005D23 RID: 23843
 	private bool IsLockedInner;
 
-	// Token: 0x04005C55 RID: 23637
+	// Token: 0x04005D24 RID: 23844
 	private LevelSequencePlayer LockedSequencePlayer;
 
-	// Token: 0x04005C56 RID: 23638
+	// Token: 0x04005D25 RID: 23845
 	private LevelSequencePlayer NotLockSequencePlayer;
 
-	// Token: 0x04005C57 RID: 23639
+	// Token: 0x04005D26 RID: 23846
 	private LevelSequencePlayer OutsideItemSequencePlayer;
 
-	// Token: 0x04005C58 RID: 23640
+	// Token: 0x04005D27 RID: 23847
 	[Nullable(1)]
 	public readonly Vector2D AimRange = AimRange;
 
-	// Token: 0x04005C59 RID: 23641
+	// Token: 0x04005D28 RID: 23848
 	public readonly EntityHandle TargetEntity = TargetEntity;
 
-	// Token: 0x02007FDE RID: 32734
+	// Token: 0x0200716D RID: 29037
 	[NullableContext(0)]
 	private class EViewComponent
 	{
-		// Token: 0x04029BDF RID: 170975
+		// Token: 0x04024F1C RID: 151324
 		public const int RootButton = 0;
 
-		// Token: 0x04029BE0 RID: 170976
+		// Token: 0x04024F1D RID: 151325
 		public const int PanelNotLock = 1;
 
-		// Token: 0x04029BE1 RID: 170977
+		// Token: 0x04024F1E RID: 151326
 		public const int PanelLocked = 2;
 
-		// Token: 0x04029BE2 RID: 170978
+		// Token: 0x04024F1F RID: 151327
 		public const int InsideItem = 3;
 
-		// Token: 0x04029BE3 RID: 170979
+		// Token: 0x04024F20 RID: 151328
 		public const int OutsideItem = 4;
 
-		// Token: 0x04029BE4 RID: 170980
+		// Token: 0x04024F21 RID: 151329
 		public const int OutsideNormalItem = 5;
 
-		// Token: 0x04029BE5 RID: 170981
+		// Token: 0x04024F22 RID: 151330
 		public const int OutsideLockItem = 6;
 	}
 }

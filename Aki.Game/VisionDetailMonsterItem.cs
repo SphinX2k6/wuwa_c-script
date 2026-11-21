@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02002438 RID: 9272
+// Token: 0x0200191D RID: 6429
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,43 +14,43 @@ using UnrealEngine;
 })]
 public class VisionDetailMonsterItem : LoopScrollSmallItemGrid<VisionDetailMonsterItemData>
 {
-	// Token: 0x06012987 RID: 76167 RVA: 0x00496602 File Offset: 0x00494802
+	// Token: 0x0600FE3D RID: 65085 RVA: 0x004A3BCE File Offset: 0x004A1DCE
 	protected override void OnStart()
 	{
 		base.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickEvent));
 		base.SetUseFixedAsync(true);
 	}
 
-	// Token: 0x06012988 RID: 76168 RVA: 0x0049661D File Offset: 0x0049481D
+	// Token: 0x0600FE3E RID: 65086 RVA: 0x004A3BE9 File Offset: 0x004A1DE9
 	private void OnClickEvent(MediumItemGridExtendCallback data)
 	{
 	}
 
-	// Token: 0x06012989 RID: 76169 RVA: 0x0049661F File Offset: 0x0049481F
+	// Token: 0x0600FE3F RID: 65087 RVA: 0x004A3BEB File Offset: 0x004A1DEB
 	protected override void OnExtendToggleClicked()
 	{
 		this.ClickButton();
 	}
 
-	// Token: 0x0601298A RID: 76170 RVA: 0x00496627 File Offset: 0x00494827
+	// Token: 0x0600FE40 RID: 65088 RVA: 0x004A3BF3 File Offset: 0x004A1DF3
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x0601298B RID: 76171 RVA: 0x00496631 File Offset: 0x00494831
+	// Token: 0x0600FE41 RID: 65089 RVA: 0x004A3BFD File Offset: 0x004A1DFD
 	private void ClickButton()
 	{
 		AdventureGuideController.Instance.TryJumpToTargetViewByMonsterId(this.MonsterId, null);
 	}
 
-	// Token: 0x0601298C RID: 76172 RVA: 0x00496644 File Offset: 0x00494844
+	// Token: 0x0600FE42 RID: 65090 RVA: 0x004A3C10 File Offset: 0x004A1E10
 	protected override void OnRefresh(VisionDetailMonsterItemData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data, isSelected, gridIndex);
 	}
 
-	// Token: 0x0601298D RID: 76173 RVA: 0x00496650 File Offset: 0x00494850
+	// Token: 0x0600FE43 RID: 65091 RVA: 0x004A3C1C File Offset: 0x004A1E1C
 	public override void Refresh(VisionDetailMonsterItemData data, bool isSelected, int gridIndex)
 	{
 		this.MonsterId = data.MonsterId;
@@ -107,6 +107,6 @@ public class VisionDetailMonsterItem : LoopScrollSmallItemGrid<VisionDetailMonst
 		base.Apply<PhantomSmallItemGrid>(phantomSmallItemGrid);
 	}
 
-	// Token: 0x04008C2E RID: 35886
+	// Token: 0x04008D75 RID: 36213
 	private int MonsterId;
 }

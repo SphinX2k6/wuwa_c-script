@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000286 RID: 646
+	// Token: 0x0200029A RID: 666
 	public class ConfigEntrustTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F29 RID: 3881 RVA: 0x000AF2A8 File Offset: 0x000AD4A8
+		// Token: 0x06000FA1 RID: 4001 RVA: 0x000B556C File Offset: 0x000B376C
 		static ConfigEntrustTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntrustTypeById.CreateStaticDefaultValue), new Action(ConfigEntrustTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F2A RID: 3882 RVA: 0x000AF2C8 File Offset: 0x000AD4C8
+		// Token: 0x06000FA2 RID: 4002 RVA: 0x000B558C File Offset: 0x000B378C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntrustTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F2B RID: 3883 RVA: 0x000AF347 File Offset: 0x000AD547
+		// Token: 0x06000FA3 RID: 4003 RVA: 0x000B560B File Offset: 0x000B380B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntrustTypeById.LogPair = null;
 			ConfigEntrustTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06000F2C RID: 3884 RVA: 0x000AF355 File Offset: 0x000AD555
+		// Token: 0x06000FA4 RID: 4004 RVA: 0x000B5619 File Offset: 0x000B3819
 		public static void Init()
 		{
 			ConfigEntrustTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigEntrustTypeById.HandleId, "db_moonchasing.db", "select BinData from `EntrustType` where Id=?");
 		}
 
-		// Token: 0x06000F2D RID: 3885 RVA: 0x000AF370 File Offset: 0x000AD570
+		// Token: 0x06000FA5 RID: 4005 RVA: 0x000B5634 File Offset: 0x000B3834
 		public static EntrustType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntrustTypeById.HandleId, ConfigEntrustTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EntrustType?(rootAsEntrustType);
 		}
 
-		// Token: 0x0400118E RID: 4494
+		// Token: 0x0400121A RID: 4634
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x0400118F RID: 4495
+		// Token: 0x0400121B RID: 4635
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x04001190 RID: 4496
+		// Token: 0x0400121C RID: 4636
 		private const string TABLE = "EntrustType";
 
-		// Token: 0x04001191 RID: 4497
+		// Token: 0x0400121D RID: 4637
 		private const string COMMAND = "select BinData from `EntrustType` where Id=?";
 
-		// Token: 0x04001192 RID: 4498
+		// Token: 0x0400121E RID: 4638
 		private const string KEY_PREFIX = "EntrustTypeById";
 
-		// Token: 0x04001193 RID: 4499
+		// Token: 0x0400121F RID: 4639
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001194 RID: 4500
+		// Token: 0x04001220 RID: 4640
 		private static int HandleId;
 	}
 }

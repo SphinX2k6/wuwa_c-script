@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DCC RID: 28108
+	// Token: 0x02007547 RID: 30023
 	public class IPromptStyleBattleT
 	{
-		// Token: 0x1700D193 RID: 53651
-		// (get) Token: 0x06031A6B RID: 203371 RVA: 0x006B9E4E File Offset: 0x006B804E
-		// (set) Token: 0x06031A6C RID: 203372 RVA: 0x006B9E56 File Offset: 0x006B8056
+		// Token: 0x1700DCDB RID: 56539
+		// (get) Token: 0x06034A67 RID: 215655 RVA: 0x00715536 File Offset: 0x00713736
+		// (set) Token: 0x06034A68 RID: 215656 RVA: 0x0071553E File Offset: 0x0071373E
 		public EPromptStyle Type { get; set; }
 
-		// Token: 0x06031A6D RID: 203373 RVA: 0x006B9E5F File Offset: 0x006B805F
+		// Token: 0x06034A69 RID: 215657 RVA: 0x00715547 File Offset: 0x00713747
 		public IPromptStyleBattleT()
 		{
 			this.Type = EPromptStyle.Default;

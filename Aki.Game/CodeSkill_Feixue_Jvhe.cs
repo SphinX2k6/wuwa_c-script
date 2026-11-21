@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003180 RID: 12672
+// Token: 0x020026ED RID: 9965
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 {
-	// Token: 0x0601B40B RID: 111627 RVA: 0x0076F122 File Offset: 0x0076D322
+	// Token: 0x06018F10 RID: 102160 RVA: 0x00796A86 File Offset: 0x00794C86
 	public CodeSkill_Feixue_Jvhe(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B40C RID: 111628 RVA: 0x0076F12B File Offset: 0x0076D32B
+	// Token: 0x06018F11 RID: 102161 RVA: 0x00796A8F File Offset: 0x00794C8F
 	public override void OnBegin(Skill skill)
 	{
 		this.ClearParryWeakTask();
@@ -25,13 +25,13 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.PlayJvheMontage(skill, 1, 0);
 	}
 
-	// Token: 0x0601B40D RID: 111629 RVA: 0x0076F155 File Offset: 0x0076D355
+	// Token: 0x06018F12 RID: 102162 RVA: 0x00796AB9 File Offset: 0x00794CB9
 	public override void OnEnd(Skill skill)
 	{
 		this.ClearParryWeakTask();
 	}
 
-	// Token: 0x0601B40E RID: 111630 RVA: 0x0076F160 File Offset: 0x0076D360
+	// Token: 0x06018F13 RID: 102163 RVA: 0x00796AC4 File Offset: 0x00794CC4
 	private void ApplyStartBranch(Skill skill)
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -85,7 +85,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.CreateSkillBullet(skill, "1108122001");
 	}
 
-	// Token: 0x0601B40F RID: 111631 RVA: 0x0076F27C File Offset: 0x0076D47C
+	// Token: 0x06018F14 RID: 102164 RVA: 0x00796BE0 File Offset: 0x00794DE0
 	private void AddBuffs(Skill skill, long[] buffIds)
 	{
 		CharacterBuffComponent component = base.Entity.GetComponent<CharacterBuffComponent>();
@@ -120,7 +120,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B410 RID: 111632 RVA: 0x0076F398 File Offset: 0x0076D598
+	// Token: 0x06018F15 RID: 102165 RVA: 0x00796CFC File Offset: 0x00794EFC
 	private void CreateSkillBullet(Skill skill, string bulletId)
 	{
 		long? skillContextId = BulletUtil.GetSkillContextId(base.Entity, skill.SkillId);
@@ -133,19 +133,19 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		}, skillContextId, EBulletCreateSource.Skill);
 	}
 
-	// Token: 0x0601B411 RID: 111633 RVA: 0x0076F400 File Offset: 0x0076D600
+	// Token: 0x06018F16 RID: 102166 RVA: 0x00796D64 File Offset: 0x00794F64
 	private int GetJvheStage()
 	{
 		return BlackboardController.Instance.GetIntValueByEntity(base.Entity.Id, "居合段数").GetValueOrDefault();
 	}
 
-	// Token: 0x0601B412 RID: 111634 RVA: 0x0076F42F File Offset: 0x0076D62F
+	// Token: 0x06018F17 RID: 102167 RVA: 0x00796D93 File Offset: 0x00794F93
 	private void SetJvheStage(int value)
 	{
 		BlackboardController.Instance.SetIntValueByEntity(base.Entity.Id, "居合段数", value);
 	}
 
-	// Token: 0x0601B413 RID: 111635 RVA: 0x0076F44C File Offset: 0x0076D64C
+	// Token: 0x06018F18 RID: 102168 RVA: 0x00796DB0 File Offset: 0x00794FB0
 	private void PlayJvheMontage(Skill skill, int montageIndex, int nextStage)
 	{
 		if (!base.SkillComp.PlaySkillMontage(montageIndex, "", 0f, delegate(bool isInterrupted)
@@ -163,7 +163,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.RegisterParryWeakListener();
 	}
 
-	// Token: 0x0601B414 RID: 111636 RVA: 0x0076F4B8 File Offset: 0x0076D6B8
+	// Token: 0x06018F19 RID: 102169 RVA: 0x00796E1C File Offset: 0x0079501C
 	private void RegisterParryWeakListener()
 	{
 		this.ClearParryWeakTask();
@@ -171,7 +171,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.ParryWeakTask = ((component != null) ? component.ListenForTagAddOrRemove(new int?(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.事件相关.弹反成功弱"]), new BaseTagComponent.TTagSwitchedCallback(this.OnParryWeak), null) : null);
 	}
 
-	// Token: 0x0601B415 RID: 111637 RVA: 0x0076F50A File Offset: 0x0076D70A
+	// Token: 0x06018F1A RID: 102170 RVA: 0x00796E6E File Offset: 0x0079506E
 	private void ClearParryWeakTask()
 	{
 		ITagTask parryWeakTask = this.ParryWeakTask;
@@ -182,7 +182,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.ParryWeakTask = null;
 	}
 
-	// Token: 0x0601B416 RID: 111638 RVA: 0x0076F524 File Offset: 0x0076D724
+	// Token: 0x06018F1B RID: 102171 RVA: 0x00796E88 File Offset: 0x00795088
 	private void OnParryWeak(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -193,7 +193,7 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		this.DestroyGpBullets();
 	}
 
-	// Token: 0x0601B417 RID: 111639 RVA: 0x0076F538 File Offset: 0x0076D738
+	// Token: 0x06018F1C RID: 102172 RVA: 0x00796E9C File Offset: 0x0079509C
 	private void DestroyGpBullets()
 	{
 		int id = base.Entity.Id;
@@ -201,28 +201,28 @@ public class CodeSkill_Feixue_Jvhe : CodeSkillBase
 		BulletController.Instance.DestroySpecifiedBullet(id, new FName("绯雪二形态-地面居合-GP拼刀子弹（无伤害）"), false, 0, 0f);
 	}
 
-	// Token: 0x0400D4AF RID: 54447
+	// Token: 0x0400D912 RID: 55570
 	private const int JVHE_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D4B0 RID: 54448
+	// Token: 0x0400D913 RID: 55571
 	private const int JVHE_SECOND_MONTAGE_INDEX = 1;
 
-	// Token: 0x0400D4B1 RID: 54449
+	// Token: 0x0400D914 RID: 55572
 	private const string JVHE_STAGE_BLACKBOARD_KEY = "居合段数";
 
-	// Token: 0x0400D4B2 RID: 54450
+	// Token: 0x0400D915 RID: 55573
 	private const string JVHE_BULLET_ID = "1108122001";
 
-	// Token: 0x0400D4B3 RID: 54451
+	// Token: 0x0400D916 RID: 55574
 	private const string JVHE_NO_STACK_BULLET_ID = "1108122003";
 
-	// Token: 0x0400D4B4 RID: 54452
+	// Token: 0x0400D917 RID: 55575
 	private const string GP_BULLET_NAME = "绯雪二形态-地面居合-GP子弹（无伤害）";
 
-	// Token: 0x0400D4B5 RID: 54453
+	// Token: 0x0400D918 RID: 55576
 	private const string GP_PARRY_BULLET_NAME = "绯雪二形态-地面居合-GP拼刀子弹（无伤害）";
 
-	// Token: 0x0400D4B6 RID: 54454
+	// Token: 0x0400D919 RID: 55577
 	[Nullable(2)]
 	private ITagTask ParryWeakTask;
 }

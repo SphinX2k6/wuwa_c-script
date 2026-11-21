@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200272E RID: 10030
+// Token: 0x02001C19 RID: 7193
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsDangoTerrainView : UiViewBase
 {
-	// Token: 0x060148E9 RID: 84201 RVA: 0x00531980 File Offset: 0x0052FB80
+	// Token: 0x06011DCB RID: 73163 RVA: 0x00540698 File Offset: 0x0053E898
 	public RacingBetsDangoTerrainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060148EA RID: 84202 RVA: 0x0053198C File Offset: 0x0052FB8C
+	// Token: 0x06011DCC RID: 73164 RVA: 0x005406A4 File Offset: 0x0053E8A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class RacingBetsDangoTerrainView : UiViewBase
 		};
 	}
 
-	// Token: 0x060148EB RID: 84203 RVA: 0x00531A50 File Offset: 0x0052FC50
+	// Token: 0x06011DCD RID: 73165 RVA: 0x00540768 File Offset: 0x0053E968
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsDangoTerrainView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -46,38 +46,38 @@ public class RacingBetsDangoTerrainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060148EC RID: 84204 RVA: 0x00531A93 File Offset: 0x0052FC93
+	// Token: 0x06011DCE RID: 73166 RVA: 0x005407AB File Offset: 0x0053E9AB
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060148ED RID: 84205 RVA: 0x00531A9C File Offset: 0x0052FC9C
+	// Token: 0x06011DCF RID: 73167 RVA: 0x005407B4 File Offset: 0x0053E9B4
 	private RacingBetsDangoTerrainItem DungeonTerrainItemProxyCreate()
 	{
 		return new RacingBetsDangoTerrainItem();
 	}
 
-	// Token: 0x04009A89 RID: 39561
+	// Token: 0x04009BE1 RID: 39905
 	private GenericLayout<RacingBetsDangoTerrainItem, int> DungeonTerrainLayout;
 
-	// Token: 0x02008D8B RID: 36235
+	// Token: 0x02007F13 RID: 32531
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DEE6 RID: 188134
+		// Token: 0x040291FC RID: 168444
 		public const int CloseButton = 0;
 
-		// Token: 0x0402DEE7 RID: 188135
+		// Token: 0x040291FD RID: 168445
 		public const int TerrainLayout = 1;
 
-		// Token: 0x0402DEE8 RID: 188136
+		// Token: 0x040291FE RID: 168446
 		public const int TerrainItem = 2;
 
-		// Token: 0x0402DEE9 RID: 188137
+		// Token: 0x040291FF RID: 168447
 		public const int MaskButton = 3;
 
-		// Token: 0x0402DEEA RID: 188138
+		// Token: 0x04029200 RID: 168448
 		public const int TitleText = 4;
 	}
 }

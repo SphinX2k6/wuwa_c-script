@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008EA RID: 2282
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200098F RID: 2447
 	public class WuWaGoComponent : IComponentBase
 	{
-		// Token: 0x060033C9 RID: 13257 RVA: 0x00084808 File Offset: 0x00082A08
+		// Token: 0x06003711 RID: 14097 RVA: 0x0008BE44 File Offset: 0x0008A044
 		private WuWaGoComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033CA RID: 13258 RVA: 0x00084840 File Offset: 0x00082A40
+		// Token: 0x06003712 RID: 14098 RVA: 0x0008BE7C File Offset: 0x0008A07C
 		public static WuWaGoComponent Create([Nullable(2)] WuWaGoComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033CB RID: 13259 RVA: 0x00084853 File Offset: 0x00082A53
+		// Token: 0x06003713 RID: 14099 RVA: 0x0008BE8F File Offset: 0x0008A08F
 		public static WuWaGoComponent CreateFromSetValue([Nullable(2)] WuWaGoComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033CC RID: 13260 RVA: 0x00084866 File Offset: 0x00082A66
+		// Token: 0x06003714 RID: 14100 RVA: 0x0008BEA2 File Offset: 0x0008A0A2
 		public new WuWaGoComponent_SetValue ToSetValue()
 		{
 			return new WuWaGoComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DED RID: 3565
-		// (get) Token: 0x060033CD RID: 13261 RVA: 0x000848A0 File Offset: 0x00082AA0
-		// (set) Token: 0x060033CE RID: 13262 RVA: 0x000848DA File Offset: 0x00082ADA
+		// Token: 0x17000EB9 RID: 3769
+		// (get) Token: 0x06003715 RID: 14101 RVA: 0x0008BEDC File Offset: 0x0008A0DC
+		// (set) Token: 0x06003716 RID: 14102 RVA: 0x0008BF16 File Offset: 0x0008A116
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DEE RID: 3566
-		// (get) Token: 0x060033CF RID: 13263 RVA: 0x000848E8 File Offset: 0x00082AE8
-		// (set) Token: 0x060033D0 RID: 13264 RVA: 0x00084912 File Offset: 0x00082B12
+		// Token: 0x17000EBA RID: 3770
+		// (get) Token: 0x06003717 RID: 14103 RVA: 0x0008BF24 File Offset: 0x0008A124
+		// (set) Token: 0x06003718 RID: 14104 RVA: 0x0008BF4E File Offset: 0x0008A14E
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DEF RID: 3567
-		// (get) Token: 0x060033D1 RID: 13265 RVA: 0x00084920 File Offset: 0x00082B20
-		// (set) Token: 0x060033D2 RID: 13266 RVA: 0x00084947 File Offset: 0x00082B47
+		// Token: 0x17000EBB RID: 3771
+		// (get) Token: 0x06003719 RID: 14105 RVA: 0x0008BF5C File Offset: 0x0008A15C
+		// (set) Token: 0x0600371A RID: 14106 RVA: 0x0008BF83 File Offset: 0x0008A183
 		public virtual IWuWaGoEntityBase WuWaGoEntity
 		{
 			get
@@ -130,9 +128,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DF0 RID: 3568
-		// (get) Token: 0x060033D3 RID: 13267 RVA: 0x00084955 File Offset: 0x00082B55
-		// (set) Token: 0x060033D4 RID: 13268 RVA: 0x0008497C File Offset: 0x00082B7C
+		// Token: 0x17000EBC RID: 3772
+		// (get) Token: 0x0600371B RID: 14107 RVA: 0x0008BF91 File Offset: 0x0008A191
+		// (set) Token: 0x0600371C RID: 14108 RVA: 0x0008BFB8 File Offset: 0x0008A1B8
 		[Nullable(2)]
 		public virtual List<int> OpenAddClientTags
 		{
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040021E6 RID: 8678
+		// Token: 0x040023FD RID: 9213
 		[Nullable(2)]
 		protected new WuWaGoComponent FbInstance;
 
-		// Token: 0x040021E7 RID: 8679
+		// Token: 0x040023FE RID: 9214
 		[Nullable(2)]
 		protected new WuWaGoComponent_SetValue PocoInterface;
 	}

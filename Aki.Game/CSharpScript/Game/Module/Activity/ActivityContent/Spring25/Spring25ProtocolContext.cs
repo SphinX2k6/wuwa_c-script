@@ -9,18 +9,18 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x02006099 RID: 24729
+	// Token: 0x02005017 RID: 20503
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Spring25ProtocolContext : ActivityBaseData
 	{
-		// Token: 0x0603E819 RID: 256025 RVA: 0x00F1BA7B File Offset: 0x00F19C7B
+		// Token: 0x060334DD RID: 210141 RVA: 0x00E6283F File Offset: 0x00E60A3F
 		public Spring25ProtocolContext(Spring25Model model)
 		{
 			this.AttachedModel = model;
 		}
 
-		// Token: 0x0603E81A RID: 256026 RVA: 0x00F1BAA0 File Offset: 0x00F19CA0
+		// Token: 0x060334DE RID: 210142 RVA: 0x00E62864 File Offset: 0x00E60A64
 		public void Dispose()
 		{
 			this.CanInvite = false;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.InvitedRoleSetInternal.Clear();
 		}
 
-		// Token: 0x0603E81B RID: 256027 RVA: 0x00F1BAC0 File Offset: 0x00F19CC0
+		// Token: 0x060334DF RID: 210143 RVA: 0x00E62884 File Offset: 0x00E60A84
 		protected override void PhraseEx(ActivityData data)
 		{
 			SpringSignInfo springSignInfo = data.SpringSignInfo;
@@ -44,14 +44,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E81C RID: 256028 RVA: 0x00F1BB31 File Offset: 0x00F19D31
+		// Token: 0x060334E0 RID: 210144 RVA: 0x00E628F5 File Offset: 0x00E60AF5
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.AttachedModel.HasRedDot;
 		}
 
-		// Token: 0x17009083 RID: 36995
-		// (get) Token: 0x0603E81D RID: 256029 RVA: 0x00F1BB3E File Offset: 0x00F19D3E
+		// Token: 0x170063E5 RID: 25573
+		// (get) Token: 0x060334E1 RID: 210145 RVA: 0x00E62902 File Offset: 0x00E60B02
 		public int SignCountRemain
 		{
 			get
@@ -60,8 +60,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009084 RID: 36996
-		// (get) Token: 0x0603E81E RID: 256030 RVA: 0x00F1BB4C File Offset: 0x00F19D4C
+		// Token: 0x170063E6 RID: 25574
+		// (get) Token: 0x060334E2 RID: 210146 RVA: 0x00E62910 File Offset: 0x00E60B10
 		public int FinishTaskCount
 		{
 			get
@@ -81,8 +81,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009085 RID: 36997
-		// (get) Token: 0x0603E81F RID: 256031 RVA: 0x00F1BBAC File Offset: 0x00F19DAC
+		// Token: 0x170063E7 RID: 25575
+		// (get) Token: 0x060334E3 RID: 210147 RVA: 0x00E62970 File Offset: 0x00E60B70
 		public int InvitedCount
 		{
 			get
@@ -91,8 +91,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009086 RID: 36998
-		// (get) Token: 0x0603E820 RID: 256032 RVA: 0x00F1BBB9 File Offset: 0x00F19DB9
+		// Token: 0x170063E8 RID: 25576
+		// (get) Token: 0x060334E4 RID: 210148 RVA: 0x00E6297D File Offset: 0x00E60B7D
 		public Dictionary<int, ActivityTask> TaskCache
 		{
 			get
@@ -101,8 +101,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009087 RID: 36999
-		// (get) Token: 0x0603E821 RID: 256033 RVA: 0x00F1BBC1 File Offset: 0x00F19DC1
+		// Token: 0x170063E9 RID: 25577
+		// (get) Token: 0x060334E5 RID: 210149 RVA: 0x00E62985 File Offset: 0x00E60B85
 		public HashSet<int> InvitedRoleSet
 		{
 			get
@@ -111,8 +111,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009088 RID: 37000
-		// (get) Token: 0x0603E822 RID: 256034 RVA: 0x00F1BBCC File Offset: 0x00F19DCC
+		// Token: 0x170063EA RID: 25578
+		// (get) Token: 0x060334E6 RID: 210150 RVA: 0x00E62990 File Offset: 0x00E60B90
 		public bool HasAnyReward
 		{
 			get
@@ -131,8 +131,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x17009089 RID: 37001
-		// (get) Token: 0x0603E823 RID: 256035 RVA: 0x00F1BC44 File Offset: 0x00F19E44
+		// Token: 0x170063EB RID: 25579
+		// (get) Token: 0x060334E7 RID: 210151 RVA: 0x00E62A08 File Offset: 0x00E60C08
 		public bool IsInviteAvailable
 		{
 			get
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E824 RID: 256036 RVA: 0x00F1BC4C File Offset: 0x00F19E4C
+		// Token: 0x060334E8 RID: 210152 RVA: 0x00E62A10 File Offset: 0x00E60C10
 		public int GetTaskCurrentByTaskId(int id)
 		{
 			ActivityTask activityTask;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return activityTask.Current;
 		}
 
-		// Token: 0x0603E825 RID: 256037 RVA: 0x00F1BC74 File Offset: 0x00F19E74
+		// Token: 0x060334E9 RID: 210153 RVA: 0x00E62A38 File Offset: 0x00E60C38
 		public int GetTaskTargetByTaskId(int id)
 		{
 			ActivityTask activityTask;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return activityTask.Target;
 		}
 
-		// Token: 0x0603E826 RID: 256038 RVA: 0x00F1BC9C File Offset: 0x00F19E9C
+		// Token: 0x060334EA RID: 210154 RVA: 0x00E62A60 File Offset: 0x00E60C60
 		public ActivityTaskState GetTaskStateByTaskId(int id)
 		{
 			ActivityTask activityTask;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return activityTask.Status;
 		}
 
-		// Token: 0x0603E827 RID: 256039 RVA: 0x00F1BCC4 File Offset: 0x00F19EC4
+		// Token: 0x060334EB RID: 210155 RVA: 0x00E62A88 File Offset: 0x00E60C88
 		public List<TItem> GetTaskRewardPreviewByTaskId(int id)
 		{
 			List<TItem> list = new List<TItem>();
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return list;
 		}
 
-		// Token: 0x0603E828 RID: 256040 RVA: 0x00F1BD54 File Offset: 0x00F19F54
+		// Token: 0x060334EC RID: 210156 RVA: 0x00E62B18 File Offset: 0x00E60D18
 		public bool IsRoleInvitedById(int id)
 		{
 			return this.InvitedRoleSetInternal.Contains(id);
 		}
 
-		// Token: 0x0603E829 RID: 256041 RVA: 0x00F1BD64 File Offset: 0x00F19F64
+		// Token: 0x060334ED RID: 210157 RVA: 0x00E62B28 File Offset: 0x00E60D28
 		private void ParseActivityInfo(SpringSignInfo data)
 		{
 			this.CanInvite = data.CanInvite;
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.IsSkinRewarded = data.SkinReward;
 		}
 
-		// Token: 0x0603E82A RID: 256042 RVA: 0x00F1BE2C File Offset: 0x00F1A02C
+		// Token: 0x060334EE RID: 210158 RVA: 0x00E62BF0 File Offset: 0x00E60DF0
 		public void SyncTaskStateByTaskId(int id)
 		{
 			ActivityTask activityTask;
@@ -233,25 +233,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E82B RID: 256043 RVA: 0x00F1BE60 File Offset: 0x00F1A060
+		// Token: 0x060334EF RID: 210159 RVA: 0x00E62C24 File Offset: 0x00E60E24
 		public void SyncSkinReward()
 		{
 			this.IsSkinRewarded = true;
 		}
 
-		// Token: 0x04020B66 RID: 133990
+		// Token: 0x0401B493 RID: 111763
 		private readonly Spring25Model AttachedModel;
 
-		// Token: 0x04020B67 RID: 133991
+		// Token: 0x0401B494 RID: 111764
 		public bool IsSkinRewarded;
 
-		// Token: 0x04020B68 RID: 133992
+		// Token: 0x0401B495 RID: 111765
 		public bool CanInvite;
 
-		// Token: 0x04020B69 RID: 133993
+		// Token: 0x0401B496 RID: 111766
 		private readonly Dictionary<int, ActivityTask> TaskCacheInternal = new Dictionary<int, ActivityTask>();
 
-		// Token: 0x04020B6A RID: 133994
+		// Token: 0x0401B497 RID: 111767
 		private readonly HashSet<int> InvitedRoleSetInternal = new HashSet<int>();
 	}
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B48 RID: 19272
+	// Token: 0x02003AF0 RID: 15088
 	public class TowerDefenseInBattleTips : UiTickViewBase
 	{
-		// Token: 0x06031E7A RID: 204410 RVA: 0x00B92B02 File Offset: 0x00B90D02
+		// Token: 0x06026C0A RID: 158730 RVA: 0x00AD6B66 File Offset: 0x00AD4D66
 		[NullableContext(1)]
 		public TowerDefenseInBattleTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031E7B RID: 204411 RVA: 0x00B92B14 File Offset: 0x00B90D14
+		// Token: 0x06026C0B RID: 158731 RVA: 0x00AD6B78 File Offset: 0x00AD4D78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031E7C RID: 204412 RVA: 0x00B92BC0 File Offset: 0x00B90DC0
+		// Token: 0x06026C0C RID: 158732 RVA: 0x00AD6C24 File Offset: 0x00AD4E24
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseInBattleTips.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,19 +47,19 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031E7D RID: 204413 RVA: 0x00B92C03 File Offset: 0x00B90E03
+		// Token: 0x06026C0D RID: 158733 RVA: 0x00AD6C67 File Offset: 0x00AD4E67
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06031E7E RID: 204414 RVA: 0x00B92C0B File Offset: 0x00B90E0B
+		// Token: 0x06026C0E RID: 158734 RVA: 0x00AD6C6F File Offset: 0x00AD4E6F
 		protected override void OnAfterDestroy()
 		{
 			TowerDefenseController.Instance.TryReopenInBattleTip();
 		}
 
-		// Token: 0x06031E7F RID: 204415 RVA: 0x00B92C18 File Offset: 0x00B90E18
+		// Token: 0x06026C0F RID: 158735 RVA: 0x00AD6C7C File Offset: 0x00AD4E7C
 		private void Refresh()
 		{
 			this.ShowingLevel = TowerDefenseModel.Instance.GetCurrentPhantomLevelInBattle();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), towerDefenseTipsContentInBattle.DescTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06031E80 RID: 204416 RVA: 0x00B92CC9 File Offset: 0x00B90EC9
+		// Token: 0x06026C10 RID: 158736 RVA: 0x00AD6D2D File Offset: 0x00AD4F2D
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.PlaySequenceStream().ContinueWith(delegate()
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			});
 		}
 
-		// Token: 0x06031E81 RID: 204417 RVA: 0x00B92CE4 File Offset: 0x00B90EE4
+		// Token: 0x06026C11 RID: 158737 RVA: 0x00AD6D48 File Offset: 0x00AD4F48
 		private UniTask PlaySequenceStream()
 		{
 			TowerDefenseInBattleTips.<PlaySequenceStream>d__10 <PlaySequenceStream>d__;
@@ -99,29 +99,29 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <PlaySequenceStream>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401A9E1 RID: 109025
+		// Token: 0x04015333 RID: 86835
 		private const int WAITING_TO_CLOSE = 2000;
 
-		// Token: 0x0401A9E2 RID: 109026
+		// Token: 0x04015334 RID: 86836
 		[Nullable(2)]
 		private SmallItemGrid IconItem;
 
-		// Token: 0x0401A9E3 RID: 109027
+		// Token: 0x04015335 RID: 86837
 		private int ShowingLevel = 1;
 
-		// Token: 0x0200ACC0 RID: 44224
+		// Token: 0x020096E0 RID: 38624
 		private class EComponent
 		{
-			// Token: 0x040347BF RID: 214975
+			// Token: 0x0402F170 RID: 192880
 			public const int IconItem = 0;
 
-			// Token: 0x040347C0 RID: 214976
+			// Token: 0x0402F171 RID: 192881
 			public const int StateSprite = 1;
 
-			// Token: 0x040347C1 RID: 214977
+			// Token: 0x0402F172 RID: 192882
 			public const int TitleText = 2;
 
-			// Token: 0x040347C2 RID: 214978
+			// Token: 0x0402F173 RID: 192883
 			public const int DescText = 3;
 		}
 	}

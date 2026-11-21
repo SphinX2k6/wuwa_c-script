@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 {
-	// Token: 0x02004F28 RID: 20264
+	// Token: 0x02003EF1 RID: 16113
 	public class RacingBetsGroupMatchPanel : UiPanelBase
 	{
-		// Token: 0x06033FA6 RID: 212902 RVA: 0x00C2F3CC File Offset: 0x00C2D5CC
+		// Token: 0x06028E14 RID: 167444 RVA: 0x00B78B74 File Offset: 0x00B76D74
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			};
 		}
 
-		// Token: 0x06033FA7 RID: 212903 RVA: 0x00C2F494 File Offset: 0x00C2D694
+		// Token: 0x06028E15 RID: 167445 RVA: 0x00B78C3C File Offset: 0x00B76E3C
 		protected override void OnBeforeCreate()
 		{
 			this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiLevelSequence);
 		}
 
-		// Token: 0x06033FA8 RID: 212904 RVA: 0x00C2F4B0 File Offset: 0x00C2D6B0
+		// Token: 0x06028E16 RID: 167446 RVA: 0x00B78C58 File Offset: 0x00B76E58
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RacingBetsGroupMatchPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033FA9 RID: 212905 RVA: 0x00C2F4F4 File Offset: 0x00C2D6F4
+		// Token: 0x06028E17 RID: 167447 RVA: 0x00B78C9C File Offset: 0x00B76E9C
 		protected override UniTask OnBeforeShowAsyncImplement()
 		{
 			RacingBetsGroupMatchPanel.<OnBeforeShowAsyncImplement>d__8 <OnBeforeShowAsyncImplement>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033FAA RID: 212906 RVA: 0x00C2F538 File Offset: 0x00C2D738
+		// Token: 0x06028E18 RID: 167448 RVA: 0x00B78CE0 File Offset: 0x00B76EE0
 		private void RefreshLine()
 		{
 			int[] groupMatchListArray = RacingBetsConfig.Instance.GetMatchTableConfigById(1).Value.GetGroupMatchListArray();
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			}
 		}
 
-		// Token: 0x06033FAB RID: 212907 RVA: 0x00C2F5A0 File Offset: 0x00C2D7A0
+		// Token: 0x06028E19 RID: 167449 RVA: 0x00B78D48 File Offset: 0x00B76F48
 		public UniTask PlayAnim()
 		{
 			RacingBetsGroupMatchPanel.<PlayAnim>d__10 <PlayAnim>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			return <PlayAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033FAC RID: 212908 RVA: 0x00C2F5E4 File Offset: 0x00C2D7E4
+		// Token: 0x06028E1A RID: 167450 RVA: 0x00B78D8C File Offset: 0x00B76F8C
 		public void ResetItemAlpha()
 		{
 			foreach (RacingBetsMatchItemBase racingBetsMatchItemBase in this.MatchItemList)
@@ -92,45 +92,45 @@ namespace CSharpScript.Game.Module.RacingBets.View.Item.RacingBetsMatchTable
 			}
 		}
 
-		// Token: 0x0401B9B8 RID: 113080
+		// Token: 0x0401638D RID: 91021
 		private const int GROUP_MATCH_NUM = 5;
 
-		// Token: 0x0401B9B9 RID: 113081
+		// Token: 0x0401638E RID: 91022
 		private const int ADVANCED_INDEX = 3;
 
-		// Token: 0x0401B9BA RID: 113082
+		// Token: 0x0401638F RID: 91023
 		[Nullable(2)]
 		public UiBehaviorLevelSequence UiLevelSequence;
 
-		// Token: 0x0401B9BB RID: 113083
+		// Token: 0x04016390 RID: 91024
 		[Nullable(1)]
 		private readonly List<RacingBetsMatchItemBase> MatchItemList = new List<RacingBetsMatchItemBase>();
 
-		// Token: 0x0200B07B RID: 45179
+		// Token: 0x02009AAB RID: 39595
 		private class EComponent
 		{
-			// Token: 0x040358FA RID: 219386
+			// Token: 0x04030325 RID: 197413
 			public const int ItemLine1 = 0;
 
-			// Token: 0x040358FB RID: 219387
+			// Token: 0x04030326 RID: 197414
 			public const int ItemLine2 = 1;
 
-			// Token: 0x040358FC RID: 219388
+			// Token: 0x04030327 RID: 197415
 			public const int ItemLine3 = 2;
 
-			// Token: 0x040358FD RID: 219389
+			// Token: 0x04030328 RID: 197416
 			public const int ItemPos1 = 3;
 
-			// Token: 0x040358FE RID: 219390
+			// Token: 0x04030329 RID: 197417
 			public const int ItemPos2 = 4;
 
-			// Token: 0x040358FF RID: 219391
+			// Token: 0x0403032A RID: 197418
 			public const int ItemPos3 = 5;
 
-			// Token: 0x04035900 RID: 219392
+			// Token: 0x0403032B RID: 197419
 			public const int ItemPos4 = 6;
 
-			// Token: 0x04035901 RID: 219393
+			// Token: 0x0403032C RID: 197420
 			public const int ItemPos5 = 7;
 		}
 	}

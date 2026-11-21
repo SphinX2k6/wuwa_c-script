@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB3 RID: 19123
+	// Token: 0x02003A5B RID: 14939
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class TrapDefenseLevelTabPanel<[Nullable(0)] TLevelModeData> : UiPanelBase where TLevelModeData : ITrapDefenseLevelModeData<TrapDefenseLevelModeDataBase>
 	{
-		// Token: 0x060318C5 RID: 202949 RVA: 0x00B7D50C File Offset: 0x00B7B70C
+		// Token: 0x06026655 RID: 157269 RVA: 0x00AC14C0 File Offset: 0x00ABF6C0
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseLevelTabPanel<TLevelModeData>.<Init>d__7 <Init>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318C6 RID: 202950 RVA: 0x00B7D558 File Offset: 0x00B7B758
+		// Token: 0x06026656 RID: 157270 RVA: 0x00AC150C File Offset: 0x00ABF70C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060318C7 RID: 202951 RVA: 0x00B7D684 File Offset: 0x00B7B884
+		// Token: 0x06026657 RID: 157271 RVA: 0x00AC1638 File Offset: 0x00ABF838
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseLevelTabPanel<TLevelModeData>.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318C8 RID: 202952 RVA: 0x00B7D6C8 File Offset: 0x00B7B8C8
+		// Token: 0x06026658 RID: 157272 RVA: 0x00AC167C File Offset: 0x00ABF87C
 		public void OnClickBtnBdSum()
 		{
 			TrapDefenseModel.Instance.OpenViewBdSum(new bool?(this.IsInstance), new ETrapDefenseBdTabType?(ETrapDefenseBdTabType.BdProgress), null);
 		}
 
-		// Token: 0x060318C9 RID: 202953 RVA: 0x00B7D6F9 File Offset: 0x00B7B8F9
+		// Token: 0x06026659 RID: 157273 RVA: 0x00AC16AD File Offset: 0x00ABF8AD
 		public TrapDefenseLevelItem CreateItemLevel()
 		{
 			return new TrapDefenseLevelItem
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x060318CA RID: 202954 RVA: 0x00B7D714 File Offset: 0x00B7B914
+		// Token: 0x0602665A RID: 157274 RVA: 0x00AC16C8 File Offset: 0x00ABF8C8
 		public void SelectLevelItem(TrapDefenseLevelItem item)
 		{
 			TrapDefenseLevelData itemData = item.ItemData;
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onSelectLevelCallback(itemData);
 		}
 
-		// Token: 0x060318CB RID: 202955 RVA: 0x00B7D740 File Offset: 0x00B7B940
+		// Token: 0x0602665B RID: 157275 RVA: 0x00AC16F4 File Offset: 0x00ABF8F4
 		public void InitSelectLevel(TrapDefenseLevelData data)
 		{
 			this.CurSelectLevel = data;
 		}
 
-		// Token: 0x060318CC RID: 202956 RVA: 0x00B7D74C File Offset: 0x00B7B94C
+		// Token: 0x0602665C RID: 157276 RVA: 0x00AC1700 File Offset: 0x00ABF900
 		public void UpdateLevelDataList(TrapDefenseLevelData[] list)
 		{
 			int selectIndex = this.UpdateSelectIndex(list);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}, true);
 		}
 
-		// Token: 0x060318CD RID: 202957 RVA: 0x00B7D7C0 File Offset: 0x00B7B9C0
+		// Token: 0x0602665D RID: 157277 RVA: 0x00AC1774 File Offset: 0x00ABF974
 		private int UpdateSelectIndex(TrapDefenseLevelData[] list)
 		{
 			int num = Array.FindIndex<TrapDefenseLevelData>(list, delegate(TrapDefenseLevelData data)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return 0;
 		}
 
-		// Token: 0x060318CE RID: 202958 RVA: 0x00B7D820 File Offset: 0x00B7BA20
+		// Token: 0x0602665E RID: 157278 RVA: 0x00AC17D4 File Offset: 0x00ABF9D4
 		public void UpdateBdSumProgress()
 		{
 			TrapDefenseRougeModeData rougeModeData = TrapDefenseModel.Instance.RougeModeData;
@@ -159,19 +159,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			uuiartText.SetText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x060318CF RID: 202959
+		// Token: 0x0602665F RID: 157279
 		public abstract void UpdateModeData();
 
-		// Token: 0x0401A7A5 RID: 108453
+		// Token: 0x040150F7 RID: 86263
 		public TLevelModeData ModeData;
 
-		// Token: 0x0401A7A6 RID: 108454
+		// Token: 0x040150F8 RID: 86264
 		public TrapDefenseDifficultyChangePanel PanelDifficultyChange;
 
-		// Token: 0x0401A7A7 RID: 108455
+		// Token: 0x040150F9 RID: 86265
 		public GenericScrollViewNew<TrapDefenseLevelItem, TrapDefenseLevelData> ScrollLevel;
 
-		// Token: 0x0401A7A8 RID: 108456
+		// Token: 0x040150FA RID: 86266
 		[Nullable(new byte[]
 		{
 			2,
@@ -179,33 +179,33 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public Action<TrapDefenseLevelData> OnSelectLevelCallback;
 
-		// Token: 0x0401A7A9 RID: 108457
+		// Token: 0x040150FB RID: 86267
 		[Nullable(2)]
 		public TrapDefenseLevelData CurSelectLevel;
 
-		// Token: 0x0401A7AA RID: 108458
+		// Token: 0x040150FC RID: 86268
 		public bool IsInstance;
 
-		// Token: 0x0200AC13 RID: 44051
+		// Token: 0x02009633 RID: 38451
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403449C RID: 214172
+			// Token: 0x0402EE4D RID: 192077
 			public const int ItemDifficultyChange = 0;
 
-			// Token: 0x0403449D RID: 214173
+			// Token: 0x0402EE4E RID: 192078
 			public const int ScrollLevel = 1;
 
-			// Token: 0x0403449E RID: 214174
+			// Token: 0x0402EE4F RID: 192079
 			public const int ItemLevel = 2;
 
-			// Token: 0x0403449F RID: 214175
+			// Token: 0x0402EE50 RID: 192080
 			public const int BtnBdSum = 3;
 
-			// Token: 0x040344A0 RID: 214176
+			// Token: 0x0402EE51 RID: 192081
 			public const int TextBdSumTitle = 4;
 
-			// Token: 0x040344A1 RID: 214177
+			// Token: 0x0402EE52 RID: 192082
 			public const int ArtTextBdProgress = 5;
 		}
 	}

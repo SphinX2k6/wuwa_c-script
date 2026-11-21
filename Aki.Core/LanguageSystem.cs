@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Common.Proxy;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using UnrealEngine;
 
 // Token: 0x02000030 RID: 48
@@ -11,7 +10,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class LanguageSystem : Singleton, ILanguageSystemProxy
 {
-	// Token: 0x060000F8 RID: 248 RVA: 0x000077E8 File Offset: 0x000059E8
+	// Token: 0x060000FA RID: 250 RVA: 0x00007560 File Offset: 0x00005760
 	protected override bool OnInit()
 	{
 		foreach (global::LanguageDefine languageDefine in this.languageList)
@@ -23,18 +22,18 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 	}
 
 	// Token: 0x17000018 RID: 24
-	// (get) Token: 0x060000F9 RID: 249 RVA: 0x0000785C File Offset: 0x00005A5C
-	// (set) Token: 0x060000FA RID: 250 RVA: 0x00007864 File Offset: 0x00005A64
+	// (get) Token: 0x060000FB RID: 251 RVA: 0x000075D4 File Offset: 0x000057D4
+	// (set) Token: 0x060000FC RID: 252 RVA: 0x000075DC File Offset: 0x000057DC
 	public bool GmShowLanguageKey { get; set; }
 
 	// Token: 0x17000019 RID: 25
-	// (get) Token: 0x060000FB RID: 251 RVA: 0x0000786D File Offset: 0x00005A6D
-	// (set) Token: 0x060000FC RID: 252 RVA: 0x00007875 File Offset: 0x00005A75
+	// (get) Token: 0x060000FD RID: 253 RVA: 0x000075E5 File Offset: 0x000057E5
+	// (set) Token: 0x060000FE RID: 254 RVA: 0x000075ED File Offset: 0x000057ED
 	public string GmReplaceTextContent { get; set; }
 
 	// Token: 0x1700001A RID: 26
-	// (get) Token: 0x060000FD RID: 253 RVA: 0x0000787E File Offset: 0x00005A7E
-	// (set) Token: 0x060000FE RID: 254 RVA: 0x0000789C File Offset: 0x00005A9C
+	// (get) Token: 0x060000FF RID: 255 RVA: 0x000075F6 File Offset: 0x000057F6
+	// (set) Token: 0x06000100 RID: 256 RVA: 0x00007614 File Offset: 0x00005814
 	public string PackageLanguage
 	{
 		get
@@ -52,10 +51,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 			UKuroVariableFunctionLibrary.RemoveStringValue("PackageLanguage");
 			UKuroVariableFunctionLibrary.SetStringValue("PackageLanguage", value);
 			ULGUIFontData.SetAllFontCurrentCulture(this.languageCultureMap.GetValueOrDefault(value, Culture.zh_Hans));
-			if (!Info.Instance.IsPlayInEditor)
-			{
-				UKismetInternationalizationLibrary.SetCurrentCulture(value, true);
-			}
+			UKismetInternationalizationLibrary.SetCurrentCulture(value, true);
 			if (value != packageLanguageInternal)
 			{
 				UUIText.OnTsLanguageChange();
@@ -72,7 +68,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 	}
 
 	// Token: 0x1700001B RID: 27
-	// (get) Token: 0x060000FF RID: 255 RVA: 0x00007934 File Offset: 0x00005B34
+	// (get) Token: 0x06000101 RID: 257 RVA: 0x000076A0 File Offset: 0x000058A0
 	public ELanguageType? PackageLanguageType
 	{
 		get
@@ -87,7 +83,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 	}
 
 	// Token: 0x1700001C RID: 28
-	// (get) Token: 0x06000100 RID: 256 RVA: 0x0000796B File Offset: 0x00005B6B
+	// (get) Token: 0x06000102 RID: 258 RVA: 0x000076D7 File Offset: 0x000058D7
 	public string PackageAudio
 	{
 		get
@@ -100,7 +96,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		}
 	}
 
-	// Token: 0x06000101 RID: 257 RVA: 0x00007988 File Offset: 0x00005B88
+	// Token: 0x06000103 RID: 259 RVA: 0x000076F4 File Offset: 0x000058F4
 	public unsafe void SetPackageAudio(string audioCode, UObject worldContext)
 	{
 		global::Log instance = global::Log.Instance;
@@ -135,7 +131,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		UAkGameplayStatics.SetCurrentAudioCultureAsync(audioCode2, fonSetCurrentAudioCultureCallback);
 	}
 
-	// Token: 0x06000102 RID: 258 RVA: 0x00007A0F File Offset: 0x00005C0F
+	// Token: 0x06000104 RID: 260 RVA: 0x0000777B File Offset: 0x0000597B
 	private string GetDefaultCulture(string currentCulture)
 	{
 		if (currentCulture.Contains("zh"))
@@ -145,7 +141,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		return "en";
 	}
 
-	// Token: 0x06000103 RID: 259 RVA: 0x00007A2C File Offset: 0x00005C2C
+	// Token: 0x06000105 RID: 261 RVA: 0x00007798 File Offset: 0x00005998
 	public unsafe void FirstTimeSetLanguage(UObject worldContext)
 	{
 		string defaultLanguage = UKismetSystemLibrary.GetDefaultLanguage();
@@ -202,25 +198,25 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		this.PackageLanguage = languageDefine.LanguageCode;
 	}
 
-	// Token: 0x06000104 RID: 260 RVA: 0x00007C35 File Offset: 0x00005E35
+	// Token: 0x06000106 RID: 262 RVA: 0x000079A1 File Offset: 0x00005BA1
 	public List<global::LanguageDefine> GetAllLanguageDefines()
 	{
 		return this.languageList;
 	}
 
-	// Token: 0x06000105 RID: 261 RVA: 0x00007C3D File Offset: 0x00005E3D
+	// Token: 0x06000107 RID: 263 RVA: 0x000079A9 File Offset: 0x00005BA9
 	public global::LanguageDefine GetLanguageDefineByType(int type)
 	{
 		return this.languageTypeMap[type];
 	}
 
-	// Token: 0x06000106 RID: 262 RVA: 0x00007C4B File Offset: 0x00005E4B
+	// Token: 0x06000108 RID: 264 RVA: 0x000079B7 File Offset: 0x00005BB7
 	public global::LanguageDefine GetLanguageDefineByCode(string code)
 	{
 		return this.languageCodeMap[code];
 	}
 
-	// Token: 0x06000107 RID: 263 RVA: 0x00007C59 File Offset: 0x00005E59
+	// Token: 0x06000109 RID: 265 RVA: 0x000079C5 File Offset: 0x00005BC5
 	public string GetCultureOrDefault([Nullable(2)] string culture)
 	{
 		if (!string.IsNullOrEmpty(culture))
@@ -230,13 +226,13 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		return this.PackageLanguage;
 	}
 
-	// Token: 0x06000108 RID: 264 RVA: 0x00007C6B File Offset: 0x00005E6B
+	// Token: 0x0600010A RID: 266 RVA: 0x000079D7 File Offset: 0x00005BD7
 	public ESpeechType GetSpeechTypeByLanguageType(ELanguageType languageType)
 	{
 		return this.languageSpeechMapping[languageType];
 	}
 
-	// Token: 0x06000109 RID: 265 RVA: 0x00007C7C File Offset: 0x00005E7C
+	// Token: 0x0600010B RID: 267 RVA: 0x000079E8 File Offset: 0x00005BE8
 	public int GetLanguageTypeByAudioCode(string audioCode)
 	{
 		foreach (global::LanguageDefine languageDefine in this.languageList)
@@ -250,7 +246,7 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 	}
 
 	// Token: 0x1700001D RID: 29
-	// (get) Token: 0x0600010A RID: 266 RVA: 0x00007CE4 File Offset: 0x00005EE4
+	// (get) Token: 0x0600010C RID: 268 RVA: 0x00007A50 File Offset: 0x00005C50
 	public static global::LanguageSystem Instance
 	{
 		get
@@ -264,13 +260,13 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		}
 	}
 
-	// Token: 0x0600010B RID: 267 RVA: 0x00007D07 File Offset: 0x00005F07
+	// Token: 0x0600010D RID: 269 RVA: 0x00007A73 File Offset: 0x00005C73
 	public static void CreateStaticDefaultValue()
 	{
 		global::LanguageSystem.OnCreateStaticDefaultValue();
 	}
 
-	// Token: 0x0600010C RID: 268 RVA: 0x00007D0E File Offset: 0x00005F0E
+	// Token: 0x0600010E RID: 270 RVA: 0x00007A7A File Offset: 0x00005C7A
 	public static void ResetStaticDefaultValue()
 	{
 		global::LanguageSystem instance = global::LanguageSystem._instance;
@@ -282,24 +278,24 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		global::LanguageSystem.OnResetStaticDefaultValue();
 	}
 
-	// Token: 0x0600010D RID: 269 RVA: 0x00007D2C File Offset: 0x00005F2C
+	// Token: 0x0600010F RID: 271 RVA: 0x00007A98 File Offset: 0x00005C98
 	private static void OnCreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600010E RID: 270 RVA: 0x00007D2E File Offset: 0x00005F2E
+	// Token: 0x06000110 RID: 272 RVA: 0x00007A9A File Offset: 0x00005C9A
 	private static void OnResetStaticDefaultValue()
 	{
 		global::LanguageSystem.NotifyLauncherLanguageHook = null;
 	}
 
-	// Token: 0x0600010F RID: 271 RVA: 0x00007D36 File Offset: 0x00005F36
+	// Token: 0x06000111 RID: 273 RVA: 0x00007AA2 File Offset: 0x00005CA2
 	static LanguageSystem()
 	{
 		global::StaticVariableRegister.RegisterAndExecute(new Action(global::LanguageSystem.CreateStaticDefaultValue), new Action(global::LanguageSystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000110 RID: 272 RVA: 0x00007D58 File Offset: 0x00005F58
+	// Token: 0x06000112 RID: 274 RVA: 0x00007AC4 File Offset: 0x00005CC4
 	public LanguageSystem()
 	{
 		Dictionary<ELanguageType, ESpeechType> dictionary = new Dictionary<ELanguageType, ESpeechType>();
@@ -354,31 +350,31 @@ public class LanguageSystem : Singleton, ILanguageSystemProxy
 		base..ctor();
 	}
 
-	// Token: 0x04000104 RID: 260
+	// Token: 0x04000105 RID: 261
 	public readonly Dictionary<ELanguageType, ESpeechType> languageSpeechMapping;
 
-	// Token: 0x04000105 RID: 261
+	// Token: 0x04000106 RID: 262
 	private readonly List<global::LanguageDefine> languageList;
 
-	// Token: 0x04000106 RID: 262
+	// Token: 0x04000107 RID: 263
 	public readonly Dictionary<string, Culture> languageCultureMap;
 
-	// Token: 0x04000107 RID: 263
+	// Token: 0x04000108 RID: 264
 	private readonly Dictionary<int, global::LanguageDefine> languageTypeMap;
 
-	// Token: 0x04000108 RID: 264
+	// Token: 0x04000109 RID: 265
 	private readonly Dictionary<string, global::LanguageDefine> languageCodeMap;
 
-	// Token: 0x0400010B RID: 267
+	// Token: 0x0400010C RID: 268
 	private string PackageLanguageInternal;
 
-	// Token: 0x0400010C RID: 268
+	// Token: 0x0400010D RID: 269
 	private string PackageAudioInternal;
 
-	// Token: 0x0400010D RID: 269
+	// Token: 0x0400010E RID: 270
 	public static Action<string> NotifyLauncherLanguageHook;
 
-	// Token: 0x0400010E RID: 270
+	// Token: 0x0400010F RID: 271
 	[Nullable(2)]
 	private static global::LanguageSystem _instance;
 }

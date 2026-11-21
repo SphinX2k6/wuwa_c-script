@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BBD RID: 3005
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C8B RID: 3211
 	public class INpcUiInteractOnHandInItem : INpcUiInteractType
 	{
-		// Token: 0x060044E3 RID: 17635 RVA: 0x000AEC1A File Offset: 0x000ACE1A
+		// Token: 0x0600493C RID: 18748 RVA: 0x000B8CDE File Offset: 0x000B6EDE
 		public static INpcUiInteractOnHandInItem Create(INpcUiInteractOnHandInItem? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001326 RID: 4902
-		// (get) Token: 0x060044E4 RID: 17636 RVA: 0x000AEC39 File Offset: 0x000ACE39
+		// Token: 0x17001421 RID: 5153
+		// (get) Token: 0x0600493D RID: 18749 RVA: 0x000B8CFD File Offset: 0x000B6EFD
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001327 RID: 4903
-		// (get) Token: 0x060044E5 RID: 17637 RVA: 0x000AEC46 File Offset: 0x000ACE46
+		// Token: 0x17001422 RID: 5154
+		// (get) Token: 0x0600493E RID: 18750 RVA: 0x000B8D0A File Offset: 0x000B6F0A
 		public virtual string EnterMontage
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001328 RID: 4904
-		// (get) Token: 0x060044E6 RID: 17638 RVA: 0x000AEC53 File Offset: 0x000ACE53
+		// Token: 0x17001423 RID: 5155
+		// (get) Token: 0x0600493F RID: 18751 RVA: 0x000B8D17 File Offset: 0x000B6F17
 		public virtual string StandByMontage
 		{
 			get
@@ -53,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001329 RID: 4905
-		// (get) Token: 0x060044E7 RID: 17639 RVA: 0x000AEC60 File Offset: 0x000ACE60
+		// Token: 0x17001424 RID: 5156
+		// (get) Token: 0x06004940 RID: 18752 RVA: 0x000B8D24 File Offset: 0x000B6F24
 		public virtual string HandInFailedMontage
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700132A RID: 4906
-		// (get) Token: 0x060044E8 RID: 17640 RVA: 0x000AEC6D File Offset: 0x000ACE6D
+		// Token: 0x17001425 RID: 5157
+		// (get) Token: 0x06004941 RID: 18753 RVA: 0x000B8D31 File Offset: 0x000B6F31
 		[Nullable(2)]
 		public virtual PlayFlow EnterFlow
 		{
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700132B RID: 4907
-		// (get) Token: 0x060044E9 RID: 17641 RVA: 0x000AECA1 File Offset: 0x000ACEA1
+		// Token: 0x17001426 RID: 5158
+		// (get) Token: 0x06004942 RID: 18754 RVA: 0x000B8D65 File Offset: 0x000B6F65
 		[Nullable(2)]
 		public virtual PlayFlow HandInFailedFlow
 		{
@@ -99,21 +97,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026F6 RID: 9974
+		// Token: 0x0400293E RID: 10558
 		private INpcUiInteractOnHandInItem Instance;
 
-		// Token: 0x040026F7 RID: 9975
+		// Token: 0x0400293F RID: 10559
 		[Nullable(2)]
 		private PlayFlow _EnterFlowCache;
 
-		// Token: 0x040026F8 RID: 9976
+		// Token: 0x04002940 RID: 10560
 		private bool _EnterFlowInited;
 
-		// Token: 0x040026F9 RID: 9977
+		// Token: 0x04002941 RID: 10561
 		[Nullable(2)]
 		private PlayFlow _HandInFailedFlowCache;
 
-		// Token: 0x040026FA RID: 9978
+		// Token: 0x04002942 RID: 10562
 		private bool _HandInFailedFlowInited;
 	}
 }

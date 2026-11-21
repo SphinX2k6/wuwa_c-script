@@ -4,7 +4,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200195D RID: 6493
+// Token: 0x02000E1A RID: 3610
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using CSharpScript.Game.Module.Inventory;
 })]
 public class SelectablePropMediumItemGrid : LoopScrollMediumItemGrid<SelectablePropData>
 {
-	// Token: 0x0600BDE3 RID: 48611 RVA: 0x002AEDD0 File Offset: 0x002ACFD0
+	// Token: 0x060091E6 RID: 37350 RVA: 0x002B9C14 File Offset: 0x002B7E14
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -34,39 +34,39 @@ public class SelectablePropMediumItemGrid : LoopScrollMediumItemGrid<SelectableP
 		}
 	}
 
-	// Token: 0x0600BDE4 RID: 48612 RVA: 0x002AEE2A File Offset: 0x002AD02A
+	// Token: 0x060091E7 RID: 37351 RVA: 0x002B9C6E File Offset: 0x002B7E6E
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x0600BDE5 RID: 48613 RVA: 0x002AEE34 File Offset: 0x002AD034
+	// Token: 0x060091E8 RID: 37352 RVA: 0x002B9C78 File Offset: 0x002B7E78
 	public override void SetSelected(bool bSelected, bool bForce = false)
 	{
 		this.RefreshUi(this.SelectablePropData);
 		base.SetSelected(bSelected, bForce);
 	}
 
-	// Token: 0x0600BDE6 RID: 48614 RVA: 0x002AEE4A File Offset: 0x002AD04A
+	// Token: 0x060091E9 RID: 37353 RVA: 0x002B9C8E File Offset: 0x002B7E8E
 	protected override void OnStart()
 	{
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Bind(new Action(this.ShowItemTips));
 	}
 
-	// Token: 0x0600BDE7 RID: 48615 RVA: 0x002AEE68 File Offset: 0x002AD068
+	// Token: 0x060091EA RID: 37354 RVA: 0x002B9CAC File Offset: 0x002B7EAC
 	protected override void OnBeforeDestroy()
 	{
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Unbind();
 		this.OnAfterApplyCallback = null;
 	}
 
-	// Token: 0x0600BDE8 RID: 48616 RVA: 0x002AEE81 File Offset: 0x002AD081
+	// Token: 0x060091EB RID: 37355 RVA: 0x002B9CC5 File Offset: 0x002B7EC5
 	private void ShowItemTips()
 	{
 		EventSystem.Instance.Emit<int, int>(EEventName.OnSelectItemAdd, this.SelectablePropData.ItemId, this.SelectablePropData.IncId);
 	}
 
-	// Token: 0x0600BDE9 RID: 48617 RVA: 0x002AEEA9 File Offset: 0x002AD0A9
+	// Token: 0x060091EC RID: 37356 RVA: 0x002B9CED File Offset: 0x002B7EED
 	protected override void OnRefresh(SelectablePropData data, bool isSelected, int gridIndex)
 	{
 		this.SelectablePropData = data;
@@ -77,7 +77,7 @@ public class SelectablePropMediumItemGrid : LoopScrollMediumItemGrid<SelectableP
 		}
 	}
 
-	// Token: 0x0600BDEA RID: 48618 RVA: 0x002AEEE4 File Offset: 0x002AD0E4
+	// Token: 0x060091ED RID: 37357 RVA: 0x002B9D28 File Offset: 0x002B7F28
 	public virtual void RefreshUi(SelectablePropData data)
 	{
 		this.SelectablePropData = data;
@@ -189,7 +189,7 @@ public class SelectablePropMediumItemGrid : LoopScrollMediumItemGrid<SelectableP
 		base.Apply<PropMediumItemGrid>(propMediumItemGrid);
 	}
 
-	// Token: 0x0600BDEB RID: 48619 RVA: 0x002AF1A4 File Offset: 0x002AD3A4
+	// Token: 0x060091EE RID: 37358 RVA: 0x002B9FE8 File Offset: 0x002B81E8
 	public virtual void RefreshCostCount()
 	{
 		if (this.SelectablePropData == null)
@@ -229,17 +229,17 @@ public class SelectablePropMediumItemGrid : LoopScrollMediumItemGrid<SelectableP
 		base.SetBottomText(this.SelectablePropData.Count.ToString());
 	}
 
-	// Token: 0x0600BDEC RID: 48620 RVA: 0x002AF279 File Offset: 0x002AD479
+	// Token: 0x060091EF RID: 37359 RVA: 0x002BA0BD File Offset: 0x002B82BD
 	public void BindAfterApply(Action<SelectablePropMediumItemGrid> onAfterApplyCallback)
 	{
 		this.OnAfterApplyCallback = onAfterApplyCallback;
 	}
 
-	// Token: 0x040055AA RID: 21930
+	// Token: 0x04005657 RID: 22103
 	[Nullable(2)]
 	public SelectablePropData SelectablePropData;
 
-	// Token: 0x040055AB RID: 21931
+	// Token: 0x04005658 RID: 22104
 	[Nullable(new byte[]
 	{
 		2,

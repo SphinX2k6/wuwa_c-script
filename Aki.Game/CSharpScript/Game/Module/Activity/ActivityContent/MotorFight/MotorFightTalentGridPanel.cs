@@ -10,14 +10,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200641A RID: 25626
+	// Token: 0x02005398 RID: 21400
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightTalentGridPanel : UiPanelBase, IGridProxy<List<MotorFightTalentData>>
 	{
-		// Token: 0x17009476 RID: 38006
-		// (get) Token: 0x0604071F RID: 263967 RVA: 0x00F97FFE File Offset: 0x00F961FE
-		// (set) Token: 0x06040720 RID: 263968 RVA: 0x00F98006 File Offset: 0x00F96206
+		// Token: 0x170067D8 RID: 26584
+		// (get) Token: 0x060353E0 RID: 218080 RVA: 0x00EDEF9E File Offset: 0x00EDD19E
+		// (set) Token: 0x060353E1 RID: 218081 RVA: 0x00EDEFA6 File Offset: 0x00EDD1A6
 		[Nullable(new byte[]
 		{
 			2,
@@ -45,17 +45,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			1
 		})] set; }
 
-		// Token: 0x17009477 RID: 38007
-		// (get) Token: 0x06040721 RID: 263969 RVA: 0x00F9800F File Offset: 0x00F9620F
-		// (set) Token: 0x06040722 RID: 263970 RVA: 0x00F98017 File Offset: 0x00F96217
+		// Token: 0x170067D9 RID: 26585
+		// (get) Token: 0x060353E2 RID: 218082 RVA: 0x00EDEFAF File Offset: 0x00EDD1AF
+		// (set) Token: 0x060353E3 RID: 218083 RVA: 0x00EDEFB7 File Offset: 0x00EDD1B7
 		public int GridIndex { get; set; }
 
-		// Token: 0x17009478 RID: 38008
-		// (get) Token: 0x06040723 RID: 263971 RVA: 0x00F98020 File Offset: 0x00F96220
-		// (set) Token: 0x06040724 RID: 263972 RVA: 0x00F98028 File Offset: 0x00F96228
+		// Token: 0x170067DA RID: 26586
+		// (get) Token: 0x060353E4 RID: 218084 RVA: 0x00EDEFC0 File Offset: 0x00EDD1C0
+		// (set) Token: 0x060353E5 RID: 218085 RVA: 0x00EDEFC8 File Offset: 0x00EDD1C8
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x06040725 RID: 263973 RVA: 0x00F98034 File Offset: 0x00F96234
+		// Token: 0x060353E6 RID: 218086 RVA: 0x00EDEFD4 File Offset: 0x00EDD1D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040726 RID: 263974 RVA: 0x00F980C0 File Offset: 0x00F962C0
+		// Token: 0x060353E7 RID: 218087 RVA: 0x00EDF060 File Offset: 0x00EDD260
 		public UniTask RefreshAsync(List<MotorFightTalentData> dataList, bool isSelected, int gridIndex)
 		{
 			MotorFightTalentGridPanel.<RefreshAsync>d__16 <RefreshAsync>d__;
@@ -83,46 +83,46 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040727 RID: 263975 RVA: 0x00F9810B File Offset: 0x00F9630B
+		// Token: 0x060353E8 RID: 218088 RVA: 0x00EDF0AB File Offset: 0x00EDD2AB
 		public void Clear()
 		{
 		}
 
-		// Token: 0x06040728 RID: 263976 RVA: 0x00F9810D File Offset: 0x00F9630D
+		// Token: 0x060353E9 RID: 218089 RVA: 0x00EDF0AD File Offset: 0x00EDD2AD
 		public void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x06040729 RID: 263977 RVA: 0x00F9810F File Offset: 0x00F9630F
+		// Token: 0x060353EA RID: 218090 RVA: 0x00EDF0AF File Offset: 0x00EDD2AF
 		public void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0604072A RID: 263978 RVA: 0x00F98111 File Offset: 0x00F96311
+		// Token: 0x060353EB RID: 218091 RVA: 0x00EDF0B1 File Offset: 0x00EDD2B1
 		public object GetKey(List<MotorFightTalentData> data, int gridIndex)
 		{
 			return this.GridIndex;
 		}
 
-		// Token: 0x0402181A RID: 137242
+		// Token: 0x0401C149 RID: 115017
 		private readonly List<MotorFightTalentNodeItem> TalentNodeItemList = new List<MotorFightTalentNodeItem>();
 
-		// Token: 0x0402181E RID: 137246
+		// Token: 0x0401C14D RID: 115021
 		public Action<MotorFightTalentNodeItem> OnSelectTalentNode = delegate(MotorFightTalentNodeItem technologyNode)
 		{
 		};
 
-		// Token: 0x0200C63F RID: 50751
+		// Token: 0x0200B026 RID: 45094
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BDAE RID: 245166
+			// Token: 0x0403670B RID: 222987
 			public const int Pos1 = 0;
 
-			// Token: 0x0403BDAF RID: 245167
+			// Token: 0x0403670C RID: 222988
 			public const int Pos2 = 1;
 
-			// Token: 0x0403BDB0 RID: 245168
+			// Token: 0x0403670D RID: 222989
 			public const int Pos3 = 2;
 		}
 	}

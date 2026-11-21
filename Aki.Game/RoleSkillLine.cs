@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028BB RID: 10427
+// Token: 0x02001E36 RID: 7734
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSkillLine : UiPanelBase
 {
-	// Token: 0x06015806 RID: 88070 RVA: 0x0056C42C File Offset: 0x0056A62C
+	// Token: 0x06013206 RID: 78342 RVA: 0x00597274 File Offset: 0x00595474
 	[NullableContext(1)]
 	public RoleSkillLine(int startNodeId, int endNodeId, string color, UUIItem uiItem)
 	{
@@ -21,7 +21,7 @@ public class RoleSkillLine : UiPanelBase
 		this.SetColor(color);
 	}
 
-	// Token: 0x06015807 RID: 88071 RVA: 0x0056C496 File Offset: 0x0056A696
+	// Token: 0x06013207 RID: 78343 RVA: 0x005972DE File Offset: 0x005954DE
 	[NullableContext(1)]
 	public void SetColor(string color)
 	{
@@ -35,7 +35,7 @@ public class RoleSkillLine : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015808 RID: 88072 RVA: 0x0056C4CC File Offset: 0x0056A6CC
+	// Token: 0x06013208 RID: 78344 RVA: 0x00597314 File Offset: 0x00595514
 	public void SetLineActive(ELineState lineState)
 	{
 		switch (lineState)
@@ -61,7 +61,7 @@ public class RoleSkillLine : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015809 RID: 88073 RVA: 0x0056C568 File Offset: 0x0056A768
+	// Token: 0x06013209 RID: 78345 RVA: 0x005973B0 File Offset: 0x005955B0
 	protected override void OnBeforeDestroy()
 	{
 		this.StartPosId = null;
@@ -71,18 +71,18 @@ public class RoleSkillLine : UiPanelBase
 		this.ActiveEffect = null;
 	}
 
-	// Token: 0x0400A03F RID: 41023
+	// Token: 0x0400A428 RID: 42024
 	public int? StartPosId;
 
-	// Token: 0x0400A040 RID: 41024
+	// Token: 0x0400A429 RID: 42025
 	public int? EndPosId;
 
-	// Token: 0x0400A041 RID: 41025
+	// Token: 0x0400A42A RID: 42026
 	private UUIItem InactiveNode;
 
-	// Token: 0x0400A042 RID: 41026
+	// Token: 0x0400A42B RID: 42027
 	private UUIItem ActiveNode;
 
-	// Token: 0x0400A043 RID: 41027
+	// Token: 0x0400A42C RID: 42028
 	private UUIItem ActiveEffect;
 }

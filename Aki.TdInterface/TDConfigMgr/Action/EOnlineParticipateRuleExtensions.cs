@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B5 RID: 9141
+	// Token: 0x02002646 RID: 9798
 	public static class EOnlineParticipateRuleExtensions
 	{
-		// Token: 0x0600C72D RID: 50989 RVA: 0x001D2988 File Offset: 0x001D0B88
+		// Token: 0x0600D395 RID: 54165 RVA: 0x001EBDBC File Offset: 0x001E9FBC
 		public static string ToEnumString(this EOnlineParticipateRule value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C72E RID: 50990 RVA: 0x001D29C0 File Offset: 0x001D0BC0
+		// Token: 0x0600D396 RID: 54166 RVA: 0x001EBDF4 File Offset: 0x001E9FF4
 		public static EOnlineParticipateRule FromString(string name)
 		{
 			EOnlineParticipateRule result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C72F RID: 50991 RVA: 0x001D29E9 File Offset: 0x001D0BE9
+		// Token: 0x0600D397 RID: 54167 RVA: 0x001EBE1D File Offset: 0x001EA01D
 		public static bool TryFromString(string name, out EOnlineParticipateRule value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C730 RID: 50992 RVA: 0x001D2A22 File Offset: 0x001D0C22
+		// Token: 0x0600D398 RID: 54168 RVA: 0x001EBE56 File Offset: 0x001EA056
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C731 RID: 50993 RVA: 0x001D2A3A File Offset: 0x001D0C3A
+		// Token: 0x0600D399 RID: 54169 RVA: 0x001EBE6E File Offset: 0x001EA06E
 		public static EOnlineParticipateRule[] GetValues()
 		{
 			return new EOnlineParticipateRule[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C732 RID: 50994 RVA: 0x001D2A46 File Offset: 0x001D0C46
+		// Token: 0x0600D39A RID: 54170 RVA: 0x001EBE7A File Offset: 0x001EA07A
 		public static string[] GetNames()
 		{
 			return new string[]

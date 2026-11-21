@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003317 RID: 13079
+// Token: 0x02002889 RID: 10377
 [NullableContext(1)]
 [Nullable(0)]
 public class ModelAssetBulletManager : IStaticVariableResetter
 {
-	// Token: 0x0601C7DE RID: 116702 RVA: 0x007FE3FC File Offset: 0x007FC5FC
+	// Token: 0x0601A4D7 RID: 107735 RVA: 0x00824968 File Offset: 0x00822B68
 	static ModelAssetBulletManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ModelAssetBulletManager.CreateStaticDefaultValue), new Action(ModelAssetBulletManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601C7DF RID: 116703 RVA: 0x007FE41B File Offset: 0x007FC61B
+	// Token: 0x0601A4D8 RID: 107736 RVA: 0x00824987 File Offset: 0x00822B87
 	public ModelAssetBulletManager(ModelAssetElement modelAssetElement)
 	{
 		this.ModelAssetElement = modelAssetElement;
 	}
 
-	// Token: 0x1700277E RID: 10110
-	// (get) Token: 0x0601C7E0 RID: 116704 RVA: 0x007FE452 File Offset: 0x007FC652
+	// Token: 0x17002B1B RID: 11035
+	// (get) Token: 0x0601A4D9 RID: 107737 RVA: 0x008249BE File Offset: 0x00822BBE
 	private static Stat AddAssetStat1
 	{
 		get
@@ -30,7 +30,7 @@ public class ModelAssetBulletManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601C7E1 RID: 116705 RVA: 0x007FE45C File Offset: 0x007FC65C
+	// Token: 0x0601A4DA RID: 107738 RVA: 0x008249C8 File Offset: 0x00822BC8
 	public bool AddAsset(long id, AssetElement assetElement)
 	{
 		ModelAssetBulletManager.<>c__DisplayClass11_0 CS$<>8__locals1 = new ModelAssetBulletManager.<>c__DisplayClass11_0();
@@ -71,7 +71,7 @@ public class ModelAssetBulletManager : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601C7E2 RID: 116706 RVA: 0x007FE530 File Offset: 0x007FC730
+	// Token: 0x0601A4DB RID: 107739 RVA: 0x00824A9C File Offset: 0x00822C9C
 	public void Clear()
 	{
 		this.Key = -1;
@@ -86,38 +86,38 @@ public class ModelAssetBulletManager : IStaticVariableResetter
 		holdAssetObject.Clear();
 	}
 
-	// Token: 0x0601C7E3 RID: 116707 RVA: 0x007FE56A File Offset: 0x007FC76A
+	// Token: 0x0601A4DC RID: 107740 RVA: 0x00824AD6 File Offset: 0x00822CD6
 	public static void CreateStaticDefaultValue()
 	{
 		ModelAssetBulletManager._addAssetStat1 = Stat.Create("Preload.AddStat1.NewObject", "", "");
 	}
 
-	// Token: 0x0601C7E4 RID: 116708 RVA: 0x007FE585 File Offset: 0x007FC785
+	// Token: 0x0601A4DD RID: 107741 RVA: 0x00824AF1 File Offset: 0x00822CF1
 	public static void ResetStaticDefaultValue()
 	{
 		ModelAssetBulletManager._addAssetStat1 = null;
 	}
 
-	// Token: 0x0400E256 RID: 57942
+	// Token: 0x0400E707 RID: 59143
 	public readonly ModelAssetElement ModelAssetElement;
 
-	// Token: 0x0400E257 RID: 57943
+	// Token: 0x0400E708 RID: 59144
 	public Dictionary<long, int> ValueMapping = new Dictionary<long, int>();
 
-	// Token: 0x0400E258 RID: 57944
+	// Token: 0x0400E709 RID: 59145
 	public Dictionary<int, long> IndexMapping = new Dictionary<int, long>();
 
-	// Token: 0x0400E259 RID: 57945
+	// Token: 0x0400E70A RID: 59146
 	public Dictionary<int, AssetElement> AssetMap = new Dictionary<int, AssetElement>();
 
-	// Token: 0x0400E25A RID: 57946
+	// Token: 0x0400E70B RID: 59147
 	[Nullable(2)]
 	private UHoldPreloadObject HoldAssetObject;
 
-	// Token: 0x0400E25B RID: 57947
+	// Token: 0x0400E70C RID: 59148
 	private int Key = -1;
 
-	// Token: 0x0400E25C RID: 57948
+	// Token: 0x0400E70D RID: 59149
 	[Nullable(2)]
 	private static Stat _addAssetStat1;
 }

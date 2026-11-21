@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EC4 RID: 24260
+	// Token: 0x02004EA9 RID: 20137
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SilentAreaDetectionDynamicData : ISilentAreaDetectionDynamicData
 	{
-		// Token: 0x17008ED4 RID: 36564
-		// (get) Token: 0x0603DB26 RID: 252710 RVA: 0x00EE5DB5 File Offset: 0x00EE3FB5
-		// (set) Token: 0x0603DB27 RID: 252711 RVA: 0x00EE5DBD File Offset: 0x00EE3FBD
+		// Token: 0x170062A6 RID: 25254
+		// (get) Token: 0x06032AB6 RID: 207542 RVA: 0x00E37301 File Offset: 0x00E35501
+		// (set) Token: 0x06032AB7 RID: 207543 RVA: 0x00E37309 File Offset: 0x00E35509
 		public bool IsShow { get; set; }
 
-		// Token: 0x17008ED5 RID: 36565
-		// (get) Token: 0x0603DB28 RID: 252712 RVA: 0x00EE5DC6 File Offset: 0x00EE3FC6
-		// (set) Token: 0x0603DB29 RID: 252713 RVA: 0x00EE5DCE File Offset: 0x00EE3FCE
+		// Token: 0x170062A7 RID: 25255
+		// (get) Token: 0x06032AB8 RID: 207544 RVA: 0x00E37312 File Offset: 0x00E35512
+		// (set) Token: 0x06032AB9 RID: 207545 RVA: 0x00E3731A File Offset: 0x00E3551A
 		public int DangerType { get; set; }
 
-		// Token: 0x17008ED6 RID: 36566
-		// (get) Token: 0x0603DB2A RID: 252714 RVA: 0x00EE5DD7 File Offset: 0x00EE3FD7
-		// (set) Token: 0x0603DB2B RID: 252715 RVA: 0x00EE5DDF File Offset: 0x00EE3FDF
+		// Token: 0x170062A8 RID: 25256
+		// (get) Token: 0x06032ABA RID: 207546 RVA: 0x00E37323 File Offset: 0x00E35523
+		// (set) Token: 0x06032ABB RID: 207547 RVA: 0x00E3732B File Offset: 0x00E3552B
 		public SilentAreaDetectionRecord SilentAreaDetectionData { get; set; }
 
-		// Token: 0x17008ED7 RID: 36567
-		// (get) Token: 0x0603DB2C RID: 252716 RVA: 0x00EE5DE8 File Offset: 0x00EE3FE8
-		// (set) Token: 0x0603DB2D RID: 252717 RVA: 0x00EE5DF0 File Offset: 0x00EE3FF0
+		// Token: 0x170062A9 RID: 25257
+		// (get) Token: 0x06032ABC RID: 207548 RVA: 0x00E37334 File Offset: 0x00E35534
+		// (set) Token: 0x06032ABD RID: 207549 RVA: 0x00E3733C File Offset: 0x00E3553C
 		[Nullable(2)]
 		public ISilentAreaTitleData SilentAreaTitleData { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

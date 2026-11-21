@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 {
-	// Token: 0x02006E1E RID: 28190
+	// Token: 0x02005F9E RID: 24478
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GravityFlipView : UiViewBase
 	{
-		// Token: 0x06044B99 RID: 281497 RVA: 0x010F63C3 File Offset: 0x010F45C3
+		// Token: 0x0603AD02 RID: 240898 RVA: 0x010A08FF File Offset: 0x0109EAFF
 		[NullableContext(1)]
 		public GravityFlipView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06044B9A RID: 281498 RVA: 0x010F63D4 File Offset: 0x010F45D4
+		// Token: 0x0603AD03 RID: 240899 RVA: 0x010A0910 File Offset: 0x0109EB10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044B9B RID: 281499 RVA: 0x010F65AC File Offset: 0x010F47AC
+		// Token: 0x0603AD04 RID: 240900 RVA: 0x010A0AE8 File Offset: 0x0109ECE8
 		protected override void OnStart()
 		{
 			this.BtnUpArrow = base.GetButton(0);
@@ -84,25 +84,25 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			GravityFlipModel.Instance.ViewCallBackCache = ((gravityFlipViewOpenParam != null) ? gravityFlipViewOpenParam.SelectCallback : null);
 		}
 
-		// Token: 0x06044B9C RID: 281500 RVA: 0x010F6667 File Offset: 0x010F4867
+		// Token: 0x0603AD05 RID: 240901 RVA: 0x010A0BA3 File Offset: 0x0109EDA3
 		protected override void OnBeforeShow()
 		{
 			this.SetBtnState(true);
 		}
 
-		// Token: 0x06044B9D RID: 281501 RVA: 0x010F6670 File Offset: 0x010F4870
+		// Token: 0x0603AD06 RID: 240902 RVA: 0x010A0BAC File Offset: 0x0109EDAC
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnGravityFlipAnimFinish, new Action(this.OnGravityFlipAnimFinish));
 		}
 
-		// Token: 0x06044B9E RID: 281502 RVA: 0x010F668E File Offset: 0x010F488E
+		// Token: 0x0603AD07 RID: 240903 RVA: 0x010A0BCA File Offset: 0x0109EDCA
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnGravityFlipAnimFinish, new Action(this.OnGravityFlipAnimFinish));
 		}
 
-		// Token: 0x06044B9F RID: 281503 RVA: 0x010F66AC File Offset: 0x010F48AC
+		// Token: 0x0603AD08 RID: 240904 RVA: 0x010A0BE8 File Offset: 0x0109EDE8
 		private void OnCloseClick()
 		{
 			if (this.IsPlayingTurnAnim)
@@ -121,31 +121,31 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06044BA0 RID: 281504 RVA: 0x010F6708 File Offset: 0x010F4908
+		// Token: 0x0603AD09 RID: 240905 RVA: 0x010A0C44 File Offset: 0x0109EE44
 		private void OnUpArrowClick()
 		{
 			this.OnArrowBtnClick(0);
 		}
 
-		// Token: 0x06044BA1 RID: 281505 RVA: 0x010F6711 File Offset: 0x010F4911
+		// Token: 0x0603AD0A RID: 240906 RVA: 0x010A0C4D File Offset: 0x0109EE4D
 		private void OnLeftArrowClick()
 		{
 			this.OnArrowBtnClick(1);
 		}
 
-		// Token: 0x06044BA2 RID: 281506 RVA: 0x010F671A File Offset: 0x010F491A
+		// Token: 0x0603AD0B RID: 240907 RVA: 0x010A0C56 File Offset: 0x0109EE56
 		private void OnRightArrowClick()
 		{
 			this.OnArrowBtnClick(2);
 		}
 
-		// Token: 0x06044BA3 RID: 281507 RVA: 0x010F6723 File Offset: 0x010F4923
+		// Token: 0x0603AD0C RID: 240908 RVA: 0x010A0C5F File Offset: 0x0109EE5F
 		private void OnDownArrowClick()
 		{
 			this.OnArrowBtnClick(4);
 		}
 
-		// Token: 0x06044BA4 RID: 281508 RVA: 0x010F672C File Offset: 0x010F492C
+		// Token: 0x0603AD0D RID: 240909 RVA: 0x010A0C68 File Offset: 0x0109EE68
 		private void OnArrowBtnClick(int btn)
 		{
 			if (this.IsPlayingTurnAnim)
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			this.SetAllBtnInteractive(false);
 		}
 
-		// Token: 0x06044BA5 RID: 281509 RVA: 0x010F6834 File Offset: 0x010F4A34
+		// Token: 0x0603AD0E RID: 240910 RVA: 0x010A0D70 File Offset: 0x0109EF70
 		private void OnGravityFlipAnimFinish()
 		{
 			this.SetBtnState(false);
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			this.IsPlayingTurnAnim = false;
 		}
 
-		// Token: 0x06044BA6 RID: 281510 RVA: 0x010F6890 File Offset: 0x010F4A90
+		// Token: 0x0603AD0F RID: 240911 RVA: 0x010A0DCC File Offset: 0x0109EFCC
 		private void SetBtnState(bool isInit = false)
 		{
 			this.SetAllBtnInteractive(false);
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			downArrowSeqPlayer2.PlayLevelSequenceByName("Gray", false, null, false);
 		}
 
-		// Token: 0x06044BA7 RID: 281511 RVA: 0x010F6A8C File Offset: 0x010F4C8C
+		// Token: 0x0603AD10 RID: 240912 RVA: 0x010A0FC8 File Offset: 0x0109F1C8
 		private void SetAllBtnInteractive(bool interactiveEnable)
 		{
 			UUIButtonComponent btnUpArrow = this.BtnUpArrow;
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			btnDownArrow.SetSelfInteractive(interactiveEnable);
 		}
 
-		// Token: 0x06044BA8 RID: 281512 RVA: 0x010F6B40 File Offset: 0x010F4D40
+		// Token: 0x0603AD11 RID: 240913 RVA: 0x010A107C File Offset: 0x0109F27C
 		private void RequestGravityFlip()
 		{
 			if (!GravityFlipModel.Instance.NeedChangeGravity())
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			}, 0);
 		}
 
-		// Token: 0x06044BA9 RID: 281513 RVA: 0x010F6BF8 File Offset: 0x010F4DF8
+		// Token: 0x0603AD12 RID: 240914 RVA: 0x010A1134 File Offset: 0x0109F334
 		[NullableContext(1)]
 		private void OnPlotNetworkEnd(PlotResultInfo _)
 		{
@@ -405,53 +405,53 @@ namespace CSharpScript.Game.LevelGamePlay.GravityFlip
 			GravityFlipModel.Instance.GravityFlipComp.OnNotifyUpdateGravityDirection(GravityFlipModel.Instance.CacheCorrectDirection);
 		}
 
-		// Token: 0x04023BFC RID: 146428
+		// Token: 0x0401EE9F RID: 126623
 		private UUIButtonComponent BtnUpArrow;
 
-		// Token: 0x04023BFD RID: 146429
+		// Token: 0x0401EEA0 RID: 126624
 		private UUIButtonComponent BtnRightArrow;
 
-		// Token: 0x04023BFE RID: 146430
+		// Token: 0x0401EEA1 RID: 126625
 		private UUIButtonComponent BtnLeftArrow;
 
-		// Token: 0x04023BFF RID: 146431
+		// Token: 0x0401EEA2 RID: 126626
 		private UUIButtonComponent BtnDownArrow;
 
-		// Token: 0x04023C00 RID: 146432
+		// Token: 0x0401EEA3 RID: 126627
 		private LevelSequencePlayer DownArrowSeqPlayer;
 
-		// Token: 0x04023C01 RID: 146433
+		// Token: 0x0401EEA4 RID: 126628
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x04023C02 RID: 146434
+		// Token: 0x0401EEA5 RID: 126629
 		private int TargetDirection = -1;
 
-		// Token: 0x04023C03 RID: 146435
+		// Token: 0x0401EEA6 RID: 126630
 		private bool IsPlayingTurnAnim;
 
-		// Token: 0x0200CCD5 RID: 52437
+		// Token: 0x0200B8C5 RID: 47301
 		[NullableContext(0)]
 		private class EGravityFlipView
 		{
-			// Token: 0x0403DC6A RID: 253034
+			// Token: 0x0403908C RID: 233612
 			public const int BtnUpArrow = 0;
 
-			// Token: 0x0403DC6B RID: 253035
+			// Token: 0x0403908D RID: 233613
 			public const int BtnLeftArrow = 1;
 
-			// Token: 0x0403DC6C RID: 253036
+			// Token: 0x0403908E RID: 233614
 			public const int BtnRightArrow = 2;
 
-			// Token: 0x0403DC6D RID: 253037
+			// Token: 0x0403908F RID: 233615
 			public const int BtnClose = 3;
 
-			// Token: 0x0403DC6E RID: 253038
+			// Token: 0x04039090 RID: 233616
 			public const int BtnDownArrow = 4;
 
-			// Token: 0x0403DC6F RID: 253039
+			// Token: 0x04039091 RID: 233617
 			public const int ArrowPanel = 5;
 
-			// Token: 0x0403DC70 RID: 253040
+			// Token: 0x04039092 RID: 233618
 			public const int TargetArrow = 6;
 		}
 	}

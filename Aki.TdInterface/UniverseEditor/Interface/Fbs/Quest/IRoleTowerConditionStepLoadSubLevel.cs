@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040D6 RID: 16598
+	// Token: 0x02004517 RID: 17687
 	public struct IRoleTowerConditionStepLoadSubLevel : IFlatbufferObject
 	{
-		// Token: 0x1700750A RID: 29962
-		// (get) Token: 0x060182EC RID: 99052 RVA: 0x0037BC91 File Offset: 0x00379E91
+		// Token: 0x17007B10 RID: 31504
+		// (get) Token: 0x0601998D RID: 104845 RVA: 0x003A5BE1 File Offset: 0x003A3DE1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060182ED RID: 99053 RVA: 0x0037BC9E File Offset: 0x00379E9E
+		// Token: 0x0601998E RID: 104846 RVA: 0x003A5BEE File Offset: 0x003A3DEE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060182EE RID: 99054 RVA: 0x0037BCA8 File Offset: 0x00379EA8
+		// Token: 0x0601998F RID: 104847 RVA: 0x003A5BF8 File Offset: 0x003A3DF8
 		public static IRoleTowerConditionStepLoadSubLevel GetRootAsIRoleTowerConditionStepLoadSubLevel(ByteBuffer _bb)
 		{
 			return IRoleTowerConditionStepLoadSubLevel.GetRootAsIRoleTowerConditionStepLoadSubLevel(_bb, default(IRoleTowerConditionStepLoadSubLevel));
 		}
 
-		// Token: 0x060182EF RID: 99055 RVA: 0x0037BCC4 File Offset: 0x00379EC4
+		// Token: 0x06019990 RID: 104848 RVA: 0x003A5C14 File Offset: 0x003A3E14
 		public static IRoleTowerConditionStepLoadSubLevel GetRootAsIRoleTowerConditionStepLoadSubLevel(ByteBuffer _bb, IRoleTowerConditionStepLoadSubLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060182F0 RID: 99056 RVA: 0x0037BCE1 File Offset: 0x00379EE1
+		// Token: 0x06019991 RID: 104849 RVA: 0x003A5C31 File Offset: 0x003A3E31
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060182F1 RID: 99057 RVA: 0x0037BCF0 File Offset: 0x00379EF0
+		// Token: 0x06019992 RID: 104850 RVA: 0x003A5C40 File Offset: 0x003A3E40
 		public IRoleTowerConditionStepLoadSubLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700750B RID: 29963
-		// (get) Token: 0x060182F2 RID: 99058 RVA: 0x0037BD00 File Offset: 0x00379F00
+		// Token: 0x17007B11 RID: 31505
+		// (get) Token: 0x06019993 RID: 104851 RVA: 0x003A5C50 File Offset: 0x003A3E50
 		public ERoleTowerConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060182F3 RID: 99059 RVA: 0x0037BD3C File Offset: 0x00379F3C
+		// Token: 0x06019994 RID: 104852 RVA: 0x003A5C8C File Offset: 0x003A3E8C
 		public static Offset<IRoleTowerConditionStepLoadSubLevel> CreateIRoleTowerConditionStepLoadSubLevel(FlatBufferBuilder builder, ERoleTowerConditionStep Type = ERoleTowerConditionStep.Prepare)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerConditionStepLoadSubLevel.EndIRoleTowerConditionStepLoadSubLevel(builder);
 		}
 
-		// Token: 0x060182F4 RID: 99060 RVA: 0x0037BD52 File Offset: 0x00379F52
+		// Token: 0x06019995 RID: 104853 RVA: 0x003A5CA2 File Offset: 0x003A3EA2
 		public static void StartIRoleTowerConditionStepLoadSubLevel(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060182F5 RID: 99061 RVA: 0x0037BD5B File Offset: 0x00379F5B
+		// Token: 0x06019996 RID: 104854 RVA: 0x003A5CAB File Offset: 0x003A3EAB
 		public static void AddType(FlatBufferBuilder builder, ERoleTowerConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060182F6 RID: 99062 RVA: 0x0037BD66 File Offset: 0x00379F66
+		// Token: 0x06019997 RID: 104855 RVA: 0x003A5CB6 File Offset: 0x003A3EB6
 		public static Offset<IRoleTowerConditionStepLoadSubLevel> EndIRoleTowerConditionStepLoadSubLevel(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoleTowerConditionStepLoadSubLevel>(builder.EndTable());
 		}
 
-		// Token: 0x060182F7 RID: 99063 RVA: 0x0037BD74 File Offset: 0x00379F74
+		// Token: 0x06019998 RID: 104856 RVA: 0x003A5CC4 File Offset: 0x003A3EC4
 		public IRoleTowerConditionStepLoadSubLevelT UnPack()
 		{
 			IRoleTowerConditionStepLoadSubLevelT roleTowerConditionStepLoadSubLevelT = new IRoleTowerConditionStepLoadSubLevelT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return roleTowerConditionStepLoadSubLevelT;
 		}
 
-		// Token: 0x060182F8 RID: 99064 RVA: 0x0037BD8F File Offset: 0x00379F8F
+		// Token: 0x06019999 RID: 104857 RVA: 0x003A5CDF File Offset: 0x003A3EDF
 		public void UnPackTo(IRoleTowerConditionStepLoadSubLevelT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060182F9 RID: 99065 RVA: 0x0037BDA0 File Offset: 0x00379FA0
+		// Token: 0x0601999A RID: 104858 RVA: 0x003A5CF0 File Offset: 0x003A3EF0
 		public static Offset<IRoleTowerConditionStepLoadSubLevel> Pack(FlatBufferBuilder builder, IRoleTowerConditionStepLoadSubLevelT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRoleTowerConditionStepLoadSubLevel.CreateIRoleTowerConditionStepLoadSubLevel(builder, _o.Type);
 		}
 
-		// Token: 0x0400BC72 RID: 48242
+		// Token: 0x0400C65B RID: 50779
 		private Table __p;
 	}
 }

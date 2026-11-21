@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BBD RID: 7101
+// Token: 0x0200107C RID: 4220
 [NullableContext(1)]
 public interface IFormationValidator
 {
-	// Token: 0x0600D3A6 RID: 54182
+	// Token: 0x0600A7B8 RID: 42936
 	bool CanJoinTeam(int roleId, int formationId);
 
-	// Token: 0x0600D3A7 RID: 54183
+	// Token: 0x0600A7B9 RID: 42937
 	bool IsNeedRevive(int roleId, int formationId);
 
-	// Token: 0x0600D3A8 RID: 54184
+	// Token: 0x0600A7BA RID: 42938
 	bool CanSelectRole(int roleId, IReadOnlyList<int> selectedRoleIds);
 
-	// Token: 0x0600D3A9 RID: 54185
-	bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds);
+	// Token: 0x0600A7BB RID: 42939
+	bool CanQuickSelectConfirm(IReadOnlyList<int> selectedRoleIds, int formationId);
 
-	// Token: 0x0600D3AA RID: 54186
+	// Token: 0x0600A7BC RID: 42940
 	bool ConfirmCheck(int roleId, int formationId, int editPosition);
 
-	// Token: 0x0600D3AB RID: 54187
+	// Token: 0x0600A7BD RID: 42941
 	bool IsConfirmButtonEnable(int roleId, int formationId, int editPosition);
 
-	// Token: 0x0600D3AC RID: 54188
+	// Token: 0x0600A7BE RID: 42942
 	[NullableContext(2)]
 	string GetConfirmButtonTextId(int roleId, int formationId, int editPosition);
 }

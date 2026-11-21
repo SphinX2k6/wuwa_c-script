@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000613 RID: 1555
+	// Token: 0x020006B0 RID: 1712
 	public class IPointGroupGenerateType_SetValue
 	{
-		// Token: 0x04001732 RID: 5938
+		// Token: 0x04001924 RID: 6436
 		public EPointGroupGenerateType Type;
 	}
 }

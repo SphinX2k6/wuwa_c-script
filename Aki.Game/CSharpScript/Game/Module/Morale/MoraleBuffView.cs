@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053AF RID: 21423
+	// Token: 0x02004392 RID: 17298
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleBuffView : UiViewBase
 	{
-		// Token: 0x170083B2 RID: 33714
-		// (get) Token: 0x06036BDC RID: 224220 RVA: 0x00CF4872 File Offset: 0x00CF2A72
+		// Token: 0x1700577E RID: 22398
+		// (get) Token: 0x0602BB22 RID: 178978 RVA: 0x00C4391A File Offset: 0x00C41B1A
 		[Nullable(2)]
 		public new MoraleBuffViewParams OpenParam
 		{
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BDD RID: 224221 RVA: 0x00CF487F File Offset: 0x00CF2A7F
+		// Token: 0x0602BB23 RID: 178979 RVA: 0x00C43927 File Offset: 0x00C41B27
 		public MoraleBuffView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036BDE RID: 224222 RVA: 0x00CF48AC File Offset: 0x00CF2AAC
+		// Token: 0x0602BB24 RID: 178980 RVA: 0x00C43954 File Offset: 0x00C41B54
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036BDF RID: 224223 RVA: 0x00CF4A80 File Offset: 0x00CF2C80
+		// Token: 0x0602BB25 RID: 178981 RVA: 0x00C43B28 File Offset: 0x00C41D28
 		private void InitDataParam()
 		{
 			this.BuffDataList = new List<MoraleBuffData>(MoraleModel.Instance.BuffList);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.SetSelectBuff(this.SelectBuff);
 		}
 
-		// Token: 0x06036BE0 RID: 224224 RVA: 0x00CF4B40 File Offset: 0x00CF2D40
+		// Token: 0x0602BB26 RID: 178982 RVA: 0x00C43BE8 File Offset: 0x00C41DE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleBuffView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BE1 RID: 224225 RVA: 0x00CF4B84 File Offset: 0x00CF2D84
+		// Token: 0x0602BB27 RID: 178983 RVA: 0x00C43C2C File Offset: 0x00C41E2C
 		private UniTask InitBuffList()
 		{
 			MoraleBuffView.<InitBuffList>d__16 <InitBuffList>d__;
@@ -103,17 +103,17 @@ namespace CSharpScript.Game.Module.Morale
 			return <InitBuffList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036BE2 RID: 224226 RVA: 0x00CF4BC7 File Offset: 0x00CF2DC7
+		// Token: 0x0602BB28 RID: 178984 RVA: 0x00C43C6F File Offset: 0x00C41E6F
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06036BE3 RID: 224227 RVA: 0x00CF4BC9 File Offset: 0x00CF2DC9
+		// Token: 0x0602BB29 RID: 178985 RVA: 0x00C43C71 File Offset: 0x00C41E71
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06036BE4 RID: 224228 RVA: 0x00CF4BCC File Offset: 0x00CF2DCC
+		// Token: 0x0602BB2A RID: 178986 RVA: 0x00C43C74 File Offset: 0x00C41E74
 		protected override void OnBeforeShow()
 		{
 			this.UpdateData();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Morale
 			});
 		}
 
-		// Token: 0x06036BE5 RID: 224229 RVA: 0x00CF4C18 File Offset: 0x00CF2E18
+		// Token: 0x0602BB2B RID: 178987 RVA: 0x00C43CC0 File Offset: 0x00C41EC0
 		protected void UpdateProgressAndJump(float _)
 		{
 			if (base.IsDestroyOrDestroying)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateScrollJumpPos();
 		}
 
-		// Token: 0x06036BE6 RID: 224230 RVA: 0x00CF4C4C File Offset: 0x00CF2E4C
+		// Token: 0x0602BB2C RID: 178988 RVA: 0x00C43CF4 File Offset: 0x00C41EF4
 		private void UpdateData()
 		{
 			foreach (MoraleBuffItem moraleBuffItem in this.BuffItemList)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.UpdateAreaBuffRedDot();
 		}
 
-		// Token: 0x06036BE7 RID: 224231 RVA: 0x00CF4D78 File Offset: 0x00CF2F78
+		// Token: 0x0602BB2D RID: 178989 RVA: 0x00C43E20 File Offset: 0x00C42020
 		public void UpdateScrollJumpPos()
 		{
 			if (this.SelectBuff == null)
@@ -195,14 +195,14 @@ namespace CSharpScript.Game.Module.Morale
 			scrollViewWithScrollbar.ScrollToLeft(ref fvector2D, moraleBuffItem.GetRootItem(), false);
 		}
 
-		// Token: 0x06036BE8 RID: 224232 RVA: 0x00CF4DFA File Offset: 0x00CF2FFA
+		// Token: 0x0602BB2E RID: 178990 RVA: 0x00C43EA2 File Offset: 0x00C420A2
 		private void SetSelectBuff(MoraleBuffData buff)
 		{
 			this.SelectBuff = buff;
 			this.UpdateSelectBuffState();
 		}
 
-		// Token: 0x06036BE9 RID: 224233 RVA: 0x00CF4E0C File Offset: 0x00CF300C
+		// Token: 0x0602BB2F RID: 178991 RVA: 0x00C43EB4 File Offset: 0x00C420B4
 		private void UpdateSelectBuffState()
 		{
 			foreach (MoraleBuffData moraleBuffData in this.BuffDataList)
@@ -214,13 +214,13 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BEA RID: 224234 RVA: 0x00CF4E94 File Offset: 0x00CF3094
+		// Token: 0x0602BB30 RID: 178992 RVA: 0x00C43F3C File Offset: 0x00C4213C
 		private void OnButtonBuffDetail()
 		{
 			this.RoleAttrAddPanel.SetActive(true);
 		}
 
-		// Token: 0x06036BEB RID: 224235 RVA: 0x00CF4EA4 File Offset: 0x00CF30A4
+		// Token: 0x0602BB31 RID: 178993 RVA: 0x00C43F4C File Offset: 0x00C4214C
 		private void OnClickBuff(MoraleBuffData buff)
 		{
 			this.SetSelectBuff(buff);
@@ -231,13 +231,13 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BEC RID: 224236 RVA: 0x00CF4F08 File Offset: 0x00CF3108
+		// Token: 0x0602BB32 RID: 178994 RVA: 0x00C43FB0 File Offset: 0x00C421B0
 		private void OnBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036BED RID: 224237 RVA: 0x00CF4F14 File Offset: 0x00CF3114
+		// Token: 0x0602BB33 RID: 178995 RVA: 0x00C43FBC File Offset: 0x00C421BC
 		public void UpdateLvProgress(int? moraleLv = null, int? tempMoraleLv = null)
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BEE RID: 224238 RVA: 0x00CF500C File Offset: 0x00CF320C
+		// Token: 0x0602BB34 RID: 178996 RVA: 0x00C440B4 File Offset: 0x00C422B4
 		public float GetLvProgress(int lv)
 		{
 			int num = this.BuffItemList.Count * 2 - 1;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Morale
 			return ((float)Math.Max(stageBuffDataByLv.Index * 2 - 1, 0) + num4) / (float)num;
 		}
 
-		// Token: 0x06036BEF RID: 224239 RVA: 0x00CF5080 File Offset: 0x00CF3280
+		// Token: 0x0602BB35 RID: 178997 RVA: 0x00C44128 File Offset: 0x00C42328
 		public void UpdateExpAddDesc()
 		{
 			UUIText text = base.GetText(16);
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x06036BF0 RID: 224240 RVA: 0x00CF50DC File Offset: 0x00CF32DC
+		// Token: 0x0602BB36 RID: 178998 RVA: 0x00C44184 File Offset: 0x00C42384
 		public void UpdateAreaBuffRedDot()
 		{
 			bool uiactive = MoraleModel.Instance.RedDotAreaBuff();
@@ -321,97 +321,97 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06036BF1 RID: 224241 RVA: 0x00CF5107 File Offset: 0x00CF3307
+		// Token: 0x0602BB37 RID: 178999 RVA: 0x00C441AF File Offset: 0x00C423AF
 		private void OnCloseRoleAttrAddPanel()
 		{
 			MoraleModel.Instance.ClearNewActiveAreaBuff();
 			this.UpdateAreaBuffRedDot();
 		}
 
-		// Token: 0x0401CE63 RID: 118371
+		// Token: 0x040178FB RID: 96507
 		public PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401CE64 RID: 118372
+		// Token: 0x040178FC RID: 96508
 		public MoraleBuffInfoPanel BuffInfoPanel;
 
-		// Token: 0x0401CE65 RID: 118373
+		// Token: 0x040178FD RID: 96509
 		public List<MoraleBuffItem> BuffItemList = new List<MoraleBuffItem>();
 
-		// Token: 0x0401CE66 RID: 118374
+		// Token: 0x040178FE RID: 96510
 		public Dictionary<int, MoraleBuffItem> BuffItemMap = new Dictionary<int, MoraleBuffItem>();
 
-		// Token: 0x0401CE67 RID: 118375
+		// Token: 0x040178FF RID: 96511
 		public MoraleLvInfoItem MoraleLvPanel;
 
-		// Token: 0x0401CE68 RID: 118376
+		// Token: 0x04017900 RID: 96512
 		public MoraleUnbreakableLvInfoItem UnbreakableLvPanel;
 
-		// Token: 0x0401CE69 RID: 118377
+		// Token: 0x04017901 RID: 96513
 		[Nullable(2)]
 		public MoraleBuffData SelectBuff;
 
-		// Token: 0x0401CE6A RID: 118378
+		// Token: 0x04017902 RID: 96514
 		public List<MoraleBuffData> BuffDataList = new List<MoraleBuffData>();
 
-		// Token: 0x0401CE6B RID: 118379
+		// Token: 0x04017903 RID: 96515
 		public MoraleBuffAddPanel RoleAttrAddPanel;
 
-		// Token: 0x0200B643 RID: 46659
+		// Token: 0x0200A07B RID: 41083
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403736F RID: 226159
+			// Token: 0x04031DC4 RID: 204228
 			public const int ItemCaption = 0;
 
-			// Token: 0x04037370 RID: 226160
+			// Token: 0x04031DC5 RID: 204229
 			public const int ItemInfo = 1;
 
-			// Token: 0x04037371 RID: 226161
+			// Token: 0x04031DC6 RID: 204230
 			public const int SpriteMoraleLvProgress = 2;
 
-			// Token: 0x04037372 RID: 226162
+			// Token: 0x04031DC7 RID: 204231
 			public const int SpriteTempMoraleLvProgress = 3;
 
-			// Token: 0x04037373 RID: 226163
+			// Token: 0x04031DC8 RID: 204232
 			public const int ItemBuffRoot = 4;
 
-			// Token: 0x04037374 RID: 226164
+			// Token: 0x04031DC9 RID: 204233
 			public const int ItemBuffTemplateDown = 5;
 
-			// Token: 0x04037375 RID: 226165
+			// Token: 0x04031DCA RID: 204234
 			public const int ItemBuffTemplateUp = 6;
 
-			// Token: 0x04037376 RID: 226166
+			// Token: 0x04031DCB RID: 204235
 			public const int ArtTextCurrentProgress = 7;
 
-			// Token: 0x04037377 RID: 226167
+			// Token: 0x04031DCC RID: 204236
 			public const int ArtTextTotalProgress = 8;
 
-			// Token: 0x04037378 RID: 226168
+			// Token: 0x04031DCD RID: 204237
 			public const int ButtonBuffDetail = 9;
 
-			// Token: 0x04037379 RID: 226169
+			// Token: 0x04031DCE RID: 204238
 			public const int ItemUnbreakableLv = 10;
 
-			// Token: 0x0403737A RID: 226170
+			// Token: 0x04031DCF RID: 204239
 			public const int ItemMoraleLv = 11;
 
-			// Token: 0x0403737B RID: 226171
+			// Token: 0x04031DD0 RID: 204240
 			public const int ItemBuffDetailPos = 12;
 
-			// Token: 0x0403737C RID: 226172
+			// Token: 0x04031DD1 RID: 204241
 			public const int ScrollBuff = 13;
 
-			// Token: 0x0403737D RID: 226173
+			// Token: 0x04031DD2 RID: 204242
 			public const int TextLvAddDesc = 14;
 
-			// Token: 0x0403737E RID: 226174
+			// Token: 0x04031DD3 RID: 204243
 			public const int ItemRoleAttrAdd = 15;
 
-			// Token: 0x0403737F RID: 226175
+			// Token: 0x04031DD4 RID: 204244
 			public const int TextExpAddDesc = 16;
 
-			// Token: 0x04037380 RID: 226176
+			// Token: 0x04031DD5 RID: 204245
 			public const int ItemAreaBuffRedDot = 17;
 		}
 	}

@@ -3,31 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002E8 RID: 744
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200032F RID: 815
 	public class IDynamicPortalByBullet_SetValue
 	{
-		// Token: 0x04000CA9 RID: 3241
+		// Token: 0x04000D93 RID: 3475
 		public EDynamicPortalCreateType Type;
 
-		// Token: 0x04000CAA RID: 3242
+		// Token: 0x04000D94 RID: 3476
 		public IDynamicPortalConfig PortalA;
 
-		// Token: 0x04000CAB RID: 3243
+		// Token: 0x04000D95 RID: 3477
 		public IDynamicPortalConfig PortalB;
 
-		// Token: 0x04000CAC RID: 3244
+		// Token: 0x04000D96 RID: 3478
 		public EPortalModel? InitOpenPortal;
 
-		// Token: 0x04000CAD RID: 3245
+		// Token: 0x04000D97 RID: 3479
 		[Nullable(2)]
 		public IPortalRenderConfig RenderConfig;
 
-		// Token: 0x04000CAE RID: 3246
+		// Token: 0x04000D98 RID: 3480
 		public IDynamicBulletConfig TypeA;
 
-		// Token: 0x04000CAF RID: 3247
+		// Token: 0x04000D99 RID: 3481
 		public IDynamicBulletConfig TypeB;
 	}
 }

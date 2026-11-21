@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FE9 RID: 4073
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001115 RID: 4373
 	public class IKurotatoSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06005AA4 RID: 23204 RVA: 0x000DC110 File Offset: 0x000DA310
+		// Token: 0x06006084 RID: 24708 RVA: 0x000E8D50 File Offset: 0x000E6F50
 		private IKurotatoSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AA5 RID: 23205 RVA: 0x000DC148 File Offset: 0x000DA348
+		// Token: 0x06006085 RID: 24709 RVA: 0x000E8D88 File Offset: 0x000E6F88
 		public static IKurotatoSystemConfig Create([Nullable(2)] IKurotatoSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AA6 RID: 23206 RVA: 0x000DC15B File Offset: 0x000DA35B
+		// Token: 0x06006086 RID: 24710 RVA: 0x000E8D9B File Offset: 0x000E6F9B
 		public static IKurotatoSystemConfig CreateFromSetValue([Nullable(2)] IKurotatoSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AA7 RID: 23207 RVA: 0x000DC16E File Offset: 0x000DA36E
+		// Token: 0x06006087 RID: 24711 RVA: 0x000E8DAE File Offset: 0x000E6FAE
 		public new IKurotatoSystemConfig_SetValue ToSetValue()
 		{
 			return new IKurotatoSystemConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF6 RID: 7670
-		// (get) Token: 0x06005AA8 RID: 23208 RVA: 0x000DC18D File Offset: 0x000DA38D
-		// (set) Token: 0x06005AA9 RID: 23209 RVA: 0x000DC1B8 File Offset: 0x000DA3B8
+		// Token: 0x17001F9F RID: 8095
+		// (get) Token: 0x06006088 RID: 24712 RVA: 0x000E8DCD File Offset: 0x000E6FCD
+		// (set) Token: 0x06006089 RID: 24713 RVA: 0x000E8DF8 File Offset: 0x000E6FF8
 		public override EEnableSystemType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DF7 RID: 7671
-		// (get) Token: 0x06005AAA RID: 23210 RVA: 0x000DC1C8 File Offset: 0x000DA3C8
-		// (set) Token: 0x06005AAB RID: 23211 RVA: 0x000DC25B File Offset: 0x000DA45B
+		// Token: 0x17001FA0 RID: 8096
+		// (get) Token: 0x0600608A RID: 24714 RVA: 0x000E8E08 File Offset: 0x000E7008
+		// (set) Token: 0x0600608B RID: 24715 RVA: 0x000E8E9B File Offset: 0x000E709B
 		public virtual List<IKurotatoSystemVar> Vars
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400368F RID: 13967
+		// Token: 0x040039C7 RID: 14791
 		[Nullable(2)]
 		protected new IKurotatoSystemConfig FbInstance;
 
-		// Token: 0x04003690 RID: 13968
+		// Token: 0x040039C8 RID: 14792
 		[Nullable(2)]
 		protected new IKurotatoSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x04003691 RID: 13969
+		// Token: 0x040039C9 RID: 14793
 		private List<IKurotatoSystemVar> _VarsCache;
 
-		// Token: 0x04003692 RID: 13970
+		// Token: 0x040039CA RID: 14794
 		private bool _VarsInited;
 	}
 }

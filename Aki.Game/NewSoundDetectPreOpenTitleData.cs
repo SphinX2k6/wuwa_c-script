@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x0200169D RID: 5789
+// Token: 0x02000B55 RID: 2901
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,19 +12,19 @@ using CSharpScript.Game.Module.AdventureGuide;
 })]
 public class NewSoundDetectPreOpenTitleData : MultiTemplateGridDataBase<NewSoundDetectTabItemData, NewSoundDetectPreOpenTitleItem>
 {
-	// Token: 0x0600A54F RID: 42319 RVA: 0x0024EDA4 File Offset: 0x0024CFA4
+	// Token: 0x0600792F RID: 31023 RVA: 0x002591C0 File Offset: 0x002573C0
 	public NewSoundDetectPreOpenTitleData(NewSoundDetectTabItemData data)
 	{
 		base.Data = data;
 	}
 
-	// Token: 0x0600A550 RID: 42320 RVA: 0x0024EDB3 File Offset: 0x0024CFB3
+	// Token: 0x06007930 RID: 31024 RVA: 0x002591CF File Offset: 0x002573CF
 	public override int GetTemplateIndex()
 	{
 		return 2;
 	}
 
-	// Token: 0x0600A551 RID: 42321 RVA: 0x0024EDB6 File Offset: 0x0024CFB6
+	// Token: 0x06007931 RID: 31025 RVA: 0x002591D2 File Offset: 0x002573D2
 	public override NewSoundDetectPreOpenTitleItem CreateProxy()
 	{
 		return new NewSoundDetectPreOpenTitleItem
@@ -33,7 +33,7 @@ public class NewSoundDetectPreOpenTitleData : MultiTemplateGridDataBase<NewSound
 		};
 	}
 
-	// Token: 0x04004ACF RID: 19151
+	// Token: 0x04004B76 RID: 19318
 	[Nullable(2)]
 	public Action<int, bool> OnClickCallBack;
 }

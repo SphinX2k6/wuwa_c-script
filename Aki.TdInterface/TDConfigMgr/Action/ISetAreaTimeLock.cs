@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E0E RID: 7694
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002041 RID: 8257
 	public class ISetAreaTimeLock : ISetAreaTimeBase
 	{
-		// Token: 0x0600A499 RID: 42137 RVA: 0x001753A8 File Offset: 0x001735A8
+		// Token: 0x0600AF41 RID: 44865 RVA: 0x0018ADB0 File Offset: 0x00188FB0
 		private ISetAreaTimeLock_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A49A RID: 42138 RVA: 0x001753E0 File Offset: 0x001735E0
+		// Token: 0x0600AF42 RID: 44866 RVA: 0x0018ADE8 File Offset: 0x00188FE8
 		public static ISetAreaTimeLock Create([Nullable(2)] ISetAreaTimeLock instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A49B RID: 42139 RVA: 0x001753F3 File Offset: 0x001735F3
+		// Token: 0x0600AF43 RID: 44867 RVA: 0x0018ADFB File Offset: 0x00188FFB
 		public static ISetAreaTimeLock CreateFromSetValue([Nullable(2)] ISetAreaTimeLock_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A49C RID: 42140 RVA: 0x00175406 File Offset: 0x00173606
+		// Token: 0x0600AF44 RID: 44868 RVA: 0x0018AE0E File Offset: 0x0018900E
 		public new ISetAreaTimeLock_SetValue ToSetValue()
 		{
 			return new ISetAreaTimeLock_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700328E RID: 12942
-		// (get) Token: 0x0600A49D RID: 42141 RVA: 0x00175431 File Offset: 0x00173631
-		// (set) Token: 0x0600A49E RID: 42142 RVA: 0x0017545C File Offset: 0x0017365C
+		// Token: 0x1700354D RID: 13645
+		// (get) Token: 0x0600AF45 RID: 44869 RVA: 0x0018AE39 File Offset: 0x00189039
+		// (set) Token: 0x0600AF46 RID: 44870 RVA: 0x0018AE64 File Offset: 0x00189064
 		public override ESetAreaTime Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700328F RID: 12943
-		// (get) Token: 0x0600A49F RID: 42143 RVA: 0x0017546A File Offset: 0x0017366A
-		// (set) Token: 0x0600A4A0 RID: 42144 RVA: 0x00175491 File Offset: 0x00173691
+		// Token: 0x1700354E RID: 13646
+		// (get) Token: 0x0600AF47 RID: 44871 RVA: 0x0018AE72 File Offset: 0x00189072
+		// (set) Token: 0x0600AF48 RID: 44872 RVA: 0x0018AE99 File Offset: 0x00189099
 		public virtual List<int> AreaIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003290 RID: 12944
-		// (get) Token: 0x0600A4A1 RID: 42145 RVA: 0x001754A0 File Offset: 0x001736A0
-		// (set) Token: 0x0600A4A2 RID: 42146 RVA: 0x00175501 File Offset: 0x00173701
+		// Token: 0x1700354F RID: 13647
+		// (get) Token: 0x0600AF49 RID: 44873 RVA: 0x0018AEA8 File Offset: 0x001890A8
+		// (set) Token: 0x0600AF4A RID: 44874 RVA: 0x0018AF09 File Offset: 0x00189109
 		public virtual IFixedTime LockTime
 		{
 			get
@@ -139,18 +137,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006289 RID: 25225
+		// Token: 0x04006860 RID: 26720
 		[Nullable(2)]
 		protected new ISetAreaTimeLock FbInstance;
 
-		// Token: 0x0400628A RID: 25226
+		// Token: 0x04006861 RID: 26721
 		[Nullable(2)]
 		protected new ISetAreaTimeLock_SetValue PocoInterface;
 
-		// Token: 0x0400628B RID: 25227
+		// Token: 0x04006862 RID: 26722
 		private IFixedTime _LockTimeCache;
 
-		// Token: 0x0400628C RID: 25228
+		// Token: 0x04006863 RID: 26723
 		private bool _LockTimeInited;
 	}
 }

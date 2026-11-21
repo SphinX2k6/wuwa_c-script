@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -20,13 +19,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02001A0D RID: 6669
+// Token: 0x02000ECC RID: 3788
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DangoAbyssController : UiControllerBase
 {
-	// Token: 0x0600C3A4 RID: 50084 RVA: 0x002C44BC File Offset: 0x002C26BC
+	// Token: 0x060097B4 RID: 38836 RVA: 0x002CF52C File Offset: 0x002CD72C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<ERefreshRoleSlotReason>(EEventName.OnRefreshBattleRoleSlot, new Action<ERefreshRoleSlotReason>(this.HandleOnRefreshEditBattleRoleSlotData));
@@ -38,7 +37,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.OnAbyssFirstRoomEnter, new Action(this.PreloadRoomMonsterEntitiesOnEnter));
 	}
 
-	// Token: 0x0600C3A5 RID: 50085 RVA: 0x002C4590 File Offset: 0x002C2790
+	// Token: 0x060097B5 RID: 38837 RVA: 0x002CF600 File Offset: 0x002CD800
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshBattleRoleSlot, new Action<ERefreshRoleSlotReason>(this.HandleOnRefreshEditBattleRoleSlotData));
@@ -50,7 +49,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnAbyssFirstRoomEnter, new Action(this.PreloadRoomMonsterEntitiesOnEnter));
 	}
 
-	// Token: 0x0600C3A6 RID: 50086 RVA: 0x002C4664 File Offset: 0x002C2864
+	// Token: 0x060097B6 RID: 38838 RVA: 0x002CF6D4 File Offset: 0x002CD8D4
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.AbyssChallengeSubLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAbyssSubLevelNotify));
@@ -61,7 +60,7 @@ public class DangoAbyssController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.AbyssChallengeUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnUnlockChallengeStateUpdate));
 	}
 
-	// Token: 0x0600C3A7 RID: 50087 RVA: 0x002C471C File Offset: 0x002C291C
+	// Token: 0x060097B7 RID: 38839 RVA: 0x002CF78C File Offset: 0x002CD98C
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.AbyssChallengeSubLevelNotify);
@@ -72,7 +71,7 @@ public class DangoAbyssController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.AbyssChallengeUpdateNotify);
 	}
 
-	// Token: 0x0600C3A8 RID: 50088 RVA: 0x002C478C File Offset: 0x002C298C
+	// Token: 0x060097B8 RID: 38840 RVA: 0x002CF7FC File Offset: 0x002CD9FC
 	public void OpenAbyssSelectViewByActivityId(int activityId)
 	{
 		DangoAbyssInsSelectViewData dangoAbyssInsSelectViewData = new DangoAbyssInsSelectViewData();
@@ -82,7 +81,7 @@ public class DangoAbyssController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssInsSelectView, dangoAbyssInsSelectViewData, null);
 	}
 
-	// Token: 0x0600C3A9 RID: 50089 RVA: 0x002C47DC File Offset: 0x002C29DC
+	// Token: 0x060097B9 RID: 38841 RVA: 0x002CF84C File Offset: 0x002CDA4C
 	public void OpenAbyssRankView(int challengeId = 0)
 	{
 		int openAbyssActivityId = this.GetOpenAbyssActivityId();
@@ -92,7 +91,7 @@ public class DangoAbyssController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssRankView, dangoAbyssRankData, null);
 	}
 
-	// Token: 0x0600C3AA RID: 50090 RVA: 0x002C4820 File Offset: 0x002C2A20
+	// Token: 0x060097BA RID: 38842 RVA: 0x002CF890 File Offset: 0x002CDA90
 	public void OpenGetDangoView(Dictionary<int, int> getDangoData)
 	{
 		if (GameModeModel.Instance.Loading)
@@ -124,7 +123,7 @@ public class DangoAbyssController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssGetDangoView, param, null);
 	}
 
-	// Token: 0x0600C3AB RID: 50091 RVA: 0x002C4968 File Offset: 0x002C2B68
+	// Token: 0x060097BB RID: 38843 RVA: 0x002CF9D8 File Offset: 0x002CDBD8
 	public void OpenAbyssLimitRewardView(bool needScene = true)
 	{
 		EUiViewName name = EUiViewName.DangoAbyssTimeLimitRewardView;
@@ -138,7 +137,7 @@ public class DangoAbyssController : UiControllerBase
 		UiManager.Instance.OpenView(name, dangoAbyssTimeLimitViewData, null);
 	}
 
-	// Token: 0x0600C3AC RID: 50092 RVA: 0x002C49B4 File Offset: 0x002C2BB4
+	// Token: 0x060097BC RID: 38844 RVA: 0x002CFA24 File Offset: 0x002CDC24
 	public void OpenAbyssRewardView(bool needScene = true)
 	{
 		EUiViewName name = EUiViewName.DangoAbyssCommonRewardView;
@@ -152,7 +151,7 @@ public class DangoAbyssController : UiControllerBase
 		UiManager.Instance.OpenView(name, dangoAbyssRewardViewData, null);
 	}
 
-	// Token: 0x0600C3AD RID: 50093 RVA: 0x002C4A00 File Offset: 0x002C2C00
+	// Token: 0x060097BD RID: 38845 RVA: 0x002CFA70 File Offset: 0x002CDC70
 	public void OpenAbyssEntranceViewByActivityId(int activityId)
 	{
 		UiManager.Instance.NormalResetToView(EUiViewName.BattleView, delegate(bool _)
@@ -163,7 +162,7 @@ public class DangoAbyssController : UiControllerBase
 		}, true);
 	}
 
-	// Token: 0x0600C3AE RID: 50094 RVA: 0x002C4A38 File Offset: 0x002C2C38
+	// Token: 0x060097BE RID: 38846 RVA: 0x002CFAA8 File Offset: 0x002CDCA8
 	private int GetOpenAbyssActivityId()
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetAllActivityMap().Values)
@@ -176,7 +175,7 @@ public class DangoAbyssController : UiControllerBase
 		return 0;
 	}
 
-	// Token: 0x0600C3AF RID: 50095 RVA: 0x002C4AA4 File Offset: 0x002C2CA4
+	// Token: 0x060097BF RID: 38847 RVA: 0x002CFB14 File Offset: 0x002CDD14
 	[NullableContext(0)]
 	public UniTask<bool> OpenCurrentActivityAbyssEntranceAsync()
 	{
@@ -188,7 +187,7 @@ public class DangoAbyssController : UiControllerBase
 		return <OpenCurrentActivityAbyssEntranceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3B0 RID: 50096 RVA: 0x002C4AE8 File Offset: 0x002C2CE8
+	// Token: 0x060097C0 RID: 38848 RVA: 0x002CFB58 File Offset: 0x002CDD58
 	public bool OpenCurrentActivityAbyssEntrance()
 	{
 		int openAbyssActivityId = this.GetOpenAbyssActivityId();
@@ -200,20 +199,20 @@ public class DangoAbyssController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C3B1 RID: 50097 RVA: 0x002C4B09 File Offset: 0x002C2D09
+	// Token: 0x060097C1 RID: 38849 RVA: 0x002CFB79 File Offset: 0x002CDD79
 	public bool CheckPreloadRoomMonsterEntities(int? mapId)
 	{
 		DangoAbyssModel instance = DangoAbyssModel.Instance;
 		return instance != null && instance.CheckInAbyss();
 	}
 
-	// Token: 0x0600C3B2 RID: 50098 RVA: 0x002C4B1B File Offset: 0x002C2D1B
+	// Token: 0x060097C2 RID: 38850 RVA: 0x002CFB8B File Offset: 0x002CDD8B
 	public void PreloadRoomMonsterEntitiesOnEnter()
 	{
 		this.PreloadRoomMonsterEntities();
 	}
 
-	// Token: 0x0600C3B3 RID: 50099 RVA: 0x002C4B24 File Offset: 0x002C2D24
+	// Token: 0x060097C3 RID: 38851 RVA: 0x002CFB94 File Offset: 0x002CDD94
 	[NullableContext(0)]
 	public UniTask<bool> PreloadRoomMonsterEntities()
 	{
@@ -225,7 +224,7 @@ public class DangoAbyssController : UiControllerBase
 		return <PreloadRoomMonsterEntities>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3B4 RID: 50100 RVA: 0x002C4B68 File Offset: 0x002C2D68
+	// Token: 0x060097C4 RID: 38852 RVA: 0x002CFBD8 File Offset: 0x002CDDD8
 	[NullableContext(2)]
 	private void OnAbyssSubLevelNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -234,7 +233,7 @@ public class DangoAbyssController : UiControllerBase
 		this.ProcessLevelMessageQueue();
 	}
 
-	// Token: 0x0600C3B5 RID: 50101 RVA: 0x002C4B90 File Offset: 0x002C2D90
+	// Token: 0x060097C5 RID: 38853 RVA: 0x002CFC00 File Offset: 0x002CDE00
 	private UniTask ProcessLevelMessageQueue()
 	{
 		DangoAbyssController.<ProcessLevelMessageQueue>d__21 <ProcessLevelMessageQueue>d__;
@@ -245,7 +244,7 @@ public class DangoAbyssController : UiControllerBase
 		return <ProcessLevelMessageQueue>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3B6 RID: 50102 RVA: 0x002C4BD4 File Offset: 0x002C2DD4
+	// Token: 0x060097C6 RID: 38854 RVA: 0x002CFC44 File Offset: 0x002CDE44
 	private UniTask HandleSubLevelNotify(AbyssChallengeSubLevelNotify notify)
 	{
 		DangoAbyssController.<HandleSubLevelNotify>d__22 <HandleSubLevelNotify>d__;
@@ -257,7 +256,7 @@ public class DangoAbyssController : UiControllerBase
 		return <HandleSubLevelNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3B7 RID: 50103 RVA: 0x002C4C20 File Offset: 0x002C2E20
+	// Token: 0x060097C7 RID: 38855 RVA: 0x002CFC90 File Offset: 0x002CDE90
 	[NullableContext(2)]
 	private void OnAbyssChallengeRoomInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -266,7 +265,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnAbyssRoomInfoUpdate);
 	}
 
-	// Token: 0x0600C3B8 RID: 50104 RVA: 0x002C4C50 File Offset: 0x002C2E50
+	// Token: 0x060097C8 RID: 38856 RVA: 0x002CFCC0 File Offset: 0x002CDEC0
 	private UniTask AbyssGotoNextRoomRequest(int roomId)
 	{
 		DangoAbyssController.<AbyssGotoNextRoomRequest>d__24 <AbyssGotoNextRoomRequest>d__;
@@ -277,7 +276,7 @@ public class DangoAbyssController : UiControllerBase
 		return <AbyssGotoNextRoomRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3B9 RID: 50105 RVA: 0x002C4C94 File Offset: 0x002C2E94
+	// Token: 0x060097C9 RID: 38857 RVA: 0x002CFD04 File Offset: 0x002CDF04
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -325,7 +324,7 @@ public class DangoAbyssController : UiControllerBase
 		return new ValueTuple<string[], string[]>(list.ToArray(), list2.ToArray());
 	}
 
-	// Token: 0x0600C3BA RID: 50106 RVA: 0x002C4DE0 File Offset: 0x002C2FE0
+	// Token: 0x060097CA RID: 38858 RVA: 0x002CFE50 File Offset: 0x002CE050
 	[NullableContext(2)]
 	private void OnAbyssChallengeResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -375,7 +374,7 @@ public class DangoAbyssController : UiControllerBase
 						list2.Add(item2);
 					}
 				}
-				int mainHonorRank = DangoAbyssModel.Instance.GetMainHonorRank(list3.ToList<IAbyssDescData>(), false);
+				int mainHonorRank = DangoAbyssModel.Instance.GetMainHonorRank(list3, false);
 				AbyssRolePanelData item3 = new AbyssRolePanelData
 				{
 					Rank = 0,
@@ -392,8 +391,8 @@ public class DangoAbyssController : UiControllerBase
 						IconPath = ((currentTeamListById == null) ? "" : PersonalModel.Instance.GetPlayerHeadData(currentTeamListById.HeadId, false).GetRoleHeadIconCircle())
 					},
 					LikeCount = abyssChallengeResultPlayerInfo.LikeCount,
-					SubDescData = list2.ToList<IAbyssDescData>(),
-					MainDescData = list3.ToList<IAbyssDescData>(),
+					SubDescData = list2,
+					MainDescData = list3,
 					AvatarTexturePath = SolarSpeedDefine.avatarPattern[mainHonorRank],
 					LineTexturePath = SolarSpeedDefine.linePattern[mainHonorRank],
 					BgTexturePath = SolarSpeedDefine.bgPattern[mainHonorRank],
@@ -405,7 +404,7 @@ public class DangoAbyssController : UiControllerBase
 			}
 			SolarSpeedResultViewData solarSpeedResultViewData = new SolarSpeedResultViewData();
 			solarSpeedResultViewData.TitleId = "DangoAbyssMultiEndTitle";
-			solarSpeedResultViewData.RoleDataList = list.Cast<ISolarSpeedRolePanelData>().ToList<ISolarSpeedRolePanelData>();
+			solarSpeedResultViewData.RoleDataList = new List<ISolarSpeedRolePanelData>(list);
 			solarSpeedResultViewData.PanelType = (() => new AbyssDangoRolePanel());
 			solarSpeedResultViewData.ConfirmClick = delegate()
 			{
@@ -418,7 +417,7 @@ public class DangoAbyssController : UiControllerBase
 		this.OpenResultView(notify);
 	}
 
-	// Token: 0x0600C3BB RID: 50107 RVA: 0x002C51FC File Offset: 0x002C33FC
+	// Token: 0x060097CB RID: 38859 RVA: 0x002D0258 File Offset: 0x002CE458
 	private void OpenResultView(AbyssChallengeResultNotify notify)
 	{
 		RewardExploreConfirmButtonData item = new RewardExploreConfirmButtonData
@@ -454,7 +453,7 @@ public class DangoAbyssController : UiControllerBase
 		float instanceProgress = DangoAbyssModel.Instance.GetInstanceProgress();
 		DangoAbyssSuccessData dangoAbyssSuccessData = new DangoAbyssSuccessData
 		{
-			RewardItemData = list2.ToList<RewardItemData>(),
+			RewardItemData = list2,
 			Progress = instanceProgress
 		};
 		ExploreRewardViewData data = new ExploreRewardViewData
@@ -469,7 +468,7 @@ public class DangoAbyssController : UiControllerBase
 		ItemRewardController.Instance.OpenExploreRewardViewNew(data);
 	}
 
-	// Token: 0x0600C3BC RID: 50108 RVA: 0x002C53A4 File Offset: 0x002C35A4
+	// Token: 0x060097CC RID: 38860 RVA: 0x002D03FC File Offset: 0x002CE5FC
 	[NullableContext(2)]
 	private void OnAbyssLikeNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -478,7 +477,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnAbyssLikeChange, abyssLikeNotify.PlayerId);
 	}
 
-	// Token: 0x0600C3BD RID: 50109 RVA: 0x002C53DC File Offset: 0x002C35DC
+	// Token: 0x060097CD RID: 38861 RVA: 0x002D0434 File Offset: 0x002CE634
 	[NullableContext(2)]
 	private void OnAbyssRoleSelectUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -487,7 +486,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnAbyssFormationUpdate);
 	}
 
-	// Token: 0x0600C3BE RID: 50110 RVA: 0x002C540C File Offset: 0x002C360C
+	// Token: 0x060097CE RID: 38862 RVA: 0x002D0464 File Offset: 0x002CE664
 	public void AbyssLikePlayer(int playerId)
 	{
 		AbyssLikeRequest abyssLikeRequest = AbyssLikeRequest.Create();
@@ -497,12 +496,12 @@ public class DangoAbyssController : UiControllerBase
 			AbyssLikeResponse abyssLikeResponse = (AbyssLikeResponse)msg;
 			if (abyssLikeResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssLikeResponse.ErrorCode, 17535, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssLikeResponse.ErrorCode, 21792, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600C3BF RID: 50111 RVA: 0x002C5458 File Offset: 0x002C3658
+	// Token: 0x060097CF RID: 38863 RVA: 0x002D04B0 File Offset: 0x002CE6B0
 	public UniTask RequestAbyssRankList(int activityId)
 	{
 		DangoAbyssController.<RequestAbyssRankList>d__31 <RequestAbyssRankList>d__;
@@ -513,7 +512,7 @@ public class DangoAbyssController : UiControllerBase
 		return <RequestAbyssRankList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3C0 RID: 50112 RVA: 0x002C549C File Offset: 0x002C369C
+	// Token: 0x060097D0 RID: 38864 RVA: 0x002D04F4 File Offset: 0x002CE6F4
 	public UniTask RequestAbyssSelfRank(int activityId)
 	{
 		DangoAbyssController.<RequestAbyssSelfRank>d__32 <RequestAbyssSelfRank>d__;
@@ -524,7 +523,7 @@ public class DangoAbyssController : UiControllerBase
 		return <RequestAbyssSelfRank>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3C1 RID: 50113 RVA: 0x002C54E0 File Offset: 0x002C36E0
+	// Token: 0x060097D1 RID: 38865 RVA: 0x002D0538 File Offset: 0x002CE738
 	[NullableContext(0)]
 	public UniTask<bool> RequestSetAbyssShowName(int challengeId, bool ifShowName)
 	{
@@ -537,7 +536,7 @@ public class DangoAbyssController : UiControllerBase
 		return <RequestSetAbyssShowName>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C3C2 RID: 50114 RVA: 0x002C552C File Offset: 0x002C372C
+	// Token: 0x060097D2 RID: 38866 RVA: 0x002D0584 File Offset: 0x002CE784
 	public void StartAbyssChallenge(int challengeId)
 	{
 		AbyssInst value = DangoAbyssConfig.Instance.GetDangoAbyssInstById(challengeId).Value;
@@ -546,14 +545,14 @@ public class DangoAbyssController : UiControllerBase
 		InstanceDungeonEntranceController.Instance.EnterEntrance(value.InstEntranceId, 0, null);
 	}
 
-	// Token: 0x0600C3C3 RID: 50115 RVA: 0x002C5584 File Offset: 0x002C3784
+	// Token: 0x060097D3 RID: 38867 RVA: 0x002D05DC File Offset: 0x002CE7DC
 	private void ShowBadDangoTip(string tips)
 	{
 		TableTextArgNew mainTextObj = new TableTextArgNew(tips, Array.Empty<object>());
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.BadDangoTip, mainTextObj, null, null, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x0600C3C4 RID: 50116 RVA: 0x002C55C3 File Offset: 0x002C37C3
+	// Token: 0x060097D4 RID: 38868 RVA: 0x002D061B File Offset: 0x002CE81B
 	private void OnLeaveDungeon()
 	{
 		if (DangoAbyssModel.Instance.CheckInAbyss())
@@ -562,14 +561,14 @@ public class DangoAbyssController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C3C5 RID: 50117 RVA: 0x002C55D7 File Offset: 0x002C37D7
+	// Token: 0x060097D5 RID: 38869 RVA: 0x002D062F File Offset: 0x002CE82F
 	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
 		this.CheckIfNeedShowCacheResult();
 	}
 
-	// Token: 0x0600C3C6 RID: 50118 RVA: 0x002C55E0 File Offset: 0x002C37E0
+	// Token: 0x060097D6 RID: 38870 RVA: 0x002D0638 File Offset: 0x002CE838
 	private void WorldDoneAndCloseLoading()
 	{
 		this.CheckIfNeedShowCacheResult();
@@ -599,7 +598,7 @@ public class DangoAbyssController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C3C7 RID: 50119 RVA: 0x002C56C0 File Offset: 0x002C38C0
+	// Token: 0x060097D7 RID: 38871 RVA: 0x002D0718 File Offset: 0x002CE918
 	private void CheckIfNeedShowCacheResult()
 	{
 		if (this.ResultCache != null && DangoAbyssModel.Instance.CheckInDangoAbyssInstance())
@@ -612,7 +611,7 @@ public class DangoAbyssController : UiControllerBase
 		this.ResultCache = null;
 	}
 
-	// Token: 0x0600C3C8 RID: 50120 RVA: 0x002C571C File Offset: 0x002C391C
+	// Token: 0x060097D8 RID: 38872 RVA: 0x002D0774 File Offset: 0x002CE974
 	private void HandleOnAbyssDangoSelect(IReadOnlyDictionary<int, int[]> dataMap)
 	{
 		InstanceDungeon? dungeonConfig = BattleTeamModel.Instance.Context.GetDungeonConfig();
@@ -638,7 +637,7 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyDictionary<int, int[]>>(EEventName.RefreshFormationDango, dataMap);
 	}
 
-	// Token: 0x0600C3C9 RID: 50121 RVA: 0x002C57B4 File Offset: 0x002C39B4
+	// Token: 0x060097D9 RID: 38873 RVA: 0x002D080C File Offset: 0x002CEA0C
 	private void HandleOnRefreshEditBattleRoleSlotData(ERefreshRoleSlotReason reason)
 	{
 		InstanceDungeon? dungeonConfig = BattleTeamModel.Instance.Context.GetDungeonConfig();
@@ -656,7 +655,7 @@ public class DangoAbyssController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C3CA RID: 50122 RVA: 0x002C5804 File Offset: 0x002C3A04
+	// Token: 0x060097DA RID: 38874 RVA: 0x002D085C File Offset: 0x002CEA5C
 	private void SyncMatchingDangoId()
 	{
 		if (BattleTeamModel.Instance.Context.GetDungeonConfig().Value.InstSubType != 33)
@@ -671,19 +670,19 @@ public class DangoAbyssController : UiControllerBase
 		DangoAbyssModel.Instance.RefreshOwnerListByMatchTeamInfo(matchTeamInfo);
 	}
 
-	// Token: 0x0600C3CB RID: 50123 RVA: 0x002C5858 File Offset: 0x002C3A58
+	// Token: 0x060097DB RID: 38875 RVA: 0x002D08B0 File Offset: 0x002CEAB0
 	public void InitAbyssDangoObserver(int index)
 	{
 		DangoAbyssActorManager.InitIndexDangoSkeletalObserverHandle(index);
 	}
 
-	// Token: 0x0600C3CC RID: 50124 RVA: 0x002C5860 File Offset: 0x002C3A60
+	// Token: 0x060097DC RID: 38876 RVA: 0x002D08B8 File Offset: 0x002CEAB8
 	public void RefreshAbyssDangoAnimation(int index, string animName, bool ifLoop)
 	{
 		DangoAbyssActorManager.RefreshSkeletalObserverAnimation(index, animName, ifLoop);
 	}
 
-	// Token: 0x0600C3CD RID: 50125 RVA: 0x002C586C File Offset: 0x002C3A6C
+	// Token: 0x060097DD RID: 38877 RVA: 0x002D08C4 File Offset: 0x002CEAC4
 	public void RefreshAbyssDangoModel(int index, int dangoId, string targetCase, [Nullable(2)] Action callBack)
 	{
 		FTransform? transform = null;
@@ -714,13 +713,13 @@ public class DangoAbyssController : UiControllerBase
 		DangoAbyssActorManager.RefreshDangoSkeletalObserverHandle(index, data, callBack);
 	}
 
-	// Token: 0x0600C3CE RID: 50126 RVA: 0x002C5925 File Offset: 0x002C3B25
+	// Token: 0x060097DE RID: 38878 RVA: 0x002D097D File Offset: 0x002CEB7D
 	public void DestroyAbyssDangoObserver(int index)
 	{
 		DangoAbyssActorManager.DestroyDangoSkeletalObserverHandle(index);
 	}
 
-	// Token: 0x0600C3CF RID: 50127 RVA: 0x002C5930 File Offset: 0x002C3B30
+	// Token: 0x060097DF RID: 38879 RVA: 0x002D0988 File Offset: 0x002CEB88
 	public void RequestQuitChallenge()
 	{
 		AbyssChallengeQuitRequest message = AbyssChallengeQuitRequest.Create();
@@ -729,12 +728,12 @@ public class DangoAbyssController : UiControllerBase
 			AbyssChallengeQuitResponse abyssChallengeQuitResponse = (AbyssChallengeQuitResponse)msg;
 			if (abyssChallengeQuitResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssChallengeQuitResponse.ErrorCode, 15723, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssChallengeQuitResponse.ErrorCode, 25360, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600C3D0 RID: 50128 RVA: 0x002C5974 File Offset: 0x002C3B74
+	// Token: 0x060097E0 RID: 38880 RVA: 0x002D09CC File Offset: 0x002CEBCC
 	public void RequestChallengeUnlock(int challengeId)
 	{
 		AbyssChallengeUnlockRequest abyssChallengeUnlockRequest = AbyssChallengeUnlockRequest.Create();
@@ -744,12 +743,12 @@ public class DangoAbyssController : UiControllerBase
 			AbyssChallengeUnlockResponse abyssChallengeUnlockResponse = (AbyssChallengeUnlockResponse)msg;
 			if (abyssChallengeUnlockResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssChallengeUnlockResponse.ErrorCode, 20260, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(abyssChallengeUnlockResponse.ErrorCode, 21147, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600C3D1 RID: 50129 RVA: 0x002C59C0 File Offset: 0x002C3BC0
+	// Token: 0x060097E1 RID: 38881 RVA: 0x002D0A18 File Offset: 0x002CEC18
 	[NullableContext(2)]
 	private void OnUnlockChallengeStateUpdate(IMessage msg, Net.CallbackStatus status)
 	{
@@ -765,8 +764,8 @@ public class DangoAbyssController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnAbyssUnlockChallengeStateUpdate);
 	}
 
-	// Token: 0x1700104D RID: 4173
-	// (get) Token: 0x0600C3D2 RID: 50130 RVA: 0x002C5A26 File Offset: 0x002C3C26
+	// Token: 0x17001072 RID: 4210
+	// (get) Token: 0x060097E2 RID: 38882 RVA: 0x002D0A7E File Offset: 0x002CEC7E
 	public static DangoAbyssController Instance
 	{
 		get
@@ -775,7 +774,7 @@ public class DangoAbyssController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C3D3 RID: 50131 RVA: 0x002C5A2D File Offset: 0x002C3C2D
+	// Token: 0x060097E3 RID: 38883 RVA: 0x002D0A85 File Offset: 0x002CEC85
 	public static DangoAbyssController GetOrCreateInstance()
 	{
 		if (DangoAbyssController._Instance == null)
@@ -785,7 +784,7 @@ public class DangoAbyssController : UiControllerBase
 		return DangoAbyssController._Instance;
 	}
 
-	// Token: 0x0600C3D4 RID: 50132 RVA: 0x002C5A41 File Offset: 0x002C3C41
+	// Token: 0x060097E4 RID: 38884 RVA: 0x002D0A99 File Offset: 0x002CEC99
 	public static bool CreateInstance()
 	{
 		if (DangoAbyssController._Instance != null)
@@ -796,24 +795,24 @@ public class DangoAbyssController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C3D5 RID: 50133 RVA: 0x002C5A57 File Offset: 0x002C3C57
+	// Token: 0x060097E5 RID: 38885 RVA: 0x002D0AAF File Offset: 0x002CECAF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C3D6 RID: 50134 RVA: 0x002C5A59 File Offset: 0x002C3C59
+	// Token: 0x060097E6 RID: 38886 RVA: 0x002D0AB1 File Offset: 0x002CECB1
 	public static void ResetStaticDefaultValue()
 	{
 		DangoAbyssController._Instance = null;
 	}
 
-	// Token: 0x0600C3D7 RID: 50135 RVA: 0x002C5A61 File Offset: 0x002C3C61
+	// Token: 0x060097E7 RID: 38887 RVA: 0x002D0AB9 File Offset: 0x002CECB9
 	static DangoAbyssController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DangoAbyssController.CreateStaticDefaultValue), new Action(DangoAbyssController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600C3D9 RID: 50137 RVA: 0x002C5AA0 File Offset: 0x002C3CA0
+	// Token: 0x060097E9 RID: 38889 RVA: 0x002D0AF8 File Offset: 0x002CECF8
 	[CompilerGenerated]
 	private bool <PreloadRoomMonsterEntities>g__isMonsterEntity|19_0(IEntityData entity)
 	{
@@ -821,14 +820,14 @@ public class DangoAbyssController : UiControllerBase
 		return config != null && config.Value.EntityType == this.S_ENTITY_TYPE_MONSTER;
 	}
 
-	// Token: 0x0600C3DA RID: 50138 RVA: 0x002C5AE2 File Offset: 0x002C3CE2
+	// Token: 0x060097EA RID: 38890 RVA: 0x002D0B3A File Offset: 0x002CED3A
 	[CompilerGenerated]
 	internal static void <OpenResultView>g__onClickQuit|27_0(int _)
 	{
 		InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 	}
 
-	// Token: 0x0600C3DB RID: 50139 RVA: 0x002C5AF3 File Offset: 0x002C3CF3
+	// Token: 0x060097EB RID: 38891 RVA: 0x002D0B4B File Offset: 0x002CED4B
 	[CompilerGenerated]
 	internal static void <OpenResultView>g__onClickFight|27_1(int _)
 	{
@@ -837,23 +836,23 @@ public class DangoAbyssController : UiControllerBase
 			InstanceDungeonEntranceController.Instance.SettleViewButtonSuccessOnMultiCallBack(0);
 			return;
 		}
-		InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+		InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false);
 	}
 
-	// Token: 0x04005A47 RID: 23111
+	// Token: 0x04005B16 RID: 23318
 	public string S_ENTITY_TYPE_MONSTER = "Monster";
 
-	// Token: 0x04005A48 RID: 23112
+	// Token: 0x04005B17 RID: 23319
 	private bool IsProcessingQueue;
 
-	// Token: 0x04005A49 RID: 23113
+	// Token: 0x04005B18 RID: 23320
 	private readonly List<AbyssChallengeSubLevelNotify> LevelMessageQueue = new List<AbyssChallengeSubLevelNotify>();
 
-	// Token: 0x04005A4A RID: 23114
+	// Token: 0x04005B19 RID: 23321
 	[Nullable(2)]
 	private AbyssChallengeResultNotify ResultCache;
 
-	// Token: 0x04005A4B RID: 23115
+	// Token: 0x04005B1A RID: 23322
 	[Nullable(2)]
 	private static DangoAbyssController _Instance;
 }

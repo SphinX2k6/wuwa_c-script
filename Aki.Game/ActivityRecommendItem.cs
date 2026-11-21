@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001098 RID: 4248
+// Token: 0x0200054C RID: 1356
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRecommendItem : GridProxyAbstract<int>
 {
-	// Token: 0x06006EA3 RID: 28323 RVA: 0x00169605 File Offset: 0x00167805
+	// Token: 0x06004239 RID: 16953 RVA: 0x00171F65 File Offset: 0x00170165
 	public void SetViewModel(ActivityRecommendViewModel vm)
 	{
 		this.Vm = vm;
 	}
 
-	// Token: 0x06006EA4 RID: 28324 RVA: 0x00169610 File Offset: 0x00167810
+	// Token: 0x0600423A RID: 16954 RVA: 0x00171F70 File Offset: 0x00170170
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,13 +47,13 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06006EA5 RID: 28325 RVA: 0x00169811 File Offset: 0x00167A11
+	// Token: 0x0600423B RID: 16955 RVA: 0x00172171 File Offset: 0x00170371
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(9), new Func<CommonItemSmallItemGrid>(this.InitRewardItem), null, false, true);
 	}
 
-	// Token: 0x06006EA6 RID: 28326 RVA: 0x00169835 File Offset: 0x00167A35
+	// Token: 0x0600423C RID: 16956 RVA: 0x00172195 File Offset: 0x00170395
 	private CommonItemSmallItemGrid InitRewardItem()
 	{
 		return new CommonItemSmallItemGrid
@@ -62,7 +62,7 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06006EA7 RID: 28327 RVA: 0x00169850 File Offset: 0x00167A50
+	// Token: 0x0600423D RID: 16957 RVA: 0x001721B0 File Offset: 0x001703B0
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.CurrentId = data;
@@ -75,7 +75,7 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		this.ApplyDisplay(recommendItemDisplay.Value);
 	}
 
-	// Token: 0x06006EA8 RID: 28328 RVA: 0x00169898 File Offset: 0x00167A98
+	// Token: 0x0600423E RID: 16958 RVA: 0x001721F8 File Offset: 0x001703F8
 	private void ApplyDisplay(RecommendItemDisplay display)
 	{
 		base.GetText(3).SetText(display.Title, true);
@@ -173,7 +173,7 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		base.GetItem(14).SetUIActive(!display.IsMainQuestFinished);
 	}
 
-	// Token: 0x06006EA9 RID: 28329 RVA: 0x00169B70 File Offset: 0x00167D70
+	// Token: 0x0600423F RID: 16959 RVA: 0x001724D0 File Offset: 0x001706D0
 	private void ApplyIcon(RecommendItemDisplay display)
 	{
 		UUISprite iconSprite = base.GetSprite(1);
@@ -233,7 +233,7 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06006EAA RID: 28330 RVA: 0x00169CF0 File Offset: 0x00167EF0
+	// Token: 0x06004240 RID: 16960 RVA: 0x00172650 File Offset: 0x00170850
 	private void OnClickJumpBtn()
 	{
 		ActivityRecommendViewModel vm = this.Vm;
@@ -244,7 +244,7 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		vm.OnClickJump(this.CurrentId);
 	}
 
-	// Token: 0x06006EAB RID: 28331 RVA: 0x00169D08 File Offset: 0x00167F08
+	// Token: 0x06004241 RID: 16961 RVA: 0x00172668 File Offset: 0x00170868
 	private void OnClickPreOpenBtn()
 	{
 		ActivityRecommendViewModel vm = this.Vm;
@@ -255,11 +255,11 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 		vm.OnClickPreOpen(this.CurrentId);
 	}
 
-	// Token: 0x04003351 RID: 13137
+	// Token: 0x040033EA RID: 13290
 	[StaticVariableRuleIgnore]
 	private static readonly FColor FallbackTagColor = FColor.FromHex("FFFFFF");
 
-	// Token: 0x04003352 RID: 13138
+	// Token: 0x040033EB RID: 13291
 	[Nullable(new byte[]
 	{
 		2,
@@ -267,13 +267,13 @@ public class ActivityRecommendItem : GridProxyAbstract<int>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04003353 RID: 13139
+	// Token: 0x040033EC RID: 13292
 	[Nullable(2)]
 	private ActivityRecommendViewModel Vm;
 
-	// Token: 0x04003354 RID: 13140
+	// Token: 0x040033ED RID: 13293
 	private int CurrentId;
 
-	// Token: 0x04003355 RID: 13141
+	// Token: 0x040033EE RID: 13294
 	private bool RewardShowReceived;
 }

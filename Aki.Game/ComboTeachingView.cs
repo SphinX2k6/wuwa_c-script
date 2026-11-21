@@ -11,17 +11,17 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017E3 RID: 6115
+// Token: 0x02000C9C RID: 3228
 [NullableContext(1)]
 [Nullable(0)]
 public class ComboTeachingView : UiTickViewBase
 {
-	// Token: 0x0600B2C4 RID: 45764 RVA: 0x00286387 File Offset: 0x00284587
+	// Token: 0x060086AE RID: 34478 RVA: 0x00290A54 File Offset: 0x0028EC54
 	public ComboTeachingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B2C5 RID: 45765 RVA: 0x002863AC File Offset: 0x002845AC
+	// Token: 0x060086AF RID: 34479 RVA: 0x00290A78 File Offset: 0x0028EC78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class ComboTeachingView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x0600B2C6 RID: 45766 RVA: 0x00286448 File Offset: 0x00284648
+	// Token: 0x060086B0 RID: 34480 RVA: 0x00290B14 File Offset: 0x0028ED14
 	protected override void OnStart()
 	{
 		ComboTeachingModel.Instance.IsClose = false;
@@ -46,27 +46,27 @@ public class ComboTeachingView : UiTickViewBase
 		this.InitComboInputHandler();
 	}
 
-	// Token: 0x0600B2C7 RID: 45767 RVA: 0x002864A2 File Offset: 0x002846A2
+	// Token: 0x060086B1 RID: 34481 RVA: 0x00290B6E File Offset: 0x0028ED6E
 	protected override void OnBeforeShow()
 	{
 		this.OnSelectedUpdate();
 	}
 
-	// Token: 0x0600B2C8 RID: 45768 RVA: 0x002864AA File Offset: 0x002846AA
+	// Token: 0x060086B2 RID: 34482 RVA: 0x00290B76 File Offset: 0x0028ED76
 	protected override void OnAddEventListener()
 	{
 		this.AddTeachingEventListener();
 		EventSystem.Instance.Add(EEventName.OnStartLoadingState, new Action(this.OnOpenLoading));
 	}
 
-	// Token: 0x0600B2C9 RID: 45769 RVA: 0x002864CE File Offset: 0x002846CE
+	// Token: 0x060086B3 RID: 34483 RVA: 0x00290B9A File Offset: 0x0028ED9A
 	protected override void OnRemoveEventListener()
 	{
 		this.RemoveTeachingEventListener();
 		EventSystem.Instance.Remove(EEventName.OnStartLoadingState, new Action(this.OnOpenLoading));
 	}
 
-	// Token: 0x0600B2CA RID: 45770 RVA: 0x002864F4 File Offset: 0x002846F4
+	// Token: 0x060086B4 RID: 34484 RVA: 0x00290BC0 File Offset: 0x0028EDC0
 	protected void AddTeachingEventListener()
 	{
 		EventSystem.Instance.Add<EInputAction, float>(EEventName.ComboTeachingPress, new Action<EInputAction, float>(this.OnPress));
@@ -81,7 +81,7 @@ public class ComboTeachingView : UiTickViewBase
 		this.TeachingEventAdded = true;
 	}
 
-	// Token: 0x0600B2CB RID: 45771 RVA: 0x00286600 File Offset: 0x00284800
+	// Token: 0x060086B5 RID: 34485 RVA: 0x00290CCC File Offset: 0x0028EECC
 	protected void RemoveTeachingEventListener()
 	{
 		if (!this.TeachingEventAdded)
@@ -100,7 +100,7 @@ public class ComboTeachingView : UiTickViewBase
 		EventSystem.Instance.Remove<int, int>(EEventName.OnSkillEnd, new Action<int, int>(this.OnCharEndSkill));
 	}
 
-	// Token: 0x0600B2CC RID: 45772 RVA: 0x00286713 File Offset: 0x00284913
+	// Token: 0x060086B6 RID: 34486 RVA: 0x00290DDF File Offset: 0x0028EFDF
 	protected override void OnBeforeDestroy()
 	{
 		this.NoCircleAttachView = null;
@@ -108,7 +108,7 @@ public class ComboTeachingView : UiTickViewBase
 		ComboTeachingModel.Instance.OnComboListEnd();
 	}
 
-	// Token: 0x0600B2CD RID: 45773 RVA: 0x00286738 File Offset: 0x00284938
+	// Token: 0x060086B7 RID: 34487 RVA: 0x00290E04 File Offset: 0x0028F004
 	private void InitDraggablePanel()
 	{
 		UUIItem item = base.GetItem(0);
@@ -119,7 +119,7 @@ public class ComboTeachingView : UiTickViewBase
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600B2CE RID: 45774 RVA: 0x002867B4 File Offset: 0x002849B4
+	// Token: 0x060086B8 RID: 34488 RVA: 0x00290E80 File Offset: 0x0028F080
 	protected void RefreshComboList(int comboId)
 	{
 		ComboTeaching value = ComboTeachingConfig.Instance.GetComboTeachingConfig(comboId).Value;
@@ -128,6 +128,7 @@ public class ComboTeachingView : UiTickViewBase
 		{
 			GuideController.Instance.TryStartGuide(guideId);
 		}
+		int curComboId = this.CurComboId;
 		if (comboId != this.CurComboId)
 		{
 			this.CurComboId = comboId;
@@ -187,14 +188,14 @@ public class ComboTeachingView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), value.DescriptionContent, Array.Empty<object>());
 	}
 
-	// Token: 0x0600B2CF RID: 45775 RVA: 0x00286A4C File Offset: 0x00284C4C
+	// Token: 0x060086B9 RID: 34489 RVA: 0x00291120 File Offset: 0x0028F320
 	protected void InitComboInputHandler()
 	{
 		this.InputHandler = new ComboTeachingInputHandler();
 		InputController.Instance.AddInputHandler(this.InputHandler);
 	}
 
-	// Token: 0x0600B2D0 RID: 45776 RVA: 0x00286A6C File Offset: 0x00284C6C
+	// Token: 0x060086BA RID: 34490 RVA: 0x00291140 File Offset: 0x0028F340
 	protected void OnPress(EInputAction action, float time)
 	{
 		ComboTeachingNode itemByShowIndex = this.NoCircleAttachView.GetItemByShowIndex(ComboTeachingModel.Instance.CurrentNodeIndex);
@@ -205,7 +206,7 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnPress(action, time);
 	}
 
-	// Token: 0x0600B2D1 RID: 45777 RVA: 0x00286A9C File Offset: 0x00284C9C
+	// Token: 0x060086BB RID: 34491 RVA: 0x00291170 File Offset: 0x0028F370
 	protected void OnRelease(EInputAction action, float time)
 	{
 		ComboTeachingNode itemByShowIndex = this.NoCircleAttachView.GetItemByShowIndex(ComboTeachingModel.Instance.CurrentNodeIndex);
@@ -216,7 +217,7 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnRelease(action, time);
 	}
 
-	// Token: 0x0600B2D2 RID: 45778 RVA: 0x00286ACC File Offset: 0x00284CCC
+	// Token: 0x060086BC RID: 34492 RVA: 0x002911A0 File Offset: 0x0028F3A0
 	protected void OnHold(EInputAction action, float time)
 	{
 		ComboTeachingNode itemByShowIndex = this.NoCircleAttachView.GetItemByShowIndex(ComboTeachingModel.Instance.CurrentNodeIndex);
@@ -227,7 +228,7 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnHold(action, time);
 	}
 
-	// Token: 0x0600B2D3 RID: 45779 RVA: 0x00286AFC File Offset: 0x00284CFC
+	// Token: 0x060086BD RID: 34493 RVA: 0x002911D0 File Offset: 0x0028F3D0
 	protected void OnNodeEnd(ComboTeachingNode node, bool isSuccess)
 	{
 		ComboTeachingModel.Instance.IsEmit = true;
@@ -297,7 +298,7 @@ public class ComboTeachingView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600B2D4 RID: 45780 RVA: 0x00286C44 File Offset: 0x00284E44
+	// Token: 0x060086BE RID: 34494 RVA: 0x00291318 File Offset: 0x0028F518
 	protected void OnSelectedUpdate()
 	{
 		if (this.NoCircleAttachView == null)
@@ -316,7 +317,7 @@ public class ComboTeachingView : UiTickViewBase
 		ComboTeachingModel.Instance.OnCurIndexChanged(this.NodeList[currentNodeIndex]);
 	}
 
-	// Token: 0x0600B2D5 RID: 45781 RVA: 0x00286CD4 File Offset: 0x00284ED4
+	// Token: 0x060086BF RID: 34495 RVA: 0x002913A8 File Offset: 0x0028F5A8
 	protected void OnCharUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		if (this.IsSuccess)
@@ -344,7 +345,7 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnUseSkill(skillId);
 	}
 
-	// Token: 0x0600B2D6 RID: 45782 RVA: 0x00286D60 File Offset: 0x00284F60
+	// Token: 0x060086C0 RID: 34496 RVA: 0x00291434 File Offset: 0x0028F634
 	protected void OnCharEndSkill(int charId, int skillId)
 	{
 		Entity entity = EntitySystem.Instance.Get(charId);
@@ -360,7 +361,7 @@ public class ComboTeachingView : UiTickViewBase
 		ComboTeachingModel.Instance.UseSkillTime = 0f;
 	}
 
-	// Token: 0x0600B2D7 RID: 45783 RVA: 0x00286DB0 File Offset: 0x00284FB0
+	// Token: 0x060086C1 RID: 34497 RVA: 0x00291484 File Offset: 0x0028F684
 	protected void OnNextAttrChanged(int entityId, int skillId, bool nextAttr)
 	{
 		if (this.IsSuccess)
@@ -380,7 +381,7 @@ public class ComboTeachingView : UiTickViewBase
 		ComboTeachingModel.Instance.NextAttrSkillId = (long)skillId;
 	}
 
-	// Token: 0x0600B2D8 RID: 45784 RVA: 0x00286E04 File Offset: 0x00285004
+	// Token: 0x060086C2 RID: 34498 RVA: 0x002914D8 File Offset: 0x0028F6D8
 	protected override void OnTick(float delta)
 	{
 		if (ComboTeachingModel.Instance.UseSkillId != 0L)
@@ -409,7 +410,7 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnTick(delta);
 	}
 
-	// Token: 0x0600B2D9 RID: 45785 RVA: 0x00286ED4 File Offset: 0x002850D4
+	// Token: 0x060086C3 RID: 34499 RVA: 0x002915A8 File Offset: 0x0028F7A8
 	public void OnHit(global::HitInformation hitData, [Nullable(2)] IAttributeSet attackerAttribute)
 	{
 		if (this.IsSuccess)
@@ -424,19 +425,19 @@ public class ComboTeachingView : UiTickViewBase
 		itemByShowIndex.OnBulletHit(hitData);
 	}
 
-	// Token: 0x0600B2DA RID: 45786 RVA: 0x00286F0B File Offset: 0x0028510B
+	// Token: 0x060086C4 RID: 34500 RVA: 0x002915DF File Offset: 0x0028F7DF
 	public void OnOpenLoading()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600B2DB RID: 45787 RVA: 0x00286F14 File Offset: 0x00285114
+	// Token: 0x060086C5 RID: 34501 RVA: 0x002915E8 File Offset: 0x0028F7E8
 	private ComboTeachingNode CreateNoCircleAttachItem(AActor actor, int index, int showNum)
 	{
 		return new ComboTeachingNode(actor);
 	}
 
-	// Token: 0x0600B2DC RID: 45788 RVA: 0x00286F1C File Offset: 0x0028511C
+	// Token: 0x060086C6 RID: 34502 RVA: 0x002915F0 File Offset: 0x0028F7F0
 	private void OpenNextGuideView()
 	{
 		ComboTeachingModel.Instance.IsClose = true;
@@ -453,23 +454,23 @@ public class ComboTeachingView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x04005107 RID: 20743
+	// Token: 0x040051B2 RID: 20914
 	private const int DRAGITEM_INTERVAL = -280;
 
-	// Token: 0x04005108 RID: 20744
+	// Token: 0x040051B3 RID: 20915
 	private const string SHOW_TIP_ID = "12900001";
 
-	// Token: 0x04005109 RID: 20745
+	// Token: 0x040051B4 RID: 20916
 	private const int BEFORE_JUMP_TIME = 100;
 
-	// Token: 0x0400510A RID: 20746
+	// Token: 0x040051B5 RID: 20917
 	[Nullable(2)]
 	private ComboTeachingInputHandler InputHandler;
 
-	// Token: 0x0400510B RID: 20747
+	// Token: 0x040051B6 RID: 20918
 	private int NextGuideId = -1;
 
-	// Token: 0x0400510C RID: 20748
+	// Token: 0x040051B7 RID: 20919
 	[Nullable(new byte[]
 	{
 		2,
@@ -478,33 +479,33 @@ public class ComboTeachingView : UiTickViewBase
 	})]
 	private NoCircleAttachView<IComboTeachingInfo, ComboTeachingNode> NoCircleAttachView;
 
-	// Token: 0x0400510D RID: 20749
+	// Token: 0x040051B8 RID: 20920
 	private bool IsSuccess;
 
-	// Token: 0x0400510E RID: 20750
+	// Token: 0x040051B9 RID: 20921
 	public List<IComboTeachingInfo> NodeList = new List<IComboTeachingInfo>();
 
-	// Token: 0x0400510F RID: 20751
+	// Token: 0x040051BA RID: 20922
 	private bool TeachingEventAdded;
 
-	// Token: 0x04005110 RID: 20752
+	// Token: 0x040051BB RID: 20923
 	private int CurComboId = -1;
 
-	// Token: 0x02007DCF RID: 32207
+	// Token: 0x02006F55 RID: 28501
 	[NullableContext(0)]
 	private enum EComboTeachingViewDefine
 	{
-		// Token: 0x040292F4 RID: 168692
+		// Token: 0x0402461F RID: 149023
 		DragPanel,
-		// Token: 0x040292F5 RID: 168693
+		// Token: 0x04024620 RID: 149024
 		TextMain,
-		// Token: 0x040292F6 RID: 168694
+		// Token: 0x04024621 RID: 149025
 		TextSub,
-		// Token: 0x040292F7 RID: 168695
+		// Token: 0x04024622 RID: 149026
 		NodeItem,
-		// Token: 0x040292F8 RID: 168696
+		// Token: 0x04024623 RID: 149027
 		MaskItem,
-		// Token: 0x040292F9 RID: 168697
+		// Token: 0x04024624 RID: 149028
 		DragContent
 	}
 }

@@ -5,17 +5,16 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003FD RID: 1021
+	// Token: 0x02000456 RID: 1110
 	public class IGroupDestroyListenConfig_SetValue
 	{
-		// Token: 0x0400102A RID: 4138
+		// Token: 0x0400114C RID: 4428
 		public ETemplateEntityGroupType GroupType;
 
-		// Token: 0x0400102B RID: 4139
-		[Nullable(1)]
+		// Token: 0x0400114D RID: 4429
 		public List<ActionInfo> OnTriggerActions;
 
-		// Token: 0x0400102C RID: 4140
+		// Token: 0x0400114E RID: 4430
 		[Nullable(2)]
 		public IChangeTemplateInstanceStateConfig ChangeInstanceStateConfig;
 	}

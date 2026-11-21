@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045DD RID: 17885
+	// Token: 0x02003506 RID: 13574
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCharacterVehicleEffect
 	{
-		// Token: 0x0602E1E5 RID: 188901 RVA: 0x00AA4CB8 File Offset: 0x00AA2EB8
+		// Token: 0x060228D9 RID: 141529 RVA: 0x009D1394 File Offset: 0x009CF594
 		public void Start(TsBaseCharacter owner)
 		{
 			if (!owner.IsValid())
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1E6 RID: 188902 RVA: 0x00AA4D04 File Offset: 0x00AA2F04
+		// Token: 0x060228DA RID: 141530 RVA: 0x009D13E0 File Offset: 0x009CF5E0
 		public void Enable()
 		{
 			if (!this.IsReady)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1E7 RID: 188903 RVA: 0x00AA4D50 File Offset: 0x00AA2F50
+		// Token: 0x060228DB RID: 141531 RVA: 0x009D142C File Offset: 0x009CF62C
 		public void Disable()
 		{
 			if (!this.IsEnabled)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E1E8 RID: 188904 RVA: 0x00AA4E21 File Offset: 0x00AA3021
+		// Token: 0x060228DC RID: 141532 RVA: 0x009D14FD File Offset: 0x009CF6FD
 		public void Tick()
 		{
 			if (!this.IsEnabled)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1E9 RID: 188905 RVA: 0x00AA4E60 File Offset: 0x00AA3060
+		// Token: 0x060228DD RID: 141533 RVA: 0x009D153C File Offset: 0x009CF73C
 		[NullableContext(2)]
 		public void SetStateInWaterEnviData(FKuroEnviInteractionData enviData)
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateMotorScreenEffect(screenEffectPath);
 		}
 
-		// Token: 0x0602E1EA RID: 188906 RVA: 0x00AA4F24 File Offset: 0x00AA3124
+		// Token: 0x060228DE RID: 141534 RVA: 0x009D1600 File Offset: 0x009CF800
 		[NullableContext(2)]
 		public void UpdateVehicleEffectData(FKuroEnviInteractionData enviData, bool motorState, double cacheMaxSpeed, bool isBlackWave)
 		{
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateMotorScreenEffect(screenEffectPath);
 		}
 
-		// Token: 0x0602E1EB RID: 188907 RVA: 0x00AA5028 File Offset: 0x00AA3228
+		// Token: 0x060228DF RID: 141535 RVA: 0x009D1704 File Offset: 0x009CF904
 		public unsafe void OnFallInWater(Vector location, Vector normal)
 		{
 			if (!this.IsEnabled)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Render
 			this.SpawnFallEffect(location, normal);
 		}
 
-		// Token: 0x0602E1EC RID: 188908 RVA: 0x00AA50B0 File Offset: 0x00AA32B0
+		// Token: 0x060228E0 RID: 141536 RVA: 0x009D178C File Offset: 0x009CF98C
 		protected void StopMotorAttachEffect()
 		{
 			int motorAttachHandle = this.MotorAttachHandle;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Render
 			this.MotorAttachHandlePath = "";
 		}
 
-		// Token: 0x0602E1ED RID: 188909 RVA: 0x00AA5104 File Offset: 0x00AA3304
+		// Token: 0x060228E1 RID: 141537 RVA: 0x009D17E0 File Offset: 0x009CF9E0
 		protected void StopMotorScreenEffect()
 		{
 			int effectHandle = this.MotorScreenHandle;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Render
 			this.MotorScreenHandlePath = "";
 		}
 
-		// Token: 0x0602E1EE RID: 188910 RVA: 0x00AA5174 File Offset: 0x00AA3374
+		// Token: 0x060228E2 RID: 141538 RVA: 0x009D1850 File Offset: 0x009CFA50
 		protected void SpawnMotorAttachEffect(string effectDataPath)
 		{
 			if (this.IsBlackWave || this.CacheMaxSpeed < 100.0 || this.Owner == null)
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1EF RID: 188911 RVA: 0x00AA52A8 File Offset: 0x00AA34A8
+		// Token: 0x060228E3 RID: 141539 RVA: 0x009D1984 File Offset: 0x009CFB84
 		protected string GetScreenEffectPath(FKuroEnviInteractionData enviData)
 		{
 			if (this.Owner == null || !this.IsMotorState)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Render
 			return "";
 		}
 
-		// Token: 0x0602E1F0 RID: 188912 RVA: 0x00AA5344 File Offset: 0x00AA3544
+		// Token: 0x060228E4 RID: 141540 RVA: 0x009D1A20 File Offset: 0x009CFC20
 		protected void UpdateMotorScreenEffect(string screenEffectPath)
 		{
 			if (this.IsBlackWave || this.CacheMaxSpeed < 100.0 || this.Owner == null)
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E1F1 RID: 188913 RVA: 0x00AA5458 File Offset: 0x00AA3658
+		// Token: 0x060228E5 RID: 141541 RVA: 0x009D1B34 File Offset: 0x009CFD34
 		protected int SpawnFallEffect(Vector location, Vector normal)
 		{
 			if (this.FindNoWaterPhysicalMaterial)
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Render
 			return instance.SpawnUnloopedEffect(world, ftransformDouble, "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Fall.DA_Fx_SI3_Water_Moto_Fall", "[SceneCharacterVehicleEffect.SpawnFallEffect]", new EffectContext(null, this.Owner, false), EEffectType.Scene, null, null, null, false, false);
 		}
 
-		// Token: 0x0602E1F2 RID: 188914 RVA: 0x00AA54EC File Offset: 0x00AA36EC
+		// Token: 0x060228E6 RID: 141542 RVA: 0x009D1BC8 File Offset: 0x009CFDC8
 		protected string GetAttachEffectPath(FKuroEnviInteractionData enviData)
 		{
 			string result = "";
@@ -436,113 +436,113 @@ namespace CSharpScript.Game.Render
 			return result;
 		}
 
-		// Token: 0x0602E1F3 RID: 188915 RVA: 0x00AA5709 File Offset: 0x00AA3909
+		// Token: 0x060228E7 RID: 141543 RVA: 0x009D1DE5 File Offset: 0x009CFFE5
 		protected bool IsPlayingAttachEffectButNotWater()
 		{
 			return this.MotorAttachHandlePath != "" && this.MotorAttachHandlePath != "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Putong.DA_Fx_SI3_Water_Moto_Putong" && this.MotorAttachHandlePath != "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Danqi.DA_Fx_SI3_Water_Moto_Danqi";
 		}
 
-		// Token: 0x0602E1F4 RID: 188916 RVA: 0x00AA5741 File Offset: 0x00AA3941
+		// Token: 0x060228E8 RID: 141544 RVA: 0x009D1E1D File Offset: 0x009D001D
 		protected bool DriftingLift()
 		{
 			return this.Owner.K2_GetActorRotation().Roll < 0f;
 		}
 
-		// Token: 0x04018BA6 RID: 101286
+		// Token: 0x040131E4 RID: 78308
 		private const string MOTOR_DANQI = "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Danqi.DA_Fx_SI3_Water_Moto_Danqi";
 
-		// Token: 0x04018BA7 RID: 101287
+		// Token: 0x040131E5 RID: 78309
 		private const string MOTOR_PUTONG = "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Putong.DA_Fx_SI3_Water_Moto_Putong";
 
-		// Token: 0x04018BA8 RID: 101288
+		// Token: 0x040131E6 RID: 78310
 		private const string MOTOR_SHACHEN = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_ShaChen.DA_Fx_Sl3_Moto_ShaChen";
 
-		// Token: 0x04018BA9 RID: 101289
+		// Token: 0x040131E7 RID: 78311
 		private const string MOTOR_FALL_IN = "/Game/Aki/Effect/DataAsset/Niagara/Common/Water/DA_Fx_SI3_Water_Moto_Fall.DA_Fx_SI3_Water_Moto_Fall";
 
-		// Token: 0x04018BAA RID: 101290
+		// Token: 0x040131E8 RID: 78312
 		private const string MOTOR_SCREEN = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Motuo_Screen01.DA_Fx_Sl3_Motuo_Screen01";
 
-		// Token: 0x04018BAB RID: 101291
+		// Token: 0x040131E9 RID: 78313
 		private const string ICE_DQ = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Ice_DQ.DA_Fx_Sl3_Moto_Ice_DQ";
 
-		// Token: 0x04018BAC RID: 101292
+		// Token: 0x040131EA RID: 78314
 		private const string ICE_PT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Ice_PT.DA_Fx_Sl3_Moto_Ice_PT";
 
-		// Token: 0x04018BAD RID: 101293
+		// Token: 0x040131EB RID: 78315
 		private const string ICE_SP_L = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Ice_SP_L.DA_Fx_Sl3_Moto_Ice_SP_L";
 
-		// Token: 0x04018BAE RID: 101294
+		// Token: 0x040131EC RID: 78316
 		private const string ICE_SP_R = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Ice_SP_R.DA_Fx_Sl3_Moto_Ice_SP_R";
 
-		// Token: 0x04018BAF RID: 101295
+		// Token: 0x040131ED RID: 78317
 		private const string ICE_ST = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Ice_ST.DA_Fx_Sl3_Moto_Ice_ST";
 
-		// Token: 0x04018BB0 RID: 101296
+		// Token: 0x040131EE RID: 78318
 		private const string SNOW_DQ = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Snow_DQ.DA_Fx_Sl3_Moto_Snow_DQ";
 
-		// Token: 0x04018BB1 RID: 101297
+		// Token: 0x040131EF RID: 78319
 		private const string SNOW_PT = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Snow_PT.DA_Fx_Sl3_Moto_Snow_PT";
 
-		// Token: 0x04018BB2 RID: 101298
+		// Token: 0x040131F0 RID: 78320
 		private const string SNOW_SP_L = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Snow_SP_L.DA_Fx_Sl3_Moto_Snow_SP_L";
 
-		// Token: 0x04018BB3 RID: 101299
+		// Token: 0x040131F1 RID: 78321
 		private const string SNOW_SP_R = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Snow_SP_R.DA_Fx_Sl3_Moto_Snow_SP_R";
 
-		// Token: 0x04018BB4 RID: 101300
+		// Token: 0x040131F2 RID: 78322
 		private const string SNOW_ST = "/Game/Aki/Effect/DataAsset/Niagara/Common/Snow/DA_Fx_Sl3_Moto_Snow_ST.DA_Fx_Sl3_Moto_Snow_ST";
 
-		// Token: 0x04018BB5 RID: 101301
+		// Token: 0x040131F3 RID: 78323
 		private const string MOTOR_LIGHT_RAIL = "/Game/Aki/Effect/EffectGroup/BigWorld/3_3AnYuan/DA_Fx_Group_Sl2_AY_Glg_MT.DA_Fx_Group_Sl2_AY_Glg_MT";
 
-		// Token: 0x04018BB6 RID: 101302
+		// Token: 0x040131F4 RID: 78324
 		private const string MOTOR_XU_ZHI_CUBE = "/Game/Aki/Effect/EffectGroup/BigWorld/3_3AnYuan/DA_Fx_Group_Sl2_AY_3_3_Motuo_Trail.DA_Fx_Group_Sl2_AY_3_3_Motuo_Trail";
 
-		// Token: 0x04018BB7 RID: 101303
+		// Token: 0x040131F5 RID: 78325
 		private const double MOTOR_EFFECT_SPEED_CLAMP = 100.0;
 
-		// Token: 0x04018BB8 RID: 101304
+		// Token: 0x040131F6 RID: 78326
 		[Nullable(2)]
 		public TsBaseCharacter Owner;
 
-		// Token: 0x04018BB9 RID: 101305
+		// Token: 0x040131F7 RID: 78327
 		public bool IsReady;
 
-		// Token: 0x04018BBA RID: 101306
+		// Token: 0x040131F8 RID: 78328
 		public bool IsEnabled;
 
-		// Token: 0x04018BBB RID: 101307
+		// Token: 0x040131F9 RID: 78329
 		protected int MotorAttachHandle;
 
-		// Token: 0x04018BBC RID: 101308
+		// Token: 0x040131FA RID: 78330
 		protected string MotorAttachHandlePath = "";
 
-		// Token: 0x04018BBD RID: 101309
+		// Token: 0x040131FB RID: 78331
 		protected int MotorScreenHandle;
 
-		// Token: 0x04018BBE RID: 101310
+		// Token: 0x040131FC RID: 78332
 		protected string MotorScreenHandlePath = "";
 
-		// Token: 0x04018BBF RID: 101311
+		// Token: 0x040131FD RID: 78333
 		protected double CacheMaxSpeed;
 
-		// Token: 0x04018BC0 RID: 101312
+		// Token: 0x040131FE RID: 78334
 		protected FTransformDouble EmptyUeTransform = new FTransformDouble();
 
-		// Token: 0x04018BC1 RID: 101313
+		// Token: 0x040131FF RID: 78335
 		protected bool IsMotorState;
 
-		// Token: 0x04018BC2 RID: 101314
+		// Token: 0x04013200 RID: 78336
 		protected bool FindNoWaterPhysicalMaterial;
 
-		// Token: 0x04018BC3 RID: 101315
+		// Token: 0x04013201 RID: 78337
 		public bool IsVehicleWaterState;
 
-		// Token: 0x04018BC4 RID: 101316
+		// Token: 0x04013202 RID: 78338
 		public bool IsBlackWave;
 
-		// Token: 0x04018BC5 RID: 101317
+		// Token: 0x04013203 RID: 78339
 		[Nullable(2)]
 		protected FKuroEnviInteractionData EnviData;
 	}

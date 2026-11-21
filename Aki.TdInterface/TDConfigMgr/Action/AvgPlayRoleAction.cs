@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A5 RID: 5285
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015FE RID: 5630
 	public class AvgPlayRoleAction : ActionParams
 	{
-		// Token: 0x0600785A RID: 30810 RVA: 0x0012097C File Offset: 0x0011EB7C
+		// Token: 0x06007F27 RID: 32551 RVA: 0x0012F5C8 File Offset: 0x0012D7C8
 		private AvgPlayRoleAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600785B RID: 30811 RVA: 0x001209B4 File Offset: 0x0011EBB4
+		// Token: 0x06007F28 RID: 32552 RVA: 0x0012F600 File Offset: 0x0012D800
 		public static AvgPlayRoleAction Create([Nullable(2)] AvgPlayRoleAction instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600785C RID: 30812 RVA: 0x001209C7 File Offset: 0x0011EBC7
+		// Token: 0x06007F29 RID: 32553 RVA: 0x0012F613 File Offset: 0x0012D813
 		public static AvgPlayRoleAction CreateFromSetValue([Nullable(2)] AvgPlayRoleAction_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600785D RID: 30813 RVA: 0x001209DA File Offset: 0x0011EBDA
+		// Token: 0x06007F2A RID: 32554 RVA: 0x0012F626 File Offset: 0x0012D826
 		public AvgPlayRoleAction_SetValue ToSetValue()
 		{
 			return new AvgPlayRoleAction_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700286B RID: 10347
-		// (get) Token: 0x0600785E RID: 30814 RVA: 0x001209F0 File Offset: 0x0011EBF0
-		// (set) Token: 0x0600785F RID: 30815 RVA: 0x00120A83 File Offset: 0x0011EC83
+		// Token: 0x17002A55 RID: 10837
+		// (get) Token: 0x06007F2B RID: 32555 RVA: 0x0012F63C File Offset: 0x0012D83C
+		// (set) Token: 0x06007F2C RID: 32556 RVA: 0x0012F6CF File Offset: 0x0012D8CF
 		public virtual List<IAvgPlayRoleActionItem> RoleActionList
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040045F3 RID: 17907
+		// Token: 0x0400498E RID: 18830
 		[Nullable(2)]
 		protected new AvgPlayRoleAction FbInstance;
 
-		// Token: 0x040045F4 RID: 17908
+		// Token: 0x0400498F RID: 18831
 		[Nullable(2)]
 		protected AvgPlayRoleAction_SetValue PocoInterface;
 
-		// Token: 0x040045F5 RID: 17909
+		// Token: 0x04004990 RID: 18832
 		private List<IAvgPlayRoleActionItem> _RoleActionListCache;
 
-		// Token: 0x040045F6 RID: 17910
+		// Token: 0x04004991 RID: 18833
 		private bool _RoleActionListInited;
 	}
 }

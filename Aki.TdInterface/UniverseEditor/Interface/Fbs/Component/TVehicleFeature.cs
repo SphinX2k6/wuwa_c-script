@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CCF RID: 23759
+	// Token: 0x02006303 RID: 25347
 	public enum TVehicleFeature : byte
 	{
-		// Token: 0x0400F5A9 RID: 62889
+		// Token: 0x040102F6 RID: 66294
 		NONE,
-		// Token: 0x0400F5AA RID: 62890
+		// Token: 0x040102F7 RID: 66295
 		IAudioVehicleFeature,
-		// Token: 0x0400F5AB RID: 62891
+		// Token: 0x040102F8 RID: 66296
 		IBattleVehicleFeature,
-		// Token: 0x0400F5AC RID: 62892
+		// Token: 0x040102F9 RID: 66297
 		IMovablePlatformVehicleFeature,
-		// Token: 0x0400F5AD RID: 62893
+		// Token: 0x040102FA RID: 66298
 		IMovementVehicleFeature,
-		// Token: 0x0400F5AE RID: 62894
+		// Token: 0x040102FB RID: 66299
 		IPerformanceVehicleFeature,
-		// Token: 0x0400F5AF RID: 62895
+		// Token: 0x040102FC RID: 66300
 		ISharingVehicleFeature
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200091F RID: 2335
+	// Token: 0x020009CC RID: 2508
 	public class EDataPersistenceGameplayTypeJsonConverter : JsonConverter<EDataPersistenceGameplayType>
 	{
-		// Token: 0x060034BE RID: 13502 RVA: 0x00089F50 File Offset: 0x00088150
+		// Token: 0x0600382A RID: 14378 RVA: 0x00091AD0 File Offset: 0x0008FCD0
 		public override EDataPersistenceGameplayType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EDataPersistenceGameplayTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060034BF RID: 13503 RVA: 0x00089F74 File Offset: 0x00088174
+		// Token: 0x0600382B RID: 14379 RVA: 0x00091AF4 File Offset: 0x0008FCF4
 		public override void Write(Utf8JsonWriter writer, EDataPersistenceGameplayType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

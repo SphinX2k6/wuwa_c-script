@@ -2,44 +2,44 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E9 RID: 17385
+	// Token: 0x0200484E RID: 18510
 	public enum EInteractAudioMaterial : byte
 	{
-		// Token: 0x0400C2BF RID: 49855
+		// Token: 0x0400CCE3 RID: 52451
 		GrowSolution,
-		// Token: 0x0400C2C0 RID: 49856
+		// Token: 0x0400CCE4 RID: 52452
 		Battery,
-		// Token: 0x0400C2C1 RID: 49857
+		// Token: 0x0400CCE5 RID: 52453
 		BurstCrystal,
-		// Token: 0x0400C2C2 RID: 49858
+		// Token: 0x0400CCE6 RID: 52454
 		Ashbin,
-		// Token: 0x0400C2C3 RID: 49859
+		// Token: 0x0400CCE7 RID: 52455
 		Port,
-		// Token: 0x0400C2C4 RID: 49860
+		// Token: 0x0400CCE8 RID: 52456
 		PortContainer,
-		// Token: 0x0400C2C5 RID: 49861
+		// Token: 0x0400CCE9 RID: 52457
 		ExplodingFruit,
-		// Token: 0x0400C2C6 RID: 49862
+		// Token: 0x0400CCEA RID: 52458
 		PulseDevice,
-		// Token: 0x0400C2C7 RID: 49863
+		// Token: 0x0400CCEB RID: 52459
 		ExplosiveLance,
-		// Token: 0x0400C2C8 RID: 49864
+		// Token: 0x0400CCEC RID: 52460
 		Pipeline,
-		// Token: 0x0400C2C9 RID: 49865
+		// Token: 0x0400CCED RID: 52461
 		Jigsaw,
-		// Token: 0x0400C2CA RID: 49866
+		// Token: 0x0400CCEE RID: 52462
 		GravityCube,
-		// Token: 0x0400C2CB RID: 49867
+		// Token: 0x0400CCEF RID: 52463
 		Mural,
-		// Token: 0x0400C2CC RID: 49868
+		// Token: 0x0400CCF0 RID: 52464
 		DungeonOpenItem,
-		// Token: 0x0400C2CD RID: 49869
+		// Token: 0x0400CCF1 RID: 52465
 		Keystone,
-		// Token: 0x0400C2CE RID: 49870
+		// Token: 0x0400CCF2 RID: 52466
 		StainedGlass,
-		// Token: 0x0400C2CF RID: 49871
+		// Token: 0x0400CCF3 RID: 52467
 		OilPainting,
-		// Token: 0x0400C2D0 RID: 49872
+		// Token: 0x0400CCF4 RID: 52468
 		Radio
 	}
 }

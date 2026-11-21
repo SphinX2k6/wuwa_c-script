@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001788 RID: 6024
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001909 RID: 6409
 	public class IActorLookAtPlayerData : IActorLookAtLockable
 	{
-		// Token: 0x06007F89 RID: 32649 RVA: 0x00130CFC File Offset: 0x0012EEFC
+		// Token: 0x06008679 RID: 34425 RVA: 0x0013FF5C File Offset: 0x0013E15C
 		private IActorLookAtPlayerData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F8A RID: 32650 RVA: 0x00130D34 File Offset: 0x0012EF34
+		// Token: 0x0600867A RID: 34426 RVA: 0x0013FF94 File Offset: 0x0013E194
 		public static IActorLookAtPlayerData Create([Nullable(2)] IActorLookAtPlayerData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F8B RID: 32651 RVA: 0x00130D47 File Offset: 0x0012EF47
+		// Token: 0x0600867B RID: 34427 RVA: 0x0013FFA7 File Offset: 0x0013E1A7
 		public static IActorLookAtPlayerData CreateFromSetValue([Nullable(2)] IActorLookAtPlayerData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F8C RID: 32652 RVA: 0x00130D5A File Offset: 0x0012EF5A
+		// Token: 0x0600867C RID: 34428 RVA: 0x0013FFBA File Offset: 0x0013E1BA
 		public new IActorLookAtPlayerData_SetValue ToSetValue()
 		{
 			return new IActorLookAtPlayerData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029CD RID: 10701
-		// (get) Token: 0x06007F8D RID: 32653 RVA: 0x00130D79 File Offset: 0x0012EF79
-		// (set) Token: 0x06007F8E RID: 32654 RVA: 0x00130DA4 File Offset: 0x0012EFA4
+		// Token: 0x17002BBB RID: 11195
+		// (get) Token: 0x0600867D RID: 34429 RVA: 0x0013FFD9 File Offset: 0x0013E1D9
+		// (set) Token: 0x0600867E RID: 34430 RVA: 0x00140004 File Offset: 0x0013E204
 		public override EActorLookAtMode Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029CE RID: 10702
-		// (get) Token: 0x06007F8F RID: 32655 RVA: 0x00130DB4 File Offset: 0x0012EFB4
-		// (set) Token: 0x06007F90 RID: 32656 RVA: 0x00130DEE File Offset: 0x0012EFEE
+		// Token: 0x17002BBC RID: 11196
+		// (get) Token: 0x0600867F RID: 34431 RVA: 0x00140014 File Offset: 0x0013E214
+		// (set) Token: 0x06008680 RID: 34432 RVA: 0x0014004E File Offset: 0x0013E24E
 		public override bool? Lock
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400510C RID: 20748
+		// Token: 0x04005542 RID: 21826
 		[Nullable(2)]
 		protected new IActorLookAtPlayerData FbInstance;
 
-		// Token: 0x0400510D RID: 20749
+		// Token: 0x04005543 RID: 21827
 		[Nullable(2)]
 		protected new IActorLookAtPlayerData_SetValue PocoInterface;
 	}

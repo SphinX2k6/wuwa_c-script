@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017FC RID: 6140
+	// Token: 0x0200036E RID: 878
 	[UnrealObjectPath("/Script/KuroData.TraceCapsuleElement")]
 	[UnrealStructLayout(256, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 256)]
 	public class UTraceCapsuleElement : UTraceBaseElement, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016BC2 RID: 93122 RVA: 0x00212D60 File Offset: 0x00210F60
+		// Token: 0x06005998 RID: 22936 RVA: 0x0007E480 File Offset: 0x0007C680
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTraceCapsuleElement._ClassPtr;
 		}
 
-		// Token: 0x06016BC3 RID: 93123 RVA: 0x00212D6C File Offset: 0x00210F6C
+		// Token: 0x06005999 RID: 22937 RVA: 0x0007E48C File Offset: 0x0007C68C
 		public UTraceCapsuleElement() : this(BuiltinUtils.AllocNativeUObject(UTraceCapsuleElement.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016BC4 RID: 93124 RVA: 0x00212D94 File Offset: 0x00210F94
+		// Token: 0x0600599A RID: 22938 RVA: 0x0007E4B4 File Offset: 0x0007C6B4
 		[NullableContext(1)]
 		public UTraceCapsuleElement(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTraceCapsuleElement.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BEC RID: 23532
-		// (get) Token: 0x06016BC5 RID: 93125 RVA: 0x00212DC7 File Offset: 0x00210FC7
-		// (set) Token: 0x06016BC6 RID: 93126 RVA: 0x00212DD7 File Offset: 0x00210FD7
+		// Token: 0x170011C0 RID: 4544
+		// (get) Token: 0x0600599B RID: 22939 RVA: 0x0007E4E7 File Offset: 0x0007C6E7
+		// (set) Token: 0x0600599C RID: 22940 RVA: 0x0007E4F7 File Offset: 0x0007C6F7
 		public unsafe float Radius
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BED RID: 23533
-		// (get) Token: 0x06016BC7 RID: 93127 RVA: 0x00212DE8 File Offset: 0x00210FE8
-		// (set) Token: 0x06016BC8 RID: 93128 RVA: 0x00212DF8 File Offset: 0x00210FF8
+		// Token: 0x170011C1 RID: 4545
+		// (get) Token: 0x0600599D RID: 22941 RVA: 0x0007E508 File Offset: 0x0007C708
+		// (set) Token: 0x0600599E RID: 22942 RVA: 0x0007E518 File Offset: 0x0007C718
 		public unsafe float HalfHeight
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BEE RID: 23534
-		// (get) Token: 0x06016BC9 RID: 93129 RVA: 0x00212E09 File Offset: 0x00211009
-		// (set) Token: 0x06016BCA RID: 93130 RVA: 0x00212E19 File Offset: 0x00211019
+		// Token: 0x170011C2 RID: 4546
+		// (get) Token: 0x0600599F RID: 22943 RVA: 0x0007E529 File Offset: 0x0007C729
+		// (set) Token: 0x060059A0 RID: 22944 RVA: 0x0007E539 File Offset: 0x0007C739
 		public unsafe float OrientationPitch
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BEF RID: 23535
-		// (get) Token: 0x06016BCB RID: 93131 RVA: 0x00212E2A File Offset: 0x0021102A
-		// (set) Token: 0x06016BCC RID: 93132 RVA: 0x00212E3A File Offset: 0x0021103A
+		// Token: 0x170011C3 RID: 4547
+		// (get) Token: 0x060059A1 RID: 22945 RVA: 0x0007E54A File Offset: 0x0007C74A
+		// (set) Token: 0x060059A2 RID: 22946 RVA: 0x0007E55A File Offset: 0x0007C75A
 		public unsafe float OrientationYaw
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BF0 RID: 23536
-		// (get) Token: 0x06016BCD RID: 93133 RVA: 0x00212E4B File Offset: 0x0021104B
-		// (set) Token: 0x06016BCE RID: 93134 RVA: 0x00212E5B File Offset: 0x0021105B
+		// Token: 0x170011C4 RID: 4548
+		// (get) Token: 0x060059A3 RID: 22947 RVA: 0x0007E56B File Offset: 0x0007C76B
+		// (set) Token: 0x060059A4 RID: 22948 RVA: 0x0007E57B File Offset: 0x0007C77B
 		public unsafe float OrientationRoll
 		{
 			get
@@ -103,50 +103,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016BCF RID: 93135 RVA: 0x00212E6C File Offset: 0x0021106C
+		// Token: 0x060059A5 RID: 22949 RVA: 0x0007E58C File Offset: 0x0007C78C
 		public void SetCapsuleOrientation(float Pitch, float Yaw, float Roll)
 		{
 			UTraceCapsuleElement.__SetCapsuleOrientation_Internal(base.NativePtr, Pitch, Yaw, Roll);
 		}
 
-		// Token: 0x06016BD0 RID: 93136
+		// Token: 0x060059A6 RID: 22950
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCapsuleOrientation_Internal(IntPtr @this, float Pitch, float Yaw, float Roll);
 
-		// Token: 0x06016BD1 RID: 93137 RVA: 0x00212E7C File Offset: 0x0021107C
+		// Token: 0x060059A7 RID: 22951 RVA: 0x0007E59C File Offset: 0x0007C79C
 		static UTraceCapsuleElement()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroData.TraceCapsuleElement");
 		}
 
-		// Token: 0x06016BD2 RID: 93138 RVA: 0x00212E8A File Offset: 0x0021108A
+		// Token: 0x060059A8 RID: 22952 RVA: 0x0007E5AA File Offset: 0x0007C7AA
 		protected UTraceCapsuleElement(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C571 RID: 50545
+		// Token: 0x04002509 RID: 9481
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroData.TraceCapsuleElement";
 
-		// Token: 0x0400C572 RID: 50546
+		// Token: 0x0400250A RID: 9482
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C573 RID: 50547
+		// Token: 0x0400250B RID: 9483
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C574 RID: 50548
+		// Token: 0x0400250C RID: 9484
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0400C575 RID: 50549
+		// Token: 0x0400250D RID: 9485
 		internal static int __PropertyOffset_HalfHeight;
 
-		// Token: 0x0400C576 RID: 50550
+		// Token: 0x0400250E RID: 9486
 		internal static int __PropertyOffset_OrientationPitch;
 
-		// Token: 0x0400C577 RID: 50551
+		// Token: 0x0400250F RID: 9487
 		internal static int __PropertyOffset_OrientationYaw;
 
-		// Token: 0x0400C578 RID: 50552
+		// Token: 0x04002510 RID: 9488
 		internal static int __PropertyOffset_OrientationRoll;
 	}
 }

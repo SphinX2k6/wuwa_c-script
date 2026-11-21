@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DAC RID: 11692
+// Token: 0x02002306 RID: 8966
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataInteract
 {
-	// Token: 0x1700216A RID: 8554
-	// (get) Token: 0x06018949 RID: 100681 RVA: 0x00647FBD File Offset: 0x006461BD
+	// Token: 0x170021C6 RID: 8646
+	// (get) Token: 0x060161F1 RID: 90609 RVA: 0x0066DE9D File Offset: 0x0066C09D
 	public FName SceneInteract
 	{
 		get
@@ -19,8 +19,8 @@ public class BulletDataInteract
 		}
 	}
 
-	// Token: 0x1700216B RID: 8555
-	// (get) Token: 0x0601894A RID: 100682 RVA: 0x00647FCB File Offset: 0x006461CB
+	// Token: 0x170021C7 RID: 8647
+	// (get) Token: 0x060161F2 RID: 90610 RVA: 0x0066DEAB File Offset: 0x0066C0AB
 	public bool IsSceneInteract
 	{
 		get
@@ -30,7 +30,7 @@ public class BulletDataInteract
 		}
 	}
 
-	// Token: 0x0601894B RID: 100683 RVA: 0x00647FD9 File Offset: 0x006461D9
+	// Token: 0x060161F3 RID: 90611 RVA: 0x0066DEB9 File Offset: 0x0066C0B9
 	private void InitSceneInteract()
 	{
 		if (!this.SceneInteractInit)
@@ -41,21 +41,21 @@ public class BulletDataInteract
 		}
 	}
 
-	// Token: 0x0601894C RID: 100684 RVA: 0x00648016 File Offset: 0x00646216
+	// Token: 0x060161F4 RID: 90612 RVA: 0x0066DEF6 File Offset: 0x0066C0F6
 	public BulletDataInteract(SReBulletDataInteraction data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0400B667 RID: 46695
+	// Token: 0x0400B9E1 RID: 47585
 	private readonly SReBulletDataInteraction Data;
 
-	// Token: 0x0400B668 RID: 46696
+	// Token: 0x0400B9E2 RID: 47586
 	private FName SceneInteractInternal = FName.NAME_None;
 
-	// Token: 0x0400B669 RID: 46697
+	// Token: 0x0400B9E3 RID: 47587
 	private bool IsSceneInteractInternal;
 
-	// Token: 0x0400B66A RID: 46698
+	// Token: 0x0400B9E4 RID: 47588
 	private bool SceneInteractInit;
 }

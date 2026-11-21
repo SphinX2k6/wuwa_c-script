@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A49 RID: 6729
+// Token: 0x02000F08 RID: 3848
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssPluginItem : UiPanelBase
 {
-	// Token: 0x0600C60B RID: 50699 RVA: 0x002CFE7F File Offset: 0x002CE07F
+	// Token: 0x06009A1B RID: 39451 RVA: 0x002DAF7B File Offset: 0x002D917B
 	public DangoAbyssPluginItem(int index, bool isEquipView)
 	{
 		this.Index = index;
 		this.IsEquipView = isEquipView;
 	}
 
-	// Token: 0x0600C60C RID: 50700 RVA: 0x002CFEA4 File Offset: 0x002CE0A4
+	// Token: 0x06009A1C RID: 39452 RVA: 0x002DAFA0 File Offset: 0x002D91A0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -50,20 +50,20 @@ public class DangoAbyssPluginItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C60D RID: 50701 RVA: 0x002CFFCE File Offset: 0x002CE1CE
+	// Token: 0x06009A1D RID: 39453 RVA: 0x002DB0CA File Offset: 0x002D92CA
 	protected override void OnStart()
 	{
 		this.Sequence = new LevelSequencePlayer(this.RootItem);
 		base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 	}
 
-	// Token: 0x0600C60E RID: 50702 RVA: 0x002CFFFE File Offset: 0x002CE1FE
+	// Token: 0x06009A1E RID: 39454 RVA: 0x002DB0FA File Offset: 0x002D92FA
 	protected override void OnBeforeDestroy()
 	{
 		base.GetExtendToggle(0).OnUndeterminedClicked.Clear();
 	}
 
-	// Token: 0x0600C60F RID: 50703 RVA: 0x002D0011 File Offset: 0x002CE211
+	// Token: 0x06009A1F RID: 39455 RVA: 0x002DB10D File Offset: 0x002D930D
 	public void Refresh(AbyssDangoRoleSlotData data)
 	{
 		if (data == null)
@@ -78,7 +78,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		this.RefreshSpriteBg(false);
 	}
 
-	// Token: 0x0600C610 RID: 50704 RVA: 0x002D0044 File Offset: 0x002CE244
+	// Token: 0x06009A20 RID: 39456 RVA: 0x002DB140 File Offset: 0x002D9340
 	private void SetDangoLock()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
@@ -95,7 +95,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		base.GetSprite(4).SetUIActive(false);
 	}
 
-	// Token: 0x0600C611 RID: 50705 RVA: 0x002D00E8 File Offset: 0x002CE2E8
+	// Token: 0x06009A21 RID: 39457 RVA: 0x002DB1E4 File Offset: 0x002D93E4
 	private void RefreshEffect(AbyssDangoRoleSlotData oldData, AbyssDangoRoleSlotData newData)
 	{
 		int dangoId = (newData != null) ? newData.GetDangoId() : 0;
@@ -119,7 +119,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C612 RID: 50706 RVA: 0x002D0160 File Offset: 0x002CE360
+	// Token: 0x06009A22 RID: 39458 RVA: 0x002DB25C File Offset: 0x002D945C
 	[NullableContext(1)]
 	public UniTask PlaySequence(string name)
 	{
@@ -132,7 +132,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		return <PlaySequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C613 RID: 50707 RVA: 0x002D01AC File Offset: 0x002CE3AC
+	// Token: 0x06009A23 RID: 39459 RVA: 0x002DB2A8 File Offset: 0x002D94A8
 	private void RefreshState()
 	{
 		int dangoId = this.CurrentData.GetDangoId();
@@ -159,7 +159,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnDetermined, false, false, false);
 	}
 
-	// Token: 0x0600C614 RID: 50708 RVA: 0x002D0270 File Offset: 0x002CE470
+	// Token: 0x06009A24 RID: 39460 RVA: 0x002DB36C File Offset: 0x002D956C
 	private void RefreshTexture()
 	{
 		int equipId = this.CurrentData.GetEquipId();
@@ -183,7 +183,7 @@ public class DangoAbyssPluginItem : UiPanelBase
 		texture.SetHeight((float)num);
 	}
 
-	// Token: 0x0600C615 RID: 50709 RVA: 0x002D0378 File Offset: 0x002CE578
+	// Token: 0x06009A25 RID: 39461 RVA: 0x002DB474 File Offset: 0x002D9674
 	private void RefreshSpriteBg(bool newState)
 	{
 		AbyssDangoRoleSlotData currentData = this.CurrentData;
@@ -193,13 +193,13 @@ public class DangoAbyssPluginItem : UiPanelBase
 		base.GetSprite(4).SetUIActive(!flag);
 	}
 
-	// Token: 0x0600C616 RID: 50710 RVA: 0x002D03F1 File Offset: 0x002CE5F1
+	// Token: 0x06009A26 RID: 39462 RVA: 0x002DB4ED File Offset: 0x002D96ED
 	private void OnToggleClick(EToggleState toggleState)
 	{
 		this.OnUndeterminedClicked();
 	}
 
-	// Token: 0x0600C617 RID: 50711 RVA: 0x002D03FC File Offset: 0x002CE5FC
+	// Token: 0x06009A27 RID: 39463 RVA: 0x002DB4F8 File Offset: 0x002D96F8
 	private void OnUndeterminedClicked()
 	{
 		Log instance = Log.Instance;
@@ -228,48 +228,48 @@ public class DangoAbyssPluginItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C618 RID: 50712 RVA: 0x002D04DC File Offset: 0x002CE6DC
+	// Token: 0x06009A28 RID: 39464 RVA: 0x002DB5D8 File Offset: 0x002D97D8
 	private void OnClickLevelUpConfirm()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
 		UiManager.Instance.OpenView(EUiViewName.DangoAbyssLevelUpView, dangoId, null);
 	}
 
-	// Token: 0x04005B46 RID: 23366
+	// Token: 0x04005C15 RID: 23573
 	private readonly int Index = -1;
 
-	// Token: 0x04005B47 RID: 23367
+	// Token: 0x04005C16 RID: 23574
 	private readonly bool IsEquipView = true;
 
-	// Token: 0x04005B48 RID: 23368
+	// Token: 0x04005C17 RID: 23575
 	private AbyssDangoRoleSlotData CurrentData;
 
-	// Token: 0x04005B49 RID: 23369
+	// Token: 0x04005C18 RID: 23576
 	public PluginEquipViewModel ViewModel;
 
-	// Token: 0x04005B4A RID: 23370
+	// Token: 0x04005C19 RID: 23577
 	public LevelSequencePlayer Sequence;
 
-	// Token: 0x02007F8F RID: 32655
+	// Token: 0x0200711E RID: 28958
 	[NullableContext(0)]
 	private class EPluginComponent
 	{
-		// Token: 0x04029A5A RID: 170586
+		// Token: 0x04024D97 RID: 150935
 		public const int Toggle = 0;
 
-		// Token: 0x04029A5B RID: 170587
+		// Token: 0x04024D98 RID: 150936
 		public const int Texture = 1;
 
-		// Token: 0x04029A5C RID: 170588
+		// Token: 0x04024D99 RID: 150937
 		public const int LevelText = 2;
 
-		// Token: 0x04029A5D RID: 170589
+		// Token: 0x04024D9A RID: 150938
 		public const int SpriteBg = 3;
 
-		// Token: 0x04029A5E RID: 170590
+		// Token: 0x04024D9B RID: 150939
 		public const int SpriteNew = 4;
 
-		// Token: 0x04029A5F RID: 170591
+		// Token: 0x04024D9C RID: 150940
 		public const int TextureQuality = 5;
 	}
 }

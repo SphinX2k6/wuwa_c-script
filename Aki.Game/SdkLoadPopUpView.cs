@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200296C RID: 10604
+// Token: 0x02001EE7 RID: 7911
 [NullableContext(2)]
 [Nullable(0)]
 public class SdkLoadPopUpView : UiViewBase
 {
-	// Token: 0x06015E8D RID: 89741 RVA: 0x00586B59 File Offset: 0x00584D59
+	// Token: 0x06013891 RID: 80017 RVA: 0x005B1B5D File Offset: 0x005AFD5D
 	[NullableContext(1)]
 	public SdkLoadPopUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015E8E RID: 89742 RVA: 0x00586B62 File Offset: 0x00584D62
+	// Token: 0x06013892 RID: 80018 RVA: 0x005B1B66 File Offset: 0x005AFD66
 	protected override void OnStart()
 	{
 		if (this.OpenParam != null)
@@ -23,7 +23,7 @@ public class SdkLoadPopUpView : UiViewBase
 		this.CheckCountDown();
 	}
 
-	// Token: 0x06015E8F RID: 89743 RVA: 0x00586B83 File Offset: 0x00584D83
+	// Token: 0x06013893 RID: 80019 RVA: 0x005B1B87 File Offset: 0x005AFD87
 	private void CancelTimer()
 	{
 		if (this.TimerHandle != null)
@@ -33,7 +33,7 @@ public class SdkLoadPopUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015E90 RID: 89744 RVA: 0x00586BA8 File Offset: 0x00584DA8
+	// Token: 0x06013894 RID: 80020 RVA: 0x005B1BAC File Offset: 0x005AFDAC
 	private void CheckCountDown()
 	{
 		SdkLoadPopUpViewData data = this.Data;
@@ -64,28 +64,28 @@ public class SdkLoadPopUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015E91 RID: 89745 RVA: 0x00586C32 File Offset: 0x00584E32
+	// Token: 0x06013895 RID: 80021 RVA: 0x005B1C36 File Offset: 0x005AFE36
 	protected override void OnBeforeShow()
 	{
 		UiLayer.Instance.SetShowMaskLayer("SdkLoading", true);
 	}
 
-	// Token: 0x06015E92 RID: 89746 RVA: 0x00586C44 File Offset: 0x00584E44
+	// Token: 0x06013896 RID: 80022 RVA: 0x005B1C48 File Offset: 0x005AFE48
 	protected override void OnBeforeHide()
 	{
 		UiLayer.Instance.SetShowMaskLayer("SdkLoading", false);
 		this.CancelTimer();
 	}
 
-	// Token: 0x0400A319 RID: 41753
+	// Token: 0x0400A703 RID: 42755
 	private const int TIMERGAP = 1000;
 
-	// Token: 0x0400A31A RID: 41754
+	// Token: 0x0400A704 RID: 42756
 	private SdkLoadPopUpViewData Data;
 
-	// Token: 0x0400A31B RID: 41755
+	// Token: 0x0400A705 RID: 42757
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400A31C RID: 41756
+	// Token: 0x0400A706 RID: 42758
 	private int CurrentLeftTime;
 }

@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200137E RID: 4990
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020014CF RID: 5327
 	public class INewHandInItemsCondition : IQuestCondition
 	{
-		// Token: 0x0600722F RID: 29231 RVA: 0x00112D60 File Offset: 0x00110F60
-		[NullableContext(1)]
+		// Token: 0x060078D5 RID: 30933 RVA: 0x001213E4 File Offset: 0x0011F5E4
 		public static INewHandInItemsCondition Create(INewHandInItemsCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002506 RID: 9478
-		// (get) Token: 0x06007230 RID: 29232 RVA: 0x00112D7F File Offset: 0x00110F7F
+		// Token: 0x170026D9 RID: 9945
+		// (get) Token: 0x060078D6 RID: 30934 RVA: 0x00121403 File Offset: 0x0011F603
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002507 RID: 9479
-		// (get) Token: 0x06007231 RID: 29233 RVA: 0x00112D8C File Offset: 0x00110F8C
+		// Token: 0x170026DA RID: 9946
+		// (get) Token: 0x060078D7 RID: 30935 RVA: 0x00121410 File Offset: 0x0011F610
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002508 RID: 9480
-		// (get) Token: 0x06007232 RID: 29234 RVA: 0x00112DC0 File Offset: 0x00110FC0
-		[Nullable(1)]
+		// Token: 0x170026DB RID: 9947
+		// (get) Token: 0x060078D8 RID: 30936 RVA: 0x00121444 File Offset: 0x0011F644
 		public virtual INewHandInItemsProjectionMachine HandIn
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._HandInInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004202 RID: 16898
+		// Token: 0x04004583 RID: 17795
 		private INewHandInItemsCondition Instance;
 
-		// Token: 0x04004203 RID: 16899
+		// Token: 0x04004584 RID: 17796
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004204 RID: 16900
+		// Token: 0x04004585 RID: 17797
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004205 RID: 16901
+		// Token: 0x04004586 RID: 17798
+		[Nullable(2)]
 		private INewHandInItemsProjectionMachine _HandInCache;
 
-		// Token: 0x04004206 RID: 16902
+		// Token: 0x04004587 RID: 17799
 		private bool _HandInInited;
 	}
 }

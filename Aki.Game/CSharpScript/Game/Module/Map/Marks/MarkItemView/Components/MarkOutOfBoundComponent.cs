@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x02005549 RID: 21833
+	// Token: 0x0200451B RID: 17691
 	public class MarkOutOfBoundComponent : MarkPanelBase
 	{
-		// Token: 0x06037B6F RID: 228207 RVA: 0x00D38480 File Offset: 0x00D36680
+		// Token: 0x0602CA3F RID: 182847 RVA: 0x00C85F54 File Offset: 0x00C84154
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06037B70 RID: 228208 RVA: 0x00D384C8 File Offset: 0x00D366C8
+		// Token: 0x0602CA40 RID: 182848 RVA: 0x00C85F9C File Offset: 0x00C8419C
 		protected override void OnBeforeShow()
 		{
 			this.UpdateRotation();
 		}
 
-		// Token: 0x06037B71 RID: 228209 RVA: 0x00D384D0 File Offset: 0x00D366D0
+		// Token: 0x0602CA41 RID: 182849 RVA: 0x00C85FA4 File Offset: 0x00C841A4
 		[NullableContext(1)]
 		public void SetOutOfBoundDirection(Vector2D offset)
 		{
@@ -39,25 +39,25 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x06037B72 RID: 228210 RVA: 0x00D3851E File Offset: 0x00D3671E
+		// Token: 0x0602CA42 RID: 182850 RVA: 0x00C85FF2 File Offset: 0x00C841F2
 		private void UpdateRotation()
 		{
 			base.GetItem(0).SetUIRelativeRotation(this.TempRotator);
 		}
 
-		// Token: 0x0401D449 RID: 119881
+		// Token: 0x04017ED2 RID: 98002
 		private const double RAD_2_DEG = 57.29577951308232;
 
-		// Token: 0x0401D44A RID: 119882
+		// Token: 0x04017ED3 RID: 98003
 		private const double DEG_PI_4 = 90.0;
 
-		// Token: 0x0401D44B RID: 119883
+		// Token: 0x04017ED4 RID: 98004
 		private FRotator TempRotator = new FRotator();
 
-		// Token: 0x0200B774 RID: 46964
+		// Token: 0x0200A19F RID: 41375
 		public static class EChildComponents
 		{
-			// Token: 0x040378A5 RID: 227493
+			// Token: 0x040322D0 RID: 205520
 			public const int DirectionItem = 0;
 		}
 	}

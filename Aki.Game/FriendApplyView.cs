@@ -9,18 +9,18 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C37 RID: 7223
+// Token: 0x020010F6 RID: 4342
 [NullableContext(2)]
 [Nullable(0)]
 public class FriendApplyView : UiTickViewBase
 {
-	// Token: 0x0600D974 RID: 55668 RVA: 0x0032620F File Offset: 0x0032440F
+	// Token: 0x0600AD8A RID: 44426 RVA: 0x0033160F File Offset: 0x0032F80F
 	[NullableContext(1)]
 	public FriendApplyView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D975 RID: 55669 RVA: 0x00326218 File Offset: 0x00324418
+	// Token: 0x0600AD8B RID: 44427 RVA: 0x00331618 File Offset: 0x0032F818
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -57,7 +57,7 @@ public class FriendApplyView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D976 RID: 55670 RVA: 0x003263C9 File Offset: 0x003245C9
+	// Token: 0x0600AD8C RID: 44428 RVA: 0x003317C9 File Offset: 0x0032F9C9
 	protected override void OnStart()
 	{
 		this.ToBeAddedPlayerIdList = (this.OpenParam as List<int>);
@@ -67,7 +67,7 @@ public class FriendApplyView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D977 RID: 55671 RVA: 0x00326402 File Offset: 0x00324602
+	// Token: 0x0600AD8D RID: 44429 RVA: 0x00331802 File Offset: 0x0032FA02
 	protected override void OnBeforeDestroy()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.FriendMultipleApplyView))
@@ -76,7 +76,7 @@ public class FriendApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D978 RID: 55672 RVA: 0x00326428 File Offset: 0x00324628
+	// Token: 0x0600AD8E RID: 44430 RVA: 0x00331828 File Offset: 0x0032FA28
 	protected override void OnTick(float delta)
 	{
 		List<FriendApplyData> applyViewDataList = FriendModel.Instance.GetApplyViewDataList(this.ToBeAddedPlayerIdList);
@@ -93,21 +93,21 @@ public class FriendApplyView : UiTickViewBase
 		this.CountDownBar.SetFillAmount((float)(applyViewDataList[0].ApplyTimeLeftTime / (double)FriendModel.Instance.ApplyCdTime));
 	}
 
-	// Token: 0x0600D979 RID: 55673 RVA: 0x003264C2 File Offset: 0x003246C2
+	// Token: 0x0600AD8F RID: 44431 RVA: 0x003318C2 File Offset: 0x0032FAC2
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshFriendApplicationRedDot, new Action(this.CallServerNotifyFriendApply));
 		EventSystem.Instance.Add<int>(EEventName.FriendOnMultiItemAction, new Action<int>(this.HandleFriendOnMultiItemAction));
 	}
 
-	// Token: 0x0600D97A RID: 55674 RVA: 0x003264FC File Offset: 0x003246FC
+	// Token: 0x0600AD90 RID: 44432 RVA: 0x003318FC File Offset: 0x0032FAFC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshFriendApplicationRedDot, new Action(this.CallServerNotifyFriendApply));
 		EventSystem.Instance.Remove(EEventName.FriendOnMultiItemAction, new Action<int>(this.HandleFriendOnMultiItemAction));
 	}
 
-	// Token: 0x0600D97B RID: 55675 RVA: 0x00326538 File Offset: 0x00324738
+	// Token: 0x0600AD91 RID: 44433 RVA: 0x00331938 File Offset: 0x0032FB38
 	private void ResetTime()
 	{
 		List<FriendApplyData> applyViewDataList = FriendModel.Instance.GetApplyViewDataList(this.ToBeAddedPlayerIdList);
@@ -121,7 +121,7 @@ public class FriendApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D97C RID: 55676 RVA: 0x003265A8 File Offset: 0x003247A8
+	// Token: 0x0600AD92 RID: 44434 RVA: 0x003319A8 File Offset: 0x0032FBA8
 	private void RefreshView()
 	{
 		List<FriendApplyData> applyViewDataList = FriendModel.Instance.GetApplyViewDataList(this.ToBeAddedPlayerIdList);
@@ -174,7 +174,7 @@ public class FriendApplyView : UiTickViewBase
 		button3.RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0600D97D RID: 55677 RVA: 0x00326764 File Offset: 0x00324964
+	// Token: 0x0600AD93 RID: 44435 RVA: 0x00331B64 File Offset: 0x0032FD64
 	private void OnClickHandleBtn()
 	{
 		List<FriendApplyData> applyViewDataList = FriendModel.Instance.GetApplyViewDataList(this.ToBeAddedPlayerIdList);
@@ -200,7 +200,7 @@ public class FriendApplyView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.FriendMultipleApplyView, applyViewDataList, null);
 	}
 
-	// Token: 0x0600D97E RID: 55678 RVA: 0x00326804 File Offset: 0x00324A04
+	// Token: 0x0600AD94 RID: 44436 RVA: 0x00331C04 File Offset: 0x0032FE04
 	private void OnClickCancelBtn()
 	{
 		List<FriendApplyData> applyViewDataList = FriendModel.Instance.GetApplyViewDataList(this.ToBeAddedPlayerIdList);
@@ -221,14 +221,14 @@ public class FriendApplyView : UiTickViewBase
 		FriendController.Instance.RequestFriendApplyHandle(list, FriendApplyOperator.Reject);
 	}
 
-	// Token: 0x0600D97F RID: 55679 RVA: 0x0032689C File Offset: 0x00324A9C
+	// Token: 0x0600AD95 RID: 44437 RVA: 0x00331C9C File Offset: 0x0032FE9C
 	private void CallServerNotifyFriendApply()
 	{
 		this.ResetTime();
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D980 RID: 55680 RVA: 0x003268AC File Offset: 0x00324AAC
+	// Token: 0x0600AD96 RID: 44438 RVA: 0x00331CAC File Offset: 0x0032FEAC
 	private void HandleFriendOnMultiItemAction(int playerId)
 	{
 		if (this.ToBeAddedPlayerIdList == null)
@@ -243,47 +243,47 @@ public class FriendApplyView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0400631D RID: 25373
+	// Token: 0x040063EF RID: 25583
 	private UUIText CountDown;
 
-	// Token: 0x0400631E RID: 25374
+	// Token: 0x040063F0 RID: 25584
 	private UUISprite CountDownBar;
 
-	// Token: 0x0400631F RID: 25375
+	// Token: 0x040063F1 RID: 25585
 	private bool HaveClosed;
 
-	// Token: 0x04006320 RID: 25376
+	// Token: 0x040063F2 RID: 25586
 	private List<int> ToBeAddedPlayerIdList;
 
-	// Token: 0x020081FC RID: 33276
+	// Token: 0x02007385 RID: 29573
 	[NullableContext(0)]
 	private class EFriendApplyView
 	{
-		// Token: 0x0402A6A5 RID: 173733
+		// Token: 0x040259CC RID: 154060
 		public const int RoleTexture = 0;
 
-		// Token: 0x0402A6A6 RID: 173734
+		// Token: 0x040259CD RID: 154061
 		public const int PlayerName = 1;
 
-		// Token: 0x0402A6A7 RID: 173735
+		// Token: 0x040259CE RID: 154062
 		public const int HandleBtn = 2;
 
-		// Token: 0x0402A6A8 RID: 173736
+		// Token: 0x040259CF RID: 154063
 		public const int ApplySprite = 3;
 
-		// Token: 0x0402A6A9 RID: 173737
+		// Token: 0x040259D0 RID: 154064
 		public const int MoreSprite = 4;
 
-		// Token: 0x0402A6AA RID: 173738
+		// Token: 0x040259D1 RID: 154065
 		public const int CountDown = 5;
 
-		// Token: 0x0402A6AB RID: 173739
+		// Token: 0x040259D2 RID: 154066
 		public const int CountDownProgressBar = 6;
 
-		// Token: 0x0402A6AC RID: 173740
+		// Token: 0x040259D3 RID: 154067
 		public const int MultipleApplyText = 7;
 
-		// Token: 0x0402A6AD RID: 173741
+		// Token: 0x040259D4 RID: 154068
 		public const int CancelBtn = 8;
 	}
 }

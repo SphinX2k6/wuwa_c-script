@@ -4,30 +4,30 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CC4 RID: 7364
+	// Token: 0x0200054E RID: 1358
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.EKSC_CalculateType")]
 	public enum EKSC_CalculateType : byte
 	{
-		// Token: 0x0400F620 RID: 63008
+		// Token: 0x0400362C RID: 13868
 		Hurt,
-		// Token: 0x0400F621 RID: 63009
+		// Token: 0x0400362D RID: 13869
 		Heal,
-		// Token: 0x0400F622 RID: 63010
+		// Token: 0x0400362E RID: 13870
 		PercentageHurt,
-		// Token: 0x0400F623 RID: 63011
+		// Token: 0x0400362F RID: 13871
 		MotorFightHurt,
-		// Token: 0x0400F624 RID: 63012
+		// Token: 0x04003630 RID: 13872
 		MotorCollisionHurt,
-		// Token: 0x0400F625 RID: 63013
+		// Token: 0x04003631 RID: 13873
 		MotorFightHeal,
-		// Token: 0x0400F626 RID: 63014
+		// Token: 0x04003632 RID: 13874
 		HurtMultiRelated,
-		// Token: 0x0400F627 RID: 63015
+		// Token: 0x04003633 RID: 13875
 		Shield,
-		// Token: 0x0400F628 RID: 63016
+		// Token: 0x04003634 RID: 13876
 		HealMultiRelated,
-		// Token: 0x0400F629 RID: 63017
+		// Token: 0x04003635 RID: 13877
 		EKSC_MAX
 	}
 }

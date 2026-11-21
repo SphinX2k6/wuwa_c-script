@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A13 RID: 18963
+	// Token: 0x02004ED3 RID: 20179
 	public class ICheckEntityPrefabPerformanceTypeT
 	{
-		// Token: 0x17008947 RID: 35143
-		// (get) Token: 0x0601DAB7 RID: 121527 RVA: 0x0042CC3F File Offset: 0x0042AE3F
-		// (set) Token: 0x0601DAB8 RID: 121528 RVA: 0x0042CC47 File Offset: 0x0042AE47
+		// Token: 0x17009017 RID: 36887
+		// (get) Token: 0x0601F52A RID: 128298 RVA: 0x0045D8AB File Offset: 0x0045BAAB
+		// (set) Token: 0x0601F52B RID: 128299 RVA: 0x0045D8B3 File Offset: 0x0045BAB3
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008948 RID: 35144
-		// (get) Token: 0x0601DAB9 RID: 121529 RVA: 0x0042CC50 File Offset: 0x0042AE50
-		// (set) Token: 0x0601DABA RID: 121530 RVA: 0x0042CC58 File Offset: 0x0042AE58
+		// Token: 0x17009018 RID: 36888
+		// (get) Token: 0x0601F52C RID: 128300 RVA: 0x0045D8BC File Offset: 0x0045BABC
+		// (set) Token: 0x0601F52D RID: 128301 RVA: 0x0045D8C4 File Offset: 0x0045BAC4
 		public int EntityId { get; set; }
 
-		// Token: 0x17008949 RID: 35145
-		// (get) Token: 0x0601DABB RID: 121531 RVA: 0x0042CC61 File Offset: 0x0042AE61
-		// (set) Token: 0x0601DABC RID: 121532 RVA: 0x0042CC69 File Offset: 0x0042AE69
+		// Token: 0x17009019 RID: 36889
+		// (get) Token: 0x0601F52E RID: 128302 RVA: 0x0045D8CD File Offset: 0x0045BACD
+		// (set) Token: 0x0601F52F RID: 128303 RVA: 0x0045D8D5 File Offset: 0x0045BAD5
 		public string PerformanceTag { get; set; }
 
-		// Token: 0x1700894A RID: 35146
-		// (get) Token: 0x0601DABD RID: 121533 RVA: 0x0042CC72 File Offset: 0x0042AE72
-		// (set) Token: 0x0601DABE RID: 121534 RVA: 0x0042CC7A File Offset: 0x0042AE7A
+		// Token: 0x1700901A RID: 36890
+		// (get) Token: 0x0601F530 RID: 128304 RVA: 0x0045D8DE File Offset: 0x0045BADE
+		// (set) Token: 0x0601F531 RID: 128305 RVA: 0x0045D8E6 File Offset: 0x0045BAE6
 		public ECompare Compare { get; set; }
 
-		// Token: 0x0601DABF RID: 121535 RVA: 0x0042CC83 File Offset: 0x0042AE83
+		// Token: 0x0601F532 RID: 128306 RVA: 0x0045D8EF File Offset: 0x0045BAEF
 		public ICheckEntityPrefabPerformanceTypeT()
 		{
 			this.Type = ECondition.CompareVar;

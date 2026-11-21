@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028FE RID: 10494
+// Token: 0x02001E79 RID: 7801
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleViewViewModel
 {
-	// Token: 0x06015A93 RID: 88723 RVA: 0x00577FF2 File Offset: 0x005761F2
+	// Token: 0x06013497 RID: 78999 RVA: 0x005A2EE6 File Offset: 0x005A10E6
 	public RoleViewViewModel(int roleId, bool isNeedLoadRole, ERoleViewSource source = ERoleViewSource.Normal)
 	{
 		this.RoleId = roleId;
@@ -19,7 +19,7 @@ public class RoleViewViewModel
 		this.Source = source;
 	}
 
-	// Token: 0x06015A94 RID: 88724 RVA: 0x00578028 File Offset: 0x00576228
+	// Token: 0x06013498 RID: 79000 RVA: 0x005A2F1C File Offset: 0x005A111C
 	public UniTask InitRoleActor()
 	{
 		RoleViewViewModel.<InitRoleActor>d__14 <InitRoleActor>d__;
@@ -30,7 +30,7 @@ public class RoleViewViewModel
 		return <InitRoleActor>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015A95 RID: 88725 RVA: 0x0057806C File Offset: 0x0057626C
+	// Token: 0x06013499 RID: 79001 RVA: 0x005A2F60 File Offset: 0x005A1160
 	public void HandleLoadScene(Action callback)
 	{
 		this.InitRoleActor().ContinueWith(delegate()
@@ -52,7 +52,7 @@ public class RoleViewViewModel
 		uiModelActorComponent.SetTransformByTag("RoleCase");
 	}
 
-	// Token: 0x06015A96 RID: 88726 RVA: 0x005780CC File Offset: 0x005762CC
+	// Token: 0x0601349A RID: 79002 RVA: 0x005A2FC0 File Offset: 0x005A11C0
 	public void ShowActor()
 	{
 		UiSceneManager.Instance.ShowRoleSystemRoleActor();
@@ -66,7 +66,7 @@ public class RoleViewViewModel
 		}
 	}
 
-	// Token: 0x06015A97 RID: 88727 RVA: 0x00578160 File Offset: 0x00576360
+	// Token: 0x0601349B RID: 79003 RVA: 0x005A3054 File Offset: 0x005A1254
 	public void HideActor()
 	{
 		if (new ERoleFadeCurveDefine?(this.FadeInCurveId) != new ERoleFadeCurveDefine?(ERoleFadeCurveDefine.None))
@@ -86,7 +86,7 @@ public class RoleViewViewModel
 		}
 	}
 
-	// Token: 0x06015A98 RID: 88728 RVA: 0x00578214 File Offset: 0x00576414
+	// Token: 0x0601349C RID: 79004 RVA: 0x005A3108 File Offset: 0x005A1308
 	private void LoadFloorEffect()
 	{
 		AActor actorByTag = UiSceneManager.Instance.GetActorByTag("RoleFloorCase");
@@ -96,7 +96,7 @@ public class RoleViewViewModel
 		}
 	}
 
-	// Token: 0x06015A99 RID: 88729 RVA: 0x0057826C File Offset: 0x0057646C
+	// Token: 0x0601349D RID: 79005 RVA: 0x005A3160 File Offset: 0x005A1360
 	public void HandleReleaseScene()
 	{
 		this.HideActor();
@@ -111,42 +111,42 @@ public class RoleViewViewModel
 		this.IsLoadRole = false;
 	}
 
-	// Token: 0x0400A11D RID: 41245
+	// Token: 0x0400A508 RID: 42248
 	public int RoleId;
 
-	// Token: 0x0400A11E RID: 41246
+	// Token: 0x0400A509 RID: 42249
 	public int WeaponIncId;
 
-	// Token: 0x0400A11F RID: 41247
+	// Token: 0x0400A50A RID: 42250
 	public bool IsNeedLoadRole;
 
-	// Token: 0x0400A120 RID: 41248
+	// Token: 0x0400A50B RID: 42251
 	public ERoleViewSource Source;
 
-	// Token: 0x0400A121 RID: 41249
+	// Token: 0x0400A50C RID: 42252
 	public TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400A122 RID: 41250
+	// Token: 0x0400A50D RID: 42253
 	public RoleStatePlayContext RoleStatePlayContextOnShow;
 
-	// Token: 0x0400A123 RID: 41251
+	// Token: 0x0400A50E RID: 42254
 	public RoleStatePlayContext RoleStatePlayContextOnHide;
 
-	// Token: 0x0400A124 RID: 41252
+	// Token: 0x0400A50F RID: 42255
 	public bool NeedShowOnViewPlayingStartSequence;
 
-	// Token: 0x0400A125 RID: 41253
+	// Token: 0x0400A510 RID: 42256
 	public bool NeedHideOnViewPlayingCloseSequence;
 
-	// Token: 0x0400A126 RID: 41254
+	// Token: 0x0400A511 RID: 42257
 	private bool IsLoadRole;
 
-	// Token: 0x0400A127 RID: 41255
+	// Token: 0x0400A512 RID: 42258
 	private int FloorEffect;
 
-	// Token: 0x0400A128 RID: 41256
+	// Token: 0x0400A513 RID: 42259
 	public ERoleFadeCurveDefine FadeInCurveId = ERoleFadeCurveDefine.None;
 
-	// Token: 0x0400A129 RID: 41257
+	// Token: 0x0400A514 RID: 42260
 	public ERoleFadeCurveDefine FadeOutCurveId = ERoleFadeCurveDefine.None;
 }

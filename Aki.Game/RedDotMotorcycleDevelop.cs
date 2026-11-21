@@ -1,16 +1,16 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033CD RID: 13261
+// Token: 0x0200293F RID: 10559
 public class RedDotMotorcycleDevelop : RedDotBase
 {
-	// Token: 0x0601CBEC RID: 117740 RVA: 0x0080903E File Offset: 0x0080723E
+	// Token: 0x0601A8E4 RID: 108772 RVA: 0x0082F602 File Offset: 0x0082D802
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.BattleViewMenu);
 	}
 
-	// Token: 0x0601CBED RID: 117741 RVA: 0x00809048 File Offset: 0x00807248
+	// Token: 0x0601A8E5 RID: 108773 RVA: 0x0082F60C File Offset: 0x0082D80C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
@@ -22,7 +22,7 @@ public class RedDotMotorcycleDevelop : RedDotBase
 		EventSystem.Instance.Add(EEventName.MotorDiySceneItemUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBEE RID: 117742 RVA: 0x0080911C File Offset: 0x0080731C
+	// Token: 0x0601A8E6 RID: 108774 RVA: 0x0082F6E0 File Offset: 0x0082D8E0
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopInfoUpdate, new Action(base.EventCheck));
@@ -34,13 +34,13 @@ public class RedDotMotorcycleDevelop : RedDotBase
 		EventSystem.Instance.Remove(EEventName.MotorDiySceneItemUpdate, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CBEF RID: 117743 RVA: 0x008091F0 File Offset: 0x008073F0
+	// Token: 0x0601A8E7 RID: 108775 RVA: 0x0082F7B4 File Offset: 0x0082D9B4
 	protected override bool OnCheck(int uId = 0)
 	{
 		return FunctionModel.Instance.IsOpen(EFunctionType.MotorDevelop) && (MotorcycleDevelopModel.Instance.RedDotHasLevelUpReward() || MotorcycleDevelopModel.Instance.RedDotHasAnyNewTechTree() || MotorcycleDevelopModel.Instance.RedDotHasUpgradableTechNode(null) || MotorcycleDevelopModel.Instance.RedDotCanGetAnyTaskReward() || MotorcycleDiyModel.Instance.RedDotForDiyTab());
 	}
 
-	// Token: 0x0601CBF0 RID: 117744 RVA: 0x00809255 File Offset: 0x00807455
+	// Token: 0x0601A8E8 RID: 108776 RVA: 0x0082F819 File Offset: 0x0082DA19
 	private void OnMotorDevelopTechTreeUpdate(bool isUpdateNode)
 	{
 		base.EventCheck();

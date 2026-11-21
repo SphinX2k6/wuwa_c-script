@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001161 RID: 4449
+	// Token: 0x02001297 RID: 4759
 	public struct TrapDefenseGaining : IFlatbufferObject
 	{
-		// Token: 0x17003C22 RID: 15394
-		// (get) Token: 0x0600E378 RID: 58232 RVA: 0x00338611 File Offset: 0x00336811
+		// Token: 0x17003F86 RID: 16262
+		// (get) Token: 0x0600F0E6 RID: 61670 RVA: 0x0036366F File Offset: 0x0036186F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E379 RID: 58233 RVA: 0x0033861E File Offset: 0x0033681E
+		// Token: 0x0600F0E7 RID: 61671 RVA: 0x0036367C File Offset: 0x0036187C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E37A RID: 58234 RVA: 0x00338628 File Offset: 0x00336828
+		// Token: 0x0600F0E8 RID: 61672 RVA: 0x00363684 File Offset: 0x00361884
 		public static TrapDefenseGaining GetRootAsTrapDefenseGaining(ByteBuffer _bb)
 		{
 			return TrapDefenseGaining.GetRootAsTrapDefenseGaining(_bb, default(TrapDefenseGaining));
 		}
 
-		// Token: 0x0600E37B RID: 58235 RVA: 0x00338644 File Offset: 0x00336844
+		// Token: 0x0600F0E9 RID: 61673 RVA: 0x003636A0 File Offset: 0x003618A0
 		public static TrapDefenseGaining GetRootAsTrapDefenseGaining(ByteBuffer _bb, TrapDefenseGaining obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E37C RID: 58236 RVA: 0x00338661 File Offset: 0x00336861
+		// Token: 0x0600F0EA RID: 61674 RVA: 0x003636BD File Offset: 0x003618BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E37D RID: 58237 RVA: 0x00338670 File Offset: 0x00336870
+		// Token: 0x0600F0EB RID: 61675 RVA: 0x003636CC File Offset: 0x003618CC
 		public TrapDefenseGaining __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003C23 RID: 15395
-		// (get) Token: 0x0600E37E RID: 58238 RVA: 0x00338680 File Offset: 0x00336880
+		// Token: 0x17003F87 RID: 16263
+		// (get) Token: 0x0600F0EC RID: 61676 RVA: 0x003636DC File Offset: 0x003618DC
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003C24 RID: 15396
-		// (get) Token: 0x0600E37F RID: 58239 RVA: 0x003386BC File Offset: 0x003368BC
+		// Token: 0x17003F88 RID: 16264
+		// (get) Token: 0x0600F0ED RID: 61677 RVA: 0x00363718 File Offset: 0x00361918
 		public int GainingType
 		{
 			get
@@ -81,7 +81,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E380 RID: 58240 RVA: 0x003386F8 File Offset: 0x003368F8
+		// Token: 0x0600F0EE RID: 61678 RVA: 0x00363754 File Offset: 0x00361954
 		public int Buffs(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -92,8 +92,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C25 RID: 15397
-		// (get) Token: 0x0600E381 RID: 58241 RVA: 0x00338738 File Offset: 0x00336938
+		// Token: 0x17003F89 RID: 16265
+		// (get) Token: 0x0600F0EF RID: 61679 RVA: 0x00363794 File Offset: 0x00361994
 		public int BuffsLength
 		{
 			get
@@ -107,19 +107,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E382 RID: 58242 RVA: 0x00338763 File Offset: 0x00336963
+		// Token: 0x0600F0F0 RID: 61680 RVA: 0x003637BF File Offset: 0x003619BF
 		public Span<int> GetBuffsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600E383 RID: 58243 RVA: 0x00338772 File Offset: 0x00336972
+		// Token: 0x0600F0F1 RID: 61681 RVA: 0x003637CE File Offset: 0x003619CE
 		public int[] GetBuffsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E384 RID: 58244 RVA: 0x0033878C File Offset: 0x0033698C
+		// Token: 0x0600F0F2 RID: 61682 RVA: 0x003637E8 File Offset: 0x003619E8
 		public int TowerTypeFilter(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -130,8 +130,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C26 RID: 15398
-		// (get) Token: 0x0600E385 RID: 58245 RVA: 0x003387CC File Offset: 0x003369CC
+		// Token: 0x17003F8A RID: 16266
+		// (get) Token: 0x0600F0F3 RID: 61683 RVA: 0x00363828 File Offset: 0x00361A28
 		public int TowerTypeFilterLength
 		{
 			get
@@ -145,19 +145,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E386 RID: 58246 RVA: 0x003387F8 File Offset: 0x003369F8
+		// Token: 0x0600F0F4 RID: 61684 RVA: 0x00363854 File Offset: 0x00361A54
 		public Span<int> GetTowerTypeFilterBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600E387 RID: 58247 RVA: 0x00338808 File Offset: 0x00336A08
+		// Token: 0x0600F0F5 RID: 61685 RVA: 0x00363864 File Offset: 0x00361A64
 		public int[] GetTowerTypeFilterArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E388 RID: 58248 RVA: 0x00338820 File Offset: 0x00336A20
+		// Token: 0x0600F0F6 RID: 61686 RVA: 0x0036387C File Offset: 0x00361A7C
 		public int MonsterTypeFilter(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -168,8 +168,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C27 RID: 15399
-		// (get) Token: 0x0600E389 RID: 58249 RVA: 0x00338860 File Offset: 0x00336A60
+		// Token: 0x17003F8B RID: 16267
+		// (get) Token: 0x0600F0F7 RID: 61687 RVA: 0x003638BC File Offset: 0x00361ABC
 		public int MonsterTypeFilterLength
 		{
 			get
@@ -183,19 +183,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E38A RID: 58250 RVA: 0x0033888C File Offset: 0x00336A8C
+		// Token: 0x0600F0F8 RID: 61688 RVA: 0x003638E8 File Offset: 0x00361AE8
 		public Span<int> GetMonsterTypeFilterBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600E38B RID: 58251 RVA: 0x0033889C File Offset: 0x00336A9C
+		// Token: 0x0600F0F9 RID: 61689 RVA: 0x003638F8 File Offset: 0x00361AF8
 		public int[] GetMonsterTypeFilterArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E38C RID: 58252 RVA: 0x003388B4 File Offset: 0x00336AB4
+		// Token: 0x0600F0FA RID: 61690 RVA: 0x00363910 File Offset: 0x00361B10
 		public int Params(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -206,8 +206,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003C28 RID: 15400
-		// (get) Token: 0x0600E38D RID: 58253 RVA: 0x003388F4 File Offset: 0x00336AF4
+		// Token: 0x17003F8C RID: 16268
+		// (get) Token: 0x0600F0FB RID: 61691 RVA: 0x00363950 File Offset: 0x00361B50
 		public int ParamsLength
 		{
 			get
@@ -221,19 +221,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E38E RID: 58254 RVA: 0x00338920 File Offset: 0x00336B20
+		// Token: 0x0600F0FC RID: 61692 RVA: 0x0036397C File Offset: 0x00361B7C
 		public Span<int> GetParamsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600E38F RID: 58255 RVA: 0x00338930 File Offset: 0x00336B30
+		// Token: 0x0600F0FD RID: 61693 RVA: 0x0036398C File Offset: 0x00361B8C
 		public int[] GetParamsArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600E390 RID: 58256 RVA: 0x00338948 File Offset: 0x00336B48
+		// Token: 0x0600F0FE RID: 61694 RVA: 0x003639A4 File Offset: 0x00361BA4
 		public DicIntInt? MapParams(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -244,8 +244,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003C29 RID: 15401
-		// (get) Token: 0x0600E391 RID: 58257 RVA: 0x003389AC File Offset: 0x00336BAC
+		// Token: 0x17003F8D RID: 16269
+		// (get) Token: 0x0600F0FF RID: 61695 RVA: 0x00363A08 File Offset: 0x00361C08
 		public int MapParamsLength
 		{
 			get
@@ -259,96 +259,87 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E392 RID: 58258 RVA: 0x003389D8 File Offset: 0x00336BD8
+		// Token: 0x0600F100 RID: 61696 RVA: 0x00363A34 File Offset: 0x00361C34
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BuffsIter()或GetBuffsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Buffs()
+		public int[] Buffs()
 		{
-			TrapDefenseGaining trapDefenseGaining = this;
-			return trapDefenseGaining.GetBuffsArray() ?? Array.Empty<int>();
+			return this.GetBuffsArray();
 		}
 
-		// Token: 0x0600E393 RID: 58259 RVA: 0x003389FC File Offset: 0x00336BFC
+		// Token: 0x0600F101 RID: 61697 RVA: 0x00363A3C File Offset: 0x00361C3C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BuffsIter()
+		public IEnumerable<int> BuffsIter()
 		{
 			TrapDefenseGaining.<BuffsIter>d__36 <BuffsIter>d__ = new TrapDefenseGaining.<BuffsIter>d__36(-2);
 			<BuffsIter>d__.<>3__<>4__this = this;
 			return <BuffsIter>d__;
 		}
 
-		// Token: 0x0600E394 RID: 58260 RVA: 0x00338A14 File Offset: 0x00336C14
+		// Token: 0x0600F102 RID: 61698 RVA: 0x00363A54 File Offset: 0x00361C54
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用MapParamsFrozenDict()缓存字典，遍历请使用MapParamsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> MapParams()
+		public Dictionary<int, int> MapParams()
 		{
 			return this.MapParamsIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600E395 RID: 58261 RVA: 0x00338A6A File Offset: 0x00336C6A
+		// Token: 0x0600F103 RID: 61699 RVA: 0x00363AAA File Offset: 0x00361CAA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> MapParamsIter()
+		public IEnumerable<DicIntInt> MapParamsIter()
 		{
 			TrapDefenseGaining.<MapParamsIter>d__38 <MapParamsIter>d__ = new TrapDefenseGaining.<MapParamsIter>d__38(-2);
 			<MapParamsIter>d__.<>3__<>4__this = this;
 			return <MapParamsIter>d__;
 		}
 
-		// Token: 0x0600E396 RID: 58262 RVA: 0x00338A80 File Offset: 0x00336C80
+		// Token: 0x0600F104 RID: 61700 RVA: 0x00363ABF File Offset: 0x00361CBF
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MonsterTypeFilterIter()或GetMonsterTypeFilterBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MonsterTypeFilter()
+		public int[] MonsterTypeFilter()
 		{
-			TrapDefenseGaining trapDefenseGaining = this;
-			return trapDefenseGaining.GetMonsterTypeFilterArray() ?? Array.Empty<int>();
+			return this.GetMonsterTypeFilterArray();
 		}
 
-		// Token: 0x0600E397 RID: 58263 RVA: 0x00338AA4 File Offset: 0x00336CA4
+		// Token: 0x0600F105 RID: 61701 RVA: 0x00363AC7 File Offset: 0x00361CC7
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MonsterTypeFilterIter()
+		public IEnumerable<int> MonsterTypeFilterIter()
 		{
 			TrapDefenseGaining.<MonsterTypeFilterIter>d__40 <MonsterTypeFilterIter>d__ = new TrapDefenseGaining.<MonsterTypeFilterIter>d__40(-2);
 			<MonsterTypeFilterIter>d__.<>3__<>4__this = this;
 			return <MonsterTypeFilterIter>d__;
 		}
 
-		// Token: 0x0600E398 RID: 58264 RVA: 0x00338ABC File Offset: 0x00336CBC
+		// Token: 0x0600F106 RID: 61702 RVA: 0x00363ADC File Offset: 0x00361CDC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamsIter()或GetParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Params()
+		public int[] Params()
 		{
-			TrapDefenseGaining trapDefenseGaining = this;
-			return trapDefenseGaining.GetParamsArray() ?? Array.Empty<int>();
+			return this.GetParamsArray();
 		}
 
-		// Token: 0x0600E399 RID: 58265 RVA: 0x00338AE0 File Offset: 0x00336CE0
+		// Token: 0x0600F107 RID: 61703 RVA: 0x00363AE4 File Offset: 0x00361CE4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ParamsIter()
+		public IEnumerable<int> ParamsIter()
 		{
 			TrapDefenseGaining.<ParamsIter>d__42 <ParamsIter>d__ = new TrapDefenseGaining.<ParamsIter>d__42(-2);
 			<ParamsIter>d__.<>3__<>4__this = this;
 			return <ParamsIter>d__;
 		}
 
-		// Token: 0x0600E39A RID: 58266 RVA: 0x00338AF8 File Offset: 0x00336CF8
+		// Token: 0x0600F108 RID: 61704 RVA: 0x00363AF9 File Offset: 0x00361CF9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TowerTypeFilterIter()或GetTowerTypeFilterBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] TowerTypeFilter()
+		public int[] TowerTypeFilter()
 		{
-			TrapDefenseGaining trapDefenseGaining = this;
-			return trapDefenseGaining.GetTowerTypeFilterArray() ?? Array.Empty<int>();
+			return this.GetTowerTypeFilterArray();
 		}
 
-		// Token: 0x0600E39B RID: 58267 RVA: 0x00338B1C File Offset: 0x00336D1C
+		// Token: 0x0600F109 RID: 61705 RVA: 0x00363B01 File Offset: 0x00361D01
 		[NullableContext(1)]
-		public readonly IEnumerable<int> TowerTypeFilterIter()
+		public IEnumerable<int> TowerTypeFilterIter()
 		{
 			TrapDefenseGaining.<TowerTypeFilterIter>d__44 <TowerTypeFilterIter>d__ = new TrapDefenseGaining.<TowerTypeFilterIter>d__44(-2);
 			<TowerTypeFilterIter>d__.<>3__<>4__this = this;
 			return <TowerTypeFilterIter>d__;
 		}
 
-		// Token: 0x0600E39C RID: 58268 RVA: 0x00338B34 File Offset: 0x00336D34
+		// Token: 0x0600F10A RID: 61706 RVA: 0x00363B18 File Offset: 0x00361D18
 		public int? GetMapParams(int key)
 		{
 			this.EnsureMapParamsCacheIfNeeded();
@@ -360,7 +351,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600E39D RID: 58269 RVA: 0x00338B68 File Offset: 0x00336D68
+		// Token: 0x0600F10B RID: 61707 RVA: 0x00363B4C File Offset: 0x00361D4C
 		private void EnsureMapParamsCacheIfNeeded()
 		{
 			if (this.MapParamsCache != null)
@@ -370,18 +361,18 @@ namespace Aki.Config
 			this.MapParamsCache = this.MapParamsIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600E39E RID: 58270 RVA: 0x00338BCE File Offset: 0x00336DCE
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetMapParamsFrozenDict(int key)
+		// Token: 0x0600F10C RID: 61708 RVA: 0x00363BB2 File Offset: 0x00361DB2
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetMapParamsFrozenDict()
 		{
 			this.EnsureMapParamsCacheIfNeeded();
 			return this.MapParamsCache;
 		}
 
-		// Token: 0x040052A6 RID: 21158
+		// Token: 0x040058E9 RID: 22761
 		private Table __p;
 
-		// Token: 0x040052A7 RID: 21159
+		// Token: 0x040058EA RID: 22762
 		[Nullable(2)]
 		private FrozenDictionary<int, int> MapParamsCache;
 	}

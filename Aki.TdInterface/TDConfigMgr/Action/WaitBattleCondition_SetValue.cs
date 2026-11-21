@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002280 RID: 8832
+	// Token: 0x020024ED RID: 9453
 	public class WaitBattleCondition_SetValue
 	{
-		// Token: 0x04007367 RID: 29543
-		[Nullable(1)]
+		// Token: 0x040079B4 RID: 31156
 		public IDetectBattleTag StateOption;
 	}
 }

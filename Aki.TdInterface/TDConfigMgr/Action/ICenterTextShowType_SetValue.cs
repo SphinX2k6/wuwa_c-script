@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200185F RID: 6239
+	// Token: 0x020019EA RID: 6634
 	public class ICenterTextShowType_SetValue
 	{
-		// Token: 0x0400549F RID: 21663
+		// Token: 0x040058EC RID: 22764
 		public ECenterTextShowAnim Type;
 	}
 }

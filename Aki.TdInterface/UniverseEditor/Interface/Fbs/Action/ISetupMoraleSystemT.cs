@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070A1 RID: 28833
+	// Token: 0x0200786D RID: 30829
 	public class ISetupMoraleSystemT
 	{
-		// Token: 0x1700D637 RID: 54839
-		// (get) Token: 0x060330E5 RID: 209125 RVA: 0x006E2DD0 File Offset: 0x006E0FD0
-		// (set) Token: 0x060330E6 RID: 209126 RVA: 0x006E2DD8 File Offset: 0x006E0FD8
+		// Token: 0x1700E21A RID: 57882
+		// (get) Token: 0x06036387 RID: 222087 RVA: 0x007433DC File Offset: 0x007415DC
+		// (set) Token: 0x06036388 RID: 222088 RVA: 0x007433E4 File Offset: 0x007415E4
 		public int MoralePlayId { get; set; }
 
-		// Token: 0x1700D638 RID: 54840
-		// (get) Token: 0x060330E7 RID: 209127 RVA: 0x006E2DE1 File Offset: 0x006E0FE1
-		// (set) Token: 0x060330E8 RID: 209128 RVA: 0x006E2DE9 File Offset: 0x006E0FE9
+		// Token: 0x1700E21B RID: 57883
+		// (get) Token: 0x06036389 RID: 222089 RVA: 0x007433ED File Offset: 0x007415ED
+		// (set) Token: 0x0603638A RID: 222090 RVA: 0x007433F5 File Offset: 0x007415F5
 		public bool IsOn { get; set; }
 
-		// Token: 0x060330E9 RID: 209129 RVA: 0x006E2DF2 File Offset: 0x006E0FF2
+		// Token: 0x0603638B RID: 222091 RVA: 0x007433FE File Offset: 0x007415FE
 		public ISetupMoraleSystemT()
 		{
 			this.MoralePlayId = 0;

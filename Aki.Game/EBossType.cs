@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000E95 RID: 3733
+// Token: 0x0200034A RID: 842
 public enum EBossType
 {
-	// Token: 0x040029C6 RID: 10694
+	// Token: 0x04002A61 RID: 10849
 	NormalBoss,
-	// Token: 0x040029C7 RID: 10695
+	// Token: 0x04002A62 RID: 10850
 	Elite
 }

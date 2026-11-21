@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002799 RID: 10137
+// Token: 0x02001C84 RID: 7300
 public class RolePropertyDetailItem : GridProxyAbstract<int>
 {
-	// Token: 0x06014D08 RID: 85256 RVA: 0x00547F84 File Offset: 0x00546184
+	// Token: 0x060121F4 RID: 74228 RVA: 0x005570A8 File Offset: 0x005552A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,7 +23,7 @@ public class RolePropertyDetailItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014D09 RID: 85257 RVA: 0x00547FF0 File Offset: 0x005461F0
+	// Token: 0x060121F5 RID: 74229 RVA: 0x00557114 File Offset: 0x00555314
 	public override void Refresh(int tagId, bool isSelected, int gridIndex)
 	{
 		RoleTag? roleTagConfig = RoleConfig.Instance.GetRoleTagConfig(tagId);
@@ -49,12 +49,12 @@ public class RolePropertyDetailItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), roleTagConfig.Value.TagName, Array.Empty<object>());
 	}
 
-	// Token: 0x02008E0C RID: 36364
+	// Token: 0x02007F93 RID: 32659
 	private enum EPropertyDetailComponent
 	{
-		// Token: 0x0402E172 RID: 188786
+		// Token: 0x04029485 RID: 169093
 		AttrIcon,
-		// Token: 0x0402E173 RID: 188787
+		// Token: 0x04029486 RID: 169094
 		AttrTxt
 	}
 }

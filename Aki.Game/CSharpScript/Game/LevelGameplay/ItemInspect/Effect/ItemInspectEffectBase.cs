@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 {
-	// Token: 0x02006DF2 RID: 28146
+	// Token: 0x02005F71 RID: 24433
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ItemInspectEffectBase
 	{
-		// Token: 0x06044AB5 RID: 281269 RVA: 0x010F34B0 File Offset: 0x010F16B0
+		// Token: 0x0603AC19 RID: 240665 RVA: 0x0109D778 File Offset: 0x0109B978
 		public void ExecuteEffect(IInteractEffect @params, Action<bool, ItemInspectEffectBase> onFinish)
 		{
 			this.Params = @params;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			}, valueOrDefault * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06044AB6 RID: 281270 RVA: 0x010F3534 File Offset: 0x010F1734
+		// Token: 0x0603AC1A RID: 240666 RVA: 0x0109D7FC File Offset: 0x0109B9FC
 		public EInteractEffectType? GetEffectType()
 		{
 			IInteractEffect @params = this.Params;
@@ -37,10 +37,10 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			return new EInteractEffectType?(@params.Type);
 		}
 
-		// Token: 0x06044AB7 RID: 281271
+		// Token: 0x0603AC1B RID: 240667
 		protected abstract void Execute(IInteractEffect @params);
 
-		// Token: 0x06044AB8 RID: 281272 RVA: 0x010F355F File Offset: 0x010F175F
+		// Token: 0x0603AC1C RID: 240668 RVA: 0x0109D827 File Offset: 0x0109BA27
 		protected void FinishExecute(bool result)
 		{
 			Action<bool, ItemInspectEffectBase> onFinish = this.OnFinish;
@@ -51,11 +51,11 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			onFinish(result, this);
 		}
 
-		// Token: 0x04023B9C RID: 146332
+		// Token: 0x0401EE3E RID: 126526
 		[Nullable(2)]
 		private IInteractEffect Params;
 
-		// Token: 0x04023B9D RID: 146333
+		// Token: 0x0401EE3F RID: 126527
 		[Nullable(new byte[]
 		{
 			2,

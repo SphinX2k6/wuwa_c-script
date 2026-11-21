@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000748 RID: 1864
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007E9 RID: 2025
 	public class ISystemModuleDataSyncData
 	{
-		// Token: 0x06002841 RID: 10305 RVA: 0x0006AC60 File Offset: 0x00068E60
+		// Token: 0x06002B65 RID: 11109 RVA: 0x00071E08 File Offset: 0x00070008
 		private ISystemModuleDataSyncData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002842 RID: 10306 RVA: 0x0006AC98 File Offset: 0x00068E98
+		// Token: 0x06002B66 RID: 11110 RVA: 0x00071E40 File Offset: 0x00070040
 		public static ISystemModuleDataSyncData Create([Nullable(2)] ISystemModuleDataSyncData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002843 RID: 10307 RVA: 0x0006ACAB File Offset: 0x00068EAB
+		// Token: 0x06002B67 RID: 11111 RVA: 0x00071E53 File Offset: 0x00070053
 		public static ISystemModuleDataSyncData CreateFromSetValue([Nullable(2)] ISystemModuleDataSyncData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002844 RID: 10308 RVA: 0x0006ACBE File Offset: 0x00068EBE
+		// Token: 0x06002B68 RID: 11112 RVA: 0x00071E66 File Offset: 0x00070066
 		public ISystemModuleDataSyncData_SetValue ToSetValue()
 		{
 			return new ISystemModuleDataSyncData_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A95 RID: 2709
-		// (get) Token: 0x06002845 RID: 10309 RVA: 0x0006ACD1 File Offset: 0x00068ED1
-		// (set) Token: 0x06002846 RID: 10310 RVA: 0x0006ACFC File Offset: 0x00068EFC
+		// Token: 0x17000B55 RID: 2901
+		// (get) Token: 0x06002B69 RID: 11113 RVA: 0x00071E79 File Offset: 0x00070079
+		// (set) Token: 0x06002B6A RID: 11114 RVA: 0x00071EA4 File Offset: 0x000700A4
 		public virtual ESyncDataSystemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B1E RID: 6942
+		// Token: 0x04001D23 RID: 7459
 		[Nullable(2)]
 		protected ISystemModuleDataSyncData FbInstance;
 
-		// Token: 0x04001B1F RID: 6943
+		// Token: 0x04001D24 RID: 7460
 		[Nullable(2)]
 		protected ISystemModuleDataSyncData_SetValue PocoInterface;
 	}

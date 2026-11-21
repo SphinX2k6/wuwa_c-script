@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001ACB RID: 6859
+// Token: 0x02000F8A RID: 3978
 [NullableContext(1)]
 [Nullable(0)]
 public class MapExplorePlayProgressPanel : UiPanelBase
 {
-	// Token: 0x0600CB8C RID: 52108 RVA: 0x002E7544 File Offset: 0x002E5744
+	// Token: 0x06009F9D RID: 40861 RVA: 0x002F2698 File Offset: 0x002F0898
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -27,7 +27,7 @@ public class MapExplorePlayProgressPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CB8D RID: 52109 RVA: 0x002E75B0 File Offset: 0x002E57B0
+	// Token: 0x06009F9E RID: 40862 RVA: 0x002F2704 File Offset: 0x002F0904
 	public UniTask Init(UUIItem item)
 	{
 		MapExplorePlayProgressPanel.<Init>d__3 <Init>d__;
@@ -39,13 +39,13 @@ public class MapExplorePlayProgressPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB8E RID: 52110 RVA: 0x002E75FB File Offset: 0x002E57FB
+	// Token: 0x06009F9F RID: 40863 RVA: 0x002F274F File Offset: 0x002F094F
 	protected override void OnBeforeShow()
 	{
 		this.PlayLayout = new GenericLayout<MapExplorePlayProgressItem, IExplorePlayProgressItemData>(base.GetHorizontalLayout(0), () => new MapExplorePlayProgressItem(), null, false, true);
 	}
 
-	// Token: 0x0600CB8F RID: 52111 RVA: 0x002E7634 File Offset: 0x002E5834
+	// Token: 0x06009FA0 RID: 40864 RVA: 0x002F2788 File Offset: 0x002F0988
 	public void UpdateData(List<IExplorePlayProgressItemData> data, [Nullable(2)] Action finishCallback = null)
 	{
 		GenericLayout<MapExplorePlayProgressItem, IExplorePlayProgressItemData> playLayout = this.PlayLayout;
@@ -64,7 +64,7 @@ public class MapExplorePlayProgressPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600CB90 RID: 52112 RVA: 0x002E766C File Offset: 0x002E586C
+	// Token: 0x06009FA1 RID: 40865 RVA: 0x002F27C0 File Offset: 0x002F09C0
 	public void CheckPlayStateChanged()
 	{
 		GenericLayout<MapExplorePlayProgressItem, IExplorePlayProgressItemData> playLayout = this.PlayLayout;
@@ -79,16 +79,16 @@ public class MapExplorePlayProgressPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005D9F RID: 23967
+	// Token: 0x04005E6E RID: 24174
 	private GenericLayout<MapExplorePlayProgressItem, IExplorePlayProgressItemData> PlayLayout;
 
-	// Token: 0x02008029 RID: 32809
+	// Token: 0x020071B7 RID: 29111
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D8A RID: 171402
+		// Token: 0x040250BE RID: 151742
 		RootLayout,
-		// Token: 0x04029D8B RID: 171403
+		// Token: 0x040250BF RID: 151743
 		PlayPointItem
 	}
 }

@@ -7,14 +7,14 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200219F RID: 8607
+// Token: 0x02001683 RID: 5763
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 {
-	// Token: 0x17001541 RID: 5441
-	// (get) Token: 0x06010BB8 RID: 68536 RVA: 0x00410876 File Offset: 0x0040EA76
-	// (set) Token: 0x06010BB9 RID: 68537 RVA: 0x0041087E File Offset: 0x0040EA7E
+	// Token: 0x17001578 RID: 5496
+	// (get) Token: 0x0600E049 RID: 57417 RVA: 0x0041D15E File Offset: 0x0041B35E
+	// (set) Token: 0x0600E04A RID: 57418 RVA: 0x0041D166 File Offset: 0x0041B366
 	[Nullable(new byte[]
 	{
 		2,
@@ -30,17 +30,17 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 		1
 	})] set; }
 
-	// Token: 0x17001542 RID: 5442
-	// (get) Token: 0x06010BBA RID: 68538 RVA: 0x00410887 File Offset: 0x0040EA87
-	// (set) Token: 0x06010BBB RID: 68539 RVA: 0x0041088F File Offset: 0x0040EA8F
+	// Token: 0x17001579 RID: 5497
+	// (get) Token: 0x0600E04B RID: 57419 RVA: 0x0041D16F File Offset: 0x0041B36F
+	// (set) Token: 0x0600E04C RID: 57420 RVA: 0x0041D177 File Offset: 0x0041B377
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001543 RID: 5443
-	// (get) Token: 0x06010BBC RID: 68540 RVA: 0x00410898 File Offset: 0x0040EA98
-	// (set) Token: 0x06010BBD RID: 68541 RVA: 0x004108A0 File Offset: 0x0040EAA0
+	// Token: 0x1700157A RID: 5498
+	// (get) Token: 0x0600E04D RID: 57421 RVA: 0x0041D180 File Offset: 0x0041B380
+	// (set) Token: 0x0600E04E RID: 57422 RVA: 0x0041D188 File Offset: 0x0041B388
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x06010BBE RID: 68542 RVA: 0x004108AC File Offset: 0x0040EAAC
+	// Token: 0x0600E04F RID: 57423 RVA: 0x0041D194 File Offset: 0x0041B394
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,28 +57,28 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06010BBF RID: 68543 RVA: 0x0041097F File Offset: 0x0040EB7F
+	// Token: 0x0600E050 RID: 57424 RVA: 0x0041D267 File Offset: 0x0041B467
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<RoleItem, RoleBrief>(base.GetHorizontalLayout(3), new Func<RoleItem>(this.CreateRoleItem), null, false, true);
 	}
 
-	// Token: 0x06010BC0 RID: 68544 RVA: 0x004109A2 File Offset: 0x0040EBA2
+	// Token: 0x0600E051 RID: 57425 RVA: 0x0041D28A File Offset: 0x0041B48A
 	public void Clear()
 	{
 	}
 
-	// Token: 0x06010BC1 RID: 68545 RVA: 0x004109A4 File Offset: 0x0040EBA4
+	// Token: 0x0600E052 RID: 57426 RVA: 0x0041D28C File Offset: 0x0041B48C
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x06010BC2 RID: 68546 RVA: 0x004109A6 File Offset: 0x0040EBA6
+	// Token: 0x0600E053 RID: 57427 RVA: 0x0041D28E File Offset: 0x0041B48E
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x06010BC3 RID: 68547 RVA: 0x004109A8 File Offset: 0x0040EBA8
+	// Token: 0x0600E054 RID: 57428 RVA: 0x0041D290 File Offset: 0x0041B490
 	public void Refresh(LordGym data, bool isSelected, int gridIndex)
 	{
 		if (data.MonsterListLength == 0)
@@ -119,7 +119,7 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 		}
 	}
 
-	// Token: 0x06010BC4 RID: 68548 RVA: 0x00410B50 File Offset: 0x0040ED50
+	// Token: 0x0600E055 RID: 57429 RVA: 0x0041D438 File Offset: 0x0041B638
 	private List<RoleBrief> GetRoleItemData(LordGymPassRecord recordData)
 	{
 		List<RoleBrief> list = new List<RoleBrief>(3);
@@ -140,7 +140,7 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 		return list;
 	}
 
-	// Token: 0x06010BC5 RID: 68549 RVA: 0x00410BB0 File Offset: 0x0040EDB0
+	// Token: 0x0600E056 RID: 57430 RVA: 0x0041D498 File Offset: 0x0041B698
 	private string GetBossIconPath(int gymId)
 	{
 		IReadOnlyList<LordGymEntrance> lordGymEntranceAllConfig = LordGymConfig.Instance.GetLordGymEntranceAllConfig();
@@ -188,19 +188,19 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 		return "";
 	}
 
-	// Token: 0x06010BC6 RID: 68550 RVA: 0x00410CBC File Offset: 0x0040EEBC
+	// Token: 0x0600E057 RID: 57431 RVA: 0x0041D5A4 File Offset: 0x0041B7A4
 	public object GetKey(LordGym data, int gridIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x06010BC7 RID: 68551 RVA: 0x00410CCA File Offset: 0x0040EECA
+	// Token: 0x0600E058 RID: 57432 RVA: 0x0041D5B2 File Offset: 0x0041B7B2
 	private RoleItem CreateRoleItem()
 	{
 		return new RoleItem();
 	}
 
-	// Token: 0x04007F6E RID: 32622
+	// Token: 0x040080B5 RID: 32949
 	[Nullable(new byte[]
 	{
 		2,
@@ -209,32 +209,32 @@ public class LordGymRecordItem : UiPanelBase, IGridProxy<LordGym>
 	})]
 	private GenericLayout<RoleItem, RoleBrief> RoleLayout;
 
-	// Token: 0x020086CA RID: 34506
+	// Token: 0x02007855 RID: 30805
 	[NullableContext(0)]
 	private class ERecordComponents
 	{
-		// Token: 0x0402BDB1 RID: 179633
+		// Token: 0x040270D2 RID: 159954
 		public const int TxtBoss = 0;
 
-		// Token: 0x0402BDB2 RID: 179634
+		// Token: 0x040270D3 RID: 159955
 		public const int TxtLevel = 1;
 
-		// Token: 0x0402BDB3 RID: 179635
+		// Token: 0x040270D4 RID: 159956
 		public const int TxtTime = 2;
 
-		// Token: 0x0402BDB4 RID: 179636
+		// Token: 0x040270D5 RID: 159957
 		public const int PnlHLayout = 3;
 
-		// Token: 0x0402BDB5 RID: 179637
+		// Token: 0x040270D6 RID: 159958
 		public const int TxtNoneRecord = 4;
 
-		// Token: 0x0402BDB6 RID: 179638
+		// Token: 0x040270D7 RID: 159959
 		public const int PnlLock = 5;
 
-		// Token: 0x0402BDB7 RID: 179639
+		// Token: 0x040270D8 RID: 159960
 		public const int TxtLock = 6;
 
-		// Token: 0x0402BDB8 RID: 179640
+		// Token: 0x040270D9 RID: 159961
 		public const int TexBossIcon = 7;
 	}
 }

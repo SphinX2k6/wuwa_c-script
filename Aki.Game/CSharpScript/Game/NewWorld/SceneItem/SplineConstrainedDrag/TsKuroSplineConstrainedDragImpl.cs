@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071A8 RID: 29096
+	// Token: 0x0200625D RID: 25181
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TsKuroSplineConstrainedDragImpl : IKuroSplineConstrainedDrag
 	{
-		// Token: 0x06047326 RID: 291622 RVA: 0x01217E74 File Offset: 0x01216074
+		// Token: 0x0603CC21 RID: 248865 RVA: 0x01171D78 File Offset: 0x0116FF78
 		[NullableContext(1)]
 		public TsKuroSplineConstrainedDragImpl(IKuroSplineConstrainedDragParam param)
 		{
@@ -65,26 +65,26 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.Host.Register();
 		}
 
-		// Token: 0x06047327 RID: 291623 RVA: 0x01218088 File Offset: 0x01216288
+		// Token: 0x0603CC22 RID: 248866 RVA: 0x01171F8C File Offset: 0x0117018C
 		public USplineComponent GetConstraintSpline()
 		{
 			return this.ConstraintSpline;
 		}
 
-		// Token: 0x06047328 RID: 291624 RVA: 0x01218090 File Offset: 0x01216290
+		// Token: 0x0603CC23 RID: 248867 RVA: 0x01171F94 File Offset: 0x01170194
 		public AActor GetActor()
 		{
 			return this.Actor;
 		}
 
-		// Token: 0x06047329 RID: 291625 RVA: 0x01218098 File Offset: 0x01216298
+		// Token: 0x0603CC24 RID: 248868 RVA: 0x01171F9C File Offset: 0x0117019C
 		[NullableContext(1)]
 		public string GetActorKey()
 		{
 			return this.ActorKey;
 		}
 
-		// Token: 0x0604732A RID: 291626 RVA: 0x012180A0 File Offset: 0x012162A0
+		// Token: 0x0603CC25 RID: 248869 RVA: 0x01171FA4 File Offset: 0x011701A4
 		[NullableContext(1)]
 		public IDraggableStateApplier GetCustomStateApplier()
 		{
@@ -100,37 +100,37 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return new MaterialParamDraggableStateApplier();
 		}
 
-		// Token: 0x0604732B RID: 291627 RVA: 0x012180DA File Offset: 0x012162DA
+		// Token: 0x0603CC26 RID: 248870 RVA: 0x01171FDE File Offset: 0x011701DE
 		public float GetCurrentDistanceAlongSpline()
 		{
 			return this.CurrentDistanceAlongSpline;
 		}
 
-		// Token: 0x0604732C RID: 291628 RVA: 0x012180E2 File Offset: 0x012162E2
+		// Token: 0x0603CC27 RID: 248871 RVA: 0x01171FE6 File Offset: 0x011701E6
 		public float? GetMagneticStiffness()
 		{
 			return this.Stiffness;
 		}
 
-		// Token: 0x0604732D RID: 291629 RVA: 0x012180EA File Offset: 0x012162EA
+		// Token: 0x0603CC28 RID: 248872 RVA: 0x01171FEE File Offset: 0x011701EE
 		public float? GetMagneticDamping()
 		{
 			return this.Damping;
 		}
 
-		// Token: 0x0604732E RID: 291630 RVA: 0x012180F2 File Offset: 0x012162F2
+		// Token: 0x0603CC29 RID: 248873 RVA: 0x01171FF6 File Offset: 0x011701F6
 		public IConditionGroup GetCondition()
 		{
 			return this.Condition;
 		}
 
-		// Token: 0x0604732F RID: 291631 RVA: 0x012180FA File Offset: 0x012162FA
+		// Token: 0x0603CC2A RID: 248874 RVA: 0x01171FFE File Offset: 0x011701FE
 		public EDragHintType? GetDragHintType()
 		{
 			return this.DragHintType;
 		}
 
-		// Token: 0x06047330 RID: 291632 RVA: 0x01218104 File Offset: 0x01216304
+		// Token: 0x0603CC2B RID: 248875 RVA: 0x01172008 File Offset: 0x01170208
 		public EntityContext GetEntityContext()
 		{
 			if (this.CreatureDataId == null)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.EntityContextInternal;
 		}
 
-		// Token: 0x06047331 RID: 291633 RVA: 0x01218160 File Offset: 0x01216360
+		// Token: 0x0603CC2C RID: 248876 RVA: 0x01172064 File Offset: 0x01170264
 		public float SnapToSpline()
 		{
 			USplineComponent constraintSpline = this.GetConstraintSpline();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.SetDistanceAlongSpline(distanceAlongSplineAtSplineInputKey, true);
 		}
 
-		// Token: 0x06047332 RID: 291634 RVA: 0x012181C0 File Offset: 0x012163C0
+		// Token: 0x0603CC2D RID: 248877 RVA: 0x011720C4 File Offset: 0x011702C4
 		public float SetDistanceAlongSpline(float distance, bool checkSpeed = true)
 		{
 			USplineComponent constraintSpline = this.GetConstraintSpline();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.CurrentDistanceAlongSpline;
 		}
 
-		// Token: 0x06047333 RID: 291635 RVA: 0x012183B4 File Offset: 0x012165B4
+		// Token: 0x0603CC2E RID: 248878 RVA: 0x011722B8 File Offset: 0x011704B8
 		public void ApplyDragMode(EKuroSplineConstrainedDragMode mode)
 		{
 			IDragModeStrategy currentStrategy = this.CurrentStrategy;
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.CurrentStrategy = dragModeStrategy;
 		}
 
-		// Token: 0x06047334 RID: 291636 RVA: 0x01218420 File Offset: 0x01216620
+		// Token: 0x0603CC2F RID: 248879 RVA: 0x01172324 File Offset: 0x01170524
 		public void RunCommonBeginDrag()
 		{
 			this.PreviousDistanceAlongSpline = this.CurrentDistanceAlongSpline;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047335 RID: 291637 RVA: 0x012184E0 File Offset: 0x012166E0
+		// Token: 0x0603CC30 RID: 248880 RVA: 0x011723E4 File Offset: 0x011705E4
 		public float RunCommonEndDrag(bool checkRelease)
 		{
 			if (this.CurrentStrategy != null)
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.CurrentDistanceAlongSpline;
 		}
 
-		// Token: 0x06047336 RID: 291638 RVA: 0x012186F0 File Offset: 0x012168F0
+		// Token: 0x0603CC31 RID: 248881 RVA: 0x011725F4 File Offset: 0x011707F4
 		public void Clear()
 		{
 			CapabilityHostImpl host = this.Host;
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			host.Unregister();
 		}
 
-		// Token: 0x06047337 RID: 291639 RVA: 0x01218704 File Offset: 0x01216904
+		// Token: 0x0603CC32 RID: 248882 RVA: 0x01172608 File Offset: 0x01170808
 		[NullableContext(1)]
 		private IDragModeStrategy CreateStrategy(EKuroSplineConstrainedDragMode mode)
 		{
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return new ProjectedDragModeStrategy();
 		}
 
-		// Token: 0x06047338 RID: 291640 RVA: 0x01218757 File Offset: 0x01216957
+		// Token: 0x0603CC33 RID: 248883 RVA: 0x0117265B File Offset: 0x0117085B
 		public IDragModeStrategy GetCurrentStrategy()
 		{
 			if (this.CurrentStrategy != null)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.CurrentStrategy;
 		}
 
-		// Token: 0x06047339 RID: 291641 RVA: 0x0121877C File Offset: 0x0121697C
+		// Token: 0x0603CC34 RID: 248884 RVA: 0x01172680 File Offset: 0x01170880
 		private void CheckKeyPoints()
 		{
 			if (this.KeyPointStates.Count != 0)
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604733A RID: 291642 RVA: 0x012188F0 File Offset: 0x01216AF0
+		// Token: 0x0603CC35 RID: 248885 RVA: 0x011727F4 File Offset: 0x011709F4
 		private void DebugDrawKeyPoints()
 		{
 			foreach (IKeyPointState keyPointState in this.KeyPointStates)
@@ -437,7 +437,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604733B RID: 291643 RVA: 0x01218988 File Offset: 0x01216B88
+		// Token: 0x0603CC36 RID: 248886 RVA: 0x0117288C File Offset: 0x01170A8C
 		[NullableContext(1)]
 		private float GetSnapTargetDistance(IDragActorPlayKeyPointConfig kp)
 		{
@@ -451,80 +451,80 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return constraintSpline.GetDistanceAlongSplineAtSplineInputKey(inKey);
 		}
 
-		// Token: 0x040256F2 RID: 153330
+		// Token: 0x04020361 RID: 131937
 		[Nullable(1)]
 		protected readonly string ActorKey = "";
 
-		// Token: 0x040256F3 RID: 153331
+		// Token: 0x04020362 RID: 131938
 		protected readonly USplineComponent ConstraintSpline;
 
-		// Token: 0x040256F4 RID: 153332
+		// Token: 0x04020363 RID: 131939
 		protected readonly AActor Actor;
 
-		// Token: 0x040256F5 RID: 153333
+		// Token: 0x04020364 RID: 131940
 		protected float CurrentDistanceAlongSpline;
 
-		// Token: 0x040256F6 RID: 153334
+		// Token: 0x04020365 RID: 131941
 		protected bool OrientRotationToSpline = true;
 
-		// Token: 0x040256F7 RID: 153335
+		// Token: 0x04020366 RID: 131942
 		protected readonly ISequenceProgressController SeqProgressController;
 
-		// Token: 0x040256F8 RID: 153336
+		// Token: 0x04020367 RID: 131943
 		protected readonly long? CreatureDataId;
 
-		// Token: 0x040256F9 RID: 153337
+		// Token: 0x04020368 RID: 131944
 		[Nullable(1)]
 		protected readonly List<IKeyPointState> KeyPointStates = new List<IKeyPointState>();
 
-		// Token: 0x040256FA RID: 153338
+		// Token: 0x04020369 RID: 131945
 		[Nullable(1)]
 		protected readonly Vector TempActorPosition = Vector.Create();
 
-		// Token: 0x040256FB RID: 153339
+		// Token: 0x0402036A RID: 131946
 		protected readonly float MaxPlaySpeed;
 
-		// Token: 0x040256FC RID: 153340
+		// Token: 0x0402036B RID: 131947
 		protected readonly float? Stiffness;
 
-		// Token: 0x040256FD RID: 153341
+		// Token: 0x0402036C RID: 131948
 		protected readonly float? Damping;
 
-		// Token: 0x040256FE RID: 153342
+		// Token: 0x0402036D RID: 131949
 		protected readonly string DraggableActorEffectDa;
 
-		// Token: 0x040256FF RID: 153343
+		// Token: 0x0402036E RID: 131950
 		protected readonly IConditionGroup Condition;
 
-		// Token: 0x04025700 RID: 153344
+		// Token: 0x0402036F RID: 131951
 		protected readonly IDraggableStateApplier CustomStateApplier;
 
-		// Token: 0x04025701 RID: 153345
+		// Token: 0x04020370 RID: 131952
 		protected readonly string AkEvent;
 
-		// Token: 0x04025702 RID: 153346
+		// Token: 0x04020371 RID: 131953
 		protected readonly EDragHintType? DragHintType;
 
-		// Token: 0x04025703 RID: 153347
+		// Token: 0x04020372 RID: 131954
 		private int AkEventHandle;
 
-		// Token: 0x04025704 RID: 153348
+		// Token: 0x04020373 RID: 131955
 		private float PreviousDistanceAlongSpline;
 
-		// Token: 0x04025705 RID: 153349
+		// Token: 0x04020374 RID: 131956
 		public readonly CapabilityHostImpl Host;
 
-		// Token: 0x04025706 RID: 153350
+		// Token: 0x04020375 RID: 131957
 		[Nullable(1)]
 		private readonly Dictionary<EKuroSplineConstrainedDragMode, IDragModeStrategy> StrategyPool = new Dictionary<EKuroSplineConstrainedDragMode, IDragModeStrategy>();
 
-		// Token: 0x04025707 RID: 153351
+		// Token: 0x04020376 RID: 131958
 		private IDragModeStrategy CurrentStrategy;
 
-		// Token: 0x04025708 RID: 153352
+		// Token: 0x04020377 RID: 131959
 		private static readonly EKuroSplineConstrainedDragMode DefaultDragMode;
 
-		// Token: 0x04025709 RID: 153353
+		// Token: 0x04020378 RID: 131960
 		private EntityContext EntityContextInternal;
 	}
 }

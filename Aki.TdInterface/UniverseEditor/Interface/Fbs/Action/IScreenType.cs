@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F48 RID: 28488
+	// Token: 0x02007702 RID: 30466
 	public struct IScreenType : IFlatbufferObject
 	{
-		// Token: 0x1700D3B4 RID: 54196
-		// (get) Token: 0x06032549 RID: 206153 RVA: 0x006CBF02 File Offset: 0x006CA102
+		// Token: 0x1700DF73 RID: 57203
+		// (get) Token: 0x06035749 RID: 218953 RVA: 0x0072B1BD File Offset: 0x007293BD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603254A RID: 206154 RVA: 0x006CBF0F File Offset: 0x006CA10F
+		// Token: 0x0603574A RID: 218954 RVA: 0x0072B1CA File Offset: 0x007293CA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603254B RID: 206155 RVA: 0x006CBF18 File Offset: 0x006CA118
+		// Token: 0x0603574B RID: 218955 RVA: 0x0072B1D4 File Offset: 0x007293D4
 		public static IScreenType GetRootAsIScreenType(ByteBuffer _bb)
 		{
 			return IScreenType.GetRootAsIScreenType(_bb, default(IScreenType));
 		}
 
-		// Token: 0x0603254C RID: 206156 RVA: 0x006CBF34 File Offset: 0x006CA134
+		// Token: 0x0603574C RID: 218956 RVA: 0x0072B1F0 File Offset: 0x007293F0
 		public static IScreenType GetRootAsIScreenType(ByteBuffer _bb, IScreenType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603254D RID: 206157 RVA: 0x006CBF51 File Offset: 0x006CA151
+		// Token: 0x0603574D RID: 218957 RVA: 0x0072B20D File Offset: 0x0072940D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603254E RID: 206158 RVA: 0x006CBF60 File Offset: 0x006CA160
+		// Token: 0x0603574E RID: 218958 RVA: 0x0072B21C File Offset: 0x0072941C
 		public IScreenType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D3B5 RID: 54197
-		// (get) Token: 0x0603254F RID: 206159 RVA: 0x006CBF70 File Offset: 0x006CA170
+		// Token: 0x1700DF74 RID: 57204
+		// (get) Token: 0x0603574F RID: 218959 RVA: 0x0072B22C File Offset: 0x0072942C
 		public EScreenType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032550 RID: 206160 RVA: 0x006CBFAC File Offset: 0x006CA1AC
+		// Token: 0x06035750 RID: 218960 RVA: 0x0072B268 File Offset: 0x00729468
 		public static Offset<IScreenType> CreateIScreenType(FlatBufferBuilder builder, EScreenType Type = EScreenType.Main)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IScreenType.EndIScreenType(builder);
 		}
 
-		// Token: 0x06032551 RID: 206161 RVA: 0x006CBFC2 File Offset: 0x006CA1C2
+		// Token: 0x06035751 RID: 218961 RVA: 0x0072B27E File Offset: 0x0072947E
 		public static void StartIScreenType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06032552 RID: 206162 RVA: 0x006CBFCB File Offset: 0x006CA1CB
+		// Token: 0x06035752 RID: 218962 RVA: 0x0072B287 File Offset: 0x00729487
 		public static void AddType(FlatBufferBuilder builder, EScreenType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032553 RID: 206163 RVA: 0x006CBFD6 File Offset: 0x006CA1D6
+		// Token: 0x06035753 RID: 218963 RVA: 0x0072B292 File Offset: 0x00729492
 		public static Offset<IScreenType> EndIScreenType(FlatBufferBuilder builder)
 		{
 			return new Offset<IScreenType>(builder.EndTable());
 		}
 
-		// Token: 0x06032554 RID: 206164 RVA: 0x006CBFE4 File Offset: 0x006CA1E4
+		// Token: 0x06035754 RID: 218964 RVA: 0x0072B2A0 File Offset: 0x007294A0
 		public IScreenTypeT UnPack()
 		{
 			IScreenTypeT screenTypeT = new IScreenTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return screenTypeT;
 		}
 
-		// Token: 0x06032555 RID: 206165 RVA: 0x006CBFFF File Offset: 0x006CA1FF
+		// Token: 0x06035755 RID: 218965 RVA: 0x0072B2BB File Offset: 0x007294BB
 		public void UnPackTo(IScreenTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06032556 RID: 206166 RVA: 0x006CC010 File Offset: 0x006CA210
+		// Token: 0x06035756 RID: 218966 RVA: 0x0072B2CC File Offset: 0x007294CC
 		public static Offset<IScreenType> Pack(FlatBufferBuilder builder, IScreenTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IScreenType.CreateIScreenType(builder, _o.Type);
 		}
 
-		// Token: 0x0401193F RID: 71999
+		// Token: 0x04012917 RID: 76055
 		private Table __p;
 	}
 }

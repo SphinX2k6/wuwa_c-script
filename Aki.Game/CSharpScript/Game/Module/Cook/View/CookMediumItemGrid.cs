@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B1A RID: 23322
+	// Token: 0x02004AFB RID: 19195
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,32 +16,32 @@ namespace CSharpScript.Game.Module.Cook.View
 	})]
 	public class CookMediumItemGrid : LoopScrollMediumItemGrid<ICookItemData>
 	{
-		// Token: 0x0603B0A0 RID: 241824 RVA: 0x00E132C1 File Offset: 0x00E114C1
+		// Token: 0x06030012 RID: 196626 RVA: 0x00D63FD9 File Offset: 0x00D621D9
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603B0A1 RID: 241825 RVA: 0x00E132D4 File Offset: 0x00E114D4
+		// Token: 0x06030013 RID: 196627 RVA: 0x00D63FEC File Offset: 0x00D621EC
 		protected override void OnBeforeDestroy()
 		{
 			this.SequencePlayer.Clear();
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603B0A2 RID: 241826 RVA: 0x00E132E8 File Offset: 0x00E114E8
+		// Token: 0x06030014 RID: 196628 RVA: 0x00D64000 File Offset: 0x00D62200
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x0603B0A3 RID: 241827 RVA: 0x00E132F2 File Offset: 0x00E114F2
+		// Token: 0x06030015 RID: 196629 RVA: 0x00D6400A File Offset: 0x00D6220A
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0603B0A4 RID: 241828 RVA: 0x00E132FC File Offset: 0x00E114FC
+		// Token: 0x06030016 RID: 196630 RVA: 0x00D64014 File Offset: 0x00D62214
 		protected override void OnRefresh(ICookItemData data, bool isSelected, int gridIndex)
 		{
 			ICookingData cookingData = data as ICookingData;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0401ECBA RID: 126138
+		// Token: 0x04019776 RID: 104310
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EB8 RID: 24248
+	// Token: 0x02004E9D RID: 20125
 	public enum EPeriodicityChallengeType
 	{
-		// Token: 0x0402030E RID: 131854
+		// Token: 0x0401ADD5 RID: 110037
 		None,
-		// Token: 0x0402030F RID: 131855
+		// Token: 0x0401ADD6 RID: 110038
 		TowerLow,
-		// Token: 0x04020310 RID: 131856
+		// Token: 0x0401ADD7 RID: 110039
 		TowerHigh,
-		// Token: 0x04020311 RID: 131857
+		// Token: 0x0401ADD8 RID: 110040
 		TowerVariation,
-		// Token: 0x04020312 RID: 131858
+		// Token: 0x0401ADD9 RID: 110041
 		TowerOverLoad,
-		// Token: 0x04020313 RID: 131859
+		// Token: 0x0401ADDA RID: 110042
 		ShipTowerNormal,
-		// Token: 0x04020314 RID: 131860
+		// Token: 0x0401ADDB RID: 110043
 		ShipTowerPeriodicity,
-		// Token: 0x04020315 RID: 131861
+		// Token: 0x0401ADDC RID: 110044
 		WeeklyRogue,
-		// Token: 0x04020316 RID: 131862
+		// Token: 0x0401ADDD RID: 110045
 		WheelTowerNormal,
-		// Token: 0x04020317 RID: 131863
+		// Token: 0x0401ADDE RID: 110046
 		WheelTowerEndless
 	}
 }

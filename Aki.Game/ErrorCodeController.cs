@@ -1,49 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.BaseConfig;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001A8F RID: 6799
+// Token: 0x02000F4E RID: 3918
 [NullableContext(1)]
 [Nullable(0)]
 public class ErrorCodeController : UiControllerBase
 {
-	// Token: 0x0600C89D RID: 51357 RVA: 0x002DBF1C File Offset: 0x002DA11C
+	// Token: 0x06009CAE RID: 40110 RVA: 0x002E70A0 File Offset: 0x002E52A0
 	protected override bool OnInit()
 	{
 		Net.Instance.SetExceptionHandle(new Net.TExceptionHandle(this.OpenExceptionTipView));
 		return true;
 	}
 
-	// Token: 0x0600C89E RID: 51358 RVA: 0x002DBF35 File Offset: 0x002DA135
+	// Token: 0x06009CAF RID: 40111 RVA: 0x002E70B9 File Offset: 0x002E52B9
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0600C89F RID: 51359 RVA: 0x002DBF38 File Offset: 0x002DA138
+	// Token: 0x06009CB0 RID: 40112 RVA: 0x002E70BC File Offset: 0x002E52BC
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.MessageDecodeFailNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMessageDecodeFailNotify));
 		Net.Instance.Register(ENotifyMessageId.SysInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnErrorNotify));
 	}
 
-	// Token: 0x0600C8A0 RID: 51360 RVA: 0x002DBF72 File Offset: 0x002DA172
+	// Token: 0x06009CB1 RID: 40113 RVA: 0x002E70F6 File Offset: 0x002E52F6
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MessageDecodeFailNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.SysInfoNotify);
 	}
 
-	// Token: 0x0600C8A1 RID: 51361 RVA: 0x002DBF94 File Offset: 0x002DA194
+	// Token: 0x06009CB2 RID: 40114 RVA: 0x002E7118 File Offset: 0x002E5318
 	[NullableContext(2)]
 	private void OnMessageDecodeFailNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -62,18 +60,23 @@ public class ErrorCodeController : UiControllerBase
 		LogReportController.Instance.LogReport(messageDecodeData);
 	}
 
-	// Token: 0x0600C8A2 RID: 51362 RVA: 0x002DC03C File Offset: 0x002DA23C
+	// Token: 0x06009CB3 RID: 40115 RVA: 0x002E71C0 File Offset: 0x002E53C0
 	[NullableContext(2)]
 	private void OnErrorNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		SysInfoNotify sysInfoNotify = (SysInfoNotify)msg;
 		RepeatedField<string> errorParams = sysInfoNotify.ErrorParams;
 		Aki.Protocol.ErrorCode errorCode = sysInfoNotify.ErrorCode;
-		this.OpenErrorCodeScrollingTipsView(errorCode, errorParams.ToArray<string>());
+		string[] array = new string[errorParams.Count];
+		for (int i = 0; i < errorParams.Count; i++)
+		{
+			array[i] = errorParams[i];
+		}
+		this.OpenErrorCodeScrollingTipsView(errorCode, array);
 	}
 
-	// Token: 0x0600C8A3 RID: 51363 RVA: 0x002DC06C File Offset: 0x002DA26C
-	public unsafe void OpenErrorCodeScrollingTipsView(Aki.Protocol.ErrorCode errorCode, string[] errorParams)
+	// Token: 0x06009CB4 RID: 40116 RVA: 0x002E7218 File Offset: 0x002E5418
+	public void OpenErrorCodeScrollingTipsView(Aki.Protocol.ErrorCode errorCode, string[] errorParams)
 	{
 		string textByErrorId = ErrorCodeConfig.Instance.GetTextByErrorId(errorCode);
 		if (errorCode == Aki.Protocol.ErrorCode.PropRewardTips)
@@ -83,20 +86,9 @@ public class ErrorCodeController : UiControllerBase
 		}
 		string text = this.ReplaceWildCard(textByErrorId, errorParams);
 		ScrollingTipsController.Instance.ShowTipsByText(text);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.ErrorCode;
-			ELogAuthor author = ELogAuthor.XXJ;
-			string message = "服务器错误信息";
-			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("error", text);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("errorParams", errorParams);
-			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-		}
 	}
 
-	// Token: 0x0600C8A4 RID: 51364 RVA: 0x002DC117 File Offset: 0x002DA317
+	// Token: 0x06009CB5 RID: 40117 RVA: 0x002E7264 File Offset: 0x002E5464
 	public void OpenErrorCodeTipView(Aki.Protocol.ErrorCode errorCode, EResponseMessageId messageId, [Nullable(new byte[]
 	{
 		2,
@@ -106,7 +98,7 @@ public class ErrorCodeController : UiControllerBase
 		this.OpenErrorCodeTipView(errorCode, (int)messageId, errorParams, showToScreen, isShowErrorCode);
 	}
 
-	// Token: 0x0600C8A5 RID: 51365 RVA: 0x002DC128 File Offset: 0x002DA328
+	// Token: 0x06009CB6 RID: 40118 RVA: 0x002E7274 File Offset: 0x002E5474
 	public unsafe void OpenErrorCodeTipView(Aki.Protocol.ErrorCode errorCode, int messageId, [Nullable(new byte[]
 	{
 		2,
@@ -155,7 +147,7 @@ public class ErrorCodeController : UiControllerBase
 		instance2.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0600C8A6 RID: 51366 RVA: 0x002DC264 File Offset: 0x002DA464
+	// Token: 0x06009CB7 RID: 40119 RVA: 0x002E73B0 File Offset: 0x002E55B0
 	private string FormatErrorCodeInfo(int messageId, Aki.Protocol.ErrorCode errorCode, string showText)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -178,7 +170,7 @@ public class ErrorCodeController : UiControllerBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600C8A7 RID: 51367 RVA: 0x002DC2FC File Offset: 0x002DA4FC
+	// Token: 0x06009CB8 RID: 40120 RVA: 0x002E7448 File Offset: 0x002E5648
 	public unsafe void LogOnlyErrorCode(Aki.Protocol.ErrorCode errorCode, [Nullable(new byte[]
 	{
 		2,
@@ -203,7 +195,7 @@ public class ErrorCodeController : UiControllerBase
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600C8A8 RID: 51368 RVA: 0x002DC3AC File Offset: 0x002DA5AC
+	// Token: 0x06009CB9 RID: 40121 RVA: 0x002E74F8 File Offset: 0x002E56F8
 	private string ReplaceWildCard(string text, [Nullable(new byte[]
 	{
 		2,
@@ -227,7 +219,7 @@ public class ErrorCodeController : UiControllerBase
 		return text2;
 	}
 
-	// Token: 0x0600C8A9 RID: 51369 RVA: 0x002DC414 File Offset: 0x002DA614
+	// Token: 0x06009CBA RID: 40122 RVA: 0x002E7560 File Offset: 0x002E5760
 	public void OpenLoginStatusCodeTipView(Aki.Protocol.ErrorCode errorCode)
 	{
 		if (this.IsErrorCodeOpen)
@@ -242,7 +234,7 @@ public class ErrorCodeController : UiControllerBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600C8AA RID: 51370 RVA: 0x002DC460 File Offset: 0x002DA660
+	// Token: 0x06009CBB RID: 40123 RVA: 0x002E75AC File Offset: 0x002E57AC
 	private unsafe void OpenExceptionTipView(int rpcId, int errorCode, int messageId, object message, string errorMessage)
 	{
 		if (errorCode == 64)
@@ -261,10 +253,6 @@ public class ErrorCodeController : UiControllerBase
 			instance.Info(module, author, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 			return;
 		}
-		if (!Info.Instance.IsBuildShipping)
-		{
-			this.OpenErrorCodeTipView((Aki.Protocol.ErrorCode)errorCode, (EResponseMessageId)messageId, null, true, true);
-		}
 		Log instance2 = Log.Instance;
 		ELogModule module2 = ELogModule.ErrorCode;
 		ELogAuthor author2 = ELogAuthor.ZJC;
@@ -278,7 +266,7 @@ public class ErrorCodeController : UiControllerBase
 		instance2.Error(module2, author2, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 5));
 	}
 
-	// Token: 0x0600C8AB RID: 51371 RVA: 0x002DC5FC File Offset: 0x002DA7FC
+	// Token: 0x06009CBC RID: 40124 RVA: 0x002E7730 File Offset: 0x002E5930
 	public void OpenConfirmBoxByTextId(string textId)
 	{
 		if (!this.IsErrorCodeOpen)
@@ -295,7 +283,7 @@ public class ErrorCodeController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C8AC RID: 51372 RVA: 0x002DC64C File Offset: 0x002DA84C
+	// Token: 0x06009CBD RID: 40125 RVA: 0x002E7780 File Offset: 0x002E5980
 	public void OpenConfirmBoxByTextIdNew(string textId)
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew(textId, null);
@@ -308,7 +296,7 @@ public class ErrorCodeController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C8AD RID: 51373 RVA: 0x002DC68C File Offset: 0x002DA88C
+	// Token: 0x06009CBE RID: 40126 RVA: 0x002E77C0 File Offset: 0x002E59C0
 	public unsafe bool CheckErrorCode(Aki.Protocol.ErrorCode? response, EResponseMessageId msgId, bool isShowTip = true)
 	{
 		if (response == null)
@@ -334,8 +322,8 @@ public class ErrorCodeController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x17001073 RID: 4211
-	// (get) Token: 0x0600C8AE RID: 51374 RVA: 0x002DC727 File Offset: 0x002DA927
+	// Token: 0x17001098 RID: 4248
+	// (get) Token: 0x06009CBF RID: 40127 RVA: 0x002E785B File Offset: 0x002E5A5B
 	public static ErrorCodeController Instance
 	{
 		get
@@ -344,7 +332,7 @@ public class ErrorCodeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C8AF RID: 51375 RVA: 0x002DC72E File Offset: 0x002DA92E
+	// Token: 0x06009CC0 RID: 40128 RVA: 0x002E7862 File Offset: 0x002E5A62
 	public static ErrorCodeController GetOrCreateInstance()
 	{
 		if (ErrorCodeController._Instance == null)
@@ -354,7 +342,7 @@ public class ErrorCodeController : UiControllerBase
 		return ErrorCodeController._Instance;
 	}
 
-	// Token: 0x0600C8B0 RID: 51376 RVA: 0x002DC742 File Offset: 0x002DA942
+	// Token: 0x06009CC1 RID: 40129 RVA: 0x002E7876 File Offset: 0x002E5A76
 	public static bool CreateInstance()
 	{
 		if (ErrorCodeController._Instance != null)
@@ -365,27 +353,27 @@ public class ErrorCodeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C8B1 RID: 51377 RVA: 0x002DC758 File Offset: 0x002DA958
+	// Token: 0x06009CC2 RID: 40130 RVA: 0x002E788C File Offset: 0x002E5A8C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C8B2 RID: 51378 RVA: 0x002DC75A File Offset: 0x002DA95A
+	// Token: 0x06009CC3 RID: 40131 RVA: 0x002E788E File Offset: 0x002E5A8E
 	public static void ResetStaticDefaultValue()
 	{
 		ErrorCodeController._Instance = null;
 	}
 
-	// Token: 0x0600C8B3 RID: 51379 RVA: 0x002DC762 File Offset: 0x002DA962
+	// Token: 0x06009CC4 RID: 40132 RVA: 0x002E7896 File Offset: 0x002E5A96
 	static ErrorCodeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ErrorCodeController.CreateStaticDefaultValue), new Action(ErrorCodeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C7B RID: 23675
+	// Token: 0x04005D4A RID: 23882
 	public bool IsErrorCodeOpen = true;
 
-	// Token: 0x04005C7C RID: 23676
+	// Token: 0x04005D4B RID: 23883
 	public readonly Action<string> OpenConfirmBoxByText = delegate(string text)
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ErrorCodeTips);
@@ -396,7 +384,7 @@ public class ErrorCodeController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	};
 
-	// Token: 0x04005C7D RID: 23677
+	// Token: 0x04005D4C RID: 23884
 	[Nullable(2)]
 	private static ErrorCodeController _Instance;
 }

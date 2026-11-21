@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015FE RID: 5630
+	// Token: 0x02001671 RID: 5745
 	public enum EMatchAcceptInviteResult
 	{
-		// Token: 0x0400BF4D RID: 48973
+		// Token: 0x0400C447 RID: 50247
 		[OriginalName("Accept")]
 		Accept,
-		// Token: 0x0400BF4E RID: 48974
+		// Token: 0x0400C448 RID: 50248
 		[OriginalName("ActiveRefuse")]
 		ActiveRefuse,
-		// Token: 0x0400BF4F RID: 48975
+		// Token: 0x0400C449 RID: 50249
 		[OriginalName("TimeOutRefuse")]
 		TimeOutRefuse
 	}

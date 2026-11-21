@@ -8,11 +8,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000038 RID: 56
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CalculateComponent : IComponentBase
 	{
-		// Token: 0x060001FA RID: 506 RVA: 0x00018678 File Offset: 0x00016878
+		// Token: 0x060001FE RID: 510 RVA: 0x00018FEC File Offset: 0x000171EC
 		private CalculateComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060001FB RID: 507 RVA: 0x000186B0 File Offset: 0x000168B0
+		// Token: 0x060001FF RID: 511 RVA: 0x00019024 File Offset: 0x00017224
 		public static CalculateComponent Create([Nullable(2)] CalculateComponent instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001FC RID: 508 RVA: 0x000186C3 File Offset: 0x000168C3
+		// Token: 0x06000200 RID: 512 RVA: 0x00019037 File Offset: 0x00017237
 		public static CalculateComponent CreateFromSetValue([Nullable(2)] CalculateComponent_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060001FD RID: 509 RVA: 0x000186D6 File Offset: 0x000168D6
+		// Token: 0x06000201 RID: 513 RVA: 0x0001904A File Offset: 0x0001724A
 		public new CalculateComponent_SetValue ToSetValue()
 		{
 			return new CalculateComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000BB RID: 187
-		// (get) Token: 0x060001FE RID: 510 RVA: 0x00018710 File Offset: 0x00016910
-		// (set) Token: 0x060001FF RID: 511 RVA: 0x0001874A File Offset: 0x0001694A
+		// Token: 0x170000BD RID: 189
+		// (get) Token: 0x06000202 RID: 514 RVA: 0x00019084 File Offset: 0x00017284
+		// (set) Token: 0x06000203 RID: 515 RVA: 0x000190BE File Offset: 0x000172BE
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000BC RID: 188
-		// (get) Token: 0x06000200 RID: 512 RVA: 0x00018758 File Offset: 0x00016958
-		// (set) Token: 0x06000201 RID: 513 RVA: 0x00018782 File Offset: 0x00016982
+		// Token: 0x170000BE RID: 190
+		// (get) Token: 0x06000204 RID: 516 RVA: 0x000190CC File Offset: 0x000172CC
+		// (set) Token: 0x06000205 RID: 517 RVA: 0x000190F6 File Offset: 0x000172F6
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000BD RID: 189
-		// (get) Token: 0x06000202 RID: 514 RVA: 0x00018790 File Offset: 0x00016990
-		// (set) Token: 0x06000203 RID: 515 RVA: 0x00018823 File Offset: 0x00016A23
+		// Token: 0x170000BF RID: 191
+		// (get) Token: 0x06000206 RID: 518 RVA: 0x00019104 File Offset: 0x00017304
+		// (set) Token: 0x06000207 RID: 519 RVA: 0x00019197 File Offset: 0x00017397
 		public virtual List<Aki.TDConfigMgr.Action.INumberVar> Vars
 		{
 			get
@@ -146,9 +144,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000BE RID: 190
-		// (get) Token: 0x06000204 RID: 516 RVA: 0x00018838 File Offset: 0x00016A38
-		// (set) Token: 0x06000205 RID: 517 RVA: 0x000188CB File Offset: 0x00016ACB
+		// Token: 0x170000C0 RID: 192
+		// (get) Token: 0x06000208 RID: 520 RVA: 0x000191AC File Offset: 0x000173AC
+		// (set) Token: 0x06000209 RID: 521 RVA: 0x0001923F File Offset: 0x0001743F
 		public virtual List<Aki.TDConfigMgr.Action.IFunction> Functions
 		{
 			get
@@ -184,24 +182,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000142 RID: 322
+		// Token: 0x04000147 RID: 327
 		[Nullable(2)]
 		protected new CalculateComponent FbInstance;
 
-		// Token: 0x04000143 RID: 323
+		// Token: 0x04000148 RID: 328
 		[Nullable(2)]
 		protected new CalculateComponent_SetValue PocoInterface;
 
-		// Token: 0x04000144 RID: 324
+		// Token: 0x04000149 RID: 329
 		private List<Aki.TDConfigMgr.Action.INumberVar> _VarsCache;
 
-		// Token: 0x04000145 RID: 325
+		// Token: 0x0400014A RID: 330
 		private bool _VarsInited;
 
-		// Token: 0x04000146 RID: 326
+		// Token: 0x0400014B RID: 331
 		private List<Aki.TDConfigMgr.Action.IFunction> _FunctionsCache;
 
-		// Token: 0x04000147 RID: 327
+		// Token: 0x0400014C RID: 332
 		private bool _FunctionsInited;
 	}
 }

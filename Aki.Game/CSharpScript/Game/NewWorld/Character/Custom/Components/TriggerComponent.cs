@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Game.NewWorld.Character.Custom.Components.Range;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
@@ -8,13 +9,13 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 {
-	// Token: 0x020070AE RID: 28846
+	// Token: 0x0200630D RID: 25357
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TriggerComponent : EntityComponent
 	{
-		// Token: 0x17009C57 RID: 40023
-		// (get) Token: 0x06046551 RID: 288081 RVA: 0x011A1334 File Offset: 0x0119F534
+		// Token: 0x17007449 RID: 29769
+		// (get) Token: 0x0603D5F9 RID: 251385 RVA: 0x011BEC34 File Offset: 0x011BCE34
 		[Nullable(new byte[]
 		{
 			2,
@@ -59,8 +60,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C58 RID: 40024
-		// (get) Token: 0x06046552 RID: 288082 RVA: 0x011A13E4 File Offset: 0x0119F5E4
+		// Token: 0x1700744A RID: 29770
+		// (get) Token: 0x0603D5FA RID: 251386 RVA: 0x011BECE4 File Offset: 0x011BCEE4
 		[Nullable(new byte[]
 		{
 			2,
@@ -120,7 +121,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x06046553 RID: 288083 RVA: 0x011A14B0 File Offset: 0x0119F6B0
+		// Token: 0x0603D5FB RID: 251387 RVA: 0x011BEDB0 File Offset: 0x011BCFB0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object obj;
@@ -145,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x06046554 RID: 288084 RVA: 0x011A152C File Offset: 0x0119F72C
+		// Token: 0x0603D5FC RID: 251388 RVA: 0x011BEE2C File Offset: 0x011BD02C
 		protected override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<RangeComponent>();
@@ -160,32 +161,32 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			TriggerComponent config = this.Config;
-			if (config != null && config.OnlineDisableTip.GetValueOrDefault() && !RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new TMessageRegisterCallback(this.OnServerMessageEmit)))
+			if (config != null && config.OnlineDisableTip.GetValueOrDefault() && !RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new MessageRegisterCallback(this.OnServerMessageEmit)))
 			{
-				RangeComponentMessageManager.Instance.RegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new TMessageRegisterCallback(this.OnServerMessageEmit));
+				RangeComponentMessageManager.Instance.RegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new MessageRegisterCallback(this.OnServerMessageEmit));
 			}
 			return true;
 		}
 
-		// Token: 0x06046555 RID: 288085 RVA: 0x011A15E0 File Offset: 0x0119F7E0
+		// Token: 0x0603D5FD RID: 251389 RVA: 0x011BEEE0 File Offset: 0x011BD0E0
 		protected override bool OnEnd()
 		{
 			this.Config = null;
-			if (RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new TMessageRegisterCallback(this.OnServerMessageEmit)))
+			if (RangeComponentMessageManager.Instance.HasMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new MessageRegisterCallback(this.OnServerMessageEmit)))
 			{
-				RangeComponentMessageManager.Instance.UnRegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new TMessageRegisterCallback(this.OnServerMessageEmit));
+				RangeComponentMessageManager.Instance.UnRegisterMessage(base.Entity, AccessRangeType.RangeEnter, AccessRangeResultType.Trigger, new MessageRegisterCallback(this.OnServerMessageEmit));
 			}
 			return true;
 		}
 
-		// Token: 0x06046556 RID: 288086 RVA: 0x011A1634 File Offset: 0x0119F834
+		// Token: 0x0603D5FE RID: 251390 RVA: 0x011BEF34 File Offset: 0x011BD134
 		[NullableContext(1)]
 		public TriggerContext CreateTriggerContext(int targetId)
 		{
 			return TriggerContext.Create(base.Entity.Id, targetId, null, null, null);
 		}
 
-		// Token: 0x06046557 RID: 288087 RVA: 0x011A166D File Offset: 0x0119F86D
+		// Token: 0x0603D5FF RID: 251391 RVA: 0x011BEF6D File Offset: 0x011BD16D
 		[NullableContext(1)]
 		private void OnServerMessageEmit(AccessRangeType accessRangeType, AccessRangeResultType accessRangeResultType, Entity otherEntity, ErrorCode errorCode)
 		{
@@ -195,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x06046558 RID: 288088 RVA: 0x011A169C File Offset: 0x0119F89C
+		// Token: 0x0603D600 RID: 251392 RVA: 0x011BEF9C File Offset: 0x011BD19C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -204,56 +205,64 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			TriggerComponent triggerComponent = (TriggerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (triggerComponent.CreatureDataComp == null)
 			{
-				if (triggerComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (triggerComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (triggerComponent.RangeComp == null)
 			{
-				if (triggerComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TriggerComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("EntityConfigId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				this.EntityConfigId = triggerComponent.EntityConfigId;
+				return false;
 			}
+			if (triggerComponent.Config == null)
+			{
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
+			{
+				return false;
+			}
+			this.EntityConfigId = triggerComponent.EntityConfigId;
 			return true;
 		}
 
-		// Token: 0x04024DAD RID: 150957
+		// Token: 0x1700744B RID: 29771
+		// (get) Token: 0x0603D601 RID: 251393 RVA: 0x011BF049 File Offset: 0x011BD249
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700744C RID: 29772
+		// (get) Token: 0x0603D602 RID: 251394 RVA: 0x011BF04C File Offset: 0x011BD24C
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040208D4 RID: 133332
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024DAE RID: 150958
+		// Token: 0x040208D5 RID: 133333
 		private RangeComponent RangeComp;
 
-		// Token: 0x04024DAF RID: 150959
+		// Token: 0x040208D6 RID: 133334
 		private TriggerComponent Config;
 
-		// Token: 0x04024DB0 RID: 150960
+		// Token: 0x040208D7 RID: 133335
 		private int EntityConfigId;
 	}
 }

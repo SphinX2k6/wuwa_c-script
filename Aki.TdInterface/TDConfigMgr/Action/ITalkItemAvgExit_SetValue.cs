@@ -4,168 +4,168 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F35 RID: 7989
+	// Token: 0x0200216E RID: 8558
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITalkItemAvgExit_SetValue
 	{
-		// Token: 0x04006655 RID: 26197
+		// Token: 0x04006C44 RID: 27716
 		public ETalkItemType? Type;
 
-		// Token: 0x04006656 RID: 26198
+		// Token: 0x04006C45 RID: 27717
 		public int Id;
 
-		// Token: 0x04006657 RID: 26199
+		// Token: 0x04006C46 RID: 27718
 		public int? PlotLineId;
 
-		// Token: 0x04006658 RID: 26200
+		// Token: 0x04006C47 RID: 27719
 		public string PlotLineKey;
 
-		// Token: 0x04006659 RID: 26201
-		[Nullable(1)]
+		// Token: 0x04006C48 RID: 27720
+		[Nullable(0)]
 		public string Name;
 
-		// Token: 0x0400665A RID: 26202
+		// Token: 0x04006C49 RID: 27721
 		public bool? _folded;
 
-		// Token: 0x0400665B RID: 26203
+		// Token: 0x04006C4A RID: 27722
 		public EEditFlag? _editFlag;
 
-		// Token: 0x0400665C RID: 26204
+		// Token: 0x04006C4B RID: 27723
 		public int? WhoId;
 
-		// Token: 0x0400665D RID: 26205
+		// Token: 0x04006C4C RID: 27724
 		public int? TextId;
 
-		// Token: 0x0400665E RID: 26206
+		// Token: 0x04006C4D RID: 27725
 		public string TidTalk;
 
-		// Token: 0x0400665F RID: 26207
+		// Token: 0x04006C4E RID: 27726
 		public float? WaitTime;
 
-		// Token: 0x04006660 RID: 26208
+		// Token: 0x04006C4F RID: 27727
 		public ICaptionParam CaptionParams;
 
-		// Token: 0x04006661 RID: 26209
+		// Token: 0x04006C50 RID: 27728
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 
-		// Token: 0x04006662 RID: 26210
+		// Token: 0x04006C51 RID: 27729
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ITalkOption> Options;
 
-		// Token: 0x04006663 RID: 26211
+		// Token: 0x04006C52 RID: 27730
 		public PlayMontage Montage;
 
-		// Token: 0x04006664 RID: 26212
+		// Token: 0x04006C53 RID: 27731
 		public ICameraData CameraData;
 
-		// Token: 0x04006665 RID: 26213
+		// Token: 0x04006C54 RID: 27732
 		public SetFlowTemplate FlowTemplate;
 
-		// Token: 0x04006666 RID: 26214
+		// Token: 0x04006C55 RID: 27733
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<SetFlowTemplate> FlowTemplateList;
 
-		// Token: 0x04006667 RID: 26215
+		// Token: 0x04006C56 RID: 27734
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IMontageData> ActorMontageArray;
 
-		// Token: 0x04006668 RID: 26216
+		// Token: 0x04006C57 RID: 27735
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorFaceExpression> ActorFaceExpressionArray;
 
-		// Token: 0x04006669 RID: 26217
+		// Token: 0x04006C58 RID: 27736
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorLookAt> ActorLookAtArray;
 
-		// Token: 0x0400666A RID: 26218
+		// Token: 0x04006C59 RID: 27737
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorTurnTo> ActorTurnToArray;
 
-		// Token: 0x0400666B RID: 26219
+		// Token: 0x04006C5A RID: 27738
 		public IPostAkEventType TalkAkEvent;
 
-		// Token: 0x0400666C RID: 26220
+		// Token: 0x04006C5B RID: 27739
 		public IPostAkEventType TalkEndAkEvent;
 
-		// Token: 0x0400666D RID: 26221
+		// Token: 0x04006C5C RID: 27740
 		public IUniversalTone UniversalTone;
 
-		// Token: 0x0400666E RID: 26222
+		// Token: 0x04006C5D RID: 27741
 		public ITalkBackground BackgroundConfig;
 
-		// Token: 0x0400666F RID: 26223
+		// Token: 0x04006C5E RID: 27742
 		public bool? PlayVoice;
 
-		// Token: 0x04006670 RID: 26224
+		// Token: 0x04006C5F RID: 27743
 		public ITimeLimitOptionGroup TimeLimitOptionGroup;
 
-		// Token: 0x04006671 RID: 26225
+		// Token: 0x04006C60 RID: 27744
 		public IGamepadShakeInTalk GamepadShake;
 
-		// Token: 0x04006672 RID: 26226
+		// Token: 0x04006C61 RID: 27745
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> IntroActions;
 
-		// Token: 0x04006673 RID: 26227
+		// Token: 0x04006C62 RID: 27746
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorFxEmote> ActorFxEmoteArray;
 
-		// Token: 0x04006674 RID: 26228
+		// Token: 0x04006C63 RID: 27747
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ITalkEffectActionType> TalkEffectArray;
 
-		// Token: 0x04006675 RID: 26229
+		// Token: 0x04006C64 RID: 27748
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorVisibility> ActorVisibilityArray;
 
-		// Token: 0x04006676 RID: 26230
-		[Nullable(1)]
+		// Token: 0x04006C65 RID: 27749
+		[Nullable(0)]
 		public ITalkItemAvgRoleConfig AvgRoleConfig;
 	}
 }

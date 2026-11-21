@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001701 RID: 5889
+// Token: 0x02000BB9 RID: 3001
 public class SceneTeamCooperationHandler : ICooperationHandler
 {
-	// Token: 0x0600A8DD RID: 43229 RVA: 0x002601E4 File Offset: 0x0025E3E4
+	// Token: 0x06007CBD RID: 31933 RVA: 0x0026A600 File Offset: 0x00268800
 	[NullableContext(1)]
 	public bool Trigger(SceneTeamItem goDownRole, SceneTeamItem goBattleRole)
 	{
@@ -39,7 +39,7 @@ public class SceneTeamCooperationHandler : ICooperationHandler
 		return true;
 	}
 
-	// Token: 0x0600A8DE RID: 43230 RVA: 0x002602D9 File Offset: 0x0025E4D9
+	// Token: 0x06007CBE RID: 31934 RVA: 0x0026A6F5 File Offset: 0x002688F5
 	public void Clear()
 	{
 	}

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02003040 RID: 12352
+// Token: 0x02002596 RID: 9622
 public enum ENewestInputFacingType
 {
-	// Token: 0x0400C73C RID: 51004
+	// Token: 0x0400CB15 RID: 51989
 	All,
-	// Token: 0x0400C73D RID: 51005
+	// Token: 0x0400CB16 RID: 51990
 	Rotator,
-	// Token: 0x0400C73E RID: 51006
+	// Token: 0x0400CB17 RID: 51991
 	Facing
 }

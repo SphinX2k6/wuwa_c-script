@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048F6 RID: 18678
+	// Token: 0x02004D5B RID: 19803
 	public enum TTwoDimensionOutlineNode : byte
 	{
-		// Token: 0x0400CF53 RID: 53075
+		// Token: 0x0400D98C RID: 55692
 		NONE,
-		// Token: 0x0400CF54 RID: 53076
+		// Token: 0x0400D98D RID: 55693
 		ITwoDimensionOutlineFolderNode,
-		// Token: 0x0400CF55 RID: 53077
+		// Token: 0x0400D98E RID: 55694
 		ITwoDimensionOutlineItemNode
 	}
 }

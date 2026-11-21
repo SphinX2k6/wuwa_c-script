@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006332 RID: 25394
+	// Token: 0x020052B0 RID: 21168
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 	})]
 	public class PinballMainChapterProgressItem : GridProxyAbstract<PinballLevelRecordData>
 	{
-		// Token: 0x0603FE36 RID: 261686 RVA: 0x00F74E38 File Offset: 0x00F73038
+		// Token: 0x06034AF7 RID: 215799 RVA: 0x00EBBD94 File Offset: 0x00EB9F94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FE37 RID: 261687 RVA: 0x00F74EA1 File Offset: 0x00F730A1
+		// Token: 0x06034AF8 RID: 215800 RVA: 0x00EBBDFD File Offset: 0x00EB9FFD
 		[NullableContext(1)]
 		public override void Refresh(PinballLevelRecordData levelData, bool isSelected, int gridIndex)
 		{
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.GetSprite(0).SetUIActive(levelData.PassStatus == EPinballLevelPassStatus.Perfect);
 		}
 
-		// Token: 0x0200C52D RID: 50477
+		// Token: 0x0200AF14 RID: 44820
 		private enum EComponent
 		{
-			// Token: 0x0403B834 RID: 243764
+			// Token: 0x04036196 RID: 221590
 			SprPointPerfect,
-			// Token: 0x0403B835 RID: 243765
+			// Token: 0x04036197 RID: 221591
 			SprPointFinish
 		}
 	}

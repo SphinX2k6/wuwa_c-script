@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BB3 RID: 27571
+	// Token: 0x02005D2C RID: 23852
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventVehicleMoveWithPathLine : LevelEventBase
 	{
-		// Token: 0x06044321 RID: 279329 RVA: 0x010CEF20 File Offset: 0x010CD120
+		// Token: 0x0603A479 RID: 238713 RVA: 0x01078E34 File Offset: 0x01077034
 		public LevelEventVehicleMoveWithPathLine(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044322 RID: 279330 RVA: 0x010CEF34 File Offset: 0x010CD134
+		// Token: 0x0603A47A RID: 238714 RVA: 0x01078E48 File Offset: 0x01077048
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -65,14 +65,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(false, false, true);
 		}
 
-		// Token: 0x06044323 RID: 279331 RVA: 0x010CF091 File Offset: 0x010CD291
+		// Token: 0x0603A47B RID: 238715 RVA: 0x01078FA5 File Offset: 0x010771A5
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			this.GetTargetVehicleEntity(this.Params.TargetVehicle);
 			this.ChangeControlState();
 		}
 
-		// Token: 0x06044324 RID: 279332 RVA: 0x010CF0AC File Offset: 0x010CD2AC
+		// Token: 0x0603A47C RID: 238716 RVA: 0x01078FC0 File Offset: 0x010771C0
 		[NullableContext(1)]
 		private void GetTargetVehicleEntity(ITargetVehicle config)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.Entity = ((entityByPbDataId != null) ? entityByPbDataId.Entity : null);
 		}
 
-		// Token: 0x06044325 RID: 279333 RVA: 0x010CF130 File Offset: 0x010CD330
+		// Token: 0x0603A47D RID: 238717 RVA: 0x01079044 File Offset: 0x01077244
 		private Entity GetVehicleEntityFromPlayerRole()
 		{
 			if (Global.BaseCharacter == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return entity;
 		}
 
-		// Token: 0x06044326 RID: 279334 RVA: 0x010CF1A8 File Offset: 0x010CD3A8
+		// Token: 0x0603A47E RID: 238718 RVA: 0x010790BC File Offset: 0x010772BC
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private unsafe Entity GetVehicleEntityFromTrigger(GeneralContext context)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return entity;
 		}
 
-		// Token: 0x06044327 RID: 279335 RVA: 0x010CF2BC File Offset: 0x010CD4BC
+		// Token: 0x0603A47F RID: 238719 RVA: 0x010791D0 File Offset: 0x010773D0
 		private void ChangeControlState()
 		{
 			if (this.Entity == null)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044328 RID: 279336 RVA: 0x010CF3B4 File Offset: 0x010CD5B4
+		// Token: 0x0603A480 RID: 238720 RVA: 0x010792C8 File Offset: 0x010774C8
 		private void OnRefreshBaseCharacter(float delta)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -216,19 +216,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.DelayExecuteList.Clear();
 		}
 
-		// Token: 0x04023975 RID: 145781
+		// Token: 0x0401EC17 RID: 125975
 		private const float CHECK_BASE_CHARACTER_INTERVAL = 500f;
 
-		// Token: 0x04023976 RID: 145782
+		// Token: 0x0401EC18 RID: 125976
 		private Entity Entity;
 
-		// Token: 0x04023977 RID: 145783
+		// Token: 0x0401EC19 RID: 125977
 		private VehicleMoveWithPathLine Params;
 
-		// Token: 0x04023978 RID: 145784
+		// Token: 0x0401EC1A RID: 125978
 		private TimerHandle DelayExecuteHandle;
 
-		// Token: 0x04023979 RID: 145785
+		// Token: 0x0401EC1B RID: 125979
 		[Nullable(new byte[]
 		{
 			1,

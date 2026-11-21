@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Manufacture.Compose;
 
-// Token: 0x0200187B RID: 6267
+// Token: 0x02000D34 RID: 3380
 [NullableContext(1)]
 [Nullable(0)]
 public class ComposeExchangeSort : CommonSort<EComposeExchangeSortWayType>
 {
-	// Token: 0x0600B7D1 RID: 47057 RVA: 0x00299988 File Offset: 0x00297B88
+	// Token: 0x06008BBA RID: 35770 RVA: 0x002A40A0 File Offset: 0x002A22A0
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -43,7 +43,7 @@ public class ComposeExchangeSort : CommonSort<EComposeExchangeSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7D2 RID: 47058 RVA: 0x00299A04 File Offset: 0x00297C04
+	// Token: 0x06008BBB RID: 35771 RVA: 0x002A411C File Offset: 0x002A231C
 	private int SortMake(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -81,7 +81,7 @@ public class ComposeExchangeSort : CommonSort<EComposeExchangeSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7D3 RID: 47059 RVA: 0x00299A81 File Offset: 0x00297C81
+	// Token: 0x06008BBC RID: 35772 RVA: 0x002A4199 File Offset: 0x002A2399
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EComposeExchangeSortWayType.Quality, new TSortResult(this.SortQuality));

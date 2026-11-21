@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004558 RID: 17752
+	// Token: 0x02003480 RID: 13440
 	public class TsAnimNotifyUtils
 	{
-		// Token: 0x0602DDB4 RID: 187828 RVA: 0x00A8BFE8 File Offset: 0x00A8A1E8
+		// Token: 0x06022496 RID: 140438 RVA: 0x009B7700 File Offset: 0x009B5900
 		[NullableContext(1)]
 		public static bool CheckTags(bool needAnyTag, TMap<FGameplayTag, bool> playNeedTags, Func<int, bool> tagCheckFunc)
 		{

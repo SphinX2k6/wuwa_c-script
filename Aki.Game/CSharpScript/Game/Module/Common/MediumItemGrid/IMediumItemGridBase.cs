@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B54 RID: 23380
+	// Token: 0x02004B33 RID: 19251
 	public interface IMediumItemGridBase
 	{
-		// Token: 0x17008CAA RID: 36010
-		// (get) Token: 0x0603B377 RID: 242551
+		// Token: 0x1700607C RID: 24700
+		// (get) Token: 0x060302C3 RID: 197315
 		EMediumItemGridType Type { get; }
 	}
 }

@@ -3,43 +3,43 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001805 RID: 6149
+// Token: 0x02000CBE RID: 3262
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class UiViewConfig : ConfigBase
 {
-	// Token: 0x0600B456 RID: 46166 RVA: 0x0028BA0F File Offset: 0x00289C0F
+	// Token: 0x06008841 RID: 34881 RVA: 0x0029612F File Offset: 0x0029432F
 	public UiShow? GetUiShowConfig(string name)
 	{
 		return ConfigUiShowByViewName.GetConfig(name, true);
 	}
 
-	// Token: 0x0600B457 RID: 46167 RVA: 0x0028BA18 File Offset: 0x00289C18
+	// Token: 0x06008842 RID: 34882 RVA: 0x00296138 File Offset: 0x00294338
 	public UiShow? GetUiShowConfig(EUiViewName name)
 	{
 		return ConfigUiShowByViewName.GetConfig(name, true);
 	}
 
-	// Token: 0x0600B458 RID: 46168 RVA: 0x0028BA26 File Offset: 0x00289C26
+	// Token: 0x06008843 RID: 34883 RVA: 0x00296146 File Offset: 0x00294346
 	public UiFloatConfig? GetUiFloatConfig(EUiViewName name)
 	{
 		return ConfigUiFloatConfigByViewNameIfNull.GetConfig(name, name, name, true);
 	}
 
-	// Token: 0x0600B459 RID: 46169 RVA: 0x0028BA40 File Offset: 0x00289C40
+	// Token: 0x06008844 RID: 34884 RVA: 0x00296160 File Offset: 0x00294360
 	public UiNormalConfig? GetUiNormalConfig(EUiViewName name)
 	{
 		return ConfigUiNormalConfigByViewNameIfNull.GetConfig(name.ToString(), name.ToString(), name.ToString(), true);
 	}
 
-	// Token: 0x0600B45A RID: 46170 RVA: 0x0028BA6F File Offset: 0x00289C6F
+	// Token: 0x06008845 RID: 34885 RVA: 0x0029618F File Offset: 0x0029438F
 	public UiSceneCsv? GetSceneConfig(string sceneId)
 	{
 		return ConfigUiSceneCsvById.GetConfig(sceneId, true);
 	}
 
-	// Token: 0x0600B45B RID: 46171 RVA: 0x0028BA78 File Offset: 0x00289C78
+	// Token: 0x06008846 RID: 34886 RVA: 0x00296198 File Offset: 0x00294398
 	public string[] GetScenePathList(string sceneId)
 	{
 		UiSceneCsv? config = ConfigUiSceneCsvById.GetConfig(sceneId, true);
@@ -50,8 +50,8 @@ public class UiViewConfig : ConfigBase
 		return config.Value.SceneList();
 	}
 
-	// Token: 0x17000F25 RID: 3877
-	// (get) Token: 0x0600B45C RID: 46172 RVA: 0x0028BAAB File Offset: 0x00289CAB
+	// Token: 0x17000F48 RID: 3912
+	// (get) Token: 0x06008847 RID: 34887 RVA: 0x002961CB File Offset: 0x002943CB
 	public static UiViewConfig Instance
 	{
 		get
@@ -60,7 +60,7 @@ public class UiViewConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B45D RID: 46173 RVA: 0x0028BAB2 File Offset: 0x00289CB2
+	// Token: 0x06008848 RID: 34888 RVA: 0x002961D2 File Offset: 0x002943D2
 	public static UiViewConfig GetOrCreateInstance()
 	{
 		if (UiViewConfig._Instance == null)
@@ -70,7 +70,7 @@ public class UiViewConfig : ConfigBase
 		return UiViewConfig._Instance;
 	}
 
-	// Token: 0x0600B45E RID: 46174 RVA: 0x0028BAC6 File Offset: 0x00289CC6
+	// Token: 0x06008849 RID: 34889 RVA: 0x002961E6 File Offset: 0x002943E6
 	public static bool CreateInstance()
 	{
 		if (UiViewConfig._Instance != null)
@@ -81,24 +81,24 @@ public class UiViewConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B45F RID: 46175 RVA: 0x0028BADC File Offset: 0x00289CDC
+	// Token: 0x0600884A RID: 34890 RVA: 0x002961FC File Offset: 0x002943FC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B460 RID: 46176 RVA: 0x0028BADE File Offset: 0x00289CDE
+	// Token: 0x0600884B RID: 34891 RVA: 0x002961FE File Offset: 0x002943FE
 	public static void ResetStaticDefaultValue()
 	{
 		UiViewConfig._Instance = null;
 	}
 
-	// Token: 0x0600B461 RID: 46177 RVA: 0x0028BAE6 File Offset: 0x00289CE6
+	// Token: 0x0600884C RID: 34892 RVA: 0x00296206 File Offset: 0x00294406
 	static UiViewConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiViewConfig.CreateStaticDefaultValue), new Action(UiViewConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400516D RID: 20845
+	// Token: 0x04005218 RID: 21016
 	[Nullable(2)]
 	private static UiViewConfig _Instance;
 }

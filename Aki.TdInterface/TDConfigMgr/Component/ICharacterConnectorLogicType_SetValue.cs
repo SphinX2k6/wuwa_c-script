@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000230 RID: 560
+	// Token: 0x02000257 RID: 599
 	public class ICharacterConnectorLogicType_SetValue
 	{
-		// Token: 0x04000A00 RID: 2560
+		// Token: 0x04000A8A RID: 2698
 		public ECharacterConnectorLogicType Type;
 
-		// Token: 0x04000A01 RID: 2561
-		[Nullable(1)]
+		// Token: 0x04000A8B RID: 2699
 		public IConnectorEffectConfig EffectConfig;
 	}
 }

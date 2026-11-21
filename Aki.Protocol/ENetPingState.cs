@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001673 RID: 5747
+	// Token: 0x020016EF RID: 5871
 	public enum ENetPingState
 	{
-		// Token: 0x0400C1C2 RID: 49602
+		// Token: 0x0400C6EB RID: 50923
 		[OriginalName("UNKNOWN")]
 		Unknown,
-		// Token: 0x0400C1C3 RID: 49603
+		// Token: 0x0400C6EC RID: 50924
 		[OriginalName("GREAT")]
 		Great,
-		// Token: 0x0400C1C4 RID: 49604
+		// Token: 0x0400C6ED RID: 50925
 		[OriginalName("GOOD")]
 		Good,
-		// Token: 0x0400C1C5 RID: 49605
+		// Token: 0x0400C6EE RID: 50926
 		[OriginalName("POOR")]
 		Poor,
-		// Token: 0x0400C1C6 RID: 49606
+		// Token: 0x0400C6EF RID: 50927
 		[OriginalName("MAX")]
 		Max
 	}

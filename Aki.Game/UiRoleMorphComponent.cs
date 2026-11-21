@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002CB2 RID: 11442
+// Token: 0x0200220B RID: 8715
 public class UiRoleMorphComponent : UiModelMorphComponent
 {
-	// Token: 0x06017E85 RID: 97925 RVA: 0x00613CA2 File Offset: 0x00611EA2
+	// Token: 0x060156F9 RID: 87801 RVA: 0x0063982E File Offset: 0x00637A2E
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.UiRoleDataComponent = base.Owner.CheckGetComponent<UiRoleDataComponent>();
 	}
 
-	// Token: 0x06017E86 RID: 97926 RVA: 0x00613CBB File Offset: 0x00611EBB
+	// Token: 0x060156FA RID: 87802 RVA: 0x00639847 File Offset: 0x00637A47
 	protected override void OnEnd()
 	{
 		base.OnEnd();
 		this.UiRoleDataComponent = null;
 	}
 
-	// Token: 0x06017E87 RID: 97927 RVA: 0x00613CCC File Offset: 0x00611ECC
+	// Token: 0x060156FB RID: 87803 RVA: 0x00639858 File Offset: 0x00637A58
 	protected override void PreloadMorphId()
 	{
 		this.MorphIdMap = UiModelUtil.Instance.GetRoleMorphConfigMap(this.UiRoleDataComponent.RoleConfigId, this.UiRoleDataComponent.RoleSkinId);
@@ -27,7 +27,7 @@ public class UiRoleMorphComponent : UiModelMorphComponent
 		this.IsEnableMorphInternal = (morphIdMap == null || morphIdMap.Count != 0);
 	}
 
-	// Token: 0x06017E88 RID: 97928 RVA: 0x00613D1C File Offset: 0x00611F1C
+	// Token: 0x060156FC RID: 87804 RVA: 0x006398A8 File Offset: 0x00637AA8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -59,7 +59,7 @@ public class UiRoleMorphComponent : UiModelMorphComponent
 		return list;
 	}
 
-	// Token: 0x06017E89 RID: 97929 RVA: 0x00613DE8 File Offset: 0x00611FE8
+	// Token: 0x060156FD RID: 87805 RVA: 0x00639974 File Offset: 0x00637B74
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -83,7 +83,7 @@ public class UiRoleMorphComponent : UiModelMorphComponent
 		return list;
 	}
 
-	// Token: 0x0400B23D RID: 45629
+	// Token: 0x0400B5A8 RID: 46504
 	[Nullable(2)]
 	private UiRoleDataComponent UiRoleDataComponent;
 }

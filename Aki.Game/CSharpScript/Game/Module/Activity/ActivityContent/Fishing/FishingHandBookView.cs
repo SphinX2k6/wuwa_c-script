@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006617 RID: 26135
+	// Token: 0x02005595 RID: 21909
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingHandBookView : UiViewBase
 	{
-		// Token: 0x060417DB RID: 268251 RVA: 0x00FDD24E File Offset: 0x00FDB44E
+		// Token: 0x060364A0 RID: 222368 RVA: 0x00F242E6 File Offset: 0x00F224E6
 		public FishingHandBookView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060417DC RID: 268252 RVA: 0x00FDD264 File Offset: 0x00FDB464
+		// Token: 0x060364A1 RID: 222369 RVA: 0x00F242FC File Offset: 0x00F224FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 21;
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060417DD RID: 268253 RVA: 0x00FDD58C File Offset: 0x00FDB78C
+		// Token: 0x060364A2 RID: 222370 RVA: 0x00F24624 File Offset: 0x00F22824
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingHandBookView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -94,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060417DE RID: 268254 RVA: 0x00FDD5D0 File Offset: 0x00FDB7D0
+		// Token: 0x060364A3 RID: 222371 RVA: 0x00F24668 File Offset: 0x00F22868
 		protected override void OnStart()
 		{
 			List<IFishingHandBookItemData> fishingItemList = FishingModel.Instance.GetFishingItemList();
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060417DF RID: 268255 RVA: 0x00FDD64C File Offset: 0x00FDB84C
+		// Token: 0x060364A4 RID: 222372 RVA: 0x00F246E4 File Offset: 0x00F228E4
 		private void RefreshView(int itemId)
 		{
 			this.ItemId = itemId;
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 				GenericLayout<FishingHandBookTagItem, int> tagItemLayout = this.TagItemLayout;
 				if (tagItemLayout != null)
 				{
-					tagItemLayout.RefreshByData(fishingItemConfig.Value.Tech().ToList<int>(), null, false);
+					tagItemLayout.RefreshByData(fishingItemConfig.Value.Tech(), null, false);
 				}
 				base.GetItem(12).SetUIActive(true);
 			}
@@ -198,7 +197,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ReadItemNewFlag();
 		}
 
-		// Token: 0x060417E0 RID: 268256 RVA: 0x00FDD9D0 File Offset: 0x00FDBBD0
+		// Token: 0x060364A5 RID: 222373 RVA: 0x00F24A64 File Offset: 0x00F22C64
 		private void RefreshDesLayout(int itemId)
 		{
 			FishingItem? fishingItemConfig = FishingConfig.Instance.GetFishingItemConfig(itemId);
@@ -287,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			desLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060417E1 RID: 268257 RVA: 0x00FDDC96 File Offset: 0x00FDBE96
+		// Token: 0x060364A6 RID: 222374 RVA: 0x00F24D2A File Offset: 0x00F22F2A
 		private FishingHandBookItem InitLoopScrollItem()
 		{
 			return new FishingHandBookItem
@@ -296,19 +295,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060417E2 RID: 268258 RVA: 0x00FDDCAF File Offset: 0x00FDBEAF
+		// Token: 0x060364A7 RID: 222375 RVA: 0x00F24D43 File Offset: 0x00F22F43
 		private FishingHandBookTagItem InitTagLayoutItem()
 		{
 			return new FishingHandBookTagItem();
 		}
 
-		// Token: 0x060417E3 RID: 268259 RVA: 0x00FDDCB6 File Offset: 0x00FDBEB6
+		// Token: 0x060364A8 RID: 222376 RVA: 0x00F24D4A File Offset: 0x00F22F4A
 		private FishingHandBookDesItem InitDesLayoutItem()
 		{
 			return new FishingHandBookDesItem();
 		}
 
-		// Token: 0x060417E4 RID: 268260 RVA: 0x00FDDCC0 File Offset: 0x00FDBEC0
+		// Token: 0x060364A9 RID: 222377 RVA: 0x00F24D54 File Offset: 0x00F22F54
 		private void OnClickTraceBtn()
 		{
 			IFishingHandBook fishingHandBook;
@@ -336,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			ScrollingTipsController.Instance.ShowTipsByTextId("Fishing_NormalItemCannotTrace", Array.Empty<object>());
 		}
 
-		// Token: 0x060417E5 RID: 268261 RVA: 0x00FDDDC4 File Offset: 0x00FDBFC4
+		// Token: 0x060364AA RID: 222378 RVA: 0x00F24E58 File Offset: 0x00F23058
 		private void OnClickHandBookItem(int itemId, UUIExtendToggle toggle, int index)
 		{
 			UUIExtendToggle currentToggle = this.CurrentToggle;
@@ -355,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelSequencePlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x060417E6 RID: 268262 RVA: 0x00FDDE24 File Offset: 0x00FDC024
+		// Token: 0x060364AB RID: 222379 RVA: 0x00F24EB8 File Offset: 0x00F230B8
 		private void OnClickRelationItem(int itemId, UUIExtendToggle toggle, int _)
 		{
 			int num = 0;
@@ -374,7 +373,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.HandBookLoopScrollView.SelectGridProxy(num, true);
 		}
 
-		// Token: 0x060417E7 RID: 268263 RVA: 0x00FDDE9C File Offset: 0x00FDC09C
+		// Token: 0x060364AC RID: 222380 RVA: 0x00F24F30 File Offset: 0x00F23130
 		private void OnFilterUpdate(List<IFishingHandBookItemData> list, bool isOutSideChange, EFilterSortType sortType)
 		{
 			List<int> filteredArr = new List<int>();
@@ -408,7 +407,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetItem(19).SetUIActive(false);
 		}
 
-		// Token: 0x060417E8 RID: 268264 RVA: 0x00FDDFB4 File Offset: 0x00FDC1B4
+		// Token: 0x060364AD RID: 222381 RVA: 0x00F25048 File Offset: 0x00F23248
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -445,7 +444,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060417E9 RID: 268265 RVA: 0x00FDE028 File Offset: 0x00FDC228
+		// Token: 0x060364AE RID: 222382 RVA: 0x00F250BC File Offset: 0x00F232BC
 		private void ReadItemNewFlag()
 		{
 			IFishingHandBook fishingHandBook;
@@ -457,21 +456,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.FishingHandBookItemRecord);
 		}
 
-		// Token: 0x04022144 RID: 139588
+		// Token: 0x0401CA75 RID: 117365
 		private int ItemId;
 
-		// Token: 0x04022145 RID: 139589
+		// Token: 0x0401CA76 RID: 117366
 		private List<IFishingHandBookItemData> ItemDataList = new List<IFishingHandBookItemData>();
 
-		// Token: 0x04022146 RID: 139590
+		// Token: 0x0401CA77 RID: 117367
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022147 RID: 139591
+		// Token: 0x0401CA78 RID: 117368
 		[Nullable(2)]
 		private FishingQuestShapePanel FishingShapePanel;
 
-		// Token: 0x04022148 RID: 139592
+		// Token: 0x0401CA79 RID: 117369
 		[Nullable(new byte[]
 		{
 			2,
@@ -479,7 +478,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private LoopScrollView<FishingHandBookItem, int> HandBookLoopScrollView;
 
-		// Token: 0x04022149 RID: 139593
+		// Token: 0x0401CA7A RID: 117370
 		[Nullable(new byte[]
 		{
 			2,
@@ -487,7 +486,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingHandBookTagItem, int> TagItemLayout;
 
-		// Token: 0x0402214A RID: 139594
+		// Token: 0x0401CA7B RID: 117371
 		[Nullable(new byte[]
 		{
 			2,
@@ -496,15 +495,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingHandBookDesItem, IFishingHandBookDesData> DesLayout;
 
-		// Token: 0x0402214B RID: 139595
+		// Token: 0x0401CA7C RID: 117372
 		[Nullable(2)]
 		private UUIExtendToggle CurrentToggle;
 
-		// Token: 0x0402214C RID: 139596
+		// Token: 0x0401CA7D RID: 117373
 		[Nullable(2)]
 		private FishingHandBookItem RelationItem;
 
-		// Token: 0x0402214D RID: 139597
+		// Token: 0x0401CA7E RID: 117374
 		[Nullable(new byte[]
 		{
 			2,
@@ -512,78 +511,78 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private FilterSortEntrance<IFishingHandBookItemData> FilterSortBtn;
 
-		// Token: 0x0402214E RID: 139598
+		// Token: 0x0401CA7F RID: 117375
 		private int RelationItemId;
 
-		// Token: 0x0402214F RID: 139599
+		// Token: 0x0401CA80 RID: 117376
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C829 RID: 51241
+		// Token: 0x0200B20B RID: 45579
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C732 RID: 247602
+			// Token: 0x04037077 RID: 225399
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403C733 RID: 247603
+			// Token: 0x04037078 RID: 225400
 			public const int ItemLoopScrollView = 1;
 
-			// Token: 0x0403C734 RID: 247604
+			// Token: 0x04037079 RID: 225401
 			public const int ItemLoopScrollItem = 2;
 
-			// Token: 0x0403C735 RID: 247605
+			// Token: 0x0403707A RID: 225402
 			public const int CollectCountText = 3;
 
-			// Token: 0x0403C736 RID: 247606
+			// Token: 0x0403707B RID: 225403
 			public const int EmptyItem = 4;
 
-			// Token: 0x0403C737 RID: 247607
+			// Token: 0x0403707C RID: 225404
 			public const int FilterSortItem = 5;
 
-			// Token: 0x0403C738 RID: 247608
+			// Token: 0x0403707D RID: 225405
 			public const int ShapePanelItem = 6;
 
-			// Token: 0x0403C739 RID: 247609
+			// Token: 0x0403707E RID: 225406
 			public const int ItemStateText = 7;
 
-			// Token: 0x0403C73A RID: 247610
+			// Token: 0x0403707F RID: 225407
 			public const int ItemDesText = 8;
 
-			// Token: 0x0403C73B RID: 247611
+			// Token: 0x04037080 RID: 225408
 			public const int VariationItem = 9;
 
-			// Token: 0x0403C73C RID: 247612
+			// Token: 0x04037081 RID: 225409
 			public const int VariationPanelItem = 10;
 
-			// Token: 0x0403C73D RID: 247613
+			// Token: 0x04037082 RID: 225410
 			public const int NumberAndNameText = 11;
 
-			// Token: 0x0403C73E RID: 247614
+			// Token: 0x04037083 RID: 225411
 			public const int AreaItem = 12;
 
-			// Token: 0x0403C73F RID: 247615
+			// Token: 0x04037084 RID: 225412
 			public const int PositionText = 13;
 
-			// Token: 0x0403C740 RID: 247616
+			// Token: 0x04037085 RID: 225413
 			public const int TagLayout = 14;
 
-			// Token: 0x0403C741 RID: 247617
+			// Token: 0x04037086 RID: 225414
 			public const int DesVerticalLayout = 15;
 
-			// Token: 0x0403C742 RID: 247618
+			// Token: 0x04037087 RID: 225415
 			public const int TraceBtn = 16;
 
-			// Token: 0x0403C743 RID: 247619
+			// Token: 0x04037088 RID: 225416
 			public const int LockItem = 17;
 
-			// Token: 0x0403C744 RID: 247620
+			// Token: 0x04037089 RID: 225417
 			public const int LockText = 18;
 
-			// Token: 0x0403C745 RID: 247621
+			// Token: 0x0403708A RID: 225418
 			public const int NotEmptyItem = 19;
 
-			// Token: 0x0403C746 RID: 247622
+			// Token: 0x0403708B RID: 225419
 			public const int VariationText = 20;
 		}
 	}

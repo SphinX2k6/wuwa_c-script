@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005010 RID: 20496
+	// Token: 0x0200556F RID: 21871
 	public class IConnectorPathAdvanceReceiverT
 	{
-		// Token: 0x17009493 RID: 38035
-		// (get) Token: 0x06020CB1 RID: 134321 RVA: 0x0048F3BA File Offset: 0x0048D5BA
-		// (set) Token: 0x06020CB2 RID: 134322 RVA: 0x0048F3C2 File Offset: 0x0048D5C2
+		// Token: 0x17009C74 RID: 40052
+		// (get) Token: 0x06022BD1 RID: 142289 RVA: 0x004C8E0A File Offset: 0x004C700A
+		// (set) Token: 0x06022BD2 RID: 142290 RVA: 0x004C8E12 File Offset: 0x004C7012
 		public string ConnectedState { get; set; }
 
-		// Token: 0x17009494 RID: 38036
-		// (get) Token: 0x06020CB3 RID: 134323 RVA: 0x0048F3CB File Offset: 0x0048D5CB
-		// (set) Token: 0x06020CB4 RID: 134324 RVA: 0x0048F3D3 File Offset: 0x0048D5D3
+		// Token: 0x17009C75 RID: 40053
+		// (get) Token: 0x06022BD3 RID: 142291 RVA: 0x004C8E1B File Offset: 0x004C701B
+		// (set) Token: 0x06022BD4 RID: 142292 RVA: 0x004C8E23 File Offset: 0x004C7023
 		public string DisconnectedState { get; set; }
 
-		// Token: 0x06020CB5 RID: 134325 RVA: 0x0048F3DC File Offset: 0x0048D5DC
+		// Token: 0x06022BD5 RID: 142293 RVA: 0x004C8E2C File Offset: 0x004C702C
 		public IConnectorPathAdvanceReceiverT()
 		{
 			this.ConnectedState = null;

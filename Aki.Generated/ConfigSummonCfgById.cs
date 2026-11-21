@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000995 RID: 2453
+	// Token: 0x02000A6A RID: 2666
 	public class ConfigSummonCfgById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003992 RID: 14738 RVA: 0x0019F1A1 File Offset: 0x0019D3A1
+		// Token: 0x06003E90 RID: 16016 RVA: 0x001BE535 File Offset: 0x001BC735
 		static ConfigSummonCfgById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSummonCfgById.CreateStaticDefaultValue), new Action(ConfigSummonCfgById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003993 RID: 14739 RVA: 0x0019F1C0 File Offset: 0x0019D3C0
+		// Token: 0x06003E91 RID: 16017 RVA: 0x001BE554 File Offset: 0x001BC754
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSummonCfgById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003994 RID: 14740 RVA: 0x0019F23F File Offset: 0x0019D43F
+		// Token: 0x06003E92 RID: 16018 RVA: 0x001BE5D3 File Offset: 0x001BC7D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSummonCfgById.LogPair = null;
 			ConfigSummonCfgById.HandleId = 0;
 		}
 
-		// Token: 0x06003995 RID: 14741 RVA: 0x0019F24D File Offset: 0x0019D44D
+		// Token: 0x06003E93 RID: 16019 RVA: 0x001BE5E1 File Offset: 0x001BC7E1
 		public static void Init()
 		{
 			ConfigSummonCfgById.HandleId = ConfigCommon.InitDataStatement(ConfigSummonCfgById.HandleId, "db_summon.db", "select BinData from `SummonCfg` where id=?");
 		}
 
-		// Token: 0x06003996 RID: 14742 RVA: 0x0019F268 File Offset: 0x0019D468
+		// Token: 0x06003E94 RID: 16020 RVA: 0x001BE5FC File Offset: 0x001BC7FC
 		public static SummonCfg? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSummonCfgById.HandleId, ConfigSummonCfgById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SummonCfg?(rootAsSummonCfg);
 		}
 
-		// Token: 0x040042F9 RID: 17145
+		// Token: 0x040048CC RID: 18636
 		private const string DB = "db_summon.db";
 
-		// Token: 0x040042FA RID: 17146
+		// Token: 0x040048CD RID: 18637
 		private const string FILE = "z.召唤.xlsx";
 
-		// Token: 0x040042FB RID: 17147
+		// Token: 0x040048CE RID: 18638
 		private const string TABLE = "SummonCfg";
 
-		// Token: 0x040042FC RID: 17148
+		// Token: 0x040048CF RID: 18639
 		private const string COMMAND = "select BinData from `SummonCfg` where id=?";
 
-		// Token: 0x040042FD RID: 17149
+		// Token: 0x040048D0 RID: 18640
 		private const string KEY_PREFIX = "SummonCfgById";
 
-		// Token: 0x040042FE RID: 17150
+		// Token: 0x040048D1 RID: 18641
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042FF RID: 17151
+		// Token: 0x040048D2 RID: 18642
 		private static int HandleId;
 	}
 }

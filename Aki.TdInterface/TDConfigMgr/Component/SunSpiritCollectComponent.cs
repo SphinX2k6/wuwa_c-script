@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008AB RID: 2219
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200094E RID: 2382
 	public class SunSpiritCollectComponent : IComponentBase
 	{
-		// Token: 0x060031B7 RID: 12727 RVA: 0x0007F978 File Offset: 0x0007DB78
+		// Token: 0x060034F3 RID: 13555 RVA: 0x00086E60 File Offset: 0x00085060
 		private SunSpiritCollectComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060031B8 RID: 12728 RVA: 0x0007F9B0 File Offset: 0x0007DBB0
+		// Token: 0x060034F4 RID: 13556 RVA: 0x00086E98 File Offset: 0x00085098
 		public static SunSpiritCollectComponent Create([Nullable(2)] SunSpiritCollectComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031B9 RID: 12729 RVA: 0x0007F9C3 File Offset: 0x0007DBC3
+		// Token: 0x060034F5 RID: 13557 RVA: 0x00086EAB File Offset: 0x000850AB
 		public static SunSpiritCollectComponent CreateFromSetValue([Nullable(2)] SunSpiritCollectComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060031BA RID: 12730 RVA: 0x0007F9D8 File Offset: 0x0007DBD8
+		// Token: 0x060034F6 RID: 13558 RVA: 0x00086EC0 File Offset: 0x000850C0
 		public new SunSpiritCollectComponent_SetValue ToSetValue()
 		{
 			return new SunSpiritCollectComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D3E RID: 3390
-		// (get) Token: 0x060031BB RID: 12731 RVA: 0x0007FA28 File Offset: 0x0007DC28
-		// (set) Token: 0x060031BC RID: 12732 RVA: 0x0007FA62 File Offset: 0x0007DC62
+		// Token: 0x17000E07 RID: 3591
+		// (get) Token: 0x060034F7 RID: 13559 RVA: 0x00086F10 File Offset: 0x00085110
+		// (set) Token: 0x060034F8 RID: 13560 RVA: 0x00086F4A File Offset: 0x0008514A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D3F RID: 3391
-		// (get) Token: 0x060031BD RID: 12733 RVA: 0x0007FA70 File Offset: 0x0007DC70
-		// (set) Token: 0x060031BE RID: 12734 RVA: 0x0007FA9A File Offset: 0x0007DC9A
+		// Token: 0x17000E08 RID: 3592
+		// (get) Token: 0x060034F9 RID: 13561 RVA: 0x00086F58 File Offset: 0x00085158
+		// (set) Token: 0x060034FA RID: 13562 RVA: 0x00086F82 File Offset: 0x00085182
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D40 RID: 3392
-		// (get) Token: 0x060031BF RID: 12735 RVA: 0x0007FAA8 File Offset: 0x0007DCA8
-		// (set) Token: 0x060031C0 RID: 12736 RVA: 0x0007FAD3 File Offset: 0x0007DCD3
+		// Token: 0x17000E09 RID: 3593
+		// (get) Token: 0x060034FB RID: 13563 RVA: 0x00086F90 File Offset: 0x00085190
+		// (set) Token: 0x060034FC RID: 13564 RVA: 0x00086FBB File Offset: 0x000851BB
 		public virtual int AreaId
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D41 RID: 3393
-		// (get) Token: 0x060031C1 RID: 12737 RVA: 0x0007FAE4 File Offset: 0x0007DCE4
-		// (set) Token: 0x060031C2 RID: 12738 RVA: 0x0007FB1E File Offset: 0x0007DD1E
+		// Token: 0x17000E0A RID: 3594
+		// (get) Token: 0x060034FD RID: 13565 RVA: 0x00086FCC File Offset: 0x000851CC
+		// (set) Token: 0x060034FE RID: 13566 RVA: 0x00087006 File Offset: 0x00085206
 		public virtual float? SunSpiritScale
 		{
 			get
@@ -153,9 +151,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D42 RID: 3394
-		// (get) Token: 0x060031C3 RID: 12739 RVA: 0x0007FB2C File Offset: 0x0007DD2C
-		// (set) Token: 0x060031C4 RID: 12740 RVA: 0x0007FB8D File Offset: 0x0007DD8D
+		// Token: 0x17000E0B RID: 3595
+		// (get) Token: 0x060034FF RID: 13567 RVA: 0x00087014 File Offset: 0x00085214
+		// (set) Token: 0x06003500 RID: 13568 RVA: 0x00087075 File Offset: 0x00085275
 		[Nullable(2)]
 		public virtual ISunSpiritPlayerBattleConfig PlayerBattleConfig
 		{
@@ -186,18 +184,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400209E RID: 8350
+		// Token: 0x040022B0 RID: 8880
 		[Nullable(2)]
 		protected new SunSpiritCollectComponent FbInstance;
 
-		// Token: 0x0400209F RID: 8351
+		// Token: 0x040022B1 RID: 8881
 		[Nullable(2)]
 		protected new SunSpiritCollectComponent_SetValue PocoInterface;
 
-		// Token: 0x040020A0 RID: 8352
+		// Token: 0x040022B2 RID: 8882
 		private ISunSpiritPlayerBattleConfig _PlayerBattleConfigCache;
 
-		// Token: 0x040020A1 RID: 8353
+		// Token: 0x040022B3 RID: 8883
 		private bool _PlayerBattleConfigInited;
 	}
 }

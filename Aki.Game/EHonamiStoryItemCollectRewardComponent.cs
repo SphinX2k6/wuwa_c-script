@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001EBC RID: 7868
+// Token: 0x0200137E RID: 4990
 public enum EHonamiStoryItemCollectRewardComponent
 {
-	// Token: 0x04006FE0 RID: 28640
+	// Token: 0x040070C1 RID: 28865
 	BtnReward,
-	// Token: 0x04006FE1 RID: 28641
+	// Token: 0x040070C2 RID: 28866
 	RewardGridItem,
-	// Token: 0x04006FE2 RID: 28642
+	// Token: 0x040070C3 RID: 28867
 	SprBorder,
-	// Token: 0x04006FE3 RID: 28643
+	// Token: 0x040070C4 RID: 28868
 	ItemEffect1,
-	// Token: 0x04006FE4 RID: 28644
+	// Token: 0x040070C5 RID: 28869
 	ItemEffect2
 }

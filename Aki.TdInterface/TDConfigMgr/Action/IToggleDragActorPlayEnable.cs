@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FCE RID: 8142
+	// Token: 0x02002213 RID: 8723
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IToggleDragActorPlayEnable : IToggleDragActorPlayType
 	{
-		// Token: 0x0600B318 RID: 45848 RVA: 0x001A115C File Offset: 0x0019F35C
-		[NullableContext(1)]
+		// Token: 0x0600BE26 RID: 48678 RVA: 0x001B760C File Offset: 0x001B580C
+		[NullableContext(0)]
 		private IToggleDragActorPlayEnable_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B319 RID: 45849 RVA: 0x001A1194 File Offset: 0x0019F394
-		[NullableContext(1)]
+		// Token: 0x0600BE27 RID: 48679 RVA: 0x001B7644 File Offset: 0x001B5844
+		[NullableContext(0)]
 		public static IToggleDragActorPlayEnable Create([Nullable(2)] IToggleDragActorPlayEnable instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B31A RID: 45850 RVA: 0x001A11A7 File Offset: 0x0019F3A7
-		[NullableContext(1)]
+		// Token: 0x0600BE28 RID: 48680 RVA: 0x001B7657 File Offset: 0x001B5857
+		[NullableContext(0)]
 		public static IToggleDragActorPlayEnable CreateFromSetValue([Nullable(2)] IToggleDragActorPlayEnable_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B31B RID: 45851 RVA: 0x001A11BC File Offset: 0x0019F3BC
-		[NullableContext(1)]
+		// Token: 0x0600BE29 RID: 48681 RVA: 0x001B766C File Offset: 0x001B586C
+		[NullableContext(0)]
 		public new IToggleDragActorPlayEnable_SetValue ToSetValue()
 		{
 			return new IToggleDragActorPlayEnable_SetValue
@@ -72,9 +72,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700372F RID: 14127
-		// (get) Token: 0x0600B31C RID: 45852 RVA: 0x001A1246 File Offset: 0x0019F446
-		// (set) Token: 0x0600B31D RID: 45853 RVA: 0x001A1271 File Offset: 0x0019F471
+		// Token: 0x17003A06 RID: 14854
+		// (get) Token: 0x0600BE2A RID: 48682 RVA: 0x001B76F6 File Offset: 0x001B58F6
+		// (set) Token: 0x0600BE2B RID: 48683 RVA: 0x001B7721 File Offset: 0x001B5921
 		public override EToggleDragActorPlayType Type
 		{
 			get
@@ -95,13 +95,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003730 RID: 14128
-		// (get) Token: 0x0600B31E RID: 45854 RVA: 0x001A1280 File Offset: 0x0019F480
-		// (set) Token: 0x0600B31F RID: 45855 RVA: 0x001A12E1 File Offset: 0x0019F4E1
-		[Nullable(1)]
+		// Token: 0x17003A07 RID: 14855
+		// (get) Token: 0x0600BE2C RID: 48684 RVA: 0x001B7730 File Offset: 0x001B5930
+		// (set) Token: 0x0600BE2D RID: 48685 RVA: 0x001B7791 File Offset: 0x001B5991
+		[Nullable(0)]
 		public virtual IFixedCameraConfig CameraConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._CameraConfigInited)
@@ -120,7 +120,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._CameraConfigCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().CameraConfig = value;
@@ -128,9 +128,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003731 RID: 14129
-		// (get) Token: 0x0600B320 RID: 45856 RVA: 0x001A12F6 File Offset: 0x0019F4F6
-		// (set) Token: 0x0600B321 RID: 45857 RVA: 0x001A131D File Offset: 0x0019F51D
+		// Token: 0x17003A08 RID: 14856
+		// (get) Token: 0x0600BE2E RID: 48686 RVA: 0x001B77A6 File Offset: 0x001B59A6
+		// (set) Token: 0x0600BE2F RID: 48687 RVA: 0x001B77CD File Offset: 0x001B59CD
 		public virtual string TidMainText
 		{
 			get
@@ -152,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003732 RID: 14130
-		// (get) Token: 0x0600B322 RID: 45858 RVA: 0x001A132B File Offset: 0x0019F52B
-		// (set) Token: 0x0600B323 RID: 45859 RVA: 0x001A1352 File Offset: 0x0019F552
+		// Token: 0x17003A09 RID: 14857
+		// (get) Token: 0x0600BE30 RID: 48688 RVA: 0x001B77DB File Offset: 0x001B59DB
+		// (set) Token: 0x0600BE31 RID: 48689 RVA: 0x001B7802 File Offset: 0x001B5A02
 		public virtual string TidSubText
 		{
 			get
@@ -176,9 +176,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003733 RID: 14131
-		// (get) Token: 0x0600B324 RID: 45860 RVA: 0x001A1360 File Offset: 0x0019F560
-		// (set) Token: 0x0600B325 RID: 45861 RVA: 0x001A1387 File Offset: 0x0019F587
+		// Token: 0x17003A0A RID: 14858
+		// (get) Token: 0x0600BE32 RID: 48690 RVA: 0x001B7810 File Offset: 0x001B5A10
+		// (set) Token: 0x0600BE33 RID: 48691 RVA: 0x001B7837 File Offset: 0x001B5A37
 		public virtual string TidHintText
 		{
 			get
@@ -200,9 +200,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003734 RID: 14132
-		// (get) Token: 0x0600B326 RID: 45862 RVA: 0x001A1398 File Offset: 0x0019F598
-		// (set) Token: 0x0600B327 RID: 45863 RVA: 0x001A13D2 File Offset: 0x0019F5D2
+		// Token: 0x17003A0B RID: 14859
+		// (get) Token: 0x0600BE34 RID: 48692 RVA: 0x001B7848 File Offset: 0x001B5A48
+		// (set) Token: 0x0600BE35 RID: 48693 RVA: 0x001B7882 File Offset: 0x001B5A82
 		public virtual bool? KeepDialog
 		{
 			get
@@ -224,9 +224,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003735 RID: 14133
-		// (get) Token: 0x0600B328 RID: 45864 RVA: 0x001A13E0 File Offset: 0x0019F5E0
-		// (set) Token: 0x0600B329 RID: 45865 RVA: 0x001A141A File Offset: 0x0019F61A
+		// Token: 0x17003A0C RID: 14860
+		// (get) Token: 0x0600BE36 RID: 48694 RVA: 0x001B7890 File Offset: 0x001B5A90
+		// (set) Token: 0x0600BE37 RID: 48695 RVA: 0x001B78CA File Offset: 0x001B5ACA
 		public virtual bool? DisableExit
 		{
 			get
@@ -248,9 +248,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003736 RID: 14134
-		// (get) Token: 0x0600B32A RID: 45866 RVA: 0x001A1428 File Offset: 0x0019F628
-		// (set) Token: 0x0600B32B RID: 45867 RVA: 0x001A143F File Offset: 0x0019F63F
+		// Token: 0x17003A0D RID: 14861
+		// (get) Token: 0x0600BE38 RID: 48696 RVA: 0x001B78D8 File Offset: 0x001B5AD8
+		// (set) Token: 0x0600BE39 RID: 48697 RVA: 0x001B78EF File Offset: 0x001B5AEF
 		public virtual string EdTidMainText
 		{
 			get
@@ -267,9 +267,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003737 RID: 14135
-		// (get) Token: 0x0600B32C RID: 45868 RVA: 0x001A144D File Offset: 0x0019F64D
-		// (set) Token: 0x0600B32D RID: 45869 RVA: 0x001A1464 File Offset: 0x0019F664
+		// Token: 0x17003A0E RID: 14862
+		// (get) Token: 0x0600BE3A RID: 48698 RVA: 0x001B78FD File Offset: 0x001B5AFD
+		// (set) Token: 0x0600BE3B RID: 48699 RVA: 0x001B7914 File Offset: 0x001B5B14
 		public virtual string EdTidSubText
 		{
 			get
@@ -286,9 +286,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003738 RID: 14136
-		// (get) Token: 0x0600B32E RID: 45870 RVA: 0x001A1472 File Offset: 0x0019F672
-		// (set) Token: 0x0600B32F RID: 45871 RVA: 0x001A1489 File Offset: 0x0019F689
+		// Token: 0x17003A0F RID: 14863
+		// (get) Token: 0x0600BE3C RID: 48700 RVA: 0x001B7922 File Offset: 0x001B5B22
+		// (set) Token: 0x0600BE3D RID: 48701 RVA: 0x001B7939 File Offset: 0x001B5B39
 		public virtual string EdTidHintText
 		{
 			get
@@ -305,17 +305,17 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C14 RID: 27668
+		// Token: 0x04007213 RID: 29203
 		protected new IToggleDragActorPlayEnable FbInstance;
 
-		// Token: 0x04006C15 RID: 27669
+		// Token: 0x04007214 RID: 29204
 		protected new IToggleDragActorPlayEnable_SetValue PocoInterface;
 
-		// Token: 0x04006C16 RID: 27670
-		[Nullable(1)]
+		// Token: 0x04007215 RID: 29205
+		[Nullable(0)]
 		private IFixedCameraConfig _CameraConfigCache;
 
-		// Token: 0x04006C17 RID: 27671
+		// Token: 0x04007216 RID: 29206
 		private bool _CameraConfigInited;
 	}
 }

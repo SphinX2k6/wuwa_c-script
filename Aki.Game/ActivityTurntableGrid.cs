@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001535 RID: 5429
+// Token: 0x020009ED RID: 2541
 public class ActivityTurntableGrid : UiPanelBase
 {
-	// Token: 0x06009B20 RID: 39712 RVA: 0x002195B0 File Offset: 0x002177B0
+	// Token: 0x06006EFE RID: 28414 RVA: 0x00223350 File Offset: 0x00221550
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -40,7 +40,7 @@ public class ActivityTurntableGrid : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009B21 RID: 39713 RVA: 0x002196DC File Offset: 0x002178DC
+	// Token: 0x06006EFF RID: 28415 RVA: 0x0022347C File Offset: 0x0022167C
 	[NullableContext(1)]
 	public UniTask Refresh(ITurntableReward reward)
 	{
@@ -53,7 +53,7 @@ public class ActivityTurntableGrid : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B22 RID: 39714 RVA: 0x00219727 File Offset: 0x00217927
+	// Token: 0x06006F00 RID: 28416 RVA: 0x002234C7 File Offset: 0x002216C7
 	public void SetRewardClaimed(bool isClaimed)
 	{
 		base.GetTexture(0).SetUIActive(!isClaimed);
@@ -61,7 +61,7 @@ public class ActivityTurntableGrid : UiPanelBase
 		base.GetItem(4).SetUIActive(!isClaimed);
 	}
 
-	// Token: 0x06009B23 RID: 39715 RVA: 0x00219758 File Offset: 0x00217958
+	// Token: 0x06006F01 RID: 28417 RVA: 0x002234F8 File Offset: 0x002216F8
 	public void Rotate(float changeAngle)
 	{
 		float inYaw = base.GetItem(4).RelativeRotation.Yaw + changeAngle;
@@ -70,49 +70,49 @@ public class ActivityTurntableGrid : UiPanelBase
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x06009B24 RID: 39716 RVA: 0x00219798 File Offset: 0x00217998
+	// Token: 0x06006F02 RID: 28418 RVA: 0x00223538 File Offset: 0x00221738
 	private void ButtonClicked()
 	{
 		if (this.ItemId > 0)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemId, true, null, false);
 		}
 	}
 
-	// Token: 0x04004434 RID: 17460
+	// Token: 0x040044DA RID: 17626
 	public int RewardId;
 
-	// Token: 0x04004435 RID: 17461
+	// Token: 0x040044DB RID: 17627
 	public bool IsGoldenQuality;
 
-	// Token: 0x04004436 RID: 17462
+	// Token: 0x040044DC RID: 17628
 	public bool IsSpecial;
 
-	// Token: 0x04004437 RID: 17463
+	// Token: 0x040044DD RID: 17629
 	private int ItemId;
 
-	// Token: 0x04004438 RID: 17464
+	// Token: 0x040044DE RID: 17630
 	private const int REFRESH_LOADING_COUNT = 2;
 
-	// Token: 0x02007B70 RID: 31600
+	// Token: 0x02006CFB RID: 27899
 	private class EGridComponents
 	{
-		// Token: 0x0402896F RID: 166255
+		// Token: 0x04023CAA RID: 146602
 		public const int Icon = 0;
 
-		// Token: 0x04028970 RID: 166256
+		// Token: 0x04023CAB RID: 146603
 		public const int SpriteQuality = 1;
 
-		// Token: 0x04028971 RID: 166257
+		// Token: 0x04023CAC RID: 146604
 		public const int TxtCount = 2;
 
-		// Token: 0x04028972 RID: 166258
+		// Token: 0x04023CAD RID: 146605
 		public const int PanelReward = 3;
 
-		// Token: 0x04028973 RID: 166259
+		// Token: 0x04023CAE RID: 146606
 		public const int PanelCount = 4;
 
-		// Token: 0x04028974 RID: 166260
+		// Token: 0x04023CAF RID: 146607
 		public const int Button = 5;
 	}
 }

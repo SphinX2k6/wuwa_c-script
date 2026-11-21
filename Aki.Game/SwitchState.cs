@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003117 RID: 12567
+// Token: 0x02002672 RID: 9842
 [NullableContext(2)]
 [Nullable(0)]
 public class SwitchState : ISwitchState, IActionParamMap
 {
-	// Token: 0x17002562 RID: 9570
-	// (get) Token: 0x0601B02F RID: 110639 RVA: 0x00754E5B File Offset: 0x0075305B
-	// (set) Token: 0x0601B030 RID: 110640 RVA: 0x00754E63 File Offset: 0x00753063
+	// Token: 0x1700270D RID: 9997
+	// (get) Token: 0x06018A8A RID: 101002 RVA: 0x0077AEC7 File Offset: 0x007790C7
+	// (set) Token: 0x06018A8B RID: 101003 RVA: 0x0077AECF File Offset: 0x007790CF
 	public string TargetStateName { get; set; }
 
-	// Token: 0x17002563 RID: 9571
-	// (get) Token: 0x0601B031 RID: 110641 RVA: 0x00754E6C File Offset: 0x0075306C
-	// (set) Token: 0x0601B032 RID: 110642 RVA: 0x00754E74 File Offset: 0x00753074
+	// Token: 0x1700270E RID: 9998
+	// (get) Token: 0x06018A8C RID: 101004 RVA: 0x0077AED8 File Offset: 0x007790D8
+	// (set) Token: 0x06018A8D RID: 101005 RVA: 0x0077AEE0 File Offset: 0x007790E0
 	public bool? IsNoTransition { get; set; }
 
-	// Token: 0x17002564 RID: 9572
-	// (get) Token: 0x0601B033 RID: 110643 RVA: 0x00754E7D File Offset: 0x0075307D
-	// (set) Token: 0x0601B034 RID: 110644 RVA: 0x00754E85 File Offset: 0x00753085
+	// Token: 0x1700270F RID: 9999
+	// (get) Token: 0x06018A8E RID: 101006 RVA: 0x0077AEE9 File Offset: 0x007790E9
+	// (set) Token: 0x06018A8F RID: 101007 RVA: 0x0077AEF1 File Offset: 0x007790F1
 	public string Context { get; set; }
 }

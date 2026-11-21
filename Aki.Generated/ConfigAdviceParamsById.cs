@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000077 RID: 119
+	// Token: 0x0200007F RID: 127
 	public class ConfigAdviceParamsById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060002CA RID: 714 RVA: 0x00069420 File Offset: 0x00067620
+		// Token: 0x060002FA RID: 762 RVA: 0x0006DCD4 File Offset: 0x0006BED4
 		static ConfigAdviceParamsById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAdviceParamsById.CreateStaticDefaultValue), new Action(ConfigAdviceParamsById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060002CB RID: 715 RVA: 0x00069440 File Offset: 0x00067640
+		// Token: 0x060002FB RID: 763 RVA: 0x0006DCF4 File Offset: 0x0006BEF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAdviceParamsById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060002CC RID: 716 RVA: 0x000694BF File Offset: 0x000676BF
+		// Token: 0x060002FC RID: 764 RVA: 0x0006DD73 File Offset: 0x0006BF73
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAdviceParamsById.LogPair = null;
 			ConfigAdviceParamsById.HandleId = 0;
 		}
 
-		// Token: 0x060002CD RID: 717 RVA: 0x000694CD File Offset: 0x000676CD
+		// Token: 0x060002FD RID: 765 RVA: 0x0006DD81 File Offset: 0x0006BF81
 		public static void Init()
 		{
 			ConfigAdviceParamsById.HandleId = ConfigCommon.InitDataStatement(ConfigAdviceParamsById.HandleId, "db_advice.db", "select BinData from `AdviceParams` where Id=?");
 		}
 
-		// Token: 0x060002CE RID: 718 RVA: 0x000694E8 File Offset: 0x000676E8
+		// Token: 0x060002FE RID: 766 RVA: 0x0006DD9C File Offset: 0x0006BF9C
 		public static AdviceParams? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAdviceParamsById.HandleId, ConfigAdviceParamsById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AdviceParams?(rootAsAdviceParams);
 		}
 
-		// Token: 0x04000325 RID: 805
+		// Token: 0x0400035D RID: 861
 		private const string DB = "db_advice.db";
 
-		// Token: 0x04000326 RID: 806
+		// Token: 0x0400035E RID: 862
 		private const string FILE = "s.溯言.xlsx";
 
-		// Token: 0x04000327 RID: 807
+		// Token: 0x0400035F RID: 863
 		private const string TABLE = "AdviceParams";
 
-		// Token: 0x04000328 RID: 808
+		// Token: 0x04000360 RID: 864
 		private const string COMMAND = "select BinData from `AdviceParams` where Id=?";
 
-		// Token: 0x04000329 RID: 809
+		// Token: 0x04000361 RID: 865
 		private const string KEY_PREFIX = "AdviceParamsById";
 
-		// Token: 0x0400032A RID: 810
+		// Token: 0x04000362 RID: 866
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400032B RID: 811
+		// Token: 0x04000363 RID: 867
 		private static int HandleId;
 	}
 }

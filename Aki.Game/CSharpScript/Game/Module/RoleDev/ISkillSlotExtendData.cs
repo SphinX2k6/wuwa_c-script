@@ -2,47 +2,47 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CCC RID: 19660
+	// Token: 0x02003C7D RID: 15485
 	public interface ISkillSlotExtendData
 	{
-		// Token: 0x17007D63 RID: 32099
-		// (get) Token: 0x06032C10 RID: 207888
-		// (set) Token: 0x06032C11 RID: 207889
+		// Token: 0x1700510D RID: 20749
+		// (get) Token: 0x060279C4 RID: 162244
+		// (set) Token: 0x060279C5 RID: 162245
 		int RoleId { get; set; }
 
-		// Token: 0x17007D64 RID: 32100
-		// (get) Token: 0x06032C12 RID: 207890
-		// (set) Token: 0x06032C13 RID: 207891
+		// Token: 0x1700510E RID: 20750
+		// (get) Token: 0x060279C6 RID: 162246
+		// (set) Token: 0x060279C7 RID: 162247
 		int SkillNodeId { get; set; }
 
-		// Token: 0x17007D65 RID: 32101
-		// (get) Token: 0x06032C14 RID: 207892
-		// (set) Token: 0x06032C15 RID: 207893
+		// Token: 0x1700510F RID: 20751
+		// (get) Token: 0x060279C8 RID: 162248
+		// (set) Token: 0x060279C9 RID: 162249
 		int IconId { get; set; }
 
-		// Token: 0x17007D66 RID: 32102
-		// (get) Token: 0x06032C16 RID: 207894
-		// (set) Token: 0x06032C17 RID: 207895
+		// Token: 0x17005110 RID: 20752
+		// (get) Token: 0x060279CA RID: 162250
+		// (set) Token: 0x060279CB RID: 162251
 		int CurrentLevel { get; set; }
 
-		// Token: 0x17007D67 RID: 32103
-		// (get) Token: 0x06032C18 RID: 207896
-		// (set) Token: 0x06032C19 RID: 207897
+		// Token: 0x17005111 RID: 20753
+		// (get) Token: 0x060279CC RID: 162252
+		// (set) Token: 0x060279CD RID: 162253
 		int NormalTargetLevel { get; set; }
 
-		// Token: 0x17007D68 RID: 32104
-		// (get) Token: 0x06032C1A RID: 207898
-		// (set) Token: 0x06032C1B RID: 207899
+		// Token: 0x17005112 RID: 20754
+		// (get) Token: 0x060279CE RID: 162254
+		// (set) Token: 0x060279CF RID: 162255
 		int PerfectTargetLevel { get; set; }
 
-		// Token: 0x17007D69 RID: 32105
-		// (get) Token: 0x06032C1C RID: 207900
-		// (set) Token: 0x06032C1D RID: 207901
+		// Token: 0x17005113 RID: 20755
+		// (get) Token: 0x060279D0 RID: 162256
+		// (set) Token: 0x060279D1 RID: 162257
 		ESkillType SkillType { get; set; }
 
-		// Token: 0x17007D6A RID: 32106
-		// (get) Token: 0x06032C1E RID: 207902
-		// (set) Token: 0x06032C1F RID: 207903
+		// Token: 0x17005114 RID: 20756
+		// (get) Token: 0x060279D2 RID: 162258
+		// (set) Token: 0x060279D3 RID: 162259
 		int NodeIndex { get; set; }
 	}
 }

@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001BA1 RID: 7073
+// Token: 0x02001060 RID: 4192
 public class FloroRanchTaskTabItem : GridProxyAbstract<FloroRanchTaskTab>
 {
-	// Token: 0x0600D298 RID: 53912 RVA: 0x003064FC File Offset: 0x003046FC
+	// Token: 0x0600A6A9 RID: 42665 RVA: 0x003115DC File Offset: 0x0030F7DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,7 +32,7 @@ public class FloroRanchTaskTabItem : GridProxyAbstract<FloroRanchTaskTab>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D299 RID: 53913 RVA: 0x003065C4 File Offset: 0x003047C4
+	// Token: 0x0600A6AA RID: 42666 RVA: 0x003116A4 File Offset: 0x0030F8A4
 	public override void Refresh(FloroRanchTaskTab floroRanchTaskTab, bool isSelected, int gridIndex)
 	{
 		this.FloroRanchTaskTabType = (EFloroRanchTaskTabType)floroRanchTaskTab.Id;
@@ -41,7 +41,7 @@ public class FloroRanchTaskTabItem : GridProxyAbstract<FloroRanchTaskTab>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600D29A RID: 53914 RVA: 0x00306604 File Offset: 0x00304804
+	// Token: 0x0600A6AB RID: 42667 RVA: 0x003116E4 File Offset: 0x0030F8E4
 	public void RefreshRedDot()
 	{
 		bool uiactive = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true).IsTaskHasRedDotByTab(this.FloroRanchTaskTabType);
@@ -53,26 +53,26 @@ public class FloroRanchTaskTabItem : GridProxyAbstract<FloroRanchTaskTab>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600D29B RID: 53915 RVA: 0x0030663C File Offset: 0x0030483C
+	// Token: 0x0600A6AC RID: 42668 RVA: 0x0031171C File Offset: 0x0030F91C
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(1).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600D29C RID: 53916 RVA: 0x00306662 File Offset: 0x00304862
+	// Token: 0x0600A6AD RID: 42669 RVA: 0x00311742 File Offset: 0x0030F942
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true);
 	}
 
-	// Token: 0x0600D29D RID: 53917 RVA: 0x0030666B File Offset: 0x0030486B
+	// Token: 0x0600A6AE RID: 42670 RVA: 0x0031174B File Offset: 0x0030F94B
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false);
 	}
 
-	// Token: 0x0600D29E RID: 53918 RVA: 0x00306674 File Offset: 0x00304874
+	// Token: 0x0600A6AF RID: 42671 RVA: 0x00311754 File Offset: 0x0030F954
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.OnToggleCallBack != null)
@@ -81,23 +81,23 @@ public class FloroRanchTaskTabItem : GridProxyAbstract<FloroRanchTaskTab>
 		}
 	}
 
-	// Token: 0x0400608B RID: 24715
+	// Token: 0x0400615A RID: 24922
 	private EFloroRanchTaskTabType FloroRanchTaskTabType = EFloroRanchTaskTabType.Dungeon;
 
-	// Token: 0x0400608C RID: 24716
+	// Token: 0x0400615B RID: 24923
 	[Nullable(2)]
 	public Action<int, EFloroRanchTaskTabType> OnToggleCallBack;
 
-	// Token: 0x0200813D RID: 33085
+	// Token: 0x020072CB RID: 29387
 	private class EComponents
 	{
-		// Token: 0x0402A2F7 RID: 172791
+		// Token: 0x0402562B RID: 153131
 		public const int TextTabName = 0;
 
-		// Token: 0x0402A2F8 RID: 172792
+		// Token: 0x0402562C RID: 153132
 		public const int ToggleRoot = 1;
 
-		// Token: 0x0402A2F9 RID: 172793
+		// Token: 0x0402562D RID: 153133
 		public const int ItemRedDot = 2;
 	}
 }

@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001656 RID: 5718
+	// Token: 0x020016CC RID: 5836
 	public enum TreasureChestStatType
 	{
-		// Token: 0x0400C124 RID: 49444
+		// Token: 0x0400C62B RID: 50731
 		[OriginalName("OneTime")]
 		OneTime,
-		// Token: 0x0400C125 RID: 49445
+		// Token: 0x0400C62C RID: 50732
 		[OriginalName("HsinToken")]
 		HsinToken
 	}

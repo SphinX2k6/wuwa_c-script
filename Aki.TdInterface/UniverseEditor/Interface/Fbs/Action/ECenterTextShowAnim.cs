@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F2F RID: 24367
+	// Token: 0x02006573 RID: 25971
 	public enum ECenterTextShowAnim : byte
 	{
-		// Token: 0x0400FC6B RID: 64619
+		// Token: 0x040109E1 RID: 68065
 		ShowAll,
-		// Token: 0x0400FC6C RID: 64620
+		// Token: 0x040109E2 RID: 68066
 		FadeOut,
-		// Token: 0x0400FC6D RID: 64621
+		// Token: 0x040109E3 RID: 68067
 		TypeWriter
 	}
 }

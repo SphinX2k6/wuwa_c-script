@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006B3 RID: 1715
+	// Token: 0x020006CB RID: 1739
 	public class ConfigPhantomSkillById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002842 RID: 10306 RVA: 0x0013D3C4 File Offset: 0x0013B5C4
+		// Token: 0x060028D2 RID: 10450 RVA: 0x00143E40 File Offset: 0x00142040
 		static ConfigPhantomSkillById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomSkillById.CreateStaticDefaultValue), new Action(ConfigPhantomSkillById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002843 RID: 10307 RVA: 0x0013D3E4 File Offset: 0x0013B5E4
+		// Token: 0x060028D3 RID: 10451 RVA: 0x00143E60 File Offset: 0x00142060
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomSkillById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002844 RID: 10308 RVA: 0x0013D463 File Offset: 0x0013B663
+		// Token: 0x060028D4 RID: 10452 RVA: 0x00143EDF File Offset: 0x001420DF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomSkillById.LogPair = null;
 			ConfigPhantomSkillById.HandleId = 0;
 		}
 
-		// Token: 0x06002845 RID: 10309 RVA: 0x0013D471 File Offset: 0x0013B671
+		// Token: 0x060028D5 RID: 10453 RVA: 0x00143EED File Offset: 0x001420ED
 		public static void Init()
 		{
 			ConfigPhantomSkillById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomSkillById.HandleId, "db_phantom.db", "select BinData from `PhantomSkill` where Id=?");
 		}
 
-		// Token: 0x06002846 RID: 10310 RVA: 0x0013D48C File Offset: 0x0013B68C
+		// Token: 0x060028D6 RID: 10454 RVA: 0x00143F08 File Offset: 0x00142108
 		public static PhantomSkill? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomSkillById.HandleId, ConfigPhantomSkillById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomSkill?(rootAsPhantomSkill);
 		}
 
-		// Token: 0x04002ECB RID: 11979
+		// Token: 0x04002F73 RID: 12147
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002ECC RID: 11980
+		// Token: 0x04002F74 RID: 12148
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002ECD RID: 11981
+		// Token: 0x04002F75 RID: 12149
 		private const string TABLE = "PhantomSkill";
 
-		// Token: 0x04002ECE RID: 11982
+		// Token: 0x04002F76 RID: 12150
 		private const string COMMAND = "select BinData from `PhantomSkill` where Id=?";
 
-		// Token: 0x04002ECF RID: 11983
+		// Token: 0x04002F77 RID: 12151
 		private const string KEY_PREFIX = "PhantomSkillById";
 
-		// Token: 0x04002ED0 RID: 11984
+		// Token: 0x04002F78 RID: 12152
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002ED1 RID: 11985
+		// Token: 0x04002F79 RID: 12153
 		private static int HandleId;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F57 RID: 8023
+	// Token: 0x02002190 RID: 8592
 	public class ITalkItemStyle_SetValue
 	{
-		// Token: 0x04006923 RID: 26915
+		// Token: 0x04006F12 RID: 28434
 		public ETalkItemStyle Type;
 	}
 }

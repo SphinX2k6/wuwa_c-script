@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02000FB5 RID: 4021
+// Token: 0x0200046A RID: 1130
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSceneItemManager
 {
-	// Token: 0x06006705 RID: 26373 RVA: 0x00145E34 File Offset: 0x00144034
+	// Token: 0x06003A9D RID: 15005 RVA: 0x0014E6F8 File Offset: 0x0014C8F8
 	[NullableContext(2)]
 	public ISceneSlotItemInfo GetSceneSlotItemInfo(int slotEntityId)
 	{
@@ -21,7 +21,7 @@ public class FurnitureSceneItemManager
 		return result;
 	}
 
-	// Token: 0x06006706 RID: 26374 RVA: 0x00145E54 File Offset: 0x00144054
+	// Token: 0x06003A9E RID: 15006 RVA: 0x0014E718 File Offset: 0x0014C918
 	public ISceneSlotItemInfo GetOrCreateSceneSlotItemInfo(int slotEntityId)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -38,13 +38,13 @@ public class FurnitureSceneItemManager
 		return sceneSlotItemInfo;
 	}
 
-	// Token: 0x06006707 RID: 26375 RVA: 0x00145E99 File Offset: 0x00144099
+	// Token: 0x06003A9F RID: 15007 RVA: 0x0014E75D File Offset: 0x0014C95D
 	public Dictionary<int, ISceneSlotItemInfo> GetSceneSlotItemInfoMap()
 	{
 		return this.SceneSlotItemInfoMap;
 	}
 
-	// Token: 0x06006708 RID: 26376 RVA: 0x00145EA4 File Offset: 0x001440A4
+	// Token: 0x06003AA0 RID: 15008 RVA: 0x0014E768 File Offset: 0x0014C968
 	private FurnitureSceneItemBase CreateFurnitureSceneItem(int furnitureConfigId)
 	{
 		switch (FurnitureModel.Instance.GetFurnitureSceneItemType(furnitureConfigId))
@@ -60,21 +60,21 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006709 RID: 26377 RVA: 0x00145EEC File Offset: 0x001440EC
+	// Token: 0x06003AA1 RID: 15009 RVA: 0x0014E7B0 File Offset: 0x0014C9B0
 	public bool HasRootFurnitureSceneItem(int slotEntityId)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
 		return ((sceneSlotItemInfo != null) ? sceneSlotItemInfo.RootFurnitureSceneItem : null) != null;
 	}
 
-	// Token: 0x0600670A RID: 26378 RVA: 0x00145F04 File Offset: 0x00144104
+	// Token: 0x06003AA2 RID: 15010 RVA: 0x0014E7C8 File Offset: 0x0014C9C8
 	public bool HasSubFurnitureSceneItem(int slotEntityId, int slotIndex)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
 		return sceneSlotItemInfo != null && sceneSlotItemInfo.SubFurnitureSceneItemMap.ContainsKey(slotIndex);
 	}
 
-	// Token: 0x0600670B RID: 26379 RVA: 0x00145F20 File Offset: 0x00144120
+	// Token: 0x06003AA3 RID: 15011 RVA: 0x0014E7E4 File Offset: 0x0014C9E4
 	[NullableContext(0)]
 	public UniTask<bool> LoadRootFurnitureSceneItemAsync(int slotEntityId, int furnitureConfigId, [Nullable(1)] Transform transform, bool bShow)
 	{
@@ -90,7 +90,7 @@ public class FurnitureSceneItemManager
 		return <LoadRootFurnitureSceneItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600670C RID: 26380 RVA: 0x00145F84 File Offset: 0x00144184
+	// Token: 0x06003AA4 RID: 15012 RVA: 0x0014E848 File Offset: 0x0014CA48
 	public void UnloadRootFurnitureSceneItem(int slotEntityId)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -100,7 +100,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x0600670D RID: 26381 RVA: 0x00145FA4 File Offset: 0x001441A4
+	// Token: 0x06003AA5 RID: 15013 RVA: 0x0014E868 File Offset: 0x0014CA68
 	private void UnloadRootFurnitureSceneItemInternal(ISceneSlotItemInfo sceneSlotItemInfo)
 	{
 		FurnitureSceneItemBase rootFurnitureSceneItem = sceneSlotItemInfo.RootFurnitureSceneItem;
@@ -111,7 +111,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x0600670E RID: 26382 RVA: 0x00145FC8 File Offset: 0x001441C8
+	// Token: 0x06003AA6 RID: 15014 RVA: 0x0014E88C File Offset: 0x0014CA8C
 	[NullableContext(0)]
 	public UniTask<bool> LoadSubFurnitureSceneItemAsync(int slotEntityId, int furnitureConfigId, int slotIndex, [Nullable(1)] Transform transform, bool bShow)
 	{
@@ -128,7 +128,7 @@ public class FurnitureSceneItemManager
 		return <LoadSubFurnitureSceneItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600670F RID: 26383 RVA: 0x00146038 File Offset: 0x00144238
+	// Token: 0x06003AA7 RID: 15015 RVA: 0x0014E8FC File Offset: 0x0014CAFC
 	public void ShowRootFurnitureSceneItem(int slotEntityId)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -143,7 +143,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006710 RID: 26384 RVA: 0x00146064 File Offset: 0x00144264
+	// Token: 0x06003AA8 RID: 15016 RVA: 0x0014E928 File Offset: 0x0014CB28
 	public void ShowSubFurnitureSceneItem(int slotEntityId, int slotIndex)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -154,7 +154,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006711 RID: 26385 RVA: 0x00146094 File Offset: 0x00144294
+	// Token: 0x06003AA9 RID: 15017 RVA: 0x0014E958 File Offset: 0x0014CB58
 	public void UnloadSubFurnitureSceneItem(int slotEntityId, int slotIndex)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -164,7 +164,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006712 RID: 26386 RVA: 0x001460B4 File Offset: 0x001442B4
+	// Token: 0x06003AAA RID: 15018 RVA: 0x0014E978 File Offset: 0x0014CB78
 	private void UnloadSubFurnitureSceneItemInternal(ISceneSlotItemInfo sceneSlotItemInfo, int slotIndex)
 	{
 		Dictionary<int, FurnitureSceneItemBase> subFurnitureSceneItemMap = sceneSlotItemInfo.SubFurnitureSceneItemMap;
@@ -179,7 +179,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006713 RID: 26387 RVA: 0x001460EC File Offset: 0x001442EC
+	// Token: 0x06003AAB RID: 15019 RVA: 0x0014E9B0 File Offset: 0x0014CBB0
 	public void UnloadAllSubFurnitureSceneItem(int slotEntityId)
 	{
 		ISceneSlotItemInfo sceneSlotItemInfo = this.GetSceneSlotItemInfo(slotEntityId);
@@ -195,7 +195,7 @@ public class FurnitureSceneItemManager
 		subFurnitureSceneItemMap.Clear();
 	}
 
-	// Token: 0x06006714 RID: 26388 RVA: 0x00146158 File Offset: 0x00144358
+	// Token: 0x06003AAC RID: 15020 RVA: 0x0014EA1C File Offset: 0x0014CC1C
 	public void UnloadAllFurnitureSceneItem()
 	{
 		if (this.SceneSlotItemInfoMap.Count == 0)
@@ -219,7 +219,7 @@ public class FurnitureSceneItemManager
 		this.NeedUnloadedSceneItem.Clear();
 	}
 
-	// Token: 0x06006715 RID: 26389 RVA: 0x00146228 File Offset: 0x00144428
+	// Token: 0x06003AAD RID: 15021 RVA: 0x0014EAEC File Offset: 0x0014CCEC
 	public void MarkFurnitureSceneItemAsNeedUnload(int slotEntityId, int slotIndex)
 	{
 		ISceneSlotItemInfo orCreateSceneSlotItemInfo = this.GetOrCreateSceneSlotItemInfo(slotEntityId);
@@ -240,7 +240,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006716 RID: 26390 RVA: 0x00146281 File Offset: 0x00144481
+	// Token: 0x06003AAE RID: 15022 RVA: 0x0014EB45 File Offset: 0x0014CD45
 	private void MarkSceneItemAsNeedUnloadInternal(FurnitureSceneItemBase sceneItem)
 	{
 		if (sceneItem != null && !this.NeedUnloadedSceneItem.Contains(sceneItem))
@@ -250,7 +250,7 @@ public class FurnitureSceneItemManager
 		}
 	}
 
-	// Token: 0x06006717 RID: 26391 RVA: 0x001462A8 File Offset: 0x001444A8
+	// Token: 0x06003AAF RID: 15023 RVA: 0x0014EB6C File Offset: 0x0014CD6C
 	public void DoUnloadNeedUnloadedSceneItem()
 	{
 		if (this.NeedUnloadedSceneItem.Count == 0)
@@ -264,9 +264,9 @@ public class FurnitureSceneItemManager
 		this.NeedUnloadedSceneItem.Clear();
 	}
 
-	// Token: 0x04002EB1 RID: 11953
+	// Token: 0x04002F4A RID: 12106
 	private readonly Dictionary<int, ISceneSlotItemInfo> SceneSlotItemInfoMap = new Dictionary<int, ISceneSlotItemInfo>();
 
-	// Token: 0x04002EB2 RID: 11954
+	// Token: 0x04002F4B RID: 12107
 	private readonly List<FurnitureSceneItemBase> NeedUnloadedSceneItem = new List<FurnitureSceneItemBase>();
 }

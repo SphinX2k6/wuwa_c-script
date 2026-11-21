@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020013EC RID: 5100
+// Token: 0x020008A0 RID: 2208
 public enum EPinballChapterLevelLockStatus
 {
-	// Token: 0x04003FB7 RID: 16311
+	// Token: 0x0400404F RID: 16463
 	Lock = -1,
-	// Token: 0x04003FB8 RID: 16312
+	// Token: 0x04004050 RID: 16464
 	PreLock,
-	// Token: 0x04003FB9 RID: 16313
+	// Token: 0x04004051 RID: 16465
 	Activated
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CD6 RID: 7382
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EDD RID: 7901
 	public class IPerformerRangeBoundaryActionTrigger
 	{
-		// Token: 0x06009E7B RID: 40571 RVA: 0x0016A6C4 File Offset: 0x001688C4
+		// Token: 0x0600A829 RID: 43049 RVA: 0x0017E324 File Offset: 0x0017C524
 		private IPerformerRangeBoundaryActionTrigger_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E7C RID: 40572 RVA: 0x0016A6FC File Offset: 0x001688FC
+		// Token: 0x0600A82A RID: 43050 RVA: 0x0017E35C File Offset: 0x0017C55C
 		public static IPerformerRangeBoundaryActionTrigger Create([Nullable(2)] IPerformerRangeBoundaryActionTrigger instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E7D RID: 40573 RVA: 0x0016A70F File Offset: 0x0016890F
+		// Token: 0x0600A82B RID: 43051 RVA: 0x0017E36F File Offset: 0x0017C56F
 		public static IPerformerRangeBoundaryActionTrigger CreateFromSetValue([Nullable(2)] IPerformerRangeBoundaryActionTrigger_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E7E RID: 40574 RVA: 0x0016A722 File Offset: 0x00168922
+		// Token: 0x0600A82C RID: 43052 RVA: 0x0017E382 File Offset: 0x0017C582
 		public IPerformerRangeBoundaryActionTrigger_SetValue ToSetValue()
 		{
 			return new IPerformerRangeBoundaryActionTrigger_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003153 RID: 12627
-		// (get) Token: 0x06009E7F RID: 40575 RVA: 0x0016A741 File Offset: 0x00168941
-		// (set) Token: 0x06009E80 RID: 40576 RVA: 0x0016A76C File Offset: 0x0016896C
+		// Token: 0x170033D7 RID: 13271
+		// (get) Token: 0x0600A82D RID: 43053 RVA: 0x0017E3A1 File Offset: 0x0017C5A1
+		// (set) Token: 0x0600A82E RID: 43054 RVA: 0x0017E3CC File Offset: 0x0017C5CC
 		public virtual int Range
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003154 RID: 12628
-		// (get) Token: 0x06009E81 RID: 40577 RVA: 0x0016A77C File Offset: 0x0016897C
-		// (set) Token: 0x06009E82 RID: 40578 RVA: 0x0016A80F File Offset: 0x00168A0F
+		// Token: 0x170033D8 RID: 13272
+		// (get) Token: 0x0600A82F RID: 43055 RVA: 0x0017E3DC File Offset: 0x0017C5DC
+		// (set) Token: 0x0600A830 RID: 43056 RVA: 0x0017E46F File Offset: 0x0017C66F
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FC4 RID: 24516
+		// Token: 0x04006520 RID: 25888
 		[Nullable(2)]
 		protected IPerformerRangeBoundaryActionTrigger FbInstance;
 
-		// Token: 0x04005FC5 RID: 24517
+		// Token: 0x04006521 RID: 25889
 		[Nullable(2)]
 		protected IPerformerRangeBoundaryActionTrigger_SetValue PocoInterface;
 
-		// Token: 0x04005FC6 RID: 24518
+		// Token: 0x04006522 RID: 25890
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04005FC7 RID: 24519
+		// Token: 0x04006523 RID: 25891
 		private bool _ActionsInited;
 	}
 }

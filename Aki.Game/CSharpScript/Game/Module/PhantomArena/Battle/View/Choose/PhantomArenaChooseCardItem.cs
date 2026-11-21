@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 {
-	// Token: 0x02005269 RID: 21097
+	// Token: 0x02004239 RID: 16953
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 	})]
 	public class PhantomArenaChooseCardItem : GridProxyAbstract<PhantomCardData>, IPhantomCardProxy, IPhantomCardProxyBase
 	{
-		// Token: 0x06035F16 RID: 220950 RVA: 0x00CC3520 File Offset: 0x00CC1720
+		// Token: 0x0602AE11 RID: 175633 RVA: 0x00C10BE8 File Offset: 0x00C0EDE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaChooseCardItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F17 RID: 220951 RVA: 0x00CC3563 File Offset: 0x00CC1763
+		// Token: 0x0602AE12 RID: 175634 RVA: 0x00C10C2B File Offset: 0x00C0EE2B
 		public override void Refresh(PhantomCardData data, bool isSelected, int gridIndex)
 		{
 			this.Card.Refresh(data);
@@ -40,31 +40,31 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			this.SetChooseStateWithoutSequence();
 		}
 
-		// Token: 0x06035F18 RID: 220952 RVA: 0x00CC358A File Offset: 0x00CC178A
+		// Token: 0x0602AE13 RID: 175635 RVA: 0x00C10C52 File Offset: 0x00C0EE52
 		public void SetSelectStateWithoutSequence()
 		{
 			this.Card.SetSelectedStateWithoutSequence();
 		}
 
-		// Token: 0x06035F19 RID: 220953 RVA: 0x00CC3597 File Offset: 0x00CC1797
+		// Token: 0x0602AE14 RID: 175636 RVA: 0x00C10C5F File Offset: 0x00C0EE5F
 		public void SetSelectState(bool value)
 		{
 			this.Card.SetSelectedState(value);
 		}
 
-		// Token: 0x06035F1A RID: 220954 RVA: 0x00CC35A5 File Offset: 0x00CC17A5
+		// Token: 0x0602AE15 RID: 175637 RVA: 0x00C10C6D File Offset: 0x00C0EE6D
 		public void SetChooseStateWithoutSequence()
 		{
 			this.Card.GetComponent<CardCommonComponent>(ECardItemComponent.CardChooseComponent).SetComponentDisActiveWithoutSequence();
 		}
 
-		// Token: 0x06035F1B RID: 220955 RVA: 0x00CC35B8 File Offset: 0x00CC17B8
+		// Token: 0x0602AE16 RID: 175638 RVA: 0x00C10C80 File Offset: 0x00C0EE80
 		public void SetChooseState(bool value)
 		{
 			this.Card.GetComponent<CardCommonComponent>(ECardItemComponent.CardChooseComponent).SetComponentActive(value);
 		}
 
-		// Token: 0x06035F1C RID: 220956 RVA: 0x00CC35CC File Offset: 0x00CC17CC
+		// Token: 0x0602AE17 RID: 175639 RVA: 0x00C10C94 File Offset: 0x00C0EE94
 		public void PointerClickCard(int id, EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -89,26 +89,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Choose
 			}
 		}
 
-		// Token: 0x06035F1D RID: 220957 RVA: 0x00CC360B File Offset: 0x00CC180B
+		// Token: 0x0602AE18 RID: 175640 RVA: 0x00C10CD3 File Offset: 0x00C0EED3
 		public void PointerEnterCard(int id)
 		{
 		}
 
-		// Token: 0x06035F1E RID: 220958 RVA: 0x00CC360D File Offset: 0x00CC180D
+		// Token: 0x0602AE19 RID: 175641 RVA: 0x00C10CD5 File Offset: 0x00C0EED5
 		public void PointerDownCard(int id, ULGUIPointerEventData eventData)
 		{
 		}
 
-		// Token: 0x06035F1F RID: 220959 RVA: 0x00CC360F File Offset: 0x00CC180F
+		// Token: 0x0602AE1A RID: 175642 RVA: 0x00C10CD7 File Offset: 0x00C0EED7
 		public override object GetKey(PhantomCardData data, int displayIndex)
 		{
 			return data.CardId;
 		}
 
-		// Token: 0x0401C912 RID: 117010
+		// Token: 0x04017347 RID: 95047
 		public PhantomArenaCard Card;
 
-		// Token: 0x0401C913 RID: 117011
+		// Token: 0x04017348 RID: 95048
 		public Action<PhantomCardData, bool> ClickCallback;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006C7 RID: 1735
+	// Token: 0x020006DF RID: 1759
 	public class ConfigPhotoAtmosphereById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060028BA RID: 10426 RVA: 0x0013FBA3 File Offset: 0x0013DDA3
+		// Token: 0x0600294A RID: 10570 RVA: 0x0014661F File Offset: 0x0014481F
 		static ConfigPhotoAtmosphereById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoAtmosphereById.CreateStaticDefaultValue), new Action(ConfigPhotoAtmosphereById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060028BB RID: 10427 RVA: 0x0013FBC4 File Offset: 0x0013DDC4
+		// Token: 0x0600294B RID: 10571 RVA: 0x00146640 File Offset: 0x00144840
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoAtmosphereById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060028BC RID: 10428 RVA: 0x0013FC43 File Offset: 0x0013DE43
+		// Token: 0x0600294C RID: 10572 RVA: 0x001466BF File Offset: 0x001448BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoAtmosphereById.LogPair = null;
 			ConfigPhotoAtmosphereById.HandleId = 0;
 		}
 
-		// Token: 0x060028BD RID: 10429 RVA: 0x0013FC51 File Offset: 0x0013DE51
+		// Token: 0x0600294D RID: 10573 RVA: 0x001466CD File Offset: 0x001448CD
 		public static void Init()
 		{
 			ConfigPhotoAtmosphereById.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoAtmosphereById.HandleId, "db_photonew.db", "select BinData from `PhotoAtmosphere` where Id=?");
 		}
 
-		// Token: 0x060028BE RID: 10430 RVA: 0x0013FC6C File Offset: 0x0013DE6C
+		// Token: 0x0600294E RID: 10574 RVA: 0x001466E8 File Offset: 0x001448E8
 		public static PhotoAtmosphere? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhotoAtmosphereById.HandleId, ConfigPhotoAtmosphereById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhotoAtmosphere?(rootAsPhotoAtmosphere);
 		}
 
-		// Token: 0x04002F57 RID: 12119
+		// Token: 0x04002FFF RID: 12287
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04002F58 RID: 12120
+		// Token: 0x04003000 RID: 12288
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04002F59 RID: 12121
+		// Token: 0x04003001 RID: 12289
 		private const string TABLE = "PhotoAtmosphere";
 
-		// Token: 0x04002F5A RID: 12122
+		// Token: 0x04003002 RID: 12290
 		private const string COMMAND = "select BinData from `PhotoAtmosphere` where Id=?";
 
-		// Token: 0x04002F5B RID: 12123
+		// Token: 0x04003003 RID: 12291
 		private const string KEY_PREFIX = "PhotoAtmosphereById";
 
-		// Token: 0x04002F5C RID: 12124
+		// Token: 0x04003004 RID: 12292
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F5D RID: 12125
+		// Token: 0x04003005 RID: 12293
 		private static int HandleId;
 	}
 }

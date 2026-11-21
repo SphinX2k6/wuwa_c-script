@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062CF RID: 25295
+	// Token: 0x02006940 RID: 26944
 	public struct IChangeBehaviorState : IFlatbufferObject
 	{
-		// Token: 0x1700BCD3 RID: 48339
-		// (get) Token: 0x0602BB8D RID: 179085 RVA: 0x00604396 File Offset: 0x00602596
+		// Token: 0x1700C65D RID: 50781
+		// (get) Token: 0x0602E2F6 RID: 189174 RVA: 0x0064F3A2 File Offset: 0x0064D5A2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BB8E RID: 179086 RVA: 0x006043A3 File Offset: 0x006025A3
+		// Token: 0x0602E2F7 RID: 189175 RVA: 0x0064F3AF File Offset: 0x0064D5AF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BB8F RID: 179087 RVA: 0x006043AC File Offset: 0x006025AC
+		// Token: 0x0602E2F8 RID: 189176 RVA: 0x0064F3B8 File Offset: 0x0064D5B8
 		public static IChangeBehaviorState GetRootAsIChangeBehaviorState(ByteBuffer _bb)
 		{
 			return IChangeBehaviorState.GetRootAsIChangeBehaviorState(_bb, default(IChangeBehaviorState));
 		}
 
-		// Token: 0x0602BB90 RID: 179088 RVA: 0x006043C8 File Offset: 0x006025C8
+		// Token: 0x0602E2F9 RID: 189177 RVA: 0x0064F3D4 File Offset: 0x0064D5D4
 		public static IChangeBehaviorState GetRootAsIChangeBehaviorState(ByteBuffer _bb, IChangeBehaviorState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BB91 RID: 179089 RVA: 0x006043E5 File Offset: 0x006025E5
+		// Token: 0x0602E2FA RID: 189178 RVA: 0x0064F3F1 File Offset: 0x0064D5F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BB92 RID: 179090 RVA: 0x006043F4 File Offset: 0x006025F4
+		// Token: 0x0602E2FB RID: 189179 RVA: 0x0064F400 File Offset: 0x0064D600
 		public IChangeBehaviorState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCD4 RID: 48340
-		// (get) Token: 0x0602BB93 RID: 179091 RVA: 0x00604404 File Offset: 0x00602604
+		// Token: 0x1700C65E RID: 50782
+		// (get) Token: 0x0602E2FC RID: 189180 RVA: 0x0064F410 File Offset: 0x0064D610
 		public int StateId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BCD5 RID: 48341
-		// (get) Token: 0x0602BB94 RID: 179092 RVA: 0x00604440 File Offset: 0x00602640
+		// Token: 0x1700C65F RID: 50783
+		// (get) Token: 0x0602E2FD RID: 189181 RVA: 0x0064F44C File Offset: 0x0064D64C
 		public bool IsInstant
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BB95 RID: 179093 RVA: 0x0060447F File Offset: 0x0060267F
+		// Token: 0x0602E2FE RID: 189182 RVA: 0x0064F48B File Offset: 0x0064D68B
 		public static Offset<IChangeBehaviorState> CreateIChangeBehaviorState(FlatBufferBuilder builder, int StateId = 0, bool IsInstant = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeBehaviorState.EndIChangeBehaviorState(builder);
 		}
 
-		// Token: 0x0602BB96 RID: 179094 RVA: 0x0060449C File Offset: 0x0060269C
+		// Token: 0x0602E2FF RID: 189183 RVA: 0x0064F4A8 File Offset: 0x0064D6A8
 		public static void StartIChangeBehaviorState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602BB97 RID: 179095 RVA: 0x006044A5 File Offset: 0x006026A5
+		// Token: 0x0602E300 RID: 189184 RVA: 0x0064F4B1 File Offset: 0x0064D6B1
 		public static void AddStateId(FlatBufferBuilder builder, int stateId)
 		{
 			builder.AddInt(0, stateId, 0);
 		}
 
-		// Token: 0x0602BB98 RID: 179096 RVA: 0x006044B0 File Offset: 0x006026B0
+		// Token: 0x0602E301 RID: 189185 RVA: 0x0064F4BC File Offset: 0x0064D6BC
 		public static void AddIsInstant(FlatBufferBuilder builder, bool isInstant)
 		{
 			builder.AddBool(1, isInstant, false);
 		}
 
-		// Token: 0x0602BB99 RID: 179097 RVA: 0x006044BB File Offset: 0x006026BB
+		// Token: 0x0602E302 RID: 189186 RVA: 0x0064F4C7 File Offset: 0x0064D6C7
 		public static Offset<IChangeBehaviorState> EndIChangeBehaviorState(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeBehaviorState>(builder.EndTable());
 		}
 
-		// Token: 0x0602BB9A RID: 179098 RVA: 0x006044C8 File Offset: 0x006026C8
+		// Token: 0x0602E303 RID: 189187 RVA: 0x0064F4D4 File Offset: 0x0064D6D4
 		public IChangeBehaviorStateT UnPack()
 		{
 			IChangeBehaviorStateT changeBehaviorStateT = new IChangeBehaviorStateT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeBehaviorStateT;
 		}
 
-		// Token: 0x0602BB9B RID: 179099 RVA: 0x006044E3 File Offset: 0x006026E3
+		// Token: 0x0602E304 RID: 189188 RVA: 0x0064F4EF File Offset: 0x0064D6EF
 		public void UnPackTo(IChangeBehaviorStateT _o)
 		{
 			_o.StateId = this.StateId;
 			_o.IsInstant = this.IsInstant;
 		}
 
-		// Token: 0x0602BB9C RID: 179100 RVA: 0x00604500 File Offset: 0x00602700
+		// Token: 0x0602E305 RID: 189189 RVA: 0x0064F50C File Offset: 0x0064D70C
 		public static Offset<IChangeBehaviorState> Pack(FlatBufferBuilder builder, IChangeBehaviorStateT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeBehaviorState.CreateIChangeBehaviorState(builder, _o.StateId, _o.IsInstant);
 		}
 
-		// Token: 0x04010877 RID: 67703
+		// Token: 0x0401168D RID: 71309
 		private Table __p;
 	}
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 {
-	// Token: 0x020069EE RID: 27118
+	// Token: 0x02005B4B RID: 23371
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SunSpiritData
 	{
-		// Token: 0x06043771 RID: 276337 RVA: 0x0107DE26 File Offset: 0x0107C026
+		// Token: 0x060397BA RID: 235450 RVA: 0x010224DA File Offset: 0x010206DA
 		public SunSpiritData(int sunSpiritId)
 		{
 			this.SunSpiritId = sunSpiritId;
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.Perform = new SunSpiritNonePerform(this, MathUtils.Instance.DefaultTransformProxy);
 		}
 
-		// Token: 0x17009885 RID: 39045
-		// (get) Token: 0x06043772 RID: 276338 RVA: 0x0107DE63 File Offset: 0x0107C063
+		// Token: 0x17006D66 RID: 28006
+		// (get) Token: 0x060397BB RID: 235451 RVA: 0x01022517 File Offset: 0x01020717
 		public ESunSpiritStateType StateType
 		{
 			get
@@ -30,27 +30,27 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043773 RID: 276339 RVA: 0x0107DE70 File Offset: 0x0107C070
+		// Token: 0x060397BC RID: 235452 RVA: 0x01022524 File Offset: 0x01020724
 		public void StopCurrentSunSpiritState()
 		{
 			this.State.IsFinished = true;
 		}
 
-		// Token: 0x06043774 RID: 276340 RVA: 0x0107DE7E File Offset: 0x0107C07E
+		// Token: 0x060397BD RID: 235453 RVA: 0x01022532 File Offset: 0x01020732
 		public void StopAllSunSpiritState()
 		{
 			this.State.IsFinished = true;
 			this.PendingStateQueue.Clear();
 		}
 
-		// Token: 0x06043775 RID: 276341 RVA: 0x0107DE97 File Offset: 0x0107C097
+		// Token: 0x060397BE RID: 235454 RVA: 0x0102254B File Offset: 0x0102074B
 		[NullableContext(1)]
 		public void SetNextSunSpiritState(SunSpiritBaseState newState)
 		{
 			this.PendingStateQueue.Push(newState);
 		}
 
-		// Token: 0x06043776 RID: 276342 RVA: 0x0107DEA8 File Offset: 0x0107C0A8
+		// Token: 0x060397BF RID: 235455 RVA: 0x0102255C File Offset: 0x0102075C
 		[NullableContext(1)]
 		public void StopAllAndSetNextSunSpiritState(SunSpiritBaseState newState, bool bDoIfSameState = false)
 		{
@@ -63,14 +63,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.SetNextSunSpiritState(newState);
 		}
 
-		// Token: 0x06043777 RID: 276343 RVA: 0x0107DF00 File Offset: 0x0107C100
+		// Token: 0x060397C0 RID: 235456 RVA: 0x010225B4 File Offset: 0x010207B4
 		[NullableContext(1)]
 		public SunSpiritBaseState GetSunSpiritState()
 		{
 			return this.State;
 		}
 
-		// Token: 0x06043778 RID: 276344 RVA: 0x0107DF08 File Offset: 0x0107C108
+		// Token: 0x060397C1 RID: 235457 RVA: 0x010225BC File Offset: 0x010207BC
 		public void TickState(float deltaSeconds)
 		{
 			if (this.State.IsFinished)
@@ -95,14 +95,14 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043779 RID: 276345 RVA: 0x0107DF8C File Offset: 0x0107C18C
+		// Token: 0x060397C2 RID: 235458 RVA: 0x01022640 File Offset: 0x01020840
 		[NullableContext(1)]
 		public SunSpiritBasePerform GetSunSpiritPerform()
 		{
 			return this.Perform;
 		}
 
-		// Token: 0x0604377A RID: 276346 RVA: 0x0107DF94 File Offset: 0x0107C194
+		// Token: 0x060397C3 RID: 235459 RVA: 0x01022648 File Offset: 0x01020848
 		[NullableContext(1)]
 		public void ChangeSunSpiritPerform(SunSpiritBasePerform newPerform)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x0604377B RID: 276347 RVA: 0x0107DFEC File Offset: 0x0107C1EC
+		// Token: 0x060397C4 RID: 235460 RVA: 0x010226A0 File Offset: 0x010208A0
 		[NullableContext(1)]
 		public void SetOrUpdateSunSpiritBasicDataByProto(SunSpiritPb sunSpiritPb)
 		{
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.AreaId = SunSpiritModel.Instance.GetSunSpiritAreaIdByConfigId(this.InstId, this.ConfigId);
 		}
 
-		// Token: 0x0604377C RID: 276348 RVA: 0x0107E044 File Offset: 0x0107C244
+		// Token: 0x060397C5 RID: 235461 RVA: 0x010226F8 File Offset: 0x010208F8
 		public void RefreshSunSpiritStateByCachedProto(bool bDoIfSameState)
 		{
 			if (this.PbData == null)
@@ -153,8 +153,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			this.StopAllAndSetNextSunSpiritState(new SunSpiritOccupiedByPlayerState(this), bDoIfSameState);
 		}
 
-		// Token: 0x17009886 RID: 39046
-		// (get) Token: 0x0604377D RID: 276349 RVA: 0x0107E0D8 File Offset: 0x0107C2D8
+		// Token: 0x17006D67 RID: 28007
+		// (get) Token: 0x060397C6 RID: 235462 RVA: 0x0102278C File Offset: 0x0102098C
 		public global::Vector Location
 		{
 			get
@@ -175,8 +175,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x17009887 RID: 39047
-		// (get) Token: 0x0604377E RID: 276350 RVA: 0x0107E13C File Offset: 0x0107C33C
+		// Token: 0x17006D68 RID: 28008
+		// (get) Token: 0x060397C7 RID: 235463 RVA: 0x010227F0 File Offset: 0x010209F0
 		public global::Rotator Rotator
 		{
 			get
@@ -202,8 +202,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x17009888 RID: 39048
-		// (get) Token: 0x0604377F RID: 276351 RVA: 0x0107E1EC File Offset: 0x0107C3EC
+		// Token: 0x17006D69 RID: 28009
+		// (get) Token: 0x060397C8 RID: 235464 RVA: 0x010228A0 File Offset: 0x01020AA0
 		public Quat Quaternion
 		{
 			get
@@ -217,8 +217,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x17009889 RID: 39049
-		// (get) Token: 0x06043780 RID: 276352 RVA: 0x0107E208 File Offset: 0x0107C408
+		// Token: 0x17006D6A RID: 28010
+		// (get) Token: 0x060397C9 RID: 235465 RVA: 0x010228BC File Offset: 0x01020ABC
 		public global::Vector Scale3D
 		{
 			get
@@ -239,8 +239,8 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x1700988A RID: 39050
-		// (get) Token: 0x06043781 RID: 276353 RVA: 0x0107E26C File Offset: 0x0107C46C
+		// Token: 0x17006D6B RID: 28011
+		// (get) Token: 0x060397CA RID: 235466 RVA: 0x01022920 File Offset: 0x01020B20
 		public global::Transform Transform
 		{
 			get
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			}
 		}
 
-		// Token: 0x06043782 RID: 276354 RVA: 0x0107E2D0 File Offset: 0x0107C4D0
+		// Token: 0x060397CB RID: 235467 RVA: 0x01022984 File Offset: 0x01020B84
 		[NullableContext(1)]
 		public void SetLocation(global::Vector value)
 		{
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransformData(this.LocationCache, null, null);
 		}
 
-		// Token: 0x06043783 RID: 276355 RVA: 0x0107E328 File Offset: 0x0107C528
+		// Token: 0x060397CC RID: 235468 RVA: 0x010229DC File Offset: 0x01020BDC
 		public void SetRotation(object value)
 		{
 			if (this.RotatorCache == null)
@@ -304,7 +304,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransformData(null, this.RotatorCache, null);
 		}
 
-		// Token: 0x06043784 RID: 276356 RVA: 0x0107E3FC File Offset: 0x0107C5FC
+		// Token: 0x060397CD RID: 235469 RVA: 0x01022AB0 File Offset: 0x01020CB0
 		[NullableContext(1)]
 		public void SetLocationAndRotation(global::Vector location, [Nullable(2)] object rotation)
 		{
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransformData(this.LocationCache, this.RotatorCache, null);
 		}
 
-		// Token: 0x06043785 RID: 276357 RVA: 0x0107E4F4 File Offset: 0x0107C6F4
+		// Token: 0x060397CE RID: 235470 RVA: 0x01022BA8 File Offset: 0x01020DA8
 		[NullableContext(1)]
 		public void SetScale3D(global::Vector value)
 		{
@@ -353,7 +353,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransformData(null, null, this.ScaleCache);
 		}
 
-		// Token: 0x06043786 RID: 276358 RVA: 0x0107E54C File Offset: 0x0107C74C
+		// Token: 0x060397CF RID: 235471 RVA: 0x01022C00 File Offset: 0x01020E00
 		[NullableContext(1)]
 		public void SetTransform(global::Transform transform)
 		{
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransform(this.TransformCache);
 		}
 
-		// Token: 0x06043787 RID: 276359 RVA: 0x0107E5B0 File Offset: 0x0107C7B0
+		// Token: 0x060397D0 RID: 235472 RVA: 0x01022C64 File Offset: 0x01020E64
 		public void SetTransform(FTransform transform)
 		{
 			if (this.TransformCache == null)
@@ -378,61 +378,61 @@ namespace CSharpScript.Game.LevelGamePlay.SunSpirit
 			((ISunSpiritScenePerform)this.Perform).SetTransform(this.TransformCache);
 		}
 
-		// Token: 0x04023364 RID: 144228
+		// Token: 0x0401E556 RID: 124246
 		public readonly int SunSpiritId;
 
-		// Token: 0x04023365 RID: 144229
+		// Token: 0x0401E557 RID: 124247
 		public int InstId;
 
-		// Token: 0x04023366 RID: 144230
+		// Token: 0x0401E558 RID: 124248
 		public int ConfigId;
 
-		// Token: 0x04023367 RID: 144231
+		// Token: 0x0401E559 RID: 124249
 		public int AreaId;
 
-		// Token: 0x04023368 RID: 144232
+		// Token: 0x0401E55A RID: 124250
 		public int PlayerId;
 
-		// Token: 0x04023369 RID: 144233
+		// Token: 0x0401E55B RID: 124251
 		public SunSpiritPb PbData;
 
-		// Token: 0x0402336A RID: 144234
+		// Token: 0x0401E55C RID: 124252
 		[Nullable(1)]
 		private SunSpiritBaseState State;
 
-		// Token: 0x0402336B RID: 144235
+		// Token: 0x0401E55D RID: 124253
 		[Nullable(1)]
 		private readonly Queue<SunSpiritBaseState> PendingStateQueue = new Queue<SunSpiritBaseState>(4);
 
-		// Token: 0x0402336C RID: 144236
+		// Token: 0x0401E55E RID: 124254
 		[Nullable(1)]
 		private SunSpiritBasePerform Perform;
 
-		// Token: 0x0402336D RID: 144237
+		// Token: 0x0401E55F RID: 124255
 		private global::Vector LocationCache;
 
-		// Token: 0x0402336E RID: 144238
+		// Token: 0x0401E560 RID: 124256
 		private int LocationCachedTime;
 
-		// Token: 0x0402336F RID: 144239
+		// Token: 0x0401E561 RID: 124257
 		private Quat QuaternionCache;
 
-		// Token: 0x04023370 RID: 144240
+		// Token: 0x0401E562 RID: 124258
 		private global::Rotator RotatorCache;
 
-		// Token: 0x04023371 RID: 144241
+		// Token: 0x0401E563 RID: 124259
 		private int RotationCachedTime;
 
-		// Token: 0x04023372 RID: 144242
+		// Token: 0x0401E564 RID: 124260
 		private global::Vector ScaleCache;
 
-		// Token: 0x04023373 RID: 144243
+		// Token: 0x0401E565 RID: 124261
 		private int ScaleCachedTime;
 
-		// Token: 0x04023374 RID: 144244
+		// Token: 0x0401E566 RID: 124262
 		private global::Transform TransformCache;
 
-		// Token: 0x04023375 RID: 144245
+		// Token: 0x0401E567 RID: 124263
 		private int TransformCacheTime;
 	}
 }

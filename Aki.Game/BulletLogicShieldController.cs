@@ -6,7 +6,7 @@ using AkiClient.Game.Aki.Core.Fight;
 using CSharpScript.Game.World.Model;
 using UnrealEngine;
 
-// Token: 0x02002DD7 RID: 11735
+// Token: 0x02002331 RID: 9009
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BulletLogicShieldController : BulletLogicController<LogicDataShield, BulletInfo>
 {
-	// Token: 0x06018A37 RID: 100919 RVA: 0x0064E0C4 File Offset: 0x0064C2C4
+	// Token: 0x060162DF RID: 90847 RVA: 0x00673EB0 File Offset: 0x006720B0
 	[NullableContext(1)]
 	public BulletLogicShieldController(LogicDataShield logicData, Entity bullet) : base(logicData, bullet)
 	{
@@ -88,14 +88,14 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		}
 	}
 
-	// Token: 0x06018A38 RID: 100920 RVA: 0x0064E2E8 File Offset: 0x0064C4E8
+	// Token: 0x060162E0 RID: 90848 RVA: 0x006740D4 File Offset: 0x006722D4
 	public override void OnInit()
 	{
 		this.BulletInfo = this.Bullet.GetBulletInfo();
 		this.BulletInfo.IsShield = true;
 	}
 
-	// Token: 0x06018A39 RID: 100921 RVA: 0x0064E308 File Offset: 0x0064C508
+	// Token: 0x060162E1 RID: 90849 RVA: 0x006740F4 File Offset: 0x006722F4
 	public override void BulletLogicAction(BulletInfo otherBulletInfo = null)
 	{
 		if (!this.CheckCanDefense(otherBulletInfo))
@@ -149,7 +149,7 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		BulletHitCountUtil.AddHitCount(this.BulletInfo, otherBulletInfo.Attacker);
 	}
 
-	// Token: 0x06018A3A RID: 100922 RVA: 0x0064E478 File Offset: 0x0064C678
+	// Token: 0x060162E2 RID: 90850 RVA: 0x00674264 File Offset: 0x00672464
 	[NullableContext(1)]
 	public bool CheckCanDefense(BulletInfo otherBulletInfo)
 	{
@@ -239,7 +239,7 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		return true;
 	}
 
-	// Token: 0x06018A3B RID: 100923 RVA: 0x0064E700 File Offset: 0x0064C900
+	// Token: 0x060162E3 RID: 90851 RVA: 0x006744EC File Offset: 0x006726EC
 	private bool CheckBulletCampType(ECampType campTypeNeedCheck, int bulletCamp)
 	{
 		if (campTypeNeedCheck == ECampType.全部)
@@ -254,7 +254,7 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		return (bulletCamp & num) != 0;
 	}
 
-	// Token: 0x06018A3C RID: 100924 RVA: 0x0064E728 File Offset: 0x0064C928
+	// Token: 0x060162E4 RID: 90852 RVA: 0x00674514 File Offset: 0x00672714
 	private bool CheckBulletCalcType(int[] needCheck, int otherBulletCalcType)
 	{
 		if (needCheck == null)
@@ -273,7 +273,7 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		return false;
 	}
 
-	// Token: 0x0400B781 RID: 46977
+	// Token: 0x0400BAFC RID: 47868
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly int[] CampTypeBitMask = new int[]
@@ -286,10 +286,10 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 		5
 	};
 
-	// Token: 0x0400B782 RID: 46978
+	// Token: 0x0400BAFD RID: 47869
 	private BulletInfo BulletInfo;
 
-	// Token: 0x0400B783 RID: 46979
+	// Token: 0x0400BAFE RID: 47870
 	[Nullable(new byte[]
 	{
 		2,
@@ -297,7 +297,7 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 	})]
 	private readonly string[] NotDefenseBulletId;
 
-	// Token: 0x0400B784 RID: 46980
+	// Token: 0x0400BAFF RID: 47871
 	[Nullable(new byte[]
 	{
 		2,
@@ -305,18 +305,18 @@ public class BulletLogicShieldController : BulletLogicController<LogicDataShield
 	})]
 	private readonly string[] DefenseBulletId;
 
-	// Token: 0x0400B785 RID: 46981
+	// Token: 0x0400BB00 RID: 47872
 	private readonly long[] AddBuffToEnemy;
 
-	// Token: 0x0400B786 RID: 46982
+	// Token: 0x0400BB01 RID: 47873
 	private readonly long[] AddBuffToSelf;
 
-	// Token: 0x0400B787 RID: 46983
+	// Token: 0x0400BB02 RID: 47874
 	private readonly int[] SelfCalcTypes;
 
-	// Token: 0x0400B788 RID: 46984
+	// Token: 0x0400BB03 RID: 47875
 	private readonly int[] FriendCalcTypes;
 
-	// Token: 0x0400B789 RID: 46985
+	// Token: 0x0400BB04 RID: 47876
 	private readonly int[] EnemyCalcTypes;
 }

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020026F5 RID: 9973
+	// Token: 0x020007CF RID: 1999
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.MovieSceneQteSection")]
-	[UnrealStructLayout(504, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 504)]
+	[UnrealStructLayout(544, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 544)]
 	public class UMovieSceneQteSection : UMovieSceneSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06024FF0 RID: 151536 RVA: 0x0036BB04 File Offset: 0x00369D04
+		// Token: 0x0600AC9E RID: 44190 RVA: 0x000FECD1 File Offset: 0x000FCED1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneQteSection._ClassPtr;
 		}
 
-		// Token: 0x06024FF1 RID: 151537 RVA: 0x0036BB10 File Offset: 0x00369D10
+		// Token: 0x0600AC9F RID: 44191 RVA: 0x000FECE0 File Offset: 0x000FCEE0
 		public UMovieSceneQteSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneQteSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06024FF2 RID: 151538 RVA: 0x0036BB38 File Offset: 0x00369D38
+		// Token: 0x0600ACA0 RID: 44192 RVA: 0x000FED08 File Offset: 0x000FCF08
 		public UMovieSceneQteSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneQteSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008EE0 RID: 36576
-		// (get) Token: 0x06024FF3 RID: 151539 RVA: 0x0036BB6C File Offset: 0x00369D6C
-		// (set) Token: 0x06024FF4 RID: 151540 RVA: 0x0036BBA5 File Offset: 0x00369DA5
+		// Token: 0x17002037 RID: 8247
+		// (get) Token: 0x0600ACA1 RID: 44193 RVA: 0x000FED3C File Offset: 0x000FCF3C
+		// (set) Token: 0x0600ACA2 RID: 44194 RVA: 0x000FED75 File Offset: 0x000FCF75
 		public FMovieSceneQteParams Params
 		{
 			get
@@ -50,30 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024FF5 RID: 151541 RVA: 0x0036BBC6 File Offset: 0x00369DC6
+		// Token: 0x0600ACA3 RID: 44195 RVA: 0x000FED96 File Offset: 0x000FCF96
 		static UMovieSceneQteSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SequenceDialogue.MovieSceneQteSection");
 		}
 
-		// Token: 0x06024FF6 RID: 151542 RVA: 0x0036BBD4 File Offset: 0x00369DD4
+		// Token: 0x0600ACA4 RID: 44196 RVA: 0x000FEDA4 File Offset: 0x000FCFA4
 		protected UMovieSceneQteSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013EFE RID: 81662
+		// Token: 0x04004A69 RID: 19049
 		public new const string __ObjectPath = "/Script/SequenceDialogue.MovieSceneQteSection";
 
-		// Token: 0x04013EFF RID: 81663
+		// Token: 0x04004A6A RID: 19050
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013F00 RID: 81664
+		// Token: 0x04004A6B RID: 19051
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013F01 RID: 81665
+		// Token: 0x04004A6C RID: 19052
 		internal static int __PropertyOffset_Params;
 
-		// Token: 0x04013F02 RID: 81666
+		// Token: 0x04004A6D RID: 19053
 		[Nullable(2)]
 		private FMovieSceneQteParams _Params;
 	}

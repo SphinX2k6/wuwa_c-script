@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D6C RID: 19820
+	// Token: 0x0200526B RID: 21099
 	public enum EAttachRuleType : byte
 	{
-		// Token: 0x0400D7E2 RID: 55266
+		// Token: 0x0400E31B RID: 58139
 		Relatively,
-		// Token: 0x0400D7E3 RID: 55267
+		// Token: 0x0400E31C RID: 58140
 		Absolute,
-		// Token: 0x0400D7E4 RID: 55268
+		// Token: 0x0400E31D RID: 58141
 		AlignTarget,
-		// Token: 0x0400D7E5 RID: 55269
+		// Token: 0x0400E31E RID: 58142
 		SpecialRuleSwordRail
 	}
 }

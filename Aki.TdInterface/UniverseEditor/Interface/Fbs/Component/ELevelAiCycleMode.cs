@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DC5 RID: 19909
+	// Token: 0x020052C9 RID: 21193
 	public enum ELevelAiCycleMode : byte
 	{
-		// Token: 0x0400DA1C RID: 55836
+		// Token: 0x0400E56B RID: 58731
 		Loop
 	}
 }

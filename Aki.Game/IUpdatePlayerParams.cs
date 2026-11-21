@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002956 RID: 10582
+// Token: 0x02001ED1 RID: 7889
 [NullableContext(1)]
 public interface IUpdatePlayerParams
 {
-	// Token: 0x17001D64 RID: 7524
-	// (get) Token: 0x06015DD4 RID: 89556
-	// (set) Token: 0x06015DD5 RID: 89557
+	// Token: 0x17001DBD RID: 7613
+	// (get) Token: 0x060137D8 RID: 79832
+	// (set) Token: 0x060137D9 RID: 79833
 	int PlayerId { get; set; }
 
-	// Token: 0x17001D65 RID: 7525
-	// (get) Token: 0x06015DD6 RID: 89558
-	// (set) Token: 0x06015DD7 RID: 89559
+	// Token: 0x17001DBE RID: 7614
+	// (get) Token: 0x060137DA RID: 79834
+	// (set) Token: 0x060137DB RID: 79835
 	ETeamGroupType CurrentGroupType { get; set; }
 
-	// Token: 0x17001D66 RID: 7526
-	// (get) Token: 0x06015DD8 RID: 89560
-	// (set) Token: 0x06015DD9 RID: 89561
+	// Token: 0x17001DBF RID: 7615
+	// (get) Token: 0x060137DC RID: 79836
+	// (set) Token: 0x060137DD RID: 79837
 	IList<IUpdateGroupParams> Groups { get; set; }
 }

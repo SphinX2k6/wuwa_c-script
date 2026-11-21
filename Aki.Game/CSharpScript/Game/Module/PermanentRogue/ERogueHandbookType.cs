@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x020052F0 RID: 21232
+	// Token: 0x020042C0 RID: 17088
 	public enum ERogueHandbookType
 	{
-		// Token: 0x0401CB41 RID: 117569
+		// Token: 0x04017577 RID: 95607
 		Token,
-		// Token: 0x0401CB42 RID: 117570
+		// Token: 0x04017578 RID: 95608
 		NormalEvent,
-		// Token: 0x0401CB43 RID: 117571
+		// Token: 0x04017579 RID: 95609
 		MapEvent
 	}
 }

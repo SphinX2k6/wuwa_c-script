@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x0200509A RID: 20634
+	// Token: 0x0200406A RID: 16490
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TalkRecord
 	{
-		// Token: 0x17008089 RID: 32905
-		// (get) Token: 0x06034E11 RID: 216593 RVA: 0x00C82BD3 File Offset: 0x00C80DD3
-		// (set) Token: 0x06034E12 RID: 216594 RVA: 0x00C82BDB File Offset: 0x00C80DDB
+		// Token: 0x17005449 RID: 21577
+		// (get) Token: 0x06029D0A RID: 171274 RVA: 0x00BCFDF3 File Offset: 0x00BCDFF3
+		// (set) Token: 0x06029D0B RID: 171275 RVA: 0x00BCFDFB File Offset: 0x00BCDFFB
 		public ITalkItem TalkItem { get; set; }
 
-		// Token: 0x1700808A RID: 32906
-		// (get) Token: 0x06034E13 RID: 216595 RVA: 0x00C82BE4 File Offset: 0x00C80DE4
-		// (set) Token: 0x06034E14 RID: 216596 RVA: 0x00C82BEC File Offset: 0x00C80DEC
+		// Token: 0x1700544A RID: 21578
+		// (get) Token: 0x06029D0C RID: 171276 RVA: 0x00BCFE04 File Offset: 0x00BCE004
+		// (set) Token: 0x06029D0D RID: 171277 RVA: 0x00BCFE0C File Offset: 0x00BCE00C
 		public bool IsOption { get; set; }
 
-		// Token: 0x1700808B RID: 32907
-		// (get) Token: 0x06034E15 RID: 216597 RVA: 0x00C82BF5 File Offset: 0x00C80DF5
-		// (set) Token: 0x06034E16 RID: 216598 RVA: 0x00C82BFD File Offset: 0x00C80DFD
+		// Token: 0x1700544B RID: 21579
+		// (get) Token: 0x06029D0E RID: 171278 RVA: 0x00BCFE15 File Offset: 0x00BCE015
+		// (set) Token: 0x06029D0F RID: 171279 RVA: 0x00BCFE1D File Offset: 0x00BCE01D
 		public int? OptionIndex { get; set; }
 	}
 }

@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B89 RID: 7049
+	// Token: 0x02001D36 RID: 7478
 	public class ILiftMoveTypeTeleport_SetValue
 	{
-		// Token: 0x04005C34 RID: 23604
+		// Token: 0x040060CD RID: 24781
 		public ELiftMoveType Type;
 
-		// Token: 0x04005C35 RID: 23605
+		// Token: 0x040060CE RID: 24782
 		public float StartTeleportOffsetDistance;
 
-		// Token: 0x04005C36 RID: 23606
+		// Token: 0x040060CF RID: 24783
 		public float EndTeleportOffsetDistance;
 
-		// Token: 0x04005C37 RID: 23607
+		// Token: 0x040060D0 RID: 24784
 		public bool SendTeleportEvent;
 
-		// Token: 0x04005C38 RID: 23608
+		// Token: 0x040060D1 RID: 24785
 		public float TeleportStartEventOffsetDistance;
 	}
 }

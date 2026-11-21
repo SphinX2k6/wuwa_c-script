@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001299 RID: 4761
+	// Token: 0x020013DB RID: 5083
 	public class ESurvivorsRougeSystemVarTypeJsonConverter : JsonConverter<ESurvivorsRougeSystemVarType>
 	{
-		// Token: 0x06006B59 RID: 27481 RVA: 0x00101F58 File Offset: 0x00100158
+		// Token: 0x060071B5 RID: 29109 RVA: 0x0010FD30 File Offset: 0x0010DF30
 		public override ESurvivorsRougeSystemVarType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ESurvivorsRougeSystemVarTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B5A RID: 27482 RVA: 0x00101F7C File Offset: 0x0010017C
+		// Token: 0x060071B6 RID: 29110 RVA: 0x0010FD54 File Offset: 0x0010DF54
 		public override void Write(Utf8JsonWriter writer, ESurvivorsRougeSystemVarType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

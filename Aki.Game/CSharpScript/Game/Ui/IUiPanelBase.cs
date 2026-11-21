@@ -4,19 +4,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200461E RID: 17950
+	// Token: 0x02003547 RID: 13639
 	[NullableContext(2)]
 	public interface IUiPanelBase
 	{
-		// Token: 0x170075D9 RID: 30169
-		// (get) Token: 0x0602E418 RID: 189464
-		// (set) Token: 0x0602E419 RID: 189465
+		// Token: 0x17004891 RID: 18577
+		// (get) Token: 0x06022B0D RID: 142093
+		// (set) Token: 0x06022B0E RID: 142094
 		bool SkipDestroyActor { get; set; }
 
-		// Token: 0x0602E41A RID: 189466
+		// Token: 0x06022B0F RID: 142095
 		void SetUiActive(bool visibility);
 
-		// Token: 0x0602E41B RID: 189467
+		// Token: 0x06022B10 RID: 142096
 		UUIItem GetRootItem();
 	}
 }

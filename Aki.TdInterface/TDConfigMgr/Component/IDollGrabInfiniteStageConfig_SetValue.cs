@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C4 RID: 708
+	// Token: 0x0200030B RID: 779
 	public class IDollGrabInfiniteStageConfig_SetValue
 	{
-		// Token: 0x04000C21 RID: 3105
+		// Token: 0x04000D0B RID: 3339
 		public float Duration;
 
-		// Token: 0x04000C22 RID: 3106
+		// Token: 0x04000D0C RID: 3340
 		[Nullable(2)]
 		public IDollGrabStageAudioState AudioState;
 	}

@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A28 RID: 23080
+	// Token: 0x02004A04 RID: 18948
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeStrongholdData
 	{
-		// Token: 0x17008BD9 RID: 35801
-		// (get) Token: 0x0603A8F9 RID: 239865 RVA: 0x00DF00D0 File Offset: 0x00DEE2D0
+		// Token: 0x17005FA7 RID: 24487
+		// (get) Token: 0x0602F842 RID: 194626 RVA: 0x00D40654 File Offset: 0x00D3E854
 		public bool IsPass
 		{
 			get
@@ -24,45 +24,45 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A8FA RID: 239866 RVA: 0x00DF00D8 File Offset: 0x00DEE2D8
+		// Token: 0x0602F843 RID: 194627 RVA: 0x00D4065C File Offset: 0x00D3E85C
 		public FlagChallengeStrongholdData(int id)
 		{
 			this.Id = id;
 			this.StrongholdConfig = FlagChallengeConfig.Instance.GetStrongholdConfig(id).Value;
 		}
 
-		// Token: 0x0603A8FB RID: 239867 RVA: 0x00DF010B File Offset: 0x00DEE30B
+		// Token: 0x0602F844 RID: 194628 RVA: 0x00D4068F File Offset: 0x00D3E88F
 		public void Refresh(FlagStrongholdInfo strongholdData)
 		{
 			this.IsPassIntl = strongholdData.IsPass;
 		}
 
-		// Token: 0x0603A8FC RID: 239868 RVA: 0x00DF0119 File Offset: 0x00DEE319
+		// Token: 0x0602F845 RID: 194629 RVA: 0x00D4069D File Offset: 0x00D3E89D
 		public EFlagChallengeStrongholdType GetStrongholdType()
 		{
 			return (EFlagChallengeStrongholdType)this.StrongholdConfig.Type;
 		}
 
-		// Token: 0x0603A8FD RID: 239869 RVA: 0x00DF0126 File Offset: 0x00DEE326
+		// Token: 0x0602F846 RID: 194630 RVA: 0x00D406AA File Offset: 0x00D3E8AA
 		public bool IsBossStronghold()
 		{
 			return this.GetStrongholdType() == EFlagChallengeStrongholdType.Boss;
 		}
 
-		// Token: 0x0603A8FE RID: 239870 RVA: 0x00DF0134 File Offset: 0x00DEE334
+		// Token: 0x0602F847 RID: 194631 RVA: 0x00D406B8 File Offset: 0x00D3E8B8
 		public unsafe FVector GetUiRelativePos()
 		{
 			Span<int> uiRelativePosBytes = this.StrongholdConfig.GetUiRelativePosBytes();
 			return new FVector((float)(*uiRelativePosBytes[0]), (float)(*uiRelativePosBytes[1]), 0f);
 		}
 
-		// Token: 0x0603A8FF RID: 239871 RVA: 0x00DF016B File Offset: 0x00DEE36B
+		// Token: 0x0602F848 RID: 194632 RVA: 0x00D406EF File Offset: 0x00D3E8EF
 		public int GetIndex()
 		{
 			return this.StrongholdConfig.Index;
 		}
 
-		// Token: 0x0603A900 RID: 239872 RVA: 0x00DF0178 File Offset: 0x00DEE378
+		// Token: 0x0602F849 RID: 194633 RVA: 0x00D406FC File Offset: 0x00D3E8FC
 		public IMapMoraleLvItemData GetMapFlagChallengeLvItemData()
 		{
 			int monsterLevel = this.StrongholdConfig.MonsterLevel;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A901 RID: 239873 RVA: 0x00DF0228 File Offset: 0x00DEE428
+		// Token: 0x0602F84A RID: 194634 RVA: 0x00D407AC File Offset: 0x00D3E9AC
 		public bool IsLowLevel()
 		{
 			if (this.IsPassIntl)
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return !instance.IsReachTargetLevel(strongholdActivityId, this.StrongholdConfig.RecommendLevel) && instance.GetTotalLevel(strongholdActivityId) < instance.GetMaxLevel(strongholdActivityId);
 		}
 
-		// Token: 0x0603A902 RID: 239874 RVA: 0x00DF0277 File Offset: 0x00DEE477
+		// Token: 0x0602F84B RID: 194635 RVA: 0x00D407FB File Offset: 0x00D3E9FB
 		public int GetMarkId()
 		{
 			return this.StrongholdConfig.MarkId;
 		}
 
-		// Token: 0x0603A903 RID: 239875 RVA: 0x00DF0284 File Offset: 0x00DEE484
+		// Token: 0x0602F84C RID: 194636 RVA: 0x00D40808 File Offset: 0x00D3EA08
 		public bool CanTeleport()
 		{
 			int markId = this.GetMarkId();
@@ -140,19 +140,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return !flag;
 		}
 
-		// Token: 0x0603A904 RID: 239876 RVA: 0x00DF0308 File Offset: 0x00DEE508
+		// Token: 0x0602F84D RID: 194637 RVA: 0x00D4088C File Offset: 0x00D3EA8C
 		public bool IsUnlocked()
 		{
 			return FlagChallengeModel.Instance.IsTeleportUnlock(this.GetMarkId());
 		}
 
-		// Token: 0x0401E7DB RID: 124891
+		// Token: 0x04019282 RID: 103042
 		public readonly int Id;
 
-		// Token: 0x0401E7DC RID: 124892
+		// Token: 0x04019283 RID: 103043
 		public FlagStronghold StrongholdConfig;
 
-		// Token: 0x0401E7DD RID: 124893
+		// Token: 0x04019284 RID: 103044
 		private bool IsPassIntl;
 	}
 }

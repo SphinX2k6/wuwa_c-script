@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C8B RID: 23691
+	// Token: 0x020062BC RID: 25276
 	public class TPortalViewDistanceConfigUnion
 	{
-		// Token: 0x1700B23A RID: 45626
-		// (get) Token: 0x06028947 RID: 166215 RVA: 0x0059426A File Offset: 0x0059246A
-		// (set) Token: 0x06028948 RID: 166216 RVA: 0x00594272 File Offset: 0x00592472
+		// Token: 0x1700BB94 RID: 48020
+		// (get) Token: 0x0602AF8D RID: 176013 RVA: 0x005DC9A2 File Offset: 0x005DABA2
+		// (set) Token: 0x0602AF8E RID: 176014 RVA: 0x005DC9AA File Offset: 0x005DABAA
 		public TPortalViewDistanceConfig Type { get; set; }
 
-		// Token: 0x1700B23B RID: 45627
-		// (get) Token: 0x06028949 RID: 166217 RVA: 0x0059427B File Offset: 0x0059247B
-		// (set) Token: 0x0602894A RID: 166218 RVA: 0x00594283 File Offset: 0x00592483
+		// Token: 0x1700BB95 RID: 48021
+		// (get) Token: 0x0602AF8F RID: 176015 RVA: 0x005DC9B3 File Offset: 0x005DABB3
+		// (set) Token: 0x0602AF90 RID: 176016 RVA: 0x005DC9BB File Offset: 0x005DABBB
 		public object Value { get; set; }
 
-		// Token: 0x0602894B RID: 166219 RVA: 0x0059428C File Offset: 0x0059248C
+		// Token: 0x0602AF91 RID: 176017 RVA: 0x005DC9C4 File Offset: 0x005DABC4
 		public TPortalViewDistanceConfigUnion()
 		{
 			this.Type = TPortalViewDistanceConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602894C RID: 166220 RVA: 0x005942A2 File Offset: 0x005924A2
+		// Token: 0x0602AF92 RID: 176018 RVA: 0x005DC9DA File Offset: 0x005DABDA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602894D RID: 166221 RVA: 0x005942B4 File Offset: 0x005924B4
+		// Token: 0x0602AF93 RID: 176019 RVA: 0x005DC9EC File Offset: 0x005DABEC
 		public ICustomViewDistanceT AsICustomViewDistance()
 		{
 			return this.As<ICustomViewDistanceT>();
 		}
 
-		// Token: 0x0602894E RID: 166222 RVA: 0x005942BC File Offset: 0x005924BC
+		// Token: 0x0602AF94 RID: 176020 RVA: 0x005DC9F4 File Offset: 0x005DABF4
 		public static TPortalViewDistanceConfigUnion FromICustomViewDistance(ICustomViewDistanceT _icustomviewdistance)
 		{
 			return new TPortalViewDistanceConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602894F RID: 166223 RVA: 0x005942D1 File Offset: 0x005924D1
+		// Token: 0x0602AF95 RID: 176021 RVA: 0x005DCA09 File Offset: 0x005DAC09
 		public IHighViewDistanceT AsIHighViewDistance()
 		{
 			return this.As<IHighViewDistanceT>();
 		}
 
-		// Token: 0x06028950 RID: 166224 RVA: 0x005942D9 File Offset: 0x005924D9
+		// Token: 0x0602AF96 RID: 176022 RVA: 0x005DCA11 File Offset: 0x005DAC11
 		public static TPortalViewDistanceConfigUnion FromIHighViewDistance(IHighViewDistanceT _ihighviewdistance)
 		{
 			return new TPortalViewDistanceConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028951 RID: 166225 RVA: 0x005942EE File Offset: 0x005924EE
+		// Token: 0x0602AF97 RID: 176023 RVA: 0x005DCA26 File Offset: 0x005DAC26
 		public ILowViewDistanceT AsILowViewDistance()
 		{
 			return this.As<ILowViewDistanceT>();
 		}
 
-		// Token: 0x06028952 RID: 166226 RVA: 0x005942F6 File Offset: 0x005924F6
+		// Token: 0x0602AF98 RID: 176024 RVA: 0x005DCA2E File Offset: 0x005DAC2E
 		public static TPortalViewDistanceConfigUnion FromILowViewDistance(ILowViewDistanceT _ilowviewdistance)
 		{
 			return new TPortalViewDistanceConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028953 RID: 166227 RVA: 0x0059430B File Offset: 0x0059250B
+		// Token: 0x0602AF99 RID: 176025 RVA: 0x005DCA43 File Offset: 0x005DAC43
 		public IMidViewDistanceT AsIMidViewDistance()
 		{
 			return this.As<IMidViewDistanceT>();
 		}
 
-		// Token: 0x06028954 RID: 166228 RVA: 0x00594313 File Offset: 0x00592513
+		// Token: 0x0602AF9A RID: 176026 RVA: 0x005DCA4B File Offset: 0x005DAC4B
 		public static TPortalViewDistanceConfigUnion FromIMidViewDistance(IMidViewDistanceT _imidviewdistance)
 		{
 			return new TPortalViewDistanceConfigUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028955 RID: 166229 RVA: 0x00594328 File Offset: 0x00592528
+		// Token: 0x0602AF9B RID: 176027 RVA: 0x005DCA60 File Offset: 0x005DAC60
 		public static int Pack(FlatBufferBuilder builder, TPortalViewDistanceConfigUnion _o)
 		{
 			switch (_o.Type)

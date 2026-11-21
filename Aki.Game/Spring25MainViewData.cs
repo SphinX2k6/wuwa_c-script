@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001510 RID: 5392
+// Token: 0x020009C8 RID: 2504
 [NullableContext(1)]
 [Nullable(0)]
 [RequiredMember]
 public class Spring25MainViewData
 {
-	// Token: 0x06009A01 RID: 39425 RVA: 0x0021541B File Offset: 0x0021361B
+	// Token: 0x06006DDF RID: 28127 RVA: 0x0021F1B7 File Offset: 0x0021D3B7
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public Spring25MainViewData()
 	{
 	}
 
-	// Token: 0x040043A5 RID: 17317
+	// Token: 0x0400444B RID: 17483
 	[RequiredMember]
 	public string TitleTextId;
 
-	// Token: 0x040043A6 RID: 17318
+	// Token: 0x0400444C RID: 17484
 	[RequiredMember]
 	public string InviteRemainCount;
 
-	// Token: 0x040043A7 RID: 17319
+	// Token: 0x0400444D RID: 17485
 	[RequiredMember]
 	public Dictionary<ESpring25RoleType, bool> CharacterInvitedMap;
 
-	// Token: 0x040043A8 RID: 17320
+	// Token: 0x0400444E RID: 17486
 	public ESpring25RoleType? NewRoleType;
 }

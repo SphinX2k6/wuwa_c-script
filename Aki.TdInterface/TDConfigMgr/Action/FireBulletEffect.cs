@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001727 RID: 5927
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018A4 RID: 6308
 	public class FireBulletEffect : ActionParams
 	{
-		// Token: 0x06007D7F RID: 32127 RVA: 0x0012D0B8 File Offset: 0x0012B2B8
+		// Token: 0x0600845D RID: 33885 RVA: 0x0013C164 File Offset: 0x0013A364
 		private FireBulletEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D80 RID: 32128 RVA: 0x0012D0F0 File Offset: 0x0012B2F0
+		// Token: 0x0600845E RID: 33886 RVA: 0x0013C19C File Offset: 0x0013A39C
 		public static FireBulletEffect Create([Nullable(2)] FireBulletEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D81 RID: 32129 RVA: 0x0012D103 File Offset: 0x0012B303
+		// Token: 0x0600845F RID: 33887 RVA: 0x0013C1AF File Offset: 0x0013A3AF
 		public static FireBulletEffect CreateFromSetValue([Nullable(2)] FireBulletEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D82 RID: 32130 RVA: 0x0012D118 File Offset: 0x0012B318
+		// Token: 0x06008460 RID: 33888 RVA: 0x0013C1C4 File Offset: 0x0013A3C4
 		public FireBulletEffect_SetValue ToSetValue()
 		{
 			return new FireBulletEffect_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002957 RID: 10583
-		// (get) Token: 0x06007D83 RID: 32131 RVA: 0x0012D166 File Offset: 0x0012B366
-		// (set) Token: 0x06007D84 RID: 32132 RVA: 0x0012D191 File Offset: 0x0012B391
+		// Token: 0x17002B42 RID: 11074
+		// (get) Token: 0x06008461 RID: 33889 RVA: 0x0013C212 File Offset: 0x0013A412
+		// (set) Token: 0x06008462 RID: 33890 RVA: 0x0013C23D File Offset: 0x0013A43D
 		public virtual int Id
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002958 RID: 10584
-		// (get) Token: 0x06007D85 RID: 32133 RVA: 0x0012D19F File Offset: 0x0012B39F
-		// (set) Token: 0x06007D86 RID: 32134 RVA: 0x0012D1CA File Offset: 0x0012B3CA
+		// Token: 0x17002B43 RID: 11075
+		// (get) Token: 0x06008463 RID: 33891 RVA: 0x0013C24B File Offset: 0x0013A44B
+		// (set) Token: 0x06008464 RID: 33892 RVA: 0x0013C276 File Offset: 0x0013A476
 		public virtual int X
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002959 RID: 10585
-		// (get) Token: 0x06007D87 RID: 32135 RVA: 0x0012D1D8 File Offset: 0x0012B3D8
-		// (set) Token: 0x06007D88 RID: 32136 RVA: 0x0012D203 File Offset: 0x0012B403
+		// Token: 0x17002B44 RID: 11076
+		// (get) Token: 0x06008465 RID: 33893 RVA: 0x0013C284 File Offset: 0x0013A484
+		// (set) Token: 0x06008466 RID: 33894 RVA: 0x0013C2AF File Offset: 0x0013A4AF
 		public virtual int Y
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700295A RID: 10586
-		// (get) Token: 0x06007D89 RID: 32137 RVA: 0x0012D211 File Offset: 0x0012B411
-		// (set) Token: 0x06007D8A RID: 32138 RVA: 0x0012D23C File Offset: 0x0012B43C
+		// Token: 0x17002B45 RID: 11077
+		// (get) Token: 0x06008467 RID: 33895 RVA: 0x0013C2BD File Offset: 0x0013A4BD
+		// (set) Token: 0x06008468 RID: 33896 RVA: 0x0013C2E8 File Offset: 0x0013A4E8
 		public virtual int Z
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700295B RID: 10587
-		// (get) Token: 0x06007D8B RID: 32139 RVA: 0x0012D24C File Offset: 0x0012B44C
-		// (set) Token: 0x06007D8C RID: 32140 RVA: 0x0012D286 File Offset: 0x0012B486
+		// Token: 0x17002B46 RID: 11078
+		// (get) Token: 0x06008469 RID: 33897 RVA: 0x0013C2F8 File Offset: 0x0013A4F8
+		// (set) Token: 0x0600846A RID: 33898 RVA: 0x0013C332 File Offset: 0x0013A532
 		public virtual EBulletLauncher? Launcher
 		{
 			get
@@ -179,11 +177,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005015 RID: 20501
+		// Token: 0x04005444 RID: 21572
 		[Nullable(2)]
 		protected new FireBulletEffect FbInstance;
 
-		// Token: 0x04005016 RID: 20502
+		// Token: 0x04005445 RID: 21573
 		[Nullable(2)]
 		protected FireBulletEffect_SetValue PocoInterface;
 	}

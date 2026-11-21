@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075C3 RID: 30147
+	// Token: 0x02007DBC RID: 32188
 	public class IVisualNovelPerformanceStopScreenEffectT
 	{
-		// Token: 0x1700E4F3 RID: 58611
-		// (get) Token: 0x06036E74 RID: 224884 RVA: 0x00773D9B File Offset: 0x00771F9B
-		// (set) Token: 0x06036E75 RID: 224885 RVA: 0x00773DA3 File Offset: 0x00771FA3
+		// Token: 0x1700F120 RID: 61728
+		// (get) Token: 0x0603A2A3 RID: 238243 RVA: 0x007D7507 File Offset: 0x007D5707
+		// (set) Token: 0x0603A2A4 RID: 238244 RVA: 0x007D750F File Offset: 0x007D570F
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E4F4 RID: 58612
-		// (get) Token: 0x06036E76 RID: 224886 RVA: 0x00773DAC File Offset: 0x00771FAC
-		// (set) Token: 0x06036E77 RID: 224887 RVA: 0x00773DB4 File Offset: 0x00771FB4
+		// Token: 0x1700F121 RID: 61729
+		// (get) Token: 0x0603A2A5 RID: 238245 RVA: 0x007D7518 File Offset: 0x007D5718
+		// (set) Token: 0x0603A2A6 RID: 238246 RVA: 0x007D7520 File Offset: 0x007D5720
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E4F5 RID: 58613
-		// (get) Token: 0x06036E78 RID: 224888 RVA: 0x00773DBD File Offset: 0x00771FBD
-		// (set) Token: 0x06036E79 RID: 224889 RVA: 0x00773DC5 File Offset: 0x00771FC5
-		public string ScreenEffectDa { get; set; }
+		// Token: 0x1700F122 RID: 61730
+		// (get) Token: 0x0603A2A7 RID: 238247 RVA: 0x007D7529 File Offset: 0x007D5729
+		// (set) Token: 0x0603A2A8 RID: 238248 RVA: 0x007D7531 File Offset: 0x007D5731
+		public IVisualNovelStopScreenEffectPersistentT EffectConfig { get; set; }
 
-		// Token: 0x1700E4F6 RID: 58614
-		// (get) Token: 0x06036E7A RID: 224890 RVA: 0x00773DCE File Offset: 0x00771FCE
-		// (set) Token: 0x06036E7B RID: 224891 RVA: 0x00773DD6 File Offset: 0x00771FD6
+		// Token: 0x1700F123 RID: 61731
+		// (get) Token: 0x0603A2A9 RID: 238249 RVA: 0x007D753A File Offset: 0x007D573A
+		// (set) Token: 0x0603A2AA RID: 238250 RVA: 0x007D7542 File Offset: 0x007D5742
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036E7C RID: 224892 RVA: 0x00773DDF File Offset: 0x00771FDF
+		// Token: 0x0603A2AB RID: 238251 RVA: 0x007D754B File Offset: 0x007D574B
 		public IVisualNovelPerformanceStopScreenEffectT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;
 			this.StartTime = 0f;
-			this.ScreenEffectDa = null;
+			this.EffectConfig = null;
 			this.NullMask = 0;
 		}
 	}

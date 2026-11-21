@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C4F RID: 7247
+	// Token: 0x02001E46 RID: 7750
 	public class IMp4GamepadShakeFadeOutConfig_SetValue
 	{
-		// Token: 0x04005E6E RID: 24174
+		// Token: 0x040063A5 RID: 25509
 		public float? FadeOutTime;
 
-		// Token: 0x04005E6F RID: 24175
+		// Token: 0x040063A6 RID: 25510
 		public EMp4GamepadShakeCurve? FadeOutCurve;
 	}
 }

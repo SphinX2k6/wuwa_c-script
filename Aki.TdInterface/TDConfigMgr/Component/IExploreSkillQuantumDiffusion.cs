@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200035A RID: 858
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003A3 RID: 931
 	public class IExploreSkillQuantumDiffusion : IExploreSkillInteractType
 	{
-		// Token: 0x0600110B RID: 4363 RVA: 0x0003A400 File Offset: 0x00038600
+		// Token: 0x0600124F RID: 4687 RVA: 0x0003D6E4 File Offset: 0x0003B8E4
 		private IExploreSkillQuantumDiffusion_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600110C RID: 4364 RVA: 0x0003A438 File Offset: 0x00038638
+		// Token: 0x06001250 RID: 4688 RVA: 0x0003D71C File Offset: 0x0003B91C
 		public static IExploreSkillQuantumDiffusion Create([Nullable(2)] IExploreSkillQuantumDiffusion instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600110D RID: 4365 RVA: 0x0003A44B File Offset: 0x0003864B
+		// Token: 0x06001251 RID: 4689 RVA: 0x0003D72F File Offset: 0x0003B92F
 		public static IExploreSkillQuantumDiffusion CreateFromSetValue([Nullable(2)] IExploreSkillQuantumDiffusion_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600110E RID: 4366 RVA: 0x0003A45E File Offset: 0x0003865E
+		// Token: 0x06001252 RID: 4690 RVA: 0x0003D742 File Offset: 0x0003B942
 		public new IExploreSkillQuantumDiffusion_SetValue ToSetValue()
 		{
 			return new IExploreSkillQuantumDiffusion_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004DC RID: 1244
-		// (get) Token: 0x0600110F RID: 4367 RVA: 0x0003A489 File Offset: 0x00038689
-		// (set) Token: 0x06001110 RID: 4368 RVA: 0x0003A4B4 File Offset: 0x000386B4
+		// Token: 0x17000530 RID: 1328
+		// (get) Token: 0x06001253 RID: 4691 RVA: 0x0003D76D File Offset: 0x0003B96D
+		// (set) Token: 0x06001254 RID: 4692 RVA: 0x0003D798 File Offset: 0x0003B998
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004DD RID: 1245
-		// (get) Token: 0x06001111 RID: 4369 RVA: 0x0003A4C4 File Offset: 0x000386C4
-		// (set) Token: 0x06001112 RID: 4370 RVA: 0x0003A4FE File Offset: 0x000386FE
+		// Token: 0x17000531 RID: 1329
+		// (get) Token: 0x06001255 RID: 4693 RVA: 0x0003D7A8 File Offset: 0x0003B9A8
+		// (set) Token: 0x06001256 RID: 4694 RVA: 0x0003D7E2 File Offset: 0x0003B9E2
 		public virtual bool? NeedFollowShooter
 		{
 			get
@@ -111,20 +109,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004DE RID: 1246
-		// (get) Token: 0x06001113 RID: 4371 RVA: 0x0003A50C File Offset: 0x0003870C
-		// (set) Token: 0x06001114 RID: 4372 RVA: 0x0003A59F File Offset: 0x0003879F
+		// Token: 0x17000532 RID: 1330
+		// (get) Token: 0x06001257 RID: 4695 RVA: 0x0003D7F0 File Offset: 0x0003B9F0
+		// (set) Token: 0x06001258 RID: 4696 RVA: 0x0003D883 File Offset: 0x0003BA83
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -155,7 +153,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -164,23 +162,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E29 RID: 3625
+		// Token: 0x04000F20 RID: 3872
 		[Nullable(2)]
 		protected new IExploreSkillQuantumDiffusion FbInstance;
 
-		// Token: 0x04000E2A RID: 3626
+		// Token: 0x04000F21 RID: 3873
 		[Nullable(2)]
 		protected new IExploreSkillQuantumDiffusion_SetValue PocoInterface;
 
-		// Token: 0x04000E2B RID: 3627
+		// Token: 0x04000F22 RID: 3874
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04000E2C RID: 3628
+		// Token: 0x04000F23 RID: 3875
 		private bool _ActionsInited;
 	}
 }

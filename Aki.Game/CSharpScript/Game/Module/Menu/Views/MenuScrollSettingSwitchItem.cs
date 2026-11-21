@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x02005410 RID: 21520
+	// Token: 0x020043F3 RID: 17395
 	public class MenuScrollSettingSwitchItem : MenuScrollSettingBaseItem
 	{
-		// Token: 0x06037014 RID: 225300 RVA: 0x00D08944 File Offset: 0x00D06B44
+		// Token: 0x0602BF5D RID: 180061 RVA: 0x00C57D60 File Offset: 0x00C55F60
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06037015 RID: 225301 RVA: 0x00D08A22 File Offset: 0x00D06C22
+		// Token: 0x0602BF5E RID: 180062 RVA: 0x00C57E3E File Offset: 0x00C5603E
 		protected override void OnStart()
 		{
 			base.GetButton(3).SetCanClickWhenDisable(true);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.AddOptionsEvent();
 		}
 
-		// Token: 0x06037016 RID: 225302 RVA: 0x00D08A44 File Offset: 0x00D06C44
+		// Token: 0x0602BF5F RID: 180063 RVA: 0x00C57E60 File Offset: 0x00C56060
 		protected override void OnClear()
 		{
 			if (this.Data != null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetButton(3).OnClickCallBack.Unbind();
 		}
 
-		// Token: 0x06037017 RID: 225303 RVA: 0x00D08A77 File Offset: 0x00D06C77
+		// Token: 0x0602BF60 RID: 180064 RVA: 0x00C57E93 File Offset: 0x00C56093
 		[NullableContext(1)]
 		public override void Update(MenuData data, bool bGameSettingsUpdate)
 		{
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshDetailSprite().Forget();
 		}
 
-		// Token: 0x06037018 RID: 225304 RVA: 0x00D08AA3 File Offset: 0x00D06CA3
+		// Token: 0x0602BF61 RID: 180065 RVA: 0x00C57EBF File Offset: 0x00C560BF
 		private void RefreshTitle()
 		{
 			base.GetText(0).ShowTextNew(this.Data.FunctionName ?? "");
 		}
 
-		// Token: 0x06037019 RID: 225305 RVA: 0x00D08AC8 File Offset: 0x00D06CC8
+		// Token: 0x0602BF62 RID: 180066 RVA: 0x00C57EE4 File Offset: 0x00C560E4
 		private void RefreshOptions()
 		{
 			base.GetRootItem().SetUIActive(true);
@@ -73,21 +73,21 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshInteractionGroup(index, true);
 		}
 
-		// Token: 0x0603701A RID: 225306 RVA: 0x00D08AF7 File Offset: 0x00D06CF7
+		// Token: 0x0602BF63 RID: 180067 RVA: 0x00C57F13 File Offset: 0x00C56113
 		private void AddOptionsEvent()
 		{
 			base.GetButton(2).OnClickCallBack.Bind(new Action(this.OnLeftClickCallback));
 			base.GetButton(3).OnClickCallBack.Bind(new Action(this.OnRightClickCallback));
 		}
 
-		// Token: 0x0603701B RID: 225307 RVA: 0x00D08B34 File Offset: 0x00D06D34
+		// Token: 0x0602BF64 RID: 180068 RVA: 0x00C57F50 File Offset: 0x00C56150
 		public override void SetInteractionActive(bool val)
 		{
 			int index = this.GetIndex();
 			this.RefreshInteractionGroup(index, val);
 		}
 
-		// Token: 0x0603701C RID: 225308 RVA: 0x00D08B50 File Offset: 0x00D06D50
+		// Token: 0x0602BF65 RID: 180069 RVA: 0x00C57F6C File Offset: 0x00C5616C
 		private void SetOptionsText(int index)
 		{
 			if (!this.Data.GetEnable())
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetSprite(7).SetUIActive(this.Data.IsRecommendIndex(index));
 		}
 
-		// Token: 0x0603701D RID: 225309 RVA: 0x00D08BCC File Offset: 0x00D06DCC
+		// Token: 0x0602BF66 RID: 180070 RVA: 0x00C57FE8 File Offset: 0x00C561E8
 		public void RefreshInteractionGroup(int index, bool active = true)
 		{
 			if (active)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			base.GetButton(2).SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603701E RID: 225310 RVA: 0x00D08C41 File Offset: 0x00D06E41
+		// Token: 0x0602BF67 RID: 180071 RVA: 0x00C5805D File Offset: 0x00C5625D
 		private void OnLeftClickCallback()
 		{
 			if (base.GetItemClickLimit(base.GetButton(2)))
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.ClickCallbackFromCheckIndex(-1);
 		}
 
-		// Token: 0x0603701F RID: 225311 RVA: 0x00D08C5A File Offset: 0x00D06E5A
+		// Token: 0x0602BF68 RID: 180072 RVA: 0x00C58076 File Offset: 0x00C56276
 		private void OnRightClickCallback()
 		{
 			if (base.GetItemClickLimit(base.GetButton(3)))
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.ClickCallbackFromCheckIndex(1);
 		}
 
-		// Token: 0x06037020 RID: 225312 RVA: 0x00D08C74 File Offset: 0x00D06E74
+		// Token: 0x0602BF69 RID: 180073 RVA: 0x00C58090 File Offset: 0x00C56290
 		private void ClickCallbackFromCheckIndex(int index)
 		{
 			int index2 = (int)Math.Floor((double)((float)this.GetIndex() + (float)index));
@@ -159,19 +159,19 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.FireSaveMenuChange((float)this.Data.OptionsValueList[index2]);
 		}
 
-		// Token: 0x06037021 RID: 225313 RVA: 0x00D08CD3 File Offset: 0x00D06ED3
+		// Token: 0x0602BF6A RID: 180074 RVA: 0x00C580EF File Offset: 0x00C562EF
 		private bool NeedImageQualityCustomSpecial()
 		{
 			return this.Data.FunctionId == EFunction.IMAGEQUALITY && MenuModel.Instance.IsImageQualityCustom;
 		}
 
-		// Token: 0x06037022 RID: 225314 RVA: 0x00D08CF0 File Offset: 0x00D06EF0
+		// Token: 0x0602BF6B RID: 180075 RVA: 0x00C5810C File Offset: 0x00C5630C
 		protected unsafe int GetIndex()
 		{
 			MenuModel instance = MenuModel.Instance;
 			int? num = (instance != null) ? instance.GetDataCacheOrCurValue(this.Data.FunctionId) : null;
 			IReadOnlyList<int> optionsValueList = this.Data.OptionsValueList;
-			int num2 = optionsValueList.IndexOf(num.Value);
+			int num2 = (num != null) ? optionsValueList.IndexOf(num.Value) : -1;
 			if (num2 < 0)
 			{
 				int optionsDefault = this.Data.OptionsDefault;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return num2;
 		}
 
-		// Token: 0x06037023 RID: 225315 RVA: 0x00D08DC8 File Offset: 0x00D06FC8
+		// Token: 0x0602BF6C RID: 180076 RVA: 0x00C581F0 File Offset: 0x00C563F0
 		protected override void OnSetDetailVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(4);
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06037024 RID: 225316 RVA: 0x00D08E78 File Offset: 0x00D07078
+		// Token: 0x0602BF6D RID: 180077 RVA: 0x00C582A0 File Offset: 0x00C564A0
 		private void RefreshDetailText()
 		{
 			if (this.Data == null)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			LguiUtil.Instance.SetLocalTextNew(text, detailTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x06037025 RID: 225317 RVA: 0x00D08EC1 File Offset: 0x00D070C1
+		// Token: 0x0602BF6E RID: 180078 RVA: 0x00C582E9 File Offset: 0x00C564E9
 		private void RefreshDetailSpriteVisible()
 		{
 			if (this.Data == null)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			sprite.SetUIActive(this.Data.ShowHelpBtn());
 		}
 
-		// Token: 0x06037026 RID: 225318 RVA: 0x00D08EE8 File Offset: 0x00D070E8
+		// Token: 0x0602BF6F RID: 180079 RVA: 0x00C58310 File Offset: 0x00C56510
 		public UniTask RefreshDetailSprite()
 		{
 			MenuScrollSettingSwitchItem.<RefreshDetailSprite>d__19 <RefreshDetailSprite>d__;
@@ -256,34 +256,34 @@ namespace CSharpScript.Game.Module.Menu.Views
 			return <RefreshDetailSprite>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0200B6A8 RID: 46760
+		// Token: 0x0200A0E0 RID: 41184
 		private class EComponents
 		{
-			// Token: 0x0403756B RID: 226667
+			// Token: 0x04031FC0 RID: 204736
 			public const int Title = 0;
 
-			// Token: 0x0403756C RID: 226668
+			// Token: 0x04031FC1 RID: 204737
 			public const int TitleName = 1;
 
-			// Token: 0x0403756D RID: 226669
+			// Token: 0x04031FC2 RID: 204738
 			public const int LeftBtn = 2;
 
-			// Token: 0x0403756E RID: 226670
+			// Token: 0x04031FC3 RID: 204739
 			public const int RightBtn = 3;
 
-			// Token: 0x0403756F RID: 226671
+			// Token: 0x04031FC4 RID: 204740
 			public const int DetailItem = 4;
 
-			// Token: 0x04037570 RID: 226672
+			// Token: 0x04031FC5 RID: 204741
 			public const int DetailText = 5;
 
-			// Token: 0x04037571 RID: 226673
+			// Token: 0x04031FC6 RID: 204742
 			public const int DetailSprite = 6;
 
-			// Token: 0x04037572 RID: 226674
+			// Token: 0x04031FC7 RID: 204743
 			public const int RecommendIcon = 7;
 
-			// Token: 0x04037573 RID: 226675
+			// Token: 0x04031FC8 RID: 204744
 			public const int DetailToggleTransition = 8;
 		}
 	}

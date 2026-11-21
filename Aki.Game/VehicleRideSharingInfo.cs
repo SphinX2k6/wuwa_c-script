@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020032D2 RID: 13010
+// Token: 0x02002843 RID: 10307
 public class VehicleRideSharingInfo
 {
-	// Token: 0x0601C41F RID: 115743 RVA: 0x007E0C30 File Offset: 0x007DEE30
+	// Token: 0x0601A098 RID: 106648 RVA: 0x008078B8 File Offset: 0x00805AB8
 	[NullableContext(1)]
 	public VehicleRideSharingInfo(VehiclePassengerUpdateNotify data)
 	{
@@ -15,15 +15,15 @@ public class VehicleRideSharingInfo
 		this.Seat = data.SeatId;
 	}
 
-	// Token: 0x0400DFB7 RID: 57271
+	// Token: 0x0400E45A RID: 58458
 	public int PlayerId;
 
-	// Token: 0x0400DFB8 RID: 57272
+	// Token: 0x0400E45B RID: 58459
 	public int RoleId;
 
-	// Token: 0x0400DFB9 RID: 57273
+	// Token: 0x0400E45C RID: 58460
 	public long RoleCreatureId;
 
-	// Token: 0x0400DFBA RID: 57274
+	// Token: 0x0400E45D RID: 58461
 	public int Seat = -1;
 }

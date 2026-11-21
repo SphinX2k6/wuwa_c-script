@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D10 RID: 3344
+	// Token: 0x02000DF5 RID: 3573
 	public struct GuessJokerAIPlotConfig : IFlatbufferObject
 	{
-		// Token: 0x1700161E RID: 5662
-		// (get) Token: 0x06007BF5 RID: 31733 RVA: 0x0024E654 File Offset: 0x0024C854
+		// Token: 0x1700167F RID: 5759
+		// (get) Token: 0x0600820D RID: 33293 RVA: 0x0026D094 File Offset: 0x0026B294
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007BF6 RID: 31734 RVA: 0x0024E661 File Offset: 0x0024C861
+		// Token: 0x0600820E RID: 33294 RVA: 0x0026D0A1 File Offset: 0x0026B2A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007BF7 RID: 31735 RVA: 0x0024E668 File Offset: 0x0024C868
+		// Token: 0x0600820F RID: 33295 RVA: 0x0026D0A8 File Offset: 0x0026B2A8
 		public static GuessJokerAIPlotConfig GetRootAsGuessJokerAIPlotConfig(ByteBuffer _bb)
 		{
 			return GuessJokerAIPlotConfig.GetRootAsGuessJokerAIPlotConfig(_bb, default(GuessJokerAIPlotConfig));
 		}
 
-		// Token: 0x06007BF8 RID: 31736 RVA: 0x0024E684 File Offset: 0x0024C884
+		// Token: 0x06008210 RID: 33296 RVA: 0x0026D0C4 File Offset: 0x0026B2C4
 		public static GuessJokerAIPlotConfig GetRootAsGuessJokerAIPlotConfig(ByteBuffer _bb, GuessJokerAIPlotConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007BF9 RID: 31737 RVA: 0x0024E6A1 File Offset: 0x0024C8A1
+		// Token: 0x06008211 RID: 33297 RVA: 0x0026D0E1 File Offset: 0x0026B2E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007BFA RID: 31738 RVA: 0x0024E6B0 File Offset: 0x0024C8B0
+		// Token: 0x06008212 RID: 33298 RVA: 0x0026D0F0 File Offset: 0x0026B2F0
 		public GuessJokerAIPlotConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700161F RID: 5663
-		// (get) Token: 0x06007BFB RID: 31739 RVA: 0x0024E6C0 File Offset: 0x0024C8C0
+		// Token: 0x17001680 RID: 5760
+		// (get) Token: 0x06008213 RID: 33299 RVA: 0x0026D100 File Offset: 0x0026B300
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001620 RID: 5664
-		// (get) Token: 0x06007BFC RID: 31740 RVA: 0x0024E6FC File Offset: 0x0024C8FC
+		// Token: 0x17001681 RID: 5761
+		// (get) Token: 0x06008214 RID: 33300 RVA: 0x0026D13C File Offset: 0x0026B33C
 		public int RoleId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001621 RID: 5665
-		// (get) Token: 0x06007BFD RID: 31741 RVA: 0x0024E738 File Offset: 0x0024C938
+		// Token: 0x17001682 RID: 5762
+		// (get) Token: 0x06008215 RID: 33301 RVA: 0x0026D178 File Offset: 0x0026B378
 		public int State
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001622 RID: 5666
-		// (get) Token: 0x06007BFE RID: 31742 RVA: 0x0024E774 File Offset: 0x0024C974
+		// Token: 0x17001683 RID: 5763
+		// (get) Token: 0x06008216 RID: 33302 RVA: 0x0026D1B4 File Offset: 0x0026B3B4
 		public int ExtraParam
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007BFF RID: 31743 RVA: 0x0024E7B4 File Offset: 0x0024C9B4
+		// Token: 0x06008217 RID: 33303 RVA: 0x0026D1F4 File Offset: 0x0026B3F4
 		public int PlotIdList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001623 RID: 5667
-		// (get) Token: 0x06007C00 RID: 31744 RVA: 0x0024E7F4 File Offset: 0x0024C9F4
+		// Token: 0x17001684 RID: 5764
+		// (get) Token: 0x06008218 RID: 33304 RVA: 0x0026D234 File Offset: 0x0026B434
 		public int PlotIdListLength
 		{
 			get
@@ -135,20 +135,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007C01 RID: 31745 RVA: 0x0024E820 File Offset: 0x0024CA20
+		// Token: 0x06008219 RID: 33305 RVA: 0x0026D260 File Offset: 0x0026B460
 		public Span<int> GetPlotIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06007C02 RID: 31746 RVA: 0x0024E830 File Offset: 0x0024CA30
+		// Token: 0x0600821A RID: 33306 RVA: 0x0026D270 File Offset: 0x0026B470
 		public int[] GetPlotIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001624 RID: 5668
-		// (get) Token: 0x06007C03 RID: 31747 RVA: 0x0024E848 File Offset: 0x0024CA48
+		// Token: 0x17001685 RID: 5765
+		// (get) Token: 0x0600821B RID: 33307 RVA: 0x0026D288 File Offset: 0x0026B488
 		public int DelayTime
 		{
 			get
@@ -162,8 +162,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001625 RID: 5669
-		// (get) Token: 0x06007C04 RID: 31748 RVA: 0x0024E888 File Offset: 0x0024CA88
+		// Token: 0x17001686 RID: 5766
+		// (get) Token: 0x0600821C RID: 33308 RVA: 0x0026D2C8 File Offset: 0x0026B4C8
 		public int WaitDeleteTime
 		{
 			get
@@ -177,8 +177,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001626 RID: 5670
-		// (get) Token: 0x06007C05 RID: 31749 RVA: 0x0024E8C8 File Offset: 0x0024CAC8
+		// Token: 0x17001687 RID: 5767
+		// (get) Token: 0x0600821D RID: 33309 RVA: 0x0026D308 File Offset: 0x0026B508
 		public bool CanHardCut
 		{
 			get
@@ -188,8 +188,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001627 RID: 5671
-		// (get) Token: 0x06007C06 RID: 31750 RVA: 0x0024E908 File Offset: 0x0024CB08
+		// Token: 0x17001688 RID: 5768
+		// (get) Token: 0x0600821E RID: 33310 RVA: 0x0026D348 File Offset: 0x0026B548
 		public int Cd
 		{
 			get
@@ -203,25 +203,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007C07 RID: 31751 RVA: 0x0024E948 File Offset: 0x0024CB48
+		// Token: 0x0600821F RID: 33311 RVA: 0x0026D385 File Offset: 0x0026B585
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PlotIdListIter()或GetPlotIdListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PlotIdList()
+		public int[] PlotIdList()
 		{
-			GuessJokerAIPlotConfig guessJokerAIPlotConfig = this;
-			return guessJokerAIPlotConfig.GetPlotIdListArray() ?? Array.Empty<int>();
+			return this.GetPlotIdListArray();
 		}
 
-		// Token: 0x06007C08 RID: 31752 RVA: 0x0024E96C File Offset: 0x0024CB6C
+		// Token: 0x06008220 RID: 33312 RVA: 0x0026D38D File Offset: 0x0026B58D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PlotIdListIter()
+		public IEnumerable<int> PlotIdListIter()
 		{
 			GuessJokerAIPlotConfig.<PlotIdListIter>d__30 <PlotIdListIter>d__ = new GuessJokerAIPlotConfig.<PlotIdListIter>d__30(-2);
 			<PlotIdListIter>d__.<>3__<>4__this = this;
 			return <PlotIdListIter>d__;
 		}
 
-		// Token: 0x04004D86 RID: 19846
+		// Token: 0x0400536B RID: 21355
 		private Table __p;
 	}
 }

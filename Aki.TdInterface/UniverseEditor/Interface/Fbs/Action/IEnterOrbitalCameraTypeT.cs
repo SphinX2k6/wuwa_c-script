@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066C7 RID: 26311
+	// Token: 0x02006D41 RID: 27969
 	public class IEnterOrbitalCameraTypeT
 	{
-		// Token: 0x1700C382 RID: 50050
-		// (get) Token: 0x0602DBDE RID: 187358 RVA: 0x00641E3E File Offset: 0x0064003E
-		// (set) Token: 0x0602DBDF RID: 187359 RVA: 0x00641E46 File Offset: 0x00640046
+		// Token: 0x1700CD33 RID: 52531
+		// (get) Token: 0x060303FB RID: 197627 RVA: 0x0068F0F2 File Offset: 0x0068D2F2
+		// (set) Token: 0x060303FC RID: 197628 RVA: 0x0068F0FA File Offset: 0x0068D2FA
 		public EEnterOrbitalCameraType Type { get; set; }
 
-		// Token: 0x0602DBE0 RID: 187360 RVA: 0x00641E4F File Offset: 0x0064004F
+		// Token: 0x060303FD RID: 197629 RVA: 0x0068F103 File Offset: 0x0068D303
 		public IEnterOrbitalCameraTypeT()
 		{
 			this.Type = EEnterOrbitalCameraType.ControlByMove;

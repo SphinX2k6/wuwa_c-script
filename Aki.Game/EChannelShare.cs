@@ -1,34 +1,34 @@
 ﻿using System;
 
-// Token: 0x02001782 RID: 6018
+// Token: 0x02000C3B RID: 3131
 public enum EChannelShare
 {
-	// Token: 0x04004F67 RID: 20327
+	// Token: 0x04005011 RID: 20497
 	KuroStreet = 1,
-	// Token: 0x04004F68 RID: 20328
+	// Token: 0x04005012 RID: 20498
 	WeChatFriend,
-	// Token: 0x04004F69 RID: 20329
+	// Token: 0x04005013 RID: 20499
 	WeChatMoment,
-	// Token: 0x04004F6A RID: 20330
+	// Token: 0x04005014 RID: 20500
 	QQFriend,
-	// Token: 0x04004F6B RID: 20331
+	// Token: 0x04005015 RID: 20501
 	QQMoment,
-	// Token: 0x04004F6C RID: 20332
+	// Token: 0x04005016 RID: 20502
 	Bilibili,
-	// Token: 0x04004F6D RID: 20333
+	// Token: 0x04005017 RID: 20503
 	Weibo,
-	// Token: 0x04004F6E RID: 20334
+	// Token: 0x04005018 RID: 20504
 	Douyin,
-	// Token: 0x04004F6F RID: 20335
+	// Token: 0x04005019 RID: 20505
 	KuroStreetGlobal = 100,
-	// Token: 0x04004F70 RID: 20336
+	// Token: 0x0400501A RID: 20506
 	Twitter,
-	// Token: 0x04004F71 RID: 20337
+	// Token: 0x0400501B RID: 20507
 	Facebook,
-	// Token: 0x04004F72 RID: 20338
+	// Token: 0x0400501C RID: 20508
 	Instagram,
-	// Token: 0x04004F73 RID: 20339
+	// Token: 0x0400501D RID: 20509
 	TikTok,
-	// Token: 0x04004F74 RID: 20340
+	// Token: 0x0400501E RID: 20510
 	NaverLounge
 }

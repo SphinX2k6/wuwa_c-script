@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000EC5 RID: 3781
+// Token: 0x0200037A RID: 890
 public interface ISurvivorsRogueConfigInfo
 {
-	// Token: 0x17000723 RID: 1827
-	// (get) Token: 0x06005DC5 RID: 24005
-	// (set) Token: 0x06005DC6 RID: 24006
+	// Token: 0x17000747 RID: 1863
+	// (get) Token: 0x0600315C RID: 12636
+	// (set) Token: 0x0600315D RID: 12637
 	int ConfigId { get; set; }
 }

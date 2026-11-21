@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F1B RID: 24347
+	// Token: 0x02004F02 RID: 20226
 	public enum EWheelTowerStorageKey
 	{
-		// Token: 0x040204E3 RID: 132323
+		// Token: 0x0401AFB5 RID: 110517
 		FirstOpenPage,
-		// Token: 0x040204E4 RID: 132324
+		// Token: 0x0401AFB6 RID: 110518
 		FirstEnterLevel,
-		// Token: 0x040204E5 RID: 132325
+		// Token: 0x0401AFB7 RID: 110519
 		FirstOpenSeasonRewardPage,
-		// Token: 0x040204E6 RID: 132326
+		// Token: 0x0401AFB8 RID: 110520
 		FirstOpenRewardPage,
-		// Token: 0x040204E7 RID: 132327
+		// Token: 0x0401AFB9 RID: 110521
 		FirstOpenBossHandBook
 	}
 }

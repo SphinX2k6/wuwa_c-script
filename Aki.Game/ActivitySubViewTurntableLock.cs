@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001533 RID: 5427
+// Token: 0x020009EB RID: 2539
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewTurntableLock : ActivitySubViewBase
 {
-	// Token: 0x06009B03 RID: 39683 RVA: 0x00218C48 File Offset: 0x00216E48
+	// Token: 0x06006EE1 RID: 28385 RVA: 0x002229E8 File Offset: 0x00220BE8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -33,13 +33,13 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009B04 RID: 39684 RVA: 0x00218D14 File Offset: 0x00216F14
+	// Token: 0x06006EE2 RID: 28386 RVA: 0x00222AB4 File Offset: 0x00220CB4
 	protected override void OnSetData()
 	{
 		this.ActivityTurntableData = (this.ActivityBaseData as ActivityTurntableData);
 	}
 
-	// Token: 0x06009B05 RID: 39685 RVA: 0x00218D28 File Offset: 0x00216F28
+	// Token: 0x06006EE3 RID: 28387 RVA: 0x00222AC8 File Offset: 0x00220CC8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewTurntableLock.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009B06 RID: 39686 RVA: 0x00218D6C File Offset: 0x00216F6C
+	// Token: 0x06006EE4 RID: 28388 RVA: 0x00222B0C File Offset: 0x00220D0C
 	protected override void OnStart()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -80,7 +80,7 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009B07 RID: 39687 RVA: 0x00218E98 File Offset: 0x00217098
+	// Token: 0x06006EE5 RID: 28389 RVA: 0x00222C38 File Offset: 0x00220E38
 	protected override void OnRefreshView()
 	{
 		this.RefreshTimerText();
@@ -88,13 +88,13 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x06009B08 RID: 39688 RVA: 0x00218EAC File Offset: 0x002170AC
+	// Token: 0x06006EE6 RID: 28390 RVA: 0x00222C4C File Offset: 0x00220E4C
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06009B09 RID: 39689 RVA: 0x00218EB4 File Offset: 0x002170B4
+	// Token: 0x06006EE7 RID: 28391 RVA: 0x00222C54 File Offset: 0x00220E54
 	private void RefreshCondition()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -115,7 +115,7 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009B0A RID: 39690 RVA: 0x00218F30 File Offset: 0x00217130
+	// Token: 0x06006EE8 RID: 28392 RVA: 0x00222CD0 File Offset: 0x00220ED0
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -128,14 +128,14 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06009B0B RID: 39691 RVA: 0x00218F70 File Offset: 0x00217170
+	// Token: 0x06006EE9 RID: 28393 RVA: 0x00222D10 File Offset: 0x00220F10
 	private void RefreshRedDot()
 	{
 		bool functionRedDotVisible = this.ActivityTurntableData.IsHasPreQuestRedDot();
 		this.FunctionalComponent.SetFunctionRedDotVisible(functionRedDotVisible);
 	}
 
-	// Token: 0x06009B0C RID: 39692 RVA: 0x00218F95 File Offset: 0x00217195
+	// Token: 0x06006EEA RID: 28394 RVA: 0x00222D35 File Offset: 0x00220F35
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -149,16 +149,16 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x04004422 RID: 17442
+	// Token: 0x040044C8 RID: 17608
 	protected ActivityTurntableData ActivityTurntableData;
 
-	// Token: 0x04004423 RID: 17443
+	// Token: 0x040044C9 RID: 17609
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04004424 RID: 17444
+	// Token: 0x040044CA RID: 17610
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04004425 RID: 17445
+	// Token: 0x040044CB RID: 17611
 	[Nullable(new byte[]
 	{
 		2,
@@ -166,26 +166,26 @@ public class ActivitySubViewTurntableLock : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04004426 RID: 17446
+	// Token: 0x040044CC RID: 17612
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x02007B65 RID: 31589
+	// Token: 0x02006CF0 RID: 27888
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402893A RID: 166202
+		// Token: 0x04023C75 RID: 146549
 		public const int PanelItem = 0;
 
-		// Token: 0x0402893B RID: 166203
+		// Token: 0x04023C76 RID: 146550
 		public const int TitleItem = 1;
 
-		// Token: 0x0402893C RID: 166204
+		// Token: 0x04023C77 RID: 146551
 		public const int DescriptionItem = 2;
 
-		// Token: 0x0402893D RID: 166205
+		// Token: 0x04023C78 RID: 146552
 		public const int RewardListItem = 3;
 
-		// Token: 0x0402893E RID: 166206
+		// Token: 0x04023C79 RID: 146553
 		public const int FunctionArea = 4;
 	}
 }

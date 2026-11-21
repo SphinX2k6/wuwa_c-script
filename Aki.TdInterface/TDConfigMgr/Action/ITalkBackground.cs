@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F16 RID: 7958
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200214F RID: 8527
 	public class ITalkBackground
 	{
-		// Token: 0x0600AA2A RID: 43562 RVA: 0x0017F4CC File Offset: 0x0017D6CC
+		// Token: 0x0600B4FC RID: 46332 RVA: 0x001954C4 File Offset: 0x001936C4
 		private ITalkBackground_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA2B RID: 43563 RVA: 0x0017F504 File Offset: 0x0017D704
+		// Token: 0x0600B4FD RID: 46333 RVA: 0x001954FC File Offset: 0x001936FC
 		public static ITalkBackground Create([Nullable(2)] ITalkBackground instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA2C RID: 43564 RVA: 0x0017F517 File Offset: 0x0017D717
+		// Token: 0x0600B4FE RID: 46334 RVA: 0x0019550F File Offset: 0x0019370F
 		public static ITalkBackground CreateFromSetValue([Nullable(2)] ITalkBackground_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA2D RID: 43565 RVA: 0x0017F52A File Offset: 0x0017D72A
+		// Token: 0x0600B4FF RID: 46335 RVA: 0x00195522 File Offset: 0x00193722
 		public ITalkBackground_SetValue ToSetValue()
 		{
 			return new ITalkBackground_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033CC RID: 13260
-		// (get) Token: 0x0600AA2E RID: 43566 RVA: 0x0017F53D File Offset: 0x0017D73D
-		// (set) Token: 0x0600AA2F RID: 43567 RVA: 0x0017F568 File Offset: 0x0017D768
+		// Token: 0x17003697 RID: 13975
+		// (get) Token: 0x0600B500 RID: 46336 RVA: 0x00195535 File Offset: 0x00193735
+		// (set) Token: 0x0600B501 RID: 46337 RVA: 0x00195560 File Offset: 0x00193760
 		public virtual ETalkBackgroundType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400651E RID: 25886
+		// Token: 0x04006B0D RID: 27405
 		[Nullable(2)]
 		protected ITalkBackground FbInstance;
 
-		// Token: 0x0400651F RID: 25887
+		// Token: 0x04006B0E RID: 27406
 		[Nullable(2)]
 		protected ITalkBackground_SetValue PocoInterface;
 	}

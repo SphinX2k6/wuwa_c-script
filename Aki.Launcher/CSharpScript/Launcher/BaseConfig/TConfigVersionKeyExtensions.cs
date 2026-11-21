@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000272 RID: 626
+	// Token: 0x02000279 RID: 633
 	public static class TConfigVersionKeyExtensions
 	{
-		// Token: 0x06000F3E RID: 3902 RVA: 0x00059110 File Offset: 0x00057310
+		// Token: 0x06000F89 RID: 3977 RVA: 0x0005C0B4 File Offset: 0x0005A2B4
 		public static string ToEnumString(this TConfigVersionKey value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F3F RID: 3903 RVA: 0x00059164 File Offset: 0x00057364
+		// Token: 0x06000F8A RID: 3978 RVA: 0x0005C108 File Offset: 0x0005A308
 		public static TConfigVersionKey FromString(string name)
 		{
 			TConfigVersionKey result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F40 RID: 3904 RVA: 0x00059190 File Offset: 0x00057390
+		// Token: 0x06000F8B RID: 3979 RVA: 0x0005C134 File Offset: 0x0005A334
 		public static bool TryFromString(string name, out TConfigVersionKey value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return true;
 		}
 
-		// Token: 0x06000F41 RID: 3905 RVA: 0x000591F8 File Offset: 0x000573F8
+		// Token: 0x06000F8C RID: 3980 RVA: 0x0005C19C File Offset: 0x0005A39C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F42 RID: 3906 RVA: 0x00059220 File Offset: 0x00057420
+		// Token: 0x06000F8D RID: 3981 RVA: 0x0005C1C4 File Offset: 0x0005A3C4
 		public static TConfigVersionKey[] GetValues()
 		{
 			return new TConfigVersionKey[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			};
 		}
 
-		// Token: 0x06000F43 RID: 3907 RVA: 0x00059233 File Offset: 0x00057433
+		// Token: 0x06000F8E RID: 3982 RVA: 0x0005C1D7 File Offset: 0x0005A3D7
 		public static string[] GetNames()
 		{
 			return new string[]

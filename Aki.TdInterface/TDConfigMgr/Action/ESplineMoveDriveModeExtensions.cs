@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002427 RID: 9255
+	// Token: 0x020026C6 RID: 9926
 	public static class ESplineMoveDriveModeExtensions
 	{
-		// Token: 0x0600C92E RID: 51502 RVA: 0x001D752C File Offset: 0x001D572C
+		// Token: 0x0600D5D5 RID: 54741 RVA: 0x001F1200 File Offset: 0x001EF400
 		public static string ToEnumString(this ESplineMoveDriveMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C92F RID: 51503 RVA: 0x001D7564 File Offset: 0x001D5764
+		// Token: 0x0600D5D6 RID: 54742 RVA: 0x001F1238 File Offset: 0x001EF438
 		public static ESplineMoveDriveMode FromString(string name)
 		{
 			ESplineMoveDriveMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C930 RID: 51504 RVA: 0x001D758D File Offset: 0x001D578D
+		// Token: 0x0600D5D7 RID: 54743 RVA: 0x001F1261 File Offset: 0x001EF461
 		public static bool TryFromString(string name, out ESplineMoveDriveMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C931 RID: 51505 RVA: 0x001D75C6 File Offset: 0x001D57C6
+		// Token: 0x0600D5D8 RID: 54744 RVA: 0x001F129A File Offset: 0x001EF49A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C932 RID: 51506 RVA: 0x001D75DE File Offset: 0x001D57DE
+		// Token: 0x0600D5D9 RID: 54745 RVA: 0x001F12B2 File Offset: 0x001EF4B2
 		public static ESplineMoveDriveMode[] GetValues()
 		{
 			return new ESplineMoveDriveMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C933 RID: 51507 RVA: 0x001D75EA File Offset: 0x001D57EA
+		// Token: 0x0600D5DA RID: 54746 RVA: 0x001F12BE File Offset: 0x001EF4BE
 		public static string[] GetNames()
 		{
 			return new string[]

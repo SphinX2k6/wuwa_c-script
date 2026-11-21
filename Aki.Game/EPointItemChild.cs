@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001C68 RID: 7272
+// Token: 0x02001127 RID: 4391
 internal enum EPointItemChild
 {
-	// Token: 0x04006462 RID: 25698
+	// Token: 0x04006534 RID: 25908
 	PnlNml,
-	// Token: 0x04006463 RID: 25699
+	// Token: 0x04006535 RID: 25909
 	PnlActive
 }

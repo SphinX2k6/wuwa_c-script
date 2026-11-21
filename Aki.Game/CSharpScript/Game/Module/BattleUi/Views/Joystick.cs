@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D5E RID: 23902
+	// Token: 0x02004D40 RID: 19776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Joystick : BattleChildView
 	{
-		// Token: 0x0603CACA RID: 248522 RVA: 0x00E90B6C File Offset: 0x00E8ED6C
+		// Token: 0x06031A23 RID: 203299 RVA: 0x00DE1320 File Offset: 0x00DDF520
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaskAreaEnableRootX = ConfigCommonParamById.GetFloatConfig("MaskAreaEnableRootX").Value;
 		}
 
-		// Token: 0x0603CACB RID: 248523 RVA: 0x00E90C50 File Offset: 0x00E8EE50
+		// Token: 0x06031A24 RID: 203300 RVA: 0x00DE1404 File Offset: 0x00DDF604
 		public void ShowBattleVisibleChildView()
 		{
 			this.SetVisible(EBattleUiVisibleReason.Default, true);
@@ -59,17 +59,17 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 					maskArea.SetUIActive(false);
 				}
 			}
-			this.WalkRunRate = GameSettingsManager.Instance.GetCurrentValueFloat(EFunction.WalkOrRunRate, true, true).GetValueOrDefault(0.3f);
+			this.RefreshWalkRunRate();
 		}
 
-		// Token: 0x0603CACC RID: 248524 RVA: 0x00E90D01 File Offset: 0x00E8EF01
+		// Token: 0x06031A25 RID: 203301 RVA: 0x00DE149A File Offset: 0x00DDF69A
 		public void HideBattleVisibleChildView()
 		{
 			this.SetVisible(EBattleUiVisibleReason.Default, false);
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603CACD RID: 248525 RVA: 0x00E90D14 File Offset: 0x00E8EF14
+		// Token: 0x06031A26 RID: 203302 RVA: 0x00DE14AC File Offset: 0x00DDF6AC
 		public override void Reset()
 		{
 			this.PlayerController = null;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603CACE RID: 248526 RVA: 0x00E90D80 File Offset: 0x00E8EF80
+		// Token: 0x06031A27 RID: 203303 RVA: 0x00DE1518 File Offset: 0x00DDF718
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CACF RID: 248527 RVA: 0x00E90E70 File Offset: 0x00E8F070
+		// Token: 0x06031A28 RID: 203304 RVA: 0x00DE1608 File Offset: 0x00DDF808
 		private void AddEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -124,10 +124,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 			EventSystem.Instance.Add(EEventName.OnSetJoystickMode, new Action<bool>(this.OnDynamicChanged));
 			EventSystem.Instance.Add(EEventName.OnSetMotorcycleJoystickMode, new Action<bool>(this.OnDynamicChanged));
+			EventSystem.Instance.Add(EEventName.OnJoystickWalkRunRateChanged, new Action(this.OnWalkRunRateChanged));
 			BattleUiModel.Instance.ChildViewData.AddCallback(EBattleUiChild.Joystick, new Action(this.OnJoystickVisibleChanged));
 		}
 
-		// Token: 0x0603CAD0 RID: 248528 RVA: 0x00E90F4C File Offset: 0x00E8F14C
+		// Token: 0x06031A29 RID: 203305 RVA: 0x00DE1704 File Offset: 0x00DDF904
 		private void RemoveEvents()
 		{
 			UUIDraggableComponent draggableComponent = this.DraggableComponent;
@@ -138,10 +139,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			draggableComponent.OnPointerUpCallBack.Unbind();
 			EventSystem.Instance.Remove(EEventName.OnSetJoystickMode, new Action<bool>(this.OnDynamicChanged));
 			EventSystem.Instance.Remove(EEventName.OnSetMotorcycleJoystickMode, new Action<bool>(this.OnDynamicChanged));
+			EventSystem.Instance.Remove(EEventName.OnJoystickWalkRunRateChanged, new Action(this.OnWalkRunRateChanged));
 			BattleUiModel.Instance.ChildViewData.RemoveCallback(EBattleUiChild.Joystick, new Action(this.OnJoystickVisibleChanged));
 		}
 
-		// Token: 0x0603CAD1 RID: 248529 RVA: 0x00E90FEC File Offset: 0x00E8F1EC
+		// Token: 0x06031A2A RID: 203306 RVA: 0x00DE17C4 File Offset: 0x00DDF9C4
 		public void Tick(float delta)
 		{
 			if (this.JoystickTouchId < 0)
@@ -179,7 +181,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MoveJoysticksHandle(this.CenterPosition, true);
 		}
 
-		// Token: 0x0603CAD2 RID: 248530 RVA: 0x00E910A8 File Offset: 0x00E8F2A8
+		// Token: 0x06031A2B RID: 203307 RVA: 0x00DE1880 File Offset: 0x00DDFA80
 		private void CheckInTouch()
 		{
 			if (Time.Instance.Now < this.NextCheckInTouchTime)
@@ -190,7 +192,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsInTouch = this.PlayerController.IsInTouch((float)this.JoystickTouchId);
 		}
 
-		// Token: 0x0603CAD3 RID: 248531 RVA: 0x00E910FC File Offset: 0x00E8F2FC
+		// Token: 0x06031A2C RID: 203308 RVA: 0x00DE18D4 File Offset: 0x00DDFAD4
 		private void OnBgPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
 			if (this.UpdatePointerPosition(eventData) && this.IsDynamicJoystick && this.IsJoystickPressed && InputDistributeController.Instance.IsAllowFightMoveInput())
@@ -208,13 +210,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAD4 RID: 248532 RVA: 0x00E91173 File Offset: 0x00E8F373
+		// Token: 0x06031A2D RID: 203309 RVA: 0x00DE194B File Offset: 0x00DDFB4B
 		private void OnBgPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
 			this.UpdatePointerPosition(eventData);
 		}
 
-		// Token: 0x0603CAD5 RID: 248533 RVA: 0x00E91180 File Offset: 0x00E8F380
+		// Token: 0x06031A2E RID: 203310 RVA: 0x00DE1958 File Offset: 0x00DDFB58
 		private unsafe bool UpdatePointerPosition(ULGUIPointerEventData eventData)
 		{
 			if (!this.IsInTouch)
@@ -252,7 +254,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CAD6 RID: 248534 RVA: 0x00E91284 File Offset: 0x00E8F484
+		// Token: 0x06031A2F RID: 203311 RVA: 0x00DE1A5C File Offset: 0x00DDFC5C
 		private unsafe void OnJoystickButtonPressed(ULGUIPointerEventData eventData)
 		{
 			this.JoystickTouchId = eventData.pointerID;
@@ -300,13 +302,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SaveDodgeStartInfo(this.PointerPosition);
 		}
 
-		// Token: 0x0603CAD7 RID: 248535 RVA: 0x00E9141C File Offset: 0x00E8F61C
+		// Token: 0x06031A30 RID: 203312 RVA: 0x00DE1BF4 File Offset: 0x00DDFDF4
 		private void OnJoystickButtonReleased()
 		{
 			this.EndDragJoystick();
 		}
 
-		// Token: 0x0603CAD8 RID: 248536 RVA: 0x00E91424 File Offset: 0x00E8F624
+		// Token: 0x06031A31 RID: 203313 RVA: 0x00DE1BFC File Offset: 0x00DDFDFC
 		private void MoveJoysticksHandle(global::Vector touchPosition, bool inTouch = true)
 		{
 			touchPosition.Subtraction(this.CenterPosition, this.TargetVector);
@@ -318,7 +320,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetInputAxis(this.TargetVector, inTouch);
 		}
 
-		// Token: 0x0603CAD9 RID: 248537 RVA: 0x00E91480 File Offset: 0x00E8F680
+		// Token: 0x06031A32 RID: 203314 RVA: 0x00DE1C58 File Offset: 0x00DDFE58
 		private void UpdateMaskItemPosition()
 		{
 			if (!this.EnableMaskArea)
@@ -330,14 +332,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaskArea.SetAnchorOffset(anchorOffset);
 		}
 
-		// Token: 0x0603CADA RID: 248538 RVA: 0x00E914EC File Offset: 0x00E8F6EC
+		// Token: 0x06031A33 RID: 203315 RVA: 0x00DE1CC4 File Offset: 0x00DDFEC4
 		protected void SaveDodgeStartInfo(global::Vector touchPosition)
 		{
 			this.PressTime = TimeUtil.Instance.GetServerTimeStamp();
 			this.PressPosition = touchPosition;
 		}
 
-		// Token: 0x0603CADB RID: 248539 RVA: 0x00E91508 File Offset: 0x00E8F708
+		// Token: 0x06031A34 RID: 203316 RVA: 0x00DE1CE0 File Offset: 0x00DDFEE0
 		protected void TryDodge(global::Vector touchPosition)
 		{
 			double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -358,7 +360,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAction(CSharpScript.Game.Input.EInputAction.闪避, EInputState.Release);
 		}
 
-		// Token: 0x0603CADC RID: 248540 RVA: 0x00E9159C File Offset: 0x00E8F79C
+		// Token: 0x06031A35 RID: 203317 RVA: 0x00DE1D74 File Offset: 0x00DDFF74
 		private void EndDragJoystick()
 		{
 			this.MoveJoysticksHandle(this.CenterPosition, false);
@@ -374,7 +376,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			maskArea.SetUIActive(false);
 		}
 
-		// Token: 0x0603CADD RID: 248541 RVA: 0x00E915DC File Offset: 0x00E8F7DC
+		// Token: 0x06031A36 RID: 203318 RVA: 0x00DE1DB4 File Offset: 0x00DDFFB4
 		protected unsafe FRotator? GetRotatorMoveArrow(global::Vector targetVector)
 		{
 			double num = targetVector.SizeSquared();
@@ -441,7 +443,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new FRotator?(this.BgRotator.ToUeRotator());
 		}
 
-		// Token: 0x0603CADE RID: 248542 RVA: 0x00E9189C File Offset: 0x00E8FA9C
+		// Token: 0x06031A37 RID: 203319 RVA: 0x00DE2074 File Offset: 0x00DE0274
 		protected virtual void SetHandleOffset(global::Vector targetVector)
 		{
 			FRotator? rotatorMoveArrow = this.GetRotatorMoveArrow(targetVector);
@@ -457,7 +459,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			runBgItem.SetUIRelativeRotation(value);
 		}
 
-		// Token: 0x0603CADF RID: 248543 RVA: 0x00E918E8 File Offset: 0x00E8FAE8
+		// Token: 0x06031A38 RID: 203320 RVA: 0x00DE20C0 File Offset: 0x00DE02C0
 		protected void SetInputAxis(global::Vector targetVector, bool inTouch)
 		{
 			if (!this.JoystickVisible || !inTouch || targetVector.Equality(global::Vector.ZeroVectorProxy))
@@ -481,7 +483,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetNormalInputAxis(targetVector);
 		}
 
-		// Token: 0x0603CAE0 RID: 248544 RVA: 0x00E91978 File Offset: 0x00E8FB78
+		// Token: 0x06031A39 RID: 203321 RVA: 0x00DE2150 File Offset: 0x00DE0350
 		protected unsafe void SetNormalInputAxis(global::Vector targetVector)
 		{
 			this.TempVector2D.X = targetVector.X / 200.0;
@@ -515,7 +517,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			InputController.Instance.InputAxis(EInputAxis.MoveForward, (float)y, true);
 		}
 
-		// Token: 0x0603CAE1 RID: 248545 RVA: 0x00E91AB4 File Offset: 0x00E8FCB4
+		// Token: 0x06031A3A RID: 203322 RVA: 0x00DE228C File Offset: 0x00DE048C
 		protected virtual void OnWalk()
 		{
 			if (this.CurrentJoystickType == EJoystickType.Walk)
@@ -531,7 +533,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentJoystickType = EJoystickType.Walk;
 		}
 
-		// Token: 0x0603CAE2 RID: 248546 RVA: 0x00E91B14 File Offset: 0x00E8FD14
+		// Token: 0x06031A3B RID: 203323 RVA: 0x00DE22EC File Offset: 0x00DE04EC
 		protected virtual void OnRun()
 		{
 			if (this.CurrentJoystickType == EJoystickType.Run)
@@ -547,7 +549,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentJoystickType = EJoystickType.Run;
 		}
 
-		// Token: 0x0603CAE3 RID: 248547 RVA: 0x00E91B74 File Offset: 0x00E8FD74
+		// Token: 0x06031A3C RID: 203324 RVA: 0x00DE234C File Offset: 0x00DE054C
 		protected virtual void OnStand()
 		{
 			if (this.CurrentJoystickType != EJoystickType.Stand)
@@ -566,7 +568,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAE4 RID: 248548 RVA: 0x00E91BF0 File Offset: 0x00E8FDF0
+		// Token: 0x06031A3D RID: 203325 RVA: 0x00DE23C8 File Offset: 0x00DE05C8
 		protected virtual void OnStandInTouch()
 		{
 			if (this.CurrentJoystickType != EJoystickType.StandInTouch)
@@ -585,13 +587,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAE5 RID: 248549 RVA: 0x00E91C61 File Offset: 0x00E8FE61
+		// Token: 0x06031A3E RID: 203326 RVA: 0x00DE2439 File Offset: 0x00DE0639
 		public virtual void OnDynamicChanged(bool isDynamic)
 		{
 			this.RefreshIsDynamicJoystick(true);
 		}
 
-		// Token: 0x0603CAE6 RID: 248550 RVA: 0x00E91C6C File Offset: 0x00E8FE6C
+		// Token: 0x06031A3F RID: 203327 RVA: 0x00DE2444 File Offset: 0x00DE0644
 		private void RefreshIsDynamicJoystick(bool bResetStaticJoystick = false)
 		{
 			BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;
@@ -624,13 +626,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAE7 RID: 248551 RVA: 0x00E91D50 File Offset: 0x00E8FF50
+		// Token: 0x06031A40 RID: 203328 RVA: 0x00DE2528 File Offset: 0x00DE0728
+		protected virtual void OnWalkRunRateChanged()
+		{
+			this.RefreshWalkRunRate();
+		}
+
+		// Token: 0x06031A41 RID: 203329 RVA: 0x00DE2530 File Offset: 0x00DE0730
+		private void RefreshWalkRunRate()
+		{
+			this.WalkRunRate = BattleUiModel.Instance.JoystickData.GetWalkRunRate();
+		}
+
+		// Token: 0x06031A42 RID: 203330 RVA: 0x00DE2547 File Offset: 0x00DE0747
 		private void OnJoystickVisibleChanged()
 		{
 			this.UpdateJoystickVisible();
 		}
 
-		// Token: 0x0603CAE8 RID: 248552 RVA: 0x00E91D58 File Offset: 0x00E8FF58
+		// Token: 0x06031A43 RID: 203331 RVA: 0x00DE254F File Offset: 0x00DE074F
 		protected virtual void UpdateJoystickVisible()
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -643,13 +657,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			contextArea.SetUIActive(this.JoystickVisible);
 		}
 
-		// Token: 0x0603CAE9 RID: 248553 RVA: 0x00E91D8E File Offset: 0x00E8FF8E
+		// Token: 0x06031A44 RID: 203332 RVA: 0x00DE2585 File Offset: 0x00DE0785
 		public virtual void SetVisible(EBattleUiVisibleReason visibleReason, bool bVisible)
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildVisible(visibleReason, EBattleUiChild.Joystick, bVisible, true, 0);
 		}
 
-		// Token: 0x0603CAEA RID: 248554 RVA: 0x00E91DA6 File Offset: 0x00E8FFA6
+		// Token: 0x06031A45 RID: 203333 RVA: 0x00DE259D File Offset: 0x00DE079D
 		public void SetEnable(bool bEnable)
 		{
 			this.SetActive(bEnable);
@@ -659,135 +673,132 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAEB RID: 248555 RVA: 0x00E91DB9 File Offset: 0x00E8FFB9
+		// Token: 0x06031A46 RID: 203334 RVA: 0x00DE25B0 File Offset: 0x00DE07B0
 		public void SetForbidMove(bool isForbidMove)
 		{
 		}
 
-		// Token: 0x0401F9B6 RID: 129462
-		private const float WALK_TO_RUN_RATE = 0.3f;
-
-		// Token: 0x0401F9B7 RID: 129463
+		// Token: 0x0401A46F RID: 107631
 		private const float JOYSTICK_RADIU = 200f;
 
-		// Token: 0x0401F9B8 RID: 129464
+		// Token: 0x0401A470 RID: 107632
 		private const float JOYSTICK_RADIU_SQUARED = 40000f;
 
-		// Token: 0x0401F9B9 RID: 129465
+		// Token: 0x0401A471 RID: 107633
 		private const double CHECK_IN_TOUCH_INTERVAL = 500.0;
 
-		// Token: 0x0401F9BA RID: 129466
+		// Token: 0x0401A472 RID: 107634
 		private const float MASK_AREA_MAX_X = 400f;
 
-		// Token: 0x0401F9BB RID: 129467
+		// Token: 0x0401A473 RID: 107635
 		private const float MASK_AREA_MAX_Y = 400f;
 
-		// Token: 0x0401F9BC RID: 129468
+		// Token: 0x0401A474 RID: 107636
 		[Nullable(2)]
 		private UUIDraggableComponent DraggableComponent;
 
-		// Token: 0x0401F9BD RID: 129469
+		// Token: 0x0401A475 RID: 107637
 		[Nullable(2)]
 		protected UUISprite WalkBgItem;
 
-		// Token: 0x0401F9BE RID: 129470
+		// Token: 0x0401A476 RID: 107638
 		[Nullable(2)]
 		protected UUISprite RunBgItem;
 
-		// Token: 0x0401F9BF RID: 129471
+		// Token: 0x0401A477 RID: 107639
 		[Nullable(2)]
 		private UUISprite HandleItem;
 
-		// Token: 0x0401F9C0 RID: 129472
+		// Token: 0x0401A478 RID: 107640
 		[Nullable(2)]
 		private UUIItem ContextArea;
 
-		// Token: 0x0401F9C1 RID: 129473
+		// Token: 0x0401A479 RID: 107641
 		[Nullable(2)]
 		private UUIItem MaskArea;
 
-		// Token: 0x0401F9C2 RID: 129474
+		// Token: 0x0401A47A RID: 107642
 		private readonly Vector2D TempVector2D = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x0401F9C3 RID: 129475
+		// Token: 0x0401A47B RID: 107643
 		protected EJoystickType CurrentJoystickType;
 
-		// Token: 0x0401F9C4 RID: 129476
+		// Token: 0x0401A47C RID: 107644
 		private readonly global::Vector NormalTargetVector = global::Vector.Create();
 
-		// Token: 0x0401F9C5 RID: 129477
+		// Token: 0x0401A47D RID: 107645
 		private readonly global::Vector PointerPosition = global::Vector.Create();
 
-		// Token: 0x0401F9C6 RID: 129478
+		// Token: 0x0401A47E RID: 107646
 		private readonly global::Vector CenterPosition = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401F9C7 RID: 129479
+		// Token: 0x0401A47F RID: 107647
 		protected readonly global::Vector TargetVector = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401F9C8 RID: 129480
+		// Token: 0x0401A480 RID: 107648
 		private readonly Rotator BgRotator = Rotator.Create();
 
-		// Token: 0x0401F9C9 RID: 129481
+		// Token: 0x0401A481 RID: 107649
 		protected bool IsDynamicJoystick;
 
-		// Token: 0x0401F9CA RID: 129482
+		// Token: 0x0401A482 RID: 107650
 		private float MaskAreaEnableRootX;
 
-		// Token: 0x0401F9CB RID: 129483
+		// Token: 0x0401A483 RID: 107651
 		public int JoystickTouchId = -1;
 
-		// Token: 0x0401F9CC RID: 129484
+		// Token: 0x0401A484 RID: 107652
 		private bool IsInTouch;
 
-		// Token: 0x0401F9CD RID: 129485
+		// Token: 0x0401A485 RID: 107653
 		private TsBasePlayerController PlayerController;
 
-		// Token: 0x0401F9CE RID: 129486
+		// Token: 0x0401A486 RID: 107654
 		private bool IsJoystickPressed;
 
-		// Token: 0x0401F9CF RID: 129487
+		// Token: 0x0401A487 RID: 107655
 		private int DodgeMinLength = 500;
 
-		// Token: 0x0401F9D0 RID: 129488
+		// Token: 0x0401A488 RID: 107656
 		private int DodgeJoystickSlideMinTime = 1000;
 
-		// Token: 0x0401F9D1 RID: 129489
+		// Token: 0x0401A489 RID: 107657
 		private double PressTime;
 
-		// Token: 0x0401F9D2 RID: 129490
+		// Token: 0x0401A48A RID: 107658
 		private global::Vector PressPosition = global::Vector.Create();
 
-		// Token: 0x0401F9D3 RID: 129491
+		// Token: 0x0401A48B RID: 107659
 		[Nullable(2)]
 		private TimerHandle DodgeTimerId;
 
-		// Token: 0x0401F9D4 RID: 129492
+		// Token: 0x0401A48C RID: 107660
 		private double NextCheckInTouchTime;
 
-		// Token: 0x0401F9D5 RID: 129493
+		// Token: 0x0401A48D RID: 107661
 		private bool EnableMaskArea;
 
-		// Token: 0x0401F9D6 RID: 129494
+		// Token: 0x0401A48E RID: 107662
 		protected bool JoystickVisible;
 
-		// Token: 0x0401F9D7 RID: 129495
-		private float WalkRunRate = 0.3f;
+		// Token: 0x0401A48F RID: 107663
+		private float WalkRunRate;
 
-		// Token: 0x0200C00D RID: 49165
+		// Token: 0x0200AA13 RID: 43539
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039F44 RID: 237380
+			// Token: 0x04034906 RID: 215302
 			WalkBgItem,
-			// Token: 0x04039F45 RID: 237381
+			// Token: 0x04034907 RID: 215303
 			RunBgItem,
-			// Token: 0x04039F46 RID: 237382
+			// Token: 0x04034908 RID: 215304
 			HandleItem,
-			// Token: 0x04039F47 RID: 237383
+			// Token: 0x04034909 RID: 215305
 			ContextArea,
-			// Token: 0x04039F48 RID: 237384
+			// Token: 0x0403490A RID: 215306
 			ClickArea,
-			// Token: 0x04039F49 RID: 237385
+			// Token: 0x0403490B RID: 215307
 			MaskArea
 		}
 	}

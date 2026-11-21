@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EA7 RID: 7847
+// Token: 0x02001369 RID: 4969
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryGridItemBase : UiPanelBase
 {
-	// Token: 0x0600F0E4 RID: 61668 RVA: 0x0039D844 File Offset: 0x0039BA44
+	// Token: 0x0600C503 RID: 50435 RVA: 0x003A9400 File Offset: 0x003A7600
 	public HonamiStoryGridItemBase(bool needItem, HonamiStoryBackpackPanelBase panel = null, HonamiStoryItemDataBase itemData = null)
 	{
 		this.NeedItem = needItem;
@@ -28,11 +28,11 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x170012DB RID: 4827
-	// (get) Token: 0x0600F0E5 RID: 61669 RVA: 0x0039D915 File Offset: 0x0039BB15
+	// Token: 0x17001305 RID: 4869
+	// (get) Token: 0x0600C504 RID: 50436 RVA: 0x003A94D1 File Offset: 0x003A76D1
 	private bool NeedItem { get; }
 
-	// Token: 0x0600F0E6 RID: 61670 RVA: 0x0039D920 File Offset: 0x0039BB20
+	// Token: 0x0600C505 RID: 50437 RVA: 0x003A94DC File Offset: 0x003A76DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -55,7 +55,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F0E7 RID: 61671 RVA: 0x0039D9E8 File Offset: 0x0039BBE8
+	// Token: 0x0600C506 RID: 50438 RVA: 0x003A95A4 File Offset: 0x003A77A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryGridItemBase.<OnBeforeStartAsync>d__38 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F0E8 RID: 61672 RVA: 0x0039DA2C File Offset: 0x0039BC2C
+	// Token: 0x0600C507 RID: 50439 RVA: 0x003A95E8 File Offset: 0x003A77E8
 	protected override void OnStart()
 	{
 		FVector2D viewportSize = UWidgetLayoutLibrary.GetViewportSize(GlobalData.World);
@@ -93,7 +93,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		button3.OnPointExitCallBack.Bind(new Action(this.OnBtnPointExit));
 	}
 
-	// Token: 0x0600F0E9 RID: 61673 RVA: 0x0039DAF4 File Offset: 0x0039BCF4
+	// Token: 0x0600C508 RID: 50440 RVA: 0x003A96B0 File Offset: 0x003A78B0
 	protected override void OnBeforeDestroy()
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -114,8 +114,8 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		button3.OnPointExitCallBack.Unbind();
 	}
 
-	// Token: 0x170012DC RID: 4828
-	// (get) Token: 0x0600F0EA RID: 61674 RVA: 0x0039DB45 File Offset: 0x0039BD45
+	// Token: 0x17001306 RID: 4870
+	// (get) Token: 0x0600C509 RID: 50441 RVA: 0x003A9701 File Offset: 0x003A7901
 	private HonamiStoryItemDataBase ItemData
 	{
 		get
@@ -124,40 +124,40 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F0EB RID: 61675 RVA: 0x0039DB4D File Offset: 0x0039BD4D
+	// Token: 0x0600C50A RID: 50442 RVA: 0x003A9709 File Offset: 0x003A7909
 	[NullableContext(1)]
 	public HonamiStoryBackpackPanelBase GetPanel()
 	{
 		return this.Panel;
 	}
 
-	// Token: 0x0600F0EC RID: 61676 RVA: 0x0039DB55 File Offset: 0x0039BD55
+	// Token: 0x0600C50B RID: 50443 RVA: 0x003A9711 File Offset: 0x003A7911
 	public int GetEmptyPosition()
 	{
 		return this.EmptyPosition;
 	}
 
-	// Token: 0x0600F0ED RID: 61677 RVA: 0x0039DB5D File Offset: 0x0039BD5D
+	// Token: 0x0600C50C RID: 50444 RVA: 0x003A9719 File Offset: 0x003A7919
 	public HonamiStoryItemGridItem GetItemGridItem()
 	{
 		return this.ItemGridItem;
 	}
 
-	// Token: 0x0600F0EE RID: 61678 RVA: 0x0039DB65 File Offset: 0x0039BD65
+	// Token: 0x0600C50D RID: 50445 RVA: 0x003A9721 File Offset: 0x003A7921
 	[NullableContext(1)]
 	public void RegisterPanel(HonamiStoryBackpackPanelBase panel)
 	{
 		this.Panel = panel;
 	}
 
-	// Token: 0x0600F0EF RID: 61679 RVA: 0x0039DB6E File Offset: 0x0039BD6E
+	// Token: 0x0600C50E RID: 50446 RVA: 0x003A972A File Offset: 0x003A792A
 	[NullableContext(1)]
 	protected virtual HonamiStoryItemGridItem CreateGridItem([Nullable(2)] HonamiStoryItemDataBase data)
 	{
 		return new HonamiStoryItemGridItem(data);
 	}
 
-	// Token: 0x0600F0F0 RID: 61680 RVA: 0x0039DB78 File Offset: 0x0039BD78
+	// Token: 0x0600C50F RID: 50447 RVA: 0x003A9734 File Offset: 0x003A7934
 	protected UniTask InitItemGridItem(HonamiStoryItemDataBase data, int position)
 	{
 		HonamiStoryGridItemBase.<InitItemGridItem>d__48 <InitItemGridItem>d__;
@@ -170,7 +170,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return <InitItemGridItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F0F1 RID: 61681 RVA: 0x0039DBCC File Offset: 0x0039BDCC
+	// Token: 0x0600C510 RID: 50448 RVA: 0x003A9788 File Offset: 0x003A7988
 	protected UniTask InitSweepItem(HonamiStoryItemDataBase data)
 	{
 		HonamiStoryGridItemBase.<InitSweepItem>d__49 <InitSweepItem>d__;
@@ -181,7 +181,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return <InitSweepItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F0F2 RID: 61682 RVA: 0x0039DC10 File Offset: 0x0039BE10
+	// Token: 0x0600C511 RID: 50449 RVA: 0x003A97CC File Offset: 0x003A79CC
 	public virtual void Refresh(HonamiStoryItemDataBase data, int position)
 	{
 		this.Data = data;
@@ -221,7 +221,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.PlayNewlyPickedUpSweepAnimation(data);
 	}
 
-	// Token: 0x0600F0F3 RID: 61683 RVA: 0x0039DD3A File Offset: 0x0039BF3A
+	// Token: 0x0600C512 RID: 50450 RVA: 0x003A98F6 File Offset: 0x003A7AF6
 	public int GetIncId()
 	{
 		HonamiStoryItemDataBase itemData = this.ItemData;
@@ -232,19 +232,19 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return itemData.GetIncId();
 	}
 
-	// Token: 0x0600F0F4 RID: 61684 RVA: 0x0039DD4D File Offset: 0x0039BF4D
+	// Token: 0x0600C513 RID: 50451 RVA: 0x003A9909 File Offset: 0x003A7B09
 	public HonamiStoryItemDataBase GetData()
 	{
 		return this.Data;
 	}
 
-	// Token: 0x0600F0F5 RID: 61685 RVA: 0x0039DD55 File Offset: 0x0039BF55
+	// Token: 0x0600C514 RID: 50452 RVA: 0x003A9911 File Offset: 0x003A7B11
 	public void SetIsForDrag(bool value)
 	{
 		this.IsForDrag = value;
 	}
 
-	// Token: 0x0600F0F6 RID: 61686 RVA: 0x0039DD60 File Offset: 0x0039BF60
+	// Token: 0x0600C515 RID: 50453 RVA: 0x003A991C File Offset: 0x003A7B1C
 	[NullableContext(1)]
 	public UniTask PlaySequenceByName(string sequenceName)
 	{
@@ -257,13 +257,13 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return <PlaySequenceByName>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F0F7 RID: 61687 RVA: 0x0039DDAB File Offset: 0x0039BFAB
+	// Token: 0x0600C516 RID: 50454 RVA: 0x003A9967 File Offset: 0x003A7B67
 	public void PlayPosChangeSweepAnimation()
 	{
 		this.PlaySequenceByName("Sweep_In");
 	}
 
-	// Token: 0x0600F0F8 RID: 61688 RVA: 0x0039DDB9 File Offset: 0x0039BFB9
+	// Token: 0x0600C517 RID: 50455 RVA: 0x003A9975 File Offset: 0x003A7B75
 	[NullableContext(1)]
 	public void PlayNewlyPickedUpSweepAnimation(HonamiStoryItemDataBase data)
 	{
@@ -275,7 +275,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		data.SetNewInBackpack(false);
 	}
 
-	// Token: 0x0600F0F9 RID: 61689 RVA: 0x0039DDD7 File Offset: 0x0039BFD7
+	// Token: 0x0600C518 RID: 50456 RVA: 0x003A9993 File Offset: 0x003A7B93
 	protected void ClearSequence()
 	{
 		HonamiStoryItemSweepItem sweepItem = this.SweepItem;
@@ -286,7 +286,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		sweepItem.ClearSequence();
 	}
 
-	// Token: 0x0600F0FA RID: 61690 RVA: 0x0039DDEC File Offset: 0x0039BFEC
+	// Token: 0x0600C519 RID: 50457 RVA: 0x003A99A8 File Offset: 0x003A7BA8
 	protected bool CheckOverflowEnable(int position, bool notEmpty)
 	{
 		if (this.Panel == null)
@@ -360,13 +360,13 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600F0FB RID: 61691 RVA: 0x0039DF09 File Offset: 0x0039C109
+	// Token: 0x0600C51A RID: 50458 RVA: 0x003A9AC5 File Offset: 0x003A7CC5
 	private void OnClickedGridButton()
 	{
 		this.DoClickedGridButton();
 	}
 
-	// Token: 0x0600F0FC RID: 61692 RVA: 0x0039DF14 File Offset: 0x0039C114
+	// Token: 0x0600C51B RID: 50459 RVA: 0x003A9AD0 File Offset: 0x003A7CD0
 	protected virtual void OnBtnPointDown()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -376,19 +376,19 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F0FD RID: 61693 RVA: 0x0039DF43 File Offset: 0x0039C143
+	// Token: 0x0600C51C RID: 50460 RVA: 0x003A9AFF File Offset: 0x003A7CFF
 	private void OnBtnPointEnter()
 	{
 		HonamiStoryModel.Instance.GetInteractController().OnHoverItem(true, base.GetButton(2).RootUIComp);
 	}
 
-	// Token: 0x0600F0FE RID: 61694 RVA: 0x0039DF66 File Offset: 0x0039C166
+	// Token: 0x0600C51D RID: 50461 RVA: 0x003A9B22 File Offset: 0x003A7D22
 	private void OnBtnPointExit()
 	{
 		HonamiStoryModel.Instance.GetInteractController().OnUnHover();
 	}
 
-	// Token: 0x0600F0FF RID: 61695 RVA: 0x0039DF78 File Offset: 0x0039C178
+	// Token: 0x0600C51E RID: 50462 RVA: 0x003A9B34 File Offset: 0x003A7D34
 	protected virtual void DoClickedGridButton()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -406,7 +406,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F100 RID: 61696 RVA: 0x0039DFBA File Offset: 0x0039C1BA
+	// Token: 0x0600C51F RID: 50463 RVA: 0x003A9B76 File Offset: 0x003A7D76
 	public void CancelItemToggleSelect()
 	{
 		HonamiStoryItemGridItem itemGridItem = this.ItemGridItem;
@@ -417,7 +417,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		itemGridItem.CancelToggleSelect();
 	}
 
-	// Token: 0x0600F101 RID: 61697 RVA: 0x0039DFCC File Offset: 0x0039C1CC
+	// Token: 0x0600C520 RID: 50464 RVA: 0x003A9B88 File Offset: 0x003A7D88
 	private bool IsCanDragState(bool isBegin)
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -428,7 +428,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return this.CanDrag && (backpackLogicState == EHonamiStoryBackpackLogicState.Normal || backpackLogicState == EHonamiStoryBackpackLogicState.DraggingPlugins || backpackLogicState == EHonamiStoryBackpackLogicState.Dragging);
 	}
 
-	// Token: 0x0600F102 RID: 61698 RVA: 0x0039E018 File Offset: 0x0039C218
+	// Token: 0x0600C521 RID: 50465 RVA: 0x003A9BD4 File Offset: 0x003A7DD4
 	private bool TrySellStateDragLogic(bool isBegin, ULGUIPointerEventData eventData)
 	{
 		if (HonamiStoryModel.Instance.GetBackpackLogicState() != EHonamiStoryBackpackLogicState.Sell)
@@ -461,7 +461,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600F103 RID: 61699 RVA: 0x0039E0D8 File Offset: 0x0039C2D8
+	// Token: 0x0600C522 RID: 50466 RVA: 0x003A9C94 File Offset: 0x003A7E94
 	private void CloseTipsWhenBeginDrag()
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -472,7 +472,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		HonamiStoryModel.Instance.GetBackpackLogic().CloseTips();
 	}
 
-	// Token: 0x0600F104 RID: 61700 RVA: 0x0039E108 File Offset: 0x0039C308
+	// Token: 0x0600C523 RID: 50467 RVA: 0x003A9CC4 File Offset: 0x003A7EC4
 	public void PlayMoveItemSeq()
 	{
 		if (!this.IsForDrag)
@@ -482,7 +482,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.ItemGridItem.PlayMoveItemSeq();
 	}
 
-	// Token: 0x0600F105 RID: 61701 RVA: 0x0039E11E File Offset: 0x0039C31E
+	// Token: 0x0600C524 RID: 50468 RVA: 0x003A9CDA File Offset: 0x003A7EDA
 	private void RemovePointerDownTimer()
 	{
 		if (this.LastPointerTimer != null && this.LastPointerTimer.Valid())
@@ -492,19 +492,19 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.LastPointerTimer = null;
 	}
 
-	// Token: 0x0600F106 RID: 61702 RVA: 0x0039E14D File Offset: 0x0039C34D
+	// Token: 0x0600C525 RID: 50469 RVA: 0x003A9D09 File Offset: 0x003A7F09
 	public void MarkUseCancel()
 	{
 		this.IsUseCancel = true;
 	}
 
-	// Token: 0x0600F107 RID: 61703 RVA: 0x0039E156 File Offset: 0x0039C356
+	// Token: 0x0600C526 RID: 50470 RVA: 0x003A9D12 File Offset: 0x003A7F12
 	public bool GetIsUseCancel()
 	{
 		return this.IsUseCancel;
 	}
 
-	// Token: 0x0600F108 RID: 61704 RVA: 0x0039E15E File Offset: 0x0039C35E
+	// Token: 0x0600C527 RID: 50471 RVA: 0x003A9D1A File Offset: 0x003A7F1A
 	public void TriggerOnEnterGridCb()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -518,7 +518,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F109 RID: 61705 RVA: 0x0039E184 File Offset: 0x0039C384
+	// Token: 0x0600C528 RID: 50472 RVA: 0x003A9D40 File Offset: 0x003A7F40
 	protected void InitDraggable()
 	{
 		UUIExtendToggle draggableComponent = this.ItemGridItem.DraggableComponent;
@@ -532,7 +532,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		draggableComponent.OnPointerEndDragCallBack.Bind(new Func<ULGUIPointerEventData, bool>(this.OnDragEnd));
 	}
 
-	// Token: 0x0600F10A RID: 61706 RVA: 0x0039E254 File Offset: 0x0039C454
+	// Token: 0x0600C529 RID: 50473 RVA: 0x003A9E10 File Offset: 0x003A8010
 	public void OnPointerEnter(EToggleState _)
 	{
 		if (HonamiStoryModel.Instance.GetInteractController().IsSellDragging)
@@ -547,7 +547,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		HonamiStoryModel.Instance.GetInteractController().OnHoverItem(false, this.ItemGridItem.GetPanelForHover());
 	}
 
-	// Token: 0x0600F10B RID: 61707 RVA: 0x0039E2BA File Offset: 0x0039C4BA
+	// Token: 0x0600C52A RID: 50474 RVA: 0x003A9E76 File Offset: 0x003A8076
 	public void OnPointerExit(EToggleState _)
 	{
 		if (this.IsDragging || this.OnExitGridCb == null)
@@ -558,7 +558,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		HonamiStoryModel.Instance.GetInteractController().OnUnHover();
 	}
 
-	// Token: 0x0600F10C RID: 61708 RVA: 0x0039E2E8 File Offset: 0x0039C4E8
+	// Token: 0x0600C52B RID: 50475 RVA: 0x003A9EA4 File Offset: 0x003A80A4
 	public void OnPointerDown(EToggleState _)
 	{
 		Action onDownGridCb = this.OnDownGridCb;
@@ -613,7 +613,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F10D RID: 61709 RVA: 0x0039E445 File Offset: 0x0039C645
+	// Token: 0x0600C52C RID: 50476 RVA: 0x003AA001 File Offset: 0x003A8201
 	public void OnPointerCancel(EToggleState _)
 	{
 		if (this.IsStartDrag)
@@ -623,7 +623,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.OnPointerUp(EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0600F10E RID: 61710 RVA: 0x0039E458 File Offset: 0x0039C658
+	// Token: 0x0600C52D RID: 50477 RVA: 0x003AA014 File Offset: 0x003A8214
 	public void OnPointerUp(EToggleState _)
 	{
 		EHonamiStoryBackpackLogicState backpackLogicState = HonamiStoryModel.Instance.GetBackpackLogicState();
@@ -643,7 +643,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F10F RID: 61711 RVA: 0x0039E4D8 File Offset: 0x0039C6D8
+	// Token: 0x0600C52E RID: 50478 RVA: 0x003AA094 File Offset: 0x003A8294
 	public bool OnDragBegin(ULGUIPointerEventData eventData)
 	{
 		this.IsStartDrag = true;
@@ -690,7 +690,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600F110 RID: 61712 RVA: 0x0039E5FB File Offset: 0x0039C7FB
+	// Token: 0x0600C52F RID: 50479 RVA: 0x003AA1B7 File Offset: 0x003A83B7
 	private void RefreshBackpackLogicStateByDrag()
 	{
 		if (this.GetData().GetItemType() == EHonamiStoryItemType.Plugin)
@@ -701,7 +701,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		HonamiStoryModel.Instance.SetBackpackLogicState(EHonamiStoryBackpackLogicState.Dragging);
 	}
 
-	// Token: 0x0600F111 RID: 61713 RVA: 0x0039E624 File Offset: 0x0039C824
+	// Token: 0x0600C530 RID: 50480 RVA: 0x003AA1E0 File Offset: 0x003A83E0
 	public bool OnDrag(ULGUIPointerEventData eventData)
 	{
 		if (!this.IsCanDragState(false))
@@ -735,7 +735,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x0600F112 RID: 61714 RVA: 0x0039E71C File Offset: 0x0039C91C
+	// Token: 0x0600C531 RID: 50481 RVA: 0x003AA2D8 File Offset: 0x003A84D8
 	public bool OnDragEnd(ULGUIPointerEventData eventData)
 	{
 		this.TrySellStateDragLogic(false, null);
@@ -753,7 +753,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600F113 RID: 61715 RVA: 0x0039E784 File Offset: 0x0039C984
+	// Token: 0x0600C532 RID: 50482 RVA: 0x003AA340 File Offset: 0x003A8540
 	protected void OnClickedItem()
 	{
 		if (this.IsDragging || this.OnClickedGridCb == null)
@@ -766,7 +766,7 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		this.OnClickedGridCb(this.ItemGridItem, arg, arg2);
 	}
 
-	// Token: 0x0600F114 RID: 61716 RVA: 0x0039E7F3 File Offset: 0x0039C9F3
+	// Token: 0x0600C533 RID: 50483 RVA: 0x003AA3AF File Offset: 0x003A85AF
 	public UUIItem GetBtnItem()
 	{
 		UUIButtonComponent button = base.GetButton(2);
@@ -777,16 +777,16 @@ public class HonamiStoryGridItemBase : UiPanelBase
 		return button.GetRootComponent();
 	}
 
-	// Token: 0x04006F61 RID: 28513
+	// Token: 0x04007042 RID: 28738
 	public Action<HonamiStoryItemGridItem> OnEnterGridCb;
 
-	// Token: 0x04006F62 RID: 28514
+	// Token: 0x04007043 RID: 28739
 	public Action OnExitGridCb;
 
-	// Token: 0x04006F63 RID: 28515
+	// Token: 0x04007044 RID: 28740
 	public Action OnDownGridCb;
 
-	// Token: 0x04006F64 RID: 28516
+	// Token: 0x04007045 RID: 28741
 	[Nullable(new byte[]
 	{
 		2,
@@ -796,105 +796,105 @@ public class HonamiStoryGridItemBase : UiPanelBase
 	})]
 	public Action<HonamiStoryItemGridItem, Vector2D, Vector2D> OnClickedGridCb;
 
-	// Token: 0x04006F65 RID: 28517
+	// Token: 0x04007046 RID: 28742
 	[Nullable(1)]
 	protected HonamiStoryBackpackPanelBase Panel;
 
-	// Token: 0x04006F66 RID: 28518
+	// Token: 0x04007047 RID: 28743
 	public HonamiStoryItemDataBase Data;
 
-	// Token: 0x04006F67 RID: 28519
+	// Token: 0x04007048 RID: 28744
 	private UiPanelBase OverflowItem;
 
-	// Token: 0x04006F68 RID: 28520
+	// Token: 0x04007049 RID: 28745
 	private bool CanDrag;
 
-	// Token: 0x04006F69 RID: 28521
+	// Token: 0x0400704A RID: 28746
 	private double LastPointerDownTime;
 
-	// Token: 0x04006F6A RID: 28522
+	// Token: 0x0400704B RID: 28747
 	private TimerHandle LastPointerTimer;
 
-	// Token: 0x04006F6B RID: 28523
+	// Token: 0x0400704C RID: 28748
 	[Nullable(1)]
 	private readonly Vector LastPosition = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04006F6C RID: 28524
+	// Token: 0x0400704D RID: 28749
 	[Nullable(1)]
 	private readonly Vector CurrentPosition = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04006F6D RID: 28525
+	// Token: 0x0400704E RID: 28750
 	[Nullable(1)]
 	private readonly Vector LastSellPosition = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04006F6E RID: 28526
+	// Token: 0x0400704F RID: 28751
 	[Nullable(1)]
 	private readonly Vector CurrentSellPosition = Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x04006F6F RID: 28527
+	// Token: 0x04007050 RID: 28752
 	private double MoveDistanceX;
 
-	// Token: 0x04006F70 RID: 28528
+	// Token: 0x04007051 RID: 28753
 	private double MoveDistanceY;
 
-	// Token: 0x04006F71 RID: 28529
+	// Token: 0x04007052 RID: 28754
 	private float DragDistanceThreshold = 40f;
 
-	// Token: 0x04006F72 RID: 28530
+	// Token: 0x04007053 RID: 28755
 	private float ScreenHeight;
 
-	// Token: 0x04006F73 RID: 28531
+	// Token: 0x04007054 RID: 28756
 	private bool IsStartDrag;
 
-	// Token: 0x04006F74 RID: 28532
+	// Token: 0x04007055 RID: 28757
 	private bool IsDragging;
 
-	// Token: 0x04006F75 RID: 28533
+	// Token: 0x04007056 RID: 28758
 	private bool IsGamepadDragging;
 
-	// Token: 0x04006F76 RID: 28534
+	// Token: 0x04007057 RID: 28759
 	private bool IsUseCancel;
 
-	// Token: 0x04006F77 RID: 28535
+	// Token: 0x04007058 RID: 28760
 	private bool IsForDrag;
 
-	// Token: 0x04006F78 RID: 28536
+	// Token: 0x04007059 RID: 28761
 	private float DragSpeedThreshold;
 
-	// Token: 0x04006F79 RID: 28537
+	// Token: 0x0400705A RID: 28762
 	private int EmptyPosition;
 
-	// Token: 0x04006F7A RID: 28538
+	// Token: 0x0400705B RID: 28763
 	protected HonamiStoryItemGridItem ItemGridItem;
 
-	// Token: 0x04006F7B RID: 28539
+	// Token: 0x0400705C RID: 28764
 	[Nullable(1)]
 	protected UUISprite SpriteBg;
 
-	// Token: 0x04006F7C RID: 28540
+	// Token: 0x0400705D RID: 28765
 	protected HonamiStoryItemSweepItem SweepItem;
 
-	// Token: 0x04006F7D RID: 28541
+	// Token: 0x0400705E RID: 28766
 	private const int DRAG_MIN_ANGLE = 75;
 
-	// Token: 0x04006F7E RID: 28542
+	// Token: 0x0400705F RID: 28767
 	private const int DRAG_MAX_ANGLE = 105;
 
-	// Token: 0x04006F7F RID: 28543
+	// Token: 0x04007060 RID: 28768
 	private const int DARG_MOVE_DISTANCE = 40;
 
-	// Token: 0x04006F80 RID: 28544
+	// Token: 0x04007061 RID: 28769
 	private const int POINTER_DOWN_DELAY = 500;
 
-	// Token: 0x0200846F RID: 33903
+	// Token: 0x020075F4 RID: 30196
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B1A4 RID: 176548
+		// Token: 0x040264C8 RID: 156872
 		Self,
-		// Token: 0x0402B1A5 RID: 176549
+		// Token: 0x040264C9 RID: 156873
 		SpriteBg,
-		// Token: 0x0402B1A6 RID: 176550
+		// Token: 0x040264CA RID: 156874
 		Btn
 	}
 }

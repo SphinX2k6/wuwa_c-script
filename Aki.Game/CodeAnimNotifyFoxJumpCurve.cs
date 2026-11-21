@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02003164 RID: 12644
+// Token: 0x020026D1 RID: 9937
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,19 +12,19 @@ using UnrealEngine;
 })]
 public class CodeAnimNotifyFoxJumpCurve : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B33D RID: 111421 RVA: 0x007698D3 File Offset: 0x00767AD3
+	// Token: 0x06018E42 RID: 101954 RVA: 0x00791237 File Offset: 0x0078F437
 	public CodeAnimNotifyFoxJumpCurve(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B33E RID: 111422 RVA: 0x007698E7 File Offset: 0x00767AE7
+	// Token: 0x06018E43 RID: 101955 RVA: 0x0079124B File Offset: 0x0078F44B
 	private void DoLand()
 	{
 		this.Landed = true;
 		this.SpecialSkill.DoJumpLand();
 	}
 
-	// Token: 0x0601B33F RID: 111423 RVA: 0x007698FC File Offset: 0x00767AFC
+	// Token: 0x06018E44 RID: 101956 RVA: 0x00791260 File Offset: 0x0078F460
 	public override void OnNotifyBegin(float totalDuration, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		if (!this.SpecialSkill.HasJumpTarget || this.SpecialSkill.JumpTarget.IsNearlyZero(9.999999747378752E-05))
@@ -85,7 +85,7 @@ public class CodeAnimNotifyFoxJumpCurve : CodeAnimNotifyBase<SpecialSkillAnimalF
 		Log.Instance.Error(ELogModule.Character, ELogAuthor.CWZ, "[FoxJump.Curve] payload 缺少 JumpCurve，跳过移动", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601B340 RID: 111424 RVA: 0x00769ADC File Offset: 0x00767CDC
+	// Token: 0x06018E45 RID: 101957 RVA: 0x00791440 File Offset: 0x0078F640
 	public override void OnNotifyTick(float delta, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		if (this.MoveComp == null || this.ActorComp == null || this.JumpCurve == null || this.Landed)
@@ -113,7 +113,7 @@ public class CodeAnimNotifyFoxJumpCurve : CodeAnimNotifyBase<SpecialSkillAnimalF
 		}
 	}
 
-	// Token: 0x0601B341 RID: 111425 RVA: 0x00769C20 File Offset: 0x00767E20
+	// Token: 0x06018E46 RID: 101958 RVA: 0x00791584 File Offset: 0x0078F784
 	public override void OnNotifyEnd(FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		if (this.MoveComp != null && this.ActorComp != null && !this.Landed)
@@ -128,69 +128,69 @@ public class CodeAnimNotifyFoxJumpCurve : CodeAnimNotifyBase<SpecialSkillAnimalF
 		this.JumpCurve = null;
 	}
 
-	// Token: 0x0400D3BF RID: 54207
+	// Token: 0x0400D822 RID: 55330
 	public const string EventName = "Fox.JumpCurve";
 
-	// Token: 0x0400D3C0 RID: 54208
+	// Token: 0x0400D823 RID: 55331
 	private const float FIX_LOCATION_TOLERANCE = 2f;
 
-	// Token: 0x0400D3C1 RID: 54209
+	// Token: 0x0400D824 RID: 55332
 	private const float MS_PER_SECOND = 1000f;
 
-	// Token: 0x0400D3C2 RID: 54210
+	// Token: 0x0400D825 RID: 55333
 	private const float DEBUG_SPHERE_RADIUS = 5f;
 
-	// Token: 0x0400D3C3 RID: 54211
+	// Token: 0x0400D826 RID: 55334
 	private readonly Vector TmpOffset = Vector.Create();
 
-	// Token: 0x0400D3C4 RID: 54212
+	// Token: 0x0400D827 RID: 55335
 	private float StartX;
 
-	// Token: 0x0400D3C5 RID: 54213
+	// Token: 0x0400D828 RID: 55336
 	private float StartY;
 
-	// Token: 0x0400D3C6 RID: 54214
+	// Token: 0x0400D829 RID: 55337
 	private float StartZ;
 
-	// Token: 0x0400D3C7 RID: 54215
+	// Token: 0x0400D82A RID: 55338
 	private float DirX;
 
-	// Token: 0x0400D3C8 RID: 54216
+	// Token: 0x0400D82B RID: 55339
 	private float DirY;
 
-	// Token: 0x0400D3C9 RID: 54217
+	// Token: 0x0400D82C RID: 55340
 	private float TargetX;
 
-	// Token: 0x0400D3CA RID: 54218
+	// Token: 0x0400D82D RID: 55341
 	private float TargetY;
 
-	// Token: 0x0400D3CB RID: 54219
+	// Token: 0x0400D82E RID: 55342
 	private float TargetZ;
 
-	// Token: 0x0400D3CC RID: 54220
+	// Token: 0x0400D82F RID: 55343
 	private float HorizontalDist;
 
-	// Token: 0x0400D3CD RID: 54221
+	// Token: 0x0400D830 RID: 55344
 	private float VerticalDist;
 
-	// Token: 0x0400D3CE RID: 54222
+	// Token: 0x0400D831 RID: 55345
 	private float TotalDuration;
 
-	// Token: 0x0400D3CF RID: 54223
+	// Token: 0x0400D832 RID: 55346
 	private float Elapsed;
 
-	// Token: 0x0400D3D0 RID: 54224
+	// Token: 0x0400D833 RID: 55347
 	private bool Landed;
 
-	// Token: 0x0400D3D1 RID: 54225
+	// Token: 0x0400D834 RID: 55348
 	[Nullable(2)]
 	private UCurveFloat JumpCurve;
 
-	// Token: 0x0400D3D2 RID: 54226
+	// Token: 0x0400D835 RID: 55349
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400D3D3 RID: 54227
+	// Token: 0x0400D836 RID: 55350
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 }

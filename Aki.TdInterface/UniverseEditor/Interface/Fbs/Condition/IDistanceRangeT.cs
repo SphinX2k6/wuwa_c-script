@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BF9 RID: 19449
+	// Token: 0x020050E6 RID: 20710
 	public class IDistanceRangeT
 	{
-		// Token: 0x17008D48 RID: 36168
-		// (get) Token: 0x0601ECBD RID: 126141 RVA: 0x00450516 File Offset: 0x0044E716
-		// (set) Token: 0x0601ECBE RID: 126142 RVA: 0x0045051E File Offset: 0x0044E71E
+		// Token: 0x1700946C RID: 37996
+		// (get) Token: 0x060208A3 RID: 133283 RVA: 0x00483B7E File Offset: 0x00481D7E
+		// (set) Token: 0x060208A4 RID: 133284 RVA: 0x00483B86 File Offset: 0x00481D86
 		public float Min { get; set; }
 
-		// Token: 0x17008D49 RID: 36169
-		// (get) Token: 0x0601ECBF RID: 126143 RVA: 0x00450527 File Offset: 0x0044E727
-		// (set) Token: 0x0601ECC0 RID: 126144 RVA: 0x0045052F File Offset: 0x0044E72F
+		// Token: 0x1700946D RID: 37997
+		// (get) Token: 0x060208A5 RID: 133285 RVA: 0x00483B8F File Offset: 0x00481D8F
+		// (set) Token: 0x060208A6 RID: 133286 RVA: 0x00483B97 File Offset: 0x00481D97
 		public float Max { get; set; }
 
-		// Token: 0x17008D4A RID: 36170
-		// (get) Token: 0x0601ECC1 RID: 126145 RVA: 0x00450538 File Offset: 0x0044E738
-		// (set) Token: 0x0601ECC2 RID: 126146 RVA: 0x00450540 File Offset: 0x0044E740
+		// Token: 0x1700946E RID: 37998
+		// (get) Token: 0x060208A7 RID: 133287 RVA: 0x00483BA0 File Offset: 0x00481DA0
+		// (set) Token: 0x060208A8 RID: 133288 RVA: 0x00483BA8 File Offset: 0x00481DA8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601ECC3 RID: 126147 RVA: 0x00450549 File Offset: 0x0044E749
+		// Token: 0x060208A9 RID: 133289 RVA: 0x00483BB1 File Offset: 0x00481DB1
 		public IDistanceRangeT()
 		{
 			this.Min = 0f;

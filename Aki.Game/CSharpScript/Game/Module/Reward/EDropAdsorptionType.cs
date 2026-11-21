@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Reward
 {
-	// Token: 0x02004F0D RID: 20237
+	// Token: 0x02003ED6 RID: 16086
 	public enum EDropAdsorptionType
 	{
-		// Token: 0x0401B94F RID: 112975
+		// Token: 0x04016322 RID: 90914
 		Manual,
-		// Token: 0x0401B950 RID: 112976
+		// Token: 0x04016323 RID: 90915
 		Auto
 	}
 }

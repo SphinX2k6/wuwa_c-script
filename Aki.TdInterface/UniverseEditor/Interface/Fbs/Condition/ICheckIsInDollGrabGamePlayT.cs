@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A91 RID: 19089
+	// Token: 0x02004F5A RID: 20314
 	public class ICheckIsInDollGrabGamePlayT
 	{
-		// Token: 0x17008A4E RID: 35406
-		// (get) Token: 0x0601DF0E RID: 122638 RVA: 0x004345CE File Offset: 0x004327CE
-		// (set) Token: 0x0601DF0F RID: 122639 RVA: 0x004345D6 File Offset: 0x004327D6
+		// Token: 0x1700912F RID: 37167
+		// (get) Token: 0x0601F9C7 RID: 129479 RVA: 0x0046595A File Offset: 0x00463B5A
+		// (set) Token: 0x0601F9C8 RID: 129480 RVA: 0x00465962 File Offset: 0x00463B62
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A4F RID: 35407
-		// (get) Token: 0x0601DF10 RID: 122640 RVA: 0x004345DF File Offset: 0x004327DF
-		// (set) Token: 0x0601DF11 RID: 122641 RVA: 0x004345E7 File Offset: 0x004327E7
+		// Token: 0x17009130 RID: 37168
+		// (get) Token: 0x0601F9C9 RID: 129481 RVA: 0x0046596B File Offset: 0x00463B6B
+		// (set) Token: 0x0601F9CA RID: 129482 RVA: 0x00465973 File Offset: 0x00463B73
 		public bool IsIn { get; set; }
 
-		// Token: 0x17008A50 RID: 35408
-		// (get) Token: 0x0601DF12 RID: 122642 RVA: 0x004345F0 File Offset: 0x004327F0
-		// (set) Token: 0x0601DF13 RID: 122643 RVA: 0x004345F8 File Offset: 0x004327F8
+		// Token: 0x17009131 RID: 37169
+		// (get) Token: 0x0601F9CB RID: 129483 RVA: 0x0046597C File Offset: 0x00463B7C
+		// (set) Token: 0x0601F9CC RID: 129484 RVA: 0x00465984 File Offset: 0x00463B84
 		public int DollGrabEntityId { get; set; }
 
-		// Token: 0x0601DF14 RID: 122644 RVA: 0x00434601 File Offset: 0x00432801
+		// Token: 0x0601F9CD RID: 129485 RVA: 0x0046598D File Offset: 0x00463B8D
 		public ICheckIsInDollGrabGamePlayT()
 		{
 			this.Type = ECondition.CompareVar;

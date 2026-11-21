@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BF5 RID: 3061
+	// Token: 0x02000CC5 RID: 3269
 	public class IEntityPackageNode
 	{
-		// Token: 0x06004653 RID: 18003 RVA: 0x000B1A9D File Offset: 0x000AFC9D
-		[NullableContext(1)]
+		// Token: 0x06004AB6 RID: 19126 RVA: 0x000BBC69 File Offset: 0x000B9E69
 		public static IEntityPackageNode Create(IEntityPackageNode? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001426 RID: 5158
-		// (get) Token: 0x06004654 RID: 18004 RVA: 0x000B1ABC File Offset: 0x000AFCBC
+		// Token: 0x17001527 RID: 5415
+		// (get) Token: 0x06004AB7 RID: 19127 RVA: 0x000BBC88 File Offset: 0x000B9E88
 		public virtual int EntityId
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001427 RID: 5159
-		// (get) Token: 0x06004655 RID: 18005 RVA: 0x000B1ACC File Offset: 0x000AFCCC
+		// Token: 0x17001528 RID: 5416
+		// (get) Token: 0x06004AB8 RID: 19128 RVA: 0x000BBC98 File Offset: 0x000B9E98
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityPackageNode> Children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,18 +66,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002808 RID: 10248
+		// Token: 0x04002A54 RID: 10836
 		private IEntityPackageNode Instance;
 
-		// Token: 0x04002809 RID: 10249
+		// Token: 0x04002A55 RID: 10837
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityPackageNode> _ChildrenCache;
 
-		// Token: 0x0400280A RID: 10250
+		// Token: 0x04002A56 RID: 10838
 		private bool _ChildrenInited;
 	}
 }

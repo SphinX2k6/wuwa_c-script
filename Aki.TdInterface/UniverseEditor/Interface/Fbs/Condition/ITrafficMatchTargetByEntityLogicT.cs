@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CFE RID: 19710
+	// Token: 0x020051FA RID: 20986
 	public class ITrafficMatchTargetByEntityLogicT
 	{
-		// Token: 0x17008F04 RID: 36612
-		// (get) Token: 0x0601F49C RID: 128156 RVA: 0x0045D723 File Offset: 0x0045B923
-		// (set) Token: 0x0601F49D RID: 128157 RVA: 0x0045D72B File Offset: 0x0045B92B
+		// Token: 0x1700963D RID: 38461
+		// (get) Token: 0x060210E1 RID: 135393 RVA: 0x00491673 File Offset: 0x0048F873
+		// (set) Token: 0x060210E2 RID: 135394 RVA: 0x0049167B File Offset: 0x0048F87B
 		public ETrafficMatchTargetType Type { get; set; }
 
-		// Token: 0x17008F05 RID: 36613
-		// (get) Token: 0x0601F49E RID: 128158 RVA: 0x0045D734 File Offset: 0x0045B934
-		// (set) Token: 0x0601F49F RID: 128159 RVA: 0x0045D73C File Offset: 0x0045B93C
+		// Token: 0x1700963E RID: 38462
+		// (get) Token: 0x060210E3 RID: 135395 RVA: 0x00491684 File Offset: 0x0048F884
+		// (set) Token: 0x060210E4 RID: 135396 RVA: 0x0049168C File Offset: 0x0048F88C
 		public List<EEntityLogic> EntityLogicTypes { get; set; }
 
-		// Token: 0x0601F4A0 RID: 128160 RVA: 0x0045D745 File Offset: 0x0045B945
+		// Token: 0x060210E5 RID: 135397 RVA: 0x00491695 File Offset: 0x0048F895
 		public ITrafficMatchTargetByEntityLogicT()
 		{
 			this.Type = ETrafficMatchTargetType.MatchByEntityLogic;

@@ -6,7 +6,7 @@ using CSharpScript.Core.Utils;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000FED RID: 4077
+// Token: 0x020004A2 RID: 1186
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItemData>
 {
-	// Token: 0x060068AB RID: 26795 RVA: 0x0014CD98 File Offset: 0x0014AF98
+	// Token: 0x06003C43 RID: 15427 RVA: 0x0015565C File Offset: 0x0015385C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		};
 	}
 
-	// Token: 0x060068AC RID: 26796 RVA: 0x0014CE57 File Offset: 0x0014B057
+	// Token: 0x06003C44 RID: 15428 RVA: 0x0015571B File Offset: 0x0015391B
 	[NullableContext(1)]
 	public override void Refresh(FurnitureSlotScrollItemData data, bool isSelected, int gridIndex)
 	{
@@ -45,7 +45,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		this.RefreshIcon();
 	}
 
-	// Token: 0x060068AD RID: 26797 RVA: 0x0014CE7E File Offset: 0x0014B07E
+	// Token: 0x06003C45 RID: 15429 RVA: 0x00155742 File Offset: 0x00153942
 	public void RefreshItemToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -53,7 +53,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		extendToggle.SetToggleState((data != null && data.IsSelected) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060068AE RID: 26798 RVA: 0x0014CEA8 File Offset: 0x0014B0A8
+	// Token: 0x06003C46 RID: 15430 RVA: 0x0015576C File Offset: 0x0015396C
 	public void RefreshRedDot()
 	{
 		UUIItem item = base.GetItem(2);
@@ -61,7 +61,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		item.SetUIActive(data != null && data.RedDotShowState);
 	}
 
-	// Token: 0x060068AF RID: 26799 RVA: 0x0014CEC8 File Offset: 0x0014B0C8
+	// Token: 0x06003C47 RID: 15431 RVA: 0x0015578C File Offset: 0x0015398C
 	public void RefreshLine()
 	{
 		UUIItem item = base.GetItem(5);
@@ -69,7 +69,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		item.SetUIActive(data != null && data.LineShowState);
 	}
 
-	// Token: 0x060068B0 RID: 26800 RVA: 0x0014CEE8 File Offset: 0x0014B0E8
+	// Token: 0x06003C48 RID: 15432 RVA: 0x001557AC File Offset: 0x001539AC
 	public void RefreshTagIndex()
 	{
 		FurnitureSlotScrollItemData data = this.Data;
@@ -83,7 +83,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		}
 	}
 
-	// Token: 0x060068B1 RID: 26801 RVA: 0x0014CF40 File Offset: 0x0014B140
+	// Token: 0x06003C49 RID: 15433 RVA: 0x00155804 File Offset: 0x00153A04
 	public void RefreshIcon()
 	{
 		FurnitureConfig instance = FurnitureConfig.Instance;
@@ -98,7 +98,7 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		this.SetSpriteByPath(path, base.GetSprite(1), false, null, null);
 	}
 
-	// Token: 0x060068B2 RID: 26802 RVA: 0x0014CFC3 File Offset: 0x0014B1C3
+	// Token: 0x06003C4A RID: 15434 RVA: 0x00155887 File Offset: 0x00153A87
 	private void OnClickItemToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -112,9 +112,9 @@ public class FurnitureSlotScrollItem : GridProxyAbstract<FurnitureSlotScrollItem
 		}
 	}
 
-	// Token: 0x04002FF4 RID: 12276
+	// Token: 0x0400308D RID: 12429
 	private FurnitureSlotScrollItemData Data;
 
-	// Token: 0x04002FF5 RID: 12277
+	// Token: 0x0400308E RID: 12430
 	public Action<int> OnItemSelected;
 }

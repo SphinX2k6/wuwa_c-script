@@ -5,22 +5,21 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Enum;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A5B RID: 10843
+// Token: 0x02001FD6 RID: 8150
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleOrnamentTabView : UiTabViewBase
 {
-	// Token: 0x0601697F RID: 92543 RVA: 0x005B9C58 File Offset: 0x005B7E58
+	// Token: 0x060143A0 RID: 82848 RVA: 0x005E5DF0 File Offset: 0x005E3FF0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -59,7 +58,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06016980 RID: 92544 RVA: 0x005B9E2C File Offset: 0x005B802C
+	// Token: 0x060143A1 RID: 82849 RVA: 0x005E5FC4 File Offset: 0x005E41C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleOrnamentTabView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -70,7 +69,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016981 RID: 92545 RVA: 0x005B9E70 File Offset: 0x005B8070
+	// Token: 0x060143A2 RID: 82850 RVA: 0x005E6008 File Offset: 0x005E4208
 	protected override void OnBeforeShow()
 	{
 		EModelStateInSkinView? modelState = this.RootViewModel.GetModelState();
@@ -91,20 +90,20 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.RefreshUiSceneRoleActor();
 	}
 
-	// Token: 0x06016982 RID: 92546 RVA: 0x005B9F00 File Offset: 0x005B8100
+	// Token: 0x060143A3 RID: 82851 RVA: 0x005E6098 File Offset: 0x005E4298
 	protected override void OnBeforeHide()
 	{
-		this.RootViewModel.EndCameraInput();
+		this.RootViewModel.UnbindCameraInput();
 	}
 
-	// Token: 0x06016983 RID: 92547 RVA: 0x005B9F0D File Offset: 0x005B810D
+	// Token: 0x060143A4 RID: 82852 RVA: 0x005E60A5 File Offset: 0x005E42A5
 	protected override void OnBeforeDestroy()
 	{
 		this.RootViewModel.UnBind(new Action<ESkinRootViewData>(this.OnRootViewModelUpdate));
 		this.ViewModel.UnBind(new Action<ERoleOrnamentTabViewData>(this.OnViewModelUpdate));
 	}
 
-	// Token: 0x06016984 RID: 92548 RVA: 0x005B9F40 File Offset: 0x005B8140
+	// Token: 0x060143A5 RID: 82853 RVA: 0x005E60D8 File Offset: 0x005E42D8
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
@@ -112,7 +111,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnOrnamentUnlock, new Action<int>(this.OnOrnamentUnlock));
 	}
 
-	// Token: 0x06016985 RID: 92549 RVA: 0x005B9FA4 File Offset: 0x005B81A4
+	// Token: 0x060143A6 RID: 82854 RVA: 0x005E613C File Offset: 0x005E433C
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
@@ -120,7 +119,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		EventSystem.Instance.Remove<int>(EEventName.OnOrnamentUnlock, new Action<int>(this.OnOrnamentUnlock));
 	}
 
-	// Token: 0x06016986 RID: 92550 RVA: 0x005BA008 File Offset: 0x005B8208
+	// Token: 0x060143A7 RID: 82855 RVA: 0x005E61A0 File Offset: 0x005E43A0
 	private void RefreshDefaultSelect()
 	{
 		int? num = null;
@@ -149,7 +148,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.ViewModel.SetSelectedOrnamentId(num2.Value, false);
 	}
 
-	// Token: 0x06016987 RID: 92551 RVA: 0x005BA124 File Offset: 0x005B8324
+	// Token: 0x060143A8 RID: 82856 RVA: 0x005E62BC File Offset: 0x005E44BC
 	private void RefreshOrnamentView(bool playAnim = true)
 	{
 		RoleOrnamentModel instance = RoleOrnamentModel.Instance;
@@ -205,7 +204,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016988 RID: 92552 RVA: 0x005BA2F4 File Offset: 0x005B84F4
+	// Token: 0x060143A9 RID: 82857 RVA: 0x005E648C File Offset: 0x005E468C
 	private void RefreshOrnamentModel()
 	{
 		int selectedOrnamentId = this.ViewModel.GetSelectedOrnamentId();
@@ -220,14 +219,14 @@ public class RoleOrnamentTabView : UiTabViewBase
 		UiModelUtil.RefreshRoleOrnaments(this.RootViewModel.TsUiSceneRoleActor.Model, list.ToArray(), false);
 	}
 
-	// Token: 0x06016989 RID: 92553 RVA: 0x005BA375 File Offset: 0x005B8575
+	// Token: 0x060143AA RID: 82858 RVA: 0x005E650D File Offset: 0x005E470D
 	private void RefreshText(string name, string desc)
 	{
 		base.GetText(6).ShowTextNew(name);
 		base.GetText(7).ShowTextNew(desc);
 	}
 
-	// Token: 0x0601698A RID: 92554 RVA: 0x005BA394 File Offset: 0x005B8594
+	// Token: 0x060143AB RID: 82859 RVA: 0x005E652C File Offset: 0x005E472C
 	private void RefreshContentLayout()
 	{
 		int roleId = this.RootViewModel.RoleId;
@@ -249,20 +248,20 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.ContentLayout.RefreshByData(roleSkinDataList, null, false);
 	}
 
-	// Token: 0x0601698B RID: 92555 RVA: 0x005BA3EC File Offset: 0x005B85EC
+	// Token: 0x060143AC RID: 82860 RVA: 0x005E6584 File Offset: 0x005E4784
 	private void RefreshObtainLayout(int itemId)
 	{
 		List<IGetWayItemData> getWayDataList = InventoryModel.Instance.GetGetWayDataList(itemId);
 		this.ObtainLayout.RefreshByData(getWayDataList, null, false);
 	}
 
-	// Token: 0x0601698C RID: 92556 RVA: 0x005BA413 File Offset: 0x005B8613
+	// Token: 0x060143AD RID: 82861 RVA: 0x005E65AB File Offset: 0x005E47AB
 	private void RefreshUiSceneRoleActor()
 	{
 		RoleController.Instance.RefreshUiSceneRoleActor(this.RootViewModel.TsUiSceneRoleActor, this.RootViewModel.RoleId, this.ViewModel.GetSelectedSkinId(), null);
 	}
 
-	// Token: 0x0601698D RID: 92557 RVA: 0x005BA444 File Offset: 0x005B8644
+	// Token: 0x060143AE RID: 82862 RVA: 0x005E65DC File Offset: 0x005E47DC
 	private void RefreshContentGridSelected()
 	{
 		List<RoleSkinOrnamentItem> layoutItemList = this.ContentLayout.GetLayoutItemList();
@@ -276,7 +275,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601698E RID: 92558 RVA: 0x005BA480 File Offset: 0x005B8680
+	// Token: 0x060143AF RID: 82863 RVA: 0x005E6618 File Offset: 0x005E4818
 	private void RefreshContentItems()
 	{
 		List<RoleSkinOrnamentItem> layoutItemList = this.ContentLayout.GetLayoutItemList();
@@ -290,7 +289,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601698F RID: 92559 RVA: 0x005BA4BC File Offset: 0x005B86BC
+	// Token: 0x060143B0 RID: 82864 RVA: 0x005E6654 File Offset: 0x005E4854
 	private void RevertRoleSkin()
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(this.RootViewModel.RoleId);
@@ -301,7 +300,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		RoleController.Instance.RefreshUiSceneRoleActor(this.RootViewModel.TsUiSceneRoleActor, this.RootViewModel.RoleId, roleInstanceById.GetRoleSkinId(), null);
 	}
 
-	// Token: 0x06016990 RID: 92560 RVA: 0x005BA518 File Offset: 0x005B8718
+	// Token: 0x060143B1 RID: 82865 RVA: 0x005E66B0 File Offset: 0x005E48B0
 	private void RevertOrnamentModel(bool useSelectedSkinId = false)
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor = this.RootViewModel.TsUiSceneRoleActor;
@@ -321,7 +320,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		UiModelUtil.RefreshRoleOrnaments(this.RootViewModel.TsUiSceneRoleActor.Model, list.ToArray(), false);
 	}
 
-	// Token: 0x06016991 RID: 92561 RVA: 0x005BA5C8 File Offset: 0x005B87C8
+	// Token: 0x060143B2 RID: 82866 RVA: 0x005E6760 File Offset: 0x005E4960
 	private void TryPlayRoleMontage()
 	{
 		int selectedOrnamentId = this.ViewModel.GetSelectedOrnamentId();
@@ -332,7 +331,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Favor, false, false, false);
 	}
 
-	// Token: 0x06016992 RID: 92562 RVA: 0x005BA60E File Offset: 0x005B880E
+	// Token: 0x060143B3 RID: 82867 RVA: 0x005E67A6 File Offset: 0x005E49A6
 	private RoleSkinOrnamentItem CreateSkinOrnamentItem()
 	{
 		RoleSkinOrnamentItem roleSkinOrnamentItem = new RoleSkinOrnamentItem();
@@ -342,19 +341,19 @@ public class RoleOrnamentTabView : UiTabViewBase
 		return roleSkinOrnamentItem;
 	}
 
-	// Token: 0x06016993 RID: 92563 RVA: 0x005BA64B File Offset: 0x005B884B
+	// Token: 0x060143B4 RID: 82868 RVA: 0x005E67E3 File Offset: 0x005E49E3
 	private RoleOrnamentObtainItem CreateObtainItem()
 	{
 		return new RoleOrnamentObtainItem();
 	}
 
-	// Token: 0x06016994 RID: 92564 RVA: 0x005BA652 File Offset: 0x005B8852
+	// Token: 0x060143B5 RID: 82869 RVA: 0x005E67EA File Offset: 0x005E49EA
 	private void OnUiOutSequenceFinish()
 	{
 		base.GetItem(0).SetUIActive(false);
 	}
 
-	// Token: 0x06016995 RID: 92565 RVA: 0x005BA661 File Offset: 0x005B8861
+	// Token: 0x060143B6 RID: 82870 RVA: 0x005E67F9 File Offset: 0x005E49F9
 	private void OnRootViewModelUpdate(ESkinRootViewData data)
 	{
 		if (data == ESkinRootViewData.CurSelectTabViewName && base.IsShowOrShowing)
@@ -364,7 +363,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016996 RID: 92566 RVA: 0x005BA67B File Offset: 0x005B887B
+	// Token: 0x060143B7 RID: 82871 RVA: 0x005E6813 File Offset: 0x005E4A13
 	private void OnViewModelUpdate(ERoleOrnamentTabViewData data)
 	{
 		if (data == ERoleOrnamentTabViewData.SelectedOrnamentId)
@@ -382,7 +381,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016997 RID: 92567 RVA: 0x005BA6B0 File Offset: 0x005B88B0
+	// Token: 0x060143B8 RID: 82872 RVA: 0x005E6848 File Offset: 0x005E4A48
 	private void OnClickHideViewToggle(EToggleState state)
 	{
 		UUIItem item = base.GetItem(0);
@@ -401,7 +400,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.TryPlayRoleMontage();
 	}
 
-	// Token: 0x06016998 RID: 92568 RVA: 0x005BA734 File Offset: 0x005B8934
+	// Token: 0x060143B9 RID: 82873 RVA: 0x005E68CC File Offset: 0x005E4ACC
 	private void OnClickConfirmButton()
 	{
 		int selectedSkinId = this.ViewModel.GetSelectedSkinId();
@@ -427,7 +426,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		RoleController.Instance.RequestChangeOrnamentRequest(selectedSkinId, selectedOrnamentId, !flag);
 	}
 
-	// Token: 0x06016999 RID: 92569 RVA: 0x005BA7D4 File Offset: 0x005B89D4
+	// Token: 0x060143BA RID: 82874 RVA: 0x005E696C File Offset: 0x005E4B6C
 	private void OnClickOrnamentCallback(int skinId, int ornamentId)
 	{
 		int selectedOrnamentId = this.ViewModel.GetSelectedOrnamentId();
@@ -436,15 +435,15 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.ViewModel.SetSelectedOrnamentId(ornamentId, false);
 	}
 
-	// Token: 0x0601699A RID: 92570 RVA: 0x005BA814 File Offset: 0x005B8A14
+	// Token: 0x060143BB RID: 82875 RVA: 0x005E69AC File Offset: 0x005E4BAC
 	private void OnSkinRootViewDestroy()
 	{
 		this.RevertRoleSkin();
 		this.RevertOrnamentModel(false);
-		this.RootViewModel.EndCameraInput();
+		this.RootViewModel.UnbindCameraInput();
 	}
 
-	// Token: 0x0601699B RID: 92571 RVA: 0x005BA82E File Offset: 0x005B8A2E
+	// Token: 0x060143BC RID: 82876 RVA: 0x005E69C6 File Offset: 0x005E4BC6
 	private void OnOrnamentChange()
 	{
 		this.RevertOrnamentModel(true);
@@ -452,32 +451,32 @@ public class RoleOrnamentTabView : UiTabViewBase
 		this.RefreshContentItems();
 	}
 
-	// Token: 0x0601699C RID: 92572 RVA: 0x005BA844 File Offset: 0x005B8A44
+	// Token: 0x060143BD RID: 82877 RVA: 0x005E69DC File Offset: 0x005E4BDC
 	private void OnOrnamentUnlock(int ornamentId)
 	{
 		this.RefreshDefaultSelect();
 		this.RefreshContentLayout();
 	}
 
-	// Token: 0x0601699D RID: 92573 RVA: 0x005BA852 File Offset: 0x005B8A52
+	// Token: 0x060143BE RID: 82878 RVA: 0x005E69EA File Offset: 0x005E4BEA
 	private int GetPreviewSkinIdFunc()
 	{
 		return this.ViewModel.GetSelectedSkinId();
 	}
 
-	// Token: 0x0601699E RID: 92574 RVA: 0x005BA85F File Offset: 0x005B8A5F
+	// Token: 0x060143BF RID: 82879 RVA: 0x005E69F7 File Offset: 0x005E4BF7
 	private int GetPreviewOrnamentIdFunc()
 	{
 		return this.ViewModel.GetSelectedOrnamentId();
 	}
 
-	// Token: 0x0601699F RID: 92575 RVA: 0x005BA86C File Offset: 0x005B8A6C
-	private IUiCameraInputComponentData GetCameraInputData()
+	// Token: 0x060143C0 RID: 82880 RVA: 0x005E6A04 File Offset: 0x005E4C04
+	private UiCameraInputBindingData GetCameraInputData()
 	{
 		return this.ViewModel.GetOrnamentTabCameraInputData(this.RootViewModel.GetDragItem(), this.RootViewModel.TsUiSceneRoleActor, this.IsHidingUi());
 	}
 
-	// Token: 0x060169A0 RID: 92576 RVA: 0x005BA898 File Offset: 0x005B8A98
+	// Token: 0x060143C1 RID: 82881 RVA: 0x005E6A30 File Offset: 0x005E4C30
 	private bool IsAllowCameraRotate()
 	{
 		int selectedOrnamentId = this.ViewModel.GetSelectedOrnamentId();
@@ -489,20 +488,26 @@ public class RoleOrnamentTabView : UiTabViewBase
 		return value.AllowHideUiCameraRotate;
 	}
 
-	// Token: 0x060169A1 RID: 92577 RVA: 0x005BA8DC File Offset: 0x005B8ADC
+	// Token: 0x060143C2 RID: 82882 RVA: 0x005E6A74 File Offset: 0x005E4C74
 	private bool IsHidingUi()
 	{
 		return base.GetExtendToggle(2).GetToggleState() == EToggleState.ETT_UnChecked;
 	}
 
-	// Token: 0x060169A2 RID: 92578 RVA: 0x005BA8ED File Offset: 0x005B8AED
+	// Token: 0x060143C3 RID: 82883 RVA: 0x005E6A85 File Offset: 0x005E4C85
 	private void UpdateCamera(bool? isFromOrnament = null)
 	{
 		this.TryPushOrnamentCamera(isFromOrnament, null);
-		this.RootViewModel.StartCameraInput(this.GetCameraInputData(), new bool?(this.IsAllowCameraRotate()), false);
+		this.RootViewModel.ConfigureCameraInput(this.GetCameraInputData());
+		if (this.IsAllowCameraRotate())
+		{
+			this.RootViewModel.BindCameraInput();
+			return;
+		}
+		this.RootViewModel.UnbindCameraInput();
 	}
 
-	// Token: 0x060169A3 RID: 92579 RVA: 0x005BA914 File Offset: 0x005B8B14
+	// Token: 0x060143C4 RID: 82884 RVA: 0x005E6AC0 File Offset: 0x005E4CC0
 	[NullableContext(2)]
 	private void TryPushOrnamentCamera(bool? isFromOrnament = null, Action callback = null)
 	{
@@ -516,10 +521,8 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 		string blendName = flag ? "1001" : this.GetOrnamentCameraBlendName(selectedOrnamentId, isFromOrnament);
 		string ornamentCameraHandleName = this.GetOrnamentCameraHandleName(selectedOrnamentId, selectedSkinId, flag);
-		UiCameraHandleData uiCameraHandleData = UiCameraHandleData.NewByHandleName(ornamentCameraHandleName, null);
-		uiCameraHandleData.ViewName = ornamentCameraHandleName;
-		uiCameraHandleData.OwnerViewName = base.GetViewName();
-		UiCameraAnimationManager.Instance.PushCameraHandle(uiCameraHandleData, !skipCameraBlend, !skipCameraBlend, blendName, false, delegate(UiCameraAnimationDefine.IFinishData _)
+		UiCameraHandleData handleData = UiCameraUtil.CreateHandleData(ornamentCameraHandleName, ornamentCameraHandleName);
+		UiCameraModel.Instance.PushCameraHandle(handleData, !skipCameraBlend, !skipCameraBlend, blendName, false, delegate(UiCameraDefine.IFinishData _)
 		{
 			Action callback2 = callback;
 			if (callback2 == null)
@@ -530,7 +533,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x060169A4 RID: 92580 RVA: 0x005BA9D4 File Offset: 0x005B8BD4
+	// Token: 0x060143C5 RID: 82885 RVA: 0x005E6B5C File Offset: 0x005E4D5C
 	private string GetOrnamentCameraBlendName(int targetOrnament, bool? isFromOrnament = null)
 	{
 		if (!isFromOrnament.GetValueOrDefault())
@@ -563,7 +566,7 @@ public class RoleOrnamentTabView : UiTabViewBase
 		return "1001";
 	}
 
-	// Token: 0x060169A5 RID: 92581 RVA: 0x005BAA78 File Offset: 0x005B8C78
+	// Token: 0x060143C6 RID: 82886 RVA: 0x005E6C00 File Offset: 0x005E4E00
 	private string GetOrnamentCameraHandleName(int ornamentId, int skinId, bool isHidingUi)
 	{
 		Ornament value = RoleConfig.Instance.GetOrnamentConfig(ornamentId).Value;
@@ -618,60 +621,60 @@ public class RoleOrnamentTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0400A7A4 RID: 42916
+	// Token: 0x0400ABA8 RID: 43944
 	private SkinRootViewModel RootViewModel;
 
-	// Token: 0x0400A7A5 RID: 42917
+	// Token: 0x0400ABA9 RID: 43945
 	private RoleOrnamentViewModel ViewModel;
 
-	// Token: 0x0400A7A6 RID: 42918
+	// Token: 0x0400ABAA RID: 43946
 	private GenericLayout<RoleSkinOrnamentItem, RoleSkinData> ContentLayout;
 
-	// Token: 0x0400A7A7 RID: 42919
+	// Token: 0x0400ABAB RID: 43947
 	private GenericLayout<RoleOrnamentObtainItem, IGetWayItemData> ObtainLayout;
 
-	// Token: 0x0400A7A8 RID: 42920
+	// Token: 0x0400ABAC RID: 43948
 	private RoleOrnamentTabView.RoleOrnamentHintItem HintItem;
 
-	// Token: 0x0400A7A9 RID: 42921
+	// Token: 0x0400ABAD RID: 43949
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x0400A7AA RID: 42922
+	// Token: 0x0400ABAE RID: 43950
 	private bool SkipCameraBlend;
 
-	// Token: 0x0200909D RID: 37021
+	// Token: 0x020082E4 RID: 33508
 	[NullableContext(0)]
 	private enum EComponentType
 	{
-		// Token: 0x0402EDBF RID: 191935
+		// Token: 0x0402A4B9 RID: 173241
 		RootItem,
-		// Token: 0x0402EDC0 RID: 191936
+		// Token: 0x0402A4BA RID: 173242
 		ContentLayout,
-		// Token: 0x0402EDC1 RID: 191937
+		// Token: 0x0402A4BB RID: 173243
 		HideViewToggle,
-		// Token: 0x0402EDC2 RID: 191938
+		// Token: 0x0402A4BC RID: 173244
 		ConfirmButton,
-		// Token: 0x0402EDC3 RID: 191939
+		// Token: 0x0402A4BD RID: 173245
 		ObtainLayout,
-		// Token: 0x0402EDC4 RID: 191940
+		// Token: 0x0402A4BE RID: 173246
 		ObtainItem,
-		// Token: 0x0402EDC5 RID: 191941
+		// Token: 0x0402A4BF RID: 173247
 		TitleText,
-		// Token: 0x0402EDC6 RID: 191942
+		// Token: 0x0402A4C0 RID: 173248
 		ContentText,
-		// Token: 0x0402EDC7 RID: 191943
+		// Token: 0x0402A4C1 RID: 173249
 		Draggable,
-		// Token: 0x0402EDC8 RID: 191944
+		// Token: 0x0402A4C2 RID: 173250
 		HintItem,
-		// Token: 0x0402EDC9 RID: 191945
+		// Token: 0x0402A4C3 RID: 173251
 		SkinOrnamentItem
 	}
 
-	// Token: 0x0200909E RID: 37022
+	// Token: 0x020082E5 RID: 33509
 	[Nullable(0)]
 	private class RoleOrnamentHintItem : UiPanelBase
 	{
-		// Token: 0x0604BB46 RID: 310086 RVA: 0x013ED650 File Offset: 0x013EB850
+		// Token: 0x0604203D RID: 270397 RVA: 0x01398C30 File Offset: 0x01396E30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -687,33 +690,33 @@ public class RoleOrnamentTabView : UiTabViewBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604BB47 RID: 310087 RVA: 0x013ED6DA File Offset: 0x013EB8DA
+		// Token: 0x0604203E RID: 270398 RVA: 0x01398CBA File Offset: 0x01396EBA
 		public void SetLocalText(string text, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), text, args);
 		}
 
-		// Token: 0x0604BB48 RID: 310088 RVA: 0x013ED6EF File Offset: 0x013EB8EF
+		// Token: 0x0604203F RID: 270399 RVA: 0x01398CCF File Offset: 0x01396ECF
 		public void SetShowText(string text)
 		{
 			base.GetText(1).ShowTextNew(text);
 		}
 
-		// Token: 0x0604BB49 RID: 310089 RVA: 0x013ED700 File Offset: 0x013EB900
+		// Token: 0x06042040 RID: 270400 RVA: 0x01398CE0 File Offset: 0x01396EE0
 		public void SetSprite(string resourcePath, bool setSize = false)
 		{
 			this.SetSpriteByPath(resourcePath, base.GetSprite(0), setSize, null, null);
 		}
 
-		// Token: 0x0200D05E RID: 53342
+		// Token: 0x0200BC3C RID: 48188
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x0403E969 RID: 256361
+			// Token: 0x04039DB1 RID: 236977
 			Sprite,
-			// Token: 0x0403E96A RID: 256362
+			// Token: 0x04039DB2 RID: 236978
 			Text,
-			// Token: 0x0403E96B RID: 256363
+			// Token: 0x04039DB3 RID: 236979
 			Button
 		}
 	}

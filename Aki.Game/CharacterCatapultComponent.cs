@@ -3,32 +3,32 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020030EE RID: 12526
+// Token: 0x02002646 RID: 9798
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterCatapultComponent : EntityComponent, IComponentDependency, IStaticVariableResetter
+public class CharacterCatapultComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601AD88 RID: 109960 RVA: 0x00740A75 File Offset: 0x0073EC75
+	// Token: 0x060187A7 RID: 100263 RVA: 0x00766461 File Offset: 0x00764661
 	static CharacterCatapultComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterCatapultComponent.CreateStaticDefaultValue), new Action(CharacterCatapultComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601AD89 RID: 109961 RVA: 0x00740A94 File Offset: 0x0073EC94
+	// Token: 0x060187A8 RID: 100264 RVA: 0x00766480 File Offset: 0x00764680
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterCatapultComponent._tmpVector = Vector.Create();
 	}
 
-	// Token: 0x0601AD8A RID: 109962 RVA: 0x00740AA0 File Offset: 0x0073ECA0
+	// Token: 0x060187A9 RID: 100265 RVA: 0x0076648C File Offset: 0x0076468C
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterCatapultComponent._tmpVector = null;
 	}
 
-	// Token: 0x170024F3 RID: 9459
-	// (get) Token: 0x0601AD8B RID: 109963 RVA: 0x00740AA8 File Offset: 0x0073ECA8
-	public static Type[] Dependencies
+	// Token: 0x1700267F RID: 9855
+	// (get) Token: 0x060187AA RID: 100266 RVA: 0x00766494 File Offset: 0x00764694
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -40,8 +40,8 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		}
 	}
 
-	// Token: 0x170024F4 RID: 9460
-	// (get) Token: 0x0601AD8C RID: 109964 RVA: 0x00740ACA File Offset: 0x0073ECCA
+	// Token: 0x17002680 RID: 9856
+	// (get) Token: 0x060187AB RID: 100267 RVA: 0x007664B6 File Offset: 0x007646B6
 	private static Vector TmpVector
 	{
 		get
@@ -50,7 +50,7 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		}
 	}
 
-	// Token: 0x0601AD8D RID: 109965 RVA: 0x00740AD4 File Offset: 0x0073ECD4
+	// Token: 0x060187AC RID: 100268 RVA: 0x007664C0 File Offset: 0x007646C0
 	private void OnCustomMoveCatapult(float deltaSeconds)
 	{
 		if ((double)deltaSeconds < 1E-08)
@@ -84,7 +84,7 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		}
 	}
 
-	// Token: 0x0601AD8E RID: 109966 RVA: 0x00740BB4 File Offset: 0x0073EDB4
+	// Token: 0x060187AD RID: 100269 RVA: 0x007665A0 File Offset: 0x007647A0
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -92,7 +92,7 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		return true;
 	}
 
-	// Token: 0x0601AD8F RID: 109967 RVA: 0x00740BC4 File Offset: 0x0073EDC4
+	// Token: 0x060187AE RID: 100270 RVA: 0x007665B0 File Offset: 0x007647B0
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -101,14 +101,14 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		return true;
 	}
 
-	// Token: 0x0601AD90 RID: 109968 RVA: 0x00740C13 File Offset: 0x0073EE13
+	// Token: 0x060187AF RID: 100271 RVA: 0x007665FF File Offset: 0x007647FF
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CustomMoveCatapult, new Action<float>(this.OnCustomMoveCatapult));
 		return true;
 	}
 
-	// Token: 0x0601AD91 RID: 109969 RVA: 0x00740C38 File Offset: 0x0073EE38
+	// Token: 0x060187B0 RID: 100272 RVA: 0x00766624 File Offset: 0x00764824
 	public void SetConfig(float time1, Vector startPoint, Vector middlePoint, Vector endPoint, string curvePath = "", float gravity2 = 1960f, [Nullable(2)] Rotator endRotator = null, [Nullable(2)] Vector gravityDirect = null, bool isSuperCatapult = false)
 	{
 		this.IsSuperCatapult = isSuperCatapult;
@@ -116,7 +116,7 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		this.CatapultUnit.SetAll(time1, startPoint, middlePoint, endPoint, curvePath, gravity2, endRotator, gravityDirect, "", null);
 	}
 
-	// Token: 0x0601AD92 RID: 109970 RVA: 0x00740C7C File Offset: 0x0073EE7C
+	// Token: 0x060187B1 RID: 100273 RVA: 0x00766668 File Offset: 0x00764868
 	public unsafe void StartCatapult()
 	{
 		this.CatapultUnit.SetStartPoint(this.ActorComp.ActorLocationProxy);
@@ -158,7 +158,7 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601AD93 RID: 109971 RVA: 0x00740E1C File Offset: 0x0073F01C
+	// Token: 0x060187B2 RID: 100274 RVA: 0x00766808 File Offset: 0x00764A08
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -166,82 +166,84 @@ public class CharacterCatapultComponent : EntityComponent, IComponentDependency,
 			return false;
 		}
 		CharacterCatapultComponent characterCatapultComponent = (CharacterCatapultComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterCatapultComponent.ActorComp == null)
 		{
-			if (characterCatapultComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterCatapultComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("RunTime"))
+		if (characterCatapultComponent.MoveComp == null)
 		{
-			this.RunTime = characterCatapultComponent.RunTime;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("CatapultUnit"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterCatapultComponent.CatapultUnit == null)
-			{
-				this.CatapultUnit = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BigJumpUnit>(this.CatapultUnit), "CatapultUnit"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LockRotator"))
+		this.RunTime = characterCatapultComponent.RunTime;
+		if (characterCatapultComponent.CatapultUnit == null)
 		{
-			this.LockRotator = characterCatapultComponent.LockRotator;
+			this.CatapultUnit = null;
 		}
-		if (base.CanResetComponentProperty("IsSuperCatapult"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CatapultUnit), "CatapultUnit"))
 		{
-			this.IsSuperCatapult = characterCatapultComponent.IsSuperCatapult;
+			return false;
 		}
+		this.LockRotator = characterCatapultComponent.LockRotator;
+		this.IsSuperCatapult = characterCatapultComponent.IsSuperCatapult;
 		return true;
 	}
 
-	// Token: 0x0400CFAB RID: 53163
+	// Token: 0x17002681 RID: 9857
+	// (get) Token: 0x060187B3 RID: 100275 RVA: 0x007668CD File Offset: 0x00764ACD
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002682 RID: 9858
+	// (get) Token: 0x060187B4 RID: 100276 RVA: 0x007668D0 File Offset: 0x00764AD0
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D39C RID: 54172
 	public const int MODEL_BUFFER_TIME_LENGTH = 200;
 
-	// Token: 0x0400CFAC RID: 53164
+	// Token: 0x0400D39D RID: 54173
 	public const int SUPER_CATAPULT_SKILL_ID = 400107;
 
-	// Token: 0x0400CFAD RID: 53165
+	// Token: 0x0400D39E RID: 54174
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CFAE RID: 53166
+	// Token: 0x0400D39F RID: 54175
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CFAF RID: 53167
+	// Token: 0x0400D3A0 RID: 54176
 	private float RunTime;
 
-	// Token: 0x0400CFB0 RID: 53168
+	// Token: 0x0400D3A1 RID: 54177
 	[Nullable(2)]
 	private BigJumpUnit CatapultUnit;
 
-	// Token: 0x0400CFB1 RID: 53169
+	// Token: 0x0400D3A2 RID: 54178
 	public bool LockRotator;
 
-	// Token: 0x0400CFB2 RID: 53170
+	// Token: 0x0400D3A3 RID: 54179
 	private bool IsSuperCatapult;
 
-	// Token: 0x0400CFB3 RID: 53171
+	// Token: 0x0400D3A4 RID: 54180
 	[Nullable(2)]
 	private static Vector _tmpVector;
 }

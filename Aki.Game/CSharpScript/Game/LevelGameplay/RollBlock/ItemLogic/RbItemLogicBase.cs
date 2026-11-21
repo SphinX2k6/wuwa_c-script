@@ -5,10 +5,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 {
-	// Token: 0x02006AB0 RID: 27312
+	// Token: 0x02005C0D RID: 23565
 	public class RbItemLogicBase
 	{
-		// Token: 0x06043D92 RID: 277906 RVA: 0x010A051C File Offset: 0x0109E71C
+		// Token: 0x06039DE9 RID: 237033 RVA: 0x01044C24 File Offset: 0x01042E24
 		[NullableContext(1)]
 		public RbItemLogicBase(RbItemComponent owner)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 			this.NeedUpdate = (method != null && method2 != null && method != method2);
 		}
 
-		// Token: 0x06043D93 RID: 277907 RVA: 0x010A0582 File Offset: 0x0109E782
+		// Token: 0x06039DEA RID: 237034 RVA: 0x01044C8A File Offset: 0x01042E8A
 		public virtual void Start([Nullable(new byte[]
 		{
 			0,
@@ -28,17 +28,17 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 		{
 		}
 
-		// Token: 0x06043D94 RID: 277908 RVA: 0x010A0584 File Offset: 0x0109E784
+		// Token: 0x06039DEB RID: 237035 RVA: 0x01044C8C File Offset: 0x01042E8C
 		public virtual void End()
 		{
 		}
 
-		// Token: 0x06043D95 RID: 277909 RVA: 0x010A0586 File Offset: 0x0109E786
+		// Token: 0x06039DEC RID: 237036 RVA: 0x01044C8E File Offset: 0x01042E8E
 		public virtual void Update(float delta)
 		{
 		}
 
-		// Token: 0x06043D96 RID: 277910 RVA: 0x010A0588 File Offset: 0x0109E788
+		// Token: 0x06039DED RID: 237037 RVA: 0x01044C90 File Offset: 0x01042E90
 		public virtual void OnRbItemUpdate([Nullable(new byte[]
 		{
 			0,
@@ -48,16 +48,16 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.ItemLogic
 		{
 		}
 
-		// Token: 0x06043D97 RID: 277911 RVA: 0x010A058A File Offset: 0x0109E78A
+		// Token: 0x06039DEE RID: 237038 RVA: 0x01044C92 File Offset: 0x01042E92
 		public virtual void OnStateChange(int stateId)
 		{
 		}
 
-		// Token: 0x0402375A RID: 145242
+		// Token: 0x0401E94C RID: 125260
 		[Nullable(2)]
 		protected RbItemComponent Owner;
 
-		// Token: 0x0402375B RID: 145243
+		// Token: 0x0401E94D RID: 125261
 		public bool NeedUpdate;
 	}
 }

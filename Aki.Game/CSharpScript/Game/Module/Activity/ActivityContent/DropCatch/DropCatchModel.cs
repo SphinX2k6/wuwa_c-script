@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066BE RID: 26302
+	// Token: 0x0200560E RID: 22030
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class DropCatchModel : ModelBase
 	{
-		// Token: 0x06041C9A RID: 269466 RVA: 0x00FF4818 File Offset: 0x00FF2A18
+		// Token: 0x060367E6 RID: 223206 RVA: 0x00F35C1C File Offset: 0x00F33E1C
 		public void AddGameplayScoreRecord(int gameplayId, float score)
 		{
 			if (this.GameplayScoreRecord.ContainsKey(gameplayId))
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			this.GameplayScoreRecord.Add(gameplayId, score);
 		}
 
-		// Token: 0x06041C9B RID: 269467 RVA: 0x00FF4844 File Offset: 0x00FF2A44
+		// Token: 0x060367E7 RID: 223207 RVA: 0x00F35C48 File Offset: 0x00F33E48
 		public float GetGameplayScoreRecord(int gameplayId)
 		{
 			float result;
@@ -32,15 +32,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return 0f;
 		}
 
-		// Token: 0x06041C9C RID: 269468 RVA: 0x00FF4868 File Offset: 0x00FF2A68
+		// Token: 0x060367E8 RID: 223208 RVA: 0x00F35C6C File Offset: 0x00F33E6C
 		protected override bool OnClear()
 		{
 			this.GameplayScoreRecord.Clear();
 			return true;
 		}
 
-		// Token: 0x17009643 RID: 38467
-		// (get) Token: 0x06041C9D RID: 269469 RVA: 0x00FF4876 File Offset: 0x00FF2A76
+		// Token: 0x17006982 RID: 27010
+		// (get) Token: 0x060367E9 RID: 223209 RVA: 0x00F35C7A File Offset: 0x00F33E7A
 		public static DropCatchModel Instance
 		{
 			get
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			}
 		}
 
-		// Token: 0x06041C9E RID: 269470 RVA: 0x00FF487D File Offset: 0x00FF2A7D
+		// Token: 0x060367EA RID: 223210 RVA: 0x00F35C81 File Offset: 0x00F33E81
 		public static DropCatchModel GetOrCreateInstance()
 		{
 			if (DropCatchModel._Instance == null)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return DropCatchModel._Instance;
 		}
 
-		// Token: 0x06041C9F RID: 269471 RVA: 0x00FF4891 File Offset: 0x00FF2A91
+		// Token: 0x060367EB RID: 223211 RVA: 0x00F35C95 File Offset: 0x00F33E95
 		public static bool CreateInstance()
 		{
 			if (DropCatchModel._Instance != null)
@@ -70,27 +70,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 			return true;
 		}
 
-		// Token: 0x06041CA0 RID: 269472 RVA: 0x00FF48A7 File Offset: 0x00FF2AA7
+		// Token: 0x060367EC RID: 223212 RVA: 0x00F35CAB File Offset: 0x00F33EAB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041CA1 RID: 269473 RVA: 0x00FF48A9 File Offset: 0x00FF2AA9
+		// Token: 0x060367ED RID: 223213 RVA: 0x00F35CAD File Offset: 0x00F33EAD
 		public static void ResetStaticDefaultValue()
 		{
 			DropCatchModel._Instance = null;
 		}
 
-		// Token: 0x06041CA2 RID: 269474 RVA: 0x00FF48B1 File Offset: 0x00FF2AB1
+		// Token: 0x060367EE RID: 223214 RVA: 0x00F35CB5 File Offset: 0x00F33EB5
 		static DropCatchModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DropCatchModel.CreateStaticDefaultValue), new Action(DropCatchModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402244D RID: 140365
+		// Token: 0x0401CCA6 RID: 117926
 		private readonly Dictionary<int, float> GameplayScoreRecord = new Dictionary<int, float>();
 
-		// Token: 0x0402244E RID: 140366
+		// Token: 0x0401CCA7 RID: 117927
 		[Nullable(2)]
 		private static DropCatchModel _Instance;
 	}

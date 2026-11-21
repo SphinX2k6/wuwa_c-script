@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E89 RID: 20105
+	// Token: 0x02003E52 RID: 15954
 	internal enum <RogueBattleRoleAffixDetailToggle>F63B2EAC90DFBA2C6DAA8B3584E38CC0E26CA50F00CE1C75891901FD37814C338__ERogueBattleRoleAffixDetailToggleDefine
 	{
-		// Token: 0x0401B743 RID: 112451
+		// Token: 0x04016116 RID: 90390
 		SpriteIcon,
-		// Token: 0x0401B744 RID: 112452
+		// Token: 0x04016117 RID: 90391
 		ExtendToggle
 	}
 }

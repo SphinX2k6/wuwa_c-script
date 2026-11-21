@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000269 RID: 617
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002AC RID: 684
 	public class IConditionHitConfig
 	{
-		// Token: 0x06000B35 RID: 2869 RVA: 0x0002D5B8 File Offset: 0x0002B7B8
+		// Token: 0x06000C4F RID: 3151 RVA: 0x000302A8 File Offset: 0x0002E4A8
 		private IConditionHitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B36 RID: 2870 RVA: 0x0002D5F0 File Offset: 0x0002B7F0
+		// Token: 0x06000C50 RID: 3152 RVA: 0x000302E0 File Offset: 0x0002E4E0
 		public static IConditionHitConfig Create([Nullable(2)] IConditionHitConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B37 RID: 2871 RVA: 0x0002D603 File Offset: 0x0002B803
+		// Token: 0x06000C51 RID: 3153 RVA: 0x000302F3 File Offset: 0x0002E4F3
 		public static IConditionHitConfig CreateFromSetValue([Nullable(2)] IConditionHitConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B38 RID: 2872 RVA: 0x0002D616 File Offset: 0x0002B816
+		// Token: 0x06000C52 RID: 3154 RVA: 0x00030306 File Offset: 0x0002E506
 		public IConditionHitConfig_SetValue ToSetValue()
 		{
 			return new IConditionHitConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700035A RID: 858
-		// (get) Token: 0x06000B39 RID: 2873 RVA: 0x0002D638 File Offset: 0x0002B838
-		// (set) Token: 0x06000B3A RID: 2874 RVA: 0x0002D699 File Offset: 0x0002B899
+		// Token: 0x170003A2 RID: 930
+		// (get) Token: 0x06000C53 RID: 3155 RVA: 0x00030328 File Offset: 0x0002E528
+		// (set) Token: 0x06000C54 RID: 3156 RVA: 0x00030389 File Offset: 0x0002E589
 		[Nullable(2)]
 		public virtual IConditionGroup Conditions
 		{
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700035B RID: 859
-		// (get) Token: 0x06000B3B RID: 2875 RVA: 0x0002D6AE File Offset: 0x0002B8AE
-		// (set) Token: 0x06000B3C RID: 2876 RVA: 0x0002D6D9 File Offset: 0x0002B8D9
+		// Token: 0x170003A3 RID: 931
+		// (get) Token: 0x06000C55 RID: 3157 RVA: 0x0003039E File Offset: 0x0002E59E
+		// (set) Token: 0x06000C56 RID: 3158 RVA: 0x000303C9 File Offset: 0x0002E5C9
 		public virtual string State
 		{
 			get
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000AE7 RID: 2791
+		// Token: 0x04000BC8 RID: 3016
 		[Nullable(2)]
 		protected IConditionHitConfig FbInstance;
 
-		// Token: 0x04000AE8 RID: 2792
+		// Token: 0x04000BC9 RID: 3017
 		[Nullable(2)]
 		protected IConditionHitConfig_SetValue PocoInterface;
 
-		// Token: 0x04000AE9 RID: 2793
+		// Token: 0x04000BCA RID: 3018
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04000AEA RID: 2794
+		// Token: 0x04000BCB RID: 3019
 		private bool _ConditionsInited;
 	}
 }

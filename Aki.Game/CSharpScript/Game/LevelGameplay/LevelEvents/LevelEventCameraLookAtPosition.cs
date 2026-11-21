@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF9 RID: 27385
+	// Token: 0x02005C71 RID: 23665
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventCameraLookAtPosition : LevelEventBase
 	{
-		// Token: 0x0604401C RID: 278556 RVA: 0x010B1FD4 File Offset: 0x010B01D4
+		// Token: 0x0603A16E RID: 237934 RVA: 0x0105B8A4 File Offset: 0x01059AA4
 		public LevelEventCameraLookAtPosition(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604401D RID: 278557 RVA: 0x010B2008 File Offset: 0x010B0208
+		// Token: 0x0603A16F RID: 237935 RVA: 0x0105B8D8 File Offset: 0x01059AD8
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (this.EnableDebugLog)
@@ -228,13 +228,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604401E RID: 278558 RVA: 0x010B2858 File Offset: 0x010B0A58
+		// Token: 0x0603A170 RID: 237936 RVA: 0x0105C128 File Offset: 0x0105A328
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604401F RID: 278559 RVA: 0x010B2864 File Offset: 0x010B0A64
+		// Token: 0x0603A171 RID: 237937 RVA: 0x0105C134 File Offset: 0x0105A334
 		private bool GetEntityPosition(int pbDataId, Vector outVector)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -288,16 +288,16 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return false;
 		}
 
-		// Token: 0x040238A6 RID: 145574
+		// Token: 0x0401EB48 RID: 125768
 		private readonly Vector TempPosition = Vector.Create();
 
-		// Token: 0x040238A7 RID: 145575
+		// Token: 0x0401EB49 RID: 125769
 		private readonly Vector TempEndPosition = Vector.Create();
 
-		// Token: 0x040238A8 RID: 145576
+		// Token: 0x0401EB4A RID: 125770
 		private readonly string Reason = "CameraLookAtPosition Ban Input";
 
-		// Token: 0x040238A9 RID: 145577
+		// Token: 0x0401EB4B RID: 125771
 		private readonly bool EnableDebugLog = true;
 	}
 }

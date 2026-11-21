@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CBC RID: 19644
+	// Token: 0x020051B5 RID: 20917
 	public class ISaveConfigEnterMethodT
 	{
-		// Token: 0x17008EA0 RID: 36512
-		// (get) Token: 0x0601F2BB RID: 127675 RVA: 0x0045A4A2 File Offset: 0x004586A2
-		// (set) Token: 0x0601F2BC RID: 127676 RVA: 0x0045A4AA File Offset: 0x004586AA
+		// Token: 0x170095CE RID: 38350
+		// (get) Token: 0x06020EDD RID: 134877 RVA: 0x0048DFF2 File Offset: 0x0048C1F2
+		// (set) Token: 0x06020EDE RID: 134878 RVA: 0x0048DFFA File Offset: 0x0048C1FA
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008EA1 RID: 36513
-		// (get) Token: 0x0601F2BD RID: 127677 RVA: 0x0045A4B3 File Offset: 0x004586B3
-		// (set) Token: 0x0601F2BE RID: 127678 RVA: 0x0045A4BB File Offset: 0x004586BB
+		// Token: 0x170095CF RID: 38351
+		// (get) Token: 0x06020EDF RID: 134879 RVA: 0x0048E003 File Offset: 0x0048C203
+		// (set) Token: 0x06020EE0 RID: 134880 RVA: 0x0048E00B File Offset: 0x0048C20B
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008EA2 RID: 36514
-		// (get) Token: 0x0601F2BF RID: 127679 RVA: 0x0045A4C4 File Offset: 0x004586C4
-		// (set) Token: 0x0601F2C0 RID: 127680 RVA: 0x0045A4CC File Offset: 0x004586CC
+		// Token: 0x170095D0 RID: 38352
+		// (get) Token: 0x06020EE1 RID: 134881 RVA: 0x0048E014 File Offset: 0x0048C214
+		// (set) Token: 0x06020EE2 RID: 134882 RVA: 0x0048E01C File Offset: 0x0048C21C
 		public ESaveConfigEnterMethod EnterMethod { get; set; }
 
-		// Token: 0x0601F2C1 RID: 127681 RVA: 0x0045A4D5 File Offset: 0x004586D5
+		// Token: 0x06020EE3 RID: 134883 RVA: 0x0048E025 File Offset: 0x0048C225
 		public ISaveConfigEnterMethodT()
 		{
 			this.Type = ECondition.CompareVar;

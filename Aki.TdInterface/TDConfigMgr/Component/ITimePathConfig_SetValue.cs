@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200077A RID: 1914
+	// Token: 0x0200081B RID: 2075
 	public class ITimePathConfig_SetValue
 	{
-		// Token: 0x04001BD1 RID: 7121
+		// Token: 0x04001DD6 RID: 7638
 		public float TotalTime;
 
-		// Token: 0x04001BD2 RID: 7122
-		[Nullable(1)]
+		// Token: 0x04001DD7 RID: 7639
 		public string TimePathCurve;
 	}
 }

@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C48 RID: 23624
+	// Token: 0x02004C28 RID: 19496
 	public enum ELinkStatus
 	{
-		// Token: 0x0401F133 RID: 127283
+		// Token: 0x04019BE4 RID: 105444
 		None,
-		// Token: 0x0401F134 RID: 127284
+		// Token: 0x04019BE5 RID: 105445
 		IsLinkEnabled,
-		// Token: 0x0401F135 RID: 127285
+		// Token: 0x04019BE6 RID: 105446
 		Ready,
-		// Token: 0x0401F136 RID: 127286
+		// Token: 0x04019BE7 RID: 105447
 		Link,
-		// Token: 0x0401F137 RID: 127287
+		// Token: 0x04019BE8 RID: 105448
 		Explosion
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200776F RID: 30575
+	// Token: 0x02007F9B RID: 32667
 	public class TResetPosTypeUnion
 	{
-		// Token: 0x1700E68D RID: 59021
-		// (get) Token: 0x06037870 RID: 227440 RVA: 0x00783C02 File Offset: 0x00781E02
-		// (set) Token: 0x06037871 RID: 227441 RVA: 0x00783C0A File Offset: 0x00781E0A
+		// Token: 0x1700F2DF RID: 62175
+		// (get) Token: 0x0603ADB9 RID: 241081 RVA: 0x007E8CD2 File Offset: 0x007E6ED2
+		// (set) Token: 0x0603ADBA RID: 241082 RVA: 0x007E8CDA File Offset: 0x007E6EDA
 		public TResetPosType Type { get; set; }
 
-		// Token: 0x1700E68E RID: 59022
-		// (get) Token: 0x06037872 RID: 227442 RVA: 0x00783C13 File Offset: 0x00781E13
-		// (set) Token: 0x06037873 RID: 227443 RVA: 0x00783C1B File Offset: 0x00781E1B
+		// Token: 0x1700F2E0 RID: 62176
+		// (get) Token: 0x0603ADBB RID: 241083 RVA: 0x007E8CE3 File Offset: 0x007E6EE3
+		// (set) Token: 0x0603ADBC RID: 241084 RVA: 0x007E8CEB File Offset: 0x007E6EEB
 		public object Value { get; set; }
 
-		// Token: 0x06037874 RID: 227444 RVA: 0x00783C24 File Offset: 0x00781E24
+		// Token: 0x0603ADBD RID: 241085 RVA: 0x007E8CF4 File Offset: 0x007E6EF4
 		public TResetPosTypeUnion()
 		{
 			this.Type = TResetPosType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037875 RID: 227445 RVA: 0x00783C3A File Offset: 0x00781E3A
+		// Token: 0x0603ADBE RID: 241086 RVA: 0x007E8D0A File Offset: 0x007E6F0A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037876 RID: 227446 RVA: 0x00783C4C File Offset: 0x00781E4C
+		// Token: 0x0603ADBF RID: 241087 RVA: 0x007E8D1C File Offset: 0x007E6F1C
 		public IResetPosByPosEntityT AsIResetPosByPosEntity()
 		{
 			return this.As<IResetPosByPosEntityT>();
 		}
 
-		// Token: 0x06037877 RID: 227447 RVA: 0x00783C54 File Offset: 0x00781E54
+		// Token: 0x0603ADC0 RID: 241088 RVA: 0x007E8D24 File Offset: 0x007E6F24
 		public static TResetPosTypeUnion FromIResetPosByPosEntity(IResetPosByPosEntityT _iresetposbyposentity)
 		{
 			return new TResetPosTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037878 RID: 227448 RVA: 0x00783C69 File Offset: 0x00781E69
+		// Token: 0x0603ADC1 RID: 241089 RVA: 0x007E8D39 File Offset: 0x007E6F39
 		public IResetPosByResetPointT AsIResetPosByResetPoint()
 		{
 			return this.As<IResetPosByResetPointT>();
 		}
 
-		// Token: 0x06037879 RID: 227449 RVA: 0x00783C71 File Offset: 0x00781E71
+		// Token: 0x0603ADC2 RID: 241090 RVA: 0x007E8D41 File Offset: 0x007E6F41
 		public static TResetPosTypeUnion FromIResetPosByResetPoint(IResetPosByResetPointT _iresetposbyresetpoint)
 		{
 			return new TResetPosTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603787A RID: 227450 RVA: 0x00783C88 File Offset: 0x00781E88
+		// Token: 0x0603ADC3 RID: 241091 RVA: 0x007E8D58 File Offset: 0x007E6F58
 		public static int Pack(FlatBufferBuilder builder, TResetPosTypeUnion _o)
 		{
 			TResetPosType type = _o.Type;

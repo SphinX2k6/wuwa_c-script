@@ -4,76 +4,76 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02000F0E RID: 3854
+// Token: 0x020003C3 RID: 963
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class AchievementConfig : ConfigBase
 {
-	// Token: 0x06006103 RID: 24835 RVA: 0x0012ECDD File Offset: 0x0012CEDD
+	// Token: 0x0600349B RID: 13467 RVA: 0x00137601 File Offset: 0x00135801
 	public Achievement? GetAchievementConfig(int achievementId)
 	{
 		return ConfigAchievementById.GetConfig(achievementId, true);
 	}
 
-	// Token: 0x06006104 RID: 24836 RVA: 0x0012ECE6 File Offset: 0x0012CEE6
+	// Token: 0x0600349C RID: 13468 RVA: 0x0013760A File Offset: 0x0013580A
 	[NullableContext(2)]
 	public IReadOnlyList<Achievement> GetAchievementGroupAchievementList(int groupId)
 	{
 		return ConfigAchievementByGroupId.GetConfigList(groupId, true);
 	}
 
-	// Token: 0x06006105 RID: 24837 RVA: 0x0012ECEF File Offset: 0x0012CEEF
+	// Token: 0x0600349D RID: 13469 RVA: 0x00137613 File Offset: 0x00135813
 	public AchievementStarLevel? GetAchievementStarLevelConfig(int level)
 	{
 		return ConfigAchievementStarLevelByLevel.GetConfig(level, true);
 	}
 
-	// Token: 0x06006106 RID: 24838 RVA: 0x0012ECF8 File Offset: 0x0012CEF8
+	// Token: 0x0600349E RID: 13470 RVA: 0x0013761C File Offset: 0x0013581C
 	public AchievementGroup? GetAchievementGroupConfig(int achievementGroupId)
 	{
 		return ConfigAchievementGroupById.GetConfig(achievementGroupId, true);
 	}
 
-	// Token: 0x06006107 RID: 24839 RVA: 0x0012ED01 File Offset: 0x0012CF01
+	// Token: 0x0600349F RID: 13471 RVA: 0x00137625 File Offset: 0x00135825
 	public AchievementCategory? GetAchievementCategory(int categoryId)
 	{
 		return ConfigAchievementCategoryById.GetConfig(categoryId, true);
 	}
 
-	// Token: 0x06006108 RID: 24840 RVA: 0x0012ED0A File Offset: 0x0012CF0A
+	// Token: 0x060034A0 RID: 13472 RVA: 0x0013762E File Offset: 0x0013582E
 	[NullableContext(2)]
 	public IReadOnlyList<AchievementCategory> GetAllAchievementCategory()
 	{
 		return ConfigAchievementCategoryAll.GetConfigList(true);
 	}
 
-	// Token: 0x06006109 RID: 24841 RVA: 0x0012ED12 File Offset: 0x0012CF12
+	// Token: 0x060034A1 RID: 13473 RVA: 0x00137636 File Offset: 0x00135836
 	[NullableContext(2)]
 	public IReadOnlyList<AchievementGroup> GetAchievementCategoryGroups(int categoryId)
 	{
 		return ConfigAchievementGroupByCategory.GetConfigList(categoryId, true);
 	}
 
-	// Token: 0x0600610A RID: 24842 RVA: 0x0012ED1C File Offset: 0x0012CF1C
+	// Token: 0x060034A2 RID: 13474 RVA: 0x00137640 File Offset: 0x00135840
 	public string GetAchievementTitle(int achievementId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetAchievementConfig(achievementId).Value.Name, null);
 	}
 
-	// Token: 0x0600610B RID: 24843 RVA: 0x0012ED48 File Offset: 0x0012CF48
+	// Token: 0x060034A3 RID: 13475 RVA: 0x0013766C File Offset: 0x0013586C
 	public string GetAchievementDesc(int achievementId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetAchievementConfig(achievementId).Value.Desc, null);
 	}
 
-	// Token: 0x0600610C RID: 24844 RVA: 0x0012ED74 File Offset: 0x0012CF74
+	// Token: 0x060034A4 RID: 13476 RVA: 0x00137698 File Offset: 0x00135898
 	public bool GetAchievementHiddenState(int achievementId)
 	{
 		return this.GetAchievementConfig(achievementId).Value.Hidden;
 	}
 
-	// Token: 0x0600610D RID: 24845 RVA: 0x0012ED98 File Offset: 0x0012CF98
+	// Token: 0x060034A5 RID: 13477 RVA: 0x001376BC File Offset: 0x001358BC
 	public int GetAchievementNextLink(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -84,7 +84,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.NextLink;
 	}
 
-	// Token: 0x0600610E RID: 24846 RVA: 0x0012EDC8 File Offset: 0x0012CFC8
+	// Token: 0x060034A6 RID: 13478 RVA: 0x001376EC File Offset: 0x001358EC
 	public int GetThirdPartyTrophyId(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -95,7 +95,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.ThirdPartyTrophyId;
 	}
 
-	// Token: 0x0600610F RID: 24847 RVA: 0x0012EDF8 File Offset: 0x0012CFF8
+	// Token: 0x060034A7 RID: 13479 RVA: 0x0013771C File Offset: 0x0013591C
 	public string GetExternalTrophyId(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -106,7 +106,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.ExternalTrophyId;
 	}
 
-	// Token: 0x06006110 RID: 24848 RVA: 0x0012EE2C File Offset: 0x0012D02C
+	// Token: 0x060034A8 RID: 13480 RVA: 0x00137750 File Offset: 0x00135950
 	public string GetXSXExternalTrophyId(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -117,7 +117,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.XSXExternalTrophyId;
 	}
 
-	// Token: 0x06006111 RID: 24849 RVA: 0x0012EE60 File Offset: 0x0012D060
+	// Token: 0x060034A9 RID: 13481 RVA: 0x00137784 File Offset: 0x00135984
 	public int GetAchievementLevel(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -128,7 +128,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.Level;
 	}
 
-	// Token: 0x06006112 RID: 24850 RVA: 0x0012EE90 File Offset: 0x0012D090
+	// Token: 0x060034AA RID: 13482 RVA: 0x001377B4 File Offset: 0x001359B4
 	public int GetAchievementGroup(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -139,7 +139,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.GroupId;
 	}
 
-	// Token: 0x06006113 RID: 24851 RVA: 0x0012EEC0 File Offset: 0x0012D0C0
+	// Token: 0x060034AB RID: 13483 RVA: 0x001377E4 File Offset: 0x001359E4
 	public string GetAchievementIcon(int achievementId)
 	{
 		Achievement? achievementConfig = this.GetAchievementConfig(achievementId);
@@ -150,7 +150,7 @@ public class AchievementConfig : ConfigBase
 		return achievementConfig.Value.IconPath;
 	}
 
-	// Token: 0x06006114 RID: 24852 RVA: 0x0012EEF4 File Offset: 0x0012D0F4
+	// Token: 0x060034AC RID: 13484 RVA: 0x00137818 File Offset: 0x00135A18
 	public DropPackage? GetAchievementReward(int achievementId)
 	{
 		int num = this.GetAchievementConfig(achievementId).Value.OverrideDropId;
@@ -162,50 +162,50 @@ public class AchievementConfig : ConfigBase
 		return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackage(num);
 	}
 
-	// Token: 0x06006115 RID: 24853 RVA: 0x0012EF54 File Offset: 0x0012D154
+	// Token: 0x060034AD RID: 13485 RVA: 0x00137878 File Offset: 0x00135A78
 	public string GetAchievementGroupTitleId(int groupId)
 	{
 		AchievementGroup? achievementGroupConfig = this.GetAchievementGroupConfig(groupId);
 		return ((achievementGroupConfig != null) ? achievementGroupConfig.GetValueOrDefault().Name : null) ?? "";
 	}
 
-	// Token: 0x06006116 RID: 24854 RVA: 0x0012EF8D File Offset: 0x0012D18D
+	// Token: 0x060034AE RID: 13486 RVA: 0x001378B1 File Offset: 0x00135AB1
 	public string GetAchievementGroupTitle(int groupId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetAchievementGroupTitleId(groupId), null);
 	}
 
-	// Token: 0x06006117 RID: 24855 RVA: 0x0012EF9C File Offset: 0x0012D19C
+	// Token: 0x060034AF RID: 13487 RVA: 0x001378C0 File Offset: 0x00135AC0
 	public int GetAchievementGroupSort(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.Sort;
 	}
 
-	// Token: 0x06006118 RID: 24856 RVA: 0x0012EFC0 File Offset: 0x0012D1C0
+	// Token: 0x060034B0 RID: 13488 RVA: 0x001378E4 File Offset: 0x00135AE4
 	public string GetAchievementGroupIcon(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.Icon;
 	}
 
-	// Token: 0x06006119 RID: 24857 RVA: 0x0012EFE4 File Offset: 0x0012D1E4
+	// Token: 0x060034B1 RID: 13489 RVA: 0x00137908 File Offset: 0x00135B08
 	public string GetAchievementGroupSmallIcon(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.SmallIcon;
 	}
 
-	// Token: 0x0600611A RID: 24858 RVA: 0x0012F008 File Offset: 0x0012D208
+	// Token: 0x060034B2 RID: 13490 RVA: 0x0013792C File Offset: 0x00135B2C
 	public string GetAchievementGroupBackgroundIcon(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.BackgroundIcon;
 	}
 
-	// Token: 0x0600611B RID: 24859 RVA: 0x0012F02C File Offset: 0x0012D22C
+	// Token: 0x060034B3 RID: 13491 RVA: 0x00137950 File Offset: 0x00135B50
 	public bool GetAchievementGroupEnable(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.Enable;
 	}
 
-	// Token: 0x0600611C RID: 24860 RVA: 0x0012F050 File Offset: 0x0012D250
+	// Token: 0x060034B4 RID: 13492 RVA: 0x00137974 File Offset: 0x00135B74
 	public DropPackage? GetAchievementGroupReward(int groupId)
 	{
 		AchievementGroup? achievementGroupConfig = this.GetAchievementGroupConfig(groupId);
@@ -216,47 +216,47 @@ public class AchievementConfig : ConfigBase
 		return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackage(achievementGroupConfig.Value.DropId);
 	}
 
-	// Token: 0x0600611D RID: 24861 RVA: 0x0012F09C File Offset: 0x0012D29C
+	// Token: 0x060034B5 RID: 13493 RVA: 0x001379C0 File Offset: 0x00135BC0
 	public int GetAchievementGroupCategory(int groupId)
 	{
 		return this.GetAchievementGroupConfig(groupId).Value.Category;
 	}
 
-	// Token: 0x0600611E RID: 24862 RVA: 0x0012F0C0 File Offset: 0x0012D2C0
+	// Token: 0x060034B6 RID: 13494 RVA: 0x001379E4 File Offset: 0x00135BE4
 	public string GetCategoryOriginalTitle(int categoryId)
 	{
 		AchievementCategory? achievementCategory = this.GetAchievementCategory(categoryId);
 		return ((achievementCategory != null) ? achievementCategory.GetValueOrDefault().Name : null) ?? "";
 	}
 
-	// Token: 0x0600611F RID: 24863 RVA: 0x0012F0F9 File Offset: 0x0012D2F9
+	// Token: 0x060034B7 RID: 13495 RVA: 0x00137A1D File Offset: 0x00135C1D
 	public string GetCategoryTitle(int categoryId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetCategoryOriginalTitle(categoryId), null);
 	}
 
-	// Token: 0x06006120 RID: 24864 RVA: 0x0012F108 File Offset: 0x0012D308
+	// Token: 0x060034B8 RID: 13496 RVA: 0x00137A2C File Offset: 0x00135C2C
 	public string GetCategoryTexture(int categoryId)
 	{
 		AchievementCategory? achievementCategory = this.GetAchievementCategory(categoryId);
 		return ((achievementCategory != null) ? achievementCategory.GetValueOrDefault().TexturePath : null) ?? "";
 	}
 
-	// Token: 0x06006121 RID: 24865 RVA: 0x0012F144 File Offset: 0x0012D344
+	// Token: 0x060034B9 RID: 13497 RVA: 0x00137A68 File Offset: 0x00135C68
 	public string GetCategorySprite(int categoryId)
 	{
 		AchievementCategory? achievementCategory = this.GetAchievementCategory(categoryId);
 		return ((achievementCategory != null) ? achievementCategory.GetValueOrDefault().SpritePath : null) ?? "";
 	}
 
-	// Token: 0x06006122 RID: 24866 RVA: 0x0012F180 File Offset: 0x0012D380
+	// Token: 0x060034BA RID: 13498 RVA: 0x00137AA4 File Offset: 0x00135CA4
 	public int GetCategoryFunctionType(int groupId)
 	{
 		return this.GetAchievementCategory(groupId).Value.FunctionType;
 	}
 
-	// Token: 0x17000792 RID: 1938
-	// (get) Token: 0x06006123 RID: 24867 RVA: 0x0012F1A4 File Offset: 0x0012D3A4
+	// Token: 0x170007B4 RID: 1972
+	// (get) Token: 0x060034BB RID: 13499 RVA: 0x00137AC8 File Offset: 0x00135CC8
 	public static AchievementConfig Instance
 	{
 		get
@@ -265,7 +265,7 @@ public class AchievementConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06006124 RID: 24868 RVA: 0x0012F1AB File Offset: 0x0012D3AB
+	// Token: 0x060034BC RID: 13500 RVA: 0x00137ACF File Offset: 0x00135CCF
 	public static AchievementConfig GetOrCreateInstance()
 	{
 		if (AchievementConfig._Instance == null)
@@ -275,7 +275,7 @@ public class AchievementConfig : ConfigBase
 		return AchievementConfig._Instance;
 	}
 
-	// Token: 0x06006125 RID: 24869 RVA: 0x0012F1BF File Offset: 0x0012D3BF
+	// Token: 0x060034BD RID: 13501 RVA: 0x00137AE3 File Offset: 0x00135CE3
 	public static bool CreateInstance()
 	{
 		if (AchievementConfig._Instance != null)
@@ -286,24 +286,24 @@ public class AchievementConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06006126 RID: 24870 RVA: 0x0012F1D5 File Offset: 0x0012D3D5
+	// Token: 0x060034BE RID: 13502 RVA: 0x00137AF9 File Offset: 0x00135CF9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006127 RID: 24871 RVA: 0x0012F1D7 File Offset: 0x0012D3D7
+	// Token: 0x060034BF RID: 13503 RVA: 0x00137AFB File Offset: 0x00135CFB
 	public static void ResetStaticDefaultValue()
 	{
 		AchievementConfig._Instance = null;
 	}
 
-	// Token: 0x06006128 RID: 24872 RVA: 0x0012F1DF File Offset: 0x0012D3DF
+	// Token: 0x060034C0 RID: 13504 RVA: 0x00137B03 File Offset: 0x00135D03
 	static AchievementConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AchievementConfig.CreateStaticDefaultValue), new Action(AchievementConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002C3A RID: 11322
+	// Token: 0x04002CD3 RID: 11475
 	[Nullable(2)]
 	private static AchievementConfig _Instance;
 }

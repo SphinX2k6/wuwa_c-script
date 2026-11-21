@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200598C RID: 22924
+	// Token: 0x02005F99 RID: 24473
 	public struct ISplineWayPointWithWeight : IFlatbufferObject
 	{
-		// Token: 0x1700AC05 RID: 44037
-		// (get) Token: 0x06026D20 RID: 159008 RVA: 0x00557F08 File Offset: 0x00556108
+		// Token: 0x1700B539 RID: 46393
+		// (get) Token: 0x0602928A RID: 168586 RVA: 0x0059EB74 File Offset: 0x0059CD74
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026D21 RID: 159009 RVA: 0x00557F15 File Offset: 0x00556115
+		// Token: 0x0602928B RID: 168587 RVA: 0x0059EB81 File Offset: 0x0059CD81
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026D22 RID: 159010 RVA: 0x00557F1C File Offset: 0x0055611C
+		// Token: 0x0602928C RID: 168588 RVA: 0x0059EB88 File Offset: 0x0059CD88
 		public static ISplineWayPointWithWeight GetRootAsISplineWayPointWithWeight(ByteBuffer _bb)
 		{
 			return ISplineWayPointWithWeight.GetRootAsISplineWayPointWithWeight(_bb, default(ISplineWayPointWithWeight));
 		}
 
-		// Token: 0x06026D23 RID: 159011 RVA: 0x00557F38 File Offset: 0x00556138
+		// Token: 0x0602928D RID: 168589 RVA: 0x0059EBA4 File Offset: 0x0059CDA4
 		public static ISplineWayPointWithWeight GetRootAsISplineWayPointWithWeight(ByteBuffer _bb, ISplineWayPointWithWeight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026D24 RID: 159012 RVA: 0x00557F55 File Offset: 0x00556155
+		// Token: 0x0602928E RID: 168590 RVA: 0x0059EBC1 File Offset: 0x0059CDC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026D25 RID: 159013 RVA: 0x00557F64 File Offset: 0x00556164
+		// Token: 0x0602928F RID: 168591 RVA: 0x0059EBD0 File Offset: 0x0059CDD0
 		public ISplineWayPointWithWeight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC06 RID: 44038
-		// (get) Token: 0x06026D26 RID: 159014 RVA: 0x00557F74 File Offset: 0x00556174
+		// Token: 0x1700B53A RID: 46394
+		// (get) Token: 0x06029290 RID: 168592 RVA: 0x0059EBE0 File Offset: 0x0059CDE0
 		public int Spline
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC07 RID: 44039
-		// (get) Token: 0x06026D27 RID: 159015 RVA: 0x00557FB0 File Offset: 0x005561B0
+		// Token: 0x1700B53B RID: 46395
+		// (get) Token: 0x06029291 RID: 168593 RVA: 0x0059EC1C File Offset: 0x0059CE1C
 		public int PointId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC08 RID: 44040
-		// (get) Token: 0x06026D28 RID: 159016 RVA: 0x00557FEC File Offset: 0x005561EC
+		// Token: 0x1700B53C RID: 46396
+		// (get) Token: 0x06029292 RID: 168594 RVA: 0x0059EC58 File Offset: 0x0059CE58
 		public int Weight
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026D29 RID: 159017 RVA: 0x00558028 File Offset: 0x00556228
+		// Token: 0x06029293 RID: 168595 RVA: 0x0059EC94 File Offset: 0x0059CE94
 		public static Offset<ISplineWayPointWithWeight> CreateISplineWayPointWithWeight(FlatBufferBuilder builder, int Spline = 0, int PointId = 0, int Weight = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineWayPointWithWeight.EndISplineWayPointWithWeight(builder);
 		}
 
-		// Token: 0x06026D2A RID: 159018 RVA: 0x0055804C File Offset: 0x0055624C
+		// Token: 0x06029294 RID: 168596 RVA: 0x0059ECB8 File Offset: 0x0059CEB8
 		public static void StartISplineWayPointWithWeight(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06026D2B RID: 159019 RVA: 0x00558055 File Offset: 0x00556255
+		// Token: 0x06029295 RID: 168597 RVA: 0x0059ECC1 File Offset: 0x0059CEC1
 		public static void AddSpline(FlatBufferBuilder builder, int spline)
 		{
 			builder.AddInt(0, spline, 0);
 		}
 
-		// Token: 0x06026D2C RID: 159020 RVA: 0x00558060 File Offset: 0x00556260
+		// Token: 0x06029296 RID: 168598 RVA: 0x0059ECCC File Offset: 0x0059CECC
 		public static void AddPointId(FlatBufferBuilder builder, int pointId)
 		{
 			builder.AddInt(1, pointId, 0);
 		}
 
-		// Token: 0x06026D2D RID: 159021 RVA: 0x0055806B File Offset: 0x0055626B
+		// Token: 0x06029297 RID: 168599 RVA: 0x0059ECD7 File Offset: 0x0059CED7
 		public static void AddWeight(FlatBufferBuilder builder, int weight)
 		{
 			builder.AddInt(2, weight, 0);
 		}
 
-		// Token: 0x06026D2E RID: 159022 RVA: 0x00558076 File Offset: 0x00556276
+		// Token: 0x06029298 RID: 168600 RVA: 0x0059ECE2 File Offset: 0x0059CEE2
 		public static Offset<ISplineWayPointWithWeight> EndISplineWayPointWithWeight(FlatBufferBuilder builder)
 		{
 			return new Offset<ISplineWayPointWithWeight>(builder.EndTable());
 		}
 
-		// Token: 0x06026D2F RID: 159023 RVA: 0x00558084 File Offset: 0x00556284
+		// Token: 0x06029299 RID: 168601 RVA: 0x0059ECF0 File Offset: 0x0059CEF0
 		public ISplineWayPointWithWeightT UnPack()
 		{
 			ISplineWayPointWithWeightT splineWayPointWithWeightT = new ISplineWayPointWithWeightT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return splineWayPointWithWeightT;
 		}
 
-		// Token: 0x06026D30 RID: 159024 RVA: 0x0055809F File Offset: 0x0055629F
+		// Token: 0x0602929A RID: 168602 RVA: 0x0059ED0B File Offset: 0x0059CF0B
 		public void UnPackTo(ISplineWayPointWithWeightT _o)
 		{
 			_o.Spline = this.Spline;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Weight = this.Weight;
 		}
 
-		// Token: 0x06026D31 RID: 159025 RVA: 0x005580C8 File Offset: 0x005562C8
+		// Token: 0x0602929B RID: 168603 RVA: 0x0059ED34 File Offset: 0x0059CF34
 		public static Offset<ISplineWayPointWithWeight> Pack(FlatBufferBuilder builder, ISplineWayPointWithWeightT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineWayPointWithWeight.CreateISplineWayPointWithWeight(builder, _o.Spline, _o.PointId, _o.Weight);
 		}
 
-		// Token: 0x0400EF8F RID: 61327
+		// Token: 0x0400FC84 RID: 64644
 		private Table __p;
 	}
 }

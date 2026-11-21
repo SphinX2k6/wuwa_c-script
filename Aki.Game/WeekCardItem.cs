@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020023AA RID: 9130
+// Token: 0x0200188F RID: 6287
 [NullableContext(1)]
 [Nullable(0)]
 public class WeekCardItem : UiPanelBase
 {
-	// Token: 0x0601240E RID: 74766 RVA: 0x0047E7F8 File Offset: 0x0047C9F8
+	// Token: 0x0600F8C0 RID: 63680 RVA: 0x0048BCCC File Offset: 0x00489ECC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -50,13 +50,13 @@ public class WeekCardItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601240F RID: 74767 RVA: 0x0047E9A8 File Offset: 0x0047CBA8
+	// Token: 0x0600F8C1 RID: 63681 RVA: 0x0048BE7C File Offset: 0x0048A07C
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<WeekCardRewardGrid, IWeekRewardData>(base.GetHorizontalLayout(1), () => new WeekCardRewardGrid(), null, false, true);
 	}
 
-	// Token: 0x06012410 RID: 74768 RVA: 0x0047E9E0 File Offset: 0x0047CBE0
+	// Token: 0x0600F8C2 RID: 63682 RVA: 0x0048BEB4 File Offset: 0x0048A0B4
 	public void Refresh(WeekCardViewModel vm, WeekCardContentInfo info)
 	{
 		this.Vm = vm;
@@ -73,7 +73,7 @@ public class WeekCardItem : UiPanelBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06012411 RID: 74769 RVA: 0x0047EA98 File Offset: 0x0047CC98
+	// Token: 0x0600F8C3 RID: 63683 RVA: 0x0048BF6C File Offset: 0x0048A16C
 	public void RefreshView()
 	{
 		this.RefreshRewardTexture();
@@ -95,7 +95,7 @@ public class WeekCardItem : UiPanelBase
 		this.RefreshTime();
 	}
 
-	// Token: 0x06012412 RID: 74770 RVA: 0x0047EBBC File Offset: 0x0047CDBC
+	// Token: 0x0600F8C4 RID: 63684 RVA: 0x0048C090 File Offset: 0x0048A290
 	private void RefreshRewardTexture()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -107,7 +107,7 @@ public class WeekCardItem : UiPanelBase
 		base.SetTextureByPath(text, base.GetTexture(9), null, null);
 	}
 
-	// Token: 0x06012413 RID: 74771 RVA: 0x0047EC04 File Offset: 0x0047CE04
+	// Token: 0x0600F8C5 RID: 63685 RVA: 0x0048C0D8 File Offset: 0x0048A2D8
 	public void RefreshTime()
 	{
 		base.GetText(4).SetUIActive(this.Status == EContentStatus.CannotReceive);
@@ -125,7 +125,7 @@ public class WeekCardItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), "WeekCard_1006", new <>z__ReadOnlySingleElementList<object>(this.UnlockDay));
 	}
 
-	// Token: 0x06012414 RID: 74772 RVA: 0x0047ECC1 File Offset: 0x0047CEC1
+	// Token: 0x0600F8C6 RID: 63686 RVA: 0x0048C195 File Offset: 0x0048A395
 	private void OnClickConfirm()
 	{
 		if (this.Status != EContentStatus.CanReceive)
@@ -140,28 +140,28 @@ public class WeekCardItem : UiPanelBase
 		vm.OnReceiveReward(this.ContentId).Forget<bool>();
 	}
 
-	// Token: 0x040089DB RID: 35291
+	// Token: 0x04008B22 RID: 35618
 	private int ContentId;
 
-	// Token: 0x040089DC RID: 35292
+	// Token: 0x04008B23 RID: 35619
 	private EContentStatus Status;
 
-	// Token: 0x040089DD RID: 35293
+	// Token: 0x04008B24 RID: 35620
 	private int UnlockDay;
 
-	// Token: 0x040089DE RID: 35294
+	// Token: 0x04008B25 RID: 35621
 	private long UnlockTimeStamp;
 
-	// Token: 0x040089DF RID: 35295
+	// Token: 0x04008B26 RID: 35622
 	private List<Tuple<int, int>> RewardContent = new List<Tuple<int, int>>();
 
-	// Token: 0x040089E0 RID: 35296
+	// Token: 0x04008B27 RID: 35623
 	private bool IsBuy;
 
-	// Token: 0x040089E1 RID: 35297
+	// Token: 0x04008B28 RID: 35624
 	private readonly ButtonItem ConfirmButton = new ButtonItem(null);
 
-	// Token: 0x040089E2 RID: 35298
+	// Token: 0x04008B29 RID: 35625
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,42 +170,42 @@ public class WeekCardItem : UiPanelBase
 	})]
 	private GenericLayout<WeekCardRewardGrid, IWeekRewardData> RewardLayout;
 
-	// Token: 0x040089E3 RID: 35299
+	// Token: 0x04008B2A RID: 35626
 	[Nullable(2)]
 	private WeekCardViewModel Vm;
 
-	// Token: 0x02008946 RID: 35142
+	// Token: 0x02007ACF RID: 31439
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402C9FC RID: 182780
+		// Token: 0x04027D17 RID: 163095
 		public const int ButtonWeekCardReward = 0;
 
-		// Token: 0x0402C9FD RID: 182781
+		// Token: 0x04027D18 RID: 163096
 		public const int PanelRewardLayout = 1;
 
-		// Token: 0x0402C9FE RID: 182782
+		// Token: 0x04027D19 RID: 163097
 		public const int PanelRewardItem = 2;
 
-		// Token: 0x0402C9FF RID: 182783
+		// Token: 0x04027D1A RID: 163098
 		public const int PanelLock = 3;
 
-		// Token: 0x0402CA00 RID: 182784
+		// Token: 0x04027D1B RID: 163099
 		public const int TextLock = 4;
 
-		// Token: 0x0402CA01 RID: 182785
+		// Token: 0x04027D1C RID: 163100
 		public const int PanelReceive = 5;
 
-		// Token: 0x0402CA02 RID: 182786
+		// Token: 0x04027D1D RID: 163101
 		public const int PanelFinish = 6;
 
-		// Token: 0x0402CA03 RID: 182787
+		// Token: 0x04027D1E RID: 163102
 		public const int PanelRedDot = 7;
 
-		// Token: 0x0402CA04 RID: 182788
+		// Token: 0x04027D1F RID: 163103
 		public const int PanelFinishAlpha = 8;
 
-		// Token: 0x0402CA05 RID: 182789
+		// Token: 0x04027D20 RID: 163104
 		public const int RewardTexture = 9;
 	}
 }

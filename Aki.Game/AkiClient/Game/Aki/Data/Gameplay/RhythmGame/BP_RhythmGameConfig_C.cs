@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 {
-	// Token: 0x02003F32 RID: 16178
+	// Token: 0x020031DE RID: 12766
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/RhythmGame/BP_RhythmGameConfig.BP_RhythmGameConfig_C")]
 	[UnrealStructLayout(520, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 520)]
 	public class BP_RhythmGameConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602925A RID: 168538 RVA: 0x009BCE4E File Offset: 0x009BB04E
+		// Token: 0x0601FB6C RID: 129900 RVA: 0x00933FAE File Offset: 0x009321AE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_RhythmGameConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,19 +24,19 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 			return BP_RhythmGameConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602925B RID: 168539 RVA: 0x009BCE74 File Offset: 0x009BB074
+		// Token: 0x0601FB6D RID: 129901 RVA: 0x00933FD4 File Offset: 0x009321D4
 		public BP_RhythmGameConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_RhythmGameConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602925C RID: 168540 RVA: 0x009BCE9C File Offset: 0x009BB09C
+		// Token: 0x0601FB6E RID: 129902 RVA: 0x00933FFC File Offset: 0x009321FC
 		public BP_RhythmGameConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_RhythmGameConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170061C9 RID: 25033
-		// (get) Token: 0x0602925D RID: 168541 RVA: 0x009BCED0 File Offset: 0x009BB0D0
-		// (set) Token: 0x0602925E RID: 168542 RVA: 0x009BCF09 File Offset: 0x009BB109
+		// Token: 0x17003B15 RID: 15125
+		// (get) Token: 0x0601FB6F RID: 129903 RVA: 0x00934030 File Offset: 0x00932230
+		// (set) Token: 0x0601FB70 RID: 129904 RVA: 0x00934069 File Offset: 0x00932269
 		public FKuroRhythmGameConfig Config
 		{
 			get
@@ -45,19 +45,19 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 				FKuroRhythmGameConfig result;
 				if ((result = this._Config) == null)
 				{
-					result = (this._Config = new FKuroRhythmGameConfig(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_0, this));
+					result = (this._Config = new FKuroRhythmGameConfig(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_Config, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroRhythmGameConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_0, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FKuroRhythmGameConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_Config, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170061CA RID: 25034
-		// (get) Token: 0x0602925F RID: 168543 RVA: 0x009BCF2C File Offset: 0x009BB12C
-		// (set) Token: 0x06029260 RID: 168544 RVA: 0x009BCF65 File Offset: 0x009BB165
+		// Token: 0x17003B16 RID: 15126
+		// (get) Token: 0x0601FB71 RID: 129905 RVA: 0x0093408C File Offset: 0x0093228C
+		// (set) Token: 0x0601FB72 RID: 129906 RVA: 0x009340C5 File Offset: 0x009322C5
 		public TArray<RhythmGameSpeedLevelConfig> SpeedLevelConfig
 		{
 			get
@@ -66,7 +66,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 				TArray<RhythmGameSpeedLevelConfig> result;
 				if ((result = this._SpeedLevelConfig) == null)
 				{
-					result = (this._SpeedLevelConfig = new TArray<RhythmGameSpeedLevelConfig>(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_1, this));
+					result = (this._SpeedLevelConfig = new TArray<RhythmGameSpeedLevelConfig>(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_SpeedLevelConfig, this));
 				}
 				return result;
 			}
@@ -76,39 +76,39 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 			}
 		}
 
-		// Token: 0x170061CB RID: 25035
-		// (get) Token: 0x06029261 RID: 168545 RVA: 0x009BCF73 File Offset: 0x009BB173
-		// (set) Token: 0x06029262 RID: 168546 RVA: 0x009BCF87 File Offset: 0x009BB187
+		// Token: 0x17003B17 RID: 15127
+		// (get) Token: 0x0601FB73 RID: 129907 RVA: 0x009340D3 File Offset: 0x009322D3
+		// (set) Token: 0x0601FB74 RID: 129908 RVA: 0x009340E7 File Offset: 0x009322E7
 		public unsafe RhythmGamePerformanceCameraConfig StartCameraConfig
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_StartCameraConfig);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_StartCameraConfig) = value;
 			}
 		}
 
-		// Token: 0x170061CC RID: 25036
-		// (get) Token: 0x06029263 RID: 168547 RVA: 0x009BCF9C File Offset: 0x009BB19C
-		// (set) Token: 0x06029264 RID: 168548 RVA: 0x009BCFB0 File Offset: 0x009BB1B0
+		// Token: 0x17003B18 RID: 15128
+		// (get) Token: 0x0601FB75 RID: 129909 RVA: 0x009340FC File Offset: 0x009322FC
+		// (set) Token: 0x0601FB76 RID: 129910 RVA: 0x00934110 File Offset: 0x00932310
 		public unsafe RhythmGamePerformanceCameraConfig EndCameraConfig
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_EndCameraConfig);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_EndCameraConfig) = value;
 			}
 		}
 
-		// Token: 0x170061CD RID: 25037
-		// (get) Token: 0x06029265 RID: 168549 RVA: 0x009BCFC8 File Offset: 0x009BB1C8
-		// (set) Token: 0x06029266 RID: 168550 RVA: 0x009BD001 File Offset: 0x009BB201
+		// Token: 0x17003B19 RID: 15129
+		// (get) Token: 0x0601FB77 RID: 129911 RVA: 0x00934128 File Offset: 0x00932328
+		// (set) Token: 0x0601FB78 RID: 129912 RVA: 0x00934161 File Offset: 0x00932361
 		public RhythmGameFreeFlyCameraConfig FreeFlyCameraConfig
 		{
 			get
@@ -117,41 +117,41 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 				RhythmGameFreeFlyCameraConfig result;
 				if ((result = this._FreeFlyCameraConfig) == null)
 				{
-					result = (this._FreeFlyCameraConfig = new RhythmGameFreeFlyCameraConfig(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_4, this));
+					result = (this._FreeFlyCameraConfig = new RhythmGameFreeFlyCameraConfig(base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_FreeFlyCameraConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(RhythmGameFreeFlyCameraConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_4, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(RhythmGameFreeFlyCameraConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_RhythmGameConfig_C.__PropertyOffset_FreeFlyCameraConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x06029267 RID: 168551 RVA: 0x009BD022 File Offset: 0x009BB222
+		// Token: 0x0601FB79 RID: 129913 RVA: 0x00934182 File Offset: 0x00932382
 		protected BP_RhythmGameConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015114 RID: 86292
+		// Token: 0x04011044 RID: 69700
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/RhythmGame/BP_RhythmGameConfig.BP_RhythmGameConfig_C";
 
-		// Token: 0x04015115 RID: 86293
+		// Token: 0x04011045 RID: 69701
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015116 RID: 86294
+		// Token: 0x04011046 RID: 69702
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015117 RID: 86295
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011047 RID: 69703
+		internal static int __PropertyOffset_Config;
 
-		// Token: 0x04015118 RID: 86296
+		// Token: 0x04011048 RID: 69704
 		[Nullable(2)]
 		private FKuroRhythmGameConfig _Config;
 
-		// Token: 0x04015119 RID: 86297
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011049 RID: 69705
+		internal static int __PropertyOffset_SpeedLevelConfig;
 
-		// Token: 0x0401511A RID: 86298
+		// Token: 0x0401104A RID: 69706
 		[Nullable(new byte[]
 		{
 			2,
@@ -159,16 +159,16 @@ namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 		})]
 		private TArray<RhythmGameSpeedLevelConfig> _SpeedLevelConfig;
 
-		// Token: 0x0401511B RID: 86299
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401104B RID: 69707
+		internal static int __PropertyOffset_StartCameraConfig;
 
-		// Token: 0x0401511C RID: 86300
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401104C RID: 69708
+		internal static int __PropertyOffset_EndCameraConfig;
 
-		// Token: 0x0401511D RID: 86301
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401104D RID: 69709
+		internal static int __PropertyOffset_FreeFlyCameraConfig;
 
-		// Token: 0x0401511E RID: 86302
+		// Token: 0x0401104E RID: 69710
 		[Nullable(2)]
 		private RhythmGameFreeFlyCameraConfig _FreeFlyCameraConfig;
 	}

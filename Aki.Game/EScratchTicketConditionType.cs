@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020014E1 RID: 5345
+// Token: 0x02000999 RID: 2457
 public enum EScratchTicketConditionType
 {
-	// Token: 0x040042EF RID: 17135
+	// Token: 0x04004394 RID: 17300
 	DailyLogin = 1,
-	// Token: 0x040042F0 RID: 17136
+	// Token: 0x04004395 RID: 17301
 	DailyStrengthCost
 }

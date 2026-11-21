@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017EA RID: 6122
+// Token: 0x02000CA3 RID: 3235
 public class ButtonSpriteItem : UiPanelBase
 {
-	// Token: 0x0600B323 RID: 45859 RVA: 0x00287B34 File Offset: 0x00285D34
+	// Token: 0x0600870D RID: 34573 RVA: 0x00292208 File Offset: 0x00290408
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,13 +31,13 @@ public class ButtonSpriteItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B324 RID: 45860 RVA: 0x00287BFB File Offset: 0x00285DFB
+	// Token: 0x0600870E RID: 34574 RVA: 0x002922CF File Offset: 0x002904CF
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
 	}
 
-	// Token: 0x0600B325 RID: 45861 RVA: 0x00287C03 File Offset: 0x00285E03
+	// Token: 0x0600870F RID: 34575 RVA: 0x002922D7 File Offset: 0x002904D7
 	private void ButtonClick()
 	{
 		if (this.ButtonFunction != null)
@@ -46,14 +46,14 @@ public class ButtonSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B326 RID: 45862 RVA: 0x00287C18 File Offset: 0x00285E18
+	// Token: 0x06008710 RID: 34576 RVA: 0x002922EC File Offset: 0x002904EC
 	[NullableContext(2)]
 	public UUIButtonComponent GetBtn()
 	{
 		return base.GetButton(0);
 	}
 
-	// Token: 0x0600B327 RID: 45863 RVA: 0x00287C24 File Offset: 0x00285E24
+	// Token: 0x06008711 RID: 34577 RVA: 0x002922F8 File Offset: 0x002904F8
 	public void SetButtonAllowEventBubbleUp(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -63,7 +63,7 @@ public class ButtonSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B328 RID: 45864 RVA: 0x00287C44 File Offset: 0x00285E44
+	// Token: 0x06008712 RID: 34578 RVA: 0x00292318 File Offset: 0x00290518
 	public void SetEnableClick(bool state)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -73,20 +73,20 @@ public class ButtonSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B329 RID: 45865 RVA: 0x00287C63 File Offset: 0x00285E63
+	// Token: 0x06008713 RID: 34579 RVA: 0x00292337 File Offset: 0x00290537
 	[NullableContext(1)]
 	public void SetFunction(Action buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x0600B32A RID: 45866 RVA: 0x00287C6C File Offset: 0x00285E6C
+	// Token: 0x06008714 RID: 34580 RVA: 0x00292340 File Offset: 0x00290540
 	public void SetSpriteVisible(bool bVisible)
 	{
 		base.GetSprite(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B32B RID: 45867 RVA: 0x00287C7C File Offset: 0x00285E7C
+	// Token: 0x06008715 RID: 34581 RVA: 0x00292350 File Offset: 0x00290550
 	[NullableContext(1)]
 	public void SetSprite(string path)
 	{
@@ -98,7 +98,7 @@ public class ButtonSpriteItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x0600B32C RID: 45868 RVA: 0x00287CCB File Offset: 0x00285ECB
+	// Token: 0x06008716 RID: 34582 RVA: 0x0029239F File Offset: 0x0029059F
 	public void SetRedDotVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(2);
@@ -109,7 +109,7 @@ public class ButtonSpriteItem : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x0600B32D RID: 45869 RVA: 0x00287CE0 File Offset: 0x00285EE0
+	// Token: 0x06008717 RID: 34583 RVA: 0x002923B4 File Offset: 0x002905B4
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		UUIItem item = base.GetItem(2);
@@ -126,7 +126,7 @@ public class ButtonSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B32E RID: 45870 RVA: 0x00287D30 File Offset: 0x00285F30
+	// Token: 0x06008718 RID: 34584 RVA: 0x00292404 File Offset: 0x00290604
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -138,26 +138,26 @@ public class ButtonSpriteItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400511A RID: 20762
+	// Token: 0x040051C5 RID: 20933
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0400511B RID: 20763
+	// Token: 0x040051C6 RID: 20934
 	private int RedDotUid;
 
-	// Token: 0x0400511C RID: 20764
+	// Token: 0x040051C7 RID: 20935
 	[Nullable(2)]
 	private Action ButtonFunction;
 
-	// Token: 0x02007DD7 RID: 32215
+	// Token: 0x02006F5D RID: 28509
 	private class EButtonItemDefine
 	{
-		// Token: 0x04029313 RID: 168723
+		// Token: 0x0402463E RID: 149054
 		public const int Button = 0;
 
-		// Token: 0x04029314 RID: 168724
+		// Token: 0x0402463F RID: 149055
 		public const int Sprite = 1;
 
-		// Token: 0x04029315 RID: 168725
+		// Token: 0x04024640 RID: 149056
 		public const int RedDot = 2;
 	}
 }

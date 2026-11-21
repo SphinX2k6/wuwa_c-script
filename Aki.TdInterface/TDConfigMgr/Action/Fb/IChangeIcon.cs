@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002519 RID: 9497
+	// Token: 0x020027C0 RID: 10176
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IChangeIcon
 	{
-		// Token: 0x0600D3C9 RID: 54217 RVA: 0x001F5FCA File Offset: 0x001F41CA
-		[NullableContext(1)]
+		// Token: 0x0600E129 RID: 57641 RVA: 0x00211A2A File Offset: 0x0020FC2A
+		[NullableContext(0)]
 		public static IChangeIcon Create(IChangeIcon? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B59 RID: 15193
-		// (get) Token: 0x0600D3CA RID: 54218 RVA: 0x001F5FE9 File Offset: 0x001F41E9
+		// Token: 0x17003E57 RID: 15959
+		// (get) Token: 0x0600E12A RID: 57642 RVA: 0x00211A49 File Offset: 0x0020FC49
 		public virtual int Icon
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B5A RID: 15194
-		// (get) Token: 0x0600D3CB RID: 54219 RVA: 0x001F5FF8 File Offset: 0x001F41F8
+		// Token: 0x17003E58 RID: 15960
+		// (get) Token: 0x0600E12B RID: 57643 RVA: 0x00211A58 File Offset: 0x0020FC58
 		public virtual bool? ChangeWhenSelectedInCurrentTalk
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B5B RID: 15195
-		// (get) Token: 0x0600D3CC RID: 54220 RVA: 0x001F602E File Offset: 0x001F422E
+		// Token: 0x17003E59 RID: 15961
+		// (get) Token: 0x0600E12C RID: 57644 RVA: 0x00211A8E File Offset: 0x0020FC8E
 		public virtual IConditionGroup ChangeWhenMatchConditions
 		{
 			get
@@ -64,13 +64,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400740D RID: 29709
+		// Token: 0x04007A62 RID: 31330
 		private IChangeIcon Instance;
 
-		// Token: 0x0400740E RID: 29710
+		// Token: 0x04007A63 RID: 31331
 		private IConditionGroup _ChangeWhenMatchConditionsCache;
 
-		// Token: 0x0400740F RID: 29711
+		// Token: 0x04007A64 RID: 31332
 		private bool _ChangeWhenMatchConditionsInited;
 	}
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BA6 RID: 7078
+// Token: 0x02001065 RID: 4197
 public class FloroRanchTerrainTipItem : UiPanelBase
 {
-	// Token: 0x0600D2BE RID: 53950 RVA: 0x003072AC File Offset: 0x003054AC
+	// Token: 0x0600A6CF RID: 42703 RVA: 0x0031238C File Offset: 0x0031058C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class FloroRanchTerrainTipItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D2BF RID: 53951 RVA: 0x00307318 File Offset: 0x00305518
+	// Token: 0x0600A6D0 RID: 42704 RVA: 0x003123F8 File Offset: 0x003105F8
 	protected override void OnStart()
 	{
 		ITermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -35,20 +35,20 @@ public class FloroRanchTerrainTipItem : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D2C0 RID: 53952 RVA: 0x0030735E File Offset: 0x0030555E
+	// Token: 0x0600A6D1 RID: 42705 RVA: 0x0031243E File Offset: 0x0031063E
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(1));
 	}
 
-	// Token: 0x0600D2C1 RID: 53953 RVA: 0x00307371 File Offset: 0x00305571
+	// Token: 0x0600A6D2 RID: 42706 RVA: 0x00312451 File Offset: 0x00310651
 	[NullableContext(1)]
 	public void RefreshInfoTipByEntity(FloroRanchEntityBase terrainEntity)
 	{
 		this.RefreshTerrainTip(terrainEntity);
 	}
 
-	// Token: 0x0600D2C2 RID: 53954 RVA: 0x0030737C File Offset: 0x0030557C
+	// Token: 0x0600A6D3 RID: 42707 RVA: 0x0031245C File Offset: 0x0031065C
 	[NullableContext(1)]
 	private void RefreshTerrainTip(FloroRanchEntityBase terrainEntity)
 	{
@@ -99,13 +99,13 @@ public class FloroRanchTerrainTipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x02008147 RID: 33095
+	// Token: 0x020072D5 RID: 29397
 	private class EComponentDefine
 	{
-		// Token: 0x0402A31F RID: 172831
+		// Token: 0x04025653 RID: 153171
 		public const int TerrainName = 0;
 
-		// Token: 0x0402A320 RID: 172832
+		// Token: 0x04025654 RID: 153172
 		public const int TerrainDesc = 1;
 	}
 }

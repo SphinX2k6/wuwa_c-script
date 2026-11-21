@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005727 RID: 22311
+	// Token: 0x02005D2E RID: 23854
 	public struct IPetalGrabRoleMotionInteract : IFlatbufferObject
 	{
-		// Token: 0x1700A636 RID: 42550
-		// (get) Token: 0x06025542 RID: 152898 RVA: 0x00526801 File Offset: 0x00524A01
+		// Token: 0x1700AF56 RID: 44886
+		// (get) Token: 0x06027A51 RID: 162385 RVA: 0x0056C509 File Offset: 0x0056A709
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025543 RID: 152899 RVA: 0x0052680E File Offset: 0x00524A0E
+		// Token: 0x06027A52 RID: 162386 RVA: 0x0056C516 File Offset: 0x0056A716
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025544 RID: 152900 RVA: 0x00526818 File Offset: 0x00524A18
+		// Token: 0x06027A53 RID: 162387 RVA: 0x0056C520 File Offset: 0x0056A720
 		public static IPetalGrabRoleMotionInteract GetRootAsIPetalGrabRoleMotionInteract(ByteBuffer _bb)
 		{
 			return IPetalGrabRoleMotionInteract.GetRootAsIPetalGrabRoleMotionInteract(_bb, default(IPetalGrabRoleMotionInteract));
 		}
 
-		// Token: 0x06025545 RID: 152901 RVA: 0x00526834 File Offset: 0x00524A34
+		// Token: 0x06027A54 RID: 162388 RVA: 0x0056C53C File Offset: 0x0056A73C
 		public static IPetalGrabRoleMotionInteract GetRootAsIPetalGrabRoleMotionInteract(ByteBuffer _bb, IPetalGrabRoleMotionInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025546 RID: 152902 RVA: 0x00526851 File Offset: 0x00524A51
+		// Token: 0x06027A55 RID: 162389 RVA: 0x0056C559 File Offset: 0x0056A759
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025547 RID: 152903 RVA: 0x00526860 File Offset: 0x00524A60
+		// Token: 0x06027A56 RID: 162390 RVA: 0x0056C568 File Offset: 0x0056A768
 		public IPetalGrabRoleMotionInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A637 RID: 42551
-		// (get) Token: 0x06025548 RID: 152904 RVA: 0x00526870 File Offset: 0x00524A70
+		// Token: 0x1700AF57 RID: 44887
+		// (get) Token: 0x06027A57 RID: 162391 RVA: 0x0056C578 File Offset: 0x0056A778
 		public ERoleMotionInteractType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A638 RID: 42552
-		// (get) Token: 0x06025549 RID: 152905 RVA: 0x005268AC File Offset: 0x00524AAC
+		// Token: 0x1700AF58 RID: 44888
+		// (get) Token: 0x06027A58 RID: 162392 RVA: 0x0056C5B4 File Offset: 0x0056A7B4
 		public EPetalGrabHandType HandOption
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A639 RID: 42553
-		// (get) Token: 0x0602554A RID: 152906 RVA: 0x005268E8 File Offset: 0x00524AE8
+		// Token: 0x1700AF59 RID: 44889
+		// (get) Token: 0x06027A59 RID: 162393 RVA: 0x0056C5F0 File Offset: 0x0056A7F0
 		public IPosAndRot? GrabPointOffset
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602554B RID: 152907 RVA: 0x00526948 File Offset: 0x00524B48
+		// Token: 0x06027A5A RID: 162394 RVA: 0x0056C650 File Offset: 0x0056A850
 		public IPetalGrabEvent? GrabEvents(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IPetalGrabEvent?(default(IPetalGrabEvent).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A63A RID: 42554
-		// (get) Token: 0x0602554C RID: 152908 RVA: 0x005269AC File Offset: 0x00524BAC
+		// Token: 0x1700AF5A RID: 44890
+		// (get) Token: 0x06027A5B RID: 162395 RVA: 0x0056C6B4 File Offset: 0x0056A8B4
 		public int GrabEventsLength
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A63B RID: 42555
-		// (get) Token: 0x0602554D RID: 152909 RVA: 0x005269D8 File Offset: 0x00524BD8
+		// Token: 0x1700AF5B RID: 44891
+		// (get) Token: 0x06027A5C RID: 162396 RVA: 0x0056C6E0 File Offset: 0x0056A8E0
 		public int NextPointEntityId
 		{
 			get
@@ -135,9 +135,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A63C RID: 42556
-		// (get) Token: 0x0602554E RID: 152910 RVA: 0x00526A18 File Offset: 0x00524C18
-		public byte NullMask
+		// Token: 0x1700AF5C RID: 44892
+		// (get) Token: 0x06027A5D RID: 162397 RVA: 0x0056C720 File Offset: 0x0056A920
+		public int FlightSplineId
 		{
 			get
 			{
@@ -146,54 +146,140 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				{
 					return 0;
 				}
+				return this.__p.bb.GetInt(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x1700AF5D RID: 44893
+		// (get) Token: 0x06027A5E RID: 162398 RVA: 0x0056C760 File Offset: 0x0056A960
+		public TSplineMovePattern FlightSplineMovePatternType
+		{
+			get
+			{
+				int num = this.__p.__offset(16);
+				if (num == 0)
+				{
+					return TSplineMovePattern.NONE;
+				}
+				return (TSplineMovePattern)this.__p.bb.Get(num + this.__p.bb_pos);
+			}
+		}
+
+		// Token: 0x06027A5F RID: 162399 RVA: 0x0056C7A0 File Offset: 0x0056A9A0
+		public TTable? FlightSplineMovePattern<TTable>() where TTable : struct, IFlatbufferObject
+		{
+			int num = this.__p.__offset(18);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
+		}
+
+		// Token: 0x06027A60 RID: 162400 RVA: 0x0056C7E8 File Offset: 0x0056A9E8
+		public IAirPassageMove FlightSplineMovePatternAsIAirPassageMove()
+		{
+			return this.FlightSplineMovePattern<IAirPassageMove>().Value;
+		}
+
+		// Token: 0x06027A61 RID: 162401 RVA: 0x0056C804 File Offset: 0x0056AA04
+		public IMechaAirPassageMove FlightSplineMovePatternAsIMechaAirPassageMove()
+		{
+			return this.FlightSplineMovePattern<IMechaAirPassageMove>().Value;
+		}
+
+		// Token: 0x06027A62 RID: 162402 RVA: 0x0056C820 File Offset: 0x0056AA20
+		public IMotorcycleTrack FlightSplineMovePatternAsIMotorcycleTrack()
+		{
+			return this.FlightSplineMovePattern<IMotorcycleTrack>().Value;
+		}
+
+		// Token: 0x06027A63 RID: 162403 RVA: 0x0056C83C File Offset: 0x0056AA3C
+		public IPathLineMove FlightSplineMovePatternAsIPathLineMove()
+		{
+			return this.FlightSplineMovePattern<IPathLineMove>().Value;
+		}
+
+		// Token: 0x06027A64 RID: 162404 RVA: 0x0056C858 File Offset: 0x0056AA58
+		public IPetalGrabMove FlightSplineMovePatternAsIPetalGrabMove()
+		{
+			return this.FlightSplineMovePattern<IPetalGrabMove>().Value;
+		}
+
+		// Token: 0x06027A65 RID: 162405 RVA: 0x0056C874 File Offset: 0x0056AA74
+		public IRacingTrackMove FlightSplineMovePatternAsIRacingTrackMove()
+		{
+			return this.FlightSplineMovePattern<IRacingTrackMove>().Value;
+		}
+
+		// Token: 0x06027A66 RID: 162406 RVA: 0x0056C890 File Offset: 0x0056AA90
+		public ISlideTrackMove FlightSplineMovePatternAsISlideTrackMove()
+		{
+			return this.FlightSplineMovePattern<ISlideTrackMove>().Value;
+		}
+
+		// Token: 0x1700AF5E RID: 44894
+		// (get) Token: 0x06027A67 RID: 162407 RVA: 0x0056C8AC File Offset: 0x0056AAAC
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(20);
+				if (num == 0)
+				{
+					return 0;
+				}
 				return this.__p.bb.Get(num + this.__p.bb_pos);
 			}
 		}
 
-		// Token: 0x0602554F RID: 152911 RVA: 0x00526A55 File Offset: 0x00524C55
-		public static Offset<IPetalGrabRoleMotionInteract> CreateIPetalGrabRoleMotionInteract(FlatBufferBuilder builder, ERoleMotionInteractType Type = ERoleMotionInteractType.PetalGrab, EPetalGrabHandType HandOption = EPetalGrabHandType.LeftHand, Offset<IPosAndRot> GrabPointOffsetOffset = default(Offset<IPosAndRot>), VectorOffset GrabEventsOffset = default(VectorOffset), int NextPointEntityId = 0, byte NullMask = 0)
+		// Token: 0x06027A68 RID: 162408 RVA: 0x0056C8EC File Offset: 0x0056AAEC
+		public static Offset<IPetalGrabRoleMotionInteract> CreateIPetalGrabRoleMotionInteract(FlatBufferBuilder builder, ERoleMotionInteractType Type = ERoleMotionInteractType.PetalGrab, EPetalGrabHandType HandOption = EPetalGrabHandType.LeftHand, Offset<IPosAndRot> GrabPointOffsetOffset = default(Offset<IPosAndRot>), VectorOffset GrabEventsOffset = default(VectorOffset), int NextPointEntityId = 0, int FlightSplineId = 0, TSplineMovePattern FlightSplineMovePattern_type = TSplineMovePattern.NONE, int FlightSplineMovePatternOffset = 0, byte NullMask = 0)
 		{
-			builder.StartTable(6);
+			builder.StartTable(9);
+			IPetalGrabRoleMotionInteract.AddFlightSplineMovePattern(builder, FlightSplineMovePatternOffset);
+			IPetalGrabRoleMotionInteract.AddFlightSplineId(builder, FlightSplineId);
 			IPetalGrabRoleMotionInteract.AddNextPointEntityId(builder, NextPointEntityId);
 			IPetalGrabRoleMotionInteract.AddGrabEvents(builder, GrabEventsOffset);
 			IPetalGrabRoleMotionInteract.AddGrabPointOffset(builder, GrabPointOffsetOffset);
 			IPetalGrabRoleMotionInteract.AddNullMask(builder, NullMask);
+			IPetalGrabRoleMotionInteract.AddFlightSplineMovePatternType(builder, FlightSplineMovePattern_type);
 			IPetalGrabRoleMotionInteract.AddHandOption(builder, HandOption);
 			IPetalGrabRoleMotionInteract.AddType(builder, Type);
 			return IPetalGrabRoleMotionInteract.EndIPetalGrabRoleMotionInteract(builder);
 		}
 
-		// Token: 0x06025550 RID: 152912 RVA: 0x00526A91 File Offset: 0x00524C91
+		// Token: 0x06027A69 RID: 162409 RVA: 0x0056C94C File Offset: 0x0056AB4C
 		public static void StartIPetalGrabRoleMotionInteract(FlatBufferBuilder builder)
 		{
-			builder.StartTable(6);
+			builder.StartTable(9);
 		}
 
-		// Token: 0x06025551 RID: 152913 RVA: 0x00526A9A File Offset: 0x00524C9A
+		// Token: 0x06027A6A RID: 162410 RVA: 0x0056C956 File Offset: 0x0056AB56
 		public static void AddType(FlatBufferBuilder builder, ERoleMotionInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025552 RID: 152914 RVA: 0x00526AA5 File Offset: 0x00524CA5
+		// Token: 0x06027A6B RID: 162411 RVA: 0x0056C961 File Offset: 0x0056AB61
 		public static void AddHandOption(FlatBufferBuilder builder, EPetalGrabHandType handOption)
 		{
 			builder.AddByte(1, (byte)handOption, 0);
 		}
 
-		// Token: 0x06025553 RID: 152915 RVA: 0x00526AB0 File Offset: 0x00524CB0
+		// Token: 0x06027A6C RID: 162412 RVA: 0x0056C96C File Offset: 0x0056AB6C
 		public static void AddGrabPointOffset(FlatBufferBuilder builder, Offset<IPosAndRot> grabPointOffsetOffset)
 		{
 			builder.AddOffset(2, grabPointOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06025554 RID: 152916 RVA: 0x00526AC0 File Offset: 0x00524CC0
+		// Token: 0x06027A6D RID: 162413 RVA: 0x0056C97C File Offset: 0x0056AB7C
 		public static void AddGrabEvents(FlatBufferBuilder builder, VectorOffset grabEventsOffset)
 		{
 			builder.AddOffset(3, grabEventsOffset.Value, 0);
 		}
 
-		// Token: 0x06025555 RID: 152917 RVA: 0x00526AD0 File Offset: 0x00524CD0
+		// Token: 0x06027A6E RID: 162414 RVA: 0x0056C98C File Offset: 0x0056AB8C
 		public static VectorOffset CreateGrabEventsVector(FlatBufferBuilder builder, Offset<IPetalGrabEvent>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -204,7 +290,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025556 RID: 152918 RVA: 0x00526B10 File Offset: 0x00524D10
+		// Token: 0x06027A6F RID: 162415 RVA: 0x0056C9CC File Offset: 0x0056ABCC
 		public static VectorOffset CreateGrabEventsVectorBlock(FlatBufferBuilder builder, Offset<IPetalGrabEvent>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -212,7 +298,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025557 RID: 152919 RVA: 0x00526B2A File Offset: 0x00524D2A
+		// Token: 0x06027A70 RID: 162416 RVA: 0x0056C9E6 File Offset: 0x0056ABE6
 		public static VectorOffset CreateGrabEventsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPetalGrabEvent>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -220,7 +306,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025558 RID: 152920 RVA: 0x00526B48 File Offset: 0x00524D48
+		// Token: 0x06027A71 RID: 162417 RVA: 0x0056CA04 File Offset: 0x0056AC04
 		public static VectorOffset CreateGrabEventsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -228,31 +314,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025559 RID: 152921 RVA: 0x00526B61 File Offset: 0x00524D61
+		// Token: 0x06027A72 RID: 162418 RVA: 0x0056CA1D File Offset: 0x0056AC1D
 		public static void StartGrabEventsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602555A RID: 152922 RVA: 0x00526B6C File Offset: 0x00524D6C
+		// Token: 0x06027A73 RID: 162419 RVA: 0x0056CA28 File Offset: 0x0056AC28
 		public static void AddNextPointEntityId(FlatBufferBuilder builder, int nextPointEntityId)
 		{
 			builder.AddInt(4, nextPointEntityId, 0);
 		}
 
-		// Token: 0x0602555B RID: 152923 RVA: 0x00526B77 File Offset: 0x00524D77
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x06027A74 RID: 162420 RVA: 0x0056CA33 File Offset: 0x0056AC33
+		public static void AddFlightSplineId(FlatBufferBuilder builder, int flightSplineId)
 		{
-			builder.AddByte(5, nullMask, 0);
+			builder.AddInt(5, flightSplineId, 0);
 		}
 
-		// Token: 0x0602555C RID: 152924 RVA: 0x00526B82 File Offset: 0x00524D82
+		// Token: 0x06027A75 RID: 162421 RVA: 0x0056CA3E File Offset: 0x0056AC3E
+		public static void AddFlightSplineMovePatternType(FlatBufferBuilder builder, TSplineMovePattern flightSplineMovePatternType)
+		{
+			builder.AddByte(6, (byte)flightSplineMovePatternType, 0);
+		}
+
+		// Token: 0x06027A76 RID: 162422 RVA: 0x0056CA49 File Offset: 0x0056AC49
+		public static void AddFlightSplineMovePattern(FlatBufferBuilder builder, int flightSplineMovePatternOffset)
+		{
+			builder.AddOffset(7, flightSplineMovePatternOffset, 0);
+		}
+
+		// Token: 0x06027A77 RID: 162423 RVA: 0x0056CA54 File Offset: 0x0056AC54
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(8, nullMask, 0);
+		}
+
+		// Token: 0x06027A78 RID: 162424 RVA: 0x0056CA5F File Offset: 0x0056AC5F
 		public static Offset<IPetalGrabRoleMotionInteract> EndIPetalGrabRoleMotionInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IPetalGrabRoleMotionInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602555D RID: 152925 RVA: 0x00526B90 File Offset: 0x00524D90
+		// Token: 0x06027A79 RID: 162425 RVA: 0x0056CA6C File Offset: 0x0056AC6C
 		public IPetalGrabRoleMotionInteractT UnPack()
 		{
 			IPetalGrabRoleMotionInteractT petalGrabRoleMotionInteractT = new IPetalGrabRoleMotionInteractT();
@@ -260,7 +364,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return petalGrabRoleMotionInteractT;
 		}
 
-		// Token: 0x0602555E RID: 152926 RVA: 0x00526BAC File Offset: 0x00524DAC
+		// Token: 0x06027A7A RID: 162426 RVA: 0x0056CA88 File Offset: 0x0056AC88
 		public void UnPackTo(IPetalGrabRoleMotionInteractT _o)
 		{
 			_o.Type = this.Type;
@@ -272,10 +376,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				_o.GrabEvents.Add((this.GrabEvents(i) != null) ? this.GrabEvents(i).Value.UnPack() : null);
 			}
 			_o.NextPointEntityId = this.NextPointEntityId;
+			_o.FlightSplineId = this.FlightSplineId;
+			_o.FlightSplineMovePattern = new TSplineMovePatternUnion();
+			_o.FlightSplineMovePattern.Type = this.FlightSplineMovePatternType;
+			switch (this.FlightSplineMovePatternType)
+			{
+			case TSplineMovePattern.IAirPassageMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IAirPassageMove>() != null) ? this.FlightSplineMovePattern<IAirPassageMove>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.IMechaAirPassageMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IMechaAirPassageMove>() != null) ? this.FlightSplineMovePattern<IMechaAirPassageMove>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.IMotorcycleTrack:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IMotorcycleTrack>() != null) ? this.FlightSplineMovePattern<IMotorcycleTrack>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.IPathLineMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IPathLineMove>() != null) ? this.FlightSplineMovePattern<IPathLineMove>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.IPetalGrabMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IPetalGrabMove>() != null) ? this.FlightSplineMovePattern<IPetalGrabMove>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.IRacingTrackMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<IRacingTrackMove>() != null) ? this.FlightSplineMovePattern<IRacingTrackMove>().Value.UnPack() : null);
+				break;
+			case TSplineMovePattern.ISlideTrackMove:
+				_o.FlightSplineMovePattern.Value = ((this.FlightSplineMovePattern<ISlideTrackMove>() != null) ? this.FlightSplineMovePattern<ISlideTrackMove>().Value.UnPack() : null);
+				break;
+			}
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602555F RID: 152927 RVA: 0x00526C6C File Offset: 0x00524E6C
+		// Token: 0x06027A7B RID: 162427 RVA: 0x0056CD3C File Offset: 0x0056AF3C
 		public static Offset<IPetalGrabRoleMotionInteract> Pack(FlatBufferBuilder builder, IPetalGrabRoleMotionInteractT _o)
 		{
 			if (_o == null)
@@ -293,10 +424,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				}
 				grabEventsOffset = IPetalGrabRoleMotionInteract.CreateGrabEventsVector(builder, array);
 			}
-			return IPetalGrabRoleMotionInteract.CreateIPetalGrabRoleMotionInteract(builder, _o.Type, _o.HandOption, grabPointOffsetOffset, grabEventsOffset, _o.NextPointEntityId, _o.NullMask);
+			TSplineMovePattern flightSplineMovePattern_type = (_o.FlightSplineMovePattern == null) ? TSplineMovePattern.NONE : _o.FlightSplineMovePattern.Type;
+			int flightSplineMovePatternOffset = (_o.FlightSplineMovePattern == null) ? 0 : TSplineMovePatternUnion.Pack(builder, _o.FlightSplineMovePattern);
+			return IPetalGrabRoleMotionInteract.CreateIPetalGrabRoleMotionInteract(builder, _o.Type, _o.HandOption, grabPointOffsetOffset, grabEventsOffset, _o.NextPointEntityId, _o.FlightSplineId, flightSplineMovePattern_type, flightSplineMovePatternOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EB9C RID: 60316
+		// Token: 0x0400F885 RID: 63621
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B38 RID: 19256
+	// Token: 0x0200501F RID: 20511
 	public struct ICheckSyncLevelPlayCompleteNumber : IFlatbufferObject
 	{
-		// Token: 0x17008BB1 RID: 35761
-		// (get) Token: 0x0601E4D4 RID: 124116 RVA: 0x0043EFA2 File Offset: 0x0043D1A2
+		// Token: 0x170092C1 RID: 37569
+		// (get) Token: 0x0602005F RID: 131167 RVA: 0x0047174E File Offset: 0x0046F94E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E4D5 RID: 124117 RVA: 0x0043EFAF File Offset: 0x0043D1AF
+		// Token: 0x06020060 RID: 131168 RVA: 0x0047175B File Offset: 0x0046F95B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E4D6 RID: 124118 RVA: 0x0043EFB8 File Offset: 0x0043D1B8
+		// Token: 0x06020061 RID: 131169 RVA: 0x00471764 File Offset: 0x0046F964
 		public static ICheckSyncLevelPlayCompleteNumber GetRootAsICheckSyncLevelPlayCompleteNumber(ByteBuffer _bb)
 		{
 			return ICheckSyncLevelPlayCompleteNumber.GetRootAsICheckSyncLevelPlayCompleteNumber(_bb, default(ICheckSyncLevelPlayCompleteNumber));
 		}
 
-		// Token: 0x0601E4D7 RID: 124119 RVA: 0x0043EFD4 File Offset: 0x0043D1D4
+		// Token: 0x06020062 RID: 131170 RVA: 0x00471780 File Offset: 0x0046F980
 		public static ICheckSyncLevelPlayCompleteNumber GetRootAsICheckSyncLevelPlayCompleteNumber(ByteBuffer _bb, ICheckSyncLevelPlayCompleteNumber obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E4D8 RID: 124120 RVA: 0x0043EFF1 File Offset: 0x0043D1F1
+		// Token: 0x06020063 RID: 131171 RVA: 0x0047179D File Offset: 0x0046F99D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E4D9 RID: 124121 RVA: 0x0043F000 File Offset: 0x0043D200
+		// Token: 0x06020064 RID: 131172 RVA: 0x004717AC File Offset: 0x0046F9AC
 		public ICheckSyncLevelPlayCompleteNumber __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008BB2 RID: 35762
-		// (get) Token: 0x0601E4DA RID: 124122 RVA: 0x0043F010 File Offset: 0x0043D210
+		// Token: 0x170092C2 RID: 37570
+		// (get) Token: 0x06020065 RID: 131173 RVA: 0x004717BC File Offset: 0x0046F9BC
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BB3 RID: 35763
-		// (get) Token: 0x0601E4DB RID: 124123 RVA: 0x0043F04C File Offset: 0x0043D24C
+		// Token: 0x170092C3 RID: 37571
+		// (get) Token: 0x06020066 RID: 131174 RVA: 0x004717F8 File Offset: 0x0046F9F8
 		public int SyncId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BB4 RID: 35764
-		// (get) Token: 0x0601E4DC RID: 124124 RVA: 0x0043F088 File Offset: 0x0043D288
+		// Token: 0x170092C4 RID: 37572
+		// (get) Token: 0x06020067 RID: 131175 RVA: 0x00471834 File Offset: 0x0046FA34
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008BB5 RID: 35765
-		// (get) Token: 0x0601E4DD RID: 124125 RVA: 0x0043F0C4 File Offset: 0x0043D2C4
+		// Token: 0x170092C5 RID: 37573
+		// (get) Token: 0x06020068 RID: 131176 RVA: 0x00471870 File Offset: 0x0046FA70
 		public int Number
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E4DE RID: 124126 RVA: 0x0043F101 File Offset: 0x0043D301
+		// Token: 0x06020069 RID: 131177 RVA: 0x004718AD File Offset: 0x0046FAAD
 		public static Offset<ICheckSyncLevelPlayCompleteNumber> CreateICheckSyncLevelPlayCompleteNumber(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int SyncId = 0, ECompare Compare = ECompare.Eq, int Number = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSyncLevelPlayCompleteNumber.EndICheckSyncLevelPlayCompleteNumber(builder);
 		}
 
-		// Token: 0x0601E4DF RID: 124127 RVA: 0x0043F12D File Offset: 0x0043D32D
+		// Token: 0x0602006A RID: 131178 RVA: 0x004718D9 File Offset: 0x0046FAD9
 		public static void StartICheckSyncLevelPlayCompleteNumber(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601E4E0 RID: 124128 RVA: 0x0043F136 File Offset: 0x0043D336
+		// Token: 0x0602006B RID: 131179 RVA: 0x004718E2 File Offset: 0x0046FAE2
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E4E1 RID: 124129 RVA: 0x0043F141 File Offset: 0x0043D341
+		// Token: 0x0602006C RID: 131180 RVA: 0x004718ED File Offset: 0x0046FAED
 		public static void AddSyncId(FlatBufferBuilder builder, int syncId)
 		{
 			builder.AddInt(1, syncId, 0);
 		}
 
-		// Token: 0x0601E4E2 RID: 124130 RVA: 0x0043F14C File Offset: 0x0043D34C
+		// Token: 0x0602006D RID: 131181 RVA: 0x004718F8 File Offset: 0x0046FAF8
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E4E3 RID: 124131 RVA: 0x0043F157 File Offset: 0x0043D357
+		// Token: 0x0602006E RID: 131182 RVA: 0x00471903 File Offset: 0x0046FB03
 		public static void AddNumber(FlatBufferBuilder builder, int number)
 		{
 			builder.AddInt(3, number, 0);
 		}
 
-		// Token: 0x0601E4E4 RID: 124132 RVA: 0x0043F162 File Offset: 0x0043D362
+		// Token: 0x0602006F RID: 131183 RVA: 0x0047190E File Offset: 0x0046FB0E
 		public static Offset<ICheckSyncLevelPlayCompleteNumber> EndICheckSyncLevelPlayCompleteNumber(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckSyncLevelPlayCompleteNumber>(builder.EndTable());
 		}
 
-		// Token: 0x0601E4E5 RID: 124133 RVA: 0x0043F170 File Offset: 0x0043D370
+		// Token: 0x06020070 RID: 131184 RVA: 0x0047191C File Offset: 0x0046FB1C
 		public ICheckSyncLevelPlayCompleteNumberT UnPack()
 		{
 			ICheckSyncLevelPlayCompleteNumberT checkSyncLevelPlayCompleteNumberT = new ICheckSyncLevelPlayCompleteNumberT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkSyncLevelPlayCompleteNumberT;
 		}
 
-		// Token: 0x0601E4E6 RID: 124134 RVA: 0x0043F18B File Offset: 0x0043D38B
+		// Token: 0x06020071 RID: 131185 RVA: 0x00471937 File Offset: 0x0046FB37
 		public void UnPackTo(ICheckSyncLevelPlayCompleteNumberT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Number = this.Number;
 		}
 
-		// Token: 0x0601E4E7 RID: 124135 RVA: 0x0043F1C0 File Offset: 0x0043D3C0
+		// Token: 0x06020072 RID: 131186 RVA: 0x0047196C File Offset: 0x0046FB6C
 		public static Offset<ICheckSyncLevelPlayCompleteNumber> Pack(FlatBufferBuilder builder, ICheckSyncLevelPlayCompleteNumberT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckSyncLevelPlayCompleteNumber.CreateICheckSyncLevelPlayCompleteNumber(builder, _o.Type, _o.SyncId, _o.Compare, _o.Number);
 		}
 
-		// Token: 0x0400D3DE RID: 54238
+		// Token: 0x0400DEDD RID: 57053
 		private Table __p;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D94 RID: 23956
+	// Token: 0x020063D1 RID: 25553
 	public struct IEaseCurveCustom : IFlatbufferObject
 	{
-		// Token: 0x1700B36C RID: 45932
-		// (get) Token: 0x06028FF4 RID: 167924 RVA: 0x005A18F6 File Offset: 0x0059FAF6
+		// Token: 0x1700BCD2 RID: 48338
+		// (get) Token: 0x0602B67E RID: 177790 RVA: 0x005EA626 File Offset: 0x005E8826
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028FF5 RID: 167925 RVA: 0x005A1903 File Offset: 0x0059FB03
+		// Token: 0x0602B67F RID: 177791 RVA: 0x005EA633 File Offset: 0x005E8833
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028FF6 RID: 167926 RVA: 0x005A190C File Offset: 0x0059FB0C
+		// Token: 0x0602B680 RID: 177792 RVA: 0x005EA63C File Offset: 0x005E883C
 		public static IEaseCurveCustom GetRootAsIEaseCurveCustom(ByteBuffer _bb)
 		{
 			return IEaseCurveCustom.GetRootAsIEaseCurveCustom(_bb, default(IEaseCurveCustom));
 		}
 
-		// Token: 0x06028FF7 RID: 167927 RVA: 0x005A1928 File Offset: 0x0059FB28
+		// Token: 0x0602B681 RID: 177793 RVA: 0x005EA658 File Offset: 0x005E8858
 		public static IEaseCurveCustom GetRootAsIEaseCurveCustom(ByteBuffer _bb, IEaseCurveCustom obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028FF8 RID: 167928 RVA: 0x005A1945 File Offset: 0x0059FB45
+		// Token: 0x0602B682 RID: 177794 RVA: 0x005EA675 File Offset: 0x005E8875
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028FF9 RID: 167929 RVA: 0x005A1954 File Offset: 0x0059FB54
+		// Token: 0x0602B683 RID: 177795 RVA: 0x005EA684 File Offset: 0x005E8884
 		public IEaseCurveCustom __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B36D RID: 45933
-		// (get) Token: 0x06028FFA RID: 167930 RVA: 0x005A1964 File Offset: 0x0059FB64
+		// Token: 0x1700BCD3 RID: 48339
+		// (get) Token: 0x0602B684 RID: 177796 RVA: 0x005EA694 File Offset: 0x005E8894
 		public EEaseCurveType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B36E RID: 45934
-		// (get) Token: 0x06028FFB RID: 167931 RVA: 0x005A19A0 File Offset: 0x0059FBA0
+		// Token: 0x1700BCD4 RID: 48340
+		// (get) Token: 0x0602B685 RID: 177797 RVA: 0x005EA6D0 File Offset: 0x005E88D0
 		public string CustomCurve
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06028FFC RID: 167932 RVA: 0x005A19D7 File Offset: 0x0059FBD7
+		// Token: 0x0602B686 RID: 177798 RVA: 0x005EA707 File Offset: 0x005E8907
 		public Span<byte> GetCustomCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06028FFD RID: 167933 RVA: 0x005A19E6 File Offset: 0x0059FBE6
+		// Token: 0x0602B687 RID: 177799 RVA: 0x005EA716 File Offset: 0x005E8916
 		public byte[] GetCustomCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x06028FFE RID: 167934 RVA: 0x005A19F4 File Offset: 0x0059FBF4
+		// Token: 0x0602B688 RID: 177800 RVA: 0x005EA724 File Offset: 0x005E8924
 		public static Offset<IEaseCurveCustom> CreateIEaseCurveCustom(FlatBufferBuilder builder, EEaseCurveType Type = EEaseCurveType.Preset, StringOffset CustomCurveOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IEaseCurveCustom.EndIEaseCurveCustom(builder);
 		}
 
-		// Token: 0x06028FFF RID: 167935 RVA: 0x005A1A11 File Offset: 0x0059FC11
+		// Token: 0x0602B689 RID: 177801 RVA: 0x005EA741 File Offset: 0x005E8941
 		public static void StartIEaseCurveCustom(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029000 RID: 167936 RVA: 0x005A1A1A File Offset: 0x0059FC1A
+		// Token: 0x0602B68A RID: 177802 RVA: 0x005EA74A File Offset: 0x005E894A
 		public static void AddType(FlatBufferBuilder builder, EEaseCurveType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029001 RID: 167937 RVA: 0x005A1A25 File Offset: 0x0059FC25
+		// Token: 0x0602B68B RID: 177803 RVA: 0x005EA755 File Offset: 0x005E8955
 		public static void AddCustomCurve(FlatBufferBuilder builder, StringOffset customCurveOffset)
 		{
 			builder.AddOffset(1, customCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06029002 RID: 167938 RVA: 0x005A1A35 File Offset: 0x0059FC35
+		// Token: 0x0602B68C RID: 177804 RVA: 0x005EA765 File Offset: 0x005E8965
 		public static Offset<IEaseCurveCustom> EndIEaseCurveCustom(FlatBufferBuilder builder)
 		{
 			return new Offset<IEaseCurveCustom>(builder.EndTable());
 		}
 
-		// Token: 0x06029003 RID: 167939 RVA: 0x005A1A44 File Offset: 0x0059FC44
+		// Token: 0x0602B68D RID: 177805 RVA: 0x005EA774 File Offset: 0x005E8974
 		public IEaseCurveCustomT UnPack()
 		{
 			IEaseCurveCustomT easeCurveCustomT = new IEaseCurveCustomT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return easeCurveCustomT;
 		}
 
-		// Token: 0x06029004 RID: 167940 RVA: 0x005A1A5F File Offset: 0x0059FC5F
+		// Token: 0x0602B68E RID: 177806 RVA: 0x005EA78F File Offset: 0x005E898F
 		public void UnPackTo(IEaseCurveCustomT _o)
 		{
 			_o.Type = this.Type;
 			_o.CustomCurve = this.CustomCurve;
 		}
 
-		// Token: 0x06029005 RID: 167941 RVA: 0x005A1A7C File Offset: 0x0059FC7C
+		// Token: 0x0602B68F RID: 177807 RVA: 0x005EA7AC File Offset: 0x005E89AC
 		public static Offset<IEaseCurveCustom> Pack(FlatBufferBuilder builder, IEaseCurveCustomT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IEaseCurveCustom.CreateIEaseCurveCustom(builder, _o.Type, customCurveOffset);
 		}
 
-		// Token: 0x0400F768 RID: 63336
+		// Token: 0x040104C3 RID: 66755
 		private Table __p;
 	}
 }

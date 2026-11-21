@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200778D RID: 30605
+	// Token: 0x02007FC5 RID: 32709
 	public class TShowTalkCameraMotionUnion
 	{
-		// Token: 0x1700E6A1 RID: 59041
-		// (get) Token: 0x060378F6 RID: 227574 RVA: 0x007847D6 File Offset: 0x007829D6
-		// (set) Token: 0x060378F7 RID: 227575 RVA: 0x007847DE File Offset: 0x007829DE
+		// Token: 0x1700F2FB RID: 62203
+		// (get) Token: 0x0603AE71 RID: 241265 RVA: 0x007E9CD6 File Offset: 0x007E7ED6
+		// (set) Token: 0x0603AE72 RID: 241266 RVA: 0x007E9CDE File Offset: 0x007E7EDE
 		public TShowTalkCameraMotion Type { get; set; }
 
-		// Token: 0x1700E6A2 RID: 59042
-		// (get) Token: 0x060378F8 RID: 227576 RVA: 0x007847E7 File Offset: 0x007829E7
-		// (set) Token: 0x060378F9 RID: 227577 RVA: 0x007847EF File Offset: 0x007829EF
+		// Token: 0x1700F2FC RID: 62204
+		// (get) Token: 0x0603AE73 RID: 241267 RVA: 0x007E9CE7 File Offset: 0x007E7EE7
+		// (set) Token: 0x0603AE74 RID: 241268 RVA: 0x007E9CEF File Offset: 0x007E7EEF
 		public object Value { get; set; }
 
-		// Token: 0x060378FA RID: 227578 RVA: 0x007847F8 File Offset: 0x007829F8
+		// Token: 0x0603AE75 RID: 241269 RVA: 0x007E9CF8 File Offset: 0x007E7EF8
 		public TShowTalkCameraMotionUnion()
 		{
 			this.Type = TShowTalkCameraMotion.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060378FB RID: 227579 RVA: 0x0078480E File Offset: 0x00782A0E
+		// Token: 0x0603AE76 RID: 241270 RVA: 0x007E9D0E File Offset: 0x007E7F0E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060378FC RID: 227580 RVA: 0x00784820 File Offset: 0x00782A20
+		// Token: 0x0603AE77 RID: 241271 RVA: 0x007E9D20 File Offset: 0x007E7F20
 		public IShowTalkCameraMotionPresetT AsIShowTalkCameraMotionPreset()
 		{
 			return this.As<IShowTalkCameraMotionPresetT>();
 		}
 
-		// Token: 0x060378FD RID: 227581 RVA: 0x00784828 File Offset: 0x00782A28
+		// Token: 0x0603AE78 RID: 241272 RVA: 0x007E9D28 File Offset: 0x007E7F28
 		public static TShowTalkCameraMotionUnion FromIShowTalkCameraMotionPreset(IShowTalkCameraMotionPresetT _ishowtalkcameramotionpreset)
 		{
 			return new TShowTalkCameraMotionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378FE RID: 227582 RVA: 0x0078483D File Offset: 0x00782A3D
+		// Token: 0x0603AE79 RID: 241273 RVA: 0x007E9D3D File Offset: 0x007E7F3D
 		public IShowTalkCameraMotionTweenT AsIShowTalkCameraMotionTween()
 		{
 			return this.As<IShowTalkCameraMotionTweenT>();
 		}
 
-		// Token: 0x060378FF RID: 227583 RVA: 0x00784845 File Offset: 0x00782A45
+		// Token: 0x0603AE7A RID: 241274 RVA: 0x007E9D45 File Offset: 0x007E7F45
 		public static TShowTalkCameraMotionUnion FromIShowTalkCameraMotionTween(IShowTalkCameraMotionTweenT _ishowtalkcameramotiontween)
 		{
 			return new TShowTalkCameraMotionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037900 RID: 227584 RVA: 0x0078485C File Offset: 0x00782A5C
+		// Token: 0x0603AE7B RID: 241275 RVA: 0x007E9D5C File Offset: 0x007E7F5C
 		public static int Pack(FlatBufferBuilder builder, TShowTalkCameraMotionUnion _o)
 		{
 			TShowTalkCameraMotion type = _o.Type;

@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000482 RID: 1154
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004DB RID: 1243
 	public class IInteractEntityPartPrefabOptionPoint_SetValue
 	{
-		// Token: 0x04001178 RID: 4472
+		// Token: 0x0400129A RID: 4762
 		public string UiStyle;
 
-		// Token: 0x04001179 RID: 4473
+		// Token: 0x0400129B RID: 4763
 		public string BindName;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E8E RID: 20110
+	// Token: 0x02003E57 RID: 15959
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleRoleSelectFetterItem : GridProxyAbstract<RoleBondInfo>
 	{
-		// Token: 0x06033B7C RID: 211836 RVA: 0x00C1D398 File Offset: 0x00C1B598
+		// Token: 0x060289E7 RID: 166375 RVA: 0x00B668B4 File Offset: 0x00B64AB4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B7D RID: 211837 RVA: 0x00C1D444 File Offset: 0x00C1B644
+		// Token: 0x060289E8 RID: 166376 RVA: 0x00B66960 File Offset: 0x00B64B60
 		public override void Refresh(RoleBondInfo bondInfo, bool isSelected, int gridIndex)
 		{
 			int configId = bondInfo.ConfigId;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(text2, rogueResBond.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06033B7E RID: 211838 RVA: 0x00C1D56B File Offset: 0x00C1B76B
+		// Token: 0x060289E9 RID: 166377 RVA: 0x00B66A87 File Offset: 0x00B64C87
 		private void OnToggleSelect(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onToggleClick(this.BondInfo);
 		}
 
-		// Token: 0x06033B7F RID: 211839 RVA: 0x00C1D588 File Offset: 0x00C1B788
+		// Token: 0x060289EA RID: 166378 RVA: 0x00B66AA4 File Offset: 0x00B64CA4
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIItem sprite = base.GetSprite(1);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033B80 RID: 211840 RVA: 0x00C1D5D0 File Offset: 0x00C1B7D0
+		// Token: 0x060289EB RID: 166379 RVA: 0x00B66AEC File Offset: 0x00B64CEC
 		public override void OnDeselected(bool fireEvent)
 		{
 			int level = this.BondInfo.Level;
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033B81 RID: 211841 RVA: 0x00C1D62A File Offset: 0x00C1B82A
+		// Token: 0x060289EC RID: 166380 RVA: 0x00B66B46 File Offset: 0x00B64D46
 		public override object GetKey(RoleBondInfo data, int displayIndex)
 		{
 			return data.ConfigId;
 		}
 
-		// Token: 0x0401B757 RID: 112471
+		// Token: 0x0401612A RID: 90410
 		[Nullable(new byte[]
 		{
 			2,
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public Action<RoleBondInfo> OnToggleClick;
 
-		// Token: 0x0401B758 RID: 112472
+		// Token: 0x0401612B RID: 90411
 		private RoleBondInfo BondInfo;
 	}
 }

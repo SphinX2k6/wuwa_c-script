@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x020068FE RID: 26878
+	// Token: 0x0200584E RID: 22606
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 	})]
 	internal class BuffGridItem : GridProxyAbstract<BuffGridItemData>
 	{
-		// Token: 0x06043079 RID: 274553 RVA: 0x01053FB0 File Offset: 0x010521B0
+		// Token: 0x06037BD1 RID: 228305 RVA: 0x00F955D8 File Offset: 0x00F937D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604307A RID: 274554 RVA: 0x010540BC File Offset: 0x010522BC
+		// Token: 0x06037BD2 RID: 228306 RVA: 0x00F956E4 File Offset: 0x00F938E4
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Unbind();
@@ -54,25 +54,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0604307B RID: 274555 RVA: 0x01054108 File Offset: 0x01052308
+		// Token: 0x06037BD3 RID: 228307 RVA: 0x00F95730 File Offset: 0x00F93930
 		private bool CanClickLikeToggle()
 		{
 			return this.CurrentData != null && ((this.CurrentData.State == BossRushBuffSelectionStatus.BuffLocked && base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_UnChecked) || this.CurrentData.CheckClickAble(this.CurrentData));
 		}
 
-		// Token: 0x0604307C RID: 274556 RVA: 0x01054148 File Offset: 0x01052348
+		// Token: 0x06037BD4 RID: 228308 RVA: 0x00F95770 File Offset: 0x00F93970
 		private void OnClickToggle(EToggleState state)
 		{
 			this.CurrentData.OnClickToggle(this.CurrentData);
 		}
 
-		// Token: 0x0604307D RID: 274557 RVA: 0x01054160 File Offset: 0x01052360
+		// Token: 0x06037BD5 RID: 228309 RVA: 0x00F95788 File Offset: 0x00F93988
 		public void SetToggleActiveState(bool state)
 		{
 			base.GetExtendToggle(0).RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x0604307E RID: 274558 RVA: 0x01054188 File Offset: 0x01052388
+		// Token: 0x06037BD6 RID: 228310 RVA: 0x00F957B0 File Offset: 0x00F939B0
 		public override void Refresh(BuffGridItemData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data.BuffScrollItemData1;
@@ -89,20 +89,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshSelectedTag();
 		}
 
-		// Token: 0x0604307F RID: 274559 RVA: 0x010541F2 File Offset: 0x010523F2
+		// Token: 0x06037BD7 RID: 228311 RVA: 0x00F9581A File Offset: 0x00F93A1A
 		private void RefreshSelectedTag()
 		{
 			base.GetItem(4).SetUIActive(this.CurrentData.SelectedAtStart);
 		}
 
-		// Token: 0x06043080 RID: 274560 RVA: 0x0105420C File Offset: 0x0105240C
+		// Token: 0x06037BD8 RID: 228312 RVA: 0x00F95834 File Offset: 0x00F93A34
 		private void RefreshName()
 		{
 			BossRushBuff? bossRushBuffConfigById = BossRushConfig.Instance.GetBossRushBuffConfigById(this.CurrentData.BuffId);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), bossRushBuffConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06043081 RID: 274561 RVA: 0x01054254 File Offset: 0x01052454
+		// Token: 0x06037BD9 RID: 228313 RVA: 0x00F9587C File Offset: 0x00F93A7C
 		private void RefreshDesc()
 		{
 			BossRushBuff? bossRushBuffConfigById = BossRushConfig.Instance.GetBossRushBuffConfigById(this.CurrentData.BuffId);
@@ -118,38 +118,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), bossRushBuffConfigById.Value.Description, list.ToArray());
 		}
 
-		// Token: 0x06043082 RID: 274562 RVA: 0x0105432C File Offset: 0x0105252C
+		// Token: 0x06037BDA RID: 228314 RVA: 0x00F95954 File Offset: 0x00F93B54
 		private void RefreshBuffTexture()
 		{
 			string texture = BossRushConfig.Instance.GetBossRushBuffConfigById(this.CurrentData.BuffId).Value.Texture;
 			base.SetTextureByPath(texture, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x04022E4D RID: 142925
+		// Token: 0x0401D6A9 RID: 120489
 		[Nullable(2)]
 		private BuffScrollItemData CurrentData;
 
-		// Token: 0x04022E4E RID: 142926
+		// Token: 0x0401D6AA RID: 120490
 		[StaticVariableRuleIgnore]
 		private static Regex regex = new Regex("\\[(.*?)\\]");
 
-		// Token: 0x0200CAB2 RID: 51890
+		// Token: 0x0200B47A RID: 46202
 		[NullableContext(0)]
 		private class EBuffScrollItemComponent
 		{
-			// Token: 0x0403D427 RID: 250919
+			// Token: 0x04037D01 RID: 228609
 			public const int Toggle = 0;
 
-			// Token: 0x0403D428 RID: 250920
+			// Token: 0x04037D02 RID: 228610
 			public const int BuffTexture = 1;
 
-			// Token: 0x0403D429 RID: 250921
+			// Token: 0x04037D03 RID: 228611
 			public const int BuffName = 2;
 
-			// Token: 0x0403D42A RID: 250922
+			// Token: 0x04037D04 RID: 228612
 			public const int BuffDesc = 3;
 
-			// Token: 0x0403D42B RID: 250923
+			// Token: 0x04037D05 RID: 228613
 			public const int SelectedTag = 4;
 		}
 	}

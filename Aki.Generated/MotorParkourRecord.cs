@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E63 RID: 3683
+	// Token: 0x02000F48 RID: 3912
 	public struct MotorParkourRecord : IFlatbufferObject
 	{
-		// Token: 0x170021EE RID: 8686
-		// (get) Token: 0x06009B6B RID: 39787 RVA: 0x00295C6D File Offset: 0x00293E6D
+		// Token: 0x17002253 RID: 8787
+		// (get) Token: 0x0600A18B RID: 41355 RVA: 0x002B35B9 File Offset: 0x002B17B9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009B6C RID: 39788 RVA: 0x00295C7A File Offset: 0x00293E7A
+		// Token: 0x0600A18C RID: 41356 RVA: 0x002B35C6 File Offset: 0x002B17C6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009B6D RID: 39789 RVA: 0x00295C84 File Offset: 0x00293E84
+		// Token: 0x0600A18D RID: 41357 RVA: 0x002B35D0 File Offset: 0x002B17D0
 		public static MotorParkourRecord GetRootAsMotorParkourRecord(ByteBuffer _bb)
 		{
 			return MotorParkourRecord.GetRootAsMotorParkourRecord(_bb, default(MotorParkourRecord));
 		}
 
-		// Token: 0x06009B6E RID: 39790 RVA: 0x00295CA0 File Offset: 0x00293EA0
+		// Token: 0x0600A18E RID: 41358 RVA: 0x002B35EC File Offset: 0x002B17EC
 		public static MotorParkourRecord GetRootAsMotorParkourRecord(ByteBuffer _bb, MotorParkourRecord obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009B6F RID: 39791 RVA: 0x00295CBD File Offset: 0x00293EBD
+		// Token: 0x0600A18F RID: 41359 RVA: 0x002B3609 File Offset: 0x002B1809
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009B70 RID: 39792 RVA: 0x00295CCC File Offset: 0x00293ECC
+		// Token: 0x0600A190 RID: 41360 RVA: 0x002B3618 File Offset: 0x002B1818
 		public MotorParkourRecord __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170021EF RID: 8687
-		// (get) Token: 0x06009B71 RID: 39793 RVA: 0x00295CDC File Offset: 0x00293EDC
+		// Token: 0x17002254 RID: 8788
+		// (get) Token: 0x0600A191 RID: 41361 RVA: 0x002B3628 File Offset: 0x002B1828
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021F0 RID: 8688
-		// (get) Token: 0x06009B72 RID: 39794 RVA: 0x00295D18 File Offset: 0x00293F18
+		// Token: 0x17002255 RID: 8789
+		// (get) Token: 0x0600A192 RID: 41362 RVA: 0x002B3664 File Offset: 0x002B1864
 		public int NPCId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021F1 RID: 8689
-		// (get) Token: 0x06009B73 RID: 39795 RVA: 0x00295D54 File Offset: 0x00293F54
+		// Token: 0x17002256 RID: 8790
+		// (get) Token: 0x0600A193 RID: 41363 RVA: 0x002B36A0 File Offset: 0x002B18A0
 		public int Record
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009B74 RID: 39796 RVA: 0x00295D90 File Offset: 0x00293F90
+		// Token: 0x0600A194 RID: 41364 RVA: 0x002B36DC File Offset: 0x002B18DC
 		public int LapRecord(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170021F2 RID: 8690
-		// (get) Token: 0x06009B75 RID: 39797 RVA: 0x00295DD0 File Offset: 0x00293FD0
+		// Token: 0x17002257 RID: 8791
+		// (get) Token: 0x0600A195 RID: 41365 RVA: 0x002B371C File Offset: 0x002B191C
 		public int LapRecordLength
 		{
 			get
@@ -120,37 +120,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009B76 RID: 39798 RVA: 0x00295DFC File Offset: 0x00293FFC
+		// Token: 0x0600A196 RID: 41366 RVA: 0x002B3748 File Offset: 0x002B1948
 		public Span<int> GetLapRecordBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06009B77 RID: 39799 RVA: 0x00295E0C File Offset: 0x0029400C
+		// Token: 0x0600A197 RID: 41367 RVA: 0x002B3758 File Offset: 0x002B1958
 		public int[] GetLapRecordArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009B78 RID: 39800 RVA: 0x00295E24 File Offset: 0x00294024
+		// Token: 0x0600A198 RID: 41368 RVA: 0x002B3770 File Offset: 0x002B1970
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LapRecordIter()或GetLapRecordBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LapRecord()
+		public int[] LapRecord()
 		{
-			MotorParkourRecord motorParkourRecord = this;
-			return motorParkourRecord.GetLapRecordArray() ?? Array.Empty<int>();
+			return this.GetLapRecordArray();
 		}
 
-		// Token: 0x06009B79 RID: 39801 RVA: 0x00295E48 File Offset: 0x00294048
+		// Token: 0x0600A199 RID: 41369 RVA: 0x002B3778 File Offset: 0x002B1978
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LapRecordIter()
+		public IEnumerable<int> LapRecordIter()
 		{
 			MotorParkourRecord.<LapRecordIter>d__20 <LapRecordIter>d__ = new MotorParkourRecord.<LapRecordIter>d__20(-2);
 			<LapRecordIter>d__.<>3__<>4__this = this;
 			return <LapRecordIter>d__;
 		}
 
-		// Token: 0x04004F0F RID: 20239
+		// Token: 0x040054F4 RID: 21748
 		private Table __p;
 	}
 }

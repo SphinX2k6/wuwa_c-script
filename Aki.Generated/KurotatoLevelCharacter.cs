@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DA3 RID: 3491
+	// Token: 0x02000E88 RID: 3720
 	public struct KurotatoLevelCharacter : IFlatbufferObject
 	{
-		// Token: 0x17001BAD RID: 7085
-		// (get) Token: 0x06008A3E RID: 35390 RVA: 0x0026F7D5 File Offset: 0x0026D9D5
+		// Token: 0x17001C11 RID: 7185
+		// (get) Token: 0x0600905A RID: 36954 RVA: 0x0028E222 File Offset: 0x0028C422
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A3F RID: 35391 RVA: 0x0026F7E2 File Offset: 0x0026D9E2
+		// Token: 0x0600905B RID: 36955 RVA: 0x0028E22F File Offset: 0x0028C42F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008A40 RID: 35392 RVA: 0x0026F7EC File Offset: 0x0026D9EC
+		// Token: 0x0600905C RID: 36956 RVA: 0x0028E238 File Offset: 0x0028C438
 		public static KurotatoLevelCharacter GetRootAsKurotatoLevelCharacter(ByteBuffer _bb)
 		{
 			return KurotatoLevelCharacter.GetRootAsKurotatoLevelCharacter(_bb, default(KurotatoLevelCharacter));
 		}
 
-		// Token: 0x06008A41 RID: 35393 RVA: 0x0026F808 File Offset: 0x0026DA08
+		// Token: 0x0600905D RID: 36957 RVA: 0x0028E254 File Offset: 0x0028C454
 		public static KurotatoLevelCharacter GetRootAsKurotatoLevelCharacter(ByteBuffer _bb, KurotatoLevelCharacter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008A42 RID: 35394 RVA: 0x0026F825 File Offset: 0x0026DA25
+		// Token: 0x0600905E RID: 36958 RVA: 0x0028E271 File Offset: 0x0028C471
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008A43 RID: 35395 RVA: 0x0026F834 File Offset: 0x0026DA34
+		// Token: 0x0600905F RID: 36959 RVA: 0x0028E280 File Offset: 0x0028C480
 		public KurotatoLevelCharacter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001BAE RID: 7086
-		// (get) Token: 0x06008A44 RID: 35396 RVA: 0x0026F844 File Offset: 0x0026DA44
+		// Token: 0x17001C12 RID: 7186
+		// (get) Token: 0x06009060 RID: 36960 RVA: 0x0028E290 File Offset: 0x0028C490
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BAF RID: 7087
-		// (get) Token: 0x06008A45 RID: 35397 RVA: 0x0026F880 File Offset: 0x0026DA80
+		// Token: 0x17001C13 RID: 7187
+		// (get) Token: 0x06009061 RID: 36961 RVA: 0x0028E2CC File Offset: 0x0028C4CC
 		public int CharacterId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BB0 RID: 7088
-		// (get) Token: 0x06008A46 RID: 35398 RVA: 0x0026F8BC File Offset: 0x0026DABC
+		// Token: 0x17001C14 RID: 7188
+		// (get) Token: 0x06009062 RID: 36962 RVA: 0x0028E308 File Offset: 0x0028C508
 		public int LevelId
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A47 RID: 35399 RVA: 0x0026F8F8 File Offset: 0x0026DAF8
+		// Token: 0x06009063 RID: 36963 RVA: 0x0028E344 File Offset: 0x0028C544
 		public int InitItemIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BB1 RID: 7089
-		// (get) Token: 0x06008A48 RID: 35400 RVA: 0x0026F938 File Offset: 0x0026DB38
+		// Token: 0x17001C15 RID: 7189
+		// (get) Token: 0x06009064 RID: 36964 RVA: 0x0028E384 File Offset: 0x0028C584
 		public int InitItemIdsLength
 		{
 			get
@@ -120,19 +120,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A49 RID: 35401 RVA: 0x0026F964 File Offset: 0x0026DB64
+		// Token: 0x06009065 RID: 36965 RVA: 0x0028E3B0 File Offset: 0x0028C5B0
 		public Span<int> GetInitItemIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06008A4A RID: 35402 RVA: 0x0026F974 File Offset: 0x0026DB74
+		// Token: 0x06009066 RID: 36966 RVA: 0x0028E3C0 File Offset: 0x0028C5C0
 		public int[] GetInitItemIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008A4B RID: 35403 RVA: 0x0026F98C File Offset: 0x0026DB8C
+		// Token: 0x06009067 RID: 36967 RVA: 0x0028E3D8 File Offset: 0x0028C5D8
 		public int InitWeaponIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,8 +143,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BB2 RID: 7090
-		// (get) Token: 0x06008A4C RID: 35404 RVA: 0x0026F9CC File Offset: 0x0026DBCC
+		// Token: 0x17001C16 RID: 7190
+		// (get) Token: 0x06009068 RID: 36968 RVA: 0x0028E418 File Offset: 0x0028C618
 		public int InitWeaponIdsLength
 		{
 			get
@@ -158,55 +158,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A4D RID: 35405 RVA: 0x0026F9F8 File Offset: 0x0026DBF8
+		// Token: 0x06009069 RID: 36969 RVA: 0x0028E444 File Offset: 0x0028C644
 		public Span<int> GetInitWeaponIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06008A4E RID: 35406 RVA: 0x0026FA08 File Offset: 0x0026DC08
+		// Token: 0x0600906A RID: 36970 RVA: 0x0028E454 File Offset: 0x0028C654
 		public int[] GetInitWeaponIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008A4F RID: 35407 RVA: 0x0026FA20 File Offset: 0x0026DC20
+		// Token: 0x0600906B RID: 36971 RVA: 0x0028E46C File Offset: 0x0028C66C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InitItemIdsIter()或GetInitItemIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] InitItemIds()
+		public int[] InitItemIds()
 		{
-			KurotatoLevelCharacter kurotatoLevelCharacter = this;
-			return kurotatoLevelCharacter.GetInitItemIdsArray() ?? Array.Empty<int>();
+			return this.GetInitItemIdsArray();
 		}
 
-		// Token: 0x06008A50 RID: 35408 RVA: 0x0026FA44 File Offset: 0x0026DC44
+		// Token: 0x0600906C RID: 36972 RVA: 0x0028E474 File Offset: 0x0028C674
 		[NullableContext(1)]
-		public readonly IEnumerable<int> InitItemIdsIter()
+		public IEnumerable<int> InitItemIdsIter()
 		{
 			KurotatoLevelCharacter.<InitItemIdsIter>d__25 <InitItemIdsIter>d__ = new KurotatoLevelCharacter.<InitItemIdsIter>d__25(-2);
 			<InitItemIdsIter>d__.<>3__<>4__this = this;
 			return <InitItemIdsIter>d__;
 		}
 
-		// Token: 0x06008A51 RID: 35409 RVA: 0x0026FA5C File Offset: 0x0026DC5C
+		// Token: 0x0600906D RID: 36973 RVA: 0x0028E489 File Offset: 0x0028C689
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InitWeaponIdsIter()或GetInitWeaponIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] InitWeaponIds()
+		public int[] InitWeaponIds()
 		{
-			KurotatoLevelCharacter kurotatoLevelCharacter = this;
-			return kurotatoLevelCharacter.GetInitWeaponIdsArray() ?? Array.Empty<int>();
+			return this.GetInitWeaponIdsArray();
 		}
 
-		// Token: 0x06008A52 RID: 35410 RVA: 0x0026FA80 File Offset: 0x0026DC80
+		// Token: 0x0600906E RID: 36974 RVA: 0x0028E491 File Offset: 0x0028C691
 		[NullableContext(1)]
-		public readonly IEnumerable<int> InitWeaponIdsIter()
+		public IEnumerable<int> InitWeaponIdsIter()
 		{
 			KurotatoLevelCharacter.<InitWeaponIdsIter>d__27 <InitWeaponIdsIter>d__ = new KurotatoLevelCharacter.<InitWeaponIdsIter>d__27(-2);
 			<InitWeaponIdsIter>d__.<>3__<>4__this = this;
 			return <InitWeaponIdsIter>d__;
 		}
 
-		// Token: 0x04004E34 RID: 20020
+		// Token: 0x04005419 RID: 21529
 		private Table __p;
 	}
 }

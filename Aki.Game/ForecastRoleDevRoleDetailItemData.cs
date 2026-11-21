@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.RoleDev;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
-// Token: 0x02002814 RID: 10260
+// Token: 0x02001D8F RID: 7567
 [NullableContext(1)]
 [Nullable(0)]
 public class ForecastRoleDevRoleDetailItemData
 {
-	// Token: 0x06015125 RID: 86309 RVA: 0x00555DFB File Offset: 0x00553FFB
+	// Token: 0x06012B25 RID: 76581 RVA: 0x00580BFB File Offset: 0x0057EDFB
 	public void InitByRoleId(int roleId)
 	{
 		this.DetailItemsInternal.Clear();
@@ -19,7 +19,7 @@ public class ForecastRoleDevRoleDetailItemData
 		this.AddBreachItemDetails(roleId);
 	}
 
-	// Token: 0x06015126 RID: 86310 RVA: 0x00555E18 File Offset: 0x00554018
+	// Token: 0x06012B26 RID: 76582 RVA: 0x00580C18 File Offset: 0x0057EE18
 	private void AddExpItemDetails(int roleId)
 	{
 		global::IRoleDevDetailItemData roleDevDetailItemData = this.CreateForecastRoleExpItemDetailData(roleId);
@@ -29,7 +29,7 @@ public class ForecastRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x06015127 RID: 86311 RVA: 0x00555E3C File Offset: 0x0055403C
+	// Token: 0x06012B27 RID: 76583 RVA: 0x00580C3C File Offset: 0x0057EE3C
 	private void AddBreachItemDetails(int roleId)
 	{
 		List<global::IRoleDevDetailItemData> list = this.CreateForecastRoleBreachItemDetailData(roleId);
@@ -42,7 +42,7 @@ public class ForecastRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x06015128 RID: 86312 RVA: 0x00555E9C File Offset: 0x0055409C
+	// Token: 0x06012B28 RID: 76584 RVA: 0x00580C9C File Offset: 0x0057EE9C
 	[NullableContext(2)]
 	private global::IRoleDevDetailItemData CreateForecastRoleExpItemDetailData(int roleId)
 	{
@@ -65,7 +65,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return this.BuildExpItemDetailData(roleId, list);
 	}
 
-	// Token: 0x06015129 RID: 86313 RVA: 0x00555EE8 File Offset: 0x005540E8
+	// Token: 0x06012B29 RID: 76585 RVA: 0x00580CE8 File Offset: 0x0057EEE8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -86,7 +86,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return this.BuildBreachDetailItems(roleId, roleItemGroups);
 	}
 
-	// Token: 0x0601512A RID: 86314 RVA: 0x00555F1C File Offset: 0x0055411C
+	// Token: 0x06012B2A RID: 76586 RVA: 0x00580D1C File Offset: 0x0057EF1C
 	private List<global::IItemMaterial> CalcRoleExpMaterials([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -104,14 +104,14 @@ public class ForecastRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x0601512B RID: 86315 RVA: 0x00555F47 File Offset: 0x00554147
+	// Token: 0x06012B2B RID: 76587 RVA: 0x00580D47 File Offset: 0x0057EF47
 	[NullableContext(2)]
 	private IRoleDevProsProjectConfig GetRoleDevProsProjectConfig(int roleId)
 	{
 		return RoleDevConfig.Instance.GetRoleDevProsProjectConfig(roleId);
 	}
 
-	// Token: 0x0601512C RID: 86316 RVA: 0x00555F54 File Offset: 0x00554154
+	// Token: 0x06012B2C RID: 76588 RVA: 0x00580D54 File Offset: 0x0057EF54
 	[return: TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -133,7 +133,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return this.SortExpItemsByQuality(list);
 	}
 
-	// Token: 0x0601512D RID: 86317 RVA: 0x00555FB7 File Offset: 0x005541B7
+	// Token: 0x06012B2D RID: 76589 RVA: 0x00580DB7 File Offset: 0x0057EFB7
 	[return: TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -173,14 +173,14 @@ public class ForecastRoleDevRoleDetailItemData
 		return expItemList;
 	}
 
-	// Token: 0x0601512E RID: 86318 RVA: 0x00555FE0 File Offset: 0x005541E0
+	// Token: 0x06012B2E RID: 76590 RVA: 0x00580DE0 File Offset: 0x0057EFE0
 	private global::IRoleDevDetailItemData BuildExpItemDetailData(int roleId, List<global::IItemMaterial> totalMaterials)
 	{
 		List<global::IMaterialGroup> materialGroups = RoleDevUtils.GroupMaterialsByType(totalMaterials);
 		return RoleDevUtils.BuildDetailItemData(roleId, materialGroups, ERoleDevMainPage.Role)[0];
 	}
 
-	// Token: 0x0601512F RID: 86319 RVA: 0x00556004 File Offset: 0x00554204
+	// Token: 0x06012B2F RID: 76591 RVA: 0x00580E04 File Offset: 0x0057F004
 	private int UseExistingItems([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -217,7 +217,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return num;
 	}
 
-	// Token: 0x06015130 RID: 86320 RVA: 0x005560C8 File Offset: 0x005542C8
+	// Token: 0x06012B30 RID: 76592 RVA: 0x00580EC8 File Offset: 0x0057F0C8
 	private void AddHighestQualityItemsIfNeeded([TupleElementNames(new string[]
 	{
 		"ItemId",
@@ -251,7 +251,7 @@ public class ForecastRoleDevRoleDetailItemData
 		});
 	}
 
-	// Token: 0x06015131 RID: 86321 RVA: 0x00556144 File Offset: 0x00554344
+	// Token: 0x06012B31 RID: 76593 RVA: 0x00580F44 File Offset: 0x0057F144
 	private List<RoleDevProsRoleItem> GetRoleItemGroups(IRoleDevProsProjectConfig roleDevProsListConfig)
 	{
 		List<RoleDevProsRoleItem> list = new List<RoleDevProsRoleItem>();
@@ -266,7 +266,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x06015132 RID: 86322 RVA: 0x005561BC File Offset: 0x005543BC
+	// Token: 0x06012B32 RID: 76594 RVA: 0x00580FBC File Offset: 0x0057F1BC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -293,7 +293,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x06015133 RID: 86323 RVA: 0x00556270 File Offset: 0x00554470
+	// Token: 0x06012B33 RID: 76595 RVA: 0x00581070 File Offset: 0x0057F270
 	private List<global::IItemMaterial> ConvertGroupToMaterials(RoleDevProsRoleItem group)
 	{
 		List<global::IItemMaterial> list = new List<global::IItemMaterial>();
@@ -315,7 +315,7 @@ public class ForecastRoleDevRoleDetailItemData
 		return list;
 	}
 
-	// Token: 0x06015134 RID: 86324 RVA: 0x005562EC File Offset: 0x005544EC
+	// Token: 0x06012B34 RID: 76596 RVA: 0x005810EC File Offset: 0x0057F2EC
 	private List<global::IRoleDevDetailItemData> BuildGroupDetailItems(int roleId, RoleDevProsRoleItem group, List<global::IItemMaterial> materials)
 	{
 		return RoleDevUtils.BuildDetailItemData(roleId, new List<global::IMaterialGroup>
@@ -328,8 +328,8 @@ public class ForecastRoleDevRoleDetailItemData
 		}, ERoleDevMainPage.Role);
 	}
 
-	// Token: 0x17001BD7 RID: 7127
-	// (get) Token: 0x06015135 RID: 86325 RVA: 0x00556326 File Offset: 0x00554526
+	// Token: 0x17001C2F RID: 7215
+	// (get) Token: 0x06012B35 RID: 76597 RVA: 0x00581126 File Offset: 0x0057F326
 	public List<global::IRoleDevDetailItemData> DetailItems
 	{
 		get
@@ -338,6 +338,6 @@ public class ForecastRoleDevRoleDetailItemData
 		}
 	}
 
-	// Token: 0x04009E35 RID: 40501
+	// Token: 0x0400A21E RID: 41502
 	private List<global::IRoleDevDetailItemData> DetailItemsInternal = new List<global::IRoleDevDetailItemData>();
 }

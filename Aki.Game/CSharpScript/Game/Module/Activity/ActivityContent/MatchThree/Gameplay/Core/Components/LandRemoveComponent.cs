@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x02006534 RID: 25908
+	// Token: 0x020054B2 RID: 21682
 	public sealed class LandRemoveComponent : IPieceComponent, ILandBehavior
 	{
-		// Token: 0x1700952E RID: 38190
-		// (get) Token: 0x06040F1D RID: 266013 RVA: 0x00FBCC44 File Offset: 0x00FBAE44
+		// Token: 0x17006890 RID: 26768
+		// (get) Token: 0x06035BE2 RID: 220130 RVA: 0x00F03C88 File Offset: 0x00F01E88
 		public EPieceCaps Caps
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040F1E RID: 266014 RVA: 0x00FBCC48 File Offset: 0x00FBAE48
+		// Token: 0x06035BE3 RID: 220131 RVA: 0x00F03C8C File Offset: 0x00F01E8C
 		[NullableContext(1)]
 		public void OnLandedBottom(IDispatchContext sink, Piece self, GridPosition pos)
 		{

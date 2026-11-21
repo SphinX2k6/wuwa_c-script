@@ -8,25 +8,15 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x020030D8 RID: 12504
+// Token: 0x02002630 RID: 9776
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependency
+public class CharacterLockOnComponent : BaseLockOnComponent
 {
-	// Token: 0x170024D1 RID: 9425
-	// (get) Token: 0x0601AC71 RID: 109681 RVA: 0x00738898 File Offset: 0x00736A98
-	[Nullable(new byte[]
+	// Token: 0x17002657 RID: 9815
+	// (get) Token: 0x06018689 RID: 99977 RVA: 0x0075E380 File Offset: 0x0075C580
+	public override Type[] Dependencies
 	{
-		2,
-		1
-	})]
-	public static Type[] Dependencies
-	{
-		[return: Nullable(new byte[]
-		{
-			2,
-			1
-		})]
 		get
 		{
 			return new Type[]
@@ -36,7 +26,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC72 RID: 109682 RVA: 0x007388AD File Offset: 0x00736AAD
+	// Token: 0x0601868A RID: 99978 RVA: 0x0075E395 File Offset: 0x0075C595
 	protected override void OnTargetDeadOrRemoved()
 	{
 		if (this.IsLookAt)
@@ -53,7 +43,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.SetShowTarget(null, "", false);
 	}
 
-	// Token: 0x0601AC73 RID: 109683 RVA: 0x007388E8 File Offset: 0x00736AE8
+	// Token: 0x0601868B RID: 99979 RVA: 0x0075E3D0 File Offset: 0x0075C5D0
 	private void OnStateInherit(Entity lastEntity, bool _)
 	{
 		CharacterLockOnComponent component = lastEntity.GetComponent<CharacterLockOnComponent>();
@@ -64,7 +54,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.SetShowTarget(component.ShowTarget, component.ShowTargetSocket, false);
 	}
 
-	// Token: 0x0601AC74 RID: 109684 RVA: 0x00738948 File Offset: 0x00736B48
+	// Token: 0x0601868C RID: 99980 RVA: 0x0075E430 File Offset: 0x0075C630
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -84,7 +74,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601AC75 RID: 109685 RVA: 0x00738AB4 File Offset: 0x00736CB4
+	// Token: 0x0601868D RID: 99981 RVA: 0x0075E59C File Offset: 0x0075C79C
 	protected override bool OnEnd()
 	{
 		base.OnEnd();
@@ -103,7 +93,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601AC76 RID: 109686 RVA: 0x00738B70 File Offset: 0x00736D70
+	// Token: 0x0601868E RID: 99982 RVA: 0x0075E658 File Offset: 0x0075C858
 	protected override void OnDisable(string reason)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -114,7 +104,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		tagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["角色.Common.拥有锁定目标"]));
 	}
 
-	// Token: 0x0601AC77 RID: 109687 RVA: 0x00738B97 File Offset: 0x00736D97
+	// Token: 0x0601868F RID: 99983 RVA: 0x0075E67F File Offset: 0x0075C87F
 	protected override void OnTick(float delta)
 	{
 		this.TickMoveDir();
@@ -126,7 +116,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		base.OnTick(delta);
 	}
 
-	// Token: 0x0601AC78 RID: 109688 RVA: 0x00738BC8 File Offset: 0x00736DC8
+	// Token: 0x06018690 RID: 99984 RVA: 0x0075E6B0 File Offset: 0x0075C8B0
 	private void RefreshHardLockDebug()
 	{
 		if (!LockOnDebug.IsShowDebugLine || !base.IsHardLock)
@@ -168,7 +158,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		LockOnDebug.SetDebugArrow(getCurrentInfo, EColorType.Black);
 	}
 
-	// Token: 0x0601AC79 RID: 109689 RVA: 0x00738D30 File Offset: 0x00736F30
+	// Token: 0x06018691 RID: 99985 RVA: 0x0075E818 File Offset: 0x0075CA18
 	[NullableContext(2)]
 	protected override void SetAndShowTarget(LockOnInfo bestInfo, bool showTarget)
 	{
@@ -187,7 +177,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC7A RID: 109690 RVA: 0x00738D90 File Offset: 0x00736F90
+	// Token: 0x06018692 RID: 99986 RVA: 0x0075E878 File Offset: 0x0075CA78
 	public override bool SetShowTarget([Nullable(2)] EntityHandle target, string socketName = "", bool isHardLock = false)
 	{
 		CharacterActorComponent characterActorComponent;
@@ -263,7 +253,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601AC7B RID: 109691 RVA: 0x00738F34 File Offset: 0x00737134
+	// Token: 0x06018693 RID: 99987 RVA: 0x0075EA1C File Offset: 0x0075CC1C
 	private bool SetShowTargetBySkill([Nullable(2)] EntityHandle target, string socketName = "")
 	{
 		if (base.IsHardLock)
@@ -291,7 +281,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return valueOrDefault != null && valueOrDefault.SoftLockValid && this.SetShowTarget(target, socketName, false);
 	}
 
-	// Token: 0x0601AC7C RID: 109692 RVA: 0x00738FF5 File Offset: 0x007371F5
+	// Token: 0x06018694 RID: 99988 RVA: 0x0075EADD File Offset: 0x0075CCDD
 	protected override void ClearLockOnTarget()
 	{
 		base.ClearLockOnTarget();
@@ -299,7 +289,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.ForceLookAt(null, false);
 	}
 
-	// Token: 0x0601AC7D RID: 109693 RVA: 0x0073900C File Offset: 0x0073720C
+	// Token: 0x06018695 RID: 99989 RVA: 0x0075EAF4 File Offset: 0x0075CCF4
 	[NullableContext(2)]
 	public void ForceLookAt(LockOnInfo target, bool enable)
 	{
@@ -368,7 +358,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		bool isLookAt2 = this.IsLookAt;
 	}
 
-	// Token: 0x0601AC7E RID: 109694 RVA: 0x007391DC File Offset: 0x007373DC
+	// Token: 0x06018696 RID: 99990 RVA: 0x0075ECC4 File Offset: 0x0075CEC4
 	public bool TryRestoreLookAt()
 	{
 		if (!this.IsLookAt || base.IsHardLock)
@@ -386,7 +376,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return true;
 	}
 
-	// Token: 0x0601AC7F RID: 109695 RVA: 0x00739250 File Offset: 0x00737450
+	// Token: 0x06018697 RID: 99991 RVA: 0x0075ED38 File Offset: 0x0075CF38
 	public void ForceIgnore(LockOnInfo target, bool enable)
 	{
 		if (enable)
@@ -445,7 +435,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC80 RID: 109696 RVA: 0x00739434 File Offset: 0x00737634
+	// Token: 0x06018698 RID: 99992 RVA: 0x0075EF1C File Offset: 0x0075D11C
 	private void TickCurrentInfo()
 	{
 		if (this.IsLookAt)
@@ -489,7 +479,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC81 RID: 109697 RVA: 0x00739574 File Offset: 0x00737774
+	// Token: 0x06018699 RID: 99993 RVA: 0x0075F05C File Offset: 0x0075D25C
 	private void TickMoveDir()
 	{
 		if (this.InputComponent == null)
@@ -512,7 +502,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC82 RID: 109698 RVA: 0x00739628 File Offset: 0x00737828
+	// Token: 0x0601869A RID: 99994 RVA: 0x0075F110 File Offset: 0x0075D310
 	public void EnterLockDirection()
 	{
 		if (!this.IsLookAt)
@@ -563,7 +553,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.UnifiedStateComponent.SetDirectionState(ECharDirectionState.LockDirection);
 	}
 
-	// Token: 0x0601AC83 RID: 109699 RVA: 0x0073972C File Offset: 0x0073792C
+	// Token: 0x0601869B RID: 99995 RVA: 0x0075F214 File Offset: 0x0075D414
 	public void ExitLockDirection()
 	{
 		if (base.IsHardLock)
@@ -583,7 +573,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC84 RID: 109700 RVA: 0x00739784 File Offset: 0x00737984
+	// Token: 0x0601869C RID: 99996 RVA: 0x0075F26C File Offset: 0x0075D46C
 	private void OnBattleStateChanged(bool isInFight)
 	{
 		bool flag = this.IsCompensateLockDirection();
@@ -600,7 +590,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC85 RID: 109701 RVA: 0x007397B8 File Offset: 0x007379B8
+	// Token: 0x0601869D RID: 99997 RVA: 0x0075F2A0 File Offset: 0x0075D4A0
 	private void CompensateLockDirection()
 	{
 		if (!base.IsHardLock)
@@ -620,7 +610,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		buffComponent.AddBuff(buffId, addBuffParam);
 	}
 
-	// Token: 0x0601AC86 RID: 109702 RVA: 0x00739810 File Offset: 0x00737A10
+	// Token: 0x0601869E RID: 99998 RVA: 0x0075F2F8 File Offset: 0x0075D4F8
 	private bool QuitCompensateLockDirection()
 	{
 		if (this.IsCompensateLockDirection() && this.BuffComponent != null)
@@ -631,13 +621,13 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return false;
 	}
 
-	// Token: 0x0601AC87 RID: 109703 RVA: 0x00739862 File Offset: 0x00737A62
+	// Token: 0x0601869F RID: 99999 RVA: 0x0075F34A File Offset: 0x0075D54A
 	public bool IsCompensateLockDirection()
 	{
 		return this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["被动.功能.多波次锁定补偿"]);
 	}
 
-	// Token: 0x0601AC88 RID: 109704 RVA: 0x00739880 File Offset: 0x00737A80
+	// Token: 0x060186A0 RID: 100000 RVA: 0x0075F368 File Offset: 0x0075D568
 	private void DetectHardLockTargets(bool clearCache)
 	{
 		if (this.HardLockConfig == null)
@@ -688,13 +678,13 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC89 RID: 109705 RVA: 0x007399A8 File Offset: 0x00737BA8
+	// Token: 0x060186A1 RID: 100001 RVA: 0x0075F490 File Offset: 0x0075D690
 	protected override int GetSelfCamp()
 	{
 		return (int)this.ActorComp.Actor.Camp;
 	}
 
-	// Token: 0x0601AC8A RID: 109706 RVA: 0x007399BC File Offset: 0x00737BBC
+	// Token: 0x060186A2 RID: 100002 RVA: 0x0075F4A4 File Offset: 0x0075D6A4
 	private void OnRestoreTargetTagAddOrRemove(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -745,7 +735,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.OldInfoAtRemoveDisableHardLockTag = null;
 	}
 
-	// Token: 0x0601AC8B RID: 109707 RVA: 0x00739AE8 File Offset: 0x00737CE8
+	// Token: 0x060186A3 RID: 100003 RVA: 0x0075F5D0 File Offset: 0x0075D7D0
 	private void OnForceLockTagAddOrRemove(int tagId, bool tagExist)
 	{
 		RoleInfo? roleConfig;
@@ -795,7 +785,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC8C RID: 109708 RVA: 0x00739C44 File Offset: 0x00737E44
+	// Token: 0x060186A4 RID: 100004 RVA: 0x0075F72C File Offset: 0x0075D92C
 	private void SendRequestMessageIfHardLockStateChanged()
 	{
 		bool isHardLock = base.IsHardLock;
@@ -820,7 +810,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC8D RID: 109709 RVA: 0x00739CB8 File Offset: 0x00737EB8
+	// Token: 0x060186A5 RID: 100005 RVA: 0x0075F7A0 File Offset: 0x0075D9A0
 	public void RefreshCurrentLockState([Nullable(2)] EntityHandle target, string refreshSocket = "")
 	{
 		LockOnInfo getCurrentInfo = base.GetCurrentInfo;
@@ -859,14 +849,14 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		}
 	}
 
-	// Token: 0x0601AC8E RID: 109710 RVA: 0x00739D5C File Offset: 0x00737F5C
+	// Token: 0x060186A6 RID: 100006 RVA: 0x0075F844 File Offset: 0x0075DA44
 	public bool SpeedUpCleanTarget()
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
 		return component != null && component.Valid && component.Speed > 70f && !this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]);
 	}
 
-	// Token: 0x0601AC8F RID: 109711 RVA: 0x00739DAC File Offset: 0x00737FAC
+	// Token: 0x060186A7 RID: 100007 RVA: 0x0075F894 File Offset: 0x0075DA94
 	public void ResetTarget()
 	{
 		if (this.IsLookAt || !base.IsHardLock)
@@ -876,7 +866,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		this.DetectHardLockTargets(false);
 	}
 
-	// Token: 0x0601AC90 RID: 109712 RVA: 0x00739DC8 File Offset: 0x00737FC8
+	// Token: 0x060186A8 RID: 100008 RVA: 0x0075F8B0 File Offset: 0x0075DAB0
 	public bool ChangeShowTarget(Vector2D inputDirect, float angleCoefficient, float distCoefficient)
 	{
 		if (this.IsLookAt || !base.IsHardLock || this.HardLockConfig == null || base.GetCurrentInfo == null)
@@ -933,7 +923,7 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return false;
 	}
 
-	// Token: 0x0601AC91 RID: 109713 RVA: 0x0073A076 File Offset: 0x00738276
+	// Token: 0x060186A9 RID: 100009 RVA: 0x0075FB5E File Offset: 0x0075DD5E
 	[NullableContext(2)]
 	public LockOnInfo GetPredictedLockOnTarget()
 	{
@@ -945,14 +935,14 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 		return null;
 	}
 
-	// Token: 0x0601AC92 RID: 109714 RVA: 0x0073A0A3 File Offset: 0x007382A3
+	// Token: 0x060186AA RID: 100010 RVA: 0x0075FB8B File Offset: 0x0075DD8B
 	[NullableContext(2)]
 	public void SetPredictedLockOnTarget(LockOnInfo predictedInfo)
 	{
 		this.PredictedInfo = predictedInfo;
 	}
 
-	// Token: 0x0601AC93 RID: 109715 RVA: 0x0073A0AC File Offset: 0x007382AC
+	// Token: 0x060186AB RID: 100011 RVA: 0x0075FB94 File Offset: 0x0075DD94
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -960,155 +950,168 @@ public class CharacterLockOnComponent : BaseLockOnComponent, IComponentDependenc
 			return false;
 		}
 		CharacterLockOnComponent characterLockOnComponent = (CharacterLockOnComponent)componentTemplate;
-		if (base.CanResetComponentProperty("StatTickMoveDir") && characterLockOnComponent.StatTickMoveDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTickMoveDir), "StatTickMoveDir"))
+		if (characterLockOnComponent.StatTickMoveDir != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatTickMoveDir), "StatTickMoveDir"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatTickCurrentInfo") && characterLockOnComponent.StatTickCurrentInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatTickCurrentInfo), "StatTickCurrentInfo"))
+		if (characterLockOnComponent.StatTickCurrentInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatTickCurrentInfo), "StatTickCurrentInfo"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("StatCheck") && characterLockOnComponent.StatCheck != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.StatCheck), "StatCheck"))
+		if (characterLockOnComponent.StatCheck != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StatCheck), "StatCheck"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterLockOnComponent.ActorComp == null)
 		{
-			if (characterLockOnComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
-		{
-			if (characterLockOnComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InputComponent"))
-		{
-			if (characterLockOnComponent.InputComponent == null)
-			{
-				this.InputComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComponent), "InputComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BuffComponent"))
-		{
-			if (characterLockOnComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagListeners") && characterLockOnComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagListeners), "TagListeners"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MoveDirCache") && characterLockOnComponent.MoveDirCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.MoveDirCache), "MoveDirCache"))
+		if (characterLockOnComponent.UnifiedStateComponent == null)
+		{
+			this.UnifiedStateComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsForceLock"))
+		if (characterLockOnComponent.InputComponent == null)
 		{
-			this.IsForceLock = characterLockOnComponent.IsForceLock;
+			this.InputComponent = null;
 		}
-		if (base.CanResetComponentProperty("ForceLockId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComponent), "InputComponent"))
 		{
-			this.ForceLockId = characterLockOnComponent.ForceLockId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ForceLockEntityAddDispose"))
+		if (characterLockOnComponent.BuffComponent == null)
 		{
-			if (characterLockOnComponent.ForceLockEntityAddDispose == null)
-			{
-				this.ForceLockEntityAddDispose = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TCbDispose>(this.ForceLockEntityAddDispose), "ForceLockEntityAddDispose"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("IsHardLockInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
-			this.IsHardLockInternal = characterLockOnComponent.IsHardLockInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("PredictedInfo"))
+		if (characterLockOnComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListeners), "TagListeners"))
 		{
-			if (characterLockOnComponent.PredictedInfo == null)
-			{
-				this.PredictedInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LockOnInfo>(this.PredictedInfo), "PredictedInfo"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (characterLockOnComponent.MoveDirCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveDirCache), "MoveDirCache"))
+		{
+			return false;
+		}
+		this.IsForceLock = characterLockOnComponent.IsForceLock;
+		this.ForceLockId = characterLockOnComponent.ForceLockId;
+		if (characterLockOnComponent.ForceLockEntityAddDispose == null)
+		{
+			this.ForceLockEntityAddDispose = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ForceLockEntityAddDispose), "ForceLockEntityAddDispose"))
+		{
+			return false;
+		}
+		this.IsHardLockInternal = characterLockOnComponent.IsHardLockInternal;
+		if (characterLockOnComponent.PredictedInfo == null)
+		{
+			this.PredictedInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PredictedInfo), "PredictedInfo"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CED2 RID: 52946
+	// Token: 0x17002658 RID: 9816
+	// (get) Token: 0x060186AC RID: 100012 RVA: 0x0075FD84 File Offset: 0x0075DF84
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002659 RID: 9817
+	// (get) Token: 0x060186AD RID: 100013 RVA: 0x0075FD87 File Offset: 0x0075DF87
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700265A RID: 9818
+	// (get) Token: 0x060186AE RID: 100014 RVA: 0x0075FD8A File Offset: 0x0075DF8A
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700265B RID: 9819
+	// (get) Token: 0x060186AF RID: 100015 RVA: 0x0075FD8D File Offset: 0x0075DF8D
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D2C2 RID: 53954
 	private const string LOCK_DIR_COMPENSATE_REASON = "角色强锁补偿buff";
 
-	// Token: 0x0400CED3 RID: 52947
+	// Token: 0x0400D2C3 RID: 53955
 	private readonly Stat StatTickMoveDir = Stat.Create("CharacterLockOnComponent.StatTickMoveDir", "", "");
 
-	// Token: 0x0400CED4 RID: 52948
+	// Token: 0x0400D2C4 RID: 53956
 	private readonly Stat StatTickCurrentInfo = Stat.Create("CharacterLockOnComponent.StatTickCurrentInfo", "", "");
 
-	// Token: 0x0400CED5 RID: 52949
+	// Token: 0x0400D2C5 RID: 53957
 	private readonly Stat StatCheck = Stat.Create("CharacterLockOnComponent.StatCheck", "", "");
 
-	// Token: 0x0400CED6 RID: 52950
+	// Token: 0x0400D2C6 RID: 53958
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CED7 RID: 52951
+	// Token: 0x0400D2C7 RID: 53959
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400CED8 RID: 52952
+	// Token: 0x0400D2C8 RID: 53960
 	[Nullable(2)]
 	private CharacterInputComponent InputComponent;
 
-	// Token: 0x0400CED9 RID: 52953
+	// Token: 0x0400D2C9 RID: 53961
 	[Nullable(2)]
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400CEDA RID: 52954
+	// Token: 0x0400D2CA RID: 53962
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-	// Token: 0x0400CEDB RID: 52955
+	// Token: 0x0400D2CB RID: 53963
 	private readonly global::Vector MoveDirCache = global::Vector.Create();
 
-	// Token: 0x0400CEDC RID: 52956
+	// Token: 0x0400D2CC RID: 53964
 	private bool IsForceLock;
 
-	// Token: 0x0400CEDD RID: 52957
+	// Token: 0x0400D2CD RID: 53965
 	private int ForceLockId;
 
-	// Token: 0x0400CEDE RID: 52958
+	// Token: 0x0400D2CE RID: 53966
 	[Nullable(2)]
 	private TCbDispose ForceLockEntityAddDispose;
 
-	// Token: 0x0400CEDF RID: 52959
+	// Token: 0x0400D2CF RID: 53967
 	private bool IsHardLockInternal;
 
-	// Token: 0x0400CEE0 RID: 52960
+	// Token: 0x0400D2D0 RID: 53968
 	[Nullable(2)]
 	private LockOnInfo PredictedInfo;
 }

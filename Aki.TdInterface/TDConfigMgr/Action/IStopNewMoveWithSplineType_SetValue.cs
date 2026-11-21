@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ECC RID: 7884
+	// Token: 0x02002105 RID: 8453
 	public class IStopNewMoveWithSplineType_SetValue
 	{
-		// Token: 0x0400647B RID: 25723
+		// Token: 0x04006A6A RID: 27242
 		public EStopNewMoveWithSplineType Type;
 	}
 }

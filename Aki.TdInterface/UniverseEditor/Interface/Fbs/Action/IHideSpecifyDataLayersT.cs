@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068FE RID: 26878
+	// Token: 0x02006FB1 RID: 28593
 	public class IHideSpecifyDataLayersT
 	{
-		// Token: 0x1700C764 RID: 51044
-		// (get) Token: 0x0602EE47 RID: 192071 RVA: 0x006656AF File Offset: 0x006638AF
-		// (set) Token: 0x0602EE48 RID: 192072 RVA: 0x006656B7 File Offset: 0x006638B7
+		// Token: 0x1700D167 RID: 53607
+		// (get) Token: 0x06031817 RID: 202775 RVA: 0x006B5B97 File Offset: 0x006B3D97
+		// (set) Token: 0x06031818 RID: 202776 RVA: 0x006B5B9F File Offset: 0x006B3D9F
 		public EHideType Type { get; set; }
 
-		// Token: 0x1700C765 RID: 51045
-		// (get) Token: 0x0602EE49 RID: 192073 RVA: 0x006656C0 File Offset: 0x006638C0
-		// (set) Token: 0x0602EE4A RID: 192074 RVA: 0x006656C8 File Offset: 0x006638C8
+		// Token: 0x1700D168 RID: 53608
+		// (get) Token: 0x06031819 RID: 202777 RVA: 0x006B5BA8 File Offset: 0x006B3DA8
+		// (set) Token: 0x0603181A RID: 202778 RVA: 0x006B5BB0 File Offset: 0x006B3DB0
 		public List<int> DataLayers { get; set; }
 
-		// Token: 0x0602EE4B RID: 192075 RVA: 0x006656D1 File Offset: 0x006638D1
+		// Token: 0x0603181B RID: 202779 RVA: 0x006B5BB9 File Offset: 0x006B3DB9
 		public IHideSpecifyDataLayersT()
 		{
 			this.Type = EHideType.WorldMonsterAndMonsterTreasure;

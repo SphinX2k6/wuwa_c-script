@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000998 RID: 2456
+	// Token: 0x02000A4B RID: 2635
 	public static class EMechascoutDragTypeExtensions
 	{
-		// Token: 0x060036DD RID: 14045 RVA: 0x0008EC58 File Offset: 0x0008CE58
+		// Token: 0x06003A64 RID: 14948 RVA: 0x00096BC4 File Offset: 0x00094DC4
 		public static string ToEnumString(this EMechascoutDragType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036DE RID: 14046 RVA: 0x0008EC90 File Offset: 0x0008CE90
+		// Token: 0x06003A65 RID: 14949 RVA: 0x00096BFC File Offset: 0x00094DFC
 		public static EMechascoutDragType FromString(string name)
 		{
 			EMechascoutDragType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036DF RID: 14047 RVA: 0x0008ECB9 File Offset: 0x0008CEB9
+		// Token: 0x06003A66 RID: 14950 RVA: 0x00096C25 File Offset: 0x00094E25
 		public static bool TryFromString(string name, out EMechascoutDragType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036E0 RID: 14048 RVA: 0x0008ECF2 File Offset: 0x0008CEF2
+		// Token: 0x06003A67 RID: 14951 RVA: 0x00096C5E File Offset: 0x00094E5E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036E1 RID: 14049 RVA: 0x0008ED0A File Offset: 0x0008CF0A
+		// Token: 0x06003A68 RID: 14952 RVA: 0x00096C76 File Offset: 0x00094E76
 		public static EMechascoutDragType[] GetValues()
 		{
 			return new EMechascoutDragType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036E2 RID: 14050 RVA: 0x0008ED16 File Offset: 0x0008CF16
+		// Token: 0x06003A69 RID: 14953 RVA: 0x00096C82 File Offset: 0x00094E82
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -1,53 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB4 RID: 28084
+	// Token: 0x02005F33 RID: 24371
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiPlanInstance
 	{
-		// Token: 0x06044844 RID: 280644 RVA: 0x010E5569 File Offset: 0x010E3769
+		// Token: 0x0603A9A8 RID: 240040 RVA: 0x0108F791 File Offset: 0x0108D991
 		public void Initialize(CharacterPlanComponent ownerComponent)
 		{
 			this.OwnerComponent = ownerComponent;
 		}
 
-		// Token: 0x06044845 RID: 280645 RVA: 0x010E5572 File Offset: 0x010E3772
+		// Token: 0x0603A9A9 RID: 240041 RVA: 0x0108F79A File Offset: 0x0108D99A
 		public bool IsPlanning()
 		{
 			return this.CurrentPlanner != null;
 		}
 
-		// Token: 0x06044846 RID: 280646 RVA: 0x010E557D File Offset: 0x010E377D
+		// Token: 0x0603A9AA RID: 240042 RVA: 0x0108F7A5 File Offset: 0x0108D9A5
 		public bool HasPlan()
 		{
 			return this.CurrentPlan != null && this.CurrentPlanStartedExecution;
 		}
 
-		// Token: 0x06044847 RID: 280647 RVA: 0x010E558F File Offset: 0x010E378F
+		// Token: 0x0603A9AB RID: 240043 RVA: 0x0108F7B7 File Offset: 0x0108D9B7
 		public bool HasActiveTasks()
 		{
 			return this.CurrentlyExecutingStepIds.Count > 0 || this.PendingExecutionStepIds.Count > 0 || this.CurrentlyAbortingStepIds.Count > 0;
 		}
 
-		// Token: 0x06044848 RID: 280648 RVA: 0x010E55BD File Offset: 0x010E37BD
+		// Token: 0x0603A9AC RID: 240044 RVA: 0x0108F7E5 File Offset: 0x0108D9E5
 		public bool HasActivePlan()
 		{
 			return this.HasPlan() && this.HasActiveTasks();
 		}
 
-		// Token: 0x06044849 RID: 280649 RVA: 0x010E55CF File Offset: 0x010E37CF
+		// Token: 0x0603A9AD RID: 240045 RVA: 0x0108F7F7 File Offset: 0x0108D9F7
 		public bool CanLoop()
 		{
 			return this.Loop && !this.OwnerComponent.Paused;
 		}
 
-		// Token: 0x0604484A RID: 280650 RVA: 0x010E55E9 File Offset: 0x010E37E9
+		// Token: 0x0603A9AE RID: 240046 RVA: 0x0108F811 File Offset: 0x0108DA11
 		public void Start()
 		{
 			if (this.Status == ELevelAiPlanInstanceStatus.InProgress)
@@ -61,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.StartPlanning();
 		}
 
-		// Token: 0x0604484B RID: 280651 RVA: 0x010E5618 File Offset: 0x010E3818
+		// Token: 0x0603A9AF RID: 240047 RVA: 0x0108F840 File Offset: 0x0108DA40
 		public void Tick(float deltaTime)
 		{
 			if (this.Status == ELevelAiPlanInstanceStatus.InProgress && !this.HasActivePlan() && !this.IsPlanning())
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604484C RID: 280652 RVA: 0x010E5677 File Offset: 0x010E3877
+		// Token: 0x0603A9B0 RID: 240048 RVA: 0x0108F89F File Offset: 0x0108DA9F
 		public void Stop()
 		{
 			if (this.Status != ELevelAiPlanInstanceStatus.InProgress)
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.AbortCurrentPlan();
 		}
 
-		// Token: 0x0604484D RID: 280653 RVA: 0x010E568F File Offset: 0x010E388F
+		// Token: 0x0603A9B1 RID: 240049 RVA: 0x0108F8B7 File Offset: 0x0108DAB7
 		public void Pause()
 		{
 			if (this.Status != ELevelAiPlanInstanceStatus.InProgress)
@@ -104,7 +103,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.AbortCurrentPlan();
 		}
 
-		// Token: 0x0604484E RID: 280654 RVA: 0x010E56C4 File Offset: 0x010E38C4
+		// Token: 0x0603A9B2 RID: 240050 RVA: 0x0108F8EC File Offset: 0x0108DAEC
 		public void Resume()
 		{
 			if (this.Status == ELevelAiPlanInstanceStatus.InProgress)
@@ -125,13 +124,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.SavedPlan = null;
 		}
 
-		// Token: 0x0604484F RID: 280655 RVA: 0x010E5714 File Offset: 0x010E3914
+		// Token: 0x0603A9B3 RID: 240051 RVA: 0x0108F93C File Offset: 0x0108DB3C
 		public bool RecheckCurrentPlan()
 		{
 			List<LevelAiPlanStepId> list;
 			if (this.CurrentPlanStartedExecution)
 			{
-				list = this.CurrentlyExecutingStepIds.ToList<LevelAiPlanStepId>();
+				list = new List<LevelAiPlanStepId>(this.CurrentlyExecutingStepIds);
 			}
 			else
 			{
@@ -149,7 +148,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x06044850 RID: 280656 RVA: 0x010E576F File Offset: 0x010E396F
+		// Token: 0x0603A9B4 RID: 240052 RVA: 0x0108F997 File Offset: 0x0108DB97
 		public void RePlan()
 		{
 			if (this.Status != ELevelAiPlanInstanceStatus.InProgress)
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044851 RID: 280657 RVA: 0x010E5790 File Offset: 0x010E3990
+		// Token: 0x0603A9B5 RID: 240053 RVA: 0x0108F9B8 File Offset: 0x0108DBB8
 		public void AbortCurrentPlan()
 		{
 			if (this.HasPlan())
@@ -186,7 +185,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044852 RID: 280658 RVA: 0x010E581D File Offset: 0x010E3A1D
+		// Token: 0x0603A9B6 RID: 240054 RVA: 0x0108FA45 File Offset: 0x0108DC45
 		public void CancelActivePlanning()
 		{
 			if (this.IsPlanning())
@@ -200,7 +199,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044853 RID: 280659 RVA: 0x010E584C File Offset: 0x010E3A4C
+		// Token: 0x0603A9B7 RID: 240055 RVA: 0x0108FA74 File Offset: 0x0108DC74
 		private void StartPlanning()
 		{
 			if (this.IsPlanning())
@@ -217,7 +216,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044854 RID: 280660 RVA: 0x010E58DC File Offset: 0x010E3ADC
+		// Token: 0x0603A9B8 RID: 240056 RVA: 0x0108FB04 File Offset: 0x0108DD04
 		private void OnPlanningTaskFinished(LevelAiPlanner sender, LevelAiPlan producedPlan)
 		{
 			if (this.OwnerComponent == null)
@@ -254,7 +253,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044855 RID: 280661 RVA: 0x010E593C File Offset: 0x010E3B3C
+		// Token: 0x0603A9B9 RID: 240057 RVA: 0x0108FB64 File Offset: 0x0108DD64
 		private bool StartPlanExecution(LevelAiPlan plan)
 		{
 			if (plan == null)
@@ -284,7 +283,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x06044856 RID: 280662 RVA: 0x010E59AC File Offset: 0x010E3BAC
+		// Token: 0x0603A9BA RID: 240058 RVA: 0x0108FBD4 File Offset: 0x0108DDD4
 		private void StartTasksExecution()
 		{
 			List<LevelAiPlanStepId> list = new List<LevelAiPlanStepId>();
@@ -305,7 +304,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044857 RID: 280663 RVA: 0x010E5A04 File Offset: 0x010E3C04
+		// Token: 0x0603A9BB RID: 240059 RVA: 0x0108FC2C File Offset: 0x0108DE2C
 		private ELevelAiNodeResult StartExecuteTask(LevelAiPlanStepId planStepId)
 		{
 			if (!this.HasPlan())
@@ -341,14 +340,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return elevelAiNodeResult;
 		}
 
-		// Token: 0x06044858 RID: 280664 RVA: 0x010E5AE4 File Offset: 0x010E3CE4
+		// Token: 0x0603A9BC RID: 240060 RVA: 0x0108FD0C File Offset: 0x0108DF0C
 		private void TickCurrentPlan(float deltaTime)
 		{
 			LevelAiPlanInstance.<>c__DisplayClass30_0 CS$<>8__locals1;
 			CS$<>8__locals1.<>4__this = this;
 			CS$<>8__locals1.deltaTime = deltaTime;
 			this.StartTasksExecution();
-			foreach (LevelAiPlanStepId levelAiPlanStepId in this.CurrentlyExecutingStepIds.ToList<LevelAiPlanStepId>())
+			foreach (LevelAiPlanStepId levelAiPlanStepId in new List<LevelAiPlanStepId>(this.CurrentlyExecutingStepIds))
 			{
 				if (this.CurrentlyExecutingStepIds.Contains(levelAiPlanStepId) && !this.<TickCurrentPlan>g__updateAtPlanStep|30_0(levelAiPlanStepId, ref CS$<>8__locals1))
 				{
@@ -357,7 +356,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044859 RID: 280665 RVA: 0x010E5B68 File Offset: 0x010E3D68
+		// Token: 0x0603A9BD RID: 240061 RVA: 0x0108FD90 File Offset: 0x0108DF90
 		private bool UpdateSubNodes(LevelAiPlanStepId planStepId, bool bCheckConditionsExecution, bool bCheckConditionsRecheck)
 		{
 			bool flag = bCheckConditionsExecution || bCheckConditionsRecheck;
@@ -378,7 +377,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x0604485A RID: 280666 RVA: 0x010E5BBC File Offset: 0x010E3DBC
+		// Token: 0x0603A9BE RID: 240062 RVA: 0x0108FDE4 File Offset: 0x0108DFE4
 		private void AbortExecutingPlanStep(LevelAiPlanStepId planStepId)
 		{
 			LevelAiTask taskInCurrentPlan = this.GetTaskInCurrentPlan(planStepId);
@@ -397,7 +396,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604485B RID: 280667 RVA: 0x010E5C2C File Offset: 0x010E3E2C
+		// Token: 0x0603A9BF RID: 240063 RVA: 0x0108FE54 File Offset: 0x0108E054
 		public void OnTaskFinished(LevelAiTask task, LevelAiPlanStepId finishStepId, ELevelAiNodeResult result)
 		{
 			if (task == null)
@@ -449,7 +448,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604485C RID: 280668 RVA: 0x010E5D0C File Offset: 0x010E3F0C
+		// Token: 0x0603A9C0 RID: 240064 RVA: 0x0108FF34 File Offset: 0x0108E134
 		public bool NotifyEventBasedDecoratorCondition(LevelAiDecorator decorator, bool bFinalConditionValue)
 		{
 			if (!this.HasActivePlan())
@@ -465,7 +464,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return false;
 		}
 
-		// Token: 0x0604485D RID: 280669 RVA: 0x010E5D44 File Offset: 0x010E3F44
+		// Token: 0x0603A9C1 RID: 240065 RVA: 0x0108FF6C File Offset: 0x0108E16C
 		private void NotifySubLevelStepFinishedIfNeeded(LevelAiPlanStepId finishedStepId, ELevelAiNodeResult result)
 		{
 			if (this.CurrentlyExecutingStepIds.Count == 0)
@@ -485,7 +484,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604485E RID: 280670 RVA: 0x010E5DD5 File Offset: 0x010E3FD5
+		// Token: 0x0603A9C2 RID: 240066 RVA: 0x0108FFFD File Offset: 0x0108E1FD
 		private void OnPlanAbortFinished()
 		{
 			if (this.CanLoop())
@@ -499,7 +498,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.ClearCurrentPlan();
 		}
 
-		// Token: 0x0604485F RID: 280671 RVA: 0x010E5DF5 File Offset: 0x010E3FF5
+		// Token: 0x0603A9C3 RID: 240067 RVA: 0x0109001D File Offset: 0x0108E21D
 		private void OnPlanExecutionSuccessfullyFinished()
 		{
 			if (this.CanLoop())
@@ -513,7 +512,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.ClearCurrentPlan();
 		}
 
-		// Token: 0x06044860 RID: 280672 RVA: 0x010E5E18 File Offset: 0x010E4018
+		// Token: 0x0603A9C4 RID: 240068 RVA: 0x01090040 File Offset: 0x0108E240
 		private void InitializeCurrentPlan(LevelAiPlan newPlan)
 		{
 			if (this.CurrentPlan != null)
@@ -535,7 +534,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044861 RID: 280673 RVA: 0x010E5F38 File Offset: 0x010E4138
+		// Token: 0x0603A9C5 RID: 240069 RVA: 0x01090160 File Offset: 0x0108E360
 		private void ClearCurrentPlan()
 		{
 			if (this.CurrentPlan != null)
@@ -555,13 +554,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.CurrentPlanStartedExecution = false;
 		}
 
-		// Token: 0x06044862 RID: 280674 RVA: 0x010E6008 File Offset: 0x010E4208
+		// Token: 0x0603A9C6 RID: 240070 RVA: 0x01090230 File Offset: 0x0108E430
 		private LevelAiTask GetTaskInCurrentPlan(LevelAiPlanStepId executingStepId)
 		{
 			return this.CurrentPlan.GetStep(executingStepId).Node as LevelAiTask;
 		}
 
-		// Token: 0x06044863 RID: 280675 RVA: 0x010E6020 File Offset: 0x010E4220
+		// Token: 0x0603A9C7 RID: 240071 RVA: 0x01090248 File Offset: 0x0108E448
 		private int GetNextStepsInCurrentPlan(List<LevelAiPlanStepId> outStepIds, LevelAiPlanStepId stepId, bool bIsExecutingPlan = true)
 		{
 			GetNextStepsContext getNextStepsContext = new GetNextStepsContext(this.CurrentPlan, bIsExecutingPlan, outStepIds);
@@ -569,7 +568,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return getNextStepsContext.GetNumSubmittedSteps();
 		}
 
-		// Token: 0x06044864 RID: 280676 RVA: 0x010E603C File Offset: 0x010E423C
+		// Token: 0x0603A9C8 RID: 240072 RVA: 0x01090264 File Offset: 0x0108E464
 		private void GetSubNodesInCurrentPlanToStart(List<SubNodesInfo> outSubNodesInfoGroup, LevelAiPlanStepId stepId)
 		{
 			if (this.CurrentPlan == null || !this.CurrentPlan.HasStep(stepId, 0))
@@ -594,7 +593,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044865 RID: 280677 RVA: 0x010E60B8 File Offset: 0x010E42B8
+		// Token: 0x0603A9C9 RID: 240073 RVA: 0x010902E0 File Offset: 0x0108E4E0
 		private void GetSubNodesInCurrentPlanToTick(List<SubNodesInfo> outSubNodesInfoGroup, LevelAiPlanStepId stepId)
 		{
 			if (this.CurrentPlan == null || !this.CurrentPlan.HasStep(stepId, 0))
@@ -619,7 +618,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044866 RID: 280678 RVA: 0x010E6140 File Offset: 0x010E4340
+		// Token: 0x0603A9CA RID: 240074 RVA: 0x01090368 File Offset: 0x0108E568
 		private void GetSubNodesInCurrentPlanToFinish(List<SubNodesInfo> outSubNodesInfoGroup, LevelAiPlanStepId stepId)
 		{
 			if (this.CurrentPlan == null || !this.CurrentPlan.HasStep(stepId, 0))
@@ -652,7 +651,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044867 RID: 280679 RVA: 0x010E623C File Offset: 0x010E443C
+		// Token: 0x0603A9CB RID: 240075 RVA: 0x01090464 File Offset: 0x0108E664
 		private void GetSubNodesInCurrentPlanToAbort(List<SubNodesInfo> outSubNodesInfoGroup, LevelAiPlanStepId stepId)
 		{
 			if (this.CurrentPlan == null || !this.CurrentPlan.HasStep(stepId, 0))
@@ -677,7 +676,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044868 RID: 280680 RVA: 0x010E62B8 File Offset: 0x010E44B8
+		// Token: 0x0603A9CC RID: 240076 RVA: 0x010904E0 File Offset: 0x0108E6E0
 		private bool CheckConditionsOfDecorators(SubNodesInfo subNodesInfo, ELevelAiDecoratorCheckType checkType)
 		{
 			if (this.CurrentPlan == null)
@@ -697,7 +696,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x06044869 RID: 280681 RVA: 0x010E631C File Offset: 0x010E451C
+		// Token: 0x0603A9CD RID: 240077 RVA: 0x01090544 File Offset: 0x0108E744
 		private void StartSubNodesInSubNodeGroup(SubNodesInfo subNodesInfo)
 		{
 			if (subNodesInfo.SubNodesExecuting)
@@ -712,7 +711,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604486A RID: 280682 RVA: 0x010E6398 File Offset: 0x010E4598
+		// Token: 0x0603A9CE RID: 240078 RVA: 0x010905C0 File Offset: 0x0108E7C0
 		private void FinishSubNodesAtPlanStep(LevelAiPlanStepId planStepId, ELevelAiNodeResult result)
 		{
 			List<SubNodesInfo> list = new List<SubNodesInfo>();
@@ -735,7 +734,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604486B RID: 280683 RVA: 0x010E6438 File Offset: 0x010E4638
+		// Token: 0x0603A9CF RID: 240079 RVA: 0x01090660 File Offset: 0x0108E860
 		private void FinishSubNodesInSubNodeGroup(SubNodesInfo subNodesInfo, ELevelAiNodeResult result)
 		{
 			LevelAiPlanInstance.<>c__DisplayClass49_0 CS$<>8__locals1;
@@ -753,7 +752,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x0604486C RID: 280684 RVA: 0x010E64A4 File Offset: 0x010E46A4
+		// Token: 0x0603A9D0 RID: 240080 RVA: 0x010906CC File Offset: 0x0108E8CC
 		[return: Nullable(2)]
 		public ActiveTaskInfo FindActiveTaskInfo(LevelAiTask task)
 		{
@@ -761,7 +760,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			{
 				return null;
 			}
-			LevelAiPlanStepId levelAiPlanStepId = this.CurrentlyExecutingStepIds.FirstOrDefault((LevelAiPlanStepId value) => task == this.GetTaskInCurrentPlan(value));
+			LevelAiPlanStepId levelAiPlanStepId = this.CurrentlyExecutingStepIds.Find((LevelAiPlanStepId value) => task == this.GetTaskInCurrentPlan(value));
 			if (levelAiPlanStepId != null)
 			{
 				return new ActiveTaskInfo
@@ -770,7 +769,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 					PlanStepId = levelAiPlanStepId
 				};
 			}
-			levelAiPlanStepId = this.CurrentlyAbortingStepIds.FirstOrDefault((LevelAiPlanStepId value) => task == this.GetTaskInCurrentPlan(value));
+			levelAiPlanStepId = this.CurrentlyAbortingStepIds.Find((LevelAiPlanStepId value) => task == this.GetTaskInCurrentPlan(value));
 			if (levelAiPlanStepId != null)
 			{
 				return new ActiveTaskInfo
@@ -782,7 +781,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return null;
 		}
 
-		// Token: 0x0604486D RID: 280685 RVA: 0x010E6530 File Offset: 0x010E4730
+		// Token: 0x0603A9D1 RID: 240081 RVA: 0x01090758 File Offset: 0x0108E958
 		[return: Nullable(2)]
 		public ActiveTaskInfo FindActiveDecoratorInfo(LevelAiDecorator decorator)
 		{
@@ -794,7 +793,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 				return null;
 			}
 			CS$<>8__locals1.subNodesInfoGroup = new List<SubNodesInfo>();
-			LevelAiPlanStepId levelAiPlanStepId = this.CurrentlyExecutingStepIds.FirstOrDefault(new Func<LevelAiPlanStepId, bool>(CS$<>8__locals1.<FindActiveDecoratorInfo>g__findDecorator|0));
+			LevelAiPlanStepId levelAiPlanStepId = this.CurrentlyExecutingStepIds.Find(new Predicate<LevelAiPlanStepId>(CS$<>8__locals1.<FindActiveDecoratorInfo>g__findDecorator|0));
 			if (levelAiPlanStepId != null)
 			{
 				return new ActiveTaskInfo
@@ -803,7 +802,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 					PlanStepId = levelAiPlanStepId
 				};
 			}
-			levelAiPlanStepId = this.CurrentlyAbortingStepIds.FirstOrDefault(new Func<LevelAiPlanStepId, bool>(CS$<>8__locals1.<FindActiveDecoratorInfo>g__findDecorator|0));
+			levelAiPlanStepId = this.CurrentlyAbortingStepIds.Find(new Predicate<LevelAiPlanStepId>(CS$<>8__locals1.<FindActiveDecoratorInfo>g__findDecorator|0));
 			if (levelAiPlanStepId != null)
 			{
 				return new ActiveTaskInfo
@@ -815,13 +814,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return null;
 		}
 
-		// Token: 0x0604486E RID: 280686 RVA: 0x010E65C7 File Offset: 0x010E47C7
+		// Token: 0x0603A9D2 RID: 240082 RVA: 0x010907EF File Offset: 0x0108E9EF
 		private bool CanReuseSavedPlan()
 		{
 			return this.SavedPlan != null;
 		}
 
-		// Token: 0x06044870 RID: 280688 RVA: 0x010E6602 File Offset: 0x010E4802
+		// Token: 0x0603A9D4 RID: 240084 RVA: 0x0109082A File Offset: 0x0108EA2A
 		[CompilerGenerated]
 		private bool <TickCurrentPlan>g__updateAtPlanStep|30_0(LevelAiPlanStepId planStepId, ref LevelAiPlanInstance.<>c__DisplayClass30_0 A_2)
 		{
@@ -834,7 +833,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x06044871 RID: 280689 RVA: 0x010E662A File Offset: 0x010E482A
+		// Token: 0x0603A9D5 RID: 240085 RVA: 0x01090852 File Offset: 0x0108EA52
 		[CompilerGenerated]
 		internal static void <StartSubNodesInSubNodeGroup>g__startExecution|47_0(LevelAiDecorator subNode)
 		{
@@ -844,7 +843,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x06044872 RID: 280690 RVA: 0x010E6635 File Offset: 0x010E4835
+		// Token: 0x0603A9D6 RID: 240086 RVA: 0x0109085D File Offset: 0x0108EA5D
 		[CompilerGenerated]
 		internal static void <FinishSubNodesInSubNodeGroup>g__finishExecution|49_0(LevelAiDecorator subNode, ref LevelAiPlanInstance.<>c__DisplayClass49_0 A_1)
 		{
@@ -854,37 +853,37 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x04023A26 RID: 145958
+		// Token: 0x0401ECC8 RID: 126152
 		private ELevelAiPlanInstanceStatus Status;
 
-		// Token: 0x04023A27 RID: 145959
+		// Token: 0x0401ECC9 RID: 126153
 		[Nullable(2)]
 		private CharacterPlanComponent OwnerComponent;
 
-		// Token: 0x04023A28 RID: 145960
+		// Token: 0x0401ECCA RID: 126154
 		private readonly List<LevelAiPlanStepId> CurrentlyExecutingStepIds = new List<LevelAiPlanStepId>();
 
-		// Token: 0x04023A29 RID: 145961
+		// Token: 0x0401ECCB RID: 126155
 		private readonly List<LevelAiPlanStepId> PendingExecutionStepIds = new List<LevelAiPlanStepId>();
 
-		// Token: 0x04023A2A RID: 145962
+		// Token: 0x0401ECCC RID: 126156
 		private readonly List<LevelAiPlanStepId> CurrentlyAbortingStepIds = new List<LevelAiPlanStepId>();
 
-		// Token: 0x04023A2B RID: 145963
+		// Token: 0x0401ECCD RID: 126157
 		[Nullable(2)]
 		private LevelAiPlan CurrentPlan;
 
-		// Token: 0x04023A2C RID: 145964
+		// Token: 0x0401ECCE RID: 126158
 		[Nullable(2)]
 		private LevelAiPlanner CurrentPlanner;
 
-		// Token: 0x04023A2D RID: 145965
+		// Token: 0x0401ECCF RID: 126159
 		private bool CurrentPlanStartedExecution;
 
-		// Token: 0x04023A2E RID: 145966
+		// Token: 0x0401ECD0 RID: 126160
 		private readonly bool Loop = true;
 
-		// Token: 0x04023A2F RID: 145967
+		// Token: 0x0401ECD1 RID: 126161
 		[Nullable(2)]
 		private LevelAiPlan SavedPlan;
 	}

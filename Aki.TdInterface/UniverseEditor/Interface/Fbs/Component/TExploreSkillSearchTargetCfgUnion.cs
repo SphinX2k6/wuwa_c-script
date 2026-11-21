@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C1C RID: 23580
+	// Token: 0x0200623B RID: 25147
 	public class TExploreSkillSearchTargetCfgUnion
 	{
-		// Token: 0x1700B1F0 RID: 45552
-		// (get) Token: 0x06028715 RID: 165653 RVA: 0x00590E14 File Offset: 0x0058F014
-		// (set) Token: 0x06028716 RID: 165654 RVA: 0x00590E1C File Offset: 0x0058F01C
+		// Token: 0x1700BB3E RID: 47934
+		// (get) Token: 0x0602AD07 RID: 175367 RVA: 0x005D8DA1 File Offset: 0x005D6FA1
+		// (set) Token: 0x0602AD08 RID: 175368 RVA: 0x005D8DA9 File Offset: 0x005D6FA9
 		public TExploreSkillSearchTargetCfg Type { get; set; }
 
-		// Token: 0x1700B1F1 RID: 45553
-		// (get) Token: 0x06028717 RID: 165655 RVA: 0x00590E25 File Offset: 0x0058F025
-		// (set) Token: 0x06028718 RID: 165656 RVA: 0x00590E2D File Offset: 0x0058F02D
+		// Token: 0x1700BB3F RID: 47935
+		// (get) Token: 0x0602AD09 RID: 175369 RVA: 0x005D8DB2 File Offset: 0x005D6FB2
+		// (set) Token: 0x0602AD0A RID: 175370 RVA: 0x005D8DBA File Offset: 0x005D6FBA
 		public object Value { get; set; }
 
-		// Token: 0x06028719 RID: 165657 RVA: 0x00590E36 File Offset: 0x0058F036
+		// Token: 0x0602AD0B RID: 175371 RVA: 0x005D8DC3 File Offset: 0x005D6FC3
 		public TExploreSkillSearchTargetCfgUnion()
 		{
 			this.Type = TExploreSkillSearchTargetCfg.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602871A RID: 165658 RVA: 0x00590E4C File Offset: 0x0058F04C
+		// Token: 0x0602AD0C RID: 175372 RVA: 0x005D8DD9 File Offset: 0x005D6FD9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602871B RID: 165659 RVA: 0x00590E5E File Offset: 0x0058F05E
+		// Token: 0x0602AD0D RID: 175373 RVA: 0x005D8DEB File Offset: 0x005D6FEB
 		public IAngleWeightT AsIAngleWeight()
 		{
 			return this.As<IAngleWeightT>();
 		}
 
-		// Token: 0x0602871C RID: 165660 RVA: 0x00590E66 File Offset: 0x0058F066
+		// Token: 0x0602AD0E RID: 175374 RVA: 0x005D8DF3 File Offset: 0x005D6FF3
 		public static TExploreSkillSearchTargetCfgUnion FromIAngleWeight(IAngleWeightT _iangleweight)
 		{
 			return new TExploreSkillSearchTargetCfgUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602871D RID: 165661 RVA: 0x00590E7B File Offset: 0x0058F07B
+		// Token: 0x0602AD0F RID: 175375 RVA: 0x005D8E08 File Offset: 0x005D7008
 		public IEnterScreenWeightT AsIEnterScreenWeight()
 		{
 			return this.As<IEnterScreenWeightT>();
 		}
 
-		// Token: 0x0602871E RID: 165662 RVA: 0x00590E83 File Offset: 0x0058F083
+		// Token: 0x0602AD10 RID: 175376 RVA: 0x005D8E10 File Offset: 0x005D7010
 		public static TExploreSkillSearchTargetCfgUnion FromIEnterScreenWeight(IEnterScreenWeightT _ienterscreenweight)
 		{
 			return new TExploreSkillSearchTargetCfgUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602871F RID: 165663 RVA: 0x00590E98 File Offset: 0x0058F098
+		// Token: 0x0602AD11 RID: 175377 RVA: 0x005D8E28 File Offset: 0x005D7028
 		public static int Pack(FlatBufferBuilder builder, TExploreSkillSearchTargetCfgUnion _o)
 		{
 			TExploreSkillSearchTargetCfg type = _o.Type;

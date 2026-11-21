@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DEC RID: 3564
+	// Token: 0x02000ED1 RID: 3793
 	public struct MapFog : IFlatbufferObject
 	{
-		// Token: 0x17001DE7 RID: 7655
-		// (get) Token: 0x060090DD RID: 37085 RVA: 0x0027DDF6 File Offset: 0x0027BFF6
+		// Token: 0x17001E4B RID: 7755
+		// (get) Token: 0x060096F9 RID: 38649 RVA: 0x0029C076 File Offset: 0x0029A276
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090DE RID: 37086 RVA: 0x0027DE03 File Offset: 0x0027C003
+		// Token: 0x060096FA RID: 38650 RVA: 0x0029C083 File Offset: 0x0029A283
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060090DF RID: 37087 RVA: 0x0027DE0C File Offset: 0x0027C00C
+		// Token: 0x060096FB RID: 38651 RVA: 0x0029C08C File Offset: 0x0029A28C
 		public static MapFog GetRootAsMapFog(ByteBuffer _bb)
 		{
 			return MapFog.GetRootAsMapFog(_bb, default(MapFog));
 		}
 
-		// Token: 0x060090E0 RID: 37088 RVA: 0x0027DE28 File Offset: 0x0027C028
+		// Token: 0x060096FC RID: 38652 RVA: 0x0029C0A8 File Offset: 0x0029A2A8
 		public static MapFog GetRootAsMapFog(ByteBuffer _bb, MapFog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060090E1 RID: 37089 RVA: 0x0027DE45 File Offset: 0x0027C045
+		// Token: 0x060096FD RID: 38653 RVA: 0x0029C0C5 File Offset: 0x0029A2C5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060090E2 RID: 37090 RVA: 0x0027DE54 File Offset: 0x0027C054
+		// Token: 0x060096FE RID: 38654 RVA: 0x0029C0D4 File Offset: 0x0029A2D4
 		public MapFog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001DE8 RID: 7656
-		// (get) Token: 0x060090E3 RID: 37091 RVA: 0x0027DE64 File Offset: 0x0027C064
+		// Token: 0x17001E4C RID: 7756
+		// (get) Token: 0x060096FF RID: 38655 RVA: 0x0029C0E4 File Offset: 0x0029A2E4
 		public int Fog
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DE9 RID: 7657
-		// (get) Token: 0x060090E4 RID: 37092 RVA: 0x0027DEA0 File Offset: 0x0027C0A0
+		// Token: 0x17001E4D RID: 7757
+		// (get) Token: 0x06009700 RID: 38656 RVA: 0x0029C120 File Offset: 0x0029A320
 		public int MapId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DEA RID: 7658
-		// (get) Token: 0x060090E5 RID: 37093 RVA: 0x0027DEDC File Offset: 0x0027C0DC
+		// Token: 0x17001E4E RID: 7758
+		// (get) Token: 0x06009701 RID: 38657 RVA: 0x0029C15C File Offset: 0x0029A35C
 		public int AreaId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DEB RID: 7659
-		// (get) Token: 0x060090E6 RID: 37094 RVA: 0x0027DF18 File Offset: 0x0027C118
+		// Token: 0x17001E4F RID: 7759
+		// (get) Token: 0x06009702 RID: 38658 RVA: 0x0029C198 File Offset: 0x0029A398
 		public int GravityFlip
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001DEC RID: 7660
-		// (get) Token: 0x060090E7 RID: 37095 RVA: 0x0027DF58 File Offset: 0x0027C158
+		// Token: 0x17001E50 RID: 7760
+		// (get) Token: 0x06009703 RID: 38659 RVA: 0x0029C1D8 File Offset: 0x0029A3D8
 		public int UnlockCondition
 		{
 			get
@@ -124,7 +124,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090E8 RID: 37096 RVA: 0x0027DF98 File Offset: 0x0027C198
+		// Token: 0x06009704 RID: 38660 RVA: 0x0029C218 File Offset: 0x0029A418
 		public int FogUnlockPosition(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -135,8 +135,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001DED RID: 7661
-		// (get) Token: 0x060090E9 RID: 37097 RVA: 0x0027DFD8 File Offset: 0x0027C1D8
+		// Token: 0x17001E51 RID: 7761
+		// (get) Token: 0x06009705 RID: 38661 RVA: 0x0029C258 File Offset: 0x0029A458
 		public int FogUnlockPositionLength
 		{
 			get
@@ -150,37 +150,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060090EA RID: 37098 RVA: 0x0027E004 File Offset: 0x0027C204
+		// Token: 0x06009706 RID: 38662 RVA: 0x0029C284 File Offset: 0x0029A484
 		public Span<int> GetFogUnlockPositionBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x060090EB RID: 37099 RVA: 0x0027E014 File Offset: 0x0027C214
+		// Token: 0x06009707 RID: 38663 RVA: 0x0029C294 File Offset: 0x0029A494
 		public int[] GetFogUnlockPositionArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060090EC RID: 37100 RVA: 0x0027E02C File Offset: 0x0027C22C
+		// Token: 0x06009708 RID: 38664 RVA: 0x0029C2AC File Offset: 0x0029A4AC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FogUnlockPositionIter()或GetFogUnlockPositionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FogUnlockPosition()
+		public int[] FogUnlockPosition()
 		{
-			MapFog mapFog = this;
-			return mapFog.GetFogUnlockPositionArray() ?? Array.Empty<int>();
+			return this.GetFogUnlockPositionArray();
 		}
 
-		// Token: 0x060090ED RID: 37101 RVA: 0x0027E050 File Offset: 0x0027C250
+		// Token: 0x06009709 RID: 38665 RVA: 0x0029C2B4 File Offset: 0x0029A4B4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FogUnlockPositionIter()
+		public IEnumerable<int> FogUnlockPositionIter()
 		{
 			MapFog.<FogUnlockPositionIter>d__24 <FogUnlockPositionIter>d__ = new MapFog.<FogUnlockPositionIter>d__24(-2);
 			<FogUnlockPositionIter>d__.<>3__<>4__this = this;
 			return <FogUnlockPositionIter>d__;
 		}
 
-		// Token: 0x04004E88 RID: 20104
+		// Token: 0x0400546D RID: 21613
 		private Table __p;
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200025F RID: 607
+// Token: 0x02000263 RID: 611
 [NullableContext(2)]
 public interface IAudioInfo
 {
-	// Token: 0x170005A4 RID: 1444
-	// (get) Token: 0x06002545 RID: 9541
-	// (set) Token: 0x06002546 RID: 9542
+	// Token: 0x170005CB RID: 1483
+	// (get) Token: 0x060025FC RID: 9724
+	// (set) Token: 0x060025FD RID: 9725
 	bool Start { get; set; }
 
-	// Token: 0x06002547 RID: 9543
+	// Token: 0x060025FE RID: 9726
 	[NullableContext(1)]
 	object GetCompare();
 
-	// Token: 0x06002548 RID: 9544
+	// Token: 0x060025FF RID: 9727
 	string GetName();
 
-	// Token: 0x06002549 RID: 9545
+	// Token: 0x06002600 RID: 9728
 	string GetAudioEvent();
 
-	// Token: 0x0600254A RID: 9546
+	// Token: 0x06002601 RID: 9729
 	bool IsValid();
 
-	// Token: 0x0600254B RID: 9547
+	// Token: 0x06002602 RID: 9730
 	bool IsAudioEventValid();
 }

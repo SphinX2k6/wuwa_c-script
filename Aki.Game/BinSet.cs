@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021FC RID: 8700
+// Token: 0x020016E0 RID: 5856
 public class BinSet
 {
-	// Token: 0x04008093 RID: 32915
+	// Token: 0x040081D1 RID: 33233
 	public int BinNum;
 
-	// Token: 0x04008094 RID: 32916
+	// Token: 0x040081D2 RID: 33234
 	public double MinX;
 
-	// Token: 0x04008095 RID: 32917
+	// Token: 0x040081D3 RID: 33235
 	public double MaxX;
 
-	// Token: 0x04008096 RID: 32918
+	// Token: 0x040081D4 RID: 33236
 	public double MinY;
 
-	// Token: 0x04008097 RID: 32919
+	// Token: 0x040081D5 RID: 33237
 	public double MaxY;
 
-	// Token: 0x04008098 RID: 32920
+	// Token: 0x040081D6 RID: 33238
 	public double DeltaY;
 
-	// Token: 0x04008099 RID: 32921
+	// Token: 0x040081D7 RID: 33239
 	public double InvDeltaY;
 
-	// Token: 0x0400809A RID: 32922
+	// Token: 0x040081D8 RID: 33240
 	[Nullable(new byte[]
 	{
 		2,

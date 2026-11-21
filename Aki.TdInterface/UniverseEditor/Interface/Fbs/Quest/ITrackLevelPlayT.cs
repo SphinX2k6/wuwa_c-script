@@ -5,45 +5,45 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004203 RID: 16899
+	// Token: 0x0200465F RID: 18015
 	public class ITrackLevelPlayT
 	{
-		// Token: 0x170077FC RID: 30716
-		// (get) Token: 0x06018F40 RID: 102208 RVA: 0x003975BB File Offset: 0x003957BB
-		// (set) Token: 0x06018F41 RID: 102209 RVA: 0x003975C3 File Offset: 0x003957C3
+		// Token: 0x17007E2D RID: 32301
+		// (get) Token: 0x0601A6AC RID: 108204 RVA: 0x003C2C93 File Offset: 0x003C0E93
+		// (set) Token: 0x0601A6AD RID: 108205 RVA: 0x003C2C9B File Offset: 0x003C0E9B
 		public ETrackType Type { get; set; }
 
-		// Token: 0x170077FD RID: 30717
-		// (get) Token: 0x06018F42 RID: 102210 RVA: 0x003975CC File Offset: 0x003957CC
-		// (set) Token: 0x06018F43 RID: 102211 RVA: 0x003975D4 File Offset: 0x003957D4
+		// Token: 0x17007E2E RID: 32302
+		// (get) Token: 0x0601A6AE RID: 108206 RVA: 0x003C2CA4 File Offset: 0x003C0EA4
+		// (set) Token: 0x0601A6AF RID: 108207 RVA: 0x003C2CAC File Offset: 0x003C0EAC
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x170077FE RID: 30718
-		// (get) Token: 0x06018F44 RID: 102212 RVA: 0x003975DD File Offset: 0x003957DD
-		// (set) Token: 0x06018F45 RID: 102213 RVA: 0x003975E5 File Offset: 0x003957E5
+		// Token: 0x17007E2F RID: 32303
+		// (get) Token: 0x0601A6B0 RID: 108208 RVA: 0x003C2CB5 File Offset: 0x003C0EB5
+		// (set) Token: 0x0601A6B1 RID: 108209 RVA: 0x003C2CBD File Offset: 0x003C0EBD
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x170077FF RID: 30719
-		// (get) Token: 0x06018F46 RID: 102214 RVA: 0x003975EE File Offset: 0x003957EE
-		// (set) Token: 0x06018F47 RID: 102215 RVA: 0x003975F6 File Offset: 0x003957F6
+		// Token: 0x17007E30 RID: 32304
+		// (get) Token: 0x0601A6B2 RID: 108210 RVA: 0x003C2CC6 File Offset: 0x003C0EC6
+		// (set) Token: 0x0601A6B3 RID: 108211 RVA: 0x003C2CCE File Offset: 0x003C0ECE
 		public IVectorInfoT OutOfRangeTrackPos { get; set; }
 
-		// Token: 0x17007800 RID: 30720
-		// (get) Token: 0x06018F48 RID: 102216 RVA: 0x003975FF File Offset: 0x003957FF
-		// (set) Token: 0x06018F49 RID: 102217 RVA: 0x00397607 File Offset: 0x00395807
+		// Token: 0x17007E31 RID: 32305
+		// (get) Token: 0x0601A6B4 RID: 108212 RVA: 0x003C2CD7 File Offset: 0x003C0ED7
+		// (set) Token: 0x0601A6B5 RID: 108213 RVA: 0x003C2CDF File Offset: 0x003C0EDF
 		public List<IConditionTrackPosT> ConditionTrackPosList { get; set; }
 
-		// Token: 0x17007801 RID: 30721
-		// (get) Token: 0x06018F4A RID: 102218 RVA: 0x00397610 File Offset: 0x00395810
-		// (set) Token: 0x06018F4B RID: 102219 RVA: 0x00397618 File Offset: 0x00395818
+		// Token: 0x17007E32 RID: 32306
+		// (get) Token: 0x0601A6B6 RID: 108214 RVA: 0x003C2CE8 File Offset: 0x003C0EE8
+		// (set) Token: 0x0601A6B7 RID: 108215 RVA: 0x003C2CF0 File Offset: 0x003C0EF0
 		public ELevelPlayTrackSwitchRule TrackSwitchRule { get; set; }
 
-		// Token: 0x17007802 RID: 30722
-		// (get) Token: 0x06018F4C RID: 102220 RVA: 0x00397621 File Offset: 0x00395821
-		// (set) Token: 0x06018F4D RID: 102221 RVA: 0x00397629 File Offset: 0x00395829
+		// Token: 0x17007E33 RID: 32307
+		// (get) Token: 0x0601A6B8 RID: 108216 RVA: 0x003C2CF9 File Offset: 0x003C0EF9
+		// (set) Token: 0x0601A6B9 RID: 108217 RVA: 0x003C2D01 File Offset: 0x003C0F01
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018F4E RID: 102222 RVA: 0x00397632 File Offset: 0x00395832
+		// Token: 0x0601A6BA RID: 108218 RVA: 0x003C2D0A File Offset: 0x003C0F0A
 		public ITrackLevelPlayT()
 		{
 			this.Type = ETrackType.Locations;

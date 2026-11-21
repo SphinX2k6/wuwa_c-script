@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200257E RID: 9598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200282A RID: 10282
 	public class IVisualNovelPerformancePlayScreenEffect : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D773 RID: 55155 RVA: 0x0020179A File Offset: 0x001FF99A
+		// Token: 0x0600E4E6 RID: 58598 RVA: 0x0021D40D File Offset: 0x0021B60D
 		public static IVisualNovelPerformancePlayScreenEffect Create(IVisualNovelPerformancePlayScreenEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E39 RID: 15929
-		// (get) Token: 0x0600D774 RID: 55156 RVA: 0x002017B9 File Offset: 0x001FF9B9
+		// Token: 0x17004140 RID: 16704
+		// (get) Token: 0x0600E4E7 RID: 58599 RVA: 0x0021D42C File Offset: 0x0021B62C
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E3A RID: 15930
-		// (get) Token: 0x0600D775 RID: 55157 RVA: 0x002017C8 File Offset: 0x001FF9C8
+		// Token: 0x17004141 RID: 16705
+		// (get) Token: 0x0600E4E8 RID: 58600 RVA: 0x0021D43C File Offset: 0x0021B63C
 		public override float? StartTime
 		{
 			get
@@ -46,31 +43,29 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E3B RID: 15931
-		// (get) Token: 0x0600D776 RID: 55158 RVA: 0x002017FE File Offset: 0x001FF9FE
-		public virtual string ScreenEffectDa
+		// Token: 0x17004142 RID: 16706
+		// (get) Token: 0x0600E4E9 RID: 58601 RVA: 0x0021D472 File Offset: 0x0021B672
+		public virtual IVisualNovelPlayScreenEffectConfigBase EffectConfig
 		{
 			get
 			{
-				return this.Instance.ScreenEffectDa;
-			}
-		}
-
-		// Token: 0x17003E3C RID: 15932
-		// (get) Token: 0x0600D777 RID: 55159 RVA: 0x0020180C File Offset: 0x001FFA0C
-		public virtual float? DestroyCountdown
-		{
-			get
-			{
-				if ((this.Instance.NullMask & 2) == 0)
+				if (this._EffectConfigInited)
 				{
-					return null;
+					return this._EffectConfigCache;
 				}
-				return new float?(this.Instance.DestroyCountdown);
+				this._EffectConfigInited = true;
+				this._EffectConfigCache = ActionReadHelper.ReadIVisualNovelPerformancePlayScreenEffect_EffectConfig(this.Instance);
+				return this._EffectConfigCache;
 			}
 		}
 
-		// Token: 0x04007740 RID: 30528
+		// Token: 0x04007DA0 RID: 32160
 		private IVisualNovelPerformancePlayScreenEffect Instance;
+
+		// Token: 0x04007DA1 RID: 32161
+		private IVisualNovelPlayScreenEffectConfigBase _EffectConfigCache;
+
+		// Token: 0x04007DA2 RID: 32162
+		private bool _EffectConfigInited;
 	}
 }

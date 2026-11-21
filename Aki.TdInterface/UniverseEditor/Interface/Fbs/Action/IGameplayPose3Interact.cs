@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200687F RID: 26751
+	// Token: 0x02006F20 RID: 28448
 	public struct IGameplayPose3Interact : IFlatbufferObject
 	{
-		// Token: 0x1700C6AA RID: 50858
-		// (get) Token: 0x0602EA71 RID: 191089 RVA: 0x0065CA21 File Offset: 0x0065AC21
+		// Token: 0x1700D090 RID: 53392
+		// (get) Token: 0x060313AB RID: 201643 RVA: 0x006ABAA1 File Offset: 0x006A9CA1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EA72 RID: 191090 RVA: 0x0065CA2E File Offset: 0x0065AC2E
+		// Token: 0x060313AC RID: 201644 RVA: 0x006ABAAE File Offset: 0x006A9CAE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EA73 RID: 191091 RVA: 0x0065CA38 File Offset: 0x0065AC38
+		// Token: 0x060313AD RID: 201645 RVA: 0x006ABAB8 File Offset: 0x006A9CB8
 		public static IGameplayPose3Interact GetRootAsIGameplayPose3Interact(ByteBuffer _bb)
 		{
 			return IGameplayPose3Interact.GetRootAsIGameplayPose3Interact(_bb, default(IGameplayPose3Interact));
 		}
 
-		// Token: 0x0602EA74 RID: 191092 RVA: 0x0065CA54 File Offset: 0x0065AC54
+		// Token: 0x060313AE RID: 201646 RVA: 0x006ABAD4 File Offset: 0x006A9CD4
 		public static IGameplayPose3Interact GetRootAsIGameplayPose3Interact(ByteBuffer _bb, IGameplayPose3Interact obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EA75 RID: 191093 RVA: 0x0065CA71 File Offset: 0x0065AC71
+		// Token: 0x060313AF RID: 201647 RVA: 0x006ABAF1 File Offset: 0x006A9CF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EA76 RID: 191094 RVA: 0x0065CA80 File Offset: 0x0065AC80
+		// Token: 0x060313B0 RID: 201648 RVA: 0x006ABB00 File Offset: 0x006A9D00
 		public IGameplayPose3Interact __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C6AB RID: 50859
-		// (get) Token: 0x0602EA77 RID: 191095 RVA: 0x0065CA90 File Offset: 0x0065AC90
+		// Token: 0x1700D091 RID: 53393
+		// (get) Token: 0x060313B1 RID: 201649 RVA: 0x006ABB10 File Offset: 0x006A9D10
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EA78 RID: 191096 RVA: 0x0065CACC File Offset: 0x0065ACCC
+		// Token: 0x060313B2 RID: 201650 RVA: 0x006ABB4C File Offset: 0x006A9D4C
 		public static Offset<IGameplayPose3Interact> CreateIGameplayPose3Interact(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGameplayPose3Interact.EndIGameplayPose3Interact(builder);
 		}
 
-		// Token: 0x0602EA79 RID: 191097 RVA: 0x0065CAE2 File Offset: 0x0065ACE2
+		// Token: 0x060313B3 RID: 201651 RVA: 0x006ABB62 File Offset: 0x006A9D62
 		public static void StartIGameplayPose3Interact(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602EA7A RID: 191098 RVA: 0x0065CAEB File Offset: 0x0065ACEB
+		// Token: 0x060313B4 RID: 201652 RVA: 0x006ABB6B File Offset: 0x006A9D6B
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602EA7B RID: 191099 RVA: 0x0065CAF6 File Offset: 0x0065ACF6
+		// Token: 0x060313B5 RID: 201653 RVA: 0x006ABB76 File Offset: 0x006A9D76
 		public static Offset<IGameplayPose3Interact> EndIGameplayPose3Interact(FlatBufferBuilder builder)
 		{
 			return new Offset<IGameplayPose3Interact>(builder.EndTable());
 		}
 
-		// Token: 0x0602EA7C RID: 191100 RVA: 0x0065CB04 File Offset: 0x0065AD04
+		// Token: 0x060313B6 RID: 201654 RVA: 0x006ABB84 File Offset: 0x006A9D84
 		public IGameplayPose3InteractT UnPack()
 		{
 			IGameplayPose3InteractT gameplayPose3InteractT = new IGameplayPose3InteractT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return gameplayPose3InteractT;
 		}
 
-		// Token: 0x0602EA7D RID: 191101 RVA: 0x0065CB1F File Offset: 0x0065AD1F
+		// Token: 0x060313B7 RID: 201655 RVA: 0x006ABB9F File Offset: 0x006A9D9F
 		public void UnPackTo(IGameplayPose3InteractT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602EA7E RID: 191102 RVA: 0x0065CB30 File Offset: 0x0065AD30
+		// Token: 0x060313B8 RID: 201656 RVA: 0x006ABBB0 File Offset: 0x006A9DB0
 		public static Offset<IGameplayPose3Interact> Pack(FlatBufferBuilder builder, IGameplayPose3InteractT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGameplayPose3Interact.CreateIGameplayPose3Interact(builder, _o.Type);
 		}
 
-		// Token: 0x04010FD4 RID: 69588
+		// Token: 0x04011E29 RID: 73257
 		private Table __p;
 	}
 }

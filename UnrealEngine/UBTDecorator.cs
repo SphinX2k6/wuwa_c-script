@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000138 RID: 312
+	// Token: 0x020000B1 RID: 177
 	[UnrealObjectPath("/Script/AIModule.BTDecorator")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public abstract class UBTDecorator : UBTAuxiliaryNode, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060015F0 RID: 5616 RVA: 0x000203E3 File Offset: 0x0001E5E3
+		// Token: 0x06000D4E RID: 3406 RVA: 0x0001511D File Offset: 0x0001331D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTDecorator._ClassPtr;
 		}
 
-		// Token: 0x170005BC RID: 1468
-		// (get) Token: 0x060015F1 RID: 5617 RVA: 0x000203EF File Offset: 0x0001E5EF
-		// (set) Token: 0x060015F2 RID: 5618 RVA: 0x00020408 File Offset: 0x0001E608
+		// Token: 0x1700010B RID: 267
+		// (get) Token: 0x06000D4F RID: 3407 RVA: 0x00015129 File Offset: 0x00013329
+		// (set) Token: 0x06000D50 RID: 3408 RVA: 0x00015142 File Offset: 0x00013342
 		public unsafe bool bInverseCondition
 		{
 			get
@@ -32,54 +32,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170005BD RID: 1469
-		// (get) Token: 0x060015F3 RID: 5619 RVA: 0x00020438 File Offset: 0x0001E638
-		// (set) Token: 0x060015F4 RID: 5620 RVA: 0x0002044C File Offset: 0x0001E64C
-		public unsafe TEnumAsByte<EBTFlowAbortMode> FlowAbortMode
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UBTDecorator.__PropertyOffset_FlowAbortMode);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UBTDecorator.__PropertyOffset_FlowAbortMode) = value;
-			}
-		}
-
-		// Token: 0x060015F5 RID: 5621 RVA: 0x00020461 File Offset: 0x0001E661
+		// Token: 0x06000D51 RID: 3409 RVA: 0x00015172 File Offset: 0x00013372
 		static UBTDecorator()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AIModule.BTDecorator");
 		}
 
-		// Token: 0x060015F6 RID: 5622 RVA: 0x00020470 File Offset: 0x0001E670
+		// Token: 0x06000D52 RID: 3410 RVA: 0x00015180 File Offset: 0x00013380
 		protected UBTDecorator() : this(BuiltinUtils.AllocNativeUObject(UBTDecorator.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060015F7 RID: 5623 RVA: 0x00020498 File Offset: 0x0001E698
+		// Token: 0x06000D53 RID: 3411 RVA: 0x000151A8 File Offset: 0x000133A8
 		protected UBTDecorator(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040004D3 RID: 1235
+		// Token: 0x0400025A RID: 602
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AIModule.BTDecorator";
 
-		// Token: 0x040004D4 RID: 1236
+		// Token: 0x0400025B RID: 603
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040004D5 RID: 1237
+		// Token: 0x0400025C RID: 604
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040004D6 RID: 1238
+		// Token: 0x0400025D RID: 605
 		internal static int __PropertyOffset_bInverseCondition;
 
-		// Token: 0x040004D7 RID: 1239
+		// Token: 0x0400025E RID: 606
 		internal static byte __PropertyMask_bInverseCondition;
-
-		// Token: 0x040004D8 RID: 1240
-		internal static int __PropertyOffset_FlowAbortMode;
 	}
 }

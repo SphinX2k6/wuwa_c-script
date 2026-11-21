@@ -1,54 +1,54 @@
 ﻿using System;
 
-// Token: 0x02002A3A RID: 10810
+// Token: 0x02001FB5 RID: 8117
 internal enum <SpecialItemSummonShowView>F2848DE715A659D7DC910E03D8220121798790E99C24467AF34F813BB3706D212__EComponent
 {
-	// Token: 0x0400A713 RID: 42771
+	// Token: 0x0400AB17 RID: 43799
 	CaptionItem,
-	// Token: 0x0400A714 RID: 42772
+	// Token: 0x0400AB18 RID: 43800
 	OnlyUiToggle,
-	// Token: 0x0400A715 RID: 42773
+	// Token: 0x0400AB19 RID: 43801
 	DetailIconButton,
-	// Token: 0x0400A716 RID: 42774
+	// Token: 0x0400AB1A RID: 43802
 	ButtonLeft,
-	// Token: 0x0400A717 RID: 42775
+	// Token: 0x0400AB1B RID: 43803
 	ButtonRight,
-	// Token: 0x0400A718 RID: 42776
+	// Token: 0x0400AB1C RID: 43804
 	TitleText,
-	// Token: 0x0400A719 RID: 42777
+	// Token: 0x0400AB1D RID: 43805
 	SubTitleText,
-	// Token: 0x0400A71A RID: 42778
+	// Token: 0x0400AB1E RID: 43806
 	SwitchItem,
-	// Token: 0x0400A71B RID: 42779
+	// Token: 0x0400AB1F RID: 43807
 	ToggleLeft,
-	// Token: 0x0400A71C RID: 42780
+	// Token: 0x0400AB20 RID: 43808
 	ExtraRewardItem,
-	// Token: 0x0400A71D RID: 42781
+	// Token: 0x0400AB21 RID: 43809
 	DescText = 12,
-	// Token: 0x0400A71E RID: 42782
+	// Token: 0x0400AB22 RID: 43810
 	NotHaveRoleItem,
-	// Token: 0x0400A71F RID: 42783
+	// Token: 0x0400AB23 RID: 43811
 	AssembleButton = 17,
-	// Token: 0x0400A720 RID: 42784
+	// Token: 0x0400AB24 RID: 43812
 	HideUiParentItem = 28,
-	// Token: 0x0400A721 RID: 42785
+	// Token: 0x0400AB25 RID: 43813
 	DragComponent,
-	// Token: 0x0400A722 RID: 42786
+	// Token: 0x0400AB26 RID: 43814
 	ToggleRight = 31,
-	// Token: 0x0400A723 RID: 42787
+	// Token: 0x0400AB27 RID: 43815
 	ItemNonCouponPrice = 38,
-	// Token: 0x0400A724 RID: 42788
+	// Token: 0x0400AB28 RID: 43816
 	ItemGamePadKeyTipA = 45,
-	// Token: 0x0400A725 RID: 42789
+	// Token: 0x0400AB29 RID: 43817
 	ItemGamePadKeyTipB,
-	// Token: 0x0400A726 RID: 42790
+	// Token: 0x0400AB2A RID: 43818
 	ToggleLayout,
-	// Token: 0x0400A727 RID: 42791
+	// Token: 0x0400AB2B RID: 43819
 	ExtraRewardText = 50,
-	// Token: 0x0400A728 RID: 42792
+	// Token: 0x0400AB2C RID: 43820
 	ItemPanelBuy,
-	// Token: 0x0400A729 RID: 42793
+	// Token: 0x0400AB2D RID: 43821
 	ItemPanelRole,
-	// Token: 0x0400A72A RID: 42794
+	// Token: 0x0400AB2E RID: 43822
 	EffectPreviewButton = 59
 }

@@ -5,10 +5,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006630 RID: 26160
+	// Token: 0x020055AE RID: 21934
 	public class FishingLevelUpData
 	{
-		// Token: 0x06041943 RID: 268611 RVA: 0x00FE7BA4 File Offset: 0x00FE5DA4
+		// Token: 0x06036608 RID: 222728 RVA: 0x00F2EC5C File Offset: 0x00F2CE5C
 		public FishingLevelUpData(int lastExp, int currentExp)
 		{
 			this.InitExpMaxList();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.LastExp = lastExp - this.ExpMaxList[this.LastLevel - 1];
 		}
 
-		// Token: 0x06041944 RID: 268612 RVA: 0x00FE7C08 File Offset: 0x00FE5E08
+		// Token: 0x06036609 RID: 222729 RVA: 0x00F2ECC0 File Offset: 0x00F2CEC0
 		private void InitExpMaxList()
 		{
 			FishingConfig instance = FishingConfig.Instance;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041945 RID: 268613 RVA: 0x00FE7C70 File Offset: 0x00FE5E70
+		// Token: 0x0603660A RID: 222730 RVA: 0x00F2ED28 File Offset: 0x00F2CF28
 		private int GetLevelByExp(int exp)
 		{
 			int result = 0;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return result;
 		}
 
-		// Token: 0x06041946 RID: 268614 RVA: 0x00FE7CB0 File Offset: 0x00FE5EB0
+		// Token: 0x0603660B RID: 222731 RVA: 0x00F2ED68 File Offset: 0x00F2CF68
 		public int GetMaxExpByLevel(int level)
 		{
 			if (level >= this.ExpMaxList.Count)
@@ -65,31 +65,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return this.ExpMaxList[level] - this.ExpMaxList[level - 1];
 		}
 
-		// Token: 0x06041947 RID: 268615 RVA: 0x00FE7D1E File Offset: 0x00FE5F1E
+		// Token: 0x0603660C RID: 222732 RVA: 0x00F2EDD6 File Offset: 0x00F2CFD6
 		public bool IsLevelUp()
 		{
 			return this.CurrentLevel > this.LastLevel;
 		}
 
-		// Token: 0x06041948 RID: 268616 RVA: 0x00FE7D2E File Offset: 0x00FE5F2E
+		// Token: 0x0603660D RID: 222733 RVA: 0x00F2EDE6 File Offset: 0x00F2CFE6
 		public bool IsCurrentLevelMax()
 		{
 			return this.CurrentLevel == this.ExpMaxList.Count;
 		}
 
-		// Token: 0x040221D6 RID: 139734
+		// Token: 0x0401CB07 RID: 117511
 		public readonly int AddExp;
 
-		// Token: 0x040221D7 RID: 139735
+		// Token: 0x0401CB08 RID: 117512
 		public readonly int LastExp;
 
-		// Token: 0x040221D8 RID: 139736
+		// Token: 0x0401CB09 RID: 117513
 		public readonly int LastLevel;
 
-		// Token: 0x040221D9 RID: 139737
+		// Token: 0x0401CB0A RID: 117514
 		public int CurrentLevel;
 
-		// Token: 0x040221DA RID: 139738
+		// Token: 0x0401CB0B RID: 117515
 		[Nullable(1)]
 		private readonly List<int> ExpMaxList = new List<int>();
 	}

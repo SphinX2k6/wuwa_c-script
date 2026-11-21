@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.Action
 {
-	// Token: 0x0200735A RID: 29530
+	// Token: 0x020064DD RID: 25821
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineActionStopMontage : AiStateMachineAction
 	{
-		// Token: 0x060486C9 RID: 296649 RVA: 0x012A0FBF File Offset: 0x0129F1BF
+		// Token: 0x0603EB17 RID: 256791 RVA: 0x01243ABB File Offset: 0x01241CBB
 		public AiStateMachineActionStopMontage(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Action action) : base(stateMachineNode, action)
 		{
 		}
 
-		// Token: 0x060486CA RID: 296650 RVA: 0x012A0FC9 File Offset: 0x0129F1C9
+		// Token: 0x0603EB18 RID: 256792 RVA: 0x01243AC5 File Offset: 0x01241CC5
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.Action action)
 		{
 			this.BlendOutTime = action.ActionStopMontage.BlendOutTime / 1000f;
 			return true;
 		}
 
-		// Token: 0x060486CB RID: 296651 RVA: 0x012A0FE4 File Offset: 0x0129F1E4
+		// Token: 0x0603EB19 RID: 256793 RVA: 0x01243AE0 File Offset: 0x01241CE0
 		public override void DoAction(long? contextId = null)
 		{
 			CharacterSkillComponent skillComponent = this.Node.SkillComponent;
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.AI.StateMachine.Action
 			}
 		}
 
-		// Token: 0x060486CC RID: 296652 RVA: 0x012A10C3 File Offset: 0x0129F2C3
+		// Token: 0x0603EB1A RID: 256794 RVA: 0x01243BBF File Offset: 0x01241DBF
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x04026485 RID: 156805
+		// Token: 0x04021773 RID: 137075
 		private float BlendOutTime;
 	}
 }

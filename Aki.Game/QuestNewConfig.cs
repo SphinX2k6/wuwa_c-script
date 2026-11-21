@@ -2,55 +2,26 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using Aki.TDConfigMgr.Quest;
-using CSharpScript.Core.Common;
-using UnrealEngine;
 
-// Token: 0x0200264D RID: 9805
+// Token: 0x02001B38 RID: 6968
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class QuestNewConfig : ConfigBase
 {
-	// Token: 0x0601412A RID: 82218 RVA: 0x0050F425 File Offset: 0x0050D625
+	// Token: 0x0601160C RID: 71180 RVA: 0x0051E1E5 File Offset: 0x0051C3E5
 	protected override bool OnInit()
 	{
 		this.InitQuestAreaConfigs();
 		return true;
 	}
 
-	// Token: 0x0601412B RID: 82219 RVA: 0x0050F430 File Offset: 0x0050D630
+	// Token: 0x0601160D RID: 71181 RVA: 0x0051E1F0 File Offset: 0x0051C3F0
 	private void InitQuestAreaConfigs()
 	{
-		if (PublicUtil.Instance.UseDbConfig())
-		{
-			return;
-		}
-		string text = UKismetSystemLibrary.ConvertToAbsolutePath(UKismetSystemLibrary.ConvertToAbsolutePath(UBlueprintPathsLibrary.ProjectDir()) + "../Config/Raw/Tables/k.可视化编辑/AreaQuestTracking.json");
-		if (!UBlueprintPathsLibrary.FileExists(text))
-		{
-			Log instance = Log.Instance;
-			ELogModule module = ELogModule.Editor;
-			ELogAuthor author = ELogAuthor.YSQ;
-			string message = "globalConfigTemp文件不存在";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Path", text);
-			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-			return;
-		}
-		string text2 = "";
-		UKuroStaticLibrary.LoadFileToString(ref text2, text);
-		foreach (IAreaQuestTracking areaQuestTracking in Json.Decode<List<IAreaQuestTracking>>(text2, null))
-		{
-			Dictionary<string, List<int>> areaQuestTrackingList = this.AreaQuestTrackingList;
-			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
-			defaultInterpolatedStringHandler.AppendFormatted<int>(areaQuestTracking.QuestId);
-			defaultInterpolatedStringHandler.AppendLiteral("_");
-			defaultInterpolatedStringHandler.AppendFormatted<int>(areaQuestTracking.NodeId);
-			areaQuestTrackingList[defaultInterpolatedStringHandler.ToStringAndClear()] = areaQuestTracking.AreaIds;
-		}
 	}
 
-	// Token: 0x0601412C RID: 82220 RVA: 0x0050F530 File Offset: 0x0050D730
+	// Token: 0x0601160E RID: 71182 RVA: 0x0051E200 File Offset: 0x0051C400
 	[return: Nullable(2)]
 	public unsafe string GetTrackEffectPath(string trackEffectEnum)
 	{
@@ -75,7 +46,7 @@ public class QuestNewConfig : ConfigBase
 		return config.Value.Value;
 	}
 
-	// Token: 0x0601412D RID: 82221 RVA: 0x0050F5DC File Offset: 0x0050D7DC
+	// Token: 0x0601160F RID: 71183 RVA: 0x0051E2AC File Offset: 0x0051C4AC
 	[return: Nullable(2)]
 	public unsafe string GetGlobalConfig(string paramName)
 	{
@@ -100,7 +71,7 @@ public class QuestNewConfig : ConfigBase
 		return config.Value.Value;
 	}
 
-	// Token: 0x0601412E RID: 82222 RVA: 0x0050F680 File Offset: 0x0050D880
+	// Token: 0x06011610 RID: 71184 RVA: 0x0051E350 File Offset: 0x0051C550
 	public DropPackage? GetDropConfig(int? rewardId)
 	{
 		bool flag = (rewardId ?? 0) == 0;
@@ -121,7 +92,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601412F RID: 82223 RVA: 0x0050F6F8 File Offset: 0x0050D8F8
+	// Token: 0x06011611 RID: 71185 RVA: 0x0051E3C8 File Offset: 0x0051C5C8
 	public ItemInfo? GetItemInfoConfig(int itemId)
 	{
 		ItemInfo? config = ConfigItemInfoById.GetConfig(itemId, true);
@@ -137,14 +108,14 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06014130 RID: 82224 RVA: 0x0050F743 File Offset: 0x0050D943
+	// Token: 0x06011612 RID: 71186 RVA: 0x0051E413 File Offset: 0x0051C613
 	[NullableContext(2)]
 	public IReadOnlyList<QuestType> GetQuestTypeConfigs()
 	{
 		return ConfigQuestTypeAll.GetConfigList(true);
 	}
 
-	// Token: 0x06014131 RID: 82225 RVA: 0x0050F74C File Offset: 0x0050D94C
+	// Token: 0x06011613 RID: 71187 RVA: 0x0051E41C File Offset: 0x0051C61C
 	public QuestType? GetQuestTypeConfig(int questType)
 	{
 		QuestType? config = ConfigQuestTypeById.GetConfig(questType, true);
@@ -160,7 +131,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06014132 RID: 82226 RVA: 0x0050F798 File Offset: 0x0050D998
+	// Token: 0x06011614 RID: 71188 RVA: 0x0051E468 File Offset: 0x0051C668
 	public QuestMainType? GetQuestMainTypeConfig(int mainTypeId)
 	{
 		QuestMainType? config = ConfigQuestMainTypeById.GetConfig(mainTypeId, true);
@@ -176,14 +147,14 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06014133 RID: 82227 RVA: 0x0050F7E3 File Offset: 0x0050D9E3
+	// Token: 0x06011615 RID: 71189 RVA: 0x0051E4B3 File Offset: 0x0051C6B3
 	[NullableContext(2)]
 	public IReadOnlyList<QuestType> GetQuesTypesByMainType(int questType)
 	{
 		return ConfigQuestTypeByMainId.GetConfigList(questType, true);
 	}
 
-	// Token: 0x06014134 RID: 82228 RVA: 0x0050F7EC File Offset: 0x0050D9EC
+	// Token: 0x06011616 RID: 71190 RVA: 0x0051E4BC File Offset: 0x0051C6BC
 	public string GetQuestMainTypeName(int questType)
 	{
 		QuestMainType? questMainTypeConfig = this.GetQuestMainTypeConfig(questType);
@@ -194,7 +165,7 @@ public class QuestNewConfig : ConfigBase
 		return ConfigMultiTextLang.GetLocalTextNew(questMainTypeConfig.Value.MainTypeName, null) ?? "";
 	}
 
-	// Token: 0x06014135 RID: 82229 RVA: 0x0050F830 File Offset: 0x0050DA30
+	// Token: 0x06011617 RID: 71191 RVA: 0x0051E500 File Offset: 0x0051C700
 	public string GetQuestTabIcon(int questType)
 	{
 		QuestMainType? questMainTypeConfig = this.GetQuestMainTypeConfig(questType);
@@ -205,7 +176,7 @@ public class QuestNewConfig : ConfigBase
 		return questMainTypeConfig.Value.QuestTabIcon;
 	}
 
-	// Token: 0x06014136 RID: 82230 RVA: 0x0050F864 File Offset: 0x0050DA64
+	// Token: 0x06011618 RID: 71192 RVA: 0x0051E534 File Offset: 0x0051C734
 	public string GetQuestTypeMark(int markId)
 	{
 		TaskMark? config = ConfigTaskMarkByMarkId.GetConfig(markId, true);
@@ -231,7 +202,7 @@ public class QuestNewConfig : ConfigBase
 		return config.Value.MarkPic;
 	}
 
-	// Token: 0x06014137 RID: 82231 RVA: 0x0050F908 File Offset: 0x0050DB08
+	// Token: 0x06011619 RID: 71193 RVA: 0x0051E5D8 File Offset: 0x0051C7D8
 	public TaskMark? GetQuestMarkConfig(int markId)
 	{
 		TaskMark? config = ConfigTaskMarkByMarkId.GetConfig(markId, true);
@@ -247,7 +218,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06014138 RID: 82232 RVA: 0x0050F954 File Offset: 0x0050DB54
+	// Token: 0x0601161A RID: 71194 RVA: 0x0051E624 File Offset: 0x0051C824
 	public int? GetQuestTypeMarkId(int questType)
 	{
 		QuestMainType? questMainTypeConfig = this.GetQuestMainTypeConfig(questType);
@@ -258,7 +229,7 @@ public class QuestNewConfig : ConfigBase
 		return new int?(questMainTypeConfig.Value.TrackIconId);
 	}
 
-	// Token: 0x06014139 RID: 82233 RVA: 0x0050F990 File Offset: 0x0050DB90
+	// Token: 0x0601161B RID: 71195 RVA: 0x0051E660 File Offset: 0x0051C860
 	public QuestChapter? GetChapterConfig(int chapterId)
 	{
 		QuestChapter? config = ConfigQuestChapterById.GetConfig(chapterId, true);
@@ -275,7 +246,7 @@ public class QuestNewConfig : ConfigBase
 		return new QuestChapter?(config.Value);
 	}
 
-	// Token: 0x0601413A RID: 82234 RVA: 0x0050F9F0 File Offset: 0x0050DBF0
+	// Token: 0x0601161C RID: 71196 RVA: 0x0051E6C0 File Offset: 0x0051C8C0
 	public unsafe OccupationConfig? GetOccupationConfig(string occupationId)
 	{
 		OccupationConfig? config = ConfigOccupationConfigById.GetConfig(occupationId, true);
@@ -293,7 +264,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601413B RID: 82235 RVA: 0x0050FA68 File Offset: 0x0050DC68
+	// Token: 0x0601161D RID: 71197 RVA: 0x0051E738 File Offset: 0x0051C938
 	public unsafe NewOccupationConfig? GetNewOccupationConfig(string occupationId)
 	{
 		NewOccupationConfig? config = ConfigNewOccupationConfigById.GetConfig(occupationId, true);
@@ -311,7 +282,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601413C RID: 82236 RVA: 0x0050FAE0 File Offset: 0x0050DCE0
+	// Token: 0x0601161E RID: 71198 RVA: 0x0051E7B0 File Offset: 0x0051C9B0
 	[return: Nullable(2)]
 	public string GetOccupationResourceName(string occupationId)
 	{
@@ -323,7 +294,7 @@ public class QuestNewConfig : ConfigBase
 		return PublicUtil.Instance.GetConfigTextByTable(ETableText.OccupationConfigName, occupationConfig.Value.Id);
 	}
 
-	// Token: 0x0601413D RID: 82237 RVA: 0x0050FB20 File Offset: 0x0050DD20
+	// Token: 0x0601161F RID: 71199 RVA: 0x0051E7F0 File Offset: 0x0051C9F0
 	[return: Nullable(2)]
 	public string GetOccupationType(string occupationId)
 	{
@@ -335,7 +306,7 @@ public class QuestNewConfig : ConfigBase
 		return occupationConfig.Value.OccupationType;
 	}
 
-	// Token: 0x0601413E RID: 82238 RVA: 0x0050FB54 File Offset: 0x0050DD54
+	// Token: 0x06011620 RID: 71200 RVA: 0x0051E824 File Offset: 0x0051CA24
 	public QuestData? GetQuestConfig(int questId)
 	{
 		QuestData? config = ConfigQuestDataById.GetConfig(questId, false);
@@ -351,7 +322,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601413F RID: 82239 RVA: 0x0050FBA0 File Offset: 0x0050DDA0
+	// Token: 0x06011621 RID: 71201 RVA: 0x0051E870 File Offset: 0x0051CA70
 	public unsafe QuestNodeData? GetQuestNodeConfig(int questId, int nodeId)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -373,7 +344,7 @@ public class QuestNewConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06014140 RID: 82240 RVA: 0x0050FC48 File Offset: 0x0050DE48
+	// Token: 0x06011622 RID: 71202 RVA: 0x0051E918 File Offset: 0x0051CB18
 	[NullableContext(2)]
 	public string GetQuestTypeColor(int questType)
 	{
@@ -391,7 +362,7 @@ public class QuestNewConfig : ConfigBase
 		return questTypeConfig.Value.TypeColor;
 	}
 
-	// Token: 0x06014141 RID: 82241 RVA: 0x0050FCA4 File Offset: 0x0050DEA4
+	// Token: 0x06011623 RID: 71203 RVA: 0x0051E974 File Offset: 0x0051CB74
 	[NullableContext(2)]
 	public string GetQuestMainTypeCircleColor(int questType)
 	{
@@ -409,7 +380,7 @@ public class QuestNewConfig : ConfigBase
 		return this.GetQuestMainTypeConfig(questTypeConfig.Value.MainId).Value.CircleColor;
 	}
 
-	// Token: 0x06014142 RID: 82242 RVA: 0x0050FD18 File Offset: 0x0050DF18
+	// Token: 0x06011624 RID: 71204 RVA: 0x0051E9E8 File Offset: 0x0051CBE8
 	[NullableContext(2)]
 	public string GetQuestMainTypeTrackBgColor(int questType)
 	{
@@ -427,7 +398,7 @@ public class QuestNewConfig : ConfigBase
 		return this.GetQuestMainTypeConfig(questTypeConfig.Value.MainId).Value.TrackBgColor;
 	}
 
-	// Token: 0x06014143 RID: 82243 RVA: 0x0050FD8C File Offset: 0x0050DF8C
+	// Token: 0x06011625 RID: 71205 RVA: 0x0051EA5C File Offset: 0x0051CC5C
 	[NullableContext(2)]
 	public string GetQuestTypeTextColor(int questType)
 	{
@@ -445,7 +416,7 @@ public class QuestNewConfig : ConfigBase
 		return questTypeConfig.Value.TextColor;
 	}
 
-	// Token: 0x06014144 RID: 82244 RVA: 0x0050FDE8 File Offset: 0x0050DFE8
+	// Token: 0x06011626 RID: 71206 RVA: 0x0051EAB8 File Offset: 0x0051CCB8
 	public int? GetNewTipsShowTime(int questType)
 	{
 		QuestMainType? questMainTypeConfig = this.GetQuestMainTypeConfig(questType);
@@ -456,7 +427,7 @@ public class QuestNewConfig : ConfigBase
 		return new int?(questMainTypeConfig.Value.NewQuestTipTime);
 	}
 
-	// Token: 0x06014145 RID: 82245 RVA: 0x0050FE24 File Offset: 0x0050E024
+	// Token: 0x06011627 RID: 71207 RVA: 0x0051EAF4 File Offset: 0x0051CCF4
 	public int? GetQuestUpdateShowTime(int questType)
 	{
 		QuestMainType? questMainTypeConfig = this.GetQuestMainTypeConfig(questType);
@@ -467,7 +438,7 @@ public class QuestNewConfig : ConfigBase
 		return new int?(questMainTypeConfig.Value.QuestUpdateTipsTime);
 	}
 
-	// Token: 0x06014146 RID: 82246 RVA: 0x0050FE60 File Offset: 0x0050E060
+	// Token: 0x06011628 RID: 71208 RVA: 0x0051EB30 File Offset: 0x0051CD30
 	[NullableContext(2)]
 	public unsafe List<int> GetQuestNodeAreaInfo(int questId, int nodeId)
 	{
@@ -475,12 +446,8 @@ public class QuestNewConfig : ConfigBase
 		defaultInterpolatedStringHandler.AppendFormatted<int>(questId);
 		defaultInterpolatedStringHandler.AppendLiteral("_");
 		defaultInterpolatedStringHandler.AppendFormatted<int>(nodeId);
-		string text = defaultInterpolatedStringHandler.ToStringAndClear();
-		if (!PublicUtil.Instance.UseDbConfig())
-		{
-			return this.AreaQuestTrackingList.GetValueOrDefault(text);
-		}
-		AreaQuestTracking? config = ConfigAreaQuestTrackingById.GetConfig(text, true);
+		string p0Id = defaultInterpolatedStringHandler.ToStringAndClear();
+		AreaQuestTracking? config = ConfigAreaQuestTrackingById.GetConfig(p0Id, true);
 		if (config == null)
 		{
 			Log instance = Log.Instance;
@@ -496,8 +463,8 @@ public class QuestNewConfig : ConfigBase
 		return new List<int>(config.Value.GetAreaListArray());
 	}
 
-	// Token: 0x17001995 RID: 6549
-	// (get) Token: 0x06014147 RID: 82247 RVA: 0x0050FF38 File Offset: 0x0050E138
+	// Token: 0x170019CD RID: 6605
+	// (get) Token: 0x06011629 RID: 71209 RVA: 0x0051EBEF File Offset: 0x0051CDEF
 	public static QuestNewConfig Instance
 	{
 		get
@@ -506,7 +473,7 @@ public class QuestNewConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06014148 RID: 82248 RVA: 0x0050FF3F File Offset: 0x0050E13F
+	// Token: 0x0601162A RID: 71210 RVA: 0x0051EBF6 File Offset: 0x0051CDF6
 	public static QuestNewConfig GetOrCreateInstance()
 	{
 		if (QuestNewConfig._Instance == null)
@@ -516,7 +483,7 @@ public class QuestNewConfig : ConfigBase
 		return QuestNewConfig._Instance;
 	}
 
-	// Token: 0x06014149 RID: 82249 RVA: 0x0050FF53 File Offset: 0x0050E153
+	// Token: 0x0601162B RID: 71211 RVA: 0x0051EC0A File Offset: 0x0051CE0A
 	public static bool CreateInstance()
 	{
 		if (QuestNewConfig._Instance != null)
@@ -527,27 +494,27 @@ public class QuestNewConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601414A RID: 82250 RVA: 0x0050FF69 File Offset: 0x0050E169
+	// Token: 0x0601162C RID: 71212 RVA: 0x0051EC20 File Offset: 0x0051CE20
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601414B RID: 82251 RVA: 0x0050FF6B File Offset: 0x0050E16B
+	// Token: 0x0601162D RID: 71213 RVA: 0x0051EC22 File Offset: 0x0051CE22
 	public static void ResetStaticDefaultValue()
 	{
 		QuestNewConfig._Instance = null;
 	}
 
-	// Token: 0x0601414C RID: 82252 RVA: 0x0050FF73 File Offset: 0x0050E173
+	// Token: 0x0601162E RID: 71214 RVA: 0x0051EC2A File Offset: 0x0051CE2A
 	static QuestNewConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestNewConfig.CreateStaticDefaultValue), new Action(QuestNewConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400974B RID: 38731
+	// Token: 0x040098A3 RID: 39075
 	private readonly Dictionary<string, List<int>> AreaQuestTrackingList = new Dictionary<string, List<int>>();
 
-	// Token: 0x0400974C RID: 38732
+	// Token: 0x040098A4 RID: 39076
 	[Nullable(2)]
 	private static QuestNewConfig _Instance;
 }

@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E3A RID: 28218
+	// Token: 0x02005FBB RID: 24507
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingQteTipsItem : UiPanelBase
 	{
-		// Token: 0x06044CB4 RID: 281780 RVA: 0x010F9E2C File Offset: 0x010F802C
+		// Token: 0x0603AE41 RID: 241217 RVA: 0x010A43AC File Offset: 0x010A25AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,25 +24,25 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CB5 RID: 281781 RVA: 0x010F9E74 File Offset: 0x010F8074
+		// Token: 0x0603AE42 RID: 241218 RVA: 0x010A43F4 File Offset: 0x010A25F4
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x06044CB6 RID: 281782 RVA: 0x010F9E9F File Offset: 0x010F809F
+		// Token: 0x0603AE43 RID: 241219 RVA: 0x010A441F File Offset: 0x010A261F
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06044CB7 RID: 281783 RVA: 0x010F9EA1 File Offset: 0x010F80A1
+		// Token: 0x0603AE44 RID: 241220 RVA: 0x010A4421 File Offset: 0x010A2621
 		protected override void OnBeforeHide()
 		{
 			this.InProgressType = EFishingTipsType.None;
 		}
 
-		// Token: 0x06044CB8 RID: 281784 RVA: 0x010F9EAA File Offset: 0x010F80AA
+		// Token: 0x0603AE45 RID: 241221 RVA: 0x010A442A File Offset: 0x010A262A
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06044CB9 RID: 281785 RVA: 0x010F9EC4 File Offset: 0x010F80C4
+		// Token: 0x0603AE46 RID: 241222 RVA: 0x010A4444 File Offset: 0x010A2644
 		private void ShowTips(string sequenceName)
 		{
 			if (this.LevelSequencePlayer.GetCurrentSequence() == sequenceName)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.SetActive(true);
 		}
 
-		// Token: 0x06044CBA RID: 281786 RVA: 0x010F9F20 File Offset: 0x010F8120
+		// Token: 0x0603AE47 RID: 241223 RVA: 0x010A44A0 File Offset: 0x010A26A0
 		private void OnSequenceClose(string sequenceName)
 		{
 			EFishingTipsType efishingTipsType = EFishingTipsType.None;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044CBB RID: 281787 RVA: 0x010F9F88 File Offset: 0x010F8188
+		// Token: 0x0603AE48 RID: 241224 RVA: 0x010A4508 File Offset: 0x010A2708
 		public void ShowTip(EFishingTipsType tipsType, string extraParam, [Nullable(2)] Action callback = null)
 		{
 			string sequenceName = "Success";
@@ -128,40 +128,40 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ShowTips(sequenceName);
 		}
 
-		// Token: 0x06044CBC RID: 281788 RVA: 0x010FA008 File Offset: 0x010F8208
+		// Token: 0x0603AE49 RID: 241225 RVA: 0x010A4588 File Offset: 0x010A2788
 		private void SetTipMiss()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Fishing_QTE_Miss", Array.Empty<object>());
 		}
 
-		// Token: 0x06044CBD RID: 281789 RVA: 0x010FA025 File Offset: 0x010F8225
+		// Token: 0x0603AE4A RID: 241226 RVA: 0x010A45A5 File Offset: 0x010A27A5
 		private void SetTipSuccess()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Fishing_QTE_Success", Array.Empty<object>());
 		}
 
-		// Token: 0x06044CBE RID: 281790 RVA: 0x010FA042 File Offset: 0x010F8242
+		// Token: 0x0603AE4B RID: 241227 RVA: 0x010A45C2 File Offset: 0x010A27C2
 		private void SetTipGetFish(string count)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Fishing_QTE_Catch", new <>z__ReadOnlySingleElementList<object>(count));
 		}
 
-		// Token: 0x04023CAC RID: 146604
+		// Token: 0x0401EF61 RID: 126817
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04023CAD RID: 146605
+		// Token: 0x0401EF62 RID: 126818
 		protected EFishingTipsType InProgressType;
 
-		// Token: 0x04023CAE RID: 146606
+		// Token: 0x0401EF63 RID: 126819
 		[Nullable(2)]
 		protected Action SequenceCallback;
 
-		// Token: 0x0200CCEC RID: 52460
+		// Token: 0x0200B8DC RID: 47324
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403DCC6 RID: 253126
+			// Token: 0x040390E8 RID: 233704
 			public const int TxtTips = 0;
 		}
 	}

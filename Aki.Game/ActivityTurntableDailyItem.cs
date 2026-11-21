@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001544 RID: 5444
+// Token: 0x020009FC RID: 2556
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class ActivityTurntableDailyItem : GridProxyAbstract<ActivityTaskData>
 {
-	// Token: 0x06009BA2 RID: 39842 RVA: 0x0021B0C8 File Offset: 0x002192C8
+	// Token: 0x06006F80 RID: 28544 RVA: 0x00224E78 File Offset: 0x00223078
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class ActivityTurntableDailyItem : GridProxyAbstract<ActivityTaskData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009BA3 RID: 39843 RVA: 0x0021B134 File Offset: 0x00219334
+	// Token: 0x06006F81 RID: 28545 RVA: 0x00224EE4 File Offset: 0x002230E4
 	[NullableContext(1)]
 	public override void Refresh(ActivityTaskData data, bool isSelected, int gridIndex)
 	{
@@ -41,13 +41,13 @@ public class ActivityTurntableDailyItem : GridProxyAbstract<ActivityTaskData>
 		}));
 	}
 
-	// Token: 0x02007B7A RID: 31610
+	// Token: 0x02006D05 RID: 27909
 	private class EDailyItemComponents
 	{
-		// Token: 0x04028992 RID: 166290
+		// Token: 0x04023CCD RID: 146637
 		public const int SpriteFinished = 0;
 
-		// Token: 0x04028993 RID: 166291
+		// Token: 0x04023CCE RID: 146638
 		public const int Name = 1;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017F5 RID: 6133
+	// Token: 0x0200197E RID: 6526
 	public class IAxisLockScreenConfig_SetValue
 	{
-		// Token: 0x04005384 RID: 21380
+		// Token: 0x040057CC RID: 22476
 		public float TriggerAngle;
 
-		// Token: 0x04005385 RID: 21381
+		// Token: 0x040057CD RID: 22477
 		public float FadeInTime;
 
-		// Token: 0x04005386 RID: 21382
+		// Token: 0x040057CE RID: 22478
 		public float FadeOutTime;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002EF8 RID: 12024
+// Token: 0x0200244B RID: 9291
 public enum EAttributeEventTargetType
 {
-	// Token: 0x0400C0B7 RID: 49335
+	// Token: 0x0400C458 RID: 50264
 	Owner,
-	// Token: 0x0400C0B8 RID: 49336
+	// Token: 0x0400C459 RID: 50265
 	Instigator
 }

@@ -17,18 +17,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CEE RID: 7406
+// Token: 0x020011B0 RID: 4528
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariableResetter
 {
-	// Token: 0x0600E044 RID: 57412 RVA: 0x00348A65 File Offset: 0x00346C65
+	// Token: 0x0600B461 RID: 46177 RVA: 0x0035448D File Offset: 0x0035268D
 	static PinballBattleMainBattlePanel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PinballBattleMainBattlePanel.CreateStaticDefaultValue), new Action(PinballBattleMainBattlePanel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600E045 RID: 57413 RVA: 0x00348A84 File Offset: 0x00346C84
+	// Token: 0x0600B462 RID: 46178 RVA: 0x003544AC File Offset: 0x003526AC
 	public static void CreateStaticDefaultValue()
 	{
 		PinballBattleMainBattlePanel.DashBarRange = new float[]
@@ -44,14 +44,14 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		};
 	}
 
-	// Token: 0x0600E046 RID: 57414 RVA: 0x00348ABC File Offset: 0x00346CBC
+	// Token: 0x0600B463 RID: 46179 RVA: 0x003544E4 File Offset: 0x003526E4
 	public static void ResetStaticDefaultValue()
 	{
 		PinballBattleMainBattlePanel.DashBarRange = null;
 		PinballBattleMainBattlePanel.ComboSeqNames = null;
 	}
 
-	// Token: 0x0600E047 RID: 57415 RVA: 0x00348ACC File Offset: 0x00346CCC
+	// Token: 0x0600B464 RID: 46180 RVA: 0x003544F4 File Offset: 0x003526F4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 20;
@@ -101,7 +101,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E048 RID: 57416 RVA: 0x00348D94 File Offset: 0x00346F94
+	// Token: 0x0600B465 RID: 46181 RVA: 0x003547BC File Offset: 0x003529BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PinballBattleMainBattlePanel.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -112,7 +112,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E049 RID: 57417 RVA: 0x00348DD8 File Offset: 0x00346FD8
+	// Token: 0x0600B466 RID: 46182 RVA: 0x00354800 File Offset: 0x00352A00
 	protected override void OnStart()
 	{
 		this.InitCacheComponent();
@@ -131,7 +131,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		instance.SetBattleCenterRootItem(base.GetItem(17));
 	}
 
-	// Token: 0x0600E04A RID: 57418 RVA: 0x00348E2C File Offset: 0x0034702C
+	// Token: 0x0600B467 RID: 46183 RVA: 0x00354854 File Offset: 0x00352A54
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindDashAttrDelegate();
@@ -148,7 +148,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		seqPlayer.Clear();
 	}
 
-	// Token: 0x0600E04B RID: 57419 RVA: 0x00348E54 File Offset: 0x00347054
+	// Token: 0x0600B468 RID: 46184 RVA: 0x0035487C File Offset: 0x00352A7C
 	protected override void OnShowBattleChildViewPanel(bool isFirst)
 	{
 		this.RefreshRoleSkillItemList();
@@ -157,21 +157,21 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.PlaySwitchIn();
 	}
 
-	// Token: 0x0600E04C RID: 57420 RVA: 0x00348E6E File Offset: 0x0034706E
+	// Token: 0x0600B469 RID: 46185 RVA: 0x00354896 File Offset: 0x00352A96
 	public override void OnTickBattleChildViewPanel(float delta)
 	{
 		this.TickCountdown(delta * Time.Instance.TimeDilation);
 		this.RefreshSkillBtnState();
 	}
 
-	// Token: 0x0600E04D RID: 57421 RVA: 0x00348E88 File Offset: 0x00347088
+	// Token: 0x0600B46A RID: 46186 RVA: 0x003548B0 File Offset: 0x00352AB0
 	private void InitLevelSequencePlayer()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceFinished), false);
 	}
 
-	// Token: 0x0600E04E RID: 57422 RVA: 0x00348EB4 File Offset: 0x003470B4
+	// Token: 0x0600B46B RID: 46187 RVA: 0x003548DC File Offset: 0x00352ADC
 	private void InitCacheComponent()
 	{
 		this.TimeText = base.GetText(8);
@@ -182,7 +182,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.SkillBtn = base.GetButton(6);
 	}
 
-	// Token: 0x0600E04F RID: 57423 RVA: 0x00348F14 File Offset: 0x00347114
+	// Token: 0x0600B46C RID: 46188 RVA: 0x0035493C File Offset: 0x00352B3C
 	protected override void AddEvents()
 	{
 		EventSystem.Instance.Add<FKSC_HeadHpContext>(EEventName.OnPinballEntityHpChanged, new Action<FKSC_HeadHpContext>(this.OnEntityHpChange));
@@ -195,7 +195,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		EventSystem.Instance.Add<bool>(EEventName.OnPinballFeverChange, new Action<bool>(this.OnFeverChange));
 	}
 
-	// Token: 0x0600E050 RID: 57424 RVA: 0x00349004 File Offset: 0x00347204
+	// Token: 0x0600B46D RID: 46189 RVA: 0x00354A2C File Offset: 0x00352C2C
 	protected override void RemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPinballEntityHpChanged, new Action<FKSC_HeadHpContext>(this.OnEntityHpChange));
@@ -208,7 +208,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		EventSystem.Instance.Remove(EEventName.OnPinballFeverChange, new Action<bool>(this.OnFeverChange));
 	}
 
-	// Token: 0x0600E051 RID: 57425 RVA: 0x003490F4 File Offset: 0x003472F4
+	// Token: 0x0600B46E RID: 46190 RVA: 0x00354B1C File Offset: 0x00352D1C
 	private void BindButtonEvent()
 	{
 		UUIButtonComponent button = base.GetButton(5);
@@ -234,7 +234,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		button4.OnPointDownCallBack.Bind(new Action(this.OnBtnResetClick));
 	}
 
-	// Token: 0x0600E052 RID: 57426 RVA: 0x0034918D File Offset: 0x0034738D
+	// Token: 0x0600B46F RID: 46191 RVA: 0x00354BB5 File Offset: 0x00352DB5
 	private void OnSequenceFinished(string sequenceName)
 	{
 		if (sequenceName == "Combo_Out")
@@ -248,7 +248,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E053 RID: 57427 RVA: 0x003491B0 File Offset: 0x003473B0
+	// Token: 0x0600B470 RID: 46192 RVA: 0x00354BD8 File Offset: 0x00352DD8
 	private void OnFeverChange(bool isIn)
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -259,19 +259,19 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		seqPlayer.PlayOrReplaySequenceByName(isIn ? "Fever_In" : "Fever_Out", false, null);
 	}
 
-	// Token: 0x0600E054 RID: 57428 RVA: 0x003491E6 File Offset: 0x003473E6
+	// Token: 0x0600B471 RID: 46193 RVA: 0x00354C0E File Offset: 0x00352E0E
 	private void OnFirstLaunch()
 	{
 		this.StartCountdown();
 	}
 
-	// Token: 0x0600E055 RID: 57429 RVA: 0x003491EE File Offset: 0x003473EE
+	// Token: 0x0600B472 RID: 46194 RVA: 0x00354C16 File Offset: 0x00352E16
 	private void OnPlayerCreate()
 	{
 		this.RefreshRoleSkillItemList();
 	}
 
-	// Token: 0x0600E056 RID: 57430 RVA: 0x003491F6 File Offset: 0x003473F6
+	// Token: 0x0600B473 RID: 46195 RVA: 0x00354C1E File Offset: 0x00352E1E
 	private void OnEntityCreated(int entityId)
 	{
 		if (entityId == 10001)
@@ -280,7 +280,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E057 RID: 57431 RVA: 0x00349206 File Offset: 0x00347406
+	// Token: 0x0600B474 RID: 46196 RVA: 0x00354C2E File Offset: 0x00352E2E
 	private void OnClickRoleSkill(int roleId)
 	{
 		PinballController instance = PinballController.Instance;
@@ -291,7 +291,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		instance.ShowRoleSkillTips(roleId, new Action(this.OnRoleSkillReleaseTipsClose));
 	}
 
-	// Token: 0x0600E058 RID: 57432 RVA: 0x00349224 File Offset: 0x00347424
+	// Token: 0x0600B475 RID: 46197 RVA: 0x00354C4C File Offset: 0x00352E4C
 	private void OnRoleSkillReleaseTipsClose()
 	{
 		foreach (PinballBattleRoleSkillItem pinballBattleRoleSkillItem in this.RoleSkillItemList)
@@ -300,13 +300,13 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E059 RID: 57433 RVA: 0x00349274 File Offset: 0x00347474
+	// Token: 0x0600B476 RID: 46198 RVA: 0x00354C9C File Offset: 0x00352E9C
 	private void OnPinballBattleViewSwitchIn()
 	{
 		this.PlaySwitchIn();
 	}
 
-	// Token: 0x0600E05A RID: 57434 RVA: 0x0034927C File Offset: 0x0034747C
+	// Token: 0x0600B477 RID: 46199 RVA: 0x00354CA4 File Offset: 0x00352EA4
 	private void PlaySwitchIn()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -322,7 +322,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		seqPlayer2.PlayOrReplaySequenceByName("Switch_In", false, null);
 	}
 
-	// Token: 0x0600E05B RID: 57435 RVA: 0x003492C0 File Offset: 0x003474C0
+	// Token: 0x0600B478 RID: 46200 RVA: 0x00354CE8 File Offset: 0x00352EE8
 	private void OnEntityHpChange(FKSC_HeadHpContext hpContext)
 	{
 		if (hpContext.HeadUiType == EKSC_HeadUiType.TopBoss)
@@ -336,7 +336,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E05C RID: 57436 RVA: 0x003492DC File Offset: 0x003474DC
+	// Token: 0x0600B479 RID: 46201 RVA: 0x00354D04 File Offset: 0x00352F04
 	private void OnScoreChange(int score)
 	{
 		PinballBattleSubModel pinballBattleSubModel = KuroSimpleCombatController.Instance.CurSubModel as PinballBattleSubModel;
@@ -348,7 +348,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.RefreshProgress(((pinballBattleSubModel != null) ? pinballBattleSubModel.LevelScoreTargetList : null) ?? new List<float>(), (float)score);
 	}
 
-	// Token: 0x0600E05D RID: 57437 RVA: 0x00349330 File Offset: 0x00347530
+	// Token: 0x0600B47A RID: 46202 RVA: 0x00354D58 File Offset: 0x00352F58
 	private void PlayComboSequence(string name)
 	{
 		foreach (string text in PinballBattleMainBattlePanel.ComboSeqNames)
@@ -370,7 +370,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		seqPlayer2.PlayOrReplaySequenceByName(name, false, null);
 	}
 
-	// Token: 0x0600E05E RID: 57438 RVA: 0x00349390 File Offset: 0x00347590
+	// Token: 0x0600B47B RID: 46203 RVA: 0x00354DB8 File Offset: 0x00352FB8
 	private void OnComboChange(int newValue)
 	{
 		if (this.LastCombo == 0 && newValue > 0)
@@ -402,7 +402,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E05F RID: 57439 RVA: 0x00349410 File Offset: 0x00347610
+	// Token: 0x0600B47C RID: 46204 RVA: 0x00354E38 File Offset: 0x00353038
 	private void OnGameplayCdChanged(float remainTime)
 	{
 		int num = (int)Math.Floor((double)(remainTime / 1000f));
@@ -418,7 +418,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		timeText.SetText(str + ":" + str2, true);
 	}
 
-	// Token: 0x0600E060 RID: 57440 RVA: 0x00349488 File Offset: 0x00347688
+	// Token: 0x0600B47D RID: 46205 RVA: 0x00354EB0 File Offset: 0x003530B0
 	private string FormatTimeUnit(int value)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 2);
@@ -427,7 +427,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600E061 RID: 57441 RVA: 0x003494C8 File Offset: 0x003476C8
+	// Token: 0x0600B47E RID: 46206 RVA: 0x00354EF0 File Offset: 0x003530F0
 	private void InitCaption()
 	{
 		PopupCaptionItem caption = this.Caption;
@@ -457,7 +457,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		caption2.SetTitleLocalText(((pinballLevelConfig != null) ? pinballLevelConfig.GetValueOrDefault().Name : null) ?? "");
 	}
 
-	// Token: 0x0600E062 RID: 57442 RVA: 0x00349560 File Offset: 0x00347760
+	// Token: 0x0600B47F RID: 46207 RVA: 0x00354F88 File Offset: 0x00353188
 	private void InitLevelInfo()
 	{
 		int curLevelId = PinballModel.Instance.CurLevelId;
@@ -472,7 +472,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		item.SetUIActive(this.IsCowLevel);
 	}
 
-	// Token: 0x0600E063 RID: 57443 RVA: 0x003495D0 File Offset: 0x003477D0
+	// Token: 0x0600B480 RID: 46208 RVA: 0x00354FF8 File Offset: 0x003531F8
 	private void RefreshProgress(List<float> scoreTargetList, float curScore)
 	{
 		if (!this.IsCowLevel)
@@ -530,14 +530,14 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E064 RID: 57444 RVA: 0x003496E4 File Offset: 0x003478E4
+	// Token: 0x0600B481 RID: 46209 RVA: 0x0035510C File Offset: 0x0035330C
 	private void RefreshDashButton()
 	{
 		this.RefreshSkillBtnState();
 		this.UpdateDashSkillBar();
 	}
 
-	// Token: 0x0600E065 RID: 57445 RVA: 0x003496F4 File Offset: 0x003478F4
+	// Token: 0x0600B482 RID: 46210 RVA: 0x0035511C File Offset: 0x0035331C
 	private void RefreshLevelInfo()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -552,19 +552,19 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.RefreshProgress(((pinballBattleSubModel != null) ? pinballBattleSubModel.LevelScoreTargetList : null) ?? new List<float>(), curScore);
 	}
 
-	// Token: 0x0600E066 RID: 57446 RVA: 0x0034976E File Offset: 0x0034796E
+	// Token: 0x0600B483 RID: 46211 RVA: 0x00355196 File Offset: 0x00353396
 	private void InitStarLayout()
 	{
 		this.StarLayout = new GenericLayout<PinballBattleStarItem, bool>(base.GetLayoutBase(12), new Func<PinballBattleStarItem>(this.CreateStarItem), base.GetItem(13).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600E067 RID: 57447 RVA: 0x003497A3 File Offset: 0x003479A3
+	// Token: 0x0600B484 RID: 46212 RVA: 0x003551CB File Offset: 0x003533CB
 	private PinballBattleStarItem CreateStarItem()
 	{
 		return new PinballBattleStarItem();
 	}
 
-	// Token: 0x0600E068 RID: 57448 RVA: 0x003497AC File Offset: 0x003479AC
+	// Token: 0x0600B485 RID: 46213 RVA: 0x003551D4 File Offset: 0x003533D4
 	public void RefreshRoleSkillItemList()
 	{
 		PinballBattleSubModel pinballBattleSubModel = KuroSimpleCombatController.Instance.CurSubModel as PinballBattleSubModel;
@@ -591,7 +591,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E069 RID: 57449 RVA: 0x00349870 File Offset: 0x00347A70
+	// Token: 0x0600B486 RID: 46214 RVA: 0x00355298 File Offset: 0x00353498
 	private void OnCenterBtnShootClick()
 	{
 		if (Info.Instance.IsInKeyBoard() && (InputSettings.Instance.IsInputKeyDown("RightMouseButton") || !InputSettings.Instance.IsInputKeyDown("LeftMouseButton")))
@@ -601,7 +601,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.OnBtnShootClick();
 	}
 
-	// Token: 0x0600E06A RID: 57450 RVA: 0x003498A8 File Offset: 0x00347AA8
+	// Token: 0x0600B487 RID: 46215 RVA: 0x003552D0 File Offset: 0x003534D0
 	private void OnBtnShootClick()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -612,7 +612,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		pinballBattleSubController.OnInputTriggerBar();
 	}
 
-	// Token: 0x0600E06B RID: 57451 RVA: 0x003498CF File Offset: 0x00347ACF
+	// Token: 0x0600B488 RID: 46216 RVA: 0x003552F7 File Offset: 0x003534F7
 	private bool CanUseDashSkill(PinballBattleSubController subController)
 	{
 		if (this.CanEnableDashSkill(subController) && Time.Instance.TimeDilation != 0f)
@@ -623,7 +623,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		return false;
 	}
 
-	// Token: 0x0600E06C RID: 57452 RVA: 0x00349904 File Offset: 0x00347B04
+	// Token: 0x0600B489 RID: 46217 RVA: 0x0035532C File Offset: 0x0035352C
 	private bool CanEnableDashSkill(PinballBattleSubController subController)
 	{
 		if (this.OwnerAttrSet == null || subController == null)
@@ -634,7 +634,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		return dashNeedCost != null && (float)this.OwnerAttrSet.Attrs_.GetValueOrNull(<PinballBattleMainBattlePanel>F13954715AA9E400802E82B74BFA19540AB238E6555C9E1ECFC5E2AF3E01CA6FF__MainBattleConst.DashAttrType).GetValueOrDefault() >= dashNeedCost.Value && !subController.IsInDashCd();
 	}
 
-	// Token: 0x0600E06D RID: 57453 RVA: 0x00349964 File Offset: 0x00347B64
+	// Token: 0x0600B48A RID: 46218 RVA: 0x0035538C File Offset: 0x0035358C
 	private void OnBtnDashClick()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -645,7 +645,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		pinballBattleSubController.OnInputUseTeamSkill(1);
 	}
 
-	// Token: 0x0600E06E RID: 57454 RVA: 0x00349994 File Offset: 0x00347B94
+	// Token: 0x0600B48B RID: 46219 RVA: 0x003553BC File Offset: 0x003535BC
 	private void OnBtnResetClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PinballBattleResetLaunchConfirm);
@@ -661,7 +661,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		PinballController.Instance.OpenPinballSmallConfirmBoxView(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600E06F RID: 57455 RVA: 0x003499E4 File Offset: 0x00347BE4
+	// Token: 0x0600B48C RID: 46220 RVA: 0x0035540C File Offset: 0x0035360C
 	private void TryBindTeamEntity()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -672,7 +672,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E070 RID: 57456 RVA: 0x00349A18 File Offset: 0x00347C18
+	// Token: 0x0600B48D RID: 46221 RVA: 0x00355440 File Offset: 0x00353640
 	private void BindTeamEntity(AKSC_Entity entity)
 	{
 		UKSC_SkillComp skillComp_ = entity.SkillComp_;
@@ -692,7 +692,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.UpdateDashSkillBar();
 	}
 
-	// Token: 0x0600E071 RID: 57457 RVA: 0x00349A90 File Offset: 0x00347C90
+	// Token: 0x0600B48E RID: 46222 RVA: 0x003554B8 File Offset: 0x003536B8
 	private void UpdateDashSkillBar()
 	{
 		UKSC_AttrSet ownerAttrSet = this.OwnerAttrSet;
@@ -729,7 +729,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		sprite.SetFillAmount(MathUtils.Instance.Lerp(PinballBattleMainBattlePanel.DashBarRange[0], PinballBattleMainBattlePanel.DashBarRange[1], (float)valueOrDefault / (float)valueOrDefault2));
 	}
 
-	// Token: 0x0600E072 RID: 57458 RVA: 0x00349B44 File Offset: 0x00347D44
+	// Token: 0x0600B48F RID: 46223 RVA: 0x0035556C File Offset: 0x0035376C
 	public void BindDashAttrDelegate(UKSC_AttrSet attrSet)
 	{
 		this.UnBindDashAttrDelegate();
@@ -739,7 +739,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.OwnerAttrSet = attrSet;
 	}
 
-	// Token: 0x0600E073 RID: 57459 RVA: 0x00349B98 File Offset: 0x00347D98
+	// Token: 0x0600B490 RID: 46224 RVA: 0x003555C0 File Offset: 0x003537C0
 	public void UnBindDashAttrDelegate()
 	{
 		if (this.OwnerAttrSet != null)
@@ -752,13 +752,13 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E074 RID: 57460 RVA: 0x00349BF8 File Offset: 0x00347DF8
+	// Token: 0x0600B491 RID: 46225 RVA: 0x00355620 File Offset: 0x00353820
 	private void OnDashChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateDashSkillBar();
 	}
 
-	// Token: 0x0600E075 RID: 57461 RVA: 0x00349C00 File Offset: 0x00347E00
+	// Token: 0x0600B492 RID: 46226 RVA: 0x00355628 File Offset: 0x00353828
 	private void RefreshSkillBtnState()
 	{
 		PinballBattleSubController pinballBattleSubController = KuroSimpleCombatController.Instance.CurSubController as PinballBattleSubController;
@@ -775,7 +775,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		}
 	}
 
-	// Token: 0x0600E076 RID: 57462 RVA: 0x00349C4C File Offset: 0x00347E4C
+	// Token: 0x0600B493 RID: 46227 RVA: 0x00355674 File Offset: 0x00353874
 	private void InitCountdown()
 	{
 		int curLevelId = PinballModel.Instance.CurLevelId;
@@ -787,14 +787,14 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.LevelCountdownTimer = (float)(pinballLevelConfigById.Value.LevelTime * 1000);
 	}
 
-	// Token: 0x0600E077 RID: 57463 RVA: 0x00349C96 File Offset: 0x00347E96
+	// Token: 0x0600B494 RID: 46228 RVA: 0x003556BE File Offset: 0x003538BE
 	private void StartCountdown()
 	{
 		this.IsCountdownStart = true;
 		this.OnGameplayCdChanged(this.LevelCountdownTimer);
 	}
 
-	// Token: 0x0600E078 RID: 57464 RVA: 0x00349CAC File Offset: 0x00347EAC
+	// Token: 0x0600B495 RID: 46229 RVA: 0x003556D4 File Offset: 0x003538D4
 	private void TickCountdown(float delta)
 	{
 		if (delta == 0f || !this.IsCountdownStart)
@@ -817,7 +817,7 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		this.OnGameplayCdChanged(this.LevelCountdownTimer);
 	}
 
-	// Token: 0x0600E079 RID: 57465 RVA: 0x00349D2C File Offset: 0x00347F2C
+	// Token: 0x0600B496 RID: 46230 RVA: 0x00355754 File Offset: 0x00353954
 	public void PlaySequence(string name)
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -828,11 +828,11 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 		seqPlayer.PlayOrReplaySequenceByName(name, false, null);
 	}
 
-	// Token: 0x0400676A RID: 26474
+	// Token: 0x04006849 RID: 26697
 	[Nullable(2)]
 	private static float[] DashBarRange;
 
-	// Token: 0x0400676B RID: 26475
+	// Token: 0x0400684A RID: 26698
 	[Nullable(new byte[]
 	{
 		2,
@@ -840,14 +840,14 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 	})]
 	private static string[] ComboSeqNames;
 
-	// Token: 0x0400676C RID: 26476
+	// Token: 0x0400684B RID: 26699
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x0400676D RID: 26477
+	// Token: 0x0400684C RID: 26700
 	private readonly List<PinballBattleRoleSkillItem> RoleSkillItemList = new List<PinballBattleRoleSkillItem>();
 
-	// Token: 0x0400676E RID: 26478
+	// Token: 0x0400684D RID: 26701
 	[Nullable(new byte[]
 	{
 		2,
@@ -855,61 +855,61 @@ public class PinballBattleMainBattlePanel : BattleChildViewPanel, IStaticVariabl
 	})]
 	private GenericLayout<PinballBattleStarItem, bool> StarLayout;
 
-	// Token: 0x0400676F RID: 26479
+	// Token: 0x0400684E RID: 26702
 	[Nullable(2)]
 	private PinballBattleBossHpBar BossHpBar;
 
-	// Token: 0x04006770 RID: 26480
+	// Token: 0x0400684F RID: 26703
 	[Nullable(2)]
 	private UUIText TimeText;
 
-	// Token: 0x04006771 RID: 26481
+	// Token: 0x04006850 RID: 26704
 	[Nullable(2)]
 	private UUIArtText ScoreText;
 
-	// Token: 0x04006772 RID: 26482
+	// Token: 0x04006851 RID: 26705
 	[Nullable(2)]
 	private UUIArtText ComboNum;
 
-	// Token: 0x04006773 RID: 26483
+	// Token: 0x04006852 RID: 26706
 	[Nullable(2)]
 	private UUIItem ComboPanel;
 
-	// Token: 0x04006774 RID: 26484
+	// Token: 0x04006853 RID: 26707
 	[Nullable(2)]
 	private UUITexture ScoreProgressBar;
 
-	// Token: 0x04006775 RID: 26485
+	// Token: 0x04006854 RID: 26708
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04006776 RID: 26486
+	// Token: 0x04006855 RID: 26709
 	[Nullable(2)]
 	private UKSC_AttrSet OwnerAttrSet;
 
-	// Token: 0x04006777 RID: 26487
+	// Token: 0x04006856 RID: 26710
 	[Nullable(2)]
 	private FOnKSCAttrChange DelegateDashChange;
 
-	// Token: 0x04006778 RID: 26488
+	// Token: 0x04006857 RID: 26711
 	private bool LastCanUseDash = true;
 
-	// Token: 0x04006779 RID: 26489
+	// Token: 0x04006858 RID: 26712
 	private bool IsCowLevel;
 
-	// Token: 0x0400677A RID: 26490
+	// Token: 0x04006859 RID: 26713
 	private int LastCombo;
 
-	// Token: 0x0400677B RID: 26491
+	// Token: 0x0400685A RID: 26714
 	[Nullable(2)]
 	private UUIButtonComponent SkillBtn;
 
-	// Token: 0x0400677C RID: 26492
+	// Token: 0x0400685B RID: 26715
 	private float LevelCountdownTimer;
 
-	// Token: 0x0400677D RID: 26493
+	// Token: 0x0400685C RID: 26716
 	private bool IsCountdownStart;
 
-	// Token: 0x0400677E RID: 26494
+	// Token: 0x0400685D RID: 26717
 	private float TickTimer;
 }

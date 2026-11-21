@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000080 RID: 128
+	// Token: 0x02000085 RID: 133
 	public enum EClaimDynamicEntityRewardType
 	{
-		// Token: 0x0400027F RID: 639
+		// Token: 0x04000296 RID: 662
 		Hook
 	}
 }

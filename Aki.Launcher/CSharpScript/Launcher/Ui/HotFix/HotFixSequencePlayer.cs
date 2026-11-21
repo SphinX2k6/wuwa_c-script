@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000E4 RID: 228
+	// Token: 0x020000E7 RID: 231
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixSequencePlayer
 	{
-		// Token: 0x06000785 RID: 1925 RVA: 0x0003BC1A File Offset: 0x00039E1A
+		// Token: 0x060007A2 RID: 1954 RVA: 0x0003D806 File Offset: 0x0003BA06
 		public HotFixSequencePlayer(UUIItem uiItem)
 		{
 			this.UiItem = uiItem;
 			this.UiBaseActor = (uiItem.GetOwner() as AUIBaseActor);
 		}
 
-		// Token: 0x06000786 RID: 1926 RVA: 0x0003BC48 File Offset: 0x00039E48
+		// Token: 0x060007A3 RID: 1955 RVA: 0x0003D834 File Offset: 0x0003BA34
 		[return: Nullable(2)]
 		private USequencePlayContext GetSequencePlayContext(string sequenceName)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return sequencePlayContextOfKey;
 		}
 
-		// Token: 0x06000787 RID: 1927 RVA: 0x0003BC8C File Offset: 0x00039E8C
+		// Token: 0x060007A4 RID: 1956 RVA: 0x0003D878 File Offset: 0x0003BA78
 		public bool PlaySequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 		{
 			USequencePlayContext playContext = this.GetSequencePlayContext(sequenceName);
@@ -67,7 +67,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return true;
 		}
 
-		// Token: 0x06000788 RID: 1928 RVA: 0x0003BD34 File Offset: 0x00039F34
+		// Token: 0x060007A5 RID: 1957 RVA: 0x0003D920 File Offset: 0x0003BB20
 		public bool StopSequence(string sequenceName, bool toLastFrame = false, [Nullable(2)] Action stopCallback = null)
 		{
 			if (this.UiItem.LevelSequences.GetValueOrDefault(sequenceName) == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return true;
 		}
 
-		// Token: 0x06000789 RID: 1929 RVA: 0x0003BDB2 File Offset: 0x00039FB2
+		// Token: 0x060007A6 RID: 1958 RVA: 0x0003D99E File Offset: 0x0003BB9E
 		public void ClearSequence()
 		{
 			this.PlayContextMap.Clear();
@@ -107,15 +107,15 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			this.UiItem = null;
 		}
 
-		// Token: 0x04000476 RID: 1142
+		// Token: 0x040004A5 RID: 1189
 		[Nullable(2)]
 		private AUIBaseActor UiBaseActor;
 
-		// Token: 0x04000477 RID: 1143
+		// Token: 0x040004A6 RID: 1190
 		[Nullable(2)]
 		private UUIItem UiItem;
 
-		// Token: 0x04000478 RID: 1144
+		// Token: 0x040004A7 RID: 1191
 		private readonly Dictionary<string, USequencePlayContext> PlayContextMap = new Dictionary<string, USequencePlayContext>();
 	}
 }

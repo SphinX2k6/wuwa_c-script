@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020019DC RID: 6620
+// Token: 0x02000E9B RID: 3739
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ConfirmBoxConfig : ConfigBase
 {
-	// Token: 0x0600C14A RID: 49482 RVA: 0x002B9AB4 File Offset: 0x002B7CB4
+	// Token: 0x06009557 RID: 38231 RVA: 0x002C4A8C File Offset: 0x002C2C8C
 	public ConfirmBox? GetConfirmBoxConfig(int configId)
 	{
 		ConfirmBox? config = ConfigConfirmBoxById.GetConfig(configId, true);
@@ -24,31 +24,31 @@ public class ConfirmBoxConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600C14B RID: 49483 RVA: 0x002B9AFF File Offset: 0x002B7CFF
+	// Token: 0x06009558 RID: 38232 RVA: 0x002C4AD7 File Offset: 0x002C2CD7
 	public string GetTitle(string titleId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(titleId, null);
 	}
 
-	// Token: 0x0600C14C RID: 49484 RVA: 0x002B9B08 File Offset: 0x002B7D08
+	// Token: 0x06009559 RID: 38233 RVA: 0x002C4AE0 File Offset: 0x002C2CE0
 	public string GetContent(string contentId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(contentId, null);
 	}
 
-	// Token: 0x0600C14D RID: 49485 RVA: 0x002B9B11 File Offset: 0x002B7D11
+	// Token: 0x0600955A RID: 38234 RVA: 0x002C4AE9 File Offset: 0x002C2CE9
 	public string GetSecondaryContent(string secondaryContentId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(secondaryContentId, null);
 	}
 
-	// Token: 0x0600C14E RID: 49486 RVA: 0x002B9B1A File Offset: 0x002B7D1A
+	// Token: 0x0600955B RID: 38235 RVA: 0x002C4AF2 File Offset: 0x002C2CF2
 	public string GetButtonText(string textId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(textId, null);
 	}
 
-	// Token: 0x0600C14F RID: 49487 RVA: 0x002B9B24 File Offset: 0x002B7D24
+	// Token: 0x0600955C RID: 38236 RVA: 0x002C4AFC File Offset: 0x002C2CFC
 	public int? GetUiShowType(int configId)
 	{
 		ConfirmBox? confirmBoxConfig = this.GetConfirmBoxConfig(configId);
@@ -59,8 +59,8 @@ public class ConfirmBoxConfig : ConfigBase
 		return new int?(confirmBoxConfig.GetValueOrDefault().UiShowType);
 	}
 
-	// Token: 0x1700102E RID: 4142
-	// (get) Token: 0x0600C150 RID: 49488 RVA: 0x002B9B60 File Offset: 0x002B7D60
+	// Token: 0x17001053 RID: 4179
+	// (get) Token: 0x0600955D RID: 38237 RVA: 0x002C4B38 File Offset: 0x002C2D38
 	public static ConfirmBoxConfig Instance
 	{
 		get
@@ -69,7 +69,7 @@ public class ConfirmBoxConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600C151 RID: 49489 RVA: 0x002B9B67 File Offset: 0x002B7D67
+	// Token: 0x0600955E RID: 38238 RVA: 0x002C4B3F File Offset: 0x002C2D3F
 	public static ConfirmBoxConfig GetOrCreateInstance()
 	{
 		if (ConfirmBoxConfig._Instance == null)
@@ -79,7 +79,7 @@ public class ConfirmBoxConfig : ConfigBase
 		return ConfirmBoxConfig._Instance;
 	}
 
-	// Token: 0x0600C152 RID: 49490 RVA: 0x002B9B7B File Offset: 0x002B7D7B
+	// Token: 0x0600955F RID: 38239 RVA: 0x002C4B53 File Offset: 0x002C2D53
 	public static bool CreateInstance()
 	{
 		if (ConfirmBoxConfig._Instance != null)
@@ -90,24 +90,24 @@ public class ConfirmBoxConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600C153 RID: 49491 RVA: 0x002B9B91 File Offset: 0x002B7D91
+	// Token: 0x06009560 RID: 38240 RVA: 0x002C4B69 File Offset: 0x002C2D69
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C154 RID: 49492 RVA: 0x002B9B93 File Offset: 0x002B7D93
+	// Token: 0x06009561 RID: 38241 RVA: 0x002C4B6B File Offset: 0x002C2D6B
 	public static void ResetStaticDefaultValue()
 	{
 		ConfirmBoxConfig._Instance = null;
 	}
 
-	// Token: 0x0600C155 RID: 49493 RVA: 0x002B9B9B File Offset: 0x002B7D9B
+	// Token: 0x06009562 RID: 38242 RVA: 0x002C4B73 File Offset: 0x002C2D73
 	static ConfirmBoxConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ConfirmBoxConfig.CreateStaticDefaultValue), new Action(ConfirmBoxConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400591A RID: 22810
+	// Token: 0x040059E9 RID: 23017
 	[Nullable(2)]
 	private static ConfirmBoxConfig _Instance;
 }

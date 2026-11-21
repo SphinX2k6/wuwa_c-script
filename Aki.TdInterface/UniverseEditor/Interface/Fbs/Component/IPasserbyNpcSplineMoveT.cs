@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056E4 RID: 22244
+	// Token: 0x02005CD0 RID: 23760
 	public class IPasserbyNpcSplineMoveT
 	{
-		// Token: 0x1700A59A RID: 42394
-		// (get) Token: 0x060252C0 RID: 152256 RVA: 0x0052180F File Offset: 0x0051FA0F
-		// (set) Token: 0x060252C1 RID: 152257 RVA: 0x00521817 File Offset: 0x0051FA17
+		// Token: 0x1700AE98 RID: 44696
+		// (get) Token: 0x06027711 RID: 161553 RVA: 0x00565FCB File Offset: 0x005641CB
+		// (set) Token: 0x06027712 RID: 161554 RVA: 0x00565FD3 File Offset: 0x005641D3
 		public EPasserbyNpcMoveType Type { get; set; }
 
-		// Token: 0x1700A59B RID: 42395
-		// (get) Token: 0x060252C2 RID: 152258 RVA: 0x00521820 File Offset: 0x0051FA20
-		// (set) Token: 0x060252C3 RID: 152259 RVA: 0x00521828 File Offset: 0x0051FA28
+		// Token: 0x1700AE99 RID: 44697
+		// (get) Token: 0x06027713 RID: 161555 RVA: 0x00565FDC File Offset: 0x005641DC
+		// (set) Token: 0x06027714 RID: 161556 RVA: 0x00565FE4 File Offset: 0x005641E4
 		public List<IPasserbyNpcSplineT> Routes { get; set; }
 
-		// Token: 0x060252C4 RID: 152260 RVA: 0x00521831 File Offset: 0x0051FA31
+		// Token: 0x06027715 RID: 161557 RVA: 0x00565FED File Offset: 0x005641ED
 		public IPasserbyNpcSplineMoveT()
 		{
 			this.Type = EPasserbyNpcMoveType.Spline;

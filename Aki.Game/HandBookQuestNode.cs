@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DF6 RID: 7670
+// Token: 0x020012B8 RID: 4792
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestNode
 {
-	// Token: 0x0600E990 RID: 59792 RVA: 0x0037436E File Offset: 0x0037256E
+	// Token: 0x0600BDAF RID: 48559 RVA: 0x00380076 File Offset: 0x0037E276
 	public HandBookQuestNode(string tidText = "", [Nullable(2)] string flowListName = null, int flowId = 0, int stateId = 0)
 	{
 		this.TidText = tidText;
@@ -15,16 +15,16 @@ public class HandBookQuestNode
 		this.StateId = stateId;
 	}
 
-	// Token: 0x04006C46 RID: 27718
+	// Token: 0x04006D27 RID: 27943
 	public string TidText;
 
-	// Token: 0x04006C47 RID: 27719
+	// Token: 0x04006D28 RID: 27944
 	[Nullable(2)]
 	public string FlowListName;
 
-	// Token: 0x04006C48 RID: 27720
+	// Token: 0x04006D29 RID: 27945
 	public int FlowId;
 
-	// Token: 0x04006C49 RID: 27721
+	// Token: 0x04006D2A RID: 27946
 	public int StateId;
 }

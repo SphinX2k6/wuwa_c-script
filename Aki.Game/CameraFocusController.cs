@@ -8,24 +8,24 @@ using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020001FE RID: 510
+// Token: 0x02000202 RID: 514
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06002019 RID: 8217 RVA: 0x000A80A6 File Offset: 0x000A62A6
+	// Token: 0x060020C7 RID: 8391 RVA: 0x000AF3FA File Offset: 0x000AD5FA
 	public CameraFocusController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x0600201A RID: 8218 RVA: 0x000A80E2 File Offset: 0x000A62E2
+	// Token: 0x060020C8 RID: 8392 RVA: 0x000AF436 File Offset: 0x000AD636
 	public override string Name()
 	{
 		return "FocusController";
 	}
 
-	// Token: 0x0600201B RID: 8219 RVA: 0x000A80EC File Offset: 0x000A62EC
+	// Token: 0x060020C9 RID: 8393 RVA: 0x000AF440 File Offset: 0x000AD640
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraFocus.臂旋转Yaw过渡最小速度, "RelativeRotationLagYawSpeedMin");
@@ -81,7 +81,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		base.RegisterPairConfigKey(EFightCameraFocus.臂旋转过渡速度最小系数_目标距离_, EFightCameraFocus.臂旋转过渡速度最大系数_目标距离_, true);
 	}
 
-	// Token: 0x0600201C RID: 8220 RVA: 0x000A8498 File Offset: 0x000A6698
+	// Token: 0x060020CA RID: 8394 RVA: 0x000AF7EC File Offset: 0x000AD9EC
 	protected override void OnEnable()
 	{
 		this.Camera.CameraAutoController.EnableForce(this);
@@ -90,7 +90,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		EventSystem.Instance.Add<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnCharUseSkill));
 	}
 
-	// Token: 0x0600201D RID: 8221 RVA: 0x000A84F0 File Offset: 0x000A66F0
+	// Token: 0x060020CB RID: 8395 RVA: 0x000AF844 File Offset: 0x000ADA44
 	protected override void OnDisable()
 	{
 		EventSystem.Instance.Remove<int, int, bool>(EEventName.CharUseSkill, new Action<int, int, bool>(this.OnCharUseSkill));
@@ -101,13 +101,13 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.SumYawPitchInput.Reset();
 	}
 
-	// Token: 0x0600201E RID: 8222 RVA: 0x000A8559 File Offset: 0x000A6759
+	// Token: 0x060020CC RID: 8396 RVA: 0x000AF8AD File Offset: 0x000ADAAD
 	protected override bool UpdateCustomEnableCondition()
 	{
 		return this.HasTarget() && this.Camera.CharacterEntityHandle.IsInit;
 	}
 
-	// Token: 0x0600201F RID: 8223 RVA: 0x000A8578 File Offset: 0x000A6778
+	// Token: 0x060020CD RID: 8397 RVA: 0x000AF8CC File Offset: 0x000ADACC
 	private bool HasTarget()
 	{
 		if (this.Camera.TargetEntity == null)
@@ -118,7 +118,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		return true;
 	}
 
-	// Token: 0x06002020 RID: 8224 RVA: 0x000A85B1 File Offset: 0x000A67B1
+	// Token: 0x060020CE RID: 8398 RVA: 0x000AF905 File Offset: 0x000ADB05
 	protected override void UpdateInternal(float deltaSeconds)
 	{
 		this.UpdateSoftUnlockState((double)deltaSeconds);
@@ -126,7 +126,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.UpdateShowTarget((double)deltaSeconds);
 	}
 
-	// Token: 0x06002021 RID: 8225 RVA: 0x000A85CC File Offset: 0x000A67CC
+	// Token: 0x060020CF RID: 8399 RVA: 0x000AF920 File Offset: 0x000ADB20
 	private void UpdateSoftUnlockState(double deltaSeconds)
 	{
 		if (!this.HasTarget() || !this.Camera.IsTargetLocationValid)
@@ -149,7 +149,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.SoftUnlockInputRemainTime -= deltaSeconds;
 	}
 
-	// Token: 0x06002022 RID: 8226 RVA: 0x000A869C File Offset: 0x000A689C
+	// Token: 0x060020D0 RID: 8400 RVA: 0x000AF9F0 File Offset: 0x000ADBF0
 	private unsafe void UpdateArmRotation(float deltaSeconds)
 	{
 		if (!this.HasTarget() || !this.Camera.IsTargetLocationValid)
@@ -180,7 +180,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.UpdateTargetPitch(deltaSeconds, flag || this.Camera.IsSpecificLockTarget, isSoftLockEnable, item2);
 	}
 
-	// Token: 0x06002023 RID: 8227 RVA: 0x000A87E4 File Offset: 0x000A69E4
+	// Token: 0x060020D1 RID: 8401 RVA: 0x000AFB38 File Offset: 0x000ADD38
 	private void UpdateTargetYaw(float deltaSeconds, bool isLockSight, bool isSoftLockEnable, float inputYaw)
 	{
 		if (this.Camera.IsModifiedArmRotationYaw)
@@ -344,7 +344,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002024 RID: 8228 RVA: 0x000A8EE4 File Offset: 0x000A70E4
+	// Token: 0x060020D2 RID: 8402 RVA: 0x000B0238 File Offset: 0x000AE438
 	private void UpdateTargetPitch(float deltaSeconds, bool isLockSight, bool isSoftLockEnable, float inputPitch)
 	{
 		if (this.Camera.IsModifiedArmRotationPitch)
@@ -416,7 +416,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		CameraUtility.SetPitchInGravity(this.Camera.DesiredCamera.ArmRotation, (double)MathUtils.Instance.RotatorAxisInterpTo(pitch2, this.TargetRotator.Pitch, deltaSeconds, interpSpeed), this.Camera.DesiredCamera.ArmRotation);
 	}
 
-	// Token: 0x06002025 RID: 8229 RVA: 0x000A91F4 File Offset: 0x000A73F4
+	// Token: 0x060020D3 RID: 8403 RVA: 0x000B0548 File Offset: 0x000AE748
 	private void UpdateShowTarget(double deltaSeconds)
 	{
 		if (!this.Camera.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.方向状态.注视方向"], false))
@@ -458,7 +458,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.SumYawPitchInput.MultiplyEqual((double)((float)Math.Pow((double)(1f - this.ChangeShowTargetDamping), deltaSeconds * 60.0)));
 	}
 
-	// Token: 0x06002026 RID: 8230 RVA: 0x000A93D8 File Offset: 0x000A75D8
+	// Token: 0x060020D4 RID: 8404 RVA: 0x000B072C File Offset: 0x000AE92C
 	protected override void UpdateDeactivateInternal(float deltaSeconds)
 	{
 		this.ClearUnlockInputRemainTime();
@@ -476,7 +476,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		this.AddCameraOffsetY = null;
 	}
 
-	// Token: 0x06002027 RID: 8231 RVA: 0x000A9454 File Offset: 0x000A7654
+	// Token: 0x060020D5 RID: 8405 RVA: 0x000B07A8 File Offset: 0x000AE9A8
 	private void OnCharUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -498,7 +498,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x06002028 RID: 8232 RVA: 0x000A94E0 File Offset: 0x000A76E0
+	// Token: 0x060020D6 RID: 8406 RVA: 0x000B0834 File Offset: 0x000AEA34
 	public bool ShouldSoftUnlock()
 	{
 		ValueTuple<float, float> cameraInput = this.Camera.CharacterEntityHandle.Entity.GetComponent<CharacterInputComponent>().GetCameraInput();
@@ -509,25 +509,25 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		return Math.Abs(num) > this.SoftUnlockYawSpeed || Math.Abs(num2) > this.SoftUnlockPitchSpeed;
 	}
 
-	// Token: 0x06002029 RID: 8233 RVA: 0x000A956C File Offset: 0x000A776C
+	// Token: 0x060020D7 RID: 8407 RVA: 0x000B08C0 File Offset: 0x000AEAC0
 	public bool CanMoveCameraInSoftLock()
 	{
 		return this.SoftUnlockInputRemainTime > 0.0;
 	}
 
-	// Token: 0x0600202A RID: 8234 RVA: 0x000A957F File Offset: 0x000A777F
+	// Token: 0x060020D8 RID: 8408 RVA: 0x000B08D3 File Offset: 0x000AEAD3
 	private void ClearUnlockInputRemainTime()
 	{
 		this.SoftUnlockInputRemainTime = 0.0;
 	}
 
-	// Token: 0x0600202B RID: 8235 RVA: 0x000A9590 File Offset: 0x000A7790
+	// Token: 0x060020D9 RID: 8409 RVA: 0x000B08E4 File Offset: 0x000AEAE4
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x0600202C RID: 8236 RVA: 0x000A959C File Offset: 0x000A779C
+	// Token: 0x060020DA RID: 8410 RVA: 0x000B08F0 File Offset: 0x000AEAF0
 	public override void PostProcessConfig(Dictionary<int, float> config, Dictionary<int, CurveBase> curveConfig)
 	{
 		base.PostProcessConfig(config, curveConfig);
@@ -581,7 +581,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		}
 	}
 
-	// Token: 0x0600202D RID: 8237 RVA: 0x000A9790 File Offset: 0x000A7990
+	// Token: 0x060020DB RID: 8411 RVA: 0x000B0AE4 File Offset: 0x000AECE4
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -1085,7 +1085,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x0600202E RID: 8238 RVA: 0x000AA178 File Offset: 0x000A8378
+	// Token: 0x060020DC RID: 8412 RVA: 0x000B14CC File Offset: 0x000AF6CC
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -2646,7 +2646,7 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x0600202F RID: 8239 RVA: 0x000ABC28 File Offset: 0x000A9E28
+	// Token: 0x060020DD RID: 8413 RVA: 0x000B2F7C File Offset: 0x000B117C
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -2655,183 +2655,183 @@ public class CameraFocusController : CameraControllerBase, ICanGetConfigMapValue
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040013F4 RID: 5108
+	// Token: 0x04001436 RID: 5174
 	internal const int ArmOffsetYSpeed = 100;
 
-	// Token: 0x040013F5 RID: 5109
+	// Token: 0x04001437 RID: 5175
 	internal const int DefaultFps = 60;
 
-	// Token: 0x040013F6 RID: 5110
+	// Token: 0x04001438 RID: 5176
 	internal const float FirstThreshold = 0.5f;
 
-	// Token: 0x040013F7 RID: 5111
+	// Token: 0x04001439 RID: 5177
 	internal const double FirstThresholdSquared = 0.25;
 
-	// Token: 0x040013F8 RID: 5112
+	// Token: 0x0400143A RID: 5178
 	internal const float LockDirectionLeft = -1f;
 
-	// Token: 0x040013F9 RID: 5113
+	// Token: 0x0400143B RID: 5179
 	internal const float LockDirectionRight = 1f;
 
-	// Token: 0x040013FA RID: 5114
+	// Token: 0x0400143C RID: 5180
 	public float RelativeRotationLagYawSpeedMin;
 
-	// Token: 0x040013FB RID: 5115
+	// Token: 0x0400143D RID: 5181
 	public float RelativeRotationLagYawSpeedMax;
 
-	// Token: 0x040013FC RID: 5116
+	// Token: 0x0400143E RID: 5182
 	public float RelativeRotationLagYawAngleRange;
 
-	// Token: 0x040013FD RID: 5117
+	// Token: 0x0400143F RID: 5183
 	[Nullable(2)]
 	public CurveBase RelativeRotationLagYawCurve;
 
-	// Token: 0x040013FE RID: 5118
+	// Token: 0x04001440 RID: 5184
 	public float RelativeRotationLagPitchSpeedMin;
 
-	// Token: 0x040013FF RID: 5119
+	// Token: 0x04001441 RID: 5185
 	public float RelativeRotationLagPitchSpeedMax;
 
-	// Token: 0x04001400 RID: 5120
+	// Token: 0x04001442 RID: 5186
 	public float RelativeRotationLagPitchAngleRange;
 
-	// Token: 0x04001401 RID: 5121
+	// Token: 0x04001443 RID: 5187
 	[Nullable(2)]
 	public CurveBase RelativeRotationLagPitchCurve;
 
-	// Token: 0x04001402 RID: 5122
+	// Token: 0x04001444 RID: 5188
 	public float RelativeRotationLagRatioMin;
 
-	// Token: 0x04001403 RID: 5123
+	// Token: 0x04001445 RID: 5189
 	public float RelativeRotationLagRatioMax;
 
-	// Token: 0x04001404 RID: 5124
+	// Token: 0x04001446 RID: 5190
 	public float RelativeRotationLagDistanceRangeMin;
 
-	// Token: 0x04001405 RID: 5125
+	// Token: 0x04001447 RID: 5191
 	public float RelativeRotationLagDistanceRangeMax;
 
-	// Token: 0x04001406 RID: 5126
+	// Token: 0x04001448 RID: 5192
 	[Nullable(2)]
 	public CurveBase RelativeRotationLagRatioCurve;
 
-	// Token: 0x04001407 RID: 5127
+	// Token: 0x04001449 RID: 5193
 	public float YawSignAdaptionOn;
 
-	// Token: 0x04001408 RID: 5128
+	// Token: 0x0400144A RID: 5194
 	public float YawSignAdaptionThreshold;
 
-	// Token: 0x04001409 RID: 5129
+	// Token: 0x0400144B RID: 5195
 	public float YawSignAdaptionCooldown;
 
-	// Token: 0x0400140A RID: 5130
+	// Token: 0x0400144C RID: 5196
 	public float YawSignAdaptionDistanceThreshold;
 
-	// Token: 0x0400140B RID: 5131
+	// Token: 0x0400144D RID: 5197
 	public float YawSignAdaptionLockDirection;
 
-	// Token: 0x0400140C RID: 5132
+	// Token: 0x0400144E RID: 5198
 	public float RelativeYawSoftMin;
 
-	// Token: 0x0400140D RID: 5133
+	// Token: 0x0400144F RID: 5199
 	public float RelativeYawSoftMax;
 
-	// Token: 0x0400140E RID: 5134
+	// Token: 0x04001450 RID: 5200
 	public float CameraOffsetSoft;
 
-	// Token: 0x0400140F RID: 5135
+	// Token: 0x04001451 RID: 5201
 	public float CameraOffset;
 
-	// Token: 0x04001410 RID: 5136
+	// Token: 0x04001452 RID: 5202
 	public float HardLockInputYawSensitivity;
 
-	// Token: 0x04001411 RID: 5137
+	// Token: 0x04001453 RID: 5203
 	public float HardLockInputPitchSensitivity;
 
-	// Token: 0x04001412 RID: 5138
+	// Token: 0x04001454 RID: 5204
 	public float HardLockInputYawSensitivityGamepad;
 
-	// Token: 0x04001413 RID: 5139
+	// Token: 0x04001455 RID: 5205
 	public float HardLockInputPitchSensitivityGamepad;
 
-	// Token: 0x04001414 RID: 5140
+	// Token: 0x04001456 RID: 5206
 	public float SoftLockInputYawSensitivity;
 
-	// Token: 0x04001415 RID: 5141
+	// Token: 0x04001457 RID: 5207
 	public float SoftLockInputPitchSensitivity;
 
-	// Token: 0x04001416 RID: 5142
+	// Token: 0x04001458 RID: 5208
 	public float SoftLockInputYawSensitivityGamepad;
 
-	// Token: 0x04001417 RID: 5143
+	// Token: 0x04001459 RID: 5209
 	public float SoftLockInputPitchSensitivityGamepad;
 
-	// Token: 0x04001418 RID: 5144
+	// Token: 0x0400145A RID: 5210
 	public float ChangeShowTargetDamping;
 
-	// Token: 0x04001419 RID: 5145
+	// Token: 0x0400145B RID: 5211
 	public float ChangeShowTargetAngleCoefficient;
 
-	// Token: 0x0400141A RID: 5146
+	// Token: 0x0400145C RID: 5212
 	public float ChangeShowTargetDistCoefficient;
 
-	// Token: 0x0400141B RID: 5147
+	// Token: 0x0400145D RID: 5213
 	public float ChangeShowTargetSensitivity;
 
-	// Token: 0x0400141C RID: 5148
+	// Token: 0x0400145E RID: 5214
 	public float ChangeShowTargetSensitivityGamepad;
 
-	// Token: 0x0400141D RID: 5149
+	// Token: 0x0400145F RID: 5215
 	public float RelativeYawHardMax;
 
-	// Token: 0x0400141E RID: 5150
+	// Token: 0x04001460 RID: 5216
 	public float RelativeYawHardMin;
 
-	// Token: 0x0400141F RID: 5151
+	// Token: 0x04001461 RID: 5217
 	public float RelativePitchHardMax;
 
-	// Token: 0x04001420 RID: 5152
+	// Token: 0x04001462 RID: 5218
 	public float RelativePitchHardMin;
 
-	// Token: 0x04001421 RID: 5153
+	// Token: 0x04001463 RID: 5219
 	public float SoftUnlockYawSpeed;
 
-	// Token: 0x04001422 RID: 5154
+	// Token: 0x04001464 RID: 5220
 	public float SoftUnlockPitchSpeed;
 
-	// Token: 0x04001423 RID: 5155
+	// Token: 0x04001465 RID: 5221
 	public float SoftUnlockInputTime;
 
-	// Token: 0x04001424 RID: 5156
+	// Token: 0x04001466 RID: 5222
 	public float SoftUnlockInputYawMinSpeed;
 
-	// Token: 0x04001425 RID: 5157
+	// Token: 0x04001467 RID: 5223
 	public float SoftUnlockInputPitchMinSpeed;
 
-	// Token: 0x04001426 RID: 5158
+	// Token: 0x04001468 RID: 5224
 	private double SoftUnlockInputRemainTime;
 
-	// Token: 0x04001427 RID: 5159
+	// Token: 0x04001469 RID: 5225
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x04001428 RID: 5160
+	// Token: 0x0400146A RID: 5226
 	private readonly Vector TargetOffset = Vector.Create();
 
-	// Token: 0x04001429 RID: 5161
+	// Token: 0x0400146B RID: 5227
 	private readonly Rotator TargetRotator = Rotator.Create();
 
-	// Token: 0x0400142A RID: 5162
+	// Token: 0x0400146C RID: 5228
 	private float ExpectedYawSign;
 
-	// Token: 0x0400142B RID: 5163
+	// Token: 0x0400146D RID: 5229
 	public float? AddCameraOffsetY;
 
-	// Token: 0x0400142C RID: 5164
+	// Token: 0x0400146E RID: 5230
 	private readonly Vector2D SumYawPitchInput = Vector2D.Create();
 
-	// Token: 0x0400142D RID: 5165
+	// Token: 0x0400146F RID: 5231
 	private bool FirstInput = true;
 
-	// Token: 0x0400142E RID: 5166
+	// Token: 0x04001470 RID: 5232
 	private float PrevChangeYawSignTime;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014E6 RID: 5350
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200163F RID: 5695
 	public class ChangeSelfEntityState : ActionParams
 	{
-		// Token: 0x060079C2 RID: 31170 RVA: 0x0012334C File Offset: 0x0012154C
+		// Token: 0x0600808F RID: 32911 RVA: 0x00131F98 File Offset: 0x00130198
 		private ChangeSelfEntityState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060079C3 RID: 31171 RVA: 0x00123384 File Offset: 0x00121584
+		// Token: 0x06008090 RID: 32912 RVA: 0x00131FD0 File Offset: 0x001301D0
 		public static ChangeSelfEntityState Create([Nullable(2)] ChangeSelfEntityState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079C4 RID: 31172 RVA: 0x00123397 File Offset: 0x00121597
+		// Token: 0x06008091 RID: 32913 RVA: 0x00131FE3 File Offset: 0x001301E3
 		public static ChangeSelfEntityState CreateFromSetValue([Nullable(2)] ChangeSelfEntityState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079C5 RID: 31173 RVA: 0x001233AA File Offset: 0x001215AA
+		// Token: 0x06008092 RID: 32914 RVA: 0x00131FF6 File Offset: 0x001301F6
 		public ChangeSelfEntityState_SetValue ToSetValue()
 		{
 			return new ChangeSelfEntityState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028BE RID: 10430
-		// (get) Token: 0x060079C6 RID: 31174 RVA: 0x001233BD File Offset: 0x001215BD
-		// (set) Token: 0x060079C7 RID: 31175 RVA: 0x001233E8 File Offset: 0x001215E8
+		// Token: 0x17002AA8 RID: 10920
+		// (get) Token: 0x06008093 RID: 32915 RVA: 0x00132009 File Offset: 0x00130209
+		// (set) Token: 0x06008094 RID: 32916 RVA: 0x00132034 File Offset: 0x00130234
 		public virtual string EntityState
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400469D RID: 18077
+		// Token: 0x04004A38 RID: 19000
 		[Nullable(2)]
 		protected new ChangeSelfEntityState FbInstance;
 
-		// Token: 0x0400469E RID: 18078
+		// Token: 0x04004A39 RID: 19001
 		[Nullable(2)]
 		protected ChangeSelfEntityState_SetValue PocoInterface;
 	}

@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063CF RID: 25551
+	// Token: 0x0200534D RID: 21325
 	public interface IMowingRiskThresholdData
 	{
-		// Token: 0x170093EB RID: 37867
-		// (get) Token: 0x0604043D RID: 263229
-		// (set) Token: 0x0604043E RID: 263230
+		// Token: 0x1700674D RID: 26445
+		// (get) Token: 0x060350FE RID: 217342
+		// (set) Token: 0x060350FF RID: 217343
 		int Index { get; set; }
 
-		// Token: 0x170093EC RID: 37868
-		// (get) Token: 0x0604043F RID: 263231
-		// (set) Token: 0x06040440 RID: 263232
+		// Token: 0x1700674E RID: 26446
+		// (get) Token: 0x06035100 RID: 217344
+		// (set) Token: 0x06035101 RID: 217345
 		int BuffId { get; set; }
 
-		// Token: 0x170093ED RID: 37869
-		// (get) Token: 0x06040441 RID: 263233
-		// (set) Token: 0x06040442 RID: 263234
+		// Token: 0x1700674F RID: 26447
+		// (get) Token: 0x06035102 RID: 217346
+		// (set) Token: 0x06035103 RID: 217347
 		int Threshold { get; set; }
 	}
 }

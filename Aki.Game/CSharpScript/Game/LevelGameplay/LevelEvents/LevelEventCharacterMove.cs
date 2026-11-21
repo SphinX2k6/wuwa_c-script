@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B01 RID: 27393
+	// Token: 0x02005C79 RID: 23673
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventCharacterMove : LevelEventBase
 	{
-		// Token: 0x06044042 RID: 278594 RVA: 0x010B5D3A File Offset: 0x010B3F3A
+		// Token: 0x0603A194 RID: 237972 RVA: 0x0105F5D6 File Offset: 0x0105D7D6
 		public LevelEventCharacterMove(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044043 RID: 278595 RVA: 0x010B5D44 File Offset: 0x010B3F44
+		// Token: 0x0603A195 RID: 237973 RVA: 0x0105F5E0 File Offset: 0x0105D7E0
 		[NullableContext(1)]
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044044 RID: 278596 RVA: 0x010B5F14 File Offset: 0x010B4114
+		// Token: 0x0603A196 RID: 237974 RVA: 0x0105F7B0 File Offset: 0x0105D9B0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044045 RID: 278597 RVA: 0x010B60EC File Offset: 0x010B42EC
+		// Token: 0x0603A197 RID: 237975 RVA: 0x0105F988 File Offset: 0x0105DB88
 		private bool HandleMovePlayer()
 		{
 			this.IsPlayer = true;
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044046 RID: 278598 RVA: 0x010B61D8 File Offset: 0x010B43D8
+		// Token: 0x0603A198 RID: 237976 RVA: 0x0105FA74 File Offset: 0x0105DC74
 		private bool HandleMoveEntity()
 		{
 			EntityHandle targetEntityHandle = this.TargetEntityHandle;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06044047 RID: 278599 RVA: 0x010B6320 File Offset: 0x010B4520
+		// Token: 0x0603A199 RID: 237977 RVA: 0x0105FBBC File Offset: 0x0105DDBC
 		private bool HandleMoveTriggered(TriggerContext context)
 		{
 			if (context == null || context.OtherEntityId == null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return this.HandleMoveEntity();
 		}
 
-		// Token: 0x06044048 RID: 278600 RVA: 0x010B6388 File Offset: 0x010B4588
+		// Token: 0x0603A19A RID: 237978 RVA: 0x0105FC24 File Offset: 0x0105DE24
 		[NullableContext(1)]
 		private static void OnMoveEndAsync(ELevelEventState moveResult, EntityHandle handle, bool isPlayer, Vector targetPos, [Nullable(2)] Action callback = null)
 		{
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044049 RID: 278601 RVA: 0x010B6463 File Offset: 0x010B4663
+		// Token: 0x0603A19B RID: 237979 RVA: 0x0105FCFF File Offset: 0x0105DEFF
 		private void OnMoveEnd(ELevelEventState moveResult)
 		{
 			LevelEventCharacterMove.OnMoveEndAsync(moveResult, this.TargetEntityHandle, this.IsPlayer, this.TargetPos, delegate
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x0604404A RID: 278602 RVA: 0x010B648C File Offset: 0x010B468C
+		// Token: 0x0603A19C RID: 237980 RVA: 0x0105FD28 File Offset: 0x0105DF28
 		private static void TogglePlayerControl(bool enable)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -427,19 +427,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x040238BD RID: 145597
+		// Token: 0x0401EB5F RID: 125791
 		private const int MAX_EXCUTE_TIME_SEC = 10;
 
-		// Token: 0x040238BE RID: 145598
+		// Token: 0x0401EB60 RID: 125792
 		private EntityHandle TargetEntityHandle;
 
-		// Token: 0x040238BF RID: 145599
+		// Token: 0x0401EB61 RID: 125793
 		private bool IsPlayer;
 
-		// Token: 0x040238C0 RID: 145600
+		// Token: 0x0401EB62 RID: 125794
 		private MoveCharacterConfig MoveConfig;
 
-		// Token: 0x040238C1 RID: 145601
+		// Token: 0x0401EB63 RID: 125795
 		private Vector TargetPos;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E8 RID: 2536
+	// Token: 0x02000AAD RID: 2733
 	public static class EQuickHackAutoCloseTypeExtensions
 	{
-		// Token: 0x06003845 RID: 14405 RVA: 0x00091D44 File Offset: 0x0008FF44
+		// Token: 0x06003C1D RID: 15389 RVA: 0x0009A604 File Offset: 0x00098804
 		public static string ToEnumString(this EQuickHackAutoCloseType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003846 RID: 14406 RVA: 0x00091D7C File Offset: 0x0008FF7C
+		// Token: 0x06003C1E RID: 15390 RVA: 0x0009A63C File Offset: 0x0009883C
 		public static EQuickHackAutoCloseType FromString(string name)
 		{
 			EQuickHackAutoCloseType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003847 RID: 14407 RVA: 0x00091DA5 File Offset: 0x0008FFA5
+		// Token: 0x06003C1F RID: 15391 RVA: 0x0009A665 File Offset: 0x00098865
 		public static bool TryFromString(string name, out EQuickHackAutoCloseType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003848 RID: 14408 RVA: 0x00091DDE File Offset: 0x0008FFDE
+		// Token: 0x06003C20 RID: 15392 RVA: 0x0009A69E File Offset: 0x0009889E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003849 RID: 14409 RVA: 0x00091DF6 File Offset: 0x0008FFF6
+		// Token: 0x06003C21 RID: 15393 RVA: 0x0009A6B6 File Offset: 0x000988B6
 		public static EQuickHackAutoCloseType[] GetValues()
 		{
 			return new EQuickHackAutoCloseType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600384A RID: 14410 RVA: 0x00091E02 File Offset: 0x00090002
+		// Token: 0x06003C22 RID: 15394 RVA: 0x0009A6C2 File Offset: 0x000988C2
 		public static string[] GetNames()
 		{
 			return new string[]

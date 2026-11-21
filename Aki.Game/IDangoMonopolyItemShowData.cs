@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02001234 RID: 4660
+// Token: 0x020006E8 RID: 1768
 public interface IDangoMonopolyItemShowData
 {
-	// Token: 0x17000AB0 RID: 2736
-	// (get) Token: 0x06007DF9 RID: 32249
+	// Token: 0x17000AD0 RID: 2768
+	// (get) Token: 0x06005190 RID: 20880
 	int Id { get; }
 
-	// Token: 0x17000AB1 RID: 2737
-	// (get) Token: 0x06007DFA RID: 32250
+	// Token: 0x17000AD1 RID: 2769
+	// (get) Token: 0x06005191 RID: 20881
 	int UniqueId { get; }
 
-	// Token: 0x17000AB2 RID: 2738
-	// (get) Token: 0x06007DFB RID: 32251
-	// (set) Token: 0x06007DFC RID: 32252
+	// Token: 0x17000AD2 RID: 2770
+	// (get) Token: 0x06005192 RID: 20882
+	// (set) Token: 0x06005193 RID: 20883
 	int Num { get; set; }
 
-	// Token: 0x17000AB3 RID: 2739
-	// (get) Token: 0x06007DFD RID: 32253
+	// Token: 0x17000AD3 RID: 2771
+	// (get) Token: 0x06005194 RID: 20884
 	bool IsDouble { get; }
 }

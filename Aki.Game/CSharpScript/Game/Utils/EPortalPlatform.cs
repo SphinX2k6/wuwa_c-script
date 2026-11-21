@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x02004550 RID: 17744
+	// Token: 0x02003478 RID: 13432
 	public enum EPortalPlatform
 	{
-		// Token: 0x040187B1 RID: 100273
+		// Token: 0x04012DEB RID: 77291
 		Pc,
-		// Token: 0x040187B2 RID: 100274
+		// Token: 0x04012DEC RID: 77292
 		Mobile
 	}
 }

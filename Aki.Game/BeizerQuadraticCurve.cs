@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003494 RID: 13460
+// Token: 0x02002A08 RID: 10760
 [NullableContext(1)]
 [Nullable(0)]
 public class BeizerQuadraticCurve
 {
-	// Token: 0x0601D4D0 RID: 120016 RVA: 0x0082AD6F File Offset: 0x00828F6F
+	// Token: 0x0601B1CC RID: 111052 RVA: 0x00851FD3 File Offset: 0x008501D3
 	public void InitByThreePoints(Vector pointA, Vector pointB, Vector controlPoint)
 	{
 		this.PointA = pointA;
@@ -14,7 +14,7 @@ public class BeizerQuadraticCurve
 		this.ControlPoint = controlPoint;
 	}
 
-	// Token: 0x0601D4D1 RID: 120017 RVA: 0x0082AD88 File Offset: 0x00828F88
+	// Token: 0x0601B1CD RID: 111053 RVA: 0x00851FEC File Offset: 0x008501EC
 	public void InitByPhysics(Vector pointA, Vector pointB, Vector speedA, double delta)
 	{
 		this.PointA = pointA;
@@ -24,7 +24,7 @@ public class BeizerQuadraticCurve
 		this.PointA.Addition(this.TempVector, this.ControlPoint);
 	}
 
-	// Token: 0x0601D4D2 RID: 120018 RVA: 0x0082ADD8 File Offset: 0x00828FD8
+	// Token: 0x0601B1CE RID: 111054 RVA: 0x0085203C File Offset: 0x0085023C
 	public void InitByFactor(Vector pointA, Vector pointB, Vector upVetcor, double factor, double centerFactor)
 	{
 		this.PointA = pointA;
@@ -40,7 +40,7 @@ public class BeizerQuadraticCurve
 		this.TempVector2.Addition(this.TempVector3, this.ControlPoint);
 	}
 
-	// Token: 0x0601D4D3 RID: 120019 RVA: 0x0082AEA4 File Offset: 0x008290A4
+	// Token: 0x0601B1CF RID: 111055 RVA: 0x00852108 File Offset: 0x00850308
 	public Vector GetPos(double factor)
 	{
 		double num = 1.0 - factor;
@@ -52,7 +52,7 @@ public class BeizerQuadraticCurve
 		return this.TempVector;
 	}
 
-	// Token: 0x0601D4D4 RID: 120020 RVA: 0x0082AF3C File Offset: 0x0082913C
+	// Token: 0x0601B1D0 RID: 111056 RVA: 0x008521A0 File Offset: 0x008503A0
 	public Vector GetDerivativeAt(double factor)
 	{
 		double num = 1.0 - factor;
@@ -64,7 +64,7 @@ public class BeizerQuadraticCurve
 		return this.TempVector;
 	}
 
-	// Token: 0x0601D4D5 RID: 120021 RVA: 0x0082AFF0 File Offset: 0x008291F0
+	// Token: 0x0601B1D1 RID: 111057 RVA: 0x00852254 File Offset: 0x00850454
 	public double GetPolylineLength()
 	{
 		this.ControlPoint.Subtraction(this.PointA, this.TempVector);
@@ -72,24 +72,24 @@ public class BeizerQuadraticCurve
 		return this.TempVector.Size() + this.TempVector2.Size();
 	}
 
-	// Token: 0x0400E6E3 RID: 59107
+	// Token: 0x0400EB98 RID: 60312
 	[Nullable(2)]
 	protected Vector PointA;
 
-	// Token: 0x0400E6E4 RID: 59108
+	// Token: 0x0400EB99 RID: 60313
 	[Nullable(2)]
 	protected Vector PointB;
 
-	// Token: 0x0400E6E5 RID: 59109
+	// Token: 0x0400EB9A RID: 60314
 	[Nullable(2)]
 	protected Vector ControlPoint;
 
-	// Token: 0x0400E6E6 RID: 59110
+	// Token: 0x0400EB9B RID: 60315
 	protected Vector TempVector = Vector.Create();
 
-	// Token: 0x0400E6E7 RID: 59111
+	// Token: 0x0400EB9C RID: 60316
 	protected Vector TempVector2 = Vector.Create();
 
-	// Token: 0x0400E6E8 RID: 59112
+	// Token: 0x0400EB9D RID: 60317
 	protected Vector TempVector3 = Vector.Create();
 }

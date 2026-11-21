@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D09 RID: 19721
+	// Token: 0x02005205 RID: 20997
 	public struct IUltimateSkillReady : IFlatbufferObject
 	{
-		// Token: 0x17008F0E RID: 36622
-		// (get) Token: 0x0601F4D2 RID: 128210 RVA: 0x0045DB75 File Offset: 0x0045BD75
+		// Token: 0x17009647 RID: 38471
+		// (get) Token: 0x06021117 RID: 135447 RVA: 0x00491AC5 File Offset: 0x0048FCC5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F4D3 RID: 128211 RVA: 0x0045DB82 File Offset: 0x0045BD82
+		// Token: 0x06021118 RID: 135448 RVA: 0x00491AD2 File Offset: 0x0048FCD2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F4D4 RID: 128212 RVA: 0x0045DB8C File Offset: 0x0045BD8C
+		// Token: 0x06021119 RID: 135449 RVA: 0x00491ADC File Offset: 0x0048FCDC
 		public static IUltimateSkillReady GetRootAsIUltimateSkillReady(ByteBuffer _bb)
 		{
 			return IUltimateSkillReady.GetRootAsIUltimateSkillReady(_bb, default(IUltimateSkillReady));
 		}
 
-		// Token: 0x0601F4D5 RID: 128213 RVA: 0x0045DBA8 File Offset: 0x0045BDA8
+		// Token: 0x0602111A RID: 135450 RVA: 0x00491AF8 File Offset: 0x0048FCF8
 		public static IUltimateSkillReady GetRootAsIUltimateSkillReady(ByteBuffer _bb, IUltimateSkillReady obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F4D6 RID: 128214 RVA: 0x0045DBC5 File Offset: 0x0045BDC5
+		// Token: 0x0602111B RID: 135451 RVA: 0x00491B15 File Offset: 0x0048FD15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F4D7 RID: 128215 RVA: 0x0045DBD4 File Offset: 0x0045BDD4
+		// Token: 0x0602111C RID: 135452 RVA: 0x00491B24 File Offset: 0x0048FD24
 		public IUltimateSkillReady __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008F0F RID: 36623
-		// (get) Token: 0x0601F4D8 RID: 128216 RVA: 0x0045DBE4 File Offset: 0x0045BDE4
+		// Token: 0x17009648 RID: 38472
+		// (get) Token: 0x0602111D RID: 135453 RVA: 0x00491B34 File Offset: 0x0048FD34
 		public ESkillReadyType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F4D9 RID: 128217 RVA: 0x0045DC20 File Offset: 0x0045BE20
+		// Token: 0x0602111E RID: 135454 RVA: 0x00491B70 File Offset: 0x0048FD70
 		public static Offset<IUltimateSkillReady> CreateIUltimateSkillReady(FlatBufferBuilder builder, ESkillReadyType Type = ESkillReadyType.UltimateSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IUltimateSkillReady.EndIUltimateSkillReady(builder);
 		}
 
-		// Token: 0x0601F4DA RID: 128218 RVA: 0x0045DC36 File Offset: 0x0045BE36
+		// Token: 0x0602111F RID: 135455 RVA: 0x00491B86 File Offset: 0x0048FD86
 		public static void StartIUltimateSkillReady(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601F4DB RID: 128219 RVA: 0x0045DC3F File Offset: 0x0045BE3F
+		// Token: 0x06021120 RID: 135456 RVA: 0x00491B8F File Offset: 0x0048FD8F
 		public static void AddType(FlatBufferBuilder builder, ESkillReadyType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F4DC RID: 128220 RVA: 0x0045DC4A File Offset: 0x0045BE4A
+		// Token: 0x06021121 RID: 135457 RVA: 0x00491B9A File Offset: 0x0048FD9A
 		public static Offset<IUltimateSkillReady> EndIUltimateSkillReady(FlatBufferBuilder builder)
 		{
 			return new Offset<IUltimateSkillReady>(builder.EndTable());
 		}
 
-		// Token: 0x0601F4DD RID: 128221 RVA: 0x0045DC58 File Offset: 0x0045BE58
+		// Token: 0x06021122 RID: 135458 RVA: 0x00491BA8 File Offset: 0x0048FDA8
 		public IUltimateSkillReadyT UnPack()
 		{
 			IUltimateSkillReadyT ultimateSkillReadyT = new IUltimateSkillReadyT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ultimateSkillReadyT;
 		}
 
-		// Token: 0x0601F4DE RID: 128222 RVA: 0x0045DC73 File Offset: 0x0045BE73
+		// Token: 0x06021123 RID: 135459 RVA: 0x00491BC3 File Offset: 0x0048FDC3
 		public void UnPackTo(IUltimateSkillReadyT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601F4DF RID: 128223 RVA: 0x0045DC84 File Offset: 0x0045BE84
+		// Token: 0x06021124 RID: 135460 RVA: 0x00491BD4 File Offset: 0x0048FDD4
 		public static Offset<IUltimateSkillReady> Pack(FlatBufferBuilder builder, IUltimateSkillReadyT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IUltimateSkillReady.CreateIUltimateSkillReady(builder, _o.Type);
 		}
 
-		// Token: 0x0400D6E6 RID: 55014
+		// Token: 0x0400E213 RID: 57875
 		private Table __p;
 	}
 }

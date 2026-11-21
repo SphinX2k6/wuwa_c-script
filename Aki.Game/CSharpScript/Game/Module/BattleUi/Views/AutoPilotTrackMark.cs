@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB3 RID: 23731
+	// Token: 0x02004C95 RID: 19605
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AutoPilotTrackMark : UiPanelBase
 	{
-		// Token: 0x0603BF45 RID: 245573 RVA: 0x00E54654 File Offset: 0x00E52854
+		// Token: 0x06030E98 RID: 200344 RVA: 0x00DA4CFC File Offset: 0x00DA2EFC
 		public AutoPilotTrackMark()
 		{
 			if (GlobalData.World == null)
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LimitB = Math.Min(712.5f, (((uiRootItem != null) ? uiRootItem.GetHeight() : 0f) - 495f) / 2f);
 		}
 
-		// Token: 0x0603BF46 RID: 245574 RVA: 0x00E54717 File Offset: 0x00E52917
+		// Token: 0x06030E99 RID: 200345 RVA: 0x00DA4DBF File Offset: 0x00DA2FBF
 		[NullableContext(1)]
 		public void Initialize(UUIItem parent)
 		{
 			base.CreateThenShowByResourceIdAsync("UiItem_Mark_Prefab", parent, true).Forget();
 		}
 
-		// Token: 0x0603BF47 RID: 245575 RVA: 0x00E5472C File Offset: 0x00E5292C
+		// Token: 0x06030E9A RID: 200346 RVA: 0x00DA4DD4 File Offset: 0x00DA2FD4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BF48 RID: 245576 RVA: 0x00E54819 File Offset: 0x00E52A19
+		// Token: 0x06030E9B RID: 200347 RVA: 0x00DA4EC1 File Offset: 0x00DA30C1
 		protected override void OnStart()
 		{
 			this.DistanceComp = base.GetItem(4);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnUiShow();
 		}
 
-		// Token: 0x0603BF49 RID: 245577 RVA: 0x00E5483B File Offset: 0x00E52A3B
+		// Token: 0x06030E9C RID: 200348 RVA: 0x00DA4EE3 File Offset: 0x00DA30E3
 		protected override void OnBeforeDestroy()
 		{
 			this.PointTransport = null;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF4A RID: 245578 RVA: 0x00E54867 File Offset: 0x00E52A67
+		// Token: 0x06030E9D RID: 200349 RVA: 0x00DA4F0F File Offset: 0x00DA310F
 		public void OnUiShow()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -86,12 +86,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rootItem.SetRelativeScale3D(new FVector(1f, 1f, 1f));
 		}
 
-		// Token: 0x0603BF4B RID: 245579 RVA: 0x00E5488D File Offset: 0x00E52A8D
+		// Token: 0x06030E9E RID: 200350 RVA: 0x00DA4F35 File Offset: 0x00DA3135
 		public void OnUiHide()
 		{
 		}
 
-		// Token: 0x0603BF4C RID: 245580 RVA: 0x00E54890 File Offset: 0x00E52A90
+		// Token: 0x06030E9F RID: 200351 RVA: 0x00DA4F38 File Offset: 0x00DA3138
 		private void UpdateIcon()
 		{
 			if (!this.IsIconPathDirty)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsIconPathDirty = false;
 		}
 
-		// Token: 0x0603BF4D RID: 245581 RVA: 0x00E548CC File Offset: 0x00E52ACC
+		// Token: 0x06030EA0 RID: 200352 RVA: 0x00DA4F74 File Offset: 0x00DA3174
 		private void UpdateTrackDistance()
 		{
 			AutoPilotFindPathResult findPathResult = AutoPilotModel.Instance.GetFindPathResult();
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF4E RID: 245582 RVA: 0x00E54974 File Offset: 0x00E52B74
+		// Token: 0x06030EA1 RID: 200353 RVA: 0x00DA501C File Offset: 0x00DA321C
 		public void Update(float delta)
 		{
 			if (GlobalData.World == null)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateIcon();
 		}
 
-		// Token: 0x0603BF4F RID: 245583 RVA: 0x00E549CC File Offset: 0x00E52BCC
+		// Token: 0x06030EA2 RID: 200354 RVA: 0x00DA5074 File Offset: 0x00DA3274
 		protected void UpdatePositionAndRotation(float delta)
 		{
 			AutoPilotFindPathResult findPathResult = AutoPilotModel.Instance.GetFindPathResult();
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BF50 RID: 245584 RVA: 0x00E54B80 File Offset: 0x00E52D80
+		// Token: 0x06030EA3 RID: 200355 RVA: 0x00DA5228 File Offset: 0x00DA3428
 		private bool IsShowTrackingMark()
 		{
 			AutoPilotModel instance = AutoPilotModel.Instance;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603BF51 RID: 245585 RVA: 0x00E54BF4 File Offset: 0x00E52DF4
+		// Token: 0x06030EA4 RID: 200356 RVA: 0x00DA529C File Offset: 0x00DA349C
 		[NullableContext(1)]
 		protected bool ClampToEllipse(Vector2D vector, bool inFront)
 		{
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603BF52 RID: 245586 RVA: 0x00E54C67 File Offset: 0x00E52E67
+		// Token: 0x06030EA5 RID: 200357 RVA: 0x00DA530F File Offset: 0x00DA350F
 		private void SetRootItemState(bool bActive)
 		{
 			if (this.RootItem == null)
@@ -261,64 +261,64 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RootItem.SetUIActive(bActive);
 		}
 
-		// Token: 0x0401F4A0 RID: 128160
+		// Token: 0x04019F59 RID: 106329
 		private readonly float LimitA;
 
-		// Token: 0x0401F4A1 RID: 128161
+		// Token: 0x04019F5A RID: 106330
 		private readonly float LimitB;
 
-		// Token: 0x0401F4A2 RID: 128162
+		// Token: 0x04019F5B RID: 106331
 		protected FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x0401F4A3 RID: 128163
+		// Token: 0x04019F5C RID: 106332
 		protected Vector2D PointTransport = Vector2D.Create(1.0, -1.0);
 
-		// Token: 0x0401F4A4 RID: 128164
+		// Token: 0x04019F5D RID: 106333
 		private TimerHandle DelayTrackSequenceTimerId;
 
-		// Token: 0x0401F4A5 RID: 128165
+		// Token: 0x04019F5E RID: 106334
 		[Nullable(1)]
 		protected readonly Vector2D ScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401F4A6 RID: 128166
+		// Token: 0x04019F5F RID: 106335
 		[Nullable(1)]
 		protected readonly Vector2D LastScreenPosition = Vector2D.Create();
 
-		// Token: 0x0401F4A7 RID: 128167
+		// Token: 0x04019F60 RID: 106336
 		protected bool InRange;
 
-		// Token: 0x0401F4A8 RID: 128168
+		// Token: 0x04019F61 RID: 106337
 		private int TrackDistanceDisplay = -1;
 
-		// Token: 0x0401F4A9 RID: 128169
+		// Token: 0x04019F62 RID: 106338
 		private UUIItem DistanceComp;
 
-		// Token: 0x0401F4AA RID: 128170
+		// Token: 0x04019F63 RID: 106339
 		protected UUIItem DirectionComp;
 
-		// Token: 0x0401F4AB RID: 128171
+		// Token: 0x04019F64 RID: 106340
 		private string IconPath;
 
-		// Token: 0x0401F4AC RID: 128172
+		// Token: 0x04019F65 RID: 106341
 		private bool IsIconPathDirty;
 
-		// Token: 0x0200BE8C RID: 48780
+		// Token: 0x0200A892 RID: 43154
 		[NullableContext(0)]
 		private enum ETrackedMark
 		{
-			// Token: 0x04039764 RID: 235364
+			// Token: 0x04034125 RID: 213285
 			Icon,
-			// Token: 0x04039765 RID: 235365
+			// Token: 0x04034126 RID: 213286
 			Distance,
-			// Token: 0x04039766 RID: 235366
+			// Token: 0x04034127 RID: 213287
 			Direction,
-			// Token: 0x04039767 RID: 235367
+			// Token: 0x04034128 RID: 213288
 			TrackedButton,
-			// Token: 0x04039768 RID: 235368
+			// Token: 0x04034129 RID: 213289
 			DistanceItem,
-			// Token: 0x04039769 RID: 235369
+			// Token: 0x0403412A RID: 213290
 			WaveNiagara,
-			// Token: 0x0403976A RID: 235370
+			// Token: 0x0403412B RID: 213291
 			PanelIcon
 		}
 	}

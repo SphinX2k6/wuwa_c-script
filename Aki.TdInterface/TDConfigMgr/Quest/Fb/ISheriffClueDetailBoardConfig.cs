@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200141B RID: 5147
+	// Token: 0x02001572 RID: 5490
 	public class ISheriffClueDetailBoardConfig
 	{
-		// Token: 0x060074F0 RID: 29936 RVA: 0x0011771D File Offset: 0x0011591D
-		[NullableContext(1)]
+		// Token: 0x06007BB1 RID: 31665 RVA: 0x00126101 File Offset: 0x00124301
 		public static ISheriffClueDetailBoardConfig Create(ISheriffClueDetailBoardConfig? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x040043B3 RID: 17331
+		// Token: 0x04004744 RID: 18244
 		private ISheriffClueDetailBoardConfig Instance;
 	}
 }

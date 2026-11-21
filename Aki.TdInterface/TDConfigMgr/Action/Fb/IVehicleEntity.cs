@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027BE RID: 10174
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A91 RID: 10897
 	public class IVehicleEntity : ITargetEntityType
 	{
-		// Token: 0x0600E250 RID: 57936 RVA: 0x00216DD2 File Offset: 0x00214FD2
+		// Token: 0x0600F072 RID: 61554 RVA: 0x00233BA6 File Offset: 0x00231DA6
 		public static IVehicleEntity Create(IVehicleEntity? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004496 RID: 17558
-		// (get) Token: 0x0600E251 RID: 57937 RVA: 0x00216DF1 File Offset: 0x00214FF1
+		// Token: 0x170047FE RID: 18430
+		// (get) Token: 0x0600F073 RID: 61555 RVA: 0x00233BC5 File Offset: 0x00231DC5
 		public override ETargetEntityType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004497 RID: 17559
-		// (get) Token: 0x0600E252 RID: 57938 RVA: 0x00216DFE File Offset: 0x00214FFE
+		// Token: 0x170047FF RID: 18431
+		// (get) Token: 0x0600F074 RID: 61556 RVA: 0x00233BD2 File Offset: 0x00231DD2
 		public virtual ITargetVehicle Vehicle
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D7E RID: 32126
+		// Token: 0x04008435 RID: 33845
 		private IVehicleEntity Instance;
 
-		// Token: 0x04007D7F RID: 32127
+		// Token: 0x04008436 RID: 33846
 		private ITargetVehicle _VehicleCache;
 
-		// Token: 0x04007D80 RID: 32128
+		// Token: 0x04008437 RID: 33847
 		private bool _VehicleInited;
 	}
 }

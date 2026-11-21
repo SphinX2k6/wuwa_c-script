@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.AI.StateMachine.State
 {
-	// Token: 0x02007330 RID: 29488
+	// Token: 0x020064B3 RID: 25779
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AiStateMachineStatePalsy : AiStateMachineState
 	{
-		// Token: 0x060485DE RID: 296414 RVA: 0x0129D631 File Offset: 0x0129B831
+		// Token: 0x0603EA2B RID: 256555 RVA: 0x012400B5 File Offset: 0x0123E2B5
 		public AiStateMachineStatePalsy(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.State state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x060485DF RID: 296415 RVA: 0x0129D654 File Offset: 0x0129B854
+		// Token: 0x0603EA2C RID: 256556 RVA: 0x012400D8 File Offset: 0x0123E2D8
 		[NullableContext(2)]
 		public unsafe override void OnActivate(AiStateMachineBase lastState = null, long? contextId = null)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.AI.StateMachine.State
 					if (loadedAsset.CameraShake != null && !CameraController.Instance.MainModel.IsModeEnabled(ECustomCameraMode.Widget) && !CameraController.Instance.MainModel.IsModeEnabled(ECustomCameraMode.Sequence))
 					{
 						FVectorDouble value = CameraModel.Instance.MainModel.FightCamera.GetComponent<FightCameraDisplayComponent>().CameraActor.D_K2_GetActorLocation();
-						CameraController.Instance.PlayWorldCameraShake(loadedAsset.CameraShake, new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+						CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(loadedAsset.CameraShake), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 					}
 				}
 				else
@@ -121,13 +121,13 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			}
 		}
 
-		// Token: 0x060485E0 RID: 296416 RVA: 0x0129DA26 File Offset: 0x0129BC26
+		// Token: 0x0603EA2D RID: 256557 RVA: 0x012404AF File Offset: 0x0123E6AF
 		[NullableContext(2)]
 		public override void OnDeactivate(AiStateMachineBase nextState = null, long? contextId = null)
 		{
 		}
 
-		// Token: 0x060485E1 RID: 296417 RVA: 0x0129DA28 File Offset: 0x0129BC28
+		// Token: 0x0603EA2E RID: 256558 RVA: 0x012404B1 File Offset: 0x0123E6B1
 		protected override bool OnInit(CombatStateMachineDefine.Fsm.State state)
 		{
 			this.CounterAttackEffect = state.BindPalsy.CounterAttackEffect;
@@ -135,16 +135,16 @@ namespace CSharpScript.Game.AI.StateMachine.State
 			return true;
 		}
 
-		// Token: 0x060485E2 RID: 296418 RVA: 0x0129DA4D File Offset: 0x0129BC4D
+		// Token: 0x0603EA2F RID: 256559 RVA: 0x012404D6 File Offset: 0x0123E6D6
 		public override void ToString(StringBuilder outBuilder, int depth = 0)
 		{
 			AiStateMachineHelper.AppendDepthSpace(outBuilder, depth);
 		}
 
-		// Token: 0x0402643A RID: 156730
+		// Token: 0x04021727 RID: 136999
 		private string CounterAttackEffect = "";
 
-		// Token: 0x0402643B RID: 156731
+		// Token: 0x04021728 RID: 137000
 		private string CounterAttackCamera = "";
 	}
 }

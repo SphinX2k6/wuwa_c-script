@@ -5,13 +5,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AF7 RID: 23287
+	// Token: 0x02004AD8 RID: 19160
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CookDefine : IStaticVariableResetter
 	{
-		// Token: 0x17008C37 RID: 35895
-		// (get) Token: 0x0603AF2D RID: 241453 RVA: 0x00E0E222 File Offset: 0x00E0C422
+		// Token: 0x17006011 RID: 24593
+		// (get) Token: 0x0602FE9F RID: 196255 RVA: 0x00D5EF16 File Offset: 0x00D5D116
 		public static IReadOnlyList<EUiViewName> CookEntityCanChangeArray
 		{
 			get
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.Cook
 			}
 		}
 
-		// Token: 0x0603AF2E RID: 241454 RVA: 0x00E0E229 File Offset: 0x00E0C429
+		// Token: 0x0602FEA0 RID: 196256 RVA: 0x00D5EF1D File Offset: 0x00D5D11D
 		static CookDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CookDefine.CreateStaticDefaultValue), new Action(CookDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603AF2F RID: 241455 RVA: 0x00E0E248 File Offset: 0x00E0C448
+		// Token: 0x0602FEA1 RID: 196257 RVA: 0x00D5EF3C File Offset: 0x00D5D13C
 		public static void CreateStaticDefaultValue()
 		{
 			CookDefine._cookEntityCanChangeArray = new List<EUiViewName>
@@ -36,25 +36,25 @@ namespace CSharpScript.Game.Module.Cook
 			};
 		}
 
-		// Token: 0x0603AF30 RID: 241456 RVA: 0x00E0E26A File Offset: 0x00E0C46A
+		// Token: 0x0602FEA2 RID: 196258 RVA: 0x00D5EF5E File Offset: 0x00D5D15E
 		public static void ResetStaticDefaultValue()
 		{
 			CookDefine._cookEntityCanChangeArray = null;
 		}
 
-		// Token: 0x0401EC47 RID: 126023
+		// Token: 0x04019703 RID: 104195
 		public const int COOK_SEQUENCE_TIME_LENGTH = 300;
 
-		// Token: 0x0401EC48 RID: 126024
+		// Token: 0x04019704 RID: 104196
 		public const string COOK_TYPE_TEXTURE_KEY = "T_CookingType";
 
-		// Token: 0x0401EC49 RID: 126025
+		// Token: 0x04019705 RID: 104197
 		public const string INVENTORY_ACTIVE_COLOR = "aa9b6a";
 
-		// Token: 0x0401EC4A RID: 126026
+		// Token: 0x04019706 RID: 104198
 		public const string INVENTORY_DEACTIVE_COLOR = "ece5d8";
 
-		// Token: 0x0401EC4B RID: 126027
+		// Token: 0x04019707 RID: 104199
 		[Nullable(2)]
 		private static IReadOnlyList<EUiViewName> _cookEntityCanChangeArray;
 	}

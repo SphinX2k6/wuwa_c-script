@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200032C RID: 812
+	// Token: 0x02000333 RID: 819
 	[NetMessage(EMessageId.DailyQuestUnlockAreaNotify)]
 	public sealed class DailyQuestUnlockAreaNotify : IMessage<DailyQuestUnlockAreaNotify>, IMessage, IEquatable<DailyQuestUnlockAreaNotify>, IDeepCloneable<DailyQuestUnlockAreaNotify>, IBufferMessage
 	{
-		// Token: 0x0600516B RID: 20843 RVA: 0x000C5F9C File Offset: 0x000C419C
+		// Token: 0x06005244 RID: 21060 RVA: 0x000C8390 File Offset: 0x000C6590
 		[NullableContext(1)]
 		public static DailyQuestUnlockAreaNotify Create()
 		{
 			return new DailyQuestUnlockAreaNotify();
 		}
 
-		// Token: 0x17000E9E RID: 3742
-		// (get) Token: 0x0600516C RID: 20844 RVA: 0x000C5FA3 File Offset: 0x000C41A3
+		// Token: 0x17000ECB RID: 3787
+		// (get) Token: 0x06005245 RID: 21061 RVA: 0x000C8397 File Offset: 0x000C6597
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000E9F RID: 3743
-		// (get) Token: 0x0600516D RID: 20845 RVA: 0x000C5FA6 File Offset: 0x000C41A6
+		// Token: 0x17000ECC RID: 3788
+		// (get) Token: 0x06005246 RID: 21062 RVA: 0x000C839A File Offset: 0x000C659A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600516E RID: 20846 RVA: 0x000C5FAD File Offset: 0x000C41AD
+		// Token: 0x06005247 RID: 21063 RVA: 0x000C83A1 File Offset: 0x000C65A1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyQuestUnlockAreaNotify()
 		{
 		}
 
-		// Token: 0x0600516F RID: 20847 RVA: 0x000C5FCC File Offset: 0x000C41CC
+		// Token: 0x06005248 RID: 21064 RVA: 0x000C83C0 File Offset: 0x000C65C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyQuestUnlockAreaNotify(DailyQuestUnlockAreaNotify other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005170 RID: 20848 RVA: 0x000C6036 File Offset: 0x000C4236
+		// Token: 0x06005249 RID: 21065 RVA: 0x000C842A File Offset: 0x000C662A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DailyQuestUnlockAreaNotify Clone()
@@ -71,8 +71,8 @@ namespace Aki.Protocol
 			return new DailyQuestUnlockAreaNotify(this);
 		}
 
-		// Token: 0x17000EA0 RID: 3744
-		// (get) Token: 0x06005171 RID: 20849 RVA: 0x000C603E File Offset: 0x000C423E
+		// Token: 0x17000ECD RID: 3789
+		// (get) Token: 0x0600524A RID: 21066 RVA: 0x000C8432 File Offset: 0x000C6632
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockAreaIds
@@ -83,8 +83,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EA1 RID: 3745
-		// (get) Token: 0x06005172 RID: 20850 RVA: 0x000C6046 File Offset: 0x000C4246
+		// Token: 0x17000ECE RID: 3790
+		// (get) Token: 0x0600524B RID: 21067 RVA: 0x000C843A File Offset: 0x000C663A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnlockInfluenceIds
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EA2 RID: 3746
-		// (get) Token: 0x06005173 RID: 20851 RVA: 0x000C604E File Offset: 0x000C424E
-		// (set) Token: 0x06005174 RID: 20852 RVA: 0x000C6056 File Offset: 0x000C4256
+		// Token: 0x17000ECF RID: 3791
+		// (get) Token: 0x0600524C RID: 21068 RVA: 0x000C8442 File Offset: 0x000C6642
+		// (set) Token: 0x0600524D RID: 21069 RVA: 0x000C844A File Offset: 0x000C664A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurrChoosedArea
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EA3 RID: 3747
-		// (get) Token: 0x06005175 RID: 20853 RVA: 0x000C605F File Offset: 0x000C425F
-		// (set) Token: 0x06005176 RID: 20854 RVA: 0x000C6067 File Offset: 0x000C4267
+		// Token: 0x17000ED0 RID: 3792
+		// (get) Token: 0x0600524E RID: 21070 RVA: 0x000C8453 File Offset: 0x000C6653
+		// (set) Token: 0x0600524F RID: 21071 RVA: 0x000C845B File Offset: 0x000C665B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurrChoosedInfluence
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EA4 RID: 3748
-		// (get) Token: 0x06005177 RID: 20855 RVA: 0x000C6070 File Offset: 0x000C4270
-		// (set) Token: 0x06005178 RID: 20856 RVA: 0x000C6078 File Offset: 0x000C4278
+		// Token: 0x17000ED1 RID: 3793
+		// (get) Token: 0x06005250 RID: 21072 RVA: 0x000C8464 File Offset: 0x000C6664
+		// (set) Token: 0x06005251 RID: 21073 RVA: 0x000C846C File Offset: 0x000C666C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsInit
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005179 RID: 20857 RVA: 0x000C6081 File Offset: 0x000C4281
+		// Token: 0x06005252 RID: 21074 RVA: 0x000C8475 File Offset: 0x000C6675
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DailyQuestUnlockAreaNotify);
 		}
 
-		// Token: 0x0600517A RID: 20858 RVA: 0x000C6090 File Offset: 0x000C4290
+		// Token: 0x06005253 RID: 21075 RVA: 0x000C8484 File Offset: 0x000C6684
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DailyQuestUnlockAreaNotify other)
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.unlockAreaIds_.Equals(other.unlockAreaIds_) && this.unlockInfluenceIds_.Equals(other.unlockInfluenceIds_) && this.CurrChoosedArea == other.CurrChoosedArea && this.CurrChoosedInfluence == other.CurrChoosedInfluence && this.IsInit == other.IsInit && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600517B RID: 20859 RVA: 0x000C6114 File Offset: 0x000C4314
+		// Token: 0x06005254 RID: 21076 RVA: 0x000C8508 File Offset: 0x000C6708
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600517C RID: 20860 RVA: 0x000C61A1 File Offset: 0x000C43A1
+		// Token: 0x06005255 RID: 21077 RVA: 0x000C8595 File Offset: 0x000C6795
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600517D RID: 20861 RVA: 0x000C61AE File Offset: 0x000C43AE
+		// Token: 0x06005256 RID: 21078 RVA: 0x000C85A2 File Offset: 0x000C67A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -205,27 +205,27 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600517E RID: 20862 RVA: 0x000C61B8 File Offset: 0x000C43B8
+		// Token: 0x06005257 RID: 21079 RVA: 0x000C85AC File Offset: 0x000C67AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.CurrChoosedArea != 0)
 			{
-				output.WriteRawTag(8);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.CurrChoosedArea);
-			}
-			this.unlockInfluenceIds_.WriteTo(ref output, DailyQuestUnlockAreaNotify._repeated_unlockInfluenceIds_codec);
-			if (this.CurrChoosedInfluence != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.CurrChoosedInfluence);
 			}
 			this.unlockAreaIds_.WriteTo(ref output, DailyQuestUnlockAreaNotify._repeated_unlockAreaIds_codec);
 			if (this.IsInit)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(72);
 				output.WriteBool(this.IsInit);
+			}
+			this.unlockInfluenceIds_.WriteTo(ref output, DailyQuestUnlockAreaNotify._repeated_unlockInfluenceIds_codec);
+			if (this.CurrChoosedInfluence != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.CurrChoosedInfluence);
 			}
 			if (this._unknownFields != null)
 			{
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600517F RID: 20863 RVA: 0x000C6250 File Offset: 0x000C4450
+		// Token: 0x06005258 RID: 21080 RVA: 0x000C8644 File Offset: 0x000C6844
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005180 RID: 20864 RVA: 0x000C62D8 File Offset: 0x000C44D8
+		// Token: 0x06005259 RID: 21081 RVA: 0x000C86CC File Offset: 0x000C68CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DailyQuestUnlockAreaNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005181 RID: 20865 RVA: 0x000C635E File Offset: 0x000C455E
+		// Token: 0x0600525A RID: 21082 RVA: 0x000C8752 File Offset: 0x000C6952
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005182 RID: 20866 RVA: 0x000C6368 File Offset: 0x000C4568
+		// Token: 0x0600525B RID: 21083 RVA: 0x000C875C File Offset: 0x000C695C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,84 +306,84 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num > 18U)
+				if (num > 50U)
 				{
-					if (num <= 72U)
+					if (num <= 96U)
 					{
-						if (num == 24U)
+						if (num == 72U)
 						{
-							this.CurrChoosedInfluence = input.ReadInt32();
+							this.IsInit = input.ReadBool();
 							continue;
 						}
-						if (num != 72U)
+						if (num != 96U)
 						{
-							goto IL_3C;
+							goto IL_3D;
 						}
 					}
-					else if (num != 74U)
+					else if (num != 98U)
 					{
-						if (num != 80U)
+						if (num != 104U)
 						{
-							goto IL_3C;
+							goto IL_3D;
 						}
-						this.IsInit = input.ReadBool();
+						this.CurrChoosedInfluence = input.ReadInt32();
 						continue;
 					}
-					this.unlockAreaIds_.AddEntriesFrom(ref input, DailyQuestUnlockAreaNotify._repeated_unlockAreaIds_codec);
+					this.unlockInfluenceIds_.AddEntriesFrom(ref input, DailyQuestUnlockAreaNotify._repeated_unlockInfluenceIds_codec);
 					continue;
 				}
-				if (num == 8U)
+				if (num == 40U)
 				{
 					this.CurrChoosedArea = input.ReadInt32();
 					continue;
 				}
-				if (num == 16U || num == 18U)
+				if (num == 48U || num == 50U)
 				{
-					this.unlockInfluenceIds_.AddEntriesFrom(ref input, DailyQuestUnlockAreaNotify._repeated_unlockInfluenceIds_codec);
+					this.unlockAreaIds_.AddEntriesFrom(ref input, DailyQuestUnlockAreaNotify._repeated_unlockAreaIds_codec);
 					continue;
 				}
-				IL_3C:
+				IL_3D:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x040032A2 RID: 12962
+		// Token: 0x04003339 RID: 13113
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040032A3 RID: 12963
-		public const int UnlockAreaIdsFieldNumber = 9;
+		// Token: 0x0400333A RID: 13114
+		public const int UnlockAreaIdsFieldNumber = 6;
 
-		// Token: 0x040032A4 RID: 12964
-		private static readonly FieldCodec<int> _repeated_unlockAreaIds_codec = FieldCodec.ForInt32(74U);
+		// Token: 0x0400333B RID: 13115
+		private static readonly FieldCodec<int> _repeated_unlockAreaIds_codec = FieldCodec.ForInt32(50U);
 
-		// Token: 0x040032A5 RID: 12965
+		// Token: 0x0400333C RID: 13116
 		private readonly RepeatedField<int> unlockAreaIds_ = new RepeatedField<int>();
 
-		// Token: 0x040032A6 RID: 12966
-		public const int UnlockInfluenceIdsFieldNumber = 2;
+		// Token: 0x0400333D RID: 13117
+		public const int UnlockInfluenceIdsFieldNumber = 12;
 
-		// Token: 0x040032A7 RID: 12967
-		private static readonly FieldCodec<int> _repeated_unlockInfluenceIds_codec = FieldCodec.ForInt32(18U);
+		// Token: 0x0400333E RID: 13118
+		private static readonly FieldCodec<int> _repeated_unlockInfluenceIds_codec = FieldCodec.ForInt32(98U);
 
-		// Token: 0x040032A8 RID: 12968
+		// Token: 0x0400333F RID: 13119
 		private readonly RepeatedField<int> unlockInfluenceIds_ = new RepeatedField<int>();
 
-		// Token: 0x040032A9 RID: 12969
-		public const int CurrChoosedAreaFieldNumber = 1;
+		// Token: 0x04003340 RID: 13120
+		public const int CurrChoosedAreaFieldNumber = 5;
 
-		// Token: 0x040032AA RID: 12970
+		// Token: 0x04003341 RID: 13121
 		private int currChoosedArea_;
 
-		// Token: 0x040032AB RID: 12971
-		public const int CurrChoosedInfluenceFieldNumber = 3;
+		// Token: 0x04003342 RID: 13122
+		public const int CurrChoosedInfluenceFieldNumber = 13;
 
-		// Token: 0x040032AC RID: 12972
+		// Token: 0x04003343 RID: 13123
 		private int currChoosedInfluence_;
 
-		// Token: 0x040032AD RID: 12973
-		public const int IsInitFieldNumber = 10;
+		// Token: 0x04003344 RID: 13124
+		public const int IsInitFieldNumber = 9;
 
-		// Token: 0x040032AE RID: 12974
+		// Token: 0x04003345 RID: 13125
 		private bool isInit_;
 	}
 }

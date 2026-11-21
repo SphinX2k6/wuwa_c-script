@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Cook;
 using FilterDefine;
 
-// Token: 0x02001838 RID: 6200
+// Token: 0x02000CF1 RID: 3313
 [NullableContext(1)]
 [Nullable(0)]
 public class CookFilter : CommonFilter
 {
-	// Token: 0x0600B5D2 RID: 46546 RVA: 0x00291E41 File Offset: 0x00290041
+	// Token: 0x060089BD RID: 35261 RVA: 0x0029C561 File Offset: 0x0029A761
 	protected object GetCookTypeList(object data, Dictionary<int, string> currentSelectMap)
 	{
 		if (((ICookItemData)data).MainType == ECookListType.Cooking)
@@ -19,7 +19,7 @@ public class CookFilter : CommonFilter
 		return 0;
 	}
 
-	// Token: 0x0600B5D3 RID: 46547 RVA: 0x00291E67 File Offset: 0x00290067
+	// Token: 0x060089BE RID: 35262 RVA: 0x0029C587 File Offset: 0x0029A787
 	protected object GetCookMenuList(object data, Dictionary<int, string> currentSelectMap)
 	{
 		if (((ICookItemData)data).MainType == ECookListType.Cooking)
@@ -29,7 +29,7 @@ public class CookFilter : CommonFilter
 		return 0;
 	}
 
-	// Token: 0x0600B5D4 RID: 46548 RVA: 0x00291E8D File Offset: 0x0029008D
+	// Token: 0x060089BF RID: 35263 RVA: 0x0029C5AD File Offset: 0x0029A7AD
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.CookMenu, new TFilterConfig(this.GetCookMenuList));

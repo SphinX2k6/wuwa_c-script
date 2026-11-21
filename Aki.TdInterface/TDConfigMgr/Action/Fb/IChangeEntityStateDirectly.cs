@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200266F RID: 9839
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200292E RID: 10542
 	public class IChangeEntityStateDirectly : ChangeEntityState
 	{
-		// Token: 0x0600DC87 RID: 56455 RVA: 0x0020CE03 File Offset: 0x0020B003
+		// Token: 0x0600EA53 RID: 59987 RVA: 0x00229513 File Offset: 0x00227713
 		public static IChangeEntityStateDirectly Create(IChangeEntityStateDirectly? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700416B RID: 16747
-		// (get) Token: 0x0600DC88 RID: 56456 RVA: 0x0020CE22 File Offset: 0x0020B022
+		// Token: 0x170044A5 RID: 17573
+		// (get) Token: 0x0600EA54 RID: 59988 RVA: 0x00229532 File Offset: 0x00227732
 		public override EChangeEntityState Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700416C RID: 16748
-		// (get) Token: 0x0600DC89 RID: 56457 RVA: 0x0020CE2F File Offset: 0x0020B02F
+		// Token: 0x170044A6 RID: 17574
+		// (get) Token: 0x0600EA55 RID: 59989 RVA: 0x0022953F File Offset: 0x0022773F
 		public override int EntityId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700416D RID: 16749
-		// (get) Token: 0x0600DC8A RID: 56458 RVA: 0x0020CE3C File Offset: 0x0020B03C
+		// Token: 0x170044A7 RID: 17575
+		// (get) Token: 0x0600EA56 RID: 59990 RVA: 0x0022954C File Offset: 0x0022774C
 		public virtual string State
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700416E RID: 16750
-		// (get) Token: 0x0600DC8B RID: 56459 RVA: 0x0020CE4C File Offset: 0x0020B04C
+		// Token: 0x170044A8 RID: 17576
+		// (get) Token: 0x0600EA57 RID: 59991 RVA: 0x0022955C File Offset: 0x0022775C
 		public virtual bool? DelayChange
 		{
 			get
@@ -66,7 +63,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A97 RID: 31383
+		// Token: 0x0400812E RID: 33070
 		private IChangeEntityStateDirectly Instance;
 	}
 }

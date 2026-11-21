@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200257F RID: 9599
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200282D RID: 10285
 	public class IVisualNovelPerformanceStopScreenEffect : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D779 RID: 55161 RVA: 0x0020184A File Offset: 0x001FFA4A
+		// Token: 0x0600E4F2 RID: 58610 RVA: 0x0021D51E File Offset: 0x0021B71E
 		public static IVisualNovelPerformanceStopScreenEffect Create(IVisualNovelPerformanceStopScreenEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E3D RID: 15933
-		// (get) Token: 0x0600D77A RID: 55162 RVA: 0x00201869 File Offset: 0x001FFA69
+		// Token: 0x17004146 RID: 16710
+		// (get) Token: 0x0600E4F3 RID: 58611 RVA: 0x0021D53D File Offset: 0x0021B73D
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E3E RID: 15934
-		// (get) Token: 0x0600D77B RID: 55163 RVA: 0x00201878 File Offset: 0x001FFA78
+		// Token: 0x17004147 RID: 16711
+		// (get) Token: 0x0600E4F4 RID: 58612 RVA: 0x0021D54C File Offset: 0x0021B74C
 		public override float? StartTime
 		{
 			get
@@ -46,17 +44,30 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E3F RID: 15935
-		// (get) Token: 0x0600D77C RID: 55164 RVA: 0x002018AE File Offset: 0x001FFAAE
-		public virtual string ScreenEffectDa
+		// Token: 0x17004148 RID: 16712
+		// (get) Token: 0x0600E4F5 RID: 58613 RVA: 0x0021D582 File Offset: 0x0021B782
+		public virtual IVisualNovelStopScreenEffectPersistent EffectConfig
 		{
 			get
 			{
-				return this.Instance.ScreenEffectDa;
+				if (this._EffectConfigInited)
+				{
+					return this._EffectConfigCache;
+				}
+				this._EffectConfigInited = true;
+				this._EffectConfigCache = IVisualNovelStopScreenEffectPersistent.Create(this.Instance.EffectConfig);
+				return this._EffectConfigCache;
 			}
 		}
 
-		// Token: 0x04007741 RID: 30529
+		// Token: 0x04007DA5 RID: 32165
 		private IVisualNovelPerformanceStopScreenEffect Instance;
+
+		// Token: 0x04007DA6 RID: 32166
+		[Nullable(2)]
+		private IVisualNovelStopScreenEffectPersistent _EffectConfigCache;
+
+		// Token: 0x04007DA7 RID: 32167
+		private bool _EffectConfigInited;
 	}
 }

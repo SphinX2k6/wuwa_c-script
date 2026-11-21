@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020012AB RID: 4779
+// Token: 0x0200075F RID: 1887
 public class RoleGrowingStageItem : UiPanelBase
 {
-	// Token: 0x0600832E RID: 33582 RVA: 0x001BE81F File Offset: 0x001BCA1F
+	// Token: 0x060056C5 RID: 22213 RVA: 0x001C75AF File Offset: 0x001C57AF
 	public RoleGrowingStageItem(int StageId)
 	{
 		this.StageId = StageId;
 	}
 
-	// Token: 0x0600832F RID: 33583 RVA: 0x001BE830 File Offset: 0x001BCA30
+	// Token: 0x060056C6 RID: 22214 RVA: 0x001C75C0 File Offset: 0x001C57C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -39,7 +39,7 @@ public class RoleGrowingStageItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06008330 RID: 33584 RVA: 0x001BE940 File Offset: 0x001BCB40
+	// Token: 0x060056C7 RID: 22215 RVA: 0x001C76D0 File Offset: 0x001C58D0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -48,7 +48,7 @@ public class RoleGrowingStageItem : UiPanelBase
 		extendToggle.OnPointUpCallBack.Bind(new Action<EToggleState>(this.OnClickStageDetailInternal));
 	}
 
-	// Token: 0x06008331 RID: 33585 RVA: 0x001BE99C File Offset: 0x001BCB9C
+	// Token: 0x060056C8 RID: 22216 RVA: 0x001C772C File Offset: 0x001C592C
 	[NullableContext(1)]
 	public void Refresh(ActivityLongShanData actData)
 	{
@@ -74,7 +74,7 @@ public class RoleGrowingStageItem : UiPanelBase
 		base.GetItem(4).SetUIActive(actData.CheckStageRed(this.StageId));
 	}
 
-	// Token: 0x06008332 RID: 33586 RVA: 0x001BEAA5 File Offset: 0x001BCCA5
+	// Token: 0x060056C9 RID: 22217 RVA: 0x001C7835 File Offset: 0x001C5A35
 	private void OnClickStageDetailInternal(EToggleState toggleState)
 	{
 		Action<int> onClickStageDetail = this.OnClickStageDetail;
@@ -85,35 +85,35 @@ public class RoleGrowingStageItem : UiPanelBase
 		onClickStageDetail(this.StageId);
 	}
 
-	// Token: 0x04003B1D RID: 15133
+	// Token: 0x04003BB5 RID: 15285
 	[Nullable(2)]
 	public Action<int> OnClickStageDetail;
 
-	// Token: 0x04003B1E RID: 15134
+	// Token: 0x04003BB6 RID: 15286
 	protected readonly int StageId;
 
-	// Token: 0x020078CA RID: 30922
+	// Token: 0x02006A54 RID: 27220
 	private class EComponents
 	{
-		// Token: 0x04027CB0 RID: 162992
+		// Token: 0x04022FDE RID: 143326
 		public const int Toggle = 0;
 
-		// Token: 0x04027CB1 RID: 162993
+		// Token: 0x04022FDF RID: 143327
 		public const int FinishItem = 1;
 
-		// Token: 0x04027CB2 RID: 162994
+		// Token: 0x04022FE0 RID: 143328
 		public const int TxtProgress = 2;
 
-		// Token: 0x04027CB3 RID: 162995
+		// Token: 0x04022FE1 RID: 143329
 		public const int TxtName = 3;
 
-		// Token: 0x04027CB4 RID: 162996
+		// Token: 0x04022FE2 RID: 143330
 		public const int RedDot = 4;
 
-		// Token: 0x04027CB5 RID: 162997
+		// Token: 0x04022FE3 RID: 143331
 		public const int PanelLock = 5;
 
-		// Token: 0x04027CB6 RID: 162998
+		// Token: 0x04022FE4 RID: 143332
 		public const int PanelUnlock = 6;
 	}
 }

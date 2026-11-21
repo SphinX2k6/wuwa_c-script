@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,33 +10,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001DED RID: 7661
+// Token: 0x020012AF RID: 4783
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class HandBookController : UiControllerBase
 {
-	// Token: 0x0600E96E RID: 59758 RVA: 0x00373B5F File Offset: 0x00371D5F
+	// Token: 0x0600BD8D RID: 48525 RVA: 0x0037F867 File Offset: 0x0037DA67
 	public void SetPhantomMeshShow(int id, SkeletalObserverHandle skeletalObserverHandle)
 	{
 	}
 
-	// Token: 0x0600E96F RID: 59759 RVA: 0x00373B61 File Offset: 0x00371D61
+	// Token: 0x0600BD8E RID: 48526 RVA: 0x0037F869 File Offset: 0x0037DA69
 	public void SetWeaponMeshShow(int id, SkeletalObserverHandle observerHandle)
 	{
 	}
 
-	// Token: 0x0600E970 RID: 59760 RVA: 0x00373B63 File Offset: 0x00371D63
+	// Token: 0x0600BD8F RID: 48527 RVA: 0x0037F86B File Offset: 0x0037DA6B
 	public void SetMonsterMeshShow(int id, SkeletalObserverHandle skeletalObserverHandle)
 	{
 	}
 
-	// Token: 0x0600E971 RID: 59761 RVA: 0x00373B65 File Offset: 0x00371D65
+	// Token: 0x0600BD90 RID: 48528 RVA: 0x0037F86D File Offset: 0x0037DA6D
 	public void SetAnimalMeshShow(int id, SkeletalObserverHandle skeletalObserverHandle)
 	{
 	}
 
-	// Token: 0x0600E972 RID: 59762 RVA: 0x00373B68 File Offset: 0x00371D68
+	// Token: 0x0600BD91 RID: 48529 RVA: 0x0037F870 File Offset: 0x0037DA70
 	public void ClearEffect()
 	{
 		if (this.CommonEffect != 0)
@@ -47,7 +46,7 @@ public class HandBookController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600E973 RID: 59763 RVA: 0x00373BA4 File Offset: 0x00371DA4
+	// Token: 0x0600BD92 RID: 48530 RVA: 0x0037F8AC File Offset: 0x0037DAAC
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.IllustratedUnlockNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -71,7 +70,7 @@ public class HandBookController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600E974 RID: 59764 RVA: 0x00373BC4 File Offset: 0x00371DC4
+	// Token: 0x0600BD93 RID: 48531 RVA: 0x0037F8CC File Offset: 0x0037DACC
 	private void ShowUnlockTips(IllustratedType type, IllustratedEntry entry)
 	{
 		string text = "";
@@ -82,7 +81,7 @@ public class HandBookController : UiControllerBase
 		int length = text.Length;
 	}
 
-	// Token: 0x0600E975 RID: 59765 RVA: 0x00373C14 File Offset: 0x00371E14
+	// Token: 0x0600BD94 RID: 48532 RVA: 0x0037F91C File Offset: 0x0037DB1C
 	private void ShowGeographyPhoto(GeographyHandBook config)
 	{
 		List<string> list = new List<string>();
@@ -115,7 +114,7 @@ public class HandBookController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhotoSaveView, param, null);
 	}
 
-	// Token: 0x0600E976 RID: 59766 RVA: 0x00373D44 File Offset: 0x00371F44
+	// Token: 0x0600BD95 RID: 48533 RVA: 0x0037FA4C File Offset: 0x0037DC4C
 	public UniTask SendIllustratedRedDotRequest()
 	{
 		HandBookController.<SendIllustratedRedDotRequest>d__10 <SendIllustratedRedDotRequest>d__;
@@ -125,7 +124,7 @@ public class HandBookController : UiControllerBase
 		return <SendIllustratedRedDotRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E977 RID: 59767 RVA: 0x00373D80 File Offset: 0x00371F80
+	// Token: 0x0600BD96 RID: 48534 RVA: 0x0037FA88 File Offset: 0x0037DC88
 	public UniTask SendIllustratedInfoRequestAsync(List<EHandBookTabType> typeList)
 	{
 		HandBookController.<SendIllustratedInfoRequestAsync>d__11 <SendIllustratedInfoRequestAsync>d__;
@@ -136,7 +135,7 @@ public class HandBookController : UiControllerBase
 		return <SendIllustratedInfoRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E978 RID: 59768 RVA: 0x00373DC4 File Offset: 0x00371FC4
+	// Token: 0x0600BD97 RID: 48535 RVA: 0x0037FACC File Offset: 0x0037DCCC
 	public UniTask SendIllustratedInfoRequest(List<EHandBookTabType> typeList)
 	{
 		HandBookController.<SendIllustratedInfoRequest>d__12 <SendIllustratedInfoRequest>d__;
@@ -147,7 +146,7 @@ public class HandBookController : UiControllerBase
 		return <SendIllustratedInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E979 RID: 59769 RVA: 0x00373E08 File Offset: 0x00372008
+	// Token: 0x0600BD98 RID: 48536 RVA: 0x0037FB10 File Offset: 0x0037DD10
 	public void SendIllustratedReadRequest(EHandBookTabType type, int id)
 	{
 		IllustratedReadRequest request = IllustratedReadRequest.Create();
@@ -162,14 +161,14 @@ public class HandBookController : UiControllerBase
 			}
 			if (illustratedReadResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(illustratedReadResponse.ErrorCode, 20958, illustratedReadResponse.ErrorParams.ToArray<string>(), true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(illustratedReadResponse.ErrorCode, 27163, illustratedReadResponse.ErrorParams, true, true);
 				return;
 			}
 			HandBookModel.Instance.UpdateRedDot(type, request.Id);
 		}, 0);
 	}
 
-	// Token: 0x0600E97A RID: 59770 RVA: 0x00373E78 File Offset: 0x00372078
+	// Token: 0x0600BD99 RID: 48537 RVA: 0x0037FB80 File Offset: 0x0037DD80
 	public void SendIllustratedUnlockRequest(EHandBookTabType type, int id)
 	{
 		IllustratedUnlockRequest illustratedUnlockRequest = IllustratedUnlockRequest.Create();
@@ -184,12 +183,12 @@ public class HandBookController : UiControllerBase
 			}
 			if (illustratedUnlockResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(illustratedUnlockResponse.ErrorCode, 18471, illustratedUnlockResponse.ErrorParams.ToArray<string>(), true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(illustratedUnlockResponse.ErrorCode, 20078, illustratedUnlockResponse.ErrorParams, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600E97B RID: 59771 RVA: 0x00373ED4 File Offset: 0x003720D4
+	// Token: 0x0600BD9A RID: 48538 RVA: 0x0037FBDC File Offset: 0x0037DDDC
 	public int[] GetCollectProgress(EHandBookTabType type)
 	{
 		if (type == EHandBookTabType.Quest)
@@ -222,7 +221,7 @@ public class HandBookController : UiControllerBase
 		};
 	}
 
-	// Token: 0x0600E97C RID: 59772 RVA: 0x00373F60 File Offset: 0x00372160
+	// Token: 0x0600BD9B RID: 48539 RVA: 0x0037FC68 File Offset: 0x0037DE68
 	public int GetCollectProgressMax(EHandBookTabType type)
 	{
 		int num;
@@ -282,19 +281,19 @@ public class HandBookController : UiControllerBase
 		return num;
 	}
 
-	// Token: 0x0600E97D RID: 59773 RVA: 0x00374098 File Offset: 0x00372298
+	// Token: 0x0600BD9C RID: 48540 RVA: 0x0037FDA0 File Offset: 0x0037DFA0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.PlayerSenseTargetEnter, new Action<int>(this.EnterLogicRange));
 	}
 
-	// Token: 0x0600E97E RID: 59774 RVA: 0x003740B6 File Offset: 0x003722B6
+	// Token: 0x0600BD9D RID: 48541 RVA: 0x0037FDBE File Offset: 0x0037DFBE
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.PlayerSenseTargetEnter, new Action<int>(this.EnterLogicRange));
 	}
 
-	// Token: 0x0600E97F RID: 59775 RVA: 0x003740D4 File Offset: 0x003722D4
+	// Token: 0x0600BD9E RID: 48542 RVA: 0x0037FDDC File Offset: 0x0037DFDC
 	private void EnterLogicRange(int entityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -319,14 +318,14 @@ public class HandBookController : UiControllerBase
 		this.SendIllustratedUnlockRequest(EHandBookTabType.Animal, modelId);
 	}
 
-	// Token: 0x0600E980 RID: 59776 RVA: 0x00374120 File Offset: 0x00372320
+	// Token: 0x0600BD9F RID: 48543 RVA: 0x0037FE28 File Offset: 0x0037E028
 	private bool IsAnimalLock(int modelId)
 	{
 		AnimalHandBook? animalHandBookConfigByMeshId = HandBookConfig.Instance.GetAnimalHandBookConfigByMeshId(modelId);
 		return animalHandBookConfigByMeshId != null && HandBookModel.Instance.GetHandBookInfo(EHandBookTabType.Animal, animalHandBookConfigByMeshId.Value.Id) == null;
 	}
 
-	// Token: 0x0600E981 RID: 59777 RVA: 0x00374164 File Offset: 0x00372364
+	// Token: 0x0600BDA0 RID: 48544 RVA: 0x0037FE6C File Offset: 0x0037E06C
 	public UniTask RoleIllustratedInfoRequest()
 	{
 		HandBookController.<RoleIllustratedInfoRequest>d__21 <RoleIllustratedInfoRequest>d__;
@@ -336,7 +335,7 @@ public class HandBookController : UiControllerBase
 		return <RoleIllustratedInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E982 RID: 59778 RVA: 0x003741A0 File Offset: 0x003723A0
+	// Token: 0x0600BDA1 RID: 48545 RVA: 0x0037FEA8 File Offset: 0x0037E0A8
 	public void ShowPanoramicPointUnlockTips(GeographyHandBook config)
 	{
 		PanoramicPointUnlockTipsParam param = new PanoramicPointUnlockTipsParam
@@ -346,8 +345,8 @@ public class HandBookController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PanoramicPointUnlockTipsView, param, null);
 	}
 
-	// Token: 0x17001281 RID: 4737
-	// (get) Token: 0x0600E983 RID: 59779 RVA: 0x003741D1 File Offset: 0x003723D1
+	// Token: 0x170012AB RID: 4779
+	// (get) Token: 0x0600BDA2 RID: 48546 RVA: 0x0037FED9 File Offset: 0x0037E0D9
 	public static HandBookController Instance
 	{
 		get
@@ -356,7 +355,7 @@ public class HandBookController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600E984 RID: 59780 RVA: 0x003741D8 File Offset: 0x003723D8
+	// Token: 0x0600BDA3 RID: 48547 RVA: 0x0037FEE0 File Offset: 0x0037E0E0
 	public static HandBookController GetOrCreateInstance()
 	{
 		if (HandBookController._Instance == null)
@@ -366,7 +365,7 @@ public class HandBookController : UiControllerBase
 		return HandBookController._Instance;
 	}
 
-	// Token: 0x0600E985 RID: 59781 RVA: 0x003741EC File Offset: 0x003723EC
+	// Token: 0x0600BDA4 RID: 48548 RVA: 0x0037FEF4 File Offset: 0x0037E0F4
 	public static bool CreateInstance()
 	{
 		if (HandBookController._Instance != null)
@@ -377,30 +376,30 @@ public class HandBookController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600E986 RID: 59782 RVA: 0x00374202 File Offset: 0x00372402
+	// Token: 0x0600BDA5 RID: 48549 RVA: 0x0037FF0A File Offset: 0x0037E10A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E987 RID: 59783 RVA: 0x00374204 File Offset: 0x00372404
+	// Token: 0x0600BDA6 RID: 48550 RVA: 0x0037FF0C File Offset: 0x0037E10C
 	public static void ResetStaticDefaultValue()
 	{
 		HandBookController._Instance = null;
 	}
 
-	// Token: 0x0600E988 RID: 59784 RVA: 0x0037420C File Offset: 0x0037240C
+	// Token: 0x0600BDA7 RID: 48551 RVA: 0x0037FF14 File Offset: 0x0037E114
 	static HandBookController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HandBookController.CreateStaticDefaultValue), new Action(HandBookController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006C17 RID: 27671
+	// Token: 0x04006CF8 RID: 27896
 	private int CommonEffect;
 
-	// Token: 0x04006C18 RID: 27672
+	// Token: 0x04006CF9 RID: 27897
 	private readonly Dictionary<EHandBookTabType, int> CollectProgressMaxMap = new Dictionary<EHandBookTabType, int>();
 
-	// Token: 0x04006C19 RID: 27673
+	// Token: 0x04006CFA RID: 27898
 	[Nullable(2)]
 	private static HandBookController _Instance;
 }

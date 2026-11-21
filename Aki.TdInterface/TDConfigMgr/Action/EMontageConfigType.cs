@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001618 RID: 5656
+	// Token: 0x02001784 RID: 6020
 	[EnumExtensions]
 	public enum EMontageConfigType
 	{
-		// Token: 0x04004BE8 RID: 19432
+		// Token: 0x04004FD6 RID: 20438
 		Asset,
-		// Token: 0x04004BE9 RID: 19433
+		// Token: 0x04004FD7 RID: 20439
 		Registered
 	}
 }

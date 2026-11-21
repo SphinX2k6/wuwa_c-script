@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C6B RID: 15467
+	// Token: 0x0200407A RID: 16506
 	public class ITriggerShape_UnionUnion
 	{
-		// Token: 0x17006AB2 RID: 27314
-		// (get) Token: 0x0601566F RID: 87663 RVA: 0x003182CD File Offset: 0x003164CD
-		// (set) Token: 0x06015670 RID: 87664 RVA: 0x003182D5 File Offset: 0x003164D5
+		// Token: 0x17007063 RID: 28771
+		// (get) Token: 0x06016B83 RID: 93059 RVA: 0x0033F16D File Offset: 0x0033D36D
+		// (set) Token: 0x06016B84 RID: 93060 RVA: 0x0033F175 File Offset: 0x0033D375
 		public ITriggerShape_Union Type { get; set; }
 
-		// Token: 0x17006AB3 RID: 27315
-		// (get) Token: 0x06015671 RID: 87665 RVA: 0x003182DE File Offset: 0x003164DE
-		// (set) Token: 0x06015672 RID: 87666 RVA: 0x003182E6 File Offset: 0x003164E6
+		// Token: 0x17007064 RID: 28772
+		// (get) Token: 0x06016B85 RID: 93061 RVA: 0x0033F17E File Offset: 0x0033D37E
+		// (set) Token: 0x06016B86 RID: 93062 RVA: 0x0033F186 File Offset: 0x0033D386
 		public object Value { get; set; }
 
-		// Token: 0x06015673 RID: 87667 RVA: 0x003182EF File Offset: 0x003164EF
+		// Token: 0x06016B87 RID: 93063 RVA: 0x0033F18F File Offset: 0x0033D38F
 		public ITriggerShape_UnionUnion()
 		{
 			this.Type = ITriggerShape_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06015674 RID: 87668 RVA: 0x00318305 File Offset: 0x00316505
+		// Token: 0x06016B88 RID: 93064 RVA: 0x0033F1A5 File Offset: 0x0033D3A5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06015675 RID: 87669 RVA: 0x00318317 File Offset: 0x00316517
+		// Token: 0x06016B89 RID: 93065 RVA: 0x0033F1B7 File Offset: 0x0033D3B7
 		public ITriggerShapeT AsITriggerShape()
 		{
 			return this.As<ITriggerShapeT>();
 		}
 
-		// Token: 0x06015676 RID: 87670 RVA: 0x0031831F File Offset: 0x0031651F
+		// Token: 0x06016B8A RID: 93066 RVA: 0x0033F1BF File Offset: 0x0033D3BF
 		public static ITriggerShape_UnionUnion FromITriggerShape(ITriggerShapeT _itriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015677 RID: 87671 RVA: 0x00318334 File Offset: 0x00316534
+		// Token: 0x06016B8B RID: 93067 RVA: 0x0033F1D4 File Offset: 0x0033D3D4
 		public IBoxTriggerShapeT AsIBoxTriggerShape()
 		{
 			return this.As<IBoxTriggerShapeT>();
 		}
 
-		// Token: 0x06015678 RID: 87672 RVA: 0x0031833C File Offset: 0x0031653C
+		// Token: 0x06016B8C RID: 93068 RVA: 0x0033F1DC File Offset: 0x0033D3DC
 		public static ITriggerShape_UnionUnion FromIBoxTriggerShape(IBoxTriggerShapeT _iboxtriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015679 RID: 87673 RVA: 0x00318351 File Offset: 0x00316551
+		// Token: 0x06016B8D RID: 93069 RVA: 0x0033F1F1 File Offset: 0x0033D3F1
 		public ISphereTriggerShapeT AsISphereTriggerShape()
 		{
 			return this.As<ISphereTriggerShapeT>();
 		}
 
-		// Token: 0x0601567A RID: 87674 RVA: 0x00318359 File Offset: 0x00316559
+		// Token: 0x06016B8E RID: 93070 RVA: 0x0033F1F9 File Offset: 0x0033D3F9
 		public static ITriggerShape_UnionUnion FromISphereTriggerShape(ISphereTriggerShapeT _ispheretriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601567B RID: 87675 RVA: 0x0031836E File Offset: 0x0031656E
+		// Token: 0x06016B8F RID: 93071 RVA: 0x0033F20E File Offset: 0x0033D40E
 		public IHollowSphereTriggerShapeT AsIHollowSphereTriggerShape()
 		{
 			return this.As<IHollowSphereTriggerShapeT>();
 		}
 
-		// Token: 0x0601567C RID: 87676 RVA: 0x00318376 File Offset: 0x00316576
+		// Token: 0x06016B90 RID: 93072 RVA: 0x0033F216 File Offset: 0x0033D416
 		public static ITriggerShape_UnionUnion FromIHollowSphereTriggerShape(IHollowSphereTriggerShapeT _ihollowspheretriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601567D RID: 87677 RVA: 0x0031838B File Offset: 0x0031658B
+		// Token: 0x06016B91 RID: 93073 RVA: 0x0033F22B File Offset: 0x0033D42B
 		public ICylinderTriggerShapeT AsICylinderTriggerShape()
 		{
 			return this.As<ICylinderTriggerShapeT>();
 		}
 
-		// Token: 0x0601567E RID: 87678 RVA: 0x00318393 File Offset: 0x00316593
+		// Token: 0x06016B92 RID: 93074 RVA: 0x0033F233 File Offset: 0x0033D433
 		public static ITriggerShape_UnionUnion FromICylinderTriggerShape(ICylinderTriggerShapeT _icylindertriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601567F RID: 87679 RVA: 0x003183A8 File Offset: 0x003165A8
+		// Token: 0x06016B93 RID: 93075 RVA: 0x0033F248 File Offset: 0x0033D448
 		public IHollowCylinderTriggerShapeT AsIHollowCylinderTriggerShape()
 		{
 			return this.As<IHollowCylinderTriggerShapeT>();
 		}
 
-		// Token: 0x06015680 RID: 87680 RVA: 0x003183B0 File Offset: 0x003165B0
+		// Token: 0x06016B94 RID: 93076 RVA: 0x0033F250 File Offset: 0x0033D450
 		public static ITriggerShape_UnionUnion FromIHollowCylinderTriggerShape(IHollowCylinderTriggerShapeT _ihollowcylindertriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015681 RID: 87681 RVA: 0x003183C5 File Offset: 0x003165C5
+		// Token: 0x06016B95 RID: 93077 RVA: 0x0033F265 File Offset: 0x0033D465
 		public IConeTriggerShapeT AsIConeTriggerShape()
 		{
 			return this.As<IConeTriggerShapeT>();
 		}
 
-		// Token: 0x06015682 RID: 87682 RVA: 0x003183CD File Offset: 0x003165CD
+		// Token: 0x06016B96 RID: 93078 RVA: 0x0033F26D File Offset: 0x0033D46D
 		public static ITriggerShape_UnionUnion FromIConeTriggerShape(IConeTriggerShapeT _iconetriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015683 RID: 87683 RVA: 0x003183E2 File Offset: 0x003165E2
+		// Token: 0x06016B97 RID: 93079 RVA: 0x0033F282 File Offset: 0x0033D482
 		public IVolumeTriggerShapeT AsIVolumeTriggerShape()
 		{
 			return this.As<IVolumeTriggerShapeT>();
 		}
 
-		// Token: 0x06015684 RID: 87684 RVA: 0x003183EA File Offset: 0x003165EA
+		// Token: 0x06016B98 RID: 93080 RVA: 0x0033F28A File Offset: 0x0033D48A
 		public static ITriggerShape_UnionUnion FromIVolumeTriggerShape(IVolumeTriggerShapeT _ivolumetriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015685 RID: 87685 RVA: 0x003183FF File Offset: 0x003165FF
+		// Token: 0x06016B99 RID: 93081 RVA: 0x0033F29F File Offset: 0x0033D49F
 		public IActorRefVolumeT AsIActorRefVolume()
 		{
 			return this.As<IActorRefVolumeT>();
 		}
 
-		// Token: 0x06015686 RID: 87686 RVA: 0x00318407 File Offset: 0x00316607
+		// Token: 0x06016B9A RID: 93082 RVA: 0x0033F2A7 File Offset: 0x0033D4A7
 		public static ITriggerShape_UnionUnion FromIActorRefVolume(IActorRefVolumeT _iactorrefvolume)
 		{
 			return new ITriggerShape_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015687 RID: 87687 RVA: 0x0031841D File Offset: 0x0031661D
+		// Token: 0x06016B9B RID: 93083 RVA: 0x0033F2BD File Offset: 0x0033D4BD
 		public IActorCollisionTriggerShapeT AsIActorCollisionTriggerShape()
 		{
 			return this.As<IActorCollisionTriggerShapeT>();
 		}
 
-		// Token: 0x06015688 RID: 87688 RVA: 0x00318425 File Offset: 0x00316625
+		// Token: 0x06016B9C RID: 93084 RVA: 0x0033F2C5 File Offset: 0x0033D4C5
 		public static ITriggerShape_UnionUnion FromIActorCollisionTriggerShape(IActorCollisionTriggerShapeT _iactorcollisiontriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015689 RID: 87689 RVA: 0x0031843B File Offset: 0x0031663B
+		// Token: 0x06016B9D RID: 93085 RVA: 0x0033F2DB File Offset: 0x0033D4DB
 		public ICombinationTriggerShapeT AsICombinationTriggerShape()
 		{
 			return this.As<ICombinationTriggerShapeT>();
 		}
 
-		// Token: 0x0601568A RID: 87690 RVA: 0x00318443 File Offset: 0x00316643
+		// Token: 0x06016B9E RID: 93086 RVA: 0x0033F2E3 File Offset: 0x0033D4E3
 		public static ITriggerShape_UnionUnion FromICombinationTriggerShape(ICombinationTriggerShapeT _icombinationtriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601568B RID: 87691 RVA: 0x00318459 File Offset: 0x00316659
+		// Token: 0x06016B9F RID: 93087 RVA: 0x0033F2F9 File Offset: 0x0033D4F9
 		public ISpotlightTriggerShapeT AsISpotlightTriggerShape()
 		{
 			return this.As<ISpotlightTriggerShapeT>();
 		}
 
-		// Token: 0x0601568C RID: 87692 RVA: 0x00318461 File Offset: 0x00316661
+		// Token: 0x06016BA0 RID: 93088 RVA: 0x0033F301 File Offset: 0x0033D501
 		public static ITriggerShape_UnionUnion FromISpotlightTriggerShape(ISpotlightTriggerShapeT _ispotlighttriggershape)
 		{
 			return new ITriggerShape_UnionUnion
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x0601568D RID: 87693 RVA: 0x00318478 File Offset: 0x00316678
+		// Token: 0x06016BA1 RID: 93089 RVA: 0x0033F318 File Offset: 0x0033D518
 		public static int Pack(FlatBufferBuilder builder, ITriggerShape_UnionUnion _o)
 		{
 			switch (_o.Type)

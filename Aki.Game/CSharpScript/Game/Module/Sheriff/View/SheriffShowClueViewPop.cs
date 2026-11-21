@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C5A RID: 19546
+	// Token: 0x02003C0B RID: 15371
 	public class SheriffShowClueViewPop : UiViewBase
 	{
-		// Token: 0x0603288A RID: 206986 RVA: 0x00BC5CAB File Offset: 0x00BC3EAB
+		// Token: 0x0602763D RID: 161341 RVA: 0x00B0A8F7 File Offset: 0x00B08AF7
 		[NullableContext(1)]
 		public SheriffShowClueViewPop(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603288B RID: 206987 RVA: 0x00BC5CB4 File Offset: 0x00BC3EB4
+		// Token: 0x0602763E RID: 161342 RVA: 0x00B0A900 File Offset: 0x00B08B00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603288C RID: 206988 RVA: 0x00BC5D60 File Offset: 0x00BC3F60
+		// Token: 0x0602763F RID: 161343 RVA: 0x00B0A9AC File Offset: 0x00B08BAC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffShowClueViewPop.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -47,29 +47,29 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603288D RID: 206989 RVA: 0x00BC5DA3 File Offset: 0x00BC3FA3
+		// Token: 0x06027640 RID: 161344 RVA: 0x00B0A9EF File Offset: 0x00B08BEF
 		private void OnClickedClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401AE63 RID: 110179
+		// Token: 0x040157C0 RID: 88000
 		[Nullable(1)]
 		protected SheriffShowClueViewPanel DetailPanel;
 
-		// Token: 0x0200ADFE RID: 44542
+		// Token: 0x0200981C RID: 38940
 		private static class EDefine
 		{
-			// Token: 0x04034D92 RID: 216466
+			// Token: 0x0402F737 RID: 194359
 			public const int Caption = 0;
 
-			// Token: 0x04034D93 RID: 216467
+			// Token: 0x0402F738 RID: 194360
 			public const int Content = 1;
 
-			// Token: 0x04034D94 RID: 216468
+			// Token: 0x0402F739 RID: 194361
 			public const int BtnTips = 2;
 
-			// Token: 0x04034D95 RID: 216469
+			// Token: 0x0402F73A RID: 194362
 			public const int DialogItem = 3;
 		}
 	}

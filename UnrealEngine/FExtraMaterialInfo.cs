@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BD0 RID: 3024
+	// Token: 0x0200020C RID: 524
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.ExtraMaterialInfo")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FExtraMaterialInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060094AE RID: 38062 RVA: 0x000D43B9 File Offset: 0x000D25B9
+		// Token: 0x060021A9 RID: 8617 RVA: 0x00031559 File Offset: 0x0002F759
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FExtraMaterialInfo._ScriptStructPtr != 0) ? FExtraMaterialInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.ExtraMaterialInfo", ref FExtraMaterialInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17002399 RID: 9113
-		// (get) Token: 0x060094AF RID: 38063 RVA: 0x000D43E0 File Offset: 0x000D25E0
-		// (set) Token: 0x060094B0 RID: 38064 RVA: 0x000D4423 File Offset: 0x000D2623
+		// Token: 0x170004BC RID: 1212
+		// (get) Token: 0x060021AA RID: 8618 RVA: 0x00031580 File Offset: 0x0002F780
+		// (set) Token: 0x060021AB RID: 8619 RVA: 0x000315C3 File Offset: 0x0002F7C3
 		public TArray<int> MaterialIndexs
 		{
 			get
@@ -39,56 +39,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060094B1 RID: 38065 RVA: 0x000D4431 File Offset: 0x000D2631
+		// Token: 0x060021AC RID: 8620 RVA: 0x000315D1 File Offset: 0x0002F7D1
 		public FExtraMaterialInfo()
 		{
 		}
 
-		// Token: 0x060094B2 RID: 38066 RVA: 0x000D4439 File Offset: 0x000D2639
-		public FExtraMaterialInfo(TArray<int> MaterialIndexs)
-		{
-			this.MaterialIndexs = MaterialIndexs;
-		}
-
-		// Token: 0x060094B3 RID: 38067 RVA: 0x000D4448 File Offset: 0x000D2648
+		// Token: 0x060021AD RID: 8621 RVA: 0x000315D9 File Offset: 0x0002F7D9
 		protected override IntPtr GetUStructPtr()
 		{
 			return FExtraMaterialInfo.StaticStruct();
 		}
 
-		// Token: 0x060094B4 RID: 38068 RVA: 0x000D4454 File Offset: 0x000D2654
+		// Token: 0x060021AE RID: 8622 RVA: 0x000315E5 File Offset: 0x0002F7E5
 		[NullableContext(2)]
 		public FExtraMaterialInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060094B5 RID: 38069 RVA: 0x000D445E File Offset: 0x000D265E
+		// Token: 0x060021AF RID: 8623 RVA: 0x000315EF File Offset: 0x0002F7EF
 		public FExtraMaterialInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060094B6 RID: 38070 RVA: 0x000D4469 File Offset: 0x000D2669
+		// Token: 0x060021B0 RID: 8624 RVA: 0x000315FA File Offset: 0x0002F7FA
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FExtraMaterialInfo(Pointer, false, true);
 		}
 
-		// Token: 0x060094B7 RID: 38071 RVA: 0x000D4473 File Offset: 0x000D2673
+		// Token: 0x060021B1 RID: 8625 RVA: 0x00031604 File Offset: 0x0002F804
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FExtraMaterialInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04005384 RID: 21380
+		// Token: 0x04000D23 RID: 3363
 		public const string __ObjectPath = "/Script/Engine.ExtraMaterialInfo";
 
-		// Token: 0x04005385 RID: 21381
+		// Token: 0x04000D24 RID: 3364
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04005386 RID: 21382
+		// Token: 0x04000D25 RID: 3365
 		internal static int __PropertyOffset_MaterialIndexs;
 
-		// Token: 0x04005387 RID: 21383
+		// Token: 0x04000D26 RID: 3366
 		[Nullable(2)]
 		private TArray<int> _MaterialIndexs;
 	}

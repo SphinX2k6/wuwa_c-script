@@ -2,65 +2,65 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F6E RID: 20334
+	// Token: 0x0200549D RID: 21661
 	public class ICategoryMatchingSucceedT
 	{
-		// Token: 0x170092DF RID: 37599
-		// (get) Token: 0x06020435 RID: 132149 RVA: 0x0047D5DF File Offset: 0x0047B7DF
-		// (set) Token: 0x06020436 RID: 132150 RVA: 0x0047D5E7 File Offset: 0x0047B7E7
+		// Token: 0x17009A58 RID: 39512
+		// (get) Token: 0x06022187 RID: 139655 RVA: 0x004B35CF File Offset: 0x004B17CF
+		// (set) Token: 0x06022188 RID: 139656 RVA: 0x004B35D7 File Offset: 0x004B17D7
 		public bool IsSilent { get; set; }
 
-		// Token: 0x170092E0 RID: 37600
-		// (get) Token: 0x06020437 RID: 132151 RVA: 0x0047D5F0 File Offset: 0x0047B7F0
-		// (set) Token: 0x06020438 RID: 132152 RVA: 0x0047D5F8 File Offset: 0x0047B7F8
+		// Token: 0x17009A59 RID: 39513
+		// (get) Token: 0x06022189 RID: 139657 RVA: 0x004B35E0 File Offset: 0x004B17E0
+		// (set) Token: 0x0602218A RID: 139658 RVA: 0x004B35E8 File Offset: 0x004B17E8
 		public bool IsDestroy { get; set; }
 
-		// Token: 0x170092E1 RID: 37601
-		// (get) Token: 0x06020439 RID: 132153 RVA: 0x0047D601 File Offset: 0x0047B801
-		// (set) Token: 0x0602043A RID: 132154 RVA: 0x0047D609 File Offset: 0x0047B809
+		// Token: 0x17009A5A RID: 39514
+		// (get) Token: 0x0602218B RID: 139659 RVA: 0x004B35F1 File Offset: 0x004B17F1
+		// (set) Token: 0x0602218C RID: 139660 RVA: 0x004B35F9 File Offset: 0x004B17F9
 		public bool SyncAdsorbatePerformance { get; set; }
 
-		// Token: 0x170092E2 RID: 37602
-		// (get) Token: 0x0602043B RID: 132155 RVA: 0x0047D612 File Offset: 0x0047B812
-		// (set) Token: 0x0602043C RID: 132156 RVA: 0x0047D61A File Offset: 0x0047B81A
+		// Token: 0x17009A5B RID: 39515
+		// (get) Token: 0x0602218D RID: 139661 RVA: 0x004B3602 File Offset: 0x004B1802
+		// (set) Token: 0x0602218E RID: 139662 RVA: 0x004B360A File Offset: 0x004B180A
 		public string ChangeSelfState { get; set; }
 
-		// Token: 0x170092E3 RID: 37603
-		// (get) Token: 0x0602043D RID: 132157 RVA: 0x0047D623 File Offset: 0x0047B823
-		// (set) Token: 0x0602043E RID: 132158 RVA: 0x0047D62B File Offset: 0x0047B82B
+		// Token: 0x17009A5C RID: 39516
+		// (get) Token: 0x0602218F RID: 139663 RVA: 0x004B3613 File Offset: 0x004B1813
+		// (set) Token: 0x06022190 RID: 139664 RVA: 0x004B361B File Offset: 0x004B181B
 		public IEntityStateT ChangeItemState { get; set; }
 
-		// Token: 0x170092E4 RID: 37604
-		// (get) Token: 0x0602043F RID: 132159 RVA: 0x0047D634 File Offset: 0x0047B834
-		// (set) Token: 0x06020440 RID: 132160 RVA: 0x0047D63C File Offset: 0x0047B83C
+		// Token: 0x17009A5D RID: 39517
+		// (get) Token: 0x06022191 RID: 139665 RVA: 0x004B3624 File Offset: 0x004B1824
+		// (set) Token: 0x06022192 RID: 139666 RVA: 0x004B362C File Offset: 0x004B182C
 		public int DelayDischarge { get; set; }
 
-		// Token: 0x170092E5 RID: 37605
-		// (get) Token: 0x06020441 RID: 132161 RVA: 0x0047D645 File Offset: 0x0047B845
-		// (set) Token: 0x06020442 RID: 132162 RVA: 0x0047D64D File Offset: 0x0047B84D
+		// Token: 0x17009A5E RID: 39518
+		// (get) Token: 0x06022193 RID: 139667 RVA: 0x004B3635 File Offset: 0x004B1835
+		// (set) Token: 0x06022194 RID: 139668 RVA: 0x004B363D File Offset: 0x004B183D
 		public IEntityStateT ChangeItemStateAfterDischarged { get; set; }
 
-		// Token: 0x170092E6 RID: 37606
-		// (get) Token: 0x06020443 RID: 132163 RVA: 0x0047D656 File Offset: 0x0047B856
-		// (set) Token: 0x06020444 RID: 132164 RVA: 0x0047D65E File Offset: 0x0047B85E
+		// Token: 0x17009A5F RID: 39519
+		// (get) Token: 0x06022195 RID: 139669 RVA: 0x004B3646 File Offset: 0x004B1846
+		// (set) Token: 0x06022196 RID: 139670 RVA: 0x004B364E File Offset: 0x004B184E
 		public string ChangeSelfStateAfterDischarged { get; set; }
 
-		// Token: 0x170092E7 RID: 37607
-		// (get) Token: 0x06020445 RID: 132165 RVA: 0x0047D667 File Offset: 0x0047B867
-		// (set) Token: 0x06020446 RID: 132166 RVA: 0x0047D66F File Offset: 0x0047B86F
+		// Token: 0x17009A60 RID: 39520
+		// (get) Token: 0x06022197 RID: 139671 RVA: 0x004B3657 File Offset: 0x004B1857
+		// (set) Token: 0x06022198 RID: 139672 RVA: 0x004B365F File Offset: 0x004B185F
 		public IItemChangeAdsorbateStateT ChangeAdsorbateState { get; set; }
 
-		// Token: 0x170092E8 RID: 37608
-		// (get) Token: 0x06020447 RID: 132167 RVA: 0x0047D678 File Offset: 0x0047B878
-		// (set) Token: 0x06020448 RID: 132168 RVA: 0x0047D680 File Offset: 0x0047B880
+		// Token: 0x17009A61 RID: 39521
+		// (get) Token: 0x06022199 RID: 139673 RVA: 0x004B3668 File Offset: 0x004B1868
+		// (set) Token: 0x0602219A RID: 139674 RVA: 0x004B3670 File Offset: 0x004B1870
 		public string DischargeSequence { get; set; }
 
-		// Token: 0x170092E9 RID: 37609
-		// (get) Token: 0x06020449 RID: 132169 RVA: 0x0047D689 File Offset: 0x0047B889
-		// (set) Token: 0x0602044A RID: 132170 RVA: 0x0047D691 File Offset: 0x0047B891
+		// Token: 0x17009A62 RID: 39522
+		// (get) Token: 0x0602219B RID: 139675 RVA: 0x004B3679 File Offset: 0x004B1879
+		// (set) Token: 0x0602219C RID: 139676 RVA: 0x004B3681 File Offset: 0x004B1881
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602044B RID: 132171 RVA: 0x0047D69C File Offset: 0x0047B89C
+		// Token: 0x0602219D RID: 139677 RVA: 0x004B368C File Offset: 0x004B188C
 		public ICategoryMatchingSucceedT()
 		{
 			this.IsSilent = false;

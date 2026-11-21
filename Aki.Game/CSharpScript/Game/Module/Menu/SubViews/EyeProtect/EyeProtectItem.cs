@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x0200544C RID: 21580
+	// Token: 0x0200442F RID: 17455
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 	})]
 	public class EyeProtectItem : GridProxyAbstract<EyeProtectItemData>
 	{
-		// Token: 0x0603718B RID: 225675 RVA: 0x00D0F1B4 File Offset: 0x00D0D3B4
+		// Token: 0x0602C0D4 RID: 180436 RVA: 0x00C5E5CC File Offset: 0x00C5C7CC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			};
 		}
 
-		// Token: 0x0603718C RID: 225676 RVA: 0x00D0F2B5 File Offset: 0x00D0D4B5
+		// Token: 0x0602C0D5 RID: 180437 RVA: 0x00C5E6CD File Offset: 0x00C5C8CD
 		private void TagToggle(EToggleState toggleState)
 		{
 			Action<int> selectCallback = this.SelectCallback;
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			selectCallback(base.GridIndex);
 		}
 
-		// Token: 0x0603718D RID: 225677 RVA: 0x00D0F2CD File Offset: 0x00D0D4CD
+		// Token: 0x0602C0D6 RID: 180438 RVA: 0x00C5E6E5 File Offset: 0x00C5C8E5
 		public void SetSelected(bool selected)
 		{
 			base.GetExtendToggle(0).SetToggleState(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 			base.GetItem(3).SetUIActive(selected);
 		}
 
-		// Token: 0x0603718E RID: 225678 RVA: 0x00D0F2F3 File Offset: 0x00D0D4F3
+		// Token: 0x0602C0D7 RID: 180439 RVA: 0x00C5E70B File Offset: 0x00C5C90B
 		[NullableContext(1)]
 		public override void Refresh(EyeProtectItemData data, bool isSelected, int gridIndex)
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.OnDeselected(false);
 		}
 
-		// Token: 0x0603718F RID: 225679 RVA: 0x00D0F314 File Offset: 0x00D0D514
+		// Token: 0x0602C0D8 RID: 180440 RVA: 0x00C5E72C File Offset: 0x00C5C92C
 		public void InitData()
 		{
 			if (this.Data == null)
@@ -95,26 +95,26 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.OnApply(GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.EyeProtectionMode, 0, true));
 		}
 
-		// Token: 0x06037190 RID: 225680 RVA: 0x00D0F3F3 File Offset: 0x00D0D5F3
+		// Token: 0x0602C0D9 RID: 180441 RVA: 0x00C5E80B File Offset: 0x00C5CA0B
 		[NullableContext(1)]
 		private EyeProtectSliderItem CreateSliderItem()
 		{
 			return new EyeProtectSliderItem();
 		}
 
-		// Token: 0x06037191 RID: 225681 RVA: 0x00D0F3FA File Offset: 0x00D0D5FA
+		// Token: 0x0602C0DA RID: 180442 RVA: 0x00C5E812 File Offset: 0x00C5CA12
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true);
 		}
 
-		// Token: 0x06037192 RID: 225682 RVA: 0x00D0F403 File Offset: 0x00D0D603
+		// Token: 0x0602C0DB RID: 180443 RVA: 0x00C5E81B File Offset: 0x00C5CA1B
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false);
 		}
 
-		// Token: 0x06037193 RID: 225683 RVA: 0x00D0F40C File Offset: 0x00D0D60C
+		// Token: 0x0602C0DC RID: 180444 RVA: 0x00C5E824 File Offset: 0x00C5CA24
 		public void OnApply(int value)
 		{
 			UUIItem item = base.GetItem(7);
@@ -123,16 +123,16 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			item.SetUIActive(value == num.GetValueOrDefault() & num != null);
 		}
 
-		// Token: 0x0401D118 RID: 119064
+		// Token: 0x04017BB1 RID: 97201
 		public EyeProtectItemData Data;
 
-		// Token: 0x0401D119 RID: 119065
+		// Token: 0x04017BB2 RID: 97202
 		public Action<int> SelectCallback;
 
-		// Token: 0x0401D11A RID: 119066
+		// Token: 0x04017BB3 RID: 97203
 		public Func<int, bool> CanExecuteChange;
 
-		// Token: 0x0401D11B RID: 119067
+		// Token: 0x04017BB4 RID: 97204
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,35 +141,35 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 		})]
 		public GenericScrollViewNew<EyeProtectSliderItem, EyeProtectSliderData> ScrollView;
 
-		// Token: 0x0200B6C6 RID: 46790
+		// Token: 0x0200A0FE RID: 41214
 		[NullableContext(0)]
 		public class EComponent
 		{
-			// Token: 0x040375F2 RID: 226802
+			// Token: 0x04032047 RID: 204871
 			public const int ItemSelf = 0;
 
-			// Token: 0x040375F3 RID: 226803
+			// Token: 0x04032048 RID: 204872
 			public const int RedPoint = 1;
 
-			// Token: 0x040375F4 RID: 226804
+			// Token: 0x04032049 RID: 204873
 			public const int Title = 2;
 
-			// Token: 0x040375F5 RID: 226805
+			// Token: 0x0403204A RID: 204874
 			public const int SliderLayout = 3;
 
-			// Token: 0x040375F6 RID: 226806
+			// Token: 0x0403204B RID: 204875
 			public const int Scroll = 4;
 
-			// Token: 0x040375F7 RID: 226807
+			// Token: 0x0403204C RID: 204876
 			public const int SliderItem = 5;
 
-			// Token: 0x040375F8 RID: 226808
+			// Token: 0x0403204D RID: 204877
 			public const int Mask = 6;
 
-			// Token: 0x040375F9 RID: 226809
+			// Token: 0x0403204E RID: 204878
 			public const int Toggle = 7;
 
-			// Token: 0x040375FA RID: 226810
+			// Token: 0x0403204F RID: 204879
 			public const int GamePadKey = 8;
 		}
 	}

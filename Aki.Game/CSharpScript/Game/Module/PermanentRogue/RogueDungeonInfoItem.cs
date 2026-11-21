@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200530B RID: 21259
+	// Token: 0x020042DB RID: 17115
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueDungeonInfoItem : UiPanelBase
 	{
-		// Token: 0x0603661C RID: 222748 RVA: 0x00CDDB04 File Offset: 0x00CDBD04
+		// Token: 0x0602B518 RID: 177432 RVA: 0x00C2B4D4 File Offset: 0x00C296D4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603661D RID: 222749 RVA: 0x00CDDBF0 File Offset: 0x00CDBDF0
+		// Token: 0x0602B519 RID: 177433 RVA: 0x00C2B5C0 File Offset: 0x00C297C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueDungeonInfoItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603661E RID: 222750 RVA: 0x00CDDC33 File Offset: 0x00CDBE33
+		// Token: 0x0602B51A RID: 177434 RVA: 0x00C2B603 File Offset: 0x00C29803
 		protected override void OnBeforeDestroy()
 		{
 			this.DescriptionComponent = null;
 			this.RewardListComponent = null;
 		}
 
-		// Token: 0x0603661F RID: 222751 RVA: 0x00CDDC44 File Offset: 0x00CDBE44
+		// Token: 0x0602B51B RID: 177435 RVA: 0x00C2B614 File Offset: 0x00C29814
 		public void RefreshDungeonConfig(int id)
 		{
 			RogueResDungeonConfig? config = ConfigRogueResDungeonConfigById.GetConfig(id, true);
@@ -111,20 +111,20 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			EventSystem.Instance.Emit<int>(EEventName.RogueViewInfoRefresh, id);
 		}
 
-		// Token: 0x06036620 RID: 222752 RVA: 0x00CDDE74 File Offset: 0x00CDC074
+		// Token: 0x0602B51C RID: 177436 RVA: 0x00C2B844 File Offset: 0x00C29A44
 		private void OnClickEnding()
 		{
 			RogueResDungeonConfig? config = ConfigRogueResDungeonConfigById.GetConfig(this.DungeonId, true);
 			UiManager.Instance.OpenView(EUiViewName.RogueResEndingView, (config != null) ? new int?(config.GetValueOrDefault().SeasonId) : null, null);
 		}
 
-		// Token: 0x0401CBB1 RID: 117681
+		// Token: 0x040175E7 RID: 95719
 		protected int DungeonId;
 
-		// Token: 0x0401CBB2 RID: 117682
+		// Token: 0x040175E8 RID: 95720
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401CBB3 RID: 117683
+		// Token: 0x040175E9 RID: 95721
 		[Nullable(new byte[]
 		{
 			2,
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x0401CBB4 RID: 117684
+		// Token: 0x040175EA RID: 95722
 		private RogueDungeonEntryConfirm ConfirmBtn;
 	}
 }

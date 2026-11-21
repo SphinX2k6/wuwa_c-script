@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063AD RID: 25517
+	// Token: 0x0200532B RID: 21291
 	public enum EMowingBuffType
 	{
-		// Token: 0x040216E6 RID: 136934
+		// Token: 0x0401C015 RID: 114709
 		BasicLow = 1,
-		// Token: 0x040216E7 RID: 136935
+		// Token: 0x0401C016 RID: 114710
 		BasicHigh,
-		// Token: 0x040216E8 RID: 136936
+		// Token: 0x0401C017 RID: 114711
 		Super
 	}
 }

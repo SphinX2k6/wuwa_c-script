@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200092E RID: 2350
+	// Token: 0x020009DB RID: 2523
 	public static class EElementalRangeTypeExtensions
 	{
-		// Token: 0x06003500 RID: 13568 RVA: 0x0008A728 File Offset: 0x00088928
+		// Token: 0x0600386C RID: 14444 RVA: 0x000922A8 File Offset: 0x000904A8
 		public static string ToEnumString(this EElementalRangeType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003501 RID: 13569 RVA: 0x0008A760 File Offset: 0x00088960
+		// Token: 0x0600386D RID: 14445 RVA: 0x000922E0 File Offset: 0x000904E0
 		public static EElementalRangeType FromString(string name)
 		{
 			EElementalRangeType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003502 RID: 13570 RVA: 0x0008A789 File Offset: 0x00088989
+		// Token: 0x0600386E RID: 14446 RVA: 0x00092309 File Offset: 0x00090509
 		public static bool TryFromString(string name, out EElementalRangeType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003503 RID: 13571 RVA: 0x0008A7C2 File Offset: 0x000889C2
+		// Token: 0x0600386F RID: 14447 RVA: 0x00092342 File Offset: 0x00090542
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003504 RID: 13572 RVA: 0x0008A7DA File Offset: 0x000889DA
+		// Token: 0x06003870 RID: 14448 RVA: 0x0009235A File Offset: 0x0009055A
 		public static EElementalRangeType[] GetValues()
 		{
 			return new EElementalRangeType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003505 RID: 13573 RVA: 0x0008A7E6 File Offset: 0x000889E6
+		// Token: 0x06003871 RID: 14449 RVA: 0x00092366 File Offset: 0x00090566
 		public static string[] GetNames()
 		{
 			return new string[]

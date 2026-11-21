@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024D5 RID: 9429
+// Token: 0x020019BC RID: 6588
 public class VisionNewRecommendPreviewEquipItem : UiPanelBase
 {
-	// Token: 0x06012F5D RID: 77661 RVA: 0x004B1B34 File Offset: 0x004AFD34
+	// Token: 0x0601041C RID: 66588 RVA: 0x004BF734 File Offset: 0x004BD934
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class VisionNewRecommendPreviewEquipItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06012F5E RID: 77662 RVA: 0x004B1BBC File Offset: 0x004AFDBC
+	// Token: 0x0601041D RID: 66589 RVA: 0x004BF7BC File Offset: 0x004BD9BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendPreviewEquipItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class VisionNewRecommendPreviewEquipItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012F5F RID: 77663 RVA: 0x004B1C00 File Offset: 0x004AFE00
+	// Token: 0x0601041E RID: 66590 RVA: 0x004BF800 File Offset: 0x004BDA00
 	public void Update([Nullable(new byte[]
 	{
 		1,
@@ -54,22 +54,22 @@ public class VisionNewRecommendPreviewEquipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008EC7 RID: 36551
+	// Token: 0x04009011 RID: 36881
 	[Nullable(1)]
 	private readonly List<VisionNewRecommendPhantomItem> AssembleItemList = new List<VisionNewRecommendPhantomItem>();
 
-	// Token: 0x02008A64 RID: 35428
+	// Token: 0x02007BED RID: 31725
 	private enum EComp
 	{
-		// Token: 0x0402CEFF RID: 184063
+		// Token: 0x0402821D RID: 164381
 		VisionAssembleItem1,
-		// Token: 0x0402CF00 RID: 184064
+		// Token: 0x0402821E RID: 164382
 		VisionAssembleItem2,
-		// Token: 0x0402CF01 RID: 184065
+		// Token: 0x0402821F RID: 164383
 		VisionAssembleItem3,
-		// Token: 0x0402CF02 RID: 184066
+		// Token: 0x04028220 RID: 164384
 		VisionAssembleItem4,
-		// Token: 0x0402CF03 RID: 184067
+		// Token: 0x04028221 RID: 164385
 		VisionAssembleItem5
 	}
 }

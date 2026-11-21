@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x020046E9 RID: 18153
+	// Token: 0x02004B51 RID: 19281
 	public class IEntityClientRunningDataT
 	{
-		// Token: 0x170081A4 RID: 33188
-		// (get) Token: 0x0601BC1D RID: 113693 RVA: 0x003EF578 File Offset: 0x003ED778
-		// (set) Token: 0x0601BC1E RID: 113694 RVA: 0x003EF580 File Offset: 0x003ED780
+		// Token: 0x170087E5 RID: 34789
+		// (get) Token: 0x0601D3F2 RID: 119794 RVA: 0x0041B814 File Offset: 0x00419A14
+		// (set) Token: 0x0601D3F3 RID: 119795 RVA: 0x0041B81C File Offset: 0x00419A1C
 		public int ConfigId { get; set; }
 
-		// Token: 0x170081A5 RID: 33189
-		// (get) Token: 0x0601BC1F RID: 113695 RVA: 0x003EF589 File Offset: 0x003ED789
-		// (set) Token: 0x0601BC20 RID: 113696 RVA: 0x003EF591 File Offset: 0x003ED791
+		// Token: 0x170087E6 RID: 34790
+		// (get) Token: 0x0601D3F4 RID: 119796 RVA: 0x0041B825 File Offset: 0x00419A25
+		// (set) Token: 0x0601D3F5 RID: 119797 RVA: 0x0041B82D File Offset: 0x00419A2D
 		public EEntityClientCreateState CreateState { get; set; }
 
-		// Token: 0x170081A6 RID: 33190
-		// (get) Token: 0x0601BC21 RID: 113697 RVA: 0x003EF59A File Offset: 0x003ED79A
-		// (set) Token: 0x0601BC22 RID: 113698 RVA: 0x003EF5A2 File Offset: 0x003ED7A2
+		// Token: 0x170087E7 RID: 34791
+		// (get) Token: 0x0601D3F6 RID: 119798 RVA: 0x0041B836 File Offset: 0x00419A36
+		// (set) Token: 0x0601D3F7 RID: 119799 RVA: 0x0041B83E File Offset: 0x00419A3E
 		public string Reason { get; set; }
 
-		// Token: 0x170081A7 RID: 33191
-		// (get) Token: 0x0601BC23 RID: 113699 RVA: 0x003EF5AB File Offset: 0x003ED7AB
-		// (set) Token: 0x0601BC24 RID: 113700 RVA: 0x003EF5B3 File Offset: 0x003ED7B3
+		// Token: 0x170087E8 RID: 34792
+		// (get) Token: 0x0601D3F8 RID: 119800 RVA: 0x0041B847 File Offset: 0x00419A47
+		// (set) Token: 0x0601D3F9 RID: 119801 RVA: 0x0041B84F File Offset: 0x00419A4F
 		public bool IsClientVisible { get; set; }
 
-		// Token: 0x170081A8 RID: 33192
-		// (get) Token: 0x0601BC25 RID: 113701 RVA: 0x003EF5BC File Offset: 0x003ED7BC
-		// (set) Token: 0x0601BC26 RID: 113702 RVA: 0x003EF5C4 File Offset: 0x003ED7C4
+		// Token: 0x170087E9 RID: 34793
+		// (get) Token: 0x0601D3FA RID: 119802 RVA: 0x0041B858 File Offset: 0x00419A58
+		// (set) Token: 0x0601D3FB RID: 119803 RVA: 0x0041B860 File Offset: 0x00419A60
 		public bool IsInRange { get; set; }
 
-		// Token: 0x170081A9 RID: 33193
-		// (get) Token: 0x0601BC27 RID: 113703 RVA: 0x003EF5CD File Offset: 0x003ED7CD
-		// (set) Token: 0x0601BC28 RID: 113704 RVA: 0x003EF5D5 File Offset: 0x003ED7D5
+		// Token: 0x170087EA RID: 34794
+		// (get) Token: 0x0601D3FC RID: 119804 RVA: 0x0041B869 File Offset: 0x00419A69
+		// (set) Token: 0x0601D3FD RID: 119805 RVA: 0x0041B871 File Offset: 0x00419A71
 		public string Tags { get; set; }
 
-		// Token: 0x170081AA RID: 33194
-		// (get) Token: 0x0601BC29 RID: 113705 RVA: 0x003EF5DE File Offset: 0x003ED7DE
-		// (set) Token: 0x0601BC2A RID: 113706 RVA: 0x003EF5E6 File Offset: 0x003ED7E6
+		// Token: 0x170087EB RID: 34795
+		// (get) Token: 0x0601D3FE RID: 119806 RVA: 0x0041B87A File Offset: 0x00419A7A
+		// (set) Token: 0x0601D3FF RID: 119807 RVA: 0x0041B882 File Offset: 0x00419A82
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601BC2B RID: 113707 RVA: 0x003EF5EF File Offset: 0x003ED7EF
+		// Token: 0x0601D400 RID: 119808 RVA: 0x0041B88B File Offset: 0x00419A8B
 		public IEntityClientRunningDataT()
 		{
 			this.ConfigId = 0;

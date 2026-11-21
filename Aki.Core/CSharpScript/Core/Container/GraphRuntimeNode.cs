@@ -4,37 +4,37 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Container
 {
-	// Token: 0x0200014C RID: 332
+	// Token: 0x02000150 RID: 336
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class GraphRuntimeNode<[Nullable(2)] TVec> : IGraphRuntimeNode<TVec>
 	{
-		// Token: 0x1700010C RID: 268
-		// (get) Token: 0x06000B92 RID: 2962 RVA: 0x000378D2 File Offset: 0x00035AD2
-		// (set) Token: 0x06000B93 RID: 2963 RVA: 0x000378DA File Offset: 0x00035ADA
+		// Token: 0x1700011F RID: 287
+		// (get) Token: 0x06000BEE RID: 3054 RVA: 0x000384A2 File Offset: 0x000366A2
+		// (set) Token: 0x06000BEF RID: 3055 RVA: 0x000384AA File Offset: 0x000366AA
 		[RequiredMember]
 		public int Id { get; set; }
 
-		// Token: 0x1700010D RID: 269
-		// (get) Token: 0x06000B94 RID: 2964 RVA: 0x000378E3 File Offset: 0x00035AE3
-		// (set) Token: 0x06000B95 RID: 2965 RVA: 0x000378EB File Offset: 0x00035AEB
+		// Token: 0x17000120 RID: 288
+		// (get) Token: 0x06000BF0 RID: 3056 RVA: 0x000384B3 File Offset: 0x000366B3
+		// (set) Token: 0x06000BF1 RID: 3057 RVA: 0x000384BB File Offset: 0x000366BB
 		[RequiredMember]
 		public TVec Location { get; set; }
 
-		// Token: 0x1700010E RID: 270
-		// (get) Token: 0x06000B96 RID: 2966 RVA: 0x000378F4 File Offset: 0x00035AF4
-		// (set) Token: 0x06000B97 RID: 2967 RVA: 0x000378FC File Offset: 0x00035AFC
+		// Token: 0x17000121 RID: 289
+		// (get) Token: 0x06000BF2 RID: 3058 RVA: 0x000384C4 File Offset: 0x000366C4
+		// (set) Token: 0x06000BF3 RID: 3059 RVA: 0x000384CC File Offset: 0x000366CC
 		[RequiredMember]
 		public HashSet<int> OutNeighbors { get; set; }
 
-		// Token: 0x1700010F RID: 271
-		// (get) Token: 0x06000B98 RID: 2968 RVA: 0x00037905 File Offset: 0x00035B05
-		// (set) Token: 0x06000B99 RID: 2969 RVA: 0x0003790D File Offset: 0x00035B0D
+		// Token: 0x17000122 RID: 290
+		// (get) Token: 0x06000BF4 RID: 3060 RVA: 0x000384D5 File Offset: 0x000366D5
+		// (set) Token: 0x06000BF5 RID: 3061 RVA: 0x000384DD File Offset: 0x000366DD
 		[RequiredMember]
 		public HashSet<int> Neighbors { get; set; }
 
-		// Token: 0x06000B9A RID: 2970 RVA: 0x00037916 File Offset: 0x00035B16
+		// Token: 0x06000BF6 RID: 3062 RVA: 0x000384E6 File Offset: 0x000366E6
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public GraphRuntimeNode()

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D9 RID: 29145
+	// Token: 0x0200628E RID: 25230
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SceneItemConnectorModel : ModelBase
 	{
-		// Token: 0x0604754D RID: 292173 RVA: 0x012236D8 File Offset: 0x012218D8
+		// Token: 0x0603CE4F RID: 249423 RVA: 0x0117D50C File Offset: 0x0117B70C
 		public void AddConnectedRelation(int scrId, int[] targetId)
 		{
 			HashSet<int> hashSet;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x0604754E RID: 292174 RVA: 0x01223724 File Offset: 0x01221924
+		// Token: 0x0603CE50 RID: 249424 RVA: 0x0117D558 File Offset: 0x0117B758
 		public void RemoveConnectRelation(int scrId, int targetId)
 		{
 			HashSet<int> hashSet;
@@ -35,15 +35,15 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x0604754F RID: 292175 RVA: 0x01223749 File Offset: 0x01221949
+		// Token: 0x0603CE51 RID: 249425 RVA: 0x0117D57D File Offset: 0x0117B77D
 		[NullableContext(2)]
 		public HashSet<int> GetRelationByEntityId(int scrId)
 		{
 			return this.ConnectedRelationCache.GetValueOrDefault(scrId);
 		}
 
-		// Token: 0x17009DF3 RID: 40435
-		// (get) Token: 0x06047550 RID: 292176 RVA: 0x01223757 File Offset: 0x01221957
+		// Token: 0x1700734A RID: 29514
+		// (get) Token: 0x0603CE52 RID: 249426 RVA: 0x0117D58B File Offset: 0x0117B78B
 		public static SceneItemConnectorModel Instance
 		{
 			get
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x06047551 RID: 292177 RVA: 0x0122375E File Offset: 0x0122195E
+		// Token: 0x0603CE53 RID: 249427 RVA: 0x0117D592 File Offset: 0x0117B792
 		public static SceneItemConnectorModel GetOrCreateInstance()
 		{
 			if (SceneItemConnectorModel._Instance == null)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return SceneItemConnectorModel._Instance;
 		}
 
-		// Token: 0x06047552 RID: 292178 RVA: 0x01223772 File Offset: 0x01221972
+		// Token: 0x0603CE54 RID: 249428 RVA: 0x0117D5A6 File Offset: 0x0117B7A6
 		public static bool CreateInstance()
 		{
 			if (SceneItemConnectorModel._Instance != null)
@@ -73,27 +73,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x06047553 RID: 292179 RVA: 0x01223788 File Offset: 0x01221988
+		// Token: 0x0603CE55 RID: 249429 RVA: 0x0117D5BC File Offset: 0x0117B7BC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047554 RID: 292180 RVA: 0x0122378A File Offset: 0x0122198A
+		// Token: 0x0603CE56 RID: 249430 RVA: 0x0117D5BE File Offset: 0x0117B7BE
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemConnectorModel._Instance = null;
 		}
 
-		// Token: 0x06047555 RID: 292181 RVA: 0x01223792 File Offset: 0x01221992
+		// Token: 0x0603CE57 RID: 249431 RVA: 0x0117D5C6 File Offset: 0x0117B7C6
 		static SceneItemConnectorModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemConnectorModel.CreateStaticDefaultValue), new Action(SceneItemConnectorModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025812 RID: 153618
+		// Token: 0x04020481 RID: 132225
 		private readonly Dictionary<int, HashSet<int>> ConnectedRelationCache = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04025813 RID: 153619
+		// Token: 0x04020482 RID: 132226
 		[Nullable(2)]
 		private static SceneItemConnectorModel _Instance;
 	}

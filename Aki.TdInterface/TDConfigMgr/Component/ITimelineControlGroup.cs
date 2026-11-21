@@ -6,13 +6,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000774 RID: 1908
+	// Token: 0x02000815 RID: 2069
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimelineControlGroup
 	{
-		// Token: 0x0600295B RID: 10587 RVA: 0x0006D284 File Offset: 0x0006B484
-		[NullableContext(1)]
+		// Token: 0x06002C7F RID: 11391 RVA: 0x0007442C File Offset: 0x0007262C
+		[NullableContext(0)]
 		private ITimelineControlGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600295C RID: 10588 RVA: 0x0006D2BC File Offset: 0x0006B4BC
-		[NullableContext(1)]
+		// Token: 0x06002C80 RID: 11392 RVA: 0x00074464 File Offset: 0x00072664
+		[NullableContext(0)]
 		public static ITimelineControlGroup Create([Nullable(2)] ITimelineControlGroup instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600295D RID: 10589 RVA: 0x0006D2CF File Offset: 0x0006B4CF
-		[NullableContext(1)]
+		// Token: 0x06002C81 RID: 11393 RVA: 0x00074477 File Offset: 0x00072677
+		[NullableContext(0)]
 		public static ITimelineControlGroup CreateFromSetValue([Nullable(2)] ITimelineControlGroup_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600295E RID: 10590 RVA: 0x0006D2E4 File Offset: 0x0006B4E4
-		[NullableContext(1)]
+		// Token: 0x06002C82 RID: 11394 RVA: 0x0007448C File Offset: 0x0007268C
+		[NullableContext(0)]
 		public ITimelineControlGroup_SetValue ToSetValue()
 		{
 			return new ITimelineControlGroup_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AE0 RID: 2784
-		// (get) Token: 0x0600295F RID: 10591 RVA: 0x0006D34C File Offset: 0x0006B54C
-		// (set) Token: 0x06002960 RID: 10592 RVA: 0x0006D3AD File Offset: 0x0006B5AD
+		// Token: 0x17000BA0 RID: 2976
+		// (get) Token: 0x06002C83 RID: 11395 RVA: 0x000744F4 File Offset: 0x000726F4
+		// (set) Token: 0x06002C84 RID: 11396 RVA: 0x00074555 File Offset: 0x00072755
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -101,9 +101,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE1 RID: 2785
-		// (get) Token: 0x06002961 RID: 10593 RVA: 0x0006D3C2 File Offset: 0x0006B5C2
-		// (set) Token: 0x06002962 RID: 10594 RVA: 0x0006D3E9 File Offset: 0x0006B5E9
+		// Token: 0x17000BA1 RID: 2977
+		// (get) Token: 0x06002C85 RID: 11397 RVA: 0x0007456A File Offset: 0x0007276A
+		// (set) Token: 0x06002C86 RID: 11398 RVA: 0x00074591 File Offset: 0x00072791
 		public virtual string TidContent
 		{
 			get
@@ -125,9 +125,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE2 RID: 2786
-		// (get) Token: 0x06002963 RID: 10595 RVA: 0x0006D3F8 File Offset: 0x0006B5F8
-		// (set) Token: 0x06002964 RID: 10596 RVA: 0x0006D432 File Offset: 0x0006B632
+		// Token: 0x17000BA2 RID: 2978
+		// (get) Token: 0x06002C87 RID: 11399 RVA: 0x000745A0 File Offset: 0x000727A0
+		// (set) Token: 0x06002C88 RID: 11400 RVA: 0x000745DA File Offset: 0x000727DA
 		public virtual float? SegmentTime
 		{
 			get
@@ -149,13 +149,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE3 RID: 2787
-		// (get) Token: 0x06002965 RID: 10597 RVA: 0x0006D440 File Offset: 0x0006B640
-		// (set) Token: 0x06002966 RID: 10598 RVA: 0x0006D467 File Offset: 0x0006B667
-		[Nullable(1)]
+		// Token: 0x17000BA3 RID: 2979
+		// (get) Token: 0x06002C89 RID: 11401 RVA: 0x000745E8 File Offset: 0x000727E8
+		// (set) Token: 0x06002C8A RID: 11402 RVA: 0x0007460F File Offset: 0x0007280F
+		[Nullable(0)]
 		public virtual List<ITimelineTrackControlData> ControlConfigs
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -169,27 +169,27 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.ControlConfigs;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().ControlConfigs = value;
 			}
 		}
 
-		// Token: 0x17000AE4 RID: 2788
-		// (get) Token: 0x06002967 RID: 10599 RVA: 0x0006D478 File Offset: 0x0006B678
-		// (set) Token: 0x06002968 RID: 10600 RVA: 0x0006D50B File Offset: 0x0006B70B
+		// Token: 0x17000BA4 RID: 2980
+		// (get) Token: 0x06002C8B RID: 11403 RVA: 0x00074620 File Offset: 0x00072820
+		// (set) Token: 0x06002C8C RID: 11404 RVA: 0x000746B3 File Offset: 0x000728B3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IControlPointEventConfig> ControlPointEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -220,7 +220,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -229,9 +229,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE5 RID: 2789
-		// (get) Token: 0x06002969 RID: 10601 RVA: 0x0006D520 File Offset: 0x0006B720
-		// (set) Token: 0x0600296A RID: 10602 RVA: 0x0006D547 File Offset: 0x0006B747
+		// Token: 0x17000BA5 RID: 2981
+		// (get) Token: 0x06002C8D RID: 11405 RVA: 0x000746C8 File Offset: 0x000728C8
+		// (set) Token: 0x06002C8E RID: 11406 RVA: 0x000746EF File Offset: 0x000728EF
 		public virtual string Description
 		{
 			get
@@ -253,9 +253,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AE6 RID: 2790
-		// (get) Token: 0x0600296B RID: 10603 RVA: 0x0006D555 File Offset: 0x0006B755
-		// (set) Token: 0x0600296C RID: 10604 RVA: 0x0006D56C File Offset: 0x0006B76C
+		// Token: 0x17000BA6 RID: 2982
+		// (get) Token: 0x06002C8F RID: 11407 RVA: 0x000746FD File Offset: 0x000728FD
+		// (set) Token: 0x06002C90 RID: 11408 RVA: 0x00074714 File Offset: 0x00072914
 		public virtual string EdTidContent
 		{
 			get
@@ -272,28 +272,28 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BBF RID: 7103
+		// Token: 0x04001DC4 RID: 7620
 		protected ITimelineControlGroup FbInstance;
 
-		// Token: 0x04001BC0 RID: 7104
+		// Token: 0x04001DC5 RID: 7621
 		protected ITimelineControlGroup_SetValue PocoInterface;
 
-		// Token: 0x04001BC1 RID: 7105
-		[Nullable(1)]
+		// Token: 0x04001DC6 RID: 7622
+		[Nullable(0)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04001BC2 RID: 7106
+		// Token: 0x04001DC7 RID: 7623
 		private bool _ConditionInited;
 
-		// Token: 0x04001BC3 RID: 7107
+		// Token: 0x04001DC8 RID: 7624
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IControlPointEventConfig> _ControlPointEventsCache;
 
-		// Token: 0x04001BC4 RID: 7108
+		// Token: 0x04001DC9 RID: 7625
 		private bool _ControlPointEventsInited;
 	}
 }

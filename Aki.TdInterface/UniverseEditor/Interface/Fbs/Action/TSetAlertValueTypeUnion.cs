@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200777B RID: 30587
+	// Token: 0x02007FB3 RID: 32691
 	public class TSetAlertValueTypeUnion
 	{
-		// Token: 0x1700E695 RID: 59029
-		// (get) Token: 0x060378A2 RID: 227490 RVA: 0x0078403E File Offset: 0x0078223E
-		// (set) Token: 0x060378A3 RID: 227491 RVA: 0x00784046 File Offset: 0x00782246
+		// Token: 0x1700F2EF RID: 62191
+		// (get) Token: 0x0603AE1B RID: 241179 RVA: 0x007E94FE File Offset: 0x007E76FE
+		// (set) Token: 0x0603AE1C RID: 241180 RVA: 0x007E9506 File Offset: 0x007E7706
 		public TSetAlertValueType Type { get; set; }
 
-		// Token: 0x1700E696 RID: 59030
-		// (get) Token: 0x060378A4 RID: 227492 RVA: 0x0078404F File Offset: 0x0078224F
-		// (set) Token: 0x060378A5 RID: 227493 RVA: 0x00784057 File Offset: 0x00782257
+		// Token: 0x1700F2F0 RID: 62192
+		// (get) Token: 0x0603AE1D RID: 241181 RVA: 0x007E950F File Offset: 0x007E770F
+		// (set) Token: 0x0603AE1E RID: 241182 RVA: 0x007E9517 File Offset: 0x007E7717
 		public object Value { get; set; }
 
-		// Token: 0x060378A6 RID: 227494 RVA: 0x00784060 File Offset: 0x00782260
+		// Token: 0x0603AE1F RID: 241183 RVA: 0x007E9520 File Offset: 0x007E7720
 		public TSetAlertValueTypeUnion()
 		{
 			this.Type = TSetAlertValueType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060378A7 RID: 227495 RVA: 0x00784076 File Offset: 0x00782276
+		// Token: 0x0603AE20 RID: 241184 RVA: 0x007E9536 File Offset: 0x007E7736
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060378A8 RID: 227496 RVA: 0x00784088 File Offset: 0x00782288
+		// Token: 0x0603AE21 RID: 241185 RVA: 0x007E9548 File Offset: 0x007E7748
 		public IAddOrSubAlertValueT AsIAddOrSubAlertValue()
 		{
 			return this.As<IAddOrSubAlertValueT>();
 		}
 
-		// Token: 0x060378A9 RID: 227497 RVA: 0x00784090 File Offset: 0x00782290
+		// Token: 0x0603AE22 RID: 241186 RVA: 0x007E9550 File Offset: 0x007E7750
 		public static TSetAlertValueTypeUnion FromIAddOrSubAlertValue(IAddOrSubAlertValueT _iaddorsubalertvalue)
 		{
 			return new TSetAlertValueTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378AA RID: 227498 RVA: 0x007840A5 File Offset: 0x007822A5
+		// Token: 0x0603AE23 RID: 241187 RVA: 0x007E9565 File Offset: 0x007E7765
 		public ICustomAlertValueT AsICustomAlertValue()
 		{
 			return this.As<ICustomAlertValueT>();
 		}
 
-		// Token: 0x060378AB RID: 227499 RVA: 0x007840AD File Offset: 0x007822AD
+		// Token: 0x0603AE24 RID: 241188 RVA: 0x007E956D File Offset: 0x007E776D
 		public static TSetAlertValueTypeUnion FromICustomAlertValue(ICustomAlertValueT _icustomalertvalue)
 		{
 			return new TSetAlertValueTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378AC RID: 227500 RVA: 0x007840C2 File Offset: 0x007822C2
+		// Token: 0x0603AE25 RID: 241189 RVA: 0x007E9582 File Offset: 0x007E7782
 		public IMaxAlertValueT AsIMaxAlertValue()
 		{
 			return this.As<IMaxAlertValueT>();
 		}
 
-		// Token: 0x060378AD RID: 227501 RVA: 0x007840CA File Offset: 0x007822CA
+		// Token: 0x0603AE26 RID: 241190 RVA: 0x007E958A File Offset: 0x007E778A
 		public static TSetAlertValueTypeUnion FromIMaxAlertValue(IMaxAlertValueT _imaxalertvalue)
 		{
 			return new TSetAlertValueTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378AE RID: 227502 RVA: 0x007840DF File Offset: 0x007822DF
+		// Token: 0x0603AE27 RID: 241191 RVA: 0x007E959F File Offset: 0x007E779F
 		public IMinAlertValueT AsIMinAlertValue()
 		{
 			return this.As<IMinAlertValueT>();
 		}
 
-		// Token: 0x060378AF RID: 227503 RVA: 0x007840E7 File Offset: 0x007822E7
+		// Token: 0x0603AE28 RID: 241192 RVA: 0x007E95A7 File Offset: 0x007E77A7
 		public static TSetAlertValueTypeUnion FromIMinAlertValue(IMinAlertValueT _iminalertvalue)
 		{
 			return new TSetAlertValueTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378B0 RID: 227504 RVA: 0x007840FC File Offset: 0x007822FC
+		// Token: 0x0603AE29 RID: 241193 RVA: 0x007E95BC File Offset: 0x007E77BC
 		public static int Pack(FlatBufferBuilder builder, TSetAlertValueTypeUnion _o)
 		{
 			switch (_o.Type)

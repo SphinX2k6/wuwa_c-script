@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002C29 RID: 11305
+// Token: 0x020021A4 RID: 8612
 public interface ITutorialViewParam
 {
-	// Token: 0x17001FB6 RID: 8118
-	// (get) Token: 0x060178D6 RID: 96470
-	// (set) Token: 0x060178D7 RID: 96471
+	// Token: 0x1700200E RID: 8206
+	// (get) Token: 0x06015308 RID: 86792
+	// (set) Token: 0x06015309 RID: 86793
 	int? TutorialId { get; set; }
 
-	// Token: 0x17001FB7 RID: 8119
-	// (get) Token: 0x060178D8 RID: 96472
-	// (set) Token: 0x060178D9 RID: 96473
+	// Token: 0x1700200F RID: 8207
+	// (get) Token: 0x0601530A RID: 86794
+	// (set) Token: 0x0601530B RID: 86795
 	EExclusiveTutorialType? ExclusiveType { get; set; }
 }

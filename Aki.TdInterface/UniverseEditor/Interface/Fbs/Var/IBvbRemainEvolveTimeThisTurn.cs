@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A84 RID: 14980
+	// Token: 0x02003E5F RID: 15967
 	public struct IBvbRemainEvolveTimeThisTurn : IFlatbufferObject
 	{
-		// Token: 0x17006696 RID: 26262
-		// (get) Token: 0x060144F3 RID: 83187 RVA: 0x002F6CE1 File Offset: 0x002F4EE1
+		// Token: 0x17006BC6 RID: 27590
+		// (get) Token: 0x0601580F RID: 88079 RVA: 0x00319ECD File Offset: 0x003180CD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144F4 RID: 83188 RVA: 0x002F6CEE File Offset: 0x002F4EEE
+		// Token: 0x06015810 RID: 88080 RVA: 0x00319EDA File Offset: 0x003180DA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060144F5 RID: 83189 RVA: 0x002F6CF8 File Offset: 0x002F4EF8
+		// Token: 0x06015811 RID: 88081 RVA: 0x00319EE4 File Offset: 0x003180E4
 		public static IBvbRemainEvolveTimeThisTurn GetRootAsIBvbRemainEvolveTimeThisTurn(ByteBuffer _bb)
 		{
 			return IBvbRemainEvolveTimeThisTurn.GetRootAsIBvbRemainEvolveTimeThisTurn(_bb, default(IBvbRemainEvolveTimeThisTurn));
 		}
 
-		// Token: 0x060144F6 RID: 83190 RVA: 0x002F6D14 File Offset: 0x002F4F14
+		// Token: 0x06015812 RID: 88082 RVA: 0x00319F00 File Offset: 0x00318100
 		public static IBvbRemainEvolveTimeThisTurn GetRootAsIBvbRemainEvolveTimeThisTurn(ByteBuffer _bb, IBvbRemainEvolveTimeThisTurn obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060144F7 RID: 83191 RVA: 0x002F6D31 File Offset: 0x002F4F31
+		// Token: 0x06015813 RID: 88083 RVA: 0x00319F1D File Offset: 0x0031811D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060144F8 RID: 83192 RVA: 0x002F6D40 File Offset: 0x002F4F40
+		// Token: 0x06015814 RID: 88084 RVA: 0x00319F2C File Offset: 0x0031812C
 		public IBvbRemainEvolveTimeThisTurn __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006697 RID: 26263
-		// (get) Token: 0x060144F9 RID: 83193 RVA: 0x002F6D50 File Offset: 0x002F4F50
+		// Token: 0x17006BC7 RID: 27591
+		// (get) Token: 0x06015815 RID: 88085 RVA: 0x00319F3C File Offset: 0x0031813C
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060144FA RID: 83194 RVA: 0x002F6D8C File Offset: 0x002F4F8C
+		// Token: 0x06015816 RID: 88086 RVA: 0x00319F78 File Offset: 0x00318178
 		public static Offset<IBvbRemainEvolveTimeThisTurn> CreateIBvbRemainEvolveTimeThisTurn(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbRemainEvolveTimeThisTurn.EndIBvbRemainEvolveTimeThisTurn(builder);
 		}
 
-		// Token: 0x060144FB RID: 83195 RVA: 0x002F6DA2 File Offset: 0x002F4FA2
+		// Token: 0x06015817 RID: 88087 RVA: 0x00319F8E File Offset: 0x0031818E
 		public static void StartIBvbRemainEvolveTimeThisTurn(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060144FC RID: 83196 RVA: 0x002F6DAB File Offset: 0x002F4FAB
+		// Token: 0x06015818 RID: 88088 RVA: 0x00319F97 File Offset: 0x00318197
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060144FD RID: 83197 RVA: 0x002F6DB6 File Offset: 0x002F4FB6
+		// Token: 0x06015819 RID: 88089 RVA: 0x00319FA2 File Offset: 0x003181A2
 		public static Offset<IBvbRemainEvolveTimeThisTurn> EndIBvbRemainEvolveTimeThisTurn(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbRemainEvolveTimeThisTurn>(builder.EndTable());
 		}
 
-		// Token: 0x060144FE RID: 83198 RVA: 0x002F6DC4 File Offset: 0x002F4FC4
+		// Token: 0x0601581A RID: 88090 RVA: 0x00319FB0 File Offset: 0x003181B0
 		public IBvbRemainEvolveTimeThisTurnT UnPack()
 		{
 			IBvbRemainEvolveTimeThisTurnT bvbRemainEvolveTimeThisTurnT = new IBvbRemainEvolveTimeThisTurnT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbRemainEvolveTimeThisTurnT;
 		}
 
-		// Token: 0x060144FF RID: 83199 RVA: 0x002F6DDF File Offset: 0x002F4FDF
+		// Token: 0x0601581B RID: 88091 RVA: 0x00319FCB File Offset: 0x003181CB
 		public void UnPackTo(IBvbRemainEvolveTimeThisTurnT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06014500 RID: 83200 RVA: 0x002F6DF0 File Offset: 0x002F4FF0
+		// Token: 0x0601581C RID: 88092 RVA: 0x00319FDC File Offset: 0x003181DC
 		public static Offset<IBvbRemainEvolveTimeThisTurn> Pack(FlatBufferBuilder builder, IBvbRemainEvolveTimeThisTurnT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbRemainEvolveTimeThisTurn.CreateIBvbRemainEvolveTimeThisTurn(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEFE RID: 44798
+		// Token: 0x0400B820 RID: 47136
 		private Table __p;
 	}
 }

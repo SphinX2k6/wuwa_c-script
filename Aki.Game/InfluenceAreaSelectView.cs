@@ -9,16 +9,16 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F81 RID: 8065
+// Token: 0x02001443 RID: 5187
 public class InfluenceAreaSelectView : UiViewBase
 {
-	// Token: 0x0600FA31 RID: 64049 RVA: 0x003C9A32 File Offset: 0x003C7C32
+	// Token: 0x0600CE50 RID: 52816 RVA: 0x003D556E File Offset: 0x003D376E
 	[NullableContext(1)]
 	public InfluenceAreaSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FA32 RID: 64050 RVA: 0x003C9A3C File Offset: 0x003C7C3C
+	// Token: 0x0600CE51 RID: 52817 RVA: 0x003D5578 File Offset: 0x003D3778
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -51,20 +51,20 @@ public class InfluenceAreaSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FA33 RID: 64051 RVA: 0x003C9BAA File Offset: 0x003C7DAA
+	// Token: 0x0600CE52 RID: 52818 RVA: 0x003D56E6 File Offset: 0x003D38E6
 	private void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FA34 RID: 64052 RVA: 0x003C9BB3 File Offset: 0x003C7DB3
+	// Token: 0x0600CE53 RID: 52819 RVA: 0x003D56EF File Offset: 0x003D38EF
 	private void ConfirmClick()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.RefreshInfluencePanel, this.CurrentSelectedAreaId);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600FA35 RID: 64053 RVA: 0x003C9BD4 File Offset: 0x003C7DD4
+	// Token: 0x0600CE54 RID: 52820 RVA: 0x003D5710 File Offset: 0x003D3910
 	protected override void OnStart()
 	{
 		this.CountryLayout = new GenericLayoutNew<AreaButtonItem>(base.GetGridLayout(1), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<AreaButtonItem>(this.InitItem), null);
@@ -76,7 +76,7 @@ public class InfluenceAreaSelectView : UiViewBase
 		this.SpecialItem.SetCanExecuteChange(new TAreaCanExecuteChange(this.CanExecuteChange));
 	}
 
-	// Token: 0x0600FA36 RID: 64054 RVA: 0x003C9C70 File Offset: 0x003C7E70
+	// Token: 0x0600CE55 RID: 52821 RVA: 0x003D57AC File Offset: 0x003D39AC
 	[NullableContext(1)]
 	private ILayoutItem<AreaButtonItem> InitItem(object country, UUIItem uiItem, int _)
 	{
@@ -91,7 +91,7 @@ public class InfluenceAreaSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600FA37 RID: 64055 RVA: 0x003C9CE4 File Offset: 0x003C7EE4
+	// Token: 0x0600CE56 RID: 52822 RVA: 0x003D5820 File Offset: 0x003D3A20
 	private void ToggleFunction(int areaId)
 	{
 		if (this.CurrentSelectedAreaId != 0)
@@ -116,13 +116,13 @@ public class InfluenceAreaSelectView : UiViewBase
 		interactionGroup.SetInteractable(false);
 	}
 
-	// Token: 0x0600FA38 RID: 64056 RVA: 0x003C9DB4 File Offset: 0x003C7FB4
+	// Token: 0x0600CE57 RID: 52823 RVA: 0x003D58F0 File Offset: 0x003D3AF0
 	private bool CanExecuteChange(int areaId)
 	{
 		return this.CurrentSelectedAreaId != areaId;
 	}
 
-	// Token: 0x0600FA39 RID: 64057 RVA: 0x003C9DC4 File Offset: 0x003C7FC4
+	// Token: 0x0600CE58 RID: 52824 RVA: 0x003D5900 File Offset: 0x003D3B00
 	[NullableContext(2)]
 	private AreaButtonItem GetAreaButtonItem(int areaId)
 	{
@@ -134,14 +134,14 @@ public class InfluenceAreaSelectView : UiViewBase
 		return this.SpecialItem;
 	}
 
-	// Token: 0x0600FA3A RID: 64058 RVA: 0x003C9DF0 File Offset: 0x003C7FF0
+	// Token: 0x0600CE59 RID: 52825 RVA: 0x003D592C File Offset: 0x003D3B2C
 	protected override void OnAfterShow()
 	{
 		int areaId = (int)this.OpenParam;
 		this.GetAreaButtonItem(areaId).SetToggleState(EToggleState.ETT_Checked, true);
 	}
 
-	// Token: 0x0600FA3B RID: 64059 RVA: 0x003C9E17 File Offset: 0x003C8017
+	// Token: 0x0600CE5A RID: 52826 RVA: 0x003D5953 File Offset: 0x003D3B53
 	protected override void OnBeforeDestroy()
 	{
 		this.CountryLayout.ClearChildren();
@@ -150,7 +150,7 @@ public class InfluenceAreaSelectView : UiViewBase
 		this.SpecialItem = null;
 	}
 
-	// Token: 0x04007490 RID: 29840
+	// Token: 0x04007571 RID: 30065
 	[Nullable(new byte[]
 	{
 		2,
@@ -158,29 +158,29 @@ public class InfluenceAreaSelectView : UiViewBase
 	})]
 	private GenericLayoutNew<AreaButtonItem> CountryLayout;
 
-	// Token: 0x04007491 RID: 29841
+	// Token: 0x04007572 RID: 30066
 	[Nullable(2)]
 	private AreaButtonItem SpecialItem;
 
-	// Token: 0x04007492 RID: 29842
+	// Token: 0x04007573 RID: 30067
 	private int CurrentSelectedAreaId;
 
-	// Token: 0x0200856D RID: 34157
+	// Token: 0x020076F2 RID: 30450
 	private enum EInfluenceAreaSelectView
 	{
-		// Token: 0x0402B70E RID: 177934
+		// Token: 0x04026A31 RID: 158257
 		CloseButton,
-		// Token: 0x0402B70F RID: 177935
+		// Token: 0x04026A32 RID: 158258
 		CountryArea,
-		// Token: 0x0402B710 RID: 177936
+		// Token: 0x04026A33 RID: 158259
 		SpecialArea,
-		// Token: 0x0402B711 RID: 177937
+		// Token: 0x04026A34 RID: 158260
 		Title,
-		// Token: 0x0402B712 RID: 177938
+		// Token: 0x04026A35 RID: 158261
 		Content,
-		// Token: 0x0402B713 RID: 177939
+		// Token: 0x04026A36 RID: 158262
 		ConfirmButton,
-		// Token: 0x0402B714 RID: 177940
+		// Token: 0x04026A37 RID: 158263
 		InteractionGroup
 	}
 }

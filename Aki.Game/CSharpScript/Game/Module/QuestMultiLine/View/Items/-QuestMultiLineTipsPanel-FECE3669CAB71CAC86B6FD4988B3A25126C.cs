@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FCB RID: 20427
+	// Token: 0x02003F94 RID: 16276
 	internal enum <QuestMultiLineTipsPanel>FECE3669CAB71CAC86B6FD4988B3A25126C77EE864C6487D3AA08560701411A1B__EComponent
 	{
-		// Token: 0x0401BCD5 RID: 113877
+		// Token: 0x040166AA RID: 91818
 		TexRoleIcon,
-		// Token: 0x0401BCD6 RID: 113878
+		// Token: 0x040166AB RID: 91819
 		NameText,
-		// Token: 0x0401BCD7 RID: 113879
+		// Token: 0x040166AC RID: 91820
 		LocationText,
-		// Token: 0x0401BCD8 RID: 113880
+		// Token: 0x040166AD RID: 91821
 		StateIconSprite,
-		// Token: 0x0401BCD9 RID: 113881
+		// Token: 0x040166AE RID: 91822
 		StateText,
-		// Token: 0x0401BCDA RID: 113882
+		// Token: 0x040166AF RID: 91823
 		ContentText,
-		// Token: 0x0401BCDB RID: 113883
+		// Token: 0x040166B0 RID: 91824
 		HideSelfButton,
-		// Token: 0x0401BCDC RID: 113884
+		// Token: 0x040166B1 RID: 91825
 		TexTipQuality,
-		// Token: 0x0401BCDD RID: 113885
+		// Token: 0x040166B2 RID: 91826
 		SpriteQualityFrame,
-		// Token: 0x0401BCDE RID: 113886
+		// Token: 0x040166B3 RID: 91827
 		TexMultiPersonAvatar
 	}
 }

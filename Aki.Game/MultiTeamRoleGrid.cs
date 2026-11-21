@@ -5,7 +5,7 @@ using CSharpScript.Core.Extension;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002785 RID: 10117
+// Token: 0x02001C70 RID: 7280
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MultiTeamRoleGrid : GridProxyAbstract<MultiTeamRoleGridContentData>
 {
-	// Token: 0x06014C1B RID: 85019 RVA: 0x00540A68 File Offset: 0x0053EC68
+	// Token: 0x060120FE RID: 73982 RVA: 0x0054F8EC File Offset: 0x0054DAEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,20 +25,20 @@ public class MultiTeamRoleGrid : GridProxyAbstract<MultiTeamRoleGridContentData>
 		};
 	}
 
-	// Token: 0x06014C1C RID: 85020 RVA: 0x00540AC2 File Offset: 0x0053ECC2
+	// Token: 0x060120FF RID: 73983 RVA: 0x0054F946 File Offset: 0x0054DB46
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<RoleGrid, RoleGridContentData>(base.GetGridLayout(1), new Func<RoleGrid>(this.CreateItem), null, false, true);
 		this.Layout.GetUiAnimController().PlayFromIndex = 1;
 	}
 
-	// Token: 0x06014C1D RID: 85021 RVA: 0x00540AF6 File Offset: 0x0053ECF6
+	// Token: 0x06012100 RID: 73984 RVA: 0x0054F97A File Offset: 0x0054DB7A
 	private RoleGrid CreateItem()
 	{
 		return new RoleGrid();
 	}
 
-	// Token: 0x06014C1E RID: 85022 RVA: 0x00540B00 File Offset: 0x0053ED00
+	// Token: 0x06012101 RID: 73985 RVA: 0x0054F984 File Offset: 0x0054DB84
 	public override void Refresh(MultiTeamRoleGridContentData data, bool isSelected, int gridIndex)
 	{
 		if (data.Data == null)
@@ -54,6 +54,7 @@ public class MultiTeamRoleGrid : GridProxyAbstract<MultiTeamRoleGridContentData>
 			{
 				Data = multiTeamRoleGridData,
 				CurrentSelectedRoleList = data.CurrentSelectedRoleList,
+				IsSingleSelect = data.IsSingleSelect,
 				CurrentTagBranchId = data.CurrentSelectTagMap.GetValueOrNull(multiTeamRoleGridData.GetRole().GetDataId()).GetValueOrDefault(-1),
 				OnToggleCallBack = data.OnToggleCallBack,
 				CanExecuteChangeCallBack = data.CanExecuteChangeCallBack
@@ -62,7 +63,7 @@ public class MultiTeamRoleGrid : GridProxyAbstract<MultiTeamRoleGridContentData>
 		this.Layout.RefreshByData(list, null, data.ShowGridAnimation);
 	}
 
-	// Token: 0x04009C16 RID: 39958
+	// Token: 0x04009D6F RID: 40303
 	[Nullable(new byte[]
 	{
 		2,
@@ -71,15 +72,15 @@ public class MultiTeamRoleGrid : GridProxyAbstract<MultiTeamRoleGridContentData>
 	})]
 	private GenericLayout<RoleGrid, RoleGridContentData> Layout;
 
-	// Token: 0x02008DED RID: 36333
+	// Token: 0x02007F74 RID: 32628
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E0B6 RID: 188598
+		// Token: 0x040293CA RID: 168906
 		TitleText,
-		// Token: 0x0402E0B7 RID: 188599
+		// Token: 0x040293CB RID: 168907
 		Layout,
-		// Token: 0x0402E0B8 RID: 188600
+		// Token: 0x040293CC RID: 168908
 		GridItem
 	}
 }

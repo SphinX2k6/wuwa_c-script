@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200427B RID: 17019
+	// Token: 0x020046D7 RID: 18135
 	public class IVisionSystemQuestSetActivatedT
 	{
-		// Token: 0x170078CB RID: 30923
-		// (get) Token: 0x06019316 RID: 103190 RVA: 0x0039EA5C File Offset: 0x0039CC5C
-		// (set) Token: 0x06019317 RID: 103191 RVA: 0x0039EA64 File Offset: 0x0039CC64
+		// Token: 0x17007EFC RID: 32508
+		// (get) Token: 0x0601AA82 RID: 109186 RVA: 0x003CA134 File Offset: 0x003C8334
+		// (set) Token: 0x0601AA83 RID: 109187 RVA: 0x003CA13C File Offset: 0x003C833C
 		public EVisionSystemQuestType Type { get; set; }
 
-		// Token: 0x170078CC RID: 30924
-		// (get) Token: 0x06019318 RID: 103192 RVA: 0x0039EA6D File Offset: 0x0039CC6D
-		// (set) Token: 0x06019319 RID: 103193 RVA: 0x0039EA75 File Offset: 0x0039CC75
+		// Token: 0x17007EFD RID: 32509
+		// (get) Token: 0x0601AA84 RID: 109188 RVA: 0x003CA145 File Offset: 0x003C8345
+		// (set) Token: 0x0601AA85 RID: 109189 RVA: 0x003CA14D File Offset: 0x003C834D
 		public EVisionSetType SetType { get; set; }
 
-		// Token: 0x0601931A RID: 103194 RVA: 0x0039EA7E File Offset: 0x0039CC7E
+		// Token: 0x0601AA86 RID: 109190 RVA: 0x003CA156 File Offset: 0x003C8356
 		public IVisionSystemQuestSetActivatedT()
 		{
 			this.Type = EVisionSystemQuestType.HasVisionGetTargetLevel;

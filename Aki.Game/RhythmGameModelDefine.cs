@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001088 RID: 4232
+// Token: 0x0200053C RID: 1340
 [NullableContext(1)]
 [Nullable(0)]
 public static class RhythmGameModelDefine
 {
-	// Token: 0x040032D9 RID: 13017
+	// Token: 0x04003372 RID: 13170
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<EKuroRhythmGameRating, string> RhythmGameHitResultTexture = new Dictionary<EKuroRhythmGameRating, string>
 	{
@@ -38,10 +38,10 @@ public static class RhythmGameModelDefine
 		}
 	};
 
-	// Token: 0x040032DA RID: 13018
+	// Token: 0x04003373 RID: 13171
 	public const string RHYTHM_GAME_TUNNEL_LINE_HIT_EFFECT = "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_2/3_2YinYou/DA_FX_Yinyou_Rectangle_Sparks_02.DA_FX_Yinyou_Rectangle_Sparks_02";
 
-	// Token: 0x040032DB RID: 13019
+	// Token: 0x04003374 RID: 13172
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyDictionary<string, string> RhythmGameHitEffectPath = new Dictionary<string, string>
 	{
@@ -91,7 +91,7 @@ public static class RhythmGameModelDefine
 		}
 	};
 
-	// Token: 0x040032DC RID: 13020
+	// Token: 0x04003375 RID: 13173
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyList<string> EffectGroupA = new <>z__ReadOnlyArray<string>(new string[]
 	{
@@ -99,7 +99,7 @@ public static class RhythmGameModelDefine
 		RhythmGameModelDefine.RhythmGameHitEffectPath["IconCylind"]
 	});
 
-	// Token: 0x040032DD RID: 13021
+	// Token: 0x04003376 RID: 13174
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyList<string> EffectGroupB = new <>z__ReadOnlyArray<string>(new string[]
 	{
@@ -107,7 +107,7 @@ public static class RhythmGameModelDefine
 		RhythmGameModelDefine.RhythmGameHitEffectPath["IconCylindB"]
 	});
 
-	// Token: 0x040032DE RID: 13022
+	// Token: 0x04003377 RID: 13175
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyList<string> EffectGroupC = new <>z__ReadOnlyArray<string>(new string[]
 	{
@@ -115,15 +115,15 @@ public static class RhythmGameModelDefine
 		RhythmGameModelDefine.RhythmGameHitEffectPath["IconCylindW"]
 	});
 
-	// Token: 0x040032DF RID: 13023
+	// Token: 0x04003378 RID: 13176
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyList<string> EffectGroupLine = new <>z__ReadOnlySingleElementList<string>(RhythmGameModelDefine.RhythmGameHitEffectPath["RectangleSparks"]);
 
-	// Token: 0x040032E0 RID: 13024
+	// Token: 0x04003379 RID: 13177
 	[StaticVariableRuleIgnore]
 	private static IReadOnlyList<string> EffectGroupHit = new <>z__ReadOnlySingleElementList<string>(RhythmGameModelDefine.RhythmGameHitEffectPath["ChuanYue"]);
 
-	// Token: 0x040032E1 RID: 13025
+	// Token: 0x0400337A RID: 13178
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<EKuroRhythmGameNoteType, IReadOnlyList<string>> RhythmGameHitResultEffect = new Dictionary<EKuroRhythmGameNoteType, IReadOnlyList<string>>
 	{
@@ -185,7 +185,7 @@ public static class RhythmGameModelDefine
 		}
 	};
 
-	// Token: 0x040032E2 RID: 13026
+	// Token: 0x0400337B RID: 13179
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyDictionary<EKuroRhythmGameNoteType, string> RhythmGameHitResultExternalEffect = new Dictionary<EKuroRhythmGameNoteType, string>
 	{
@@ -247,7 +247,7 @@ public static class RhythmGameModelDefine
 		}
 	};
 
-	// Token: 0x040032E3 RID: 13027
+	// Token: 0x0400337C RID: 13180
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyList<string> RhythmGameLockIconEffect = new <>z__ReadOnlyArray<string>(new string[]
 	{
@@ -256,11 +256,11 @@ public static class RhythmGameModelDefine
 		"/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_Yinyou_Suoding_03.DA_Fx_Group_Yinyou_Suoding_03"
 	});
 
-	// Token: 0x040032E4 RID: 13028
+	// Token: 0x0400337D RID: 13181
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyList<string> RhythmGameHighSpeedEffect = new <>z__ReadOnlySingleElementList<string>("/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_Yinyou_LineScreen.DA_Fx_Group_Yinyou_LineScreen");
 
-	// Token: 0x040032E5 RID: 13029
+	// Token: 0x0400337E RID: 13182
 	[StaticVariableRuleIgnore]
 	public static IReadOnlyList<string> RhythmGameFeverEffect = new <>z__ReadOnlyArray<string>(new string[]
 	{
@@ -268,54 +268,54 @@ public static class RhythmGameModelDefine
 		"/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_SpeedLine.DA_Fx_Group_SpeedLine"
 	});
 
-	// Token: 0x040032E6 RID: 13030
+	// Token: 0x0400337F RID: 13183
 	public const string RHYTHM_GAME_START_EFFECT = "/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_Start.DA_Fx_Group_Start";
 
-	// Token: 0x040032E7 RID: 13031
+	// Token: 0x04003380 RID: 13184
 	public const string RHYTHM_GAME_SPARKS_LINE_EFFECT = "/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_SparkLine.DA_Fx_Group_SparkLine";
 
-	// Token: 0x040032E8 RID: 13032
+	// Token: 0x04003381 RID: 13185
 	public const string RHYTHM_GAME_FIREWORKS_EFFECT = "/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_Sparks.DA_Fx_Group_Sparks";
 
-	// Token: 0x040032E9 RID: 13033
+	// Token: 0x04003382 RID: 13186
 	public const string RHYTHM_GAME_START_TRAIL_EFFECT = "/Game/Aki/Effect/EffectGroup/Scenes/3_2/3_2YinYou/DA_Fx_Group_StartTrail.DA_Fx_Group_StartTrail";
 
-	// Token: 0x040032EA RID: 13034
+	// Token: 0x04003383 RID: 13187
 	public const string RHYTHM_GAME_HIT_EVENT_NAME = "play_ui_rhythmship_gamenote_normal";
 
-	// Token: 0x040032EB RID: 13035
+	// Token: 0x04003384 RID: 13188
 	public const string RHYTHM_GAME_LINE_EVENT_NAME = "play_ui_rhythmship_gamenote_line";
 
-	// Token: 0x040032EC RID: 13036
+	// Token: 0x04003385 RID: 13189
 	public const string RHYTHM_GAME_LINE_HOLD_EVENT_NAME = "play_ui_rhythmship_gamenote_line_loop";
 
-	// Token: 0x040032ED RID: 13037
+	// Token: 0x04003386 RID: 13190
 	public const string RHYTHM_GAME_LINE_HIT_EVENT_NAME = "play_ui_rhythmship_gamenote_air";
 
-	// Token: 0x040032EE RID: 13038
+	// Token: 0x04003387 RID: 13191
 	public const string RHYTHM_GAME_FLICK_EVENT_NAME = "play_ui_rhythmship_gamenote_spin";
 
-	// Token: 0x040032EF RID: 13039
+	// Token: 0x04003388 RID: 13192
 	public const string RHYTHM_GAME_FEVER_LOOP_EVENT_NAME = "play_ui_rhythmship_gamefever_start_loop";
 
-	// Token: 0x040032F0 RID: 13040
+	// Token: 0x04003389 RID: 13193
 	public const string RHYTHM_GAME_FEVER_END_EVENT_NAME = "play_ui_rhythmship_gamefever_end";
 
-	// Token: 0x040032F1 RID: 13041
+	// Token: 0x0400338A RID: 13194
 	public const string RHYTHM_GAME_SPEED_UP_EVENT_NAME = "play_ui_rhythmship_gamespeedlevel_up";
 
-	// Token: 0x040032F2 RID: 13042
+	// Token: 0x0400338B RID: 13195
 	public const string RHYTHM_GAME_SPEED_DOWN_EVENT_NAME = "play_ui_rhythmship_gamespeedlevel_down";
 
-	// Token: 0x040032F3 RID: 13043
+	// Token: 0x0400338C RID: 13196
 	public const string RHYTHM_GAME_FIREWORKS_EVENT_NAME = "play_ui_rhythmship_gamefirework";
 
-	// Token: 0x040032F4 RID: 13044
+	// Token: 0x0400338D RID: 13197
 	public const string RHYTHM_GAME_END_TIP_SSS_EVENT_NAME = "play_ui_rhythmship_success_sss";
 
-	// Token: 0x040032F5 RID: 13045
+	// Token: 0x0400338E RID: 13198
 	public const string RHYTHM_GAME_END_TIP_NORMAL_EVENT_NAME = "play_ui_rhythmship_success_normal";
 
-	// Token: 0x040032F6 RID: 13046
+	// Token: 0x0400338F RID: 13199
 	public const string RHYTHM_GAME_START_EVENT_NAME = "play_ui_rhythmship_gameship_start";
 }

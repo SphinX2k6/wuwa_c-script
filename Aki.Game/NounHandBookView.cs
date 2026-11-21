@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E3F RID: 7743
+// Token: 0x02001301 RID: 4865
 [NullableContext(1)]
 [Nullable(0)]
 public class NounHandBookView : UiViewBase
 {
-	// Token: 0x0600EB53 RID: 60243 RVA: 0x0037CAEC File Offset: 0x0037ACEC
+	// Token: 0x0600BF72 RID: 49010 RVA: 0x0038878C File Offset: 0x0038698C
 	public NounHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.HandBookCommonItemDataList = new List<HandBookCommonItemData>();
 		this.NounHandBookItemList = new List<NounHandBookItem>();
 	}
 
-	// Token: 0x0600EB54 RID: 60244 RVA: 0x0037CB4C File Offset: 0x0037AD4C
+	// Token: 0x0600BF73 RID: 49011 RVA: 0x003887EC File Offset: 0x003869EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -52,7 +52,7 @@ public class NounHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EB55 RID: 60245 RVA: 0x0037CD6C File Offset: 0x0037AF6C
+	// Token: 0x0600BF74 RID: 49012 RVA: 0x00388A0C File Offset: 0x00386C0C
 	protected override void OnStart()
 	{
 		base.GetText(11).SetUIActive(false);
@@ -65,20 +65,20 @@ public class NounHandBookView : UiViewBase
 		this.RefreshLockText();
 	}
 
-	// Token: 0x0600EB56 RID: 60246 RVA: 0x0037CDF8 File Offset: 0x0037AFF8
+	// Token: 0x0600BF75 RID: 49013 RVA: 0x00388A98 File Offset: 0x00386C98
 	private void OnHandBookDataUpdate(EHandBookTabType eHandBookTabType, int i)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x0600EB57 RID: 60247 RVA: 0x0037CE00 File Offset: 0x0037B000
+	// Token: 0x0600BF76 RID: 49014 RVA: 0x00388AA0 File Offset: 0x00386CA0
 	protected void Refresh()
 	{
 		this.InitScrollView();
 		this.RefreshCollectText();
 	}
 
-	// Token: 0x0600EB58 RID: 60248 RVA: 0x0037CE10 File Offset: 0x0037B010
+	// Token: 0x0600BF77 RID: 49015 RVA: 0x00388AB0 File Offset: 0x00386CB0
 	protected void OnHandBookRead(EHandBookTabType type, int id)
 	{
 		if (type != EHandBookTabType.Noun)
@@ -92,7 +92,7 @@ public class NounHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EB59 RID: 60249 RVA: 0x0037CE4C File Offset: 0x0037B04C
+	// Token: 0x0600BF78 RID: 49016 RVA: 0x00388AEC File Offset: 0x00386CEC
 	protected void RefreshLockState(bool isLock)
 	{
 		base.GetText(4).SetUIActive(!isLock);
@@ -107,7 +107,7 @@ public class NounHandBookView : UiViewBase
 		base.GetItem(20).SetUIActive(!isLock);
 	}
 
-	// Token: 0x0600EB5A RID: 60250 RVA: 0x0037CEF8 File Offset: 0x0037B0F8
+	// Token: 0x0600BF79 RID: 49017 RVA: 0x00388B98 File Offset: 0x00386D98
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -115,7 +115,7 @@ public class NounHandBookView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600EB5B RID: 60251 RVA: 0x0037CF5C File Offset: 0x0037B15C
+	// Token: 0x0600BF7A RID: 49018 RVA: 0x00388BFC File Offset: 0x00386DFC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookDataInit, new Action(this.Refresh));
@@ -123,7 +123,7 @@ public class NounHandBookView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600EB5C RID: 60252 RVA: 0x0037CFC0 File Offset: 0x0037B1C0
+	// Token: 0x0600BF7B RID: 49019 RVA: 0x00388C60 File Offset: 0x00386E60
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NounHandBookView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -134,7 +134,7 @@ public class NounHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EB5D RID: 60253 RVA: 0x0037D004 File Offset: 0x0037B204
+	// Token: 0x0600BF7C RID: 49020 RVA: 0x00388CA4 File Offset: 0x00386EA4
 	public void InitScrollView()
 	{
 		List<NounType> list = ConfigCommon.ToList<NounType>(HandBookConfig.Instance.GetNounTypeConfigList());
@@ -164,7 +164,7 @@ public class NounHandBookView : UiViewBase
 		contentGenericLayout.RefreshByData(data, false, false);
 	}
 
-	// Token: 0x0600EB5E RID: 60254 RVA: 0x0037D108 File Offset: 0x0037B308
+	// Token: 0x0600BF7D RID: 49021 RVA: 0x00388DA8 File Offset: 0x00386FA8
 	private NounHandBookItem InitNounItem(object data, UUIItem uiItem, int index)
 	{
 		NounHandBookItem nounHandBookItem = new NounHandBookItem();
@@ -174,7 +174,7 @@ public class NounHandBookView : UiViewBase
 		return nounHandBookItem;
 	}
 
-	// Token: 0x0600EB5F RID: 60255 RVA: 0x0037D14C File Offset: 0x0037B34C
+	// Token: 0x0600BF7E RID: 49022 RVA: 0x00388DEC File Offset: 0x00386FEC
 	private void NounToggleFunction(int selectId)
 	{
 		this.CurrentSelectNoun = selectId;
@@ -205,7 +205,7 @@ public class NounHandBookView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600EB60 RID: 60256 RVA: 0x0037D198 File Offset: 0x0037B398
+	// Token: 0x0600BF7F RID: 49023 RVA: 0x00388E38 File Offset: 0x00387038
 	private void ChildNounToggleFunction(NounHandBook nounHandBook, UUIExtendToggle toggle)
 	{
 		this.CurSelectConfig = new NounHandBook?(nounHandBook);
@@ -262,20 +262,20 @@ public class NounHandBookView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(6), "DateOfAcquisition", new <>z__ReadOnlySingleElementList<object>(flag ? "" : handBookInfo.CreateTime));
 	}
 
-	// Token: 0x0600EB61 RID: 60257 RVA: 0x0037D3F4 File Offset: 0x0037B5F4
+	// Token: 0x0600BF80 RID: 49024 RVA: 0x00389094 File Offset: 0x00387294
 	protected void RefreshLockText()
 	{
 		string textById = TextConfig.Instance.GetTextById("ChipHandBookLock");
 		base.GetText(15).SetText(textById, true);
 	}
 
-	// Token: 0x0600EB62 RID: 60258 RVA: 0x0037D420 File Offset: 0x0037B620
+	// Token: 0x0600BF81 RID: 49025 RVA: 0x003890C0 File Offset: 0x003872C0
 	private int SortIndex(NounType a, NounType b)
 	{
 		return a.Id - b.Id;
 	}
 
-	// Token: 0x0600EB63 RID: 60259 RVA: 0x0037D434 File Offset: 0x0037B634
+	// Token: 0x0600BF82 RID: 49026 RVA: 0x003890D4 File Offset: 0x003872D4
 	protected void InitCommonTabTitle()
 	{
 		HandBookEntrance? handBookEntranceConfig = HandBookConfig.Instance.GetHandBookEntranceConfig(EHandBookTabType.Noun);
@@ -285,7 +285,7 @@ public class NounHandBookView : UiViewBase
 		this.CaptionItem.SetTitleIcon(handBookEntranceConfig.Value.TitleIcon);
 	}
 
-	// Token: 0x0600EB64 RID: 60260 RVA: 0x0037D4A8 File Offset: 0x0037B6A8
+	// Token: 0x0600BF83 RID: 49027 RVA: 0x00389148 File Offset: 0x00387348
 	protected void RefreshCollectText()
 	{
 		int[] collectProgress = HandBookController.Instance.GetCollectProgress(EHandBookTabType.Noun);
@@ -296,7 +296,7 @@ public class NounHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600EB65 RID: 60261 RVA: 0x0037D4F9 File Offset: 0x0037B6F9
+	// Token: 0x0600BF84 RID: 49028 RVA: 0x00389199 File Offset: 0x00387399
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ContentGenericLayout != null)
@@ -309,7 +309,7 @@ public class NounHandBookView : UiViewBase
 		this.CurSelectConfig = null;
 	}
 
-	// Token: 0x0600EB66 RID: 60262 RVA: 0x0037D538 File Offset: 0x0037B738
+	// Token: 0x0600BF85 RID: 49029 RVA: 0x003891D8 File Offset: 0x003873D8
 	private HandBookNounDynamicData[] BuildContentData()
 	{
 		if (this.CurrentSelectNoun == -1)
@@ -345,7 +345,7 @@ public class NounHandBookView : UiViewBase
 		return list.ToArray();
 	}
 
-	// Token: 0x04006D36 RID: 27958
+	// Token: 0x04006E17 RID: 28183
 	[Nullable(new byte[]
 	{
 		2,
@@ -355,110 +355,110 @@ public class NounHandBookView : UiViewBase
 	})]
 	private DynamicScrollView<NounHandBookItem, HandBootNounDynamicItem, HandBookNounDynamicData> ContentGenericLayout;
 
-	// Token: 0x04006D37 RID: 27959
+	// Token: 0x04006E18 RID: 28184
 	[Nullable(2)]
 	private HandBootNounDynamicItem HandBootNounDynamicItem;
 
-	// Token: 0x04006D38 RID: 27960
+	// Token: 0x04006E19 RID: 28185
 	private int CurrentSelectNoun = -1;
 
-	// Token: 0x04006D39 RID: 27961
+	// Token: 0x04006E1A RID: 28186
 	private int ScrollToIndex = -1;
 
-	// Token: 0x04006D3A RID: 27962
+	// Token: 0x04006E1B RID: 28187
 	protected List<HandBookCommonItemData> HandBookCommonItemDataList;
 
-	// Token: 0x04006D3B RID: 27963
+	// Token: 0x04006E1C RID: 28188
 	private NounHandBook? CurSelectConfig;
 
-	// Token: 0x04006D3C RID: 27964
+	// Token: 0x04006E1D RID: 28189
 	private List<NounHandBookItem> NounHandBookItemList;
 
-	// Token: 0x04006D3D RID: 27965
+	// Token: 0x04006E1E RID: 28190
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04006D3E RID: 27966
+	// Token: 0x04006E1F RID: 28191
 	[Nullable(2)]
 	private UUIExtendToggle CurrentToggle;
 
-	// Token: 0x04006D3F RID: 27967
+	// Token: 0x04006E20 RID: 28192
 	private readonly Action OnClickCloseButton = delegate()
 	{
 		UiManager.Instance.CloseView(EUiViewName.NounHandBookView, null);
 	};
 
-	// Token: 0x020083EF RID: 33775
+	// Token: 0x02007574 RID: 30068
 	[NullableContext(0)]
 	private class ENounHandBookViewDefine
 	{
-		// Token: 0x0402AF28 RID: 175912
+		// Token: 0x0402624C RID: 156236
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AF29 RID: 175913
+		// Token: 0x0402624D RID: 156237
 		public const int CollectCountText = 1;
 
-		// Token: 0x0402AF2A RID: 175914
+		// Token: 0x0402624E RID: 156238
 		public const int Layout = 2;
 
-		// Token: 0x0402AF2B RID: 175915
+		// Token: 0x0402624F RID: 156239
 		public const int NounItem = 3;
 
-		// Token: 0x0402AF2C RID: 175916
+		// Token: 0x04026250 RID: 156240
 		public const int NameText = 4;
 
-		// Token: 0x0402AF2D RID: 175917
+		// Token: 0x04026251 RID: 156241
 		public const int TypeText = 5;
 
-		// Token: 0x0402AF2E RID: 175918
+		// Token: 0x04026252 RID: 156242
 		public const int DateText = 6;
 
-		// Token: 0x0402AF2F RID: 175919
+		// Token: 0x04026253 RID: 156243
 		public const int Texture = 7;
 
-		// Token: 0x0402AF30 RID: 175920
+		// Token: 0x04026254 RID: 156244
 		public const int ProgressText = 8;
 
-		// Token: 0x0402AF31 RID: 175921
+		// Token: 0x04026255 RID: 156245
 		public const int DescriptionText = 9;
 
-		// Token: 0x0402AF32 RID: 175922
+		// Token: 0x04026256 RID: 156246
 		public const int VoiceProgressText = 10;
 
-		// Token: 0x0402AF33 RID: 175923
+		// Token: 0x04026257 RID: 156247
 		public const int VoiceText = 11;
 
-		// Token: 0x0402AF34 RID: 175924
+		// Token: 0x04026258 RID: 156248
 		public const int StopButton = 12;
 
-		// Token: 0x0402AF35 RID: 175925
+		// Token: 0x04026259 RID: 156249
 		public const int PlayButton = 13;
 
-		// Token: 0x0402AF36 RID: 175926
+		// Token: 0x0402625A RID: 156250
 		public const int TextureButton = 14;
 
-		// Token: 0x0402AF37 RID: 175927
+		// Token: 0x0402625B RID: 156251
 		public const int LockText = 15;
 
-		// Token: 0x0402AF38 RID: 175928
+		// Token: 0x0402625C RID: 156252
 		public const int SoundItem = 16;
 
-		// Token: 0x0402AF39 RID: 175929
+		// Token: 0x0402625D RID: 156253
 		public const int PhotoItem = 17;
 
-		// Token: 0x0402AF3A RID: 175930
+		// Token: 0x0402625E RID: 156254
 		public const int WordItem = 18;
 
-		// Token: 0x0402AF3B RID: 175931
+		// Token: 0x0402625F RID: 156255
 		public const int NounTitleItem = 19;
 
-		// Token: 0x0402AF3C RID: 175932
+		// Token: 0x04026260 RID: 156256
 		public const int BigWordItem = 20;
 
-		// Token: 0x0402AF3D RID: 175933
+		// Token: 0x04026261 RID: 156257
 		public const int BigWordText = 21;
 
-		// Token: 0x0402AF3E RID: 175934
+		// Token: 0x04026262 RID: 156258
 		public const int UnlockItem = 22;
 	}
 }

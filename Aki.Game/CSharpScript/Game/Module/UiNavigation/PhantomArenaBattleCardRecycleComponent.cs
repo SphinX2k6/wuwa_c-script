@@ -5,18 +5,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A6 RID: 18854
+	// Token: 0x02003920 RID: 14624
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhantomArenaBattleCardRecycleComponent : LongTimeToTriggerComponent
 	{
-		// Token: 0x06031168 RID: 201064 RVA: 0x00B6408C File Offset: 0x00B6228C
+		// Token: 0x06025C9E RID: 154782 RVA: 0x00A9EFDC File Offset: 0x00A9D1DC
 		public PhantomArenaBattleCardRecycleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x170079DA RID: 31194
-		// (get) Token: 0x06031169 RID: 201065 RVA: 0x00B64098 File Offset: 0x00B62298
+		// Token: 0x17004D42 RID: 19778
+		// (get) Token: 0x06025C9F RID: 154783 RVA: 0x00A9EFE8 File Offset: 0x00A9D1E8
 		protected PhantomArenaBattleProxy Proxy
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603116A RID: 201066 RVA: 0x00B640DA File Offset: 0x00B622DA
+		// Token: 0x06025CA0 RID: 154784 RVA: 0x00A9F02A File Offset: 0x00A9D22A
 		[NullableContext(1)]
 		protected override void ClickButton(string tag)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0603116B RID: 201067 RVA: 0x00B640F4 File Offset: 0x00B622F4
+		// Token: 0x06025CA1 RID: 154785 RVA: 0x00A9F044 File Offset: 0x00A9D244
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x0401A4B0 RID: 107696
+		// Token: 0x04014D22 RID: 85282
 		protected PhantomArenaBattleProxy ProxyInternal;
 	}
 }

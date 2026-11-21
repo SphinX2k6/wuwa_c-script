@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EDF RID: 24287
+	// Token: 0x02004EC6 RID: 20166
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PeriodicityChallengeTitleItem : UiPanelBase
 	{
-		// Token: 0x0603DBB3 RID: 252851 RVA: 0x00EEA3E0 File Offset: 0x00EE85E0
+		// Token: 0x06032B4E RID: 207694 RVA: 0x00E3C094 File Offset: 0x00E3A294
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DBB4 RID: 252852 RVA: 0x00EEA554 File Offset: 0x00EE8754
+		// Token: 0x06032B4F RID: 207695 RVA: 0x00E3C208 File Offset: 0x00E3A408
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<NewSoundDetectRewardItem, INewSoundDetectRewardItemData>(base.GetScrollViewWithScrollbar(6), new Func<NewSoundDetectRewardItem>(this.OnRewardLayoutUpdater), null, false, null);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBB5 RID: 252853 RVA: 0x00EEA5AB File Offset: 0x00EE87AB
+		// Token: 0x06032B50 RID: 207696 RVA: 0x00E3C25F File Offset: 0x00E3A45F
 		[NullableContext(1)]
 		public void RefreshItem(SoundAreaDetectionRecord data)
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.RefreshRoleBadge();
 		}
 
-		// Token: 0x0603DBB6 RID: 252854 RVA: 0x00EEA5E0 File Offset: 0x00EE87E0
+		// Token: 0x06032B51 RID: 207697 RVA: 0x00E3C294 File Offset: 0x00E3A494
 		private void RefreshRoleBadge()
 		{
 			if (this.RoleBadge == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBB7 RID: 252855 RVA: 0x00EEA6B0 File Offset: 0x00EE88B0
+		// Token: 0x06032B52 RID: 207698 RVA: 0x00E3C364 File Offset: 0x00E3A564
 		private void RefreshTitleItem()
 		{
 			DetectionTitlePanel? detectionTitlePanelConfig = AdventureGuideConfig.Instance.GetDetectionTitlePanelConfig(this.Data.DetectionTitlePanel);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(5), detectionTitlePanelConfig.Value.SubTitleText, Array.Empty<object>());
 		}
 
-		// Token: 0x0603DBB8 RID: 252856 RVA: 0x00EEA75C File Offset: 0x00EE895C
+		// Token: 0x06032B53 RID: 207699 RVA: 0x00E3C410 File Offset: 0x00E3A610
 		private void RefreshTimeItem()
 		{
 			SecondaryGuideData? secondaryGuideDataConf = AdventureGuideConfig.Instance.GetSecondaryGuideDataConf(this.Data.Secondary);
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			base.GetText(4).SetText(countDown.CountDownText, true);
 		}
 
-		// Token: 0x0603DBB9 RID: 252857 RVA: 0x00EEA8E8 File Offset: 0x00EE8AE8
+		// Token: 0x06032B54 RID: 207700 RVA: 0x00E3C59C File Offset: 0x00E3A79C
 		private void RefreshReward()
 		{
 			List<INewSoundDetectRewardItemData> list = new List<INewSoundDetectRewardItemData>();
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}, false);
 		}
 
-		// Token: 0x0603DBBA RID: 252858 RVA: 0x00EEA9C4 File Offset: 0x00EE8BC4
+		// Token: 0x06032B55 RID: 207701 RVA: 0x00E3C678 File Offset: 0x00E3A878
 		private bool IsRewardMapEqual(Dictionary<int, int> map1, Dictionary<int, int> map2)
 		{
 			if (map1 == null || map2 == null)
@@ -209,26 +209,26 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return true;
 		}
 
-		// Token: 0x0603DBBB RID: 252859 RVA: 0x00EEAA54 File Offset: 0x00EE8C54
+		// Token: 0x06032B56 RID: 207702 RVA: 0x00E3C708 File Offset: 0x00E3A908
 		[NullableContext(1)]
 		private NewSoundDetectRewardItem OnRewardLayoutUpdater()
 		{
 			return new NewSoundDetectRewardItem();
 		}
 
-		// Token: 0x0603DBBC RID: 252860 RVA: 0x00EEAA5B File Offset: 0x00EE8C5B
+		// Token: 0x06032B57 RID: 207703 RVA: 0x00E3C70F File Offset: 0x00E3A90F
 		private bool IsTimeOutType()
 		{
 			return this.Type == EPeriodicityChallengeType.TowerVariation || this.Type == EPeriodicityChallengeType.ShipTowerPeriodicity || this.Type == EPeriodicityChallengeType.WeeklyRogue || this.Type == EPeriodicityChallengeType.WheelTowerNormal || this.Type == EPeriodicityChallengeType.WheelTowerEndless;
 		}
 
-		// Token: 0x040203ED RID: 132077
+		// Token: 0x0401AEBF RID: 110271
 		private SoundAreaDetectionRecord Data;
 
-		// Token: 0x040203EE RID: 132078
+		// Token: 0x0401AEC0 RID: 110272
 		private EPeriodicityChallengeType Type;
 
-		// Token: 0x040203EF RID: 132079
+		// Token: 0x0401AEC1 RID: 110273
 		[Nullable(new byte[]
 		{
 			2,
@@ -237,10 +237,10 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericScrollViewNew<NewSoundDetectRewardItem, INewSoundDetectRewardItemData> RewardScroll;
 
-		// Token: 0x040203F0 RID: 132080
+		// Token: 0x0401AEC2 RID: 110274
 		private RoleDevelopItemRoleBadge RoleBadge;
 
-		// Token: 0x040203F1 RID: 132081
+		// Token: 0x0401AEC3 RID: 110275
 		private Dictionary<int, int> LastRefreshReward;
 	}
 }

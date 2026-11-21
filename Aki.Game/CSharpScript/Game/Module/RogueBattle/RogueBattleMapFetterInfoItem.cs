@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E67 RID: 20071
+	// Token: 0x02003E30 RID: 15920
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleMapFetterInfoItem : GridProxyAbstract<IRogueBattleMapFetterInfo>
 	{
-		// Token: 0x06033AF8 RID: 211704 RVA: 0x00C1A4FC File Offset: 0x00C186FC
+		// Token: 0x06028963 RID: 166243 RVA: 0x00B63A24 File Offset: 0x00B61C24
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,19 +29,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AF9 RID: 211705 RVA: 0x00C1A582 File Offset: 0x00C18782
+		// Token: 0x06028964 RID: 166244 RVA: 0x00B63AAA File Offset: 0x00B61CAA
 		protected override void OnStart()
 		{
 			this.DescLayout = new GenericLayout<RogueBattleMapFetterInfoDescItem, IRogueBattleMapFetterDescInfo>(base.GetVerticalLayout(3), new Func<RogueBattleMapFetterInfoDescItem>(this.CreateItem), null, false, true);
 		}
 
-		// Token: 0x06033AFA RID: 211706 RVA: 0x00C1A5A5 File Offset: 0x00C187A5
+		// Token: 0x06028965 RID: 166245 RVA: 0x00B63ACD File Offset: 0x00B61CCD
 		protected override void OnBeforeDestroy()
 		{
 			this.DescLayout = null;
 		}
 
-		// Token: 0x06033AFB RID: 211707 RVA: 0x00C1A5B0 File Offset: 0x00C187B0
+		// Token: 0x06028966 RID: 166246 RVA: 0x00B63AD8 File Offset: 0x00B61CD8
 		public override void Refresh(IRogueBattleMapFetterInfo data, bool isSelected, int gridIndex)
 		{
 			RogueResBond? rogueResBond = RogueBattleConfig.Instance.GetRogueResBond(data.ConfigId);
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetText(2).SetColor(FColor.FromHex(this.TxtColor[data.IsReached]));
 		}
 
-		// Token: 0x06033AFC RID: 211708 RVA: 0x00C1A8A8 File Offset: 0x00C18AA8
+		// Token: 0x06028967 RID: 166247 RVA: 0x00B63DD0 File Offset: 0x00B61FD0
 		private RogueBattleMapFetterInfoDescItem CreateItem()
 		{
 			return new RogueBattleMapFetterInfoDescItem();
 		}
 
-		// Token: 0x06033AFD RID: 211709 RVA: 0x00C1A8B0 File Offset: 0x00C18AB0
+		// Token: 0x06028968 RID: 166248 RVA: 0x00B63DD8 File Offset: 0x00B61FD8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B6BA RID: 112314
+		// Token: 0x0401608D RID: 90253
 		[Nullable(new byte[]
 		{
 			2,
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericLayout<RogueBattleMapFetterInfoDescItem, IRogueBattleMapFetterDescInfo> DescLayout;
 
-		// Token: 0x0401B6BB RID: 112315
+		// Token: 0x0401608E RID: 90254
 		public readonly Dictionary<bool, string> BgColor = new Dictionary<bool, string>
 		{
 			{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		};
 
-		// Token: 0x0401B6BC RID: 112316
+		// Token: 0x0401608F RID: 90255
 		public readonly Dictionary<bool, string> TxtColor = new Dictionary<bool, string>
 		{
 			{

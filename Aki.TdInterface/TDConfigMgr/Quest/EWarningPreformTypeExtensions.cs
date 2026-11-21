@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012BA RID: 4794
+	// Token: 0x02001400 RID: 5120
 	public static class EWarningPreformTypeExtensions
 	{
-		// Token: 0x06006BEC RID: 27628 RVA: 0x00103C54 File Offset: 0x00101E54
+		// Token: 0x0600725A RID: 29274 RVA: 0x00111C1C File Offset: 0x0010FE1C
 		public static string ToEnumString(this EWarningPreformType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BED RID: 27629 RVA: 0x00103C8C File Offset: 0x00101E8C
+		// Token: 0x0600725B RID: 29275 RVA: 0x00111C54 File Offset: 0x0010FE54
 		public static EWarningPreformType FromString(string name)
 		{
 			EWarningPreformType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BEE RID: 27630 RVA: 0x00103CB5 File Offset: 0x00101EB5
+		// Token: 0x0600725C RID: 29276 RVA: 0x00111C7D File Offset: 0x0010FE7D
 		public static bool TryFromString(string name, out EWarningPreformType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BEF RID: 27631 RVA: 0x00103CEE File Offset: 0x00101EEE
+		// Token: 0x0600725D RID: 29277 RVA: 0x00111CB6 File Offset: 0x0010FEB6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BF0 RID: 27632 RVA: 0x00103D06 File Offset: 0x00101F06
+		// Token: 0x0600725E RID: 29278 RVA: 0x00111CCE File Offset: 0x0010FECE
 		public static EWarningPreformType[] GetValues()
 		{
 			return new EWarningPreformType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BF1 RID: 27633 RVA: 0x00103D12 File Offset: 0x00101F12
+		// Token: 0x0600725F RID: 29279 RVA: 0x00111CDA File Offset: 0x0010FEDA
 		public static string[] GetNames()
 		{
 			return new string[]

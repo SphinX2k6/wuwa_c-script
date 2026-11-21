@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View
 {
-	// Token: 0x02004B92 RID: 19346
+	// Token: 0x02003B3C RID: 15164
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PrepareCountDownItem : CommonMarkItem
 	{
-		// Token: 0x0603221A RID: 205338 RVA: 0x00BA551E File Offset: 0x00BA371E
+		// Token: 0x06026FAA RID: 159658 RVA: 0x00AE966A File Offset: 0x00AE786A
 		public PrepareCountDownItem(FVectorDouble targetPosition) : base(targetPosition, null)
 		{
 		}
 
-		// Token: 0x0603221B RID: 205339 RVA: 0x00BA554C File Offset: 0x00BA374C
+		// Token: 0x06026FAB RID: 159659 RVA: 0x00AE9698 File Offset: 0x00AE7898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603221C RID: 205340 RVA: 0x00BA5594 File Offset: 0x00BA3794
+		// Token: 0x06026FAC RID: 159660 RVA: 0x00AE96E0 File Offset: 0x00AE78E0
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603221D RID: 205341 RVA: 0x00BA55A8 File Offset: 0x00BA37A8
+		// Token: 0x06026FAD RID: 159661 RVA: 0x00AE96F4 File Offset: 0x00AE78F4
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PrepareCountDownItem.<OnShowAsyncImplementImplement>d__9 <OnShowAsyncImplementImplement>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603221E RID: 205342 RVA: 0x00BA55EC File Offset: 0x00BA37EC
+		// Token: 0x06026FAE RID: 159662 RVA: 0x00AE9738 File Offset: 0x00AE7938
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PrepareCountDownItem.<OnHideAsyncImplementImplement>d__10 <OnHideAsyncImplementImplement>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603221F RID: 205343 RVA: 0x00BA5630 File Offset: 0x00BA3830
+		// Token: 0x06026FAF RID: 159663 RVA: 0x00AE977C File Offset: 0x00AE797C
 		public override void OnTick(float delta)
 		{
 			SlidingBlocksGameData gameData = SlidingBlocksModel.Instance.GameData;
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			base.OnTick(delta);
 		}
 
-		// Token: 0x06032220 RID: 205344 RVA: 0x00BA5769 File Offset: 0x00BA3969
+		// Token: 0x06026FB0 RID: 159664 RVA: 0x00AE98B5 File Offset: 0x00AE7AB5
 		protected override bool ClampToEllipse(Vector2D vector, bool inFront)
 		{
 			return true;
 		}
 
-		// Token: 0x06032221 RID: 205345 RVA: 0x00BA576C File Offset: 0x00BA396C
+		// Token: 0x06026FB1 RID: 159665 RVA: 0x00AE98B8 File Offset: 0x00AE7AB8
 		private void GetTargetCoord(Tetromino tetromino, Vector2D @out)
 		{
 			Mino geometricCenterMino = tetromino.GeometricCenterMino;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x06032222 RID: 205346 RVA: 0x00BA588C File Offset: 0x00BA3A8C
+		// Token: 0x06026FB2 RID: 159666 RVA: 0x00AE99D8 File Offset: 0x00AE7BD8
 		private void SetShowOrHide(bool bShow)
 		{
 			if (bShow)
@@ -152,27 +152,27 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View
 			}
 		}
 
-		// Token: 0x0401AB4E RID: 109390
+		// Token: 0x040154A2 RID: 87202
 		private readonly Vector TargetWorldLocation = Vector.Create();
 
-		// Token: 0x0401AB4F RID: 109391
+		// Token: 0x040154A3 RID: 87203
 		private readonly Vector2D TargetCoord = Vector2D.Create();
 
-		// Token: 0x0401AB50 RID: 109392
+		// Token: 0x040154A4 RID: 87204
 		private readonly Vector2D TempCoord = Vector2D.Create();
 
-		// Token: 0x0401AB51 RID: 109393
+		// Token: 0x040154A5 RID: 87205
 		private double LastSecond;
 
-		// Token: 0x0401AB52 RID: 109394
+		// Token: 0x040154A6 RID: 87206
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200AD9F RID: 44447
+		// Token: 0x020097BE RID: 38846
 		[NullableContext(0)]
 		private enum EViewComponent
 		{
-			// Token: 0x04034BB6 RID: 215990
+			// Token: 0x0402F55D RID: 193885
 			CountDownText
 		}
 	}

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 
-// Token: 0x02000F72 RID: 3954
+// Token: 0x02000427 RID: 1063
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSceneSlotData : FurnitureSlotDataBase
 {
-	// Token: 0x0600653C RID: 25916 RVA: 0x001422DE File Offset: 0x001404DE
+	// Token: 0x060038D4 RID: 14548 RVA: 0x0014AB7A File Offset: 0x00148D7A
 	public override EFurnitureSlotType GetSlotType()
 	{
 		return EFurnitureSlotType.SceneSlot;
 	}
 
-	// Token: 0x0600653D RID: 25917 RVA: 0x001422E4 File Offset: 0x001404E4
+	// Token: 0x060038D5 RID: 14549 RVA: 0x0014AB80 File Offset: 0x00148D80
 	public void SetSceneSlotData(int mapId, int slotEntityId)
 	{
 		this.MapId = mapId;
@@ -28,7 +28,7 @@ public class FurnitureSceneSlotData : FurnitureSlotDataBase
 		this.ExcludedFurnitureIds = (sceneSlotEntitySlotInfo.ExcludedFurnitureIds ?? new List<int>());
 	}
 
-	// Token: 0x0600653E RID: 25918 RVA: 0x00142334 File Offset: 0x00140534
+	// Token: 0x060038D6 RID: 14550 RVA: 0x0014ABD0 File Offset: 0x00148DD0
 	public void DeepCopy(FurnitureSceneSlotData other)
 	{
 		base.DeepCopy(other);
@@ -44,7 +44,7 @@ public class FurnitureSceneSlotData : FurnitureSlotDataBase
 		this.MapId = other.MapId;
 	}
 
-	// Token: 0x0600653F RID: 25919 RVA: 0x001423A8 File Offset: 0x001405A8
+	// Token: 0x060038D7 RID: 14551 RVA: 0x0014AC44 File Offset: 0x00148E44
 	public bool Compare(FurnitureSceneSlotData other)
 	{
 		if (!base.Compare(other))
@@ -73,7 +73,7 @@ public class FurnitureSceneSlotData : FurnitureSlotDataBase
 		return true;
 	}
 
-	// Token: 0x06006540 RID: 25920 RVA: 0x00142434 File Offset: 0x00140634
+	// Token: 0x060038D8 RID: 14552 RVA: 0x0014ACD0 File Offset: 0x00148ED0
 	public IFurnitureSceneSlotDiff GetSceneSlotDiff(FurnitureSceneSlotData other)
 	{
 		int rootFurnitureToUnPlace = 0;
@@ -140,7 +140,7 @@ public class FurnitureSceneSlotData : FurnitureSlotDataBase
 		};
 	}
 
-	// Token: 0x06006541 RID: 25921 RVA: 0x00142584 File Offset: 0x00140784
+	// Token: 0x060038D9 RID: 14553 RVA: 0x0014AE20 File Offset: 0x00149020
 	public override void PlaceFurniture(int furnitureConfigId)
 	{
 		this.PlacedFurnitureConfigId = furnitureConfigId;
@@ -159,49 +159,49 @@ public class FurnitureSceneSlotData : FurnitureSlotDataBase
 		}
 	}
 
-	// Token: 0x06006542 RID: 25922 RVA: 0x001425FC File Offset: 0x001407FC
+	// Token: 0x060038DA RID: 14554 RVA: 0x0014AE98 File Offset: 0x00149098
 	public override void UnPlaceFurniture()
 	{
 		this.PlacedFurnitureConfigId = 0;
 		this.ClearSubSlotDataList();
 	}
 
-	// Token: 0x06006543 RID: 25923 RVA: 0x0014260B File Offset: 0x0014080B
+	// Token: 0x060038DB RID: 14555 RVA: 0x0014AEA7 File Offset: 0x001490A7
 	public void ClearSubSlotDataList()
 	{
 		this.SubSlotDataList.Clear();
 	}
 
-	// Token: 0x06006544 RID: 25924 RVA: 0x00142618 File Offset: 0x00140818
+	// Token: 0x060038DC RID: 14556 RVA: 0x0014AEB4 File Offset: 0x001490B4
 	public FurnitureSubSlotData GetSubSlotData(int index)
 	{
 		return this.SubSlotDataList[index];
 	}
 
-	// Token: 0x06006545 RID: 25925 RVA: 0x00142626 File Offset: 0x00140826
+	// Token: 0x060038DD RID: 14557 RVA: 0x0014AEC2 File Offset: 0x001490C2
 	public int GetSubSlotDataListLength()
 	{
 		return this.SubSlotDataList.Count;
 	}
 
-	// Token: 0x06006546 RID: 25926 RVA: 0x00142633 File Offset: 0x00140833
+	// Token: 0x060038DE RID: 14558 RVA: 0x0014AECF File Offset: 0x001490CF
 	public List<FurnitureSubSlotData> GetSubSlotDataList()
 	{
 		return this.SubSlotDataList;
 	}
 
-	// Token: 0x06006547 RID: 25927 RVA: 0x0014263B File Offset: 0x0014083B
+	// Token: 0x060038DF RID: 14559 RVA: 0x0014AED7 File Offset: 0x001490D7
 	public int GetSlotEntityId()
 	{
 		return this.SlotEntityId;
 	}
 
-	// Token: 0x04002E03 RID: 11779
+	// Token: 0x04002E9C RID: 11932
 	protected int SlotEntityId;
 
-	// Token: 0x04002E04 RID: 11780
+	// Token: 0x04002E9D RID: 11933
 	protected List<FurnitureSubSlotData> SubSlotDataList = new List<FurnitureSubSlotData>();
 
-	// Token: 0x04002E05 RID: 11781
+	// Token: 0x04002E9E RID: 11934
 	protected int MapId;
 }

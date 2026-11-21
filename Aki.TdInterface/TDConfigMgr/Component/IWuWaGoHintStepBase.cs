@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000801 RID: 2049
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008A4 RID: 2212
 	public class IWuWaGoHintStepBase
 	{
-		// Token: 0x06002C7F RID: 11391 RVA: 0x00073860 File Offset: 0x00071A60
+		// Token: 0x06002FAF RID: 12207 RVA: 0x0007ABC4 File Offset: 0x00078DC4
 		private IWuWaGoHintStepBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002C80 RID: 11392 RVA: 0x00073898 File Offset: 0x00071A98
+		// Token: 0x06002FB0 RID: 12208 RVA: 0x0007ABFC File Offset: 0x00078DFC
 		public static IWuWaGoHintStepBase Create([Nullable(2)] IWuWaGoHintStepBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C81 RID: 11393 RVA: 0x000738AB File Offset: 0x00071AAB
+		// Token: 0x06002FB1 RID: 12209 RVA: 0x0007AC0F File Offset: 0x00078E0F
 		public static IWuWaGoHintStepBase CreateFromSetValue([Nullable(2)] IWuWaGoHintStepBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002C82 RID: 11394 RVA: 0x000738BE File Offset: 0x00071ABE
+		// Token: 0x06002FB2 RID: 12210 RVA: 0x0007AC22 File Offset: 0x00078E22
 		public IWuWaGoHintStepBase_SetValue ToSetValue()
 		{
 			return new IWuWaGoHintStepBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BA1 RID: 2977
-		// (get) Token: 0x06002C83 RID: 11395 RVA: 0x000738D1 File Offset: 0x00071AD1
-		// (set) Token: 0x06002C84 RID: 11396 RVA: 0x000738FC File Offset: 0x00071AFC
+		// Token: 0x17000C64 RID: 3172
+		// (get) Token: 0x06002FB3 RID: 12211 RVA: 0x0007AC35 File Offset: 0x00078E35
+		// (set) Token: 0x06002FB4 RID: 12212 RVA: 0x0007AC60 File Offset: 0x00078E60
 		public virtual EWuWaGoHintStepType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D77 RID: 7543
+		// Token: 0x04001F83 RID: 8067
 		[Nullable(2)]
 		protected IWuWaGoHintStepBase FbInstance;
 
-		// Token: 0x04001D78 RID: 7544
+		// Token: 0x04001F84 RID: 8068
 		[Nullable(2)]
 		protected IWuWaGoHintStepBase_SetValue PocoInterface;
 	}

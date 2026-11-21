@@ -16,14 +16,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003058 RID: 12376
+// Token: 0x020025AE RID: 9646
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterDriveVehicleComponent : EntityComponent
 {
-	// Token: 0x17002436 RID: 9270
-	// (get) Token: 0x0601A4FC RID: 107772 RVA: 0x006F9394 File Offset: 0x006F7594
-	// (set) Token: 0x0601A4FD RID: 107773 RVA: 0x006F939C File Offset: 0x006F759C
+	// Token: 0x17002556 RID: 9558
+	// (get) Token: 0x06017E9D RID: 97949 RVA: 0x007204B4 File Offset: 0x0071E6B4
+	// (set) Token: 0x06017E9E RID: 97950 RVA: 0x007204BC File Offset: 0x0071E6BC
 	[Nullable(2)]
 	protected VehiclePassengerInfo VehicleInfo
 	{
@@ -56,8 +56,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002437 RID: 9271
-	// (get) Token: 0x0601A4FE RID: 107774 RVA: 0x006F9416 File Offset: 0x006F7616
+	// Token: 0x17002557 RID: 9559
+	// (get) Token: 0x06017E9F RID: 97951 RVA: 0x00720536 File Offset: 0x0071E736
 	public bool IsDriver
 	{
 		get
@@ -67,8 +67,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002438 RID: 9272
-	// (get) Token: 0x0601A4FF RID: 107775 RVA: 0x006F9429 File Offset: 0x006F7629
+	// Token: 0x17002558 RID: 9560
+	// (get) Token: 0x06017EA0 RID: 97952 RVA: 0x00720549 File Offset: 0x0071E749
 	public bool IsOnVehicle
 	{
 		get
@@ -77,8 +77,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002439 RID: 9273
-	// (get) Token: 0x0601A500 RID: 107776 RVA: 0x006F9434 File Offset: 0x006F7634
+	// Token: 0x17002559 RID: 9561
+	// (get) Token: 0x06017EA1 RID: 97953 RVA: 0x00720554 File Offset: 0x0071E754
 	public bool IsOnVehicleWithOther
 	{
 		get
@@ -99,8 +99,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243A RID: 9274
-	// (get) Token: 0x0601A501 RID: 107777 RVA: 0x006F9468 File Offset: 0x006F7668
+	// Token: 0x1700255A RID: 9562
+	// (get) Token: 0x06017EA2 RID: 97954 RVA: 0x00720588 File Offset: 0x0071E788
 	public EVehicleType? VehicleType
 	{
 		get
@@ -114,8 +114,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243B RID: 9275
-	// (get) Token: 0x0601A502 RID: 107778 RVA: 0x006F9494 File Offset: 0x006F7694
+	// Token: 0x1700255B RID: 9563
+	// (get) Token: 0x06017EA3 RID: 97955 RVA: 0x007205B4 File Offset: 0x0071E7B4
 	public EVehicleTypeInt VehicleTypeInt
 	{
 		get
@@ -125,8 +125,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243C RID: 9276
-	// (get) Token: 0x0601A503 RID: 107779 RVA: 0x006F94C5 File Offset: 0x006F76C5
+	// Token: 0x1700255C RID: 9564
+	// (get) Token: 0x06017EA4 RID: 97956 RVA: 0x007205E5 File Offset: 0x0071E7E5
 	[Nullable(2)]
 	public Entity VehicleEntity
 	{
@@ -142,8 +142,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243D RID: 9277
-	// (get) Token: 0x0601A504 RID: 107780 RVA: 0x006F94D8 File Offset: 0x006F76D8
+	// Token: 0x1700255D RID: 9565
+	// (get) Token: 0x06017EA5 RID: 97957 RVA: 0x007205F8 File Offset: 0x0071E7F8
 	public int Seat
 	{
 		get
@@ -157,8 +157,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243E RID: 9278
-	// (get) Token: 0x0601A505 RID: 107781 RVA: 0x006F94EC File Offset: 0x006F76EC
+	// Token: 0x1700255E RID: 9566
+	// (get) Token: 0x06017EA6 RID: 97958 RVA: 0x0072060C File Offset: 0x0071E80C
 	public bool CanLeave
 	{
 		get
@@ -179,8 +179,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700243F RID: 9279
-	// (get) Token: 0x0601A506 RID: 107782 RVA: 0x006F9534 File Offset: 0x006F7734
+	// Token: 0x1700255F RID: 9567
+	// (get) Token: 0x06017EA7 RID: 97959 RVA: 0x00720654 File Offset: 0x0071E854
 	public bool CanSprint
 	{
 		get
@@ -201,8 +201,8 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002440 RID: 9280
-	// (get) Token: 0x0601A507 RID: 107783 RVA: 0x006F957C File Offset: 0x006F777C
+	// Token: 0x17002560 RID: 9568
+	// (get) Token: 0x06017EA8 RID: 97960 RVA: 0x0072069C File Offset: 0x0071E89C
 	public bool CanRiderSharing
 	{
 		get
@@ -223,20 +223,20 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A508 RID: 107784 RVA: 0x006F95C4 File Offset: 0x006F77C4
+	// Token: 0x06017EA9 RID: 97961 RVA: 0x007206E4 File Offset: 0x0071E8E4
 	public bool IsVehicleType(EVehicleType vehicleType)
 	{
 		VehiclePassengerInfo vehicleInfo = this.VehicleInfo;
 		return vehicleInfo != null && vehicleInfo.VehicleType == vehicleType;
 	}
 
-	// Token: 0x0601A509 RID: 107785 RVA: 0x006F95DA File Offset: 0x006F77DA
+	// Token: 0x06017EAA RID: 97962 RVA: 0x007206FA File Offset: 0x0071E8FA
 	public bool IsEnableLongPressLeave()
 	{
 		return this.IsVehicleType(EVehicleType.Gongduola) || this.IsVehicleType(EVehicleType.AutoMoveGongduola);
 	}
 
-	// Token: 0x0601A50A RID: 107786 RVA: 0x006F95F4 File Offset: 0x006F77F4
+	// Token: 0x06017EAB RID: 97963 RVA: 0x00720714 File Offset: 0x0071E914
 	protected override bool OnStart()
 	{
 		this.DisableKey = new int?(base.Disable("VehicleInfo"));
@@ -260,13 +260,13 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A50B RID: 107787 RVA: 0x006F9772 File Offset: 0x006F7972
+	// Token: 0x06017EAC RID: 97964 RVA: 0x00720892 File Offset: 0x0071EA92
 	protected override void OnPostActivate()
 	{
 		VehicleController.Instance.OnCharacterEnable(base.Entity);
 	}
 
-	// Token: 0x0601A50C RID: 107788 RVA: 0x006F9784 File Offset: 0x006F7984
+	// Token: 0x06017EAD RID: 97965 RVA: 0x007208A4 File Offset: 0x0071EAA4
 	protected override bool OnEnd()
 	{
 		this.MotorHandIkConfigArray = null;
@@ -288,7 +288,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A50D RID: 107789 RVA: 0x006F9874 File Offset: 0x006F7A74
+	// Token: 0x06017EAE RID: 97966 RVA: 0x00720994 File Offset: 0x0071EB94
 	protected override void OnTick(float delta)
 	{
 		if (this.VehicleInfo == null)
@@ -357,19 +357,19 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A50E RID: 107790 RVA: 0x006F99A8 File Offset: 0x006F7BA8
+	// Token: 0x06017EAF RID: 97967 RVA: 0x00720AC8 File Offset: 0x0071ECC8
 	protected void OnEnterVehicleWrapper(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.OnEnterVehicle(info);
 	}
 
-	// Token: 0x0601A50F RID: 107791 RVA: 0x006F99B1 File Offset: 0x006F7BB1
+	// Token: 0x06017EB0 RID: 97968 RVA: 0x00720AD1 File Offset: 0x0071ECD1
 	protected void OnLeaveVehicleWrapper(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		this.OnLeaveVehicle(info).Forget();
 	}
 
-	// Token: 0x0601A510 RID: 107792 RVA: 0x006F99C0 File Offset: 0x006F7BC0
+	// Token: 0x06017EB1 RID: 97969 RVA: 0x00720AE0 File Offset: 0x0071ECE0
 	[NullableContext(2)]
 	protected void OnRoleGameplayAnimInstChanged(UAnimInstance animInst)
 	{
@@ -386,7 +386,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A511 RID: 107793 RVA: 0x006F9A0C File Offset: 0x006F7C0C
+	// Token: 0x06017EB2 RID: 97970 RVA: 0x00720B2C File Offset: 0x0071ED2C
 	protected void OnEnterVehicle(VehiclePassengerInfo info)
 	{
 		this.VehicleInfo = info;
@@ -429,7 +429,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		this.MotorHandIkConfigArray = null;
 	}
 
-	// Token: 0x0601A512 RID: 107794 RVA: 0x006F9B78 File Offset: 0x006F7D78
+	// Token: 0x06017EB3 RID: 97971 RVA: 0x00720C98 File Offset: 0x0071EE98
 	protected UniTask OnLeaveVehicle(VehiclePassengerInfo info)
 	{
 		CharacterDriveVehicleComponent.<OnLeaveVehicle>d__65 <OnLeaveVehicle>d__;
@@ -441,7 +441,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return <OnLeaveVehicle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601A513 RID: 107795 RVA: 0x006F9BC4 File Offset: 0x006F7DC4
+	// Token: 0x06017EB4 RID: 97972 RVA: 0x00720CE4 File Offset: 0x0071EEE4
 	protected virtual void EnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		this.PreEnterVehiclePerform(info);
@@ -463,7 +463,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		EventSystem.Instance.Emit<VehiclePassengerInfo>(EEventName.OnAfterAttachVehicle, info);
 	}
 
-	// Token: 0x0601A514 RID: 107796 RVA: 0x006F9C60 File Offset: 0x006F7E60
+	// Token: 0x06017EB5 RID: 97973 RVA: 0x00720D80 File Offset: 0x0071EF80
 	protected virtual void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		if (this.WaitPreEnterEffectHandle != null)
@@ -503,7 +503,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		this.LeavePerformEndPromise.SetResult(true);
 	}
 
-	// Token: 0x0601A515 RID: 107797 RVA: 0x006F9D44 File Offset: 0x006F7F44
+	// Token: 0x06017EB6 RID: 97974 RVA: 0x00720E64 File Offset: 0x0071F064
 	private unsafe void OnCharMovementModeChanged(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		if (base.Entity.HasDisableKey(EEntityDisableKey.GoDown))
@@ -536,7 +536,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 	}
 
-	// Token: 0x0601A516 RID: 107798 RVA: 0x006F9E30 File Offset: 0x006F8030
+	// Token: 0x06017EB7 RID: 97975 RVA: 0x00720F50 File Offset: 0x0071F150
 	protected virtual void ChangeCurrentState()
 	{
 		this.ActorComp.ClearInput(false, true);
@@ -570,7 +570,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		this.IgnoreVehicleCollision(true);
 	}
 
-	// Token: 0x0601A517 RID: 107799 RVA: 0x006F9F20 File Offset: 0x006F8120
+	// Token: 0x06017EB8 RID: 97976 RVA: 0x00721040 File Offset: 0x0071F240
 	protected void IgnoreVehicleCollision(bool ignore)
 	{
 		if (this.VehicleInfo == null)
@@ -608,7 +608,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		platformActor.IgnoreActorWhenMoving(this.ActorComp.Actor, ignore, true);
 	}
 
-	// Token: 0x0601A518 RID: 107800 RVA: 0x006F9FF8 File Offset: 0x006F81F8
+	// Token: 0x06017EB9 RID: 97977 RVA: 0x00721118 File Offset: 0x0071F318
 	protected virtual void RestoreState()
 	{
 		if (this.ShouldDisableMoveSync())
@@ -629,17 +629,17 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		this.IsLeavingVehicle = false;
 	}
 
-	// Token: 0x0601A519 RID: 107801 RVA: 0x006FA080 File Offset: 0x006F8280
+	// Token: 0x06017EBA RID: 97978 RVA: 0x007211A0 File Offset: 0x0071F3A0
 	protected virtual void ListenAutoLeave()
 	{
 	}
 
-	// Token: 0x0601A51A RID: 107802 RVA: 0x006FA082 File Offset: 0x006F8282
+	// Token: 0x06017EBB RID: 97979 RVA: 0x007211A2 File Offset: 0x0071F3A2
 	protected virtual void RemoveListenAutoLeave()
 	{
 	}
 
-	// Token: 0x0601A51B RID: 107803 RVA: 0x006FA084 File Offset: 0x006F8284
+	// Token: 0x06017EBC RID: 97980 RVA: 0x007211A4 File Offset: 0x0071F3A4
 	protected virtual void RegisterExtraFollow(VehiclePassengerInfo info)
 	{
 		if (this.VehicleType.GetValueOrDefault() == EVehicleType.Motorcycle)
@@ -711,7 +711,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A51C RID: 107804 RVA: 0x006FA1CC File Offset: 0x006F83CC
+	// Token: 0x06017EBD RID: 97981 RVA: 0x007212EC File Offset: 0x0071F4EC
 	protected virtual void UnregisterExtraFollow(VehiclePassengerInfo info)
 	{
 		if (this.VehicleType.GetValueOrDefault() == EVehicleType.Motorcycle)
@@ -778,7 +778,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A51D RID: 107805 RVA: 0x006FA2D6 File Offset: 0x006F84D6
+	// Token: 0x06017EBE RID: 97982 RVA: 0x007213F6 File Offset: 0x0071F5F6
 	protected void SetWaterEffect(bool enable)
 	{
 		if (this.HasWaterEffect == enable)
@@ -794,19 +794,19 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		charRenderingComponent.SetNoWater(!enable);
 	}
 
-	// Token: 0x0601A51E RID: 107806 RVA: 0x006FA307 File Offset: 0x006F8507
+	// Token: 0x06017EBF RID: 97983 RVA: 0x00721427 File Offset: 0x0071F627
 	protected virtual void PreEnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		this.PreEnterEffect(info);
 	}
 
-	// Token: 0x0601A51F RID: 107807 RVA: 0x006FA310 File Offset: 0x006F8510
+	// Token: 0x06017EC0 RID: 97984 RVA: 0x00721430 File Offset: 0x0071F630
 	protected virtual void PostEnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		this.PostEnterEffect(info);
 	}
 
-	// Token: 0x0601A520 RID: 107808 RVA: 0x006FA31C File Offset: 0x006F851C
+	// Token: 0x06017EC1 RID: 97985 RVA: 0x0072143C File Offset: 0x0071F63C
 	protected void PreEnterEffect(VehiclePassengerInfo info)
 	{
 		this.PreEnterEffectTime = 0f;
@@ -857,7 +857,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A521 RID: 107809 RVA: 0x006FA440 File Offset: 0x006F8640
+	// Token: 0x06017EC2 RID: 97986 RVA: 0x00721560 File Offset: 0x0071F760
 	protected void PostEnterEffect(VehiclePassengerInfo info)
 	{
 		Entity vehicleEntity = info.VehicleEntity;
@@ -906,7 +906,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A522 RID: 107810 RVA: 0x006FA53C File Offset: 0x006F873C
+	// Token: 0x06017EC3 RID: 97987 RVA: 0x0072165C File Offset: 0x0071F85C
 	public unsafe void AttachAndSetPassengerTransform()
 	{
 		if (this.VehicleInfo == null)
@@ -1072,7 +1072,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 5));
 	}
 
-	// Token: 0x0601A523 RID: 107811 RVA: 0x006FAA54 File Offset: 0x006F8C54
+	// Token: 0x06017EC4 RID: 97988 RVA: 0x00721B74 File Offset: 0x0071FD74
 	protected unsafe bool SetRelativeTransform(USceneComponent parent, FName seatSocketName, bool checkAndLog = false)
 	{
 		this.GetSitPoseRelativeTransform(parent, this.TmpTrans);
@@ -1115,7 +1115,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601A524 RID: 107812 RVA: 0x006FABA4 File Offset: 0x006F8DA4
+	// Token: 0x06017EC5 RID: 97989 RVA: 0x00721CC4 File Offset: 0x0071FEC4
 	protected unsafe void GetSitPoseRelativeTransform(USceneComponent parent, Transform outTrans)
 	{
 		AActor aactor = parent.GetOwner();
@@ -1176,7 +1176,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		outTrans.GetScale3D().Set((double)(1f / scale3D.X), (double)(1f / scale3D.Y), (double)(1f / scale3D.Z));
 	}
 
-	// Token: 0x0601A525 RID: 107813 RVA: 0x006FAE38 File Offset: 0x006F9038
+	// Token: 0x06017EC6 RID: 97990 RVA: 0x00721F58 File Offset: 0x00720158
 	public unsafe bool MotorCheckAndResetRelativeTransform()
 	{
 		BaseMoveComponent moveComp = this.MoveComp;
@@ -1242,7 +1242,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return this.SetRelativeTransform(uskeletalMeshComponent2, seatSocketName, true);
 	}
 
-	// Token: 0x0601A526 RID: 107814 RVA: 0x006FAFE8 File Offset: 0x006F91E8
+	// Token: 0x06017EC7 RID: 97991 RVA: 0x00722108 File Offset: 0x00720308
 	public bool GetSeatTransform(Transform outTrans)
 	{
 		if (this.VehicleInfo == null)
@@ -1257,7 +1257,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A527 RID: 107815 RVA: 0x006FB088 File Offset: 0x006F9288
+	// Token: 0x06017EC8 RID: 97992 RVA: 0x007221A8 File Offset: 0x007203A8
 	public ECharMoveState GetMoveStateFromVehicleType(EVehicleType? type)
 	{
 		if (type != null)
@@ -1275,14 +1275,14 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return ECharMoveState.Other;
 	}
 
-	// Token: 0x0601A528 RID: 107816 RVA: 0x006FB0B8 File Offset: 0x006F92B8
+	// Token: 0x06017EC9 RID: 97993 RVA: 0x007221D8 File Offset: 0x007203D8
 	protected bool NeedLeaveVehicleWhenTeleport()
 	{
 		VehiclePassengerInfo vehicleInfo = this.VehicleInfo;
 		return (vehicleInfo != null && vehicleInfo.ExitType == ELeaveVehicleType.DelayExit) || (this.VehicleType.GetValueOrDefault() == EVehicleType.NpcVehicle || this.VehicleType.GetValueOrDefault() == EVehicleType.Thunderbird || this.VehicleType.GetValueOrDefault() == EVehicleType.WoodenOxenAndFlowingHorses);
 	}
 
-	// Token: 0x0601A529 RID: 107817 RVA: 0x006FB115 File Offset: 0x006F9315
+	// Token: 0x06017ECA RID: 97994 RVA: 0x00722235 File Offset: 0x00720435
 	public void TryLeaveVehicleWhenTeleport()
 	{
 		if (!this.NeedLeaveVehicleWhenTeleport())
@@ -1298,13 +1298,13 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		baseVehiclePerformComponent.Leave(base.Entity, ELeaveVehicleType.StandUp, false);
 	}
 
-	// Token: 0x0601A52A RID: 107818 RVA: 0x006FB149 File Offset: 0x006F9349
+	// Token: 0x06017ECB RID: 97995 RVA: 0x00722269 File Offset: 0x00720469
 	protected void OnTeleportChangleLocation()
 	{
 		this.TryLeaveVehicleWhenTeleport();
 	}
 
-	// Token: 0x0601A52B RID: 107819 RVA: 0x006FB154 File Offset: 0x006F9354
+	// Token: 0x06017ECC RID: 97996 RVA: 0x00722274 File Offset: 0x00720474
 	protected unsafe void OnMoveRide(float delta)
 	{
 		if (this.MoveComp != null)
@@ -1371,7 +1371,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A52C RID: 107820 RVA: 0x006FB2F3 File Offset: 0x006F94F3
+	// Token: 0x06017ECD RID: 97997 RVA: 0x00722413 File Offset: 0x00720613
 	protected void ReplaceExploreSkillForGongduola()
 	{
 		if (CharacterExploreModel.Instance.CheckNeedChangeSkill(1009, EExploreSkillLayer.LevelEvent))
@@ -1381,7 +1381,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		CharacterExploreModel.Instance.SetExploreSkillId(1009, EExploreSkillLayer.LevelEvent, "贡多拉拍照");
 	}
 
-	// Token: 0x0601A52D RID: 107821 RVA: 0x006FB330 File Offset: 0x006F9530
+	// Token: 0x06017ECE RID: 97998 RVA: 0x00722450 File Offset: 0x00720650
 	protected void ResetExploreSkillForGongduola()
 	{
 		CharacterExploreModel.Instance.ResetExplodeSkillId(EExploreSkillLayer.LevelEvent, "ResetExploreSkillForGongduola");
@@ -1389,7 +1389,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		RouletteController.Instance.ExploreSkillSetRequest(topLayerExplodeSkillId, null, true);
 	}
 
-	// Token: 0x0601A52E RID: 107822 RVA: 0x006FB368 File Offset: 0x006F9568
+	// Token: 0x06017ECF RID: 97999 RVA: 0x00722488 File Offset: 0x00720688
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1440,7 +1440,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return new ValueTuple<IkTarget, IkTarget>(this.CacheHandIk[0], this.CacheHandIk[1]);
 	}
 
-	// Token: 0x0601A52F RID: 107823 RVA: 0x006FB51A File Offset: 0x006F971A
+	// Token: 0x06017ED0 RID: 98000 RVA: 0x0072263A File Offset: 0x0072083A
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1456,7 +1456,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return new ValueTuple<FIKTarget, FIKTarget>(this.CacheHandIk[0].ToUeIkTarget(), this.CacheHandIk[1].ToUeIkTarget());
 	}
 
-	// Token: 0x0601A530 RID: 107824 RVA: 0x006FB54C File Offset: 0x006F974C
+	// Token: 0x06017ED1 RID: 98001 RVA: 0x0072266C File Offset: 0x0072086C
 	protected void TryDisableUeMovementComp()
 	{
 		if (this.UeMovementComp == null)
@@ -1476,7 +1476,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A531 RID: 107825 RVA: 0x006FB5B8 File Offset: 0x006F97B8
+	// Token: 0x06017ED2 RID: 98002 RVA: 0x007226D8 File Offset: 0x007208D8
 	protected void TryEnableUeMovementComp()
 	{
 		if (this.UeMovementComp == null)
@@ -1492,7 +1492,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		this.EnableUeMovementComp(true, "OnLeaveVehicle");
 	}
 
-	// Token: 0x0601A532 RID: 107826 RVA: 0x006FB608 File Offset: 0x006F9808
+	// Token: 0x06017ED3 RID: 98003 RVA: 0x00722728 File Offset: 0x00720928
 	protected unsafe void EnableUeMovementComp(bool enable, string reason = "")
 	{
 		if (this.UeMovementComp == null)
@@ -1538,13 +1538,13 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A533 RID: 107827 RVA: 0x006FB784 File Offset: 0x006F9984
+	// Token: 0x06017ED4 RID: 98004 RVA: 0x007228A4 File Offset: 0x00720AA4
 	private void OnEnableUeMovementTagChanged(int tagId, bool tagExist)
 	{
 		this.EnableUeMovementComp(tagExist, "OnEnableUeMovementTagChanged");
 	}
 
-	// Token: 0x0601A534 RID: 107828 RVA: 0x006FB794 File Offset: 0x006F9994
+	// Token: 0x06017ED5 RID: 98005 RVA: 0x007228B4 File Offset: 0x00720AB4
 	protected bool ShouldMoveSweep()
 	{
 		EVehicleType? vehicleType = this.VehicleType;
@@ -1562,7 +1562,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A535 RID: 107829 RVA: 0x006FB7E0 File Offset: 0x006F99E0
+	// Token: 0x06017ED6 RID: 98006 RVA: 0x00722900 File Offset: 0x00720B00
 	protected bool ShouldDisableMoveSync()
 	{
 		Entity vehicleEntity = this.VehicleEntity;
@@ -1579,7 +1579,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return flag || this.VehicleType.GetValueOrDefault() == EVehicleType.Thunderbird;
 	}
 
-	// Token: 0x0601A536 RID: 107830 RVA: 0x006FB838 File Offset: 0x006F9A38
+	// Token: 0x06017ED7 RID: 98007 RVA: 0x00722958 File Offset: 0x00720B58
 	protected EGameplayABPType? GetUeGameplayTypeFromVehicleType(EVehicleType vehicleType)
 	{
 		switch (vehicleType)
@@ -1594,7 +1594,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601A537 RID: 107831 RVA: 0x006FB884 File Offset: 0x006F9A84
+	// Token: 0x06017ED8 RID: 98008 RVA: 0x007229A4 File Offset: 0x00720BA4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1602,268 +1602,224 @@ public class CharacterDriveVehicleComponent : EntityComponent
 			return false;
 		}
 		CharacterDriveVehicleComponent characterDriveVehicleComponent = (CharacterDriveVehicleComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterDriveVehicleComponent.ActorComp == null)
 		{
-			if (characterDriveVehicleComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterDriveVehicleComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
+		if (characterDriveVehicleComponent.MoveComp == null)
 		{
-			if (characterDriveVehicleComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterDriveVehicleComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffComp"))
+		if (characterDriveVehicleComponent.UnifiedStateComp == null)
 		{
-			if (characterDriveVehicleComponent.BuffComp == null)
-			{
-				this.BuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseBuffComponent>(this.BuffComp), "BuffComp"))
-			{
-				return false;
-			}
+			this.UnifiedStateComp = null;
 		}
-		if (base.CanResetComponentProperty("UeMovementComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
-			if (characterDriveVehicleComponent.UeMovementComp == null)
-			{
-				this.UeMovementComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UeMovementTickManageComponent>(this.UeMovementComp), "UeMovementComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
+		if (characterDriveVehicleComponent.TagComp == null)
 		{
-			this.DisableKey = characterDriveVehicleComponent.DisableKey;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("VehicleInfoInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterDriveVehicleComponent.VehicleInfoInternal == null)
-			{
-				this.VehicleInfoInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehiclePassengerInfo>(this.VehicleInfoInternal), "VehicleInfoInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MotorHandIkConfigArray"))
+		if (characterDriveVehicleComponent.BuffComp == null)
 		{
-			if (characterDriveVehicleComponent.MotorHandIkConfigArray == null)
-			{
-				this.MotorHandIkConfigArray = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MotorHandIkConfigs[]>(this.MotorHandIkConfigArray), "MotorHandIkConfigArray"))
-			{
-				return false;
-			}
+			this.BuffComp = null;
 		}
-		if (base.CanResetComponentProperty("AttachOffset"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
 		{
-			if (characterDriveVehicleComponent.AttachOffset == null)
-			{
-				this.AttachOffset = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AttachOffset), "AttachOffset"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SeatReletiveTrans"))
+		if (characterDriveVehicleComponent.UeMovementComp == null)
 		{
-			if (characterDriveVehicleComponent.SeatReletiveTrans == null)
-			{
-				this.SeatReletiveTrans = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.SeatReletiveTrans), "SeatReletiveTrans"))
-			{
-				return false;
-			}
+			this.UeMovementComp = null;
 		}
-		if (base.CanResetComponentProperty("HasWaterEffect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeMovementComp), "UeMovementComp"))
 		{
-			this.HasWaterEffect = characterDriveVehicleComponent.HasWaterEffect;
+			return false;
 		}
-		if (base.CanResetComponentProperty("PreEnterEffectTime"))
+		this.DisableKey = characterDriveVehicleComponent.DisableKey;
+		if (characterDriveVehicleComponent.VehicleInfoInternal == null)
 		{
-			this.PreEnterEffectTime = characterDriveVehicleComponent.PreEnterEffectTime;
+			this.VehicleInfoInternal = null;
 		}
-		if (base.CanResetComponentProperty("WaitPreEnterEffectHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleInfoInternal), "VehicleInfoInternal"))
 		{
-			if (characterDriveVehicleComponent.WaitPreEnterEffectHandle == null)
-			{
-				this.WaitPreEnterEffectHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.WaitPreEnterEffectHandle), "WaitPreEnterEffectHandle"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsLeavingVehicle"))
+		if (characterDriveVehicleComponent.MotorHandIkConfigArray == null)
 		{
-			this.IsLeavingVehicle = characterDriveVehicleComponent.IsLeavingVehicle;
+			this.MotorHandIkConfigArray = null;
 		}
-		if (base.CanResetComponentProperty("WasLeavePerformFinish"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MotorHandIkConfigArray), "MotorHandIkConfigArray"))
 		{
-			this.WasLeavePerformFinish = characterDriveVehicleComponent.WasLeavePerformFinish;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LeavePerformEndPromise"))
+		if (characterDriveVehicleComponent.AttachOffset == null)
 		{
-			if (characterDriveVehicleComponent.LeavePerformEndPromise == null)
-			{
-				this.LeavePerformEndPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GameModePromise>(this.LeavePerformEndPromise), "LeavePerformEndPromise"))
-			{
-				return false;
-			}
+			this.AttachOffset = null;
 		}
-		if (base.CanResetComponentProperty("UeMovementCompDisableHandle"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachOffset), "AttachOffset"))
 		{
-			this.UeMovementCompDisableHandle = characterDriveVehicleComponent.UeMovementCompDisableHandle;
+			return false;
 		}
-		if (base.CanResetComponentProperty("EntityHandle"))
+		if (characterDriveVehicleComponent.SeatReletiveTrans == null)
 		{
-			if (characterDriveVehicleComponent.EntityHandle == null)
-			{
-				this.EntityHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.EntityHandle), "EntityHandle"))
-			{
-				return false;
-			}
+			this.SeatReletiveTrans = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeatReletiveTrans), "SeatReletiveTrans"))
 		{
-			if (characterDriveVehicleComponent.TmpVector1 == null)
-			{
-				this.TmpVector1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector1), "TmpVector1"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2"))
+		this.HasWaterEffect = characterDriveVehicleComponent.HasWaterEffect;
+		this.PreEnterEffectTime = characterDriveVehicleComponent.PreEnterEffectTime;
+		if (characterDriveVehicleComponent.WaitPreEnterEffectHandle == null)
 		{
-			if (characterDriveVehicleComponent.TmpVector2 == null)
-			{
-				this.TmpVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
-			{
-				return false;
-			}
+			this.WaitPreEnterEffectHandle = null;
 		}
-		if (base.CanResetComponentProperty("TmpQuat"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitPreEnterEffectHandle), "WaitPreEnterEffectHandle"))
 		{
-			if (characterDriveVehicleComponent.TmpQuat == null)
-			{
-				this.TmpQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTrans"))
+		this.IsLeavingVehicle = characterDriveVehicleComponent.IsLeavingVehicle;
+		this.WasLeavePerformFinish = characterDriveVehicleComponent.WasLeavePerformFinish;
+		if (characterDriveVehicleComponent.LeavePerformEndPromise == null)
 		{
-			if (characterDriveVehicleComponent.TmpTrans == null)
-			{
-				this.TmpTrans = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTrans), "TmpTrans"))
-			{
-				return false;
-			}
+			this.LeavePerformEndPromise = null;
 		}
-		if (base.CanResetComponentProperty("TmpTrans2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LeavePerformEndPromise), "LeavePerformEndPromise"))
 		{
-			if (characterDriveVehicleComponent.TmpTrans2 == null)
-			{
-				this.TmpTrans2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTrans2), "TmpTrans2"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpTrans3"))
+		this.UeMovementCompDisableHandle = characterDriveVehicleComponent.UeMovementCompDisableHandle;
+		if (characterDriveVehicleComponent.EntityHandle == null)
 		{
-			if (characterDriveVehicleComponent.TmpTrans3 == null)
-			{
-				this.TmpTrans3 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTrans3), "TmpTrans3"))
-			{
-				return false;
-			}
+			this.EntityHandle = null;
 		}
-		if (base.CanResetComponentProperty("CacheHandIk"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityHandle), "EntityHandle"))
 		{
-			if (characterDriveVehicleComponent.CacheHandIk == null)
-			{
-				this.CacheHandIk = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IkTarget[]>(this.CacheHandIk), "CacheHandIk"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsAttachToMoveSceneItem"))
+		if (characterDriveVehicleComponent.TmpVector1 == null)
 		{
-			this.IsAttachToMoveSceneItem = characterDriveVehicleComponent.IsAttachToMoveSceneItem;
+			this.TmpVector1 = null;
 		}
-		if (base.CanResetComponentProperty("VehicleDisableTimeLength"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
 		{
-			this.VehicleDisableTimeLength = characterDriveVehicleComponent.VehicleDisableTimeLength;
+			return false;
 		}
+		if (characterDriveVehicleComponent.TmpVector2 == null)
+		{
+			this.TmpVector2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
+		{
+			return false;
+		}
+		if (characterDriveVehicleComponent.TmpQuat == null)
+		{
+			this.TmpQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+		{
+			return false;
+		}
+		if (characterDriveVehicleComponent.TmpTrans == null)
+		{
+			this.TmpTrans = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans), "TmpTrans"))
+		{
+			return false;
+		}
+		if (characterDriveVehicleComponent.TmpTrans2 == null)
+		{
+			this.TmpTrans2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans2), "TmpTrans2"))
+		{
+			return false;
+		}
+		if (characterDriveVehicleComponent.TmpTrans3 == null)
+		{
+			this.TmpTrans3 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans3), "TmpTrans3"))
+		{
+			return false;
+		}
+		if (characterDriveVehicleComponent.CacheHandIk == null)
+		{
+			this.CacheHandIk = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheHandIk), "CacheHandIk"))
+		{
+			return false;
+		}
+		this.IsAttachToMoveSceneItem = characterDriveVehicleComponent.IsAttachToMoveSceneItem;
+		this.VehicleDisableTimeLength = characterDriveVehicleComponent.VehicleDisableTimeLength;
 		return true;
 	}
 
-	// Token: 0x0400C8AC RID: 51372
+	// Token: 0x17002561 RID: 9569
+	// (get) Token: 0x06017ED9 RID: 98009 RVA: 0x00722D80 File Offset: 0x00720F80
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002562 RID: 9570
+	// (get) Token: 0x06017EDA RID: 98010 RVA: 0x00722D83 File Offset: 0x00720F83
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002563 RID: 9571
+	// (get) Token: 0x06017EDB RID: 98011 RVA: 0x00722D86 File Offset: 0x00720F86
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002564 RID: 9572
+	// (get) Token: 0x06017EDC RID: 98012 RVA: 0x00722D89 File Offset: 0x00720F89
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CC86 RID: 52358
 	public const float DEFAULT_SITTING_HEIGHT = 45f;
 
-	// Token: 0x0400C8AD RID: 51373
+	// Token: 0x0400CC87 RID: 52359
 	private const float VEHICLE_DISABLE_TIME_LENGTH_THRESHOLD = 1000f;
 
-	// Token: 0x0400C8AE RID: 51374
+	// Token: 0x0400CC88 RID: 52360
 	[StaticVariableRuleIgnore]
 	private static HashSet<EVehicleType> gongduolaTypes = new HashSet<EVehicleType>
 	{
@@ -1872,7 +1828,7 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		EVehicleType.Gongduola
 	};
 
-	// Token: 0x0400C8AF RID: 51375
+	// Token: 0x0400CC89 RID: 52361
 	[StaticVariableRuleIgnore]
 	private static Dictionary<string, MotorHandIkConfigs[]> motorHandIkConfigsForRoleTypes = new Dictionary<string, MotorHandIkConfigs[]>
 	{
@@ -1934,38 +1890,38 @@ public class CharacterDriveVehicleComponent : EntityComponent
 		}
 	};
 
-	// Token: 0x0400C8B0 RID: 51376
+	// Token: 0x0400CC8A RID: 52362
 	[Nullable(2)]
 	protected CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C8B1 RID: 51377
+	// Token: 0x0400CC8B RID: 52363
 	[Nullable(2)]
 	protected BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C8B2 RID: 51378
+	// Token: 0x0400CC8C RID: 52364
 	[Nullable(2)]
 	protected BaseUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400C8B3 RID: 51379
+	// Token: 0x0400CC8D RID: 52365
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400C8B4 RID: 51380
+	// Token: 0x0400CC8E RID: 52366
 	[Nullable(2)]
 	protected BaseBuffComponent BuffComp;
 
-	// Token: 0x0400C8B5 RID: 51381
+	// Token: 0x0400CC8F RID: 52367
 	[Nullable(2)]
 	protected UeMovementTickManageComponent UeMovementComp;
 
-	// Token: 0x0400C8B6 RID: 51382
+	// Token: 0x0400CC90 RID: 52368
 	private int? DisableKey;
 
-	// Token: 0x0400C8B7 RID: 51383
+	// Token: 0x0400CC91 RID: 52369
 	[Nullable(2)]
 	private VehiclePassengerInfo VehicleInfoInternal;
 
-	// Token: 0x0400C8B8 RID: 51384
+	// Token: 0x0400CC92 RID: 52370
 	[Nullable(new byte[]
 	{
 		2,
@@ -1973,67 +1929,67 @@ public class CharacterDriveVehicleComponent : EntityComponent
 	})]
 	private MotorHandIkConfigs[] MotorHandIkConfigArray;
 
-	// Token: 0x0400C8B9 RID: 51385
+	// Token: 0x0400CC93 RID: 52371
 	protected global::Vector AttachOffset = global::Vector.Create();
 
-	// Token: 0x0400C8BA RID: 51386
+	// Token: 0x0400CC94 RID: 52372
 	public Transform SeatReletiveTrans = Transform.Create();
 
-	// Token: 0x0400C8BB RID: 51387
+	// Token: 0x0400CC95 RID: 52373
 	protected bool HasWaterEffect = true;
 
-	// Token: 0x0400C8BC RID: 51388
+	// Token: 0x0400CC96 RID: 52374
 	protected float PreEnterEffectTime;
 
-	// Token: 0x0400C8BD RID: 51389
+	// Token: 0x0400CC97 RID: 52375
 	[Nullable(2)]
 	protected TimerHandle WaitPreEnterEffectHandle;
 
-	// Token: 0x0400C8BE RID: 51390
+	// Token: 0x0400CC98 RID: 52376
 	public bool IsLeavingVehicle;
 
-	// Token: 0x0400C8BF RID: 51391
+	// Token: 0x0400CC99 RID: 52377
 	protected bool WasLeavePerformFinish;
 
-	// Token: 0x0400C8C0 RID: 51392
+	// Token: 0x0400CC9A RID: 52378
 	[Nullable(2)]
 	protected GameModePromise LeavePerformEndPromise;
 
-	// Token: 0x0400C8C1 RID: 51393
+	// Token: 0x0400CC9B RID: 52379
 	protected int UeMovementCompDisableHandle;
 
-	// Token: 0x0400C8C2 RID: 51394
+	// Token: 0x0400CC9C RID: 52380
 	[Nullable(2)]
 	protected EntityHandle EntityHandle;
 
-	// Token: 0x0400C8C3 RID: 51395
+	// Token: 0x0400CC9D RID: 52381
 	protected global::Vector TmpVector1 = global::Vector.Create();
 
-	// Token: 0x0400C8C4 RID: 51396
+	// Token: 0x0400CC9E RID: 52382
 	protected global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400C8C5 RID: 51397
+	// Token: 0x0400CC9F RID: 52383
 	protected Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400C8C6 RID: 51398
+	// Token: 0x0400CCA0 RID: 52384
 	protected Transform TmpTrans = Transform.Create();
 
-	// Token: 0x0400C8C7 RID: 51399
+	// Token: 0x0400CCA1 RID: 52385
 	protected Transform TmpTrans2 = Transform.Create();
 
-	// Token: 0x0400C8C8 RID: 51400
+	// Token: 0x0400CCA2 RID: 52386
 	protected Transform TmpTrans3 = Transform.Create();
 
-	// Token: 0x0400C8C9 RID: 51401
+	// Token: 0x0400CCA3 RID: 52387
 	protected IkTarget[] CacheHandIk = new IkTarget[]
 	{
 		new IkTarget(null, null, null),
 		new IkTarget(null, null, null)
 	};
 
-	// Token: 0x0400C8CA RID: 51402
+	// Token: 0x0400CCA4 RID: 52388
 	public bool IsAttachToMoveSceneItem;
 
-	// Token: 0x0400C8CB RID: 51403
+	// Token: 0x0400CCA5 RID: 52389
 	private double VehicleDisableTimeLength;
 }

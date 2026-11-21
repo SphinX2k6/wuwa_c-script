@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001854 RID: 6228
+	// Token: 0x0200038F RID: 911
 	public sealed class FCustomPlayerRangeEnterEvent : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06016F0D RID: 93965 RVA: 0x002178BE File Offset: 0x00215ABE
+		// Token: 0x06005B12 RID: 23314 RVA: 0x000809EE File Offset: 0x0007EBEE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FCustomPlayerRangeEnterEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x06016F0E RID: 93966 RVA: 0x002178CA File Offset: 0x00215ACA
+		// Token: 0x06005B13 RID: 23315 RVA: 0x000809FA File Offset: 0x0007EBFA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FCustomPlayerRangeEnterEvent._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FCustomPlayerRangeEnterEvent._FunctionPtr;
 		}
 
-		// Token: 0x06016F0F RID: 93967 RVA: 0x002178ED File Offset: 0x00215AED
+		// Token: 0x06005B14 RID: 23316 RVA: 0x00080A1D File Offset: 0x0007EC1D
 		public FCustomPlayerRangeEnterEvent()
 		{
 		}
 
-		// Token: 0x06016F10 RID: 93968 RVA: 0x002178F5 File Offset: 0x00215AF5
+		// Token: 0x06005B15 RID: 23317 RVA: 0x00080A25 File Offset: 0x0007EC25
 		[NullableContext(2)]
 		public FCustomPlayerRangeEnterEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06016F11 RID: 93969 RVA: 0x002178FF File Offset: 0x00215AFF
+		// Token: 0x06005B16 RID: 23318 RVA: 0x00080A2F File Offset: 0x0007EC2F
 		public FCustomPlayerRangeEnterEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06016F12 RID: 93970 RVA: 0x0021790A File Offset: 0x00215B0A
+		// Token: 0x06005B17 RID: 23319 RVA: 0x00080A3A File Offset: 0x0007EC3A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06016F13 RID: 93971 RVA: 0x0021793C File Offset: 0x00215B3C
+		// Token: 0x06005B18 RID: 23320 RVA: 0x00080A6C File Offset: 0x0007EC6C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FCustomPlayerRangeEnterEvent.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FCustomPlayerRangeEnterEvent.RegisterId);
 		}
 
-		// Token: 0x06016F14 RID: 93972 RVA: 0x00217976 File Offset: 0x00215B76
+		// Token: 0x06005B19 RID: 23321 RVA: 0x00080AA6 File Offset: 0x0007ECA6
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06016F15 RID: 93973 RVA: 0x00217984 File Offset: 0x00215B84
+		// Token: 0x06005B1A RID: 23322 RVA: 0x00080AB4 File Offset: 0x0007ECB4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400C762 RID: 51042
+		// Token: 0x040025D7 RID: 9687
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C763 RID: 51043
+		// Token: 0x040025D8 RID: 9688
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameBudget.CustomPlayerRangeEnterEvent__DelegateSignature";
 
-		// Token: 0x0400C764 RID: 51044
+		// Token: 0x040025D9 RID: 9689
 		private static int RegisterId;
 
-		// Token: 0x02002F70 RID: 12144
+		// Token: 0x02000A99 RID: 2713
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B2B RID: 92971
+			// Token: 0x04005AED RID: 23277
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

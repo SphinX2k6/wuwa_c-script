@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Teleport
 {
-	// Token: 0x02004B71 RID: 19313
+	// Token: 0x02003B1B RID: 15131
 	public class TeleportSeamlessHelper : TeleportContextHolder
 	{
-		// Token: 0x06032082 RID: 204930 RVA: 0x00B9CE70 File Offset: 0x00B9B070
+		// Token: 0x06026E13 RID: 159251 RVA: 0x00AE1021 File Offset: 0x00ADF221
 		[NullableContext(1)]
 		public TeleportSeamlessHelper(TeleportContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06032083 RID: 204931 RVA: 0x00B9CE7C File Offset: 0x00B9B07C
+		// Token: 0x06026E14 RID: 159252 RVA: 0x00AE102C File Offset: 0x00ADF22C
 		public UniTask SeamlessTeleportPreStart()
 		{
 			TeleportSeamlessHelper.<SeamlessTeleportPreStart>d__1 <SeamlessTeleportPreStart>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <SeamlessTeleportPreStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032084 RID: 204932 RVA: 0x00B9CEC0 File Offset: 0x00B9B0C0
+		// Token: 0x06026E15 RID: 159253 RVA: 0x00AE1070 File Offset: 0x00ADF270
 		public UniTask SeamlessTeleportStart()
 		{
 			TeleportSeamlessHelper.<SeamlessTeleportStart>d__2 <SeamlessTeleportStart>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <SeamlessTeleportStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032085 RID: 204933 RVA: 0x00B9CF04 File Offset: 0x00B9B104
+		// Token: 0x06026E16 RID: 159254 RVA: 0x00AE10B4 File Offset: 0x00ADF2B4
 		public UniTask SeamlessTeleportPreEnd()
 		{
 			TeleportSeamlessHelper.<SeamlessTeleportPreEnd>d__3 <SeamlessTeleportPreEnd>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <SeamlessTeleportPreEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032086 RID: 204934 RVA: 0x00B9CF48 File Offset: 0x00B9B148
+		// Token: 0x06026E17 RID: 159255 RVA: 0x00AE10F8 File Offset: 0x00ADF2F8
 		public UniTask SeamlessTeleportEnd()
 		{
 			TeleportSeamlessHelper.<SeamlessTeleportEnd>d__4 <SeamlessTeleportEnd>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Teleport
 			return <SeamlessTeleportEnd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032087 RID: 204935 RVA: 0x00B9CF8C File Offset: 0x00B9B18C
+		// Token: 0x06026E18 RID: 159256 RVA: 0x00AE113C File Offset: 0x00ADF33C
 		public void FinishSeamlessTeleport()
 		{
 			EventSystem.Instance.Emit(EEventName.SeamlessTravelFinishBeforeShowUI);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Teleport
 			InputDistributeController.Instance.RefreshInputTag();
 		}
 
-		// Token: 0x06032088 RID: 204936 RVA: 0x00B9D0F0 File Offset: 0x00B9B2F0
+		// Token: 0x06026E19 RID: 159257 RVA: 0x00AE12A0 File Offset: 0x00ADF4A0
 		[CompilerGenerated]
 		private void <SeamlessTeleportStart>g__delayLeastTime|2_0()
 		{

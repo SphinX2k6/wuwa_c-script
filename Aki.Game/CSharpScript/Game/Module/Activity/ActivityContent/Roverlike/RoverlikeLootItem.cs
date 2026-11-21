@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006166 RID: 24934
+	// Token: 0x020050E4 RID: 20708
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeLootItem : RoverlikeMultiUseGridProxyAbstract<RoverlikeLootGainEntry>
 	{
-		// Token: 0x0603F072 RID: 258162 RVA: 0x00F3ACA8 File Offset: 0x00F38EA8
+		// Token: 0x06033D32 RID: 212274 RVA: 0x00E81B7C File Offset: 0x00E7FD7C
 		public void BindOnItemSelect(Action<RoverlikeLootGainEntry> callback)
 		{
 			this.OnItemSelect = callback;
 		}
 
-		// Token: 0x0603F073 RID: 258163 RVA: 0x00F3ACB4 File Offset: 0x00F38EB4
+		// Token: 0x06033D33 RID: 212275 RVA: 0x00E81B88 File Offset: 0x00E7FD88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F074 RID: 258164 RVA: 0x00F3AE20 File Offset: 0x00F39020
+		// Token: 0x06033D34 RID: 212276 RVA: 0x00E81CF4 File Offset: 0x00E7FEF4
 		public override void Refresh(RoverlikeLootGainEntry data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603F075 RID: 258165 RVA: 0x00F3AF59 File Offset: 0x00F39159
+		// Token: 0x06033D35 RID: 212277 RVA: 0x00E81E2D File Offset: 0x00E8002D
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603F076 RID: 258166 RVA: 0x00F3AF6C File Offset: 0x00F3916C
+		// Token: 0x06033D36 RID: 212278 RVA: 0x00E81E40 File Offset: 0x00E80040
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603F077 RID: 258167 RVA: 0x00F3AF7F File Offset: 0x00F3917F
+		// Token: 0x06033D37 RID: 212279 RVA: 0x00E81E53 File Offset: 0x00E80053
 		private void OnTogCommonStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.CurrentData != null)
@@ -119,19 +119,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603F078 RID: 258168 RVA: 0x00F3AFA3 File Offset: 0x00F391A3
+		// Token: 0x06033D38 RID: 212280 RVA: 0x00E81E77 File Offset: 0x00E80077
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<RoverlikeLootStarItem, bool>(base.GetHorizontalLayout(2), new Func<RoverlikeLootStarItem>(this.CreateStarItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x0603F079 RID: 258169 RVA: 0x00F3AFD6 File Offset: 0x00F391D6
+		// Token: 0x06033D39 RID: 212281 RVA: 0x00E81EAA File Offset: 0x00E800AA
 		private RoverlikeLootStarItem CreateStarItem()
 		{
 			return new RoverlikeLootStarItem();
 		}
 
-		// Token: 0x04020E0C RID: 134668
+		// Token: 0x0401B739 RID: 112441
 		[Nullable(new byte[]
 		{
 			2,
@@ -139,11 +139,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeLootStarItem, bool> StarLayout;
 
-		// Token: 0x04020E0D RID: 134669
+		// Token: 0x0401B73A RID: 112442
 		[Nullable(2)]
 		private RoverlikeLootGainEntry CurrentData;
 
-		// Token: 0x04020E0E RID: 134670
+		// Token: 0x0401B73B RID: 112443
 		[Nullable(new byte[]
 		{
 			2,
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<RoverlikeLootGainEntry> OnItemSelect;
 
-		// Token: 0x04020E0F RID: 134671
+		// Token: 0x0401B73C RID: 112444
 		[Nullable(new byte[]
 		{
 			2,
@@ -159,32 +159,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Func<RoverlikeLootGainEntry, bool> GetHasRedDot;
 
-		// Token: 0x0200C3CA RID: 50122
+		// Token: 0x0200ADB1 RID: 44465
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B150 RID: 242000
+			// Token: 0x04035AB1 RID: 219825
 			public const int TogCommon = 0;
 
-			// Token: 0x0403B151 RID: 242001
+			// Token: 0x04035AB2 RID: 219826
 			public const int TexIcon = 1;
 
-			// Token: 0x0403B152 RID: 242002
+			// Token: 0x04035AB3 RID: 219827
 			public const int StarLayout = 2;
 
-			// Token: 0x0403B153 RID: 242003
+			// Token: 0x04035AB4 RID: 219828
 			public const int StarItem = 3;
 
-			// Token: 0x0403B154 RID: 242004
+			// Token: 0x04035AB5 RID: 219829
 			public const int TxtName = 4;
 
-			// Token: 0x0403B155 RID: 242005
+			// Token: 0x04035AB6 RID: 219830
 			public const int ItemTagNew = 5;
 
-			// Token: 0x0403B156 RID: 242006
+			// Token: 0x04035AB7 RID: 219831
 			public const int PnlLock = 6;
 
-			// Token: 0x0403B157 RID: 242007
+			// Token: 0x04035AB8 RID: 219832
 			public const int PnlEquipment = 7;
 		}
 	}

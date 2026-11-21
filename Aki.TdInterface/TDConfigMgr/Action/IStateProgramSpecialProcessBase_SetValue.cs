@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EBA RID: 7866
+	// Token: 0x020020F3 RID: 8435
 	public class IStateProgramSpecialProcessBase_SetValue
 	{
-		// Token: 0x0400645B RID: 25691
+		// Token: 0x04006A4A RID: 27210
 		public ELogicProgramSpecialProcess Type;
 	}
 }

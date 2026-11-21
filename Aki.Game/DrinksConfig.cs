@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02000F3A RID: 3898
+// Token: 0x020003EF RID: 1007
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class DrinksConfig : ConfigBase
 {
-	// Token: 0x06006354 RID: 25428 RVA: 0x0013879C File Offset: 0x0013699C
+	// Token: 0x060036EC RID: 14060 RVA: 0x00141068 File Offset: 0x0013F268
 	public DrinksDrinkBase? GetDrinkBase(int id)
 	{
 		DrinksDrinkBase? config = ConfigDrinksDrinkBaseById.GetConfig(id, true);
@@ -26,7 +26,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006355 RID: 25429 RVA: 0x001387F4 File Offset: 0x001369F4
+	// Token: 0x060036ED RID: 14061 RVA: 0x001410C0 File Offset: 0x0013F2C0
 	public IReadOnlyList<DrinksDrinkBase> GetAllDrinkBase()
 	{
 		IReadOnlyList<DrinksDrinkBase> configList = ConfigDrinksDrinkBaseAll.GetConfigList(true);
@@ -37,7 +37,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006356 RID: 25430 RVA: 0x00138814 File Offset: 0x00136A14
+	// Token: 0x060036EE RID: 14062 RVA: 0x001410E0 File Offset: 0x0013F2E0
 	public DrinksBatching? GetBatching(int id)
 	{
 		DrinksBatching? config = ConfigDrinksBatchingById.GetConfig(id, true);
@@ -54,7 +54,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006357 RID: 25431 RVA: 0x0013886C File Offset: 0x00136A6C
+	// Token: 0x060036EF RID: 14063 RVA: 0x00141138 File Offset: 0x0013F338
 	public IReadOnlyList<DrinksBatching> GetAllBatching()
 	{
 		IReadOnlyList<DrinksBatching> configList = ConfigDrinksBatchingAll.GetConfigList(true);
@@ -65,7 +65,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006358 RID: 25432 RVA: 0x0013888C File Offset: 0x00136A8C
+	// Token: 0x060036F0 RID: 14064 RVA: 0x00141158 File Offset: 0x0013F358
 	public DrinksOrnament? GetOrnament(int id)
 	{
 		DrinksOrnament? config = ConfigDrinksOrnamentById.GetConfig(id, true);
@@ -82,7 +82,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006359 RID: 25433 RVA: 0x001388E4 File Offset: 0x00136AE4
+	// Token: 0x060036F1 RID: 14065 RVA: 0x001411B0 File Offset: 0x0013F3B0
 	public IReadOnlyList<DrinksOrnament> GetAllOrnament()
 	{
 		IReadOnlyList<DrinksOrnament> configList = ConfigDrinksOrnamentAll.GetConfigList(true);
@@ -93,7 +93,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600635A RID: 25434 RVA: 0x00138904 File Offset: 0x00136B04
+	// Token: 0x060036F2 RID: 14066 RVA: 0x001411D0 File Offset: 0x0013F3D0
 	public DrinksRequireList? GetRequireList(int id)
 	{
 		DrinksRequireList? config = ConfigDrinksRequireListById.GetConfig(id, true);
@@ -110,7 +110,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600635B RID: 25435 RVA: 0x0013895C File Offset: 0x00136B5C
+	// Token: 0x060036F3 RID: 14067 RVA: 0x00141228 File Offset: 0x0013F428
 	public DrinksRoleLikeDrink? GetRoleLikeDrink(int id)
 	{
 		DrinksRoleLikeDrink? config = ConfigDrinksRoleLikeDrinkById.GetConfig(id, true);
@@ -127,7 +127,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600635C RID: 25436 RVA: 0x001389B4 File Offset: 0x00136BB4
+	// Token: 0x060036F4 RID: 14068 RVA: 0x00141280 File Offset: 0x0013F480
 	public DrinksFlavorRange? GetFlavorRange(int id)
 	{
 		DrinksFlavorRange? config = ConfigDrinksFlavorRangeById.GetConfig(id, true);
@@ -144,7 +144,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600635D RID: 25437 RVA: 0x00138A0C File Offset: 0x00136C0C
+	// Token: 0x060036F5 RID: 14069 RVA: 0x001412D8 File Offset: 0x0013F4D8
 	public IReadOnlyList<DrinksFlavorRange> GetFlavorRangeGroup(int id)
 	{
 		IReadOnlyList<DrinksFlavorRange> configList = ConfigDrinksFlavorRangeByGroupId.GetConfigList(id, true);
@@ -161,7 +161,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x0600635E RID: 25438 RVA: 0x00138A5C File Offset: 0x00136C5C
+	// Token: 0x060036F6 RID: 14070 RVA: 0x00141328 File Offset: 0x0013F528
 	public DrinksFlavorType? GetFlavorType(EDrinksFlavorType id)
 	{
 		DrinksFlavorType? config = ConfigDrinksFlavorTypeById.GetConfig((int)id, true);
@@ -178,7 +178,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0600635F RID: 25439 RVA: 0x00138AB4 File Offset: 0x00136CB4
+	// Token: 0x060036F7 RID: 14071 RVA: 0x00141380 File Offset: 0x0013F580
 	public DrinksDrinkMix? GetDrinkMix(int id)
 	{
 		DrinksDrinkMix? config = ConfigDrinksDrinkMixById.GetConfig(id, true);
@@ -195,7 +195,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006360 RID: 25440 RVA: 0x00138B0C File Offset: 0x00136D0C
+	// Token: 0x060036F8 RID: 14072 RVA: 0x001413D8 File Offset: 0x0013F5D8
 	public IReadOnlyList<DrinksDrinkMix> GetAllMix()
 	{
 		IReadOnlyList<DrinksDrinkMix> configList = ConfigDrinksDrinkMixAll.GetConfigList(true);
@@ -207,7 +207,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006361 RID: 25441 RVA: 0x00138B4C File Offset: 0x00136D4C
+	// Token: 0x060036F9 RID: 14073 RVA: 0x00141418 File Offset: 0x0013F618
 	public IReadOnlyList<DrinksRequireList> GetRequireListByRole(int roleId)
 	{
 		IReadOnlyList<DrinksRequireList> configList = ConfigDrinksRequireListByRoleId.GetConfigList(roleId, true);
@@ -224,7 +224,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006362 RID: 25442 RVA: 0x00138B9C File Offset: 0x00136D9C
+	// Token: 0x060036FA RID: 14074 RVA: 0x00141468 File Offset: 0x0013F668
 	public DrinksStepConfig? GetStepConfig(EDrinksPlayStep step)
 	{
 		DrinksStepConfig? config = ConfigDrinksStepConfigById.GetConfig((int)step, true);
@@ -241,7 +241,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006363 RID: 25443 RVA: 0x00138BF4 File Offset: 0x00136DF4
+	// Token: 0x060036FB RID: 14075 RVA: 0x001414C0 File Offset: 0x0013F6C0
 	public DrinksRoleInvite? GetInviteConfig(int configId)
 	{
 		DrinksRoleInvite? config = ConfigDrinksRoleInviteById.GetConfig(configId, true);
@@ -258,7 +258,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006364 RID: 25444 RVA: 0x00138C4C File Offset: 0x00136E4C
+	// Token: 0x060036FC RID: 14076 RVA: 0x00141518 File Offset: 0x0013F718
 	public DrinksRoleInvite? GetInviteConfigByRole(int id)
 	{
 		IReadOnlyList<DrinksRoleInvite> allInvite = this.GetAllInvite();
@@ -279,7 +279,7 @@ public class DrinksConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x06006365 RID: 25445 RVA: 0x00138CC4 File Offset: 0x00136EC4
+	// Token: 0x060036FD RID: 14077 RVA: 0x00141590 File Offset: 0x0013F790
 	public IReadOnlyList<DrinksRoleInvite> GetAllInvite()
 	{
 		IReadOnlyList<DrinksRoleInvite> configList = ConfigDrinksRoleInviteAll.GetConfigList(true);
@@ -290,7 +290,7 @@ public class DrinksConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x06006366 RID: 25446 RVA: 0x00138CE4 File Offset: 0x00136EE4
+	// Token: 0x060036FE RID: 14078 RVA: 0x001415B0 File Offset: 0x0013F7B0
 	public DrinksDialog? GetDialog(string id)
 	{
 		DrinksDialog? config = ConfigDrinksDialogById.GetConfig(id, true);
@@ -307,7 +307,7 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006367 RID: 25447 RVA: 0x00138D38 File Offset: 0x00136F38
+	// Token: 0x060036FF RID: 14079 RVA: 0x00141604 File Offset: 0x0013F804
 	public DrinksParam? GetParam(int id)
 	{
 		DrinksParam? config = ConfigDrinksParamById.GetConfig(id, true);
@@ -324,38 +324,38 @@ public class DrinksConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06006368 RID: 25448 RVA: 0x00138D90 File Offset: 0x00136F90
+	// Token: 0x06003700 RID: 14080 RVA: 0x0014165C File Offset: 0x0013F85C
 	public int GetFlavorMax()
 	{
 		return ConfigCommonParamById.GetIntConfig("DrinksFlavorMax").GetValueOrDefault(10);
 	}
 
-	// Token: 0x06006369 RID: 25449 RVA: 0x00138DB4 File Offset: 0x00136FB4
+	// Token: 0x06003701 RID: 14081 RVA: 0x00141680 File Offset: 0x0013F880
 	public int GetQTETimeLimit()
 	{
 		return ConfigCommonParamById.GetIntConfig("DrinksQTETimeLimit").GetValueOrDefault(9000);
 	}
 
-	// Token: 0x0600636A RID: 25450 RVA: 0x00138DD8 File Offset: 0x00136FD8
+	// Token: 0x06003702 RID: 14082 RVA: 0x001416A4 File Offset: 0x0013F8A4
 	public int GetQTESpeed()
 	{
 		return ConfigCommonParamById.GetIntConfig("DrinksQTETimeSpeed").GetValueOrDefault(1500);
 	}
 
-	// Token: 0x0600636B RID: 25451 RVA: 0x00138DFC File Offset: 0x00136FFC
+	// Token: 0x06003703 RID: 14083 RVA: 0x001416C8 File Offset: 0x0013F8C8
 	public int GetQTESeqTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("DrinksQTESeqTime").GetValueOrDefault(500);
 	}
 
-	// Token: 0x0600636C RID: 25452 RVA: 0x00138E20 File Offset: 0x00137020
+	// Token: 0x06003704 RID: 14084 RVA: 0x001416EC File Offset: 0x0013F8EC
 	public IReadOnlyList<int> GetNeedHideNpcId()
 	{
 		return ConfigCommonParamById.GetIntArrayConfig("DrinksNPCEntity") ?? new List<int>();
 	}
 
-	// Token: 0x1700079E RID: 1950
-	// (get) Token: 0x0600636D RID: 25453 RVA: 0x00138E35 File Offset: 0x00137035
+	// Token: 0x170007C0 RID: 1984
+	// (get) Token: 0x06003705 RID: 14085 RVA: 0x00141701 File Offset: 0x0013F901
 	public static DrinksConfig Instance
 	{
 		get
@@ -364,7 +364,7 @@ public class DrinksConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600636E RID: 25454 RVA: 0x00138E3C File Offset: 0x0013703C
+	// Token: 0x06003706 RID: 14086 RVA: 0x00141708 File Offset: 0x0013F908
 	public static DrinksConfig GetOrCreateInstance()
 	{
 		if (DrinksConfig._Instance == null)
@@ -374,7 +374,7 @@ public class DrinksConfig : ConfigBase
 		return DrinksConfig._Instance;
 	}
 
-	// Token: 0x0600636F RID: 25455 RVA: 0x00138E50 File Offset: 0x00137050
+	// Token: 0x06003707 RID: 14087 RVA: 0x0014171C File Offset: 0x0013F91C
 	public static bool CreateInstance()
 	{
 		if (DrinksConfig._Instance != null)
@@ -385,24 +385,24 @@ public class DrinksConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06006370 RID: 25456 RVA: 0x00138E66 File Offset: 0x00137066
+	// Token: 0x06003708 RID: 14088 RVA: 0x00141732 File Offset: 0x0013F932
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006371 RID: 25457 RVA: 0x00138E68 File Offset: 0x00137068
+	// Token: 0x06003709 RID: 14089 RVA: 0x00141734 File Offset: 0x0013F934
 	public static void ResetStaticDefaultValue()
 	{
 		DrinksConfig._Instance = null;
 	}
 
-	// Token: 0x06006372 RID: 25458 RVA: 0x00138E70 File Offset: 0x00137070
+	// Token: 0x0600370A RID: 14090 RVA: 0x0014173C File Offset: 0x0013F93C
 	static DrinksConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DrinksConfig.CreateStaticDefaultValue), new Action(DrinksConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002D14 RID: 11540
+	// Token: 0x04002DAD RID: 11693
 	[Nullable(2)]
 	private static DrinksConfig _Instance;
 }

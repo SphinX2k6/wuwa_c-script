@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001115 RID: 4373
+	// Token: 0x02001243 RID: 4675
 	public class IRoleTowerSystemConfig_SetValue
 	{
-		// Token: 0x04003B3E RID: 15166
+		// Token: 0x04003E8C RID: 16012
 		public EEnableSystemType Type;
 
-		// Token: 0x04003B3F RID: 15167
-		[Nullable(1)]
+		// Token: 0x04003E8D RID: 16013
 		public List<IRoleTowerSystemVar> Vars;
 	}
 }

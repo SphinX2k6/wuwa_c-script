@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 {
-	// Token: 0x020000AE RID: 174
+	// Token: 0x020000B1 RID: 177
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VoiceResourceModule : BaseResourceModule
 	{
-		// Token: 0x06000603 RID: 1539 RVA: 0x000361C4 File Offset: 0x000343C4
+		// Token: 0x0600061E RID: 1566 RVA: 0x00037C4C File Offset: 0x00035E4C
 		[NullableContext(0)]
 		public override UniTask<bool> PrepareManifests()
 		{
@@ -26,48 +26,58 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return <PrepareManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000604 RID: 1540 RVA: 0x00036200 File Offset: 0x00034400
+		// Token: 0x0600061F RID: 1567 RVA: 0x00037C88 File Offset: 0x00035E88
 		public unsafe override PackClassification ClassifyPacks(ResourceSelectionContext context, ETier tier = ETier.None, bool forceMax = false)
 		{
 			HashSet<string> hashSet = new HashSet<string>(LauncherLanguageLib.Instance.GetUsedAudioCodes());
 			bool flag = !this.IsVoiceDownloadEnable();
 			List<ResPackageInfo> list = new List<ResPackageInfo>();
 			long num = 0L;
+			int num2 = 0;
+			int num3 = 0;
 			foreach (KeyValuePair<string, ResPackageInfo> keyValuePair in ResPackageInfo.RoleVoiceInfos)
 			{
 				string key = keyValuePair.Key;
 				ResPackageInfo value = keyValuePair.Value;
-				if (!flag)
+				string audioCodeFromPackKey = this.GetAudioCodeFromPackKey(key);
+				bool flag2 = hashSet.Contains(audioCodeFromPackKey);
+				bool flag3 = !string.IsNullOrEmpty(value.ResourceVersionInfo.RecordVersion);
+				if (flag || flag2 || flag3)
 				{
-					string audioCodeFromPackKey = this.GetAudioCodeFromPackKey(key);
-					if (!hashSet.Contains(audioCodeFromPackKey) && string.IsNullOrEmpty(value.ResourceVersionInfo.RecordVersion))
+					List<RequireFileInfo> item = value.AnalyzeRequireFiles(false, tier).Item1;
+					long num4 = 0L;
+					foreach (RequireFileInfo requireFileInfo in item)
 					{
-						continue;
+						num4 += requireFileInfo.Size;
 					}
+					if (flag2)
+					{
+						num2++;
+					}
+					else if (flag3)
+					{
+						num3++;
+					}
+					list.Add(value);
+					num += num4;
 				}
-				List<RequireFileInfo> item = value.AnalyzeRequireFiles(false, tier).Item1;
-				long num2 = 0L;
-				foreach (RequireFileInfo requireFileInfo in item)
-				{
-					num2 += requireFileInfo.Size;
-				}
-				LauncherLog.Instance.Info("RoleVoice package 已下载过的角色语音包 " + key + ", 会自动参与更新.", default(ReadOnlySpan<ValueTuple<string, object>>));
-				list.Add(value);
-				num += num2;
 			}
 			LauncherLog instance = LauncherLog.Instance;
 			string message = "RoleVoice package 分类完成";
-			<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray4<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("downloadAll", flag);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("usedAudioCodes", string.Join(",", hashSet));
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("count", list.Count);
-			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3);
+			<>y__InlineArray7<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray7<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("tier", tier);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("downloadAll", flag);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("usedAudioCodes", ResourceUpdateUtils.FormatLogList<string>(hashSet));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("usedLanguage.count", num2);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("existingOtherLanguage.count", num3);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("count", list.Count);
+			ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6);
 			string item2 = "totalSize";
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(3, 1);
 			defaultInterpolatedStringHandler.AppendFormatted<long>(num / 1048576L);
 			defaultInterpolatedStringHandler.AppendLiteral(" MB");
 			ptr = new ValueTuple<string, object>(item2, defaultInterpolatedStringHandler.ToStringAndClear());
-			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
+			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray7<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 7));
 			return new PackClassification
 			{
 				MinPacks = list,
@@ -77,13 +87,13 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			};
 		}
 
-		// Token: 0x06000605 RID: 1541 RVA: 0x0003641C File Offset: 0x0003461C
+		// Token: 0x06000620 RID: 1568 RVA: 0x00037EFC File Offset: 0x000360FC
 		public bool IsVoiceDownloadEnable()
 		{
 			return VideoResUpdate.Instance.GetIsSeparateVideo() && !Platform.Instance.IsCloudGame() && !Platform.Instance.IsMacPlatform();
 		}
 
-		// Token: 0x06000606 RID: 1542 RVA: 0x00036448 File Offset: 0x00034648
+		// Token: 0x06000621 RID: 1569 RVA: 0x00037F28 File Offset: 0x00036128
 		public override long GetLocalSize(IReadOnlyList<string> pakNames)
 		{
 			long num = 0L;
@@ -103,7 +113,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return num;
 		}
 
-		// Token: 0x06000607 RID: 1543 RVA: 0x000364D4 File Offset: 0x000346D4
+		// Token: 0x06000622 RID: 1570 RVA: 0x00037FB4 File Offset: 0x000361B4
 		public override void Delete(IReadOnlyList<string> pakNames)
 		{
 			foreach (string text in pakNames)
@@ -121,7 +131,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			}
 		}
 
-		// Token: 0x06000608 RID: 1544 RVA: 0x0003654C File Offset: 0x0003474C
+		// Token: 0x06000623 RID: 1571 RVA: 0x0003802C File Offset: 0x0003622C
 		public long GetLocalSizeByAudioCode(string audioCode)
 		{
 			long num = 0L;
@@ -141,7 +151,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return num;
 		}
 
-		// Token: 0x06000609 RID: 1545 RVA: 0x000365F0 File Offset: 0x000347F0
+		// Token: 0x06000624 RID: 1572 RVA: 0x000380D0 File Offset: 0x000362D0
 		public void DeleteByAudioCode(string audioCode)
 		{
 			ResPackageInfo languageInfo = ResPackageInfo.GetLanguageInfo(audioCode);
@@ -167,14 +177,14 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			}
 		}
 
-		// Token: 0x0600060A RID: 1546 RVA: 0x000366C8 File Offset: 0x000348C8
+		// Token: 0x06000625 RID: 1573 RVA: 0x000381A8 File Offset: 0x000363A8
 		private string GetAudioCodeFromPackKey(string packKey)
 		{
 			string[] array = packKey.Split('_', StringSplitOptions.None);
 			return array[array.Length - 1];
 		}
 
-		// Token: 0x0600060B RID: 1547 RVA: 0x000366DC File Offset: 0x000348DC
+		// Token: 0x06000626 RID: 1574 RVA: 0x000381BC File Offset: 0x000363BC
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -195,7 +205,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return list;
 		}
 
-		// Token: 0x040003AD RID: 941
+		// Token: 0x040003DB RID: 987
 		private const long MB_SIZE = 1048576L;
 	}
 }

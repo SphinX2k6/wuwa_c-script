@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002908 RID: 10504
+// Token: 0x02001E83 RID: 7811
 public enum ERouletteGridType
 {
-	// Token: 0x0400A16C RID: 41324
+	// Token: 0x0400A557 RID: 42327
 	Explore,
-	// Token: 0x0400A16D RID: 41325
+	// Token: 0x0400A558 RID: 42328
 	Function,
-	// Token: 0x0400A16E RID: 41326
+	// Token: 0x0400A559 RID: 42329
 	EquipItem
 }

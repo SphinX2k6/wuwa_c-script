@@ -5,10 +5,10 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine.Extension
 {
-	// Token: 0x02002ADC RID: 10972
+	// Token: 0x0200088B RID: 2187
 	public static class ScriptStructExtension
 	{
-		// Token: 0x060283D8 RID: 164824 RVA: 0x003D3439 File Offset: 0x003D1639
+		// Token: 0x0600BD8B RID: 48523 RVA: 0x0012E729 File Offset: 0x0012C929
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[return: Nullable(new byte[]
 		{
@@ -20,7 +20,7 @@ namespace UnrealEngine.Extension
 			return new TWeakObjectPtr<UScriptStruct>(BuiltinUtils.GetOrCreateUObjectByNativePointer<UScriptStruct>(Ptr.ScriptStructPtr));
 		}
 
-		// Token: 0x060283D9 RID: 164825 RVA: 0x003D344B File Offset: 0x003D164B
+		// Token: 0x0600BD8C RID: 48524 RVA: 0x0012E73B File Offset: 0x0012C93B
 		[NullableContext(1)]
 		[SecurityCritical]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]

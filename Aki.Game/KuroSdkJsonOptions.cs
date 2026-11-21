@@ -4,17 +4,17 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using CSharpScript.Core.Common;
 
-// Token: 0x02000DE4 RID: 3556
+// Token: 0x02000296 RID: 662
 public class KuroSdkJsonOptions : IStaticVariableResetter
 {
-	// Token: 0x0600562F RID: 22063 RVA: 0x000F8F03 File Offset: 0x000F7103
+	// Token: 0x060029BD RID: 10685 RVA: 0x00100653 File Offset: 0x000FE853
 	static KuroSdkJsonOptions()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroSdkJsonOptions.CreateStaticDefaultValue), new Action(KuroSdkJsonOptions.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170005FD RID: 1533
-	// (get) Token: 0x06005630 RID: 22064 RVA: 0x000F8F22 File Offset: 0x000F7122
+	// Token: 0x17000621 RID: 1569
+	// (get) Token: 0x060029BE RID: 10686 RVA: 0x00100672 File Offset: 0x000FE872
 	[Nullable(1)]
 	public static JsonSerializerOptions Unescaped
 	{
@@ -25,7 +25,7 @@ public class KuroSdkJsonOptions : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005631 RID: 22065 RVA: 0x000F8F29 File Offset: 0x000F7129
+	// Token: 0x060029BF RID: 10687 RVA: 0x00100679 File Offset: 0x000FE879
 	public static void CreateStaticDefaultValue()
 	{
 		KuroSdkJsonOptions._unescaped = new JsonSerializerOptions(JsonSettings.EncodeOptions)
@@ -34,13 +34,13 @@ public class KuroSdkJsonOptions : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06005632 RID: 22066 RVA: 0x000F8F45 File Offset: 0x000F7145
+	// Token: 0x060029C0 RID: 10688 RVA: 0x00100695 File Offset: 0x000FE895
 	public static void ResetStaticDefaultValue()
 	{
 		KuroSdkJsonOptions._unescaped = null;
 	}
 
-	// Token: 0x040026DB RID: 9947
+	// Token: 0x04002763 RID: 10083
 	[Nullable(2)]
 	private static JsonSerializerOptions _unescaped;
 }

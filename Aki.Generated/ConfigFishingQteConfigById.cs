@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002E7 RID: 743
+	// Token: 0x020002FC RID: 764
 	public class ConfigFishingQteConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600116F RID: 4463 RVA: 0x000BC0D4 File Offset: 0x000BA2D4
+		// Token: 0x060011ED RID: 4589 RVA: 0x000C25E0 File Offset: 0x000C07E0
 		static ConfigFishingQteConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingQteConfigById.CreateStaticDefaultValue), new Action(ConfigFishingQteConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001170 RID: 4464 RVA: 0x000BC0F4 File Offset: 0x000BA2F4
+		// Token: 0x060011EE RID: 4590 RVA: 0x000C2600 File Offset: 0x000C0800
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingQteConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001171 RID: 4465 RVA: 0x000BC173 File Offset: 0x000BA373
+		// Token: 0x060011EF RID: 4591 RVA: 0x000C267F File Offset: 0x000C087F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingQteConfigById.LogPair = null;
 			ConfigFishingQteConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06001172 RID: 4466 RVA: 0x000BC181 File Offset: 0x000BA381
+		// Token: 0x060011F0 RID: 4592 RVA: 0x000C268D File Offset: 0x000C088D
 		public static void Init()
 		{
 			ConfigFishingQteConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigFishingQteConfigById.HandleId, "db_fishingqteconfig.db", "select BinData from `FishingQteConfig` where Id=?");
 		}
 
-		// Token: 0x06001173 RID: 4467 RVA: 0x000BC19C File Offset: 0x000BA39C
+		// Token: 0x060011F1 RID: 4593 RVA: 0x000C26A8 File Offset: 0x000C08A8
 		public static FishingQteConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingQteConfigById.HandleId, ConfigFishingQteConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingQteConfig?(rootAsFishingQteConfig);
 		}
 
-		// Token: 0x04001435 RID: 5173
+		// Token: 0x040014C8 RID: 5320
 		private const string DB = "db_fishingqteconfig.db";
 
-		// Token: 0x04001436 RID: 5174
+		// Token: 0x040014C9 RID: 5321
 		private const string FILE = "k.可视化编辑/c.Csv/b.捕鱼转盘/*.csv*";
 
-		// Token: 0x04001437 RID: 5175
+		// Token: 0x040014CA RID: 5322
 		private const string TABLE = "FishingQteConfig";
 
-		// Token: 0x04001438 RID: 5176
+		// Token: 0x040014CB RID: 5323
 		private const string COMMAND = "select BinData from `FishingQteConfig` where Id=?";
 
-		// Token: 0x04001439 RID: 5177
+		// Token: 0x040014CC RID: 5324
 		private const string KEY_PREFIX = "FishingQteConfigById";
 
-		// Token: 0x0400143A RID: 5178
+		// Token: 0x040014CD RID: 5325
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400143B RID: 5179
+		// Token: 0x040014CE RID: 5326
 		private static int HandleId;
 	}
 }

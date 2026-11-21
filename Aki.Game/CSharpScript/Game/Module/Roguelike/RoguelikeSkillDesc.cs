@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
@@ -8,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E2E RID: 20014
+	// Token: 0x02003DF7 RID: 15863
 	public class RoguelikeSkillDesc : UiPanelBase
 	{
-		// Token: 0x060339B8 RID: 211384 RVA: 0x00C13964 File Offset: 0x00C11B64
+		// Token: 0x06028823 RID: 165923 RVA: 0x00B5CE98 File Offset: 0x00B5B098
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,13 +28,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060339B9 RID: 211385 RVA: 0x00C13A0F File Offset: 0x00C11C0F
+		// Token: 0x06028824 RID: 165924 RVA: 0x00B5CF43 File Offset: 0x00B5B143
 		protected override void OnStart()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060339BA RID: 211386 RVA: 0x00C13A18 File Offset: 0x00C11C18
+		// Token: 0x06028825 RID: 165925 RVA: 0x00B5CF4C File Offset: 0x00B5B14C
 		public void Refresh()
 		{
 			if (this.Data == null)
@@ -43,32 +42,32 @@ namespace CSharpScript.Game.Module.Roguelike
 				return;
 			}
 			RogueTalentTreeDesc? rogueTalentTreeDescConfig = RoguelikeConfig.Instance.GetRogueTalentTreeDescConfig(this.Data.Value.Describe);
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), rogueTalentTreeDescConfig.Value.BaseDesc, rogueTalentTreeDescConfig.Value.Params().ToArray<string>());
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), rogueTalentTreeDescConfig.Value.BaseDesc, rogueTalentTreeDescConfig.Value.Params());
 			if (this.Index % 2 == 1)
 			{
 				base.GetSprite(2).useChangeColor = true;
 			}
 		}
 
-		// Token: 0x0401B5F6 RID: 112118
+		// Token: 0x04015FC9 RID: 90057
 		public RogueTalentTree? Data;
 
-		// Token: 0x0401B5F7 RID: 112119
+		// Token: 0x04015FCA RID: 90058
 		public int Index;
 
-		// Token: 0x0200AFE0 RID: 45024
+		// Token: 0x02009A12 RID: 39442
 		private class ERoguelikeSkillDescDefine
 		{
-			// Token: 0x04035654 RID: 218708
+			// Token: 0x04030084 RID: 196740
 			public const int TexIcon = 0;
 
-			// Token: 0x04035655 RID: 218709
+			// Token: 0x04030085 RID: 196741
 			public const int TxtTitle = 1;
 
-			// Token: 0x04035656 RID: 218710
+			// Token: 0x04030086 RID: 196742
 			public const int SpriteBg = 2;
 
-			// Token: 0x04035657 RID: 218711
+			// Token: 0x04030087 RID: 196743
 			public const int TxtNum = 3;
 		}
 	}

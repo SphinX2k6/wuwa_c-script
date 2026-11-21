@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008E8 RID: 2280
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200098D RID: 2445
 	public class WindSourceComponent : IComponentBase
 	{
-		// Token: 0x060033BD RID: 13245 RVA: 0x00084674 File Offset: 0x00082874
+		// Token: 0x06003705 RID: 14085 RVA: 0x0008BCB0 File Offset: 0x00089EB0
 		private WindSourceComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033BE RID: 13246 RVA: 0x000846AC File Offset: 0x000828AC
+		// Token: 0x06003706 RID: 14086 RVA: 0x0008BCE8 File Offset: 0x00089EE8
 		public static WindSourceComponent Create([Nullable(2)] WindSourceComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033BF RID: 13247 RVA: 0x000846BF File Offset: 0x000828BF
+		// Token: 0x06003707 RID: 14087 RVA: 0x0008BCFB File Offset: 0x00089EFB
 		public static WindSourceComponent CreateFromSetValue([Nullable(2)] WindSourceComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033C0 RID: 13248 RVA: 0x000846D2 File Offset: 0x000828D2
+		// Token: 0x06003708 RID: 14088 RVA: 0x0008BD0E File Offset: 0x00089F0E
 		public new WindSourceComponent_SetValue ToSetValue()
 		{
 			return new WindSourceComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DEA RID: 3562
-		// (get) Token: 0x060033C1 RID: 13249 RVA: 0x00084700 File Offset: 0x00082900
-		// (set) Token: 0x060033C2 RID: 13250 RVA: 0x0008473A File Offset: 0x0008293A
+		// Token: 0x17000EB6 RID: 3766
+		// (get) Token: 0x06003709 RID: 14089 RVA: 0x0008BD3C File Offset: 0x00089F3C
+		// (set) Token: 0x0600370A RID: 14090 RVA: 0x0008BD76 File Offset: 0x00089F76
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DEB RID: 3563
-		// (get) Token: 0x060033C3 RID: 13251 RVA: 0x00084748 File Offset: 0x00082948
-		// (set) Token: 0x060033C4 RID: 13252 RVA: 0x00084772 File Offset: 0x00082972
+		// Token: 0x17000EB7 RID: 3767
+		// (get) Token: 0x0600370B RID: 14091 RVA: 0x0008BD84 File Offset: 0x00089F84
+		// (set) Token: 0x0600370C RID: 14092 RVA: 0x0008BDAE File Offset: 0x00089FAE
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DEC RID: 3564
-		// (get) Token: 0x060033C5 RID: 13253 RVA: 0x00084780 File Offset: 0x00082980
-		// (set) Token: 0x060033C6 RID: 13254 RVA: 0x000847E1 File Offset: 0x000829E1
+		// Token: 0x17000EB8 RID: 3768
+		// (get) Token: 0x0600370D RID: 14093 RVA: 0x0008BDBC File Offset: 0x00089FBC
+		// (set) Token: 0x0600370E RID: 14094 RVA: 0x0008BE1D File Offset: 0x0008A01D
 		public virtual IWindDirectional WindSource
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040021DF RID: 8671
+		// Token: 0x040023F6 RID: 9206
 		[Nullable(2)]
 		protected new WindSourceComponent FbInstance;
 
-		// Token: 0x040021E0 RID: 8672
+		// Token: 0x040023F7 RID: 9207
 		[Nullable(2)]
 		protected new WindSourceComponent_SetValue PocoInterface;
 
-		// Token: 0x040021E1 RID: 8673
+		// Token: 0x040023F8 RID: 9208
 		private IWindDirectional _WindSourceCache;
 
-		// Token: 0x040021E2 RID: 8674
+		// Token: 0x040023F9 RID: 9209
 		private bool _WindSourceInited;
 	}
 }

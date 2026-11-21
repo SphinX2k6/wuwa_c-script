@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FDC RID: 24540
+	// Token: 0x02006636 RID: 26166
 	public enum EPreloadObjectType : byte
 	{
-		// Token: 0x0400FF6F RID: 65391
+		// Token: 0x04010D40 RID: 68928
 		PreloadTrialCharacterForSkill,
-		// Token: 0x0400FF70 RID: 65392
+		// Token: 0x04010D41 RID: 68929
 		PreloadPhantomCharacterForSkill,
-		// Token: 0x0400FF71 RID: 65393
+		// Token: 0x04010D42 RID: 68930
 		PreloadFlows,
-		// Token: 0x0400FF72 RID: 65394
+		// Token: 0x04010D43 RID: 68931
 		PreloadMp4s,
-		// Token: 0x0400FF73 RID: 65395
+		// Token: 0x04010D44 RID: 68932
 		PreloadLinkResource
 	}
 }

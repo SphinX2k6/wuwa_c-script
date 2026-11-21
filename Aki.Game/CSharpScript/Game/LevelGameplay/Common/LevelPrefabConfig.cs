@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Common
 {
-	// Token: 0x02006F20 RID: 28448
+	// Token: 0x020060A1 RID: 24737
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelPrefabConfig
 	{
-		// Token: 0x17009B0A RID: 39690
-		// (get) Token: 0x060453A9 RID: 283561 RVA: 0x01121AF9 File Offset: 0x0111FCF9
-		// (set) Token: 0x060453AA RID: 283562 RVA: 0x01121B01 File Offset: 0x0111FD01
+		// Token: 0x17007049 RID: 28745
+		// (get) Token: 0x0603B557 RID: 243031 RVA: 0x010CBAA5 File Offset: 0x010C9CA5
+		// (set) Token: 0x0603B558 RID: 243032 RVA: 0x010CBAAD File Offset: 0x010C9CAD
 		public string[] CloseUroPrefab { get; set; } = Array.Empty<string>();
 	}
 }

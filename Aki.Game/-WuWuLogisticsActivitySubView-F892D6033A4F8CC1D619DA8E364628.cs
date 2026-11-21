@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200165D RID: 5725
+// Token: 0x02000B15 RID: 2837
 internal enum <WuWuLogisticsActivitySubView>F892D6033A4F8CC1D619DA8E364628F01919E82C6DF16F1438BB21EB1178465FC__EComponents
 {
-	// Token: 0x04004962 RID: 18786
+	// Token: 0x04004A08 RID: 18952
 	UiItemComActivityTitle,
-	// Token: 0x04004963 RID: 18787
+	// Token: 0x04004A09 RID: 18953
 	UiItemComActivityDescript,
-	// Token: 0x04004964 RID: 18788
+	// Token: 0x04004A0A RID: 18954
 	TxtProgressValue,
-	// Token: 0x04004965 RID: 18789
+	// Token: 0x04004A0B RID: 18955
 	UiItemComActivityReward,
-	// Token: 0x04004966 RID: 18790
+	// Token: 0x04004A0C RID: 18956
 	UiItemComActivityBottomGuide,
-	// Token: 0x04004967 RID: 18791
+	// Token: 0x04004A0D RID: 18957
 	PnlAactivedB,
-	// Token: 0x04004968 RID: 18792
+	// Token: 0x04004A0E RID: 18958
 	BtnConfirmB
 }

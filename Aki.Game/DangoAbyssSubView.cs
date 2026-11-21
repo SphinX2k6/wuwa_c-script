@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A5D RID: 6749
+// Token: 0x02000F1C RID: 3868
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssSubView : ActivitySubViewBase
 {
-	// Token: 0x0600C6B3 RID: 50867 RVA: 0x002D3554 File Offset: 0x002D1754
+	// Token: 0x06009AC3 RID: 39619 RVA: 0x002DE650 File Offset: 0x002DC850
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x0600C6B4 RID: 50868 RVA: 0x002D3660 File Offset: 0x002D1860
+	// Token: 0x06009AC4 RID: 39620 RVA: 0x002DE75C File Offset: 0x002DC95C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssSubView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -43,13 +43,13 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C6B5 RID: 50869 RVA: 0x002D36A3 File Offset: 0x002D18A3
+	// Token: 0x06009AC5 RID: 39621 RVA: 0x002DE79F File Offset: 0x002DC99F
 	protected override void OnStart()
 	{
 		this.DangoAbyssActivityData = (this.ActivityBaseData as DangoAbyssActivityData);
 	}
 
-	// Token: 0x0600C6B6 RID: 50870 RVA: 0x002D36B6 File Offset: 0x002D18B6
+	// Token: 0x06009AC6 RID: 39622 RVA: 0x002DE7B2 File Offset: 0x002DC9B2
 	protected override void OnBeforeShow()
 	{
 		this.BindRedDot();
@@ -59,14 +59,14 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600C6B7 RID: 50871 RVA: 0x002D36E8 File Offset: 0x002D18E8
+	// Token: 0x06009AC7 RID: 39623 RVA: 0x002DE7E4 File Offset: 0x002DC9E4
 	protected override void OnBeforeHide()
 	{
 		this.RemoveRedDot();
 		base.GetSpine(10).ClearTracks();
 	}
 
-	// Token: 0x0600C6B8 RID: 50872 RVA: 0x002D3700 File Offset: 0x002D1900
+	// Token: 0x06009AC8 RID: 39624 RVA: 0x002DE7FC File Offset: 0x002DC9FC
 	private void BindRedDot()
 	{
 		ActivityButtonItem limitRewardBtn = this.LimitRewardBtn;
@@ -82,7 +82,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		rewardBtn.BindRedDot(ERedDotName.RedDotDangoCommonReward, this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x0600C6B9 RID: 50873 RVA: 0x002D374E File Offset: 0x002D194E
+	// Token: 0x06009AC9 RID: 39625 RVA: 0x002DE84A File Offset: 0x002DCA4A
 	private void RemoveRedDot()
 	{
 		ActivityButtonItem limitRewardBtn = this.LimitRewardBtn;
@@ -98,7 +98,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		rewardBtn.UnBindGivenUid(this.ActivityBaseData.Id);
 	}
 
-	// Token: 0x0600C6BA RID: 50874 RVA: 0x002D3788 File Offset: 0x002D1988
+	// Token: 0x06009ACA RID: 39626 RVA: 0x002DE884 File Offset: 0x002DCA84
 	protected override void OnRefreshView()
 	{
 		Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -114,7 +114,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x0600C6BB RID: 50875 RVA: 0x002D37D0 File Offset: 0x002D19D0
+	// Token: 0x06009ACB RID: 39627 RVA: 0x002DE8CC File Offset: 0x002DCACC
 	private void RefreshProgressText()
 	{
 		bool flag = this.DangoAbyssActivityData.CheckInLimitTime();
@@ -136,7 +136,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.RewardBtn.SetText(rewardFinishProgressText);
 	}
 
-	// Token: 0x0600C6BC RID: 50876 RVA: 0x002D3834 File Offset: 0x002D1A34
+	// Token: 0x06009ACC RID: 39628 RVA: 0x002DE930 File Offset: 0x002DCB30
 	private void RefreshDesc()
 	{
 		Activity value = this.ActivityBaseData.LocalConfig.Value;
@@ -161,7 +161,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x0600C6BD RID: 50877 RVA: 0x002D38C4 File Offset: 0x002D1AC4
+	// Token: 0x06009ACD RID: 39629 RVA: 0x002DE9C0 File Offset: 0x002DCBC0
 	private void RefreshTitle()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
@@ -177,7 +177,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.TitleComponent.SetActivityBaseData(this.ActivityBaseData);
 	}
 
-	// Token: 0x0600C6BE RID: 50878 RVA: 0x002D393C File Offset: 0x002D1B3C
+	// Token: 0x06009ACE RID: 39630 RVA: 0x002DEA38 File Offset: 0x002DCC38
 	private void RefreshReward()
 	{
 		List<TItem> previewReward = this.ActivityBaseData.GetPreviewReward(null);
@@ -185,7 +185,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(previewReward, null);
 	}
 
-	// Token: 0x0600C6BF RID: 50879 RVA: 0x002D397C File Offset: 0x002D1B7C
+	// Token: 0x06009ACF RID: 39631 RVA: 0x002DEA78 File Offset: 0x002DCC78
 	private void RefreshState()
 	{
 		bool flag = this.ActivityBaseData.IsUnLock();
@@ -197,7 +197,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetUiActive(flag);
 	}
 
-	// Token: 0x0600C6C0 RID: 50880 RVA: 0x002D39DC File Offset: 0x002D1BDC
+	// Token: 0x06009AD0 RID: 39632 RVA: 0x002DEAD8 File Offset: 0x002DCCD8
 	private void RefreshFunctionalComponent()
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew("DangoAbyssEnterText", null);
@@ -206,7 +206,7 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x0600C6C1 RID: 50881 RVA: 0x002D3A32 File Offset: 0x002D1C32
+	// Token: 0x06009AD1 RID: 39633 RVA: 0x002DEB2E File Offset: 0x002DCD2E
 	private void FunctionExecute()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -223,23 +223,23 @@ public class DangoAbyssSubView : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x0600C6C2 RID: 50882 RVA: 0x002D3A50 File Offset: 0x002D1C50
+	// Token: 0x06009AD2 RID: 39634 RVA: 0x002DEB4C File Offset: 0x002DCD4C
 	protected override void OnTimer(float gap)
 	{
 		base.OnTimer(gap);
 		this.RefreshTitle();
 	}
 
-	// Token: 0x04005B8E RID: 23438
+	// Token: 0x04005C5D RID: 23645
 	private DangoAbyssActivityData DangoAbyssActivityData;
 
-	// Token: 0x04005B8F RID: 23439
+	// Token: 0x04005C5E RID: 23646
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04005B90 RID: 23440
+	// Token: 0x04005C5F RID: 23647
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04005B91 RID: 23441
+	// Token: 0x04005C60 RID: 23648
 	[Nullable(new byte[]
 	{
 		2,
@@ -247,50 +247,50 @@ public class DangoAbyssSubView : ActivitySubViewBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04005B92 RID: 23442
+	// Token: 0x04005C61 RID: 23649
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x04005B93 RID: 23443
+	// Token: 0x04005C62 RID: 23650
 	private ActivityButtonItem LimitRewardBtn;
 
-	// Token: 0x04005B94 RID: 23444
+	// Token: 0x04005C63 RID: 23651
 	private ActivityButtonItem RewardBtn;
 
-	// Token: 0x02007FAA RID: 32682
+	// Token: 0x02007139 RID: 28985
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029AEE RID: 170734
+		// Token: 0x04024E2B RID: 151083
 		public const int TitleItem = 0;
 
-		// Token: 0x04029AEF RID: 170735
+		// Token: 0x04024E2C RID: 151084
 		public const int DescItem = 1;
 
-		// Token: 0x04029AF0 RID: 170736
+		// Token: 0x04024E2D RID: 151085
 		public const int RewardItem = 2;
 
-		// Token: 0x04029AF1 RID: 170737
+		// Token: 0x04024E2E RID: 151086
 		public const int FunctionalAreaItem = 3;
 
-		// Token: 0x04029AF2 RID: 170738
+		// Token: 0x04024E2F RID: 151087
 		public const int LimitRewardBtn = 4;
 
-		// Token: 0x04029AF3 RID: 170739
+		// Token: 0x04024E30 RID: 151088
 		public const int LimitRewardProgress = 5;
 
-		// Token: 0x04029AF4 RID: 170740
+		// Token: 0x04024E31 RID: 151089
 		public const int RewardBtn = 6;
 
-		// Token: 0x04029AF5 RID: 170741
+		// Token: 0x04024E32 RID: 151090
 		public const int RewardProgress = 7;
 
-		// Token: 0x04029AF6 RID: 170742
+		// Token: 0x04024E33 RID: 151091
 		public const int LimitRewardBtnItem = 8;
 
-		// Token: 0x04029AF7 RID: 170743
+		// Token: 0x04024E34 RID: 151092
 		public const int RewardBtnItem = 9;
 
-		// Token: 0x04029AF8 RID: 170744
+		// Token: 0x04024E35 RID: 151093
 		public const int SpineActor = 10;
 	}
 }

@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010DA RID: 4314
+// Token: 0x0200058E RID: 1422
 [NullableContext(1)]
 [Nullable(0)]
 public class AdvanceNoticeRootView : UiViewBase
 {
-	// Token: 0x06007049 RID: 28745 RVA: 0x0016E539 File Offset: 0x0016C739
+	// Token: 0x060043DF RID: 17375 RVA: 0x00176EF5 File Offset: 0x001750F5
 	public AdvanceNoticeRootView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600704A RID: 28746 RVA: 0x0016E544 File Offset: 0x0016C744
+	// Token: 0x060043E0 RID: 17376 RVA: 0x00176F00 File Offset: 0x00175100
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600704B RID: 28747 RVA: 0x0016E660 File Offset: 0x0016C860
+	// Token: 0x060043E1 RID: 17377 RVA: 0x0017701C File Offset: 0x0017521C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AdvanceNoticeRootView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600704C RID: 28748 RVA: 0x0016E6A4 File Offset: 0x0016C8A4
+	// Token: 0x060043E2 RID: 17378 RVA: 0x00177060 File Offset: 0x00175260
 	protected override void OnBeforeShow()
 	{
 		this.HideArrow();
@@ -63,7 +63,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		this.TabComponent.LateScrollToToggleByIndex(num);
 	}
 
-	// Token: 0x0600704D RID: 28749 RVA: 0x0016E6E0 File Offset: 0x0016C8E0
+	// Token: 0x060043E3 RID: 17379 RVA: 0x0017709C File Offset: 0x0017529C
 	protected void InitTabComponent()
 	{
 		CommonTabComponentData<AdvanceNoticeTabItem> data = new CommonTabComponentData<AdvanceNoticeTabItem>(new Func<UUIItem, int?, AdvanceNoticeTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -72,7 +72,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		this.TabViewComponent = new TabViewComponent<AdvanceNoticeViewModel>(base.GetItem(1), EKeyMode.Default);
 	}
 
-	// Token: 0x0600704E RID: 28750 RVA: 0x0016E758 File Offset: 0x0016C958
+	// Token: 0x060043E4 RID: 17380 RVA: 0x00177114 File Offset: 0x00175314
 	private UniTask InitTabListAsync()
 	{
 		AdvanceNoticeRootView.<InitTabListAsync>d__11 <InitTabListAsync>d__;
@@ -83,13 +83,13 @@ public class AdvanceNoticeRootView : UiViewBase
 		return <InitTabListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600704F RID: 28751 RVA: 0x0016E79B File Offset: 0x0016C99B
+	// Token: 0x060043E5 RID: 17381 RVA: 0x00177157 File Offset: 0x00175357
 	private AdvanceNoticeTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new AdvanceNoticeTabItem();
 	}
 
-	// Token: 0x06007050 RID: 28752 RVA: 0x0016E7A4 File Offset: 0x0016C9A4
+	// Token: 0x060043E6 RID: 17382 RVA: 0x00177160 File Offset: 0x00175360
 	private void ToggleCallBack(int index)
 	{
 		AdvanceNoticeTabItem tabItemByIndex = this.TabComponent.GetTabItemByIndex(index);
@@ -107,7 +107,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		viewModel.ClickTabLogEvent();
 	}
 
-	// Token: 0x06007051 RID: 28753 RVA: 0x0016E83C File Offset: 0x0016CA3C
+	// Token: 0x060043E7 RID: 17383 RVA: 0x001771F8 File Offset: 0x001753F8
 	private CommonTabData GetCommonData(int index)
 	{
 		int id = this.ViewModel.TabList[index];
@@ -118,7 +118,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		return commonTabData;
 	}
 
-	// Token: 0x06007052 RID: 28754 RVA: 0x0016E8AC File Offset: 0x0016CAAC
+	// Token: 0x060043E8 RID: 17384 RVA: 0x00177268 File Offset: 0x00175468
 	private void OnSwitchSubTab(int subTabIndex)
 	{
 		AdvanceNoticeTabViewBase advanceNoticeTabViewBase = this.TabViewComponent.GetTabViewByTabKey(this.ViewModel.CurrentTabView, null) as AdvanceNoticeTabViewBase;
@@ -128,25 +128,25 @@ public class AdvanceNoticeRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007053 RID: 28755 RVA: 0x0016E8E8 File Offset: 0x0016CAE8
+	// Token: 0x060043E9 RID: 17385 RVA: 0x001772A4 File Offset: 0x001754A4
 	private void OnCloseClicked()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007054 RID: 28756 RVA: 0x0016E8F1 File Offset: 0x0016CAF1
+	// Token: 0x060043EA RID: 17386 RVA: 0x001772AD File Offset: 0x001754AD
 	private void OnLeftArrowButtonClick()
 	{
 		this.AdvanceNoticeSwitchComponent.SelectPreviousThumb();
 	}
 
-	// Token: 0x06007055 RID: 28757 RVA: 0x0016E8FE File Offset: 0x0016CAFE
+	// Token: 0x060043EB RID: 17387 RVA: 0x001772BA File Offset: 0x001754BA
 	private void OnRightArrowButtonClick()
 	{
 		this.AdvanceNoticeSwitchComponent.SelectNextThumb();
 	}
 
-	// Token: 0x06007056 RID: 28758 RVA: 0x0016E90B File Offset: 0x0016CB0B
+	// Token: 0x060043EC RID: 17388 RVA: 0x001772C7 File Offset: 0x001754C7
 	private void OnTabScrollValueChange(FVector2D _)
 	{
 		if (!this.HasTabScrollFirstLateUpdate)
@@ -156,7 +156,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		this.RefreshArrow();
 	}
 
-	// Token: 0x06007057 RID: 28759 RVA: 0x0016E91C File Offset: 0x0016CB1C
+	// Token: 0x060043ED RID: 17389 RVA: 0x001772D8 File Offset: 0x001754D8
 	private void OnTabScrollLateUpdate(float _)
 	{
 		if (!this.HasTabScrollFirstLateUpdate)
@@ -166,7 +166,7 @@ public class AdvanceNoticeRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007058 RID: 28760 RVA: 0x0016E934 File Offset: 0x0016CB34
+	// Token: 0x060043EE RID: 17390 RVA: 0x001772F0 File Offset: 0x001754F0
 	private void RefreshArrow()
 	{
 		int count = this.ViewModel.TabList.Count;
@@ -195,14 +195,14 @@ public class AdvanceNoticeRootView : UiViewBase
 		base.GetItem(3).SetUIActive(eoutOfBoundsType3 == EOutOfBoundsType.OutOfEnd);
 	}
 
-	// Token: 0x06007059 RID: 28761 RVA: 0x0016EA00 File Offset: 0x0016CC00
+	// Token: 0x060043EF RID: 17391 RVA: 0x001773BC File Offset: 0x001755BC
 	private void HideArrow()
 	{
 		base.GetItem(2).SetUIActive(false);
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x0600705A RID: 28762 RVA: 0x0016EA1C File Offset: 0x0016CC1C
+	// Token: 0x060043F0 RID: 17392 RVA: 0x001773D8 File Offset: 0x001755D8
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TabComponent != null)
@@ -212,11 +212,11 @@ public class AdvanceNoticeRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400341B RID: 13339
+	// Token: 0x040034B4 RID: 13492
 	[Nullable(2)]
 	protected AdvanceNoticeViewModel ViewModel;
 
-	// Token: 0x0400341C RID: 13340
+	// Token: 0x040034B5 RID: 13493
 	[Nullable(new byte[]
 	{
 		2,
@@ -224,7 +224,7 @@ public class AdvanceNoticeRootView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<AdvanceNoticeTabItem> TabComponent;
 
-	// Token: 0x0400341D RID: 13341
+	// Token: 0x040034B6 RID: 13494
 	[Nullable(new byte[]
 	{
 		2,
@@ -232,42 +232,42 @@ public class AdvanceNoticeRootView : UiViewBase
 	})]
 	protected TabViewComponent<AdvanceNoticeViewModel> TabViewComponent;
 
-	// Token: 0x0400341E RID: 13342
+	// Token: 0x040034B7 RID: 13495
 	[Nullable(2)]
 	protected AdvanceNoticeSwitchComponent AdvanceNoticeSwitchComponent;
 
-	// Token: 0x0400341F RID: 13343
+	// Token: 0x040034B8 RID: 13496
 	protected bool HasTabScrollFirstLateUpdate;
 
-	// Token: 0x020076A1 RID: 30369
+	// Token: 0x02006835 RID: 26677
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402726C RID: 160364
+		// Token: 0x040225B5 RID: 140725
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402726D RID: 160365
+		// Token: 0x040225B6 RID: 140726
 		public const int ContentRootItem = 1;
 
-		// Token: 0x0402726E RID: 160366
+		// Token: 0x040225B7 RID: 140727
 		public const int ArrowUpItem = 2;
 
-		// Token: 0x0402726F RID: 160367
+		// Token: 0x040225B8 RID: 140728
 		public const int ArrowDownItem = 3;
 
-		// Token: 0x04027270 RID: 160368
+		// Token: 0x040225B9 RID: 140729
 		public const int ThumbScrollView = 4;
 
-		// Token: 0x04027271 RID: 160369
+		// Token: 0x040225BA RID: 140730
 		public const int ThumbItem = 5;
 
-		// Token: 0x04027272 RID: 160370
+		// Token: 0x040225BB RID: 140731
 		public const int LeftArrowButton = 6;
 
-		// Token: 0x04027273 RID: 160371
+		// Token: 0x040225BC RID: 140732
 		public const int RightArrowButton = 7;
 
-		// Token: 0x04027274 RID: 160372
+		// Token: 0x040225BD RID: 140733
 		public const int ReminderText = 8;
 	}
 }

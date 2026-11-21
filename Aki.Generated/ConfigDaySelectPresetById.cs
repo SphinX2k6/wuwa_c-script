@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001F9 RID: 505
+	// Token: 0x0200020B RID: 523
 	public class ConfigDaySelectPresetById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000BD9 RID: 3033 RVA: 0x0009CA2F File Offset: 0x0009AC2F
+		// Token: 0x06000C45 RID: 3141 RVA: 0x000A2967 File Offset: 0x000A0B67
 		static ConfigDaySelectPresetById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDaySelectPresetById.CreateStaticDefaultValue), new Action(ConfigDaySelectPresetById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000BDA RID: 3034 RVA: 0x0009CA50 File Offset: 0x0009AC50
+		// Token: 0x06000C46 RID: 3142 RVA: 0x000A2988 File Offset: 0x000A0B88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDaySelectPresetById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000BDB RID: 3035 RVA: 0x0009CACF File Offset: 0x0009ACCF
+		// Token: 0x06000C47 RID: 3143 RVA: 0x000A2A07 File Offset: 0x000A0C07
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDaySelectPresetById.LogPair = null;
 			ConfigDaySelectPresetById.HandleId = 0;
 		}
 
-		// Token: 0x06000BDC RID: 3036 RVA: 0x0009CADD File Offset: 0x0009ACDD
+		// Token: 0x06000C48 RID: 3144 RVA: 0x000A2A15 File Offset: 0x000A0C15
 		public static void Init()
 		{
 			ConfigDaySelectPresetById.HandleId = ConfigCommon.InitDataStatement(ConfigDaySelectPresetById.HandleId, "db_time_of_day.db", "select BinData from `DaySelectPreset` where Id=?");
 		}
 
-		// Token: 0x06000BDD RID: 3037 RVA: 0x0009CAF8 File Offset: 0x0009ACF8
+		// Token: 0x06000C49 RID: 3145 RVA: 0x000A2A30 File Offset: 0x000A0C30
 		public static DaySelectPreset? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDaySelectPresetById.HandleId, ConfigDaySelectPresetById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DaySelectPreset?(rootAsDaySelectPreset);
 		}
 
-		// Token: 0x04000DB3 RID: 3507
+		// Token: 0x04000E31 RID: 3633
 		private const string DB = "db_time_of_day.db";
 
-		// Token: 0x04000DB4 RID: 3508
+		// Token: 0x04000E32 RID: 3634
 		private const string FILE = "s.时间系统.xlsx";
 
-		// Token: 0x04000DB5 RID: 3509
+		// Token: 0x04000E33 RID: 3635
 		private const string TABLE = "DaySelectPreset";
 
-		// Token: 0x04000DB6 RID: 3510
+		// Token: 0x04000E34 RID: 3636
 		private const string COMMAND = "select BinData from `DaySelectPreset` where Id=?";
 
-		// Token: 0x04000DB7 RID: 3511
+		// Token: 0x04000E35 RID: 3637
 		private const string KEY_PREFIX = "DaySelectPresetById";
 
-		// Token: 0x04000DB8 RID: 3512
+		// Token: 0x04000E36 RID: 3638
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DB9 RID: 3513
+		// Token: 0x04000E37 RID: 3639
 		private static int HandleId;
 	}
 }

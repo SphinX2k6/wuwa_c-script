@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004654 RID: 18004
+	// Token: 0x02003585 RID: 13701
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupTypeRightItem : CommonPopViewBase, ICommonPopView
 	{
-		// Token: 0x0602E7A1 RID: 190369 RVA: 0x00ABC9C6 File Offset: 0x00ABABC6
+		// Token: 0x06022EEB RID: 143083 RVA: 0x009E9FF6 File Offset: 0x009E81F6
 		public override UUIItem GetAttachParent()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0602E7A2 RID: 190370 RVA: 0x00ABC9CF File Offset: 0x00ABABCF
+		// Token: 0x06022EEC RID: 143084 RVA: 0x009E9FFF File Offset: 0x009E81FF
 		public override UUIItem GetCostParent()
 		{
 			return null;
 		}
 
-		// Token: 0x0602E7A3 RID: 190371 RVA: 0x00ABC9D4 File Offset: 0x00ABABD4
+		// Token: 0x06022EED RID: 143085 RVA: 0x009EA004 File Offset: 0x009E8204
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Ui
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602E7A4 RID: 190372 RVA: 0x00ABCAE0 File Offset: 0x00ABACE0
+		// Token: 0x06022EEE RID: 143086 RVA: 0x009EA110 File Offset: 0x009E8310
 		public override void OnSetBackBtnShowState(bool state)
 		{
 			UUIItem uuiitem = base.GetButton(0).RootUIComp.Get();
@@ -61,34 +61,34 @@ namespace CSharpScript.Game.Ui
 			uuiitem.SetUIActive(state);
 		}
 
-		// Token: 0x0602E7A5 RID: 190373 RVA: 0x00ABCB0C File Offset: 0x00ABAD0C
+		// Token: 0x06022EEF RID: 143087 RVA: 0x009EA13C File Offset: 0x009E833C
 		public override void OnSetCloseBtnInteractive(bool state)
 		{
 		}
 
-		// Token: 0x0602E7A6 RID: 190374 RVA: 0x00ABCB0E File Offset: 0x00ABAD0E
+		// Token: 0x06022EF0 RID: 143088 RVA: 0x009EA13E File Offset: 0x009E833E
 		public override void OnSetHelpButtonActive(bool state)
 		{
 		}
 
-		// Token: 0x0602E7A7 RID: 190375 RVA: 0x00ABCB10 File Offset: 0x00ABAD10
+		// Token: 0x06022EF1 RID: 143089 RVA: 0x009EA140 File Offset: 0x009E8340
 		public override void OnSetTitleByTextIdAndArg(string textId, params object[] args)
 		{
 		}
 
-		// Token: 0x0602E7A8 RID: 190376 RVA: 0x00ABCB12 File Offset: 0x00ABAD12
+		// Token: 0x06022EF2 RID: 143090 RVA: 0x009EA142 File Offset: 0x009E8342
 		public override void OnRefreshCost(CommonCurrencyItem[] commonCurrencyItemList)
 		{
 		}
 
-		// Token: 0x0602E7A9 RID: 190377 RVA: 0x00ABCB14 File Offset: 0x00ABAD14
+		// Token: 0x06022EF3 RID: 143091 RVA: 0x009EA144 File Offset: 0x009E8344
 		public void ShowMoraleBg(bool show)
 		{
 			this.SetMoraleBgActive(show);
 			this.SetWhiteBgActive(!show);
 		}
 
-		// Token: 0x0602E7AA RID: 190378 RVA: 0x00ABCB27 File Offset: 0x00ABAD27
+		// Token: 0x06022EF4 RID: 143092 RVA: 0x009EA157 File Offset: 0x009E8357
 		private void SetMoraleBgActive(bool active)
 		{
 			UUITexture texture = base.GetTexture(4);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Ui
 			texture.SetUIActive(active);
 		}
 
-		// Token: 0x0602E7AB RID: 190379 RVA: 0x00ABCB3B File Offset: 0x00ABAD3B
+		// Token: 0x06022EF5 RID: 143093 RVA: 0x009EA16B File Offset: 0x009E836B
 		private void SetWhiteBgActive(bool active)
 		{
 			UUITexture texture = base.GetTexture(3);
@@ -110,23 +110,23 @@ namespace CSharpScript.Game.Ui
 			texture.SetUIActive(active);
 		}
 
-		// Token: 0x0200A8B9 RID: 43193
+		// Token: 0x02009275 RID: 37493
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040335C9 RID: 210377
+			// Token: 0x0402DD5F RID: 187743
 			public const int BackBtn = 0;
 
-			// Token: 0x040335CA RID: 210378
+			// Token: 0x0402DD60 RID: 187744
 			public const int Content = 1;
 
-			// Token: 0x040335CB RID: 210379
+			// Token: 0x0402DD61 RID: 187745
 			public const int TexturePatternB = 2;
 
-			// Token: 0x040335CC RID: 210380
+			// Token: 0x0402DD62 RID: 187746
 			public const int TextureWitheBgTop = 3;
 
-			// Token: 0x040335CD RID: 210381
+			// Token: 0x0402DD63 RID: 187747
 			public const int TextureMoraleBgTop = 4;
 		}
 	}

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006828 RID: 26664
+	// Token: 0x02005778 RID: 22392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlOutBackpackFocusMap
 	{
-		// Token: 0x060428AA RID: 272554 RVA: 0x0102BAA0 File Offset: 0x01029CA0
+		// Token: 0x060373FE RID: 226302 RVA: 0x00F6CFDC File Offset: 0x00F6B1DC
 		public void Bind(DangoBrawlOutBackpackItemBase item)
 		{
 			UUIItem rootItem = item.GetRootItem();
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060428AB RID: 272555 RVA: 0x0102BAC4 File Offset: 0x01029CC4
+		// Token: 0x060373FF RID: 226303 RVA: 0x00F6D000 File Offset: 0x00F6B200
 		public void Clear()
 		{
 			this.Map.Clear();
 		}
 
-		// Token: 0x060428AC RID: 272556 RVA: 0x0102BAD4 File Offset: 0x01029CD4
+		// Token: 0x06037400 RID: 226304 RVA: 0x00F6D010 File Offset: 0x00F6B210
 		[NullableContext(2)]
 		public DangoBrawlOutBackpackItemBase TryFindFocusItem()
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return result;
 		}
 
-		// Token: 0x04022AA6 RID: 141990
+		// Token: 0x0401D303 RID: 119555
 		private readonly Dictionary<UUIItem, DangoBrawlOutBackpackItemBase> Map = new Dictionary<UUIItem, DangoBrawlOutBackpackItemBase>();
 	}
 }

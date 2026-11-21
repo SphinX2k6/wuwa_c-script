@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Define
 {
-	// Token: 0x02006A3F RID: 27199
+	// Token: 0x02005B9C RID: 23452
 	public enum EKuroSplineConstrainedDragMode
 	{
-		// Token: 0x0402350E RID: 144654
+		// Token: 0x0401E700 RID: 124672
 		Magnetic,
-		// Token: 0x0402350F RID: 144655
+		// Token: 0x0401E701 RID: 124673
 		Projected
 	}
 }

@@ -4,17 +4,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AFE RID: 27390
+	// Token: 0x02005C76 RID: 23670
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventChangeNpcPerformState : LevelEventBase
 	{
-		// Token: 0x06044038 RID: 278584 RVA: 0x010B5A4B File Offset: 0x010B3C4B
+		// Token: 0x0603A18A RID: 237962 RVA: 0x0105F2E7 File Offset: 0x0105D4E7
 		public LevelEventChangeNpcPerformState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044039 RID: 278585 RVA: 0x010B5A60 File Offset: 0x010B3C60
+		// Token: 0x0603A18B RID: 237963 RVA: 0x0105F2FC File Offset: 0x0105D4FC
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			ChangeNpcPerformState changeNpcPerformState = inParams as ChangeNpcPerformState;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(changeNpcPerformState.EntityId);
 		}
 
-		// Token: 0x0604403A RID: 278586 RVA: 0x010B5B00 File Offset: 0x010B3D00
+		// Token: 0x0603A18C RID: 237964 RVA: 0x0105F39C File Offset: 0x0105D59C
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.EntityId);
@@ -67,17 +67,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604403B RID: 278587 RVA: 0x010B5B91 File Offset: 0x010B3D91
+		// Token: 0x0603A18D RID: 237965 RVA: 0x0105F42D File Offset: 0x0105D62D
 		protected override void OnReset()
 		{
 			this.State = "";
 			this.EntityId = 0;
 		}
 
-		// Token: 0x040238B9 RID: 145593
+		// Token: 0x0401EB5B RID: 125787
 		private string State = "";
 
-		// Token: 0x040238BA RID: 145594
+		// Token: 0x0401EB5C RID: 125788
 		private int EntityId;
 	}
 }

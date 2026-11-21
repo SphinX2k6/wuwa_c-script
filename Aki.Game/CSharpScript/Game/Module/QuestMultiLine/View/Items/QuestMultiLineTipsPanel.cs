@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FCC RID: 20428
+	// Token: 0x02003F95 RID: 16277
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuestMultiLineTipsPanel : UiPanelBase
 	{
-		// Token: 0x0603443F RID: 214079 RVA: 0x00C46224 File Offset: 0x00C44424
+		// Token: 0x060292AD RID: 168621 RVA: 0x00B8F9DC File Offset: 0x00B8DBDC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x06034440 RID: 214080 RVA: 0x00C4633C File Offset: 0x00C4453C
+		// Token: 0x060292AE RID: 168622 RVA: 0x00B8FAF4 File Offset: 0x00B8DCF4
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06034441 RID: 214081 RVA: 0x00C4634F File Offset: 0x00C4454F
+		// Token: 0x060292AF RID: 168623 RVA: 0x00B8FB07 File Offset: 0x00B8DD07
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06034442 RID: 214082 RVA: 0x00C4636C File Offset: 0x00C4456C
+		// Token: 0x060292B0 RID: 168624 RVA: 0x00B8FB24 File Offset: 0x00B8DD24
 		[NullableContext(1)]
 		public void RefreshTips(QuestMultiLineComponentData componentData)
 		{
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			base.GetSprite(3).SetUIActive(false);
 		}
 
-		// Token: 0x06034443 RID: 214083 RVA: 0x00C46520 File Offset: 0x00C44720
+		// Token: 0x060292B1 RID: 168625 RVA: 0x00B8FCD8 File Offset: 0x00B8DED8
 		public void SetHideCallback(Action callback)
 		{
 			this.HideCallback = callback;
 		}
 
-		// Token: 0x06034444 RID: 214084 RVA: 0x00C46529 File Offset: 0x00C44729
+		// Token: 0x060292B2 RID: 168626 RVA: 0x00B8FCE1 File Offset: 0x00B8DEE1
 		public void SetHideSelfBtnInterceptor(Func<bool> interceptor)
 		{
 			this.HideSelfBtnInterceptor = interceptor;
 		}
 
-		// Token: 0x06034445 RID: 214085 RVA: 0x00C46534 File Offset: 0x00C44734
+		// Token: 0x060292B3 RID: 168627 RVA: 0x00B8FCEC File Offset: 0x00B8DEEC
 		public UniTask ShowAndPlayStartAsync()
 		{
 			QuestMultiLineTipsPanel.<ShowAndPlayStartAsync>d__10 <ShowAndPlayStartAsync>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <ShowAndPlayStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034446 RID: 214086 RVA: 0x00C46578 File Offset: 0x00C44778
+		// Token: 0x060292B4 RID: 168628 RVA: 0x00B8FD30 File Offset: 0x00B8DF30
 		public UniTask PlayCloseAndHideAsync()
 		{
 			QuestMultiLineTipsPanel.<PlayCloseAndHideAsync>d__11 <PlayCloseAndHideAsync>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayCloseAndHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034447 RID: 214087 RVA: 0x00C465BB File Offset: 0x00C447BB
+		// Token: 0x060292B5 RID: 168629 RVA: 0x00B8FD73 File Offset: 0x00B8DF73
 		private void HideSelf()
 		{
 			Func<bool> hideSelfBtnInterceptor = this.HideSelfBtnInterceptor;
@@ -139,16 +139,16 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			AudioSystem.Instance.PostEvent("play_ui_ia_com_close");
 		}
 
-		// Token: 0x0401BCDF RID: 113887
+		// Token: 0x040166B4 RID: 91828
 		private QuestMultiLineComponentData ComponentData;
 
-		// Token: 0x0401BCE0 RID: 113888
+		// Token: 0x040166B5 RID: 91829
 		private Action HideCallback;
 
-		// Token: 0x0401BCE1 RID: 113889
+		// Token: 0x040166B6 RID: 91830
 		private Func<bool> HideSelfBtnInterceptor;
 
-		// Token: 0x0401BCE2 RID: 113890
+		// Token: 0x040166B7 RID: 91831
 		private LevelSequencePlayer SequencePlayer;
 	}
 }

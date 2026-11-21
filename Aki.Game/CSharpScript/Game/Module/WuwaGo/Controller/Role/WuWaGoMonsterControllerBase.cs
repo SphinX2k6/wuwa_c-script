@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 {
-	// Token: 0x0200475C RID: 18268
+	// Token: 0x0200368D RID: 13965
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,12 +19,12 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 	})]
 	public abstract class WuWaGoMonsterControllerBase<[Nullable(0)] TRole> : WuWaGoRoleController<TRole>, IWuWaGoMonsterController where TRole : WuWaGoRole
 	{
-		// Token: 0x0602FC11 RID: 195601 RVA: 0x00B104B3 File Offset: 0x00B0E6B3
+		// Token: 0x060243DB RID: 148443 RVA: 0x00A40473 File Offset: 0x00A3E673
 		protected WuWaGoMonsterControllerBase(TRole role, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(role, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x0602FC12 RID: 195602 RVA: 0x00B104C9 File Offset: 0x00B0E6C9
+		// Token: 0x060243DC RID: 148444 RVA: 0x00A40489 File Offset: 0x00A3E689
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return true;
 		}
 
-		// Token: 0x0602FC13 RID: 195603 RVA: 0x00B104E8 File Offset: 0x00B0E6E8
+		// Token: 0x060243DD RID: 148445 RVA: 0x00A404A8 File Offset: 0x00A3E6A8
 		public override void OnEnterRunning()
 		{
 			this.RestoreAttackRangeFromBusy("WuWaGo.AttackRange.Running");
 		}
 
-		// Token: 0x0602FC14 RID: 195604 RVA: 0x00B104F8 File Offset: 0x00B0E6F8
+		// Token: 0x060243DE RID: 148446 RVA: 0x00A404B8 File Offset: 0x00A3E6B8
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -54,19 +54,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.AttackRangeEffectHandle = 0;
 		}
 
-		// Token: 0x0602FC15 RID: 195605 RVA: 0x00B10552 File Offset: 0x00B0E752
+		// Token: 0x060243DF RID: 148447 RVA: 0x00A40512 File Offset: 0x00A3E712
 		protected override void OnBeforeExecuteAction()
 		{
 			this.HideAttackRangeForBusy("WuWaGo.AttackRange.Acting");
 		}
 
-		// Token: 0x0602FC16 RID: 195606 RVA: 0x00B1055F File Offset: 0x00B0E75F
+		// Token: 0x060243E0 RID: 148448 RVA: 0x00A4051F File Offset: 0x00A3E71F
 		protected override void OnAfterExecuteAction()
 		{
 			this.RestoreAttackRangeFromBusy("WuWaGo.AttackRange.Idle");
 		}
 
-		// Token: 0x0602FC17 RID: 195607 RVA: 0x00B1056C File Offset: 0x00B0E76C
+		// Token: 0x060243E1 RID: 148449 RVA: 0x00A4052C File Offset: 0x00A3E72C
 		public override void OnRollbackRestore()
 		{
 			base.OnRollbackRestore();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.RestoreAttackRangeFromBusy("WuWaGo.AttackRange.RollbackRestore");
 		}
 
-		// Token: 0x0602FC18 RID: 195608 RVA: 0x00B105A3 File Offset: 0x00B0E7A3
+		// Token: 0x060243E2 RID: 148450 RVA: 0x00A40563 File Offset: 0x00A3E763
 		public override void SyncRuntimePresentationAfterCoordinateChanged()
 		{
 			if (!EffectSystem.Instance.IsValid(this.AttackRangeEffectHandle))
@@ -89,19 +89,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			this.SyncAttackRangeEffectTransform();
 		}
 
-		// Token: 0x0602FC19 RID: 195609 RVA: 0x00B105BE File Offset: 0x00B0E7BE
+		// Token: 0x060243E3 RID: 148451 RVA: 0x00A4057E File Offset: 0x00A3E77E
 		public override void HideAttackRangeEffect(string reason)
 		{
 			this.HideAttackRangeForBusy(reason);
 		}
 
-		// Token: 0x0602FC1A RID: 195610 RVA: 0x00B105C7 File Offset: 0x00B0E7C7
+		// Token: 0x060243E4 RID: 148452 RVA: 0x00A40587 File Offset: 0x00A3E787
 		public override void ShowAttackRangeEffect(string reason)
 		{
 			this.RestoreAttackRangeFromBusy(reason);
 		}
 
-		// Token: 0x0602FC1B RID: 195611 RVA: 0x00B105D0 File Offset: 0x00B0E7D0
+		// Token: 0x060243E5 RID: 148453 RVA: 0x00A40590 File Offset: 0x00A3E790
 		[NullableContext(2)]
 		public override UniTask TakeAttack(bool playBeHitAnim, UAnimMontage deathMontage = null)
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <TakeAttack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC1C RID: 195612 RVA: 0x00B10624 File Offset: 0x00B0E824
+		// Token: 0x060243E6 RID: 148454 RVA: 0x00A405E4 File Offset: 0x00A3E7E4
 		public UniTask ExecutePostMovableFloorAttackJudgement()
 		{
 			WuWaGoMonsterControllerBase<TRole>.<ExecutePostMovableFloorAttackJudgement>d__15 <ExecutePostMovableFloorAttackJudgement>d__;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <ExecutePostMovableFloorAttackJudgement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC1D RID: 195613 RVA: 0x00B10667 File Offset: 0x00B0E867
+		// Token: 0x060243E7 RID: 148455 RVA: 0x00A40627 File Offset: 0x00A3E827
 		private void HideAttackRangeForBusy(string reason)
 		{
 			if (this.IsAttackRangeHidden)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			EffectSystem.Instance.SetEffectHidden(this.AttackRangeEffectHandle, true, reason, false);
 		}
 
-		// Token: 0x0602FC1E RID: 195614 RVA: 0x00B106A0 File Offset: 0x00B0E8A0
+		// Token: 0x060243E8 RID: 148456 RVA: 0x00A40660 File Offset: 0x00A3E860
 		private void RestoreAttackRangeFromBusy(string reason)
 		{
 			if (!this.IsAttackRangeHidden)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			EffectSystem.Instance.SetEffectHidden(this.AttackRangeEffectHandle, false, reason, false);
 		}
 
-		// Token: 0x0602FC1F RID: 195615 RVA: 0x00B106FC File Offset: 0x00B0E8FC
+		// Token: 0x060243E9 RID: 148457 RVA: 0x00A406BC File Offset: 0x00A3E8BC
 		private Rotator GetAttackRangeEffectRotator()
 		{
 			Rotator rotator = this.Role.Rotator;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return this.TempAttackRangeRotator;
 		}
 
-		// Token: 0x0602FC20 RID: 195616 RVA: 0x00B10744 File Offset: 0x00B0E944
+		// Token: 0x060243EA RID: 148458 RVA: 0x00A40704 File Offset: 0x00A3E904
 		private UniTask SpawnAttackRangeEffect()
 		{
 			WuWaGoMonsterControllerBase<TRole>.<SpawnAttackRangeEffect>d__19 <SpawnAttackRangeEffect>d__;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			return <SpawnAttackRangeEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FC21 RID: 195617 RVA: 0x00B10788 File Offset: 0x00B0E988
+		// Token: 0x060243EB RID: 148459 RVA: 0x00A40748 File Offset: 0x00A3E948
 		private void SyncAttackRangeEffectTransform()
 		{
 			AActor sureEffectActor = EffectSystem.Instance.GetSureEffectActor(this.AttackRangeEffectHandle);
@@ -199,16 +199,16 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 			sureEffectActor.D_K2_SetActorLocationAndRotation(worldPositionByCoordinate.ToUeVector(false), quat.Rotator(null).ToUeRotator(), false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x04019C45 RID: 105541
+		// Token: 0x040142F5 RID: 82677
 		private int AttackRangeEffectHandle;
 
-		// Token: 0x04019C46 RID: 105542
+		// Token: 0x040142F6 RID: 82678
 		private int AttackRangeEffectRequestSeq;
 
-		// Token: 0x04019C47 RID: 105543
+		// Token: 0x040142F7 RID: 82679
 		private readonly Rotator TempAttackRangeRotator = Rotator.Create();
 
-		// Token: 0x04019C48 RID: 105544
+		// Token: 0x040142F8 RID: 82680
 		private bool IsAttackRangeHidden;
 	}
 }

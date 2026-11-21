@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025D9 RID: 9689
+	// Token: 0x02002898 RID: 10392
 	public class IProgramSpecialConfigBase
 	{
-		// Token: 0x0600D9CE RID: 55758 RVA: 0x00207AF7 File Offset: 0x00205CF7
-		[NullableContext(1)]
+		// Token: 0x0600E796 RID: 59286 RVA: 0x002241AB File Offset: 0x002223AB
 		public static IProgramSpecialConfigBase Create(IProgramSpecialConfigBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FDE RID: 16350
-		// (get) Token: 0x0600D9CF RID: 55759 RVA: 0x00207B16 File Offset: 0x00205D16
+		// Token: 0x17004314 RID: 17172
+		// (get) Token: 0x0600E797 RID: 59287 RVA: 0x002241CA File Offset: 0x002223CA
 		public virtual EPlayMovieProgramSpecialConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078F5 RID: 30965
+		// Token: 0x04007F8C RID: 32652
 		private IProgramSpecialConfigBase Instance;
 	}
 }

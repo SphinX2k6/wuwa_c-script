@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x02004835 RID: 18485
+	// Token: 0x02003766 RID: 14182
 	[NullableContext(1)]
 	public interface IWorldMapSecondaryTipItemParam
 	{
-		// Token: 0x170078EE RID: 30958
-		// (get) Token: 0x06030615 RID: 198165
-		// (set) Token: 0x06030616 RID: 198166
+		// Token: 0x17004BAB RID: 19371
+		// (get) Token: 0x06024DE5 RID: 151013
+		// (set) Token: 0x06024DE6 RID: 151014
 		string Name { get; set; }
 
-		// Token: 0x170078EF RID: 30959
-		// (get) Token: 0x06030617 RID: 198167
-		// (set) Token: 0x06030618 RID: 198168
+		// Token: 0x17004BAC RID: 19372
+		// (get) Token: 0x06024DE7 RID: 151015
+		// (set) Token: 0x06024DE8 RID: 151016
 		string Desc { get; set; }
 	}
 }

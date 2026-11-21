@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200594F RID: 22863
+	// Token: 0x02004928 RID: 18728
 	public class HonamiStoryTechSuccessEffectView : UiViewBase
 	{
-		// Token: 0x0603A052 RID: 237650 RVA: 0x00DCA6CA File Offset: 0x00DC88CA
+		// Token: 0x0602EF75 RID: 192373 RVA: 0x00D1997E File Offset: 0x00D17B7E
 		[NullableContext(1)]
 		public HonamiStoryTechSuccessEffectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A053 RID: 237651 RVA: 0x00DCA6D4 File Offset: 0x00DC88D4
+		// Token: 0x0602EF76 RID: 192374 RVA: 0x00D19988 File Offset: 0x00D17B88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A054 RID: 237652 RVA: 0x00DCA824 File Offset: 0x00DC8A24
+		// Token: 0x0602EF77 RID: 192375 RVA: 0x00D19AD8 File Offset: 0x00D17CD8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			HonamiStoryTechSuccessEffectView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A055 RID: 237653 RVA: 0x00DCA868 File Offset: 0x00DC8A68
+		// Token: 0x0602EF78 RID: 192376 RVA: 0x00D19B1C File Offset: 0x00D17D1C
 		protected override void OnBeforeShow()
 		{
 			this.Data = new HonamiStoryTalent?((HonamiStoryTalent)this.OpenParam);
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x0603A056 RID: 237654 RVA: 0x00DCA903 File Offset: 0x00DC8B03
+		// Token: 0x0602EF79 RID: 192377 RVA: 0x00D19BB7 File Offset: 0x00D17DB7
 		private void OnClickCloseBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603A057 RID: 237655 RVA: 0x00DCA90C File Offset: 0x00DC8B0C
+		// Token: 0x0602EF7A RID: 192378 RVA: 0x00D19BC0 File Offset: 0x00D17DC0
 		protected override void OnAfterDestroy()
 		{
 			HonamiStoryModel instance = HonamiStoryModel.Instance;
@@ -106,27 +106,27 @@ namespace CSharpScript.Game.Module.HonamiStory
 			}
 		}
 
-		// Token: 0x0401E442 RID: 123970
+		// Token: 0x04018EDF RID: 102111
 		[Nullable(2)]
 		private SuccessDescriptionItem TextItem;
 
-		// Token: 0x0401E443 RID: 123971
+		// Token: 0x04018EE0 RID: 102112
 		private HonamiStoryTalent? Data;
 
-		// Token: 0x0200BBE2 RID: 48098
+		// Token: 0x0200A5F1 RID: 42481
 		private enum EComponent
 		{
-			// Token: 0x04038BA7 RID: 232359
+			// Token: 0x04033586 RID: 210310
 			TextScrollLayout,
-			// Token: 0x04038BA8 RID: 232360
+			// Token: 0x04033587 RID: 210311
 			TextItem,
-			// Token: 0x04038BA9 RID: 232361
+			// Token: 0x04033588 RID: 210312
 			Title,
-			// Token: 0x04038BAA RID: 232362
+			// Token: 0x04033589 RID: 210313
 			TipsText,
-			// Token: 0x04038BAB RID: 232363
+			// Token: 0x0403358A RID: 210314
 			TipsButton,
-			// Token: 0x04038BAC RID: 232364
+			// Token: 0x0403358B RID: 210315
 			TipsButton2
 		}
 	}

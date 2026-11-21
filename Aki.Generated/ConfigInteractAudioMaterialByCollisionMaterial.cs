@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200044E RID: 1102
+	// Token: 0x02000464 RID: 1124
 	public class ConfigInteractAudioMaterialByCollisionMaterial : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019DE RID: 6622 RVA: 0x000EBB48 File Offset: 0x000E9D48
+		// Token: 0x06001A62 RID: 6754 RVA: 0x000F229C File Offset: 0x000F049C
 		static ConfigInteractAudioMaterialByCollisionMaterial()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInteractAudioMaterialByCollisionMaterial.CreateStaticDefaultValue), new Action(ConfigInteractAudioMaterialByCollisionMaterial.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019DF RID: 6623 RVA: 0x000EBB68 File Offset: 0x000E9D68
+		// Token: 0x06001A63 RID: 6755 RVA: 0x000F22BC File Offset: 0x000F04BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInteractAudioMaterialByCollisionMaterial.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019E0 RID: 6624 RVA: 0x000EBBE7 File Offset: 0x000E9DE7
+		// Token: 0x06001A64 RID: 6756 RVA: 0x000F233B File Offset: 0x000F053B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInteractAudioMaterialByCollisionMaterial.LogPair = null;
 			ConfigInteractAudioMaterialByCollisionMaterial.HandleId = 0;
 		}
 
-		// Token: 0x060019E1 RID: 6625 RVA: 0x000EBBF5 File Offset: 0x000E9DF5
+		// Token: 0x06001A65 RID: 6757 RVA: 0x000F2349 File Offset: 0x000F0549
 		public static void Init()
 		{
 			ConfigInteractAudioMaterialByCollisionMaterial.HandleId = ConfigCommon.InitDataStatement(ConfigInteractAudioMaterialByCollisionMaterial.HandleId, "db_interactaudiomaterial.db", "select BinData from `InteractAudioMaterial` where CollisionMaterial=?");
 		}
 
-		// Token: 0x060019E2 RID: 6626 RVA: 0x000EBC10 File Offset: 0x000E9E10
+		// Token: 0x06001A66 RID: 6758 RVA: 0x000F2364 File Offset: 0x000F0564
 		public static InteractAudioMaterial? GetConfig(string p0CollisionMaterial, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInteractAudioMaterialByCollisionMaterial.HandleId, ConfigInteractAudioMaterialByCollisionMaterial.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new InteractAudioMaterial?(rootAsInteractAudioMaterial);
 		}
 
-		// Token: 0x04001E06 RID: 7686
+		// Token: 0x04001EA0 RID: 7840
 		private const string DB = "db_interactaudiomaterial.db";
 
-		// Token: 0x04001E07 RID: 7687
+		// Token: 0x04001EA1 RID: 7841
 		private const string FILE = "k.可视化编辑/c.Csv/y.音频/j.交互材质音频/*.csv*";
 
-		// Token: 0x04001E08 RID: 7688
+		// Token: 0x04001EA2 RID: 7842
 		private const string TABLE = "InteractAudioMaterial";
 
-		// Token: 0x04001E09 RID: 7689
+		// Token: 0x04001EA3 RID: 7843
 		private const string COMMAND = "select BinData from `InteractAudioMaterial` where CollisionMaterial=?";
 
-		// Token: 0x04001E0A RID: 7690
+		// Token: 0x04001EA4 RID: 7844
 		private const string KEY_PREFIX = "InteractAudioMaterialByCollisionMaterial";
 
-		// Token: 0x04001E0B RID: 7691
+		// Token: 0x04001EA5 RID: 7845
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001E0C RID: 7692
+		// Token: 0x04001EA6 RID: 7846
 		private static int HandleId;
 	}
 }

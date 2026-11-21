@@ -6,74 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029E2 RID: 10722
+	// Token: 0x02000871 RID: 2161
 	[UnrealObjectPath("/Script/UMG.TextLayoutWidget")]
 	[UnrealStructLayout(688, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 688)]
 	public abstract class UTextLayoutWidget : UWidget, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027B78 RID: 162680 RVA: 0x003C8CFA File Offset: 0x003C6EFA
+		// Token: 0x0600BB98 RID: 48024 RVA: 0x0012C5EB File Offset: 0x0012A7EB
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTextLayoutWidget._ClassPtr;
 		}
 
-		// Token: 0x17009829 RID: 38953
-		// (get) Token: 0x06027B79 RID: 162681 RVA: 0x003C8D08 File Offset: 0x003C6F08
-		// (set) Token: 0x06027B7A RID: 162682 RVA: 0x003C8D41 File Offset: 0x003C6F41
-		[Nullable(1)]
-		public FShapedTextOptions ShapedTextOptions
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FShapedTextOptions result;
-				if ((result = this._ShapedTextOptions) == null)
-				{
-					result = (this._ShapedTextOptions = new FShapedTextOptions(base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_ShapedTextOptions, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FShapedTextOptions.StaticStruct(), base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_ShapedTextOptions, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700982A RID: 38954
-		// (get) Token: 0x06027B7B RID: 162683 RVA: 0x003C8D62 File Offset: 0x003C6F62
-		// (set) Token: 0x06027B7C RID: 162684 RVA: 0x003C8D76 File Offset: 0x003C6F76
-		public unsafe TEnumAsByte<ETextJustify> Justification
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_Justification);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_Justification) = value;
-			}
-		}
-
-		// Token: 0x1700982B RID: 38955
-		// (get) Token: 0x06027B7D RID: 162685 RVA: 0x003C8D8B File Offset: 0x003C6F8B
-		// (set) Token: 0x06027B7E RID: 162686 RVA: 0x003C8D9B File Offset: 0x003C6F9B
-		public unsafe ETextWrappingPolicy WrappingPolicy
-		{
-			get
-			{
-				return (ETextWrappingPolicy)(*(base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_WrappingPolicy));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UTextLayoutWidget.__PropertyOffset_WrappingPolicy) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700982C RID: 38956
-		// (get) Token: 0x06027B7F RID: 162687 RVA: 0x003C8DAC File Offset: 0x003C6FAC
-		// (set) Token: 0x06027B80 RID: 162688 RVA: 0x003C8DC5 File Offset: 0x003C6FC5
+		// Token: 0x170022C1 RID: 8897
+		// (get) Token: 0x0600BB99 RID: 48025 RVA: 0x0012C5F7 File Offset: 0x0012A7F7
+		// (set) Token: 0x0600BB9A RID: 48026 RVA: 0x0012C610 File Offset: 0x0012A810
 		public unsafe bool AutoWrapText
 		{
 			get
@@ -86,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700982D RID: 38957
-		// (get) Token: 0x06027B81 RID: 162689 RVA: 0x003C8DF5 File Offset: 0x003C6FF5
-		// (set) Token: 0x06027B82 RID: 162690 RVA: 0x003C8E05 File Offset: 0x003C7005
+		// Token: 0x170022C2 RID: 8898
+		// (get) Token: 0x0600BB9B RID: 48027 RVA: 0x0012C640 File Offset: 0x0012A840
+		// (set) Token: 0x0600BB9C RID: 48028 RVA: 0x0012C650 File Offset: 0x0012A850
 		public unsafe float WrapTextAt
 		{
 			get
@@ -101,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700982E RID: 38958
-		// (get) Token: 0x06027B83 RID: 162691 RVA: 0x003C8E16 File Offset: 0x003C7016
-		// (set) Token: 0x06027B84 RID: 162692 RVA: 0x003C8E2A File Offset: 0x003C702A
+		// Token: 0x170022C3 RID: 8899
+		// (get) Token: 0x0600BB9D RID: 48029 RVA: 0x0012C661 File Offset: 0x0012A861
+		// (set) Token: 0x0600BB9E RID: 48030 RVA: 0x0012C675 File Offset: 0x0012A875
 		public unsafe FMargin Margin
 		{
 			get
@@ -116,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700982F RID: 38959
-		// (get) Token: 0x06027B85 RID: 162693 RVA: 0x003C8E3F File Offset: 0x003C703F
-		// (set) Token: 0x06027B86 RID: 162694 RVA: 0x003C8E4F File Offset: 0x003C704F
+		// Token: 0x170022C4 RID: 8900
+		// (get) Token: 0x0600BB9F RID: 48031 RVA: 0x0012C68A File Offset: 0x0012A88A
+		// (set) Token: 0x0600BBA0 RID: 48032 RVA: 0x0012C69A File Offset: 0x0012A89A
 		public unsafe float LineHeightPercentage
 		{
 			get
@@ -131,68 +77,45 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06027B87 RID: 162695 RVA: 0x003C8E60 File Offset: 0x003C7060
-		public void SetJustification(ETextJustify InJustification)
-		{
-			UTextLayoutWidget.__SetJustification_Internal(base.NativePtr, InJustification);
-		}
-
-		// Token: 0x06027B88 RID: 162696
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetJustification_Internal(IntPtr @this, TEnumAsByte<ETextJustify> InJustification);
-
-		// Token: 0x06027B89 RID: 162697 RVA: 0x003C8E73 File Offset: 0x003C7073
+		// Token: 0x0600BBA1 RID: 48033 RVA: 0x0012C6AB File Offset: 0x0012A8AB
 		static UTextLayoutWidget()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/UMG.TextLayoutWidget");
 		}
 
-		// Token: 0x06027B8A RID: 162698 RVA: 0x003C8E84 File Offset: 0x003C7084
+		// Token: 0x0600BBA2 RID: 48034 RVA: 0x0012C6BC File Offset: 0x0012A8BC
 		protected UTextLayoutWidget() : this(BuiltinUtils.AllocNativeUObject(UTextLayoutWidget.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027B8B RID: 162699 RVA: 0x003C8EAC File Offset: 0x003C70AC
+		// Token: 0x0600BBA3 RID: 48035 RVA: 0x0012C6E4 File Offset: 0x0012A8E4
 		protected UTextLayoutWidget(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015BF4 RID: 89076
+		// Token: 0x040054F2 RID: 21746
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/UMG.TextLayoutWidget";
 
-		// Token: 0x04015BF5 RID: 89077
+		// Token: 0x040054F3 RID: 21747
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015BF6 RID: 89078
+		// Token: 0x040054F4 RID: 21748
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015BF7 RID: 89079
-		internal static int __PropertyOffset_ShapedTextOptions;
-
-		// Token: 0x04015BF8 RID: 89080
-		[Nullable(2)]
-		private FShapedTextOptions _ShapedTextOptions;
-
-		// Token: 0x04015BF9 RID: 89081
-		internal static int __PropertyOffset_Justification;
-
-		// Token: 0x04015BFA RID: 89082
-		internal static int __PropertyOffset_WrappingPolicy;
-
-		// Token: 0x04015BFB RID: 89083
+		// Token: 0x040054F5 RID: 21749
 		internal static int __PropertyOffset_AutoWrapText;
 
-		// Token: 0x04015BFC RID: 89084
+		// Token: 0x040054F6 RID: 21750
 		internal static byte __PropertyMask_AutoWrapText;
 
-		// Token: 0x04015BFD RID: 89085
+		// Token: 0x040054F7 RID: 21751
 		internal static int __PropertyOffset_WrapTextAt;
 
-		// Token: 0x04015BFE RID: 89086
+		// Token: 0x040054F8 RID: 21752
 		internal static int __PropertyOffset_Margin;
 
-		// Token: 0x04015BFF RID: 89087
+		// Token: 0x040054F9 RID: 21753
 		internal static int __PropertyOffset_LineHeightPercentage;
 	}
 }

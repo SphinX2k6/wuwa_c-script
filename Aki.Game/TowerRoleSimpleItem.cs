@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002C07 RID: 11271
+// Token: 0x02002182 RID: 8578
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class TowerRoleSimpleItem : GridProxyAbstract<RoleDataWithBranch>
 {
-	// Token: 0x06017688 RID: 95880 RVA: 0x005F5DF8 File Offset: 0x005F3FF8
+	// Token: 0x060150B9 RID: 86201 RVA: 0x0062291C File Offset: 0x00620B1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class TowerRoleSimpleItem : GridProxyAbstract<RoleDataWithBranch>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017689 RID: 95881 RVA: 0x005F5E64 File Offset: 0x005F4064
+	// Token: 0x060150BA RID: 86202 RVA: 0x00622988 File Offset: 0x00620B88
 	[NullableContext(1)]
 	public override void Refresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
@@ -53,12 +53,12 @@ public class TowerRoleSimpleItem : GridProxyAbstract<RoleDataWithBranch>
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x020091D2 RID: 37330
+	// Token: 0x02008415 RID: 33813
 	private enum EChildType
 	{
-		// Token: 0x0402F2DE RID: 193246
+		// Token: 0x0402A9DF RID: 174559
 		RoleIcon,
-		// Token: 0x0402F2DF RID: 193247
+		// Token: 0x0402A9E0 RID: 174560
 		ItemSkillTag
 	}
 }

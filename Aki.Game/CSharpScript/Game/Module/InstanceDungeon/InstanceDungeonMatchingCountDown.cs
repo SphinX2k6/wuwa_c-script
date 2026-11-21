@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587A RID: 22650
+	// Token: 0x02004852 RID: 18514
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonMatchingCountDown : UiPanelBase
 	{
-		// Token: 0x06039A1D RID: 236061 RVA: 0x00DB1FE0 File Offset: 0x00DB01E0
+		// Token: 0x0602E93F RID: 190783 RVA: 0x00D00EEC File Offset: 0x00CFF0EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039A1E RID: 236062 RVA: 0x00DB2174 File Offset: 0x00DB0374
+		// Token: 0x0602E940 RID: 190784 RVA: 0x00D01080 File Offset: 0x00CFF280
 		private void OnClickBtnCancel()
 		{
 			if ("Close" == this.CurrentAnimation)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039A1F RID: 236063 RVA: 0x00DB21C8 File Offset: 0x00DB03C8
+		// Token: 0x0602E941 RID: 190785 RVA: 0x00D010D4 File Offset: 0x00CFF2D4
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(2);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.RefreshButtonActivity();
 		}
 
-		// Token: 0x06039A20 RID: 236064 RVA: 0x00DB2288 File Offset: 0x00DB0488
+		// Token: 0x0602E942 RID: 190786 RVA: 0x00D01194 File Offset: 0x00CFF394
 		protected void RefreshButtonActivity()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetButton(8).RootUIComp.Get().SetUIActive(OnlineModel.Instance.GetIsMyTeam());
 		}
 
-		// Token: 0x06039A21 RID: 236065 RVA: 0x00DB22E0 File Offset: 0x00DB04E0
+		// Token: 0x0602E943 RID: 190787 RVA: 0x00D011EC File Offset: 0x00CFF3EC
 		public void PlayAnimation(string animation)
 		{
 			if (this.CurrentAnimation == animation)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.CurrentAnimation = animation;
 		}
 
-		// Token: 0x06039A22 RID: 236066 RVA: 0x00DB232E File Offset: 0x00DB052E
+		// Token: 0x0602E944 RID: 190788 RVA: 0x00D0123A File Offset: 0x00CFF43A
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "Close")
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			onAfterCloseAnimation(sequenceName);
 		}
 
-		// Token: 0x06039A23 RID: 236067 RVA: 0x00DB236B File Offset: 0x00DB056B
+		// Token: 0x0602E945 RID: 190789 RVA: 0x00D01277 File Offset: 0x00CFF477
 		protected override void OnBeforeDestroy()
 		{
 			this.OnClickBtnCancelMatching = null;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06039A24 RID: 236068 RVA: 0x00DB238C File Offset: 0x00DB058C
+		// Token: 0x0602E946 RID: 190790 RVA: 0x00D01298 File Offset: 0x00CFF498
 		public void StartTimer()
 		{
 			InstanceDungeonEntranceModel instance = InstanceDungeonEntranceModel.Instance;
@@ -180,37 +180,37 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.RefreshButtonActivity();
 		}
 
-		// Token: 0x06039A25 RID: 236069 RVA: 0x00DB2450 File Offset: 0x00DB0650
+		// Token: 0x0602E947 RID: 190791 RVA: 0x00D0135C File Offset: 0x00CFF55C
 		public void BindOnStopTimer(Func<bool> onStopTimer)
 		{
 			InstanceDungeonEntranceModel.Instance.OnStopTimer = onStopTimer;
 		}
 
-		// Token: 0x06039A26 RID: 236070 RVA: 0x00DB245D File Offset: 0x00DB065D
+		// Token: 0x0602E948 RID: 190792 RVA: 0x00D01369 File Offset: 0x00CFF569
 		public void BindOnClickBtnCancelMatching(Action onClickBtnCancelMatching)
 		{
 			this.OnClickBtnCancelMatching = onClickBtnCancelMatching;
 		}
 
-		// Token: 0x06039A27 RID: 236071 RVA: 0x00DB2466 File Offset: 0x00DB0666
+		// Token: 0x0602E949 RID: 190793 RVA: 0x00D01372 File Offset: 0x00CFF572
 		public void BindOnAfterCloseAnimation(Action<string> onAfterCloseAnimation)
 		{
 			this.OnAfterCloseAnimation = onAfterCloseAnimation;
 		}
 
-		// Token: 0x06039A28 RID: 236072 RVA: 0x00DB246F File Offset: 0x00DB066F
+		// Token: 0x0602E94A RID: 190794 RVA: 0x00D0137B File Offset: 0x00CFF57B
 		public void BindOnStopHandle(Action onStopHandle)
 		{
 			InstanceDungeonEntranceModel.Instance.OnStopHandle = onStopHandle;
 		}
 
-		// Token: 0x06039A29 RID: 236073 RVA: 0x00DB247C File Offset: 0x00DB067C
+		// Token: 0x0602E94B RID: 190795 RVA: 0x00D01388 File Offset: 0x00CFF588
 		public void SetMatchingTime(int time)
 		{
 			InstanceDungeonEntranceModel.Instance.MatchingTime = time;
 		}
 
-		// Token: 0x06039A2A RID: 236074 RVA: 0x00DB248C File Offset: 0x00DB068C
+		// Token: 0x0602E94C RID: 190796 RVA: 0x00D01398 File Offset: 0x00CFF598
 		private void RefreshMatchingTime()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.InstanceDungeonEntranceView) && !UiManager.Instance.IsViewShow(EUiViewName.OnlineWorldHallView) && !UiManager.Instance.IsViewShow(EUiViewName.BattleTeam2DView) && !UiManager.Instance.IsViewShow(EUiViewName.DangoAbyssInsSelectView) && !UiManager.Instance.IsViewShow(EUiViewName.MultiMotorChoseLevelView) && !UiManager.Instance.IsViewShow(EUiViewName.TowerDefenseLevelView))
@@ -225,15 +225,15 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			text.SetText(TimeUtil.Instance.GetTimeString((double)InstanceDungeonEntranceModel.Instance.MatchingTime), true);
 		}
 
-		// Token: 0x0401E1F5 RID: 123381
+		// Token: 0x04018C92 RID: 101522
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401E1F6 RID: 123382
+		// Token: 0x04018C93 RID: 101523
 		[Nullable(2)]
 		private Action OnClickBtnCancelMatching;
 
-		// Token: 0x0401E1F7 RID: 123383
+		// Token: 0x04018C94 RID: 101524
 		[Nullable(new byte[]
 		{
 			2,
@@ -241,39 +241,39 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private Action<string> OnAfterCloseAnimation;
 
-		// Token: 0x0401E1F8 RID: 123384
+		// Token: 0x04018C95 RID: 101525
 		[Nullable(2)]
 		private string CurrentAnimation;
 
-		// Token: 0x0200BAD4 RID: 47828
+		// Token: 0x0200A4ED RID: 42221
 		[NullableContext(0)]
 		private static class EInstanceDungeonMatchingCountDownComponent
 		{
-			// Token: 0x04038754 RID: 231252
+			// Token: 0x04033155 RID: 209237
 			public const int OtherButton = 2;
 
-			// Token: 0x04038755 RID: 231253
+			// Token: 0x04033156 RID: 209238
 			public const int TextTime = 5;
 
-			// Token: 0x04038756 RID: 231254
+			// Token: 0x04033157 RID: 209239
 			public const int TextName = 7;
 
-			// Token: 0x04038757 RID: 231255
+			// Token: 0x04033158 RID: 209240
 			public const int BtnCancel = 8;
 
-			// Token: 0x04038758 RID: 231256
+			// Token: 0x04033159 RID: 209241
 			public const int RoleItem = 10;
 
-			// Token: 0x04038759 RID: 231257
+			// Token: 0x0403315A RID: 209242
 			public const int ProcessItem = 11;
 
-			// Token: 0x0403875A RID: 231258
+			// Token: 0x0403315B RID: 209243
 			public const int MatchingItem = 12;
 
-			// Token: 0x0403875B RID: 231259
+			// Token: 0x0403315C RID: 209244
 			public const int MatchingDownItem = 13;
 
-			// Token: 0x0403875C RID: 231260
+			// Token: 0x0403315D RID: 209245
 			public const int MatchingWaitItem = 14;
 		}
 	}

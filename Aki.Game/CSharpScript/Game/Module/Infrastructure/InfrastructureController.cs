@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -10,31 +9,31 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005901 RID: 22785
+	// Token: 0x020048DA RID: 18650
 	[Controller(0)]
 	public class InfrastructureController : ActivityControllerBase
 	{
-		// Token: 0x06039D7C RID: 236924 RVA: 0x00DBCEDE File Offset: 0x00DBB0DE
+		// Token: 0x0602ECA2 RID: 191650 RVA: 0x00D0BEFA File Offset: 0x00D0A0FA
 		[NullableContext(1)]
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x06039D7D RID: 236925 RVA: 0x00DBCEE0 File Offset: 0x00DBB0E0
+		// Token: 0x0602ECA3 RID: 191651 RVA: 0x00D0BEFC File Offset: 0x00D0A0FC
 		[NullableContext(1)]
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_InfrastructureActivityMain";
 		}
 
-		// Token: 0x06039D7E RID: 236926 RVA: 0x00DBCEE7 File Offset: 0x00DBB0E7
+		// Token: 0x0602ECA4 RID: 191652 RVA: 0x00D0BF03 File Offset: 0x00D0A103
 		[NullableContext(1)]
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new InfrActivityMainView();
 		}
 
-		// Token: 0x06039D7F RID: 236927 RVA: 0x00DBCEF0 File Offset: 0x00DBB0F0
+		// Token: 0x0602ECA5 RID: 191653 RVA: 0x00D0BF0C File Offset: 0x00D0A10C
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			foreach (EUiViewName viewName in new EUiViewName[]
@@ -50,7 +49,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return false;
 		}
 
-		// Token: 0x06039D80 RID: 236928 RVA: 0x00DBCF38 File Offset: 0x00DBB138
+		// Token: 0x0602ECA6 RID: 191654 RVA: 0x00D0BF54 File Offset: 0x00D0A154
 		[NullableContext(1)]
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return infrastructureActivityData;
 		}
 
-		// Token: 0x06039D81 RID: 236929 RVA: 0x00DBCF58 File Offset: 0x00DBB158
+		// Token: 0x0602ECA7 RID: 191655 RVA: 0x00D0BF74 File Offset: 0x00D0A174
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.InfrFireAddNotify, new Action<IMessage, Net.CallbackStatus>(this.OnInfrFireAddNotify));
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			Net.Instance.Register(ENotifyMessageId.InfrThemeActivityTaskDataUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnInfrThemeActivityTaskDataUpdateNotify));
 		}
 
-		// Token: 0x06039D82 RID: 236930 RVA: 0x00DBD010 File Offset: 0x00DBB210
+		// Token: 0x0602ECA8 RID: 191656 RVA: 0x00D0C02C File Offset: 0x00D0A22C
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.InfrFireAddNotify);
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			Net.Instance.UnRegister(ENotifyMessageId.InfrThemeActivityTaskDataUpdateNotify);
 		}
 
-		// Token: 0x06039D83 RID: 236931 RVA: 0x00DBD080 File Offset: 0x00DBB280
+		// Token: 0x0602ECA9 RID: 191657 RVA: 0x00D0C09C File Offset: 0x00D0A29C
 		public UniTask<bool> RequestInfrastructureInfoRequest()
 		{
 			InfrastructureController.<RequestInfrastructureInfoRequest>d__7 <RequestInfrastructureInfoRequest>d__;
@@ -91,7 +90,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D84 RID: 236932 RVA: 0x00DBD0BC File Offset: 0x00DBB2BC
+		// Token: 0x0602ECAA RID: 191658 RVA: 0x00D0C0D8 File Offset: 0x00D0A2D8
 		public UniTask<bool> RequestInfrastructureArchiveTaskReward()
 		{
 			InfrastructureController.<RequestInfrastructureArchiveTaskReward>d__8 <RequestInfrastructureArchiveTaskReward>d__;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureArchiveTaskReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D85 RID: 236933 RVA: 0x00DBD0F8 File Offset: 0x00DBB2F8
+		// Token: 0x0602ECAB RID: 191659 RVA: 0x00D0C114 File Offset: 0x00D0A314
 		public UniTask<bool> RequestInfrastructurePhoneTaskReward()
 		{
 			InfrastructureController.<RequestInfrastructurePhoneTaskReward>d__9 <RequestInfrastructurePhoneTaskReward>d__;
@@ -111,7 +110,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructurePhoneTaskReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D86 RID: 236934 RVA: 0x00DBD134 File Offset: 0x00DBB334
+		// Token: 0x0602ECAC RID: 191660 RVA: 0x00D0C150 File Offset: 0x00D0A350
 		public UniTask<bool> RequestInfrastructureLevelUp()
 		{
 			InfrastructureController.<RequestInfrastructureLevelUp>d__10 <RequestInfrastructureLevelUp>d__;
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureLevelUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D87 RID: 236935 RVA: 0x00DBD170 File Offset: 0x00DBB370
+		// Token: 0x0602ECAD RID: 191661 RVA: 0x00D0C18C File Offset: 0x00D0A38C
 		public UniTask<bool> RequestInfrastructureRoadBuild(int roadId)
 		{
 			InfrastructureController.<RequestInfrastructureRoadBuild>d__11 <RequestInfrastructureRoadBuild>d__;
@@ -132,7 +131,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureRoadBuild>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D88 RID: 236936 RVA: 0x00DBD1B4 File Offset: 0x00DBB3B4
+		// Token: 0x0602ECAE RID: 191662 RVA: 0x00D0C1D0 File Offset: 0x00D0A3D0
 		public UniTask<bool> RequestInfrastructureManualSwitchTraceRoad(int roadId)
 		{
 			InfrastructureController.<RequestInfrastructureManualSwitchTraceRoad>d__12 <RequestInfrastructureManualSwitchTraceRoad>d__;
@@ -143,7 +142,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureManualSwitchTraceRoad>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D89 RID: 236937 RVA: 0x00DBD1F8 File Offset: 0x00DBB3F8
+		// Token: 0x0602ECAF RID: 191663 RVA: 0x00D0C214 File Offset: 0x00D0A414
 		public UniTask<bool> RequestInfrManualCancelTraceRoadRequest()
 		{
 			InfrastructureController.<RequestInfrManualCancelTraceRoadRequest>d__13 <RequestInfrManualCancelTraceRoadRequest>d__;
@@ -153,7 +152,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrManualCancelTraceRoadRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D8A RID: 236938 RVA: 0x00DBD234 File Offset: 0x00DBB434
+		// Token: 0x0602ECB0 RID: 191664 RVA: 0x00D0C250 File Offset: 0x00D0A450
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -168,7 +167,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrastructureFireNotice>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D8B RID: 236939 RVA: 0x00DBD270 File Offset: 0x00DBB470
+		// Token: 0x0602ECB1 RID: 191665 RVA: 0x00D0C28C File Offset: 0x00D0A48C
 		public UniTask<bool> RequestInfrArchiveReadRequest([Nullable(1)] int[] archiveIds)
 		{
 			InfrastructureController.<RequestInfrArchiveReadRequest>d__15 <RequestInfrArchiveReadRequest>d__;
@@ -179,7 +178,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrArchiveReadRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D8C RID: 236940 RVA: 0x00DBD2B4 File Offset: 0x00DBB4B4
+		// Token: 0x0602ECB2 RID: 191666 RVA: 0x00D0C2D0 File Offset: 0x00D0A4D0
 		[NullableContext(2)]
 		private void OnFireShopCoinNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -187,7 +186,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			InfrastructureModel.Instance.SetFireShopCoinData(fireShopCoinData);
 		}
 
-		// Token: 0x06039D8D RID: 236941 RVA: 0x00DBD2D4 File Offset: 0x00DBB4D4
+		// Token: 0x0602ECB3 RID: 191667 RVA: 0x00D0C2F0 File Offset: 0x00D0A4F0
 		[NullableContext(2)]
 		private void OnInfrThemeActivityTaskDataUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			InfrastructureModel.Instance.UpdateActivityTaskData(data);
 		}
 
-		// Token: 0x06039D8E RID: 236942 RVA: 0x00DBD2F4 File Offset: 0x00DBB4F4
+		// Token: 0x0602ECB4 RID: 191668 RVA: 0x00D0C310 File Offset: 0x00D0A510
 		public UniTask<bool> RequestInfrLimitTaskRewardRequest(int activityId, [Nullable(1)] int[] taskIds)
 		{
 			InfrastructureController.<RequestInfrLimitTaskRewardRequest>d__18 <RequestInfrLimitTaskRewardRequest>d__;
@@ -206,7 +205,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <RequestInfrLimitTaskRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D8F RID: 236943 RVA: 0x00DBD338 File Offset: 0x00DBB538
+		// Token: 0x0602ECB5 RID: 191669 RVA: 0x00D0C354 File Offset: 0x00D0A554
 		[NullableContext(2)]
 		private void OnInfrFireAddNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			EventSystem.Instance.Emit<float>(EEventName.InfrastructureFireExpAdd, (float)infrFireAddNotify.Add);
 		}
 
-		// Token: 0x06039D90 RID: 236944 RVA: 0x00DBD370 File Offset: 0x00DBB570
+		// Token: 0x0602ECB6 RID: 191670 RVA: 0x00D0C38C File Offset: 0x00D0A58C
 		[NullableContext(2)]
 		private void OnInfrFireUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			InfrastructureModel.Instance.SetFireData(infrFireUpdateNotify.FireInfo);
 		}
 
-		// Token: 0x06039D91 RID: 236945 RVA: 0x00DBD394 File Offset: 0x00DBB594
+		// Token: 0x0602ECB7 RID: 191671 RVA: 0x00D0C3B0 File Offset: 0x00D0A5B0
 		[NullableContext(2)]
 		private void OnInfrRoadUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -231,13 +230,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			InfrastructureModel.Instance.SetRoadData(infrRoadUpdateNotify.RoadInfo);
 		}
 
-		// Token: 0x06039D92 RID: 236946 RVA: 0x00DBD3B8 File Offset: 0x00DBB5B8
+		// Token: 0x0602ECB8 RID: 191672 RVA: 0x00D0C3D4 File Offset: 0x00D0A5D4
 		[NullableContext(2)]
 		private void OnInfrLibraryTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			InfrLibraryTaskUpdateNotify infrLibraryTaskUpdateNotify = (InfrLibraryTaskUpdateNotify)msg;
-			InfrastructureModel.Instance.SetArchiveTaskData(infrLibraryTaskUpdateNotify.ArchiveTasks.ToArray<InfrTaskPb>());
-			InfrastructureModel.Instance.SetPhoneTaskData(infrLibraryTaskUpdateNotify.PhoneTasks.ToArray<InfrTaskPb>());
+			InfrastructureModel.Instance.SetArchiveTaskData(infrLibraryTaskUpdateNotify.ArchiveTasks);
+			InfrastructureModel.Instance.SetPhoneTaskData(infrLibraryTaskUpdateNotify.PhoneTasks);
 			InfrastructureActivityData activityData = InfrastructureModel.Instance.GetActivityData();
 			if (activityData != null)
 			{
@@ -245,7 +244,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039D93 RID: 236947 RVA: 0x00DBD41C File Offset: 0x00DBB61C
+		// Token: 0x0602ECB9 RID: 191673 RVA: 0x00D0C42C File Offset: 0x00D0A62C
 		public void OpenMaterialDelivery(ActionInfrastructureItemDeliveryType deliveryType, int roadId, int actionId, InfrastructureDefine.EMaterialDeliveryOpenSource openSource)
 		{
 			InfrastructureDefine.InfrMaterialsDeliveryOpenParam param = new InfrastructureDefine.InfrMaterialsDeliveryOpenParam
@@ -259,7 +258,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			UiManager.Instance.OpenView(EUiViewName.InfrMaterialsDeliveryView, param, null);
 		}
 
-		// Token: 0x06039D94 RID: 236948 RVA: 0x00DBD470 File Offset: 0x00DBB670
+		// Token: 0x0602ECBA RID: 191674 RVA: 0x00D0C480 File Offset: 0x00D0A680
 		public UniTask<int?> OpenInfrastructureMainView([Nullable(2)] InfrastructureDefine.IInfrMainViewOpenParam param = null)
 		{
 			InfrastructureController.<OpenInfrastructureMainView>d__24 <OpenInfrastructureMainView>d__;
@@ -270,15 +269,15 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OpenInfrastructureMainView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039D95 RID: 236949 RVA: 0x00DBD4B3 File Offset: 0x00DBB6B3
+		// Token: 0x0602ECBB RID: 191675 RVA: 0x00D0C4C3 File Offset: 0x00D0A6C3
 		[NullableContext(1)]
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.InfrOpeningTipsView, null, null);
 		}
 
-		// Token: 0x17008ACA RID: 35530
-		// (get) Token: 0x06039D96 RID: 236950 RVA: 0x00DBD4C6 File Offset: 0x00DBB6C6
+		// Token: 0x17005E96 RID: 24214
+		// (get) Token: 0x0602ECBC RID: 191676 RVA: 0x00D0C4D6 File Offset: 0x00D0A6D6
 		[Nullable(1)]
 		public static InfrastructureController Instance
 		{
@@ -289,7 +288,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039D97 RID: 236951 RVA: 0x00DBD4CD File Offset: 0x00DBB6CD
+		// Token: 0x0602ECBD RID: 191677 RVA: 0x00D0C4DD File Offset: 0x00D0A6DD
 		[NullableContext(1)]
 		public static InfrastructureController GetOrCreateInstance()
 		{
@@ -300,7 +299,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return InfrastructureController._Instance;
 		}
 
-		// Token: 0x06039D98 RID: 236952 RVA: 0x00DBD4E1 File Offset: 0x00DBB6E1
+		// Token: 0x0602ECBE RID: 191678 RVA: 0x00D0C4F1 File Offset: 0x00D0A6F1
 		public static bool CreateInstance()
 		{
 			if (InfrastructureController._Instance != null)
@@ -311,24 +310,24 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return true;
 		}
 
-		// Token: 0x06039D99 RID: 236953 RVA: 0x00DBD4F7 File Offset: 0x00DBB6F7
+		// Token: 0x0602ECBF RID: 191679 RVA: 0x00D0C507 File Offset: 0x00D0A707
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039D9A RID: 236954 RVA: 0x00DBD4F9 File Offset: 0x00DBB6F9
+		// Token: 0x0602ECC0 RID: 191680 RVA: 0x00D0C509 File Offset: 0x00D0A709
 		public static void ResetStaticDefaultValue()
 		{
 			InfrastructureController._Instance = null;
 		}
 
-		// Token: 0x06039D9B RID: 236955 RVA: 0x00DBD501 File Offset: 0x00DBB701
+		// Token: 0x0602ECC1 RID: 191681 RVA: 0x00D0C511 File Offset: 0x00D0A711
 		static InfrastructureController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InfrastructureController.CreateStaticDefaultValue), new Action(InfrastructureController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E2E1 RID: 123617
+		// Token: 0x04018D7E RID: 101758
 		[Nullable(2)]
 		private static InfrastructureController _Instance;
 	}

@@ -5,31 +5,30 @@ using CSharpScript.Game.Module.Map.Marks.MarkItem;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x0200552A RID: 21802
+	// Token: 0x020044FD RID: 17661
 	public class VillageInfrTreeMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x06037A9D RID: 227997 RVA: 0x00D36693 File Offset: 0x00D34893
+		// Token: 0x0602C96D RID: 182637 RVA: 0x00C843BF File Offset: 0x00C825BF
 		[NullableContext(1)]
 		public VillageInfrTreeMarkItemView(VillageInfrTreeMarkItem markItem) : base(markItem)
 		{
 		}
 
-		// Token: 0x06037A9E RID: 227998 RVA: 0x00D3669C File Offset: 0x00D3489C
+		// Token: 0x0602C96E RID: 182638 RVA: 0x00C843C8 File Offset: 0x00C825C8
 		public override void RegisterEvents()
 		{
 			EventSystem.Instance.Add(EEventName.VillageInfrTreeDataUpdate, new Action(this.OnTreeDataChange));
 		}
 
-		// Token: 0x06037A9F RID: 227999 RVA: 0x00D366BA File Offset: 0x00D348BA
+		// Token: 0x0602C96F RID: 182639 RVA: 0x00C843E6 File Offset: 0x00C825E6
 		public override void UnRegisterEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.VillageInfrTreeDataUpdate, new Action(this.OnTreeDataChange));
 		}
 
-		// Token: 0x06037AA0 RID: 228000 RVA: 0x00D366D8 File Offset: 0x00D348D8
+		// Token: 0x0602C970 RID: 182640 RVA: 0x00C84404 File Offset: 0x00C82604
 		private void OnTreeDataChange()
 		{
-			(this.Holder as VillageInfrTreeMarkItem).UpdateGamePlayState();
 			base.MarkItemTopRightIconHandle.Update();
 			base.MarkItemTopRightIconHandle.ApplyModified();
 		}

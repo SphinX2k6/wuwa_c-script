@@ -5,18 +5,18 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200584A RID: 22602
+	// Token: 0x02004822 RID: 18466
 	public static class LongPressInteractRestrictCoreFix
 	{
-		// Token: 0x0200BA6C RID: 47724
+		// Token: 0x0200A483 RID: 42115
 		public class CoreFixLongPressRestriction : ILongPressInteractRestriction
 		{
-			// Token: 0x0604F89D RID: 325789 RVA: 0x0154835A File Offset: 0x0154655A
+			// Token: 0x06045E2B RID: 286251 RVA: 0x015017FE File Offset: 0x014FF9FE
 			public void Enter(EInputAction? triggerAction)
 			{
 			}
 
-			// Token: 0x0604F89E RID: 325790 RVA: 0x0154835C File Offset: 0x0154655C
+			// Token: 0x06045E2C RID: 286252 RVA: 0x01501800 File Offset: 0x014FFA00
 			public void Press(EInputAction? triggerAction)
 			{
 				if (this.IsPressing)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Interaction
 				LongPressInteractRestrictCoreFix.CoreFixLongPressRestriction.SetCombineButtonActionEnabled(false);
 			}
 
-			// Token: 0x0604F89F RID: 325791 RVA: 0x0154837B File Offset: 0x0154657B
+			// Token: 0x06045E2D RID: 286253 RVA: 0x0150181F File Offset: 0x014FFA1F
 			public void Release(EInputAction? triggerAction)
 			{
 				if (!this.IsPressing)
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Interaction
 				LongPressInteractRestrictCoreFix.CoreFixLongPressRestriction.SetCombineButtonActionEnabled(true);
 			}
 
-			// Token: 0x0604F8A0 RID: 325792 RVA: 0x0154839A File Offset: 0x0154659A
+			// Token: 0x06045E2E RID: 286254 RVA: 0x0150183E File Offset: 0x014FFA3E
 			public void Exit(EInputAction? triggerAction)
 			{
 				this.Release(triggerAction);
 			}
 
-			// Token: 0x0604F8A1 RID: 325793 RVA: 0x015483A3 File Offset: 0x015465A3
+			// Token: 0x06045E2F RID: 286255 RVA: 0x01501847 File Offset: 0x014FFA47
 			private void SetCameraInputEnabled(bool enabled)
 			{
 				FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Interaction
 				fightCameraLogicComponent.SetInputEnable(this, enabled);
 			}
 
-			// Token: 0x0604F8A2 RID: 325794 RVA: 0x015483CC File Offset: 0x015465CC
+			// Token: 0x06045E30 RID: 286256 RVA: 0x01501870 File Offset: 0x014FFA70
 			private static void SetCombineButtonActionEnabled(bool enabled)
 			{
 				if (!enabled)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Interaction
 				characterController.SetActionEnable("组合主键", enabled);
 			}
 
-			// Token: 0x040385C1 RID: 230849
+			// Token: 0x04032FB9 RID: 208825
 			private bool IsPressing;
 		}
 	}

@@ -7,19 +7,19 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 {
-	// Token: 0x020059EC RID: 23020
+	// Token: 0x020049C5 RID: 18885
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BehaviorTreeTimerCenter
 	{
-		// Token: 0x0603A54E RID: 238926 RVA: 0x00DE029C File Offset: 0x00DDE49C
+		// Token: 0x0602F475 RID: 193653 RVA: 0x00D2FB08 File Offset: 0x00D2DD08
 		public BehaviorTreeTimerCenter(long treeIncId, Blackboard blackBoard)
 		{
 			this.TreeIncId = treeIncId;
 			this.Blackboard = blackBoard;
 		}
 
-		// Token: 0x0603A54F RID: 238927 RVA: 0x00DE02C0 File Offset: 0x00DDE4C0
+		// Token: 0x0602F476 RID: 193654 RVA: 0x00D2FB2C File Offset: 0x00D2DD2C
 		public void Dispose()
 		{
 			foreach (LogicTreeTimerBase logicTreeTimerBase in this.Timers.Values)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			this.Timers.Clear();
 		}
 
-		// Token: 0x0603A550 RID: 238928 RVA: 0x00DE0320 File Offset: 0x00DDE520
+		// Token: 0x0602F477 RID: 193655 RVA: 0x00D2FB8C File Offset: 0x00D2DD8C
 		[NullableContext(2)]
 		public void UpdateTimerInfo(TimerInfoPb timerInfo)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			this.StartShowTimer(timerType, endTime, pauseTime, timerInfo.NodeId);
 		}
 
-		// Token: 0x0603A551 RID: 238929 RVA: 0x00DE0370 File Offset: 0x00DDE570
+		// Token: 0x0602F478 RID: 193656 RVA: 0x00D2FBDC File Offset: 0x00D2DDDC
 		private void StartShowTimer(string timerType, long endTime, long pauseTime, int nodeId)
 		{
 			LogicTreeTimerBase logicTreeTimerBase = null;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			}
 		}
 
-		// Token: 0x0603A552 RID: 238930 RVA: 0x00DE071C File Offset: 0x00DDE91C
+		// Token: 0x0602F479 RID: 193657 RVA: 0x00D2FF88 File Offset: 0x00D2E188
 		private void EndShowTimer(string timerType)
 		{
 			LogicTreeTimerBase timer = this.GetTimer(timerType);
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			this.Timers.Remove(timerType);
 		}
 
-		// Token: 0x0603A553 RID: 238931 RVA: 0x00DE0777 File Offset: 0x00DDE977
+		// Token: 0x0602F47A RID: 193658 RVA: 0x00D2FFE3 File Offset: 0x00D2E1E3
 		[return: Nullable(2)]
 		public LogicTreeTimerBase GetTimer(string timerType)
 		{
 			return this.Timers.GetValueOrDefault(timerType);
 		}
 
-		// Token: 0x0603A554 RID: 238932 RVA: 0x00DE0788 File Offset: 0x00DDE988
+		// Token: 0x0602F47B RID: 193659 RVA: 0x00D2FFF4 File Offset: 0x00D2E1F4
 		public double GetRemainTime(ETimerType? timerType = null)
 		{
 			ETimerType value = timerType.GetValueOrDefault();
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			return timer.GetRemainTime();
 		}
 
-		// Token: 0x0603A555 RID: 238933 RVA: 0x00DE07D8 File Offset: 0x00DDE9D8
+		// Token: 0x0602F47C RID: 193660 RVA: 0x00D30044 File Offset: 0x00D2E244
 		public bool HasRunningTimers([Nullable(new byte[]
 		{
 			2,
@@ -260,19 +260,19 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree
 			return false;
 		}
 
-		// Token: 0x0401E69E RID: 124574
+		// Token: 0x0401913D RID: 102717
 		private const int TICK_INTETVAL_TIME = 20;
 
-		// Token: 0x0401E69F RID: 124575
+		// Token: 0x0401913E RID: 102718
 		private const int FAILEDRANGE_INTERTVAL = 100;
 
-		// Token: 0x0401E6A0 RID: 124576
+		// Token: 0x0401913F RID: 102719
 		private readonly long TreeIncId;
 
-		// Token: 0x0401E6A1 RID: 124577
+		// Token: 0x04019140 RID: 102720
 		private readonly Blackboard Blackboard;
 
-		// Token: 0x0401E6A2 RID: 124578
+		// Token: 0x04019141 RID: 102721
 		private readonly Dictionary<string, LogicTreeTimerBase> Timers = new Dictionary<string, LogicTreeTimerBase>();
 	}
 }

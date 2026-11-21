@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BFE RID: 11262
+// Token: 0x02002179 RID: 8569
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -20,7 +20,7 @@ using UnrealEngine;
 })]
 public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 {
-	// Token: 0x0601764D RID: 95821 RVA: 0x005F4860 File Offset: 0x005F2A60
+	// Token: 0x0601507E RID: 86142 RVA: 0x00621388 File Offset: 0x0061F588
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -47,14 +47,14 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601764E RID: 95822 RVA: 0x005F4969 File Offset: 0x005F2B69
+	// Token: 0x0601507F RID: 86143 RVA: 0x00621491 File Offset: 0x0061F691
 	protected override void OnStart()
 	{
 		this.RoleIdArray = new List<int>();
 		this.RoleSkillBranchMap = new Dictionary<int, int>();
 	}
 
-	// Token: 0x0601764F RID: 95823 RVA: 0x005F4984 File Offset: 0x005F2B84
+	// Token: 0x06015080 RID: 86144 RVA: 0x006214AC File Offset: 0x0061F6AC
 	public override void Refresh(TowerRecommendFormation formationInfo, bool isSelected, int gridIndex)
 	{
 		this.RoleSkillBranchMap.Clear();
@@ -84,7 +84,7 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		this.RoleLayout.RebuildLayoutByDataNew<TowerRecommendRole>(list, null);
 	}
 
-	// Token: 0x06017650 RID: 95824 RVA: 0x005F4AA4 File Offset: 0x005F2CA4
+	// Token: 0x06015081 RID: 86145 RVA: 0x006215CC File Offset: 0x0061F7CC
 	private ILayoutItem<MediumItemGrid> InitRoleItem(object data, UUIItem uiItem, int index)
 	{
 		MediumItemGrid mediumItemGrid = new MediumItemGrid();
@@ -113,7 +113,7 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		};
 	}
 
-	// Token: 0x06017651 RID: 95825 RVA: 0x005F4BBC File Offset: 0x005F2DBC
+	// Token: 0x06015082 RID: 86146 RVA: 0x006216E4 File Offset: 0x0061F8E4
 	private bool IsRoleAllowUse(TowerRecommendRole roleInfo)
 	{
 		int roleId = roleInfo.RoleId;
@@ -144,7 +144,7 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		return true;
 	}
 
-	// Token: 0x06017652 RID: 95826 RVA: 0x005F4CDB File Offset: 0x005F2EDB
+	// Token: 0x06015083 RID: 86147 RVA: 0x00621803 File Offset: 0x0061FA03
 	protected override void OnBeforeDestroy()
 	{
 		this.RoleIdArray.Clear();
@@ -153,7 +153,7 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		this.RoleLayout = null;
 	}
 
-	// Token: 0x06017653 RID: 95827 RVA: 0x005F4D04 File Offset: 0x005F2F04
+	// Token: 0x06015084 RID: 86148 RVA: 0x0062182C File Offset: 0x0061FA2C
 	private void OnClickUseBtn()
 	{
 		foreach (int num in this.RoleIdArray)
@@ -176,10 +176,10 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 		UiManager.Instance.CloseView(EUiViewName.TowerRecommendView, null);
 	}
 
-	// Token: 0x0400AF03 RID: 44803
+	// Token: 0x0400B308 RID: 45832
 	private const double PERCENT = 0.01;
 
-	// Token: 0x0400AF04 RID: 44804
+	// Token: 0x0400B309 RID: 45833
 	[Nullable(new byte[]
 	{
 		2,
@@ -187,27 +187,27 @@ public class TowerRecommendItem : GridProxyAbstract<TowerRecommendFormation>
 	})]
 	private GenericLayoutNew<MediumItemGrid> RoleLayout;
 
-	// Token: 0x0400AF05 RID: 44805
+	// Token: 0x0400B30A RID: 45834
 	[Nullable(2)]
 	private List<int> RoleIdArray;
 
-	// Token: 0x0400AF06 RID: 44806
+	// Token: 0x0400B30B RID: 45835
 	[Nullable(2)]
 	private Dictionary<int, int> RoleSkillBranchMap;
 
-	// Token: 0x020091C4 RID: 37316
+	// Token: 0x02008407 RID: 33799
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F2A8 RID: 193192
+		// Token: 0x0402A9A9 RID: 174505
 		UseBtn,
-		// Token: 0x0402F2A9 RID: 193193
+		// Token: 0x0402A9AA RID: 174506
 		UseBtnInteractionGroup,
-		// Token: 0x0402F2AA RID: 193194
+		// Token: 0x0402A9AB RID: 174507
 		IndexText,
-		// Token: 0x0402F2AB RID: 193195
+		// Token: 0x0402A9AC RID: 174508
 		PercentText,
-		// Token: 0x0402F2AC RID: 193196
+		// Token: 0x0402A9AD RID: 174509
 		RoleScrollView
 	}
 }

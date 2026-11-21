@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200163E RID: 5694
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017AB RID: 6059
 	public class EnableHostility : ActionParams
 	{
-		// Token: 0x06007C55 RID: 31829 RVA: 0x0012B074 File Offset: 0x00129274
+		// Token: 0x06008333 RID: 33587 RVA: 0x0013A120 File Offset: 0x00138320
 		private EnableHostility_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C56 RID: 31830 RVA: 0x0012B0AC File Offset: 0x001292AC
+		// Token: 0x06008334 RID: 33588 RVA: 0x0013A158 File Offset: 0x00138358
 		public static EnableHostility Create([Nullable(2)] EnableHostility instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C57 RID: 31831 RVA: 0x0012B0BF File Offset: 0x001292BF
+		// Token: 0x06008335 RID: 33589 RVA: 0x0013A16B File Offset: 0x0013836B
 		public static EnableHostility CreateFromSetValue([Nullable(2)] EnableHostility_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C58 RID: 31832 RVA: 0x0012B0D2 File Offset: 0x001292D2
+		// Token: 0x06008336 RID: 33590 RVA: 0x0013A17E File Offset: 0x0013837E
 		public EnableHostility_SetValue ToSetValue()
 		{
 			return new EnableHostility_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002920 RID: 10528
-		// (get) Token: 0x06007C59 RID: 31833 RVA: 0x0012B0F1 File Offset: 0x001292F1
-		// (set) Token: 0x06007C5A RID: 31834 RVA: 0x0012B11C File Offset: 0x0012931C
+		// Token: 0x17002B0B RID: 11019
+		// (get) Token: 0x06008337 RID: 33591 RVA: 0x0013A19D File Offset: 0x0013839D
+		// (set) Token: 0x06008338 RID: 33592 RVA: 0x0013A1C8 File Offset: 0x001383C8
 		public virtual bool IsEnable
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002921 RID: 10529
-		// (get) Token: 0x06007C5B RID: 31835 RVA: 0x0012B12A File Offset: 0x0012932A
-		// (set) Token: 0x06007C5C RID: 31836 RVA: 0x0012B151 File Offset: 0x00129351
+		// Token: 0x17002B0C RID: 11020
+		// (get) Token: 0x06008339 RID: 33593 RVA: 0x0013A1D6 File Offset: 0x001383D6
+		// (set) Token: 0x0600833A RID: 33594 RVA: 0x0013A1FD File Offset: 0x001383FD
 		public virtual List<int> EntityIds
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C62 RID: 19554
+		// Token: 0x04005056 RID: 20566
 		[Nullable(2)]
 		protected new EnableHostility FbInstance;
 
-		// Token: 0x04004C63 RID: 19555
+		// Token: 0x04005057 RID: 20567
 		[Nullable(2)]
 		protected EnableHostility_SetValue PocoInterface;
 	}

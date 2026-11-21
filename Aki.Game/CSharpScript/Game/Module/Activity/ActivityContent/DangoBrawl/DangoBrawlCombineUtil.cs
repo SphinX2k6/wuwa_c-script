@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067D5 RID: 26581
+	// Token: 0x02005725 RID: 22309
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class DangoBrawlCombineUtil
 	{
-		// Token: 0x06042343 RID: 271171 RVA: 0x0100DC60 File Offset: 0x0100BE60
+		// Token: 0x06036E99 RID: 224921 RVA: 0x00F4F130 File Offset: 0x00F4D330
 		public static FVector2D GetLinkCenterOffset(int templateId)
 		{
 			IDangoBrawlObjectTemplate templateConfigById = DangoBrawlConfig.Instance.GetTemplateConfigById(templateId);
@@ -26,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new FVector2D(templateConfigById.LinkCenterOffset.X.GetValueOrDefault(), templateConfigById.LinkCenterOffset.Y.GetValueOrDefault());
 		}
 
-		// Token: 0x06042344 RID: 271172 RVA: 0x0100DCC4 File Offset: 0x0100BEC4
+		// Token: 0x06036E9A RID: 224922 RVA: 0x00F4F194 File Offset: 0x00F4D394
 		public static bool HasCombineInfo(int configId)
 		{
 			IReadOnlyList<DangoBrawlItemCompose> dangoBrawlAllCompose = DangoBrawlConfig.Instance.GetDangoBrawlAllCompose();
@@ -36,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 			foreach (DangoBrawlItemCompose dangoBrawlItemCompose in dangoBrawlAllCompose)
 			{
-				if (dangoBrawlItemCompose.GetNeedItemsArray().Contains(configId) || dangoBrawlItemCompose.ResultItemId == configId)
+				if (NoLinq.Contains<int>(dangoBrawlItemCompose.GetNeedItemsBytes(), configId) || dangoBrawlItemCompose.ResultItemId == configId)
 				{
 					return true;
 				}
@@ -44,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x06042345 RID: 271173 RVA: 0x0100DD38 File Offset: 0x0100BF38
+		// Token: 0x06036E9B RID: 224923 RVA: 0x00F4F208 File Offset: 0x00F4D408
 		[NullableContext(1)]
 		public static DangoBrawlCombineRowData[] GetCombineDataList([Nullable(2)] DangoBrawlBackpackData backPackData)
 		{
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list.ToArray();
 		}
 
-		// Token: 0x06042346 RID: 271174 RVA: 0x0100DEF0 File Offset: 0x0100C0F0
+		// Token: 0x06036E9C RID: 224924 RVA: 0x00F4F3C0 File Offset: 0x00F4D5C0
 		[return: Nullable(1)]
 		public static DangoBrawlCombineRowData[] GetCombineDataListAll(ActivityDangoBrawlData actData, EDragSourceKind[] validSources = null, int extraUid = 0)
 		{
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list2.ToArray();
 		}
 
-		// Token: 0x06042347 RID: 271175 RVA: 0x0100E2A8 File Offset: 0x0100C4A8
+		// Token: 0x06036E9D RID: 224925 RVA: 0x00F4F778 File Offset: 0x00F4D978
 		[return: Nullable(1)]
 		public static CombineItem[] GetCombinePartnerUids(int forUid, ActivityDangoBrawlData actData, EDragSourceKind ownerSource = EDragSourceKind.Bag, EDragSourceKind[] validSources = null)
 		{
@@ -363,7 +362,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list4.ToArray();
 		}
 
-		// Token: 0x06042348 RID: 271176 RVA: 0x0100E864 File Offset: 0x0100CA64
+		// Token: 0x06036E9E RID: 224926 RVA: 0x00F4FD34 File Offset: 0x00F4DF34
 		[NullableContext(1)]
 		private static int ResolveConfigId(int uid, ActivityDangoBrawlData actData)
 		{
@@ -417,7 +416,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return 0;
 		}
 
-		// Token: 0x06042349 RID: 271177 RVA: 0x0100E9DC File Offset: 0x0100CBDC
+		// Token: 0x06036E9F RID: 224927 RVA: 0x00F4FEAC File Offset: 0x00F4E0AC
 		public static FVector2D? GetItemStartLguiPos(UUIItem rootItem, int configId)
 		{
 			if (rootItem == null || !rootItem.IsValid() || configId <= 0)
@@ -435,13 +434,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new FVector2D?(new FVector2D(itemTopLeft.Value.X + width * 0.5f + linkCenterOffset.X, itemTopLeft.Value.Y - height * 0.5f + linkCenterOffset.Y));
 		}
 
-		// Token: 0x0604234A RID: 271178 RVA: 0x0100EA78 File Offset: 0x0100CC78
+		// Token: 0x06036EA0 RID: 224928 RVA: 0x00F4FF48 File Offset: 0x00F4E148
 		public static float CalcCombineLineAngleDeg(FVector2D from, FVector2D to)
 		{
 			return (float)(Math.Atan2((double)(to.Y - from.Y), (double)(to.X - from.X)) * 180.0 / 3.141592653589793);
 		}
 
-		// Token: 0x0604234B RID: 271179 RVA: 0x0100EAB0 File Offset: 0x0100CCB0
+		// Token: 0x06036EA1 RID: 224929 RVA: 0x00F4FF80 File Offset: 0x00F4E180
 		public static bool IsMoreTopLeft(PanelPos a, PanelPos b)
 		{
 			if (a.RowIndex != b.RowIndex)
@@ -451,7 +450,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return a.ColIndex < b.ColIndex;
 		}
 
-		// Token: 0x0604234C RID: 271180 RVA: 0x0100EAE0 File Offset: 0x0100CCE0
+		// Token: 0x06036EA2 RID: 224930 RVA: 0x00F4FFB0 File Offset: 0x00F4E1B0
 		public static int ResolveMainUid(DangoBrawlCombineRowData data, DangoBrawlBackpackData bagData)
 		{
 			if (data.SourceItems.Length == 0)
@@ -492,7 +491,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return data.SourceItems[0].Uid;
 		}
 
-		// Token: 0x0604234D RID: 271181 RVA: 0x0100EBC4 File Offset: 0x0100CDC4
+		// Token: 0x06036EA3 RID: 224931 RVA: 0x00F50094 File Offset: 0x00F4E294
 		[return: TupleElementNames(new string[]
 		{
 			"toBench",
@@ -573,7 +572,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new ValueTuple<bool, DangoBrawlBagSlotInfo>(false, dangoBrawlBagSlotInfo);
 		}
 
-		// Token: 0x0604234E RID: 271182 RVA: 0x0100EDEC File Offset: 0x0100CFEC
+		// Token: 0x06036EA4 RID: 224932 RVA: 0x00F502BC File Offset: 0x00F4E4BC
 		[NullableContext(1)]
 		public static bool IsBlockedByUniqueWeapon(ActivityDangoBrawlData actData, DangoBrawlCombineRowData data)
 		{
@@ -604,7 +603,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return flag || flag2;
 		}
 
-		// Token: 0x0604234F RID: 271183 RVA: 0x0100EEEC File Offset: 0x0100D0EC
+		// Token: 0x06036EA5 RID: 224933 RVA: 0x00F503BC File Offset: 0x00F4E5BC
 		[NullableContext(1)]
 		private static bool HasUnconsumedSpeItem([Nullable(new byte[]
 		{
@@ -627,21 +626,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x06042350 RID: 271184 RVA: 0x0100EF80 File Offset: 0x0100D180
+		// Token: 0x06036EA6 RID: 224934 RVA: 0x00F50450 File Offset: 0x00F4E650
 		[CompilerGenerated]
 		internal static bool <GetCombineDataListAll>g__IsAllowed|3_0(EDragSourceKind kind, ref DangoBrawlCombineUtil.<>c__DisplayClass3_0 A_1)
 		{
 			return A_1.allowAll || Array.IndexOf<EDragSourceKind>(A_1.validSources, kind) >= 0;
 		}
 
-		// Token: 0x06042351 RID: 271185 RVA: 0x0100EF9E File Offset: 0x0100D19E
+		// Token: 0x06036EA7 RID: 224935 RVA: 0x00F5046E File Offset: 0x00F4E66E
 		[CompilerGenerated]
 		internal static bool <GetCombineDataListAll>g__Accept|3_1(EDragSourceKind kind, int uid, ref DangoBrawlCombineUtil.<>c__DisplayClass3_0 A_2)
 		{
 			return DangoBrawlCombineUtil.<GetCombineDataListAll>g__IsAllowed|3_0(kind, ref A_2) || uid == A_2.extraUid;
 		}
 
-		// Token: 0x06042352 RID: 271186 RVA: 0x0100EFB4 File Offset: 0x0100D1B4
+		// Token: 0x06036EA8 RID: 224936 RVA: 0x00F50484 File Offset: 0x00F4E684
 		[CompilerGenerated]
 		internal static bool <GetCombinePartnerUids>g__IsAllowed|4_0(EDragSourceKind kind, ref DangoBrawlCombineUtil.<>c__DisplayClass4_0 A_1)
 		{

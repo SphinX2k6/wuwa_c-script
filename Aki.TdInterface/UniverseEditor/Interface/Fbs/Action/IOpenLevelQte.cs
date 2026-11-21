@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C0C RID: 27660
+	// Token: 0x02007370 RID: 29552
 	public struct IOpenLevelQte : IFlatbufferObject
 	{
-		// Token: 0x1700CDB6 RID: 52662
-		// (get) Token: 0x06030A2A RID: 199210 RVA: 0x0069A2D8 File Offset: 0x006984D8
+		// Token: 0x1700D8C4 RID: 55492
+		// (get) Token: 0x0603394A RID: 211274 RVA: 0x006F3C6C File Offset: 0x006F1E6C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030A2B RID: 199211 RVA: 0x0069A2E5 File Offset: 0x006984E5
+		// Token: 0x0603394B RID: 211275 RVA: 0x006F3C79 File Offset: 0x006F1E79
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030A2C RID: 199212 RVA: 0x0069A2EC File Offset: 0x006984EC
+		// Token: 0x0603394C RID: 211276 RVA: 0x006F3C80 File Offset: 0x006F1E80
 		public static IOpenLevelQte GetRootAsIOpenLevelQte(ByteBuffer _bb)
 		{
 			return IOpenLevelQte.GetRootAsIOpenLevelQte(_bb, default(IOpenLevelQte));
 		}
 
-		// Token: 0x06030A2D RID: 199213 RVA: 0x0069A308 File Offset: 0x00698508
+		// Token: 0x0603394D RID: 211277 RVA: 0x006F3C9C File Offset: 0x006F1E9C
 		public static IOpenLevelQte GetRootAsIOpenLevelQte(ByteBuffer _bb, IOpenLevelQte obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030A2E RID: 199214 RVA: 0x0069A325 File Offset: 0x00698525
+		// Token: 0x0603394E RID: 211278 RVA: 0x006F3CB9 File Offset: 0x006F1EB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030A2F RID: 199215 RVA: 0x0069A334 File Offset: 0x00698534
+		// Token: 0x0603394F RID: 211279 RVA: 0x006F3CC8 File Offset: 0x006F1EC8
 		public IOpenLevelQte __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDB7 RID: 52663
-		// (get) Token: 0x06030A30 RID: 199216 RVA: 0x0069A344 File Offset: 0x00698544
+		// Token: 0x1700D8C5 RID: 55493
+		// (get) Token: 0x06033950 RID: 211280 RVA: 0x006F3CD8 File Offset: 0x006F1ED8
 		public EOpenQteType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDB8 RID: 52664
-		// (get) Token: 0x06030A31 RID: 199217 RVA: 0x0069A380 File Offset: 0x00698580
+		// Token: 0x1700D8C6 RID: 55494
+		// (get) Token: 0x06033951 RID: 211281 RVA: 0x006F3D14 File Offset: 0x006F1F14
 		public TTargetEntity LevelQteEntityType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030A32 RID: 199218 RVA: 0x0069A3BC File Offset: 0x006985BC
+		// Token: 0x06033952 RID: 211282 RVA: 0x006F3D50 File Offset: 0x006F1F50
 		public TTable? LevelQteEntity<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,37 +88,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030A33 RID: 199219 RVA: 0x0069A400 File Offset: 0x00698600
+		// Token: 0x06033953 RID: 211283 RVA: 0x006F3D94 File Offset: 0x006F1F94
 		public IPlayerEntity LevelQteEntityAsIPlayerEntity()
 		{
 			return this.LevelQteEntity<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x06030A34 RID: 199220 RVA: 0x0069A41C File Offset: 0x0069861C
+		// Token: 0x06033954 RID: 211284 RVA: 0x006F3DB0 File Offset: 0x006F1FB0
 		public ISelfEntity LevelQteEntityAsISelfEntity()
 		{
 			return this.LevelQteEntity<ISelfEntity>().Value;
 		}
 
-		// Token: 0x06030A35 RID: 199221 RVA: 0x0069A438 File Offset: 0x00698638
+		// Token: 0x06033955 RID: 211285 RVA: 0x006F3DCC File Offset: 0x006F1FCC
 		public ITargetEntity LevelQteEntityAsITargetEntity()
 		{
 			return this.LevelQteEntity<ITargetEntity>().Value;
 		}
 
-		// Token: 0x06030A36 RID: 199222 RVA: 0x0069A454 File Offset: 0x00698654
+		// Token: 0x06033956 RID: 211286 RVA: 0x006F3DE8 File Offset: 0x006F1FE8
 		public ITriggeredEntity LevelQteEntityAsITriggeredEntity()
 		{
 			return this.LevelQteEntity<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x06030A37 RID: 199223 RVA: 0x0069A470 File Offset: 0x00698670
+		// Token: 0x06033957 RID: 211287 RVA: 0x006F3E04 File Offset: 0x006F2004
 		public IVehicleEntity LevelQteEntityAsIVehicleEntity()
 		{
 			return this.LevelQteEntity<IVehicleEntity>().Value;
 		}
 
-		// Token: 0x06030A38 RID: 199224 RVA: 0x0069A48B File Offset: 0x0069868B
+		// Token: 0x06033958 RID: 211288 RVA: 0x006F3E1F File Offset: 0x006F201F
 		public static Offset<IOpenLevelQte> CreateIOpenLevelQte(FlatBufferBuilder builder, EOpenQteType Type = EOpenQteType.PanelQte, TTargetEntity LevelQteEntity_type = TTargetEntity.NONE, int LevelQteEntityOffset = 0)
 		{
 			builder.StartTable(3);
@@ -128,37 +128,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenLevelQte.EndIOpenLevelQte(builder);
 		}
 
-		// Token: 0x06030A39 RID: 199225 RVA: 0x0069A4AF File Offset: 0x006986AF
+		// Token: 0x06033959 RID: 211289 RVA: 0x006F3E43 File Offset: 0x006F2043
 		public static void StartIOpenLevelQte(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06030A3A RID: 199226 RVA: 0x0069A4B8 File Offset: 0x006986B8
+		// Token: 0x0603395A RID: 211290 RVA: 0x006F3E4C File Offset: 0x006F204C
 		public static void AddType(FlatBufferBuilder builder, EOpenQteType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030A3B RID: 199227 RVA: 0x0069A4C3 File Offset: 0x006986C3
+		// Token: 0x0603395B RID: 211291 RVA: 0x006F3E57 File Offset: 0x006F2057
 		public static void AddLevelQteEntityType(FlatBufferBuilder builder, TTargetEntity levelQteEntityType)
 		{
 			builder.AddByte(1, (byte)levelQteEntityType, 0);
 		}
 
-		// Token: 0x06030A3C RID: 199228 RVA: 0x0069A4CE File Offset: 0x006986CE
+		// Token: 0x0603395C RID: 211292 RVA: 0x006F3E62 File Offset: 0x006F2062
 		public static void AddLevelQteEntity(FlatBufferBuilder builder, int levelQteEntityOffset)
 		{
 			builder.AddOffset(2, levelQteEntityOffset, 0);
 		}
 
-		// Token: 0x06030A3D RID: 199229 RVA: 0x0069A4D9 File Offset: 0x006986D9
+		// Token: 0x0603395D RID: 211293 RVA: 0x006F3E6D File Offset: 0x006F206D
 		public static Offset<IOpenLevelQte> EndIOpenLevelQte(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenLevelQte>(builder.EndTable());
 		}
 
-		// Token: 0x06030A3E RID: 199230 RVA: 0x0069A4E8 File Offset: 0x006986E8
+		// Token: 0x0603395E RID: 211294 RVA: 0x006F3E7C File Offset: 0x006F207C
 		public IOpenLevelQteT UnPack()
 		{
 			IOpenLevelQteT openLevelQteT = new IOpenLevelQteT();
@@ -166,7 +166,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openLevelQteT;
 		}
 
-		// Token: 0x06030A3F RID: 199231 RVA: 0x0069A504 File Offset: 0x00698704
+		// Token: 0x0603395F RID: 211295 RVA: 0x006F3E98 File Offset: 0x006F2098
 		public void UnPackTo(IOpenLevelQteT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030A40 RID: 199232 RVA: 0x0069A670 File Offset: 0x00698870
+		// Token: 0x06033960 RID: 211296 RVA: 0x006F4004 File Offset: 0x006F2204
 		public static Offset<IOpenLevelQte> Pack(FlatBufferBuilder builder, IOpenLevelQteT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenLevelQte.CreateIOpenLevelQte(builder, _o.Type, levelQteEntity_type, levelQteEntityOffset);
 		}
 
-		// Token: 0x0401150D RID: 70925
+		// Token: 0x0401245D RID: 74845
 		private Table __p;
 	}
 }

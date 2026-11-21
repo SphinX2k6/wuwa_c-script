@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020010D4 RID: 4308
+	// Token: 0x02000277 RID: 631
 	[UnrealObjectPath("/Script/Engine.SceneCaptureComponent2D")]
-	[UnrealStructLayout(3680, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3680)]
+	[UnrealStructLayout(3728, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3728)]
 	public class USceneCaptureComponent2D : USceneCaptureComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600F5F2 RID: 62962 RVA: 0x0016C72D File Offset: 0x0016A92D
+		// Token: 0x060040A9 RID: 16553 RVA: 0x0005CCB9 File Offset: 0x0005AEB9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USceneCaptureComponent2D._ClassPtr;
 		}
 
-		// Token: 0x0600F5F3 RID: 62963 RVA: 0x0016C73C File Offset: 0x0016A93C
+		// Token: 0x060040AA RID: 16554 RVA: 0x0005CCC8 File Offset: 0x0005AEC8
 		public USceneCaptureComponent2D() : this(BuiltinUtils.AllocNativeUObject(USceneCaptureComponent2D.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600F5F4 RID: 62964 RVA: 0x0016C764 File Offset: 0x0016A964
+		// Token: 0x060040AB RID: 16555 RVA: 0x0005CCF0 File Offset: 0x0005AEF0
 		[NullableContext(1)]
 		public USceneCaptureComponent2D(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USceneCaptureComponent2D.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003BE4 RID: 15332
-		// (get) Token: 0x0600F5F5 RID: 62965 RVA: 0x0016C797 File Offset: 0x0016A997
-		// (set) Token: 0x0600F5F6 RID: 62966 RVA: 0x0016C7B0 File Offset: 0x0016A9B0
+		// Token: 0x17000BDE RID: 3038
+		// (get) Token: 0x060040AC RID: 16556 RVA: 0x0005CD23 File Offset: 0x0005AF23
+		// (set) Token: 0x060040AD RID: 16557 RVA: 0x0005CD3C File Offset: 0x0005AF3C
 		public unsafe bool bForceCaptureOnce
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BE5 RID: 15333
-		// (get) Token: 0x0600F5F7 RID: 62967 RVA: 0x0016C7E0 File Offset: 0x0016A9E0
-		// (set) Token: 0x0600F5F8 RID: 62968 RVA: 0x0016C7F0 File Offset: 0x0016A9F0
+		// Token: 0x17000BDF RID: 3039
+		// (get) Token: 0x060040AE RID: 16558 RVA: 0x0005CD6C File Offset: 0x0005AF6C
+		// (set) Token: 0x060040AF RID: 16559 RVA: 0x0005CD7C File Offset: 0x0005AF7C
 		public unsafe byte bEnableCapture
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BE6 RID: 15334
-		// (get) Token: 0x0600F5F9 RID: 62969 RVA: 0x0016C801 File Offset: 0x0016AA01
-		// (set) Token: 0x0600F5FA RID: 62970 RVA: 0x0016C811 File Offset: 0x0016AA11
+		// Token: 0x17000BE0 RID: 3040
+		// (get) Token: 0x060040B0 RID: 16560 RVA: 0x0005CD8D File Offset: 0x0005AF8D
+		// (set) Token: 0x060040B1 RID: 16561 RVA: 0x0005CD9D File Offset: 0x0005AF9D
 		public unsafe float CaptureInterval
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BE7 RID: 15335
-		// (get) Token: 0x0600F5FB RID: 62971 RVA: 0x0016C822 File Offset: 0x0016AA22
-		// (set) Token: 0x0600F5FC RID: 62972 RVA: 0x0016C832 File Offset: 0x0016AA32
+		// Token: 0x17000BE1 RID: 3041
+		// (get) Token: 0x060040B2 RID: 16562 RVA: 0x0005CDAE File Offset: 0x0005AFAE
+		// (set) Token: 0x060040B3 RID: 16563 RVA: 0x0005CDBE File Offset: 0x0005AFBE
 		public unsafe int CaptureMaxRTSize
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BE8 RID: 15336
-		// (get) Token: 0x0600F5FD RID: 62973 RVA: 0x0016C843 File Offset: 0x0016AA43
-		// (set) Token: 0x0600F5FE RID: 62974 RVA: 0x0016C853 File Offset: 0x0016AA53
+		// Token: 0x17000BE2 RID: 3042
+		// (get) Token: 0x060040B4 RID: 16564 RVA: 0x0005CDCF File Offset: 0x0005AFCF
+		// (set) Token: 0x060040B5 RID: 16565 RVA: 0x0005CDDF File Offset: 0x0005AFDF
 		public unsafe int CaptureMaxRTSizeXScale
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BE9 RID: 15337
-		// (get) Token: 0x0600F5FF RID: 62975 RVA: 0x0016C864 File Offset: 0x0016AA64
-		// (set) Token: 0x0600F600 RID: 62976 RVA: 0x0016C874 File Offset: 0x0016AA74
+		// Token: 0x17000BE3 RID: 3043
+		// (get) Token: 0x060040B6 RID: 16566 RVA: 0x0005CDF0 File Offset: 0x0005AFF0
+		// (set) Token: 0x060040B7 RID: 16567 RVA: 0x0005CE00 File Offset: 0x0005B000
 		public unsafe int CaptureMaxRTSizeYScale
 		{
 			get
@@ -118,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BEA RID: 15338
-		// (get) Token: 0x0600F601 RID: 62977 RVA: 0x0016C885 File Offset: 0x0016AA85
-		// (set) Token: 0x0600F602 RID: 62978 RVA: 0x0016C895 File Offset: 0x0016AA95
+		// Token: 0x17000BE4 RID: 3044
+		// (get) Token: 0x060040B8 RID: 16568 RVA: 0x0005CE11 File Offset: 0x0005B011
+		// (set) Token: 0x060040B9 RID: 16569 RVA: 0x0005CE21 File Offset: 0x0005B021
 		public unsafe bool bIgnoreCaptureMaxRTSize
 		{
 			get
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BEB RID: 15339
-		// (get) Token: 0x0600F603 RID: 62979 RVA: 0x0016C8A6 File Offset: 0x0016AAA6
-		// (set) Token: 0x0600F604 RID: 62980 RVA: 0x0016C8BA File Offset: 0x0016AABA
+		// Token: 0x17000BE5 RID: 3045
+		// (get) Token: 0x060040BA RID: 16570 RVA: 0x0005CE32 File Offset: 0x0005B032
+		// (set) Token: 0x060040BB RID: 16571 RVA: 0x0005CE46 File Offset: 0x0005B046
 		public unsafe TEnumAsByte<ECameraProjectionMode> ProjectionType
 		{
 			get
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BEC RID: 15340
-		// (get) Token: 0x0600F605 RID: 62981 RVA: 0x0016C8CF File Offset: 0x0016AACF
-		// (set) Token: 0x0600F606 RID: 62982 RVA: 0x0016C8DF File Offset: 0x0016AADF
+		// Token: 0x17000BE6 RID: 3046
+		// (get) Token: 0x060040BC RID: 16572 RVA: 0x0005CE5B File Offset: 0x0005B05B
+		// (set) Token: 0x060040BD RID: 16573 RVA: 0x0005CE6B File Offset: 0x0005B06B
 		public unsafe float FOVAngle
 		{
 			get
@@ -163,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BED RID: 15341
-		// (get) Token: 0x0600F607 RID: 62983 RVA: 0x0016C8F0 File Offset: 0x0016AAF0
-		// (set) Token: 0x0600F608 RID: 62984 RVA: 0x0016C900 File Offset: 0x0016AB00
+		// Token: 0x17000BE7 RID: 3047
+		// (get) Token: 0x060040BE RID: 16574 RVA: 0x0005CE7C File Offset: 0x0005B07C
+		// (set) Token: 0x060040BF RID: 16575 RVA: 0x0005CE8C File Offset: 0x0005B08C
 		public unsafe float OrthoWidth
 		{
 			get
@@ -178,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BEE RID: 15342
-		// (get) Token: 0x0600F609 RID: 62985 RVA: 0x0016C911 File Offset: 0x0016AB11
-		// (set) Token: 0x0600F60A RID: 62986 RVA: 0x0016C925 File Offset: 0x0016AB25
+		// Token: 0x17000BE8 RID: 3048
+		// (get) Token: 0x060040C0 RID: 16576 RVA: 0x0005CE9D File Offset: 0x0005B09D
+		// (set) Token: 0x060040C1 RID: 16577 RVA: 0x0005CEB1 File Offset: 0x0005B0B1
 		[Nullable(2)]
 		public unsafe UTextureRenderTarget2D TextureTarget
 		{
@@ -196,24 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BEF RID: 15343
-		// (get) Token: 0x0600F60B RID: 62987 RVA: 0x0016C93A File Offset: 0x0016AB3A
-		// (set) Token: 0x0600F60C RID: 62988 RVA: 0x0016C94E File Offset: 0x0016AB4E
-		public unsafe TEnumAsByte<ESceneCaptureCompositeMode> CompositeMode
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)USceneCaptureComponent2D.__PropertyOffset_CompositeMode);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)USceneCaptureComponent2D.__PropertyOffset_CompositeMode) = value;
-			}
-		}
-
-		// Token: 0x17003BF0 RID: 15344
-		// (get) Token: 0x0600F60D RID: 62989 RVA: 0x0016C964 File Offset: 0x0016AB64
-		// (set) Token: 0x0600F60E RID: 62990 RVA: 0x0016C99D File Offset: 0x0016AB9D
+		// Token: 0x17000BE9 RID: 3049
+		// (get) Token: 0x060040C2 RID: 16578 RVA: 0x0005CEC8 File Offset: 0x0005B0C8
+		// (set) Token: 0x060040C3 RID: 16579 RVA: 0x0005CF01 File Offset: 0x0005B101
 		[Nullable(1)]
 		public FPostProcessSettings PostProcessSettings
 		{
@@ -235,9 +220,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF1 RID: 15345
-		// (get) Token: 0x0600F60F RID: 62991 RVA: 0x0016C9BE File Offset: 0x0016ABBE
-		// (set) Token: 0x0600F610 RID: 62992 RVA: 0x0016C9CE File Offset: 0x0016ABCE
+		// Token: 0x17000BEA RID: 3050
+		// (get) Token: 0x060040C4 RID: 16580 RVA: 0x0005CF22 File Offset: 0x0005B122
+		// (set) Token: 0x060040C5 RID: 16581 RVA: 0x0005CF32 File Offset: 0x0005B132
 		public unsafe float PostProcessBlendWeight
 		{
 			get
@@ -250,9 +235,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF2 RID: 15346
-		// (get) Token: 0x0600F611 RID: 62993 RVA: 0x0016C9DF File Offset: 0x0016ABDF
-		// (set) Token: 0x0600F612 RID: 62994 RVA: 0x0016C9F8 File Offset: 0x0016ABF8
+		// Token: 0x17000BEB RID: 3051
+		// (get) Token: 0x060040C6 RID: 16582 RVA: 0x0005CF43 File Offset: 0x0005B143
+		// (set) Token: 0x060040C7 RID: 16583 RVA: 0x0005CF5C File Offset: 0x0005B15C
 		public unsafe bool bOverride_CustomNearClippingPlane
 		{
 			get
@@ -265,9 +250,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF3 RID: 15347
-		// (get) Token: 0x0600F613 RID: 62995 RVA: 0x0016CA28 File Offset: 0x0016AC28
-		// (set) Token: 0x0600F614 RID: 62996 RVA: 0x0016CA38 File Offset: 0x0016AC38
+		// Token: 0x17000BEC RID: 3052
+		// (get) Token: 0x060040C8 RID: 16584 RVA: 0x0005CF8C File Offset: 0x0005B18C
+		// (set) Token: 0x060040C9 RID: 16585 RVA: 0x0005CF9C File Offset: 0x0005B19C
 		public unsafe float CustomNearClippingPlane
 		{
 			get
@@ -280,9 +265,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF4 RID: 15348
-		// (get) Token: 0x0600F615 RID: 62997 RVA: 0x0016CA49 File Offset: 0x0016AC49
-		// (set) Token: 0x0600F616 RID: 62998 RVA: 0x0016CA62 File Offset: 0x0016AC62
+		// Token: 0x17000BED RID: 3053
+		// (get) Token: 0x060040CA RID: 16586 RVA: 0x0005CFAD File Offset: 0x0005B1AD
+		// (set) Token: 0x060040CB RID: 16587 RVA: 0x0005CFC6 File Offset: 0x0005B1C6
 		public unsafe bool bUseCustomAspectRatio
 		{
 			get
@@ -295,9 +280,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF5 RID: 15349
-		// (get) Token: 0x0600F617 RID: 62999 RVA: 0x0016CA92 File Offset: 0x0016AC92
-		// (set) Token: 0x0600F618 RID: 63000 RVA: 0x0016CAA2 File Offset: 0x0016ACA2
+		// Token: 0x17000BEE RID: 3054
+		// (get) Token: 0x060040CC RID: 16588 RVA: 0x0005CFF6 File Offset: 0x0005B1F6
+		// (set) Token: 0x060040CD RID: 16589 RVA: 0x0005D006 File Offset: 0x0005B206
 		public unsafe float CustomAspectRatio
 		{
 			get
@@ -310,9 +295,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF6 RID: 15350
-		// (get) Token: 0x0600F619 RID: 63001 RVA: 0x0016CAB3 File Offset: 0x0016ACB3
-		// (set) Token: 0x0600F61A RID: 63002 RVA: 0x0016CAC3 File Offset: 0x0016ACC3
+		// Token: 0x17000BEF RID: 3055
+		// (get) Token: 0x060040CE RID: 16590 RVA: 0x0005D017 File Offset: 0x0005B217
+		// (set) Token: 0x060040CF RID: 16591 RVA: 0x0005D027 File Offset: 0x0005B227
 		public unsafe bool bUseCustomProjectionMatrix
 		{
 			get
@@ -325,9 +310,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF7 RID: 15351
-		// (get) Token: 0x0600F61B RID: 63003 RVA: 0x0016CAD4 File Offset: 0x0016ACD4
-		// (set) Token: 0x0600F61C RID: 63004 RVA: 0x0016CAE8 File Offset: 0x0016ACE8
+		// Token: 0x17000BF0 RID: 3056
+		// (get) Token: 0x060040D0 RID: 16592 RVA: 0x0005D038 File Offset: 0x0005B238
+		// (set) Token: 0x060040D1 RID: 16593 RVA: 0x0005D04C File Offset: 0x0005B24C
 		public unsafe FMatrix CustomProjectionMatrix
 		{
 			get
@@ -340,9 +325,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF8 RID: 15352
-		// (get) Token: 0x0600F61D RID: 63005 RVA: 0x0016CAFD File Offset: 0x0016ACFD
-		// (set) Token: 0x0600F61E RID: 63006 RVA: 0x0016CB0D File Offset: 0x0016AD0D
+		// Token: 0x17000BF1 RID: 3057
+		// (get) Token: 0x060040D2 RID: 16594 RVA: 0x0005D061 File Offset: 0x0005B261
+		// (set) Token: 0x060040D3 RID: 16595 RVA: 0x0005D071 File Offset: 0x0005B271
 		public unsafe bool bEnableClipPlane
 		{
 			get
@@ -355,9 +340,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BF9 RID: 15353
-		// (get) Token: 0x0600F61F RID: 63007 RVA: 0x0016CB1E File Offset: 0x0016AD1E
-		// (set) Token: 0x0600F620 RID: 63008 RVA: 0x0016CB32 File Offset: 0x0016AD32
+		// Token: 0x17000BF2 RID: 3058
+		// (get) Token: 0x060040D4 RID: 16596 RVA: 0x0005D082 File Offset: 0x0005B282
+		// (set) Token: 0x060040D5 RID: 16597 RVA: 0x0005D096 File Offset: 0x0005B296
 		public unsafe FVector ClipPlaneBase
 		{
 			get
@@ -370,9 +355,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BFA RID: 15354
-		// (get) Token: 0x0600F621 RID: 63009 RVA: 0x0016CB47 File Offset: 0x0016AD47
-		// (set) Token: 0x0600F622 RID: 63010 RVA: 0x0016CB5B File Offset: 0x0016AD5B
+		// Token: 0x17000BF3 RID: 3059
+		// (get) Token: 0x060040D6 RID: 16598 RVA: 0x0005D0AB File Offset: 0x0005B2AB
+		// (set) Token: 0x060040D7 RID: 16599 RVA: 0x0005D0BF File Offset: 0x0005B2BF
 		public unsafe FVector ClipPlaneNormal
 		{
 			get
@@ -385,9 +370,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BFB RID: 15355
-		// (get) Token: 0x0600F623 RID: 63011 RVA: 0x0016CB70 File Offset: 0x0016AD70
-		// (set) Token: 0x0600F624 RID: 63012 RVA: 0x0016CB89 File Offset: 0x0016AD89
+		// Token: 0x17000BF4 RID: 3060
+		// (get) Token: 0x060040D8 RID: 16600 RVA: 0x0005D0D4 File Offset: 0x0005B2D4
+		// (set) Token: 0x060040D9 RID: 16601 RVA: 0x0005D0ED File Offset: 0x0005B2ED
 		public unsafe bool bCameraCutThisFrame
 		{
 			get
@@ -400,9 +385,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BFC RID: 15356
-		// (get) Token: 0x0600F625 RID: 63013 RVA: 0x0016CBB9 File Offset: 0x0016ADB9
-		// (set) Token: 0x0600F626 RID: 63014 RVA: 0x0016CBD2 File Offset: 0x0016ADD2
+		// Token: 0x17000BF5 RID: 3061
+		// (get) Token: 0x060040DA RID: 16602 RVA: 0x0005D11D File Offset: 0x0005B31D
+		// (set) Token: 0x060040DB RID: 16603 RVA: 0x0005D136 File Offset: 0x0005B336
 		public unsafe bool bConsiderUnrenderedOpaquePixelAsFullyTranslucent
 		{
 			get
@@ -415,9 +400,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003BFD RID: 15357
-		// (get) Token: 0x0600F627 RID: 63015 RVA: 0x0016CC02 File Offset: 0x0016AE02
-		// (set) Token: 0x0600F628 RID: 63016 RVA: 0x0016CC12 File Offset: 0x0016AE12
+		// Token: 0x17000BF6 RID: 3062
+		// (get) Token: 0x060040DC RID: 16604 RVA: 0x0005D166 File Offset: 0x0005B366
+		// (set) Token: 0x060040DD RID: 16605 RVA: 0x0005D176 File Offset: 0x0005B376
 		public unsafe bool bDisableFlipCopyGLES
 		{
 			get
@@ -430,155 +415,140 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600F629 RID: 63017 RVA: 0x0016CC23 File Offset: 0x0016AE23
+		// Token: 0x060040DE RID: 16606 RVA: 0x0005D187 File Offset: 0x0005B387
 		[NullableContext(2)]
 		public void UpdateCaptureParams(in FSceneCaptureComponent2DParams Params, bool ForceCaptureOnce)
 		{
 			USceneCaptureComponent2D.__UpdateCaptureParams_Internal(base.NativePtr, (Params ?? new FSceneCaptureComponent2DParams()).NativePtr, ForceCaptureOnce);
 		}
 
-		// Token: 0x0600F62A RID: 63018 RVA: 0x0016CC41 File Offset: 0x0016AE41
+		// Token: 0x060040DF RID: 16607 RVA: 0x0005D1A5 File Offset: 0x0005B3A5
 		public void CaptureScene()
 		{
 			USceneCaptureComponent2D.__CaptureScene_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600F62B RID: 63019 RVA: 0x0016CC50 File Offset: 0x0016AE50
-		[NullableContext(2)]
-		public void AddOrUpdateBlendable(IBlendableInterface InBlendableObject, float InWeight = 1f)
-		{
-			FScriptInterface fscriptInterface = new FScriptInterface(InBlendableObject, (InBlendableObject != null) ? InBlendableObject.InterfaceOffset() : 0);
-			USceneCaptureComponent2D.__AddOrUpdateBlendable_Internal(base.NativePtr, fscriptInterface, InWeight);
-		}
-
-		// Token: 0x0600F62C RID: 63020
+		// Token: 0x060040E0 RID: 16608
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UpdateCaptureParams_Internal(IntPtr @this, IntPtr Params, bool ForceCaptureOnce);
 
-		// Token: 0x0600F62D RID: 63021
+		// Token: 0x060040E1 RID: 16609
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __CaptureScene_Internal(IntPtr @this);
 
-		// Token: 0x0600F62E RID: 63022
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __AddOrUpdateBlendable_Internal(IntPtr @this, in FScriptInterface InBlendableObject, float InWeight);
-
-		// Token: 0x0600F62F RID: 63023 RVA: 0x0016CC7F File Offset: 0x0016AE7F
+		// Token: 0x060040E2 RID: 16610 RVA: 0x0005D1B2 File Offset: 0x0005B3B2
 		static USceneCaptureComponent2D()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.SceneCaptureComponent2D");
 		}
 
-		// Token: 0x0600F630 RID: 63024 RVA: 0x0016CC8D File Offset: 0x0016AE8D
+		// Token: 0x060040E3 RID: 16611 RVA: 0x0005D1C0 File Offset: 0x0005B3C0
 		protected USceneCaptureComponent2D(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008539 RID: 34105
+		// Token: 0x0400195F RID: 6495
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.SceneCaptureComponent2D";
 
-		// Token: 0x0400853A RID: 34106
+		// Token: 0x04001960 RID: 6496
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400853B RID: 34107
+		// Token: 0x04001961 RID: 6497
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400853C RID: 34108
+		// Token: 0x04001962 RID: 6498
 		internal static int __PropertyOffset_bForceCaptureOnce;
 
-		// Token: 0x0400853D RID: 34109
+		// Token: 0x04001963 RID: 6499
 		internal static byte __PropertyMask_bForceCaptureOnce;
 
-		// Token: 0x0400853E RID: 34110
+		// Token: 0x04001964 RID: 6500
 		internal static int __PropertyOffset_bEnableCapture;
 
-		// Token: 0x0400853F RID: 34111
+		// Token: 0x04001965 RID: 6501
 		internal static int __PropertyOffset_CaptureInterval;
 
-		// Token: 0x04008540 RID: 34112
+		// Token: 0x04001966 RID: 6502
 		internal static int __PropertyOffset_CaptureMaxRTSize;
 
-		// Token: 0x04008541 RID: 34113
+		// Token: 0x04001967 RID: 6503
 		internal static int __PropertyOffset_CaptureMaxRTSizeXScale;
 
-		// Token: 0x04008542 RID: 34114
+		// Token: 0x04001968 RID: 6504
 		internal static int __PropertyOffset_CaptureMaxRTSizeYScale;
 
-		// Token: 0x04008543 RID: 34115
+		// Token: 0x04001969 RID: 6505
 		internal static int __PropertyOffset_bIgnoreCaptureMaxRTSize;
 
-		// Token: 0x04008544 RID: 34116
+		// Token: 0x0400196A RID: 6506
 		internal static int __PropertyOffset_ProjectionType;
 
-		// Token: 0x04008545 RID: 34117
+		// Token: 0x0400196B RID: 6507
 		internal static int __PropertyOffset_FOVAngle;
 
-		// Token: 0x04008546 RID: 34118
+		// Token: 0x0400196C RID: 6508
 		internal static int __PropertyOffset_OrthoWidth;
 
-		// Token: 0x04008547 RID: 34119
+		// Token: 0x0400196D RID: 6509
 		internal static int __PropertyOffset_TextureTarget;
 
-		// Token: 0x04008548 RID: 34120
-		internal static int __PropertyOffset_CompositeMode;
-
-		// Token: 0x04008549 RID: 34121
+		// Token: 0x0400196E RID: 6510
 		internal static int __PropertyOffset_PostProcessSettings;
 
-		// Token: 0x0400854A RID: 34122
+		// Token: 0x0400196F RID: 6511
 		[Nullable(2)]
 		private FPostProcessSettings _PostProcessSettings;
 
-		// Token: 0x0400854B RID: 34123
+		// Token: 0x04001970 RID: 6512
 		internal static int __PropertyOffset_PostProcessBlendWeight;
 
-		// Token: 0x0400854C RID: 34124
+		// Token: 0x04001971 RID: 6513
 		internal static int __PropertyOffset_bOverride_CustomNearClippingPlane;
 
-		// Token: 0x0400854D RID: 34125
+		// Token: 0x04001972 RID: 6514
 		internal static byte __PropertyMask_bOverride_CustomNearClippingPlane;
 
-		// Token: 0x0400854E RID: 34126
+		// Token: 0x04001973 RID: 6515
 		internal static int __PropertyOffset_CustomNearClippingPlane;
 
-		// Token: 0x0400854F RID: 34127
+		// Token: 0x04001974 RID: 6516
 		internal static int __PropertyOffset_bUseCustomAspectRatio;
 
-		// Token: 0x04008550 RID: 34128
+		// Token: 0x04001975 RID: 6517
 		internal static byte __PropertyMask_bUseCustomAspectRatio;
 
-		// Token: 0x04008551 RID: 34129
+		// Token: 0x04001976 RID: 6518
 		internal static int __PropertyOffset_CustomAspectRatio;
 
-		// Token: 0x04008552 RID: 34130
+		// Token: 0x04001977 RID: 6519
 		internal static int __PropertyOffset_bUseCustomProjectionMatrix;
 
-		// Token: 0x04008553 RID: 34131
+		// Token: 0x04001978 RID: 6520
 		internal static int __PropertyOffset_CustomProjectionMatrix;
 
-		// Token: 0x04008554 RID: 34132
+		// Token: 0x04001979 RID: 6521
 		internal static int __PropertyOffset_bEnableClipPlane;
 
-		// Token: 0x04008555 RID: 34133
+		// Token: 0x0400197A RID: 6522
 		internal static int __PropertyOffset_ClipPlaneBase;
 
-		// Token: 0x04008556 RID: 34134
+		// Token: 0x0400197B RID: 6523
 		internal static int __PropertyOffset_ClipPlaneNormal;
 
-		// Token: 0x04008557 RID: 34135
+		// Token: 0x0400197C RID: 6524
 		internal static int __PropertyOffset_bCameraCutThisFrame;
 
-		// Token: 0x04008558 RID: 34136
+		// Token: 0x0400197D RID: 6525
 		internal static byte __PropertyMask_bCameraCutThisFrame;
 
-		// Token: 0x04008559 RID: 34137
+		// Token: 0x0400197E RID: 6526
 		internal static int __PropertyOffset_bConsiderUnrenderedOpaquePixelAsFullyTranslucent;
 
-		// Token: 0x0400855A RID: 34138
+		// Token: 0x0400197F RID: 6527
 		internal static byte __PropertyMask_bConsiderUnrenderedOpaquePixelAsFullyTranslucent;
 
-		// Token: 0x0400855B RID: 34139
+		// Token: 0x04001980 RID: 6528
 		internal static int __PropertyOffset_bDisableFlipCopyGLES;
 	}
 }

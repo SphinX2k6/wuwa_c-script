@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F8 RID: 18680
+	// Token: 0x0200386F RID: 14447
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NavigationScrollbarData
 	{
-		// Token: 0x06030D92 RID: 200082 RVA: 0x00B58218 File Offset: 0x00B56418
+		// Token: 0x060258BF RID: 153791 RVA: 0x00A93088 File Offset: 0x00A91288
 		private void FindSuitableScrollbar()
 		{
 			TsUiNavigationBehaviorListener currentListener = this.CurrentListener;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.SetCurrentScrollbar(currentScrollbar);
 		}
 
-		// Token: 0x06030D93 RID: 200083 RVA: 0x00B58290 File Offset: 0x00B56490
+		// Token: 0x060258C0 RID: 153792 RVA: 0x00A93100 File Offset: 0x00A91300
 		private void SetCurrentScrollbar(TsUiNavigationBehaviorListener listener)
 		{
 			if (this.CurrentListener != null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.CurrentScrollbar = (((listener != null) ? listener.GetBehaviorComponent() : null) as UUIScrollViewComponent);
 		}
 
-		// Token: 0x06030D94 RID: 200084 RVA: 0x00B582E8 File Offset: 0x00B564E8
+		// Token: 0x060258C1 RID: 153793 RVA: 0x00A93158 File Offset: 0x00A91358
 		[NullableContext(1)]
 		public void AddScrollbar(List<NavigationGroup> groupArray)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FindSuitableScrollbar();
 		}
 
-		// Token: 0x06030D95 RID: 200085 RVA: 0x00B583B0 File Offset: 0x00B565B0
+		// Token: 0x060258C2 RID: 153794 RVA: 0x00A93220 File Offset: 0x00A91420
 		public void DeleteScrollbar(NavigationGroup group)
 		{
 			List<TsUiNavigationBehaviorListener> list = (group != null) ? group.ListenerList : null;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FindSuitableScrollbar();
 		}
 
-		// Token: 0x06030D96 RID: 200086 RVA: 0x00B5843C File Offset: 0x00B5663C
+		// Token: 0x060258C3 RID: 153795 RVA: 0x00A932AC File Offset: 0x00A914AC
 		public void ResumeLastListener()
 		{
 			TsUiNavigationBehaviorListener lastListener = this.LastListener;
@@ -97,27 +97,27 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.FindSuitableScrollbar();
 		}
 
-		// Token: 0x06030D97 RID: 200087 RVA: 0x00B58472 File Offset: 0x00B56672
+		// Token: 0x060258C4 RID: 153796 RVA: 0x00A932E2 File Offset: 0x00A914E2
 		[NullableContext(1)]
 		public TsUiNavigationBehaviorListener GetCurrentListener()
 		{
 			return this.CurrentListener;
 		}
 
-		// Token: 0x06030D98 RID: 200088 RVA: 0x00B5847A File Offset: 0x00B5667A
+		// Token: 0x060258C5 RID: 153797 RVA: 0x00A932EA File Offset: 0x00A914EA
 		[NullableContext(1)]
 		public UUIScrollViewComponent GetCurrentScrollbar()
 		{
 			return this.CurrentScrollbar;
 		}
 
-		// Token: 0x06030D99 RID: 200089 RVA: 0x00B58482 File Offset: 0x00B56682
+		// Token: 0x060258C6 RID: 153798 RVA: 0x00A932F2 File Offset: 0x00A914F2
 		public bool HasActiveScrollbarList()
 		{
 			return this.ScrollbarList.FindAll((TsUiNavigationBehaviorListener listener) => listener.IsListenerActive()).Count > 1;
 		}
 
-		// Token: 0x06030D9A RID: 200090 RVA: 0x00B584B8 File Offset: 0x00B566B8
+		// Token: 0x060258C7 RID: 153799 RVA: 0x00A93328 File Offset: 0x00A91528
 		public void FindNextScrollbar()
 		{
 			if (this.CurrentListener == null)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationViewManager.Instance.RefreshCurrentHotKey();
 		}
 
-		// Token: 0x06030D9B RID: 200091 RVA: 0x00B58554 File Offset: 0x00B56754
+		// Token: 0x060258C8 RID: 153800 RVA: 0x00A933C4 File Offset: 0x00A915C4
 		public void FindPrevScrollbar()
 		{
 			if (this.CurrentListener == null)
@@ -176,23 +176,23 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationViewManager.Instance.RefreshCurrentHotKey();
 		}
 
-		// Token: 0x06030D9C RID: 200092 RVA: 0x00B585EB File Offset: 0x00B567EB
+		// Token: 0x060258C9 RID: 153801 RVA: 0x00A9345B File Offset: 0x00A9165B
 		public void TryFindScrollbar()
 		{
 			this.FindSuitableScrollbar();
 		}
 
-		// Token: 0x0401A3B0 RID: 107440
+		// Token: 0x04014C23 RID: 85027
 		[Nullable(1)]
 		private List<TsUiNavigationBehaviorListener> ScrollbarList = new List<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3B1 RID: 107441
+		// Token: 0x04014C24 RID: 85028
 		private TsUiNavigationBehaviorListener CurrentListener;
 
-		// Token: 0x0401A3B2 RID: 107442
+		// Token: 0x04014C25 RID: 85029
 		private UUIScrollViewComponent CurrentScrollbar;
 
-		// Token: 0x0401A3B3 RID: 107443
+		// Token: 0x04014C26 RID: 85030
 		private TsUiNavigationBehaviorListener LastListener;
 	}
 }

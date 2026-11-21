@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.CombatMessage
 {
-	// Token: 0x0200168E RID: 5774
+	// Token: 0x0200170A RID: 5898
 	[NetMessage(EMessageId.CombatSendPackRequest)]
 	public sealed class CombatSendPackRequest : IMessage<CombatSendPackRequest>, IMessage, IEquatable<CombatSendPackRequest>, IDeepCloneable<CombatSendPackRequest>, IBufferMessage
 	{
-		// Token: 0x0601CEDB RID: 118491 RVA: 0x0043B7DD File Offset: 0x004399DD
+		// Token: 0x0601D9A6 RID: 121254 RVA: 0x00457389 File Offset: 0x00455589
 		[NullableContext(1)]
 		public static CombatSendPackRequest Create()
 		{
 			return new CombatSendPackRequest();
 		}
 
-		// Token: 0x1700621C RID: 25116
-		// (get) Token: 0x0601CEDC RID: 118492 RVA: 0x0043B7E4 File Offset: 0x004399E4
+		// Token: 0x170064BF RID: 25791
+		// (get) Token: 0x0601D9A7 RID: 121255 RVA: 0x00457390 File Offset: 0x00455590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700621D RID: 25117
-		// (get) Token: 0x0601CEDD RID: 118493 RVA: 0x0043B7E7 File Offset: 0x004399E7
+		// Token: 0x170064C0 RID: 25792
+		// (get) Token: 0x0601D9A8 RID: 121256 RVA: 0x00457393 File Offset: 0x00455593
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CEDE RID: 118494 RVA: 0x0043B7EE File Offset: 0x004399EE
+		// Token: 0x0601D9A9 RID: 121257 RVA: 0x0045739A File Offset: 0x0045559A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatSendPackRequest()
 		{
 		}
 
-		// Token: 0x0601CEDF RID: 118495 RVA: 0x0043B801 File Offset: 0x00439A01
+		// Token: 0x0601D9AA RID: 121258 RVA: 0x004573AD File Offset: 0x004555AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatSendPackRequest(CombatSendPackRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CEE0 RID: 118496 RVA: 0x0043B837 File Offset: 0x00439A37
+		// Token: 0x0601D9AB RID: 121259 RVA: 0x004573E3 File Offset: 0x004555E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatSendPackRequest Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol.CombatMessage
 			return new CombatSendPackRequest(this);
 		}
 
-		// Token: 0x1700621E RID: 25118
-		// (get) Token: 0x0601CEE1 RID: 118497 RVA: 0x0043B83F File Offset: 0x00439A3F
+		// Token: 0x170064C1 RID: 25793
+		// (get) Token: 0x0601D9AC RID: 121260 RVA: 0x004573EB File Offset: 0x004555EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CombatSendData> Data
@@ -80,9 +80,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700621F RID: 25119
-		// (get) Token: 0x0601CEE2 RID: 118498 RVA: 0x0043B847 File Offset: 0x00439A47
-		// (set) Token: 0x0601CEE3 RID: 118499 RVA: 0x0043B84F File Offset: 0x00439A4F
+		// Token: 0x170064C2 RID: 25794
+		// (get) Token: 0x0601D9AD RID: 121261 RVA: 0x004573F3 File Offset: 0x004555F3
+		// (set) Token: 0x0601D9AE RID: 121262 RVA: 0x004573FB File Offset: 0x004555FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int HostPlayerId
@@ -97,7 +97,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CEE4 RID: 118500 RVA: 0x0043B858 File Offset: 0x00439A58
+		// Token: 0x0601D9AF RID: 121263 RVA: 0x00457404 File Offset: 0x00455604
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol.CombatMessage
 			return this.Equals(other as CombatSendPackRequest);
 		}
 
-		// Token: 0x0601CEE5 RID: 118501 RVA: 0x0043B868 File Offset: 0x00439A68
+		// Token: 0x0601D9B0 RID: 121264 RVA: 0x00457414 File Offset: 0x00455614
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CombatSendPackRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol.CombatMessage
 			return other != null && (other == this || (this.data_.Equals(other.data_) && this.HostPlayerId == other.HostPlayerId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601CEE6 RID: 118502 RVA: 0x0043B8B8 File Offset: 0x00439AB8
+		// Token: 0x0601D9B1 RID: 121265 RVA: 0x00457464 File Offset: 0x00455664
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CEE7 RID: 118503 RVA: 0x0043B905 File Offset: 0x00439B05
+		// Token: 0x0601D9B2 RID: 121266 RVA: 0x004574B1 File Offset: 0x004556B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol.CombatMessage
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CEE8 RID: 118504 RVA: 0x0043B912 File Offset: 0x00439B12
+		// Token: 0x0601D9B3 RID: 121267 RVA: 0x004574BE File Offset: 0x004556BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol.CombatMessage
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CEE9 RID: 118505 RVA: 0x0043B91C File Offset: 0x00439B1C
+		// Token: 0x0601D9B4 RID: 121268 RVA: 0x004574C8 File Offset: 0x004556C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.HostPlayerId != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.HostPlayerId);
 			}
 			this.data_.WriteTo(ref output, CombatSendPackRequest._repeated_data_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CEEA RID: 118506 RVA: 0x0043B96C File Offset: 0x00439B6C
+		// Token: 0x0601D9B5 RID: 121269 RVA: 0x00457518 File Offset: 0x00455718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CEEB RID: 118507 RVA: 0x0043B9C0 File Offset: 0x00439BC0
+		// Token: 0x0601D9B6 RID: 121270 RVA: 0x0045756C File Offset: 0x0045576C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CombatSendPackRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CEEC RID: 118508 RVA: 0x0043BA0D File Offset: 0x00439C0D
+		// Token: 0x0601D9B7 RID: 121271 RVA: 0x004575B9 File Offset: 0x004557B9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol.CombatMessage
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CEED RID: 118509 RVA: 0x0043BA18 File Offset: 0x00439C18
+		// Token: 0x0601D9B8 RID: 121272 RVA: 0x004575C4 File Offset: 0x004557C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol.CombatMessage
 				{
 					return;
 				}
-				if (num != 64U)
+				if (num != 80U)
 				{
-					if (num != 114U)
+					if (num != 90U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0400C356 RID: 50006
+		// Token: 0x0400C881 RID: 51329
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C357 RID: 50007
-		public const int DataFieldNumber = 14;
+		// Token: 0x0400C882 RID: 51330
+		public const int DataFieldNumber = 11;
 
-		// Token: 0x0400C358 RID: 50008
-		private static readonly FieldCodec<CombatSendData> _repeated_data_codec = FieldCodec.ForMessage<CombatSendData>(114U, CombatSendData.Parser);
+		// Token: 0x0400C883 RID: 51331
+		private static readonly FieldCodec<CombatSendData> _repeated_data_codec = FieldCodec.ForMessage<CombatSendData>(90U, CombatSendData.Parser);
 
-		// Token: 0x0400C359 RID: 50009
+		// Token: 0x0400C884 RID: 51332
 		private readonly RepeatedField<CombatSendData> data_ = new RepeatedField<CombatSendData>();
 
-		// Token: 0x0400C35A RID: 50010
-		public const int HostPlayerIdFieldNumber = 8;
+		// Token: 0x0400C885 RID: 51333
+		public const int HostPlayerIdFieldNumber = 10;
 
-		// Token: 0x0400C35B RID: 50011
+		// Token: 0x0400C886 RID: 51334
 		private int hostPlayerId_;
 	}
 }

@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003499 RID: 13465
+// Token: 0x02002A0D RID: 10765
 [NullableContext(1)]
 [Nullable(0)]
 public class CatmullRomArcLengthLookup : ICatmullRomArcLengthLookup
 {
-	// Token: 0x170028AF RID: 10415
-	// (get) Token: 0x0601D4EA RID: 120042 RVA: 0x0082B5BC File Offset: 0x008297BC
+	// Token: 0x17002C47 RID: 11335
+	// (get) Token: 0x0601B1E6 RID: 111078 RVA: 0x00852820 File Offset: 0x00850A20
 	public IReadOnlyList<double> ParamSamples { get; }
 
-	// Token: 0x170028B0 RID: 10416
-	// (get) Token: 0x0601D4EB RID: 120043 RVA: 0x0082B5C4 File Offset: 0x008297C4
+	// Token: 0x17002C48 RID: 11336
+	// (get) Token: 0x0601B1E7 RID: 111079 RVA: 0x00852828 File Offset: 0x00850A28
 	public IReadOnlyList<double> CumulativeArcLengths { get; }
 
-	// Token: 0x170028B1 RID: 10417
-	// (get) Token: 0x0601D4EC RID: 120044 RVA: 0x0082B5CC File Offset: 0x008297CC
+	// Token: 0x17002C49 RID: 11337
+	// (get) Token: 0x0601B1E8 RID: 111080 RVA: 0x00852830 File Offset: 0x00850A30
 	public double TotalLength { get; }
 
-	// Token: 0x0601D4ED RID: 120045 RVA: 0x0082B5D4 File Offset: 0x008297D4
+	// Token: 0x0601B1E9 RID: 111081 RVA: 0x00852838 File Offset: 0x00850A38
 	public CatmullRomArcLengthLookup(double[] paramSamples, double[] cumulativeArcLengths, double totalLength)
 	{
 		this.ParamSamples = paramSamples;

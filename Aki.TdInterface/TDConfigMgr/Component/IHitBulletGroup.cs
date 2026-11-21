@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200040C RID: 1036
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000465 RID: 1125
 	public class IHitBulletGroup
 	{
-		// Token: 0x060014EB RID: 5355 RVA: 0x00042394 File Offset: 0x00040594
+		// Token: 0x06001685 RID: 5765 RVA: 0x000460DC File Offset: 0x000442DC
 		private IHitBulletGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014EC RID: 5356 RVA: 0x000423CC File Offset: 0x000405CC
+		// Token: 0x06001686 RID: 5766 RVA: 0x00046114 File Offset: 0x00044314
 		public static IHitBulletGroup Create([Nullable(2)] IHitBulletGroup instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014ED RID: 5357 RVA: 0x000423DF File Offset: 0x000405DF
+		// Token: 0x06001687 RID: 5767 RVA: 0x00046127 File Offset: 0x00044327
 		public static IHitBulletGroup CreateFromSetValue([Nullable(2)] IHitBulletGroup_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014EE RID: 5358 RVA: 0x000423F2 File Offset: 0x000405F2
+		// Token: 0x06001688 RID: 5768 RVA: 0x0004613A File Offset: 0x0004433A
 		public IHitBulletGroup_SetValue ToSetValue()
 		{
 			return new IHitBulletGroup_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005C1 RID: 1473
-		// (get) Token: 0x060014EF RID: 5359 RVA: 0x00042411 File Offset: 0x00040611
-		// (set) Token: 0x060014F0 RID: 5360 RVA: 0x0004243C File Offset: 0x0004063C
+		// Token: 0x17000628 RID: 1576
+		// (get) Token: 0x06001689 RID: 5769 RVA: 0x00046159 File Offset: 0x00044359
+		// (set) Token: 0x0600168A RID: 5770 RVA: 0x00046184 File Offset: 0x00044384
 		public virtual bool MatchAny
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005C2 RID: 1474
-		// (get) Token: 0x060014F1 RID: 5361 RVA: 0x0004244A File Offset: 0x0004064A
-		// (set) Token: 0x060014F2 RID: 5362 RVA: 0x00042471 File Offset: 0x00040671
+		// Token: 0x17000629 RID: 1577
+		// (get) Token: 0x0600168B RID: 5771 RVA: 0x00046192 File Offset: 0x00044392
+		// (set) Token: 0x0600168C RID: 5772 RVA: 0x000461B9 File Offset: 0x000443B9
 		public virtual List<IHitBulletType> HitBullets
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001052 RID: 4178
+		// Token: 0x04001174 RID: 4468
 		[Nullable(2)]
 		protected IHitBulletGroup FbInstance;
 
-		// Token: 0x04001053 RID: 4179
+		// Token: 0x04001175 RID: 4469
 		[Nullable(2)]
 		protected IHitBulletGroup_SetValue PocoInterface;
 	}

@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E9 RID: 6121
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001972 RID: 6514
 	public class IAudioStateGroup_SetValue
 	{
-		// Token: 0x0400536B RID: 21355
+		// Token: 0x040057B3 RID: 22451
 		public string Group;
 
-		// Token: 0x0400536C RID: 21356
+		// Token: 0x040057B4 RID: 22452
 		public List<string> States;
 	}
 }

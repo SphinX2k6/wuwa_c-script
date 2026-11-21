@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020025CC RID: 9676
+// Token: 0x02001AB7 RID: 6839
 public enum ESprColor
 {
-	// Token: 0x040093FF RID: 37887
+	// Token: 0x04009555 RID: 38229
 	None,
-	// Token: 0x04009400 RID: 37888
+	// Token: 0x04009556 RID: 38230
 	Yellow,
-	// Token: 0x04009401 RID: 37889
+	// Token: 0x04009557 RID: 38231
 	Green
 }

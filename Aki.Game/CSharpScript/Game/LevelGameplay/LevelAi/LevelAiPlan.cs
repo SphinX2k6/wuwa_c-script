@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB1 RID: 28081
+	// Token: 0x02005F30 RID: 24368
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiPlan
 	{
-		// Token: 0x0604482F RID: 280623 RVA: 0x010E4FFB File Offset: 0x010E31FB
+		// Token: 0x0603A993 RID: 240019 RVA: 0x0108F223 File Offset: 0x0108D423
 		public LevelAiPlan(LevelAi asset, [Nullable(2)] LevelAiWorldState worldStateAtLevelStart)
 		{
 			this.LevelAiAsset = asset;
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.Cost = 0;
 		}
 
-		// Token: 0x06044830 RID: 280624 RVA: 0x010E5031 File Offset: 0x010E3231
+		// Token: 0x0603A994 RID: 240020 RVA: 0x0108F259 File Offset: 0x0108D459
 		public bool HasLevel(int levelIndex)
 		{
 			return levelIndex < this.Levels.Count && this.Levels[levelIndex] != null;
 		}
 
-		// Token: 0x06044831 RID: 280625 RVA: 0x010E5054 File Offset: 0x010E3254
+		// Token: 0x0603A995 RID: 240021 RVA: 0x0108F27C File Offset: 0x0108D47C
 		public bool HasStep(LevelAiPlanStepId stepId, int levelIndex = 0)
 		{
 			if (!this.HasLevel(stepId.LevelIndex) || !this.HasLevel(levelIndex))
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return stepId.LevelIndex != 0 && this.HasStep(this.Levels[stepId.LevelIndex].ParentStepId, levelIndex);
 		}
 
-		// Token: 0x06044832 RID: 280626 RVA: 0x010E50E4 File Offset: 0x010E32E4
+		// Token: 0x0603A996 RID: 240022 RVA: 0x0108F30C File Offset: 0x0108D50C
 		[return: Nullable(2)]
 		public LevelAiPlanStep GetStep(LevelAiPlanStepId stepId)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiPlanLevel.Steps[stepId.StepIndex];
 		}
 
-		// Token: 0x06044833 RID: 280627 RVA: 0x010E5134 File Offset: 0x010E3334
+		// Token: 0x0603A997 RID: 240023 RVA: 0x0108F35C File Offset: 0x0108D55C
 		public bool IsComplete()
 		{
 			for (int i = 0; i < this.Levels.Count; i++)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return true;
 		}
 
-		// Token: 0x06044834 RID: 280628 RVA: 0x010E5164 File Offset: 0x010E3364
+		// Token: 0x0603A998 RID: 240024 RVA: 0x0108F38C File Offset: 0x0108D58C
 		public bool IsLevelComplete(int levelIndex)
 		{
 			if (!this.HasLevel(levelIndex))
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiPlanStep.Node.NextNodes.Count == 0;
 		}
 
-		// Token: 0x06044835 RID: 280629 RVA: 0x010E5200 File Offset: 0x010E3400
+		// Token: 0x0603A999 RID: 240025 RVA: 0x0108F428 File Offset: 0x0108D628
 		public bool FindStepToAddAfter(LevelAiPlanStepId outPlanStepId)
 		{
 			for (int i = this.Levels.Count - 1; i >= 0; i--)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return false;
 		}
 
-		// Token: 0x06044836 RID: 280630 RVA: 0x010E5270 File Offset: 0x010E3470
+		// Token: 0x0603A99A RID: 240026 RVA: 0x0108F498 File Offset: 0x0108D698
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return step.Node.NextNodes;
 		}
 
-		// Token: 0x06044837 RID: 280631 RVA: 0x010E530C File Offset: 0x010E350C
+		// Token: 0x0603A99B RID: 240027 RVA: 0x0108F534 File Offset: 0x0108D734
 		public LevelAiWorldState GetWorldState(LevelAiPlanStepId stepId)
 		{
 			LevelAiPlanLevel levelAiPlanLevel = this.Levels[stepId.LevelIndex];
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiPlanLevel.Steps[stepId.StepIndex].WorldState;
 		}
 
-		// Token: 0x06044838 RID: 280632 RVA: 0x010E5354 File Offset: 0x010E3554
+		// Token: 0x0603A99C RID: 240028 RVA: 0x0108F57C File Offset: 0x0108D77C
 		public LevelAiPlan MakeCopy()
 		{
 			LevelAiPlan levelAiPlan = new LevelAiPlan(this.LevelAiAsset, null);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiPlan;
 		}
 
-		// Token: 0x06044839 RID: 280633 RVA: 0x010E53C4 File Offset: 0x010E35C4
+		// Token: 0x0603A99D RID: 240029 RVA: 0x0108F5EC File Offset: 0x0108D7EC
 		public void GetSubNodesAtPlanStep(LevelAiPlanStepId stepId, List<SubNodesInfo> outSubNodesInfoGroup)
 		{
 			if (!this.HasStep(stepId, 0))
@@ -185,13 +185,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			}
 		}
 
-		// Token: 0x04023A1D RID: 145949
+		// Token: 0x0401ECBF RID: 126143
 		private readonly LevelAi LevelAiAsset;
 
-		// Token: 0x04023A1E RID: 145950
+		// Token: 0x0401ECC0 RID: 126144
 		public List<LevelAiPlanLevel> Levels = new List<LevelAiPlanLevel>();
 
-		// Token: 0x04023A1F RID: 145951
+		// Token: 0x0401ECC1 RID: 126145
 		public int Cost;
 	}
 }

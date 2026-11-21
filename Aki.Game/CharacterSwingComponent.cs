@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using UnrealEngine;
 
-// Token: 0x02003009 RID: 12297
+// Token: 0x0200255F RID: 9567
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterSwingComponent : EntityComponent
 {
-	// Token: 0x0601A0D2 RID: 106706 RVA: 0x006D37FC File Offset: 0x006D19FC
+	// Token: 0x06017A18 RID: 96792 RVA: 0x006FB7F4 File Offset: 0x006F99F4
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -21,7 +21,7 @@ public class CharacterSwingComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A0D3 RID: 106707 RVA: 0x006D3850 File Offset: 0x006D1A50
+	// Token: 0x06017A19 RID: 96793 RVA: 0x006FB848 File Offset: 0x006F9A48
 	protected override void OnTick(float delta)
 	{
 		if (this.IsStartSwing)
@@ -73,7 +73,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0D4 RID: 106708 RVA: 0x006D3910 File Offset: 0x006D1B10
+	// Token: 0x06017A1A RID: 96794 RVA: 0x006FB908 File Offset: 0x006F9B08
 	public unsafe void StartSwing(string daPath, int chairPbDataId, bool? immediately = false)
 	{
 		bool value = immediately.GetValueOrDefault();
@@ -113,7 +113,7 @@ public class CharacterSwingComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A0D5 RID: 106709 RVA: 0x006D39F8 File Offset: 0x006D1BF8
+	// Token: 0x06017A1B RID: 96795 RVA: 0x006FB9F0 File Offset: 0x006F9BF0
 	public unsafe void StartRoleSwing(string daPath, int chairPbDataId, bool immediately = false)
 	{
 		if (Time.Instance.Now - this.LastEndSwingTime < 1000.0)
@@ -168,7 +168,7 @@ public class CharacterSwingComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A0D6 RID: 106710 RVA: 0x006D3B86 File Offset: 0x006D1D86
+	// Token: 0x06017A1C RID: 96796 RVA: 0x006FBB7E File Offset: 0x006F9D7E
 	public void LeftStartSwing()
 	{
 		if (this.SwingState != ESwingStateType.EnterSwing)
@@ -178,7 +178,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.ChangeSwingState(ESwingStateType.LoopSwing);
 	}
 
-	// Token: 0x0601A0D7 RID: 106711 RVA: 0x006D3B9C File Offset: 0x006D1D9C
+	// Token: 0x06017A1D RID: 96797 RVA: 0x006FBB94 File Offset: 0x006F9D94
 	public void ExitLoopSwing()
 	{
 		if (!this.IsSwinging)
@@ -206,7 +206,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.ChangeSwingState(ESwingStateType.LeftLoopSwing);
 	}
 
-	// Token: 0x0601A0D8 RID: 106712 RVA: 0x006D3C38 File Offset: 0x006D1E38
+	// Token: 0x06017A1E RID: 96798 RVA: 0x006FBC30 File Offset: 0x006F9E30
 	public void LeftLoopSwing()
 	{
 		if (this.SwingState != ESwingStateType.LeftLoopSwing)
@@ -227,7 +227,7 @@ public class CharacterSwingComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A0D9 RID: 106713 RVA: 0x006D3C88 File Offset: 0x006D1E88
+	// Token: 0x06017A1F RID: 96799 RVA: 0x006FBC80 File Offset: 0x006F9E80
 	public void LeftEndSwing()
 	{
 		if (this.SwingState == ESwingStateType.None)
@@ -249,7 +249,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.FinishSwing();
 	}
 
-	// Token: 0x0601A0DA RID: 106714 RVA: 0x006D3CD8 File Offset: 0x006D1ED8
+	// Token: 0x06017A20 RID: 96800 RVA: 0x006FBCD0 File Offset: 0x006F9ED0
 	private void OnStartSwing()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -291,7 +291,7 @@ public class CharacterSwingComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A0DB RID: 106715 RVA: 0x006D3DB4 File Offset: 0x006D1FB4
+	// Token: 0x06017A21 RID: 96801 RVA: 0x006FBDAC File Offset: 0x006F9FAC
 	private void OnStartRoleSwing()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -333,7 +333,7 @@ public class CharacterSwingComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A0DC RID: 106716 RVA: 0x006D3E90 File Offset: 0x006D2090
+	// Token: 0x06017A22 RID: 96802 RVA: 0x006FBE88 File Offset: 0x006FA088
 	private bool SitOnChair()
 	{
 		PawnChairController chairController = this.ChairController;
@@ -388,7 +388,7 @@ public class CharacterSwingComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A0DD RID: 106717 RVA: 0x006D4008 File Offset: 0x006D2208
+	// Token: 0x06017A23 RID: 96803 RVA: 0x006FC000 File Offset: 0x006FA200
 	private void StandUp()
 	{
 		PawnChairController chairController = this.ChairController;
@@ -435,7 +435,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.ResetActor();
 	}
 
-	// Token: 0x0601A0DE RID: 106718 RVA: 0x006D4138 File Offset: 0x006D2338
+	// Token: 0x06017A24 RID: 96804 RVA: 0x006FC130 File Offset: 0x006FA330
 	private void ResetActor()
 	{
 		if (this.ChairController != null)
@@ -461,7 +461,7 @@ public class CharacterSwingComponent : EntityComponent
 		CharacterActorComponent actorComp2 = this.ActorComp;
 		if (actorComp2 != null)
 		{
-			actorComp2.SetInputDirect(this.ActorComp.ActorForwardProxy, false);
+			actorComp2.SetInputDirect(this.ActorComp.ActorForwardProxy, false, EInputDirectSpace.World);
 		}
 		CharacterActorComponent actorComp3 = this.ActorComp;
 		if (actorComp3 != null)
@@ -476,7 +476,7 @@ public class CharacterSwingComponent : EntityComponent
 		actorComp4.ClearInput(false, true);
 	}
 
-	// Token: 0x0601A0DF RID: 106719 RVA: 0x006D4278 File Offset: 0x006D2478
+	// Token: 0x06017A25 RID: 96805 RVA: 0x006FC270 File Offset: 0x006FA470
 	private void ChangeSitDownTag(bool value)
 	{
 		if (value)
@@ -506,7 +506,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0E0 RID: 106720 RVA: 0x006D4320 File Offset: 0x006D2520
+	// Token: 0x06017A26 RID: 96806 RVA: 0x006FC318 File Offset: 0x006FA518
 	private unsafe bool AttachToSocket(SceneItemActorComponent chair)
 	{
 		SceneInteractionActor sceneInteractionActor = chair.GetInteractionMainActor() as SceneInteractionActor;
@@ -546,14 +546,14 @@ public class CharacterSwingComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A0E1 RID: 106721 RVA: 0x006D4541 File Offset: 0x006D2741
+	// Token: 0x06017A27 RID: 96807 RVA: 0x006FC539 File Offset: 0x006FA739
 	private void ResetAttach()
 	{
 		this.ActorComp.Actor.K2_DetachFromActor(EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld);
 		this.ActorComp.SetForbidSettingLocAndRot(false, EForbidSettingLocAndRotReason.Swing);
 	}
 
-	// Token: 0x0601A0E2 RID: 106722 RVA: 0x006D4564 File Offset: 0x006D2764
+	// Token: 0x06017A28 RID: 96808 RVA: 0x006FC55C File Offset: 0x006FA75C
 	private void IgnoreCollision(Entity chair)
 	{
 		SceneItemActorComponent component = chair.GetComponent<SceneItemActorComponent>();
@@ -564,7 +564,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.ActorComp.Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Ignore);
 	}
 
-	// Token: 0x0601A0E3 RID: 106723 RVA: 0x006D45A4 File Offset: 0x006D27A4
+	// Token: 0x06017A29 RID: 96809 RVA: 0x006FC59C File Offset: 0x006FA79C
 	[NullableContext(2)]
 	private void ResetCollision(Entity chair)
 	{
@@ -580,7 +580,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0E4 RID: 106724 RVA: 0x006D45E8 File Offset: 0x006D27E8
+	// Token: 0x06017A2A RID: 96810 RVA: 0x006FC5E0 File Offset: 0x006FA7E0
 	private void IgnoreActorsCollision(SceneItemActorComponent actorComp, bool bCollision)
 	{
 		CreatureDataComponent component = actorComp.Entity.GetComponent<CreatureDataComponent>();
@@ -619,7 +619,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0E5 RID: 106725 RVA: 0x006D46D6 File Offset: 0x006D28D6
+	// Token: 0x06017A2B RID: 96811 RVA: 0x006FC6CE File Offset: 0x006FA8CE
 	private void FinishSwing()
 	{
 		this.LastEndSwingTime = Time.Instance.Now;
@@ -629,7 +629,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.SwingConfig = null;
 	}
 
-	// Token: 0x0601A0E6 RID: 106726 RVA: 0x006D4704 File Offset: 0x006D2904
+	// Token: 0x06017A2C RID: 96812 RVA: 0x006FC6FC File Offset: 0x006FA8FC
 	private void ExitSwingImmediately()
 	{
 		this.ChangeSwingState(ESwingStateType.LeftLoopSwing);
@@ -646,7 +646,7 @@ public class CharacterSwingComponent : EntityComponent
 		this.FinishSwing();
 	}
 
-	// Token: 0x0601A0E7 RID: 106727 RVA: 0x006D4754 File Offset: 0x006D2954
+	// Token: 0x06017A2D RID: 96813 RVA: 0x006FC74C File Offset: 0x006FA94C
 	private void InitConfig(string daPath, [Nullable(new byte[]
 	{
 		1,
@@ -681,7 +681,7 @@ public class CharacterSwingComponent : EntityComponent
 		}, "js_undefined");
 	}
 
-	// Token: 0x0601A0E8 RID: 106728 RVA: 0x006D479C File Offset: 0x006D299C
+	// Token: 0x06017A2E RID: 96814 RVA: 0x006FC794 File Offset: 0x006FA994
 	private void InitRoleConfig(int roleId, string daPath, [Nullable(new byte[]
 	{
 		1,
@@ -716,7 +716,7 @@ public class CharacterSwingComponent : EntityComponent
 		}, "js_undefined");
 	}
 
-	// Token: 0x0601A0E9 RID: 106729 RVA: 0x006D47EC File Offset: 0x006D29EC
+	// Token: 0x06017A2F RID: 96815 RVA: 0x006FC7E4 File Offset: 0x006FA9E4
 	private unsafe void ChangeSwingState(ESwingStateType type)
 	{
 		UKuroAnimInstanceChar animInstance = this.AnimInstance;
@@ -763,7 +763,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0EA RID: 106730 RVA: 0x006D4964 File Offset: 0x006D2B64
+	// Token: 0x06017A30 RID: 96816 RVA: 0x006FC95C File Offset: 0x006FAB5C
 	private bool GetChairController(int chairPbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(chairPbDataId);
@@ -774,7 +774,7 @@ public class CharacterSwingComponent : EntityComponent
 		return worldEntity != null && pawnInteractNewComponent != null && sceneItemActorComponent != null && this.ChairController != null;
 	}
 
-	// Token: 0x0601A0EB RID: 106731 RVA: 0x006D49D0 File Offset: 0x006D2BD0
+	// Token: 0x06017A31 RID: 96817 RVA: 0x006FC9C8 File Offset: 0x006FABC8
 	private static string GetSwingStateName(ESwingStateType type)
 	{
 		switch (type)
@@ -794,7 +794,7 @@ public class CharacterSwingComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A0EC RID: 106732 RVA: 0x006D4A1C File Offset: 0x006D2C1C
+	// Token: 0x06017A32 RID: 96818 RVA: 0x006FCA14 File Offset: 0x006FAC14
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -802,214 +802,192 @@ public class CharacterSwingComponent : EntityComponent
 			return false;
 		}
 		CharacterSwingComponent characterSwingComponent = (CharacterSwingComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ChairPosition") && characterSwingComponent.ChairPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ChairPosition), "ChairPosition"))
+		if (characterSwingComponent.ChairPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairPosition), "ChairPosition"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector") && characterSwingComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
+		if (characterSwingComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector2") && characterSwingComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector2), "TempVector2"))
+		if (characterSwingComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempRotator") && characterSwingComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
+		if (characterSwingComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempTransform") && characterSwingComponent.TempTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TempTransform), "TempTransform"))
+		if (characterSwingComponent.TempTransform != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempTransform), "TempTransform"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ChairController"))
+		if (characterSwingComponent.ChairController == null)
 		{
-			if (characterSwingComponent.ChairController == null)
-			{
-				this.ChairController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnChairController>(this.ChairController), "ChairController"))
-			{
-				return false;
-			}
+			this.ChairController = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairController), "ChairController"))
 		{
-			if (characterSwingComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (characterSwingComponent.ActorComp == null)
 		{
-			if (characterSwingComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterSwingComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		if (characterSwingComponent.MoveComp == null)
 		{
-			if (characterSwingComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("SwingConfig"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterSwingComponent.SwingConfig == null)
-			{
-				this.SwingConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SwingConfig>(this.SwingConfig), "SwingConfig"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AnimInstance"))
+		if (characterSwingComponent.AnimComp == null)
 		{
-			if (characterSwingComponent.AnimInstance == null)
-			{
-				this.AnimInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroAnimInstanceChar>(this.AnimInstance), "AnimInstance"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("SwingMontage"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (characterSwingComponent.SwingMontage == null)
-			{
-				this.SwingMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.SwingMontage), "SwingMontage"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SwingAnimInstance"))
+		if (characterSwingComponent.TagComp == null)
 		{
-			if (characterSwingComponent.SwingAnimInstance == null)
-			{
-				this.SwingAnimInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.SwingAnimInstance), "SwingAnimInstance"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("IsSwinging"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.IsSwinging = characterSwingComponent.IsSwinging;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsStartSwing"))
+		if (characterSwingComponent.SwingConfig == null)
 		{
-			this.IsStartSwing = characterSwingComponent.IsStartSwing;
+			this.SwingConfig = null;
 		}
-		if (base.CanResetComponentProperty("SwingState"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwingConfig), "SwingConfig"))
 		{
-			this.SwingState = characterSwingComponent.SwingState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("Immediately"))
+		if (characterSwingComponent.AnimInstance == null)
 		{
-			this.Immediately = characterSwingComponent.Immediately;
+			this.AnimInstance = null;
 		}
-		if (base.CanResetComponentProperty("LastEndSwingTime"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstance), "AnimInstance"))
 		{
-			this.LastEndSwingTime = characterSwingComponent.LastEndSwingTime;
+			return false;
 		}
+		if (characterSwingComponent.SwingMontage == null)
+		{
+			this.SwingMontage = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwingMontage), "SwingMontage"))
+		{
+			return false;
+		}
+		if (characterSwingComponent.SwingAnimInstance == null)
+		{
+			this.SwingAnimInstance = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwingAnimInstance), "SwingAnimInstance"))
+		{
+			return false;
+		}
+		this.IsSwinging = characterSwingComponent.IsSwinging;
+		this.IsStartSwing = characterSwingComponent.IsStartSwing;
+		this.SwingState = characterSwingComponent.SwingState;
+		this.Immediately = characterSwingComponent.Immediately;
+		this.LastEndSwingTime = characterSwingComponent.LastEndSwingTime;
 		return true;
 	}
 
-	// Token: 0x0400C568 RID: 50536
+	// Token: 0x17002497 RID: 9367
+	// (get) Token: 0x06017A33 RID: 96819 RVA: 0x006FCC9D File Offset: 0x006FAE9D
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002498 RID: 9368
+	// (get) Token: 0x06017A34 RID: 96820 RVA: 0x006FCCA0 File Offset: 0x006FAEA0
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C935 RID: 51509
 	private const long SWING_INTERVAL_TIME = 1000L;
 
-	// Token: 0x0400C569 RID: 50537
+	// Token: 0x0400C936 RID: 51510
 	private readonly Vector ChairPosition = Vector.Create();
 
-	// Token: 0x0400C56A RID: 50538
+	// Token: 0x0400C937 RID: 51511
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400C56B RID: 50539
+	// Token: 0x0400C938 RID: 51512
 	private readonly Vector TempVector2 = Vector.Create();
 
-	// Token: 0x0400C56C RID: 50540
+	// Token: 0x0400C939 RID: 51513
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0400C56D RID: 50541
+	// Token: 0x0400C93A RID: 51514
 	private readonly Transform TempTransform = Transform.Create();
 
-	// Token: 0x0400C56E RID: 50542
+	// Token: 0x0400C93B RID: 51515
 	[Nullable(2)]
 	private PawnChairController ChairController;
 
-	// Token: 0x0400C56F RID: 50543
+	// Token: 0x0400C93C RID: 51516
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C570 RID: 50544
+	// Token: 0x0400C93D RID: 51517
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C571 RID: 50545
+	// Token: 0x0400C93E RID: 51518
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400C572 RID: 50546
+	// Token: 0x0400C93F RID: 51519
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C573 RID: 50547
+	// Token: 0x0400C940 RID: 51520
 	[Nullable(2)]
 	private SwingConfig SwingConfig;
 
-	// Token: 0x0400C574 RID: 50548
+	// Token: 0x0400C941 RID: 51521
 	[Nullable(2)]
 	private UKuroAnimInstanceChar AnimInstance;
 
-	// Token: 0x0400C575 RID: 50549
+	// Token: 0x0400C942 RID: 51522
 	[Nullable(2)]
 	private UAnimMontage SwingMontage;
 
-	// Token: 0x0400C576 RID: 50550
+	// Token: 0x0400C943 RID: 51523
 	[Nullable(2)]
 	private UAnimInstance SwingAnimInstance;
 
-	// Token: 0x0400C577 RID: 50551
+	// Token: 0x0400C944 RID: 51524
 	public bool IsSwinging;
 
-	// Token: 0x0400C578 RID: 50552
+	// Token: 0x0400C945 RID: 51525
 	public bool IsStartSwing;
 
-	// Token: 0x0400C579 RID: 50553
+	// Token: 0x0400C946 RID: 51526
 	public ESwingStateType SwingState;
 
-	// Token: 0x0400C57A RID: 50554
+	// Token: 0x0400C947 RID: 51527
 	private bool Immediately;
 
-	// Token: 0x0400C57B RID: 50555
+	// Token: 0x0400C948 RID: 51528
 	public double LastEndSwingTime;
 }

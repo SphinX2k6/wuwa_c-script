@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001225 RID: 4645
+	// Token: 0x02001361 RID: 4961
 	public class EAtomicProcessJsonConverter : JsonConverter<EAtomicProcess>
 	{
-		// Token: 0x0600694F RID: 26959 RVA: 0x000FAF18 File Offset: 0x000F9118
+		// Token: 0x06006F90 RID: 28560 RVA: 0x00108824 File Offset: 0x00106A24
 		public override EAtomicProcess Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EAtomicProcessExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006950 RID: 26960 RVA: 0x000FAF3C File Offset: 0x000F913C
+		// Token: 0x06006F91 RID: 28561 RVA: 0x00108848 File Offset: 0x00106A48
 		public override void Write(Utf8JsonWriter writer, EAtomicProcess value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

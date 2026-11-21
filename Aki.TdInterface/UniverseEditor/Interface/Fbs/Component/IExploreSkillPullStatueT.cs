@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051FC RID: 20988
+	// Token: 0x02005764 RID: 22372
 	public class IExploreSkillPullStatueT
 	{
-		// Token: 0x170099BF RID: 39359
-		// (get) Token: 0x06022196 RID: 139670 RVA: 0x004BB8B1 File Offset: 0x004B9AB1
-		// (set) Token: 0x06022197 RID: 139671 RVA: 0x004BB8B9 File Offset: 0x004B9AB9
+		// Token: 0x1700A1BB RID: 41403
+		// (get) Token: 0x0602412C RID: 147756 RVA: 0x004F6375 File Offset: 0x004F4575
+		// (set) Token: 0x0602412D RID: 147757 RVA: 0x004F637D File Offset: 0x004F457D
 		public EExploreSkillInteractType Type { get; set; }
 
-		// Token: 0x170099C0 RID: 39360
-		// (get) Token: 0x06022198 RID: 139672 RVA: 0x004BB8C2 File Offset: 0x004B9AC2
-		// (set) Token: 0x06022199 RID: 139673 RVA: 0x004BB8CA File Offset: 0x004B9ACA
+		// Token: 0x1700A1BC RID: 41404
+		// (get) Token: 0x0602412E RID: 147758 RVA: 0x004F6386 File Offset: 0x004F4586
+		// (set) Token: 0x0602412F RID: 147759 RVA: 0x004F638E File Offset: 0x004F458E
 		public ICategoryMatchingConditionT Condition { get; set; }
 
-		// Token: 0x170099C1 RID: 39361
-		// (get) Token: 0x0602219A RID: 139674 RVA: 0x004BB8D3 File Offset: 0x004B9AD3
-		// (set) Token: 0x0602219B RID: 139675 RVA: 0x004BB8DB File Offset: 0x004B9ADB
+		// Token: 0x1700A1BD RID: 41405
+		// (get) Token: 0x06024130 RID: 147760 RVA: 0x004F6397 File Offset: 0x004F4597
+		// (set) Token: 0x06024131 RID: 147761 RVA: 0x004F639F File Offset: 0x004F459F
 		public int StatueInteractPointId { get; set; }
 
-		// Token: 0x0602219C RID: 139676 RVA: 0x004BB8E4 File Offset: 0x004B9AE4
+		// Token: 0x06024132 RID: 147762 RVA: 0x004F63A8 File Offset: 0x004F45A8
 		public IExploreSkillPullStatueT()
 		{
 			this.Type = EExploreSkillInteractType.PullGiant;

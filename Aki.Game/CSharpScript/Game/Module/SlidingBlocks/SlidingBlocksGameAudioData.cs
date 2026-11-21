@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.Data.Gameplay.Tetris;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B80 RID: 19328
+	// Token: 0x02003B2A RID: 15146
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SlidingBlocksGameAudioData
 	{
-		// Token: 0x06032165 RID: 205157 RVA: 0x00BA16D8 File Offset: 0x00B9F8D8
+		// Token: 0x06026EF6 RID: 159478 RVA: 0x00AE5868 File Offset: 0x00AE3A68
 		public void Init()
 		{
 			Bp_Tetris_C setting = SlidingBlocksGlobal.Setting;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.AimingMoveAudio = AudioSystem.Instance.parseAudioEventPath(setting.AudioAimingMove);
 		}
 
-		// Token: 0x06032166 RID: 205158 RVA: 0x00BA1785 File Offset: 0x00B9F985
+		// Token: 0x06026EF7 RID: 159479 RVA: 0x00AE5915 File Offset: 0x00AE3B15
 		public void Reset()
 		{
 			this.GameSpeedUpAudio = null;
@@ -34,25 +34,25 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.AimingMoveAudio = null;
 		}
 
-		// Token: 0x0401AAE8 RID: 109288
+		// Token: 0x0401543C RID: 87100
 		public string GameSpeedUpAudio;
 
-		// Token: 0x0401AAE9 RID: 109289
+		// Token: 0x0401543D RID: 87101
 		public string TetrominoStartFallAudio;
 
-		// Token: 0x0401AAEA RID: 109290
+		// Token: 0x0401543E RID: 87102
 		public string SuccessAudio;
 
-		// Token: 0x0401AAEB RID: 109291
+		// Token: 0x0401543F RID: 87103
 		public string FailAudio;
 
-		// Token: 0x0401AAEC RID: 109292
+		// Token: 0x04015440 RID: 87104
 		public string RestartAudio;
 
-		// Token: 0x0401AAED RID: 109293
+		// Token: 0x04015441 RID: 87105
 		public string RotateAudio;
 
-		// Token: 0x0401AAEE RID: 109294
+		// Token: 0x04015442 RID: 87106
 		public string AimingMoveAudio;
 	}
 }

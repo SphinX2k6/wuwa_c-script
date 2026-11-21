@@ -7,17 +7,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D52 RID: 7506
+// Token: 0x02001214 RID: 4628
 [NullableContext(1)]
 [Nullable(0)]
 public class PingView : UiViewBase
 {
-	// Token: 0x0600E3AD RID: 58285 RVA: 0x00357703 File Offset: 0x00355903
+	// Token: 0x0600B7CA RID: 47050 RVA: 0x00363173 File Offset: 0x00361373
 	public PingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E3AE RID: 58286 RVA: 0x00357724 File Offset: 0x00355924
+	// Token: 0x0600B7CB RID: 47051 RVA: 0x00363194 File Offset: 0x00361394
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class PingView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E3AF RID: 58287 RVA: 0x003577B0 File Offset: 0x003559B0
+	// Token: 0x0600B7CC RID: 47052 RVA: 0x00363220 File Offset: 0x00361420
 	protected override void OnStart()
 	{
 		base.GetItem(1).SetUIActive(false);
@@ -41,19 +41,19 @@ public class PingView : UiViewBase
 		this.PingUnChangeValue = CommonConfig.Instance.GetPingUnChangeValue().Value;
 	}
 
-	// Token: 0x0600E3B0 RID: 58288 RVA: 0x003577E9 File Offset: 0x003559E9
+	// Token: 0x0600B7CD RID: 47053 RVA: 0x00363259 File Offset: 0x00361459
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnCheckGamePing, new Action<int>(this.OnRefreshPing));
 	}
 
-	// Token: 0x0600E3B1 RID: 58289 RVA: 0x00357807 File Offset: 0x00355A07
+	// Token: 0x0600B7CE RID: 47054 RVA: 0x00363277 File Offset: 0x00361477
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCheckGamePing, new Action<int>(this.OnRefreshPing));
 	}
 
-	// Token: 0x0600E3B2 RID: 58290 RVA: 0x00357828 File Offset: 0x00355A28
+	// Token: 0x0600B7CF RID: 47055 RVA: 0x00363298 File Offset: 0x00361498
 	private void OnRefreshPing(int pingTime)
 	{
 		if (Math.Abs(pingTime - this.LastTimeShowPing) < this.PingUnChangeValue)
@@ -79,13 +79,13 @@ public class PingView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(2), "PingStr", new <>z__ReadOnlySingleElementList<object>(pingTime.ToString()));
 	}
 
-	// Token: 0x0600E3B3 RID: 58291 RVA: 0x0035790D File Offset: 0x00355B0D
+	// Token: 0x0600B7D0 RID: 47056 RVA: 0x0036337D File Offset: 0x0036157D
 	protected override void OnAfterShow()
 	{
 		this.OnRefreshPing(GamePingModel.Instance.CurrentPing);
 	}
 
-	// Token: 0x0600E3B4 RID: 58292 RVA: 0x0035791F File Offset: 0x00355B1F
+	// Token: 0x0600B7D1 RID: 47057 RVA: 0x0036338F File Offset: 0x0036158F
 	private void RefreshReconnectAnimation(bool reconnectState)
 	{
 		if (reconnectState)
@@ -96,7 +96,7 @@ public class PingView : UiViewBase
 		this.UiViewSequence.StopSequenceByKey("Loop", false, false);
 	}
 
-	// Token: 0x0600E3B5 RID: 58293 RVA: 0x0035794C File Offset: 0x00355B4C
+	// Token: 0x0600B7D2 RID: 47058 RVA: 0x003633BC File Offset: 0x003615BC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -116,7 +116,7 @@ public class PingView : UiViewBase
 		return new ValueTuple<string, string>(this.GetBadPingSprite(), "FF1F1EFF");
 	}
 
-	// Token: 0x0600E3B6 RID: 58294 RVA: 0x0035799D File Offset: 0x00355B9D
+	// Token: 0x0600B7D3 RID: 47059 RVA: 0x0036340D File Offset: 0x0036160D
 	[NullableContext(2)]
 	private string GetGoodPingSprite()
 	{
@@ -131,7 +131,7 @@ public class PingView : UiViewBase
 		return CommonConfig.Instance.GetNetGoodSprite();
 	}
 
-	// Token: 0x0600E3B7 RID: 58295 RVA: 0x003579D3 File Offset: 0x00355BD3
+	// Token: 0x0600B7D4 RID: 47060 RVA: 0x00363443 File Offset: 0x00361643
 	[NullableContext(2)]
 	private string GetMiddlePingSprite()
 	{
@@ -146,7 +146,7 @@ public class PingView : UiViewBase
 		return CommonConfig.Instance.GetNetMiddleSprite();
 	}
 
-	// Token: 0x0600E3B8 RID: 58296 RVA: 0x00357A09 File Offset: 0x00355C09
+	// Token: 0x0600B7D5 RID: 47061 RVA: 0x00363479 File Offset: 0x00361679
 	[NullableContext(2)]
 	private string GetBadPingSprite()
 	{
@@ -161,45 +161,45 @@ public class PingView : UiViewBase
 		return CommonConfig.Instance.GetNetBadSprite();
 	}
 
-	// Token: 0x04006914 RID: 26900
+	// Token: 0x040069F3 RID: 27123
 	private const int GOODPING = 100;
 
-	// Token: 0x04006915 RID: 26901
+	// Token: 0x040069F4 RID: 27124
 	private const int MIDDLEPING = 200;
 
-	// Token: 0x04006916 RID: 26902
+	// Token: 0x040069F5 RID: 27125
 	private const int LOOPPING = 500;
 
-	// Token: 0x04006917 RID: 26903
+	// Token: 0x040069F6 RID: 27126
 	private const string BADCOLOR = "FF1F1EFF";
 
-	// Token: 0x04006918 RID: 26904
+	// Token: 0x040069F7 RID: 27127
 	private const string MIDDLECOLOR = "FFD12FFF";
 
-	// Token: 0x04006919 RID: 26905
+	// Token: 0x040069F8 RID: 27128
 	private const string GOODCOLOR = "30D82DFF";
 
-	// Token: 0x0400691A RID: 26906
+	// Token: 0x040069F9 RID: 27129
 	private string LastSpritePath = string.Empty;
 
-	// Token: 0x0400691B RID: 26907
+	// Token: 0x040069FA RID: 27130
 	private bool LastTimeReconnectState;
 
-	// Token: 0x0400691C RID: 26908
+	// Token: 0x040069FB RID: 27131
 	private int LastTimeShowPing = -9999;
 
-	// Token: 0x0400691D RID: 26909
+	// Token: 0x040069FC RID: 27132
 	private int PingUnChangeValue;
 
-	// Token: 0x02008366 RID: 33638
+	// Token: 0x020074EF RID: 29935
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402AD58 RID: 175448
+		// Token: 0x04026080 RID: 155776
 		NetStateSprite,
-		// Token: 0x0402AD59 RID: 175449
+		// Token: 0x04026081 RID: 155777
 		ReconnectItem,
-		// Token: 0x0402AD5A RID: 175450
+		// Token: 0x04026082 RID: 155778
 		PingText
 	}
 }

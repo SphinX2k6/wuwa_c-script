@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000F4B RID: 3915
+// Token: 0x02000400 RID: 1024
 public class DrinksUtils
 {
-	// Token: 0x06006403 RID: 25603 RVA: 0x0013B940 File Offset: 0x00139B40
+	// Token: 0x0600379B RID: 14235 RVA: 0x0014420C File Offset: 0x0014240C
 	public static EDrinksRequireType GetStepType(int step)
 	{
 		if (step < 2)

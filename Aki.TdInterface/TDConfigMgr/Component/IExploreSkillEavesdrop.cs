@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200034B RID: 843
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000392 RID: 914
 	public class IExploreSkillEavesdrop : IExploreSkillInteractType
 	{
-		// Token: 0x060010B2 RID: 4274 RVA: 0x00039794 File Offset: 0x00037994
+		// Token: 0x060011E4 RID: 4580 RVA: 0x0003C760 File Offset: 0x0003A960
 		private IExploreSkillEavesdrop_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060010B3 RID: 4275 RVA: 0x000397CC File Offset: 0x000379CC
+		// Token: 0x060011E5 RID: 4581 RVA: 0x0003C798 File Offset: 0x0003A998
 		public static IExploreSkillEavesdrop Create([Nullable(2)] IExploreSkillEavesdrop instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010B4 RID: 4276 RVA: 0x000397DF File Offset: 0x000379DF
+		// Token: 0x060011E6 RID: 4582 RVA: 0x0003C7AB File Offset: 0x0003A9AB
 		public static IExploreSkillEavesdrop CreateFromSetValue([Nullable(2)] IExploreSkillEavesdrop_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010B5 RID: 4277 RVA: 0x000397F2 File Offset: 0x000379F2
+		// Token: 0x060011E7 RID: 4583 RVA: 0x0003C7BE File Offset: 0x0003A9BE
 		public new IExploreSkillEavesdrop_SetValue ToSetValue()
 		{
 			return new IExploreSkillEavesdrop_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004C5 RID: 1221
-		// (get) Token: 0x060010B6 RID: 4278 RVA: 0x0003981D File Offset: 0x00037A1D
-		// (set) Token: 0x060010B7 RID: 4279 RVA: 0x00039848 File Offset: 0x00037A48
+		// Token: 0x17000513 RID: 1299
+		// (get) Token: 0x060011E8 RID: 4584 RVA: 0x0003C7E9 File Offset: 0x0003A9E9
+		// (set) Token: 0x060011E9 RID: 4585 RVA: 0x0003C814 File Offset: 0x0003AA14
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004C6 RID: 1222
-		// (get) Token: 0x060010B8 RID: 4280 RVA: 0x00039858 File Offset: 0x00037A58
-		// (set) Token: 0x060010B9 RID: 4281 RVA: 0x000398EB File Offset: 0x00037AEB
+		// Token: 0x17000514 RID: 1300
+		// (get) Token: 0x060011EA RID: 4586 RVA: 0x0003C824 File Offset: 0x0003AA24
+		// (set) Token: 0x060011EB RID: 4587 RVA: 0x0003C8B7 File Offset: 0x0003AAB7
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -126,9 +124,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004C7 RID: 1223
-		// (get) Token: 0x060010BA RID: 4282 RVA: 0x00039900 File Offset: 0x00037B00
-		// (set) Token: 0x060010BB RID: 4283 RVA: 0x00039961 File Offset: 0x00037B61
+		// Token: 0x17000515 RID: 1301
+		// (get) Token: 0x060011EC RID: 4588 RVA: 0x0003C8CC File Offset: 0x0003AACC
+		// (set) Token: 0x060011ED RID: 4589 RVA: 0x0003C92D File Offset: 0x0003AB2D
 		[Nullable(2)]
 		public virtual VectorInfo InteractOffset
 		{
@@ -159,24 +157,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DF6 RID: 3574
+		// Token: 0x04000EE1 RID: 3809
 		[Nullable(2)]
 		protected new IExploreSkillEavesdrop FbInstance;
 
-		// Token: 0x04000DF7 RID: 3575
+		// Token: 0x04000EE2 RID: 3810
 		[Nullable(2)]
 		protected new IExploreSkillEavesdrop_SetValue PocoInterface;
 
-		// Token: 0x04000DF8 RID: 3576
+		// Token: 0x04000EE3 RID: 3811
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04000DF9 RID: 3577
+		// Token: 0x04000EE4 RID: 3812
 		private bool _ActionsInited;
 
-		// Token: 0x04000DFA RID: 3578
+		// Token: 0x04000EE5 RID: 3813
 		private VectorInfo _InteractOffsetCache;
 
-		// Token: 0x04000DFB RID: 3579
+		// Token: 0x04000EE6 RID: 3814
 		private bool _InteractOffsetInited;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002144 RID: 8516
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023A5 RID: 9125
 	public class RemoveBuffFromEntity : ActionParams
 	{
-		// Token: 0x0600BB7A RID: 47994 RVA: 0x001B0D88 File Offset: 0x001AEF88
+		// Token: 0x0600C708 RID: 50952 RVA: 0x001C7F3C File Offset: 0x001C613C
 		private RemoveBuffFromEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB7B RID: 47995 RVA: 0x001B0DC0 File Offset: 0x001AEFC0
+		// Token: 0x0600C709 RID: 50953 RVA: 0x001C7F74 File Offset: 0x001C6174
 		public static RemoveBuffFromEntity Create([Nullable(2)] RemoveBuffFromEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB7C RID: 47996 RVA: 0x001B0DD3 File Offset: 0x001AEFD3
+		// Token: 0x0600C70A RID: 50954 RVA: 0x001C7F87 File Offset: 0x001C6187
 		public static RemoveBuffFromEntity CreateFromSetValue([Nullable(2)] RemoveBuffFromEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB7D RID: 47997 RVA: 0x001B0DE6 File Offset: 0x001AEFE6
+		// Token: 0x0600C70B RID: 50955 RVA: 0x001C7F9A File Offset: 0x001C619A
 		public RemoveBuffFromEntity_SetValue ToSetValue()
 		{
 			return new RemoveBuffFromEntity_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003934 RID: 14644
-		// (get) Token: 0x0600BB7E RID: 47998 RVA: 0x001B0E14 File Offset: 0x001AF014
-		// (set) Token: 0x0600BB7F RID: 47999 RVA: 0x001B0E4E File Offset: 0x001AF04E
+		// Token: 0x17003C21 RID: 15393
+		// (get) Token: 0x0600C70C RID: 50956 RVA: 0x001C7FC8 File Offset: 0x001C61C8
+		// (set) Token: 0x0600C70D RID: 50957 RVA: 0x001C8002 File Offset: 0x001C6202
 		public virtual int? EntityId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003935 RID: 14645
-		// (get) Token: 0x0600BB80 RID: 48000 RVA: 0x001B0E5C File Offset: 0x001AF05C
-		// (set) Token: 0x0600BB81 RID: 48001 RVA: 0x001B0E83 File Offset: 0x001AF083
+		// Token: 0x17003C22 RID: 15394
+		// (get) Token: 0x0600C70E RID: 50958 RVA: 0x001C8010 File Offset: 0x001C6210
+		// (set) Token: 0x0600C70F RID: 50959 RVA: 0x001C8037 File Offset: 0x001C6237
 		[Nullable(2)]
 		public virtual List<int> EntityIds
 		{
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003936 RID: 14646
-		// (get) Token: 0x0600BB82 RID: 48002 RVA: 0x001B0E91 File Offset: 0x001AF091
-		// (set) Token: 0x0600BB83 RID: 48003 RVA: 0x001B0EB8 File Offset: 0x001AF0B8
+		// Token: 0x17003C23 RID: 15395
+		// (get) Token: 0x0600C710 RID: 50960 RVA: 0x001C8045 File Offset: 0x001C6245
+		// (set) Token: 0x0600C711 RID: 50961 RVA: 0x001C806C File Offset: 0x001C626C
 		public virtual List<long> BuffIds
 		{
 			get
@@ -137,11 +135,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400701A RID: 28698
+		// Token: 0x0400764F RID: 30287
 		[Nullable(2)]
 		protected new RemoveBuffFromEntity FbInstance;
 
-		// Token: 0x0400701B RID: 28699
+		// Token: 0x04007650 RID: 30288
 		[Nullable(2)]
 		protected RemoveBuffFromEntity_SetValue PocoInterface;
 	}

@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003C2 RID: 962
+	// Token: 0x0200040D RID: 1037
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFoxJumpPositionOnThisEntity : IFoxJumpInteractPointRelationType
 	{
-		// Token: 0x06001343 RID: 4931 RVA: 0x0003EC5C File Offset: 0x0003CE5C
-		[NullableContext(1)]
+		// Token: 0x06001499 RID: 5273 RVA: 0x000421FC File Offset: 0x000403FC
+		[NullableContext(0)]
 		private IFoxJumpPositionOnThisEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001344 RID: 4932 RVA: 0x0003EC94 File Offset: 0x0003CE94
-		[NullableContext(1)]
+		// Token: 0x0600149A RID: 5274 RVA: 0x00042234 File Offset: 0x00040434
+		[NullableContext(0)]
 		public static IFoxJumpPositionOnThisEntity Create([Nullable(2)] IFoxJumpPositionOnThisEntity instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001345 RID: 4933 RVA: 0x0003ECA7 File Offset: 0x0003CEA7
-		[NullableContext(1)]
+		// Token: 0x0600149B RID: 5275 RVA: 0x00042247 File Offset: 0x00040447
+		[NullableContext(0)]
 		public static IFoxJumpPositionOnThisEntity CreateFromSetValue([Nullable(2)] IFoxJumpPositionOnThisEntity_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001346 RID: 4934 RVA: 0x0003ECBA File Offset: 0x0003CEBA
-		[NullableContext(1)]
+		// Token: 0x0600149C RID: 5276 RVA: 0x0004225A File Offset: 0x0004045A
+		[NullableContext(0)]
 		public new IFoxJumpPositionOnThisEntity_SetValue ToSetValue()
 		{
 			return new IFoxJumpPositionOnThisEntity_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700055C RID: 1372
-		// (get) Token: 0x06001347 RID: 4935 RVA: 0x0003ECF1 File Offset: 0x0003CEF1
-		// (set) Token: 0x06001348 RID: 4936 RVA: 0x0003ED1C File Offset: 0x0003CF1C
+		// Token: 0x170005B6 RID: 1462
+		// (get) Token: 0x0600149D RID: 5277 RVA: 0x00042291 File Offset: 0x00040491
+		// (set) Token: 0x0600149E RID: 5278 RVA: 0x000422BC File Offset: 0x000404BC
 		public override EFoxJumpInteractPointRelationType Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700055D RID: 1373
-		// (get) Token: 0x06001349 RID: 4937 RVA: 0x0003ED2C File Offset: 0x0003CF2C
-		// (set) Token: 0x0600134A RID: 4938 RVA: 0x0003ED8D File Offset: 0x0003CF8D
+		// Token: 0x170005B7 RID: 1463
+		// (get) Token: 0x0600149F RID: 5279 RVA: 0x000422CC File Offset: 0x000404CC
+		// (set) Token: 0x060014A0 RID: 5280 RVA: 0x0004232D File Offset: 0x0004052D
 		public override VectorInfo Offset
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700055E RID: 1374
-		// (get) Token: 0x0600134B RID: 4939 RVA: 0x0003EDA4 File Offset: 0x0003CFA4
-		// (set) Token: 0x0600134C RID: 4940 RVA: 0x0003EE05 File Offset: 0x0003D005
+		// Token: 0x170005B8 RID: 1464
+		// (get) Token: 0x060014A1 RID: 5281 RVA: 0x00042344 File Offset: 0x00040544
+		// (set) Token: 0x060014A2 RID: 5282 RVA: 0x000423A5 File Offset: 0x000405A5
 		public override VectorInfo RaycastDestOffset
 		{
 			get
@@ -150,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700055F RID: 1375
-		// (get) Token: 0x0600134D RID: 4941 RVA: 0x0003EE1C File Offset: 0x0003D01C
-		// (set) Token: 0x0600134E RID: 4942 RVA: 0x0003EE56 File Offset: 0x0003D056
+		// Token: 0x170005B9 RID: 1465
+		// (get) Token: 0x060014A3 RID: 5283 RVA: 0x000423BC File Offset: 0x000405BC
+		// (set) Token: 0x060014A4 RID: 5284 RVA: 0x000423F6 File Offset: 0x000405F6
 		public virtual int? SplineEntityId
 		{
 			get
@@ -174,24 +174,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F61 RID: 3937
+		// Token: 0x04001062 RID: 4194
 		protected new IFoxJumpPositionOnThisEntity FbInstance;
 
-		// Token: 0x04000F62 RID: 3938
+		// Token: 0x04001063 RID: 4195
 		protected new IFoxJumpPositionOnThisEntity_SetValue PocoInterface;
 
-		// Token: 0x04000F63 RID: 3939
-		[Nullable(1)]
+		// Token: 0x04001064 RID: 4196
+		[Nullable(0)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04000F64 RID: 3940
+		// Token: 0x04001065 RID: 4197
 		private bool _OffsetInited;
 
-		// Token: 0x04000F65 RID: 3941
-		[Nullable(1)]
+		// Token: 0x04001066 RID: 4198
+		[Nullable(0)]
 		private VectorInfo _RaycastDestOffsetCache;
 
-		// Token: 0x04000F66 RID: 3942
+		// Token: 0x04001067 RID: 4199
 		private bool _RaycastDestOffsetInited;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A6 RID: 24742
+	// Token: 0x02005024 RID: 20516
 	public class Spring25SharePanel : UiPanelBase
 	{
-		// Token: 0x0603E8BB RID: 256187 RVA: 0x00F1E0BC File Offset: 0x00F1C2BC
+		// Token: 0x0603357F RID: 210303 RVA: 0x00E64E80 File Offset: 0x00E63080
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E8BC RID: 256188 RVA: 0x00F1E188 File Offset: 0x00F1C388
+		// Token: 0x06033580 RID: 210304 RVA: 0x00E64F4C File Offset: 0x00E6314C
 		protected override void OnStart()
 		{
 			Spring25ShareData spring25ShareData = this.OpenParam as Spring25ShareData;
@@ -60,22 +60,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			base.SetTextureByPath(spring25ShareData.PhotoPath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0200C30A RID: 49930
+		// Token: 0x0200ACF5 RID: 44277
 		private static class EComponents
 		{
-			// Token: 0x0403AE5A RID: 241242
+			// Token: 0x040357C2 RID: 219074
 			public const int Texture = 0;
 
-			// Token: 0x0403AE5B RID: 241243
+			// Token: 0x040357C3 RID: 219075
 			public const int Name = 1;
 
-			// Token: 0x0403AE5C RID: 241244
+			// Token: 0x040357C4 RID: 219076
 			public const int Time = 2;
 
-			// Token: 0x0403AE5D RID: 241245
+			// Token: 0x040357C5 RID: 219077
 			public const int Desc = 3;
 
-			// Token: 0x0403AE5E RID: 241246
+			// Token: 0x040357C6 RID: 219078
 			public const int LineItem = 4;
 		}
 	}

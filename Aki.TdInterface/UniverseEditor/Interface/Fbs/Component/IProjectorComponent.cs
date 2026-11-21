@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A8 RID: 22440
+	// Token: 0x02005DAF RID: 23983
 	public struct IProjectorComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A777 RID: 42871
-		// (get) Token: 0x06025A64 RID: 154212 RVA: 0x00531887 File Offset: 0x0052FA87
+		// Token: 0x1700B09B RID: 45211
+		// (get) Token: 0x06027F84 RID: 163716 RVA: 0x00577A13 File Offset: 0x00575C13
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A65 RID: 154213 RVA: 0x00531894 File Offset: 0x0052FA94
+		// Token: 0x06027F85 RID: 163717 RVA: 0x00577A20 File Offset: 0x00575C20
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025A66 RID: 154214 RVA: 0x0053189C File Offset: 0x0052FA9C
+		// Token: 0x06027F86 RID: 163718 RVA: 0x00577A28 File Offset: 0x00575C28
 		public static IProjectorComponent GetRootAsIProjectorComponent(ByteBuffer _bb)
 		{
 			return IProjectorComponent.GetRootAsIProjectorComponent(_bb, default(IProjectorComponent));
 		}
 
-		// Token: 0x06025A67 RID: 154215 RVA: 0x005318B8 File Offset: 0x0052FAB8
+		// Token: 0x06027F87 RID: 163719 RVA: 0x00577A44 File Offset: 0x00575C44
 		public static IProjectorComponent GetRootAsIProjectorComponent(ByteBuffer _bb, IProjectorComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025A68 RID: 154216 RVA: 0x005318D5 File Offset: 0x0052FAD5
+		// Token: 0x06027F88 RID: 163720 RVA: 0x00577A61 File Offset: 0x00575C61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025A69 RID: 154217 RVA: 0x005318E4 File Offset: 0x0052FAE4
+		// Token: 0x06027F89 RID: 163721 RVA: 0x00577A70 File Offset: 0x00575C70
 		public IProjectorComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A778 RID: 42872
-		// (get) Token: 0x06025A6A RID: 154218 RVA: 0x005318F4 File Offset: 0x0052FAF4
+		// Token: 0x1700B09C RID: 45212
+		// (get) Token: 0x06027F8A RID: 163722 RVA: 0x00577A80 File Offset: 0x00575C80
 		public bool Disabled
 		{
 			get
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A779 RID: 42873
-		// (get) Token: 0x06025A6B RID: 154219 RVA: 0x00531934 File Offset: 0x0052FB34
+		// Token: 0x1700B09D RID: 45213
+		// (get) Token: 0x06027F8B RID: 163723 RVA: 0x00577AC0 File Offset: 0x00575CC0
 		public int ProjectorPatternId
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A77A RID: 42874
-		// (get) Token: 0x06025A6C RID: 154220 RVA: 0x00531970 File Offset: 0x0052FB70
+		// Token: 0x1700B09E RID: 45214
+		// (get) Token: 0x06027F8C RID: 163724 RVA: 0x00577AFC File Offset: 0x00575CFC
 		public float RotationSpeed
 		{
 			get
@@ -90,8 +90,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A77B RID: 42875
-		// (get) Token: 0x06025A6D RID: 154221 RVA: 0x005319B0 File Offset: 0x0052FBB0
+		// Token: 0x1700B09F RID: 45215
+		// (get) Token: 0x06027F8D RID: 163725 RVA: 0x00577B3C File Offset: 0x00575D3C
 		public float DragRotationCoefficient
 		{
 			get
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A6E RID: 154222 RVA: 0x005319F4 File Offset: 0x0052FBF4
+		// Token: 0x06027F8E RID: 163726 RVA: 0x00577B80 File Offset: 0x00575D80
 		public IVectorInfo? RotationTargetAngles(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A77C RID: 42876
-		// (get) Token: 0x06025A6F RID: 154223 RVA: 0x00531A58 File Offset: 0x0052FC58
+		// Token: 0x1700B0A0 RID: 45216
+		// (get) Token: 0x06027F8F RID: 163727 RVA: 0x00577BE4 File Offset: 0x00575DE4
 		public int RotationTargetAnglesLength
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A77D RID: 42877
-		// (get) Token: 0x06025A70 RID: 154224 RVA: 0x00531A84 File Offset: 0x0052FC84
+		// Token: 0x1700B0A1 RID: 45217
+		// (get) Token: 0x06027F90 RID: 163728 RVA: 0x00577C10 File Offset: 0x00575E10
 		public float MatchTolerance
 		{
 			get
@@ -146,8 +146,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A77E RID: 42878
-		// (get) Token: 0x06025A71 RID: 154225 RVA: 0x00531AC8 File Offset: 0x0052FCC8
+		// Token: 0x1700B0A2 RID: 45218
+		// (get) Token: 0x06027F91 RID: 163729 RVA: 0x00577C54 File Offset: 0x00575E54
 		public int BackgroundEntityId
 		{
 			get
@@ -161,8 +161,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A77F RID: 42879
-		// (get) Token: 0x06025A72 RID: 154226 RVA: 0x00531B08 File Offset: 0x0052FD08
+		// Token: 0x1700B0A3 RID: 45219
+		// (get) Token: 0x06027F92 RID: 163730 RVA: 0x00577C94 File Offset: 0x00575E94
 		public byte NullMask
 		{
 			get
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025A73 RID: 154227 RVA: 0x00531B48 File Offset: 0x0052FD48
+		// Token: 0x06027F93 RID: 163731 RVA: 0x00577CD4 File Offset: 0x00575ED4
 		public static Offset<IProjectorComponent> CreateIProjectorComponent(FlatBufferBuilder builder, bool Disabled = false, int ProjectorPatternId = 0, float RotationSpeed = 0f, float DragRotationCoefficient = 0f, VectorOffset RotationTargetAnglesOffset = default(VectorOffset), float MatchTolerance = 0f, int BackgroundEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -191,43 +191,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProjectorComponent.EndIProjectorComponent(builder);
 		}
 
-		// Token: 0x06025A74 RID: 154228 RVA: 0x00531B9F File Offset: 0x0052FD9F
+		// Token: 0x06027F94 RID: 163732 RVA: 0x00577D2B File Offset: 0x00575F2B
 		public static void StartIProjectorComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06025A75 RID: 154229 RVA: 0x00531BA8 File Offset: 0x0052FDA8
+		// Token: 0x06027F95 RID: 163733 RVA: 0x00577D34 File Offset: 0x00575F34
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06025A76 RID: 154230 RVA: 0x00531BB3 File Offset: 0x0052FDB3
+		// Token: 0x06027F96 RID: 163734 RVA: 0x00577D3F File Offset: 0x00575F3F
 		public static void AddProjectorPatternId(FlatBufferBuilder builder, int projectorPatternId)
 		{
 			builder.AddInt(1, projectorPatternId, 0);
 		}
 
-		// Token: 0x06025A77 RID: 154231 RVA: 0x00531BBE File Offset: 0x0052FDBE
+		// Token: 0x06027F97 RID: 163735 RVA: 0x00577D4A File Offset: 0x00575F4A
 		public static void AddRotationSpeed(FlatBufferBuilder builder, float rotationSpeed)
 		{
 			builder.AddFloat(2, rotationSpeed, 0.0);
 		}
 
-		// Token: 0x06025A78 RID: 154232 RVA: 0x00531BD1 File Offset: 0x0052FDD1
+		// Token: 0x06027F98 RID: 163736 RVA: 0x00577D5D File Offset: 0x00575F5D
 		public static void AddDragRotationCoefficient(FlatBufferBuilder builder, float dragRotationCoefficient)
 		{
 			builder.AddFloat(3, dragRotationCoefficient, 0.0);
 		}
 
-		// Token: 0x06025A79 RID: 154233 RVA: 0x00531BE4 File Offset: 0x0052FDE4
+		// Token: 0x06027F99 RID: 163737 RVA: 0x00577D70 File Offset: 0x00575F70
 		public static void AddRotationTargetAngles(FlatBufferBuilder builder, VectorOffset rotationTargetAnglesOffset)
 		{
 			builder.AddOffset(4, rotationTargetAnglesOffset.Value, 0);
 		}
 
-		// Token: 0x06025A7A RID: 154234 RVA: 0x00531BF4 File Offset: 0x0052FDF4
+		// Token: 0x06027F9A RID: 163738 RVA: 0x00577D80 File Offset: 0x00575F80
 		public static VectorOffset CreateRotationTargetAnglesVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025A7B RID: 154235 RVA: 0x00531C34 File Offset: 0x0052FE34
+		// Token: 0x06027F9B RID: 163739 RVA: 0x00577DC0 File Offset: 0x00575FC0
 		public static VectorOffset CreateRotationTargetAnglesVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -246,7 +246,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025A7C RID: 154236 RVA: 0x00531C4E File Offset: 0x0052FE4E
+		// Token: 0x06027F9C RID: 163740 RVA: 0x00577DDA File Offset: 0x00575FDA
 		public static VectorOffset CreateRotationTargetAnglesVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -254,7 +254,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025A7D RID: 154237 RVA: 0x00531C6C File Offset: 0x0052FE6C
+		// Token: 0x06027F9D RID: 163741 RVA: 0x00577DF8 File Offset: 0x00575FF8
 		public static VectorOffset CreateRotationTargetAnglesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -262,37 +262,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06025A7E RID: 154238 RVA: 0x00531C85 File Offset: 0x0052FE85
+		// Token: 0x06027F9E RID: 163742 RVA: 0x00577E11 File Offset: 0x00576011
 		public static void StartRotationTargetAnglesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06025A7F RID: 154239 RVA: 0x00531C90 File Offset: 0x0052FE90
+		// Token: 0x06027F9F RID: 163743 RVA: 0x00577E1C File Offset: 0x0057601C
 		public static void AddMatchTolerance(FlatBufferBuilder builder, float matchTolerance)
 		{
 			builder.AddFloat(5, matchTolerance, 0.0);
 		}
 
-		// Token: 0x06025A80 RID: 154240 RVA: 0x00531CA3 File Offset: 0x0052FEA3
+		// Token: 0x06027FA0 RID: 163744 RVA: 0x00577E2F File Offset: 0x0057602F
 		public static void AddBackgroundEntityId(FlatBufferBuilder builder, int backgroundEntityId)
 		{
 			builder.AddInt(6, backgroundEntityId, 0);
 		}
 
-		// Token: 0x06025A81 RID: 154241 RVA: 0x00531CAE File Offset: 0x0052FEAE
+		// Token: 0x06027FA1 RID: 163745 RVA: 0x00577E3A File Offset: 0x0057603A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06025A82 RID: 154242 RVA: 0x00531CB9 File Offset: 0x0052FEB9
+		// Token: 0x06027FA2 RID: 163746 RVA: 0x00577E45 File Offset: 0x00576045
 		public static Offset<IProjectorComponent> EndIProjectorComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IProjectorComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06025A83 RID: 154243 RVA: 0x00531CC8 File Offset: 0x0052FEC8
+		// Token: 0x06027FA3 RID: 163747 RVA: 0x00577E54 File Offset: 0x00576054
 		public IProjectorComponentT UnPack()
 		{
 			IProjectorComponentT projectorComponentT = new IProjectorComponentT();
@@ -300,7 +300,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return projectorComponentT;
 		}
 
-		// Token: 0x06025A84 RID: 154244 RVA: 0x00531CE4 File Offset: 0x0052FEE4
+		// Token: 0x06027FA4 RID: 163748 RVA: 0x00577E70 File Offset: 0x00576070
 		public void UnPackTo(IProjectorComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -317,7 +317,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025A85 RID: 154245 RVA: 0x00531D98 File Offset: 0x0052FF98
+		// Token: 0x06027FA5 RID: 163749 RVA: 0x00577F24 File Offset: 0x00576124
 		public static Offset<IProjectorComponent> Pack(FlatBufferBuilder builder, IProjectorComponentT _o)
 		{
 			if (_o == null)
@@ -337,7 +337,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProjectorComponent.CreateIProjectorComponent(builder, _o.Disabled, _o.ProjectorPatternId, _o.RotationSpeed, _o.DragRotationCoefficient, rotationTargetAnglesOffset, _o.MatchTolerance, _o.BackgroundEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400EC77 RID: 60535
+		// Token: 0x0400F962 RID: 63842
 		private Table __p;
 	}
 }

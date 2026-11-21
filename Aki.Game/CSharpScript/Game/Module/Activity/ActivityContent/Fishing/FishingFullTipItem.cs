@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065CC RID: 26060
+	// Token: 0x0200554A RID: 21834
 	public class FishingFullTipItem : UiPanelBase
 	{
-		// Token: 0x060415D5 RID: 267733 RVA: 0x00FD71F8 File Offset: 0x00FD53F8
+		// Token: 0x0603629A RID: 221850 RVA: 0x00F1E238 File Offset: 0x00F1C438
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -24,20 +24,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060415D6 RID: 267734 RVA: 0x00FD7240 File Offset: 0x00FD5440
+		// Token: 0x0603629B RID: 221851 RVA: 0x00F1E280 File Offset: 0x00F1C480
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x060415D7 RID: 267735 RVA: 0x00FD7253 File Offset: 0x00FD5453
+		// Token: 0x0603629C RID: 221852 RVA: 0x00F1E293 File Offset: 0x00F1C493
 		[NullableContext(1)]
 		public void SetTxtInfo(string textId, params object[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x060415D8 RID: 267736 RVA: 0x00FD7268 File Offset: 0x00FD5468
+		// Token: 0x0603629D RID: 221853 RVA: 0x00F1E2A8 File Offset: 0x00F1C4A8
 		[NullableContext(1)]
 		public void PlayTipSequence([Nullable(2)] Action callback = null, string sequenceName = "Start", bool blockClick = true)
 		{
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}).Forget();
 		}
 
-		// Token: 0x04022022 RID: 139298
+		// Token: 0x0401C953 RID: 117075
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C7F3 RID: 51187
+		// Token: 0x0200B1D6 RID: 45526
 		private class EComponentDefine
 		{
-			// Token: 0x0403C63C RID: 247356
+			// Token: 0x04036F8A RID: 225162
 			public const int TxtInfo = 0;
 		}
 	}

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044A6 RID: 17574
+	// Token: 0x0200490E RID: 18702
 	public struct IDynamicSpawnMonsterRandomPoolConfigs : IFlatbufferObject
 	{
-		// Token: 0x17007C04 RID: 31748
-		// (get) Token: 0x0601A3D4 RID: 107476 RVA: 0x003BFA9F File Offset: 0x003BDC9F
+		// Token: 0x17008243 RID: 33347
+		// (get) Token: 0x0601BBA5 RID: 113573 RVA: 0x003EBCAB File Offset: 0x003E9EAB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A3D5 RID: 107477 RVA: 0x003BFAAC File Offset: 0x003BDCAC
+		// Token: 0x0601BBA6 RID: 113574 RVA: 0x003EBCB8 File Offset: 0x003E9EB8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A3D6 RID: 107478 RVA: 0x003BFAB4 File Offset: 0x003BDCB4
+		// Token: 0x0601BBA7 RID: 113575 RVA: 0x003EBCC0 File Offset: 0x003E9EC0
 		public static IDynamicSpawnMonsterRandomPoolConfigs GetRootAsIDynamicSpawnMonsterRandomPoolConfigs(ByteBuffer _bb)
 		{
 			return IDynamicSpawnMonsterRandomPoolConfigs.GetRootAsIDynamicSpawnMonsterRandomPoolConfigs(_bb, default(IDynamicSpawnMonsterRandomPoolConfigs));
 		}
 
-		// Token: 0x0601A3D7 RID: 107479 RVA: 0x003BFAD0 File Offset: 0x003BDCD0
+		// Token: 0x0601BBA8 RID: 113576 RVA: 0x003EBCDC File Offset: 0x003E9EDC
 		public static IDynamicSpawnMonsterRandomPoolConfigs GetRootAsIDynamicSpawnMonsterRandomPoolConfigs(ByteBuffer _bb, IDynamicSpawnMonsterRandomPoolConfigs obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A3D8 RID: 107480 RVA: 0x003BFAED File Offset: 0x003BDCED
+		// Token: 0x0601BBA9 RID: 113577 RVA: 0x003EBCF9 File Offset: 0x003E9EF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A3D9 RID: 107481 RVA: 0x003BFAFC File Offset: 0x003BDCFC
+		// Token: 0x0601BBAA RID: 113578 RVA: 0x003EBD08 File Offset: 0x003E9F08
 		public IDynamicSpawnMonsterRandomPoolConfigs __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601A3DA RID: 107482 RVA: 0x003BFB0C File Offset: 0x003BDD0C
+		// Token: 0x0601BBAB RID: 113579 RVA: 0x003EBD18 File Offset: 0x003E9F18
 		public IDynamicSpawnMonsterRandomPoolConfig? Pools(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IDynamicSpawnMonsterRandomPoolConfig?(default(IDynamicSpawnMonsterRandomPoolConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007C05 RID: 31749
-		// (get) Token: 0x0601A3DB RID: 107483 RVA: 0x003BFB6C File Offset: 0x003BDD6C
+		// Token: 0x17008244 RID: 33348
+		// (get) Token: 0x0601BBAC RID: 113580 RVA: 0x003EBD78 File Offset: 0x003E9F78
 		public int PoolsLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A3DC RID: 107484 RVA: 0x003BFB97 File Offset: 0x003BDD97
+		// Token: 0x0601BBAD RID: 113581 RVA: 0x003EBDA3 File Offset: 0x003E9FA3
 		public static Offset<IDynamicSpawnMonsterRandomPoolConfigs> CreateIDynamicSpawnMonsterRandomPoolConfigs(FlatBufferBuilder builder, VectorOffset PoolsOffset = default(VectorOffset))
 		{
 			builder.StartTable(1);
@@ -82,19 +82,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDynamicSpawnMonsterRandomPoolConfigs.EndIDynamicSpawnMonsterRandomPoolConfigs(builder);
 		}
 
-		// Token: 0x0601A3DD RID: 107485 RVA: 0x003BFBAD File Offset: 0x003BDDAD
+		// Token: 0x0601BBAE RID: 113582 RVA: 0x003EBDB9 File Offset: 0x003E9FB9
 		public static void StartIDynamicSpawnMonsterRandomPoolConfigs(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601A3DE RID: 107486 RVA: 0x003BFBB6 File Offset: 0x003BDDB6
+		// Token: 0x0601BBAF RID: 113583 RVA: 0x003EBDC2 File Offset: 0x003E9FC2
 		public static void AddPools(FlatBufferBuilder builder, VectorOffset poolsOffset)
 		{
 			builder.AddOffset(0, poolsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A3DF RID: 107487 RVA: 0x003BFBC8 File Offset: 0x003BDDC8
+		// Token: 0x0601BBB0 RID: 113584 RVA: 0x003EBDD4 File Offset: 0x003E9FD4
 		public static VectorOffset CreatePoolsVector(FlatBufferBuilder builder, Offset<IDynamicSpawnMonsterRandomPoolConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -105,7 +105,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A3E0 RID: 107488 RVA: 0x003BFC08 File Offset: 0x003BDE08
+		// Token: 0x0601BBB1 RID: 113585 RVA: 0x003EBE14 File Offset: 0x003EA014
 		public static VectorOffset CreatePoolsVectorBlock(FlatBufferBuilder builder, Offset<IDynamicSpawnMonsterRandomPoolConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A3E1 RID: 107489 RVA: 0x003BFC22 File Offset: 0x003BDE22
+		// Token: 0x0601BBB2 RID: 113586 RVA: 0x003EBE2E File Offset: 0x003EA02E
 		public static VectorOffset CreatePoolsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDynamicSpawnMonsterRandomPoolConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A3E2 RID: 107490 RVA: 0x003BFC40 File Offset: 0x003BDE40
+		// Token: 0x0601BBB3 RID: 113587 RVA: 0x003EBE4C File Offset: 0x003EA04C
 		public static VectorOffset CreatePoolsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -129,19 +129,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A3E3 RID: 107491 RVA: 0x003BFC59 File Offset: 0x003BDE59
+		// Token: 0x0601BBB4 RID: 113588 RVA: 0x003EBE65 File Offset: 0x003EA065
 		public static void StartPoolsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A3E4 RID: 107492 RVA: 0x003BFC64 File Offset: 0x003BDE64
+		// Token: 0x0601BBB5 RID: 113589 RVA: 0x003EBE70 File Offset: 0x003EA070
 		public static Offset<IDynamicSpawnMonsterRandomPoolConfigs> EndIDynamicSpawnMonsterRandomPoolConfigs(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicSpawnMonsterRandomPoolConfigs>(builder.EndTable());
 		}
 
-		// Token: 0x0601A3E5 RID: 107493 RVA: 0x003BFC74 File Offset: 0x003BDE74
+		// Token: 0x0601BBB6 RID: 113590 RVA: 0x003EBE80 File Offset: 0x003EA080
 		public IDynamicSpawnMonsterRandomPoolConfigsT UnPack()
 		{
 			IDynamicSpawnMonsterRandomPoolConfigsT dynamicSpawnMonsterRandomPoolConfigsT = new IDynamicSpawnMonsterRandomPoolConfigsT();
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dynamicSpawnMonsterRandomPoolConfigsT;
 		}
 
-		// Token: 0x0601A3E6 RID: 107494 RVA: 0x003BFC90 File Offset: 0x003BDE90
+		// Token: 0x0601BBB7 RID: 113591 RVA: 0x003EBE9C File Offset: 0x003EA09C
 		public void UnPackTo(IDynamicSpawnMonsterRandomPoolConfigsT _o)
 		{
 			_o.Pools = new List<IDynamicSpawnMonsterRandomPoolConfigT>();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A3E7 RID: 107495 RVA: 0x003BFCF0 File Offset: 0x003BDEF0
+		// Token: 0x0601BBB8 RID: 113592 RVA: 0x003EBEFC File Offset: 0x003EA0FC
 		public static Offset<IDynamicSpawnMonsterRandomPoolConfigs> Pack(FlatBufferBuilder builder, IDynamicSpawnMonsterRandomPoolConfigsT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDynamicSpawnMonsterRandomPoolConfigs.CreateIDynamicSpawnMonsterRandomPoolConfigs(builder, poolsOffset);
 		}
 
-		// Token: 0x0400C4B0 RID: 50352
+		// Token: 0x0400CEDE RID: 52958
 		private Table __p;
 	}
 }

@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200106B RID: 4203
+	// Token: 0x02001199 RID: 4505
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestBuffActiveRange
 	{
-		// Token: 0x06005E88 RID: 24200 RVA: 0x000E4C14 File Offset: 0x000E2E14
-		[NullableContext(1)]
+		// Token: 0x0600647C RID: 25724 RVA: 0x000F1C6C File Offset: 0x000EFE6C
+		[NullableContext(0)]
 		private IQuestBuffActiveRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005E89 RID: 24201 RVA: 0x000E4C4C File Offset: 0x000E2E4C
-		[NullableContext(1)]
+		// Token: 0x0600647D RID: 25725 RVA: 0x000F1CA4 File Offset: 0x000EFEA4
+		[NullableContext(0)]
 		public static IQuestBuffActiveRange Create([Nullable(2)] IQuestBuffActiveRange instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005E8A RID: 24202 RVA: 0x000E4C5F File Offset: 0x000E2E5F
-		[NullableContext(1)]
+		// Token: 0x0600647E RID: 25726 RVA: 0x000F1CB7 File Offset: 0x000EFEB7
+		[NullableContext(0)]
 		public static IQuestBuffActiveRange CreateFromSetValue([Nullable(2)] IQuestBuffActiveRange_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005E8B RID: 24203 RVA: 0x000E4C72 File Offset: 0x000E2E72
-		[NullableContext(1)]
+		// Token: 0x0600647F RID: 25727 RVA: 0x000F1CCA File Offset: 0x000EFECA
+		[NullableContext(0)]
 		public IQuestBuffActiveRange_SetValue ToSetValue()
 		{
 			return new IQuestBuffActiveRange_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F25 RID: 7973
-		// (get) Token: 0x06005E8C RID: 24204 RVA: 0x000E4CA0 File Offset: 0x000E2EA0
-		// (set) Token: 0x06005E8D RID: 24205 RVA: 0x000E4D01 File Offset: 0x000E2F01
+		// Token: 0x170020D5 RID: 8405
+		// (get) Token: 0x06006480 RID: 25728 RVA: 0x000F1CF8 File Offset: 0x000EFEF8
+		// (set) Token: 0x06006481 RID: 25729 RVA: 0x000F1D59 File Offset: 0x000EFF59
 		public virtual IQuestBuffActiveCenterRange QuestBuffActiveCenterRange
 		{
 			get
@@ -96,9 +96,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F26 RID: 7974
-		// (get) Token: 0x06005E8E RID: 24206 RVA: 0x000E4D16 File Offset: 0x000E2F16
-		// (set) Token: 0x06005E8F RID: 24207 RVA: 0x000E4D3D File Offset: 0x000E2F3D
+		// Token: 0x170020D6 RID: 8406
+		// (get) Token: 0x06006482 RID: 25730 RVA: 0x000F1D6E File Offset: 0x000EFF6E
+		// (set) Token: 0x06006483 RID: 25731 RVA: 0x000F1D95 File Offset: 0x000EFF95
 		public virtual List<int> QuestBuffActiveRangeEntities
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F27 RID: 7975
-		// (get) Token: 0x06005E90 RID: 24208 RVA: 0x000E4D4B File Offset: 0x000E2F4B
-		// (set) Token: 0x06005E91 RID: 24209 RVA: 0x000E4D72 File Offset: 0x000E2F72
+		// Token: 0x170020D7 RID: 8407
+		// (get) Token: 0x06006484 RID: 25732 RVA: 0x000F1DA3 File Offset: 0x000EFFA3
+		// (set) Token: 0x06006485 RID: 25733 RVA: 0x000F1DCA File Offset: 0x000EFFCA
 		public virtual List<int> QuestBuffActiveRangeAreaIds
 		{
 			get
@@ -144,17 +144,17 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040038F8 RID: 14584
+		// Token: 0x04003C43 RID: 15427
 		protected IQuestBuffActiveRange FbInstance;
 
-		// Token: 0x040038F9 RID: 14585
+		// Token: 0x04003C44 RID: 15428
 		protected IQuestBuffActiveRange_SetValue PocoInterface;
 
-		// Token: 0x040038FA RID: 14586
-		[Nullable(1)]
+		// Token: 0x04003C45 RID: 15429
+		[Nullable(0)]
 		private IQuestBuffActiveCenterRange _QuestBuffActiveCenterRangeCache;
 
-		// Token: 0x040038FB RID: 14587
+		// Token: 0x04003C46 RID: 15430
 		private bool _QuestBuffActiveCenterRangeInited;
 	}
 }

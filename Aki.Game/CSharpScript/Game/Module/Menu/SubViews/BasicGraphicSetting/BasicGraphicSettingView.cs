@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 {
-	// Token: 0x02005458 RID: 21592
+	// Token: 0x0200443B RID: 17467
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BasicGraphicSettingView : UiViewBase
 	{
-		// Token: 0x060371E5 RID: 225765 RVA: 0x00D10A19 File Offset: 0x00D0EC19
+		// Token: 0x0602C12E RID: 180526 RVA: 0x00C5FE31 File Offset: 0x00C5E031
 		public BasicGraphicSettingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060371E6 RID: 225766 RVA: 0x00D10A30 File Offset: 0x00D0EC30
+		// Token: 0x0602C12F RID: 180527 RVA: 0x00C5FE48 File Offset: 0x00C5E048
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			};
 		}
 
-		// Token: 0x060371E7 RID: 225767 RVA: 0x00D10AF8 File Offset: 0x00D0ECF8
+		// Token: 0x0602C130 RID: 180528 RVA: 0x00C5FF10 File Offset: 0x00C5E110
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BasicGraphicSettingView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060371E8 RID: 225768 RVA: 0x00D10B3C File Offset: 0x00D0ED3C
+		// Token: 0x0602C131 RID: 180529 RVA: 0x00C5FF54 File Offset: 0x00C5E154
 		protected override void OnStart()
 		{
 			this.LayoutSlideBars = new GenericLayout<BasicGraphicSettingSliderItem, BasicGraphicSettingSliderData>(base.GetVerticalLayout(6), new Func<BasicGraphicSettingSliderItem>(this.CreateSliderBar), null, false, true);
@@ -60,19 +60,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.LayoutSlideBars.SetActive(false);
 		}
 
-		// Token: 0x060371E9 RID: 225769 RVA: 0x00D10BD0 File Offset: 0x00D0EDD0
+		// Token: 0x0602C132 RID: 180530 RVA: 0x00C5FFE8 File Offset: 0x00C5E1E8
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x060371EA RID: 225770 RVA: 0x00D10BEE File Offset: 0x00D0EDEE
+		// Token: 0x0602C133 RID: 180531 RVA: 0x00C60006 File Offset: 0x00C5E206
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x060371EB RID: 225771 RVA: 0x00D10C0C File Offset: 0x00D0EE0C
+		// Token: 0x0602C134 RID: 180532 RVA: 0x00C60024 File Offset: 0x00C5E224
 		protected override void OnBeforeDestroy()
 		{
 			if (this.HasConfirmed)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			}
 		}
 
-		// Token: 0x060371EC RID: 225772 RVA: 0x00D10C64 File Offset: 0x00D0EE64
+		// Token: 0x0602C135 RID: 180533 RVA: 0x00C6007C File Offset: 0x00C5E27C
 		private void PlayAnim(string name)
 		{
 			UUIInturnAnimController uiAnimController = this.LayoutSlideBars.GetUiAnimController();
@@ -95,14 +95,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			uiAnimController.Play(name, -1, false);
 		}
 
-		// Token: 0x060371ED RID: 225773 RVA: 0x00D10C7E File Offset: 0x00D0EE7E
+		// Token: 0x0602C136 RID: 180534 RVA: 0x00C60096 File Offset: 0x00C5E296
 		private void OnActivitySequenceEmitEvent(string param)
 		{
 			this.LayoutSlideBars.SetActive(true);
 			this.PlayAnim(param);
 		}
 
-		// Token: 0x060371EE RID: 225774 RVA: 0x00D10C94 File Offset: 0x00D0EE94
+		// Token: 0x0602C137 RID: 180535 RVA: 0x00C600AC File Offset: 0x00C5E2AC
 		private void OnReset(int _)
 		{
 			foreach (BasicGraphicSettingSliderData basicGraphicSettingSliderData in this.SliderBarDataList)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.LayoutSlideBars.RefreshByData(this.SliderBarDataList, null, false);
 		}
 
-		// Token: 0x060371EF RID: 225775 RVA: 0x00D10D04 File Offset: 0x00D0EF04
+		// Token: 0x0602C138 RID: 180536 RVA: 0x00C6011C File Offset: 0x00C5E31C
 		private void OnConfirm(int _)
 		{
 			GenericPromptController.Instance.ShowPromptByCode("ImageColorSetting", Array.Empty<object>());
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060371F0 RID: 225776 RVA: 0x00D10D28 File Offset: 0x00D0EF28
+		// Token: 0x0602C139 RID: 180537 RVA: 0x00C60140 File Offset: 0x00C5E340
 		private BasicGraphicSettingSliderItem CreateSliderBar()
 		{
 			return new BasicGraphicSettingSliderItem();
 		}
 
-		// Token: 0x0401D146 RID: 119110
+		// Token: 0x04017BDF RID: 97247
 		[Nullable(new byte[]
 		{
 			2,
@@ -135,54 +135,54 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 		})]
 		private GenericLayout<BasicGraphicSettingSliderItem, BasicGraphicSettingSliderData> LayoutSlideBars;
 
-		// Token: 0x0401D147 RID: 119111
+		// Token: 0x04017BE0 RID: 97248
 		private List<BasicGraphicSettingSliderData> SliderBarDataList = new List<BasicGraphicSettingSliderData>();
 
-		// Token: 0x0401D148 RID: 119112
+		// Token: 0x04017BE1 RID: 97249
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D149 RID: 119113
+		// Token: 0x04017BE2 RID: 97250
 		[Nullable(2)]
 		private ButtonItem ResetBtnItem;
 
-		// Token: 0x0401D14A RID: 119114
+		// Token: 0x04017BE3 RID: 97251
 		[Nullable(2)]
 		private ButtonItem ConfirmBtnItem;
 
-		// Token: 0x0401D14B RID: 119115
+		// Token: 0x04017BE4 RID: 97252
 		private bool HasConfirmed;
 
-		// Token: 0x0401D14C RID: 119116
+		// Token: 0x04017BE5 RID: 97253
 		[Nullable(2)]
 		private MenuData SettingData;
 
-		// Token: 0x0200B6CE RID: 46798
+		// Token: 0x0200A106 RID: 41222
 		[NullableContext(0)]
 		public class EComponentDefine
 		{
-			// Token: 0x0403761B RID: 226843
+			// Token: 0x04032070 RID: 204912
 			public const int TexLeft = 0;
 
-			// Token: 0x0403761C RID: 226844
+			// Token: 0x04032071 RID: 204913
 			public const int TexMid = 1;
 
-			// Token: 0x0403761D RID: 226845
+			// Token: 0x04032072 RID: 204914
 			public const int TexRight = 2;
 
-			// Token: 0x0403761E RID: 226846
+			// Token: 0x04032073 RID: 204915
 			public const int ItemCaption = 3;
 
-			// Token: 0x0403761F RID: 226847
+			// Token: 0x04032074 RID: 204916
 			public const int BtnReset = 4;
 
-			// Token: 0x04037620 RID: 226848
+			// Token: 0x04032075 RID: 204917
 			public const int BtnConfirm = 5;
 
-			// Token: 0x04037621 RID: 226849
+			// Token: 0x04032076 RID: 204918
 			public const int VLayoutSlideBars = 6;
 
-			// Token: 0x04037622 RID: 226850
+			// Token: 0x04032077 RID: 204919
 			public const int SlideBar = 7;
 		}
 	}

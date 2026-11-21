@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200183E RID: 6206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019C9 RID: 6601
 	public class ICameraGaze
 	{
-		// Token: 0x0600852B RID: 34091 RVA: 0x0013CD14 File Offset: 0x0013AF14
+		// Token: 0x06008C51 RID: 35921 RVA: 0x0014C508 File Offset: 0x0014A708
 		private ICameraGaze_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600852C RID: 34092 RVA: 0x0013CD4C File Offset: 0x0013AF4C
+		// Token: 0x06008C52 RID: 35922 RVA: 0x0014C540 File Offset: 0x0014A740
 		public static ICameraGaze Create([Nullable(2)] ICameraGaze instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600852D RID: 34093 RVA: 0x0013CD5F File Offset: 0x0013AF5F
+		// Token: 0x06008C53 RID: 35923 RVA: 0x0014C553 File Offset: 0x0014A753
 		public static ICameraGaze CreateFromSetValue([Nullable(2)] ICameraGaze_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600852E RID: 34094 RVA: 0x0013CD74 File Offset: 0x0013AF74
+		// Token: 0x06008C54 RID: 35924 RVA: 0x0014C568 File Offset: 0x0014A768
 		public ICameraGaze_SetValue ToSetValue()
 		{
 			return new ICameraGaze_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B8D RID: 11149
-		// (get) Token: 0x0600852F RID: 34095 RVA: 0x0013CDCE File Offset: 0x0013AFCE
-		// (set) Token: 0x06008530 RID: 34096 RVA: 0x0013CDFD File Offset: 0x0013AFFD
+		// Token: 0x17002D87 RID: 11655
+		// (get) Token: 0x06008C55 RID: 35925 RVA: 0x0014C5C2 File Offset: 0x0014A7C2
+		// (set) Token: 0x06008C56 RID: 35926 RVA: 0x0014C5F1 File Offset: 0x0014A7F1
 		public virtual float FadeInTime
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B8E RID: 11150
-		// (get) Token: 0x06008531 RID: 34097 RVA: 0x0013CE0B File Offset: 0x0013B00B
-		// (set) Token: 0x06008532 RID: 34098 RVA: 0x0013CE3A File Offset: 0x0013B03A
+		// Token: 0x17002D88 RID: 11656
+		// (get) Token: 0x06008C57 RID: 35927 RVA: 0x0014C5FF File Offset: 0x0014A7FF
+		// (set) Token: 0x06008C58 RID: 35928 RVA: 0x0014C62E File Offset: 0x0014A82E
 		public virtual float StayTime
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B8F RID: 11151
-		// (get) Token: 0x06008533 RID: 34099 RVA: 0x0013CE48 File Offset: 0x0013B048
-		// (set) Token: 0x06008534 RID: 34100 RVA: 0x0013CE82 File Offset: 0x0013B082
+		// Token: 0x17002D89 RID: 11657
+		// (get) Token: 0x06008C59 RID: 35929 RVA: 0x0014C63C File Offset: 0x0014A83C
+		// (set) Token: 0x06008C5A RID: 35930 RVA: 0x0014C676 File Offset: 0x0014A876
 		public virtual float? FadeOutTime
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B90 RID: 11152
-		// (get) Token: 0x06008535 RID: 34101 RVA: 0x0013CE90 File Offset: 0x0013B090
-		// (set) Token: 0x06008536 RID: 34102 RVA: 0x0013CECA File Offset: 0x0013B0CA
+		// Token: 0x17002D8A RID: 11658
+		// (get) Token: 0x06008C5B RID: 35931 RVA: 0x0014C684 File Offset: 0x0014A884
+		// (set) Token: 0x06008C5C RID: 35932 RVA: 0x0014C6BE File Offset: 0x0014A8BE
 		public virtual bool? LockCamera
 		{
 			get
@@ -158,9 +156,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B91 RID: 11153
-		// (get) Token: 0x06008537 RID: 34103 RVA: 0x0013CED8 File Offset: 0x0013B0D8
-		// (set) Token: 0x06008538 RID: 34104 RVA: 0x0013CF03 File Offset: 0x0013B103
+		// Token: 0x17002D8B RID: 11659
+		// (get) Token: 0x06008C5D RID: 35933 RVA: 0x0014C6CC File Offset: 0x0014A8CC
+		// (set) Token: 0x06008C5E RID: 35934 RVA: 0x0014C6F7 File Offset: 0x0014A8F7
 		public virtual int LockPriority
 		{
 			get
@@ -181,9 +179,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B92 RID: 11154
-		// (get) Token: 0x06008539 RID: 34105 RVA: 0x0013CF14 File Offset: 0x0013B114
-		// (set) Token: 0x0600853A RID: 34106 RVA: 0x0013CF4E File Offset: 0x0013B14E
+		// Token: 0x17002D8C RID: 11660
+		// (get) Token: 0x06008C5F RID: 35935 RVA: 0x0014C708 File Offset: 0x0014A908
+		// (set) Token: 0x06008C60 RID: 35936 RVA: 0x0014C742 File Offset: 0x0014A942
 		public virtual bool? GazeInHook
 		{
 			get
@@ -205,11 +203,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005426 RID: 21542
+		// Token: 0x04005872 RID: 22642
 		[Nullable(2)]
 		protected ICameraGaze FbInstance;
 
-		// Token: 0x04005427 RID: 21543
+		// Token: 0x04005873 RID: 22643
 		[Nullable(2)]
 		protected ICameraGaze_SetValue PocoInterface;
 	}

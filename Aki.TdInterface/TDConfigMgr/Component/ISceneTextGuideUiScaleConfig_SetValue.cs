@@ -2,22 +2,22 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B3 RID: 1715
+	// Token: 0x02000754 RID: 1876
 	public class ISceneTextGuideUiScaleConfig_SetValue
 	{
-		// Token: 0x04001935 RID: 6453
+		// Token: 0x04001B32 RID: 6962
 		public int MinDist;
 
-		// Token: 0x04001936 RID: 6454
+		// Token: 0x04001B33 RID: 6963
 		public int MaxDist;
 
-		// Token: 0x04001937 RID: 6455
+		// Token: 0x04001B34 RID: 6964
 		public float MinScale;
 
-		// Token: 0x04001938 RID: 6456
+		// Token: 0x04001B35 RID: 6965
 		public float MaxScale;
 
-		// Token: 0x04001939 RID: 6457
+		// Token: 0x04001B36 RID: 6966
 		public ESceneTextGuideUiScaleType ScaleType;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066AE RID: 26286
+	// Token: 0x020055FE RID: 22014
 	public enum EDropCatchGameplayInputChannel
 	{
-		// Token: 0x040223F8 RID: 140280
+		// Token: 0x0401CC51 RID: 117841
 		MoveDirection
 	}
 }

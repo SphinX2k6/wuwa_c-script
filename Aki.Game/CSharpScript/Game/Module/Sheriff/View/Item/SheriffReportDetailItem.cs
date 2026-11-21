@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C74 RID: 19572
+	// Token: 0x02003C25 RID: 15397
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SheriffReportDetailItem : UiTabViewBase
 	{
-		// Token: 0x0603296D RID: 207213 RVA: 0x00BCB778 File Offset: 0x00BC9978
+		// Token: 0x06027720 RID: 161568 RVA: 0x00B103DC File Offset: 0x00B0E5DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603296E RID: 207214 RVA: 0x00BCB9F8 File Offset: 0x00BC9BF8
+		// Token: 0x06027721 RID: 161569 RVA: 0x00B1065C File Offset: 0x00B0E85C
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x0603296F RID: 207215 RVA: 0x00BCBA24 File Offset: 0x00BC9C24
+		// Token: 0x06027722 RID: 161570 RVA: 0x00B10688 File Offset: 0x00B0E888
 		protected override void OnStart()
 		{
 			ISheriffReportPopParam sheriffReportPopParam = this.ExtraParams as ISheriffReportPopParam;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshProgressScroll();
 		}
 
-		// Token: 0x06032970 RID: 207216 RVA: 0x00BCBB0C File Offset: 0x00BC9D0C
+		// Token: 0x06027723 RID: 161571 RVA: 0x00B10770 File Offset: 0x00B0E970
 		private void OnClickBtnFunctionA()
 		{
 			SheriffShowClueViewPopInfo param = new SheriffShowClueViewPopInfo
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			UiManager.Instance.OpenView(EUiViewName.SheriffShowClueViewPop, param, null);
 		}
 
-		// Token: 0x06032971 RID: 207217 RVA: 0x00BCBB44 File Offset: 0x00BC9D44
+		// Token: 0x06027724 RID: 161572 RVA: 0x00B107A8 File Offset: 0x00B0E9A8
 		private void OnClickBtnConfirmB(int id)
 		{
 			if (!SheriffModel.Instance.CheckGameplayActivated(this.AnomalyInfo.AnomalyId))
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032972 RID: 207218 RVA: 0x00BCBC5C File Offset: 0x00BC9E5C
+		// Token: 0x06027725 RID: 161573 RVA: 0x00B108C0 File Offset: 0x00B0EAC0
 		private void RefreshPanelRole()
 		{
 			ESheriffCriminalState state = this.CriminalInfo.State;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.SetTextureByPath(value.IconReport, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x06032973 RID: 207219 RVA: 0x00BCBD14 File Offset: 0x00BC9F14
+		// Token: 0x06027726 RID: 161574 RVA: 0x00B10978 File Offset: 0x00B0EB78
 		private void RefreshRewardList()
 		{
 			SheriffAnomaly value = SheriffConfig.Instance.GetAnomalyConfigById(this.AnomalyInfo.AnomalyId).Value;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			rewardList.RefreshByData(dropPackagePreviewItemList, false, null, false);
 		}
 
-		// Token: 0x06032974 RID: 207220 RVA: 0x00BCBD68 File Offset: 0x00BC9F68
+		// Token: 0x06027727 RID: 161575 RVA: 0x00B109CC File Offset: 0x00B0EBCC
 		private void RefreshProgressScroll()
 		{
 			int anomalyId = this.AnomalyInfo.AnomalyId;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032975 RID: 207221 RVA: 0x00BCBFA0 File Offset: 0x00BCA1A0
+		// Token: 0x06027728 RID: 161576 RVA: 0x00B10C04 File Offset: 0x00B0EE04
 		[NullableContext(1)]
 		private List<int> GetProgressList()
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return list;
 		}
 
-		// Token: 0x06032976 RID: 207222 RVA: 0x00BCC028 File Offset: 0x00BCA228
+		// Token: 0x06027729 RID: 161577 RVA: 0x00B10C8C File Offset: 0x00B0EE8C
 		protected void RefreshTargetPanel()
 		{
 			if (!SheriffModel.Instance.CheckGameplayActivated(this.AnomalyInfo.AnomalyId))
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x06032977 RID: 207223 RVA: 0x00BCC179 File Offset: 0x00BCA379
+		// Token: 0x0602772A RID: 161578 RVA: 0x00B10DDD File Offset: 0x00B0EFDD
 		[NullableContext(1)]
 		private CommonItemSmallItemGrid CreateGrid()
 		{
@@ -360,20 +360,20 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			};
 		}
 
-		// Token: 0x06032978 RID: 207224 RVA: 0x00BCC192 File Offset: 0x00BCA392
+		// Token: 0x0602772B RID: 161579 RVA: 0x00B10DF6 File Offset: 0x00B0EFF6
 		private bool CheckLevelFinished(TItem data)
 		{
 			return this.AnomalyInfo.EndingTime != 0L;
 		}
 
-		// Token: 0x06032979 RID: 207225 RVA: 0x00BCC1A3 File Offset: 0x00BCA3A3
+		// Token: 0x0602772C RID: 161580 RVA: 0x00B10E07 File Offset: 0x00B0F007
 		[NullableContext(1)]
 		private SheriffReportDetailItemProgress CreateProgressGrid()
 		{
 			return new SheriffReportDetailItemProgress();
 		}
 
-		// Token: 0x0603297A RID: 207226 RVA: 0x00BCC1AA File Offset: 0x00BCA3AA
+		// Token: 0x0602772D RID: 161581 RVA: 0x00B10E0E File Offset: 0x00B0F00E
 		private void OnAfterRefreshProgressScroll()
 		{
 			TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}, null, null);
 		}
 
-		// Token: 0x0603297B RID: 207227 RVA: 0x00BCC1C5 File Offset: 0x00BCA3C5
+		// Token: 0x0602772E RID: 161582 RVA: 0x00B10E29 File Offset: 0x00B0F029
 		protected void OnLateUpdate()
 		{
 			base.GetScrollViewWithScrollbar(7).OnLateUpdate.Bind(delegate(float _)
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			});
 		}
 
-		// Token: 0x0401AEB3 RID: 110259
+		// Token: 0x04015810 RID: 88080
 		[Nullable(new byte[]
 		{
 			2,
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private LoopScrollView<CommonItemSmallItemGrid, TItem> RewardList;
 
-		// Token: 0x0401AEB4 RID: 110260
+		// Token: 0x04015811 RID: 88081
 		[Nullable(new byte[]
 		{
 			2,
@@ -409,53 +409,53 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericScrollViewNew<SheriffReportDetailItemProgress, ISheriffProgressPopInfo> ProgressScroll;
 
-		// Token: 0x0401AEB5 RID: 110261
+		// Token: 0x04015812 RID: 88082
 		protected ButtonItem ConfirmBtn;
 
-		// Token: 0x0401AEB6 RID: 110262
+		// Token: 0x04015813 RID: 88083
 		protected SheriffAnomalyInfo AnomalyInfo;
 
-		// Token: 0x0401AEB7 RID: 110263
+		// Token: 0x04015814 RID: 88084
 		protected SheriffCriminalInfo CriminalInfo;
 
-		// Token: 0x0401AEB8 RID: 110264
+		// Token: 0x04015815 RID: 88085
 		protected Action CloseViewCallback;
 
-		// Token: 0x0200AE29 RID: 44585
+		// Token: 0x02009847 RID: 38983
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x04034E57 RID: 216663
+			// Token: 0x0402F7FC RID: 194556
 			PanelLock,
-			// Token: 0x04034E58 RID: 216664
+			// Token: 0x0402F7FD RID: 194557
 			PanelUnlock,
-			// Token: 0x04034E59 RID: 216665
+			// Token: 0x0402F7FE RID: 194558
 			TexRole,
-			// Token: 0x04034E5A RID: 216666
+			// Token: 0x0402F7FF RID: 194559
 			TxtName,
-			// Token: 0x04034E5B RID: 216667
+			// Token: 0x0402F800 RID: 194560
 			PanelDone,
-			// Token: 0x04034E5C RID: 216668
+			// Token: 0x0402F801 RID: 194561
 			SvInfo,
-			// Token: 0x04034E5D RID: 216669
+			// Token: 0x0402F802 RID: 194562
 			UiItemItemBaseB,
-			// Token: 0x04034E5E RID: 216670
+			// Token: 0x0402F803 RID: 194563
 			SvInfoAlt,
-			// Token: 0x04034E5F RID: 216671
+			// Token: 0x0402F804 RID: 194564
 			PanelInfo,
-			// Token: 0x04034E60 RID: 216672
+			// Token: 0x0402F805 RID: 194565
 			PanelMission,
-			// Token: 0x04034E61 RID: 216673
+			// Token: 0x0402F806 RID: 194566
 			TxtMission,
-			// Token: 0x04034E62 RID: 216674
+			// Token: 0x0402F807 RID: 194567
 			PanelButton,
-			// Token: 0x04034E63 RID: 216675
+			// Token: 0x0402F808 RID: 194568
 			TxtNum,
-			// Token: 0x04034E64 RID: 216676
+			// Token: 0x0402F809 RID: 194569
 			BtnFunctionA,
-			// Token: 0x04034E65 RID: 216677
+			// Token: 0x0402F80A RID: 194570
 			BtnConfirmB,
-			// Token: 0x04034E66 RID: 216678
+			// Token: 0x0402F80B RID: 194571
 			PanelDoneAlt
 		}
 	}

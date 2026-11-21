@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D68 RID: 7528
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F79 RID: 8057
 	public class IPunishReport : ICommonTipType
 	{
-		// Token: 0x0600A16B RID: 41323 RVA: 0x0016FB3C File Offset: 0x0016DD3C
+		// Token: 0x0600AB57 RID: 43863 RVA: 0x00183F60 File Offset: 0x00182160
 		private IPunishReport_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A16C RID: 41324 RVA: 0x0016FB74 File Offset: 0x0016DD74
+		// Token: 0x0600AB58 RID: 43864 RVA: 0x00183F98 File Offset: 0x00182198
 		public static IPunishReport Create([Nullable(2)] IPunishReport instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A16D RID: 41325 RVA: 0x0016FB87 File Offset: 0x0016DD87
+		// Token: 0x0600AB59 RID: 43865 RVA: 0x00183FAB File Offset: 0x001821AB
 		public static IPunishReport CreateFromSetValue([Nullable(2)] IPunishReport_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A16E RID: 41326 RVA: 0x0016FB9A File Offset: 0x0016DD9A
+		// Token: 0x0600AB5A RID: 43866 RVA: 0x00183FBE File Offset: 0x001821BE
 		public new IPunishReport_SetValue ToSetValue()
 		{
 			return new IPunishReport_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031F0 RID: 12784
-		// (get) Token: 0x0600A16F RID: 41327 RVA: 0x0016FBD1 File Offset: 0x0016DDD1
-		// (set) Token: 0x0600A170 RID: 41328 RVA: 0x0016FBFC File Offset: 0x0016DDFC
+		// Token: 0x17003484 RID: 13444
+		// (get) Token: 0x0600AB5B RID: 43867 RVA: 0x00183FF5 File Offset: 0x001821F5
+		// (set) Token: 0x0600AB5C RID: 43868 RVA: 0x00184020 File Offset: 0x00182220
 		public override ECommonTipType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031F1 RID: 12785
-		// (get) Token: 0x0600A171 RID: 41329 RVA: 0x0016FC0A File Offset: 0x0016DE0A
-		// (set) Token: 0x0600A172 RID: 41330 RVA: 0x0016FC35 File Offset: 0x0016DE35
+		// Token: 0x17003485 RID: 13445
+		// (get) Token: 0x0600AB5D RID: 43869 RVA: 0x0018402E File Offset: 0x0018222E
+		// (set) Token: 0x0600AB5E RID: 43870 RVA: 0x00184059 File Offset: 0x00182259
 		public virtual string MainText
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031F2 RID: 12786
-		// (get) Token: 0x0600A173 RID: 41331 RVA: 0x0016FC43 File Offset: 0x0016DE43
-		// (set) Token: 0x0600A174 RID: 41332 RVA: 0x0016FC6E File Offset: 0x0016DE6E
+		// Token: 0x17003486 RID: 13446
+		// (get) Token: 0x0600AB5F RID: 43871 RVA: 0x00184067 File Offset: 0x00182267
+		// (set) Token: 0x0600AB60 RID: 43872 RVA: 0x00184092 File Offset: 0x00182292
 		public virtual string SubText
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031F3 RID: 12787
-		// (get) Token: 0x0600A175 RID: 41333 RVA: 0x0016FC7C File Offset: 0x0016DE7C
-		// (set) Token: 0x0600A176 RID: 41334 RVA: 0x0016FCB6 File Offset: 0x0016DEB6
+		// Token: 0x17003487 RID: 13447
+		// (get) Token: 0x0600AB61 RID: 43873 RVA: 0x001840A0 File Offset: 0x001822A0
+		// (set) Token: 0x0600AB62 RID: 43874 RVA: 0x001840DA File Offset: 0x001822DA
 		public virtual EPunishReportShowType? ShowType
 		{
 			get
@@ -155,11 +153,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006121 RID: 24865
+		// Token: 0x0400669D RID: 26269
 		[Nullable(2)]
 		protected new IPunishReport FbInstance;
 
-		// Token: 0x04006122 RID: 24866
+		// Token: 0x0400669E RID: 26270
 		[Nullable(2)]
 		protected new IPunishReport_SetValue PocoInterface;
 	}

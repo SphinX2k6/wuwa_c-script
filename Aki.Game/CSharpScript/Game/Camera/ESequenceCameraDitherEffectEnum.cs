@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072E0 RID: 29408
+	// Token: 0x02006463 RID: 25699
 	public enum ESequenceCameraDitherEffectEnum
 	{
-		// Token: 0x04026169 RID: 156009
+		// Token: 0x04021453 RID: 136275
 		Ans
 	}
 }

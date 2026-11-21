@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F53 RID: 24403
+	// Token: 0x02004F3A RID: 20282
 	public class WheelTowerStageMedalDetailItem : UiPanelBase
 	{
-		// Token: 0x0603DFE4 RID: 253924 RVA: 0x00EF60D0 File Offset: 0x00EF42D0
+		// Token: 0x06032F7F RID: 208767 RVA: 0x00E47DFC File Offset: 0x00E45FFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DFE5 RID: 253925 RVA: 0x00EF61C0 File Offset: 0x00EF43C0
+		// Token: 0x06032F80 RID: 208768 RVA: 0x00E47EEC File Offset: 0x00E460EC
 		[NullableContext(1)]
 		public void Refresh(IWheelTowerMedalGroupData groupData)
 		{

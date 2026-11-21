@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028CF RID: 10447
+	// Token: 0x02002BA4 RID: 11172
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ChangePhantomFormation : ActionParams
 	{
-		// Token: 0x0600E808 RID: 59400 RVA: 0x00220F1A File Offset: 0x0021F11A
-		[NullableContext(1)]
+		// Token: 0x0600F637 RID: 63031 RVA: 0x0023DE9A File Offset: 0x0023C09A
+		[NullableContext(0)]
 		public static ChangePhantomFormation Create(IChangePhantomFormation? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700482C RID: 18476
-		// (get) Token: 0x0600E809 RID: 59401 RVA: 0x00220F39 File Offset: 0x0021F139
+		// Token: 0x17004B9D RID: 19357
+		// (get) Token: 0x0600F638 RID: 63032 RVA: 0x0023DEB9 File Offset: 0x0023C0B9
 		public virtual int FormationId
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700482D RID: 18477
-		// (get) Token: 0x0600E80A RID: 59402 RVA: 0x00220F48 File Offset: 0x0021F148
+		// Token: 0x17004B9E RID: 19358
+		// (get) Token: 0x0600F639 RID: 63033 RVA: 0x0023DEC8 File Offset: 0x0023C0C8
 		public virtual bool? RetainRole
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700482E RID: 18478
-		// (get) Token: 0x0600E80B RID: 59403 RVA: 0x00220F80 File Offset: 0x0021F180
+		// Token: 0x17004B9F RID: 19359
+		// (get) Token: 0x0600F63A RID: 63034 RVA: 0x0023DF00 File Offset: 0x0023C100
 		public virtual int? TeleportEntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700482F RID: 18479
-		// (get) Token: 0x0600E80C RID: 59404 RVA: 0x00220FB8 File Offset: 0x0021F1B8
+		// Token: 0x17004BA0 RID: 19360
+		// (get) Token: 0x0600F63B RID: 63035 RVA: 0x0023DF38 File Offset: 0x0023C138
 		public virtual List<long> AppendBuffIds
 		{
 			get
@@ -87,13 +87,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008047 RID: 32839
+		// Token: 0x04008706 RID: 34566
 		private IChangePhantomFormation Instance;
 
-		// Token: 0x04008048 RID: 32840
+		// Token: 0x04008707 RID: 34567
 		private List<long> _AppendBuffIdsCache;
 
-		// Token: 0x04008049 RID: 32841
+		// Token: 0x04008708 RID: 34568
 		private bool _AppendBuffIdsInited;
 	}
 }

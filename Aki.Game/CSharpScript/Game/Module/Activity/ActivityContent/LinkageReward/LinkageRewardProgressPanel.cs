@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006554 RID: 25940
+	// Token: 0x020054D2 RID: 21714
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal sealed class LinkageRewardProgressPanel : UiPanelBase
 	{
-		// Token: 0x06041002 RID: 266242 RVA: 0x00FC0634 File Offset: 0x00FBE834
+		// Token: 0x06035CC7 RID: 220359 RVA: 0x00F07624 File Offset: 0x00F05824
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -37,15 +36,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06041003 RID: 266243 RVA: 0x00FC0744 File Offset: 0x00FBE944
+		// Token: 0x06035CC8 RID: 220360 RVA: 0x00F07734 File Offset: 0x00F05934
 		public void Refresh(List<TimePointRewardData> dataList, int checkInDay)
 		{
 			int num = Math.Min(LinkageRewardProgressPanel.PointComponents.Length, LinkageRewardProgressPanel.DayTextComponents.Length);
-			List<TimePointRewardData> list = (from x in dataList
-			where x.RewardTime > 0L
-			select x into a
-			orderby a.RewardTime
-			select a).Take(num).ToList<TimePointRewardData>();
+			List<TimePointRewardData> list = NoLinq.WhereOrderByTakeToList<TimePointRewardData, long>(dataList, (TimePointRewardData stage) => stage.RewardTime > 0L, (TimePointRewardData stage) => stage.RewardTime, num);
 			if (list.Count < num)
 			{
 				foreach (int name in LinkageRewardProgressPanel.PointComponents)
@@ -66,13 +61,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 				}
 				return;
 			}
-			List<int> days = (from x in list
-			select (int)x.RewardTime).ToList<int>();
-			for (int j = 0; j < num; j++)
+			List<int> list2 = new List<int>(list.Count);
+			for (int j = 0; j < list.Count; j++)
 			{
-				ETimePointRewardState rewardState = list[j].RewardState;
-				int name3 = LinkageRewardProgressPanel.DayTextComponents[j];
-				int component = LinkageRewardProgressPanel.PointComponents[j];
+				list2.Add((int)list[j].RewardTime);
+			}
+			for (int k = 0; k < num; k++)
+			{
+				ETimePointRewardState rewardState = list[k].RewardState;
+				int name3 = LinkageRewardProgressPanel.DayTextComponents[k];
+				int component = LinkageRewardProgressPanel.PointComponents[k];
 				UUIText text2 = base.GetText(name3);
 				if (text2 != null)
 				{
@@ -81,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 				LinkageRewardDayTextUtil.ApplyLinkageRewardDayTextStyle(text2, rewardState);
 				this.SetPointState(component, rewardState);
 			}
-			float fillAmount = LinkageRewardProgressPanel.CalculateProgressFill(days, checkInDay);
+			float fillAmount = LinkageRewardProgressPanel.CalculateProgressFill(list2, checkInDay);
 			UUISprite sprite2 = base.GetSprite(0);
 			if (sprite2 != null)
 			{
@@ -94,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			sprite2.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x06041004 RID: 266244 RVA: 0x00FC08DC File Offset: 0x00FBEADC
+		// Token: 0x06035CC9 RID: 220361 RVA: 0x00F078C4 File Offset: 0x00F05AC4
 		private void SetPointState(int component, ETimePointRewardState state)
 		{
 			UUISprite sprite = base.GetSprite(component);
@@ -123,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			});
 		}
 
-		// Token: 0x06041005 RID: 266245 RVA: 0x00FC0968 File Offset: 0x00FBEB68
+		// Token: 0x06035CCA RID: 220362 RVA: 0x00F07950 File Offset: 0x00F05B50
 		private static float CalculateProgressFill(List<int> days, int checkInDay)
 		{
 			int[] array = new int[]
@@ -158,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return 1f;
 		}
 
-		// Token: 0x04021E48 RID: 138824
+		// Token: 0x0401C779 RID: 116601
 		private static readonly int[] PointComponents = new int[]
 		{
 			1,
@@ -166,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			3
 		};
 
-		// Token: 0x04021E49 RID: 138825
+		// Token: 0x0401C77A RID: 116602
 		private static readonly int[] DayTextComponents = new int[]
 		{
 			4,
@@ -174,29 +172,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			6
 		};
 
-		// Token: 0x0200C742 RID: 51010
+		// Token: 0x0200B127 RID: 45351
 		[NullableContext(0)]
 		private static class EProgressComponents
 		{
-			// Token: 0x0403C33F RID: 246591
+			// Token: 0x04036C92 RID: 224402
 			public const int SprProgress = 0;
 
-			// Token: 0x0403C340 RID: 246592
+			// Token: 0x04036C93 RID: 224403
 			public const int SprPoint1 = 1;
 
-			// Token: 0x0403C341 RID: 246593
+			// Token: 0x04036C94 RID: 224404
 			public const int SprPoint2 = 2;
 
-			// Token: 0x0403C342 RID: 246594
+			// Token: 0x04036C95 RID: 224405
 			public const int SprPoint3 = 3;
 
-			// Token: 0x0403C343 RID: 246595
+			// Token: 0x04036C96 RID: 224406
 			public const int TxtDay1 = 4;
 
-			// Token: 0x0403C344 RID: 246596
+			// Token: 0x04036C97 RID: 224407
 			public const int TxtDay2 = 5;
 
-			// Token: 0x0403C345 RID: 246597
+			// Token: 0x04036C98 RID: 224408
 			public const int TxtDay3 = 6;
 		}
 	}

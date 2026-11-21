@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B05 RID: 2821
+	// Token: 0x02000BDF RID: 3039
 	public struct AreaMpc : IFlatbufferObject
 	{
-		// Token: 0x17000340 RID: 832
-		// (get) Token: 0x060048AB RID: 18603 RVA: 0x001D7FF1 File Offset: 0x001D61F1
+		// Token: 0x17000357 RID: 855
+		// (get) Token: 0x06004DF2 RID: 19954 RVA: 0x001F7820 File Offset: 0x001F5A20
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048AC RID: 18604 RVA: 0x001D7FFE File Offset: 0x001D61FE
+		// Token: 0x06004DF3 RID: 19955 RVA: 0x001F782D File Offset: 0x001F5A2D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060048AD RID: 18605 RVA: 0x001D8008 File Offset: 0x001D6208
+		// Token: 0x06004DF4 RID: 19956 RVA: 0x001F7834 File Offset: 0x001F5A34
 		public static AreaMpc GetRootAsAreaMpc(ByteBuffer _bb)
 		{
 			return AreaMpc.GetRootAsAreaMpc(_bb, default(AreaMpc));
 		}
 
-		// Token: 0x060048AE RID: 18606 RVA: 0x001D8024 File Offset: 0x001D6224
+		// Token: 0x06004DF5 RID: 19957 RVA: 0x001F7850 File Offset: 0x001F5A50
 		public static AreaMpc GetRootAsAreaMpc(ByteBuffer _bb, AreaMpc obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060048AF RID: 18607 RVA: 0x001D8041 File Offset: 0x001D6241
+		// Token: 0x06004DF6 RID: 19958 RVA: 0x001F786D File Offset: 0x001F5A6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060048B0 RID: 18608 RVA: 0x001D8050 File Offset: 0x001D6250
+		// Token: 0x06004DF7 RID: 19959 RVA: 0x001F787C File Offset: 0x001F5A7C
 		public AreaMpc __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000341 RID: 833
-		// (get) Token: 0x060048B1 RID: 18609 RVA: 0x001D8060 File Offset: 0x001D6260
+		// Token: 0x17000358 RID: 856
+		// (get) Token: 0x06004DF8 RID: 19960 RVA: 0x001F788C File Offset: 0x001F5A8C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000342 RID: 834
-		// (get) Token: 0x060048B2 RID: 18610 RVA: 0x001D809C File Offset: 0x001D629C
+		// Token: 0x17000359 RID: 857
+		// (get) Token: 0x06004DF9 RID: 19961 RVA: 0x001F78C8 File Offset: 0x001F5AC8
 		public int RegionId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000343 RID: 835
-		// (get) Token: 0x060048B3 RID: 18611 RVA: 0x001D80D8 File Offset: 0x001D62D8
+		// Token: 0x1700035A RID: 858
+		// (get) Token: 0x06004DFA RID: 19962 RVA: 0x001F7904 File Offset: 0x001F5B04
 		public string MpcData
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060048B4 RID: 18612 RVA: 0x001D810F File Offset: 0x001D630F
+		// Token: 0x06004DFB RID: 19963 RVA: 0x001F793B File Offset: 0x001F5B3B
 		public Span<byte> GetMpcDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060048B5 RID: 18613 RVA: 0x001D811E File Offset: 0x001D631E
+		// Token: 0x06004DFC RID: 19964 RVA: 0x001F794A File Offset: 0x001F5B4A
 		public byte[] GetMpcDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004AEA RID: 19178
+		// Token: 0x040050C4 RID: 20676
 		private Table __p;
 	}
 }

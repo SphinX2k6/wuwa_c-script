@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075C6 RID: 30150
+	// Token: 0x02007DBF RID: 32191
 	public class IVisualNovelPerformanceSwitchAudioStateT
 	{
-		// Token: 0x1700E4FC RID: 58620
-		// (get) Token: 0x06036E92 RID: 224914 RVA: 0x0077412F File Offset: 0x0077232F
-		// (set) Token: 0x06036E93 RID: 224915 RVA: 0x00774137 File Offset: 0x00772337
+		// Token: 0x1700F129 RID: 61737
+		// (get) Token: 0x0603A2C1 RID: 238273 RVA: 0x007D78B7 File Offset: 0x007D5AB7
+		// (set) Token: 0x0603A2C2 RID: 238274 RVA: 0x007D78BF File Offset: 0x007D5ABF
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E4FD RID: 58621
-		// (get) Token: 0x06036E94 RID: 224916 RVA: 0x00774140 File Offset: 0x00772340
-		// (set) Token: 0x06036E95 RID: 224917 RVA: 0x00774148 File Offset: 0x00772348
+		// Token: 0x1700F12A RID: 61738
+		// (get) Token: 0x0603A2C3 RID: 238275 RVA: 0x007D78C8 File Offset: 0x007D5AC8
+		// (set) Token: 0x0603A2C4 RID: 238276 RVA: 0x007D78D0 File Offset: 0x007D5AD0
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E4FE RID: 58622
-		// (get) Token: 0x06036E96 RID: 224918 RVA: 0x00774151 File Offset: 0x00772351
-		// (set) Token: 0x06036E97 RID: 224919 RVA: 0x00774159 File Offset: 0x00772359
+		// Token: 0x1700F12B RID: 61739
+		// (get) Token: 0x0603A2C5 RID: 238277 RVA: 0x007D78D9 File Offset: 0x007D5AD9
+		// (set) Token: 0x0603A2C6 RID: 238278 RVA: 0x007D78E1 File Offset: 0x007D5AE1
 		public IAudioStateT AudioState { get; set; }
 
-		// Token: 0x1700E4FF RID: 58623
-		// (get) Token: 0x06036E98 RID: 224920 RVA: 0x00774162 File Offset: 0x00772362
-		// (set) Token: 0x06036E99 RID: 224921 RVA: 0x0077416A File Offset: 0x0077236A
+		// Token: 0x1700F12C RID: 61740
+		// (get) Token: 0x0603A2C7 RID: 238279 RVA: 0x007D78EA File Offset: 0x007D5AEA
+		// (set) Token: 0x0603A2C8 RID: 238280 RVA: 0x007D78F2 File Offset: 0x007D5AF2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036E9A RID: 224922 RVA: 0x00774173 File Offset: 0x00772373
+		// Token: 0x0603A2C9 RID: 238281 RVA: 0x007D78FB File Offset: 0x007D5AFB
 		public IVisualNovelPerformanceSwitchAudioStateT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002D7B RID: 11643
+// Token: 0x020022D5 RID: 8917
 public class InstanceTipGridData : IInstanceTipGridData
 {
-	// Token: 0x17002119 RID: 8473
-	// (get) Token: 0x060187A6 RID: 100262 RVA: 0x0063A9FA File Offset: 0x00638BFA
-	// (set) Token: 0x060187A7 RID: 100263 RVA: 0x0063AA02 File Offset: 0x00638C02
+	// Token: 0x17002174 RID: 8564
+	// (get) Token: 0x06016048 RID: 90184 RVA: 0x00660A12 File Offset: 0x0065EC12
+	// (set) Token: 0x06016049 RID: 90185 RVA: 0x00660A1A File Offset: 0x0065EC1A
 	public int InstanceId { get; set; }
 
-	// Token: 0x1700211A RID: 8474
-	// (get) Token: 0x060187A8 RID: 100264 RVA: 0x0063AA0B File Offset: 0x00638C0B
-	// (set) Token: 0x060187A9 RID: 100265 RVA: 0x0063AA13 File Offset: 0x00638C13
+	// Token: 0x17002175 RID: 8565
+	// (get) Token: 0x0601604A RID: 90186 RVA: 0x00660A23 File Offset: 0x0065EC23
+	// (set) Token: 0x0601604B RID: 90187 RVA: 0x00660A2B File Offset: 0x0065EC2B
 	public bool IsDouble { get; set; }
 }

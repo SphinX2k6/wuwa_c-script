@@ -1,50 +1,50 @@
 ﻿using System;
 
-// Token: 0x020028D3 RID: 10451
+// Token: 0x02001E4E RID: 7758
 public interface IRoleSystemUiParams
 {
-	// Token: 0x17001CDD RID: 7389
-	// (get) Token: 0x0601591E RID: 88350
-	// (set) Token: 0x0601591F RID: 88351
+	// Token: 0x17001D35 RID: 7477
+	// (get) Token: 0x0601331E RID: 78622
+	// (set) Token: 0x0601331F RID: 78623
 	bool RoleListButton { get; set; }
 
-	// Token: 0x17001CDE RID: 7390
-	// (get) Token: 0x06015920 RID: 88352
-	// (set) Token: 0x06015921 RID: 88353
+	// Token: 0x17001D36 RID: 7478
+	// (get) Token: 0x06013320 RID: 78624
+	// (set) Token: 0x06013321 RID: 78625
 	bool RoleListButtonRedDot { get; set; }
 
-	// Token: 0x17001CDF RID: 7391
-	// (get) Token: 0x06015922 RID: 88354
-	// (set) Token: 0x06015923 RID: 88355
+	// Token: 0x17001D37 RID: 7479
+	// (get) Token: 0x06013322 RID: 78626
+	// (set) Token: 0x06013323 RID: 78627
 	bool RoleList { get; set; }
 
-	// Token: 0x17001CE0 RID: 7392
-	// (get) Token: 0x06015924 RID: 88356
-	// (set) Token: 0x06015925 RID: 88357
+	// Token: 0x17001D38 RID: 7480
+	// (get) Token: 0x06013324 RID: 78628
+	// (set) Token: 0x06013325 RID: 78629
 	bool RoleListNeedTrial { get; set; }
 
-	// Token: 0x17001CE1 RID: 7393
-	// (get) Token: 0x06015926 RID: 88358
-	// (set) Token: 0x06015927 RID: 88359
+	// Token: 0x17001D39 RID: 7481
+	// (get) Token: 0x06013326 RID: 78630
+	// (set) Token: 0x06013327 RID: 78631
 	bool RoleListRedDot { get; set; }
 
-	// Token: 0x17001CE2 RID: 7394
-	// (get) Token: 0x06015928 RID: 88360
-	// (set) Token: 0x06015929 RID: 88361
+	// Token: 0x17001D3A RID: 7482
+	// (get) Token: 0x06013328 RID: 78632
+	// (set) Token: 0x06013329 RID: 78633
 	bool TabRedDot { get; set; }
 
-	// Token: 0x17001CE3 RID: 7395
-	// (get) Token: 0x0601592A RID: 88362
-	// (set) Token: 0x0601592B RID: 88363
+	// Token: 0x17001D3B RID: 7483
+	// (get) Token: 0x0601332A RID: 78634
+	// (set) Token: 0x0601332B RID: 78635
 	bool TeachBtn { get; set; }
 
-	// Token: 0x17001CE4 RID: 7396
-	// (get) Token: 0x0601592C RID: 88364
-	// (set) Token: 0x0601592D RID: 88365
+	// Token: 0x17001D3C RID: 7484
+	// (get) Token: 0x0601332C RID: 78636
+	// (set) Token: 0x0601332D RID: 78637
 	bool SwitchSkin { get; set; }
 
-	// Token: 0x17001CE5 RID: 7397
-	// (get) Token: 0x0601592E RID: 88366
-	// (set) Token: 0x0601592F RID: 88367
+	// Token: 0x17001D3D RID: 7485
+	// (get) Token: 0x0601332E RID: 78638
+	// (set) Token: 0x0601332F RID: 78639
 	bool BackgroundMusicSwitch { get; set; }
 }

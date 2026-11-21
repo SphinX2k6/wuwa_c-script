@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200274B RID: 10059
+// Token: 0x02001C36 RID: 7222
 public enum EReConnectStatus
 {
-	// Token: 0x04009AFF RID: 39679
+	// Token: 0x04009C58 RID: 40024
 	NoReConnect,
-	// Token: 0x04009B00 RID: 39680
+	// Token: 0x04009C59 RID: 40025
 	ReConnectDoing
 }

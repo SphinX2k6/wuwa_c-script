@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006077 RID: 24695
+	// Token: 0x020066D9 RID: 26329
 	public enum IActionContextType_Union : byte
 	{
-		// Token: 0x0401023F RID: 66111
+		// Token: 0x04011034 RID: 69684
 		NONE,
-		// Token: 0x04010240 RID: 66112
+		// Token: 0x04011035 RID: 69685
 		IActionContextType,
-		// Token: 0x04010241 RID: 66113
+		// Token: 0x04011036 RID: 69686
 		IEntityActionContext,
-		// Token: 0x04010242 RID: 66114
+		// Token: 0x04011037 RID: 69687
 		IFlowActionContext,
-		// Token: 0x04010243 RID: 66115
+		// Token: 0x04011038 RID: 69688
 		ILevelPlayActionContext,
-		// Token: 0x04010244 RID: 66116
+		// Token: 0x04011039 RID: 69689
 		ICommonBtActionContext,
-		// Token: 0x04010245 RID: 66117
+		// Token: 0x0401103A RID: 69690
 		IQuestActionContext,
-		// Token: 0x04010246 RID: 66118
+		// Token: 0x0401103B RID: 69691
 		IGmActionContext,
-		// Token: 0x04010247 RID: 66119
+		// Token: 0x0401103C RID: 69692
 		IToolEditorActionContext,
-		// Token: 0x04010248 RID: 66120
+		// Token: 0x0401103D RID: 69693
 		ICsvActionContext
 	}
 }

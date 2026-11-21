@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AC7 RID: 10951
+// Token: 0x02002043 RID: 8259
 public class SurvivorsRogueCardCostItem : SurvivorsRogueCardComponent
 {
-	// Token: 0x06016CAD RID: 93357 RVA: 0x005C9AD5 File Offset: 0x005C7CD5
+	// Token: 0x060146DE RID: 83678 RVA: 0x005F6629 File Offset: 0x005F4829
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,20 +16,20 @@ public class SurvivorsRogueCardCostItem : SurvivorsRogueCardComponent
 		};
 	}
 
-	// Token: 0x06016CAE RID: 93358 RVA: 0x005C9B0E File Offset: 0x005C7D0E
+	// Token: 0x060146DF RID: 83679 RVA: 0x005F6662 File Offset: 0x005F4862
 	[NullableContext(2)]
 	protected override string OnGetResourceId()
 	{
 		return "UiItem_SurvivorsCardCost";
 	}
 
-	// Token: 0x06016CAF RID: 93359 RVA: 0x005C9B15 File Offset: 0x005C7D15
+	// Token: 0x060146E0 RID: 83680 RVA: 0x005F6669 File Offset: 0x005F4869
 	public override ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Bottom;
 	}
 
-	// Token: 0x06016CB0 RID: 93360 RVA: 0x005C9B18 File Offset: 0x005C7D18
+	// Token: 0x060146E1 RID: 83681 RVA: 0x005F666C File Offset: 0x005F486C
 	protected override void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -48,13 +48,13 @@ public class SurvivorsRogueCardCostItem : SurvivorsRogueCardComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x06016CB1 RID: 93361 RVA: 0x005C9BA0 File Offset: 0x005C7DA0
+	// Token: 0x060146E2 RID: 83682 RVA: 0x005F66F4 File Offset: 0x005F48F4
 	public void SetCostItem(int costItemId)
 	{
 		base.SetItemIcon(base.GetTexture(0), costItemId, null, null);
 	}
 
-	// Token: 0x06016CB2 RID: 93362 RVA: 0x005C9BC8 File Offset: 0x005C7DC8
+	// Token: 0x060146E3 RID: 83683 RVA: 0x005F671C File Offset: 0x005F491C
 	public void SetCost(int cost, bool useChangeColor)
 	{
 		UUIText text = base.GetText(1);

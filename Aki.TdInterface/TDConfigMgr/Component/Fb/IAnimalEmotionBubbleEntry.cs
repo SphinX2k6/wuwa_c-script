@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C26 RID: 3110
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CF9 RID: 3321
 	public class IAnimalEmotionBubbleEntry
 	{
-		// Token: 0x0600473D RID: 18237 RVA: 0x000B3625 File Offset: 0x000B1825
+		// Token: 0x06004BAC RID: 19372 RVA: 0x000BD95D File Offset: 0x000BBB5D
 		public static IAnimalEmotionBubbleEntry Create(IAnimalEmotionBubbleEntry? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014AE RID: 5294
-		// (get) Token: 0x0600473E RID: 18238 RVA: 0x000B3644 File Offset: 0x000B1844
+		// Token: 0x170015B5 RID: 5557
+		// (get) Token: 0x06004BAD RID: 19373 RVA: 0x000BD97C File Offset: 0x000BBB7C
 		public virtual string MontagePath
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014AF RID: 5295
-		// (get) Token: 0x0600473F RID: 18239 RVA: 0x000B3651 File Offset: 0x000B1851
+		// Token: 0x170015B6 RID: 5558
+		// (get) Token: 0x06004BAE RID: 19374 RVA: 0x000BD989 File Offset: 0x000BBB89
 		public virtual string EmotionName
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002871 RID: 10353
+		// Token: 0x04002AC4 RID: 10948
 		private IAnimalEmotionBubbleEntry Instance;
 	}
 }

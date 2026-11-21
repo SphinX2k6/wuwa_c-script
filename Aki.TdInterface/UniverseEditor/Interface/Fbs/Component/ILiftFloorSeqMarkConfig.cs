@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005503 RID: 21763
+	// Token: 0x02005A89 RID: 23177
 	public struct ILiftFloorSeqMarkConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A0AD RID: 41133
-		// (get) Token: 0x06023F07 RID: 147207 RVA: 0x004F7ECD File Offset: 0x004F60CD
+		// Token: 0x1700A8E7 RID: 43239
+		// (get) Token: 0x06025FC1 RID: 155585 RVA: 0x00534FF1 File Offset: 0x005331F1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F08 RID: 147208 RVA: 0x004F7EDA File Offset: 0x004F60DA
+		// Token: 0x06025FC2 RID: 155586 RVA: 0x00534FFE File Offset: 0x005331FE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023F09 RID: 147209 RVA: 0x004F7EE4 File Offset: 0x004F60E4
+		// Token: 0x06025FC3 RID: 155587 RVA: 0x00535008 File Offset: 0x00533208
 		public static ILiftFloorSeqMarkConfig GetRootAsILiftFloorSeqMarkConfig(ByteBuffer _bb)
 		{
 			return ILiftFloorSeqMarkConfig.GetRootAsILiftFloorSeqMarkConfig(_bb, default(ILiftFloorSeqMarkConfig));
 		}
 
-		// Token: 0x06023F0A RID: 147210 RVA: 0x004F7F00 File Offset: 0x004F6100
+		// Token: 0x06025FC4 RID: 155588 RVA: 0x00535024 File Offset: 0x00533224
 		public static ILiftFloorSeqMarkConfig GetRootAsILiftFloorSeqMarkConfig(ByteBuffer _bb, ILiftFloorSeqMarkConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023F0B RID: 147211 RVA: 0x004F7F1D File Offset: 0x004F611D
+		// Token: 0x06025FC5 RID: 155589 RVA: 0x00535041 File Offset: 0x00533241
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023F0C RID: 147212 RVA: 0x004F7F2C File Offset: 0x004F612C
+		// Token: 0x06025FC6 RID: 155590 RVA: 0x00535050 File Offset: 0x00533250
 		public ILiftFloorSeqMarkConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A0AE RID: 41134
-		// (get) Token: 0x06023F0D RID: 147213 RVA: 0x004F7F3C File Offset: 0x004F613C
+		// Token: 0x1700A8E8 RID: 43240
+		// (get) Token: 0x06025FC7 RID: 155591 RVA: 0x00535060 File Offset: 0x00533260
 		public string SequencePath
 		{
 			get
@@ -63,19 +63,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F0E RID: 147214 RVA: 0x004F7F73 File Offset: 0x004F6173
+		// Token: 0x06025FC8 RID: 155592 RVA: 0x00535097 File Offset: 0x00533297
 		public Span<byte> GetSequencePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06023F0F RID: 147215 RVA: 0x004F7F82 File Offset: 0x004F6182
+		// Token: 0x06025FC9 RID: 155593 RVA: 0x005350A6 File Offset: 0x005332A6
 		public byte[] GetSequencePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06023F10 RID: 147216 RVA: 0x004F7F90 File Offset: 0x004F6190
+		// Token: 0x06025FCA RID: 155594 RVA: 0x005350B4 File Offset: 0x005332B4
 		public ILiftFloorSeqMark? FloorMarks(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -86,8 +86,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ILiftFloorSeqMark?(default(ILiftFloorSeqMark).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A0AF RID: 41135
-		// (get) Token: 0x06023F11 RID: 147217 RVA: 0x004F7FF0 File Offset: 0x004F61F0
+		// Token: 0x1700A8E9 RID: 43241
+		// (get) Token: 0x06025FCB RID: 155595 RVA: 0x00535114 File Offset: 0x00533314
 		public int FloorMarksLength
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F12 RID: 147218 RVA: 0x004F801B File Offset: 0x004F621B
+		// Token: 0x06025FCC RID: 155596 RVA: 0x0053513F File Offset: 0x0053333F
 		public static Offset<ILiftFloorSeqMarkConfig> CreateILiftFloorSeqMarkConfig(FlatBufferBuilder builder, StringOffset SequencePathOffset = default(StringOffset), VectorOffset FloorMarksOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILiftFloorSeqMarkConfig.EndILiftFloorSeqMarkConfig(builder);
 		}
 
-		// Token: 0x06023F13 RID: 147219 RVA: 0x004F8038 File Offset: 0x004F6238
+		// Token: 0x06025FCD RID: 155597 RVA: 0x0053515C File Offset: 0x0053335C
 		public static void StartILiftFloorSeqMarkConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06023F14 RID: 147220 RVA: 0x004F8041 File Offset: 0x004F6241
+		// Token: 0x06025FCE RID: 155598 RVA: 0x00535165 File Offset: 0x00533365
 		public static void AddSequencePath(FlatBufferBuilder builder, StringOffset sequencePathOffset)
 		{
 			builder.AddOffset(0, sequencePathOffset.Value, 0);
 		}
 
-		// Token: 0x06023F15 RID: 147221 RVA: 0x004F8051 File Offset: 0x004F6251
+		// Token: 0x06025FCF RID: 155599 RVA: 0x00535175 File Offset: 0x00533375
 		public static void AddFloorMarks(FlatBufferBuilder builder, VectorOffset floorMarksOffset)
 		{
 			builder.AddOffset(1, floorMarksOffset.Value, 0);
 		}
 
-		// Token: 0x06023F16 RID: 147222 RVA: 0x004F8064 File Offset: 0x004F6264
+		// Token: 0x06025FD0 RID: 155600 RVA: 0x00535188 File Offset: 0x00533388
 		public static VectorOffset CreateFloorMarksVector(FlatBufferBuilder builder, Offset<ILiftFloorSeqMark>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023F17 RID: 147223 RVA: 0x004F80A4 File Offset: 0x004F62A4
+		// Token: 0x06025FD1 RID: 155601 RVA: 0x005351C8 File Offset: 0x005333C8
 		public static VectorOffset CreateFloorMarksVectorBlock(FlatBufferBuilder builder, Offset<ILiftFloorSeqMark>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023F18 RID: 147224 RVA: 0x004F80BE File Offset: 0x004F62BE
+		// Token: 0x06025FD2 RID: 155602 RVA: 0x005351E2 File Offset: 0x005333E2
 		public static VectorOffset CreateFloorMarksVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ILiftFloorSeqMark>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023F19 RID: 147225 RVA: 0x004F80DC File Offset: 0x004F62DC
+		// Token: 0x06025FD3 RID: 155603 RVA: 0x00535200 File Offset: 0x00533400
 		public static VectorOffset CreateFloorMarksVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,19 +163,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023F1A RID: 147226 RVA: 0x004F80F5 File Offset: 0x004F62F5
+		// Token: 0x06025FD4 RID: 155604 RVA: 0x00535219 File Offset: 0x00533419
 		public static void StartFloorMarksVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06023F1B RID: 147227 RVA: 0x004F8100 File Offset: 0x004F6300
+		// Token: 0x06025FD5 RID: 155605 RVA: 0x00535224 File Offset: 0x00533424
 		public static Offset<ILiftFloorSeqMarkConfig> EndILiftFloorSeqMarkConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ILiftFloorSeqMarkConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06023F1C RID: 147228 RVA: 0x004F8110 File Offset: 0x004F6310
+		// Token: 0x06025FD6 RID: 155606 RVA: 0x00535234 File Offset: 0x00533434
 		public ILiftFloorSeqMarkConfigT UnPack()
 		{
 			ILiftFloorSeqMarkConfigT liftFloorSeqMarkConfigT = new ILiftFloorSeqMarkConfigT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return liftFloorSeqMarkConfigT;
 		}
 
-		// Token: 0x06023F1D RID: 147229 RVA: 0x004F812C File Offset: 0x004F632C
+		// Token: 0x06025FD7 RID: 155607 RVA: 0x00535250 File Offset: 0x00533450
 		public void UnPackTo(ILiftFloorSeqMarkConfigT _o)
 		{
 			_o.SequencePath = this.SequencePath;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F1E RID: 147230 RVA: 0x004F8198 File Offset: 0x004F6398
+		// Token: 0x06025FD8 RID: 155608 RVA: 0x005352BC File Offset: 0x005334BC
 		public static Offset<ILiftFloorSeqMarkConfig> Pack(FlatBufferBuilder builder, ILiftFloorSeqMarkConfigT _o)
 		{
 			if (_o == null)
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILiftFloorSeqMarkConfig.CreateILiftFloorSeqMarkConfig(builder, sequencePathOffset, floorMarksOffset);
 		}
 
-		// Token: 0x0400E7F2 RID: 59378
+		// Token: 0x0400F423 RID: 62499
 		private Table __p;
 	}
 }

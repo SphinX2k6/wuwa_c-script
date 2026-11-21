@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.ItemDeliver
 {
-	// Token: 0x02005816 RID: 22550
+	// Token: 0x020047ED RID: 18413
 	public enum EDeliverType
 	{
-		// Token: 0x0401DF7E RID: 122750
+		// Token: 0x04018A15 RID: 100885
 		Default,
-		// Token: 0x0401DF7F RID: 122751
+		// Token: 0x04018A16 RID: 100886
 		ArbitraryDeliver,
-		// Token: 0x0401DF80 RID: 122752
+		// Token: 0x04018A17 RID: 100887
 		DesignatedDeliver
 	}
 }

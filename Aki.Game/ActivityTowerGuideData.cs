@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001527 RID: 5415
+// Token: 0x020009DF RID: 2527
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityTowerGuideData : ActivityBaseData
 {
-	// Token: 0x06009A84 RID: 39556 RVA: 0x00216FF8 File Offset: 0x002151F8
+	// Token: 0x06006E62 RID: 28258 RVA: 0x00220D94 File Offset: 0x0021EF94
 	protected override void PhraseEx(ActivityData data)
 	{
 		ActivityTowerGuideController.Instance.SetCurrentActivityId(base.Id);
@@ -28,7 +28,7 @@ public class ActivityTowerGuideData : ActivityBaseData
 		this.MapMarkId = towerGuideById.Value.MapMark;
 	}
 
-	// Token: 0x06009A85 RID: 39557 RVA: 0x00217084 File Offset: 0x00215284
+	// Token: 0x06006E63 RID: 28259 RVA: 0x00220E20 File Offset: 0x0021F020
 	public override bool GetExDataRedPointShowState()
 	{
 		for (int i = 0; i < this.TowerDifficultIdList.Length; i++)
@@ -41,7 +41,7 @@ public class ActivityTowerGuideData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009A86 RID: 39558 RVA: 0x002170B8 File Offset: 0x002152B8
+	// Token: 0x06006E64 RID: 28260 RVA: 0x00220E54 File Offset: 0x0021F054
 	protected override bool GetExDataFinishShowState()
 	{
 		for (int i = 0; i < this.TowerDifficultIdList.Length; i++)
@@ -54,7 +54,7 @@ public class ActivityTowerGuideData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x06009A87 RID: 39559 RVA: 0x002170EC File Offset: 0x002152EC
+	// Token: 0x06006E65 RID: 28261 RVA: 0x00220E88 File Offset: 0x0021F088
 	public ETowerGuideViewState GetViewState()
 	{
 		if (!base.IsUnLock())
@@ -77,14 +77,14 @@ public class ActivityTowerGuideData : ActivityBaseData
 		return ETowerGuideViewState.Finished;
 	}
 
-	// Token: 0x06009A88 RID: 39560 RVA: 0x00217133 File Offset: 0x00215333
+	// Token: 0x06006E66 RID: 28262 RVA: 0x00220ECF File Offset: 0x0021F0CF
 	public void SetRewardClaimed(int id, bool isClaimed)
 	{
 		this.TowerRewardClaimed[id] = isClaimed;
 		this.RefreshRewardState((ETowerDifficultId)id);
 	}
 
-	// Token: 0x06009A89 RID: 39561 RVA: 0x0021714C File Offset: 0x0021534C
+	// Token: 0x06006E67 RID: 28263 RVA: 0x00220EE8 File Offset: 0x0021F0E8
 	public void RefreshRewardState(ETowerDifficultId id)
 	{
 		ETowerProgressState rewardState = this.GetRewardState(id);
@@ -92,7 +92,7 @@ public class ActivityTowerGuideData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009A8A RID: 39562 RVA: 0x00217184 File Offset: 0x00215384
+	// Token: 0x06006E68 RID: 28264 RVA: 0x00220F20 File Offset: 0x0021F120
 	private ETowerProgressState GetRewardState(ETowerDifficultId id)
 	{
 		if (!base.IsUnLock())
@@ -111,14 +111,14 @@ public class ActivityTowerGuideData : ActivityBaseData
 		return ETowerProgressState.FinishedAndUnClaimed;
 	}
 
-	// Token: 0x06009A8B RID: 39563 RVA: 0x002171BF File Offset: 0x002153BF
+	// Token: 0x06006E69 RID: 28265 RVA: 0x00220F5B File Offset: 0x0021F15B
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetTowerProgress(ETowerDifficultId id)
 	{
 		return TowerModel.Instance.GetDifficultyProgress((int)id);
 	}
 
-	// Token: 0x06009A8C RID: 39564 RVA: 0x002171CC File Offset: 0x002153CC
+	// Token: 0x06006E6A RID: 28266 RVA: 0x00220F68 File Offset: 0x0021F168
 	public ETowerProgressState GetTowerProgressState(int id)
 	{
 		ETowerProgressState result;
@@ -129,29 +129,29 @@ public class ActivityTowerGuideData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06009A8D RID: 39565 RVA: 0x002171EC File Offset: 0x002153EC
+	// Token: 0x06006E6B RID: 28267 RVA: 0x00220F88 File Offset: 0x0021F188
 	[NullableContext(2)]
 	public RoleDataBase GetTrialRoleData()
 	{
 		return RoleModel.Instance.GetRoleDataById(this.TrialRoleId, true);
 	}
 
-	// Token: 0x040043F6 RID: 17398
+	// Token: 0x0400449C RID: 17564
 	public int[] TowerDifficultIdList = new int[]
 	{
 		1,
 		2
 	};
 
-	// Token: 0x040043F7 RID: 17399
+	// Token: 0x0400449D RID: 17565
 	private readonly Dictionary<int, ETowerProgressState> TowerRewardMap = new Dictionary<int, ETowerProgressState>();
 
-	// Token: 0x040043F8 RID: 17400
+	// Token: 0x0400449E RID: 17566
 	private readonly Dictionary<int, bool> TowerRewardClaimed = new Dictionary<int, bool>();
 
-	// Token: 0x040043F9 RID: 17401
+	// Token: 0x0400449F RID: 17567
 	public int TrialRoleId;
 
-	// Token: 0x040043FA RID: 17402
+	// Token: 0x040044A0 RID: 17568
 	public int MapMarkId;
 }

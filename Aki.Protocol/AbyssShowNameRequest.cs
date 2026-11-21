@@ -11,7 +11,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssShowNameRequest)]
 	public sealed class AbyssShowNameRequest : IMessage<AbyssShowNameRequest>, IMessage, IEquatable<AbyssShowNameRequest>, IDeepCloneable<AbyssShowNameRequest>, IBufferMessage
 	{
-		// Token: 0x06001454 RID: 5204 RVA: 0x000367B9 File Offset: 0x000349B9
+		// Token: 0x0600147F RID: 5247 RVA: 0x00036D71 File Offset: 0x00034F71
 		[NullableContext(1)]
 		public static AbyssShowNameRequest Create()
 		{
@@ -19,7 +19,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000125 RID: 293
-		// (get) Token: 0x06001455 RID: 5205 RVA: 0x000367C0 File Offset: 0x000349C0
+		// (get) Token: 0x06001480 RID: 5248 RVA: 0x00036D78 File Offset: 0x00034F78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,7 +31,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000126 RID: 294
-		// (get) Token: 0x06001456 RID: 5206 RVA: 0x000367C3 File Offset: 0x000349C3
+		// (get) Token: 0x06001481 RID: 5249 RVA: 0x00036D7B File Offset: 0x00034F7B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001457 RID: 5207 RVA: 0x000367CA File Offset: 0x000349CA
+		// Token: 0x06001482 RID: 5250 RVA: 0x00036D82 File Offset: 0x00034F82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssShowNameRequest()
 		{
 		}
 
-		// Token: 0x06001458 RID: 5208 RVA: 0x000367D2 File Offset: 0x000349D2
+		// Token: 0x06001483 RID: 5251 RVA: 0x00036D8A File Offset: 0x00034F8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssShowNameRequest(AbyssShowNameRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001459 RID: 5209 RVA: 0x00036803 File Offset: 0x00034A03
+		// Token: 0x06001484 RID: 5252 RVA: 0x00036DBB File Offset: 0x00034FBB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssShowNameRequest Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000127 RID: 295
-		// (get) Token: 0x0600145A RID: 5210 RVA: 0x0003680B File Offset: 0x00034A0B
-		// (set) Token: 0x0600145B RID: 5211 RVA: 0x00036813 File Offset: 0x00034A13
+		// (get) Token: 0x06001485 RID: 5253 RVA: 0x00036DC3 File Offset: 0x00034FC3
+		// (set) Token: 0x06001486 RID: 5254 RVA: 0x00036DCB File Offset: 0x00034FCB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000128 RID: 296
-		// (get) Token: 0x0600145C RID: 5212 RVA: 0x0003681C File Offset: 0x00034A1C
-		// (set) Token: 0x0600145D RID: 5213 RVA: 0x00036824 File Offset: 0x00034A24
+		// (get) Token: 0x06001487 RID: 5255 RVA: 0x00036DD4 File Offset: 0x00034FD4
+		// (set) Token: 0x06001488 RID: 5256 RVA: 0x00036DDC File Offset: 0x00034FDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool ShowName
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600145E RID: 5214 RVA: 0x0003682D File Offset: 0x00034A2D
+		// Token: 0x06001489 RID: 5257 RVA: 0x00036DE5 File Offset: 0x00034FE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssShowNameRequest);
 		}
 
-		// Token: 0x0600145F RID: 5215 RVA: 0x0003683B File Offset: 0x00034A3B
+		// Token: 0x0600148A RID: 5258 RVA: 0x00036DF3 File Offset: 0x00034FF3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssShowNameRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeId == other.ChallengeId && this.ShowName == other.ShowName && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001460 RID: 5216 RVA: 0x0003687C File Offset: 0x00034A7C
+		// Token: 0x0600148B RID: 5259 RVA: 0x00036E34 File Offset: 0x00035034
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001461 RID: 5217 RVA: 0x000368D4 File Offset: 0x00034AD4
+		// Token: 0x0600148C RID: 5260 RVA: 0x00036E8C File Offset: 0x0003508C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06001462 RID: 5218 RVA: 0x000368E1 File Offset: 0x00034AE1
+		// Token: 0x0600148D RID: 5261 RVA: 0x00036E99 File Offset: 0x00035099
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06001463 RID: 5219 RVA: 0x000368EC File Offset: 0x00034AEC
+		// Token: 0x0600148E RID: 5262 RVA: 0x00036EA4 File Offset: 0x000350A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ChallengeId != 0)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.ChallengeId);
-			}
 			if (this.ShowName)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(16);
 				output.WriteBool(this.ShowName);
+			}
+			if (this.ChallengeId != 0)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.ChallengeId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001464 RID: 5220 RVA: 0x00036948 File Offset: 0x00034B48
+		// Token: 0x0600148F RID: 5263 RVA: 0x00036F00 File Offset: 0x00035100
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06001465 RID: 5221 RVA: 0x00036994 File Offset: 0x00034B94
+		// Token: 0x06001490 RID: 5264 RVA: 0x00036F4C File Offset: 0x0003514C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssShowNameRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06001466 RID: 5222 RVA: 0x000369E4 File Offset: 0x00034BE4
+		// Token: 0x06001491 RID: 5265 RVA: 0x00036F9C File Offset: 0x0003519C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001467 RID: 5223 RVA: 0x000369F0 File Offset: 0x00034BF0
+		// Token: 0x06001492 RID: 5266 RVA: 0x00036FA8 File Offset: 0x000351A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U)
+				if (num != 16U)
 				{
-					if (num != 120U)
+					if (num != 112U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.ShowName = input.ReadBool();
+						this.ChallengeId = input.ReadInt32();
 					}
 				}
 				else
 				{
-					this.ChallengeId = input.ReadInt32();
+					this.ShowName = input.ReadBool();
 				}
 			}
 		}
 
-		// Token: 0x0400204E RID: 8270
+		// Token: 0x040020A4 RID: 8356
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400204F RID: 8271
-		public const int ChallengeIdFieldNumber = 5;
+		// Token: 0x040020A5 RID: 8357
+		public const int ChallengeIdFieldNumber = 14;
 
-		// Token: 0x04002050 RID: 8272
+		// Token: 0x040020A6 RID: 8358
 		private int challengeId_;
 
-		// Token: 0x04002051 RID: 8273
-		public const int ShowNameFieldNumber = 15;
+		// Token: 0x040020A7 RID: 8359
+		public const int ShowNameFieldNumber = 2;
 
-		// Token: 0x04002052 RID: 8274
+		// Token: 0x040020A8 RID: 8360
 		private bool showName_;
 	}
 }

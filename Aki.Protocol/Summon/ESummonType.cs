@@ -3,26 +3,29 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Summon
 {
-	// Token: 0x0200167C RID: 5756
+	// Token: 0x020016F8 RID: 5880
 	public enum ESummonType
 	{
-		// Token: 0x0400C1F2 RID: 49650
+		// Token: 0x0400C71D RID: 50973
 		[OriginalName("ESummonTypeDefault")]
 		Default,
-		// Token: 0x0400C1F3 RID: 49651
+		// Token: 0x0400C71E RID: 50974
 		[OriginalName("ESummonTypeConcomitantVision")]
 		ConcomitantVision,
-		// Token: 0x0400C1F4 RID: 49652
+		// Token: 0x0400C71F RID: 50975
 		[OriginalName("ESummonTypeConcomitantCustom")]
 		ConcomitantCustom,
-		// Token: 0x0400C1F5 RID: 49653
+		// Token: 0x0400C720 RID: 50976
 		[OriginalName("ESummonTypeConcomitantPhantomRole")]
 		ConcomitantPhantomRole,
-		// Token: 0x0400C1F6 RID: 49654
+		// Token: 0x0400C721 RID: 50977
 		[OriginalName("ESummonTypeConcomitantWeakVision")]
 		ConcomitantWeakVision,
-		// Token: 0x0400C1F7 RID: 49655
+		// Token: 0x0400C722 RID: 50978
 		[OriginalName("ESummonTypeConcomitantMotorcycle")]
-		ConcomitantMotorcycle
+		ConcomitantMotorcycle,
+		// Token: 0x0400C723 RID: 50979
+		[OriginalName("ESummonTypeConcomitantSkillAvatar")]
+		ConcomitantSkillAvatar
 	}
 }

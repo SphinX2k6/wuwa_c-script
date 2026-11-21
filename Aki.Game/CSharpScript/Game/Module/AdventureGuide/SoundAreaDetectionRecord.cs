@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EBE RID: 24254
+	// Token: 0x02004EA3 RID: 20131
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SoundAreaDetectionRecord
 	{
-		// Token: 0x0603DAFF RID: 252671 RVA: 0x00EE523E File Offset: 0x00EE343E
+		// Token: 0x06032A8F RID: 207503 RVA: 0x00E3678A File Offset: 0x00E3498A
 		[NullableContext(2)]
 		public SoundAreaDetectionRecord(ESoundAreaDataType type, DungeonDetectionRecord dungeonDetectionRecord = null, SilentAreaDetectionRecord silentAreaDetectionRecord = null)
 		{
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			this.SilentAreaDetectionRecord = silentAreaDetectionRecord;
 		}
 
-		// Token: 0x17008EBA RID: 36538
-		// (get) Token: 0x0603DB00 RID: 252672 RVA: 0x00EE5260 File Offset: 0x00EE3460
+		// Token: 0x1700628C RID: 25228
+		// (get) Token: 0x06032A90 RID: 207504 RVA: 0x00E367AC File Offset: 0x00E349AC
 		[Nullable(0)]
 		public OneOf<DungeonDetection, SilentAreaDetection>? Conf
 		{
@@ -59,8 +59,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EBB RID: 36539
-		// (get) Token: 0x0603DB01 RID: 252673 RVA: 0x00EE532C File Offset: 0x00EE352C
+		// Token: 0x1700628D RID: 25229
+		// (get) Token: 0x06032A91 RID: 207505 RVA: 0x00E36878 File Offset: 0x00E34A78
 		public string Name
 		{
 			get
@@ -84,8 +84,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EBC RID: 36540
-		// (get) Token: 0x0603DB02 RID: 252674 RVA: 0x00EE53A8 File Offset: 0x00EE35A8
+		// Token: 0x1700628E RID: 25230
+		// (get) Token: 0x06032A92 RID: 207506 RVA: 0x00E368F4 File Offset: 0x00E34AF4
 		public string BigIcon
 		{
 			get
@@ -109,8 +109,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EBD RID: 36541
-		// (get) Token: 0x0603DB03 RID: 252675 RVA: 0x00EE5424 File Offset: 0x00EE3624
+		// Token: 0x1700628F RID: 25231
+		// (get) Token: 0x06032A93 RID: 207507 RVA: 0x00E36970 File Offset: 0x00E34B70
 		public string LockBigIcon
 		{
 			get
@@ -134,8 +134,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EBE RID: 36542
-		// (get) Token: 0x0603DB04 RID: 252676 RVA: 0x00EE54A0 File Offset: 0x00EE36A0
+		// Token: 0x17006290 RID: 25232
+		// (get) Token: 0x06032A94 RID: 207508 RVA: 0x00E369EC File Offset: 0x00E34BEC
 		public string AttributesDescriptionUnlock
 		{
 			get
@@ -159,8 +159,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EBF RID: 36543
-		// (get) Token: 0x0603DB05 RID: 252677 RVA: 0x00EE551C File Offset: 0x00EE371C
+		// Token: 0x17006291 RID: 25233
+		// (get) Token: 0x06032A95 RID: 207509 RVA: 0x00E36A68 File Offset: 0x00E34C68
 		public string InstanceSubTypeDescription
 		{
 			get
@@ -184,8 +184,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC0 RID: 36544
-		// (get) Token: 0x0603DB06 RID: 252678 RVA: 0x00EE5598 File Offset: 0x00EE3798
+		// Token: 0x17006292 RID: 25234
+		// (get) Token: 0x06032A96 RID: 207510 RVA: 0x00E36AE4 File Offset: 0x00E34CE4
 		public string LeftBgSprite
 		{
 			get
@@ -209,8 +209,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC1 RID: 36545
-		// (get) Token: 0x0603DB07 RID: 252679 RVA: 0x00EE5614 File Offset: 0x00EE3814
+		// Token: 0x17006293 RID: 25235
+		// (get) Token: 0x06032A97 RID: 207511 RVA: 0x00E36B60 File Offset: 0x00E34D60
 		public string RightBgSprite
 		{
 			get
@@ -234,8 +234,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC2 RID: 36546
-		// (get) Token: 0x0603DB08 RID: 252680 RVA: 0x00EE5690 File Offset: 0x00EE3890
+		// Token: 0x17006294 RID: 25236
+		// (get) Token: 0x06032A98 RID: 207512 RVA: 0x00E36BDC File Offset: 0x00E34DDC
 		public string LeftBgTexture
 		{
 			get
@@ -259,8 +259,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC3 RID: 36547
-		// (get) Token: 0x0603DB09 RID: 252681 RVA: 0x00EE570C File Offset: 0x00EE390C
+		// Token: 0x17006295 RID: 25237
+		// (get) Token: 0x06032A99 RID: 207513 RVA: 0x00E36C58 File Offset: 0x00E34E58
 		public int DetectionTitlePanel
 		{
 			get
@@ -295,8 +295,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC4 RID: 36548
-		// (get) Token: 0x0603DB0A RID: 252682 RVA: 0x00EE5770 File Offset: 0x00EE3970
+		// Token: 0x17006296 RID: 25238
+		// (get) Token: 0x06032A9A RID: 207514 RVA: 0x00E36CBC File Offset: 0x00E34EBC
 		public int[] PhantomId
 		{
 			get
@@ -320,8 +320,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC5 RID: 36549
-		// (get) Token: 0x0603DB0B RID: 252683 RVA: 0x00EE57EC File Offset: 0x00EE39EC
+		// Token: 0x17006297 RID: 25239
+		// (get) Token: 0x06032A9B RID: 207515 RVA: 0x00E36D38 File Offset: 0x00E34F38
 		public int LockCon
 		{
 			get
@@ -356,8 +356,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC6 RID: 36550
-		// (get) Token: 0x0603DB0C RID: 252684 RVA: 0x00EE5850 File Offset: 0x00EE3A50
+		// Token: 0x17006298 RID: 25240
+		// (get) Token: 0x06032A9C RID: 207516 RVA: 0x00E36D9C File Offset: 0x00E34F9C
 		public int PeriodicityChallengeType
 		{
 			get
@@ -392,8 +392,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC7 RID: 36551
-		// (get) Token: 0x0603DB0D RID: 252685 RVA: 0x00EE58B4 File Offset: 0x00EE3AB4
+		// Token: 0x17006299 RID: 25241
+		// (get) Token: 0x06032A9D RID: 207517 RVA: 0x00E36E00 File Offset: 0x00E35000
 		public int Secondary
 		{
 			get
@@ -428,8 +428,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC8 RID: 36552
-		// (get) Token: 0x0603DB0E RID: 252686 RVA: 0x00EE5918 File Offset: 0x00EE3B18
+		// Token: 0x1700629A RID: 25242
+		// (get) Token: 0x06032A9E RID: 207518 RVA: 0x00E36E64 File Offset: 0x00E35064
 		public bool? IsLock
 		{
 			get
@@ -464,8 +464,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008EC9 RID: 36553
-		// (get) Token: 0x0603DB0F RID: 252687 RVA: 0x00EE598C File Offset: 0x00EE3B8C
+		// Token: 0x1700629B RID: 25243
+		// (get) Token: 0x06032A9F RID: 207519 RVA: 0x00E36ED8 File Offset: 0x00E350D8
 		public int Id
 		{
 			get
@@ -500,8 +500,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECA RID: 36554
-		// (get) Token: 0x0603DB10 RID: 252688 RVA: 0x00EE59F0 File Offset: 0x00EE3BF0
+		// Token: 0x1700629C RID: 25244
+		// (get) Token: 0x06032AA0 RID: 207520 RVA: 0x00E36F3C File Offset: 0x00E3513C
 		public int PreOpenId
 		{
 			get
@@ -536,8 +536,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECB RID: 36555
-		// (get) Token: 0x0603DB11 RID: 252689 RVA: 0x00EE5A54 File Offset: 0x00EE3C54
+		// Token: 0x1700629D RID: 25245
+		// (get) Token: 0x06032AA1 RID: 207521 RVA: 0x00E36FA0 File Offset: 0x00E351A0
 		public int SortId
 		{
 			get
@@ -572,8 +572,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECC RID: 36556
-		// (get) Token: 0x0603DB12 RID: 252690 RVA: 0x00EE5AB8 File Offset: 0x00EE3CB8
+		// Token: 0x1700629E RID: 25246
+		// (get) Token: 0x06032AA2 RID: 207522 RVA: 0x00E37004 File Offset: 0x00E35204
 		public Dictionary<int, int> ShowRewardMap
 		{
 			get
@@ -597,8 +597,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECD RID: 36557
-		// (get) Token: 0x0603DB13 RID: 252691 RVA: 0x00EE5B34 File Offset: 0x00EE3D34
+		// Token: 0x1700629F RID: 25247
+		// (get) Token: 0x06032AA3 RID: 207523 RVA: 0x00E37080 File Offset: 0x00E35280
 		public Dictionary<int, int> ShowRewardMapCalabash
 		{
 			get
@@ -622,8 +622,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECE RID: 36558
-		// (get) Token: 0x0603DB14 RID: 252692 RVA: 0x00EE5BB0 File Offset: 0x00EE3DB0
+		// Token: 0x170062A0 RID: 25248
+		// (get) Token: 0x06032AA4 RID: 207524 RVA: 0x00E370FC File Offset: 0x00E352FC
 		public int[] PhantomFetterGroup
 		{
 			get
@@ -647,8 +647,8 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x17008ECF RID: 36559
-		// (get) Token: 0x0603DB15 RID: 252693 RVA: 0x00EE5C2C File Offset: 0x00EE3E2C
+		// Token: 0x170062A1 RID: 25249
+		// (get) Token: 0x06032AA5 RID: 207525 RVA: 0x00E37178 File Offset: 0x00E35378
 		public int[] WeaponFetterGroup
 		{
 			get
@@ -672,27 +672,27 @@ namespace CSharpScript.Game.Module.AdventureGuide
 			}
 		}
 
-		// Token: 0x0603DB16 RID: 252694 RVA: 0x00EE5CA7 File Offset: 0x00EE3EA7
+		// Token: 0x06032AA6 RID: 207526 RVA: 0x00E371F3 File Offset: 0x00E353F3
 		public int GetTargetTowerDifficulty()
 		{
 			return AdventureDefine.periodicityChallengeTypeToTarget[(EPeriodicityChallengeType)this.PeriodicityChallengeType];
 		}
 
-		// Token: 0x0603DB17 RID: 252695 RVA: 0x00EE5CBC File Offset: 0x00EE3EBC
+		// Token: 0x06032AA7 RID: 207527 RVA: 0x00E37208 File Offset: 0x00E35408
 		public bool GetTargetTowerIsUnlock()
 		{
 			int targetTowerDifficulty = this.GetTargetTowerDifficulty();
 			return targetTowerDifficulty > 0 && (targetTowerDifficulty - 1 <= 0 || TowerModel.Instance.GetDifficultyIsClear(targetTowerDifficulty - 1));
 		}
 
-		// Token: 0x0402031F RID: 131871
+		// Token: 0x0401ADE6 RID: 110054
 		public ESoundAreaDataType? Type;
 
-		// Token: 0x04020320 RID: 131872
+		// Token: 0x0401ADE7 RID: 110055
 		[Nullable(2)]
 		public DungeonDetectionRecord DungeonDetectionRecord;
 
-		// Token: 0x04020321 RID: 131873
+		// Token: 0x0401ADE8 RID: 110056
 		[Nullable(2)]
 		public SilentAreaDetectionRecord SilentAreaDetectionRecord;
 	}

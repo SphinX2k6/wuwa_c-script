@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200230F RID: 8975
+	// Token: 0x0200257E RID: 9598
 	public static class EDynamicSettlementTypeExtensions
 	{
-		// Token: 0x0600C442 RID: 50242 RVA: 0x001CA66C File Offset: 0x001C886C
+		// Token: 0x0600D011 RID: 53265 RVA: 0x001E2534 File Offset: 0x001E0734
 		public static string ToEnumString(this EDynamicSettlementType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C443 RID: 50243 RVA: 0x001CA6A4 File Offset: 0x001C88A4
+		// Token: 0x0600D012 RID: 53266 RVA: 0x001E256C File Offset: 0x001E076C
 		public static EDynamicSettlementType FromString(string name)
 		{
 			EDynamicSettlementType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C444 RID: 50244 RVA: 0x001CA6CD File Offset: 0x001C88CD
+		// Token: 0x0600D013 RID: 53267 RVA: 0x001E2595 File Offset: 0x001E0795
 		public static bool TryFromString(string name, out EDynamicSettlementType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C445 RID: 50245 RVA: 0x001CA706 File Offset: 0x001C8906
+		// Token: 0x0600D014 RID: 53268 RVA: 0x001E25CE File Offset: 0x001E07CE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C446 RID: 50246 RVA: 0x001CA71E File Offset: 0x001C891E
+		// Token: 0x0600D015 RID: 53269 RVA: 0x001E25E6 File Offset: 0x001E07E6
 		public static EDynamicSettlementType[] GetValues()
 		{
 			return new EDynamicSettlementType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C447 RID: 50247 RVA: 0x001CA72A File Offset: 0x001C892A
+		// Token: 0x0600D016 RID: 53270 RVA: 0x001E25F2 File Offset: 0x001E07F2
 		public static string[] GetNames()
 		{
 			return new string[]

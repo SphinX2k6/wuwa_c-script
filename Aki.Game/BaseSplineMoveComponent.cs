@@ -6,13 +6,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x02003272 RID: 12914
+// Token: 0x020027E1 RID: 10209
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseSplineMoveComponent : EntityComponent
 {
-	// Token: 0x1700268C RID: 9868
-	// (get) Token: 0x0601BEE7 RID: 114407 RVA: 0x007C0587 File Offset: 0x007BE787
+	// Token: 0x17002924 RID: 10532
+	// (get) Token: 0x06019AC7 RID: 105159 RVA: 0x007E7B17 File Offset: 0x007E5D17
 	public ESplineMovePattern CurrentSplineMoveType
 	{
 		get
@@ -25,8 +25,8 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700268D RID: 9869
-	// (get) Token: 0x0601BEE8 RID: 114408 RVA: 0x007C059E File Offset: 0x007BE79E
+	// Token: 0x17002925 RID: 10533
+	// (get) Token: 0x06019AC8 RID: 105160 RVA: 0x007E7B2E File Offset: 0x007E5D2E
 	[Nullable(2)]
 	public SplineMoveParams CurrentSplineMoveParams
 	{
@@ -37,9 +37,9 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700268E RID: 9870
-	// (get) Token: 0x0601BEE9 RID: 114409 RVA: 0x007C05A6 File Offset: 0x007BE7A6
-	// (set) Token: 0x0601BEEA RID: 114410 RVA: 0x007C05AE File Offset: 0x007BE7AE
+	// Token: 0x17002926 RID: 10534
+	// (get) Token: 0x06019AC9 RID: 105161 RVA: 0x007E7B36 File Offset: 0x007E5D36
+	// (set) Token: 0x06019ACA RID: 105162 RVA: 0x007E7B3E File Offset: 0x007E5D3E
 	public bool IsPositiveMoving
 	{
 		get
@@ -57,12 +57,12 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEEB RID: 114411 RVA: 0x007C05C7 File Offset: 0x007BE7C7
+	// Token: 0x06019ACB RID: 105163 RVA: 0x007E7B57 File Offset: 0x007E5D57
 	protected virtual void OnPositiveMovingChanged()
 	{
 	}
 
-	// Token: 0x0601BEEC RID: 114412 RVA: 0x007C05CC File Offset: 0x007BE7CC
+	// Token: 0x06019ACC RID: 105164 RVA: 0x007E7B5C File Offset: 0x007E5D5C
 	protected override bool OnStart()
 	{
 		this.DisableKey = new int?(base.Disable("[SplineMoveComponent.OnStart] 默认Disable"));
@@ -72,7 +72,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BEED RID: 114413 RVA: 0x007C0634 File Offset: 0x007BE834
+	// Token: 0x06019ACD RID: 105165 RVA: 0x007E7BC4 File Offset: 0x007E5DC4
 	protected override void OnTick(float delta)
 	{
 		SplineMoveParams currentSplineMoveParams = this.CurrentSplineMoveParams;
@@ -104,7 +104,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.UpdateSplineGravity(ESplineGravityUpdateType.Update);
 	}
 
-	// Token: 0x0601BEEE RID: 114414 RVA: 0x007C070B File Offset: 0x007BE90B
+	// Token: 0x06019ACE RID: 105166 RVA: 0x007E7C9B File Offset: 0x007E5E9B
 	protected override bool OnEnd()
 	{
 		this.ClearSplineMoveParams();
@@ -112,7 +112,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BEEF RID: 114415 RVA: 0x007C0738 File Offset: 0x007BE938
+	// Token: 0x06019ACF RID: 105167 RVA: 0x007E7CC8 File Offset: 0x007E5EC8
 	protected virtual void PositionAdjust(float timeKey, float deltaSeconds)
 	{
 		ESplineMovePattern currentSplineMoveType = this.CurrentSplineMoveType;
@@ -122,7 +122,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEF0 RID: 114416 RVA: 0x007C0758 File Offset: 0x007BE958
+	// Token: 0x06019AD0 RID: 105168 RVA: 0x007E7CE8 File Offset: 0x007E5EE8
 	protected virtual void PositionAdjustCommon(float timeKey, float deltaSeconds)
 	{
 		this.TargetLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -131,7 +131,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.MoveToTargetLocation(deltaSeconds);
 	}
 
-	// Token: 0x0601BEF1 RID: 114417 RVA: 0x007C0784 File Offset: 0x007BE984
+	// Token: 0x06019AD1 RID: 105169 RVA: 0x007E7D14 File Offset: 0x007E5F14
 	protected void LimitMaxMove()
 	{
 		SplineMoveParams currentSplineMoveParamsInternal = this.CurrentSplineMoveParamsInternal;
@@ -168,7 +168,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		currentSplineMoveParamsInternal.CurrentMaxOffset = (float)Math.Max((double)currentSplineMoveParamsInternal.MaxOffsetDist, Math.Min((double)currentSplineMoveParamsInternal.CurrentMaxOffset, num));
 	}
 
-	// Token: 0x0601BEF2 RID: 114418 RVA: 0x007C0904 File Offset: 0x007BEB04
+	// Token: 0x06019AD2 RID: 105170 RVA: 0x007E7E94 File Offset: 0x007E6094
 	protected virtual void MoveToTargetLocation(float deltaSeconds)
 	{
 		if (Vector.DistSquared(this.ActorComp.ActorLocationProxy, this.TargetLocation) <= 1E-08)
@@ -178,7 +178,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.ActorComp.SetActorLocation(this.TargetLocation.ToUeVector(false), "样条移动", false);
 	}
 
-	// Token: 0x0601BEF3 RID: 114419 RVA: 0x007C0954 File Offset: 0x007BEB54
+	// Token: 0x06019AD3 RID: 105171 RVA: 0x007E7EE4 File Offset: 0x007E60E4
 	protected bool CheckAndLimitOnlyForwardMove()
 	{
 		this.ActorComp.ActorLocationProxy.Subtraction(this.LastLocation, this.TmpVector);
@@ -194,12 +194,12 @@ public class BaseSplineMoveComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BEF4 RID: 114420 RVA: 0x007C09FF File Offset: 0x007BEBFF
+	// Token: 0x06019AD4 RID: 105172 RVA: 0x007E7F8F File Offset: 0x007E618F
 	protected virtual void InputAdjust()
 	{
 	}
 
-	// Token: 0x0601BEF5 RID: 114421 RVA: 0x007C0A04 File Offset: 0x007BEC04
+	// Token: 0x06019AD5 RID: 105173 RVA: 0x007E7F94 File Offset: 0x007E6194
 	public void StartSplineMove(int id, ISplineMovePattern config, bool allowInherit = false)
 	{
 		if (!this.StartMoveConditionCheck(id, config))
@@ -212,7 +212,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.StartSplineMoveInternal(splineMoveParams);
 	}
 
-	// Token: 0x0601BEF6 RID: 114422 RVA: 0x007C0A40 File Offset: 0x007BEC40
+	// Token: 0x06019AD6 RID: 105174 RVA: 0x007E7FD0 File Offset: 0x007E61D0
 	public void InheritStartSplineMove(SplineMoveParams splineMoveParams)
 	{
 		if (!this.StartMoveConditionCheck(splineMoveParams.Id, splineMoveParams.Config))
@@ -233,7 +233,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.StartSplineMoveInternal(splineMoveParams2);
 	}
 
-	// Token: 0x0601BEF7 RID: 114423 RVA: 0x007C0AC0 File Offset: 0x007BECC0
+	// Token: 0x06019AD7 RID: 105175 RVA: 0x007E8050 File Offset: 0x007E6250
 	public void StartSplineMoveWithAutoPilotRoute(UAutopilotRoute autoPilotRoute)
 	{
 		SplineMoveParams splineMoveParams = new SplineMoveParams();
@@ -241,7 +241,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.StartSplineMoveInternal(splineMoveParams);
 	}
 
-	// Token: 0x0601BEF8 RID: 114424 RVA: 0x007C0AE8 File Offset: 0x007BECE8
+	// Token: 0x06019AD8 RID: 105176 RVA: 0x007E8078 File Offset: 0x007E6278
 	public unsafe virtual void StartSplineMoveInternal(SplineMoveParams config)
 	{
 		int id = config.Id;
@@ -264,7 +264,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0601BEF9 RID: 114425 RVA: 0x007C0BD0 File Offset: 0x007BEDD0
+	// Token: 0x06019AD9 RID: 105177 RVA: 0x007E8160 File Offset: 0x007E6360
 	public unsafe void EndSplineMove(int id)
 	{
 		if (!this.EndMoveConditionCheck(id))
@@ -289,13 +289,13 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.SelectNextSplineMove();
 	}
 
-	// Token: 0x0601BEFA RID: 114426 RVA: 0x007C0C9A File Offset: 0x007BEE9A
+	// Token: 0x06019ADA RID: 105178 RVA: 0x007E822A File Offset: 0x007E642A
 	public void EndSplineMoveForAutoPilot()
 	{
 		this.EndSplineMove(-1);
 	}
 
-	// Token: 0x0601BEFB RID: 114427 RVA: 0x007C0CA3 File Offset: 0x007BEEA3
+	// Token: 0x06019ADB RID: 105179 RVA: 0x007E8233 File Offset: 0x007E6433
 	public void ForceStopSplineMove()
 	{
 		if (this.DisableKey == null)
@@ -307,25 +307,25 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.ClearSplineMoveParams();
 	}
 
-	// Token: 0x0601BEFC RID: 114428 RVA: 0x007C0CDB File Offset: 0x007BEEDB
+	// Token: 0x06019ADC RID: 105180 RVA: 0x007E826B File Offset: 0x007E646B
 	public virtual bool IsPlannerMove()
 	{
 		return true;
 	}
 
-	// Token: 0x0601BEFD RID: 114429 RVA: 0x007C0CDE File Offset: 0x007BEEDE
+	// Token: 0x06019ADD RID: 105181 RVA: 0x007E826E File Offset: 0x007E646E
 	protected virtual bool StartMoveConditionCheck(int id, ISplineMovePattern config)
 	{
 		return this.SplineStack.Count <= 0 || this.SplineStack[this.SplineStack.Count - 1] != id;
 	}
 
-	// Token: 0x0601BEFE RID: 114430 RVA: 0x007C0D0C File Offset: 0x007BEF0C
+	// Token: 0x06019ADE RID: 105182 RVA: 0x007E829C File Offset: 0x007E649C
 	protected virtual bool EndMoveConditionCheck(int id)
 	{
 		return this.SplineMoveParamsMap.ContainsKey(id);
 	}
 
-	// Token: 0x0601BEFF RID: 114431 RVA: 0x007C0D20 File Offset: 0x007BEF20
+	// Token: 0x06019ADF RID: 105183 RVA: 0x007E82B0 File Offset: 0x007E64B0
 	protected bool SelectNextSplineMove()
 	{
 		this.OnSelectNextSplineMoveBegin();
@@ -348,7 +348,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		return this.CurrentSplineMoveParams != null;
 	}
 
-	// Token: 0x0601BF00 RID: 114432 RVA: 0x007C0DB3 File Offset: 0x007BEFB3
+	// Token: 0x06019AE0 RID: 105184 RVA: 0x007E8343 File Offset: 0x007E6543
 	protected void AddSplineMoveParams(int id, SplineMoveParams config)
 	{
 		if (!this.SplineMoveParamsMap.ContainsKey(id))
@@ -359,7 +359,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.SplineStack.Add(id);
 	}
 
-	// Token: 0x0601BF01 RID: 114433 RVA: 0x007C0DE4 File Offset: 0x007BEFE4
+	// Token: 0x06019AE1 RID: 105185 RVA: 0x007E8374 File Offset: 0x007E6574
 	protected void RemoveSplineMoveParams(int id, bool bDelayClear)
 	{
 		SplineMoveParams splineMoveParams;
@@ -378,7 +378,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BF02 RID: 114434 RVA: 0x007C0E6C File Offset: 0x007BF06C
+	// Token: 0x06019AE2 RID: 105186 RVA: 0x007E83FC File Offset: 0x007E65FC
 	protected void ClearSplineMoveParams()
 	{
 		foreach (int splineId in this.SplineMoveParamsMap.Keys)
@@ -389,24 +389,24 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.SplineStack.Clear();
 	}
 
-	// Token: 0x0601BF03 RID: 114435 RVA: 0x007C0EEC File Offset: 0x007BF0EC
+	// Token: 0x06019AE3 RID: 105187 RVA: 0x007E847C File Offset: 0x007E667C
 	protected virtual void OnSplineMoveEnable(int id, SplineMoveParams config)
 	{
 	}
 
-	// Token: 0x0601BF04 RID: 114436 RVA: 0x007C0EEE File Offset: 0x007BF0EE
+	// Token: 0x06019AE4 RID: 105188 RVA: 0x007E847E File Offset: 0x007E667E
 	protected virtual void OnSplineMoveDisable()
 	{
 	}
 
-	// Token: 0x0601BF05 RID: 114437 RVA: 0x007C0EF0 File Offset: 0x007BF0F0
+	// Token: 0x06019AE5 RID: 105189 RVA: 0x007E8480 File Offset: 0x007E6680
 	protected virtual void OnSelectNextSplineMoveBegin()
 	{
 		SplineMoveParams currentSplineMoveParams = this.CurrentSplineMoveParams;
 		this.CacheNeedUpdateSplineGravityLeave = (currentSplineMoveParams != null && currentSplineMoveParams.UseSplineGravity);
 	}
 
-	// Token: 0x0601BF06 RID: 114438 RVA: 0x007C0F0C File Offset: 0x007BF10C
+	// Token: 0x06019AE6 RID: 105190 RVA: 0x007E849C File Offset: 0x007E669C
 	protected virtual void OnSelectNextSplineMoveEnd()
 	{
 		this.LastLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -425,7 +425,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BF07 RID: 114439 RVA: 0x007C0F88 File Offset: 0x007BF188
+	// Token: 0x06019AE7 RID: 105191 RVA: 0x007E8518 File Offset: 0x007E6718
 	protected virtual void UpdateSplineLocationAndDirection()
 	{
 		USplineComponent spline = this.CurrentSplineMoveParams.Spline;
@@ -483,7 +483,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		MathUtils.Instance.LookRotationUpFirst(this.TmpVector1, this.TmpVector, this.SplineQuat);
 	}
 
-	// Token: 0x0601BF08 RID: 114440 RVA: 0x007C1158 File Offset: 0x007BF358
+	// Token: 0x06019AE8 RID: 105192 RVA: 0x007E86E8 File Offset: 0x007E68E8
 	protected void UpdateLastSplineLocationAndDirection()
 	{
 		if (this.LastTimeKey == -1f)
@@ -504,7 +504,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.LastSplineDirection.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601BF09 RID: 114441 RVA: 0x007C11E9 File Offset: 0x007BF3E9
+	// Token: 0x06019AE9 RID: 105193 RVA: 0x007E8779 File Offset: 0x007E6979
 	protected void OnTeleportWrapper()
 	{
 		if (this.SplineMoveParamsMap.Count == 0 && this.SplineStack.Count == 0)
@@ -514,7 +514,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.OnTeleportChangeLocation();
 	}
 
-	// Token: 0x0601BF0A RID: 114442 RVA: 0x007C120C File Offset: 0x007BF40C
+	// Token: 0x06019AEA RID: 105194 RVA: 0x007E879C File Offset: 0x007E699C
 	protected void OnTeleportChangeLocation()
 	{
 		this.LastLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
@@ -523,7 +523,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		this.LastTimeKey = -1f;
 	}
 
-	// Token: 0x0601BF0B RID: 114443 RVA: 0x007C125C File Offset: 0x007BF45C
+	// Token: 0x06019AEB RID: 105195 RVA: 0x007E87EC File Offset: 0x007E69EC
 	protected unsafe virtual void UpdateSplineGravity(ESplineGravityUpdateType type)
 	{
 		BaseGravityComponent component = base.Entity.GetComponent<BaseGravityComponent>();
@@ -587,7 +587,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BF0C RID: 114444 RVA: 0x007C141C File Offset: 0x007BF61C
+	// Token: 0x06019AEC RID: 105196 RVA: 0x007E89AC File Offset: 0x007E6BAC
 	protected float CalcGravitySwitchSmoothTime(Vector from, Vector to)
 	{
 		SplineMoveParams currentSplineMoveParams = this.CurrentSplineMoveParams;
@@ -616,7 +616,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		return -1f;
 	}
 
-	// Token: 0x0601BF0D RID: 114445 RVA: 0x007C153C File Offset: 0x007BF73C
+	// Token: 0x06019AED RID: 105197 RVA: 0x007E8ACC File Offset: 0x007E6CCC
 	protected void CheckAutoExitCurrentSpline()
 	{
 		if (this.CurrentSplineMoveParams.AutoExitSplineDist <= 0f)
@@ -640,7 +640,7 @@ public class BaseSplineMoveComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BF0E RID: 114446 RVA: 0x007C15CC File Offset: 0x007BF7CC
+	// Token: 0x06019AEE RID: 105198 RVA: 0x007E8B5C File Offset: 0x007E6D5C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -648,323 +648,278 @@ public class BaseSplineMoveComponent : EntityComponent
 			return false;
 		}
 		BaseSplineMoveComponent baseSplineMoveComponent = (BaseSplineMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (baseSplineMoveComponent.ActorComp == null)
 		{
-			if (baseSplineMoveComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (baseSplineMoveComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DisableKey"))
-		{
-			this.DisableKey = baseSplineMoveComponent.DisableKey;
-		}
-		if (base.CanResetComponentProperty("SplineMoveParamsMap") && baseSplineMoveComponent.SplineMoveParamsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, SplineMoveParams>>(this.SplineMoveParamsMap), "SplineMoveParamsMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SplineStack") && baseSplineMoveComponent.SplineStack != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.SplineStack), "SplineStack"))
+		if (baseSplineMoveComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentSplineMoveParamsInternal"))
+		this.DisableKey = baseSplineMoveComponent.DisableKey;
+		if (baseSplineMoveComponent.SplineMoveParamsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineMoveParamsMap), "SplineMoveParamsMap"))
 		{
-			if (baseSplineMoveComponent.CurrentSplineMoveParamsInternal == null)
-			{
-				this.CurrentSplineMoveParamsInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SplineMoveParams>(this.CurrentSplineMoveParamsInternal), "CurrentSplineMoveParamsInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsPositiveMovingInternal"))
+		if (baseSplineMoveComponent.SplineStack != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineStack), "SplineStack"))
 		{
-			this.IsPositiveMovingInternal = baseSplineMoveComponent.IsPositiveMovingInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SplineTimeKey"))
+		if (baseSplineMoveComponent.CurrentSplineMoveParamsInternal == null)
 		{
-			this.SplineTimeKey = baseSplineMoveComponent.SplineTimeKey;
+			this.CurrentSplineMoveParamsInternal = null;
 		}
-		if (base.CanResetComponentProperty("SplineDirection"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentSplineMoveParamsInternal), "CurrentSplineMoveParamsInternal"))
 		{
-			if (baseSplineMoveComponent.SplineDirection == null)
-			{
-				this.SplineDirection = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SplineDirection), "SplineDirection"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SplineLocation"))
+		this.IsPositiveMovingInternal = baseSplineMoveComponent.IsPositiveMovingInternal;
+		this.SplineTimeKey = baseSplineMoveComponent.SplineTimeKey;
+		if (baseSplineMoveComponent.SplineDirection == null)
 		{
-			if (baseSplineMoveComponent.SplineLocation == null)
-			{
-				this.SplineLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SplineLocation), "SplineLocation"))
-			{
-				return false;
-			}
+			this.SplineDirection = null;
 		}
-		if (base.CanResetComponentProperty("SplineQuat"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineDirection), "SplineDirection"))
 		{
-			if (baseSplineMoveComponent.SplineQuat == null)
-			{
-				this.SplineQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.SplineQuat), "SplineQuat"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastTimeKey"))
+		if (baseSplineMoveComponent.SplineLocation == null)
 		{
-			this.LastTimeKey = baseSplineMoveComponent.LastTimeKey;
+			this.SplineLocation = null;
 		}
-		if (base.CanResetComponentProperty("LastSplineLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineLocation), "SplineLocation"))
 		{
-			if (baseSplineMoveComponent.LastSplineLocation == null)
-			{
-				this.LastSplineLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastSplineLocation), "LastSplineLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastSplineDirection"))
+		if (baseSplineMoveComponent.SplineQuat == null)
 		{
-			if (baseSplineMoveComponent.LastSplineDirection == null)
-			{
-				this.LastSplineDirection = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastSplineDirection), "LastSplineDirection"))
-			{
-				return false;
-			}
+			this.SplineQuat = null;
 		}
-		if (base.CanResetComponentProperty("Using3d"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineQuat), "SplineQuat"))
 		{
-			this.Using3d = baseSplineMoveComponent.Using3d;
+			return false;
 		}
-		if (base.CanResetComponentProperty("AllowInherit"))
+		this.LastTimeKey = baseSplineMoveComponent.LastTimeKey;
+		if (baseSplineMoveComponent.LastSplineLocation == null)
 		{
-			this.AllowInherit = baseSplineMoveComponent.AllowInherit;
+			this.LastSplineLocation = null;
 		}
-		if (base.CanResetComponentProperty("InheritThisFrame"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSplineLocation), "LastSplineLocation"))
 		{
-			this.InheritThisFrame = baseSplineMoveComponent.InheritThisFrame;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LastLocation"))
+		if (baseSplineMoveComponent.LastSplineDirection == null)
 		{
-			if (baseSplineMoveComponent.LastLocation == null)
-			{
-				this.LastLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastLocation), "LastLocation"))
-			{
-				return false;
-			}
+			this.LastSplineDirection = null;
 		}
-		if (base.CanResetComponentProperty("TargetLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSplineDirection), "LastSplineDirection"))
 		{
-			if (baseSplineMoveComponent.TargetLocation == null)
-			{
-				this.TargetLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetLocation), "TargetLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("OffsetVector"))
+		this.Using3d = baseSplineMoveComponent.Using3d;
+		this.AllowInherit = baseSplineMoveComponent.AllowInherit;
+		this.InheritThisFrame = baseSplineMoveComponent.InheritThisFrame;
+		if (baseSplineMoveComponent.LastLocation == null)
 		{
-			if (baseSplineMoveComponent.OffsetVector == null)
-			{
-				this.OffsetVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.OffsetVector), "OffsetVector"))
-			{
-				return false;
-			}
+			this.LastLocation = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastLocation), "LastLocation"))
 		{
-			if (baseSplineMoveComponent.TmpVector == null)
-			{
-				this.TmpVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector), "TmpVector"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector1"))
+		if (baseSplineMoveComponent.TargetLocation == null)
 		{
-			if (baseSplineMoveComponent.TmpVector1 == null)
-			{
-				this.TmpVector1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector1), "TmpVector1"))
-			{
-				return false;
-			}
+			this.TargetLocation = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetLocation), "TargetLocation"))
 		{
-			if (baseSplineMoveComponent.TmpVector2 == null)
-			{
-				this.TmpVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector2), "TmpVector2"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat"))
+		if (baseSplineMoveComponent.OffsetVector == null)
 		{
-			if (baseSplineMoveComponent.TmpQuat == null)
-			{
-				this.TmpQuat = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
-			{
-				return false;
-			}
+			this.OffsetVector = null;
 		}
-		if (base.CanResetComponentProperty("TmpQuat1"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OffsetVector), "OffsetVector"))
 		{
-			if (baseSplineMoveComponent.TmpQuat1 == null)
-			{
-				this.TmpQuat1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat1), "TmpQuat1"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator"))
+		if (baseSplineMoveComponent.TmpVector == null)
 		{
-			if (baseSplineMoveComponent.TmpRotator == null)
-			{
-				this.TmpRotator = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator), "TmpRotator"))
-			{
-				return false;
-			}
+			this.TmpVector = null;
 		}
-		if (base.CanResetComponentProperty("CacheNeedUpdateSplineGravityLeave"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 		{
-			this.CacheNeedUpdateSplineGravityLeave = baseSplineMoveComponent.CacheNeedUpdateSplineGravityLeave;
+			return false;
 		}
+		if (baseSplineMoveComponent.TmpVector1 == null)
+		{
+			this.TmpVector1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
+		{
+			return false;
+		}
+		if (baseSplineMoveComponent.TmpVector2 == null)
+		{
+			this.TmpVector2 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
+		{
+			return false;
+		}
+		if (baseSplineMoveComponent.TmpQuat == null)
+		{
+			this.TmpQuat = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+		{
+			return false;
+		}
+		if (baseSplineMoveComponent.TmpQuat1 == null)
+		{
+			this.TmpQuat1 = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat1), "TmpQuat1"))
+		{
+			return false;
+		}
+		if (baseSplineMoveComponent.TmpRotator == null)
+		{
+			this.TmpRotator = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+		{
+			return false;
+		}
+		this.CacheNeedUpdateSplineGravityLeave = baseSplineMoveComponent.CacheNeedUpdateSplineGravityLeave;
 		return true;
 	}
 
-	// Token: 0x0400DCA2 RID: 56482
+	// Token: 0x17002927 RID: 10535
+	// (get) Token: 0x06019AEF RID: 105199 RVA: 0x007E8EFB File Offset: 0x007E70FB
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002928 RID: 10536
+	// (get) Token: 0x06019AF0 RID: 105200 RVA: 0x007E8EFE File Offset: 0x007E70FE
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002929 RID: 10537
+	// (get) Token: 0x06019AF1 RID: 105201 RVA: 0x007E8F01 File Offset: 0x007E7101
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E141 RID: 57665
 	public const int INVALID_TIME_KEY = -1;
 
-	// Token: 0x0400DCA3 RID: 56483
+	// Token: 0x0400E142 RID: 57666
 	public const int AUTO_PILOT_ROUTE_ID = -1;
 
-	// Token: 0x0400DCA4 RID: 56484
+	// Token: 0x0400E143 RID: 57667
 	[Nullable(2)]
 	protected BaseActorComponent ActorComp;
 
-	// Token: 0x0400DCA5 RID: 56485
+	// Token: 0x0400E144 RID: 57668
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400DCA6 RID: 56486
+	// Token: 0x0400E145 RID: 57669
 	protected int? DisableKey;
 
-	// Token: 0x0400DCA7 RID: 56487
+	// Token: 0x0400E146 RID: 57670
 	protected readonly Dictionary<int, SplineMoveParams> SplineMoveParamsMap = new Dictionary<int, SplineMoveParams>();
 
-	// Token: 0x0400DCA8 RID: 56488
+	// Token: 0x0400E147 RID: 57671
 	protected readonly List<int> SplineStack = new List<int>();
 
-	// Token: 0x0400DCA9 RID: 56489
+	// Token: 0x0400E148 RID: 57672
 	[Nullable(2)]
 	protected SplineMoveParams CurrentSplineMoveParamsInternal;
 
-	// Token: 0x0400DCAA RID: 56490
+	// Token: 0x0400E149 RID: 57673
 	private bool IsPositiveMovingInternal = true;
 
-	// Token: 0x0400DCAB RID: 56491
+	// Token: 0x0400E14A RID: 57674
 	public float SplineTimeKey;
 
-	// Token: 0x0400DCAC RID: 56492
+	// Token: 0x0400E14B RID: 57675
 	public Vector SplineDirection = Vector.Create();
 
-	// Token: 0x0400DCAD RID: 56493
+	// Token: 0x0400E14C RID: 57676
 	public Vector SplineLocation = Vector.Create();
 
-	// Token: 0x0400DCAE RID: 56494
+	// Token: 0x0400E14D RID: 57677
 	protected Quat SplineQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DCAF RID: 56495
+	// Token: 0x0400E14E RID: 57678
 	protected float LastTimeKey = -1f;
 
-	// Token: 0x0400DCB0 RID: 56496
+	// Token: 0x0400E14F RID: 57679
 	protected Vector LastSplineLocation = Vector.Create();
 
-	// Token: 0x0400DCB1 RID: 56497
+	// Token: 0x0400E150 RID: 57680
 	protected Vector LastSplineDirection = Vector.Create();
 
-	// Token: 0x0400DCB2 RID: 56498
+	// Token: 0x0400E151 RID: 57681
 	protected bool Using3d;
 
-	// Token: 0x0400DCB3 RID: 56499
+	// Token: 0x0400E152 RID: 57682
 	protected bool AllowInherit;
 
-	// Token: 0x0400DCB4 RID: 56500
+	// Token: 0x0400E153 RID: 57683
 	protected bool InheritThisFrame;
 
-	// Token: 0x0400DCB5 RID: 56501
+	// Token: 0x0400E154 RID: 57684
 	protected Vector LastLocation = Vector.Create();
 
-	// Token: 0x0400DCB6 RID: 56502
+	// Token: 0x0400E155 RID: 57685
 	protected Vector TargetLocation = Vector.Create();
 
-	// Token: 0x0400DCB7 RID: 56503
+	// Token: 0x0400E156 RID: 57686
 	protected Vector OffsetVector = Vector.Create();
 
-	// Token: 0x0400DCB8 RID: 56504
+	// Token: 0x0400E157 RID: 57687
 	protected Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400DCB9 RID: 56505
+	// Token: 0x0400E158 RID: 57688
 	protected Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x0400DCBA RID: 56506
+	// Token: 0x0400E159 RID: 57689
 	protected Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400DCBB RID: 56507
+	// Token: 0x0400E15A RID: 57690
 	protected Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DCBC RID: 56508
+	// Token: 0x0400E15B RID: 57691
 	protected Quat TmpQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DCBD RID: 56509
+	// Token: 0x0400E15C RID: 57692
 	protected Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400DCBE RID: 56510
+	// Token: 0x0400E15D RID: 57693
 	private bool CacheNeedUpdateSplineGravityLeave;
 }

@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061A1 RID: 24993
+	// Token: 0x0200680C RID: 26636
 	public class IAssistCharacterNavigationMoveT
 	{
-		// Token: 0x1700BA4A RID: 47690
-		// (get) Token: 0x0602B0CA RID: 176330 RVA: 0x005EFF65 File Offset: 0x005EE165
-		// (set) Token: 0x0602B0CB RID: 176331 RVA: 0x005EFF6D File Offset: 0x005EE16D
+		// Token: 0x1700C3C8 RID: 50120
+		// (get) Token: 0x0602D7FB RID: 186363 RVA: 0x0063A7D9 File Offset: 0x006389D9
+		// (set) Token: 0x0602D7FC RID: 186364 RVA: 0x0063A7E1 File Offset: 0x006389E1
 		public EAssistCharacterMoveType Type { get; set; }
 
-		// Token: 0x1700BA4B RID: 47691
-		// (get) Token: 0x0602B0CC RID: 176332 RVA: 0x005EFF76 File Offset: 0x005EE176
-		// (set) Token: 0x0602B0CD RID: 176333 RVA: 0x005EFF7E File Offset: 0x005EE17E
+		// Token: 0x1700C3C9 RID: 50121
+		// (get) Token: 0x0602D7FD RID: 186365 RVA: 0x0063A7EA File Offset: 0x006389EA
+		// (set) Token: 0x0602D7FE RID: 186366 RVA: 0x0063A7F2 File Offset: 0x006389F2
 		public IPosAT Destination { get; set; }
 
-		// Token: 0x1700BA4C RID: 47692
-		// (get) Token: 0x0602B0CE RID: 176334 RVA: 0x005EFF87 File Offset: 0x005EE187
-		// (set) Token: 0x0602B0CF RID: 176335 RVA: 0x005EFF8F File Offset: 0x005EE18F
+		// Token: 0x1700C3CA RID: 50122
+		// (get) Token: 0x0602D7FF RID: 186367 RVA: 0x0063A7FB File Offset: 0x006389FB
+		// (set) Token: 0x0602D800 RID: 186368 RVA: 0x0063A803 File Offset: 0x00638A03
 		public EMoveState MoveState { get; set; }
 
-		// Token: 0x0602B0D0 RID: 176336 RVA: 0x005EFF98 File Offset: 0x005EE198
+		// Token: 0x0602D801 RID: 186369 RVA: 0x0063A80C File Offset: 0x00638A0C
 		public IAssistCharacterNavigationMoveT()
 		{
 			this.Type = EAssistCharacterMoveType.Navigation;

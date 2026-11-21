@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200030D RID: 781
+	// Token: 0x02000354 RID: 852
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEntityAttachTarget : IAttachTarget
 	{
-		// Token: 0x06000F21 RID: 3873 RVA: 0x00035AA4 File Offset: 0x00033CA4
-		[NullableContext(1)]
+		// Token: 0x06001051 RID: 4177 RVA: 0x000389D8 File Offset: 0x00036BD8
+		[NullableContext(0)]
 		private IEntityAttachTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000F22 RID: 3874 RVA: 0x00035ADC File Offset: 0x00033CDC
-		[NullableContext(1)]
+		// Token: 0x06001052 RID: 4178 RVA: 0x00038A10 File Offset: 0x00036C10
+		[NullableContext(0)]
 		public static IEntityAttachTarget Create([Nullable(2)] IEntityAttachTarget instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F23 RID: 3875 RVA: 0x00035AEF File Offset: 0x00033CEF
-		[NullableContext(1)]
+		// Token: 0x06001053 RID: 4179 RVA: 0x00038A23 File Offset: 0x00036C23
+		[NullableContext(0)]
 		public static IEntityAttachTarget CreateFromSetValue([Nullable(2)] IEntityAttachTarget_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F24 RID: 3876 RVA: 0x00035B02 File Offset: 0x00033D02
-		[NullableContext(1)]
+		// Token: 0x06001054 RID: 4180 RVA: 0x00038A36 File Offset: 0x00036C36
+		[NullableContext(0)]
 		public new IEntityAttachTarget_SetValue ToSetValue()
 		{
 			return new IEntityAttachTarget_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700045A RID: 1114
-		// (get) Token: 0x06000F25 RID: 3877 RVA: 0x00035B39 File Offset: 0x00033D39
-		// (set) Token: 0x06000F26 RID: 3878 RVA: 0x00035B64 File Offset: 0x00033D64
+		// Token: 0x170004A7 RID: 1191
+		// (get) Token: 0x06001055 RID: 4181 RVA: 0x00038A6D File Offset: 0x00036C6D
+		// (set) Token: 0x06001056 RID: 4182 RVA: 0x00038A98 File Offset: 0x00036C98
 		public override EAttachType Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700045B RID: 1115
-		// (get) Token: 0x06000F27 RID: 3879 RVA: 0x00035B72 File Offset: 0x00033D72
-		// (set) Token: 0x06000F28 RID: 3880 RVA: 0x00035B9D File Offset: 0x00033D9D
+		// Token: 0x170004A8 RID: 1192
+		// (get) Token: 0x06001057 RID: 4183 RVA: 0x00038AA6 File Offset: 0x00036CA6
+		// (set) Token: 0x06001058 RID: 4184 RVA: 0x00038AD1 File Offset: 0x00036CD1
 		public virtual int EntityId
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700045C RID: 1116
-		// (get) Token: 0x06000F29 RID: 3881 RVA: 0x00035BAB File Offset: 0x00033DAB
-		// (set) Token: 0x06000F2A RID: 3882 RVA: 0x00035BD2 File Offset: 0x00033DD2
+		// Token: 0x170004A9 RID: 1193
+		// (get) Token: 0x06001059 RID: 4185 RVA: 0x00038ADF File Offset: 0x00036CDF
+		// (set) Token: 0x0600105A RID: 4186 RVA: 0x00038B06 File Offset: 0x00036D06
 		public virtual string AttachPoint
 		{
 			get
@@ -137,9 +137,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700045D RID: 1117
-		// (get) Token: 0x06000F2B RID: 3883 RVA: 0x00035BE0 File Offset: 0x00033DE0
-		// (set) Token: 0x06000F2C RID: 3884 RVA: 0x00035C41 File Offset: 0x00033E41
+		// Token: 0x170004AA RID: 1194
+		// (get) Token: 0x0600105B RID: 4187 RVA: 0x00038B14 File Offset: 0x00036D14
+		// (set) Token: 0x0600105C RID: 4188 RVA: 0x00038B75 File Offset: 0x00036D75
 		public virtual VectorInfo PosOffset
 		{
 			get
@@ -167,17 +167,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D1D RID: 3357
+		// Token: 0x04000E07 RID: 3591
 		protected new IEntityAttachTarget FbInstance;
 
-		// Token: 0x04000D1E RID: 3358
+		// Token: 0x04000E08 RID: 3592
 		protected new IEntityAttachTarget_SetValue PocoInterface;
 
-		// Token: 0x04000D1F RID: 3359
-		[Nullable(1)]
+		// Token: 0x04000E09 RID: 3593
+		[Nullable(0)]
 		private VectorInfo _PosOffsetCache;
 
-		// Token: 0x04000D20 RID: 3360
+		// Token: 0x04000E0A RID: 3594
 		private bool _PosOffsetInited;
 	}
 }

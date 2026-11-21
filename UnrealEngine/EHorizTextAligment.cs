@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A81 RID: 2689
+	// Token: 0x020001E2 RID: 482
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EHorizTextAligment")]
 	public enum EHorizTextAligment
 	{
-		// Token: 0x04004819 RID: 18457
+		// Token: 0x04000BF0 RID: 3056
 		EHTA_Left,
-		// Token: 0x0400481A RID: 18458
+		// Token: 0x04000BF1 RID: 3057
 		EHTA_Center,
-		// Token: 0x0400481B RID: 18459
+		// Token: 0x04000BF2 RID: 3058
 		EHTA_Right,
-		// Token: 0x0400481C RID: 18460
+		// Token: 0x04000BF3 RID: 3059
 		EHTA_MAX
 	}
 }

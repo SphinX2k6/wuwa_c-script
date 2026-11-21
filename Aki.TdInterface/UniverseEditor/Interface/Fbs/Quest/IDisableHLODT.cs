@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DD4 RID: 15828
+	// Token: 0x0200420F RID: 16911
 	public class IDisableHLODT
 	{
-		// Token: 0x17006D50 RID: 27984
-		// (get) Token: 0x060161A7 RID: 90535 RVA: 0x00331EE0 File Offset: 0x003300E0
-		// (set) Token: 0x060161A8 RID: 90536 RVA: 0x00331EE8 File Offset: 0x003300E8
+		// Token: 0x17007330 RID: 29488
+		// (get) Token: 0x060177C6 RID: 96198 RVA: 0x0035A8E4 File Offset: 0x00358AE4
+		// (set) Token: 0x060177C7 RID: 96199 RVA: 0x0035A8EC File Offset: 0x00358AEC
 		public EOperation Type { get; set; }
 
-		// Token: 0x17006D51 RID: 27985
-		// (get) Token: 0x060161A9 RID: 90537 RVA: 0x00331EF1 File Offset: 0x003300F1
-		// (set) Token: 0x060161AA RID: 90538 RVA: 0x00331EF9 File Offset: 0x003300F9
+		// Token: 0x17007331 RID: 29489
+		// (get) Token: 0x060177C8 RID: 96200 RVA: 0x0035A8F5 File Offset: 0x00358AF5
+		// (set) Token: 0x060177C9 RID: 96201 RVA: 0x0035A8FD File Offset: 0x00358AFD
 		public bool IsDisable { get; set; }
 
-		// Token: 0x060161AB RID: 90539 RVA: 0x00331F02 File Offset: 0x00330102
+		// Token: 0x060177CA RID: 96202 RVA: 0x0035A906 File Offset: 0x00358B06
 		public IDisableHLODT()
 		{
 			this.Type = EOperation.DisableHLOD;

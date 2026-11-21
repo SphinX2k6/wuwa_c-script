@@ -4,46 +4,46 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x02005837 RID: 22583
+	// Token: 0x0200480E RID: 18446
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TItemQualityConfig
 	{
-		// Token: 0x06039638 RID: 235064 RVA: 0x00D9E18B File Offset: 0x00D9C38B
+		// Token: 0x0602E54B RID: 189771 RVA: 0x00CED027 File Offset: 0x00CEB227
 		[NullableContext(1)]
 		private TItemQualityConfig(object value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x06039639 RID: 235065 RVA: 0x00D9E19A File Offset: 0x00D9C39A
+		// Token: 0x0602E54C RID: 189772 RVA: 0x00CED036 File Offset: 0x00CEB236
 		[NullableContext(1)]
 		public static implicit operator TItemQualityConfig(AbyssQuality value)
 		{
 			return new TItemQualityConfig(value);
 		}
 
-		// Token: 0x0603963A RID: 235066 RVA: 0x00D9E1A7 File Offset: 0x00D9C3A7
+		// Token: 0x0602E54D RID: 189773 RVA: 0x00CED043 File Offset: 0x00CEB243
 		[NullableContext(1)]
 		public static implicit operator TItemQualityConfig(QualityInfo value)
 		{
 			return new TItemQualityConfig(value);
 		}
 
-		// Token: 0x0603963B RID: 235067 RVA: 0x00D9E1B4 File Offset: 0x00D9C3B4
+		// Token: 0x0602E54E RID: 189774 RVA: 0x00CED050 File Offset: 0x00CEB250
 		[NullableContext(1)]
 		public static implicit operator TItemQualityConfig(HonamiStoryItemQuality value)
 		{
 			return new TItemQualityConfig(value);
 		}
 
-		// Token: 0x0603963C RID: 235068 RVA: 0x00D9E1C1 File Offset: 0x00D9C3C1
+		// Token: 0x0602E54F RID: 189775 RVA: 0x00CED05D File Offset: 0x00CEB25D
 		public bool Is<T>()
 		{
 			return this._value is T;
 		}
 
-		// Token: 0x0603963D RID: 235069 RVA: 0x00D9E1D4 File Offset: 0x00D9C3D4
+		// Token: 0x0602E550 RID: 189776 RVA: 0x00CED070 File Offset: 0x00CEB270
 		[NullableContext(0)]
 		public T? As<T>() where T : struct
 		{
@@ -56,15 +56,15 @@ namespace CSharpScript.Game.Module.Inventory
 			return null;
 		}
 
-		// Token: 0x0603963E RID: 235070 RVA: 0x00D9E209 File Offset: 0x00D9C409
+		// Token: 0x0602E551 RID: 189777 RVA: 0x00CED0A5 File Offset: 0x00CEB2A5
 		[NullableContext(1)]
 		public T AsClass<T>() where T : class
 		{
 			return this._value as T;
 		}
 
-		// Token: 0x17008A31 RID: 35377
-		// (get) Token: 0x0603963F RID: 235071 RVA: 0x00D9E21C File Offset: 0x00D9C41C
+		// Token: 0x17005DFA RID: 24058
+		// (get) Token: 0x0602E552 RID: 189778 RVA: 0x00CED0B8 File Offset: 0x00CEB2B8
 		public string TextColor
 		{
 			get
@@ -88,8 +88,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A32 RID: 35378
-		// (get) Token: 0x06039640 RID: 235072 RVA: 0x00D9E284 File Offset: 0x00D9C484
+		// Token: 0x17005DFB RID: 24059
+		// (get) Token: 0x0602E553 RID: 189779 RVA: 0x00CED120 File Offset: 0x00CEB320
 		public string AcquireQualityTexPath
 		{
 			get
@@ -113,8 +113,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A33 RID: 35379
-		// (get) Token: 0x06039641 RID: 235073 RVA: 0x00D9E2EC File Offset: 0x00D9C4EC
+		// Token: 0x17005DFC RID: 24060
+		// (get) Token: 0x0602E554 RID: 189780 RVA: 0x00CED188 File Offset: 0x00CEB388
 		public string AcquireQualitySpritePath
 		{
 			get
@@ -138,8 +138,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A34 RID: 35380
-		// (get) Token: 0x06039642 RID: 235074 RVA: 0x00D9E354 File Offset: 0x00D9C554
+		// Token: 0x17005DFD RID: 24061
+		// (get) Token: 0x0602E555 RID: 189781 RVA: 0x00CED1F0 File Offset: 0x00CEB3F0
 		public int? Id
 		{
 			get
@@ -163,8 +163,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A35 RID: 35381
-		// (get) Token: 0x06039643 RID: 235075 RVA: 0x00D9E3D4 File Offset: 0x00D9C5D4
+		// Token: 0x17005DFE RID: 24062
+		// (get) Token: 0x0602E556 RID: 189782 RVA: 0x00CED270 File Offset: 0x00CEB470
 		public string AcquireNewItemQualityTexPath
 		{
 			get
@@ -188,8 +188,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A36 RID: 35382
-		// (get) Token: 0x06039644 RID: 235076 RVA: 0x00D9E43C File Offset: 0x00D9C63C
+		// Token: 0x17005DFF RID: 24063
+		// (get) Token: 0x0602E557 RID: 189783 RVA: 0x00CED2D8 File Offset: 0x00CEB4D8
 		public string TextureAcquireFlow
 		{
 			get
@@ -213,8 +213,8 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x17008A37 RID: 35383
-		// (get) Token: 0x06039645 RID: 235077 RVA: 0x00D9E4A4 File Offset: 0x00D9C6A4
+		// Token: 0x17005E00 RID: 24064
+		// (get) Token: 0x0602E558 RID: 189784 RVA: 0x00CED340 File Offset: 0x00CEB540
 		public string TextureAcquireBg
 		{
 			get
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x0401E040 RID: 122944
+		// Token: 0x04018AD9 RID: 101081
 		[Nullable(1)]
 		private readonly object _value;
 	}

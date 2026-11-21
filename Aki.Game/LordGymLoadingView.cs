@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020021A8 RID: 8616
+// Token: 0x0200168C RID: 5772
 public class LordGymLoadingView : LoadingViewBase
 {
-	// Token: 0x06010C29 RID: 68649 RVA: 0x004128F3 File Offset: 0x00410AF3
+	// Token: 0x0600E0BA RID: 57530 RVA: 0x0041F1DB File Offset: 0x0041D3DB
 	[NullableContext(1)]
 	public LordGymLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C2A RID: 68650 RVA: 0x004128FC File Offset: 0x00410AFC
+	// Token: 0x0600E0BB RID: 57531 RVA: 0x0041F1E4 File Offset: 0x0041D3E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,25 +22,25 @@ public class LordGymLoadingView : LoadingViewBase
 		};
 	}
 
-	// Token: 0x06010C2B RID: 68651 RVA: 0x0041291F File Offset: 0x00410B1F
+	// Token: 0x0600E0BC RID: 57532 RVA: 0x0041F207 File Offset: 0x0041D407
 	protected override void OnStart()
 	{
 		base.OnStart();
 		AudioSystem.Instance.PostEvent("play_ui_daoguan_3_0_loading_percent");
 	}
 
-	// Token: 0x06010C2C RID: 68652 RVA: 0x00412937 File Offset: 0x00410B37
+	// Token: 0x0600E0BD RID: 57533 RVA: 0x0041F21F File Offset: 0x0041D41F
 	protected override void UpdateProgressRate(float rate)
 	{
 	}
 
-	// Token: 0x06010C2D RID: 68653 RVA: 0x00412939 File Offset: 0x00410B39
+	// Token: 0x0600E0BE RID: 57534 RVA: 0x0041F221 File Offset: 0x0041D421
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(0, value, "");
 	}
 
-	// Token: 0x06010C2E RID: 68654 RVA: 0x00412948 File Offset: 0x00410B48
+	// Token: 0x0600E0BF RID: 57535 RVA: 0x0041F230 File Offset: 0x0041D430
 	[NullableContext(1)]
 	protected override void SetTextProgressValue(int textKey, float value, string suffix = "")
 	{
@@ -48,10 +48,10 @@ public class LordGymLoadingView : LoadingViewBase
 		base.GetArtText(textKey).SetText(num.ToString());
 	}
 
-	// Token: 0x020086E0 RID: 34528
+	// Token: 0x0200786B RID: 30827
 	private class EComponent
 	{
-		// Token: 0x0402BE2C RID: 179756
+		// Token: 0x0402714D RID: 160077
 		public const int ProgressText = 0;
 	}
 }

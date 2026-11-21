@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D5E RID: 19806
+	// Token: 0x0200525A RID: 21082
 	public class TVehicleConditionUnion
 	{
-		// Token: 0x17008F59 RID: 36697
-		// (get) Token: 0x0601F6BE RID: 128702 RVA: 0x00460A4E File Offset: 0x0045EC4E
-		// (set) Token: 0x0601F6BF RID: 128703 RVA: 0x00460A56 File Offset: 0x0045EC56
+		// Token: 0x17009692 RID: 38546
+		// (get) Token: 0x06021307 RID: 135943 RVA: 0x00494A22 File Offset: 0x00492C22
+		// (set) Token: 0x06021308 RID: 135944 RVA: 0x00494A2A File Offset: 0x00492C2A
 		public TVehicleCondition Type { get; set; }
 
-		// Token: 0x17008F5A RID: 36698
-		// (get) Token: 0x0601F6C0 RID: 128704 RVA: 0x00460A5F File Offset: 0x0045EC5F
-		// (set) Token: 0x0601F6C1 RID: 128705 RVA: 0x00460A67 File Offset: 0x0045EC67
+		// Token: 0x17009693 RID: 38547
+		// (get) Token: 0x06021309 RID: 135945 RVA: 0x00494A33 File Offset: 0x00492C33
+		// (set) Token: 0x0602130A RID: 135946 RVA: 0x00494A3B File Offset: 0x00492C3B
 		public object Value { get; set; }
 
-		// Token: 0x0601F6C2 RID: 128706 RVA: 0x00460A70 File Offset: 0x0045EC70
+		// Token: 0x0602130B RID: 135947 RVA: 0x00494A44 File Offset: 0x00492C44
 		public TVehicleConditionUnion()
 		{
 			this.Type = TVehicleCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F6C3 RID: 128707 RVA: 0x00460A86 File Offset: 0x0045EC86
+		// Token: 0x0602130C RID: 135948 RVA: 0x00494A5A File Offset: 0x00492C5A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F6C4 RID: 128708 RVA: 0x00460A98 File Offset: 0x0045EC98
+		// Token: 0x0602130D RID: 135949 RVA: 0x00494A6C File Offset: 0x00492C6C
 		public ICheckIsPlayerUsingVehicleT AsICheckIsPlayerUsingVehicle()
 		{
 			return this.As<ICheckIsPlayerUsingVehicleT>();
 		}
 
-		// Token: 0x0601F6C5 RID: 128709 RVA: 0x00460AA0 File Offset: 0x0045ECA0
+		// Token: 0x0602130E RID: 135950 RVA: 0x00494A74 File Offset: 0x00492C74
 		public static TVehicleConditionUnion FromICheckIsPlayerUsingVehicle(ICheckIsPlayerUsingVehicleT _icheckisplayerusingvehicle)
 		{
 			return new TVehicleConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6C6 RID: 128710 RVA: 0x00460AB5 File Offset: 0x0045ECB5
+		// Token: 0x0602130F RID: 135951 RVA: 0x00494A89 File Offset: 0x00492C89
 		public ICheckIsUsingVehicleT AsICheckIsUsingVehicle()
 		{
 			return this.As<ICheckIsUsingVehicleT>();
 		}
 
-		// Token: 0x0601F6C7 RID: 128711 RVA: 0x00460ABD File Offset: 0x0045ECBD
+		// Token: 0x06021310 RID: 135952 RVA: 0x00494A91 File Offset: 0x00492C91
 		public static TVehicleConditionUnion FromICheckIsUsingVehicle(ICheckIsUsingVehicleT _icheckisusingvehicle)
 		{
 			return new TVehicleConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6C8 RID: 128712 RVA: 0x00460AD2 File Offset: 0x0045ECD2
+		// Token: 0x06021311 RID: 135953 RVA: 0x00494AA6 File Offset: 0x00492CA6
 		public ICheckVehicleSpeedConditionT AsICheckVehicleSpeedCondition()
 		{
 			return this.As<ICheckVehicleSpeedConditionT>();
 		}
 
-		// Token: 0x0601F6C9 RID: 128713 RVA: 0x00460ADA File Offset: 0x0045ECDA
+		// Token: 0x06021312 RID: 135954 RVA: 0x00494AAE File Offset: 0x00492CAE
 		public static TVehicleConditionUnion FromICheckVehicleSpeedCondition(ICheckVehicleSpeedConditionT _icheckvehiclespeedcondition)
 		{
 			return new TVehicleConditionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6CA RID: 128714 RVA: 0x00460AEF File Offset: 0x0045ECEF
+		// Token: 0x06021313 RID: 135955 RVA: 0x00494AC3 File Offset: 0x00492CC3
 		public ICheckVehicleTriggerAngleConditionT AsICheckVehicleTriggerAngleCondition()
 		{
 			return this.As<ICheckVehicleTriggerAngleConditionT>();
 		}
 
-		// Token: 0x0601F6CB RID: 128715 RVA: 0x00460AF7 File Offset: 0x0045ECF7
+		// Token: 0x06021314 RID: 135956 RVA: 0x00494ACB File Offset: 0x00492CCB
 		public static TVehicleConditionUnion FromICheckVehicleTriggerAngleCondition(ICheckVehicleTriggerAngleConditionT _icheckvehicletriggeranglecondition)
 		{
 			return new TVehicleConditionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F6CC RID: 128716 RVA: 0x00460B0C File Offset: 0x0045ED0C
+		// Token: 0x06021315 RID: 135957 RVA: 0x00494AE0 File Offset: 0x00492CE0
 		public static int Pack(FlatBufferBuilder builder, TVehicleConditionUnion _o)
 		{
 			switch (_o.Type)

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016B7 RID: 5815
+	// Token: 0x02001831 RID: 6193
 	[EnumExtensions]
 	public enum ESubScreenPushDirection
 	{
-		// Token: 0x04004E0D RID: 19981
+		// Token: 0x0400522C RID: 21036
 		Left,
-		// Token: 0x04004E0E RID: 19982
+		// Token: 0x0400522D RID: 21037
 		Right
 	}
 }

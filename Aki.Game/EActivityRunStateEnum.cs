@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020014D5 RID: 5333
+// Token: 0x0200098D RID: 2445
 public enum EActivityRunStateEnum
 {
-	// Token: 0x040042B8 RID: 17080
+	// Token: 0x0400435D RID: 17245
 	UnFinished,
-	// Token: 0x040042B9 RID: 17081
+	// Token: 0x0400435E RID: 17246
 	CanGetReward,
-	// Token: 0x040042BA RID: 17082
+	// Token: 0x0400435F RID: 17247
 	HaveGetReward
 }

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002466 RID: 9318
+// Token: 0x0200194B RID: 6475
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, IPhantomInteractGridData
 {
-	// Token: 0x06012B1F RID: 76575 RVA: 0x0049D65B File Offset: 0x0049B85B
+	// Token: 0x0600FFD7 RID: 65495 RVA: 0x004AADC7 File Offset: 0x004A8FC7
 	public PhantomInteractEditGridViewModel(IPhantomInteractGridData data)
 	{
 	}
 
-	// Token: 0x1700185E RID: 6238
-	// (get) Token: 0x06012B20 RID: 76576 RVA: 0x0049D671 File Offset: 0x0049B871
+	// Token: 0x17001898 RID: 6296
+	// (get) Token: 0x0600FFD8 RID: 65496 RVA: 0x004AADDD File Offset: 0x004A8FDD
 	public int MonsterId
 	{
 		get
@@ -27,8 +27,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x1700185F RID: 6239
-	// (get) Token: 0x06012B21 RID: 76577 RVA: 0x0049D684 File Offset: 0x0049B884
+	// Token: 0x17001899 RID: 6297
+	// (get) Token: 0x0600FFD9 RID: 65497 RVA: 0x004AADF0 File Offset: 0x004A8FF0
 	public int MonsterInfoId
 	{
 		get
@@ -42,8 +42,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001860 RID: 6240
-	// (get) Token: 0x06012B22 RID: 76578 RVA: 0x0049D697 File Offset: 0x0049B897
+	// Token: 0x1700189A RID: 6298
+	// (get) Token: 0x0600FFDA RID: 65498 RVA: 0x004AAE03 File Offset: 0x004A9003
 	public List<int> SkinIds
 	{
 		get
@@ -53,8 +53,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001861 RID: 6241
-	// (get) Token: 0x06012B23 RID: 76579 RVA: 0x0049D6B4 File Offset: 0x0049B8B4
+	// Token: 0x1700189B RID: 6299
+	// (get) Token: 0x0600FFDB RID: 65499 RVA: 0x004AAE20 File Offset: 0x004A9020
 	public int EquippedSkin
 	{
 		get
@@ -68,8 +68,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001862 RID: 6242
-	// (get) Token: 0x06012B24 RID: 76580 RVA: 0x0049D6C7 File Offset: 0x0049B8C7
+	// Token: 0x1700189C RID: 6300
+	// (get) Token: 0x0600FFDC RID: 65500 RVA: 0x004AAE33 File Offset: 0x004A9033
 	public bool IsSpecial
 	{
 		get
@@ -79,8 +79,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001863 RID: 6243
-	// (get) Token: 0x06012B25 RID: 76581 RVA: 0x0049D6DA File Offset: 0x0049B8DA
+	// Token: 0x1700189D RID: 6301
+	// (get) Token: 0x0600FFDD RID: 65501 RVA: 0x004AAE46 File Offset: 0x004A9046
 	[Nullable(2)]
 	public string Name
 	{
@@ -92,8 +92,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001864 RID: 6244
-	// (get) Token: 0x06012B26 RID: 76582 RVA: 0x0049D6F3 File Offset: 0x0049B8F3
+	// Token: 0x1700189E RID: 6302
+	// (get) Token: 0x0600FFDE RID: 65502 RVA: 0x004AAE5F File Offset: 0x004A905F
 	public int Cost
 	{
 		get
@@ -107,8 +107,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001865 RID: 6245
-	// (get) Token: 0x06012B27 RID: 76583 RVA: 0x0049D706 File Offset: 0x0049B906
+	// Token: 0x1700189F RID: 6303
+	// (get) Token: 0x0600FFDF RID: 65503 RVA: 0x004AAE72 File Offset: 0x004A9072
 	public bool IsUnlocked
 	{
 		get
@@ -118,8 +118,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001866 RID: 6246
-	// (get) Token: 0x06012B28 RID: 76584 RVA: 0x0049D719 File Offset: 0x0049B919
+	// Token: 0x170018A0 RID: 6304
+	// (get) Token: 0x0600FFE0 RID: 65504 RVA: 0x004AAE85 File Offset: 0x004A9085
 	public List<int> InteractAreaList
 	{
 		get
@@ -129,8 +129,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001867 RID: 6247
-	// (get) Token: 0x06012B29 RID: 76585 RVA: 0x0049D736 File Offset: 0x0049B936
+	// Token: 0x170018A1 RID: 6305
+	// (get) Token: 0x0600FFE1 RID: 65505 RVA: 0x004AAEA2 File Offset: 0x004A90A2
 	public int InSlotIndex
 	{
 		get
@@ -144,8 +144,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001868 RID: 6248
-	// (get) Token: 0x06012B2A RID: 76586 RVA: 0x0049D749 File Offset: 0x0049B949
+	// Token: 0x170018A2 RID: 6306
+	// (get) Token: 0x0600FFE2 RID: 65506 RVA: 0x004AAEB5 File Offset: 0x004A90B5
 	[Nullable(2)]
 	public string IconPath
 	{
@@ -157,8 +157,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x17001869 RID: 6249
-	// (get) Token: 0x06012B2B RID: 76587 RVA: 0x0049D762 File Offset: 0x0049B962
+	// Token: 0x170018A3 RID: 6307
+	// (get) Token: 0x0600FFE3 RID: 65507 RVA: 0x004AAECE File Offset: 0x004A90CE
 	public bool HasSkin
 	{
 		get
@@ -168,8 +168,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x1700186A RID: 6250
-	// (get) Token: 0x06012B2C RID: 76588 RVA: 0x0049D775 File Offset: 0x0049B975
+	// Token: 0x170018A4 RID: 6308
+	// (get) Token: 0x0600FFE4 RID: 65508 RVA: 0x004AAEE1 File Offset: 0x004A90E1
 	public int GetWayConfigId
 	{
 		get
@@ -183,8 +183,8 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x1700186B RID: 6251
-	// (get) Token: 0x06012B2D RID: 76589 RVA: 0x0049D788 File Offset: 0x0049B988
+	// Token: 0x170018A5 RID: 6309
+	// (get) Token: 0x0600FFE5 RID: 65509 RVA: 0x004AAEF4 File Offset: 0x004A90F4
 	public int SortId
 	{
 		get
@@ -198,22 +198,22 @@ public class PhantomInteractEditGridViewModel : IPhantomInteractGridViewModel, I
 		}
 	}
 
-	// Token: 0x1700186C RID: 6252
-	// (get) Token: 0x06012B2E RID: 76590 RVA: 0x0049D79B File Offset: 0x0049B99B
-	// (set) Token: 0x06012B2F RID: 76591 RVA: 0x0049D7A3 File Offset: 0x0049B9A3
+	// Token: 0x170018A6 RID: 6310
+	// (get) Token: 0x0600FFE6 RID: 65510 RVA: 0x004AAF07 File Offset: 0x004A9107
+	// (set) Token: 0x0600FFE7 RID: 65511 RVA: 0x004AAF0F File Offset: 0x004A910F
 	public bool IsSelected { get; set; }
 
-	// Token: 0x1700186D RID: 6253
-	// (get) Token: 0x06012B30 RID: 76592 RVA: 0x0049D7AC File Offset: 0x0049B9AC
-	// (set) Token: 0x06012B31 RID: 76593 RVA: 0x0049D7B4 File Offset: 0x0049B9B4
+	// Token: 0x170018A7 RID: 6311
+	// (get) Token: 0x0600FFE8 RID: 65512 RVA: 0x004AAF18 File Offset: 0x004A9118
+	// (set) Token: 0x0600FFE9 RID: 65513 RVA: 0x004AAF20 File Offset: 0x004A9120
 	public int GridIndex { get; set; } = -1;
 
-	// Token: 0x1700186E RID: 6254
-	// (get) Token: 0x06012B32 RID: 76594 RVA: 0x0049D7BD File Offset: 0x0049B9BD
-	// (set) Token: 0x06012B33 RID: 76595 RVA: 0x0049D7C5 File Offset: 0x0049B9C5
+	// Token: 0x170018A8 RID: 6312
+	// (get) Token: 0x0600FFEA RID: 65514 RVA: 0x004AAF29 File Offset: 0x004A9129
+	// (set) Token: 0x0600FFEB RID: 65515 RVA: 0x004AAF31 File Offset: 0x004A9131
 	public bool IsInArea { get; set; }
 
-	// Token: 0x04008CD4 RID: 36052
+	// Token: 0x04008E1B RID: 36379
 	[Nullable(2)]
 	private readonly IPhantomInteractGridData Data = data;
 }

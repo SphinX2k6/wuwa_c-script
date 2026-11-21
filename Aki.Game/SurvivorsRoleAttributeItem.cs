@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002B37 RID: 11063
+// Token: 0x020020B3 RID: 8371
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class SurvivorsRoleAttributeItem : GridProxyAbstract<ISurvivorsAttributeUiData>
 {
-	// Token: 0x06016F54 RID: 94036 RVA: 0x005D396F File Offset: 0x005D1B6F
+	// Token: 0x06014985 RID: 84357 RVA: 0x006004DF File Offset: 0x005FE6DF
 	public override void Refresh(ISurvivorsAttributeUiData data, bool isSelected, int gridIndex)
 	{
 		this.Update(data);
 	}
 
-	// Token: 0x06016F55 RID: 94037 RVA: 0x005D3978 File Offset: 0x005D1B78
+	// Token: 0x06014986 RID: 84358 RVA: 0x006004E8 File Offset: 0x005FE6E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class SurvivorsRoleAttributeItem : GridProxyAbstract<ISurvivorsAttributeU
 		};
 	}
 
-	// Token: 0x06016F56 RID: 94038 RVA: 0x005D3A56 File Offset: 0x005D1C56
+	// Token: 0x06014987 RID: 84359 RVA: 0x006005C6 File Offset: 0x005FE7C6
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(5);
@@ -58,7 +58,7 @@ public class SurvivorsRoleAttributeItem : GridProxyAbstract<ISurvivorsAttributeU
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06016F57 RID: 94039 RVA: 0x005D3A90 File Offset: 0x005D1C90
+	// Token: 0x06014988 RID: 84360 RVA: 0x00600600 File Offset: 0x005FE800
 	public void Update(ISurvivorsAttributeUiData data)
 	{
 		base.GetSprite(1).useChangeColor = (base.GridIndex % 2 == 1);
@@ -68,7 +68,7 @@ public class SurvivorsRoleAttributeItem : GridProxyAbstract<ISurvivorsAttributeU
 		this.SetValue(data.Value, value.IsPercent);
 	}
 
-	// Token: 0x06016F58 RID: 94040 RVA: 0x005D3B14 File Offset: 0x005D1D14
+	// Token: 0x06014989 RID: 84361 RVA: 0x00600684 File Offset: 0x005FE884
 	public void SetValue(double value, bool isPercent = false)
 	{
 		UUIText text = base.GetText(4);

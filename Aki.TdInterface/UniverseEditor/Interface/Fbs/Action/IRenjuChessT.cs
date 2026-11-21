@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E74 RID: 28276
+	// Token: 0x020075F8 RID: 30200
 	public class IRenjuChessT
 	{
-		// Token: 0x1700D2A0 RID: 53920
-		// (get) Token: 0x06031FA3 RID: 204707 RVA: 0x006C2C91 File Offset: 0x006C0E91
-		// (set) Token: 0x06031FA4 RID: 204708 RVA: 0x006C2C99 File Offset: 0x006C0E99
+		// Token: 0x1700DDF7 RID: 56823
+		// (get) Token: 0x06034FE3 RID: 217059 RVA: 0x0071E9C5 File Offset: 0x0071CBC5
+		// (set) Token: 0x06034FE4 RID: 217060 RVA: 0x0071E9CD File Offset: 0x0071CBCD
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700D2A1 RID: 53921
-		// (get) Token: 0x06031FA5 RID: 204709 RVA: 0x006C2CA2 File Offset: 0x006C0EA2
-		// (set) Token: 0x06031FA6 RID: 204710 RVA: 0x006C2CAA File Offset: 0x006C0EAA
+		// Token: 0x1700DDF8 RID: 56824
+		// (get) Token: 0x06034FE5 RID: 217061 RVA: 0x0071E9D6 File Offset: 0x0071CBD6
+		// (set) Token: 0x06034FE6 RID: 217062 RVA: 0x0071E9DE File Offset: 0x0071CBDE
 		public int Chessboard { get; set; }
 
-		// Token: 0x1700D2A2 RID: 53922
-		// (get) Token: 0x06031FA7 RID: 204711 RVA: 0x006C2CB3 File Offset: 0x006C0EB3
-		// (set) Token: 0x06031FA8 RID: 204712 RVA: 0x006C2CBB File Offset: 0x006C0EBB
+		// Token: 0x1700DDF9 RID: 56825
+		// (get) Token: 0x06034FE7 RID: 217063 RVA: 0x0071E9E7 File Offset: 0x0071CBE7
+		// (set) Token: 0x06034FE8 RID: 217064 RVA: 0x0071E9EF File Offset: 0x0071CBEF
 		public TAdjustPlayerCameraOptionUnion CameraConfig { get; set; }
 
-		// Token: 0x06031FA9 RID: 204713 RVA: 0x006C2CC4 File Offset: 0x006C0EC4
+		// Token: 0x06034FE9 RID: 217065 RVA: 0x0071E9F8 File Offset: 0x0071CBF8
 		public IRenjuChessT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001010 RID: 4112
+	// Token: 0x0200113C RID: 4412
 	public class IMechaTrackScoreTagDetection_SetValue
 	{
-		// Token: 0x04003742 RID: 14146
+		// Token: 0x04003A7A RID: 14970
 		public EMechaTrackScoreDetectionType Type;
 	}
 }

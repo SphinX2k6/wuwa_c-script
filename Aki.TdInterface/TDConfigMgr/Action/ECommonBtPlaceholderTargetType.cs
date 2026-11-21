@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015B4 RID: 5556
+	// Token: 0x02001713 RID: 5907
 	[EnumExtensions]
 	public enum ECommonBtPlaceholderTargetType
 	{
-		// Token: 0x040049F5 RID: 18933
+		// Token: 0x04004DA8 RID: 19880
 		Action,
-		// Token: 0x040049F6 RID: 18934
+		// Token: 0x04004DA9 RID: 19881
 		Condition
 	}
 }

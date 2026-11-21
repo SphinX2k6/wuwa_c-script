@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017FA RID: 6138
+// Token: 0x02000CB3 RID: 3251
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonRewardPopup : UiPanelBase
 {
-	// Token: 0x0600B3BC RID: 46012 RVA: 0x00289E2E File Offset: 0x0028802E
+	// Token: 0x060087A6 RID: 34726 RVA: 0x0029452A File Offset: 0x0029272A
 	public CommonRewardPopup(UUIItem parentItem)
 	{
 		base.CreateByResourceIdAsync("UiItem_RewardPopup", parentItem, false);
 	}
 
-	// Token: 0x0600B3BD RID: 46013 RVA: 0x00289E50 File Offset: 0x00288050
+	// Token: 0x060087A7 RID: 34727 RVA: 0x0029454C File Offset: 0x0029274C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ public class CommonRewardPopup : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600B3BE RID: 46014 RVA: 0x00289EE3 File Offset: 0x002880E3
+	// Token: 0x060087A8 RID: 34728 RVA: 0x002945DF File Offset: 0x002927DF
 	protected override void OnBeforeCreateImplement()
 	{
 		this.Sequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.Sequence);
 	}
 
-	// Token: 0x0600B3BF RID: 46015 RVA: 0x00289F00 File Offset: 0x00288100
+	// Token: 0x060087A9 RID: 34729 RVA: 0x002945FC File Offset: 0x002927FC
 	protected override void OnStart()
 	{
 		this.RewardPanel = new GenericLayout<RewardPanelItem, DailyActivityDefine.RewardTuple>(base.GetHorizontalLayout(0), new Func<RewardPanelItem>(this.CreateRewardItem), null, false, true);
@@ -52,7 +52,7 @@ public class CommonRewardPopup : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600B3C0 RID: 46016 RVA: 0x00289F80 File Offset: 0x00288180
+	// Token: 0x060087AA RID: 34730 RVA: 0x0029467C File Offset: 0x0029287C
 	protected override UniTask OnShowAsyncImplementImplement()
 	{
 		CommonRewardPopup.<OnShowAsyncImplementImplement>d__9 <OnShowAsyncImplementImplement>d__;
@@ -63,7 +63,7 @@ public class CommonRewardPopup : UiPanelBase
 		return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B3C1 RID: 46017 RVA: 0x00289FC4 File Offset: 0x002881C4
+	// Token: 0x060087AB RID: 34731 RVA: 0x002946C0 File Offset: 0x002928C0
 	protected override UniTask OnHideAsyncImplementImplement()
 	{
 		CommonRewardPopup.<OnHideAsyncImplementImplement>d__10 <OnHideAsyncImplementImplement>d__;
@@ -74,7 +74,7 @@ public class CommonRewardPopup : UiPanelBase
 		return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B3C2 RID: 46018 RVA: 0x0028A007 File Offset: 0x00288207
+	// Token: 0x060087AC RID: 34732 RVA: 0x00294703 File Offset: 0x00292903
 	protected override void OnBeforeDestroy()
 	{
 		this.RewardPanel.ClearChildren();
@@ -83,7 +83,7 @@ public class CommonRewardPopup : UiPanelBase
 		this.OperationMap.Clear();
 	}
 
-	// Token: 0x0600B3C3 RID: 46019 RVA: 0x0028A02D File Offset: 0x0028822D
+	// Token: 0x060087AD RID: 34733 RVA: 0x00294729 File Offset: 0x00292929
 	public void Refresh(RewardPopupData data)
 	{
 		this.PopUpData = data;
@@ -95,19 +95,19 @@ public class CommonRewardPopup : UiPanelBase
 		this.<Refresh>g__callback|12_0();
 	}
 
-	// Token: 0x0600B3C4 RID: 46020 RVA: 0x0028A061 File Offset: 0x00288261
+	// Token: 0x060087AE RID: 34734 RVA: 0x0029475D File Offset: 0x0029295D
 	private RewardPanelItem CreateRewardItem()
 	{
 		return new RewardPanelItem();
 	}
 
-	// Token: 0x0600B3C5 RID: 46021 RVA: 0x0028A068 File Offset: 0x00288268
+	// Token: 0x060087AF RID: 34735 RVA: 0x00294764 File Offset: 0x00292964
 	private void OnMaskBtnClick()
 	{
 		this.SetActive(false);
 	}
 
-	// Token: 0x0600B3C6 RID: 46022 RVA: 0x0028A074 File Offset: 0x00288274
+	// Token: 0x060087B0 RID: 34736 RVA: 0x00294770 File Offset: 0x00292970
 	[CompilerGenerated]
 	private void <Refresh>g__callback|12_0()
 	{
@@ -128,7 +128,7 @@ public class CommonRewardPopup : UiPanelBase
 		});
 	}
 
-	// Token: 0x0400515E RID: 20830
+	// Token: 0x04005209 RID: 21001
 	[Nullable(new byte[]
 	{
 		2,
@@ -137,28 +137,28 @@ public class CommonRewardPopup : UiPanelBase
 	})]
 	private GenericLayout<RewardPanelItem, DailyActivityDefine.RewardTuple> RewardPanel;
 
-	// Token: 0x0400515F RID: 20831
+	// Token: 0x0400520A RID: 21002
 	[Nullable(2)]
 	private RewardPopupData PopUpData;
 
-	// Token: 0x04005160 RID: 20832
+	// Token: 0x0400520B RID: 21003
 	private readonly Dictionary<string, Action> OperationMap = new Dictionary<string, Action>();
 
-	// Token: 0x04005161 RID: 20833
+	// Token: 0x0400520C RID: 21004
 	[Nullable(2)]
 	private UiBehaviorLevelSequence Sequence;
 
-	// Token: 0x02007DF5 RID: 32245
+	// Token: 0x02006F7B RID: 28539
 	[NullableContext(0)]
 	private enum EPopupComponent
 	{
-		// Token: 0x04029391 RID: 168849
+		// Token: 0x040246BC RID: 149180
 		PanelLayout,
-		// Token: 0x04029392 RID: 168850
+		// Token: 0x040246BD RID: 149181
 		RewardItem,
-		// Token: 0x04029393 RID: 168851
+		// Token: 0x040246BE RID: 149182
 		Panel,
-		// Token: 0x04029394 RID: 168852
+		// Token: 0x040246BF RID: 149183
 		MaskBtn
 	}
 }

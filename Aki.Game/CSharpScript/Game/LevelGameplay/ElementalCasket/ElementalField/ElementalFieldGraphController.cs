@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E91 RID: 28305
+	// Token: 0x02006011 RID: 24593
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ElementalFieldGraphController : ControllerBase
 	{
-		// Token: 0x06044FC2 RID: 282562 RVA: 0x0110C987 File Offset: 0x0110AB87
+		// Token: 0x0603B163 RID: 242019 RVA: 0x010B6A63 File Offset: 0x010B4C63
 		private int GetDebugLevel()
 		{
 			SundryModel instance = SundryModel.Instance;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return instance.GetModuleDebugLevel("ElementalFieldGraph");
 		}
 
-		// Token: 0x06044FC3 RID: 282563 RVA: 0x0110C9A0 File Offset: 0x0110ABA0
+		// Token: 0x0603B164 RID: 242020 RVA: 0x010B6A7C File Offset: 0x010B4C7C
 		[return: Nullable(2)]
 		public ISceneItemGraphSelectResult SelectWanderPoint(ISceneItemGraph graph, Vector selfLocation, float onNodeRadius, EElementalType? elementalType = null)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			};
 		}
 
-		// Token: 0x06044FC4 RID: 282564 RVA: 0x0110CB88 File Offset: 0x0110AD88
+		// Token: 0x0603B165 RID: 242021 RVA: 0x010B6C64 File Offset: 0x010B4E64
 		[return: Nullable(2)]
 		public ISceneItemGraphSelectResult SelectFleePoint(ISceneItemGraph graph, Vector selfLocation, Vector playerLocation, float onNodeRadius, EElementalType? elementalType = null)
 		{
@@ -190,14 +190,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			};
 		}
 
-		// Token: 0x06044FC5 RID: 282565 RVA: 0x0110CDE4 File Offset: 0x0110AFE4
+		// Token: 0x0603B166 RID: 242022 RVA: 0x010B6EC0 File Offset: 0x010B50C0
 		public bool IsNodeInfluenced(ISceneItemGraph graph, int nodeId, EElementalType? elementalType = null)
 		{
 			Vector nodeLocation = graph.GetNodeLocation(nodeId);
 			return nodeLocation != null && ElementalFieldVolumeController.Instance.IsLocationInAnyField(nodeLocation, elementalType);
 		}
 
-		// Token: 0x06044FC6 RID: 282566 RVA: 0x0110CE0C File Offset: 0x0110B00C
+		// Token: 0x0603B167 RID: 242023 RVA: 0x010B6EE8 File Offset: 0x010B50E8
 		private void DebugDrawCandidate(int debugLevel, Vector location, FLinearColor color, string text, int zOffsetRatio = 1)
 		{
 			UWorld world = GlobalData.World;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FC7 RID: 282567 RVA: 0x0110CE90 File Offset: 0x0110B090
+		// Token: 0x0603B168 RID: 242024 RVA: 0x010B6F6C File Offset: 0x010B516C
 		private void DebugDrawPicked(int debugLevel, Vector selfLocation, Vector pickedLocation, int pickedId)
 		{
 			FLinearColor selectPickedColor = SceneItemGraphDefine.selectPickedColor;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.DebugDrawArrow(selfLocation, pickedLocation, SceneItemGraphDefine.selectPickedColor);
 		}
 
-		// Token: 0x06044FC8 RID: 282568 RVA: 0x0110CEE0 File Offset: 0x0110B0E0
+		// Token: 0x0603B169 RID: 242025 RVA: 0x010B6FBC File Offset: 0x010B51BC
 		private void DebugDrawArrow(Vector from, Vector to, FLinearColor color)
 		{
 			UWorld world = GlobalData.World;
@@ -235,8 +235,8 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			UKismetSystemLibrary.D_DrawDebugArrow(world, from.ToUeVector(false), to.ToUeVector(false), 100f, color, 5f, 3f);
 		}
 
-		// Token: 0x17009A5A RID: 39514
-		// (get) Token: 0x06044FC9 RID: 282569 RVA: 0x0110CF1B File Offset: 0x0110B11B
+		// Token: 0x17006F91 RID: 28561
+		// (get) Token: 0x0603B16A RID: 242026 RVA: 0x010B6FF7 File Offset: 0x010B51F7
 		public static ElementalFieldGraphController Instance
 		{
 			get
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			}
 		}
 
-		// Token: 0x06044FCA RID: 282570 RVA: 0x0110CF22 File Offset: 0x0110B122
+		// Token: 0x0603B16B RID: 242027 RVA: 0x010B6FFE File Offset: 0x010B51FE
 		public static ElementalFieldGraphController GetOrCreateInstance()
 		{
 			if (ElementalFieldGraphController._Instance == null)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return ElementalFieldGraphController._Instance;
 		}
 
-		// Token: 0x06044FCB RID: 282571 RVA: 0x0110CF36 File Offset: 0x0110B136
+		// Token: 0x0603B16C RID: 242028 RVA: 0x010B7012 File Offset: 0x010B5212
 		public static bool CreateInstance()
 		{
 			if (ElementalFieldGraphController._Instance != null)
@@ -266,33 +266,33 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x06044FCC RID: 282572 RVA: 0x0110CF4C File Offset: 0x0110B14C
+		// Token: 0x0603B16D RID: 242029 RVA: 0x010B7028 File Offset: 0x010B5228
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044FCD RID: 282573 RVA: 0x0110CF4E File Offset: 0x0110B14E
+		// Token: 0x0603B16E RID: 242030 RVA: 0x010B702A File Offset: 0x010B522A
 		public static void ResetStaticDefaultValue()
 		{
 			ElementalFieldGraphController._Instance = null;
 		}
 
-		// Token: 0x06044FCE RID: 282574 RVA: 0x0110CF56 File Offset: 0x0110B156
+		// Token: 0x0603B16F RID: 242031 RVA: 0x010B7032 File Offset: 0x010B5232
 		static ElementalFieldGraphController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ElementalFieldGraphController.CreateStaticDefaultValue), new Action(ElementalFieldGraphController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023EB5 RID: 147125
+		// Token: 0x0401F168 RID: 127336
 		private readonly Vector TempToCandidate = Vector.Create();
 
-		// Token: 0x04023EB6 RID: 147126
+		// Token: 0x0401F169 RID: 127337
 		private readonly Vector TempAwayFromPlayer = Vector.Create();
 
-		// Token: 0x04023EB7 RID: 147127
+		// Token: 0x0401F16A RID: 127338
 		private readonly Vector TempDebugDraw = Vector.Create();
 
-		// Token: 0x04023EB8 RID: 147128
+		// Token: 0x0401F16B RID: 127339
 		[Nullable(2)]
 		private static ElementalFieldGraphController _Instance;
 	}

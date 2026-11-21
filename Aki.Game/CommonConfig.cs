@@ -5,79 +5,79 @@ using Aki.Config;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020017FE RID: 6142
+// Token: 0x02000CB7 RID: 3255
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class CommonConfig : ConfigBase
 {
-	// Token: 0x0600B3D9 RID: 46041 RVA: 0x0028A37B File Offset: 0x0028857B
+	// Token: 0x060087C3 RID: 34755 RVA: 0x00294A77 File Offset: 0x00292C77
 	public int? GetSelectablePropItemTickMaxTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("additem_accumulate_initialtime");
 	}
 
-	// Token: 0x0600B3DA RID: 46042 RVA: 0x0028A387 File Offset: 0x00288587
+	// Token: 0x060087C4 RID: 34756 RVA: 0x00294A83 File Offset: 0x00292C83
 	public int? GetSelectablePropItemTickMinTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("additem_accumulate_mintime");
 	}
 
-	// Token: 0x0600B3DB RID: 46043 RVA: 0x0028A393 File Offset: 0x00288593
+	// Token: 0x060087C5 RID: 34757 RVA: 0x00294A8F File Offset: 0x00292C8F
 	public int? GetSelectablePropItemTickIntervalTime()
 	{
 		return ConfigCommonParamById.GetIntConfig("additem_accumulate_deltaspeed");
 	}
 
-	// Token: 0x0600B3DC RID: 46044 RVA: 0x0028A39F File Offset: 0x0028859F
+	// Token: 0x060087C6 RID: 34758 RVA: 0x00294A9B File Offset: 0x00292C9B
 	public float? GetAutoAttachVelocityTime()
 	{
 		return ConfigCommonParamById.GetFloatConfig("AutoAttachVelocityTime");
 	}
 
-	// Token: 0x0600B3DD RID: 46045 RVA: 0x0028A3AB File Offset: 0x002885AB
+	// Token: 0x060087C7 RID: 34759 RVA: 0x00294AA7 File Offset: 0x00292CA7
 	public float? GetAutoAttachInertiaTime()
 	{
 		return ConfigCommonParamById.GetFloatConfig("AutoAttachInertiaTime");
 	}
 
-	// Token: 0x0600B3DE RID: 46046 RVA: 0x0028A3B7 File Offset: 0x002885B7
+	// Token: 0x060087C8 RID: 34760 RVA: 0x00294AB3 File Offset: 0x00292CB3
 	public string GetNetGoodSprite()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetGood");
 	}
 
-	// Token: 0x0600B3DF RID: 46047 RVA: 0x0028A3C3 File Offset: 0x002885C3
+	// Token: 0x060087C9 RID: 34761 RVA: 0x00294ABF File Offset: 0x00292CBF
 	public string GetNetMiddleSprite()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetMiddle");
 	}
 
-	// Token: 0x0600B3E0 RID: 46048 RVA: 0x0028A3CF File Offset: 0x002885CF
+	// Token: 0x060087CA RID: 34762 RVA: 0x00294ACB File Offset: 0x00292CCB
 	public string GetNetBadSprite()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetBad");
 	}
 
-	// Token: 0x0600B3E1 RID: 46049 RVA: 0x0028A3DB File Offset: 0x002885DB
+	// Token: 0x060087CB RID: 34763 RVA: 0x00294AD7 File Offset: 0x00292CD7
 	public string GetNetGoodSpriteMobile()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetGoodMobile");
 	}
 
-	// Token: 0x0600B3E2 RID: 46050 RVA: 0x0028A3E7 File Offset: 0x002885E7
+	// Token: 0x060087CC RID: 34764 RVA: 0x00294AE3 File Offset: 0x00292CE3
 	public string GetNetMiddleSpriteMobile()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetMiddleMobile");
 	}
 
-	// Token: 0x0600B3E3 RID: 46051 RVA: 0x0028A3F3 File Offset: 0x002885F3
+	// Token: 0x060087CD RID: 34765 RVA: 0x00294AEF File Offset: 0x00292CEF
 	public string GetNetBadSpriteMobile()
 	{
 		return ConfigCommonParamById.GetStringConfig("NetBadMobile");
 	}
 
-	// Token: 0x0600B3E4 RID: 46052 RVA: 0x0028A400 File Offset: 0x00288600
+	// Token: 0x060087CE RID: 34766 RVA: 0x00294AFC File Offset: 0x00292CFC
 	public List<QualityInfo> GetItemQualityList()
 	{
 		List<QualityInfo> list = ConfigCommon.ToList<QualityInfo>(ConfigQualityInfoAll.GetConfigList(true));
@@ -88,13 +88,13 @@ public class CommonConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600B3E5 RID: 46053 RVA: 0x0028A442 File Offset: 0x00288642
+	// Token: 0x060087CF RID: 34767 RVA: 0x00294B3E File Offset: 0x00292D3E
 	public QualityInfo? GetItemQualityById(int id)
 	{
 		return ConfigQualityInfoById.GetConfig(id, true);
 	}
 
-	// Token: 0x0600B3E6 RID: 46054 RVA: 0x0028A44C File Offset: 0x0028864C
+	// Token: 0x060087D0 RID: 34768 RVA: 0x00294B48 File Offset: 0x00292D48
 	public string GetItemQualityValueByParam(QualityInfo? config, CommonDefine.EQualityIconType? param)
 	{
 		if (config == null)
@@ -120,19 +120,19 @@ public class CommonConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600B3E7 RID: 46055 RVA: 0x0028A4E2 File Offset: 0x002886E2
+	// Token: 0x060087D1 RID: 34769 RVA: 0x00294BDE File Offset: 0x00292DDE
 	public ElementInfo? GetElementConfig(int elementId)
 	{
 		return ConfigElementInfoById.GetConfig(elementId, true);
 	}
 
-	// Token: 0x0600B3E8 RID: 46056 RVA: 0x0028A4EB File Offset: 0x002886EB
+	// Token: 0x060087D2 RID: 34770 RVA: 0x00294BE7 File Offset: 0x00292DE7
 	public LongPressConfig? GetLongPressConfig(int configId)
 	{
 		return ConfigLongPressConfigById.GetConfig(configId, true);
 	}
 
-	// Token: 0x0600B3E9 RID: 46057 RVA: 0x0028A4F4 File Offset: 0x002886F4
+	// Token: 0x060087D3 RID: 34771 RVA: 0x00294BF0 File Offset: 0x00292DF0
 	public string GetDebugGmViewPath(EUiViewName name)
 	{
 		if (name == EUiViewName.GmView)
@@ -157,79 +157,79 @@ public class CommonConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B3EA RID: 46058 RVA: 0x0028A560 File Offset: 0x00288760
+	// Token: 0x060087D4 RID: 34772 RVA: 0x00294C5C File Offset: 0x00292E5C
 	public int? GetNewMailGap()
 	{
 		return ConfigCommonParamById.GetIntConfig("NewMailGap");
 	}
 
-	// Token: 0x0600B3EB RID: 46059 RVA: 0x0028A56C File Offset: 0x0028876C
+	// Token: 0x060087D5 RID: 34773 RVA: 0x00294C68 File Offset: 0x00292E68
 	public int? GetPingUnChangeValue()
 	{
 		return ConfigCommonParamById.GetIntConfig("PingUnChangeValue");
 	}
 
-	// Token: 0x0600B3EC RID: 46060 RVA: 0x0028A578 File Offset: 0x00288778
+	// Token: 0x060087D6 RID: 34774 RVA: 0x00294C74 File Offset: 0x00292E74
 	public bool? GetBetaBlockRecharge()
 	{
 		return ConfigCommonParamById.GetBoolConfig("BlockPay");
 	}
 
-	// Token: 0x0600B3ED RID: 46061 RVA: 0x0028A584 File Offset: 0x00288784
+	// Token: 0x060087D7 RID: 34775 RVA: 0x00294C80 File Offset: 0x00292E80
 	public bool? GetPioneerFlag()
 	{
 		return ConfigCommonParamById.GetBoolConfig("PioneerFlag");
 	}
 
-	// Token: 0x0600B3EE RID: 46062 RVA: 0x0028A590 File Offset: 0x00288790
+	// Token: 0x060087D8 RID: 34776 RVA: 0x00294C8C File Offset: 0x00292E8C
 	public int? GetShareGap()
 	{
 		return ConfigCommonParamById.GetIntConfig("ShareGap");
 	}
 
-	// Token: 0x0600B3EF RID: 46063 RVA: 0x0028A59C File Offset: 0x0028879C
+	// Token: 0x060087D9 RID: 34777 RVA: 0x00294C98 File Offset: 0x00292E98
 	public IReadOnlyList<int> GetIosReviewShieldMenuArray()
 	{
 		return ConfigCommonParamById.GetIntArrayConfig("BlockOnIosCheckServer");
 	}
 
-	// Token: 0x0600B3F0 RID: 46064 RVA: 0x0028A5A8 File Offset: 0x002887A8
+	// Token: 0x060087DA RID: 34778 RVA: 0x00294CA4 File Offset: 0x00292EA4
 	public string GetKoShopRuleUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("KoShopRuleUrl");
 	}
 
-	// Token: 0x0600B3F1 RID: 46065 RVA: 0x0028A5B4 File Offset: 0x002887B4
+	// Token: 0x060087DB RID: 34779 RVA: 0x00294CB0 File Offset: 0x00292EB0
 	public string GetJaShopRuleUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("JaShopRuleUrl");
 	}
 
-	// Token: 0x0600B3F2 RID: 46066 RVA: 0x0028A5C0 File Offset: 0x002887C0
+	// Token: 0x060087DC RID: 34780 RVA: 0x00294CBC File Offset: 0x00292EBC
 	public int? GetReviewCd()
 	{
 		return ConfigCommonParamById.GetIntConfig("ReviewCd");
 	}
 
-	// Token: 0x0600B3F3 RID: 46067 RVA: 0x0028A5CC File Offset: 0x002887CC
+	// Token: 0x060087DD RID: 34781 RVA: 0x00294CC8 File Offset: 0x00292EC8
 	public int? OpenReviewDelay()
 	{
 		return ConfigCommonParamById.GetIntConfig("OpenReviewDelay");
 	}
 
-	// Token: 0x0600B3F4 RID: 46068 RVA: 0x0028A5D8 File Offset: 0x002887D8
+	// Token: 0x060087DE RID: 34782 RVA: 0x00294CD4 File Offset: 0x00292ED4
 	public float GetPlayPointTrackRange()
 	{
 		return ConfigCommonParamById.GetFloatConfig("PlayPointTrackExtraRadius").GetValueOrDefault();
 	}
 
-	// Token: 0x0600B3F5 RID: 46069 RVA: 0x0028A5F8 File Offset: 0x002887F8
+	// Token: 0x060087DF RID: 34783 RVA: 0x00294CF4 File Offset: 0x00292EF4
 	public int GetDiceItemId()
 	{
 		return ConfigCommonParamById.GetIntConfig("DangoMonopolyDiceItemId").GetValueOrDefault();
 	}
 
-	// Token: 0x0600B3F6 RID: 46070 RVA: 0x0028A617 File Offset: 0x00288817
+	// Token: 0x060087E0 RID: 34784 RVA: 0x00294D13 File Offset: 0x00292F13
 	[NullableContext(1)]
 	public IReadOnlyList<float> GetDangoMonopolyRangeSpeed()
 	{
@@ -245,41 +245,41 @@ public class CommonConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x0600B3F7 RID: 46071 RVA: 0x0028A644 File Offset: 0x00288844
+	// Token: 0x060087E1 RID: 34785 RVA: 0x00294D40 File Offset: 0x00292F40
 	public int GetAutoOpenNoticePatchSize()
 	{
 		return ConfigCommonParamById.GetIntConfig("AutoOpenNotifyPatchSize").GetValueOrDefault();
 	}
 
-	// Token: 0x0600B3F8 RID: 46072 RVA: 0x0028A663 File Offset: 0x00288863
+	// Token: 0x060087E2 RID: 34786 RVA: 0x00294D5F File Offset: 0x00292F5F
 	[NullableContext(1)]
 	public string GetGameIntroductionUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("GameIntroductionUrl") ?? string.Empty;
 	}
 
-	// Token: 0x0600B3F9 RID: 46073 RVA: 0x0028A678 File Offset: 0x00288878
+	// Token: 0x060087E3 RID: 34787 RVA: 0x00294D74 File Offset: 0x00292F74
 	[NullableContext(1)]
 	public string GetGameIntroductionGlobalUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("GameIntroductionGlobalUrl") ?? string.Empty;
 	}
 
-	// Token: 0x0600B3FA RID: 46074 RVA: 0x0028A68D File Offset: 0x0028888D
+	// Token: 0x060087E4 RID: 34788 RVA: 0x00294D89 File Offset: 0x00292F89
 	[NullableContext(1)]
 	public string GetGuideMainlandLinkUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("GuideMainlandLink") ?? string.Empty;
 	}
 
-	// Token: 0x0600B3FB RID: 46075 RVA: 0x0028A6A2 File Offset: 0x002888A2
+	// Token: 0x060087E5 RID: 34789 RVA: 0x00294D9E File Offset: 0x00292F9E
 	[NullableContext(1)]
 	public string GetGuideOverseaLinkUrl()
 	{
 		return ConfigCommonParamById.GetStringConfig("GuideOverseaLink") ?? string.Empty;
 	}
 
-	// Token: 0x0600B3FC RID: 46076 RVA: 0x0028A6B7 File Offset: 0x002888B7
+	// Token: 0x060087E6 RID: 34790 RVA: 0x00294DB3 File Offset: 0x00292FB3
 	[NullableContext(1)]
 	public IReadOnlyList<float> GetPhantomArenaBattleSpeed()
 	{
@@ -296,26 +296,26 @@ public class CommonConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x0600B3FD RID: 46077 RVA: 0x0028A6E0 File Offset: 0x002888E0
+	// Token: 0x060087E7 RID: 34791 RVA: 0x00294DDC File Offset: 0x00292FDC
 	public int GetGiftMaxNineNineNine()
 	{
 		return ConfigCommonParamById.GetIntConfig("GiftMaxNineNineNine").GetValueOrDefault();
 	}
 
-	// Token: 0x0600B3FE RID: 46078 RVA: 0x0028A6FF File Offset: 0x002888FF
+	// Token: 0x060087E8 RID: 34792 RVA: 0x00294DFB File Offset: 0x00292FFB
 	[NullableContext(1)]
 	public IReadOnlyList<string> GetPioneerPkgIdList()
 	{
 		return ConfigCommonParamById.GetStringArrayConfig("PioneerPkgIdList");
 	}
 
-	// Token: 0x0600B3FF RID: 46079 RVA: 0x0028A70C File Offset: 0x0028890C
+	// Token: 0x060087E9 RID: 34793 RVA: 0x00294E08 File Offset: 0x00293008
 	public int GetGachaJumpShopTabId()
 	{
 		return ConfigCommonParamById.GetIntConfig("GachaJumpShopTabId").GetValueOrDefault();
 	}
 
-	// Token: 0x0600B400 RID: 46080 RVA: 0x0028A72C File Offset: 0x0028892C
+	// Token: 0x060087EA RID: 34794 RVA: 0x00294E28 File Offset: 0x00293028
 	[NullableContext(1)]
 	public IReadOnlySet<string> GetUiModelEffectReflectionBlacklist()
 	{
@@ -327,15 +327,21 @@ public class CommonConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x0600B401 RID: 46081 RVA: 0x0028A764 File Offset: 0x00288964
+	// Token: 0x060087EB RID: 34795 RVA: 0x00294E60 File Offset: 0x00293060
 	[NullableContext(1)]
 	public IReadOnlyList<string> GetPanoramicUiDeferWhiteList()
 	{
 		return ConfigCommonParamById.GetStringArrayConfig("PanoramicUiDeferWhiteList") ?? Array.Empty<string>();
 	}
 
-	// Token: 0x17000F1E RID: 3870
-	// (get) Token: 0x0600B402 RID: 46082 RVA: 0x0028A779 File Offset: 0x00288979
+	// Token: 0x060087EC RID: 34796 RVA: 0x00294E78 File Offset: 0x00293078
+	public int GetConsoleParallelPackageGap()
+	{
+		return ConfigCommonParamById.GetIntConfig("ConsoleParallelPackageGap").GetValueOrDefault();
+	}
+
+	// Token: 0x17000F41 RID: 3905
+	// (get) Token: 0x060087ED RID: 34797 RVA: 0x00294E97 File Offset: 0x00293097
 	[Nullable(1)]
 	public static CommonConfig Instance
 	{
@@ -346,7 +352,7 @@ public class CommonConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B403 RID: 46083 RVA: 0x0028A780 File Offset: 0x00288980
+	// Token: 0x060087EE RID: 34798 RVA: 0x00294E9E File Offset: 0x0029309E
 	[NullableContext(1)]
 	public static CommonConfig GetOrCreateInstance()
 	{
@@ -357,7 +363,7 @@ public class CommonConfig : ConfigBase
 		return CommonConfig._Instance;
 	}
 
-	// Token: 0x0600B404 RID: 46084 RVA: 0x0028A794 File Offset: 0x00288994
+	// Token: 0x060087EF RID: 34799 RVA: 0x00294EB2 File Offset: 0x002930B2
 	public static bool CreateInstance()
 	{
 		if (CommonConfig._Instance != null)
@@ -368,24 +374,24 @@ public class CommonConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B405 RID: 46085 RVA: 0x0028A7AA File Offset: 0x002889AA
+	// Token: 0x060087F0 RID: 34800 RVA: 0x00294EC8 File Offset: 0x002930C8
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B406 RID: 46086 RVA: 0x0028A7AC File Offset: 0x002889AC
+	// Token: 0x060087F1 RID: 34801 RVA: 0x00294ECA File Offset: 0x002930CA
 	public static void ResetStaticDefaultValue()
 	{
 		CommonConfig._Instance = null;
 	}
 
-	// Token: 0x0600B407 RID: 46087 RVA: 0x0028A7B4 File Offset: 0x002889B4
+	// Token: 0x060087F2 RID: 34802 RVA: 0x00294ED2 File Offset: 0x002930D2
 	static CommonConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CommonConfig.CreateStaticDefaultValue), new Action(CommonConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005164 RID: 20836
+	// Token: 0x0400520F RID: 21007
 	[Nullable(new byte[]
 	{
 		2,
@@ -393,6 +399,6 @@ public class CommonConfig : ConfigBase
 	})]
 	private IReadOnlySet<string> UiModelEffectReflectionBlacklist;
 
-	// Token: 0x04005165 RID: 20837
+	// Token: 0x04005210 RID: 21008
 	private static CommonConfig _Instance;
 }

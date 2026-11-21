@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135E RID: 4958
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014AE RID: 5294
 	public class ICheckLevelPlayQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007181 RID: 29057 RVA: 0x0011185D File Offset: 0x0010FA5D
+		// Token: 0x06007821 RID: 30753 RVA: 0x0011FDC9 File Offset: 0x0011DFC9
 		public static ICheckLevelPlayQuestCondition Create(ICheckLevelPlayQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002498 RID: 9368
-		// (get) Token: 0x06007182 RID: 29058 RVA: 0x0011187C File Offset: 0x0010FA7C
+		// Token: 0x17002667 RID: 9831
+		// (get) Token: 0x06007822 RID: 30754 RVA: 0x0011FDE8 File Offset: 0x0011DFE8
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002499 RID: 9369
-		// (get) Token: 0x06007183 RID: 29059 RVA: 0x00111889 File Offset: 0x0010FA89
+		// Token: 0x17002668 RID: 9832
+		// (get) Token: 0x06007823 RID: 30755 RVA: 0x0011FDF5 File Offset: 0x0011DFF5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700249A RID: 9370
-		// (get) Token: 0x06007184 RID: 29060 RVA: 0x001118C0 File Offset: 0x0010FAC0
+		// Token: 0x17002669 RID: 9833
+		// (get) Token: 0x06007824 RID: 30756 RVA: 0x0011FE2C File Offset: 0x0011E02C
 		public virtual List<int> LevelPlayIds
 		{
 			get
@@ -73,8 +71,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700249B RID: 9371
-		// (get) Token: 0x06007185 RID: 29061 RVA: 0x00111924 File Offset: 0x0010FB24
+		// Token: 0x1700266A RID: 9834
+		// (get) Token: 0x06007825 RID: 30757 RVA: 0x0011FE90 File Offset: 0x0011E090
 		public virtual int CompleteNumber
 		{
 			get
@@ -83,20 +81,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004192 RID: 16786
+		// Token: 0x0400450E RID: 17678
 		private ICheckLevelPlayQuestCondition Instance;
 
-		// Token: 0x04004193 RID: 16787
+		// Token: 0x0400450F RID: 17679
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004194 RID: 16788
+		// Token: 0x04004510 RID: 17680
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004195 RID: 16789
+		// Token: 0x04004511 RID: 17681
 		private List<int> _LevelPlayIdsCache;
 
-		// Token: 0x04004196 RID: 16790
+		// Token: 0x04004512 RID: 17682
 		private bool _LevelPlayIdsInited;
 	}
 }

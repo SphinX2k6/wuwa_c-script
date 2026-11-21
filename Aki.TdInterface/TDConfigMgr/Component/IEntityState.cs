@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000335 RID: 821
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200037C RID: 892
 	public class IEntityState
 	{
-		// Token: 0x0600102C RID: 4140 RVA: 0x00038444 File Offset: 0x00036644
+		// Token: 0x0600115E RID: 4446 RVA: 0x0003B410 File Offset: 0x00039610
 		private IEntityState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600102D RID: 4141 RVA: 0x0003847C File Offset: 0x0003667C
+		// Token: 0x0600115F RID: 4447 RVA: 0x0003B448 File Offset: 0x00039648
 		public static IEntityState Create([Nullable(2)] IEntityState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600102E RID: 4142 RVA: 0x0003848F File Offset: 0x0003668F
+		// Token: 0x06001160 RID: 4448 RVA: 0x0003B45B File Offset: 0x0003965B
 		public static IEntityState CreateFromSetValue([Nullable(2)] IEntityState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600102F RID: 4143 RVA: 0x000384A2 File Offset: 0x000366A2
+		// Token: 0x06001161 RID: 4449 RVA: 0x0003B46E File Offset: 0x0003966E
 		public IEntityState_SetValue ToSetValue()
 		{
 			return new IEntityState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004A3 RID: 1187
-		// (get) Token: 0x06001030 RID: 4144 RVA: 0x000384C1 File Offset: 0x000366C1
-		// (set) Token: 0x06001031 RID: 4145 RVA: 0x000384EC File Offset: 0x000366EC
+		// Token: 0x170004F1 RID: 1265
+		// (get) Token: 0x06001162 RID: 4450 RVA: 0x0003B48D File Offset: 0x0003968D
+		// (set) Token: 0x06001163 RID: 4451 RVA: 0x0003B4B8 File Offset: 0x000396B8
 		public virtual string Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A4 RID: 1188
-		// (get) Token: 0x06001032 RID: 4146 RVA: 0x000384FA File Offset: 0x000366FA
-		// (set) Token: 0x06001033 RID: 4147 RVA: 0x00038525 File Offset: 0x00036725
+		// Token: 0x170004F2 RID: 1266
+		// (get) Token: 0x06001164 RID: 4452 RVA: 0x0003B4C6 File Offset: 0x000396C6
+		// (set) Token: 0x06001165 RID: 4453 RVA: 0x0003B4F1 File Offset: 0x000396F1
 		public virtual string State
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DA2 RID: 3490
+		// Token: 0x04000E8D RID: 3725
 		[Nullable(2)]
 		protected IEntityState FbInstance;
 
-		// Token: 0x04000DA3 RID: 3491
+		// Token: 0x04000E8E RID: 3726
 		[Nullable(2)]
 		protected IEntityState_SetValue PocoInterface;
 	}

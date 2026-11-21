@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E16 RID: 15894
+	// Token: 0x02004251 RID: 16977
 	public class IEventTypeConfig_UnionUnion
 	{
-		// Token: 0x17006DD8 RID: 28120
-		// (get) Token: 0x060163E4 RID: 91108 RVA: 0x00335EA1 File Offset: 0x003340A1
-		// (set) Token: 0x060163E5 RID: 91109 RVA: 0x00335EA9 File Offset: 0x003340A9
+		// Token: 0x170073BE RID: 29630
+		// (get) Token: 0x06017A11 RID: 96785 RVA: 0x0035EA99 File Offset: 0x0035CC99
+		// (set) Token: 0x06017A12 RID: 96786 RVA: 0x0035EAA1 File Offset: 0x0035CCA1
 		public IEventTypeConfig_Union Type { get; set; }
 
-		// Token: 0x17006DD9 RID: 28121
-		// (get) Token: 0x060163E6 RID: 91110 RVA: 0x00335EB2 File Offset: 0x003340B2
-		// (set) Token: 0x060163E7 RID: 91111 RVA: 0x00335EBA File Offset: 0x003340BA
+		// Token: 0x170073BF RID: 29631
+		// (get) Token: 0x06017A13 RID: 96787 RVA: 0x0035EAAA File Offset: 0x0035CCAA
+		// (set) Token: 0x06017A14 RID: 96788 RVA: 0x0035EAB2 File Offset: 0x0035CCB2
 		public object Value { get; set; }
 
-		// Token: 0x060163E8 RID: 91112 RVA: 0x00335EC3 File Offset: 0x003340C3
+		// Token: 0x06017A15 RID: 96789 RVA: 0x0035EABB File Offset: 0x0035CCBB
 		public IEventTypeConfig_UnionUnion()
 		{
 			this.Type = IEventTypeConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060163E9 RID: 91113 RVA: 0x00335ED9 File Offset: 0x003340D9
+		// Token: 0x06017A16 RID: 96790 RVA: 0x0035EAD1 File Offset: 0x0035CCD1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060163EA RID: 91114 RVA: 0x00335EEB File Offset: 0x003340EB
+		// Token: 0x06017A17 RID: 96791 RVA: 0x0035EAE3 File Offset: 0x0035CCE3
 		public IEventTypeConfigT AsIEventTypeConfig()
 		{
 			return this.As<IEventTypeConfigT>();
 		}
 
-		// Token: 0x060163EB RID: 91115 RVA: 0x00335EF3 File Offset: 0x003340F3
+		// Token: 0x06017A18 RID: 96792 RVA: 0x0035EAEB File Offset: 0x0035CCEB
 		public static IEventTypeConfig_UnionUnion FromIEventTypeConfig(IEventTypeConfigT _ieventtypeconfig)
 		{
 			return new IEventTypeConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060163EC RID: 91116 RVA: 0x00335F08 File Offset: 0x00334108
+		// Token: 0x06017A19 RID: 96793 RVA: 0x0035EB00 File Offset: 0x0035CD00
 		public ICommonEventVarValueChangeT AsICommonEventVarValueChange()
 		{
 			return this.As<ICommonEventVarValueChangeT>();
 		}
 
-		// Token: 0x060163ED RID: 91117 RVA: 0x00335F10 File Offset: 0x00334110
+		// Token: 0x06017A1A RID: 96794 RVA: 0x0035EB08 File Offset: 0x0035CD08
 		public static IEventTypeConfig_UnionUnion FromICommonEventVarValueChange(ICommonEventVarValueChangeT _icommoneventvarvaluechange)
 		{
 			return new IEventTypeConfig_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060163EE RID: 91118 RVA: 0x00335F25 File Offset: 0x00334125
+		// Token: 0x06017A1B RID: 96795 RVA: 0x0035EB1D File Offset: 0x0035CD1D
 		public ICommonEventEntityStateChangeT AsICommonEventEntityStateChange()
 		{
 			return this.As<ICommonEventEntityStateChangeT>();
 		}
 
-		// Token: 0x060163EF RID: 91119 RVA: 0x00335F2D File Offset: 0x0033412D
+		// Token: 0x06017A1C RID: 96796 RVA: 0x0035EB25 File Offset: 0x0035CD25
 		public static IEventTypeConfig_UnionUnion FromICommonEventEntityStateChange(ICommonEventEntityStateChangeT _icommonevententitystatechange)
 		{
 			return new IEventTypeConfig_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x060163F0 RID: 91120 RVA: 0x00335F44 File Offset: 0x00334144
+		// Token: 0x06017A1D RID: 96797 RVA: 0x0035EB3C File Offset: 0x0035CD3C
 		public static int Pack(FlatBufferBuilder builder, IEventTypeConfig_UnionUnion _o)
 		{
 			switch (_o.Type)

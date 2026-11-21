@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022AA RID: 8874
+	// Token: 0x02002519 RID: 9497
 	public class EAvgPlayRoleActionTypeJsonConverter : JsonConverter<EAvgPlayRoleActionType>
 	{
-		// Token: 0x0600C27D RID: 49789 RVA: 0x001C6A0C File Offset: 0x001C4C0C
+		// Token: 0x0600CE4C RID: 52812 RVA: 0x001DE814 File Offset: 0x001DCA14
 		public override EAvgPlayRoleActionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EAvgPlayRoleActionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C27E RID: 49790 RVA: 0x001C6A30 File Offset: 0x001C4C30
+		// Token: 0x0600CE4D RID: 52813 RVA: 0x001DE838 File Offset: 0x001DCA38
 		public override void Write(Utf8JsonWriter writer, EAvgPlayRoleActionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

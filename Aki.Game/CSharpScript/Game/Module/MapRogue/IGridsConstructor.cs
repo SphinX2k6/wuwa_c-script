@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055C1 RID: 21953
+	// Token: 0x02004597 RID: 17815
 	[NullableContext(1)]
 	public interface IGridsConstructor
 	{
-		// Token: 0x170086D5 RID: 34517
-		// (get) Token: 0x06037F62 RID: 229218
-		// (set) Token: 0x06037F63 RID: 229219
+		// Token: 0x17005A9C RID: 23196
+		// (get) Token: 0x0602CE60 RID: 183904
+		// (set) Token: 0x0602CE61 RID: 183905
 		List<IPathNode> Matrix { get; set; }
 
-		// Token: 0x170086D6 RID: 34518
-		// (get) Token: 0x06037F64 RID: 229220
-		// (set) Token: 0x06037F65 RID: 229221
+		// Token: 0x17005A9D RID: 23197
+		// (get) Token: 0x0602CE62 RID: 183906
+		// (set) Token: 0x0602CE63 RID: 183907
 		int Width { get; set; }
 
-		// Token: 0x170086D7 RID: 34519
-		// (get) Token: 0x06037F66 RID: 229222
-		// (set) Token: 0x06037F67 RID: 229223
+		// Token: 0x17005A9E RID: 23198
+		// (get) Token: 0x0602CE64 RID: 183908
+		// (set) Token: 0x0602CE65 RID: 183909
 		int Height { get; set; }
 	}
 }

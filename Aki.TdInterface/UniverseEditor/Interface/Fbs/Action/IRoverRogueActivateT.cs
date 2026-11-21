@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F07 RID: 28423
+	// Token: 0x0200768E RID: 30350
 	public class IRoverRogueActivateT
 	{
-		// Token: 0x1700D35B RID: 54107
-		// (get) Token: 0x06032386 RID: 205702 RVA: 0x006C90DA File Offset: 0x006C72DA
-		// (set) Token: 0x06032387 RID: 205703 RVA: 0x006C90E2 File Offset: 0x006C72E2
+		// Token: 0x1700DEB7 RID: 57015
+		// (get) Token: 0x060353DE RID: 218078 RVA: 0x00725042 File Offset: 0x00723242
+		// (set) Token: 0x060353DF RID: 218079 RVA: 0x0072504A File Offset: 0x0072324A
 		public ERoverRogueActivateType InteractType { get; set; }
 
-		// Token: 0x06032388 RID: 205704 RVA: 0x006C90EB File Offset: 0x006C72EB
+		// Token: 0x060353E0 RID: 218080 RVA: 0x00725053 File Offset: 0x00723253
 		public IRoverRogueActivateT()
 		{
 			this.InteractType = ERoverRogueActivateType.Shop;

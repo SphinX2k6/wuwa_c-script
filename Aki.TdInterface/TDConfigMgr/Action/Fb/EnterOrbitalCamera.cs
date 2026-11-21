@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028D3 RID: 10451
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BA8 RID: 11176
 	public class EnterOrbitalCamera : ActionParams
 	{
-		// Token: 0x0600E81D RID: 59421 RVA: 0x00221173 File Offset: 0x0021F373
+		// Token: 0x0600F64C RID: 63052 RVA: 0x0023E0F3 File Offset: 0x0023C2F3
 		public static EnterOrbitalCamera Create(IEnterOrbitalCamera? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004839 RID: 18489
-		// (get) Token: 0x0600E81E RID: 59422 RVA: 0x00221192 File Offset: 0x0021F392
+		// Token: 0x17004BAA RID: 19370
+		// (get) Token: 0x0600F64D RID: 63053 RVA: 0x0023E112 File Offset: 0x0023C312
 		public virtual IEnterOrbitalCameraControlByMove Option
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700483A RID: 18490
-		// (get) Token: 0x0600E81F RID: 59423 RVA: 0x002211C8 File Offset: 0x0021F3C8
+		// Token: 0x17004BAB RID: 19371
+		// (get) Token: 0x0600F64E RID: 63054 RVA: 0x0023E148 File Offset: 0x0023C348
 		public virtual bool? IsDisableControlCamera
 		{
 			get
@@ -52,14 +50,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400804D RID: 32845
+		// Token: 0x0400870C RID: 34572
 		private IEnterOrbitalCamera Instance;
 
-		// Token: 0x0400804E RID: 32846
+		// Token: 0x0400870D RID: 34573
 		[Nullable(2)]
 		private IEnterOrbitalCameraControlByMove _OptionCache;
 
-		// Token: 0x0400804F RID: 32847
+		// Token: 0x0400870E RID: 34574
 		private bool _OptionInited;
 	}
 }

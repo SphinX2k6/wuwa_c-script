@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
@@ -8,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005665 RID: 22117
+	// Token: 0x0200463B RID: 17979
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeCarryOnMultiTemplatePanel
 	{
-		// Token: 0x06038432 RID: 230450 RVA: 0x00D557A4 File Offset: 0x00D539A4
+		// Token: 0x0602D330 RID: 185136 RVA: 0x00CA3724 File Offset: 0x00CA1924
 		public ComposeCarryOnMultiTemplatePanel(UUIMultiTemplateScrollViewComponent scrollViewComponent)
 		{
 			this.ScrollView = new MultiTemplateScrollView(scrollViewComponent);
 		}
 
-		// Token: 0x06038433 RID: 230451 RVA: 0x00D557CA File Offset: 0x00D539CA
+		// Token: 0x0602D331 RID: 185137 RVA: 0x00CA374A File Offset: 0x00CA194A
 		public void RefreshByData(List<IBaseItemData> itemList, bool scrollToTop = true)
 		{
 			this.SelectedGridIndex = -1;
@@ -27,7 +26,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.DoRefresh(scrollToTop);
 		}
 
-		// Token: 0x06038434 RID: 230452 RVA: 0x00D557E7 File Offset: 0x00D539E7
+		// Token: 0x0602D332 RID: 185138 RVA: 0x00CA3767 File Offset: 0x00CA1967
 		public void RefreshByExchangeData(List<IExchangeData> exchangeList, bool scrollToTop = true, bool useExternalSort = false)
 		{
 			this.SelectedGridIndex = -1;
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.DoRefresh(scrollToTop);
 		}
 
-		// Token: 0x06038435 RID: 230453 RVA: 0x00D55808 File Offset: 0x00D53A08
+		// Token: 0x0602D333 RID: 185139 RVA: 0x00CA3788 File Offset: 0x00CA1988
 		private void DoRefresh(bool scrollToTop)
 		{
 			MultiTemplateScrollViewRefreshContext multiTemplateScrollViewRefreshContext = new MultiTemplateScrollViewRefreshContext(this.DataList);
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			scrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x06038436 RID: 230454 RVA: 0x00D55844 File Offset: 0x00D53A44
+		// Token: 0x0602D334 RID: 185140 RVA: 0x00CA37C4 File Offset: 0x00CA19C4
 		private List<IMultiTemplateGridData> BuildSingleGroupDataList(List<IBaseItemData> itemList)
 		{
 			List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
@@ -71,33 +70,50 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return list;
 		}
 
-		// Token: 0x06038437 RID: 230455 RVA: 0x00D558D8 File Offset: 0x00D53AD8
+		// Token: 0x0602D335 RID: 185141 RVA: 0x00CA3858 File Offset: 0x00CA1A58
 		private List<IMultiTemplateGridData> BuildExchangeDataList(List<IExchangeData> exchangeList, bool useExternalSort = false)
 		{
 			List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
-			Dictionary<int, List<IExchangeData>> dictionary = (from data in (from data in exchangeList
-			where !data.IsSingleDirection || data.ConfigId == data.ExchangeTarget
-			select data).ToList<IExchangeData>()
-			group data by data.ExchangeTypeId).ToDictionary((IGrouping<int, IExchangeData> group) => group.Key, (IGrouping<int, IExchangeData> group) => group.ToList<IExchangeData>());
+			Dictionary<int, List<IExchangeData>> dictionary = new Dictionary<int, List<IExchangeData>>();
+			foreach (IExchangeData exchangeData in exchangeList)
+			{
+				if (!exchangeData.IsSingleDirection || exchangeData.ConfigId == exchangeData.ExchangeTarget)
+				{
+					List<IExchangeData> list2;
+					if (!dictionary.TryGetValue(exchangeData.ExchangeTypeId, out list2))
+					{
+						list2 = new List<IExchangeData>();
+						dictionary[exchangeData.ExchangeTypeId] = list2;
+					}
+					list2.Add(exchangeData);
+				}
+			}
 			IReadOnlyList<ExchangeType> exchangeTypeList = ComposeConfig.Instance.GetExchangeTypeList();
 			if (exchangeTypeList == null)
 			{
 				return list;
 			}
-			List<ValueTuple<string, List<IBaseItemData>>> list2 = new List<ValueTuple<string, List<IBaseItemData>>>();
+			List<ValueTuple<string, List<IBaseItemData>>> list3 = new List<ValueTuple<string, List<IBaseItemData>>>();
 			foreach (ExchangeType exchangeType in exchangeTypeList)
 			{
-				List<IExchangeData> source;
-				if (dictionary.TryGetValue(exchangeType.Id, out source))
+				List<IExchangeData> list4;
+				if (dictionary.TryGetValue(exchangeType.Id, out list4))
 				{
-					List<IBaseItemData> list3 = source.Cast<IBaseItemData>().ToList<IBaseItemData>();
-					List<IBaseItemData> item = useExternalSort ? list3 : this.SortItemList(list3);
-					list2.Add(new ValueTuple<string, List<IBaseItemData>>(exchangeType.Desc ?? "", item));
+					List<IBaseItemData> list5 = list4.ConvertAll<IBaseItemData>(([Nullable(1)] IExchangeData data) => data);
+					List<IBaseItemData> item = useExternalSort ? list5 : this.SortItemList(list5);
+					list3.Add(new ValueTuple<string, List<IBaseItemData>>(exchangeType.Desc ?? "", item));
 				}
 			}
-			foreach (ValueTuple<string, List<IBaseItemData>> valueTuple in (from @group in list2
-			orderby @group.Item2.Count
-			select @group).ToList<ValueTuple<string, List<IBaseItemData>>>())
+			NoLinq.SortStable<ValueTuple<string, List<IBaseItemData>>>(list3, ([TupleElementNames(new string[]
+			{
+				"title",
+				"items"
+			})] ValueTuple<string, List<IBaseItemData>> left, [TupleElementNames(new string[]
+			{
+				"title",
+				"items"
+			})] ValueTuple<string, List<IBaseItemData>> right) => left.Item2.Count.CompareTo(right.Item2.Count));
+			foreach (ValueTuple<string, List<IBaseItemData>> valueTuple in list3)
 			{
 				if (valueTuple.Item2.Count > 0)
 				{
@@ -127,13 +143,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return list;
 		}
 
-		// Token: 0x06038438 RID: 230456 RVA: 0x00D55B64 File Offset: 0x00D53D64
+		// Token: 0x0602D336 RID: 185142 RVA: 0x00CA3AF0 File Offset: 0x00CA1CF0
 		private bool IsGridSelected(int gridIndex)
 		{
 			return gridIndex >= 0 && gridIndex == this.SelectedGridIndex;
 		}
 
-		// Token: 0x06038439 RID: 230457 RVA: 0x00D55B75 File Offset: 0x00D53D75
+		// Token: 0x0602D337 RID: 185143 RVA: 0x00CA3B01 File Offset: 0x00CA1D01
 		private List<IBaseItemData> SortItemList(List<IBaseItemData> itemList)
 		{
 			itemList.Sort(delegate(IBaseItemData a, IBaseItemData b)
@@ -166,7 +182,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return itemList;
 		}
 
-		// Token: 0x0603843A RID: 230458 RVA: 0x00D55B8C File Offset: 0x00D53D8C
+		// Token: 0x0602D338 RID: 185144 RVA: 0x00CA3B18 File Offset: 0x00CA1D18
 		private bool CanComposeOrOwned(IBaseItemData data)
 		{
 			if (data.IsUnlock <= 0)
@@ -181,7 +197,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return ComposeController.Instance.CheckCanExchange(data.ConfigId);
 		}
 
-		// Token: 0x0603843B RID: 230459 RVA: 0x00D55BD8 File Offset: 0x00D53DD8
+		// Token: 0x0602D339 RID: 185145 RVA: 0x00CA3B64 File Offset: 0x00CA1D64
 		private int GetSortId(IBaseItemData data)
 		{
 			if (data.MainType == EComposeListType.Exchange)
@@ -196,7 +212,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return synthesisFormulaById.GetValueOrDefault().SortId;
 		}
 
-		// Token: 0x0603843C RID: 230460 RVA: 0x00D55C20 File Offset: 0x00D53E20
+		// Token: 0x0602D33A RID: 185146 RVA: 0x00CA3BAC File Offset: 0x00CA1DAC
 		private void OnItemToggleStateChanged(MediumItemGridExtendCallback callbackParameter)
 		{
 			Action<MediumItemGridExtendCallback> onItemClick = this.OnItemClick;
@@ -207,7 +223,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			onItemClick(callbackParameter);
 		}
 
-		// Token: 0x0603843D RID: 230461 RVA: 0x00D55C34 File Offset: 0x00D53E34
+		// Token: 0x0602D33B RID: 185147 RVA: 0x00CA3BC0 File Offset: 0x00CA1DC0
 		public void SelectGridProxy(int gridIndex, bool fireEvent = false)
 		{
 			if (gridIndex < 0 || gridIndex >= this.DataList.Count)
@@ -229,7 +245,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			composeItemGridProxy.SetSelected(true);
 		}
 
-		// Token: 0x0603843E RID: 230462 RVA: 0x00D55C9C File Offset: 0x00D53E9C
+		// Token: 0x0602D33C RID: 185148 RVA: 0x00CA3C28 File Offset: 0x00CA1E28
 		public void DeselectCurrentGridProxy(bool fireEvent = false)
 		{
 			if (this.SelectedGridIndex < 0)
@@ -246,7 +262,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SelectedGridIndex = -1;
 		}
 
-		// Token: 0x0603843F RID: 230463 RVA: 0x00D55CEA File Offset: 0x00D53EEA
+		// Token: 0x0602D33D RID: 185149 RVA: 0x00CA3C76 File Offset: 0x00CA1E76
 		public void RefreshGridProxy(int gridIndex)
 		{
 			if (gridIndex < 0 || gridIndex >= this.DataList.Count)
@@ -261,7 +277,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			scrollView.RefreshProxyByData(gridIndex, this.DataList[gridIndex]);
 		}
 
-		// Token: 0x06038440 RID: 230464 RVA: 0x00D55D20 File Offset: 0x00D53F20
+		// Token: 0x0602D33E RID: 185150 RVA: 0x00CA3CAC File Offset: 0x00CA1EAC
 		public void ScrollToGridIndex(int gridIndex)
 		{
 			if (gridIndex < 0 || gridIndex >= this.DataList.Count)
@@ -278,7 +294,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			scrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x06038441 RID: 230465 RVA: 0x00D55D64 File Offset: 0x00D53F64
+		// Token: 0x0602D33F RID: 185151 RVA: 0x00CA3CF0 File Offset: 0x00CA1EF0
 		public int GetScrollAnchorGridIndex(int itemGridIndex)
 		{
 			if (itemGridIndex <= 0 || itemGridIndex >= this.DataList.Count)
@@ -292,7 +308,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return itemGridIndex;
 		}
 
-		// Token: 0x06038442 RID: 230466 RVA: 0x00D55D94 File Offset: 0x00D53F94
+		// Token: 0x0602D340 RID: 185152 RVA: 0x00CA3D20 File Offset: 0x00CA1F20
 		public int GetFirstItemConfigId()
 		{
 			for (int i = 0; i < this.DataList.Count; i++)
@@ -317,7 +333,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return 0;
 		}
 
-		// Token: 0x06038443 RID: 230467 RVA: 0x00D55E18 File Offset: 0x00D54018
+		// Token: 0x0602D341 RID: 185153 RVA: 0x00CA3DA4 File Offset: 0x00CA1FA4
 		public int GetGridIndexByConfigId(int configId)
 		{
 			for (int i = 0; i < this.DataList.Count; i++)
@@ -345,7 +361,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return -1;
 		}
 
-		// Token: 0x06038444 RID: 230468 RVA: 0x00D55EA4 File Offset: 0x00D540A4
+		// Token: 0x0602D342 RID: 185154 RVA: 0x00CA3E30 File Offset: 0x00CA2030
 		public int GetGridIndexByItemIndex(int itemIndex)
 		{
 			int num = 0;
@@ -363,7 +379,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return -1;
 		}
 
-		// Token: 0x06038445 RID: 230469 RVA: 0x00D55EE8 File Offset: 0x00D540E8
+		// Token: 0x0602D343 RID: 185155 RVA: 0x00CA3E74 File Offset: 0x00CA2074
 		[NullableContext(2)]
 		public IBaseItemData GetSelectedItemData()
 		{
@@ -383,7 +399,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return data.ItemData;
 		}
 
-		// Token: 0x06038446 RID: 230470 RVA: 0x00D55F54 File Offset: 0x00D54154
+		// Token: 0x0602D344 RID: 185156 RVA: 0x00CA3EE0 File Offset: 0x00CA20E0
 		[NullableContext(2)]
 		public ComposeItemGridProxy GetGridProxy(int gridIndex)
 		{
@@ -391,26 +407,26 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return ((scrollView != null) ? scrollView.GetProxyByGridIndex(gridIndex) : null) as ComposeItemGridProxy;
 		}
 
-		// Token: 0x06038447 RID: 230471 RVA: 0x00D55F6E File Offset: 0x00D5416E
+		// Token: 0x0602D345 RID: 185157 RVA: 0x00CA3EFA File Offset: 0x00CA20FA
 		public bool IsGridDisplaying(int gridIndex)
 		{
 			MultiTemplateScrollView scrollView = this.ScrollView;
 			return scrollView != null && scrollView.IsGridDisplaying(gridIndex);
 		}
 
-		// Token: 0x06038448 RID: 230472 RVA: 0x00D55F82 File Offset: 0x00D54182
+		// Token: 0x0602D346 RID: 185158 RVA: 0x00CA3F0E File Offset: 0x00CA210E
 		public int GetSelectedGridIndex()
 		{
 			return this.SelectedGridIndex;
 		}
 
-		// Token: 0x06038449 RID: 230473 RVA: 0x00D55F8A File Offset: 0x00D5418A
+		// Token: 0x0602D347 RID: 185159 RVA: 0x00CA3F16 File Offset: 0x00CA2116
 		public int GetDataCount()
 		{
 			return this.DataList.Count;
 		}
 
-		// Token: 0x0603844A RID: 230474 RVA: 0x00D55F98 File Offset: 0x00D54198
+		// Token: 0x0602D348 RID: 185160 RVA: 0x00CA3F24 File Offset: 0x00CA2124
 		public List<IBaseItemData> GetAllItemDataList()
 		{
 			List<IBaseItemData> list = new List<IBaseItemData>();
@@ -429,7 +445,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return list;
 		}
 
-		// Token: 0x0401D95B RID: 121179
+		// Token: 0x040183E6 RID: 99302
 		[Nullable(new byte[]
 		{
 			2,
@@ -437,14 +453,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		public Action<MediumItemGridExtendCallback> OnItemClick;
 
-		// Token: 0x0401D95C RID: 121180
+		// Token: 0x040183E7 RID: 99303
 		[Nullable(2)]
 		private MultiTemplateScrollView ScrollView;
 
-		// Token: 0x0401D95D RID: 121181
+		// Token: 0x040183E8 RID: 99304
 		private List<IMultiTemplateGridData> DataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0401D95E RID: 121182
+		// Token: 0x040183E9 RID: 99305
 		private int SelectedGridIndex = -1;
 	}
 }

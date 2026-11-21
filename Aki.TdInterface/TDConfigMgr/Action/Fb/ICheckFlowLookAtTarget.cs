@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A71 RID: 10865
+	// Token: 0x02002D65 RID: 11621
 	public class ICheckFlowLookAtTarget
 	{
-		// Token: 0x0600EEE8 RID: 61160 RVA: 0x0022C135 File Offset: 0x0022A335
-		[NullableContext(1)]
+		// Token: 0x0600FD9E RID: 64926 RVA: 0x00249E41 File Offset: 0x00248041
 		public static ICheckFlowLookAtTarget Create(ICheckFlowLookAtTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BC8 RID: 19400
-		// (get) Token: 0x0600EEE9 RID: 61161 RVA: 0x0022C154 File Offset: 0x0022A354
+		// Token: 0x17004F82 RID: 20354
+		// (get) Token: 0x0600FD9F RID: 64927 RVA: 0x00249E60 File Offset: 0x00248060
 		public virtual ECheckFlowLookAtTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400836D RID: 33645
+		// Token: 0x04008A71 RID: 35441
 		private ICheckFlowLookAtTarget Instance;
 	}
 }

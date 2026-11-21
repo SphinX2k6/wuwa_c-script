@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200572D RID: 22317
+	// Token: 0x02005D34 RID: 23860
 	public struct IPhotoTargetComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A64C RID: 42572
-		// (get) Token: 0x0602558C RID: 152972 RVA: 0x00527286 File Offset: 0x00525486
+		// Token: 0x1700AF70 RID: 44912
+		// (get) Token: 0x06027AAC RID: 162476 RVA: 0x0056D412 File Offset: 0x0056B612
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602558D RID: 152973 RVA: 0x00527293 File Offset: 0x00525493
+		// Token: 0x06027AAD RID: 162477 RVA: 0x0056D41F File Offset: 0x0056B61F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602558E RID: 152974 RVA: 0x0052729C File Offset: 0x0052549C
+		// Token: 0x06027AAE RID: 162478 RVA: 0x0056D428 File Offset: 0x0056B628
 		public static IPhotoTargetComponent GetRootAsIPhotoTargetComponent(ByteBuffer _bb)
 		{
 			return IPhotoTargetComponent.GetRootAsIPhotoTargetComponent(_bb, default(IPhotoTargetComponent));
 		}
 
-		// Token: 0x0602558F RID: 152975 RVA: 0x005272B8 File Offset: 0x005254B8
+		// Token: 0x06027AAF RID: 162479 RVA: 0x0056D444 File Offset: 0x0056B644
 		public static IPhotoTargetComponent GetRootAsIPhotoTargetComponent(ByteBuffer _bb, IPhotoTargetComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025590 RID: 152976 RVA: 0x005272D5 File Offset: 0x005254D5
+		// Token: 0x06027AB0 RID: 162480 RVA: 0x0056D461 File Offset: 0x0056B661
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025591 RID: 152977 RVA: 0x005272E4 File Offset: 0x005254E4
+		// Token: 0x06027AB1 RID: 162481 RVA: 0x0056D470 File Offset: 0x0056B670
 		public IPhotoTargetComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A64D RID: 42573
-		// (get) Token: 0x06025592 RID: 152978 RVA: 0x005272F4 File Offset: 0x005254F4
+		// Token: 0x1700AF71 RID: 44913
+		// (get) Token: 0x06027AB2 RID: 162482 RVA: 0x0056D480 File Offset: 0x0056B680
 		public bool Disabled
 		{
 			get
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025593 RID: 152979 RVA: 0x00527334 File Offset: 0x00525534
+		// Token: 0x06027AB3 RID: 162483 RVA: 0x0056D4C0 File Offset: 0x0056B6C0
 		public IVectorInfo? RequiredPoints(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -72,8 +72,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IVectorInfo?(default(IVectorInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A64E RID: 42574
-		// (get) Token: 0x06025594 RID: 152980 RVA: 0x00527394 File Offset: 0x00525594
+		// Token: 0x1700AF72 RID: 44914
+		// (get) Token: 0x06027AB4 RID: 162484 RVA: 0x0056D520 File Offset: 0x0056B720
 		public int RequiredPointsLength
 		{
 			get
@@ -87,8 +87,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A64F RID: 42575
-		// (get) Token: 0x06025595 RID: 152981 RVA: 0x005273C0 File Offset: 0x005255C0
+		// Token: 0x1700AF73 RID: 44915
+		// (get) Token: 0x06027AB5 RID: 162485 RVA: 0x0056D54C File Offset: 0x0056B74C
 		public TPhotoTargetCaptureUi TargetCapturePromptUiType
 		{
 			get
@@ -102,7 +102,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025596 RID: 152982 RVA: 0x005273FC File Offset: 0x005255FC
+		// Token: 0x06027AB6 RID: 162486 RVA: 0x0056D588 File Offset: 0x0056B788
 		public TTable? TargetCapturePromptUi<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -113,31 +113,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06025597 RID: 152983 RVA: 0x00527444 File Offset: 0x00525644
+		// Token: 0x06027AB7 RID: 162487 RVA: 0x0056D5D0 File Offset: 0x0056B7D0
 		public IPhotoTargetCaptureUiCustomPoints TargetCapturePromptUiAsIPhotoTargetCaptureUiCustomPoints()
 		{
 			return this.TargetCapturePromptUi<IPhotoTargetCaptureUiCustomPoints>().Value;
 		}
 
-		// Token: 0x06025598 RID: 152984 RVA: 0x00527460 File Offset: 0x00525660
+		// Token: 0x06027AB8 RID: 162488 RVA: 0x0056D5EC File Offset: 0x0056B7EC
 		public IPhotoTargetCaptureUiEachRequiredPoints TargetCapturePromptUiAsIPhotoTargetCaptureUiEachRequiredPoints()
 		{
 			return this.TargetCapturePromptUi<IPhotoTargetCaptureUiEachRequiredPoints>().Value;
 		}
 
-		// Token: 0x06025599 RID: 152985 RVA: 0x0052747C File Offset: 0x0052567C
+		// Token: 0x06027AB9 RID: 162489 RVA: 0x0056D608 File Offset: 0x0056B808
 		public IPhotoTargetCaptureUiEntityZero TargetCapturePromptUiAsIPhotoTargetCaptureUiEntityZero()
 		{
 			return this.TargetCapturePromptUi<IPhotoTargetCaptureUiEntityZero>().Value;
 		}
 
-		// Token: 0x0602559A RID: 152986 RVA: 0x00527498 File Offset: 0x00525698
+		// Token: 0x06027ABA RID: 162490 RVA: 0x0056D624 File Offset: 0x0056B824
 		public IPhotoTargetCaptureUiRequiredPointsCenter TargetCapturePromptUiAsIPhotoTargetCaptureUiRequiredPointsCenter()
 		{
 			return this.TargetCapturePromptUi<IPhotoTargetCaptureUiRequiredPointsCenter>().Value;
 		}
 
-		// Token: 0x0602559B RID: 152987 RVA: 0x005274B4 File Offset: 0x005256B4
+		// Token: 0x06027ABB RID: 162491 RVA: 0x0056D640 File Offset: 0x0056B840
 		public int RayCastIgnoreEntities(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -148,8 +148,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700A650 RID: 42576
-		// (get) Token: 0x0602559C RID: 152988 RVA: 0x005274F4 File Offset: 0x005256F4
+		// Token: 0x1700AF74 RID: 44916
+		// (get) Token: 0x06027ABC RID: 162492 RVA: 0x0056D680 File Offset: 0x0056B880
 		public int RayCastIgnoreEntitiesLength
 		{
 			get
@@ -163,20 +163,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602559D RID: 152989 RVA: 0x00527520 File Offset: 0x00525720
+		// Token: 0x06027ABD RID: 162493 RVA: 0x0056D6AC File Offset: 0x0056B8AC
 		public Span<int> GetRayCastIgnoreEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0602559E RID: 152990 RVA: 0x00527530 File Offset: 0x00525730
+		// Token: 0x06027ABE RID: 162494 RVA: 0x0056D6BC File Offset: 0x0056B8BC
 		public int[] GetRayCastIgnoreEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(12);
 		}
 
-		// Token: 0x1700A651 RID: 42577
-		// (get) Token: 0x0602559F RID: 152991 RVA: 0x00527540 File Offset: 0x00525740
+		// Token: 0x1700AF75 RID: 44917
+		// (get) Token: 0x06027ABF RID: 162495 RVA: 0x0056D6CC File Offset: 0x0056B8CC
 		public byte NullMask
 		{
 			get
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060255A0 RID: 152992 RVA: 0x0052757D File Offset: 0x0052577D
+		// Token: 0x06027AC0 RID: 162496 RVA: 0x0056D709 File Offset: 0x0056B909
 		public static Offset<IPhotoTargetComponent> CreateIPhotoTargetComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset RequiredPointsOffset = default(VectorOffset), TPhotoTargetCaptureUi TargetCapturePromptUi_type = TPhotoTargetCaptureUi.NONE, int TargetCapturePromptUiOffset = 0, VectorOffset RayCastIgnoreEntitiesOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -203,25 +203,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhotoTargetComponent.EndIPhotoTargetComponent(builder);
 		}
 
-		// Token: 0x060255A1 RID: 152993 RVA: 0x005275B9 File Offset: 0x005257B9
+		// Token: 0x06027AC1 RID: 162497 RVA: 0x0056D745 File Offset: 0x0056B945
 		public static void StartIPhotoTargetComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060255A2 RID: 152994 RVA: 0x005275C2 File Offset: 0x005257C2
+		// Token: 0x06027AC2 RID: 162498 RVA: 0x0056D74E File Offset: 0x0056B94E
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060255A3 RID: 152995 RVA: 0x005275CD File Offset: 0x005257CD
+		// Token: 0x06027AC3 RID: 162499 RVA: 0x0056D759 File Offset: 0x0056B959
 		public static void AddRequiredPoints(FlatBufferBuilder builder, VectorOffset requiredPointsOffset)
 		{
 			builder.AddOffset(1, requiredPointsOffset.Value, 0);
 		}
 
-		// Token: 0x060255A4 RID: 152996 RVA: 0x005275E0 File Offset: 0x005257E0
+		// Token: 0x06027AC4 RID: 162500 RVA: 0x0056D76C File Offset: 0x0056B96C
 		public static VectorOffset CreateRequiredPointsVector(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255A5 RID: 152997 RVA: 0x00527620 File Offset: 0x00525820
+		// Token: 0x06027AC5 RID: 162501 RVA: 0x0056D7AC File Offset: 0x0056B9AC
 		public static VectorOffset CreateRequiredPointsVectorBlock(FlatBufferBuilder builder, Offset<IVectorInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255A6 RID: 152998 RVA: 0x0052763A File Offset: 0x0052583A
+		// Token: 0x06027AC6 RID: 162502 RVA: 0x0056D7C6 File Offset: 0x0056B9C6
 		public static VectorOffset CreateRequiredPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVectorInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255A7 RID: 152999 RVA: 0x00527658 File Offset: 0x00525858
+		// Token: 0x06027AC7 RID: 162503 RVA: 0x0056D7E4 File Offset: 0x0056B9E4
 		public static VectorOffset CreateRequiredPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -256,31 +256,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255A8 RID: 153000 RVA: 0x00527671 File Offset: 0x00525871
+		// Token: 0x06027AC8 RID: 162504 RVA: 0x0056D7FD File Offset: 0x0056B9FD
 		public static void StartRequiredPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060255A9 RID: 153001 RVA: 0x0052767C File Offset: 0x0052587C
+		// Token: 0x06027AC9 RID: 162505 RVA: 0x0056D808 File Offset: 0x0056BA08
 		public static void AddTargetCapturePromptUiType(FlatBufferBuilder builder, TPhotoTargetCaptureUi targetCapturePromptUiType)
 		{
 			builder.AddByte(2, (byte)targetCapturePromptUiType, 0);
 		}
 
-		// Token: 0x060255AA RID: 153002 RVA: 0x00527687 File Offset: 0x00525887
+		// Token: 0x06027ACA RID: 162506 RVA: 0x0056D813 File Offset: 0x0056BA13
 		public static void AddTargetCapturePromptUi(FlatBufferBuilder builder, int targetCapturePromptUiOffset)
 		{
 			builder.AddOffset(3, targetCapturePromptUiOffset, 0);
 		}
 
-		// Token: 0x060255AB RID: 153003 RVA: 0x00527692 File Offset: 0x00525892
+		// Token: 0x06027ACB RID: 162507 RVA: 0x0056D81E File Offset: 0x0056BA1E
 		public static void AddRayCastIgnoreEntities(FlatBufferBuilder builder, VectorOffset rayCastIgnoreEntitiesOffset)
 		{
 			builder.AddOffset(4, rayCastIgnoreEntitiesOffset.Value, 0);
 		}
 
-		// Token: 0x060255AC RID: 153004 RVA: 0x005276A4 File Offset: 0x005258A4
+		// Token: 0x06027ACC RID: 162508 RVA: 0x0056D830 File Offset: 0x0056BA30
 		public static VectorOffset CreateRayCastIgnoreEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255AD RID: 153005 RVA: 0x005276DB File Offset: 0x005258DB
+		// Token: 0x06027ACD RID: 162509 RVA: 0x0056D867 File Offset: 0x0056BA67
 		public static VectorOffset CreateRayCastIgnoreEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255AE RID: 153006 RVA: 0x005276F5 File Offset: 0x005258F5
+		// Token: 0x06027ACE RID: 162510 RVA: 0x0056D881 File Offset: 0x0056BA81
 		public static VectorOffset CreateRayCastIgnoreEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255AF RID: 153007 RVA: 0x00527713 File Offset: 0x00525913
+		// Token: 0x06027ACF RID: 162511 RVA: 0x0056D89F File Offset: 0x0056BA9F
 		public static VectorOffset CreateRayCastIgnoreEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -315,25 +315,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060255B0 RID: 153008 RVA: 0x0052772C File Offset: 0x0052592C
+		// Token: 0x06027AD0 RID: 162512 RVA: 0x0056D8B8 File Offset: 0x0056BAB8
 		public static void StartRayCastIgnoreEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060255B1 RID: 153009 RVA: 0x00527737 File Offset: 0x00525937
+		// Token: 0x06027AD1 RID: 162513 RVA: 0x0056D8C3 File Offset: 0x0056BAC3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060255B2 RID: 153010 RVA: 0x00527742 File Offset: 0x00525942
+		// Token: 0x06027AD2 RID: 162514 RVA: 0x0056D8CE File Offset: 0x0056BACE
 		public static Offset<IPhotoTargetComponent> EndIPhotoTargetComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotoTargetComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060255B3 RID: 153011 RVA: 0x00527750 File Offset: 0x00525950
+		// Token: 0x06027AD3 RID: 162515 RVA: 0x0056D8DC File Offset: 0x0056BADC
 		public IPhotoTargetComponentT UnPack()
 		{
 			IPhotoTargetComponentT photoTargetComponentT = new IPhotoTargetComponentT();
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return photoTargetComponentT;
 		}
 
-		// Token: 0x060255B4 RID: 153012 RVA: 0x0052776C File Offset: 0x0052596C
+		// Token: 0x06027AD4 RID: 162516 RVA: 0x0056D8F8 File Offset: 0x0056BAF8
 		public void UnPackTo(IPhotoTargetComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -375,7 +375,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060255B5 RID: 153013 RVA: 0x0052793C File Offset: 0x00525B3C
+		// Token: 0x06027AD5 RID: 162517 RVA: 0x0056DAC8 File Offset: 0x0056BCC8
 		public static Offset<IPhotoTargetComponent> Pack(FlatBufferBuilder builder, IPhotoTargetComponentT _o)
 		{
 			if (_o == null)
@@ -403,7 +403,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPhotoTargetComponent.CreateIPhotoTargetComponent(builder, _o.Disabled, requiredPointsOffset, targetCapturePromptUi_type, targetCapturePromptUiOffset, rayCastIgnoreEntitiesOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EBA8 RID: 60328
+		// Token: 0x0400F893 RID: 63635
 		private Table __p;
 	}
 }

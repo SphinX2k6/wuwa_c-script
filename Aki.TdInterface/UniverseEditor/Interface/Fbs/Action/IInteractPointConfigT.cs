@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200699D RID: 27037
+	// Token: 0x02007050 RID: 28752
 	public class IInteractPointConfigT
 	{
-		// Token: 0x1700C89D RID: 51357
-		// (get) Token: 0x0602F3EB RID: 193515 RVA: 0x0066F9D6 File Offset: 0x0066DBD6
-		// (set) Token: 0x0602F3EC RID: 193516 RVA: 0x0066F9DE File Offset: 0x0066DBDE
+		// Token: 0x1700D2A2 RID: 53922
+		// (get) Token: 0x06031DC7 RID: 204231 RVA: 0x006C00DA File Offset: 0x006BE2DA
+		// (set) Token: 0x06031DC8 RID: 204232 RVA: 0x006C00E2 File Offset: 0x006BE2E2
 		public EInteractUnlockType Type { get; set; }
 
-		// Token: 0x0602F3ED RID: 193517 RVA: 0x0066F9E7 File Offset: 0x0066DBE7
+		// Token: 0x06031DC9 RID: 204233 RVA: 0x006C00EB File Offset: 0x006BE2EB
 		public IInteractPointConfigT()
 		{
 			this.Type = EInteractUnlockType.Sequence;

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007446 RID: 29766
+	// Token: 0x02007C39 RID: 31801
 	public class ITransitionPopupConfigT
 	{
-		// Token: 0x1700E1FC RID: 57852
-		// (get) Token: 0x06036137 RID: 221495 RVA: 0x0075AD15 File Offset: 0x00758F15
-		// (set) Token: 0x06036138 RID: 221496 RVA: 0x0075AD1D File Offset: 0x00758F1D
+		// Token: 0x1700EE19 RID: 60953
+		// (get) Token: 0x06039520 RID: 234784 RVA: 0x007BDA41 File Offset: 0x007BBC41
+		// (set) Token: 0x06039521 RID: 234785 RVA: 0x007BDA49 File Offset: 0x007BBC49
 		public float Duration { get; set; }
 
-		// Token: 0x1700E1FD RID: 57853
-		// (get) Token: 0x06036139 RID: 221497 RVA: 0x0075AD26 File Offset: 0x00758F26
-		// (set) Token: 0x0603613A RID: 221498 RVA: 0x0075AD2E File Offset: 0x00758F2E
+		// Token: 0x1700EE1A RID: 60954
+		// (get) Token: 0x06039522 RID: 234786 RVA: 0x007BDA52 File Offset: 0x007BBC52
+		// (set) Token: 0x06039523 RID: 234787 RVA: 0x007BDA5A File Offset: 0x007BBC5A
 		public TTransitionPopupStyleUnion PopupStyle { get; set; }
 
-		// Token: 0x1700E1FE RID: 57854
-		// (get) Token: 0x0603613B RID: 221499 RVA: 0x0075AD37 File Offset: 0x00758F37
-		// (set) Token: 0x0603613C RID: 221500 RVA: 0x0075AD3F File Offset: 0x00758F3F
+		// Token: 0x1700EE1B RID: 60955
+		// (get) Token: 0x06039524 RID: 234788 RVA: 0x007BDA63 File Offset: 0x007BBC63
+		// (set) Token: 0x06039525 RID: 234789 RVA: 0x007BDA6B File Offset: 0x007BBC6B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603613D RID: 221501 RVA: 0x0075AD48 File Offset: 0x00758F48
+		// Token: 0x06039526 RID: 234790 RVA: 0x007BDA74 File Offset: 0x007BBC74
 		public ITransitionPopupConfigT()
 		{
 			this.Duration = 0f;

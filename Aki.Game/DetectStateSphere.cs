@@ -7,21 +7,21 @@ using UnrealEngine;
 [Nullable(0)]
 public class DetectStateSphere
 {
-	// Token: 0x06001220 RID: 4640 RVA: 0x00066EF3 File Offset: 0x000650F3
+	// Token: 0x06001226 RID: 4646 RVA: 0x000686C3 File Offset: 0x000668C3
 	public DetectStateSphere(UTraceSphereElement sphereElement)
 	{
 		this.SphereElement = sphereElement;
 	}
 
-	// Token: 0x04000D95 RID: 3477
+	// Token: 0x04000D9D RID: 3485
 	public readonly Vector Offset = Vector.Create();
 
-	// Token: 0x04000D96 RID: 3478
+	// Token: 0x04000D9E RID: 3486
 	public readonly Vector CurrentPosition = Vector.Create();
 
-	// Token: 0x04000D97 RID: 3479
+	// Token: 0x04000D9F RID: 3487
 	public readonly Vector LastFramePosition = Vector.Create();
 
-	// Token: 0x04000D98 RID: 3480
+	// Token: 0x04000DA0 RID: 3488
 	public readonly UTraceSphereElement SphereElement;
 }

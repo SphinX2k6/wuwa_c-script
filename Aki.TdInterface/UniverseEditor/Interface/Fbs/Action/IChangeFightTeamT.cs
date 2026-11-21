@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062FA RID: 25338
+	// Token: 0x0200696B RID: 26987
 	public class IChangeFightTeamT
 	{
-		// Token: 0x1700BD1D RID: 48413
-		// (get) Token: 0x0602BCE1 RID: 179425 RVA: 0x0060656C File Offset: 0x0060476C
-		// (set) Token: 0x0602BCE2 RID: 179426 RVA: 0x00606574 File Offset: 0x00604774
+		// Token: 0x1700C6A7 RID: 50855
+		// (get) Token: 0x0602E44A RID: 189514 RVA: 0x00651578 File Offset: 0x0064F778
+		// (set) Token: 0x0602E44B RID: 189515 RVA: 0x00651580 File Offset: 0x0064F780
 		public int TeamIndex { get; set; }
 
-		// Token: 0x1700BD1E RID: 48414
-		// (get) Token: 0x0602BCE3 RID: 179427 RVA: 0x0060657D File Offset: 0x0060477D
-		// (set) Token: 0x0602BCE4 RID: 179428 RVA: 0x00606585 File Offset: 0x00604785
+		// Token: 0x1700C6A8 RID: 50856
+		// (get) Token: 0x0602E44C RID: 189516 RVA: 0x00651589 File Offset: 0x0064F789
+		// (set) Token: 0x0602E44D RID: 189517 RVA: 0x00651591 File Offset: 0x0064F791
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BCE5 RID: 179429 RVA: 0x0060658E File Offset: 0x0060478E
+		// Token: 0x0602E44E RID: 189518 RVA: 0x0065159A File Offset: 0x0064F79A
 		public IChangeFightTeamT()
 		{
 			this.TeamIndex = 0;

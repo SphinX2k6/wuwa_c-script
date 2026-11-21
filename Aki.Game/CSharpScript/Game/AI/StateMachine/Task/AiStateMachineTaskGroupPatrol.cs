@@ -5,16 +5,16 @@ using CSharpScript.Game.Utils.CombatStateMachine;
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x02007319 RID: 29465
+	// Token: 0x0200649C RID: 25756
 	public class AiStateMachineTaskGroupPatrol : AiStateMachineTask
 	{
-		// Token: 0x06048535 RID: 296245 RVA: 0x01299817 File Offset: 0x01297A17
+		// Token: 0x0603E982 RID: 256386 RVA: 0x0123C297 File Offset: 0x0123A497
 		[NullableContext(1)]
 		public AiStateMachineTaskGroupPatrol(AiStateMachineBase stateMachineNode, CombatStateMachineDefine.Fsm.Task state) : base(stateMachineNode, state)
 		{
 		}
 
-		// Token: 0x06048536 RID: 296246 RVA: 0x01299824 File Offset: 0x01297A24
+		// Token: 0x0603E983 RID: 256387 RVA: 0x0123C2A4 File Offset: 0x0123A4A4
 		public override void OnEnter(long? contextId = null)
 		{
 			MonsterPatrolInfo monsterInfoByEntityId = MonsterGroupPatrolModel.Instance.GetMonsterInfoByEntityId(this.Node.Entity.Id);
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048537 RID: 296247 RVA: 0x01299858 File Offset: 0x01297A58
+		// Token: 0x0603E984 RID: 256388 RVA: 0x0123C2D8 File Offset: 0x0123A4D8
 		public override void OnExit(long? contextId = null)
 		{
 			MonsterPatrolInfo monsterInfoByEntityId = MonsterGroupPatrolModel.Instance.GetMonsterInfoByEntityId(this.Node.Entity.Id);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.AI.StateMachine.Task
 			}
 		}
 
-		// Token: 0x06048538 RID: 296248 RVA: 0x0129989B File Offset: 0x01297A9B
+		// Token: 0x0603E985 RID: 256389 RVA: 0x0123C31B File Offset: 0x0123A51B
 		protected override void OnTick(float delta, long? contextId = null)
 		{
 			if (MonsterGroupPatrolModel.Instance.GetMonsterInfoByEntityId(this.Node.Entity.Id) == null)

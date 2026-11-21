@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002309 RID: 8969
+// Token: 0x020017ED RID: 6125
 [NullableContext(1)]
 [Nullable(0)]
 public class YouHuQteView : PanelQteView
 {
-	// Token: 0x06011B55 RID: 72533 RVA: 0x0045A57C File Offset: 0x0045877C
+	// Token: 0x0600EFF0 RID: 61424 RVA: 0x0046738C File Offset: 0x0046558C
 	public YouHuQteView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011B56 RID: 72534 RVA: 0x0045A5C8 File Offset: 0x004587C8
+	// Token: 0x0600EFF1 RID: 61425 RVA: 0x004673D8 File Offset: 0x004655D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -101,7 +101,7 @@ public class YouHuQteView : PanelQteView
 		this.ComponentRegisterInfos = list2;
 	}
 
-	// Token: 0x06011B57 RID: 72535 RVA: 0x0045AA08 File Offset: 0x00458C08
+	// Token: 0x0600EFF2 RID: 61426 RVA: 0x00467818 File Offset: 0x00465A18
 	protected override UniTask OnBeforeStartAsync()
 	{
 		YouHuQteView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -112,7 +112,7 @@ public class YouHuQteView : PanelQteView
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011B58 RID: 72536 RVA: 0x0045AA4C File Offset: 0x00458C4C
+	// Token: 0x0600EFF3 RID: 61427 RVA: 0x0046785C File Offset: 0x00465A5C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -159,7 +159,7 @@ public class YouHuQteView : PanelQteView
 		this.InitQteData();
 	}
 
-	// Token: 0x06011B59 RID: 72537 RVA: 0x0045AC34 File Offset: 0x00458E34
+	// Token: 0x0600EFF4 RID: 61428 RVA: 0x00467A44 File Offset: 0x00465C44
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -170,7 +170,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B5A RID: 72538 RVA: 0x0045AC88 File Offset: 0x00458E88
+	// Token: 0x0600EFF5 RID: 61429 RVA: 0x00467A98 File Offset: 0x00465C98
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -195,12 +195,12 @@ public class YouHuQteView : PanelQteView
 		this.StopDelayTimer();
 	}
 
-	// Token: 0x06011B5B RID: 72539 RVA: 0x0045AD58 File Offset: 0x00458F58
+	// Token: 0x0600EFF6 RID: 61430 RVA: 0x00467B68 File Offset: 0x00465D68
 	protected override void RefreshVisible()
 	{
 	}
 
-	// Token: 0x06011B5C RID: 72540 RVA: 0x0045AD5A File Offset: 0x00458F5A
+	// Token: 0x0600EFF7 RID: 61431 RVA: 0x00467B6A File Offset: 0x00465D6A
 	private void StopDelayTimer()
 	{
 		if (this.DelayTimer != null)
@@ -210,7 +210,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B5D RID: 72541 RVA: 0x0045AD7C File Offset: 0x00458F7C
+	// Token: 0x0600EFF8 RID: 61432 RVA: 0x00467B8C File Offset: 0x00465D8C
 	private void InitQteData()
 	{
 		int num = (int)(this.OpenParam ?? 0);
@@ -236,7 +236,7 @@ public class YouHuQteView : PanelQteView
 		levelSequencePlayer.PlayLevelSequenceByName("Start02", false, null, false);
 	}
 
-	// Token: 0x06011B5E RID: 72542 RVA: 0x0045AE68 File Offset: 0x00459068
+	// Token: 0x0600EFF9 RID: 61433 RVA: 0x00467C78 File Offset: 0x00465E78
 	private void OnSequenceEndEvent(string sequenceName)
 	{
 		if (sequenceName == "Start02")
@@ -251,7 +251,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B5F RID: 72543 RVA: 0x0045AEB4 File Offset: 0x004590B4
+	// Token: 0x0600EFFA RID: 61434 RVA: 0x00467CC4 File Offset: 0x00465EC4
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -273,7 +273,7 @@ public class YouHuQteView : PanelQteView
 		progressEffect.SetNiagaraVarFloat("Dissolve", num);
 	}
 
-	// Token: 0x06011B60 RID: 72544 RVA: 0x0045AF27 File Offset: 0x00459127
+	// Token: 0x0600EFFB RID: 61435 RVA: 0x00467D37 File Offset: 0x00465F37
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
@@ -283,7 +283,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B61 RID: 72545 RVA: 0x0045AF52 File Offset: 0x00459152
+	// Token: 0x0600EFFC RID: 61436 RVA: 0x00467D62 File Offset: 0x00465F62
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
@@ -293,7 +293,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B62 RID: 72546 RVA: 0x0045AF80 File Offset: 0x00459180
+	// Token: 0x0600EFFD RID: 61437 RVA: 0x00467D90 File Offset: 0x00465F90
 	private void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 	{
 		if (this.IsQteEnd || !this.IsQteStart)
@@ -311,7 +311,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B63 RID: 72547 RVA: 0x0045AFBC File Offset: 0x004591BC
+	// Token: 0x0600EFFE RID: 61438 RVA: 0x00467DCC File Offset: 0x00465FCC
 	private void OnInput(int index)
 	{
 		this.LevelSequencePlayerList[index].PlayLevelSequenceByName("ButtonPre", false, null, false);
@@ -325,13 +325,13 @@ public class YouHuQteView : PanelQteView
 		PanelQteController.Instance.StopQte(num, false);
 	}
 
-	// Token: 0x06011B64 RID: 72548 RVA: 0x0045B035 File Offset: 0x00459235
+	// Token: 0x0600EFFF RID: 61439 RVA: 0x00467E45 File Offset: 0x00466045
 	protected override void InputControllerChangeInner()
 	{
 		this.RefreshEffectVisible();
 	}
 
-	// Token: 0x06011B65 RID: 72549 RVA: 0x0045B040 File Offset: 0x00459240
+	// Token: 0x0600F000 RID: 61440 RVA: 0x00467E50 File Offset: 0x00466050
 	private void RefreshEffectVisible()
 	{
 		bool uiactive = Info.Instance.IsInGamepad();
@@ -346,7 +346,7 @@ public class YouHuQteView : PanelQteView
 		}
 	}
 
-	// Token: 0x06011B66 RID: 72550 RVA: 0x0045B0E8 File Offset: 0x004592E8
+	// Token: 0x0600F001 RID: 61441 RVA: 0x00467EF8 File Offset: 0x004660F8
 	protected override void HandleQteEnd()
 	{
 		if (this.DelayTimer != null)
@@ -365,45 +365,45 @@ public class YouHuQteView : PanelQteView
 		}, 333f, null, null, true, 1f);
 	}
 
-	// Token: 0x04008658 RID: 34392
+	// Token: 0x04008798 RID: 34712
 	private readonly List<InputMultiKeyItem> KeyItemList = new List<InputMultiKeyItem>();
 
-	// Token: 0x04008659 RID: 34393
+	// Token: 0x04008799 RID: 34713
 	[Nullable(2)]
 	private UUITexture ProgressTexture;
 
-	// Token: 0x0400865A RID: 34394
+	// Token: 0x0400879A RID: 34714
 	[Nullable(2)]
 	private UUINiagara ProgressEffect;
 
-	// Token: 0x0400865B RID: 34395
+	// Token: 0x0400879B RID: 34715
 	[Nullable(2)]
 	private UUIItem AnimItem;
 
-	// Token: 0x0400865C RID: 34396
+	// Token: 0x0400879C RID: 34716
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400865D RID: 34397
+	// Token: 0x0400879D RID: 34717
 	private readonly List<LevelSequencePlayer> LevelSequencePlayerList = new List<LevelSequencePlayer>();
 
-	// Token: 0x0400865E RID: 34398
+	// Token: 0x0400879E RID: 34718
 	private readonly List<UUIItem> KeyboardEffectList = new List<UUIItem>();
 
-	// Token: 0x0400865F RID: 34399
+	// Token: 0x0400879F RID: 34719
 	private readonly List<UUIItem> GamepadEffectList = new List<UUIItem>();
 
-	// Token: 0x04008660 RID: 34400
+	// Token: 0x040087A0 RID: 34720
 	[Nullable(2)]
 	private TimerHandle DelayTimer;
 
-	// Token: 0x04008661 RID: 34401
+	// Token: 0x040087A1 RID: 34721
 	private Number DurationMs = 0;
 
-	// Token: 0x04008662 RID: 34402
+	// Token: 0x040087A2 RID: 34722
 	private const int STOP_ANIM_TIME = 333;
 
-	// Token: 0x04008663 RID: 34403
+	// Token: 0x040087A3 RID: 34723
 	[StaticVariableRuleIgnore]
 	private static readonly string[] ActionNames = new string[]
 	{
@@ -413,75 +413,75 @@ public class YouHuQteView : PanelQteView
 		"QTE数字4"
 	};
 
-	// Token: 0x02008886 RID: 34950
+	// Token: 0x02007A0C RID: 31244
 	[NullableContext(0)]
 	private enum EPadChildType
 	{
-		// Token: 0x0402C5F7 RID: 181751
+		// Token: 0x04027905 RID: 162053
 		AnimItem,
-		// Token: 0x0402C5F8 RID: 181752
+		// Token: 0x04027906 RID: 162054
 		AnimItem1,
-		// Token: 0x0402C5F9 RID: 181753
+		// Token: 0x04027907 RID: 162055
 		AnimItem2,
-		// Token: 0x0402C5FA RID: 181754
+		// Token: 0x04027908 RID: 162056
 		AnimItem3,
-		// Token: 0x0402C5FB RID: 181755
+		// Token: 0x04027909 RID: 162057
 		AnimItem4,
-		// Token: 0x0402C5FC RID: 181756
+		// Token: 0x0402790A RID: 162058
 		ProgressTexture,
-		// Token: 0x0402C5FD RID: 181757
+		// Token: 0x0402790B RID: 162059
 		ProgressEffect,
-		// Token: 0x0402C5FE RID: 181758
+		// Token: 0x0402790C RID: 162060
 		BtnItem1,
-		// Token: 0x0402C5FF RID: 181759
+		// Token: 0x0402790D RID: 162061
 		BtnItem2,
-		// Token: 0x0402C600 RID: 181760
+		// Token: 0x0402790E RID: 162062
 		BtnItem3,
-		// Token: 0x0402C601 RID: 181761
+		// Token: 0x0402790F RID: 162063
 		BtnItem4
 	}
 
-	// Token: 0x02008887 RID: 34951
+	// Token: 0x02007A0D RID: 31245
 	[NullableContext(0)]
 	private enum EDesktopChildType
 	{
-		// Token: 0x0402C603 RID: 181763
+		// Token: 0x04027911 RID: 162065
 		AnimItem,
-		// Token: 0x0402C604 RID: 181764
+		// Token: 0x04027912 RID: 162066
 		AnimItem1,
-		// Token: 0x0402C605 RID: 181765
+		// Token: 0x04027913 RID: 162067
 		AnimItem2,
-		// Token: 0x0402C606 RID: 181766
+		// Token: 0x04027914 RID: 162068
 		AnimItem3,
-		// Token: 0x0402C607 RID: 181767
+		// Token: 0x04027915 RID: 162069
 		AnimItem4,
-		// Token: 0x0402C608 RID: 181768
+		// Token: 0x04027916 RID: 162070
 		ProgressTexture,
-		// Token: 0x0402C609 RID: 181769
+		// Token: 0x04027917 RID: 162071
 		ProgressEffect,
-		// Token: 0x0402C60A RID: 181770
+		// Token: 0x04027918 RID: 162072
 		KeyItem1,
-		// Token: 0x0402C60B RID: 181771
+		// Token: 0x04027919 RID: 162073
 		KeyItem2,
-		// Token: 0x0402C60C RID: 181772
+		// Token: 0x0402791A RID: 162074
 		KeyItem3,
-		// Token: 0x0402C60D RID: 181773
+		// Token: 0x0402791B RID: 162075
 		KeyItem4,
-		// Token: 0x0402C60E RID: 181774
+		// Token: 0x0402791C RID: 162076
 		KeyboardEffectItem1,
-		// Token: 0x0402C60F RID: 181775
+		// Token: 0x0402791D RID: 162077
 		KeyboardEffectItem2,
-		// Token: 0x0402C610 RID: 181776
+		// Token: 0x0402791E RID: 162078
 		KeyboardEffectItem3,
-		// Token: 0x0402C611 RID: 181777
+		// Token: 0x0402791F RID: 162079
 		KeyboardEffectItem4,
-		// Token: 0x0402C612 RID: 181778
+		// Token: 0x04027920 RID: 162080
 		GamepadEffectItem1,
-		// Token: 0x0402C613 RID: 181779
+		// Token: 0x04027921 RID: 162081
 		GamepadEffectItem2,
-		// Token: 0x0402C614 RID: 181780
+		// Token: 0x04027922 RID: 162082
 		GamepadEffectItem3,
-		// Token: 0x0402C615 RID: 181781
+		// Token: 0x04027923 RID: 162083
 		GamepadEffectItem4
 	}
 }

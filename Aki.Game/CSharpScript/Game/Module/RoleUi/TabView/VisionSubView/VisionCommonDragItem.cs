@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 {
-	// Token: 0x02004CF5 RID: 19701
+	// Token: 0x02003CA7 RID: 15527
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VisionCommonDragItem
 	{
-		// Token: 0x06032E7A RID: 208506 RVA: 0x00BDD218 File Offset: 0x00BDB418
+		// Token: 0x06027C55 RID: 162901 RVA: 0x00B22B20 File Offset: 0x00B20D20
 		[NullableContext(1)]
 		public VisionCommonDragItem(UUIItem normalParent, UUIDraggableComponent dragComponent, UUIItem dragParent, EPhantomItemIndex index)
 		{
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.Canvas = (dragComponent.GetOwner().GetComponentByClass(ULGUICanvas.StaticClass()) as ULGUICanvas);
 		}
 
-		// Token: 0x06032E7B RID: 208507 RVA: 0x00BDD42D File Offset: 0x00BDB62D
+		// Token: 0x06027C56 RID: 162902 RVA: 0x00B22D35 File Offset: 0x00B20F35
 		[NullableContext(1)]
 		public UUIItem GetNormalParent()
 		{
 			return this.NormalParent;
 		}
 
-		// Token: 0x06032E7C RID: 208508 RVA: 0x00BDD438 File Offset: 0x00BDB638
+		// Token: 0x06027C57 RID: 162903 RVA: 0x00B22D40 File Offset: 0x00B20F40
 		public void SetActive(bool state)
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			dragComponent.RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x06032E7D RID: 208509 RVA: 0x00BDD464 File Offset: 0x00BDB664
+		// Token: 0x06027C58 RID: 162904 RVA: 0x00B22D6C File Offset: 0x00B20F6C
 		[NullableContext(1)]
 		public void SetScrollViewItem(UUIItem scrollView)
 		{
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.ScrollViewBounceY.Y = (double)num5;
 		}
 
-		// Token: 0x06032E7E RID: 208510 RVA: 0x00BDD50B File Offset: 0x00BDB70B
+		// Token: 0x06027C59 RID: 162905 RVA: 0x00B22E13 File Offset: 0x00B21013
 		public void Refresh(PhantomDataBase data, bool isTrialRole)
 		{
 			this.CurrentData = data;
 			this.IsTrailRole = isTrialRole;
 		}
 
-		// Token: 0x06032E7F RID: 208511 RVA: 0x00BDD51C File Offset: 0x00BDB71C
+		// Token: 0x06027C5A RID: 162906 RVA: 0x00B22E24 File Offset: 0x00B21024
 		public void StartClickCheckTimer()
 		{
 			this.ClearFingerTick();
@@ -97,26 +97,26 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E80 RID: 208512 RVA: 0x00BDD55E File Offset: 0x00BDB75E
+		// Token: 0x06027C5B RID: 162907 RVA: 0x00B22E66 File Offset: 0x00B21066
 		public Vector2D GetAnimationTargetPos()
 		{
 			return this.AnimationTargetPosition;
 		}
 
-		// Token: 0x06032E81 RID: 208513 RVA: 0x00BDD566 File Offset: 0x00BDB766
+		// Token: 0x06027C5C RID: 162908 RVA: 0x00B22E6E File Offset: 0x00B2106E
 		public void SetDragItemHierarchyMax()
 		{
 			this.DragItem.SetAsLastHierarchy();
 			this.Canvas.SetSortOrder(101, true);
 		}
 
-		// Token: 0x06032E82 RID: 208514 RVA: 0x00BDD581 File Offset: 0x00BDB781
+		// Token: 0x06027C5D RID: 162909 RVA: 0x00B22E89 File Offset: 0x00B21089
 		public PhantomDataBase GetCurrentData()
 		{
 			return this.CurrentData;
 		}
 
-		// Token: 0x06032E83 RID: 208515 RVA: 0x00BDD58C File Offset: 0x00BDB78C
+		// Token: 0x06027C5E RID: 162910 RVA: 0x00B22E94 File Offset: 0x00B21094
 		public void CacheStartDragPosition()
 		{
 			FVector lguispaceAbsolutePosition = this.DragComponent.RootUIComp.Get().GetLGUISpaceAbsolutePosition();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.AnimationTargetPosition = new Vector2D((double)lguispaceAbsolutePosition.X, (double)lguispaceAbsolutePosition.Y);
 		}
 
-		// Token: 0x06032E84 RID: 208516 RVA: 0x00BDD600 File Offset: 0x00BDB800
+		// Token: 0x06027C5F RID: 162911 RVA: 0x00B22F08 File Offset: 0x00B21108
 		private void BackDragItemToNormalParent()
 		{
 			this.DragComponent.RootUIComp.Get().SetAnchorAlign(UIAnchorHorizontalAlign.Stretch, UIAnchorVerticalAlign.Stretch);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.DragComponent.RootUIComp.Get().SetBubbleUpToParent(true);
 		}
 
-		// Token: 0x06032E85 RID: 208517 RVA: 0x00BDD6C4 File Offset: 0x00BDB8C4
+		// Token: 0x06027C60 RID: 162912 RVA: 0x00B22FCC File Offset: 0x00B211CC
 		public void StartDragState()
 		{
 			this.CacheStartDragPosition();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.DragComponent.RootUIComp.Get().SetBubbleUpToParent(false);
 		}
 
-		// Token: 0x06032E86 RID: 208518 RVA: 0x00BDD76C File Offset: 0x00BDB96C
+		// Token: 0x06027C61 RID: 162913 RVA: 0x00B23074 File Offset: 0x00B21274
 		public void ResetPosition()
 		{
 			this.LevelSequencePlayer.StopSequenceByKey("Drag", false, true);
@@ -172,122 +172,122 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.DragState = false;
 		}
 
-		// Token: 0x06032E87 RID: 208519 RVA: 0x00BDD7E1 File Offset: 0x00BDB9E1
+		// Token: 0x06027C62 RID: 162914 RVA: 0x00B230E9 File Offset: 0x00B212E9
 		public void SetToTargetParentAndSetStretch(UUIItem targetItem)
 		{
 		}
 
-		// Token: 0x06032E88 RID: 208520 RVA: 0x00BDD7E3 File Offset: 0x00BDB9E3
+		// Token: 0x06027C63 RID: 162915 RVA: 0x00B230EB File Offset: 0x00B212EB
 		public void SetToNormalParent()
 		{
 			this.SetToTargetParentAndSetStretch(this.MovingParent);
 		}
 
-		// Token: 0x06032E89 RID: 208521 RVA: 0x00BDD7F1 File Offset: 0x00BDB9F1
+		// Token: 0x06027C64 RID: 162916 RVA: 0x00B230F9 File Offset: 0x00B212F9
 		[NullableContext(1)]
 		public void SetDragSuccessCallBack(Action<VisionCommonDragItem, List<VisionCommonDragItem>, bool> onFunction)
 		{
 			this.OnDragEndFunction = onFunction;
 		}
 
-		// Token: 0x06032E8A RID: 208522 RVA: 0x00BDD7FA File Offset: 0x00BDB9FA
+		// Token: 0x06027C65 RID: 162917 RVA: 0x00B23102 File Offset: 0x00B21302
 		[NullableContext(1)]
 		public void SetMoveToScrollViewCallBack(Action<int> callBack)
 		{
 			this.OnMoveToScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x06032E8B RID: 208523 RVA: 0x00BDD803 File Offset: 0x00BDBA03
+		// Token: 0x06027C66 RID: 162918 RVA: 0x00B2310B File Offset: 0x00B2130B
 		[NullableContext(1)]
 		public void SetRemoveFromScrollViewCallBack(Action<int> callBack)
 		{
 			this.OnRemoveFromScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x06032E8C RID: 208524 RVA: 0x00BDD80C File Offset: 0x00BDBA0C
+		// Token: 0x06027C67 RID: 162919 RVA: 0x00B23114 File Offset: 0x00B21314
 		[NullableContext(1)]
 		public void SetEndDragWhenOnScrollViewCallBack(Action<int, PhantomBattleData> callBack)
 		{
 			this.OnEndDragWhenOnScrollViewCallBack = callBack;
 		}
 
-		// Token: 0x06032E8D RID: 208525 RVA: 0x00BDD815 File Offset: 0x00BDBA15
+		// Token: 0x06027C68 RID: 162920 RVA: 0x00B2311D File Offset: 0x00B2131D
 		[NullableContext(1)]
 		public void SetOnUnOverlayCallBack(Action<int> callBack)
 		{
 			this.OnUnOverlayCallBack = callBack;
 		}
 
-		// Token: 0x06032E8E RID: 208526 RVA: 0x00BDD81E File Offset: 0x00BDBA1E
+		// Token: 0x06027C69 RID: 162921 RVA: 0x00B23126 File Offset: 0x00B21326
 		[NullableContext(1)]
 		public void SetOnOverlayCallBack(Action<int> callBack)
 		{
 			this.OnOverlayCallBack = callBack;
 		}
 
-		// Token: 0x06032E8F RID: 208527 RVA: 0x00BDD827 File Offset: 0x00BDBA27
+		// Token: 0x06027C6A RID: 162922 RVA: 0x00B2312F File Offset: 0x00B2132F
 		[NullableContext(1)]
 		public void SetPointerDownCallBack(Action<int> dragEvent)
 		{
 			this.OnPointerDownCallBack = dragEvent;
 		}
 
-		// Token: 0x06032E90 RID: 208528 RVA: 0x00BDD830 File Offset: 0x00BDBA30
+		// Token: 0x06027C6B RID: 162923 RVA: 0x00B23138 File Offset: 0x00B21338
 		[NullableContext(1)]
 		public void SetPointerUpCallBack(Action<int> dragEvent)
 		{
 			this.OnPointerUpCallBack = dragEvent;
 		}
 
-		// Token: 0x06032E91 RID: 208529 RVA: 0x00BDD839 File Offset: 0x00BDBA39
+		// Token: 0x06027C6C RID: 162924 RVA: 0x00B23141 File Offset: 0x00B21341
 		[NullableContext(1)]
 		public void SetOnDragAnimationStartFunction(Action<int> onFunction)
 		{
 			this.OnDragAnimationStartFunction = onFunction;
 		}
 
-		// Token: 0x06032E92 RID: 208530 RVA: 0x00BDD842 File Offset: 0x00BDBA42
+		// Token: 0x06027C6D RID: 162925 RVA: 0x00B2314A File Offset: 0x00B2134A
 		[NullableContext(1)]
 		public void SetOnDragAnimationEndFunction(Action<int> onFunction)
 		{
 			this.OnDragAnimationEndFunction = onFunction;
 		}
 
-		// Token: 0x06032E93 RID: 208531 RVA: 0x00BDD84B File Offset: 0x00BDBA4B
+		// Token: 0x06027C6E RID: 162926 RVA: 0x00B23153 File Offset: 0x00B21353
 		[NullableContext(1)]
 		public void SetOnClickCallBack(Action<int> onFunction)
 		{
 			this.ClickFunction = onFunction;
 		}
 
-		// Token: 0x06032E94 RID: 208532 RVA: 0x00BDD854 File Offset: 0x00BDBA54
+		// Token: 0x06027C6F RID: 162927 RVA: 0x00B2315C File Offset: 0x00B2135C
 		[NullableContext(1)]
 		public void SetOnClickFailCallBack(Action<int> onFunction)
 		{
 			this.ClickFailFunction = onFunction;
 		}
 
-		// Token: 0x06032E95 RID: 208533 RVA: 0x00BDD85D File Offset: 0x00BDBA5D
+		// Token: 0x06027C70 RID: 162928 RVA: 0x00B23165 File Offset: 0x00B21365
 		[NullableContext(1)]
 		public void SetOnBeginDragCall(Action<int> onFunction)
 		{
 			this.OnBeginDragFunction = onFunction;
 		}
 
-		// Token: 0x06032E96 RID: 208534 RVA: 0x00BDD866 File Offset: 0x00BDBA66
+		// Token: 0x06027C71 RID: 162929 RVA: 0x00B2316E File Offset: 0x00B2136E
 		[NullableContext(1)]
 		public void SetDragCheckItem(List<VisionCommonDragItem> itemList)
 		{
 			this.CheckList = itemList;
 		}
 
-		// Token: 0x06032E97 RID: 208535 RVA: 0x00BDD86F File Offset: 0x00BDBA6F
+		// Token: 0x06027C72 RID: 162930 RVA: 0x00B23177 File Offset: 0x00B21377
 		public int GetCurrentIndex()
 		{
 			return this.Index;
 		}
 
-		// Token: 0x06032E98 RID: 208536 RVA: 0x00BDD877 File Offset: 0x00BDBA77
+		// Token: 0x06027C73 RID: 162931 RVA: 0x00B2317F File Offset: 0x00B2137F
 		public void TickCheckDrag()
 		{
 			if (this.MoveParentDelay <= 1)
@@ -299,20 +299,20 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.CheckOnDrag();
 		}
 
-		// Token: 0x06032E99 RID: 208537 RVA: 0x00BDD89D File Offset: 0x00BDBA9D
+		// Token: 0x06027C74 RID: 162932 RVA: 0x00B231A5 File Offset: 0x00B213A5
 		public void ClearStayingItem()
 		{
 			this.CurrentStaying.Clear();
 		}
 
-		// Token: 0x06032E9A RID: 208538 RVA: 0x00BDD8AA File Offset: 0x00BDBAAA
+		// Token: 0x06027C75 RID: 162933 RVA: 0x00B231B2 File Offset: 0x00B213B2
 		[NullableContext(1)]
 		public List<VisionCommonDragItem> GetStayingItem()
 		{
 			return this.CurrentStaying;
 		}
 
-		// Token: 0x06032E9B RID: 208539 RVA: 0x00BDD8B4 File Offset: 0x00BDBAB4
+		// Token: 0x06027C76 RID: 162934 RVA: 0x00B231BC File Offset: 0x00B213BC
 		public void SetItemToPointerPosition()
 		{
 			if (!this.DragState)
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			uuiitem.SetLGUISpaceAbsolutePosition(fvector);
 		}
 
-		// Token: 0x06032E9C RID: 208540 RVA: 0x00BDD9CC File Offset: 0x00BDBBCC
+		// Token: 0x06027C77 RID: 162935 RVA: 0x00B232D4 File Offset: 0x00B214D4
 		private void OnPointerDown(ULGUIPointerEventData eventData)
 		{
 			if (!PhantomBattleModel.Instance.CheckIfCanDrag() || this.DragState)
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E9D RID: 208541 RVA: 0x00BDDA7C File Offset: 0x00BDBC7C
+		// Token: 0x06027C78 RID: 162936 RVA: 0x00B23384 File Offset: 0x00B21584
 		private void OnPointUp(ULGUIPointerEventData eventData)
 		{
 			this.ClearTick();
@@ -418,7 +418,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E9E RID: 208542 RVA: 0x00BDDB1B File Offset: 0x00BDBD1B
+		// Token: 0x06027C79 RID: 162937 RVA: 0x00B23423 File Offset: 0x00B21623
 		private void ClearFingerTick()
 		{
 			if (this.CurrentCheckFingerTick != -1)
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032E9F RID: 208543 RVA: 0x00BDDB40 File Offset: 0x00BDBD40
+		// Token: 0x06027C7A RID: 162938 RVA: 0x00B23448 File Offset: 0x00B21648
 		private void OnDrag(ULGUIPointerEventData eventData)
 		{
 			if (this.IsTrailRole)
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.TickCheckDrag();
 		}
 
-		// Token: 0x06032EA0 RID: 208544 RVA: 0x00BDDB90 File Offset: 0x00BDBD90
+		// Token: 0x06027C7B RID: 162939 RVA: 0x00B23498 File Offset: 0x00B21698
 		private void OnDragBegin(ULGUIPointerEventData eventData)
 		{
 			if (this.IsTrailRole)
@@ -472,7 +472,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.IfBeginDrag = true;
 		}
 
-		// Token: 0x06032EA1 RID: 208545 RVA: 0x00BDDBE8 File Offset: 0x00BDBDE8
+		// Token: 0x06027C7C RID: 162940 RVA: 0x00B234F0 File Offset: 0x00B216F0
 		private void OnDragEnd(ULGUIPointerEventData eventData)
 		{
 			if (this.IsTrailRole)
@@ -512,13 +512,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EA2 RID: 208546 RVA: 0x00BDDC8A File Offset: 0x00BDBE8A
+		// Token: 0x06027C7D RID: 162941 RVA: 0x00B23592 File Offset: 0x00B21792
 		public bool CheckAndGetCurrentClickState()
 		{
 			return this.CurrentClickState;
 		}
 
-		// Token: 0x06032EA3 RID: 208547 RVA: 0x00BDDC92 File Offset: 0x00BDBE92
+		// Token: 0x06027C7E RID: 162942 RVA: 0x00B2359A File Offset: 0x00B2179A
 		private void ClearTick()
 		{
 			if (this.CurrentTick != -1)
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EA4 RID: 208548 RVA: 0x00BDDCB8 File Offset: 0x00BDBEB8
+		// Token: 0x06027C7F RID: 162943 RVA: 0x00B235C0 File Offset: 0x00B217C0
 		public void CancelDrag()
 		{
 			this.ClearTick();
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			ceaseAnimationPromise.SetResult(true);
 		}
 
-		// Token: 0x06032EA5 RID: 208549 RVA: 0x00BDDD18 File Offset: 0x00BDBF18
+		// Token: 0x06027C80 RID: 162944 RVA: 0x00B23620 File Offset: 0x00B21820
 		private int GetCurrentFingerNum()
 		{
 			bool flag = LguiEventSystemManager.Instance.IsPressComponentIsValid(0);
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return num;
 		}
 
-		// Token: 0x06032EA6 RID: 208550 RVA: 0x00BDDD4C File Offset: 0x00BDBF4C
+		// Token: 0x06027C81 RID: 162945 RVA: 0x00B23654 File Offset: 0x00B21854
 		[NullableContext(1)]
 		private void FinishSequenceEvent(string sequenceName)
 		{
@@ -581,7 +581,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EA7 RID: 208551 RVA: 0x00BDDD80 File Offset: 0x00BDBF80
+		// Token: 0x06027C82 RID: 162946 RVA: 0x00B23688 File Offset: 0x00B21888
 		public void DoCeaseSequence()
 		{
 			this.CeaseFailAnimationState = false;
@@ -589,13 +589,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Cease", false, null, false);
 		}
 
-		// Token: 0x06032EA8 RID: 208552 RVA: 0x00BDDDBA File Offset: 0x00BDBFBA
+		// Token: 0x06027C83 RID: 162947 RVA: 0x00B236C2 File Offset: 0x00B218C2
 		public CustomPromise<bool> GetCeaseAnimationPromise()
 		{
 			return this.CeaseAnimationPromise;
 		}
 
-		// Token: 0x06032EA9 RID: 208553 RVA: 0x00BDDDC4 File Offset: 0x00BDBFC4
+		// Token: 0x06027C84 RID: 162948 RVA: 0x00B236CC File Offset: 0x00B218CC
 		private void TryDoCeaseFailSequence()
 		{
 			if (this.CeaseFailAnimationState)
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EAA RID: 208554 RVA: 0x00BDDE0C File Offset: 0x00BDC00C
+		// Token: 0x06027C85 RID: 162949 RVA: 0x00B23714 File Offset: 0x00B21914
 		private void DoDragSequence()
 		{
 			if (this.IsTrailRole)
@@ -628,7 +628,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			onDragAnimationStartFunction(this.GetCurrentIndex());
 		}
 
-		// Token: 0x06032EAB RID: 208555 RVA: 0x00BDDE60 File Offset: 0x00BDC060
+		// Token: 0x06027C86 RID: 162950 RVA: 0x00B23768 File Offset: 0x00B21968
 		private void CheckTimeForDoDrag()
 		{
 			if (this.GetCurrentFingerNum() >= 2 || this.GetCurrentFingerNum() == 0)
@@ -659,7 +659,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EAC RID: 208556 RVA: 0x00BDDEE4 File Offset: 0x00BDC0E4
+		// Token: 0x06027C87 RID: 162951 RVA: 0x00B237EC File Offset: 0x00B219EC
 		private bool TryDoClick(bool force = false)
 		{
 			if (this.CheckIsBlockedByOther())
@@ -687,26 +687,26 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return false;
 		}
 
-		// Token: 0x06032EAD RID: 208557 RVA: 0x00BDDF5C File Offset: 0x00BDC15C
+		// Token: 0x06027C88 RID: 162952 RVA: 0x00B23864 File Offset: 0x00B21A64
 		private bool CheckIsBlockedByOther()
 		{
 			UUIItem nowHitComponent = LguiEventSystemManager.Instance.GetNowHitComponent();
 			return nowHitComponent != null && nowHitComponent != this.DragItem && nowHitComponent != this.DragParent;
 		}
 
-		// Token: 0x06032EAE RID: 208558 RVA: 0x00BDDF8E File Offset: 0x00BDC18E
+		// Token: 0x06027C89 RID: 162953 RVA: 0x00B23896 File Offset: 0x00B21A96
 		private bool CheckInClickGap()
 		{
 			return Info.Instance.IsInGamepad() || TimeUtil.Instance.GetServerTime() - this.LastClickTime > 1.0;
 		}
 
-		// Token: 0x06032EAF RID: 208559 RVA: 0x00BDDFBA File Offset: 0x00BDC1BA
+		// Token: 0x06027C8A RID: 162954 RVA: 0x00B238C2 File Offset: 0x00B21AC2
 		private bool CheckInClickableTime()
 		{
 			return this.CurrentRunningTime < 300f && this.CheckInClickGap();
 		}
 
-		// Token: 0x06032EB0 RID: 208560 RVA: 0x00BDDFD4 File Offset: 0x00BDC1D4
+		// Token: 0x06027C8B RID: 162955 RVA: 0x00B238DC File Offset: 0x00B21ADC
 		private void CheckOnDrag()
 		{
 			List<VisionCommonDragItem> list = new List<VisionCommonDragItem>();
@@ -762,13 +762,13 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			}
 		}
 
-		// Token: 0x06032EB1 RID: 208561 RVA: 0x00BDE16C File Offset: 0x00BDC36C
+		// Token: 0x06027C8C RID: 162956 RVA: 0x00B23A74 File Offset: 0x00B21C74
 		public bool CheckIfSelfItem(int index)
 		{
 			return index == this.Index;
 		}
 
-		// Token: 0x06032EB2 RID: 208562 RVA: 0x00BDE178 File Offset: 0x00BDC378
+		// Token: 0x06027C8D RID: 162957 RVA: 0x00B23A80 File Offset: 0x00B21C80
 		[NullableContext(1)]
 		public bool CheckOverlap(Vector2D inX, Vector2D inY)
 		{
@@ -783,7 +783,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return x < y3 && x3 < y && x2 < y4 && x4 < y2;
 		}
 
-		// Token: 0x06032EB3 RID: 208563 RVA: 0x00BDE1E8 File Offset: 0x00BDC3E8
+		// Token: 0x06027C8E RID: 162958 RVA: 0x00B23AF0 File Offset: 0x00B21CF0
 		[NullableContext(1)]
 		private Vector2D GetBounceX()
 		{
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return this.BounceX;
 		}
 
-		// Token: 0x06032EB4 RID: 208564 RVA: 0x00BDE250 File Offset: 0x00BDC450
+		// Token: 0x06027C8F RID: 162959 RVA: 0x00B23B58 File Offset: 0x00B21D58
 		[NullableContext(1)]
 		private Vector2D GetBounceY()
 		{
@@ -809,7 +809,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return this.BounceY;
 		}
 
-		// Token: 0x06032EB5 RID: 208565 RVA: 0x00BDE2B8 File Offset: 0x00BDC4B8
+		// Token: 0x06027C90 RID: 162960 RVA: 0x00B23BC0 File Offset: 0x00B21DC0
 		private void OnUnOverlay()
 		{
 			Action<int> onUnOverlayCallBack = this.OnUnOverlayCallBack;
@@ -820,7 +820,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			onUnOverlayCallBack(this.GetCurrentIndex());
 		}
 
-		// Token: 0x06032EB6 RID: 208566 RVA: 0x00BDE2D0 File Offset: 0x00BDC4D0
+		// Token: 0x06027C91 RID: 162961 RVA: 0x00B23BD8 File Offset: 0x00B21DD8
 		private void OnOverlay()
 		{
 			Action<int> onOverlayCallBack = this.OnOverlayCallBack;
@@ -831,14 +831,14 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			onOverlayCallBack(this.GetCurrentIndex());
 		}
 
-		// Token: 0x06032EB7 RID: 208567 RVA: 0x00BDE2E8 File Offset: 0x00BDC4E8
+		// Token: 0x06027C92 RID: 162962 RVA: 0x00B23BF0 File Offset: 0x00B21DF0
 		[NullableContext(0)]
 		public ValueTuple<float, float> GetMiddlePosition()
 		{
 			return new ValueTuple<float, float>(this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().X, this.DragComponent.RootUIComp.Get().GetLGUISpaceCenterAbsolutePosition().Y);
 		}
 
-		// Token: 0x06032EB8 RID: 208568 RVA: 0x00BDE334 File Offset: 0x00BDC534
+		// Token: 0x06027C93 RID: 162963 RVA: 0x00B23C3C File Offset: 0x00B21E3C
 		[NullableContext(1)]
 		public static int GetOverlapIndex(VisionCommonDragItem self, List<VisionCommonDragItem> targets)
 		{
@@ -866,7 +866,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return currentIndex;
 		}
 
-		// Token: 0x06032EB9 RID: 208569 RVA: 0x00BDE420 File Offset: 0x00BDC620
+		// Token: 0x06027C94 RID: 162964 RVA: 0x00B23D28 File Offset: 0x00B21F28
 		[NullableContext(1)]
 		public void SetDragComponentToTargetPositionParam(Vector2D targetVec)
 		{
@@ -878,7 +878,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			this.AnimationStartPos.Y = (double)lguispaceAbsolutePosition.Y;
 		}
 
-		// Token: 0x06032EBA RID: 208570 RVA: 0x00BDE488 File Offset: 0x00BDC688
+		// Token: 0x06027C95 RID: 162965 RVA: 0x00B23D90 File Offset: 0x00B21F90
 		public UniTask TickDoCeaseAnimation(float currentProgress)
 		{
 			VisionCommonDragItem.<TickDoCeaseAnimation>d__121 <TickDoCeaseAnimation>d__;
@@ -890,46 +890,46 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			return <TickDoCeaseAnimation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032EBB RID: 208571 RVA: 0x00BDE4D3 File Offset: 0x00BDC6D3
+		// Token: 0x06027C96 RID: 162966 RVA: 0x00B23DDB File Offset: 0x00B21FDB
 		public void SetMovingState(bool state)
 		{
 			this.MovingState = state;
 		}
 
-		// Token: 0x0401B11F RID: 110879
+		// Token: 0x04015AA4 RID: 88740
 		private const int CLICKTIME = 300;
 
-		// Token: 0x0401B120 RID: 110880
+		// Token: 0x04015AA5 RID: 88741
 		private const int CLICKCALLGAP = 1;
 
-		// Token: 0x0401B121 RID: 110881
+		// Token: 0x04015AA6 RID: 88742
 		private const int MOVEPARENTDELAYTIME = 1;
 
-		// Token: 0x0401B122 RID: 110882
+		// Token: 0x04015AA7 RID: 88743
 		private const int HEIGHTCANVASSORT = 100;
 
-		// Token: 0x0401B123 RID: 110883
+		// Token: 0x04015AA8 RID: 88744
 		public CustomPromise<bool> CeaseAnimationPromise;
 
-		// Token: 0x0401B124 RID: 110884
+		// Token: 0x04015AA9 RID: 88745
 		private readonly UUIDraggableComponent DragComponent;
 
-		// Token: 0x0401B125 RID: 110885
+		// Token: 0x04015AAA RID: 88746
 		private readonly int Index = -1;
 
-		// Token: 0x0401B126 RID: 110886
+		// Token: 0x04015AAB RID: 88747
 		private Action<int> OnPointerDownCallBack;
 
-		// Token: 0x0401B127 RID: 110887
+		// Token: 0x04015AAC RID: 88748
 		private Action<int> OnPointerUpCallBack;
 
-		// Token: 0x0401B128 RID: 110888
+		// Token: 0x04015AAD RID: 88749
 		private Action<int> OnOverlayCallBack;
 
-		// Token: 0x0401B129 RID: 110889
+		// Token: 0x04015AAE RID: 88750
 		private Action<int> OnUnOverlayCallBack;
 
-		// Token: 0x0401B12A RID: 110890
+		// Token: 0x04015AAF RID: 88751
 		[Nullable(new byte[]
 		{
 			2,
@@ -937,28 +937,28 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 		})]
 		private Action<int, PhantomBattleData> OnEndDragWhenOnScrollViewCallBack;
 
-		// Token: 0x0401B12B RID: 110891
+		// Token: 0x04015AB0 RID: 88752
 		private Action<int> OnMoveToScrollViewCallBack;
 
-		// Token: 0x0401B12C RID: 110892
+		// Token: 0x04015AB1 RID: 88753
 		private Action<int> OnRemoveFromScrollViewCallBack;
 
-		// Token: 0x0401B12D RID: 110893
+		// Token: 0x04015AB2 RID: 88754
 		private Action<int> ClickFunction;
 
-		// Token: 0x0401B12E RID: 110894
+		// Token: 0x04015AB3 RID: 88755
 		private Action<int> ClickFailFunction;
 
-		// Token: 0x0401B12F RID: 110895
+		// Token: 0x04015AB4 RID: 88756
 		private Action<int> OnBeginDragFunction;
 
-		// Token: 0x0401B130 RID: 110896
+		// Token: 0x04015AB5 RID: 88757
 		private Action<int> OnDragAnimationStartFunction;
 
-		// Token: 0x0401B131 RID: 110897
+		// Token: 0x04015AB6 RID: 88758
 		private Action<int> OnDragAnimationEndFunction;
 
-		// Token: 0x0401B132 RID: 110898
+		// Token: 0x04015AB7 RID: 88759
 		[Nullable(new byte[]
 		{
 			2,
@@ -968,38 +968,38 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 		})]
 		private Action<VisionCommonDragItem, List<VisionCommonDragItem>, bool> OnDragEndFunction;
 
-		// Token: 0x0401B133 RID: 110899
+		// Token: 0x04015AB8 RID: 88760
 		private ULGUIPointerEventData CurrentMoveData;
 
-		// Token: 0x0401B134 RID: 110900
+		// Token: 0x04015AB9 RID: 88761
 		private bool CurrentClickState;
 
-		// Token: 0x0401B135 RID: 110901
+		// Token: 0x04015ABA RID: 88762
 		private float CurrentRunningTime;
 
-		// Token: 0x0401B136 RID: 110902
+		// Token: 0x04015ABB RID: 88763
 		private bool IfDragMove;
 
-		// Token: 0x0401B137 RID: 110903
+		// Token: 0x04015ABC RID: 88764
 		private bool PlayDragSequenceState;
 
-		// Token: 0x0401B138 RID: 110904
+		// Token: 0x04015ABD RID: 88765
 		private int CurrentTick = -1;
 
-		// Token: 0x0401B139 RID: 110905
+		// Token: 0x04015ABE RID: 88766
 		private bool IfBeginDrag;
 
-		// Token: 0x0401B13A RID: 110906
+		// Token: 0x04015ABF RID: 88767
 		private int CurrentCheckFingerTick = -1;
 
-		// Token: 0x0401B13B RID: 110907
+		// Token: 0x04015AC0 RID: 88768
 		private double LastClickTime;
 
-		// Token: 0x0401B13C RID: 110908
+		// Token: 0x04015AC1 RID: 88769
 		[Nullable(1)]
 		private readonly Vector StaticBeginVector = Vector.Create();
 
-		// Token: 0x0401B13D RID: 110909
+		// Token: 0x04015AC2 RID: 88770
 		[Nullable(new byte[]
 		{
 			2,
@@ -1007,89 +1007,89 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 		})]
 		private List<VisionCommonDragItem> CheckList;
 
-		// Token: 0x0401B13E RID: 110910
+		// Token: 0x04015AC3 RID: 88771
 		private float SourceWidth;
 
-		// Token: 0x0401B13F RID: 110911
+		// Token: 0x04015AC4 RID: 88772
 		private float SourceHeight;
 
-		// Token: 0x0401B140 RID: 110912
+		// Token: 0x04015AC5 RID: 88773
 		[Nullable(1)]
 		private readonly Vector2D BounceX = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B141 RID: 110913
+		// Token: 0x04015AC6 RID: 88774
 		[Nullable(1)]
 		private readonly Vector2D BounceY = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B142 RID: 110914
+		// Token: 0x04015AC7 RID: 88775
 		[Nullable(1)]
 		private List<VisionCommonDragItem> CurrentStaying = new List<VisionCommonDragItem>();
 
-		// Token: 0x0401B143 RID: 110915
+		// Token: 0x04015AC8 RID: 88776
 		private bool CeaseFailAnimationState;
 
-		// Token: 0x0401B144 RID: 110916
+		// Token: 0x04015AC9 RID: 88777
 		private bool DragState;
 
-		// Token: 0x0401B145 RID: 110917
+		// Token: 0x04015ACA RID: 88778
 		private readonly LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B146 RID: 110918
+		// Token: 0x04015ACB RID: 88779
 		private int MoveParentDelay;
 
-		// Token: 0x0401B147 RID: 110919
+		// Token: 0x04015ACC RID: 88780
 		private PhantomDataBase CurrentData;
 
-		// Token: 0x0401B148 RID: 110920
+		// Token: 0x04015ACD RID: 88781
 		private Vector2D StartPosition;
 
-		// Token: 0x0401B149 RID: 110921
+		// Token: 0x04015ACE RID: 88782
 		private Vector2D AnimationTargetPosition;
 
-		// Token: 0x0401B14A RID: 110922
+		// Token: 0x04015ACF RID: 88783
 		private readonly UUIItem MovingParent;
 
-		// Token: 0x0401B14B RID: 110923
+		// Token: 0x04015AD0 RID: 88784
 		private readonly UUIItem NormalParent;
 
-		// Token: 0x0401B14C RID: 110924
+		// Token: 0x04015AD1 RID: 88785
 		private readonly FVector2D? StretchVector;
 
-		// Token: 0x0401B14D RID: 110925
+		// Token: 0x04015AD2 RID: 88786
 		private readonly UUIItem DragItem;
 
-		// Token: 0x0401B14E RID: 110926
+		// Token: 0x04015AD3 RID: 88787
 		private readonly UUIItem DragParent;
 
-		// Token: 0x0401B14F RID: 110927
+		// Token: 0x04015AD4 RID: 88788
 		[Nullable(1)]
 		private readonly Vector2D ScrollViewBounceX = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B150 RID: 110928
+		// Token: 0x04015AD5 RID: 88789
 		[Nullable(1)]
 		private readonly Vector2D ScrollViewBounceY = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B151 RID: 110929
+		// Token: 0x04015AD6 RID: 88790
 		private bool IfStayInScrollView;
 
-		// Token: 0x0401B152 RID: 110930
+		// Token: 0x04015AD7 RID: 88791
 		[Nullable(1)]
 		private readonly Vector2D CurrentAnimationTargetPos = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B153 RID: 110931
+		// Token: 0x04015AD8 RID: 88792
 		private bool CeaseState;
 
-		// Token: 0x0401B154 RID: 110932
+		// Token: 0x04015AD9 RID: 88793
 		[Nullable(1)]
 		private readonly Vector2D AnimationStartPos = new Vector2D(0.0, 0.0);
 
-		// Token: 0x0401B155 RID: 110933
+		// Token: 0x04015ADA RID: 88794
 		private bool MovingState;
 
-		// Token: 0x0401B156 RID: 110934
+		// Token: 0x04015ADB RID: 88795
 		private readonly ULGUICanvas Canvas;
 
-		// Token: 0x0401B157 RID: 110935
+		// Token: 0x04015ADC RID: 88796
 		private bool IsTrailRole;
 	}
 }

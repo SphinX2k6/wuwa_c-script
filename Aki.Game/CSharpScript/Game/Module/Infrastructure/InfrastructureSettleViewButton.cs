@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590D RID: 22797
+	// Token: 0x020048E6 RID: 18662
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureSettleViewButton : UiPanelBase
 	{
-		// Token: 0x06039E3D RID: 237117 RVA: 0x00DC0088 File Offset: 0x00DBE288
+		// Token: 0x0602ED60 RID: 191840 RVA: 0x00D0F380 File Offset: 0x00D0D580
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E3E RID: 237118 RVA: 0x00DC0194 File Offset: 0x00DBE394
+		// Token: 0x0602ED61 RID: 191841 RVA: 0x00D0F48C File Offset: 0x00D0D68C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InfrastructureSettleViewButton.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -52,14 +52,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039E3F RID: 237119 RVA: 0x00DC01D8 File Offset: 0x00DBE3D8
+		// Token: 0x0602ED62 RID: 191842 RVA: 0x00D0F4D0 File Offset: 0x00D0D6D0
 		protected override void OnStart()
 		{
 			base.GetButton(4).RootUIComp.Get().SetUIActive(true);
 			this.LeftButton.SetLocalTextNew("JijianTask_CompleteButton", Array.Empty<object>());
 		}
 
-		// Token: 0x06039E40 RID: 237120 RVA: 0x00DC0214 File Offset: 0x00DBE414
+		// Token: 0x0602ED63 RID: 191843 RVA: 0x00D0F50C File Offset: 0x00D0D70C
 		private void OnClickedLeftButton(int _)
 		{
 			Action onClickLeftEvent = this.OnClickLeftEvent;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickLeftEvent();
 		}
 
-		// Token: 0x06039E41 RID: 237121 RVA: 0x00DC0226 File Offset: 0x00DBE426
+		// Token: 0x0602ED64 RID: 191844 RVA: 0x00D0F51E File Offset: 0x00D0D71E
 		private void OnClickedButton()
 		{
 			Action onClickEvent = this.OnClickEvent;
@@ -81,56 +81,56 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickEvent();
 		}
 
-		// Token: 0x06039E42 RID: 237122 RVA: 0x00DC0238 File Offset: 0x00DBE438
+		// Token: 0x0602ED65 RID: 191845 RVA: 0x00D0F530 File Offset: 0x00D0D730
 		public void SetBtnText(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalText(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x06039E43 RID: 237123 RVA: 0x00DC024D File Offset: 0x00DBE44D
+		// Token: 0x0602ED66 RID: 191846 RVA: 0x00D0F545 File Offset: 0x00D0D745
 		public void HideFloatText()
 		{
 			base.GetText(2).SetUIActive(false);
 		}
 
-		// Token: 0x06039E44 RID: 237124 RVA: 0x00DC025C File Offset: 0x00DBE45C
+		// Token: 0x0602ED67 RID: 191847 RVA: 0x00D0F554 File Offset: 0x00D0D754
 		public void SetOnClickEvent(Action onClickEvent)
 		{
 			this.OnClickEvent = onClickEvent;
 		}
 
-		// Token: 0x06039E45 RID: 237125 RVA: 0x00DC0265 File Offset: 0x00DBE465
+		// Token: 0x0602ED68 RID: 191848 RVA: 0x00D0F55D File Offset: 0x00D0D75D
 		public void SetOnClickLeftEvent(Action onClickLeftEvent)
 		{
 			this.OnClickLeftEvent = onClickLeftEvent;
 		}
 
-		// Token: 0x0401E311 RID: 123665
+		// Token: 0x04018DAE RID: 101806
 		private Action OnClickEvent;
 
-		// Token: 0x0401E312 RID: 123666
+		// Token: 0x04018DAF RID: 101807
 		private Action OnClickLeftEvent;
 
-		// Token: 0x0401E313 RID: 123667
+		// Token: 0x04018DB0 RID: 101808
 		private ButtonItem LeftButton = new ButtonItem(null);
 
-		// Token: 0x0200BB7A RID: 47994
+		// Token: 0x0200A58A RID: 42378
 		[NullableContext(0)]
 		private class ESimpleButtonChildType
 		{
-			// Token: 0x0403896D RID: 231789
+			// Token: 0x04033355 RID: 209749
 			public const int ButtonText = 0;
 
-			// Token: 0x0403896E RID: 231790
+			// Token: 0x04033356 RID: 209750
 			public const int DescriptionItem = 1;
 
-			// Token: 0x0403896F RID: 231791
+			// Token: 0x04033357 RID: 209751
 			public const int DescriptionText = 2;
 
-			// Token: 0x04038970 RID: 231792
+			// Token: 0x04033358 RID: 209752
 			public const int Button = 3;
 
-			// Token: 0x04038971 RID: 231793
+			// Token: 0x04033359 RID: 209753
 			public const int LeftButton = 4;
 		}
 	}

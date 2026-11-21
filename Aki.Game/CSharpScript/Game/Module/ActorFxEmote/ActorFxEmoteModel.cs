@@ -4,27 +4,27 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ActorFxEmote
 {
-	// Token: 0x02005EEE RID: 24302
+	// Token: 0x02004ED5 RID: 20181
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ActorFxEmoteModel : ModelBase
 	{
-		// Token: 0x0603DC0B RID: 252939 RVA: 0x00EED7FF File Offset: 0x00EEB9FF
+		// Token: 0x06032BA6 RID: 207782 RVA: 0x00E3F4C3 File Offset: 0x00E3D6C3
 		protected override bool OnClear()
 		{
 			this.EntityDataMap.Clear();
 			return true;
 		}
 
-		// Token: 0x0603DC0C RID: 252940 RVA: 0x00EED80D File Offset: 0x00EEBA0D
+		// Token: 0x06032BA7 RID: 207783 RVA: 0x00E3F4D1 File Offset: 0x00E3D6D1
 		[NullableContext(2)]
 		public ActorFxEmoteData GetEntityData(int entityId)
 		{
 			return this.EntityDataMap.GetValueOrDefault(entityId);
 		}
 
-		// Token: 0x0603DC0D RID: 252941 RVA: 0x00EED81C File Offset: 0x00EEBA1C
+		// Token: 0x06032BA8 RID: 207784 RVA: 0x00E3F4E0 File Offset: 0x00E3D6E0
 		public ActorFxEmoteData GetOrCreateEntityData(int entityId)
 		{
 			ActorFxEmoteData actorFxEmoteData;
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return actorFxEmoteData;
 		}
 
-		// Token: 0x0603DC0E RID: 252942 RVA: 0x00EED84D File Offset: 0x00EEBA4D
+		// Token: 0x06032BA9 RID: 207785 RVA: 0x00E3F511 File Offset: 0x00E3D711
 		public void RemoveEntityData(int entityId)
 		{
 			this.EntityDataMap.Remove(entityId);
 		}
 
-		// Token: 0x0603DC0F RID: 252943 RVA: 0x00EED85C File Offset: 0x00EEBA5C
+		// Token: 0x06032BAA RID: 207786 RVA: 0x00E3F520 File Offset: 0x00E3D720
 		public void ForEachEntityData(Action<int, ActorFxEmoteData> callback)
 		{
 			foreach (KeyValuePair<int, ActorFxEmoteData> keyValuePair in this.EntityDataMap)
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			}
 		}
 
-		// Token: 0x17008EE9 RID: 36585
-		// (get) Token: 0x0603DC10 RID: 252944 RVA: 0x00EED8C4 File Offset: 0x00EEBAC4
+		// Token: 0x170062BB RID: 25275
+		// (get) Token: 0x06032BAB RID: 207787 RVA: 0x00E3F588 File Offset: 0x00E3D788
 		public static ActorFxEmoteModel Instance
 		{
 			get
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			}
 		}
 
-		// Token: 0x0603DC11 RID: 252945 RVA: 0x00EED8CB File Offset: 0x00EEBACB
+		// Token: 0x06032BAC RID: 207788 RVA: 0x00E3F58F File Offset: 0x00E3D78F
 		public static ActorFxEmoteModel GetOrCreateInstance()
 		{
 			if (ActorFxEmoteModel._Instance == null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return ActorFxEmoteModel._Instance;
 		}
 
-		// Token: 0x0603DC12 RID: 252946 RVA: 0x00EED8DF File Offset: 0x00EEBADF
+		// Token: 0x06032BAD RID: 207789 RVA: 0x00E3F5A3 File Offset: 0x00E3D7A3
 		public static bool CreateInstance()
 		{
 			if (ActorFxEmoteModel._Instance != null)
@@ -87,30 +87,30 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return true;
 		}
 
-		// Token: 0x0603DC13 RID: 252947 RVA: 0x00EED8F5 File Offset: 0x00EEBAF5
+		// Token: 0x06032BAE RID: 207790 RVA: 0x00E3F5B9 File Offset: 0x00E3D7B9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DC14 RID: 252948 RVA: 0x00EED8F7 File Offset: 0x00EEBAF7
+		// Token: 0x06032BAF RID: 207791 RVA: 0x00E3F5BB File Offset: 0x00E3D7BB
 		public static void ResetStaticDefaultValue()
 		{
 			ActorFxEmoteModel._Instance = null;
 		}
 
-		// Token: 0x0603DC15 RID: 252949 RVA: 0x00EED8FF File Offset: 0x00EEBAFF
+		// Token: 0x06032BB0 RID: 207792 RVA: 0x00E3F5C3 File Offset: 0x00E3D7C3
 		static ActorFxEmoteModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActorFxEmoteModel.CreateStaticDefaultValue), new Action(ActorFxEmoteModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020452 RID: 132178
+		// Token: 0x0401AF24 RID: 110372
 		public const string DEFAULT_SOCKET_KEY = "__default";
 
-		// Token: 0x04020453 RID: 132179
+		// Token: 0x0401AF25 RID: 110373
 		private Dictionary<int, ActorFxEmoteData> EntityDataMap = new Dictionary<int, ActorFxEmoteData>();
 
-		// Token: 0x04020454 RID: 132180
+		// Token: 0x0401AF26 RID: 110374
 		[Nullable(2)]
 		private static ActorFxEmoteModel _Instance;
 	}

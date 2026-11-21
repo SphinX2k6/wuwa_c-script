@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E04 RID: 19972
+	// Token: 0x02005311 RID: 21265
 	public enum EReviveType : byte
 	{
-		// Token: 0x0400DAF6 RID: 56054
+		// Token: 0x0400E65F RID: 58975
 		None,
-		// Token: 0x0400DAF7 RID: 56055
+		// Token: 0x0400E660 RID: 58976
 		BigWorldDisableResurrectionItem = 12,
-		// Token: 0x0400DAF8 RID: 56056
+		// Token: 0x0400E661 RID: 58977
 		BigWorldEnableResurrectionItem
 	}
 }

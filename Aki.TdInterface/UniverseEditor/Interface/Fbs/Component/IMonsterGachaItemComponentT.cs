@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200557C RID: 21884
+	// Token: 0x02005B1A RID: 23322
 	public class IMonsterGachaItemComponentT
 	{
-		// Token: 0x1700A1BE RID: 41406
-		// (get) Token: 0x060243A7 RID: 148391 RVA: 0x00500EA2 File Offset: 0x004FF0A2
-		// (set) Token: 0x060243A8 RID: 148392 RVA: 0x00500EAA File Offset: 0x004FF0AA
+		// Token: 0x1700AA46 RID: 43590
+		// (get) Token: 0x060265B4 RID: 157108 RVA: 0x0054141A File Offset: 0x0053F61A
+		// (set) Token: 0x060265B5 RID: 157109 RVA: 0x00541422 File Offset: 0x0053F622
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A1BF RID: 41407
-		// (get) Token: 0x060243A9 RID: 148393 RVA: 0x00500EB3 File Offset: 0x004FF0B3
-		// (set) Token: 0x060243AA RID: 148394 RVA: 0x00500EBB File Offset: 0x004FF0BB
+		// Token: 0x1700AA47 RID: 43591
+		// (get) Token: 0x060265B6 RID: 157110 RVA: 0x0054142B File Offset: 0x0053F62B
+		// (set) Token: 0x060265B7 RID: 157111 RVA: 0x00541433 File Offset: 0x0053F633
 		public string MaterialDataPath { get; set; }
 
-		// Token: 0x1700A1C0 RID: 41408
-		// (get) Token: 0x060243AB RID: 148395 RVA: 0x00500EC4 File Offset: 0x004FF0C4
-		// (set) Token: 0x060243AC RID: 148396 RVA: 0x00500ECC File Offset: 0x004FF0CC
+		// Token: 0x1700AA48 RID: 43592
+		// (get) Token: 0x060265B8 RID: 157112 RVA: 0x0054143C File Offset: 0x0053F63C
+		// (set) Token: 0x060265B9 RID: 157113 RVA: 0x00541444 File Offset: 0x0053F644
 		public EMonsterMatchType MonsterType { get; set; }
 
-		// Token: 0x1700A1C1 RID: 41409
-		// (get) Token: 0x060243AD RID: 148397 RVA: 0x00500ED5 File Offset: 0x004FF0D5
-		// (set) Token: 0x060243AE RID: 148398 RVA: 0x00500EDD File Offset: 0x004FF0DD
+		// Token: 0x1700AA49 RID: 43593
+		// (get) Token: 0x060265BA RID: 157114 RVA: 0x0054144D File Offset: 0x0053F64D
+		// (set) Token: 0x060265BB RID: 157115 RVA: 0x00541455 File Offset: 0x0053F655
 		public List<int> MonsterEntityIds { get; set; }
 
-		// Token: 0x1700A1C2 RID: 41410
-		// (get) Token: 0x060243AF RID: 148399 RVA: 0x00500EE6 File Offset: 0x004FF0E6
-		// (set) Token: 0x060243B0 RID: 148400 RVA: 0x00500EEE File Offset: 0x004FF0EE
+		// Token: 0x1700AA4A RID: 43594
+		// (get) Token: 0x060265BC RID: 157116 RVA: 0x0054145E File Offset: 0x0053F65E
+		// (set) Token: 0x060265BD RID: 157117 RVA: 0x00541466 File Offset: 0x0053F666
 		public byte NullMask { get; set; }
 
-		// Token: 0x060243B1 RID: 148401 RVA: 0x00500EF7 File Offset: 0x004FF0F7
+		// Token: 0x060265BE RID: 157118 RVA: 0x0054146F File Offset: 0x0053F66F
 		public IMonsterGachaItemComponentT()
 		{
 			this.Disabled = false;

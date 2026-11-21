@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022A1 RID: 8865
+	// Token: 0x0200250E RID: 9486
 	public static class EAoiNotifyStateExtensions
 	{
-		// Token: 0x0600C253 RID: 49747 RVA: 0x001C64D8 File Offset: 0x001C46D8
+		// Token: 0x0600CE19 RID: 52761 RVA: 0x001DE1CC File Offset: 0x001DC3CC
 		public static string ToEnumString(this EAoiNotifyState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C254 RID: 49748 RVA: 0x001C6510 File Offset: 0x001C4710
+		// Token: 0x0600CE1A RID: 52762 RVA: 0x001DE204 File Offset: 0x001DC404
 		public static EAoiNotifyState FromString(string name)
 		{
 			EAoiNotifyState result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C255 RID: 49749 RVA: 0x001C6539 File Offset: 0x001C4739
+		// Token: 0x0600CE1B RID: 52763 RVA: 0x001DE22D File Offset: 0x001DC42D
 		public static bool TryFromString(string name, out EAoiNotifyState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C256 RID: 49750 RVA: 0x001C6572 File Offset: 0x001C4772
+		// Token: 0x0600CE1C RID: 52764 RVA: 0x001DE266 File Offset: 0x001DC466
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C257 RID: 49751 RVA: 0x001C658A File Offset: 0x001C478A
+		// Token: 0x0600CE1D RID: 52765 RVA: 0x001DE27E File Offset: 0x001DC47E
 		public static EAoiNotifyState[] GetValues()
 		{
 			return new EAoiNotifyState[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C258 RID: 49752 RVA: 0x001C6596 File Offset: 0x001C4796
+		// Token: 0x0600CE1E RID: 52766 RVA: 0x001DE28A File Offset: 0x001DC48A
 		public static string[] GetNames()
 		{
 			return new string[]

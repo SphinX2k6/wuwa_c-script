@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C45 RID: 19525
+	// Token: 0x02003BF6 RID: 15350
 	[NullableContext(1)]
 	public interface ISheriffQuestState
 	{
-		// Token: 0x17007CBA RID: 31930
-		// (get) Token: 0x060327E6 RID: 206822
-		// (set) Token: 0x060327E7 RID: 206823
+		// Token: 0x17005064 RID: 20580
+		// (get) Token: 0x06027599 RID: 161177
+		// (set) Token: 0x0602759A RID: 161178
 		List<int> UnFinishList { get; set; }
 
-		// Token: 0x17007CBB RID: 31931
-		// (get) Token: 0x060327E8 RID: 206824
-		// (set) Token: 0x060327E9 RID: 206825
+		// Token: 0x17005065 RID: 20581
+		// (get) Token: 0x0602759B RID: 161179
+		// (set) Token: 0x0602759C RID: 161180
 		List<int> TotalList { get; set; }
 	}
 }

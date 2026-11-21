@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B24 RID: 11044
+// Token: 0x020020A0 RID: 8352
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,8 +17,8 @@ using UnrealEngine;
 })]
 public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, SurvivorsRogueItemCard>
 {
-	// Token: 0x17001E9C RID: 7836
-	// (get) Token: 0x06016EED RID: 93933 RVA: 0x005D20EF File Offset: 0x005D02EF
+	// Token: 0x17001EF4 RID: 7924
+	// (get) Token: 0x0601491E RID: 84254 RVA: 0x005FEC6B File Offset: 0x005FCE6B
 	protected override ESurvivorsRogueItemType ItemType
 	{
 		get
@@ -27,7 +27,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		}
 	}
 
-	// Token: 0x06016EEE RID: 93934 RVA: 0x005D20F4 File Offset: 0x005D02F4
+	// Token: 0x0601491F RID: 84255 RVA: 0x005FEC70 File Offset: 0x005FCE70
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06016EEF RID: 93935 RVA: 0x005D219C File Offset: 0x005D039C
+	// Token: 0x06014920 RID: 84256 RVA: 0x005FED18 File Offset: 0x005FCF18
 	protected override UniTask InitSubComponents()
 	{
 		SurvivorsItemTabView.<InitSubComponents>d__4 <InitSubComponents>d__;
@@ -53,7 +53,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		return <InitSubComponents>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016EF0 RID: 93936 RVA: 0x005D21DF File Offset: 0x005D03DF
+	// Token: 0x06014921 RID: 84257 RVA: 0x005FED5B File Offset: 0x005FCF5B
 	protected override void OnBeforeDestroy()
 	{
 		SurvivorsRogueCardBase propDetailItem = this.PropDetailItem;
@@ -64,19 +64,19 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		this.PropDetailItem = null;
 	}
 
-	// Token: 0x06016EF1 RID: 93937 RVA: 0x005D21FA File Offset: 0x005D03FA
+	// Token: 0x06014922 RID: 84258 RVA: 0x005FED76 File Offset: 0x005FCF76
 	protected override int GetLoopItemIndex()
 	{
 		return 3;
 	}
 
-	// Token: 0x06016EF2 RID: 93938 RVA: 0x005D21FD File Offset: 0x005D03FD
+	// Token: 0x06014923 RID: 84259 RVA: 0x005FED79 File Offset: 0x005FCF79
 	protected override int GetLoopScrollComponentIndex()
 	{
 		return 1;
 	}
 
-	// Token: 0x06016EF3 RID: 93939 RVA: 0x005D2200 File Offset: 0x005D0400
+	// Token: 0x06014924 RID: 84260 RVA: 0x005FED7C File Offset: 0x005FCF7C
 	protected override SurvivorsItemTabItem CreateLoopItem()
 	{
 		SurvivorsItemTabItem survivorsItemTabItem = new SurvivorsItemTabItem();
@@ -85,7 +85,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		return survivorsItemTabItem;
 	}
 
-	// Token: 0x06016EF4 RID: 93940 RVA: 0x005D222C File Offset: 0x005D042C
+	// Token: 0x06014925 RID: 84261 RVA: 0x005FEDA8 File Offset: 0x005FCFA8
 	protected override IReadOnlyList<SurvivorsRogueItemCard> GenerateItemUiDataList()
 	{
 		int actId = SurvivorsRogueModel.Instance.ActivityData.ActId;
@@ -111,7 +111,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		return list;
 	}
 
-	// Token: 0x06016EF5 RID: 93941 RVA: 0x005D2334 File Offset: 0x005D0534
+	// Token: 0x06014926 RID: 84262 RVA: 0x005FEEB0 File Offset: 0x005FD0B0
 	protected override void OnSelectItem(SurvivorsRogueItemCard data, bool isFromClick = true)
 	{
 		SurvivorsItemTabView.<>c__DisplayClass10_0 CS$<>8__locals1 = new SurvivorsItemTabView.<>c__DisplayClass10_0();
@@ -143,7 +143,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		}
 	}
 
-	// Token: 0x06016EF6 RID: 93942 RVA: 0x005D23AF File Offset: 0x005D05AF
+	// Token: 0x06014927 RID: 84263 RVA: 0x005FEF2B File Offset: 0x005FD12B
 	private void SortUiDataList(List<SurvivorsRogueItemCard> uiDataList)
 	{
 		if (uiDataList == null)
@@ -177,7 +177,7 @@ public class SurvivorsItemTabView : SurvivorsTabViewBase<SurvivorsItemTabItem, S
 		});
 	}
 
-	// Token: 0x0400AAB2 RID: 43698
+	// Token: 0x0400AEB8 RID: 44728
 	[Nullable(2)]
 	private SurvivorsRogueCardBase PropDetailItem;
 }

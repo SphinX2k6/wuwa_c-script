@@ -6,63 +6,63 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 {
-	// Token: 0x0200517F RID: 20863
+	// Token: 0x0200414F RID: 16719
 	[NullableContext(1)]
 	public interface IPhantomArenaDeckDetailViewData
 	{
-		// Token: 0x17008123 RID: 33059
-		// (get) Token: 0x060355B4 RID: 218548
-		// (set) Token: 0x060355B5 RID: 218549
+		// Token: 0x170054E3 RID: 21731
+		// (get) Token: 0x0602A4AF RID: 173231
+		// (set) Token: 0x0602A4B0 RID: 173232
 		DeckInfo DeckInfo { get; set; }
 
-		// Token: 0x17008124 RID: 33060
-		// (get) Token: 0x060355B6 RID: 218550
-		// (set) Token: 0x060355B7 RID: 218551
+		// Token: 0x170054E4 RID: 21732
+		// (get) Token: 0x0602A4B1 RID: 173233
+		// (set) Token: 0x0602A4B2 RID: 173234
 		bool ShowLocked { get; set; }
 
-		// Token: 0x17008125 RID: 33061
-		// (get) Token: 0x060355B8 RID: 218552
-		// (set) Token: 0x060355B9 RID: 218553
+		// Token: 0x170054E5 RID: 21733
+		// (get) Token: 0x0602A4B3 RID: 173235
+		// (set) Token: 0x0602A4B4 RID: 173236
 		int ActivityId { get; set; }
 
-		// Token: 0x17008126 RID: 33062
-		// (get) Token: 0x060355BA RID: 218554
-		// (set) Token: 0x060355BB RID: 218555
+		// Token: 0x170054E6 RID: 21734
+		// (get) Token: 0x0602A4B5 RID: 173237
+		// (set) Token: 0x0602A4B6 RID: 173238
 		int? CurrencyId { get; set; }
 
-		// Token: 0x17008127 RID: 33063
-		// (get) Token: 0x060355BC RID: 218556
-		// (set) Token: 0x060355BD RID: 218557
+		// Token: 0x170054E7 RID: 21735
+		// (get) Token: 0x0602A4B7 RID: 173239
+		// (set) Token: 0x0602A4B8 RID: 173240
 		int? CurCardId { get; set; }
 
-		// Token: 0x17008128 RID: 33064
-		// (get) Token: 0x060355BE RID: 218558
-		// (set) Token: 0x060355BF RID: 218559
+		// Token: 0x170054E8 RID: 21736
+		// (get) Token: 0x0602A4B9 RID: 173241
+		// (set) Token: 0x0602A4BA RID: 173242
 		DetailViewCardItemData CardItemData { get; set; }
 
-		// Token: 0x17008129 RID: 33065
-		// (get) Token: 0x060355C0 RID: 218560
-		// (set) Token: 0x060355C1 RID: 218561
+		// Token: 0x170054E9 RID: 21737
+		// (get) Token: 0x0602A4BB RID: 173243
+		// (set) Token: 0x0602A4BC RID: 173244
 		CardDetailItemData DetailItemData { get; set; }
 
-		// Token: 0x1700812A RID: 33066
-		// (get) Token: 0x060355C2 RID: 218562
-		// (set) Token: 0x060355C3 RID: 218563
+		// Token: 0x170054EA RID: 21738
+		// (get) Token: 0x0602A4BD RID: 173245
+		// (set) Token: 0x0602A4BE RID: 173246
 		List<int> EntryList { get; set; }
 
-		// Token: 0x1700812B RID: 33067
-		// (get) Token: 0x060355C4 RID: 218564
-		// (set) Token: 0x060355C5 RID: 218565
+		// Token: 0x170054EB RID: 21739
+		// (get) Token: 0x0602A4BF RID: 173247
+		// (set) Token: 0x0602A4C0 RID: 173248
 		bool? IsUnlock { get; set; }
 
-		// Token: 0x1700812C RID: 33068
-		// (get) Token: 0x060355C6 RID: 218566
-		// (set) Token: 0x060355C7 RID: 218567
+		// Token: 0x170054EC RID: 21740
+		// (get) Token: 0x0602A4C1 RID: 173249
+		// (set) Token: 0x0602A4C2 RID: 173250
 		bool? IsRecommend { get; set; }
 
-		// Token: 0x1700812D RID: 33069
-		// (get) Token: 0x060355C8 RID: 218568
-		// (set) Token: 0x060355C9 RID: 218569
+		// Token: 0x170054ED RID: 21741
+		// (get) Token: 0x0602A4C3 RID: 173251
+		// (set) Token: 0x0602A4C4 RID: 173252
 		Action<DeckInfo> SaveRecommendDeckCallback { get; set; }
 	}
 }

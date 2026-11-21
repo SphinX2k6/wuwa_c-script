@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B7B RID: 11131
+// Token: 0x020020F7 RID: 8439
 internal enum <SurvivorsRogueShopView>F6A6C46952D956D06F1ADED4FB73F2D522F8B3715F9362E377F80EEB9BE91E45D__EComponents
 {
-	// Token: 0x0400AC92 RID: 44178
+	// Token: 0x0400B098 RID: 45208
 	BaseItem,
-	// Token: 0x0400AC93 RID: 44179
+	// Token: 0x0400B099 RID: 45209
 	LayoutCard,
-	// Token: 0x0400AC94 RID: 44180
+	// Token: 0x0400B09A RID: 45210
 	CardItem,
-	// Token: 0x0400AC95 RID: 44181
+	// Token: 0x0400B09B RID: 45211
 	BtnRefresh,
-	// Token: 0x0400AC96 RID: 44182
+	// Token: 0x0400B09C RID: 45212
 	BtnContinue,
-	// Token: 0x0400AC97 RID: 44183
+	// Token: 0x0400B09D RID: 45213
 	TexRefreshIcon,
-	// Token: 0x0400AC98 RID: 44184
+	// Token: 0x0400B09E RID: 45214
 	TxtRefreshCount
 }

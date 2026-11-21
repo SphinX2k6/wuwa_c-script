@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 {
-	// Token: 0x02006A27 RID: 27175
+	// Token: 0x02005B84 RID: 23428
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemSplineMoveTaskUtils
 	{
-		// Token: 0x06043973 RID: 276851 RVA: 0x01089FB4 File Offset: 0x010881B4
+		// Token: 0x060399C1 RID: 235969 RVA: 0x0102E7E4 File Offset: 0x0102C9E4
 		public static bool ParseOldConfigToSplineMoveParam(USplineComponent spline, List<float> speeds, List<float> waitTimes, bool isRepeat, bool isCycle, bool isKeepLookAt, float startTimeOffset, SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam outSplineMoveParam)
 		{
 			outSplineMoveParam.IsRepeat = isRepeat;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return SceneItemSplineMoveTaskUtils.ParseGeneralPointsConfigToSplineMoveParam(spline, list, null, outSplineMoveParam);
 		}
 
-		// Token: 0x06043974 RID: 276852 RVA: 0x0108A0A9 File Offset: 0x010882A9
+		// Token: 0x060399C2 RID: 235970 RVA: 0x0102E8D9 File Offset: 0x0102CAD9
 		public static ISceneItemSplineMoveConfig CreateDefaultGeneralConfig()
 		{
 			return new SceneItemSplineMoveConfig
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			};
 		}
 
-		// Token: 0x06043975 RID: 276853 RVA: 0x0108A0DC File Offset: 0x010882DC
+		// Token: 0x060399C3 RID: 235971 RVA: 0x0102E90C File Offset: 0x0102CB0C
 		public static SceneItemSplineMoveRuntimeData CreateDefaultGeneralRuntimeData()
 		{
 			return new SceneItemSplineMoveRuntimeData
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			};
 		}
 
-		// Token: 0x06043976 RID: 276854 RVA: 0x0108A10C File Offset: 0x0108830C
+		// Token: 0x060399C4 RID: 235972 RVA: 0x0102E93C File Offset: 0x0102CB3C
 		public static bool ParseProtoSplineMoveConfigToGeneralConfig(int protoSplineId, [Nullable(2)] MoveSplineConfig protoMoveSplineConfig, ISceneItemSplineMoveConfig outSplineMoveConfig)
 		{
 			CreatureModel instance = CreatureModel.Instance;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x06043977 RID: 276855 RVA: 0x0108A228 File Offset: 0x01088428
+		// Token: 0x060399C5 RID: 235973 RVA: 0x0102EA58 File Offset: 0x0102CC58
 		public static bool ParseProtoSplineMoveRuntimeDataToGeneralRuntimeData([Nullable(2)] SceneItemSplineRuntimeData protoRuntimeData, ISceneItemSplineMoveRuntimeData outSplineMoveRuntimeData)
 		{
 			float? distanceAloneSpline;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x06043978 RID: 276856 RVA: 0x0108A2B0 File Offset: 0x010884B0
+		// Token: 0x060399C6 RID: 235974 RVA: 0x0102EAE0 File Offset: 0x0102CCE0
 		public static bool ParseSplineDataToGeneralConfig(ISplineType splineData, ISceneItemSplineMoveConfig outSplineMoveConfig)
 		{
 			ESplineType type = splineData.Type;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return false;
 		}
 
-		// Token: 0x06043979 RID: 276857 RVA: 0x0108A5B4 File Offset: 0x010887B4
+		// Token: 0x060399C7 RID: 235975 RVA: 0x0102EDE4 File Offset: 0x0102CFE4
 		public static bool ParseGeneralConfigAndRuntimeDataToSplineMoveParam(USplineComponent splineComp, ISceneItemSplineMoveConfig splineMoveConfig, ISceneItemSplineMoveRuntimeData splineMoveRuntimeData, [Nullable(new byte[]
 		{
 			2,
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return (splineMoveConfig.GlobalConfig == null || SceneItemSplineMoveTaskUtils.ParseGeneralGlobalConfigToSplineMoveParam(splineComp, splineMoveConfig.GlobalConfig, curveAssetMap, outSplineMoveParam)) && (splineMoveConfig.PointConfigs == null || SceneItemSplineMoveTaskUtils.ParseGeneralPointsConfigToSplineMoveParam(splineComp, splineMoveConfig.PointConfigs, curveAssetMap, outSplineMoveParam)) && SceneItemSplineMoveTaskUtils.ParseRuntimeDataToSplineMoveParam(splineComp, splineMoveRuntimeData, outSplineMoveParam);
 		}
 
-		// Token: 0x0604397A RID: 276858 RVA: 0x0108A6AC File Offset: 0x010888AC
+		// Token: 0x060399C8 RID: 235976 RVA: 0x0102EEDC File Offset: 0x0102D0DC
 		private static bool ParseGeneralGlobalConfigToSplineMoveParam(USplineComponent splineComp, ISceneItemSplineMoveSegmentConfig splineMoveGlobalConfig, [Nullable(new byte[]
 		{
 			2,
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return false;
 		}
 
-		// Token: 0x0604397B RID: 276859 RVA: 0x0108A7D4 File Offset: 0x010889D4
+		// Token: 0x060399C9 RID: 235977 RVA: 0x0102F004 File Offset: 0x0102D204
 		private static bool ParseGeneralPointsConfigToSplineMoveParam(USplineComponent splineComp, List<ISceneItemSplineMoveSegmentConfig> splineMovePointConfigs, [Nullable(new byte[]
 		{
 			2,
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x0604397C RID: 276860 RVA: 0x0108AAB8 File Offset: 0x01088CB8
+		// Token: 0x060399CA RID: 235978 RVA: 0x0102F2E8 File Offset: 0x0102D4E8
 		private static bool ParseRuntimeDataToSplineMoveParam(USplineComponent splineComp, ISceneItemSplineMoveRuntimeData splineMoveRuntimeData, SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam outSplineMoveParam)
 		{
 			float? distanceAloneSpline = splineMoveRuntimeData.DistanceAloneSpline;
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x0604397D RID: 276861 RVA: 0x0108AB8C File Offset: 0x01088D8C
+		// Token: 0x060399CB RID: 235979 RVA: 0x0102F3BC File Offset: 0x0102D5BC
 		public static void SetSplineClosedLoop(USplineComponent splineComp, bool targetClosedLoop)
 		{
 			int numberOfSplinePoints = splineComp.GetNumberOfSplinePoints();
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			}
 		}
 
-		// Token: 0x0604397E RID: 276862 RVA: 0x0108AC30 File Offset: 0x01088E30
+		// Token: 0x060399CC RID: 235980 RVA: 0x0102F460 File Offset: 0x0102D660
 		private static ISceneItemSplineMoveRangeByDistAlongSpline GetSplineMoveRange([Nullable(2)] object splineMoveRange, USplineComponent spline)
 		{
 			SceneItemSplineMoveRangeByDistAlongSpline sceneItemSplineMoveRangeByDistAlongSpline = new SceneItemSplineMoveRangeByDistAlongSpline
@@ -513,19 +513,19 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return sceneItemSplineMoveRangeByDistAlongSpline;
 		}
 
-		// Token: 0x0604397F RID: 276863 RVA: 0x0108AD76 File Offset: 0x01088F76
+		// Token: 0x060399CD RID: 235981 RVA: 0x0102F5A6 File Offset: 0x0102D7A6
 		public static bool CheckSplineMoveDistanceNearlyEqual(double distance1, double distance2, double tolerance = 1E-08)
 		{
 			return MathUtils.Instance.IsNearlyEqual(distance1, distance2, new double?(tolerance));
 		}
 
-		// Token: 0x06043980 RID: 276864 RVA: 0x0108AD8A File Offset: 0x01088F8A
+		// Token: 0x060399CE RID: 235982 RVA: 0x0102F5BA File Offset: 0x0102D7BA
 		public static bool CheckSplineMoveLocationNearlyEqual(global::Vector location1, global::Vector location2, double tolerance = 1E-08)
 		{
 			return global::Vector.Distance(location1, location2) <= tolerance;
 		}
 
-		// Token: 0x06043981 RID: 276865 RVA: 0x0108AD9C File Offset: 0x01088F9C
+		// Token: 0x060399CF RID: 235983 RVA: 0x0102F5CC File Offset: 0x0102D7CC
 		public static bool CheckSplineMoveRotatorNearlyEqual(global::Rotator rotator1, global::Rotator rotator2, double tolerance = 1E-08)
 		{
 			rotator1.Quaternion(SceneItemSplineMoveTaskUtils.TempQuat1);
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return (double)fquat.AngularDistance(fquat2) <= tolerance;
 		}
 
-		// Token: 0x06043982 RID: 276866 RVA: 0x0108ADE8 File Offset: 0x01088FE8
+		// Token: 0x060399D0 RID: 235984 RVA: 0x0102F618 File Offset: 0x0102D818
 		public static bool CheckSplineMoveQuatNearlyEqual(Quat quat1, Quat quat2, double tolerance = 1E-08)
 		{
 			FQuat fquat = quat1.ToUeQuat();
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return (double)fquat.AngularDistance(fquat2) <= tolerance;
 		}
 
-		// Token: 0x06043983 RID: 276867 RVA: 0x0108AE14 File Offset: 0x01089014
+		// Token: 0x060399D1 RID: 235985 RVA: 0x0102F644 File Offset: 0x0102D844
 		public static bool ParseNewMoveWithSplineActionToGeneralConfig(NewMoveWithSpline action, ISceneItemSplineMoveConfig outSplineMoveConfig)
 		{
 			CreatureModel instance = CreatureModel.Instance;
@@ -574,7 +574,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return true;
 		}
 
-		// Token: 0x06043984 RID: 276868 RVA: 0x0108AF1C File Offset: 0x0108911C
+		// Token: 0x060399D2 RID: 235986 RVA: 0x0102F74C File Offset: 0x0102D94C
 		public static MoveSplineConfig ParseGeneralConfigToProtoConfig(ISceneItemSplineMoveConfig splineMoveConfig)
 		{
 			MoveSplineConfig moveSplineConfig = MoveSplineConfig.Create();
@@ -590,11 +590,11 @@ namespace CSharpScript.Game.LevelGamePlay.SplineMoveTask
 			return moveSplineConfig;
 		}
 
-		// Token: 0x040234AC RID: 144556
+		// Token: 0x0401E69E RID: 124574
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TempQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040234AD RID: 144557
+		// Token: 0x0401E69F RID: 124575
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TempQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}

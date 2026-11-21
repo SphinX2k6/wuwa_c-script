@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053BA RID: 21434
+	// Token: 0x0200439D RID: 17309
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleSumAreaMapPanel : UiPanelBase
 	{
-		// Token: 0x06036C42 RID: 224322 RVA: 0x00CF6490 File Offset: 0x00CF4690
+		// Token: 0x0602BB88 RID: 179080 RVA: 0x00C45538 File Offset: 0x00C43738
 		public UniTask Init(UUIItem item, MoraleAreaData areaData)
 		{
 			MoraleSumAreaMapPanel.<Init>d__4 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C43 RID: 224323 RVA: 0x00CF64E4 File Offset: 0x00CF46E4
+		// Token: 0x0602BB89 RID: 179081 RVA: 0x00C4558C File Offset: 0x00C4378C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C44 RID: 224324 RVA: 0x00CF65A4 File Offset: 0x00CF47A4
+		// Token: 0x0602BB8A RID: 179082 RVA: 0x00C4564C File Offset: 0x00C4384C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleSumAreaMapPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C45 RID: 224325 RVA: 0x00CF65E7 File Offset: 0x00CF47E7
+		// Token: 0x0602BB8B RID: 179083 RVA: 0x00C4568F File Offset: 0x00C4388F
 		public void UpdateData()
 		{
 			this.AreaTitle.UpdateData();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.CheckAreaLight();
 		}
 
-		// Token: 0x06036C46 RID: 224326 RVA: 0x00CF660B File Offset: 0x00CF480B
+		// Token: 0x0602BB8C RID: 179084 RVA: 0x00C456B3 File Offset: 0x00C438B3
 		public void InitData()
 		{
 			this.AreaTitle.UpdateData();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.CheckAreaLight();
 		}
 
-		// Token: 0x06036C47 RID: 224327 RVA: 0x00CF662C File Offset: 0x00CF482C
+		// Token: 0x0602BB8D RID: 179085 RVA: 0x00C456D4 File Offset: 0x00C438D4
 		public void CheckAreaLight()
 		{
 			bool uiactive = this.AreaData.IsAllUiFlagActive();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06036C48 RID: 224328 RVA: 0x00CF6657 File Offset: 0x00CF4857
+		// Token: 0x0602BB8E RID: 179086 RVA: 0x00C456FF File Offset: 0x00C438FF
 		public void SetRecommendLightActive(bool active)
 		{
 			UUIItem item = base.GetItem(5);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Morale
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06036C49 RID: 224329 RVA: 0x00CF666B File Offset: 0x00CF486B
+		// Token: 0x0602BB8F RID: 179087 RVA: 0x00C45713 File Offset: 0x00C43913
 		private void OnBtnSelf()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MoraleAreaInfoView, new MoraleAreaInfoView.Params
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Morale
 			}, null);
 		}
 
-		// Token: 0x06036C4A RID: 224330 RVA: 0x00CF6694 File Offset: 0x00CF4894
+		// Token: 0x0602BB90 RID: 179088 RVA: 0x00C4573C File Offset: 0x00C4393C
 		public UniTask PlayEnterEffect(IReadOnlyList<MoraleAreaPlotData> plotList)
 		{
 			MoraleSumAreaMapPanel.<PlayEnterEffect>d__12 <PlayEnterEffect>d__;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayEnterEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C4B RID: 224331 RVA: 0x00CF66E0 File Offset: 0x00CF48E0
+		// Token: 0x0602BB91 RID: 179089 RVA: 0x00C45788 File Offset: 0x00C43988
 		public UniTask PlayLoopEffect(IReadOnlyList<MoraleAreaPlotData> plotList)
 		{
 			MoraleSumAreaMapPanel.<PlayLoopEffect>d__13 <PlayLoopEffect>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayLoopEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C4C RID: 224332 RVA: 0x00CF672C File Offset: 0x00CF492C
+		// Token: 0x0602BB92 RID: 179090 RVA: 0x00C457D4 File Offset: 0x00C439D4
 		public UniTask PlayNewUnlockEffect(IReadOnlyList<MoraleAreaPlotData> plotList)
 		{
 			MoraleSumAreaMapPanel.<PlayNewUnlockEffect>d__14 <PlayNewUnlockEffect>d__;
@@ -143,12 +143,12 @@ namespace CSharpScript.Game.Module.Morale
 			return <PlayNewUnlockEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C4D RID: 224333 RVA: 0x00CF6777 File Offset: 0x00CF4977
+		// Token: 0x0602BB93 RID: 179091 RVA: 0x00C4581F File Offset: 0x00C43A1F
 		public void LogIdList(List<int> idList, string title)
 		{
 		}
 
-		// Token: 0x06036C4E RID: 224334 RVA: 0x00CF677C File Offset: 0x00CF497C
+		// Token: 0x0602BB94 RID: 179092 RVA: 0x00C45824 File Offset: 0x00C43A24
 		public List<MoraleAreaPlotItem> GetBelongCurAreaPlotItemList(IReadOnlyList<MoraleAreaPlotData> plotList)
 		{
 			Dictionary<int, MoraleAreaPlotItem> plotMap = this.AreaPlotPanel.PlotMap;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Morale
 			return list;
 		}
 
-		// Token: 0x06036C4F RID: 224335 RVA: 0x00CF67E0 File Offset: 0x00CF49E0
+		// Token: 0x0602BB95 RID: 179093 RVA: 0x00C45888 File Offset: 0x00C43A88
 		public void OnTick(float delta)
 		{
 			for (int i = 0; i < this.AreaPlotPanel.PlotList.Count; i++)
@@ -174,35 +174,35 @@ namespace CSharpScript.Game.Module.Morale
 			}
 		}
 
-		// Token: 0x0401CE7A RID: 118394
+		// Token: 0x04017912 RID: 96530
 		public MoraleAreaData AreaData;
 
-		// Token: 0x0401CE7B RID: 118395
+		// Token: 0x04017913 RID: 96531
 		public MoraleSumAreaTitleItem AreaTitle;
 
-		// Token: 0x0401CE7C RID: 118396
+		// Token: 0x04017914 RID: 96532
 		public MoraleAreaPlotPanel AreaPlotPanel;
 
-		// Token: 0x0200B65C RID: 46684
+		// Token: 0x0200A094 RID: 41108
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040373EB RID: 226283
+			// Token: 0x04031E40 RID: 204352
 			public const int BtnSelf = 0;
 
-			// Token: 0x040373EC RID: 226284
+			// Token: 0x04031E41 RID: 204353
 			public const int ItemAreaTitle = 1;
 
-			// Token: 0x040373ED RID: 226285
+			// Token: 0x04031E42 RID: 204354
 			public const int TexMapBg = 2;
 
-			// Token: 0x040373EE RID: 226286
+			// Token: 0x04031E43 RID: 204355
 			public const int ItemPlotPanel = 3;
 
-			// Token: 0x040373EF RID: 226287
+			// Token: 0x04031E44 RID: 204356
 			public const int ItemAreaLight = 4;
 
-			// Token: 0x040373F0 RID: 226288
+			// Token: 0x04031E45 RID: 204357
 			public const int ItemRecommendLight = 5;
 		}
 	}

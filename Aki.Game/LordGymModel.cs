@@ -11,13 +11,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002190 RID: 8592
+// Token: 0x02001674 RID: 5748
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class LordGymModel : ModelBase
 {
-	// Token: 0x06010B2C RID: 68396 RVA: 0x0040E3F4 File Offset: 0x0040C5F4
+	// Token: 0x0600DFBD RID: 57277 RVA: 0x0041ACD4 File Offset: 0x00418ED4
 	protected override bool OnInit()
 	{
 		this.LordId2EntranceIdMap = new Dictionary<int, int>();
@@ -31,13 +31,13 @@ public class LordGymModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010B2D RID: 68397 RVA: 0x0040E47C File Offset: 0x0040C67C
+	// Token: 0x0600DFBE RID: 57278 RVA: 0x0041AD5C File Offset: 0x00418F5C
 	public bool GetLordGymIsUnLock(int lordId)
 	{
 		return this.UnLockLordGym.Contains(lordId);
 	}
 
-	// Token: 0x06010B2E RID: 68398 RVA: 0x0040E48C File Offset: 0x0040C68C
+	// Token: 0x0600DFBF RID: 57279 RVA: 0x0041AD6C File Offset: 0x00418F6C
 	public bool IsLordGymUnlockedByGroup(int lordId)
 	{
 		LordGym? lordGymConfig = LordGymConfig.Instance.GetLordGymConfig(lordId);
@@ -45,7 +45,7 @@ public class LordGymModel : ModelBase
 		return lordGymConfig != null && this.LordGymGroupPassDiff.TryGetValue(lordGymConfig.Value.FilterType, out num) && lordGymConfig.Value.Difficulty <= num + 1;
 	}
 
-	// Token: 0x06010B2F RID: 68399 RVA: 0x0040E4E8 File Offset: 0x0040C6E8
+	// Token: 0x0600DFC0 RID: 57280 RVA: 0x0041ADC8 File Offset: 0x00418FC8
 	public void UpdateLordGymGroupInfos([Nullable(new byte[]
 	{
 		2,
@@ -63,26 +63,26 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B30 RID: 68400 RVA: 0x0040E558 File Offset: 0x0040C758
+	// Token: 0x0600DFC1 RID: 57281 RVA: 0x0041AE38 File Offset: 0x00419038
 	public bool GetLordGymHasRead(int lordId)
 	{
 		return this.ReadLoadGymIds.Contains(lordId);
 	}
 
-	// Token: 0x06010B31 RID: 68401 RVA: 0x0040E566 File Offset: 0x0040C766
+	// Token: 0x0600DFC2 RID: 57282 RVA: 0x0041AE46 File Offset: 0x00419046
 	public void ReadLordGym(int lordId)
 	{
 		this.ReadLoadGymIds.Add(lordId);
 	}
 
-	// Token: 0x06010B32 RID: 68402 RVA: 0x0040E574 File Offset: 0x0040C774
+	// Token: 0x0600DFC3 RID: 57283 RVA: 0x0041AE54 File Offset: 0x00419054
 	[NullableContext(2)]
 	public int[] GetLordGymEntranceList(int lordEntranceId)
 	{
 		return LordGymConfig.Instance.GetLordGymEntranceLordList(lordEntranceId);
 	}
 
-	// Token: 0x06010B33 RID: 68403 RVA: 0x0040E584 File Offset: 0x0040C784
+	// Token: 0x0600DFC4 RID: 57284 RVA: 0x0041AE64 File Offset: 0x00419064
 	public bool GetLastGymFinish(int lordId)
 	{
 		LordGym value = LordGymConfig.Instance.GetLordGymConfig(lordId).Value;
@@ -104,7 +104,7 @@ public class LordGymModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06010B34 RID: 68404 RVA: 0x0040E62C File Offset: 0x0040C82C
+	// Token: 0x0600DFC5 RID: 57285 RVA: 0x0041AF0C File Offset: 0x0041910C
 	public int? GetNextGymId(int lordId)
 	{
 		LordGym value = LordGymConfig.Instance.GetLordGymConfig(lordId).Value;
@@ -123,7 +123,7 @@ public class LordGymModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010B35 RID: 68405 RVA: 0x0040E6D4 File Offset: 0x0040C8D4
+	// Token: 0x0600DFC6 RID: 57286 RVA: 0x0041AFB4 File Offset: 0x004191B4
 	public bool GetLordGymIsFinish(int lordId)
 	{
 		if (lordId == 0)
@@ -150,7 +150,7 @@ public class LordGymModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06010B36 RID: 68406 RVA: 0x0040E7B4 File Offset: 0x0040C9B4
+	// Token: 0x0600DFC7 RID: 57287 RVA: 0x0041B094 File Offset: 0x00419294
 	public int? GetMarkIdByLordGymId(int gymId)
 	{
 		int lordEntranceId;
@@ -166,7 +166,7 @@ public class LordGymModel : ModelBase
 		return new int?(lordGymEntranceConfig.GetValueOrDefault().MarkId);
 	}
 
-	// Token: 0x06010B37 RID: 68407 RVA: 0x0040E810 File Offset: 0x0040CA10
+	// Token: 0x0600DFC8 RID: 57288 RVA: 0x0041B0F0 File Offset: 0x004192F0
 	public int GetEntranceIdByLordId(int lordId)
 	{
 		int result;
@@ -177,7 +177,7 @@ public class LordGymModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06010B38 RID: 68408 RVA: 0x0040E838 File Offset: 0x0040CA38
+	// Token: 0x0600DFC9 RID: 57289 RVA: 0x0041B118 File Offset: 0x00419318
 	[NullableContext(2)]
 	public string GetLordGymEntranceFinish(int gymEntranceId)
 	{
@@ -188,7 +188,7 @@ public class LordGymModel : ModelBase
 		return str + str2 + num.ToString();
 	}
 
-	// Token: 0x06010B39 RID: 68409 RVA: 0x0040E878 File Offset: 0x0040CA78
+	// Token: 0x0600DFCA RID: 57290 RVA: 0x0041B158 File Offset: 0x00419358
 	public int GetHasFinishLord(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -208,7 +208,7 @@ public class LordGymModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06010B3A RID: 68410 RVA: 0x0040E8D8 File Offset: 0x0040CAD8
+	// Token: 0x0600DFCB RID: 57291 RVA: 0x0041B1B8 File Offset: 0x004193B8
 	public int? GetMaxDifficultyLordGymEntrance(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -228,7 +228,7 @@ public class LordGymModel : ModelBase
 		return new int?(num);
 	}
 
-	// Token: 0x06010B3B RID: 68411 RVA: 0x0040E974 File Offset: 0x0040CB74
+	// Token: 0x0600DFCC RID: 57292 RVA: 0x0041B254 File Offset: 0x00419454
 	public int? GetMaxDifficultyLordGymEntranceCanFight(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -248,7 +248,7 @@ public class LordGymModel : ModelBase
 		return new int?(num);
 	}
 
-	// Token: 0x06010B3C RID: 68412 RVA: 0x0040EA30 File Offset: 0x0040CC30
+	// Token: 0x0600DFCD RID: 57293 RVA: 0x0041B310 File Offset: 0x00419510
 	public int GetCanFightLordGym(bool isNewLordGym = false)
 	{
 		foreach (int num in this.UnLockLordGym)
@@ -265,7 +265,7 @@ public class LordGymModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06010B3D RID: 68413 RVA: 0x0040EACC File Offset: 0x0040CCCC
+	// Token: 0x0600DFCE RID: 57294 RVA: 0x0041B3AC File Offset: 0x004195AC
 	public bool GetGymEntranceAllFinish(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -283,7 +283,7 @@ public class LordGymModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010B3E RID: 68414 RVA: 0x0040EB20 File Offset: 0x0040CD20
+	// Token: 0x0600DFCF RID: 57295 RVA: 0x0041B400 File Offset: 0x00419600
 	public int? GetGymCanFightMaxLevelWithoutLockCondition(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -303,7 +303,7 @@ public class LordGymModel : ModelBase
 		return new int?(num);
 	}
 
-	// Token: 0x06010B3F RID: 68415 RVA: 0x0040EBD0 File Offset: 0x0040CDD0
+	// Token: 0x0600DFD0 RID: 57296 RVA: 0x0041B4B0 File Offset: 0x004196B0
 	public int? GetGymCanFightMaxLevel(int gymEntranceId)
 	{
 		LordGymEntrance? lordGymEntranceConfig = LordGymConfig.Instance.GetLordGymEntranceConfig(gymEntranceId);
@@ -323,7 +323,7 @@ public class LordGymModel : ModelBase
 		return new int?(num);
 	}
 
-	// Token: 0x06010B40 RID: 68416 RVA: 0x0040EC74 File Offset: 0x0040CE74
+	// Token: 0x0600DFD1 RID: 57297 RVA: 0x0041B554 File Offset: 0x00419754
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetLordGymCurrencyRewardAndTotalCount(int gymEntranceSetId)
 	{
@@ -355,19 +355,19 @@ public class LordGymModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x06010B41 RID: 68417 RVA: 0x0040EDDC File Offset: 0x0040CFDC
+	// Token: 0x0600DFD2 RID: 57298 RVA: 0x0041B6BC File Offset: 0x004198BC
 	public bool IsChallenging()
 	{
 		return this.CurrentChallengeLordGymId > 0;
 	}
 
-	// Token: 0x06010B42 RID: 68418 RVA: 0x0040EDE7 File Offset: 0x0040CFE7
+	// Token: 0x0600DFD3 RID: 57299 RVA: 0x0041B6C7 File Offset: 0x004198C7
 	public void InitNewLordGymEntranceIdRecord()
 	{
 		this.NewLordGymEntranceIdRecord = (LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.NewLordGymEntranceIdRecord, null) ?? new List<int>());
 	}
 
-	// Token: 0x06010B43 RID: 68419 RVA: 0x0040EE00 File Offset: 0x0040D000
+	// Token: 0x0600DFD4 RID: 57300 RVA: 0x0041B6E0 File Offset: 0x004198E0
 	public void RecordNewLordGymEntrance(int entranceId)
 	{
 		if (this.NewLordGymEntranceIdRecord == null || this.IsNewLordGymEntranceRecord(entranceId))
@@ -378,14 +378,14 @@ public class LordGymModel : ModelBase
 		LocalStorage.SetPlayer<List<int>>(ELocalStoragePlayerKey.NewLordGymEntranceIdRecord, this.NewLordGymEntranceIdRecord);
 	}
 
-	// Token: 0x06010B44 RID: 68420 RVA: 0x0040EE2E File Offset: 0x0040D02E
+	// Token: 0x0600DFD5 RID: 57301 RVA: 0x0041B70E File Offset: 0x0041990E
 	public bool IsNewLordGymEntranceRecord(int entranceId)
 	{
 		List<int> newLordGymEntranceIdRecord = this.NewLordGymEntranceIdRecord;
 		return newLordGymEntranceIdRecord != null && newLordGymEntranceIdRecord.Contains(entranceId);
 	}
 
-	// Token: 0x06010B45 RID: 68421 RVA: 0x0040EE44 File Offset: 0x0040D044
+	// Token: 0x0600DFD6 RID: 57302 RVA: 0x0041B724 File Offset: 0x00419924
 	public void PhraseEntranceInfo(List<Aki.Protocol.LordGymEntranceInfo> info)
 	{
 		if (info == null)
@@ -401,7 +401,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B46 RID: 68422 RVA: 0x0040EEB4 File Offset: 0x0040D0B4
+	// Token: 0x0600DFD7 RID: 57303 RVA: 0x0041B794 File Offset: 0x00419994
 	public List<int> GetLordGymEntranceWithNewTag()
 	{
 		this.LordGymEntrancesWithNewTag.Clear();
@@ -416,14 +416,14 @@ public class LordGymModel : ModelBase
 		return this.LordGymEntrancesWithNewTag;
 	}
 
-	// Token: 0x06010B47 RID: 68423 RVA: 0x0040EF40 File Offset: 0x0040D140
+	// Token: 0x0600DFD8 RID: 57304 RVA: 0x0041B820 File Offset: 0x00419A20
 	[NullableContext(2)]
 	public ALevelSequenceActor GetLordGymThirdBossSequenceActor()
 	{
 		return this.LordGymThirdBossSequenceActor;
 	}
 
-	// Token: 0x06010B48 RID: 68424 RVA: 0x0040EF48 File Offset: 0x0040D148
+	// Token: 0x0600DFD9 RID: 57305 RVA: 0x0041B828 File Offset: 0x00419A28
 	public void DestroyLordGymThirdBossSequenceActor()
 	{
 		if (this.LordGymThirdBossSequenceActor != null && this.LordGymThirdBossSequenceActor.IsValid())
@@ -438,7 +438,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B49 RID: 68425 RVA: 0x0040EF88 File Offset: 0x0040D188
+	// Token: 0x0600DFDA RID: 57306 RVA: 0x0041B868 File Offset: 0x00419A68
 	protected void PlaybackPosition(bool isStart)
 	{
 		if (this.LordGymThirdBossSequenceActor == null || !this.LordGymThirdBossSequenceActor.IsValid())
@@ -486,7 +486,12 @@ public class LordGymModel : ModelBase
 		FFrameTime fframeTime2 = fframeTime;
 		if (fframeTime2 != null)
 		{
-			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(fframeTime2, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play);
+			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+			{
+				Frame = fframeTime2,
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = EUpdatePositionMethod.Play
+			};
 			ALevelSequenceActor lordGymThirdBossSequenceActor3 = this.LordGymThirdBossSequenceActor;
 			if (lordGymThirdBossSequenceActor3 == null)
 			{
@@ -501,7 +506,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B4A RID: 68426 RVA: 0x0040F0D8 File Offset: 0x0040D2D8
+	// Token: 0x0600DFDB RID: 57307 RVA: 0x0041B9C0 File Offset: 0x00419BC0
 	private UniTask CreateLordGymThirdBossSequence(bool isStart)
 	{
 		LordGymModel.<CreateLordGymThirdBossSequence>d__54 <CreateLordGymThirdBossSequence>d__;
@@ -513,7 +518,7 @@ public class LordGymModel : ModelBase
 		return <CreateLordGymThirdBossSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B4B RID: 68427 RVA: 0x0040F124 File Offset: 0x0040D324
+	// Token: 0x0600DFDC RID: 57308 RVA: 0x0041BA0C File Offset: 0x00419C0C
 	public UniTask EnterLordGymThirdBossScene(bool isStart)
 	{
 		LordGymModel.<EnterLordGymThirdBossScene>d__55 <EnterLordGymThirdBossScene>d__;
@@ -525,7 +530,7 @@ public class LordGymModel : ModelBase
 		return <EnterLordGymThirdBossScene>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B4C RID: 68428 RVA: 0x0040F170 File Offset: 0x0040D370
+	// Token: 0x0600DFDD RID: 57309 RVA: 0x0041BA58 File Offset: 0x00419C58
 	public void ExitLordGymThirdBossScene()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -545,7 +550,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B4D RID: 68429 RVA: 0x0040F1C8 File Offset: 0x0040D3C8
+	// Token: 0x0600DFDE RID: 57310 RVA: 0x0041BAB0 File Offset: 0x00419CB0
 	public void PreloadThird5SceneEffect(int entranceId)
 	{
 		LordGymEntrance? config = ConfigLordGymEntranceById.GetConfig(entranceId, true);
@@ -559,7 +564,7 @@ public class LordGymModel : ModelBase
 		instance.SpawnEffect(world, ftransformDouble, config.Value.LordUISceneEffect, "LordGymSceneEffect", null, EEffectType.UiScene3D, null, null, null, true, false);
 	}
 
-	// Token: 0x06010B4E RID: 68430 RVA: 0x0040F238 File Offset: 0x0040D438
+	// Token: 0x0600DFDF RID: 57311 RVA: 0x0041BB20 File Offset: 0x00419D20
 	public void PlayThird5SceneEffect(int entranceId)
 	{
 		if (EffectSystem.Instance.IsValid(this.Third5SceneEffectHandle))
@@ -579,7 +584,7 @@ public class LordGymModel : ModelBase
 		AudioSystem.Instance.PostEvent("play_ui_daoguan_3_5_efx_scene");
 	}
 
-	// Token: 0x06010B4F RID: 68431 RVA: 0x0040F2F4 File Offset: 0x0040D4F4
+	// Token: 0x0600DFE0 RID: 57312 RVA: 0x0041BBDC File Offset: 0x00419DDC
 	public void EnterLordGymThird5BossScene()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -599,7 +604,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B50 RID: 68432 RVA: 0x0040F34C File Offset: 0x0040D54C
+	// Token: 0x0600DFE1 RID: 57313 RVA: 0x0041BC34 File Offset: 0x00419E34
 	public void ExitLordGymThird5BossScene()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -624,7 +629,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B51 RID: 68433 RVA: 0x0040F3DC File Offset: 0x0040D5DC
+	// Token: 0x0600DFE2 RID: 57314 RVA: 0x0041BCC4 File Offset: 0x00419EC4
 	public void EnterLordGymFirstBossScene()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -644,7 +649,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B52 RID: 68434 RVA: 0x0040F434 File Offset: 0x0040D634
+	// Token: 0x0600DFE3 RID: 57315 RVA: 0x0041BD1C File Offset: 0x00419F1C
 	public void ExitLordGymFirstBossScene()
 	{
 		UKuroGISystem kuroGISystem = UKuroGISystem.GetKuroGISystem(GlobalData.World);
@@ -664,8 +669,8 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700152B RID: 5419
-	// (get) Token: 0x06010B53 RID: 68435 RVA: 0x0040F48B File Offset: 0x0040D68B
+	// Token: 0x17001562 RID: 5474
+	// (get) Token: 0x0600DFE4 RID: 57316 RVA: 0x0041BD73 File Offset: 0x00419F73
 	public static LordGymModel Instance
 	{
 		get
@@ -674,7 +679,7 @@ public class LordGymModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010B54 RID: 68436 RVA: 0x0040F492 File Offset: 0x0040D692
+	// Token: 0x0600DFE5 RID: 57317 RVA: 0x0041BD7A File Offset: 0x00419F7A
 	public static LordGymModel GetOrCreateInstance()
 	{
 		if (LordGymModel._Instance == null)
@@ -684,7 +689,7 @@ public class LordGymModel : ModelBase
 		return LordGymModel._Instance;
 	}
 
-	// Token: 0x06010B55 RID: 68437 RVA: 0x0040F4A6 File Offset: 0x0040D6A6
+	// Token: 0x0600DFE6 RID: 57318 RVA: 0x0041BD8E File Offset: 0x00419F8E
 	public static bool CreateInstance()
 	{
 		if (LordGymModel._Instance != null)
@@ -695,24 +700,24 @@ public class LordGymModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010B56 RID: 68438 RVA: 0x0040F4BC File Offset: 0x0040D6BC
+	// Token: 0x0600DFE7 RID: 57319 RVA: 0x0041BDA4 File Offset: 0x00419FA4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010B57 RID: 68439 RVA: 0x0040F4BE File Offset: 0x0040D6BE
+	// Token: 0x0600DFE8 RID: 57320 RVA: 0x0041BDA6 File Offset: 0x00419FA6
 	public static void ResetStaticDefaultValue()
 	{
 		LordGymModel._Instance = null;
 	}
 
-	// Token: 0x06010B58 RID: 68440 RVA: 0x0040F4C6 File Offset: 0x0040D6C6
+	// Token: 0x0600DFE9 RID: 57321 RVA: 0x0041BDAE File Offset: 0x00419FAE
 	static LordGymModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LordGymModel.CreateStaticDefaultValue), new Action(LordGymModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06010B59 RID: 68441 RVA: 0x0040F4E8 File Offset: 0x0040D6E8
+	// Token: 0x0600DFEA RID: 57322 RVA: 0x0041BDD0 File Offset: 0x00419FD0
 	public LordGymModel()
 	{
 		FRotator frotator = new FRotator(0f, 0f, 0f);
@@ -723,88 +728,88 @@ public class LordGymModel : ModelBase
 		base..ctor();
 	}
 
-	// Token: 0x04007F27 RID: 32551
+	// Token: 0x0400806E RID: 32878
 	[Nullable(2)]
 	protected Dictionary<int, int> LordId2EntranceIdMap;
 
-	// Token: 0x04007F28 RID: 32552
+	// Token: 0x0400806F RID: 32879
 	public List<int> UnLockLordGym = new List<int>();
 
-	// Token: 0x04007F29 RID: 32553
+	// Token: 0x04008070 RID: 32880
 	public List<int> ReadLoadGymIds = new List<int>();
 
-	// Token: 0x04007F2A RID: 32554
+	// Token: 0x04008071 RID: 32881
 	public List<int> FirstUnLockLordGym = new List<int>();
 
-	// Token: 0x04007F2B RID: 32555
+	// Token: 0x04008072 RID: 32882
 	public int EntranceEntityId;
 
-	// Token: 0x04007F2C RID: 32556
+	// Token: 0x04008073 RID: 32883
 	public int EntranceSetId;
 
-	// Token: 0x04007F2D RID: 32557
+	// Token: 0x04008074 RID: 32884
 	public int EntryChallengeId;
 
-	// Token: 0x04007F2E RID: 32558
+	// Token: 0x04008075 RID: 32885
 	public int LastChallengeLordEntranceId;
 
-	// Token: 0x04007F2F RID: 32559
+	// Token: 0x04008076 RID: 32886
 	public int CurrentChallengeLordGymId;
 
-	// Token: 0x04007F30 RID: 32560
+	// Token: 0x04008077 RID: 32887
 	public bool IsDeadInChallenge;
 
-	// Token: 0x04007F31 RID: 32561
+	// Token: 0x04008078 RID: 32888
 	public int LastChallengeLordId;
 
-	// Token: 0x04007F32 RID: 32562
+	// Token: 0x04008079 RID: 32889
 	public bool SkipBossSelectInFlow;
 
-	// Token: 0x04007F33 RID: 32563
+	// Token: 0x0400807A RID: 32890
 	public bool LastChallengeEntryFromGuide;
 
-	// Token: 0x04007F34 RID: 32564
+	// Token: 0x0400807B RID: 32891
 	public bool IsCurrentChallengeFromGuide;
 
-	// Token: 0x04007F35 RID: 32565
+	// Token: 0x0400807C RID: 32892
 	public Dictionary<int, LordGymPassRecord> LordGymRecord = new Dictionary<int, LordGymPassRecord>();
 
-	// Token: 0x04007F36 RID: 32566
+	// Token: 0x0400807D RID: 32893
 	public Dictionary<int, int> LordGymGroupPassDiff = new Dictionary<int, int>();
 
-	// Token: 0x04007F37 RID: 32567
+	// Token: 0x0400807E RID: 32894
 	public List<global::LordGymEntranceInfo> LordGymEntranceInfo = new List<global::LordGymEntranceInfo>();
 
-	// Token: 0x04007F38 RID: 32568
+	// Token: 0x0400807F RID: 32895
 	public List<int> LordGymEntrancesWithNewTag = new List<int>();
 
-	// Token: 0x04007F39 RID: 32569
+	// Token: 0x04008080 RID: 32896
 	[Nullable(2)]
 	public List<int> NewLordGymEntranceIdRecord;
 
-	// Token: 0x04007F3A RID: 32570
+	// Token: 0x04008081 RID: 32897
 	public FTransform CacheTransform;
 
-	// Token: 0x04007F3B RID: 32571
+	// Token: 0x04008082 RID: 32898
 	public FVector CacheLocation;
 
-	// Token: 0x04007F3C RID: 32572
+	// Token: 0x04008083 RID: 32899
 	public FRotator CacheRotator;
 
-	// Token: 0x04007F3D RID: 32573
+	// Token: 0x04008084 RID: 32900
 	public FVector CacheScale;
 
-	// Token: 0x04007F3E RID: 32574
+	// Token: 0x04008085 RID: 32901
 	[Nullable(2)]
 	private ALevelSequenceActor LordGymThirdBossSequenceActor;
 
-	// Token: 0x04007F3F RID: 32575
+	// Token: 0x04008086 RID: 32902
 	private int Third5SceneEffectHandle;
 
-	// Token: 0x04007F40 RID: 32576
+	// Token: 0x04008087 RID: 32903
 	private readonly FTransformDouble Third5SceneEffectTransform;
 
-	// Token: 0x04007F41 RID: 32577
+	// Token: 0x04008088 RID: 32904
 	[Nullable(2)]
 	private static LordGymModel _Instance;
 }

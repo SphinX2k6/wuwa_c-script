@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A0A RID: 14858
+	// Token: 0x02003DE5 RID: 15845
 	public class IBlackBoardT
 	{
-		// Token: 0x170065D1 RID: 26065
-		// (get) Token: 0x0601412D RID: 82221 RVA: 0x002F066B File Offset: 0x002EE86B
-		// (set) Token: 0x0601412E RID: 82222 RVA: 0x002F0673 File Offset: 0x002EE873
+		// Token: 0x17006B01 RID: 27393
+		// (get) Token: 0x06015449 RID: 87113 RVA: 0x00313857 File Offset: 0x00311A57
+		// (set) Token: 0x0601544A RID: 87114 RVA: 0x0031385F File Offset: 0x00311A5F
 		public EBlackBoardType Type { get; set; }
 
-		// Token: 0x170065D2 RID: 26066
-		// (get) Token: 0x0601412F RID: 82223 RVA: 0x002F067C File Offset: 0x002EE87C
-		// (set) Token: 0x06014130 RID: 82224 RVA: 0x002F0684 File Offset: 0x002EE884
+		// Token: 0x17006B02 RID: 27394
+		// (get) Token: 0x0601544B RID: 87115 RVA: 0x00313868 File Offset: 0x00311A68
+		// (set) Token: 0x0601544C RID: 87116 RVA: 0x00313870 File Offset: 0x00311A70
 		public string Key { get; set; }
 
-		// Token: 0x06014131 RID: 82225 RVA: 0x002F068D File Offset: 0x002EE88D
+		// Token: 0x0601544D RID: 87117 RVA: 0x00313879 File Offset: 0x00311A79
 		public IBlackBoardT()
 		{
 			this.Type = EBlackBoardType.Boolean;

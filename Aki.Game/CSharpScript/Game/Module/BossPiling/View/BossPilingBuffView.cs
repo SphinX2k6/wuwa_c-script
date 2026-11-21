@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C0D RID: 23565
+	// Token: 0x02004BED RID: 19437
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingBuffView : UiViewBase
 	{
-		// Token: 0x0603B8C7 RID: 243911 RVA: 0x00E327A1 File Offset: 0x00E309A1
+		// Token: 0x06030812 RID: 198674 RVA: 0x00D82AE1 File Offset: 0x00D80CE1
 		public BossPilingBuffView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B8C8 RID: 243912 RVA: 0x00E327BC File Offset: 0x00E309BC
+		// Token: 0x06030813 RID: 198675 RVA: 0x00D82AFC File Offset: 0x00D80CFC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B8C9 RID: 243913 RVA: 0x00E328CC File Offset: 0x00E30ACC
+		// Token: 0x06030814 RID: 198676 RVA: 0x00D82C0C File Offset: 0x00D80E0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingBuffView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B8CA RID: 243914 RVA: 0x00E32910 File Offset: 0x00E30B10
+		// Token: 0x06030815 RID: 198677 RVA: 0x00D82C50 File Offset: 0x00D80E50
 		protected override void OnStart()
 		{
 			this.LevelSequence = new LevelSequencePlayer(base.GetRootItem());
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshTips();
 		}
 
-		// Token: 0x0603B8CB RID: 243915 RVA: 0x00E329E0 File Offset: 0x00E30BE0
+		// Token: 0x06030816 RID: 198678 RVA: 0x00D82D20 File Offset: 0x00D80F20
 		protected void InitScrollDataList(Dictionary<int, List<BossPilingBuffCountInfo>> buffMap)
 		{
 			foreach (KeyValuePair<int, List<BossPilingBuffCountInfo>> keyValuePair in buffMap)
@@ -110,14 +110,14 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			}
 		}
 
-		// Token: 0x0603B8CC RID: 243916 RVA: 0x00E32AE4 File Offset: 0x00E30CE4
+		// Token: 0x06030817 RID: 198679 RVA: 0x00D82E24 File Offset: 0x00D81024
 		protected void RefreshTips()
 		{
 			this.LevelSequence.PlayOrReplaySequenceByName("Switch", false, null);
 			this.DetailPanel.Refresh(this.CurInfo);
 		}
 
-		// Token: 0x0603B8CD RID: 243917 RVA: 0x00E32B1C File Offset: 0x00E30D1C
+		// Token: 0x06030818 RID: 198680 RVA: 0x00D82E5C File Offset: 0x00D8105C
 		private void OnToggleClicked(BossPilingBuffCountInfo buffInfo)
 		{
 			this.CurSelect = buffInfo.BuffId;
@@ -129,59 +129,59 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			}
 		}
 
-		// Token: 0x0603B8CE RID: 243918 RVA: 0x00E32B65 File Offset: 0x00E30D65
+		// Token: 0x06030819 RID: 198681 RVA: 0x00D82EA5 File Offset: 0x00D810A5
 		private bool IsSelectedCb(int buffId)
 		{
 			return buffId == this.CurSelect;
 		}
 
-		// Token: 0x0603B8CF RID: 243919 RVA: 0x00E32B70 File Offset: 0x00E30D70
+		// Token: 0x0603081A RID: 198682 RVA: 0x00D82EB0 File Offset: 0x00D810B0
 		private void OnClickedClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401F01C RID: 127004
+		// Token: 0x04019ACD RID: 105165
 		protected BossPilingBuffViewInfo DataInfo;
 
-		// Token: 0x0401F01D RID: 127005
+		// Token: 0x04019ACE RID: 105166
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401F01E RID: 127006
+		// Token: 0x04019ACF RID: 105167
 		protected BossPilingBuffTipsPanel DetailPanel;
 
-		// Token: 0x0401F01F RID: 127007
+		// Token: 0x04019AD0 RID: 105168
 		protected MultiTemplateScrollView MultiScroll;
 
-		// Token: 0x0401F020 RID: 127008
+		// Token: 0x04019AD1 RID: 105169
 		protected int CurSelect = -1;
 
-		// Token: 0x0401F021 RID: 127009
+		// Token: 0x04019AD2 RID: 105170
 		protected BossPilingBuffCountInfo CurInfo;
 
-		// Token: 0x0401F022 RID: 127010
+		// Token: 0x04019AD3 RID: 105171
 		protected LevelSequencePlayer LevelSequence;
 
-		// Token: 0x0401F023 RID: 127011
+		// Token: 0x04019AD4 RID: 105172
 		private List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0200BDEB RID: 48619
+		// Token: 0x0200A7F3 RID: 42995
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x0403942D RID: 234541
+			// Token: 0x04033DF0 RID: 212464
 			CaptionItem,
-			// Token: 0x0403942E RID: 234542
+			// Token: 0x04033DF1 RID: 212465
 			MultiSvList,
-			// Token: 0x0403942F RID: 234543
+			// Token: 0x04033DF2 RID: 212466
 			PanelListTitle,
-			// Token: 0x04039430 RID: 234544
+			// Token: 0x04033DF3 RID: 212467
 			PanelItem,
-			// Token: 0x04039431 RID: 234545
+			// Token: 0x04033DF4 RID: 212468
 			DetailItem,
-			// Token: 0x04039432 RID: 234546
+			// Token: 0x04033DF5 RID: 212469
 			PanelNone,
-			// Token: 0x04039433 RID: 234547
+			// Token: 0x04033DF6 RID: 212470
 			PanelContent
 		}
 	}

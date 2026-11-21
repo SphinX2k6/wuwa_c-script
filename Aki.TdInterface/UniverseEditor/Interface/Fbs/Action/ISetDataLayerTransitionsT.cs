@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FD8 RID: 28632
+	// Token: 0x020077A1 RID: 30625
 	public class ISetDataLayerTransitionsT
 	{
-		// Token: 0x1700D492 RID: 54418
-		// (get) Token: 0x060329CF RID: 207311 RVA: 0x006D4301 File Offset: 0x006D2501
-		// (set) Token: 0x060329D0 RID: 207312 RVA: 0x006D4309 File Offset: 0x006D2509
+		// Token: 0x1700E066 RID: 57446
+		// (get) Token: 0x06035C35 RID: 220213 RVA: 0x00733F45 File Offset: 0x00732145
+		// (set) Token: 0x06035C36 RID: 220214 RVA: 0x00733F4D File Offset: 0x0073214D
 		public IActorRefT VolumeActor { get; set; }
 
-		// Token: 0x1700D493 RID: 54419
-		// (get) Token: 0x060329D1 RID: 207313 RVA: 0x006D4312 File Offset: 0x006D2512
-		// (set) Token: 0x060329D2 RID: 207314 RVA: 0x006D431A File Offset: 0x006D251A
+		// Token: 0x1700E067 RID: 57447
+		// (get) Token: 0x06035C37 RID: 220215 RVA: 0x00733F56 File Offset: 0x00732156
+		// (set) Token: 0x06035C38 RID: 220216 RVA: 0x00733F5E File Offset: 0x0073215E
 		public string MaterialDataForEnable { get; set; }
 
-		// Token: 0x1700D494 RID: 54420
-		// (get) Token: 0x060329D3 RID: 207315 RVA: 0x006D4323 File Offset: 0x006D2523
-		// (set) Token: 0x060329D4 RID: 207316 RVA: 0x006D432B File Offset: 0x006D252B
+		// Token: 0x1700E068 RID: 57448
+		// (get) Token: 0x06035C39 RID: 220217 RVA: 0x00733F67 File Offset: 0x00732167
+		// (set) Token: 0x06035C3A RID: 220218 RVA: 0x00733F6F File Offset: 0x0073216F
 		public string MaterialDataForDisable { get; set; }
 
-		// Token: 0x1700D495 RID: 54421
-		// (get) Token: 0x060329D5 RID: 207317 RVA: 0x006D4334 File Offset: 0x006D2534
-		// (set) Token: 0x060329D6 RID: 207318 RVA: 0x006D433C File Offset: 0x006D253C
+		// Token: 0x1700E069 RID: 57449
+		// (get) Token: 0x06035C3B RID: 220219 RVA: 0x00733F78 File Offset: 0x00732178
+		// (set) Token: 0x06035C3C RID: 220220 RVA: 0x00733F80 File Offset: 0x00732180
 		public string VolumeEnterSeq { get; set; }
 
-		// Token: 0x1700D496 RID: 54422
-		// (get) Token: 0x060329D7 RID: 207319 RVA: 0x006D4345 File Offset: 0x006D2545
-		// (set) Token: 0x060329D8 RID: 207320 RVA: 0x006D434D File Offset: 0x006D254D
+		// Token: 0x1700E06A RID: 57450
+		// (get) Token: 0x06035C3D RID: 220221 RVA: 0x00733F89 File Offset: 0x00732189
+		// (set) Token: 0x06035C3E RID: 220222 RVA: 0x00733F91 File Offset: 0x00732191
 		public string VolumeOutSeq { get; set; }
 
-		// Token: 0x060329D9 RID: 207321 RVA: 0x006D4356 File Offset: 0x006D2556
+		// Token: 0x06035C3F RID: 220223 RVA: 0x00733F9A File Offset: 0x0073219A
 		public ISetDataLayerTransitionsT()
 		{
 			this.VolumeActor = null;

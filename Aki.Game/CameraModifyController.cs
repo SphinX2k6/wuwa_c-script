@@ -8,14 +8,14 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200021D RID: 541
+// Token: 0x02000221 RID: 545
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x17000503 RID: 1283
-	// (get) Token: 0x060020EF RID: 8431 RVA: 0x000B6AC8 File Offset: 0x000B4CC8
+	// Token: 0x17000524 RID: 1316
+	// (get) Token: 0x0600219D RID: 8605 RVA: 0x000BDDE8 File Offset: 0x000BBFE8
 	private bool ModifyArmRotation
 	{
 		get
@@ -24,9 +24,9 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x17000504 RID: 1284
-	// (get) Token: 0x060020F0 RID: 8432 RVA: 0x000B6AE2 File Offset: 0x000B4CE2
-	// (set) Token: 0x060020F1 RID: 8433 RVA: 0x000B6AEA File Offset: 0x000B4CEA
+	// Token: 0x17000525 RID: 1317
+	// (get) Token: 0x0600219E RID: 8606 RVA: 0x000BDE02 File Offset: 0x000BC002
+	// (set) Token: 0x0600219F RID: 8607 RVA: 0x000BDE0A File Offset: 0x000BC00A
 	protected bool IsAiming
 	{
 		get
@@ -49,7 +49,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020F2 RID: 8434 RVA: 0x000B6B14 File Offset: 0x000B4D14
+	// Token: 0x060021A0 RID: 8608 RVA: 0x000BDE34 File Offset: 0x000BC034
 	public CameraModifyController(FightCameraLogicComponent camera) : base(camera)
 	{
 		this.OnAllMontageInstancesEnded = new Action(this.OnAllMontageInstancesEndedHandler);
@@ -61,7 +61,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.OnCharBeforeUseSkill = new Action<int, int, bool>(this.OnCharBeforeUseSkillHandler);
 	}
 
-	// Token: 0x060020F3 RID: 8435 RVA: 0x000B6D3D File Offset: 0x000B4F3D
+	// Token: 0x060021A1 RID: 8609 RVA: 0x000BE05D File Offset: 0x000BC25D
 	private void OnAllMontageInstancesEndedHandler()
 	{
 		if (this.ModifyMontage != null)
@@ -75,7 +75,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020F4 RID: 8436 RVA: 0x000B6D6A File Offset: 0x000B4F6A
+	// Token: 0x060021A2 RID: 8610 RVA: 0x000BE08A File Offset: 0x000BC28A
 	[NullableContext(2)]
 	private void OnMontageEndedHandler(UAnimMontage montage, bool interrupt)
 	{
@@ -90,7 +90,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020F5 RID: 8437 RVA: 0x000B6D97 File Offset: 0x000B4F97
+	// Token: 0x060021A3 RID: 8611 RVA: 0x000BE0B7 File Offset: 0x000BC2B7
 	[NullableContext(2)]
 	private void OnMontageStartedHandler(UAnimMontage montage)
 	{
@@ -100,7 +100,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020F6 RID: 8438 RVA: 0x000B6DB4 File Offset: 0x000B4FB4
+	// Token: 0x060021A4 RID: 8612 RVA: 0x000BE0D4 File Offset: 0x000BC2D4
 	private void OnLookAtEntityDeadHandler(int id)
 	{
 		if (!this.LookAtActor.HasValue)
@@ -114,7 +114,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.EndModify(true, false, null);
 	}
 
-	// Token: 0x060020F7 RID: 8439 RVA: 0x000B6E0B File Offset: 0x000B500B
+	// Token: 0x060021A5 RID: 8613 RVA: 0x000BE12B File Offset: 0x000BC32B
 	[NullableContext(2)]
 	private void OnVisionMorphEndHandler(EntityHandle roleEntityHandle, EntityHandle visionEntityHandle)
 	{
@@ -125,7 +125,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.EndModify(true, true, null);
 	}
 
-	// Token: 0x060020F8 RID: 8440 RVA: 0x000B6E38 File Offset: 0x000B5038
+	// Token: 0x060021A6 RID: 8614 RVA: 0x000BE158 File Offset: 0x000BC358
 	private void OnPlayCameraLevelSequenceHandler(ULevelSequence levelSequence, AActor role, ALevelSequenceActor sequenceActor, FTransformDouble startTrans, bool playResult, bool isStopModify, string cameraName)
 	{
 		CameraModelInstance cameraModel = base.CameraModel;
@@ -144,7 +144,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.EndModifyFadeOut(true);
 	}
 
-	// Token: 0x060020F9 RID: 8441 RVA: 0x000B6F08 File Offset: 0x000B5108
+	// Token: 0x060021A7 RID: 8615 RVA: 0x000BE228 File Offset: 0x000BC428
 	private void OnCharBeforeUseSkillHandler(int entityId, int skillId, bool isAutonomousProxy)
 	{
 		if (!isAutonomousProxy)
@@ -168,13 +168,13 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020FA RID: 8442 RVA: 0x000B6FAC File Offset: 0x000B51AC
+	// Token: 0x060021A8 RID: 8616 RVA: 0x000BE2CC File Offset: 0x000BC4CC
 	public override string Name()
 	{
 		return "ModifyController";
 	}
 
-	// Token: 0x060020FB RID: 8443 RVA: 0x000B6FB4 File Offset: 0x000B51B4
+	// Token: 0x060021A9 RID: 8617 RVA: 0x000BE2D4 File Offset: 0x000BC4D4
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraModify.臂长还原过渡速度, "ModifyArmLengthLagSpeed");
@@ -184,7 +184,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		base.SetConfigMap(EFightCameraModify.臂偏移原点还原过渡速度, "ModifyArmOffsetLagSpeed");
 	}
 
-	// Token: 0x060020FC RID: 8444 RVA: 0x000B7016 File Offset: 0x000B5216
+	// Token: 0x060021AA RID: 8618 RVA: 0x000BE336 File Offset: 0x000BC536
 	protected override void OnDisable()
 	{
 		if (this.IsModified)
@@ -197,7 +197,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x060020FD RID: 8445 RVA: 0x000B7038 File Offset: 0x000B5238
+	// Token: 0x060021AB RID: 8619 RVA: 0x000BE358 File Offset: 0x000BC558
 	protected override void UpdateInternal(float deltaTime)
 	{
 		this.IsAiming = this.Camera.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.方向状态.瞄准方向"], false);
@@ -209,7 +209,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.UpdateModifiers(deltaTime);
 	}
 
-	// Token: 0x060020FE RID: 8446 RVA: 0x000B7072 File Offset: 0x000B5272
+	// Token: 0x060021AC RID: 8620 RVA: 0x000BE392 File Offset: 0x000BC592
 	protected override void UpdateDeactivateInternal(float deltaTime)
 	{
 		this.IsAiming = this.Camera.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.方向状态.瞄准方向"], false);
@@ -220,7 +220,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.UpdateModifyFadeOut(deltaTime);
 	}
 
-	// Token: 0x060020FF RID: 8447 RVA: 0x000B70A5 File Offset: 0x000B52A5
+	// Token: 0x060021AD RID: 8621 RVA: 0x000BE3C5 File Offset: 0x000BC5C5
 	protected override void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		CameraModify modifySettings = this.ModifySettings;
@@ -231,8 +231,8 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.EndModify(true, true, null);
 	}
 
-	// Token: 0x17000505 RID: 1285
-	// (get) Token: 0x06002100 RID: 8448 RVA: 0x000B70C5 File Offset: 0x000B52C5
+	// Token: 0x17000526 RID: 1318
+	// (get) Token: 0x060021AE RID: 8622 RVA: 0x000BE3E5 File Offset: 0x000BC5E5
 	public override bool IsActivate
 	{
 		get
@@ -246,8 +246,8 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x17000506 RID: 1286
-	// (get) Token: 0x06002101 RID: 8449 RVA: 0x000B70FB File Offset: 0x000B52FB
+	// Token: 0x17000527 RID: 1319
+	// (get) Token: 0x060021AF RID: 8623 RVA: 0x000BE41B File Offset: 0x000BC61B
 	public bool IsModified
 	{
 		get
@@ -256,7 +256,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002102 RID: 8450 RVA: 0x000B7108 File Offset: 0x000B5308
+	// Token: 0x060021B0 RID: 8624 RVA: 0x000BE428 File Offset: 0x000BC628
 	public unsafe int ApplyCameraModify(FGameplayTag? tag, float duration, float blendInTime, float blendOutTime, float breakBlendOutTime, SCameraModifier_Settings settings, [Nullable(2)] UAnimSequenceBase anim, [Nullable(new byte[]
 	{
 		0,
@@ -507,7 +507,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return this.ModifyInstance;
 	}
 
-	// Token: 0x06002103 RID: 8451 RVA: 0x000B7930 File Offset: 0x000B5B30
+	// Token: 0x060021B1 RID: 8625 RVA: 0x000BEC50 File Offset: 0x000BCE50
 	private void UpdateModifiers(float deltaSeconds)
 	{
 		if (!this.IsModified)
@@ -576,7 +576,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002104 RID: 8452 RVA: 0x000B7BE8 File Offset: 0x000B5DE8
+	// Token: 0x060021B2 RID: 8626 RVA: 0x000BEF08 File Offset: 0x000BD108
 	private void UpdatePlayerLocationModifier(EBlendState state, float alpha, float _)
 	{
 		if (!this.ModifyPlayerLocation)
@@ -616,7 +616,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002105 RID: 8453 RVA: 0x000B7D84 File Offset: 0x000B5F84
+	// Token: 0x060021B3 RID: 8627 RVA: 0x000BF0A4 File Offset: 0x000BD2A4
 	private void UpdateArmLocationModifier(EBlendState state, float _, float alphaOffsetRate)
 	{
 		if (!this.ModifySettings.IsLerpArmLocation)
@@ -644,7 +644,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.Camera.IsModifiedArmLocation = true;
 	}
 
-	// Token: 0x06002106 RID: 8454 RVA: 0x000B7EF0 File Offset: 0x000B60F0
+	// Token: 0x060021B4 RID: 8628 RVA: 0x000BF210 File Offset: 0x000BD410
 	private unsafe void UpdateArmLengthModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		if (!this.ModifySettings.IsModifiedArmLength && !this.ModifyArmLength)
@@ -716,7 +716,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002107 RID: 8455 RVA: 0x000B8258 File Offset: 0x000B6458
+	// Token: 0x060021B5 RID: 8629 RVA: 0x000BF578 File Offset: 0x000BD778
 	private void UpdateArmOffsetModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		if (!this.ModifySettings.IsModifiedArmOffset && !this.ModifyArmOffset)
@@ -747,7 +747,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.Camera.IsModifiedCameraOffset = true;
 	}
 
-	// Token: 0x06002108 RID: 8456 RVA: 0x000B8368 File Offset: 0x000B6568
+	// Token: 0x060021B6 RID: 8630 RVA: 0x000BF688 File Offset: 0x000BD888
 	private unsafe void UpdateCameraOffsetModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		if (!this.ModifySettings.IsModifiedCameraOffset && !this.ModifyCameraOffset)
@@ -819,7 +819,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.Camera.IsModifiedCameraOffset = true;
 	}
 
-	// Token: 0x06002109 RID: 8457 RVA: 0x000B8710 File Offset: 0x000B6910
+	// Token: 0x060021B7 RID: 8631 RVA: 0x000BFA30 File Offset: 0x000BDC30
 	private void UpdateArmRotationModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		this.TempTargetArmRotator.FromUeRotator(this.Camera.PlayerRotator);
@@ -872,7 +872,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.UpdateArmRotationRollModifier(state, alpha, blendInTimeRatio, this.TempTargetArmRotator.Roll, this.TmpFinalRotatorInGravity.Roll);
 	}
 
-	// Token: 0x0600210A RID: 8458 RVA: 0x000B88F0 File Offset: 0x000B6AF0
+	// Token: 0x060021B8 RID: 8632 RVA: 0x000BFC10 File Offset: 0x000BDE10
 	private void UpdateArmRotationPitchModifier(EBlendState state, float alpha, float blendIntTimeRatio, float tempTargetArmRotatorPitch, float finalPitch)
 	{
 		if (this.Camera.IsModifiedArmRotationPitch || ((!this.ModifySettings.IsModifiedArmRotation || !this.ModifySettings.IsModifiedArmRotationPitch) && !this.ModifyArmRotationPitch) || (!this.ModifySettings.IsLockInput && this.HasInput))
@@ -941,7 +941,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x0600210B RID: 8459 RVA: 0x000B8C6C File Offset: 0x000B6E6C
+	// Token: 0x060021B9 RID: 8633 RVA: 0x000BFF8C File Offset: 0x000BE18C
 	private void UpdateArmRotationYawModifier(EBlendState state, float alpha, float blendIntTimeRatio, float tempTargetArmRotatorYaw, float finalYaw)
 	{
 		if (this.Camera.IsModifiedArmRotationYaw || ((!this.ModifySettings.IsModifiedArmRotation || !this.ModifySettings.IsModifiedArmRotationYaw) && !this.ModifyArmRotationYaw) || (!this.ModifySettings.IsLockInput && this.HasInput))
@@ -1008,7 +1008,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x0600210C RID: 8460 RVA: 0x000B8FBC File Offset: 0x000B71BC
+	// Token: 0x060021BA RID: 8634 RVA: 0x000C02DC File Offset: 0x000BE4DC
 	private void UpdateArmRotationRollModifier(EBlendState state, float alpha, float blendIntTimeRatio, float tempTargetArmRotatorRoll, float finalRoll)
 	{
 		if (this.Camera.IsModifiedArmRotationRoll || ((!this.ModifySettings.IsModifiedArmRotation || !this.ModifySettings.IsModifiedArmRotationRoll) && !this.ModifyArmRotationRoll))
@@ -1075,7 +1075,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x0600210D RID: 8461 RVA: 0x000B92F8 File Offset: 0x000B74F8
+	// Token: 0x060021BB RID: 8635 RVA: 0x000C0618 File Offset: 0x000BE818
 	private void UpdateHasInput()
 	{
 		CharacterInputComponent characterInputComponent = this.Camera.CharacterInputComponent;
@@ -1092,14 +1092,14 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x0600210E RID: 8462 RVA: 0x000B936C File Offset: 0x000B756C
+	// Token: 0x060021BC RID: 8636 RVA: 0x000C068C File Offset: 0x000BE88C
 	private bool HasZoomInput()
 	{
 		CharacterInputComponent characterInputComponent = this.Camera.CharacterInputComponent;
 		return characterInputComponent != null && characterInputComponent.Valid && !MathUtils.Instance.IsNearlyZero((double)this.Camera.CharacterInputComponent.GetZoomInput(), new double?(0.0001));
 	}
 
-	// Token: 0x0600210F RID: 8463 RVA: 0x000B93C4 File Offset: 0x000B75C4
+	// Token: 0x060021BD RID: 8637 RVA: 0x000C06E4 File Offset: 0x000BE8E4
 	private Rotator GetFinalArmRotation()
 	{
 		if (this.ModifySettings.ResetFinalArmRotation)
@@ -1127,7 +1127,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return this.FirstStartVirtualCamera.ArmRotation;
 	}
 
-	// Token: 0x06002110 RID: 8464 RVA: 0x000B94A4 File Offset: 0x000B76A4
+	// Token: 0x060021BE RID: 8638 RVA: 0x000C07C4 File Offset: 0x000BE9C4
 	private Rotator GetFinalArmQuaternion()
 	{
 		this.TmpFinalRotator.Reset();
@@ -1161,7 +1161,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return this.FirstStartVirtualCamera.ArmRotation;
 	}
 
-	// Token: 0x06002111 RID: 8465 RVA: 0x000B9626 File Offset: 0x000B7826
+	// Token: 0x060021BF RID: 8639 RVA: 0x000C0946 File Offset: 0x000BEB46
 	private float GetFinalArmLength()
 	{
 		if (this.ModifySettings.ResetFinalArmLength)
@@ -1171,7 +1171,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return this.FirstStartVirtualCamera.ArmLength;
 	}
 
-	// Token: 0x06002112 RID: 8466 RVA: 0x000B9654 File Offset: 0x000B7854
+	// Token: 0x060021C0 RID: 8640 RVA: 0x000C0974 File Offset: 0x000BEB74
 	[NullableContext(2)]
 	private float GetFinalZoomModifierArmLength(ModifyEndContext modifyEndContext = null)
 	{
@@ -1192,7 +1192,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return MathUtils.Instance.Clamp(this.FirstStartVirtualCamera.ZoomModifier * this.Camera.GetArmLengthWithSetting(this.FirstStartVirtualCamera), this.Camera.CurrentCamera.MinArmLength, this.Camera.CurrentCamera.MaxArmLength);
 	}
 
-	// Token: 0x06002113 RID: 8467 RVA: 0x000B97A8 File Offset: 0x000B79A8
+	// Token: 0x060021C1 RID: 8641 RVA: 0x000C0AC8 File Offset: 0x000BECC8
 	private void UpdateFovModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		if (!this.ModifyFov)
@@ -1220,7 +1220,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.Camera.IsModifiedFov = true;
 	}
 
-	// Token: 0x06002114 RID: 8468 RVA: 0x000B9890 File Offset: 0x000B7A90
+	// Token: 0x060021C2 RID: 8642 RVA: 0x000C0BB0 File Offset: 0x000BEDB0
 	private void UpdateLensModifier(EBlendState state, float alpha, float blendInTimeRatio)
 	{
 		if (!this.ModifyLens)
@@ -1254,7 +1254,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.Camera.ApplyRadialBlur(new float?(value), new FVector2D?(cameraLens.RadialBlurCenter), new float?(cameraLens.RadialBlurRadius), new float?(cameraLens.RadialBlurHardness), new int?((int)cameraLens.RadialBlurPassNumber), new int?((int)cameraLens.RadialBlurSampleNumber));
 	}
 
-	// Token: 0x06002115 RID: 8469 RVA: 0x000B99F4 File Offset: 0x000B7BF4
+	// Token: 0x060021C3 RID: 8643 RVA: 0x000C0D14 File Offset: 0x000BEF14
 	[NullableContext(2)]
 	public void EndModify(bool withFadeOut, bool useFadeOutTime, ModifyEndContext modifyEndContext = null)
 	{
@@ -1350,7 +1350,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.IsBreakPreviousPlayerLocationModify = false;
 	}
 
-	// Token: 0x06002116 RID: 8470 RVA: 0x000B9CBC File Offset: 0x000B7EBC
+	// Token: 0x060021C4 RID: 8644 RVA: 0x000C0FDC File Offset: 0x000BF1DC
 	[NullableContext(2)]
 	private void StartModifyFadeOut(bool useFadeOutTime = false, ModifyEndContext modifyEndContext = null)
 	{
@@ -1428,7 +1428,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002117 RID: 8471 RVA: 0x000BA1A4 File Offset: 0x000B83A4
+	// Token: 0x060021C5 RID: 8645 RVA: 0x000C14C4 File Offset: 0x000BF6C4
 	public void EndModifyFadeOut(bool isRestoreToFinalValue = false)
 	{
 		if (isRestoreToFinalValue)
@@ -1519,7 +1519,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002118 RID: 8472 RVA: 0x000BA538 File Offset: 0x000B8738
+	// Token: 0x060021C6 RID: 8646 RVA: 0x000C1858 File Offset: 0x000BFA58
 	private unsafe void UpdateModifyFadeOut(float deltaTime)
 	{
 		if (!this.IsModifyFadeOut)
@@ -1834,7 +1834,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002119 RID: 8473 RVA: 0x000BB1F8 File Offset: 0x000B93F8
+	// Token: 0x060021C7 RID: 8647 RVA: 0x000C2518 File Offset: 0x000C0718
 	[NullableContext(2)]
 	private UAnimInstance GetModifyAnimInstance([Nullable(new byte[]
 	{
@@ -1885,7 +1885,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return component.MainAnimInstance;
 	}
 
-	// Token: 0x0600211A RID: 8474 RVA: 0x000BB2E8 File Offset: 0x000B94E8
+	// Token: 0x060021C8 RID: 8648 RVA: 0x000C2608 File Offset: 0x000C0808
 	private bool LookAtEntityIsVision()
 	{
 		Entity lookAtEntity = this.LookAtEntity;
@@ -1893,7 +1893,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return creatureDataComponent != null && creatureDataComponent.Valid && creatureDataComponent.IsVision();
 	}
 
-	// Token: 0x0600211B RID: 8475 RVA: 0x000BB324 File Offset: 0x000B9524
+	// Token: 0x060021C9 RID: 8649 RVA: 0x000C2644 File Offset: 0x000C0844
 	[NullableContext(0)]
 	public ValueTuple<bool, float> FloatInterpTo(float current, float target, float deltaTime, float interpSpeed, float nearValue)
 	{
@@ -1905,7 +1905,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, float>(true, (float)num);
 	}
 
-	// Token: 0x0600211C RID: 8476 RVA: 0x000BB364 File Offset: 0x000B9564
+	// Token: 0x060021CA RID: 8650 RVA: 0x000C2684 File Offset: 0x000C0884
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1925,7 +1925,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, Vector>(true, vector);
 	}
 
-	// Token: 0x0600211D RID: 8477 RVA: 0x000BB3BC File Offset: 0x000B95BC
+	// Token: 0x060021CB RID: 8651 RVA: 0x000C26DC File Offset: 0x000C08DC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1943,7 +1943,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, Rotator>(true, rotator);
 	}
 
-	// Token: 0x0600211E RID: 8478 RVA: 0x000BB404 File Offset: 0x000B9604
+	// Token: 0x060021CC RID: 8652 RVA: 0x000C2724 File Offset: 0x000C0924
 	[NullableContext(0)]
 	public ValueTuple<bool, float> RotationAxisInterpTo(float current, float target, float deltaTime, float interpSpeed, float nearValue)
 	{
@@ -1955,7 +1955,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, float>(true, item);
 	}
 
-	// Token: 0x0600211F RID: 8479 RVA: 0x000BB444 File Offset: 0x000B9644
+	// Token: 0x060021CD RID: 8653 RVA: 0x000C2764 File Offset: 0x000C0964
 	[NullableContext(0)]
 	public ValueTuple<bool, float> FloatLerp(float current, float target, float alpha, float nearValue)
 	{
@@ -1967,7 +1967,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, float>(true, item);
 	}
 
-	// Token: 0x06002120 RID: 8480 RVA: 0x000BB47C File Offset: 0x000B967C
+	// Token: 0x060021CE RID: 8654 RVA: 0x000C279C File Offset: 0x000C099C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1985,7 +1985,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, Vector>(true, vector);
 	}
 
-	// Token: 0x06002121 RID: 8481 RVA: 0x000BB4BC File Offset: 0x000B96BC
+	// Token: 0x060021CF RID: 8655 RVA: 0x000C27DC File Offset: 0x000C09DC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -2003,7 +2003,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, Rotator>(true, rotator);
 	}
 
-	// Token: 0x06002122 RID: 8482 RVA: 0x000BB4FC File Offset: 0x000B96FC
+	// Token: 0x060021D0 RID: 8656 RVA: 0x000C281C File Offset: 0x000C0A1C
 	[NullableContext(0)]
 	public ValueTuple<bool, float> RotationAxisLerp(float current, float target, float alpha, float nearValue)
 	{
@@ -2015,7 +2015,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return new ValueTuple<bool, float>(true, item);
 	}
 
-	// Token: 0x06002123 RID: 8483 RVA: 0x000BB534 File Offset: 0x000B9734
+	// Token: 0x060021D1 RID: 8657 RVA: 0x000C2854 File Offset: 0x000C0A54
 	public void StopCameraModify(UAnimSequenceBase anim, int modifyInstance)
 	{
 		if (this.ModifyAnimSequence != anim || this.ModifyInstance != modifyInstance)
@@ -2025,7 +2025,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		this.EndModify(true, true, null);
 	}
 
-	// Token: 0x06002124 RID: 8484 RVA: 0x000BB552 File Offset: 0x000B9752
+	// Token: 0x060021D2 RID: 8658 RVA: 0x000C2872 File Offset: 0x000C0A72
 	public void ForceStopModify(bool withFadeOut)
 	{
 		if (this.IsModified)
@@ -2039,7 +2039,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002125 RID: 8485 RVA: 0x000BB578 File Offset: 0x000B9778
+	// Token: 0x060021D3 RID: 8659 RVA: 0x000C2898 File Offset: 0x000C0A98
 	public float GetTargetRotatorAdditional(ECameraRotationAxis axis)
 	{
 		switch (axis)
@@ -2067,7 +2067,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002126 RID: 8486 RVA: 0x000BB610 File Offset: 0x000B9810
+	// Token: 0x060021D4 RID: 8660 RVA: 0x000C2930 File Offset: 0x000C0B30
 	private unsafe void PreparePitchTarget(float tempTargetArmRotatorPitch)
 	{
 		if (!this.ModifySettings.IsModifiedArmRotationPitch)
@@ -2095,7 +2095,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002127 RID: 8487 RVA: 0x000BB73C File Offset: 0x000B993C
+	// Token: 0x060021D5 RID: 8661 RVA: 0x000C2A5C File Offset: 0x000C0C5C
 	private unsafe void PrepareYawTarget(float tempTargetArmRotatorYaw)
 	{
 		if (!this.ModifySettings.IsModifiedArmRotationYaw)
@@ -2123,7 +2123,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002128 RID: 8488 RVA: 0x000BB868 File Offset: 0x000B9A68
+	// Token: 0x060021D6 RID: 8662 RVA: 0x000C2B88 File Offset: 0x000C0D88
 	private unsafe void PrepareRollTarget(float tempTargetArmRotatorRoll)
 	{
 		if (!this.ModifySettings.IsModifiedArmRotationRoll)
@@ -2151,13 +2151,13 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x06002129 RID: 8489 RVA: 0x000BB991 File Offset: 0x000B9B91
+	// Token: 0x060021D7 RID: 8663 RVA: 0x000C2CB1 File Offset: 0x000C0EB1
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x0600212A RID: 8490 RVA: 0x000BB99A File Offset: 0x000B9B9A
+	// Token: 0x060021D8 RID: 8664 RVA: 0x000C2CBA File Offset: 0x000C0EBA
 	public void LockCameraModify(EModifyInternalLockReason lockType, bool isFadeOut, bool isEndFadeOut)
 	{
 		this.ModifyLockHandler.Lock(lockType);
@@ -2171,19 +2171,19 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		}
 	}
 
-	// Token: 0x0600212B RID: 8491 RVA: 0x000BB9CC File Offset: 0x000B9BCC
+	// Token: 0x060021D9 RID: 8665 RVA: 0x000C2CEC File Offset: 0x000C0EEC
 	public void UnlockCameraModify(EModifyInternalLockReason lockType)
 	{
 		this.ModifyLockHandler.Unlock(lockType);
 	}
 
-	// Token: 0x0600212C RID: 8492 RVA: 0x000BB9DA File Offset: 0x000B9BDA
+	// Token: 0x060021DA RID: 8666 RVA: 0x000C2CFA File Offset: 0x000C0EFA
 	public bool IsCameraModifyLocked()
 	{
 		return !this.ModifyLockHandler.IsUnlocked();
 	}
 
-	// Token: 0x0600212D RID: 8493 RVA: 0x000BB9EC File Offset: 0x000B9BEC
+	// Token: 0x060021DB RID: 8667 RVA: 0x000C2D0C File Offset: 0x000C0F0C
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -2960,7 +2960,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x0600212E RID: 8494 RVA: 0x000BC8E4 File Offset: 0x000BAAE4
+	// Token: 0x060021DC RID: 8668 RVA: 0x000C3C04 File Offset: 0x000C1E04
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -3831,7 +3831,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x0600212F RID: 8495 RVA: 0x000BD871 File Offset: 0x000BBA71
+	// Token: 0x060021DD RID: 8669 RVA: 0x000C4B91 File Offset: 0x000C2D91
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -3840,113 +3840,113 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x0400157B RID: 5499
+	// Token: 0x040015BD RID: 5565
 	private const int MODIFY_SMALL_LENGTH = 1;
 
-	// Token: 0x0400157C RID: 5500
+	// Token: 0x040015BE RID: 5566
 	private const int INVALID_MODIFY_INSTANCE = -1;
 
-	// Token: 0x0400157D RID: 5501
+	// Token: 0x040015BF RID: 5567
 	[StaticVariableRuleIgnore]
 	private static readonly int BanForcePlayModify = GameplayTagDefine.EGameplayTagId["功能.通用镜头.屏蔽modify强制生效"];
 
-	// Token: 0x0400157E RID: 5502
+	// Token: 0x040015C0 RID: 5568
 	public float ModifyArmLengthLagSpeed;
 
-	// Token: 0x0400157F RID: 5503
+	// Token: 0x040015C1 RID: 5569
 	public float ModifyArmOffsetLagSpeed;
 
-	// Token: 0x04001580 RID: 5504
+	// Token: 0x040015C2 RID: 5570
 	public float ModifyCameraOffsetLagSpeed;
 
-	// Token: 0x04001581 RID: 5505
+	// Token: 0x040015C3 RID: 5571
 	public float ModifyArmRotationLagSpeed;
 
-	// Token: 0x04001582 RID: 5506
+	// Token: 0x040015C4 RID: 5572
 	public float ModifyFovLagSpeed;
 
-	// Token: 0x04001583 RID: 5507
+	// Token: 0x040015C5 RID: 5573
 	public int ModifyInstance;
 
-	// Token: 0x04001584 RID: 5508
+	// Token: 0x040015C6 RID: 5574
 	private float ModifyElapsedTime;
 
-	// Token: 0x04001585 RID: 5509
+	// Token: 0x040015C7 RID: 5575
 	private FGameplayTag? ModifyTag;
 
-	// Token: 0x04001586 RID: 5510
+	// Token: 0x040015C8 RID: 5576
 	private float ModifyDuration;
 
-	// Token: 0x04001587 RID: 5511
+	// Token: 0x040015C9 RID: 5577
 	private float ModifyBlendInTime;
 
-	// Token: 0x04001588 RID: 5512
+	// Token: 0x040015CA RID: 5578
 	private float ModifyBlendOutTime;
 
-	// Token: 0x04001589 RID: 5513
+	// Token: 0x040015CB RID: 5579
 	private float ModifyFadeOutTime;
 
-	// Token: 0x0400158A RID: 5514
+	// Token: 0x040015CC RID: 5580
 	private bool IsBreakPreviousPlayerLocationModify;
 
-	// Token: 0x0400158B RID: 5515
+	// Token: 0x040015CD RID: 5581
 	[Nullable(2)]
 	private CurveBase ModifyBlendInCurve;
 
-	// Token: 0x0400158C RID: 5516
+	// Token: 0x040015CE RID: 5582
 	[Nullable(2)]
 	private CurveBase ModifyBlendOutCurve;
 
-	// Token: 0x0400158D RID: 5517
+	// Token: 0x040015CF RID: 5583
 	private bool IsModifyBlendingOut;
 
-	// Token: 0x0400158E RID: 5518
+	// Token: 0x040015D0 RID: 5584
 	public bool IsModifyFadeOut;
 
-	// Token: 0x0400158F RID: 5519
+	// Token: 0x040015D1 RID: 5585
 	public EBlendState CurrentBlendState;
 
-	// Token: 0x04001590 RID: 5520
+	// Token: 0x040015D2 RID: 5586
 	public readonly CameraFadeOutData ModifyFadeOutData = new CameraFadeOutData();
 
-	// Token: 0x04001591 RID: 5521
+	// Token: 0x040015D3 RID: 5587
 	[Nullable(2)]
 	public CameraModify ModifySettings;
 
-	// Token: 0x04001592 RID: 5522
+	// Token: 0x040015D4 RID: 5588
 	[Nullable(2)]
 	private UAnimSequenceBase ModifyAnimSequence;
 
-	// Token: 0x04001593 RID: 5523
+	// Token: 0x040015D5 RID: 5589
 	[Nullable(2)]
 	public UAnimMontage ModifyMontage;
 
-	// Token: 0x04001594 RID: 5524
+	// Token: 0x040015D6 RID: 5590
 	[Nullable(2)]
 	private UAnimInstance ModifyAnimInstance;
 
-	// Token: 0x04001595 RID: 5525
+	// Token: 0x040015D7 RID: 5591
 	public bool ModifyArmLength;
 
-	// Token: 0x04001596 RID: 5526
+	// Token: 0x040015D8 RID: 5592
 	public bool ModifyArmOffset;
 
-	// Token: 0x04001597 RID: 5527
+	// Token: 0x040015D9 RID: 5593
 	private bool ModifyCameraOffset;
 
-	// Token: 0x04001598 RID: 5528
+	// Token: 0x040015DA RID: 5594
 	private bool ModifyArmRotationPitch;
 
-	// Token: 0x04001599 RID: 5529
+	// Token: 0x040015DB RID: 5595
 	private bool ModifyArmRotationYaw;
 
-	// Token: 0x0400159A RID: 5530
+	// Token: 0x040015DC RID: 5596
 	private bool ModifyArmRotationRoll;
 
-	// Token: 0x0400159B RID: 5531
+	// Token: 0x040015DD RID: 5597
 	private bool ModifyPlayerLocation;
 
-	// Token: 0x0400159C RID: 5532
+	// Token: 0x040015DE RID: 5598
 	[Nullable(new byte[]
 	{
 		0,
@@ -3955,7 +3955,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 	})]
 	private OneOf<TsBaseCharacter, TsBaseVehicle> AnimOwner;
 
-	// Token: 0x0400159D RID: 5533
+	// Token: 0x040015DF RID: 5599
 	[Nullable(new byte[]
 	{
 		0,
@@ -3964,119 +3964,119 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 	})]
 	private OneOf<TsBaseCharacter, TsBaseVehicle> LookAtActor;
 
-	// Token: 0x0400159E RID: 5534
+	// Token: 0x040015E0 RID: 5600
 	[Nullable(2)]
 	private Entity LookAtEntity;
 
-	// Token: 0x0400159F RID: 5535
+	// Token: 0x040015E1 RID: 5601
 	private string LookAtActorSocket = "";
 
-	// Token: 0x040015A0 RID: 5536
+	// Token: 0x040015E2 RID: 5602
 	private readonly Vector TargetLocation = Vector.Create();
 
-	// Token: 0x040015A1 RID: 5537
+	// Token: 0x040015E3 RID: 5603
 	private readonly Vector TmpPlayerLocation = Vector.Create();
 
-	// Token: 0x040015A2 RID: 5538
+	// Token: 0x040015E4 RID: 5604
 	private bool ModifyFov;
 
-	// Token: 0x040015A3 RID: 5539
+	// Token: 0x040015E5 RID: 5605
 	private bool ModifyLens;
 
-	// Token: 0x040015A4 RID: 5540
+	// Token: 0x040015E6 RID: 5606
 	private bool HasInput;
 
-	// Token: 0x040015A5 RID: 5541
+	// Token: 0x040015E7 RID: 5607
 	private bool FirstModifyArmRotationPitch = true;
 
-	// Token: 0x040015A6 RID: 5542
+	// Token: 0x040015E8 RID: 5608
 	private bool FirstModifyArmRotationYaw = true;
 
-	// Token: 0x040015A7 RID: 5543
+	// Token: 0x040015E9 RID: 5609
 	private bool FirstModifyArmRotationRoll = true;
 
-	// Token: 0x040015A8 RID: 5544
+	// Token: 0x040015EA RID: 5610
 	private readonly Quat MaxAngleFixQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x040015A9 RID: 5545
+	// Token: 0x040015EB RID: 5611
 	private float TargetArmRotatorPitch;
 
-	// Token: 0x040015AA RID: 5546
+	// Token: 0x040015EC RID: 5612
 	private float TargetArmRotatorYaw;
 
-	// Token: 0x040015AB RID: 5547
+	// Token: 0x040015ED RID: 5613
 	private float TargetArmRotatorRoll;
 
-	// Token: 0x040015AC RID: 5548
+	// Token: 0x040015EE RID: 5614
 	private readonly ModifyEndContext ModifyEndContext = new ModifyEndContext();
 
-	// Token: 0x040015AD RID: 5549
+	// Token: 0x040015EF RID: 5615
 	private readonly Rotator TempTargetArmRotator = Rotator.Create();
 
-	// Token: 0x040015AE RID: 5550
+	// Token: 0x040015F0 RID: 5616
 	private readonly Rotator StartTargetArmRotator = Rotator.Create();
 
-	// Token: 0x040015AF RID: 5551
+	// Token: 0x040015F1 RID: 5617
 	private readonly Rotator FadeOutStartRotator = Rotator.Create();
 
-	// Token: 0x040015B0 RID: 5552
+	// Token: 0x040015F2 RID: 5618
 	private readonly Vector TmpTargetArmOffset = Vector.Create();
 
-	// Token: 0x040015B1 RID: 5553
+	// Token: 0x040015F3 RID: 5619
 	private readonly Rotator TmpFinalRotator = Rotator.Create();
 
-	// Token: 0x040015B2 RID: 5554
+	// Token: 0x040015F4 RID: 5620
 	private readonly Rotator TmpFinalRotatorInGravity = Rotator.Create();
 
-	// Token: 0x040015B3 RID: 5555
+	// Token: 0x040015F5 RID: 5621
 	private readonly VirtualCamera FirstStartVirtualCamera = new VirtualCamera();
 
-	// Token: 0x040015B4 RID: 5556
+	// Token: 0x040015F6 RID: 5622
 	private readonly VirtualCamera StartVirtualCamera = new VirtualCamera();
 
-	// Token: 0x040015B5 RID: 5557
+	// Token: 0x040015F7 RID: 5623
 	private float StartAutoCameraArmLengthAddition;
 
-	// Token: 0x040015B6 RID: 5558
+	// Token: 0x040015F8 RID: 5624
 	private readonly Vector StartAutoCameraArmOffset = Vector.Create();
 
-	// Token: 0x040015B7 RID: 5559
+	// Token: 0x040015F9 RID: 5625
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x040015B8 RID: 5560
+	// Token: 0x040015FA RID: 5626
 	private readonly Rotator TmpRotator2 = Rotator.Create();
 
-	// Token: 0x040015B9 RID: 5561
+	// Token: 0x040015FB RID: 5627
 	private readonly Rotator TmpRotator3 = Rotator.Create();
 
-	// Token: 0x040015BA RID: 5562
+	// Token: 0x040015FC RID: 5628
 	private readonly Rotator TmpRotator4 = Rotator.Create();
 
-	// Token: 0x040015BB RID: 5563
+	// Token: 0x040015FD RID: 5629
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x040015BC RID: 5564
+	// Token: 0x040015FE RID: 5630
 	private readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x040015BD RID: 5565
+	// Token: 0x040015FF RID: 5631
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x040015BE RID: 5566
+	// Token: 0x04001600 RID: 5632
 	private bool EnableDebugModifyZoomModifier = true;
 
-	// Token: 0x040015BF RID: 5567
+	// Token: 0x04001601 RID: 5633
 	private bool EnableDebugFadeOutZoomModifier = true;
 
-	// Token: 0x040015C0 RID: 5568
+	// Token: 0x04001602 RID: 5634
 	public bool IsDebugCurveEval;
 
-	// Token: 0x040015C1 RID: 5569
+	// Token: 0x04001603 RID: 5635
 	private readonly CameraBlendOutData BlendOutData = new CameraBlendOutData();
 
-	// Token: 0x040015C2 RID: 5570
+	// Token: 0x04001604 RID: 5636
 	private readonly Action OnAllMontageInstancesEnded;
 
-	// Token: 0x040015C3 RID: 5571
+	// Token: 0x04001605 RID: 5637
 	[Nullable(new byte[]
 	{
 		1,
@@ -4084,7 +4084,7 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 	})]
 	private readonly Action<UAnimMontage, bool> OnMontageEnded;
 
-	// Token: 0x040015C4 RID: 5572
+	// Token: 0x04001606 RID: 5638
 	[Nullable(new byte[]
 	{
 		1,
@@ -4092,10 +4092,10 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 	})]
 	private readonly Action<UAnimMontage> OnMontageStarted;
 
-	// Token: 0x040015C5 RID: 5573
+	// Token: 0x04001607 RID: 5639
 	private readonly Action<int> OnLookAtEntityDead;
 
-	// Token: 0x040015C6 RID: 5574
+	// Token: 0x04001608 RID: 5640
 	[Nullable(new byte[]
 	{
 		1,
@@ -4104,18 +4104,18 @@ public class CameraModifyController : CameraControllerBase, ICanGetConfigMapValu
 	})]
 	private readonly Action<EntityHandle, EntityHandle> OnVisionMorphEnd;
 
-	// Token: 0x040015C7 RID: 5575
+	// Token: 0x04001609 RID: 5641
 	private readonly Action<ULevelSequence, AActor, ALevelSequenceActor, FTransformDouble, bool, bool, string> OnPlayCameraLevelSequence;
 
-	// Token: 0x040015C8 RID: 5576
+	// Token: 0x0400160A RID: 5642
 	private readonly Action<int, int, bool> OnCharBeforeUseSkill;
 
-	// Token: 0x040015C9 RID: 5577
+	// Token: 0x0400160B RID: 5643
 	private bool IsAimingInternal;
 
-	// Token: 0x040015CA RID: 5578
+	// Token: 0x0400160C RID: 5644
 	private readonly UniqueLockingHandler<EModifyInternalLockReason> ModifyLockHandler = new UniqueLockingHandler<EModifyInternalLockReason>();
 
-	// Token: 0x040015CB RID: 5579
+	// Token: 0x0400160D RID: 5645
 	private int Priority;
 }

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EEA RID: 20202
+	// Token: 0x02003EB3 RID: 16051
 	public class RogueBattleMapHelpView : UiViewBase
 	{
-		// Token: 0x06033D6A RID: 212330 RVA: 0x00C243B8 File Offset: 0x00C225B8
+		// Token: 0x06028BD5 RID: 166869 RVA: 0x00B6D960 File Offset: 0x00B6BB60
 		[NullableContext(1)]
 		public RogueBattleMapHelpView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033D6B RID: 212331 RVA: 0x00C243C1 File Offset: 0x00C225C1
+		// Token: 0x06028BD6 RID: 166870 RVA: 0x00B6D969 File Offset: 0x00B6BB69
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033D6C RID: 212332 RVA: 0x00C243FC File Offset: 0x00C225FC
+		// Token: 0x06028BD7 RID: 166871 RVA: 0x00B6D9A4 File Offset: 0x00B6BBA4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleMapHelpView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B896 RID: 112790
+		// Token: 0x04016269 RID: 90729
 		[Nullable(new byte[]
 		{
 			2,

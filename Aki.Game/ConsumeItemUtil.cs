@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001815 RID: 6165
+// Token: 0x02000CCE RID: 3278
 [NullableContext(1)]
 [Nullable(0)]
 public class ConsumeItemUtil
 {
-	// Token: 0x0600B4BF RID: 46271 RVA: 0x0028CA44 File Offset: 0x0028AC44
+	// Token: 0x060088AA RID: 34986 RVA: 0x00297164 File Offset: 0x00295364
 	[return: Nullable(2)]
 	public static ConsumeItemData GetConsumeItemData(InventoryDefine.IGetItemData getItemData, int count)
 	{
@@ -23,7 +23,7 @@ public class ConsumeItemUtil
 		return ConsumeItemUtil.MaterialConsumeData(itemDataBase, count);
 	}
 
-	// Token: 0x0600B4C0 RID: 46272 RVA: 0x0028CA88 File Offset: 0x0028AC88
+	// Token: 0x060088AB RID: 34987 RVA: 0x002971A8 File Offset: 0x002953A8
 	protected static ConsumeItemData WeaponConsumeData(ItemDataBase itemDataBase)
 	{
 		ConsumeItemData consumeItemData = new ConsumeItemData();
@@ -36,7 +36,7 @@ public class ConsumeItemUtil
 		return consumeItemData;
 	}
 
-	// Token: 0x0600B4C1 RID: 46273 RVA: 0x0028CB08 File Offset: 0x0028AD08
+	// Token: 0x060088AC RID: 34988 RVA: 0x00297228 File Offset: 0x00295428
 	protected static ConsumeItemData MaterialConsumeData(ItemDataBase itemDataBase, int count)
 	{
 		return new ConsumeItemData

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Player.Component
 {
-	// Token: 0x02007058 RID: 28760
+	// Token: 0x020061D9 RID: 25049
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerFlashLightComponent : EntityComponent
 	{
-		// Token: 0x06045FEB RID: 286699 RVA: 0x0117293C File Offset: 0x01170B3C
+		// Token: 0x0603C1D9 RID: 246233 RVA: 0x0111C5FC File Offset: 0x0111A7FC
 		protected override bool OnStart()
 		{
 			this.TagComp = base.Entity.CheckGetComponent<PlayerTagComponent>();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			return true;
 		}
 
-		// Token: 0x06045FEC RID: 286700 RVA: 0x011729DB File Offset: 0x01170BDB
+		// Token: 0x0603C1DA RID: 246234 RVA: 0x0111C69B File Offset: 0x0111A89B
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsEnabled)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			this.UpdateFlashLightTransform(delta * 0.001f);
 		}
 
-		// Token: 0x06045FED RID: 286701 RVA: 0x011729F4 File Offset: 0x01170BF4
+		// Token: 0x0603C1DB RID: 246235 RVA: 0x0111C6B4 File Offset: 0x0111A8B4
 		protected override bool OnEnd()
 		{
 			ITagTask switchFlashLight = this.SwitchFlashLight;
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			return true;
 		}
 
-		// Token: 0x06045FEE RID: 286702 RVA: 0x01172A4B File Offset: 0x01170C4B
+		// Token: 0x0603C1DC RID: 246236 RVA: 0x0111C70B File Offset: 0x0111A90B
 		protected override void OnEnable()
 		{
 			this.EnableFlashLight(true);
 		}
 
-		// Token: 0x06045FEF RID: 286703 RVA: 0x01172A54 File Offset: 0x01170C54
+		// Token: 0x0603C1DD RID: 246237 RVA: 0x0111C714 File Offset: 0x0111A914
 		protected override void OnDisable(string reason)
 		{
 			this.EnableFlashLight(false);
 		}
 
-		// Token: 0x06045FF0 RID: 286704 RVA: 0x01172A60 File Offset: 0x01170C60
+		// Token: 0x0603C1DE RID: 246238 RVA: 0x0111C720 File Offset: 0x0111A920
 		protected void EnableFlashLight(bool enable)
 		{
 			if (this.IsEnabled == enable)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			}
 		}
 
-		// Token: 0x06045FF1 RID: 286705 RVA: 0x01172AF7 File Offset: 0x01170CF7
+		// Token: 0x0603C1DF RID: 246239 RVA: 0x0111C7B7 File Offset: 0x0111A9B7
 		protected void LoadAndInitFlashLightActor()
 		{
 			ResourceSystem.Instance.LoadTypeAsync("BP_FlashLightConfig_C", delegate
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			}, "js_undefined");
 		}
 
-		// Token: 0x06045FF2 RID: 286706 RVA: 0x01172B1C File Offset: 0x01170D1C
+		// Token: 0x0603C1E0 RID: 246240 RVA: 0x0111C7DC File Offset: 0x0111A9DC
 		protected UniTask InitFlashLightParams(FlashLightConfig config)
 		{
 			PlayerFlashLightComponent.<InitFlashLightParams>d__23 <InitFlashLightParams>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			return <InitFlashLightParams>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045FF3 RID: 286707 RVA: 0x01172B68 File Offset: 0x01170D68
+		// Token: 0x0603C1E1 RID: 246241 RVA: 0x0111C828 File Offset: 0x0111AA28
 		protected void UpdateFlashLightTransform(float deltaSecond)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			}
 		}
 
-		// Token: 0x06045FF4 RID: 286708 RVA: 0x01172E6F File Offset: 0x0117106F
+		// Token: 0x0603C1E2 RID: 246242 RVA: 0x0111CB2F File Offset: 0x0111AD2F
 		protected void OnClearWorld()
 		{
 			if (!this.IsEnabled)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			}
 		}
 
-		// Token: 0x06045FF5 RID: 286709 RVA: 0x01172EA0 File Offset: 0x011710A0
+		// Token: 0x0603C1E3 RID: 246243 RVA: 0x0111CB60 File Offset: 0x0111AD60
 		protected void OnWorldDone()
 		{
 			if (!this.IsEnabled)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			this.InitFlashLightParams(this.Config).Forget();
 		}
 
-		// Token: 0x06045FF6 RID: 286710 RVA: 0x01172EF0 File Offset: 0x011710F0
+		// Token: 0x0603C1E4 RID: 246244 RVA: 0x0111CBB0 File Offset: 0x0111ADB0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -221,192 +221,200 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 				return false;
 			}
 			PlayerFlashLightComponent playerFlashLightComponent = (PlayerFlashLightComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComp"))
+			if (playerFlashLightComponent.TagComp == null)
 			{
-				if (playerFlashLightComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("DisableKey"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.DisableKey = playerFlashLightComponent.DisableKey;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SwitchFlashLight"))
+			this.DisableKey = playerFlashLightComponent.DisableKey;
+			if (playerFlashLightComponent.SwitchFlashLight == null)
 			{
-				if (playerFlashLightComponent.SwitchFlashLight == null)
-				{
-					this.SwitchFlashLight = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.SwitchFlashLight), "SwitchFlashLight"))
-				{
-					return false;
-				}
+				this.SwitchFlashLight = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SwitchFlashLight), "SwitchFlashLight"))
 			{
-				if (playerFlashLightComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FlashLightConfig>(this.Config), "Config"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FlashLightActor"))
+			if (playerFlashLightComponent.Config == null)
 			{
-				if (playerFlashLightComponent.FlashLightActor == null)
-				{
-					this.FlashLightActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.FlashLightActor), "FlashLightActor"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("IsEnabled"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.IsEnabled = playerFlashLightComponent.IsEnabled;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastPitchRad"))
+			if (playerFlashLightComponent.FlashLightActor == null)
 			{
-				this.LastPitchRad = playerFlashLightComponent.LastPitchRad;
+				this.FlashLightActor = null;
 			}
-			if (base.CanResetComponentProperty("TmpVector1"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FlashLightActor), "FlashLightActor"))
 			{
-				if (playerFlashLightComponent.TmpVector1 == null)
-				{
-					this.TmpVector1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector1), "TmpVector1"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector2"))
+			this.IsEnabled = playerFlashLightComponent.IsEnabled;
+			this.LastPitchRad = playerFlashLightComponent.LastPitchRad;
+			if (playerFlashLightComponent.TmpVector1 == null)
 			{
-				if (playerFlashLightComponent.TmpVector2 == null)
-				{
-					this.TmpVector2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector2), "TmpVector2"))
-				{
-					return false;
-				}
+				this.TmpVector1 = null;
 			}
-			if (base.CanResetComponentProperty("TmpRotator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
 			{
-				if (playerFlashLightComponent.TmpRotator == null)
-				{
-					this.TmpRotator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator), "TmpRotator"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TmpTrans1"))
+			if (playerFlashLightComponent.TmpVector2 == null)
 			{
-				if (playerFlashLightComponent.TmpTrans1 == null)
-				{
-					this.TmpTrans1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTrans1), "TmpTrans1"))
-				{
-					return false;
-				}
+				this.TmpVector2 = null;
 			}
-			if (base.CanResetComponentProperty("TmpTrans2"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 			{
-				if (playerFlashLightComponent.TmpTrans2 == null)
-				{
-					this.TmpTrans2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TmpTrans2), "TmpTrans2"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TmpQuat1"))
+			if (playerFlashLightComponent.TmpRotator == null)
 			{
-				if (playerFlashLightComponent.TmpQuat1 == null)
-				{
-					this.TmpQuat1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat1), "TmpQuat1"))
-				{
-					return false;
-				}
+				this.TmpRotator = null;
 			}
-			if (base.CanResetComponentProperty("TmpQuat2"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
 			{
-				if (playerFlashLightComponent.TmpQuat2 == null)
-				{
-					this.TmpQuat2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (playerFlashLightComponent.TmpTrans1 == null)
+			{
+				this.TmpTrans1 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans1), "TmpTrans1"))
+			{
+				return false;
+			}
+			if (playerFlashLightComponent.TmpTrans2 == null)
+			{
+				this.TmpTrans2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpTrans2), "TmpTrans2"))
+			{
+				return false;
+			}
+			if (playerFlashLightComponent.TmpQuat1 == null)
+			{
+				this.TmpQuat1 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat1), "TmpQuat1"))
+			{
+				return false;
+			}
+			if (playerFlashLightComponent.TmpQuat2 == null)
+			{
+				this.TmpQuat2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024A51 RID: 150097
+		// Token: 0x1700716B RID: 29035
+		// (get) Token: 0x0603C1E5 RID: 246245 RVA: 0x0111CDCD File Offset: 0x0111AFCD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700716C RID: 29036
+		// (get) Token: 0x0603C1E6 RID: 246246 RVA: 0x0111CDD0 File Offset: 0x0111AFD0
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700716D RID: 29037
+		// (get) Token: 0x0603C1E7 RID: 246247 RVA: 0x0111CDD3 File Offset: 0x0111AFD3
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700716E RID: 29038
+		// (get) Token: 0x0603C1E8 RID: 246248 RVA: 0x0111CDD6 File Offset: 0x0111AFD6
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700716F RID: 29039
+		// (get) Token: 0x0603C1E9 RID: 246249 RVA: 0x0111CDD9 File Offset: 0x0111AFD9
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FD07 RID: 130311
 		private const string FLASH_LIGHT_CONFIG_PATH = "/Game/Aki/Character/Role/Common/Data/DA/DA_FlashLightCommon.DA_FlashLightCommon";
 
-		// Token: 0x04024A52 RID: 150098
+		// Token: 0x0401FD08 RID: 130312
 		private const float INVALID_PITCH_RAD = 360f;
 
-		// Token: 0x04024A53 RID: 150099
+		// Token: 0x0401FD09 RID: 130313
 		[Nullable(2)]
 		protected PlayerTagComponent TagComp;
 
-		// Token: 0x04024A54 RID: 150100
+		// Token: 0x0401FD0A RID: 130314
 		private int? DisableKey;
 
-		// Token: 0x04024A55 RID: 150101
+		// Token: 0x0401FD0B RID: 130315
 		[Nullable(2)]
 		private ITagTask SwitchFlashLight;
 
-		// Token: 0x04024A56 RID: 150102
+		// Token: 0x0401FD0C RID: 130316
 		[Nullable(2)]
 		protected FlashLightConfig Config;
 
-		// Token: 0x04024A57 RID: 150103
+		// Token: 0x0401FD0D RID: 130317
 		[Nullable(2)]
 		protected AActor FlashLightActor;
 
-		// Token: 0x04024A58 RID: 150104
+		// Token: 0x0401FD0E RID: 130318
 		protected bool IsEnabled;
 
-		// Token: 0x04024A59 RID: 150105
+		// Token: 0x0401FD0F RID: 130319
 		protected float LastPitchRad = 360f;
 
-		// Token: 0x04024A5A RID: 150106
+		// Token: 0x0401FD10 RID: 130320
 		protected Vector TmpVector1 = Vector.Create();
 
-		// Token: 0x04024A5B RID: 150107
+		// Token: 0x0401FD11 RID: 130321
 		protected Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x04024A5C RID: 150108
+		// Token: 0x0401FD12 RID: 130322
 		protected Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x04024A5D RID: 150109
+		// Token: 0x0401FD13 RID: 130323
 		protected Transform TmpTrans1 = Transform.Create();
 
-		// Token: 0x04024A5E RID: 150110
+		// Token: 0x0401FD14 RID: 130324
 		protected Transform TmpTrans2 = Transform.Create();
 
-		// Token: 0x04024A5F RID: 150111
+		// Token: 0x0401FD15 RID: 130325
 		protected Quat TmpQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04024A60 RID: 150112
+		// Token: 0x0401FD16 RID: 130326
 		protected Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 	}
 }

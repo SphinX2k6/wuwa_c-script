@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028E4 RID: 10468
+	// Token: 0x02002BBC RID: 11196
 	public class ICloseSplineMovePattern
 	{
-		// Token: 0x0600E899 RID: 59545 RVA: 0x002222BA File Offset: 0x002204BA
-		[NullableContext(1)]
+		// Token: 0x0600F6DA RID: 63194 RVA: 0x0023F472 File Offset: 0x0023D672
 		public static ICloseSplineMovePattern Create(ICloseSplineMovePattern? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004893 RID: 18579
-		// (get) Token: 0x0600E89A RID: 59546 RVA: 0x002222D9 File Offset: 0x002204D9
+		// Token: 0x17004C10 RID: 19472
+		// (get) Token: 0x0600F6DB RID: 63195 RVA: 0x0023F491 File Offset: 0x0023D691
 		public virtual ESplineMovePattern Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004894 RID: 18580
-		// (get) Token: 0x0600E89B RID: 59547 RVA: 0x002222E8 File Offset: 0x002204E8
+		// Token: 0x17004C11 RID: 19473
+		// (get) Token: 0x0600F6DC RID: 63196 RVA: 0x0023F4A0 File Offset: 0x0023D6A0
 		public virtual float? GravitySwitchAngularVelocity
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400806E RID: 32878
+		// Token: 0x04008732 RID: 34610
 		private ICloseSplineMovePattern Instance;
 	}
 }

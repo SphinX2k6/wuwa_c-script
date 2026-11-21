@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200335F RID: 13151
+// Token: 0x020028D1 RID: 10449
 public class BabelTowerQuestRedDot : RedDotBase
 {
-	// Token: 0x0601C9F7 RID: 117239 RVA: 0x008054D4 File Offset: 0x008036D4
+	// Token: 0x0601A6EF RID: 108271 RVA: 0x0082BA98 File Offset: 0x00829C98
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshQuestState, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9F8 RID: 117240 RVA: 0x008054F2 File Offset: 0x008036F2
+	// Token: 0x0601A6F0 RID: 108272 RVA: 0x0082BAB6 File Offset: 0x00829CB6
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshQuestState, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C9F9 RID: 117241 RVA: 0x00805510 File Offset: 0x00803710
+	// Token: 0x0601A6F1 RID: 108273 RVA: 0x0082BAD4 File Offset: 0x00829CD4
 	protected override bool OnCheck(int uId = 0)
 	{
 		BabelTowerData babelTowerData = BabelTowerController.Instance.GetBabelTowerData();

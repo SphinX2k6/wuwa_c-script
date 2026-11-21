@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Plot.Avg
 {
-	// Token: 0x020050E3 RID: 20707
+	// Token: 0x020040B3 RID: 16563
 	public enum EPlotAvgCharacterSpineDirection
 	{
-		// Token: 0x0401C327 RID: 115495
+		// Token: 0x04016D58 RID: 93528
 		Left,
-		// Token: 0x0401C328 RID: 115496
+		// Token: 0x04016D59 RID: 93529
 		Right
 	}
 }

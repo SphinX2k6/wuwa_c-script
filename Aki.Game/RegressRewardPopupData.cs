@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001447 RID: 5191
+// Token: 0x020008FB RID: 2299
 [NullableContext(1)]
 [Nullable(0)]
 public struct RegressRewardPopupData
 {
-	// Token: 0x040040FB RID: 16635
+	// Token: 0x04004193 RID: 16787
 	public RegressRewardTuple[] RewardLists;
 
-	// Token: 0x040040FC RID: 16636
+	// Token: 0x04004194 RID: 16788
 	public UUIItem MountItem;
 
-	// Token: 0x040040FD RID: 16637
+	// Token: 0x04004195 RID: 16789
 	public FVector PosBias;
 }

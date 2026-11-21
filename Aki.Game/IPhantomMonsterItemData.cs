@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020027EB RID: 10219
+// Token: 0x02001D66 RID: 7526
 public interface IPhantomMonsterItemData : IUniversalSmallItemData<ERoleDevItemType>
 {
-	// Token: 0x17001B84 RID: 7044
-	// (get) Token: 0x06014FAB RID: 85931
-	// (set) Token: 0x06014FAC RID: 85932
+	// Token: 0x17001BDC RID: 7132
+	// (get) Token: 0x060129AB RID: 76203
+	// (set) Token: 0x060129AC RID: 76204
 	int MonsterId { get; set; }
 
-	// Token: 0x17001B85 RID: 7045
-	// (get) Token: 0x06014FAD RID: 85933
-	// (set) Token: 0x06014FAE RID: 85934
+	// Token: 0x17001BDD RID: 7133
+	// (get) Token: 0x060129AD RID: 76205
+	// (set) Token: 0x060129AE RID: 76206
 	int QualityId { get; set; }
 
-	// Token: 0x17001B86 RID: 7046
-	// (get) Token: 0x06014FAF RID: 85935
-	// (set) Token: 0x06014FB0 RID: 85936
+	// Token: 0x17001BDE RID: 7134
+	// (get) Token: 0x060129AF RID: 76207
+	// (set) Token: 0x060129B0 RID: 76208
 	int RoleId { get; set; }
 }

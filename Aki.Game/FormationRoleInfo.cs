@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020034E0 RID: 13536
+// Token: 0x02002A54 RID: 10836
 public class FormationRoleInfo
 {
-	// Token: 0x0400E8A1 RID: 59553
+	// Token: 0x0400ED58 RID: 60760
 	public int? EntityHandleId;
 
-	// Token: 0x0400E8A2 RID: 59554
+	// Token: 0x0400ED59 RID: 60761
 	public int ConfigId;
 
-	// Token: 0x0400E8A3 RID: 59555
+	// Token: 0x0400ED5A RID: 60762
 	public bool IsMyRole;
 
-	// Token: 0x0400E8A4 RID: 59556
+	// Token: 0x0400ED5B RID: 60763
 	public bool IsControl;
 
-	// Token: 0x0400E8A5 RID: 59557
+	// Token: 0x0400ED5C RID: 60764
 	public bool IsDead;
 }

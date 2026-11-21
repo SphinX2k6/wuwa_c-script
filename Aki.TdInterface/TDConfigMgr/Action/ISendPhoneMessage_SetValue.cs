@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DFF RID: 7679
+	// Token: 0x02002032 RID: 8242
 	public class ISendPhoneMessage_SetValue
 	{
-		// Token: 0x04006263 RID: 25187
+		// Token: 0x0400683A RID: 26682
 		public EPhoneSystemInteractType Type;
 
-		// Token: 0x04006264 RID: 25188
-		[Nullable(1)]
+		// Token: 0x0400683B RID: 26683
 		public IPhoneRecordActionConfig PhoneRecordActionConfig;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace UnrealEngine.Interface
 {
-	// Token: 0x02002B13 RID: 11027
+	// Token: 0x020008C3 RID: 2243
 	public interface IUnrealNativeInterface : IUnrealInterface, IUnrealObject
 	{
 	}

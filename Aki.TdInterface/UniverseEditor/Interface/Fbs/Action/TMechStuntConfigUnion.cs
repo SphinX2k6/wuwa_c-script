@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007711 RID: 30481
+	// Token: 0x02007F34 RID: 32564
 	public class TMechStuntConfigUnion
 	{
-		// Token: 0x1700E64F RID: 58959
-		// (get) Token: 0x060376A4 RID: 226980 RVA: 0x0078115E File Offset: 0x0077F35E
-		// (set) Token: 0x060376A5 RID: 226981 RVA: 0x00781166 File Offset: 0x0077F366
+		// Token: 0x1700F29B RID: 62107
+		// (get) Token: 0x0603ABC1 RID: 240577 RVA: 0x007E5E16 File Offset: 0x007E4016
+		// (set) Token: 0x0603ABC2 RID: 240578 RVA: 0x007E5E1E File Offset: 0x007E401E
 		public TMechStuntConfig Type { get; set; }
 
-		// Token: 0x1700E650 RID: 58960
-		// (get) Token: 0x060376A6 RID: 226982 RVA: 0x0078116F File Offset: 0x0077F36F
-		// (set) Token: 0x060376A7 RID: 226983 RVA: 0x00781177 File Offset: 0x0077F377
+		// Token: 0x1700F29C RID: 62108
+		// (get) Token: 0x0603ABC3 RID: 240579 RVA: 0x007E5E27 File Offset: 0x007E4027
+		// (set) Token: 0x0603ABC4 RID: 240580 RVA: 0x007E5E2F File Offset: 0x007E402F
 		public object Value { get; set; }
 
-		// Token: 0x060376A8 RID: 226984 RVA: 0x00781180 File Offset: 0x0077F380
+		// Token: 0x0603ABC5 RID: 240581 RVA: 0x007E5E38 File Offset: 0x007E4038
 		public TMechStuntConfigUnion()
 		{
 			this.Type = TMechStuntConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060376A9 RID: 226985 RVA: 0x00781196 File Offset: 0x0077F396
+		// Token: 0x0603ABC6 RID: 240582 RVA: 0x007E5E4E File Offset: 0x007E404E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060376AA RID: 226986 RVA: 0x007811A8 File Offset: 0x0077F3A8
+		// Token: 0x0603ABC7 RID: 240583 RVA: 0x007E5E60 File Offset: 0x007E4060
 		public IMechStuntBurrowT AsIMechStuntBurrow()
 		{
 			return this.As<IMechStuntBurrowT>();
 		}
 
-		// Token: 0x060376AB RID: 226987 RVA: 0x007811B0 File Offset: 0x0077F3B0
+		// Token: 0x0603ABC8 RID: 240584 RVA: 0x007E5E68 File Offset: 0x007E4068
 		public static TMechStuntConfigUnion FromIMechStuntBurrow(IMechStuntBurrowT _imechstuntburrow)
 		{
 			return new TMechStuntConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376AC RID: 226988 RVA: 0x007811C5 File Offset: 0x0077F3C5
+		// Token: 0x0603ABC9 RID: 240585 RVA: 0x007E5E7D File Offset: 0x007E407D
 		public IMechStuntClimbFlyT AsIMechStuntClimbFly()
 		{
 			return this.As<IMechStuntClimbFlyT>();
 		}
 
-		// Token: 0x060376AD RID: 226989 RVA: 0x007811CD File Offset: 0x0077F3CD
+		// Token: 0x0603ABCA RID: 240586 RVA: 0x007E5E85 File Offset: 0x007E4085
 		public static TMechStuntConfigUnion FromIMechStuntClimbFly(IMechStuntClimbFlyT _imechstuntclimbfly)
 		{
 			return new TMechStuntConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376AE RID: 226990 RVA: 0x007811E2 File Offset: 0x0077F3E2
+		// Token: 0x0603ABCB RID: 240587 RVA: 0x007E5E9A File Offset: 0x007E409A
 		public IMechStuntDiveT AsIMechStuntDive()
 		{
 			return this.As<IMechStuntDiveT>();
 		}
 
-		// Token: 0x060376AF RID: 226991 RVA: 0x007811EA File Offset: 0x0077F3EA
+		// Token: 0x0603ABCC RID: 240588 RVA: 0x007E5EA2 File Offset: 0x007E40A2
 		public static TMechStuntConfigUnion FromIMechStuntDive(IMechStuntDiveT _imechstuntdive)
 		{
 			return new TMechStuntConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376B0 RID: 226992 RVA: 0x007811FF File Offset: 0x0077F3FF
+		// Token: 0x0603ABCD RID: 240589 RVA: 0x007E5EB7 File Offset: 0x007E40B7
 		public IMechStuntHighSpeedT AsIMechStuntHighSpeed()
 		{
 			return this.As<IMechStuntHighSpeedT>();
 		}
 
-		// Token: 0x060376B1 RID: 226993 RVA: 0x00781207 File Offset: 0x0077F407
+		// Token: 0x0603ABCE RID: 240590 RVA: 0x007E5EBF File Offset: 0x007E40BF
 		public static TMechStuntConfigUnion FromIMechStuntHighSpeed(IMechStuntHighSpeedT _imechstunthighspeed)
 		{
 			return new TMechStuntConfigUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376B2 RID: 226994 RVA: 0x0078121C File Offset: 0x0077F41C
+		// Token: 0x0603ABCF RID: 240591 RVA: 0x007E5ED4 File Offset: 0x007E40D4
 		public IMechStuntLevelFlyT AsIMechStuntLevelFly()
 		{
 			return this.As<IMechStuntLevelFlyT>();
 		}
 
-		// Token: 0x060376B3 RID: 226995 RVA: 0x00781224 File Offset: 0x0077F424
+		// Token: 0x0603ABD0 RID: 240592 RVA: 0x007E5EDC File Offset: 0x007E40DC
 		public static TMechStuntConfigUnion FromIMechStuntLevelFly(IMechStuntLevelFlyT _imechstuntlevelfly)
 		{
 			return new TMechStuntConfigUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376B4 RID: 226996 RVA: 0x00781239 File Offset: 0x0077F439
+		// Token: 0x0603ABD1 RID: 240593 RVA: 0x007E5EF1 File Offset: 0x007E40F1
 		public IMechStuntWaterT AsIMechStuntWater()
 		{
 			return this.As<IMechStuntWaterT>();
 		}
 
-		// Token: 0x060376B5 RID: 226997 RVA: 0x00781241 File Offset: 0x0077F441
+		// Token: 0x0603ABD2 RID: 240594 RVA: 0x007E5EF9 File Offset: 0x007E40F9
 		public static TMechStuntConfigUnion FromIMechStuntWater(IMechStuntWaterT _imechstuntwater)
 		{
 			return new TMechStuntConfigUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060376B6 RID: 226998 RVA: 0x00781258 File Offset: 0x0077F458
+		// Token: 0x0603ABD3 RID: 240595 RVA: 0x007E5F10 File Offset: 0x007E4110
 		public static int Pack(FlatBufferBuilder builder, TMechStuntConfigUnion _o)
 		{
 			switch (_o.Type)

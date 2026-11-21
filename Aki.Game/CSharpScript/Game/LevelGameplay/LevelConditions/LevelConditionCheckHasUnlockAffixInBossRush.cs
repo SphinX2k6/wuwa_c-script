@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CA6 RID: 27814
+	// Token: 0x02005E20 RID: 24096
 	public class LevelConditionCheckHasUnlockAffixInBossRush : LevelConditionBase
 	{
-		// Token: 0x060445DE RID: 280030 RVA: 0x010DBEB0 File Offset: 0x010DA0B0
+		// Token: 0x0603A738 RID: 239416 RVA: 0x01085E5C File Offset: 0x0108405C
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

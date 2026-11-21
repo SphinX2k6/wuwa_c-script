@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001D26 RID: 7462
+// Token: 0x020011E8 RID: 4584
 public enum EWaveType
 {
-	// Token: 0x04006881 RID: 26753
+	// Token: 0x04006960 RID: 26976
 	Normal,
-	// Token: 0x04006882 RID: 26754
+	// Token: 0x04006961 RID: 26977
 	Special,
-	// Token: 0x04006883 RID: 26755
+	// Token: 0x04006962 RID: 26978
 	Endless
 }

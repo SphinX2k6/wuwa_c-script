@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FFB RID: 16379
+	// Token: 0x0200443C RID: 17468
 	public struct IQuestPlayerBeDamage : IFlatbufferObject
 	{
-		// Token: 0x17007315 RID: 29461
-		// (get) Token: 0x060179F5 RID: 96757 RVA: 0x003687BC File Offset: 0x003669BC
+		// Token: 0x17007917 RID: 30999
+		// (get) Token: 0x0601908E RID: 102542 RVA: 0x003925B0 File Offset: 0x003907B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060179F6 RID: 96758 RVA: 0x003687C9 File Offset: 0x003669C9
+		// Token: 0x0601908F RID: 102543 RVA: 0x003925BD File Offset: 0x003907BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060179F7 RID: 96759 RVA: 0x003687D0 File Offset: 0x003669D0
+		// Token: 0x06019090 RID: 102544 RVA: 0x003925C4 File Offset: 0x003907C4
 		public static IQuestPlayerBeDamage GetRootAsIQuestPlayerBeDamage(ByteBuffer _bb)
 		{
 			return IQuestPlayerBeDamage.GetRootAsIQuestPlayerBeDamage(_bb, default(IQuestPlayerBeDamage));
 		}
 
-		// Token: 0x060179F8 RID: 96760 RVA: 0x003687EC File Offset: 0x003669EC
+		// Token: 0x06019091 RID: 102545 RVA: 0x003925E0 File Offset: 0x003907E0
 		public static IQuestPlayerBeDamage GetRootAsIQuestPlayerBeDamage(ByteBuffer _bb, IQuestPlayerBeDamage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060179F9 RID: 96761 RVA: 0x00368809 File Offset: 0x00366A09
+		// Token: 0x06019092 RID: 102546 RVA: 0x003925FD File Offset: 0x003907FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060179FA RID: 96762 RVA: 0x00368818 File Offset: 0x00366A18
+		// Token: 0x06019093 RID: 102547 RVA: 0x0039260C File Offset: 0x0039080C
 		public IQuestPlayerBeDamage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007316 RID: 29462
-		// (get) Token: 0x060179FB RID: 96763 RVA: 0x00368828 File Offset: 0x00366A28
+		// Token: 0x17007918 RID: 31000
+		// (get) Token: 0x06019094 RID: 102548 RVA: 0x0039261C File Offset: 0x0039081C
 		public EPlayerHitStatisticsType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17007317 RID: 29463
-		// (get) Token: 0x060179FC RID: 96764 RVA: 0x00368864 File Offset: 0x00366A64
+		// Token: 0x17007919 RID: 31001
+		// (get) Token: 0x06019095 RID: 102549 RVA: 0x00392658 File Offset: 0x00390858
 		public EPlayerDamageInfoType StatisticsType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060179FD RID: 96765 RVA: 0x003688A0 File Offset: 0x00366AA0
+		// Token: 0x06019096 RID: 102550 RVA: 0x00392694 File Offset: 0x00390894
 		public static Offset<IQuestPlayerBeDamage> CreateIQuestPlayerBeDamage(FlatBufferBuilder builder, EPlayerHitStatisticsType Type = EPlayerHitStatisticsType.HitCount, EPlayerDamageInfoType StatisticsType = EPlayerDamageInfoType.DamagePoint)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerBeDamage.EndIQuestPlayerBeDamage(builder);
 		}
 
-		// Token: 0x060179FE RID: 96766 RVA: 0x003688BD File Offset: 0x00366ABD
+		// Token: 0x06019097 RID: 102551 RVA: 0x003926B1 File Offset: 0x003908B1
 		public static void StartIQuestPlayerBeDamage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060179FF RID: 96767 RVA: 0x003688C6 File Offset: 0x00366AC6
+		// Token: 0x06019098 RID: 102552 RVA: 0x003926BA File Offset: 0x003908BA
 		public static void AddType(FlatBufferBuilder builder, EPlayerHitStatisticsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017A00 RID: 96768 RVA: 0x003688D1 File Offset: 0x00366AD1
+		// Token: 0x06019099 RID: 102553 RVA: 0x003926C5 File Offset: 0x003908C5
 		public static void AddStatisticsType(FlatBufferBuilder builder, EPlayerDamageInfoType statisticsType)
 		{
 			builder.AddByte(1, (byte)statisticsType, 0);
 		}
 
-		// Token: 0x06017A01 RID: 96769 RVA: 0x003688DC File Offset: 0x00366ADC
+		// Token: 0x0601909A RID: 102554 RVA: 0x003926D0 File Offset: 0x003908D0
 		public static Offset<IQuestPlayerBeDamage> EndIQuestPlayerBeDamage(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestPlayerBeDamage>(builder.EndTable());
 		}
 
-		// Token: 0x06017A02 RID: 96770 RVA: 0x003688EC File Offset: 0x00366AEC
+		// Token: 0x0601909B RID: 102555 RVA: 0x003926E0 File Offset: 0x003908E0
 		public IQuestPlayerBeDamageT UnPack()
 		{
 			IQuestPlayerBeDamageT questPlayerBeDamageT = new IQuestPlayerBeDamageT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questPlayerBeDamageT;
 		}
 
-		// Token: 0x06017A03 RID: 96771 RVA: 0x00368907 File Offset: 0x00366B07
+		// Token: 0x0601909C RID: 102556 RVA: 0x003926FB File Offset: 0x003908FB
 		public void UnPackTo(IQuestPlayerBeDamageT _o)
 		{
 			_o.Type = this.Type;
 			_o.StatisticsType = this.StatisticsType;
 		}
 
-		// Token: 0x06017A04 RID: 96772 RVA: 0x00368924 File Offset: 0x00366B24
+		// Token: 0x0601909D RID: 102557 RVA: 0x00392718 File Offset: 0x00390918
 		public static Offset<IQuestPlayerBeDamage> Pack(FlatBufferBuilder builder, IQuestPlayerBeDamageT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerBeDamage.CreateIQuestPlayerBeDamage(builder, _o.Type, _o.StatisticsType);
 		}
 
-		// Token: 0x0400BB0E RID: 47886
+		// Token: 0x0400C4F5 RID: 50421
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F63 RID: 3939
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200108D RID: 4237
 	public class IEventTypeConfig
 	{
-		// Token: 0x0600578A RID: 22410 RVA: 0x000D5F98 File Offset: 0x000D4198
+		// Token: 0x06005D5E RID: 23902 RVA: 0x000E2A04 File Offset: 0x000E0C04
 		private IEventTypeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600578B RID: 22411 RVA: 0x000D5FD0 File Offset: 0x000D41D0
+		// Token: 0x06005D5F RID: 23903 RVA: 0x000E2A3C File Offset: 0x000E0C3C
 		public static IEventTypeConfig Create([Nullable(2)] IEventTypeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600578C RID: 22412 RVA: 0x000D5FE3 File Offset: 0x000D41E3
+		// Token: 0x06005D60 RID: 23904 RVA: 0x000E2A4F File Offset: 0x000E0C4F
 		public static IEventTypeConfig CreateFromSetValue([Nullable(2)] IEventTypeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600578D RID: 22413 RVA: 0x000D5FF6 File Offset: 0x000D41F6
+		// Token: 0x06005D61 RID: 23905 RVA: 0x000E2A62 File Offset: 0x000E0C62
 		public IEventTypeConfig_SetValue ToSetValue()
 		{
 			return new IEventTypeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D32 RID: 7474
-		// (get) Token: 0x0600578E RID: 22414 RVA: 0x000D6009 File Offset: 0x000D4209
-		// (set) Token: 0x0600578F RID: 22415 RVA: 0x000D6034 File Offset: 0x000D4234
+		// Token: 0x17001ED8 RID: 7896
+		// (get) Token: 0x06005D62 RID: 23906 RVA: 0x000E2A75 File Offset: 0x000E0C75
+		// (set) Token: 0x06005D63 RID: 23907 RVA: 0x000E2AA0 File Offset: 0x000E0CA0
 		public virtual ECommonEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034ED RID: 13549
+		// Token: 0x0400381E RID: 14366
 		[Nullable(2)]
 		protected IEventTypeConfig FbInstance;
 
-		// Token: 0x040034EE RID: 13550
+		// Token: 0x0400381F RID: 14367
 		[Nullable(2)]
 		protected IEventTypeConfig_SetValue PocoInterface;
 	}

@@ -5,7 +5,7 @@ using CSharpScript.Game.Guide.StepInfo;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x0200460F RID: 17935
+	// Token: 0x02003538 RID: 13624
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 	})]
 	public class InitState : StateBase<GuideGroupInfo, EGuideGroupState>
 	{
-		// Token: 0x0602E3AA RID: 189354 RVA: 0x00AB0B17 File Offset: 0x00AAED17
+		// Token: 0x06022A9F RID: 141983 RVA: 0x009DD20B File Offset: 0x009DB40B
 		public InitState(GuideGroupInfo owner, EGuideGroupState state, [Nullable(new byte[]
 		{
 			2,
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		{
 		}
 
-		// Token: 0x0602E3AB RID: 189355 RVA: 0x00AB0B24 File Offset: 0x00AAED24
+		// Token: 0x06022AA0 RID: 141984 RVA: 0x009DD218 File Offset: 0x009DB418
 		protected override void OnStart()
 		{
 			this.Owner.BreakExcludeStepIdSet = GuideConfig.Instance.GetBreakExcludeStepIdSetOfGroup(this.Owner.Id);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			}
 		}
 
-		// Token: 0x0602E3AC RID: 189356 RVA: 0x00AB0BF0 File Offset: 0x00AAEDF0
+		// Token: 0x06022AA1 RID: 141985 RVA: 0x009DD2E4 File Offset: 0x009DB4E4
 		protected override void OnEnter(EGuideGroupState? lastState)
 		{
 			this.Owner.CurrentStepIndex = -1;

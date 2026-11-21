@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DF0 RID: 7664
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002023 RID: 8227
 	public class ISelfClientEvent : IClientEventTarget
 	{
-		// Token: 0x0600A407 RID: 41991 RVA: 0x00174294 File Offset: 0x00172494
+		// Token: 0x0600AEAF RID: 44719 RVA: 0x00189C9C File Offset: 0x00187E9C
 		private ISelfClientEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A408 RID: 41992 RVA: 0x001742CC File Offset: 0x001724CC
+		// Token: 0x0600AEB0 RID: 44720 RVA: 0x00189CD4 File Offset: 0x00187ED4
 		public static ISelfClientEvent Create([Nullable(2)] ISelfClientEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A409 RID: 41993 RVA: 0x001742DF File Offset: 0x001724DF
+		// Token: 0x0600AEB1 RID: 44721 RVA: 0x00189CE7 File Offset: 0x00187EE7
 		public static ISelfClientEvent CreateFromSetValue([Nullable(2)] ISelfClientEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A40A RID: 41994 RVA: 0x001742F2 File Offset: 0x001724F2
+		// Token: 0x0600AEB2 RID: 44722 RVA: 0x00189CFA File Offset: 0x00187EFA
 		public new ISelfClientEvent_SetValue ToSetValue()
 		{
 			return new ISelfClientEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003272 RID: 12914
-		// (get) Token: 0x0600A40B RID: 41995 RVA: 0x00174305 File Offset: 0x00172505
-		// (set) Token: 0x0600A40C RID: 41996 RVA: 0x00174330 File Offset: 0x00172530
+		// Token: 0x17003531 RID: 13617
+		// (get) Token: 0x0600AEB3 RID: 44723 RVA: 0x00189D0D File Offset: 0x00187F0D
+		// (set) Token: 0x0600AEB4 RID: 44724 RVA: 0x00189D38 File Offset: 0x00187F38
 		public override EClientEventTarget Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006243 RID: 25155
+		// Token: 0x0400681A RID: 26650
 		[Nullable(2)]
 		protected new ISelfClientEvent FbInstance;
 
-		// Token: 0x04006244 RID: 25156
+		// Token: 0x0400681B RID: 26651
 		[Nullable(2)]
 		protected new ISelfClientEvent_SetValue PocoInterface;
 	}

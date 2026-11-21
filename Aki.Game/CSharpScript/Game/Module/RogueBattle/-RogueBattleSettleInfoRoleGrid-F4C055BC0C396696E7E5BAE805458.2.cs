@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E9C RID: 20124
+	// Token: 0x02003E65 RID: 15973
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class <RogueBattleSettleInfoRoleGrid>F4C055BC0C396696E7E5BAE8054587EF69924311750C95E1C4B8449D42628F438__RogueBattleSettleInfoRoleGridLevelComponent : MediumItemGridComponent
 	{
-		// Token: 0x06033B96 RID: 211862 RVA: 0x00C1DF58 File Offset: 0x00C1C158
+		// Token: 0x06028A01 RID: 166401 RVA: 0x00B67474 File Offset: 0x00B65674
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B97 RID: 211863 RVA: 0x00C1DFC8 File Offset: 0x00C1C1C8
+		// Token: 0x06028A02 RID: 166402 RVA: 0x00B674E4 File Offset: 0x00B656E4
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRoleInfo";
 		}
 
-		// Token: 0x06033B98 RID: 211864 RVA: 0x00C1DFD0 File Offset: 0x00C1C1D0
+		// Token: 0x06028A03 RID: 166403 RVA: 0x00B674EC File Offset: 0x00B656EC
 		protected override void OnRefresh(object data)
 		{
 			RogueResGainData rogueResGainData = (RogueResGainData)data;

@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200092B RID: 2347
+	// Token: 0x020001A3 RID: 419
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FCharacterReachedApexSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600844E RID: 33870 RVA: 0x000BD17A File Offset: 0x000BB37A
+		// Token: 0x06001EE9 RID: 7913 RVA: 0x0002D1D6 File Offset: 0x0002B3D6
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FCharacterReachedApexSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600844F RID: 33871 RVA: 0x000BD186 File Offset: 0x000BB386
+		// Token: 0x06001EEA RID: 7914 RVA: 0x0002D1E2 File Offset: 0x0002B3E2
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FCharacterReachedApexSignature._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FCharacterReachedApexSignature._FunctionPtr;
 		}
 
-		// Token: 0x06008450 RID: 33872 RVA: 0x000BD1A9 File Offset: 0x000BB3A9
+		// Token: 0x06001EEB RID: 7915 RVA: 0x0002D205 File Offset: 0x0002B405
 		public FCharacterReachedApexSignature()
 		{
 		}
 
-		// Token: 0x06008451 RID: 33873 RVA: 0x000BD1B1 File Offset: 0x000BB3B1
+		// Token: 0x06001EEC RID: 7916 RVA: 0x0002D20D File Offset: 0x0002B40D
 		[NullableContext(2)]
 		public FCharacterReachedApexSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06008452 RID: 33874 RVA: 0x000BD1BB File Offset: 0x000BB3BB
+		// Token: 0x06001EED RID: 7917 RVA: 0x0002D217 File Offset: 0x0002B417
 		public FCharacterReachedApexSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06008453 RID: 33875 RVA: 0x000BD1C6 File Offset: 0x000BB3C6
+		// Token: 0x06001EEE RID: 7918 RVA: 0x0002D222 File Offset: 0x0002B422
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008454 RID: 33876 RVA: 0x000BD1F8 File Offset: 0x000BB3F8
+		// Token: 0x06001EEF RID: 7919 RVA: 0x0002D254 File Offset: 0x0002B454
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FCharacterReachedApexSignature.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FCharacterReachedApexSignature.RegisterId);
 		}
 
-		// Token: 0x06008455 RID: 33877 RVA: 0x000BD232 File Offset: 0x000BB432
+		// Token: 0x06001EF0 RID: 7920 RVA: 0x0002D28E File Offset: 0x0002B48E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06008456 RID: 33878 RVA: 0x000BD23B File Offset: 0x000BB43B
+		// Token: 0x06001EF1 RID: 7921 RVA: 0x0002D297 File Offset: 0x0002B497
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x06008457 RID: 33879 RVA: 0x000BD248 File Offset: 0x000BB448
+		// Token: 0x06001EF2 RID: 7922 RVA: 0x0002D2A4 File Offset: 0x0002B4A4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04003F2F RID: 16175
+		// Token: 0x04000A5D RID: 2653
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04003F30 RID: 16176
+		// Token: 0x04000A5E RID: 2654
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.CharacterReachedApexSignature__DelegateSignature";
 
-		// Token: 0x04003F31 RID: 16177
+		// Token: 0x04000A5F RID: 2655
 		private static int RegisterId;
 
-		// Token: 0x02002CBE RID: 11454
+		// Token: 0x0200097A RID: 2426
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401664F RID: 91727
+			// Token: 0x040058C4 RID: 22724
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

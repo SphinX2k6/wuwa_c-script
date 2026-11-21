@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200715A RID: 29018
+	// Token: 0x02007926 RID: 31014
 	public struct ISlopeSlidePerformStart : IFlatbufferObject
 	{
-		// Token: 0x1700D7A3 RID: 55203
-		// (get) Token: 0x06033734 RID: 210740 RVA: 0x006EEAD9 File Offset: 0x006ECCD9
+		// Token: 0x1700E388 RID: 58248
+		// (get) Token: 0x060369DE RID: 223710 RVA: 0x0074F2E5 File Offset: 0x0074D4E5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033735 RID: 210741 RVA: 0x006EEAE6 File Offset: 0x006ECCE6
+		// Token: 0x060369DF RID: 223711 RVA: 0x0074F2F2 File Offset: 0x0074D4F2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033736 RID: 210742 RVA: 0x006EEAF0 File Offset: 0x006ECCF0
+		// Token: 0x060369E0 RID: 223712 RVA: 0x0074F2FC File Offset: 0x0074D4FC
 		public static ISlopeSlidePerformStart GetRootAsISlopeSlidePerformStart(ByteBuffer _bb)
 		{
 			return ISlopeSlidePerformStart.GetRootAsISlopeSlidePerformStart(_bb, default(ISlopeSlidePerformStart));
 		}
 
-		// Token: 0x06033737 RID: 210743 RVA: 0x006EEB0C File Offset: 0x006ECD0C
+		// Token: 0x060369E1 RID: 223713 RVA: 0x0074F318 File Offset: 0x0074D518
 		public static ISlopeSlidePerformStart GetRootAsISlopeSlidePerformStart(ByteBuffer _bb, ISlopeSlidePerformStart obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033738 RID: 210744 RVA: 0x006EEB29 File Offset: 0x006ECD29
+		// Token: 0x060369E2 RID: 223714 RVA: 0x0074F335 File Offset: 0x0074D535
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033739 RID: 210745 RVA: 0x006EEB38 File Offset: 0x006ECD38
+		// Token: 0x060369E3 RID: 223715 RVA: 0x0074F344 File Offset: 0x0074D544
 		public ISlopeSlidePerformStart __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D7A4 RID: 55204
-		// (get) Token: 0x0603373A RID: 210746 RVA: 0x006EEB48 File Offset: 0x006ECD48
+		// Token: 0x1700E389 RID: 58249
+		// (get) Token: 0x060369E4 RID: 223716 RVA: 0x0074F354 File Offset: 0x0074D554
 		public ESlidePerformType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D7A5 RID: 55205
-		// (get) Token: 0x0603373B RID: 210747 RVA: 0x006EEB84 File Offset: 0x006ECD84
+		// Token: 0x1700E38A RID: 58250
+		// (get) Token: 0x060369E5 RID: 223717 RVA: 0x0074F390 File Offset: 0x0074D590
 		public string SlopeSlidePerformDaPath
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603373C RID: 210748 RVA: 0x006EEBBB File Offset: 0x006ECDBB
+		// Token: 0x060369E6 RID: 223718 RVA: 0x0074F3C7 File Offset: 0x0074D5C7
 		public Span<byte> GetSlopeSlidePerformDaPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0603373D RID: 210749 RVA: 0x006EEBCA File Offset: 0x006ECDCA
+		// Token: 0x060369E7 RID: 223719 RVA: 0x0074F3D6 File Offset: 0x0074D5D6
 		public byte[] GetSlopeSlidePerformDaPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0603373E RID: 210750 RVA: 0x006EEBD8 File Offset: 0x006ECDD8
+		// Token: 0x060369E8 RID: 223720 RVA: 0x0074F3E4 File Offset: 0x0074D5E4
 		public static Offset<ISlopeSlidePerformStart> CreateISlopeSlidePerformStart(FlatBufferBuilder builder, ESlidePerformType Type = ESlidePerformType.SlopeSlide, StringOffset SlopeSlidePerformDaPathOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlopeSlidePerformStart.EndISlopeSlidePerformStart(builder);
 		}
 
-		// Token: 0x0603373F RID: 210751 RVA: 0x006EEBF5 File Offset: 0x006ECDF5
+		// Token: 0x060369E9 RID: 223721 RVA: 0x0074F401 File Offset: 0x0074D601
 		public static void StartISlopeSlidePerformStart(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06033740 RID: 210752 RVA: 0x006EEBFE File Offset: 0x006ECDFE
+		// Token: 0x060369EA RID: 223722 RVA: 0x0074F40A File Offset: 0x0074D60A
 		public static void AddType(FlatBufferBuilder builder, ESlidePerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033741 RID: 210753 RVA: 0x006EEC09 File Offset: 0x006ECE09
+		// Token: 0x060369EB RID: 223723 RVA: 0x0074F415 File Offset: 0x0074D615
 		public static void AddSlopeSlidePerformDaPath(FlatBufferBuilder builder, StringOffset slopeSlidePerformDaPathOffset)
 		{
 			builder.AddOffset(1, slopeSlidePerformDaPathOffset.Value, 0);
 		}
 
-		// Token: 0x06033742 RID: 210754 RVA: 0x006EEC19 File Offset: 0x006ECE19
+		// Token: 0x060369EC RID: 223724 RVA: 0x0074F425 File Offset: 0x0074D625
 		public static Offset<ISlopeSlidePerformStart> EndISlopeSlidePerformStart(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlopeSlidePerformStart>(builder.EndTable());
 		}
 
-		// Token: 0x06033743 RID: 210755 RVA: 0x006EEC28 File Offset: 0x006ECE28
+		// Token: 0x060369ED RID: 223725 RVA: 0x0074F434 File Offset: 0x0074D634
 		public ISlopeSlidePerformStartT UnPack()
 		{
 			ISlopeSlidePerformStartT slopeSlidePerformStartT = new ISlopeSlidePerformStartT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slopeSlidePerformStartT;
 		}
 
-		// Token: 0x06033744 RID: 210756 RVA: 0x006EEC43 File Offset: 0x006ECE43
+		// Token: 0x060369EE RID: 223726 RVA: 0x0074F44F File Offset: 0x0074D64F
 		public void UnPackTo(ISlopeSlidePerformStartT _o)
 		{
 			_o.Type = this.Type;
 			_o.SlopeSlidePerformDaPath = this.SlopeSlidePerformDaPath;
 		}
 
-		// Token: 0x06033745 RID: 210757 RVA: 0x006EEC60 File Offset: 0x006ECE60
+		// Token: 0x060369EF RID: 223727 RVA: 0x0074F46C File Offset: 0x0074D66C
 		public static Offset<ISlopeSlidePerformStart> Pack(FlatBufferBuilder builder, ISlopeSlidePerformStartT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlopeSlidePerformStart.CreateISlopeSlidePerformStart(builder, _o.Type, slopeSlidePerformDaPathOffset);
 		}
 
-		// Token: 0x04011C00 RID: 72704
+		// Token: 0x04012BEF RID: 76783
 		private Table __p;
 	}
 }

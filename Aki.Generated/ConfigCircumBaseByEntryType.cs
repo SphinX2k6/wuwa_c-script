@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200016E RID: 366
+	// Token: 0x0200017E RID: 382
 	public class ConfigCircumBaseByEntryType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000895 RID: 2197 RVA: 0x00089F65 File Offset: 0x00088165
+		// Token: 0x060008F5 RID: 2293 RVA: 0x0008FAC1 File Offset: 0x0008DCC1
 		static ConfigCircumBaseByEntryType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCircumBaseByEntryType.CreateStaticDefaultValue), new Action(ConfigCircumBaseByEntryType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000896 RID: 2198 RVA: 0x00089F84 File Offset: 0x00088184
+		// Token: 0x060008F6 RID: 2294 RVA: 0x0008FAE0 File Offset: 0x0008DCE0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCircumBaseByEntryType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000897 RID: 2199 RVA: 0x0008A003 File Offset: 0x00088203
+		// Token: 0x060008F7 RID: 2295 RVA: 0x0008FB5F File Offset: 0x0008DD5F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCircumBaseByEntryType.LogPair = null;
 			ConfigCircumBaseByEntryType.HandleId = 0;
 		}
 
-		// Token: 0x06000898 RID: 2200 RVA: 0x0008A011 File Offset: 0x00088211
+		// Token: 0x060008F8 RID: 2296 RVA: 0x0008FB6D File Offset: 0x0008DD6D
 		public static void Init()
 		{
 			ConfigCircumBaseByEntryType.HandleId = ConfigCommon.InitDataStatement(ConfigCircumBaseByEntryType.HandleId, "db_circumfluence.db", "select BinData from `CircumBase` where EntryType=?");
 		}
 
-		// Token: 0x06000899 RID: 2201 RVA: 0x0008A02C File Offset: 0x0008822C
+		// Token: 0x060008F9 RID: 2297 RVA: 0x0008FB88 File Offset: 0x0008DD88
 		[NullableContext(2)]
 		public static IReadOnlyList<CircumBase> GetConfigList(int p0EntryType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040009E6 RID: 2534
+		// Token: 0x04000A56 RID: 2646
 		private const string DB = "db_circumfluence.db";
 
-		// Token: 0x040009E7 RID: 2535
+		// Token: 0x04000A57 RID: 2647
 		private const string FILE = "h.回流活动.xlsx";
 
-		// Token: 0x040009E8 RID: 2536
+		// Token: 0x04000A58 RID: 2648
 		private const string TABLE = "CircumBase";
 
-		// Token: 0x040009E9 RID: 2537
+		// Token: 0x04000A59 RID: 2649
 		private const string COMMAND = "select BinData from `CircumBase` where EntryType=?";
 
-		// Token: 0x040009EA RID: 2538
+		// Token: 0x04000A5A RID: 2650
 		private const string KEY_PREFIX = "CircumBaseByEntryType";
 
-		// Token: 0x040009EB RID: 2539
+		// Token: 0x04000A5B RID: 2651
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040009EC RID: 2540
+		// Token: 0x04000A5C RID: 2652
 		private static int HandleId;
 	}
 }

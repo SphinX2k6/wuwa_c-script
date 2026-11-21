@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200708E RID: 28814
+	// Token: 0x0200785A RID: 30810
 	public enum ISetTeleControlConfig_Union : byte
 	{
-		// Token: 0x04011AF5 RID: 72437
+		// Token: 0x04012AE3 RID: 76515
 		NONE,
-		// Token: 0x04011AF6 RID: 72438
+		// Token: 0x04012AE4 RID: 76516
 		ISetTeleControlConfig,
-		// Token: 0x04011AF7 RID: 72439
+		// Token: 0x04012AE5 RID: 76517
 		IOpenGravity,
-		// Token: 0x04011AF8 RID: 72440
+		// Token: 0x04012AE6 RID: 76518
 		ISetResetPosition
 	}
 }

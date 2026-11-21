@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200605A RID: 24666
+	// Token: 0x02004FD8 RID: 20440
 	public class SpringManorAlbumTabItem : UiPanelBase
 	{
-		// Token: 0x0603E689 RID: 255625 RVA: 0x00F132B0 File Offset: 0x00F114B0
+		// Token: 0x0603334D RID: 209741 RVA: 0x00E5A074 File Offset: 0x00E58274
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E68A RID: 255626 RVA: 0x00F13320 File Offset: 0x00F11520
+		// Token: 0x0603334E RID: 209742 RVA: 0x00E5A0E4 File Offset: 0x00E582E4
 		[NullableContext(1)]
 		public void SetTitle(string title)
 		{
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			text.ShowTextNew(title);
 		}
 
-		// Token: 0x0603E68B RID: 255627 RVA: 0x00F13334 File Offset: 0x00F11534
+		// Token: 0x0603334F RID: 209743 RVA: 0x00E5A0F8 File Offset: 0x00E582F8
 		public void InitProgress(int curNum, int maxNum)
 		{
 			this.MaxNum = maxNum;
 			this.SetCurProgress(curNum);
 		}
 
-		// Token: 0x0603E68C RID: 255628 RVA: 0x00F13344 File Offset: 0x00F11544
+		// Token: 0x06033350 RID: 209744 RVA: 0x00E5A108 File Offset: 0x00E58308
 		public void SetCurProgress(int curNum)
 		{
 			UUIText text = base.GetText(2);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603E68D RID: 255629 RVA: 0x00F13394 File Offset: 0x00F11594
+		// Token: 0x06033351 RID: 209745 RVA: 0x00E5A158 File Offset: 0x00E58358
 		public void SetSelected(bool isSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			extendToggle.SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603E68E RID: 255630 RVA: 0x00F133B2 File Offset: 0x00F115B2
+		// Token: 0x06033352 RID: 209746 RVA: 0x00E5A176 File Offset: 0x00E58376
 		public void SetRedDotActive(bool hasRedDot)
 		{
 			UUIItem item = base.GetItem(3);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(hasRedDot);
 		}
 
-		// Token: 0x040209C5 RID: 133573
+		// Token: 0x0401B2F2 RID: 111346
 		private int MaxNum;
 	}
 }

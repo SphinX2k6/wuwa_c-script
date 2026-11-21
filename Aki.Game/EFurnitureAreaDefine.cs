@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000F8F RID: 3983
+// Token: 0x02000444 RID: 1092
 public enum EFurnitureAreaDefine
 {
-	// Token: 0x04002E5E RID: 11870
+	// Token: 0x04002EF7 RID: 12023
 	CardArea = 101,
-	// Token: 0x04002E5F RID: 11871
+	// Token: 0x04002EF8 RID: 12024
 	DrinkArea,
-	// Token: 0x04002E60 RID: 11872
+	// Token: 0x04002EF9 RID: 12025
 	MotorcycleArea,
-	// Token: 0x04002E61 RID: 11873
+	// Token: 0x04002EFA RID: 12026
 	PoolArea,
-	// Token: 0x04002E62 RID: 11874
+	// Token: 0x04002EFB RID: 12027
 	WeaponArea,
-	// Token: 0x04002E63 RID: 11875
+	// Token: 0x04002EFC RID: 12028
 	BackyardArea,
-	// Token: 0x04002E64 RID: 11876
+	// Token: 0x04002EFD RID: 12029
 	StudyArea
 }

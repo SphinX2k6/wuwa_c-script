@@ -2,42 +2,46 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BDA RID: 15322
+	// Token: 0x02003FE6 RID: 16358
 	public enum ETipsActorType : byte
 	{
-		// Token: 0x0400B17C RID: 45436
+		// Token: 0x0400BB05 RID: 47877
 		Sphere,
-		// Token: 0x0400B17D RID: 45437
+		// Token: 0x0400BB06 RID: 47878
 		Box,
-		// Token: 0x0400B17E RID: 45438
+		// Token: 0x0400BB07 RID: 47879
 		Cylinder,
-		// Token: 0x0400B17F RID: 45439
+		// Token: 0x0400BB08 RID: 47880
 		CylinderSector,
-		// Token: 0x0400B180 RID: 45440
+		// Token: 0x0400BB09 RID: 47881
 		HollowCylinder,
-		// Token: 0x0400B181 RID: 45441
+		// Token: 0x0400BB0A RID: 47882
 		HollowSphere,
-		// Token: 0x0400B182 RID: 45442
+		// Token: 0x0400BB0B RID: 47883
 		Cone,
-		// Token: 0x0400B183 RID: 45443
+		// Token: 0x0400BB0C RID: 47884
 		Sector,
-		// Token: 0x0400B184 RID: 45444
+		// Token: 0x0400BB0D RID: 47885
 		TargetPoint,
-		// Token: 0x0400B185 RID: 45445
+		// Token: 0x0400BB0E RID: 47886
 		Laser,
-		// Token: 0x0400B186 RID: 45446
+		// Token: 0x0400BB0F RID: 47887
 		Spline,
-		// Token: 0x0400B187 RID: 45447
+		// Token: 0x0400BB10 RID: 47888
 		SplineEffect,
-		// Token: 0x0400B188 RID: 45448
+		// Token: 0x0400BB11 RID: 47889
 		Track,
-		// Token: 0x0400B189 RID: 45449
+		// Token: 0x0400BB12 RID: 47890
 		BottomAlignSemiBox,
-		// Token: 0x0400B18A RID: 45450
+		// Token: 0x0400BB13 RID: 47891
 		GraphPoint,
-		// Token: 0x0400B18B RID: 45451
+		// Token: 0x0400BB14 RID: 47892
 		GraphLine,
-		// Token: 0x0400B18C RID: 45452
-		Spotlight
+		// Token: 0x0400BB15 RID: 47893
+		Spotlight,
+		// Token: 0x0400BB16 RID: 47894
+		NoiseBubble,
+		// Token: 0x0400BB17 RID: 47895
+		TurntableConnector
 	}
 }

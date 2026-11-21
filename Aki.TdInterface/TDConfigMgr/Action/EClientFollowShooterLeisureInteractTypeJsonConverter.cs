@@ -4,21 +4,21 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022E4 RID: 8932
+	// Token: 0x02002555 RID: 9557
 	public class EClientFollowShooterLeisureInteractTypeJsonConverter : JsonConverter<EClientFollowShooterLeisureInteractType>
 	{
-		// Token: 0x0600C382 RID: 50050 RVA: 0x001C9038 File Offset: 0x001C7238
+		// Token: 0x0600CF5A RID: 53082 RVA: 0x001E0F60 File Offset: 0x001DF160
 		public override EClientFollowShooterLeisureInteractType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
 			if (string.IsNullOrEmpty(@string))
 			{
-				return EClientFollowShooterLeisureInteractType.ResetToPlayer;
+				return EClientFollowShooterLeisureInteractType.PlayAnimation;
 			}
 			return EClientFollowShooterLeisureInteractTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C383 RID: 50051 RVA: 0x001C905C File Offset: 0x001C725C
+		// Token: 0x0600CF5B RID: 53083 RVA: 0x001E0F84 File Offset: 0x001DF184
 		public override void Write(Utf8JsonWriter writer, EClientFollowShooterLeisureInteractType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

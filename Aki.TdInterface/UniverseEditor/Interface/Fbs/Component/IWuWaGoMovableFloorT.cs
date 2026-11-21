@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BC8 RID: 23496
+	// Token: 0x020061DE RID: 25054
 	public class IWuWaGoMovableFloorT
 	{
-		// Token: 0x1700B188 RID: 45448
-		// (get) Token: 0x06028403 RID: 164867 RVA: 0x00587CBB File Offset: 0x00585EBB
-		// (set) Token: 0x06028404 RID: 164868 RVA: 0x00587CC3 File Offset: 0x00585EC3
+		// Token: 0x1700BAD0 RID: 47824
+		// (get) Token: 0x0602A9C7 RID: 174535 RVA: 0x005CF74B File Offset: 0x005CD94B
+		// (set) Token: 0x0602A9C8 RID: 174536 RVA: 0x005CF753 File Offset: 0x005CD953
 		public EWuWaGoEntityType Type { get; set; }
 
-		// Token: 0x1700B189 RID: 45449
-		// (get) Token: 0x06028405 RID: 164869 RVA: 0x00587CCC File Offset: 0x00585ECC
-		// (set) Token: 0x06028406 RID: 164870 RVA: 0x00587CD4 File Offset: 0x00585ED4
+		// Token: 0x1700BAD1 RID: 47825
+		// (get) Token: 0x0602A9C9 RID: 174537 RVA: 0x005CF75C File Offset: 0x005CD95C
+		// (set) Token: 0x0602A9CA RID: 174538 RVA: 0x005CF764 File Offset: 0x005CD964
 		public IWuWaGoGridLinkDataT LinkData { get; set; }
 
-		// Token: 0x1700B18A RID: 45450
-		// (get) Token: 0x06028407 RID: 164871 RVA: 0x00587CDD File Offset: 0x00585EDD
-		// (set) Token: 0x06028408 RID: 164872 RVA: 0x00587CE5 File Offset: 0x00585EE5
+		// Token: 0x1700BAD2 RID: 47826
+		// (get) Token: 0x0602A9CB RID: 174539 RVA: 0x005CF76D File Offset: 0x005CD96D
+		// (set) Token: 0x0602A9CC RID: 174540 RVA: 0x005CF775 File Offset: 0x005CD975
 		public IWuWaGoGridLinkDataT GearLinkData { get; set; }
 
-		// Token: 0x1700B18B RID: 45451
-		// (get) Token: 0x06028409 RID: 164873 RVA: 0x00587CEE File Offset: 0x00585EEE
-		// (set) Token: 0x0602840A RID: 164874 RVA: 0x00587CF6 File Offset: 0x00585EF6
+		// Token: 0x1700BAD3 RID: 47827
+		// (get) Token: 0x0602A9CD RID: 174541 RVA: 0x005CF77E File Offset: 0x005CD97E
+		// (set) Token: 0x0602A9CE RID: 174542 RVA: 0x005CF786 File Offset: 0x005CD986
 		public List<IWuWaGoMovableGridStatePosT> MoveData { get; set; }
 
-		// Token: 0x0602840B RID: 164875 RVA: 0x00587CFF File Offset: 0x00585EFF
+		// Token: 0x0602A9CF RID: 174543 RVA: 0x005CF78F File Offset: 0x005CD98F
 		public IWuWaGoMovableFloorT()
 		{
 			this.Type = EWuWaGoEntityType.LevelCenter;

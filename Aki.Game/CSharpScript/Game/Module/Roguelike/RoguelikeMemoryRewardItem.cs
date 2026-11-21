@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -12,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E13 RID: 19987
+	// Token: 0x02003DDC RID: 15836
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +20,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeMemoryRewardItem : GridProxyAbstract<RoguelikeMemoryRewardItemData>
 	{
-		// Token: 0x060338F7 RID: 211191 RVA: 0x00C0D5A4 File Offset: 0x00C0B7A4
+		// Token: 0x06028762 RID: 165730 RVA: 0x00B56AB0 File Offset: 0x00B54CB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -48,7 +47,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338F8 RID: 211192 RVA: 0x00C0D6B0 File Offset: 0x00C0B8B0
+		// Token: 0x06028763 RID: 165731 RVA: 0x00B56BBC File Offset: 0x00B54DBC
 		private void OnBtnRewardClick()
 		{
 			int pointItem = RoguelikeModel.Instance.GetParamConfigBySeasonId(null).Value.PointItem;
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x060338F9 RID: 211193 RVA: 0x00C0D79A File Offset: 0x00C0B99A
+		// Token: 0x06028764 RID: 165732 RVA: 0x00B56CA6 File Offset: 0x00B54EA6
 		protected override void OnStart()
 		{
 			if (this.GridItem == null)
@@ -76,7 +75,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.GridItem.SetActive(false);
 		}
 
-		// Token: 0x060338FA RID: 211194 RVA: 0x00C0D7D4 File Offset: 0x00C0B9D4
+		// Token: 0x06028765 RID: 165733 RVA: 0x00B56CE0 File Offset: 0x00B54EE0
 		[NullableContext(1)]
 		public override void Refresh(RoguelikeMemoryRewardItemData data, bool isSelected, int gridIndex)
 		{
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetButton(4).SetActive(false, false);
 			IL_8C:
 			this.GridItem.SetActive(true);
-			List<KeyValuePair<int, int>> list = RewardConfig.Instance.GetDropPackagePreview(data.Config.Value.DropId).ToList<KeyValuePair<int, int>>();
+			List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>(RewardConfig.Instance.GetDropPackagePreview(data.Config.Value.DropId));
 			TItem data2 = new TItem(new InventoryDefine.GetItemData(list[0].Key, 0), list[0].Value);
 			this.GridItem.Refresh(data2);
 			base.GetText(1).SetText(data.Config.Value.Index.ToString(), true);
@@ -104,10 +103,10 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetSprite(3).SetUIActive(gridIndex != 0);
 		}
 
-		// Token: 0x0401B592 RID: 112018
+		// Token: 0x04015F65 RID: 89957
 		public CommonItemSmallItemGrid GridItem;
 
-		// Token: 0x0401B593 RID: 112019
+		// Token: 0x04015F66 RID: 89958
 		public RoguelikeMemoryRewardItemData Data;
 	}
 }

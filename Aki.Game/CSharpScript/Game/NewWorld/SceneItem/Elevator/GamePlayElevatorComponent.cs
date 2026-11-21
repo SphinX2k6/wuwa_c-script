@@ -22,17 +22,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007202 RID: 29186
+	// Token: 0x020062B7 RID: 25271
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GamePlayElevatorComponent : EntityComponent
 	{
-		// Token: 0x17009E1A RID: 40474
-		// (get) Token: 0x0604771D RID: 292637 RVA: 0x01231AA6 File Offset: 0x0122FCA6
-		// (set) Token: 0x0604771E RID: 292638 RVA: 0x01231AAE File Offset: 0x0122FCAE
+		// Token: 0x17007377 RID: 29559
+		// (get) Token: 0x0603D025 RID: 249893 RVA: 0x0118B66A File Offset: 0x0118986A
+		// (set) Token: 0x0603D026 RID: 249894 RVA: 0x0118B672 File Offset: 0x01189872
 		public int CurLiftFloor { get; private set; } = 1;
 
-		// Token: 0x0604771F RID: 292639 RVA: 0x01231AB8 File Offset: 0x0122FCB8
+		// Token: 0x0603D027 RID: 249895 RVA: 0x0118B67C File Offset: 0x0118987C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -95,14 +95,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047720 RID: 292640 RVA: 0x01231E06 File Offset: 0x01230006
+		// Token: 0x0603D028 RID: 249896 RVA: 0x0118B9CA File Offset: 0x01189BCA
 		protected override bool OnInit()
 		{
 			this.MoveStrategy.OnInit();
 			return true;
 		}
 
-		// Token: 0x06047721 RID: 292641 RVA: 0x01231E14 File Offset: 0x01230014
+		// Token: 0x0603D029 RID: 249897 RVA: 0x0118B9D8 File Offset: 0x01189BD8
 		protected override bool OnStart()
 		{
 			this.RangeComp = base.Entity.GetComponent<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047722 RID: 292642 RVA: 0x01231EB4 File Offset: 0x012300B4
+		// Token: 0x0603D02A RID: 249898 RVA: 0x0118BA78 File Offset: 0x01189C78
 		protected override bool OnClear()
 		{
 			if (this.RangeComp != null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047723 RID: 292643 RVA: 0x01231F54 File Offset: 0x01230154
+		// Token: 0x0603D02B RID: 249899 RVA: 0x0118BB18 File Offset: 0x01189D18
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			if (this.EnableCustomTimeScale)
@@ -148,13 +148,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047724 RID: 292644 RVA: 0x01231F7F File Offset: 0x0123017F
+		// Token: 0x0603D02C RID: 249900 RVA: 0x0118BB43 File Offset: 0x01189D43
 		protected override void OnForceTick(float deltaSeconds)
 		{
 			this.ForceTickInternal(deltaSeconds);
 		}
 
-		// Token: 0x06047725 RID: 292645 RVA: 0x01231F88 File Offset: 0x01230188
+		// Token: 0x0603D02D RID: 249901 RVA: 0x0118BB4C File Offset: 0x01189D4C
 		private void ForceTickInternal(float deltaSeconds)
 		{
 			float deltaSeconds2 = deltaSeconds * this.CustomTimeScale;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.ForceTickAfterElevatorTick(deltaSeconds2);
 		}
 
-		// Token: 0x06047726 RID: 292646 RVA: 0x01231FAC File Offset: 0x012301AC
+		// Token: 0x0603D02E RID: 249902 RVA: 0x0118BB70 File Offset: 0x01189D70
 		private void ForceTickElevatorTick(float deltaSeconds)
 		{
 			if (this.GetLock())
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x06047727 RID: 292647 RVA: 0x0123201C File Offset: 0x0123021C
+		// Token: 0x0603D02F RID: 249903 RVA: 0x0118BBE0 File Offset: 0x01189DE0
 		private unsafe void EnterState(EGamePlayElevatorState newState)
 		{
 			global::Log instance = global::Log.Instance;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.OnStateChange(state, newState);
 		}
 
-		// Token: 0x06047728 RID: 292648 RVA: 0x0123212C File Offset: 0x0123032C
+		// Token: 0x0603D030 RID: 249904 RVA: 0x0118BCF0 File Offset: 0x01189EF0
 		private void ExecuteTeleport()
 		{
 			this.EnterState(EGamePlayElevatorState.Teleporting);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.EnterState(EGamePlayElevatorState.MovingPhaseTwo);
 		}
 
-		// Token: 0x06047729 RID: 292649 RVA: 0x012321C4 File Offset: 0x012303C4
+		// Token: 0x0603D031 RID: 249905 RVA: 0x0118BD88 File Offset: 0x01189F88
 		private void EnterMovePhase()
 		{
 			this.SetIsMoving(true);
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.MoveStrategy.OnEnterMovePhase();
 		}
 
-		// Token: 0x0604772A RID: 292650 RVA: 0x012321DE File Offset: 0x012303DE
+		// Token: 0x0603D032 RID: 249906 RVA: 0x0118BDA2 File Offset: 0x01189FA2
 		private void SetIsMoving(bool value)
 		{
 			if (this.PropComp != null)
@@ -267,13 +267,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604772B RID: 292651 RVA: 0x012321F4 File Offset: 0x012303F4
+		// Token: 0x0603D033 RID: 249907 RVA: 0x0118BDB8 File Offset: 0x01189FB8
 		private void UpdateIsDescending()
 		{
 			this.IsDescending = (this.TargetFloor > 0 && this.TargetFloor < this.CurLiftFloor);
 		}
 
-		// Token: 0x0604772C RID: 292652 RVA: 0x01232218 File Offset: 0x01230418
+		// Token: 0x0603D034 RID: 249908 RVA: 0x0118BDDC File Offset: 0x01189FDC
 		private void OnStateChange(EGamePlayElevatorState oldState, EGamePlayElevatorState newState)
 		{
 			if (oldState == newState)
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604772D RID: 292653 RVA: 0x0123227F File Offset: 0x0123047F
+		// Token: 0x0603D035 RID: 249909 RVA: 0x0118BE43 File Offset: 0x0118A043
 		private long GetActiveElevatorBuffId()
 		{
 			if (this.CustomLiftBuffType.GetValueOrDefault() == ELiftBuffType.AllowJumpDash)
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return 640003011L;
 		}
 
-		// Token: 0x0604772E RID: 292654 RVA: 0x0123229C File Offset: 0x0123049C
+		// Token: 0x0603D036 RID: 249910 RVA: 0x0118BE60 File Offset: 0x0118A060
 		[NullableContext(2)]
 		public static bool IsCharacterOnMovingElevator(Entity entity)
 		{
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return ((component != null) ? component.GetBuffById(640003011L) : null) != null || ((component != null) ? component.GetBuffById(640003037L) : null) != null;
 		}
 
-		// Token: 0x0604772F RID: 292655 RVA: 0x012322F0 File Offset: 0x012304F0
+		// Token: 0x0603D037 RID: 249911 RVA: 0x0118BEB4 File Offset: 0x0118A0B4
 		private void OnMovingStateChange(bool isMoving)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -404,7 +404,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047730 RID: 292656 RVA: 0x01232468 File Offset: 0x01230668
+		// Token: 0x0603D038 RID: 249912 RVA: 0x0118C02C File Offset: 0x0118A22C
 		private void DisableAFME()
 		{
 			if (GameSettingsDeviceRender.Instance.IsSupportedAFME)
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047731 RID: 292657 RVA: 0x01232486 File Offset: 0x01230686
+		// Token: 0x0603D039 RID: 249913 RVA: 0x0118C04A File Offset: 0x0118A24A
 		private void EnableAFME()
 		{
 			if (GameSettingsDeviceRender.Instance.IsSupportedAFME)
@@ -422,19 +422,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047732 RID: 292658 RVA: 0x012324A4 File Offset: 0x012306A4
+		// Token: 0x0603D03A RID: 249914 RVA: 0x0118C068 File Offset: 0x0118A268
 		private void DisableMotionBlur()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlur.Amount 0", null);
 		}
 
-		// Token: 0x06047733 RID: 292659 RVA: 0x012324B6 File Offset: 0x012306B6
+		// Token: 0x0603D03B RID: 249915 RVA: 0x0118C07A File Offset: 0x0118A27A
 		private void EnableMotionBlur()
 		{
 			GameSettingsManager.Instance.ReApply(EFunction.MOTIONBLUR, EGameSettingsApplyReason.AnyTime, true);
 		}
 
-		// Token: 0x06047734 RID: 292660 RVA: 0x012324C8 File Offset: 0x012306C8
+		// Token: 0x0603D03C RID: 249916 RVA: 0x0118C08C File Offset: 0x0118A28C
 		private void SyncElevatorStateToServer(int floor, bool isMoving)
 		{
 			if (this.GetLock() || this.IsInStateChange.GetValueOrDefault())
@@ -450,7 +450,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			LevelGamePlayController.Instance.ElevatorStateChangeRequest(base.Entity.Id, floor, state, new Action(this.HandleStateChangeResponse));
 		}
 
-		// Token: 0x06047735 RID: 292661 RVA: 0x01232534 File Offset: 0x01230734
+		// Token: 0x0603D03D RID: 249917 RVA: 0x0118C0F8 File Offset: 0x0118A2F8
 		private void OnMoveArrived()
 		{
 			ElevatorNormalMoveStrategy elevatorNormalMoveStrategy = this.MoveStrategy as ElevatorNormalMoveStrategy;
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.MoveToTargetFloor(num, "AutoRun");
 		}
 
-		// Token: 0x06047736 RID: 292662 RVA: 0x0123266C File Offset: 0x0123086C
+		// Token: 0x0603D03E RID: 249918 RVA: 0x0118C230 File Offset: 0x0118A430
 		private unsafe bool CheckTargetFloorValid(int targetFloor)
 		{
 			if (this.GetLock())
@@ -581,13 +581,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047737 RID: 292663 RVA: 0x01232A1E File Offset: 0x01230C1E
+		// Token: 0x0603D03F RID: 249919 RVA: 0x0118C5E2 File Offset: 0x0118A7E2
 		public bool IsMovingOrTeleporting()
 		{
 			return this.State == EGamePlayElevatorState.Moving || this.State == EGamePlayElevatorState.MovingPhaseTwo || this.State == EGamePlayElevatorState.Teleporting;
 		}
 
-		// Token: 0x06047738 RID: 292664 RVA: 0x01232A40 File Offset: 0x01230C40
+		// Token: 0x0603D040 RID: 249920 RVA: 0x0118C604 File Offset: 0x0118A804
 		[NullableContext(2)]
 		public ALevelSequenceActor GetPlayingSequenceActor()
 		{
@@ -599,7 +599,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return null;
 		}
 
-		// Token: 0x06047739 RID: 292665 RVA: 0x01232A64 File Offset: 0x01230C64
+		// Token: 0x0603D041 RID: 249921 RVA: 0x0118C628 File Offset: 0x0118A828
 		private void TryStartAutoMove()
 		{
 			if (this.IsAutoMove)
@@ -609,7 +609,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604773A RID: 292666 RVA: 0x01232A8C File Offset: 0x01230C8C
+		// Token: 0x0603D042 RID: 249922 RVA: 0x0118C650 File Offset: 0x0118A850
 		public unsafe void MoveToTargetFloor(int targetFloor, string reason)
 		{
 			global::Log instance = global::Log.Instance;
@@ -647,7 +647,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.StartPreparedMove(targetFloor);
 		}
 
-		// Token: 0x0604773B RID: 292667 RVA: 0x01232BD0 File Offset: 0x01230DD0
+		// Token: 0x0603D043 RID: 249923 RVA: 0x0118C794 File Offset: 0x0118A994
 		public unsafe void MoveToTargetFloorByTeleport(int targetFloor, float startOffset, float endOffset, bool needEmitEvent = false, float startEventOffset = 0f)
 		{
 			global::Log instance = global::Log.Instance;
@@ -666,7 +666,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.StartPreparedMove(targetFloor);
 		}
 
-		// Token: 0x0604773C RID: 292668 RVA: 0x01232C68 File Offset: 0x01230E68
+		// Token: 0x0603D044 RID: 249924 RVA: 0x0118C82C File Offset: 0x0118AA2C
 		public unsafe void MoveToTargetFloorByCurve(int targetFloor, string curveName, float duration)
 		{
 			global::Log instance = global::Log.Instance;
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.StartPreparedMove(targetFloor);
 		}
 
-		// Token: 0x0604773D RID: 292669 RVA: 0x01232CFA File Offset: 0x01230EFA
+		// Token: 0x0603D045 RID: 249925 RVA: 0x0118C8BE File Offset: 0x0118AABE
 		private bool PrepareMoveToFloor(int targetFloor)
 		{
 			if (!this.CheckTargetFloorValid(targetFloor))
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x0604773E RID: 292670 RVA: 0x01232D1C File Offset: 0x01230F1C
+		// Token: 0x0603D046 RID: 249926 RVA: 0x0118C8E0 File Offset: 0x0118AAE0
 		private void StartPreparedMove(int targetFloor)
 		{
 			this.MoveStrategy.PrepareMoveToFloor(delegate
@@ -706,7 +706,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			});
 		}
 
-		// Token: 0x0604773F RID: 292671 RVA: 0x01232D54 File Offset: 0x01230F54
+		// Token: 0x0603D047 RID: 249927 RVA: 0x0118C918 File Offset: 0x0118AB18
 		private void StartMoveWithDelay(int targetFloor)
 		{
 			GamePlayElevatorComponent.<>c__DisplayClass64_0 CS$<>8__locals1 = new GamePlayElevatorComponent.<>c__DisplayClass64_0();
@@ -725,7 +725,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			CS$<>8__locals1.<StartMoveWithDelay>g__DoEnter|0();
 		}
 
-		// Token: 0x06047740 RID: 292672 RVA: 0x01232DE5 File Offset: 0x01230FE5
+		// Token: 0x0603D048 RID: 249928 RVA: 0x0118C9A9 File Offset: 0x0118ABA9
 		private void ClearStartMoveDelayTimer()
 		{
 			if (this.DelayMoveTimer != null)
@@ -735,7 +735,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047741 RID: 292673 RVA: 0x01232E08 File Offset: 0x01231008
+		// Token: 0x0603D049 RID: 249929 RVA: 0x0118C9CC File Offset: 0x0118ABCC
 		private void PostMoveToFloor(int targetFloor)
 		{
 			if (this.IsAutoMove)
@@ -760,7 +760,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047742 RID: 292674 RVA: 0x01232F00 File Offset: 0x01231100
+		// Token: 0x0603D04A RID: 249930 RVA: 0x0118CAC4 File Offset: 0x0118ACC4
 		private void TickHovering(float deltaSeconds)
 		{
 			this.HoveringTime += deltaSeconds * 0.001f;
@@ -777,32 +777,42 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047743 RID: 292675 RVA: 0x01232F5F File Offset: 0x0123115F
+		// Token: 0x0603D04B RID: 249931 RVA: 0x0118CB23 File Offset: 0x0118AD23
 		private bool GetLock()
 		{
 			return base.Entity.GetComponent<LevelTagComponent>().HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.属性.锁定"]);
 		}
 
-		// Token: 0x06047744 RID: 292676 RVA: 0x01232F80 File Offset: 0x01231180
+		// Token: 0x0603D04C RID: 249932 RVA: 0x0118CB44 File Offset: 0x0118AD44
 		private void HandleStateChangeResponse()
 		{
 			this.IsInStateChange = new bool?(false);
 		}
 
-		// Token: 0x06047745 RID: 292677 RVA: 0x01232F90 File Offset: 0x01231190
+		// Token: 0x0603D04D RID: 249933 RVA: 0x0118CB54 File Offset: 0x0118AD54
 		private bool HasEntityBelow()
 		{
 			if (this.RangeComp == null)
 			{
 				return false;
 			}
-			IReadOnlyDictionary<int, EntityHandle> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			IEnumerable<KeyValuePair<int, EntityHandle>> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
+			Dictionary<int, EntityHandle> dictionary;
 			if (entitiesInRangeLocal == null)
+			{
+				dictionary = null;
+			}
+			else
+			{
+				dictionary = NoLinq.ToDictionary<KeyValuePair<int, EntityHandle>, int, EntityHandle>(entitiesInRangeLocal, (KeyValuePair<int, EntityHandle> pair) => pair.Key, (KeyValuePair<int, EntityHandle> pair) => pair.Value);
+			}
+			Dictionary<int, EntityHandle> dictionary2 = dictionary;
+			if (dictionary2 == null)
 			{
 				return false;
 			}
 			bool result = false;
-			foreach (EntityHandle entityHandle in entitiesInRangeLocal.Values)
+			foreach (EntityHandle entityHandle in dictionary2.Values)
 			{
 				if (entityHandle != null && entityHandle.Valid && entityHandle.Entity != base.Entity)
 				{
@@ -850,7 +860,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return result;
 		}
 
-		// Token: 0x06047746 RID: 292678 RVA: 0x01233148 File Offset: 0x01231348
+		// Token: 0x0603D04E RID: 249934 RVA: 0x0118CD68 File Offset: 0x0118AF68
 		private void SetEntitySafePos(Entity entity)
 		{
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -918,28 +928,23 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			component5.SetActorLocation(vector2.ToUeVector(false), base.GetType().Name, false);
 		}
 
-		// Token: 0x06047747 RID: 292679 RVA: 0x01233388 File Offset: 0x01231588
+		// Token: 0x0603D04F RID: 249935 RVA: 0x0118CFA8 File Offset: 0x0118B1A8
 		private bool HasPlayerInElevator()
 		{
 			if (this.RangeComp == null)
 			{
 				return false;
 			}
-			IReadOnlyDictionary<int, EntityHandle> entitiesInRangeLocal = this.RangeComp.GetEntitiesInRangeLocal();
-			if (entitiesInRangeLocal == null)
-			{
-				return false;
-			}
-			int key = -1;
+			int entityId = -1;
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
 			if (baseCharacter != null)
 			{
-				key = baseCharacter.CharacterActorComponent.Entity.Id;
+				entityId = baseCharacter.CharacterActorComponent.Entity.Id;
 			}
-			return entitiesInRangeLocal.ContainsKey(key);
+			return this.RangeComp.IsEntityInRange(entityId);
 		}
 
-		// Token: 0x06047748 RID: 292680 RVA: 0x012333D4 File Offset: 0x012315D4
+		// Token: 0x0603D050 RID: 249936 RVA: 0x0118CFE8 File Offset: 0x0118B1E8
 		private void RecordManipulatableItem(bool isEnter, EntityHandle handle)
 		{
 			WorldEntity entity = handle.Entity;
@@ -966,7 +971,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047749 RID: 292681 RVA: 0x01233458 File Offset: 0x01231658
+		// Token: 0x0603D051 RID: 249937 RVA: 0x0118D06C File Offset: 0x0118B26C
 		private void SetPlayerOnElevatorBuff(bool isEnter)
 		{
 			if (!this.IsMovingOrTeleporting())
@@ -1006,13 +1011,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604774A RID: 292682 RVA: 0x01233541 File Offset: 0x01231741
+		// Token: 0x0603D052 RID: 249938 RVA: 0x0118D155 File Offset: 0x0118B355
 		private float GetRunDuration()
 		{
 			return this.MoveStrategy.GetMoveDuration();
 		}
 
-		// Token: 0x0604774B RID: 292683 RVA: 0x01233550 File Offset: 0x01231750
+		// Token: 0x0603D053 RID: 249939 RVA: 0x0118D164 File Offset: 0x0118B364
 		private unsafe int GetNextTargetFloor()
 		{
 			int floorCount = this.MoveStrategy.GetFloorCount();
@@ -1064,7 +1069,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return num2 + 1;
 		}
 
-		// Token: 0x0604774C RID: 292684 RVA: 0x0123366C File Offset: 0x0123186C
+		// Token: 0x0603D054 RID: 249940 RVA: 0x0118D280 File Offset: 0x0118B480
 		[NullableContext(2)]
 		private void OnManipulatableSceneItemHit(AActor selfActor, AActor otherActor, FVector normalImpulse, [Nullable(1)] FHitResult hit)
 		{
@@ -1087,7 +1092,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604774D RID: 292685 RVA: 0x012336CC File Offset: 0x012318CC
+		// Token: 0x0603D055 RID: 249941 RVA: 0x0118D2E0 File Offset: 0x0118B4E0
 		protected void OnSceneInteractionLoadCompleted()
 		{
 			SceneItemActorComponent component = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -1100,7 +1105,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x0604774E RID: 292686 RVA: 0x01233744 File Offset: 0x01231944
+		// Token: 0x0603D056 RID: 249942 RVA: 0x0118D358 File Offset: 0x0118B558
 		private void AttachToElevator(AActor actor)
 		{
 			EntityHandle entityByActor = ActorUtils.GetEntityByActor(actor, true);
@@ -1118,7 +1123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			AttachToActorController.Instance.AttachToActor(actor, component2.Owner, EDetachType.DestroyExternal, "GamePlayElevatorComponent.AttachToElevator", null, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, false, true, false, false, false);
 		}
 
-		// Token: 0x0604774F RID: 292687 RVA: 0x012337B0 File Offset: 0x012319B0
+		// Token: 0x0603D057 RID: 249943 RVA: 0x0118D3C4 File Offset: 0x0118B5C4
 		private void DetachFromElevator(AActor actor)
 		{
 			AttachToActorController.Instance.DetachActor(actor, false, "GamePlayElevatorComponent.DetachFromElevator", EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld);
@@ -1135,7 +1140,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			component.TryEnableTick(true);
 		}
 
-		// Token: 0x06047750 RID: 292688 RVA: 0x012337F8 File Offset: 0x012319F8
+		// Token: 0x0603D058 RID: 249944 RVA: 0x0118D40C File Offset: 0x0118B60C
 		public void RegisterAfterElevatorTickHandler(object key, Action<float> tickHandler)
 		{
 			HashSet<Action<float>> hashSet;
@@ -1147,13 +1152,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			hashSet.Add(tickHandler);
 		}
 
-		// Token: 0x06047751 RID: 292689 RVA: 0x01233830 File Offset: 0x01231A30
+		// Token: 0x0603D059 RID: 249945 RVA: 0x0118D444 File Offset: 0x0118B644
 		public void UnRegisterAfterElevatorTickHandlers(object key)
 		{
 			this.AfterElevatorTickHandlers.Remove(key);
 		}
 
-		// Token: 0x06047752 RID: 292690 RVA: 0x01233840 File Offset: 0x01231A40
+		// Token: 0x0603D05A RID: 249946 RVA: 0x0118D454 File Offset: 0x0118B654
 		private void ForceTickAfterElevatorTick(float deltaSeconds)
 		{
 			this.TempAfterElevatorTickHandlers.Clear();
@@ -1171,7 +1176,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			this.TempAfterElevatorTickHandlers.Clear();
 		}
 
-		// Token: 0x06047753 RID: 292691 RVA: 0x012338FC File Offset: 0x01231AFC
+		// Token: 0x0603D05B RID: 249947 RVA: 0x0118D510 File Offset: 0x0118B710
 		protected override void OnActivate()
 		{
 			if (!Info.Instance.EnableForceTick && base.Active)
@@ -1180,7 +1185,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047754 RID: 292692 RVA: 0x01233929 File Offset: 0x01231B29
+		// Token: 0x0603D05C RID: 249948 RVA: 0x0118D53D File Offset: 0x0118B73D
 		protected override void OnEnable()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -1193,7 +1198,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047755 RID: 292693 RVA: 0x01233962 File Offset: 0x01231B62
+		// Token: 0x0603D05D RID: 249949 RVA: 0x0118D576 File Offset: 0x0118B776
 		protected override bool OnEnd()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -1203,7 +1208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			return true;
 		}
 
-		// Token: 0x06047756 RID: 292694 RVA: 0x0123397C File Offset: 0x01231B7C
+		// Token: 0x0603D05E RID: 249950 RVA: 0x0118D590 File Offset: 0x0118B790
 		protected override void OnDisable(string reason)
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -1212,7 +1217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 			}
 		}
 
-		// Token: 0x06047757 RID: 292695 RVA: 0x01233998 File Offset: 0x01231B98
+		// Token: 0x0603D05F RID: 249951 RVA: 0x0118D5AC File Offset: 0x0118B7AC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1220,239 +1225,239 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 				return false;
 			}
 			GamePlayElevatorComponent gamePlayElevatorComponent = (GamePlayElevatorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("AfterElevatorTickHandlers") && gamePlayElevatorComponent.AfterElevatorTickHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<object, HashSet<Action<float>>>>(this.AfterElevatorTickHandlers), "AfterElevatorTickHandlers"))
+			if (gamePlayElevatorComponent.AfterElevatorTickHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AfterElevatorTickHandlers), "AfterElevatorTickHandlers"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TempAfterElevatorTickHandlers") && gamePlayElevatorComponent.TempAfterElevatorTickHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<Action<float>>>(this.TempAfterElevatorTickHandlers), "TempAfterElevatorTickHandlers"))
+			if (gamePlayElevatorComponent.TempAfterElevatorTickHandlers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempAfterElevatorTickHandlers), "TempAfterElevatorTickHandlers"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (gamePlayElevatorComponent.ActorComp == null)
 			{
-				if (gamePlayElevatorComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorHitElevator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (gamePlayElevatorComponent.ActorHitElevator == null)
-				{
-					this.ActorHitElevator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.ActorHitElevator), "ActorHitElevator"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorOnElevator"))
+			if (gamePlayElevatorComponent.ActorHitElevator == null)
 			{
-				if (gamePlayElevatorComponent.ActorOnElevator == null)
-				{
-					this.ActorOnElevator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.ActorOnElevator), "ActorOnElevator"))
-				{
-					return false;
-				}
+				this.ActorHitElevator = null;
 			}
-			if (base.CanResetComponentProperty("AFMEKey"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorHitElevator), "ActorHitElevator"))
 			{
-				this.AFMEKey = gamePlayElevatorComponent.AFMEKey;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (gamePlayElevatorComponent.ActorOnElevator == null)
 			{
-				if (gamePlayElevatorComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.ActorOnElevator = null;
 			}
-			if (base.CanResetComponentProperty("CustomLiftBuffType"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorOnElevator), "ActorOnElevator"))
 			{
-				this.CustomLiftBuffType = gamePlayElevatorComponent.CustomLiftBuffType;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CustomTimeScale"))
+			this.AFMEKey = gamePlayElevatorComponent.AFMEKey;
+			if (gamePlayElevatorComponent.CreatureDataComp == null)
 			{
-				this.CustomTimeScale = gamePlayElevatorComponent.CustomTimeScale;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("EnableCustomTimeScale"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.EnableCustomTimeScale = gamePlayElevatorComponent.EnableCustomTimeScale;
+				return false;
 			}
-			if (base.CanResetComponentProperty("EntityConfigId"))
+			this.CustomLiftBuffType = gamePlayElevatorComponent.CustomLiftBuffType;
+			this.CustomTimeScale = gamePlayElevatorComponent.CustomTimeScale;
+			this.EnableCustomTimeScale = gamePlayElevatorComponent.EnableCustomTimeScale;
+			this.EntityConfigId = gamePlayElevatorComponent.EntityConfigId;
+			this.HoveringTime = gamePlayElevatorComponent.HoveringTime;
+			this.HoverTime = gamePlayElevatorComponent.HoverTime;
+			this.IsAnnular = gamePlayElevatorComponent.IsAnnular;
+			this.IsAutoMove = gamePlayElevatorComponent.IsAutoMove;
+			this.IsDescending = gamePlayElevatorComponent.IsDescending;
+			this.IsInStateChange = gamePlayElevatorComponent.IsInStateChange;
+			this.IsReverseAutoRunning = gamePlayElevatorComponent.IsReverseAutoRunning;
+			this.PendingAutoRunNextFloor = gamePlayElevatorComponent.PendingAutoRunNextFloor;
+			this.PendingServerTargetFloor = gamePlayElevatorComponent.PendingServerTargetFloor;
+			if (gamePlayElevatorComponent.PrimitiveComp == null)
 			{
-				this.EntityConfigId = gamePlayElevatorComponent.EntityConfigId;
+				this.PrimitiveComp = null;
 			}
-			if (base.CanResetComponentProperty("HoveringTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PrimitiveComp), "PrimitiveComp"))
 			{
-				this.HoveringTime = gamePlayElevatorComponent.HoveringTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HoverTime"))
+			if (gamePlayElevatorComponent.PropComp == null)
 			{
-				this.HoverTime = gamePlayElevatorComponent.HoverTime;
+				this.PropComp = null;
 			}
-			if (base.CanResetComponentProperty("IsAnnular"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropComp), "PropComp"))
 			{
-				this.IsAnnular = gamePlayElevatorComponent.IsAnnular;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsAutoMove"))
+			if (gamePlayElevatorComponent.RangeComp == null)
 			{
-				this.IsAutoMove = gamePlayElevatorComponent.IsAutoMove;
+				this.RangeComp = null;
 			}
-			if (base.CanResetComponentProperty("IsDescending"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
 			{
-				this.IsDescending = gamePlayElevatorComponent.IsDescending;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsInStateChange"))
+			if (gamePlayElevatorComponent.SafePosition == null)
 			{
-				this.IsInStateChange = gamePlayElevatorComponent.IsInStateChange;
+				this.SafePosition = null;
 			}
-			if (base.CanResetComponentProperty("IsReverseAutoRunning"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SafePosition), "SafePosition"))
 			{
-				this.IsReverseAutoRunning = gamePlayElevatorComponent.IsReverseAutoRunning;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingAutoRunNextFloor"))
+			this.State = gamePlayElevatorComponent.State;
+			this.TargetFloor = gamePlayElevatorComponent.TargetFloor;
+			if (gamePlayElevatorComponent.TempLocation == null)
 			{
-				this.PendingAutoRunNextFloor = gamePlayElevatorComponent.PendingAutoRunNextFloor;
+				this.TempLocation = null;
 			}
-			if (base.CanResetComponentProperty("PendingServerTargetFloor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempLocation), "TempLocation"))
 			{
-				this.PendingServerTargetFloor = gamePlayElevatorComponent.PendingServerTargetFloor;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PrimitiveComp"))
+			if (gamePlayElevatorComponent.TempVector == null)
 			{
-				if (gamePlayElevatorComponent.PrimitiveComp == null)
-				{
-					this.PrimitiveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.PrimitiveComp), "PrimitiveComp"))
-				{
-					return false;
-				}
+				this.TempVector = null;
 			}
-			if (base.CanResetComponentProperty("PropComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 			{
-				if (gamePlayElevatorComponent.PropComp == null)
-				{
-					this.PropComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropComp), "PropComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComp"))
+			this.CurLiftFloor = gamePlayElevatorComponent.CurLiftFloor;
+			if (gamePlayElevatorComponent.MoveCtx == null)
 			{
-				if (gamePlayElevatorComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
+				this.MoveCtx = null;
 			}
-			if (base.CanResetComponentProperty("SafePosition"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveCtx), "MoveCtx"))
 			{
-				if (gamePlayElevatorComponent.SafePosition == null)
-				{
-					this.SafePosition = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SafePosition), "SafePosition"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("State"))
+			if (gamePlayElevatorComponent.MoveStrategy == null)
 			{
-				this.State = gamePlayElevatorComponent.State;
+				this.MoveStrategy = null;
 			}
-			if (base.CanResetComponentProperty("TargetFloor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveStrategy), "MoveStrategy"))
 			{
-				this.TargetFloor = gamePlayElevatorComponent.TargetFloor;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TempLocation"))
+			if (gamePlayElevatorComponent.DelayMoveTimer == null)
 			{
-				if (gamePlayElevatorComponent.TempLocation == null)
-				{
-					this.TempLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempLocation), "TempLocation"))
-				{
-					return false;
-				}
+				this.DelayMoveTimer = null;
 			}
-			if (base.CanResetComponentProperty("TempVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayMoveTimer), "DelayMoveTimer"))
 			{
-				if (gamePlayElevatorComponent.TempVector == null)
-				{
-					this.TempVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TempVector), "TempVector"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("<CurLiftFloor>k__BackingField"))
-			{
-				this.CurLiftFloor = gamePlayElevatorComponent.CurLiftFloor;
-			}
-			if (base.CanResetComponentProperty("MoveCtx"))
-			{
-				if (gamePlayElevatorComponent.MoveCtx == null)
-				{
-					this.MoveCtx = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ElevatorContext>(this.MoveCtx), "MoveCtx"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MoveStrategy"))
-			{
-				if (gamePlayElevatorComponent.MoveStrategy == null)
-				{
-					this.MoveStrategy = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IElevatorMoveStrategy>(this.MoveStrategy), "MoveStrategy"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DelayMoveTimer"))
-			{
-				if (gamePlayElevatorComponent.DelayMoveTimer == null)
-				{
-					this.DelayMoveTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayMoveTimer), "DelayMoveTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025937 RID: 153911
+		// Token: 0x17007378 RID: 29560
+		// (get) Token: 0x0603D060 RID: 249952 RVA: 0x0118D90B File Offset: 0x0118BB0B
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007379 RID: 29561
+		// (get) Token: 0x0603D061 RID: 249953 RVA: 0x0118D90E File Offset: 0x0118BB0E
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737A RID: 29562
+		// (get) Token: 0x0603D062 RID: 249954 RVA: 0x0118D911 File Offset: 0x0118BB11
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737B RID: 29563
+		// (get) Token: 0x0603D063 RID: 249955 RVA: 0x0118D914 File Offset: 0x0118BB14
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737C RID: 29564
+		// (get) Token: 0x0603D064 RID: 249956 RVA: 0x0118D917 File Offset: 0x0118BB17
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737D RID: 29565
+		// (get) Token: 0x0603D065 RID: 249957 RVA: 0x0118D91A File Offset: 0x0118BB1A
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737E RID: 29566
+		// (get) Token: 0x0603D066 RID: 249958 RVA: 0x0118D91D File Offset: 0x0118BB1D
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700737F RID: 29567
+		// (get) Token: 0x0603D067 RID: 249959 RVA: 0x0118D920 File Offset: 0x0118BB20
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007380 RID: 29568
+		// (get) Token: 0x0603D068 RID: 249960 RVA: 0x0118D923 File Offset: 0x0118BB23
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040205A6 RID: 132518
 		private readonly Dictionary<object, HashSet<Action<float>>> AfterElevatorTickHandlers = new Dictionary<object, HashSet<Action<float>>>();
 
-		// Token: 0x04025938 RID: 153912
+		// Token: 0x040205A7 RID: 132519
 		private readonly List<Action<float>> TempAfterElevatorTickHandlers = new List<Action<float>>();
 
-		// Token: 0x04025939 RID: 153913
+		// Token: 0x040205A8 RID: 132520
 		[Nullable(2)]
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x0402593A RID: 153914
+		// Token: 0x040205A9 RID: 132521
 		[Nullable(new byte[]
 		{
 			2,
@@ -1460,7 +1465,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 		})]
 		private List<AActor> ActorHitElevator;
 
-		// Token: 0x0402593B RID: 153915
+		// Token: 0x040205AA RID: 132522
 		[Nullable(new byte[]
 		{
 			2,
@@ -1468,89 +1473,89 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 		})]
 		private List<AActor> ActorOnElevator;
 
-		// Token: 0x0402593C RID: 153916
+		// Token: 0x040205AB RID: 132523
 		private string AFMEKey = "";
 
-		// Token: 0x0402593D RID: 153917
+		// Token: 0x040205AC RID: 132524
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x0402593E RID: 153918
+		// Token: 0x040205AD RID: 132525
 		private ELiftBuffType? CustomLiftBuffType;
 
-		// Token: 0x0402593F RID: 153919
+		// Token: 0x040205AE RID: 132526
 		private float CustomTimeScale = 1f;
 
-		// Token: 0x04025940 RID: 153920
+		// Token: 0x040205AF RID: 132527
 		private bool EnableCustomTimeScale;
 
-		// Token: 0x04025941 RID: 153921
+		// Token: 0x040205B0 RID: 132528
 		private int? EntityConfigId;
 
-		// Token: 0x04025942 RID: 153922
+		// Token: 0x040205B1 RID: 132529
 		private float HoveringTime;
 
-		// Token: 0x04025943 RID: 153923
+		// Token: 0x040205B2 RID: 132530
 		private float HoverTime;
 
-		// Token: 0x04025944 RID: 153924
+		// Token: 0x040205B3 RID: 132531
 		private bool IsAnnular;
 
-		// Token: 0x04025945 RID: 153925
+		// Token: 0x040205B4 RID: 132532
 		private bool IsAutoMove;
 
-		// Token: 0x04025946 RID: 153926
+		// Token: 0x040205B5 RID: 132533
 		private bool IsDescending;
 
-		// Token: 0x04025947 RID: 153927
+		// Token: 0x040205B6 RID: 132534
 		private bool? IsInStateChange;
 
-		// Token: 0x04025948 RID: 153928
+		// Token: 0x040205B7 RID: 132535
 		private bool IsReverseAutoRunning;
 
-		// Token: 0x04025949 RID: 153929
+		// Token: 0x040205B8 RID: 132536
 		private int PendingAutoRunNextFloor;
 
-		// Token: 0x0402594A RID: 153930
+		// Token: 0x040205B9 RID: 132537
 		private int PendingServerTargetFloor;
 
-		// Token: 0x0402594B RID: 153931
+		// Token: 0x040205BA RID: 132538
 		[Nullable(2)]
 		private UPrimitiveComponent PrimitiveComp;
 
-		// Token: 0x0402594C RID: 153932
+		// Token: 0x040205BB RID: 132539
 		[Nullable(2)]
 		private SceneItemPropertyComponent PropComp;
 
-		// Token: 0x0402594D RID: 153933
+		// Token: 0x040205BC RID: 132540
 		[Nullable(2)]
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x0402594E RID: 153934
+		// Token: 0x040205BD RID: 132541
 		[Nullable(2)]
 		private global::Vector SafePosition;
 
-		// Token: 0x0402594F RID: 153935
+		// Token: 0x040205BE RID: 132542
 		private EGamePlayElevatorState State;
 
-		// Token: 0x04025950 RID: 153936
+		// Token: 0x040205BF RID: 132543
 		private int TargetFloor;
 
-		// Token: 0x04025951 RID: 153937
+		// Token: 0x040205C0 RID: 132544
 		[Nullable(2)]
 		private global::Vector TempLocation;
 
-		// Token: 0x04025952 RID: 153938
+		// Token: 0x040205C1 RID: 132545
 		[Nullable(2)]
 		private global::Vector TempVector;
 
-		// Token: 0x04025954 RID: 153940
+		// Token: 0x040205C3 RID: 132547
 		private ElevatorContext MoveCtx;
 
-		// Token: 0x04025955 RID: 153941
+		// Token: 0x040205C4 RID: 132548
 		private IElevatorMoveStrategy MoveStrategy;
 
-		// Token: 0x04025956 RID: 153942
+		// Token: 0x040205C5 RID: 132549
 		[Nullable(2)]
 		private TimerHandle DelayMoveTimer;
 	}

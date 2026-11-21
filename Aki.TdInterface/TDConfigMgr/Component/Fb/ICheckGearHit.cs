@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA5 RID: 2981
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C73 RID: 3187
 	public class ICheckGearHit
 	{
-		// Token: 0x0600446D RID: 17517 RVA: 0x000ADCF8 File Offset: 0x000ABEF8
+		// Token: 0x060048C6 RID: 18630 RVA: 0x000B7DBC File Offset: 0x000B5FBC
 		public static ICheckGearHit Create(ICheckGearHit? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012E0 RID: 4832
-		// (get) Token: 0x0600446E RID: 17518 RVA: 0x000ADD17 File Offset: 0x000ABF17
+		// Token: 0x170013DB RID: 5083
+		// (get) Token: 0x060048C7 RID: 18631 RVA: 0x000B7DDB File Offset: 0x000B5FDB
 		public virtual int HitIndex
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012E1 RID: 4833
-		// (get) Token: 0x0600446F RID: 17519 RVA: 0x000ADD24 File Offset: 0x000ABF24
+		// Token: 0x170013DC RID: 5084
+		// (get) Token: 0x060048C8 RID: 18632 RVA: 0x000B7DE8 File Offset: 0x000B5FE8
 		public virtual List<int> AffectIndex
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012E2 RID: 4834
-		// (get) Token: 0x06004470 RID: 17520 RVA: 0x000ADD88 File Offset: 0x000ABF88
+		// Token: 0x170013DD RID: 5085
+		// (get) Token: 0x060048C9 RID: 18633 RVA: 0x000B7E4C File Offset: 0x000B604C
 		public virtual EGearHitAffectType AffectType
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026A2 RID: 9890
+		// Token: 0x040028EA RID: 10474
 		private ICheckGearHit Instance;
 
-		// Token: 0x040026A3 RID: 9891
+		// Token: 0x040028EB RID: 10475
 		private List<int> _AffectIndexCache;
 
-		// Token: 0x040026A4 RID: 9892
+		// Token: 0x040028EC RID: 10476
 		private bool _AffectIndexInited;
 	}
 }

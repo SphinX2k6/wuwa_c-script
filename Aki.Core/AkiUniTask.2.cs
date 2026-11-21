@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 [Nullable(0)]
 public class AkiUniTask<[Nullable(2)] T>
 {
-	// Token: 0x060000E5 RID: 229 RVA: 0x000074D0 File Offset: 0x000056D0
+	// Token: 0x060000E7 RID: 231 RVA: 0x00007248 File Offset: 0x00005448
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -22,7 +22,7 @@ public class AkiUniTask<[Nullable(2)] T>
 		return uniTaskCompletionSource.Task;
 	}
 
-	// Token: 0x060000E6 RID: 230 RVA: 0x000074F8 File Offset: 0x000056F8
+	// Token: 0x060000E8 RID: 232 RVA: 0x00007270 File Offset: 0x00005470
 	public void TrySetResult(T result)
 	{
 		foreach (UniTaskCompletionSource<T> uniTaskCompletionSource in this.Tasks)
@@ -31,7 +31,7 @@ public class AkiUniTask<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060000E7 RID: 231 RVA: 0x0000754C File Offset: 0x0000574C
+	// Token: 0x060000E9 RID: 233 RVA: 0x000072C4 File Offset: 0x000054C4
 	public void TrySetCanceled()
 	{
 		foreach (UniTaskCompletionSource<T> uniTaskCompletionSource in this.Tasks)
@@ -40,6 +40,6 @@ public class AkiUniTask<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x040000C3 RID: 195
+	// Token: 0x040000C4 RID: 196
 	private readonly List<UniTaskCompletionSource<T>> Tasks = new List<UniTaskCompletionSource<T>>(1);
 }

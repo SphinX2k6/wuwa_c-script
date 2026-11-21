@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200237A RID: 9082
+	// Token: 0x02002603 RID: 9731
 	public class ELoopStateTypeJsonConverter : JsonConverter<ELoopStateType>
 	{
-		// Token: 0x0600C625 RID: 50725 RVA: 0x001D0734 File Offset: 0x001CE934
+		// Token: 0x0600D269 RID: 53865 RVA: 0x001E9708 File Offset: 0x001E7908
 		public override ELoopStateType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ELoopStateTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C626 RID: 50726 RVA: 0x001D0758 File Offset: 0x001CE958
+		// Token: 0x0600D26A RID: 53866 RVA: 0x001E972C File Offset: 0x001E792C
 		public override void Write(Utf8JsonWriter writer, ELoopStateType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

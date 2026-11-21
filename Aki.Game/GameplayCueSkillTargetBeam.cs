@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002FD3 RID: 12243
+// Token: 0x02002527 RID: 9511
 public class GameplayCueSkillTargetBeam : GameplayCueBase
 {
-	// Token: 0x06019F4A RID: 106314 RVA: 0x006CAA00 File Offset: 0x006C8C00
+	// Token: 0x0601785C RID: 96348 RVA: 0x006F12F4 File Offset: 0x006EF4F4
 	protected override void OnInit()
 	{
 		this.Socket = FNameUtil.GetDynamicFName(this.CueConfig.Socket);
@@ -17,7 +17,7 @@ public class GameplayCueSkillTargetBeam : GameplayCueBase
 		this.TargetPoint = this.ActorInternal.D_GetTransform().TransformPositionNoScale(this.MyOffset);
 	}
 
-	// Token: 0x06019F4B RID: 106315 RVA: 0x006CAAB0 File Offset: 0x006C8CB0
+	// Token: 0x0601785D RID: 96349 RVA: 0x006F13A4 File Offset: 0x006EF5A4
 	protected override void OnTick(float delta)
 	{
 		FVectorDouble fvectorDouble = (this.Socket != null) ? this.ActorInternal.Mesh.D_GetSocketLocation(this.Socket.Value) : this.ActorInternal.D_K2_GetActorLocation();
@@ -59,7 +59,7 @@ public class GameplayCueSkillTargetBeam : GameplayCueBase
 		}, delta);
 	}
 
-	// Token: 0x06019F4C RID: 106316 RVA: 0x006CAC03 File Offset: 0x006C8E03
+	// Token: 0x0601785E RID: 96350 RVA: 0x006F14F7 File Offset: 0x006EF6F7
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -80,7 +80,7 @@ public class GameplayCueSkillTargetBeam : GameplayCueBase
 		return this.GetLockOnTargetAndSocket();
 	}
 
-	// Token: 0x06019F4D RID: 106317 RVA: 0x006CAC20 File Offset: 0x006C8E20
+	// Token: 0x0601785F RID: 96351 RVA: 0x006F1514 File Offset: 0x006EF714
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -118,7 +118,7 @@ public class GameplayCueSkillTargetBeam : GameplayCueBase
 		return new ValueTuple<EntityHandle, string>(item, item2);
 	}
 
-	// Token: 0x06019F4E RID: 106318 RVA: 0x006CACB8 File Offset: 0x006C8EB8
+	// Token: 0x06017860 RID: 96352 RVA: 0x006F15AC File Offset: 0x006EF7AC
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -144,46 +144,46 @@ public class GameplayCueSkillTargetBeam : GameplayCueBase
 		return new ValueTuple<EntityHandle, string>(item, item2);
 	}
 
-	// Token: 0x06019F4F RID: 106319 RVA: 0x006CACFD File Offset: 0x006C8EFD
+	// Token: 0x06017861 RID: 96353 RVA: 0x006F15F1 File Offset: 0x006EF7F1
 	protected override void OnCreate()
 	{
 		this.BeamItem = GameplayCueBeamCommonItem.Spawn(this.ActorInternal, this.CueConfig.Path, null);
 	}
 
-	// Token: 0x06019F50 RID: 106320 RVA: 0x006CAD1C File Offset: 0x006C8F1C
+	// Token: 0x06017862 RID: 96354 RVA: 0x006F1610 File Offset: 0x006EF810
 	protected override void OnDestroy()
 	{
 		this.BeamItem.Destroy();
 	}
 
-	// Token: 0x06019F51 RID: 106321 RVA: 0x006CAD29 File Offset: 0x006C8F29
+	// Token: 0x06017863 RID: 96355 RVA: 0x006F161D File Offset: 0x006EF81D
 	public override void OnEnable()
 	{
 		this.BeamItem.GetOwner().SetActorHiddenInGame(false);
 	}
 
-	// Token: 0x06019F52 RID: 106322 RVA: 0x006CAD3C File Offset: 0x006C8F3C
+	// Token: 0x06017864 RID: 96356 RVA: 0x006F1630 File Offset: 0x006EF830
 	public override void OnDisable()
 	{
 		this.BeamItem.GetOwner().SetActorHiddenInGame(true);
 	}
 
-	// Token: 0x0400C47B RID: 50299
+	// Token: 0x0400C824 RID: 51236
 	private FName? Socket;
 
-	// Token: 0x0400C47C RID: 50300
+	// Token: 0x0400C825 RID: 51237
 	[Nullable(2)]
 	private GameplayCueBeamCommonItem BeamItem;
 
-	// Token: 0x0400C47D RID: 50301
+	// Token: 0x0400C826 RID: 51238
 	private FVectorDouble MyOffset;
 
-	// Token: 0x0400C47E RID: 50302
+	// Token: 0x0400C827 RID: 51239
 	private FVectorDouble TargetOffset;
 
-	// Token: 0x0400C47F RID: 50303
+	// Token: 0x0400C828 RID: 51240
 	private FVectorDouble TargetPoint;
 
-	// Token: 0x0400C480 RID: 50304
+	// Token: 0x0400C829 RID: 51241
 	private FTransformDouble TargetTransform;
 }

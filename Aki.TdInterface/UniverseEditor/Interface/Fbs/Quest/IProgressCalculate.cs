@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FC2 RID: 16322
+	// Token: 0x02004403 RID: 17411
 	public struct IProgressCalculate : IFlatbufferObject
 	{
-		// Token: 0x170071F8 RID: 29176
-		// (get) Token: 0x06017568 RID: 95592 RVA: 0x0035D150 File Offset: 0x0035B350
+		// Token: 0x170077F6 RID: 30710
+		// (get) Token: 0x06018BF7 RID: 101367 RVA: 0x00386D68 File Offset: 0x00384F68
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017569 RID: 95593 RVA: 0x0035D15D File Offset: 0x0035B35D
+		// Token: 0x06018BF8 RID: 101368 RVA: 0x00386D75 File Offset: 0x00384F75
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601756A RID: 95594 RVA: 0x0035D164 File Offset: 0x0035B364
+		// Token: 0x06018BF9 RID: 101369 RVA: 0x00386D7C File Offset: 0x00384F7C
 		public static IProgressCalculate GetRootAsIProgressCalculate(ByteBuffer _bb)
 		{
 			return IProgressCalculate.GetRootAsIProgressCalculate(_bb, default(IProgressCalculate));
 		}
 
-		// Token: 0x0601756B RID: 95595 RVA: 0x0035D180 File Offset: 0x0035B380
+		// Token: 0x06018BFA RID: 101370 RVA: 0x00386D98 File Offset: 0x00384F98
 		public static IProgressCalculate GetRootAsIProgressCalculate(ByteBuffer _bb, IProgressCalculate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601756C RID: 95596 RVA: 0x0035D19D File Offset: 0x0035B39D
+		// Token: 0x06018BFB RID: 101371 RVA: 0x00386DB5 File Offset: 0x00384FB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601756D RID: 95597 RVA: 0x0035D1AC File Offset: 0x0035B3AC
+		// Token: 0x06018BFC RID: 101372 RVA: 0x00386DC4 File Offset: 0x00384FC4
 		public IProgressCalculate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071F9 RID: 29177
-		// (get) Token: 0x0601756E RID: 95598 RVA: 0x0035D1BC File Offset: 0x0035B3BC
+		// Token: 0x170077F7 RID: 30711
+		// (get) Token: 0x06018BFD RID: 101373 RVA: 0x00386DD4 File Offset: 0x00384FD4
 		public TProgressBarLeftType VarLeftType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601756F RID: 95599 RVA: 0x0035D1F8 File Offset: 0x0035B3F8
+		// Token: 0x06018BFE RID: 101374 RVA: 0x00386E10 File Offset: 0x00385010
 		public TTable? VarLeft<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -74,20 +74,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017570 RID: 95600 RVA: 0x0035D23C File Offset: 0x0035B43C
+		// Token: 0x06018BFF RID: 101375 RVA: 0x00386E54 File Offset: 0x00385054
 		public IUseCount VarLeftAsIUseCount()
 		{
 			return this.VarLeft<IUseCount>().Value;
 		}
 
-		// Token: 0x06017571 RID: 95601 RVA: 0x0035D258 File Offset: 0x0035B458
+		// Token: 0x06018C00 RID: 101376 RVA: 0x00386E70 File Offset: 0x00385070
 		public IUseVar VarLeftAsIUseVar()
 		{
 			return this.VarLeft<IUseVar>().Value;
 		}
 
-		// Token: 0x170071FA RID: 29178
-		// (get) Token: 0x06017572 RID: 95602 RVA: 0x0035D274 File Offset: 0x0035B474
+		// Token: 0x170077F8 RID: 30712
+		// (get) Token: 0x06018C01 RID: 101377 RVA: 0x00386E8C File Offset: 0x0038508C
 		public TVarRef VarRightType
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017573 RID: 95603 RVA: 0x0035D2B0 File Offset: 0x0035B4B0
+		// Token: 0x06018C02 RID: 101378 RVA: 0x00386EC8 File Offset: 0x003850C8
 		public TTable? VarRight<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -112,37 +112,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017574 RID: 95604 RVA: 0x0035D2F8 File Offset: 0x0035B4F8
+		// Token: 0x06018C03 RID: 101379 RVA: 0x00386F10 File Offset: 0x00385110
 		public IConstVarRef VarRightAsIConstVarRef()
 		{
 			return this.VarRight<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06017575 RID: 95605 RVA: 0x0035D314 File Offset: 0x0035B514
+		// Token: 0x06018C04 RID: 101380 RVA: 0x00386F2C File Offset: 0x0038512C
 		public IGlobalVarRef VarRightAsIGlobalVarRef()
 		{
 			return this.VarRight<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06017576 RID: 95606 RVA: 0x0035D330 File Offset: 0x0035B530
+		// Token: 0x06018C05 RID: 101381 RVA: 0x00386F48 File Offset: 0x00385148
 		public IOtherVarRef VarRightAsIOtherVarRef()
 		{
 			return this.VarRight<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06017577 RID: 95607 RVA: 0x0035D34C File Offset: 0x0035B54C
+		// Token: 0x06018C06 RID: 101382 RVA: 0x00386F64 File Offset: 0x00385164
 		public ISelfVarRef VarRightAsISelfVarRef()
 		{
 			return this.VarRight<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06017578 RID: 95608 RVA: 0x0035D368 File Offset: 0x0035B568
+		// Token: 0x06018C07 RID: 101383 RVA: 0x00386F80 File Offset: 0x00385180
 		public ISystemVarRef VarRightAsISystemVarRef()
 		{
 			return this.VarRight<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x06017579 RID: 95609 RVA: 0x0035D383 File Offset: 0x0035B583
+		// Token: 0x06018C08 RID: 101384 RVA: 0x00386F9B File Offset: 0x0038519B
 		public static Offset<IProgressCalculate> CreateIProgressCalculate(FlatBufferBuilder builder, TProgressBarLeftType VarLeft_type = TProgressBarLeftType.NONE, int VarLeftOffset = 0, TVarRef VarRight_type = TVarRef.NONE, int VarRightOffset = 0)
 		{
 			builder.StartTable(4);
@@ -153,43 +153,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IProgressCalculate.EndIProgressCalculate(builder);
 		}
 
-		// Token: 0x0601757A RID: 95610 RVA: 0x0035D3AF File Offset: 0x0035B5AF
+		// Token: 0x06018C09 RID: 101385 RVA: 0x00386FC7 File Offset: 0x003851C7
 		public static void StartIProgressCalculate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601757B RID: 95611 RVA: 0x0035D3B8 File Offset: 0x0035B5B8
+		// Token: 0x06018C0A RID: 101386 RVA: 0x00386FD0 File Offset: 0x003851D0
 		public static void AddVarLeftType(FlatBufferBuilder builder, TProgressBarLeftType varLeftType)
 		{
 			builder.AddByte(0, (byte)varLeftType, 0);
 		}
 
-		// Token: 0x0601757C RID: 95612 RVA: 0x0035D3C3 File Offset: 0x0035B5C3
+		// Token: 0x06018C0B RID: 101387 RVA: 0x00386FDB File Offset: 0x003851DB
 		public static void AddVarLeft(FlatBufferBuilder builder, int varLeftOffset)
 		{
 			builder.AddOffset(1, varLeftOffset, 0);
 		}
 
-		// Token: 0x0601757D RID: 95613 RVA: 0x0035D3CE File Offset: 0x0035B5CE
+		// Token: 0x06018C0C RID: 101388 RVA: 0x00386FE6 File Offset: 0x003851E6
 		public static void AddVarRightType(FlatBufferBuilder builder, TVarRef varRightType)
 		{
 			builder.AddByte(2, (byte)varRightType, 0);
 		}
 
-		// Token: 0x0601757E RID: 95614 RVA: 0x0035D3D9 File Offset: 0x0035B5D9
+		// Token: 0x06018C0D RID: 101389 RVA: 0x00386FF1 File Offset: 0x003851F1
 		public static void AddVarRight(FlatBufferBuilder builder, int varRightOffset)
 		{
 			builder.AddOffset(3, varRightOffset, 0);
 		}
 
-		// Token: 0x0601757F RID: 95615 RVA: 0x0035D3E4 File Offset: 0x0035B5E4
+		// Token: 0x06018C0E RID: 101390 RVA: 0x00386FFC File Offset: 0x003851FC
 		public static Offset<IProgressCalculate> EndIProgressCalculate(FlatBufferBuilder builder)
 		{
 			return new Offset<IProgressCalculate>(builder.EndTable());
 		}
 
-		// Token: 0x06017580 RID: 95616 RVA: 0x0035D3F4 File Offset: 0x0035B5F4
+		// Token: 0x06018C0F RID: 101391 RVA: 0x0038700C File Offset: 0x0038520C
 		public IProgressCalculateT UnPack()
 		{
 			IProgressCalculateT progressCalculateT = new IProgressCalculateT();
@@ -197,7 +197,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return progressCalculateT;
 		}
 
-		// Token: 0x06017581 RID: 95617 RVA: 0x0035D410 File Offset: 0x0035B610
+		// Token: 0x06018C10 RID: 101392 RVA: 0x00387028 File Offset: 0x00385228
 		public void UnPackTo(IProgressCalculateT _o)
 		{
 			_o.VarLeft = new TProgressBarLeftTypeUnion();
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017582 RID: 95618 RVA: 0x0035D610 File Offset: 0x0035B810
+		// Token: 0x06018C11 RID: 101393 RVA: 0x00387228 File Offset: 0x00385428
 		public static Offset<IProgressCalculate> Pack(FlatBufferBuilder builder, IProgressCalculateT _o)
 		{
 			if (_o == null)
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IProgressCalculate.CreateIProgressCalculate(builder, varLeft_type, varLeftOffset, varRight_type, varRightOffset);
 		}
 
-		// Token: 0x0400BA32 RID: 47666
+		// Token: 0x0400C417 RID: 50199
 		private Table __p;
 	}
 }

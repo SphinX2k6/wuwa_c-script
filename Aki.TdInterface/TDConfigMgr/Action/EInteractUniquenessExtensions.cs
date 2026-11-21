@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002365 RID: 9061
+	// Token: 0x020025DA RID: 9690
 	public static class EInteractUniquenessExtensions
 	{
-		// Token: 0x0600C5C5 RID: 50629 RVA: 0x001CEAD0 File Offset: 0x001CCCD0
+		// Token: 0x0600D1AF RID: 53679 RVA: 0x001E6DB0 File Offset: 0x001E4FB0
 		public static string ToEnumString(this EInteractUniqueness value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5C6 RID: 50630 RVA: 0x001CEAF8 File Offset: 0x001CCCF8
+		// Token: 0x0600D1B0 RID: 53680 RVA: 0x001E6DD8 File Offset: 0x001E4FD8
 		public static EInteractUniqueness FromString(string name)
 		{
 			EInteractUniqueness result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5C7 RID: 50631 RVA: 0x001CEB21 File Offset: 0x001CCD21
+		// Token: 0x0600D1B1 RID: 53681 RVA: 0x001E6E01 File Offset: 0x001E5001
 		public static bool TryFromString(string name, out EInteractUniqueness value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C5C8 RID: 50632 RVA: 0x001CEB46 File Offset: 0x001CCD46
+		// Token: 0x0600D1B2 RID: 53682 RVA: 0x001E6E26 File Offset: 0x001E5026
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5C9 RID: 50633 RVA: 0x001CEB56 File Offset: 0x001CCD56
+		// Token: 0x0600D1B3 RID: 53683 RVA: 0x001E6E36 File Offset: 0x001E5036
 		public static EInteractUniqueness[] GetValues()
 		{
 			return new EInteractUniqueness[1];
 		}
 
-		// Token: 0x0600C5CA RID: 50634 RVA: 0x001CEB5E File Offset: 0x001CCD5E
+		// Token: 0x0600D1B4 RID: 53684 RVA: 0x001E6E3E File Offset: 0x001E503E
 		public static string[] GetNames()
 		{
 			return new string[]

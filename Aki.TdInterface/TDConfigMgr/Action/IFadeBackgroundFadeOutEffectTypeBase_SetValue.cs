@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A4E RID: 6734
+	// Token: 0x02001BE3 RID: 7139
 	public class IFadeBackgroundFadeOutEffectTypeBase_SetValue
 	{
-		// Token: 0x0400590A RID: 22794
+		// Token: 0x04005D6F RID: 23919
 		public EFadeBackgroundFadeOutEffectType Type;
 	}
 }

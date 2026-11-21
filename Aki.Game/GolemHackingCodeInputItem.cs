@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001010 RID: 4112
+// Token: 0x020004C4 RID: 1220
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo>
 {
-	// Token: 0x06006977 RID: 26999 RVA: 0x00150A70 File Offset: 0x0014EC70
+	// Token: 0x06003D0C RID: 15628 RVA: 0x00159398 File Offset: 0x00157598
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -36,14 +36,14 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006978 RID: 27000 RVA: 0x00150B5D File Offset: 0x0014ED5D
+	// Token: 0x06003D0D RID: 15629 RVA: 0x00159485 File Offset: 0x00157685
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		this.SequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEnded), false);
 	}
 
-	// Token: 0x06006979 RID: 27001 RVA: 0x00150B88 File Offset: 0x0014ED88
+	// Token: 0x06003D0E RID: 15630 RVA: 0x001594B0 File Offset: 0x001576B0
 	[NullableContext(1)]
 	public override void Refresh(GolemHackingInputInfo data, bool isSelected, int gridIndex)
 	{
@@ -62,7 +62,7 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		this.UpdateInfo();
 	}
 
-	// Token: 0x0600697A RID: 27002 RVA: 0x00150BF8 File Offset: 0x0014EDF8
+	// Token: 0x06003D0F RID: 15631 RVA: 0x00159520 File Offset: 0x00157720
 	protected void PlayAnim(EGolemHackingInputState? oldState)
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -136,7 +136,7 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		sequencePlayer10.PlayOrReplaySequenceByName(this.InputData.AnimName, false, null);
 	}
 
-	// Token: 0x0600697B RID: 27003 RVA: 0x00150D78 File Offset: 0x0014EF78
+	// Token: 0x06003D10 RID: 15632 RVA: 0x001596A0 File Offset: 0x001578A0
 	public void UpdateInfo()
 	{
 		EGolemHackingInputState state = this.InputData.State;
@@ -186,7 +186,7 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		}
 	}
 
-	// Token: 0x0600697C RID: 27004 RVA: 0x00150E30 File Offset: 0x0014F030
+	// Token: 0x06003D11 RID: 15633 RVA: 0x00159758 File Offset: 0x00157958
 	[NullableContext(1)]
 	public void EnterInputCode(string code)
 	{
@@ -201,7 +201,7 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		}
 	}
 
-	// Token: 0x0600697D RID: 27005 RVA: 0x00150E53 File Offset: 0x0014F053
+	// Token: 0x06003D12 RID: 15634 RVA: 0x0015977B File Offset: 0x0015797B
 	public void ClearInputCode()
 	{
 		if (this.InputData.State == EGolemHackingInputState.Enterring)
@@ -215,7 +215,7 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		}
 	}
 
-	// Token: 0x0600697E RID: 27006 RVA: 0x00150E7A File Offset: 0x0014F07A
+	// Token: 0x06003D13 RID: 15635 RVA: 0x001597A2 File Offset: 0x001579A2
 	[NullableContext(1)]
 	private void OnSequenceEnded(string sequenceName)
 	{
@@ -230,36 +230,36 @@ public class GolemHackingCodeInputItem : GridProxyAbstract<GolemHackingInputInfo
 		}
 	}
 
-	// Token: 0x0400309E RID: 12446
+	// Token: 0x04003137 RID: 12599
 	private const int INTERVAL_TIME = 80;
 
-	// Token: 0x0400309F RID: 12447
+	// Token: 0x04003138 RID: 12600
 	public Action OnBarAnimEnd;
 
-	// Token: 0x040030A0 RID: 12448
+	// Token: 0x04003139 RID: 12601
 	protected GolemHackingInputInfo InputData;
 
-	// Token: 0x040030A1 RID: 12449
+	// Token: 0x0400313A RID: 12602
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040030A2 RID: 12450
+	// Token: 0x0400313B RID: 12603
 	protected TimerHandle TimerHandle;
 
-	// Token: 0x0200760A RID: 30218
+	// Token: 0x0200679E RID: 26526
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x04026FEC RID: 159724
+		// Token: 0x04022337 RID: 140087
 		PanelEmpty,
-		// Token: 0x04026FED RID: 159725
+		// Token: 0x04022338 RID: 140088
 		PanelEnterCode,
-		// Token: 0x04026FEE RID: 159726
+		// Token: 0x04022339 RID: 140089
 		TxtEnter,
-		// Token: 0x04026FEF RID: 159727
+		// Token: 0x0402233A RID: 140090
 		PanelReadyEnter,
-		// Token: 0x04026FF0 RID: 159728
+		// Token: 0x0402233B RID: 140091
 		TxtReadyCode,
-		// Token: 0x04026FF1 RID: 159729
+		// Token: 0x0402233C RID: 140092
 		PanelLockState
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A5B RID: 14939
+	// Token: 0x02003E36 RID: 15926
 	public class IBvbGetCardChangeUseT
 	{
-		// Token: 0x17006669 RID: 26217
-		// (get) Token: 0x060143ED RID: 82925 RVA: 0x002F5307 File Offset: 0x002F3507
-		// (set) Token: 0x060143EE RID: 82926 RVA: 0x002F530F File Offset: 0x002F350F
+		// Token: 0x17006B99 RID: 27545
+		// (get) Token: 0x06015709 RID: 87817 RVA: 0x003184F3 File Offset: 0x003166F3
+		// (set) Token: 0x0601570A RID: 87818 RVA: 0x003184FB File Offset: 0x003166FB
 		public ESystemVarName Type { get; set; }
 
-		// Token: 0x1700666A RID: 26218
-		// (get) Token: 0x060143EF RID: 82927 RVA: 0x002F5318 File Offset: 0x002F3518
-		// (set) Token: 0x060143F0 RID: 82928 RVA: 0x002F5320 File Offset: 0x002F3520
+		// Token: 0x17006B9A RID: 27546
+		// (get) Token: 0x0601570B RID: 87819 RVA: 0x00318504 File Offset: 0x00316704
+		// (set) Token: 0x0601570C RID: 87820 RVA: 0x0031850C File Offset: 0x0031670C
 		public TVarRefUnion Card { get; set; }
 
-		// Token: 0x060143F1 RID: 82929 RVA: 0x002F5329 File Offset: 0x002F3529
+		// Token: 0x0601570D RID: 87821 RVA: 0x00318515 File Offset: 0x00316715
 		public IBvbGetCardChangeUseT()
 		{
 			this.Type = ESystemVarName.CommonHotFixVar;

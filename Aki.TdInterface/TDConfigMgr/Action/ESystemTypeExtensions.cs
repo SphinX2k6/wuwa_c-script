@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200244D RID: 9293
+	// Token: 0x020026EE RID: 9966
 	public static class ESystemTypeExtensions
 	{
-		// Token: 0x0600C9D9 RID: 51673 RVA: 0x001D8B90 File Offset: 0x001D6D90
+		// Token: 0x0600D689 RID: 54921 RVA: 0x001F2A88 File Offset: 0x001F0C88
 		public static string ToEnumString(this ESystemType value)
 		{
 			string result;
@@ -136,6 +136,9 @@ namespace Aki.TDConfigMgr.Action
 				break;
 			case ESystemType.MotorRaceChallenge:
 				result = "MotorRaceChallenge";
+				break;
+			case ESystemType.MechaStuntTrackChallenge:
+				result = "MechaStuntTrackChallenge";
 				break;
 			case ESystemType.PhotoMemoryTopic:
 				result = "PhotoMemoryTopic";
@@ -383,6 +386,18 @@ namespace Aki.TDConfigMgr.Action
 			case ESystemType.DeliverItemProbeCollectibles:
 				result = "DeliverItemProbeCollectibles";
 				break;
+			case ESystemType.HandBookPage:
+				result = "HandBookPage";
+				break;
+			case ESystemType.HandBookTips:
+				result = "HandBookTips";
+				break;
+			case ESystemType.DiceNpcBattlePreparation:
+				result = "DiceNpcBattlePreparation";
+				break;
+			case ESystemType.DiceBattle:
+				result = "DiceBattle";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -390,7 +405,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9DA RID: 51674 RVA: 0x001D92D0 File Offset: 0x001D74D0
+		// Token: 0x0600D68A RID: 54922 RVA: 0x001F3214 File Offset: 0x001F1414
 		public static ESystemType FromString(string name)
 		{
 			ESystemType result;
@@ -401,7 +416,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9DB RID: 51675 RVA: 0x001D92FC File Offset: 0x001D74FC
+		// Token: 0x0600D68B RID: 54923 RVA: 0x001F3240 File Offset: 0x001F1440
 		public static bool TryFromString(string name, out ESystemType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -539,6 +554,13 @@ namespace Aki.TDConfigMgr.Action
 						{
 							switch (c)
 							{
+							case 'a':
+								if (name == "DiceBattle")
+								{
+									value = ESystemType.DiceBattle;
+									return true;
+								}
+								break;
 							case 'c':
 								if (name == "Motorcycle")
 								{
@@ -670,10 +692,29 @@ namespace Aki.TDConfigMgr.Action
 				}
 				case 12:
 				{
-					char c = name[0];
-					if (c != 'H')
+					char c = name[8];
+					if (c <= 'P')
 					{
-						if (c == 'M')
+						if (c != 'O')
+						{
+							if (c == 'P')
+							{
+								if (name == "HandBookPage")
+								{
+									value = ESystemType.HandBookPage;
+									return true;
+								}
+							}
+						}
+						else if (name == "HideLordOpen")
+						{
+							value = ESystemType.HideLordOpen;
+							return true;
+						}
+					}
+					else if (c != 'T')
+					{
+						if (c == 's')
 						{
 							if (name == "MoraleSystem")
 							{
@@ -682,9 +723,9 @@ namespace Aki.TDConfigMgr.Action
 							}
 						}
 					}
-					else if (name == "HideLordOpen")
+					else if (name == "HandBookTips")
 					{
-						value = ESystemType.HideLordOpen;
+						value = ESystemType.HandBookTips;
 						return true;
 					}
 					break;
@@ -1341,9 +1382,34 @@ namespace Aki.TDConfigMgr.Action
 				case 24:
 				{
 					char c = name[0];
-					if (c != 'C')
+					switch (c)
 					{
-						if (c != 'G')
+					case 'C':
+						if (name == "ChangePhantomExhibitView")
+						{
+							value = ESystemType.ChangePhantomExhibitView;
+							return true;
+						}
+						break;
+					case 'D':
+						if (name == "DiceNpcBattlePreparation")
+						{
+							value = ESystemType.DiceNpcBattlePreparation;
+							return true;
+						}
+						break;
+					case 'E':
+					case 'F':
+						break;
+					case 'G':
+						if (name == "GuessJokerSelectRoleView")
+						{
+							value = ESystemType.GuessJokerSelectRoleView;
+							return true;
+						}
+						break;
+					default:
+						if (c != 'M')
 						{
 							if (c == 'P')
 							{
@@ -1354,16 +1420,12 @@ namespace Aki.TDConfigMgr.Action
 								}
 							}
 						}
-						else if (name == "GuessJokerSelectRoleView")
+						else if (name == "MechaStuntTrackChallenge")
 						{
-							value = ESystemType.GuessJokerSelectRoleView;
+							value = ESystemType.MechaStuntTrackChallenge;
 							return true;
 						}
-					}
-					else if (name == "ChangePhantomExhibitView")
-					{
-						value = ESystemType.ChangePhantomExhibitView;
-						return true;
+						break;
 					}
 					break;
 				}
@@ -1546,7 +1608,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C9DC RID: 51676 RVA: 0x001DA60C File Offset: 0x001D880C
+		// Token: 0x0600D68C RID: 54924 RVA: 0x001F4610 File Offset: 0x001F2810
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -1593,6 +1655,7 @@ namespace Aki.TDConfigMgr.Action
 				"MowingTowerActivity",
 				"SoaringChallenge",
 				"MotorRaceChallenge",
+				"MechaStuntTrackChallenge",
 				"PhotoMemoryTopic",
 				"LordGymEntrance",
 				"RaidReportSettlement",
@@ -1674,11 +1737,15 @@ namespace Aki.TDConfigMgr.Action
 				"DangoBrawlVictorySettlement",
 				"DangoBrawlFailureSettlement",
 				"InformationViewPopup",
-				"DeliverItemProbeCollectibles"
+				"DeliverItemProbeCollectibles",
+				"HandBookPage",
+				"HandBookTips",
+				"DiceNpcBattlePreparation",
+				"DiceBattle"
 			};
 		}
 
-		// Token: 0x0600C9DD RID: 51677 RVA: 0x001DAA73 File Offset: 0x001D8C73
+		// Token: 0x0600D68D RID: 54925 RVA: 0x001F4AAA File Offset: 0x001F2CAA
 		public static ESystemType[] GetValues()
 		{
 			return new ESystemType[]
@@ -1725,6 +1792,7 @@ namespace Aki.TDConfigMgr.Action
 				ESystemType.MowingTowerActivity,
 				ESystemType.SoaringChallenge,
 				ESystemType.MotorRaceChallenge,
+				ESystemType.MechaStuntTrackChallenge,
 				ESystemType.PhotoMemoryTopic,
 				ESystemType.LordGymEntrance,
 				ESystemType.RaidReportSettlement,
@@ -1806,11 +1874,15 @@ namespace Aki.TDConfigMgr.Action
 				ESystemType.DangoBrawlVictorySettlement,
 				ESystemType.DangoBrawlFailureSettlement,
 				ESystemType.InformationViewPopup,
-				ESystemType.DeliverItemProbeCollectibles
+				ESystemType.DeliverItemProbeCollectibles,
+				ESystemType.HandBookPage,
+				ESystemType.HandBookTips,
+				ESystemType.DiceNpcBattlePreparation,
+				ESystemType.DiceBattle
 			};
 		}
 
-		// Token: 0x0600C9DE RID: 51678 RVA: 0x001DAA88 File Offset: 0x001D8C88
+		// Token: 0x0600D68E RID: 54926 RVA: 0x001F4AC4 File Offset: 0x001F2CC4
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -1857,6 +1929,7 @@ namespace Aki.TDConfigMgr.Action
 				"MowingTowerActivity",
 				"SoaringChallenge",
 				"MotorRaceChallenge",
+				"MechaStuntTrackChallenge",
 				"PhotoMemoryTopic",
 				"LordGymEntrance",
 				"RaidReportSettlement",
@@ -1938,7 +2011,11 @@ namespace Aki.TDConfigMgr.Action
 				"DangoBrawlVictorySettlement",
 				"DangoBrawlFailureSettlement",
 				"InformationViewPopup",
-				"DeliverItemProbeCollectibles"
+				"DeliverItemProbeCollectibles",
+				"HandBookPage",
+				"HandBookTips",
+				"DiceNpcBattlePreparation",
+				"DiceBattle"
 			};
 		}
 	}

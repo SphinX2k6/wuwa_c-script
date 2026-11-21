@@ -2,16 +2,16 @@
 
 namespace Aki.Config
 {
-	// Token: 0x020011C1 RID: 4545
+	// Token: 0x020012F7 RID: 4855
 	public enum DropGroupType : sbyte
 	{
-		// Token: 0x04005313 RID: 21267
+		// Token: 0x04005956 RID: 22870
 		FixRandom,
-		// Token: 0x04005314 RID: 21268
+		// Token: 0x04005957 RID: 22871
 		WeigthRandom,
-		// Token: 0x04005315 RID: 21269
+		// Token: 0x04005958 RID: 22872
 		PhantomWeight,
-		// Token: 0x04005316 RID: 21270
+		// Token: 0x04005959 RID: 22873
 		HonamiStoryRed
 	}
 }

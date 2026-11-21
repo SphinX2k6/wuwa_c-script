@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A96 RID: 23190
+	// Token: 0x02004A72 RID: 19058
 	public enum EDreamLinkRewardType
 	{
-		// Token: 0x0401EA88 RID: 125576
+		// Token: 0x0401952F RID: 103727
 		DreamDungeon = 1,
-		// Token: 0x0401EA89 RID: 125577
+		// Token: 0x04019530 RID: 103728
 		WorldRun,
-		// Token: 0x0401EA8A RID: 125578
+		// Token: 0x04019531 RID: 103729
 		Boss,
-		// Token: 0x0401EA8B RID: 125579
+		// Token: 0x04019532 RID: 103730
 		Main,
-		// Token: 0x0401EA8C RID: 125580
+		// Token: 0x04019533 RID: 103731
 		SpecialReward
 	}
 }

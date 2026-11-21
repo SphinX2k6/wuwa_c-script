@@ -8,28 +8,28 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005300 RID: 21248
+	// Token: 0x020042D0 RID: 17104
 	public class RogueEndingTaskData
 	{
-		// Token: 0x060365DE RID: 222686 RVA: 0x00CDC934 File Offset: 0x00CDAB34
+		// Token: 0x0602B4DA RID: 177370 RVA: 0x00C2A304 File Offset: 0x00C28504
 		public RogueEndingTaskData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x060365DF RID: 222687 RVA: 0x00CDC94A File Offset: 0x00CDAB4A
+		// Token: 0x0602B4DB RID: 177371 RVA: 0x00C2A31A File Offset: 0x00C2851A
 		public bool IsFinished()
 		{
 			return this.Status == ActivityTaskState.ActivityTaskFinish;
 		}
 
-		// Token: 0x060365E0 RID: 222688 RVA: 0x00CDC955 File Offset: 0x00CDAB55
+		// Token: 0x0602B4DC RID: 177372 RVA: 0x00C2A325 File Offset: 0x00C28525
 		public bool IsTaken()
 		{
 			return this.Status == ActivityTaskState.ActivityTaskTaken;
 		}
 
-		// Token: 0x060365E1 RID: 222689 RVA: 0x00CDC960 File Offset: 0x00CDAB60
+		// Token: 0x0602B4DD RID: 177373 RVA: 0x00C2A330 File Offset: 0x00C28530
 		[NullableContext(1)]
 		public List<TItem> GetRewardList()
 		{
@@ -43,16 +43,16 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return list;
 		}
 
-		// Token: 0x0401CB6E RID: 117614
+		// Token: 0x040175A4 RID: 95652
 		public ActivityTaskState Status;
 
-		// Token: 0x0401CB6F RID: 117615
+		// Token: 0x040175A5 RID: 95653
 		public readonly int Id;
 
-		// Token: 0x0401CB70 RID: 117616
+		// Token: 0x040175A6 RID: 95654
 		public int Current;
 
-		// Token: 0x0401CB71 RID: 117617
+		// Token: 0x040175A7 RID: 95655
 		public int Target = 1;
 	}
 }

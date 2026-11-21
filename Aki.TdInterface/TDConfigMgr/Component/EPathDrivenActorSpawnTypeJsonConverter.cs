@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C7 RID: 2503
+	// Token: 0x02000A88 RID: 2696
 	public class EPathDrivenActorSpawnTypeJsonConverter : JsonConverter<EPathDrivenActorSpawnType>
 	{
-		// Token: 0x060037B2 RID: 14258 RVA: 0x00090BA8 File Offset: 0x0008EDA8
+		// Token: 0x06003B78 RID: 15224 RVA: 0x00099278 File Offset: 0x00097478
 		public override EPathDrivenActorSpawnType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EPathDrivenActorSpawnTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060037B3 RID: 14259 RVA: 0x00090BCC File Offset: 0x0008EDCC
+		// Token: 0x06003B79 RID: 15225 RVA: 0x0009929C File Offset: 0x0009749C
 		public override void Write(Utf8JsonWriter writer, EPathDrivenActorSpawnType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

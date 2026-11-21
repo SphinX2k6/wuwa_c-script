@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000529 RID: 1321
+	// Token: 0x0200053F RID: 1343
 	public class ConfigMapTravelConfigByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F01 RID: 7937 RVA: 0x00108807 File Offset: 0x00106A07
+		// Token: 0x06001F85 RID: 8069 RVA: 0x0010EF5B File Offset: 0x0010D15B
 		static ConfigMapTravelConfigByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapTravelConfigByActivityId.CreateStaticDefaultValue), new Action(ConfigMapTravelConfigByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F02 RID: 7938 RVA: 0x00108828 File Offset: 0x00106A28
+		// Token: 0x06001F86 RID: 8070 RVA: 0x0010EF7C File Offset: 0x0010D17C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapTravelConfigByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F03 RID: 7939 RVA: 0x001088A7 File Offset: 0x00106AA7
+		// Token: 0x06001F87 RID: 8071 RVA: 0x0010EFFB File Offset: 0x0010D1FB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapTravelConfigByActivityId.LogPair = null;
 			ConfigMapTravelConfigByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06001F04 RID: 7940 RVA: 0x001088B5 File Offset: 0x00106AB5
+		// Token: 0x06001F88 RID: 8072 RVA: 0x0010F009 File Offset: 0x0010D209
 		public static void Init()
 		{
 			ConfigMapTravelConfigByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigMapTravelConfigByActivityId.HandleId, "db_activitymaptravel.db", "select BinData from `MapTravelConfig` where ActivityId=?");
 		}
 
-		// Token: 0x06001F05 RID: 7941 RVA: 0x001088D0 File Offset: 0x00106AD0
+		// Token: 0x06001F89 RID: 8073 RVA: 0x0010F024 File Offset: 0x0010D224
 		public static MapTravelConfig? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMapTravelConfigByActivityId.HandleId, ConfigMapTravelConfigByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MapTravelConfig?(rootAsMapTravelConfig);
 		}
 
-		// Token: 0x04002403 RID: 9219
+		// Token: 0x0400249D RID: 9373
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x04002404 RID: 9220
+		// Token: 0x0400249E RID: 9374
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x04002405 RID: 9221
+		// Token: 0x0400249F RID: 9375
 		private const string TABLE = "MapTravelConfig";
 
-		// Token: 0x04002406 RID: 9222
+		// Token: 0x040024A0 RID: 9376
 		private const string COMMAND = "select BinData from `MapTravelConfig` where ActivityId=?";
 
-		// Token: 0x04002407 RID: 9223
+		// Token: 0x040024A1 RID: 9377
 		private const string KEY_PREFIX = "MapTravelConfigByActivityId";
 
-		// Token: 0x04002408 RID: 9224
+		// Token: 0x040024A2 RID: 9378
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002409 RID: 9225
+		// Token: 0x040024A3 RID: 9379
 		private static int HandleId;
 	}
 }

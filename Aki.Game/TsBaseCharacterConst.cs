@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x0200023D RID: 573
+// Token: 0x02000241 RID: 577
 public class TsBaseCharacterConst
 {
-	// Token: 0x040017D2 RID: 6098
+	// Token: 0x04001816 RID: 6166
 	public const int MOVEMENT_MODE_MAX_COUNT = 3;
 }

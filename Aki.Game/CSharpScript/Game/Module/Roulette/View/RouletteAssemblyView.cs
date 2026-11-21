@@ -19,13 +19,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C9E RID: 19614
+	// Token: 0x02003C4F RID: 15439
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RouletteAssemblyView : UiTickViewBase
 	{
-		// Token: 0x17007D0A RID: 32010
-		// (get) Token: 0x06032AE7 RID: 207591 RVA: 0x00BD29BB File Offset: 0x00BD0BBB
+		// Token: 0x170050B4 RID: 20660
+		// (get) Token: 0x0602789A RID: 161946 RVA: 0x00B1761F File Offset: 0x00B1581F
 		private RouletteComponentAssembly RouletteComponent
 		{
 			get
@@ -34,12 +34,12 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032AE8 RID: 207592 RVA: 0x00BD29C8 File Offset: 0x00BD0BC8
+		// Token: 0x0602789B RID: 161947 RVA: 0x00B1762C File Offset: 0x00B1582C
 		public RouletteAssemblyView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032AE9 RID: 207593 RVA: 0x00BD29E0 File Offset: 0x00BD0BE0
+		// Token: 0x0602789C RID: 161948 RVA: 0x00B17644 File Offset: 0x00B15844
 		protected unsafe override void OnRegisterComponent()
 		{
 			if (this.OpenParam == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 				this.ViewProxy = (RouletteAssemblyViewProxy)this.OpenParam;
 			}
 			this.ViewProxy.RegisterView(this);
-			int num = 17;
+			int num = 20;
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 			CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 			Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -89,6 +89,12 @@ namespace CSharpScript.Game.Module.Roulette.View
 			*span[num2] = new ValueTuple<int, Type>(15, typeof(UUIItem));
 			num2++;
 			*span[num2] = new ValueTuple<int, Type>(16, typeof(UUIItem));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(17, typeof(UUILoopScrollViewComponent));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(18, typeof(UUIItem));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(19, typeof(UUIItem));
 			this.ComponentRegisterInfos = list;
 			num2 = 3;
 			List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
@@ -103,7 +109,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032AEA RID: 207594 RVA: 0x00BD2D0C File Offset: 0x00BD0F0C
+		// Token: 0x0602789D RID: 161949 RVA: 0x00B179D4 File Offset: 0x00B15BD4
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.InputControllerMainTypeChange));
@@ -113,7 +119,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			EventSystem.Instance.Add(EEventName.RouletteNavigationComponentEmit, new Action(this.OnRouletteNavigationComponentEmit));
 		}
 
-		// Token: 0x06032AEB RID: 207595 RVA: 0x00BD2DA8 File Offset: 0x00BD0FA8
+		// Token: 0x0602789E RID: 161950 RVA: 0x00B17A70 File Offset: 0x00B15C70
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.InputControllerMainTypeChange));
@@ -123,25 +129,25 @@ namespace CSharpScript.Game.Module.Roulette.View
 			EventSystem.Instance.Remove(EEventName.RouletteNavigationComponentEmit, new Action(this.OnRouletteNavigationComponentEmit));
 		}
 
-		// Token: 0x06032AEC RID: 207596 RVA: 0x00BD2E44 File Offset: 0x00BD1044
+		// Token: 0x0602789F RID: 161951 RVA: 0x00B17B0C File Offset: 0x00B15D0C
 		protected override UniTask OnBeforeStartAsync()
 		{
-			RouletteAssemblyView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
+			RouletteAssemblyView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<RouletteAssemblyView.<OnBeforeStartAsync>d__23>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<RouletteAssemblyView.<OnBeforeStartAsync>d__24>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032AED RID: 207597 RVA: 0x00BD2E87 File Offset: 0x00BD1087
+		// Token: 0x060278A0 RID: 161952 RVA: 0x00B17B4F File Offset: 0x00B15D4F
 		protected override void OnStart()
 		{
 			this.InitRouletteInputManager();
 			this.ViewProxy.Start();
 		}
 
-		// Token: 0x06032AEE RID: 207598 RVA: 0x00BD2E9C File Offset: 0x00BD109C
+		// Token: 0x060278A1 RID: 161953 RVA: 0x00B17B64 File Offset: 0x00B15D64
 		protected override void OnBeforeDestroy()
 		{
 			this.SetExploreSkill();
@@ -150,11 +156,6 @@ namespace CSharpScript.Game.Module.Roulette.View
 			{
 				this.InputManager.Destroy();
 				this.InputManager = null;
-			}
-			if (this.AssemblyGridScrollView != null)
-			{
-				this.AssemblyGridScrollView.ClearGridProxies();
-				this.AssemblyGridScrollView = null;
 			}
 			this.CurrentSelectOnGridData = null;
 			this.AssemblyTips.Destroy(null);
@@ -166,7 +167,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.ViewProxy.Destroy();
 		}
 
-		// Token: 0x06032AEF RID: 207599 RVA: 0x00BD2F40 File Offset: 0x00BD1140
+		// Token: 0x060278A2 RID: 161954 RVA: 0x00B17BEC File Offset: 0x00B15DEC
 		protected override void OnBeforeShow()
 		{
 			if (this.IsFirstShow)
@@ -198,7 +199,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			buttonPhantomEdit.BindRedDot(ERedDotName.RedDotPhantomInteractEditEntry, 0);
 		}
 
-		// Token: 0x06032AF0 RID: 207600 RVA: 0x00BD2FDE File Offset: 0x00BD11DE
+		// Token: 0x060278A3 RID: 161955 RVA: 0x00B17C8A File Offset: 0x00B15E8A
 		protected override void OnAfterHide()
 		{
 			ButtonItem buttonPhantomEdit = this.ButtonPhantomEdit;
@@ -209,7 +210,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			buttonPhantomEdit.UnBindGivenUid(0);
 		}
 
-		// Token: 0x06032AF1 RID: 207601 RVA: 0x00BD2FF4 File Offset: 0x00BD11F4
+		// Token: 0x060278A4 RID: 161956 RVA: 0x00B17CA0 File Offset: 0x00B15EA0
 		protected override void OnTick(float delta)
 		{
 			ValueTuple<int?, int?> valueTuple = this.InputManager.Tick(delta);
@@ -218,14 +219,14 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RouletteComponent.Refresh(item, item2);
 		}
 
-		// Token: 0x06032AF2 RID: 207602 RVA: 0x00BD3027 File Offset: 0x00BD1227
+		// Token: 0x060278A5 RID: 161957 RVA: 0x00B17CD3 File Offset: 0x00B15ED3
 		private void OnRouletteTypeSwitch(int typeId)
 		{
 			this.ViewProxy.OnRouletteTypeSwitch((ERouletteType)typeId);
 			this.RefreshTypeSwitch();
 		}
 
-		// Token: 0x06032AF3 RID: 207603 RVA: 0x00BD303C File Offset: 0x00BD123C
+		// Token: 0x060278A6 RID: 161958 RVA: 0x00B17CE8 File Offset: 0x00B15EE8
 		private void RefreshTypeSwitch()
 		{
 			this.SetRouletteInputType();
@@ -238,9 +239,9 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.SelectDefaultRouletteGrid();
 		}
 
-		// Token: 0x17007D0B RID: 32011
-		// (get) Token: 0x06032AF4 RID: 207604 RVA: 0x00BD3091 File Offset: 0x00BD1291
-		// (set) Token: 0x06032AF5 RID: 207605 RVA: 0x00BD309C File Offset: 0x00BD129C
+		// Token: 0x170050B5 RID: 20661
+		// (get) Token: 0x060278A7 RID: 161959 RVA: 0x00B17D3D File Offset: 0x00B15F3D
+		// (set) Token: 0x060278A8 RID: 161960 RVA: 0x00B17D48 File Offset: 0x00B15F48
 		private EAssemblyState AssemblyState
 		{
 			get
@@ -289,7 +290,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032AF6 RID: 207606 RVA: 0x00BD31B0 File Offset: 0x00BD13B0
+		// Token: 0x060278A9 RID: 161961 RVA: 0x00B17E5C File Offset: 0x00B1605C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -309,41 +310,31 @@ namespace CSharpScript.Game.Module.Roulette.View
 				return null;
 			}
 			int num2 = int.Parse(configParams[0]);
-			LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> assemblyGridScrollView = this.AssemblyGridScrollView;
-			UUIItem uuiitem;
-			if (assemblyGridScrollView == null)
-			{
-				uuiitem = null;
-			}
-			else
-			{
-				uuiitem = assemblyGridScrollView.GetGridAndScrollToByJudge(num2, (object itemIdObj, AssemblyGridData data) => (int)itemIdObj == data.Id, true);
-			}
-			UUIItem uuiitem2 = uuiitem;
-			if (uuiitem2 != null)
+			UUIItem gridAndScrollToByJudge = this.GetAssemblyGridScrollView(this.CurrentSelectOnGridData.GridType).GetGridAndScrollToByJudge(num2, (object itemIdObj, AssemblyGridData data) => (int)itemIdObj == data.Id, true);
+			if (gridAndScrollToByJudge != null)
 			{
 				return new UUIItem[]
 				{
-					uuiitem2,
-					uuiitem2
+					gridAndScrollToByJudge,
+					gridAndScrollToByJudge
 				};
 			}
 			return null;
 		}
 
-		// Token: 0x06032AF7 RID: 207607 RVA: 0x00BD324D File Offset: 0x00BD144D
+		// Token: 0x060278AA RID: 161962 RVA: 0x00B17EFD File Offset: 0x00B160FD
 		private void SetRouletteType()
 		{
 			this.RouletteComponent.RefreshRouletteType();
 		}
 
-		// Token: 0x06032AF8 RID: 207608 RVA: 0x00BD325A File Offset: 0x00BD145A
+		// Token: 0x060278AB RID: 161963 RVA: 0x00B17F0A File Offset: 0x00B1610A
 		private void SetRoulettePlatformType()
 		{
 			this.RouletteComponent.RefreshRoulettePlatformType();
 		}
 
-		// Token: 0x06032AF9 RID: 207609 RVA: 0x00BD3268 File Offset: 0x00BD1468
+		// Token: 0x060278AC RID: 161964 RVA: 0x00B17F18 File Offset: 0x00B16118
 		private void SetRouletteInputType()
 		{
 			this.RouletteComponent.RefreshRouletteInputType();
@@ -359,7 +350,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			LguiUtil.Instance.SetLocalTextNew(text, "Text_ExploreToolsClose_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x06032AFA RID: 207610 RVA: 0x00BD32DF File Offset: 0x00BD14DF
+		// Token: 0x060278AD RID: 161965 RVA: 0x00B17F8F File Offset: 0x00B1618F
 		private void SwitchInputType()
 		{
 			this.SetRouletteInputType();
@@ -368,14 +359,14 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.SelectDefaultRouletteGrid();
 		}
 
-		// Token: 0x06032AFB RID: 207611 RVA: 0x00BD32FC File Offset: 0x00BD14FC
+		// Token: 0x060278AE RID: 161966 RVA: 0x00B17FAC File Offset: 0x00B161AC
 		private void OnButtonSwitch()
 		{
 			EAssemblyState assemblyState = (this.AssemblyState == EAssemblyState.RouletteGridChoose) ? EAssemblyState.ScrollViewChoose : EAssemblyState.RouletteGridChoose;
 			this.AssemblyState = assemblyState;
 		}
 
-		// Token: 0x06032AFC RID: 207612 RVA: 0x00BD3320 File Offset: 0x00BD1520
+		// Token: 0x060278AF RID: 161967 RVA: 0x00B17FD0 File Offset: 0x00B161D0
 		private void InputControllerMainTypeChange(EInputControllerMainType eInputControllerMainType, EInputControllerMainType inputControllerMainType)
 		{
 			Log instance = Log.Instance;
@@ -387,7 +378,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.SwitchInputType();
 		}
 
-		// Token: 0x06032AFD RID: 207613 RVA: 0x00BD3368 File Offset: 0x00BD1568
+		// Token: 0x060278B0 RID: 161968 RVA: 0x00B18018 File Offset: 0x00B16218
 		private void InitRouletteInputManager()
 		{
 			RouletteInputBase inputManager = this.InputManager;
@@ -405,7 +396,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.InputManager.SetIsNeedEmpty(true);
 		}
 
-		// Token: 0x06032AFE RID: 207614 RVA: 0x00BD3404 File Offset: 0x00BD1604
+		// Token: 0x060278B1 RID: 161969 RVA: 0x00B180B4 File Offset: 0x00B162B4
 		private void SelectDefaultRouletteGrid()
 		{
 			this.RouletteComponent.Reset();
@@ -438,7 +429,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.AssemblyState = EAssemblyState.ScrollViewChoose;
 		}
 
-		// Token: 0x06032AFF RID: 207615 RVA: 0x00BD34F0 File Offset: 0x00BD16F0
+		// Token: 0x060278B2 RID: 161970 RVA: 0x00B181A0 File Offset: 0x00B163A0
 		private void OnRouletteButtonClicked(RouletteData data)
 		{
 			RouletteData currentSelectOnGridData = this.CurrentSelectOnGridData;
@@ -461,7 +452,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.AssemblyState = EAssemblyState.ScrollViewChoose;
 		}
 
-		// Token: 0x06032B00 RID: 207616 RVA: 0x00BD3584 File Offset: 0x00BD1784
+		// Token: 0x060278B3 RID: 161971 RVA: 0x00B18234 File Offset: 0x00B16434
 		private bool OnCanRouletteToggleExecuteChange(RouletteData itemData, EToggleState state)
 		{
 			if (this.CurrentSelectOnGridData != null && state == EToggleState.ETT_Checked)
@@ -476,13 +467,24 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return true;
 		}
 
-		// Token: 0x06032B01 RID: 207617 RVA: 0x00BD35CB File Offset: 0x00BD17CB
+		// Token: 0x060278B4 RID: 161972 RVA: 0x00B1827C File Offset: 0x00B1647C
 		private void InitScrollView()
 		{
-			this.AssemblyGridScrollView = new LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData>(base.GetLoopScrollViewComponent(5), (AUIBaseActor)base.GetItem(6).GetOwner(), new Func<RouletteAssemblyGridItem>(this.OnGridProxyCreate), false);
+			this.ItemAssemblyGridScrollView = new LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData>(base.GetLoopScrollViewComponent(5), (AUIBaseActor)base.GetItem(6).GetOwner(), new Func<RouletteAssemblyGridItem>(this.OnGridProxyCreate), false);
+			this.GeneralAssemblyGridScrollView = new LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData>(base.GetLoopScrollViewComponent(17), (AUIBaseActor)base.GetItem(19).GetOwner(), new Func<RouletteAssemblyGridItem>(this.OnGridProxyCreate), false);
 		}
 
-		// Token: 0x06032B02 RID: 207618 RVA: 0x00BD3600 File Offset: 0x00BD1800
+		// Token: 0x060278B5 RID: 161973 RVA: 0x00B182EB File Offset: 0x00B164EB
+		private LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> GetAssemblyGridScrollView(ERouletteGridType gridType)
+		{
+			if (gridType != ERouletteGridType.EquipItem)
+			{
+				return this.GeneralAssemblyGridScrollView;
+			}
+			return this.ItemAssemblyGridScrollView;
+		}
+
+		// Token: 0x060278B6 RID: 161974 RVA: 0x00B18300 File Offset: 0x00B16500
 		private int GetGridRelativeIndex(AssemblyGridData gridData)
 		{
 			RouletteGridBase gridByValidId = this.RouletteComponent.GetGridByValidId(gridData.Id);
@@ -493,7 +495,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return 0;
 		}
 
-		// Token: 0x06032B03 RID: 207619 RVA: 0x00BD3634 File Offset: 0x00BD1834
+		// Token: 0x060278B7 RID: 161975 RVA: 0x00B18334 File Offset: 0x00B16534
 		private void RefreshScrollView(bool keepSelect = false)
 		{
 			if (this.CurrentSelectOnGridData == null)
@@ -519,18 +521,30 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RefreshItemFilterSort(30, list3);
 		}
 
-		// Token: 0x06032B04 RID: 207620 RVA: 0x00BD371C File Offset: 0x00BD191C
-		private void RefreshScrollViewByData(int selectGridIndex, List<AssemblyGridData> newDataList)
+		// Token: 0x060278B8 RID: 161976 RVA: 0x00B1841C File Offset: 0x00B1661C
+		private void RefreshScrollViewByData(ERouletteGridType gridType, int selectGridIndex, List<AssemblyGridData> newDataList)
 		{
+			LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> assemblyGridScrollView = this.GetAssemblyGridScrollView(gridType);
+			bool flag = gridType == ERouletteGridType.EquipItem;
 			this.CurrentSelectOnAssemblyData = null;
-			this.AssemblyGridScrollView.DeselectCurrentGridProxy(false);
-			base.GetLoopScrollViewComponent(5).RootUIComp.Get().SetUIActive(newDataList.Count > 0);
+			assemblyGridScrollView.DeselectCurrentGridProxy(false);
+			base.GetItem(18).SetUIActive(flag);
+			base.GetLoopScrollViewComponent(5).RootUIComp.Get().SetUIActive(flag && newDataList.Count > 0);
+			base.GetLoopScrollViewComponent(17).RootUIComp.Get().SetUIActive(!flag && newDataList.Count > 0);
 			base.GetItem(9).SetUIActive(newDataList.Count <= 0);
 			if (newDataList.Count > 0)
 			{
-				this.AssemblyGridScrollView.ReloadData(newDataList, false);
-				this.AssemblyGridScrollView.ScrollToGridIndex(selectGridIndex, true);
-				this.AssemblyGridScrollView.SelectGridProxy(selectGridIndex, true);
+				if (flag)
+				{
+					this.GeneralAssemblyGridScrollView.RefreshByData(Array.Empty<AssemblyGridData>(), false, null, false);
+				}
+				else
+				{
+					this.ItemAssemblyGridScrollView.RefreshByData(Array.Empty<AssemblyGridData>(), false, null, false);
+				}
+				assemblyGridScrollView.ReloadData(newDataList, false);
+				assemblyGridScrollView.ScrollToGridIndex(selectGridIndex, true);
+				assemblyGridScrollView.SelectGridProxy(selectGridIndex, true);
 				this.SelectAssemblyGridIndex = selectGridIndex;
 				return;
 			}
@@ -549,14 +563,15 @@ namespace CSharpScript.Game.Module.Roulette.View
 			buttonPhantomEdit.SetUiActive(false);
 		}
 
-		// Token: 0x06032B05 RID: 207621 RVA: 0x00BD37EC File Offset: 0x00BD19EC
+		// Token: 0x060278B9 RID: 161977 RVA: 0x00B18550 File Offset: 0x00B16750
 		private void OnRouletteNavigationComponentEmit()
 		{
-			if (!this.AssemblyGridScrollView.IsGridDisplaying(this.SelectAssemblyGridIndex))
+			LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> assemblyGridScrollView = this.GetAssemblyGridScrollView(this.CurrentSelectOnGridData.GridType);
+			if (!assemblyGridScrollView.IsGridDisplaying(this.SelectAssemblyGridIndex))
 			{
 				return;
 			}
-			RouletteAssemblyGridItem rouletteAssemblyGridItem = this.AssemblyGridScrollView.UnsafeGetGridProxy(this.SelectAssemblyGridIndex, false);
+			RouletteAssemblyGridItem rouletteAssemblyGridItem = assemblyGridScrollView.UnsafeGetGridProxy(this.SelectAssemblyGridIndex, false);
 			UUIItem uuiitem = (rouletteAssemblyGridItem != null) ? rouletteAssemblyGridItem.GetRootItem() : null;
 			if (uuiitem != null)
 			{
@@ -564,7 +579,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B06 RID: 207622 RVA: 0x00BD3840 File Offset: 0x00BD1A40
+		// Token: 0x060278BA RID: 161978 RVA: 0x00B185AC File Offset: 0x00B167AC
 		private EAssemblyGridState JudgeAssemblyGridState(AssemblyGridData assemblyData, RouletteData rouletteData)
 		{
 			EAssemblyGridState result = EAssemblyGridState.UnEquip;
@@ -588,7 +603,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return result;
 		}
 
-		// Token: 0x06032B07 RID: 207623 RVA: 0x00BD38A8 File Offset: 0x00BD1AA8
+		// Token: 0x060278BB RID: 161979 RVA: 0x00B18614 File Offset: 0x00B16814
 		private RouletteAssemblyGridItem OnGridProxyCreate()
 		{
 			RouletteAssemblyGridItem rouletteAssemblyGridItem = new RouletteAssemblyGridItem();
@@ -596,7 +611,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return rouletteAssemblyGridItem;
 		}
 
-		// Token: 0x06032B08 RID: 207624 RVA: 0x00BD38C4 File Offset: 0x00BD1AC4
+		// Token: 0x060278BC RID: 161980 RVA: 0x00B18630 File Offset: 0x00B16830
 		private void GridToggleFunction(MediumItemGridExtendCallback callbackParameter)
 		{
 			int state = (int)callbackParameter.State;
@@ -604,21 +619,22 @@ namespace CSharpScript.Game.Module.Roulette.View
 			RouletteAssemblyGridItem rouletteAssemblyGridItem = (RouletteAssemblyGridItem)callbackParameter.MediumItemGrid;
 			if (state == 1)
 			{
-				int selectedGridIndex = this.AssemblyGridScrollView.GetSelectedGridIndex();
+				LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> assemblyGridScrollView = this.GetAssemblyGridScrollView(assemblyGridData.GridType);
+				int selectedGridIndex = assemblyGridScrollView.GetSelectedGridIndex();
 				this.CurrentSelectOnAssemblyData = assemblyGridData;
-				this.AssemblyGridScrollView.DeselectCurrentGridProxy(false);
-				this.AssemblyGridScrollView.SelectGridProxy(assemblyGridData.Index, false);
-				this.AssemblyGridScrollView.RefreshGridProxy(selectedGridIndex);
+				assemblyGridScrollView.DeselectCurrentGridProxy(false);
+				assemblyGridScrollView.SelectGridProxy(assemblyGridData.Index, false);
+				assemblyGridScrollView.RefreshGridProxy(selectedGridIndex);
 				this.RefreshSwitchButton();
 				this.RefreshTips();
 				if (RouletteModel.Instance.TryRemoveNewItem(this.CurrentSelectOnAssemblyData.Id))
 				{
-					this.AssemblyGridScrollView.RefreshGridProxy(rouletteAssemblyGridItem.GridIndex);
+					assemblyGridScrollView.RefreshGridProxy(rouletteAssemblyGridItem.GridIndex);
 				}
 			}
 		}
 
-		// Token: 0x06032B09 RID: 207625 RVA: 0x00BD3964 File Offset: 0x00BD1B64
+		// Token: 0x060278BD RID: 161981 RVA: 0x00B186C4 File Offset: 0x00B168C4
 		private void RefreshSwitchButton()
 		{
 			base.GetItem(14).SetUIActive(false);
@@ -664,7 +680,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			buttonPhantomEdit.SetUiActive(false);
 		}
 
-		// Token: 0x06032B0A RID: 207626 RVA: 0x00BD3A68 File Offset: 0x00BD1C68
+		// Token: 0x060278BE RID: 161982 RVA: 0x00B187C8 File Offset: 0x00B169C8
 		private void SelectedItem(int _)
 		{
 			AssemblyGridData currentSelectOnAssemblyData = this.CurrentSelectOnAssemblyData;
@@ -738,7 +754,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.SaveTempData();
 		}
 
-		// Token: 0x06032B0B RID: 207627 RVA: 0x00BD3CCC File Offset: 0x00BD1ECC
+		// Token: 0x060278BF RID: 161983 RVA: 0x00B18A2C File Offset: 0x00B16C2C
 		private void SaveTempDataMap(int dataIndex, RouletteData newData)
 		{
 			if (newData.GridType == ERouletteGridType.EquipItem)
@@ -753,20 +769,22 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B0C RID: 207628 RVA: 0x00BD3D24 File Offset: 0x00BD1F24
+		// Token: 0x060278C0 RID: 161984 RVA: 0x00B18A84 File Offset: 0x00B16C84
 		protected void RefreshItemFilterSort(int useWayId, List<AssemblyGridData> itemDataList)
 		{
 			this.SortEntrance.UpdateData((EFilterSortGroupId)useWayId, itemDataList, Array.Empty<object>());
 			this.SortEntrance.SetActive(false);
 		}
 
-		// Token: 0x06032B0D RID: 207629 RVA: 0x00BD3D44 File Offset: 0x00BD1F44
+		// Token: 0x060278C1 RID: 161985 RVA: 0x00B18AA4 File Offset: 0x00B16CA4
 		private void OnItemFilterSortRefresh(List<AssemblyGridData> list, bool isOutSideChange, EFilterSortType sortType)
 		{
 			int selectGridIndex = 0;
+			ERouletteGridType gridType = this.CurrentSelectOnGridData.GridType;
+			LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> assemblyGridScrollView = this.GetAssemblyGridScrollView(gridType);
 			if (this.TempKeepSelect)
 			{
-				selectGridIndex = this.AssemblyGridScrollView.GetSelectedGridIndex();
+				selectGridIndex = assemblyGridScrollView.GetSelectedGridIndex();
 				this.TempKeepSelect = false;
 			}
 			else
@@ -788,10 +806,10 @@ namespace CSharpScript.Game.Module.Roulette.View
 					selectGridIndex = num;
 				}
 			}
-			this.RefreshScrollViewByData(selectGridIndex, list);
+			this.RefreshScrollViewByData(gridType, selectGridIndex, list);
 		}
 
-		// Token: 0x06032B0E RID: 207630 RVA: 0x00BD3DE4 File Offset: 0x00BD1FE4
+		// Token: 0x060278C2 RID: 161986 RVA: 0x00B18B5C File Offset: 0x00B16D5C
 		public void RefreshTips()
 		{
 			ERouletteGridType gridType = this.CurrentSelectOnAssemblyData.GridType;
@@ -827,7 +845,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			buttonPhantomEdit2.SetUiActive(assemblyTipsData.ShowPhantomInteractEquipment);
 		}
 
-		// Token: 0x06032B0F RID: 207631 RVA: 0x00BD3E88 File Offset: 0x00BD2088
+		// Token: 0x060278C3 RID: 161987 RVA: 0x00B18C00 File Offset: 0x00B16E00
 		private AssemblyTipsData CreateExploreSkillTipsData(AssemblyGridData gridData)
 		{
 			AssemblyTipsData assemblyTipsData = new AssemblyTipsData();
@@ -851,7 +869,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return assemblyTipsData;
 		}
 
-		// Token: 0x06032B10 RID: 207632 RVA: 0x00BD3FA0 File Offset: 0x00BD21A0
+		// Token: 0x060278C4 RID: 161988 RVA: 0x00B18D18 File Offset: 0x00B16F18
 		private AssemblyTipsData CreateEquipItemTipsData(AssemblyGridData gridData)
 		{
 			AssemblyTipsData assemblyTipsData = new AssemblyTipsData();
@@ -882,7 +900,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			return assemblyTipsData;
 		}
 
-		// Token: 0x06032B11 RID: 207633 RVA: 0x00BD40F0 File Offset: 0x00BD22F0
+		// Token: 0x060278C5 RID: 161989 RVA: 0x00B18E68 File Offset: 0x00B17068
 		private void RefreshTabToggle()
 		{
 			if (this.CurrentSelectOnGridData == null)
@@ -891,7 +909,8 @@ namespace CSharpScript.Game.Module.Roulette.View
 				return;
 			}
 			bool flag = this.CurrentSelectOnGridData.GridType == ERouletteGridType.EquipItem;
-			base.GetItem(2).SetUIActive(flag);
+			base.GetItem(18).SetUIActive(flag);
+			base.GetLoopScrollViewComponent(17).RootUIComp.Get().SetUIActive(!flag);
 			if (flag)
 			{
 				InventoryDefine.EItemType eitemType = this.EquipItemType;
@@ -910,25 +929,25 @@ namespace CSharpScript.Game.Module.Roulette.View
 			}
 		}
 
-		// Token: 0x06032B12 RID: 207634 RVA: 0x00BD4196 File Offset: 0x00BD2396
+		// Token: 0x060278C6 RID: 161990 RVA: 0x00B18F30 File Offset: 0x00B17130
 		private bool CanTabToggleChanged(EToggleState state, InventoryDefine.EItemType type)
 		{
 			return state == EToggleState.ETT_UnChecked || this.EquipItemType != type;
 		}
 
-		// Token: 0x06032B13 RID: 207635 RVA: 0x00BD41A9 File Offset: 0x00BD23A9
+		// Token: 0x060278C7 RID: 161991 RVA: 0x00B18F43 File Offset: 0x00B17143
 		private void OnToggleLeftClicked(EToggleState state)
 		{
 			this.OnToggleClicked(InventoryDefine.EItemType.Common, state);
 		}
 
-		// Token: 0x06032B14 RID: 207636 RVA: 0x00BD41B3 File Offset: 0x00BD23B3
+		// Token: 0x060278C8 RID: 161992 RVA: 0x00B18F4D File Offset: 0x00B1714D
 		private void OnToggleRightClicked(EToggleState state)
 		{
 			this.OnToggleClicked(InventoryDefine.EItemType.SpecialItem, state);
 		}
 
-		// Token: 0x06032B15 RID: 207637 RVA: 0x00BD41BE File Offset: 0x00BD23BE
+		// Token: 0x060278C9 RID: 161993 RVA: 0x00B18F58 File Offset: 0x00B17158
 		private void OnToggleClicked(InventoryDefine.EItemType newItemType, EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -944,19 +963,19 @@ namespace CSharpScript.Game.Module.Roulette.View
 			this.RefreshScrollView(false);
 		}
 
-		// Token: 0x06032B16 RID: 207638 RVA: 0x00BD41FE File Offset: 0x00BD23FE
+		// Token: 0x060278CA RID: 161994 RVA: 0x00B18F98 File Offset: 0x00B17198
 		private void OnSaveDataChange()
 		{
 			this.UpdateButtonEnable();
 		}
 
-		// Token: 0x06032B17 RID: 207639 RVA: 0x00BD4206 File Offset: 0x00BD2406
+		// Token: 0x060278CB RID: 161995 RVA: 0x00B18FA0 File Offset: 0x00B171A0
 		private void UpdateButtonEnable()
 		{
 			this.RefreshSwitchButton();
 		}
 
-		// Token: 0x06032B18 RID: 207640 RVA: 0x00BD4210 File Offset: 0x00BD2410
+		// Token: 0x060278CC RID: 161996 RVA: 0x00B18FA8 File Offset: 0x00B171A8
 		private void SetExploreSkill()
 		{
 			ERouletteExploreId? endSwitchSkillId = this.ViewProxy.OpenParam.EndSwitchSkillId;
@@ -968,7 +987,7 @@ namespace CSharpScript.Game.Module.Roulette.View
 			RouletteController.Instance.ExploreSkillSetRequest((int)endSwitchSkillId.Value, null, false);
 		}
 
-		// Token: 0x06032B19 RID: 207641 RVA: 0x00BD4264 File Offset: 0x00BD2464
+		// Token: 0x060278CD RID: 161997 RVA: 0x00B18FFC File Offset: 0x00B171FC
 		private void SaveTempData()
 		{
 			Log instance = Log.Instance;
@@ -986,70 +1005,79 @@ namespace CSharpScript.Game.Module.Roulette.View
 			});
 		}
 
-		// Token: 0x06032B1A RID: 207642 RVA: 0x00BD42C8 File Offset: 0x00BD24C8
+		// Token: 0x060278CE RID: 161998 RVA: 0x00B19060 File Offset: 0x00B17260
 		private void OnToggleConfigClicked(EToggleState state)
 		{
 			int config = (state == EToggleState.ETT_Checked) ? 1 : 0;
 			RouletteModel.Instance.SaveRouletteSelectConfig(config);
 		}
 
-		// Token: 0x06032B1B RID: 207643 RVA: 0x00BD42E5 File Offset: 0x00BD24E5
+		// Token: 0x060278CF RID: 161999 RVA: 0x00B1907D File Offset: 0x00B1727D
 		private void OnPhantomEditClicked(int _)
 		{
 			PhantomInteractController.Instance.OpenPhantomVisionEditView(0, false);
 		}
 
-		// Token: 0x0401AFC3 RID: 110531
+		// Token: 0x04015923 RID: 88355
 		private RouletteAssemblyViewProxy ViewProxy;
 
-		// Token: 0x0401AFC4 RID: 110532
+		// Token: 0x04015924 RID: 88356
 		[Nullable(2)]
 		private RouletteInputBase InputManager;
 
-		// Token: 0x0401AFC5 RID: 110533
+		// Token: 0x04015925 RID: 88357
 		[Nullable(new byte[]
 		{
 			2,
 			1,
 			1
 		})]
-		private LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> AssemblyGridScrollView;
+		private LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> ItemAssemblyGridScrollView;
 
-		// Token: 0x0401AFC6 RID: 110534
+		// Token: 0x04015926 RID: 88358
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private LoopScrollView<RouletteAssemblyGridItem, AssemblyGridData> GeneralAssemblyGridScrollView;
+
+		// Token: 0x04015927 RID: 88359
 		private InventoryDefine.EItemType EquipItemType = InventoryDefine.EItemType.Common;
 
-		// Token: 0x0401AFC7 RID: 110535
+		// Token: 0x04015928 RID: 88360
 		[Nullable(2)]
 		protected UUIExtendToggle ToggleLeft;
 
-		// Token: 0x0401AFC8 RID: 110536
+		// Token: 0x04015929 RID: 88361
 		[Nullable(2)]
 		protected UUIExtendToggle ToggleRight;
 
-		// Token: 0x0401AFC9 RID: 110537
+		// Token: 0x0401592A RID: 88362
 		[Nullable(2)]
 		private RouletteData CurrentSelectOnGridData;
 
-		// Token: 0x0401AFCA RID: 110538
+		// Token: 0x0401592B RID: 88363
 		[Nullable(2)]
 		private AssemblyGridData CurrentSelectOnAssemblyData;
 
-		// Token: 0x0401AFCB RID: 110539
+		// Token: 0x0401592C RID: 88364
 		private EAssemblyState ViewAssemblyState;
 
-		// Token: 0x0401AFCC RID: 110540
+		// Token: 0x0401592D RID: 88365
 		[Nullable(2)]
 		private ButtonItem ButtonSwitch;
 
-		// Token: 0x0401AFCD RID: 110541
+		// Token: 0x0401592E RID: 88366
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401AFCE RID: 110542
+		// Token: 0x0401592F RID: 88367
 		[Nullable(2)]
 		private RouletteAssemblyTips AssemblyTips;
 
-		// Token: 0x0401AFCF RID: 110543
+		// Token: 0x04015930 RID: 88368
 		[Nullable(new byte[]
 		{
 			2,
@@ -1057,25 +1085,25 @@ namespace CSharpScript.Game.Module.Roulette.View
 		})]
 		private SortEntrance<AssemblyGridData> SortEntrance;
 
-		// Token: 0x0401AFD0 RID: 110544
+		// Token: 0x04015931 RID: 88369
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401AFD1 RID: 110545
+		// Token: 0x04015932 RID: 88370
 		[Nullable(2)]
 		private RouletteAssemblyTabItem TabItem;
 
-		// Token: 0x0401AFD2 RID: 110546
+		// Token: 0x04015933 RID: 88371
 		[Nullable(2)]
 		public UUIItem RouletteUiItem;
 
-		// Token: 0x0401AFD3 RID: 110547
+		// Token: 0x04015934 RID: 88372
 		[Nullable(2)]
 		private ButtonItem ButtonPhantomEdit;
 
-		// Token: 0x0401AFD4 RID: 110548
+		// Token: 0x04015935 RID: 88373
 		protected int SelectAssemblyGridIndex;
 
-		// Token: 0x0401AFD5 RID: 110549
+		// Token: 0x04015936 RID: 88374
 		protected bool TempKeepSelect;
 	}
 }

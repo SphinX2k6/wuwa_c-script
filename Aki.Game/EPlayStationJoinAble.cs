@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020022E2 RID: 8930
+// Token: 0x020017C6 RID: 6086
 public enum EPlayStationJoinAble
 {
-	// Token: 0x04008578 RID: 34168
+	// Token: 0x040086B6 RID: 34486
 	NotSet,
-	// Token: 0x04008579 RID: 34169
+	// Token: 0x040086B7 RID: 34487
 	NoOne,
-	// Token: 0x0400857A RID: 34170
+	// Token: 0x040086B8 RID: 34488
 	Friends,
-	// Token: 0x0400857B RID: 34171
+	// Token: 0x040086B9 RID: 34489
 	FriendsOfFriends,
-	// Token: 0x0400857C RID: 34172
+	// Token: 0x040086BA RID: 34490
 	Anyone,
-	// Token: 0x0400857D RID: 34173
+	// Token: 0x040086BB RID: 34491
 	SpecifiedUsers
 }

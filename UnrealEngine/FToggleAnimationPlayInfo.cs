@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002115 RID: 8469
+	// Token: 0x020006E2 RID: 1762
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.ToggleAnimationPlayInfo")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FToggleAnimationPlayInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601FDDC RID: 130524 RVA: 0x002F68CD File Offset: 0x002F4ACD
+		// Token: 0x060095A5 RID: 38309 RVA: 0x000E1F65 File Offset: 0x000E0165
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FToggleAnimationPlayInfo._ScriptStructPtr != 0) ? FToggleAnimationPlayInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.ToggleAnimationPlayInfo", ref FToggleAnimationPlayInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17007D56 RID: 32086
-		// (get) Token: 0x0601FDDD RID: 130525 RVA: 0x002F68F4 File Offset: 0x002F4AF4
-		// (set) Token: 0x0601FDDE RID: 130526 RVA: 0x002F6937 File Offset: 0x002F4B37
+		// Token: 0x17001BC8 RID: 7112
+		// (get) Token: 0x060095A6 RID: 38310 RVA: 0x000E1F8C File Offset: 0x000E018C
+		// (set) Token: 0x060095A7 RID: 38311 RVA: 0x000E1FCF File Offset: 0x000E01CF
 		public FSequenceInfo Animation
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D57 RID: 32087
-		// (get) Token: 0x0601FDDF RID: 130527 RVA: 0x002F6958 File Offset: 0x002F4B58
-		// (set) Token: 0x0601FDE0 RID: 130528 RVA: 0x002F6968 File Offset: 0x002F4B68
+		// Token: 0x17001BC9 RID: 7113
+		// (get) Token: 0x060095A8 RID: 38312 RVA: 0x000E1FF0 File Offset: 0x000E01F0
+		// (set) Token: 0x060095A9 RID: 38313 RVA: 0x000E2000 File Offset: 0x000E0200
 		public unsafe float PlayRate
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D58 RID: 32088
-		// (get) Token: 0x0601FDE1 RID: 130529 RVA: 0x002F6979 File Offset: 0x002F4B79
-		// (set) Token: 0x0601FDE2 RID: 130530 RVA: 0x002F6989 File Offset: 0x002F4B89
+		// Token: 0x17001BCA RID: 7114
+		// (get) Token: 0x060095AA RID: 38314 RVA: 0x000E2011 File Offset: 0x000E0211
+		// (set) Token: 0x060095AB RID: 38315 RVA: 0x000E2021 File Offset: 0x000E0221
 		public unsafe bool bPlayReverse
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D59 RID: 32089
-		// (get) Token: 0x0601FDE3 RID: 130531 RVA: 0x002F699A File Offset: 0x002F4B9A
-		// (set) Token: 0x0601FDE4 RID: 130532 RVA: 0x002F69AA File Offset: 0x002F4BAA
+		// Token: 0x17001BCB RID: 7115
+		// (get) Token: 0x060095AC RID: 38316 RVA: 0x000E2032 File Offset: 0x000E0232
+		// (set) Token: 0x060095AD RID: 38317 RVA: 0x000E2042 File Offset: 0x000E0242
 		public unsafe int JumpToFrame
 		{
 			get
@@ -85,69 +85,60 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FDE5 RID: 130533 RVA: 0x002F69BB File Offset: 0x002F4BBB
+		// Token: 0x060095AE RID: 38318 RVA: 0x000E2053 File Offset: 0x000E0253
 		public FToggleAnimationPlayInfo()
 		{
 		}
 
-		// Token: 0x0601FDE6 RID: 130534 RVA: 0x002F69C3 File Offset: 0x002F4BC3
-		public FToggleAnimationPlayInfo(FSequenceInfo Animation, float PlayRate, bool bPlayReverse, int JumpToFrame)
-		{
-			this.Animation = Animation;
-			this.PlayRate = PlayRate;
-			this.bPlayReverse = bPlayReverse;
-			this.JumpToFrame = JumpToFrame;
-		}
-
-		// Token: 0x0601FDE7 RID: 130535 RVA: 0x002F69E8 File Offset: 0x002F4BE8
+		// Token: 0x060095AF RID: 38319 RVA: 0x000E205B File Offset: 0x000E025B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FToggleAnimationPlayInfo.StaticStruct();
 		}
 
-		// Token: 0x0601FDE8 RID: 130536 RVA: 0x002F69F4 File Offset: 0x002F4BF4
+		// Token: 0x060095B0 RID: 38320 RVA: 0x000E2067 File Offset: 0x000E0267
 		[NullableContext(2)]
 		public FToggleAnimationPlayInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FDE9 RID: 130537 RVA: 0x002F69FE File Offset: 0x002F4BFE
+		// Token: 0x060095B1 RID: 38321 RVA: 0x000E2071 File Offset: 0x000E0271
 		public FToggleAnimationPlayInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FDEA RID: 130538 RVA: 0x002F6A09 File Offset: 0x002F4C09
+		// Token: 0x060095B2 RID: 38322 RVA: 0x000E207C File Offset: 0x000E027C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FToggleAnimationPlayInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601FDEB RID: 130539 RVA: 0x002F6A13 File Offset: 0x002F4C13
+		// Token: 0x060095B3 RID: 38323 RVA: 0x000E2086 File Offset: 0x000E0286
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FToggleAnimationPlayInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040112C4 RID: 70340
+		// Token: 0x0400411F RID: 16671
 		public const string __ObjectPath = "/Script/LGUI.ToggleAnimationPlayInfo";
 
-		// Token: 0x040112C5 RID: 70341
+		// Token: 0x04004120 RID: 16672
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040112C6 RID: 70342
+		// Token: 0x04004121 RID: 16673
 		internal static int __PropertyOffset_Animation;
 
-		// Token: 0x040112C7 RID: 70343
+		// Token: 0x04004122 RID: 16674
 		[Nullable(2)]
 		private FSequenceInfo _Animation;
 
-		// Token: 0x040112C8 RID: 70344
+		// Token: 0x04004123 RID: 16675
 		internal static int __PropertyOffset_PlayRate;
 
-		// Token: 0x040112C9 RID: 70345
+		// Token: 0x04004124 RID: 16676
 		internal static int __PropertyOffset_bPlayReverse;
 
-		// Token: 0x040112CA RID: 70346
+		// Token: 0x04004125 RID: 16677
 		internal static int __PropertyOffset_JumpToFrame;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CDD RID: 3293
+	// Token: 0x02000DC1 RID: 3521
 	public struct GachaAccumulate : IFlatbufferObject
 	{
-		// Token: 0x17001494 RID: 5268
-		// (get) Token: 0x060077F2 RID: 30706 RVA: 0x002457C5 File Offset: 0x002439C5
+		// Token: 0x170014F1 RID: 5361
+		// (get) Token: 0x06007DFD RID: 32253 RVA: 0x00264341 File Offset: 0x00262541
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077F3 RID: 30707 RVA: 0x002457D2 File Offset: 0x002439D2
+		// Token: 0x06007DFE RID: 32254 RVA: 0x0026434E File Offset: 0x0026254E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060077F4 RID: 30708 RVA: 0x002457DC File Offset: 0x002439DC
+		// Token: 0x06007DFF RID: 32255 RVA: 0x00264358 File Offset: 0x00262558
 		public static GachaAccumulate GetRootAsGachaAccumulate(ByteBuffer _bb)
 		{
 			return GachaAccumulate.GetRootAsGachaAccumulate(_bb, default(GachaAccumulate));
 		}
 
-		// Token: 0x060077F5 RID: 30709 RVA: 0x002457F8 File Offset: 0x002439F8
+		// Token: 0x06007E00 RID: 32256 RVA: 0x00264374 File Offset: 0x00262574
 		public static GachaAccumulate GetRootAsGachaAccumulate(ByteBuffer _bb, GachaAccumulate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060077F6 RID: 30710 RVA: 0x00245815 File Offset: 0x00243A15
+		// Token: 0x06007E01 RID: 32257 RVA: 0x00264391 File Offset: 0x00262591
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060077F7 RID: 30711 RVA: 0x00245824 File Offset: 0x00243A24
+		// Token: 0x06007E02 RID: 32258 RVA: 0x002643A0 File Offset: 0x002625A0
 		public GachaAccumulate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001495 RID: 5269
-		// (get) Token: 0x060077F8 RID: 30712 RVA: 0x00245834 File Offset: 0x00243A34
+		// Token: 0x170014F2 RID: 5362
+		// (get) Token: 0x06007E03 RID: 32259 RVA: 0x002643B0 File Offset: 0x002625B0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001496 RID: 5270
-		// (get) Token: 0x060077F9 RID: 30713 RVA: 0x00245870 File Offset: 0x00243A70
+		// Token: 0x170014F3 RID: 5363
+		// (get) Token: 0x06007E04 RID: 32260 RVA: 0x002643EC File Offset: 0x002625EC
 		public string TipsPrefabPath
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077FA RID: 30714 RVA: 0x002458A7 File Offset: 0x00243AA7
+		// Token: 0x06007E05 RID: 32261 RVA: 0x00264423 File Offset: 0x00262623
 		public Span<byte> GetTipsPrefabPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060077FB RID: 30715 RVA: 0x002458B6 File Offset: 0x00243AB6
+		// Token: 0x06007E06 RID: 32262 RVA: 0x00264432 File Offset: 0x00262632
 		public byte[] GetTipsPrefabPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001497 RID: 5271
-		// (get) Token: 0x060077FC RID: 30716 RVA: 0x002458D0 File Offset: 0x00243AD0
+		// Token: 0x170014F4 RID: 5364
+		// (get) Token: 0x06007E07 RID: 32263 RVA: 0x0026444C File Offset: 0x0026264C
 		public string GachaAccumulatePrefabPath
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060077FD RID: 30717 RVA: 0x00245907 File Offset: 0x00243B07
+		// Token: 0x06007E08 RID: 32264 RVA: 0x00264483 File Offset: 0x00262683
 		public Span<byte> GetGachaAccumulatePrefabPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060077FE RID: 30718 RVA: 0x00245916 File Offset: 0x00243B16
+		// Token: 0x06007E09 RID: 32265 RVA: 0x00264492 File Offset: 0x00262692
 		public byte[] GetGachaAccumulatePrefabPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001498 RID: 5272
-		// (get) Token: 0x060077FF RID: 30719 RVA: 0x00245930 File Offset: 0x00243B30
+		// Token: 0x170014F5 RID: 5365
+		// (get) Token: 0x06007E0A RID: 32266 RVA: 0x002644AC File Offset: 0x002626AC
 		public int ShowType
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001499 RID: 5273
-		// (get) Token: 0x06007800 RID: 30720 RVA: 0x00245970 File Offset: 0x00243B70
+		// Token: 0x170014F6 RID: 5366
+		// (get) Token: 0x06007E0B RID: 32267 RVA: 0x002644EC File Offset: 0x002626EC
 		public int HelpId
 		{
 			get
@@ -146,7 +146,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D4E RID: 19790
+		// Token: 0x04005332 RID: 21298
 		private Table __p;
 	}
 }

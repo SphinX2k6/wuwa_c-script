@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D86 RID: 3462
+	// Token: 0x02000D76 RID: 3446
 	[NetMessage(EMessageId.PlayerCreateXboxSessionRequest)]
 	public sealed class PlayerCreateXboxSessionRequest : IMessage<PlayerCreateXboxSessionRequest>, IMessage, IEquatable<PlayerCreateXboxSessionRequest>, IDeepCloneable<PlayerCreateXboxSessionRequest>, IBufferMessage
 	{
-		// Token: 0x06012A8A RID: 76426 RVA: 0x002B895A File Offset: 0x002B6B5A
+		// Token: 0x0601298E RID: 76174 RVA: 0x002B6D3A File Offset: 0x002B4F3A
 		[NullableContext(1)]
 		public static PlayerCreateXboxSessionRequest Create()
 		{
 			return new PlayerCreateXboxSessionRequest();
 		}
 
-		// Token: 0x17003DDC RID: 15836
-		// (get) Token: 0x06012A8B RID: 76427 RVA: 0x002B8961 File Offset: 0x002B6B61
+		// Token: 0x17003DA7 RID: 15783
+		// (get) Token: 0x0601298F RID: 76175 RVA: 0x002B6D41 File Offset: 0x002B4F41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003DDD RID: 15837
-		// (get) Token: 0x06012A8C RID: 76428 RVA: 0x002B8964 File Offset: 0x002B6B64
+		// Token: 0x17003DA8 RID: 15784
+		// (get) Token: 0x06012990 RID: 76176 RVA: 0x002B6D44 File Offset: 0x002B4F44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012A8D RID: 76429 RVA: 0x002B896B File Offset: 0x002B6B6B
+		// Token: 0x06012991 RID: 76177 RVA: 0x002B6D4B File Offset: 0x002B4F4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerCreateXboxSessionRequest()
 		{
 		}
 
-		// Token: 0x06012A8E RID: 76430 RVA: 0x002B897E File Offset: 0x002B6B7E
+		// Token: 0x06012992 RID: 76178 RVA: 0x002B6D5E File Offset: 0x002B4F5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerCreateXboxSessionRequest(PlayerCreateXboxSessionRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012A8F RID: 76431 RVA: 0x002B89A3 File Offset: 0x002B6BA3
+		// Token: 0x06012993 RID: 76179 RVA: 0x002B6D83 File Offset: 0x002B4F83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerCreateXboxSessionRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new PlayerCreateXboxSessionRequest(this);
 		}
 
-		// Token: 0x17003DDE RID: 15838
-		// (get) Token: 0x06012A90 RID: 76432 RVA: 0x002B89AB File Offset: 0x002B6BAB
-		// (set) Token: 0x06012A91 RID: 76433 RVA: 0x002B89B3 File Offset: 0x002B6BB3
+		// Token: 0x17003DA9 RID: 15785
+		// (get) Token: 0x06012994 RID: 76180 RVA: 0x002B6D8B File Offset: 0x002B4F8B
+		// (set) Token: 0x06012995 RID: 76181 RVA: 0x002B6D93 File Offset: 0x002B4F93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string XboxSessionId
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012A92 RID: 76434 RVA: 0x002B89C6 File Offset: 0x002B6BC6
+		// Token: 0x06012996 RID: 76182 RVA: 0x002B6DA6 File Offset: 0x002B4FA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerCreateXboxSessionRequest);
 		}
 
-		// Token: 0x06012A93 RID: 76435 RVA: 0x002B89D4 File Offset: 0x002B6BD4
+		// Token: 0x06012997 RID: 76183 RVA: 0x002B6DB4 File Offset: 0x002B4FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerCreateXboxSessionRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.XboxSessionId != other.XboxSessionId) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012A94 RID: 76436 RVA: 0x002B8A08 File Offset: 0x002B6C08
+		// Token: 0x06012998 RID: 76184 RVA: 0x002B6DE8 File Offset: 0x002B4FE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012A95 RID: 76437 RVA: 0x002B8A49 File Offset: 0x002B6C49
+		// Token: 0x06012999 RID: 76185 RVA: 0x002B6E29 File Offset: 0x002B5029
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012A96 RID: 76438 RVA: 0x002B8A56 File Offset: 0x002B6C56
+		// Token: 0x0601299A RID: 76186 RVA: 0x002B6E36 File Offset: 0x002B5036
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012A97 RID: 76439 RVA: 0x002B8A5F File Offset: 0x002B6C5F
+		// Token: 0x0601299B RID: 76187 RVA: 0x002B6E3F File Offset: 0x002B503F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.XboxSessionId.Length != 0)
 			{
-				output.WriteRawTag(106);
+				output.WriteRawTag(18);
 				output.WriteString(this.XboxSessionId);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012A98 RID: 76440 RVA: 0x002B8A98 File Offset: 0x002B6C98
+		// Token: 0x0601299C RID: 76188 RVA: 0x002B6E78 File Offset: 0x002B5078
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012A99 RID: 76441 RVA: 0x002B8ADB File Offset: 0x002B6CDB
+		// Token: 0x0601299D RID: 76189 RVA: 0x002B6EBB File Offset: 0x002B50BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerCreateXboxSessionRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012A9A RID: 76442 RVA: 0x002B8B11 File Offset: 0x002B6D11
+		// Token: 0x0601299E RID: 76190 RVA: 0x002B6EF1 File Offset: 0x002B50F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012A9B RID: 76443 RVA: 0x002B8B1C File Offset: 0x002B6D1C
+		// Token: 0x0601299F RID: 76191 RVA: 0x002B6EFC File Offset: 0x002B50FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 106U)
+				if (num != 18U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040073B1 RID: 29617
+		// Token: 0x040073C9 RID: 29641
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040073B2 RID: 29618
-		public const int XboxSessionIdFieldNumber = 13;
+		// Token: 0x040073CA RID: 29642
+		public const int XboxSessionIdFieldNumber = 2;
 
-		// Token: 0x040073B3 RID: 29619
+		// Token: 0x040073CB RID: 29643
 		private string xboxSessionId_ = "";
 	}
 }

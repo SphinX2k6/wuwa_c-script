@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010B8 RID: 4280
+	// Token: 0x020011E6 RID: 4582
 	public class IQuestScheduleTowerChallengeTitle_SetValue
 	{
-		// Token: 0x04003A37 RID: 14903
+		// Token: 0x04003D84 RID: 15748
 		public EQuestScheduleType Type;
 	}
 }

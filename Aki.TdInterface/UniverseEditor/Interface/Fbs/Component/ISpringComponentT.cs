@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005990 RID: 22928
+	// Token: 0x02005F9D RID: 24477
 	public class ISpringComponentT
 	{
-		// Token: 0x1700AC13 RID: 44051
-		// (get) Token: 0x06026D52 RID: 159058 RVA: 0x0055852F File Offset: 0x0055672F
-		// (set) Token: 0x06026D53 RID: 159059 RVA: 0x00558537 File Offset: 0x00556737
+		// Token: 0x1700B547 RID: 46407
+		// (get) Token: 0x060292BC RID: 168636 RVA: 0x0059F19B File Offset: 0x0059D39B
+		// (set) Token: 0x060292BD RID: 168637 RVA: 0x0059F1A3 File Offset: 0x0059D3A3
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AC14 RID: 44052
-		// (get) Token: 0x06026D54 RID: 159060 RVA: 0x00558540 File Offset: 0x00556740
-		// (set) Token: 0x06026D55 RID: 159061 RVA: 0x00558548 File Offset: 0x00556748
+		// Token: 0x1700B548 RID: 46408
+		// (get) Token: 0x060292BE RID: 168638 RVA: 0x0059F1AC File Offset: 0x0059D3AC
+		// (set) Token: 0x060292BF RID: 168639 RVA: 0x0059F1B4 File Offset: 0x0059D3B4
 		public bool IsNormalSpring { get; set; }
 
-		// Token: 0x1700AC15 RID: 44053
-		// (get) Token: 0x06026D56 RID: 159062 RVA: 0x00558551 File Offset: 0x00556751
-		// (set) Token: 0x06026D57 RID: 159063 RVA: 0x00558559 File Offset: 0x00556759
+		// Token: 0x1700B549 RID: 46409
+		// (get) Token: 0x060292C0 RID: 168640 RVA: 0x0059F1BD File Offset: 0x0059D3BD
+		// (set) Token: 0x060292C1 RID: 168641 RVA: 0x0059F1C5 File Offset: 0x0059D3C5
 		public bool IsHitNormalSpring { get; set; }
 
-		// Token: 0x1700AC16 RID: 44054
-		// (get) Token: 0x06026D58 RID: 159064 RVA: 0x00558562 File Offset: 0x00556762
-		// (set) Token: 0x06026D59 RID: 159065 RVA: 0x0055856A File Offset: 0x0055676A
+		// Token: 0x1700B54A RID: 46410
+		// (get) Token: 0x060292C2 RID: 168642 RVA: 0x0059F1CE File Offset: 0x0059D3CE
+		// (set) Token: 0x060292C3 RID: 168643 RVA: 0x0059F1D6 File Offset: 0x0059D3D6
 		public ISettingSpringDirT SettingDir { get; set; }
 
-		// Token: 0x1700AC17 RID: 44055
-		// (get) Token: 0x06026D5A RID: 159066 RVA: 0x00558573 File Offset: 0x00556773
-		// (set) Token: 0x06026D5B RID: 159067 RVA: 0x0055857B File Offset: 0x0055677B
+		// Token: 0x1700B54B RID: 46411
+		// (get) Token: 0x060292C4 RID: 168644 RVA: 0x0059F1DF File Offset: 0x0059D3DF
+		// (set) Token: 0x060292C5 RID: 168645 RVA: 0x0059F1E7 File Offset: 0x0059D3E7
 		public int SpringPow { get; set; }
 
-		// Token: 0x1700AC18 RID: 44056
-		// (get) Token: 0x06026D5C RID: 159068 RVA: 0x00558584 File Offset: 0x00556784
-		// (set) Token: 0x06026D5D RID: 159069 RVA: 0x0055858C File Offset: 0x0055678C
+		// Token: 0x1700B54C RID: 46412
+		// (get) Token: 0x060292C6 RID: 168646 RVA: 0x0059F1F0 File Offset: 0x0059D3F0
+		// (set) Token: 0x060292C7 RID: 168647 RVA: 0x0059F1F8 File Offset: 0x0059D3F8
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026D5E RID: 159070 RVA: 0x00558595 File Offset: 0x00556795
+		// Token: 0x060292C8 RID: 168648 RVA: 0x0059F201 File Offset: 0x0059D401
 		public ISpringComponentT()
 		{
 			this.Disabled = false;

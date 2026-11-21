@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020010E7 RID: 4327
+	// Token: 0x0200027B RID: 635
 	[UnrealObjectPath("/Script/Engine.ShapeComponent")]
 	[UnrealStructLayout(1584, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1584)]
 	public abstract class UShapeComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600F85B RID: 63579 RVA: 0x0016F52F File Offset: 0x0016D72F
+		// Token: 0x060041E1 RID: 16865 RVA: 0x0005E296 File Offset: 0x0005C496
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UShapeComponent._ClassPtr;
 		}
 
-		// Token: 0x17003C80 RID: 15488
-		// (get) Token: 0x0600F85C RID: 63580 RVA: 0x0016F53B File Offset: 0x0016D73B
-		// (set) Token: 0x0600F85D RID: 63581 RVA: 0x0016F54F File Offset: 0x0016D74F
+		// Token: 0x17000C18 RID: 3096
+		// (get) Token: 0x060041E2 RID: 16866 RVA: 0x0005E2A2 File Offset: 0x0005C4A2
+		// (set) Token: 0x060041E3 RID: 16867 RVA: 0x0005E2B6 File Offset: 0x0005C4B6
 		[Nullable(2)]
 		public unsafe UBodySetup ShapeBodySetup
 		{
@@ -35,39 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C81 RID: 15489
-		// (get) Token: 0x0600F85E RID: 63582 RVA: 0x0016F564 File Offset: 0x0016D764
-		// (set) Token: 0x0600F85F RID: 63583 RVA: 0x0016F578 File Offset: 0x0016D778
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<UNavAreaBase> AreaClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UShapeComponent.__PropertyOffset_AreaClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UShapeComponent.__PropertyOffset_AreaClass) = value;
-			}
-		}
-
-		// Token: 0x17003C82 RID: 15490
-		// (get) Token: 0x0600F860 RID: 63584 RVA: 0x0016F58D File Offset: 0x0016D78D
-		// (set) Token: 0x0600F861 RID: 63585 RVA: 0x0016F5A1 File Offset: 0x0016D7A1
+		// Token: 0x17000C19 RID: 3097
+		// (get) Token: 0x060041E4 RID: 16868 RVA: 0x0005E2CB File Offset: 0x0005C4CB
+		// (set) Token: 0x060041E5 RID: 16869 RVA: 0x0005E2DF File Offset: 0x0005C4DF
 		public unsafe FColor ShapeColor
 		{
 			get
@@ -80,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C83 RID: 15491
-		// (get) Token: 0x0600F862 RID: 63586 RVA: 0x0016F5B6 File Offset: 0x0016D7B6
-		// (set) Token: 0x0600F863 RID: 63587 RVA: 0x0016F5CF File Offset: 0x0016D7CF
+		// Token: 0x17000C1A RID: 3098
+		// (get) Token: 0x060041E6 RID: 16870 RVA: 0x0005E2F4 File Offset: 0x0005C4F4
+		// (set) Token: 0x060041E7 RID: 16871 RVA: 0x0005E30D File Offset: 0x0005C50D
 		public unsafe bool bDrawOnlyIfSelected
 		{
 			get
@@ -95,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C84 RID: 15492
-		// (get) Token: 0x0600F864 RID: 63588 RVA: 0x0016F5FF File Offset: 0x0016D7FF
-		// (set) Token: 0x0600F865 RID: 63589 RVA: 0x0016F618 File Offset: 0x0016D818
+		// Token: 0x17000C1B RID: 3099
+		// (get) Token: 0x060041E8 RID: 16872 RVA: 0x0005E33D File Offset: 0x0005C53D
+		// (set) Token: 0x060041E9 RID: 16873 RVA: 0x0005E356 File Offset: 0x0005C556
 		public unsafe bool bShouldCollideWhenPlacing
 		{
 			get
@@ -110,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003C85 RID: 15493
-		// (get) Token: 0x0600F866 RID: 63590 RVA: 0x0016F648 File Offset: 0x0016D848
-		// (set) Token: 0x0600F867 RID: 63591 RVA: 0x0016F661 File Offset: 0x0016D861
+		// Token: 0x17000C1C RID: 3100
+		// (get) Token: 0x060041EA RID: 16874 RVA: 0x0005E386 File Offset: 0x0005C586
+		// (set) Token: 0x060041EB RID: 16875 RVA: 0x0005E39F File Offset: 0x0005C59F
 		public unsafe bool bDynamicObstacle
 		{
 			get
@@ -125,57 +95,54 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600F868 RID: 63592 RVA: 0x0016F691 File Offset: 0x0016D891
+		// Token: 0x060041EC RID: 16876 RVA: 0x0005E3CF File Offset: 0x0005C5CF
 		static UShapeComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.ShapeComponent");
 		}
 
-		// Token: 0x0600F869 RID: 63593 RVA: 0x0016F6A0 File Offset: 0x0016D8A0
+		// Token: 0x060041ED RID: 16877 RVA: 0x0005E3E0 File Offset: 0x0005C5E0
 		protected UShapeComponent() : this(BuiltinUtils.AllocNativeUObject(UShapeComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600F86A RID: 63594 RVA: 0x0016F6C8 File Offset: 0x0016D8C8
+		// Token: 0x060041EE RID: 16878 RVA: 0x0005E408 File Offset: 0x0005C608
 		protected UShapeComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400862B RID: 34347
+		// Token: 0x040019BD RID: 6589
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.ShapeComponent";
 
-		// Token: 0x0400862C RID: 34348
+		// Token: 0x040019BE RID: 6590
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400862D RID: 34349
+		// Token: 0x040019BF RID: 6591
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400862E RID: 34350
+		// Token: 0x040019C0 RID: 6592
 		internal static int __PropertyOffset_ShapeBodySetup;
 
-		// Token: 0x0400862F RID: 34351
-		internal static int __PropertyOffset_AreaClass;
-
-		// Token: 0x04008630 RID: 34352
+		// Token: 0x040019C1 RID: 6593
 		internal static int __PropertyOffset_ShapeColor;
 
-		// Token: 0x04008631 RID: 34353
+		// Token: 0x040019C2 RID: 6594
 		internal static int __PropertyOffset_bDrawOnlyIfSelected;
 
-		// Token: 0x04008632 RID: 34354
+		// Token: 0x040019C3 RID: 6595
 		internal static byte __PropertyMask_bDrawOnlyIfSelected;
 
-		// Token: 0x04008633 RID: 34355
+		// Token: 0x040019C4 RID: 6596
 		internal static int __PropertyOffset_bShouldCollideWhenPlacing;
 
-		// Token: 0x04008634 RID: 34356
+		// Token: 0x040019C5 RID: 6597
 		internal static byte __PropertyMask_bShouldCollideWhenPlacing;
 
-		// Token: 0x04008635 RID: 34357
+		// Token: 0x040019C6 RID: 6598
 		internal static int __PropertyOffset_bDynamicObstacle;
 
-		// Token: 0x04008636 RID: 34358
+		// Token: 0x040019C7 RID: 6599
 		internal static byte __PropertyMask_bDynamicObstacle;
 	}
 }

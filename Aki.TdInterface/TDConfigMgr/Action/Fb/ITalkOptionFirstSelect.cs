@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200250C RID: 9484
+	// Token: 0x020027B2 RID: 10162
 	public class ITalkOptionFirstSelect : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600D394 RID: 54164 RVA: 0x001F5B00 File Offset: 0x001F3D00
-		[NullableContext(1)]
+		// Token: 0x0600E0F0 RID: 57584 RVA: 0x002114F8 File Offset: 0x0020F6F8
 		public static ITalkOptionFirstSelect Create(ITalkOptionFirstSelect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B3E RID: 15166
-		// (get) Token: 0x0600D395 RID: 54165 RVA: 0x001F5B1F File Offset: 0x001F3D1F
+		// Token: 0x17003E3A RID: 15930
+		// (get) Token: 0x0600E0F1 RID: 57585 RVA: 0x00211517 File Offset: 0x0020F717
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073FC RID: 29692
+		// Token: 0x04007A4E RID: 31310
 		private ITalkOptionFirstSelect Instance;
 	}
 }

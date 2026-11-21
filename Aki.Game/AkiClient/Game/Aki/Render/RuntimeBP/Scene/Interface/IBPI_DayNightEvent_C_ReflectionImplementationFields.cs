@@ -2,13 +2,13 @@
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interface
 {
-	// Token: 0x02003B3D RID: 15165
+	// Token: 0x020030BA RID: 12474
 	internal static class IBPI_DayNightEvent_C_ReflectionImplementationFields
 	{
-		// Token: 0x0401059C RID: 66972
+		// Token: 0x0400FD69 RID: 64873
 		public static IntPtr __OnEnterNight_NativeFunctionPtr;
 
-		// Token: 0x0401059D RID: 66973
+		// Token: 0x0400FD6A RID: 64874
 		public static IntPtr __OnEnterDay_NativeFunctionPtr;
 	}
 }

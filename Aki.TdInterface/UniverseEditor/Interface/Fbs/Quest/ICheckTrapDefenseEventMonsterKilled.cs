@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D82 RID: 15746
+	// Token: 0x02004199 RID: 16793
 	public struct ICheckTrapDefenseEventMonsterKilled : IFlatbufferObject
 	{
-		// Token: 0x17006C0D RID: 27661
-		// (get) Token: 0x06015CD7 RID: 89303 RVA: 0x0032496F File Offset: 0x00322B6F
+		// Token: 0x170071C7 RID: 29127
+		// (get) Token: 0x0601720F RID: 94735 RVA: 0x0034BBE7 File Offset: 0x00349DE7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CD8 RID: 89304 RVA: 0x0032497C File Offset: 0x00322B7C
+		// Token: 0x06017210 RID: 94736 RVA: 0x0034BBF4 File Offset: 0x00349DF4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015CD9 RID: 89305 RVA: 0x00324984 File Offset: 0x00322B84
+		// Token: 0x06017211 RID: 94737 RVA: 0x0034BBFC File Offset: 0x00349DFC
 		public static ICheckTrapDefenseEventMonsterKilled GetRootAsICheckTrapDefenseEventMonsterKilled(ByteBuffer _bb)
 		{
 			return ICheckTrapDefenseEventMonsterKilled.GetRootAsICheckTrapDefenseEventMonsterKilled(_bb, default(ICheckTrapDefenseEventMonsterKilled));
 		}
 
-		// Token: 0x06015CDA RID: 89306 RVA: 0x003249A0 File Offset: 0x00322BA0
+		// Token: 0x06017212 RID: 94738 RVA: 0x0034BC18 File Offset: 0x00349E18
 		public static ICheckTrapDefenseEventMonsterKilled GetRootAsICheckTrapDefenseEventMonsterKilled(ByteBuffer _bb, ICheckTrapDefenseEventMonsterKilled obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015CDB RID: 89307 RVA: 0x003249BD File Offset: 0x00322BBD
+		// Token: 0x06017213 RID: 94739 RVA: 0x0034BC35 File Offset: 0x00349E35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015CDC RID: 89308 RVA: 0x003249CC File Offset: 0x00322BCC
+		// Token: 0x06017214 RID: 94740 RVA: 0x0034BC44 File Offset: 0x00349E44
 		public ICheckTrapDefenseEventMonsterKilled __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C0E RID: 27662
-		// (get) Token: 0x06015CDD RID: 89309 RVA: 0x003249DC File Offset: 0x00322BDC
+		// Token: 0x170071C8 RID: 29128
+		// (get) Token: 0x06017215 RID: 94741 RVA: 0x0034BC54 File Offset: 0x00349E54
 		public ECheckTrapDefenseEvent Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C0F RID: 27663
-		// (get) Token: 0x06015CDE RID: 89310 RVA: 0x00324A18 File Offset: 0x00322C18
+		// Token: 0x170071C9 RID: 29129
+		// (get) Token: 0x06017216 RID: 94742 RVA: 0x0034BC90 File Offset: 0x00349E90
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015CDF RID: 89311 RVA: 0x00324A54 File Offset: 0x00322C54
+		// Token: 0x06017217 RID: 94743 RVA: 0x0034BCCC File Offset: 0x00349ECC
 		public static Offset<ICheckTrapDefenseEventMonsterKilled> CreateICheckTrapDefenseEventMonsterKilled(FlatBufferBuilder builder, ECheckTrapDefenseEvent Type = ECheckTrapDefenseEvent.MonsterKilled, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTrapDefenseEventMonsterKilled.EndICheckTrapDefenseEventMonsterKilled(builder);
 		}
 
-		// Token: 0x06015CE0 RID: 89312 RVA: 0x00324A71 File Offset: 0x00322C71
+		// Token: 0x06017218 RID: 94744 RVA: 0x0034BCE9 File Offset: 0x00349EE9
 		public static void StartICheckTrapDefenseEventMonsterKilled(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06015CE1 RID: 89313 RVA: 0x00324A7A File Offset: 0x00322C7A
+		// Token: 0x06017219 RID: 94745 RVA: 0x0034BCF2 File Offset: 0x00349EF2
 		public static void AddType(FlatBufferBuilder builder, ECheckTrapDefenseEvent type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015CE2 RID: 89314 RVA: 0x00324A85 File Offset: 0x00322C85
+		// Token: 0x0601721A RID: 94746 RVA: 0x0034BCFD File Offset: 0x00349EFD
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06015CE3 RID: 89315 RVA: 0x00324A90 File Offset: 0x00322C90
+		// Token: 0x0601721B RID: 94747 RVA: 0x0034BD08 File Offset: 0x00349F08
 		public static Offset<ICheckTrapDefenseEventMonsterKilled> EndICheckTrapDefenseEventMonsterKilled(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckTrapDefenseEventMonsterKilled>(builder.EndTable());
 		}
 
-		// Token: 0x06015CE4 RID: 89316 RVA: 0x00324AA0 File Offset: 0x00322CA0
+		// Token: 0x0601721C RID: 94748 RVA: 0x0034BD18 File Offset: 0x00349F18
 		public ICheckTrapDefenseEventMonsterKilledT UnPack()
 		{
 			ICheckTrapDefenseEventMonsterKilledT checkTrapDefenseEventMonsterKilledT = new ICheckTrapDefenseEventMonsterKilledT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkTrapDefenseEventMonsterKilledT;
 		}
 
-		// Token: 0x06015CE5 RID: 89317 RVA: 0x00324ABB File Offset: 0x00322CBB
+		// Token: 0x0601721D RID: 94749 RVA: 0x0034BD33 File Offset: 0x00349F33
 		public void UnPackTo(ICheckTrapDefenseEventMonsterKilledT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06015CE6 RID: 89318 RVA: 0x00324AD8 File Offset: 0x00322CD8
+		// Token: 0x0601721E RID: 94750 RVA: 0x0034BD50 File Offset: 0x00349F50
 		public static Offset<ICheckTrapDefenseEventMonsterKilled> Pack(FlatBufferBuilder builder, ICheckTrapDefenseEventMonsterKilledT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckTrapDefenseEventMonsterKilled.CreateICheckTrapDefenseEventMonsterKilled(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400B66E RID: 46702
+		// Token: 0x0400C01B RID: 49179
 		private Table __p;
 	}
 }

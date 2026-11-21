@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils.LevelRangeDebug
 {
-	// Token: 0x02004563 RID: 17763
+	// Token: 0x0200348B RID: 13451
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class LevelRangeDebugDrawController : ControllerBase
 	{
-		// Token: 0x0602DE2E RID: 187950 RVA: 0x00A8CC74 File Offset: 0x00A8AE74
+		// Token: 0x06022510 RID: 140560 RVA: 0x009B838C File Offset: 0x009B658C
 		public void InitData()
 		{
 			if (LevelRangeDebugDrawModel.Instance.DrawDataMap != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			LevelRangeDebugDrawModel.Instance.DrawMode = EDebugDrawMode.CurrentQuest;
 		}
 
-		// Token: 0x0602DE2F RID: 187951 RVA: 0x00A8CD9E File Offset: 0x00A8AF9E
+		// Token: 0x06022511 RID: 140561 RVA: 0x009B84B6 File Offset: 0x009B66B6
 		private LevelRangeDrawData CreateDrawData(bool enable, float r, float g, float b)
 		{
 			return new LevelRangeDrawData
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			};
 		}
 
-		// Token: 0x0602DE30 RID: 187952 RVA: 0x00A8CDC5 File Offset: 0x00A8AFC5
+		// Token: 0x06022512 RID: 140562 RVA: 0x009B84DD File Offset: 0x009B66DD
 		public void SetDrawMode(EDebugDrawMode mode)
 		{
 			LevelRangeDebugDrawModel.Instance.DrawMode = mode;
 		}
 
-		// Token: 0x0602DE31 RID: 187953 RVA: 0x00A8CDD4 File Offset: 0x00A8AFD4
+		// Token: 0x06022513 RID: 140563 RVA: 0x009B84EC File Offset: 0x009B66EC
 		public void SetDrawData(ELevelRangeType type, bool enable, float r, float g, float b)
 		{
 			Dictionary<ELevelRangeType, LevelRangeDrawData> drawDataMap = LevelRangeDebugDrawModel.Instance.DrawDataMap;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE32 RID: 187954 RVA: 0x00A8CE20 File Offset: 0x00A8B020
+		// Token: 0x06022514 RID: 140564 RVA: 0x009B8538 File Offset: 0x009B6738
 		[NullableContext(2)]
 		public void DebugDrawComponentHit(UPrimitiveComponent hitComp, AActor otherActor, UPrimitiveComponent otherComp, FVector normalImpulse, [Nullable(1)] FHitResult hitResult)
 		{
@@ -147,18 +147,18 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE33 RID: 187955 RVA: 0x00A8D095 File Offset: 0x00A8B295
+		// Token: 0x06022515 RID: 140565 RVA: 0x009B87AD File Offset: 0x009B69AD
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0602DE34 RID: 187956 RVA: 0x00A8D097 File Offset: 0x00A8B297
+		// Token: 0x06022516 RID: 140566 RVA: 0x009B87AF File Offset: 0x009B69AF
 		[Conditional("DEBUG")]
 		private void DrawRange(float delta)
 		{
 		}
 
-		// Token: 0x0602DE35 RID: 187957 RVA: 0x00A8D09C File Offset: 0x00A8B29C
+		// Token: 0x06022517 RID: 140567 RVA: 0x009B87B4 File Offset: 0x009B69B4
 		private void GetQuestReference(int questId, HashSet<LogicTreeContainer> outTrees, HashSet<int> outEntityIds)
 		{
 			Dictionary<int, LevelRangeTreeReferenceData> questReferenceDataMap = LevelRangeDebugDrawModel.Instance.QuestReferenceDataMap;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE36 RID: 187958 RVA: 0x00A8D1C0 File Offset: 0x00A8B3C0
+		// Token: 0x06022518 RID: 140568 RVA: 0x009B88D8 File Offset: 0x009B6AD8
 		private void GetLevelPlayReference(int levelPlayId, HashSet<LogicTreeContainer> outTrees, HashSet<int> outPbDataIds)
 		{
 			Dictionary<int, LevelRangeTreeReferenceData> levelPlayReferenceDataMap = LevelRangeDebugDrawModel.Instance.LevelPlayReferenceDataMap;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE37 RID: 187959 RVA: 0x00A8D2E4 File Offset: 0x00A8B4E4
+		// Token: 0x06022519 RID: 140569 RVA: 0x009B89FC File Offset: 0x009B6BFC
 		private LevelRangeTreeReferenceData CreateReferenceData(List<string> referenceList)
 		{
 			LevelRangeTreeReferenceData levelRangeTreeReferenceData = new LevelRangeTreeReferenceData();
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			return levelRangeTreeReferenceData;
 		}
 
-		// Token: 0x0602DE38 RID: 187960 RVA: 0x00A8D380 File Offset: 0x00A8B580
+		// Token: 0x0602251A RID: 140570 RVA: 0x009B8A98 File Offset: 0x009B6C98
 		private void CollectRangeComp(RangeComponent rangeComp, LevelRangeDrawData drawData, Dictionary<RangeComponent, LevelRangeDrawData> drawRangeCompMap, Dictionary<AActor, LevelRangeDrawData> drawVolumeMap)
 		{
 			ETriggerShape? rangeType = rangeComp.GetRangeType();
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE39 RID: 187961 RVA: 0x00A8D424 File Offset: 0x00A8B624
+		// Token: 0x0602251B RID: 140571 RVA: 0x009B8B3C File Offset: 0x009B6D3C
 		private void DrawRangeShape(RangeComponent rangeComp, LevelRangeDrawData drawData)
 		{
 			ITriggerShape shapeConfig = rangeComp.GetShapeConfig();
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE3A RID: 187962 RVA: 0x00A8D6C4 File Offset: 0x00A8B8C4
+		// Token: 0x0602251C RID: 140572 RVA: 0x009B8DDC File Offset: 0x009B6FDC
 		private void DrawShapeComp(UShapeComponent shapeComp, LevelRangeDrawData drawData)
 		{
 			if (shapeComp is UBoxComponent)
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE3B RID: 187963 RVA: 0x00A8D78C File Offset: 0x00A8B98C
+		// Token: 0x0602251D RID: 140573 RVA: 0x009B8EA4 File Offset: 0x009B70A4
 		private void DrawCylinderMeshComp(UMeshComponent meshComp, float height, float radius, float hollowInnerRadius, LevelRangeDrawData drawData)
 		{
 			float scale = height / 2f;
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE3C RID: 187964 RVA: 0x00A8D858 File Offset: 0x00A8BA58
+		// Token: 0x0602251E RID: 140574 RVA: 0x009B8F70 File Offset: 0x009B7170
 		private void DrawConeMeshComp(UMeshComponent meshComp, float height, float radius, LevelRangeDrawData drawData)
 		{
 			float length = (float)Math.Sqrt((double)(height * height + radius * radius));
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			UKismetSystemLibrary.DrawDebugCone(world, fvector + fvector2, -upVector, length, num, num, 12, drawData.LinearColor ?? FLinearColor.White, 1.2f, 0f);
 		}
 
-		// Token: 0x0602DE3D RID: 187965 RVA: 0x00A8D8E8 File Offset: 0x00A8BAE8
+		// Token: 0x0602251F RID: 140575 RVA: 0x009B9000 File Offset: 0x009B7200
 		private void DrawCacheVolumes()
 		{
 			Queue<LevelRangeDrawVolumeCache> drawVolumeCache = LevelRangeDebugDrawModel.Instance.DrawVolumeCache;
@@ -458,13 +458,13 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE3E RID: 187966 RVA: 0x00A8D950 File Offset: 0x00A8BB50
+		// Token: 0x06022520 RID: 140576 RVA: 0x009B9068 File Offset: 0x009B7268
 		private void DrawVolume(AActor actor, LevelRangeDrawData drawData)
 		{
 		}
 
-		// Token: 0x17007585 RID: 30085
-		// (get) Token: 0x0602DE3F RID: 187967 RVA: 0x00A8D952 File Offset: 0x00A8BB52
+		// Token: 0x1700483C RID: 18492
+		// (get) Token: 0x06022521 RID: 140577 RVA: 0x009B906A File Offset: 0x009B726A
 		public static LevelRangeDebugDrawController Instance
 		{
 			get
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			}
 		}
 
-		// Token: 0x0602DE40 RID: 187968 RVA: 0x00A8D959 File Offset: 0x00A8BB59
+		// Token: 0x06022522 RID: 140578 RVA: 0x009B9071 File Offset: 0x009B7271
 		public static LevelRangeDebugDrawController GetOrCreateInstance()
 		{
 			if (LevelRangeDebugDrawController._Instance == null)
@@ -483,7 +483,7 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			return LevelRangeDebugDrawController._Instance;
 		}
 
-		// Token: 0x0602DE41 RID: 187969 RVA: 0x00A8D96D File Offset: 0x00A8BB6D
+		// Token: 0x06022523 RID: 140579 RVA: 0x009B9085 File Offset: 0x009B7285
 		public static bool CreateInstance()
 		{
 			if (LevelRangeDebugDrawController._Instance != null)
@@ -494,66 +494,66 @@ namespace CSharpScript.Game.Utils.LevelRangeDebug
 			return true;
 		}
 
-		// Token: 0x0602DE42 RID: 187970 RVA: 0x00A8D983 File Offset: 0x00A8BB83
+		// Token: 0x06022524 RID: 140580 RVA: 0x009B909B File Offset: 0x009B729B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DE43 RID: 187971 RVA: 0x00A8D985 File Offset: 0x00A8BB85
+		// Token: 0x06022525 RID: 140581 RVA: 0x009B909D File Offset: 0x009B729D
 		public static void ResetStaticDefaultValue()
 		{
 			LevelRangeDebugDrawController._Instance = null;
 		}
 
-		// Token: 0x0602DE44 RID: 187972 RVA: 0x00A8D98D File Offset: 0x00A8BB8D
+		// Token: 0x06022526 RID: 140582 RVA: 0x009B90A5 File Offset: 0x009B72A5
 		static LevelRangeDebugDrawController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelRangeDebugDrawController.CreateStaticDefaultValue), new Action(LevelRangeDebugDrawController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018809 RID: 100361
+		// Token: 0x04012E43 RID: 77379
 		private const int DRAW_INTERVAL = 1000;
 
-		// Token: 0x0401880A RID: 100362
+		// Token: 0x04012E44 RID: 77380
 		private const float DRAW_DURATION = 1.2f;
 
-		// Token: 0x0401880B RID: 100363
+		// Token: 0x04012E45 RID: 77381
 		private const int DRAW_SEGMENTS = 12;
 
-		// Token: 0x0401880C RID: 100364
+		// Token: 0x04012E46 RID: 77382
 		private const float DRAW_ARROW_SIZE = 20f;
 
-		// Token: 0x0401880D RID: 100365
+		// Token: 0x04012E47 RID: 77383
 		private const float DRAW_SPHERE_RADIUS = 15f;
 
-		// Token: 0x0401880E RID: 100366
+		// Token: 0x04012E48 RID: 77384
 		private const float DRAW_HIT_DURATION = 1f;
 
-		// Token: 0x0401880F RID: 100367
+		// Token: 0x04012E49 RID: 77385
 		private const float DRAW_THICKNESS = 3f;
 
-		// Token: 0x04018810 RID: 100368
+		// Token: 0x04012E4A RID: 77386
 		private const int DRAW_VOLUME_MAX = 5;
 
-		// Token: 0x04018811 RID: 100369
+		// Token: 0x04012E4B RID: 77387
 		private const float DRAW_IMPULSE_OFFSET = 30f;
 
-		// Token: 0x04018812 RID: 100370
+		// Token: 0x04012E4C RID: 77388
 		private const float DRAW_IMPULSE_LENGTH_MIN = 20f;
 
-		// Token: 0x04018813 RID: 100371
+		// Token: 0x04012E4D RID: 77389
 		private const float DRAW_IMPULSE_LENGTH_MAX = 200f;
 
-		// Token: 0x04018814 RID: 100372
+		// Token: 0x04012E4E RID: 77390
 		private const float DRAW_PHYS_OFFSET = 15f;
 
-		// Token: 0x04018815 RID: 100373
+		// Token: 0x04012E4F RID: 77391
 		private const float DRAW_IMPACT_LENGTH = 50f;
 
-		// Token: 0x04018816 RID: 100374
+		// Token: 0x04012E50 RID: 77392
 		private const int RANGE_ENTITY_TEMPLATE_ID = 34900000;
 
-		// Token: 0x04018817 RID: 100375
+		// Token: 0x04012E51 RID: 77393
 		[Nullable(2)]
 		private static LevelRangeDebugDrawController _Instance;
 	}

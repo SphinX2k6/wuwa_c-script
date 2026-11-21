@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002161 RID: 8545
+	// Token: 0x020023C2 RID: 9154
 	public class ResetLevelPlay_SetValue
 	{
-		// Token: 0x04007054 RID: 28756
-		[Nullable(1)]
+		// Token: 0x04007689 RID: 30345
 		public List<int> ResetLevelPlayList;
 	}
 }

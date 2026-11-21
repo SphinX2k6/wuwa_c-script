@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Roulette.View
 {
-	// Token: 0x02004C9B RID: 19611
+	// Token: 0x02003C4C RID: 15436
 	public class EAssemblyItemGridNode
 	{
-		// Token: 0x0401AFB0 RID: 110512
+		// Token: 0x0401590D RID: 88333
 		public const int GridItem = 0;
 	}
 }

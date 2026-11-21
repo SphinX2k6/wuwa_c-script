@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200525B RID: 21083
+	// Token: 0x020057C3 RID: 22467
 	public struct IFireBulletAddBuff : IFlatbufferObject
 	{
-		// Token: 0x17009A6B RID: 39531
-		// (get) Token: 0x060224B7 RID: 140471 RVA: 0x004C14F1 File Offset: 0x004BF6F1
+		// Token: 0x1700A267 RID: 41575
+		// (get) Token: 0x0602444D RID: 148557 RVA: 0x004FBFB5 File Offset: 0x004FA1B5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060224B8 RID: 140472 RVA: 0x004C14FE File Offset: 0x004BF6FE
+		// Token: 0x0602444E RID: 148558 RVA: 0x004FBFC2 File Offset: 0x004FA1C2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060224B9 RID: 140473 RVA: 0x004C1508 File Offset: 0x004BF708
+		// Token: 0x0602444F RID: 148559 RVA: 0x004FBFCC File Offset: 0x004FA1CC
 		public static IFireBulletAddBuff GetRootAsIFireBulletAddBuff(ByteBuffer _bb)
 		{
 			return IFireBulletAddBuff.GetRootAsIFireBulletAddBuff(_bb, default(IFireBulletAddBuff));
 		}
 
-		// Token: 0x060224BA RID: 140474 RVA: 0x004C1524 File Offset: 0x004BF724
+		// Token: 0x06024450 RID: 148560 RVA: 0x004FBFE8 File Offset: 0x004FA1E8
 		public static IFireBulletAddBuff GetRootAsIFireBulletAddBuff(ByteBuffer _bb, IFireBulletAddBuff obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060224BB RID: 140475 RVA: 0x004C1541 File Offset: 0x004BF741
+		// Token: 0x06024451 RID: 148561 RVA: 0x004FC005 File Offset: 0x004FA205
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060224BC RID: 140476 RVA: 0x004C1550 File Offset: 0x004BF750
+		// Token: 0x06024452 RID: 148562 RVA: 0x004FC014 File Offset: 0x004FA214
 		public IFireBulletAddBuff __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009A6C RID: 39532
-		// (get) Token: 0x060224BD RID: 140477 RVA: 0x004C1560 File Offset: 0x004BF760
+		// Token: 0x1700A268 RID: 41576
+		// (get) Token: 0x06024453 RID: 148563 RVA: 0x004FC024 File Offset: 0x004FA224
 		public EBuffProducerMode Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A6D RID: 39533
-		// (get) Token: 0x060224BE RID: 140478 RVA: 0x004C159C File Offset: 0x004BF79C
+		// Token: 0x1700A269 RID: 41577
+		// (get) Token: 0x06024454 RID: 148564 RVA: 0x004FC060 File Offset: 0x004FA260
 		public long BulletId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009A6E RID: 39534
-		// (get) Token: 0x060224BF RID: 140479 RVA: 0x004C15DC File Offset: 0x004BF7DC
+		// Token: 0x1700A26A RID: 41578
+		// (get) Token: 0x06024455 RID: 148565 RVA: 0x004FC0A0 File Offset: 0x004FA2A0
 		public IVectorInfo? BulletOffset
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060224C0 RID: 140480 RVA: 0x004C1639 File Offset: 0x004BF839
+		// Token: 0x06024456 RID: 148566 RVA: 0x004FC0FD File Offset: 0x004FA2FD
 		public static Offset<IFireBulletAddBuff> CreateIFireBulletAddBuff(FlatBufferBuilder builder, EBuffProducerMode Type = EBuffProducerMode.Immediate, long BulletId = 0L, Offset<IVectorInfo> BulletOffsetOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFireBulletAddBuff.EndIFireBulletAddBuff(builder);
 		}
 
-		// Token: 0x060224C1 RID: 140481 RVA: 0x004C165D File Offset: 0x004BF85D
+		// Token: 0x06024457 RID: 148567 RVA: 0x004FC121 File Offset: 0x004FA321
 		public static void StartIFireBulletAddBuff(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060224C2 RID: 140482 RVA: 0x004C1666 File Offset: 0x004BF866
+		// Token: 0x06024458 RID: 148568 RVA: 0x004FC12A File Offset: 0x004FA32A
 		public static void AddType(FlatBufferBuilder builder, EBuffProducerMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060224C3 RID: 140483 RVA: 0x004C1671 File Offset: 0x004BF871
+		// Token: 0x06024459 RID: 148569 RVA: 0x004FC135 File Offset: 0x004FA335
 		public static void AddBulletId(FlatBufferBuilder builder, long bulletId)
 		{
 			builder.AddLong(1, bulletId, 0L);
 		}
 
-		// Token: 0x060224C4 RID: 140484 RVA: 0x004C167D File Offset: 0x004BF87D
+		// Token: 0x0602445A RID: 148570 RVA: 0x004FC141 File Offset: 0x004FA341
 		public static void AddBulletOffset(FlatBufferBuilder builder, Offset<IVectorInfo> bulletOffsetOffset)
 		{
 			builder.AddOffset(2, bulletOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x060224C5 RID: 140485 RVA: 0x004C168D File Offset: 0x004BF88D
+		// Token: 0x0602445B RID: 148571 RVA: 0x004FC151 File Offset: 0x004FA351
 		public static Offset<IFireBulletAddBuff> EndIFireBulletAddBuff(FlatBufferBuilder builder)
 		{
 			return new Offset<IFireBulletAddBuff>(builder.EndTable());
 		}
 
-		// Token: 0x060224C6 RID: 140486 RVA: 0x004C169C File Offset: 0x004BF89C
+		// Token: 0x0602445C RID: 148572 RVA: 0x004FC160 File Offset: 0x004FA360
 		public IFireBulletAddBuffT UnPack()
 		{
 			IFireBulletAddBuffT fireBulletAddBuffT = new IFireBulletAddBuffT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return fireBulletAddBuffT;
 		}
 
-		// Token: 0x060224C7 RID: 140487 RVA: 0x004C16B8 File Offset: 0x004BF8B8
+		// Token: 0x0602445D RID: 148573 RVA: 0x004FC17C File Offset: 0x004FA37C
 		public void UnPackTo(IFireBulletAddBuffT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.BulletOffset = ((this.BulletOffset != null) ? this.BulletOffset.Value.UnPack() : null);
 		}
 
-		// Token: 0x060224C8 RID: 140488 RVA: 0x004C170C File Offset: 0x004BF90C
+		// Token: 0x0602445E RID: 148574 RVA: 0x004FC1D0 File Offset: 0x004FA3D0
 		public static Offset<IFireBulletAddBuff> Pack(FlatBufferBuilder builder, IFireBulletAddBuffT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFireBulletAddBuff.CreateIFireBulletAddBuff(builder, _o.Type, _o.BulletId, bulletOffsetOffset);
 		}
 
-		// Token: 0x0400E3AC RID: 58284
+		// Token: 0x0400EFB2 RID: 61362
 		private Table __p;
 	}
 }

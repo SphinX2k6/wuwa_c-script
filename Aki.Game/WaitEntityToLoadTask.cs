@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003515 RID: 13589
+// Token: 0x02002A8A RID: 10890
 [NullableContext(1)]
 [Nullable(0)]
 public class WaitEntityToLoadTask : IStaticVariableResetter
 {
-	// Token: 0x0601DC94 RID: 122004 RVA: 0x00858AFF File Offset: 0x00856CFF
+	// Token: 0x0601B9AE RID: 113070 RVA: 0x008810A7 File Offset: 0x0087F2A7
 	static WaitEntityToLoadTask()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WaitEntityToLoadTask.CreateStaticDefaultValue), new Action(WaitEntityToLoadTask.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601DC95 RID: 122005 RVA: 0x00858B20 File Offset: 0x00856D20
+	// Token: 0x0601B9AF RID: 113071 RVA: 0x008810C8 File Offset: 0x0087F2C8
 	public WaitEntityToLoadTask([Nullable(new byte[]
 	{
 		1,
@@ -27,14 +27,14 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		this.AddEntityToAwake = addEntityToAwake;
 	}
 
-	// Token: 0x0601DC96 RID: 122006 RVA: 0x00858BA1 File Offset: 0x00856DA1
+	// Token: 0x0601B9B0 RID: 113072 RVA: 0x00881149 File Offset: 0x0087F349
 	public void OnInit()
 	{
 		this.RegisterEvents();
 		this.InLoadingEntityCount = 0L;
 	}
 
-	// Token: 0x0601DC97 RID: 122007 RVA: 0x00858BB1 File Offset: 0x00856DB1
+	// Token: 0x0601B9B1 RID: 113073 RVA: 0x00881159 File Offset: 0x0087F359
 	public void OnClear()
 	{
 		this.UnregisterEvents();
@@ -47,7 +47,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		this.FilterChain.Cleanup();
 	}
 
-	// Token: 0x0601DC98 RID: 122008 RVA: 0x00858BF0 File Offset: 0x00856DF0
+	// Token: 0x0601B9B2 RID: 113074 RVA: 0x00881198 File Offset: 0x0087F398
 	private void RegisterEvents()
 	{
 		EventSystem.Instance.Add(EEventName.EntityToLoadFilterCreated, new Action<EntityToLoadFilter>(this.OnEntityToLoadFilterCreated));
@@ -55,7 +55,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		EventSystem.Instance.Add<IEntityToLoadParam>(EEventName.EntityToLoadParamUpdated, new Action<IEntityToLoadParam>(this.DelayInvoke));
 	}
 
-	// Token: 0x0601DC99 RID: 122009 RVA: 0x00858C54 File Offset: 0x00856E54
+	// Token: 0x0601B9B3 RID: 113075 RVA: 0x008811FC File Offset: 0x0087F3FC
 	private void UnregisterEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.EntityToLoadFilterCreated, new Action<EntityToLoadFilter>(this.OnEntityToLoadFilterCreated));
@@ -63,21 +63,21 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		EventSystem.Instance.Remove(EEventName.EntityToLoadParamUpdated, new <>f__AnonymousDelegate11<IEntityToLoadParam>(this.DelayInvoke));
 	}
 
-	// Token: 0x0601DC9A RID: 122010 RVA: 0x00858CB5 File Offset: 0x00856EB5
+	// Token: 0x0601B9B4 RID: 113076 RVA: 0x0088125D File Offset: 0x0087F45D
 	private void OnEntityToLoadFilterCreated(EntityToLoadFilter filter)
 	{
 		this.FilterChain.AddFilter(filter);
 		this.DelayInvoke(null);
 	}
 
-	// Token: 0x0601DC9B RID: 122011 RVA: 0x00858CCA File Offset: 0x00856ECA
+	// Token: 0x0601B9B5 RID: 113077 RVA: 0x00881272 File Offset: 0x0087F472
 	private void OnEntityToLoadFilterDestroyed(EntityToLoadFilter filter)
 	{
 		this.FilterChain.RemoveFilter(filter);
 		this.DelayInvoke(null);
 	}
 
-	// Token: 0x0601DC9C RID: 122012 RVA: 0x00858CE0 File Offset: 0x00856EE0
+	// Token: 0x0601B9B6 RID: 113078 RVA: 0x00881288 File Offset: 0x0087F488
 	private static EntityHandleCallbackPair GetOrCreatePair(EntityHandle handle, [Nullable(2)] Action<ELoadResultType> callback, long creatureDataId, int pbDataId)
 	{
 		EntityHandleCallbackPair entityHandleCallbackPair = WaitEntityToLoadTask.EntityHandleCallbackPairPool.Get();
@@ -98,7 +98,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		return entityHandleCallbackPair;
 	}
 
-	// Token: 0x0601DC9D RID: 122013 RVA: 0x00858D54 File Offset: 0x00856F54
+	// Token: 0x0601B9B7 RID: 113079 RVA: 0x008812FC File Offset: 0x0087F4FC
 	[return: Nullable(2)]
 	private EntityHandleCallbackPair FindEntity(EntityHandle handle)
 	{
@@ -116,7 +116,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		return entityHandleCallbackPair;
 	}
 
-	// Token: 0x0601DC9E RID: 122014 RVA: 0x00858D90 File Offset: 0x00856F90
+	// Token: 0x0601B9B8 RID: 113080 RVA: 0x00881338 File Offset: 0x0087F538
 	private static bool ShouldPreloadEntity(EntityHandle handle)
 	{
 		CreatureDataComponent component = handle.Entity.GetComponent<CreatureDataComponent>();
@@ -136,7 +136,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601DC9F RID: 122015 RVA: 0x00858DDC File Offset: 0x00856FDC
+	// Token: 0x0601B9B9 RID: 113081 RVA: 0x00881384 File Offset: 0x0087F584
 	public unsafe void QueueToInvoke(EntityHandle handle, [Nullable(2)] Action<ELoadResultType> callback, long creatureDataId, int pbDataId)
 	{
 		EntityHandleCallbackPair entityHandleCallbackPair = this.FindEntity(handle);
@@ -170,7 +170,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		this.DelayInvoke(null);
 	}
 
-	// Token: 0x0601DCA0 RID: 122016 RVA: 0x00858F2B File Offset: 0x0085712B
+	// Token: 0x0601B9BA RID: 113082 RVA: 0x008814D3 File Offset: 0x0087F6D3
 	public void DelayInvoke(IEntityToLoadParam _ = null)
 	{
 		if (this.DelayTickTimerId == null && this.FilterChain.QueuedHeap.Size > 0)
@@ -183,7 +183,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCA1 RID: 122017 RVA: 0x00858F66 File Offset: 0x00857166
+	// Token: 0x0601B9BB RID: 113083 RVA: 0x0088150E File Offset: 0x0087F70E
 	public void Flush()
 	{
 		if (this.DelayTickTimerId != null)
@@ -197,7 +197,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCA2 RID: 122018 RVA: 0x00858FA4 File Offset: 0x008571A4
+	// Token: 0x0601B9BC RID: 113084 RVA: 0x0088154C File Offset: 0x0087F74C
 	public unsafe void RemoveEntity(EntityHandle entityHandle)
 	{
 		EntityHandleCallbackPair entityHandleCallbackPair = this.FindEntity(entityHandle);
@@ -227,7 +227,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCA3 RID: 122019 RVA: 0x0085913C File Offset: 0x0085733C
+	// Token: 0x0601B9BD RID: 113085 RVA: 0x008816E4 File Offset: 0x0087F8E4
 	private unsafe void InvokeAwakeCallback(EntityHandleCallbackPair pair, ELoadResultType result)
 	{
 		if (CreatureModel.Instance.EnableEntityLog)
@@ -252,7 +252,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		WaitEntityToLoadTask.EntityHandleCallbackPairPool.Put(pair);
 	}
 
-	// Token: 0x0601DCA4 RID: 122020 RVA: 0x00859294 File Offset: 0x00857494
+	// Token: 0x0601B9BE RID: 113086 RVA: 0x0088183C File Offset: 0x0087FA3C
 	private void ValidateToAwake(EntityHandleCallbackPair pair, ELoadResultType result, long? version = null)
 	{
 		long pairVersion = version ?? ((long)pair.Version);
@@ -275,14 +275,14 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		this.InvokeAwakeCallback(pair, result2);
 	}
 
-	// Token: 0x0601DCA5 RID: 122021 RVA: 0x00859340 File Offset: 0x00857540
+	// Token: 0x0601B9BF RID: 113087 RVA: 0x008818E8 File Offset: 0x0087FAE8
 	private void PushToAwake(EntityHandleCallbackPair pair)
 	{
 		this.QueuedAwakeEntities[pair.Handle] = pair;
 		this.ValidateToAwake(pair, ELoadResultType.Done, null);
 	}
 
-	// Token: 0x0601DCA6 RID: 122022 RVA: 0x00859370 File Offset: 0x00857570
+	// Token: 0x0601B9C0 RID: 113088 RVA: 0x00881918 File Offset: 0x0087FB18
 	private void Invoke(EntityHandleCallbackPair pair)
 	{
 		WaitEntityToLoadTask.<>c__DisplayClass28_0 CS$<>8__locals1 = new WaitEntityToLoadTask.<>c__DisplayClass28_0();
@@ -303,13 +303,13 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		CS$<>8__locals1.<Invoke>g__beginTimeoutCheck|1();
 	}
 
-	// Token: 0x0601DCA7 RID: 122023 RVA: 0x00859418 File Offset: 0x00857618
+	// Token: 0x0601B9C1 RID: 113089 RVA: 0x008819C0 File Offset: 0x0087FBC0
 	private bool HasEntityForLoading()
 	{
 		return this.FilterChain.QueuedHeap.Size > 0 && this.InLoadingEntityCount < this.FilterChain.EntityToLoadParam.MaxLoadingCount && this.CurrentEntityFrameInterval >= this.FilterChain.EntityToLoadParam.LoadingInterval;
 	}
 
-	// Token: 0x0601DCA8 RID: 122024 RVA: 0x00859470 File Offset: 0x00857670
+	// Token: 0x0601B9C2 RID: 113090 RVA: 0x00881A18 File Offset: 0x0087FC18
 	private unsafe void InvokeTop()
 	{
 		EntityHandleCallbackPair entityHandleCallbackPair = this.FilterChain.PopTopPair();
@@ -339,7 +339,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		Log.Instance.Error(ELogModule.Preload, ELogAuthor.XDW, "预加载实体:调用InvokeTop之前需要确保优先队列不为空", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601DCA9 RID: 122025 RVA: 0x00859624 File Offset: 0x00857824
+	// Token: 0x0601B9C3 RID: 113091 RVA: 0x00881BCC File Offset: 0x0087FDCC
 	private void StartUpdateFrameInterval()
 	{
 		int frame = Time.Instance.Frame;
@@ -350,7 +350,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCAA RID: 122026 RVA: 0x00859664 File Offset: 0x00857864
+	// Token: 0x0601B9C4 RID: 113092 RVA: 0x00881C0C File Offset: 0x0087FE0C
 	private void EndUpdateFrameInternal()
 	{
 		if (this.FilterChain.QueuedHeap.Size == 0 || this.InLoadingEntityCount >= this.FilterChain.EntityToLoadParam.MaxLoadingCount || this.CurrentEntityFrameInterval >= this.FilterChain.EntityToLoadParam.LoadingInterval)
@@ -359,7 +359,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCAB RID: 122027 RVA: 0x008596BC File Offset: 0x008578BC
+	// Token: 0x0601B9C5 RID: 113093 RVA: 0x00881C64 File Offset: 0x0087FE64
 	private void ValidateToInvoke()
 	{
 		this.StartUpdateFrameInterval();
@@ -375,7 +375,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCAC RID: 122028 RVA: 0x0085971D File Offset: 0x0085791D
+	// Token: 0x0601B9C6 RID: 113094 RVA: 0x00881CC5 File Offset: 0x0087FEC5
 	private void Sort()
 	{
 		if ((long)this.FilterChain.QueuedHeap.Size > this.FilterChain.EntityToLoadParam.MaxLoadingCount - this.InLoadingEntityCount)
@@ -384,7 +384,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601DCAD RID: 122029 RVA: 0x0085975A File Offset: 0x0085795A
+	// Token: 0x0601B9C7 RID: 113095 RVA: 0x00881D02 File Offset: 0x0087FF02
 	private global::Vector GetPlayerVelocity()
 	{
 		if (WaitEntityToLoadTask.GetPlayerVelocityOverride != null)
@@ -394,20 +394,20 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 		return global::Vector.ZeroVectorProxy;
 	}
 
-	// Token: 0x0601DCAE RID: 122030 RVA: 0x00859773 File Offset: 0x00857973
+	// Token: 0x0601B9C8 RID: 113096 RVA: 0x00881D1B File Offset: 0x0087FF1B
 	public static void CreateStaticDefaultValue()
 	{
 		WaitEntityToLoadTask.EntityHandleCallbackPairPool = new Pool<EntityHandleCallbackPair>(200, () => new EntityHandleCallbackPair(), null);
 	}
 
-	// Token: 0x0601DCAF RID: 122031 RVA: 0x008597A4 File Offset: 0x008579A4
+	// Token: 0x0601B9C9 RID: 113097 RVA: 0x00881D4C File Offset: 0x0087FF4C
 	public static void ResetStaticDefaultValue()
 	{
 		WaitEntityToLoadTask.GetPlayerVelocityOverride = null;
 		WaitEntityToLoadTask.EntityHandleCallbackPairPool = null;
 	}
 
-	// Token: 0x0400E9C9 RID: 59849
+	// Token: 0x0400EE84 RID: 61060
 	[Nullable(new byte[]
 	{
 		2,
@@ -415,7 +415,7 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 	})]
 	public static Func<global::Vector> GetPlayerVelocityOverride;
 
-	// Token: 0x0400E9CA RID: 59850
+	// Token: 0x0400EE85 RID: 61061
 	[Nullable(new byte[]
 	{
 		1,
@@ -424,30 +424,30 @@ public class WaitEntityToLoadTask : IStaticVariableResetter
 	})]
 	private readonly Func<EntityHandle, Action<ELoadResultType>, ELoadResultType> LoadEntityCallback = ([Nullable(2)] EntityHandle _, Action<ELoadResultType> _) => ELoadResultType.None;
 
-	// Token: 0x0400E9CB RID: 59851
+	// Token: 0x0400EE86 RID: 61062
 	private readonly Action<EntityHandle, Action<ELoadResultType>> AddEntityToAwake = delegate(EntityHandle _, Action<ELoadResultType> _)
 	{
 	};
 
-	// Token: 0x0400E9CC RID: 59852
+	// Token: 0x0400EE87 RID: 61063
 	private static Pool<EntityHandleCallbackPair> EntityHandleCallbackPairPool;
 
-	// Token: 0x0400E9CD RID: 59853
+	// Token: 0x0400EE88 RID: 61064
 	private readonly Dictionary<EntityHandle, EntityHandleCallbackPair> QueuedAwakeEntities = new Dictionary<EntityHandle, EntityHandleCallbackPair>();
 
-	// Token: 0x0400E9CE RID: 59854
+	// Token: 0x0400EE89 RID: 61065
 	private readonly EntityToLoadFilterChain FilterChain = EntityToLoadFilterChain.Create();
 
-	// Token: 0x0400E9CF RID: 59855
+	// Token: 0x0400EE8A RID: 61066
 	private long InLoadingEntityCount;
 
-	// Token: 0x0400E9D0 RID: 59856
+	// Token: 0x0400EE8B RID: 61067
 	private long CurrentEntityFrameInterval;
 
-	// Token: 0x0400E9D1 RID: 59857
+	// Token: 0x0400EE8C RID: 61068
 	[Nullable(2)]
 	private TimerHandle DelayTickTimerId;
 
-	// Token: 0x0400E9D2 RID: 59858
+	// Token: 0x0400EE8D RID: 61069
 	private long CachedFrame;
 }

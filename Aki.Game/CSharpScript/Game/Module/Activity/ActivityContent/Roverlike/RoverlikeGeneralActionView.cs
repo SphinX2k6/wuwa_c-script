@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200610B RID: 24843
+	// Token: 0x02005089 RID: 20617
 	public class RoverlikeGeneralActionView : RoverlikeActionViewBase
 	{
-		// Token: 0x0603ECDC RID: 257244 RVA: 0x00F2AA71 File Offset: 0x00F28C71
+		// Token: 0x0603399E RID: 211358 RVA: 0x00E71885 File Offset: 0x00E6FA85
 		[NullableContext(1)]
 		public RoverlikeGeneralActionView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603ECDD RID: 257245 RVA: 0x00F2AA7C File Offset: 0x00F28C7C
+		// Token: 0x0603399F RID: 211359 RVA: 0x00E71890 File Offset: 0x00E6FA90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603ECDE RID: 257246 RVA: 0x00F2AAE8 File Offset: 0x00F28CE8
+		// Token: 0x060339A0 RID: 211360 RVA: 0x00E718FC File Offset: 0x00E6FAFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeGeneralActionView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603ECDF RID: 257247 RVA: 0x00F2AB2C File Offset: 0x00F28D2C
+		// Token: 0x060339A1 RID: 211361 RVA: 0x00E71940 File Offset: 0x00E6FB40
 		protected override void OnStart()
 		{
 			RoverlikeActionSubViewManager actionSubViewManager = RoverlikeModel.Instance.ActionSubViewManager;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			actionSubViewManager.RegisterTopPanel(this.TopPanel);
 		}
 
-		// Token: 0x0603ECE0 RID: 257248 RVA: 0x00F2AB73 File Offset: 0x00F28D73
+		// Token: 0x060339A2 RID: 211362 RVA: 0x00E71987 File Offset: 0x00E6FB87
 		protected override void OnBeforeShow()
 		{
 			RoverlikeBattleTopPanel topPanel = this.TopPanel;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			topPanel.StartShow();
 		}
 
-		// Token: 0x0603ECE1 RID: 257249 RVA: 0x00F2AB85 File Offset: 0x00F28D85
+		// Token: 0x060339A3 RID: 211363 RVA: 0x00E71999 File Offset: 0x00E6FB99
 		protected override void OnBeforeHide()
 		{
 			RoverlikeBattleTopPanel topPanel = this.TopPanel;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			topPanel.EndShow();
 		}
 
-		// Token: 0x0603ECE2 RID: 257250 RVA: 0x00F2AB98 File Offset: 0x00F28D98
+		// Token: 0x060339A4 RID: 211364 RVA: 0x00E719AC File Offset: 0x00E6FBAC
 		protected override void OnBeforeDestroy()
 		{
 			RoverlikeActionSubViewManager actionSubViewManager = RoverlikeModel.Instance.ActionSubViewManager;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603ECE3 RID: 257251 RVA: 0x00F2ABB9 File Offset: 0x00F28DB9
+		// Token: 0x060339A5 RID: 211365 RVA: 0x00E719CD File Offset: 0x00E6FBCD
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -114,17 +114,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return currentSubView.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x04020CFD RID: 134397
+		// Token: 0x0401B62A RID: 112170
 		[Nullable(2)]
 		protected RoverlikeBattleTopPanel TopPanel;
 
-		// Token: 0x0200C35B RID: 50011
+		// Token: 0x0200AD43 RID: 44355
 		private class EComponents
 		{
-			// Token: 0x0403AF5D RID: 241501
+			// Token: 0x040358C2 RID: 219330
 			public const int ItemRogueTop = 0;
 
-			// Token: 0x0403AF5E RID: 241502
+			// Token: 0x040358C3 RID: 219331
 			public const int Content = 1;
 		}
 	}

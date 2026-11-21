@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BFD RID: 27645
+	// Token: 0x02007361 RID: 29537
 	public struct IOpenGiantDeliveryWithReturn : IFlatbufferObject
 	{
-		// Token: 0x1700CD91 RID: 52625
-		// (get) Token: 0x0603098B RID: 199051 RVA: 0x00698C40 File Offset: 0x00696E40
+		// Token: 0x1700D89F RID: 55455
+		// (get) Token: 0x060338AB RID: 211115 RVA: 0x006F25D4 File Offset: 0x006F07D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603098C RID: 199052 RVA: 0x00698C4D File Offset: 0x00696E4D
+		// Token: 0x060338AC RID: 211116 RVA: 0x006F25E1 File Offset: 0x006F07E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603098D RID: 199053 RVA: 0x00698C54 File Offset: 0x00696E54
+		// Token: 0x060338AD RID: 211117 RVA: 0x006F25E8 File Offset: 0x006F07E8
 		public static IOpenGiantDeliveryWithReturn GetRootAsIOpenGiantDeliveryWithReturn(ByteBuffer _bb)
 		{
 			return IOpenGiantDeliveryWithReturn.GetRootAsIOpenGiantDeliveryWithReturn(_bb, default(IOpenGiantDeliveryWithReturn));
 		}
 
-		// Token: 0x0603098E RID: 199054 RVA: 0x00698C70 File Offset: 0x00696E70
+		// Token: 0x060338AE RID: 211118 RVA: 0x006F2604 File Offset: 0x006F0804
 		public static IOpenGiantDeliveryWithReturn GetRootAsIOpenGiantDeliveryWithReturn(ByteBuffer _bb, IOpenGiantDeliveryWithReturn obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603098F RID: 199055 RVA: 0x00698C8D File Offset: 0x00696E8D
+		// Token: 0x060338AF RID: 211119 RVA: 0x006F2621 File Offset: 0x006F0821
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030990 RID: 199056 RVA: 0x00698C9C File Offset: 0x00696E9C
+		// Token: 0x060338B0 RID: 211120 RVA: 0x006F2630 File Offset: 0x006F0830
 		public IOpenGiantDeliveryWithReturn __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CD92 RID: 52626
-		// (get) Token: 0x06030991 RID: 199057 RVA: 0x00698CAC File Offset: 0x00696EAC
+		// Token: 0x1700D8A0 RID: 55456
+		// (get) Token: 0x060338B1 RID: 211121 RVA: 0x006F2640 File Offset: 0x006F0840
 		public ESystemType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD93 RID: 52627
-		// (get) Token: 0x06030992 RID: 199058 RVA: 0x00698CE8 File Offset: 0x00696EE8
+		// Token: 0x1700D8A1 RID: 55457
+		// (get) Token: 0x060338B2 RID: 211122 RVA: 0x006F267C File Offset: 0x006F087C
 		public EGiantEcoType EcoType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CD94 RID: 52628
-		// (get) Token: 0x06030993 RID: 199059 RVA: 0x00698D24 File Offset: 0x00696F24
+		// Token: 0x1700D8A2 RID: 55458
+		// (get) Token: 0x060338B3 RID: 211123 RVA: 0x006F26B8 File Offset: 0x006F08B8
 		public TVarRef ReturnVarType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030994 RID: 199060 RVA: 0x00698D60 File Offset: 0x00696F60
+		// Token: 0x060338B4 RID: 211124 RVA: 0x006F26F4 File Offset: 0x006F08F4
 		public TTable? ReturnVar<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -105,37 +105,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030995 RID: 199061 RVA: 0x00698DA8 File Offset: 0x00696FA8
+		// Token: 0x060338B5 RID: 211125 RVA: 0x006F273C File Offset: 0x006F093C
 		public IConstVarRef ReturnVarAsIConstVarRef()
 		{
 			return this.ReturnVar<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06030996 RID: 199062 RVA: 0x00698DC4 File Offset: 0x00696FC4
+		// Token: 0x060338B6 RID: 211126 RVA: 0x006F2758 File Offset: 0x006F0958
 		public IGlobalVarRef ReturnVarAsIGlobalVarRef()
 		{
 			return this.ReturnVar<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06030997 RID: 199063 RVA: 0x00698DE0 File Offset: 0x00696FE0
+		// Token: 0x060338B7 RID: 211127 RVA: 0x006F2774 File Offset: 0x006F0974
 		public IOtherVarRef ReturnVarAsIOtherVarRef()
 		{
 			return this.ReturnVar<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06030998 RID: 199064 RVA: 0x00698DFC File Offset: 0x00696FFC
+		// Token: 0x060338B8 RID: 211128 RVA: 0x006F2790 File Offset: 0x006F0990
 		public ISelfVarRef ReturnVarAsISelfVarRef()
 		{
 			return this.ReturnVar<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x06030999 RID: 199065 RVA: 0x00698E18 File Offset: 0x00697018
+		// Token: 0x060338B9 RID: 211129 RVA: 0x006F27AC File Offset: 0x006F09AC
 		public ISystemVarRef ReturnVarAsISystemVarRef()
 		{
 			return this.ReturnVar<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0603099A RID: 199066 RVA: 0x00698E33 File Offset: 0x00697033
+		// Token: 0x060338BA RID: 211130 RVA: 0x006F27C7 File Offset: 0x006F09C7
 		public static Offset<IOpenGiantDeliveryWithReturn> CreateIOpenGiantDeliveryWithReturn(FlatBufferBuilder builder, ESystemType Type = ESystemType.Shop, EGiantEcoType EcoType = EGiantEcoType.Fire, TVarRef ReturnVar_type = TVarRef.NONE, int ReturnVarOffset = 0)
 		{
 			builder.StartTable(4);
@@ -146,43 +146,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGiantDeliveryWithReturn.EndIOpenGiantDeliveryWithReturn(builder);
 		}
 
-		// Token: 0x0603099B RID: 199067 RVA: 0x00698E5F File Offset: 0x0069705F
+		// Token: 0x060338BB RID: 211131 RVA: 0x006F27F3 File Offset: 0x006F09F3
 		public static void StartIOpenGiantDeliveryWithReturn(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603099C RID: 199068 RVA: 0x00698E68 File Offset: 0x00697068
+		// Token: 0x060338BC RID: 211132 RVA: 0x006F27FC File Offset: 0x006F09FC
 		public static void AddType(FlatBufferBuilder builder, ESystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603099D RID: 199069 RVA: 0x00698E73 File Offset: 0x00697073
+		// Token: 0x060338BD RID: 211133 RVA: 0x006F2807 File Offset: 0x006F0A07
 		public static void AddEcoType(FlatBufferBuilder builder, EGiantEcoType ecoType)
 		{
 			builder.AddByte(1, (byte)ecoType, 0);
 		}
 
-		// Token: 0x0603099E RID: 199070 RVA: 0x00698E7E File Offset: 0x0069707E
+		// Token: 0x060338BE RID: 211134 RVA: 0x006F2812 File Offset: 0x006F0A12
 		public static void AddReturnVarType(FlatBufferBuilder builder, TVarRef returnVarType)
 		{
 			builder.AddByte(2, (byte)returnVarType, 0);
 		}
 
-		// Token: 0x0603099F RID: 199071 RVA: 0x00698E89 File Offset: 0x00697089
+		// Token: 0x060338BF RID: 211135 RVA: 0x006F281D File Offset: 0x006F0A1D
 		public static void AddReturnVar(FlatBufferBuilder builder, int returnVarOffset)
 		{
 			builder.AddOffset(3, returnVarOffset, 0);
 		}
 
-		// Token: 0x060309A0 RID: 199072 RVA: 0x00698E94 File Offset: 0x00697094
+		// Token: 0x060338C0 RID: 211136 RVA: 0x006F2828 File Offset: 0x006F0A28
 		public static Offset<IOpenGiantDeliveryWithReturn> EndIOpenGiantDeliveryWithReturn(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenGiantDeliveryWithReturn>(builder.EndTable());
 		}
 
-		// Token: 0x060309A1 RID: 199073 RVA: 0x00698EA4 File Offset: 0x006970A4
+		// Token: 0x060338C1 RID: 211137 RVA: 0x006F2838 File Offset: 0x006F0A38
 		public IOpenGiantDeliveryWithReturnT UnPack()
 		{
 			IOpenGiantDeliveryWithReturnT openGiantDeliveryWithReturnT = new IOpenGiantDeliveryWithReturnT();
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openGiantDeliveryWithReturnT;
 		}
 
-		// Token: 0x060309A2 RID: 199074 RVA: 0x00698EC0 File Offset: 0x006970C0
+		// Token: 0x060338C2 RID: 211138 RVA: 0x006F2854 File Offset: 0x006F0A54
 		public void UnPackTo(IOpenGiantDeliveryWithReturnT _o)
 		{
 			_o.Type = this.Type;
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309A3 RID: 199075 RVA: 0x00699038 File Offset: 0x00697238
+		// Token: 0x060338C3 RID: 211139 RVA: 0x006F29CC File Offset: 0x006F0BCC
 		public static Offset<IOpenGiantDeliveryWithReturn> Pack(FlatBufferBuilder builder, IOpenGiantDeliveryWithReturnT _o)
 		{
 			if (_o == null)
@@ -231,7 +231,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGiantDeliveryWithReturn.CreateIOpenGiantDeliveryWithReturn(builder, _o.Type, _o.EcoType, returnVar_type, returnVarOffset);
 		}
 
-		// Token: 0x040114F8 RID: 70904
+		// Token: 0x04012448 RID: 74824
 		private Table __p;
 	}
 }

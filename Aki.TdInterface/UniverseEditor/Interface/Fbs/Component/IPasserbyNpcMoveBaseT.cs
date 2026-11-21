@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056C6 RID: 22214
+	// Token: 0x02005C94 RID: 23700
 	public class IPasserbyNpcMoveBaseT
 	{
-		// Token: 0x1700A554 RID: 42324
-		// (get) Token: 0x060251C0 RID: 152000 RVA: 0x0051FA06 File Offset: 0x0051DC06
-		// (set) Token: 0x060251C1 RID: 152001 RVA: 0x0051FA0E File Offset: 0x0051DC0E
+		// Token: 0x1700AE15 RID: 44565
+		// (get) Token: 0x06027503 RID: 161027 RVA: 0x00561FBE File Offset: 0x005601BE
+		// (set) Token: 0x06027504 RID: 161028 RVA: 0x00561FC6 File Offset: 0x005601C6
 		public EPasserbyNpcMoveType Type { get; set; }
 
-		// Token: 0x060251C2 RID: 152002 RVA: 0x0051FA17 File Offset: 0x0051DC17
+		// Token: 0x06027505 RID: 161029 RVA: 0x00561FCF File Offset: 0x005601CF
 		public IPasserbyNpcMoveBaseT()
 		{
 			this.Type = EPasserbyNpcMoveType.Spline;

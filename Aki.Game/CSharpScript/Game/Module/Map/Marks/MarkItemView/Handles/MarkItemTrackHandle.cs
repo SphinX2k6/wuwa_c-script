@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using CSharpScript.Game.Module.Map.Marks.MarkItemView.Components;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200553A RID: 21818
+	// Token: 0x0200450C RID: 17676
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,12 +15,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class MarkItemTrackHandle : MarkItemComponentHandle<MarkTrackComponent>
 	{
-		// Token: 0x06037B18 RID: 228120 RVA: 0x00D37634 File Offset: 0x00D35834
+		// Token: 0x0602C9E9 RID: 182761 RVA: 0x00C85177 File Offset: 0x00C83377
 		public MarkItemTrackHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B19 RID: 228121 RVA: 0x00D37640 File Offset: 0x00D35840
+		// Token: 0x0602C9EA RID: 182762 RVA: 0x00C85180 File Offset: 0x00C83380
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -38,7 +36,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B1A RID: 228122 RVA: 0x00D37683 File Offset: 0x00D35883
+		// Token: 0x0602C9EB RID: 182763 RVA: 0x00C851C3 File Offset: 0x00C833C3
 		protected override MarkTrackComponent GetOrCreateComponent()
 		{
 			if (this.ComponentInternal == null)
@@ -51,26 +49,19 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return this.ComponentInternal;
 		}
 
-		// Token: 0x06037B1B RID: 228123 RVA: 0x00D376AB File Offset: 0x00D358AB
-		protected override void OnSetVisible(bool active)
-		{
-			this.Context.MarkItemEntity.ViewLifeCircle.SetChildViewVisibility(EMarkViewComponentType.Track, active);
-		}
-
-		// Token: 0x06037B1C RID: 228124 RVA: 0x00D376C4 File Offset: 0x00D358C4
+		// Token: 0x0602C9EC RID: 182764 RVA: 0x00C851EC File Offset: 0x00C833EC
 		protected override void OnApplyModified()
 		{
-			MarkViewLifeCircleComponent viewLifeCircle = this.Context.MarkItemEntity.ViewLifeCircle;
-			if (viewLifeCircle.IsChildViewStateDirty(EMarkViewComponentType.Track))
+			if (base.VisibleDirty)
 			{
 				MarkTrackComponent orCreateComponent = this.GetOrCreateComponent();
 				if (!this.IsComponentValid(orCreateComponent))
 				{
 					return;
 				}
-				bool active = viewLifeCircle.IsChildViewVisible(EMarkViewComponentType.Track, false);
-				viewLifeCircle.SetChildViewVisibleClean(EMarkViewComponentType.Track);
-				MarkItemComponentHandle<MarkTrackComponent>.SetComponentActive(orCreateComponent, active);
+				bool visible = base.Visible;
+				base.CleanVisibleDirty();
+				MarkItemComponentHandle<MarkTrackComponent>.SetComponentActive(orCreateComponent, visible);
 			}
 		}
 	}

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002AB RID: 683
+	// Token: 0x020002C0 RID: 704
 	public class ConfigFarmGoldActivityByActivityIdAndInstanceId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001007 RID: 4103 RVA: 0x000B401B File Offset: 0x000B221B
+		// Token: 0x06001085 RID: 4229 RVA: 0x000BA527 File Offset: 0x000B8727
 		static ConfigFarmGoldActivityByActivityIdAndInstanceId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFarmGoldActivityByActivityIdAndInstanceId.CreateStaticDefaultValue), new Action(ConfigFarmGoldActivityByActivityIdAndInstanceId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001008 RID: 4104 RVA: 0x000B403C File Offset: 0x000B223C
+		// Token: 0x06001086 RID: 4230 RVA: 0x000BA548 File Offset: 0x000B8748
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFarmGoldActivityByActivityIdAndInstanceId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001009 RID: 4105 RVA: 0x000B40BB File Offset: 0x000B22BB
+		// Token: 0x06001087 RID: 4231 RVA: 0x000BA5C7 File Offset: 0x000B87C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFarmGoldActivityByActivityIdAndInstanceId.LogPair = null;
 			ConfigFarmGoldActivityByActivityIdAndInstanceId.HandleId = 0;
 		}
 
-		// Token: 0x0600100A RID: 4106 RVA: 0x000B40C9 File Offset: 0x000B22C9
+		// Token: 0x06001088 RID: 4232 RVA: 0x000BA5D5 File Offset: 0x000B87D5
 		public static void Init()
 		{
 			ConfigFarmGoldActivityByActivityIdAndInstanceId.HandleId = ConfigCommon.InitDataStatement(ConfigFarmGoldActivityByActivityIdAndInstanceId.HandleId, "db_farmgold.db", "select BinData from `FarmGoldActivity` where ActivityId=? And InstId=?");
 		}
 
-		// Token: 0x0600100B RID: 4107 RVA: 0x000B40E4 File Offset: 0x000B22E4
+		// Token: 0x06001089 RID: 4233 RVA: 0x000BA5F0 File Offset: 0x000B87F0
 		[NullableContext(2)]
 		public static IReadOnlyList<FarmGoldActivity> GetConfigList(int p0ActivityId, int p1InstId, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001291 RID: 4753
+		// Token: 0x04001324 RID: 4900
 		private const string DB = "db_farmgold.db";
 
-		// Token: 0x04001292 RID: 4754
+		// Token: 0x04001325 RID: 4901
 		private const string FILE = "b.爆金币活动.xlsx";
 
-		// Token: 0x04001293 RID: 4755
+		// Token: 0x04001326 RID: 4902
 		private const string TABLE = "FarmGoldActivity";
 
-		// Token: 0x04001294 RID: 4756
+		// Token: 0x04001327 RID: 4903
 		private const string COMMAND = "select BinData from `FarmGoldActivity` where ActivityId=? And InstId=?";
 
-		// Token: 0x04001295 RID: 4757
+		// Token: 0x04001328 RID: 4904
 		private const string KEY_PREFIX = "FarmGoldActivityByActivityIdAndInstanceId";
 
-		// Token: 0x04001296 RID: 4758
+		// Token: 0x04001329 RID: 4905
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001297 RID: 4759
+		// Token: 0x0400132A RID: 4906
 		private static int HandleId;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004808 RID: 18440
+	// Token: 0x02004C70 RID: 19568
 	public enum EEditorLaunchMode : byte
 	{
-		// Token: 0x0400CCCA RID: 52426
+		// Token: 0x0400D704 RID: 55044
 		PIE,
-		// Token: 0x0400CCCB RID: 52427
+		// Token: 0x0400D705 RID: 55045
 		Attach,
-		// Token: 0x0400CCCC RID: 52428
+		// Token: 0x0400D706 RID: 55046
 		Package
 	}
 }

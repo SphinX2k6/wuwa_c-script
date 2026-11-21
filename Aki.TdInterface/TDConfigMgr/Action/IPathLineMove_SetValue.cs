@@ -3,45 +3,45 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CC9 RID: 7369
+	// Token: 0x02001ED0 RID: 7888
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPathLineMove_SetValue
 	{
-		// Token: 0x04005FA1 RID: 24481
+		// Token: 0x040064FD RID: 25853
 		public ESplineMovePattern Type;
 
-		// Token: 0x04005FA2 RID: 24482
+		// Token: 0x040064FE RID: 25854
 		public float? MaxOffsetDistance;
 
-		// Token: 0x04005FA3 RID: 24483
+		// Token: 0x040064FF RID: 25855
 		public bool? IsOneWay;
 
-		// Token: 0x04005FA4 RID: 24484
+		// Token: 0x04006500 RID: 25856
 		public float? LayerVerticalLimit;
 
-		// Token: 0x04005FA5 RID: 24485
+		// Token: 0x04006501 RID: 25857
 		public bool? DynamicGravity;
 
-		// Token: 0x04005FA6 RID: 24486
+		// Token: 0x04006502 RID: 25858
 		public float? GravitySwitchAngularVelocity;
 
-		// Token: 0x04005FA7 RID: 24487
+		// Token: 0x04006503 RID: 25859
 		public int? AutoExitDistance;
 
-		// Token: 0x04005FA8 RID: 24488
+		// Token: 0x04006504 RID: 25860
 		public IPathLineFacingType FacingConfig;
 
-		// Token: 0x04005FA9 RID: 24489
+		// Token: 0x04006505 RID: 25861
 		public string SplineMoveConfigDaPath;
 
-		// Token: 0x04005FAA RID: 24490
+		// Token: 0x04006506 RID: 25862
 		public bool? IsAdaptiveClimbInput;
 
-		// Token: 0x04005FAB RID: 24491
+		// Token: 0x04006507 RID: 25863
 		public bool? IsDisableStopAnim;
 
-		// Token: 0x04005FAC RID: 24492
+		// Token: 0x04006508 RID: 25864
 		public bool? IsAllowEarlyExitClimb;
 	}
 }

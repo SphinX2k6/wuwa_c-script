@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001848 RID: 6216
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019D3 RID: 6611
 	public class ICameraOffsetInMovementDirection
 	{
-		// Token: 0x0600857D RID: 34173 RVA: 0x0013D7B4 File Offset: 0x0013B9B4
+		// Token: 0x06008CA3 RID: 36003 RVA: 0x0014CFA8 File Offset: 0x0014B1A8
 		private ICameraOffsetInMovementDirection_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600857E RID: 34174 RVA: 0x0013D7EC File Offset: 0x0013B9EC
+		// Token: 0x06008CA4 RID: 36004 RVA: 0x0014CFE0 File Offset: 0x0014B1E0
 		public static ICameraOffsetInMovementDirection Create([Nullable(2)] ICameraOffsetInMovementDirection instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600857F RID: 34175 RVA: 0x0013D7FF File Offset: 0x0013B9FF
+		// Token: 0x06008CA5 RID: 36005 RVA: 0x0014CFF3 File Offset: 0x0014B1F3
 		public static ICameraOffsetInMovementDirection CreateFromSetValue([Nullable(2)] ICameraOffsetInMovementDirection_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008580 RID: 34176 RVA: 0x0013D814 File Offset: 0x0013BA14
+		// Token: 0x06008CA6 RID: 36006 RVA: 0x0014D008 File Offset: 0x0014B208
 		public ICameraOffsetInMovementDirection_SetValue ToSetValue()
 		{
 			return new ICameraOffsetInMovementDirection_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BA7 RID: 11175
-		// (get) Token: 0x06008581 RID: 34177 RVA: 0x0013D87A File Offset: 0x0013BA7A
-		// (set) Token: 0x06008582 RID: 34178 RVA: 0x0013D8A9 File Offset: 0x0013BAA9
+		// Token: 0x17002DA1 RID: 11681
+		// (get) Token: 0x06008CA7 RID: 36007 RVA: 0x0014D06E File Offset: 0x0014B26E
+		// (set) Token: 0x06008CA8 RID: 36008 RVA: 0x0014D09D File Offset: 0x0014B29D
 		public virtual float MinInterpolationSpeed
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA8 RID: 11176
-		// (get) Token: 0x06008583 RID: 34179 RVA: 0x0013D8B7 File Offset: 0x0013BAB7
-		// (set) Token: 0x06008584 RID: 34180 RVA: 0x0013D8E6 File Offset: 0x0013BAE6
+		// Token: 0x17002DA2 RID: 11682
+		// (get) Token: 0x06008CA9 RID: 36009 RVA: 0x0014D0AB File Offset: 0x0014B2AB
+		// (set) Token: 0x06008CAA RID: 36010 RVA: 0x0014D0DA File Offset: 0x0014B2DA
 		public virtual float MaxInterpolationSpeed
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BA9 RID: 11177
-		// (get) Token: 0x06008585 RID: 34181 RVA: 0x0013D8F4 File Offset: 0x0013BAF4
-		// (set) Token: 0x06008586 RID: 34182 RVA: 0x0013D923 File Offset: 0x0013BB23
+		// Token: 0x17002DA3 RID: 11683
+		// (get) Token: 0x06008CAB RID: 36011 RVA: 0x0014D0E8 File Offset: 0x0014B2E8
+		// (set) Token: 0x06008CAC RID: 36012 RVA: 0x0014D117 File Offset: 0x0014B317
 		public virtual float OffsetDistance1
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BAA RID: 11178
-		// (get) Token: 0x06008587 RID: 34183 RVA: 0x0013D931 File Offset: 0x0013BB31
-		// (set) Token: 0x06008588 RID: 34184 RVA: 0x0013D960 File Offset: 0x0013BB60
+		// Token: 0x17002DA4 RID: 11684
+		// (get) Token: 0x06008CAD RID: 36013 RVA: 0x0014D125 File Offset: 0x0014B325
+		// (set) Token: 0x06008CAE RID: 36014 RVA: 0x0014D154 File Offset: 0x0014B354
 		public virtual float OffsetDistance2
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BAB RID: 11179
-		// (get) Token: 0x06008589 RID: 34185 RVA: 0x0013D970 File Offset: 0x0013BB70
-		// (set) Token: 0x0600858A RID: 34186 RVA: 0x0013D9D1 File Offset: 0x0013BBD1
+		// Token: 0x17002DA5 RID: 11685
+		// (get) Token: 0x06008CAF RID: 36015 RVA: 0x0014D164 File Offset: 0x0014B364
+		// (set) Token: 0x06008CB0 RID: 36016 RVA: 0x0014D1C5 File Offset: 0x0014B3C5
 		[Nullable(2)]
 		public virtual IBaseCurve OffsetCurve
 		{
@@ -190,9 +188,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BAC RID: 11180
-		// (get) Token: 0x0600858B RID: 34187 RVA: 0x0013D9E8 File Offset: 0x0013BBE8
-		// (set) Token: 0x0600858C RID: 34188 RVA: 0x0013DA22 File Offset: 0x0013BC22
+		// Token: 0x17002DA6 RID: 11686
+		// (get) Token: 0x06008CB1 RID: 36017 RVA: 0x0014D1DC File Offset: 0x0014B3DC
+		// (set) Token: 0x06008CB2 RID: 36018 RVA: 0x0014D216 File Offset: 0x0014B416
 		public virtual int? CenteringWaitTime
 		{
 			get
@@ -214,9 +212,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BAD RID: 11181
-		// (get) Token: 0x0600858D RID: 34189 RVA: 0x0013DA30 File Offset: 0x0013BC30
-		// (set) Token: 0x0600858E RID: 34190 RVA: 0x0013DA6A File Offset: 0x0013BC6A
+		// Token: 0x17002DA7 RID: 11687
+		// (get) Token: 0x06008CB3 RID: 36019 RVA: 0x0014D224 File Offset: 0x0014B424
+		// (set) Token: 0x06008CB4 RID: 36020 RVA: 0x0014D25E File Offset: 0x0014B45E
 		public virtual int? StartupWaitTime
 		{
 			get
@@ -238,18 +236,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005450 RID: 21584
+		// Token: 0x0400589C RID: 22684
 		[Nullable(2)]
 		protected ICameraOffsetInMovementDirection FbInstance;
 
-		// Token: 0x04005451 RID: 21585
+		// Token: 0x0400589D RID: 22685
 		[Nullable(2)]
 		protected ICameraOffsetInMovementDirection_SetValue PocoInterface;
 
-		// Token: 0x04005452 RID: 21586
+		// Token: 0x0400589E RID: 22686
 		private IBaseCurve _OffsetCurveCache;
 
-		// Token: 0x04005453 RID: 21587
+		// Token: 0x0400589F RID: 22687
 		private bool _OffsetCurveInited;
 	}
 }

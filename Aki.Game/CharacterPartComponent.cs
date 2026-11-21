@@ -6,13 +6,13 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x0200307E RID: 12414
+// Token: 0x020025D5 RID: 9685
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterPartComponent : EntityComponent
 {
-	// Token: 0x1700247B RID: 9339
-	// (get) Token: 0x0601A83D RID: 108605 RVA: 0x00718555 File Offset: 0x00716755
+	// Token: 0x170025C5 RID: 9669
+	// (get) Token: 0x06018213 RID: 98835 RVA: 0x0073EC19 File Offset: 0x0073CE19
 	public bool IsMultiPart
 	{
 		get
@@ -21,7 +21,7 @@ public class CharacterPartComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A83E RID: 108606 RVA: 0x00718560 File Offset: 0x00716760
+	// Token: 0x06018214 RID: 98836 RVA: 0x0073EC24 File Offset: 0x0073CE24
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		EntityComponentPb entityComponentPb;
@@ -39,7 +39,7 @@ public class CharacterPartComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A83F RID: 108607 RVA: 0x007185ED File Offset: 0x007167ED
+	// Token: 0x06018215 RID: 98837 RVA: 0x0073ECB1 File Offset: 0x0073CEB1
 	protected override bool OnInit()
 	{
 		this.TagComponent = base.Entity.GetComponent<BaseTagComponent>();
@@ -51,7 +51,7 @@ public class CharacterPartComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A840 RID: 108608 RVA: 0x00718628 File Offset: 0x00716828
+	// Token: 0x06018216 RID: 98838 RVA: 0x0073ECEC File Offset: 0x0073CEEC
 	protected unsafe override void OnActivate()
 	{
 		if (!this.IsMultiPartInternal)
@@ -173,7 +173,7 @@ public class CharacterPartComponent : EntityComponent
 		this.PartActiveTagChangeTaskList = list2.ToArray();
 	}
 
-	// Token: 0x0601A841 RID: 108609 RVA: 0x00718A04 File Offset: 0x00716C04
+	// Token: 0x06018217 RID: 98839 RVA: 0x0073F0C8 File Offset: 0x0073D2C8
 	protected override bool OnEnd()
 	{
 		if (this.IsMultiPartInternal)
@@ -187,7 +187,7 @@ public class CharacterPartComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A842 RID: 108610 RVA: 0x00718A38 File Offset: 0x00716C38
+	// Token: 0x06018218 RID: 98840 RVA: 0x0073F0FC File Offset: 0x0073D2FC
 	[NullableContext(1)]
 	public bool IsWeakness(string boneName)
 	{
@@ -195,7 +195,7 @@ public class CharacterPartComponent : EntityComponent
 		return characterPart != null && characterPart.Active;
 	}
 
-	// Token: 0x0601A843 RID: 108611 RVA: 0x00718A70 File Offset: 0x00716C70
+	// Token: 0x06018219 RID: 98841 RVA: 0x0073F134 File Offset: 0x0073D334
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public CharacterPart GetPart(string boneName)
@@ -208,7 +208,7 @@ public class CharacterPartComponent : EntityComponent
 		return this.PartMapByBone.GetValueOrDefault(valueOrDefault);
 	}
 
-	// Token: 0x0601A844 RID: 108612 RVA: 0x00718A9C File Offset: 0x00716C9C
+	// Token: 0x0601821A RID: 98842 RVA: 0x0073F160 File Offset: 0x0073D360
 	public CharacterPart GetPartByTag(FGameplayTag tag)
 	{
 		CharacterPart characterPart;
@@ -225,7 +225,7 @@ public class CharacterPartComponent : EntityComponent
 		return characterPart;
 	}
 
-	// Token: 0x0601A845 RID: 108613 RVA: 0x00718B04 File Offset: 0x00716D04
+	// Token: 0x0601821B RID: 98843 RVA: 0x0073F1C8 File Offset: 0x0073D3C8
 	public CharacterPart GetPartByIndex(int index)
 	{
 		if (index < 0 || index >= this.Parts.Length)
@@ -241,7 +241,7 @@ public class CharacterPartComponent : EntityComponent
 		return this.Parts[index];
 	}
 
-	// Token: 0x0601A846 RID: 108614 RVA: 0x00718B5A File Offset: 0x00716D5A
+	// Token: 0x0601821C RID: 98844 RVA: 0x0073F21E File Offset: 0x0073D41E
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public CharacterPart GetPartByCombineBoneName(string boneName)
@@ -253,7 +253,7 @@ public class CharacterPartComponent : EntityComponent
 		return this.PartMapByCombineBone.GetValueOrDefault(boneName);
 	}
 
-	// Token: 0x0601A847 RID: 108615 RVA: 0x00718B74 File Offset: 0x00716D74
+	// Token: 0x0601821D RID: 98845 RVA: 0x0073F238 File Offset: 0x0073D438
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private ITagTask ListenCharPartActiveChange(CharacterPart part, FGameplayTag tag)
@@ -264,7 +264,7 @@ public class CharacterPartComponent : EntityComponent
 		}, null);
 	}
 
-	// Token: 0x0601A848 RID: 108616 RVA: 0x00718BB4 File Offset: 0x00716DB4
+	// Token: 0x0601821E RID: 98846 RVA: 0x0073F278 File Offset: 0x0073D478
 	[CombatListen(ENotifyMessageId.PartUpdateNotify, false, false)]
 	public static void PartUpdateNotify(Entity entity, [Nullable(1)] PartUpdateNotify data, CombatCommon combatCommon = null)
 	{
@@ -285,7 +285,7 @@ public class CharacterPartComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A849 RID: 108617 RVA: 0x00718C3C File Offset: 0x00716E3C
+	// Token: 0x0601821F RID: 98847 RVA: 0x0073F300 File Offset: 0x0073D500
 	[CombatListen(ENotifyMessageId.PartComponentInitNotify, false, false)]
 	public static void PartComponentInitNotify(Entity entity, [Nullable(1)] PartComponentInitNotify data, CombatCommon combatCommon = null)
 	{
@@ -307,7 +307,7 @@ public class CharacterPartComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A84A RID: 108618 RVA: 0x00718CE8 File Offset: 0x00716EE8
+	// Token: 0x06018220 RID: 98848 RVA: 0x0073F3AC File Offset: 0x0073D5AC
 	[NullableContext(1)]
 	public string GetDebugText()
 	{
@@ -331,7 +331,7 @@ public class CharacterPartComponent : EntityComponent
 		return text;
 	}
 
-	// Token: 0x0601A84B RID: 108619 RVA: 0x00718DB4 File Offset: 0x00716FB4
+	// Token: 0x06018221 RID: 98849 RVA: 0x0073F478 File Offset: 0x0073D678
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -340,169 +340,157 @@ public class CharacterPartComponent : EntityComponent
 			return false;
 		}
 		CharacterPartComponent characterPartComponent = (CharacterPartComponent)componentTemplate;
-		if (base.CanResetComponentProperty("BaseChar"))
+		if (characterPartComponent.BaseChar == null)
 		{
-			if (characterPartComponent.BaseChar == null)
-			{
-				this.BaseChar = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.BaseChar), "BaseChar"))
-			{
-				return false;
-			}
+			this.BaseChar = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseChar), "BaseChar"))
 		{
-			if (characterPartComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (characterPartComponent.ActorComp == null)
 		{
-			if (characterPartComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("DtCharacterPart"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterPartComponent.DtCharacterPart == null)
-			{
-				this.DtCharacterPart = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDataTable>(this.DtCharacterPart), "DtCharacterPart"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Parts"))
+		if (characterPartComponent.TagComponent == null)
 		{
-			if (characterPartComponent.Parts == null)
-			{
-				this.Parts = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPart[]>(this.Parts), "Parts"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("PartMapByBone"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (characterPartComponent.PartMapByBone == null)
-			{
-				this.PartMapByBone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CharacterPart>>(this.PartMapByBone), "PartMapByBone"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PartMapByTag"))
+		if (characterPartComponent.DtCharacterPart == null)
 		{
-			if (characterPartComponent.PartMapByTag == null)
-			{
-				this.PartMapByTag = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CharacterPart>>(this.PartMapByTag), "PartMapByTag"))
-			{
-				return false;
-			}
+			this.DtCharacterPart = null;
 		}
-		if (base.CanResetComponentProperty("WeaknessByBone"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DtCharacterPart), "DtCharacterPart"))
 		{
-			if (characterPartComponent.WeaknessByBone == null)
-			{
-				this.WeaknessByBone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CharacterPart>>(this.WeaknessByBone), "WeaknessByBone"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PartForwardByBone"))
+		if (characterPartComponent.Parts == null)
 		{
-			if (characterPartComponent.PartForwardByBone == null)
-			{
-				this.PartForwardByBone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.PartForwardByBone), "PartForwardByBone"))
-			{
-				return false;
-			}
+			this.Parts = null;
 		}
-		if (base.CanResetComponentProperty("GroupMapByBone"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Parts), "Parts"))
 		{
-			if (characterPartComponent.GroupMapByBone == null)
-			{
-				this.GroupMapByBone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.GroupMapByBone), "GroupMapByBone"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PartMapByCombineBone"))
+		if (characterPartComponent.PartMapByBone == null)
 		{
-			if (characterPartComponent.PartMapByCombineBone == null)
-			{
-				this.PartMapByCombineBone = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, CharacterPart>>(this.PartMapByCombineBone), "PartMapByCombineBone"))
-			{
-				return false;
-			}
+			this.PartMapByBone = null;
 		}
-		if (base.CanResetComponentProperty("PartActiveTagChangeTaskList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartMapByBone), "PartMapByBone"))
 		{
-			if (characterPartComponent.PartActiveTagChangeTaskList == null)
-			{
-				this.PartActiveTagChangeTaskList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask[]>(this.PartActiveTagChangeTaskList), "PartActiveTagChangeTaskList"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PartComponentPb"))
+		if (characterPartComponent.PartMapByTag == null)
 		{
-			if (characterPartComponent.PartComponentPb == null)
-			{
-				this.PartComponentPb = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PartComponentPb>(this.PartComponentPb), "PartComponentPb"))
-			{
-				return false;
-			}
+			this.PartMapByTag = null;
 		}
-		if (base.CanResetComponentProperty("IsMultiPartInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartMapByTag), "PartMapByTag"))
 		{
-			this.IsMultiPartInternal = characterPartComponent.IsMultiPartInternal;
+			return false;
 		}
+		if (characterPartComponent.WeaknessByBone == null)
+		{
+			this.WeaknessByBone = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeaknessByBone), "WeaknessByBone"))
+		{
+			return false;
+		}
+		if (characterPartComponent.PartForwardByBone == null)
+		{
+			this.PartForwardByBone = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartForwardByBone), "PartForwardByBone"))
+		{
+			return false;
+		}
+		if (characterPartComponent.GroupMapByBone == null)
+		{
+			this.GroupMapByBone = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroupMapByBone), "GroupMapByBone"))
+		{
+			return false;
+		}
+		if (characterPartComponent.PartMapByCombineBone == null)
+		{
+			this.PartMapByCombineBone = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartMapByCombineBone), "PartMapByCombineBone"))
+		{
+			return false;
+		}
+		if (characterPartComponent.PartActiveTagChangeTaskList == null)
+		{
+			this.PartActiveTagChangeTaskList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartActiveTagChangeTaskList), "PartActiveTagChangeTaskList"))
+		{
+			return false;
+		}
+		if (characterPartComponent.PartComponentPb == null)
+		{
+			this.PartComponentPb = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PartComponentPb), "PartComponentPb"))
+		{
+			return false;
+		}
+		this.IsMultiPartInternal = characterPartComponent.IsMultiPartInternal;
 		return true;
 	}
 
-	// Token: 0x0400CB90 RID: 52112
+	// Token: 0x170025C6 RID: 9670
+	// (get) Token: 0x06018222 RID: 98850 RVA: 0x0073F6D3 File Offset: 0x0073D8D3
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C7 RID: 9671
+	// (get) Token: 0x06018223 RID: 98851 RVA: 0x0073F6D6 File Offset: 0x0073D8D6
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C8 RID: 9672
+	// (get) Token: 0x06018224 RID: 98852 RVA: 0x0073F6D9 File Offset: 0x0073D8D9
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CF73 RID: 53107
 	public TsBaseCharacter BaseChar;
 
-	// Token: 0x0400CB91 RID: 52113
+	// Token: 0x0400CF74 RID: 53108
 	public CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CB92 RID: 52114
+	// Token: 0x0400CF75 RID: 53109
 	public BaseTagComponent TagComponent;
 
-	// Token: 0x0400CB93 RID: 52115
+	// Token: 0x0400CF76 RID: 53110
 	public UDataTable DtCharacterPart;
 
-	// Token: 0x0400CB94 RID: 52116
+	// Token: 0x0400CF77 RID: 53111
 	[Nullable(new byte[]
 	{
 		2,
@@ -510,7 +498,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public CharacterPart[] Parts;
 
-	// Token: 0x0400CB95 RID: 52117
+	// Token: 0x0400CF78 RID: 53112
 	[Nullable(new byte[]
 	{
 		2,
@@ -519,7 +507,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, CharacterPart> PartMapByBone;
 
-	// Token: 0x0400CB96 RID: 52118
+	// Token: 0x0400CF79 RID: 53113
 	[Nullable(new byte[]
 	{
 		2,
@@ -528,7 +516,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, CharacterPart> PartMapByTag;
 
-	// Token: 0x0400CB97 RID: 52119
+	// Token: 0x0400CF7A RID: 53114
 	[Nullable(new byte[]
 	{
 		2,
@@ -537,7 +525,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, CharacterPart> WeaknessByBone;
 
-	// Token: 0x0400CB98 RID: 52120
+	// Token: 0x0400CF7B RID: 53115
 	[Nullable(new byte[]
 	{
 		2,
@@ -546,7 +534,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, string> PartForwardByBone;
 
-	// Token: 0x0400CB99 RID: 52121
+	// Token: 0x0400CF7C RID: 53116
 	[Nullable(new byte[]
 	{
 		2,
@@ -555,7 +543,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, string> GroupMapByBone;
 
-	// Token: 0x0400CB9A RID: 52122
+	// Token: 0x0400CF7D RID: 53117
 	[Nullable(new byte[]
 	{
 		2,
@@ -564,7 +552,7 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	public Dictionary<string, CharacterPart> PartMapByCombineBone;
 
-	// Token: 0x0400CB9B RID: 52123
+	// Token: 0x0400CF7E RID: 53118
 	[Nullable(new byte[]
 	{
 		2,
@@ -572,9 +560,9 @@ public class CharacterPartComponent : EntityComponent
 	})]
 	private ITagTask[] PartActiveTagChangeTaskList;
 
-	// Token: 0x0400CB9C RID: 52124
+	// Token: 0x0400CF7F RID: 53119
 	private PartComponentPb PartComponentPb;
 
-	// Token: 0x0400CB9D RID: 52125
+	// Token: 0x0400CF80 RID: 53120
 	private bool IsMultiPartInternal;
 }

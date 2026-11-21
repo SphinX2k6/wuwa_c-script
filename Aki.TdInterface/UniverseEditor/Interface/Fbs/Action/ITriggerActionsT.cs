@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007470 RID: 29808
+	// Token: 0x02007C63 RID: 31843
 	public class ITriggerActionsT
 	{
-		// Token: 0x1700E23C RID: 57916
-		// (get) Token: 0x0603627A RID: 221818 RVA: 0x0075CDD9 File Offset: 0x0075AFD9
-		// (set) Token: 0x0603627B RID: 221819 RVA: 0x0075CDE1 File Offset: 0x0075AFE1
+		// Token: 0x1700EE59 RID: 61017
+		// (get) Token: 0x06039663 RID: 235107 RVA: 0x007BFB05 File Offset: 0x007BDD05
+		// (set) Token: 0x06039664 RID: 235108 RVA: 0x007BFB0D File Offset: 0x007BDD0D
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x0603627C RID: 221820 RVA: 0x0075CDEA File Offset: 0x0075AFEA
+		// Token: 0x06039665 RID: 235109 RVA: 0x007BFB16 File Offset: 0x007BDD16
 		public ITriggerActionsT()
 		{
 			this.Actions = null;

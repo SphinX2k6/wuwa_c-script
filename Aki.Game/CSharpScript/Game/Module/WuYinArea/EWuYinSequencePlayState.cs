@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.WuYinArea
 {
-	// Token: 0x020046F5 RID: 18165
+	// Token: 0x02003625 RID: 13861
 	public enum EWuYinSequencePlayState
 	{
-		// Token: 0x04019AA5 RID: 105125
+		// Token: 0x04014154 RID: 82260
 		Play,
-		// Token: 0x04019AA6 RID: 105126
+		// Token: 0x04014155 RID: 82261
 		End
 	}
 }

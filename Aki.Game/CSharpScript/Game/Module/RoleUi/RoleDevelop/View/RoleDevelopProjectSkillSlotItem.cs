@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D48 RID: 19784
+	// Token: 0x02003D11 RID: 15633
 	public class RoleDevelopProjectSkillSlotItem : UiPanelBase
 	{
-		// Token: 0x060331D4 RID: 209364 RVA: 0x00BEA8A8 File Offset: 0x00BE8AA8
+		// Token: 0x06028037 RID: 163895 RVA: 0x00B33BEC File Offset: 0x00B31DEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,15 +41,16 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060331D5 RID: 209365 RVA: 0x00BEA9D2 File Offset: 0x00BE8BD2
+		// Token: 0x06028038 RID: 163896 RVA: 0x00B33D16 File Offset: 0x00B31F16
 		[NullableContext(1)]
-		public void Refresh(RoleDevelopSkillData data)
+		public void Refresh(RoleDevelopSkillData data, bool clickEnabled = true)
 		{
 			this.Data = data;
+			this.ClickEnabled = clickEnabled;
 			this.RefreshView();
 		}
 
-		// Token: 0x060331D6 RID: 209366 RVA: 0x00BEA9E4 File Offset: 0x00BE8BE4
+		// Token: 0x06028039 RID: 163897 RVA: 0x00B33D2C File Offset: 0x00B31F2C
 		private void RefreshView()
 		{
 			RoleDevelopSkillData data = this.Data;
@@ -105,11 +106,11 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 				base.SetSpriteTransitionByPath(path, base.GetUiSpriteTransition(0), EUISelectableSelectionState.EUISelectableSelectionState_MAX);
 				this.RefreshShowTag(skillTreeNode.Value.SkillId);
 			}
-			bool selfInteractive = RoleModel.Instance.IsRoleOwned(data.RoleId);
-			base.GetButton(3).SetSelfInteractive(selfInteractive);
+			bool flag2 = RoleModel.Instance.IsRoleOwned(data.RoleId);
+			base.GetButton(3).SetSelfInteractive(this.ClickEnabled && flag2);
 		}
 
-		// Token: 0x060331D7 RID: 209367 RVA: 0x00BEABD8 File Offset: 0x00BE8DD8
+		// Token: 0x0602803A RID: 163898 RVA: 0x00B33F28 File Offset: 0x00B32128
 		private void RefreshShowTag(int skillId)
 		{
 			UUIItem item = base.GetItem(4);
@@ -124,15 +125,15 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 			if (skillShowTagType == 2)
 			{
-				string resourcePath2 = UiResourceConfig.Instance.GetResourcePath("T_RoleDevelopRecommend");
+				string resourcePath2 = UiResourceConfig.Instance.GetResourcePath("T_RoleDevelopRecommendB");
 				base.SetTextureByPath(resourcePath2, texture, null, null);
 			}
 		}
 
-		// Token: 0x060331D8 RID: 209368 RVA: 0x00BEAC6C File Offset: 0x00BE8E6C
+		// Token: 0x0602803B RID: 163899 RVA: 0x00B33FBC File Offset: 0x00B321BC
 		private void OnSkillSlotClick()
 		{
-			if (this.Data == null)
+			if (this.Data == null || !this.ClickEnabled)
 			{
 				return;
 			}
@@ -145,30 +146,28 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			UiManager.Instance.OpenView(EUiViewName.RoleSkillMergeView, param, null);
 		}
 
-		// Token: 0x0401B2B8 RID: 111288
+		// Token: 0x04015C89 RID: 89225
 		[Nullable(2)]
 		private RoleDevelopSkillData Data;
 
-		// Token: 0x0200AEB4 RID: 44724
-		public static class EComponentType
+		// Token: 0x04015C8A RID: 89226
+		private bool ClickEnabled = true;
+
+		// Token: 0x020098E8 RID: 39144
+		private enum EComponentType
 		{
-			// Token: 0x040350E3 RID: 217315
-			public const int SpriteSkill = 0;
-
-			// Token: 0x040350E4 RID: 217316
-			public const int SpriteLock = 1;
-
-			// Token: 0x040350E5 RID: 217317
-			public const int TxtSkillNum = 2;
-
-			// Token: 0x040350E6 RID: 217318
-			public const int BtnSkillSlot = 3;
-
-			// Token: 0x040350E7 RID: 217319
-			public const int ItemTag = 4;
-
-			// Token: 0x040350E8 RID: 217320
-			public const int TextureTag = 5;
+			// Token: 0x0402FB08 RID: 195336
+			SpriteSkill,
+			// Token: 0x0402FB09 RID: 195337
+			SpriteLock,
+			// Token: 0x0402FB0A RID: 195338
+			TxtSkillNum,
+			// Token: 0x0402FB0B RID: 195339
+			BtnSkillSlot,
+			// Token: 0x0402FB0C RID: 195340
+			ItemTag,
+			// Token: 0x0402FB0D RID: 195341
+			TextureTag
 		}
 	}
 }

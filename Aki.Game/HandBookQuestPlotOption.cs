@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E1F RID: 7711
+// Token: 0x020012E1 RID: 4833
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestPlotOption : UiPanelBase
 {
-	// Token: 0x0600EA60 RID: 60000 RVA: 0x00377698 File Offset: 0x00375898
+	// Token: 0x0600BE7F RID: 48767 RVA: 0x003833A0 File Offset: 0x003815A0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class HandBookQuestPlotOption : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EA61 RID: 60001 RVA: 0x00377708 File Offset: 0x00375908
+	// Token: 0x0600BE80 RID: 48768 RVA: 0x00383410 File Offset: 0x00381610
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(1);
@@ -35,7 +35,7 @@ public class HandBookQuestPlotOption : UiPanelBase
 		toggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleClick));
 	}
 
-	// Token: 0x0600EA62 RID: 60002 RVA: 0x00377738 File Offset: 0x00375938
+	// Token: 0x0600BE81 RID: 48769 RVA: 0x00383440 File Offset: 0x00381640
 	public void RefreshByOption(ITalkOption option, int plotId, int talkItemId, int index, bool isChoseOption)
 	{
 		this.PlotId = plotId;
@@ -52,7 +52,7 @@ public class HandBookQuestPlotOption : UiPanelBase
 		this.SelectShow(isChoseOption);
 	}
 
-	// Token: 0x0600EA63 RID: 60003 RVA: 0x003777A8 File Offset: 0x003759A8
+	// Token: 0x0600BE82 RID: 48770 RVA: 0x003834B0 File Offset: 0x003816B0
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle toggle = this.Toggle;
@@ -63,7 +63,7 @@ public class HandBookQuestPlotOption : UiPanelBase
 		toggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x0600EA64 RID: 60004 RVA: 0x003777C0 File Offset: 0x003759C0
+	// Token: 0x0600BE83 RID: 48771 RVA: 0x003834C8 File Offset: 0x003816C8
 	public void SelectShow(bool isSelect)
 	{
 		if (isSelect)
@@ -108,13 +108,13 @@ public class HandBookQuestPlotOption : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EA65 RID: 60005 RVA: 0x00377865 File Offset: 0x00375A65
+	// Token: 0x0600BE84 RID: 48772 RVA: 0x0038356D File Offset: 0x0038176D
 	public void BindClickToggleBack(TSelectedOpenCallback onClickToggle)
 	{
 		this.OnClickToggleBack = onClickToggle;
 	}
 
-	// Token: 0x0600EA66 RID: 60006 RVA: 0x0037786E File Offset: 0x00375A6E
+	// Token: 0x0600BE85 RID: 48773 RVA: 0x00383576 File Offset: 0x00381776
 	private void OnToggleClick(EToggleState state)
 	{
 		if (this.OnClickToggleBack != null && state == EToggleState.ETT_Checked)
@@ -123,23 +123,23 @@ public class HandBookQuestPlotOption : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006CC9 RID: 27849
+	// Token: 0x04006DAA RID: 28074
 	[Nullable(2)]
 	public UUIExtendToggle Toggle;
 
-	// Token: 0x04006CCA RID: 27850
+	// Token: 0x04006DAB RID: 28075
 	private int TalkItemId = -1;
 
-	// Token: 0x04006CCB RID: 27851
+	// Token: 0x04006DAC RID: 28076
 	private int PlotId = -1;
 
-	// Token: 0x04006CCC RID: 27852
+	// Token: 0x04006DAD RID: 28077
 	private int OptionIndex;
 
-	// Token: 0x04006CCD RID: 27853
+	// Token: 0x04006DAE RID: 28078
 	[Nullable(2)]
 	private TSelectedOpenCallback OnClickToggleBack;
 
-	// Token: 0x04006CCE RID: 27854
+	// Token: 0x04006DAF RID: 28079
 	private HandBookDefine HandBookDefine = new HandBookDefine();
 }

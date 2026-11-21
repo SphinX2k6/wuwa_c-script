@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002CC2 RID: 11458
+// Token: 0x0200221B RID: 8731
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelCreateData
 {
-	// Token: 0x06017F1D RID: 98077 RVA: 0x00616C60 File Offset: 0x00614E60
+	// Token: 0x06015796 RID: 87958 RVA: 0x0063C920 File Offset: 0x0063AB20
 	public UiModelCreateData(EUiModelType modelType, EUiModelActorType modelActorType, EUiModelUseWay modelUseWay, Type[] components)
 	{
 		this.ModelType = modelType;
@@ -15,15 +15,15 @@ public class UiModelCreateData
 		this.Components = components;
 	}
 
-	// Token: 0x0400B279 RID: 45689
+	// Token: 0x0400B5E4 RID: 46564
 	public EUiModelType ModelType;
 
-	// Token: 0x0400B27A RID: 45690
+	// Token: 0x0400B5E5 RID: 46565
 	public EUiModelActorType ModelActorType;
 
-	// Token: 0x0400B27B RID: 45691
+	// Token: 0x0400B5E6 RID: 46566
 	public EUiModelUseWay ModelUseWay;
 
-	// Token: 0x0400B27C RID: 45692
+	// Token: 0x0400B5E7 RID: 46567
 	public Type[] Components;
 }

@@ -17,18 +17,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 {
-	// Token: 0x0200480B RID: 18443
+	// Token: 0x0200373C RID: 14140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LordGymPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030499 RID: 197785 RVA: 0x00B32FA0 File Offset: 0x00B311A0
+		// Token: 0x06024C69 RID: 150633 RVA: 0x00A62F04 File Offset: 0x00A61104
 		public override string GetResourceId()
 		{
 			return "UiView_InstanceEntranceTip_Prefab_2";
 		}
 
-		// Token: 0x0603049A RID: 197786 RVA: 0x00B32FA7 File Offset: 0x00B311A7
+		// Token: 0x06024C6A RID: 150634 RVA: 0x00A62F0B File Offset: 0x00A6110B
 		protected override void OnStart()
 		{
 			this.DifficultyView = new GenericLayout<DifficultyItem, IDifficultyItemData>(base.GetVerticalLayout(16), new Func<DifficultyItem>(this.OnCreateDifficultyItem), null, false, true);
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			base.OnStart();
 		}
 
-		// Token: 0x0603049B RID: 197787 RVA: 0x00B32FE3 File Offset: 0x00B311E3
+		// Token: 0x06024C6B RID: 150635 RVA: 0x00A62F47 File Offset: 0x00A61147
 		private DifficultyItem OnCreateDifficultyItem()
 		{
 			return new DifficultyItem();
 		}
 
-		// Token: 0x0603049C RID: 197788 RVA: 0x00B32FEC File Offset: 0x00B311EC
+		// Token: 0x06024C6C RID: 150636 RVA: 0x00A62F50 File Offset: 0x00A61150
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayout<DifficultyItem, IDifficultyItemData> difficultyView = this.DifficultyView;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603049D RID: 197789 RVA: 0x00B33060 File Offset: 0x00B31260
+		// Token: 0x06024C6D RID: 150637 RVA: 0x00A62FC4 File Offset: 0x00A611C4
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603049E RID: 197790 RVA: 0x00B330C8 File Offset: 0x00B312C8
+		// Token: 0x06024C6E RID: 150638 RVA: 0x00A6302C File Offset: 0x00A6122C
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			}
 		}
 
-		// Token: 0x0603049F RID: 197791 RVA: 0x00B33188 File Offset: 0x00B31388
+		// Token: 0x06024C6F RID: 150639 RVA: 0x00A630F0 File Offset: 0x00A612F0
 		private unsafe void InitView()
 		{
 			FixedSceneGameplayMarkItem selectedMarkItem = this.SelectedMarkItem;
@@ -215,18 +215,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 				LordGymModel instance9 = LordGymModel.Instance;
 				int valueOrDefault = ((instance9 != null) ? instance9.GetMaxDifficultyLordGymEntranceCanFight(lordGymEntrance.Id) : null).GetValueOrDefault(1);
 				this.RewardConfig = ConfigExchangeRewardById.GetConfig((variableRewardParam != null) ? variableRewardParam.RewardConfig[valueOrDefault - 1].RewardId : 0, true);
-				global::LevelPlayInfo levelPlayInfo2 = this.LevelPlayInfo;
-				bool flag4;
-				if (levelPlayInfo2 == null)
-				{
-					flag4 = false;
-				}
-				else
-				{
-					int firstRewardId = levelPlayInfo2.FirstRewardId;
-					flag4 = true;
-				}
-				this.FirstRewardConfig = (flag4 ? ConfigExchangeRewardById.GetConfig(this.LevelPlayInfo.FirstRewardId, true) : null);
+				this.FirstRewardConfig = ((this.LevelPlayInfo != null && this.LevelPlayInfo.FirstRewardId != 0) ? ConfigExchangeRewardById.GetConfig(this.LevelPlayInfo.FirstRewardId, true) : null);
 				int valueOrDefault2 = ((array2 != null) ? array2.GetValueOrNull(valueOrDefault - 1) : null).GetValueOrDefault();
 				LordGymModel instance10 = LordGymModel.Instance;
 				this.IsGymFinished = (instance10 != null && instance10.GetLordGymIsFinish(valueOrDefault2));
@@ -238,17 +227,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 					LordGymConfig instance11 = LordGymConfig.Instance;
 					LordGym? lordGym2 = (instance11 != null) ? instance11.GetLordGymConfig(lordId2) : null;
 					LordGymModel instance12 = LordGymModel.Instance;
-					bool flag5 = instance12 != null && instance12.GetLordGymIsUnLock(lordId2);
+					bool flag4 = instance12 != null && instance12.GetLordGymIsUnLock(lordId2);
 					LordGymModel instance13 = LordGymModel.Instance;
-					bool flag6 = instance13 != null && instance13.GetLordGymIsFinish(lordId2);
+					bool flag5 = instance13 != null && instance13.GetLordGymIsFinish(lordId2);
 					LordGymModel instance14 = LordGymModel.Instance;
-					bool flag7 = instance14 != null && instance14.GetLastGymFinish(lordId2);
+					bool flag6 = instance14 != null && instance14.GetLastGymFinish(lordId2);
 					ELordGymDifficultyState elordGymDifficultyState = ELordGymDifficultyState.Lock;
-					if (flag6)
+					if (flag5)
 					{
 						elordGymDifficultyState = ELordGymDifficultyState.Ticked;
 					}
-					else if (flag7 && flag5)
+					else if (flag6 && flag4)
 					{
 						elordGymDifficultyState = ELordGymDifficultyState.Empty;
 					}
@@ -280,7 +269,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			this.InitEnterState();
 		}
 
-		// Token: 0x060304A0 RID: 197792 RVA: 0x00B3367C File Offset: 0x00B3187C
+		// Token: 0x06024C70 RID: 150640 RVA: 0x00A635E4 File Offset: 0x00A617E4
 		private void InitButtonState()
 		{
 			bool confirmBtnActive = false;
@@ -323,7 +312,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			base.UpdateQuickGotoActive(flag);
 		}
 
-		// Token: 0x060304A1 RID: 197793 RVA: 0x00B33730 File Offset: 0x00B31930
+		// Token: 0x06024C71 RID: 150641 RVA: 0x00A63698 File Offset: 0x00A61898
 		private void InitEnterState()
 		{
 			MapModel instance = MapModel.Instance;
@@ -361,7 +350,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			}
 		}
 
-		// Token: 0x060304A2 RID: 197794 RVA: 0x00B33818 File Offset: 0x00B31A18
+		// Token: 0x06024C72 RID: 150642 RVA: 0x00A63780 File Offset: 0x00A61980
 		private void InitRewards()
 		{
 			if (this.RewardGrid == null)
@@ -406,7 +395,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			this.UpdateReward(this.RewardGrid, this.RewardConfig, curWorldLevel, "FirstPassReward", this.IsGymFinished);
 		}
 
-		// Token: 0x060304A3 RID: 197795 RVA: 0x00B3398C File Offset: 0x00B31B8C
+		// Token: 0x06024C73 RID: 150643 RVA: 0x00A638F4 File Offset: 0x00A61AF4
 		private void UpdateReward([Nullable(2)] SceneGameplayTipGrid grid, ExchangeReward? rewardConfig, int curWorldLevel, string title, bool showGet = false)
 		{
 			if (rewardConfig == null)
@@ -493,7 +482,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			grid.SetActive(false);
 		}
 
-		// Token: 0x060304A4 RID: 197796 RVA: 0x00B33B80 File Offset: 0x00B31D80
+		// Token: 0x06024C74 RID: 150644 RVA: 0x00A63AE8 File Offset: 0x00A61CE8
 		protected override void HandleTeleportAndTrack()
 		{
 			WorldMapSecondaryUiContext layoutContext = this.LayoutContext;
@@ -506,7 +495,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			this.HandleTrack();
 		}
 
-		// Token: 0x060304A5 RID: 197797 RVA: 0x00B33BDC File Offset: 0x00B31DDC
+		// Token: 0x06024C75 RID: 150645 RVA: 0x00A63B44 File Offset: 0x00A61D44
 		protected override void OnDetailBtnClick()
 		{
 			MapModel instance = MapModel.Instance;
@@ -529,32 +518,32 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 			}
 		}
 
-		// Token: 0x04019FC3 RID: 106435
+		// Token: 0x04014677 RID: 83575
 		private bool IsNewLordGym;
 
-		// Token: 0x04019FC4 RID: 106436
+		// Token: 0x04014678 RID: 83576
 		[Nullable(2)]
 		private global::LevelPlayInfo LevelPlayInfo;
 
-		// Token: 0x04019FC5 RID: 106437
+		// Token: 0x04014679 RID: 83577
 		[Nullable(2)]
 		private FixedSceneGameplayMarkItem SelectedMarkItem;
 
-		// Token: 0x04019FC6 RID: 106438
+		// Token: 0x0401467A RID: 83578
 		[Nullable(2)]
 		private SceneGameplayTipGrid RewardGrid;
 
-		// Token: 0x04019FC7 RID: 106439
+		// Token: 0x0401467B RID: 83579
 		[Nullable(2)]
 		private SceneGameplayTipGrid FirstRewardGrid;
 
-		// Token: 0x04019FC8 RID: 106440
+		// Token: 0x0401467C RID: 83580
 		private ExchangeReward? RewardConfig;
 
-		// Token: 0x04019FC9 RID: 106441
+		// Token: 0x0401467D RID: 83581
 		private ExchangeReward? FirstRewardConfig;
 
-		// Token: 0x04019FCA RID: 106442
+		// Token: 0x0401467E RID: 83582
 		[Nullable(new byte[]
 		{
 			2,
@@ -563,14 +552,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.LordGymPanel
 		})]
 		private GenericLayout<DifficultyItem, IDifficultyItemData> DifficultyView;
 
-		// Token: 0x04019FCB RID: 106443
+		// Token: 0x0401467F RID: 83583
 		private bool IsGymFinished;
 
-		// Token: 0x0200AADA RID: 43738
+		// Token: 0x0200948B RID: 38027
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F51 RID: 212817
+			// Token: 0x0402E6D4 RID: 190164
 			public const int LordGymPanel = 0;
 		}
 	}

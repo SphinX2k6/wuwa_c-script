@@ -14,13 +14,13 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.TrapDefense;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 
-// Token: 0x02002937 RID: 10551
+// Token: 0x02001EB2 RID: 7858
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RouletteModel : ModelBase
 {
-	// Token: 0x06015C42 RID: 89154 RVA: 0x0057D9E4 File Offset: 0x0057BBE4
+	// Token: 0x06013647 RID: 79431 RVA: 0x005A8A24 File Offset: 0x005A6C24
 	public bool IsExploreRouletteOpen(bool checkTips = false)
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -54,13 +54,13 @@ public class RouletteModel : ModelBase
 		return FunctionModel.Instance.IsOpen(10026);
 	}
 
-	// Token: 0x06015C43 RID: 89155 RVA: 0x0057DA75 File Offset: 0x0057BC75
+	// Token: 0x06013648 RID: 79432 RVA: 0x005A8AB5 File Offset: 0x005A6CB5
 	public bool IsFunctionRouletteOpen()
 	{
 		return FunctionModel.Instance.IsOpen(10056);
 	}
 
-	// Token: 0x06015C44 RID: 89156 RVA: 0x0057DA86 File Offset: 0x0057BC86
+	// Token: 0x06013649 RID: 79433 RVA: 0x005A8AC6 File Offset: 0x005A6CC6
 	protected override bool OnInit()
 	{
 		this.InitAllRouletteListData();
@@ -70,7 +70,7 @@ public class RouletteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015C45 RID: 89157 RVA: 0x0057DAA6 File Offset: 0x0057BCA6
+	// Token: 0x0601364A RID: 79434 RVA: 0x005A8AE6 File Offset: 0x005A6CE6
 	protected override bool OnClear()
 	{
 		this.ClearAllRouletteListData();
@@ -78,7 +78,7 @@ public class RouletteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015C46 RID: 89158 RVA: 0x0057DAB8 File Offset: 0x0057BCB8
+	// Token: 0x0601364B RID: 79435 RVA: 0x005A8AF8 File Offset: 0x005A6CF8
 	public List<int> GetExploreRouletteBanTagIds()
 	{
 		IReadOnlyList<ExploreRoulette> exploreRouletteConfig = RouletteConfig.Instance.GetExploreRouletteConfig();
@@ -108,21 +108,21 @@ public class RouletteModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015C47 RID: 89159 RVA: 0x0057DB5D File Offset: 0x0057BD5D
+	// Token: 0x0601364C RID: 79436 RVA: 0x005A8B9D File Offset: 0x005A6D9D
 	protected void AddEvents()
 	{
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenSet, this.UnlockFunction1);
 		EventSystem.Instance.Add<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, this.UnlockFunction2);
 	}
 
-	// Token: 0x06015C48 RID: 89160 RVA: 0x0057DB8B File Offset: 0x0057BD8B
+	// Token: 0x0601364D RID: 79437 RVA: 0x005A8BCB File Offset: 0x005A6DCB
 	protected void RemoveEvents()
 	{
 		EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenSet, this.UnlockFunction1);
 		EventSystem.Instance.Remove<EFunctionType, bool>(EEventName.OnFunctionOpenUpdate, this.UnlockFunction2);
 	}
 
-	// Token: 0x06015C49 RID: 89161 RVA: 0x0057DBBC File Offset: 0x0057BDBC
+	// Token: 0x0601364E RID: 79438 RVA: 0x005A8BFC File Offset: 0x005A6DFC
 	public List<RouletteListDataBase> GetActivatedRouletteList()
 	{
 		List<RouletteListDataBase> list = new List<RouletteListDataBase>();
@@ -137,19 +137,19 @@ public class RouletteModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015C4A RID: 89162 RVA: 0x0057DC48 File Offset: 0x0057BE48
+	// Token: 0x0601364F RID: 79439 RVA: 0x005A8C88 File Offset: 0x005A6E88
 	public RouletteListDataBase GetCurrentExploreRouletteListData()
 	{
 		return this.GetActivatedRouletteList()[0];
 	}
 
-	// Token: 0x06015C4B RID: 89163 RVA: 0x0057DC56 File Offset: 0x0057BE56
+	// Token: 0x06013650 RID: 79440 RVA: 0x005A8C96 File Offset: 0x005A6E96
 	public RouletteListDataBase GetCurrentFunctionRouletteListData()
 	{
 		return this.RouletteListDataMap[ERouletteType.Function];
 	}
 
-	// Token: 0x06015C4C RID: 89164 RVA: 0x0057DC64 File Offset: 0x0057BE64
+	// Token: 0x06013651 RID: 79441 RVA: 0x005A8CA4 File Offset: 0x005A6EA4
 	private void InitAllRouletteListData()
 	{
 		this.RouletteListDataMap.Clear();
@@ -165,7 +165,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C4D RID: 89165 RVA: 0x0057DD00 File Offset: 0x0057BF00
+	// Token: 0x06013652 RID: 79442 RVA: 0x005A8D40 File Offset: 0x005A6F40
 	private void ClearAllRouletteListData()
 	{
 		foreach (RouletteListDataBase rouletteListDataBase in this.RouletteListDataMap.Values)
@@ -175,9 +175,9 @@ public class RouletteModel : ModelBase
 		this.RouletteListDataMap.Clear();
 	}
 
-	// Token: 0x17001D33 RID: 7475
-	// (get) Token: 0x06015C4E RID: 89166 RVA: 0x0057DD60 File Offset: 0x0057BF60
-	// (set) Token: 0x06015C4F RID: 89167 RVA: 0x0057DD68 File Offset: 0x0057BF68
+	// Token: 0x17001D8D RID: 7565
+	// (get) Token: 0x06013653 RID: 79443 RVA: 0x005A8DA0 File Offset: 0x005A6FA0
+	// (set) Token: 0x06013654 RID: 79444 RVA: 0x005A8DA8 File Offset: 0x005A6FA8
 	public int CurrentExploreSkillId
 	{
 		get
@@ -202,8 +202,8 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D34 RID: 7476
-	// (get) Token: 0x06015C50 RID: 89168 RVA: 0x0057DDD4 File Offset: 0x0057BFD4
+	// Token: 0x17001D8E RID: 7566
+	// (get) Token: 0x06013655 RID: 79445 RVA: 0x005A8E14 File Offset: 0x005A7014
 	[Nullable(2)]
 	public string CurrentExploreSkillIcon
 	{
@@ -244,7 +244,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C51 RID: 89169 RVA: 0x0057DE74 File Offset: 0x0057C074
+	// Token: 0x06013656 RID: 79446 RVA: 0x005A8EB4 File Offset: 0x005A70B4
 	public unsafe void RecoverEquipExploreSkillId()
 	{
 		foreach (RouletteListDataBase rouletteListDataBase in this.GetActivatedRouletteList())
@@ -267,7 +267,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C52 RID: 89170 RVA: 0x0057DF58 File Offset: 0x0057C158
+	// Token: 0x06013657 RID: 79447 RVA: 0x005A8F98 File Offset: 0x005A7198
 	public ExploreTools? GetExploreDataBySkillId(int skillId)
 	{
 		ExploreTools value;
@@ -278,7 +278,7 @@ public class RouletteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015C53 RID: 89171 RVA: 0x0057DF88 File Offset: 0x0057C188
+	// Token: 0x06013658 RID: 79448 RVA: 0x005A8FC8 File Offset: 0x005A71C8
 	public void UnlockExploreSkill(int id, bool isNew = true)
 	{
 		ExploreTools? exploreConfigById = RouletteConfig.Instance.GetExploreConfigById(id);
@@ -293,8 +293,8 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C54 RID: 89172 RVA: 0x0057DFDC File Offset: 0x0057C1DC
-	public void CreateAllUnlockExploreSkill(List<int> idList)
+	// Token: 0x06013659 RID: 79449 RVA: 0x005A901C File Offset: 0x005A721C
+	public void CreateAllUnlockExploreSkill(IEnumerable<int> idList)
 	{
 		this.UnlockExploreSkillDataMap.Clear();
 		foreach (int id in idList)
@@ -309,7 +309,7 @@ public class RouletteModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06015C55 RID: 89173 RVA: 0x0057E060 File Offset: 0x0057C260
+	// Token: 0x0601365A RID: 79450 RVA: 0x005A9098 File Offset: 0x005A7298
 	public FuncMenuWheel? GetFuncDataByFuncId(int id)
 	{
 		FuncMenuWheel value;
@@ -320,7 +320,7 @@ public class RouletteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015C56 RID: 89174 RVA: 0x0057E090 File Offset: 0x0057C290
+	// Token: 0x0601365B RID: 79451 RVA: 0x005A90C8 File Offset: 0x005A72C8
 	private void InitFunctionData()
 	{
 		IReadOnlyList<FuncMenuWheel> allFuncConfig = RouletteConfig.Instance.GetAllFuncConfig();
@@ -340,7 +340,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C57 RID: 89175 RVA: 0x0057E118 File Offset: 0x0057C318
+	// Token: 0x0601365C RID: 79452 RVA: 0x005A9150 File Offset: 0x005A7350
 	private void OpenFunction(int funcId)
 	{
 		FuncMenuWheel? funcConfigById = RouletteConfig.Instance.GetFuncConfigById(funcId);
@@ -354,14 +354,14 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C58 RID: 89176 RVA: 0x0057E15C File Offset: 0x0057C35C
+	// Token: 0x0601365D RID: 79453 RVA: 0x005A9194 File Offset: 0x005A7394
 	private void CloseFunction(int funcId)
 	{
 		this.UnlockFunctionDataMap.Remove(funcId);
 	}
 
-	// Token: 0x17001D35 RID: 7477
-	// (get) Token: 0x06015C59 RID: 89177 RVA: 0x0057E16B File Offset: 0x0057C36B
+	// Token: 0x17001D8F RID: 7567
+	// (get) Token: 0x0601365E RID: 79454 RVA: 0x005A91A3 File Offset: 0x005A73A3
 	public int CurrentEquipItemId
 	{
 		get
@@ -370,8 +370,8 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D36 RID: 7478
-	// (get) Token: 0x06015C5A RID: 89178 RVA: 0x0057E17E File Offset: 0x0057C37E
+	// Token: 0x17001D90 RID: 7568
+	// (get) Token: 0x0601365F RID: 79455 RVA: 0x005A91B6 File Offset: 0x005A73B6
 	public bool IsEquipItemSelectOn
 	{
 		get
@@ -380,8 +380,8 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001D37 RID: 7479
-	// (get) Token: 0x06015C5B RID: 89179 RVA: 0x0057E190 File Offset: 0x0057C390
+	// Token: 0x17001D91 RID: 7569
+	// (get) Token: 0x06013660 RID: 79456 RVA: 0x005A91C8 File Offset: 0x005A73C8
 	public InventoryDefine.EItemType? EquipItemType
 	{
 		get
@@ -398,7 +398,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C5C RID: 89180 RVA: 0x0057E1D8 File Offset: 0x0057C3D8
+	// Token: 0x06013661 RID: 79457 RVA: 0x005A9210 File Offset: 0x005A7410
 	public bool IsExploreSkillHasNumBySkillData(ExploreTools skillData)
 	{
 		if (skillData.SkillType != 5)
@@ -415,7 +415,7 @@ public class RouletteModel : ModelBase
 		return ((instance != null) ? instance.BattleInventoryData.GetItemData(trapDefenseItemByExploreToolId.Value.Id) : null) != null;
 	}
 
-	// Token: 0x06015C5D RID: 89181 RVA: 0x0057E250 File Offset: 0x0057C450
+	// Token: 0x06013662 RID: 79458 RVA: 0x005A9288 File Offset: 0x005A7488
 	public int GetExploreSkillShowNumBySkillData(ExploreTools skillData)
 	{
 		if (skillData.SkillType != 5)
@@ -452,7 +452,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C5E RID: 89182 RVA: 0x0057E328 File Offset: 0x0057C528
+	// Token: 0x06013663 RID: 79459 RVA: 0x005A9360 File Offset: 0x005A7560
 	public bool IsExploreSkillHasNum()
 	{
 		if (!this.IsEquipItemSelectOn)
@@ -472,7 +472,7 @@ public class RouletteModel : ModelBase
 		return config != null && config.GetValueOrDefault().NeedShowNum;
 	}
 
-	// Token: 0x06015C5F RID: 89183 RVA: 0x0057E3AC File Offset: 0x0057C5AC
+	// Token: 0x06013664 RID: 79460 RVA: 0x005A93E4 File Offset: 0x005A75E4
 	public int GetExploreSkillShowNum()
 	{
 		if (this.IsEquipItemSelectOn)
@@ -487,13 +487,13 @@ public class RouletteModel : ModelBase
 		return this.GetExploreSkillShowNumBySkillData(skillData);
 	}
 
-	// Token: 0x06015C60 RID: 89184 RVA: 0x0057E3F1 File Offset: 0x0057C5F1
+	// Token: 0x06013665 RID: 79461 RVA: 0x005A9429 File Offset: 0x005A7629
 	public bool IsExploreSkillHasSetNum(int exploreSkillId)
 	{
 		return exploreSkillId - 1010 <= 2 || exploreSkillId == 1018;
 	}
 
-	// Token: 0x06015C61 RID: 89185 RVA: 0x0057E408 File Offset: 0x0057C608
+	// Token: 0x06013666 RID: 79462 RVA: 0x005A9440 File Offset: 0x005A7640
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetExploreSkillShowSetNumById(ERouletteExploreId exploreSkillId)
 	{
@@ -527,26 +527,26 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C62 RID: 89186 RVA: 0x0057E500 File Offset: 0x0057C700
+	// Token: 0x06013667 RID: 79463 RVA: 0x005A9538 File Offset: 0x005A7738
 	public bool IsEquipItemInBuffCd()
 	{
 		return this.IsEquipItemSelectOn && this.CurrentEquipItemId != 0 && BuffItemConfig.Instance.IsBuffItem(this.CurrentEquipItemId) && BuffItemModel.Instance.GetBuffItemRemainCdTime(this.CurrentEquipItemId) - TimeUtil.Instance.TimeDeviation > 0.0;
 	}
 
-	// Token: 0x06015C63 RID: 89187 RVA: 0x0057E55B File Offset: 0x0057C75B
+	// Token: 0x06013668 RID: 79464 RVA: 0x005A9593 File Offset: 0x005A7793
 	public bool IsEquippedItemBanReqUse()
 	{
 		return this.IsEquipItemSelectOn && SpecialItemController.Instance.IsSpecialItem(this.CurrentEquipItemId) && !SpecialItemController.Instance.AllowReqUseSpecialItem(this.CurrentEquipItemId);
 	}
 
-	// Token: 0x06015C64 RID: 89188 RVA: 0x0057E58E File Offset: 0x0057C78E
+	// Token: 0x06013669 RID: 79465 RVA: 0x005A95C6 File Offset: 0x005A77C6
 	public void SaveNewItemList()
 	{
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.RouletteAssemblyItemRedDot);
 		EventSystem.Instance.Emit(EEventName.RouletteRefreshNew);
 	}
 
-	// Token: 0x06015C65 RID: 89189 RVA: 0x0057E5AC File Offset: 0x0057C7AC
+	// Token: 0x0601366A RID: 79466 RVA: 0x005A95E4 File Offset: 0x005A77E4
 	public bool TryAddNewItem(int id)
 	{
 		if (id == 0)
@@ -558,13 +558,13 @@ public class RouletteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015C66 RID: 89190 RVA: 0x0057E5D1 File Offset: 0x0057C7D1
+	// Token: 0x0601366B RID: 79467 RVA: 0x005A9609 File Offset: 0x005A7809
 	public bool TryRemoveNewItem(int id)
 	{
 		return id != 0 && NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.RouletteAssemblyItemRedDot, id);
 	}
 
-	// Token: 0x06015C67 RID: 89191 RVA: 0x0057E5E4 File Offset: 0x0057C7E4
+	// Token: 0x0601366C RID: 79468 RVA: 0x005A961C File Offset: 0x005A781C
 	public bool CheckHasAnyNewItem()
 	{
 		foreach (KeyValuePair<int, ExploreTools> keyValuePair in this.UnlockExploreSkillDataMap)
@@ -592,8 +592,8 @@ public class RouletteModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06015C68 RID: 89192 RVA: 0x0057E6AC File Offset: 0x0057C8AC
-	public unsafe void UpdateRouletteData(List<ExploreSkillRoulette> exploreList)
+	// Token: 0x0601366D RID: 79469 RVA: 0x005A96E4 File Offset: 0x005A78E4
+	public unsafe void UpdateRouletteData(IReadOnlyList<ExploreSkillRoulette> exploreList)
 	{
 		if (exploreList.Count == 0)
 		{
@@ -622,7 +622,7 @@ public class RouletteModel : ModelBase
 		this.TryEquipActivateRouletteExploreSkillId();
 	}
 
-	// Token: 0x06015C69 RID: 89193 RVA: 0x0057E7CC File Offset: 0x0057C9CC
+	// Token: 0x0601366E RID: 79470 RVA: 0x005A9804 File Offset: 0x005A7A04
 	public unsafe void UpdateRouletteDataByType(int type, ExploreSkillRoulette rouletteDataList)
 	{
 		RouletteListDataBase rouletteListDataBase;
@@ -648,7 +648,7 @@ public class RouletteModel : ModelBase
 		this.TryEquipActivateRouletteExploreSkillId();
 	}
 
-	// Token: 0x06015C6A RID: 89194 RVA: 0x0057E8C0 File Offset: 0x0057CAC0
+	// Token: 0x0601366F RID: 79471 RVA: 0x005A98F8 File Offset: 0x005A7AF8
 	private unsafe void TryEquipActivateRouletteExploreSkillId()
 	{
 		RouletteListDataBase currentExploreRouletteListData = this.GetCurrentExploreRouletteListData();
@@ -673,7 +673,7 @@ public class RouletteModel : ModelBase
 		RouletteController.Instance.ExploreSkillSetRequest(equipExploreSkillId, null, true);
 	}
 
-	// Token: 0x06015C6B RID: 89195 RVA: 0x0057E96C File Offset: 0x0057CB6C
+	// Token: 0x06013670 RID: 79472 RVA: 0x005A99A4 File Offset: 0x005A7BA4
 	public string GetRouletteKeyRichText(string actionName)
 	{
 		string result = "";
@@ -690,7 +690,7 @@ public class RouletteModel : ModelBase
 		return "<texture=" + displayKeyIconPathList[0] + ">";
 	}
 
-	// Token: 0x06015C6C RID: 89196 RVA: 0x0057E9C9 File Offset: 0x0057CBC9
+	// Token: 0x06013671 RID: 79473 RVA: 0x005A9A01 File Offset: 0x005A7C01
 	public string GetRouletteMainAction(string actionName)
 	{
 		if (!InputSettingsManager.Instance.GetActionKeyDisplayData(this.InputKeyDisplayDataRef, actionName))
@@ -704,19 +704,19 @@ public class RouletteModel : ModelBase
 		return actionName;
 	}
 
-	// Token: 0x06015C6D RID: 89197 RVA: 0x0057E9F4 File Offset: 0x0057CBF4
+	// Token: 0x06013672 RID: 79474 RVA: 0x005A9A2C File Offset: 0x005A7C2C
 	public int GetRouletteSelectConfig()
 	{
 		return LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.GamepadRouletteSelectConfig, null).GetValueOrDefault(1);
 	}
 
-	// Token: 0x06015C6E RID: 89198 RVA: 0x0057EA1A File Offset: 0x0057CC1A
+	// Token: 0x06013673 RID: 79475 RVA: 0x005A9A52 File Offset: 0x005A7C52
 	public void SaveRouletteSelectConfig(int config)
 	{
 		LocalStorage.SetGlobal<int>(ELocalStorageGlobalKey.GamepadRouletteSelectConfig, config);
 	}
 
-	// Token: 0x06015C6F RID: 89199 RVA: 0x0057EA28 File Offset: 0x0057CC28
+	// Token: 0x06013674 RID: 79476 RVA: 0x005A9A60 File Offset: 0x005A7C60
 	public ERouletteType GetRouletteActionOpenConfig(ERouletteActionType actionType)
 	{
 		ERouletteType erouletteType = (actionType == ERouletteActionType.Action1) ? ERouletteType.Explore : ERouletteType.Function;
@@ -727,13 +727,13 @@ public class RouletteModel : ModelBase
 		return LocalStorage.GetPlayer<ERouletteType?>((actionType == ERouletteActionType.Action1) ? ELocalStoragePlayerKey.RouletteAction01OpenConfig : ELocalStoragePlayerKey.RouletteAction02OpenConfig, null).GetValueOrDefault(erouletteType);
 	}
 
-	// Token: 0x06015C70 RID: 89200 RVA: 0x0057EA6D File Offset: 0x0057CC6D
+	// Token: 0x06013675 RID: 79477 RVA: 0x005A9AA5 File Offset: 0x005A7CA5
 	public void SaveRouletteActionOpenConfig(ERouletteActionType actionType, ERouletteType type)
 	{
 		LocalStorage.SetPlayer<ERouletteType>((actionType == ERouletteActionType.Action1) ? ELocalStoragePlayerKey.RouletteAction01OpenConfig : ELocalStoragePlayerKey.RouletteAction02OpenConfig, type);
 	}
 
-	// Token: 0x06015C71 RID: 89201 RVA: 0x0057EA80 File Offset: 0x0057CC80
+	// Token: 0x06013676 RID: 79478 RVA: 0x005A9AB8 File Offset: 0x005A7CB8
 	private void SendExploreToolSwitchLogData(int id)
 	{
 		ExploreToolSwitchLogData exploreToolSwitchLogData = new ExploreToolSwitchLogData();
@@ -758,7 +758,7 @@ public class RouletteModel : ModelBase
 		LogReportController.Instance.LogReport(exploreToolSwitchLogData);
 	}
 
-	// Token: 0x06015C72 RID: 89202 RVA: 0x0057EB48 File Offset: 0x0057CD48
+	// Token: 0x06013677 RID: 79479 RVA: 0x005A9B80 File Offset: 0x005A7D80
 	public void SendExploreToolEquipLogData(int id, int operationType, int rouletteType, int? itemId = null)
 	{
 		ExploreToolEquipLogData exploreToolEquipLogData = new ExploreToolEquipLogData();
@@ -789,7 +789,7 @@ public class RouletteModel : ModelBase
 		LogReportController.Instance.LogReport(exploreToolEquipLogData);
 	}
 
-	// Token: 0x06015C73 RID: 89203 RVA: 0x0057EC34 File Offset: 0x0057CE34
+	// Token: 0x06013678 RID: 79480 RVA: 0x005A9C6C File Offset: 0x005A7E6C
 	public void SendExploreToolItemUseLogData(int id)
 	{
 		ExploreToolItemUseLogData exploreToolItemUseLogData = new ExploreToolItemUseLogData();
@@ -803,7 +803,7 @@ public class RouletteModel : ModelBase
 		LogReportController.Instance.LogReport(exploreToolItemUseLogData);
 	}
 
-	// Token: 0x06015C74 RID: 89204 RVA: 0x0057ECD0 File Offset: 0x0057CED0
+	// Token: 0x06013679 RID: 79481 RVA: 0x005A9D08 File Offset: 0x005A7F08
 	public void TrySendExploreToolGeneralUseLogData(int exploreSkillId, int skillId = 0, int entityConfigId = 0)
 	{
 		ExploreTools? exploreConfigById = RouletteConfig.Instance.GetExploreConfigById(exploreSkillId);
@@ -829,8 +829,8 @@ public class RouletteModel : ModelBase
 		LogReportController.Instance.UnitLogReport(exploreToolGeneralUseLogData);
 	}
 
-	// Token: 0x17001D38 RID: 7480
-	// (get) Token: 0x06015C75 RID: 89205 RVA: 0x0057EDDC File Offset: 0x0057CFDC
+	// Token: 0x17001D92 RID: 7570
+	// (get) Token: 0x0601367A RID: 79482 RVA: 0x005A9E14 File Offset: 0x005A8014
 	public static RouletteModel Instance
 	{
 		get
@@ -839,7 +839,7 @@ public class RouletteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015C76 RID: 89206 RVA: 0x0057EDE3 File Offset: 0x0057CFE3
+	// Token: 0x0601367B RID: 79483 RVA: 0x005A9E1B File Offset: 0x005A801B
 	public static RouletteModel GetOrCreateInstance()
 	{
 		if (RouletteModel._Instance == null)
@@ -849,7 +849,7 @@ public class RouletteModel : ModelBase
 		return RouletteModel._Instance;
 	}
 
-	// Token: 0x06015C77 RID: 89207 RVA: 0x0057EDF7 File Offset: 0x0057CFF7
+	// Token: 0x0601367C RID: 79484 RVA: 0x005A9E2F File Offset: 0x005A802F
 	public static bool CreateInstance()
 	{
 		if (RouletteModel._Instance != null)
@@ -860,42 +860,42 @@ public class RouletteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015C78 RID: 89208 RVA: 0x0057EE0D File Offset: 0x0057D00D
+	// Token: 0x0601367D RID: 79485 RVA: 0x005A9E45 File Offset: 0x005A8045
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015C79 RID: 89209 RVA: 0x0057EE0F File Offset: 0x0057D00F
+	// Token: 0x0601367E RID: 79486 RVA: 0x005A9E47 File Offset: 0x005A8047
 	public static void ResetStaticDefaultValue()
 	{
 		RouletteModel._Instance = null;
 	}
 
-	// Token: 0x06015C7A RID: 89210 RVA: 0x0057EE17 File Offset: 0x0057D017
+	// Token: 0x0601367F RID: 79487 RVA: 0x005A9E4F File Offset: 0x005A804F
 	static RouletteModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RouletteModel.CreateStaticDefaultValue), new Action(RouletteModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A230 RID: 41520
+	// Token: 0x0400A61B RID: 42523
 	public Dictionary<ERouletteType, RouletteListDataBase> RouletteListDataMap = new Dictionary<ERouletteType, RouletteListDataBase>();
 
-	// Token: 0x0400A231 RID: 41521
+	// Token: 0x0400A61C RID: 42524
 	private int EquipExploreSkillId;
 
-	// Token: 0x0400A232 RID: 41522
+	// Token: 0x0400A61D RID: 42525
 	public List<int> OnSettingExploreSkillIdList = new List<int>();
 
-	// Token: 0x0400A233 RID: 41523
+	// Token: 0x0400A61E RID: 42526
 	public Dictionary<int, ExploreTools> UnlockExploreSkillDataMap = new Dictionary<int, ExploreTools>();
 
-	// Token: 0x0400A234 RID: 41524
+	// Token: 0x0400A61F RID: 42527
 	private readonly Dictionary<int, int> FuncOpenIdMap = new Dictionary<int, int>();
 
-	// Token: 0x0400A235 RID: 41525
+	// Token: 0x0400A620 RID: 42528
 	public Dictionary<int, FuncMenuWheel> UnlockFunctionDataMap = new Dictionary<int, FuncMenuWheel>();
 
-	// Token: 0x0400A236 RID: 41526
+	// Token: 0x0400A621 RID: 42529
 	private readonly Action<EFunctionType, bool> UnlockFunction1 = delegate(EFunctionType funcOpenId, bool isOpen)
 	{
 		int funcId;
@@ -910,7 +910,7 @@ public class RouletteModel : ModelBase
 		}
 	};
 
-	// Token: 0x0400A237 RID: 41527
+	// Token: 0x0400A622 RID: 42530
 	private readonly Action<EFunctionType, bool> UnlockFunction2 = delegate(EFunctionType funcOpenId, bool isOpen)
 	{
 		int funcId;
@@ -925,10 +925,10 @@ public class RouletteModel : ModelBase
 		}
 	};
 
-	// Token: 0x0400A238 RID: 41528
+	// Token: 0x0400A623 RID: 42531
 	private readonly InputKeyDisplayData InputKeyDisplayDataRef = new InputKeyDisplayData();
 
-	// Token: 0x0400A239 RID: 41529
+	// Token: 0x0400A624 RID: 42532
 	public readonly Dictionary<ERouletteActionType, string> GetRouletteActionName = new Dictionary<ERouletteActionType, string>
 	{
 		{
@@ -941,7 +941,7 @@ public class RouletteModel : ModelBase
 		}
 	};
 
-	// Token: 0x0400A23A RID: 41530
+	// Token: 0x0400A625 RID: 42533
 	[Nullable(2)]
 	private static RouletteModel _Instance;
 }

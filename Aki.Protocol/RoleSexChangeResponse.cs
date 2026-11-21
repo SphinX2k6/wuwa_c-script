@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020010A9 RID: 4265
+	// Token: 0x02001099 RID: 4249
 	[NetMessage(EMessageId.RoleSexChangeResponse)]
 	public sealed class RoleSexChangeResponse : IMessage<RoleSexChangeResponse>, IMessage, IEquatable<RoleSexChangeResponse>, IDeepCloneable<RoleSexChangeResponse>, IBufferMessage
 	{
-		// Token: 0x06016C67 RID: 93287 RVA: 0x0034F409 File Offset: 0x0034D609
+		// Token: 0x06016B82 RID: 93058 RVA: 0x0034DD2D File Offset: 0x0034BF2D
 		[NullableContext(1)]
 		public static RoleSexChangeResponse Create()
 		{
 			return new RoleSexChangeResponse();
 		}
 
-		// Token: 0x17004C50 RID: 19536
-		// (get) Token: 0x06016C68 RID: 93288 RVA: 0x0034F410 File Offset: 0x0034D610
+		// Token: 0x17004C26 RID: 19494
+		// (get) Token: 0x06016B83 RID: 93059 RVA: 0x0034DD34 File Offset: 0x0034BF34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C51 RID: 19537
-		// (get) Token: 0x06016C69 RID: 93289 RVA: 0x0034F413 File Offset: 0x0034D613
+		// Token: 0x17004C27 RID: 19495
+		// (get) Token: 0x06016B84 RID: 93060 RVA: 0x0034DD37 File Offset: 0x0034BF37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016C6A RID: 93290 RVA: 0x0034F41A File Offset: 0x0034D61A
+		// Token: 0x06016B85 RID: 93061 RVA: 0x0034DD3E File Offset: 0x0034BF3E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSexChangeResponse()
 		{
 		}
 
-		// Token: 0x06016C6B RID: 93291 RVA: 0x0034F422 File Offset: 0x0034D622
+		// Token: 0x06016B86 RID: 93062 RVA: 0x0034DD46 File Offset: 0x0034BF46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSexChangeResponse(RoleSexChangeResponse other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016C6C RID: 93292 RVA: 0x0034F453 File Offset: 0x0034D653
+		// Token: 0x06016B87 RID: 93063 RVA: 0x0034DD77 File Offset: 0x0034BF77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleSexChangeResponse Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new RoleSexChangeResponse(this);
 		}
 
-		// Token: 0x17004C52 RID: 19538
-		// (get) Token: 0x06016C6D RID: 93293 RVA: 0x0034F45B File Offset: 0x0034D65B
-		// (set) Token: 0x06016C6E RID: 93294 RVA: 0x0034F463 File Offset: 0x0034D663
+		// Token: 0x17004C28 RID: 19496
+		// (get) Token: 0x06016B88 RID: 93064 RVA: 0x0034DD7F File Offset: 0x0034BF7F
+		// (set) Token: 0x06016B89 RID: 93065 RVA: 0x0034DD87 File Offset: 0x0034BF87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004C53 RID: 19539
-		// (get) Token: 0x06016C6F RID: 93295 RVA: 0x0034F46C File Offset: 0x0034D66C
-		// (set) Token: 0x06016C70 RID: 93296 RVA: 0x0034F474 File Offset: 0x0034D674
+		// Token: 0x17004C29 RID: 19497
+		// (get) Token: 0x06016B8A RID: 93066 RVA: 0x0034DD90 File Offset: 0x0034BF90
+		// (set) Token: 0x06016B8B RID: 93067 RVA: 0x0034DD98 File Offset: 0x0034BF98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Sex
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016C71 RID: 93297 RVA: 0x0034F47D File Offset: 0x0034D67D
+		// Token: 0x06016B8C RID: 93068 RVA: 0x0034DDA1 File Offset: 0x0034BFA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RoleSexChangeResponse);
 		}
 
-		// Token: 0x06016C72 RID: 93298 RVA: 0x0034F48B File Offset: 0x0034D68B
+		// Token: 0x06016B8D RID: 93069 RVA: 0x0034DDAF File Offset: 0x0034BFAF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RoleSexChangeResponse other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.Sex == other.Sex && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06016C73 RID: 93299 RVA: 0x0034F4CC File Offset: 0x0034D6CC
+		// Token: 0x06016B8E RID: 93070 RVA: 0x0034DDF0 File Offset: 0x0034BFF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016C74 RID: 93300 RVA: 0x0034F52A File Offset: 0x0034D72A
+		// Token: 0x06016B8F RID: 93071 RVA: 0x0034DE4E File Offset: 0x0034C04E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016C75 RID: 93301 RVA: 0x0034F537 File Offset: 0x0034D737
+		// Token: 0x06016B90 RID: 93072 RVA: 0x0034DE5B File Offset: 0x0034C05B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016C76 RID: 93302 RVA: 0x0034F540 File Offset: 0x0034D740
+		// Token: 0x06016B91 RID: 93073 RVA: 0x0034DE64 File Offset: 0x0034C064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(48);
 				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.Sex != 0)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(120);
 				output.WriteInt32(this.Sex);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016C77 RID: 93303 RVA: 0x0034F59C File Offset: 0x0034D79C
+		// Token: 0x06016B92 RID: 93074 RVA: 0x0034DEC0 File Offset: 0x0034C0C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016C78 RID: 93304 RVA: 0x0034F5F4 File Offset: 0x0034D7F4
+		// Token: 0x06016B93 RID: 93075 RVA: 0x0034DF18 File Offset: 0x0034C118
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RoleSexChangeResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016C79 RID: 93305 RVA: 0x0034F644 File Offset: 0x0034D844
+		// Token: 0x06016B94 RID: 93076 RVA: 0x0034DF68 File Offset: 0x0034C168
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016C7A RID: 93306 RVA: 0x0034F650 File Offset: 0x0034D850
+		// Token: 0x06016B95 RID: 93077 RVA: 0x0034DF74 File Offset: 0x0034C174
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 56U)
+				if (num != 48U)
 				{
-					if (num != 80U)
+					if (num != 120U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040087FD RID: 34813
+		// Token: 0x04008827 RID: 34855
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040087FE RID: 34814
-		public const int ErrorCodeFieldNumber = 7;
+		// Token: 0x04008828 RID: 34856
+		public const int ErrorCodeFieldNumber = 6;
 
-		// Token: 0x040087FF RID: 34815
+		// Token: 0x04008829 RID: 34857
 		private ErrorCode errorCode_;
 
-		// Token: 0x04008800 RID: 34816
-		public const int SexFieldNumber = 10;
+		// Token: 0x0400882A RID: 34858
+		public const int SexFieldNumber = 15;
 
-		// Token: 0x04008801 RID: 34817
+		// Token: 0x0400882B RID: 34859
 		private int sex_;
 	}
 }

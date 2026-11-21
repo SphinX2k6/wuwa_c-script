@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200327D RID: 12925
+// Token: 0x020027ED RID: 10221
 [NullableContext(2)]
 public interface IUeMovementComp
 {
-	// Token: 0x17002698 RID: 9880
-	// (get) Token: 0x0601BF6C RID: 114540
-	// (set) Token: 0x0601BF6D RID: 114541
+	// Token: 0x17002940 RID: 10560
+	// (get) Token: 0x06019B5C RID: 105308
+	// (set) Token: 0x06019B5D RID: 105309
 	UeSkeletalTickManageComponent SkelTickMgr { get; set; }
 
-	// Token: 0x0601BF6E RID: 114542
+	// Token: 0x06019B5E RID: 105310
 	bool CanTickDefault();
 
-	// Token: 0x0601BF6F RID: 114543
+	// Token: 0x06019B5F RID: 105311
 	bool CanTickWithDistance();
 
-	// Token: 0x0601BF70 RID: 114544
+	// Token: 0x06019B60 RID: 105312
 	void PreProxyTick(float delta);
 
-	// Token: 0x0601BF71 RID: 114545
+	// Token: 0x06019B61 RID: 105313
 	void ProxyTick();
 }

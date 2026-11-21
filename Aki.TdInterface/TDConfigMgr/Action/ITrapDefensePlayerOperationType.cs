@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF4 RID: 8180
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200223B RID: 8763
 	public class ITrapDefensePlayerOperationType
 	{
-		// Token: 0x0600B3EA RID: 46058 RVA: 0x001A2984 File Offset: 0x001A0B84
+		// Token: 0x0600BF00 RID: 48896 RVA: 0x001B8EF0 File Offset: 0x001B70F0
 		private ITrapDefensePlayerOperationType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B3EB RID: 46059 RVA: 0x001A29BC File Offset: 0x001A0BBC
+		// Token: 0x0600BF01 RID: 48897 RVA: 0x001B8F28 File Offset: 0x001B7128
 		public static ITrapDefensePlayerOperationType Create([Nullable(2)] ITrapDefensePlayerOperationType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3EC RID: 46060 RVA: 0x001A29CF File Offset: 0x001A0BCF
+		// Token: 0x0600BF02 RID: 48898 RVA: 0x001B8F3B File Offset: 0x001B713B
 		public static ITrapDefensePlayerOperationType CreateFromSetValue([Nullable(2)] ITrapDefensePlayerOperationType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B3ED RID: 46061 RVA: 0x001A29E2 File Offset: 0x001A0BE2
+		// Token: 0x0600BF03 RID: 48899 RVA: 0x001B8F4E File Offset: 0x001B714E
 		public ITrapDefensePlayerOperationType_SetValue ToSetValue()
 		{
 			return new ITrapDefensePlayerOperationType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700375F RID: 14175
-		// (get) Token: 0x0600B3EE RID: 46062 RVA: 0x001A29F5 File Offset: 0x001A0BF5
-		// (set) Token: 0x0600B3EF RID: 46063 RVA: 0x001A2A20 File Offset: 0x001A0C20
+		// Token: 0x17003A37 RID: 14903
+		// (get) Token: 0x0600BF04 RID: 48900 RVA: 0x001B8F61 File Offset: 0x001B7161
+		// (set) Token: 0x0600BF05 RID: 48901 RVA: 0x001B8F8C File Offset: 0x001B718C
 		public virtual ETrapDefensePlayerOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C7C RID: 27772
+		// Token: 0x0400727E RID: 29310
 		[Nullable(2)]
 		protected ITrapDefensePlayerOperationType FbInstance;
 
-		// Token: 0x04006C7D RID: 27773
+		// Token: 0x0400727F RID: 29311
 		[Nullable(2)]
 		protected ITrapDefensePlayerOperationType_SetValue PocoInterface;
 	}

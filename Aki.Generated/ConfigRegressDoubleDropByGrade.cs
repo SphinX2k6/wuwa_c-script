@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007CE RID: 1998
+	// Token: 0x020007EA RID: 2026
 	public class ConfigRegressDoubleDropByGrade : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EE6 RID: 12006 RVA: 0x0016258F File Offset: 0x0016078F
+		// Token: 0x06002F8E RID: 12174 RVA: 0x00169877 File Offset: 0x00167A77
 		static ConfigRegressDoubleDropByGrade()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressDoubleDropByGrade.CreateStaticDefaultValue), new Action(ConfigRegressDoubleDropByGrade.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EE7 RID: 12007 RVA: 0x001625B0 File Offset: 0x001607B0
+		// Token: 0x06002F8F RID: 12175 RVA: 0x00169898 File Offset: 0x00167A98
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressDoubleDropByGrade.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EE8 RID: 12008 RVA: 0x0016262F File Offset: 0x0016082F
+		// Token: 0x06002F90 RID: 12176 RVA: 0x00169917 File Offset: 0x00167B17
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressDoubleDropByGrade.LogPair = null;
 			ConfigRegressDoubleDropByGrade.HandleId = 0;
 		}
 
-		// Token: 0x06002EE9 RID: 12009 RVA: 0x0016263D File Offset: 0x0016083D
+		// Token: 0x06002F91 RID: 12177 RVA: 0x00169925 File Offset: 0x00167B25
 		public static void Init()
 		{
 			ConfigRegressDoubleDropByGrade.HandleId = ConfigCommon.InitDataStatement(ConfigRegressDoubleDropByGrade.HandleId, "db_regressactivity.db", "select BinData from `RegressDoubleDrop` where Grade=?");
 		}
 
-		// Token: 0x06002EEA RID: 12010 RVA: 0x00162658 File Offset: 0x00160858
+		// Token: 0x06002F92 RID: 12178 RVA: 0x00169940 File Offset: 0x00167B40
 		public static RegressDoubleDrop? GetConfig(int p0Grade, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressDoubleDropByGrade.HandleId, ConfigRegressDoubleDropByGrade.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RegressDoubleDrop?(rootAsRegressDoubleDrop);
 		}
 
-		// Token: 0x04003688 RID: 13960
+		// Token: 0x0400374C RID: 14156
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x04003689 RID: 13961
+		// Token: 0x0400374D RID: 14157
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x0400368A RID: 13962
+		// Token: 0x0400374E RID: 14158
 		private const string TABLE = "RegressDoubleDrop";
 
-		// Token: 0x0400368B RID: 13963
+		// Token: 0x0400374F RID: 14159
 		private const string COMMAND = "select BinData from `RegressDoubleDrop` where Grade=?";
 
-		// Token: 0x0400368C RID: 13964
+		// Token: 0x04003750 RID: 14160
 		private const string KEY_PREFIX = "RegressDoubleDropByGrade";
 
-		// Token: 0x0400368D RID: 13965
+		// Token: 0x04003751 RID: 14161
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400368E RID: 13966
+		// Token: 0x04003752 RID: 14162
 		private static int HandleId;
 	}
 }

@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F74 RID: 12148
+// Token: 0x020024C8 RID: 9416
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonSnapshotModify : ModifierCalculator
 {
-	// Token: 0x06019D19 RID: 105753 RVA: 0x006BC299 File Offset: 0x006BA499
+	// Token: 0x0601762B RID: 95787 RVA: 0x006E2B85 File Offset: 0x006E0D85
 	public CommonSnapshotModify(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019D1A RID: 105754 RVA: 0x006BC2A8 File Offset: 0x006BA4A8
+	// Token: 0x0601762C RID: 95788 RVA: 0x006E2B94 File Offset: 0x006E0D94
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -37,28 +36,33 @@ public class CommonSnapshotModify : ModifierCalculator
 		}
 		this.RefTargetType = (ESnapAttributeSourceType)int.Parse(extraEffectParameters_[4]);
 		this.RefValueType = (EAttributeRefType)int.Parse(extraEffectParameters_[5]);
-		long[] stackParam;
-		if (extraEffectParameters_.Length <= 6)
+		if (extraEffectParameters_.Length > 6)
 		{
-			stackParam = new long[1];
+			string[] array2 = extraEffectParameters_[6].Split('#', StringSplitOptions.None);
+			this.StackParam = new long[array2.Length];
+			for (int i = 0; i < array2.Length; i++)
+			{
+				this.StackParam[i] = long.Parse(array2[i]);
+			}
 		}
 		else
 		{
-			IEnumerable<string> source = extraEffectParameters_[6].Split('#', StringSplitOptions.None);
-			Func<string, long> selector;
-			if ((selector = CommonSnapshotModify.<>O.<0>__Parse) == null)
-			{
-				selector = (CommonSnapshotModify.<>O.<0>__Parse = new Func<string, long>(long.Parse));
-			}
-			stackParam = source.Select(selector).ToArray<long>();
+			this.StackParam = new long[1];
 		}
-		this.StackParam = stackParam;
 		this.RefParam1 = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters, level, 0f);
 		this.RefParam2 = AbilityUtils.GetLevelValue<float>(extraEffectGrowParameters2, level, 0f);
-		this.NeedCheckCritical = this.RequireAndLimits.Requirements.Any((IRequirement require) => require.Type == EExtraEffectRequire.ShouldCritical);
+		this.NeedCheckCritical = false;
+		for (int j = 0; j < this.RequireAndLimits.Requirements.Length; j++)
+		{
+			if (this.RequireAndLimits.Requirements[j].Type == EExtraEffectRequire.ShouldCritical)
+			{
+				this.NeedCheckCritical = true;
+				return;
+			}
+		}
 	}
 
-	// Token: 0x06019D1B RID: 105755 RVA: 0x006BC42E File Offset: 0x006BA62E
+	// Token: 0x0601762D RID: 95789 RVA: 0x006E2D38 File Offset: 0x006E0F38
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -70,7 +74,7 @@ public class CommonSnapshotModify : ModifierCalculator
 		return true;
 	}
 
-	// Token: 0x06019D1C RID: 105756 RVA: 0x006BC45C File Offset: 0x006BA65C
+	// Token: 0x0601762E RID: 95790 RVA: 0x006E2D64 File Offset: 0x006E0F64
 	protected override void OnExecuteSnap(Dictionary<EAttributeType, float> resultMap, SnapshotPayload snapshots)
 	{
 		EAttributeType attrId = this.AttrId;
@@ -80,15 +84,6 @@ public class CommonSnapshotModify : ModifierCalculator
 		resultMap[attrId] = num + num3;
 	}
 
-	// Token: 0x0400C2E7 RID: 49895
+	// Token: 0x0400C690 RID: 50832
 	public EAttributeType AttrId;
-
-	// Token: 0x02009607 RID: 38407
-	[CompilerGenerated]
-	private static class <>O
-	{
-		// Token: 0x0403026E RID: 197230
-		[Nullable(0)]
-		public static Func<string, long> <0>__Parse;
-	}
 }

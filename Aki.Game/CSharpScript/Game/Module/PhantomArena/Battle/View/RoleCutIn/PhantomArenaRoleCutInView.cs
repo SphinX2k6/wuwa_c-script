@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 {
-	// Token: 0x02005253 RID: 21075
+	// Token: 0x02004223 RID: 16931
 	public class PhantomArenaRoleCutInView : UiTickViewBase
 	{
-		// Token: 0x06035D9F RID: 220575 RVA: 0x00CBE429 File Offset: 0x00CBC629
+		// Token: 0x0602AC9A RID: 175258 RVA: 0x00C0BAB9 File Offset: 0x00C09CB9
 		[NullableContext(1)]
 		public PhantomArenaRoleCutInView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035DA0 RID: 220576 RVA: 0x00CBE43D File Offset: 0x00CBC63D
+		// Token: 0x0602AC9B RID: 175259 RVA: 0x00C0BACD File Offset: 0x00C09CCD
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			};
 		}
 
-		// Token: 0x06035DA1 RID: 220577 RVA: 0x00CBE478 File Offset: 0x00CBC678
+		// Token: 0x0602AC9C RID: 175260 RVA: 0x00C0BB08 File Offset: 0x00C09D08
 		protected UniTask LoadRoleSkillTexture()
 		{
 			PhantomArenaRoleCutInView.<LoadRoleSkillTexture>d__5 <LoadRoleSkillTexture>d__;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			return <LoadRoleSkillTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035DA2 RID: 220578 RVA: 0x00CBE4BC File Offset: 0x00CBC6BC
+		// Token: 0x0602AC9D RID: 175261 RVA: 0x00C0BB4C File Offset: 0x00C09D4C
 		protected void RefreshSkillName()
 		{
 			int roleId = PhantomArenaBattleModel.Instance.OwnData.RoleId;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), phantomBattleCardRole.SkillNameList()[num], Array.Empty<object>());
 		}
 
-		// Token: 0x06035DA3 RID: 220579 RVA: 0x00CBE51C File Offset: 0x00CBC71C
+		// Token: 0x0602AC9E RID: 175262 RVA: 0x00C0BBAC File Offset: 0x00C09DAC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRoleCutInView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035DA4 RID: 220580 RVA: 0x00CBE55F File Offset: 0x00CBC75F
+		// Token: 0x0602AC9F RID: 175263 RVA: 0x00C0BBEF File Offset: 0x00C09DEF
 		protected override void OnBeforeDestroy()
 		{
 			IPhantomArenaRoleCutInData data = this.Data;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			closeCallback();
 		}
 
-		// Token: 0x06035DA5 RID: 220581 RVA: 0x00CBE57B File Offset: 0x00CBC77B
+		// Token: 0x0602ACA0 RID: 175264 RVA: 0x00C0BC0B File Offset: 0x00C09E0B
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.TickTime < 0f)
@@ -91,20 +91,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.RoleCutIn
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401C8AA RID: 116906
+		// Token: 0x040172DF RID: 94943
 		protected float TickTime = 2000f;
 
-		// Token: 0x0401C8AB RID: 116907
+		// Token: 0x040172E0 RID: 94944
 		[Nullable(1)]
 		protected IPhantomArenaRoleCutInData Data;
 
-		// Token: 0x0200B407 RID: 46087
+		// Token: 0x02009E3F RID: 40511
 		private class EComponentDefine
 		{
-			// Token: 0x040368D5 RID: 223445
+			// Token: 0x04031328 RID: 201512
 			public const int RoleTexture = 0;
 
-			// Token: 0x040368D6 RID: 223446
+			// Token: 0x04031329 RID: 201513
 			public const int SkillName = 1;
 		}
 	}

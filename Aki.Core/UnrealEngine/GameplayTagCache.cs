@@ -8,27 +8,27 @@ namespace UnrealEngine
 	// Token: 0x02000115 RID: 277
 	public class GameplayTagCache : IStaticVariableResetter
 	{
-		// Token: 0x06000A15 RID: 2581 RVA: 0x0003387D File Offset: 0x00031A7D
+		// Token: 0x06000A66 RID: 2662 RVA: 0x00034259 File Offset: 0x00032459
 		static GameplayTagCache()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameplayTagCache.CreateStaticDefaultValue), new Action(GameplayTagCache.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000A16 RID: 2582 RVA: 0x0003389C File Offset: 0x00031A9C
+		// Token: 0x06000A67 RID: 2663 RVA: 0x00034278 File Offset: 0x00032478
 		public static void CreateStaticDefaultValue()
 		{
 			GameplayTagCache.TagIdCache = new Dictionary<FName, int>();
 			GameplayTagCache.OriginalTagNameCache = new Dictionary<FName, FName>();
 		}
 
-		// Token: 0x06000A17 RID: 2583 RVA: 0x000338B2 File Offset: 0x00031AB2
+		// Token: 0x06000A68 RID: 2664 RVA: 0x0003428E File Offset: 0x0003248E
 		public static void ResetStaticDefaultValue()
 		{
 			GameplayTagCache.TagIdCache = null;
 			GameplayTagCache.OriginalTagNameCache = null;
 		}
 
-		// Token: 0x06000A18 RID: 2584 RVA: 0x000338C0 File Offset: 0x00031AC0
+		// Token: 0x06000A69 RID: 2665 RVA: 0x0003429C File Offset: 0x0003249C
 		public static int GetOrCreateTagId(FName tagName)
 		{
 			int num;
@@ -40,7 +40,7 @@ namespace UnrealEngine
 			return num;
 		}
 
-		// Token: 0x06000A19 RID: 2585 RVA: 0x000338FC File Offset: 0x00031AFC
+		// Token: 0x06000A6A RID: 2666 RVA: 0x000342D8 File Offset: 0x000324D8
 		public static FName GetOrCreateOriginalTagName(FName tagName)
 		{
 			FName fname;
@@ -52,11 +52,11 @@ namespace UnrealEngine
 			return fname;
 		}
 
-		// Token: 0x0400069D RID: 1693
+		// Token: 0x040006A8 RID: 1704
 		[Nullable(2)]
 		private static Dictionary<FName, int> TagIdCache;
 
-		// Token: 0x0400069E RID: 1694
+		// Token: 0x040006A9 RID: 1705
 		[Nullable(2)]
 		private static Dictionary<FName, FName> OriginalTagNameCache;
 	}

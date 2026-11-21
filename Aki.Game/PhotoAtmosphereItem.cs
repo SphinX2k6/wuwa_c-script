@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002560 RID: 9568
+// Token: 0x02001A4B RID: 6731
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoAtmosphereItem : GridProxyAbstract<PhotoAtmosphere>
 {
-	// Token: 0x060134D5 RID: 79061 RVA: 0x004CD3D4 File Offset: 0x004CB5D4
+	// Token: 0x060109B7 RID: 68023 RVA: 0x004DC00C File Offset: 0x004DA20C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,13 +30,13 @@ public class PhotoAtmosphereItem : GridProxyAbstract<PhotoAtmosphere>
 		};
 	}
 
-	// Token: 0x060134D6 RID: 79062 RVA: 0x004CD4A9 File Offset: 0x004CB6A9
+	// Token: 0x060109B8 RID: 68024 RVA: 0x004DC0E1 File Offset: 0x004DA2E1
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x060134D7 RID: 79063 RVA: 0x004CD4B8 File Offset: 0x004CB6B8
+	// Token: 0x060109B9 RID: 68025 RVA: 0x004DC0F0 File Offset: 0x004DA2F0
 	public override void Refresh(PhotoAtmosphere data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -71,7 +71,7 @@ public class PhotoAtmosphereItem : GridProxyAbstract<PhotoAtmosphere>
 		this.UnlockAnimPlayer.TryPlay(this.RootItem, data.RelativeItem);
 	}
 
-	// Token: 0x060134D8 RID: 79064 RVA: 0x004CD5A0 File Offset: 0x004CB7A0
+	// Token: 0x060109BA RID: 68026 RVA: 0x004DC1D8 File Offset: 0x004DA3D8
 	private void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -82,31 +82,31 @@ public class PhotoAtmosphereItem : GridProxyAbstract<PhotoAtmosphere>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x060134D9 RID: 79065 RVA: 0x004CD5BD File Offset: 0x004CB7BD
+	// Token: 0x060109BB RID: 68027 RVA: 0x004DC1F5 File Offset: 0x004DA3F5
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x060134DA RID: 79066 RVA: 0x004CD5C7 File Offset: 0x004CB7C7
+	// Token: 0x060109BC RID: 68028 RVA: 0x004DC1FF File Offset: 0x004DA3FF
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x060134DB RID: 79067 RVA: 0x004CD5D1 File Offset: 0x004CB7D1
+	// Token: 0x060109BD RID: 68029 RVA: 0x004DC209 File Offset: 0x004DA409
 	public override object GetKey(PhotoAtmosphere data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x060134DC RID: 79068 RVA: 0x004CD5DF File Offset: 0x004CB7DF
+	// Token: 0x060109BE RID: 68030 RVA: 0x004DC217 File Offset: 0x004DA417
 	protected override void OnBeforeDestroy()
 	{
 		this.UnlockAnimPlayer.Clear();
 	}
 
-	// Token: 0x060134DD RID: 79069 RVA: 0x004CD5EC File Offset: 0x004CB7EC
+	// Token: 0x060109BF RID: 68031 RVA: 0x004DC224 File Offset: 0x004DA424
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -118,44 +118,44 @@ public class PhotoAtmosphereItem : GridProxyAbstract<PhotoAtmosphere>
 			this.SetToggleState(false, false);
 			if (this.Data.RelativeItem != 0)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.Data.RelativeItem, true, null, false);
 			}
 			return;
 		}
 		this.OnAtmosphereClick(base.GridIndex);
 	}
 
-	// Token: 0x0400919D RID: 37277
+	// Token: 0x040092F6 RID: 37622
 	private PhotoAtmosphere Data;
 
-	// Token: 0x0400919E RID: 37278
+	// Token: 0x040092F7 RID: 37623
 	private bool IsUnlock = true;
 
-	// Token: 0x0400919F RID: 37279
+	// Token: 0x040092F8 RID: 37624
 	public Action<int> OnAtmosphereClick = delegate(int gridIndex)
 	{
 	};
 
-	// Token: 0x040091A0 RID: 37280
+	// Token: 0x040092F9 RID: 37625
 	private readonly PhotoUnlockAnimPlayer UnlockAnimPlayer = new PhotoUnlockAnimPlayer();
 
-	// Token: 0x02008B31 RID: 35633
+	// Token: 0x02007CB7 RID: 31927
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D311 RID: 185105
+		// Token: 0x0402861E RID: 165406
 		ToggleItem,
-		// Token: 0x0402D312 RID: 185106
+		// Token: 0x0402861F RID: 165407
 		ItemNormalState,
-		// Token: 0x0402D313 RID: 185107
+		// Token: 0x04028620 RID: 165408
 		ItemContent,
-		// Token: 0x0402D314 RID: 185108
+		// Token: 0x04028621 RID: 165409
 		TextureBg,
-		// Token: 0x0402D315 RID: 185109
+		// Token: 0x04028622 RID: 165410
 		TextTitle,
-		// Token: 0x0402D316 RID: 185110
+		// Token: 0x04028623 RID: 165411
 		SpriteRedDot,
-		// Token: 0x0402D317 RID: 185111
+		// Token: 0x04028624 RID: 165412
 		ItemLockState
 	}
 }

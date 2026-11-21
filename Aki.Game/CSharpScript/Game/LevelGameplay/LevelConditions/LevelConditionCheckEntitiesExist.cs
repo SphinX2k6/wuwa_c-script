@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C7C RID: 27772
+	// Token: 0x02005DF6 RID: 24054
 	public class LevelConditionCheckEntitiesExist : LevelConditionBase
 	{
-		// Token: 0x06044585 RID: 279941 RVA: 0x010D99D0 File Offset: 0x010D7BD0
+		// Token: 0x0603A6DF RID: 239327 RVA: 0x01083974 File Offset: 0x01081B74
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return result;
 		}
 
-		// Token: 0x06044586 RID: 279942 RVA: 0x010D9B44 File Offset: 0x010D7D44
+		// Token: 0x0603A6E0 RID: 239328 RVA: 0x01083AE8 File Offset: 0x01081CE8
 		[NullableContext(2)]
 		private int? GetRemovingEntityPbDataId(GeneralContext context)
 		{

@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Core.Common;
-using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002E1B RID: 11803
+// Token: 0x02002377 RID: 9079
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletTraceElementPool : IStaticVariableResetter
 {
-	// Token: 0x06018D77 RID: 101751 RVA: 0x0065F367 File Offset: 0x0065D567
+	// Token: 0x06016639 RID: 91705 RVA: 0x00685493 File Offset: 0x00683693
 	static BulletTraceElementPool()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BulletTraceElementPool.CreateStaticDefaultValue), new Action(BulletTraceElementPool.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700227B RID: 8827
-	// (get) Token: 0x06018D78 RID: 101752 RVA: 0x0065F386 File Offset: 0x0065D586
+	// Token: 0x170022E3 RID: 8931
+	// (get) Token: 0x0601663A RID: 91706 RVA: 0x006854B2 File Offset: 0x006836B2
 	private static List<UTraceBoxElement> TraceBoxElementList
 	{
 		get
@@ -26,8 +24,8 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700227C RID: 8828
-	// (get) Token: 0x06018D79 RID: 101753 RVA: 0x0065F38D File Offset: 0x0065D58D
+	// Token: 0x170022E4 RID: 8932
+	// (get) Token: 0x0601663B RID: 91707 RVA: 0x006854B9 File Offset: 0x006836B9
 	private static List<UTraceLineElement> TraceLineElementList
 	{
 		get
@@ -36,8 +34,8 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700227D RID: 8829
-	// (get) Token: 0x06018D7A RID: 101754 RVA: 0x0065F394 File Offset: 0x0065D594
+	// Token: 0x170022E5 RID: 8933
+	// (get) Token: 0x0601663C RID: 91708 RVA: 0x006854C0 File Offset: 0x006836C0
 	private static List<UTraceSphereElement> TraceSphereElementList
 	{
 		get
@@ -46,7 +44,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D7B RID: 101755 RVA: 0x0065F39B File Offset: 0x0065D59B
+	// Token: 0x0601663D RID: 91709 RVA: 0x006854C7 File Offset: 0x006836C7
 	public static UTraceBoxElement GetTraceBoxElement([Nullable(new byte[]
 	{
 		1,
@@ -56,7 +54,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		return BulletTraceElementPool.GetTraceElement<UTraceBoxElement>(BulletTraceElementPool.TraceBoxElementList, traceObjectType, attackerId, ignoreObjectType);
 	}
 
-	// Token: 0x06018D7C RID: 101756 RVA: 0x0065F3AA File Offset: 0x0065D5AA
+	// Token: 0x0601663E RID: 91710 RVA: 0x006854D6 File Offset: 0x006836D6
 	public static UTraceLineElement GetTraceLineElement([Nullable(new byte[]
 	{
 		1,
@@ -66,7 +64,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		return BulletTraceElementPool.GetTraceElement<UTraceLineElement>(BulletTraceElementPool.TraceLineElementList, traceObjectType, attackerId, ignoreObjectType);
 	}
 
-	// Token: 0x06018D7D RID: 101757 RVA: 0x0065F3B9 File Offset: 0x0065D5B9
+	// Token: 0x0601663F RID: 91711 RVA: 0x006854E5 File Offset: 0x006836E5
 	public static UTraceSphereElement GetTraceSphereElement([Nullable(new byte[]
 	{
 		1,
@@ -76,7 +74,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		return BulletTraceElementPool.GetTraceElement<UTraceSphereElement>(BulletTraceElementPool.TraceSphereElementList, traceObjectType, attackerId, ignoreObjectType);
 	}
 
-	// Token: 0x06018D7E RID: 101758 RVA: 0x0065F3C8 File Offset: 0x0065D5C8
+	// Token: 0x06016640 RID: 91712 RVA: 0x006854F4 File Offset: 0x006836F4
 	private static T GetTraceElement<[Nullable(0)] T>(List<T> elementList, [Nullable(new byte[]
 	{
 		1,
@@ -100,33 +98,12 @@ public class BulletTraceElementPool : IStaticVariableResetter
 				}
 				i++;
 			}
-			if (Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				bool flag = BulletModel.Instance.ShowBulletTrace(attackerId);
-				t.SetDrawDebugTrace(flag ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None);
-				if (flag)
-				{
-					TraceElementCommon.Instance.SetTraceColor(t, ColorUtils.LinearGreen);
-					TraceElementCommon.Instance.SetTraceHitColor(t, ColorUtils.LinearRed);
-				}
-			}
 			return t;
 		}
-		T t2 = BulletTraceElementPool.NewTraceElement<T>(traceObjectType, ignoreObjectType, false);
-		if (Info.Instance.IsBuildDevelopmentOrDebug)
-		{
-			bool flag2 = BulletModel.Instance.ShowBulletTrace(attackerId);
-			t2.SetDrawDebugTrace(flag2 ? EDrawDebugTrace.ForDuration : EDrawDebugTrace.None);
-			if (flag2)
-			{
-				TraceElementCommon.Instance.SetTraceColor(t2, ColorUtils.LinearGreen);
-				TraceElementCommon.Instance.SetTraceHitColor(t2, ColorUtils.LinearRed);
-			}
-		}
-		return t2;
+		return BulletTraceElementPool.NewTraceElement<T>(traceObjectType, ignoreObjectType, false);
 	}
 
-	// Token: 0x06018D7F RID: 101759 RVA: 0x0065F519 File Offset: 0x0065D719
+	// Token: 0x06016641 RID: 91713 RVA: 0x0068558E File Offset: 0x0068378E
 	[NullableContext(2)]
 	public static void RecycleTraceBoxElement(UTraceBoxElement traceElement)
 	{
@@ -137,7 +114,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D80 RID: 101760 RVA: 0x0065F530 File Offset: 0x0065D730
+	// Token: 0x06016642 RID: 91714 RVA: 0x006855A5 File Offset: 0x006837A5
 	[NullableContext(2)]
 	public static void RecycleTraceLineElement(UTraceLineElement traceElement)
 	{
@@ -148,7 +125,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D81 RID: 101761 RVA: 0x0065F547 File Offset: 0x0065D747
+	// Token: 0x06016643 RID: 91715 RVA: 0x006855BC File Offset: 0x006837BC
 	[NullableContext(2)]
 	public static void RecycleTraceSphereElement(UTraceSphereElement traceElement)
 	{
@@ -159,7 +136,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06018D82 RID: 101762 RVA: 0x0065F560 File Offset: 0x0065D760
+	// Token: 0x06016644 RID: 91716 RVA: 0x006855D4 File Offset: 0x006837D4
 	private static T NewTraceElement<[Nullable(0)] T>([Nullable(new byte[]
 	{
 		1,
@@ -185,7 +162,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		return t;
 	}
 
-	// Token: 0x06018D83 RID: 101763 RVA: 0x0065F5EC File Offset: 0x0065D7EC
+	// Token: 0x06016645 RID: 91717 RVA: 0x00685660 File Offset: 0x00683860
 	public static T NewTraceElementByTraceChannel<[Nullable(0)] T>(ETraceTypeQuery traceChannel, bool bIsSingle = false) where T : UTraceBaseElement, new()
 	{
 		T t = Activator.CreateInstance<T>();
@@ -197,7 +174,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		return t;
 	}
 
-	// Token: 0x06018D84 RID: 101764 RVA: 0x0065F63E File Offset: 0x0065D83E
+	// Token: 0x06016646 RID: 91718 RVA: 0x006856B2 File Offset: 0x006838B2
 	public static void Clear()
 	{
 		BulletTraceElementPool.TraceBoxElementList.Clear();
@@ -205,7 +182,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		BulletTraceElementPool.TraceSphereElementList.Clear();
 	}
 
-	// Token: 0x06018D85 RID: 101765 RVA: 0x0065F65E File Offset: 0x0065D85E
+	// Token: 0x06016647 RID: 91719 RVA: 0x006856D2 File Offset: 0x006838D2
 	public static void CreateStaticDefaultValue()
 	{
 		BulletTraceElementPool._traceBoxElementList = new List<UTraceBoxElement>();
@@ -213,7 +190,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		BulletTraceElementPool._traceSphereElementList = new List<UTraceSphereElement>();
 	}
 
-	// Token: 0x06018D86 RID: 101766 RVA: 0x0065F67E File Offset: 0x0065D87E
+	// Token: 0x06016648 RID: 91720 RVA: 0x006856F2 File Offset: 0x006838F2
 	public static void ResetStaticDefaultValue()
 	{
 		BulletTraceElementPool._traceBoxElementList = null;
@@ -221,7 +198,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 		BulletTraceElementPool._traceSphereElementList = null;
 	}
 
-	// Token: 0x0400BA68 RID: 47720
+	// Token: 0x0400BDF6 RID: 48630
 	[Nullable(new byte[]
 	{
 		2,
@@ -229,7 +206,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 	})]
 	private static List<UTraceBoxElement> _traceBoxElementList;
 
-	// Token: 0x0400BA69 RID: 47721
+	// Token: 0x0400BDF7 RID: 48631
 	[Nullable(new byte[]
 	{
 		2,
@@ -237,7 +214,7 @@ public class BulletTraceElementPool : IStaticVariableResetter
 	})]
 	private static List<UTraceLineElement> _traceLineElementList;
 
-	// Token: 0x0400BA6A RID: 47722
+	// Token: 0x0400BDF8 RID: 48632
 	[Nullable(new byte[]
 	{
 		2,

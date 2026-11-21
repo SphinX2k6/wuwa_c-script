@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -18,12 +17,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005975 RID: 22901
+	// Token: 0x0200494E RID: 18766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantSystemQuestView : UiViewBase
 	{
-		// Token: 0x0603A1E4 RID: 238052 RVA: 0x00DD0F8C File Offset: 0x00DCF18C
+		// Token: 0x0602F10A RID: 192778 RVA: 0x00D202B4 File Offset: 0x00D1E4B4
 		public GiantSystemQuestView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 			this.OnStableValueChange = delegate(GiantEcoNetType? _, double _, double _)
@@ -44,7 +43,7 @@ namespace CSharpScript.Game.Module.Giant
 			};
 		}
 
-		// Token: 0x0603A1E5 RID: 238053 RVA: 0x00DD1008 File Offset: 0x00DCF208
+		// Token: 0x0602F10B RID: 192779 RVA: 0x00D20330 File Offset: 0x00D1E530
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 30;
@@ -125,7 +124,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A1E6 RID: 238054 RVA: 0x00DD14A8 File Offset: 0x00DCF6A8
+		// Token: 0x0602F10C RID: 192780 RVA: 0x00D207D0 File Offset: 0x00D1E9D0
 		protected override void OnBeforeCreate()
 		{
 			IGiantSystemQuestOpenParam giantSystemQuestOpenParam = this.OpenParam as IGiantSystemQuestOpenParam;
@@ -133,7 +132,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.GuideOnly = giantSystemQuestOpenParam.GuideOnly.GetValueOrDefault();
 		}
 
-		// Token: 0x0603A1E7 RID: 238055 RVA: 0x00DD14E4 File Offset: 0x00DCF6E4
+		// Token: 0x0602F10D RID: 192781 RVA: 0x00D2080C File Offset: 0x00D1EA0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GiantSystemQuestView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -144,7 +143,7 @@ namespace CSharpScript.Game.Module.Giant
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A1E8 RID: 238056 RVA: 0x00DD1528 File Offset: 0x00DCF728
+		// Token: 0x0602F10E RID: 192782 RVA: 0x00D20850 File Offset: 0x00D1EA50
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(19);
@@ -180,7 +179,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.PlayQuestGuideListAnim();
 		}
 
-		// Token: 0x0603A1E9 RID: 238057 RVA: 0x00DD15E8 File Offset: 0x00DCF7E8
+		// Token: 0x0602F10F RID: 192783 RVA: 0x00D20910 File Offset: 0x00D1EB10
 		protected override void OnBeforeDestroy()
 		{
 			GiantDeliverBtnItem deliverBtn = this.DeliverBtn;
@@ -193,7 +192,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.DeliverBtn = null;
 		}
 
-		// Token: 0x0603A1EA RID: 238058 RVA: 0x00DD1648 File Offset: 0x00DCF848
+		// Token: 0x0602F110 RID: 192784 RVA: 0x00D20970 File Offset: 0x00D1EB70
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<GiantEcoNetType?, double, double>(EEventName.OnGiantStableValueChange, this.OnStableValueChange);
@@ -202,7 +201,7 @@ namespace CSharpScript.Game.Module.Giant
 			EventSystem.Instance.Add<int, int, int>(EEventName.OnGiantAccessProgressChange, this.OnAccessProgressChange);
 		}
 
-		// Token: 0x0603A1EB RID: 238059 RVA: 0x00DD16B0 File Offset: 0x00DCF8B0
+		// Token: 0x0602F111 RID: 192785 RVA: 0x00D209D8 File Offset: 0x00D1EBD8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<GiantEcoNetType?, double, double>(EEventName.OnGiantStableValueChange, this.OnStableValueChange);
@@ -212,7 +211,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.MarkViewedEcoAccessRead();
 		}
 
-		// Token: 0x0603A1EC RID: 238060 RVA: 0x00DD171C File Offset: 0x00DCF91C
+		// Token: 0x0602F112 RID: 192786 RVA: 0x00D20A44 File Offset: 0x00D1EC44
 		private void MarkViewedEcoAccessRead()
 		{
 			if (this.ViewedEcoSet.Count == 0)
@@ -235,13 +234,13 @@ namespace CSharpScript.Game.Module.Giant
 			instance.MarkAccessReadBatch(list);
 		}
 
-		// Token: 0x0603A1ED RID: 238061 RVA: 0x00DD17EC File Offset: 0x00DCF9EC
+		// Token: 0x0602F113 RID: 192787 RVA: 0x00D20B14 File Offset: 0x00D1ED14
 		private void OnGiantDataChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603A1EE RID: 238062 RVA: 0x00DD17F4 File Offset: 0x00DCF9F4
+		// Token: 0x0602F114 RID: 192788 RVA: 0x00D20B1C File Offset: 0x00D1ED1C
 		private void InitQuestGuideList()
 		{
 			UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(4);
@@ -254,7 +253,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.QuestGuideList = new LoopScrollView<GiantQuestGuideItem, IGiantQuestGuideData>(loopScrollViewComponent, auibaseActor, new Func<GiantQuestGuideItem>(this.CreateQuestGuideItem), false);
 		}
 
-		// Token: 0x0603A1EF RID: 238063 RVA: 0x00DD1843 File Offset: 0x00DCFA43
+		// Token: 0x0602F115 RID: 192789 RVA: 0x00D20B6B File Offset: 0x00D1ED6B
 		private GiantQuestGuideItem CreateQuestGuideItem()
 		{
 			return new GiantQuestGuideItem
@@ -263,16 +262,20 @@ namespace CSharpScript.Game.Module.Giant
 			};
 		}
 
-		// Token: 0x0603A1F0 RID: 238064 RVA: 0x00DD185C File Offset: 0x00DCFA5C
+		// Token: 0x0602F116 RID: 192790 RVA: 0x00D20B84 File Offset: 0x00D1ED84
 		private void OnHoverQuestGuideItem(int gridIndex)
 		{
 			this.MarkGuideAccessRead(gridIndex);
 		}
 
-		// Token: 0x0603A1F1 RID: 238065 RVA: 0x00DD1868 File Offset: 0x00DCFA68
+		// Token: 0x0602F117 RID: 192791 RVA: 0x00D20B90 File Offset: 0x00D1ED90
 		private void MarkGuideAccessRead(int gridIndex)
 		{
-			IGiantQuestGuideData giantQuestGuideData = this.CurrentGuideData.ElementAtOrDefault(gridIndex);
+			if (gridIndex < 0 || gridIndex >= this.CurrentGuideData.Count)
+			{
+				return;
+			}
+			IGiantQuestGuideData giantQuestGuideData = this.CurrentGuideData[gridIndex];
 			List<int> list = (giantQuestGuideData != null) ? giantQuestGuideData.GroupAccessIds : null;
 			if (list == null)
 			{
@@ -288,7 +291,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1F2 RID: 238066 RVA: 0x00DD18E4 File Offset: 0x00DCFAE4
+		// Token: 0x0602F118 RID: 192792 RVA: 0x00D20C20 File Offset: 0x00D1EE20
 		private void InitCollectedList()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(22);
@@ -312,7 +315,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.CollectedList = new GenericLayout<GiantCollectedCoinItem, IGiantCollectedCoinData>(uuilayoutBase, () => new GiantCollectedCoinItem(), auibaseActor, false, true);
 		}
 
-		// Token: 0x0603A1F3 RID: 238067 RVA: 0x00DD1970 File Offset: 0x00DCFB70
+		// Token: 0x0602F119 RID: 192793 RVA: 0x00D20CAC File Offset: 0x00D1EEAC
 		private void InitMindsetTabs()
 		{
 			for (int i = 0; i < GiantSystemQuestView.tabChildList.Length; i++)
@@ -332,7 +335,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1F4 RID: 238068 RVA: 0x00DD19D4 File Offset: 0x00DCFBD4
+		// Token: 0x0602F11A RID: 192794 RVA: 0x00D20D10 File Offset: 0x00D1EF10
 		private void SwitchEco(GiantEcoNetType eco)
 		{
 			if (this.EcoType == eco)
@@ -352,7 +355,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.PlayQuestGuideListAnim();
 		}
 
-		// Token: 0x0603A1F5 RID: 238069 RVA: 0x00DD1A3F File Offset: 0x00DCFC3F
+		// Token: 0x0602F11B RID: 192795 RVA: 0x00D20D7B File Offset: 0x00D1EF7B
 		private void PlayQuestGuideListAnim()
 		{
 			LoopScrollView<GiantQuestGuideItem, IGiantQuestGuideData> questGuideList = this.QuestGuideList;
@@ -368,7 +371,7 @@ namespace CSharpScript.Game.Module.Giant
 			uiAnimController.Play("", -1, false);
 		}
 
-		// Token: 0x0603A1F6 RID: 238070 RVA: 0x00DD1A64 File Offset: 0x00DCFC64
+		// Token: 0x0602F11C RID: 192796 RVA: 0x00D20DA0 File Offset: 0x00D1EFA0
 		private void Refresh()
 		{
 			IGiantEcoDisplayConfig config = GiantDefine.EcoDisplayConfigs[this.EcoType];
@@ -386,7 +389,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshDeliverRedDot();
 		}
 
-		// Token: 0x0603A1F7 RID: 238071 RVA: 0x00DD1ADC File Offset: 0x00DCFCDC
+		// Token: 0x0602F11D RID: 192797 RVA: 0x00D20E18 File Offset: 0x00D1F018
 		private void RefreshDeliverRedDot()
 		{
 			GiantDeliverBtnItem deliverBtn = this.DeliverBtn;
@@ -413,7 +416,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.BoundDeliverEco = giantEcoNetType;
 		}
 
-		// Token: 0x0603A1F8 RID: 238072 RVA: 0x00DD1B9C File Offset: 0x00DCFD9C
+		// Token: 0x0602F11E RID: 192798 RVA: 0x00D20ED8 File Offset: 0x00D1F0D8
 		private void RefreshGuideVisibility()
 		{
 			bool uiactive = !this.GuideOnly;
@@ -430,7 +433,7 @@ namespace CSharpScript.Game.Module.Giant
 			uuiitem.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603A1F9 RID: 238073 RVA: 0x00DD1BD8 File Offset: 0x00DCFDD8
+		// Token: 0x0602F11F RID: 192799 RVA: 0x00D20F14 File Offset: 0x00D1F114
 		private void RefreshTabSelection()
 		{
 			for (int i = 0; i < GiantSystemQuestView.tabChildList.Length; i++)
@@ -450,7 +453,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A1FA RID: 238074 RVA: 0x00DD1C4C File Offset: 0x00DCFE4C
+		// Token: 0x0602F120 RID: 192800 RVA: 0x00D20F88 File Offset: 0x00D1F188
 		[NullableContext(2)]
 		private UUIItem GetTabComplete(UUIExtendToggle toggle)
 		{
@@ -468,7 +471,7 @@ namespace CSharpScript.Game.Module.Giant
 			return ((aactor != null) ? aactor.GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem;
 		}
 
-		// Token: 0x0603A1FB RID: 238075 RVA: 0x00DD1CD4 File Offset: 0x00DCFED4
+		// Token: 0x0602F121 RID: 192801 RVA: 0x00D21010 File Offset: 0x00D1F210
 		private void RefreshIcon(IGiantEcoDisplayConfig config, GiantEcoNetStatus status)
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath(config.IconSpriteNormal);
@@ -479,7 +482,7 @@ namespace CSharpScript.Game.Module.Giant
 			base.TrySetTextureByPath(resourcePath3, base.GetTexture(6), null, null);
 		}
 
-		// Token: 0x0603A1FC RID: 238076 RVA: 0x00DD1D60 File Offset: 0x00DCFF60
+		// Token: 0x0602F122 RID: 192802 RVA: 0x00D2109C File Offset: 0x00D1F29C
 		private void RefreshTextAndColor(IGiantEcoDisplayConfig config, GiantEcoNetStatus status)
 		{
 			FColor color = FColor.FromHex(config.OutlineColorHex);
@@ -493,7 +496,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshFeatureActivation();
 		}
 
-		// Token: 0x0603A1FD RID: 238077 RVA: 0x00DD1DB0 File Offset: 0x00DCFFB0
+		// Token: 0x0602F123 RID: 192803 RVA: 0x00D210EC File Offset: 0x00D1F2EC
 		private void RefreshLevelUnlockText()
 		{
 			GiantLevelUnlock? levelUnlock = GiantConfig.GetLevelUnlock(this.EcoType, this.BrowseLevel);
@@ -538,7 +541,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshTitles();
 		}
 
-		// Token: 0x0603A1FE RID: 238078 RVA: 0x00DD1F00 File Offset: 0x00DD0100
+		// Token: 0x0602F124 RID: 192804 RVA: 0x00D2123C File Offset: 0x00D1F43C
 		private void RefreshTitles()
 		{
 			bool flag = this.BrowseLevel >= this.GetMaxLevel();
@@ -557,7 +560,7 @@ namespace CSharpScript.Game.Module.Giant
 			text2.SetText(newText, true);
 		}
 
-		// Token: 0x0603A1FF RID: 238079 RVA: 0x00DD1F78 File Offset: 0x00DD0178
+		// Token: 0x0602F125 RID: 192805 RVA: 0x00D212B4 File Offset: 0x00D1F4B4
 		private void RefreshFeatureActivation()
 		{
 			bool flag = this.IsBrowseLevelReached();
@@ -595,7 +598,7 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A200 RID: 238080 RVA: 0x00DD2018 File Offset: 0x00DD0218
+		// Token: 0x0602F126 RID: 192806 RVA: 0x00D21354 File Offset: 0x00D1F554
 		private void SetTextOutline(int name, FColor color)
 		{
 			UUIText text = base.GetText(name);
@@ -606,7 +609,7 @@ namespace CSharpScript.Game.Module.Giant
 			text.SetFontOutlineColor(color);
 		}
 
-		// Token: 0x0603A201 RID: 238081 RVA: 0x00DD202C File Offset: 0x00DD022C
+		// Token: 0x0602F127 RID: 192807 RVA: 0x00D21368 File Offset: 0x00D1F568
 		private void RefreshProgress()
 		{
 			UUIText text = base.GetText(12);
@@ -620,20 +623,20 @@ namespace CSharpScript.Game.Module.Giant
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603A202 RID: 238082 RVA: 0x00DD2078 File Offset: 0x00DD0278
+		// Token: 0x0602F128 RID: 192808 RVA: 0x00D213B4 File Offset: 0x00D1F5B4
 		private bool IsBrowseLevelReached()
 		{
 			int displayLevelFromStage = this.GetDisplayLevelFromStage();
 			return this.BrowseLevel < displayLevelFromStage || displayLevelFromStage >= this.GetMaxLevel();
 		}
 
-		// Token: 0x0603A203 RID: 238083 RVA: 0x00DD20A3 File Offset: 0x00DD02A3
+		// Token: 0x0602F129 RID: 192809 RVA: 0x00D213DF File Offset: 0x00D1F5DF
 		private bool IsBrowseLevelRewardReceived()
 		{
 			return this.BrowseLevel < this.GetMaxLevel() && this.IsBrowseLevelReached();
 		}
 
-		// Token: 0x0603A204 RID: 238084 RVA: 0x00DD20BC File Offset: 0x00DD02BC
+		// Token: 0x0602F12A RID: 192810 RVA: 0x00D213F8 File Offset: 0x00D1F5F8
 		private void RefreshRewardList()
 		{
 			if (this.RewardLayout == null)
@@ -663,7 +666,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.RewardLayout.RefreshByData(dropPackagePreviewItemListByIdList, null, false);
 		}
 
-		// Token: 0x0603A205 RID: 238085 RVA: 0x00DD218A File Offset: 0x00DD038A
+		// Token: 0x0602F12B RID: 192811 RVA: 0x00D214C6 File Offset: 0x00D1F6C6
 		private void RefreshQuestGuide()
 		{
 			if (this.QuestGuideList == null)
@@ -674,20 +677,18 @@ namespace CSharpScript.Game.Module.Giant
 			this.QuestGuideList.RefreshByData(this.CurrentGuideData, false, null, false);
 		}
 
-		// Token: 0x0603A206 RID: 238086 RVA: 0x00DD21B8 File Offset: 0x00DD03B8
+		// Token: 0x0602F12C RID: 192812 RVA: 0x00D214F4 File Offset: 0x00D1F6F4
 		private List<IGiantQuestGuideData> BuildQuestGuideData()
 		{
-			GiantModel model = GiantModel.Instance;
-			bool flag = model.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.MaxStableValue;
+			GiantModel instance = GiantModel.Instance;
+			bool flag = instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.MaxStableValue;
 			List<IGiantQuestGuideData> list = new List<IGiantQuestGuideData>();
-			Func<GiantItemAccess, bool> <>9__3;
-			Func<GiantItemAccess, bool> <>9__5;
 			foreach (List<GiantItemAccess> list2 in GiantConfig.GetEcoItemAccessGroups(this.EcoType))
 			{
 				Dictionary<int, int> dictionary = new Dictionary<int, int>();
 				foreach (GiantItemAccess giantItemAccess in list2)
 				{
-					IReadOnlyDictionary<int, int> accessItemInfos = model.GetAccessItemInfos(giantItemAccess.Id);
+					IReadOnlyDictionary<int, int> accessItemInfos = instance.GetAccessItemInfos(giantItemAccess.Id);
 					if (accessItemInfos != null)
 					{
 						foreach (KeyValuePair<int, int> keyValuePair in accessItemInfos)
@@ -710,82 +711,96 @@ namespace CSharpScript.Game.Module.Giant
 					}
 				}
 				list3.Sort((IGiantQuestGuideItemInfo a, IGiantQuestGuideItemInfo b) => GiantConfig.GetItemQuality(a.ItemId) - GiantConfig.GetItemQuality(b.ItemId));
-				IEnumerable<GiantItemAccess> source = list2;
-				Func<GiantItemAccess, bool> predicate;
-				if ((predicate = <>9__3) == null)
+				bool flag2 = false;
+				foreach (GiantItemAccess giantItemAccess2 in list2)
 				{
-					predicate = (<>9__3 = ((GiantItemAccess access) => model.GetAccessState(access.Id) == GiantItemAccessStatus.AccessLock));
-				}
-				bool flag2 = source.Any(predicate);
-				int num2 = list3.Sum((IGiantQuestGuideItemInfo info) => info.Count);
-				EGiantQuestGuideState state = flag2 ? EGiantQuestGuideState.Locked : ((num2 <= 0) ? EGiantQuestGuideState.Done : EGiantQuestGuideState.CanGoto);
-				GiantItemAccess? giantItemAccess2 = null;
-				foreach (GiantItemAccess value in list2)
-				{
-					if (model.GetAccessState(value.Id) != GiantItemAccessStatus.AccessLock && this.GetAccessRemain(value.Id) > 0)
+					if (instance.GetAccessState(giantItemAccess2.Id) == GiantItemAccessStatus.AccessLock)
 					{
-						giantItemAccess2 = new GiantItemAccess?(value);
+						flag2 = true;
 						break;
 					}
 				}
-				bool flag3;
+				int num2 = 0;
+				foreach (IGiantQuestGuideItemInfo giantQuestGuideItemInfo in list3)
+				{
+					num2 += giantQuestGuideItemInfo.Count;
+				}
+				EGiantQuestGuideState state = flag2 ? EGiantQuestGuideState.Locked : ((num2 <= 0) ? EGiantQuestGuideState.Done : EGiantQuestGuideState.CanGoto);
+				GiantItemAccess? giantItemAccess3 = null;
+				foreach (GiantItemAccess value in list2)
+				{
+					if (instance.GetAccessState(value.Id) != GiantItemAccessStatus.AccessLock && this.GetAccessRemain(value.Id) > 0)
+					{
+						giantItemAccess3 = new GiantItemAccess?(value);
+						break;
+					}
+				}
+				bool flag3 = false;
 				if (!flag)
 				{
-					IEnumerable<GiantItemAccess> source2 = list2;
-					Func<GiantItemAccess, bool> predicate2;
-					if ((predicate2 = <>9__5) == null)
+					foreach (GiantItemAccess giantItemAccess4 in list2)
 					{
-						predicate2 = (<>9__5 = ((GiantItemAccess access) => model.HasNewAccess(access.Id)));
+						if (instance.HasNewAccess(giantItemAccess4.Id))
+						{
+							flag3 = true;
+							break;
+						}
 					}
-					flag3 = source2.Any(predicate2);
 				}
-				else
+				bool flag4 = giantItemAccess3 != null && GiantConfig.GetAccessHasSkip(giantItemAccess3.Value.AccessPathId);
+				GiantItemAccess giantItemAccess5 = list2[0];
+				foreach (GiantItemAccess giantItemAccess6 in list2)
 				{
-					flag3 = false;
-				}
-				bool flag4 = flag3;
-				bool flag5 = giantItemAccess2 != null && GiantConfig.GetAccessHasSkip(giantItemAccess2.Value.AccessPathId);
-				GiantItemAccess giantItemAccess3 = list2.Aggregate(list2[0], delegate(GiantItemAccess min, GiantItemAccess access)
-				{
-					if (access.Id >= min.Id)
+					if (giantItemAccess6.Id < giantItemAccess5.Id)
 					{
-						return min;
+						giantItemAccess5 = giantItemAccess6;
 					}
-					return access;
-				});
-				List<int> list4 = (from access in list2
-				select access.Id).ToList<int>();
+				}
+				List<int> list4 = new List<int>();
+				foreach (GiantItemAccess giantItemAccess7 in list2)
+				{
+					list4.Add(giantItemAccess7.Id);
+				}
 				list.Add(new GiantQuestGuideData
 				{
-					AccessId = giantItemAccess3.Id,
+					AccessId = giantItemAccess5.Id,
 					GroupAccessIds = list4,
-					SkipConfigId = ((giantItemAccess2 != null) ? giantItemAccess2.GetValueOrDefault().AccessPathId : 0),
+					SkipConfigId = ((giantItemAccess3 != null) ? giantItemAccess3.GetValueOrDefault().AccessPathId : 0),
 					AnchorItemId = ((list3.Count > 0) ? list3[0].ItemId : 0),
-					DescText = GiantConfig.ResolveLocalTextOrKey(giantItemAccess3.Desc),
-					LockedText = GiantConfig.GetAccessUnlockHintText(giantItemAccess3.AccessPathId),
+					DescText = GiantConfig.ResolveLocalTextOrKey(giantItemAccess5.Desc),
+					LockedText = GiantConfig.GetAccessUnlockHintText(giantItemAccess5.AccessPathId),
 					State = state,
 					Items = list3,
-					HasNew = flag4,
-					HasSkip = flag5,
+					HasNew = flag3,
+					HasSkip = flag4,
 					OnGoto = new Action<IGiantQuestGuideData>(this.OnGotoAccess)
 				});
-				if (flag4 && !flag5)
+				if (flag3 && !flag4)
 				{
 					foreach (int accessId in list4)
 					{
-						if (model.GetAccessState(accessId) != GiantItemAccessStatus.AccessLock)
+						if (instance.GetAccessState(accessId) != GiantItemAccessStatus.AccessLock)
 						{
-							model.MarkAccessReadSilently(accessId);
+							instance.MarkAccessReadSilently(accessId);
 						}
 					}
 				}
 			}
-			return (from d in list
-			orderby GiantSystemQuestView.<BuildQuestGuideData>g__Rank|52_0(d.State)
-			select d).ToList<IGiantQuestGuideData>();
+			List<IGiantQuestGuideData> list5 = new List<IGiantQuestGuideData>(list.Count);
+			for (int i = 0; i < 3; i++)
+			{
+				foreach (IGiantQuestGuideData giantQuestGuideData in list)
+				{
+					if (GiantSystemQuestView.<BuildQuestGuideData>g__Rank|52_0(giantQuestGuideData.State) == i)
+					{
+						list5.Add(giantQuestGuideData);
+					}
+				}
+			}
+			return list5;
 		}
 
-		// Token: 0x0603A207 RID: 238087 RVA: 0x00DD269C File Offset: 0x00DD089C
+		// Token: 0x0602F12D RID: 192813 RVA: 0x00D21AF0 File Offset: 0x00D1FCF0
 		private int GetAccessRemain(int accessId)
 		{
 			IReadOnlyDictionary<int, int> accessItemInfos = GiantModel.Instance.GetAccessItemInfos(accessId);
@@ -801,7 +816,7 @@ namespace CSharpScript.Game.Module.Giant
 			return num;
 		}
 
-		// Token: 0x0603A208 RID: 238088 RVA: 0x00DD26FC File Offset: 0x00DD08FC
+		// Token: 0x0602F12E RID: 192814 RVA: 0x00D21B50 File Offset: 0x00D1FD50
 		private void OnGotoAccess(IGiantQuestGuideData data)
 		{
 			GiantModel instance = GiantModel.Instance;
@@ -818,26 +833,34 @@ namespace CSharpScript.Game.Module.Giant
 			}
 		}
 
-		// Token: 0x0603A209 RID: 238089 RVA: 0x00DD2780 File Offset: 0x00DD0980
+		// Token: 0x0602F12F RID: 192815 RVA: 0x00D21BD4 File Offset: 0x00D1FDD4
 		private void RefreshCollectedItems()
 		{
 			if (this.CollectedList == null)
 			{
 				return;
 			}
-			InventoryModel inventory = InventoryModel.Instance;
-			List<IGiantCollectedCoinData> data = (from itemId in (from itemId in GiantConfig.GetEcoItemIds(this.EcoType)
-			orderby GiantConfig.GetItemQuality(itemId) descending
-			select itemId).ToList<int>()
-			select new GiantCollectedCoinData
+			InventoryModel instance = InventoryModel.Instance;
+			IEnumerable<int> ecoItemIds = GiantConfig.GetEcoItemIds(this.EcoType);
+			Func<int, int> keySelector;
+			if ((keySelector = GiantSystemQuestView.<>O.<0>__GetItemQuality) == null)
 			{
-				ItemId = itemId,
-				Count = inventory.GetItemCountByConfigId(itemId, 0)
-			}).ToList<IGiantCollectedCoinData>();
-			this.CollectedList.RefreshByData(data, null, false);
+				keySelector = (GiantSystemQuestView.<>O.<0>__GetItemQuality = new Func<int, int>(GiantConfig.GetItemQuality));
+			}
+			List<int> list = NoLinq.OrderByDescendingToList<int, int>(ecoItemIds, keySelector);
+			List<IGiantCollectedCoinData> list2 = new List<IGiantCollectedCoinData>(list.Count);
+			foreach (int num in list)
+			{
+				list2.Add(new GiantCollectedCoinData
+				{
+					ItemId = num,
+					Count = instance.GetItemCountByConfigId(num, 0)
+				});
+			}
+			this.CollectedList.RefreshByData(list2, null, false);
 		}
 
-		// Token: 0x0603A20A RID: 238090 RVA: 0x00DD2800 File Offset: 0x00DD0A00
+		// Token: 0x0602F130 RID: 192816 RVA: 0x00D21C90 File Offset: 0x00D1FE90
 		private void RefreshDeliverState(GiantEcoNetStatus status)
 		{
 			bool flag = status == GiantEcoNetStatus.MaxStableValue;
@@ -869,19 +892,19 @@ namespace CSharpScript.Game.Module.Giant
 			uuiitem.SetUIActive(!this.GuideOnly && !flag);
 		}
 
-		// Token: 0x0603A20B RID: 238091 RVA: 0x00DD2887 File Offset: 0x00DD0A87
+		// Token: 0x0602F131 RID: 192817 RVA: 0x00D21D17 File Offset: 0x00D1FF17
 		private void OnClickLevelPre()
 		{
 			this.SwitchLevel(-1);
 		}
 
-		// Token: 0x0603A20C RID: 238092 RVA: 0x00DD2890 File Offset: 0x00DD0A90
+		// Token: 0x0602F132 RID: 192818 RVA: 0x00D21D20 File Offset: 0x00D1FF20
 		private void OnClickLevelNext()
 		{
 			this.SwitchLevel(1);
 		}
 
-		// Token: 0x0603A20D RID: 238093 RVA: 0x00DD289C File Offset: 0x00DD0A9C
+		// Token: 0x0602F133 RID: 192819 RVA: 0x00D21D2C File Offset: 0x00D1FF2C
 		private void SwitchLevel(int delta)
 		{
 			int num = this.BrowseLevel + delta;
@@ -898,13 +921,13 @@ namespace CSharpScript.Game.Module.Giant
 			this.RefreshRewardList();
 		}
 
-		// Token: 0x0603A20E RID: 238094 RVA: 0x00DD28FA File Offset: 0x00DD0AFA
+		// Token: 0x0602F134 RID: 192820 RVA: 0x00D21D8A File Offset: 0x00D1FF8A
 		private int GetBrowseCap()
 		{
 			return this.GetMaxLevel();
 		}
 
-		// Token: 0x0603A20F RID: 238095 RVA: 0x00DD2904 File Offset: 0x00DD0B04
+		// Token: 0x0602F135 RID: 192821 RVA: 0x00D21D94 File Offset: 0x00D1FF94
 		private void RefreshLevelBrowse()
 		{
 			int browseCap = this.GetBrowseCap();
@@ -930,7 +953,7 @@ namespace CSharpScript.Game.Module.Giant
 			uuiitem2.SetUIActive(this.BrowseLevel < browseCap);
 		}
 
-		// Token: 0x0603A210 RID: 238096 RVA: 0x00DD2974 File Offset: 0x00DD0B74
+		// Token: 0x0602F136 RID: 192822 RVA: 0x00D21E04 File Offset: 0x00D20004
 		private void OnClickDeliver()
 		{
 			if (this.IsEcoWholeLocked())
@@ -948,19 +971,19 @@ namespace CSharpScript.Game.Module.Giant
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 		}
 
-		// Token: 0x0603A211 RID: 238097 RVA: 0x00DD29EE File Offset: 0x00DD0BEE
+		// Token: 0x0602F137 RID: 192823 RVA: 0x00D21E7E File Offset: 0x00D2007E
 		private bool IsEcoWholeLocked()
 		{
 			return GiantModel.Instance.GetEcoStatus(this.EcoType) == GiantEcoNetStatus.Lock;
 		}
 
-		// Token: 0x0603A212 RID: 238098 RVA: 0x00DD2A03 File Offset: 0x00DD0C03
+		// Token: 0x0602F138 RID: 192824 RVA: 0x00D21E93 File Offset: 0x00D20093
 		private bool IsItemLocked(int itemId)
 		{
 			return this.IsEcoWholeLocked() || GiantModel.Instance.GetItemLocked(itemId);
 		}
 
-		// Token: 0x0603A213 RID: 238099 RVA: 0x00DD2A1C File Offset: 0x00DD0C1C
+		// Token: 0x0602F139 RID: 192825 RVA: 0x00D21EAC File Offset: 0x00D200AC
 		private int GetMaxLevel()
 		{
 			int num = GiantConfig.GetEcoGoals(this.EcoType).Length;
@@ -971,13 +994,13 @@ namespace CSharpScript.Game.Module.Giant
 			return num + 1;
 		}
 
-		// Token: 0x0603A214 RID: 238100 RVA: 0x00DD2A40 File Offset: 0x00DD0C40
+		// Token: 0x0602F13A RID: 192826 RVA: 0x00D21ED0 File Offset: 0x00D200D0
 		private int GetDisplayLevelFromStage()
 		{
 			return GiantConfig.GetEcoLevelByValue(this.EcoType, (int)GiantModel.Instance.GetStableValue(this.EcoType));
 		}
 
-		// Token: 0x0603A21D RID: 238109 RVA: 0x00DD2AD3 File Offset: 0x00DD0CD3
+		// Token: 0x0602F143 RID: 192835 RVA: 0x00D21F63 File Offset: 0x00D20163
 		[CompilerGenerated]
 		internal static int <BuildQuestGuideData>g__Rank|52_0(EGiantQuestGuideState state)
 		{
@@ -992,7 +1015,7 @@ namespace CSharpScript.Game.Module.Giant
 			return 1;
 		}
 
-		// Token: 0x0401E52C RID: 124204
+		// Token: 0x04018FCA RID: 102346
 		[StaticVariableRuleIgnore]
 		private static readonly GiantEcoNetType[] tabEcoList = new GiantEcoNetType[]
 		{
@@ -1001,7 +1024,7 @@ namespace CSharpScript.Game.Module.Giant
 			GiantEcoNetType.Water
 		};
 
-		// Token: 0x0401E52D RID: 124205
+		// Token: 0x04018FCB RID: 102347
 		[StaticVariableRuleIgnore]
 		private static readonly int[] tabChildList = new int[]
 		{
@@ -1010,23 +1033,23 @@ namespace CSharpScript.Game.Module.Giant
 			3
 		};
 
-		// Token: 0x0401E52E RID: 124206
+		// Token: 0x04018FCC RID: 102348
 		private const int TAB_NESTED_PNL_COMPLETE = 2;
 
-		// Token: 0x0401E52F RID: 124207
+		// Token: 0x04018FCD RID: 102349
 		private GiantEcoNetType EcoType;
 
-		// Token: 0x0401E530 RID: 124208
+		// Token: 0x04018FCE RID: 102350
 		private bool GuideOnly;
 
-		// Token: 0x0401E531 RID: 124209
+		// Token: 0x04018FCF RID: 102351
 		private int BrowseLevel = 1;
 
-		// Token: 0x0401E532 RID: 124210
+		// Token: 0x04018FD0 RID: 102352
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401E533 RID: 124211
+		// Token: 0x04018FD1 RID: 102353
 		[Nullable(new byte[]
 		{
 			2,
@@ -1034,7 +1057,7 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0401E534 RID: 124212
+		// Token: 0x04018FD2 RID: 102354
 		[Nullable(new byte[]
 		{
 			2,
@@ -1043,25 +1066,25 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private LoopScrollView<GiantQuestGuideItem, IGiantQuestGuideData> QuestGuideList;
 
-		// Token: 0x0401E535 RID: 124213
+		// Token: 0x04018FD3 RID: 102355
 		private readonly HashSet<GiantEcoNetType> ViewedEcoSet = new HashSet<GiantEcoNetType>();
 
-		// Token: 0x0401E536 RID: 124214
+		// Token: 0x04018FD4 RID: 102356
 		private List<IGiantQuestGuideData> CurrentGuideData = new List<IGiantQuestGuideData>();
 
-		// Token: 0x0401E537 RID: 124215
+		// Token: 0x04018FD5 RID: 102357
 		private readonly Action<GiantEcoNetType?, double, double> OnStableValueChange;
 
-		// Token: 0x0401E538 RID: 124216
+		// Token: 0x04018FD6 RID: 102358
 		private readonly Action<GiantEcoNetType?, EGiantStage, EGiantStage> OnStageCross;
 
-		// Token: 0x0401E539 RID: 124217
+		// Token: 0x04018FD7 RID: 102359
 		private readonly Action<GiantEcoNetType, GiantEcoNetStatus, GiantEcoNetStatus> OnEcoStatusChange;
 
-		// Token: 0x0401E53A RID: 124218
+		// Token: 0x04018FD8 RID: 102360
 		private readonly Action<int, int, int> OnAccessProgressChange;
 
-		// Token: 0x0401E53B RID: 124219
+		// Token: 0x04018FD9 RID: 102361
 		[Nullable(new byte[]
 		{
 			2,
@@ -1070,11 +1093,20 @@ namespace CSharpScript.Game.Module.Giant
 		})]
 		private GenericLayout<GiantCollectedCoinItem, IGiantCollectedCoinData> CollectedList;
 
-		// Token: 0x0401E53C RID: 124220
+		// Token: 0x04018FDA RID: 102362
 		[Nullable(2)]
 		private GiantDeliverBtnItem DeliverBtn;
 
-		// Token: 0x0401E53D RID: 124221
+		// Token: 0x04018FDB RID: 102363
 		private GiantEcoNetType? BoundDeliverEco;
+
+		// Token: 0x0200A60F RID: 42511
+		[CompilerGenerated]
+		private static class <>O
+		{
+			// Token: 0x040335E3 RID: 210403
+			[Nullable(0)]
+			public static Func<int, int> <0>__GetItemQuality;
+		}
 	}
 }

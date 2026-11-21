@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A55 RID: 6741
+// Token: 0x02000F14 RID: 3860
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssRankView : UiViewBase
 {
-	// Token: 0x0600C659 RID: 50777 RVA: 0x002D1A30 File Offset: 0x002CFC30
+	// Token: 0x06009A69 RID: 39529 RVA: 0x002DCB44 File Offset: 0x002DAD44
 	public DangoAbyssRankView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C65A RID: 50778 RVA: 0x002D1A3C File Offset: 0x002CFC3C
+	// Token: 0x06009A6A RID: 39530 RVA: 0x002DCB50 File Offset: 0x002DAD50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -66,13 +66,13 @@ public class DangoAbyssRankView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C65B RID: 50779 RVA: 0x002D1C9A File Offset: 0x002CFE9A
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x06009A6B RID: 39531 RVA: 0x002DCDAE File Offset: 0x002DAFAE
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C65C RID: 50780 RVA: 0x002D1CAC File Offset: 0x002CFEAC
+	// Token: 0x06009A6C RID: 39532 RVA: 0x002DCDC0 File Offset: 0x002DAFC0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssRankView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -83,7 +83,7 @@ public class DangoAbyssRankView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C65D RID: 50781 RVA: 0x002D1CF0 File Offset: 0x002CFEF0
+	// Token: 0x06009A6D RID: 39533 RVA: 0x002DCE04 File Offset: 0x002DB004
 	private bool CanToggleExecuteChange()
 	{
 		if (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - this.LastChangeToggleTime < 1000L)
@@ -95,7 +95,7 @@ public class DangoAbyssRankView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600C65E RID: 50782 RVA: 0x002D1D38 File Offset: 0x002CFF38
+	// Token: 0x06009A6E RID: 39534 RVA: 0x002DCE4C File Offset: 0x002DB04C
 	private UniTask ChangeToggleByRequest()
 	{
 		DangoAbyssRankView.<ChangeToggleByRequest>d__17 <ChangeToggleByRequest>d__;
@@ -106,13 +106,13 @@ public class DangoAbyssRankView : UiViewBase
 		return <ChangeToggleByRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C65F RID: 50783 RVA: 0x002D1D7B File Offset: 0x002CFF7B
+	// Token: 0x06009A6F RID: 39535 RVA: 0x002DCE8F File Offset: 0x002DB08F
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C660 RID: 50784 RVA: 0x002D1D84 File Offset: 0x002CFF84
+	// Token: 0x06009A70 RID: 39536 RVA: 0x002DCE98 File Offset: 0x002DB098
 	private UniTask InitOwnRankItem()
 	{
 		DangoAbyssRankView.<InitOwnRankItem>d__19 <InitOwnRankItem>d__;
@@ -123,19 +123,19 @@ public class DangoAbyssRankView : UiViewBase
 		return <InitOwnRankItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C661 RID: 50785 RVA: 0x002D1DC7 File Offset: 0x002CFFC7
+	// Token: 0x06009A71 RID: 39537 RVA: 0x002DCEDB File Offset: 0x002DB0DB
 	private void InitRankScroll()
 	{
 		this.RankScroll = new LoopScrollView<DangoAbyssRankItem, DangoRankItemData>(base.GetLoopScrollViewComponent(3), base.GetItem(4).GetOwner() as AUIBaseActor, new Func<DangoAbyssRankItem>(this.InitRankItem), false);
 	}
 
-	// Token: 0x0600C662 RID: 50786 RVA: 0x002D1DF9 File Offset: 0x002CFFF9
+	// Token: 0x06009A72 RID: 39538 RVA: 0x002DCF0D File Offset: 0x002DB10D
 	private DangoAbyssRankItem InitRankItem()
 	{
 		return new DangoAbyssRankItem(false);
 	}
 
-	// Token: 0x0600C663 RID: 50787 RVA: 0x002D1E01 File Offset: 0x002D0001
+	// Token: 0x06009A73 RID: 39539 RVA: 0x002DCF15 File Offset: 0x002DB115
 	private void OnSingleRankTabToggleClick(EToggleState toggleState)
 	{
 		this.CurrentMode = ERankMode.Single;
@@ -143,7 +143,7 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshRankLayout(false, null);
 	}
 
-	// Token: 0x0600C664 RID: 50788 RVA: 0x002D1E19 File Offset: 0x002D0019
+	// Token: 0x06009A74 RID: 39540 RVA: 0x002DCF2D File Offset: 0x002DB12D
 	private void OnOnlineRankTabToggleClick(EToggleState toggleState)
 	{
 		this.CurrentMode = ERankMode.Online;
@@ -151,7 +151,7 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshRankLayout(this.CurrentMode == ERankMode.Online, null);
 	}
 
-	// Token: 0x0600C665 RID: 50789 RVA: 0x002D1E3C File Offset: 0x002D003C
+	// Token: 0x06009A75 RID: 39541 RVA: 0x002DCF50 File Offset: 0x002DB150
 	private void RefreshToggleByCurrentMode()
 	{
 		EToggleState state = (this.CurrentMode == ERankMode.Single) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -169,7 +169,7 @@ public class DangoAbyssRankView : UiViewBase
 		extendToggle2.SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600C666 RID: 50790 RVA: 0x002D1E94 File Offset: 0x002D0094
+	// Token: 0x06009A76 RID: 39542 RVA: 0x002DCFA8 File Offset: 0x002DB1A8
 	private void OnButtonLeftClick()
 	{
 		this.CurrentPage = Math.Max(this.CurrentPage - 1, 0);
@@ -187,7 +187,7 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshAnonymousToggle();
 	}
 
-	// Token: 0x0600C667 RID: 50791 RVA: 0x002D1EE4 File Offset: 0x002D00E4
+	// Token: 0x06009A77 RID: 39543 RVA: 0x002DCFF8 File Offset: 0x002DB1F8
 	private void OnButtonRightClick()
 	{
 		this.CurrentPage = Math.Min(this.CurrentPage + 1, this.MaxPage);
@@ -205,7 +205,7 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshAnonymousToggle();
 	}
 
-	// Token: 0x0600C668 RID: 50792 RVA: 0x002D1F38 File Offset: 0x002D0138
+	// Token: 0x06009A78 RID: 39544 RVA: 0x002DD04C File Offset: 0x002DB24C
 	private void RefreshButtonState()
 	{
 		bool uiactive = this.CurrentPage > 0;
@@ -223,7 +223,7 @@ public class DangoAbyssRankView : UiViewBase
 		button2.RootUIComp.Get().SetUIActive(uiactive2);
 	}
 
-	// Token: 0x0600C669 RID: 50793 RVA: 0x002D1FA0 File Offset: 0x002D01A0
+	// Token: 0x06009A79 RID: 39545 RVA: 0x002DD0B4 File Offset: 0x002DB2B4
 	protected override void OnBeforeShow()
 	{
 		this.OpenData = (this.OpenParam as DangoAbyssRankData);
@@ -248,7 +248,7 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshAnonymousToggle();
 	}
 
-	// Token: 0x0600C66A RID: 50794 RVA: 0x002D2090 File Offset: 0x002D0290
+	// Token: 0x06009A7A RID: 39546 RVA: 0x002DD1A4 File Offset: 0x002DB3A4
 	private void RefreshAnonymousToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -257,7 +257,7 @@ public class DangoAbyssRankView : UiViewBase
 		extendToggle.SetToggleStateForce((!challengeAnonymousNameState) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600C66B RID: 50795 RVA: 0x002D20E8 File Offset: 0x002D02E8
+	// Token: 0x06009A7B RID: 39547 RVA: 0x002DD1FC File Offset: 0x002DB3FC
 	private void InitMode()
 	{
 		int id = this.OpenData.DangoAbyssData[this.CurrentPage].GetConfig().Value.Id;
@@ -270,14 +270,14 @@ public class DangoAbyssRankView : UiViewBase
 		this.RefreshToggleByCurrentMode();
 	}
 
-	// Token: 0x0600C66C RID: 50796 RVA: 0x002D2150 File Offset: 0x002D0350
+	// Token: 0x06009A7C RID: 39548 RVA: 0x002DD264 File Offset: 0x002DB464
 	private void RefreshLevelText()
 	{
 		string title = this.OpenData.DangoAbyssData[this.CurrentPage].GetConfig().Value.Title;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600C66D RID: 50797 RVA: 0x002D219C File Offset: 0x002D039C
+	// Token: 0x06009A7D RID: 39549 RVA: 0x002DD2B0 File Offset: 0x002DB4B0
 	[NullableContext(2)]
 	private UniTask RefreshRankLayout(bool onlineState, Action finishCall = null)
 	{
@@ -291,77 +291,77 @@ public class DangoAbyssRankView : UiViewBase
 		return <RefreshRankLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005B69 RID: 23401
+	// Token: 0x04005C38 RID: 23608
 	private const int CD = 1000;
 
-	// Token: 0x04005B6A RID: 23402
+	// Token: 0x04005C39 RID: 23609
 	private DangoAbyssRankData OpenData;
 
-	// Token: 0x04005B6B RID: 23403
+	// Token: 0x04005C3A RID: 23610
 	[Nullable(2)]
 	private AbyssRankChallengeInfo ChallengeRankData;
 
-	// Token: 0x04005B6C RID: 23404
+	// Token: 0x04005C3B RID: 23611
 	private ERankMode CurrentMode;
 
-	// Token: 0x04005B6D RID: 23405
+	// Token: 0x04005C3C RID: 23612
 	private int CurrentPage;
 
-	// Token: 0x04005B6E RID: 23406
+	// Token: 0x04005C3D RID: 23613
 	private int MaxPage;
 
-	// Token: 0x04005B6F RID: 23407
+	// Token: 0x04005C3E RID: 23614
 	private LoopScrollView<DangoAbyssRankItem, DangoRankItemData> RankScroll;
 
-	// Token: 0x04005B70 RID: 23408
+	// Token: 0x04005C3F RID: 23615
 	private DangoAbyssRankItem OwnRankItem;
 
-	// Token: 0x04005B71 RID: 23409
+	// Token: 0x04005C40 RID: 23616
 	private long LastChangeToggleTime;
 
-	// Token: 0x04005B72 RID: 23410
+	// Token: 0x04005C41 RID: 23617
 	[Nullable(2)]
 	private UUIInturnAnimController AttributeTurnAniComponentR;
 
-	// Token: 0x04005B73 RID: 23411
+	// Token: 0x04005C42 RID: 23618
 	[Nullable(2)]
 	private UUIInturnAnimController AttributeTurnAniComponentL;
 
-	// Token: 0x02007F9B RID: 32667
+	// Token: 0x0200712A RID: 28970
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029A9E RID: 170654
+		// Token: 0x04024DDB RID: 151003
 		public const int SingleRankTabToggle = 0;
 
-		// Token: 0x04029A9F RID: 170655
+		// Token: 0x04024DDC RID: 151004
 		public const int OnlineRankTabToggle = 1;
 
-		// Token: 0x04029AA0 RID: 170656
+		// Token: 0x04024DDD RID: 151005
 		public const int LevelText = 2;
 
-		// Token: 0x04029AA1 RID: 170657
+		// Token: 0x04024DDE RID: 151006
 		public const int RankScroller = 3;
 
-		// Token: 0x04029AA2 RID: 170658
+		// Token: 0x04024DDF RID: 151007
 		public const int RankScrollerItem = 4;
 
-		// Token: 0x04029AA3 RID: 170659
+		// Token: 0x04024DE0 RID: 151008
 		public const int ButtonLeft = 5;
 
-		// Token: 0x04029AA4 RID: 170660
+		// Token: 0x04024DE1 RID: 151009
 		public const int ButtonRight = 6;
 
-		// Token: 0x04029AA5 RID: 170661
+		// Token: 0x04024DE2 RID: 151010
 		public const int CloseBtn = 7;
 
-		// Token: 0x04029AA6 RID: 170662
+		// Token: 0x04024DE3 RID: 151011
 		public const int SelfRankItem = 8;
 
-		// Token: 0x04029AA7 RID: 170663
+		// Token: 0x04024DE4 RID: 151012
 		public const int AnonymousToggle = 9;
 
-		// Token: 0x04029AA8 RID: 170664
+		// Token: 0x04024DE5 RID: 151013
 		public const int TurnAnimationItem = 10;
 	}
 }

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200194C RID: 6476
+// Token: 0x02000E09 RID: 3593
 public class MiniElementReactionItem : UiPanelBase
 {
-	// Token: 0x0600BD22 RID: 48418 RVA: 0x002AC99A File Offset: 0x002AAB9A
+	// Token: 0x06009125 RID: 37157 RVA: 0x002B77DE File Offset: 0x002B59DE
 	[NullableContext(1)]
 	public MiniElementReactionItem(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600BD23 RID: 48419 RVA: 0x002AC9AA File Offset: 0x002AABAA
+	// Token: 0x06009126 RID: 37158 RVA: 0x002B77EE File Offset: 0x002B59EE
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class MiniElementReactionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600BD24 RID: 48420 RVA: 0x002AC9E4 File Offset: 0x002AABE4
+	// Token: 0x06009127 RID: 37159 RVA: 0x002B7828 File Offset: 0x002B5A28
 	public void SetReactionActivated(bool bActivated)
 	{
 		UUISprite sprite = base.GetSprite(0);
@@ -33,12 +33,12 @@ public class MiniElementReactionItem : UiPanelBase
 		texture.SetUIActive(bActivated);
 	}
 
-	// Token: 0x02007EA9 RID: 32425
+	// Token: 0x02007038 RID: 28728
 	private enum EChildType
 	{
-		// Token: 0x040296A0 RID: 169632
+		// Token: 0x040249DD RID: 149981
 		DeactivateSprite,
-		// Token: 0x040296A1 RID: 169633
+		// Token: 0x040249DE RID: 149982
 		ReactionTexture
 	}
 }

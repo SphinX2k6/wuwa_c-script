@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000884 RID: 2180
+	// Token: 0x020008A0 RID: 2208
 	public class ConfigRoleAnimAudioByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600332A RID: 13098 RVA: 0x0017AAA4 File Offset: 0x00178CA4
+		// Token: 0x060033D2 RID: 13266 RVA: 0x00181D8C File Offset: 0x0017FF8C
 		static ConfigRoleAnimAudioByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleAnimAudioByRoleId.CreateStaticDefaultValue), new Action(ConfigRoleAnimAudioByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600332B RID: 13099 RVA: 0x0017AAC4 File Offset: 0x00178CC4
+		// Token: 0x060033D3 RID: 13267 RVA: 0x00181DAC File Offset: 0x0017FFAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleAnimAudioByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600332C RID: 13100 RVA: 0x0017AB43 File Offset: 0x00178D43
+		// Token: 0x060033D4 RID: 13268 RVA: 0x00181E2B File Offset: 0x0018002B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleAnimAudioByRoleId.LogPair = null;
 			ConfigRoleAnimAudioByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x0600332D RID: 13101 RVA: 0x0017AB51 File Offset: 0x00178D51
+		// Token: 0x060033D5 RID: 13269 RVA: 0x00181E39 File Offset: 0x00180039
 		public static void Init()
 		{
 			ConfigRoleAnimAudioByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleAnimAudioByRoleId.HandleId, "db_role.db", "select BinData from `RoleAnimAudio` where RoleId=?");
 		}
 
-		// Token: 0x0600332E RID: 13102 RVA: 0x0017AB6C File Offset: 0x00178D6C
+		// Token: 0x060033D6 RID: 13270 RVA: 0x00181E54 File Offset: 0x00180054
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleAnimAudio> GetConfigList(int p0RoleId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003B82 RID: 15234
+		// Token: 0x04003C46 RID: 15430
 		private const string DB = "db_role.db";
 
-		// Token: 0x04003B83 RID: 15235
+		// Token: 0x04003C47 RID: 15431
 		private const string FILE = "j.角色.xlsx";
 
-		// Token: 0x04003B84 RID: 15236
+		// Token: 0x04003C48 RID: 15432
 		private const string TABLE = "RoleAnimAudio";
 
-		// Token: 0x04003B85 RID: 15237
+		// Token: 0x04003C49 RID: 15433
 		private const string COMMAND = "select BinData from `RoleAnimAudio` where RoleId=?";
 
-		// Token: 0x04003B86 RID: 15238
+		// Token: 0x04003C4A RID: 15434
 		private const string KEY_PREFIX = "RoleAnimAudioByRoleId";
 
-		// Token: 0x04003B87 RID: 15239
+		// Token: 0x04003C4B RID: 15435
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003B88 RID: 15240
+		// Token: 0x04003C4C RID: 15436
 		private static int HandleId;
 	}
 }

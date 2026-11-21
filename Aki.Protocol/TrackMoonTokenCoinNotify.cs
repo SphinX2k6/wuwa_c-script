@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013F0 RID: 5104
+	// Token: 0x02001463 RID: 5219
 	[NetMessage(EMessageId.TrackMoonTokenCoinNotify)]
 	public sealed class TrackMoonTokenCoinNotify : IMessage<TrackMoonTokenCoinNotify>, IMessage, IEquatable<TrackMoonTokenCoinNotify>, IDeepCloneable<TrackMoonTokenCoinNotify>, IBufferMessage
 	{
-		// Token: 0x0601B0C3 RID: 110787 RVA: 0x003EAA75 File Offset: 0x003E8C75
+		// Token: 0x0601BB4E RID: 113486 RVA: 0x00405D49 File Offset: 0x00403F49
 		[NullableContext(1)]
 		public static TrackMoonTokenCoinNotify Create()
 		{
 			return new TrackMoonTokenCoinNotify();
 		}
 
-		// Token: 0x17005B26 RID: 23334
-		// (get) Token: 0x0601B0C4 RID: 110788 RVA: 0x003EAA7C File Offset: 0x003E8C7C
+		// Token: 0x17005DBB RID: 23995
+		// (get) Token: 0x0601BB4F RID: 113487 RVA: 0x00405D50 File Offset: 0x00403F50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B27 RID: 23335
-		// (get) Token: 0x0601B0C5 RID: 110789 RVA: 0x003EAA7F File Offset: 0x003E8C7F
+		// Token: 0x17005DBC RID: 23996
+		// (get) Token: 0x0601BB50 RID: 113488 RVA: 0x00405D53 File Offset: 0x00403F53
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B0C6 RID: 110790 RVA: 0x003EAA86 File Offset: 0x003E8C86
+		// Token: 0x0601BB51 RID: 113489 RVA: 0x00405D5A File Offset: 0x00403F5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonTokenCoinNotify()
 		{
 		}
 
-		// Token: 0x0601B0C7 RID: 110791 RVA: 0x003EAA8E File Offset: 0x003E8C8E
+		// Token: 0x0601BB52 RID: 113490 RVA: 0x00405D62 File Offset: 0x00403F62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonTokenCoinNotify(TrackMoonTokenCoinNotify other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B0C8 RID: 110792 RVA: 0x003EAAB3 File Offset: 0x003E8CB3
+		// Token: 0x0601BB53 RID: 113491 RVA: 0x00405D87 File Offset: 0x00403F87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonTokenCoinNotify Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new TrackMoonTokenCoinNotify(this);
 		}
 
-		// Token: 0x17005B28 RID: 23336
-		// (get) Token: 0x0601B0C9 RID: 110793 RVA: 0x003EAABB File Offset: 0x003E8CBB
-		// (set) Token: 0x0601B0CA RID: 110794 RVA: 0x003EAAC3 File Offset: 0x003E8CC3
+		// Token: 0x17005DBD RID: 23997
+		// (get) Token: 0x0601BB54 RID: 113492 RVA: 0x00405D8F File Offset: 0x00403F8F
+		// (set) Token: 0x0601BB55 RID: 113493 RVA: 0x00405D97 File Offset: 0x00403F97
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TokenCoin
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B0CB RID: 110795 RVA: 0x003EAACC File Offset: 0x003E8CCC
+		// Token: 0x0601BB56 RID: 113494 RVA: 0x00405DA0 File Offset: 0x00403FA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrackMoonTokenCoinNotify);
 		}
 
-		// Token: 0x0601B0CC RID: 110796 RVA: 0x003EAADA File Offset: 0x003E8CDA
+		// Token: 0x0601BB57 RID: 113495 RVA: 0x00405DAE File Offset: 0x00403FAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrackMoonTokenCoinNotify other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TokenCoin == other.TokenCoin && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B0CD RID: 110797 RVA: 0x003EAB08 File Offset: 0x003E8D08
+		// Token: 0x0601BB58 RID: 113496 RVA: 0x00405DDC File Offset: 0x00403FDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B0CE RID: 110798 RVA: 0x003EAB47 File Offset: 0x003E8D47
+		// Token: 0x0601BB59 RID: 113497 RVA: 0x00405E1B File Offset: 0x0040401B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B0CF RID: 110799 RVA: 0x003EAB54 File Offset: 0x003E8D54
+		// Token: 0x0601BB5A RID: 113498 RVA: 0x00405E28 File Offset: 0x00404028
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B0D0 RID: 110800 RVA: 0x003EAB5D File Offset: 0x003E8D5D
+		// Token: 0x0601BB5B RID: 113499 RVA: 0x00405E31 File Offset: 0x00404031
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.TokenCoin != 0)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.TokenCoin);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B0D1 RID: 110801 RVA: 0x003EAB90 File Offset: 0x003E8D90
+		// Token: 0x0601BB5C RID: 113500 RVA: 0x00405E64 File Offset: 0x00404064
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B0D2 RID: 110802 RVA: 0x003EABCE File Offset: 0x003E8DCE
+		// Token: 0x0601BB5D RID: 113501 RVA: 0x00405EA2 File Offset: 0x004040A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrackMoonTokenCoinNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B0D3 RID: 110803 RVA: 0x003EABFF File Offset: 0x003E8DFF
+		// Token: 0x0601BB5E RID: 113502 RVA: 0x00405ED3 File Offset: 0x004040D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B0D4 RID: 110804 RVA: 0x003EAC08 File Offset: 0x003E8E08
+		// Token: 0x0601BB5F RID: 113503 RVA: 0x00405EDC File Offset: 0x004040DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 40U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009C88 RID: 40072
+		// Token: 0x0400A0CF RID: 41167
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009C89 RID: 40073
-		public const int TokenCoinFieldNumber = 3;
+		// Token: 0x0400A0D0 RID: 41168
+		public const int TokenCoinFieldNumber = 5;
 
-		// Token: 0x04009C8A RID: 40074
+		// Token: 0x0400A0D1 RID: 41169
 		private int tokenCoin_;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C20 RID: 7200
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E17 RID: 7703
 	public class IMotorRadioOperationRestriction
 	{
-		// Token: 0x06009A7F RID: 39551 RVA: 0x00163560 File Offset: 0x00161760
+		// Token: 0x0600A3D7 RID: 41943 RVA: 0x001768A0 File Offset: 0x00174AA0
 		private IMotorRadioOperationRestriction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009A80 RID: 39552 RVA: 0x00163598 File Offset: 0x00161798
+		// Token: 0x0600A3D8 RID: 41944 RVA: 0x001768D8 File Offset: 0x00174AD8
 		public static IMotorRadioOperationRestriction Create([Nullable(2)] IMotorRadioOperationRestriction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A81 RID: 39553 RVA: 0x001635AB File Offset: 0x001617AB
+		// Token: 0x0600A3D9 RID: 41945 RVA: 0x001768EB File Offset: 0x00174AEB
 		public static IMotorRadioOperationRestriction CreateFromSetValue([Nullable(2)] IMotorRadioOperationRestriction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009A82 RID: 39554 RVA: 0x001635BE File Offset: 0x001617BE
+		// Token: 0x0600A3DA RID: 41946 RVA: 0x001768FE File Offset: 0x00174AFE
 		public IMotorRadioOperationRestriction_SetValue ToSetValue()
 		{
 			return new IMotorRadioOperationRestriction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003066 RID: 12390
-		// (get) Token: 0x06009A83 RID: 39555 RVA: 0x001635D1 File Offset: 0x001617D1
-		// (set) Token: 0x06009A84 RID: 39556 RVA: 0x001635FC File Offset: 0x001617FC
+		// Token: 0x170032D7 RID: 13015
+		// (get) Token: 0x0600A3DB RID: 41947 RVA: 0x00176911 File Offset: 0x00174B11
+		// (set) Token: 0x0600A3DC RID: 41948 RVA: 0x0017693C File Offset: 0x00174B3C
 		public virtual EMotorRadioOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DF7 RID: 24055
+		// Token: 0x0400632E RID: 25390
 		[Nullable(2)]
 		protected IMotorRadioOperationRestriction FbInstance;
 
-		// Token: 0x04005DF8 RID: 24056
+		// Token: 0x0400632F RID: 25391
 		[Nullable(2)]
 		protected IMotorRadioOperationRestriction_SetValue PocoInterface;
 	}

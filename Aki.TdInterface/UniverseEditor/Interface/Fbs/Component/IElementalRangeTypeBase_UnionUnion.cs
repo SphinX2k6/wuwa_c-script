@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200513C RID: 20796
+	// Token: 0x020056A1 RID: 22177
 	public class IElementalRangeTypeBase_UnionUnion
 	{
-		// Token: 0x1700978F RID: 38799
-		// (get) Token: 0x060218A2 RID: 137378 RVA: 0x004A80AD File Offset: 0x004A62AD
-		// (set) Token: 0x060218A3 RID: 137379 RVA: 0x004A80B5 File Offset: 0x004A62B5
+		// Token: 0x17009F7C RID: 40828
+		// (get) Token: 0x060237F6 RID: 145398 RVA: 0x004E2039 File Offset: 0x004E0239
+		// (set) Token: 0x060237F7 RID: 145399 RVA: 0x004E2041 File Offset: 0x004E0241
 		public IElementalRangeTypeBase_Union Type { get; set; }
 
-		// Token: 0x17009790 RID: 38800
-		// (get) Token: 0x060218A4 RID: 137380 RVA: 0x004A80BE File Offset: 0x004A62BE
-		// (set) Token: 0x060218A5 RID: 137381 RVA: 0x004A80C6 File Offset: 0x004A62C6
+		// Token: 0x17009F7D RID: 40829
+		// (get) Token: 0x060237F8 RID: 145400 RVA: 0x004E204A File Offset: 0x004E024A
+		// (set) Token: 0x060237F9 RID: 145401 RVA: 0x004E2052 File Offset: 0x004E0252
 		public object Value { get; set; }
 
-		// Token: 0x060218A6 RID: 137382 RVA: 0x004A80CF File Offset: 0x004A62CF
+		// Token: 0x060237FA RID: 145402 RVA: 0x004E205B File Offset: 0x004E025B
 		public IElementalRangeTypeBase_UnionUnion()
 		{
 			this.Type = IElementalRangeTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060218A7 RID: 137383 RVA: 0x004A80E5 File Offset: 0x004A62E5
+		// Token: 0x060237FB RID: 145403 RVA: 0x004E2071 File Offset: 0x004E0271
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060218A8 RID: 137384 RVA: 0x004A80F7 File Offset: 0x004A62F7
+		// Token: 0x060237FC RID: 145404 RVA: 0x004E2083 File Offset: 0x004E0283
 		public IElementalRangeTypeBaseT AsIElementalRangeTypeBase()
 		{
 			return this.As<IElementalRangeTypeBaseT>();
 		}
 
-		// Token: 0x060218A9 RID: 137385 RVA: 0x004A80FF File Offset: 0x004A62FF
+		// Token: 0x060237FD RID: 145405 RVA: 0x004E208B File Offset: 0x004E028B
 		public static IElementalRangeTypeBase_UnionUnion FromIElementalRangeTypeBase(IElementalRangeTypeBaseT _ielementalrangetypebase)
 		{
 			return new IElementalRangeTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060218AA RID: 137386 RVA: 0x004A8114 File Offset: 0x004A6314
+		// Token: 0x060237FE RID: 145406 RVA: 0x004E20A0 File Offset: 0x004E02A0
 		public IBaseShapeElementalRangeT AsIBaseShapeElementalRange()
 		{
 			return this.As<IBaseShapeElementalRangeT>();
 		}
 
-		// Token: 0x060218AB RID: 137387 RVA: 0x004A811C File Offset: 0x004A631C
+		// Token: 0x060237FF RID: 145407 RVA: 0x004E20A8 File Offset: 0x004E02A8
 		public static IElementalRangeTypeBase_UnionUnion FromIBaseShapeElementalRange(IBaseShapeElementalRangeT _ibaseshapeelementalrange)
 		{
 			return new IElementalRangeTypeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060218AC RID: 137388 RVA: 0x004A8131 File Offset: 0x004A6331
+		// Token: 0x06023800 RID: 145408 RVA: 0x004E20BD File Offset: 0x004E02BD
 		public ITransportBoxElementalRangeT AsITransportBoxElementalRange()
 		{
 			return this.As<ITransportBoxElementalRangeT>();
 		}
 
-		// Token: 0x060218AD RID: 137389 RVA: 0x004A8139 File Offset: 0x004A6339
+		// Token: 0x06023801 RID: 145409 RVA: 0x004E20C5 File Offset: 0x004E02C5
 		public static IElementalRangeTypeBase_UnionUnion FromITransportBoxElementalRange(ITransportBoxElementalRangeT _itransportboxelementalrange)
 		{
 			return new IElementalRangeTypeBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060218AE RID: 137390 RVA: 0x004A8150 File Offset: 0x004A6350
+		// Token: 0x06023802 RID: 145410 RVA: 0x004E20DC File Offset: 0x004E02DC
 		public static int Pack(FlatBufferBuilder builder, IElementalRangeTypeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005333 RID: 21299
+	// Token: 0x020058B9 RID: 22713
 	public struct IGroupAiEcologyGameplayAbp : IFlatbufferObject
 	{
-		// Token: 0x17009C7A RID: 40058
-		// (get) Token: 0x06022D43 RID: 142659 RVA: 0x004D377A File Offset: 0x004D197A
+		// Token: 0x1700A4B2 RID: 42162
+		// (get) Token: 0x06024DF7 RID: 151031 RVA: 0x0051064E File Offset: 0x0050E84E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,21 +16,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D44 RID: 142660 RVA: 0x004D3787 File Offset: 0x004D1987
+		// Token: 0x06024DF8 RID: 151032 RVA: 0x0051065B File Offset: 0x0050E85B
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Struct(_i, _bb);
 		}
 
-		// Token: 0x06022D45 RID: 142661 RVA: 0x004D3796 File Offset: 0x004D1996
+		// Token: 0x06024DF9 RID: 151033 RVA: 0x0051066A File Offset: 0x0050E86A
 		public IGroupAiEcologyGameplayAbp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009C7B RID: 40059
-		// (get) Token: 0x06022D46 RID: 142662 RVA: 0x004D37A6 File Offset: 0x004D19A6
+		// Token: 0x1700A4B3 RID: 42163
+		// (get) Token: 0x06024DFA RID: 151034 RVA: 0x0051067A File Offset: 0x0050E87A
 		public EGroupAiEcologyGameplayType GameplayType
 		{
 			get
@@ -39,7 +39,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022D47 RID: 142663 RVA: 0x004D37C3 File Offset: 0x004D19C3
+		// Token: 0x06024DFB RID: 151035 RVA: 0x00510697 File Offset: 0x0050E897
 		public static Offset<IGroupAiEcologyGameplayAbp> CreateIGroupAiEcologyGameplayAbp(FlatBufferBuilder builder, EGroupAiEcologyGameplayType GameplayType)
 		{
 			builder.Prep(1, 1);
@@ -47,7 +47,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new Offset<IGroupAiEcologyGameplayAbp>(builder.Offset);
 		}
 
-		// Token: 0x06022D48 RID: 142664 RVA: 0x004D37E0 File Offset: 0x004D19E0
+		// Token: 0x06024DFC RID: 151036 RVA: 0x005106B4 File Offset: 0x0050E8B4
 		public IGroupAiEcologyGameplayAbpT UnPack()
 		{
 			IGroupAiEcologyGameplayAbpT groupAiEcologyGameplayAbpT = new IGroupAiEcologyGameplayAbpT();
@@ -55,13 +55,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return groupAiEcologyGameplayAbpT;
 		}
 
-		// Token: 0x06022D49 RID: 142665 RVA: 0x004D37FB File Offset: 0x004D19FB
+		// Token: 0x06024DFD RID: 151037 RVA: 0x005106CF File Offset: 0x0050E8CF
 		public void UnPackTo(IGroupAiEcologyGameplayAbpT _o)
 		{
 			_o.GameplayType = this.GameplayType;
 		}
 
-		// Token: 0x06022D4A RID: 142666 RVA: 0x004D380C File Offset: 0x004D1A0C
+		// Token: 0x06024DFE RID: 151038 RVA: 0x005106E0 File Offset: 0x0050E8E0
 		public static Offset<IGroupAiEcologyGameplayAbp> Pack(FlatBufferBuilder builder, IGroupAiEcologyGameplayAbpT _o)
 		{
 			if (_o == null)
@@ -71,7 +71,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGroupAiEcologyGameplayAbp.CreateIGroupAiEcologyGameplayAbp(builder, _o.GameplayType);
 		}
 
-		// Token: 0x0400E4FA RID: 58618
+		// Token: 0x0400F12A RID: 61738
 		private Struct __p;
 	}
 }

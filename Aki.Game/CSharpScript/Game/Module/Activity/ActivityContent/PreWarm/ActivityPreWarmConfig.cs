@@ -4,20 +4,20 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062B5 RID: 25269
+	// Token: 0x02005233 RID: 21043
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ActivityPreWarmConfig : ConfigBase
 	{
-		// Token: 0x0603F8D5 RID: 260309 RVA: 0x00F5F2DF File Offset: 0x00F5D4DF
+		// Token: 0x06034596 RID: 214422 RVA: 0x00EA623B File Offset: 0x00EA443B
 		public PreHeatTaskActivity? GetPreWarmConfig(int id)
 		{
 			return ConfigPreHeatTaskActivityById.GetConfig(id, true);
 		}
 
-		// Token: 0x17009270 RID: 37488
-		// (get) Token: 0x0603F8D6 RID: 260310 RVA: 0x00F5F2E8 File Offset: 0x00F5D4E8
+		// Token: 0x170065D2 RID: 26066
+		// (get) Token: 0x06034597 RID: 214423 RVA: 0x00EA6244 File Offset: 0x00EA4444
 		public static ActivityPreWarmConfig Instance
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			}
 		}
 
-		// Token: 0x0603F8D7 RID: 260311 RVA: 0x00F5F2EF File Offset: 0x00F5D4EF
+		// Token: 0x06034598 RID: 214424 RVA: 0x00EA624B File Offset: 0x00EA444B
 		public static ActivityPreWarmConfig GetOrCreateInstance()
 		{
 			if (ActivityPreWarmConfig._Instance == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return ActivityPreWarmConfig._Instance;
 		}
 
-		// Token: 0x0603F8D8 RID: 260312 RVA: 0x00F5F303 File Offset: 0x00F5D503
+		// Token: 0x06034599 RID: 214425 RVA: 0x00EA625F File Offset: 0x00EA445F
 		public static bool CreateInstance()
 		{
 			if (ActivityPreWarmConfig._Instance != null)
@@ -47,24 +47,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return true;
 		}
 
-		// Token: 0x0603F8D9 RID: 260313 RVA: 0x00F5F319 File Offset: 0x00F5D519
+		// Token: 0x0603459A RID: 214426 RVA: 0x00EA6275 File Offset: 0x00EA4475
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F8DA RID: 260314 RVA: 0x00F5F31B File Offset: 0x00F5D51B
+		// Token: 0x0603459B RID: 214427 RVA: 0x00EA6277 File Offset: 0x00EA4477
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityPreWarmConfig._Instance = null;
 		}
 
-		// Token: 0x0603F8DB RID: 260315 RVA: 0x00F5F323 File Offset: 0x00F5D523
+		// Token: 0x0603459C RID: 214428 RVA: 0x00EA627F File Offset: 0x00EA447F
 		static ActivityPreWarmConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityPreWarmConfig.CreateStaticDefaultValue), new Action(ActivityPreWarmConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040213CC RID: 136140
+		// Token: 0x0401BCFB RID: 113915
 		[Nullable(2)]
 		private static ActivityPreWarmConfig _Instance;
 	}

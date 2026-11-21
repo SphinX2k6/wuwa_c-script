@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200102F RID: 4143
+	// Token: 0x0200026B RID: 619
 	[UnrealObjectPath("/Script/Engine.PredictProjectilePathParams")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 104)]
 	public class FPredictProjectilePathParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600E907 RID: 59655 RVA: 0x0015A342 File Offset: 0x00158542
+		// Token: 0x06003D76 RID: 15734 RVA: 0x00058A69 File Offset: 0x00056C69
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPredictProjectilePathParams._ScriptStructPtr != 0) ? FPredictProjectilePathParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.PredictProjectilePathParams", ref FPredictProjectilePathParams._ScriptStructPtr);
 		}
 
-		// Token: 0x1700386A RID: 14442
-		// (get) Token: 0x0600E908 RID: 59656 RVA: 0x0015A366 File Offset: 0x00158566
-		// (set) Token: 0x0600E909 RID: 59657 RVA: 0x0015A37A File Offset: 0x0015857A
+		// Token: 0x17000B21 RID: 2849
+		// (get) Token: 0x06003D77 RID: 15735 RVA: 0x00058A8D File Offset: 0x00056C8D
+		// (set) Token: 0x06003D78 RID: 15736 RVA: 0x00058AA1 File Offset: 0x00056CA1
 		public unsafe FVector StartLocation
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700386B RID: 14443
-		// (get) Token: 0x0600E90A RID: 59658 RVA: 0x0015A38F File Offset: 0x0015858F
-		// (set) Token: 0x0600E90B RID: 59659 RVA: 0x0015A3A3 File Offset: 0x001585A3
+		// Token: 0x17000B22 RID: 2850
+		// (get) Token: 0x06003D79 RID: 15737 RVA: 0x00058AB6 File Offset: 0x00056CB6
+		// (set) Token: 0x06003D7A RID: 15738 RVA: 0x00058ACA File Offset: 0x00056CCA
 		public unsafe FVector LaunchVelocity
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700386C RID: 14444
-		// (get) Token: 0x0600E90C RID: 59660 RVA: 0x0015A3B8 File Offset: 0x001585B8
-		// (set) Token: 0x0600E90D RID: 59661 RVA: 0x0015A3C8 File Offset: 0x001585C8
+		// Token: 0x17000B23 RID: 2851
+		// (get) Token: 0x06003D7B RID: 15739 RVA: 0x00058ADF File Offset: 0x00056CDF
+		// (set) Token: 0x06003D7C RID: 15740 RVA: 0x00058AEF File Offset: 0x00056CEF
 		public unsafe bool bTraceWithCollision
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700386D RID: 14445
-		// (get) Token: 0x0600E90E RID: 59662 RVA: 0x0015A3D9 File Offset: 0x001585D9
-		// (set) Token: 0x0600E90F RID: 59663 RVA: 0x0015A3E9 File Offset: 0x001585E9
+		// Token: 0x17000B24 RID: 2852
+		// (get) Token: 0x06003D7D RID: 15741 RVA: 0x00058B00 File Offset: 0x00056D00
+		// (set) Token: 0x06003D7E RID: 15742 RVA: 0x00058B10 File Offset: 0x00056D10
 		public unsafe float ProjectileRadius
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700386E RID: 14446
-		// (get) Token: 0x0600E910 RID: 59664 RVA: 0x0015A3FA File Offset: 0x001585FA
-		// (set) Token: 0x0600E911 RID: 59665 RVA: 0x0015A40A File Offset: 0x0015860A
+		// Token: 0x17000B25 RID: 2853
+		// (get) Token: 0x06003D7F RID: 15743 RVA: 0x00058B21 File Offset: 0x00056D21
+		// (set) Token: 0x06003D80 RID: 15744 RVA: 0x00058B31 File Offset: 0x00056D31
 		public unsafe float MaxSimTime
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700386F RID: 14447
-		// (get) Token: 0x0600E912 RID: 59666 RVA: 0x0015A41B File Offset: 0x0015861B
-		// (set) Token: 0x0600E913 RID: 59667 RVA: 0x0015A42B File Offset: 0x0015862B
+		// Token: 0x17000B26 RID: 2854
+		// (get) Token: 0x06003D81 RID: 15745 RVA: 0x00058B42 File Offset: 0x00056D42
+		// (set) Token: 0x06003D82 RID: 15746 RVA: 0x00058B52 File Offset: 0x00056D52
 		public unsafe bool bTraceWithChannel
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003870 RID: 14448
-		// (get) Token: 0x0600E914 RID: 59668 RVA: 0x0015A43C File Offset: 0x0015863C
-		// (set) Token: 0x0600E915 RID: 59669 RVA: 0x0015A450 File Offset: 0x00158650
+		// Token: 0x17000B27 RID: 2855
+		// (get) Token: 0x06003D83 RID: 15747 RVA: 0x00058B63 File Offset: 0x00056D63
+		// (set) Token: 0x06003D84 RID: 15748 RVA: 0x00058B77 File Offset: 0x00056D77
 		public unsafe TEnumAsByte<ECollisionChannel> TraceChannel
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003871 RID: 14449
-		// (get) Token: 0x0600E916 RID: 59670 RVA: 0x0015A468 File Offset: 0x00158668
-		// (set) Token: 0x0600E917 RID: 59671 RVA: 0x0015A4AB File Offset: 0x001586AB
+		// Token: 0x17000B28 RID: 2856
+		// (get) Token: 0x06003D85 RID: 15749 RVA: 0x00058B8C File Offset: 0x00056D8C
+		// (set) Token: 0x06003D86 RID: 15750 RVA: 0x00058BCF File Offset: 0x00056DCF
 		[Nullable(new byte[]
 		{
 			1,
@@ -157,9 +157,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003872 RID: 14450
-		// (get) Token: 0x0600E918 RID: 59672 RVA: 0x0015A4BC File Offset: 0x001586BC
-		// (set) Token: 0x0600E919 RID: 59673 RVA: 0x0015A4FF File Offset: 0x001586FF
+		// Token: 0x17000B29 RID: 2857
+		// (get) Token: 0x06003D87 RID: 15751 RVA: 0x00058BE0 File Offset: 0x00056DE0
+		// (set) Token: 0x06003D88 RID: 15752 RVA: 0x00058C23 File Offset: 0x00056E23
 		[Nullable(1)]
 		public TArray<AActor> ActorsToIgnore
 		{
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003873 RID: 14451
-		// (get) Token: 0x0600E91A RID: 59674 RVA: 0x0015A50D File Offset: 0x0015870D
-		// (set) Token: 0x0600E91B RID: 59675 RVA: 0x0015A51D File Offset: 0x0015871D
+		// Token: 0x17000B2A RID: 2858
+		// (get) Token: 0x06003D89 RID: 15753 RVA: 0x00058C31 File Offset: 0x00056E31
+		// (set) Token: 0x06003D8A RID: 15754 RVA: 0x00058C41 File Offset: 0x00056E41
 		public unsafe float SimFrequency
 		{
 			get
@@ -196,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003874 RID: 14452
-		// (get) Token: 0x0600E91C RID: 59676 RVA: 0x0015A52E File Offset: 0x0015872E
-		// (set) Token: 0x0600E91D RID: 59677 RVA: 0x0015A53E File Offset: 0x0015873E
+		// Token: 0x17000B2B RID: 2859
+		// (get) Token: 0x06003D8B RID: 15755 RVA: 0x00058C52 File Offset: 0x00056E52
+		// (set) Token: 0x06003D8C RID: 15756 RVA: 0x00058C62 File Offset: 0x00056E62
 		public unsafe float OverrideGravityZ
 		{
 			get
@@ -211,9 +211,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003875 RID: 14453
-		// (get) Token: 0x0600E91E RID: 59678 RVA: 0x0015A54F File Offset: 0x0015874F
-		// (set) Token: 0x0600E91F RID: 59679 RVA: 0x0015A563 File Offset: 0x00158763
+		// Token: 0x17000B2C RID: 2860
+		// (get) Token: 0x06003D8D RID: 15757 RVA: 0x00058C73 File Offset: 0x00056E73
+		// (set) Token: 0x06003D8E RID: 15758 RVA: 0x00058C87 File Offset: 0x00056E87
 		public unsafe TEnumAsByte<EDrawDebugTrace> DrawDebugType
 		{
 			get
@@ -226,9 +226,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003876 RID: 14454
-		// (get) Token: 0x0600E920 RID: 59680 RVA: 0x0015A578 File Offset: 0x00158778
-		// (set) Token: 0x0600E921 RID: 59681 RVA: 0x0015A588 File Offset: 0x00158788
+		// Token: 0x17000B2D RID: 2861
+		// (get) Token: 0x06003D8F RID: 15759 RVA: 0x00058C9C File Offset: 0x00056E9C
+		// (set) Token: 0x06003D90 RID: 15760 RVA: 0x00058CAC File Offset: 0x00056EAC
 		public unsafe float DrawDebugTime
 		{
 			get
@@ -241,9 +241,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003877 RID: 14455
-		// (get) Token: 0x0600E922 RID: 59682 RVA: 0x0015A599 File Offset: 0x00158799
-		// (set) Token: 0x0600E923 RID: 59683 RVA: 0x0015A5A9 File Offset: 0x001587A9
+		// Token: 0x17000B2E RID: 2862
+		// (get) Token: 0x06003D91 RID: 15761 RVA: 0x00058CBD File Offset: 0x00056EBD
+		// (set) Token: 0x06003D92 RID: 15762 RVA: 0x00058CCD File Offset: 0x00056ECD
 		public unsafe bool bTraceComplex
 		{
 			get
@@ -256,9 +256,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003878 RID: 14456
-		// (get) Token: 0x0600E924 RID: 59684 RVA: 0x0015A5BA File Offset: 0x001587BA
-		// (set) Token: 0x0600E925 RID: 59685 RVA: 0x0015A5CA File Offset: 0x001587CA
+		// Token: 0x17000B2F RID: 2863
+		// (get) Token: 0x06003D93 RID: 15763 RVA: 0x00058CDE File Offset: 0x00056EDE
+		// (set) Token: 0x06003D94 RID: 15764 RVA: 0x00058CEE File Offset: 0x00056EEE
 		public unsafe bool bOverrideGravity
 		{
 			get
@@ -271,9 +271,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003879 RID: 14457
-		// (get) Token: 0x0600E926 RID: 59686 RVA: 0x0015A5DB File Offset: 0x001587DB
-		// (set) Token: 0x0600E927 RID: 59687 RVA: 0x0015A5EF File Offset: 0x001587EF
+		// Token: 0x17000B30 RID: 2864
+		// (get) Token: 0x06003D95 RID: 15765 RVA: 0x00058CFF File Offset: 0x00056EFF
+		// (set) Token: 0x06003D96 RID: 15766 RVA: 0x00058D13 File Offset: 0x00056F13
 		public unsafe FVector OverrideGravity
 		{
 			get
@@ -286,99 +286,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600E928 RID: 59688 RVA: 0x0015A604 File Offset: 0x00158804
+		// Token: 0x06003D97 RID: 15767 RVA: 0x00058D28 File Offset: 0x00056F28
 		public FPredictProjectilePathParams()
 		{
 		}
 
-		// Token: 0x0600E929 RID: 59689 RVA: 0x0015A60C File Offset: 0x0015880C
-		public FPredictProjectilePathParams(FVector StartLocation, FVector LaunchVelocity, bool bTraceWithCollision, float ProjectileRadius, float MaxSimTime, bool bTraceWithChannel, TEnumAsByte<ECollisionChannel> TraceChannel, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, [Nullable(1)] TArray<AActor> ActorsToIgnore, float SimFrequency, float OverrideGravityZ, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, bool bTraceComplex, bool bOverrideGravity, FVector OverrideGravity)
-		{
-			this.StartLocation = StartLocation;
-			this.LaunchVelocity = LaunchVelocity;
-			this.bTraceWithCollision = bTraceWithCollision;
-			this.ProjectileRadius = ProjectileRadius;
-			this.MaxSimTime = MaxSimTime;
-			this.bTraceWithChannel = bTraceWithChannel;
-			this.TraceChannel = TraceChannel;
-			this.ObjectTypes = ObjectTypes;
-			this.ActorsToIgnore = ActorsToIgnore;
-			this.SimFrequency = SimFrequency;
-			this.OverrideGravityZ = OverrideGravityZ;
-			this.DrawDebugType = DrawDebugType;
-			this.DrawDebugTime = DrawDebugTime;
-			this.bTraceComplex = bTraceComplex;
-			this.bOverrideGravity = bOverrideGravity;
-			this.OverrideGravity = OverrideGravity;
-		}
-
-		// Token: 0x0600E92A RID: 59690 RVA: 0x0015A69C File Offset: 0x0015889C
+		// Token: 0x06003D98 RID: 15768 RVA: 0x00058D30 File Offset: 0x00056F30
 		protected override IntPtr GetUStructPtr()
 		{
 			return FPredictProjectilePathParams.StaticStruct();
 		}
 
-		// Token: 0x0600E92B RID: 59691 RVA: 0x0015A6A8 File Offset: 0x001588A8
+		// Token: 0x06003D99 RID: 15769 RVA: 0x00058D3C File Offset: 0x00056F3C
 		[NullableContext(2)]
 		public FPredictProjectilePathParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600E92C RID: 59692 RVA: 0x0015A6B2 File Offset: 0x001588B2
+		// Token: 0x06003D9A RID: 15770 RVA: 0x00058D46 File Offset: 0x00056F46
 		public FPredictProjectilePathParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600E92D RID: 59693 RVA: 0x0015A6BD File Offset: 0x001588BD
+		// Token: 0x06003D9B RID: 15771 RVA: 0x00058D51 File Offset: 0x00056F51
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FPredictProjectilePathParams(Pointer, false, true);
 		}
 
-		// Token: 0x0600E92E RID: 59694 RVA: 0x0015A6C7 File Offset: 0x001588C7
+		// Token: 0x06003D9C RID: 15772 RVA: 0x00058D5B File Offset: 0x00056F5B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FPredictProjectilePathParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04007E85 RID: 32389
+		// Token: 0x040017FA RID: 6138
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.PredictProjectilePathParams";
 
-		// Token: 0x04007E86 RID: 32390
+		// Token: 0x040017FB RID: 6139
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04007E87 RID: 32391
+		// Token: 0x040017FC RID: 6140
 		internal static int __PropertyOffset_StartLocation;
 
-		// Token: 0x04007E88 RID: 32392
+		// Token: 0x040017FD RID: 6141
 		internal static int __PropertyOffset_LaunchVelocity;
 
-		// Token: 0x04007E89 RID: 32393
+		// Token: 0x040017FE RID: 6142
 		internal static int __PropertyOffset_bTraceWithCollision;
 
-		// Token: 0x04007E8A RID: 32394
+		// Token: 0x040017FF RID: 6143
 		internal static int __PropertyOffset_ProjectileRadius;
 
-		// Token: 0x04007E8B RID: 32395
+		// Token: 0x04001800 RID: 6144
 		internal static int __PropertyOffset_MaxSimTime;
 
-		// Token: 0x04007E8C RID: 32396
+		// Token: 0x04001801 RID: 6145
 		internal static int __PropertyOffset_bTraceWithChannel;
 
-		// Token: 0x04007E8D RID: 32397
+		// Token: 0x04001802 RID: 6146
 		internal static int __PropertyOffset_TraceChannel;
 
-		// Token: 0x04007E8E RID: 32398
+		// Token: 0x04001803 RID: 6147
 		internal static int __PropertyOffset_ObjectTypes;
 
-		// Token: 0x04007E8F RID: 32399
+		// Token: 0x04001804 RID: 6148
 		[Nullable(new byte[]
 		{
 			2,
@@ -386,10 +361,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TEnumAsByte<EObjectTypeQuery>> _ObjectTypes;
 
-		// Token: 0x04007E90 RID: 32400
+		// Token: 0x04001805 RID: 6149
 		internal static int __PropertyOffset_ActorsToIgnore;
 
-		// Token: 0x04007E91 RID: 32401
+		// Token: 0x04001806 RID: 6150
 		[Nullable(new byte[]
 		{
 			2,
@@ -397,25 +372,25 @@ namespace UnrealEngine
 		})]
 		private TArray<AActor> _ActorsToIgnore;
 
-		// Token: 0x04007E92 RID: 32402
+		// Token: 0x04001807 RID: 6151
 		internal static int __PropertyOffset_SimFrequency;
 
-		// Token: 0x04007E93 RID: 32403
+		// Token: 0x04001808 RID: 6152
 		internal static int __PropertyOffset_OverrideGravityZ;
 
-		// Token: 0x04007E94 RID: 32404
+		// Token: 0x04001809 RID: 6153
 		internal static int __PropertyOffset_DrawDebugType;
 
-		// Token: 0x04007E95 RID: 32405
+		// Token: 0x0400180A RID: 6154
 		internal static int __PropertyOffset_DrawDebugTime;
 
-		// Token: 0x04007E96 RID: 32406
+		// Token: 0x0400180B RID: 6155
 		internal static int __PropertyOffset_bTraceComplex;
 
-		// Token: 0x04007E97 RID: 32407
+		// Token: 0x0400180C RID: 6156
 		internal static int __PropertyOffset_bOverrideGravity;
 
-		// Token: 0x04007E98 RID: 32408
+		// Token: 0x0400180D RID: 6157
 		internal static int __PropertyOffset_OverrideGravity;
 	}
 }

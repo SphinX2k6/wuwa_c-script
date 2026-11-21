@@ -9,18 +9,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.CombatMessage
 {
-	// Token: 0x02001687 RID: 5767
+	// Token: 0x02001703 RID: 5891
 	public sealed class CombatNotifyData : IMessage<CombatNotifyData>, IMessage, IEquatable<CombatNotifyData>, IDeepCloneable<CombatNotifyData>, IBufferMessage
 	{
-		// Token: 0x0601CC17 RID: 117783 RVA: 0x004264AD File Offset: 0x004246AD
+		// Token: 0x0601D6E4 RID: 120548 RVA: 0x0044216D File Offset: 0x0044036D
 		[NullableContext(1)]
 		public static CombatNotifyData Create()
 		{
 			return new CombatNotifyData();
 		}
 
-		// Token: 0x170060E4 RID: 24804
-		// (get) Token: 0x0601CC18 RID: 117784 RVA: 0x004264B4 File Offset: 0x004246B4
+		// Token: 0x17006388 RID: 25480
+		// (get) Token: 0x0601D6E5 RID: 120549 RVA: 0x00442174 File Offset: 0x00440374
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060E5 RID: 24805
-		// (get) Token: 0x0601CC19 RID: 117785 RVA: 0x004264B7 File Offset: 0x004246B7
+		// Token: 0x17006389 RID: 25481
+		// (get) Token: 0x0601D6E6 RID: 120550 RVA: 0x00442177 File Offset: 0x00440377
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CC1A RID: 117786 RVA: 0x004264BE File Offset: 0x004246BE
+		// Token: 0x0601D6E7 RID: 120551 RVA: 0x0044217E File Offset: 0x0044037E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatNotifyData()
 		{
 		}
 
-		// Token: 0x0601CC1B RID: 117787 RVA: 0x004264C8 File Offset: 0x004246C8
+		// Token: 0x0601D6E8 RID: 120552 RVA: 0x00442188 File Offset: 0x00440388
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatNotifyData(CombatNotifyData other) : this()
@@ -271,9 +271,6 @@ namespace Aki.Protocol.CombatMessage
 			case CombatNotifyData.MessageOneofCase.FsmMontageDurationNotify:
 				this.FsmMontageDurationNotify = other.FsmMontageDurationNotify.Clone();
 				break;
-			case CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify:
-				this.SwitchDarkTideWeaponSlotNotify = other.SwitchDarkTideWeaponSlotNotify.Clone();
-				break;
 			case CombatNotifyData.MessageOneofCase.CombatValNotify:
 				this.CombatValNotify = other.CombatValNotify.Clone();
 				break;
@@ -283,6 +280,9 @@ namespace Aki.Protocol.CombatMessage
 			case CombatNotifyData.MessageOneofCase.SquadPropChangedNotify:
 				this.SquadPropChangedNotify = other.SquadPropChangedNotify.Clone();
 				break;
+			case CombatNotifyData.MessageOneofCase.DamageShowNotify:
+				this.DamageShowNotify = other.DamageShowNotify.Clone();
+				break;
 			case CombatNotifyData.MessageOneofCase.CombatDataMaxNotify:
 				this.CombatDataMaxNotify = other.CombatDataMaxNotify.Clone();
 				break;
@@ -290,7 +290,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CC1C RID: 117788 RVA: 0x00426D19 File Offset: 0x00424F19
+		// Token: 0x0601D6E9 RID: 120553 RVA: 0x004429D9 File Offset: 0x00440BD9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatNotifyData Clone()
@@ -298,9 +298,9 @@ namespace Aki.Protocol.CombatMessage
 			return new CombatNotifyData(this);
 		}
 
-		// Token: 0x170060E6 RID: 24806
-		// (get) Token: 0x0601CC1D RID: 117789 RVA: 0x00426D21 File Offset: 0x00424F21
-		// (set) Token: 0x0601CC1E RID: 117790 RVA: 0x00426D29 File Offset: 0x00424F29
+		// Token: 0x1700638A RID: 25482
+		// (get) Token: 0x0601D6EA RID: 120554 RVA: 0x004429E1 File Offset: 0x00440BE1
+		// (set) Token: 0x0601D6EB RID: 120555 RVA: 0x004429E9 File Offset: 0x00440BE9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatCommon CombatCommon
@@ -315,9 +315,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060E7 RID: 24807
-		// (get) Token: 0x0601CC1F RID: 117791 RVA: 0x00426D32 File Offset: 0x00424F32
-		// (set) Token: 0x0601CC20 RID: 117792 RVA: 0x00426D4A File Offset: 0x00424F4A
+		// Token: 0x1700638B RID: 25483
+		// (get) Token: 0x0601D6EC RID: 120556 RVA: 0x004429F2 File Offset: 0x00440BF2
+		// (set) Token: 0x0601D6ED RID: 120557 RVA: 0x00442A0A File Offset: 0x00440C0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CreateBulletNotify CreateBulletNotify
@@ -337,9 +337,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060E8 RID: 24808
-		// (get) Token: 0x0601CC21 RID: 117793 RVA: 0x00426D60 File Offset: 0x00424F60
-		// (set) Token: 0x0601CC22 RID: 117794 RVA: 0x00426D78 File Offset: 0x00424F78
+		// Token: 0x1700638C RID: 25484
+		// (get) Token: 0x0601D6EE RID: 120558 RVA: 0x00442A20 File Offset: 0x00440C20
+		// (set) Token: 0x0601D6EF RID: 120559 RVA: 0x00442A38 File Offset: 0x00440C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DestroyBulletNotify DestroyBulletNotify
@@ -359,9 +359,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060E9 RID: 24809
-		// (get) Token: 0x0601CC23 RID: 117795 RVA: 0x00426D8E File Offset: 0x00424F8E
-		// (set) Token: 0x0601CC24 RID: 117796 RVA: 0x00426DA6 File Offset: 0x00424FA6
+		// Token: 0x1700638D RID: 25485
+		// (get) Token: 0x0601D6F0 RID: 120560 RVA: 0x00442A4E File Offset: 0x00440C4E
+		// (set) Token: 0x0601D6F1 RID: 120561 RVA: 0x00442A66 File Offset: 0x00440C66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageExecuteNotify DamageExecuteNotify
@@ -381,9 +381,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060EA RID: 24810
-		// (get) Token: 0x0601CC25 RID: 117797 RVA: 0x00426DBC File Offset: 0x00424FBC
-		// (set) Token: 0x0601CC26 RID: 117798 RVA: 0x00426DD4 File Offset: 0x00424FD4
+		// Token: 0x1700638E RID: 25486
+		// (get) Token: 0x0601D6F2 RID: 120562 RVA: 0x00442A7C File Offset: 0x00440C7C
+		// (set) Token: 0x0601D6F3 RID: 120563 RVA: 0x00442A94 File Offset: 0x00440C94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyGameplayEffectNotify ApplyGameplayEffectNotify
@@ -403,9 +403,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060EB RID: 24811
-		// (get) Token: 0x0601CC27 RID: 117799 RVA: 0x00426DEA File Offset: 0x00424FEA
-		// (set) Token: 0x0601CC28 RID: 117800 RVA: 0x00426E02 File Offset: 0x00425002
+		// Token: 0x1700638F RID: 25487
+		// (get) Token: 0x0601D6F4 RID: 120564 RVA: 0x00442AAA File Offset: 0x00440CAA
+		// (set) Token: 0x0601D6F5 RID: 120565 RVA: 0x00442AC2 File Offset: 0x00440CC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectNotify RemoveGameplayEffectNotify
@@ -425,9 +425,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060EC RID: 24812
-		// (get) Token: 0x0601CC29 RID: 117801 RVA: 0x00426E18 File Offset: 0x00425018
-		// (set) Token: 0x0601CC2A RID: 117802 RVA: 0x00426E30 File Offset: 0x00425030
+		// Token: 0x17006390 RID: 25488
+		// (get) Token: 0x0601D6F6 RID: 120566 RVA: 0x00442AD8 File Offset: 0x00440CD8
+		// (set) Token: 0x0601D6F7 RID: 120567 RVA: 0x00442AF0 File Offset: 0x00440CF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HitNotify HitNotify
@@ -447,9 +447,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060ED RID: 24813
-		// (get) Token: 0x0601CC2B RID: 117803 RVA: 0x00426E46 File Offset: 0x00425046
-		// (set) Token: 0x0601CC2C RID: 117804 RVA: 0x00426E5E File Offset: 0x0042505E
+		// Token: 0x17006391 RID: 25489
+		// (get) Token: 0x0601D6F8 RID: 120568 RVA: 0x00442B06 File Offset: 0x00440D06
+		// (set) Token: 0x0601D6F9 RID: 120569 RVA: 0x00442B1E File Offset: 0x00440D1E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillNotify SkillNotify
@@ -469,9 +469,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060EE RID: 24814
-		// (get) Token: 0x0601CC2D RID: 117805 RVA: 0x00426E74 File Offset: 0x00425074
-		// (set) Token: 0x0601CC2E RID: 117806 RVA: 0x00426E8D File Offset: 0x0042508D
+		// Token: 0x17006392 RID: 25490
+		// (get) Token: 0x0601D6FA RID: 120570 RVA: 0x00442B34 File Offset: 0x00440D34
+		// (set) Token: 0x0601D6FB RID: 120571 RVA: 0x00442B4D File Offset: 0x00440D4D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseSkillNotify UseSkillNotify
@@ -491,9 +491,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060EF RID: 24815
-		// (get) Token: 0x0601CC2F RID: 117807 RVA: 0x00426EA4 File Offset: 0x004250A4
-		// (set) Token: 0x0601CC30 RID: 117808 RVA: 0x00426EBD File Offset: 0x004250BD
+		// Token: 0x17006393 RID: 25491
+		// (get) Token: 0x0601D6FC RID: 120572 RVA: 0x00442B64 File Offset: 0x00440D64
+		// (set) Token: 0x0601D6FD RID: 120573 RVA: 0x00442B7D File Offset: 0x00440D7D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EndSkillNotify EndSkillNotify
@@ -513,9 +513,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F0 RID: 24816
-		// (get) Token: 0x0601CC31 RID: 117809 RVA: 0x00426ED4 File Offset: 0x004250D4
-		// (set) Token: 0x0601CC32 RID: 117810 RVA: 0x00426EED File Offset: 0x004250ED
+		// Token: 0x17006394 RID: 25492
+		// (get) Token: 0x0601D6FE RID: 120574 RVA: 0x00442B94 File Offset: 0x00440D94
+		// (set) Token: 0x0601D6FF RID: 120575 RVA: 0x00442BAD File Offset: 0x00440DAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityLoadCompleteNotify EntityLoadCompleteNotify
@@ -535,9 +535,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F1 RID: 24817
-		// (get) Token: 0x0601CC33 RID: 117811 RVA: 0x00426F04 File Offset: 0x00425104
-		// (set) Token: 0x0601CC34 RID: 117812 RVA: 0x00426F1D File Offset: 0x0042511D
+		// Token: 0x17006395 RID: 25493
+		// (get) Token: 0x0601D700 RID: 120576 RVA: 0x00442BC4 File Offset: 0x00440DC4
+		// (set) Token: 0x0601D701 RID: 120577 RVA: 0x00442BDD File Offset: 0x00440DDD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartUpdateNotify PartUpdateNotify
@@ -557,9 +557,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F2 RID: 24818
-		// (get) Token: 0x0601CC35 RID: 117813 RVA: 0x00426F34 File Offset: 0x00425134
-		// (set) Token: 0x0601CC36 RID: 117814 RVA: 0x00426F4D File Offset: 0x0042514D
+		// Token: 0x17006396 RID: 25494
+		// (get) Token: 0x0601D702 RID: 120578 RVA: 0x00442BF4 File Offset: 0x00440DF4
+		// (set) Token: 0x0601D703 RID: 120579 RVA: 0x00442C0D File Offset: 0x00440E0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartComponentInitNotify PartComponentInitNotify
@@ -579,9 +579,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F3 RID: 24819
-		// (get) Token: 0x0601CC37 RID: 117815 RVA: 0x00426F64 File Offset: 0x00425164
-		// (set) Token: 0x0601CC38 RID: 117816 RVA: 0x00426F7D File Offset: 0x0042517D
+		// Token: 0x17006397 RID: 25495
+		// (get) Token: 0x0601D704 RID: 120580 RVA: 0x00442C24 File Offset: 0x00440E24
+		// (set) Token: 0x0601D705 RID: 120581 RVA: 0x00442C3D File Offset: 0x00440E3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MaterialNotify MaterialNotify
@@ -601,9 +601,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F4 RID: 24820
-		// (get) Token: 0x0601CC39 RID: 117817 RVA: 0x00426F94 File Offset: 0x00425194
-		// (set) Token: 0x0601CC3A RID: 117818 RVA: 0x00426FAD File Offset: 0x004251AD
+		// Token: 0x17006398 RID: 25496
+		// (get) Token: 0x0601D706 RID: 120582 RVA: 0x00442C54 File Offset: 0x00440E54
+		// (set) Token: 0x0601D707 RID: 120583 RVA: 0x00442C6D File Offset: 0x00440E6D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameplayCueNotify GameplayCueNotify
@@ -623,9 +623,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F5 RID: 24821
-		// (get) Token: 0x0601CC3B RID: 117819 RVA: 0x00426FC4 File Offset: 0x004251C4
-		// (set) Token: 0x0601CC3C RID: 117820 RVA: 0x00426FDD File Offset: 0x004251DD
+		// Token: 0x17006399 RID: 25497
+		// (get) Token: 0x0601D708 RID: 120584 RVA: 0x00442C84 File Offset: 0x00440E84
+		// (set) Token: 0x0601D709 RID: 120585 RVA: 0x00442C9D File Offset: 0x00440E9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityIsVisibleNotify EntityIsVisibleNotify
@@ -645,9 +645,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F6 RID: 24822
-		// (get) Token: 0x0601CC3D RID: 117821 RVA: 0x00426FF4 File Offset: 0x004251F4
-		// (set) Token: 0x0601CC3E RID: 117822 RVA: 0x0042700D File Offset: 0x0042520D
+		// Token: 0x1700639A RID: 25498
+		// (get) Token: 0x0601D70A RID: 120586 RVA: 0x00442CB4 File Offset: 0x00440EB4
+		// (set) Token: 0x0601D70B RID: 120587 RVA: 0x00442CCD File Offset: 0x00440ECD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchCharacterStateNotify SwitchCharacterStateNotify
@@ -667,9 +667,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F7 RID: 24823
-		// (get) Token: 0x0601CC3F RID: 117823 RVA: 0x00427024 File Offset: 0x00425224
-		// (set) Token: 0x0601CC40 RID: 117824 RVA: 0x0042703D File Offset: 0x0042523D
+		// Token: 0x1700639B RID: 25499
+		// (get) Token: 0x0601D70C RID: 120588 RVA: 0x00442CE4 File Offset: 0x00440EE4
+		// (set) Token: 0x0601D70D RID: 120589 RVA: 0x00442CFD File Offset: 0x00440EFD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerRebackSceneNotify PlayerRebackSceneNotify
@@ -689,9 +689,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F8 RID: 24824
-		// (get) Token: 0x0601CC41 RID: 117825 RVA: 0x00427054 File Offset: 0x00425254
-		// (set) Token: 0x0601CC42 RID: 117826 RVA: 0x0042706D File Offset: 0x0042526D
+		// Token: 0x1700639C RID: 25500
+		// (get) Token: 0x0601D70E RID: 120590 RVA: 0x00442D14 File Offset: 0x00440F14
+		// (set) Token: 0x0601D70F RID: 120591 RVA: 0x00442D2D File Offset: 0x00440F2D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogicStateInitNotify LogicStateInitNotify
@@ -711,9 +711,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060F9 RID: 24825
-		// (get) Token: 0x0601CC43 RID: 117827 RVA: 0x00427084 File Offset: 0x00425284
-		// (set) Token: 0x0601CC44 RID: 117828 RVA: 0x0042709D File Offset: 0x0042529D
+		// Token: 0x1700639D RID: 25501
+		// (get) Token: 0x0601D710 RID: 120592 RVA: 0x00442D44 File Offset: 0x00440F44
+		// (set) Token: 0x0601D711 RID: 120593 RVA: 0x00442D5D File Offset: 0x00440F5D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchLogicStateNotify SwitchLogicStateNotify
@@ -733,9 +733,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FA RID: 24826
-		// (get) Token: 0x0601CC45 RID: 117829 RVA: 0x004270B4 File Offset: 0x004252B4
-		// (set) Token: 0x0601CC46 RID: 117830 RVA: 0x004270CD File Offset: 0x004252CD
+		// Token: 0x1700639E RID: 25502
+		// (get) Token: 0x0601D712 RID: 120594 RVA: 0x00442D74 File Offset: 0x00440F74
+		// (set) Token: 0x0601D713 RID: 120595 RVA: 0x00442D8D File Offset: 0x00440F8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AttributeChangedNotify AttributeChangedNotify
@@ -755,9 +755,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FB RID: 24827
-		// (get) Token: 0x0601CC47 RID: 117831 RVA: 0x004270E4 File Offset: 0x004252E4
-		// (set) Token: 0x0601CC48 RID: 117832 RVA: 0x004270FD File Offset: 0x004252FD
+		// Token: 0x1700639F RID: 25503
+		// (get) Token: 0x0601D714 RID: 120596 RVA: 0x00442DA4 File Offset: 0x00440FA4
+		// (set) Token: 0x0601D715 RID: 120597 RVA: 0x00442DBD File Offset: 0x00440FBD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateChangedNotify AnimationStateChangedNotify
@@ -777,9 +777,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FC RID: 24828
-		// (get) Token: 0x0601CC49 RID: 117833 RVA: 0x00427114 File Offset: 0x00425314
-		// (set) Token: 0x0601CC4A RID: 117834 RVA: 0x0042712D File Offset: 0x0042532D
+		// Token: 0x170063A0 RID: 25504
+		// (get) Token: 0x0601D716 RID: 120598 RVA: 0x00442DD4 File Offset: 0x00440FD4
+		// (set) Token: 0x0601D717 RID: 120599 RVA: 0x00442DED File Offset: 0x00440FED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateInitNotify AnimationStateInitNotify
@@ -799,9 +799,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FD RID: 24829
-		// (get) Token: 0x0601CC4B RID: 117835 RVA: 0x00427144 File Offset: 0x00425344
-		// (set) Token: 0x0601CC4C RID: 117836 RVA: 0x0042715D File Offset: 0x0042535D
+		// Token: 0x170063A1 RID: 25505
+		// (get) Token: 0x0601D718 RID: 120600 RVA: 0x00442E04 File Offset: 0x00441004
+		// (set) Token: 0x0601D719 RID: 120601 RVA: 0x00442E1D File Offset: 0x0044101D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ModifyBulletParamsNotify ModifyBulletParamsNotify
@@ -821,9 +821,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FE RID: 24830
-		// (get) Token: 0x0601CC4D RID: 117837 RVA: 0x00427174 File Offset: 0x00425374
-		// (set) Token: 0x0601CC4E RID: 117838 RVA: 0x0042718D File Offset: 0x0042538D
+		// Token: 0x170063A2 RID: 25506
+		// (get) Token: 0x0601D71A RID: 120602 RVA: 0x00442E34 File Offset: 0x00441034
+		// (set) Token: 0x0601D71B RID: 120603 RVA: 0x00442E4D File Offset: 0x0044104D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrownNotify DrownNotify
@@ -843,9 +843,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170060FF RID: 24831
-		// (get) Token: 0x0601CC4F RID: 117839 RVA: 0x004271A4 File Offset: 0x004253A4
-		// (set) Token: 0x0601CC50 RID: 117840 RVA: 0x004271BD File Offset: 0x004253BD
+		// Token: 0x170063A3 RID: 25507
+		// (get) Token: 0x0601D71C RID: 120604 RVA: 0x00442E64 File Offset: 0x00441064
+		// (set) Token: 0x0601D71D RID: 120605 RVA: 0x00442E7D File Offset: 0x0044107D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderApplyBuffNotify OrderApplyBuffNotify
@@ -865,9 +865,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006100 RID: 24832
-		// (get) Token: 0x0601CC51 RID: 117841 RVA: 0x004271D4 File Offset: 0x004253D4
-		// (set) Token: 0x0601CC52 RID: 117842 RVA: 0x004271ED File Offset: 0x004253ED
+		// Token: 0x170063A4 RID: 25508
+		// (get) Token: 0x0601D71E RID: 120606 RVA: 0x00442E94 File Offset: 0x00441094
+		// (set) Token: 0x0601D71F RID: 120607 RVA: 0x00442EAD File Offset: 0x004410AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderRemoveBuffNotify OrderRemoveBuffNotify
@@ -887,9 +887,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006101 RID: 24833
-		// (get) Token: 0x0601CC53 RID: 117843 RVA: 0x00427204 File Offset: 0x00425404
-		// (set) Token: 0x0601CC54 RID: 117844 RVA: 0x0042721D File Offset: 0x0042541D
+		// Token: 0x170063A5 RID: 25509
+		// (get) Token: 0x0601D720 RID: 120608 RVA: 0x00442EC4 File Offset: 0x004410C4
+		// (set) Token: 0x0601D721 RID: 120609 RVA: 0x00442EDD File Offset: 0x004410DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivateBuffNotify ActivateBuffNotify
@@ -909,9 +909,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006102 RID: 24834
-		// (get) Token: 0x0601CC55 RID: 117845 RVA: 0x00427234 File Offset: 0x00425434
-		// (set) Token: 0x0601CC56 RID: 117846 RVA: 0x0042724D File Offset: 0x0042544D
+		// Token: 0x170063A6 RID: 25510
+		// (get) Token: 0x0601D722 RID: 120610 RVA: 0x00442EF4 File Offset: 0x004410F4
+		// (set) Token: 0x0601D723 RID: 120611 RVA: 0x00442F0D File Offset: 0x0044110D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderRemoveBuffByTagsNotify OrderRemoveBuffByTagsNotify
@@ -931,9 +931,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006103 RID: 24835
-		// (get) Token: 0x0601CC57 RID: 117847 RVA: 0x00427264 File Offset: 0x00425464
-		// (set) Token: 0x0601CC58 RID: 117848 RVA: 0x0042727D File Offset: 0x0042547D
+		// Token: 0x170063A7 RID: 25511
+		// (get) Token: 0x0601D724 RID: 120612 RVA: 0x00442F24 File Offset: 0x00441124
+		// (set) Token: 0x0601D725 RID: 120613 RVA: 0x00442F3D File Offset: 0x0044113D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiInformationNotify AiInformationNotify
@@ -953,9 +953,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006104 RID: 24836
-		// (get) Token: 0x0601CC59 RID: 117849 RVA: 0x00427294 File Offset: 0x00425494
-		// (set) Token: 0x0601CC5A RID: 117850 RVA: 0x004272AD File Offset: 0x004254AD
+		// Token: 0x170063A8 RID: 25512
+		// (get) Token: 0x0601D726 RID: 120614 RVA: 0x00442F54 File Offset: 0x00441154
+		// (set) Token: 0x0601D727 RID: 120615 RVA: 0x00442F6D File Offset: 0x0044116D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleStateChangeNotify BattleStateChangeNotify
@@ -975,9 +975,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006105 RID: 24837
-		// (get) Token: 0x0601CC5B RID: 117851 RVA: 0x004272C4 File Offset: 0x004254C4
-		// (set) Token: 0x0601CC5C RID: 117852 RVA: 0x004272DD File Offset: 0x004254DD
+		// Token: 0x170063A9 RID: 25513
+		// (get) Token: 0x0601D728 RID: 120616 RVA: 0x00442F84 File Offset: 0x00441184
+		// (set) Token: 0x0601D729 RID: 120617 RVA: 0x00442F9D File Offset: 0x0044119D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationGameplayTagNotify AnimationGameplayTagNotify
@@ -997,9 +997,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006106 RID: 24838
-		// (get) Token: 0x0601CC5D RID: 117853 RVA: 0x004272F4 File Offset: 0x004254F4
-		// (set) Token: 0x0601CC5E RID: 117854 RVA: 0x0042730D File Offset: 0x0042550D
+		// Token: 0x170063AA RID: 25514
+		// (get) Token: 0x0601D72A RID: 120618 RVA: 0x00442FB4 File Offset: 0x004411B4
+		// (set) Token: 0x0601D72B RID: 120619 RVA: 0x00442FCD File Offset: 0x004411CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoneVisibleChangeNotify BoneVisibleChangeNotify
@@ -1019,9 +1019,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006107 RID: 24839
-		// (get) Token: 0x0601CC5F RID: 117855 RVA: 0x00427324 File Offset: 0x00425524
-		// (set) Token: 0x0601CC60 RID: 117856 RVA: 0x0042733D File Offset: 0x0042553D
+		// Token: 0x170063AB RID: 25515
+		// (get) Token: 0x0601D72C RID: 120620 RVA: 0x00442FE4 File Offset: 0x004411E4
+		// (set) Token: 0x0601D72D RID: 120621 RVA: 0x00442FFD File Offset: 0x004411FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdNotify AiBlackboardCdNotify
@@ -1041,9 +1041,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006108 RID: 24840
-		// (get) Token: 0x0601CC61 RID: 117857 RVA: 0x00427354 File Offset: 0x00425554
-		// (set) Token: 0x0601CC62 RID: 117858 RVA: 0x0042736D File Offset: 0x0042556D
+		// Token: 0x170063AC RID: 25516
+		// (get) Token: 0x0601D72E RID: 120622 RVA: 0x00443014 File Offset: 0x00441214
+		// (set) Token: 0x0601D72F RID: 120623 RVA: 0x0044302D File Offset: 0x0044122D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CaughtNotify CaughtNotify
@@ -1063,9 +1063,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006109 RID: 24841
-		// (get) Token: 0x0601CC63 RID: 117859 RVA: 0x00427384 File Offset: 0x00425584
-		// (set) Token: 0x0601CC64 RID: 117860 RVA: 0x0042739D File Offset: 0x0042559D
+		// Token: 0x170063AD RID: 25517
+		// (get) Token: 0x0601D730 RID: 120624 RVA: 0x00443044 File Offset: 0x00441244
+		// (set) Token: 0x0601D731 RID: 120625 RVA: 0x0044305D File Offset: 0x0044125D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityStaticHookMoveNotify EntityStaticHookMoveNotify
@@ -1085,9 +1085,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610A RID: 24842
-		// (get) Token: 0x0601CC65 RID: 117861 RVA: 0x004273B4 File Offset: 0x004255B4
-		// (set) Token: 0x0601CC66 RID: 117862 RVA: 0x004273CD File Offset: 0x004255CD
+		// Token: 0x170063AE RID: 25518
+		// (get) Token: 0x0601D732 RID: 120626 RVA: 0x00443074 File Offset: 0x00441274
+		// (set) Token: 0x0601D733 RID: 120627 RVA: 0x0044308D File Offset: 0x0044128D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeStateNotify ChangeStateNotify
@@ -1107,9 +1107,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610B RID: 24843
-		// (get) Token: 0x0601CC67 RID: 117863 RVA: 0x004273E4 File Offset: 0x004255E4
-		// (set) Token: 0x0601CC68 RID: 117864 RVA: 0x004273FD File Offset: 0x004255FD
+		// Token: 0x170063AF RID: 25519
+		// (get) Token: 0x0601D734 RID: 120628 RVA: 0x004430A4 File Offset: 0x004412A4
+		// (set) Token: 0x0601D735 RID: 120629 RVA: 0x004430BD File Offset: 0x004412BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeStateConfirmNotify ChangeStateConfirmNotify
@@ -1129,9 +1129,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610C RID: 24844
-		// (get) Token: 0x0601CC69 RID: 117865 RVA: 0x00427414 File Offset: 0x00425614
-		// (set) Token: 0x0601CC6A RID: 117866 RVA: 0x0042742D File Offset: 0x0042562D
+		// Token: 0x170063B0 RID: 25520
+		// (get) Token: 0x0601D736 RID: 120630 RVA: 0x004430D4 File Offset: 0x004412D4
+		// (set) Token: 0x0601D737 RID: 120631 RVA: 0x004430ED File Offset: 0x004412ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffStackCountNotify BuffStackCountNotify
@@ -1151,9 +1151,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610D RID: 24845
-		// (get) Token: 0x0601CC6B RID: 117867 RVA: 0x00427444 File Offset: 0x00425644
-		// (set) Token: 0x0601CC6C RID: 117868 RVA: 0x0042745D File Offset: 0x0042565D
+		// Token: 0x170063B1 RID: 25521
+		// (get) Token: 0x0601D738 RID: 120632 RVA: 0x00443104 File Offset: 0x00441304
+		// (set) Token: 0x0601D739 RID: 120633 RVA: 0x0044311D File Offset: 0x0044131D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MontagePlayNotify MontagePlayNotify
@@ -1173,9 +1173,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610E RID: 24846
-		// (get) Token: 0x0601CC6D RID: 117869 RVA: 0x00427474 File Offset: 0x00425674
-		// (set) Token: 0x0601CC6E RID: 117870 RVA: 0x0042748D File Offset: 0x0042568D
+		// Token: 0x170063B2 RID: 25522
+		// (get) Token: 0x0601D73A RID: 120634 RVA: 0x00443134 File Offset: 0x00441334
+		// (set) Token: 0x0601D73B RID: 120635 RVA: 0x0044314D File Offset: 0x0044134D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ANStartNotify ANStartNotify
@@ -1195,9 +1195,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700610F RID: 24847
-		// (get) Token: 0x0601CC6F RID: 117871 RVA: 0x004274A4 File Offset: 0x004256A4
-		// (set) Token: 0x0601CC70 RID: 117872 RVA: 0x004274BD File Offset: 0x004256BD
+		// Token: 0x170063B3 RID: 25523
+		// (get) Token: 0x0601D73C RID: 120636 RVA: 0x00443164 File Offset: 0x00441364
+		// (set) Token: 0x0601D73D RID: 120637 RVA: 0x0044317D File Offset: 0x0044137D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmResetNotify FsmResetNotify
@@ -1217,9 +1217,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006110 RID: 24848
-		// (get) Token: 0x0601CC71 RID: 117873 RVA: 0x004274D4 File Offset: 0x004256D4
-		// (set) Token: 0x0601CC72 RID: 117874 RVA: 0x004274ED File Offset: 0x004256ED
+		// Token: 0x170063B4 RID: 25524
+		// (get) Token: 0x0601D73E RID: 120638 RVA: 0x00443194 File Offset: 0x00441394
+		// (set) Token: 0x0601D73F RID: 120639 RVA: 0x004431AD File Offset: 0x004413AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageRecordNotify DamageRecordNotify
@@ -1239,9 +1239,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006111 RID: 24849
-		// (get) Token: 0x0601CC73 RID: 117875 RVA: 0x00427504 File Offset: 0x00425704
-		// (set) Token: 0x0601CC74 RID: 117876 RVA: 0x0042751D File Offset: 0x0042571D
+		// Token: 0x170063B5 RID: 25525
+		// (get) Token: 0x0601D740 RID: 120640 RVA: 0x004431C4 File Offset: 0x004413C4
+		// (set) Token: 0x0601D741 RID: 120641 RVA: 0x004431DD File Offset: 0x004413DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiHateNotify AiHateNotify
@@ -1261,9 +1261,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006112 RID: 24850
-		// (get) Token: 0x0601CC75 RID: 117877 RVA: 0x00427534 File Offset: 0x00425734
-		// (set) Token: 0x0601CC76 RID: 117878 RVA: 0x0042754D File Offset: 0x0042574D
+		// Token: 0x170063B6 RID: 25526
+		// (get) Token: 0x0601D742 RID: 120642 RVA: 0x004431F4 File Offset: 0x004413F4
+		// (set) Token: 0x0601D743 RID: 120643 RVA: 0x0044320D File Offset: 0x0044140D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmBlackboardNotify FsmBlackboardNotify
@@ -1283,9 +1283,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006113 RID: 24851
-		// (get) Token: 0x0601CC77 RID: 117879 RVA: 0x00427564 File Offset: 0x00425764
-		// (set) Token: 0x0601CC78 RID: 117880 RVA: 0x0042757D File Offset: 0x0042577D
+		// Token: 0x170063B7 RID: 25527
+		// (get) Token: 0x0601D744 RID: 120644 RVA: 0x00443224 File Offset: 0x00441424
+		// (set) Token: 0x0601D745 RID: 120645 RVA: 0x0044323D File Offset: 0x0044143D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CharacterBattleStateChangeNotify CharacterBattleStateChangeNotify
@@ -1305,9 +1305,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006114 RID: 24852
-		// (get) Token: 0x0601CC79 RID: 117881 RVA: 0x00427594 File Offset: 0x00425794
-		// (set) Token: 0x0601CC7A RID: 117882 RVA: 0x004275AD File Offset: 0x004257AD
+		// Token: 0x170063B8 RID: 25528
+		// (get) Token: 0x0601D746 RID: 120646 RVA: 0x00443254 File Offset: 0x00441454
+		// (set) Token: 0x0601D747 RID: 120647 RVA: 0x0044326D File Offset: 0x0044146D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyBuffS2cRequestNotify ApplyBuffS2CRequestNotify
@@ -1327,9 +1327,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006115 RID: 24853
-		// (get) Token: 0x0601CC7B RID: 117883 RVA: 0x004275C4 File Offset: 0x004257C4
-		// (set) Token: 0x0601CC7C RID: 117884 RVA: 0x004275DD File Offset: 0x004257DD
+		// Token: 0x170063B9 RID: 25529
+		// (get) Token: 0x0601D748 RID: 120648 RVA: 0x00443284 File Offset: 0x00441484
+		// (set) Token: 0x0601D749 RID: 120649 RVA: 0x0044329D File Offset: 0x0044149D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveBuffS2cRequestNotify RemoveBuffS2CRequestNotify
@@ -1349,9 +1349,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006116 RID: 24854
-		// (get) Token: 0x0601CC7D RID: 117885 RVA: 0x004275F4 File Offset: 0x004257F4
-		// (set) Token: 0x0601CC7E RID: 117886 RVA: 0x0042760D File Offset: 0x0042580D
+		// Token: 0x170063BA RID: 25530
+		// (get) Token: 0x0601D74A RID: 120650 RVA: 0x004432B4 File Offset: 0x004414B4
+		// (set) Token: 0x0601D74B RID: 120651 RVA: 0x004432CD File Offset: 0x004414CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActorVisibleNotify ActorVisibleNotify
@@ -1371,9 +1371,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006117 RID: 24855
-		// (get) Token: 0x0601CC7F RID: 117887 RVA: 0x00427624 File Offset: 0x00425824
-		// (set) Token: 0x0601CC80 RID: 117888 RVA: 0x0042763D File Offset: 0x0042583D
+		// Token: 0x170063BB RID: 25531
+		// (get) Token: 0x0601D74C RID: 120652 RVA: 0x004432E4 File Offset: 0x004414E4
+		// (set) Token: 0x0601D74D RID: 120653 RVA: 0x004432FD File Offset: 0x004414FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RecoverPropChangedNotify RecoverPropChangedNotify
@@ -1393,9 +1393,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006118 RID: 24856
-		// (get) Token: 0x0601CC81 RID: 117889 RVA: 0x00427654 File Offset: 0x00425854
-		// (set) Token: 0x0601CC82 RID: 117890 RVA: 0x0042766D File Offset: 0x0042586D
+		// Token: 0x170063BC RID: 25532
+		// (get) Token: 0x0601D74E RID: 120654 RVA: 0x00443314 File Offset: 0x00441514
+		// (set) Token: 0x0601D74F RID: 120655 RVA: 0x0044332D File Offset: 0x0044152D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveBuffByIdS2cRequestNotify RemoveBuffByIdS2CRequestNotify
@@ -1415,9 +1415,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006119 RID: 24857
-		// (get) Token: 0x0601CC83 RID: 117891 RVA: 0x00427684 File Offset: 0x00425884
-		// (set) Token: 0x0601CC84 RID: 117892 RVA: 0x0042769D File Offset: 0x0042589D
+		// Token: 0x170063BD RID: 25533
+		// (get) Token: 0x0601D750 RID: 120656 RVA: 0x00443344 File Offset: 0x00441544
+		// (set) Token: 0x0601D751 RID: 120657 RVA: 0x0044335D File Offset: 0x0044155D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShieldUpdateNotify ShieldUpdateNotify
@@ -1437,9 +1437,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611A RID: 24858
-		// (get) Token: 0x0601CC85 RID: 117893 RVA: 0x004276B4 File Offset: 0x004258B4
-		// (set) Token: 0x0601CC86 RID: 117894 RVA: 0x004276CD File Offset: 0x004258CD
+		// Token: 0x170063BE RID: 25534
+		// (get) Token: 0x0601D752 RID: 120658 RVA: 0x00443374 File Offset: 0x00441574
+		// (set) Token: 0x0601D753 RID: 120659 RVA: 0x0044338D File Offset: 0x0044158D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerBattleStateChangeNotify PlayerBattleStateChangeNotify
@@ -1459,9 +1459,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611B RID: 24859
-		// (get) Token: 0x0601CC87 RID: 117895 RVA: 0x004276E4 File Offset: 0x004258E4
-		// (set) Token: 0x0601CC88 RID: 117896 RVA: 0x004276FD File Offset: 0x004258FD
+		// Token: 0x170063BF RID: 25535
+		// (get) Token: 0x0601D754 RID: 120660 RVA: 0x004433A4 File Offset: 0x004415A4
+		// (set) Token: 0x0601D755 RID: 120661 RVA: 0x004433BD File Offset: 0x004415BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmCustomBlackboardNotify FsmCustomBlackboardNotify
@@ -1481,9 +1481,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611C RID: 24860
-		// (get) Token: 0x0601CC89 RID: 117897 RVA: 0x00427714 File Offset: 0x00425914
-		// (set) Token: 0x0601CC8A RID: 117898 RVA: 0x0042772D File Offset: 0x0042592D
+		// Token: 0x170063C0 RID: 25536
+		// (get) Token: 0x0601D756 RID: 120662 RVA: 0x004433D4 File Offset: 0x004415D4
+		// (set) Token: 0x0601D757 RID: 120663 RVA: 0x004433ED File Offset: 0x004415ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillAddNotify PassiveSkillAddNotify
@@ -1503,9 +1503,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611D RID: 24861
-		// (get) Token: 0x0601CC8B RID: 117899 RVA: 0x00427744 File Offset: 0x00425944
-		// (set) Token: 0x0601CC8C RID: 117900 RVA: 0x0042775D File Offset: 0x0042595D
+		// Token: 0x170063C1 RID: 25537
+		// (get) Token: 0x0601D758 RID: 120664 RVA: 0x00443404 File Offset: 0x00441604
+		// (set) Token: 0x0601D759 RID: 120665 RVA: 0x0044341D File Offset: 0x0044161D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillRemoveNotify PassiveSkillRemoveNotify
@@ -1525,9 +1525,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611E RID: 24862
-		// (get) Token: 0x0601CC8D RID: 117901 RVA: 0x00427774 File Offset: 0x00425974
-		// (set) Token: 0x0601CC8E RID: 117902 RVA: 0x0042778D File Offset: 0x0042598D
+		// Token: 0x170063C2 RID: 25538
+		// (get) Token: 0x0601D75A RID: 120666 RVA: 0x00443434 File Offset: 0x00441634
+		// (set) Token: 0x0601D75B RID: 120667 RVA: 0x0044344D File Offset: 0x0044164D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExecuteQteNotify ExecuteQteNotify
@@ -1547,9 +1547,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700611F RID: 24863
-		// (get) Token: 0x0601CC8F RID: 117903 RVA: 0x004277A4 File Offset: 0x004259A4
-		// (set) Token: 0x0601CC90 RID: 117904 RVA: 0x004277BD File Offset: 0x004259BD
+		// Token: 0x170063C3 RID: 25539
+		// (get) Token: 0x0601D75C RID: 120668 RVA: 0x00443464 File Offset: 0x00441664
+		// (set) Token: 0x0601D75D RID: 120669 RVA: 0x0044347D File Offset: 0x0044167D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ModifyEntityCampNotify ModifyEntityCampNotify
@@ -1569,9 +1569,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006120 RID: 24864
-		// (get) Token: 0x0601CC91 RID: 117905 RVA: 0x004277D4 File Offset: 0x004259D4
-		// (set) Token: 0x0601CC92 RID: 117906 RVA: 0x004277ED File Offset: 0x004259ED
+		// Token: 0x170063C4 RID: 25540
+		// (get) Token: 0x0601D75E RID: 120670 RVA: 0x00443494 File Offset: 0x00441694
+		// (set) Token: 0x0601D75F RID: 120671 RVA: 0x004434AD File Offset: 0x004416AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AddCombineEntitiesRelationNotify AddCombineEntitiesRelationNotify
@@ -1591,9 +1591,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006121 RID: 24865
-		// (get) Token: 0x0601CC93 RID: 117907 RVA: 0x00427804 File Offset: 0x00425A04
-		// (set) Token: 0x0601CC94 RID: 117908 RVA: 0x0042781D File Offset: 0x00425A1D
+		// Token: 0x170063C5 RID: 25541
+		// (get) Token: 0x0601D760 RID: 120672 RVA: 0x004434C4 File Offset: 0x004416C4
+		// (set) Token: 0x0601D761 RID: 120673 RVA: 0x004434DD File Offset: 0x004416DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveCombineRelationNotify RemoveCombineRelationNotify
@@ -1613,9 +1613,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006122 RID: 24866
-		// (get) Token: 0x0601CC95 RID: 117909 RVA: 0x00427834 File Offset: 0x00425A34
-		// (set) Token: 0x0601CC96 RID: 117910 RVA: 0x0042784D File Offset: 0x00425A4D
+		// Token: 0x170063C6 RID: 25542
+		// (get) Token: 0x0601D762 RID: 120674 RVA: 0x004434F4 File Offset: 0x004416F4
+		// (set) Token: 0x0601D763 RID: 120675 RVA: 0x0044350D File Offset: 0x0044170D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TestDamageRecordNotify TestDamageRecordNotify
@@ -1635,9 +1635,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006123 RID: 24867
-		// (get) Token: 0x0601CC97 RID: 117911 RVA: 0x00427864 File Offset: 0x00425A64
-		// (set) Token: 0x0601CC98 RID: 117912 RVA: 0x0042787D File Offset: 0x00425A7D
+		// Token: 0x170063C7 RID: 25543
+		// (get) Token: 0x0601D764 RID: 120676 RVA: 0x00443524 File Offset: 0x00441724
+		// (set) Token: 0x0601D765 RID: 120677 RVA: 0x0044353D File Offset: 0x0044173D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffDurationNotify BuffDurationNotify
@@ -1657,9 +1657,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006124 RID: 24868
-		// (get) Token: 0x0601CC99 RID: 117913 RVA: 0x00427894 File Offset: 0x00425A94
-		// (set) Token: 0x0601CC9A RID: 117914 RVA: 0x004278AD File Offset: 0x00425AAD
+		// Token: 0x170063C8 RID: 25544
+		// (get) Token: 0x0601D766 RID: 120678 RVA: 0x00443554 File Offset: 0x00441754
+		// (set) Token: 0x0601D767 RID: 120679 RVA: 0x0044356D File Offset: 0x0044176D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityLivingStatusNotify EntityLivingStatusNotify
@@ -1679,9 +1679,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006125 RID: 24869
-		// (get) Token: 0x0601CC9B RID: 117915 RVA: 0x004278C4 File Offset: 0x00425AC4
-		// (set) Token: 0x0601CC9C RID: 117916 RVA: 0x004278DD File Offset: 0x00425ADD
+		// Token: 0x170063C9 RID: 25545
+		// (get) Token: 0x0601D768 RID: 120680 RVA: 0x00443584 File Offset: 0x00441784
+		// (set) Token: 0x0601D769 RID: 120681 RVA: 0x0044359D File Offset: 0x0044179D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewLinkNotify NewLinkNotify
@@ -1701,9 +1701,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006126 RID: 24870
-		// (get) Token: 0x0601CC9D RID: 117917 RVA: 0x004278F4 File Offset: 0x00425AF4
-		// (set) Token: 0x0601CC9E RID: 117918 RVA: 0x0042790D File Offset: 0x00425B0D
+		// Token: 0x170063CA RID: 25546
+		// (get) Token: 0x0601D76A RID: 120682 RVA: 0x004435B4 File Offset: 0x004417B4
+		// (set) Token: 0x0601D76B RID: 120683 RVA: 0x004435CD File Offset: 0x004417CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyBuffFailedNotify ApplyBuffFailedNotify
@@ -1723,9 +1723,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006127 RID: 24871
-		// (get) Token: 0x0601CC9F RID: 117919 RVA: 0x00427924 File Offset: 0x00425B24
-		// (set) Token: 0x0601CCA0 RID: 117920 RVA: 0x0042793D File Offset: 0x00425B3D
+		// Token: 0x170063CB RID: 25547
+		// (get) Token: 0x0601D76C RID: 120684 RVA: 0x004435E4 File Offset: 0x004417E4
+		// (set) Token: 0x0601D76D RID: 120685 RVA: 0x004435FD File Offset: 0x004417FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PackAnimChangedNotify PackAnimChangedNotify
@@ -1745,9 +1745,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006128 RID: 24872
-		// (get) Token: 0x0601CCA1 RID: 117921 RVA: 0x00427954 File Offset: 0x00425B54
-		// (set) Token: 0x0601CCA2 RID: 117922 RVA: 0x0042796D File Offset: 0x00425B6D
+		// Token: 0x170063CC RID: 25548
+		// (get) Token: 0x0601D76E RID: 120686 RVA: 0x00443614 File Offset: 0x00441814
+		// (set) Token: 0x0601D76F RID: 120687 RVA: 0x0044362D File Offset: 0x0044182D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VisionTriggerNotify VisionTriggerNotify
@@ -1767,9 +1767,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006129 RID: 24873
-		// (get) Token: 0x0601CCA3 RID: 117923 RVA: 0x00427984 File Offset: 0x00425B84
-		// (set) Token: 0x0601CCA4 RID: 117924 RVA: 0x0042799D File Offset: 0x00425B9D
+		// Token: 0x170063CD RID: 25549
+		// (get) Token: 0x0601D770 RID: 120688 RVA: 0x00443644 File Offset: 0x00441844
+		// (set) Token: 0x0601D771 RID: 120689 RVA: 0x0044365D File Offset: 0x0044185D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveBuffByServerIdS2cRequestNotify RemoveBuffByServerIdS2CRequestNotify
@@ -1789,9 +1789,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700612A RID: 24874
-		// (get) Token: 0x0601CCA5 RID: 117925 RVA: 0x004279B4 File Offset: 0x00425BB4
-		// (set) Token: 0x0601CCA6 RID: 117926 RVA: 0x004279CD File Offset: 0x00425BCD
+		// Token: 0x170063CE RID: 25550
+		// (get) Token: 0x0601D772 RID: 120690 RVA: 0x00443674 File Offset: 0x00441874
+		// (set) Token: 0x0601D773 RID: 120691 RVA: 0x0044368D File Offset: 0x0044188D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransformBuffStackNotify TransformBuffStackNotify
@@ -1811,9 +1811,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700612B RID: 24875
-		// (get) Token: 0x0601CCA7 RID: 117927 RVA: 0x004279E4 File Offset: 0x00425BE4
-		// (set) Token: 0x0601CCA8 RID: 117928 RVA: 0x004279FD File Offset: 0x00425BFD
+		// Token: 0x170063CF RID: 25551
+		// (get) Token: 0x0601D774 RID: 120692 RVA: 0x004436A4 File Offset: 0x004418A4
+		// (set) Token: 0x0601D775 RID: 120693 RVA: 0x004436BD File Offset: 0x004418BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorSummonAndRideNotify MotorSummonAndRideNotify
@@ -1833,9 +1833,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700612C RID: 24876
-		// (get) Token: 0x0601CCA9 RID: 117929 RVA: 0x00427A14 File Offset: 0x00425C14
-		// (set) Token: 0x0601CCAA RID: 117930 RVA: 0x00427A2D File Offset: 0x00425C2D
+		// Token: 0x170063D0 RID: 25552
+		// (get) Token: 0x0601D776 RID: 120694 RVA: 0x004436D4 File Offset: 0x004418D4
+		// (set) Token: 0x0601D777 RID: 120695 RVA: 0x004436ED File Offset: 0x004418ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BulletPatternNotify BulletPatternNotify
@@ -1855,9 +1855,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700612D RID: 24877
-		// (get) Token: 0x0601CCAB RID: 117931 RVA: 0x00427A44 File Offset: 0x00425C44
-		// (set) Token: 0x0601CCAC RID: 117932 RVA: 0x00427A5D File Offset: 0x00425C5D
+		// Token: 0x170063D1 RID: 25553
+		// (get) Token: 0x0601D778 RID: 120696 RVA: 0x00443704 File Offset: 0x00441904
+		// (set) Token: 0x0601D779 RID: 120697 RVA: 0x0044371D File Offset: 0x0044191D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmMontageDurationNotify FsmMontageDurationNotify
@@ -1877,31 +1877,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700612E RID: 24878
-		// (get) Token: 0x0601CCAD RID: 117933 RVA: 0x00427A74 File Offset: 0x00425C74
-		// (set) Token: 0x0601CCAE RID: 117934 RVA: 0x00427A8D File Offset: 0x00425C8D
-		[DebuggerNonUserCode]
-		[GeneratedCode("protoc", null)]
-		public SwitchDarkTideWeaponSlotNotify SwitchDarkTideWeaponSlotNotify
-		{
-			get
-			{
-				if (this.messageCase_ != CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify)
-				{
-					return null;
-				}
-				return (SwitchDarkTideWeaponSlotNotify)this.message_;
-			}
-			set
-			{
-				this.message_ = value;
-				this.messageCase_ = ((value == null) ? CombatNotifyData.MessageOneofCase.None : CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify);
-			}
-		}
-
-		// Token: 0x1700612F RID: 24879
-		// (get) Token: 0x0601CCAF RID: 117935 RVA: 0x00427AA4 File Offset: 0x00425CA4
-		// (set) Token: 0x0601CCB0 RID: 117936 RVA: 0x00427ABD File Offset: 0x00425CBD
+		// Token: 0x170063D2 RID: 25554
+		// (get) Token: 0x0601D77A RID: 120698 RVA: 0x00443734 File Offset: 0x00441934
+		// (set) Token: 0x0601D77B RID: 120699 RVA: 0x0044374D File Offset: 0x0044194D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatValNotify CombatValNotify
@@ -1921,9 +1899,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006130 RID: 24880
-		// (get) Token: 0x0601CCB1 RID: 117937 RVA: 0x00427AD4 File Offset: 0x00425CD4
-		// (set) Token: 0x0601CCB2 RID: 117938 RVA: 0x00427AED File Offset: 0x00425CED
+		// Token: 0x170063D3 RID: 25555
+		// (get) Token: 0x0601D77C RID: 120700 RVA: 0x00443764 File Offset: 0x00441964
+		// (set) Token: 0x0601D77D RID: 120701 RVA: 0x0044377D File Offset: 0x0044197D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatValDecayBeginNotify CombatValDecayBeginNotify
@@ -1943,9 +1921,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006131 RID: 24881
-		// (get) Token: 0x0601CCB3 RID: 117939 RVA: 0x00427B04 File Offset: 0x00425D04
-		// (set) Token: 0x0601CCB4 RID: 117940 RVA: 0x00427B1D File Offset: 0x00425D1D
+		// Token: 0x170063D4 RID: 25556
+		// (get) Token: 0x0601D77E RID: 120702 RVA: 0x00443794 File Offset: 0x00441994
+		// (set) Token: 0x0601D77F RID: 120703 RVA: 0x004437AD File Offset: 0x004419AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SquadPropChangedNotify SquadPropChangedNotify
@@ -1965,9 +1943,31 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006132 RID: 24882
-		// (get) Token: 0x0601CCB5 RID: 117941 RVA: 0x00427B34 File Offset: 0x00425D34
-		// (set) Token: 0x0601CCB6 RID: 117942 RVA: 0x00427B4D File Offset: 0x00425D4D
+		// Token: 0x170063D5 RID: 25557
+		// (get) Token: 0x0601D780 RID: 120704 RVA: 0x004437C4 File Offset: 0x004419C4
+		// (set) Token: 0x0601D781 RID: 120705 RVA: 0x004437DD File Offset: 0x004419DD
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public DamageShowNotify DamageShowNotify
+		{
+			get
+			{
+				if (this.messageCase_ != CombatNotifyData.MessageOneofCase.DamageShowNotify)
+				{
+					return null;
+				}
+				return (DamageShowNotify)this.message_;
+			}
+			set
+			{
+				this.message_ = value;
+				this.messageCase_ = ((value == null) ? CombatNotifyData.MessageOneofCase.None : CombatNotifyData.MessageOneofCase.DamageShowNotify);
+			}
+		}
+
+		// Token: 0x170063D6 RID: 25558
+		// (get) Token: 0x0601D782 RID: 120706 RVA: 0x004437F4 File Offset: 0x004419F4
+		// (set) Token: 0x0601D783 RID: 120707 RVA: 0x0044380D File Offset: 0x00441A0D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatDataMaxNotify CombatDataMaxNotify
@@ -1987,8 +1987,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006133 RID: 24883
-		// (get) Token: 0x0601CCB7 RID: 117943 RVA: 0x00427B64 File Offset: 0x00425D64
+		// Token: 0x170063D7 RID: 25559
+		// (get) Token: 0x0601D784 RID: 120708 RVA: 0x00443824 File Offset: 0x00441A24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatNotifyData.MessageOneofCase MessageCase
@@ -1999,7 +1999,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CCB8 RID: 117944 RVA: 0x00427B6C File Offset: 0x00425D6C
+		// Token: 0x0601D785 RID: 120709 RVA: 0x0044382C File Offset: 0x00441A2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearMessage()
@@ -2008,7 +2008,7 @@ namespace Aki.Protocol.CombatMessage
 			this.message_ = null;
 		}
 
-		// Token: 0x0601CCB9 RID: 117945 RVA: 0x00427B7C File Offset: 0x00425D7C
+		// Token: 0x0601D786 RID: 120710 RVA: 0x0044383C File Offset: 0x00441A3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -2016,15 +2016,15 @@ namespace Aki.Protocol.CombatMessage
 			return this.Equals(other as CombatNotifyData);
 		}
 
-		// Token: 0x0601CCBA RID: 117946 RVA: 0x00427B8C File Offset: 0x00425D8C
+		// Token: 0x0601D787 RID: 120711 RVA: 0x0044384C File Offset: 0x00441A4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CombatNotifyData other)
 		{
-			return other != null && (other == this || (object.Equals(this.CombatCommon, other.CombatCommon) && object.Equals(this.CreateBulletNotify, other.CreateBulletNotify) && object.Equals(this.DestroyBulletNotify, other.DestroyBulletNotify) && object.Equals(this.DamageExecuteNotify, other.DamageExecuteNotify) && object.Equals(this.ApplyGameplayEffectNotify, other.ApplyGameplayEffectNotify) && object.Equals(this.RemoveGameplayEffectNotify, other.RemoveGameplayEffectNotify) && object.Equals(this.HitNotify, other.HitNotify) && object.Equals(this.SkillNotify, other.SkillNotify) && object.Equals(this.UseSkillNotify, other.UseSkillNotify) && object.Equals(this.EndSkillNotify, other.EndSkillNotify) && object.Equals(this.EntityLoadCompleteNotify, other.EntityLoadCompleteNotify) && object.Equals(this.PartUpdateNotify, other.PartUpdateNotify) && object.Equals(this.PartComponentInitNotify, other.PartComponentInitNotify) && object.Equals(this.MaterialNotify, other.MaterialNotify) && object.Equals(this.GameplayCueNotify, other.GameplayCueNotify) && object.Equals(this.EntityIsVisibleNotify, other.EntityIsVisibleNotify) && object.Equals(this.SwitchCharacterStateNotify, other.SwitchCharacterStateNotify) && object.Equals(this.PlayerRebackSceneNotify, other.PlayerRebackSceneNotify) && object.Equals(this.LogicStateInitNotify, other.LogicStateInitNotify) && object.Equals(this.SwitchLogicStateNotify, other.SwitchLogicStateNotify) && object.Equals(this.AttributeChangedNotify, other.AttributeChangedNotify) && object.Equals(this.AnimationStateChangedNotify, other.AnimationStateChangedNotify) && object.Equals(this.AnimationStateInitNotify, other.AnimationStateInitNotify) && object.Equals(this.ModifyBulletParamsNotify, other.ModifyBulletParamsNotify) && object.Equals(this.DrownNotify, other.DrownNotify) && object.Equals(this.OrderApplyBuffNotify, other.OrderApplyBuffNotify) && object.Equals(this.OrderRemoveBuffNotify, other.OrderRemoveBuffNotify) && object.Equals(this.ActivateBuffNotify, other.ActivateBuffNotify) && object.Equals(this.OrderRemoveBuffByTagsNotify, other.OrderRemoveBuffByTagsNotify) && object.Equals(this.AiInformationNotify, other.AiInformationNotify) && object.Equals(this.BattleStateChangeNotify, other.BattleStateChangeNotify) && object.Equals(this.AnimationGameplayTagNotify, other.AnimationGameplayTagNotify) && object.Equals(this.BoneVisibleChangeNotify, other.BoneVisibleChangeNotify) && object.Equals(this.AiBlackboardCdNotify, other.AiBlackboardCdNotify) && object.Equals(this.CaughtNotify, other.CaughtNotify) && object.Equals(this.EntityStaticHookMoveNotify, other.EntityStaticHookMoveNotify) && object.Equals(this.ChangeStateNotify, other.ChangeStateNotify) && object.Equals(this.ChangeStateConfirmNotify, other.ChangeStateConfirmNotify) && object.Equals(this.BuffStackCountNotify, other.BuffStackCountNotify) && object.Equals(this.MontagePlayNotify, other.MontagePlayNotify) && object.Equals(this.ANStartNotify, other.ANStartNotify) && object.Equals(this.FsmResetNotify, other.FsmResetNotify) && object.Equals(this.DamageRecordNotify, other.DamageRecordNotify) && object.Equals(this.AiHateNotify, other.AiHateNotify) && object.Equals(this.FsmBlackboardNotify, other.FsmBlackboardNotify) && object.Equals(this.CharacterBattleStateChangeNotify, other.CharacterBattleStateChangeNotify) && object.Equals(this.ApplyBuffS2CRequestNotify, other.ApplyBuffS2CRequestNotify) && object.Equals(this.RemoveBuffS2CRequestNotify, other.RemoveBuffS2CRequestNotify) && object.Equals(this.ActorVisibleNotify, other.ActorVisibleNotify) && object.Equals(this.RecoverPropChangedNotify, other.RecoverPropChangedNotify) && object.Equals(this.RemoveBuffByIdS2CRequestNotify, other.RemoveBuffByIdS2CRequestNotify) && object.Equals(this.ShieldUpdateNotify, other.ShieldUpdateNotify) && object.Equals(this.PlayerBattleStateChangeNotify, other.PlayerBattleStateChangeNotify) && object.Equals(this.FsmCustomBlackboardNotify, other.FsmCustomBlackboardNotify) && object.Equals(this.PassiveSkillAddNotify, other.PassiveSkillAddNotify) && object.Equals(this.PassiveSkillRemoveNotify, other.PassiveSkillRemoveNotify) && object.Equals(this.ExecuteQteNotify, other.ExecuteQteNotify) && object.Equals(this.ModifyEntityCampNotify, other.ModifyEntityCampNotify) && object.Equals(this.AddCombineEntitiesRelationNotify, other.AddCombineEntitiesRelationNotify) && object.Equals(this.RemoveCombineRelationNotify, other.RemoveCombineRelationNotify) && object.Equals(this.TestDamageRecordNotify, other.TestDamageRecordNotify) && object.Equals(this.BuffDurationNotify, other.BuffDurationNotify) && object.Equals(this.EntityLivingStatusNotify, other.EntityLivingStatusNotify) && object.Equals(this.NewLinkNotify, other.NewLinkNotify) && object.Equals(this.ApplyBuffFailedNotify, other.ApplyBuffFailedNotify) && object.Equals(this.PackAnimChangedNotify, other.PackAnimChangedNotify) && object.Equals(this.VisionTriggerNotify, other.VisionTriggerNotify) && object.Equals(this.RemoveBuffByServerIdS2CRequestNotify, other.RemoveBuffByServerIdS2CRequestNotify) && object.Equals(this.TransformBuffStackNotify, other.TransformBuffStackNotify) && object.Equals(this.MotorSummonAndRideNotify, other.MotorSummonAndRideNotify) && object.Equals(this.BulletPatternNotify, other.BulletPatternNotify) && object.Equals(this.FsmMontageDurationNotify, other.FsmMontageDurationNotify) && object.Equals(this.SwitchDarkTideWeaponSlotNotify, other.SwitchDarkTideWeaponSlotNotify) && object.Equals(this.CombatValNotify, other.CombatValNotify) && object.Equals(this.CombatValDecayBeginNotify, other.CombatValDecayBeginNotify) && object.Equals(this.SquadPropChangedNotify, other.SquadPropChangedNotify) && object.Equals(this.CombatDataMaxNotify, other.CombatDataMaxNotify) && this.MessageCase == other.MessageCase && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (object.Equals(this.CombatCommon, other.CombatCommon) && object.Equals(this.CreateBulletNotify, other.CreateBulletNotify) && object.Equals(this.DestroyBulletNotify, other.DestroyBulletNotify) && object.Equals(this.DamageExecuteNotify, other.DamageExecuteNotify) && object.Equals(this.ApplyGameplayEffectNotify, other.ApplyGameplayEffectNotify) && object.Equals(this.RemoveGameplayEffectNotify, other.RemoveGameplayEffectNotify) && object.Equals(this.HitNotify, other.HitNotify) && object.Equals(this.SkillNotify, other.SkillNotify) && object.Equals(this.UseSkillNotify, other.UseSkillNotify) && object.Equals(this.EndSkillNotify, other.EndSkillNotify) && object.Equals(this.EntityLoadCompleteNotify, other.EntityLoadCompleteNotify) && object.Equals(this.PartUpdateNotify, other.PartUpdateNotify) && object.Equals(this.PartComponentInitNotify, other.PartComponentInitNotify) && object.Equals(this.MaterialNotify, other.MaterialNotify) && object.Equals(this.GameplayCueNotify, other.GameplayCueNotify) && object.Equals(this.EntityIsVisibleNotify, other.EntityIsVisibleNotify) && object.Equals(this.SwitchCharacterStateNotify, other.SwitchCharacterStateNotify) && object.Equals(this.PlayerRebackSceneNotify, other.PlayerRebackSceneNotify) && object.Equals(this.LogicStateInitNotify, other.LogicStateInitNotify) && object.Equals(this.SwitchLogicStateNotify, other.SwitchLogicStateNotify) && object.Equals(this.AttributeChangedNotify, other.AttributeChangedNotify) && object.Equals(this.AnimationStateChangedNotify, other.AnimationStateChangedNotify) && object.Equals(this.AnimationStateInitNotify, other.AnimationStateInitNotify) && object.Equals(this.ModifyBulletParamsNotify, other.ModifyBulletParamsNotify) && object.Equals(this.DrownNotify, other.DrownNotify) && object.Equals(this.OrderApplyBuffNotify, other.OrderApplyBuffNotify) && object.Equals(this.OrderRemoveBuffNotify, other.OrderRemoveBuffNotify) && object.Equals(this.ActivateBuffNotify, other.ActivateBuffNotify) && object.Equals(this.OrderRemoveBuffByTagsNotify, other.OrderRemoveBuffByTagsNotify) && object.Equals(this.AiInformationNotify, other.AiInformationNotify) && object.Equals(this.BattleStateChangeNotify, other.BattleStateChangeNotify) && object.Equals(this.AnimationGameplayTagNotify, other.AnimationGameplayTagNotify) && object.Equals(this.BoneVisibleChangeNotify, other.BoneVisibleChangeNotify) && object.Equals(this.AiBlackboardCdNotify, other.AiBlackboardCdNotify) && object.Equals(this.CaughtNotify, other.CaughtNotify) && object.Equals(this.EntityStaticHookMoveNotify, other.EntityStaticHookMoveNotify) && object.Equals(this.ChangeStateNotify, other.ChangeStateNotify) && object.Equals(this.ChangeStateConfirmNotify, other.ChangeStateConfirmNotify) && object.Equals(this.BuffStackCountNotify, other.BuffStackCountNotify) && object.Equals(this.MontagePlayNotify, other.MontagePlayNotify) && object.Equals(this.ANStartNotify, other.ANStartNotify) && object.Equals(this.FsmResetNotify, other.FsmResetNotify) && object.Equals(this.DamageRecordNotify, other.DamageRecordNotify) && object.Equals(this.AiHateNotify, other.AiHateNotify) && object.Equals(this.FsmBlackboardNotify, other.FsmBlackboardNotify) && object.Equals(this.CharacterBattleStateChangeNotify, other.CharacterBattleStateChangeNotify) && object.Equals(this.ApplyBuffS2CRequestNotify, other.ApplyBuffS2CRequestNotify) && object.Equals(this.RemoveBuffS2CRequestNotify, other.RemoveBuffS2CRequestNotify) && object.Equals(this.ActorVisibleNotify, other.ActorVisibleNotify) && object.Equals(this.RecoverPropChangedNotify, other.RecoverPropChangedNotify) && object.Equals(this.RemoveBuffByIdS2CRequestNotify, other.RemoveBuffByIdS2CRequestNotify) && object.Equals(this.ShieldUpdateNotify, other.ShieldUpdateNotify) && object.Equals(this.PlayerBattleStateChangeNotify, other.PlayerBattleStateChangeNotify) && object.Equals(this.FsmCustomBlackboardNotify, other.FsmCustomBlackboardNotify) && object.Equals(this.PassiveSkillAddNotify, other.PassiveSkillAddNotify) && object.Equals(this.PassiveSkillRemoveNotify, other.PassiveSkillRemoveNotify) && object.Equals(this.ExecuteQteNotify, other.ExecuteQteNotify) && object.Equals(this.ModifyEntityCampNotify, other.ModifyEntityCampNotify) && object.Equals(this.AddCombineEntitiesRelationNotify, other.AddCombineEntitiesRelationNotify) && object.Equals(this.RemoveCombineRelationNotify, other.RemoveCombineRelationNotify) && object.Equals(this.TestDamageRecordNotify, other.TestDamageRecordNotify) && object.Equals(this.BuffDurationNotify, other.BuffDurationNotify) && object.Equals(this.EntityLivingStatusNotify, other.EntityLivingStatusNotify) && object.Equals(this.NewLinkNotify, other.NewLinkNotify) && object.Equals(this.ApplyBuffFailedNotify, other.ApplyBuffFailedNotify) && object.Equals(this.PackAnimChangedNotify, other.PackAnimChangedNotify) && object.Equals(this.VisionTriggerNotify, other.VisionTriggerNotify) && object.Equals(this.RemoveBuffByServerIdS2CRequestNotify, other.RemoveBuffByServerIdS2CRequestNotify) && object.Equals(this.TransformBuffStackNotify, other.TransformBuffStackNotify) && object.Equals(this.MotorSummonAndRideNotify, other.MotorSummonAndRideNotify) && object.Equals(this.BulletPatternNotify, other.BulletPatternNotify) && object.Equals(this.FsmMontageDurationNotify, other.FsmMontageDurationNotify) && object.Equals(this.CombatValNotify, other.CombatValNotify) && object.Equals(this.CombatValDecayBeginNotify, other.CombatValDecayBeginNotify) && object.Equals(this.SquadPropChangedNotify, other.SquadPropChangedNotify) && object.Equals(this.DamageShowNotify, other.DamageShowNotify) && object.Equals(this.CombatDataMaxNotify, other.CombatDataMaxNotify) && this.MessageCase == other.MessageCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601CCBB RID: 117947 RVA: 0x00428218 File Offset: 0x00426418
+		// Token: 0x0601D788 RID: 120712 RVA: 0x00443ED8 File Offset: 0x004420D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -2318,10 +2318,6 @@ namespace Aki.Protocol.CombatMessage
 			{
 				num ^= this.FsmMontageDurationNotify.GetHashCode();
 			}
-			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify)
-			{
-				num ^= this.SwitchDarkTideWeaponSlotNotify.GetHashCode();
-			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatValNotify)
 			{
 				num ^= this.CombatValNotify.GetHashCode();
@@ -2333,6 +2329,10 @@ namespace Aki.Protocol.CombatMessage
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.SquadPropChangedNotify)
 			{
 				num ^= this.SquadPropChangedNotify.GetHashCode();
+			}
+			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.DamageShowNotify)
+			{
+				num ^= this.DamageShowNotify.GetHashCode();
 			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatDataMaxNotify)
 			{
@@ -2346,7 +2346,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CCBC RID: 117948 RVA: 0x00428976 File Offset: 0x00426B76
+		// Token: 0x0601D789 RID: 120713 RVA: 0x00444636 File Offset: 0x00442836
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -2354,7 +2354,7 @@ namespace Aki.Protocol.CombatMessage
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CCBD RID: 117949 RVA: 0x00428983 File Offset: 0x00426B83
+		// Token: 0x0601D78A RID: 120714 RVA: 0x00444643 File Offset: 0x00442843
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -2362,7 +2362,7 @@ namespace Aki.Protocol.CombatMessage
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CCBE RID: 117950 RVA: 0x0042898C File Offset: 0x00426B8C
+		// Token: 0x0601D78B RID: 120715 RVA: 0x0044464C File Offset: 0x0044284C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -2727,11 +2727,6 @@ namespace Aki.Protocol.CombatMessage
 				output.WriteRawTag(154, 5);
 				output.WriteMessage(this.FsmMontageDurationNotify);
 			}
-			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify)
-			{
-				output.WriteRawTag(162, 5);
-				output.WriteMessage(this.SwitchDarkTideWeaponSlotNotify);
-			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatValNotify)
 			{
 				output.WriteRawTag(170, 5);
@@ -2747,6 +2742,11 @@ namespace Aki.Protocol.CombatMessage
 				output.WriteRawTag(186, 5);
 				output.WriteMessage(this.SquadPropChangedNotify);
 			}
+			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.DamageShowNotify)
+			{
+				output.WriteRawTag(194, 5);
+				output.WriteMessage(this.DamageShowNotify);
+			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatDataMaxNotify)
 			{
 				output.WriteRawTag(162, 6);
@@ -2758,7 +2758,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CCBF RID: 117951 RVA: 0x004293A8 File Offset: 0x004275A8
+		// Token: 0x0601D78C RID: 120716 RVA: 0x00445068 File Offset: 0x00443268
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -3052,10 +3052,6 @@ namespace Aki.Protocol.CombatMessage
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.FsmMontageDurationNotify);
 			}
-			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify)
-			{
-				num += 2 + CodedOutputStream.ComputeMessageSize(this.SwitchDarkTideWeaponSlotNotify);
-			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatValNotify)
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.CombatValNotify);
@@ -3068,6 +3064,10 @@ namespace Aki.Protocol.CombatMessage
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.SquadPropChangedNotify);
 			}
+			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.DamageShowNotify)
+			{
+				num += 2 + CodedOutputStream.ComputeMessageSize(this.DamageShowNotify);
+			}
 			if (this.messageCase_ == CombatNotifyData.MessageOneofCase.CombatDataMaxNotify)
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.CombatDataMaxNotify);
@@ -3079,7 +3079,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CCC0 RID: 117952 RVA: 0x00429B98 File Offset: 0x00427D98
+		// Token: 0x0601D78D RID: 120717 RVA: 0x00445858 File Offset: 0x00443A58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CombatNotifyData other)
@@ -3595,13 +3595,6 @@ namespace Aki.Protocol.CombatMessage
 				}
 				this.FsmMontageDurationNotify.MergeFrom(other.FsmMontageDurationNotify);
 				break;
-			case CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify:
-				if (this.SwitchDarkTideWeaponSlotNotify == null)
-				{
-					this.SwitchDarkTideWeaponSlotNotify = new SwitchDarkTideWeaponSlotNotify();
-				}
-				this.SwitchDarkTideWeaponSlotNotify.MergeFrom(other.SwitchDarkTideWeaponSlotNotify);
-				break;
 			case CombatNotifyData.MessageOneofCase.CombatValNotify:
 				if (this.CombatValNotify == null)
 				{
@@ -3623,6 +3616,13 @@ namespace Aki.Protocol.CombatMessage
 				}
 				this.SquadPropChangedNotify.MergeFrom(other.SquadPropChangedNotify);
 				break;
+			case CombatNotifyData.MessageOneofCase.DamageShowNotify:
+				if (this.DamageShowNotify == null)
+				{
+					this.DamageShowNotify = new DamageShowNotify();
+				}
+				this.DamageShowNotify.MergeFrom(other.DamageShowNotify);
+				break;
 			case CombatNotifyData.MessageOneofCase.CombatDataMaxNotify:
 				if (this.CombatDataMaxNotify == null)
 				{
@@ -3634,7 +3634,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CCC1 RID: 117953 RVA: 0x0042A9AA File Offset: 0x00428BAA
+		// Token: 0x0601D78E RID: 120718 RVA: 0x0044666A File Offset: 0x0044486A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -3642,7 +3642,7 @@ namespace Aki.Protocol.CombatMessage
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CCC2 RID: 117954 RVA: 0x0042A9B4 File Offset: 0x00428BB4
+		// Token: 0x0601D78F RID: 120719 RVA: 0x00446674 File Offset: 0x00444874
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -4579,19 +4579,8 @@ namespace Aki.Protocol.CombatMessage
 						}
 					}
 				}
-				else if (num <= 682U)
+				else if (num <= 690U)
 				{
-					if (num == 674U)
-					{
-						SwitchDarkTideWeaponSlotNotify switchDarkTideWeaponSlotNotify = new SwitchDarkTideWeaponSlotNotify();
-						if (this.messageCase_ == CombatNotifyData.MessageOneofCase.SwitchDarkTideWeaponSlotNotify)
-						{
-							switchDarkTideWeaponSlotNotify.MergeFrom(this.SwitchDarkTideWeaponSlotNotify);
-						}
-						input.ReadMessage(switchDarkTideWeaponSlotNotify);
-						this.SwitchDarkTideWeaponSlotNotify = switchDarkTideWeaponSlotNotify;
-						continue;
-					}
 					if (num == 682U)
 					{
 						CombatValNotify combatValNotify = new CombatValNotify();
@@ -4603,9 +4592,6 @@ namespace Aki.Protocol.CombatMessage
 						this.CombatValNotify = combatValNotify;
 						continue;
 					}
-				}
-				else
-				{
 					if (num == 690U)
 					{
 						CombatValDecayBeginNotify combatValDecayBeginNotify = new CombatValDecayBeginNotify();
@@ -4617,6 +4603,9 @@ namespace Aki.Protocol.CombatMessage
 						this.CombatValDecayBeginNotify = combatValDecayBeginNotify;
 						continue;
 					}
+				}
+				else
+				{
 					if (num == 698U)
 					{
 						SquadPropChangedNotify squadPropChangedNotify = new SquadPropChangedNotify();
@@ -4626,6 +4615,17 @@ namespace Aki.Protocol.CombatMessage
 						}
 						input.ReadMessage(squadPropChangedNotify);
 						this.SquadPropChangedNotify = squadPropChangedNotify;
+						continue;
+					}
+					if (num == 706U)
+					{
+						DamageShowNotify damageShowNotify = new DamageShowNotify();
+						if (this.messageCase_ == CombatNotifyData.MessageOneofCase.DamageShowNotify)
+						{
+							damageShowNotify.MergeFrom(this.DamageShowNotify);
+						}
+						input.ReadMessage(damageShowNotify);
+						this.DamageShowNotify = damageShowNotify;
 						continue;
 					}
 					if (num == 802U)
@@ -4644,405 +4644,405 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0400C217 RID: 49687
+		// Token: 0x0400C743 RID: 51011
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C218 RID: 49688
+		// Token: 0x0400C744 RID: 51012
 		public const int CombatCommonFieldNumber = 1;
 
-		// Token: 0x0400C219 RID: 49689
+		// Token: 0x0400C745 RID: 51013
 		private CombatCommon combatCommon_;
 
-		// Token: 0x0400C21A RID: 49690
+		// Token: 0x0400C746 RID: 51014
 		public const int CreateBulletNotifyFieldNumber = 2;
 
-		// Token: 0x0400C21B RID: 49691
+		// Token: 0x0400C747 RID: 51015
 		public const int DestroyBulletNotifyFieldNumber = 3;
 
-		// Token: 0x0400C21C RID: 49692
+		// Token: 0x0400C748 RID: 51016
 		public const int DamageExecuteNotifyFieldNumber = 4;
 
-		// Token: 0x0400C21D RID: 49693
+		// Token: 0x0400C749 RID: 51017
 		public const int ApplyGameplayEffectNotifyFieldNumber = 5;
 
-		// Token: 0x0400C21E RID: 49694
+		// Token: 0x0400C74A RID: 51018
 		public const int RemoveGameplayEffectNotifyFieldNumber = 6;
 
-		// Token: 0x0400C21F RID: 49695
+		// Token: 0x0400C74B RID: 51019
 		public const int HitNotifyFieldNumber = 7;
 
-		// Token: 0x0400C220 RID: 49696
+		// Token: 0x0400C74C RID: 51020
 		public const int SkillNotifyFieldNumber = 8;
 
-		// Token: 0x0400C221 RID: 49697
+		// Token: 0x0400C74D RID: 51021
 		public const int UseSkillNotifyFieldNumber = 9;
 
-		// Token: 0x0400C222 RID: 49698
+		// Token: 0x0400C74E RID: 51022
 		public const int EndSkillNotifyFieldNumber = 10;
 
-		// Token: 0x0400C223 RID: 49699
+		// Token: 0x0400C74F RID: 51023
 		public const int EntityLoadCompleteNotifyFieldNumber = 11;
 
-		// Token: 0x0400C224 RID: 49700
+		// Token: 0x0400C750 RID: 51024
 		public const int PartUpdateNotifyFieldNumber = 12;
 
-		// Token: 0x0400C225 RID: 49701
+		// Token: 0x0400C751 RID: 51025
 		public const int PartComponentInitNotifyFieldNumber = 14;
 
-		// Token: 0x0400C226 RID: 49702
+		// Token: 0x0400C752 RID: 51026
 		public const int MaterialNotifyFieldNumber = 15;
 
-		// Token: 0x0400C227 RID: 49703
+		// Token: 0x0400C753 RID: 51027
 		public const int GameplayCueNotifyFieldNumber = 16;
 
-		// Token: 0x0400C228 RID: 49704
+		// Token: 0x0400C754 RID: 51028
 		public const int EntityIsVisibleNotifyFieldNumber = 17;
 
-		// Token: 0x0400C229 RID: 49705
+		// Token: 0x0400C755 RID: 51029
 		public const int SwitchCharacterStateNotifyFieldNumber = 18;
 
-		// Token: 0x0400C22A RID: 49706
+		// Token: 0x0400C756 RID: 51030
 		public const int PlayerRebackSceneNotifyFieldNumber = 19;
 
-		// Token: 0x0400C22B RID: 49707
+		// Token: 0x0400C757 RID: 51031
 		public const int LogicStateInitNotifyFieldNumber = 20;
 
-		// Token: 0x0400C22C RID: 49708
+		// Token: 0x0400C758 RID: 51032
 		public const int SwitchLogicStateNotifyFieldNumber = 21;
 
-		// Token: 0x0400C22D RID: 49709
+		// Token: 0x0400C759 RID: 51033
 		public const int AttributeChangedNotifyFieldNumber = 22;
 
-		// Token: 0x0400C22E RID: 49710
+		// Token: 0x0400C75A RID: 51034
 		public const int AnimationStateChangedNotifyFieldNumber = 23;
 
-		// Token: 0x0400C22F RID: 49711
+		// Token: 0x0400C75B RID: 51035
 		public const int AnimationStateInitNotifyFieldNumber = 24;
 
-		// Token: 0x0400C230 RID: 49712
+		// Token: 0x0400C75C RID: 51036
 		public const int ModifyBulletParamsNotifyFieldNumber = 25;
 
-		// Token: 0x0400C231 RID: 49713
+		// Token: 0x0400C75D RID: 51037
 		public const int DrownNotifyFieldNumber = 26;
 
-		// Token: 0x0400C232 RID: 49714
+		// Token: 0x0400C75E RID: 51038
 		public const int OrderApplyBuffNotifyFieldNumber = 27;
 
-		// Token: 0x0400C233 RID: 49715
+		// Token: 0x0400C75F RID: 51039
 		public const int OrderRemoveBuffNotifyFieldNumber = 28;
 
-		// Token: 0x0400C234 RID: 49716
+		// Token: 0x0400C760 RID: 51040
 		public const int ActivateBuffNotifyFieldNumber = 29;
 
-		// Token: 0x0400C235 RID: 49717
+		// Token: 0x0400C761 RID: 51041
 		public const int OrderRemoveBuffByTagsNotifyFieldNumber = 30;
 
-		// Token: 0x0400C236 RID: 49718
+		// Token: 0x0400C762 RID: 51042
 		public const int AiInformationNotifyFieldNumber = 31;
 
-		// Token: 0x0400C237 RID: 49719
+		// Token: 0x0400C763 RID: 51043
 		public const int BattleStateChangeNotifyFieldNumber = 32;
 
-		// Token: 0x0400C238 RID: 49720
+		// Token: 0x0400C764 RID: 51044
 		public const int AnimationGameplayTagNotifyFieldNumber = 33;
 
-		// Token: 0x0400C239 RID: 49721
+		// Token: 0x0400C765 RID: 51045
 		public const int BoneVisibleChangeNotifyFieldNumber = 34;
 
-		// Token: 0x0400C23A RID: 49722
+		// Token: 0x0400C766 RID: 51046
 		public const int AiBlackboardCdNotifyFieldNumber = 35;
 
-		// Token: 0x0400C23B RID: 49723
+		// Token: 0x0400C767 RID: 51047
 		public const int CaughtNotifyFieldNumber = 36;
 
-		// Token: 0x0400C23C RID: 49724
+		// Token: 0x0400C768 RID: 51048
 		public const int EntityStaticHookMoveNotifyFieldNumber = 37;
 
-		// Token: 0x0400C23D RID: 49725
+		// Token: 0x0400C769 RID: 51049
 		public const int ChangeStateNotifyFieldNumber = 38;
 
-		// Token: 0x0400C23E RID: 49726
+		// Token: 0x0400C76A RID: 51050
 		public const int ChangeStateConfirmNotifyFieldNumber = 40;
 
-		// Token: 0x0400C23F RID: 49727
+		// Token: 0x0400C76B RID: 51051
 		public const int BuffStackCountNotifyFieldNumber = 41;
 
-		// Token: 0x0400C240 RID: 49728
+		// Token: 0x0400C76C RID: 51052
 		public const int MontagePlayNotifyFieldNumber = 42;
 
-		// Token: 0x0400C241 RID: 49729
+		// Token: 0x0400C76D RID: 51053
 		public const int ANStartNotifyFieldNumber = 43;
 
-		// Token: 0x0400C242 RID: 49730
+		// Token: 0x0400C76E RID: 51054
 		public const int FsmResetNotifyFieldNumber = 44;
 
-		// Token: 0x0400C243 RID: 49731
+		// Token: 0x0400C76F RID: 51055
 		public const int DamageRecordNotifyFieldNumber = 45;
 
-		// Token: 0x0400C244 RID: 49732
+		// Token: 0x0400C770 RID: 51056
 		public const int AiHateNotifyFieldNumber = 46;
 
-		// Token: 0x0400C245 RID: 49733
+		// Token: 0x0400C771 RID: 51057
 		public const int FsmBlackboardNotifyFieldNumber = 47;
 
-		// Token: 0x0400C246 RID: 49734
+		// Token: 0x0400C772 RID: 51058
 		public const int CharacterBattleStateChangeNotifyFieldNumber = 48;
 
-		// Token: 0x0400C247 RID: 49735
+		// Token: 0x0400C773 RID: 51059
 		public const int ApplyBuffS2CRequestNotifyFieldNumber = 53;
 
-		// Token: 0x0400C248 RID: 49736
+		// Token: 0x0400C774 RID: 51060
 		public const int RemoveBuffS2CRequestNotifyFieldNumber = 54;
 
-		// Token: 0x0400C249 RID: 49737
+		// Token: 0x0400C775 RID: 51061
 		public const int ActorVisibleNotifyFieldNumber = 57;
 
-		// Token: 0x0400C24A RID: 49738
+		// Token: 0x0400C776 RID: 51062
 		public const int RecoverPropChangedNotifyFieldNumber = 58;
 
-		// Token: 0x0400C24B RID: 49739
+		// Token: 0x0400C777 RID: 51063
 		public const int RemoveBuffByIdS2CRequestNotifyFieldNumber = 59;
 
-		// Token: 0x0400C24C RID: 49740
+		// Token: 0x0400C778 RID: 51064
 		public const int ShieldUpdateNotifyFieldNumber = 61;
 
-		// Token: 0x0400C24D RID: 49741
+		// Token: 0x0400C779 RID: 51065
 		public const int PlayerBattleStateChangeNotifyFieldNumber = 62;
 
-		// Token: 0x0400C24E RID: 49742
+		// Token: 0x0400C77A RID: 51066
 		public const int FsmCustomBlackboardNotifyFieldNumber = 63;
 
-		// Token: 0x0400C24F RID: 49743
+		// Token: 0x0400C77B RID: 51067
 		public const int PassiveSkillAddNotifyFieldNumber = 64;
 
-		// Token: 0x0400C250 RID: 49744
+		// Token: 0x0400C77C RID: 51068
 		public const int PassiveSkillRemoveNotifyFieldNumber = 65;
 
-		// Token: 0x0400C251 RID: 49745
+		// Token: 0x0400C77D RID: 51069
 		public const int ExecuteQteNotifyFieldNumber = 66;
 
-		// Token: 0x0400C252 RID: 49746
+		// Token: 0x0400C77E RID: 51070
 		public const int ModifyEntityCampNotifyFieldNumber = 69;
 
-		// Token: 0x0400C253 RID: 49747
+		// Token: 0x0400C77F RID: 51071
 		public const int AddCombineEntitiesRelationNotifyFieldNumber = 70;
 
-		// Token: 0x0400C254 RID: 49748
+		// Token: 0x0400C780 RID: 51072
 		public const int RemoveCombineRelationNotifyFieldNumber = 71;
 
-		// Token: 0x0400C255 RID: 49749
+		// Token: 0x0400C781 RID: 51073
 		public const int TestDamageRecordNotifyFieldNumber = 72;
 
-		// Token: 0x0400C256 RID: 49750
+		// Token: 0x0400C782 RID: 51074
 		public const int BuffDurationNotifyFieldNumber = 73;
 
-		// Token: 0x0400C257 RID: 49751
+		// Token: 0x0400C783 RID: 51075
 		public const int EntityLivingStatusNotifyFieldNumber = 74;
 
-		// Token: 0x0400C258 RID: 49752
+		// Token: 0x0400C784 RID: 51076
 		public const int NewLinkNotifyFieldNumber = 75;
 
-		// Token: 0x0400C259 RID: 49753
+		// Token: 0x0400C785 RID: 51077
 		public const int ApplyBuffFailedNotifyFieldNumber = 76;
 
-		// Token: 0x0400C25A RID: 49754
+		// Token: 0x0400C786 RID: 51078
 		public const int PackAnimChangedNotifyFieldNumber = 77;
 
-		// Token: 0x0400C25B RID: 49755
+		// Token: 0x0400C787 RID: 51079
 		public const int VisionTriggerNotifyFieldNumber = 78;
 
-		// Token: 0x0400C25C RID: 49756
+		// Token: 0x0400C788 RID: 51080
 		public const int RemoveBuffByServerIdS2CRequestNotifyFieldNumber = 79;
 
-		// Token: 0x0400C25D RID: 49757
+		// Token: 0x0400C789 RID: 51081
 		public const int TransformBuffStackNotifyFieldNumber = 80;
 
-		// Token: 0x0400C25E RID: 49758
+		// Token: 0x0400C78A RID: 51082
 		public const int MotorSummonAndRideNotifyFieldNumber = 81;
 
-		// Token: 0x0400C25F RID: 49759
+		// Token: 0x0400C78B RID: 51083
 		public const int BulletPatternNotifyFieldNumber = 82;
 
-		// Token: 0x0400C260 RID: 49760
+		// Token: 0x0400C78C RID: 51084
 		public const int FsmMontageDurationNotifyFieldNumber = 83;
 
-		// Token: 0x0400C261 RID: 49761
-		public const int SwitchDarkTideWeaponSlotNotifyFieldNumber = 84;
-
-		// Token: 0x0400C262 RID: 49762
+		// Token: 0x0400C78D RID: 51085
 		public const int CombatValNotifyFieldNumber = 85;
 
-		// Token: 0x0400C263 RID: 49763
+		// Token: 0x0400C78E RID: 51086
 		public const int CombatValDecayBeginNotifyFieldNumber = 86;
 
-		// Token: 0x0400C264 RID: 49764
+		// Token: 0x0400C78F RID: 51087
 		public const int SquadPropChangedNotifyFieldNumber = 87;
 
-		// Token: 0x0400C265 RID: 49765
+		// Token: 0x0400C790 RID: 51088
+		public const int DamageShowNotifyFieldNumber = 88;
+
+		// Token: 0x0400C791 RID: 51089
 		public const int CombatDataMaxNotifyFieldNumber = 100;
 
-		// Token: 0x0400C266 RID: 49766
+		// Token: 0x0400C792 RID: 51090
 		private object message_;
 
-		// Token: 0x0400C267 RID: 49767
+		// Token: 0x0400C793 RID: 51091
 		private CombatNotifyData.MessageOneofCase messageCase_;
 
-		// Token: 0x020019FD RID: 6653
+		// Token: 0x02001A9F RID: 6815
 		public enum MessageOneofCase
 		{
-			// Token: 0x0400CAF1 RID: 51953
+			// Token: 0x0400D05C RID: 53340
 			None,
-			// Token: 0x0400CAF2 RID: 51954
+			// Token: 0x0400D05D RID: 53341
 			CreateBulletNotify = 2,
-			// Token: 0x0400CAF3 RID: 51955
+			// Token: 0x0400D05E RID: 53342
 			DestroyBulletNotify,
-			// Token: 0x0400CAF4 RID: 51956
+			// Token: 0x0400D05F RID: 53343
 			DamageExecuteNotify,
-			// Token: 0x0400CAF5 RID: 51957
+			// Token: 0x0400D060 RID: 53344
 			ApplyGameplayEffectNotify,
-			// Token: 0x0400CAF6 RID: 51958
+			// Token: 0x0400D061 RID: 53345
 			RemoveGameplayEffectNotify,
-			// Token: 0x0400CAF7 RID: 51959
+			// Token: 0x0400D062 RID: 53346
 			HitNotify,
-			// Token: 0x0400CAF8 RID: 51960
+			// Token: 0x0400D063 RID: 53347
 			SkillNotify,
-			// Token: 0x0400CAF9 RID: 51961
+			// Token: 0x0400D064 RID: 53348
 			UseSkillNotify,
-			// Token: 0x0400CAFA RID: 51962
+			// Token: 0x0400D065 RID: 53349
 			EndSkillNotify,
-			// Token: 0x0400CAFB RID: 51963
+			// Token: 0x0400D066 RID: 53350
 			EntityLoadCompleteNotify,
-			// Token: 0x0400CAFC RID: 51964
+			// Token: 0x0400D067 RID: 53351
 			PartUpdateNotify,
-			// Token: 0x0400CAFD RID: 51965
+			// Token: 0x0400D068 RID: 53352
 			PartComponentInitNotify = 14,
-			// Token: 0x0400CAFE RID: 51966
+			// Token: 0x0400D069 RID: 53353
 			MaterialNotify,
-			// Token: 0x0400CAFF RID: 51967
+			// Token: 0x0400D06A RID: 53354
 			GameplayCueNotify,
-			// Token: 0x0400CB00 RID: 51968
+			// Token: 0x0400D06B RID: 53355
 			EntityIsVisibleNotify,
-			// Token: 0x0400CB01 RID: 51969
+			// Token: 0x0400D06C RID: 53356
 			SwitchCharacterStateNotify,
-			// Token: 0x0400CB02 RID: 51970
+			// Token: 0x0400D06D RID: 53357
 			PlayerRebackSceneNotify,
-			// Token: 0x0400CB03 RID: 51971
+			// Token: 0x0400D06E RID: 53358
 			LogicStateInitNotify,
-			// Token: 0x0400CB04 RID: 51972
+			// Token: 0x0400D06F RID: 53359
 			SwitchLogicStateNotify,
-			// Token: 0x0400CB05 RID: 51973
+			// Token: 0x0400D070 RID: 53360
 			AttributeChangedNotify,
-			// Token: 0x0400CB06 RID: 51974
+			// Token: 0x0400D071 RID: 53361
 			AnimationStateChangedNotify,
-			// Token: 0x0400CB07 RID: 51975
+			// Token: 0x0400D072 RID: 53362
 			AnimationStateInitNotify,
-			// Token: 0x0400CB08 RID: 51976
+			// Token: 0x0400D073 RID: 53363
 			ModifyBulletParamsNotify,
-			// Token: 0x0400CB09 RID: 51977
+			// Token: 0x0400D074 RID: 53364
 			DrownNotify,
-			// Token: 0x0400CB0A RID: 51978
+			// Token: 0x0400D075 RID: 53365
 			OrderApplyBuffNotify,
-			// Token: 0x0400CB0B RID: 51979
+			// Token: 0x0400D076 RID: 53366
 			OrderRemoveBuffNotify,
-			// Token: 0x0400CB0C RID: 51980
+			// Token: 0x0400D077 RID: 53367
 			ActivateBuffNotify,
-			// Token: 0x0400CB0D RID: 51981
+			// Token: 0x0400D078 RID: 53368
 			OrderRemoveBuffByTagsNotify,
-			// Token: 0x0400CB0E RID: 51982
+			// Token: 0x0400D079 RID: 53369
 			AiInformationNotify,
-			// Token: 0x0400CB0F RID: 51983
+			// Token: 0x0400D07A RID: 53370
 			BattleStateChangeNotify,
-			// Token: 0x0400CB10 RID: 51984
+			// Token: 0x0400D07B RID: 53371
 			AnimationGameplayTagNotify,
-			// Token: 0x0400CB11 RID: 51985
+			// Token: 0x0400D07C RID: 53372
 			BoneVisibleChangeNotify,
-			// Token: 0x0400CB12 RID: 51986
+			// Token: 0x0400D07D RID: 53373
 			AiBlackboardCdNotify,
-			// Token: 0x0400CB13 RID: 51987
+			// Token: 0x0400D07E RID: 53374
 			CaughtNotify,
-			// Token: 0x0400CB14 RID: 51988
+			// Token: 0x0400D07F RID: 53375
 			EntityStaticHookMoveNotify,
-			// Token: 0x0400CB15 RID: 51989
+			// Token: 0x0400D080 RID: 53376
 			ChangeStateNotify,
-			// Token: 0x0400CB16 RID: 51990
+			// Token: 0x0400D081 RID: 53377
 			ChangeStateConfirmNotify = 40,
-			// Token: 0x0400CB17 RID: 51991
+			// Token: 0x0400D082 RID: 53378
 			BuffStackCountNotify,
-			// Token: 0x0400CB18 RID: 51992
+			// Token: 0x0400D083 RID: 53379
 			MontagePlayNotify,
-			// Token: 0x0400CB19 RID: 51993
+			// Token: 0x0400D084 RID: 53380
 			ANStartNotify,
-			// Token: 0x0400CB1A RID: 51994
+			// Token: 0x0400D085 RID: 53381
 			FsmResetNotify,
-			// Token: 0x0400CB1B RID: 51995
+			// Token: 0x0400D086 RID: 53382
 			DamageRecordNotify,
-			// Token: 0x0400CB1C RID: 51996
+			// Token: 0x0400D087 RID: 53383
 			AiHateNotify,
-			// Token: 0x0400CB1D RID: 51997
+			// Token: 0x0400D088 RID: 53384
 			FsmBlackboardNotify,
-			// Token: 0x0400CB1E RID: 51998
+			// Token: 0x0400D089 RID: 53385
 			CharacterBattleStateChangeNotify,
-			// Token: 0x0400CB1F RID: 51999
+			// Token: 0x0400D08A RID: 53386
 			ApplyBuffS2CRequestNotify = 53,
-			// Token: 0x0400CB20 RID: 52000
+			// Token: 0x0400D08B RID: 53387
 			RemoveBuffS2CRequestNotify,
-			// Token: 0x0400CB21 RID: 52001
+			// Token: 0x0400D08C RID: 53388
 			ActorVisibleNotify = 57,
-			// Token: 0x0400CB22 RID: 52002
+			// Token: 0x0400D08D RID: 53389
 			RecoverPropChangedNotify,
-			// Token: 0x0400CB23 RID: 52003
+			// Token: 0x0400D08E RID: 53390
 			RemoveBuffByIdS2CRequestNotify,
-			// Token: 0x0400CB24 RID: 52004
+			// Token: 0x0400D08F RID: 53391
 			ShieldUpdateNotify = 61,
-			// Token: 0x0400CB25 RID: 52005
+			// Token: 0x0400D090 RID: 53392
 			PlayerBattleStateChangeNotify,
-			// Token: 0x0400CB26 RID: 52006
+			// Token: 0x0400D091 RID: 53393
 			FsmCustomBlackboardNotify,
-			// Token: 0x0400CB27 RID: 52007
+			// Token: 0x0400D092 RID: 53394
 			PassiveSkillAddNotify,
-			// Token: 0x0400CB28 RID: 52008
+			// Token: 0x0400D093 RID: 53395
 			PassiveSkillRemoveNotify,
-			// Token: 0x0400CB29 RID: 52009
+			// Token: 0x0400D094 RID: 53396
 			ExecuteQteNotify,
-			// Token: 0x0400CB2A RID: 52010
+			// Token: 0x0400D095 RID: 53397
 			ModifyEntityCampNotify = 69,
-			// Token: 0x0400CB2B RID: 52011
+			// Token: 0x0400D096 RID: 53398
 			AddCombineEntitiesRelationNotify,
-			// Token: 0x0400CB2C RID: 52012
+			// Token: 0x0400D097 RID: 53399
 			RemoveCombineRelationNotify,
-			// Token: 0x0400CB2D RID: 52013
+			// Token: 0x0400D098 RID: 53400
 			TestDamageRecordNotify,
-			// Token: 0x0400CB2E RID: 52014
+			// Token: 0x0400D099 RID: 53401
 			BuffDurationNotify,
-			// Token: 0x0400CB2F RID: 52015
+			// Token: 0x0400D09A RID: 53402
 			EntityLivingStatusNotify,
-			// Token: 0x0400CB30 RID: 52016
+			// Token: 0x0400D09B RID: 53403
 			NewLinkNotify,
-			// Token: 0x0400CB31 RID: 52017
+			// Token: 0x0400D09C RID: 53404
 			ApplyBuffFailedNotify,
-			// Token: 0x0400CB32 RID: 52018
+			// Token: 0x0400D09D RID: 53405
 			PackAnimChangedNotify,
-			// Token: 0x0400CB33 RID: 52019
+			// Token: 0x0400D09E RID: 53406
 			VisionTriggerNotify,
-			// Token: 0x0400CB34 RID: 52020
+			// Token: 0x0400D09F RID: 53407
 			RemoveBuffByServerIdS2CRequestNotify,
-			// Token: 0x0400CB35 RID: 52021
+			// Token: 0x0400D0A0 RID: 53408
 			TransformBuffStackNotify,
-			// Token: 0x0400CB36 RID: 52022
+			// Token: 0x0400D0A1 RID: 53409
 			MotorSummonAndRideNotify,
-			// Token: 0x0400CB37 RID: 52023
+			// Token: 0x0400D0A2 RID: 53410
 			BulletPatternNotify,
-			// Token: 0x0400CB38 RID: 52024
+			// Token: 0x0400D0A3 RID: 53411
 			FsmMontageDurationNotify,
-			// Token: 0x0400CB39 RID: 52025
-			SwitchDarkTideWeaponSlotNotify,
-			// Token: 0x0400CB3A RID: 52026
-			CombatValNotify,
-			// Token: 0x0400CB3B RID: 52027
+			// Token: 0x0400D0A4 RID: 53412
+			CombatValNotify = 85,
+			// Token: 0x0400D0A5 RID: 53413
 			CombatValDecayBeginNotify,
-			// Token: 0x0400CB3C RID: 52028
+			// Token: 0x0400D0A6 RID: 53414
 			SquadPropChangedNotify,
-			// Token: 0x0400CB3D RID: 52029
+			// Token: 0x0400D0A7 RID: 53415
+			DamageShowNotify,
+			// Token: 0x0400D0A8 RID: 53416
 			CombatDataMaxNotify = 100
 		}
 	}

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F1 RID: 25329
+	// Token: 0x0200526F RID: 21103
 	public class PinballSettleProgressRewardView : UiPanelBase
 	{
-		// Token: 0x0603FBC7 RID: 261063 RVA: 0x00F6BE70 File Offset: 0x00F6A070
+		// Token: 0x06034888 RID: 215176 RVA: 0x00EB2DCC File Offset: 0x00EB0FCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FBC8 RID: 261064 RVA: 0x00F6BF60 File Offset: 0x00F6A160
+		// Token: 0x06034889 RID: 215177 RVA: 0x00EB2EBC File Offset: 0x00EB10BC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballSettleProgressRewardView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FBC9 RID: 261065 RVA: 0x00F6BFA4 File Offset: 0x00F6A1A4
+		// Token: 0x0603488A RID: 215178 RVA: 0x00EB2F00 File Offset: 0x00EB1100
 		[NullableContext(1)]
 		public void ShowProgressRewardList(int progress, int[] progressList, int[] scoreLevelDropId)
 		{
@@ -73,24 +73,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x04021488 RID: 136328
+		// Token: 0x0401BDB7 RID: 114103
 		[Nullable(1)]
 		private readonly List<PinballLevelInfoScoreItem> Items = new List<PinballLevelInfoScoreItem>();
 
-		// Token: 0x0200C4E7 RID: 50407
+		// Token: 0x0200AECE RID: 44750
 		private enum EComponent
 		{
-			// Token: 0x0403B6B5 RID: 243381
+			// Token: 0x04036017 RID: 221207
 			TextScore,
-			// Token: 0x0403B6B6 RID: 243382
+			// Token: 0x04036018 RID: 221208
 			ProgressOne,
-			// Token: 0x0403B6B7 RID: 243383
+			// Token: 0x04036019 RID: 221209
 			ProgressTwo,
-			// Token: 0x0403B6B8 RID: 243384
+			// Token: 0x0403601A RID: 221210
 			ProgressRewardItemOne,
-			// Token: 0x0403B6B9 RID: 243385
+			// Token: 0x0403601B RID: 221211
 			ProgressRewardItemTwo,
-			// Token: 0x0403B6BA RID: 243386
+			// Token: 0x0403601C RID: 221212
 			ProgressRewardItemThree
 		}
 	}

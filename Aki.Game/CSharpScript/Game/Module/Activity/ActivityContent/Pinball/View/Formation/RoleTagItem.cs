@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x0200636A RID: 25450
+	// Token: 0x020052E8 RID: 21224
 	[Nullable(new byte[]
 	{
 		0,
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 	})]
 	public class RoleTagItem : GridProxyAbstract<IRoleTagItemData>
 	{
-		// Token: 0x06040060 RID: 262240 RVA: 0x00F7CFA8 File Offset: 0x00F7B1A8
+		// Token: 0x06034D21 RID: 216353 RVA: 0x00EC3F08 File Offset: 0x00EC2108
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040061 RID: 262241 RVA: 0x00F7D014 File Offset: 0x00F7B214
+		// Token: 0x06034D22 RID: 216354 RVA: 0x00EC3F74 File Offset: 0x00EC2174
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleTagItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040062 RID: 262242 RVA: 0x00F7D058 File Offset: 0x00F7B258
+		// Token: 0x06034D23 RID: 216355 RVA: 0x00EC3FB8 File Offset: 0x00EC21B8
 		[NullableContext(1)]
 		public override void Refresh(IRoleTagItemData data, bool isSelected, int gridIndex)
 		{
@@ -72,16 +72,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			tagIconItemIns2.RefreshPanel(pinballBdConfigById.Value.Icon, pinballBdConfigById.Value.BgColor);
 		}
 
-		// Token: 0x040215F0 RID: 136688
+		// Token: 0x0401BF1F RID: 114463
 		[Nullable(2)]
 		private TagIconItem TagIconItemIns;
 
-		// Token: 0x0200C584 RID: 50564
+		// Token: 0x0200AF6B RID: 44907
 		private enum ERoleTagItem
 		{
-			// Token: 0x0403B9E5 RID: 244197
+			// Token: 0x04036347 RID: 222023
 			IconItem,
-			// Token: 0x0403B9E6 RID: 244198
+			// Token: 0x04036348 RID: 222024
 			NameText
 		}
 	}

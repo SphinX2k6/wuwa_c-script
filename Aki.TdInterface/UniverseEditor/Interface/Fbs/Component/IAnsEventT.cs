@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EB4 RID: 20148
+	// Token: 0x020053DD RID: 21469
 	public class IAnsEventT
 	{
-		// Token: 0x1700908D RID: 37005
-		// (get) Token: 0x0601FBAC RID: 129964 RVA: 0x0046ADC3 File Offset: 0x00468FC3
-		// (set) Token: 0x0601FBAD RID: 129965 RVA: 0x0046ADCB File Offset: 0x00468FCB
+		// Token: 0x170097EE RID: 38894
+		// (get) Token: 0x060218AD RID: 137389 RVA: 0x004A023F File Offset: 0x0049E43F
+		// (set) Token: 0x060218AE RID: 137390 RVA: 0x004A0247 File Offset: 0x0049E447
 		public ESceneItemSeqEventCbType Type { get; set; }
 
-		// Token: 0x1700908E RID: 37006
-		// (get) Token: 0x0601FBAE RID: 129966 RVA: 0x0046ADD4 File Offset: 0x00468FD4
-		// (set) Token: 0x0601FBAF RID: 129967 RVA: 0x0046ADDC File Offset: 0x00468FDC
+		// Token: 0x170097EF RID: 38895
+		// (get) Token: 0x060218AF RID: 137391 RVA: 0x004A0250 File Offset: 0x0049E450
+		// (set) Token: 0x060218B0 RID: 137392 RVA: 0x004A0258 File Offset: 0x0049E458
 		public string EventName { get; set; }
 
-		// Token: 0x1700908F RID: 37007
-		// (get) Token: 0x0601FBB0 RID: 129968 RVA: 0x0046ADE5 File Offset: 0x00468FE5
-		// (set) Token: 0x0601FBB1 RID: 129969 RVA: 0x0046ADED File Offset: 0x00468FED
+		// Token: 0x170097F0 RID: 38896
+		// (get) Token: 0x060218B1 RID: 137393 RVA: 0x004A0261 File Offset: 0x0049E461
+		// (set) Token: 0x060218B2 RID: 137394 RVA: 0x004A0269 File Offset: 0x0049E469
 		public IActionInfoT Action { get; set; }
 
-		// Token: 0x17009090 RID: 37008
-		// (get) Token: 0x0601FBB2 RID: 129970 RVA: 0x0046ADF6 File Offset: 0x00468FF6
-		// (set) Token: 0x0601FBB3 RID: 129971 RVA: 0x0046ADFE File Offset: 0x00468FFE
+		// Token: 0x170097F1 RID: 38897
+		// (get) Token: 0x060218B3 RID: 137395 RVA: 0x004A0272 File Offset: 0x0049E472
+		// (set) Token: 0x060218B4 RID: 137396 RVA: 0x004A027A File Offset: 0x0049E47A
 		public float Duration { get; set; }
 
-		// Token: 0x0601FBB4 RID: 129972 RVA: 0x0046AE07 File Offset: 0x00469007
+		// Token: 0x060218B5 RID: 137397 RVA: 0x004A0283 File Offset: 0x0049E483
 		public IAnsEventT()
 		{
 			this.Type = ESceneItemSeqEventCbType.ANS;

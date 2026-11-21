@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FunctionalTest
 {
-	// Token: 0x02004725 RID: 18213
+	// Token: 0x02004B8D RID: 19341
 	public class ITestSuiteCollectionT
 	{
-		// Token: 0x1700828A RID: 33418
-		// (get) Token: 0x0601BFBD RID: 114621 RVA: 0x003F73EE File Offset: 0x003F55EE
-		// (set) Token: 0x0601BFBE RID: 114622 RVA: 0x003F73F6 File Offset: 0x003F55F6
+		// Token: 0x170088CB RID: 35019
+		// (get) Token: 0x0601D792 RID: 120722 RVA: 0x0042368A File Offset: 0x0042188A
+		// (set) Token: 0x0601D793 RID: 120723 RVA: 0x00423692 File Offset: 0x00421892
 		public string Id { get; set; }
 
-		// Token: 0x1700828B RID: 33419
-		// (get) Token: 0x0601BFBF RID: 114623 RVA: 0x003F73FF File Offset: 0x003F55FF
-		// (set) Token: 0x0601BFC0 RID: 114624 RVA: 0x003F7407 File Offset: 0x003F5607
+		// Token: 0x170088CC RID: 35020
+		// (get) Token: 0x0601D794 RID: 120724 RVA: 0x0042369B File Offset: 0x0042189B
+		// (set) Token: 0x0601D795 RID: 120725 RVA: 0x004236A3 File Offset: 0x004218A3
 		public int LevelId { get; set; }
 
-		// Token: 0x1700828C RID: 33420
-		// (get) Token: 0x0601BFC1 RID: 114625 RVA: 0x003F7410 File Offset: 0x003F5610
-		// (set) Token: 0x0601BFC2 RID: 114626 RVA: 0x003F7418 File Offset: 0x003F5618
+		// Token: 0x170088CD RID: 35021
+		// (get) Token: 0x0601D796 RID: 120726 RVA: 0x004236AC File Offset: 0x004218AC
+		// (set) Token: 0x0601D797 RID: 120727 RVA: 0x004236B4 File Offset: 0x004218B4
 		public List<ITestSuiteT> Suites { get; set; }
 
-		// Token: 0x0601BFC3 RID: 114627 RVA: 0x003F7421 File Offset: 0x003F5621
+		// Token: 0x0601D798 RID: 120728 RVA: 0x004236BD File Offset: 0x004218BD
 		public ITestSuiteCollectionT()
 		{
 			this.Id = null;

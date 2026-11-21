@@ -4,17 +4,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004902 RID: 18690
+	// Token: 0x02003879 RID: 14457
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSkillPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DCB RID: 200139 RVA: 0x00B58FC7 File Offset: 0x00B571C7
+		// Token: 0x060258F8 RID: 153848 RVA: 0x00A93E37 File Offset: 0x00A92037
 		public RoleSkillPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x06030DCC RID: 200140 RVA: 0x00B58FDC File Offset: 0x00B571DC
+		// Token: 0x060258F9 RID: 153849 RVA: 0x00A93E4C File Offset: 0x00A9204C
 		public void SetToggleSelectByGroupName(string groupName)
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(groupName);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DCD RID: 200141 RVA: 0x00B59050 File Offset: 0x00B57250
+		// Token: 0x060258FA RID: 153850 RVA: 0x00A93EC0 File Offset: 0x00A920C0
 		public void ResetToggleSelect()
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(this.GroupName);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DCE RID: 200142 RVA: 0x00B590CC File Offset: 0x00B572CC
+		// Token: 0x060258FB RID: 153851 RVA: 0x00A93F3C File Offset: 0x00A9213C
 		public void SetSkillTreeToggleCursorActive(bool isActive)
 		{
 			NavigationGroup navigationGroup = base.GetNavigationGroup(this.GroupName);
@@ -70,10 +70,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationModel.Instance.RefreshCursorActive();
 		}
 
-		// Token: 0x0401A3C3 RID: 107459
+		// Token: 0x04014C36 RID: 85046
 		public string GroupName = "";
 
-		// Token: 0x0401A3C4 RID: 107460
+		// Token: 0x04014C37 RID: 85047
 		public bool IsInPreview;
 	}
 }

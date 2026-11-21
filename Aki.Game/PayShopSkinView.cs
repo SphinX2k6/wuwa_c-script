@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002371 RID: 9073
+// Token: 0x02001856 RID: 6230
 public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x060121E5 RID: 74213 RVA: 0x004733A0 File Offset: 0x004715A0
+	// Token: 0x0600F695 RID: 63125 RVA: 0x00480520 File Offset: 0x0047E720
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x060121E6 RID: 74214 RVA: 0x00473468 File Offset: 0x00471668
+	// Token: 0x0600F696 RID: 63126 RVA: 0x004805E8 File Offset: 0x0047E7E8
 	protected override void OnStart()
 	{
 		this.TabGroup = new TabComponent<PayShopSwitchItem>(base.GetHorizontalLayout(2).GetRootComponent(), new Func<UUIItem, int?, PayShopSwitchItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), base.GetItem(3));
@@ -43,14 +43,14 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121E7 RID: 74215 RVA: 0x0047351E File Offset: 0x0047171E
+	// Token: 0x0600F697 RID: 63127 RVA: 0x0048069E File Offset: 0x0047E89E
 	[NullableContext(1)]
 	private PayShopSwitchItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new PayShopSwitchItem();
 	}
 
-	// Token: 0x060121E8 RID: 74216 RVA: 0x00473528 File Offset: 0x00471728
+	// Token: 0x0600F698 RID: 63128 RVA: 0x004806A8 File Offset: 0x0047E8A8
 	private void ToggleCallBack(int gridIndex)
 	{
 		this.CurrentSelectTabId = this.TabList[gridIndex];
@@ -65,7 +65,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		this.TryRefreshRootShopMoney();
 	}
 
-	// Token: 0x060121E9 RID: 74217 RVA: 0x004735B4 File Offset: 0x004717B4
+	// Token: 0x0600F699 RID: 63129 RVA: 0x00480734 File Offset: 0x0047E934
 	private void TryRefreshRootShopMoney()
 	{
 		PayShopTabData payShopTabDataByPayShopIdAndTabId = PayShopModel.Instance.GetPayShopTabDataByPayShopIdAndTabId((PayShopDefine.EPayShopTabType)this.CurrentShopId, this.CurrentSelectTabId);
@@ -77,7 +77,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121EA RID: 74218 RVA: 0x00473624 File Offset: 0x00471824
+	// Token: 0x0600F69A RID: 63130 RVA: 0x004807A4 File Offset: 0x0047E9A4
 	protected override void OnBeforeShow()
 	{
 		this.CurrentShopId = (int)this.Params;
@@ -85,7 +85,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		this.RefreshSkinTabs();
 	}
 
-	// Token: 0x060121EB RID: 74219 RVA: 0x0047364A File Offset: 0x0047184A
+	// Token: 0x0600F69B RID: 63131 RVA: 0x004807CA File Offset: 0x0047E9CA
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		if (fromToggle)
@@ -95,7 +95,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		this.NeedCheckGoodsList.Clear();
 	}
 
-	// Token: 0x060121EC RID: 74220 RVA: 0x00473668 File Offset: 0x00471868
+	// Token: 0x0600F69C RID: 63132 RVA: 0x004807E8 File Offset: 0x0047E9E8
 	protected override void OnAfterShow()
 	{
 		Log instance = Log.Instance;
@@ -106,13 +106,13 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060121ED RID: 74221 RVA: 0x004736A1 File Offset: 0x004718A1
+	// Token: 0x0600F69D RID: 63133 RVA: 0x00480821 File Offset: 0x0047EA21
 	protected override void OnBeforeHide()
 	{
 		this.TabViewComponent.SetCurrentTabViewState(false);
 	}
 
-	// Token: 0x060121EE RID: 74222 RVA: 0x004736B0 File Offset: 0x004718B0
+	// Token: 0x0600F69E RID: 63134 RVA: 0x00480830 File Offset: 0x0047EA30
 	private UniTask UpdateTabs()
 	{
 		PayShopSkinView.<UpdateTabs>d__18 <UpdateTabs>d__;
@@ -123,7 +123,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		return <UpdateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060121EF RID: 74223 RVA: 0x004736F3 File Offset: 0x004718F3
+	// Token: 0x0600F69F RID: 63135 RVA: 0x00480873 File Offset: 0x0047EA73
 	protected override void OnBeforeDestroy()
 	{
 		this.TabGroup.Destroy(null);
@@ -134,14 +134,14 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121F0 RID: 74224 RVA: 0x0047371B File Offset: 0x0047191B
+	// Token: 0x0600F6A0 RID: 63136 RVA: 0x0048089B File Offset: 0x0047EA9B
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
 		this.RefreshSkinTabs();
 	}
 
-	// Token: 0x060121F1 RID: 74225 RVA: 0x00473724 File Offset: 0x00471924
+	// Token: 0x0600F6A1 RID: 63137 RVA: 0x004808A4 File Offset: 0x0047EAA4
 	protected override void OnTickUiTabViewBase(float deltaTime)
 	{
 		if (!this.AllowTick)
@@ -192,7 +192,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		}
 	}
 
-	// Token: 0x060121F2 RID: 74226 RVA: 0x0047382C File Offset: 0x00471A2C
+	// Token: 0x0600F6A2 RID: 63138 RVA: 0x004809AC File Offset: 0x0047EBAC
 	private void UpdateGoodsList()
 	{
 		List<PayShopGoods> payShopGoodsByTabType = PayShopModel.Instance.GetPayShopGoodsByTabType(PayShopDefine.EPayShopTabType.SkinShop, 3);
@@ -211,7 +211,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		this.AllowTick = (this.NeedCheckGoodsList.Count > 0);
 	}
 
-	// Token: 0x060121F3 RID: 74227 RVA: 0x004738C0 File Offset: 0x00471AC0
+	// Token: 0x0600F6A3 RID: 63139 RVA: 0x00480A40 File Offset: 0x0047EC40
 	private void RefreshSkinTabs()
 	{
 		List<int> payShopTableList = PayShopModel.Instance.GetPayShopTableList(6);
@@ -256,7 +256,7 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 		}).Forget();
 	}
 
-	// Token: 0x04008904 RID: 35076
+	// Token: 0x04008A49 RID: 35401
 	[Nullable(new byte[]
 	{
 		2,
@@ -264,48 +264,48 @@ public class PayShopSkinView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	protected TabComponent<PayShopSwitchItem> TabGroup;
 
-	// Token: 0x04008905 RID: 35077
+	// Token: 0x04008A4A RID: 35402
 	[Nullable(2)]
 	protected TabViewComponent<int> TabViewComponent;
 
-	// Token: 0x04008906 RID: 35078
+	// Token: 0x04008A4B RID: 35403
 	[Nullable(1)]
 	protected List<int> TabList = new List<int>();
 
-	// Token: 0x04008907 RID: 35079
+	// Token: 0x04008A4C RID: 35404
 	protected int CurrentSelectTabId;
 
-	// Token: 0x04008908 RID: 35080
+	// Token: 0x04008A4D RID: 35405
 	private int CurrentShopId;
 
-	// Token: 0x04008909 RID: 35081
+	// Token: 0x04008A4E RID: 35406
 	[Nullable(1)]
 	private readonly List<PayShopGoods> NeedCheckGoodsList = new List<PayShopGoods>();
 
-	// Token: 0x0400890A RID: 35082
+	// Token: 0x04008A4F RID: 35407
 	private bool AllowTick;
 
-	// Token: 0x0400890B RID: 35083
+	// Token: 0x04008A50 RID: 35408
 	private bool IsFirstOpen = true;
 
-	// Token: 0x0200890B RID: 35083
+	// Token: 0x02007A95 RID: 31381
 	private enum EComponent
 	{
-		// Token: 0x0402C883 RID: 182403
+		// Token: 0x04027B9B RID: 162715
 		ScrollerItem,
-		// Token: 0x0402C884 RID: 182404
+		// Token: 0x04027B9C RID: 162716
 		Scroller,
-		// Token: 0x0402C885 RID: 182405
+		// Token: 0x04027B9D RID: 162717
 		GroupScroller,
-		// Token: 0x0402C886 RID: 182406
+		// Token: 0x04027B9E RID: 162718
 		TabItem,
-		// Token: 0x0402C887 RID: 182407
+		// Token: 0x04027B9F RID: 162719
 		TabPanel,
-		// Token: 0x0402C888 RID: 182408
+		// Token: 0x04027BA0 RID: 162720
 		TitleTips,
-		// Token: 0x0402C889 RID: 182409
+		// Token: 0x04027BA1 RID: 162721
 		ScrollerItemRecharge,
-		// Token: 0x0402C88A RID: 182410
+		// Token: 0x04027BA2 RID: 162722
 		PanelContent
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A55 RID: 2645
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B1E RID: 2846
 	public class BehaviorFlowComponent : IComponentBase
 	{
-		// Token: 0x06003CE8 RID: 15592 RVA: 0x0009CAC0 File Offset: 0x0009ACC0
+		// Token: 0x06004108 RID: 16648 RVA: 0x000A5F38 File Offset: 0x000A4138
 		public static BehaviorFlowComponent Create(IBehaviorFlowComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000DFB RID: 3579
-		// (get) Token: 0x06003CE9 RID: 15593 RVA: 0x0009CAE0 File Offset: 0x0009ACE0
+		// Token: 0x17000EC7 RID: 3783
+		// (get) Token: 0x06004109 RID: 16649 RVA: 0x000A5F58 File Offset: 0x000A4158
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DFC RID: 3580
-		// (get) Token: 0x06003CEA RID: 15594 RVA: 0x0009CB18 File Offset: 0x0009AD18
+		// Token: 0x17000EC8 RID: 3784
+		// (get) Token: 0x0600410A RID: 16650 RVA: 0x000A5F90 File Offset: 0x000A4190
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DFD RID: 3581
-		// (get) Token: 0x06003CEB RID: 15595 RVA: 0x0009CB30 File Offset: 0x0009AD30
+		// Token: 0x17000EC9 RID: 3785
+		// (get) Token: 0x0600410B RID: 16651 RVA: 0x000A5FA8 File Offset: 0x000A41A8
 		public virtual bool? _Folded
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DFE RID: 3582
-		// (get) Token: 0x06003CEC RID: 15596 RVA: 0x0009CB66 File Offset: 0x0009AD66
+		// Token: 0x17000ECA RID: 3786
+		// (get) Token: 0x0600410C RID: 16652 RVA: 0x000A5FDE File Offset: 0x000A41DE
 		public virtual int InitStateId
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DFF RID: 3583
-		// (get) Token: 0x06003CED RID: 15597 RVA: 0x0009CB73 File Offset: 0x0009AD73
+		// Token: 0x17000ECB RID: 3787
+		// (get) Token: 0x0600410D RID: 16653 RVA: 0x000A5FEB File Offset: 0x000A41EB
 		public virtual IFlowInfo FlowInfo
 		{
 			get
@@ -87,14 +85,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040021F2 RID: 8690
+		// Token: 0x04002409 RID: 9225
 		private IBehaviorFlowComponent Instance;
 
-		// Token: 0x040021F3 RID: 8691
+		// Token: 0x0400240A RID: 9226
 		[Nullable(2)]
 		private IFlowInfo _FlowInfoCache;
 
-		// Token: 0x040021F4 RID: 8692
+		// Token: 0x0400240B RID: 9227
 		private bool _FlowInfoInited;
 	}
 }

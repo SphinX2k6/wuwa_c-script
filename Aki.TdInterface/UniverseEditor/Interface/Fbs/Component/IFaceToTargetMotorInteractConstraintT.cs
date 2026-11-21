@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200521D RID: 21021
+	// Token: 0x02005785 RID: 22405
 	public class IFaceToTargetMotorInteractConstraintT
 	{
-		// Token: 0x170099F6 RID: 39414
-		// (get) Token: 0x060222A1 RID: 139937 RVA: 0x004BD785 File Offset: 0x004BB985
-		// (set) Token: 0x060222A2 RID: 139938 RVA: 0x004BD78D File Offset: 0x004BB98D
+		// Token: 0x1700A1F2 RID: 41458
+		// (get) Token: 0x06024237 RID: 148023 RVA: 0x004F8249 File Offset: 0x004F6449
+		// (set) Token: 0x06024238 RID: 148024 RVA: 0x004F8251 File Offset: 0x004F6451
 		public EMotorInteractConstraintType Type { get; set; }
 
-		// Token: 0x170099F7 RID: 39415
-		// (get) Token: 0x060222A3 RID: 139939 RVA: 0x004BD796 File Offset: 0x004BB996
-		// (set) Token: 0x060222A4 RID: 139940 RVA: 0x004BD79E File Offset: 0x004BB99E
+		// Token: 0x1700A1F3 RID: 41459
+		// (get) Token: 0x06024239 RID: 148025 RVA: 0x004F825A File Offset: 0x004F645A
+		// (set) Token: 0x0602423A RID: 148026 RVA: 0x004F8262 File Offset: 0x004F6462
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x170099F8 RID: 39416
-		// (get) Token: 0x060222A5 RID: 139941 RVA: 0x004BD7A7 File Offset: 0x004BB9A7
-		// (set) Token: 0x060222A6 RID: 139942 RVA: 0x004BD7AF File Offset: 0x004BB9AF
+		// Token: 0x1700A1F4 RID: 41460
+		// (get) Token: 0x0602423B RID: 148027 RVA: 0x004F826B File Offset: 0x004F646B
+		// (set) Token: 0x0602423C RID: 148028 RVA: 0x004F8273 File Offset: 0x004F6473
 		public float Angle { get; set; }
 
-		// Token: 0x060222A7 RID: 139943 RVA: 0x004BD7B8 File Offset: 0x004BB9B8
+		// Token: 0x0602423D RID: 148029 RVA: 0x004F827C File Offset: 0x004F647C
 		public IFaceToTargetMotorInteractConstraintT()
 		{
 			this.Type = EMotorInteractConstraintType.FaceToTarget;

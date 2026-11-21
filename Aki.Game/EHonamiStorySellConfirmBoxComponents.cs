@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001EEF RID: 7919
+// Token: 0x020013B1 RID: 5041
 public enum EHonamiStorySellConfirmBoxComponents
 {
-	// Token: 0x040070D9 RID: 28889
+	// Token: 0x040071BA RID: 29114
 	BgSprite,
-	// Token: 0x040070DA RID: 28890
+	// Token: 0x040071BB RID: 29115
 	IconTexture,
-	// Token: 0x040070DB RID: 28891
+	// Token: 0x040071BC RID: 29116
 	NameText,
-	// Token: 0x040070DC RID: 28892
+	// Token: 0x040071BD RID: 29117
 	NumberText,
-	// Token: 0x040070DD RID: 28893
+	// Token: 0x040071BE RID: 29118
 	CostIconTexture
 }

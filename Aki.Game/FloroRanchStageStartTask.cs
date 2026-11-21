@@ -5,18 +5,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B4F RID: 6991
+// Token: 0x0200100E RID: 4110
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchStageStartTask : FloroRanchDailyTaskBase
 {
-	// Token: 0x0600CF69 RID: 53097 RVA: 0x002F4087 File Offset: 0x002F2287
+	// Token: 0x0600A37A RID: 41850 RVA: 0x002FF15F File Offset: 0x002FD35F
 	public FloroRanchStageStartTask(FloroRanchStageStart data)
 	{
 		this.StageStartData = data;
 	}
 
-	// Token: 0x0600CF6A RID: 53098 RVA: 0x002F4098 File Offset: 0x002F2298
+	// Token: 0x0600A37B RID: 41851 RVA: 0x002FF170 File Offset: 0x002FD370
 	protected override void OnExecute()
 	{
 		FloroRanchGamePlayModel.Instance.OnStageStart(this.StageStartData);
@@ -36,6 +36,6 @@ public class FloroRanchStageStartTask : FloroRanchDailyTaskBase
 		}, null);
 	}
 
-	// Token: 0x04005F6A RID: 24426
+	// Token: 0x04006039 RID: 24633
 	private readonly FloroRanchStageStart StageStartData;
 }

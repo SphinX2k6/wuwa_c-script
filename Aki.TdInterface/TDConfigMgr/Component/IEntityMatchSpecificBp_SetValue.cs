@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200032E RID: 814
+	// Token: 0x02000375 RID: 885
 	public class IEntityMatchSpecificBp_SetValue
 	{
-		// Token: 0x04000D8B RID: 3467
+		// Token: 0x04000E76 RID: 3702
 		public EEntityMatchType Type;
 
-		// Token: 0x04000D8C RID: 3468
-		[Nullable(1)]
+		// Token: 0x04000E77 RID: 3703
 		public List<string> SpecificBpList;
 	}
 }

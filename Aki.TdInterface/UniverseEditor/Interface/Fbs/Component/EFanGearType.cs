@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DA0 RID: 19872
+	// Token: 0x020052A2 RID: 21154
 	public enum EFanGearType : byte
 	{
-		// Token: 0x0400D98B RID: 55691
+		// Token: 0x0400E4D2 RID: 58578
 		ReboundPlateGear,
-		// Token: 0x0400D98C RID: 55692
+		// Token: 0x0400E4D3 RID: 58579
 		LightDeliver
 	}
 }

@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005959 RID: 22873
+	// Token: 0x02004932 RID: 18738
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GiantBodyActor : IStaticVariableResetter
 	{
-		// Token: 0x0603A079 RID: 237689 RVA: 0x00DCB19C File Offset: 0x00DC939C
+		// Token: 0x0602EF9C RID: 192412 RVA: 0x00D1A450 File Offset: 0x00D18650
 		static GiantBodyActor()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GiantBodyActor.CreateStaticDefaultValue), new Action(GiantBodyActor.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603A07A RID: 237690 RVA: 0x00DCB1D4 File Offset: 0x00DC93D4
+		// Token: 0x0602EF9D RID: 192413 RVA: 0x00D1A488 File Offset: 0x00D18688
 		public static void CreateStaticDefaultValue()
 		{
 			GiantBodyActor.Actor = null;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Giant
 			GiantBodyActor.CurrentMontageBlendOutCallback = null;
 		}
 
-		// Token: 0x0603A07B RID: 237691 RVA: 0x00DCB1EE File Offset: 0x00DC93EE
+		// Token: 0x0602EF9E RID: 192414 RVA: 0x00D1A4A2 File Offset: 0x00D186A2
 		public static void ResetStaticDefaultValue()
 		{
 			GiantBodyActor.Actor = null;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Giant
 			GiantBodyActor.CurrentMontageBlendOutCallback = null;
 		}
 
-		// Token: 0x0603A07C RID: 237692 RVA: 0x00DCB208 File Offset: 0x00DC9408
+		// Token: 0x0602EF9F RID: 192415 RVA: 0x00D1A4BC File Offset: 0x00D186BC
 		public static void Spawn(Action onSpawned = null)
 		{
 			string path = GiantConfig.GetGiantBodyActorClassPath();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Giant
 			}, "js_undefined");
 		}
 
-		// Token: 0x0603A07D RID: 237693 RVA: 0x00DCB258 File Offset: 0x00DC9458
+		// Token: 0x0602EFA0 RID: 192416 RVA: 0x00D1A50C File Offset: 0x00D1870C
 		public static void SetBodyVisible(bool visible)
 		{
 			AActor actor = GiantBodyActor.Actor;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Giant
 			actor.SetActorHiddenInGame(!visible);
 		}
 
-		// Token: 0x0603A07E RID: 237694 RVA: 0x00DCB287 File Offset: 0x00DC9487
+		// Token: 0x0602EFA1 RID: 192417 RVA: 0x00D1A53B File Offset: 0x00D1873B
 		public static void Destroy()
 		{
 			GiantBodyActor.ClearMontageBinding();
@@ -110,20 +110,20 @@ namespace CSharpScript.Game.Module.Giant
 			GiantBodyActor.Actor = null;
 		}
 
-		// Token: 0x0603A07F RID: 237695 RVA: 0x00DCB2C3 File Offset: 0x00DC94C3
+		// Token: 0x0602EFA2 RID: 192418 RVA: 0x00D1A577 File Offset: 0x00D18777
 		public static bool IsSpawned()
 		{
 			AActor actor = GiantBodyActor.Actor;
 			return actor != null && actor.IsValid();
 		}
 
-		// Token: 0x0603A080 RID: 237696 RVA: 0x00DCB2D5 File Offset: 0x00DC94D5
+		// Token: 0x0602EFA3 RID: 192419 RVA: 0x00D1A589 File Offset: 0x00D18789
 		public static AActor GetActor()
 		{
 			return GiantBodyActor.Actor;
 		}
 
-		// Token: 0x0603A081 RID: 237697 RVA: 0x00DCB2DC File Offset: 0x00DC94DC
+		// Token: 0x0602EFA4 RID: 192420 RVA: 0x00D1A590 File Offset: 0x00D18790
 		[NullableContext(1)]
 		public static void SetCurrentIdleAnimKey(string idleKey)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Giant
 			ghostTitanAnim.CurrentIdleType = (FNameUtil.GetDynamicFName(idleKey) ?? FNameUtil.NONE);
 		}
 
-		// Token: 0x0603A082 RID: 237698 RVA: 0x00DCB318 File Offset: 0x00DC9518
+		// Token: 0x0602EFA5 RID: 192421 RVA: 0x00D1A5CC File Offset: 0x00D187CC
 		public static void SetRestVariantIsA(bool value)
 		{
 			ABP_GhostTitan_C ghostTitanAnim = GiantBodyActor.GetGhostTitanAnim();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Giant
 			ghostTitanAnim.RestVariantIsA = value;
 		}
 
-		// Token: 0x0603A083 RID: 237699 RVA: 0x00DCB338 File Offset: 0x00DC9538
+		// Token: 0x0602EFA6 RID: 192422 RVA: 0x00D1A5EC File Offset: 0x00D187EC
 		public static void SetSightTargetDirect(float x, float y, float z)
 		{
 			ABP_GhostTitan_C ghostTitanAnim = GiantBodyActor.GetGhostTitanAnim();
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Giant
 			ghostTitanAnim.SightTargetDirect = sightTargetVector;
 		}
 
-		// Token: 0x0603A084 RID: 237700 RVA: 0x00DCB374 File Offset: 0x00DC9574
+		// Token: 0x0602EFA7 RID: 192423 RVA: 0x00D1A628 File Offset: 0x00D18828
 		public static void SetSightPlayingSpecial(bool value)
 		{
 			ABP_GhostTitan_C ghostTitanAnim = GiantBodyActor.GetGhostTitanAnim();
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Giant
 			ghostTitanAnim.IsPlayingSpecial = value;
 		}
 
-		// Token: 0x0603A085 RID: 237701 RVA: 0x00DCB394 File Offset: 0x00DC9594
+		// Token: 0x0602EFA8 RID: 192424 RVA: 0x00D1A648 File Offset: 0x00D18848
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Giant
 			return <PlayMontage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A086 RID: 237702 RVA: 0x00DCB3D8 File Offset: 0x00DC95D8
+		// Token: 0x0602EFA9 RID: 192425 RVA: 0x00D1A68C File Offset: 0x00D1888C
 		public static void StopCurrentMontage()
 		{
 			UAnimInstance animInstance = GiantBodyActor.GetAnimInstance();
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Giant
 			animInstance.Montage_Stop(0.25f, currentMontage);
 		}
 
-		// Token: 0x0603A087 RID: 237703 RVA: 0x00DCB404 File Offset: 0x00DC9604
+		// Token: 0x0602EFAA RID: 192426 RVA: 0x00D1A6B8 File Offset: 0x00D188B8
 		private static void OnMontageBlendingOut(UAnimMontage montage, bool bInterrupted)
 		{
 			if (montage != GiantBodyActor.CurrentMontage)
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.Giant
 			currentMontageBlendOutCallback();
 		}
 
-		// Token: 0x0603A088 RID: 237704 RVA: 0x00DCB424 File Offset: 0x00DC9624
+		// Token: 0x0602EFAB RID: 192427 RVA: 0x00D1A6D8 File Offset: 0x00D188D8
 		private static void ClearMontageBinding()
 		{
 			UAnimInstance animInstance = GiantBodyActor.GetAnimInstance();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Giant
 			GiantBodyActor.CurrentMontageBlendOutCallback = null;
 		}
 
-		// Token: 0x0603A089 RID: 237705 RVA: 0x00DCB46C File Offset: 0x00DC966C
+		// Token: 0x0602EFAC RID: 192428 RVA: 0x00D1A720 File Offset: 0x00D18920
 		private static ABP_GhostTitan_C GetGhostTitanAnim()
 		{
 			ABP_GhostTitan_C ghostTitanAnim = GiantBodyActor.GhostTitanAnim;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Giant
 			return GiantBodyActor.GhostTitanAnim = (animInstance as ABP_GhostTitan_C);
 		}
 
-		// Token: 0x0603A08A RID: 237706 RVA: 0x00DCB4B6 File Offset: 0x00DC96B6
+		// Token: 0x0602EFAD RID: 192429 RVA: 0x00D1A76A File Offset: 0x00D1896A
 		private static UAnimInstance GetAnimInstance()
 		{
 			USkeletalMeshComponent skeletalMesh = GiantBodyActor.GetSkeletalMesh();
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Giant
 			return skeletalMesh.GetAnimInstance();
 		}
 
-		// Token: 0x0603A08B RID: 237707 RVA: 0x00DCB4C8 File Offset: 0x00DC96C8
+		// Token: 0x0602EFAE RID: 192430 RVA: 0x00D1A77C File Offset: 0x00D1897C
 		public static USkeletalMeshComponent GetSkeletalMesh()
 		{
 			AActor actor = GiantBodyActor.Actor;
@@ -273,27 +273,27 @@ namespace CSharpScript.Game.Module.Giant
 			return actor.GetComponentByClass(USkeletalMeshComponent.StaticClass()) as USkeletalMeshComponent;
 		}
 
-		// Token: 0x0401E459 RID: 123993
+		// Token: 0x04018EF6 RID: 102134
 		private static AActor Actor;
 
-		// Token: 0x0401E45A RID: 123994
+		// Token: 0x04018EF7 RID: 102135
 		private static ABP_GhostTitan_C GhostTitanAnim;
 
-		// Token: 0x0401E45B RID: 123995
+		// Token: 0x04018EF8 RID: 102136
 		[StaticVariableRuleIgnore]
 		private static readonly FVector SightTargetVector = new FVector(0f, 0f, 0f);
 
-		// Token: 0x0401E45C RID: 123996
+		// Token: 0x04018EF9 RID: 102137
 		private static UAnimMontage CurrentMontage;
 
-		// Token: 0x0401E45D RID: 123997
+		// Token: 0x04018EFA RID: 102138
 		private static Action CurrentMontageBlendOutCallback;
 
-		// Token: 0x0200BBE5 RID: 48101
+		// Token: 0x0200A5F4 RID: 42484
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04038BB5 RID: 232373
+			// Token: 0x04033594 RID: 210324
 			[Nullable(new byte[]
 			{
 				0,

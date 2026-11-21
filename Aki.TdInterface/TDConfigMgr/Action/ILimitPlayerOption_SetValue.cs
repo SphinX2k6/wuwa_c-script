@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B97 RID: 7063
+	// Token: 0x02001D44 RID: 7492
 	public class ILimitPlayerOption_SetValue
 	{
-		// Token: 0x04005C52 RID: 23634
+		// Token: 0x040060EB RID: 24811
 		public ELimitPlayOperation Type;
 	}
 }

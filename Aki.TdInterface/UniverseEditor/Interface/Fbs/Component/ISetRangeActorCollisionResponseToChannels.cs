@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005903 RID: 22787
+	// Token: 0x02005F10 RID: 24336
 	public struct ISetRangeActorCollisionResponseToChannels : IFlatbufferObject
 	{
-		// Token: 0x1700AACA RID: 43722
-		// (get) Token: 0x0602681E RID: 157726 RVA: 0x0054E390 File Offset: 0x0054C590
+		// Token: 0x1700B3FE RID: 46078
+		// (get) Token: 0x06028D88 RID: 167304 RVA: 0x00594FFC File Offset: 0x005931FC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,21 +16,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602681F RID: 157727 RVA: 0x0054E39D File Offset: 0x0054C59D
+		// Token: 0x06028D89 RID: 167305 RVA: 0x00595009 File Offset: 0x00593209
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Struct(_i, _bb);
 		}
 
-		// Token: 0x06026820 RID: 157728 RVA: 0x0054E3AC File Offset: 0x0054C5AC
+		// Token: 0x06028D8A RID: 167306 RVA: 0x00595018 File Offset: 0x00593218
 		public ISetRangeActorCollisionResponseToChannels __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AACB RID: 43723
-		// (get) Token: 0x06026821 RID: 157729 RVA: 0x0054E3BC File Offset: 0x0054C5BC
+		// Token: 0x1700B3FF RID: 46079
+		// (get) Token: 0x06028D8B RID: 167307 RVA: 0x00595028 File Offset: 0x00593228
 		public ECollisionChannelType CollisionChannelType
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AACC RID: 43724
-		// (get) Token: 0x06026822 RID: 157730 RVA: 0x0054E3D9 File Offset: 0x0054C5D9
+		// Token: 0x1700B400 RID: 46080
+		// (get) Token: 0x06028D8C RID: 167308 RVA: 0x00595045 File Offset: 0x00593245
 		public ECollisionResponseType CollisionResponseType
 		{
 			get
@@ -49,7 +49,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026823 RID: 157731 RVA: 0x0054E3F8 File Offset: 0x0054C5F8
+		// Token: 0x06028D8D RID: 167309 RVA: 0x00595064 File Offset: 0x00593264
 		public static Offset<ISetRangeActorCollisionResponseToChannels> CreateISetRangeActorCollisionResponseToChannels(FlatBufferBuilder builder, ECollisionChannelType CollisionChannelType, ECollisionResponseType CollisionResponseType)
 		{
 			builder.Prep(1, 2);
@@ -58,7 +58,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new Offset<ISetRangeActorCollisionResponseToChannels>(builder.Offset);
 		}
 
-		// Token: 0x06026824 RID: 157732 RVA: 0x0054E41C File Offset: 0x0054C61C
+		// Token: 0x06028D8E RID: 167310 RVA: 0x00595088 File Offset: 0x00593288
 		public ISetRangeActorCollisionResponseToChannelsT UnPack()
 		{
 			ISetRangeActorCollisionResponseToChannelsT setRangeActorCollisionResponseToChannelsT = new ISetRangeActorCollisionResponseToChannelsT();
@@ -66,14 +66,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return setRangeActorCollisionResponseToChannelsT;
 		}
 
-		// Token: 0x06026825 RID: 157733 RVA: 0x0054E437 File Offset: 0x0054C637
+		// Token: 0x06028D8F RID: 167311 RVA: 0x005950A3 File Offset: 0x005932A3
 		public void UnPackTo(ISetRangeActorCollisionResponseToChannelsT _o)
 		{
 			_o.CollisionChannelType = this.CollisionChannelType;
 			_o.CollisionResponseType = this.CollisionResponseType;
 		}
 
-		// Token: 0x06026826 RID: 157734 RVA: 0x0054E454 File Offset: 0x0054C654
+		// Token: 0x06028D90 RID: 167312 RVA: 0x005950C0 File Offset: 0x005932C0
 		public static Offset<ISetRangeActorCollisionResponseToChannels> Pack(FlatBufferBuilder builder, ISetRangeActorCollisionResponseToChannelsT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISetRangeActorCollisionResponseToChannels.CreateISetRangeActorCollisionResponseToChannels(builder, _o.CollisionChannelType, _o.CollisionResponseType);
 		}
 
-		// Token: 0x0400EEA2 RID: 61090
+		// Token: 0x0400FB97 RID: 64407
 		private Struct __p;
 	}
 }

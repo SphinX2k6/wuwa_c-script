@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200269A RID: 9882
+	// Token: 0x0200295D RID: 10589
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICustomShowUi
 	{
-		// Token: 0x0600DD33 RID: 56627 RVA: 0x0020DEB2 File Offset: 0x0020C0B2
-		[NullableContext(1)]
+		// Token: 0x0600EB0A RID: 60170 RVA: 0x0022A652 File Offset: 0x00228852
+		[NullableContext(0)]
 		public static ICustomShowUi Create(ICustomShowUi? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041C1 RID: 16833
-		// (get) Token: 0x0600DD34 RID: 56628 RVA: 0x0020DED1 File Offset: 0x0020C0D1
+		// Token: 0x170044FE RID: 17662
+		// (get) Token: 0x0600EB0B RID: 60171 RVA: 0x0022A671 File Offset: 0x00228871
 		public virtual ICustomScreenTextSetting TextSetting
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041C2 RID: 16834
-		// (get) Token: 0x0600DD35 RID: 56629 RVA: 0x0020DF08 File Offset: 0x0020C108
+		// Token: 0x170044FF RID: 17663
+		// (get) Token: 0x0600EB0C RID: 60172 RVA: 0x0022A6A8 File Offset: 0x002288A8
 		public virtual bool? IsHideCircle
 		{
 			get
@@ -53,13 +53,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ADC RID: 31452
+		// Token: 0x04008179 RID: 33145
 		private ICustomShowUi Instance;
 
-		// Token: 0x04007ADD RID: 31453
+		// Token: 0x0400817A RID: 33146
 		private ICustomScreenTextSetting _TextSettingCache;
 
-		// Token: 0x04007ADE RID: 31454
+		// Token: 0x0400817B RID: 33147
 		private bool _TextSettingInited;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A3E RID: 6718
+	// Token: 0x02001BD3 RID: 7123
 	public class IFaceExpressionTextureMultiSlotConfig_SetValue
 	{
-		// Token: 0x040058E8 RID: 22760
+		// Token: 0x04005D4D RID: 23885
 		public EFaceExpressionConfigType Type;
 
-		// Token: 0x040058E9 RID: 22761
+		// Token: 0x04005D4E RID: 23886
 		public int SlotIndex;
 
-		// Token: 0x040058EA RID: 22762
+		// Token: 0x04005D4F RID: 23887
 		public int FaceIndex;
 	}
 }

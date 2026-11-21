@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001627 RID: 5671
+	// Token: 0x02001794 RID: 6036
 	[JsonConverter(typeof(EMoveOperationTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EMoveOperationType
 	{
-		// Token: 0x04004C1E RID: 19486
+		// Token: 0x04005012 RID: 20498
 		Enable,
-		// Token: 0x04004C1F RID: 19487
+		// Token: 0x04005013 RID: 20499
 		Disable
 	}
 }

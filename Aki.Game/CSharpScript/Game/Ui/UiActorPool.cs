@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046C8 RID: 18120
+	// Token: 0x020035F9 RID: 13817
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiActorPool : Singleton
 	{
-		// Token: 0x0602EBA5 RID: 191397 RVA: 0x00AD045C File Offset: 0x00ACE65C
+		// Token: 0x060232F1 RID: 144113 RVA: 0x009FEDF0 File Offset: 0x009FCFF0
 		private UiActorFactory TryGetFactory(string path)
 		{
 			UiActorFactory uiActorFactory;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Ui
 			return uiActorFactory;
 		}
 
-		// Token: 0x0602EBA6 RID: 191398 RVA: 0x00AD0494 File Offset: 0x00ACE694
+		// Token: 0x060232F2 RID: 144114 RVA: 0x009FEE28 File Offset: 0x009FD028
 		[return: Nullable(2)]
 		private UiActorFactory GetFactory(string path)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Ui
 			return result;
 		}
 
-		// Token: 0x0602EBA7 RID: 191399 RVA: 0x00AD04B4 File Offset: 0x00ACE6B4
+		// Token: 0x060232F3 RID: 144115 RVA: 0x009FEE48 File Offset: 0x009FD048
 		public UniTask Init()
 		{
 			UiActorPool.<Init>d__8 <Init>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Ui
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBA8 RID: 191400 RVA: 0x00AD04F8 File Offset: 0x00ACE6F8
+		// Token: 0x060232F4 RID: 144116 RVA: 0x009FEE8C File Offset: 0x009FD08C
 		private UniTask PreloadActor()
 		{
 			UiActorPool.<PreloadActor>d__9 <PreloadActor>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Ui
 			return <PreloadActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBA9 RID: 191401 RVA: 0x00AD053C File Offset: 0x00ACE73C
+		// Token: 0x060232F5 RID: 144117 RVA: 0x009FEED0 File Offset: 0x009FD0D0
 		public void Tick(float deltaTime)
 		{
 			int num = 1;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EBAA RID: 191402 RVA: 0x00AD059C File Offset: 0x00ACE79C
+		// Token: 0x060232F6 RID: 144118 RVA: 0x009FEF30 File Offset: 0x009FD130
 		public void ClearPool()
 		{
 			List<string> list = new List<string>();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EBAB RID: 191403 RVA: 0x00AD065C File Offset: 0x00ACE85C
+		// Token: 0x060232F7 RID: 144119 RVA: 0x009FEFF0 File Offset: 0x009FD1F0
 		public void SetKeepWhileCleaning(string path, bool isKeepWhileCleaning)
 		{
 			if (!this.IsOpenPool)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Ui
 			this.TryGetFactory(path).IsKeepWhileCleaning = isKeepWhileCleaning;
 		}
 
-		// Token: 0x0602EBAC RID: 191404 RVA: 0x00AD0674 File Offset: 0x00ACE874
+		// Token: 0x060232F8 RID: 144120 RVA: 0x009FF008 File Offset: 0x009FD208
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Ui
 			return <GetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBAD RID: 191405 RVA: 0x00AD06C8 File Offset: 0x00ACE8C8
+		// Token: 0x060232F9 RID: 144121 RVA: 0x009FF05C File Offset: 0x009FD25C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadUiPoolActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBAE RID: 191406 RVA: 0x00AD0714 File Offset: 0x00ACE914
+		// Token: 0x060232FA RID: 144122 RVA: 0x009FF0A8 File Offset: 0x009FD2A8
 		public void RecycleAsync([Nullable(2)] UiPoolActor uiPoolActor, string path)
 		{
 			UiActorFactory factory = this.GetFactory(path);
@@ -147,8 +147,8 @@ namespace CSharpScript.Game.Ui
 			factory.Release(uiPoolActor);
 		}
 
-		// Token: 0x17007672 RID: 30322
-		// (get) Token: 0x0602EBAF RID: 191407 RVA: 0x00AD0749 File Offset: 0x00ACE949
+		// Token: 0x1700492E RID: 18734
+		// (get) Token: 0x060232FB RID: 144123 RVA: 0x009FF0DD File Offset: 0x009FD2DD
 		public static UiActorPool Instance
 		{
 			get
@@ -162,12 +162,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EBB0 RID: 191408 RVA: 0x00AD076C File Offset: 0x00ACE96C
+		// Token: 0x060232FC RID: 144124 RVA: 0x009FF100 File Offset: 0x009FD300
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EBB1 RID: 191409 RVA: 0x00AD076E File Offset: 0x00ACE96E
+		// Token: 0x060232FD RID: 144125 RVA: 0x009FF102 File Offset: 0x009FD302
 		public static void ResetStaticDefaultValue()
 		{
 			UiActorPool instance = UiActorPool._instance;
@@ -178,32 +178,32 @@ namespace CSharpScript.Game.Ui
 			UiActorPool._instance = null;
 		}
 
-		// Token: 0x0602EBB2 RID: 191410 RVA: 0x00AD0787 File Offset: 0x00ACE987
+		// Token: 0x060232FE RID: 144126 RVA: 0x009FF11B File Offset: 0x009FD31B
 		static UiActorPool()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiActorPool.CreateStaticDefaultValue), new Action(UiActorPool.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019700 RID: 104192
+		// Token: 0x04013DA7 RID: 81319
 		private const int TICK_GARBAGE_MAXCOUNT = 1;
 
-		// Token: 0x04019701 RID: 104193
+		// Token: 0x04013DA8 RID: 81320
 		private readonly Dictionary<string, UiActorFactory> FactoryMap = new Dictionary<string, UiActorFactory>();
 
-		// Token: 0x04019702 RID: 104194
+		// Token: 0x04013DA9 RID: 81321
 		private readonly Stat StatTick = Stat.Create("UiActorPool.Tick", "", "");
 
-		// Token: 0x04019703 RID: 104195
+		// Token: 0x04013DAA RID: 81322
 		[Nullable(2)]
 		private UUIItem PoolRootActor;
 
-		// Token: 0x04019704 RID: 104196
+		// Token: 0x04013DAB RID: 81323
 		public Dictionary<string, Func<int>> PrepareConfigMap = new Dictionary<string, Func<int>>();
 
-		// Token: 0x04019705 RID: 104197
+		// Token: 0x04013DAC RID: 81324
 		public bool IsOpenPool = true;
 
-		// Token: 0x04019706 RID: 104198
+		// Token: 0x04013DAD RID: 81325
 		[Nullable(2)]
 		private static UiActorPool _instance;
 	}

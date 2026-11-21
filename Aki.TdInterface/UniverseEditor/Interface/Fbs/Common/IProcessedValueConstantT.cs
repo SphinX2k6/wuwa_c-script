@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E40 RID: 24128
+	// Token: 0x02006480 RID: 25728
 	public class IProcessedValueConstantT
 	{
-		// Token: 0x1700B46A RID: 46186
-		// (get) Token: 0x060294E0 RID: 169184 RVA: 0x005A9D1C File Offset: 0x005A7F1C
-		// (set) Token: 0x060294E1 RID: 169185 RVA: 0x005A9D24 File Offset: 0x005A7F24
+		// Token: 0x1700BDD3 RID: 48595
+		// (get) Token: 0x0602BB7C RID: 179068 RVA: 0x005F2BC4 File Offset: 0x005F0DC4
+		// (set) Token: 0x0602BB7D RID: 179069 RVA: 0x005F2BCC File Offset: 0x005F0DCC
 		public EProcessedValueType Type { get; set; }
 
-		// Token: 0x1700B46B RID: 46187
-		// (get) Token: 0x060294E2 RID: 169186 RVA: 0x005A9D2D File Offset: 0x005A7F2D
-		// (set) Token: 0x060294E3 RID: 169187 RVA: 0x005A9D35 File Offset: 0x005A7F35
+		// Token: 0x1700BDD4 RID: 48596
+		// (get) Token: 0x0602BB7E RID: 179070 RVA: 0x005F2BD5 File Offset: 0x005F0DD5
+		// (set) Token: 0x0602BB7F RID: 179071 RVA: 0x005F2BDD File Offset: 0x005F0DDD
 		public float Value { get; set; }
 
-		// Token: 0x060294E4 RID: 169188 RVA: 0x005A9D3E File Offset: 0x005A7F3E
+		// Token: 0x0602BB80 RID: 179072 RVA: 0x005F2BE6 File Offset: 0x005F0DE6
 		public IProcessedValueConstantT()
 		{
 			this.Type = EProcessedValueType.Constant;

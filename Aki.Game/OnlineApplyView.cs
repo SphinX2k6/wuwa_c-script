@@ -7,16 +7,16 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020022E9 RID: 8937
+// Token: 0x020017CD RID: 6093
 public class OnlineApplyView : UiTickViewBase
 {
-	// Token: 0x060119B6 RID: 72118 RVA: 0x0045092D File Offset: 0x0044EB2D
+	// Token: 0x0600EE4E RID: 61006 RVA: 0x0045D5F9 File Offset: 0x0045B7F9
 	[NullableContext(1)]
 	public OnlineApplyView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060119B7 RID: 72119 RVA: 0x00450938 File Offset: 0x0044EB38
+	// Token: 0x0600EE4F RID: 61007 RVA: 0x0045D604 File Offset: 0x0045B804
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -61,7 +61,7 @@ public class OnlineApplyView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060119B8 RID: 72120 RVA: 0x00450B71 File Offset: 0x0044ED71
+	// Token: 0x0600EE50 RID: 61008 RVA: 0x0045D83D File Offset: 0x0045BA3D
 	protected override void OnStart()
 	{
 		this.CountDown = base.GetText(5);
@@ -71,7 +71,7 @@ public class OnlineApplyView : UiTickViewBase
 		this.RefreshThirdPartyItem();
 	}
 
-	// Token: 0x060119B9 RID: 72121 RVA: 0x00450BA0 File Offset: 0x0044EDA0
+	// Token: 0x0600EE51 RID: 61009 RVA: 0x0045D86C File Offset: 0x0045BA6C
 	protected override void OnTick(float delta)
 	{
 		OnlineApplyData currentApply = OnlineModel.Instance.CurrentApply;
@@ -88,19 +88,19 @@ public class OnlineApplyView : UiTickViewBase
 		this.CountDownBar.SetFillAmount((float)currentApply.ApplyTimeLeftTime / (float)OnlineModel.Instance.ApplyCd);
 	}
 
-	// Token: 0x060119BA RID: 72122 RVA: 0x00450C1D File Offset: 0x0044EE1D
+	// Token: 0x0600EE52 RID: 61010 RVA: 0x0045D8E9 File Offset: 0x0045BAE9
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshApply, new Action(this.CallServerNotifyOnlineApply));
 	}
 
-	// Token: 0x060119BB RID: 72123 RVA: 0x00450C3B File Offset: 0x0044EE3B
+	// Token: 0x0600EE53 RID: 61011 RVA: 0x0045D907 File Offset: 0x0045BB07
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshApply, new Action(this.CallServerNotifyOnlineApply));
 	}
 
-	// Token: 0x060119BC RID: 72124 RVA: 0x00450C5C File Offset: 0x0044EE5C
+	// Token: 0x0600EE54 RID: 61012 RVA: 0x0045D928 File Offset: 0x0045BB28
 	public void RefreshView()
 	{
 		int currentApplySize = OnlineModel.Instance.GetCurrentApplySize();
@@ -140,7 +140,7 @@ public class OnlineApplyView : UiTickViewBase
 		button.RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x060119BD RID: 72125 RVA: 0x00450DA0 File Offset: 0x0044EFA0
+	// Token: 0x0600EE55 RID: 61013 RVA: 0x0045DA6C File Offset: 0x0045BC6C
 	private void OnClickHandleBtn()
 	{
 		if (OnlineModel.Instance.GetCurrentApplySize() > 1)
@@ -158,7 +158,7 @@ public class OnlineApplyView : UiTickViewBase
 		OnlineController.Instance.AgreeJoinResultRequest(OnlineModel.Instance.CurrentApply.PlayerId, true);
 	}
 
-	// Token: 0x060119BE RID: 72126 RVA: 0x00450E28 File Offset: 0x0044F028
+	// Token: 0x0600EE56 RID: 61014 RVA: 0x0045DAF4 File Offset: 0x0045BCF4
 	private void OnClickCancelBtn()
 	{
 		if (OnlineModel.Instance.CurrentApply == null)
@@ -170,7 +170,7 @@ public class OnlineApplyView : UiTickViewBase
 		OnlineController.Instance.AgreeJoinResultRequest(OnlineModel.Instance.CurrentApply.PlayerId, false);
 	}
 
-	// Token: 0x060119BF RID: 72127 RVA: 0x00450E88 File Offset: 0x0044F088
+	// Token: 0x0600EE57 RID: 61015 RVA: 0x0045DB54 File Offset: 0x0045BD54
 	private void RefreshPcItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -196,7 +196,7 @@ public class OnlineApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119C0 RID: 72128 RVA: 0x00450EE8 File Offset: 0x0044F0E8
+	// Token: 0x0600EE58 RID: 61016 RVA: 0x0045DBB4 File Offset: 0x0045BDB4
 	private void RefreshThirdPartyItem()
 	{
 		if (KuroSdkController.Instance.NeedShowThirdPartyId())
@@ -239,51 +239,51 @@ public class OnlineApplyView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060119C1 RID: 72129 RVA: 0x00450FB8 File Offset: 0x0044F1B8
+	// Token: 0x0600EE59 RID: 61017 RVA: 0x0045DC84 File Offset: 0x0045BE84
 	private void CallServerNotifyOnlineApply()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x040085AC RID: 34220
+	// Token: 0x040086EA RID: 34538
 	[Nullable(2)]
 	private UUIText CountDown;
 
-	// Token: 0x040085AD RID: 34221
+	// Token: 0x040086EB RID: 34539
 	[Nullable(2)]
 	private UUISprite CountDownBar;
 
-	// Token: 0x040085AE RID: 34222
+	// Token: 0x040086EC RID: 34540
 	private bool HaveClosed;
 
-	// Token: 0x0200885F RID: 34911
+	// Token: 0x020079E3 RID: 31203
 	private enum EOnlineApplyView
 	{
-		// Token: 0x0402C4EB RID: 181483
+		// Token: 0x040277ED RID: 161773
 		RoleTexture,
-		// Token: 0x0402C4EC RID: 181484
+		// Token: 0x040277EE RID: 161774
 		PlayerName,
-		// Token: 0x0402C4ED RID: 181485
+		// Token: 0x040277EF RID: 161775
 		HandleBtn,
-		// Token: 0x0402C4EE RID: 181486
+		// Token: 0x040277F0 RID: 161776
 		ApplySprite,
-		// Token: 0x0402C4EF RID: 181487
+		// Token: 0x040277F1 RID: 161777
 		MoreSprite,
-		// Token: 0x0402C4F0 RID: 181488
+		// Token: 0x040277F2 RID: 161778
 		CountDown,
-		// Token: 0x0402C4F1 RID: 181489
+		// Token: 0x040277F3 RID: 161779
 		CountDownProgressBar,
-		// Token: 0x0402C4F2 RID: 181490
+		// Token: 0x040277F4 RID: 161780
 		MultipleApplyText,
-		// Token: 0x0402C4F3 RID: 181491
+		// Token: 0x040277F5 RID: 161781
 		CancelBtn,
-		// Token: 0x0402C4F4 RID: 181492
+		// Token: 0x040277F6 RID: 161782
 		TexturePc = 15,
-		// Token: 0x0402C4F5 RID: 181493
+		// Token: 0x040277F7 RID: 161783
 		ThirdPartyItem,
-		// Token: 0x0402C4F6 RID: 181494
+		// Token: 0x040277F8 RID: 161784
 		ThirdPartyText,
-		// Token: 0x0402C4F7 RID: 181495
+		// Token: 0x040277F9 RID: 161785
 		ThirdPartyTexture
 	}
 }

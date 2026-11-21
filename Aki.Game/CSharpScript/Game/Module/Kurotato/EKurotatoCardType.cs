@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056DA RID: 22234
+	// Token: 0x020046B1 RID: 18097
 	public enum EKurotatoCardType
 	{
-		// Token: 0x0401DB4C RID: 121676
+		// Token: 0x040185E2 RID: 99810
 		None = -1,
-		// Token: 0x0401DB4D RID: 121677
+		// Token: 0x040185E3 RID: 99811
 		Weapon,
-		// Token: 0x0401DB4E RID: 121678
+		// Token: 0x040185E4 RID: 99812
 		Item
 	}
 }

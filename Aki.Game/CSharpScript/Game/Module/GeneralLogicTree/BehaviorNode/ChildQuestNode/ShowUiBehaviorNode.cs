@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Quest;
 using CSharpScript.Game.Common.Event;
@@ -10,17 +9,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059E1 RID: 23009
+	// Token: 0x020049BA RID: 18874
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ShowUiBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4FE RID: 238846 RVA: 0x00DDE911 File Offset: 0x00DDCB11
+		// Token: 0x0602F426 RID: 193574 RVA: 0x00D2E131 File Offset: 0x00D2C331
 		public ShowUiBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4FF RID: 238847 RVA: 0x00DDE928 File Offset: 0x00DDCB28
+		// Token: 0x0602F427 RID: 193575 RVA: 0x00D2E148 File Offset: 0x00D2C348
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A500 RID: 238848 RVA: 0x00DDE97E File Offset: 0x00DDCB7E
+		// Token: 0x0602F428 RID: 193576 RVA: 0x00D2E19E File Offset: 0x00D2C39E
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -50,7 +49,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.KeepUiOpen = false;
 		}
 
-		// Token: 0x0603A501 RID: 238849 RVA: 0x00DDE994 File Offset: 0x00DDCB94
+		// Token: 0x0602F429 RID: 193577 RVA: 0x00D2E1B4 File Offset: 0x00D2C3B4
 		protected override void OnNodeActive()
 		{
 			base.OnNodeActive();
@@ -60,7 +59,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A502 RID: 238850 RVA: 0x00DDE9D0 File Offset: 0x00DDCBD0
+		// Token: 0x0602F42A RID: 193578 RVA: 0x00D2E1F0 File Offset: 0x00D2C3F0
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A503 RID: 238851 RVA: 0x00DDEA7C File Offset: 0x00DDCC7C
+		// Token: 0x0602F42B RID: 193579 RVA: 0x00D2E29C File Offset: 0x00D2C49C
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			base.RemoveEventsOnChildQuestEnd();
@@ -99,13 +98,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A504 RID: 238852 RVA: 0x00DDEB32 File Offset: 0x00DDCD32
+		// Token: 0x0602F42C RID: 193580 RVA: 0x00D2E352 File Offset: 0x00D2C552
 		private void OnViewDone()
 		{
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0603A505 RID: 238853 RVA: 0x00DDEB3C File Offset: 0x00DDCD3C
+		// Token: 0x0602F42D RID: 193581 RVA: 0x00D2E35C File Offset: 0x00D2C55C
 		private void OnCiacconaChapterFinish(int chapterId, int subEndingId)
 		{
 			int valueOrDefault = ((ICiacconaAvgBoard)this.UiType).EndingId.GetValueOrDefault();
@@ -115,17 +114,20 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A506 RID: 238854 RVA: 0x00DDEB70 File Offset: 0x00DDCD70
+		// Token: 0x0602F42E RID: 193582 RVA: 0x00D2E390 File Offset: 0x00D2C590
 		private void OnRewardViewShow()
 		{
 			ItemRewardModel instance = ItemRewardModel.Instance;
 			RewardData<IRewardInfo> rewardData = (instance != null) ? instance.GetCurrentRewardData() : null;
-			List<RewardItemData> source = ((rewardData != null) ? rewardData.GetItemList() : null) ?? new List<RewardItemData>();
-			this.ItemIdsSnapshot = (from item in source
-			select item.ConfigId).ToList<int>();
+			List<RewardItemData> list = ((rewardData != null) ? rewardData.GetItemList() : null) ?? new List<RewardItemData>();
+			this.ItemIdsSnapshot.Clear();
+			foreach (RewardItemData rewardItemData in list)
+			{
+				this.ItemIdsSnapshot.Add(rewardItemData.ConfigId);
+			}
 		}
 
-		// Token: 0x0603A507 RID: 238855 RVA: 0x00DDEBD4 File Offset: 0x00DDCDD4
+		// Token: 0x0602F42F RID: 193583 RVA: 0x00D2E418 File Offset: 0x00D2C618
 		private void OnItemObtainViewClose(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.QuestRewardView)
@@ -133,21 +135,27 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 				return;
 			}
 			IItemObtain itemObtain = (IItemObtain)this.UiType;
-			if (itemObtain.ItemIds != null && itemObtain.ItemIds.Count > 0 && !itemObtain.ItemIds.All((int id) => this.ItemIdsSnapshot.Contains(id)))
+			if (itemObtain.ItemIds != null && itemObtain.ItemIds.Count > 0)
 			{
-				return;
+				foreach (int item in itemObtain.ItemIds)
+				{
+					if (!this.ItemIdsSnapshot.Contains(item))
+					{
+						return;
+					}
+				}
 			}
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0401E671 RID: 124529
+		// Token: 0x04019110 RID: 102672
 		[Nullable(2)]
 		private IShowUi UiType;
 
-		// Token: 0x0401E672 RID: 124530
+		// Token: 0x04019111 RID: 102673
 		private bool KeepUiOpen;
 
-		// Token: 0x0401E673 RID: 124531
+		// Token: 0x04019112 RID: 102674
 		private List<int> ItemIdsSnapshot = new List<int>();
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050EA RID: 20714
+	// Token: 0x0200564F RID: 22095
 	public struct IDynamicPortalByBullet : IFlatbufferObject
 	{
-		// Token: 0x170096CC RID: 38604
-		// (get) Token: 0x06021587 RID: 136583 RVA: 0x004A1673 File Offset: 0x0049F873
+		// Token: 0x17009EB9 RID: 40633
+		// (get) Token: 0x060234DB RID: 144603 RVA: 0x004DB5FF File Offset: 0x004D97FF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021588 RID: 136584 RVA: 0x004A1680 File Offset: 0x0049F880
+		// Token: 0x060234DC RID: 144604 RVA: 0x004DB60C File Offset: 0x004D980C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021589 RID: 136585 RVA: 0x004A1688 File Offset: 0x0049F888
+		// Token: 0x060234DD RID: 144605 RVA: 0x004DB614 File Offset: 0x004D9814
 		public static IDynamicPortalByBullet GetRootAsIDynamicPortalByBullet(ByteBuffer _bb)
 		{
 			return IDynamicPortalByBullet.GetRootAsIDynamicPortalByBullet(_bb, default(IDynamicPortalByBullet));
 		}
 
-		// Token: 0x0602158A RID: 136586 RVA: 0x004A16A4 File Offset: 0x0049F8A4
+		// Token: 0x060234DE RID: 144606 RVA: 0x004DB630 File Offset: 0x004D9830
 		public static IDynamicPortalByBullet GetRootAsIDynamicPortalByBullet(ByteBuffer _bb, IDynamicPortalByBullet obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602158B RID: 136587 RVA: 0x004A16C1 File Offset: 0x0049F8C1
+		// Token: 0x060234DF RID: 144607 RVA: 0x004DB64D File Offset: 0x004D984D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602158C RID: 136588 RVA: 0x004A16D0 File Offset: 0x0049F8D0
+		// Token: 0x060234E0 RID: 144608 RVA: 0x004DB65C File Offset: 0x004D985C
 		public IDynamicPortalByBullet __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170096CD RID: 38605
-		// (get) Token: 0x0602158D RID: 136589 RVA: 0x004A16E0 File Offset: 0x0049F8E0
+		// Token: 0x17009EBA RID: 40634
+		// (get) Token: 0x060234E1 RID: 144609 RVA: 0x004DB66C File Offset: 0x004D986C
 		public EDynamicPortalCreateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096CE RID: 38606
-		// (get) Token: 0x0602158E RID: 136590 RVA: 0x004A171C File Offset: 0x0049F91C
+		// Token: 0x17009EBB RID: 40635
+		// (get) Token: 0x060234E2 RID: 144610 RVA: 0x004DB6A8 File Offset: 0x004D98A8
 		public IDynamicPortalConfig? PortalA
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096CF RID: 38607
-		// (get) Token: 0x0602158F RID: 136591 RVA: 0x004A177C File Offset: 0x0049F97C
+		// Token: 0x17009EBC RID: 40636
+		// (get) Token: 0x060234E3 RID: 144611 RVA: 0x004DB708 File Offset: 0x004D9908
 		public IDynamicPortalConfig? PortalB
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096D0 RID: 38608
-		// (get) Token: 0x06021590 RID: 136592 RVA: 0x004A17DC File Offset: 0x0049F9DC
+		// Token: 0x17009EBD RID: 40637
+		// (get) Token: 0x060234E4 RID: 144612 RVA: 0x004DB768 File Offset: 0x004D9968
 		public EPortalModel InitOpenPortal
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096D1 RID: 38609
-		// (get) Token: 0x06021591 RID: 136593 RVA: 0x004A181C File Offset: 0x0049FA1C
+		// Token: 0x17009EBE RID: 40638
+		// (get) Token: 0x060234E5 RID: 144613 RVA: 0x004DB7A8 File Offset: 0x004D99A8
 		public IPortalRenderConfig? RenderConfig
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096D2 RID: 38610
-		// (get) Token: 0x06021592 RID: 136594 RVA: 0x004A187C File Offset: 0x0049FA7C
+		// Token: 0x17009EBF RID: 40639
+		// (get) Token: 0x060234E6 RID: 144614 RVA: 0x004DB808 File Offset: 0x004D9A08
 		public IDynamicBulletConfig? TypeA
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096D3 RID: 38611
-		// (get) Token: 0x06021593 RID: 136595 RVA: 0x004A18DC File Offset: 0x0049FADC
+		// Token: 0x17009EC0 RID: 40640
+		// (get) Token: 0x060234E7 RID: 144615 RVA: 0x004DB868 File Offset: 0x004D9A68
 		public IDynamicBulletConfig? TypeB
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170096D4 RID: 38612
-		// (get) Token: 0x06021594 RID: 136596 RVA: 0x004A193C File Offset: 0x0049FB3C
+		// Token: 0x17009EC1 RID: 40641
+		// (get) Token: 0x060234E8 RID: 144616 RVA: 0x004DB8C8 File Offset: 0x004D9AC8
 		public byte NullMask
 		{
 			get
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021595 RID: 136597 RVA: 0x004A197C File Offset: 0x0049FB7C
+		// Token: 0x060234E9 RID: 144617 RVA: 0x004DB908 File Offset: 0x004D9B08
 		public static Offset<IDynamicPortalByBullet> CreateIDynamicPortalByBullet(FlatBufferBuilder builder, EDynamicPortalCreateType Type = EDynamicPortalCreateType.Bullet, Offset<IDynamicPortalConfig> PortalAOffset = default(Offset<IDynamicPortalConfig>), Offset<IDynamicPortalConfig> PortalBOffset = default(Offset<IDynamicPortalConfig>), EPortalModel InitOpenPortal = EPortalModel.A, Offset<IPortalRenderConfig> RenderConfigOffset = default(Offset<IPortalRenderConfig>), Offset<IDynamicBulletConfig> TypeAOffset = default(Offset<IDynamicBulletConfig>), Offset<IDynamicBulletConfig> TypeBOffset = default(Offset<IDynamicBulletConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -182,67 +182,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicPortalByBullet.EndIDynamicPortalByBullet(builder);
 		}
 
-		// Token: 0x06021596 RID: 136598 RVA: 0x004A19D3 File Offset: 0x0049FBD3
+		// Token: 0x060234EA RID: 144618 RVA: 0x004DB95F File Offset: 0x004D9B5F
 		public static void StartIDynamicPortalByBullet(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06021597 RID: 136599 RVA: 0x004A19DC File Offset: 0x0049FBDC
+		// Token: 0x060234EB RID: 144619 RVA: 0x004DB968 File Offset: 0x004D9B68
 		public static void AddType(FlatBufferBuilder builder, EDynamicPortalCreateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021598 RID: 136600 RVA: 0x004A19E7 File Offset: 0x0049FBE7
+		// Token: 0x060234EC RID: 144620 RVA: 0x004DB973 File Offset: 0x004D9B73
 		public static void AddPortalA(FlatBufferBuilder builder, Offset<IDynamicPortalConfig> portalAOffset)
 		{
 			builder.AddOffset(1, portalAOffset.Value, 0);
 		}
 
-		// Token: 0x06021599 RID: 136601 RVA: 0x004A19F7 File Offset: 0x0049FBF7
+		// Token: 0x060234ED RID: 144621 RVA: 0x004DB983 File Offset: 0x004D9B83
 		public static void AddPortalB(FlatBufferBuilder builder, Offset<IDynamicPortalConfig> portalBOffset)
 		{
 			builder.AddOffset(2, portalBOffset.Value, 0);
 		}
 
-		// Token: 0x0602159A RID: 136602 RVA: 0x004A1A07 File Offset: 0x0049FC07
+		// Token: 0x060234EE RID: 144622 RVA: 0x004DB993 File Offset: 0x004D9B93
 		public static void AddInitOpenPortal(FlatBufferBuilder builder, EPortalModel initOpenPortal)
 		{
 			builder.AddByte(3, (byte)initOpenPortal, 0);
 		}
 
-		// Token: 0x0602159B RID: 136603 RVA: 0x004A1A12 File Offset: 0x0049FC12
+		// Token: 0x060234EF RID: 144623 RVA: 0x004DB99E File Offset: 0x004D9B9E
 		public static void AddRenderConfig(FlatBufferBuilder builder, Offset<IPortalRenderConfig> renderConfigOffset)
 		{
 			builder.AddOffset(4, renderConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602159C RID: 136604 RVA: 0x004A1A22 File Offset: 0x0049FC22
+		// Token: 0x060234F0 RID: 144624 RVA: 0x004DB9AE File Offset: 0x004D9BAE
 		public static void AddTypeA(FlatBufferBuilder builder, Offset<IDynamicBulletConfig> typeAOffset)
 		{
 			builder.AddOffset(5, typeAOffset.Value, 0);
 		}
 
-		// Token: 0x0602159D RID: 136605 RVA: 0x004A1A32 File Offset: 0x0049FC32
+		// Token: 0x060234F1 RID: 144625 RVA: 0x004DB9BE File Offset: 0x004D9BBE
 		public static void AddTypeB(FlatBufferBuilder builder, Offset<IDynamicBulletConfig> typeBOffset)
 		{
 			builder.AddOffset(6, typeBOffset.Value, 0);
 		}
 
-		// Token: 0x0602159E RID: 136606 RVA: 0x004A1A42 File Offset: 0x0049FC42
+		// Token: 0x060234F2 RID: 144626 RVA: 0x004DB9CE File Offset: 0x004D9BCE
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x0602159F RID: 136607 RVA: 0x004A1A4D File Offset: 0x0049FC4D
+		// Token: 0x060234F3 RID: 144627 RVA: 0x004DB9D9 File Offset: 0x004D9BD9
 		public static Offset<IDynamicPortalByBullet> EndIDynamicPortalByBullet(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicPortalByBullet>(builder.EndTable());
 		}
 
-		// Token: 0x060215A0 RID: 136608 RVA: 0x004A1A5C File Offset: 0x0049FC5C
+		// Token: 0x060234F4 RID: 144628 RVA: 0x004DB9E8 File Offset: 0x004D9BE8
 		public IDynamicPortalByBulletT UnPack()
 		{
 			IDynamicPortalByBulletT dynamicPortalByBulletT = new IDynamicPortalByBulletT();
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicPortalByBulletT;
 		}
 
-		// Token: 0x060215A1 RID: 136609 RVA: 0x004A1A78 File Offset: 0x0049FC78
+		// Token: 0x060234F5 RID: 144629 RVA: 0x004DBA04 File Offset: 0x004D9C04
 		public void UnPackTo(IDynamicPortalByBulletT _o)
 		{
 			_o.Type = this.Type;
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060215A2 RID: 136610 RVA: 0x004A1B9C File Offset: 0x0049FD9C
+		// Token: 0x060234F6 RID: 144630 RVA: 0x004DBB28 File Offset: 0x004D9D28
 		public static Offset<IDynamicPortalByBullet> Pack(FlatBufferBuilder builder, IDynamicPortalByBulletT _o)
 		{
 			if (_o == null)
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicPortalByBullet.CreateIDynamicPortalByBullet(builder, _o.Type, portalAOffset, portalBOffset, _o.InitOpenPortal, renderConfigOffset, typeAOffset, typeBOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E13E RID: 57662
+		// Token: 0x0400ED3B RID: 60731
 		private Table __p;
 	}
 }

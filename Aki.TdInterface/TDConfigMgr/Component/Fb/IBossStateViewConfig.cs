@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C15 RID: 3093
+	// Token: 0x02000CE5 RID: 3301
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IBossStateViewConfig
 	{
-		// Token: 0x060046F2 RID: 18162 RVA: 0x000B2DD6 File Offset: 0x000B0FD6
-		[NullableContext(1)]
+		// Token: 0x06004B55 RID: 19285 RVA: 0x000BCFA2 File Offset: 0x000BB1A2
+		[NullableContext(0)]
 		public static IBossStateViewConfig Create(IBossStateViewConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001485 RID: 5253
-		// (get) Token: 0x060046F3 RID: 18163 RVA: 0x000B2DF5 File Offset: 0x000B0FF5
+		// Token: 0x17001586 RID: 5510
+		// (get) Token: 0x06004B56 RID: 19286 RVA: 0x000BCFC1 File Offset: 0x000BB1C1
 		public virtual EBossStateViewType BossStateViewType
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001486 RID: 5254
-		// (get) Token: 0x060046F4 RID: 18164 RVA: 0x000B2E02 File Offset: 0x000B1002
+		// Token: 0x17001587 RID: 5511
+		// (get) Token: 0x06004B57 RID: 19287 RVA: 0x000BCFCE File Offset: 0x000BB1CE
 		public virtual IDoubleViewBossStateViewStyle BossStateViewStyle
 		{
 			get
@@ -50,20 +50,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001487 RID: 5255
-		// (get) Token: 0x060046F5 RID: 18165 RVA: 0x000B2E36 File Offset: 0x000B1036
-		[Nullable(1)]
+		// Token: 0x17001588 RID: 5512
+		// (get) Token: 0x06004B58 RID: 19288 RVA: 0x000BD002 File Offset: 0x000BB202
+		[Nullable(0)]
 		public virtual string TidBossSubTitle
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TidBossSubTitle;
 			}
 		}
 
-		// Token: 0x17001488 RID: 5256
-		// (get) Token: 0x060046F6 RID: 18166 RVA: 0x000B2E44 File Offset: 0x000B1044
+		// Token: 0x17001589 RID: 5513
+		// (get) Token: 0x06004B59 RID: 19289 RVA: 0x000BD010 File Offset: 0x000BB210
 		public virtual EBossStateInfoShowType? BossStateInfoShowType
 		{
 			get
@@ -76,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001489 RID: 5257
-		// (get) Token: 0x060046F7 RID: 18167 RVA: 0x000B2E7A File Offset: 0x000B107A
+		// Token: 0x1700158A RID: 5514
+		// (get) Token: 0x06004B5A RID: 19290 RVA: 0x000BD046 File Offset: 0x000BB246
 		public virtual string TidLevelText
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700148A RID: 5258
-		// (get) Token: 0x060046F8 RID: 18168 RVA: 0x000B2E88 File Offset: 0x000B1088
+		// Token: 0x1700158B RID: 5515
+		// (get) Token: 0x06004B5B RID: 19291 RVA: 0x000BD054 File Offset: 0x000BB254
 		public virtual bool? OnlyShowInBattleState
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700148B RID: 5259
-		// (get) Token: 0x060046F9 RID: 18169 RVA: 0x000B2EC0 File Offset: 0x000B10C0
+		// Token: 0x1700158C RID: 5516
+		// (get) Token: 0x06004B5C RID: 19292 RVA: 0x000BD08C File Offset: 0x000BB28C
 		public virtual int? ShowDistance
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700148C RID: 5260
-		// (get) Token: 0x060046FA RID: 18170 RVA: 0x000B2EF6 File Offset: 0x000B10F6
+		// Token: 0x1700158D RID: 5517
+		// (get) Token: 0x06004B5D RID: 19293 RVA: 0x000BD0C2 File Offset: 0x000BB2C2
 		public virtual string EdTidBossSubTitle
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700148D RID: 5261
-		// (get) Token: 0x060046FB RID: 18171 RVA: 0x000B2EF9 File Offset: 0x000B10F9
+		// Token: 0x1700158E RID: 5518
+		// (get) Token: 0x06004B5E RID: 19294 RVA: 0x000BD0C5 File Offset: 0x000BB2C5
 		public virtual string EdTidLevelText
 		{
 			get
@@ -134,13 +134,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400284C RID: 10316
+		// Token: 0x04002A98 RID: 10904
 		private IBossStateViewConfig Instance;
 
-		// Token: 0x0400284D RID: 10317
+		// Token: 0x04002A99 RID: 10905
 		private IDoubleViewBossStateViewStyle _BossStateViewStyleCache;
 
-		// Token: 0x0400284E RID: 10318
+		// Token: 0x04002A9A RID: 10906
 		private bool _BossStateViewStyleInited;
 	}
 }

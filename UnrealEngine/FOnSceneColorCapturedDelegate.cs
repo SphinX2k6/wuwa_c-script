@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002695 RID: 9877
+	// Token: 0x020007C1 RID: 1985
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnSceneColorCapturedDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06024AC3 RID: 150211 RVA: 0x00364AF8 File Offset: 0x00362CF8
+		// Token: 0x0600ABD0 RID: 43984 RVA: 0x000FD661 File Offset: 0x000FB861
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnSceneColorCapturedDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06024AC4 RID: 150212 RVA: 0x00364B04 File Offset: 0x00362D04
+		// Token: 0x0600ABD1 RID: 43985 RVA: 0x000FD66D File Offset: 0x000FB86D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnSceneColorCapturedDelegate._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnSceneColorCapturedDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06024AC5 RID: 150213 RVA: 0x00364B27 File Offset: 0x00362D27
+		// Token: 0x0600ABD2 RID: 43986 RVA: 0x000FD690 File Offset: 0x000FB890
 		public FOnSceneColorCapturedDelegate()
 		{
 		}
 
-		// Token: 0x06024AC6 RID: 150214 RVA: 0x00364B2F File Offset: 0x00362D2F
+		// Token: 0x0600ABD3 RID: 43987 RVA: 0x000FD698 File Offset: 0x000FB898
 		[NullableContext(2)]
 		public FOnSceneColorCapturedDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06024AC7 RID: 150215 RVA: 0x00364B39 File Offset: 0x00362D39
+		// Token: 0x0600ABD4 RID: 43988 RVA: 0x000FD6A2 File Offset: 0x000FB8A2
 		public FOnSceneColorCapturedDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06024AC8 RID: 150216 RVA: 0x00364B44 File Offset: 0x00362D44
+		// Token: 0x0600ABD5 RID: 43989 RVA: 0x000FD6AD File Offset: 0x000FB8AD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06024AC9 RID: 150217 RVA: 0x00364B76 File Offset: 0x00362D76
+		// Token: 0x0600ABD6 RID: 43990 RVA: 0x000FD6DF File Offset: 0x000FB8DF
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnSceneColorCapturedDelegate.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnSceneColorCapturedDelegate.RegisterId);
 		}
 
-		// Token: 0x06024ACA RID: 150218 RVA: 0x00364BB0 File Offset: 0x00362DB0
+		// Token: 0x0600ABD7 RID: 43991 RVA: 0x000FD719 File Offset: 0x000FB919
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06024ACB RID: 150219 RVA: 0x00364BB9 File Offset: 0x00362DB9
+		// Token: 0x0600ABD8 RID: 43992 RVA: 0x000FD722 File Offset: 0x000FB922
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x06024ACC RID: 150220 RVA: 0x00364BC4 File Offset: 0x00362DC4
+		// Token: 0x0600ABD9 RID: 43993 RVA: 0x000FD72C File Offset: 0x000FB92C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04013B79 RID: 80761
+		// Token: 0x040049E2 RID: 18914
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013B7A RID: 80762
+		// Token: 0x040049E3 RID: 18915
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Renderer.OnSceneColorCapturedDelegate__DelegateSignature";
 
-		// Token: 0x04013B7B RID: 80763
+		// Token: 0x040049E4 RID: 18916
 		private static int RegisterId;
 
-		// Token: 0x02003694 RID: 13972
+		// Token: 0x02000F6E RID: 3950
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017787 RID: 96135
+			// Token: 0x04006348 RID: 25416
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

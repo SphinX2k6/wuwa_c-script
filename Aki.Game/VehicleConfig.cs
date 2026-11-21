@@ -7,12 +7,12 @@ using AkiClient.Game.Aki.Data.Fight.UI;
 using AkiClient.Game.Aki.Data.Level.Vehicle;
 using UnrealEngine;
 
-// Token: 0x020032C9 RID: 13001
+// Token: 0x0200283A RID: 10298
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleConfig
 {
-	// Token: 0x0601C3F6 RID: 115702 RVA: 0x007DFA84 File Offset: 0x007DDC84
+	// Token: 0x0601A068 RID: 106600 RVA: 0x00806770 File Offset: 0x00804970
 	public VehicleConfig(Entity entity, [Nullable(2)] BP_VehicleConfig_C asset)
 	{
 		this.VehicleEntity = entity;
@@ -126,7 +126,7 @@ public class VehicleConfig
 		}
 	}
 
-	// Token: 0x0601C3F7 RID: 115703 RVA: 0x007DFFB0 File Offset: 0x007DE1B0
+	// Token: 0x0601A069 RID: 106601 RVA: 0x00806CA4 File Offset: 0x00804EA4
 	public virtual VehicleConfig DeepCopy()
 	{
 		VehicleConfig vehicleConfig = new VehicleConfig(this.VehicleEntity, null);
@@ -134,7 +134,7 @@ public class VehicleConfig
 		return vehicleConfig;
 	}
 
-	// Token: 0x0601C3F8 RID: 115704 RVA: 0x007DFFD4 File Offset: 0x007DE1D4
+	// Token: 0x0601A06A RID: 106602 RVA: 0x00806CC8 File Offset: 0x00804EC8
 	protected virtual void DeepCopyInternal(VehicleConfig inOut)
 	{
 		inOut.VehicleEntity = this.VehicleEntity;
@@ -155,7 +155,7 @@ public class VehicleConfig
 		inOut.DriverToVehicleTagMap = new Dictionary<int, int[]>(this.DriverToVehicleTagMap);
 	}
 
-	// Token: 0x0601C3F9 RID: 115705 RVA: 0x007E00BF File Offset: 0x007DE2BF
+	// Token: 0x0601A06B RID: 106603 RVA: 0x00806DB3 File Offset: 0x00804FB3
 	public virtual bool Init()
 	{
 		if (this.VehicleEntity == null)
@@ -166,13 +166,13 @@ public class VehicleConfig
 		return true;
 	}
 
-	// Token: 0x0601C3FA RID: 115706 RVA: 0x007E00D9 File Offset: 0x007DE2D9
+	// Token: 0x0601A06C RID: 106604 RVA: 0x00806DCD File Offset: 0x00804FCD
 	protected void SetVehicleBornTags(Entity entity, bool isAdd)
 	{
 		this.AddOrRemoveTags(entity, this.BornTagList, isAdd);
 	}
 
-	// Token: 0x0601C3FB RID: 115707 RVA: 0x007E00EC File Offset: 0x007DE2EC
+	// Token: 0x0601A06D RID: 106605 RVA: 0x00806DE0 File Offset: 0x00804FE0
 	protected void AddOrRemoveTags(Entity entity, List<int> tagList, bool isAdd)
 	{
 		BaseTagComponent component = entity.GetComponent<BaseTagComponent>();
@@ -198,65 +198,65 @@ public class VehicleConfig
 		}
 	}
 
-	// Token: 0x0400DF81 RID: 57217
+	// Token: 0x0400E424 RID: 58404
 	public const float DEFAULT_BOUNCE_HEIGHT = 800f;
 
-	// Token: 0x0400DF82 RID: 57218
+	// Token: 0x0400E425 RID: 58405
 	public const float DEFAULT_BOUNCE_TIME = 1000f;
 
-	// Token: 0x0400DF83 RID: 57219
+	// Token: 0x0400E426 RID: 58406
 	public const string DEFAULT_BOUNCE_CURVE = "/Game/Aki/Data/Fight/Curves/CV_Bounce_Motion.CV_Bounce_Motion";
 
-	// Token: 0x0400DF84 RID: 57220
+	// Token: 0x0400E427 RID: 58407
 	public const float PARAGLIDING_DELAY_MILISECONDS = 500f;
 
-	// Token: 0x0400DF85 RID: 57221
+	// Token: 0x0400E428 RID: 58408
 	[Nullable(2)]
 	public Entity VehicleEntity;
 
-	// Token: 0x0400DF86 RID: 57222
+	// Token: 0x0400E429 RID: 58409
 	public List<int> BornTagList = new List<int>();
 
-	// Token: 0x0400DF87 RID: 57223
+	// Token: 0x0400E42A RID: 58410
 	public List<int> VehicleEnterTags = new List<int>();
 
-	// Token: 0x0400DF88 RID: 57224
+	// Token: 0x0400E42B RID: 58411
 	public List<int> PassengerEnterTags = new List<int>();
 
-	// Token: 0x0400DF89 RID: 57225
+	// Token: 0x0400E42C RID: 58412
 	public Dictionary<int, int[]> VehicleToDriverTagMap = new Dictionary<int, int[]>();
 
-	// Token: 0x0400DF8A RID: 57226
+	// Token: 0x0400E42D RID: 58413
 	public Dictionary<int, long[]> VehicleToDriverBuffMap = new Dictionary<int, long[]>();
 
-	// Token: 0x0400DF8B RID: 57227
+	// Token: 0x0400E42E RID: 58414
 	public Dictionary<int, int[]> DriverToVehicleTagMap = new Dictionary<int, int[]>();
 
-	// Token: 0x0400DF8C RID: 57228
+	// Token: 0x0400E42F RID: 58415
 	public float BounceTime = 1000f;
 
-	// Token: 0x0400DF8D RID: 57229
+	// Token: 0x0400E430 RID: 58416
 	public float BounceHeight = 800f;
 
-	// Token: 0x0400DF8E RID: 57230
+	// Token: 0x0400E431 RID: 58417
 	public string BounceCurve = "/Game/Aki/Data/Fight/Curves/CV_Bounce_Motion.CV_Bounce_Motion";
 
-	// Token: 0x0400DF8F RID: 57231
+	// Token: 0x0400E432 RID: 58418
 	public float ParaglidingDelayTime = 500f;
 
-	// Token: 0x0400DF90 RID: 57232
+	// Token: 0x0400E433 RID: 58419
 	public string PreEnterEffect = string.Empty;
 
-	// Token: 0x0400DF91 RID: 57233
+	// Token: 0x0400E434 RID: 58420
 	public string PreEnterMatEffect = string.Empty;
 
-	// Token: 0x0400DF92 RID: 57234
+	// Token: 0x0400E435 RID: 58421
 	public string PostEnterEffect = string.Empty;
 
-	// Token: 0x0400DF93 RID: 57235
+	// Token: 0x0400E436 RID: 58422
 	public string PostEnterMatEffect = string.Empty;
 
-	// Token: 0x0400DF94 RID: 57236
+	// Token: 0x0400E437 RID: 58423
 	[Nullable(2)]
 	public BP_VehicleConfig_C Asset;
 }

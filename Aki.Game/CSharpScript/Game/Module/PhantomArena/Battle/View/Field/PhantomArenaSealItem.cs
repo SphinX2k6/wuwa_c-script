@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 {
-	// Token: 0x02005263 RID: 21091
+	// Token: 0x02004233 RID: 16947
 	public class PhantomArenaSealItem : UiPanelBase
 	{
-		// Token: 0x06035EC7 RID: 220871 RVA: 0x00CC28A1 File Offset: 0x00CC0AA1
+		// Token: 0x0602ADC2 RID: 175554 RVA: 0x00C0FF31 File Offset: 0x00C0E131
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,20 +20,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			};
 		}
 
-		// Token: 0x06035EC8 RID: 220872 RVA: 0x00CC28C4 File Offset: 0x00CC0AC4
+		// Token: 0x0602ADC3 RID: 175555 RVA: 0x00C0FF54 File Offset: 0x00C0E154
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.OnSequenceEndEvent));
 		}
 
-		// Token: 0x06035EC9 RID: 220873 RVA: 0x00CC28EE File Offset: 0x00CC0AEE
+		// Token: 0x0602ADC4 RID: 175556 RVA: 0x00C0FF7E File Offset: 0x00C0E17E
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035ECA RID: 220874 RVA: 0x00CC28FB File Offset: 0x00CC0AFB
+		// Token: 0x0602ADC5 RID: 175557 RVA: 0x00C0FF8B File Offset: 0x00C0E18B
 		[NullableContext(1)]
 		private void OnSequenceEndEvent(string sequenceName)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			}
 		}
 
-		// Token: 0x06035ECB RID: 220875 RVA: 0x00CC2914 File Offset: 0x00CC0B14
+		// Token: 0x0602ADC6 RID: 175558 RVA: 0x00C0FFA4 File Offset: 0x00C0E1A4
 		public UniTask ShowSeal(int roundNum)
 		{
 			PhantomArenaSealItem.<ShowSeal>d__7 <ShowSeal>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <ShowSeal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035ECC RID: 220876 RVA: 0x00CC2960 File Offset: 0x00CC0B60
+		// Token: 0x0602ADC7 RID: 175559 RVA: 0x00C0FFF0 File Offset: 0x00C0E1F0
 		public UniTask HideSeal()
 		{
 			PhantomArenaSealItem.<HideSeal>d__8 <HideSeal>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <HideSeal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035ECD RID: 220877 RVA: 0x00CC29A4 File Offset: 0x00CC0BA4
+		// Token: 0x0602ADC8 RID: 175560 RVA: 0x00C10034 File Offset: 0x00C0E234
 		public UniTask SetSealText(int roundNum)
 		{
 			PhantomArenaSealItem.<SetSealText>d__9 <SetSealText>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <SetSealText>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035ECE RID: 220878 RVA: 0x00CC29F0 File Offset: 0x00CC0BF0
+		// Token: 0x0602ADC9 RID: 175561 RVA: 0x00C10080 File Offset: 0x00C0E280
 		public UniTask RefreshSeal(bool active, int roundNum)
 		{
 			PhantomArenaSealItem.<RefreshSeal>d__10 <RefreshSeal>d__;
@@ -91,17 +91,17 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Field
 			return <RefreshSeal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401C900 RID: 116992
+		// Token: 0x04017335 RID: 95029
 		[Nullable(1)]
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0401C901 RID: 116993
+		// Token: 0x04017336 RID: 95030
 		protected bool IsInSeal;
 
-		// Token: 0x0200B449 RID: 46153
+		// Token: 0x02009E81 RID: 40577
 		private class EComponentDefine
 		{
-			// Token: 0x04036A01 RID: 223745
+			// Token: 0x04031454 RID: 201812
 			public const int SealText = 0;
 		}
 	}

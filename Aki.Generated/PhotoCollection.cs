@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F05 RID: 3845
+	// Token: 0x02000FEA RID: 4074
 	public struct PhotoCollection : IFlatbufferObject
 	{
-		// Token: 0x170027AD RID: 10157
-		// (get) Token: 0x0600AB33 RID: 43827 RVA: 0x002B90CE File Offset: 0x002B72CE
+		// Token: 0x17002813 RID: 10259
+		// (get) Token: 0x0600B154 RID: 45396 RVA: 0x002D5E32 File Offset: 0x002D4032
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB34 RID: 43828 RVA: 0x002B90DB File Offset: 0x002B72DB
+		// Token: 0x0600B155 RID: 45397 RVA: 0x002D5E3F File Offset: 0x002D403F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AB35 RID: 43829 RVA: 0x002B90E4 File Offset: 0x002B72E4
+		// Token: 0x0600B156 RID: 45398 RVA: 0x002D5E48 File Offset: 0x002D4048
 		public static PhotoCollection GetRootAsPhotoCollection(ByteBuffer _bb)
 		{
 			return PhotoCollection.GetRootAsPhotoCollection(_bb, default(PhotoCollection));
 		}
 
-		// Token: 0x0600AB36 RID: 43830 RVA: 0x002B9100 File Offset: 0x002B7300
+		// Token: 0x0600B157 RID: 45399 RVA: 0x002D5E64 File Offset: 0x002D4064
 		public static PhotoCollection GetRootAsPhotoCollection(ByteBuffer _bb, PhotoCollection obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AB37 RID: 43831 RVA: 0x002B911D File Offset: 0x002B731D
+		// Token: 0x0600B158 RID: 45400 RVA: 0x002D5E81 File Offset: 0x002D4081
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AB38 RID: 43832 RVA: 0x002B912C File Offset: 0x002B732C
+		// Token: 0x0600B159 RID: 45401 RVA: 0x002D5E90 File Offset: 0x002D4090
 		public PhotoCollection __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170027AE RID: 10158
-		// (get) Token: 0x0600AB39 RID: 43833 RVA: 0x002B913C File Offset: 0x002B733C
+		// Token: 0x17002814 RID: 10260
+		// (get) Token: 0x0600B15A RID: 45402 RVA: 0x002D5EA0 File Offset: 0x002D40A0
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB3A RID: 43834 RVA: 0x002B9178 File Offset: 0x002B7378
+		// Token: 0x0600B15B RID: 45403 RVA: 0x002D5EDC File Offset: 0x002D40DC
 		public int WhiteList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170027AF RID: 10159
-		// (get) Token: 0x0600AB3B RID: 43835 RVA: 0x002B91B8 File Offset: 0x002B73B8
+		// Token: 0x17002815 RID: 10261
+		// (get) Token: 0x0600B15C RID: 45404 RVA: 0x002D5F1C File Offset: 0x002D411C
 		public int WhiteListLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB3C RID: 43836 RVA: 0x002B91E3 File Offset: 0x002B73E3
+		// Token: 0x0600B15D RID: 45405 RVA: 0x002D5F47 File Offset: 0x002D4147
 		public Span<int> GetWhiteListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600AB3D RID: 43837 RVA: 0x002B91F2 File Offset: 0x002B73F2
+		// Token: 0x0600B15E RID: 45406 RVA: 0x002D5F56 File Offset: 0x002D4156
 		public int[] GetWhiteListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600AB3E RID: 43838 RVA: 0x002B920C File Offset: 0x002B740C
+		// Token: 0x0600B15F RID: 45407 RVA: 0x002D5F70 File Offset: 0x002D4170
 		public int BlackList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170027B0 RID: 10160
-		// (get) Token: 0x0600AB3F RID: 43839 RVA: 0x002B924C File Offset: 0x002B744C
+		// Token: 0x17002816 RID: 10262
+		// (get) Token: 0x0600B160 RID: 45408 RVA: 0x002D5FB0 File Offset: 0x002D41B0
 		public int BlackListLength
 		{
 			get
@@ -128,55 +128,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB40 RID: 43840 RVA: 0x002B9277 File Offset: 0x002B7477
+		// Token: 0x0600B161 RID: 45409 RVA: 0x002D5FDB File Offset: 0x002D41DB
 		public Span<int> GetBlackListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600AB41 RID: 43841 RVA: 0x002B9286 File Offset: 0x002B7486
+		// Token: 0x0600B162 RID: 45410 RVA: 0x002D5FEA File Offset: 0x002D41EA
 		public int[] GetBlackListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600AB42 RID: 43842 RVA: 0x002B92A0 File Offset: 0x002B74A0
+		// Token: 0x0600B163 RID: 45411 RVA: 0x002D6001 File Offset: 0x002D4201
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BlackListIter()或GetBlackListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BlackList()
+		public int[] BlackList()
 		{
-			PhotoCollection photoCollection = this;
-			return photoCollection.GetBlackListArray() ?? Array.Empty<int>();
+			return this.GetBlackListArray();
 		}
 
-		// Token: 0x0600AB43 RID: 43843 RVA: 0x002B92C4 File Offset: 0x002B74C4
+		// Token: 0x0600B164 RID: 45412 RVA: 0x002D6009 File Offset: 0x002D4209
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BlackListIter()
+		public IEnumerable<int> BlackListIter()
 		{
 			PhotoCollection.<BlackListIter>d__21 <BlackListIter>d__ = new PhotoCollection.<BlackListIter>d__21(-2);
 			<BlackListIter>d__.<>3__<>4__this = this;
 			return <BlackListIter>d__;
 		}
 
-		// Token: 0x0600AB44 RID: 43844 RVA: 0x002B92DC File Offset: 0x002B74DC
+		// Token: 0x0600B165 RID: 45413 RVA: 0x002D601E File Offset: 0x002D421E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WhiteListIter()或GetWhiteListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WhiteList()
+		public int[] WhiteList()
 		{
-			PhotoCollection photoCollection = this;
-			return photoCollection.GetWhiteListArray() ?? Array.Empty<int>();
+			return this.GetWhiteListArray();
 		}
 
-		// Token: 0x0600AB45 RID: 43845 RVA: 0x002B9300 File Offset: 0x002B7500
+		// Token: 0x0600B166 RID: 45414 RVA: 0x002D6026 File Offset: 0x002D4226
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WhiteListIter()
+		public IEnumerable<int> WhiteListIter()
 		{
 			PhotoCollection.<WhiteListIter>d__23 <WhiteListIter>d__ = new PhotoCollection.<WhiteListIter>d__23(-2);
 			<WhiteListIter>d__.<>3__<>4__this = this;
 			return <WhiteListIter>d__;
 		}
 
-		// Token: 0x04004FCD RID: 20429
+		// Token: 0x040055B2 RID: 21938
 		private Table __p;
 	}
 }

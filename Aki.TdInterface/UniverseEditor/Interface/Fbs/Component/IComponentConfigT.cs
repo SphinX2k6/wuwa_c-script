@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FE0 RID: 20448
+	// Token: 0x0200553F RID: 21823
 	public class IComponentConfigT
 	{
-		// Token: 0x17009426 RID: 37926
-		// (get) Token: 0x06020ACB RID: 133835 RVA: 0x0048B12B File Offset: 0x0048932B
-		// (set) Token: 0x06020ACC RID: 133836 RVA: 0x0048B133 File Offset: 0x00489333
+		// Token: 0x17009C07 RID: 39943
+		// (get) Token: 0x060229EB RID: 141803 RVA: 0x004C4B7B File Offset: 0x004C2D7B
+		// (set) Token: 0x060229EC RID: 141804 RVA: 0x004C4B83 File Offset: 0x004C2D83
 		public List<EAction> BaseActions { get; set; }
 
-		// Token: 0x17009427 RID: 37927
-		// (get) Token: 0x06020ACD RID: 133837 RVA: 0x0048B13C File Offset: 0x0048933C
-		// (set) Token: 0x06020ACE RID: 133838 RVA: 0x0048B144 File Offset: 0x00489344
+		// Token: 0x17009C08 RID: 39944
+		// (get) Token: 0x060229ED RID: 141805 RVA: 0x004C4B8C File Offset: 0x004C2D8C
+		// (set) Token: 0x060229EE RID: 141806 RVA: 0x004C4B94 File Offset: 0x004C2D94
 		public string ActionsByComponent { get; set; }
 
-		// Token: 0x06020ACF RID: 133839 RVA: 0x0048B14D File Offset: 0x0048934D
+		// Token: 0x060229EF RID: 141807 RVA: 0x004C4B9D File Offset: 0x004C2D9D
 		public IComponentConfigT()
 		{
 			this.BaseActions = null;

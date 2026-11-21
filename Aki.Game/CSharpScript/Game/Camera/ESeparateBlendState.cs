@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B6 RID: 29366
+	// Token: 0x02006438 RID: 25656
 	public enum ESeparateBlendState
 	{
-		// Token: 0x04025FDB RID: 155611
+		// Token: 0x040212BB RID: 135867
 		Stay,
-		// Token: 0x04025FDC RID: 155612
+		// Token: 0x040212BC RID: 135868
 		Blend
 	}
 }

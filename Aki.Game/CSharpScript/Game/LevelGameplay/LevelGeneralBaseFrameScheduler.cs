@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006995 RID: 27029
+	// Token: 0x02005AF1 RID: 23281
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelGeneralBaseFrameScheduler : Singleton
 	{
-		// Token: 0x17009850 RID: 38992
-		// (get) Token: 0x06043422 RID: 275490 RVA: 0x010650C2 File Offset: 0x010632C2
+		// Token: 0x17006D30 RID: 27952
+		// (get) Token: 0x0603945A RID: 234586 RVA: 0x0100932A File Offset: 0x0100752A
 		private int MaxActionPerFrame
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x06043423 RID: 275491 RVA: 0x010650E4 File Offset: 0x010632E4
+		// Token: 0x0603945B RID: 234587 RVA: 0x0100934C File Offset: 0x0100754C
 		public unsafe bool PushActionToFrameScheduler(LevelEventBase eventBase, ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			LevelGeneralBaseFrameScheduler.<>c__DisplayClass17_0 CS$<>8__locals1 = new LevelGeneralBaseFrameScheduler.<>c__DisplayClass17_0();
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return true;
 		}
 
-		// Token: 0x06043424 RID: 275492 RVA: 0x010654FC File Offset: 0x010636FC
+		// Token: 0x0603945C RID: 234588 RVA: 0x01009764 File Offset: 0x01007964
 		public unsafe void UpdateActionFrameScheduler()
 		{
 			while (this.ActionQueue.Count > 0)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.ActionCounter = 0;
 		}
 
-		// Token: 0x06043425 RID: 275493 RVA: 0x01065738 File Offset: 0x01063938
+		// Token: 0x0603945D RID: 234589 RVA: 0x010099A0 File Offset: 0x01007BA0
 		public void ClearActionFrameScheduler()
 		{
 			if (this.FrameSchedulerLogEnabled)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.ActionQueue.Clear();
 		}
 
-		// Token: 0x06043426 RID: 275494 RVA: 0x01065795 File Offset: 0x01063995
+		// Token: 0x0603945E RID: 234590 RVA: 0x010099FD File Offset: 0x01007BFD
 		public void OnSettingFrameRateChanged(float frameRate)
 		{
 			if (frameRate <= 30f)
@@ -269,20 +269,20 @@ namespace CSharpScript.Game.LevelGamePlay
 			this.MaxActionPerFrameInternalValue = 40;
 		}
 
-		// Token: 0x06043427 RID: 275495 RVA: 0x010657C1 File Offset: 0x010639C1
+		// Token: 0x0603945F RID: 234591 RVA: 0x01009A29 File Offset: 0x01007C29
 		public void UpdateMaxActionPerFrame(int maxAction)
 		{
 			this.MaxActionPerFrameInternalValue = maxAction;
 		}
 
-		// Token: 0x06043428 RID: 275496 RVA: 0x010657CA File Offset: 0x010639CA
+		// Token: 0x06039460 RID: 234592 RVA: 0x01009A32 File Offset: 0x01007C32
 		public void UpdateMaxActionQueueLength(int maxLength)
 		{
 			this.MaxActionQueueLength = maxLength;
 		}
 
-		// Token: 0x17009851 RID: 38993
-		// (get) Token: 0x06043429 RID: 275497 RVA: 0x010657D3 File Offset: 0x010639D3
+		// Token: 0x17006D31 RID: 27953
+		// (get) Token: 0x06039461 RID: 234593 RVA: 0x01009A3B File Offset: 0x01007C3B
 		public static LevelGeneralBaseFrameScheduler Instance
 		{
 			get
@@ -296,12 +296,12 @@ namespace CSharpScript.Game.LevelGamePlay
 			}
 		}
 
-		// Token: 0x0604342A RID: 275498 RVA: 0x010657F6 File Offset: 0x010639F6
+		// Token: 0x06039462 RID: 234594 RVA: 0x01009A5E File Offset: 0x01007C5E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604342B RID: 275499 RVA: 0x010657F8 File Offset: 0x010639F8
+		// Token: 0x06039463 RID: 234595 RVA: 0x01009A60 File Offset: 0x01007C60
 		public static void ResetStaticDefaultValue()
 		{
 			LevelGeneralBaseFrameScheduler instance = LevelGeneralBaseFrameScheduler._instance;
@@ -312,61 +312,61 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelGeneralBaseFrameScheduler._instance = null;
 		}
 
-		// Token: 0x0604342C RID: 275500 RVA: 0x01065811 File Offset: 0x01063A11
+		// Token: 0x06039464 RID: 234596 RVA: 0x01009A79 File Offset: 0x01007C79
 		static LevelGeneralBaseFrameScheduler()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelGeneralBaseFrameScheduler.CreateStaticDefaultValue), new Action(LevelGeneralBaseFrameScheduler.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023077 RID: 143479
+		// Token: 0x0401E261 RID: 123489
 		private const int MAX_ACTION_PER_FRAME_LEVEL_1 = 10;
 
-		// Token: 0x04023078 RID: 143480
+		// Token: 0x0401E262 RID: 123490
 		private const int MAX_ACTION_PER_FRAME_LEVEL_2 = 20;
 
-		// Token: 0x04023079 RID: 143481
+		// Token: 0x0401E263 RID: 123491
 		private const int MAX_ACTION_PER_FRAME_LEVEL_3 = 40;
 
-		// Token: 0x0402307A RID: 143482
+		// Token: 0x0401E264 RID: 123492
 		private const int FRAME_LIMIT_LEVEL_1 = 30;
 
-		// Token: 0x0402307B RID: 143483
+		// Token: 0x0401E265 RID: 123493
 		private const int FRAME_LIMIT_LEVEL_2 = 60;
 
-		// Token: 0x0402307C RID: 143484
+		// Token: 0x0401E266 RID: 123494
 		private const int MAX_ACTION_QUEUE_LENGTH = 100;
 
-		// Token: 0x0402307D RID: 143485
+		// Token: 0x0401E267 RID: 123495
 		private const int LOW_PRIORITY_ACTION_ALIVE_FRAME = 30;
 
-		// Token: 0x0402307E RID: 143486
+		// Token: 0x0401E268 RID: 123496
 		private readonly HashSet<EEventName> FrameSplittingEventType = new HashSet<EEventName>
 		{
 			EEventName.CheckMusicBeatsEvent
 		};
 
-		// Token: 0x0402307F RID: 143487
+		// Token: 0x0401E269 RID: 123497
 		private readonly List<Action> ActionQueue = new List<Action>();
 
-		// Token: 0x04023080 RID: 143488
+		// Token: 0x0401E26A RID: 123498
 		private readonly List<IQueuedLowPriorityAction> LowPriorityActionQueue = new List<IQueuedLowPriorityAction>();
 
-		// Token: 0x04023081 RID: 143489
+		// Token: 0x0401E26B RID: 123499
 		private int MaxActionPerFrameInternalValue;
 
-		// Token: 0x04023082 RID: 143490
+		// Token: 0x0401E26C RID: 123500
 		private int MaxActionQueueLength = 100;
 
-		// Token: 0x04023083 RID: 143491
+		// Token: 0x0401E26D RID: 123501
 		private int ActionCounter;
 
-		// Token: 0x04023084 RID: 143492
+		// Token: 0x0401E26E RID: 123502
 		public bool FrameSchedulerLogEnabled;
 
-		// Token: 0x04023085 RID: 143493
+		// Token: 0x0401E26F RID: 123503
 		public bool FrameSchedulerEnabled = true;
 
-		// Token: 0x04023086 RID: 143494
+		// Token: 0x0401E270 RID: 123504
 		[Nullable(2)]
 		private static LevelGeneralBaseFrameScheduler _instance;
 	}

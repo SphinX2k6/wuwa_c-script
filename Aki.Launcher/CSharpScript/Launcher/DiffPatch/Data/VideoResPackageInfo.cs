@@ -7,10 +7,10 @@ using CSharpScript.Launcher.Util;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000238 RID: 568
+	// Token: 0x0200023D RID: 573
 	public class VideoResPackageInfo : ResPackageInfo
 	{
-		// Token: 0x06000E63 RID: 3683 RVA: 0x000558B4 File Offset: 0x00053AB4
+		// Token: 0x06000EA4 RID: 3748 RVA: 0x000583BC File Offset: 0x000565BC
 		[NullableContext(1)]
 		public VideoResPackageInfo(List<VideoResourceInfo> videoInfos) : base(BaseConfigController.Instance.GetResUri(), new VideoVersionInfo(videoInfos.Count > 0), false)
 		{
@@ -18,13 +18,13 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			this.totalFileCount = videoInfos.Count * 2;
 		}
 
-		// Token: 0x06000E64 RID: 3684 RVA: 0x000558EA File Offset: 0x00053AEA
+		// Token: 0x06000EA5 RID: 3749 RVA: 0x000583F2 File Offset: 0x000565F2
 		public bool IsVideoPackage()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E65 RID: 3685 RVA: 0x000558F0 File Offset: 0x00053AF0
+		// Token: 0x06000EA6 RID: 3750 RVA: 0x000583F8 File Offset: 0x000565F8
 		[return: TupleElementNames(new string[]
 		{
 			"requireFiles",
@@ -70,18 +70,18 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return new ValueTuple<List<RequireFileInfo>, long, long, long, long, long, long, ValueTuple<long, int>>(list, num2, num3, num3, num, num, num, new ValueTuple<long, int>(num2, this.totalFileCount));
 		}
 
-		// Token: 0x06000E66 RID: 3686 RVA: 0x000559DC File Offset: 0x00053BDC
+		// Token: 0x06000EA7 RID: 3751 RVA: 0x000584E4 File Offset: 0x000566E4
 		public override void UpdateRecord()
 		{
 		}
 
-		// Token: 0x06000E67 RID: 3687 RVA: 0x000559DE File Offset: 0x00053BDE
+		// Token: 0x06000EA8 RID: 3752 RVA: 0x000584E6 File Offset: 0x000566E6
 		public override bool NeedPatch()
 		{
 			return false;
 		}
 
-		// Token: 0x06000E68 RID: 3688 RVA: 0x000559E1 File Offset: 0x00053BE1
+		// Token: 0x06000EA9 RID: 3753 RVA: 0x000584E9 File Offset: 0x000566E9
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -97,12 +97,12 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return new ValueTuple<List<string>, List<ValueTuple<string, string, int>>>(new List<string>(), new List<ValueTuple<string, string, int>>());
 		}
 
-		// Token: 0x06000E69 RID: 3689 RVA: 0x000559F2 File Offset: 0x00053BF2
+		// Token: 0x06000EAA RID: 3754 RVA: 0x000584FA File Offset: 0x000566FA
 		public override void CollectAllFiles()
 		{
 		}
 
-		// Token: 0x06000E6A RID: 3690 RVA: 0x000559F4 File Offset: 0x00053BF4
+		// Token: 0x06000EAB RID: 3755 RVA: 0x000584FC File Offset: 0x000566FC
 		public override bool IsCompleteUpdate()
 		{
 			foreach (VideoResourceInfo singleInfo in this.videoInfos)
@@ -118,7 +118,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return true;
 		}
 
-		// Token: 0x06000E6B RID: 3691 RVA: 0x00055A68 File Offset: 0x00053C68
+		// Token: 0x06000EAC RID: 3756 RVA: 0x00058570 File Offset: 0x00056770
 		public override ValueTuple<long, long> CalculateSavedSizeAndTotalSize()
 		{
 			long num = 0L;
@@ -134,17 +134,17 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			return new ValueTuple<long, long>(num, num2);
 		}
 
-		// Token: 0x06000E6C RID: 3692 RVA: 0x00055AE8 File Offset: 0x00053CE8
+		// Token: 0x06000EAD RID: 3757 RVA: 0x000585F0 File Offset: 0x000567F0
 		public override bool IsCompleteDownload()
 		{
 			return this.IsCompleteUpdate();
 		}
 
-		// Token: 0x04000925 RID: 2341
+		// Token: 0x04000967 RID: 2407
 		[Nullable(1)]
 		private readonly List<VideoResourceInfo> videoInfos;
 
-		// Token: 0x04000926 RID: 2342
+		// Token: 0x04000968 RID: 2408
 		private readonly int totalFileCount;
 	}
 }

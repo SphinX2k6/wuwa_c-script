@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005554 RID: 21844
+	// Token: 0x02004526 RID: 17702
 	public enum EClearMarkReasonType
 	{
-		// Token: 0x0401D469 RID: 119913
+		// Token: 0x04017EF2 RID: 98034
 		None,
-		// Token: 0x0401D46A RID: 119914
+		// Token: 0x04017EF3 RID: 98035
 		MiniMapDispose,
-		// Token: 0x0401D46B RID: 119915
+		// Token: 0x04017EF4 RID: 98036
 		WorldMapDispose,
-		// Token: 0x0401D46C RID: 119916
+		// Token: 0x04017EF5 RID: 98037
 		MapSetup
 	}
 }

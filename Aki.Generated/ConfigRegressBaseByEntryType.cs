@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C8 RID: 1992
+	// Token: 0x020007E4 RID: 2020
 	public class ConfigRegressBaseByEntryType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EC2 RID: 11970 RVA: 0x00161913 File Offset: 0x0015FB13
+		// Token: 0x06002F6A RID: 12138 RVA: 0x00168BFB File Offset: 0x00166DFB
 		static ConfigRegressBaseByEntryType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressBaseByEntryType.CreateStaticDefaultValue), new Action(ConfigRegressBaseByEntryType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EC3 RID: 11971 RVA: 0x00161934 File Offset: 0x0015FB34
+		// Token: 0x06002F6B RID: 12139 RVA: 0x00168C1C File Offset: 0x00166E1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressBaseByEntryType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EC4 RID: 11972 RVA: 0x001619B3 File Offset: 0x0015FBB3
+		// Token: 0x06002F6C RID: 12140 RVA: 0x00168C9B File Offset: 0x00166E9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressBaseByEntryType.LogPair = null;
 			ConfigRegressBaseByEntryType.HandleId = 0;
 		}
 
-		// Token: 0x06002EC5 RID: 11973 RVA: 0x001619C1 File Offset: 0x0015FBC1
+		// Token: 0x06002F6D RID: 12141 RVA: 0x00168CA9 File Offset: 0x00166EA9
 		public static void Init()
 		{
 			ConfigRegressBaseByEntryType.HandleId = ConfigCommon.InitDataStatement(ConfigRegressBaseByEntryType.HandleId, "db_regressactivity.db", "select BinData from `RegressBase` where EntryType=?");
 		}
 
-		// Token: 0x06002EC6 RID: 11974 RVA: 0x001619DC File Offset: 0x0015FBDC
+		// Token: 0x06002F6E RID: 12142 RVA: 0x00168CC4 File Offset: 0x00166EC4
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressBase> GetConfigList(int p0EntryType, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400365E RID: 13918
+		// Token: 0x04003722 RID: 14114
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x0400365F RID: 13919
+		// Token: 0x04003723 RID: 14115
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x04003660 RID: 13920
+		// Token: 0x04003724 RID: 14116
 		private const string TABLE = "RegressBase";
 
-		// Token: 0x04003661 RID: 13921
+		// Token: 0x04003725 RID: 14117
 		private const string COMMAND = "select BinData from `RegressBase` where EntryType=?";
 
-		// Token: 0x04003662 RID: 13922
+		// Token: 0x04003726 RID: 14118
 		private const string KEY_PREFIX = "RegressBaseByEntryType";
 
-		// Token: 0x04003663 RID: 13923
+		// Token: 0x04003727 RID: 14119
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003664 RID: 13924
+		// Token: 0x04003728 RID: 14120
 		private static int HandleId;
 	}
 }

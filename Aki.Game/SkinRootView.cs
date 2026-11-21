@@ -13,17 +13,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A37 RID: 10807
+// Token: 0x02001FB2 RID: 8114
 [NullableContext(1)]
 [Nullable(0)]
 public class SkinRootView : UiViewBase
 {
-	// Token: 0x060167FE RID: 92158 RVA: 0x005B423C File Offset: 0x005B243C
+	// Token: 0x06014207 RID: 82439 RVA: 0x005DF3B1 File Offset: 0x005DD5B1
 	public SkinRootView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060167FF RID: 92159 RVA: 0x005B4248 File Offset: 0x005B2448
+	// Token: 0x06014208 RID: 82440 RVA: 0x005DF3BC File Offset: 0x005DD5BC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class SkinRootView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016800 RID: 92160 RVA: 0x005B42D0 File Offset: 0x005B24D0
+	// Token: 0x06014209 RID: 82441 RVA: 0x005DF444 File Offset: 0x005DD644
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as ISkinViewData);
@@ -53,7 +53,7 @@ public class SkinRootView : UiViewBase
 		AudioSystem.Instance.SetState("mute_nature_voice", ERoleMuteAudioState.Mute, true);
 	}
 
-	// Token: 0x06016801 RID: 92161 RVA: 0x005B43E8 File Offset: 0x005B25E8
+	// Token: 0x0601420A RID: 82442 RVA: 0x005DF55C File Offset: 0x005DD75C
 	private void CloseView()
 	{
 		bool needLoadRole = this.ViewModel.NeedLoadRole;
@@ -70,7 +70,7 @@ public class SkinRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x06016802 RID: 92162 RVA: 0x005B4448 File Offset: 0x005B2648
+	// Token: 0x0601420B RID: 82443 RVA: 0x005DF5BC File Offset: 0x005DD7BC
 	private void OnViewModelUpdate(ESkinRootViewData data)
 	{
 		switch (data)
@@ -118,7 +118,7 @@ public class SkinRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016803 RID: 92163 RVA: 0x005B452C File Offset: 0x005B272C
+	// Token: 0x0601420C RID: 82444 RVA: 0x005DF6A0 File Offset: 0x005DD8A0
 	protected override void OnHandleLoadScene()
 	{
 		UiSceneManager.Instance.ShowRoleSystemRoleActor();
@@ -133,7 +133,7 @@ public class SkinRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016804 RID: 92164 RVA: 0x005B45A4 File Offset: 0x005B27A4
+	// Token: 0x0601420D RID: 82445 RVA: 0x005DF718 File Offset: 0x005DD918
 	protected override UniTask OnHandlePostLoadSceneAsync(bool isSceneLoad)
 	{
 		SkinRootView.<OnHandlePostLoadSceneAsync>d__16 <OnHandlePostLoadSceneAsync>d__;
@@ -144,7 +144,7 @@ public class SkinRootView : UiViewBase
 		return <OnHandlePostLoadSceneAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016805 RID: 92165 RVA: 0x005B45E8 File Offset: 0x005B27E8
+	// Token: 0x0601420E RID: 82446 RVA: 0x005DF75C File Offset: 0x005DD95C
 	private UniTask TryLoadRoleActor()
 	{
 		SkinRootView.<TryLoadRoleActor>d__17 <TryLoadRoleActor>d__;
@@ -155,7 +155,7 @@ public class SkinRootView : UiViewBase
 		return <TryLoadRoleActor>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016806 RID: 92166 RVA: 0x005B462C File Offset: 0x005B282C
+	// Token: 0x0601420F RID: 82447 RVA: 0x005DF7A0 File Offset: 0x005DD9A0
 	protected override void OnHandleReleaseScene()
 	{
 		UiSceneManager.Instance.HideRoleSystemRoleActor();
@@ -167,14 +167,14 @@ public class SkinRootView : UiViewBase
 		this.ReleaseRoleActor();
 	}
 
-	// Token: 0x06016807 RID: 92167 RVA: 0x005B4682 File Offset: 0x005B2882
+	// Token: 0x06014210 RID: 82448 RVA: 0x005DF7F6 File Offset: 0x005DD9F6
 	protected override void OnBeforeShow()
 	{
 		this.UpdateDynamicTabComponent();
 		this.RefreshGamePadKeyTip();
 	}
 
-	// Token: 0x06016808 RID: 92168 RVA: 0x005B4690 File Offset: 0x005B2890
+	// Token: 0x06014211 RID: 82449 RVA: 0x005DF804 File Offset: 0x005DDA04
 	protected void UpdateDynamicTabComponent()
 	{
 		this.TabDataList = RoleSkinModel.Instance.GetSkinTabList(this.ViewModel.IsMainRole, this.ViewModel.RoleId).ToArray();
@@ -194,7 +194,7 @@ public class SkinRootView : UiViewBase
 		});
 	}
 
-	// Token: 0x06016809 RID: 92169 RVA: 0x005B4754 File Offset: 0x005B2954
+	// Token: 0x06014212 RID: 82450 RVA: 0x005DF8C8 File Offset: 0x005DDAC8
 	private void SelectTabView(EUiTabViewName tabName)
 	{
 		int index = 0;
@@ -209,7 +209,7 @@ public class SkinRootView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(index, true);
 	}
 
-	// Token: 0x0601680A RID: 92170 RVA: 0x005B47A5 File Offset: 0x005B29A5
+	// Token: 0x06014213 RID: 82451 RVA: 0x005DF919 File Offset: 0x005DDB19
 	protected override void OnBeforeHide()
 	{
 		this.TabViewComponent.HideCurrentTabView();
@@ -220,7 +220,7 @@ public class SkinRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601680B RID: 92171 RVA: 0x005B47D8 File Offset: 0x005B29D8
+	// Token: 0x06014214 RID: 82452 RVA: 0x005DF94C File Offset: 0x005DDB4C
 	protected override void OnBeforeDestroy()
 	{
 		this.ViewModel.UnBind(new Action<ESkinRootViewData>(this.OnViewModelUpdate));
@@ -231,7 +231,7 @@ public class SkinRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601680C RID: 92172 RVA: 0x005B4829 File Offset: 0x005B2A29
+	// Token: 0x06014215 RID: 82453 RVA: 0x005DF99D File Offset: 0x005DDB9D
 	private void ReleaseRoleActor()
 	{
 		if (this.ViewModel.TsUiSceneRoleActor == null)
@@ -243,19 +243,19 @@ public class SkinRootView : UiViewBase
 		this.FadeAnimController.TsUiSceneRoleActor = null;
 	}
 
-	// Token: 0x0601680D RID: 92173 RVA: 0x005B4867 File Offset: 0x005B2A67
+	// Token: 0x06014216 RID: 82454 RVA: 0x005DF9DB File Offset: 0x005DDBDB
 	public void HideView()
 	{
 		this.TabComponent.SetUiActive(false);
 	}
 
-	// Token: 0x0601680E RID: 92174 RVA: 0x005B4875 File Offset: 0x005B2A75
+	// Token: 0x06014217 RID: 82455 RVA: 0x005DF9E9 File Offset: 0x005DDBE9
 	public void ShowView()
 	{
 		this.TabComponent.SetUiActive(true);
 	}
 
-	// Token: 0x0601680F RID: 92175 RVA: 0x005B4884 File Offset: 0x005B2A84
+	// Token: 0x06014218 RID: 82456 RVA: 0x005DF9F8 File Offset: 0x005DDBF8
 	public void RefreshGamePadKeyTip()
 	{
 		UUIItem item = base.GetItem(3);
@@ -291,7 +291,7 @@ public class SkinRootView : UiViewBase
 		item4.SetUIActive(true);
 	}
 
-	// Token: 0x06016810 RID: 92176 RVA: 0x005B491E File Offset: 0x005B2B1E
+	// Token: 0x06014219 RID: 82457 RVA: 0x005DFA92 File Offset: 0x005DDC92
 	public void SetMoveGamepadKeyTipActive(bool isActive)
 	{
 		UUIItem item = base.GetItem(4);
@@ -302,13 +302,13 @@ public class SkinRootView : UiViewBase
 		item.SetUIActive(isActive);
 	}
 
-	// Token: 0x06016811 RID: 92177 RVA: 0x005B4932 File Offset: 0x005B2B32
+	// Token: 0x0601421A RID: 82458 RVA: 0x005DFAA6 File Offset: 0x005DDCA6
 	private SkinTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new SkinTabItem();
 	}
 
-	// Token: 0x06016812 RID: 92178 RVA: 0x005B493C File Offset: 0x005B2B3C
+	// Token: 0x0601421B RID: 82459 RVA: 0x005DFAB0 File Offset: 0x005DDCB0
 	private void ToggleCallBack(int index)
 	{
 		this.LastClickTime = TimeUtil.Instance.GetServerTimeStamp();
@@ -321,14 +321,14 @@ public class SkinRootView : UiViewBase
 		this.RefreshGamePadKeyTip();
 	}
 
-	// Token: 0x06016813 RID: 92179 RVA: 0x005B49C8 File Offset: 0x005B2BC8
+	// Token: 0x0601421C RID: 82460 RVA: 0x005DFB3C File Offset: 0x005DDD3C
 	private CommonTabData GetCommonData(int index)
 	{
 		UiDynamicTab uiDynamicTab = this.TabDataList[index];
 		return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x06016814 RID: 92180 RVA: 0x005B4A00 File Offset: 0x005B2C00
+	// Token: 0x0601421D RID: 82461 RVA: 0x005DFB74 File Offset: 0x005DDD74
 	protected bool CanToggleChange(int index, bool? _)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -339,7 +339,7 @@ public class SkinRootView : UiViewBase
 		return intConfig == null || (this.LastClickTime == 0.0 || TimeUtil.Instance.GetServerTimeStamp() - this.LastClickTime >= (double)intConfig.Value);
 	}
 
-	// Token: 0x06016815 RID: 92181 RVA: 0x005B4A60 File Offset: 0x005B2C60
+	// Token: 0x0601421E RID: 82462 RVA: 0x005DFBD4 File Offset: 0x005DDDD4
 	private void OnClickHelpBtn()
 	{
 		EUiTabViewName? currentTabViewName = this.TabViewComponent.GetCurrentTabViewName(null);
@@ -354,13 +354,13 @@ public class SkinRootView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016816 RID: 92182 RVA: 0x005B4AB9 File Offset: 0x005B2CB9
+	// Token: 0x0601421F RID: 82463 RVA: 0x005DFC2D File Offset: 0x005DDE2D
 	private UUIDraggableComponent GetDragItem()
 	{
 		return base.GetDraggable(2);
 	}
 
-	// Token: 0x06016817 RID: 92183 RVA: 0x005B4AC4 File Offset: 0x005B2CC4
+	// Token: 0x06014220 RID: 82464 RVA: 0x005DFC38 File Offset: 0x005DDE38
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -397,11 +397,11 @@ public class SkinRootView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x0400A707 RID: 42759
+	// Token: 0x0400AAF2 RID: 43762
 	[Nullable(2)]
 	protected TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x0400A708 RID: 42760
+	// Token: 0x0400AAF3 RID: 43763
 	[Nullable(new byte[]
 	{
 		2,
@@ -409,44 +409,44 @@ public class SkinRootView : UiViewBase
 	})]
 	protected TabComponentWithCaptionItem<SkinTabItem> TabComponent;
 
-	// Token: 0x0400A709 RID: 42761
+	// Token: 0x0400AAF4 RID: 43764
 	[Nullable(2)]
 	protected UiDynamicTab[] TabDataList;
 
-	// Token: 0x0400A70A RID: 42762
+	// Token: 0x0400AAF5 RID: 43765
 	[Nullable(2)]
 	private ISkinViewData ViewData;
 
-	// Token: 0x0400A70B RID: 42763
+	// Token: 0x0400AAF6 RID: 43766
 	[Nullable(2)]
 	private SkinRootViewModel ViewModel;
 
-	// Token: 0x0400A70C RID: 42764
+	// Token: 0x0400AAF7 RID: 43767
 	[Nullable(2)]
 	private SkinFadeAnimController FadeAnimController;
 
-	// Token: 0x0400A70D RID: 42765
+	// Token: 0x0400AAF8 RID: 43768
 	private double LastClickTime;
 
-	// Token: 0x0400A70E RID: 42766
+	// Token: 0x0400AAF9 RID: 43769
 	private bool NeedReloadRole;
 
-	// Token: 0x0400A70F RID: 42767
+	// Token: 0x0400AAFA RID: 43770
 	private int FloorEffect;
 
-	// Token: 0x02009079 RID: 36985
+	// Token: 0x020082C0 RID: 33472
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402ED35 RID: 191797
+		// Token: 0x0402A42D RID: 173101
 		CaptionItem,
-		// Token: 0x0402ED36 RID: 191798
+		// Token: 0x0402A42E RID: 173102
 		ContentItem,
-		// Token: 0x0402ED37 RID: 191799
+		// Token: 0x0402A42F RID: 173103
 		DragItem,
-		// Token: 0x0402ED38 RID: 191800
+		// Token: 0x0402A430 RID: 173104
 		ItemGamePadKeyTipA,
-		// Token: 0x0402ED39 RID: 191801
+		// Token: 0x0402A431 RID: 173105
 		ItemGamePadKeyTipB
 	}
 }

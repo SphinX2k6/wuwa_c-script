@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200118B RID: 4491
+// Token: 0x0200063F RID: 1599
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerTeamItem : UiPanelBase
 {
-	// Token: 0x060076D8 RID: 30424 RVA: 0x0018C130 File Offset: 0x0018A330
+	// Token: 0x06004A6F RID: 19055 RVA: 0x00194CE0 File Offset: 0x00192EE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -45,7 +45,7 @@ public class BabelTowerTeamItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060076D9 RID: 30425 RVA: 0x0018C27C File Offset: 0x0018A47C
+	// Token: 0x06004A70 RID: 19056 RVA: 0x00194E2C File Offset: 0x0019302C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerTeamItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class BabelTowerTeamItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060076DA RID: 30426 RVA: 0x0018C2BF File Offset: 0x0018A4BF
+	// Token: 0x06004A71 RID: 19057 RVA: 0x00194E6F File Offset: 0x0019306F
 	private void OnClickButton()
 	{
 		Action onClickBtnCallBack = this.OnClickBtnCallBack;
@@ -67,13 +67,13 @@ public class BabelTowerTeamItem : UiPanelBase
 		onClickBtnCallBack();
 	}
 
-	// Token: 0x060076DB RID: 30427 RVA: 0x0018C2D1 File Offset: 0x0018A4D1
+	// Token: 0x06004A72 RID: 19058 RVA: 0x00194E81 File Offset: 0x00193081
 	private BabelTowerTeamRoleItem CreateTeamRoleItem()
 	{
 		return new BabelTowerTeamRoleItem();
 	}
 
-	// Token: 0x060076DC RID: 30428 RVA: 0x0018C2D8 File Offset: 0x0018A4D8
+	// Token: 0x06004A73 RID: 19059 RVA: 0x00194E88 File Offset: 0x00193088
 	public void RefreshItem(List<int> roleList, int instanceId)
 	{
 		GenericLayout<BabelTowerTeamRoleItem, int> teamLayout = this.TeamLayout;
@@ -103,7 +103,7 @@ public class BabelTowerTeamItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BossRushRecommendLevel", new <>z__ReadOnlySingleElementList<object>(recommendLevel));
 	}
 
-	// Token: 0x060076DD RID: 30429 RVA: 0x0018C3E0 File Offset: 0x0018A5E0
+	// Token: 0x06004A74 RID: 19060 RVA: 0x00194F90 File Offset: 0x00193190
 	public void RefreshSkillBranchIcon()
 	{
 		if (this.TeamLayout == null)
@@ -116,18 +116,18 @@ public class BabelTowerTeamItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003681 RID: 13953
+	// Token: 0x0400371A RID: 14106
 	[Nullable(2)]
 	private CommonElementItem ElementItem1;
 
-	// Token: 0x04003682 RID: 13954
+	// Token: 0x0400371B RID: 14107
 	[Nullable(2)]
 	private CommonElementItem ElementItem2;
 
-	// Token: 0x04003683 RID: 13955
+	// Token: 0x0400371C RID: 14108
 	private readonly List<CommonElementItem> ElementItemArray = new List<CommonElementItem>();
 
-	// Token: 0x04003684 RID: 13956
+	// Token: 0x0400371D RID: 14109
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,33 +135,33 @@ public class BabelTowerTeamItem : UiPanelBase
 	})]
 	private GenericLayout<BabelTowerTeamRoleItem, int> TeamLayout;
 
-	// Token: 0x04003685 RID: 13957
+	// Token: 0x0400371E RID: 14110
 	[Nullable(2)]
 	public Action OnClickBtnCallBack;
 
-	// Token: 0x0200776E RID: 30574
+	// Token: 0x020068FB RID: 26875
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027657 RID: 161367
+		// Token: 0x04022990 RID: 141712
 		public const int Button = 0;
 
-		// Token: 0x04027658 RID: 161368
+		// Token: 0x04022991 RID: 141713
 		public const int RecommendLevelText = 1;
 
-		// Token: 0x04027659 RID: 161369
+		// Token: 0x04022992 RID: 141714
 		public const int RecommendElementText = 2;
 
-		// Token: 0x0402765A RID: 161370
+		// Token: 0x04022993 RID: 141715
 		public const int RecommendElementItem1 = 3;
 
-		// Token: 0x0402765B RID: 161371
+		// Token: 0x04022994 RID: 141716
 		public const int RecommendElementItem2 = 4;
 
-		// Token: 0x0402765C RID: 161372
+		// Token: 0x04022995 RID: 141717
 		public const int TeamHorizontalScrollView = 5;
 
-		// Token: 0x0402765D RID: 161373
+		// Token: 0x04022996 RID: 141718
 		public const int TeamItem = 6;
 	}
 }

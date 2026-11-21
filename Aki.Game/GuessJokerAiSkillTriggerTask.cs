@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001035 RID: 4149
+// Token: 0x020004E9 RID: 1257
 public class GuessJokerAiSkillTriggerTask : GuessJokerTaskBase
 {
-	// Token: 0x06006A87 RID: 27271 RVA: 0x001568BF File Offset: 0x00154ABF
+	// Token: 0x06003E1C RID: 15900 RVA: 0x0015F1E7 File Offset: 0x0015D3E7
 	[NullableContext(1)]
 	public GuessJokerAiSkillTriggerTask(JokerGuessSkillTriggerAction data)
 	{
@@ -14,7 +14,7 @@ public class GuessJokerAiSkillTriggerTask : GuessJokerTaskBase
 		this.SkillRemindCount = data.RemainingSkillNum;
 	}
 
-	// Token: 0x06006A88 RID: 27272 RVA: 0x001568E0 File Offset: 0x00154AE0
+	// Token: 0x06003E1D RID: 15901 RVA: 0x0015F208 File Offset: 0x0015D408
 	protected override void OnExecute()
 	{
 		GuessJokerAiSkillTriggerTask.<>c__DisplayClass5_0 CS$<>8__locals1 = new GuessJokerAiSkillTriggerTask.<>c__DisplayClass5_0();
@@ -69,7 +69,7 @@ public class GuessJokerAiSkillTriggerTask : GuessJokerTaskBase
 		base.FinishTask();
 	}
 
-	// Token: 0x06006A89 RID: 27273 RVA: 0x00156A48 File Offset: 0x00154C48
+	// Token: 0x06003E1E RID: 15902 RVA: 0x0015F370 File Offset: 0x0015D570
 	protected override void OnTick(float deltaTime)
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -83,7 +83,7 @@ public class GuessJokerAiSkillTriggerTask : GuessJokerTaskBase
 		guessJokerGamePlayView.SetSkillProgress(EGuessJokerPlayerType.Ai, progress);
 	}
 
-	// Token: 0x06006A8A RID: 27274 RVA: 0x00156AA4 File Offset: 0x00154CA4
+	// Token: 0x06003E1F RID: 15903 RVA: 0x0015F3CC File Offset: 0x0015D5CC
 	protected override void OnComplete()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -95,15 +95,15 @@ public class GuessJokerAiSkillTriggerTask : GuessJokerTaskBase
 		}
 	}
 
-	// Token: 0x04003116 RID: 12566
+	// Token: 0x040031AF RID: 12719
 	private readonly int SkillId;
 
-	// Token: 0x04003117 RID: 12567
+	// Token: 0x040031B0 RID: 12720
 	private readonly int SkillRemindCount;
 
-	// Token: 0x04003118 RID: 12568
+	// Token: 0x040031B1 RID: 12721
 	private bool IsStartCountDown;
 
-	// Token: 0x04003119 RID: 12569
+	// Token: 0x040031B2 RID: 12722
 	private float ThinkTime;
 }

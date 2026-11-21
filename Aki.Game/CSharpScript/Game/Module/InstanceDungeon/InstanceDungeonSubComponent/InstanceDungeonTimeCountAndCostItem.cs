@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058AE RID: 22702
+	// Token: 0x02004886 RID: 18566
 	public class InstanceDungeonTimeCountAndCostItem : UiPanelBase
 	{
-		// Token: 0x06039BDA RID: 236506 RVA: 0x00DB9320 File Offset: 0x00DB7520
+		// Token: 0x0602EAFD RID: 191229 RVA: 0x00D08238 File Offset: 0x00D06438
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BDB RID: 236507 RVA: 0x00DB93AC File Offset: 0x00DB75AC
+		// Token: 0x0602EAFE RID: 191230 RVA: 0x00D082C4 File Offset: 0x00D064C4
 		public void RefreshItem(TItem item, int instanceId)
 		{
 			int rewardId = InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.RewardId;
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			base.SetItemIcon(base.GetTexture(0), item.ItemData.ItemId, null, null);
 		}
 
-		// Token: 0x0200BB15 RID: 47893
+		// Token: 0x0200A52E RID: 42286
 		private enum EChildType
 		{
-			// Token: 0x04038842 RID: 231490
+			// Token: 0x04033243 RID: 209475
 			ItemIconTex,
-			// Token: 0x04038843 RID: 231491
+			// Token: 0x04033244 RID: 209476
 			TimeCountTxt,
-			// Token: 0x04038844 RID: 231492
+			// Token: 0x04033245 RID: 209477
 			ItemCountNumTxt
 		}
 	}

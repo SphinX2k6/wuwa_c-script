@@ -7,19 +7,19 @@ using CSharpScript.Game.Input;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using UnrealEngine;
 
-// Token: 0x0200307C RID: 12412
+// Token: 0x020025D3 RID: 9683
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 {
-	// Token: 0x0601A815 RID: 108565 RVA: 0x00716AB9 File Offset: 0x00714CB9
+	// Token: 0x060181E6 RID: 98790 RVA: 0x0073D209 File Offset: 0x0073B409
 	private void OnCharSkillEnd(int entityId, int skillId)
 	{
 		this.CurEndSkillId = (long)skillId;
 	}
 
-	// Token: 0x1700247A RID: 9338
-	// (get) Token: 0x0601A816 RID: 108566 RVA: 0x00716AC3 File Offset: 0x00714CC3
+	// Token: 0x170025BF RID: 9663
+	// (get) Token: 0x060181E7 RID: 98791 RVA: 0x0073D213 File Offset: 0x0073B413
 	private CharacterActorComponent CharActorComp
 	{
 		get
@@ -28,19 +28,19 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		}
 	}
 
-	// Token: 0x0601A817 RID: 108567 RVA: 0x00716AD0 File Offset: 0x00714CD0
+	// Token: 0x060181E8 RID: 98792 RVA: 0x0073D220 File Offset: 0x0073B420
 	public CharacterMovementSyncComponent()
 	{
 		this.FastMoveSampleInternal = this.ReadOnlyFastMoveSampleInfo;
 	}
 
-	// Token: 0x0601A818 RID: 108568 RVA: 0x00716B09 File Offset: 0x00714D09
+	// Token: 0x060181E9 RID: 98793 RVA: 0x0073D259 File Offset: 0x0073B459
 	protected override bool DefaultEnableMovementSync()
 	{
 		return true;
 	}
 
-	// Token: 0x0601A819 RID: 108569 RVA: 0x00716B0C File Offset: 0x00714D0C
+	// Token: 0x060181EA RID: 98794 RVA: 0x0073D25C File Offset: 0x0073B45C
 	protected override bool GetIsMoving()
 	{
 		int movementModeFromSample = this.GetMovementModeFromSample();
@@ -59,7 +59,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A81A RID: 108570 RVA: 0x00716BE4 File Offset: 0x00714DE4
+	// Token: 0x060181EB RID: 98795 RVA: 0x0073D334 File Offset: 0x0073B534
 	protected override bool GetImportantMove(bool moving)
 	{
 		int movementModeFromSample = this.GetMovementModeFromSample();
@@ -70,7 +70,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return this.LastMovementMode != movementModeFromSample || this.LastHasBaseMovement != this.MoveComp.HasBaseMovement || this.LastTimeScale != num3 || (!moving && this.LastMove);
 	}
 
-	// Token: 0x0601A81B RID: 108571 RVA: 0x00716C7C File Offset: 0x00714E7C
+	// Token: 0x060181EC RID: 98796 RVA: 0x0073D3CC File Offset: 0x0073B5CC
 	protected override bool GetSecondaryImportantMove()
 	{
 		if (this.CurEndSkillId <= 0L)
@@ -83,7 +83,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A81C RID: 108572 RVA: 0x00716CD8 File Offset: 0x00714ED8
+	// Token: 0x060181ED RID: 98797 RVA: 0x0073D428 File Offset: 0x0073B628
 	protected override void CustomAfterTickInternal(float delta)
 	{
 		this.UpdateFastMoveSampleBase((double)delta);
@@ -100,7 +100,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		base.CustomAfterTickInternal(delta);
 	}
 
-	// Token: 0x0601A81D RID: 108573 RVA: 0x00716D92 File Offset: 0x00714F92
+	// Token: 0x060181EE RID: 98798 RVA: 0x0073D4E2 File Offset: 0x0073B6E2
 	public override void TickReplaySamples()
 	{
 		if (this.DriveVehicleComp != null && this.DriveVehicleComp.Seat >= 0)
@@ -110,7 +110,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		base.TickReplaySamples();
 	}
 
-	// Token: 0x0601A81E RID: 108574 RVA: 0x00716DB4 File Offset: 0x00714FB4
+	// Token: 0x060181EF RID: 98799 RVA: 0x0073D504 File Offset: 0x0073B704
 	private void UpdateFastMoveSampleBase(double delta)
 	{
 		CharacterActorComponent charActorComp = this.CharActorComp;
@@ -137,7 +137,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		this.FastMoveSampleInternal = this.FastMoveSampleInfo;
 	}
 
-	// Token: 0x0601A81F RID: 108575 RVA: 0x00716EA4 File Offset: 0x007150A4
+	// Token: 0x060181F0 RID: 98800 RVA: 0x0073D5F4 File Offset: 0x0073B7F4
 	private int GetMovementModeFromSample()
 	{
 		FastMoveSample fastMoveSample = this.FastMoveSampleInternal as FastMoveSample;
@@ -153,7 +153,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return 0;
 	}
 
-	// Token: 0x0601A820 RID: 108576 RVA: 0x00716EE0 File Offset: 0x007150E0
+	// Token: 0x060181F1 RID: 98801 RVA: 0x0073D630 File Offset: 0x0073B830
 	private global::Vector GetLocationFromSample()
 	{
 		FastMoveSample fastMoveSample = this.FastMoveSampleInternal as FastMoveSample;
@@ -169,7 +169,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return global::Vector.Create();
 	}
 
-	// Token: 0x0601A821 RID: 108577 RVA: 0x00716F20 File Offset: 0x00715120
+	// Token: 0x060181F2 RID: 98802 RVA: 0x0073D670 File Offset: 0x0073B870
 	private global::Rotator GetRotationFromSample()
 	{
 		FastMoveSample fastMoveSample = this.FastMoveSampleInternal as FastMoveSample;
@@ -185,7 +185,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return global::Rotator.Create();
 	}
 
-	// Token: 0x0601A822 RID: 108578 RVA: 0x00716F60 File Offset: 0x00715160
+	// Token: 0x060181F3 RID: 98803 RVA: 0x0073D6B0 File Offset: 0x0073B8B0
 	private global::Vector GetLinearVelocityFromSample()
 	{
 		FastMoveSample fastMoveSample = this.FastMoveSampleInternal as FastMoveSample;
@@ -201,7 +201,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return global::Vector.Create();
 	}
 
-	// Token: 0x0601A823 RID: 108579 RVA: 0x00716FA0 File Offset: 0x007151A0
+	// Token: 0x060181F4 RID: 98804 RVA: 0x0073D6F0 File Offset: 0x0073B8F0
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -217,7 +217,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A824 RID: 108580 RVA: 0x0071702C File Offset: 0x0071522C
+	// Token: 0x060181F5 RID: 98805 RVA: 0x0073D77C File Offset: 0x0073B97C
 	protected override bool OnEnd()
 	{
 		if (!base.OnEnd())
@@ -228,7 +228,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A825 RID: 108581 RVA: 0x00717058 File Offset: 0x00715258
+	// Token: 0x060181F6 RID: 98806 RVA: 0x0073D7A8 File Offset: 0x0073B9A8
 	protected override void ApplyInput(int input, global::Rotator rotation)
 	{
 		if (this.InputComp != null)
@@ -261,7 +261,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		}
 	}
 
-	// Token: 0x0601A826 RID: 108582 RVA: 0x007170FC File Offset: 0x007152FC
+	// Token: 0x060181F7 RID: 98807 RVA: 0x0073D84C File Offset: 0x0073BA4C
 	private void UnpackInputDirection(int input, global::Vector outVector)
 	{
 		if (input == 255)
@@ -274,7 +274,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		outVector.Y = Math.Sin(num);
 	}
 
-	// Token: 0x0601A827 RID: 108583 RVA: 0x00717164 File Offset: 0x00715364
+	// Token: 0x060181F8 RID: 98808 RVA: 0x0073D8B4 File Offset: 0x0073BAB4
 	public unsafe override MoveReplaySample GetCurrentMoveSample()
 	{
 		MoveReplaySample moveReplaySample = MoveReplaySample.Create();
@@ -367,7 +367,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return moveReplaySample;
 	}
 
-	// Token: 0x0601A828 RID: 108584 RVA: 0x00717540 File Offset: 0x00715740
+	// Token: 0x060181F9 RID: 98809 RVA: 0x0073DC90 File Offset: 0x0073BE90
 	[return: Nullable(2)]
 	protected RelativeMoveReplaySample GetRelativeMoveSample(BasePlatform platform, bool checkLeave = false)
 	{
@@ -408,7 +408,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return relativeMoveReplaySample;
 	}
 
-	// Token: 0x0601A829 RID: 108585 RVA: 0x00717670 File Offset: 0x00715870
+	// Token: 0x060181FA RID: 98810 RVA: 0x0073DDC0 File Offset: 0x0073BFC0
 	protected override void RecordLastData(bool isMove = false)
 	{
 		this.LastMovementMode = this.GetMovementModeFromSample();
@@ -437,7 +437,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		this.LastTimeScale = lastTimeScale;
 	}
 
-	// Token: 0x0601A82A RID: 108586 RVA: 0x00717790 File Offset: 0x00715990
+	// Token: 0x060181FB RID: 98811 RVA: 0x0073DEE0 File Offset: 0x0073C0E0
 	protected override bool CalcRelativeMove(ReplaySample sample1, ReplaySample sample2, float lerpPercent, global::Vector outLocation, global::Rotator outRotator)
 	{
 		if (sample1.RelativeMove == null || sample2.RelativeMove == null)
@@ -470,7 +470,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A82B RID: 108587 RVA: 0x00717884 File Offset: 0x00715A84
+	// Token: 0x060181FC RID: 98812 RVA: 0x0073DFD4 File Offset: 0x0073C1D4
 	[return: Nullable(2)]
 	protected override EntityHandle CheckRelativeMove(ReplaySample sample1, ReplaySample sample2, float lerpPercent, global::Vector outLocation, global::Rotator outRotator)
 	{
@@ -496,7 +496,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return entityHandle;
 	}
 
-	// Token: 0x0601A82C RID: 108588 RVA: 0x00717920 File Offset: 0x00715B20
+	// Token: 0x060181FD RID: 98813 RVA: 0x0073E070 File Offset: 0x0073C270
 	protected override bool TransformFromRelativeMove(EntityHandle handle, global::Vector location, global::Rotator rotator, global::Vector outLocation, global::Rotator outRotator)
 	{
 		BasePlatform basePlatformByEntity = BasePlatformController.GetBasePlatformByEntity(handle);
@@ -514,7 +514,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return true;
 	}
 
-	// Token: 0x0601A82D RID: 108589 RVA: 0x00717990 File Offset: 0x00715B90
+	// Token: 0x060181FE RID: 98814 RVA: 0x0073E0E0 File Offset: 0x0073C2E0
 	protected override void ApplyMoveSample(int movementMode, global::Vector location, global::Rotator rotator, global::Vector linearVelocity, global::Vector slideForward, int controllerPlayerId, int input, float controllerPitch, float timeScale, long serverTimeStamp, float originRtt)
 	{
 		base.ApplyMoveSample(movementMode, location, rotator, linearVelocity, slideForward, controllerPlayerId, input, controllerPitch, timeScale, serverTimeStamp, originRtt);
@@ -578,14 +578,14 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		base.ReportMoveDataApplyInfo((float)Time.Instance.CombatServerTime - (float)serverTimeStamp, (float)num, originRtt);
 	}
 
-	// Token: 0x0601A82E RID: 108590 RVA: 0x00717AFD File Offset: 0x00715CFD
+	// Token: 0x060181FF RID: 98815 RVA: 0x0073E24D File Offset: 0x0073C44D
 	public void ClearBasePlatform()
 	{
 		this.LastHasBaseMovement = false;
 		this.LastBasePlatform = null;
 	}
 
-	// Token: 0x0601A82F RID: 108591 RVA: 0x00717B10 File Offset: 0x00715D10
+	// Token: 0x06018200 RID: 98816 RVA: 0x0073E260 File Offset: 0x0073C460
 	private void UpdateFastMoveSampleBase(ref FastMoveSample moveSample, [Nullable(2)] APawn pawn, UCharacterMovementComponent moveComp)
 	{
 		if (pawn == null)
@@ -607,7 +607,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		moveSample.MovementMode = (int)moveComp.MovementMode;
 	}
 
-	// Token: 0x0601A830 RID: 108592 RVA: 0x00717BFC File Offset: 0x00715DFC
+	// Token: 0x06018201 RID: 98817 RVA: 0x0073E34C File Offset: 0x0073C54C
 	private void UpdateFastMoveSampleInput(ref MoveReplaySample moveSample, [Nullable(2)] APawn pawn, UCharacterMovementComponent moveComp, float inputX, float inputY, float inputSize, float cameraYaw)
 	{
 		if (pawn == null)
@@ -637,7 +637,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		moveSample.MovementMode = (int)moveComp.MovementMode;
 	}
 
-	// Token: 0x0601A831 RID: 108593 RVA: 0x00717D34 File Offset: 0x00715F34
+	// Token: 0x06018202 RID: 98818 RVA: 0x0073E484 File Offset: 0x0073C684
 	private int CalculateInputDirection(FVector2D inputDirection, float inputDirectionSize, float cameraRotatorYaw)
 	{
 		int num = (int)this.PackJoystickInput(inputDirection, inputDirectionSize);
@@ -646,7 +646,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return num << 8 | num2;
 	}
 
-	// Token: 0x0601A832 RID: 108594 RVA: 0x00717D64 File Offset: 0x00715F64
+	// Token: 0x06018203 RID: 98819 RVA: 0x0073E4B4 File Offset: 0x0073C6B4
 	private float PackJoystickInput(FVector2D inputDirection, float inputDirectionSize)
 	{
 		if (inputDirection.IsNearlyZero(1E-08f))
@@ -665,7 +665,7 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 		return UKismetMathLibrary.MapRangeClamped(num, 0f, 6.2831855f, 0f, 255f);
 	}
 
-	// Token: 0x0601A833 RID: 108595 RVA: 0x00717DD0 File Offset: 0x00715FD0
+	// Token: 0x06018204 RID: 98820 RVA: 0x0073E520 File Offset: 0x0073C720
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -673,153 +673,170 @@ public class CharacterMovementSyncComponent : BaseMovementSyncComponent
 			return false;
 		}
 		CharacterMovementSyncComponent characterMovementSyncComponent = (CharacterMovementSyncComponent)componentTemplate;
-		if (base.CanResetComponentProperty("LastMovementMode"))
+		this.LastMovementMode = characterMovementSyncComponent.LastMovementMode;
+		this.LastReceivedMovementMode = characterMovementSyncComponent.LastReceivedMovementMode;
+		this.LastTimeScale = characterMovementSyncComponent.LastTimeScale;
+		if (characterMovementSyncComponent.InputComp == null)
 		{
-			this.LastMovementMode = characterMovementSyncComponent.LastMovementMode;
+			this.InputComp = null;
 		}
-		if (base.CanResetComponentProperty("LastReceivedMovementMode"))
-		{
-			this.LastReceivedMovementMode = characterMovementSyncComponent.LastReceivedMovementMode;
-		}
-		if (base.CanResetComponentProperty("LastTimeScale"))
-		{
-			this.LastTimeScale = characterMovementSyncComponent.LastTimeScale;
-		}
-		if (base.CanResetComponentProperty("InputComp"))
-		{
-			if (characterMovementSyncComponent.InputComp == null)
-			{
-				this.InputComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComp), "InputComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SlideComponent"))
-		{
-			if (characterMovementSyncComponent.SlideComponent == null)
-			{
-				this.SlideComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSlideComponent>(this.SlideComponent), "SlideComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
-		{
-			if (characterMovementSyncComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DriveVehicleComp"))
-		{
-			if (characterMovementSyncComponent.DriveVehicleComp == null)
-			{
-				this.DriveVehicleComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterDriveVehicleComponent>(this.DriveVehicleComp), "DriveVehicleComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AiComponent"))
-		{
-			if (characterMovementSyncComponent.AiComponent == null)
-			{
-				this.AiComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAiComponent>(this.AiComponent), "AiComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FastMoveSampleInfo"))
-		{
-			if (characterMovementSyncComponent.FastMoveSampleInfo == null)
-			{
-				this.FastMoveSampleInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FastMoveSample>(this.FastMoveSampleInfo), "FastMoveSampleInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ReadOnlyFastMoveSampleInfo") && characterMovementSyncComponent.ReadOnlyFastMoveSampleInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ReadOnlyFastMoveSample>(this.ReadOnlyFastMoveSampleInfo), "ReadOnlyFastMoveSampleInfo"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("FastMoveSampleInternal"))
+		if (characterMovementSyncComponent.SlideComponent == null)
 		{
-			if (characterMovementSyncComponent.FastMoveSampleInternal == null)
-			{
-				this.FastMoveSampleInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<object>(this.FastMoveSampleInternal), "FastMoveSampleInternal"))
-			{
-				return false;
-			}
+			this.SlideComponent = null;
 		}
-		if (base.CanResetComponentProperty("CurEndSkillId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlideComponent), "SlideComponent"))
 		{
-			this.CurEndSkillId = characterMovementSyncComponent.CurEndSkillId;
+			return false;
 		}
+		if (characterMovementSyncComponent.UnifiedComp == null)
+		{
+			this.UnifiedComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
+		{
+			return false;
+		}
+		if (characterMovementSyncComponent.DriveVehicleComp == null)
+		{
+			this.DriveVehicleComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DriveVehicleComp), "DriveVehicleComp"))
+		{
+			return false;
+		}
+		if (characterMovementSyncComponent.AiComponent == null)
+		{
+			this.AiComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiComponent), "AiComponent"))
+		{
+			return false;
+		}
+		if (characterMovementSyncComponent.FastMoveSampleInfo == null)
+		{
+			this.FastMoveSampleInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FastMoveSampleInfo), "FastMoveSampleInfo"))
+		{
+			return false;
+		}
+		if (characterMovementSyncComponent.ReadOnlyFastMoveSampleInfo != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReadOnlyFastMoveSampleInfo), "ReadOnlyFastMoveSampleInfo"))
+		{
+			return false;
+		}
+		if (characterMovementSyncComponent.FastMoveSampleInternal == null)
+		{
+			this.FastMoveSampleInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FastMoveSampleInternal), "FastMoveSampleInternal"))
+		{
+			return false;
+		}
+		this.CurEndSkillId = characterMovementSyncComponent.CurEndSkillId;
 		return true;
 	}
 
-	// Token: 0x0400CB63 RID: 52067
+	// Token: 0x170025C0 RID: 9664
+	// (get) Token: 0x06018205 RID: 98821 RVA: 0x0073E6BF File Offset: 0x0073C8BF
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C1 RID: 9665
+	// (get) Token: 0x06018206 RID: 98822 RVA: 0x0073E6C2 File Offset: 0x0073C8C2
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C2 RID: 9666
+	// (get) Token: 0x06018207 RID: 98823 RVA: 0x0073E6C5 File Offset: 0x0073C8C5
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C3 RID: 9667
+	// (get) Token: 0x06018208 RID: 98824 RVA: 0x0073E6C8 File Offset: 0x0073C8C8
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025C4 RID: 9668
+	// (get) Token: 0x06018209 RID: 98825 RVA: 0x0073E6CB File Offset: 0x0073C8CB
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CF46 RID: 53062
 	private const int InputDirectionSize = 255;
 
-	// Token: 0x0400CB64 RID: 52068
+	// Token: 0x0400CF47 RID: 53063
 	private const int InvalidInput = 65535;
 
-	// Token: 0x0400CB65 RID: 52069
+	// Token: 0x0400CF48 RID: 53064
 	private const float PI = 3.1415927f;
 
-	// Token: 0x0400CB66 RID: 52070
+	// Token: 0x0400CF49 RID: 53065
 	protected int LastMovementMode;
 
-	// Token: 0x0400CB67 RID: 52071
+	// Token: 0x0400CF4A RID: 53066
 	protected int LastReceivedMovementMode;
 
-	// Token: 0x0400CB68 RID: 52072
+	// Token: 0x0400CF4B RID: 53067
 	protected double LastTimeScale = 1.0;
 
-	// Token: 0x0400CB69 RID: 52073
+	// Token: 0x0400CF4C RID: 53068
 	[Nullable(2)]
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400CB6A RID: 52074
+	// Token: 0x0400CF4D RID: 53069
 	[Nullable(2)]
 	private CharacterSlideComponent SlideComponent;
 
-	// Token: 0x0400CB6B RID: 52075
+	// Token: 0x0400CF4E RID: 53070
 	[Nullable(2)]
 	private BaseUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400CB6C RID: 52076
+	// Token: 0x0400CF4F RID: 53071
 	[Nullable(2)]
 	private CharacterDriveVehicleComponent DriveVehicleComp;
 
-	// Token: 0x0400CB6D RID: 52077
+	// Token: 0x0400CF50 RID: 53072
 	[Nullable(2)]
 	private CharacterAiComponent AiComponent;
 
-	// Token: 0x0400CB6E RID: 52078
+	// Token: 0x0400CF51 RID: 53073
 	private FastMoveSample FastMoveSampleInfo = new FastMoveSample();
 
-	// Token: 0x0400CB6F RID: 52079
+	// Token: 0x0400CF52 RID: 53074
 	private readonly ReadOnlyFastMoveSample ReadOnlyFastMoveSampleInfo = new ReadOnlyFastMoveSample();
 
-	// Token: 0x0400CB70 RID: 52080
+	// Token: 0x0400CF53 RID: 53075
 	private object FastMoveSampleInternal;
 
-	// Token: 0x0400CB71 RID: 52081
+	// Token: 0x0400CF54 RID: 53076
 	private long CurEndSkillId;
 }

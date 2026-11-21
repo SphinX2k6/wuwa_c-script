@@ -10,24 +10,24 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AF1 RID: 27377
+	// Token: 0x02005C69 RID: 23657
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventAddTrialCharacter : LevelEventBase
 	{
-		// Token: 0x06043FDD RID: 278493 RVA: 0x010AE458 File Offset: 0x010AC658
+		// Token: 0x0603A12F RID: 237871 RVA: 0x01057CD4 File Offset: 0x01055ED4
 		public LevelEventAddTrialCharacter(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06043FDE RID: 278494 RVA: 0x010AE461 File Offset: 0x010AC661
+		// Token: 0x0603A130 RID: 237872 RVA: 0x01057CDD File Offset: 0x01055EDD
 		[NullableContext(1)]
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06043FDF RID: 278495 RVA: 0x010AE46C File Offset: 0x010AC66C
+		// Token: 0x0603A131 RID: 237873 RVA: 0x01057CE8 File Offset: 0x01055EE8
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, (float)(GlobalData.IsPlayInEditor ? 300000 : (count * 10000)), null, "WaitAddTrialCharacter", true, 1f);
 		}
 
-		// Token: 0x06043FE0 RID: 278496 RVA: 0x010AE644 File Offset: 0x010AC844
+		// Token: 0x0603A132 RID: 237874 RVA: 0x01057EC0 File Offset: 0x010560C0
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.WaitAddCharacterTimer == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06043FE1 RID: 278497 RVA: 0x010AE6A4 File Offset: 0x010AC8A4
+		// Token: 0x0603A133 RID: 237875 RVA: 0x01057F20 File Offset: 0x01056120
 		private bool CheckOutOfRange()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06043FE2 RID: 278498 RVA: 0x010AE808 File Offset: 0x010ACA08
+		// Token: 0x0603A134 RID: 237876 RVA: 0x01058084 File Offset: 0x01056284
 		private bool CheckAllRoleInTeam()
 		{
 			if (this.RoleGroupIdList == null || this.RoleGroupIdList.Count <= 0)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x06043FE3 RID: 278499 RVA: 0x010AE87C File Offset: 0x010ACA7C
+		// Token: 0x0603A135 RID: 237877 RVA: 0x010580F8 File Offset: 0x010562F8
 		[NullableContext(1)]
 		private bool CheckOutOfAoiRange(global::Vector roleLocation, int pbDataId)
 		{
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return global::Vector.DistSquared2D(vector, roleLocation) > (double)(valueOrDefault * valueOrDefault) || (valueOrDefault2 > 0 && Math.Abs(vector.Z - roleLocation.Z) > (double)valueOrDefault2);
 		}
 
-		// Token: 0x06043FE4 RID: 278500 RVA: 0x010AE930 File Offset: 0x010ACB30
+		// Token: 0x0603A136 RID: 237878 RVA: 0x010581AC File Offset: 0x010563AC
 		private SceneTeamItem GetRoleTeamItem(int roleGroupId)
 		{
 			foreach (SceneTeamItem sceneTeamItem in SceneTeamModel.Instance.GetTeamItems(true))
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x06043FE5 RID: 278501 RVA: 0x010AE9C4 File Offset: 0x010ACBC4
+		// Token: 0x0603A137 RID: 237879 RVA: 0x01058240 File Offset: 0x01056440
 		private void WaitFinish(bool result)
 		{
 			global::Log.Instance.Info(ELogModule.Event, ELogAuthor.LYY, "[AddTrialEvent] 编队等待结束", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -242,22 +242,22 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0402388B RID: 145547
+		// Token: 0x0401EB2D RID: 125741
 		private bool AutoChange;
 
-		// Token: 0x0402388C RID: 145548
+		// Token: 0x0401EB2E RID: 125742
 		private List<int> RoleGroupIdList;
 
-		// Token: 0x0402388D RID: 145549
+		// Token: 0x0401EB2F RID: 125743
 		private global::Vector ActiveRangeLocation;
 
-		// Token: 0x0402388E RID: 145550
+		// Token: 0x0401EB30 RID: 125744
 		private float ActiveRangeRadius;
 
-		// Token: 0x0402388F RID: 145551
+		// Token: 0x0401EB31 RID: 125745
 		private List<int> RangeEntityPbDataIdList;
 
-		// Token: 0x04023890 RID: 145552
+		// Token: 0x0401EB32 RID: 125746
 		private TimerHandle WaitAddCharacterTimer;
 	}
 }

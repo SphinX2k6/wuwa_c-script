@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067F0 RID: 26608
+	// Token: 0x02005740 RID: 22336
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlCombineViewTitleItem : UiPanelBase
 	{
-		// Token: 0x060424C6 RID: 271558 RVA: 0x010189B0 File Offset: 0x01016BB0
+		// Token: 0x0603701B RID: 225307 RVA: 0x00F59E40 File Offset: 0x00F58040
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060424C7 RID: 271559 RVA: 0x01018A3A File Offset: 0x01016C3A
+		// Token: 0x0603701C RID: 225308 RVA: 0x00F59ECA File Offset: 0x00F580CA
 		protected override void OnStart()
 		{
 			this.ListLoopScroll = new LoopScrollView<DangoBrawlCombineViewListItem, DangoBrawlCombineViewListItemData>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<DangoBrawlCombineViewListItem>(this.CreateListItem), true);
 		}
 
-		// Token: 0x060424C8 RID: 271560 RVA: 0x01018A6C File Offset: 0x01016C6C
+		// Token: 0x0603701D RID: 225309 RVA: 0x00F59EFC File Offset: 0x00F580FC
 		[NullableContext(1)]
 		public UniTask RefreshAsync(DangoBrawlCombineViewTitleData data)
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060424C9 RID: 271561 RVA: 0x01018AB7 File Offset: 0x01016CB7
+		// Token: 0x0603701E RID: 225310 RVA: 0x00F59F47 File Offset: 0x00F58147
 		public UUIItem GetFirstNavigationItem()
 		{
 			if (this.ListLoopScroll == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlCombineViewListItem.GetRootItem();
 		}
 
-		// Token: 0x060424CA RID: 271562 RVA: 0x01018AE8 File Offset: 0x01016CE8
+		// Token: 0x0603701F RID: 225311 RVA: 0x00F59F78 File Offset: 0x00F58178
 		public void RefreshGridSelection()
 		{
 			if (this.ListLoopScroll == null)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424CB RID: 271563 RVA: 0x01018B48 File Offset: 0x01016D48
+		// Token: 0x06037020 RID: 225312 RVA: 0x00F59FD8 File Offset: 0x00F581D8
 		[NullableContext(1)]
 		private void ApplyLoopScrollHeight(DangoBrawlCombineViewTitleData data)
 		{
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uuiitem.SetHeight(flag ? ((float)data.LoopMaxHeight) : num);
 		}
 
-		// Token: 0x060424CC RID: 271564 RVA: 0x01018BDF File Offset: 0x01016DDF
+		// Token: 0x06037021 RID: 225313 RVA: 0x00F5A06F File Offset: 0x00F5826F
 		[NullableContext(1)]
 		private DangoBrawlCombineViewListItem CreateListItem()
 		{
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x0402296A RID: 141674
+		// Token: 0x0401D1C7 RID: 119239
 		[Nullable(new byte[]
 		{
 			2,
@@ -133,30 +133,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoopScrollView<DangoBrawlCombineViewListItem, DangoBrawlCombineViewListItemData> ListLoopScroll;
 
-		// Token: 0x0402296B RID: 141675
+		// Token: 0x0401D1C8 RID: 119240
 		private float OriginalScrollHeight;
 
-		// Token: 0x0402296C RID: 141676
+		// Token: 0x0401D1C9 RID: 119241
 		private bool HasOriginalScrollHeight;
 
-		// Token: 0x0402296D RID: 141677
+		// Token: 0x0401D1CA RID: 119242
 		public Action<DangoBrawlCombineRowData> OnCombineClick;
 
-		// Token: 0x0402296E RID: 141678
+		// Token: 0x0401D1CB RID: 119243
 		public Action<int, UUIItem> OnGridClick;
 
-		// Token: 0x0402296F RID: 141679
+		// Token: 0x0401D1CC RID: 119244
 		public Func<int, bool> IsGridSelected;
 
-		// Token: 0x0200C930 RID: 51504
+		// Token: 0x0200B2FD RID: 45821
 		[NullableContext(0)]
 		private enum EItemComponents
 		{
-			// Token: 0x0403CBD5 RID: 248789
+			// Token: 0x040374C5 RID: 226501
 			TxtTitle,
-			// Token: 0x0403CBD6 RID: 248790
+			// Token: 0x040374C6 RID: 226502
 			ListLoopScroll,
-			// Token: 0x0403CBD7 RID: 248791
+			// Token: 0x040374C7 RID: 226503
 			ListItem
 		}
 	}

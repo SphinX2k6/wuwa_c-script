@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200422A RID: 16938
+	// Token: 0x02004686 RID: 18054
 	public class ITrapDefenseConditionStepLoadAndRestoreMapT
 	{
-		// Token: 0x1700784E RID: 30798
-		// (get) Token: 0x060190B2 RID: 102578 RVA: 0x0039A686 File Offset: 0x00398886
-		// (set) Token: 0x060190B3 RID: 102579 RVA: 0x0039A68E File Offset: 0x0039888E
+		// Token: 0x17007E7F RID: 32383
+		// (get) Token: 0x0601A81E RID: 108574 RVA: 0x003C5D5E File Offset: 0x003C3F5E
+		// (set) Token: 0x0601A81F RID: 108575 RVA: 0x003C5D66 File Offset: 0x003C3F66
 		public ETrapDefenseConditionStep Type { get; set; }
 
-		// Token: 0x060190B4 RID: 102580 RVA: 0x0039A697 File Offset: 0x00398897
+		// Token: 0x0601A820 RID: 108576 RVA: 0x003C5D6F File Offset: 0x003C3F6F
 		public ITrapDefenseConditionStepLoadAndRestoreMapT()
 		{
 			this.Type = ETrapDefenseConditionStep.Reward;

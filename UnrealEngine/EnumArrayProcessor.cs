@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000057 RID: 87
+	// Token: 0x0200003C RID: 60
 	public sealed class EnumArrayProcessor<[IsUnmanaged] T> : PodBaseArrayProcessor<T> where T : struct, ValueType, Enum
 	{
-		// Token: 0x060008EA RID: 2282 RVA: 0x00010C98 File Offset: 0x0000EE98
+		// Token: 0x0600086F RID: 2159 RVA: 0x0000D504 File Offset: 0x0000B704
 		public EnumArrayProcessor()
 		{
 			this.HasGetTypeHash = true;
@@ -15,7 +15,7 @@ namespace UnrealEngine
 			this.MinAlignment = sizeof(T);
 		}
 
-		// Token: 0x060008EB RID: 2283 RVA: 0x00010CC0 File Offset: 0x0000EEC0
+		// Token: 0x06000870 RID: 2160 RVA: 0x0000D52C File Offset: 0x0000B72C
 		public override int FindIndex(IntPtr Data, int Num, T Value)
 		{
 			for (int i = 0; i < Num; i++)

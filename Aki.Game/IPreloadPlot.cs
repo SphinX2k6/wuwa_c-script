@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003319 RID: 13081
+// Token: 0x0200288B RID: 10379
 [NullableContext(1)]
 public interface IPreloadPlot
 {
-	// Token: 0x17002781 RID: 10113
-	// (get) Token: 0x0601C7EF RID: 116719
+	// Token: 0x17002B1E RID: 11038
+	// (get) Token: 0x0601A4E8 RID: 107752
 	string Id { get; }
 
-	// Token: 0x17002782 RID: 10114
-	// (get) Token: 0x0601C7F0 RID: 116720
+	// Token: 0x17002B1F RID: 11039
+	// (get) Token: 0x0601A4E9 RID: 107753
 	int Priority { get; }
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200012B RID: 299
+	// Token: 0x0200013C RID: 316
 	[EnumExtensions]
 	public enum ERewardDropType
 	{
-		// Token: 0x040005F4 RID: 1524
+		// Token: 0x04000632 RID: 1586
 		Death,
-		// Token: 0x040005F5 RID: 1525
+		// Token: 0x04000633 RID: 1587
 		HostInteract
 	}
 }

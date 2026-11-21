@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002404 RID: 9220
+// Token: 0x020018E9 RID: 6377
 public class PhantomBattleConfigDefine : IStaticVariableResetter
 {
-	// Token: 0x0601277C RID: 75644 RVA: 0x0048DB01 File Offset: 0x0048BD01
+	// Token: 0x0600FC32 RID: 64562 RVA: 0x0049B125 File Offset: 0x00499325
 	static PhantomBattleConfigDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomBattleConfigDefine.CreateStaticDefaultValue), new Action(PhantomBattleConfigDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601277D RID: 75645 RVA: 0x0048DB20 File Offset: 0x0048BD20
+	// Token: 0x0600FC33 RID: 64563 RVA: 0x0049B144 File Offset: 0x00499344
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomBattleConfigDefine.COSTLIST = null;
 	}
 
-	// Token: 0x0601277E RID: 75646 RVA: 0x0048DB28 File Offset: 0x0048BD28
+	// Token: 0x0600FC34 RID: 64564 RVA: 0x0049B14C File Offset: 0x0049934C
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomBattleConfigDefine.COSTLIST = new List<int>
@@ -28,13 +28,13 @@ public class PhantomBattleConfigDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x04008B6A RID: 35690
+	// Token: 0x04008CB1 RID: 36017
 	public const int COST3 = 3;
 
-	// Token: 0x04008B6B RID: 35691
+	// Token: 0x04008CB2 RID: 36018
 	public const int COST1 = 1;
 
-	// Token: 0x04008B6C RID: 35692
+	// Token: 0x04008CB3 RID: 36019
 	[Nullable(2)]
 	public static List<int> COSTLIST;
 }

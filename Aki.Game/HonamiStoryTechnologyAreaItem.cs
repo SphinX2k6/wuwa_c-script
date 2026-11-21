@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F03 RID: 7939
+// Token: 0x020013C5 RID: 5061
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,8 +16,8 @@ using UnrealEngine;
 })]
 public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAreaData>
 {
-	// Token: 0x17001314 RID: 4884
-	// (get) Token: 0x0600F473 RID: 62579 RVA: 0x003AF836 File Offset: 0x003ADA36
+	// Token: 0x1700133E RID: 4926
+	// (get) Token: 0x0600C892 RID: 51346 RVA: 0x003BB32A File Offset: 0x003B952A
 	[Nullable(new byte[]
 	{
 		2,
@@ -36,7 +36,7 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 		}
 	}
 
-	// Token: 0x0600F474 RID: 62580 RVA: 0x003AF840 File Offset: 0x003ADA40
+	// Token: 0x0600C893 RID: 51347 RVA: 0x003BB334 File Offset: 0x003B9534
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -53,19 +53,19 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 		};
 	}
 
-	// Token: 0x0600F475 RID: 62581 RVA: 0x003AF920 File Offset: 0x003ADB20
+	// Token: 0x0600C894 RID: 51348 RVA: 0x003BB414 File Offset: 0x003B9614
 	protected override void OnStart()
 	{
 		this.NodeItemMap = new Dictionary<int, HonamiStoryTechnologyNodeItem>();
 	}
 
-	// Token: 0x0600F476 RID: 62582 RVA: 0x003AF92D File Offset: 0x003ADB2D
+	// Token: 0x0600C895 RID: 51349 RVA: 0x003BB421 File Offset: 0x003B9621
 	protected override void OnBeforeDestroy()
 	{
 		this.NodeItemMap = null;
 	}
 
-	// Token: 0x0600F477 RID: 62583 RVA: 0x003AF938 File Offset: 0x003ADB38
+	// Token: 0x0600C896 RID: 51350 RVA: 0x003BB42C File Offset: 0x003B962C
 	public override void Refresh(HonamiStoryTechAreaData areaData, bool isSelected, int gridIndex)
 	{
 		List<int> nodeIds = areaData.NodeIds;
@@ -96,7 +96,7 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 		this.RefreshArea(list2);
 	}
 
-	// Token: 0x0600F478 RID: 62584 RVA: 0x003AFA40 File Offset: 0x003ADC40
+	// Token: 0x0600C897 RID: 51351 RVA: 0x003BB534 File Offset: 0x003B9734
 	public void RefreshArea(List<HonamiStoryTechNodeData> nodeDataList)
 	{
 		HonamiStoryTechnologyAreaItem.<>c__DisplayClass10_0 CS$<>8__locals1 = new HonamiStoryTechnologyAreaItem.<>c__DisplayClass10_0();
@@ -114,7 +114,7 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0600F479 RID: 62585 RVA: 0x003AFA84 File Offset: 0x003ADC84
+	// Token: 0x0600C898 RID: 51352 RVA: 0x003BB578 File Offset: 0x003B9778
 	private UniTask RefreshAreaItemAsync(List<HonamiStoryTechNodeData> nodeDataList)
 	{
 		HonamiStoryTechnologyAreaItem.<RefreshAreaItemAsync>d__11 <RefreshAreaItemAsync>d__;
@@ -126,16 +126,16 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 		return <RefreshAreaItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F47A RID: 62586 RVA: 0x003AFACF File Offset: 0x003ADCCF
+	// Token: 0x0600C899 RID: 51353 RVA: 0x003BB5C3 File Offset: 0x003B97C3
 	public void CloseLineRight()
 	{
 		base.GetItem(10).SetUIActive(false);
 	}
 
-	// Token: 0x0400711E RID: 28958
+	// Token: 0x040071FF RID: 29183
 	private const string ROME_ICON_PATH = "/Game/Aki/UI/UIResources/Common/Atlas/SP_ComRomeText_0{0}.SP_ComRomeText_0{1}";
 
-	// Token: 0x0400711F RID: 28959
+	// Token: 0x04007200 RID: 29184
 	[Nullable(new byte[]
 	{
 		2,
@@ -143,7 +143,7 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 	})]
 	private Dictionary<int, HonamiStoryTechnologyNodeItem> NodeItemMap;
 
-	// Token: 0x04007120 RID: 28960
+	// Token: 0x04007201 RID: 29185
 	[Nullable(new byte[]
 	{
 		2,
@@ -151,39 +151,39 @@ public class HonamiStoryTechnologyAreaItem : GridProxyAbstract<HonamiStoryTechAr
 	})]
 	public Action<HonamiStoryTechnologyNodeItem> OnAfterRefreshOneNode;
 
-	// Token: 0x02008505 RID: 34053
+	// Token: 0x0200768A RID: 30346
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402B49C RID: 177308
+		// Token: 0x040267C0 RID: 157632
 		LeftSkillItem,
-		// Token: 0x0402B49D RID: 177309
+		// Token: 0x040267C1 RID: 157633
 		TopSkillItem,
-		// Token: 0x0402B49E RID: 177310
+		// Token: 0x040267C2 RID: 157634
 		MiddleSkillItem,
-		// Token: 0x0402B49F RID: 177311
+		// Token: 0x040267C3 RID: 157635
 		BottomSkillItem,
-		// Token: 0x0402B4A0 RID: 177312
+		// Token: 0x040267C4 RID: 157636
 		ExtraSkillItemA,
-		// Token: 0x0402B4A1 RID: 177313
+		// Token: 0x040267C5 RID: 157637
 		ExtraSkillItemB,
-		// Token: 0x0402B4A2 RID: 177314
+		// Token: 0x040267C6 RID: 157638
 		ExtraSkillItemC,
-		// Token: 0x0402B4A3 RID: 177315
+		// Token: 0x040267C7 RID: 157639
 		line1,
-		// Token: 0x0402B4A4 RID: 177316
+		// Token: 0x040267C8 RID: 157640
 		line2,
-		// Token: 0x0402B4A5 RID: 177317
+		// Token: 0x040267C9 RID: 157641
 		line3,
-		// Token: 0x0402B4A6 RID: 177318
+		// Token: 0x040267CA RID: 157642
 		lineRight,
-		// Token: 0x0402B4A7 RID: 177319
+		// Token: 0x040267CB RID: 157643
 		line5,
-		// Token: 0x0402B4A8 RID: 177320
+		// Token: 0x040267CC RID: 157644
 		line6,
-		// Token: 0x0402B4A9 RID: 177321
+		// Token: 0x040267CD RID: 157645
 		line7,
-		// Token: 0x0402B4AA RID: 177322
+		// Token: 0x040267CE RID: 157646
 		SprTopNum
 	}
 }

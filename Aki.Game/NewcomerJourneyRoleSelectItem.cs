@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020013A4 RID: 5028
+// Token: 0x02000858 RID: 2136
 [NullableContext(2)]
 [Nullable(0)]
 public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 {
-	// Token: 0x06008D45 RID: 36165 RVA: 0x001E5DEC File Offset: 0x001E3FEC
+	// Token: 0x060060DB RID: 24795 RVA: 0x001EEA20 File Offset: 0x001ECC20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -51,7 +51,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D46 RID: 36166 RVA: 0x001E5FBF File Offset: 0x001E41BF
+	// Token: 0x060060DC RID: 24796 RVA: 0x001EEBF3 File Offset: 0x001ECDF3
 	private void OnToggleClick(EToggleState state)
 	{
 		Action<int, int> toggleCallBack = this.ToggleCallBack;
@@ -62,7 +62,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		toggleCallBack(base.GridIndex, this.RoleId);
 	}
 
-	// Token: 0x06008D47 RID: 36167 RVA: 0x001E5FE0 File Offset: 0x001E41E0
+	// Token: 0x060060DD RID: 24797 RVA: 0x001EEC14 File Offset: 0x001ECE14
 	private void OnPreviewBtnClick()
 	{
 		List<int> previewCharacterList = ActivityNewcomerJourneyController.Instance.GetNewcomerJourneyData().GetPreviewCharacterList();
@@ -77,7 +77,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		openCallBack();
 	}
 
-	// Token: 0x06008D48 RID: 36168 RVA: 0x001E6054 File Offset: 0x001E4254
+	// Token: 0x060060DE RID: 24798 RVA: 0x001EEC88 File Offset: 0x001ECE88
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(4));
@@ -89,7 +89,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		base.GetText(6).SetUIActive(false);
 	}
 
-	// Token: 0x06008D49 RID: 36169 RVA: 0x001E60A4 File Offset: 0x001E42A4
+	// Token: 0x060060DF RID: 24799 RVA: 0x001EECD8 File Offset: 0x001ECED8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.RoleId = data;
@@ -138,7 +138,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06008D4A RID: 36170 RVA: 0x001E61FA File Offset: 0x001E43FA
+	// Token: 0x060060E0 RID: 24800 RVA: 0x001EEE2E File Offset: 0x001ED02E
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -154,7 +154,7 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x06008D4B RID: 36171 RVA: 0x001E6226 File Offset: 0x001E4426
+	// Token: 0x060060E1 RID: 24801 RVA: 0x001EEE5A File Offset: 0x001ED05A
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -170,18 +170,18 @@ public class NewcomerJourneyRoleSelectItem : GridProxyAbstract<int>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x04003E9D RID: 16029
+	// Token: 0x04003F35 RID: 16181
 	private int RoleId;
 
-	// Token: 0x04003E9E RID: 16030
+	// Token: 0x04003F36 RID: 16182
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x04003E9F RID: 16031
+	// Token: 0x04003F37 RID: 16183
 	public Action OpenCallBack;
 
-	// Token: 0x04003EA0 RID: 16032
+	// Token: 0x04003F38 RID: 16184
 	public Action<int, int> ToggleCallBack;
 
-	// Token: 0x04003EA1 RID: 16033
+	// Token: 0x04003F39 RID: 16185
 	public Func<int, bool> CanToggleChange;
 }

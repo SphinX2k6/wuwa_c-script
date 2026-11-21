@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF3 RID: 3827
+	// Token: 0x02001009 RID: 4105
 	public class ICheckPlayerInputBase_SetValue
 	{
-		// Token: 0x04003327 RID: 13095
+		// Token: 0x04003634 RID: 13876
 		public ECheckPlayerInputType Type;
 	}
 }

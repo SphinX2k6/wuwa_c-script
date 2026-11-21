@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E87 RID: 24199
+	// Token: 0x020064CA RID: 25802
 	public enum TGiantTriggerCondition : byte
 	{
-		// Token: 0x0400F8C3 RID: 63683
+		// Token: 0x04010626 RID: 67110
 		NONE,
-		// Token: 0x0400F8C4 RID: 63684
+		// Token: 0x04010627 RID: 67111
 		IGiantTriggerEnterArea,
-		// Token: 0x0400F8C5 RID: 63685
+		// Token: 0x04010628 RID: 67112
 		IGiantTriggerRoleState,
-		// Token: 0x0400F8C6 RID: 63686
+		// Token: 0x04010629 RID: 67113
 		IGiantTriggerStableValue
 	}
 }

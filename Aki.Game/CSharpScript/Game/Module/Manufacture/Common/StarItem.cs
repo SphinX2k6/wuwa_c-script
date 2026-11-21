@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x02005694 RID: 22164
+	// Token: 0x0200466A RID: 18026
 	public class StarItem : UiPanelBase
 	{
-		// Token: 0x06038657 RID: 230999 RVA: 0x00D6310C File Offset: 0x00D6130C
+		// Token: 0x0602D554 RID: 185684 RVA: 0x00CB125C File Offset: 0x00CAF45C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06038658 RID: 231000 RVA: 0x00D6315F File Offset: 0x00D6135F
+		// Token: 0x0602D555 RID: 185685 RVA: 0x00CB12AF File Offset: 0x00CAF4AF
 		public void SetState(bool isReached)
 		{
 			if (isReached)
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetSprite(0).SetUIActive(false);
 		}
 
-		// Token: 0x0200B856 RID: 47190
+		// Token: 0x0200A27E RID: 41598
 		private class EStarDefine
 		{
-			// Token: 0x04037CB2 RID: 228530
+			// Token: 0x040326CF RID: 206543
 			public const int SprStar = 0;
 		}
 	}

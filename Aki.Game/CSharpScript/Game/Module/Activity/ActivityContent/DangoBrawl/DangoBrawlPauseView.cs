@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200682D RID: 26669
+	// Token: 0x0200577D RID: 22397
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlPauseView : UiViewBase
 	{
-		// Token: 0x060428F1 RID: 272625 RVA: 0x0102CE32 File Offset: 0x0102B032
+		// Token: 0x06037445 RID: 226373 RVA: 0x00F6E36E File Offset: 0x00F6C56E
 		public DangoBrawlPauseView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060428F2 RID: 272626 RVA: 0x0102CE3C File Offset: 0x0102B03C
+		// Token: 0x06037446 RID: 226374 RVA: 0x00F6E378 File Offset: 0x00F6C578
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060428F3 RID: 272627 RVA: 0x0102D100 File Offset: 0x0102B300
+		// Token: 0x06037447 RID: 226375 RVA: 0x00F6E63C File Offset: 0x00F6C83C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlPauseView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -88,25 +88,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060428F4 RID: 272628 RVA: 0x0102D143 File Offset: 0x0102B343
+		// Token: 0x06037448 RID: 226376 RVA: 0x00F6E67F File Offset: 0x00F6C87F
 		private DangoBrawlProgressItem CreateBrawlProgressItem()
 		{
 			return new DangoBrawlProgressItem();
 		}
 
-		// Token: 0x060428F5 RID: 272629 RVA: 0x0102D14A File Offset: 0x0102B34A
+		// Token: 0x06037449 RID: 226377 RVA: 0x00F6E686 File Offset: 0x00F6C886
 		private DangoBrawlRoundAddProgressItem CreateRoundAddProgressItem()
 		{
 			return new DangoBrawlRoundAddProgressItem();
 		}
 
-		// Token: 0x060428F6 RID: 272630 RVA: 0x0102D151 File Offset: 0x0102B351
+		// Token: 0x0603744A RID: 226378 RVA: 0x00F6E68D File Offset: 0x00F6C88D
 		private DangoBrawlRetryCountItem CreateRetryCountItem()
 		{
 			return new DangoBrawlRetryCountItem();
 		}
 
-		// Token: 0x060428F7 RID: 272631 RVA: 0x0102D158 File Offset: 0x0102B358
+		// Token: 0x0603744B RID: 226379 RVA: 0x00F6E694 File Offset: 0x00F6C894
 		protected override void OnStart()
 		{
 			object openParam = this.OpenParam;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshInfo();
 		}
 
-		// Token: 0x060428F8 RID: 272632 RVA: 0x0102D188 File Offset: 0x0102B388
+		// Token: 0x0603744C RID: 226380 RVA: 0x00F6E6C4 File Offset: 0x00F6C8C4
 		protected override void OnBeforeShow()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			battleManager.SetIsPauseByView(true, "DangoBrawlPauseView");
 		}
 
-		// Token: 0x060428F9 RID: 272633 RVA: 0x0102D1A5 File Offset: 0x0102B3A5
+		// Token: 0x0603744D RID: 226381 RVA: 0x00F6E6E1 File Offset: 0x00F6C8E1
 		protected override void OnBeforeHide()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			battleManager.SetIsPauseByView(false, "DangoBrawlPauseView");
 		}
 
-		// Token: 0x060428FA RID: 272634 RVA: 0x0102D1C4 File Offset: 0x0102B3C4
+		// Token: 0x0603744E RID: 226382 RVA: 0x00F6E700 File Offset: 0x00F6C900
 		private void RefreshInfo()
 		{
 			DangoBrawlInstBaseNotify instBase = ActivityDangoBrawlController.Instance.MyActivityData.InstBase;
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060428FB RID: 272635 RVA: 0x0102D338 File Offset: 0x0102B538
+		// Token: 0x0603744F RID: 226383 RVA: 0x00F6E874 File Offset: 0x00F6CA74
 		public List<DangoBrawlProgressItemData> BuildBrawlProgressItemDataList(int totalCount, int currentCount, bool isAdd = false)
 		{
 			List<DangoBrawlProgressItemData> list = new List<DangoBrawlProgressItemData>(totalCount);
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x060428FC RID: 272636 RVA: 0x0102D382 File Offset: 0x0102B582
+		// Token: 0x06037450 RID: 226384 RVA: 0x00F6E8BE File Offset: 0x00F6CABE
 		private void OnClickContinue()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060428FD RID: 272637 RVA: 0x0102D3A4 File Offset: 0x0102B5A4
+		// Token: 0x06037451 RID: 226385 RVA: 0x00F6E8E0 File Offset: 0x00F6CAE0
 		private void OnClickReStart()
 		{
 			if (ActivityDangoBrawlController.Instance.TryLeaveIfActivityClosed())
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x060428FE RID: 272638 RVA: 0x0102D400 File Offset: 0x0102B600
+		// Token: 0x06037452 RID: 226386 RVA: 0x00F6E93C File Offset: 0x00F6CB3C
 		private void OnClickExit()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}).Forget();
 		}
 
-		// Token: 0x060428FF RID: 272639 RVA: 0x0102D464 File Offset: 0x0102B664
+		// Token: 0x06037453 RID: 226387 RVA: 0x00F6E9A0 File Offset: 0x00F6CBA0
 		private void OnClickSaveExit()
 		{
 			AfterLeaveInstanceDungeonOpenViewParam openParam = new AfterLeaveInstanceDungeonOpenViewParam
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RequestLeaveInstanceDungeon(openParam).Forget<bool>();
 		}
 
-		// Token: 0x04022ACD RID: 142029
+		// Token: 0x0401D32A RID: 119594
 		[Nullable(new byte[]
 		{
 			2,
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlProgressItem, DangoBrawlProgressItemData> NormalBrawlProgressItemLayout;
 
-		// Token: 0x04022ACE RID: 142030
+		// Token: 0x0401D32B RID: 119595
 		[Nullable(new byte[]
 		{
 			2,
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlRoundAddProgressItem, DangoBrawlProgressItemData> AddBrawlProgressItemLayout;
 
-		// Token: 0x04022ACF RID: 142031
+		// Token: 0x0401D32C RID: 119596
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlProgressItem, DangoBrawlProgressItemData> NormalBrawlWithAddProgressItemLayout;
 
-		// Token: 0x04022AD0 RID: 142032
+		// Token: 0x0401D32D RID: 119597
 		[Nullable(new byte[]
 		{
 			2,
@@ -306,43 +306,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlRetryCountItem, DangoBrawlRetryCountInfo> RetryItemLayout;
 
-		// Token: 0x04022AD1 RID: 142033
+		// Token: 0x0401D32E RID: 119598
 		[Nullable(2)]
 		private DangoBrawlPauseViewCaptionPanel CaptionPanel;
 
-		// Token: 0x0200C9DA RID: 51674
+		// Token: 0x0200B3A6 RID: 45990
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CFAF RID: 249775
+			// Token: 0x04037899 RID: 227481
 			BtnExit,
-			// Token: 0x0403CFB0 RID: 249776
+			// Token: 0x0403789A RID: 227482
 			BtnRestart,
-			// Token: 0x0403CFB1 RID: 249777
+			// Token: 0x0403789B RID: 227483
 			BtnContinue,
-			// Token: 0x0403CFB2 RID: 249778
+			// Token: 0x0403789C RID: 227484
 			BtnSaveExit,
-			// Token: 0x0403CFB3 RID: 249779
+			// Token: 0x0403789D RID: 227485
 			NormalLayout,
-			// Token: 0x0403CFB4 RID: 249780
+			// Token: 0x0403789E RID: 227486
 			NormalItem,
-			// Token: 0x0403CFB5 RID: 249781
+			// Token: 0x0403789F RID: 227487
 			AddNode,
-			// Token: 0x0403CFB6 RID: 249782
+			// Token: 0x040378A0 RID: 227488
 			AddLayout,
-			// Token: 0x0403CFB7 RID: 249783
+			// Token: 0x040378A1 RID: 227489
 			AddItem,
-			// Token: 0x0403CFB8 RID: 249784
+			// Token: 0x040378A2 RID: 227490
 			NormalLayoutWithAdd,
-			// Token: 0x0403CFB9 RID: 249785
+			// Token: 0x040378A3 RID: 227491
 			NormalItemWithAdd,
-			// Token: 0x0403CFBA RID: 249786
+			// Token: 0x040378A4 RID: 227492
 			RetryItemLayout,
-			// Token: 0x0403CFBB RID: 249787
+			// Token: 0x040378A5 RID: 227493
 			RetryItem,
-			// Token: 0x0403CFBC RID: 249788
+			// Token: 0x040378A6 RID: 227494
 			PanelSelf,
-			// Token: 0x0403CFBD RID: 249789
+			// Token: 0x040378A7 RID: 227495
 			PnlCaption
 		}
 	}

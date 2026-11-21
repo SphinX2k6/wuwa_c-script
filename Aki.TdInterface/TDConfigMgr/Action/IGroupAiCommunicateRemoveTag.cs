@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE3 RID: 6883
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C8A RID: 7306
 	public class IGroupAiCommunicateRemoveTag : IGroupAiCommunicateMode
 	{
-		// Token: 0x06009380 RID: 37760 RVA: 0x00156428 File Offset: 0x00154628
+		// Token: 0x06009B3E RID: 39742 RVA: 0x00166C48 File Offset: 0x00164E48
 		private IGroupAiCommunicateRemoveTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009381 RID: 37761 RVA: 0x00156460 File Offset: 0x00154660
+		// Token: 0x06009B3F RID: 39743 RVA: 0x00166C80 File Offset: 0x00164E80
 		public static IGroupAiCommunicateRemoveTag Create([Nullable(2)] IGroupAiCommunicateRemoveTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009382 RID: 37762 RVA: 0x00156473 File Offset: 0x00154673
+		// Token: 0x06009B40 RID: 39744 RVA: 0x00166C93 File Offset: 0x00164E93
 		public static IGroupAiCommunicateRemoveTag CreateFromSetValue([Nullable(2)] IGroupAiCommunicateRemoveTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009383 RID: 37763 RVA: 0x00156486 File Offset: 0x00154686
+		// Token: 0x06009B41 RID: 39745 RVA: 0x00166CA6 File Offset: 0x00164EA6
 		public new IGroupAiCommunicateRemoveTag_SetValue ToSetValue()
 		{
 			return new IGroupAiCommunicateRemoveTag_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC1 RID: 11969
-		// (get) Token: 0x06009384 RID: 37764 RVA: 0x001564A5 File Offset: 0x001546A5
-		// (set) Token: 0x06009385 RID: 37765 RVA: 0x001564D0 File Offset: 0x001546D0
+		// Token: 0x170030DD RID: 12509
+		// (get) Token: 0x06009B42 RID: 39746 RVA: 0x00166CC5 File Offset: 0x00164EC5
+		// (set) Token: 0x06009B43 RID: 39747 RVA: 0x00166CF0 File Offset: 0x00164EF0
 		public override EGroupAiCommunicateType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002EC2 RID: 11970
-		// (get) Token: 0x06009386 RID: 37766 RVA: 0x001564DE File Offset: 0x001546DE
-		// (set) Token: 0x06009387 RID: 37767 RVA: 0x00156505 File Offset: 0x00154705
+		// Token: 0x170030DE RID: 12510
+		// (get) Token: 0x06009B44 RID: 39748 RVA: 0x00166CFE File Offset: 0x00164EFE
+		// (set) Token: 0x06009B45 RID: 39749 RVA: 0x00166D25 File Offset: 0x00164F25
 		public virtual List<string> Tags
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005AA2 RID: 23202
+		// Token: 0x04005F2C RID: 24364
 		[Nullable(2)]
 		protected new IGroupAiCommunicateRemoveTag FbInstance;
 
-		// Token: 0x04005AA3 RID: 23203
+		// Token: 0x04005F2D RID: 24365
 		[Nullable(2)]
 		protected new IGroupAiCommunicateRemoveTag_SetValue PocoInterface;
 	}

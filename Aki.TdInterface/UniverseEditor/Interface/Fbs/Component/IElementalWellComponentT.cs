@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200513F RID: 20799
+	// Token: 0x020056A4 RID: 22180
 	public class IElementalWellComponentT
 	{
-		// Token: 0x1700979A RID: 38810
-		// (get) Token: 0x060218D2 RID: 137426 RVA: 0x004A8777 File Offset: 0x004A6977
-		// (set) Token: 0x060218D3 RID: 137427 RVA: 0x004A877F File Offset: 0x004A697F
+		// Token: 0x17009F87 RID: 40839
+		// (get) Token: 0x06023826 RID: 145446 RVA: 0x004E2703 File Offset: 0x004E0903
+		// (set) Token: 0x06023827 RID: 145447 RVA: 0x004E270B File Offset: 0x004E090B
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700979B RID: 38811
-		// (get) Token: 0x060218D4 RID: 137428 RVA: 0x004A8788 File Offset: 0x004A6988
-		// (set) Token: 0x060218D5 RID: 137429 RVA: 0x004A8790 File Offset: 0x004A6990
+		// Token: 0x17009F88 RID: 40840
+		// (get) Token: 0x06023828 RID: 145448 RVA: 0x004E2714 File Offset: 0x004E0914
+		// (set) Token: 0x06023829 RID: 145449 RVA: 0x004E271C File Offset: 0x004E091C
 		public EElementalWellEntryType WellType { get; set; }
 
-		// Token: 0x1700979C RID: 38812
-		// (get) Token: 0x060218D6 RID: 137430 RVA: 0x004A8799 File Offset: 0x004A6999
-		// (set) Token: 0x060218D7 RID: 137431 RVA: 0x004A87A1 File Offset: 0x004A69A1
+		// Token: 0x17009F89 RID: 40841
+		// (get) Token: 0x0602382A RID: 145450 RVA: 0x004E2725 File Offset: 0x004E0925
+		// (set) Token: 0x0602382B RID: 145451 RVA: 0x004E272D File Offset: 0x004E092D
 		public IWellStreamingRenderConfigT StreamingRenderConfig { get; set; }
 
-		// Token: 0x1700979D RID: 38813
-		// (get) Token: 0x060218D8 RID: 137432 RVA: 0x004A87AA File Offset: 0x004A69AA
-		// (set) Token: 0x060218D9 RID: 137433 RVA: 0x004A87B2 File Offset: 0x004A69B2
+		// Token: 0x17009F8A RID: 40842
+		// (get) Token: 0x0602382C RID: 145452 RVA: 0x004E2736 File Offset: 0x004E0936
+		// (set) Token: 0x0602382D RID: 145453 RVA: 0x004E273E File Offset: 0x004E093E
 		public IStreamingWaitConfigT StreamWaitConfig { get; set; }
 
-		// Token: 0x1700979E RID: 38814
-		// (get) Token: 0x060218DA RID: 137434 RVA: 0x004A87BB File Offset: 0x004A69BB
-		// (set) Token: 0x060218DB RID: 137435 RVA: 0x004A87C3 File Offset: 0x004A69C3
+		// Token: 0x17009F8B RID: 40843
+		// (get) Token: 0x0602382E RID: 145454 RVA: 0x004E2747 File Offset: 0x004E0947
+		// (set) Token: 0x0602382F RID: 145455 RVA: 0x004E274F File Offset: 0x004E094F
 		public string StreamingFinishedToState { get; set; }
 
-		// Token: 0x1700979F RID: 38815
-		// (get) Token: 0x060218DC RID: 137436 RVA: 0x004A87CC File Offset: 0x004A69CC
-		// (set) Token: 0x060218DD RID: 137437 RVA: 0x004A87D4 File Offset: 0x004A69D4
+		// Token: 0x17009F8C RID: 40844
+		// (get) Token: 0x06023830 RID: 145456 RVA: 0x004E2758 File Offset: 0x004E0958
+		// (set) Token: 0x06023831 RID: 145457 RVA: 0x004E2760 File Offset: 0x004E0960
 		public string LeaveRangeToState { get; set; }
 
-		// Token: 0x170097A0 RID: 38816
-		// (get) Token: 0x060218DE RID: 137438 RVA: 0x004A87DD File Offset: 0x004A69DD
-		// (set) Token: 0x060218DF RID: 137439 RVA: 0x004A87E5 File Offset: 0x004A69E5
+		// Token: 0x17009F8D RID: 40845
+		// (get) Token: 0x06023832 RID: 145458 RVA: 0x004E2769 File Offset: 0x004E0969
+		// (set) Token: 0x06023833 RID: 145459 RVA: 0x004E2771 File Offset: 0x004E0971
 		public string PrefabBindPointKey { get; set; }
 
-		// Token: 0x170097A1 RID: 38817
-		// (get) Token: 0x060218E0 RID: 137440 RVA: 0x004A87EE File Offset: 0x004A69EE
-		// (set) Token: 0x060218E1 RID: 137441 RVA: 0x004A87F6 File Offset: 0x004A69F6
+		// Token: 0x17009F8E RID: 40846
+		// (get) Token: 0x06023834 RID: 145460 RVA: 0x004E277A File Offset: 0x004E097A
+		// (set) Token: 0x06023835 RID: 145461 RVA: 0x004E2782 File Offset: 0x004E0982
 		public byte NullMask { get; set; }
 
-		// Token: 0x060218E2 RID: 137442 RVA: 0x004A87FF File Offset: 0x004A69FF
+		// Token: 0x06023836 RID: 145462 RVA: 0x004E278B File Offset: 0x004E098B
 		public IElementalWellComponentT()
 		{
 			this.Disabled = false;

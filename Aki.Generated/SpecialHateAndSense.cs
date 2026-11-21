@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010E0 RID: 4320
+	// Token: 0x02001216 RID: 4630
 	public struct SpecialHateAndSense : IFlatbufferObject
 	{
-		// Token: 0x170037CF RID: 14287
-		// (get) Token: 0x0600D7E1 RID: 55265 RVA: 0x0031DEE9 File Offset: 0x0031C0E9
+		// Token: 0x17003B25 RID: 15141
+		// (get) Token: 0x0600E52C RID: 58668 RVA: 0x0034953E File Offset: 0x0034773E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7E2 RID: 55266 RVA: 0x0031DEF6 File Offset: 0x0031C0F6
+		// Token: 0x0600E52D RID: 58669 RVA: 0x0034954B File Offset: 0x0034774B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D7E3 RID: 55267 RVA: 0x0031DF00 File Offset: 0x0031C100
+		// Token: 0x0600E52E RID: 58670 RVA: 0x00349554 File Offset: 0x00347754
 		public static SpecialHateAndSense GetRootAsSpecialHateAndSense(ByteBuffer _bb)
 		{
 			return SpecialHateAndSense.GetRootAsSpecialHateAndSense(_bb, default(SpecialHateAndSense));
 		}
 
-		// Token: 0x0600D7E4 RID: 55268 RVA: 0x0031DF1C File Offset: 0x0031C11C
+		// Token: 0x0600E52F RID: 58671 RVA: 0x00349570 File Offset: 0x00347770
 		public static SpecialHateAndSense GetRootAsSpecialHateAndSense(ByteBuffer _bb, SpecialHateAndSense obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D7E5 RID: 55269 RVA: 0x0031DF39 File Offset: 0x0031C139
+		// Token: 0x0600E530 RID: 58672 RVA: 0x0034958D File Offset: 0x0034778D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D7E6 RID: 55270 RVA: 0x0031DF48 File Offset: 0x0031C148
+		// Token: 0x0600E531 RID: 58673 RVA: 0x0034959C File Offset: 0x0034779C
 		public SpecialHateAndSense __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037D0 RID: 14288
-		// (get) Token: 0x0600D7E7 RID: 55271 RVA: 0x0031DF58 File Offset: 0x0031C158
+		// Token: 0x17003B26 RID: 15142
+		// (get) Token: 0x0600E532 RID: 58674 RVA: 0x003495AC File Offset: 0x003477AC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037D1 RID: 14289
-		// (get) Token: 0x0600D7E8 RID: 55272 RVA: 0x0031DF94 File Offset: 0x0031C194
+		// Token: 0x17003B27 RID: 15143
+		// (get) Token: 0x0600E533 RID: 58675 RVA: 0x003495E8 File Offset: 0x003477E8
 		public string DescText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7E9 RID: 55273 RVA: 0x0031DFCB File Offset: 0x0031C1CB
+		// Token: 0x0600E534 RID: 58676 RVA: 0x0034961F File Offset: 0x0034781F
 		public Span<byte> GetDescTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D7EA RID: 55274 RVA: 0x0031DFDA File Offset: 0x0031C1DA
+		// Token: 0x0600E535 RID: 58677 RVA: 0x0034962E File Offset: 0x0034782E
 		public byte[] GetDescTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170037D2 RID: 14290
-		// (get) Token: 0x0600D7EB RID: 55275 RVA: 0x0031DFF4 File Offset: 0x0031C1F4
+		// Token: 0x17003B28 RID: 15144
+		// (get) Token: 0x0600E536 RID: 58678 RVA: 0x00349648 File Offset: 0x00347848
 		public int AiHateId
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037D3 RID: 14291
-		// (get) Token: 0x0600D7EC RID: 55276 RVA: 0x0031E030 File Offset: 0x0031C230
+		// Token: 0x17003B29 RID: 15145
+		// (get) Token: 0x0600E537 RID: 58679 RVA: 0x00349684 File Offset: 0x00347884
 		public int FirstAiSenseId
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005213 RID: 21011
+		// Token: 0x04005856 RID: 22614
 		private Table __p;
 	}
 }

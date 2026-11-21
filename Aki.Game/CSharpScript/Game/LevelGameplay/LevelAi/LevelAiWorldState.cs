@@ -4,54 +4,54 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DBA RID: 28090
+	// Token: 0x02005F39 RID: 24377
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiWorldState : IStaticVariableResetter
 	{
-		// Token: 0x060448A4 RID: 280740 RVA: 0x010E7003 File Offset: 0x010E5203
+		// Token: 0x0603AA08 RID: 240136 RVA: 0x0109122B File Offset: 0x0108F42B
 		static LevelAiWorldState()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelAiWorldState.CreateStaticDefaultValue), new Action(LevelAiWorldState.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060448A5 RID: 280741 RVA: 0x010E7022 File Offset: 0x010E5222
+		// Token: 0x0603AA09 RID: 240137 RVA: 0x0109124A File Offset: 0x0108F44A
 		public void SetBooleanWorldState(string key, bool value)
 		{
 			this.BooleanWorldState[key] = value;
 		}
 
-		// Token: 0x060448A6 RID: 280742 RVA: 0x010E7031 File Offset: 0x010E5231
+		// Token: 0x0603AA0A RID: 240138 RVA: 0x01091259 File Offset: 0x0108F459
 		public void SetIntWorldState(string key, long value)
 		{
 			this.IntWorldState[key] = value;
 		}
 
-		// Token: 0x060448A7 RID: 280743 RVA: 0x010E7040 File Offset: 0x010E5240
+		// Token: 0x0603AA0B RID: 240139 RVA: 0x01091268 File Offset: 0x0108F468
 		public void RemoveBooleanWorldState(string key)
 		{
 			this.BooleanWorldState.Remove(key);
 		}
 
-		// Token: 0x060448A8 RID: 280744 RVA: 0x010E704F File Offset: 0x010E524F
+		// Token: 0x0603AA0C RID: 240140 RVA: 0x01091277 File Offset: 0x0108F477
 		public void RemoveIntWorldState(string key)
 		{
 			this.IntWorldState.Remove(key);
 		}
 
-		// Token: 0x060448A9 RID: 280745 RVA: 0x010E705E File Offset: 0x010E525E
+		// Token: 0x0603AA0D RID: 240141 RVA: 0x01091286 File Offset: 0x0108F486
 		public bool GetBooleanWorldState(string key)
 		{
 			return this.BooleanWorldState[key];
 		}
 
-		// Token: 0x060448AA RID: 280746 RVA: 0x010E706C File Offset: 0x010E526C
+		// Token: 0x0603AA0E RID: 240142 RVA: 0x01091294 File Offset: 0x0108F494
 		public long GetIntWorldState(string key)
 		{
 			return this.IntWorldState[key];
 		}
 
-		// Token: 0x060448AB RID: 280747 RVA: 0x010E707C File Offset: 0x010E527C
+		// Token: 0x0603AA0F RID: 240143 RVA: 0x010912A4 File Offset: 0x0108F4A4
 		public LevelAiWorldState MakeCopy()
 		{
 			LevelAiWorldState levelAiWorldState = new LevelAiWorldState();
@@ -66,28 +66,28 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiWorldState;
 		}
 
-		// Token: 0x060448AC RID: 280748 RVA: 0x010E7140 File Offset: 0x010E5340
+		// Token: 0x0603AA10 RID: 240144 RVA: 0x01091368 File Offset: 0x0108F568
 		public static void CreateStaticDefaultValue()
 		{
 			LevelAiWorldState.UidGenerator = 0;
 		}
 
-		// Token: 0x060448AD RID: 280749 RVA: 0x010E7148 File Offset: 0x010E5348
+		// Token: 0x0603AA11 RID: 240145 RVA: 0x01091370 File Offset: 0x0108F570
 		public static void ResetStaticDefaultValue()
 		{
 			LevelAiWorldState.UidGenerator = 0;
 		}
 
-		// Token: 0x04023A47 RID: 145991
+		// Token: 0x0401ECE9 RID: 126185
 		private static int UidGenerator;
 
-		// Token: 0x04023A48 RID: 145992
+		// Token: 0x0401ECEA RID: 126186
 		public readonly int Uid = ++LevelAiWorldState.UidGenerator;
 
-		// Token: 0x04023A49 RID: 145993
+		// Token: 0x0401ECEB RID: 126187
 		public Dictionary<string, bool> BooleanWorldState = new Dictionary<string, bool>();
 
-		// Token: 0x04023A4A RID: 145994
+		// Token: 0x0401ECEC RID: 126188
 		public Dictionary<string, long> IntWorldState = new Dictionary<string, long>();
 	}
 }

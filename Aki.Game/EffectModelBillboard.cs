@@ -6,12 +6,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200346E RID: 13422
+// Token: 0x020029E2 RID: 10722
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/Data/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelBillboard.EffectModelBillboard_C")]
 public class EffectModelBillboard : UEffectModelBillboard, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D1C1 RID: 119233 RVA: 0x0081DAA0 File Offset: 0x0081BCA0
+	// Token: 0x0601AEC9 RID: 110281 RVA: 0x00844DA0 File Offset: 0x00842FA0
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (EffectModelBillboard._ClassPtr == IntPtr.Zero)
@@ -21,29 +21,29 @@ public class EffectModelBillboard : UEffectModelBillboard, IUnrealUObject, IUnre
 		return EffectModelBillboard._ClassPtr;
 	}
 
-	// Token: 0x0601D1C2 RID: 119234 RVA: 0x0081DAC4 File Offset: 0x0081BCC4
+	// Token: 0x0601AECA RID: 110282 RVA: 0x00844DC4 File Offset: 0x00842FC4
 	public EffectModelBillboard() : this(BuiltinUtils.AllocNativeUObject(EffectModelBillboard.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D1C3 RID: 119235 RVA: 0x0081DAEC File Offset: 0x0081BCEC
+	// Token: 0x0601AECB RID: 110283 RVA: 0x00844DEC File Offset: 0x00842FEC
 	[NullableContext(1)]
 	public EffectModelBillboard(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectModelBillboard.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D1C4 RID: 119236 RVA: 0x0081DB1F File Offset: 0x0081BD1F
+	// Token: 0x0601AECC RID: 110284 RVA: 0x00844E1F File Offset: 0x0084301F
 	protected EffectModelBillboard(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400E531 RID: 58673
+	// Token: 0x0400E9E9 RID: 59881
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelBillboard.EffectModelBillboard_C";
 
-	// Token: 0x0400E532 RID: 58674
+	// Token: 0x0400E9EA RID: 59882
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E533 RID: 58675
+	// Token: 0x0400E9EB RID: 59883
 	private static IntPtr _ClassDefaultObjectPtr;
 }

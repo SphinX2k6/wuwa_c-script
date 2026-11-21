@@ -7,17 +7,17 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B07 RID: 27399
+	// Token: 0x02005C7F RID: 23679
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventClientPlayFlow : LevelEventBase
 	{
-		// Token: 0x0604405E RID: 278622 RVA: 0x010B6F22 File Offset: 0x010B5122
+		// Token: 0x0603A1B0 RID: 238000 RVA: 0x010607AE File Offset: 0x0105E9AE
 		public LevelEventClientPlayFlow(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604405F RID: 278623 RVA: 0x010B6F2C File Offset: 0x010B512C
+		// Token: 0x0603A1B1 RID: 238001 RVA: 0x010607B8 File Offset: 0x0105E9B8
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.FlowInfo = (inParams as PlayFlow);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044060 RID: 278624 RVA: 0x010B7100 File Offset: 0x010B5300
+		// Token: 0x0603A1B2 RID: 238002 RVA: 0x0106098C File Offset: 0x0105EB8C
 		private void DoStartFlow(GeneralContext context)
 		{
 			if (this.IsAsync)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Add<PlotResultInfo>(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnPlotNetworkEnd));
 		}
 
-		// Token: 0x06044061 RID: 278625 RVA: 0x010B71AC File Offset: 0x010B53AC
+		// Token: 0x0603A1B3 RID: 238003 RVA: 0x01060A38 File Offset: 0x0105EC38
 		private void OnPlotNetworkEnd(PlotResultInfo plotResult)
 		{
 			if (this.FlowInfo == null || this.FlowIncId == null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044062 RID: 278626 RVA: 0x010B7290 File Offset: 0x010B5490
+		// Token: 0x0603A1B4 RID: 238004 RVA: 0x01060B1C File Offset: 0x0105ED1C
 		protected override void OnReset()
 		{
 			this.FlowInfo = null;
@@ -139,11 +139,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x040238CA RID: 145610
+		// Token: 0x0401EB6C RID: 125804
 		[Nullable(2)]
 		private PlayFlow FlowInfo;
 
-		// Token: 0x040238CB RID: 145611
+		// Token: 0x0401EB6D RID: 125805
 		private long? FlowIncId;
 	}
 }

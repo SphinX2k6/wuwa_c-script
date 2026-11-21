@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000831 RID: 2097
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008D4 RID: 2260
 	public class LocationSafetyComponent : IComponentBase
 	{
-		// Token: 0x06002DBF RID: 11711 RVA: 0x00076724 File Offset: 0x00074924
+		// Token: 0x060030EF RID: 12527 RVA: 0x0007DA88 File Offset: 0x0007BC88
 		private LocationSafetyComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002DC0 RID: 11712 RVA: 0x0007675C File Offset: 0x0007495C
+		// Token: 0x060030F0 RID: 12528 RVA: 0x0007DAC0 File Offset: 0x0007BCC0
 		public static LocationSafetyComponent Create([Nullable(2)] LocationSafetyComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002DC1 RID: 11713 RVA: 0x0007676F File Offset: 0x0007496F
+		// Token: 0x060030F1 RID: 12529 RVA: 0x0007DAD3 File Offset: 0x0007BCD3
 		public static LocationSafetyComponent CreateFromSetValue([Nullable(2)] LocationSafetyComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002DC2 RID: 11714 RVA: 0x00076782 File Offset: 0x00074982
+		// Token: 0x060030F2 RID: 12530 RVA: 0x0007DAE6 File Offset: 0x0007BCE6
 		public new LocationSafetyComponent_SetValue ToSetValue()
 		{
 			return new LocationSafetyComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BF9 RID: 3065
-		// (get) Token: 0x06002DC3 RID: 11715 RVA: 0x000767BC File Offset: 0x000749BC
-		// (set) Token: 0x06002DC4 RID: 11716 RVA: 0x000767F6 File Offset: 0x000749F6
+		// Token: 0x17000CBC RID: 3260
+		// (get) Token: 0x060030F3 RID: 12531 RVA: 0x0007DB20 File Offset: 0x0007BD20
+		// (set) Token: 0x060030F4 RID: 12532 RVA: 0x0007DB5A File Offset: 0x0007BD5A
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BFA RID: 3066
-		// (get) Token: 0x06002DC5 RID: 11717 RVA: 0x00076804 File Offset: 0x00074A04
-		// (set) Token: 0x06002DC6 RID: 11718 RVA: 0x0007682E File Offset: 0x00074A2E
+		// Token: 0x17000CBD RID: 3261
+		// (get) Token: 0x060030F5 RID: 12533 RVA: 0x0007DB68 File Offset: 0x0007BD68
+		// (set) Token: 0x060030F6 RID: 12534 RVA: 0x0007DB92 File Offset: 0x0007BD92
 		public override bool? EdIsLocked
 		{
 			get
@@ -106,9 +104,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BFB RID: 3067
-		// (get) Token: 0x06002DC7 RID: 11719 RVA: 0x0007683C File Offset: 0x00074A3C
-		// (set) Token: 0x06002DC8 RID: 11720 RVA: 0x00076867 File Offset: 0x00074A67
+		// Token: 0x17000CBE RID: 3262
+		// (get) Token: 0x060030F7 RID: 12535 RVA: 0x0007DBA0 File Offset: 0x0007BDA0
+		// (set) Token: 0x060030F8 RID: 12536 RVA: 0x0007DBCB File Offset: 0x0007BDCB
 		public virtual EDetectionFrequency DetectionFrequency
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BFC RID: 3068
-		// (get) Token: 0x06002DC9 RID: 11721 RVA: 0x00076878 File Offset: 0x00074A78
-		// (set) Token: 0x06002DCA RID: 11722 RVA: 0x000768D9 File Offset: 0x00074AD9
+		// Token: 0x17000CBF RID: 3263
+		// (get) Token: 0x060030F9 RID: 12537 RVA: 0x0007DBDC File Offset: 0x0007BDDC
+		// (set) Token: 0x060030FA RID: 12538 RVA: 0x0007DC3D File Offset: 0x0007BE3D
 		public virtual VectorInfo SafeLocation
 		{
 			get
@@ -159,18 +157,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E41 RID: 7745
+		// Token: 0x0400204D RID: 8269
 		[Nullable(2)]
 		protected new LocationSafetyComponent FbInstance;
 
-		// Token: 0x04001E42 RID: 7746
+		// Token: 0x0400204E RID: 8270
 		[Nullable(2)]
 		protected new LocationSafetyComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E43 RID: 7747
+		// Token: 0x0400204F RID: 8271
 		private VectorInfo _SafeLocationCache;
 
-		// Token: 0x04001E44 RID: 7748
+		// Token: 0x04002050 RID: 8272
 		private bool _SafeLocationInited;
 	}
 }

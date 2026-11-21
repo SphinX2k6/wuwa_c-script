@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AA1 RID: 19105
+	// Token: 0x02003A49 RID: 14921
 	public class TrapDefenseResultContinueButton : UiPanelBase
 	{
-		// Token: 0x06031838 RID: 202808 RVA: 0x00B7AB30 File Offset: 0x00B78D30
+		// Token: 0x060265C8 RID: 157128 RVA: 0x00ABEAE4 File Offset: 0x00ABCCE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031839 RID: 202809 RVA: 0x00B7ABF7 File Offset: 0x00B78DF7
+		// Token: 0x060265C9 RID: 157129 RVA: 0x00ABEBAB File Offset: 0x00ABCDAB
 		[NullableContext(1)]
 		public void ShowText(string key)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), key, Array.Empty<object>());
 		}
 
-		// Token: 0x0603183A RID: 202810 RVA: 0x00B7AC10 File Offset: 0x00B78E10
+		// Token: 0x060265CA RID: 157130 RVA: 0x00ABEBC4 File Offset: 0x00ABCDC4
 		private void OnClickedBtn()
 		{
 			if (this.OnClickCb != null)
@@ -49,20 +49,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A778 RID: 108408
+		// Token: 0x040150CA RID: 86218
 		[Nullable(1)]
 		public Action OnClickCb;
 
-		// Token: 0x0200ABF9 RID: 44025
+		// Token: 0x02009619 RID: 38425
 		private class EContinueBtn
 		{
-			// Token: 0x0403441C RID: 214044
+			// Token: 0x0402EDCD RID: 191949
 			public const int Btn = 0;
 
-			// Token: 0x0403441D RID: 214045
+			// Token: 0x0402EDCE RID: 191950
 			public const int Txt = 1;
 
-			// Token: 0x0403441E RID: 214046
+			// Token: 0x0402EDCF RID: 191951
 			public const int RedDot = 2;
 		}
 	}

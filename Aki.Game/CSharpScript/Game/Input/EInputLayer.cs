@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Input
 {
-	// Token: 0x02006FCD RID: 28621
+	// Token: 0x0200614E RID: 24910
 	public enum EInputLayer
 	{
-		// Token: 0x04024555 RID: 148821
+		// Token: 0x0401F80A RID: 129034
 		None,
-		// Token: 0x04024556 RID: 148822
+		// Token: 0x0401F80B RID: 129035
 		Character,
-		// Token: 0x04024557 RID: 148823
+		// Token: 0x0401F80C RID: 129036
 		Extra,
-		// Token: 0x04024558 RID: 148824
+		// Token: 0x0401F80D RID: 129037
 		Vision,
-		// Token: 0x04024559 RID: 148825
+		// Token: 0x0401F80E RID: 129038
 		Vehicle,
-		// Token: 0x0402455A RID: 148826
+		// Token: 0x0401F80F RID: 129039
 		Interaction,
-		// Token: 0x0402455B RID: 148827
+		// Token: 0x0401F810 RID: 129040
 		FollowShooter,
-		// Token: 0x0402455C RID: 148828
+		// Token: 0x0401F811 RID: 129041
 		Manipulate,
-		// Token: 0x0402455D RID: 148829
+		// Token: 0x0401F812 RID: 129042
 		ElementalField,
-		// Token: 0x0402455E RID: 148830
+		// Token: 0x0401F813 RID: 129043
 		TowerDefense,
-		// Token: 0x0402455F RID: 148831
+		// Token: 0x0401F814 RID: 129044
 		SurvivorsRogue,
-		// Token: 0x04024560 RID: 148832
+		// Token: 0x0401F815 RID: 129045
 		HoldingHands,
-		// Token: 0x04024561 RID: 148833
+		// Token: 0x0401F816 RID: 129046
 		Panoramic,
-		// Token: 0x04024562 RID: 148834
+		// Token: 0x0401F817 RID: 129047
 		OverShoulder,
-		// Token: 0x04024563 RID: 148835
+		// Token: 0x0401F818 RID: 129048
 		Potato,
-		// Token: 0x04024564 RID: 148836
+		// Token: 0x0401F819 RID: 129049
 		AceAntiCheat = 99,
-		// Token: 0x04024565 RID: 148837
+		// Token: 0x0401F81A RID: 129050
 		Swallow
 	}
 }

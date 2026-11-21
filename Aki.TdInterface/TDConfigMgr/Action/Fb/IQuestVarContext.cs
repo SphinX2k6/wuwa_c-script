@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024E9 RID: 9449
+	// Token: 0x0200278E RID: 10126
 	public class IQuestVarContext : IVarContext
 	{
-		// Token: 0x0600D2F4 RID: 54004 RVA: 0x001F4A7E File Offset: 0x001F2C7E
-		[NullableContext(1)]
+		// Token: 0x0600E04A RID: 57418 RVA: 0x00210316 File Offset: 0x0020E516
 		public static IQuestVarContext Create(IQuestVarContext? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AE4 RID: 15076
-		// (get) Token: 0x0600D2F5 RID: 54005 RVA: 0x001F4A9D File Offset: 0x001F2C9D
+		// Token: 0x17003DDC RID: 15836
+		// (get) Token: 0x0600E04B RID: 57419 RVA: 0x00210335 File Offset: 0x0020E535
 		public override EVarContext Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AE5 RID: 15077
-		// (get) Token: 0x0600D2F6 RID: 54006 RVA: 0x001F4AAA File Offset: 0x001F2CAA
+		// Token: 0x17003DDD RID: 15837
+		// (get) Token: 0x0600E04C RID: 57420 RVA: 0x00210342 File Offset: 0x0020E542
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073B3 RID: 29619
+		// Token: 0x04007A00 RID: 31232
 		private IQuestVarContext Instance;
 	}
 }

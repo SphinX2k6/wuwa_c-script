@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002671 RID: 9841
+	// Token: 0x02002930 RID: 10544
 	public class IChangeEntityStateLoop : ChangeEntityState
 	{
-		// Token: 0x0600DC94 RID: 56468 RVA: 0x0020CF76 File Offset: 0x0020B176
-		[NullableContext(1)]
+		// Token: 0x0600EA60 RID: 60000 RVA: 0x00229686 File Offset: 0x00227886
 		public static IChangeEntityStateLoop Create(IChangeEntityStateLoop? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004174 RID: 16756
-		// (get) Token: 0x0600DC95 RID: 56469 RVA: 0x0020CF95 File Offset: 0x0020B195
+		// Token: 0x170044AE RID: 17582
+		// (get) Token: 0x0600EA61 RID: 60001 RVA: 0x002296A5 File Offset: 0x002278A5
 		public override EChangeEntityState Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004175 RID: 16757
-		// (get) Token: 0x0600DC96 RID: 56470 RVA: 0x0020CFA2 File Offset: 0x0020B1A2
+		// Token: 0x170044AF RID: 17583
+		// (get) Token: 0x0600EA62 RID: 60002 RVA: 0x002296B2 File Offset: 0x002278B2
 		public override int EntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004176 RID: 16758
-		// (get) Token: 0x0600DC97 RID: 56471 RVA: 0x0020CFAF File Offset: 0x0020B1AF
+		// Token: 0x170044B0 RID: 17584
+		// (get) Token: 0x0600EA63 RID: 60003 RVA: 0x002296BF File Offset: 0x002278BF
 		public virtual ELoopStateType Circulation
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A9B RID: 31387
+		// Token: 0x04008132 RID: 33074
 		private IChangeEntityStateLoop Instance;
 	}
 }

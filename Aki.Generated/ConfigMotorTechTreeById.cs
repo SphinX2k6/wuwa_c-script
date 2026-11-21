@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005CF RID: 1487
+	// Token: 0x020005E7 RID: 1511
 	public class ConfigMotorTechTreeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060022E7 RID: 8935 RVA: 0x0011EE4F File Offset: 0x0011D04F
+		// Token: 0x06002377 RID: 9079 RVA: 0x001258CB File Offset: 0x00123ACB
 		static ConfigMotorTechTreeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorTechTreeById.CreateStaticDefaultValue), new Action(ConfigMotorTechTreeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060022E8 RID: 8936 RVA: 0x0011EE70 File Offset: 0x0011D070
+		// Token: 0x06002378 RID: 9080 RVA: 0x001258EC File Offset: 0x00123AEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorTechTreeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060022E9 RID: 8937 RVA: 0x0011EEEF File Offset: 0x0011D0EF
+		// Token: 0x06002379 RID: 9081 RVA: 0x0012596B File Offset: 0x00123B6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorTechTreeById.LogPair = null;
 			ConfigMotorTechTreeById.HandleId = 0;
 		}
 
-		// Token: 0x060022EA RID: 8938 RVA: 0x0011EEFD File Offset: 0x0011D0FD
+		// Token: 0x0600237A RID: 9082 RVA: 0x00125979 File Offset: 0x00123B79
 		public static void Init()
 		{
 			ConfigMotorTechTreeById.HandleId = ConfigCommon.InitDataStatement(ConfigMotorTechTreeById.HandleId, "db_motor.db", "select BinData from `MotorTechTree` where Id=?");
 		}
 
-		// Token: 0x060022EB RID: 8939 RVA: 0x0011EF18 File Offset: 0x0011D118
+		// Token: 0x0600237B RID: 9083 RVA: 0x00125994 File Offset: 0x00123B94
 		public static MotorTechTree? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorTechTreeById.HandleId, ConfigMotorTechTreeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorTechTree?(rootAsMotorTechTree);
 		}
 
-		// Token: 0x0400288D RID: 10381
+		// Token: 0x04002935 RID: 10549
 		private const string DB = "db_motor.db";
 
-		// Token: 0x0400288E RID: 10382
+		// Token: 0x04002936 RID: 10550
 		private const string FILE = "m.摩托车.xlsx";
 
-		// Token: 0x0400288F RID: 10383
+		// Token: 0x04002937 RID: 10551
 		private const string TABLE = "MotorTechTree";
 
-		// Token: 0x04002890 RID: 10384
+		// Token: 0x04002938 RID: 10552
 		private const string COMMAND = "select BinData from `MotorTechTree` where Id=?";
 
-		// Token: 0x04002891 RID: 10385
+		// Token: 0x04002939 RID: 10553
 		private const string KEY_PREFIX = "MotorTechTreeById";
 
-		// Token: 0x04002892 RID: 10386
+		// Token: 0x0400293A RID: 10554
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002893 RID: 10387
+		// Token: 0x0400293B RID: 10555
 		private static int HandleId;
 	}
 }

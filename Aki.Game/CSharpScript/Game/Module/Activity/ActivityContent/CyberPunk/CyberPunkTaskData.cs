@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068B1 RID: 26801
+	// Token: 0x02005801 RID: 22529
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CyberPunkTaskData
 	{
-		// Token: 0x06042E47 RID: 273991 RVA: 0x01049107 File Offset: 0x01047307
+		// Token: 0x0603799F RID: 227743 RVA: 0x00F8A72F File Offset: 0x00F8892F
 		public void Refresh(ConditionTask task)
 		{
 			this.Id = task.Id;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.InitQuestName();
 		}
 
-		// Token: 0x06042E48 RID: 273992 RVA: 0x01049148 File Offset: 0x01047348
+		// Token: 0x060379A0 RID: 227744 RVA: 0x00F8A770 File Offset: 0x00F88970
 		public void InitRewardList()
 		{
 			EdgeRunnerReward? config = ConfigEdgeRunnerRewardById.GetConfig(this.Id, true);
@@ -35,20 +35,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RewardList = new List<TItem>();
 		}
 
-		// Token: 0x06042E49 RID: 273993 RVA: 0x010491A8 File Offset: 0x010473A8
+		// Token: 0x060379A1 RID: 227745 RVA: 0x00F8A7D0 File Offset: 0x00F889D0
 		public void InitQuestName()
 		{
 			EdgeRunnerReward? config = ConfigEdgeRunnerRewardById.GetConfig(this.Id, true);
 			this.QuestName = (((config != null) ? config.GetValueOrDefault().Desc : null) ?? "");
 		}
 
-		// Token: 0x06042E4A RID: 273994 RVA: 0x010491EC File Offset: 0x010473EC
+		// Token: 0x060379A2 RID: 227746 RVA: 0x00F8A814 File Offset: 0x00F88A14
 		public void SetClaimed()
 		{
 			this.Status = ConditionTaskState.ConditionTaskTaken;
 		}
 
-		// Token: 0x06042E4B RID: 273995 RVA: 0x010491F8 File Offset: 0x010473F8
+		// Token: 0x060379A3 RID: 227747 RVA: 0x00F8A820 File Offset: 0x00F88A20
 		public string GetProgressText()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -58,40 +58,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06042E4C RID: 273996 RVA: 0x0104923B File Offset: 0x0104743B
+		// Token: 0x060379A4 RID: 227748 RVA: 0x00F8A863 File Offset: 0x00F88A63
 		public bool IsFinished()
 		{
 			return this.Status == ConditionTaskState.ConditionTaskFinish;
 		}
 
-		// Token: 0x06042E4D RID: 273997 RVA: 0x01049246 File Offset: 0x01047446
+		// Token: 0x060379A5 RID: 227749 RVA: 0x00F8A86E File Offset: 0x00F88A6E
 		public bool IsClaimed()
 		{
 			return this.Status == ConditionTaskState.ConditionTaskTaken;
 		}
 
-		// Token: 0x06042E4E RID: 273998 RVA: 0x01049251 File Offset: 0x01047451
+		// Token: 0x060379A6 RID: 227750 RVA: 0x00F8A879 File Offset: 0x00F88A79
 		public bool IsActive()
 		{
 			return this.Status == ConditionTaskState.ConditionTaskRunning;
 		}
 
-		// Token: 0x04022CC9 RID: 142537
+		// Token: 0x0401D525 RID: 120101
 		public int Id;
 
-		// Token: 0x04022CCA RID: 142538
+		// Token: 0x0401D526 RID: 120102
 		public int Current;
 
-		// Token: 0x04022CCB RID: 142539
+		// Token: 0x0401D527 RID: 120103
 		public int Target = 1;
 
-		// Token: 0x04022CCC RID: 142540
+		// Token: 0x0401D528 RID: 120104
 		public ConditionTaskState Status;
 
-		// Token: 0x04022CCD RID: 142541
+		// Token: 0x0401D529 RID: 120105
 		public List<TItem> RewardList = new List<TItem>();
 
-		// Token: 0x04022CCE RID: 142542
+		// Token: 0x0401D52A RID: 120106
 		public string QuestName = "";
 	}
 }

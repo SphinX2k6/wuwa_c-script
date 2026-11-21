@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200268A RID: 9866
+	// Token: 0x0200294D RID: 10573
 	public class IFadeBackgroundFadeOutEffectBlack : IFadeBackgroundFadeOutEffectTypeBase
 	{
-		// Token: 0x0600DCED RID: 56557 RVA: 0x0020D829 File Offset: 0x0020BA29
-		[NullableContext(1)]
+		// Token: 0x0600EAC4 RID: 60100 RVA: 0x00229FC9 File Offset: 0x002281C9
 		public static IFadeBackgroundFadeOutEffectBlack Create(IFadeBackgroundFadeOutEffectBlack? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700419B RID: 16795
-		// (get) Token: 0x0600DCEE RID: 56558 RVA: 0x0020D848 File Offset: 0x0020BA48
+		// Token: 0x170044D8 RID: 17624
+		// (get) Token: 0x0600EAC5 RID: 60101 RVA: 0x00229FE8 File Offset: 0x002281E8
 		public override EFadeBackgroundFadeOutEffectType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700419C RID: 16796
-		// (get) Token: 0x0600DCEF RID: 56559 RVA: 0x0020D855 File Offset: 0x0020BA55
+		// Token: 0x170044D9 RID: 17625
+		// (get) Token: 0x0600EAC6 RID: 60102 RVA: 0x00229FF5 File Offset: 0x002281F5
 		public virtual EFadeInScreenShowType FadeColor
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700419D RID: 16797
-		// (get) Token: 0x0600DCF0 RID: 56560 RVA: 0x0020D864 File Offset: 0x0020BA64
+		// Token: 0x170044DA RID: 17626
+		// (get) Token: 0x0600EAC7 RID: 60103 RVA: 0x0022A004 File Offset: 0x00228204
 		public virtual float? FadeInTime
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700419E RID: 16798
-		// (get) Token: 0x0600DCF1 RID: 56561 RVA: 0x0020D89C File Offset: 0x0020BA9C
+		// Token: 0x170044DB RID: 17627
+		// (get) Token: 0x0600EAC8 RID: 60104 RVA: 0x0022A03C File Offset: 0x0022823C
 		public virtual float? FadeOutTime
 		{
 			get
@@ -69,7 +67,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ABE RID: 31422
+		// Token: 0x0400815B RID: 33115
 		private IFadeBackgroundFadeOutEffectBlack Instance;
 	}
 }

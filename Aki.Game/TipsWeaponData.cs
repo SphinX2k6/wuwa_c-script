@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020018D9 RID: 6361
+// Token: 0x02000D92 RID: 3474
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsWeaponData : ItemTipsData
 {
-	// Token: 0x0600BAA0 RID: 47776 RVA: 0x002A4068 File Offset: 0x002A2268
+	// Token: 0x06008E89 RID: 36489 RVA: 0x002AE7E4 File Offset: 0x002AC9E4
 	public TipsWeaponData(ItemTipsParam data) : base(data)
 	{
 		AttributeItemData attributeItemData = InventoryModel.Instance.GetAttributeItemData(this.IncId);
@@ -78,37 +78,37 @@ public class TipsWeaponData : ItemTipsData
 		}
 	}
 
-	// Token: 0x0600BAA1 RID: 47777 RVA: 0x002A44AB File Offset: 0x002A26AB
+	// Token: 0x06008E8A RID: 36490 RVA: 0x002AEC27 File Offset: 0x002ACE27
 	protected override bool OnIsShowIconBig()
 	{
 		return true;
 	}
 
-	// Token: 0x040054A9 RID: 21673
+	// Token: 0x04005554 RID: 21844
 	public string WeaponType = "";
 
-	// Token: 0x040054AA RID: 21674
+	// Token: 0x04005555 RID: 21845
 	public int WeaponLevel;
 
-	// Token: 0x040054AB RID: 21675
+	// Token: 0x04005556 RID: 21846
 	public int WeaponLimitLevel;
 
-	// Token: 0x040054AC RID: 21676
+	// Token: 0x04005557 RID: 21847
 	public int BreachLevel;
 
-	// Token: 0x040054AD RID: 21677
+	// Token: 0x04005558 RID: 21848
 	public int BreachMaxLevel;
 
-	// Token: 0x040054AE RID: 21678
+	// Token: 0x04005559 RID: 21849
 	public int WeaponStage;
 
-	// Token: 0x040054AF RID: 21679
+	// Token: 0x0400555A RID: 21850
 	public string WeaponSkillName = "";
 
-	// Token: 0x040054B0 RID: 21680
+	// Token: 0x0400555B RID: 21851
 	public string WeaponEffect = "";
 
-	// Token: 0x040054B1 RID: 21681
+	// Token: 0x0400555C RID: 21852
 	[Nullable(new byte[]
 	{
 		2,
@@ -116,10 +116,10 @@ public class TipsWeaponData : ItemTipsData
 	})]
 	public string[] WeaponEffectParam;
 
-	// Token: 0x040054B2 RID: 21682
+	// Token: 0x0400555D RID: 21853
 	public string WeaponDescription = "";
 
-	// Token: 0x040054B3 RID: 21683
+	// Token: 0x0400555E RID: 21854
 	[Nullable(new byte[]
 	{
 		2,
@@ -127,9 +127,9 @@ public class TipsWeaponData : ItemTipsData
 	})]
 	public ITipsAttributeItemData[] AttributeData;
 
-	// Token: 0x040054B4 RID: 21684
+	// Token: 0x0400555F RID: 21855
 	public bool IsEquip;
 
-	// Token: 0x040054B5 RID: 21685
+	// Token: 0x04005560 RID: 21856
 	public int? EquippedId;
 }

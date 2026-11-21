@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F05 RID: 7941
+	// Token: 0x02000612 RID: 1554
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.PreloadObjectCollection")]
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FPreloadObjectCollection : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E241 RID: 123457 RVA: 0x002CCEF6 File Offset: 0x002CB0F6
+		// Token: 0x06008881 RID: 34945 RVA: 0x000CDE7E File Offset: 0x000CC07E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FPreloadObjectCollection._ScriptStructPtr != 0) ? FPreloadObjectCollection._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.PreloadObjectCollection", ref FPreloadObjectCollection._ScriptStructPtr);
 		}
 
-		// Token: 0x170077C5 RID: 30661
-		// (get) Token: 0x0601E242 RID: 123458 RVA: 0x002CCF1C File Offset: 0x002CB11C
-		// (set) Token: 0x0601E243 RID: 123459 RVA: 0x002CCF5F File Offset: 0x002CB15F
+		// Token: 0x17001977 RID: 6519
+		// (get) Token: 0x06008882 RID: 34946 RVA: 0x000CDEA4 File Offset: 0x000CC0A4
+		// (set) Token: 0x06008883 RID: 34947 RVA: 0x000CDEE7 File Offset: 0x000CC0E7
 		public TArray<UObject> Assets
 		{
 			get
@@ -39,56 +39,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E244 RID: 123460 RVA: 0x002CCF6D File Offset: 0x002CB16D
+		// Token: 0x06008884 RID: 34948 RVA: 0x000CDEF5 File Offset: 0x000CC0F5
 		public FPreloadObjectCollection()
 		{
 		}
 
-		// Token: 0x0601E245 RID: 123461 RVA: 0x002CCF75 File Offset: 0x002CB175
-		public FPreloadObjectCollection(TArray<UObject> Assets)
-		{
-			this.Assets = Assets;
-		}
-
-		// Token: 0x0601E246 RID: 123462 RVA: 0x002CCF84 File Offset: 0x002CB184
+		// Token: 0x06008885 RID: 34949 RVA: 0x000CDEFD File Offset: 0x000CC0FD
 		protected override IntPtr GetUStructPtr()
 		{
 			return FPreloadObjectCollection.StaticStruct();
 		}
 
-		// Token: 0x0601E247 RID: 123463 RVA: 0x002CCF90 File Offset: 0x002CB190
+		// Token: 0x06008886 RID: 34950 RVA: 0x000CDF09 File Offset: 0x000CC109
 		[NullableContext(2)]
 		public FPreloadObjectCollection(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E248 RID: 123464 RVA: 0x002CCF9A File Offset: 0x002CB19A
+		// Token: 0x06008887 RID: 34951 RVA: 0x000CDF13 File Offset: 0x000CC113
 		public FPreloadObjectCollection(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E249 RID: 123465 RVA: 0x002CCFA5 File Offset: 0x002CB1A5
+		// Token: 0x06008888 RID: 34952 RVA: 0x000CDF1E File Offset: 0x000CC11E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FPreloadObjectCollection(Pointer, false, true);
 		}
 
-		// Token: 0x0601E24A RID: 123466 RVA: 0x002CCFAF File Offset: 0x002CB1AF
+		// Token: 0x06008889 RID: 34953 RVA: 0x000CDF28 File Offset: 0x000CC128
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FPreloadObjectCollection(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401046F RID: 66671
+		// Token: 0x04003B41 RID: 15169
 		public const string __ObjectPath = "/Script/KuroUtility.PreloadObjectCollection";
 
-		// Token: 0x04010470 RID: 66672
+		// Token: 0x04003B42 RID: 15170
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010471 RID: 66673
+		// Token: 0x04003B43 RID: 15171
 		internal static int __PropertyOffset_Assets;
 
-		// Token: 0x04010472 RID: 66674
+		// Token: 0x04003B44 RID: 15172
 		[Nullable(new byte[]
 		{
 			2,

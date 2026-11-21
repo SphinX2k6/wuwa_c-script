@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004530 RID: 17712
+	// Token: 0x02004998 RID: 18840
 	public struct INoneRefresh : IFlatbufferObject
 	{
-		// Token: 0x17007DA3 RID: 32163
-		// (get) Token: 0x0601AA2B RID: 109099 RVA: 0x003CD2AE File Offset: 0x003CB4AE
+		// Token: 0x170083E4 RID: 33764
+		// (get) Token: 0x0601C200 RID: 115200 RVA: 0x003F954A File Offset: 0x003F774A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA2C RID: 109100 RVA: 0x003CD2BB File Offset: 0x003CB4BB
+		// Token: 0x0601C201 RID: 115201 RVA: 0x003F9557 File Offset: 0x003F7757
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AA2D RID: 109101 RVA: 0x003CD2C4 File Offset: 0x003CB4C4
+		// Token: 0x0601C202 RID: 115202 RVA: 0x003F9560 File Offset: 0x003F7760
 		public static INoneRefresh GetRootAsINoneRefresh(ByteBuffer _bb)
 		{
 			return INoneRefresh.GetRootAsINoneRefresh(_bb, default(INoneRefresh));
 		}
 
-		// Token: 0x0601AA2E RID: 109102 RVA: 0x003CD2E0 File Offset: 0x003CB4E0
+		// Token: 0x0601C203 RID: 115203 RVA: 0x003F957C File Offset: 0x003F777C
 		public static INoneRefresh GetRootAsINoneRefresh(ByteBuffer _bb, INoneRefresh obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AA2F RID: 109103 RVA: 0x003CD2FD File Offset: 0x003CB4FD
+		// Token: 0x0601C204 RID: 115204 RVA: 0x003F9599 File Offset: 0x003F7799
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AA30 RID: 109104 RVA: 0x003CD30C File Offset: 0x003CB50C
+		// Token: 0x0601C205 RID: 115205 RVA: 0x003F95A8 File Offset: 0x003F77A8
 		public INoneRefresh __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007DA4 RID: 32164
-		// (get) Token: 0x0601AA31 RID: 109105 RVA: 0x003CD31C File Offset: 0x003CB51C
+		// Token: 0x170083E5 RID: 33765
+		// (get) Token: 0x0601C206 RID: 115206 RVA: 0x003F95B8 File Offset: 0x003F77B8
 		public ELevelPlayRefreshType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AA32 RID: 109106 RVA: 0x003CD358 File Offset: 0x003CB558
+		// Token: 0x0601C207 RID: 115207 RVA: 0x003F95F4 File Offset: 0x003F77F4
 		public static Offset<INoneRefresh> CreateINoneRefresh(FlatBufferBuilder builder, ELevelPlayRefreshType Type = ELevelPlayRefreshType.None)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return INoneRefresh.EndINoneRefresh(builder);
 		}
 
-		// Token: 0x0601AA33 RID: 109107 RVA: 0x003CD36E File Offset: 0x003CB56E
+		// Token: 0x0601C208 RID: 115208 RVA: 0x003F960A File Offset: 0x003F780A
 		public static void StartINoneRefresh(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601AA34 RID: 109108 RVA: 0x003CD377 File Offset: 0x003CB577
+		// Token: 0x0601C209 RID: 115209 RVA: 0x003F9613 File Offset: 0x003F7813
 		public static void AddType(FlatBufferBuilder builder, ELevelPlayRefreshType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AA35 RID: 109109 RVA: 0x003CD382 File Offset: 0x003CB582
+		// Token: 0x0601C20A RID: 115210 RVA: 0x003F961E File Offset: 0x003F781E
 		public static Offset<INoneRefresh> EndINoneRefresh(FlatBufferBuilder builder)
 		{
 			return new Offset<INoneRefresh>(builder.EndTable());
 		}
 
-		// Token: 0x0601AA36 RID: 109110 RVA: 0x003CD390 File Offset: 0x003CB590
+		// Token: 0x0601C20B RID: 115211 RVA: 0x003F962C File Offset: 0x003F782C
 		public INoneRefreshT UnPack()
 		{
 			INoneRefreshT noneRefreshT = new INoneRefreshT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return noneRefreshT;
 		}
 
-		// Token: 0x0601AA37 RID: 109111 RVA: 0x003CD3AB File Offset: 0x003CB5AB
+		// Token: 0x0601C20C RID: 115212 RVA: 0x003F9647 File Offset: 0x003F7847
 		public void UnPackTo(INoneRefreshT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601AA38 RID: 109112 RVA: 0x003CD3BC File Offset: 0x003CB5BC
+		// Token: 0x0601C20D RID: 115213 RVA: 0x003F9658 File Offset: 0x003F7858
 		public static Offset<INoneRefresh> Pack(FlatBufferBuilder builder, INoneRefreshT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return INoneRefresh.CreateINoneRefresh(builder, _o.Type);
 		}
 
-		// Token: 0x0400C5B6 RID: 50614
+		// Token: 0x0400CFE5 RID: 53221
 		private Table __p;
 	}
 }

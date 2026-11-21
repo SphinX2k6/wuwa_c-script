@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02003343 RID: 13123
+// Token: 0x020028B5 RID: 10421
 public class RedDotActivityRegressBp : RedDotBase
 {
 }

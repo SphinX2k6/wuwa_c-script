@@ -9,39 +9,39 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001715 RID: 5909
+// Token: 0x02000BCD RID: 3021
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BuffItemControl : UiControllerBase
 {
-	// Token: 0x0600AA47 RID: 43591 RVA: 0x00263FD1 File Offset: 0x002621D1
+	// Token: 0x06007E2A RID: 32298 RVA: 0x0026E521 File Offset: 0x0026C721
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600AA48 RID: 43592 RVA: 0x00263FD4 File Offset: 0x002621D4
+	// Token: 0x06007E2B RID: 32299 RVA: 0x0026E524 File Offset: 0x0026C724
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0600AA49 RID: 43593 RVA: 0x00263FD7 File Offset: 0x002621D7
+	// Token: 0x06007E2C RID: 32300 RVA: 0x0026E527 File Offset: 0x0026C727
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BuffItemNotify, new Action<IMessage, Net.CallbackStatus>(this.NotifyBuffItem));
 		Net.Instance.Register(ENotifyMessageId.BuffItemUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.BuffItemUpdateNotify));
 	}
 
-	// Token: 0x0600AA4A RID: 43594 RVA: 0x00264011 File Offset: 0x00262211
+	// Token: 0x06007E2D RID: 32301 RVA: 0x0026E561 File Offset: 0x0026C761
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BuffItemNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.BuffItemUpdateNotify);
 	}
 
-	// Token: 0x0600AA4B RID: 43595 RVA: 0x00264034 File Offset: 0x00262234
+	// Token: 0x06007E2E RID: 32302 RVA: 0x0026E584 File Offset: 0x0026C784
 	public void RequestUseBuffItem(int itemConfigId, int useCount, int useRoleConfigId)
 	{
 		BuffItemControl.<>c__DisplayClass5_0 CS$<>8__locals1 = new BuffItemControl.<>c__DisplayClass5_0();
@@ -59,7 +59,7 @@ public class BuffItemControl : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.BuffItemRequest, buffItemRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<RequestUseBuffItem>g__responseBuffItem|0), 0);
 	}
 
-	// Token: 0x0600AA4C RID: 43596 RVA: 0x002640B4 File Offset: 0x002622B4
+	// Token: 0x06007E2F RID: 32303 RVA: 0x0026E604 File Offset: 0x0026C804
 	[NullableContext(2)]
 	private void NotifyBuffItem(IMessage msg, Net.CallbackStatus _)
 	{
@@ -83,7 +83,7 @@ public class BuffItemControl : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AA4D RID: 43597 RVA: 0x0026417C File Offset: 0x0026237C
+	// Token: 0x06007E30 RID: 32304 RVA: 0x0026E6CC File Offset: 0x0026C8CC
 	[NullableContext(2)]
 	private unsafe void BuffItemUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -110,7 +110,7 @@ public class BuffItemControl : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AA4E RID: 43598 RVA: 0x00264260 File Offset: 0x00262460
+	// Token: 0x06007E31 RID: 32305 RVA: 0x0026E7B0 File Offset: 0x0026C9B0
 	private void RefreshBuffItem(Aki.Protocol.BuffItem buffInfo)
 	{
 		int itemId = buffInfo.ItemId;
@@ -150,7 +150,7 @@ public class BuffItemControl : UiControllerBase
 		instance2.SetBuffItemCdTimeStamp(itemId, cdTime, buffItemConfig.Value.Cd);
 	}
 
-	// Token: 0x0600AA4F RID: 43599 RVA: 0x0026436C File Offset: 0x0026256C
+	// Token: 0x06007E32 RID: 32306 RVA: 0x0026E8BC File Offset: 0x0026CABC
 	private void RefreshEquipBuffItem(EquipBuffItem itemInfo, bool notifyUpdate = false)
 	{
 		int itemId = itemInfo.ItemId;
@@ -177,7 +177,7 @@ public class BuffItemControl : UiControllerBase
 		EventSystem.Instance.Emit<int, bool>(EEventName.OnEquipBuffItemUpdate, itemId, equiped);
 	}
 
-	// Token: 0x0600AA50 RID: 43600 RVA: 0x0026443C File Offset: 0x0026263C
+	// Token: 0x06007E33 RID: 32307 RVA: 0x0026E98C File Offset: 0x0026CB8C
 	public void InitializeAllUseBuffItemRoleFromPlayerFormationInstance(int useItemConfigId)
 	{
 		BuffItemModel instance = BuffItemModel.Instance;
@@ -216,7 +216,7 @@ public class BuffItemControl : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AA51 RID: 43601 RVA: 0x0026451C File Offset: 0x0026271C
+	// Token: 0x06007E34 RID: 32308 RVA: 0x0026EA6C File Offset: 0x0026CC6C
 	public bool TryUseResurrectionItem(int roleConfigId)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("use_buff_item_id_list");
@@ -262,8 +262,8 @@ public class BuffItemControl : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x17000E05 RID: 3589
-	// (get) Token: 0x0600AA52 RID: 43602 RVA: 0x0026464C File Offset: 0x0026284C
+	// Token: 0x17000E26 RID: 3622
+	// (get) Token: 0x06007E35 RID: 32309 RVA: 0x0026EB9C File Offset: 0x0026CD9C
 	public static BuffItemControl Instance
 	{
 		get
@@ -272,7 +272,7 @@ public class BuffItemControl : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AA53 RID: 43603 RVA: 0x00264653 File Offset: 0x00262853
+	// Token: 0x06007E36 RID: 32310 RVA: 0x0026EBA3 File Offset: 0x0026CDA3
 	public static BuffItemControl GetOrCreateInstance()
 	{
 		if (BuffItemControl._Instance == null)
@@ -282,7 +282,7 @@ public class BuffItemControl : UiControllerBase
 		return BuffItemControl._Instance;
 	}
 
-	// Token: 0x0600AA54 RID: 43604 RVA: 0x00264667 File Offset: 0x00262867
+	// Token: 0x06007E37 RID: 32311 RVA: 0x0026EBB7 File Offset: 0x0026CDB7
 	public static bool CreateInstance()
 	{
 		if (BuffItemControl._Instance != null)
@@ -293,27 +293,27 @@ public class BuffItemControl : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600AA55 RID: 43605 RVA: 0x0026467D File Offset: 0x0026287D
+	// Token: 0x06007E38 RID: 32312 RVA: 0x0026EBCD File Offset: 0x0026CDCD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AA56 RID: 43606 RVA: 0x0026467F File Offset: 0x0026287F
+	// Token: 0x06007E39 RID: 32313 RVA: 0x0026EBCF File Offset: 0x0026CDCF
 	public static void ResetStaticDefaultValue()
 	{
 		BuffItemControl._Instance = null;
 	}
 
-	// Token: 0x0600AA57 RID: 43607 RVA: 0x00264687 File Offset: 0x00262887
+	// Token: 0x06007E3A RID: 32314 RVA: 0x0026EBD7 File Offset: 0x0026CDD7
 	static BuffItemControl()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BuffItemControl.CreateStaticDefaultValue), new Action(BuffItemControl.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D4F RID: 19791
+	// Token: 0x04004DF7 RID: 19959
 	private const int TRIAL_ROLE_ID = 10000;
 
-	// Token: 0x04004D50 RID: 19792
+	// Token: 0x04004DF8 RID: 19960
 	[Nullable(2)]
 	private static BuffItemControl _Instance;
 }

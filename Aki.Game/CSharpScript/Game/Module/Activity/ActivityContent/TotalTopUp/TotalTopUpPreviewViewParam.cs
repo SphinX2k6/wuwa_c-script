@@ -4,19 +4,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F92 RID: 24466
+	// Token: 0x02004F79 RID: 20345
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewViewParam : ITotalTopUpPreviewViewParam
 	{
-		// Token: 0x17008FE7 RID: 36839
-		// (get) Token: 0x0603E123 RID: 254243 RVA: 0x00EFCB4B File Offset: 0x00EFAD4B
-		// (set) Token: 0x0603E124 RID: 254244 RVA: 0x00EFCB53 File Offset: 0x00EFAD53
+		// Token: 0x170063B9 RID: 25529
+		// (get) Token: 0x060330BD RID: 209085 RVA: 0x00E4E803 File Offset: 0x00E4CA03
+		// (set) Token: 0x060330BE RID: 209086 RVA: 0x00E4E80B File Offset: 0x00E4CA0B
 		public TotalTopUpReward RewardConfig { get; set; }
 
-		// Token: 0x17008FE8 RID: 36840
-		// (get) Token: 0x0603E125 RID: 254245 RVA: 0x00EFCB5C File Offset: 0x00EFAD5C
-		// (set) Token: 0x0603E126 RID: 254246 RVA: 0x00EFCB64 File Offset: 0x00EFAD64
+		// Token: 0x170063BA RID: 25530
+		// (get) Token: 0x060330BF RID: 209087 RVA: 0x00E4E814 File Offset: 0x00E4CA14
+		// (set) Token: 0x060330C0 RID: 209088 RVA: 0x00E4E81C File Offset: 0x00E4CA1C
 		public TotalTopUpRewardData RewardData { get; set; }
 	}
 }

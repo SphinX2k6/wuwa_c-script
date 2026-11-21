@@ -9,18 +9,18 @@ using CSharpScript.Game.Module.FirstPersonTurret;
 using CSharpScript.Game.World.Controller;
 using UnrealEngine;
 
-// Token: 0x02001D64 RID: 7524
+// Token: 0x02001226 RID: 4646
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class LogicNodeBase : BehaviorNodeBase
 {
-	// Token: 0x0600E4EB RID: 58603 RVA: 0x0035E6EF File Offset: 0x0035C8EF
+	// Token: 0x0600B909 RID: 47369 RVA: 0x0036A2EB File Offset: 0x003684EB
 	protected LogicNodeBase(int nodeId) : base(nodeId)
 	{
 	}
 
-	// Token: 0x17001248 RID: 4680
-	// (get) Token: 0x0600E4EC RID: 58604 RVA: 0x0035E6F8 File Offset: 0x0035C8F8
+	// Token: 0x17001272 RID: 4722
+	// (get) Token: 0x0600B90A RID: 47370 RVA: 0x0036A2F4 File Offset: 0x003684F4
 	public IQuestScheduleConfig CustomUiConfig
 	{
 		get
@@ -34,8 +34,8 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x17001249 RID: 4681
-	// (get) Token: 0x0600E4ED RID: 58605 RVA: 0x0035E70B File Offset: 0x0035C90B
+	// Token: 0x17001273 RID: 4723
+	// (get) Token: 0x0600B90B RID: 47371 RVA: 0x0036A307 File Offset: 0x00368507
 	public IInformationViewType SilentAreaInfoViewConfig
 	{
 		get
@@ -54,8 +54,8 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x1700124A RID: 4682
-	// (get) Token: 0x0600E4EE RID: 58606 RVA: 0x0035E729 File Offset: 0x0035C929
+	// Token: 0x17001274 RID: 4724
+	// (get) Token: 0x0600B90C RID: 47372 RVA: 0x0036A325 File Offset: 0x00368525
 	public ITrackAreaText ModifyTrackAreaTextConfig
 	{
 		get
@@ -69,8 +69,8 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x1700124B RID: 4683
-	// (get) Token: 0x0600E4EF RID: 58607 RVA: 0x0035E73C File Offset: 0x0035C93C
+	// Token: 0x17001275 RID: 4725
+	// (get) Token: 0x0600B90D RID: 47373 RVA: 0x0036A338 File Offset: 0x00368538
 	public ITrackCustomBoardOnBtLogicNode TrackCustomBoard
 	{
 		get
@@ -84,8 +84,8 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x1700124C RID: 4684
-	// (get) Token: 0x0600E4F0 RID: 58608 RVA: 0x0035E74F File Offset: 0x0035C94F
+	// Token: 0x17001276 RID: 4726
+	// (get) Token: 0x0600B90E RID: 47374 RVA: 0x0036A34B File Offset: 0x0036854B
 	public ITrackLevelPlay TrackLevelPlay
 	{
 		get
@@ -95,7 +95,7 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x0600E4F1 RID: 58609 RVA: 0x0035E768 File Offset: 0x0035C968
+	// Token: 0x0600B90F RID: 47375 RVA: 0x0036A364 File Offset: 0x00368564
 	[NullableContext(1)]
 	protected override bool OnCreate(IBtNode nodeConfig)
 	{
@@ -115,7 +115,7 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		return true;
 	}
 
-	// Token: 0x0600E4F2 RID: 58610 RVA: 0x0035E79C File Offset: 0x0035C99C
+	// Token: 0x0600B910 RID: 47376 RVA: 0x0036A398 File Offset: 0x00368598
 	protected override void OnNodeActive()
 	{
 		ILogicBtNode config = this.Config;
@@ -141,6 +141,14 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "a.Animation.AnimSeqSkeletonCheck false", null);
 		}
+		if (config.ForceClosedRestriction != null)
+		{
+			Blackboard blackboard2 = this.Blackboard;
+			if (blackboard2 != null)
+			{
+				blackboard2.AddTag(EBehaviorTreeTag.ForceClosedRestriction, base.NodeId.ToString());
+			}
+		}
 		if (this.Config.LogicProgramSpecialProcess != null)
 		{
 			this.ClientSpecialProcess(true);
@@ -152,19 +160,19 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		IInformationViewType silentAreaInfoViewConfig = this.SilentAreaInfoViewConfig;
 		if (silentAreaInfoViewConfig != null)
 		{
-			Blackboard blackboard2 = this.Blackboard;
-			if (blackboard2 != null)
+			Blackboard blackboard3 = this.Blackboard;
+			if (blackboard3 != null)
 			{
-				blackboard2.AddSilentShowInfo(base.NodeId, silentAreaInfoViewConfig);
+				blackboard3.AddSilentShowInfo(base.NodeId, silentAreaInfoViewConfig);
 			}
 		}
 		ITrackAreaText modifyTrackAreaTextConfig = this.ModifyTrackAreaTextConfig;
 		if (modifyTrackAreaTextConfig != null)
 		{
-			Blackboard blackboard3 = this.Blackboard;
-			if (blackboard3 != null)
+			Blackboard blackboard4 = this.Blackboard;
+			if (blackboard4 != null)
 			{
-				blackboard3.AddModifyTrackAreaConfig(base.NodeId, modifyTrackAreaTextConfig);
+				blackboard4.AddModifyTrackAreaConfig(base.NodeId, modifyTrackAreaTextConfig);
 			}
 		}
 		if (config.CompositeTrackViewMode != null)
@@ -226,10 +234,10 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		if (trackLevelPlay != null)
 		{
 			GeneralLogicTreeModel.Instance.AddLevelPlayTrackBinding(base.NodeId, base.TreeIncId, trackLevelPlay.LevelPlayId);
-			Blackboard blackboard4 = this.Blackboard;
-			if (blackboard4 != null)
+			Blackboard blackboard5 = this.Blackboard;
+			if (blackboard5 != null)
 			{
-				blackboard4.AddTag(EBehaviorTreeTag.BindingLevelPlayTrack, base.NodeId.ToString());
+				blackboard5.AddTag(EBehaviorTreeTag.BindingLevelPlayTrack, base.NodeId.ToString());
 			}
 		}
 		ILogicBtNode config4 = this.Config;
@@ -239,7 +247,7 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x0600E4F3 RID: 58611 RVA: 0x0035EAEC File Offset: 0x0035CCEC
+	// Token: 0x0600B911 RID: 47377 RVA: 0x0036A710 File Offset: 0x00368910
 	protected override void OnNodeDeActive(bool success)
 	{
 		this.RemoveTag(EBehaviorTreeTag.CanShow, "");
@@ -354,10 +362,18 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		{
 			this.HandleDisableSystemPrompt(false);
 		}
+		if (this.Config.ForceClosedRestriction != null)
+		{
+			Blackboard blackboard5 = this.Blackboard;
+			if (blackboard5 != null)
+			{
+				blackboard5.RemoveTag(EBehaviorTreeTag.ForceClosedRestriction, base.NodeId.ToString());
+			}
+		}
 		base.OnNodeDeActive(success);
 	}
 
-	// Token: 0x0600E4F4 RID: 58612 RVA: 0x0035EDEC File Offset: 0x0035CFEC
+	// Token: 0x0600B912 RID: 47378 RVA: 0x0036AA40 File Offset: 0x00368C40
 	private void ClientSpecialProcess(bool isFromActive)
 	{
 		foreach (IDisableUro disableUro in this.Config.LogicProgramSpecialProcess.SpecialProcessList)
@@ -400,7 +416,7 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x0600E4F5 RID: 58613 RVA: 0x0035EF00 File Offset: 0x0035D100
+	// Token: 0x0600B913 RID: 47379 RVA: 0x0036AB54 File Offset: 0x00368D54
 	private void DisableOnline(bool disable)
 	{
 		BtType btType = this.BtType;
@@ -416,7 +432,7 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		OnlineModel.Instance.DisableOnline(EDisableOnlineType.NonOnlinePlay, disable, base.TreeConfigId, base.NodeId);
 	}
 
-	// Token: 0x0600E4F6 RID: 58614 RVA: 0x0035EF50 File Offset: 0x0035D150
+	// Token: 0x0600B914 RID: 47380 RVA: 0x0036ABA4 File Offset: 0x00368DA4
 	private void HandleDisableSystemPrompt(bool isDisable)
 	{
 		using (List<IAreaNameSystemPrompt>.Enumerator enumerator = this.Config.DisableSystemPrompt.GetEnumerator())
@@ -431,9 +447,9 @@ public abstract class LogicNodeBase : BehaviorNodeBase
 		}
 	}
 
-	// Token: 0x04006993 RID: 27027
+	// Token: 0x04006A73 RID: 27251
 	protected ILogicBtNode Config;
 
-	// Token: 0x04006994 RID: 27028
+	// Token: 0x04006A74 RID: 27252
 	public bool AddTrackViewMode;
 }

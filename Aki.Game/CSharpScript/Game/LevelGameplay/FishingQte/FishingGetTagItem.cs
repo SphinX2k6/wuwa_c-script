@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E40 RID: 28224
+	// Token: 0x02005FC1 RID: 24513
 	public class FishingGetTagItem : UiPanelBase
 	{
-		// Token: 0x06044CEB RID: 281835 RVA: 0x010FAA5C File Offset: 0x010F8C5C
+		// Token: 0x0603AE78 RID: 241272 RVA: 0x010A4FDC File Offset: 0x010A31DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CEC RID: 281836 RVA: 0x010FAAC8 File Offset: 0x010F8CC8
+		// Token: 0x0603AE79 RID: 241273 RVA: 0x010A5048 File Offset: 0x010A3248
 		public void RefreshTag(EFishingQteGetItemTagType tagType)
 		{
 			string text = null;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x0200CCF6 RID: 52470
+		// Token: 0x0200B8E6 RID: 47334
 		private class ETagComponents
 		{
-			// Token: 0x0403DCE8 RID: 253160
+			// Token: 0x0403910A RID: 233738
 			public const int SpriteBg = 0;
 
-			// Token: 0x0403DCE9 RID: 253161
+			// Token: 0x0403910B RID: 233739
 			public const int Txt = 1;
 		}
 	}

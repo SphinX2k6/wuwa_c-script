@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E07 RID: 7687
+	// Token: 0x02000582 RID: 1410
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Move_Spline")]
 	[UnrealStructLayout(592, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 592)]
 	public class UKSC_Move_Spline : UKSC_Move, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D5AD RID: 120237 RVA: 0x002B55AA File Offset: 0x002B37AA
+		// Token: 0x06007FFC RID: 32764 RVA: 0x000BD3B0 File Offset: 0x000BB5B0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_Move_Spline._ClassPtr;
 		}
 
-		// Token: 0x0601D5AE RID: 120238 RVA: 0x002B55B8 File Offset: 0x002B37B8
+		// Token: 0x06007FFD RID: 32765 RVA: 0x000BD3BC File Offset: 0x000BB5BC
 		public UKSC_Move_Spline() : this(BuiltinUtils.AllocNativeUObject(UKSC_Move_Spline.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D5AF RID: 120239 RVA: 0x002B55E0 File Offset: 0x002B37E0
+		// Token: 0x06007FFE RID: 32766 RVA: 0x000BD3E4 File Offset: 0x000BB5E4
 		[NullableContext(1)]
 		public UKSC_Move_Spline(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_Move_Spline.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007677 RID: 30327
-		// (get) Token: 0x0601D5B0 RID: 120240 RVA: 0x002B5613 File Offset: 0x002B3813
-		// (set) Token: 0x0601D5B1 RID: 120241 RVA: 0x002B5627 File Offset: 0x002B3827
+		// Token: 0x170018E6 RID: 6374
+		// (get) Token: 0x06007FFF RID: 32767 RVA: 0x000BD417 File Offset: 0x000BB617
+		// (set) Token: 0x06008000 RID: 32768 RVA: 0x000BD42B File Offset: 0x000BB62B
 		public unsafe USplineComponent SplineComp_
 		{
 			get
@@ -45,58 +45,58 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D5B2 RID: 120242 RVA: 0x002B563C File Offset: 0x002B383C
+		// Token: 0x06008001 RID: 32769 RVA: 0x000BD440 File Offset: 0x000BB640
 		public void SetSplineWide(float Width)
 		{
 			UKSC_Move_Spline.__SetSplineWide_Internal(base.NativePtr, Width);
 		}
 
-		// Token: 0x0601D5B3 RID: 120243 RVA: 0x002B564A File Offset: 0x002B384A
+		// Token: 0x06008002 RID: 32770 RVA: 0x000BD44E File Offset: 0x000BB64E
 		public void SetSplineHeight(float Height)
 		{
 			UKSC_Move_Spline.__SetSplineHeight_Internal(base.NativePtr, Height);
 		}
 
-		// Token: 0x0601D5B4 RID: 120244 RVA: 0x002B5658 File Offset: 0x002B3858
+		// Token: 0x06008003 RID: 32771 RVA: 0x000BD45C File Offset: 0x000BB65C
 		public void SetSpline(USplineComponent SplineComp)
 		{
 			UKSC_Move_Spline.__SetSpline_Internal(base.NativePtr, (SplineComp != null) ? SplineComp.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D5B5 RID: 120245
+		// Token: 0x06008004 RID: 32772
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplineWide_Internal(IntPtr @this, float Width);
 
-		// Token: 0x0601D5B6 RID: 120246
+		// Token: 0x06008005 RID: 32773
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSplineHeight_Internal(IntPtr @this, float Height);
 
-		// Token: 0x0601D5B7 RID: 120247
+		// Token: 0x06008006 RID: 32774
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSpline_Internal(IntPtr @this, IntPtr SplineComp);
 
-		// Token: 0x0601D5B8 RID: 120248 RVA: 0x002B5675 File Offset: 0x002B3875
+		// Token: 0x06008007 RID: 32775 RVA: 0x000BD479 File Offset: 0x000BB679
 		static UKSC_Move_Spline()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Move_Spline");
 		}
 
-		// Token: 0x0601D5B9 RID: 120249 RVA: 0x002B5683 File Offset: 0x002B3883
+		// Token: 0x06008008 RID: 32776 RVA: 0x000BD487 File Offset: 0x000BB687
 		protected UKSC_Move_Spline(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FEC1 RID: 65217
+		// Token: 0x040037E0 RID: 14304
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Move_Spline";
 
-		// Token: 0x0400FEC2 RID: 65218
+		// Token: 0x040037E1 RID: 14305
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FEC3 RID: 65219
+		// Token: 0x040037E2 RID: 14306
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FEC4 RID: 65220
+		// Token: 0x040037E3 RID: 14307
 		internal static int __PropertyOffset_SplineComp_;
 	}
 }

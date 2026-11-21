@@ -21,7 +21,7 @@ using CSharpScript.Launcher.Update;
 
 namespace CSharpScript.Launcher.Util.Json.Generated
 {
-	// Token: 0x02000083 RID: 131
+	// Token: 0x02000086 RID: 134
 	[JsonSourceGenerationOptions(GenerationMode = JsonSourceGenerationMode.Metadata, IncludeFields = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
 	[JsonSerializable(typeof(EntryJson))]
 	[JsonSerializable(typeof(PatchManifestJson))]
@@ -60,7 +60,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 	internal class LauncherJsonSourceGenContext : JsonSerializerContext, IJsonTypeInfoResolver
 	{
 		// Token: 0x17000048 RID: 72
-		// (get) Token: 0x06000373 RID: 883 RVA: 0x00012BF0 File Offset: 0x00010DF0
+		// (get) Token: 0x06000384 RID: 900 RVA: 0x00013B4C File Offset: 0x00011D4C
 		public JsonTypeInfo<bool> Boolean
 		{
 			get
@@ -74,7 +74,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000374 RID: 884 RVA: 0x00012C2C File Offset: 0x00010E2C
+		// Token: 0x06000385 RID: 901 RVA: 0x00013B88 File Offset: 0x00011D88
 		[NullableContext(1)]
 		private JsonTypeInfo<bool> Create_Boolean(JsonSerializerOptions options)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000049 RID: 73
-		// (get) Token: 0x06000375 RID: 885 RVA: 0x00012C58 File Offset: 0x00010E58
+		// (get) Token: 0x06000386 RID: 902 RVA: 0x00013BB4 File Offset: 0x00011DB4
 		public JsonTypeInfo<bool?> NullableBoolean
 		{
 			get
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000376 RID: 886 RVA: 0x00012C94 File Offset: 0x00010E94
+		// Token: 0x06000387 RID: 903 RVA: 0x00013BF0 File Offset: 0x00011DF0
 		[NullableContext(1)]
 		private JsonTypeInfo<bool?> Create_NullableBoolean(JsonSerializerOptions options)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004A RID: 74
-		// (get) Token: 0x06000377 RID: 887 RVA: 0x00012CC4 File Offset: 0x00010EC4
+		// (get) Token: 0x06000388 RID: 904 RVA: 0x00013C20 File Offset: 0x00011E20
 		public JsonTypeInfo<double> Double
 		{
 			get
@@ -131,7 +131,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000378 RID: 888 RVA: 0x00012D00 File Offset: 0x00010F00
+		// Token: 0x06000389 RID: 905 RVA: 0x00013C5C File Offset: 0x00011E5C
 		[NullableContext(1)]
 		private JsonTypeInfo<double> Create_Double(JsonSerializerOptions options)
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004B RID: 75
-		// (get) Token: 0x06000379 RID: 889 RVA: 0x00012D2C File Offset: 0x00010F2C
+		// (get) Token: 0x0600038A RID: 906 RVA: 0x00013C88 File Offset: 0x00011E88
 		public JsonTypeInfo<float> Single
 		{
 			get
@@ -159,7 +159,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600037A RID: 890 RVA: 0x00012D68 File Offset: 0x00010F68
+		// Token: 0x0600038B RID: 907 RVA: 0x00013CC4 File Offset: 0x00011EC4
 		[NullableContext(1)]
 		private JsonTypeInfo<float> Create_Single(JsonSerializerOptions options)
 		{
@@ -173,7 +173,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004C RID: 76
-		// (get) Token: 0x0600037B RID: 891 RVA: 0x00012D94 File Offset: 0x00010F94
+		// (get) Token: 0x0600038C RID: 908 RVA: 0x00013CF0 File Offset: 0x00011EF0
 		public JsonTypeInfo<float?> NullableSingle
 		{
 			get
@@ -187,7 +187,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600037C RID: 892 RVA: 0x00012DD0 File Offset: 0x00010FD0
+		// Token: 0x0600038D RID: 909 RVA: 0x00013D2C File Offset: 0x00011F2C
 		[NullableContext(1)]
 		private JsonTypeInfo<float?> Create_NullableSingle(JsonSerializerOptions options)
 		{
@@ -202,7 +202,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004D RID: 77
-		// (get) Token: 0x0600037D RID: 893 RVA: 0x00012E00 File Offset: 0x00011000
+		// (get) Token: 0x0600038E RID: 910 RVA: 0x00013D5C File Offset: 0x00011F5C
 		public JsonTypeInfo<GatewayLatencyConfigVo> GatewayLatencyConfigVo
 		{
 			get
@@ -216,7 +216,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600037E RID: 894 RVA: 0x00012E3C File Offset: 0x0001103C
+		// Token: 0x0600038F RID: 911 RVA: 0x00013D98 File Offset: 0x00011F98
 		[NullableContext(1)]
 		private JsonTypeInfo<GatewayLatencyConfigVo> Create_GatewayLatencyConfigVo(JsonSerializerOptions options)
 		{
@@ -238,7 +238,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600037F RID: 895 RVA: 0x00012F04 File Offset: 0x00011104
+		// Token: 0x06000390 RID: 912 RVA: 0x00013E60 File Offset: 0x00012060
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] GatewayLatencyConfigVoPropInit(JsonSerializerOptions options)
 		{
@@ -307,7 +307,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004E RID: 78
-		// (get) Token: 0x06000380 RID: 896 RVA: 0x000131D8 File Offset: 0x000113D8
+		// (get) Token: 0x06000391 RID: 913 RVA: 0x00014134 File Offset: 0x00012334
 		public JsonTypeInfo<NetHostInfo> NetHostInfo
 		{
 			get
@@ -321,7 +321,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000381 RID: 897 RVA: 0x00013214 File Offset: 0x00011414
+		// Token: 0x06000392 RID: 914 RVA: 0x00014170 File Offset: 0x00012370
 		[NullableContext(1)]
 		private JsonTypeInfo<NetHostInfo> Create_NetHostInfo(JsonSerializerOptions options)
 		{
@@ -343,7 +343,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000382 RID: 898 RVA: 0x000132DC File Offset: 0x000114DC
+		// Token: 0x06000393 RID: 915 RVA: 0x00014238 File Offset: 0x00012438
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] NetHostInfoPropInit(JsonSerializerOptions options)
 		{
@@ -394,7 +394,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700004F RID: 79
-		// (get) Token: 0x06000383 RID: 899 RVA: 0x000134D4 File Offset: 0x000116D4
+		// (get) Token: 0x06000394 RID: 916 RVA: 0x00014430 File Offset: 0x00012630
 		public JsonTypeInfo<EntryJson> EntryJson
 		{
 			get
@@ -408,7 +408,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000384 RID: 900 RVA: 0x00013510 File Offset: 0x00011710
+		// Token: 0x06000395 RID: 917 RVA: 0x0001446C File Offset: 0x0001266C
 		[NullableContext(1)]
 		private JsonTypeInfo<EntryJson> Create_EntryJson(JsonSerializerOptions options)
 		{
@@ -430,11 +430,11 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000385 RID: 901 RVA: 0x000135D8 File Offset: 0x000117D8
+		// Token: 0x06000396 RID: 918 RVA: 0x00014534 File Offset: 0x00012734
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] EntryJsonPropInit(JsonSerializerOptions options)
 		{
-			JsonPropertyInfo[] array = new JsonPropertyInfo[28];
+			JsonPropertyInfo[] array = new JsonPropertyInfo[30];
 			JsonPropertyInfoValues<List<ICdnUrlData>> jsonPropertyInfoValues = new JsonPropertyInfoValues<List<ICdnUrlData>>();
 			jsonPropertyInfoValues.IsProperty = false;
 			jsonPropertyInfoValues.IsPublic = true;
@@ -683,54 +683,78 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			jsonPropertyInfoValues12.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GARUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
 			JsonPropertyInfoValues<string> propertyInfo12 = jsonPropertyInfoValues12;
 			array[11] = JsonMetadataServices.CreatePropertyInfo<string>(options, propertyInfo12);
-			JsonPropertyInfoValues<ITDConfig> jsonPropertyInfoValues13 = new JsonPropertyInfoValues<ITDConfig>();
+			JsonPropertyInfoValues<string[]> jsonPropertyInfoValues13 = new JsonPropertyInfoValues<string[]>();
 			jsonPropertyInfoValues13.IsProperty = false;
 			jsonPropertyInfoValues13.IsPublic = true;
 			jsonPropertyInfoValues13.IsVirtual = false;
 			jsonPropertyInfoValues13.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues13.Converter = null;
-			jsonPropertyInfoValues13.Getter = ((object obj) => ((EntryJson)obj).TDCfg);
-			jsonPropertyInfoValues13.Setter = delegate(object obj, [Nullable(2)] ITDConfig value)
+			jsonPropertyInfoValues13.Getter = ((object obj) => ((EntryJson)obj).GARUrls);
+			jsonPropertyInfoValues13.Setter = delegate(object obj, [Nullable(new byte[]
 			{
-				((EntryJson)obj).TDCfg = value;
+				2,
+				1
+			})] string[] value)
+			{
+				((EntryJson)obj).GARUrls = value;
 			};
 			jsonPropertyInfoValues13.IgnoreCondition = null;
 			jsonPropertyInfoValues13.HasJsonInclude = false;
 			jsonPropertyInfoValues13.IsExtensionData = false;
 			jsonPropertyInfoValues13.NumberHandling = null;
-			jsonPropertyInfoValues13.PropertyName = "TDCfg";
+			jsonPropertyInfoValues13.PropertyName = "GARUrls";
 			jsonPropertyInfoValues13.JsonPropertyName = null;
-			jsonPropertyInfoValues13.AttributeProviderFactory = (() => typeof(EntryJson).GetField("TDCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<ITDConfig> propertyInfo13 = jsonPropertyInfoValues13;
-			array[12] = JsonMetadataServices.CreatePropertyInfo<ITDConfig>(options, propertyInfo13);
+			jsonPropertyInfoValues13.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GARUrls", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<string[]> propertyInfo13 = jsonPropertyInfoValues13;
+			array[12] = JsonMetadataServices.CreatePropertyInfo<string[]>(options, propertyInfo13);
 			JsonPropertyInfoValues<ITDConfig> jsonPropertyInfoValues14 = new JsonPropertyInfoValues<ITDConfig>();
 			jsonPropertyInfoValues14.IsProperty = false;
 			jsonPropertyInfoValues14.IsPublic = true;
 			jsonPropertyInfoValues14.IsVirtual = false;
 			jsonPropertyInfoValues14.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues14.Converter = null;
-			jsonPropertyInfoValues14.Getter = ((object obj) => ((EntryJson)obj).KDCfg);
+			jsonPropertyInfoValues14.Getter = ((object obj) => ((EntryJson)obj).TDCfg);
 			jsonPropertyInfoValues14.Setter = delegate(object obj, [Nullable(2)] ITDConfig value)
 			{
-				((EntryJson)obj).KDCfg = value;
+				((EntryJson)obj).TDCfg = value;
 			};
 			jsonPropertyInfoValues14.IgnoreCondition = null;
 			jsonPropertyInfoValues14.HasJsonInclude = false;
 			jsonPropertyInfoValues14.IsExtensionData = false;
 			jsonPropertyInfoValues14.NumberHandling = null;
-			jsonPropertyInfoValues14.PropertyName = "KDCfg";
+			jsonPropertyInfoValues14.PropertyName = "TDCfg";
 			jsonPropertyInfoValues14.JsonPropertyName = null;
-			jsonPropertyInfoValues14.AttributeProviderFactory = (() => typeof(EntryJson).GetField("KDCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			jsonPropertyInfoValues14.AttributeProviderFactory = (() => typeof(EntryJson).GetField("TDCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
 			JsonPropertyInfoValues<ITDConfig> propertyInfo14 = jsonPropertyInfoValues14;
 			array[13] = JsonMetadataServices.CreatePropertyInfo<ITDConfig>(options, propertyInfo14);
-			JsonPropertyInfoValues<string[]> jsonPropertyInfoValues15 = new JsonPropertyInfoValues<string[]>();
+			JsonPropertyInfoValues<ITDConfig> jsonPropertyInfoValues15 = new JsonPropertyInfoValues<ITDConfig>();
 			jsonPropertyInfoValues15.IsProperty = false;
 			jsonPropertyInfoValues15.IsPublic = true;
 			jsonPropertyInfoValues15.IsVirtual = false;
 			jsonPropertyInfoValues15.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues15.Converter = null;
-			jsonPropertyInfoValues15.Getter = ((object obj) => ((EntryJson)obj).ServerTimeUrl);
-			jsonPropertyInfoValues15.Setter = delegate(object obj, [Nullable(new byte[]
+			jsonPropertyInfoValues15.Getter = ((object obj) => ((EntryJson)obj).KDCfg);
+			jsonPropertyInfoValues15.Setter = delegate(object obj, [Nullable(2)] ITDConfig value)
+			{
+				((EntryJson)obj).KDCfg = value;
+			};
+			jsonPropertyInfoValues15.IgnoreCondition = null;
+			jsonPropertyInfoValues15.HasJsonInclude = false;
+			jsonPropertyInfoValues15.IsExtensionData = false;
+			jsonPropertyInfoValues15.NumberHandling = null;
+			jsonPropertyInfoValues15.PropertyName = "KDCfg";
+			jsonPropertyInfoValues15.JsonPropertyName = null;
+			jsonPropertyInfoValues15.AttributeProviderFactory = (() => typeof(EntryJson).GetField("KDCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<ITDConfig> propertyInfo15 = jsonPropertyInfoValues15;
+			array[14] = JsonMetadataServices.CreatePropertyInfo<ITDConfig>(options, propertyInfo15);
+			JsonPropertyInfoValues<string[]> jsonPropertyInfoValues16 = new JsonPropertyInfoValues<string[]>();
+			jsonPropertyInfoValues16.IsProperty = false;
+			jsonPropertyInfoValues16.IsPublic = true;
+			jsonPropertyInfoValues16.IsVirtual = false;
+			jsonPropertyInfoValues16.DeclaringType = typeof(EntryJson);
+			jsonPropertyInfoValues16.Converter = null;
+			jsonPropertyInfoValues16.Getter = ((object obj) => ((EntryJson)obj).ServerTimeUrl);
+			jsonPropertyInfoValues16.Setter = delegate(object obj, [Nullable(new byte[]
 			{
 				2,
 				1
@@ -738,75 +762,55 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			{
 				((EntryJson)obj).ServerTimeUrl = value;
 			};
-			jsonPropertyInfoValues15.IgnoreCondition = null;
-			jsonPropertyInfoValues15.HasJsonInclude = false;
-			jsonPropertyInfoValues15.IsExtensionData = false;
-			jsonPropertyInfoValues15.NumberHandling = null;
-			jsonPropertyInfoValues15.PropertyName = "ServerTimeUrl";
-			jsonPropertyInfoValues15.JsonPropertyName = null;
-			jsonPropertyInfoValues15.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ServerTimeUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<string[]> propertyInfo15 = jsonPropertyInfoValues15;
-			array[14] = JsonMetadataServices.CreatePropertyInfo<string[]>(options, propertyInfo15);
-			array[14].IsGetNullable = false;
-			array[14].IsSetNullable = false;
-			JsonPropertyInfoValues<ILogReport> jsonPropertyInfoValues16 = new JsonPropertyInfoValues<ILogReport>();
-			jsonPropertyInfoValues16.IsProperty = false;
-			jsonPropertyInfoValues16.IsPublic = true;
-			jsonPropertyInfoValues16.IsVirtual = false;
-			jsonPropertyInfoValues16.DeclaringType = typeof(EntryJson);
-			jsonPropertyInfoValues16.Converter = null;
-			jsonPropertyInfoValues16.Getter = ((object obj) => ((EntryJson)obj).LogReport);
-			jsonPropertyInfoValues16.Setter = delegate(object obj, [Nullable(2)] ILogReport value)
-			{
-				((EntryJson)obj).LogReport = value;
-			};
 			jsonPropertyInfoValues16.IgnoreCondition = null;
 			jsonPropertyInfoValues16.HasJsonInclude = false;
 			jsonPropertyInfoValues16.IsExtensionData = false;
 			jsonPropertyInfoValues16.NumberHandling = null;
-			jsonPropertyInfoValues16.PropertyName = "LogReport";
+			jsonPropertyInfoValues16.PropertyName = "ServerTimeUrl";
 			jsonPropertyInfoValues16.JsonPropertyName = null;
-			jsonPropertyInfoValues16.AttributeProviderFactory = (() => typeof(EntryJson).GetField("LogReport", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<ILogReport> propertyInfo16 = jsonPropertyInfoValues16;
-			array[15] = JsonMetadataServices.CreatePropertyInfo<ILogReport>(options, propertyInfo16);
-			JsonPropertyInfoValues<IUpdateUrl> jsonPropertyInfoValues17 = new JsonPropertyInfoValues<IUpdateUrl>();
+			jsonPropertyInfoValues16.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ServerTimeUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<string[]> propertyInfo16 = jsonPropertyInfoValues16;
+			array[15] = JsonMetadataServices.CreatePropertyInfo<string[]>(options, propertyInfo16);
+			array[15].IsGetNullable = false;
+			array[15].IsSetNullable = false;
+			JsonPropertyInfoValues<ILogReport> jsonPropertyInfoValues17 = new JsonPropertyInfoValues<ILogReport>();
 			jsonPropertyInfoValues17.IsProperty = false;
 			jsonPropertyInfoValues17.IsPublic = true;
 			jsonPropertyInfoValues17.IsVirtual = false;
 			jsonPropertyInfoValues17.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues17.Converter = null;
-			jsonPropertyInfoValues17.Getter = ((object obj) => ((EntryJson)obj).PackageUpdateUrl);
-			jsonPropertyInfoValues17.Setter = delegate(object obj, [Nullable(2)] IUpdateUrl value)
+			jsonPropertyInfoValues17.Getter = ((object obj) => ((EntryJson)obj).LogReport);
+			jsonPropertyInfoValues17.Setter = delegate(object obj, [Nullable(2)] ILogReport value)
 			{
-				((EntryJson)obj).PackageUpdateUrl = value;
+				((EntryJson)obj).LogReport = value;
 			};
 			jsonPropertyInfoValues17.IgnoreCondition = null;
 			jsonPropertyInfoValues17.HasJsonInclude = false;
 			jsonPropertyInfoValues17.IsExtensionData = false;
 			jsonPropertyInfoValues17.NumberHandling = null;
-			jsonPropertyInfoValues17.PropertyName = "PackageUpdateUrl";
+			jsonPropertyInfoValues17.PropertyName = "LogReport";
 			jsonPropertyInfoValues17.JsonPropertyName = null;
-			jsonPropertyInfoValues17.AttributeProviderFactory = (() => typeof(EntryJson).GetField("PackageUpdateUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<IUpdateUrl> propertyInfo17 = jsonPropertyInfoValues17;
-			array[16] = JsonMetadataServices.CreatePropertyInfo<IUpdateUrl>(options, propertyInfo17);
+			jsonPropertyInfoValues17.AttributeProviderFactory = (() => typeof(EntryJson).GetField("LogReport", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<ILogReport> propertyInfo17 = jsonPropertyInfoValues17;
+			array[16] = JsonMetadataServices.CreatePropertyInfo<ILogReport>(options, propertyInfo17);
 			JsonPropertyInfoValues<IUpdateUrl> jsonPropertyInfoValues18 = new JsonPropertyInfoValues<IUpdateUrl>();
 			jsonPropertyInfoValues18.IsProperty = false;
 			jsonPropertyInfoValues18.IsPublic = true;
 			jsonPropertyInfoValues18.IsVirtual = false;
 			jsonPropertyInfoValues18.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues18.Converter = null;
-			jsonPropertyInfoValues18.Getter = ((object obj) => ((EntryJson)obj).PackageUpdateDescUrl);
+			jsonPropertyInfoValues18.Getter = ((object obj) => ((EntryJson)obj).PackageUpdateUrl);
 			jsonPropertyInfoValues18.Setter = delegate(object obj, [Nullable(2)] IUpdateUrl value)
 			{
-				((EntryJson)obj).PackageUpdateDescUrl = value;
+				((EntryJson)obj).PackageUpdateUrl = value;
 			};
 			jsonPropertyInfoValues18.IgnoreCondition = null;
 			jsonPropertyInfoValues18.HasJsonInclude = false;
 			jsonPropertyInfoValues18.IsExtensionData = false;
 			jsonPropertyInfoValues18.NumberHandling = null;
-			jsonPropertyInfoValues18.PropertyName = "PackageUpdateDescUrl";
+			jsonPropertyInfoValues18.PropertyName = "PackageUpdateUrl";
 			jsonPropertyInfoValues18.JsonPropertyName = null;
-			jsonPropertyInfoValues18.AttributeProviderFactory = (() => typeof(EntryJson).GetField("PackageUpdateDescUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			jsonPropertyInfoValues18.AttributeProviderFactory = (() => typeof(EntryJson).GetField("PackageUpdateUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
 			JsonPropertyInfoValues<IUpdateUrl> propertyInfo18 = jsonPropertyInfoValues18;
 			array[17] = JsonMetadataServices.CreatePropertyInfo<IUpdateUrl>(options, propertyInfo18);
 			JsonPropertyInfoValues<IUpdateUrl> jsonPropertyInfoValues19 = new JsonPropertyInfoValues<IUpdateUrl>();
@@ -815,128 +819,173 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			jsonPropertyInfoValues19.IsVirtual = false;
 			jsonPropertyInfoValues19.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues19.Converter = null;
-			jsonPropertyInfoValues19.Getter = ((object obj) => ((EntryJson)obj).ParallelPackageDescUrl);
+			jsonPropertyInfoValues19.Getter = ((object obj) => ((EntryJson)obj).PackageUpdateDescUrl);
 			jsonPropertyInfoValues19.Setter = delegate(object obj, [Nullable(2)] IUpdateUrl value)
 			{
-				((EntryJson)obj).ParallelPackageDescUrl = value;
+				((EntryJson)obj).PackageUpdateDescUrl = value;
 			};
 			jsonPropertyInfoValues19.IgnoreCondition = null;
 			jsonPropertyInfoValues19.HasJsonInclude = false;
 			jsonPropertyInfoValues19.IsExtensionData = false;
 			jsonPropertyInfoValues19.NumberHandling = null;
-			jsonPropertyInfoValues19.PropertyName = "ParallelPackageDescUrl";
+			jsonPropertyInfoValues19.PropertyName = "PackageUpdateDescUrl";
 			jsonPropertyInfoValues19.JsonPropertyName = null;
-			jsonPropertyInfoValues19.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ParallelPackageDescUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			jsonPropertyInfoValues19.AttributeProviderFactory = (() => typeof(EntryJson).GetField("PackageUpdateDescUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
 			JsonPropertyInfoValues<IUpdateUrl> propertyInfo19 = jsonPropertyInfoValues19;
 			array[18] = JsonMetadataServices.CreatePropertyInfo<IUpdateUrl>(options, propertyInfo19);
-			JsonPropertyInfoValues<bool?> jsonPropertyInfoValues20 = new JsonPropertyInfoValues<bool?>();
+			JsonPropertyInfoValues<IUpdateUrl> jsonPropertyInfoValues20 = new JsonPropertyInfoValues<IUpdateUrl>();
 			jsonPropertyInfoValues20.IsProperty = false;
 			jsonPropertyInfoValues20.IsPublic = true;
 			jsonPropertyInfoValues20.IsVirtual = false;
 			jsonPropertyInfoValues20.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues20.Converter = null;
-			jsonPropertyInfoValues20.Getter = ((object obj) => ((EntryJson)obj).IosAuditFirstDownloadTip);
-			jsonPropertyInfoValues20.Setter = delegate(object obj, bool? value)
+			jsonPropertyInfoValues20.Getter = ((object obj) => ((EntryJson)obj).ParallelPackageDescUrl);
+			jsonPropertyInfoValues20.Setter = delegate(object obj, [Nullable(2)] IUpdateUrl value)
 			{
-				((EntryJson)obj).IosAuditFirstDownloadTip = value;
+				((EntryJson)obj).ParallelPackageDescUrl = value;
 			};
 			jsonPropertyInfoValues20.IgnoreCondition = null;
 			jsonPropertyInfoValues20.HasJsonInclude = false;
 			jsonPropertyInfoValues20.IsExtensionData = false;
 			jsonPropertyInfoValues20.NumberHandling = null;
-			jsonPropertyInfoValues20.PropertyName = "IosAuditFirstDownloadTip";
+			jsonPropertyInfoValues20.PropertyName = "ParallelPackageDescUrl";
 			jsonPropertyInfoValues20.JsonPropertyName = null;
-			jsonPropertyInfoValues20.AttributeProviderFactory = (() => typeof(EntryJson).GetField("IosAuditFirstDownloadTip", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<bool?> propertyInfo20 = jsonPropertyInfoValues20;
-			array[19] = JsonMetadataServices.CreatePropertyInfo<bool?>(options, propertyInfo20);
-			JsonPropertyInfoValues<string> jsonPropertyInfoValues21 = new JsonPropertyInfoValues<string>();
+			jsonPropertyInfoValues20.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ParallelPackageDescUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<IUpdateUrl> propertyInfo20 = jsonPropertyInfoValues20;
+			array[19] = JsonMetadataServices.CreatePropertyInfo<IUpdateUrl>(options, propertyInfo20);
+			JsonPropertyInfoValues<bool?> jsonPropertyInfoValues21 = new JsonPropertyInfoValues<bool?>();
 			jsonPropertyInfoValues21.IsProperty = false;
 			jsonPropertyInfoValues21.IsPublic = true;
 			jsonPropertyInfoValues21.IsVirtual = false;
 			jsonPropertyInfoValues21.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues21.Converter = null;
-			jsonPropertyInfoValues21.Getter = ((object obj) => ((EntryJson)obj).MixUri);
-			jsonPropertyInfoValues21.Setter = delegate(object obj, [Nullable(2)] string value)
+			jsonPropertyInfoValues21.Getter = ((object obj) => ((EntryJson)obj).IosAuditFirstDownloadTip);
+			jsonPropertyInfoValues21.Setter = delegate(object obj, bool? value)
 			{
-				((EntryJson)obj).MixUri = value;
+				((EntryJson)obj).IosAuditFirstDownloadTip = value;
 			};
 			jsonPropertyInfoValues21.IgnoreCondition = null;
 			jsonPropertyInfoValues21.HasJsonInclude = false;
 			jsonPropertyInfoValues21.IsExtensionData = false;
 			jsonPropertyInfoValues21.NumberHandling = null;
-			jsonPropertyInfoValues21.PropertyName = "MixUri";
+			jsonPropertyInfoValues21.PropertyName = "IosAuditFirstDownloadTip";
 			jsonPropertyInfoValues21.JsonPropertyName = null;
-			jsonPropertyInfoValues21.AttributeProviderFactory = (() => typeof(EntryJson).GetField("MixUri", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<string> propertyInfo21 = jsonPropertyInfoValues21;
-			array[20] = JsonMetadataServices.CreatePropertyInfo<string>(options, propertyInfo21);
+			jsonPropertyInfoValues21.AttributeProviderFactory = (() => typeof(EntryJson).GetField("IosAuditFirstDownloadTip", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<bool?> propertyInfo21 = jsonPropertyInfoValues21;
+			array[20] = JsonMetadataServices.CreatePropertyInfo<bool?>(options, propertyInfo21);
 			JsonPropertyInfoValues<string> jsonPropertyInfoValues22 = new JsonPropertyInfoValues<string>();
 			jsonPropertyInfoValues22.IsProperty = false;
 			jsonPropertyInfoValues22.IsPublic = true;
 			jsonPropertyInfoValues22.IsVirtual = false;
 			jsonPropertyInfoValues22.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues22.Converter = null;
-			jsonPropertyInfoValues22.Getter = ((object obj) => ((EntryJson)obj).ResUri);
+			jsonPropertyInfoValues22.Getter = ((object obj) => ((EntryJson)obj).MixUri);
 			jsonPropertyInfoValues22.Setter = delegate(object obj, [Nullable(2)] string value)
 			{
-				((EntryJson)obj).ResUri = value;
+				((EntryJson)obj).MixUri = value;
 			};
 			jsonPropertyInfoValues22.IgnoreCondition = null;
 			jsonPropertyInfoValues22.HasJsonInclude = false;
 			jsonPropertyInfoValues22.IsExtensionData = false;
 			jsonPropertyInfoValues22.NumberHandling = null;
-			jsonPropertyInfoValues22.PropertyName = "ResUri";
+			jsonPropertyInfoValues22.PropertyName = "MixUri";
 			jsonPropertyInfoValues22.JsonPropertyName = null;
-			jsonPropertyInfoValues22.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ResUri", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			jsonPropertyInfoValues22.AttributeProviderFactory = (() => typeof(EntryJson).GetField("MixUri", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
 			JsonPropertyInfoValues<string> propertyInfo22 = jsonPropertyInfoValues22;
 			array[21] = JsonMetadataServices.CreatePropertyInfo<string>(options, propertyInfo22);
-			JsonPropertyInfoValues<IGachaUrl> jsonPropertyInfoValues23 = new JsonPropertyInfoValues<IGachaUrl>();
+			JsonPropertyInfoValues<string> jsonPropertyInfoValues23 = new JsonPropertyInfoValues<string>();
 			jsonPropertyInfoValues23.IsProperty = false;
 			jsonPropertyInfoValues23.IsPublic = true;
 			jsonPropertyInfoValues23.IsVirtual = false;
 			jsonPropertyInfoValues23.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues23.Converter = null;
-			jsonPropertyInfoValues23.Getter = ((object obj) => ((EntryJson)obj).GachaUrl);
-			jsonPropertyInfoValues23.Setter = delegate(object obj, [Nullable(2)] IGachaUrl value)
+			jsonPropertyInfoValues23.Getter = ((object obj) => ((EntryJson)obj).ResUri);
+			jsonPropertyInfoValues23.Setter = delegate(object obj, [Nullable(2)] string value)
 			{
-				((EntryJson)obj).GachaUrl = value;
+				((EntryJson)obj).ResUri = value;
 			};
 			jsonPropertyInfoValues23.IgnoreCondition = null;
 			jsonPropertyInfoValues23.HasJsonInclude = false;
 			jsonPropertyInfoValues23.IsExtensionData = false;
 			jsonPropertyInfoValues23.NumberHandling = null;
-			jsonPropertyInfoValues23.PropertyName = "GachaUrl";
+			jsonPropertyInfoValues23.PropertyName = "ResUri";
 			jsonPropertyInfoValues23.JsonPropertyName = null;
-			jsonPropertyInfoValues23.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GachaUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<IGachaUrl> propertyInfo23 = jsonPropertyInfoValues23;
-			array[22] = JsonMetadataServices.CreatePropertyInfo<IGachaUrl>(options, propertyInfo23);
-			JsonPropertyInfoValues<IGrayBoxConfig> jsonPropertyInfoValues24 = new JsonPropertyInfoValues<IGrayBoxConfig>();
+			jsonPropertyInfoValues23.AttributeProviderFactory = (() => typeof(EntryJson).GetField("ResUri", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<string> propertyInfo23 = jsonPropertyInfoValues23;
+			array[22] = JsonMetadataServices.CreatePropertyInfo<string>(options, propertyInfo23);
+			JsonPropertyInfoValues<IGachaUrl> jsonPropertyInfoValues24 = new JsonPropertyInfoValues<IGachaUrl>();
 			jsonPropertyInfoValues24.IsProperty = false;
 			jsonPropertyInfoValues24.IsPublic = true;
 			jsonPropertyInfoValues24.IsVirtual = false;
 			jsonPropertyInfoValues24.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues24.Converter = null;
-			jsonPropertyInfoValues24.Getter = ((object obj) => ((EntryJson)obj).GrayBox);
-			jsonPropertyInfoValues24.Setter = delegate(object obj, [Nullable(2)] IGrayBoxConfig value)
+			jsonPropertyInfoValues24.Getter = ((object obj) => ((EntryJson)obj).GachaUrl);
+			jsonPropertyInfoValues24.Setter = delegate(object obj, [Nullable(2)] IGachaUrl value)
 			{
-				((EntryJson)obj).GrayBox = value;
+				((EntryJson)obj).GachaUrl = value;
 			};
 			jsonPropertyInfoValues24.IgnoreCondition = null;
 			jsonPropertyInfoValues24.HasJsonInclude = false;
 			jsonPropertyInfoValues24.IsExtensionData = false;
 			jsonPropertyInfoValues24.NumberHandling = null;
-			jsonPropertyInfoValues24.PropertyName = "GrayBox";
+			jsonPropertyInfoValues24.PropertyName = "GachaUrl";
 			jsonPropertyInfoValues24.JsonPropertyName = null;
-			jsonPropertyInfoValues24.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GrayBox", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<IGrayBoxConfig> propertyInfo24 = jsonPropertyInfoValues24;
-			array[23] = JsonMetadataServices.CreatePropertyInfo<IGrayBoxConfig>(options, propertyInfo24);
-			JsonPropertyInfoValues<Dictionary<string, IUdpRegion>> jsonPropertyInfoValues25 = new JsonPropertyInfoValues<Dictionary<string, IUdpRegion>>();
+			jsonPropertyInfoValues24.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GachaUrl", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<IGachaUrl> propertyInfo24 = jsonPropertyInfoValues24;
+			array[23] = JsonMetadataServices.CreatePropertyInfo<IGachaUrl>(options, propertyInfo24);
+			JsonPropertyInfoValues<IGrayBoxConfig> jsonPropertyInfoValues25 = new JsonPropertyInfoValues<IGrayBoxConfig>();
 			jsonPropertyInfoValues25.IsProperty = false;
 			jsonPropertyInfoValues25.IsPublic = true;
 			jsonPropertyInfoValues25.IsVirtual = false;
 			jsonPropertyInfoValues25.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues25.Converter = null;
-			jsonPropertyInfoValues25.Getter = ((object obj) => ((EntryJson)obj).UdpDelay);
-			jsonPropertyInfoValues25.Setter = delegate(object obj, [Nullable(new byte[]
+			jsonPropertyInfoValues25.Getter = ((object obj) => ((EntryJson)obj).GrayBox);
+			jsonPropertyInfoValues25.Setter = delegate(object obj, [Nullable(2)] IGrayBoxConfig value)
+			{
+				((EntryJson)obj).GrayBox = value;
+			};
+			jsonPropertyInfoValues25.IgnoreCondition = null;
+			jsonPropertyInfoValues25.HasJsonInclude = false;
+			jsonPropertyInfoValues25.IsExtensionData = false;
+			jsonPropertyInfoValues25.NumberHandling = null;
+			jsonPropertyInfoValues25.PropertyName = "GrayBox";
+			jsonPropertyInfoValues25.JsonPropertyName = null;
+			jsonPropertyInfoValues25.AttributeProviderFactory = (() => typeof(EntryJson).GetField("GrayBox", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<IGrayBoxConfig> propertyInfo25 = jsonPropertyInfoValues25;
+			array[24] = JsonMetadataServices.CreatePropertyInfo<IGrayBoxConfig>(options, propertyInfo25);
+			JsonPropertyInfoValues<Dictionary<string, VulkanSettingConfig>> jsonPropertyInfoValues26 = new JsonPropertyInfoValues<Dictionary<string, VulkanSettingConfig>>();
+			jsonPropertyInfoValues26.IsProperty = false;
+			jsonPropertyInfoValues26.IsPublic = true;
+			jsonPropertyInfoValues26.IsVirtual = false;
+			jsonPropertyInfoValues26.DeclaringType = typeof(EntryJson);
+			jsonPropertyInfoValues26.Converter = null;
+			jsonPropertyInfoValues26.Getter = ((object obj) => ((EntryJson)obj).VulkanSettings);
+			jsonPropertyInfoValues26.Setter = delegate(object obj, [Nullable(new byte[]
+			{
+				2,
+				1,
+				1
+			})] Dictionary<string, VulkanSettingConfig> value)
+			{
+				((EntryJson)obj).VulkanSettings = value;
+			};
+			jsonPropertyInfoValues26.IgnoreCondition = null;
+			jsonPropertyInfoValues26.HasJsonInclude = false;
+			jsonPropertyInfoValues26.IsExtensionData = false;
+			jsonPropertyInfoValues26.NumberHandling = null;
+			jsonPropertyInfoValues26.PropertyName = "VulkanSettings";
+			jsonPropertyInfoValues26.JsonPropertyName = null;
+			jsonPropertyInfoValues26.AttributeProviderFactory = (() => typeof(EntryJson).GetField("VulkanSettings", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<Dictionary<string, VulkanSettingConfig>> propertyInfo26 = jsonPropertyInfoValues26;
+			array[25] = JsonMetadataServices.CreatePropertyInfo<Dictionary<string, VulkanSettingConfig>>(options, propertyInfo26);
+			JsonPropertyInfoValues<Dictionary<string, IUdpRegion>> jsonPropertyInfoValues27 = new JsonPropertyInfoValues<Dictionary<string, IUdpRegion>>();
+			jsonPropertyInfoValues27.IsProperty = false;
+			jsonPropertyInfoValues27.IsPublic = true;
+			jsonPropertyInfoValues27.IsVirtual = false;
+			jsonPropertyInfoValues27.DeclaringType = typeof(EntryJson);
+			jsonPropertyInfoValues27.Converter = null;
+			jsonPropertyInfoValues27.Getter = ((object obj) => ((EntryJson)obj).UdpDelay);
+			jsonPropertyInfoValues27.Setter = delegate(object obj, [Nullable(new byte[]
 			{
 				2,
 				1,
@@ -945,63 +994,63 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			{
 				((EntryJson)obj).UdpDelay = value;
 			};
-			jsonPropertyInfoValues25.IgnoreCondition = null;
-			jsonPropertyInfoValues25.HasJsonInclude = false;
-			jsonPropertyInfoValues25.IsExtensionData = false;
-			jsonPropertyInfoValues25.NumberHandling = null;
-			jsonPropertyInfoValues25.PropertyName = "UdpDelay";
-			jsonPropertyInfoValues25.JsonPropertyName = null;
-			jsonPropertyInfoValues25.AttributeProviderFactory = (() => typeof(EntryJson).GetField("UdpDelay", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<Dictionary<string, IUdpRegion>> propertyInfo25 = jsonPropertyInfoValues25;
-			array[24] = JsonMetadataServices.CreatePropertyInfo<Dictionary<string, IUdpRegion>>(options, propertyInfo25);
-			JsonPropertyInfoValues<IEvalConfig> jsonPropertyInfoValues26 = new JsonPropertyInfoValues<IEvalConfig>();
-			jsonPropertyInfoValues26.IsProperty = false;
-			jsonPropertyInfoValues26.IsPublic = true;
-			jsonPropertyInfoValues26.IsVirtual = false;
-			jsonPropertyInfoValues26.DeclaringType = typeof(EntryJson);
-			jsonPropertyInfoValues26.Converter = null;
-			jsonPropertyInfoValues26.Getter = ((object obj) => ((EntryJson)obj).CdnEvalCfg);
-			jsonPropertyInfoValues26.Setter = delegate(object obj, [Nullable(2)] IEvalConfig value)
-			{
-				((EntryJson)obj).CdnEvalCfg = value;
-			};
-			jsonPropertyInfoValues26.IgnoreCondition = null;
-			jsonPropertyInfoValues26.HasJsonInclude = false;
-			jsonPropertyInfoValues26.IsExtensionData = false;
-			jsonPropertyInfoValues26.NumberHandling = null;
-			jsonPropertyInfoValues26.PropertyName = "CdnEvalCfg";
-			jsonPropertyInfoValues26.JsonPropertyName = null;
-			jsonPropertyInfoValues26.AttributeProviderFactory = (() => typeof(EntryJson).GetField("CdnEvalCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<IEvalConfig> propertyInfo26 = jsonPropertyInfoValues26;
-			array[25] = JsonMetadataServices.CreatePropertyInfo<IEvalConfig>(options, propertyInfo26);
-			JsonPropertyInfoValues<ICdnScoreCfg> jsonPropertyInfoValues27 = new JsonPropertyInfoValues<ICdnScoreCfg>();
-			jsonPropertyInfoValues27.IsProperty = false;
-			jsonPropertyInfoValues27.IsPublic = true;
-			jsonPropertyInfoValues27.IsVirtual = false;
-			jsonPropertyInfoValues27.DeclaringType = typeof(EntryJson);
-			jsonPropertyInfoValues27.Converter = null;
-			jsonPropertyInfoValues27.Getter = ((object obj) => ((EntryJson)obj).CdnScoreCfg);
-			jsonPropertyInfoValues27.Setter = delegate(object obj, [Nullable(2)] ICdnScoreCfg value)
-			{
-				((EntryJson)obj).CdnScoreCfg = value;
-			};
 			jsonPropertyInfoValues27.IgnoreCondition = null;
 			jsonPropertyInfoValues27.HasJsonInclude = false;
 			jsonPropertyInfoValues27.IsExtensionData = false;
 			jsonPropertyInfoValues27.NumberHandling = null;
-			jsonPropertyInfoValues27.PropertyName = "CdnScoreCfg";
+			jsonPropertyInfoValues27.PropertyName = "UdpDelay";
 			jsonPropertyInfoValues27.JsonPropertyName = null;
-			jsonPropertyInfoValues27.AttributeProviderFactory = (() => typeof(EntryJson).GetField("CdnScoreCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<ICdnScoreCfg> propertyInfo27 = jsonPropertyInfoValues27;
-			array[26] = JsonMetadataServices.CreatePropertyInfo<ICdnScoreCfg>(options, propertyInfo27);
-			JsonPropertyInfoValues<Dictionary<string, string>> jsonPropertyInfoValues28 = new JsonPropertyInfoValues<Dictionary<string, string>>();
+			jsonPropertyInfoValues27.AttributeProviderFactory = (() => typeof(EntryJson).GetField("UdpDelay", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<Dictionary<string, IUdpRegion>> propertyInfo27 = jsonPropertyInfoValues27;
+			array[26] = JsonMetadataServices.CreatePropertyInfo<Dictionary<string, IUdpRegion>>(options, propertyInfo27);
+			JsonPropertyInfoValues<IEvalConfig> jsonPropertyInfoValues28 = new JsonPropertyInfoValues<IEvalConfig>();
 			jsonPropertyInfoValues28.IsProperty = false;
 			jsonPropertyInfoValues28.IsPublic = true;
 			jsonPropertyInfoValues28.IsVirtual = false;
 			jsonPropertyInfoValues28.DeclaringType = typeof(EntryJson);
 			jsonPropertyInfoValues28.Converter = null;
-			jsonPropertyInfoValues28.Getter = ((object obj) => ((EntryJson)obj).SDKEnvironment);
-			jsonPropertyInfoValues28.Setter = delegate(object obj, [Nullable(new byte[]
+			jsonPropertyInfoValues28.Getter = ((object obj) => ((EntryJson)obj).CdnEvalCfg);
+			jsonPropertyInfoValues28.Setter = delegate(object obj, [Nullable(2)] IEvalConfig value)
+			{
+				((EntryJson)obj).CdnEvalCfg = value;
+			};
+			jsonPropertyInfoValues28.IgnoreCondition = null;
+			jsonPropertyInfoValues28.HasJsonInclude = false;
+			jsonPropertyInfoValues28.IsExtensionData = false;
+			jsonPropertyInfoValues28.NumberHandling = null;
+			jsonPropertyInfoValues28.PropertyName = "CdnEvalCfg";
+			jsonPropertyInfoValues28.JsonPropertyName = null;
+			jsonPropertyInfoValues28.AttributeProviderFactory = (() => typeof(EntryJson).GetField("CdnEvalCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<IEvalConfig> propertyInfo28 = jsonPropertyInfoValues28;
+			array[27] = JsonMetadataServices.CreatePropertyInfo<IEvalConfig>(options, propertyInfo28);
+			JsonPropertyInfoValues<ICdnScoreCfg> jsonPropertyInfoValues29 = new JsonPropertyInfoValues<ICdnScoreCfg>();
+			jsonPropertyInfoValues29.IsProperty = false;
+			jsonPropertyInfoValues29.IsPublic = true;
+			jsonPropertyInfoValues29.IsVirtual = false;
+			jsonPropertyInfoValues29.DeclaringType = typeof(EntryJson);
+			jsonPropertyInfoValues29.Converter = null;
+			jsonPropertyInfoValues29.Getter = ((object obj) => ((EntryJson)obj).CdnScoreCfg);
+			jsonPropertyInfoValues29.Setter = delegate(object obj, [Nullable(2)] ICdnScoreCfg value)
+			{
+				((EntryJson)obj).CdnScoreCfg = value;
+			};
+			jsonPropertyInfoValues29.IgnoreCondition = null;
+			jsonPropertyInfoValues29.HasJsonInclude = false;
+			jsonPropertyInfoValues29.IsExtensionData = false;
+			jsonPropertyInfoValues29.NumberHandling = null;
+			jsonPropertyInfoValues29.PropertyName = "CdnScoreCfg";
+			jsonPropertyInfoValues29.JsonPropertyName = null;
+			jsonPropertyInfoValues29.AttributeProviderFactory = (() => typeof(EntryJson).GetField("CdnScoreCfg", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<ICdnScoreCfg> propertyInfo29 = jsonPropertyInfoValues29;
+			array[28] = JsonMetadataServices.CreatePropertyInfo<ICdnScoreCfg>(options, propertyInfo29);
+			JsonPropertyInfoValues<Dictionary<string, string>> jsonPropertyInfoValues30 = new JsonPropertyInfoValues<Dictionary<string, string>>();
+			jsonPropertyInfoValues30.IsProperty = false;
+			jsonPropertyInfoValues30.IsPublic = true;
+			jsonPropertyInfoValues30.IsVirtual = false;
+			jsonPropertyInfoValues30.DeclaringType = typeof(EntryJson);
+			jsonPropertyInfoValues30.Converter = null;
+			jsonPropertyInfoValues30.Getter = ((object obj) => ((EntryJson)obj).SDKEnvironment);
+			jsonPropertyInfoValues30.Setter = delegate(object obj, [Nullable(new byte[]
 			{
 				2,
 				1,
@@ -1010,20 +1059,20 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			{
 				((EntryJson)obj).SDKEnvironment = value;
 			};
-			jsonPropertyInfoValues28.IgnoreCondition = null;
-			jsonPropertyInfoValues28.HasJsonInclude = false;
-			jsonPropertyInfoValues28.IsExtensionData = false;
-			jsonPropertyInfoValues28.NumberHandling = null;
-			jsonPropertyInfoValues28.PropertyName = "SDKEnvironment";
-			jsonPropertyInfoValues28.JsonPropertyName = null;
-			jsonPropertyInfoValues28.AttributeProviderFactory = (() => typeof(EntryJson).GetField("SDKEnvironment", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
-			JsonPropertyInfoValues<Dictionary<string, string>> propertyInfo28 = jsonPropertyInfoValues28;
-			array[27] = JsonMetadataServices.CreatePropertyInfo<Dictionary<string, string>>(options, propertyInfo28);
+			jsonPropertyInfoValues30.IgnoreCondition = null;
+			jsonPropertyInfoValues30.HasJsonInclude = false;
+			jsonPropertyInfoValues30.IsExtensionData = false;
+			jsonPropertyInfoValues30.NumberHandling = null;
+			jsonPropertyInfoValues30.PropertyName = "SDKEnvironment";
+			jsonPropertyInfoValues30.JsonPropertyName = null;
+			jsonPropertyInfoValues30.AttributeProviderFactory = (() => typeof(EntryJson).GetField("SDKEnvironment", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<Dictionary<string, string>> propertyInfo30 = jsonPropertyInfoValues30;
+			array[29] = JsonMetadataServices.CreatePropertyInfo<Dictionary<string, string>>(options, propertyInfo30);
 			return array;
 		}
 
 		// Token: 0x17000050 RID: 80
-		// (get) Token: 0x06000386 RID: 902 RVA: 0x00014FF8 File Offset: 0x000131F8
+		// (get) Token: 0x06000397 RID: 919 RVA: 0x00016130 File Offset: 0x00014330
 		public JsonTypeInfo<ICdnScoreCfg> ICdnScoreCfg
 		{
 			get
@@ -1037,7 +1086,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000387 RID: 903 RVA: 0x00015034 File Offset: 0x00013234
+		// Token: 0x06000398 RID: 920 RVA: 0x0001616C File Offset: 0x0001436C
 		[NullableContext(1)]
 		private JsonTypeInfo<ICdnScoreCfg> Create_ICdnScoreCfg(JsonSerializerOptions options)
 		{
@@ -1059,7 +1108,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000388 RID: 904 RVA: 0x000150FC File Offset: 0x000132FC
+		// Token: 0x06000399 RID: 921 RVA: 0x00016234 File Offset: 0x00014434
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ICdnScoreCfgPropInit(JsonSerializerOptions options)
 		{
@@ -1116,7 +1165,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000051 RID: 81
-		// (get) Token: 0x06000389 RID: 905 RVA: 0x00015308 File Offset: 0x00013508
+		// (get) Token: 0x0600039A RID: 922 RVA: 0x00016440 File Offset: 0x00014640
 		public JsonTypeInfo<ICdnScoreFormula> ICdnScoreFormula
 		{
 			get
@@ -1130,7 +1179,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600038A RID: 906 RVA: 0x00015344 File Offset: 0x00013544
+		// Token: 0x0600039B RID: 923 RVA: 0x0001647C File Offset: 0x0001467C
 		[NullableContext(1)]
 		private JsonTypeInfo<ICdnScoreFormula> Create_ICdnScoreFormula(JsonSerializerOptions options)
 		{
@@ -1152,7 +1201,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600038B RID: 907 RVA: 0x0001540C File Offset: 0x0001360C
+		// Token: 0x0600039C RID: 924 RVA: 0x00016544 File Offset: 0x00014744
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ICdnScoreFormulaPropInit(JsonSerializerOptions options)
 		{
@@ -1273,7 +1322,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000052 RID: 82
-		// (get) Token: 0x0600038C RID: 908 RVA: 0x00015900 File Offset: 0x00013B00
+		// (get) Token: 0x0600039D RID: 925 RVA: 0x00016A38 File Offset: 0x00014C38
 		public JsonTypeInfo<ICdnScoreStep> ICdnScoreStep
 		{
 			get
@@ -1287,7 +1336,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600038D RID: 909 RVA: 0x0001593C File Offset: 0x00013B3C
+		// Token: 0x0600039E RID: 926 RVA: 0x00016A74 File Offset: 0x00014C74
 		[NullableContext(1)]
 		private JsonTypeInfo<ICdnScoreStep> Create_ICdnScoreStep(JsonSerializerOptions options)
 		{
@@ -1309,7 +1358,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600038E RID: 910 RVA: 0x00015A04 File Offset: 0x00013C04
+		// Token: 0x0600039F RID: 927 RVA: 0x00016B3C File Offset: 0x00014D3C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ICdnScoreStepPropInit(JsonSerializerOptions options)
 		{
@@ -1422,7 +1471,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000053 RID: 83
-		// (get) Token: 0x0600038F RID: 911 RVA: 0x00015ED4 File Offset: 0x000140D4
+		// (get) Token: 0x060003A0 RID: 928 RVA: 0x0001700C File Offset: 0x0001520C
 		public JsonTypeInfo<ICdnUrlData> ICdnUrlData
 		{
 			get
@@ -1436,7 +1485,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000390 RID: 912 RVA: 0x00015F10 File Offset: 0x00014110
+		// Token: 0x060003A1 RID: 929 RVA: 0x00017048 File Offset: 0x00015248
 		[NullableContext(1)]
 		private JsonTypeInfo<ICdnUrlData> Create_ICdnUrlData(JsonSerializerOptions options)
 		{
@@ -1458,7 +1507,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000391 RID: 913 RVA: 0x00015FD8 File Offset: 0x000141D8
+		// Token: 0x060003A2 RID: 930 RVA: 0x00017110 File Offset: 0x00015310
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ICdnUrlDataPropInit(JsonSerializerOptions options)
 		{
@@ -1511,7 +1560,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000054 RID: 84
-		// (get) Token: 0x06000392 RID: 914 RVA: 0x000161E4 File Offset: 0x000143E4
+		// (get) Token: 0x060003A3 RID: 931 RVA: 0x0001731C File Offset: 0x0001551C
 		public JsonTypeInfo<IEvalConfig> IEvalConfig
 		{
 			get
@@ -1525,7 +1574,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000393 RID: 915 RVA: 0x00016220 File Offset: 0x00014420
+		// Token: 0x060003A4 RID: 932 RVA: 0x00017358 File Offset: 0x00015558
 		[NullableContext(1)]
 		private JsonTypeInfo<IEvalConfig> Create_IEvalConfig(JsonSerializerOptions options)
 		{
@@ -1547,7 +1596,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000394 RID: 916 RVA: 0x000162E8 File Offset: 0x000144E8
+		// Token: 0x060003A5 RID: 933 RVA: 0x00017420 File Offset: 0x00015620
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IEvalConfigPropInit(JsonSerializerOptions options)
 		{
@@ -1596,7 +1645,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000055 RID: 85
-		// (get) Token: 0x06000395 RID: 917 RVA: 0x000164D0 File Offset: 0x000146D0
+		// (get) Token: 0x060003A6 RID: 934 RVA: 0x00017608 File Offset: 0x00015808
 		public JsonTypeInfo<IEvalNetworkConfig> IEvalNetworkConfig
 		{
 			get
@@ -1610,7 +1659,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000396 RID: 918 RVA: 0x0001650C File Offset: 0x0001470C
+		// Token: 0x060003A7 RID: 935 RVA: 0x00017644 File Offset: 0x00015844
 		[NullableContext(1)]
 		private JsonTypeInfo<IEvalNetworkConfig> Create_IEvalNetworkConfig(JsonSerializerOptions options)
 		{
@@ -1632,7 +1681,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000397 RID: 919 RVA: 0x000165D4 File Offset: 0x000147D4
+		// Token: 0x060003A8 RID: 936 RVA: 0x0001770C File Offset: 0x0001590C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IEvalNetworkConfigPropInit(JsonSerializerOptions options)
 		{
@@ -1701,7 +1750,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000056 RID: 86
-		// (get) Token: 0x06000398 RID: 920 RVA: 0x000168A8 File Offset: 0x00014AA8
+		// (get) Token: 0x060003A9 RID: 937 RVA: 0x000179E0 File Offset: 0x00015BE0
 		public JsonTypeInfo<IGachaUrl> IGachaUrl
 		{
 			get
@@ -1715,7 +1764,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000399 RID: 921 RVA: 0x000168E4 File Offset: 0x00014AE4
+		// Token: 0x060003AA RID: 938 RVA: 0x00017A1C File Offset: 0x00015C1C
 		[NullableContext(1)]
 		private JsonTypeInfo<IGachaUrl> Create_IGachaUrl(JsonSerializerOptions options)
 		{
@@ -1737,7 +1786,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600039A RID: 922 RVA: 0x000169AC File Offset: 0x00014BAC
+		// Token: 0x060003AB RID: 939 RVA: 0x00017AE4 File Offset: 0x00015CE4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IGachaUrlPropInit(JsonSerializerOptions options)
 		{
@@ -1768,7 +1817,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000057 RID: 87
-		// (get) Token: 0x0600039B RID: 923 RVA: 0x00016ABC File Offset: 0x00014CBC
+		// (get) Token: 0x060003AC RID: 940 RVA: 0x00017BF4 File Offset: 0x00015DF4
 		public JsonTypeInfo<IGrayBoxConfig> IGrayBoxConfig
 		{
 			get
@@ -1782,7 +1831,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600039C RID: 924 RVA: 0x00016AF8 File Offset: 0x00014CF8
+		// Token: 0x060003AD RID: 941 RVA: 0x00017C30 File Offset: 0x00015E30
 		[NullableContext(1)]
 		private JsonTypeInfo<IGrayBoxConfig> Create_IGrayBoxConfig(JsonSerializerOptions options)
 		{
@@ -1804,7 +1853,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600039D RID: 925 RVA: 0x00016BC0 File Offset: 0x00014DC0
+		// Token: 0x060003AE RID: 942 RVA: 0x00017CF8 File Offset: 0x00015EF8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IGrayBoxConfigPropInit(JsonSerializerOptions options)
 		{
@@ -1839,7 +1888,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000058 RID: 88
-		// (get) Token: 0x0600039E RID: 926 RVA: 0x00016CD0 File Offset: 0x00014ED0
+		// (get) Token: 0x060003AF RID: 943 RVA: 0x00017E08 File Offset: 0x00016008
 		public JsonTypeInfo<IGrayBoxItemConfig> IGrayBoxItemConfig
 		{
 			get
@@ -1853,7 +1902,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600039F RID: 927 RVA: 0x00016D0C File Offset: 0x00014F0C
+		// Token: 0x060003B0 RID: 944 RVA: 0x00017E44 File Offset: 0x00016044
 		[NullableContext(1)]
 		private JsonTypeInfo<IGrayBoxItemConfig> Create_IGrayBoxItemConfig(JsonSerializerOptions options)
 		{
@@ -1875,7 +1924,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003A0 RID: 928 RVA: 0x00016DD4 File Offset: 0x00014FD4
+		// Token: 0x060003B1 RID: 945 RVA: 0x00017F0C File Offset: 0x0001610C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IGrayBoxItemConfigPropInit(JsonSerializerOptions options)
 		{
@@ -1988,7 +2037,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000059 RID: 89
-		// (get) Token: 0x060003A1 RID: 929 RVA: 0x00017294 File Offset: 0x00015494
+		// (get) Token: 0x060003B2 RID: 946 RVA: 0x000183CC File Offset: 0x000165CC
 		public JsonTypeInfo<ILoginServersData> ILoginServersData
 		{
 			get
@@ -2002,7 +2051,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003A2 RID: 930 RVA: 0x000172D0 File Offset: 0x000154D0
+		// Token: 0x060003B3 RID: 947 RVA: 0x00018408 File Offset: 0x00016608
 		[NullableContext(1)]
 		private JsonTypeInfo<ILoginServersData> Create_ILoginServersData(JsonSerializerOptions options)
 		{
@@ -2024,7 +2073,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003A3 RID: 931 RVA: 0x00017398 File Offset: 0x00015598
+		// Token: 0x060003B4 RID: 948 RVA: 0x000184D0 File Offset: 0x000166D0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ILoginServersDataPropInit(JsonSerializerOptions options)
 		{
@@ -2213,7 +2262,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005A RID: 90
-		// (get) Token: 0x060003A4 RID: 932 RVA: 0x00017B9C File Offset: 0x00015D9C
+		// (get) Token: 0x060003B5 RID: 949 RVA: 0x00018CD4 File Offset: 0x00016ED4
 		public JsonTypeInfo<ILogReport> ILogReport
 		{
 			get
@@ -2227,7 +2276,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003A5 RID: 933 RVA: 0x00017BD8 File Offset: 0x00015DD8
+		// Token: 0x060003B6 RID: 950 RVA: 0x00018D10 File Offset: 0x00016F10
 		[NullableContext(1)]
 		private JsonTypeInfo<ILogReport> Create_ILogReport(JsonSerializerOptions options)
 		{
@@ -2249,7 +2298,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003A6 RID: 934 RVA: 0x00017CA0 File Offset: 0x00015EA0
+		// Token: 0x060003B7 RID: 951 RVA: 0x00018DD8 File Offset: 0x00016FD8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ILogReportPropInit(JsonSerializerOptions options)
 		{
@@ -2302,7 +2351,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005B RID: 91
-		// (get) Token: 0x060003A7 RID: 935 RVA: 0x00017EAC File Offset: 0x000160AC
+		// (get) Token: 0x060003B8 RID: 952 RVA: 0x00018FE4 File Offset: 0x000171E4
 		public JsonTypeInfo<IPrivateServersData> IPrivateServersData
 		{
 			get
@@ -2316,7 +2365,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003A8 RID: 936 RVA: 0x00017EE8 File Offset: 0x000160E8
+		// Token: 0x060003B9 RID: 953 RVA: 0x00019020 File Offset: 0x00017220
 		[NullableContext(1)]
 		private JsonTypeInfo<IPrivateServersData> Create_IPrivateServersData(JsonSerializerOptions options)
 		{
@@ -2338,7 +2387,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003A9 RID: 937 RVA: 0x00017FB0 File Offset: 0x000161B0
+		// Token: 0x060003BA RID: 954 RVA: 0x000190E8 File Offset: 0x000172E8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IPrivateServersDataPropInit(JsonSerializerOptions options)
 		{
@@ -2389,7 +2438,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005C RID: 92
-		// (get) Token: 0x060003AA RID: 938 RVA: 0x000181A8 File Offset: 0x000163A8
+		// (get) Token: 0x060003BB RID: 955 RVA: 0x000192E0 File Offset: 0x000174E0
 		public JsonTypeInfo<ITDConfig> ITDConfig
 		{
 			get
@@ -2403,7 +2452,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003AB RID: 939 RVA: 0x000181E4 File Offset: 0x000163E4
+		// Token: 0x060003BC RID: 956 RVA: 0x0001931C File Offset: 0x0001751C
 		[NullableContext(1)]
 		private JsonTypeInfo<ITDConfig> Create_ITDConfig(JsonSerializerOptions options)
 		{
@@ -2425,7 +2474,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003AC RID: 940 RVA: 0x000182AC File Offset: 0x000164AC
+		// Token: 0x060003BD RID: 957 RVA: 0x000193E4 File Offset: 0x000175E4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ITDConfigPropInit(JsonSerializerOptions options)
 		{
@@ -2478,7 +2527,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005D RID: 93
-		// (get) Token: 0x060003AD RID: 941 RVA: 0x000184B8 File Offset: 0x000166B8
+		// (get) Token: 0x060003BE RID: 958 RVA: 0x000195F0 File Offset: 0x000177F0
 		public JsonTypeInfo<IUdpProbe> IUdpProbe
 		{
 			get
@@ -2492,7 +2541,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003AE RID: 942 RVA: 0x000184F4 File Offset: 0x000166F4
+		// Token: 0x060003BF RID: 959 RVA: 0x0001962C File Offset: 0x0001782C
 		[NullableContext(1)]
 		private JsonTypeInfo<IUdpProbe> Create_IUdpProbe(JsonSerializerOptions options)
 		{
@@ -2514,7 +2563,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003AF RID: 943 RVA: 0x000185BC File Offset: 0x000167BC
+		// Token: 0x060003C0 RID: 960 RVA: 0x000196F4 File Offset: 0x000178F4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IUdpProbePropInit(JsonSerializerOptions options)
 		{
@@ -2590,7 +2639,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005E RID: 94
-		// (get) Token: 0x060003B0 RID: 944 RVA: 0x000188A0 File Offset: 0x00016AA0
+		// (get) Token: 0x060003C1 RID: 961 RVA: 0x000199D8 File Offset: 0x00017BD8
 		public JsonTypeInfo<IUdpRegion> IUdpRegion
 		{
 			get
@@ -2604,7 +2653,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003B1 RID: 945 RVA: 0x000188DC File Offset: 0x00016ADC
+		// Token: 0x060003C2 RID: 962 RVA: 0x00019A14 File Offset: 0x00017C14
 		[NullableContext(1)]
 		private JsonTypeInfo<IUdpRegion> Create_IUdpRegion(JsonSerializerOptions options)
 		{
@@ -2626,7 +2675,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003B2 RID: 946 RVA: 0x000189A4 File Offset: 0x00016BA4
+		// Token: 0x060003C3 RID: 963 RVA: 0x00019ADC File Offset: 0x00017CDC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IUdpRegionPropInit(JsonSerializerOptions options)
 		{
@@ -2701,7 +2750,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x1700005F RID: 95
-		// (get) Token: 0x060003B3 RID: 947 RVA: 0x00018C88 File Offset: 0x00016E88
+		// (get) Token: 0x060003C4 RID: 964 RVA: 0x00019DC0 File Offset: 0x00017FC0
 		public JsonTypeInfo<IUpdateUrl> IUpdateUrl
 		{
 			get
@@ -2715,7 +2764,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003B4 RID: 948 RVA: 0x00018CC4 File Offset: 0x00016EC4
+		// Token: 0x060003C5 RID: 965 RVA: 0x00019DFC File Offset: 0x00017FFC
 		[NullableContext(1)]
 		private JsonTypeInfo<IUpdateUrl> Create_IUpdateUrl(JsonSerializerOptions options)
 		{
@@ -2737,7 +2786,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003B5 RID: 949 RVA: 0x00018D8C File Offset: 0x00016F8C
+		// Token: 0x060003C6 RID: 966 RVA: 0x00019EC4 File Offset: 0x000180C4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IUpdateUrlPropInit(JsonSerializerOptions options)
 		{
@@ -2790,7 +2839,92 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		}
 
 		// Token: 0x17000060 RID: 96
-		// (get) Token: 0x060003B6 RID: 950 RVA: 0x00018F98 File Offset: 0x00017198
+		// (get) Token: 0x060003C7 RID: 967 RVA: 0x0001A0D0 File Offset: 0x000182D0
+		public JsonTypeInfo<VulkanSettingConfig> VulkanSettingConfig
+		{
+			get
+			{
+				JsonTypeInfo<VulkanSettingConfig> result;
+				if ((result = this._VulkanSettingConfig) == null)
+				{
+					result = (this._VulkanSettingConfig = (JsonTypeInfo<VulkanSettingConfig>)base.Options.GetTypeInfo(typeof(VulkanSettingConfig)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x060003C8 RID: 968 RVA: 0x0001A10C File Offset: 0x0001830C
+		[NullableContext(1)]
+		private JsonTypeInfo<VulkanSettingConfig> Create_VulkanSettingConfig(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<VulkanSettingConfig> jsonTypeInfo;
+			if (!LauncherJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<VulkanSettingConfig>(options, out jsonTypeInfo))
+			{
+				JsonObjectInfoValues<VulkanSettingConfig> jsonObjectInfoValues = new JsonObjectInfoValues<VulkanSettingConfig>();
+				jsonObjectInfoValues.ObjectCreator = (() => new VulkanSettingConfig());
+				jsonObjectInfoValues.ObjectWithParameterizedConstructorCreator = null;
+				jsonObjectInfoValues.PropertyMetadataInitializer = ((JsonSerializerContext _) => LauncherJsonSourceGenContext.VulkanSettingConfigPropInit(options));
+				jsonObjectInfoValues.ConstructorParameterMetadataInitializer = null;
+				jsonObjectInfoValues.ConstructorAttributeProviderFactory = (() => typeof(VulkanSettingConfig).GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, Array.Empty<Type>(), null));
+				jsonObjectInfoValues.SerializeHandler = null;
+				JsonObjectInfoValues<VulkanSettingConfig> objectInfo = jsonObjectInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateObjectInfo<VulkanSettingConfig>(options, objectInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x060003C9 RID: 969 RVA: 0x0001A1D4 File Offset: 0x000183D4
+		[NullableContext(1)]
+		private static JsonPropertyInfo[] VulkanSettingConfigPropInit(JsonSerializerOptions options)
+		{
+			JsonPropertyInfo[] array = new JsonPropertyInfo[2];
+			JsonPropertyInfoValues<int?> jsonPropertyInfoValues = new JsonPropertyInfoValues<int?>();
+			jsonPropertyInfoValues.IsProperty = false;
+			jsonPropertyInfoValues.IsPublic = true;
+			jsonPropertyInfoValues.IsVirtual = false;
+			jsonPropertyInfoValues.DeclaringType = typeof(VulkanSettingConfig);
+			jsonPropertyInfoValues.Converter = LauncherJsonSourceGenContext.GetConverterForNullableProperty<int>(new VulkanSettingIntegerConverter(), options);
+			jsonPropertyInfoValues.Getter = ((object obj) => ((VulkanSettingConfig)obj).DefaultValue);
+			jsonPropertyInfoValues.Setter = delegate(object obj, int? value)
+			{
+				((VulkanSettingConfig)obj).DefaultValue = value;
+			};
+			jsonPropertyInfoValues.IgnoreCondition = null;
+			jsonPropertyInfoValues.HasJsonInclude = false;
+			jsonPropertyInfoValues.IsExtensionData = false;
+			jsonPropertyInfoValues.NumberHandling = null;
+			jsonPropertyInfoValues.PropertyName = "DefaultValue";
+			jsonPropertyInfoValues.JsonPropertyName = null;
+			jsonPropertyInfoValues.AttributeProviderFactory = (() => typeof(VulkanSettingConfig).GetField("DefaultValue", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<int?> propertyInfo = jsonPropertyInfoValues;
+			array[0] = JsonMetadataServices.CreatePropertyInfo<int?>(options, propertyInfo);
+			JsonPropertyInfoValues<int?> jsonPropertyInfoValues2 = new JsonPropertyInfoValues<int?>();
+			jsonPropertyInfoValues2.IsProperty = false;
+			jsonPropertyInfoValues2.IsPublic = true;
+			jsonPropertyInfoValues2.IsVirtual = false;
+			jsonPropertyInfoValues2.DeclaringType = typeof(VulkanSettingConfig);
+			jsonPropertyInfoValues2.Converter = LauncherJsonSourceGenContext.GetConverterForNullableProperty<int>(new VulkanSettingIntegerConverter(), options);
+			jsonPropertyInfoValues2.Getter = ((object obj) => ((VulkanSettingConfig)obj).Revision);
+			jsonPropertyInfoValues2.Setter = delegate(object obj, int? value)
+			{
+				((VulkanSettingConfig)obj).Revision = value;
+			};
+			jsonPropertyInfoValues2.IgnoreCondition = null;
+			jsonPropertyInfoValues2.HasJsonInclude = false;
+			jsonPropertyInfoValues2.IsExtensionData = false;
+			jsonPropertyInfoValues2.NumberHandling = null;
+			jsonPropertyInfoValues2.PropertyName = "Revision";
+			jsonPropertyInfoValues2.JsonPropertyName = null;
+			jsonPropertyInfoValues2.AttributeProviderFactory = (() => typeof(VulkanSettingConfig).GetField("Revision", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic));
+			JsonPropertyInfoValues<int?> propertyInfo2 = jsonPropertyInfoValues2;
+			array[1] = JsonMetadataServices.CreatePropertyInfo<int?>(options, propertyInfo2);
+			return array;
+		}
+
+		// Token: 0x17000061 RID: 97
+		// (get) Token: 0x060003CA RID: 970 RVA: 0x0001A3D0 File Offset: 0x000185D0
 		public JsonTypeInfo<PatchManifest> PatchManifest
 		{
 			get
@@ -2804,7 +2938,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003B7 RID: 951 RVA: 0x00018FD4 File Offset: 0x000171D4
+		// Token: 0x060003CB RID: 971 RVA: 0x0001A40C File Offset: 0x0001860C
 		[NullableContext(1)]
 		private JsonTypeInfo<PatchManifest> Create_PatchManifest(JsonSerializerOptions options)
 		{
@@ -2818,8 +2952,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x17000061 RID: 97
-		// (get) Token: 0x060003B8 RID: 952 RVA: 0x00019014 File Offset: 0x00017214
+		// Token: 0x17000062 RID: 98
+		// (get) Token: 0x060003CC RID: 972 RVA: 0x0001A44C File Offset: 0x0001864C
 		public JsonTypeInfo<PatchManifestJson> PatchManifestJson
 		{
 			get
@@ -2833,7 +2967,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003B9 RID: 953 RVA: 0x00019050 File Offset: 0x00017250
+		// Token: 0x060003CD RID: 973 RVA: 0x0001A488 File Offset: 0x00018688
 		[NullableContext(1)]
 		private JsonTypeInfo<PatchManifestJson> Create_PatchManifestJson(JsonSerializerOptions options)
 		{
@@ -2855,7 +2989,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003BA RID: 954 RVA: 0x00019118 File Offset: 0x00017318
+		// Token: 0x060003CE RID: 974 RVA: 0x0001A550 File Offset: 0x00018750
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] PatchManifestJsonPropInit(JsonSerializerOptions options)
 		{
@@ -2885,8 +3019,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000062 RID: 98
-		// (get) Token: 0x060003BB RID: 955 RVA: 0x00019228 File Offset: 0x00017428
+		// Token: 0x17000063 RID: 99
+		// (get) Token: 0x060003CF RID: 975 RVA: 0x0001A660 File Offset: 0x00018860
 		public JsonTypeInfo<RemotePakMapConfig> RemotePakMapConfig
 		{
 			get
@@ -2900,7 +3034,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003BC RID: 956 RVA: 0x00019264 File Offset: 0x00017464
+		// Token: 0x060003D0 RID: 976 RVA: 0x0001A69C File Offset: 0x0001889C
 		[NullableContext(1)]
 		private JsonTypeInfo<RemotePakMapConfig> Create_RemotePakMapConfig(JsonSerializerOptions options)
 		{
@@ -2922,7 +3056,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003BD RID: 957 RVA: 0x0001932C File Offset: 0x0001752C
+		// Token: 0x060003D1 RID: 977 RVA: 0x0001A764 File Offset: 0x00018964
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RemotePakMapConfigPropInit(JsonSerializerOptions options)
 		{
@@ -2957,8 +3091,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000063 RID: 99
-		// (get) Token: 0x060003BE RID: 958 RVA: 0x0001943C File Offset: 0x0001763C
+		// Token: 0x17000064 RID: 100
+		// (get) Token: 0x060003D2 RID: 978 RVA: 0x0001A874 File Offset: 0x00018A74
 		public JsonTypeInfo<RemoteVideoConfig> RemoteVideoConfig
 		{
 			get
@@ -2972,7 +3106,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003BF RID: 959 RVA: 0x00019478 File Offset: 0x00017678
+		// Token: 0x060003D3 RID: 979 RVA: 0x0001A8B0 File Offset: 0x00018AB0
 		[NullableContext(1)]
 		private JsonTypeInfo<RemoteVideoConfig> Create_RemoteVideoConfig(JsonSerializerOptions options)
 		{
@@ -2994,7 +3128,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003C0 RID: 960 RVA: 0x00019540 File Offset: 0x00017740
+		// Token: 0x060003D4 RID: 980 RVA: 0x0001A978 File Offset: 0x00018B78
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RemoteVideoConfigPropInit(JsonSerializerOptions options)
 		{
@@ -3042,8 +3176,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000064 RID: 100
-		// (get) Token: 0x060003C1 RID: 961 RVA: 0x00019728 File Offset: 0x00017928
+		// Token: 0x17000065 RID: 101
+		// (get) Token: 0x060003D5 RID: 981 RVA: 0x0001AB60 File Offset: 0x00018D60
 		public JsonTypeInfo<RemoteVideoConfigUpdateTime> RemoteVideoConfigUpdateTime
 		{
 			get
@@ -3057,7 +3191,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003C2 RID: 962 RVA: 0x00019764 File Offset: 0x00017964
+		// Token: 0x060003D6 RID: 982 RVA: 0x0001AB9C File Offset: 0x00018D9C
 		[NullableContext(1)]
 		private JsonTypeInfo<RemoteVideoConfigUpdateTime> Create_RemoteVideoConfigUpdateTime(JsonSerializerOptions options)
 		{
@@ -3079,7 +3213,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003C3 RID: 963 RVA: 0x0001982C File Offset: 0x00017A2C
+		// Token: 0x060003D7 RID: 983 RVA: 0x0001AC64 File Offset: 0x00018E64
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RemoteVideoConfigUpdateTimePropInit(JsonSerializerOptions options)
 		{
@@ -3129,8 +3263,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000065 RID: 101
-		// (get) Token: 0x060003C4 RID: 964 RVA: 0x00019A24 File Offset: 0x00017C24
+		// Token: 0x17000066 RID: 102
+		// (get) Token: 0x060003D8 RID: 984 RVA: 0x0001AE5C File Offset: 0x0001905C
 		public JsonTypeInfo<VideoItem> VideoItem
 		{
 			get
@@ -3144,7 +3278,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003C5 RID: 965 RVA: 0x00019A60 File Offset: 0x00017C60
+		// Token: 0x060003D9 RID: 985 RVA: 0x0001AE98 File Offset: 0x00019098
 		[NullableContext(1)]
 		private JsonTypeInfo<VideoItem> Create_VideoItem(JsonSerializerOptions options)
 		{
@@ -3166,7 +3300,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003C6 RID: 966 RVA: 0x00019B28 File Offset: 0x00017D28
+		// Token: 0x060003DA RID: 986 RVA: 0x0001AF60 File Offset: 0x00019160
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] VideoItemPropInit(JsonSerializerOptions options)
 		{
@@ -3302,8 +3436,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000066 RID: 102
-		// (get) Token: 0x060003C7 RID: 967 RVA: 0x0001A140 File Offset: 0x00018340
+		// Token: 0x17000067 RID: 103
+		// (get) Token: 0x060003DB RID: 987 RVA: 0x0001B578 File Offset: 0x00019778
 		public JsonTypeInfo<GameWindowStateData> GameWindowStateData
 		{
 			get
@@ -3317,7 +3451,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003C8 RID: 968 RVA: 0x0001A17C File Offset: 0x0001837C
+		// Token: 0x060003DC RID: 988 RVA: 0x0001B5B4 File Offset: 0x000197B4
 		[NullableContext(1)]
 		private JsonTypeInfo<GameWindowStateData> Create_GameWindowStateData(JsonSerializerOptions options)
 		{
@@ -3339,7 +3473,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003C9 RID: 969 RVA: 0x0001A244 File Offset: 0x00018444
+		// Token: 0x060003DD RID: 989 RVA: 0x0001B67C File Offset: 0x0001987C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] GameWindowStateDataPropInit(JsonSerializerOptions options)
 		{
@@ -3367,8 +3501,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000067 RID: 103
-		// (get) Token: 0x060003CA RID: 970 RVA: 0x0001A340 File Offset: 0x00018540
+		// Token: 0x17000068 RID: 104
+		// (get) Token: 0x060003DE RID: 990 RVA: 0x0001B778 File Offset: 0x00019978
 		public JsonTypeInfo<UserInfo> UserInfo
 		{
 			get
@@ -3382,7 +3516,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003CB RID: 971 RVA: 0x0001A37C File Offset: 0x0001857C
+		// Token: 0x060003DF RID: 991 RVA: 0x0001B7B4 File Offset: 0x000199B4
 		[NullableContext(1)]
 		private JsonTypeInfo<UserInfo> Create_UserInfo(JsonSerializerOptions options)
 		{
@@ -3404,7 +3538,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003CC RID: 972 RVA: 0x0001A444 File Offset: 0x00018644
+		// Token: 0x060003E0 RID: 992 RVA: 0x0001B87C File Offset: 0x00019A7C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] UserInfoPropInit(JsonSerializerOptions options)
 		{
@@ -3432,8 +3566,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000068 RID: 104
-		// (get) Token: 0x060003CD RID: 973 RVA: 0x0001A540 File Offset: 0x00018740
+		// Token: 0x17000069 RID: 105
+		// (get) Token: 0x060003E1 RID: 993 RVA: 0x0001B978 File Offset: 0x00019B78
 		public JsonTypeInfo<ILocalSendedSave> ILocalSendedSave
 		{
 			get
@@ -3447,7 +3581,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003CE RID: 974 RVA: 0x0001A57C File Offset: 0x0001877C
+		// Token: 0x060003E2 RID: 994 RVA: 0x0001B9B4 File Offset: 0x00019BB4
 		[NullableContext(1)]
 		private JsonTypeInfo<ILocalSendedSave> Create_ILocalSendedSave(JsonSerializerOptions options)
 		{
@@ -3469,7 +3603,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003CF RID: 975 RVA: 0x0001A644 File Offset: 0x00018844
+		// Token: 0x060003E3 RID: 995 RVA: 0x0001BA7C File Offset: 0x00019C7C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ILocalSendedSavePropInit(JsonSerializerOptions options)
 		{
@@ -3503,8 +3637,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000069 RID: 105
-		// (get) Token: 0x060003D0 RID: 976 RVA: 0x0001A754 File Offset: 0x00018954
+		// Token: 0x1700006A RID: 106
+		// (get) Token: 0x060003E4 RID: 996 RVA: 0x0001BB8C File Offset: 0x00019D8C
 		public JsonTypeInfo<INetworkDetectionConfig> INetworkDetectionConfig
 		{
 			get
@@ -3518,7 +3652,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003D1 RID: 977 RVA: 0x0001A790 File Offset: 0x00018990
+		// Token: 0x060003E5 RID: 997 RVA: 0x0001BBC8 File Offset: 0x00019DC8
 		[NullableContext(1)]
 		private JsonTypeInfo<INetworkDetectionConfig> Create_INetworkDetectionConfig(JsonSerializerOptions options)
 		{
@@ -3540,7 +3674,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003D2 RID: 978 RVA: 0x0001A858 File Offset: 0x00018A58
+		// Token: 0x060003E6 RID: 998 RVA: 0x0001BC90 File Offset: 0x00019E90
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] INetworkDetectionConfigPropInit(JsonSerializerOptions options)
 		{
@@ -3632,8 +3766,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006A RID: 106
-		// (get) Token: 0x060003D3 RID: 979 RVA: 0x0001AC18 File Offset: 0x00018E18
+		// Token: 0x1700006B RID: 107
+		// (get) Token: 0x060003E7 RID: 999 RVA: 0x0001C050 File Offset: 0x0001A250
 		public JsonTypeInfo<BilibiliParam> BilibiliParam
 		{
 			get
@@ -3647,7 +3781,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003D4 RID: 980 RVA: 0x0001AC54 File Offset: 0x00018E54
+		// Token: 0x060003E8 RID: 1000 RVA: 0x0001C08C File Offset: 0x0001A28C
 		[NullableContext(1)]
 		private JsonTypeInfo<BilibiliParam> Create_BilibiliParam(JsonSerializerOptions options)
 		{
@@ -3669,7 +3803,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003D5 RID: 981 RVA: 0x0001AD1C File Offset: 0x00018F1C
+		// Token: 0x060003E9 RID: 1001 RVA: 0x0001C154 File Offset: 0x0001A354
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] BilibiliParamPropInit(JsonSerializerOptions options)
 		{
@@ -3721,8 +3855,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006B RID: 107
-		// (get) Token: 0x060003D6 RID: 982 RVA: 0x0001AF28 File Offset: 0x00019128
+		// Token: 0x1700006C RID: 108
+		// (get) Token: 0x060003EA RID: 1002 RVA: 0x0001C360 File Offset: 0x0001A560
 		public JsonTypeInfo<ClientSwitch> ClientSwitch
 		{
 			get
@@ -3736,7 +3870,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003D7 RID: 983 RVA: 0x0001AF64 File Offset: 0x00019164
+		// Token: 0x060003EB RID: 1003 RVA: 0x0001C39C File Offset: 0x0001A59C
 		[NullableContext(1)]
 		private JsonTypeInfo<ClientSwitch> Create_ClientSwitch(JsonSerializerOptions options)
 		{
@@ -3758,7 +3892,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003D8 RID: 984 RVA: 0x0001B02C File Offset: 0x0001922C
+		// Token: 0x060003EC RID: 1004 RVA: 0x0001C464 File Offset: 0x0001A664
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ClientSwitchPropInit(JsonSerializerOptions options)
 		{
@@ -3846,8 +3980,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006C RID: 108
-		// (get) Token: 0x060003D9 RID: 985 RVA: 0x0001B3EC File Offset: 0x000195EC
+		// Token: 0x1700006D RID: 109
+		// (get) Token: 0x060003ED RID: 1005 RVA: 0x0001C824 File Offset: 0x0001AA24
 		public JsonTypeInfo<ClientUrl> ClientUrl
 		{
 			get
@@ -3861,7 +3995,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003DA RID: 986 RVA: 0x0001B428 File Offset: 0x00019628
+		// Token: 0x060003EE RID: 1006 RVA: 0x0001C860 File Offset: 0x0001AA60
 		[NullableContext(1)]
 		private JsonTypeInfo<ClientUrl> Create_ClientUrl(JsonSerializerOptions options)
 		{
@@ -3883,7 +4017,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003DB RID: 987 RVA: 0x0001B4F0 File Offset: 0x000196F0
+		// Token: 0x060003EF RID: 1007 RVA: 0x0001C928 File Offset: 0x0001AB28
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ClientUrlPropInit(JsonSerializerOptions options)
 		{
@@ -3913,8 +4047,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006D RID: 109
-		// (get) Token: 0x060003DC RID: 988 RVA: 0x0001B600 File Offset: 0x00019800
+		// Token: 0x1700006E RID: 110
+		// (get) Token: 0x060003F0 RID: 1008 RVA: 0x0001CA38 File Offset: 0x0001AC38
 		public JsonTypeInfo<CsLinkEntry> CsLinkEntry
 		{
 			get
@@ -3928,7 +4062,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003DD RID: 989 RVA: 0x0001B63C File Offset: 0x0001983C
+		// Token: 0x060003F1 RID: 1009 RVA: 0x0001CA74 File Offset: 0x0001AC74
 		[NullableContext(1)]
 		private JsonTypeInfo<CsLinkEntry> Create_CsLinkEntry(JsonSerializerOptions options)
 		{
@@ -3950,7 +4084,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003DE RID: 990 RVA: 0x0001B704 File Offset: 0x00019904
+		// Token: 0x060003F2 RID: 1010 RVA: 0x0001CB3C File Offset: 0x0001AD3C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] CsLinkEntryPropInit(JsonSerializerOptions options)
 		{
@@ -3980,8 +4114,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006E RID: 110
-		// (get) Token: 0x060003DF RID: 991 RVA: 0x0001B814 File Offset: 0x00019A14
+		// Token: 0x1700006F RID: 111
+		// (get) Token: 0x060003F3 RID: 1011 RVA: 0x0001CC4C File Offset: 0x0001AE4C
 		public JsonTypeInfo<DouyinParam> DouyinParam
 		{
 			get
@@ -3995,7 +4129,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003E0 RID: 992 RVA: 0x0001B850 File Offset: 0x00019A50
+		// Token: 0x060003F4 RID: 1012 RVA: 0x0001CC88 File Offset: 0x0001AE88
 		[NullableContext(1)]
 		private JsonTypeInfo<DouyinParam> Create_DouyinParam(JsonSerializerOptions options)
 		{
@@ -4017,7 +4151,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003E1 RID: 993 RVA: 0x0001B918 File Offset: 0x00019B18
+		// Token: 0x060003F5 RID: 1013 RVA: 0x0001CD50 File Offset: 0x0001AF50
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] DouyinParamPropInit(JsonSerializerOptions options)
 		{
@@ -4069,8 +4203,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700006F RID: 111
-		// (get) Token: 0x060003E2 RID: 994 RVA: 0x0001BB24 File Offset: 0x00019D24
+		// Token: 0x17000070 RID: 112
+		// (get) Token: 0x060003F6 RID: 1014 RVA: 0x0001CF5C File Offset: 0x0001B15C
 		public JsonTypeInfo<IBlockData> IBlockData
 		{
 			get
@@ -4084,7 +4218,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003E3 RID: 995 RVA: 0x0001BB60 File Offset: 0x00019D60
+		// Token: 0x060003F7 RID: 1015 RVA: 0x0001CF98 File Offset: 0x0001B198
 		[NullableContext(1)]
 		private JsonTypeInfo<IBlockData> Create_IBlockData(JsonSerializerOptions options)
 		{
@@ -4106,7 +4240,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003E4 RID: 996 RVA: 0x0001BC28 File Offset: 0x00019E28
+		// Token: 0x060003F8 RID: 1016 RVA: 0x0001D060 File Offset: 0x0001B260
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IBlockDataPropInit(JsonSerializerOptions options)
 		{
@@ -4140,8 +4274,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000070 RID: 112
-		// (get) Token: 0x060003E5 RID: 997 RVA: 0x0001BD38 File Offset: 0x00019F38
+		// Token: 0x17000071 RID: 113
+		// (get) Token: 0x060003F9 RID: 1017 RVA: 0x0001D170 File Offset: 0x0001B370
 		public JsonTypeInfo<IBlockDataContent> IBlockDataContent
 		{
 			get
@@ -4155,7 +4289,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003E6 RID: 998 RVA: 0x0001BD74 File Offset: 0x00019F74
+		// Token: 0x060003FA RID: 1018 RVA: 0x0001D1AC File Offset: 0x0001B3AC
 		[NullableContext(1)]
 		private JsonTypeInfo<IBlockDataContent> Create_IBlockDataContent(JsonSerializerOptions options)
 		{
@@ -4177,7 +4311,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003E7 RID: 999 RVA: 0x0001BE3C File Offset: 0x0001A03C
+		// Token: 0x060003FB RID: 1019 RVA: 0x0001D274 File Offset: 0x0001B474
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IBlockDataContentPropInit(JsonSerializerOptions options)
 		{
@@ -4247,8 +4381,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000071 RID: 113
-		// (get) Token: 0x060003E8 RID: 1000 RVA: 0x0001C120 File Offset: 0x0001A320
+		// Token: 0x17000072 RID: 114
+		// (get) Token: 0x060003FC RID: 1020 RVA: 0x0001D558 File Offset: 0x0001B758
 		public JsonTypeInfo<IBlockResponseData> IBlockResponseData
 		{
 			get
@@ -4262,7 +4396,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003E9 RID: 1001 RVA: 0x0001C15C File Offset: 0x0001A35C
+		// Token: 0x060003FD RID: 1021 RVA: 0x0001D594 File Offset: 0x0001B794
 		[NullableContext(1)]
 		private JsonTypeInfo<IBlockResponseData> Create_IBlockResponseData(JsonSerializerOptions options)
 		{
@@ -4284,7 +4418,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003EA RID: 1002 RVA: 0x0001C224 File Offset: 0x0001A424
+		// Token: 0x060003FE RID: 1022 RVA: 0x0001D65C File Offset: 0x0001B85C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IBlockResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -4314,8 +4448,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000072 RID: 114
-		// (get) Token: 0x060003EB RID: 1003 RVA: 0x0001C334 File Offset: 0x0001A534
+		// Token: 0x17000073 RID: 115
+		// (get) Token: 0x060003FF RID: 1023 RVA: 0x0001D76C File Offset: 0x0001B96C
 		public JsonTypeInfo<ICheckoutProductResponse> ICheckoutProductResponse
 		{
 			get
@@ -4329,7 +4463,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003EC RID: 1004 RVA: 0x0001C370 File Offset: 0x0001A570
+		// Token: 0x06000400 RID: 1024 RVA: 0x0001D7A8 File Offset: 0x0001B9A8
 		[NullableContext(1)]
 		private JsonTypeInfo<ICheckoutProductResponse> Create_ICheckoutProductResponse(JsonSerializerOptions options)
 		{
@@ -4351,7 +4485,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003ED RID: 1005 RVA: 0x0001C438 File Offset: 0x0001A638
+		// Token: 0x06000401 RID: 1025 RVA: 0x0001D870 File Offset: 0x0001BA70
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ICheckoutProductResponsePropInit(JsonSerializerOptions options)
 		{
@@ -4421,8 +4555,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000073 RID: 115
-		// (get) Token: 0x060003EE RID: 1006 RVA: 0x0001C71C File Offset: 0x0001A91C
+		// Token: 0x17000074 RID: 116
+		// (get) Token: 0x06000402 RID: 1026 RVA: 0x0001DB54 File Offset: 0x0001BD54
 		public JsonTypeInfo<IConfigJson> IConfigJson
 		{
 			get
@@ -4436,7 +4570,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003EF RID: 1007 RVA: 0x0001C758 File Offset: 0x0001A958
+		// Token: 0x06000403 RID: 1027 RVA: 0x0001DB90 File Offset: 0x0001BD90
 		[NullableContext(1)]
 		private JsonTypeInfo<IConfigJson> Create_IConfigJson(JsonSerializerOptions options)
 		{
@@ -4458,7 +4592,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003F0 RID: 1008 RVA: 0x0001C820 File Offset: 0x0001AA20
+		// Token: 0x06000404 RID: 1028 RVA: 0x0001DC58 File Offset: 0x0001BE58
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IConfigJsonPropInit(JsonSerializerOptions options)
 		{
@@ -4488,8 +4622,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000074 RID: 116
-		// (get) Token: 0x060003F1 RID: 1009 RVA: 0x0001C930 File Offset: 0x0001AB30
+		// Token: 0x17000075 RID: 117
+		// (get) Token: 0x06000405 RID: 1029 RVA: 0x0001DD68 File Offset: 0x0001BF68
 		public JsonTypeInfo<IConnectResponse> IConnectResponse
 		{
 			get
@@ -4503,7 +4637,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003F2 RID: 1010 RVA: 0x0001C96C File Offset: 0x0001AB6C
+		// Token: 0x06000406 RID: 1030 RVA: 0x0001DDA4 File Offset: 0x0001BFA4
 		[NullableContext(1)]
 		private JsonTypeInfo<IConnectResponse> Create_IConnectResponse(JsonSerializerOptions options)
 		{
@@ -4525,7 +4659,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003F3 RID: 1011 RVA: 0x0001CA34 File Offset: 0x0001AC34
+		// Token: 0x06000407 RID: 1031 RVA: 0x0001DE6C File Offset: 0x0001C06C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IConnectResponsePropInit(JsonSerializerOptions options)
 		{
@@ -4617,8 +4751,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000075 RID: 117
-		// (get) Token: 0x060003F4 RID: 1012 RVA: 0x0001CE18 File Offset: 0x0001B018
+		// Token: 0x17000076 RID: 118
+		// (get) Token: 0x06000408 RID: 1032 RVA: 0x0001E250 File Offset: 0x0001C450
 		public JsonTypeInfo<IConnectResponseData> IConnectResponseData
 		{
 			get
@@ -4632,7 +4766,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003F5 RID: 1013 RVA: 0x0001CE54 File Offset: 0x0001B054
+		// Token: 0x06000409 RID: 1033 RVA: 0x0001E28C File Offset: 0x0001C48C
 		[NullableContext(1)]
 		private JsonTypeInfo<IConnectResponseData> Create_IConnectResponseData(JsonSerializerOptions options)
 		{
@@ -4654,7 +4788,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003F6 RID: 1014 RVA: 0x0001CF1C File Offset: 0x0001B11C
+		// Token: 0x0600040A RID: 1034 RVA: 0x0001E354 File Offset: 0x0001C554
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IConnectResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -5078,8 +5212,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000076 RID: 118
-		// (get) Token: 0x060003F7 RID: 1015 RVA: 0x0001E24C File Offset: 0x0001C44C
+		// Token: 0x17000077 RID: 119
+		// (get) Token: 0x0600040B RID: 1035 RVA: 0x0001F684 File Offset: 0x0001D884
 		public JsonTypeInfo<IGetAccessTokenResponse> IGetAccessTokenResponse
 		{
 			get
@@ -5093,7 +5227,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003F8 RID: 1016 RVA: 0x0001E288 File Offset: 0x0001C488
+		// Token: 0x0600040C RID: 1036 RVA: 0x0001F6C0 File Offset: 0x0001D8C0
 		[NullableContext(1)]
 		private JsonTypeInfo<IGetAccessTokenResponse> Create_IGetAccessTokenResponse(JsonSerializerOptions options)
 		{
@@ -5115,7 +5249,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003F9 RID: 1017 RVA: 0x0001E350 File Offset: 0x0001C550
+		// Token: 0x0600040D RID: 1037 RVA: 0x0001F788 File Offset: 0x0001D988
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IGetAccessTokenResponsePropInit(JsonSerializerOptions options)
 		{
@@ -5207,8 +5341,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000077 RID: 119
-		// (get) Token: 0x060003FA RID: 1018 RVA: 0x0001E734 File Offset: 0x0001C934
+		// Token: 0x17000078 RID: 120
+		// (get) Token: 0x0600040E RID: 1038 RVA: 0x0001FB6C File Offset: 0x0001DD6C
 		public JsonTypeInfo<IGetAccessTokenResponseData> IGetAccessTokenResponseData
 		{
 			get
@@ -5222,7 +5356,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003FB RID: 1019 RVA: 0x0001E770 File Offset: 0x0001C970
+		// Token: 0x0600040F RID: 1039 RVA: 0x0001FBA8 File Offset: 0x0001DDA8
 		[NullableContext(1)]
 		private JsonTypeInfo<IGetAccessTokenResponseData> Create_IGetAccessTokenResponseData(JsonSerializerOptions options)
 		{
@@ -5244,7 +5378,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003FC RID: 1020 RVA: 0x0001E838 File Offset: 0x0001CA38
+		// Token: 0x06000410 RID: 1040 RVA: 0x0001FC70 File Offset: 0x0001DE70
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IGetAccessTokenResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -5294,8 +5428,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000078 RID: 120
-		// (get) Token: 0x060003FD RID: 1021 RVA: 0x0001EA30 File Offset: 0x0001CC30
+		// Token: 0x17000079 RID: 121
+		// (get) Token: 0x06000411 RID: 1041 RVA: 0x0001FE68 File Offset: 0x0001E068
 		public JsonTypeInfo<IIdTokenData> IIdTokenData
 		{
 			get
@@ -5309,7 +5443,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060003FE RID: 1022 RVA: 0x0001EA6C File Offset: 0x0001CC6C
+		// Token: 0x06000412 RID: 1042 RVA: 0x0001FEA4 File Offset: 0x0001E0A4
 		[NullableContext(1)]
 		private JsonTypeInfo<IIdTokenData> Create_IIdTokenData(JsonSerializerOptions options)
 		{
@@ -5331,7 +5465,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x060003FF RID: 1023 RVA: 0x0001EB34 File Offset: 0x0001CD34
+		// Token: 0x06000413 RID: 1043 RVA: 0x0001FF6C File Offset: 0x0001E16C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IIdTokenDataPropInit(JsonSerializerOptions options)
 		{
@@ -5667,8 +5801,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000079 RID: 121
-		// (get) Token: 0x06000400 RID: 1024 RVA: 0x0001FA10 File Offset: 0x0001DC10
+		// Token: 0x1700007A RID: 122
+		// (get) Token: 0x06000414 RID: 1044 RVA: 0x00020E48 File Offset: 0x0001F048
 		public JsonTypeInfo<ILoginResponse> ILoginResponse
 		{
 			get
@@ -5682,7 +5816,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000401 RID: 1025 RVA: 0x0001FA4C File Offset: 0x0001DC4C
+		// Token: 0x06000415 RID: 1045 RVA: 0x00020E84 File Offset: 0x0001F084
 		[NullableContext(1)]
 		private JsonTypeInfo<ILoginResponse> Create_ILoginResponse(JsonSerializerOptions options)
 		{
@@ -5704,7 +5838,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000402 RID: 1026 RVA: 0x0001FB14 File Offset: 0x0001DD14
+		// Token: 0x06000416 RID: 1046 RVA: 0x00020F4C File Offset: 0x0001F14C
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ILoginResponsePropInit(JsonSerializerOptions options)
 		{
@@ -5796,8 +5930,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007A RID: 122
-		// (get) Token: 0x06000403 RID: 1027 RVA: 0x0001FEF8 File Offset: 0x0001E0F8
+		// Token: 0x1700007B RID: 123
+		// (get) Token: 0x06000417 RID: 1047 RVA: 0x00021330 File Offset: 0x0001F530
 		public JsonTypeInfo<ILoginResponseData> ILoginResponseData
 		{
 			get
@@ -5811,7 +5945,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000404 RID: 1028 RVA: 0x0001FF34 File Offset: 0x0001E134
+		// Token: 0x06000418 RID: 1048 RVA: 0x0002136C File Offset: 0x0001F56C
 		[NullableContext(1)]
 		private JsonTypeInfo<ILoginResponseData> Create_ILoginResponseData(JsonSerializerOptions options)
 		{
@@ -5833,7 +5967,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000405 RID: 1029 RVA: 0x0001FFFC File Offset: 0x0001E1FC
+		// Token: 0x06000419 RID: 1049 RVA: 0x00021434 File Offset: 0x0001F634
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ILoginResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -6075,8 +6209,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007B RID: 123
-		// (get) Token: 0x06000406 RID: 1030 RVA: 0x00020ABC File Offset: 0x0001ECBC
+		// Token: 0x1700007C RID: 124
+		// (get) Token: 0x0600041A RID: 1050 RVA: 0x00021EF4 File Offset: 0x000200F4
 		public JsonTypeInfo<IPlatformData> IPlatformData
 		{
 			get
@@ -6090,7 +6224,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000407 RID: 1031 RVA: 0x00020AF8 File Offset: 0x0001ECF8
+		// Token: 0x0600041B RID: 1051 RVA: 0x00021F30 File Offset: 0x00020130
 		[NullableContext(1)]
 		private JsonTypeInfo<IPlatformData> Create_IPlatformData(JsonSerializerOptions options)
 		{
@@ -6112,7 +6246,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000408 RID: 1032 RVA: 0x00020BC0 File Offset: 0x0001EDC0
+		// Token: 0x0600041C RID: 1052 RVA: 0x00021FF8 File Offset: 0x000201F8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IPlatformDataPropInit(JsonSerializerOptions options)
 		{
@@ -6318,8 +6452,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007C RID: 124
-		// (get) Token: 0x06000409 RID: 1033 RVA: 0x000214C4 File Offset: 0x0001F6C4
+		// Token: 0x1700007D RID: 125
+		// (get) Token: 0x0600041D RID: 1053 RVA: 0x000228FC File Offset: 0x00020AFC
 		public JsonTypeInfo<IPlatformReleaseData> IPlatformReleaseData
 		{
 			get
@@ -6333,7 +6467,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600040A RID: 1034 RVA: 0x00021500 File Offset: 0x0001F700
+		// Token: 0x0600041E RID: 1054 RVA: 0x00022938 File Offset: 0x00020B38
 		[NullableContext(1)]
 		private JsonTypeInfo<IPlatformReleaseData> Create_IPlatformReleaseData(JsonSerializerOptions options)
 		{
@@ -6355,7 +6489,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600040B RID: 1035 RVA: 0x000215C8 File Offset: 0x0001F7C8
+		// Token: 0x0600041F RID: 1055 RVA: 0x00022A00 File Offset: 0x00020C00
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IPlatformReleaseDataPropInit(JsonSerializerOptions options)
 		{
@@ -6411,8 +6545,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007D RID: 125
-		// (get) Token: 0x0600040C RID: 1036 RVA: 0x000217D4 File Offset: 0x0001F9D4
+		// Token: 0x1700007E RID: 126
+		// (get) Token: 0x06000420 RID: 1056 RVA: 0x00022C0C File Offset: 0x00020E0C
 		public JsonTypeInfo<IQueryGoodsResponse> IQueryGoodsResponse
 		{
 			get
@@ -6426,7 +6560,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600040D RID: 1037 RVA: 0x00021810 File Offset: 0x0001FA10
+		// Token: 0x06000421 RID: 1057 RVA: 0x00022C48 File Offset: 0x00020E48
 		[NullableContext(1)]
 		private JsonTypeInfo<IQueryGoodsResponse> Create_IQueryGoodsResponse(JsonSerializerOptions options)
 		{
@@ -6448,7 +6582,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600040E RID: 1038 RVA: 0x000218D8 File Offset: 0x0001FAD8
+		// Token: 0x06000422 RID: 1058 RVA: 0x00022D10 File Offset: 0x00020F10
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IQueryGoodsResponsePropInit(JsonSerializerOptions options)
 		{
@@ -6544,8 +6678,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007E RID: 126
-		// (get) Token: 0x0600040F RID: 1039 RVA: 0x00021CBC File Offset: 0x0001FEBC
+		// Token: 0x1700007F RID: 127
+		// (get) Token: 0x06000423 RID: 1059 RVA: 0x000230F4 File Offset: 0x000212F4
 		public JsonTypeInfo<IQueryGoodsResponseData> IQueryGoodsResponseData
 		{
 			get
@@ -6559,7 +6693,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000410 RID: 1040 RVA: 0x00021CF8 File Offset: 0x0001FEF8
+		// Token: 0x06000424 RID: 1060 RVA: 0x00023130 File Offset: 0x00021330
 		[NullableContext(1)]
 		private JsonTypeInfo<IQueryGoodsResponseData> Create_IQueryGoodsResponseData(JsonSerializerOptions options)
 		{
@@ -6581,7 +6715,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000411 RID: 1041 RVA: 0x00021DC0 File Offset: 0x0001FFC0
+		// Token: 0x06000425 RID: 1061 RVA: 0x000231F8 File Offset: 0x000213F8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IQueryGoodsResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -6719,8 +6853,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700007F RID: 127
-		// (get) Token: 0x06000412 RID: 1042 RVA: 0x000223B4 File Offset: 0x000205B4
+		// Token: 0x17000080 RID: 128
+		// (get) Token: 0x06000426 RID: 1062 RVA: 0x000237EC File Offset: 0x000219EC
 		public JsonTypeInfo<IRenewAccessTokenResponse> IRenewAccessTokenResponse
 		{
 			get
@@ -6734,7 +6868,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000413 RID: 1043 RVA: 0x000223F0 File Offset: 0x000205F0
+		// Token: 0x06000427 RID: 1063 RVA: 0x00023828 File Offset: 0x00021A28
 		[NullableContext(1)]
 		private JsonTypeInfo<IRenewAccessTokenResponse> Create_IRenewAccessTokenResponse(JsonSerializerOptions options)
 		{
@@ -6756,7 +6890,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000414 RID: 1044 RVA: 0x000224B8 File Offset: 0x000206B8
+		// Token: 0x06000428 RID: 1064 RVA: 0x000238F0 File Offset: 0x00021AF0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IRenewAccessTokenResponsePropInit(JsonSerializerOptions options)
 		{
@@ -6848,8 +6982,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000080 RID: 128
-		// (get) Token: 0x06000415 RID: 1045 RVA: 0x0002289C File Offset: 0x00020A9C
+		// Token: 0x17000081 RID: 129
+		// (get) Token: 0x06000429 RID: 1065 RVA: 0x00023CD4 File Offset: 0x00021ED4
 		public JsonTypeInfo<IRenewAccessTokenResponseData> IRenewAccessTokenResponseData
 		{
 			get
@@ -6863,7 +6997,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000416 RID: 1046 RVA: 0x000228D8 File Offset: 0x00020AD8
+		// Token: 0x0600042A RID: 1066 RVA: 0x00023D10 File Offset: 0x00021F10
 		[NullableContext(1)]
 		private JsonTypeInfo<IRenewAccessTokenResponseData> Create_IRenewAccessTokenResponseData(JsonSerializerOptions options)
 		{
@@ -6885,7 +7019,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000417 RID: 1047 RVA: 0x000229A0 File Offset: 0x00020BA0
+		// Token: 0x0600042B RID: 1067 RVA: 0x00023DD8 File Offset: 0x00021FD8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IRenewAccessTokenResponseDataPropInit(JsonSerializerOptions options)
 		{
@@ -6915,8 +7049,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000081 RID: 129
-		// (get) Token: 0x06000418 RID: 1048 RVA: 0x00022AB0 File Offset: 0x00020CB0
+		// Token: 0x17000082 RID: 130
+		// (get) Token: 0x0600042C RID: 1068 RVA: 0x00023EE8 File Offset: 0x000220E8
 		public JsonTypeInfo<IReportResponse> IReportResponse
 		{
 			get
@@ -6930,7 +7064,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000419 RID: 1049 RVA: 0x00022AEC File Offset: 0x00020CEC
+		// Token: 0x0600042D RID: 1069 RVA: 0x00023F24 File Offset: 0x00022124
 		[NullableContext(1)]
 		private JsonTypeInfo<IReportResponse> Create_IReportResponse(JsonSerializerOptions options)
 		{
@@ -6952,7 +7086,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600041A RID: 1050 RVA: 0x00022BB4 File Offset: 0x00020DB4
+		// Token: 0x0600042E RID: 1070 RVA: 0x00023FEC File Offset: 0x000221EC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] IReportResponsePropInit(JsonSerializerOptions options)
 		{
@@ -7022,8 +7156,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000082 RID: 130
-		// (get) Token: 0x0600041B RID: 1051 RVA: 0x00022E98 File Offset: 0x00021098
+		// Token: 0x17000083 RID: 131
+		// (get) Token: 0x0600042F RID: 1071 RVA: 0x000242D0 File Offset: 0x000224D0
 		public JsonTypeInfo<ISdkRequestEmailCodeResponse> ISdkRequestEmailCodeResponse
 		{
 			get
@@ -7037,7 +7171,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600041C RID: 1052 RVA: 0x00022ED4 File Offset: 0x000210D4
+		// Token: 0x06000430 RID: 1072 RVA: 0x0002430C File Offset: 0x0002250C
 		[NullableContext(1)]
 		private JsonTypeInfo<ISdkRequestEmailCodeResponse> Create_ISdkRequestEmailCodeResponse(JsonSerializerOptions options)
 		{
@@ -7059,7 +7193,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600041D RID: 1053 RVA: 0x00022F9C File Offset: 0x0002119C
+		// Token: 0x06000431 RID: 1073 RVA: 0x000243D4 File Offset: 0x000225D4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ISdkRequestEmailCodeResponsePropInit(JsonSerializerOptions options)
 		{
@@ -7129,8 +7263,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000083 RID: 131
-		// (get) Token: 0x0600041E RID: 1054 RVA: 0x00023280 File Offset: 0x00021480
+		// Token: 0x17000084 RID: 132
+		// (get) Token: 0x06000432 RID: 1074 RVA: 0x000246B8 File Offset: 0x000228B8
 		public JsonTypeInfo<KujiequParam> KujiequParam
 		{
 			get
@@ -7144,7 +7278,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600041F RID: 1055 RVA: 0x000232BC File Offset: 0x000214BC
+		// Token: 0x06000433 RID: 1075 RVA: 0x000246F4 File Offset: 0x000228F4
 		[NullableContext(1)]
 		private JsonTypeInfo<KujiequParam> Create_KujiequParam(JsonSerializerOptions options)
 		{
@@ -7166,7 +7300,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000420 RID: 1056 RVA: 0x00023384 File Offset: 0x00021584
+		// Token: 0x06000434 RID: 1076 RVA: 0x000247BC File Offset: 0x000229BC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] KujiequParamPropInit(JsonSerializerOptions options)
 		{
@@ -7218,8 +7352,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000084 RID: 132
-		// (get) Token: 0x06000421 RID: 1057 RVA: 0x00023590 File Offset: 0x00021790
+		// Token: 0x17000085 RID: 133
+		// (get) Token: 0x06000435 RID: 1077 RVA: 0x000249C8 File Offset: 0x00022BC8
 		public JsonTypeInfo<LoginElement> LoginElement
 		{
 			get
@@ -7233,7 +7367,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000422 RID: 1058 RVA: 0x000235CC File Offset: 0x000217CC
+		// Token: 0x06000436 RID: 1078 RVA: 0x00024A04 File Offset: 0x00022C04
 		[NullableContext(1)]
 		private JsonTypeInfo<LoginElement> Create_LoginElement(JsonSerializerOptions options)
 		{
@@ -7255,7 +7389,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000423 RID: 1059 RVA: 0x00023694 File Offset: 0x00021894
+		// Token: 0x06000437 RID: 1079 RVA: 0x00024ACC File Offset: 0x00022CCC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] LoginElementPropInit(JsonSerializerOptions options)
 		{
@@ -7283,8 +7417,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000085 RID: 133
-		// (get) Token: 0x06000424 RID: 1060 RVA: 0x00023790 File Offset: 0x00021990
+		// Token: 0x17000086 RID: 134
+		// (get) Token: 0x06000438 RID: 1080 RVA: 0x00024BC8 File Offset: 0x00022DC8
 		public JsonTypeInfo<QQParam> QQParam
 		{
 			get
@@ -7298,7 +7432,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000425 RID: 1061 RVA: 0x000237CC File Offset: 0x000219CC
+		// Token: 0x06000439 RID: 1081 RVA: 0x00024C04 File Offset: 0x00022E04
 		[NullableContext(1)]
 		private JsonTypeInfo<QQParam> Create_QQParam(JsonSerializerOptions options)
 		{
@@ -7320,7 +7454,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000426 RID: 1062 RVA: 0x00023894 File Offset: 0x00021A94
+		// Token: 0x0600043A RID: 1082 RVA: 0x00024CCC File Offset: 0x00022ECC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] QQParamPropInit(JsonSerializerOptions options)
 		{
@@ -7372,8 +7506,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000086 RID: 134
-		// (get) Token: 0x06000427 RID: 1063 RVA: 0x00023AA0 File Offset: 0x00021CA0
+		// Token: 0x17000087 RID: 135
+		// (get) Token: 0x0600043B RID: 1083 RVA: 0x00024ED8 File Offset: 0x000230D8
 		public JsonTypeInfo<SdkPlatformConfig> SdkPlatformConfig
 		{
 			get
@@ -7387,7 +7521,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000428 RID: 1064 RVA: 0x00023ADC File Offset: 0x00021CDC
+		// Token: 0x0600043C RID: 1084 RVA: 0x00024F14 File Offset: 0x00023114
 		[NullableContext(1)]
 		private JsonTypeInfo<SdkPlatformConfig> Create_SdkPlatformConfig(JsonSerializerOptions options)
 		{
@@ -7409,7 +7543,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000429 RID: 1065 RVA: 0x00023BA4 File Offset: 0x00021DA4
+		// Token: 0x0600043D RID: 1085 RVA: 0x00024FDC File Offset: 0x000231DC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] SdkPlatformConfigPropInit(JsonSerializerOptions options)
 		{
@@ -7782,8 +7916,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000087 RID: 135
-		// (get) Token: 0x0600042A RID: 1066 RVA: 0x00024BB8 File Offset: 0x00022DB8
+		// Token: 0x17000088 RID: 136
+		// (get) Token: 0x0600043E RID: 1086 RVA: 0x00025FF0 File Offset: 0x000241F0
 		public JsonTypeInfo<ShareSDKParam> ShareSDKParam
 		{
 			get
@@ -7797,7 +7931,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600042B RID: 1067 RVA: 0x00024BF4 File Offset: 0x00022DF4
+		// Token: 0x0600043F RID: 1087 RVA: 0x0002602C File Offset: 0x0002422C
 		[NullableContext(1)]
 		private JsonTypeInfo<ShareSDKParam> Create_ShareSDKParam(JsonSerializerOptions options)
 		{
@@ -7819,7 +7953,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600042C RID: 1068 RVA: 0x00024CBC File Offset: 0x00022EBC
+		// Token: 0x06000440 RID: 1088 RVA: 0x000260F4 File Offset: 0x000242F4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ShareSDKParamPropInit(JsonSerializerOptions options)
 		{
@@ -7871,8 +8005,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000088 RID: 136
-		// (get) Token: 0x0600042D RID: 1069 RVA: 0x00024EC8 File Offset: 0x000230C8
+		// Token: 0x17000089 RID: 137
+		// (get) Token: 0x06000441 RID: 1089 RVA: 0x00026300 File Offset: 0x00024500
 		public JsonTypeInfo<ThirdLogin> ThirdLogin
 		{
 			get
@@ -7886,7 +8020,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600042E RID: 1070 RVA: 0x00024F04 File Offset: 0x00023104
+		// Token: 0x06000442 RID: 1090 RVA: 0x0002633C File Offset: 0x0002453C
 		[NullableContext(1)]
 		private JsonTypeInfo<ThirdLogin> Create_ThirdLogin(JsonSerializerOptions options)
 		{
@@ -7908,7 +8042,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600042F RID: 1071 RVA: 0x00024FCC File Offset: 0x000231CC
+		// Token: 0x06000443 RID: 1091 RVA: 0x00026404 File Offset: 0x00024604
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ThirdLoginPropInit(JsonSerializerOptions options)
 		{
@@ -8334,8 +8468,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000089 RID: 137
-		// (get) Token: 0x06000430 RID: 1072 RVA: 0x000262E4 File Offset: 0x000244E4
+		// Token: 0x1700008A RID: 138
+		// (get) Token: 0x06000444 RID: 1092 RVA: 0x0002771C File Offset: 0x0002591C
 		public JsonTypeInfo<ThirdShareParams> ThirdShareParams
 		{
 			get
@@ -8349,7 +8483,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000431 RID: 1073 RVA: 0x00026320 File Offset: 0x00024520
+		// Token: 0x06000445 RID: 1093 RVA: 0x00027758 File Offset: 0x00025958
 		[NullableContext(1)]
 		private JsonTypeInfo<ThirdShareParams> Create_ThirdShareParams(JsonSerializerOptions options)
 		{
@@ -8371,7 +8505,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000432 RID: 1074 RVA: 0x000263E8 File Offset: 0x000245E8
+		// Token: 0x06000446 RID: 1094 RVA: 0x00027820 File Offset: 0x00025A20
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ThirdShareParamsPropInit(JsonSerializerOptions options)
 		{
@@ -8533,8 +8667,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008A RID: 138
-		// (get) Token: 0x06000433 RID: 1075 RVA: 0x00026AEC File Offset: 0x00024CEC
+		// Token: 0x1700008B RID: 139
+		// (get) Token: 0x06000447 RID: 1095 RVA: 0x00027F24 File Offset: 0x00026124
 		public JsonTypeInfo<WeChatParam> WeChatParam
 		{
 			get
@@ -8548,7 +8682,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000434 RID: 1076 RVA: 0x00026B28 File Offset: 0x00024D28
+		// Token: 0x06000448 RID: 1096 RVA: 0x00027F60 File Offset: 0x00026160
 		[NullableContext(1)]
 		private JsonTypeInfo<WeChatParam> Create_WeChatParam(JsonSerializerOptions options)
 		{
@@ -8570,7 +8704,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000435 RID: 1077 RVA: 0x00026BF0 File Offset: 0x00024DF0
+		// Token: 0x06000449 RID: 1097 RVA: 0x00028028 File Offset: 0x00026228
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] WeChatParamPropInit(JsonSerializerOptions options)
 		{
@@ -8622,8 +8756,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008B RID: 139
-		// (get) Token: 0x06000436 RID: 1078 RVA: 0x00026DFC File Offset: 0x00024FFC
+		// Token: 0x1700008C RID: 140
+		// (get) Token: 0x0600044A RID: 1098 RVA: 0x00028234 File Offset: 0x00026434
 		public JsonTypeInfo<WeiboParam> WeiboParam
 		{
 			get
@@ -8637,7 +8771,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000437 RID: 1079 RVA: 0x00026E38 File Offset: 0x00025038
+		// Token: 0x0600044B RID: 1099 RVA: 0x00028270 File Offset: 0x00026470
 		[NullableContext(1)]
 		private JsonTypeInfo<WeiboParam> Create_WeiboParam(JsonSerializerOptions options)
 		{
@@ -8659,7 +8793,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000438 RID: 1080 RVA: 0x00026F00 File Offset: 0x00025100
+		// Token: 0x0600044C RID: 1100 RVA: 0x00028338 File Offset: 0x00026538
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] WeiboParamPropInit(JsonSerializerOptions options)
 		{
@@ -8711,8 +8845,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008C RID: 140
-		// (get) Token: 0x06000439 RID: 1081 RVA: 0x0002710C File Offset: 0x0002530C
+		// Token: 0x1700008D RID: 141
+		// (get) Token: 0x0600044D RID: 1101 RVA: 0x00028544 File Offset: 0x00026744
 		public JsonTypeInfo<PreDownloadConfig> PreDownloadConfig
 		{
 			get
@@ -8726,7 +8860,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600043A RID: 1082 RVA: 0x00027148 File Offset: 0x00025348
+		// Token: 0x0600044E RID: 1102 RVA: 0x00028580 File Offset: 0x00026780
 		[NullableContext(1)]
 		private JsonTypeInfo<PreDownloadConfig> Create_PreDownloadConfig(JsonSerializerOptions options)
 		{
@@ -8748,7 +8882,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600043B RID: 1083 RVA: 0x00027210 File Offset: 0x00025410
+		// Token: 0x0600044F RID: 1103 RVA: 0x00028648 File Offset: 0x00026848
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] PreDownloadConfigPropInit(JsonSerializerOptions options)
 		{
@@ -8820,8 +8954,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008D RID: 141
-		// (get) Token: 0x0600043C RID: 1084 RVA: 0x00027508 File Offset: 0x00025708
+		// Token: 0x1700008E RID: 142
+		// (get) Token: 0x06000450 RID: 1104 RVA: 0x00028940 File Offset: 0x00026B40
 		public JsonTypeInfo<RemoteConfig> RemoteConfig
 		{
 			get
@@ -8835,7 +8969,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600043D RID: 1085 RVA: 0x00027544 File Offset: 0x00025744
+		// Token: 0x06000451 RID: 1105 RVA: 0x0002897C File Offset: 0x00026B7C
 		[NullableContext(1)]
 		private JsonTypeInfo<RemoteConfig> Create_RemoteConfig(JsonSerializerOptions options)
 		{
@@ -8857,7 +8991,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600043E RID: 1086 RVA: 0x0002760C File Offset: 0x0002580C
+		// Token: 0x06000452 RID: 1106 RVA: 0x00028A44 File Offset: 0x00026C44
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RemoteConfigPropInit(JsonSerializerOptions options)
 		{
@@ -9069,8 +9203,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008E RID: 142
-		// (get) Token: 0x0600043F RID: 1087 RVA: 0x00027EC8 File Offset: 0x000260C8
+		// Token: 0x1700008F RID: 143
+		// (get) Token: 0x06000453 RID: 1107 RVA: 0x00029300 File Offset: 0x00027500
 		public JsonTypeInfo<RemoteVersionConfig> RemoteVersionConfig
 		{
 			get
@@ -9084,7 +9218,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000440 RID: 1088 RVA: 0x00027F04 File Offset: 0x00026104
+		// Token: 0x06000454 RID: 1108 RVA: 0x0002933C File Offset: 0x0002753C
 		[NullableContext(1)]
 		private JsonTypeInfo<RemoteVersionConfig> Create_RemoteVersionConfig(JsonSerializerOptions options)
 		{
@@ -9106,7 +9240,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000441 RID: 1089 RVA: 0x00027FCC File Offset: 0x000261CC
+		// Token: 0x06000455 RID: 1109 RVA: 0x00029404 File Offset: 0x00027604
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] RemoteVersionConfigPropInit(JsonSerializerOptions options)
 		{
@@ -9227,8 +9361,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x1700008F RID: 143
-		// (get) Token: 0x06000442 RID: 1090 RVA: 0x000284C0 File Offset: 0x000266C0
+		// Token: 0x17000090 RID: 144
+		// (get) Token: 0x06000456 RID: 1110 RVA: 0x000298F8 File Offset: 0x00027AF8
 		public JsonTypeInfo<LoginPlayerInfo> LoginPlayerInfo
 		{
 			get
@@ -9242,7 +9376,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000443 RID: 1091 RVA: 0x000284FC File Offset: 0x000266FC
+		// Token: 0x06000457 RID: 1111 RVA: 0x00029934 File Offset: 0x00027B34
 		[NullableContext(1)]
 		private JsonTypeInfo<LoginPlayerInfo> Create_LoginPlayerInfo(JsonSerializerOptions options)
 		{
@@ -9264,7 +9398,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000444 RID: 1092 RVA: 0x000285C4 File Offset: 0x000267C4
+		// Token: 0x06000458 RID: 1112 RVA: 0x000299FC File Offset: 0x00027BFC
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] LoginPlayerInfoPropInit(JsonSerializerOptions options)
 		{
@@ -9380,8 +9514,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000090 RID: 144
-		// (get) Token: 0x06000445 RID: 1093 RVA: 0x00028A94 File Offset: 0x00026C94
+		// Token: 0x17000091 RID: 145
+		// (get) Token: 0x06000459 RID: 1113 RVA: 0x00029ECC File Offset: 0x000280CC
 		public JsonTypeInfo<UserRegionInfo> UserRegionInfo
 		{
 			get
@@ -9395,7 +9529,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000446 RID: 1094 RVA: 0x00028AD0 File Offset: 0x00026CD0
+		// Token: 0x0600045A RID: 1114 RVA: 0x00029F08 File Offset: 0x00028108
 		[NullableContext(1)]
 		private JsonTypeInfo<UserRegionInfo> Create_UserRegionInfo(JsonSerializerOptions options)
 		{
@@ -9417,7 +9551,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000447 RID: 1095 RVA: 0x00028B98 File Offset: 0x00026D98
+		// Token: 0x0600045B RID: 1115 RVA: 0x00029FD0 File Offset: 0x000281D0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] UserRegionInfoPropInit(JsonSerializerOptions options)
 		{
@@ -9487,8 +9621,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000091 RID: 145
-		// (get) Token: 0x06000448 RID: 1096 RVA: 0x00028E7C File Offset: 0x0002707C
+		// Token: 0x17000092 RID: 146
+		// (get) Token: 0x0600045C RID: 1116 RVA: 0x0002A2B4 File Offset: 0x000284B4
 		public JsonTypeInfo<HttpSubPackageResult> HttpSubPackageResult
 		{
 			get
@@ -9502,7 +9636,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000449 RID: 1097 RVA: 0x00028EB8 File Offset: 0x000270B8
+		// Token: 0x0600045D RID: 1117 RVA: 0x0002A2F0 File Offset: 0x000284F0
 		[NullableContext(1)]
 		private JsonTypeInfo<HttpSubPackageResult> Create_HttpSubPackageResult(JsonSerializerOptions options)
 		{
@@ -9524,7 +9658,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600044A RID: 1098 RVA: 0x00028F80 File Offset: 0x00027180
+		// Token: 0x0600045E RID: 1118 RVA: 0x0002A3B8 File Offset: 0x000285B8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] HttpSubPackageResultPropInit(JsonSerializerOptions options)
 		{
@@ -9716,8 +9850,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000092 RID: 146
-		// (get) Token: 0x0600044B RID: 1099 RVA: 0x000297C8 File Offset: 0x000279C8
+		// Token: 0x17000093 RID: 147
+		// (get) Token: 0x0600045F RID: 1119 RVA: 0x0002AC00 File Offset: 0x00028E00
 		public JsonTypeInfo<ResourcePackagePositionData> ResourcePackagePositionData
 		{
 			get
@@ -9731,7 +9865,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600044C RID: 1100 RVA: 0x00029804 File Offset: 0x00027A04
+		// Token: 0x06000460 RID: 1120 RVA: 0x0002AC3C File Offset: 0x00028E3C
 		[NullableContext(1)]
 		private JsonTypeInfo<ResourcePackagePositionData> Create_ResourcePackagePositionData(JsonSerializerOptions options)
 		{
@@ -9753,7 +9887,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600044D RID: 1101 RVA: 0x000298CC File Offset: 0x00027ACC
+		// Token: 0x06000461 RID: 1121 RVA: 0x0002AD04 File Offset: 0x00028F04
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ResourcePackagePositionDataPropInit(JsonSerializerOptions options)
 		{
@@ -9841,8 +9975,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000093 RID: 147
-		// (get) Token: 0x0600044E RID: 1102 RVA: 0x00029C7C File Offset: 0x00027E7C
+		// Token: 0x17000094 RID: 148
+		// (get) Token: 0x06000462 RID: 1122 RVA: 0x0002B0B4 File Offset: 0x000292B4
 		public JsonTypeInfo<PakListConfig> PakListConfig
 		{
 			get
@@ -9856,7 +9990,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600044F RID: 1103 RVA: 0x00029CB8 File Offset: 0x00027EB8
+		// Token: 0x06000463 RID: 1123 RVA: 0x0002B0F0 File Offset: 0x000292F0
 		[NullableContext(1)]
 		private JsonTypeInfo<PakListConfig> Create_PakListConfig(JsonSerializerOptions options)
 		{
@@ -9878,7 +10012,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000450 RID: 1104 RVA: 0x00029D80 File Offset: 0x00027F80
+		// Token: 0x06000464 RID: 1124 RVA: 0x0002B1B8 File Offset: 0x000293B8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] PakListConfigPropInit(JsonSerializerOptions options)
 		{
@@ -9972,8 +10106,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000094 RID: 148
-		// (get) Token: 0x06000451 RID: 1105 RVA: 0x0002A178 File Offset: 0x00028378
+		// Token: 0x17000095 RID: 149
+		// (get) Token: 0x06000465 RID: 1125 RVA: 0x0002B5B0 File Offset: 0x000297B0
 		public JsonTypeInfo<VersionItem> VersionItem
 		{
 			get
@@ -9987,7 +10121,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000452 RID: 1106 RVA: 0x0002A1B4 File Offset: 0x000283B4
+		// Token: 0x06000466 RID: 1126 RVA: 0x0002B5EC File Offset: 0x000297EC
 		[NullableContext(1)]
 		private JsonTypeInfo<VersionItem> Create_VersionItem(JsonSerializerOptions options)
 		{
@@ -10009,7 +10143,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000453 RID: 1107 RVA: 0x0002A27C File Offset: 0x0002847C
+		// Token: 0x06000467 RID: 1127 RVA: 0x0002B6B4 File Offset: 0x000298B4
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] VersionItemPropInit(JsonSerializerOptions options)
 		{
@@ -10088,8 +10222,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000095 RID: 149
-		// (get) Token: 0x06000454 RID: 1108 RVA: 0x0002A584 File Offset: 0x00028784
+		// Token: 0x17000096 RID: 150
+		// (get) Token: 0x06000468 RID: 1128 RVA: 0x0002B9BC File Offset: 0x00029BBC
 		public JsonTypeInfo<HttpResult> HttpResult
 		{
 			get
@@ -10103,7 +10237,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000455 RID: 1109 RVA: 0x0002A5C0 File Offset: 0x000287C0
+		// Token: 0x06000469 RID: 1129 RVA: 0x0002B9F8 File Offset: 0x00029BF8
 		[NullableContext(1)]
 		private JsonTypeInfo<HttpResult> Create_HttpResult(JsonSerializerOptions options)
 		{
@@ -10125,7 +10259,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000456 RID: 1110 RVA: 0x0002A688 File Offset: 0x00028888
+		// Token: 0x0600046A RID: 1130 RVA: 0x0002BAC0 File Offset: 0x00029CC0
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] HttpResultPropInit(JsonSerializerOptions options)
 		{
@@ -10429,8 +10563,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000096 RID: 150
-		// (get) Token: 0x06000457 RID: 1111 RVA: 0x0002B3D8 File Offset: 0x000295D8
+		// Token: 0x17000097 RID: 151
+		// (get) Token: 0x0600046B RID: 1131 RVA: 0x0002C810 File Offset: 0x0002AA10
 		public JsonTypeInfo<LoginNoticeEx> LoginNoticeEx
 		{
 			get
@@ -10444,7 +10578,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000458 RID: 1112 RVA: 0x0002B414 File Offset: 0x00029614
+		// Token: 0x0600046C RID: 1132 RVA: 0x0002C84C File Offset: 0x0002AA4C
 		[NullableContext(1)]
 		private JsonTypeInfo<LoginNoticeEx> Create_LoginNoticeEx(JsonSerializerOptions options)
 		{
@@ -10466,7 +10600,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x06000459 RID: 1113 RVA: 0x0002B4DC File Offset: 0x000296DC
+		// Token: 0x0600046D RID: 1133 RVA: 0x0002C914 File Offset: 0x0002AB14
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] LoginNoticeExPropInit(JsonSerializerOptions options)
 		{
@@ -10582,8 +10716,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000097 RID: 151
-		// (get) Token: 0x0600045A RID: 1114 RVA: 0x0002B9AC File Offset: 0x00029BAC
+		// Token: 0x17000098 RID: 152
+		// (get) Token: 0x0600046E RID: 1134 RVA: 0x0002CDE4 File Offset: 0x0002AFE4
 		public JsonTypeInfo<Result> Result
 		{
 			get
@@ -10597,7 +10731,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600045B RID: 1115 RVA: 0x0002B9E8 File Offset: 0x00029BE8
+		// Token: 0x0600046F RID: 1135 RVA: 0x0002CE20 File Offset: 0x0002B020
 		[NullableContext(1)]
 		private JsonTypeInfo<Result> Create_Result(JsonSerializerOptions options)
 		{
@@ -10619,7 +10753,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600045C RID: 1116 RVA: 0x0002BAB0 File Offset: 0x00029CB0
+		// Token: 0x06000470 RID: 1136 RVA: 0x0002CEE8 File Offset: 0x0002B0E8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ResultPropInit(JsonSerializerOptions options)
 		{
@@ -10647,8 +10781,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000098 RID: 152
-		// (get) Token: 0x0600045D RID: 1117 RVA: 0x0002BBAC File Offset: 0x00029DAC
+		// Token: 0x17000099 RID: 153
+		// (get) Token: 0x06000471 RID: 1137 RVA: 0x0002CFE4 File Offset: 0x0002B1E4
 		public JsonTypeInfo<ResultData> ResultData
 		{
 			get
@@ -10662,7 +10796,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600045E RID: 1118 RVA: 0x0002BBE8 File Offset: 0x00029DE8
+		// Token: 0x06000472 RID: 1138 RVA: 0x0002D020 File Offset: 0x0002B220
 		[NullableContext(1)]
 		private JsonTypeInfo<ResultData> Create_ResultData(JsonSerializerOptions options)
 		{
@@ -10684,7 +10818,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x0600045F RID: 1119 RVA: 0x0002BCB0 File Offset: 0x00029EB0
+		// Token: 0x06000473 RID: 1139 RVA: 0x0002D0E8 File Offset: 0x0002B2E8
 		[NullableContext(1)]
 		private static JsonPropertyInfo[] ResultDataPropInit(JsonSerializerOptions options)
 		{
@@ -10714,8 +10848,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return array;
 		}
 
-		// Token: 0x17000099 RID: 153
-		// (get) Token: 0x06000460 RID: 1120 RVA: 0x0002BDC0 File Offset: 0x00029FC0
+		// Token: 0x1700009A RID: 154
+		// (get) Token: 0x06000474 RID: 1140 RVA: 0x0002D1F8 File Offset: 0x0002B3F8
 		public JsonTypeInfo<Dictionary<int, double>> DictionaryInt32Double
 		{
 			get
@@ -10729,7 +10863,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000461 RID: 1121 RVA: 0x0002BDFC File Offset: 0x00029FFC
+		// Token: 0x06000475 RID: 1141 RVA: 0x0002D234 File Offset: 0x0002B434
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<int, double>> Create_DictionaryInt32Double(JsonSerializerOptions options)
 		{
@@ -10747,8 +10881,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009A RID: 154
-		// (get) Token: 0x06000462 RID: 1122 RVA: 0x0002BE64 File Offset: 0x0002A064
+		// Token: 0x1700009B RID: 155
+		// (get) Token: 0x06000476 RID: 1142 RVA: 0x0002D29C File Offset: 0x0002B49C
 		public JsonTypeInfo<Dictionary<string, double>> DictionaryStringDouble
 		{
 			get
@@ -10762,7 +10896,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000463 RID: 1123 RVA: 0x0002BEA0 File Offset: 0x0002A0A0
+		// Token: 0x06000477 RID: 1143 RVA: 0x0002D2D8 File Offset: 0x0002B4D8
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, double>> Create_DictionaryStringDouble(JsonSerializerOptions options)
 		{
@@ -10780,8 +10914,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009B RID: 155
-		// (get) Token: 0x06000464 RID: 1124 RVA: 0x0002BF08 File Offset: 0x0002A108
+		// Token: 0x1700009C RID: 156
+		// (get) Token: 0x06000478 RID: 1144 RVA: 0x0002D340 File Offset: 0x0002B540
 		public JsonTypeInfo<Dictionary<string, IUdpRegion>> DictionaryStringIUdpRegion
 		{
 			get
@@ -10795,7 +10929,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000465 RID: 1125 RVA: 0x0002BF44 File Offset: 0x0002A144
+		// Token: 0x06000479 RID: 1145 RVA: 0x0002D37C File Offset: 0x0002B57C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, IUdpRegion>> Create_DictionaryStringIUdpRegion(JsonSerializerOptions options)
 		{
@@ -10813,8 +10947,41 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009C RID: 156
-		// (get) Token: 0x06000466 RID: 1126 RVA: 0x0002BFAC File Offset: 0x0002A1AC
+		// Token: 0x1700009D RID: 157
+		// (get) Token: 0x0600047A RID: 1146 RVA: 0x0002D3E4 File Offset: 0x0002B5E4
+		public JsonTypeInfo<Dictionary<string, VulkanSettingConfig>> DictionaryStringVulkanSettingConfig
+		{
+			get
+			{
+				JsonTypeInfo<Dictionary<string, VulkanSettingConfig>> result;
+				if ((result = this._DictionaryStringVulkanSettingConfig) == null)
+				{
+					result = (this._DictionaryStringVulkanSettingConfig = (JsonTypeInfo<Dictionary<string, VulkanSettingConfig>>)base.Options.GetTypeInfo(typeof(Dictionary<string, VulkanSettingConfig>)));
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x0600047B RID: 1147 RVA: 0x0002D420 File Offset: 0x0002B620
+		[NullableContext(1)]
+		private JsonTypeInfo<Dictionary<string, VulkanSettingConfig>> Create_DictionaryStringVulkanSettingConfig(JsonSerializerOptions options)
+		{
+			JsonTypeInfo<Dictionary<string, VulkanSettingConfig>> jsonTypeInfo;
+			if (!LauncherJsonSourceGenContext.TryGetTypeInfoForRuntimeCustomConverter<Dictionary<string, VulkanSettingConfig>>(options, out jsonTypeInfo))
+			{
+				JsonCollectionInfoValues<Dictionary<string, VulkanSettingConfig>> jsonCollectionInfoValues = new JsonCollectionInfoValues<Dictionary<string, VulkanSettingConfig>>();
+				jsonCollectionInfoValues.ObjectCreator = (() => new Dictionary<string, VulkanSettingConfig>());
+				jsonCollectionInfoValues.SerializeHandler = null;
+				JsonCollectionInfoValues<Dictionary<string, VulkanSettingConfig>> collectionInfo = jsonCollectionInfoValues;
+				jsonTypeInfo = JsonMetadataServices.CreateDictionaryInfo<Dictionary<string, VulkanSettingConfig>, string, VulkanSettingConfig>(options, collectionInfo);
+				jsonTypeInfo.NumberHandling = null;
+			}
+			jsonTypeInfo.OriginatingResolver = this;
+			return jsonTypeInfo;
+		}
+
+		// Token: 0x1700009E RID: 158
+		// (get) Token: 0x0600047C RID: 1148 RVA: 0x0002D488 File Offset: 0x0002B688
 		public JsonTypeInfo<Dictionary<string, PatchManifestJson>> DictionaryStringPatchManifestJson
 		{
 			get
@@ -10828,7 +10995,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000467 RID: 1127 RVA: 0x0002BFE8 File Offset: 0x0002A1E8
+		// Token: 0x0600047D RID: 1149 RVA: 0x0002D4C4 File Offset: 0x0002B6C4
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, PatchManifestJson>> Create_DictionaryStringPatchManifestJson(JsonSerializerOptions options)
 		{
@@ -10846,8 +11013,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009D RID: 157
-		// (get) Token: 0x06000468 RID: 1128 RVA: 0x0002C050 File Offset: 0x0002A250
+		// Token: 0x1700009F RID: 159
+		// (get) Token: 0x0600047E RID: 1150 RVA: 0x0002D52C File Offset: 0x0002B72C
 		public JsonTypeInfo<Dictionary<string, VideoItem>> DictionaryStringVideoItem
 		{
 			get
@@ -10861,7 +11028,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000469 RID: 1129 RVA: 0x0002C08C File Offset: 0x0002A28C
+		// Token: 0x0600047F RID: 1151 RVA: 0x0002D568 File Offset: 0x0002B768
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, VideoItem>> Create_DictionaryStringVideoItem(JsonSerializerOptions options)
 		{
@@ -10879,8 +11046,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009E RID: 158
-		// (get) Token: 0x0600046A RID: 1130 RVA: 0x0002C0F4 File Offset: 0x0002A2F4
+		// Token: 0x170000A0 RID: 160
+		// (get) Token: 0x06000480 RID: 1152 RVA: 0x0002D5D0 File Offset: 0x0002B7D0
 		public JsonTypeInfo<Dictionary<string, CsLinkEntry>> DictionaryStringCsLinkEntry
 		{
 			get
@@ -10894,7 +11061,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600046B RID: 1131 RVA: 0x0002C130 File Offset: 0x0002A330
+		// Token: 0x06000481 RID: 1153 RVA: 0x0002D60C File Offset: 0x0002B80C
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, CsLinkEntry>> Create_DictionaryStringCsLinkEntry(JsonSerializerOptions options)
 		{
@@ -10912,8 +11079,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x1700009F RID: 159
-		// (get) Token: 0x0600046C RID: 1132 RVA: 0x0002C198 File Offset: 0x0002A398
+		// Token: 0x170000A1 RID: 161
+		// (get) Token: 0x06000482 RID: 1154 RVA: 0x0002D674 File Offset: 0x0002B874
 		public JsonTypeInfo<Dictionary<string, VersionItem>> DictionaryStringVersionItem
 		{
 			get
@@ -10927,7 +11094,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600046D RID: 1133 RVA: 0x0002C1D4 File Offset: 0x0002A3D4
+		// Token: 0x06000483 RID: 1155 RVA: 0x0002D6B0 File Offset: 0x0002B8B0
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, VersionItem>> Create_DictionaryStringVersionItem(JsonSerializerOptions options)
 		{
@@ -10945,8 +11112,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A0 RID: 160
-		// (get) Token: 0x0600046E RID: 1134 RVA: 0x0002C23C File Offset: 0x0002A43C
+		// Token: 0x170000A2 RID: 162
+		// (get) Token: 0x06000484 RID: 1156 RVA: 0x0002D718 File Offset: 0x0002B918
 		public JsonTypeInfo<Dictionary<string, object>> DictionaryStringObject
 		{
 			get
@@ -10960,7 +11127,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600046F RID: 1135 RVA: 0x0002C278 File Offset: 0x0002A478
+		// Token: 0x06000485 RID: 1157 RVA: 0x0002D754 File Offset: 0x0002B954
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, object>> Create_DictionaryStringObject(JsonSerializerOptions options)
 		{
@@ -10978,8 +11145,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A1 RID: 161
-		// (get) Token: 0x06000470 RID: 1136 RVA: 0x0002C2E0 File Offset: 0x0002A4E0
+		// Token: 0x170000A3 RID: 163
+		// (get) Token: 0x06000486 RID: 1158 RVA: 0x0002D7BC File Offset: 0x0002B9BC
 		public JsonTypeInfo<Dictionary<string, string>> DictionaryStringString
 		{
 			get
@@ -10993,7 +11160,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000471 RID: 1137 RVA: 0x0002C31C File Offset: 0x0002A51C
+		// Token: 0x06000487 RID: 1159 RVA: 0x0002D7F8 File Offset: 0x0002B9F8
 		[NullableContext(1)]
 		private JsonTypeInfo<Dictionary<string, string>> Create_DictionaryStringString(JsonSerializerOptions options)
 		{
@@ -11011,8 +11178,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A2 RID: 162
-		// (get) Token: 0x06000472 RID: 1138 RVA: 0x0002C384 File Offset: 0x0002A584
+		// Token: 0x170000A4 RID: 164
+		// (get) Token: 0x06000488 RID: 1160 RVA: 0x0002D860 File Offset: 0x0002BA60
 		public JsonTypeInfo<List<NetHostInfo>> ListNetHostInfo
 		{
 			get
@@ -11026,7 +11193,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000473 RID: 1139 RVA: 0x0002C3C0 File Offset: 0x0002A5C0
+		// Token: 0x06000489 RID: 1161 RVA: 0x0002D89C File Offset: 0x0002BA9C
 		[NullableContext(1)]
 		private JsonTypeInfo<List<NetHostInfo>> Create_ListNetHostInfo(JsonSerializerOptions options)
 		{
@@ -11044,8 +11211,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A3 RID: 163
-		// (get) Token: 0x06000474 RID: 1140 RVA: 0x0002C428 File Offset: 0x0002A628
+		// Token: 0x170000A5 RID: 165
+		// (get) Token: 0x0600048A RID: 1162 RVA: 0x0002D904 File Offset: 0x0002BB04
 		public JsonTypeInfo<List<ICdnScoreFormula>> ListICdnScoreFormula
 		{
 			get
@@ -11059,7 +11226,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000475 RID: 1141 RVA: 0x0002C464 File Offset: 0x0002A664
+		// Token: 0x0600048B RID: 1163 RVA: 0x0002D940 File Offset: 0x0002BB40
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ICdnScoreFormula>> Create_ListICdnScoreFormula(JsonSerializerOptions options)
 		{
@@ -11077,8 +11244,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A4 RID: 164
-		// (get) Token: 0x06000476 RID: 1142 RVA: 0x0002C4CC File Offset: 0x0002A6CC
+		// Token: 0x170000A6 RID: 166
+		// (get) Token: 0x0600048C RID: 1164 RVA: 0x0002D9A8 File Offset: 0x0002BBA8
 		public JsonTypeInfo<List<ICdnScoreStep>> ListICdnScoreStep
 		{
 			get
@@ -11092,7 +11259,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000477 RID: 1143 RVA: 0x0002C508 File Offset: 0x0002A708
+		// Token: 0x0600048D RID: 1165 RVA: 0x0002D9E4 File Offset: 0x0002BBE4
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ICdnScoreStep>> Create_ListICdnScoreStep(JsonSerializerOptions options)
 		{
@@ -11110,8 +11277,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A5 RID: 165
-		// (get) Token: 0x06000478 RID: 1144 RVA: 0x0002C570 File Offset: 0x0002A770
+		// Token: 0x170000A7 RID: 167
+		// (get) Token: 0x0600048E RID: 1166 RVA: 0x0002DA4C File Offset: 0x0002BC4C
 		public JsonTypeInfo<List<ICdnUrlData>> ListICdnUrlData
 		{
 			get
@@ -11125,7 +11292,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000479 RID: 1145 RVA: 0x0002C5AC File Offset: 0x0002A7AC
+		// Token: 0x0600048F RID: 1167 RVA: 0x0002DA88 File Offset: 0x0002BC88
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ICdnUrlData>> Create_ListICdnUrlData(JsonSerializerOptions options)
 		{
@@ -11143,8 +11310,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A6 RID: 166
-		// (get) Token: 0x0600047A RID: 1146 RVA: 0x0002C614 File Offset: 0x0002A814
+		// Token: 0x170000A8 RID: 168
+		// (get) Token: 0x06000490 RID: 1168 RVA: 0x0002DAF0 File Offset: 0x0002BCF0
 		public JsonTypeInfo<List<IGrayBoxItemConfig>> ListIGrayBoxItemConfig
 		{
 			get
@@ -11158,7 +11325,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600047B RID: 1147 RVA: 0x0002C650 File Offset: 0x0002A850
+		// Token: 0x06000491 RID: 1169 RVA: 0x0002DB2C File Offset: 0x0002BD2C
 		[NullableContext(1)]
 		private JsonTypeInfo<List<IGrayBoxItemConfig>> Create_ListIGrayBoxItemConfig(JsonSerializerOptions options)
 		{
@@ -11176,8 +11343,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A7 RID: 167
-		// (get) Token: 0x0600047C RID: 1148 RVA: 0x0002C6B8 File Offset: 0x0002A8B8
+		// Token: 0x170000A9 RID: 169
+		// (get) Token: 0x06000492 RID: 1170 RVA: 0x0002DB94 File Offset: 0x0002BD94
 		public JsonTypeInfo<List<ILoginServersData>> ListILoginServersData
 		{
 			get
@@ -11191,7 +11358,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600047D RID: 1149 RVA: 0x0002C6F4 File Offset: 0x0002A8F4
+		// Token: 0x06000493 RID: 1171 RVA: 0x0002DBD0 File Offset: 0x0002BDD0
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ILoginServersData>> Create_ListILoginServersData(JsonSerializerOptions options)
 		{
@@ -11209,8 +11376,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A8 RID: 168
-		// (get) Token: 0x0600047E RID: 1150 RVA: 0x0002C75C File Offset: 0x0002A95C
+		// Token: 0x170000AA RID: 170
+		// (get) Token: 0x06000494 RID: 1172 RVA: 0x0002DC38 File Offset: 0x0002BE38
 		public JsonTypeInfo<List<IUdpProbe>> ListIUdpProbe
 		{
 			get
@@ -11224,7 +11391,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600047F RID: 1151 RVA: 0x0002C798 File Offset: 0x0002A998
+		// Token: 0x06000495 RID: 1173 RVA: 0x0002DC74 File Offset: 0x0002BE74
 		[NullableContext(1)]
 		private JsonTypeInfo<List<IUdpProbe>> Create_ListIUdpProbe(JsonSerializerOptions options)
 		{
@@ -11242,8 +11409,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000A9 RID: 169
-		// (get) Token: 0x06000480 RID: 1152 RVA: 0x0002C800 File Offset: 0x0002AA00
+		// Token: 0x170000AB RID: 171
+		// (get) Token: 0x06000496 RID: 1174 RVA: 0x0002DCDC File Offset: 0x0002BEDC
 		public JsonTypeInfo<List<IBlockDataContent>> ListIBlockDataContent
 		{
 			get
@@ -11257,7 +11424,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000481 RID: 1153 RVA: 0x0002C83C File Offset: 0x0002AA3C
+		// Token: 0x06000497 RID: 1175 RVA: 0x0002DD18 File Offset: 0x0002BF18
 		[NullableContext(1)]
 		private JsonTypeInfo<List<IBlockDataContent>> Create_ListIBlockDataContent(JsonSerializerOptions options)
 		{
@@ -11275,8 +11442,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AA RID: 170
-		// (get) Token: 0x06000482 RID: 1154 RVA: 0x0002C8A4 File Offset: 0x0002AAA4
+		// Token: 0x170000AC RID: 172
+		// (get) Token: 0x06000498 RID: 1176 RVA: 0x0002DD80 File Offset: 0x0002BF80
 		public JsonTypeInfo<List<IQueryGoodsResponseData>> ListIQueryGoodsResponseData
 		{
 			get
@@ -11290,7 +11457,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000483 RID: 1155 RVA: 0x0002C8E0 File Offset: 0x0002AAE0
+		// Token: 0x06000499 RID: 1177 RVA: 0x0002DDBC File Offset: 0x0002BFBC
 		[NullableContext(1)]
 		private JsonTypeInfo<List<IQueryGoodsResponseData>> Create_ListIQueryGoodsResponseData(JsonSerializerOptions options)
 		{
@@ -11308,8 +11475,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AB RID: 171
-		// (get) Token: 0x06000484 RID: 1156 RVA: 0x0002C948 File Offset: 0x0002AB48
+		// Token: 0x170000AD RID: 173
+		// (get) Token: 0x0600049A RID: 1178 RVA: 0x0002DE24 File Offset: 0x0002C024
 		public JsonTypeInfo<List<UserRegionInfo>> ListUserRegionInfo
 		{
 			get
@@ -11323,7 +11490,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000485 RID: 1157 RVA: 0x0002C984 File Offset: 0x0002AB84
+		// Token: 0x0600049B RID: 1179 RVA: 0x0002DE60 File Offset: 0x0002C060
 		[NullableContext(1)]
 		private JsonTypeInfo<List<UserRegionInfo>> Create_ListUserRegionInfo(JsonSerializerOptions options)
 		{
@@ -11341,8 +11508,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AC RID: 172
-		// (get) Token: 0x06000486 RID: 1158 RVA: 0x0002C9EC File Offset: 0x0002ABEC
+		// Token: 0x170000AE RID: 174
+		// (get) Token: 0x0600049C RID: 1180 RVA: 0x0002DEC8 File Offset: 0x0002C0C8
 		public JsonTypeInfo<List<ResourcePackagePositionData>> ListResourcePackagePositionData
 		{
 			get
@@ -11356,7 +11523,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000487 RID: 1159 RVA: 0x0002CA28 File Offset: 0x0002AC28
+		// Token: 0x0600049D RID: 1181 RVA: 0x0002DF04 File Offset: 0x0002C104
 		[NullableContext(1)]
 		private JsonTypeInfo<List<ResourcePackagePositionData>> Create_ListResourcePackagePositionData(JsonSerializerOptions options)
 		{
@@ -11374,8 +11541,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AD RID: 173
-		// (get) Token: 0x06000488 RID: 1160 RVA: 0x0002CA90 File Offset: 0x0002AC90
+		// Token: 0x170000AF RID: 175
+		// (get) Token: 0x0600049E RID: 1182 RVA: 0x0002DF6C File Offset: 0x0002C16C
 		public JsonTypeInfo<List<VersionItem>> ListVersionItem
 		{
 			get
@@ -11389,7 +11556,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000489 RID: 1161 RVA: 0x0002CACC File Offset: 0x0002ACCC
+		// Token: 0x0600049F RID: 1183 RVA: 0x0002DFA8 File Offset: 0x0002C1A8
 		[NullableContext(1)]
 		private JsonTypeInfo<List<VersionItem>> Create_ListVersionItem(JsonSerializerOptions options)
 		{
@@ -11407,8 +11574,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AE RID: 174
-		// (get) Token: 0x0600048A RID: 1162 RVA: 0x0002CB34 File Offset: 0x0002AD34
+		// Token: 0x170000B0 RID: 176
+		// (get) Token: 0x060004A0 RID: 1184 RVA: 0x0002E010 File Offset: 0x0002C210
 		public JsonTypeInfo<List<int>> ListInt32
 		{
 			get
@@ -11422,7 +11589,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600048B RID: 1163 RVA: 0x0002CB70 File Offset: 0x0002AD70
+		// Token: 0x060004A1 RID: 1185 RVA: 0x0002E04C File Offset: 0x0002C24C
 		[NullableContext(1)]
 		private JsonTypeInfo<List<int>> Create_ListInt32(JsonSerializerOptions options)
 		{
@@ -11440,8 +11607,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000AF RID: 175
-		// (get) Token: 0x0600048C RID: 1164 RVA: 0x0002CBD8 File Offset: 0x0002ADD8
+		// Token: 0x170000B1 RID: 177
+		// (get) Token: 0x060004A2 RID: 1186 RVA: 0x0002E0B4 File Offset: 0x0002C2B4
 		public JsonTypeInfo<List<string>> ListString
 		{
 			get
@@ -11455,7 +11622,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600048D RID: 1165 RVA: 0x0002CC14 File Offset: 0x0002AE14
+		// Token: 0x060004A3 RID: 1187 RVA: 0x0002E0F0 File Offset: 0x0002C2F0
 		[NullableContext(1)]
 		private JsonTypeInfo<List<string>> Create_ListString(JsonSerializerOptions options)
 		{
@@ -11473,8 +11640,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B0 RID: 176
-		// (get) Token: 0x0600048E RID: 1166 RVA: 0x0002CC7C File Offset: 0x0002AE7C
+		// Token: 0x170000B2 RID: 178
+		// (get) Token: 0x060004A4 RID: 1188 RVA: 0x0002E158 File Offset: 0x0002C358
 		public JsonTypeInfo<List<uint>> ListUInt32
 		{
 			get
@@ -11488,7 +11655,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600048F RID: 1167 RVA: 0x0002CCB8 File Offset: 0x0002AEB8
+		// Token: 0x060004A5 RID: 1189 RVA: 0x0002E194 File Offset: 0x0002C394
 		[NullableContext(1)]
 		private JsonTypeInfo<List<uint>> Create_ListUInt32(JsonSerializerOptions options)
 		{
@@ -11506,8 +11673,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B1 RID: 177
-		// (get) Token: 0x06000490 RID: 1168 RVA: 0x0002CD20 File Offset: 0x0002AF20
+		// Token: 0x170000B3 RID: 179
+		// (get) Token: 0x060004A6 RID: 1190 RVA: 0x0002E1FC File Offset: 0x0002C3FC
 		public JsonTypeInfo<JsonElement> JsonElement
 		{
 			get
@@ -11521,7 +11688,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000491 RID: 1169 RVA: 0x0002CD5C File Offset: 0x0002AF5C
+		// Token: 0x060004A7 RID: 1191 RVA: 0x0002E238 File Offset: 0x0002C438
 		[NullableContext(1)]
 		private JsonTypeInfo<JsonElement> Create_JsonElement(JsonSerializerOptions options)
 		{
@@ -11534,8 +11701,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B2 RID: 178
-		// (get) Token: 0x06000492 RID: 1170 RVA: 0x0002CD88 File Offset: 0x0002AF88
+		// Token: 0x170000B4 RID: 180
+		// (get) Token: 0x060004A8 RID: 1192 RVA: 0x0002E264 File Offset: 0x0002C464
 		public JsonTypeInfo<JsonElement?> NullableJsonElement
 		{
 			get
@@ -11549,7 +11716,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000493 RID: 1171 RVA: 0x0002CDC4 File Offset: 0x0002AFC4
+		// Token: 0x060004A9 RID: 1193 RVA: 0x0002E2A0 File Offset: 0x0002C4A0
 		[NullableContext(1)]
 		private JsonTypeInfo<JsonElement?> Create_NullableJsonElement(JsonSerializerOptions options)
 		{
@@ -11563,8 +11730,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B3 RID: 179
-		// (get) Token: 0x06000494 RID: 1172 RVA: 0x0002CDF4 File Offset: 0x0002AFF4
+		// Token: 0x170000B5 RID: 181
+		// (get) Token: 0x060004AA RID: 1194 RVA: 0x0002E2D0 File Offset: 0x0002C4D0
 		public JsonTypeInfo<int> Int32
 		{
 			get
@@ -11578,7 +11745,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000495 RID: 1173 RVA: 0x0002CE30 File Offset: 0x0002B030
+		// Token: 0x060004AB RID: 1195 RVA: 0x0002E30C File Offset: 0x0002C50C
 		[NullableContext(1)]
 		private JsonTypeInfo<int> Create_Int32(JsonSerializerOptions options)
 		{
@@ -11591,8 +11758,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B4 RID: 180
-		// (get) Token: 0x06000496 RID: 1174 RVA: 0x0002CE5C File Offset: 0x0002B05C
+		// Token: 0x170000B6 RID: 182
+		// (get) Token: 0x060004AC RID: 1196 RVA: 0x0002E338 File Offset: 0x0002C538
 		public JsonTypeInfo<int?> NullableInt32
 		{
 			get
@@ -11606,7 +11773,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000497 RID: 1175 RVA: 0x0002CE98 File Offset: 0x0002B098
+		// Token: 0x060004AD RID: 1197 RVA: 0x0002E374 File Offset: 0x0002C574
 		[NullableContext(1)]
 		private JsonTypeInfo<int?> Create_NullableInt32(JsonSerializerOptions options)
 		{
@@ -11620,8 +11787,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B5 RID: 181
-		// (get) Token: 0x06000498 RID: 1176 RVA: 0x0002CEC8 File Offset: 0x0002B0C8
+		// Token: 0x170000B7 RID: 183
+		// (get) Token: 0x060004AE RID: 1198 RVA: 0x0002E3A4 File Offset: 0x0002C5A4
 		public JsonTypeInfo<int[]> Int32Array
 		{
 			get
@@ -11635,7 +11802,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x06000499 RID: 1177 RVA: 0x0002CF04 File Offset: 0x0002B104
+		// Token: 0x060004AF RID: 1199 RVA: 0x0002E3E0 File Offset: 0x0002C5E0
 		[NullableContext(1)]
 		private JsonTypeInfo<int[]> Create_Int32Array(JsonSerializerOptions options)
 		{
@@ -11654,8 +11821,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B6 RID: 182
-		// (get) Token: 0x0600049A RID: 1178 RVA: 0x0002CF50 File Offset: 0x0002B150
+		// Token: 0x170000B8 RID: 184
+		// (get) Token: 0x060004B0 RID: 1200 RVA: 0x0002E42C File Offset: 0x0002C62C
 		public JsonTypeInfo<long> Int64
 		{
 			get
@@ -11669,7 +11836,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600049B RID: 1179 RVA: 0x0002CF8C File Offset: 0x0002B18C
+		// Token: 0x060004B1 RID: 1201 RVA: 0x0002E468 File Offset: 0x0002C668
 		[NullableContext(1)]
 		private JsonTypeInfo<long> Create_Int64(JsonSerializerOptions options)
 		{
@@ -11682,8 +11849,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B7 RID: 183
-		// (get) Token: 0x0600049C RID: 1180 RVA: 0x0002CFB8 File Offset: 0x0002B1B8
+		// Token: 0x170000B9 RID: 185
+		// (get) Token: 0x060004B2 RID: 1202 RVA: 0x0002E494 File Offset: 0x0002C694
 		public JsonTypeInfo<long?> NullableInt64
 		{
 			get
@@ -11697,7 +11864,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600049D RID: 1181 RVA: 0x0002CFF4 File Offset: 0x0002B1F4
+		// Token: 0x060004B3 RID: 1203 RVA: 0x0002E4D0 File Offset: 0x0002C6D0
 		[NullableContext(1)]
 		private JsonTypeInfo<long?> Create_NullableInt64(JsonSerializerOptions options)
 		{
@@ -11711,8 +11878,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B8 RID: 184
-		// (get) Token: 0x0600049E RID: 1182 RVA: 0x0002D024 File Offset: 0x0002B224
+		// Token: 0x170000BA RID: 186
+		// (get) Token: 0x060004B4 RID: 1204 RVA: 0x0002E500 File Offset: 0x0002C700
 		public JsonTypeInfo<object> Object
 		{
 			get
@@ -11726,7 +11893,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x0600049F RID: 1183 RVA: 0x0002D060 File Offset: 0x0002B260
+		// Token: 0x060004B5 RID: 1205 RVA: 0x0002E53C File Offset: 0x0002C73C
 		[NullableContext(1)]
 		private JsonTypeInfo<object> Create_Object(JsonSerializerOptions options)
 		{
@@ -11739,8 +11906,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000B9 RID: 185
-		// (get) Token: 0x060004A0 RID: 1184 RVA: 0x0002D08C File Offset: 0x0002B28C
+		// Token: 0x170000BB RID: 187
+		// (get) Token: 0x060004B6 RID: 1206 RVA: 0x0002E568 File Offset: 0x0002C768
 		public JsonTypeInfo<string> String
 		{
 			get
@@ -11754,7 +11921,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060004A1 RID: 1185 RVA: 0x0002D0C8 File Offset: 0x0002B2C8
+		// Token: 0x060004B7 RID: 1207 RVA: 0x0002E5A4 File Offset: 0x0002C7A4
 		[NullableContext(1)]
 		private JsonTypeInfo<string> Create_String(JsonSerializerOptions options)
 		{
@@ -11767,8 +11934,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000BA RID: 186
-		// (get) Token: 0x060004A2 RID: 1186 RVA: 0x0002D0F4 File Offset: 0x0002B2F4
+		// Token: 0x170000BC RID: 188
+		// (get) Token: 0x060004B8 RID: 1208 RVA: 0x0002E5D0 File Offset: 0x0002C7D0
 		public JsonTypeInfo<string[]> StringArray
 		{
 			get
@@ -11782,7 +11949,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060004A3 RID: 1187 RVA: 0x0002D130 File Offset: 0x0002B330
+		// Token: 0x060004B9 RID: 1209 RVA: 0x0002E60C File Offset: 0x0002C80C
 		[NullableContext(1)]
 		private JsonTypeInfo<string[]> Create_StringArray(JsonSerializerOptions options)
 		{
@@ -11801,8 +11968,8 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000BB RID: 187
-		// (get) Token: 0x060004A4 RID: 1188 RVA: 0x0002D17C File Offset: 0x0002B37C
+		// Token: 0x170000BD RID: 189
+		// (get) Token: 0x060004BA RID: 1210 RVA: 0x0002E658 File Offset: 0x0002C858
 		public JsonTypeInfo<uint> UInt32
 		{
 			get
@@ -11816,7 +11983,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			}
 		}
 
-		// Token: 0x060004A5 RID: 1189 RVA: 0x0002D1B8 File Offset: 0x0002B3B8
+		// Token: 0x060004BB RID: 1211 RVA: 0x0002E694 File Offset: 0x0002C894
 		[NullableContext(1)]
 		private JsonTypeInfo<uint> Create_UInt32(JsonSerializerOptions options)
 		{
@@ -11829,28 +11996,28 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return jsonTypeInfo;
 		}
 
-		// Token: 0x170000BC RID: 188
-		// (get) Token: 0x060004A6 RID: 1190 RVA: 0x0002D1E3 File Offset: 0x0002B3E3
+		// Token: 0x170000BE RID: 190
+		// (get) Token: 0x060004BC RID: 1212 RVA: 0x0002E6BF File Offset: 0x0002C8BF
 		[Nullable(1)]
 		public static LauncherJsonSourceGenContext Default { [NullableContext(1)] get; } = new LauncherJsonSourceGenContext(new JsonSerializerOptions(LauncherJsonSourceGenContext.s_defaultOptions));
 
-		// Token: 0x170000BD RID: 189
-		// (get) Token: 0x060004A7 RID: 1191 RVA: 0x0002D1EA File Offset: 0x0002B3EA
+		// Token: 0x170000BF RID: 191
+		// (get) Token: 0x060004BD RID: 1213 RVA: 0x0002E6C6 File Offset: 0x0002C8C6
 		[Nullable(2)]
 		protected override JsonSerializerOptions GeneratedSerializerOptions { [NullableContext(2)] get; } = LauncherJsonSourceGenContext.s_defaultOptions;
 
-		// Token: 0x060004A8 RID: 1192 RVA: 0x0002D1F2 File Offset: 0x0002B3F2
+		// Token: 0x060004BE RID: 1214 RVA: 0x0002E6CE File Offset: 0x0002C8CE
 		public LauncherJsonSourceGenContext() : base(null)
 		{
 		}
 
-		// Token: 0x060004A9 RID: 1193 RVA: 0x0002D206 File Offset: 0x0002B406
+		// Token: 0x060004BF RID: 1215 RVA: 0x0002E6E2 File Offset: 0x0002C8E2
 		[NullableContext(1)]
 		public LauncherJsonSourceGenContext(JsonSerializerOptions options) : base(options)
 		{
 		}
 
-		// Token: 0x060004AA RID: 1194 RVA: 0x0002D21C File Offset: 0x0002B41C
+		// Token: 0x060004C0 RID: 1216 RVA: 0x0002E6F8 File Offset: 0x0002C8F8
 		[NullableContext(1)]
 		private static bool TryGetTypeInfoForRuntimeCustomConverter<[Nullable(2)] TJsonMetadataType>(JsonSerializerOptions options, out JsonTypeInfo<TJsonMetadataType> jsonTypeInfo)
 		{
@@ -11864,7 +12031,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return false;
 		}
 
-		// Token: 0x060004AB RID: 1195 RVA: 0x0002D24C File Offset: 0x0002B44C
+		// Token: 0x060004C1 RID: 1217 RVA: 0x0002E728 File Offset: 0x0002C928
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private static JsonConverter GetRuntimeConverterForType(Type type, JsonSerializerOptions options)
@@ -11880,7 +12047,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return null;
 		}
 
-		// Token: 0x060004AC RID: 1196 RVA: 0x0002D294 File Offset: 0x0002B494
+		// Token: 0x060004C2 RID: 1218 RVA: 0x0002E770 File Offset: 0x0002C970
 		[NullableContext(1)]
 		private static JsonConverter ExpandConverter(Type type, JsonConverter converter, JsonSerializerOptions options, bool validateCanConvert = true)
 		{
@@ -11900,7 +12067,24 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return converter;
 		}
 
-		// Token: 0x060004AD RID: 1197 RVA: 0x0002D2FC File Offset: 0x0002B4FC
+		// Token: 0x060004C3 RID: 1219 RVA: 0x0002E7D8 File Offset: 0x0002C9D8
+		[NullableContext(1)]
+		[return: Nullable(new byte[]
+		{
+			1,
+			0
+		})]
+		private static JsonConverter<TJsonMetadataType?> GetConverterForNullableProperty<[Nullable(0)] TJsonMetadataType>(JsonConverter converter, JsonSerializerOptions options) where TJsonMetadataType : struct
+		{
+			if (converter.CanConvert(typeof(TJsonMetadataType?)))
+			{
+				return (JsonConverter<TJsonMetadataType?>)LauncherJsonSourceGenContext.ExpandConverter(typeof(TJsonMetadataType?), converter, options, false);
+			}
+			converter = LauncherJsonSourceGenContext.ExpandConverter(typeof(TJsonMetadataType), converter, options, true);
+			return JsonMetadataServices.GetNullableConverter<TJsonMetadataType>(JsonMetadataServices.CreateValueInfo<TJsonMetadataType>(options, converter));
+		}
+
+		// Token: 0x060004C4 RID: 1220 RVA: 0x0002E830 File Offset: 0x0002CA30
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public override JsonTypeInfo GetTypeInfo(Type type)
@@ -11910,7 +12094,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return result;
 		}
 
-		// Token: 0x060004AE RID: 1198 RVA: 0x0002D31C File Offset: 0x0002B51C
+		// Token: 0x060004C5 RID: 1221 RVA: 0x0002E850 File Offset: 0x0002CA50
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		JsonTypeInfo IJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
@@ -12010,6 +12194,10 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			if (type == typeof(IUpdateUrl))
 			{
 				return this.Create_IUpdateUrl(options);
+			}
+			if (type == typeof(VulkanSettingConfig))
+			{
+				return this.Create_VulkanSettingConfig(options);
 			}
 			if (type == typeof(PatchManifest))
 			{
@@ -12251,6 +12439,10 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			{
 				return this.Create_DictionaryStringIUdpRegion(options);
 			}
+			if (type == typeof(Dictionary<string, VulkanSettingConfig>))
+			{
+				return this.Create_DictionaryStringVulkanSettingConfig(options);
+			}
 			if (type == typeof(Dictionary<string, PatchManifestJson>))
 			{
 				return this.Create_DictionaryStringPatchManifestJson(options);
@@ -12382,377 +12574,25 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			return null;
 		}
 
-		// Token: 0x04000255 RID: 597
+		// Token: 0x04000281 RID: 641
 		[Nullable(2)]
 		private JsonTypeInfo<bool> _Boolean;
 
-		// Token: 0x04000256 RID: 598
+		// Token: 0x04000282 RID: 642
 		[Nullable(2)]
 		private JsonTypeInfo<bool?> _NullableBoolean;
 
-		// Token: 0x04000257 RID: 599
+		// Token: 0x04000283 RID: 643
 		[Nullable(2)]
 		private JsonTypeInfo<double> _Double;
 
-		// Token: 0x04000258 RID: 600
+		// Token: 0x04000284 RID: 644
 		[Nullable(2)]
 		private JsonTypeInfo<float> _Single;
 
-		// Token: 0x04000259 RID: 601
+		// Token: 0x04000285 RID: 645
 		[Nullable(2)]
 		private JsonTypeInfo<float?> _NullableSingle;
-
-		// Token: 0x0400025A RID: 602
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<GatewayLatencyConfigVo> _GatewayLatencyConfigVo;
-
-		// Token: 0x0400025B RID: 603
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<NetHostInfo> _NetHostInfo;
-
-		// Token: 0x0400025C RID: 604
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<EntryJson> _EntryJson;
-
-		// Token: 0x0400025D RID: 605
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ICdnScoreCfg> _ICdnScoreCfg;
-
-		// Token: 0x0400025E RID: 606
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ICdnScoreFormula> _ICdnScoreFormula;
-
-		// Token: 0x0400025F RID: 607
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ICdnScoreStep> _ICdnScoreStep;
-
-		// Token: 0x04000260 RID: 608
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ICdnUrlData> _ICdnUrlData;
-
-		// Token: 0x04000261 RID: 609
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IEvalConfig> _IEvalConfig;
-
-		// Token: 0x04000262 RID: 610
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IEvalNetworkConfig> _IEvalNetworkConfig;
-
-		// Token: 0x04000263 RID: 611
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IGachaUrl> _IGachaUrl;
-
-		// Token: 0x04000264 RID: 612
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IGrayBoxConfig> _IGrayBoxConfig;
-
-		// Token: 0x04000265 RID: 613
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IGrayBoxItemConfig> _IGrayBoxItemConfig;
-
-		// Token: 0x04000266 RID: 614
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ILoginServersData> _ILoginServersData;
-
-		// Token: 0x04000267 RID: 615
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ILogReport> _ILogReport;
-
-		// Token: 0x04000268 RID: 616
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IPrivateServersData> _IPrivateServersData;
-
-		// Token: 0x04000269 RID: 617
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ITDConfig> _ITDConfig;
-
-		// Token: 0x0400026A RID: 618
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IUdpProbe> _IUdpProbe;
-
-		// Token: 0x0400026B RID: 619
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IUdpRegion> _IUdpRegion;
-
-		// Token: 0x0400026C RID: 620
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IUpdateUrl> _IUpdateUrl;
-
-		// Token: 0x0400026D RID: 621
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<PatchManifest> _PatchManifest;
-
-		// Token: 0x0400026E RID: 622
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<PatchManifestJson> _PatchManifestJson;
-
-		// Token: 0x0400026F RID: 623
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<RemotePakMapConfig> _RemotePakMapConfig;
-
-		// Token: 0x04000270 RID: 624
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<RemoteVideoConfig> _RemoteVideoConfig;
-
-		// Token: 0x04000271 RID: 625
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<RemoteVideoConfigUpdateTime> _RemoteVideoConfigUpdateTime;
-
-		// Token: 0x04000272 RID: 626
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<VideoItem> _VideoItem;
-
-		// Token: 0x04000273 RID: 627
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<GameWindowStateData> _GameWindowStateData;
-
-		// Token: 0x04000274 RID: 628
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<UserInfo> _UserInfo;
-
-		// Token: 0x04000275 RID: 629
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ILocalSendedSave> _ILocalSendedSave;
-
-		// Token: 0x04000276 RID: 630
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<INetworkDetectionConfig> _INetworkDetectionConfig;
-
-		// Token: 0x04000277 RID: 631
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<BilibiliParam> _BilibiliParam;
-
-		// Token: 0x04000278 RID: 632
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ClientSwitch> _ClientSwitch;
-
-		// Token: 0x04000279 RID: 633
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ClientUrl> _ClientUrl;
-
-		// Token: 0x0400027A RID: 634
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<CsLinkEntry> _CsLinkEntry;
-
-		// Token: 0x0400027B RID: 635
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<DouyinParam> _DouyinParam;
-
-		// Token: 0x0400027C RID: 636
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IBlockData> _IBlockData;
-
-		// Token: 0x0400027D RID: 637
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IBlockDataContent> _IBlockDataContent;
-
-		// Token: 0x0400027E RID: 638
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IBlockResponseData> _IBlockResponseData;
-
-		// Token: 0x0400027F RID: 639
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<ICheckoutProductResponse> _ICheckoutProductResponse;
-
-		// Token: 0x04000280 RID: 640
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IConfigJson> _IConfigJson;
-
-		// Token: 0x04000281 RID: 641
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IConnectResponse> _IConnectResponse;
-
-		// Token: 0x04000282 RID: 642
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IConnectResponseData> _IConnectResponseData;
-
-		// Token: 0x04000283 RID: 643
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IGetAccessTokenResponse> _IGetAccessTokenResponse;
-
-		// Token: 0x04000284 RID: 644
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IGetAccessTokenResponseData> _IGetAccessTokenResponseData;
-
-		// Token: 0x04000285 RID: 645
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private JsonTypeInfo<IIdTokenData> _IIdTokenData;
 
 		// Token: 0x04000286 RID: 646
 		[Nullable(new byte[]
@@ -12760,7 +12600,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ILoginResponse> _ILoginResponse;
+		private JsonTypeInfo<GatewayLatencyConfigVo> _GatewayLatencyConfigVo;
 
 		// Token: 0x04000287 RID: 647
 		[Nullable(new byte[]
@@ -12768,7 +12608,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ILoginResponseData> _ILoginResponseData;
+		private JsonTypeInfo<NetHostInfo> _NetHostInfo;
 
 		// Token: 0x04000288 RID: 648
 		[Nullable(new byte[]
@@ -12776,7 +12616,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IPlatformData> _IPlatformData;
+		private JsonTypeInfo<EntryJson> _EntryJson;
 
 		// Token: 0x04000289 RID: 649
 		[Nullable(new byte[]
@@ -12784,7 +12624,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IPlatformReleaseData> _IPlatformReleaseData;
+		private JsonTypeInfo<ICdnScoreCfg> _ICdnScoreCfg;
 
 		// Token: 0x0400028A RID: 650
 		[Nullable(new byte[]
@@ -12792,7 +12632,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IQueryGoodsResponse> _IQueryGoodsResponse;
+		private JsonTypeInfo<ICdnScoreFormula> _ICdnScoreFormula;
 
 		// Token: 0x0400028B RID: 651
 		[Nullable(new byte[]
@@ -12800,7 +12640,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IQueryGoodsResponseData> _IQueryGoodsResponseData;
+		private JsonTypeInfo<ICdnScoreStep> _ICdnScoreStep;
 
 		// Token: 0x0400028C RID: 652
 		[Nullable(new byte[]
@@ -12808,7 +12648,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IRenewAccessTokenResponse> _IRenewAccessTokenResponse;
+		private JsonTypeInfo<ICdnUrlData> _ICdnUrlData;
 
 		// Token: 0x0400028D RID: 653
 		[Nullable(new byte[]
@@ -12816,7 +12656,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IRenewAccessTokenResponseData> _IRenewAccessTokenResponseData;
+		private JsonTypeInfo<IEvalConfig> _IEvalConfig;
 
 		// Token: 0x0400028E RID: 654
 		[Nullable(new byte[]
@@ -12824,7 +12664,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<IReportResponse> _IReportResponse;
+		private JsonTypeInfo<IEvalNetworkConfig> _IEvalNetworkConfig;
 
 		// Token: 0x0400028F RID: 655
 		[Nullable(new byte[]
@@ -12832,7 +12672,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ISdkRequestEmailCodeResponse> _ISdkRequestEmailCodeResponse;
+		private JsonTypeInfo<IGachaUrl> _IGachaUrl;
 
 		// Token: 0x04000290 RID: 656
 		[Nullable(new byte[]
@@ -12840,7 +12680,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<KujiequParam> _KujiequParam;
+		private JsonTypeInfo<IGrayBoxConfig> _IGrayBoxConfig;
 
 		// Token: 0x04000291 RID: 657
 		[Nullable(new byte[]
@@ -12848,7 +12688,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<LoginElement> _LoginElement;
+		private JsonTypeInfo<IGrayBoxItemConfig> _IGrayBoxItemConfig;
 
 		// Token: 0x04000292 RID: 658
 		[Nullable(new byte[]
@@ -12856,7 +12696,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<QQParam> _QQParam;
+		private JsonTypeInfo<ILoginServersData> _ILoginServersData;
 
 		// Token: 0x04000293 RID: 659
 		[Nullable(new byte[]
@@ -12864,7 +12704,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<SdkPlatformConfig> _SdkPlatformConfig;
+		private JsonTypeInfo<ILogReport> _ILogReport;
 
 		// Token: 0x04000294 RID: 660
 		[Nullable(new byte[]
@@ -12872,7 +12712,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ShareSDKParam> _ShareSDKParam;
+		private JsonTypeInfo<IPrivateServersData> _IPrivateServersData;
 
 		// Token: 0x04000295 RID: 661
 		[Nullable(new byte[]
@@ -12880,7 +12720,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ThirdLogin> _ThirdLogin;
+		private JsonTypeInfo<ITDConfig> _ITDConfig;
 
 		// Token: 0x04000296 RID: 662
 		[Nullable(new byte[]
@@ -12888,7 +12728,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ThirdShareParams> _ThirdShareParams;
+		private JsonTypeInfo<IUdpProbe> _IUdpProbe;
 
 		// Token: 0x04000297 RID: 663
 		[Nullable(new byte[]
@@ -12896,7 +12736,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<WeChatParam> _WeChatParam;
+		private JsonTypeInfo<IUdpRegion> _IUdpRegion;
 
 		// Token: 0x04000298 RID: 664
 		[Nullable(new byte[]
@@ -12904,7 +12744,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<WeiboParam> _WeiboParam;
+		private JsonTypeInfo<IUpdateUrl> _IUpdateUrl;
 
 		// Token: 0x04000299 RID: 665
 		[Nullable(new byte[]
@@ -12912,7 +12752,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<PreDownloadConfig> _PreDownloadConfig;
+		private JsonTypeInfo<VulkanSettingConfig> _VulkanSettingConfig;
 
 		// Token: 0x0400029A RID: 666
 		[Nullable(new byte[]
@@ -12920,7 +12760,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<RemoteConfig> _RemoteConfig;
+		private JsonTypeInfo<PatchManifest> _PatchManifest;
 
 		// Token: 0x0400029B RID: 667
 		[Nullable(new byte[]
@@ -12928,7 +12768,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<RemoteVersionConfig> _RemoteVersionConfig;
+		private JsonTypeInfo<PatchManifestJson> _PatchManifestJson;
 
 		// Token: 0x0400029C RID: 668
 		[Nullable(new byte[]
@@ -12936,7 +12776,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<LoginPlayerInfo> _LoginPlayerInfo;
+		private JsonTypeInfo<RemotePakMapConfig> _RemotePakMapConfig;
 
 		// Token: 0x0400029D RID: 669
 		[Nullable(new byte[]
@@ -12944,7 +12784,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<UserRegionInfo> _UserRegionInfo;
+		private JsonTypeInfo<RemoteVideoConfig> _RemoteVideoConfig;
 
 		// Token: 0x0400029E RID: 670
 		[Nullable(new byte[]
@@ -12952,7 +12792,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<HttpSubPackageResult> _HttpSubPackageResult;
+		private JsonTypeInfo<RemoteVideoConfigUpdateTime> _RemoteVideoConfigUpdateTime;
 
 		// Token: 0x0400029F RID: 671
 		[Nullable(new byte[]
@@ -12960,7 +12800,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ResourcePackagePositionData> _ResourcePackagePositionData;
+		private JsonTypeInfo<VideoItem> _VideoItem;
 
 		// Token: 0x040002A0 RID: 672
 		[Nullable(new byte[]
@@ -12968,7 +12808,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<PakListConfig> _PakListConfig;
+		private JsonTypeInfo<GameWindowStateData> _GameWindowStateData;
 
 		// Token: 0x040002A1 RID: 673
 		[Nullable(new byte[]
@@ -12976,7 +12816,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<VersionItem> _VersionItem;
+		private JsonTypeInfo<UserInfo> _UserInfo;
 
 		// Token: 0x040002A2 RID: 674
 		[Nullable(new byte[]
@@ -12984,7 +12824,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<HttpResult> _HttpResult;
+		private JsonTypeInfo<ILocalSendedSave> _ILocalSendedSave;
 
 		// Token: 0x040002A3 RID: 675
 		[Nullable(new byte[]
@@ -12992,7 +12832,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<LoginNoticeEx> _LoginNoticeEx;
+		private JsonTypeInfo<INetworkDetectionConfig> _INetworkDetectionConfig;
 
 		// Token: 0x040002A4 RID: 676
 		[Nullable(new byte[]
@@ -13000,7 +12840,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<Result> _Result;
+		private JsonTypeInfo<BilibiliParam> _BilibiliParam;
 
 		// Token: 0x040002A5 RID: 677
 		[Nullable(new byte[]
@@ -13008,7 +12848,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<ResultData> _ResultData;
+		private JsonTypeInfo<ClientSwitch> _ClientSwitch;
 
 		// Token: 0x040002A6 RID: 678
 		[Nullable(new byte[]
@@ -13016,9 +12856,369 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			2,
 			1
 		})]
-		private JsonTypeInfo<Dictionary<int, double>> _DictionaryInt32Double;
+		private JsonTypeInfo<ClientUrl> _ClientUrl;
 
 		// Token: 0x040002A7 RID: 679
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<CsLinkEntry> _CsLinkEntry;
+
+		// Token: 0x040002A8 RID: 680
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<DouyinParam> _DouyinParam;
+
+		// Token: 0x040002A9 RID: 681
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IBlockData> _IBlockData;
+
+		// Token: 0x040002AA RID: 682
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IBlockDataContent> _IBlockDataContent;
+
+		// Token: 0x040002AB RID: 683
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IBlockResponseData> _IBlockResponseData;
+
+		// Token: 0x040002AC RID: 684
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ICheckoutProductResponse> _ICheckoutProductResponse;
+
+		// Token: 0x040002AD RID: 685
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IConfigJson> _IConfigJson;
+
+		// Token: 0x040002AE RID: 686
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IConnectResponse> _IConnectResponse;
+
+		// Token: 0x040002AF RID: 687
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IConnectResponseData> _IConnectResponseData;
+
+		// Token: 0x040002B0 RID: 688
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IGetAccessTokenResponse> _IGetAccessTokenResponse;
+
+		// Token: 0x040002B1 RID: 689
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IGetAccessTokenResponseData> _IGetAccessTokenResponseData;
+
+		// Token: 0x040002B2 RID: 690
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IIdTokenData> _IIdTokenData;
+
+		// Token: 0x040002B3 RID: 691
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ILoginResponse> _ILoginResponse;
+
+		// Token: 0x040002B4 RID: 692
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ILoginResponseData> _ILoginResponseData;
+
+		// Token: 0x040002B5 RID: 693
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IPlatformData> _IPlatformData;
+
+		// Token: 0x040002B6 RID: 694
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IPlatformReleaseData> _IPlatformReleaseData;
+
+		// Token: 0x040002B7 RID: 695
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IQueryGoodsResponse> _IQueryGoodsResponse;
+
+		// Token: 0x040002B8 RID: 696
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IQueryGoodsResponseData> _IQueryGoodsResponseData;
+
+		// Token: 0x040002B9 RID: 697
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IRenewAccessTokenResponse> _IRenewAccessTokenResponse;
+
+		// Token: 0x040002BA RID: 698
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IRenewAccessTokenResponseData> _IRenewAccessTokenResponseData;
+
+		// Token: 0x040002BB RID: 699
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<IReportResponse> _IReportResponse;
+
+		// Token: 0x040002BC RID: 700
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ISdkRequestEmailCodeResponse> _ISdkRequestEmailCodeResponse;
+
+		// Token: 0x040002BD RID: 701
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<KujiequParam> _KujiequParam;
+
+		// Token: 0x040002BE RID: 702
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<LoginElement> _LoginElement;
+
+		// Token: 0x040002BF RID: 703
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<QQParam> _QQParam;
+
+		// Token: 0x040002C0 RID: 704
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<SdkPlatformConfig> _SdkPlatformConfig;
+
+		// Token: 0x040002C1 RID: 705
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ShareSDKParam> _ShareSDKParam;
+
+		// Token: 0x040002C2 RID: 706
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ThirdLogin> _ThirdLogin;
+
+		// Token: 0x040002C3 RID: 707
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ThirdShareParams> _ThirdShareParams;
+
+		// Token: 0x040002C4 RID: 708
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<WeChatParam> _WeChatParam;
+
+		// Token: 0x040002C5 RID: 709
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<WeiboParam> _WeiboParam;
+
+		// Token: 0x040002C6 RID: 710
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<PreDownloadConfig> _PreDownloadConfig;
+
+		// Token: 0x040002C7 RID: 711
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<RemoteConfig> _RemoteConfig;
+
+		// Token: 0x040002C8 RID: 712
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<RemoteVersionConfig> _RemoteVersionConfig;
+
+		// Token: 0x040002C9 RID: 713
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<LoginPlayerInfo> _LoginPlayerInfo;
+
+		// Token: 0x040002CA RID: 714
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<UserRegionInfo> _UserRegionInfo;
+
+		// Token: 0x040002CB RID: 715
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<HttpSubPackageResult> _HttpSubPackageResult;
+
+		// Token: 0x040002CC RID: 716
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ResourcePackagePositionData> _ResourcePackagePositionData;
+
+		// Token: 0x040002CD RID: 717
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<PakListConfig> _PakListConfig;
+
+		// Token: 0x040002CE RID: 718
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<VersionItem> _VersionItem;
+
+		// Token: 0x040002CF RID: 719
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<HttpResult> _HttpResult;
+
+		// Token: 0x040002D0 RID: 720
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<LoginNoticeEx> _LoginNoticeEx;
+
+		// Token: 0x040002D1 RID: 721
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<Result> _Result;
+
+		// Token: 0x040002D2 RID: 722
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<ResultData> _ResultData;
+
+		// Token: 0x040002D3 RID: 723
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<int, double>> _DictionaryInt32Double;
+
+		// Token: 0x040002D4 RID: 724
 		[Nullable(new byte[]
 		{
 			2,
@@ -13027,7 +13227,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, double>> _DictionaryStringDouble;
 
-		// Token: 0x040002A8 RID: 680
+		// Token: 0x040002D5 RID: 725
 		[Nullable(new byte[]
 		{
 			2,
@@ -13037,7 +13237,17 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, IUdpRegion>> _DictionaryStringIUdpRegion;
 
-		// Token: 0x040002A9 RID: 681
+		// Token: 0x040002D6 RID: 726
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1,
+			1
+		})]
+		private JsonTypeInfo<Dictionary<string, VulkanSettingConfig>> _DictionaryStringVulkanSettingConfig;
+
+		// Token: 0x040002D7 RID: 727
 		[Nullable(new byte[]
 		{
 			2,
@@ -13047,7 +13257,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, PatchManifestJson>> _DictionaryStringPatchManifestJson;
 
-		// Token: 0x040002AA RID: 682
+		// Token: 0x040002D8 RID: 728
 		[Nullable(new byte[]
 		{
 			2,
@@ -13057,7 +13267,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, VideoItem>> _DictionaryStringVideoItem;
 
-		// Token: 0x040002AB RID: 683
+		// Token: 0x040002D9 RID: 729
 		[Nullable(new byte[]
 		{
 			2,
@@ -13067,7 +13277,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, CsLinkEntry>> _DictionaryStringCsLinkEntry;
 
-		// Token: 0x040002AC RID: 684
+		// Token: 0x040002DA RID: 730
 		[Nullable(new byte[]
 		{
 			2,
@@ -13077,7 +13287,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, VersionItem>> _DictionaryStringVersionItem;
 
-		// Token: 0x040002AD RID: 685
+		// Token: 0x040002DB RID: 731
 		[Nullable(new byte[]
 		{
 			2,
@@ -13087,7 +13297,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, object>> _DictionaryStringObject;
 
-		// Token: 0x040002AE RID: 686
+		// Token: 0x040002DC RID: 732
 		[Nullable(new byte[]
 		{
 			2,
@@ -13097,7 +13307,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<Dictionary<string, string>> _DictionaryStringString;
 
-		// Token: 0x040002AF RID: 687
+		// Token: 0x040002DD RID: 733
 		[Nullable(new byte[]
 		{
 			2,
@@ -13106,7 +13316,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<NetHostInfo>> _ListNetHostInfo;
 
-		// Token: 0x040002B0 RID: 688
+		// Token: 0x040002DE RID: 734
 		[Nullable(new byte[]
 		{
 			2,
@@ -13115,7 +13325,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<ICdnScoreFormula>> _ListICdnScoreFormula;
 
-		// Token: 0x040002B1 RID: 689
+		// Token: 0x040002DF RID: 735
 		[Nullable(new byte[]
 		{
 			2,
@@ -13124,7 +13334,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<ICdnScoreStep>> _ListICdnScoreStep;
 
-		// Token: 0x040002B2 RID: 690
+		// Token: 0x040002E0 RID: 736
 		[Nullable(new byte[]
 		{
 			2,
@@ -13133,7 +13343,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<ICdnUrlData>> _ListICdnUrlData;
 
-		// Token: 0x040002B3 RID: 691
+		// Token: 0x040002E1 RID: 737
 		[Nullable(new byte[]
 		{
 			2,
@@ -13142,7 +13352,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<IGrayBoxItemConfig>> _ListIGrayBoxItemConfig;
 
-		// Token: 0x040002B4 RID: 692
+		// Token: 0x040002E2 RID: 738
 		[Nullable(new byte[]
 		{
 			2,
@@ -13151,7 +13361,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<ILoginServersData>> _ListILoginServersData;
 
-		// Token: 0x040002B5 RID: 693
+		// Token: 0x040002E3 RID: 739
 		[Nullable(new byte[]
 		{
 			2,
@@ -13160,7 +13370,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<IUdpProbe>> _ListIUdpProbe;
 
-		// Token: 0x040002B6 RID: 694
+		// Token: 0x040002E4 RID: 740
 		[Nullable(new byte[]
 		{
 			2,
@@ -13169,7 +13379,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<IBlockDataContent>> _ListIBlockDataContent;
 
-		// Token: 0x040002B7 RID: 695
+		// Token: 0x040002E5 RID: 741
 		[Nullable(new byte[]
 		{
 			2,
@@ -13178,7 +13388,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<IQueryGoodsResponseData>> _ListIQueryGoodsResponseData;
 
-		// Token: 0x040002B8 RID: 696
+		// Token: 0x040002E6 RID: 742
 		[Nullable(new byte[]
 		{
 			2,
@@ -13187,7 +13397,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<UserRegionInfo>> _ListUserRegionInfo;
 
-		// Token: 0x040002B9 RID: 697
+		// Token: 0x040002E7 RID: 743
 		[Nullable(new byte[]
 		{
 			2,
@@ -13196,7 +13406,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<ResourcePackagePositionData>> _ListResourcePackagePositionData;
 
-		// Token: 0x040002BA RID: 698
+		// Token: 0x040002E8 RID: 744
 		[Nullable(new byte[]
 		{
 			2,
@@ -13205,7 +13415,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<VersionItem>> _ListVersionItem;
 
-		// Token: 0x040002BB RID: 699
+		// Token: 0x040002E9 RID: 745
 		[Nullable(new byte[]
 		{
 			2,
@@ -13213,7 +13423,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<int>> _ListInt32;
 
-		// Token: 0x040002BC RID: 700
+		// Token: 0x040002EA RID: 746
 		[Nullable(new byte[]
 		{
 			2,
@@ -13222,7 +13432,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<string>> _ListString;
 
-		// Token: 0x040002BD RID: 701
+		// Token: 0x040002EB RID: 747
 		[Nullable(new byte[]
 		{
 			2,
@@ -13230,23 +13440,23 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<List<uint>> _ListUInt32;
 
-		// Token: 0x040002BE RID: 702
+		// Token: 0x040002EC RID: 748
 		[Nullable(2)]
 		private JsonTypeInfo<JsonElement> _JsonElement;
 
-		// Token: 0x040002BF RID: 703
+		// Token: 0x040002ED RID: 749
 		[Nullable(2)]
 		private JsonTypeInfo<JsonElement?> _NullableJsonElement;
 
-		// Token: 0x040002C0 RID: 704
+		// Token: 0x040002EE RID: 750
 		[Nullable(2)]
 		private JsonTypeInfo<int> _Int32;
 
-		// Token: 0x040002C1 RID: 705
+		// Token: 0x040002EF RID: 751
 		[Nullable(2)]
 		private JsonTypeInfo<int?> _NullableInt32;
 
-		// Token: 0x040002C2 RID: 706
+		// Token: 0x040002F0 RID: 752
 		[Nullable(new byte[]
 		{
 			2,
@@ -13254,15 +13464,15 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<int[]> _Int32Array;
 
-		// Token: 0x040002C3 RID: 707
+		// Token: 0x040002F1 RID: 753
 		[Nullable(2)]
 		private JsonTypeInfo<long> _Int64;
 
-		// Token: 0x040002C4 RID: 708
+		// Token: 0x040002F2 RID: 754
 		[Nullable(2)]
 		private JsonTypeInfo<long?> _NullableInt64;
 
-		// Token: 0x040002C5 RID: 709
+		// Token: 0x040002F3 RID: 755
 		[Nullable(new byte[]
 		{
 			2,
@@ -13270,7 +13480,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<object> _Object;
 
-		// Token: 0x040002C6 RID: 710
+		// Token: 0x040002F4 RID: 756
 		[Nullable(new byte[]
 		{
 			2,
@@ -13278,7 +13488,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<string> _String;
 
-		// Token: 0x040002C7 RID: 711
+		// Token: 0x040002F5 RID: 757
 		[Nullable(new byte[]
 		{
 			2,
@@ -13287,11 +13497,11 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 		})]
 		private JsonTypeInfo<string[]> _StringArray;
 
-		// Token: 0x040002C8 RID: 712
+		// Token: 0x040002F6 RID: 758
 		[Nullable(2)]
 		private JsonTypeInfo<uint> _UInt32;
 
-		// Token: 0x040002C9 RID: 713
+		// Token: 0x040002F7 RID: 759
 		[Nullable(1)]
 		private static readonly JsonSerializerOptions s_defaultOptions = new JsonSerializerOptions
 		{
@@ -13299,7 +13509,7 @@ namespace CSharpScript.Launcher.Util.Json.Generated
 			IncludeFields = true
 		};
 
-		// Token: 0x040002CA RID: 714
+		// Token: 0x040002F8 RID: 760
 		private const BindingFlags InstanceMemberBindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 	}
 }

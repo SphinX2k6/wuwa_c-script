@@ -8,12 +8,12 @@ using AkiClient.Game.Aki.Character.NPC.Common;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using UnrealEngine;
 
-// Token: 0x02003203 RID: 12803
+// Token: 0x02002772 RID: 10098
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcFacialExpressionController
 {
-	// Token: 0x0601B9F4 RID: 113140 RVA: 0x00795DA0 File Offset: 0x00793FA0
+	// Token: 0x06019579 RID: 103801 RVA: 0x007BE3EC File Offset: 0x007BC5EC
 	public NpcFacialExpressionController(int entityId)
 	{
 		this.EntityId = new int?(entityId);
@@ -24,7 +24,7 @@ public class NpcFacialExpressionController
 		this.ActorComp = ((entity != null) ? entity.GetComponent<BaseCharacterComponent>() : null);
 	}
 
-	// Token: 0x0601B9F5 RID: 113141 RVA: 0x00795E78 File Offset: 0x00794078
+	// Token: 0x0601957A RID: 103802 RVA: 0x007BE4C4 File Offset: 0x007BC6C4
 	public void Init()
 	{
 		if (this.EntityId == null)
@@ -78,7 +78,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601B9F6 RID: 113142 RVA: 0x00795FC0 File Offset: 0x007941C0
+	// Token: 0x0601957B RID: 103803 RVA: 0x007BE60C File Offset: 0x007BC80C
 	private void EnableAnimUpdateTextureFace(bool value, string reason = "")
 	{
 		if (this.IsAnimUpdateTextureFace == value)
@@ -108,7 +108,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601B9F7 RID: 113143 RVA: 0x00796034 File Offset: 0x00794234
+	// Token: 0x0601957C RID: 103804 RVA: 0x007BE680 File Offset: 0x007BC880
 	private EFaceExpressionConfigType? GetExpressionTypeById(int? faceExpressionId)
 	{
 		if (faceExpressionId != null)
@@ -129,7 +129,7 @@ public class NpcFacialExpressionController
 		return null;
 	}
 
-	// Token: 0x0601B9F8 RID: 113144 RVA: 0x007960A4 File Offset: 0x007942A4
+	// Token: 0x0601957D RID: 103805 RVA: 0x007BE6F0 File Offset: 0x007BC8F0
 	private unsafe void ChangeFacialExpression(int? faceExpressionId)
 	{
 		if (this.EntityId == null)
@@ -168,7 +168,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601B9F9 RID: 113145 RVA: 0x00796194 File Offset: 0x00794394
+	// Token: 0x0601957E RID: 103806 RVA: 0x007BE7E0 File Offset: 0x007BC9E0
 	[NullableContext(2)]
 	private unsafe bool ChangeFacialExpression(int? faceExpressionId, out NpcFacialExpressionController.FaceExpressionInfo info)
 	{
@@ -207,7 +207,7 @@ public class NpcFacialExpressionController
 		return false;
 	}
 
-	// Token: 0x0601B9FA RID: 113146 RVA: 0x0079628C File Offset: 0x0079448C
+	// Token: 0x0601957F RID: 103807 RVA: 0x007BE8D8 File Offset: 0x007BCAD8
 	private bool ChangeFacialExpressionInternal(NpcFacialExpressionController.FaceExpressionInfo info)
 	{
 		EFaceExpressionConfigType? type = info.Type;
@@ -255,7 +255,7 @@ public class NpcFacialExpressionController
 		return true;
 	}
 
-	// Token: 0x0601B9FB RID: 113147 RVA: 0x00796398 File Offset: 0x00794598
+	// Token: 0x06019580 RID: 103808 RVA: 0x007BE9E4 File Offset: 0x007BCBE4
 	private bool SetNpcExpressionByMorphData(string morphData)
 	{
 		if (string.IsNullOrEmpty(morphData))
@@ -284,7 +284,7 @@ public class NpcFacialExpressionController
 		return true;
 	}
 
-	// Token: 0x0601B9FC RID: 113148 RVA: 0x0079641C File Offset: 0x0079461C
+	// Token: 0x06019581 RID: 103809 RVA: 0x007BEA68 File Offset: 0x007BCC68
 	private bool SetNpcExpressionByAnimSequence(NpcFacialExpressionController.FaceExpressionInfo info)
 	{
 		if (this.AnimLoadHandle != -1)
@@ -397,7 +397,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601B9FD RID: 113149 RVA: 0x007965D8 File Offset: 0x007947D8
+	// Token: 0x06019582 RID: 103810 RVA: 0x007BEC24 File Offset: 0x007BCE24
 	[NullableContext(2)]
 	private void ResetMorphExpression(string morphData)
 	{
@@ -429,7 +429,7 @@ public class NpcFacialExpressionController
 		this.SetNpcExpressionByMorphData(text);
 	}
 
-	// Token: 0x0601B9FE RID: 113150 RVA: 0x0079668C File Offset: 0x0079488C
+	// Token: 0x06019583 RID: 103811 RVA: 0x007BECD8 File Offset: 0x007BCED8
 	private unsafe bool SetNpcExpressionByFaceTextureId(int expressId, int slotId = 0)
 	{
 		if (this.EntityId == null)
@@ -504,7 +504,7 @@ public class NpcFacialExpressionController
 		return true;
 	}
 
-	// Token: 0x0601B9FF RID: 113151 RVA: 0x00796924 File Offset: 0x00794B24
+	// Token: 0x06019584 RID: 103812 RVA: 0x007BEF70 File Offset: 0x007BD170
 	private unsafe FName GetFaceMatSlotName(int slotId)
 	{
 		if (!this.IsMultiSlotFace())
@@ -531,7 +531,7 @@ public class NpcFacialExpressionController
 		return new FName(text);
 	}
 
-	// Token: 0x0601BA00 RID: 113152 RVA: 0x007969E4 File Offset: 0x00794BE4
+	// Token: 0x06019585 RID: 103813 RVA: 0x007BF030 File Offset: 0x007BD230
 	[NullableContext(2)]
 	private USkeletalMeshComponent GetNpcFaceMesh()
 	{
@@ -583,7 +583,7 @@ public class NpcFacialExpressionController
 		return uskeletalMeshComponent;
 	}
 
-	// Token: 0x0601BA01 RID: 113153 RVA: 0x00796B0C File Offset: 0x00794D0C
+	// Token: 0x06019586 RID: 103814 RVA: 0x007BF158 File Offset: 0x007BD358
 	private void SetFaceExpressionMode(EFaceExpressionMode mode, string reason = "")
 	{
 		if (this.FaceExpressionMode == mode)
@@ -608,7 +608,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601BA02 RID: 113154 RVA: 0x00796B60 File Offset: 0x00794D60
+	// Token: 0x06019587 RID: 103815 RVA: 0x007BF1AC File Offset: 0x007BD3AC
 	private void OnExpressionBindingMontageEnd(UAnimMontage montage, bool bInterrupted)
 	{
 		if (montage != null && montage.IsValid() && this.ExpressionBindingMontage == montage)
@@ -643,7 +643,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601BA03 RID: 113155 RVA: 0x00796C04 File Offset: 0x00794E04
+	// Token: 0x06019588 RID: 103816 RVA: 0x007BF250 File Offset: 0x007BD450
 	private void OnSpeakingBindingMontageEnd(UAnimMontage montage, bool bInterrupted)
 	{
 		if (montage != null && montage.IsValid() && this.SpeakingBindingMontage == montage)
@@ -683,7 +683,7 @@ public class NpcFacialExpressionController
 		}
 	}
 
-	// Token: 0x0601BA04 RID: 113156 RVA: 0x00796CCC File Offset: 0x00794ECC
+	// Token: 0x06019589 RID: 103817 RVA: 0x007BF318 File Offset: 0x007BD518
 	[NullableContext(2)]
 	public void ChangeFaceForMouthMontage(UAnimMontage animMontage)
 	{
@@ -712,7 +712,7 @@ public class NpcFacialExpressionController
 		uanimInstance.OnMontageEnded.Add(new Action<UAnimMontage, bool>(this.OnSpeakingBindingMontageEnd));
 	}
 
-	// Token: 0x0601BA05 RID: 113157 RVA: 0x00796D5C File Offset: 0x00794F5C
+	// Token: 0x0601958A RID: 103818 RVA: 0x007BF3A8 File Offset: 0x007BD5A8
 	public void ChangeFaceForExpression(UAnimMontage animMontage, int? faceExpressionId)
 	{
 		EFaceExpressionConfigType? expressionTypeById = this.GetExpressionTypeById(faceExpressionId);
@@ -730,7 +730,7 @@ public class NpcFacialExpressionController
 		this.AnimComp.MainAnimInstance.OnMontageEnded.Add(new Action<UAnimMontage, bool>(this.OnExpressionBindingMontageEnd));
 	}
 
-	// Token: 0x0601BA06 RID: 113158 RVA: 0x00796DD0 File Offset: 0x00794FD0
+	// Token: 0x0601958B RID: 103819 RVA: 0x007BF41C File Offset: 0x007BD61C
 	public int ChangeFaceForExpressionFromAnimNotify(int? faceExpressionId)
 	{
 		EFaceExpressionConfigType? expressionTypeById = this.GetExpressionTypeById(faceExpressionId);
@@ -749,7 +749,7 @@ public class NpcFacialExpressionController
 		return facialExpressionHandleId;
 	}
 
-	// Token: 0x0601BA07 RID: 113159 RVA: 0x00796E32 File Offset: 0x00795032
+	// Token: 0x0601958C RID: 103820 RVA: 0x007BF47E File Offset: 0x007BD67E
 	public void ResetFaceForExpressionFromAnimNotify(int uid)
 	{
 		if (!this.AnimNotifyStateExpressionSet.Remove(uid) || this.AnimNotifyStateExpressionSet.Count > 0)
@@ -764,7 +764,7 @@ public class NpcFacialExpressionController
 		this.RefreshFace("ANS表情结束");
 	}
 
-	// Token: 0x0601BA08 RID: 113160 RVA: 0x00796E70 File Offset: 0x00795070
+	// Token: 0x0601958D RID: 103821 RVA: 0x007BF4BC File Offset: 0x007BD6BC
 	public void ResetFacialExpressionOuter()
 	{
 		BaseAnimationComponent animComp = this.AnimComp;
@@ -788,7 +788,7 @@ public class NpcFacialExpressionController
 		this.ResetFacialExpression("强制清除");
 	}
 
-	// Token: 0x0601BA09 RID: 113161 RVA: 0x00796EE4 File Offset: 0x007950E4
+	// Token: 0x0601958E RID: 103822 RVA: 0x007BF530 File Offset: 0x007BD730
 	private void RefreshFace(string context = "")
 	{
 		if (this.SpeakingBindingMontage != null)
@@ -821,7 +821,7 @@ public class NpcFacialExpressionController
 		this.ResetFacialExpression(context);
 	}
 
-	// Token: 0x0601BA0A RID: 113162 RVA: 0x00796FA0 File Offset: 0x007951A0
+	// Token: 0x0601958F RID: 103823 RVA: 0x007BF5EC File Offset: 0x007BD7EC
 	private void ResetFacialExpression(string context = "")
 	{
 		if (this.EntityId == null)
@@ -901,7 +901,7 @@ public class NpcFacialExpressionController
 		this.ResetFaceExpressionMode(context);
 	}
 
-	// Token: 0x0601BA0B RID: 113163 RVA: 0x007971C4 File Offset: 0x007953C4
+	// Token: 0x06019590 RID: 103824 RVA: 0x007BF810 File Offset: 0x007BDA10
 	private void ResetFaceExpressionMode(string context = "")
 	{
 		if (this.DefaultFaceInfo != null && this.DefaultFaceInfo.IsValid())
@@ -912,7 +912,7 @@ public class NpcFacialExpressionController
 		this.SetFaceExpressionMode(EFaceExpressionMode.Blink, context);
 	}
 
-	// Token: 0x0601BA0C RID: 113164 RVA: 0x007971EC File Offset: 0x007953EC
+	// Token: 0x06019591 RID: 103825 RVA: 0x007BF838 File Offset: 0x007BDA38
 	public bool Dispose()
 	{
 		if (this.EntityId != null)
@@ -955,26 +955,26 @@ public class NpcFacialExpressionController
 		return true;
 	}
 
-	// Token: 0x0601BA0D RID: 113165 RVA: 0x007972A6 File Offset: 0x007954A6
+	// Token: 0x06019592 RID: 103826 RVA: 0x007BF8F2 File Offset: 0x007BDAF2
 	private int GetFacialExpressionHandleId()
 	{
 		this.FacialExpressionHandleUid++;
 		return this.FacialExpressionHandleUid;
 	}
 
-	// Token: 0x0601BA0E RID: 113166 RVA: 0x007972BC File Offset: 0x007954BC
+	// Token: 0x06019593 RID: 103827 RVA: 0x007BF908 File Offset: 0x007BDB08
 	private bool IsTextureFaceType(EFaceExpressionConfigType type)
 	{
 		return type == EFaceExpressionConfigType.Texture || type == EFaceExpressionConfigType.TextureMultiSlot;
 	}
 
-	// Token: 0x0601BA0F RID: 113167 RVA: 0x007972C8 File Offset: 0x007954C8
+	// Token: 0x06019594 RID: 103828 RVA: 0x007BF914 File Offset: 0x007BDB14
 	private bool IsMultiSlotFace()
 	{
 		return this.MultiSlotFaceType != null;
 	}
 
-	// Token: 0x0601BA10 RID: 113168 RVA: 0x007972D8 File Offset: 0x007954D8
+	// Token: 0x06019595 RID: 103829 RVA: 0x007BF924 File Offset: 0x007BDB24
 	private float GetMultiSlotFaceBaseRot(int slotId)
 	{
 		if ((this.MultiSlotFaceType ?? ESpecialNpcMarkType.IgnoreCameraHideNpc) == ESpecialNpcMarkType.TrafficLight)
@@ -984,85 +984,85 @@ public class NpcFacialExpressionController
 		return 0f;
 	}
 
-	// Token: 0x0400D92D RID: 55597
+	// Token: 0x0400DDCB RID: 56779
 	private const float TRIFFIC_LIGHT_SLOT_YAW = -120f;
 
-	// Token: 0x0400D92E RID: 55598
+	// Token: 0x0400DDCC RID: 56780
 	private readonly FName SwitchFaceParamName = new FName("AniSwitch_Face");
 
-	// Token: 0x0400D92F RID: 55599
+	// Token: 0x0400DDCD RID: 56781
 	private readonly FName FaceAniMapParamName = new FName("FaceAniMap");
 
-	// Token: 0x0400D930 RID: 55600
+	// Token: 0x0400DDCE RID: 56782
 	private readonly FName FaceSlotName = new FName("MI_Face");
 
-	// Token: 0x0400D931 RID: 55601
+	// Token: 0x0400DDCF RID: 56783
 	private readonly int? EntityId;
 
-	// Token: 0x0400D932 RID: 55602
+	// Token: 0x0400DDD0 RID: 56784
 	[Nullable(2)]
 	private readonly BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400D933 RID: 55603
+	// Token: 0x0400DDD1 RID: 56785
 	[Nullable(2)]
 	private readonly BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400D934 RID: 55604
+	// Token: 0x0400DDD2 RID: 56786
 	private readonly int? PbDataId;
 
-	// Token: 0x0400D935 RID: 55605
+	// Token: 0x0400DDD3 RID: 56787
 	[Nullable(2)]
 	private NpcFacialExpressionController.FaceExpressionInfo CurFaceInfo;
 
-	// Token: 0x0400D936 RID: 55606
+	// Token: 0x0400DDD4 RID: 56788
 	[Nullable(2)]
 	private NpcFacialExpressionController.FaceExpressionInfo DefaultFaceInfo;
 
-	// Token: 0x0400D937 RID: 55607
+	// Token: 0x0400DDD5 RID: 56789
 	private bool IsUseFaceExpressionMorph;
 
-	// Token: 0x0400D938 RID: 55608
+	// Token: 0x0400DDD6 RID: 56790
 	[Nullable(2)]
 	private string FaceMorphDataCache;
 
-	// Token: 0x0400D939 RID: 55609
+	// Token: 0x0400DDD7 RID: 56791
 	private int AnimLoadHandle = -1;
 
-	// Token: 0x0400D93A RID: 55610
+	// Token: 0x0400DDD8 RID: 56792
 	private ESpecialNpcMarkType? MultiSlotFaceType;
 
-	// Token: 0x0400D93B RID: 55611
+	// Token: 0x0400DDD9 RID: 56793
 	private int CurSlotId;
 
-	// Token: 0x0400D93C RID: 55612
+	// Token: 0x0400DDDA RID: 56794
 	private bool IsAnimUpdateTextureFace = true;
 
-	// Token: 0x0400D93D RID: 55613
+	// Token: 0x0400DDDB RID: 56795
 	private EFaceExpressionMode FaceExpressionMode = EFaceExpressionMode.Blink;
 
-	// Token: 0x0400D93E RID: 55614
+	// Token: 0x0400DDDC RID: 56796
 	[Nullable(2)]
 	private UAnimMontage ExpressionBindingMontage;
 
-	// Token: 0x0400D93F RID: 55615
+	// Token: 0x0400DDDD RID: 56797
 	[Nullable(2)]
 	private UAnimMontage SpeakingBindingMontage;
 
-	// Token: 0x0400D940 RID: 55616
+	// Token: 0x0400DDDE RID: 56798
 	private readonly HashSet<int> AnimNotifyStateExpressionSet = new HashSet<int>();
 
-	// Token: 0x0400D941 RID: 55617
+	// Token: 0x0400DDDF RID: 56799
 	private bool? IsHolographic;
 
-	// Token: 0x0400D942 RID: 55618
+	// Token: 0x0400DDE0 RID: 56800
 	private int FacialExpressionHandleUid;
 
-	// Token: 0x02009717 RID: 38679
+	// Token: 0x0200893D RID: 35133
 	[NullableContext(2)]
 	[Nullable(0)]
 	private class FaceExpressionInfo
 	{
-		// Token: 0x0604C478 RID: 312440 RVA: 0x0141AFA0 File Offset: 0x014191A0
+		// Token: 0x06042906 RID: 272646 RVA: 0x013C5BDC File Offset: 0x013C3DDC
 		public FaceExpressionInfo(int id)
 		{
 			this.Id = new int?(id);
@@ -1074,25 +1074,25 @@ public class NpcFacialExpressionController
 			this.DisableBlink = ((faceExpressionConfigData != null) ? faceExpressionConfigData.CloseAutoBlink : null).GetValueOrDefault();
 		}
 
-		// Token: 0x0604C479 RID: 312441 RVA: 0x0141B02B File Offset: 0x0141922B
+		// Token: 0x06042907 RID: 272647 RVA: 0x013C5C67 File Offset: 0x013C3E67
 		public bool IsValid()
 		{
 			return this.Config != null;
 		}
 
-		// Token: 0x040305EE RID: 198126
+		// Token: 0x0402BC83 RID: 179331
 		public int? Id;
 
-		// Token: 0x040305EF RID: 198127
+		// Token: 0x0402BC84 RID: 179332
 		public EFaceExpressionConfigType? Type;
 
-		// Token: 0x040305F0 RID: 198128
+		// Token: 0x0402BC85 RID: 179333
 		public IFaceExpressionConfig Config;
 
-		// Token: 0x040305F1 RID: 198129
+		// Token: 0x0402BC86 RID: 179334
 		public UAnimSequence Asset;
 
-		// Token: 0x040305F2 RID: 198130
+		// Token: 0x0402BC87 RID: 179335
 		public bool DisableBlink;
 	}
 }

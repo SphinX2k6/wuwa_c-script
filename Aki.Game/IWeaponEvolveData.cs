@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02002B6A RID: 11114
+// Token: 0x020020E6 RID: 8422
 public interface IWeaponEvolveData
 {
-	// Token: 0x17001EB4 RID: 7860
-	// (get) Token: 0x06017071 RID: 94321
+	// Token: 0x17001F0C RID: 7948
+	// (get) Token: 0x06014AA2 RID: 84642
 	int EvolveId { get; }
 
-	// Token: 0x17001EB5 RID: 7861
-	// (get) Token: 0x06017072 RID: 94322
+	// Token: 0x17001F0D RID: 7949
+	// (get) Token: 0x06014AA3 RID: 84643
 	bool IsUnlock { get; }
 
-	// Token: 0x17001EB6 RID: 7862
-	// (get) Token: 0x06017073 RID: 94323
+	// Token: 0x17001F0E RID: 7950
+	// (get) Token: 0x06014AA4 RID: 84644
 	bool ShowLine { get; }
 }

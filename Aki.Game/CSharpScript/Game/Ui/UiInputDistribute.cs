@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468E RID: 18062
+	// Token: 0x020035BF RID: 13759
 	public class UiInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E9A8 RID: 190888 RVA: 0x00ACA834 File Offset: 0x00AC8A34
+		// Token: 0x060230F2 RID: 143602 RVA: 0x009F8568 File Offset: 0x009F6768
 		public override bool OnRefresh()
 		{
 			if (UiManager.Instance.IsViewShow(UiModel.Instance.MainViewName))

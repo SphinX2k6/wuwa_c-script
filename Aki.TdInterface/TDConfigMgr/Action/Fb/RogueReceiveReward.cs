@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026CA RID: 9930
+	// Token: 0x0200298E RID: 10638
 	public class RogueReceiveReward : ActionParams
 	{
-		// Token: 0x0600DE08 RID: 56840 RVA: 0x0020F4D3 File Offset: 0x0020D6D3
-		[NullableContext(1)]
+		// Token: 0x0600EBE4 RID: 60388 RVA: 0x0022BD13 File Offset: 0x00229F13
 		public static RogueReceiveReward Create(IRogueReceiveReward? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004236 RID: 16950
-		// (get) Token: 0x0600DE09 RID: 56841 RVA: 0x0020F4F4 File Offset: 0x0020D6F4
+		// Token: 0x17004576 RID: 17782
+		// (get) Token: 0x0600EBE5 RID: 60389 RVA: 0x0022BD34 File Offset: 0x00229F34
 		public virtual ERogueRewardReceiveType? RogueRewardReceiveType
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B48 RID: 31560
+		// Token: 0x040081E8 RID: 33256
 		private IRogueReceiveReward Instance;
 	}
 }

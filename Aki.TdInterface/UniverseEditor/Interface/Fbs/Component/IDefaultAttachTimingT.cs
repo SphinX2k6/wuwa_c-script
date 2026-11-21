@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200507C RID: 20604
+	// Token: 0x020055E1 RID: 21985
 	public class IDefaultAttachTimingT
 	{
-		// Token: 0x1700957A RID: 38266
-		// (get) Token: 0x0602107F RID: 135295 RVA: 0x00496946 File Offset: 0x00494B46
-		// (set) Token: 0x06021080 RID: 135296 RVA: 0x0049694E File Offset: 0x00494B4E
+		// Token: 0x17009D67 RID: 40295
+		// (get) Token: 0x06022FD3 RID: 143315 RVA: 0x004D088A File Offset: 0x004CEA8A
+		// (set) Token: 0x06022FD4 RID: 143316 RVA: 0x004D0892 File Offset: 0x004CEA92
 		public EAttachTimingType Type { get; set; }
 
-		// Token: 0x06021081 RID: 135297 RVA: 0x00496957 File Offset: 0x00494B57
+		// Token: 0x06022FD5 RID: 143317 RVA: 0x004D089B File Offset: 0x004CEA9B
 		public IDefaultAttachTimingT()
 		{
 			this.Type = EAttachTimingType.Default;

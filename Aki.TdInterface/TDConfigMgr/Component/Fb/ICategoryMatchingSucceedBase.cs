@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B5A RID: 2906
+	// Token: 0x02000C28 RID: 3112
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICategoryMatchingSucceedBase
 	{
-		// Token: 0x060042E8 RID: 17128 RVA: 0x000AAACA File Offset: 0x000A8CCA
-		[NullableContext(1)]
+		// Token: 0x06004741 RID: 18241 RVA: 0x000B4B8E File Offset: 0x000B2D8E
+		[NullableContext(0)]
 		public static ICategoryMatchingSucceedBase Create(ICategoryMatchingSucceedBase? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011F1 RID: 4593
-		// (get) Token: 0x060042E9 RID: 17129 RVA: 0x000AAAEC File Offset: 0x000A8CEC
+		// Token: 0x170012EC RID: 4844
+		// (get) Token: 0x06004742 RID: 18242 RVA: 0x000B4BB0 File Offset: 0x000B2DB0
 		public virtual bool? IsSilent
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F2 RID: 4594
-		// (get) Token: 0x060042EA RID: 17130 RVA: 0x000AAB24 File Offset: 0x000A8D24
+		// Token: 0x170012ED RID: 4845
+		// (get) Token: 0x06004743 RID: 18243 RVA: 0x000B4BE8 File Offset: 0x000B2DE8
 		public virtual bool? IsDestroy
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F3 RID: 4595
-		// (get) Token: 0x060042EB RID: 17131 RVA: 0x000AAB5C File Offset: 0x000A8D5C
+		// Token: 0x170012EE RID: 4846
+		// (get) Token: 0x06004744 RID: 18244 RVA: 0x000B4C20 File Offset: 0x000B2E20
 		public virtual bool? SyncAdsorbatePerformance
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F4 RID: 4596
-		// (get) Token: 0x060042EC RID: 17132 RVA: 0x000AAB92 File Offset: 0x000A8D92
+		// Token: 0x170012EF RID: 4847
+		// (get) Token: 0x06004745 RID: 18245 RVA: 0x000B4C56 File Offset: 0x000B2E56
 		public virtual string ChangeSelfState
 		{
 			get
@@ -75,8 +75,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F5 RID: 4597
-		// (get) Token: 0x060042ED RID: 17133 RVA: 0x000AAB9F File Offset: 0x000A8D9F
+		// Token: 0x170012F0 RID: 4848
+		// (get) Token: 0x06004746 RID: 18246 RVA: 0x000B4C63 File Offset: 0x000B2E63
 		public virtual IEntityState ChangeItemState
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F6 RID: 4598
-		// (get) Token: 0x060042EE RID: 17134 RVA: 0x000AABD4 File Offset: 0x000A8DD4
+		// Token: 0x170012F1 RID: 4849
+		// (get) Token: 0x06004747 RID: 18247 RVA: 0x000B4C98 File Offset: 0x000B2E98
 		public virtual int? DelayDischarge
 		{
 			get
@@ -105,8 +105,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F7 RID: 4599
-		// (get) Token: 0x060042EF RID: 17135 RVA: 0x000AAC0A File Offset: 0x000A8E0A
+		// Token: 0x170012F2 RID: 4850
+		// (get) Token: 0x06004748 RID: 18248 RVA: 0x000B4CCE File Offset: 0x000B2ECE
 		public virtual IEntityState ChangeItemStateAfterDischarged
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011F8 RID: 4600
-		// (get) Token: 0x060042F0 RID: 17136 RVA: 0x000AAC3E File Offset: 0x000A8E3E
+		// Token: 0x170012F3 RID: 4851
+		// (get) Token: 0x06004749 RID: 18249 RVA: 0x000B4D02 File Offset: 0x000B2F02
 		public virtual string ChangeSelfStateAfterDischarged
 		{
 			get
@@ -131,19 +131,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025BB RID: 9659
+		// Token: 0x04002803 RID: 10243
 		private ICategoryMatchingSucceedBase Instance;
 
-		// Token: 0x040025BC RID: 9660
+		// Token: 0x04002804 RID: 10244
 		private IEntityState _ChangeItemStateCache;
 
-		// Token: 0x040025BD RID: 9661
+		// Token: 0x04002805 RID: 10245
 		private bool _ChangeItemStateInited;
 
-		// Token: 0x040025BE RID: 9662
+		// Token: 0x04002806 RID: 10246
 		private IEntityState _ChangeItemStateAfterDischargedCache;
 
-		// Token: 0x040025BF RID: 9663
+		// Token: 0x04002807 RID: 10247
 		private bool _ChangeItemStateAfterDischargedInited;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200749A RID: 29850
+	// Token: 0x02007C8D RID: 31885
 	public class ITuningStandGridBoardT
 	{
-		// Token: 0x1700E2A8 RID: 58024
-		// (get) Token: 0x06036432 RID: 222258 RVA: 0x00760609 File Offset: 0x0075E809
-		// (set) Token: 0x06036433 RID: 222259 RVA: 0x00760611 File Offset: 0x0075E811
+		// Token: 0x1700EEC7 RID: 61127
+		// (get) Token: 0x0603981F RID: 235551 RVA: 0x007C33C5 File Offset: 0x007C15C5
+		// (set) Token: 0x06039820 RID: 235552 RVA: 0x007C33CD File Offset: 0x007C15CD
 		public List<ETuningStandGridType> Grids { get; set; }
 
-		// Token: 0x06036434 RID: 222260 RVA: 0x0076061A File Offset: 0x0075E81A
+		// Token: 0x06039821 RID: 235553 RVA: 0x007C33D6 File Offset: 0x007C15D6
 		public ITuningStandGridBoardT()
 		{
 			this.Grids = null;

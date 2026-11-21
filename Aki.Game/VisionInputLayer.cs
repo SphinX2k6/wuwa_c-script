@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030CF RID: 12495
+// Token: 0x02002627 RID: 9767
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionInputLayer : InputLayer
 {
-	// Token: 0x0601AC16 RID: 109590 RVA: 0x007362D4 File Offset: 0x007344D4
+	// Token: 0x0601862B RID: 99883 RVA: 0x0075BFF3 File Offset: 0x0075A1F3
 	[NullableContext(1)]
 	public void Init(EntityHandle entityHandle)
 	{
@@ -18,20 +18,20 @@ public class VisionInputLayer : InputLayer
 		this.AbilityComp = ((entity2 != null) ? entity2.GetComponent<CharacterAbilityComponent>() : null);
 	}
 
-	// Token: 0x0601AC17 RID: 109591 RVA: 0x00736306 File Offset: 0x00734506
+	// Token: 0x0601862C RID: 99884 RVA: 0x0075C025 File Offset: 0x0075A225
 	public override void Clear()
 	{
 		this.VisionComp = null;
 		this.AbilityComp = null;
 	}
 
-	// Token: 0x0601AC18 RID: 109592 RVA: 0x00736316 File Offset: 0x00734516
+	// Token: 0x0601862D RID: 99885 RVA: 0x0075C035 File Offset: 0x0075A235
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.Vision;
 	}
 
-	// Token: 0x0601AC19 RID: 109593 RVA: 0x0073631C File Offset: 0x0073451C
+	// Token: 0x0601862E RID: 99886 RVA: 0x0075C038 File Offset: 0x0075A238
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{
 		byte b = action;
@@ -57,7 +57,7 @@ public class VisionInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0601AC1A RID: 109594 RVA: 0x007363C4 File Offset: 0x007345C4
+	// Token: 0x0601862F RID: 99887 RVA: 0x0075C0E0 File Offset: 0x0075A2E0
 	public override SInputCommand HandleRelease(EInputAction action, float time)
 	{
 		if (action == 9)
@@ -67,9 +67,9 @@ public class VisionInputLayer : InputLayer
 		return null;
 	}
 
-	// Token: 0x0400CE87 RID: 52871
+	// Token: 0x0400D277 RID: 53879
 	private CharacterVisionComponent VisionComp;
 
-	// Token: 0x0400CE88 RID: 52872
+	// Token: 0x0400D278 RID: 53880
 	private CharacterAbilityComponent AbilityComp;
 }

@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDD RID: 23773
+	// Token: 0x02004CBF RID: 19647
 	public class BattleSequenceQteView : UiViewBase
 	{
-		// Token: 0x0603C286 RID: 246406 RVA: 0x00E66907 File Offset: 0x00E64B07
+		// Token: 0x060311DC RID: 201180 RVA: 0x00DB6EBB File Offset: 0x00DB50BB
 		[NullableContext(1)]
 		public BattleSequenceQteView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603C287 RID: 246407 RVA: 0x00E66910 File Offset: 0x00E64B10
+		// Token: 0x060311DD RID: 201181 RVA: 0x00DB6EC4 File Offset: 0x00DB50C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -35,21 +35,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C288 RID: 246408 RVA: 0x00E66995 File Offset: 0x00E64B95
+		// Token: 0x060311DE RID: 201182 RVA: 0x00DB6F49 File Offset: 0x00DB5149
 		private void OnClickedQteButton()
 		{
 		}
 
-		// Token: 0x0603C289 RID: 246409 RVA: 0x00E66997 File Offset: 0x00E64B97
+		// Token: 0x060311DF RID: 201183 RVA: 0x00DB6F4B File Offset: 0x00DB514B
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.UiViewSequence.PlaySequencePurely("Huxi", false, false);
 		}
 
-		// Token: 0x0200BF34 RID: 48948
+		// Token: 0x0200A93A RID: 43322
 		private enum EChildCom
 		{
-			// Token: 0x04039ACA RID: 236234
+			// Token: 0x0403448C RID: 214156
 			BtnQte
 		}
 	}

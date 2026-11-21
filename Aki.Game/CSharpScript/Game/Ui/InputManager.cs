@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046B1 RID: 18097
+	// Token: 0x020035E2 RID: 13794
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputManager : Singleton
 	{
-		// Token: 0x0602EA88 RID: 191112 RVA: 0x00ACC3A8 File Offset: 0x00ACA5A8
+		// Token: 0x060231D4 RID: 143828 RVA: 0x009FAC7C File Offset: 0x009F8E7C
 		public void Init()
 		{
 			EventSystem.Instance.Add(EEventName.UiManagerInit, new Action(this.Start));
 			EventSystem.Instance.Add(EEventName.UiManagerDestroy, new Action(this.Clear));
 		}
 
-		// Token: 0x0602EA89 RID: 191113 RVA: 0x00ACC3DC File Offset: 0x00ACA5DC
+		// Token: 0x060231D5 RID: 143829 RVA: 0x009FACB0 File Offset: 0x009F8EB0
 		private void Start()
 		{
 			if (!this.IsInit)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Ui
 			UKuroInputFunctionLibrary.ClearInputModeReply();
 		}
 
-		// Token: 0x0602EA8A RID: 191114 RVA: 0x00ACC444 File Offset: 0x00ACA644
+		// Token: 0x060231D6 RID: 143830 RVA: 0x009FAD18 File Offset: 0x009F8F18
 		private void Clear()
 		{
 			if (this.IsInit)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA8B RID: 191115 RVA: 0x00ACC4A0 File Offset: 0x00ACA6A0
+		// Token: 0x060231D7 RID: 143831 RVA: 0x009FAD74 File Offset: 0x009F8F74
 		private void AddViewHotKeyHandle(OpenAndCloseViewHotKey config)
 		{
 			if (this.ViewHotKeyHandleContainer.IsDataExist(config.Id))
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Ui
 			this.ViewHotKeyHandleContainer.Add(viewHotKeyHandle);
 		}
 
-		// Token: 0x0602EA8C RID: 191116 RVA: 0x00ACC5E4 File Offset: 0x00ACA7E4
+		// Token: 0x060231D8 RID: 143832 RVA: 0x009FAEB8 File Offset: 0x009F90B8
 		private void RemoveViewHotKeyHandle(OpenAndCloseViewHotKey config)
 		{
 			ViewHotKeyHandle[] array = this.ViewHotKeyHandleContainer.Get((EUiViewName)config.ViewName);
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA8D RID: 191117 RVA: 0x00ACC62D File Offset: 0x00ACA82D
+		// Token: 0x060231D9 RID: 143833 RVA: 0x009FAF01 File Offset: 0x009F9101
 		private bool DefaultLockShortcutKeyDelegate(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 			return true;
 		}
 
-		// Token: 0x0602EA8E RID: 191118 RVA: 0x00ACC630 File Offset: 0x00ACA830
+		// Token: 0x060231DA RID: 143834 RVA: 0x009FAF04 File Offset: 0x009F9104
 		public void AddViewHotKeyActionByType(EInputDataType type)
 		{
 			IReadOnlyList<OpenAndCloseViewHotKey> allOpenAndCloseViewHotKeyConfig = ViewHotKeyConfig.Instance.GetAllOpenAndCloseViewHotKeyConfig();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA8F RID: 191119 RVA: 0x00ACC698 File Offset: 0x00ACA898
+		// Token: 0x060231DB RID: 143835 RVA: 0x009FAF6C File Offset: 0x009F916C
 		public void RemoveViewHotKeyActionByType(EInputDataType type)
 		{
 			IReadOnlyList<OpenAndCloseViewHotKey> allOpenAndCloseViewHotKeyConfig = ViewHotKeyConfig.Instance.GetAllOpenAndCloseViewHotKeyConfig();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA90 RID: 191120 RVA: 0x00ACC700 File Offset: 0x00ACA900
+		// Token: 0x060231DC RID: 143836 RVA: 0x009FAFD4 File Offset: 0x009F91D4
 		public void RegisterLockShortcutKeyReason(string reason, TLockShortcutKeyDelegate delegateItem = null)
 		{
 			if (delegateItem == null)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602EA91 RID: 191121 RVA: 0x00ACC754 File Offset: 0x00ACA954
+		// Token: 0x060231DD RID: 143837 RVA: 0x009FB028 File Offset: 0x009F9228
 		public void RemoveLockShortcutKeyReason(string reason)
 		{
 			this.LockShortcutKeyDelegateMap.Remove(reason);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602EA92 RID: 191122 RVA: 0x00ACC798 File Offset: 0x00ACA998
+		// Token: 0x060231DE RID: 143838 RVA: 0x009FB06C File Offset: 0x009F926C
 		public void RegisterOpenViewFunc(EUiViewName name, Action delegateItem)
 		{
 			this.ViewHotKeyHandleContainer.RegisterOpenViewFunc(name, delegateItem);
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA93 RID: 191123 RVA: 0x00ACC7DC File Offset: 0x00ACA9DC
+		// Token: 0x060231DF RID: 143839 RVA: 0x009FB0B0 File Offset: 0x009F92B0
 		public void RegisterCloseViewFunc(EUiViewName name, Action delegateItem)
 		{
 			this.ViewHotKeyHandleContainer.RegisterCloseViewFunc(name, delegateItem);
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA94 RID: 191124 RVA: 0x00ACC820 File Offset: 0x00ACAA20
+		// Token: 0x060231E0 RID: 143840 RVA: 0x009FB0F4 File Offset: 0x009F92F4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -229,13 +229,13 @@ namespace CSharpScript.Game.Ui
 			return this.ViewHotKeyHandleContainer.Get(viewName);
 		}
 
-		// Token: 0x0602EA95 RID: 191125 RVA: 0x00ACC82E File Offset: 0x00ACAA2E
+		// Token: 0x060231E1 RID: 143841 RVA: 0x009FB102 File Offset: 0x009F9302
 		public ViewHotKeyHandle[] GetAllViewHotKeyHandle()
 		{
 			return this.ViewHotKeyHandleContainer.GetAll();
 		}
 
-		// Token: 0x0602EA96 RID: 191126 RVA: 0x00ACC83C File Offset: 0x00ACAA3C
+		// Token: 0x060231E2 RID: 143842 RVA: 0x009FB110 File Offset: 0x009F9310
 		private void RegisterHandle()
 		{
 			InputDistributeController.Instance.BindAction("GM指令", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputGmShortcutKey));
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.RefreshStateOnPlatformChanged));
 		}
 
-		// Token: 0x0602EA97 RID: 191127 RVA: 0x00ACC93C File Offset: 0x00ACAB3C
+		// Token: 0x060231E3 RID: 143843 RVA: 0x009FB210 File Offset: 0x009F9410
 		private void RemoveHandle()
 		{
 			InputDistributeController.Instance.UnBindAction("GM指令", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputGmShortcutKey));
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.RefreshStateOnPlatformChanged));
 		}
 
-		// Token: 0x0602EA98 RID: 191128 RVA: 0x00ACCA3C File Offset: 0x00ACAC3C
+		// Token: 0x060231E4 RID: 143844 RVA: 0x009FB310 File Offset: 0x009F9510
 		private void OnInputGmShortcutKey(string name, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Release)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA99 RID: 191129 RVA: 0x00ACCA9C File Offset: 0x00ACAC9C
+		// Token: 0x060231E5 RID: 143845 RVA: 0x009FB370 File Offset: 0x009F9570
 		private void OnInputMouseShortcutKey(string name, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			bool flag = actionType == InputDistributeDefine.EActionType.Press;
@@ -314,19 +314,19 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EA9A RID: 191130 RVA: 0x00ACCAF9 File Offset: 0x00ACACF9
+		// Token: 0x060231E6 RID: 143846 RVA: 0x009FB3CD File Offset: 0x009F95CD
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			this.AddViewHandle(viewName, viewId);
 		}
 
-		// Token: 0x0602EA9B RID: 191131 RVA: 0x00ACCB03 File Offset: 0x00ACAD03
+		// Token: 0x060231E7 RID: 143847 RVA: 0x009FB3D7 File Offset: 0x009F95D7
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			this.RemoveViewHandle(viewName, viewId);
 		}
 
-		// Token: 0x0602EA9C RID: 191132 RVA: 0x00ACCB0D File Offset: 0x00ACAD0D
+		// Token: 0x060231E8 RID: 143848 RVA: 0x009FB3E1 File Offset: 0x009F95E1
 		private void AddViewHandle(EUiViewName viewName, int viewId)
 		{
 			ImmersiveMouseModule immersiveMouseModule = this.ImmersiveMouseModule;
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Ui
 			this.TryAddDisableShortcutKeyView(viewName, viewId);
 		}
 
-		// Token: 0x0602EA9D RID: 191133 RVA: 0x00ACCB38 File Offset: 0x00ACAD38
+		// Token: 0x060231E9 RID: 143849 RVA: 0x009FB40C File Offset: 0x009F960C
 		private void RemoveViewHandle(EUiViewName viewName, int viewId)
 		{
 			ImmersiveMouseModule immersiveMouseModule = this.ImmersiveMouseModule;
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Ui
 			this.TryRemoveDisableCloseView(viewName, viewId);
 		}
 
-		// Token: 0x0602EA9E RID: 191134 RVA: 0x00ACCB63 File Offset: 0x00ACAD63
+		// Token: 0x060231EA RID: 143850 RVA: 0x009FB437 File Offset: 0x009F9637
 		private void OnPlayerDead()
 		{
 			this.ClearAlwaysCursorViewList();
@@ -360,13 +360,13 @@ namespace CSharpScript.Game.Ui
 			this.DisableCloseViewByShortcutKeyViewRecord.Clear();
 		}
 
-		// Token: 0x0602EA9F RID: 191135 RVA: 0x00ACCB81 File Offset: 0x00ACAD81
+		// Token: 0x060231EB RID: 143851 RVA: 0x009FB455 File Offset: 0x009F9655
 		private void RefreshCursor()
 		{
 			this.RefreshAlwaysCursorVisibleByViewRecord();
 		}
 
-		// Token: 0x0602EAA0 RID: 191136 RVA: 0x00ACCB8C File Offset: 0x00ACAD8C
+		// Token: 0x060231EC RID: 143852 RVA: 0x009FB460 File Offset: 0x009F9660
 		private void MoveCursorToRightDown()
 		{
 			ValueTuple<int, int>? cursorRightDown = this.GetCursorRightDown();
@@ -376,13 +376,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAA1 RID: 191137 RVA: 0x00ACCBB6 File Offset: 0x00ACADB6
+		// Token: 0x060231ED RID: 143853 RVA: 0x009FB48A File Offset: 0x009F968A
 		private void OnWorldDone()
 		{
 			this.ClearAlwaysCursorViewList();
 		}
 
-		// Token: 0x0602EAA2 RID: 191138 RVA: 0x00ACCBC0 File Offset: 0x00ACADC0
+		// Token: 0x060231EE RID: 143854 RVA: 0x009FB494 File Offset: 0x009F9694
 		private unsafe void TryAddDisableShortcutKeyView(EUiViewName viewName, int viewId)
 		{
 			UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(viewName);
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0602EAA3 RID: 191139 RVA: 0x00ACCC78 File Offset: 0x00ACAE78
+		// Token: 0x060231EF RID: 143855 RVA: 0x009FB54C File Offset: 0x009F974C
 		private unsafe void TryRemoveDisableShortcutKeyView(EUiViewName viewName, int viewId)
 		{
 			if (!this.DisableShortcutKeyViewRecord.Has(viewName))
@@ -425,19 +425,19 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x0602EAA4 RID: 191140 RVA: 0x00ACCD25 File Offset: 0x00ACAF25
+		// Token: 0x060231F0 RID: 143856 RVA: 0x009FB5F9 File Offset: 0x009F97F9
 		public bool IsAllowOpenViewByShortcutKey()
 		{
 			return !this.DisableShortcutKeyViewRecord.HasAny();
 		}
 
-		// Token: 0x0602EAA5 RID: 191141 RVA: 0x00ACCD35 File Offset: 0x00ACAF35
+		// Token: 0x060231F1 RID: 143857 RVA: 0x009FB609 File Offset: 0x009F9809
 		public bool IsAllowCloseViewByShortcutKey()
 		{
 			return !this.DisableCloseViewByShortcutKeyViewRecord.HasAny();
 		}
 
-		// Token: 0x0602EAA6 RID: 191142 RVA: 0x00ACCD45 File Offset: 0x00ACAF45
+		// Token: 0x060231F2 RID: 143858 RVA: 0x009FB619 File Offset: 0x009F9819
 		public void SetMouseCursorVisibleType(EMouseCursorVisibleType cursorVisibleType)
 		{
 			this.MouseCursorVisibleType = cursorVisibleType;
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Ui
 			this.SetShowCursor(false, true);
 		}
 
-		// Token: 0x0602EAA7 RID: 191143 RVA: 0x00ACCD70 File Offset: 0x00ACAF70
+		// Token: 0x060231F3 RID: 143859 RVA: 0x009FB644 File Offset: 0x009F9844
 		private void CursorOpenViewHandle(EUiViewName viewName, int viewId)
 		{
 			if (viewName == UiModel.Instance.MainViewName)
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAA8 RID: 191144 RVA: 0x00ACCDBC File Offset: 0x00ACAFBC
+		// Token: 0x060231F4 RID: 143860 RVA: 0x009FB690 File Offset: 0x009F9890
 		private void TryAddDisableCloseView(EUiViewName viewName, int viewId)
 		{
 			UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(viewName);
@@ -491,13 +491,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAA9 RID: 191145 RVA: 0x00ACCDF7 File Offset: 0x00ACAFF7
+		// Token: 0x060231F5 RID: 143861 RVA: 0x009FB6CB File Offset: 0x009F98CB
 		private void TryRemoveDisableCloseView(EUiViewName viewName, int viewId)
 		{
 			this.DisableCloseViewByShortcutKeyViewRecord.Remove(viewName);
 		}
 
-		// Token: 0x0602EAAA RID: 191146 RVA: 0x00ACCE08 File Offset: 0x00ACB008
+		// Token: 0x060231F6 RID: 143862 RVA: 0x009FB6DC File Offset: 0x009F98DC
 		private unsafe bool TryOpenViewShowCursor(EUiViewName viewName, int viewId)
 		{
 			UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(viewName);
@@ -544,7 +544,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602EAAB RID: 191147 RVA: 0x00ACCF38 File Offset: 0x00ACB138
+		// Token: 0x060231F7 RID: 143863 RVA: 0x009FB80C File Offset: 0x009F9A0C
 		private unsafe void TryCloseViewHiddenCursor(EUiViewName viewName, int viewId)
 		{
 			UiViewInfo uiViewInfo = UiConfig.Instance.TryGetViewInfo(viewName);
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.Ui
 			this.RefreshAlwaysCursorVisibleByViewRecord();
 		}
 
-		// Token: 0x0602EAAC RID: 191148 RVA: 0x00ACD0A8 File Offset: 0x00ACB2A8
+		// Token: 0x060231F8 RID: 143864 RVA: 0x009FB97C File Offset: 0x009F9B7C
 		private void RefreshAlwaysCursorVisibleByViewRecord()
 		{
 			if (this.MouseCursorVisibleType != EMouseCursorVisibleType.None)
@@ -616,7 +616,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAAD RID: 191149 RVA: 0x00ACD134 File Offset: 0x00ACB334
+		// Token: 0x060231F9 RID: 143865 RVA: 0x009FBA08 File Offset: 0x009F9C08
 		private bool RefreshAlwaysCursorVisible()
 		{
 			bool flag = this.IsImmersiveMouseModeEnabled() && !this.IsImmersiveInputPaused();
@@ -625,7 +625,7 @@ namespace CSharpScript.Game.Ui
 			return flag2;
 		}
 
-		// Token: 0x0602EAAE RID: 191150 RVA: 0x00ACD173 File Offset: 0x00ACB373
+		// Token: 0x060231FA RID: 143866 RVA: 0x009FBA47 File Offset: 0x009F9C47
 		private void ClearAlwaysCursorViewList()
 		{
 			this.ShowMouseViewRecord.Clear();
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAAF RID: 191151 RVA: 0x00ACD1A8 File Offset: 0x00ACB3A8
+		// Token: 0x060231FB RID: 143867 RVA: 0x009FBA7C File Offset: 0x009F9C7C
 		public void SetAlwaysShowCursor(bool bAlwaysShowMouseCursor)
 		{
 			if (InputExtraShowCursorCenter.Instance.HasExtraShowCursorData())
@@ -656,7 +656,7 @@ namespace CSharpScript.Game.Ui
 			this.SetShowCursor(this.IsAlwaysShowMouseCursor, true);
 		}
 
-		// Token: 0x0602EAB0 RID: 191152 RVA: 0x00ACD1F8 File Offset: 0x00ACB3F8
+		// Token: 0x060231FC RID: 143868 RVA: 0x009FBACC File Offset: 0x009F9CCC
 		public unsafe void SetShowCursor(bool value, bool fireEvent = true)
 		{
 			if (!this.IsPlayerControllerIsValid())
@@ -696,7 +696,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAB1 RID: 191153 RVA: 0x00ACD2F0 File Offset: 0x00ACB4F0
+		// Token: 0x060231FD RID: 143869 RVA: 0x009FBBC4 File Offset: 0x009F9DC4
 		private void ApplyGameAndUiInputMode()
 		{
 			APlayerController playerController = Global.PlayerController;
@@ -706,7 +706,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAB2 RID: 191154 RVA: 0x00ACD331 File Offset: 0x00ACB531
+		// Token: 0x060231FE RID: 143870 RVA: 0x009FBC05 File Offset: 0x009F9E05
 		private void ReplyGameAndUiInputMode()
 		{
 			if (this.InputModeReply != null)
@@ -716,13 +716,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAB3 RID: 191155 RVA: 0x00ACD358 File Offset: 0x00ACB558
+		// Token: 0x060231FF RID: 143871 RVA: 0x009FBC2C File Offset: 0x009F9E2C
 		public void RefreshStateOnPlatformChanged(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 		{
 			this.SetShowCursor(this.ManagerMouseStatus, true);
 		}
 
-		// Token: 0x0602EAB4 RID: 191156 RVA: 0x00ACD368 File Offset: 0x00ACB568
+		// Token: 0x06023200 RID: 143872 RVA: 0x009FBC3C File Offset: 0x009F9E3C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -744,7 +744,7 @@ namespace CSharpScript.Game.Ui
 			return new ValueTuple<int, int>?(new ValueTuple<int, int>(item, item2));
 		}
 
-		// Token: 0x0602EAB5 RID: 191157 RVA: 0x00ACD3AC File Offset: 0x00ACB5AC
+		// Token: 0x06023201 RID: 143873 RVA: 0x009FBC80 File Offset: 0x009F9E80
 		public void MoveCursorToCenter()
 		{
 			if (!this.IsAutoMoveCursorToCenter)
@@ -758,7 +758,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAB6 RID: 191158 RVA: 0x00ACD3E0 File Offset: 0x00ACB5E0
+		// Token: 0x06023202 RID: 143874 RVA: 0x009FBCB4 File Offset: 0x009F9EB4
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -780,7 +780,7 @@ namespace CSharpScript.Game.Ui
 			return new ValueTuple<int, int>?(new ValueTuple<int, int>(item, item2));
 		}
 
-		// Token: 0x0602EAB7 RID: 191159 RVA: 0x00ACD41F File Offset: 0x00ACB61F
+		// Token: 0x06023203 RID: 143875 RVA: 0x009FBCF3 File Offset: 0x009F9EF3
 		[NullableContext(0)]
 		public void SetEventDataPrevPosition([TupleElementNames(new string[]
 		{
@@ -794,20 +794,20 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAB8 RID: 191160 RVA: 0x00ACD44C File Offset: 0x00ACB64C
+		// Token: 0x06023204 RID: 143876 RVA: 0x009FBD20 File Offset: 0x009F9F20
 		public bool IsShowMouseCursor()
 		{
 			return this.IsPlayerControllerIsValid() && Global.PlayerController.bShowMouseCursor;
 		}
 
-		// Token: 0x0602EAB9 RID: 191161 RVA: 0x00ACD464 File Offset: 0x00ACB664
+		// Token: 0x06023205 RID: 143877 RVA: 0x009FBD38 File Offset: 0x009F9F38
 		private bool IsPlayerControllerIsValid()
 		{
 			APlayerController playerController = Global.PlayerController;
 			return playerController != null && playerController.IsValid();
 		}
 
-		// Token: 0x0602EABA RID: 191162 RVA: 0x00ACD488 File Offset: 0x00ACB688
+		// Token: 0x06023206 RID: 143878 RVA: 0x009FBD5C File Offset: 0x009F9F5C
 		[NullableContext(0)]
 		private void SetMouseLocation([TupleElementNames(new string[]
 		{
@@ -819,7 +819,7 @@ namespace CSharpScript.Game.Ui
 			this.SetEventDataPrevPosition(new ValueTuple<float, float>?(new ValueTuple<float, float>((float)cursorData.Item1, (float)cursorData.Item2)));
 		}
 
-		// Token: 0x0602EABB RID: 191163 RVA: 0x00ACD4CB File Offset: 0x00ACB6CB
+		// Token: 0x06023207 RID: 143879 RVA: 0x009FBD9F File Offset: 0x009F9F9F
 		public void SetInputRespondToKey(string keyboardShortcut)
 		{
 			if (keyboardShortcut != "")
@@ -828,7 +828,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EABC RID: 191164 RVA: 0x00ACD4E5 File Offset: 0x00ACB6E5
+		// Token: 0x06023208 RID: 143880 RVA: 0x009FBDB9 File Offset: 0x009F9FB9
 		public void ResetInputRespondToKey(string keyboardShortcut)
 		{
 			if (keyboardShortcut == Input.Instance.OnlyRespondToKey)
@@ -837,7 +837,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EABD RID: 191165 RVA: 0x00ACD508 File Offset: 0x00ACB708
+		// Token: 0x06023209 RID: 143881 RVA: 0x009FBDDC File Offset: 0x009F9FDC
 		public void PauseImmersiveMouseMode(EImmersiveMouseModeReason reason, bool bReset = true, bool bShowCursor = true, bool bWakeInputState = false)
 		{
 			if (this.ImmersiveMouseModule != null)
@@ -850,7 +850,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EABE RID: 191166 RVA: 0x00ACD535 File Offset: 0x00ACB735
+		// Token: 0x0602320A RID: 143882 RVA: 0x009FBE09 File Offset: 0x009FA009
 		public void ResumeImmersiveMouseMode(EImmersiveMouseModeReason reason)
 		{
 			if (this.ImmersiveMouseModule != null)
@@ -859,25 +859,25 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EABF RID: 191167 RVA: 0x00ACD54B File Offset: 0x00ACB74B
+		// Token: 0x0602320B RID: 143883 RVA: 0x009FBE1F File Offset: 0x009FA01F
 		public bool IsImmersiveMouseModeEnabled()
 		{
 			return this.ImmersiveMouseModule != null && this.ImmersiveMouseModule.IsImmersiveModeEnabled();
 		}
 
-		// Token: 0x0602EAC0 RID: 191168 RVA: 0x00ACD562 File Offset: 0x00ACB762
+		// Token: 0x0602320C RID: 143884 RVA: 0x009FBE36 File Offset: 0x009FA036
 		public bool IsImmersiveInputPaused()
 		{
 			return this.ImmersiveMouseModule != null && this.ImmersiveMouseModule.IsImmersiveInputPaused();
 		}
 
-		// Token: 0x0602EAC1 RID: 191169 RVA: 0x00ACD579 File Offset: 0x00ACB779
+		// Token: 0x0602320D RID: 143885 RVA: 0x009FBE4D File Offset: 0x009FA04D
 		public bool GetImmersiveInputWakeState()
 		{
 			return this.ImmersiveInputWakeState;
 		}
 
-		// Token: 0x0602EAC2 RID: 191170 RVA: 0x00ACD581 File Offset: 0x00ACB781
+		// Token: 0x0602320E RID: 143886 RVA: 0x009FBE55 File Offset: 0x009FA055
 		public void SetImmersiveInputWakeState(EInputControllerMainType inputMainType, bool isWake)
 		{
 			if (this.ImmersiveInputWakeState == isWake)
@@ -888,7 +888,7 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit<EInputControllerMainType, bool>(EEventName.OnImmersiveInputStateChange, inputMainType, isWake);
 		}
 
-		// Token: 0x0602EAC3 RID: 191171 RVA: 0x00ACD5A8 File Offset: 0x00ACB7A8
+		// Token: 0x0602320F RID: 143887 RVA: 0x009FBE7C File Offset: 0x009FA07C
 		public unsafe void AddDynamicShowMouseView(EUiViewName viewName)
 		{
 			int num = this.ShowMouseViewRecord.Add(viewName);
@@ -903,7 +903,7 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0602EAC4 RID: 191172 RVA: 0x00ACD628 File Offset: 0x00ACB828
+		// Token: 0x06023210 RID: 143888 RVA: 0x009FBEFC File Offset: 0x009FA0FC
 		public unsafe void RemoveDynamicShowMouseView(EUiViewName viewName)
 		{
 			int num = this.ShowMouseViewRecord.Remove(viewName);
@@ -918,8 +918,8 @@ namespace CSharpScript.Game.Ui
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x1700765E RID: 30302
-		// (get) Token: 0x0602EAC5 RID: 191173 RVA: 0x00ACD6A5 File Offset: 0x00ACB8A5
+		// Token: 0x1700491A RID: 18714
+		// (get) Token: 0x06023211 RID: 143889 RVA: 0x009FBF79 File Offset: 0x009FA179
 		public static InputManager Instance
 		{
 			get
@@ -933,12 +933,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EAC6 RID: 191174 RVA: 0x00ACD6C8 File Offset: 0x00ACB8C8
+		// Token: 0x06023212 RID: 143890 RVA: 0x009FBF9C File Offset: 0x009FA19C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EAC7 RID: 191175 RVA: 0x00ACD6CA File Offset: 0x00ACB8CA
+		// Token: 0x06023213 RID: 143891 RVA: 0x009FBF9E File Offset: 0x009FA19E
 		public static void ResetStaticDefaultValue()
 		{
 			InputManager instance = InputManager._instance;
@@ -949,60 +949,60 @@ namespace CSharpScript.Game.Ui
 			InputManager._instance = null;
 		}
 
-		// Token: 0x0602EAC8 RID: 191176 RVA: 0x00ACD6E3 File Offset: 0x00ACB8E3
+		// Token: 0x06023214 RID: 143892 RVA: 0x009FBFB7 File Offset: 0x009FA1B7
 		static InputManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputManager.CreateStaticDefaultValue), new Action(InputManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019698 RID: 104088
+		// Token: 0x04013D3D RID: 81213
 		private EMouseCursorVisibleType MouseCursorVisibleType;
 
-		// Token: 0x04019699 RID: 104089
+		// Token: 0x04013D3E RID: 81214
 		private bool IsAlwaysShowMouseCursor;
 
-		// Token: 0x0401969A RID: 104090
+		// Token: 0x04013D3F RID: 81215
 		private bool ManagerMouseStatus;
 
-		// Token: 0x0401969B RID: 104091
+		// Token: 0x04013D40 RID: 81216
 		private bool IsInit;
 
-		// Token: 0x0401969C RID: 104092
+		// Token: 0x04013D41 RID: 81217
 		private readonly InputViewRecord ShowMouseViewRecord = new InputViewRecord();
 
-		// Token: 0x0401969D RID: 104093
+		// Token: 0x04013D42 RID: 81218
 		private bool IsCursorFrameGenDisabled;
 
-		// Token: 0x0401969E RID: 104094
+		// Token: 0x04013D43 RID: 81219
 		public readonly InputViewRecord DisableShortcutKeyViewRecord = new InputViewRecord();
 
-		// Token: 0x0401969F RID: 104095
+		// Token: 0x04013D44 RID: 81220
 		public readonly InputViewRecord DisableCloseViewByShortcutKeyViewRecord = new InputViewRecord();
 
-		// Token: 0x040196A0 RID: 104096
+		// Token: 0x04013D45 RID: 81221
 		[Nullable(2)]
 		private FInputModeReply InputModeReply;
 
-		// Token: 0x040196A1 RID: 104097
+		// Token: 0x04013D46 RID: 81222
 		private readonly ViewHotKeyHandleContainer ViewHotKeyHandleContainer = new ViewHotKeyHandleContainer();
 
-		// Token: 0x040196A2 RID: 104098
+		// Token: 0x04013D47 RID: 81223
 		public bool IsAutoMoveCursorToCenter = true;
 
-		// Token: 0x040196A3 RID: 104099
+		// Token: 0x04013D48 RID: 81224
 		public bool IsAltPress;
 
-		// Token: 0x040196A4 RID: 104100
+		// Token: 0x04013D49 RID: 81225
 		[Nullable(2)]
 		public ImmersiveMouseModule ImmersiveMouseModule;
 
-		// Token: 0x040196A5 RID: 104101
+		// Token: 0x04013D4A RID: 81226
 		private readonly Dictionary<string, TLockShortcutKeyDelegate> LockShortcutKeyDelegateMap = new Dictionary<string, TLockShortcutKeyDelegate>();
 
-		// Token: 0x040196A6 RID: 104102
+		// Token: 0x04013D4B RID: 81227
 		private bool ImmersiveInputWakeState;
 
-		// Token: 0x040196A7 RID: 104103
+		// Token: 0x04013D4C RID: 81228
 		[Nullable(2)]
 		private static InputManager _instance;
 	}

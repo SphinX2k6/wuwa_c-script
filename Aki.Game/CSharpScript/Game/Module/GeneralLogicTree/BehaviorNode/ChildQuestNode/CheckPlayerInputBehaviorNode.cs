@@ -6,17 +6,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059CB RID: 22987
+	// Token: 0x020049A4 RID: 18852
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CheckPlayerInputBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A44C RID: 238668 RVA: 0x00DDB104 File Offset: 0x00DD9304
+		// Token: 0x0602F373 RID: 193395 RVA: 0x00D2A98C File Offset: 0x00D28B8C
 		public CheckPlayerInputBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A44D RID: 238669 RVA: 0x00DDB110 File Offset: 0x00DD9310
+		// Token: 0x0602F374 RID: 193396 RVA: 0x00D2A998 File Offset: 0x00D28B98
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			if (!base.OnCreate(nodeConfig))
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A44E RID: 238670 RVA: 0x00DDB188 File Offset: 0x00DD9388
+		// Token: 0x0602F375 RID: 193397 RVA: 0x00D2AA10 File Offset: 0x00D28C10
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A44F RID: 238671 RVA: 0x00DDB224 File Offset: 0x00DD9424
+		// Token: 0x0602F376 RID: 193398 RVA: 0x00D2AAAC File Offset: 0x00D28CAC
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			base.RemoveEventsOnChildQuestEnd();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A450 RID: 238672 RVA: 0x00DDB2A1 File Offset: 0x00DD94A1
+		// Token: 0x0602F377 RID: 193399 RVA: 0x00D2AB29 File Offset: 0x00D28D29
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification ii)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Release)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.OnChallengeAgain(actionName);
 		}
 
-		// Token: 0x0603A451 RID: 238673 RVA: 0x00DDB2AF File Offset: 0x00DD94AF
+		// Token: 0x0602F378 RID: 193400 RVA: 0x00D2AB37 File Offset: 0x00D28D37
 		protected void OnChallengeAgain(string actionName)
 		{
 			if (this.Submitting)
@@ -111,10 +111,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.SubmitNode(null);
 		}
 
-		// Token: 0x0401E619 RID: 124441
+		// Token: 0x040190B8 RID: 102584
 		private EPlayerButtonType ButtonType;
 
-		// Token: 0x0401E61A RID: 124442
+		// Token: 0x040190B9 RID: 102585
 		[Nullable(2)]
 		private string ActionName;
 	}

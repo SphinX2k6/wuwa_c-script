@@ -1,7 +1,7 @@
 ﻿using System;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001573 RID: 5491
+// Token: 0x02000A2B RID: 2603
 internal class VersionPreheatActivityBottom : UiPanelBase
 {
 }

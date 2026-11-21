@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x02000141 RID: 321
+	// Token: 0x02000145 RID: 325
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class RpcUniTaskHelper
 	{
-		// Token: 0x06000B37 RID: 2871 RVA: 0x00036490 File Offset: 0x00034690
+		// Token: 0x06000B92 RID: 2962 RVA: 0x00037010 File Offset: 0x00035210
 		public static bool IsPending(object result)
 		{
 			bool flag = result is UniTask || result is UniTask<object>;
@@ -27,7 +27,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(UniTask<>);
 		}
 
-		// Token: 0x06000B38 RID: 2872 RVA: 0x000364E4 File Offset: 0x000346E4
+		// Token: 0x06000B93 RID: 2963 RVA: 0x00037064 File Offset: 0x00035264
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -43,7 +43,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return <Await>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B39 RID: 2873 RVA: 0x00036528 File Offset: 0x00034728
+		// Token: 0x06000B94 RID: 2964 RVA: 0x000370A8 File Offset: 0x000352A8
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			});
 		}
 
-		// Token: 0x06000B3A RID: 2874 RVA: 0x0003656C File Offset: 0x0003476C
+		// Token: 0x06000B95 RID: 2965 RVA: 0x000370EC File Offset: 0x000352EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -82,7 +82,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return <AwaitGenericImpl>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040006E0 RID: 1760
+		// Token: 0x040006EE RID: 1774
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly MethodInfo AwaitGenericMethod = typeof(RpcUniTaskHelper).GetMethod("AwaitGenericImpl", BindingFlags.Static | BindingFlags.NonPublic);

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C1F RID: 23583
+	// Token: 0x02004BFF RID: 19455
 	public class BossPilingBuffTitleItem : SyncGridProxyAbstract<int>
 	{
-		// Token: 0x0603B95E RID: 244062 RVA: 0x00E36228 File Offset: 0x00E34428
+		// Token: 0x060308A9 RID: 198825 RVA: 0x00D86584 File Offset: 0x00D84784
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B95F RID: 244063 RVA: 0x00E36294 File Offset: 0x00E34494
+		// Token: 0x060308AA RID: 198826 RVA: 0x00D865F0 File Offset: 0x00D847F0
 		public override void Refresh(int data)
 		{
 			string key = (data == 5) ? "BossPilingActivity_Buff01" : "BossPilingActivity_Buff02";
@@ -40,12 +40,12 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			sprite.SetChangeColor(bUseChangeColor2, fcolor);
 		}
 
-		// Token: 0x0200BE0A RID: 48650
+		// Token: 0x0200A812 RID: 43026
 		private enum ETitle
 		{
-			// Token: 0x040394DD RID: 234717
+			// Token: 0x04033EA0 RID: 212640
 			Txt,
-			// Token: 0x040394DE RID: 234718
+			// Token: 0x04033EA1 RID: 212641
 			Sprite
 		}
 	}

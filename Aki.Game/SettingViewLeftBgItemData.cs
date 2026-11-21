@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002526 RID: 9510
+// Token: 0x02001A0D RID: 6669
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,13 +11,13 @@ using System.Runtime.CompilerServices;
 })]
 public class SettingViewLeftBgItemData : MultiTemplateGridDataBase<PhoneMsgBgItemData, PhoneMsgBgItem>
 {
-	// Token: 0x06013204 RID: 78340 RVA: 0x004BF78D File Offset: 0x004BD98D
+	// Token: 0x060106C4 RID: 67268 RVA: 0x004CD499 File Offset: 0x004CB699
 	public override int GetTemplateIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x06013205 RID: 78341 RVA: 0x004BF790 File Offset: 0x004BD990
+	// Token: 0x060106C5 RID: 67269 RVA: 0x004CD49C File Offset: 0x004CB69C
 	public override PhoneMsgBgItem CreateProxy()
 	{
 		return new PhoneMsgBgItem
@@ -26,22 +26,22 @@ public class SettingViewLeftBgItemData : MultiTemplateGridDataBase<PhoneMsgBgIte
 		};
 	}
 
-	// Token: 0x06013206 RID: 78342 RVA: 0x004BF7A3 File Offset: 0x004BD9A3
+	// Token: 0x060106C6 RID: 67270 RVA: 0x004CD4AF File Offset: 0x004CB6AF
 	public SettingViewLeftBgItemData(PhoneMsgBgItemData bgData)
 	{
 		base.Data = bgData;
 	}
 
-	// Token: 0x06013207 RID: 78343 RVA: 0x004BF7B2 File Offset: 0x004BD9B2
+	// Token: 0x060106C7 RID: 67271 RVA: 0x004CD4BE File Offset: 0x004CB6BE
 	public int GetBgId()
 	{
 		return base.Data.BgId;
 	}
 
-	// Token: 0x04009068 RID: 36968
+	// Token: 0x040091BD RID: 37309
 	public int Index;
 
-	// Token: 0x04009069 RID: 36969
+	// Token: 0x040091BE RID: 37310
 	[Nullable(new byte[]
 	{
 		2,

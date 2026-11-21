@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B4E RID: 19278
+	// Token: 0x02003AF6 RID: 15094
 	public class TowerDefenseLevelBossItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06031EBD RID: 204477 RVA: 0x00B946B8 File Offset: 0x00B928B8
+		// Token: 0x06026C4D RID: 158797 RVA: 0x00AD8724 File Offset: 0x00AD6924
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031EBE RID: 204478 RVA: 0x00B94744 File Offset: 0x00B92944
+		// Token: 0x06026C4E RID: 158798 RVA: 0x00AD87B0 File Offset: 0x00AD69B0
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			string monsterIcon = MonsterInfoConfig.Instance.GetMonsterIcon(data);
@@ -54,16 +54,16 @@ namespace CSharpScript.Game.Module.TowerDefence
 			artText.SetText(text);
 		}
 
-		// Token: 0x0200ACCE RID: 44238
+		// Token: 0x020096EE RID: 38638
 		private class ELevelDetailBossItemComponent
 		{
-			// Token: 0x0403480B RID: 215051
+			// Token: 0x0402F1BB RID: 192955
 			public const int ItemBtn = 0;
 
-			// Token: 0x0403480C RID: 215052
+			// Token: 0x0402F1BC RID: 192956
 			public const int BossTex = 1;
 
-			// Token: 0x0403480D RID: 215053
+			// Token: 0x0402F1BD RID: 192957
 			public const int NumArtTxt = 2;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FBA RID: 8122
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021FD RID: 8701
 	public class ItemFoundationMatch : ActionParams
 	{
-		// Token: 0x0600B2A6 RID: 45734 RVA: 0x001A04C4 File Offset: 0x0019E6C4
+		// Token: 0x0600BDAA RID: 48554 RVA: 0x001B6874 File Offset: 0x001B4A74
 		private ItemFoundationMatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B2A7 RID: 45735 RVA: 0x001A04FC File Offset: 0x0019E6FC
+		// Token: 0x0600BDAB RID: 48555 RVA: 0x001B68AC File Offset: 0x001B4AAC
 		public static ItemFoundationMatch Create([Nullable(2)] ItemFoundationMatch instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2A8 RID: 45736 RVA: 0x001A050F File Offset: 0x0019E70F
+		// Token: 0x0600BDAC RID: 48556 RVA: 0x001B68BF File Offset: 0x001B4ABF
 		public static ItemFoundationMatch CreateFromSetValue([Nullable(2)] ItemFoundationMatch_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B2A9 RID: 45737 RVA: 0x001A0522 File Offset: 0x0019E722
+		// Token: 0x0600BDAD RID: 48557 RVA: 0x001B68D2 File Offset: 0x001B4AD2
 		public ItemFoundationMatch_SetValue ToSetValue()
 		{
 			return new ItemFoundationMatch_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003714 RID: 14100
-		// (get) Token: 0x0600B2AA RID: 45738 RVA: 0x001A0535 File Offset: 0x0019E735
-		// (set) Token: 0x0600B2AB RID: 45739 RVA: 0x001A0560 File Offset: 0x0019E760
+		// Token: 0x170039E9 RID: 14825
+		// (get) Token: 0x0600BDAE RID: 48558 RVA: 0x001B68E5 File Offset: 0x001B4AE5
+		// (set) Token: 0x0600BDAF RID: 48559 RVA: 0x001B6910 File Offset: 0x001B4B10
 		public virtual int MatchEntityId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006BE3 RID: 27619
+		// Token: 0x040071DE RID: 29150
 		[Nullable(2)]
 		protected new ItemFoundationMatch FbInstance;
 
-		// Token: 0x04006BE4 RID: 27620
+		// Token: 0x040071DF RID: 29151
 		[Nullable(2)]
 		protected ItemFoundationMatch_SetValue PocoInterface;
 	}

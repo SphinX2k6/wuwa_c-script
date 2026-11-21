@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Entity.Component
 {
-	// Token: 0x02006897 RID: 26775
+	// Token: 0x020057E7 RID: 22503
 	public enum EDangoBrawlMontageState
 	{
-		// Token: 0x04022C53 RID: 142419
+		// Token: 0x0401D4AF RID: 119983
 		Idle,
-		// Token: 0x04022C54 RID: 142420
+		// Token: 0x0401D4B0 RID: 119984
 		AttackStart,
-		// Token: 0x04022C55 RID: 142421
+		// Token: 0x0401D4B1 RID: 119985
 		AttackLoop,
-		// Token: 0x04022C56 RID: 142422
+		// Token: 0x0401D4B2 RID: 119986
 		AttackEnd,
-		// Token: 0x04022C57 RID: 142423
+		// Token: 0x0401D4B3 RID: 119987
 		Victory,
-		// Token: 0x04022C58 RID: 142424
+		// Token: 0x0401D4B4 RID: 119988
 		Defeat
 	}
 }

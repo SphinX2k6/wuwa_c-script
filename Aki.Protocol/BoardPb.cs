@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001B9 RID: 441
+	// Token: 0x020001BD RID: 445
 	public sealed class BoardPb : IMessage<BoardPb>, IMessage, IEquatable<BoardPb>, IDeepCloneable<BoardPb>, IBufferMessage
 	{
-		// Token: 0x06003311 RID: 13073 RVA: 0x0008167E File Offset: 0x0007F87E
+		// Token: 0x0600339E RID: 13214 RVA: 0x00082DEE File Offset: 0x00080FEE
 		[NullableContext(1)]
 		public static BoardPb Create()
 		{
 			return new BoardPb();
 		}
 
-		// Token: 0x17000809 RID: 2057
-		// (get) Token: 0x06003312 RID: 13074 RVA: 0x00081685 File Offset: 0x0007F885
+		// Token: 0x17000822 RID: 2082
+		// (get) Token: 0x0600339F RID: 13215 RVA: 0x00082DF5 File Offset: 0x00080FF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700080A RID: 2058
-		// (get) Token: 0x06003313 RID: 13075 RVA: 0x00081688 File Offset: 0x0007F888
+		// Token: 0x17000823 RID: 2083
+		// (get) Token: 0x060033A0 RID: 13216 RVA: 0x00082DF8 File Offset: 0x00080FF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003314 RID: 13076 RVA: 0x0008168F File Offset: 0x0007F88F
+		// Token: 0x060033A1 RID: 13217 RVA: 0x00082DFF File Offset: 0x00080FFF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardPb()
 		{
 		}
 
-		// Token: 0x06003315 RID: 13077 RVA: 0x000816B0 File Offset: 0x0007F8B0
+		// Token: 0x060033A2 RID: 13218 RVA: 0x00082E20 File Offset: 0x00081020
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardPb(BoardPb other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003316 RID: 13078 RVA: 0x00081702 File Offset: 0x0007F902
+		// Token: 0x060033A3 RID: 13219 RVA: 0x00082E72 File Offset: 0x00081072
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardPb Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new BoardPb(this);
 		}
 
-		// Token: 0x1700080B RID: 2059
-		// (get) Token: 0x06003317 RID: 13079 RVA: 0x0008170A File Offset: 0x0007F90A
+		// Token: 0x17000824 RID: 2084
+		// (get) Token: 0x060033A4 RID: 13220 RVA: 0x00082E7A File Offset: 0x0008107A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OccupiedBoardGridInfo> OccupiedGridList
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700080C RID: 2060
-		// (get) Token: 0x06003318 RID: 13080 RVA: 0x00081712 File Offset: 0x0007F912
+		// Token: 0x17000825 RID: 2085
+		// (get) Token: 0x060033A5 RID: 13221 RVA: 0x00082E82 File Offset: 0x00081082
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BoardGridDynamicConfig> DynamicGridConfigs
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700080D RID: 2061
-		// (get) Token: 0x06003319 RID: 13081 RVA: 0x0008171A File Offset: 0x0007F91A
-		// (set) Token: 0x0600331A RID: 13082 RVA: 0x00081722 File Offset: 0x0007F922
+		// Token: 0x17000826 RID: 2086
+		// (get) Token: 0x060033A6 RID: 13222 RVA: 0x00082E8A File Offset: 0x0008108A
+		// (set) Token: 0x060033A7 RID: 13223 RVA: 0x00082E92 File Offset: 0x00081092
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool CanMove
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600331B RID: 13083 RVA: 0x0008172B File Offset: 0x0007F92B
+		// Token: 0x060033A8 RID: 13224 RVA: 0x00082E9B File Offset: 0x0008109B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BoardPb);
 		}
 
-		// Token: 0x0600331C RID: 13084 RVA: 0x0008173C File Offset: 0x0007F93C
+		// Token: 0x060033A9 RID: 13225 RVA: 0x00082EAC File Offset: 0x000810AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BoardPb other)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.occupiedGridList_.Equals(other.occupiedGridList_) && this.dynamicGridConfigs_.Equals(other.dynamicGridConfigs_) && this.CanMove == other.CanMove && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600331D RID: 13085 RVA: 0x000817A0 File Offset: 0x0007F9A0
+		// Token: 0x060033AA RID: 13226 RVA: 0x00082F10 File Offset: 0x00081110
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600331E RID: 13086 RVA: 0x000817FB File Offset: 0x0007F9FB
+		// Token: 0x060033AB RID: 13227 RVA: 0x00082F6B File Offset: 0x0008116B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600331F RID: 13087 RVA: 0x00081808 File Offset: 0x0007FA08
+		// Token: 0x060033AC RID: 13228 RVA: 0x00082F78 File Offset: 0x00081178
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003320 RID: 13088 RVA: 0x00081814 File Offset: 0x0007FA14
+		// Token: 0x060033AD RID: 13229 RVA: 0x00082F84 File Offset: 0x00081184
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003321 RID: 13089 RVA: 0x00081874 File Offset: 0x0007FA74
+		// Token: 0x060033AE RID: 13230 RVA: 0x00082FE4 File Offset: 0x000811E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003322 RID: 13090 RVA: 0x000818CC File Offset: 0x0007FACC
+		// Token: 0x060033AF RID: 13231 RVA: 0x0008303C File Offset: 0x0008123C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BoardPb other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003323 RID: 13091 RVA: 0x0008192A File Offset: 0x0007FB2A
+		// Token: 0x060033B0 RID: 13232 RVA: 0x0008309A File Offset: 0x0008129A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003324 RID: 13092 RVA: 0x00081934 File Offset: 0x0007FB34
+		// Token: 0x060033B1 RID: 13233 RVA: 0x000830A4 File Offset: 0x000812A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -260,31 +260,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040029A3 RID: 10659
+		// Token: 0x04002A1E RID: 10782
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040029A4 RID: 10660
+		// Token: 0x04002A1F RID: 10783
 		public const int OccupiedGridListFieldNumber = 1;
 
-		// Token: 0x040029A5 RID: 10661
+		// Token: 0x04002A20 RID: 10784
 		private static readonly FieldCodec<OccupiedBoardGridInfo> _repeated_occupiedGridList_codec = FieldCodec.ForMessage<OccupiedBoardGridInfo>(10U, OccupiedBoardGridInfo.Parser);
 
-		// Token: 0x040029A6 RID: 10662
+		// Token: 0x04002A21 RID: 10785
 		private readonly RepeatedField<OccupiedBoardGridInfo> occupiedGridList_ = new RepeatedField<OccupiedBoardGridInfo>();
 
-		// Token: 0x040029A7 RID: 10663
+		// Token: 0x04002A22 RID: 10786
 		public const int DynamicGridConfigsFieldNumber = 2;
 
-		// Token: 0x040029A8 RID: 10664
+		// Token: 0x04002A23 RID: 10787
 		private static readonly FieldCodec<BoardGridDynamicConfig> _repeated_dynamicGridConfigs_codec = FieldCodec.ForMessage<BoardGridDynamicConfig>(18U, BoardGridDynamicConfig.Parser);
 
-		// Token: 0x040029A9 RID: 10665
+		// Token: 0x04002A24 RID: 10788
 		private readonly RepeatedField<BoardGridDynamicConfig> dynamicGridConfigs_ = new RepeatedField<BoardGridDynamicConfig>();
 
-		// Token: 0x040029AA RID: 10666
+		// Token: 0x04002A25 RID: 10789
 		public const int CanMoveFieldNumber = 3;
 
-		// Token: 0x040029AB RID: 10667
+		// Token: 0x04002A26 RID: 10790
 		private bool canMove_;
 	}
 }

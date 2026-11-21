@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EB0 RID: 7856
+	// Token: 0x020005CF RID: 1487
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.KuroBpDataAssetGroup")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class UKuroBpDataAssetGroup : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601DD27 RID: 122151 RVA: 0x002C1DDD File Offset: 0x002BFFDD
+		// Token: 0x060083FB RID: 33787 RVA: 0x000C40AD File Offset: 0x000C22AD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroBpDataAssetGroup._ClassPtr;
 		}
 
-		// Token: 0x0601DD28 RID: 122152 RVA: 0x002C1DEC File Offset: 0x002BFFEC
+		// Token: 0x060083FC RID: 33788 RVA: 0x000C40BC File Offset: 0x000C22BC
 		public UKuroBpDataAssetGroup() : this(BuiltinUtils.AllocNativeUObject(UKuroBpDataAssetGroup.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601DD29 RID: 122153 RVA: 0x002C1E14 File Offset: 0x002C0014
+		// Token: 0x060083FD RID: 33789 RVA: 0x000C40E4 File Offset: 0x000C22E4
 		public UKuroBpDataAssetGroup(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroBpDataAssetGroup.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700779A RID: 30618
-		// (get) Token: 0x0601DD2A RID: 122154 RVA: 0x002C1E48 File Offset: 0x002C0048
-		// (set) Token: 0x0601DD2B RID: 122155 RVA: 0x002C1E81 File Offset: 0x002C0081
+		// Token: 0x17001959 RID: 6489
+		// (get) Token: 0x060083FE RID: 33790 RVA: 0x000C4118 File Offset: 0x000C2318
+		// (set) Token: 0x060083FF RID: 33791 RVA: 0x000C4151 File Offset: 0x000C2351
 		public TArray<UKuroBpDataAsset> Data
 		{
 			get
@@ -50,30 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601DD2C RID: 122156 RVA: 0x002C1E8F File Offset: 0x002C008F
+		// Token: 0x06008400 RID: 33792 RVA: 0x000C415F File Offset: 0x000C235F
 		static UKuroBpDataAssetGroup()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroUtility.KuroBpDataAssetGroup");
 		}
 
-		// Token: 0x0601DD2D RID: 122157 RVA: 0x002C1E9D File Offset: 0x002C009D
+		// Token: 0x06008401 RID: 33793 RVA: 0x000C416D File Offset: 0x000C236D
 		protected UKuroBpDataAssetGroup(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401029B RID: 66203
+		// Token: 0x040039B6 RID: 14774
 		public new const string __ObjectPath = "/Script/KuroUtility.KuroBpDataAssetGroup";
 
-		// Token: 0x0401029C RID: 66204
+		// Token: 0x040039B7 RID: 14775
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401029D RID: 66205
+		// Token: 0x040039B8 RID: 14776
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401029E RID: 66206
+		// Token: 0x040039B9 RID: 14777
 		internal static int __PropertyOffset_Data;
 
-		// Token: 0x0401029F RID: 66207
+		// Token: 0x040039BA RID: 14778
 		[Nullable(new byte[]
 		{
 			2,

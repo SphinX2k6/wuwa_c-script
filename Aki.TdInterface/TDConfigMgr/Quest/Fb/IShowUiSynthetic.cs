@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013A6 RID: 5030
+	// Token: 0x020014F7 RID: 5367
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IShowUiSynthetic : IShowUiCrafting
 	{
-		// Token: 0x060072EC RID: 29420 RVA: 0x00114125 File Offset: 0x00112325
-		[NullableContext(1)]
+		// Token: 0x06007993 RID: 31123 RVA: 0x001227E1 File Offset: 0x001209E1
+		[NullableContext(0)]
 		public static IShowUiSynthetic Create(IShowUiSynthetic? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002573 RID: 9587
-		// (get) Token: 0x060072ED RID: 29421 RVA: 0x00114144 File Offset: 0x00112344
+		// Token: 0x17002747 RID: 10055
+		// (get) Token: 0x06007994 RID: 31124 RVA: 0x00122800 File Offset: 0x00120A00
 		public override EShowUiType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002574 RID: 9588
-		// (get) Token: 0x060072EE RID: 29422 RVA: 0x00114154 File Offset: 0x00112354
+		// Token: 0x17002748 RID: 10056
+		// (get) Token: 0x06007995 RID: 31125 RVA: 0x00122810 File Offset: 0x00120A10
 		public override List<int> EntityIds
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002575 RID: 9589
-		// (get) Token: 0x060072EF RID: 29423 RVA: 0x001141CC File Offset: 0x001123CC
+		// Token: 0x17002749 RID: 10057
+		// (get) Token: 0x06007996 RID: 31126 RVA: 0x00122888 File Offset: 0x00120A88
 		public override List<int> ProductIds
 		{
 			get
@@ -84,19 +84,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400426E RID: 17006
+		// Token: 0x040045EF RID: 17903
 		private IShowUiSynthetic Instance;
 
-		// Token: 0x0400426F RID: 17007
+		// Token: 0x040045F0 RID: 17904
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04004270 RID: 17008
+		// Token: 0x040045F1 RID: 17905
 		private bool _EntityIdsInited;
 
-		// Token: 0x04004271 RID: 17009
+		// Token: 0x040045F2 RID: 17906
 		private List<int> _ProductIdsCache;
 
-		// Token: 0x04004272 RID: 17010
+		// Token: 0x040045F3 RID: 17907
 		private bool _ProductIdsInited;
 	}
 }

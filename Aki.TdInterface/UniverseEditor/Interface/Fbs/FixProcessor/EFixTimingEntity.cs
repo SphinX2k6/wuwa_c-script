@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x02004751 RID: 18257
+	// Token: 0x02004BB9 RID: 19385
 	public enum EFixTimingEntity : byte
 	{
-		// Token: 0x0400CA47 RID: 51783
+		// Token: 0x0400D476 RID: 54390
 		Default,
-		// Token: 0x0400CA48 RID: 51784
+		// Token: 0x0400D477 RID: 54391
 		OnEntityCreate
 	}
 }

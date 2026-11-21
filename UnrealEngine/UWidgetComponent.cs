@@ -6,63 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029FF RID: 10751
+	// Token: 0x02000877 RID: 2167
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/UMG.WidgetComponent")]
 	[UnrealStructLayout(1920, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1920)]
 	public class UWidgetComponent : UMeshComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027EB1 RID: 163505 RVA: 0x003CCF7D File Offset: 0x003CB17D
+		// Token: 0x0600BCAF RID: 48303 RVA: 0x0012D7EE File Offset: 0x0012B9EE
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UWidgetComponent._ClassPtr;
 		}
 
-		// Token: 0x06027EB2 RID: 163506 RVA: 0x003CCF8C File Offset: 0x003CB18C
+		// Token: 0x0600BCB0 RID: 48304 RVA: 0x0012D7FC File Offset: 0x0012B9FC
 		public UWidgetComponent() : this(BuiltinUtils.AllocNativeUObject(UWidgetComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027EB3 RID: 163507 RVA: 0x003CCFB4 File Offset: 0x003CB1B4
+		// Token: 0x0600BCB1 RID: 48305 RVA: 0x0012D824 File Offset: 0x0012BA24
 		[NullableContext(1)]
 		public UWidgetComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UWidgetComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17009888 RID: 39048
-		// (get) Token: 0x06027EB4 RID: 163508 RVA: 0x003CCFE7 File Offset: 0x003CB1E7
-		// (set) Token: 0x06027EB5 RID: 163509 RVA: 0x003CCFF7 File Offset: 0x003CB1F7
-		public unsafe EWidgetSpace Space
-		{
-			get
-			{
-				return (EWidgetSpace)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_Space));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_Space) = (byte)value;
-			}
-		}
-
-		// Token: 0x17009889 RID: 39049
-		// (get) Token: 0x06027EB6 RID: 163510 RVA: 0x003CD008 File Offset: 0x003CB208
-		// (set) Token: 0x06027EB7 RID: 163511 RVA: 0x003CD018 File Offset: 0x003CB218
-		public unsafe EWidgetTimingPolicy TimingPolicy
-		{
-			get
-			{
-				return (EWidgetTimingPolicy)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_TimingPolicy));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_TimingPolicy) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700988A RID: 39050
-		// (get) Token: 0x06027EB8 RID: 163512 RVA: 0x003CD029 File Offset: 0x003CB229
-		// (set) Token: 0x06027EB9 RID: 163513 RVA: 0x003CD03D File Offset: 0x003CB23D
+		// Token: 0x170022E3 RID: 8931
+		// (get) Token: 0x0600BCB2 RID: 48306 RVA: 0x0012D857 File Offset: 0x0012BA57
+		// (set) Token: 0x0600BCB3 RID: 48307 RVA: 0x0012D86B File Offset: 0x0012BA6B
 		[Nullable(new byte[]
 		{
 			0,
@@ -90,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700988B RID: 39051
-		// (get) Token: 0x06027EBA RID: 163514 RVA: 0x003CD052 File Offset: 0x003CB252
-		// (set) Token: 0x06027EBB RID: 163515 RVA: 0x003CD066 File Offset: 0x003CB266
+		// Token: 0x170022E4 RID: 8932
+		// (get) Token: 0x0600BCB4 RID: 48308 RVA: 0x0012D880 File Offset: 0x0012BA80
+		// (set) Token: 0x0600BCB5 RID: 48309 RVA: 0x0012D894 File Offset: 0x0012BA94
 		public unsafe FIntPoint DrawSize
 		{
 			get
@@ -105,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700988C RID: 39052
-		// (get) Token: 0x06027EBC RID: 163516 RVA: 0x003CD07B File Offset: 0x003CB27B
-		// (set) Token: 0x06027EBD RID: 163517 RVA: 0x003CD08B File Offset: 0x003CB28B
+		// Token: 0x170022E5 RID: 8933
+		// (get) Token: 0x0600BCB6 RID: 48310 RVA: 0x0012D8A9 File Offset: 0x0012BAA9
+		// (set) Token: 0x0600BCB7 RID: 48311 RVA: 0x0012D8B9 File Offset: 0x0012BAB9
 		public unsafe bool bManuallyRedraw
 		{
 			get
@@ -120,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700988D RID: 39053
-		// (get) Token: 0x06027EBE RID: 163518 RVA: 0x003CD09C File Offset: 0x003CB29C
-		// (set) Token: 0x06027EBF RID: 163519 RVA: 0x003CD0AC File Offset: 0x003CB2AC
+		// Token: 0x170022E6 RID: 8934
+		// (get) Token: 0x0600BCB8 RID: 48312 RVA: 0x0012D8CA File Offset: 0x0012BACA
+		// (set) Token: 0x0600BCB9 RID: 48313 RVA: 0x0012D8DA File Offset: 0x0012BADA
 		public unsafe bool bRedrawRequested
 		{
 			get
@@ -135,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700988E RID: 39054
-		// (get) Token: 0x06027EC0 RID: 163520 RVA: 0x003CD0BD File Offset: 0x003CB2BD
-		// (set) Token: 0x06027EC1 RID: 163521 RVA: 0x003CD0CD File Offset: 0x003CB2CD
+		// Token: 0x170022E7 RID: 8935
+		// (get) Token: 0x0600BCBA RID: 48314 RVA: 0x0012D8EB File Offset: 0x0012BAEB
+		// (set) Token: 0x0600BCBB RID: 48315 RVA: 0x0012D8FB File Offset: 0x0012BAFB
 		public unsafe float RedrawTime
 		{
 			get
@@ -150,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700988F RID: 39055
-		// (get) Token: 0x06027EC2 RID: 163522 RVA: 0x003CD0DE File Offset: 0x003CB2DE
-		// (set) Token: 0x06027EC3 RID: 163523 RVA: 0x003CD0F2 File Offset: 0x003CB2F2
+		// Token: 0x170022E8 RID: 8936
+		// (get) Token: 0x0600BCBC RID: 48316 RVA: 0x0012D90C File Offset: 0x0012BB0C
+		// (set) Token: 0x0600BCBD RID: 48317 RVA: 0x0012D920 File Offset: 0x0012BB20
 		public unsafe FIntPoint CurrentDrawSize
 		{
 			get
@@ -165,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009890 RID: 39056
-		// (get) Token: 0x06027EC4 RID: 163524 RVA: 0x003CD107 File Offset: 0x003CB307
-		// (set) Token: 0x06027EC5 RID: 163525 RVA: 0x003CD117 File Offset: 0x003CB317
+		// Token: 0x170022E9 RID: 8937
+		// (get) Token: 0x0600BCBE RID: 48318 RVA: 0x0012D935 File Offset: 0x0012BB35
+		// (set) Token: 0x0600BCBF RID: 48319 RVA: 0x0012D945 File Offset: 0x0012BB45
 		public unsafe bool bDrawAtDesiredSize
 		{
 			get
@@ -180,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009891 RID: 39057
-		// (get) Token: 0x06027EC6 RID: 163526 RVA: 0x003CD128 File Offset: 0x003CB328
-		// (set) Token: 0x06027EC7 RID: 163527 RVA: 0x003CD13C File Offset: 0x003CB33C
+		// Token: 0x170022EA RID: 8938
+		// (get) Token: 0x0600BCC0 RID: 48320 RVA: 0x0012D956 File Offset: 0x0012BB56
+		// (set) Token: 0x0600BCC1 RID: 48321 RVA: 0x0012D96A File Offset: 0x0012BB6A
 		public unsafe FVector2D Pivot
 		{
 			get
@@ -195,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009892 RID: 39058
-		// (get) Token: 0x06027EC8 RID: 163528 RVA: 0x003CD151 File Offset: 0x003CB351
-		// (set) Token: 0x06027EC9 RID: 163529 RVA: 0x003CD161 File Offset: 0x003CB361
+		// Token: 0x170022EB RID: 8939
+		// (get) Token: 0x0600BCC2 RID: 48322 RVA: 0x0012D97F File Offset: 0x0012BB7F
+		// (set) Token: 0x0600BCC3 RID: 48323 RVA: 0x0012D98F File Offset: 0x0012BB8F
 		public unsafe bool bReceiveHardwareInput
 		{
 			get
@@ -210,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009893 RID: 39059
-		// (get) Token: 0x06027ECA RID: 163530 RVA: 0x003CD172 File Offset: 0x003CB372
-		// (set) Token: 0x06027ECB RID: 163531 RVA: 0x003CD182 File Offset: 0x003CB382
+		// Token: 0x170022EC RID: 8940
+		// (get) Token: 0x0600BCC4 RID: 48324 RVA: 0x0012D9A0 File Offset: 0x0012BBA0
+		// (set) Token: 0x0600BCC5 RID: 48325 RVA: 0x0012D9B0 File Offset: 0x0012BBB0
 		public unsafe bool bWindowFocusable
 		{
 			get
@@ -225,24 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009894 RID: 39060
-		// (get) Token: 0x06027ECC RID: 163532 RVA: 0x003CD193 File Offset: 0x003CB393
-		// (set) Token: 0x06027ECD RID: 163533 RVA: 0x003CD1A3 File Offset: 0x003CB3A3
-		public unsafe EWindowVisibility WindowVisibility
-		{
-			get
-			{
-				return (EWindowVisibility)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_WindowVisibility));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_WindowVisibility) = (byte)value;
-			}
-		}
-
-		// Token: 0x17009895 RID: 39061
-		// (get) Token: 0x06027ECE RID: 163534 RVA: 0x003CD1B4 File Offset: 0x003CB3B4
-		// (set) Token: 0x06027ECF RID: 163535 RVA: 0x003CD1C4 File Offset: 0x003CB3C4
+		// Token: 0x170022ED RID: 8941
+		// (get) Token: 0x0600BCC6 RID: 48326 RVA: 0x0012D9C1 File Offset: 0x0012BBC1
+		// (set) Token: 0x0600BCC7 RID: 48327 RVA: 0x0012D9D1 File Offset: 0x0012BBD1
 		public unsafe bool bApplyGammaCorrection
 		{
 			get
@@ -255,24 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009896 RID: 39062
-		// (get) Token: 0x06027ED0 RID: 163536 RVA: 0x003CD1D5 File Offset: 0x003CB3D5
-		// (set) Token: 0x06027ED1 RID: 163537 RVA: 0x003CD1E9 File Offset: 0x003CB3E9
-		public unsafe ULocalPlayer OwnerPlayer
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<ULocalPlayer>(base.NativePtr / (IntPtr)sizeof(void*) + UWidgetComponent.__PropertyOffset_OwnerPlayer);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UWidgetComponent.__PropertyOffset_OwnerPlayer, value);
-			}
-		}
-
-		// Token: 0x17009897 RID: 39063
-		// (get) Token: 0x06027ED2 RID: 163538 RVA: 0x003CD1FE File Offset: 0x003CB3FE
-		// (set) Token: 0x06027ED3 RID: 163539 RVA: 0x003CD212 File Offset: 0x003CB412
+		// Token: 0x170022EE RID: 8942
+		// (get) Token: 0x0600BCC8 RID: 48328 RVA: 0x0012D9E2 File Offset: 0x0012BBE2
+		// (set) Token: 0x0600BCC9 RID: 48329 RVA: 0x0012D9F6 File Offset: 0x0012BBF6
 		public unsafe FLinearColor BackgroundColor
 		{
 			get
@@ -285,9 +225,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009898 RID: 39064
-		// (get) Token: 0x06027ED4 RID: 163540 RVA: 0x003CD227 File Offset: 0x003CB427
-		// (set) Token: 0x06027ED5 RID: 163541 RVA: 0x003CD23B File Offset: 0x003CB43B
+		// Token: 0x170022EF RID: 8943
+		// (get) Token: 0x0600BCCA RID: 48330 RVA: 0x0012DA0B File Offset: 0x0012BC0B
+		// (set) Token: 0x0600BCCB RID: 48331 RVA: 0x0012DA1F File Offset: 0x0012BC1F
 		public unsafe FLinearColor TintColorAndOpacity
 		{
 			get
@@ -300,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009899 RID: 39065
-		// (get) Token: 0x06027ED6 RID: 163542 RVA: 0x003CD250 File Offset: 0x003CB450
-		// (set) Token: 0x06027ED7 RID: 163543 RVA: 0x003CD260 File Offset: 0x003CB460
+		// Token: 0x170022F0 RID: 8944
+		// (get) Token: 0x0600BCCC RID: 48332 RVA: 0x0012DA34 File Offset: 0x0012BC34
+		// (set) Token: 0x0600BCCD RID: 48333 RVA: 0x0012DA44 File Offset: 0x0012BC44
 		public unsafe float OpacityFromTexture
 		{
 			get
@@ -315,24 +255,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700989A RID: 39066
-		// (get) Token: 0x06027ED8 RID: 163544 RVA: 0x003CD271 File Offset: 0x003CB471
-		// (set) Token: 0x06027ED9 RID: 163545 RVA: 0x003CD281 File Offset: 0x003CB481
-		public unsafe EWidgetBlendMode BlendMode
-		{
-			get
-			{
-				return (EWidgetBlendMode)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_BlendMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_BlendMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x1700989B RID: 39067
-		// (get) Token: 0x06027EDA RID: 163546 RVA: 0x003CD292 File Offset: 0x003CB492
-		// (set) Token: 0x06027EDB RID: 163547 RVA: 0x003CD2A2 File Offset: 0x003CB4A2
+		// Token: 0x170022F1 RID: 8945
+		// (get) Token: 0x0600BCCE RID: 48334 RVA: 0x0012DA55 File Offset: 0x0012BC55
+		// (set) Token: 0x0600BCCF RID: 48335 RVA: 0x0012DA65 File Offset: 0x0012BC65
 		public unsafe bool bIsTwoSided
 		{
 			get
@@ -345,9 +270,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700989C RID: 39068
-		// (get) Token: 0x06027EDC RID: 163548 RVA: 0x003CD2B3 File Offset: 0x003CB4B3
-		// (set) Token: 0x06027EDD RID: 163549 RVA: 0x003CD2C3 File Offset: 0x003CB4C3
+		// Token: 0x170022F2 RID: 8946
+		// (get) Token: 0x0600BCD0 RID: 48336 RVA: 0x0012DA76 File Offset: 0x0012BC76
+		// (set) Token: 0x0600BCD1 RID: 48337 RVA: 0x0012DA86 File Offset: 0x0012BC86
 		public unsafe bool TickWhenOffscreen
 		{
 			get
@@ -360,9 +285,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700989D RID: 39069
-		// (get) Token: 0x06027EDE RID: 163550 RVA: 0x003CD2D4 File Offset: 0x003CB4D4
-		// (set) Token: 0x06027EDF RID: 163551 RVA: 0x003CD2E8 File Offset: 0x003CB4E8
+		// Token: 0x170022F3 RID: 8947
+		// (get) Token: 0x0600BCD2 RID: 48338 RVA: 0x0012DA97 File Offset: 0x0012BC97
+		// (set) Token: 0x0600BCD3 RID: 48339 RVA: 0x0012DAAB File Offset: 0x0012BCAB
 		public unsafe UBodySetup BodySetup
 		{
 			get
@@ -375,9 +300,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700989E RID: 39070
-		// (get) Token: 0x06027EE0 RID: 163552 RVA: 0x003CD2FD File Offset: 0x003CB4FD
-		// (set) Token: 0x06027EE1 RID: 163553 RVA: 0x003CD311 File Offset: 0x003CB511
+		// Token: 0x170022F4 RID: 8948
+		// (get) Token: 0x0600BCD4 RID: 48340 RVA: 0x0012DAC0 File Offset: 0x0012BCC0
+		// (set) Token: 0x0600BCD5 RID: 48341 RVA: 0x0012DAD4 File Offset: 0x0012BCD4
 		public unsafe UMaterialInterface TranslucentMaterial
 		{
 			get
@@ -390,9 +315,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700989F RID: 39071
-		// (get) Token: 0x06027EE2 RID: 163554 RVA: 0x003CD326 File Offset: 0x003CB526
-		// (set) Token: 0x06027EE3 RID: 163555 RVA: 0x003CD33A File Offset: 0x003CB53A
+		// Token: 0x170022F5 RID: 8949
+		// (get) Token: 0x0600BCD6 RID: 48342 RVA: 0x0012DAE9 File Offset: 0x0012BCE9
+		// (set) Token: 0x0600BCD7 RID: 48343 RVA: 0x0012DAFD File Offset: 0x0012BCFD
 		public unsafe UMaterialInterface TranslucentMaterial_OneSided
 		{
 			get
@@ -405,9 +330,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A0 RID: 39072
-		// (get) Token: 0x06027EE4 RID: 163556 RVA: 0x003CD34F File Offset: 0x003CB54F
-		// (set) Token: 0x06027EE5 RID: 163557 RVA: 0x003CD363 File Offset: 0x003CB563
+		// Token: 0x170022F6 RID: 8950
+		// (get) Token: 0x0600BCD8 RID: 48344 RVA: 0x0012DB12 File Offset: 0x0012BD12
+		// (set) Token: 0x0600BCD9 RID: 48345 RVA: 0x0012DB26 File Offset: 0x0012BD26
 		public unsafe UMaterialInterface OpaqueMaterial
 		{
 			get
@@ -420,9 +345,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A1 RID: 39073
-		// (get) Token: 0x06027EE6 RID: 163558 RVA: 0x003CD378 File Offset: 0x003CB578
-		// (set) Token: 0x06027EE7 RID: 163559 RVA: 0x003CD38C File Offset: 0x003CB58C
+		// Token: 0x170022F7 RID: 8951
+		// (get) Token: 0x0600BCDA RID: 48346 RVA: 0x0012DB3B File Offset: 0x0012BD3B
+		// (set) Token: 0x0600BCDB RID: 48347 RVA: 0x0012DB4F File Offset: 0x0012BD4F
 		public unsafe UMaterialInterface OpaqueMaterial_OneSided
 		{
 			get
@@ -435,9 +360,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A2 RID: 39074
-		// (get) Token: 0x06027EE8 RID: 163560 RVA: 0x003CD3A1 File Offset: 0x003CB5A1
-		// (set) Token: 0x06027EE9 RID: 163561 RVA: 0x003CD3B5 File Offset: 0x003CB5B5
+		// Token: 0x170022F8 RID: 8952
+		// (get) Token: 0x0600BCDC RID: 48348 RVA: 0x0012DB64 File Offset: 0x0012BD64
+		// (set) Token: 0x0600BCDD RID: 48349 RVA: 0x0012DB78 File Offset: 0x0012BD78
 		public unsafe UMaterialInterface MaskedMaterial
 		{
 			get
@@ -450,9 +375,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A3 RID: 39075
-		// (get) Token: 0x06027EEA RID: 163562 RVA: 0x003CD3CA File Offset: 0x003CB5CA
-		// (set) Token: 0x06027EEB RID: 163563 RVA: 0x003CD3DE File Offset: 0x003CB5DE
+		// Token: 0x170022F9 RID: 8953
+		// (get) Token: 0x0600BCDE RID: 48350 RVA: 0x0012DB8D File Offset: 0x0012BD8D
+		// (set) Token: 0x0600BCDF RID: 48351 RVA: 0x0012DBA1 File Offset: 0x0012BDA1
 		public unsafe UMaterialInterface MaskedMaterial_OneSided
 		{
 			get
@@ -465,9 +390,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A4 RID: 39076
-		// (get) Token: 0x06027EEC RID: 163564 RVA: 0x003CD3F3 File Offset: 0x003CB5F3
-		// (set) Token: 0x06027EED RID: 163565 RVA: 0x003CD407 File Offset: 0x003CB607
+		// Token: 0x170022FA RID: 8954
+		// (get) Token: 0x0600BCE0 RID: 48352 RVA: 0x0012DBB6 File Offset: 0x0012BDB6
+		// (set) Token: 0x0600BCE1 RID: 48353 RVA: 0x0012DBCA File Offset: 0x0012BDCA
 		public unsafe UTextureRenderTarget2D RenderTarget
 		{
 			get
@@ -480,9 +405,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A5 RID: 39077
-		// (get) Token: 0x06027EEE RID: 163566 RVA: 0x003CD41C File Offset: 0x003CB61C
-		// (set) Token: 0x06027EEF RID: 163567 RVA: 0x003CD430 File Offset: 0x003CB630
+		// Token: 0x170022FB RID: 8955
+		// (get) Token: 0x0600BCE2 RID: 48354 RVA: 0x0012DBDF File Offset: 0x0012BDDF
+		// (set) Token: 0x0600BCE3 RID: 48355 RVA: 0x0012DBF3 File Offset: 0x0012BDF3
 		public unsafe UMaterialInstanceDynamic MaterialInstance
 		{
 			get
@@ -495,9 +420,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A6 RID: 39078
-		// (get) Token: 0x06027EF0 RID: 163568 RVA: 0x003CD445 File Offset: 0x003CB645
-		// (set) Token: 0x06027EF1 RID: 163569 RVA: 0x003CD455 File Offset: 0x003CB655
+		// Token: 0x170022FC RID: 8956
+		// (get) Token: 0x0600BCE4 RID: 48356 RVA: 0x0012DC08 File Offset: 0x0012BE08
+		// (set) Token: 0x0600BCE5 RID: 48357 RVA: 0x0012DC18 File Offset: 0x0012BE18
 		public unsafe bool bAddedToScreen
 		{
 			get
@@ -510,9 +435,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A7 RID: 39079
-		// (get) Token: 0x06027EF2 RID: 163570 RVA: 0x003CD466 File Offset: 0x003CB666
-		// (set) Token: 0x06027EF3 RID: 163571 RVA: 0x003CD476 File Offset: 0x003CB676
+		// Token: 0x170022FD RID: 8957
+		// (get) Token: 0x0600BCE6 RID: 48358 RVA: 0x0012DC29 File Offset: 0x0012BE29
+		// (set) Token: 0x0600BCE7 RID: 48359 RVA: 0x0012DC39 File Offset: 0x0012BE39
 		public unsafe bool bEditTimeUsable
 		{
 			get
@@ -525,9 +450,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A8 RID: 39080
-		// (get) Token: 0x06027EF4 RID: 163572 RVA: 0x003CD487 File Offset: 0x003CB687
-		// (set) Token: 0x06027EF5 RID: 163573 RVA: 0x003CD49B File Offset: 0x003CB69B
+		// Token: 0x170022FE RID: 8958
+		// (get) Token: 0x0600BCE8 RID: 48360 RVA: 0x0012DC4A File Offset: 0x0012BE4A
+		// (set) Token: 0x0600BCE9 RID: 48361 RVA: 0x0012DC5E File Offset: 0x0012BE5E
 		public unsafe FName SharedLayerName
 		{
 			get
@@ -540,9 +465,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098A9 RID: 39081
-		// (get) Token: 0x06027EF6 RID: 163574 RVA: 0x003CD4B0 File Offset: 0x003CB6B0
-		// (set) Token: 0x06027EF7 RID: 163575 RVA: 0x003CD4C0 File Offset: 0x003CB6C0
+		// Token: 0x170022FF RID: 8959
+		// (get) Token: 0x0600BCEA RID: 48362 RVA: 0x0012DC73 File Offset: 0x0012BE73
+		// (set) Token: 0x0600BCEB RID: 48363 RVA: 0x0012DC83 File Offset: 0x0012BE83
 		public unsafe int LayerZOrder
 		{
 			get
@@ -555,24 +480,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098AA RID: 39082
-		// (get) Token: 0x06027EF8 RID: 163576 RVA: 0x003CD4D1 File Offset: 0x003CB6D1
-		// (set) Token: 0x06027EF9 RID: 163577 RVA: 0x003CD4E1 File Offset: 0x003CB6E1
-		public unsafe EWidgetGeometryMode GeometryMode
-		{
-			get
-			{
-				return (EWidgetGeometryMode)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_GeometryMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_GeometryMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x170098AB RID: 39083
-		// (get) Token: 0x06027EFA RID: 163578 RVA: 0x003CD4F2 File Offset: 0x003CB6F2
-		// (set) Token: 0x06027EFB RID: 163579 RVA: 0x003CD502 File Offset: 0x003CB702
+		// Token: 0x17002300 RID: 8960
+		// (get) Token: 0x0600BCEC RID: 48364 RVA: 0x0012DC94 File Offset: 0x0012BE94
+		// (set) Token: 0x0600BCED RID: 48365 RVA: 0x0012DCA4 File Offset: 0x0012BEA4
 		public unsafe float CylinderArcAngle
 		{
 			get
@@ -585,24 +495,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170098AC RID: 39084
-		// (get) Token: 0x06027EFC RID: 163580 RVA: 0x003CD513 File Offset: 0x003CB713
-		// (set) Token: 0x06027EFD RID: 163581 RVA: 0x003CD523 File Offset: 0x003CB723
-		public unsafe ETickMode TickMode
-		{
-			get
-			{
-				return (ETickMode)(*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_TickMode));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UWidgetComponent.__PropertyOffset_TickMode) = (byte)value;
-			}
-		}
-
-		// Token: 0x170098AD RID: 39085
-		// (get) Token: 0x06027EFE RID: 163582 RVA: 0x003CD534 File Offset: 0x003CB734
-		// (set) Token: 0x06027EFF RID: 163583 RVA: 0x003CD548 File Offset: 0x003CB748
+		// Token: 0x17002301 RID: 8961
+		// (get) Token: 0x0600BCEE RID: 48366 RVA: 0x0012DCB5 File Offset: 0x0012BEB5
+		// (set) Token: 0x0600BCEF RID: 48367 RVA: 0x0012DCC9 File Offset: 0x0012BEC9
 		public unsafe UUserWidget Widget
 		{
 			get
@@ -615,509 +510,398 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06027F00 RID: 163584 RVA: 0x003CD55D File Offset: 0x003CB75D
-		public void SetWindowVisibility(EWindowVisibility InVisibility)
-		{
-			UWidgetComponent.__SetWindowVisibility_Internal(base.NativePtr, InVisibility);
-		}
-
-		// Token: 0x06027F01 RID: 163585 RVA: 0x003CD56B File Offset: 0x003CB76B
+		// Token: 0x0600BCF0 RID: 48368 RVA: 0x0012DCDE File Offset: 0x0012BEDE
 		public void SetWindowFocusable(bool bInWindowFocusable)
 		{
 			UWidgetComponent.__SetWindowFocusable_Internal(base.NativePtr, bInWindowFocusable);
 		}
 
-		// Token: 0x06027F02 RID: 163586 RVA: 0x003CD579 File Offset: 0x003CB779
-		public void SetWidgetSpace(EWidgetSpace NewSpace)
-		{
-			UWidgetComponent.__SetWidgetSpace_Internal(base.NativePtr, NewSpace);
-		}
-
-		// Token: 0x06027F03 RID: 163587 RVA: 0x003CD587 File Offset: 0x003CB787
+		// Token: 0x0600BCF1 RID: 48369 RVA: 0x0012DCEC File Offset: 0x0012BEEC
 		public void SetWidget(UUserWidget Widget)
 		{
 			UWidgetComponent.__SetWidget_Internal(base.NativePtr, (Widget != null) ? Widget.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06027F04 RID: 163588 RVA: 0x003CD5A4 File Offset: 0x003CB7A4
+		// Token: 0x0600BCF2 RID: 48370 RVA: 0x0012DD09 File Offset: 0x0012BF09
 		public void SetTwoSided(bool bWantTwoSided)
 		{
 			UWidgetComponent.__SetTwoSided_Internal(base.NativePtr, bWantTwoSided);
 		}
 
-		// Token: 0x06027F05 RID: 163589 RVA: 0x003CD5B2 File Offset: 0x003CB7B2
+		// Token: 0x0600BCF3 RID: 48371 RVA: 0x0012DD17 File Offset: 0x0012BF17
 		public void SetTintColorAndOpacity(FLinearColor NewTintColorAndOpacity)
 		{
 			UWidgetComponent.__SetTintColorAndOpacity_Internal(base.NativePtr, NewTintColorAndOpacity);
 		}
 
-		// Token: 0x06027F06 RID: 163590 RVA: 0x003CD5C0 File Offset: 0x003CB7C0
+		// Token: 0x0600BCF4 RID: 48372 RVA: 0x0012DD25 File Offset: 0x0012BF25
 		public void SetTickWhenOffscreen(bool bWantTickWhenOffscreen)
 		{
 			UWidgetComponent.__SetTickWhenOffscreen_Internal(base.NativePtr, bWantTickWhenOffscreen);
 		}
 
-		// Token: 0x06027F07 RID: 163591 RVA: 0x003CD5CE File Offset: 0x003CB7CE
-		public void SetTickMode(ETickMode InTickMode)
-		{
-			UWidgetComponent.__SetTickMode_Internal(base.NativePtr, InTickMode);
-		}
-
-		// Token: 0x06027F08 RID: 163592 RVA: 0x003CD5DC File Offset: 0x003CB7DC
+		// Token: 0x0600BCF5 RID: 48373 RVA: 0x0012DD33 File Offset: 0x0012BF33
 		public void SetRedrawTime(float InRedrawTime)
 		{
 			UWidgetComponent.__SetRedrawTime_Internal(base.NativePtr, InRedrawTime);
 		}
 
-		// Token: 0x06027F09 RID: 163593 RVA: 0x003CD5EA File Offset: 0x003CB7EA
+		// Token: 0x0600BCF6 RID: 48374 RVA: 0x0012DD41 File Offset: 0x0012BF41
 		public void SetPivot(in FVector2D InPivot)
 		{
 			UWidgetComponent.__SetPivot_Internal(base.NativePtr, InPivot);
 		}
 
-		// Token: 0x06027F0A RID: 163594 RVA: 0x003CD5F8 File Offset: 0x003CB7F8
-		public void SetOwnerPlayer(ULocalPlayer LocalPlayer)
-		{
-			UWidgetComponent.__SetOwnerPlayer_Internal(base.NativePtr, (LocalPlayer != null) ? LocalPlayer.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x06027F0B RID: 163595 RVA: 0x003CD615 File Offset: 0x003CB815
+		// Token: 0x0600BCF7 RID: 48375 RVA: 0x0012DD4F File Offset: 0x0012BF4F
 		public void SetManuallyRedraw(bool bUseManualRedraw)
 		{
 			UWidgetComponent.__SetManuallyRedraw_Internal(base.NativePtr, bUseManualRedraw);
 		}
 
-		// Token: 0x06027F0C RID: 163596 RVA: 0x003CD623 File Offset: 0x003CB823
-		public void SetGeometryMode(EWidgetGeometryMode InGeometryMode)
-		{
-			UWidgetComponent.__SetGeometryMode_Internal(base.NativePtr, InGeometryMode);
-		}
-
-		// Token: 0x06027F0D RID: 163597 RVA: 0x003CD631 File Offset: 0x003CB831
+		// Token: 0x0600BCF8 RID: 48376 RVA: 0x0012DD5D File Offset: 0x0012BF5D
 		public void SetDrawSize(FVector2D Size)
 		{
 			UWidgetComponent.__SetDrawSize_Internal(base.NativePtr, Size);
 		}
 
-		// Token: 0x06027F0E RID: 163598 RVA: 0x003CD63F File Offset: 0x003CB83F
+		// Token: 0x0600BCF9 RID: 48377 RVA: 0x0012DD6B File Offset: 0x0012BF6B
 		public void SetDrawAtDesiredSize(bool bInDrawAtDesiredSize)
 		{
 			UWidgetComponent.__SetDrawAtDesiredSize_Internal(base.NativePtr, bInDrawAtDesiredSize);
 		}
 
-		// Token: 0x06027F0F RID: 163599 RVA: 0x003CD64D File Offset: 0x003CB84D
+		// Token: 0x0600BCFA RID: 48378 RVA: 0x0012DD79 File Offset: 0x0012BF79
 		public void SetCylinderArcAngle(float InCylinderArcAngle)
 		{
 			UWidgetComponent.__SetCylinderArcAngle_Internal(base.NativePtr, InCylinderArcAngle);
 		}
 
-		// Token: 0x06027F10 RID: 163600 RVA: 0x003CD65B File Offset: 0x003CB85B
+		// Token: 0x0600BCFB RID: 48379 RVA: 0x0012DD87 File Offset: 0x0012BF87
 		public void SetBackgroundColor(FLinearColor NewBackgroundColor)
 		{
 			UWidgetComponent.__SetBackgroundColor_Internal(base.NativePtr, NewBackgroundColor);
 		}
 
-		// Token: 0x06027F11 RID: 163601 RVA: 0x003CD669 File Offset: 0x003CB869
+		// Token: 0x0600BCFC RID: 48380 RVA: 0x0012DD95 File Offset: 0x0012BF95
 		public void RequestRedraw()
 		{
 			UWidgetComponent.__RequestRedraw_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F12 RID: 163602 RVA: 0x003CD676 File Offset: 0x003CB876
+		// Token: 0x0600BCFD RID: 48381 RVA: 0x0012DDA2 File Offset: 0x0012BFA2
 		public bool IsWidgetVisible()
 		{
 			return UWidgetComponent.__IsWidgetVisible_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F13 RID: 163603 RVA: 0x003CD683 File Offset: 0x003CB883
-		public EWindowVisibility GetWindowVisiblility()
-		{
-			return UWidgetComponent.__GetWindowVisiblility_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06027F14 RID: 163604 RVA: 0x003CD690 File Offset: 0x003CB890
+		// Token: 0x0600BCFE RID: 48382 RVA: 0x0012DDAF File Offset: 0x0012BFAF
 		public bool GetWindowFocusable()
 		{
 			return UWidgetComponent.__GetWindowFocusable_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F15 RID: 163605 RVA: 0x003CD69D File Offset: 0x003CB89D
-		public EWidgetSpace GetWidgetSpace()
-		{
-			return UWidgetComponent.__GetWidgetSpace_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06027F16 RID: 163606 RVA: 0x003CD6AA File Offset: 0x003CB8AA
+		// Token: 0x0600BCFF RID: 48383 RVA: 0x0012DDBC File Offset: 0x0012BFBC
 		public UUserWidget GetWidget()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUserWidget>(UWidgetComponent.__GetWidget_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06027F17 RID: 163607 RVA: 0x003CD6BC File Offset: 0x003CB8BC
+		// Token: 0x0600BD00 RID: 48384 RVA: 0x0012DDCE File Offset: 0x0012BFCE
 		public UUserWidget GetUserWidgetObject()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUserWidget>(UWidgetComponent.__GetUserWidgetObject_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06027F18 RID: 163608 RVA: 0x003CD6CE File Offset: 0x003CB8CE
+		// Token: 0x0600BD01 RID: 48385 RVA: 0x0012DDE0 File Offset: 0x0012BFE0
 		public bool GetTwoSided()
 		{
 			return UWidgetComponent.__GetTwoSided_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F19 RID: 163609 RVA: 0x003CD6DB File Offset: 0x003CB8DB
+		// Token: 0x0600BD02 RID: 48386 RVA: 0x0012DDED File Offset: 0x0012BFED
 		public bool GetTickWhenOffscreen()
 		{
 			return UWidgetComponent.__GetTickWhenOffscreen_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F1A RID: 163610 RVA: 0x003CD6E8 File Offset: 0x003CB8E8
+		// Token: 0x0600BD03 RID: 48387 RVA: 0x0012DDFA File Offset: 0x0012BFFA
 		public UTextureRenderTarget2D GetRenderTarget()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UTextureRenderTarget2D>(UWidgetComponent.__GetRenderTarget_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06027F1B RID: 163611 RVA: 0x003CD6FA File Offset: 0x003CB8FA
+		// Token: 0x0600BD04 RID: 48388 RVA: 0x0012DE0C File Offset: 0x0012C00C
 		public float GetRedrawTime()
 		{
 			return UWidgetComponent.__GetRedrawTime_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F1C RID: 163612 RVA: 0x003CD707 File Offset: 0x003CB907
+		// Token: 0x0600BD05 RID: 48389 RVA: 0x0012DE19 File Offset: 0x0012C019
 		public FVector2D GetPivot()
 		{
 			return UWidgetComponent.__GetPivot_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F1D RID: 163613 RVA: 0x003CD714 File Offset: 0x003CB914
-		public ULocalPlayer GetOwnerPlayer()
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULocalPlayer>(UWidgetComponent.__GetOwnerPlayer_Internal(base.NativePtr));
-		}
-
-		// Token: 0x06027F1E RID: 163614 RVA: 0x003CD726 File Offset: 0x003CB926
+		// Token: 0x0600BD06 RID: 48390 RVA: 0x0012DE26 File Offset: 0x0012C026
 		public UMaterialInstanceDynamic GetMaterialInstance()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInstanceDynamic>(UWidgetComponent.__GetMaterialInstance_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06027F1F RID: 163615 RVA: 0x003CD738 File Offset: 0x003CB938
+		// Token: 0x0600BD07 RID: 48391 RVA: 0x0012DE38 File Offset: 0x0012C038
 		public bool GetManuallyRedraw()
 		{
 			return UWidgetComponent.__GetManuallyRedraw_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F20 RID: 163616 RVA: 0x003CD745 File Offset: 0x003CB945
-		public EWidgetGeometryMode GetGeometryMode()
-		{
-			return UWidgetComponent.__GetGeometryMode_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06027F21 RID: 163617 RVA: 0x003CD752 File Offset: 0x003CB952
+		// Token: 0x0600BD08 RID: 48392 RVA: 0x0012DE45 File Offset: 0x0012C045
 		public FVector2D GetDrawSize()
 		{
 			return UWidgetComponent.__GetDrawSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F22 RID: 163618 RVA: 0x003CD75F File Offset: 0x003CB95F
+		// Token: 0x0600BD09 RID: 48393 RVA: 0x0012DE52 File Offset: 0x0012C052
 		public bool GetDrawAtDesiredSize()
 		{
 			return UWidgetComponent.__GetDrawAtDesiredSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F23 RID: 163619 RVA: 0x003CD76C File Offset: 0x003CB96C
+		// Token: 0x0600BD0A RID: 48394 RVA: 0x0012DE5F File Offset: 0x0012C05F
 		public float GetCylinderArcAngle()
 		{
 			return UWidgetComponent.__GetCylinderArcAngle_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F24 RID: 163620 RVA: 0x003CD779 File Offset: 0x003CB979
+		// Token: 0x0600BD0B RID: 48395 RVA: 0x0012DE6C File Offset: 0x0012C06C
 		public FVector2D GetCurrentDrawSize()
 		{
 			return UWidgetComponent.__GetCurrentDrawSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06027F25 RID: 163621
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetWindowVisibility_Internal(IntPtr @this, EWindowVisibility InVisibility);
-
-		// Token: 0x06027F26 RID: 163622
+		// Token: 0x0600BD0C RID: 48396
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWindowFocusable_Internal(IntPtr @this, bool bInWindowFocusable);
 
-		// Token: 0x06027F27 RID: 163623
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetWidgetSpace_Internal(IntPtr @this, EWidgetSpace NewSpace);
-
-		// Token: 0x06027F28 RID: 163624
+		// Token: 0x0600BD0D RID: 48397
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWidget_Internal(IntPtr @this, IntPtr Widget);
 
-		// Token: 0x06027F29 RID: 163625
+		// Token: 0x0600BD0E RID: 48398
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTwoSided_Internal(IntPtr @this, bool bWantTwoSided);
 
-		// Token: 0x06027F2A RID: 163626
+		// Token: 0x0600BD0F RID: 48399
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTintColorAndOpacity_Internal(IntPtr @this, FLinearColor NewTintColorAndOpacity);
 
-		// Token: 0x06027F2B RID: 163627
+		// Token: 0x0600BD10 RID: 48400
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTickWhenOffscreen_Internal(IntPtr @this, bool bWantTickWhenOffscreen);
 
-		// Token: 0x06027F2C RID: 163628
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetTickMode_Internal(IntPtr @this, ETickMode InTickMode);
-
-		// Token: 0x06027F2D RID: 163629
+		// Token: 0x0600BD11 RID: 48401
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRedrawTime_Internal(IntPtr @this, float InRedrawTime);
 
-		// Token: 0x06027F2E RID: 163630
+		// Token: 0x0600BD12 RID: 48402
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPivot_Internal(IntPtr @this, in FVector2D InPivot);
 
-		// Token: 0x06027F2F RID: 163631
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetOwnerPlayer_Internal(IntPtr @this, IntPtr LocalPlayer);
-
-		// Token: 0x06027F30 RID: 163632
+		// Token: 0x0600BD13 RID: 48403
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetManuallyRedraw_Internal(IntPtr @this, bool bUseManualRedraw);
 
-		// Token: 0x06027F31 RID: 163633
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetGeometryMode_Internal(IntPtr @this, EWidgetGeometryMode InGeometryMode);
-
-		// Token: 0x06027F32 RID: 163634
+		// Token: 0x0600BD14 RID: 48404
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDrawSize_Internal(IntPtr @this, FVector2D Size);
 
-		// Token: 0x06027F33 RID: 163635
+		// Token: 0x0600BD15 RID: 48405
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDrawAtDesiredSize_Internal(IntPtr @this, bool bInDrawAtDesiredSize);
 
-		// Token: 0x06027F34 RID: 163636
+		// Token: 0x0600BD16 RID: 48406
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCylinderArcAngle_Internal(IntPtr @this, float InCylinderArcAngle);
 
-		// Token: 0x06027F35 RID: 163637
+		// Token: 0x0600BD17 RID: 48407
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBackgroundColor_Internal(IntPtr @this, FLinearColor NewBackgroundColor);
 
-		// Token: 0x06027F36 RID: 163638
+		// Token: 0x0600BD18 RID: 48408
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RequestRedraw_Internal(IntPtr @this);
 
-		// Token: 0x06027F37 RID: 163639
+		// Token: 0x0600BD19 RID: 48409
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsWidgetVisible_Internal(IntPtr @this);
 
-		// Token: 0x06027F38 RID: 163640
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EWindowVisibility __GetWindowVisiblility_Internal(IntPtr @this);
-
-		// Token: 0x06027F39 RID: 163641
+		// Token: 0x0600BD1A RID: 48410
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetWindowFocusable_Internal(IntPtr @this);
 
-		// Token: 0x06027F3A RID: 163642
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EWidgetSpace __GetWidgetSpace_Internal(IntPtr @this);
-
-		// Token: 0x06027F3B RID: 163643
+		// Token: 0x0600BD1B RID: 48411
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetWidget_Internal(IntPtr @this);
 
-		// Token: 0x06027F3C RID: 163644
+		// Token: 0x0600BD1C RID: 48412
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetUserWidgetObject_Internal(IntPtr @this);
 
-		// Token: 0x06027F3D RID: 163645
+		// Token: 0x0600BD1D RID: 48413
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetTwoSided_Internal(IntPtr @this);
 
-		// Token: 0x06027F3E RID: 163646
+		// Token: 0x0600BD1E RID: 48414
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetTickWhenOffscreen_Internal(IntPtr @this);
 
-		// Token: 0x06027F3F RID: 163647
+		// Token: 0x0600BD1F RID: 48415
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetRenderTarget_Internal(IntPtr @this);
 
-		// Token: 0x06027F40 RID: 163648
+		// Token: 0x0600BD20 RID: 48416
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetRedrawTime_Internal(IntPtr @this);
 
-		// Token: 0x06027F41 RID: 163649
+		// Token: 0x0600BD21 RID: 48417
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetPivot_Internal(IntPtr @this);
 
-		// Token: 0x06027F42 RID: 163650
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetOwnerPlayer_Internal(IntPtr @this);
-
-		// Token: 0x06027F43 RID: 163651
+		// Token: 0x0600BD22 RID: 48418
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMaterialInstance_Internal(IntPtr @this);
 
-		// Token: 0x06027F44 RID: 163652
+		// Token: 0x0600BD23 RID: 48419
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetManuallyRedraw_Internal(IntPtr @this);
 
-		// Token: 0x06027F45 RID: 163653
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern EWidgetGeometryMode __GetGeometryMode_Internal(IntPtr @this);
-
-		// Token: 0x06027F46 RID: 163654
+		// Token: 0x0600BD24 RID: 48420
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetDrawSize_Internal(IntPtr @this);
 
-		// Token: 0x06027F47 RID: 163655
+		// Token: 0x0600BD25 RID: 48421
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetDrawAtDesiredSize_Internal(IntPtr @this);
 
-		// Token: 0x06027F48 RID: 163656
+		// Token: 0x0600BD26 RID: 48422
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetCylinderArcAngle_Internal(IntPtr @this);
 
-		// Token: 0x06027F49 RID: 163657
+		// Token: 0x0600BD27 RID: 48423
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D __GetCurrentDrawSize_Internal(IntPtr @this);
 
-		// Token: 0x06027F4A RID: 163658 RVA: 0x003CD786 File Offset: 0x003CB986
+		// Token: 0x0600BD28 RID: 48424 RVA: 0x0012DE79 File Offset: 0x0012C079
 		static UWidgetComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/UMG.WidgetComponent");
 		}
 
-		// Token: 0x06027F4B RID: 163659 RVA: 0x003CD794 File Offset: 0x003CB994
+		// Token: 0x0600BD29 RID: 48425 RVA: 0x0012DE87 File Offset: 0x0012C087
 		protected UWidgetComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015CE7 RID: 89319
+		// Token: 0x0400554A RID: 21834
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/UMG.WidgetComponent";
 
-		// Token: 0x04015CE8 RID: 89320
+		// Token: 0x0400554B RID: 21835
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015CE9 RID: 89321
+		// Token: 0x0400554C RID: 21836
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015CEA RID: 89322
-		internal static int __PropertyOffset_Space;
-
-		// Token: 0x04015CEB RID: 89323
-		internal static int __PropertyOffset_TimingPolicy;
-
-		// Token: 0x04015CEC RID: 89324
+		// Token: 0x0400554D RID: 21837
 		internal static int __PropertyOffset_WidgetClass;
 
-		// Token: 0x04015CED RID: 89325
+		// Token: 0x0400554E RID: 21838
 		internal static int __PropertyOffset_DrawSize;
 
-		// Token: 0x04015CEE RID: 89326
+		// Token: 0x0400554F RID: 21839
 		internal static int __PropertyOffset_bManuallyRedraw;
 
-		// Token: 0x04015CEF RID: 89327
+		// Token: 0x04005550 RID: 21840
 		internal static int __PropertyOffset_bRedrawRequested;
 
-		// Token: 0x04015CF0 RID: 89328
+		// Token: 0x04005551 RID: 21841
 		internal static int __PropertyOffset_RedrawTime;
 
-		// Token: 0x04015CF1 RID: 89329
+		// Token: 0x04005552 RID: 21842
 		internal static int __PropertyOffset_CurrentDrawSize;
 
-		// Token: 0x04015CF2 RID: 89330
+		// Token: 0x04005553 RID: 21843
 		internal static int __PropertyOffset_bDrawAtDesiredSize;
 
-		// Token: 0x04015CF3 RID: 89331
+		// Token: 0x04005554 RID: 21844
 		internal static int __PropertyOffset_Pivot;
 
-		// Token: 0x04015CF4 RID: 89332
+		// Token: 0x04005555 RID: 21845
 		internal static int __PropertyOffset_bReceiveHardwareInput;
 
-		// Token: 0x04015CF5 RID: 89333
+		// Token: 0x04005556 RID: 21846
 		internal static int __PropertyOffset_bWindowFocusable;
 
-		// Token: 0x04015CF6 RID: 89334
-		internal static int __PropertyOffset_WindowVisibility;
-
-		// Token: 0x04015CF7 RID: 89335
+		// Token: 0x04005557 RID: 21847
 		internal static int __PropertyOffset_bApplyGammaCorrection;
 
-		// Token: 0x04015CF8 RID: 89336
-		internal static int __PropertyOffset_OwnerPlayer;
-
-		// Token: 0x04015CF9 RID: 89337
+		// Token: 0x04005558 RID: 21848
 		internal static int __PropertyOffset_BackgroundColor;
 
-		// Token: 0x04015CFA RID: 89338
+		// Token: 0x04005559 RID: 21849
 		internal static int __PropertyOffset_TintColorAndOpacity;
 
-		// Token: 0x04015CFB RID: 89339
+		// Token: 0x0400555A RID: 21850
 		internal static int __PropertyOffset_OpacityFromTexture;
 
-		// Token: 0x04015CFC RID: 89340
-		internal static int __PropertyOffset_BlendMode;
-
-		// Token: 0x04015CFD RID: 89341
+		// Token: 0x0400555B RID: 21851
 		internal static int __PropertyOffset_bIsTwoSided;
 
-		// Token: 0x04015CFE RID: 89342
+		// Token: 0x0400555C RID: 21852
 		internal static int __PropertyOffset_TickWhenOffscreen;
 
-		// Token: 0x04015CFF RID: 89343
+		// Token: 0x0400555D RID: 21853
 		internal static int __PropertyOffset_BodySetup;
 
-		// Token: 0x04015D00 RID: 89344
+		// Token: 0x0400555E RID: 21854
 		internal static int __PropertyOffset_TranslucentMaterial;
 
-		// Token: 0x04015D01 RID: 89345
+		// Token: 0x0400555F RID: 21855
 		internal static int __PropertyOffset_TranslucentMaterial_OneSided;
 
-		// Token: 0x04015D02 RID: 89346
+		// Token: 0x04005560 RID: 21856
 		internal static int __PropertyOffset_OpaqueMaterial;
 
-		// Token: 0x04015D03 RID: 89347
+		// Token: 0x04005561 RID: 21857
 		internal static int __PropertyOffset_OpaqueMaterial_OneSided;
 
-		// Token: 0x04015D04 RID: 89348
+		// Token: 0x04005562 RID: 21858
 		internal static int __PropertyOffset_MaskedMaterial;
 
-		// Token: 0x04015D05 RID: 89349
+		// Token: 0x04005563 RID: 21859
 		internal static int __PropertyOffset_MaskedMaterial_OneSided;
 
-		// Token: 0x04015D06 RID: 89350
+		// Token: 0x04005564 RID: 21860
 		internal static int __PropertyOffset_RenderTarget;
 
-		// Token: 0x04015D07 RID: 89351
+		// Token: 0x04005565 RID: 21861
 		internal static int __PropertyOffset_MaterialInstance;
 
-		// Token: 0x04015D08 RID: 89352
+		// Token: 0x04005566 RID: 21862
 		internal static int __PropertyOffset_bAddedToScreen;
 
-		// Token: 0x04015D09 RID: 89353
+		// Token: 0x04005567 RID: 21863
 		internal static int __PropertyOffset_bEditTimeUsable;
 
-		// Token: 0x04015D0A RID: 89354
+		// Token: 0x04005568 RID: 21864
 		internal static int __PropertyOffset_SharedLayerName;
 
-		// Token: 0x04015D0B RID: 89355
+		// Token: 0x04005569 RID: 21865
 		internal static int __PropertyOffset_LayerZOrder;
 
-		// Token: 0x04015D0C RID: 89356
-		internal static int __PropertyOffset_GeometryMode;
-
-		// Token: 0x04015D0D RID: 89357
+		// Token: 0x0400556A RID: 21866
 		internal static int __PropertyOffset_CylinderArcAngle;
 
-		// Token: 0x04015D0E RID: 89358
-		internal static int __PropertyOffset_TickMode;
-
-		// Token: 0x04015D0F RID: 89359
+		// Token: 0x0400556B RID: 21867
 		internal static int __PropertyOffset_Widget;
 	}
 }

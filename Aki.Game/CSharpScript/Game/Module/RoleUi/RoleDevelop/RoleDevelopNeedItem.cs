@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D0F RID: 19727
+	// Token: 0x02003CC6 RID: 15558
 	public class RoleDevelopNeedItem : IRoleDevelopNeedItem
 	{
-		// Token: 0x17007DE8 RID: 32232
-		// (get) Token: 0x06032FD0 RID: 208848 RVA: 0x00BE1AA6 File Offset: 0x00BDFCA6
-		// (set) Token: 0x06032FD1 RID: 208849 RVA: 0x00BE1AAE File Offset: 0x00BDFCAE
+		// Token: 0x17005192 RID: 20882
+		// (get) Token: 0x06027DAE RID: 163246 RVA: 0x00B273DC File Offset: 0x00B255DC
+		// (set) Token: 0x06027DAF RID: 163247 RVA: 0x00B273E4 File Offset: 0x00B255E4
 		public int ItemId { get; set; }
 
-		// Token: 0x17007DE9 RID: 32233
-		// (get) Token: 0x06032FD2 RID: 208850 RVA: 0x00BE1AB7 File Offset: 0x00BDFCB7
-		// (set) Token: 0x06032FD3 RID: 208851 RVA: 0x00BE1ABF File Offset: 0x00BDFCBF
+		// Token: 0x17005193 RID: 20883
+		// (get) Token: 0x06027DB0 RID: 163248 RVA: 0x00B273ED File Offset: 0x00B255ED
+		// (set) Token: 0x06027DB1 RID: 163249 RVA: 0x00B273F5 File Offset: 0x00B255F5
 		public int Count { get; set; }
 
-		// Token: 0x17007DEA RID: 32234
-		// (get) Token: 0x06032FD4 RID: 208852 RVA: 0x00BE1AC8 File Offset: 0x00BDFCC8
-		// (set) Token: 0x06032FD5 RID: 208853 RVA: 0x00BE1AD0 File Offset: 0x00BDFCD0
+		// Token: 0x17005194 RID: 20884
+		// (get) Token: 0x06027DB2 RID: 163250 RVA: 0x00B273FE File Offset: 0x00B255FE
+		// (set) Token: 0x06027DB3 RID: 163251 RVA: 0x00B27406 File Offset: 0x00B25606
 		public EItemMaterialType? Type { get; set; }
 	}
 }

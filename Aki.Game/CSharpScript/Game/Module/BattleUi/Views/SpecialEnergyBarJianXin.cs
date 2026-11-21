@@ -3,17 +3,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DDD RID: 24029
+	// Token: 0x02004DC1 RID: 19905
 	public class SpecialEnergyBarJianXin : SpecialEnergyBarPointGraduate
 	{
-		// Token: 0x0603D141 RID: 250177 RVA: 0x00EB2025 File Offset: 0x00EB0225
+		// Token: 0x060320B8 RID: 204984 RVA: 0x00E02F19 File Offset: 0x00E01119
 		protected override void AddEvents()
 		{
 			base.AddEvents();
 			base.ListenForTagCountChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1JianxinMd10011.技能ID.重击.攻"], new BaseTagComponent.TTagChangedCallback(this.OnTagCountChange));
 		}
 
-		// Token: 0x0603D142 RID: 250178 RVA: 0x00EB204E File Offset: 0x00EB024E
+		// Token: 0x060320B9 RID: 204985 RVA: 0x00E02F42 File Offset: 0x00E01142
 		private void OnTagCountChange(int count, int tagId, int exactTagId, int oldCount)
 		{
 			if (count > 0)
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D143 RID: 250179 RVA: 0x00EB2068 File Offset: 0x00EB0268
+		// Token: 0x060320BA RID: 204986 RVA: 0x00E02F5C File Offset: 0x00E0115C
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float num = this.PercentMachine.GetCurPercent();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastPercent = num;
 		}
 
-		// Token: 0x0401FD34 RID: 130356
+		// Token: 0x0401A7F1 RID: 108529
 		private float EffectPercent;
 	}
 }

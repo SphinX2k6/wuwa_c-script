@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001073 RID: 4211
+// Token: 0x02000527 RID: 1319
 public class GuessJokerHeroSkillItem : UiPanelBase
 {
-	// Token: 0x06006CC9 RID: 27849 RVA: 0x0016033C File Offset: 0x0015E53C
+	// Token: 0x0600405E RID: 16478 RVA: 0x00168C70 File Offset: 0x00166E70
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class GuessJokerHeroSkillItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006CCA RID: 27850 RVA: 0x00160428 File Offset: 0x0015E628
+	// Token: 0x0600405F RID: 16479 RVA: 0x00168D5C File Offset: 0x00166F5C
 	protected override void OnStart()
 	{
 		int sex = WorldLevelModel.Instance.Sex;
@@ -44,21 +44,21 @@ public class GuessJokerHeroSkillItem : UiPanelBase
 		this.RefreshDetail(false);
 	}
 
-	// Token: 0x06006CCB RID: 27851 RVA: 0x001604D2 File Offset: 0x0015E6D2
+	// Token: 0x06004060 RID: 16480 RVA: 0x00168E06 File Offset: 0x00167006
 	public void CloseDetail()
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		this.RefreshDetail(false);
 	}
 
-	// Token: 0x06006CCC RID: 27852 RVA: 0x001604EB File Offset: 0x0015E6EB
+	// Token: 0x06004061 RID: 16481 RVA: 0x00168E1F File Offset: 0x0016701F
 	private void RefreshDetail(bool isShowDetail)
 	{
 		base.GetItem(5).SetUIActive(isShowDetail);
 		base.GetItem(3).SetUIActive(!isShowDetail);
 	}
 
-	// Token: 0x06006CCD RID: 27853 RVA: 0x0016050A File Offset: 0x0015E70A
+	// Token: 0x06004062 RID: 16482 RVA: 0x00168E3E File Offset: 0x0016703E
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)

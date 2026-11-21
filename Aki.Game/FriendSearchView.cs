@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C3F RID: 7231
+// Token: 0x020010FE RID: 4350
 [NullableContext(1)]
 [Nullable(0)]
 public class FriendSearchView : UiViewBase
 {
-	// Token: 0x0600D9E3 RID: 55779 RVA: 0x0032933D File Offset: 0x0032753D
+	// Token: 0x0600ADF9 RID: 44537 RVA: 0x0033473D File Offset: 0x0033293D
 	public FriendSearchView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D9E4 RID: 55780 RVA: 0x00329354 File Offset: 0x00327554
+	// Token: 0x0600ADFA RID: 44538 RVA: 0x00334754 File Offset: 0x00332954
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -65,7 +65,7 @@ public class FriendSearchView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D9E5 RID: 55781 RVA: 0x0032956B File Offset: 0x0032776B
+	// Token: 0x0600ADFB RID: 44539 RVA: 0x0033496B File Offset: 0x00332B6B
 	private void OnClickSearchTypeButton()
 	{
 		this.CurrentSearchType = ((this.CurrentSearchType == FriendSearchView.ECurrentSearchType.Uid) ? FriendSearchView.ECurrentSearchType.ThirdPartyId : FriendSearchView.ECurrentSearchType.Uid);
@@ -75,7 +75,7 @@ public class FriendSearchView : UiViewBase
 		this.RefreshDescText();
 	}
 
-	// Token: 0x0600D9E6 RID: 55782 RVA: 0x00329598 File Offset: 0x00327798
+	// Token: 0x0600ADFC RID: 44540 RVA: 0x00334998 File Offset: 0x00332B98
 	private void RefreshSearchColor()
 	{
 		if (this.CurrentSearchType == FriendSearchView.ECurrentSearchType.ThirdPartyId)
@@ -90,7 +90,7 @@ public class FriendSearchView : UiViewBase
 		base.GetSprite(11).SetColor(FColor.FromHex("FFFFFFFF"));
 	}
 
-	// Token: 0x0600D9E7 RID: 55783 RVA: 0x0032961C File Offset: 0x0032781C
+	// Token: 0x0600ADFD RID: 44541 RVA: 0x00334A1C File Offset: 0x00332C1C
 	private void RefreshPlaceHolderText()
 	{
 		if (KuroSdkController.Instance.SupportSwitchFriendSearchByThirdPartyId())
@@ -117,7 +117,7 @@ public class FriendSearchView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "Search_UID_Tips", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D9E8 RID: 55784 RVA: 0x003296B0 File Offset: 0x003278B0
+	// Token: 0x0600ADFE RID: 44542 RVA: 0x00334AB0 File Offset: 0x00332CB0
 	private void RefreshDescText()
 	{
 		if (KuroSdkController.Instance.SupportSwitchFriendSearchByThirdPartyId())
@@ -144,7 +144,7 @@ public class FriendSearchView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), "Search_UID_Result", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D9E9 RID: 55785 RVA: 0x00329744 File Offset: 0x00327944
+	// Token: 0x0600ADFF RID: 44543 RVA: 0x00334B44 File Offset: 0x00332D44
 	private void RefreshSearchTypeButton()
 	{
 		if (KuroSdkController.Instance.SupportSwitchFriendSearchByThirdPartyId())
@@ -172,7 +172,7 @@ public class FriendSearchView : UiViewBase
 		base.GetButton(6).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600D9EA RID: 55786 RVA: 0x003297F0 File Offset: 0x003279F0
+	// Token: 0x0600AE00 RID: 44544 RVA: 0x00334BF0 File Offset: 0x00332DF0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.SearchPlayerInfo, new Action<int>(this.CallBackSearchPlayer));
@@ -182,7 +182,7 @@ public class FriendSearchView : UiViewBase
 		EventSystem.Instance.Add<int>(EEventName.OnRemoveMutePlayer, new Action<int>(this.RefreshItemMuteState));
 	}
 
-	// Token: 0x0600D9EB RID: 55787 RVA: 0x0032988C File Offset: 0x00327A8C
+	// Token: 0x0600AE01 RID: 44545 RVA: 0x00334C8C File Offset: 0x00332E8C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SearchPlayerInfo, new Action<int>(this.CallBackSearchPlayer));
@@ -192,7 +192,7 @@ public class FriendSearchView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnRemoveMutePlayer, new Action<int>(this.RefreshItemMuteState));
 	}
 
-	// Token: 0x0600D9EC RID: 55788 RVA: 0x00329928 File Offset: 0x00327B28
+	// Token: 0x0600AE02 RID: 44546 RVA: 0x00334D28 File Offset: 0x00332F28
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FriendSearchView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -202,7 +202,7 @@ public class FriendSearchView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D9ED RID: 55789 RVA: 0x00329964 File Offset: 0x00327B64
+	// Token: 0x0600AE03 RID: 44547 RVA: 0x00334D64 File Offset: 0x00332F64
 	protected override void OnStart()
 	{
 		bool flag = !Info.Instance.IsHomeConsolePlatform();
@@ -224,7 +224,7 @@ public class FriendSearchView : UiViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600D9EE RID: 55790 RVA: 0x00329A1F File Offset: 0x00327C1F
+	// Token: 0x0600AE04 RID: 44548 RVA: 0x00334E1F File Offset: 0x0033301F
 	protected override void OnAfterHide()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -233,20 +233,20 @@ public class FriendSearchView : UiViewBase
 		instance.ClearRefuseFriendList();
 	}
 
-	// Token: 0x0600D9EF RID: 55791 RVA: 0x00329A37 File Offset: 0x00327C37
+	// Token: 0x0600AE05 RID: 44549 RVA: 0x00334E37 File Offset: 0x00333037
 	protected override void OnBeforeDestroy()
 	{
 		base.GetInputText(0).OnTextChange.Unbind();
 		FriendModel.Instance.ResetShowingView();
 	}
 
-	// Token: 0x0600D9F0 RID: 55792 RVA: 0x00329A54 File Offset: 0x00327C54
+	// Token: 0x0600AE06 RID: 44550 RVA: 0x00334E54 File Offset: 0x00333054
 	private FriendItem CreateResultItem()
 	{
 		return new FriendItem(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600D9F1 RID: 55793 RVA: 0x00329A68 File Offset: 0x00327C68
+	// Token: 0x0600AE07 RID: 44551 RVA: 0x00334E68 File Offset: 0x00333068
 	private void RefreshShow()
 	{
 		if (this.ResultList.Count > 0)
@@ -260,7 +260,7 @@ public class FriendSearchView : UiViewBase
 		this.RefreshDescText();
 	}
 
-	// Token: 0x0600D9F2 RID: 55794 RVA: 0x00329AB8 File Offset: 0x00327CB8
+	// Token: 0x0600AE08 RID: 44552 RVA: 0x00334EB8 File Offset: 0x003330B8
 	private void RefreshUiComponents()
 	{
 		base.GetInputText(0).SetText("", false);
@@ -269,7 +269,7 @@ public class FriendSearchView : UiViewBase
 		base.GetLoopScrollViewComponent(4).RootUIComp.Get().SetUIActive(this.ResultList.Count > 0);
 	}
 
-	// Token: 0x0600D9F3 RID: 55795 RVA: 0x00329B28 File Offset: 0x00327D28
+	// Token: 0x0600AE09 RID: 44553 RVA: 0x00334F28 File Offset: 0x00333128
 	private void SetClearOrPaste(string text)
 	{
 		if (this.FunctionButtonItem == null)
@@ -286,14 +286,14 @@ public class FriendSearchView : UiViewBase
 		this.FunctionButtonItem.BindCallback(new Action(this.OnClickClearBtn));
 	}
 
-	// Token: 0x0600D9F4 RID: 55796 RVA: 0x00329BA5 File Offset: 0x00327DA5
+	// Token: 0x0600AE0A RID: 44554 RVA: 0x00334FA5 File Offset: 0x003331A5
 	private void OnClickClearBtn()
 	{
 		base.GetInputText(0).SetText("", false);
 		this.SetClearOrPaste("");
 	}
 
-	// Token: 0x0600D9F5 RID: 55797 RVA: 0x00329BC4 File Offset: 0x00327DC4
+	// Token: 0x0600AE0B RID: 44555 RVA: 0x00334FC4 File Offset: 0x003331C4
 	private void OnClickPasteBtn()
 	{
 		string pasteTarget = "";
@@ -321,7 +321,7 @@ public class FriendSearchView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D9F6 RID: 55798 RVA: 0x00329C6C File Offset: 0x00327E6C
+	// Token: 0x0600AE0C RID: 44556 RVA: 0x0033506C File Offset: 0x0033326C
 	private void OnClickSearchConfirmBtn()
 	{
 		FriendModel instance = FriendModel.Instance;
@@ -349,7 +349,7 @@ public class FriendSearchView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D9F7 RID: 55799 RVA: 0x00329CE6 File Offset: 0x00327EE6
+	// Token: 0x0600AE0D RID: 44557 RVA: 0x003350E6 File Offset: 0x003332E6
 	private void CallBackSearchPlayer(int playerId)
 	{
 		this.ResultList = FriendController.Instance.CreateFriendItemSt(new List<int>
@@ -359,7 +359,7 @@ public class FriendSearchView : UiViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600D9F8 RID: 55800 RVA: 0x00329D0B File Offset: 0x00327F0B
+	// Token: 0x0600AE0E RID: 44558 RVA: 0x0033510B File Offset: 0x0033330B
 	private void CallBackApplicationSent(int playerId)
 	{
 		this.ResultList = FriendController.Instance.CreateFriendItemSt(new List<int>
@@ -369,14 +369,14 @@ public class FriendSearchView : UiViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600D9F9 RID: 55801 RVA: 0x00329D30 File Offset: 0x00327F30
+	// Token: 0x0600AE0F RID: 44559 RVA: 0x00335130 File Offset: 0x00333330
 	private void CallBackApplyPlayer(EFriendItemOperation operation, IReadOnlyList<int> ids)
 	{
 		this.ResultList = FriendController.Instance.CreateFriendItemSt(ids, operation);
 		this.RefreshShow();
 	}
 
-	// Token: 0x0600D9FA RID: 55802 RVA: 0x00329D4C File Offset: 0x00327F4C
+	// Token: 0x0600AE10 RID: 44560 RVA: 0x0033514C File Offset: 0x0033334C
 	private void RefreshItemMuteState(int playerId)
 	{
 		int i = 0;
@@ -399,7 +399,7 @@ public class FriendSearchView : UiViewBase
 		}
 	}
 
-	// Token: 0x04006340 RID: 25408
+	// Token: 0x04006412 RID: 25618
 	[Nullable(new byte[]
 	{
 		2,
@@ -408,64 +408,64 @@ public class FriendSearchView : UiViewBase
 	})]
 	private LoopScrollView<FriendItem, FriendItemSt> ResultListLayout;
 
-	// Token: 0x04006341 RID: 25409
+	// Token: 0x04006413 RID: 25619
 	private List<FriendItemSt> ResultList = new List<FriendItemSt>();
 
-	// Token: 0x04006342 RID: 25410
+	// Token: 0x04006414 RID: 25620
 	private FriendSearchView.ECurrentSearchType CurrentSearchType;
 
-	// Token: 0x04006343 RID: 25411
+	// Token: 0x04006415 RID: 25621
 	[Nullable(2)]
 	private ButtonAndSpriteItem FunctionButtonItem;
 
-	// Token: 0x02008204 RID: 33284
+	// Token: 0x0200738D RID: 29581
 	[NullableContext(0)]
 	private enum ECurrentSearchType
 	{
-		// Token: 0x0402A6EC RID: 173804
+		// Token: 0x04025A13 RID: 154131
 		Uid,
-		// Token: 0x0402A6ED RID: 173805
+		// Token: 0x04025A14 RID: 154132
 		ThirdPartyId
 	}
 
-	// Token: 0x02008205 RID: 33285
+	// Token: 0x0200738E RID: 29582
 	[NullableContext(0)]
 	private class EFriendSearchView
 	{
-		// Token: 0x0402A6EE RID: 173806
+		// Token: 0x04025A15 RID: 154133
 		public const int SearchUIDTextInput = 0;
 
-		// Token: 0x0402A6EF RID: 173807
+		// Token: 0x04025A16 RID: 154134
 		public const int FunctionButtonItem = 1;
 
-		// Token: 0x0402A6F0 RID: 173808
+		// Token: 0x04025A17 RID: 154135
 		public const int SearchConfirmBtn = 2;
 
-		// Token: 0x0402A6F1 RID: 173809
+		// Token: 0x04025A18 RID: 154136
 		public const int ResultModelItem = 3;
 
-		// Token: 0x0402A6F2 RID: 173810
+		// Token: 0x04025A19 RID: 154137
 		public const int ResultListLoopScrollView = 4;
 
-		// Token: 0x0402A6F3 RID: 173811
+		// Token: 0x04025A1A RID: 154138
 		public const int ResultEmptyBox = 5;
 
-		// Token: 0x0402A6F4 RID: 173812
+		// Token: 0x04025A1B RID: 154139
 		public const int SearchTypeButton = 6;
 
-		// Token: 0x0402A6F5 RID: 173813
+		// Token: 0x04025A1C RID: 154140
 		public const int SearchTypeText = 7;
 
-		// Token: 0x0402A6F6 RID: 173814
+		// Token: 0x04025A1D RID: 154141
 		public const int PlaceHolderText = 8;
 
-		// Token: 0x0402A6F7 RID: 173815
+		// Token: 0x04025A1E RID: 154142
 		public const int DescText = 9;
 
-		// Token: 0x0402A6F8 RID: 173816
+		// Token: 0x04025A1F RID: 154143
 		public const int NorSprite = 10;
 
-		// Token: 0x0402A6F9 RID: 173817
+		// Token: 0x04025A20 RID: 154144
 		public const int HightSprite = 11;
 	}
 }

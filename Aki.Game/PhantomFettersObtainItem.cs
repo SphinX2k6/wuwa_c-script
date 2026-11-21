@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200243D RID: 9277
+// Token: 0x02001922 RID: 6434
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomFettersObtainItem : UiPanelBase
 {
-	// Token: 0x0601299E RID: 76190 RVA: 0x00496B80 File Offset: 0x00494D80
+	// Token: 0x0600FE54 RID: 65108 RVA: 0x004A414C File Offset: 0x004A234C
 	public PhantomFettersObtainItem(UUIItem uiItem)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x0601299F RID: 76191 RVA: 0x00496B8F File Offset: 0x00494D8F
+	// Token: 0x0600FE55 RID: 65109 RVA: 0x004A415B File Offset: 0x004A235B
 	public void Init()
 	{
 		base.CreateThenShowByActor(this.SourceItem.GetOwner(), null);
 	}
 
-	// Token: 0x060129A0 RID: 76192 RVA: 0x00496BA4 File Offset: 0x00494DA4
+	// Token: 0x0600FE56 RID: 65110 RVA: 0x004A4170 File Offset: 0x004A2370
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class PhantomFettersObtainItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060129A1 RID: 76193 RVA: 0x00496C38 File Offset: 0x00494E38
+	// Token: 0x0600FE57 RID: 65111 RVA: 0x004A4204 File Offset: 0x004A2404
 	public void Update(IFettersObtainData data)
 	{
 		this.MonsterId = data.Id;
@@ -55,13 +55,13 @@ public class PhantomFettersObtainItem : UiPanelBase
 		base.GetText(2).SetUIActive(false);
 	}
 
-	// Token: 0x060129A2 RID: 76194 RVA: 0x00496CD1 File Offset: 0x00494ED1
+	// Token: 0x0600FE58 RID: 65112 RVA: 0x004A429D File Offset: 0x004A249D
 	public void BindOnItemButtonClickedCallback(Action<int> onItemButtonClicked)
 	{
 		this.OnItemButtonClickedCallback = onItemButtonClicked;
 	}
 
-	// Token: 0x060129A3 RID: 76195 RVA: 0x00496CDA File Offset: 0x00494EDA
+	// Token: 0x0600FE59 RID: 65113 RVA: 0x004A42A6 File Offset: 0x004A24A6
 	private void OnTrack()
 	{
 		if (this.OnItemButtonClickedCallback != null)
@@ -71,14 +71,14 @@ public class PhantomFettersObtainItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008C41 RID: 35905
+	// Token: 0x04008D88 RID: 36232
 	private int MonsterId;
 
-	// Token: 0x04008C42 RID: 35906
+	// Token: 0x04008D89 RID: 36233
 	[Nullable(2)]
 	private Action<int> OnItemButtonClickedCallback;
 
-	// Token: 0x04008C43 RID: 35907
+	// Token: 0x04008D8A RID: 36234
 	[Nullable(2)]
 	private readonly UUIItem SourceItem;
 }

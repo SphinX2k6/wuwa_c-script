@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x020016A6 RID: 5798
+// Token: 0x02000B5E RID: 2910
 public class NewSoundWeaponDropDownItem : DropDownItemBase<int>
 {
-	// Token: 0x0600A575 RID: 42357 RVA: 0x0024FB0A File Offset: 0x0024DD0A
+	// Token: 0x06007955 RID: 31061 RVA: 0x00259F1E File Offset: 0x0025811E
 	[NullableContext(1)]
 	public NewSoundWeaponDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600A576 RID: 42358 RVA: 0x0024FB14 File Offset: 0x0024DD14
+	// Token: 0x06007956 RID: 31062 RVA: 0x00259F28 File Offset: 0x00258128
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,14 +31,14 @@ public class NewSoundWeaponDropDownItem : DropDownItemBase<int>
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x0600A577 RID: 42359 RVA: 0x0024FBA9 File Offset: 0x0024DDA9
+	// Token: 0x06007957 RID: 31063 RVA: 0x00259FBD File Offset: 0x002581BD
 	[NullableContext(2)]
 	protected override UUIExtendToggle GetDropDownToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600A578 RID: 42360 RVA: 0x0024FBB4 File Offset: 0x0024DDB4
+	// Token: 0x06007958 RID: 31064 RVA: 0x00259FC8 File Offset: 0x002581C8
 	protected override void OnShowDropDownItemBase(int data)
 	{
 		UUITextureTransitionComponent uiTextureTransitionComponent = base.GetUiTextureTransitionComponent(2);
@@ -72,14 +72,14 @@ public class NewSoundWeaponDropDownItem : DropDownItemBase<int>
 		base.GetText(1).SetText(newText, true);
 	}
 
-	// Token: 0x02007C7D RID: 31869
+	// Token: 0x02006E02 RID: 28162
 	private enum EComponent
 	{
-		// Token: 0x04028D88 RID: 167304
+		// Token: 0x040240B1 RID: 147633
 		TogOption,
-		// Token: 0x04028D89 RID: 167305
+		// Token: 0x040240B2 RID: 147634
 		TxtOption,
-		// Token: 0x04028D8A RID: 167306
+		// Token: 0x040240B3 RID: 147635
 		WeaponTexture
 	}
 }

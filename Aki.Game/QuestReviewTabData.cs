@@ -5,18 +5,18 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 
-// Token: 0x02002670 RID: 9840
+// Token: 0x02001B5B RID: 7003
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewTabData
 {
-	// Token: 0x060142A3 RID: 82595 RVA: 0x005178D8 File Offset: 0x00515AD8
+	// Token: 0x06011785 RID: 71557 RVA: 0x00526630 File Offset: 0x00524830
 	public QuestReviewTabData(QuestReviewTab config)
 	{
 	}
 
-	// Token: 0x170019E4 RID: 6628
-	// (get) Token: 0x060142A4 RID: 82596 RVA: 0x005178E8 File Offset: 0x00515AE8
+	// Token: 0x17001A1C RID: 6684
+	// (get) Token: 0x06011786 RID: 71558 RVA: 0x00526640 File Offset: 0x00524840
 	public int Id
 	{
 		get
@@ -25,8 +25,8 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x170019E5 RID: 6629
-	// (get) Token: 0x060142A5 RID: 82597 RVA: 0x00517904 File Offset: 0x00515B04
+	// Token: 0x17001A1D RID: 6685
+	// (get) Token: 0x06011787 RID: 71559 RVA: 0x0052665C File Offset: 0x0052485C
 	public int QuestTree
 	{
 		get
@@ -35,8 +35,8 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x170019E6 RID: 6630
-	// (get) Token: 0x060142A6 RID: 82598 RVA: 0x00517920 File Offset: 0x00515B20
+	// Token: 0x17001A1E RID: 6686
+	// (get) Token: 0x06011788 RID: 71560 RVA: 0x00526678 File Offset: 0x00524878
 	public string NameId
 	{
 		get
@@ -45,8 +45,8 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x170019E7 RID: 6631
-	// (get) Token: 0x060142A7 RID: 82599 RVA: 0x0051793B File Offset: 0x00515B3B
+	// Token: 0x17001A1F RID: 6687
+	// (get) Token: 0x06011789 RID: 71561 RVA: 0x00526693 File Offset: 0x00524893
 	public bool IsUnlocked
 	{
 		get
@@ -55,14 +55,14 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x170019E8 RID: 6632
-	// (get) Token: 0x060142A8 RID: 82600 RVA: 0x00517943 File Offset: 0x00515B43
-	// (set) Token: 0x060142A9 RID: 82601 RVA: 0x0051794B File Offset: 0x00515B4B
+	// Token: 0x17001A20 RID: 6688
+	// (get) Token: 0x0601178A RID: 71562 RVA: 0x0052669B File Offset: 0x0052489B
+	// (set) Token: 0x0601178B RID: 71563 RVA: 0x005266A3 File Offset: 0x005248A3
 	public bool IsSelected { get; set; }
 
-	// Token: 0x170019E9 RID: 6633
-	// (get) Token: 0x060142AA RID: 82602 RVA: 0x00517954 File Offset: 0x00515B54
-	// (set) Token: 0x060142AB RID: 82603 RVA: 0x00517984 File Offset: 0x00515B84
+	// Token: 0x17001A21 RID: 6689
+	// (get) Token: 0x0601178C RID: 71564 RVA: 0x005266AC File Offset: 0x005248AC
+	// (set) Token: 0x0601178D RID: 71565 RVA: 0x005266DC File Offset: 0x005248DC
 	public bool IsFirstTimeShow
 	{
 		get
@@ -83,7 +83,7 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x060142AC RID: 82604 RVA: 0x005179BF File Offset: 0x00515BBF
+	// Token: 0x0601178E RID: 71566 RVA: 0x00526717 File Offset: 0x00524917
 	public void UpdateByServerData(QuestReviewTabInfo data)
 	{
 		if (data.UnlockCondition)
@@ -92,9 +92,9 @@ public class QuestReviewTabData
 		}
 	}
 
-	// Token: 0x040097D5 RID: 38869
+	// Token: 0x0400992D RID: 39213
 	private bool IsUnlockedInternal;
 
-	// Token: 0x040097D6 RID: 38870
+	// Token: 0x0400992E RID: 39214
 	private readonly QuestReviewTab Config = config;
 }

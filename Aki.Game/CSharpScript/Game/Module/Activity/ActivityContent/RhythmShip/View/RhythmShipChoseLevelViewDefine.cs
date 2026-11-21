@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006217 RID: 25111
+	// Token: 0x02005195 RID: 20885
 	public class RhythmShipChoseLevelViewDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603F576 RID: 259446 RVA: 0x00F4E662 File Offset: 0x00F4C862
+		// Token: 0x06034237 RID: 213559 RVA: 0x00E955BA File Offset: 0x00E937BA
 		static RhythmShipChoseLevelViewDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RhythmShipChoseLevelViewDefine.CreateStaticDefaultValue), new Action(RhythmShipChoseLevelViewDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603F577 RID: 259447 RVA: 0x00F4E684 File Offset: 0x00F4C884
+		// Token: 0x06034238 RID: 213560 RVA: 0x00E955DC File Offset: 0x00E937DC
 		public static void CreateStaticDefaultValue()
 		{
 			Dictionary<int, List<int>> dictionary = new Dictionary<int, List<int>>();
@@ -79,27 +79,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			RhythmShipChoseLevelViewDefine.rhythmShipLevelItemSequenceName = dictionary2;
 		}
 
-		// Token: 0x0603F578 RID: 259448 RVA: 0x00F4E83C File Offset: 0x00F4CA3C
+		// Token: 0x06034239 RID: 213561 RVA: 0x00E95794 File Offset: 0x00E93994
 		public static void ResetStaticDefaultValue()
 		{
 			RhythmShipChoseLevelViewDefine.rhythmShipLevelItemShow = null;
 			RhythmShipChoseLevelViewDefine.rhythmShipLevelItemSequenceName = null;
 		}
 
-		// Token: 0x040210E2 RID: 135394
+		// Token: 0x0401BA11 RID: 113169
 		public const int LINKAGE_PLANET_ID = 5;
 
-		// Token: 0x040210E3 RID: 135395
+		// Token: 0x0401BA12 RID: 113170
 		public const int LINKAGE_BTN_CD = 1;
 
-		// Token: 0x040210E4 RID: 135396
+		// Token: 0x0401BA13 RID: 113171
 		public const int REFRESH_TIME = 500;
 
-		// Token: 0x040210E5 RID: 135397
+		// Token: 0x0401BA14 RID: 113172
 		[Nullable(1)]
 		public static Dictionary<int, List<int>> rhythmShipLevelItemShow;
 
-		// Token: 0x040210E6 RID: 135398
+		// Token: 0x0401BA15 RID: 113173
 		[Nullable(1)]
 		public static Dictionary<int, List<string>> rhythmShipLevelItemSequenceName;
 	}

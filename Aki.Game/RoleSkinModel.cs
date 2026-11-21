@@ -11,14 +11,14 @@ using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002A29 RID: 10793
+// Token: 0x02001FA4 RID: 8100
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RoleSkinModel : ModelBase
 {
-	// Token: 0x06016715 RID: 91925 RVA: 0x005AE314 File Offset: 0x005AC514
-	public void UpdateUnlockRoleSkin(List<int> itemIdList)
+	// Token: 0x0601411B RID: 82203 RVA: 0x005D9324 File Offset: 0x005D7524
+	public void UpdateUnlockRoleSkin(IEnumerable<int> itemIdList)
 	{
 		foreach (int itemId in itemIdList)
 		{
@@ -30,8 +30,8 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016716 RID: 91926 RVA: 0x005AE36C File Offset: 0x005AC56C
-	public void UpdateUnlockRoleSkinDataFull(List<int> itemIdList)
+	// Token: 0x0601411C RID: 82204 RVA: 0x005D9378 File Offset: 0x005D7578
+	public void UpdateUnlockRoleSkinDataFull(IEnumerable<int> itemIdList)
 	{
 		foreach (RoleSkinData roleSkinData in this.RoleSkinMap.Values)
 		{
@@ -47,8 +47,8 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016717 RID: 91927 RVA: 0x005AE408 File Offset: 0x005AC608
-	public void UpdateWeaponSkinFirstWearRecord(List<int> itemIdList)
+	// Token: 0x0601411D RID: 82205 RVA: 0x005D9410 File Offset: 0x005D7610
+	public void UpdateWeaponSkinFirstWearRecord(IEnumerable<int> itemIdList)
 	{
 		foreach (int itemId in itemIdList)
 		{
@@ -64,8 +64,8 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016718 RID: 91928 RVA: 0x005AE478 File Offset: 0x005AC678
-	public void AddRoleSkinNewFlag(List<int> itemIdList)
+	// Token: 0x0601411E RID: 82206 RVA: 0x005D9478 File Offset: 0x005D7678
+	public void AddRoleSkinNewFlag(IEnumerable<int> itemIdList)
 	{
 		foreach (int num in itemIdList)
 		{
@@ -80,7 +80,7 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016719 RID: 91929 RVA: 0x005AE514 File Offset: 0x005AC714
+	// Token: 0x0601411F RID: 82207 RVA: 0x005D9510 File Offset: 0x005D7710
 	[NullableContext(2)]
 	public unsafe RoleSkinData GetRoleSkinData(int itemId)
 	{
@@ -107,7 +107,7 @@ public class RoleSkinModel : ModelBase
 		return roleSkinData;
 	}
 
-	// Token: 0x0601671A RID: 91930 RVA: 0x005AE5C0 File Offset: 0x005AC7C0
+	// Token: 0x06014120 RID: 82208 RVA: 0x005D95BC File Offset: 0x005D77BC
 	[NullableContext(2)]
 	public RoleSkinData GetRoleSkinDataByRoleId(int roleId)
 	{
@@ -120,7 +120,7 @@ public class RoleSkinModel : ModelBase
 		return this.GetRoleSkinData(roleSkinId);
 	}
 
-	// Token: 0x0601671B RID: 91931 RVA: 0x005AE5F0 File Offset: 0x005AC7F0
+	// Token: 0x06014121 RID: 82209 RVA: 0x005D95EC File Offset: 0x005D77EC
 	[NullableContext(2)]
 	public RoleSkinData GetRoleOriginalSkinData(int roleId, bool ifSelf = true)
 	{
@@ -133,7 +133,7 @@ public class RoleSkinModel : ModelBase
 		return this.GetRoleSkinData(skinId);
 	}
 
-	// Token: 0x0601671C RID: 91932 RVA: 0x005AE628 File Offset: 0x005AC828
+	// Token: 0x06014122 RID: 82210 RVA: 0x005D9624 File Offset: 0x005D7824
 	public int GetRoleSkinIdByRoleId(int roleId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -144,14 +144,14 @@ public class RoleSkinModel : ModelBase
 		return roleDataById.GetRoleSkinId();
 	}
 
-	// Token: 0x0601671D RID: 91933 RVA: 0x005AE650 File Offset: 0x005AC850
+	// Token: 0x06014123 RID: 82211 RVA: 0x005D964C File Offset: 0x005D784C
 	public bool CheckHasRoleSkin(int itemId)
 	{
 		RoleSkinData roleSkinData = this.GetRoleSkinData(itemId);
 		return roleSkinData != null && roleSkinData.IsLocked();
 	}
 
-	// Token: 0x0601671E RID: 91934 RVA: 0x005AE670 File Offset: 0x005AC870
+	// Token: 0x06014124 RID: 82212 RVA: 0x005D966C File Offset: 0x005D786C
 	public void UnlockSkin(int itemId)
 	{
 		RoleSkinData roleSkinData = this.GetRoleSkinData(itemId);
@@ -162,7 +162,7 @@ public class RoleSkinModel : ModelBase
 		roleSkinData.UnlockSkin();
 	}
 
-	// Token: 0x0601671F RID: 91935 RVA: 0x005AE690 File Offset: 0x005AC890
+	// Token: 0x06014125 RID: 82213 RVA: 0x005D968C File Offset: 0x005D788C
 	public int GetSkinCountById(int itemId)
 	{
 		RoleSkinData roleSkinData = this.GetRoleSkinData(itemId);
@@ -173,7 +173,7 @@ public class RoleSkinModel : ModelBase
 		return roleSkinData.GetItemCount();
 	}
 
-	// Token: 0x06016720 RID: 91936 RVA: 0x005AE6B0 File Offset: 0x005AC8B0
+	// Token: 0x06014126 RID: 82214 RVA: 0x005D96AC File Offset: 0x005D78AC
 	public List<UiDynamicTab> GetSkinTabList(bool isMainRole, int roleId)
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(EUiViewName.SkinRootView);
@@ -190,7 +190,7 @@ public class RoleSkinModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06016721 RID: 91937 RVA: 0x005AE74C File Offset: 0x005AC94C
+	// Token: 0x06014127 RID: 82215 RVA: 0x005D9748 File Offset: 0x005D7948
 	private bool CanShowOrnamentTab(int roleId)
 	{
 		IReadOnlyList<RoleSkin> roleSkinConfigList = SkinConfig.Instance.GetRoleSkinConfigList(roleId);
@@ -208,7 +208,7 @@ public class RoleSkinModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06016722 RID: 91938 RVA: 0x005AE7CC File Offset: 0x005AC9CC
+	// Token: 0x06014128 RID: 82216 RVA: 0x005D97C8 File Offset: 0x005D79C8
 	public List<RoleSkinData> GetRoleSkinDataList(int roleId)
 	{
 		IReadOnlyList<RoleSkin> roleSkinConfigList = SkinConfig.Instance.GetRoleSkinConfigList(roleId);
@@ -234,7 +234,7 @@ public class RoleSkinModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06016723 RID: 91939 RVA: 0x005AE86C File Offset: 0x005ACA6C
+	// Token: 0x06014129 RID: 82217 RVA: 0x005D9868 File Offset: 0x005D7A68
 	public bool HasRoleSkinRedDotByRoleId(int roleId)
 	{
 		foreach (RoleSkinData roleSkinData in this.GetRoleSkinDataList(roleId))
@@ -248,14 +248,14 @@ public class RoleSkinModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06016724 RID: 91940 RVA: 0x005AE8EC File Offset: 0x005ACAEC
+	// Token: 0x0601412A RID: 82218 RVA: 0x005D98E8 File Offset: 0x005D7AE8
 	public bool CheckSuitWeaponFirstWear(int weaponSkinId)
 	{
 		this.TryLocalOverrideToServerStorage();
 		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.SuitWeaponFirstWearRecord) as ServerStorageSet).Has(weaponSkinId);
 	}
 
-	// Token: 0x06016725 RID: 91941 RVA: 0x005AE90C File Offset: 0x005ACB0C
+	// Token: 0x0601412B RID: 82219 RVA: 0x005D9908 File Offset: 0x005D7B08
 	private void TryLocalOverrideToServerStorage()
 	{
 		if (this.HasOverrideServerStorage)
@@ -282,7 +282,7 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016726 RID: 91942 RVA: 0x005AE99C File Offset: 0x005ACB9C
+	// Token: 0x0601412C RID: 82220 RVA: 0x005D9998 File Offset: 0x005D7B98
 	public void RecordSuitWeaponFirstWear(int weaponSkinId, bool isFirstWear)
 	{
 		this.TryLocalOverrideToServerStorage();
@@ -300,8 +300,8 @@ public class RoleSkinModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.SuitWeaponFirstWearRecord, dictionary);
 	}
 
-	// Token: 0x17001DD6 RID: 7638
-	// (get) Token: 0x06016727 RID: 91943 RVA: 0x005AE9F7 File Offset: 0x005ACBF7
+	// Token: 0x17001E2E RID: 7726
+	// (get) Token: 0x0601412D RID: 82221 RVA: 0x005D99F3 File Offset: 0x005D7BF3
 	public static RoleSkinModel Instance
 	{
 		get
@@ -310,7 +310,7 @@ public class RoleSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016728 RID: 91944 RVA: 0x005AE9FE File Offset: 0x005ACBFE
+	// Token: 0x0601412E RID: 82222 RVA: 0x005D99FA File Offset: 0x005D7BFA
 	public static RoleSkinModel GetOrCreateInstance()
 	{
 		if (RoleSkinModel._Instance == null)
@@ -320,7 +320,7 @@ public class RoleSkinModel : ModelBase
 		return RoleSkinModel._Instance;
 	}
 
-	// Token: 0x06016729 RID: 91945 RVA: 0x005AEA12 File Offset: 0x005ACC12
+	// Token: 0x0601412F RID: 82223 RVA: 0x005D9A0E File Offset: 0x005D7C0E
 	public static bool CreateInstance()
 	{
 		if (RoleSkinModel._Instance != null)
@@ -331,30 +331,30 @@ public class RoleSkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601672A RID: 91946 RVA: 0x005AEA28 File Offset: 0x005ACC28
+	// Token: 0x06014130 RID: 82224 RVA: 0x005D9A24 File Offset: 0x005D7C24
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601672B RID: 91947 RVA: 0x005AEA2A File Offset: 0x005ACC2A
+	// Token: 0x06014131 RID: 82225 RVA: 0x005D9A26 File Offset: 0x005D7C26
 	public static void ResetStaticDefaultValue()
 	{
 		RoleSkinModel._Instance = null;
 	}
 
-	// Token: 0x0601672C RID: 91948 RVA: 0x005AEA32 File Offset: 0x005ACC32
+	// Token: 0x06014132 RID: 82226 RVA: 0x005D9A2E File Offset: 0x005D7C2E
 	static RoleSkinModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleSkinModel.CreateStaticDefaultValue), new Action(RoleSkinModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A6C8 RID: 42696
+	// Token: 0x0400AAB2 RID: 43698
 	private readonly Dictionary<int, RoleSkinData> RoleSkinMap = new Dictionary<int, RoleSkinData>();
 
-	// Token: 0x0400A6C9 RID: 42697
+	// Token: 0x0400AAB3 RID: 43699
 	private bool HasOverrideServerStorage;
 
-	// Token: 0x0400A6CA RID: 42698
+	// Token: 0x0400AAB4 RID: 43700
 	[Nullable(2)]
 	private static RoleSkinModel _Instance;
 }

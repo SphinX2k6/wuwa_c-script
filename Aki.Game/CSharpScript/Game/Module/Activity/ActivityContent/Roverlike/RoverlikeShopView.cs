@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006175 RID: 24949
+	// Token: 0x020050F3 RID: 20723
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeShopView : UiViewBase
 	{
-		// Token: 0x0603F110 RID: 258320 RVA: 0x00F3D723 File Offset: 0x00F3B923
+		// Token: 0x06033DD0 RID: 212432 RVA: 0x00E845F7 File Offset: 0x00E827F7
 		public RoverlikeShopView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603F111 RID: 258321 RVA: 0x00F3D738 File Offset: 0x00F3B938
+		// Token: 0x06033DD1 RID: 212433 RVA: 0x00E8460C File Offset: 0x00E8280C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F112 RID: 258322 RVA: 0x00F3D828 File Offset: 0x00F3BA28
+		// Token: 0x06033DD2 RID: 212434 RVA: 0x00E846FC File Offset: 0x00E828FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeShopView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -57,27 +56,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F113 RID: 258323 RVA: 0x00F3D86B File Offset: 0x00F3BA6B
+		// Token: 0x06033DD3 RID: 212435 RVA: 0x00E8473F File Offset: 0x00E8293F
 		protected override void OnBeforeShow()
 		{
 			this.RefreshCategoryTabs().Forget();
 		}
 
-		// Token: 0x0603F114 RID: 258324 RVA: 0x00F3D878 File Offset: 0x00F3BA78
+		// Token: 0x06033DD4 RID: 212436 RVA: 0x00E8474C File Offset: 0x00E8294C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Add<int, bool>(EEventName.RefreshPayShop, new Action<int, bool>(this.OnRefreshPayShop));
 		}
 
-		// Token: 0x0603F115 RID: 258325 RVA: 0x00F3D8B2 File Offset: 0x00F3BAB2
+		// Token: 0x06033DD5 RID: 212437 RVA: 0x00E84786 File Offset: 0x00E82986
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Remove<int, bool>(EEventName.RefreshPayShop, new Action<int, bool>(this.OnRefreshPayShop));
 		}
 
-		// Token: 0x0603F116 RID: 258326 RVA: 0x00F3D8EC File Offset: 0x00F3BAEC
+		// Token: 0x06033DD6 RID: 212438 RVA: 0x00E847C0 File Offset: 0x00E829C0
 		protected override void OnBeforeDestroy()
 		{
 			if (this.CategoryPanel != null)
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TabDataList = new List<UiDynamicTab>();
 		}
 
-		// Token: 0x0603F117 RID: 258327 RVA: 0x00F3D954 File Offset: 0x00F3BB54
+		// Token: 0x06033DD7 RID: 212439 RVA: 0x00E84828 File Offset: 0x00E82A28
 		private UniTask RefreshCategoryTabs()
 		{
 			RoverlikeShopView.<RefreshCategoryTabs>d__14 <RefreshCategoryTabs>d__;
@@ -109,13 +108,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshCategoryTabs>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F118 RID: 258328 RVA: 0x00F3D997 File Offset: 0x00F3BB97
+		// Token: 0x06033DD8 RID: 212440 RVA: 0x00E8486B File Offset: 0x00E82A6B
 		private ActivityRegressTabItemPanel ProxyCreateCategoryItem([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new ActivityRegressTabItemPanel();
 		}
 
-		// Token: 0x0603F119 RID: 258329 RVA: 0x00F3D9A0 File Offset: 0x00F3BBA0
+		// Token: 0x06033DD9 RID: 212441 RVA: 0x00E84874 File Offset: 0x00E82A74
 		[NullableContext(2)]
 		private CommonTabData GetCategoryCommonData(int index)
 		{
@@ -127,13 +126,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x0603F11A RID: 258330 RVA: 0x00F3D9EC File Offset: 0x00F3BBEC
+		// Token: 0x06033DDA RID: 212442 RVA: 0x00E848C0 File Offset: 0x00E82AC0
 		private void OnCategorySelected(int index)
 		{
 			this.RefreshSubTabs();
 		}
 
-		// Token: 0x0603F11B RID: 258331 RVA: 0x00F3D9F4 File Offset: 0x00F3BBF4
+		// Token: 0x06033DDB RID: 212443 RVA: 0x00E848C8 File Offset: 0x00E82AC8
 		private void RefreshSubTabs()
 		{
 			List<int> subTabIdList = this.GetSubTabIdList();
@@ -150,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshGoods();
 		}
 
-		// Token: 0x0603F11C RID: 258332 RVA: 0x00F3DA5F File Offset: 0x00F3BC5F
+		// Token: 0x06033DDC RID: 212444 RVA: 0x00E84933 File Offset: 0x00E82B33
 		private RoverlikeShopSubTabItem CreateSubTabItem()
 		{
 			RoverlikeShopSubTabItem roverlikeShopSubTabItem = new RoverlikeShopSubTabItem();
@@ -159,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeShopSubTabItem;
 		}
 
-		// Token: 0x0603F11D RID: 258333 RVA: 0x00F3DA84 File Offset: 0x00F3BC84
+		// Token: 0x06033DDD RID: 212445 RVA: 0x00E84958 File Offset: 0x00E82B58
 		private void OnSubTabToggle(int subTabId)
 		{
 			if (this.CurrentSubTabId != 0 && this.CurrentSubTabId != subTabId)
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshGoods();
 		}
 
-		// Token: 0x0603F11E RID: 258334 RVA: 0x00F3DAD4 File Offset: 0x00F3BCD4
+		// Token: 0x06033DDE RID: 212446 RVA: 0x00E849A8 File Offset: 0x00E82BA8
 		private void RefreshGoods()
 		{
 			if (this.ShopId <= 0 || this.CurrentSubTabId <= 0)
@@ -189,11 +188,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 			List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)this.ShopId, this.CurrentSubTabId, true);
 			this.GoodsScroll.ClearGridProxies();
-			this.GoodsScroll.RefreshByDataAsync(payShopTabData.Cast<IPayShopUnionData>().ToList<IPayShopUnionData>(), false, true).Forget();
+			this.GoodsScroll.RefreshByDataAsync(payShopTabData, false, true).Forget();
 			this.SetEmptyActive(payShopTabData.Count <= 0);
 		}
 
-		// Token: 0x0603F11F RID: 258335 RVA: 0x00F3DB5E File Offset: 0x00F3BD5E
+		// Token: 0x06033DDF RID: 212447 RVA: 0x00E84A28 File Offset: 0x00E82C28
 		private void SetEmptyActive(bool isEmpty)
 		{
 			UUIItem item = base.GetItem(5);
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			item.SetUIActive(isEmpty);
 		}
 
-		// Token: 0x0603F120 RID: 258336 RVA: 0x00F3DB74 File Offset: 0x00F3BD74
+		// Token: 0x06033DE0 RID: 212448 RVA: 0x00E84A3C File Offset: 0x00E82C3C
 		private UniTask RefreshCurrency()
 		{
 			RoverlikeShopView.<RefreshCurrency>d__23 <RefreshCurrency>d__;
@@ -215,27 +214,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshCurrency>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F121 RID: 258337 RVA: 0x00F3DBB7 File Offset: 0x00F3BDB7
+		// Token: 0x06033DE1 RID: 212449 RVA: 0x00E84A7F File Offset: 0x00E82C7F
 		private ActivityShopGridItem InitGoodsItem()
 		{
 			return new ActivityShopGridItem();
 		}
 
-		// Token: 0x0603F122 RID: 258338 RVA: 0x00F3DBBE File Offset: 0x00F3BDBE
+		// Token: 0x06033DE2 RID: 212450 RVA: 0x00E84A86 File Offset: 0x00E82C86
 		private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType payShopId, int tabId)
 		{
 			this.RefreshGoods();
 			this.RefreshCurrency().Forget();
 		}
 
-		// Token: 0x0603F123 RID: 258339 RVA: 0x00F3DBD1 File Offset: 0x00F3BDD1
+		// Token: 0x06033DE3 RID: 212451 RVA: 0x00E84A99 File Offset: 0x00E82C99
 		private void OnRefreshPayShop(int shopId, bool isSwitch)
 		{
 			this.RefreshGoods();
 			this.RefreshCurrency().Forget();
 		}
 
-		// Token: 0x0603F124 RID: 258340 RVA: 0x00F3DBE4 File Offset: 0x00F3BDE4
+		// Token: 0x06033DE4 RID: 212452 RVA: 0x00E84AAC File Offset: 0x00E82CAC
 		private int GetShopId()
 		{
 			RoverlikeActivityController instance = RoverlikeActivityController.Instance;
@@ -244,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return ((roverlikeActivityData != null) ? ((roverlikeActivityData.GetParamConfig() != null) ? new int?(roverRogueActivity.GetValueOrDefault().ShopId) : null) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x0603F125 RID: 258341 RVA: 0x00F3DC47 File Offset: 0x00F3BE47
+		// Token: 0x06033DE5 RID: 212453 RVA: 0x00E84B0F File Offset: 0x00E82D0F
 		private List<int> GetSubTabIdList()
 		{
 			if (this.ShopId <= 0)
@@ -254,16 +253,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return PayShopModel.Instance.GetPayShopTabIdList((PayShopDefine.EPayShopTabType)this.ShopId, true);
 		}
 
-		// Token: 0x0603F126 RID: 258342 RVA: 0x00F3DC69 File Offset: 0x00F3BE69
+		// Token: 0x06033DE6 RID: 212454 RVA: 0x00E84B31 File Offset: 0x00E82D31
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020E3A RID: 134714
+		// Token: 0x0401B767 RID: 112487
 		private int ShopId;
 
-		// Token: 0x04020E3B RID: 134715
+		// Token: 0x0401B768 RID: 112488
 		[Nullable(new byte[]
 		{
 			2,
@@ -271,10 +270,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private TabComponentWithCaptionItem<ActivityRegressTabItemPanel> CategoryPanel;
 
-		// Token: 0x04020E3C RID: 134716
+		// Token: 0x0401B769 RID: 112489
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04020E3D RID: 134717
+		// Token: 0x0401B76A RID: 112490
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,10 +281,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeShopSubTabItem, int> SubTabScroll;
 
-		// Token: 0x04020E3E RID: 134718
+		// Token: 0x0401B76B RID: 112491
 		private int CurrentSubTabId;
 
-		// Token: 0x04020E3F RID: 134719
+		// Token: 0x0401B76C RID: 112492
 		[Nullable(new byte[]
 		{
 			2,
@@ -294,21 +293,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private LoopScrollView<ActivityShopGridItem, IPayShopUnionData> GoodsScroll;
 
-		// Token: 0x0200C3DE RID: 50142
+		// Token: 0x0200ADC5 RID: 44485
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B1AB RID: 242091
+			// Token: 0x04035B0C RID: 219916
 			Caption,
-			// Token: 0x0403B1AC RID: 242092
+			// Token: 0x04035B0D RID: 219917
 			ShopScroller,
-			// Token: 0x0403B1AD RID: 242093
+			// Token: 0x04035B0E RID: 219918
 			ShopItem,
-			// Token: 0x0403B1AE RID: 242094
+			// Token: 0x04035B0F RID: 219919
 			TabScroller,
-			// Token: 0x0403B1AF RID: 242095
+			// Token: 0x04035B10 RID: 219920
 			TabItem,
-			// Token: 0x0403B1B0 RID: 242096
+			// Token: 0x04035B11 RID: 219921
 			EmptyItem
 		}
 	}

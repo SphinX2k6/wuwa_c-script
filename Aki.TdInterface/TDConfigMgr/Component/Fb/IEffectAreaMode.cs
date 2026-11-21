@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D0B RID: 3339
+	// Token: 0x02000E04 RID: 3588
 	public class IEffectAreaMode
 	{
-		// Token: 0x06004C3F RID: 19519 RVA: 0x000BE13A File Offset: 0x000BC33A
-		[NullableContext(1)]
+		// Token: 0x06005152 RID: 20818 RVA: 0x000C96E2 File Offset: 0x000C78E2
 		public static IEffectAreaMode Create(IEffectAreaMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017E6 RID: 6118
-		// (get) Token: 0x06004C40 RID: 19520 RVA: 0x000BE159 File Offset: 0x000BC359
+		// Token: 0x17001945 RID: 6469
+		// (get) Token: 0x06005153 RID: 20819 RVA: 0x000C9701 File Offset: 0x000C7901
 		public virtual EEffectAreaType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BA4 RID: 11172
+		// Token: 0x04002E61 RID: 11873
 		private IEffectAreaMode Instance;
 	}
 }

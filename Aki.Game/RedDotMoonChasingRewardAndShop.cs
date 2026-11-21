@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020033C5 RID: 13253
+// Token: 0x02002937 RID: 10551
 public class RedDotMoonChasingRewardAndShop : RedDotBase
 {
-	// Token: 0x0601CBCA RID: 117706 RVA: 0x00808D62 File Offset: 0x00806F62
+	// Token: 0x0601A8C2 RID: 108738 RVA: 0x0082F326 File Offset: 0x0082D526
 	protected override bool OnCheck(int uId = 0)
 	{
 		return false;

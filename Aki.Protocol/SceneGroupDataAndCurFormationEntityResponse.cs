@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001158 RID: 4440
+	// Token: 0x02001192 RID: 4498
 	[NetMessage(EMessageId.SceneGroupDataAndCurFormationEntityResponse)]
 	public sealed class SceneGroupDataAndCurFormationEntityResponse : IMessage<SceneGroupDataAndCurFormationEntityResponse>, IMessage, IEquatable<SceneGroupDataAndCurFormationEntityResponse>, IDeepCloneable<SceneGroupDataAndCurFormationEntityResponse>, IBufferMessage
 	{
-		// Token: 0x06017AA5 RID: 96933 RVA: 0x0036F482 File Offset: 0x0036D682
+		// Token: 0x06018046 RID: 98374 RVA: 0x0037E7D2 File Offset: 0x0037C9D2
 		[NullableContext(1)]
 		public static SceneGroupDataAndCurFormationEntityResponse Create()
 		{
 			return new SceneGroupDataAndCurFormationEntityResponse();
 		}
 
-		// Token: 0x17004F6B RID: 20331
-		// (get) Token: 0x06017AA6 RID: 96934 RVA: 0x0036F489 File Offset: 0x0036D689
+		// Token: 0x170050D7 RID: 20695
+		// (get) Token: 0x06018047 RID: 98375 RVA: 0x0037E7D9 File Offset: 0x0037C9D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F6C RID: 20332
-		// (get) Token: 0x06017AA7 RID: 96935 RVA: 0x0036F48C File Offset: 0x0036D68C
+		// Token: 0x170050D8 RID: 20696
+		// (get) Token: 0x06018048 RID: 98376 RVA: 0x0037E7DC File Offset: 0x0037C9DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017AA8 RID: 96936 RVA: 0x0036F493 File Offset: 0x0036D693
+		// Token: 0x06018049 RID: 98377 RVA: 0x0037E7E3 File Offset: 0x0037C9E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneGroupDataAndCurFormationEntityResponse()
 		{
 		}
 
-		// Token: 0x06017AA9 RID: 96937 RVA: 0x0036F4B4 File Offset: 0x0036D6B4
+		// Token: 0x0601804A RID: 98378 RVA: 0x0037E804 File Offset: 0x0037CA04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneGroupDataAndCurFormationEntityResponse(SceneGroupDataAndCurFormationEntityResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017AAA RID: 96938 RVA: 0x0036F506 File Offset: 0x0036D706
+		// Token: 0x0601804B RID: 98379 RVA: 0x0037E856 File Offset: 0x0037CA56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneGroupDataAndCurFormationEntityResponse Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new SceneGroupDataAndCurFormationEntityResponse(this);
 		}
 
-		// Token: 0x17004F6D RID: 20333
-		// (get) Token: 0x06017AAB RID: 96939 RVA: 0x0036F50E File Offset: 0x0036D70E
+		// Token: 0x170050D9 RID: 20697
+		// (get) Token: 0x0601804C RID: 98380 RVA: 0x0037E85E File Offset: 0x0037CA5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PlayerSceneGroupDataList> PlayerSceneGroupDataList
@@ -81,8 +81,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F6E RID: 20334
-		// (get) Token: 0x06017AAC RID: 96940 RVA: 0x0036F516 File Offset: 0x0036D716
+		// Token: 0x170050DA RID: 20698
+		// (get) Token: 0x0601804D RID: 98381 RVA: 0x0037E866 File Offset: 0x0037CA66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EntityPb> CurFormationRoleEntitys
@@ -93,9 +93,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F6F RID: 20335
-		// (get) Token: 0x06017AAD RID: 96941 RVA: 0x0036F51E File Offset: 0x0036D71E
-		// (set) Token: 0x06017AAE RID: 96942 RVA: 0x0036F526 File Offset: 0x0036D726
+		// Token: 0x170050DB RID: 20699
+		// (get) Token: 0x0601804E RID: 98382 RVA: 0x0037E86E File Offset: 0x0037CA6E
+		// (set) Token: 0x0601804F RID: 98383 RVA: 0x0037E876 File Offset: 0x0037CA76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017AAF RID: 96943 RVA: 0x0036F52F File Offset: 0x0036D72F
+		// Token: 0x06018050 RID: 98384 RVA: 0x0037E87F File Offset: 0x0037CA7F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -118,7 +118,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneGroupDataAndCurFormationEntityResponse);
 		}
 
-		// Token: 0x06017AB0 RID: 96944 RVA: 0x0036F540 File Offset: 0x0036D740
+		// Token: 0x06018051 RID: 98385 RVA: 0x0037E890 File Offset: 0x0037CA90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneGroupDataAndCurFormationEntityResponse other)
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.playerSceneGroupDataList_.Equals(other.playerSceneGroupDataList_) && this.curFormationRoleEntitys_.Equals(other.curFormationRoleEntitys_) && this.ErrorCode == other.ErrorCode && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06017AB1 RID: 96945 RVA: 0x0036F5A4 File Offset: 0x0036D7A4
+		// Token: 0x06018052 RID: 98386 RVA: 0x0037E8F4 File Offset: 0x0037CAF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017AB2 RID: 96946 RVA: 0x0036F605 File Offset: 0x0036D805
+		// Token: 0x06018053 RID: 98387 RVA: 0x0037E955 File Offset: 0x0037CB55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017AB3 RID: 96947 RVA: 0x0036F612 File Offset: 0x0036D812
+		// Token: 0x06018054 RID: 98388 RVA: 0x0037E962 File Offset: 0x0037CB62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -161,14 +161,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017AB4 RID: 96948 RVA: 0x0036F61C File Offset: 0x0036D81C
+		// Token: 0x06018055 RID: 98389 RVA: 0x0037E96C File Offset: 0x0037CB6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(8);
 				output.WriteEnum((int)this.ErrorCode);
 			}
 			this.playerSceneGroupDataList_.WriteTo(ref output, SceneGroupDataAndCurFormationEntityResponse._repeated_playerSceneGroupDataList_codec);
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017AB5 RID: 96949 RVA: 0x0036F67C File Offset: 0x0036D87C
+		// Token: 0x06018056 RID: 98390 RVA: 0x0037E9CC File Offset: 0x0037CBCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017AB6 RID: 96950 RVA: 0x0036F6E0 File Offset: 0x0036D8E0
+		// Token: 0x06018057 RID: 98391 RVA: 0x0037EA30 File Offset: 0x0037CC30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneGroupDataAndCurFormationEntityResponse other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017AB7 RID: 96951 RVA: 0x0036F73E File Offset: 0x0036D93E
+		// Token: 0x06018058 RID: 98392 RVA: 0x0037EA8E File Offset: 0x0037CC8E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017AB8 RID: 96952 RVA: 0x0036F748 File Offset: 0x0036D948
+		// Token: 0x06018059 RID: 98393 RVA: 0x0037EA98 File Offset: 0x0037CC98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,11 +236,11 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 64U)
+				if (num != 8U)
 				{
-					if (num != 82U)
+					if (num != 18U)
 					{
-						if (num != 106U)
+						if (num != 90U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
@@ -261,31 +261,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008C68 RID: 35944
+		// Token: 0x04008EFB RID: 36603
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008C69 RID: 35945
-		public const int PlayerSceneGroupDataListFieldNumber = 10;
+		// Token: 0x04008EFC RID: 36604
+		public const int PlayerSceneGroupDataListFieldNumber = 2;
 
-		// Token: 0x04008C6A RID: 35946
-		private static readonly FieldCodec<PlayerSceneGroupDataList> _repeated_playerSceneGroupDataList_codec = FieldCodec.ForMessage<PlayerSceneGroupDataList>(82U, Aki.Protocol.PlayerSceneGroupDataList.Parser);
+		// Token: 0x04008EFD RID: 36605
+		private static readonly FieldCodec<PlayerSceneGroupDataList> _repeated_playerSceneGroupDataList_codec = FieldCodec.ForMessage<PlayerSceneGroupDataList>(18U, Aki.Protocol.PlayerSceneGroupDataList.Parser);
 
-		// Token: 0x04008C6B RID: 35947
+		// Token: 0x04008EFE RID: 36606
 		private readonly RepeatedField<PlayerSceneGroupDataList> playerSceneGroupDataList_ = new RepeatedField<PlayerSceneGroupDataList>();
 
-		// Token: 0x04008C6C RID: 35948
-		public const int CurFormationRoleEntitysFieldNumber = 13;
+		// Token: 0x04008EFF RID: 36607
+		public const int CurFormationRoleEntitysFieldNumber = 11;
 
-		// Token: 0x04008C6D RID: 35949
-		private static readonly FieldCodec<EntityPb> _repeated_curFormationRoleEntitys_codec = FieldCodec.ForMessage<EntityPb>(106U, EntityPb.Parser);
+		// Token: 0x04008F00 RID: 36608
+		private static readonly FieldCodec<EntityPb> _repeated_curFormationRoleEntitys_codec = FieldCodec.ForMessage<EntityPb>(90U, EntityPb.Parser);
 
-		// Token: 0x04008C6E RID: 35950
+		// Token: 0x04008F01 RID: 36609
 		private readonly RepeatedField<EntityPb> curFormationRoleEntitys_ = new RepeatedField<EntityPb>();
 
-		// Token: 0x04008C6F RID: 35951
-		public const int ErrorCodeFieldNumber = 8;
+		// Token: 0x04008F02 RID: 36610
+		public const int ErrorCodeFieldNumber = 1;
 
-		// Token: 0x04008C70 RID: 35952
+		// Token: 0x04008F03 RID: 36611
 		private ErrorCode errorCode_;
 	}
 }

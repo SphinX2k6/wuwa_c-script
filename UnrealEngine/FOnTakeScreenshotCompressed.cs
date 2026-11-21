@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001949 RID: 6473
+	// Token: 0x02000429 RID: 1065
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnTakeScreenshotCompressed : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017FC6 RID: 98246 RVA: 0x00232FF3 File Offset: 0x002311F3
+		// Token: 0x06006669 RID: 26217 RVA: 0x0009363F File Offset: 0x0009183F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnTakeScreenshotCompressed.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017FC7 RID: 98247 RVA: 0x00232FFF File Offset: 0x002311FF
+		// Token: 0x0600666A RID: 26218 RVA: 0x0009364B File Offset: 0x0009184B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnTakeScreenshotCompressed._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnTakeScreenshotCompressed._FunctionPtr;
 		}
 
-		// Token: 0x06017FC8 RID: 98248 RVA: 0x00233022 File Offset: 0x00231222
+		// Token: 0x0600666B RID: 26219 RVA: 0x0009366E File Offset: 0x0009186E
 		public FOnTakeScreenshotCompressed()
 		{
 		}
 
-		// Token: 0x06017FC9 RID: 98249 RVA: 0x0023302A File Offset: 0x0023122A
+		// Token: 0x0600666C RID: 26220 RVA: 0x00093676 File Offset: 0x00091876
 		[NullableContext(2)]
 		public FOnTakeScreenshotCompressed(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017FCA RID: 98250 RVA: 0x00233034 File Offset: 0x00231234
+		// Token: 0x0600666D RID: 26221 RVA: 0x00093680 File Offset: 0x00091880
 		public FOnTakeScreenshotCompressed(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017FCB RID: 98251 RVA: 0x0023303F File Offset: 0x0023123F
+		// Token: 0x0600666E RID: 26222 RVA: 0x0009368B File Offset: 0x0009188B
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate) ?? ((FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017FCC RID: 98252 RVA: 0x00233071 File Offset: 0x00231271
+		// Token: 0x0600666F RID: 26223 RVA: 0x000936BD File Offset: 0x000918BD
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate Callback)
 		{
 			if (FOnTakeScreenshotCompressed.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnTakeScreenshotCompressed.RegisterId);
 		}
 
-		// Token: 0x06017FCD RID: 98253 RVA: 0x002330AB File Offset: 0x002312AB
+		// Token: 0x06006670 RID: 26224 RVA: 0x000936F7 File Offset: 0x000918F7
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06017FCE RID: 98254 RVA: 0x002330B4 File Offset: 0x002312B4
+		// Token: 0x06006671 RID: 26225 RVA: 0x00093700 File Offset: 0x00091900
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(in TArray<byte> CompressedBitMap)
 		{
 			FOnTakeScreenshotCompressed.__FOnTakeScreenshotCompressed_DelegateParams* ptr = stackalloc FOnTakeScreenshotCompressed.__FOnTakeScreenshotCompressed_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnTakeScreenshotCompressed.__FOnTakeScreenshotCompressed_DelegateParams) & -16L;
@@ -97,10 +94,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnTakeScreenshotCompressed._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06017FCF RID: 98255 RVA: 0x00233124 File Offset: 0x00231324
+		// Token: 0x06006672 RID: 26226 RVA: 0x00093770 File Offset: 0x00091970
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate fonTakeScreenshotCompressed_ScriptDelegate = target as FOnTakeScreenshotCompressed.FOnTakeScreenshotCompressed_ScriptDelegate;
@@ -116,35 +112,35 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0400CF95 RID: 53141
+		// Token: 0x04002B0F RID: 11023
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CF96 RID: 53142
+		// Token: 0x04002B10 RID: 11024
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameScreenshot.OnTakeScreenshotCompressed__DelegateSignature";
 
-		// Token: 0x0400CF97 RID: 53143
+		// Token: 0x04002B11 RID: 11025
 		private static int RegisterId;
 
-		// Token: 0x0200301C RID: 12316
-		// (Invoke) Token: 0x0602858A RID: 165258
+		// Token: 0x02000B30 RID: 2864
+		// (Invoke) Token: 0x0600BEFB RID: 48891
 		public delegate void FOnTakeScreenshotCompressed_ScriptDelegate(in TArray<byte> CompressedBitMap);
 
-		// Token: 0x0200301D RID: 12317
+		// Token: 0x02000B31 RID: 2865
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnTakeScreenshotCompressed_DelegateParams
+		private ref struct __FOnTakeScreenshotCompressed_DelegateParams
 		{
-			// Token: 0x04016C53 RID: 93267
+			// Token: 0x04005BFC RID: 23548
 			[FieldOffset(0)]
 			public byte CompressedBitMap;
 		}
 
-		// Token: 0x0200301E RID: 12318
+		// Token: 0x02000B32 RID: 2866
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016C54 RID: 93268
+			// Token: 0x04005BFD RID: 23549
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

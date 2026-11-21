@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B93 RID: 7059
+// Token: 0x02001052 RID: 4178
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnlockDataBase>
 {
-	// Token: 0x0600D22A RID: 53802 RVA: 0x003039F0 File Offset: 0x00301BF0
+	// Token: 0x0600A63B RID: 42555 RVA: 0x0030EAC8 File Offset: 0x0030CCC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -67,7 +67,7 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D22B RID: 53803 RVA: 0x00303C90 File Offset: 0x00301E90
+	// Token: 0x0600A63C RID: 42556 RVA: 0x0030ED68 File Offset: 0x0030CF68
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchHandBookSmallSlotItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D22C RID: 53804 RVA: 0x00303CD4 File Offset: 0x00301ED4
+	// Token: 0x0600A63D RID: 42557 RVA: 0x0030EDAC File Offset: 0x0030CFAC
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(3);
@@ -104,13 +104,13 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		sprite2.SetUIActive(false);
 	}
 
-	// Token: 0x0600D22D RID: 53805 RVA: 0x00303D2D File Offset: 0x00301F2D
+	// Token: 0x0600A63E RID: 42558 RVA: 0x0030EE05 File Offset: 0x0030D005
 	public void SetActivityDataType(EFloroRanchActivityDataType type)
 	{
 		this.ActivityDataType = type;
 	}
 
-	// Token: 0x0600D22E RID: 53806 RVA: 0x00303D38 File Offset: 0x00301F38
+	// Token: 0x0600A63F RID: 42559 RVA: 0x0030EE10 File Offset: 0x0030D010
 	public override UniTask RefreshAsync(FloroRanchUnlockDataBase data, bool isSelected, int gridIndex)
 	{
 		FloroRanchHandBookSmallSlotItem.<RefreshAsync>d__9 <RefreshAsync>d__;
@@ -122,7 +122,7 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D22F RID: 53807 RVA: 0x00303D84 File Offset: 0x00301F84
+	// Token: 0x0600A640 RID: 42560 RVA: 0x0030EE5C File Offset: 0x0030D05C
 	private void OnToggleClick(EToggleState _)
 	{
 		FloroRanchUnlockCardData floroRanchUnlockCardData = this.Data as FloroRanchUnlockCardData;
@@ -142,13 +142,13 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		onClickCallback(this);
 	}
 
-	// Token: 0x0600D230 RID: 53808 RVA: 0x00303DCC File Offset: 0x00301FCC
+	// Token: 0x0600A641 RID: 42561 RVA: 0x0030EEA4 File Offset: 0x0030D0A4
 	public void BindClickCallback(Action<FloroRanchHandBookSmallSlotItem> callback)
 	{
 		this.OnClickCallback = callback;
 	}
 
-	// Token: 0x0600D231 RID: 53809 RVA: 0x00303DD8 File Offset: 0x00301FD8
+	// Token: 0x0600A642 RID: 42562 RVA: 0x0030EEB0 File Offset: 0x0030D0B0
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIItem item = base.GetItem(13);
@@ -169,79 +169,79 @@ public class FloroRanchHandBookSmallSlotItem : GridProxyAbstract<FloroRanchUnloc
 		activityData.MarkUnlockDataAsViewed(this.Data);
 	}
 
-	// Token: 0x0600D232 RID: 53810 RVA: 0x00303E38 File Offset: 0x00302038
+	// Token: 0x0600A643 RID: 42563 RVA: 0x0030EF10 File Offset: 0x0030D110
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04006052 RID: 24658
+	// Token: 0x04006121 RID: 24865
 	public FloroRanchUnlockDataBase Data;
 
-	// Token: 0x04006053 RID: 24659
+	// Token: 0x04006122 RID: 24866
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x04006054 RID: 24660
+	// Token: 0x04006123 RID: 24867
 	private FloroRanchToyLevelItem LevelItem;
 
-	// Token: 0x04006055 RID: 24661
+	// Token: 0x04006124 RID: 24868
 	private Action<FloroRanchHandBookSmallSlotItem> OnClickCallback = delegate(FloroRanchHandBookSmallSlotItem item)
 	{
 	};
 
-	// Token: 0x0200811C RID: 33052
+	// Token: 0x020072AA RID: 29354
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A243 RID: 172611
+		// Token: 0x04025577 RID: 152951
 		public const int Toggle = 0;
 
-		// Token: 0x0402A244 RID: 172612
+		// Token: 0x04025578 RID: 152952
 		public const int QualitySprite = 1;
 
-		// Token: 0x0402A245 RID: 172613
+		// Token: 0x04025579 RID: 152953
 		public const int IconTexture = 2;
 
-		// Token: 0x0402A246 RID: 172614
+		// Token: 0x0402557A RID: 152954
 		public const int CountDownPanel = 3;
 
-		// Token: 0x0402A247 RID: 172615
+		// Token: 0x0402557B RID: 152955
 		public const int CountdownText = 4;
 
-		// Token: 0x0402A248 RID: 172616
+		// Token: 0x0402557C RID: 152956
 		public const int NumPanel = 5;
 
-		// Token: 0x0402A249 RID: 172617
+		// Token: 0x0402557D RID: 152957
 		public const int NumText = 6;
 
-		// Token: 0x0402A24A RID: 172618
+		// Token: 0x0402557E RID: 152958
 		public const int LockSprite = 7;
 
-		// Token: 0x0402A24B RID: 172619
+		// Token: 0x0402557F RID: 152959
 		public const int HidePanel = 8;
 
-		// Token: 0x0402A24C RID: 172620
+		// Token: 0x04025580 RID: 152960
 		public const int ItemBgSprite = 9;
 
-		// Token: 0x0402A24D RID: 172621
+		// Token: 0x04025581 RID: 152961
 		public const int IconMaskTexture = 10;
 
-		// Token: 0x0402A24E RID: 172622
+		// Token: 0x04025582 RID: 152962
 		public const int UnknownPanel = 11;
 
-		// Token: 0x0402A24F RID: 172623
+		// Token: 0x04025583 RID: 152963
 		public const int ItemPhantomIcon = 12;
 
-		// Token: 0x0402A250 RID: 172624
+		// Token: 0x04025584 RID: 152964
 		public const int ItemNew = 13;
 
-		// Token: 0x0402A251 RID: 172625
+		// Token: 0x04025585 RID: 152965
 		public const int ToyRaceItem = 14;
 
-		// Token: 0x0402A252 RID: 172626
+		// Token: 0x04025586 RID: 152966
 		public const int ToyRaceIcon = 15;
 
-		// Token: 0x0402A253 RID: 172627
+		// Token: 0x04025587 RID: 152967
 		public const int LevelItem = 16;
 	}
 }

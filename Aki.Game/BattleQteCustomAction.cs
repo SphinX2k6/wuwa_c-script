@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02002600 RID: 9728
+// Token: 0x02001AEB RID: 6891
 public static class BattleQteCustomAction
 {
-	// Token: 0x06013CCC RID: 81100 RVA: 0x004F7568 File Offset: 0x004F5768
+	// Token: 0x060111AE RID: 70062 RVA: 0x00506344 File Offset: 0x00504544
 	public static void battleQteChangeRole(int? roleId = null)
 	{
 		SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;

@@ -7,22 +7,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 {
-	// Token: 0x02006DD4 RID: 28116
+	// Token: 0x02005F53 RID: 24403
 	public class LevelAiDecoratorQuestStepState : LevelAiDecorator
 	{
-		// Token: 0x06044924 RID: 280868 RVA: 0x010EA006 File Offset: 0x010E8206
+		// Token: 0x0603AA88 RID: 240264 RVA: 0x01094256 File Offset: 0x01092456
 		protected override void OnExecutionStart()
 		{
 			EventSystem.Instance.Add<GeneralContext, NodeStatus, NodeStatus, ENodeStatusUpdateReason>(EEventName.OnLogicTreeNodeStatusChange, new Action<GeneralContext, NodeStatus, NodeStatus, ENodeStatusUpdateReason>(this.OnLogicTreeNodeStatusChange));
 		}
 
-		// Token: 0x06044925 RID: 280869 RVA: 0x010EA024 File Offset: 0x010E8224
+		// Token: 0x0603AA89 RID: 240265 RVA: 0x01094274 File Offset: 0x01092474
 		protected override void OnExecutionFinish(ELevelAiNodeResult result)
 		{
 			EventSystem.Instance.Remove<GeneralContext, NodeStatus, NodeStatus, ENodeStatusUpdateReason>(EEventName.OnLogicTreeNodeStatusChange, new Action<GeneralContext, NodeStatus, NodeStatus, ENodeStatusUpdateReason>(this.OnLogicTreeNodeStatusChange));
 		}
 
-		// Token: 0x06044926 RID: 280870 RVA: 0x010EA044 File Offset: 0x010E8244
+		// Token: 0x0603AA8A RID: 240266 RVA: 0x01094294 File Offset: 0x01092494
 		protected override bool CheckCondition(ELevelAiDecoratorCheckType checkType)
 		{
 			ICheckChildQuestFinished checkChildQuestFinished = this.Params as ICheckChildQuestFinished;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Decorators
 			return flag;
 		}
 
-		// Token: 0x06044927 RID: 280871 RVA: 0x010EA0DC File Offset: 0x010E82DC
+		// Token: 0x0603AA8B RID: 240267 RVA: 0x0109432C File Offset: 0x0109252C
 		[NullableContext(1)]
 		private void OnLogicTreeNodeStatusChange(GeneralContext contextType, NodeStatus oldStatus, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200505E RID: 20574
+	// Token: 0x0200402E RID: 16430
 	public class PlotReviewOptionItem : UiPanelBase
 	{
-		// Token: 0x06034A5A RID: 215642 RVA: 0x00C70D98 File Offset: 0x00C6EF98
+		// Token: 0x0602994D RID: 170317 RVA: 0x00BBE070 File Offset: 0x00BBC270
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034A5B RID: 215643 RVA: 0x00C70E04 File Offset: 0x00C6F004
+		// Token: 0x0602994E RID: 170318 RVA: 0x00BBE0DC File Offset: 0x00BBC2DC
 		protected override void OnStart()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "PlotReview_2", Array.Empty<object>());
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x06034A5C RID: 215644 RVA: 0x00C70E65 File Offset: 0x00C6F065
+		// Token: 0x0602994F RID: 170319 RVA: 0x00BBE13D File Offset: 0x00BBC33D
 		protected override void OnBeforeHide()
 		{
 			TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(1));
 		}
 
-		// Token: 0x06034A5D RID: 215645 RVA: 0x00C70E78 File Offset: 0x00C6F078
+		// Token: 0x06029950 RID: 170320 RVA: 0x00BBE150 File Offset: 0x00BBC350
 		[NullableContext(1)]
 		public void Update(PlotReviewOptionItemData data, int index)
 		{
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Refresh();
 		}
 
-		// Token: 0x06034A5E RID: 215646 RVA: 0x00C70E90 File Offset: 0x00C6F090
+		// Token: 0x06029951 RID: 170321 RVA: 0x00BBE168 File Offset: 0x00BBC368
 		public void Refresh()
 		{
 			ITalkItem talkItem = this.Data.TalkItem;
@@ -78,20 +78,20 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x0401C0EF RID: 114927
+		// Token: 0x04016B1A RID: 92954
 		protected int Index = -1;
 
-		// Token: 0x0401C0F0 RID: 114928
+		// Token: 0x04016B1B RID: 92955
 		[Nullable(2)]
 		private PlotReviewOptionItemData Data;
 
-		// Token: 0x0200B1C3 RID: 45507
+		// Token: 0x02009BFD RID: 39933
 		private static class EPlotReviewOptionItemComponent
 		{
-			// Token: 0x04035E8C RID: 220812
+			// Token: 0x040308E1 RID: 198881
 			public const int NameText = 0;
 
-			// Token: 0x04035E8D RID: 220813
+			// Token: 0x040308E2 RID: 198882
 			public const int ContentText = 1;
 		}
 	}

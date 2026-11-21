@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200207D RID: 8317
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022C8 RID: 8904
 	public class IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600B6B0 RID: 46768 RVA: 0x001A76E8 File Offset: 0x001A58E8
+		// Token: 0x0600C1E0 RID: 49632 RVA: 0x001BDF60 File Offset: 0x001BC160
 		private IVisualNovelPerformanceBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B6B1 RID: 46769 RVA: 0x001A7720 File Offset: 0x001A5920
+		// Token: 0x0600C1E1 RID: 49633 RVA: 0x001BDF98 File Offset: 0x001BC198
 		public static IVisualNovelPerformanceBase Create([Nullable(2)] IVisualNovelPerformanceBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B6B2 RID: 46770 RVA: 0x001A7733 File Offset: 0x001A5933
+		// Token: 0x0600C1E2 RID: 49634 RVA: 0x001BDFAB File Offset: 0x001BC1AB
 		public static IVisualNovelPerformanceBase CreateFromSetValue([Nullable(2)] IVisualNovelPerformanceBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B6B3 RID: 46771 RVA: 0x001A7746 File Offset: 0x001A5946
+		// Token: 0x0600C1E3 RID: 49635 RVA: 0x001BDFBE File Offset: 0x001BC1BE
 		public IVisualNovelPerformanceBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelPerformanceBase_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037F5 RID: 14325
-		// (get) Token: 0x0600B6B4 RID: 46772 RVA: 0x001A7765 File Offset: 0x001A5965
-		// (set) Token: 0x0600B6B5 RID: 46773 RVA: 0x001A7790 File Offset: 0x001A5990
+		// Token: 0x17003AD4 RID: 15060
+		// (get) Token: 0x0600C1E4 RID: 49636 RVA: 0x001BDFDD File Offset: 0x001BC1DD
+		// (set) Token: 0x0600C1E5 RID: 49637 RVA: 0x001BE008 File Offset: 0x001BC208
 		public virtual EVisualNovelPerformanceType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037F6 RID: 14326
-		// (get) Token: 0x0600B6B6 RID: 46774 RVA: 0x001A77A0 File Offset: 0x001A59A0
-		// (set) Token: 0x0600B6B7 RID: 46775 RVA: 0x001A77DA File Offset: 0x001A59DA
+		// Token: 0x17003AD5 RID: 15061
+		// (get) Token: 0x0600C1E6 RID: 49638 RVA: 0x001BE018 File Offset: 0x001BC218
+		// (set) Token: 0x0600C1E7 RID: 49639 RVA: 0x001BE052 File Offset: 0x001BC252
 		public virtual float? StartTime
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006DB6 RID: 28086
+		// Token: 0x040073C3 RID: 29635
 		[Nullable(2)]
 		protected IVisualNovelPerformanceBase FbInstance;
 
-		// Token: 0x04006DB7 RID: 28087
+		// Token: 0x040073C4 RID: 29636
 		[Nullable(2)]
 		protected IVisualNovelPerformanceBase_SetValue PocoInterface;
 	}

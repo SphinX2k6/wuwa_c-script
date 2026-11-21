@@ -6,13 +6,13 @@ using CSharpScript.Game.NewWorld.Pawn.Controllers;
 
 namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 {
-	// Token: 0x02007061 RID: 28769
+	// Token: 0x020061E2 RID: 25058
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MonsterNearbySensory : BaseSensoryInfo
 	{
-		// Token: 0x17009BFA RID: 39930
-		// (get) Token: 0x0604604C RID: 286796 RVA: 0x0117408E File Offset: 0x0117228E
+		// Token: 0x1700717E RID: 29054
+		// (get) Token: 0x0603C245 RID: 246341 RVA: 0x0111DC8E File Offset: 0x0111BE8E
 		public override ESensoryInfoType SensoryInfoType
 		{
 			get
@@ -21,18 +21,18 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			}
 		}
 
-		// Token: 0x0604604D RID: 286797 RVA: 0x01174091 File Offset: 0x01172291
+		// Token: 0x0603C246 RID: 246342 RVA: 0x0111DC91 File Offset: 0x0111BE91
 		protected override void OnInit(params object[] @params)
 		{
 			this.SensoryRange = (double)((float)@params[0]);
 		}
 
-		// Token: 0x0604604E RID: 286798 RVA: 0x011740A2 File Offset: 0x011722A2
+		// Token: 0x0603C247 RID: 246343 RVA: 0x0111DCA2 File Offset: 0x0111BEA2
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0604604F RID: 286799 RVA: 0x011740A4 File Offset: 0x011722A4
+		// Token: 0x0603C248 RID: 246344 RVA: 0x0111DCA4 File Offset: 0x0111BEA4
 		protected override void OnClear()
 		{
 			this.LastFindEntities.Clear();
@@ -41,20 +41,20 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			this.OnExitSensoryRange = null;
 		}
 
-		// Token: 0x06046050 RID: 286800 RVA: 0x011740CA File Offset: 0x011722CA
+		// Token: 0x0603C249 RID: 246345 RVA: 0x0111DCCA File Offset: 0x0111BECA
 		public override void ClearCacheList()
 		{
 			this.CacheEntityList.Clear();
 		}
 
-		// Token: 0x06046051 RID: 286801 RVA: 0x011740D8 File Offset: 0x011722D8
+		// Token: 0x0603C24A RID: 246346 RVA: 0x0111DCD8 File Offset: 0x0111BED8
 		public override bool CheckEntity(Entity entity)
 		{
 			CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
 			return component != null && component.IsMonster() && MonsterNearbySensory.MonsterCamp.Contains(component.GetEntityCamp());
 		}
 
-		// Token: 0x06046052 RID: 286802 RVA: 0x0117410C File Offset: 0x0117230C
+		// Token: 0x0603C24B RID: 246347 RVA: 0x0111DD0C File Offset: 0x0111BF0C
 		public override void EnterRange(Entity entity)
 		{
 			this.InRange = true;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			this.LastFindEntities.Remove(entity.Id);
 		}
 
-		// Token: 0x06046053 RID: 286803 RVA: 0x01174178 File Offset: 0x01172378
+		// Token: 0x0603C24C RID: 246348 RVA: 0x0111DD78 File Offset: 0x0111BF78
 		public override void ExitRange()
 		{
 			this.InRange = (this.CacheEntityList.Count != 0);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			}
 		}
 
-		// Token: 0x04024A81 RID: 150145
+		// Token: 0x0401FD37 RID: 130359
 		[StaticVariableRuleIgnore]
 		private static readonly HashSet<ECamp> MonsterCamp = new HashSet<ECamp>
 		{
@@ -97,13 +97,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			ECamp.Common_enemy
 		};
 
-		// Token: 0x04024A82 RID: 150146
+		// Token: 0x0401FD38 RID: 130360
 		protected readonly List<int> CacheEntityList = new List<int>();
 
-		// Token: 0x04024A83 RID: 150147
+		// Token: 0x0401FD39 RID: 130361
 		protected readonly HashSet<int> LastFindEntities = new HashSet<int>();
 
-		// Token: 0x04024A84 RID: 150148
+		// Token: 0x0401FD3A RID: 130362
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 		})]
 		public Func<Entity, bool> OnEnterSensoryRange;
 
-		// Token: 0x04024A85 RID: 150149
+		// Token: 0x0401FD3B RID: 130363
 		[Nullable(2)]
 		public Action<int> OnExitSensoryRange;
 	}

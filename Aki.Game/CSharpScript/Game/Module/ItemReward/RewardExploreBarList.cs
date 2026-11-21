@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057FB RID: 22523
+	// Token: 0x020047D2 RID: 18386
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreBarList : UiPanelBase
 	{
-		// Token: 0x06039434 RID: 234548 RVA: 0x00D9428C File Offset: 0x00D9248C
+		// Token: 0x0602E348 RID: 189256 RVA: 0x00CE30D4 File Offset: 0x00CE12D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 		}
 
-		// Token: 0x06039435 RID: 234549 RVA: 0x00D94300 File Offset: 0x00D92500
+		// Token: 0x0602E349 RID: 189257 RVA: 0x00CE3148 File Offset: 0x00CE1348
 		protected override void OnStart()
 		{
 			this.BarVerticalItem = base.GetItem(0);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			rewardExploreBarItem.SetUIActive(false);
 		}
 
-		// Token: 0x06039436 RID: 234550 RVA: 0x00D9432D File Offset: 0x00D9252D
+		// Token: 0x0602E34A RID: 189258 RVA: 0x00CE3175 File Offset: 0x00CE1375
 		protected override void OnBeforeDestroy()
 		{
 			this.BarVerticalItem = null;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ClearAllRewardExploreBar();
 		}
 
-		// Token: 0x06039437 RID: 234551 RVA: 0x00D94344 File Offset: 0x00D92544
+		// Token: 0x0602E34B RID: 189259 RVA: 0x00CE318C File Offset: 0x00CE138C
 		public void Refresh(string tipsTextId, IReadOnlyList<IRewardExploreBar> exploreBarDataList)
 		{
 			bool flag = !StringUtils.IsEmpty(tipsTextId);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.SetBarList(exploreBarDataList);
 		}
 
-		// Token: 0x06039438 RID: 234552 RVA: 0x00D94374 File Offset: 0x00D92574
+		// Token: 0x0602E34C RID: 189260 RVA: 0x00CE31BC File Offset: 0x00CE13BC
 		private void SetBarList(IReadOnlyList<IRewardExploreBar> exploreBarDataList)
 		{
 			this.ClearAllRewardExploreBar();
@@ -84,17 +84,17 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039439 RID: 234553 RVA: 0x00D943EC File Offset: 0x00D925EC
+		// Token: 0x0602E34D RID: 189261 RVA: 0x00CE3234 File Offset: 0x00CE1434
 		private void SetTitleText(string titleTextId)
 		{
 		}
 
-		// Token: 0x0603943A RID: 234554 RVA: 0x00D943EE File Offset: 0x00D925EE
+		// Token: 0x0602E34E RID: 189262 RVA: 0x00CE3236 File Offset: 0x00CE1436
 		private void SetTitleTextVisible(bool bVisible)
 		{
 		}
 
-		// Token: 0x0603943B RID: 234555 RVA: 0x00D943F0 File Offset: 0x00D925F0
+		// Token: 0x0602E34F RID: 189263 RVA: 0x00CE3238 File Offset: 0x00CE1438
 		private void NewRewardExploreBar(IRewardExploreBar rewardExploreBarData)
 		{
 			TrainingItem trainingItem = new TrainingItem(LguiUtil.Instance.CopyItem(this.RewardExploreBarItem, this.BarVerticalItem));
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardExploreBarListItem.Add(trainingItem);
 		}
 
-		// Token: 0x0603943C RID: 234556 RVA: 0x00D94438 File Offset: 0x00D92638
+		// Token: 0x0602E350 RID: 189264 RVA: 0x00CE3280 File Offset: 0x00CE1480
 		private void ClearAllRewardExploreBar()
 		{
 			foreach (TrainingItem trainingItem in this.RewardExploreBarListItem)
@@ -113,25 +113,25 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RewardExploreBarListItem.Clear();
 		}
 
-		// Token: 0x0401DF31 RID: 122673
+		// Token: 0x040189C8 RID: 100808
 		[Nullable(2)]
 		private UUIItem BarVerticalItem;
 
-		// Token: 0x0401DF32 RID: 122674
+		// Token: 0x040189C9 RID: 100809
 		[Nullable(2)]
 		private UUIItem RewardExploreBarItem;
 
-		// Token: 0x0401DF33 RID: 122675
+		// Token: 0x040189CA RID: 100810
 		private readonly List<TrainingItem> RewardExploreBarListItem = new List<TrainingItem>();
 
-		// Token: 0x0200B9F0 RID: 47600
+		// Token: 0x0200A406 RID: 41990
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038367 RID: 230247
+			// Token: 0x04032D54 RID: 208212
 			public const int BarVerticalItem = 0;
 
-			// Token: 0x04038368 RID: 230248
+			// Token: 0x04032D55 RID: 208213
 			public const int RewardExploreBarItem = 1;
 		}
 	}

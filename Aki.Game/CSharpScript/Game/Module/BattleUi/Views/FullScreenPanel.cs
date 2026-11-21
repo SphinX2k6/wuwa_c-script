@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2F RID: 23855
+	// Token: 0x02004D11 RID: 19729
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FullScreenPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603C7F2 RID: 247794 RVA: 0x00E836EF File Offset: 0x00E818EF
+		// Token: 0x0603174B RID: 202571 RVA: 0x00DD3E8F File Offset: 0x00DD208F
 		public override void InitializeTemp()
 		{
 			this.AddScreenEffectFightRoot();
 		}
 
-		// Token: 0x0603C7F3 RID: 247795 RVA: 0x00E836F7 File Offset: 0x00E818F7
+		// Token: 0x0603174C RID: 202572 RVA: 0x00DD3E97 File Offset: 0x00DD2097
 		public override void Reset()
 		{
 			this.ClearFullScreenNiagaraItem();
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C7F4 RID: 247796 RVA: 0x00E8370C File Offset: 0x00E8190C
+		// Token: 0x0603174D RID: 202573 RVA: 0x00DD3EAC File Offset: 0x00DD20AC
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnAddFullScreenEffect, new Action<FullScreenEffectHandle>(this.OnAddFullScreenEffect));
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnChangeFullScreenNiagaraFloatParameter, new Action<long, string, float>(this.OnChangeFullScreenNiagaraFloatParameter));
 		}
 
-		// Token: 0x0603C7F5 RID: 247797 RVA: 0x00E8378C File Offset: 0x00E8198C
+		// Token: 0x0603174E RID: 202574 RVA: 0x00DD3F2C File Offset: 0x00DD212C
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAddFullScreenEffect, new Action<FullScreenEffectHandle>(this.OnAddFullScreenEffect));
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnChangeFullScreenNiagaraFloatParameter, new Action<long, string, float>(this.OnChangeFullScreenNiagaraFloatParameter));
 		}
 
-		// Token: 0x0603C7F6 RID: 247798 RVA: 0x00E8380C File Offset: 0x00E81A0C
+		// Token: 0x0603174F RID: 202575 RVA: 0x00DD3FAC File Offset: 0x00DD21AC
 		private void OnAddFullScreenEffect(FullScreenEffectHandle fullScreenEffectHandle)
 		{
 			long uniqueId = fullScreenEffectHandle.UniqueId;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603C7F7 RID: 247799 RVA: 0x00E83858 File Offset: 0x00E81A58
+		// Token: 0x06031750 RID: 202576 RVA: 0x00DD3FF8 File Offset: 0x00DD21F8
 		private void OnRemoveFullScreenEffect(FullScreenEffectHandle fullScreenEffectHandle)
 		{
 			long uniqueId = fullScreenEffectHandle.UniqueId;
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveFullScreenNiagaraItem(uniqueId);
 		}
 
-		// Token: 0x0603C7F8 RID: 247800 RVA: 0x00E8387B File Offset: 0x00E81A7B
+		// Token: 0x06031751 RID: 202577 RVA: 0x00DD401B File Offset: 0x00DD221B
 		private void OnClearFullScreenEffect()
 		{
 			this.ClearFullScreenNiagaraItem();
 		}
 
-		// Token: 0x0603C7F9 RID: 247801 RVA: 0x00E83884 File Offset: 0x00E81A84
+		// Token: 0x06031752 RID: 202578 RVA: 0x00DD4024 File Offset: 0x00DD2224
 		private void OnChangeFullScreenNiagaraFloatParameter(long uniqueId, string key, float value)
 		{
 			FullScreenNiagaraItem fullScreenNiagaraItem = this.GetFullScreenNiagaraItem(uniqueId);
@@ -95,25 +95,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			fullScreenNiagaraItem.SetNiagaraFloatValue(key, value);
 		}
 
-		// Token: 0x0603C7FA RID: 247802 RVA: 0x00E838A5 File Offset: 0x00E81AA5
+		// Token: 0x06031753 RID: 202579 RVA: 0x00DD4045 File Offset: 0x00DD2245
 		private void AddPendingDisplay(long uniqueId)
 		{
 			this.PendingDisplayUniqueIdSet.Add(uniqueId);
 		}
 
-		// Token: 0x0603C7FB RID: 247803 RVA: 0x00E838B4 File Offset: 0x00E81AB4
+		// Token: 0x06031754 RID: 202580 RVA: 0x00DD4054 File Offset: 0x00DD2254
 		private void RemovePendingDisplay(long uniqueId)
 		{
 			this.PendingDisplayUniqueIdSet.Remove(uniqueId);
 		}
 
-		// Token: 0x0603C7FC RID: 247804 RVA: 0x00E838C3 File Offset: 0x00E81AC3
+		// Token: 0x06031755 RID: 202581 RVA: 0x00DD4063 File Offset: 0x00DD2263
 		private bool IsPendingDisplay(long uniqueId)
 		{
 			return this.PendingDisplayUniqueIdSet.Contains(uniqueId);
 		}
 
-		// Token: 0x0603C7FD RID: 247805 RVA: 0x00E838D4 File Offset: 0x00E81AD4
+		// Token: 0x06031756 RID: 202582 RVA: 0x00DD4074 File Offset: 0x00DD2274
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <AddFullScreenNiagaraItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7FE RID: 247806 RVA: 0x00E83928 File Offset: 0x00E81B28
+		// Token: 0x06031757 RID: 202583 RVA: 0x00DD40C8 File Offset: 0x00DD22C8
 		private bool RemoveFullScreenNiagaraItem(long uniqueId)
 		{
 			FullScreenNiagaraItem fullScreenNiagaraItem = this.GetFullScreenNiagaraItem(uniqueId);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C7FF RID: 247807 RVA: 0x00E83958 File Offset: 0x00E81B58
+		// Token: 0x06031758 RID: 202584 RVA: 0x00DD40F8 File Offset: 0x00DD22F8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -160,14 +160,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewFullScreenNiagaraItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C800 RID: 247808 RVA: 0x00E8399B File Offset: 0x00E81B9B
+		// Token: 0x06031759 RID: 202585 RVA: 0x00DD413B File Offset: 0x00DD233B
 		[NullableContext(2)]
 		private FullScreenNiagaraItem GetFullScreenNiagaraItem(long cueId)
 		{
 			return this.FullScreenNiagaraItemMap.GetValueOrDefault(cueId);
 		}
 
-		// Token: 0x0603C801 RID: 247809 RVA: 0x00E839AC File Offset: 0x00E81BAC
+		// Token: 0x0603175A RID: 202586 RVA: 0x00DD414C File Offset: 0x00DD234C
 		private void ClearFullScreenNiagaraItem()
 		{
 			if (this.FullScreenNiagaraItemMap.Count <= 0)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PendingDisplayUniqueIdSet.Clear();
 		}
 
-		// Token: 0x0603C802 RID: 247810 RVA: 0x00E83A28 File Offset: 0x00E81C28
+		// Token: 0x0603175B RID: 202587 RVA: 0x00DD41C8 File Offset: 0x00DD23C8
 		private void AddScreenEffectFightRoot()
 		{
 			BP_ScreenEffectSystem_C instance = ScreenEffectSystem.GetInstance();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			ScreenEffectModel.Instance.SetFightRootInited(true);
 		}
 
-		// Token: 0x0603C803 RID: 247811 RVA: 0x00E83A7D File Offset: 0x00E81C7D
+		// Token: 0x0603175C RID: 202588 RVA: 0x00DD421D File Offset: 0x00DD241D
 		private void RemoveScreenEffectFightRoot()
 		{
 			AUIContainerActor screenEffectFightRoot = this.ScreenEffectFightRoot;
@@ -211,13 +211,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			ScreenEffectModel.Instance.SetFightRootInited(false);
 		}
 
-		// Token: 0x0401F85C RID: 129116
+		// Token: 0x0401A315 RID: 107285
 		private readonly Dictionary<long, FullScreenNiagaraItem> FullScreenNiagaraItemMap = new Dictionary<long, FullScreenNiagaraItem>();
 
-		// Token: 0x0401F85D RID: 129117
+		// Token: 0x0401A316 RID: 107286
 		private readonly HashSet<long> PendingDisplayUniqueIdSet = new HashSet<long>();
 
-		// Token: 0x0401F85E RID: 129118
+		// Token: 0x0401A317 RID: 107287
 		[Nullable(2)]
 		private AUIContainerActor ScreenEffectFightRoot;
 	}

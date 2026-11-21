@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004960 RID: 18784
+	// Token: 0x020038D8 RID: 14552
 	public class FormationChoseRoleComponent : HotKeyComponent
 	{
-		// Token: 0x06031024 RID: 200740 RVA: 0x00B611AB File Offset: 0x00B5F3AB
+		// Token: 0x06025B54 RID: 154452 RVA: 0x00A9C08B File Offset: 0x00A9A28B
 		public FormationChoseRoleComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 			FormationViewDragController.AddCustomShieldHotKeyComponentSetData(this.HotKeyMapIndex);
 		}
 
-		// Token: 0x06031025 RID: 200741 RVA: 0x00B611BF File Offset: 0x00B5F3BF
+		// Token: 0x06025B55 RID: 154453 RVA: 0x00A9C09F File Offset: 0x00A9A29F
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (FormationViewDragController.GamePadSelectModel)
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			FormationViewDragController.OnGamePadPress();
 		}
 
-		// Token: 0x06031026 RID: 200742 RVA: 0x00B611CE File Offset: 0x00B5F3CE
+		// Token: 0x06025B56 RID: 154454 RVA: 0x00A9C0AE File Offset: 0x00A9A2AE
 		protected override void OnRelease(HotKeyMap config)
 		{
 			if (FormationViewDragController.DragStartMoveFirstRelease)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			FormationViewDragController.OnGamePadRelease();
 		}
 
-		// Token: 0x06031027 RID: 200743 RVA: 0x00B611F8 File Offset: 0x00B5F3F8
+		// Token: 0x06025B57 RID: 154455 RVA: 0x00A9C0D8 File Offset: 0x00A9A2D8
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

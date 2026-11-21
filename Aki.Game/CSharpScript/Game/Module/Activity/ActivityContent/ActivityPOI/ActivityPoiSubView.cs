@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 {
-	// Token: 0x02006930 RID: 26928
+	// Token: 0x02005880 RID: 22656
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityPoiSubView : ActivitySubViewBase
 	{
-		// Token: 0x170097EF RID: 38895
-		// (get) Token: 0x060431EE RID: 274926 RVA: 0x0105B9D7 File Offset: 0x01059BD7
+		// Token: 0x17006B2F RID: 27439
+		// (get) Token: 0x06037D46 RID: 228678 RVA: 0x00F9D003 File Offset: 0x00F9B203
 		protected new ActivityPoiData ActivityBaseData
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			}
 		}
 
-		// Token: 0x060431EF RID: 274927 RVA: 0x0105B9E4 File Offset: 0x01059BE4
+		// Token: 0x06037D47 RID: 228679 RVA: 0x00F9D010 File Offset: 0x00F9B210
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060431F0 RID: 274928 RVA: 0x0105BA2C File Offset: 0x01059C2C
+		// Token: 0x06037D48 RID: 228680 RVA: 0x00F9D058 File Offset: 0x00F9B258
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityPoiSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -47,17 +47,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060431F1 RID: 274929 RVA: 0x0105BA6F File Offset: 0x01059C6F
+		// Token: 0x06037D49 RID: 228681 RVA: 0x00F9D09B File Offset: 0x00F9B29B
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x060431F2 RID: 274930 RVA: 0x0105BA71 File Offset: 0x01059C71
+		// Token: 0x06037D4A RID: 228682 RVA: 0x00F9D09D File Offset: 0x00F9B29D
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x060431F3 RID: 274931 RVA: 0x0105BA74 File Offset: 0x01059C74
+		// Token: 0x06037D4B RID: 228683 RVA: 0x00F9D0A0 File Offset: 0x00F9B2A0
 		private void OnConfirmBtnClick(ActivityBaseData _)
 		{
 			if (!this.ActivityBaseData.GetPreGuideQuestFinishState())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			UiManager.Instance.OpenView(EUiViewName.QuestView, this.ActivityBaseData.RoleQuestId, null);
 		}
 
-		// Token: 0x060431F4 RID: 274932 RVA: 0x0105BAC8 File Offset: 0x01059CC8
+		// Token: 0x06037D4C RID: 228684 RVA: 0x00F9D0F4 File Offset: 0x00F9B2F4
 		protected override void OnRefreshView()
 		{
 			this.CommonInfoPanel.SetBtnText("PrefabTextItem_2329755894_Text", Array.Empty<object>());
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			}
 		}
 
-		// Token: 0x04022F08 RID: 143112
+		// Token: 0x0401D764 RID: 120676
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 	}
 }

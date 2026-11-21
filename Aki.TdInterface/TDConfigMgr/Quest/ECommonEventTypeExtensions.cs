@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001234 RID: 4660
+	// Token: 0x02001370 RID: 4976
 	public static class ECommonEventTypeExtensions
 	{
-		// Token: 0x06006991 RID: 27025 RVA: 0x000FCBEC File Offset: 0x000FADEC
+		// Token: 0x06006FD2 RID: 28626 RVA: 0x0010A4F8 File Offset: 0x001086F8
 		public static string ToEnumString(this ECommonEventType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006992 RID: 27026 RVA: 0x000FCC24 File Offset: 0x000FAE24
+		// Token: 0x06006FD3 RID: 28627 RVA: 0x0010A530 File Offset: 0x00108730
 		public static ECommonEventType FromString(string name)
 		{
 			ECommonEventType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006993 RID: 27027 RVA: 0x000FCC4D File Offset: 0x000FAE4D
+		// Token: 0x06006FD4 RID: 28628 RVA: 0x0010A559 File Offset: 0x00108759
 		public static bool TryFromString(string name, out ECommonEventType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006994 RID: 27028 RVA: 0x000FCC86 File Offset: 0x000FAE86
+		// Token: 0x06006FD5 RID: 28629 RVA: 0x0010A592 File Offset: 0x00108792
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006995 RID: 27029 RVA: 0x000FCC9E File Offset: 0x000FAE9E
+		// Token: 0x06006FD6 RID: 28630 RVA: 0x0010A5AA File Offset: 0x001087AA
 		public static ECommonEventType[] GetValues()
 		{
 			return new ECommonEventType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006996 RID: 27030 RVA: 0x000FCCAA File Offset: 0x000FAEAA
+		// Token: 0x06006FD7 RID: 28631 RVA: 0x0010A5B6 File Offset: 0x001087B6
 		public static string[] GetNames()
 		{
 			return new string[]

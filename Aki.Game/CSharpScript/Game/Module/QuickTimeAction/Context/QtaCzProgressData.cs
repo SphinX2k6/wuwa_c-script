@@ -4,10 +4,10 @@ using AkiClient.Game.Aki.Data.QuickTimeAction.Customization;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F45 RID: 20293
+	// Token: 0x02003F0E RID: 16142
 	public class QtaCzProgressData
 	{
-		// Token: 0x0603409C RID: 213148 RVA: 0x00C343A0 File Offset: 0x00C325A0
+		// Token: 0x06028F0A RID: 167690 RVA: 0x00B7DB40 File Offset: 0x00B7BD40
 		[NullableContext(1)]
 		public void InitByConfig(SQtaCustomizationParam_Progress cfg)
 		{
@@ -17,19 +17,19 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.AdditionSpeed = cfg.AdditionSpeed * 0.01f;
 		}
 
-		// Token: 0x0401BA34 RID: 113204
+		// Token: 0x04016409 RID: 91145
 		private const float PERCENT = 0.01f;
 
-		// Token: 0x0401BA35 RID: 113205
+		// Token: 0x0401640A RID: 91146
 		public float Init;
 
-		// Token: 0x0401BA36 RID: 113206
+		// Token: 0x0401640B RID: 91147
 		public float Max;
 
-		// Token: 0x0401BA37 RID: 113207
+		// Token: 0x0401640C RID: 91148
 		public float AutoSpeed;
 
-		// Token: 0x0401BA38 RID: 113208
+		// Token: 0x0401640D RID: 91149
 		public float AdditionSpeed;
 	}
 }

@@ -3,10 +3,10 @@ using CSharpScript.Launcher.Ui.HotFix;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002760 RID: 10080
+// Token: 0x02001C4B RID: 7243
 public class VideoResourceUpdateProxy : IResourceUpdateView
 {
-	// Token: 0x06014AD7 RID: 84695 RVA: 0x0053B07C File Offset: 0x0053927C
+	// Token: 0x06011FBA RID: 73658 RVA: 0x00549E8C File Offset: 0x0054808C
 	public UniTask<bool> ShowNotEnoughSpaceConfirmation(long totalSize)
 	{
 		VideoResourceUpdateProxy.<ShowNotEnoughSpaceConfirmation>d__0 <ShowNotEnoughSpaceConfirmation>d__;
@@ -17,7 +17,7 @@ public class VideoResourceUpdateProxy : IResourceUpdateView
 		return <ShowNotEnoughSpaceConfirmation>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014AD8 RID: 84696 RVA: 0x0053B0BF File Offset: 0x005392BF
+	// Token: 0x06011FBB RID: 73659 RVA: 0x00549ECF File Offset: 0x005480CF
 	public void UpdatePatchProgress(long receiveSize, long curProgress, long totalProgress, long downloadSpeed)
 	{
 	}

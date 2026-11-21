@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002793 RID: 10131
+	// Token: 0x02002A65 RID: 10853
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHideWorldEntityAndLevelPlayGroup : IHideGroupType
 	{
-		// Token: 0x0600E181 RID: 57729 RVA: 0x00215238 File Offset: 0x00213438
-		[NullableContext(1)]
+		// Token: 0x0600EF9F RID: 61343 RVA: 0x00231FCC File Offset: 0x002301CC
+		[NullableContext(0)]
 		public static IHideWorldEntityAndLevelPlayGroup Create(IHideWorldEntityAndLevelPlayGroup? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700441D RID: 17437
-		// (get) Token: 0x0600E182 RID: 57730 RVA: 0x00215257 File Offset: 0x00213457
+		// Token: 0x17004783 RID: 18307
+		// (get) Token: 0x0600EFA0 RID: 61344 RVA: 0x00231FEB File Offset: 0x002301EB
 		public override EHideType Type
 		{
 			get
@@ -34,12 +34,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700441E RID: 17438
-		// (get) Token: 0x0600E183 RID: 57731 RVA: 0x00215264 File Offset: 0x00213464
-		[Nullable(1)]
+		// Token: 0x17004784 RID: 18308
+		// (get) Token: 0x0600EFA1 RID: 61345 RVA: 0x00231FF8 File Offset: 0x002301F8
+		[Nullable(0)]
 		public virtual List<int> HideRangeEntities
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._HideRangeEntitiesInited)
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700441F RID: 17439
-		// (get) Token: 0x0600E184 RID: 57732 RVA: 0x002152C8 File Offset: 0x002134C8
+		// Token: 0x17004785 RID: 18309
+		// (get) Token: 0x0600EFA2 RID: 61346 RVA: 0x0023205C File Offset: 0x0023025C
 		public virtual List<int> ExcludeEntities
 		{
 			get
@@ -82,8 +82,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004420 RID: 17440
-		// (get) Token: 0x0600E185 RID: 57733 RVA: 0x00215340 File Offset: 0x00213540
+		// Token: 0x17004786 RID: 18310
+		// (get) Token: 0x0600EFA3 RID: 61347 RVA: 0x002320D4 File Offset: 0x002302D4
 		public virtual List<int> ExcludeLevelPlays
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004421 RID: 17441
-		// (get) Token: 0x0600E186 RID: 57734 RVA: 0x002153B8 File Offset: 0x002135B8
+		// Token: 0x17004787 RID: 18311
+		// (get) Token: 0x0600EFA4 RID: 61348 RVA: 0x0023214C File Offset: 0x0023034C
 		public virtual List<int> AppendEntities
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004422 RID: 17442
-		// (get) Token: 0x0600E187 RID: 57735 RVA: 0x00215430 File Offset: 0x00213630
+		// Token: 0x17004788 RID: 18312
+		// (get) Token: 0x0600EFA5 RID: 61349 RVA: 0x002321C4 File Offset: 0x002303C4
 		public virtual List<int> AppendLevelPlays
 		{
 			get
@@ -157,38 +157,38 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D05 RID: 32005
+		// Token: 0x040083BB RID: 33723
 		private IHideWorldEntityAndLevelPlayGroup Instance;
 
-		// Token: 0x04007D06 RID: 32006
-		[Nullable(1)]
+		// Token: 0x040083BC RID: 33724
+		[Nullable(0)]
 		private List<int> _HideRangeEntitiesCache;
 
-		// Token: 0x04007D07 RID: 32007
+		// Token: 0x040083BD RID: 33725
 		private bool _HideRangeEntitiesInited;
 
-		// Token: 0x04007D08 RID: 32008
+		// Token: 0x040083BE RID: 33726
 		private List<int> _ExcludeEntitiesCache;
 
-		// Token: 0x04007D09 RID: 32009
+		// Token: 0x040083BF RID: 33727
 		private bool _ExcludeEntitiesInited;
 
-		// Token: 0x04007D0A RID: 32010
+		// Token: 0x040083C0 RID: 33728
 		private List<int> _ExcludeLevelPlaysCache;
 
-		// Token: 0x04007D0B RID: 32011
+		// Token: 0x040083C1 RID: 33729
 		private bool _ExcludeLevelPlaysInited;
 
-		// Token: 0x04007D0C RID: 32012
+		// Token: 0x040083C2 RID: 33730
 		private List<int> _AppendEntitiesCache;
 
-		// Token: 0x04007D0D RID: 32013
+		// Token: 0x040083C3 RID: 33731
 		private bool _AppendEntitiesInited;
 
-		// Token: 0x04007D0E RID: 32014
+		// Token: 0x040083C4 RID: 33732
 		private List<int> _AppendLevelPlaysCache;
 
-		// Token: 0x04007D0F RID: 32015
+		// Token: 0x040083C5 RID: 33733
 		private bool _AppendLevelPlaysInited;
 	}
 }

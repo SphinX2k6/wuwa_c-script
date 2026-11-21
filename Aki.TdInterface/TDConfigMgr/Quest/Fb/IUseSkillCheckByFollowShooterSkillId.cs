@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001368 RID: 4968
+	// Token: 0x020014B8 RID: 5304
 	public class IUseSkillCheckByFollowShooterSkillId : IUseSkillCheckBase
 	{
-		// Token: 0x060071AB RID: 29099 RVA: 0x00111C42 File Offset: 0x0010FE42
-		[NullableContext(1)]
+		// Token: 0x0600784B RID: 30795 RVA: 0x001201AE File Offset: 0x0011E3AE
 		public static IUseSkillCheckByFollowShooterSkillId Create(IUseSkillCheckByFollowShooterSkillId? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024AE RID: 9390
-		// (get) Token: 0x060071AC RID: 29100 RVA: 0x00111C61 File Offset: 0x0010FE61
+		// Token: 0x1700267D RID: 9853
+		// (get) Token: 0x0600784C RID: 30796 RVA: 0x001201CD File Offset: 0x0011E3CD
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024AF RID: 9391
-		// (get) Token: 0x060071AD RID: 29101 RVA: 0x00111C6E File Offset: 0x0010FE6E
+		// Token: 0x1700267E RID: 9854
+		// (get) Token: 0x0600784D RID: 30797 RVA: 0x001201DA File Offset: 0x0011E3DA
 		public virtual int SkillId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041A8 RID: 16808
+		// Token: 0x04004524 RID: 17700
 		private IUseSkillCheckByFollowShooterSkillId Instance;
 	}
 }

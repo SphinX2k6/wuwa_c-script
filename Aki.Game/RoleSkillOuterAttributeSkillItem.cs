@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x020028BD RID: 10429
+// Token: 0x02001E38 RID: 7736
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSkillOuterAttributeSkillItem : RoleSkillTreeSkillItemBase
 {
-	// Token: 0x06015820 RID: 88096 RVA: 0x0056CB98 File Offset: 0x0056AD98
+	// Token: 0x06013220 RID: 78368 RVA: 0x005979E0 File Offset: 0x00595BE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,45 +25,45 @@ public class RoleSkillOuterAttributeSkillItem : RoleSkillTreeSkillItemBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015821 RID: 88097 RVA: 0x0056CC22 File Offset: 0x0056AE22
+	// Token: 0x06013221 RID: 78369 RVA: 0x00597A6A File Offset: 0x00595C6A
 	protected override UUIItem GetSkillIconItem()
 	{
 		return base.GetItem(0);
 	}
 
-	// Token: 0x06015822 RID: 88098 RVA: 0x0056CC2B File Offset: 0x0056AE2B
+	// Token: 0x06013222 RID: 78370 RVA: 0x00597A73 File Offset: 0x00595C73
 	protected override UUIItem GetLockItem()
 	{
 		return base.GetItem(1);
 	}
 
-	// Token: 0x06015823 RID: 88099 RVA: 0x0056CC34 File Offset: 0x0056AE34
+	// Token: 0x06013223 RID: 78371 RVA: 0x00597A7C File Offset: 0x00595C7C
 	protected override UUIItem GetStrongArrowUpItem()
 	{
 		return base.GetItem(2);
 	}
 
-	// Token: 0x06015824 RID: 88100 RVA: 0x0056CC3D File Offset: 0x0056AE3D
+	// Token: 0x06013224 RID: 78372 RVA: 0x00597A85 File Offset: 0x00595C85
 	public override ESkillTreeNodeType? GetType()
 	{
 		return new ESkillTreeNodeType?(ESkillTreeNodeType.OuterAttribute);
 	}
 
-	// Token: 0x06015825 RID: 88101 RVA: 0x0056CC45 File Offset: 0x0056AE45
+	// Token: 0x06013225 RID: 78373 RVA: 0x00597A8D File Offset: 0x00595C8D
 	public override bool IsIconTexture()
 	{
 		return true;
 	}
 
-	// Token: 0x02008EC4 RID: 36548
+	// Token: 0x0200810B RID: 33035
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E4B2 RID: 189618
+		// Token: 0x04029BAF RID: 170927
 		SkillIconItem,
-		// Token: 0x0402E4B3 RID: 189619
+		// Token: 0x04029BB0 RID: 170928
 		LockItem,
-		// Token: 0x0402E4B4 RID: 189620
+		// Token: 0x04029BB1 RID: 170929
 		StrongArrowUpItem
 	}
 }

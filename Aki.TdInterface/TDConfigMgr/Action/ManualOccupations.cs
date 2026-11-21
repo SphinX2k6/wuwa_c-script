@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020D1 RID: 8401
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200232E RID: 9006
 	public class ManualOccupations : ActionParams
 	{
-		// Token: 0x0600B89C RID: 47260 RVA: 0x001AB0B4 File Offset: 0x001A92B4
+		// Token: 0x0600C414 RID: 50196 RVA: 0x001C1FDC File Offset: 0x001C01DC
 		private ManualOccupations_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B89D RID: 47261 RVA: 0x001AB0EC File Offset: 0x001A92EC
+		// Token: 0x0600C415 RID: 50197 RVA: 0x001C2014 File Offset: 0x001C0214
 		public static ManualOccupations Create([Nullable(2)] ManualOccupations instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B89E RID: 47262 RVA: 0x001AB0FF File Offset: 0x001A92FF
+		// Token: 0x0600C416 RID: 50198 RVA: 0x001C2027 File Offset: 0x001C0227
 		public static ManualOccupations CreateFromSetValue([Nullable(2)] ManualOccupations_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B89F RID: 47263 RVA: 0x001AB112 File Offset: 0x001A9312
+		// Token: 0x0600C417 RID: 50199 RVA: 0x001C203A File Offset: 0x001C023A
 		public ManualOccupations_SetValue ToSetValue()
 		{
 			return new ManualOccupations_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700386D RID: 14445
-		// (get) Token: 0x0600B8A0 RID: 47264 RVA: 0x001AB131 File Offset: 0x001A9331
-		// (set) Token: 0x0600B8A1 RID: 47265 RVA: 0x001AB15C File Offset: 0x001A935C
+		// Token: 0x17003B55 RID: 15189
+		// (get) Token: 0x0600C418 RID: 50200 RVA: 0x001C2059 File Offset: 0x001C0259
+		// (set) Token: 0x0600C419 RID: 50201 RVA: 0x001C2084 File Offset: 0x001C0284
 		public virtual EOccupationActionType OccupationType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700386E RID: 14446
-		// (get) Token: 0x0600B8A2 RID: 47266 RVA: 0x001AB16A File Offset: 0x001A936A
-		// (set) Token: 0x0600B8A3 RID: 47267 RVA: 0x001AB191 File Offset: 0x001A9391
+		// Token: 0x17003B56 RID: 15190
+		// (get) Token: 0x0600C41A RID: 50202 RVA: 0x001C2092 File Offset: 0x001C0292
+		// (set) Token: 0x0600C41B RID: 50203 RVA: 0x001C20B9 File Offset: 0x001C02B9
 		public virtual List<string> Occupations
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E9C RID: 28316
+		// Token: 0x040074C6 RID: 29894
 		[Nullable(2)]
 		protected new ManualOccupations FbInstance;
 
-		// Token: 0x04006E9D RID: 28317
+		// Token: 0x040074C7 RID: 29895
 		[Nullable(2)]
 		protected ManualOccupations_SetValue PocoInterface;
 	}

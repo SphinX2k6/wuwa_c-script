@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004360 RID: 17248
+	// Token: 0x020047C2 RID: 18370
 	public struct IPerformerAiCoolDownDecorator : IFlatbufferObject
 	{
-		// Token: 0x170079BD RID: 31165
-		// (get) Token: 0x06019946 RID: 104774 RVA: 0x003A95EF File Offset: 0x003A77EF
+		// Token: 0x17007FF2 RID: 32754
+		// (get) Token: 0x0601B0D4 RID: 110804 RVA: 0x003D5017 File Offset: 0x003D3217
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x06019947 RID: 104775 RVA: 0x003A95FC File Offset: 0x003A77FC
+		// Token: 0x0601B0D5 RID: 110805 RVA: 0x003D5024 File Offset: 0x003D3224
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019948 RID: 104776 RVA: 0x003A9604 File Offset: 0x003A7804
+		// Token: 0x0601B0D6 RID: 110806 RVA: 0x003D502C File Offset: 0x003D322C
 		public static IPerformerAiCoolDownDecorator GetRootAsIPerformerAiCoolDownDecorator(ByteBuffer _bb)
 		{
 			return IPerformerAiCoolDownDecorator.GetRootAsIPerformerAiCoolDownDecorator(_bb, default(IPerformerAiCoolDownDecorator));
 		}
 
-		// Token: 0x06019949 RID: 104777 RVA: 0x003A9620 File Offset: 0x003A7820
+		// Token: 0x0601B0D7 RID: 110807 RVA: 0x003D5048 File Offset: 0x003D3248
 		public static IPerformerAiCoolDownDecorator GetRootAsIPerformerAiCoolDownDecorator(ByteBuffer _bb, IPerformerAiCoolDownDecorator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601994A RID: 104778 RVA: 0x003A963D File Offset: 0x003A783D
+		// Token: 0x0601B0D8 RID: 110808 RVA: 0x003D5065 File Offset: 0x003D3265
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601994B RID: 104779 RVA: 0x003A964C File Offset: 0x003A784C
+		// Token: 0x0601B0D9 RID: 110809 RVA: 0x003D5074 File Offset: 0x003D3274
 		public IPerformerAiCoolDownDecorator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170079BE RID: 31166
-		// (get) Token: 0x0601994C RID: 104780 RVA: 0x003A965C File Offset: 0x003A785C
+		// Token: 0x17007FF3 RID: 32755
+		// (get) Token: 0x0601B0DA RID: 110810 RVA: 0x003D5084 File Offset: 0x003D3284
 		public EPerformerAiDecoratorType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x170079BF RID: 31167
-		// (get) Token: 0x0601994D RID: 104781 RVA: 0x003A9698 File Offset: 0x003A7898
+		// Token: 0x17007FF4 RID: 32756
+		// (get) Token: 0x0601B0DB RID: 110811 RVA: 0x003D50C0 File Offset: 0x003D32C0
 		public int CoolDown
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			}
 		}
 
-		// Token: 0x0601994E RID: 104782 RVA: 0x003A96D4 File Offset: 0x003A78D4
+		// Token: 0x0601B0DC RID: 110812 RVA: 0x003D50FC File Offset: 0x003D32FC
 		public static Offset<IPerformerAiCoolDownDecorator> CreateIPerformerAiCoolDownDecorator(FlatBufferBuilder builder, EPerformerAiDecoratorType Type = EPerformerAiDecoratorType.Condition, int CoolDown = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiCoolDownDecorator.EndIPerformerAiCoolDownDecorator(builder);
 		}
 
-		// Token: 0x0601994F RID: 104783 RVA: 0x003A96F1 File Offset: 0x003A78F1
+		// Token: 0x0601B0DD RID: 110813 RVA: 0x003D5119 File Offset: 0x003D3319
 		public static void StartIPerformerAiCoolDownDecorator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06019950 RID: 104784 RVA: 0x003A96FA File Offset: 0x003A78FA
+		// Token: 0x0601B0DE RID: 110814 RVA: 0x003D5122 File Offset: 0x003D3322
 		public static void AddType(FlatBufferBuilder builder, EPerformerAiDecoratorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019951 RID: 104785 RVA: 0x003A9705 File Offset: 0x003A7905
+		// Token: 0x0601B0DF RID: 110815 RVA: 0x003D512D File Offset: 0x003D332D
 		public static void AddCoolDown(FlatBufferBuilder builder, int coolDown)
 		{
 			builder.AddInt(1, coolDown, 0);
 		}
 
-		// Token: 0x06019952 RID: 104786 RVA: 0x003A9710 File Offset: 0x003A7910
+		// Token: 0x0601B0E0 RID: 110816 RVA: 0x003D5138 File Offset: 0x003D3338
 		public static Offset<IPerformerAiCoolDownDecorator> EndIPerformerAiCoolDownDecorator(FlatBufferBuilder builder)
 		{
 			return new Offset<IPerformerAiCoolDownDecorator>(builder.EndTable());
 		}
 
-		// Token: 0x06019953 RID: 104787 RVA: 0x003A9720 File Offset: 0x003A7920
+		// Token: 0x0601B0E1 RID: 110817 RVA: 0x003D5148 File Offset: 0x003D3348
 		public IPerformerAiCoolDownDecoratorT UnPack()
 		{
 			IPerformerAiCoolDownDecoratorT performerAiCoolDownDecoratorT = new IPerformerAiCoolDownDecoratorT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return performerAiCoolDownDecoratorT;
 		}
 
-		// Token: 0x06019954 RID: 104788 RVA: 0x003A973B File Offset: 0x003A793B
+		// Token: 0x0601B0E2 RID: 110818 RVA: 0x003D5163 File Offset: 0x003D3363
 		public void UnPackTo(IPerformerAiCoolDownDecoratorT _o)
 		{
 			_o.Type = this.Type;
 			_o.CoolDown = this.CoolDown;
 		}
 
-		// Token: 0x06019955 RID: 104789 RVA: 0x003A9758 File Offset: 0x003A7958
+		// Token: 0x0601B0E3 RID: 110819 RVA: 0x003D5180 File Offset: 0x003D3380
 		public static Offset<IPerformerAiCoolDownDecorator> Pack(FlatBufferBuilder builder, IPerformerAiCoolDownDecoratorT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 			return IPerformerAiCoolDownDecorator.CreateIPerformerAiCoolDownDecorator(builder, _o.Type, _o.CoolDown);
 		}
 
-		// Token: 0x0400C153 RID: 49491
+		// Token: 0x0400CB71 RID: 52081
 		private Table __p;
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003179 RID: 12665
+// Token: 0x020026E6 RID: 9958
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Execute_Xunren : CodeSkillBase
 {
-	// Token: 0x0601B3CD RID: 111565 RVA: 0x0076DF27 File Offset: 0x0076C127
+	// Token: 0x06018ED2 RID: 102098 RVA: 0x0079588B File Offset: 0x00793A8B
 	public CodeSkill_Execute_Xunren(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B3CE RID: 111566 RVA: 0x0076DF30 File Offset: 0x0076C130
+	// Token: 0x06018ED3 RID: 102099 RVA: 0x00795894 File Offset: 0x00793A94
 	public override void OnBegin(Skill skill)
 	{
 		this.ClearForceSpeed();
@@ -19,7 +19,7 @@ public class CodeSkill_Execute_Xunren : CodeSkillBase
 		this.PlayExecuteMontage(skill);
 	}
 
-	// Token: 0x0601B3CF RID: 111567 RVA: 0x0076DF45 File Offset: 0x0076C145
+	// Token: 0x06018ED4 RID: 102100 RVA: 0x007958A9 File Offset: 0x00793AA9
 	private void ClearForceSpeed()
 	{
 		CharacterMoveComponent component = base.Entity.GetComponent<CharacterMoveComponent>();
@@ -30,7 +30,7 @@ public class CodeSkill_Execute_Xunren : CodeSkillBase
 		component.SetForceSpeed(Vector.ZeroVectorProxy);
 	}
 
-	// Token: 0x0601B3D0 RID: 111568 RVA: 0x0076DF64 File Offset: 0x0076C164
+	// Token: 0x06018ED5 RID: 102101 RVA: 0x007958C8 File Offset: 0x00793AC8
 	private void TryAddMultiplayerTimeStopBuff()
 	{
 		BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -53,7 +53,7 @@ public class CodeSkill_Execute_Xunren : CodeSkillBase
 		});
 	}
 
-	// Token: 0x0601B3D1 RID: 111569 RVA: 0x0076DFFC File Offset: 0x0076C1FC
+	// Token: 0x06018ED6 RID: 102102 RVA: 0x00795960 File Offset: 0x00793B60
 	private void PlayExecuteMontage(Skill skill)
 	{
 		if (!base.SkillComp.PlaySkillMontage(0, "", 0f, delegate(bool isInterrupted)
@@ -68,9 +68,9 @@ public class CodeSkill_Execute_Xunren : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0400D481 RID: 54401
+	// Token: 0x0400D8E4 RID: 55524
 	private const int EXECUTE_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D482 RID: 54402
+	// Token: 0x0400D8E5 RID: 55525
 	private const long MULTIPLAYER_TIME_STOP_BUFF_ID = 1101013023L;
 }

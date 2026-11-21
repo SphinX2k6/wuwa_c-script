@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067BA RID: 26554
+	// Token: 0x02006E3A RID: 28218
 	public class IFireBulletTrackPositionT
 	{
-		// Token: 0x1700C51C RID: 50460
-		// (get) Token: 0x0602E37F RID: 189311 RVA: 0x0064FDEB File Offset: 0x0064DFEB
-		// (set) Token: 0x0602E380 RID: 189312 RVA: 0x0064FDF3 File Offset: 0x0064DFF3
+		// Token: 0x1700CED2 RID: 52946
+		// (get) Token: 0x06030BC5 RID: 199621 RVA: 0x0069D52F File Offset: 0x0069B72F
+		// (set) Token: 0x06030BC6 RID: 199622 RVA: 0x0069D537 File Offset: 0x0069B737
 		public EFireBulletType Type { get; set; }
 
-		// Token: 0x1700C51D RID: 50461
-		// (get) Token: 0x0602E381 RID: 189313 RVA: 0x0064FDFC File Offset: 0x0064DFFC
-		// (set) Token: 0x0602E382 RID: 189314 RVA: 0x0064FE04 File Offset: 0x0064E004
+		// Token: 0x1700CED3 RID: 52947
+		// (get) Token: 0x06030BC7 RID: 199623 RVA: 0x0069D540 File Offset: 0x0069B740
+		// (set) Token: 0x06030BC8 RID: 199624 RVA: 0x0069D548 File Offset: 0x0069B748
 		public long BulletId { get; set; }
 
-		// Token: 0x1700C51E RID: 50462
-		// (get) Token: 0x0602E383 RID: 189315 RVA: 0x0064FE0D File Offset: 0x0064E00D
-		// (set) Token: 0x0602E384 RID: 189316 RVA: 0x0064FE15 File Offset: 0x0064E015
+		// Token: 0x1700CED4 RID: 52948
+		// (get) Token: 0x06030BC9 RID: 199625 RVA: 0x0069D551 File Offset: 0x0069B751
+		// (set) Token: 0x06030BCA RID: 199626 RVA: 0x0069D559 File Offset: 0x0069B759
 		public TTargetEntityUnion Launcher { get; set; }
 
-		// Token: 0x1700C51F RID: 50463
-		// (get) Token: 0x0602E385 RID: 189317 RVA: 0x0064FE1E File Offset: 0x0064E01E
-		// (set) Token: 0x0602E386 RID: 189318 RVA: 0x0064FE26 File Offset: 0x0064E026
+		// Token: 0x1700CED5 RID: 52949
+		// (get) Token: 0x06030BCB RID: 199627 RVA: 0x0069D562 File Offset: 0x0069B762
+		// (set) Token: 0x06030BCC RID: 199628 RVA: 0x0069D56A File Offset: 0x0069B76A
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x0602E387 RID: 189319 RVA: 0x0064FE2F File Offset: 0x0064E02F
+		// Token: 0x06030BCD RID: 199629 RVA: 0x0069D573 File Offset: 0x0069B773
 		public IFireBulletTrackPositionT()
 		{
 			this.Type = EFireBulletType.TrackTarget;

@@ -1,102 +1,102 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000218 RID: 536
+// Token: 0x0200021C RID: 540
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraFadeOutData
 {
-	// Token: 0x04001514 RID: 5396
+	// Token: 0x04001556 RID: 5462
 	public bool ModifyArmLength;
 
-	// Token: 0x04001515 RID: 5397
+	// Token: 0x04001557 RID: 5463
 	public float StartArmLength;
 
-	// Token: 0x04001516 RID: 5398
+	// Token: 0x04001558 RID: 5464
 	public float ArmLength;
 
-	// Token: 0x04001517 RID: 5399
+	// Token: 0x04001559 RID: 5465
 	public bool ModifyArmOffset;
 
-	// Token: 0x04001518 RID: 5400
+	// Token: 0x0400155A RID: 5466
 	public Vector StartArmOffset = Vector.Create();
 
-	// Token: 0x04001519 RID: 5401
+	// Token: 0x0400155B RID: 5467
 	public Vector ArmOffset = Vector.Create();
 
-	// Token: 0x0400151A RID: 5402
+	// Token: 0x0400155C RID: 5468
 	public bool ModifyCameraOffset;
 
-	// Token: 0x0400151B RID: 5403
+	// Token: 0x0400155D RID: 5469
 	public Vector StartCameraOffset = Vector.Create();
 
-	// Token: 0x0400151C RID: 5404
+	// Token: 0x0400155E RID: 5470
 	public Vector CameraOffset = Vector.Create();
 
-	// Token: 0x0400151D RID: 5405
+	// Token: 0x0400155F RID: 5471
 	public bool ModifyZoomModifier;
 
-	// Token: 0x0400151E RID: 5406
+	// Token: 0x04001560 RID: 5472
 	public float StartFinalArmLength;
 
-	// Token: 0x0400151F RID: 5407
+	// Token: 0x04001561 RID: 5473
 	public float FinalArmLength;
 
-	// Token: 0x04001520 RID: 5408
+	// Token: 0x04001562 RID: 5474
 	public bool ModifyFov;
 
-	// Token: 0x04001521 RID: 5409
+	// Token: 0x04001563 RID: 5475
 	public float StartFov;
 
-	// Token: 0x04001522 RID: 5410
+	// Token: 0x04001564 RID: 5476
 	public float Fov;
 
-	// Token: 0x04001523 RID: 5411
+	// Token: 0x04001565 RID: 5477
 	public bool ModifyArmRotationPitch;
 
-	// Token: 0x04001524 RID: 5412
+	// Token: 0x04001566 RID: 5478
 	public bool ModifyArmRotationYaw;
 
-	// Token: 0x04001525 RID: 5413
+	// Token: 0x04001567 RID: 5479
 	public bool ModifyArmRotationRoll;
 
-	// Token: 0x04001526 RID: 5414
+	// Token: 0x04001568 RID: 5480
 	public float StartArmRotationPitch;
 
-	// Token: 0x04001527 RID: 5415
+	// Token: 0x04001569 RID: 5481
 	public float StartArmRotationYaw;
 
-	// Token: 0x04001528 RID: 5416
+	// Token: 0x0400156A RID: 5482
 	public float StartArmRotationRoll;
 
-	// Token: 0x04001529 RID: 5417
+	// Token: 0x0400156B RID: 5483
 	public float ArmRotationPitch;
 
-	// Token: 0x0400152A RID: 5418
+	// Token: 0x0400156C RID: 5484
 	public float ArmRotationYaw;
 
-	// Token: 0x0400152B RID: 5419
+	// Token: 0x0400156D RID: 5485
 	public float ArmRotationRoll;
 
-	// Token: 0x0400152C RID: 5420
+	// Token: 0x0400156E RID: 5486
 	public bool ModifyPlayerLocation;
 
-	// Token: 0x0400152D RID: 5421
+	// Token: 0x0400156F RID: 5487
 	public Vector StartPlayerLocation = Vector.Create();
 
-	// Token: 0x0400152E RID: 5422
+	// Token: 0x04001570 RID: 5488
 	public Vector PlayerLocation = Vector.Create();
 
-	// Token: 0x0400152F RID: 5423
+	// Token: 0x04001571 RID: 5489
 	public float ElapsedTime;
 
-	// Token: 0x04001530 RID: 5424
+	// Token: 0x04001572 RID: 5490
 	public float FadeOutTotalTime;
 
-	// Token: 0x04001531 RID: 5425
+	// Token: 0x04001573 RID: 5491
 	public bool UseFadeOutTimeLerp;
 
-	// Token: 0x04001532 RID: 5426
+	// Token: 0x04001574 RID: 5492
 	[Nullable(2)]
 	public CurveBase BlendOutCurve;
 }

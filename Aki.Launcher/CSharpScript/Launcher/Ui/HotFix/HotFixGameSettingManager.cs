@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000D2 RID: 210
+	// Token: 0x020000D5 RID: 213
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotFixGameSettingManager
 	{
-		// Token: 0x060006E4 RID: 1764 RVA: 0x00039608 File Offset: 0x00037808
+		// Token: 0x06000700 RID: 1792 RVA: 0x0003B138 File Offset: 0x00039338
 		public void ApplyGameSettings()
 		{
 			Dictionary<int, double> dictionary = this.LoadGameSetting();
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006E5 RID: 1765 RVA: 0x00039668 File Offset: 0x00037868
+		// Token: 0x06000701 RID: 1793 RVA: 0x0003B198 File Offset: 0x00039398
 		[NullableContext(2)]
 		private Dictionary<int, double> LoadPlayMenuInfo()
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return global;
 		}
 
-		// Token: 0x060006E6 RID: 1766 RVA: 0x000396C0 File Offset: 0x000378C0
+		// Token: 0x06000702 RID: 1794 RVA: 0x0003B1F0 File Offset: 0x000393F0
 		[NullableContext(2)]
 		private Dictionary<int, double> LoadGameSetting()
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return dictionary;
 		}
 
-		// Token: 0x060006E7 RID: 1767 RVA: 0x0003974C File Offset: 0x0003794C
+		// Token: 0x06000703 RID: 1795 RVA: 0x0003B27C File Offset: 0x0003947C
 		private unsafe void SetGameDataMap(Dictionary<int, double> gameDataMapRef, int functionId, ELauncherStorageGlobalKey launcherStorageGlobalKey, int NotFoundValue = 0)
 		{
 			double global = LauncherStorageLib.Instance.GetGlobal<double>(launcherStorageGlobalKey, double.NaN);
@@ -98,7 +98,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006E8 RID: 1768 RVA: 0x00039884 File Offset: 0x00037A84
+		// Token: 0x06000704 RID: 1796 RVA: 0x0003B3B4 File Offset: 0x000395B4
 		private double? GetDefaultGameSetttingsValue(int functionId)
 		{
 			LaunchGameSettingMenuConfig gameSettingsMenuConfigByFunctionId = LauncherConfigLib.Instance.GetGameSettingsMenuConfigByFunctionId(functionId);
@@ -109,7 +109,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return new double?((double)gameSettingsMenuConfigByFunctionId.GetDefaultValue());
 		}
 
-		// Token: 0x060006E9 RID: 1769 RVA: 0x000398B8 File Offset: 0x00037AB8
+		// Token: 0x06000705 RID: 1797 RVA: 0x0003B3E8 File Offset: 0x000395E8
 		private unsafe void Apply(Dictionary<int, double> gameDataMap, int functionId)
 		{
 			double num;
@@ -163,13 +163,13 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			}
 		}
 
-		// Token: 0x060006EA RID: 1770 RVA: 0x00039A05 File Offset: 0x00037C05
+		// Token: 0x06000706 RID: 1798 RVA: 0x0003B535 File Offset: 0x00039735
 		private void ApplyRTPCValue(string rtpc, float value)
 		{
 			UAkGameplayStatics.SetRTPCValue(null, value, 0, null, new FName(rtpc));
 		}
 
-		// Token: 0x060006EB RID: 1771 RVA: 0x00039A18 File Offset: 0x00037C18
+		// Token: 0x06000707 RID: 1799 RVA: 0x0003B548 File Offset: 0x00039748
 		private unsafe void ApplyResolution(int value)
 		{
 			if (Platform.Instance.IsCloudGame())
@@ -199,34 +199,34 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			gameUserSettings.ApplySettings(true);
 		}
 
-		// Token: 0x060006EC RID: 1772 RVA: 0x00039B0E File Offset: 0x00037D0E
+		// Token: 0x06000708 RID: 1800 RVA: 0x0003B63E File Offset: 0x0003983E
 		public List<FIntPoint> GetResolutionList()
 		{
 			return LauncherGameSettingLib.Instance.GetResolutionList();
 		}
 
-		// Token: 0x0400041F RID: 1055
+		// Token: 0x0400044E RID: 1102
 		private const int MASTERVOLUMEFUNCTION = 1;
 
-		// Token: 0x04000420 RID: 1056
+		// Token: 0x0400044F RID: 1103
 		private const int VOICEVOLUMEFUNCTION = 2;
 
-		// Token: 0x04000421 RID: 1057
+		// Token: 0x04000450 RID: 1104
 		private const int MUSICVOLUMEFUNCTION = 3;
 
-		// Token: 0x04000422 RID: 1058
+		// Token: 0x04000451 RID: 1105
 		private const int SFXVOLUMEFUNCTION = 4;
 
-		// Token: 0x04000423 RID: 1059
+		// Token: 0x04000452 RID: 1106
 		private const int RESOLUTION = 6;
 
-		// Token: 0x04000424 RID: 1060
+		// Token: 0x04000453 RID: 1107
 		private const int AMBVOLUMEFUNCTION = 69;
 
-		// Token: 0x04000425 RID: 1061
+		// Token: 0x04000454 RID: 1108
 		private const int UIVOLUMEFUNCTION = 70;
 
-		// Token: 0x04000426 RID: 1062
+		// Token: 0x04000455 RID: 1109
 		private const int DEFAULT_VOLUME_VALUE = 100;
 	}
 }

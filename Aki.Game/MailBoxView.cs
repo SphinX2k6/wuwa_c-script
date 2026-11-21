@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,17 +14,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021D0 RID: 8656
+// Token: 0x020016B4 RID: 5812
 [NullableContext(1)]
 [Nullable(0)]
 public class MailBoxView : UiViewBase
 {
-	// Token: 0x06010D8D RID: 69005 RVA: 0x00418021 File Offset: 0x00416221
+	// Token: 0x0600E21E RID: 57886 RVA: 0x00424901 File Offset: 0x00422B01
 	public MailBoxView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010D8E RID: 69006 RVA: 0x00418034 File Offset: 0x00416234
+	// Token: 0x0600E21F RID: 57887 RVA: 0x00424914 File Offset: 0x00422B14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 23;
@@ -82,7 +81,7 @@ public class MailBoxView : UiViewBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06010D8F RID: 69007 RVA: 0x0041836C File Offset: 0x0041656C
+	// Token: 0x0600E220 RID: 57888 RVA: 0x00424C4C File Offset: 0x00422E4C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MailBoxView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -93,7 +92,7 @@ public class MailBoxView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010D90 RID: 69008 RVA: 0x004183B0 File Offset: 0x004165B0
+	// Token: 0x0600E221 RID: 57889 RVA: 0x00424C90 File Offset: 0x00422E90
 	protected override void OnStart()
 	{
 		this.InitCaptionUiStyle();
@@ -112,7 +111,7 @@ public class MailBoxView : UiViewBase
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：OnStartFinish", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010D91 RID: 69009 RVA: 0x0041848C File Offset: 0x0041668C
+	// Token: 0x0600E222 RID: 57890 RVA: 0x00424D6C File Offset: 0x00422F6C
 	protected override void OnBeforeShow()
 	{
 		this.RefreshInsufficientSpaceTip();
@@ -124,7 +123,7 @@ public class MailBoxView : UiViewBase
 			this.DropDownList.RefreshAllDropDownItem();
 			MailDropDownItem mailDropDownItem = this.DropDownList.GetDropDownItemObject(this.DropDownList.GetSelectedIndex()) as MailDropDownItem;
 			string selectedMailId = this.SelectedMailData.Id;
-			this.CurrentMailDataList = mailDropDownItem.GetFilteredMailList().ToList<MailData>();
+			this.CurrentMailDataList = new List<MailData>(mailDropDownItem.GetFilteredMailList());
 			int num = this.CurrentMailDataList.FindIndex((MailData mail) => mail.Id == selectedMailId);
 			num = ((num >= 0) ? num : 0);
 			this.RefreshMailScrollList(this.CurrentMailDataList, num);
@@ -133,7 +132,7 @@ public class MailBoxView : UiViewBase
 		this.DropDownList.InitScroll(filterTypeList, new Func<EMailFilter, MailFilter>(this.GetMailFilterConfigData), defaultIndex, true);
 	}
 
-	// Token: 0x06010D92 RID: 69010 RVA: 0x0041857C File Offset: 0x0041677C
+	// Token: 0x0600E223 RID: 57891 RVA: 0x00424E5C File Offset: 0x0042305C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string, int>(EEventName.SelectedMail, new Action<string, int>(this.CallBackSelected));
@@ -144,7 +143,7 @@ public class MailBoxView : UiViewBase
 		EventSystem.Instance.Add(EEventName.AddingNewMail, new Action(this.CallBackAddMailView));
 	}
 
-	// Token: 0x06010D93 RID: 69011 RVA: 0x00418634 File Offset: 0x00416834
+	// Token: 0x0600E224 RID: 57892 RVA: 0x00424F14 File Offset: 0x00423114
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SelectedMail, new Action<string, int>(this.CallBackSelected));
@@ -155,7 +154,7 @@ public class MailBoxView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.AddingNewMail, new Action(this.CallBackAddMailView));
 	}
 
-	// Token: 0x06010D94 RID: 69012 RVA: 0x004186EC File Offset: 0x004168EC
+	// Token: 0x0600E225 RID: 57893 RVA: 0x00424FCC File Offset: 0x004231CC
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(22);
@@ -182,7 +181,7 @@ public class MailBoxView : UiViewBase
 		this.MailSwitchSequence.Clear();
 	}
 
-	// Token: 0x06010D95 RID: 69013 RVA: 0x0041876C File Offset: 0x0041696C
+	// Token: 0x0600E226 RID: 57894 RVA: 0x0042504C File Offset: 0x0042324C
 	private void InitCaptionUiStyle()
 	{
 		this.Caption = new PopupCaptionItem(base.GetItem(0));
@@ -192,13 +191,13 @@ public class MailBoxView : UiViewBase
 		this.Caption.SetTitle(TextConfig.Instance.GetTextById("Mail") ?? "");
 	}
 
-	// Token: 0x06010D96 RID: 69014 RVA: 0x004187DD File Offset: 0x004169DD
+	// Token: 0x0600E227 RID: 57895 RVA: 0x004250BD File Offset: 0x004232BD
 	private void InitDropDownList()
 	{
 		this.DropDownList.SetOnSelectCall(new Action<int, EMailFilter>(this.OnSelectDropItem));
 	}
 
-	// Token: 0x06010D97 RID: 69015 RVA: 0x004187F8 File Offset: 0x004169F8
+	// Token: 0x0600E228 RID: 57896 RVA: 0x004250D8 File Offset: 0x004232D8
 	private UniTask InitMailScrollView()
 	{
 		MailBoxView.<InitMailScrollView>d__28 <InitMailScrollView>d__;
@@ -209,7 +208,7 @@ public class MailBoxView : UiViewBase
 		return <InitMailScrollView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010D98 RID: 69016 RVA: 0x0041883B File Offset: 0x00416A3B
+	// Token: 0x0600E229 RID: 57897 RVA: 0x0042511B File Offset: 0x0042331B
 	private MailScrollItemNew OnItemCreate(MailData data, UUIItem uiItem, int index)
 	{
 		MailScrollItemNew mailScrollItemNew = new MailScrollItemNew();
@@ -219,7 +218,7 @@ public class MailBoxView : UiViewBase
 		return mailScrollItemNew;
 	}
 
-	// Token: 0x06010D99 RID: 69017 RVA: 0x00418878 File Offset: 0x00416A78
+	// Token: 0x0600E22A RID: 57898 RVA: 0x00425158 File Offset: 0x00423358
 	private void InitLinkButtonObj()
 	{
 		this.LinkButton = new MailLinkButton(base.GetItem(14));
@@ -227,7 +226,7 @@ public class MailBoxView : UiViewBase
 		base.GetItem(14).SetUIActive(false);
 	}
 
-	// Token: 0x06010D9A RID: 69018 RVA: 0x004188B4 File Offset: 0x00416AB4
+	// Token: 0x0600E22B RID: 57899 RVA: 0x00425194 File Offset: 0x00423394
 	private void InitFavoriteToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(22);
@@ -240,7 +239,7 @@ public class MailBoxView : UiViewBase
 		extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnFavoriteToggleStateChanged));
 	}
 
-	// Token: 0x06010D9B RID: 69019 RVA: 0x00418904 File Offset: 0x00416B04
+	// Token: 0x0600E22C RID: 57900 RVA: 0x004251E4 File Offset: 0x004233E4
 	private void RefreshFavoriteToggle(MailData mailData)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(22);
@@ -256,7 +255,7 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010D9C RID: 69020 RVA: 0x00418954 File Offset: 0x00416B54
+	// Token: 0x0600E22D RID: 57901 RVA: 0x00425234 File Offset: 0x00423434
 	private void RefreshInsufficientSpaceTip()
 	{
 		bool flag = this.CurrentFilterState == EMailFilter.FilterAll && MailModel.Instance.IsMailSpaceNearFull();
@@ -268,7 +267,7 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010D9D RID: 69021 RVA: 0x004189A8 File Offset: 0x00416BA8
+	// Token: 0x0600E22E RID: 57902 RVA: 0x00425288 File Offset: 0x00423488
 	private UUIText GetInsufficientTipText()
 	{
 		if (this.InsufficientTipText != null)
@@ -311,7 +310,7 @@ public class MailBoxView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06010D9E RID: 69022 RVA: 0x00418A58 File Offset: 0x00416C58
+	// Token: 0x0600E22F RID: 57903 RVA: 0x00425338 File Offset: 0x00423538
 	private void RefreshEmptyTipText()
 	{
 		UUIText emptyTipText = this.GetEmptyTipText();
@@ -323,7 +322,7 @@ public class MailBoxView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(emptyTipText, textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06010D9F RID: 69023 RVA: 0x00418A98 File Offset: 0x00416C98
+	// Token: 0x0600E230 RID: 57904 RVA: 0x00425378 File Offset: 0x00423578
 	private UUIText GetEmptyTipText()
 	{
 		if (this.EmptyTipText != null)
@@ -366,7 +365,7 @@ public class MailBoxView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06010DA0 RID: 69024 RVA: 0x00418B48 File Offset: 0x00416D48
+	// Token: 0x0600E231 RID: 57905 RVA: 0x00425428 File Offset: 0x00423628
 	private void RequestMailFavoriteForMail(MailData mail, bool isFavorite, Action onFailed = null)
 	{
 		if (isFavorite && !mail.IsFavorite && MailModel.Instance.IsFavoriteMailFull())
@@ -406,7 +405,7 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010DA1 RID: 69025 RVA: 0x00418C10 File Offset: 0x00416E10
+	// Token: 0x0600E232 RID: 57906 RVA: 0x004254F0 File Offset: 0x004236F0
 	private void OnFavoriteToggleStateChanged(EToggleState state)
 	{
 		if (this.SelectedMailData == null)
@@ -421,7 +420,7 @@ public class MailBoxView : UiViewBase
 		});
 	}
 
-	// Token: 0x06010DA2 RID: 69026 RVA: 0x00418C60 File Offset: 0x00416E60
+	// Token: 0x0600E233 RID: 57907 RVA: 0x00425540 File Offset: 0x00423740
 	private void OnListMailFavoriteClick(int index, MailData data)
 	{
 		bool isFavorite = !data.IsFavorite;
@@ -440,7 +439,7 @@ public class MailBoxView : UiViewBase
 		});
 	}
 
-	// Token: 0x06010DA3 RID: 69027 RVA: 0x00418CB0 File Offset: 0x00416EB0
+	// Token: 0x0600E234 RID: 57908 RVA: 0x00425590 File Offset: 0x00423790
 	private void CallBackMailFavoriteChanged(string mailId, bool isFavorite)
 	{
 		this.DropDownList.RefreshAllDropDownItem();
@@ -482,20 +481,20 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010DA4 RID: 69028 RVA: 0x00418E14 File Offset: 0x00417014
+	// Token: 0x0600E235 RID: 57909 RVA: 0x004256F4 File Offset: 0x004238F4
 	private void InitMailOpButtonObj()
 	{
 		this.MailOpButton = new ButtonAndTextItem(base.GetItem(18));
 		this.MailOpButton.BindCallback(new Action(this.OnClickMailOp));
 	}
 
-	// Token: 0x06010DA5 RID: 69029 RVA: 0x00418E40 File Offset: 0x00417040
+	// Token: 0x0600E236 RID: 57910 RVA: 0x00425720 File Offset: 0x00423920
 	private void InitAttachmentList()
 	{
 		this.AttachmentsLayout = new LoopScrollView<CSharpScript.Game.Module.Mail.RewardItem, TItem>(base.GetLoopScrollViewComponent(16), base.GetItem(17).GetOwner() as AUIBaseActor, new Func<CSharpScript.Game.Module.Mail.RewardItem>(this.CreateAttachItem), false);
 	}
 
-	// Token: 0x06010DA6 RID: 69030 RVA: 0x00418E74 File Offset: 0x00417074
+	// Token: 0x0600E237 RID: 57911 RVA: 0x00425754 File Offset: 0x00423954
 	private CSharpScript.Game.Module.Mail.RewardItem CreateAttachItem()
 	{
 		return new CSharpScript.Game.Module.Mail.RewardItem
@@ -504,7 +503,7 @@ public class MailBoxView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010DA7 RID: 69031 RVA: 0x00418E84 File Offset: 0x00417084
+	// Token: 0x0600E238 RID: 57912 RVA: 0x00425764 File Offset: 0x00423964
 	private MailDropDownItem CreateDropDownItemFunc(UUIItem uiItem, EMailFilter type)
 	{
 		MailDropDownItem result;
@@ -529,7 +528,7 @@ public class MailBoxView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x06010DA8 RID: 69032 RVA: 0x00418EDC File Offset: 0x004170DC
+	// Token: 0x0600E239 RID: 57913 RVA: 0x004257BC File Offset: 0x004239BC
 	private List<string> GetBatchDeletableMailIds()
 	{
 		List<MailData> currentMailDataList = this.CurrentMailDataList;
@@ -559,7 +558,7 @@ public class MailBoxView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06010DA9 RID: 69033 RVA: 0x00418FCC File Offset: 0x004171CC
+	// Token: 0x0600E23A RID: 57914 RVA: 0x004258AC File Offset: 0x00423AAC
 	private void DeleteAllExhaustedMail()
 	{
 		if (this.CurrentFilterState == EMailFilter.FilterFavorite)
@@ -582,7 +581,7 @@ public class MailBoxView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06010DAA RID: 69034 RVA: 0x00419048 File Offset: 0x00417248
+	// Token: 0x0600E23B RID: 57915 RVA: 0x00425928 File Offset: 0x00423B28
 	private void PickAllAccessibleAttachment()
 	{
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：一键领取", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -636,7 +635,7 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010DAB RID: 69035 RVA: 0x004191B8 File Offset: 0x004173B8
+	// Token: 0x0600E23C RID: 57916 RVA: 0x00425A98 File Offset: 0x00423C98
 	private void ClearMailSelection()
 	{
 		MailScrollItemNew scrollItemFromIndex = this.MailLoopScrollList.GetScrollItemFromIndex(this.SelectedMailIndex);
@@ -647,7 +646,7 @@ public class MailBoxView : UiViewBase
 		this.SelectedMailIndex = -1;
 	}
 
-	// Token: 0x06010DAC RID: 69036 RVA: 0x004191E0 File Offset: 0x004173E0
+	// Token: 0x0600E23D RID: 57917 RVA: 0x00425AC0 File Offset: 0x00423CC0
 	private unsafe void RefreshMailScrollList(List<MailData> mailList, int selectedIndex = 0)
 	{
 		this.ClearMailSelection();
@@ -681,7 +680,7 @@ public class MailBoxView : UiViewBase
 		this.RefreshInsufficientSpaceTip();
 	}
 
-	// Token: 0x06010DAD RID: 69037 RVA: 0x0041932C File Offset: 0x0041752C
+	// Token: 0x0600E23E RID: 57918 RVA: 0x00425C0C File Offset: 0x00423E0C
 	private UniTask ScrollToItemThenRefreshItem(MailData data, int selectedIndex)
 	{
 		MailBoxView.<ScrollToItemThenRefreshItem>d__50 <ScrollToItemThenRefreshItem>d__;
@@ -694,7 +693,7 @@ public class MailBoxView : UiViewBase
 		return <ScrollToItemThenRefreshItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010DAE RID: 69038 RVA: 0x00419380 File Offset: 0x00417580
+	// Token: 0x0600E23F RID: 57919 RVA: 0x00425C60 File Offset: 0x00423E60
 	private void RefreshMailValidTime(MailData selectedMail)
 	{
 		if (selectedMail.IsFavorite)
@@ -728,7 +727,7 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010DAF RID: 69039 RVA: 0x004194C4 File Offset: 0x004176C4
+	// Token: 0x0600E240 RID: 57920 RVA: 0x00425DA4 File Offset: 0x00423FA4
 	private void RefreshMailAttachment(MailData selectedMail)
 	{
 		List<TItem> list = new List<TItem>();
@@ -741,7 +740,7 @@ public class MailBoxView : UiViewBase
 		base.GetItem(15).SetUIActive(list.Count > 0);
 	}
 
-	// Token: 0x06010DB0 RID: 69040 RVA: 0x00419534 File Offset: 0x00417734
+	// Token: 0x0600E241 RID: 57921 RVA: 0x00425E14 File Offset: 0x00424014
 	private void RefreshMailOpButtonState(MailData data)
 	{
 		if (data.GetAttachmentStatus() == EMailAttachment.AttachmentRemained)
@@ -754,7 +753,7 @@ public class MailBoxView : UiViewBase
 		this.MailOpButton.RefreshEnable(true);
 	}
 
-	// Token: 0x06010DB1 RID: 69041 RVA: 0x00419590 File Offset: 0x00417790
+	// Token: 0x0600E242 RID: 57922 RVA: 0x00425E70 File Offset: 0x00424070
 	private void RefreshMailContentView(MailData data)
 	{
 		base.GetText(7).SetText(data.Title, true);
@@ -792,19 +791,19 @@ public class MailBoxView : UiViewBase
 		this.MailSwitchSequence.PlayLevelSequenceByName("Switch", false, null, false);
 	}
 
-	// Token: 0x06010DB2 RID: 69042 RVA: 0x00419712 File Offset: 0x00417912
+	// Token: 0x0600E243 RID: 57923 RVA: 0x00425FF2 File Offset: 0x004241F2
 	private MailDropDownTitle CreateDropTitle(UUIItem uiItem)
 	{
 		return new MailDropDownTitle(uiItem);
 	}
 
-	// Token: 0x06010DB3 RID: 69043 RVA: 0x0041971A File Offset: 0x0041791A
+	// Token: 0x0600E244 RID: 57924 RVA: 0x00425FFA File Offset: 0x004241FA
 	private MailFilter GetMailFilterConfigData(EMailFilter type)
 	{
 		return MailModel.Instance.GetMailFilterConfigData(type);
 	}
 
-	// Token: 0x06010DB4 RID: 69044 RVA: 0x00419728 File Offset: 0x00417928
+	// Token: 0x0600E245 RID: 57925 RVA: 0x00426008 File Offset: 0x00424208
 	private void CallBackSelected(string mailId, int configId)
 	{
 		int index = this.CurrentMailDataList.FindIndex((MailData value) => value.Id == mailId);
@@ -823,10 +822,10 @@ public class MailBoxView : UiViewBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010DB5 RID: 69045 RVA: 0x004197D4 File Offset: 0x004179D4
+	// Token: 0x0600E246 RID: 57926 RVA: 0x004260B4 File Offset: 0x004242B4
 	private void ReloadDisplayMailDataList(MailDropDownItem dropDownItem, int defaultSelectedIndex = 0)
 	{
-		this.CurrentMailDataList = dropDownItem.GetFilteredMailList().ToList<MailData>();
+		this.CurrentMailDataList = new List<MailData>(dropDownItem.GetFilteredMailList());
 		this.SelectedMailIndex = this.CurrentMailDataList.FindIndex(delegate(MailData value)
 		{
 			string id = value.Id;
@@ -837,7 +836,7 @@ public class MailBoxView : UiViewBase
 		this.SelectedMailIndex = MathUtils.Instance.Clamp(this.SelectedMailIndex, 0, Math.Max(0, this.CurrentMailDataList.Count - 1));
 	}
 
-	// Token: 0x06010DB6 RID: 69046 RVA: 0x00419854 File Offset: 0x00417A54
+	// Token: 0x0600E247 RID: 57927 RVA: 0x00426134 File Offset: 0x00424334
 	private void CallBackPickMailView(EMailAttachmentPickType pickType)
 	{
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackPickMailView领取附件", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -877,7 +876,7 @@ public class MailBoxView : UiViewBase
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackPickMailView领取附件Finish", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010DB7 RID: 69047 RVA: 0x0041999C File Offset: 0x00417B9C
+	// Token: 0x0600E248 RID: 57928 RVA: 0x0042627C File Offset: 0x0042447C
 	private void CallBackDeleteMailView(IReadOnlyList<string> deletedMails)
 	{
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackDeleteMailView删除邮件", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -903,7 +902,7 @@ public class MailBoxView : UiViewBase
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackDeleteMailView删除邮件结束", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010DB8 RID: 69048 RVA: 0x00419AB0 File Offset: 0x00417CB0
+	// Token: 0x0600E249 RID: 57929 RVA: 0x00426390 File Offset: 0x00424590
 	private void CallBackPassivelyDeleteMailView()
 	{
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackPassivelyDeleteMailView被动删除邮件", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -928,7 +927,7 @@ public class MailBoxView : UiViewBase
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackPassivelyDeleteMailView被动删除邮件结束", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010DB9 RID: 69049 RVA: 0x00419BB0 File Offset: 0x00417DB0
+	// Token: 0x0600E24A RID: 57930 RVA: 0x00426490 File Offset: 0x00424690
 	private void CallBackAddMailView()
 	{
 		Log.Instance.Info(ELogModule.Mail, ELogAuthor.YZY, "邮件界面：CallBackAddMailView,添加新邮件", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -948,7 +947,7 @@ public class MailBoxView : UiViewBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010DBA RID: 69050 RVA: 0x00419C4C File Offset: 0x00417E4C
+	// Token: 0x0600E24B RID: 57931 RVA: 0x0042652C File Offset: 0x0042472C
 	private unsafe void OpenUrl(string link, string title = "", bool forceUseDefaultBrowser = false, bool ifLandscape = true)
 	{
 		Log instance = Log.Instance;
@@ -977,7 +976,7 @@ public class MailBoxView : UiViewBase
 		MailModel.Instance.OpenWebBrowser(extendExternalUrl3);
 	}
 
-	// Token: 0x06010DBB RID: 69051 RVA: 0x00419D48 File Offset: 0x00417F48
+	// Token: 0x0600E24C RID: 57932 RVA: 0x00426628 File Offset: 0x00424828
 	private void OnClickLink()
 	{
 		MailController.RecordMailJumpLog(this.SelectedMailData);
@@ -1000,17 +999,17 @@ public class MailBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010DBC RID: 69052 RVA: 0x00419E17 File Offset: 0x00418017
+	// Token: 0x0600E24D RID: 57933 RVA: 0x004266F7 File Offset: 0x004248F7
 	private void OnClickClose()
 	{
 		UiManager.Instance.CloseView(EUiViewName.MailBoxView, null);
 	}
 
-	// Token: 0x06010DBD RID: 69053 RVA: 0x00419E2C File Offset: 0x0041802C
+	// Token: 0x0600E24E RID: 57934 RVA: 0x0042670C File Offset: 0x0042490C
 	private unsafe void OnSelectDropItem(int index, EMailFilter data)
 	{
 		this.CurrentFilterState = data;
-		this.CurrentMailDataList = (this.DropDownList.GetDropDownItemObject(index) as MailDropDownItem).GetFilteredMailList().ToList<MailData>();
+		this.CurrentMailDataList = new List<MailData>((this.DropDownList.GetDropDownItemObject(index) as MailDropDownItem).GetFilteredMailList());
 		Log instance = Log.Instance;
 		ELogModule module = ELogModule.Mail;
 		ELogAuthor author = ELogAuthor.YZY;
@@ -1026,13 +1025,13 @@ public class MailBoxView : UiViewBase
 		this.RefreshMailScrollList(this.CurrentMailDataList, 0);
 	}
 
-	// Token: 0x06010DBE RID: 69054 RVA: 0x00419EF0 File Offset: 0x004180F0
+	// Token: 0x0600E24F RID: 57935 RVA: 0x004267D0 File Offset: 0x004249D0
 	private int GetSelectedIndex()
 	{
 		return this.SelectedMailIndex;
 	}
 
-	// Token: 0x06010DBF RID: 69055 RVA: 0x00419EF8 File Offset: 0x004180F8
+	// Token: 0x0600E250 RID: 57936 RVA: 0x004267D8 File Offset: 0x004249D8
 	private void OnSelectMailItem(int index, MailData data)
 	{
 		if (index < 0 || index >= this.CurrentMailDataList.Count || data == null)
@@ -1051,7 +1050,7 @@ public class MailBoxView : UiViewBase
 		data.SetWasScanned(1);
 	}
 
-	// Token: 0x06010DC0 RID: 69056 RVA: 0x00419F5C File Offset: 0x0041815C
+	// Token: 0x0600E251 RID: 57937 RVA: 0x0042683C File Offset: 0x00424A3C
 	private void OnClickMailOp()
 	{
 		if (this.SelectedMailData == null)
@@ -1099,132 +1098,132 @@ public class MailBoxView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew3);
 	}
 
-	// Token: 0x04008009 RID: 32777
+	// Token: 0x04008150 RID: 33104
 	private const int DEFAULT_MAIL_INDEX = 0;
 
-	// Token: 0x0400800A RID: 32778
+	// Token: 0x04008151 RID: 33105
 	private const int HOUR_PER_DAY = 24;
 
-	// Token: 0x0400800B RID: 32779
+	// Token: 0x04008152 RID: 33106
 	[Nullable(2)]
 	public MailData SelectedMailData;
 
-	// Token: 0x0400800C RID: 32780
+	// Token: 0x04008153 RID: 33107
 	private int SelectedMailIndex;
 
-	// Token: 0x0400800D RID: 32781
+	// Token: 0x04008154 RID: 33108
 	private PopupCaptionItem Caption;
 
-	// Token: 0x0400800E RID: 32782
+	// Token: 0x04008155 RID: 33109
 	private CommonDropDown<MailFilter, EMailFilter> DropDownList;
 
-	// Token: 0x0400800F RID: 32783
+	// Token: 0x04008156 RID: 33110
 	private DynamicScrollView<MailScrollItemNew, MailDynamicScrollItemNew, MailData> MailLoopScrollList;
 
-	// Token: 0x04008010 RID: 32784
+	// Token: 0x04008157 RID: 33111
 	private MailLinkButton LinkButton;
 
-	// Token: 0x04008011 RID: 32785
+	// Token: 0x04008158 RID: 33112
 	private LoopScrollView<CSharpScript.Game.Module.Mail.RewardItem, TItem> AttachmentsLayout;
 
-	// Token: 0x04008012 RID: 32786
+	// Token: 0x04008159 RID: 33113
 	private List<MailData> CurrentMailDataList;
 
-	// Token: 0x04008013 RID: 32787
+	// Token: 0x0400815A RID: 33114
 	private EMailFilter CurrentFilterState = EMailFilter.FilterAll;
 
-	// Token: 0x04008014 RID: 32788
+	// Token: 0x0400815B RID: 33115
 	private ButtonAndTextItem MailOpButton;
 
-	// Token: 0x04008015 RID: 32789
+	// Token: 0x0400815C RID: 33116
 	private ButtonAndTextItem DeleteAllReadButton;
 
-	// Token: 0x04008016 RID: 32790
+	// Token: 0x0400815D RID: 33117
 	private ButtonAndTextItem ReceiveAllRewardButton;
 
-	// Token: 0x04008017 RID: 32791
+	// Token: 0x0400815E RID: 33118
 	private LevelSequencePlayer MailSwitchSequence;
 
-	// Token: 0x04008018 RID: 32792
+	// Token: 0x0400815F RID: 33119
 	private UUIText InsufficientTipText;
 
-	// Token: 0x04008019 RID: 32793
+	// Token: 0x04008160 RID: 33120
 	private UUIText EmptyTipText;
 
-	// Token: 0x02008711 RID: 34577
+	// Token: 0x0200789A RID: 30874
 	[NullableContext(0)]
 	private class EMailComponents
 	{
-		// Token: 0x0402BED0 RID: 179920
+		// Token: 0x040271E9 RID: 160233
 		public const int Caption = 0;
 
-		// Token: 0x0402BED1 RID: 179921
+		// Token: 0x040271EA RID: 160234
 		public const int Dropdown = 1;
 
-		// Token: 0x0402BED2 RID: 179922
+		// Token: 0x040271EB RID: 160235
 		public const int MailLoopScrollView = 2;
 
-		// Token: 0x0402BED3 RID: 179923
+		// Token: 0x040271EC RID: 160236
 		public const int MailScrollItem = 3;
 
-		// Token: 0x0402BED4 RID: 179924
+		// Token: 0x040271ED RID: 160237
 		public const int BtnReceive = 4;
 
-		// Token: 0x0402BED5 RID: 179925
+		// Token: 0x040271EE RID: 160238
 		public const int BtnDelete = 5;
 
-		// Token: 0x0402BED6 RID: 179926
+		// Token: 0x040271EF RID: 160239
 		public const int SprStar = 6;
 
-		// Token: 0x0402BED7 RID: 179927
+		// Token: 0x040271F0 RID: 160240
 		public const int TxtMainTitle = 7;
 
-		// Token: 0x0402BED8 RID: 179928
+		// Token: 0x040271F1 RID: 160241
 		public const int TxtMainPoster = 8;
 
-		// Token: 0x0402BED9 RID: 179929
+		// Token: 0x040271F2 RID: 160242
 		public const int TxtPostTime = 9;
 
-		// Token: 0x0402BEDA RID: 179930
+		// Token: 0x040271F3 RID: 160243
 		public const int PnlLimitTime = 10;
 
-		// Token: 0x0402BEDB RID: 179931
+		// Token: 0x040271F4 RID: 160244
 		public const int TxtLimitTime = 11;
 
-		// Token: 0x0402BEDC RID: 179932
+		// Token: 0x040271F5 RID: 160245
 		public const int Content1 = 12;
 
-		// Token: 0x0402BEDD RID: 179933
+		// Token: 0x040271F6 RID: 160246
 		public const int TxtMainContent = 13;
 
-		// Token: 0x0402BEDE RID: 179934
+		// Token: 0x040271F7 RID: 160247
 		public const int BtnPageLink = 14;
 
-		// Token: 0x0402BEDF RID: 179935
+		// Token: 0x040271F8 RID: 160248
 		public const int PnlReward = 15;
 
-		// Token: 0x0402BEE0 RID: 179936
+		// Token: 0x040271F9 RID: 160249
 		public const int AttachItemList = 16;
 
-		// Token: 0x0402BEE1 RID: 179937
+		// Token: 0x040271FA RID: 160250
 		public const int AttachItem = 17;
 
-		// Token: 0x0402BEE2 RID: 179938
+		// Token: 0x040271FB RID: 160251
 		public const int BtnMailOp = 18;
 
-		// Token: 0x0402BEE3 RID: 179939
+		// Token: 0x040271FC RID: 160252
 		public const int PnlLeft = 19;
 
-		// Token: 0x0402BEE4 RID: 179940
+		// Token: 0x040271FD RID: 160253
 		public const int PnlRight = 20;
 
-		// Token: 0x0402BEE5 RID: 179941
+		// Token: 0x040271FE RID: 160254
 		public const int PnlEmpty = 21;
 
-		// Token: 0x0402BEE6 RID: 179942
+		// Token: 0x040271FF RID: 160255
 		public const int TogFavorite = 22;
 
-		// Token: 0x0402BEE7 RID: 179943
+		// Token: 0x04027200 RID: 160256
 		public const int PnlInsufficient = 23;
 	}
 }

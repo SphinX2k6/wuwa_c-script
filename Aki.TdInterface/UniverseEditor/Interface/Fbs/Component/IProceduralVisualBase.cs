@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005790 RID: 22416
+	// Token: 0x02005D97 RID: 23959
 	public struct IProceduralVisualBase : IFlatbufferObject
 	{
-		// Token: 0x1700A72E RID: 42798
-		// (get) Token: 0x06025945 RID: 153925 RVA: 0x0052EEBE File Offset: 0x0052D0BE
+		// Token: 0x1700B052 RID: 45138
+		// (get) Token: 0x06027E65 RID: 163429 RVA: 0x0057504A File Offset: 0x0057324A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025946 RID: 153926 RVA: 0x0052EECB File Offset: 0x0052D0CB
+		// Token: 0x06027E66 RID: 163430 RVA: 0x00575057 File Offset: 0x00573257
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025947 RID: 153927 RVA: 0x0052EED4 File Offset: 0x0052D0D4
+		// Token: 0x06027E67 RID: 163431 RVA: 0x00575060 File Offset: 0x00573260
 		public static IProceduralVisualBase GetRootAsIProceduralVisualBase(ByteBuffer _bb)
 		{
 			return IProceduralVisualBase.GetRootAsIProceduralVisualBase(_bb, default(IProceduralVisualBase));
 		}
 
-		// Token: 0x06025948 RID: 153928 RVA: 0x0052EEF0 File Offset: 0x0052D0F0
+		// Token: 0x06027E68 RID: 163432 RVA: 0x0057507C File Offset: 0x0057327C
 		public static IProceduralVisualBase GetRootAsIProceduralVisualBase(ByteBuffer _bb, IProceduralVisualBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025949 RID: 153929 RVA: 0x0052EF0D File Offset: 0x0052D10D
+		// Token: 0x06027E69 RID: 163433 RVA: 0x00575099 File Offset: 0x00573299
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602594A RID: 153930 RVA: 0x0052EF1C File Offset: 0x0052D11C
+		// Token: 0x06027E6A RID: 163434 RVA: 0x005750A8 File Offset: 0x005732A8
 		public IProceduralVisualBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A72F RID: 42799
-		// (get) Token: 0x0602594B RID: 153931 RVA: 0x0052EF2C File Offset: 0x0052D12C
+		// Token: 0x1700B053 RID: 45139
+		// (get) Token: 0x06027E6B RID: 163435 RVA: 0x005750B8 File Offset: 0x005732B8
 		public EProceduralVisualType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A730 RID: 42800
-		// (get) Token: 0x0602594C RID: 153932 RVA: 0x0052EF68 File Offset: 0x0052D168
+		// Token: 0x1700B054 RID: 45140
+		// (get) Token: 0x06027E6C RID: 163436 RVA: 0x005750F4 File Offset: 0x005732F4
 		public IConditionGroup? Condition
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602594D RID: 153933 RVA: 0x0052EFC5 File Offset: 0x0052D1C5
+		// Token: 0x06027E6D RID: 163437 RVA: 0x00575151 File Offset: 0x00573351
 		public static Offset<IProceduralVisualBase> CreateIProceduralVisualBase(FlatBufferBuilder builder, EProceduralVisualType Type = EProceduralVisualType.LookAt, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralVisualBase.EndIProceduralVisualBase(builder);
 		}
 
-		// Token: 0x0602594E RID: 153934 RVA: 0x0052EFE2 File Offset: 0x0052D1E2
+		// Token: 0x06027E6E RID: 163438 RVA: 0x0057516E File Offset: 0x0057336E
 		public static void StartIProceduralVisualBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602594F RID: 153935 RVA: 0x0052EFEB File Offset: 0x0052D1EB
+		// Token: 0x06027E6F RID: 163439 RVA: 0x00575177 File Offset: 0x00573377
 		public static void AddType(FlatBufferBuilder builder, EProceduralVisualType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025950 RID: 153936 RVA: 0x0052EFF6 File Offset: 0x0052D1F6
+		// Token: 0x06027E70 RID: 163440 RVA: 0x00575182 File Offset: 0x00573382
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(1, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06025951 RID: 153937 RVA: 0x0052F006 File Offset: 0x0052D206
+		// Token: 0x06027E71 RID: 163441 RVA: 0x00575192 File Offset: 0x00573392
 		public static Offset<IProceduralVisualBase> EndIProceduralVisualBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IProceduralVisualBase>(builder.EndTable());
 		}
 
-		// Token: 0x06025952 RID: 153938 RVA: 0x0052F014 File Offset: 0x0052D214
+		// Token: 0x06027E72 RID: 163442 RVA: 0x005751A0 File Offset: 0x005733A0
 		public IProceduralVisualBaseT UnPack()
 		{
 			IProceduralVisualBaseT proceduralVisualBaseT = new IProceduralVisualBaseT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return proceduralVisualBaseT;
 		}
 
-		// Token: 0x06025953 RID: 153939 RVA: 0x0052F030 File Offset: 0x0052D230
+		// Token: 0x06027E73 RID: 163443 RVA: 0x005751BC File Offset: 0x005733BC
 		public void UnPackTo(IProceduralVisualBaseT _o)
 		{
 			_o.Type = this.Type;
 			_o.Condition = ((this.Condition != null) ? this.Condition.Value.UnPack() : null);
 		}
 
-		// Token: 0x06025954 RID: 153940 RVA: 0x0052F078 File Offset: 0x0052D278
+		// Token: 0x06027E74 RID: 163444 RVA: 0x00575204 File Offset: 0x00573404
 		public static Offset<IProceduralVisualBase> Pack(FlatBufferBuilder builder, IProceduralVisualBaseT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralVisualBase.CreateIProceduralVisualBase(builder, _o.Type, conditionOffset);
 		}
 
-		// Token: 0x0400EC41 RID: 60481
+		// Token: 0x0400F92C RID: 63788
 		private Table __p;
 	}
 }

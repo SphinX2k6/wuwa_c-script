@@ -8,36 +8,36 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B48 RID: 15176
+	// Token: 0x020030C2 RID: 12482
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionDestructibleInfo.SSceneInteractionDestructibleInfo")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class SSceneInteractionDestructibleInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06021977 RID: 137591 RVA: 0x008F04E1 File Offset: 0x008EE6E1
+		// Token: 0x0601E024 RID: 122916 RVA: 0x009084D1 File Offset: 0x009066D1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSceneInteractionDestructibleInfo._ScriptStructPtr != 0) ? SSceneInteractionDestructibleInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionDestructibleInfo.SSceneInteractionDestructibleInfo", ref SSceneInteractionDestructibleInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17003758 RID: 14168
-		// (get) Token: 0x06021978 RID: 137592 RVA: 0x008F0505 File Offset: 0x008EE705
-		// (set) Token: 0x06021979 RID: 137593 RVA: 0x008F0519 File Offset: 0x008EE719
+		// Token: 0x17003189 RID: 12681
+		// (get) Token: 0x0601E025 RID: 122917 RVA: 0x009084F5 File Offset: 0x009066F5
+		// (set) Token: 0x0601E026 RID: 122918 RVA: 0x00908509 File Offset: 0x00906709
 		public unsafe TEnumAsByte<BPELevelPrefabDestructibleHitInfo> HitType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_HitType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_HitType) = value;
 			}
 		}
 
-		// Token: 0x17003759 RID: 14169
-		// (get) Token: 0x0602197A RID: 137594 RVA: 0x008F0530 File Offset: 0x008EE730
-		// (set) Token: 0x0602197B RID: 137595 RVA: 0x008F0573 File Offset: 0x008EE773
+		// Token: 0x1700318A RID: 12682
+		// (get) Token: 0x0601E027 RID: 122919 RVA: 0x00908520 File Offset: 0x00906720
+		// (set) Token: 0x0601E028 RID: 122920 RVA: 0x00908563 File Offset: 0x00906763
 		[Nullable(1)]
 		public SFloatRangeWithCurve ImpulseStrengthFloatRange
 		{
@@ -48,74 +48,67 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SFloatRangeWithCurve result;
 				if ((result = this._ImpulseStrengthFloatRange) == null)
 				{
-					result = (this._ImpulseStrengthFloatRange = new SFloatRangeWithCurve(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._ImpulseStrengthFloatRange = new SFloatRangeWithCurve(base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_ImpulseStrengthFloatRange, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatRangeWithCurve.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatRangeWithCurve.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionDestructibleInfo.__PropertyOffset_ImpulseStrengthFloatRange, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x0602197C RID: 137596 RVA: 0x008F0594 File Offset: 0x008EE794
+		// Token: 0x0601E029 RID: 122921 RVA: 0x00908584 File Offset: 0x00906784
 		public SSceneInteractionDestructibleInfo()
 		{
 		}
 
-		// Token: 0x0602197D RID: 137597 RVA: 0x008F059C File Offset: 0x008EE79C
-		public SSceneInteractionDestructibleInfo(TEnumAsByte<BPELevelPrefabDestructibleHitInfo> HitType, [Nullable(1)] SFloatRangeWithCurve ImpulseStrengthFloatRange)
-		{
-			this.HitType = HitType;
-			this.ImpulseStrengthFloatRange = ImpulseStrengthFloatRange;
-		}
-
-		// Token: 0x0602197E RID: 137598 RVA: 0x008F05B2 File Offset: 0x008EE7B2
+		// Token: 0x0601E02A RID: 122922 RVA: 0x0090858C File Offset: 0x0090678C
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSceneInteractionDestructibleInfo.StaticStruct();
 		}
 
-		// Token: 0x0602197F RID: 137599 RVA: 0x008F05BE File Offset: 0x008EE7BE
+		// Token: 0x0601E02B RID: 122923 RVA: 0x00908598 File Offset: 0x00906798
 		[NullableContext(2)]
 		public SSceneInteractionDestructibleInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06021980 RID: 137600 RVA: 0x008F05C8 File Offset: 0x008EE7C8
+		// Token: 0x0601E02C RID: 122924 RVA: 0x009085A2 File Offset: 0x009067A2
 		public SSceneInteractionDestructibleInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06021981 RID: 137601 RVA: 0x008F05D3 File Offset: 0x008EE7D3
+		// Token: 0x0601E02D RID: 122925 RVA: 0x009085AD File Offset: 0x009067AD
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSceneInteractionDestructibleInfo(Pointer, false, true);
 		}
 
-		// Token: 0x06021982 RID: 137602 RVA: 0x008F05DD File Offset: 0x008EE7DD
+		// Token: 0x0601E02E RID: 122926 RVA: 0x009085B7 File Offset: 0x009067B7
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSceneInteractionDestructibleInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010604 RID: 67076
+		// Token: 0x0400FDB6 RID: 64950
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionDestructibleInfo.SSceneInteractionDestructibleInfo";
 
-		// Token: 0x04010605 RID: 67077
+		// Token: 0x0400FDB7 RID: 64951
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010606 RID: 67078
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400FDB8 RID: 64952
+		internal static int __PropertyOffset_HitType;
 
-		// Token: 0x04010607 RID: 67079
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FDB9 RID: 64953
+		internal static int __PropertyOffset_ImpulseStrengthFloatRange;
 
-		// Token: 0x04010608 RID: 67080
+		// Token: 0x0400FDBA RID: 64954
 		[Nullable(2)]
 		private SFloatRangeWithCurve _ImpulseStrengthFloatRange;
 	}

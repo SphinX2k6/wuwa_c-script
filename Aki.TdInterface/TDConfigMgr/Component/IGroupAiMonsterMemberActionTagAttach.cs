@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F8 RID: 1016
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000451 RID: 1105
 	public class IGroupAiMonsterMemberActionTagAttach
 	{
-		// Token: 0x06001475 RID: 5237 RVA: 0x00041554 File Offset: 0x0003F754
+		// Token: 0x0600160F RID: 5647 RVA: 0x0004529C File Offset: 0x0004349C
 		private IGroupAiMonsterMemberActionTagAttach_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001476 RID: 5238 RVA: 0x0004158C File Offset: 0x0003F78C
+		// Token: 0x06001610 RID: 5648 RVA: 0x000452D4 File Offset: 0x000434D4
 		public static IGroupAiMonsterMemberActionTagAttach Create([Nullable(2)] IGroupAiMonsterMemberActionTagAttach instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001477 RID: 5239 RVA: 0x0004159F File Offset: 0x0003F79F
+		// Token: 0x06001611 RID: 5649 RVA: 0x000452E7 File Offset: 0x000434E7
 		public static IGroupAiMonsterMemberActionTagAttach CreateFromSetValue([Nullable(2)] IGroupAiMonsterMemberActionTagAttach_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001478 RID: 5240 RVA: 0x000415B2 File Offset: 0x0003F7B2
+		// Token: 0x06001612 RID: 5650 RVA: 0x000452FA File Offset: 0x000434FA
 		public IGroupAiMonsterMemberActionTagAttach_SetValue ToSetValue()
 		{
 			return new IGroupAiMonsterMemberActionTagAttach_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005A4 RID: 1444
-		// (get) Token: 0x06001479 RID: 5241 RVA: 0x000415D1 File Offset: 0x0003F7D1
-		// (set) Token: 0x0600147A RID: 5242 RVA: 0x000415FC File Offset: 0x0003F7FC
+		// Token: 0x1700060B RID: 1547
+		// (get) Token: 0x06001613 RID: 5651 RVA: 0x00045319 File Offset: 0x00043519
+		// (set) Token: 0x06001614 RID: 5652 RVA: 0x00045344 File Offset: 0x00043544
 		public virtual string ActionTag
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005A5 RID: 1445
-		// (get) Token: 0x0600147B RID: 5243 RVA: 0x0004160C File Offset: 0x0003F80C
-		// (set) Token: 0x0600147C RID: 5244 RVA: 0x00041646 File Offset: 0x0003F846
+		// Token: 0x1700060C RID: 1548
+		// (get) Token: 0x06001615 RID: 5653 RVA: 0x00045354 File Offset: 0x00043554
+		// (set) Token: 0x06001616 RID: 5654 RVA: 0x0004538E File Offset: 0x0004358E
 		public virtual int? AttachEntityId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001015 RID: 4117
+		// Token: 0x04001137 RID: 4407
 		[Nullable(2)]
 		protected IGroupAiMonsterMemberActionTagAttach FbInstance;
 
-		// Token: 0x04001016 RID: 4118
+		// Token: 0x04001138 RID: 4408
 		[Nullable(2)]
 		protected IGroupAiMonsterMemberActionTagAttach_SetValue PocoInterface;
 	}

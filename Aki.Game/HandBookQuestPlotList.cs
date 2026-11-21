@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E1A RID: 7706
+// Token: 0x020012DC RID: 4828
 [NullableContext(2)]
 [Nullable(0)]
 public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlotDynamicData>
 {
-	// Token: 0x0600EA4A RID: 59978 RVA: 0x003770B8 File Offset: 0x003752B8
+	// Token: 0x0600BE69 RID: 48745 RVA: 0x00382DC0 File Offset: 0x00380FC0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		};
 	}
 
-	// Token: 0x0600EA4B RID: 59979 RVA: 0x00377128 File Offset: 0x00375328
+	// Token: 0x0600BE6A RID: 48746 RVA: 0x00382E30 File Offset: 0x00381030
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -38,7 +38,7 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA4C RID: 59980 RVA: 0x00377174 File Offset: 0x00375374
+	// Token: 0x0600BE6B RID: 48747 RVA: 0x00382E7C File Offset: 0x0038107C
 	private UniTask InitChildItem()
 	{
 		HandBookQuestPlotList.<InitChildItem>d__9 <InitChildItem>d__;
@@ -49,7 +49,7 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA4D RID: 59981 RVA: 0x003771B8 File Offset: 0x003753B8
+	// Token: 0x0600BE6C RID: 48748 RVA: 0x00382EC0 File Offset: 0x003810C0
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(HandBookPlotDynamicData data)
@@ -69,7 +69,7 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		return base.GetItem(0).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600EA4E RID: 59982 RVA: 0x00377230 File Offset: 0x00375430
+	// Token: 0x0600BE6D RID: 48749 RVA: 0x00382F38 File Offset: 0x00381138
 	[NullableContext(1)]
 	public void Update(HandBookPlotDynamicData data, int index)
 	{
@@ -147,27 +147,27 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		}
 	}
 
-	// Token: 0x0600EA4F RID: 59983 RVA: 0x003773D8 File Offset: 0x003755D8
+	// Token: 0x0600BE6E RID: 48750 RVA: 0x003830E0 File Offset: 0x003812E0
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600EA50 RID: 59984 RVA: 0x003773E1 File Offset: 0x003755E1
+	// Token: 0x0600BE6F RID: 48751 RVA: 0x003830E9 File Offset: 0x003812E9
 	[NullableContext(1)]
 	public void BindClickOptionToggleBack(TSelectedOpenCallback onClickToggle)
 	{
 		this.OnClickOptionToggleBack = onClickToggle;
 	}
 
-	// Token: 0x0600EA51 RID: 59985 RVA: 0x003773EA File Offset: 0x003755EA
+	// Token: 0x0600BE70 RID: 48752 RVA: 0x003830F2 File Offset: 0x003812F2
 	[NullableContext(1)]
 	public void BindOnRefreshNode(TRefreshNode func)
 	{
 		this.OnRefreshNode = func;
 	}
 
-	// Token: 0x0600EA52 RID: 59986 RVA: 0x003773F3 File Offset: 0x003755F3
+	// Token: 0x0600BE71 RID: 48753 RVA: 0x003830FB File Offset: 0x003812FB
 	public UUIExtendToggle GetOptionToggle()
 	{
 		HandBookQuestPlotOption handBookQuestPlotOption = this.HandBookQuestPlotOption;
@@ -178,24 +178,24 @@ public class HandBookQuestPlotList : UiPanelBase, IDynamicScrollItem<HandBookPlo
 		return handBookQuestPlotOption.Toggle;
 	}
 
-	// Token: 0x04006CB8 RID: 27832
+	// Token: 0x04006D99 RID: 28057
 	private HandBookQuestPlotTalkItem HandBookQuestPlotTalkItem;
 
-	// Token: 0x04006CB9 RID: 27833
+	// Token: 0x04006D9A RID: 28058
 	private HandBookQuestPlotOption HandBookQuestPlotOption;
 
-	// Token: 0x04006CBA RID: 27834
+	// Token: 0x04006D9B RID: 28059
 	private HandBookQuestPlotNode HandBookQuestPlotNode;
 
-	// Token: 0x04006CBB RID: 27835
+	// Token: 0x04006D9C RID: 28060
 	private HandBookQuestPlotOptionTalker HandBookQuestPlotOptionTalker;
 
-	// Token: 0x04006CBC RID: 27836
+	// Token: 0x04006D9D RID: 28061
 	private TSelectedOpenCallback OnClickOptionToggleBack;
 
-	// Token: 0x04006CBD RID: 27837
+	// Token: 0x04006D9E RID: 28062
 	private TRefreshNode OnRefreshNode;
 
-	// Token: 0x04006CBE RID: 27838
+	// Token: 0x04006D9F RID: 28063
 	public HandBookPlotDynamicData OptionData;
 }

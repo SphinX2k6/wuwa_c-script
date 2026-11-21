@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200076F RID: 1903
+	// Token: 0x02000155 RID: 341
 	[UnrealObjectPath("/Script/CoreUObject.UInt32Property")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UUInt32Property : UNumericProperty, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060063DC RID: 25564 RVA: 0x0008F606 File Offset: 0x0008D806
+		// Token: 0x06001333 RID: 4915 RVA: 0x0001E4E2 File Offset: 0x0001C6E2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUInt32Property._ClassPtr;
 		}
 
-		// Token: 0x060063DD RID: 25565 RVA: 0x0008F614 File Offset: 0x0008D814
+		// Token: 0x06001334 RID: 4916 RVA: 0x0001E4F0 File Offset: 0x0001C6F0
 		public UUInt32Property() : this(BuiltinUtils.AllocNativeUObject(UUInt32Property.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060063DE RID: 25566 RVA: 0x0008F63C File Offset: 0x0008D83C
+		// Token: 0x06001335 RID: 4917 RVA: 0x0001E518 File Offset: 0x0001C718
 		[NullableContext(1)]
 		public UUInt32Property(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUInt32Property.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060063DF RID: 25567 RVA: 0x0008F66F File Offset: 0x0008D86F
+		// Token: 0x06001336 RID: 4918 RVA: 0x0001E54B File Offset: 0x0001C74B
 		static UUInt32Property()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.UInt32Property");
 		}
 
-		// Token: 0x060063E0 RID: 25568 RVA: 0x0008F67D File Offset: 0x0008D87D
+		// Token: 0x06001337 RID: 4919 RVA: 0x0001E559 File Offset: 0x0001C759
 		protected UUInt32Property(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002FE1 RID: 12257
+		// Token: 0x04000617 RID: 1559
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/CoreUObject.UInt32Property";
 
-		// Token: 0x04002FE2 RID: 12258
+		// Token: 0x04000618 RID: 1560
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002FE3 RID: 12259
+		// Token: 0x04000619 RID: 1561
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

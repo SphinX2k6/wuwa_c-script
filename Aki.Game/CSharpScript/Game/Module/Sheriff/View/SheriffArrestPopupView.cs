@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C55 RID: 19541
+	// Token: 0x02003C06 RID: 15366
 	public class SheriffArrestPopupView : UiViewBase
 	{
-		// Token: 0x06032862 RID: 206946 RVA: 0x00BC4BCF File Offset: 0x00BC2DCF
+		// Token: 0x06027615 RID: 161301 RVA: 0x00B0981B File Offset: 0x00B07A1B
 		[NullableContext(1)]
 		public SheriffArrestPopupView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032863 RID: 206947 RVA: 0x00BC4BD8 File Offset: 0x00BC2DD8
+		// Token: 0x06027616 RID: 161302 RVA: 0x00B09824 File Offset: 0x00B07A24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032864 RID: 206948 RVA: 0x00BC4C64 File Offset: 0x00BC2E64
+		// Token: 0x06027617 RID: 161303 RVA: 0x00B098B0 File Offset: 0x00B07AB0
 		protected override void OnStart()
 		{
 			SheriffArrestPopupViewData sheriffArrestPopupViewData = this.OpenParam as SheriffArrestPopupViewData;
@@ -67,22 +67,22 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			}
 		}
 
-		// Token: 0x06032865 RID: 206949 RVA: 0x00BC4DCC File Offset: 0x00BC2FCC
+		// Token: 0x06027618 RID: 161304 RVA: 0x00B09A18 File Offset: 0x00B07C18
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200ADF9 RID: 44537
+		// Token: 0x02009817 RID: 38935
 		private static class EComponents
 		{
-			// Token: 0x04034D79 RID: 216441
+			// Token: 0x0402F71E RID: 194334
 			public const int TxtName = 0;
 
-			// Token: 0x04034D7A RID: 216442
+			// Token: 0x0402F71F RID: 194335
 			public const int TxtTips = 1;
 
-			// Token: 0x04034D7B RID: 216443
+			// Token: 0x0402F720 RID: 194336
 			public const int ImgIcon = 2;
 		}
 	}

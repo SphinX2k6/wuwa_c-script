@@ -9,7 +9,7 @@ using CSharpScript.Typing;
 [LogJsonSerializable]
 public class LogReportRecord : ILogRecord
 {
-	// Token: 0x0600012D RID: 301 RVA: 0x000088E8 File Offset: 0x00006AE8
+	// Token: 0x0600012F RID: 303 RVA: 0x00008654 File Offset: 0x00006854
 	public LogReportRecord(int playerId, int num, [Nullable(1)] StringBuilder detail, string p4v = null, string br = null)
 	{
 		this.PlayerId = playerId;
@@ -19,25 +19,25 @@ public class LogReportRecord : ILogRecord
 		this.Br = br;
 	}
 
-	// Token: 0x04000134 RID: 308
+	// Token: 0x04000135 RID: 309
 	public readonly int Sp = (KuroApplication.IsBuildShipping() > false) ? 1 : 0;
 
-	// Token: 0x04000135 RID: 309
+	// Token: 0x04000136 RID: 310
 	public readonly int? Ed = KuroApplication.IsWithEditor() ? new int?(1) : null;
 
-	// Token: 0x04000136 RID: 310
+	// Token: 0x04000137 RID: 311
 	public readonly int PlayerId;
 
-	// Token: 0x04000137 RID: 311
+	// Token: 0x04000138 RID: 312
 	public readonly int Num;
 
-	// Token: 0x04000138 RID: 312
+	// Token: 0x04000139 RID: 313
 	[Nullable(1)]
 	public readonly StringBuilder Detail;
 
-	// Token: 0x04000139 RID: 313
+	// Token: 0x0400013A RID: 314
 	public string P4V;
 
-	// Token: 0x0400013A RID: 314
+	// Token: 0x0400013B RID: 315
 	public string Br;
 }

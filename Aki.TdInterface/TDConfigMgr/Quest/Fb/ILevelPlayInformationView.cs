@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012CE RID: 4814
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001414 RID: 5140
 	public class ILevelPlayInformationView : IInformationViewType
 	{
-		// Token: 0x06006E21 RID: 28193 RVA: 0x0010A6B8 File Offset: 0x001088B8
+		// Token: 0x0600749F RID: 29855 RVA: 0x00118948 File Offset: 0x00116B48
 		public static ILevelPlayInformationView Create(ILevelPlayInformationView? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002258 RID: 8792
-		// (get) Token: 0x06006E22 RID: 28194 RVA: 0x0010A6D7 File Offset: 0x001088D7
+		// Token: 0x17002419 RID: 9241
+		// (get) Token: 0x060074A0 RID: 29856 RVA: 0x00118967 File Offset: 0x00116B67
 		public override EInformationViewType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002259 RID: 8793
-		// (get) Token: 0x06006E23 RID: 28195 RVA: 0x0010A6E4 File Offset: 0x001088E4
+		// Token: 0x1700241A RID: 9242
+		// (get) Token: 0x060074A1 RID: 29857 RVA: 0x00118974 File Offset: 0x00116B74
 		public virtual List<ILevelPlayInformation> InformationConfig
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F1E RID: 16158
+		// Token: 0x0400428C RID: 17036
 		private ILevelPlayInformationView Instance;
 
-		// Token: 0x04003F1F RID: 16159
+		// Token: 0x0400428D RID: 17037
 		private List<ILevelPlayInformation> _InformationConfigCache;
 
-		// Token: 0x04003F20 RID: 16160
+		// Token: 0x0400428E RID: 17038
 		private bool _InformationConfigInited;
 	}
 }

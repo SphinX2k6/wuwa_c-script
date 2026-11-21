@@ -3,45 +3,45 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C7 RID: 5831
+	// Token: 0x02001841 RID: 6209
 	[EnumExtensions]
 	public enum ETalkItemType
 	{
-		// Token: 0x04004EB7 RID: 20151
+		// Token: 0x040052DD RID: 21213
 		Talk,
-		// Token: 0x04004EB8 RID: 20152
+		// Token: 0x040052DE RID: 21214
 		Option,
-		// Token: 0x04004EB9 RID: 20153
+		// Token: 0x040052DF RID: 21215
 		CenterText,
-		// Token: 0x04004EBA RID: 20154
+		// Token: 0x040052E0 RID: 21216
 		SystemOption,
-		// Token: 0x04004EBB RID: 20155
+		// Token: 0x040052E1 RID: 21217
 		QTE,
-		// Token: 0x04004EBC RID: 20156
+		// Token: 0x040052E2 RID: 21218
 		NoTextItem,
-		// Token: 0x04004EBD RID: 20157
+		// Token: 0x040052E3 RID: 21219
 		PhoneMessage,
-		// Token: 0x04004EBE RID: 20158
+		// Token: 0x040052E4 RID: 21220
 		AvgTalk,
-		// Token: 0x04004EBF RID: 20159
+		// Token: 0x040052E5 RID: 21221
 		AvgEnter,
-		// Token: 0x04004EC0 RID: 20160
+		// Token: 0x040052E6 RID: 21222
 		AvgExit,
-		// Token: 0x04004EC1 RID: 20161
+		// Token: 0x040052E7 RID: 21223
 		AvgOption,
-		// Token: 0x04004EC2 RID: 20162
+		// Token: 0x040052E8 RID: 21224
 		AvgNarration,
-		// Token: 0x04004EC3 RID: 20163
+		// Token: 0x040052E9 RID: 21225
 		AvgCenterText,
-		// Token: 0x04004EC4 RID: 20164
+		// Token: 0x040052EA RID: 21226
 		VisualNovelTalk,
-		// Token: 0x04004EC5 RID: 20165
+		// Token: 0x040052EB RID: 21227
 		VisualNovelNoTextItem,
-		// Token: 0x04004EC6 RID: 20166
+		// Token: 0x040052EC RID: 21228
 		VisualNovelNarration,
-		// Token: 0x04004EC7 RID: 20167
+		// Token: 0x040052ED RID: 21229
 		VisualNovelOption,
-		// Token: 0x04004EC8 RID: 20168
+		// Token: 0x040052EE RID: 21230
 		VisualNovelCenterText
 	}
 }

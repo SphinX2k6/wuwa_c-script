@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D5 RID: 9941
+	// Token: 0x02002999 RID: 10649
 	public class ItemFoundationMatch : ActionParams
 	{
-		// Token: 0x0600DE31 RID: 56881 RVA: 0x0020F9CF File Offset: 0x0020DBCF
-		[NullableContext(1)]
+		// Token: 0x0600EC0D RID: 60429 RVA: 0x0022C20F File Offset: 0x0022A40F
 		public static ItemFoundationMatch Create(IItemFoundationMatch? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004249 RID: 16969
-		// (get) Token: 0x0600DE32 RID: 56882 RVA: 0x0020F9EE File Offset: 0x0020DBEE
+		// Token: 0x17004589 RID: 17801
+		// (get) Token: 0x0600EC0E RID: 60430 RVA: 0x0022C22E File Offset: 0x0022A42E
 		public virtual int MatchEntityId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B5D RID: 31581
+		// Token: 0x040081FD RID: 33277
 		private IItemFoundationMatch Instance;
 	}
 }

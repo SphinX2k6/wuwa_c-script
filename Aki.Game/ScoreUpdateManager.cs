@@ -7,14 +7,14 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public class ScoreUpdateManager
 {
-	// Token: 0x06000CD6 RID: 3286 RVA: 0x00043F8E File Offset: 0x0004218E
+	// Token: 0x06000CDC RID: 3292 RVA: 0x00044B22 File Offset: 0x00042D22
 	public ScoreUpdateManager(float maxUpdateValue = 0.5f, int maxUpdateCount = 5)
 	{
 		this.MaxUpdateValue = maxUpdateValue;
 		this.MaxUpdateCount = maxUpdateCount;
 	}
 
-	// Token: 0x06000CD7 RID: 3287 RVA: 0x00043FBC File Offset: 0x000421BC
+	// Token: 0x06000CDD RID: 3293 RVA: 0x00044B50 File Offset: 0x00042D50
 	public void AddScore(IScoreUpdateObject obj, int addScore = 1)
 	{
 		if (addScore < 1)
@@ -40,7 +40,7 @@ public class ScoreUpdateManager
 		this.ObjectScores[obj] = num2;
 	}
 
-	// Token: 0x06000CD8 RID: 3288 RVA: 0x00044068 File Offset: 0x00042268
+	// Token: 0x06000CDE RID: 3294 RVA: 0x00044BFC File Offset: 0x00042DFC
 	public void RemoveObject(IScoreUpdateObject obj)
 	{
 		int index;
@@ -51,7 +51,7 @@ public class ScoreUpdateManager
 		this.ObjectScores.Remove(obj);
 	}
 
-	// Token: 0x06000CD9 RID: 3289 RVA: 0x000440A8 File Offset: 0x000422A8
+	// Token: 0x06000CDF RID: 3295 RVA: 0x00044C3C File Offset: 0x00042E3C
 	public unsafe void Update()
 	{
 		if (this.MaxScore == 0)
@@ -95,22 +95,22 @@ public class ScoreUpdateManager
 		}
 	}
 
-	// Token: 0x04000A27 RID: 2599
+	// Token: 0x04000A2F RID: 2607
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatObj = Stat.Create("ScoreUpdate AiPerception", "", "");
 
-	// Token: 0x04000A28 RID: 2600
+	// Token: 0x04000A30 RID: 2608
 	private readonly List<HashSet<IScoreUpdateObject>> Objects = new List<HashSet<IScoreUpdateObject>>();
 
-	// Token: 0x04000A29 RID: 2601
+	// Token: 0x04000A31 RID: 2609
 	private readonly Dictionary<IScoreUpdateObject, int> ObjectScores = new Dictionary<IScoreUpdateObject, int>();
 
-	// Token: 0x04000A2A RID: 2602
+	// Token: 0x04000A32 RID: 2610
 	private int MaxScore;
 
-	// Token: 0x04000A2B RID: 2603
+	// Token: 0x04000A33 RID: 2611
 	private readonly float MaxUpdateValue;
 
-	// Token: 0x04000A2C RID: 2604
+	// Token: 0x04000A34 RID: 2612
 	private readonly int MaxUpdateCount;
 }

@@ -3,54 +3,54 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060B7 RID: 24759
+	// Token: 0x02005035 RID: 20533
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SolarSpeedRewardCellPanelData : ISolarSpeedRewardCellPanelData
 	{
-		// Token: 0x170090DA RID: 37082
-		// (get) Token: 0x0603E995 RID: 256405 RVA: 0x00F204C2 File Offset: 0x00F1E6C2
-		// (set) Token: 0x0603E996 RID: 256406 RVA: 0x00F204CA File Offset: 0x00F1E6CA
+		// Token: 0x1700643C RID: 25660
+		// (get) Token: 0x06033659 RID: 210521 RVA: 0x00E67286 File Offset: 0x00E65486
+		// (set) Token: 0x0603365A RID: 210522 RVA: 0x00E6728E File Offset: 0x00E6548E
 		public int RewardId { get; set; }
 
-		// Token: 0x170090DB RID: 37083
-		// (get) Token: 0x0603E997 RID: 256407 RVA: 0x00F204D3 File Offset: 0x00F1E6D3
-		// (set) Token: 0x0603E998 RID: 256408 RVA: 0x00F204DB File Offset: 0x00F1E6DB
+		// Token: 0x1700643D RID: 25661
+		// (get) Token: 0x0603365B RID: 210523 RVA: 0x00E67297 File Offset: 0x00E65497
+		// (set) Token: 0x0603365C RID: 210524 RVA: 0x00E6729F File Offset: 0x00E6549F
 		public string TitleTextId { get; set; }
 
-		// Token: 0x170090DC RID: 37084
-		// (get) Token: 0x0603E999 RID: 256409 RVA: 0x00F204E4 File Offset: 0x00F1E6E4
-		// (set) Token: 0x0603E99A RID: 256410 RVA: 0x00F204EC File Offset: 0x00F1E6EC
+		// Token: 0x1700643E RID: 25662
+		// (get) Token: 0x0603365D RID: 210525 RVA: 0x00E672A8 File Offset: 0x00E654A8
+		// (set) Token: 0x0603365E RID: 210526 RVA: 0x00E672B0 File Offset: 0x00E654B0
 		public string ProgressTextId { get; set; }
 
-		// Token: 0x170090DD RID: 37085
-		// (get) Token: 0x0603E99B RID: 256411 RVA: 0x00F204F5 File Offset: 0x00F1E6F5
-		// (set) Token: 0x0603E99C RID: 256412 RVA: 0x00F204FD File Offset: 0x00F1E6FD
+		// Token: 0x1700643F RID: 25663
+		// (get) Token: 0x0603365F RID: 210527 RVA: 0x00E672B9 File Offset: 0x00E654B9
+		// (set) Token: 0x06033660 RID: 210528 RVA: 0x00E672C1 File Offset: 0x00E654C1
 		public string[] ProgressTextArgs { get; set; }
 
-		// Token: 0x170090DE RID: 37086
-		// (get) Token: 0x0603E99D RID: 256413 RVA: 0x00F20506 File Offset: 0x00F1E706
-		// (set) Token: 0x0603E99E RID: 256414 RVA: 0x00F2050E File Offset: 0x00F1E70E
+		// Token: 0x17006440 RID: 25664
+		// (get) Token: 0x06033661 RID: 210529 RVA: 0x00E672CA File Offset: 0x00E654CA
+		// (set) Token: 0x06033662 RID: 210530 RVA: 0x00E672D2 File Offset: 0x00E654D2
 		public TItem[] ItemsData { get; set; }
 
-		// Token: 0x170090DF RID: 37087
-		// (get) Token: 0x0603E99F RID: 256415 RVA: 0x00F20517 File Offset: 0x00F1E717
-		// (set) Token: 0x0603E9A0 RID: 256416 RVA: 0x00F2051F File Offset: 0x00F1E71F
+		// Token: 0x17006441 RID: 25665
+		// (get) Token: 0x06033663 RID: 210531 RVA: 0x00E672DB File Offset: 0x00E654DB
+		// (set) Token: 0x06033664 RID: 210532 RVA: 0x00E672E3 File Offset: 0x00E654E3
 		public string ButtonTextId { get; set; }
 
-		// Token: 0x170090E0 RID: 37088
-		// (get) Token: 0x0603E9A1 RID: 256417 RVA: 0x00F20528 File Offset: 0x00F1E728
-		// (set) Token: 0x0603E9A2 RID: 256418 RVA: 0x00F20530 File Offset: 0x00F1E730
+		// Token: 0x17006442 RID: 25666
+		// (get) Token: 0x06033665 RID: 210533 RVA: 0x00E672EC File Offset: 0x00E654EC
+		// (set) Token: 0x06033666 RID: 210534 RVA: 0x00E672F4 File Offset: 0x00E654F4
 		public bool ButtonActive { get; set; }
 
-		// Token: 0x170090E1 RID: 37089
-		// (get) Token: 0x0603E9A3 RID: 256419 RVA: 0x00F20539 File Offset: 0x00F1E739
-		// (set) Token: 0x0603E9A4 RID: 256420 RVA: 0x00F20541 File Offset: 0x00F1E741
+		// Token: 0x17006443 RID: 25667
+		// (get) Token: 0x06033667 RID: 210535 RVA: 0x00E672FD File Offset: 0x00E654FD
+		// (set) Token: 0x06033668 RID: 210536 RVA: 0x00E67305 File Offset: 0x00E65505
 		public bool RightActive { get; set; }
 
-		// Token: 0x170090E2 RID: 37090
-		// (get) Token: 0x0603E9A5 RID: 256421 RVA: 0x00F2054A File Offset: 0x00F1E74A
-		// (set) Token: 0x0603E9A6 RID: 256422 RVA: 0x00F20552 File Offset: 0x00F1E752
+		// Token: 0x17006444 RID: 25668
+		// (get) Token: 0x06033669 RID: 210537 RVA: 0x00E6730E File Offset: 0x00E6550E
+		// (set) Token: 0x0603366A RID: 210538 RVA: 0x00E67316 File Offset: 0x00E65516
 		public bool DoneSpriteActive { get; set; }
 	}
 }

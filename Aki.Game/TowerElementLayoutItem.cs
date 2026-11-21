@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BEF RID: 11247
+// Token: 0x0200216A RID: 8554
 public class TowerElementLayoutItem : UiPanelBase
 {
-	// Token: 0x060175B9 RID: 95673 RVA: 0x005F0DF8 File Offset: 0x005EEFF8
+	// Token: 0x06014FEA RID: 85994 RVA: 0x0061D958 File Offset: 0x0061BB58
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,13 +23,13 @@ public class TowerElementLayoutItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060175BA RID: 95674 RVA: 0x005F0E61 File Offset: 0x005EF061
+	// Token: 0x06014FEB RID: 85995 RVA: 0x0061D9C1 File Offset: 0x0061BBC1
 	protected override void OnStart()
 	{
 		this.ElementLayout = new GenericLayout<TowerElementItem, int>(base.GetHorizontalLayout(0), new Func<TowerElementItem>(this.InitElementItem), null, false, true);
 	}
 
-	// Token: 0x060175BB RID: 95675 RVA: 0x005F0E84 File Offset: 0x005EF084
+	// Token: 0x06014FEC RID: 85996 RVA: 0x0061D9E4 File Offset: 0x0061BBE4
 	[NullableContext(1)]
 	public void Refresh(int[] recommendElement)
 	{
@@ -38,20 +38,20 @@ public class TowerElementLayoutItem : UiPanelBase
 		this.ElementLayout.RefreshByData(recommendElement, null, false);
 	}
 
-	// Token: 0x060175BC RID: 95676 RVA: 0x005F0EB2 File Offset: 0x005EF0B2
+	// Token: 0x06014FED RID: 85997 RVA: 0x0061DA12 File Offset: 0x0061BC12
 	[NullableContext(1)]
 	private TowerElementItem InitElementItem()
 	{
 		return new TowerElementItem();
 	}
 
-	// Token: 0x060175BD RID: 95677 RVA: 0x005F0EB9 File Offset: 0x005EF0B9
+	// Token: 0x06014FEE RID: 85998 RVA: 0x0061DA19 File Offset: 0x0061BC19
 	protected override void OnBeforeDestroy()
 	{
 		this.ElementLayout = null;
 	}
 
-	// Token: 0x0400AECD RID: 44749
+	// Token: 0x0400B2D2 RID: 45778
 	[Nullable(new byte[]
 	{
 		2,
@@ -59,12 +59,12 @@ public class TowerElementLayoutItem : UiPanelBase
 	})]
 	private GenericLayout<TowerElementItem, int> ElementLayout;
 
-	// Token: 0x020091AC RID: 37292
+	// Token: 0x020083EF RID: 33775
 	private enum EChildType
 	{
-		// Token: 0x0402F21C RID: 193052
+		// Token: 0x0402A91D RID: 174365
 		ElementLayout,
-		// Token: 0x0402F21D RID: 193053
+		// Token: 0x0402A91E RID: 174366
 		ElementItem
 	}
 }

@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BAB RID: 7083
+// Token: 0x0200106A RID: 4202
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 {
-	// Token: 0x0600D311 RID: 54033 RVA: 0x003086C0 File Offset: 0x003068C0
+	// Token: 0x0600A722 RID: 42786 RVA: 0x003137A0 File Offset: 0x003119A0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -42,7 +42,7 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D312 RID: 54034 RVA: 0x0030880C File Offset: 0x00306A0C
+	// Token: 0x0600A723 RID: 42787 RVA: 0x003138EC File Offset: 0x00311AEC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchUiRoleSkillItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D313 RID: 54035 RVA: 0x00308850 File Offset: 0x00306A50
+	// Token: 0x0600A724 RID: 42788 RVA: 0x00313930 File Offset: 0x00311B30
 	public override UniTask PlayShowAnim()
 	{
 		FloroRanchUiRoleSkillItem.<PlayShowAnim>d__5 <PlayShowAnim>d__;
@@ -64,7 +64,7 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		return <PlayShowAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D314 RID: 54036 RVA: 0x00308894 File Offset: 0x00306A94
+	// Token: 0x0600A725 RID: 42789 RVA: 0x00313974 File Offset: 0x00311B74
 	public override UniTask PlaySkillAnim()
 	{
 		FloroRanchUiRoleSkillItem.<PlaySkillAnim>d__6 <PlaySkillAnim>d__;
@@ -75,7 +75,7 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		return <PlaySkillAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D315 RID: 54037 RVA: 0x003088D8 File Offset: 0x00306AD8
+	// Token: 0x0600A726 RID: 42790 RVA: 0x003139B8 File Offset: 0x00311BB8
 	public override UniTask PlayHideAnim()
 	{
 		FloroRanchUiRoleSkillItem.<PlayHideAnim>d__7 <PlayHideAnim>d__;
@@ -86,19 +86,19 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		return <PlayHideAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D316 RID: 54038 RVA: 0x0030891B File Offset: 0x00306B1B
+	// Token: 0x0600A727 RID: 42791 RVA: 0x003139FB File Offset: 0x00311BFB
 	public override void Pause()
 	{
 		base.GetSpine(1).SetTimeScale(0f);
 	}
 
-	// Token: 0x0600D317 RID: 54039 RVA: 0x0030892E File Offset: 0x00306B2E
+	// Token: 0x0600A728 RID: 42792 RVA: 0x00313A0E File Offset: 0x00311C0E
 	public override void Resume()
 	{
 		base.GetSpine(1).SetTimeScale(1f);
 	}
 
-	// Token: 0x0600D318 RID: 54040 RVA: 0x00308944 File Offset: 0x00306B44
+	// Token: 0x0600A729 RID: 42793 RVA: 0x00313A24 File Offset: 0x00311C24
 	public override UniTask RefreshItem()
 	{
 		FloroRanchUiRoleSkillItem.<RefreshItem>d__10 <RefreshItem>d__;
@@ -109,19 +109,19 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		return <RefreshItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D319 RID: 54041 RVA: 0x00308987 File Offset: 0x00306B87
+	// Token: 0x0600A72A RID: 42794 RVA: 0x00313A67 File Offset: 0x00311C67
 	public override FTransform? GetRewardPopTransform()
 	{
 		return new FTransform?(base.GetItem(5).GetOwner().GetTransform());
 	}
 
-	// Token: 0x0600D31A RID: 54042 RVA: 0x0030899F File Offset: 0x00306B9F
+	// Token: 0x0600A72B RID: 42795 RVA: 0x00313A7F File Offset: 0x00311C7F
 	public void BindClickSkillCallback(Action<FloroRanchEntityBase> callback)
 	{
 		this.OnClickSkillCallback = callback;
 	}
 
-	// Token: 0x0600D31B RID: 54043 RVA: 0x003089A8 File Offset: 0x00306BA8
+	// Token: 0x0600A72C RID: 42796 RVA: 0x00313A88 File Offset: 0x00311C88
 	private void OnClickSkillButton()
 	{
 		Action<FloroRanchEntityBase> onClickSkillCallback = this.OnClickSkillCallback;
@@ -132,37 +132,37 @@ public class FloroRanchUiRoleSkillItem : FloroRanchUiItemBase
 		onClickSkillCallback(this.Entity);
 	}
 
-	// Token: 0x040060B2 RID: 24754
+	// Token: 0x04006181 RID: 24961
 	private FloroRanchEntityDebugInfoItem DebugInfoItem;
 
-	// Token: 0x040060B3 RID: 24755
+	// Token: 0x04006182 RID: 24962
 	private Action<FloroRanchEntityBase> OnClickSkillCallback = delegate(FloroRanchEntityBase entity)
 	{
 	};
 
-	// Token: 0x0200815D RID: 33117
+	// Token: 0x020072EB RID: 29419
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402A382 RID: 172930
+		// Token: 0x040256B6 RID: 153270
 		public const int SkillChatText = 0;
 
-		// Token: 0x0402A383 RID: 172931
+		// Token: 0x040256B7 RID: 153271
 		public const int RoleSpine = 1;
 
-		// Token: 0x0402A384 RID: 172932
+		// Token: 0x040256B8 RID: 153272
 		public const int RemainUseTimeText = 2;
 
-		// Token: 0x0402A385 RID: 172933
+		// Token: 0x040256B9 RID: 153273
 		public const int RoleSkillButton = 3;
 
-		// Token: 0x0402A386 RID: 172934
+		// Token: 0x040256BA RID: 153274
 		public const int SkillIconTexture = 4;
 
-		// Token: 0x0402A387 RID: 172935
+		// Token: 0x040256BB RID: 153275
 		public const int RoleRootItem = 5;
 
-		// Token: 0x0402A388 RID: 172936
+		// Token: 0x040256BC RID: 153276
 		public const int ActiveNiagara = 6;
 	}
 }

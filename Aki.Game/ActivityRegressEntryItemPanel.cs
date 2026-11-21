@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200148F RID: 5263
+// Token: 0x02000943 RID: 2371
 public class ActivityRegressEntryItemPanel : UiPanelBase
 {
-	// Token: 0x06009513 RID: 38163 RVA: 0x00202734 File Offset: 0x00200934
+	// Token: 0x060068A8 RID: 26792 RVA: 0x0020B69C File Offset: 0x0020989C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class ActivityRegressEntryItemPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06009514 RID: 38164 RVA: 0x002027C8 File Offset: 0x002009C8
+	// Token: 0x060068A9 RID: 26793 RVA: 0x0020B730 File Offset: 0x00209930
 	private void OnEntryBtnClick()
 	{
 		if (!ActivityRegressModel.Instance.CheckIfEntryOpen(this.Config.Value).Item1)
@@ -55,7 +55,7 @@ public class ActivityRegressEntryItemPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009515 RID: 38165 RVA: 0x002028A0 File Offset: 0x00200AA0
+	// Token: 0x060068AA RID: 26794 RVA: 0x0020B808 File Offset: 0x00209A08
 	public void RefreshData(EActivityRegressEntranceType entryType, RegressEntry? config)
 	{
 		this.EntryType = new EActivityRegressEntranceType?(entryType);
@@ -68,7 +68,7 @@ public class ActivityRegressEntryItemPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009516 RID: 38166 RVA: 0x002028D8 File Offset: 0x00200AD8
+	// Token: 0x060068AB RID: 26795 RVA: 0x0020B840 File Offset: 0x00209A40
 	private void RefreshView()
 	{
 		if (this.Config == null)
@@ -89,7 +89,7 @@ public class ActivityRegressEntryItemPanel : UiPanelBase
 		base.SetTextureByPath(currentBgResourcePathByGender, texture, null, null);
 	}
 
-	// Token: 0x06009517 RID: 38167 RVA: 0x002029BC File Offset: 0x00200BBC
+	// Token: 0x060068AC RID: 26796 RVA: 0x0020B924 File Offset: 0x00209B24
 	[NullableContext(1)]
 	private string GetCurrentBgResourcePathByGender(RegressEntry config)
 	{
@@ -105,25 +105,25 @@ public class ActivityRegressEntryItemPanel : UiPanelBase
 		return "";
 	}
 
-	// Token: 0x040041F8 RID: 16888
+	// Token: 0x04004290 RID: 17040
 	private EActivityRegressEntranceType? EntryType;
 
-	// Token: 0x040041F9 RID: 16889
+	// Token: 0x04004291 RID: 17041
 	private RegressEntry? Config;
 
-	// Token: 0x02007ABD RID: 31421
+	// Token: 0x02006C41 RID: 27713
 	private class EComponents
 	{
-		// Token: 0x04028624 RID: 165412
+		// Token: 0x0402393E RID: 145726
 		public const int TxtNum = 0;
 
-		// Token: 0x04028625 RID: 165413
+		// Token: 0x0402393F RID: 145727
 		public const int TxtContent = 1;
 
-		// Token: 0x04028626 RID: 165414
+		// Token: 0x04023940 RID: 145728
 		public const int BtnItem = 2;
 
-		// Token: 0x04028627 RID: 165415
+		// Token: 0x04023941 RID: 145729
 		public const int TxtIcon = 3;
 	}
 }

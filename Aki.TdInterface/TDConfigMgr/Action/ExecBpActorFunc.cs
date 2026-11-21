@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200170B RID: 5899
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001888 RID: 6280
 	public class ExecBpActorFunc : ActionParams
 	{
-		// Token: 0x06007D07 RID: 32007 RVA: 0x0012C3C8 File Offset: 0x0012A5C8
+		// Token: 0x060083E5 RID: 33765 RVA: 0x0013B474 File Offset: 0x00139674
 		private ExecBpActorFunc_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D08 RID: 32008 RVA: 0x0012C400 File Offset: 0x0012A600
+		// Token: 0x060083E6 RID: 33766 RVA: 0x0013B4AC File Offset: 0x001396AC
 		public static ExecBpActorFunc Create([Nullable(2)] ExecBpActorFunc instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D09 RID: 32009 RVA: 0x0012C413 File Offset: 0x0012A613
+		// Token: 0x060083E7 RID: 33767 RVA: 0x0013B4BF File Offset: 0x001396BF
 		public static ExecBpActorFunc CreateFromSetValue([Nullable(2)] ExecBpActorFunc_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D0A RID: 32010 RVA: 0x0012C426 File Offset: 0x0012A626
+		// Token: 0x060083E8 RID: 33768 RVA: 0x0013B4D2 File Offset: 0x001396D2
 		public ExecBpActorFunc_SetValue ToSetValue()
 		{
 			return new ExecBpActorFunc_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002942 RID: 10562
-		// (get) Token: 0x06007D0B RID: 32011 RVA: 0x0012C439 File Offset: 0x0012A639
-		// (set) Token: 0x06007D0C RID: 32012 RVA: 0x0012C460 File Offset: 0x0012A660
+		// Token: 0x17002B2D RID: 11053
+		// (get) Token: 0x060083E9 RID: 33769 RVA: 0x0013B4E5 File Offset: 0x001396E5
+		// (set) Token: 0x060083EA RID: 33770 RVA: 0x0013B50C File Offset: 0x0013970C
 		public virtual IBpActorFuncTypeBase ExecFuncType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FDC RID: 20444
+		// Token: 0x0400540B RID: 21515
 		[Nullable(2)]
 		protected new ExecBpActorFunc FbInstance;
 
-		// Token: 0x04004FDD RID: 20445
+		// Token: 0x0400540C RID: 21516
 		[Nullable(2)]
 		protected ExecBpActorFunc_SetValue PocoInterface;
 	}

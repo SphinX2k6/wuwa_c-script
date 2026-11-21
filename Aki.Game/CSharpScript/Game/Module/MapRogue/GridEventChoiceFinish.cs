@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055D5 RID: 21973
+	// Token: 0x020045AB RID: 17835
 	public class GridEventChoiceFinish : UiPanelBase
 	{
-		// Token: 0x06037FE9 RID: 229353 RVA: 0x00D435E8 File Offset: 0x00D417E8
+		// Token: 0x0602CEE7 RID: 184039 RVA: 0x00C91330 File Offset: 0x00C8F530
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06037FEA RID: 229354 RVA: 0x00D43658 File Offset: 0x00D41858
+		// Token: 0x0602CEE8 RID: 184040 RVA: 0x00C913A0 File Offset: 0x00C8F5A0
 		[NullableContext(1)]
 		public void Refresh(IToggleItemData data)
 		{

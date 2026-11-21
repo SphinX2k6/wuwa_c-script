@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RecallQuest.Views
 {
-	// Token: 0x02004F1B RID: 20251
+	// Token: 0x02003EE4 RID: 16100
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RecallFunctionView : UiViewBase
 	{
-		// Token: 0x06033EC4 RID: 212676 RVA: 0x00C2B4E8 File Offset: 0x00C296E8
+		// Token: 0x06028D2F RID: 167215 RVA: 0x00B74B5C File Offset: 0x00B72D5C
 		public RecallFunctionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033EC5 RID: 212677 RVA: 0x00C2B508 File Offset: 0x00C29708
+		// Token: 0x06028D30 RID: 167216 RVA: 0x00B74B7C File Offset: 0x00B72D7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -78,20 +78,20 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033EC6 RID: 212678 RVA: 0x00C2B7EE File Offset: 0x00C299EE
+		// Token: 0x06028D31 RID: 167217 RVA: 0x00B74E62 File Offset: 0x00B73062
 		private void InitCaption()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
 			this.CaptionItem.SetCloseCallBack(new Action(this.OnCaptionClose));
 		}
 
-		// Token: 0x06033EC7 RID: 212679 RVA: 0x00C2B819 File Offset: 0x00C29A19
+		// Token: 0x06028D32 RID: 167218 RVA: 0x00B74E8D File Offset: 0x00B7308D
 		private void OnCaptionClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06033EC8 RID: 212680 RVA: 0x00C2B824 File Offset: 0x00C29A24
+		// Token: 0x06028D33 RID: 167219 RVA: 0x00B74E98 File Offset: 0x00B73098
 		protected override void OnStart()
 		{
 			this.InitCaption();
@@ -114,19 +114,19 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.RefreshBgTexture();
 		}
 
-		// Token: 0x06033EC9 RID: 212681 RVA: 0x00C2B93A File Offset: 0x00C29B3A
+		// Token: 0x06028D34 RID: 167220 RVA: 0x00B74FAE File Offset: 0x00B731AE
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.FunctionGridSelected, new Action<int>(this.OnFunctionGridSelected));
 		}
 
-		// Token: 0x06033ECA RID: 212682 RVA: 0x00C2B958 File Offset: 0x00C29B58
+		// Token: 0x06028D35 RID: 167221 RVA: 0x00B74FCC File Offset: 0x00B731CC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FunctionGridSelected, new Action<int>(this.OnFunctionGridSelected));
 		}
 
-		// Token: 0x06033ECB RID: 212683 RVA: 0x00C2B976 File Offset: 0x00C29B76
+		// Token: 0x06028D36 RID: 167222 RVA: 0x00B74FEA File Offset: 0x00B731EA
 		private void OnFunctionGridSelected(int index)
 		{
 			this.TabLayout.SetToggleSelectByIndex(index);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.ReSizeDragContentSize(index);
 		}
 
-		// Token: 0x06033ECC RID: 212684 RVA: 0x00C2B994 File Offset: 0x00C29B94
+		// Token: 0x06028D37 RID: 167223 RVA: 0x00B75008 File Offset: 0x00B73208
 		private void RefreshTurnPageBtn(int index)
 		{
 			int dataLength = this.NoCircleExhibitionView.GetDataLength();
@@ -142,14 +142,14 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.RightButtonItem.SetUIActive(index < dataLength - 1);
 		}
 
-		// Token: 0x06033ECD RID: 212685 RVA: 0x00C2B9CD File Offset: 0x00C29BCD
+		// Token: 0x06028D38 RID: 167224 RVA: 0x00B75041 File Offset: 0x00B73241
 		private void HideTurnPageBtn()
 		{
 			this.LeftButtonItem.SetUIActive(false);
 			this.RightButtonItem.SetUIActive(false);
 		}
 
-		// Token: 0x06033ECE RID: 212686 RVA: 0x00C2B9E8 File Offset: 0x00C29BE8
+		// Token: 0x06028D39 RID: 167225 RVA: 0x00B7505C File Offset: 0x00B7325C
 		private void MoveToLeft()
 		{
 			if (this.NoCircleExhibitionView.MovingState())
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.NoCircleExhibitionView.AttachToIndex(showItemIndex, false);
 		}
 
-		// Token: 0x06033ECF RID: 212687 RVA: 0x00C2BA30 File Offset: 0x00C29C30
+		// Token: 0x06028D3A RID: 167226 RVA: 0x00B750A4 File Offset: 0x00B732A4
 		private void MoveToRight()
 		{
 			if (this.NoCircleExhibitionView.MovingState())
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.NoCircleExhibitionView.AttachToIndex(showItemIndex, false);
 		}
 
-		// Token: 0x06033ED0 RID: 212688 RVA: 0x00C2BA80 File Offset: 0x00C29C80
+		// Token: 0x06028D3B RID: 167227 RVA: 0x00B750F4 File Offset: 0x00B732F4
 		private void ReSizeDragContentSize(int index)
 		{
 			float height = (this.GetShowFunctionIdListLength() > 8) ? 740f : 595f;
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			item.SetHeight(height);
 		}
 
-		// Token: 0x06033ED1 RID: 212689 RVA: 0x00C2BAB5 File Offset: 0x00C29CB5
+		// Token: 0x06028D3C RID: 167228 RVA: 0x00B75129 File Offset: 0x00B73329
 		private int GetShowFunctionIdListLength()
 		{
 			return RecallQuestModel.Instance.GetCurrentRecallFunctionIds().Count;
 		}
 
-		// Token: 0x06033ED2 RID: 212690 RVA: 0x00C2BAC8 File Offset: 0x00C29CC8
+		// Token: 0x06028D3D RID: 167229 RVA: 0x00B7513C File Offset: 0x00B7333C
 		private void SetPanelTabItemStretchRight(float offsetValue)
 		{
 			UUIItem item = base.GetItem(6);
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			item.SetStretchRight(stretchRight + offsetValue);
 		}
 
-		// Token: 0x06033ED3 RID: 212691 RVA: 0x00C2BAEC File Offset: 0x00C29CEC
+		// Token: 0x06028D3E RID: 167230 RVA: 0x00B75160 File Offset: 0x00B73360
 		private void RefreshFunctionGrid()
 		{
 			this.CalculateData = this.CalculateGridNum();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.ReSizeDragContentSize(this.NoCircleExhibitionView.GetCurrentSelectIndex());
 		}
 
-		// Token: 0x06033ED4 RID: 212692 RVA: 0x00C2BBE8 File Offset: 0x00C29DE8
+		// Token: 0x06028D3F RID: 167231 RVA: 0x00B7525C File Offset: 0x00B7345C
 		private RecallFunctionAttachGrid InitFunctionGrid(AActor actor, int index, int showNum)
 		{
 			RecallFunctionAttachGrid recallFunctionAttachGrid = new RecallFunctionAttachGrid(actor);
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			return recallFunctionAttachGrid;
 		}
 
-		// Token: 0x06033ED5 RID: 212693 RVA: 0x00C2BC14 File Offset: 0x00C29E14
+		// Token: 0x06028D40 RID: 167232 RVA: 0x00B75288 File Offset: 0x00B73488
 		private RecallFunctionView.ICalculateData CalculateGridNum()
 		{
 			UUIItem item = base.GetItem(7);
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			};
 		}
 
-		// Token: 0x06033ED6 RID: 212694 RVA: 0x00C2BD30 File Offset: 0x00C29F30
+		// Token: 0x06028D41 RID: 167233 RVA: 0x00B753A4 File Offset: 0x00B735A4
 		protected override void OnBeforeShow()
 		{
 			RecallConfig? currentRecallQuestConfig = RecallQuestModel.Instance.GetCurrentRecallQuestConfig();
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.RefreshQuestInfo(currentRecallQuestConfig);
 		}
 
-		// Token: 0x06033ED7 RID: 212695 RVA: 0x00C2BD60 File Offset: 0x00C29F60
+		// Token: 0x06028D42 RID: 167234 RVA: 0x00B753D4 File Offset: 0x00B735D4
 		protected override void OnBeforeDestroy()
 		{
 			foreach (RecallFunctionAttachGrid child in this.NoCircleExhibitionView.GetItems())
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.TabLayout.Destroy(null);
 		}
 
-		// Token: 0x06033ED8 RID: 212696 RVA: 0x00C2BDC4 File Offset: 0x00C29FC4
+		// Token: 0x06028D43 RID: 167235 RVA: 0x00B75438 File Offset: 0x00B73638
 		private void RefreshChapterInfo(RecallConfig? config)
 		{
 			if (config == null)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), config.Value.SmallChapterName, Array.Empty<object>());
 		}
 
-		// Token: 0x06033ED9 RID: 212697 RVA: 0x00C2BE28 File Offset: 0x00C2A028
+		// Token: 0x06028D44 RID: 167236 RVA: 0x00B7549C File Offset: 0x00B7369C
 		private void RefreshAreaInfo(RecallConfig? config)
 		{
 			if (config == null)
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			base.SetTextureByPath(areaTexture, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x06033EDA RID: 212698 RVA: 0x00C2BE68 File Offset: 0x00C2A068
+		// Token: 0x06028D45 RID: 167237 RVA: 0x00B754DC File Offset: 0x00B736DC
 		private void RefreshQuestInfo(RecallConfig? config)
 		{
 			if (config == null)
@@ -322,33 +322,33 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), config.Value.QuestName, Array.Empty<object>());
 		}
 
-		// Token: 0x06033EDB RID: 212699 RVA: 0x00C2BEA4 File Offset: 0x00C2A0A4
+		// Token: 0x06028D46 RID: 167238 RVA: 0x00B75518 File Offset: 0x00B73718
 		private void OnClickLeaveButton()
 		{
 			InstanceDungeonController.Instance.OnClickInstanceDungeonExitButton(null, null, true);
 		}
 
-		// Token: 0x06033EDC RID: 212700 RVA: 0x00C2BEB4 File Offset: 0x00C2A0B4
+		// Token: 0x06028D47 RID: 167239 RVA: 0x00B75528 File Offset: 0x00B73728
 		private void RefreshBgTexture()
 		{
 			string bgTexturePath = RecallQuestModel.Instance.GetBgTexturePath();
 			base.SetTextureByPath(bgTexturePath, base.GetTexture(16), null, null);
 		}
 
-		// Token: 0x0401B977 RID: 113015
+		// Token: 0x0401634A RID: 90954
 		private const int DRAG_PANEL_HEIGHT_ITEM_THRESHOLD = 8;
 
-		// Token: 0x0401B978 RID: 113016
+		// Token: 0x0401634B RID: 90955
 		private const float DRAG_PANEL_HEIGHT_SMALL = 595f;
 
-		// Token: 0x0401B979 RID: 113017
+		// Token: 0x0401634C RID: 90956
 		private const float DRAG_PANEL_HEIGHT_LARGE = 740f;
 
-		// Token: 0x0401B97A RID: 113018
+		// Token: 0x0401634D RID: 90957
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B97B RID: 113019
+		// Token: 0x0401634E RID: 90958
 		[Nullable(new byte[]
 		{
 			2,
@@ -357,97 +357,97 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 		})]
 		private NoCircleAttachView<List<int>, RecallFunctionAttachGrid> NoCircleExhibitionView;
 
-		// Token: 0x0401B97C RID: 113020
+		// Token: 0x0401634F RID: 90959
 		[Nullable(2)]
 		private FunctionTabLayout TabLayout;
 
-		// Token: 0x0401B97D RID: 113021
+		// Token: 0x04016350 RID: 90960
 		[Nullable(2)]
 		private UUIItem LeftButtonItem;
 
-		// Token: 0x0401B97E RID: 113022
+		// Token: 0x04016351 RID: 90961
 		[Nullable(2)]
 		private UUIItem RightButtonItem;
 
-		// Token: 0x0401B97F RID: 113023
+		// Token: 0x04016352 RID: 90962
 		private readonly Dictionary<int, RecallFunctionAttachGrid> FunctionGridMap = new Dictionary<int, RecallFunctionAttachGrid>();
 
-		// Token: 0x0401B980 RID: 113024
+		// Token: 0x04016353 RID: 90963
 		private List<List<int>> DataList = new List<List<int>>();
 
-		// Token: 0x0401B981 RID: 113025
+		// Token: 0x04016354 RID: 90964
 		private RecallFunctionView.ICalculateData CalculateData;
 
-		// Token: 0x0200B062 RID: 45154
+		// Token: 0x02009A92 RID: 39570
 		[NullableContext(0)]
 		private class ICalculateData
 		{
-			// Token: 0x04035872 RID: 219250
+			// Token: 0x0403029D RID: 197277
 			public int TotalGridNumber;
 
-			// Token: 0x04035873 RID: 219251
+			// Token: 0x0403029E RID: 197278
 			public float OffsetWidth;
 
-			// Token: 0x04035874 RID: 219252
+			// Token: 0x0403029F RID: 197279
 			public int HorizontalGridNum;
 
-			// Token: 0x04035875 RID: 219253
+			// Token: 0x040302A0 RID: 197280
 			public int VerticalGridNum;
 		}
 
-		// Token: 0x0200B063 RID: 45155
+		// Token: 0x02009A93 RID: 39571
 		[NullableContext(0)]
 		private class ERecallFunctionComponent
 		{
-			// Token: 0x04035876 RID: 219254
+			// Token: 0x040302A1 RID: 197281
 			public const int CaptionItem = 0;
 
-			// Token: 0x04035877 RID: 219255
+			// Token: 0x040302A2 RID: 197282
 			public const int AreaTexture = 1;
 
-			// Token: 0x04035878 RID: 219256
+			// Token: 0x040302A3 RID: 197283
 			public const int QuestText = 2;
 
-			// Token: 0x04035879 RID: 219257
+			// Token: 0x040302A4 RID: 197284
 			public const int QuestStateText = 3;
 
-			// Token: 0x0403587A RID: 219258
+			// Token: 0x040302A5 RID: 197285
 			public const int ChapterText = 4;
 
-			// Token: 0x0403587B RID: 219259
+			// Token: 0x040302A6 RID: 197286
 			public const int SmallChapterText = 5;
 
-			// Token: 0x0403587C RID: 219260
+			// Token: 0x040302A7 RID: 197287
 			public const int DragPanel = 6;
 
-			// Token: 0x0403587D RID: 219261
+			// Token: 0x040302A8 RID: 197288
 			public const int DragContentItem = 7;
 
-			// Token: 0x0403587E RID: 219262
+			// Token: 0x040302A9 RID: 197289
 			public const int LeftButton = 8;
 
-			// Token: 0x0403587F RID: 219263
+			// Token: 0x040302AA RID: 197290
 			public const int RightButton = 9;
 
-			// Token: 0x04035880 RID: 219264
+			// Token: 0x040302AB RID: 197291
 			public const int PageDotLayout = 10;
 
-			// Token: 0x04035881 RID: 219265
+			// Token: 0x040302AC RID: 197292
 			public const int PageDotItem = 11;
 
-			// Token: 0x04035882 RID: 219266
+			// Token: 0x040302AD RID: 197293
 			public const int QuitButton = 12;
 
-			// Token: 0x04035883 RID: 219267
+			// Token: 0x040302AE RID: 197294
 			public const int TaskButton = 13;
 
-			// Token: 0x04035884 RID: 219268
+			// Token: 0x040302AF RID: 197295
 			public const int GridItem = 14;
 
-			// Token: 0x04035885 RID: 219269
+			// Token: 0x040302B0 RID: 197296
 			public const int GridInsideLayout = 15;
 
-			// Token: 0x04035886 RID: 219270
+			// Token: 0x040302B1 RID: 197297
 			public const int BgTexture = 16;
 		}
 	}

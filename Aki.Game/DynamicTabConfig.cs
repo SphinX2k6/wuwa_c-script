@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001A88 RID: 6792
+// Token: 0x02000F47 RID: 3911
 [NullableContext(1)]
 [Nullable(0)]
 public class DynamicTabConfig : ConfigBase
 {
-	// Token: 0x0600C863 RID: 51299 RVA: 0x002DB86C File Offset: 0x002D9A6C
+	// Token: 0x06009C74 RID: 40052 RVA: 0x002E6A14 File Offset: 0x002E4C14
 	public List<UiDynamicTab> GetViewTabList(string parentViewName)
 	{
 		List<UiDynamicTab> list = ConfigCommon.ToList<UiDynamicTab>(ConfigUiDynamicTabByParentViewName.GetConfigList(parentViewName, true));
@@ -20,7 +20,7 @@ public class DynamicTabConfig : ConfigBase
 		return list ?? new List<UiDynamicTab>();
 	}
 
-	// Token: 0x0600C864 RID: 51300 RVA: 0x002DB8A8 File Offset: 0x002D9AA8
+	// Token: 0x06009C75 RID: 40053 RVA: 0x002E6A50 File Offset: 0x002E4C50
 	public List<EUiTabViewName> GetTabViewNameList(string parentViewName)
 	{
 		List<UiDynamicTab> viewTabList = this.GetViewTabList(parentViewName);
@@ -32,26 +32,26 @@ public class DynamicTabConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x0600C865 RID: 51301 RVA: 0x002DB910 File Offset: 0x002D9B10
+	// Token: 0x06009C76 RID: 40054 RVA: 0x002E6AB8 File Offset: 0x002E4CB8
 	public UiDynamicTab GetViewTab(string childViewName)
 	{
 		return ConfigUiDynamicTabByChildViewName.GetConfig(childViewName, true).GetValueOrDefault();
 	}
 
-	// Token: 0x0600C866 RID: 51302 RVA: 0x002DB92C File Offset: 0x002D9B2C
+	// Token: 0x06009C77 RID: 40055 RVA: 0x002E6AD4 File Offset: 0x002E4CD4
 	private int SortByTabIndex(UiDynamicTab a, UiDynamicTab b)
 	{
 		return a.TabIndex.CompareTo(b.TabIndex);
 	}
 
-	// Token: 0x0600C867 RID: 51303 RVA: 0x002DB950 File Offset: 0x002D9B50
+	// Token: 0x06009C78 RID: 40056 RVA: 0x002E6AF8 File Offset: 0x002E4CF8
 	public UiDynamicTab GetTabViewConfById(int id)
 	{
 		return ConfigUiDynamicTabById.GetConfig(id, true).GetValueOrDefault();
 	}
 
-	// Token: 0x17001070 RID: 4208
-	// (get) Token: 0x0600C868 RID: 51304 RVA: 0x002DB96C File Offset: 0x002D9B6C
+	// Token: 0x17001095 RID: 4245
+	// (get) Token: 0x06009C79 RID: 40057 RVA: 0x002E6B14 File Offset: 0x002E4D14
 	public static DynamicTabConfig Instance
 	{
 		get
@@ -60,7 +60,7 @@ public class DynamicTabConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600C869 RID: 51305 RVA: 0x002DB973 File Offset: 0x002D9B73
+	// Token: 0x06009C7A RID: 40058 RVA: 0x002E6B1B File Offset: 0x002E4D1B
 	public static DynamicTabConfig GetOrCreateInstance()
 	{
 		if (DynamicTabConfig._Instance == null)
@@ -70,7 +70,7 @@ public class DynamicTabConfig : ConfigBase
 		return DynamicTabConfig._Instance;
 	}
 
-	// Token: 0x0600C86A RID: 51306 RVA: 0x002DB987 File Offset: 0x002D9B87
+	// Token: 0x06009C7B RID: 40059 RVA: 0x002E6B2F File Offset: 0x002E4D2F
 	public static bool CreateInstance()
 	{
 		if (DynamicTabConfig._Instance != null)
@@ -81,24 +81,24 @@ public class DynamicTabConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600C86B RID: 51307 RVA: 0x002DB99D File Offset: 0x002D9B9D
+	// Token: 0x06009C7C RID: 40060 RVA: 0x002E6B45 File Offset: 0x002E4D45
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C86C RID: 51308 RVA: 0x002DB99F File Offset: 0x002D9B9F
+	// Token: 0x06009C7D RID: 40061 RVA: 0x002E6B47 File Offset: 0x002E4D47
 	public static void ResetStaticDefaultValue()
 	{
 		DynamicTabConfig._Instance = null;
 	}
 
-	// Token: 0x0600C86D RID: 51309 RVA: 0x002DB9A7 File Offset: 0x002D9BA7
+	// Token: 0x06009C7E RID: 40062 RVA: 0x002E6B4F File Offset: 0x002E4D4F
 	static DynamicTabConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DynamicTabConfig.CreateStaticDefaultValue), new Action(DynamicTabConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005C6A RID: 23658
+	// Token: 0x04005D39 RID: 23865
 	[Nullable(2)]
 	private static DynamicTabConfig _Instance;
 }

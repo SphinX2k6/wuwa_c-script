@@ -6,10 +6,10 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA1 RID: 27297
+	// Token: 0x02005BFE RID: 23550
 	public class RbFloorComponent : RbBaseComponent
 	{
-		// Token: 0x06043D17 RID: 277783 RVA: 0x0109A274 File Offset: 0x01098474
+		// Token: 0x06039D68 RID: 236904 RVA: 0x0103E9CC File Offset: 0x0103CBCC
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D18 RID: 277784 RVA: 0x0109A330 File Offset: 0x01098530
+		// Token: 0x06039D69 RID: 236905 RVA: 0x0103EA88 File Offset: 0x0103CC88
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -48,22 +48,28 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			{
 				return false;
 			}
-			RbFloorComponent rbFloorComponent = (RbFloorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (((RbFloorComponent)componentTemplate).CreatureDataComp == null)
 			{
-				if (rbFloorComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040236E6 RID: 145126
+		// Token: 0x17006E2F RID: 28207
+		// (get) Token: 0x06039D6A RID: 236906 RVA: 0x0103EAC6 File Offset: 0x0103CCC6
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E8D8 RID: 125144
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 	}

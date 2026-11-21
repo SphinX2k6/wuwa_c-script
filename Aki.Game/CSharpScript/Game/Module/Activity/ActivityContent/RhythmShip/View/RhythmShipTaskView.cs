@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200625D RID: 25181
+	// Token: 0x020051DB RID: 20955
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipTaskView : UiViewBase
 	{
-		// Token: 0x0603F69E RID: 259742 RVA: 0x00F54AC4 File Offset: 0x00F52CC4
+		// Token: 0x0603435F RID: 213855 RVA: 0x00E9BA20 File Offset: 0x00E99C20
 		public RhythmShipTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F69F RID: 259743 RVA: 0x00F54AD8 File Offset: 0x00F52CD8
+		// Token: 0x06034360 RID: 213856 RVA: 0x00E9BA34 File Offset: 0x00E99C34
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F6A0 RID: 259744 RVA: 0x00F54B5E File Offset: 0x00F52D5E
+		// Token: 0x06034361 RID: 213857 RVA: 0x00E9BABA File Offset: 0x00E99CBA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnRhythmShipTaskRefresh, new Action(this.OnRhythmShipTaskRefresh));
 		}
 
-		// Token: 0x0603F6A1 RID: 259745 RVA: 0x00F54B7C File Offset: 0x00F52D7C
+		// Token: 0x06034362 RID: 213858 RVA: 0x00E9BAD8 File Offset: 0x00E99CD8
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipTaskRefresh, new Action(this.OnRhythmShipTaskRefresh));
 		}
 
-		// Token: 0x0603F6A2 RID: 259746 RVA: 0x00F54B9C File Offset: 0x00F52D9C
+		// Token: 0x06034363 RID: 213859 RVA: 0x00E9BAF8 File Offset: 0x00E99CF8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipTaskView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F6A3 RID: 259747 RVA: 0x00F54BE0 File Offset: 0x00F52DE0
+		// Token: 0x06034364 RID: 213860 RVA: 0x00E9BB3C File Offset: 0x00E99D3C
 		protected override void OnStart()
 		{
 			List<int> rhythmShipTaskIdByTypeAndActivityId = RhythmShipConfig.Instance.GetRhythmShipTaskIdByTypeAndActivityId(0, RhythmShipModel.Instance.ActivityId);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}, true);
 		}
 
-		// Token: 0x0603F6A4 RID: 259748 RVA: 0x00F54D08 File Offset: 0x00F52F08
+		// Token: 0x06034365 RID: 213861 RVA: 0x00E9BC64 File Offset: 0x00E99E64
 		private void OnClickTaskTab(int tabId, UUIExtendToggle toggle)
 		{
 			if (this.CurrentTabId == tabId)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshTaskScrollView();
 		}
 
-		// Token: 0x0603F6A5 RID: 259749 RVA: 0x00F54D40 File Offset: 0x00F52F40
+		// Token: 0x06034366 RID: 213862 RVA: 0x00E9BC9C File Offset: 0x00E99E9C
 		private void RefreshTaskScrollView()
 		{
 			List<int> list;
@@ -129,17 +129,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			taskScrollView.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x0603F6A6 RID: 259750 RVA: 0x00F54D8C File Offset: 0x00F52F8C
+		// Token: 0x06034367 RID: 213863 RVA: 0x00E9BCE8 File Offset: 0x00E99EE8
 		private void OnRhythmShipTaskRefresh()
 		{
 			this.RefreshTaskScrollView();
 		}
 
-		// Token: 0x0402120C RID: 135692
+		// Token: 0x0401BB3B RID: 113467
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402120D RID: 135693
+		// Token: 0x0401BB3C RID: 113468
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private GenericScrollViewNew<RhythmShipTaskItem, int> TaskScrollView;
 
-		// Token: 0x0402120E RID: 135694
+		// Token: 0x0401BB3D RID: 113469
 		[Nullable(new byte[]
 		{
 			2,
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private LoopScrollView<RhythmShipTaskTabItem, int> TaskTabScrollView;
 
-		// Token: 0x0402120F RID: 135695
+		// Token: 0x0401BB3E RID: 113470
 		private readonly Dictionary<int, List<int>> TaskTabMap = new Dictionary<int, List<int>>();
 
-		// Token: 0x04021210 RID: 135696
+		// Token: 0x0401BB3F RID: 113471
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x04021211 RID: 135697
+		// Token: 0x0401BB40 RID: 113472
 		private int CurrentTabId;
 	}
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DE5 RID: 24037
+	// Token: 0x02004DC9 RID: 19913
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SpecialEnergyBarKaTiXiYaSlot : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D1A5 RID: 250277 RVA: 0x00EB4BB4 File Offset: 0x00EB2DB4
+		// Token: 0x0603211C RID: 205084 RVA: 0x00E05AB4 File Offset: 0x00E03CB4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 25;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D1A6 RID: 250278 RVA: 0x00EB4F28 File Offset: 0x00EB3128
+		// Token: 0x0603211D RID: 205085 RVA: 0x00E05E28 File Offset: 0x00E04028
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarKaTiXiYaSlot.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D1A7 RID: 250279 RVA: 0x00EB4F6C File Offset: 0x00EB316C
+		// Token: 0x0603211E RID: 205086 RVA: 0x00E05E6C File Offset: 0x00E0406C
 		protected unsafe override void OnStart()
 		{
 			base.OnStart();
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenTags();
 		}
 
-		// Token: 0x0603D1A8 RID: 250280 RVA: 0x00EB5204 File Offset: 0x00EB3404
+		// Token: 0x0603211F RID: 205087 RVA: 0x00E06104 File Offset: 0x00E04304
 		private void ListenTags()
 		{
 			foreach (int tagId in SpecialEnergyBarKaTiXiYaSlot.NormalTagIds)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1A9 RID: 250281 RVA: 0x00EB5268 File Offset: 0x00EB3468
+		// Token: 0x06032120 RID: 205088 RVA: 0x00E06168 File Offset: 0x00E04368
 		private void OnNormalTagChange(int tagId, bool tagExist)
 		{
 			int num = Array.IndexOf<int>(SpecialEnergyBarKaTiXiYaSlot.NormalTagIds, tagId);
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayCollectEffect(6 + num, 500);
 		}
 
-		// Token: 0x0603D1AA RID: 250282 RVA: 0x00EB52CC File Offset: 0x00EB34CC
+		// Token: 0x06032121 RID: 205089 RVA: 0x00E061CC File Offset: 0x00E043CC
 		private void OnCollectTagChange(int tagId, bool tagExist)
 		{
 			int num = Array.IndexOf<int>(SpecialEnergyBarKaTiXiYaSlot.CollectTagIds, tagId);
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1AB RID: 250283 RVA: 0x00EB531C File Offset: 0x00EB351C
+		// Token: 0x06032122 RID: 205090 RVA: 0x00E0621C File Offset: 0x00E0441C
 		private void RefreshState(bool isStart = false)
 		{
 			if (this.TagComponent == null)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603D1AC RID: 250284 RVA: 0x00EB5474 File Offset: 0x00EB3674
+		// Token: 0x06032123 RID: 205091 RVA: 0x00E06374 File Offset: 0x00E04574
 		private void PlayCollectEffect(int index, int duration)
 		{
 			UUIItem uuiitem = this.CollectEffectList[index];
@@ -278,12 +278,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1AD RID: 250285 RVA: 0x00EB54B8 File Offset: 0x00EB36B8
+		// Token: 0x06032124 RID: 205092 RVA: 0x00E063B8 File Offset: 0x00E045B8
 		protected override void RefreshVisible()
 		{
 		}
 
-		// Token: 0x0603D1AE RID: 250286 RVA: 0x00EB54BC File Offset: 0x00EB36BC
+		// Token: 0x06032125 RID: 205093 RVA: 0x00E063BC File Offset: 0x00E045BC
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D1AF RID: 250287 RVA: 0x00EB554C File Offset: 0x00EB374C
+		// Token: 0x06032126 RID: 205094 RVA: 0x00E0644C File Offset: 0x00E0464C
 		public unsafe SpecialEnergyBarKaTiXiYaSlot()
 		{
 			int num = 9;
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base..ctor();
 		}
 
-		// Token: 0x0401FD81 RID: 130433
+		// Token: 0x0401A83E RID: 108606
 		[StaticVariableRuleIgnore]
 		private static readonly int[] NormalTagIds = new int[]
 		{
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			GameplayTagDefine.EGameplayTagId["角色.Katixiya.状态.幻影剑_重力驻场"]
 		};
 
-		// Token: 0x0401FD82 RID: 130434
+		// Token: 0x0401A83F RID: 108607
 		[StaticVariableRuleIgnore]
 		private static readonly int[] CollectTagIds = new int[]
 		{
@@ -353,96 +353,96 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			GameplayTagDefine.EGameplayTagId["角色.Katixiya.状态.拥有幻影剑_重力"]
 		};
 
-		// Token: 0x0401FD83 RID: 130435
+		// Token: 0x0401A840 RID: 108608
 		private const int SLOT_NUM = 3;
 
-		// Token: 0x0401FD84 RID: 130436
+		// Token: 0x0401A841 RID: 108609
 		private const int COLLECT_EFFECT_DURATION = 800;
 
-		// Token: 0x0401FD85 RID: 130437
+		// Token: 0x0401A842 RID: 108610
 		private const int COLLECT_IN_EFFECT_DURATION = 1000;
 
-		// Token: 0x0401FD86 RID: 130438
+		// Token: 0x0401A843 RID: 108611
 		private const int COLLECT_OUT_EFFECT_DURATION = 500;
 
-		// Token: 0x0401FD87 RID: 130439
+		// Token: 0x0401A844 RID: 108612
 		private readonly List<bool> NormalTagStateList = new List<bool>();
 
-		// Token: 0x0401FD88 RID: 130440
+		// Token: 0x0401A845 RID: 108613
 		private readonly List<bool> CollectTagStateList = new List<bool>();
 
-		// Token: 0x0401FD89 RID: 130441
+		// Token: 0x0401A846 RID: 108614
 		private readonly List<List<UUIItem>> EnergyItemList = new List<List<UUIItem>>();
 
-		// Token: 0x0401FD8A RID: 130442
+		// Token: 0x0401A847 RID: 108615
 		private readonly List<List<UUIItem>> SwordItemList = new List<List<UUIItem>>();
 
-		// Token: 0x0401FD8B RID: 130443
+		// Token: 0x0401A848 RID: 108616
 		private readonly List<UUIItem> CollectEffectList = new List<UUIItem>();
 
-		// Token: 0x0401FD8C RID: 130444
+		// Token: 0x0401A849 RID: 108617
 		private readonly List<double> CollectEffectEndTime;
 
-		// Token: 0x0401FD8D RID: 130445
+		// Token: 0x0401A84A RID: 108618
 		private bool IsAnyEffectPlaying;
 
-		// Token: 0x0401FD8E RID: 130446
+		// Token: 0x0401A84B RID: 108619
 		[Nullable(2)]
 		public UUIItem UiKeyItem;
 
-		// Token: 0x0200C10F RID: 49423
+		// Token: 0x0200AB18 RID: 43800
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A492 RID: 238738
+			// Token: 0x04034E64 RID: 216676
 			EmptyItem11,
-			// Token: 0x0403A493 RID: 238739
+			// Token: 0x04034E65 RID: 216677
 			EmptyItem12,
-			// Token: 0x0403A494 RID: 238740
+			// Token: 0x04034E66 RID: 216678
 			EmptyItem13,
-			// Token: 0x0403A495 RID: 238741
+			// Token: 0x04034E67 RID: 216679
 			FullEffect21,
-			// Token: 0x0403A496 RID: 238742
+			// Token: 0x04034E68 RID: 216680
 			FullEffect22,
-			// Token: 0x0403A497 RID: 238743
+			// Token: 0x04034E69 RID: 216681
 			FullEffect23,
-			// Token: 0x0403A498 RID: 238744
+			// Token: 0x04034E6A RID: 216682
 			SwordIcon11,
-			// Token: 0x0403A499 RID: 238745
+			// Token: 0x04034E6B RID: 216683
 			SwordIcon12,
-			// Token: 0x0403A49A RID: 238746
+			// Token: 0x04034E6C RID: 216684
 			SwordIcon13,
-			// Token: 0x0403A49B RID: 238747
+			// Token: 0x04034E6D RID: 216685
 			SwordIcon21,
-			// Token: 0x0403A49C RID: 238748
+			// Token: 0x04034E6E RID: 216686
 			SwordIcon22,
-			// Token: 0x0403A49D RID: 238749
+			// Token: 0x04034E6F RID: 216687
 			SwordIcon23,
-			// Token: 0x0403A49E RID: 238750
+			// Token: 0x04034E70 RID: 216688
 			FullEffect31,
-			// Token: 0x0403A49F RID: 238751
+			// Token: 0x04034E71 RID: 216689
 			FullEffect32,
-			// Token: 0x0403A4A0 RID: 238752
+			// Token: 0x04034E72 RID: 216690
 			FullEffect33,
-			// Token: 0x0403A4A1 RID: 238753
+			// Token: 0x04034E73 RID: 216691
 			CollectEffect1,
-			// Token: 0x0403A4A2 RID: 238754
+			// Token: 0x04034E74 RID: 216692
 			CollectEffect2,
-			// Token: 0x0403A4A3 RID: 238755
+			// Token: 0x04034E75 RID: 216693
 			CollectEffect3,
-			// Token: 0x0403A4A4 RID: 238756
+			// Token: 0x04034E76 RID: 216694
 			CollectInEffect1,
-			// Token: 0x0403A4A5 RID: 238757
+			// Token: 0x04034E77 RID: 216695
 			CollectOutEffect1,
-			// Token: 0x0403A4A6 RID: 238758
+			// Token: 0x04034E78 RID: 216696
 			CollectInEffect2,
-			// Token: 0x0403A4A7 RID: 238759
+			// Token: 0x04034E79 RID: 216697
 			CollectOutEffect2,
-			// Token: 0x0403A4A8 RID: 238760
+			// Token: 0x04034E7A RID: 216698
 			CollectInEffect3,
-			// Token: 0x0403A4A9 RID: 238761
+			// Token: 0x04034E7B RID: 216699
 			CollectOutEffect3,
-			// Token: 0x0403A4AA RID: 238762
+			// Token: 0x04034E7C RID: 216700
 			CollectAllItem
 		}
 	}

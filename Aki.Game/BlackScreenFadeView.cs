@@ -13,10 +13,10 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200170E RID: 5902
+// Token: 0x02000BC6 RID: 3014
 public class BlackScreenFadeView : UiPanelBase
 {
-	// Token: 0x0600A944 RID: 43332 RVA: 0x00261500 File Offset: 0x0025F700
+	// Token: 0x06007D24 RID: 32036 RVA: 0x0026B91C File Offset: 0x00269B1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,20 +30,26 @@ public class BlackScreenFadeView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A945 RID: 43333 RVA: 0x0026156C File Offset: 0x0025F76C
+	// Token: 0x06007D25 RID: 32037 RVA: 0x0026B988 File Offset: 0x00269B88
 	protected override void OnStart()
 	{
 		this.ViewData.RegisterStateDelegate(BlackScreenViewData.EState.Show, new Action(this.ShowDelegate));
 		this.ViewData.RegisterStateDelegate(BlackScreenViewData.EState.Hide, new Action(this.HideDelegate));
 		this.TextureWidget = base.GetTexture(1);
 		this.TextureWidget2 = base.GetTexture(0);
+		this.ExpandBackTexture();
+		UUITexture textureWidget = this.TextureWidget;
+		if (textureWidget != null)
+		{
+			textureWidget.SetWidth(this.RootItem.GetWidth() * 3f);
+		}
 		LguiUtil.Instance.SetActorIsPermanent(this.RootActor, true, true);
 		this.ViewData.TriggerCurrentStateDelegate();
 		EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnUiViewPortSizeChanged));
 		EventSystem.Instance.Add<IMovieModeAspectOffset>(EEventName.MovieModeAspectOffsetUpdate, new Action<IMovieModeAspectOffset>(this.OnMovieModeAspectOffsetUpdate));
 	}
 
-	// Token: 0x0600A946 RID: 43334 RVA: 0x00261618 File Offset: 0x0025F818
+	// Token: 0x06007D26 RID: 32038 RVA: 0x0026BA5C File Offset: 0x00269C5C
 	protected override void OnBeforeDestroy()
 	{
 		LevelLoadingModel.Instance.CameraFadeShowPromise = null;
@@ -60,7 +66,7 @@ public class BlackScreenFadeView : UiPanelBase
 		EventSystem.Instance.Remove<IMovieModeAspectOffset>(EEventName.MovieModeAspectOffsetUpdate, new Action<IMovieModeAspectOffset>(this.OnMovieModeAspectOffsetUpdate));
 	}
 
-	// Token: 0x0600A947 RID: 43335 RVA: 0x002616C0 File Offset: 0x0025F8C0
+	// Token: 0x06007D27 RID: 32039 RVA: 0x0026BB04 File Offset: 0x00269D04
 	private void OnCloseEvent()
 	{
 		if (this.IsFadeIn)
@@ -85,7 +91,7 @@ public class BlackScreenFadeView : UiPanelBase
 		GameSettingsDeviceRender.Instance.CancelTemporaryDisableFrameGeneration("BlackScreen");
 	}
 
-	// Token: 0x0600A948 RID: 43336 RVA: 0x002617BA File Offset: 0x0025F9BA
+	// Token: 0x06007D28 RID: 32040 RVA: 0x0026BBFE File Offset: 0x00269DFE
 	private void ShowDelegate()
 	{
 		EventSystem.Instance.Emit(EEventName.OnBlackFadeScreenStart);
@@ -96,7 +102,7 @@ public class BlackScreenFadeView : UiPanelBase
 		this.UpdateBlackScreen();
 	}
 
-	// Token: 0x0600A949 RID: 43337 RVA: 0x002617F6 File Offset: 0x0025F9F6
+	// Token: 0x06007D29 RID: 32041 RVA: 0x0026BC3A File Offset: 0x00269E3A
 	private void HideDelegate()
 	{
 		this.SetActive(true);
@@ -105,7 +111,7 @@ public class BlackScreenFadeView : UiPanelBase
 		PlotModel.Instance.LastPlotColor = -1;
 	}
 
-	// Token: 0x0600A94A RID: 43338 RVA: 0x0026181C File Offset: 0x0025FA1C
+	// Token: 0x06007D2A RID: 32042 RVA: 0x0026BC60 File Offset: 0x00269E60
 	private void UpdateTextureWidgetVisibility()
 	{
 		if (PlotModel.Instance.LastPlotColor == 1)
@@ -130,7 +136,7 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A94B RID: 43339 RVA: 0x00261850 File Offset: 0x0025FA50
+	// Token: 0x06007D2B RID: 32043 RVA: 0x0026BC94 File Offset: 0x00269E94
 	private void AddTick(int tickId)
 	{
 		if (tickId != -1)
@@ -149,7 +155,7 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A94C RID: 43340 RVA: 0x002618D4 File Offset: 0x0025FAD4
+	// Token: 0x06007D2C RID: 32044 RVA: 0x0026BD18 File Offset: 0x00269F18
 	private void RemoveTick(int tickId)
 	{
 		if (tickId != -1)
@@ -172,7 +178,7 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A94D RID: 43341 RVA: 0x0026193C File Offset: 0x0025FB3C
+	// Token: 0x06007D2D RID: 32045 RVA: 0x0026BD80 File Offset: 0x00269F80
 	private void OnFadeTick(float deltaTime)
 	{
 		if (this.LerpTime > 0f)
@@ -213,7 +219,7 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A94E RID: 43342 RVA: 0x00261A63 File Offset: 0x0025FC63
+	// Token: 0x06007D2E RID: 32046 RVA: 0x0026BEA7 File Offset: 0x0026A0A7
 	private void OnSaveTick(float deltaTime)
 	{
 		this.SaveTime += deltaTime;
@@ -223,13 +229,13 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A94F RID: 43343 RVA: 0x00261A86 File Offset: 0x0025FC86
+	// Token: 0x06007D2F RID: 32047 RVA: 0x0026BECA File Offset: 0x0026A0CA
 	public void ShowItem()
 	{
 		this.ViewData.SwitchState(BlackScreenViewData.EState.Show);
 	}
 
-	// Token: 0x0600A950 RID: 43344 RVA: 0x00261A95 File Offset: 0x0025FC95
+	// Token: 0x06007D30 RID: 32048 RVA: 0x0026BED9 File Offset: 0x0026A0D9
 	public void HideItem()
 	{
 		bool flag = this.ViewData.SwitchState(BlackScreenViewData.EState.Hide);
@@ -241,7 +247,7 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A951 RID: 43345 RVA: 0x00261AC8 File Offset: 0x0025FCC8
+	// Token: 0x06007D31 RID: 32049 RVA: 0x0026BF0C File Offset: 0x0026A10C
 	public void UpdateScreenColor(EFadeInScreenShowType screenType)
 	{
 		if (screenType != EFadeInScreenShowType.White)
@@ -273,7 +279,7 @@ public class BlackScreenFadeView : UiPanelBase
 		textureWidget3.SetColor(ColorUtils.ColorBlack);
 	}
 
-	// Token: 0x0600A952 RID: 43346 RVA: 0x00261B38 File Offset: 0x0025FD38
+	// Token: 0x06007D32 RID: 32050 RVA: 0x0026BF7C File Offset: 0x0026A17C
 	public void UpdateScreenColorAndChangeVisible(EFadeInScreenShowType screenType)
 	{
 		if (screenType != EFadeInScreenShowType.White)
@@ -305,7 +311,7 @@ public class BlackScreenFadeView : UiPanelBase
 		this.UpdateTextureWidgetVisibility();
 	}
 
-	// Token: 0x0600A953 RID: 43347 RVA: 0x00261BAC File Offset: 0x0025FDAC
+	// Token: 0x06007D33 RID: 32051 RVA: 0x0026BFF0 File Offset: 0x0026A1F0
 	public bool ChangeAspect(float aspectRatio, bool? bInstantly = null)
 	{
 		float num = UiLayer.Instance.UiRootItem.GetWidth() / UiLayer.Instance.UiRootItem.GetHeight();
@@ -339,24 +345,41 @@ public class BlackScreenFadeView : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x0600A954 RID: 43348 RVA: 0x00261D14 File Offset: 0x0025FF14
+	// Token: 0x06007D34 RID: 32052 RVA: 0x0026C158 File Offset: 0x0026A358
 	private void SetAspect(float aspectRatio)
 	{
-		float height = this.RootItem.GetWidth() / aspectRatio;
+		if (this.TextureWidget == null)
+		{
+			return;
+		}
+		UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
+		float height = uiRootItem.GetWidth() * uiRootItem.K2_GetComponentScale().X / aspectRatio / this.TextureWidget.K2_GetComponentScale().Y;
+		this.TextureWidget.SetHeight(height);
 		UUITexture textureWidget = this.TextureWidget;
+		if (textureWidget == null)
+		{
+			return;
+		}
+		textureWidget.SetWidth(this.RootItem.GetWidth() * 3f);
+	}
+
+	// Token: 0x06007D35 RID: 32053 RVA: 0x0026C1CC File Offset: 0x0026A3CC
+	private void ExpandBackTexture()
+	{
+		UUITexture textureWidget = this.TextureWidget2;
 		if (textureWidget != null)
 		{
-			textureWidget.SetHeight(height);
+			textureWidget.SetWidth(this.RootItem.GetWidth() * 3f);
 		}
-		UUITexture textureWidget2 = this.TextureWidget;
+		UUITexture textureWidget2 = this.TextureWidget2;
 		if (textureWidget2 == null)
 		{
 			return;
 		}
-		textureWidget2.SetWidth(this.RootItem.GetWidth());
+		textureWidget2.SetHeight(this.RootItem.GetHeight() * 3f);
 	}
 
-	// Token: 0x0600A955 RID: 43349 RVA: 0x00261D5C File Offset: 0x0025FF5C
+	// Token: 0x06007D36 RID: 32054 RVA: 0x0026C21C File Offset: 0x0026A41C
 	private void UpdateBlackScreen()
 	{
 		float num = this.GetNowAlpha();
@@ -378,7 +401,7 @@ public class BlackScreenFadeView : UiPanelBase
 		textureWidget2.SetAlpha(num);
 	}
 
-	// Token: 0x0600A956 RID: 43350 RVA: 0x00261DB0 File Offset: 0x0025FFB0
+	// Token: 0x06007D37 RID: 32055 RVA: 0x0026C270 File Offset: 0x0026A470
 	private float GetNowAlpha()
 	{
 		if (this.IsFadeIn)
@@ -403,20 +426,20 @@ public class BlackScreenFadeView : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A957 RID: 43351 RVA: 0x00261E3F File Offset: 0x0026003F
+	// Token: 0x06007D38 RID: 32056 RVA: 0x0026C2FF File Offset: 0x0026A4FF
 	public void SetFadeTime(float num)
 	{
 		this.FadeTime = num;
 		this.FullFadeTime = num;
 	}
 
-	// Token: 0x0600A958 RID: 43352 RVA: 0x00261E4F File Offset: 0x0026004F
+	// Token: 0x06007D39 RID: 32057 RVA: 0x0026C30F File Offset: 0x0026A50F
 	public void SetIsFadeIn(bool value)
 	{
 		this.IsFadeIn = value;
 	}
 
-	// Token: 0x0600A959 RID: 43353 RVA: 0x00261E58 File Offset: 0x00260058
+	// Token: 0x06007D3A RID: 32058 RVA: 0x0026C318 File Offset: 0x0026A518
 	public EFadeInScreenShowType? GetScreenColorType()
 	{
 		if (this.TextureWidget == null)
@@ -426,71 +449,75 @@ public class BlackScreenFadeView : UiPanelBase
 		return new EFadeInScreenShowType?(this.TextureWidget.GetColor().Equals(ColorUtils.ColorBlack) ? EFadeInScreenShowType.Black : EFadeInScreenShowType.White);
 	}
 
-	// Token: 0x0600A95A RID: 43354 RVA: 0x00261E9A File Offset: 0x0026009A
+	// Token: 0x06007D3B RID: 32059 RVA: 0x0026C35A File Offset: 0x0026A55A
 	private void OnUiViewPortSizeChanged()
 	{
+		this.ExpandBackTexture();
 		this.SetAspect(PlotModel.Instance.BlackScreenNowAspect);
 	}
 
-	// Token: 0x0600A95B RID: 43355 RVA: 0x00261EAC File Offset: 0x002600AC
+	// Token: 0x06007D3C RID: 32060 RVA: 0x0026C372 File Offset: 0x0026A572
 	[NullableContext(1)]
 	private void OnMovieModeAspectOffsetUpdate(IMovieModeAspectOffset offset)
 	{
 		this.SetAspect(PlotModel.Instance.BlackScreenNowAspect);
 	}
 
-	// Token: 0x04004D30 RID: 19760
+	// Token: 0x04004DD7 RID: 19927
 	private float SaveTime;
 
-	// Token: 0x04004D31 RID: 19761
+	// Token: 0x04004DD8 RID: 19928
 	private float FadeTime;
 
-	// Token: 0x04004D32 RID: 19762
+	// Token: 0x04004DD9 RID: 19929
 	private float FullFadeTime;
 
-	// Token: 0x04004D33 RID: 19763
+	// Token: 0x04004DDA RID: 19930
 	private float LerpTime;
 
-	// Token: 0x04004D34 RID: 19764
+	// Token: 0x04004DDB RID: 19931
 	private float FullLerpTime;
 
-	// Token: 0x04004D35 RID: 19765
+	// Token: 0x04004DDC RID: 19932
 	private bool IsFadeIn = true;
 
-	// Token: 0x04004D36 RID: 19766
+	// Token: 0x04004DDD RID: 19933
 	private float FadeInAlphaFloor;
 
-	// Token: 0x04004D37 RID: 19767
+	// Token: 0x04004DDE RID: 19934
 	private int TickIdFade = -1;
 
-	// Token: 0x04004D38 RID: 19768
+	// Token: 0x04004DDF RID: 19935
 	private int TickIdSave = -1;
 
-	// Token: 0x04004D39 RID: 19769
+	// Token: 0x04004DE0 RID: 19936
 	[Nullable(1)]
 	private readonly BlackScreenViewData ViewData = new BlackScreenViewData();
 
-	// Token: 0x04004D3A RID: 19770
+	// Token: 0x04004DE1 RID: 19937
 	[Nullable(2)]
 	private UUITexture TextureWidget;
 
-	// Token: 0x04004D3B RID: 19771
+	// Token: 0x04004DE2 RID: 19938
 	[Nullable(2)]
 	private UUITexture TextureWidget2;
 
-	// Token: 0x04004D3C RID: 19772
+	// Token: 0x04004DE3 RID: 19939
 	private const float GUARANTEED_TIME = 10000f;
 
-	// Token: 0x04004D3D RID: 19773
+	// Token: 0x04004DE4 RID: 19940
 	private const float MAX_FADE_VALUE = 0.9f;
 
-	// Token: 0x02007CC3 RID: 31939
+	// Token: 0x04004DE5 RID: 19941
+	private const float EXPAND_SCALE = 3f;
+
+	// Token: 0x02006E48 RID: 28232
 	private static class ECompDefine
 	{
-		// Token: 0x04028ECB RID: 167627
+		// Token: 0x040241F4 RID: 147956
 		public const int BlackTexture = 0;
 
-		// Token: 0x04028ECC RID: 167628
+		// Token: 0x040241F5 RID: 147957
 		public const int BlackTexture2 = 1;
 	}
 }

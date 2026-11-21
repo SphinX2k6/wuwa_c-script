@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002883 RID: 10371
+// Token: 0x02001DFE RID: 7678
 [NullableContext(1)]
 [Nullable(0)]
 public class SingleText
 {
-	// Token: 0x17001C7F RID: 7295
-	// (get) Token: 0x0601557D RID: 87421 RVA: 0x005633B5 File Offset: 0x005615B5
-	// (set) Token: 0x0601557E RID: 87422 RVA: 0x005633BD File Offset: 0x005615BD
+	// Token: 0x17001CD7 RID: 7383
+	// (get) Token: 0x06012F7B RID: 77691 RVA: 0x0058E111 File Offset: 0x0058C311
+	// (set) Token: 0x06012F7C RID: 77692 RVA: 0x0058E119 File Offset: 0x0058C319
 	public string TextId { get; set; }
 
-	// Token: 0x17001C80 RID: 7296
-	// (get) Token: 0x0601557F RID: 87423 RVA: 0x005633C6 File Offset: 0x005615C6
-	// (set) Token: 0x06015580 RID: 87424 RVA: 0x005633CE File Offset: 0x005615CE
+	// Token: 0x17001CD8 RID: 7384
+	// (get) Token: 0x06012F7D RID: 77693 RVA: 0x0058E122 File Offset: 0x0058C322
+	// (set) Token: 0x06012F7E RID: 77694 RVA: 0x0058E12A File Offset: 0x0058C32A
 	[Nullable(new byte[]
 	{
 		2,

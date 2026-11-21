@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020021BB RID: 8635
+// Token: 0x0200169F RID: 5791
 public class LordMonsterItem : UiPanelBase
 {
-	// Token: 0x06010CDC RID: 68828 RVA: 0x00414DF8 File Offset: 0x00412FF8
+	// Token: 0x0600E16D RID: 57709 RVA: 0x004216D8 File Offset: 0x0041F8D8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class LordMonsterItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06010CDD RID: 68829 RVA: 0x00414E54 File Offset: 0x00413054
+	// Token: 0x0600E16E RID: 57710 RVA: 0x00421734 File Offset: 0x0041F934
 	public void SetMonsterInfo(int monsterId, int level)
 	{
 		string monsterIcon = MonsterInfoConfig.Instance.GetMonsterIcon(monsterId);
@@ -27,16 +27,16 @@ public class LordMonsterItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Text_InstanceDungeonRecommendLevel_Text", new <>z__ReadOnlySingleElementList<object>(level));
 	}
 
-	// Token: 0x02008705 RID: 34565
+	// Token: 0x02007890 RID: 30864
 	private class EChildType
 	{
-		// Token: 0x0402BEA4 RID: 179876
+		// Token: 0x040271C5 RID: 160197
 		public const int NameText = 0;
 
-		// Token: 0x0402BEA5 RID: 179877
+		// Token: 0x040271C6 RID: 160198
 		public const int LevelText = 1;
 
-		// Token: 0x0402BEA6 RID: 179878
+		// Token: 0x040271C7 RID: 160199
 		public const int MonsterTexture = 2;
 	}
 }

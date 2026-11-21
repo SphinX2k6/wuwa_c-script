@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005702 RID: 22274
+	// Token: 0x02005CF1 RID: 23793
 	public class IPatrolT
 	{
-		// Token: 0x1700A5D6 RID: 42454
-		// (get) Token: 0x060253D1 RID: 152529 RVA: 0x0052391C File Offset: 0x00521B1C
-		// (set) Token: 0x060253D2 RID: 152530 RVA: 0x00523924 File Offset: 0x00521B24
+		// Token: 0x1700AED9 RID: 44761
+		// (get) Token: 0x06027838 RID: 161848 RVA: 0x00568368 File Offset: 0x00566568
+		// (set) Token: 0x06027839 RID: 161849 RVA: 0x00568370 File Offset: 0x00566570
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A5D7 RID: 42455
-		// (get) Token: 0x060253D3 RID: 152531 RVA: 0x0052392D File Offset: 0x00521B2D
-		// (set) Token: 0x060253D4 RID: 152532 RVA: 0x00523935 File Offset: 0x00521B35
+		// Token: 0x1700AEDA RID: 44762
+		// (get) Token: 0x0602783A RID: 161850 RVA: 0x00568379 File Offset: 0x00566579
+		// (set) Token: 0x0602783B RID: 161851 RVA: 0x00568381 File Offset: 0x00566581
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700A5D8 RID: 42456
-		// (get) Token: 0x060253D5 RID: 152533 RVA: 0x0052393E File Offset: 0x00521B3E
-		// (set) Token: 0x060253D6 RID: 152534 RVA: 0x00523946 File Offset: 0x00521B46
+		// Token: 0x1700AEDB RID: 44763
+		// (get) Token: 0x0602783C RID: 161852 RVA: 0x0056838A File Offset: 0x0056658A
+		// (set) Token: 0x0602783D RID: 161853 RVA: 0x00568392 File Offset: 0x00566592
 		public List<int> SplineEntityIds { get; set; }
 
-		// Token: 0x1700A5D9 RID: 42457
-		// (get) Token: 0x060253D7 RID: 152535 RVA: 0x0052394F File Offset: 0x00521B4F
-		// (set) Token: 0x060253D8 RID: 152536 RVA: 0x00523957 File Offset: 0x00521B57
+		// Token: 0x1700AEDC RID: 44764
+		// (get) Token: 0x0602783E RID: 161854 RVA: 0x0056839B File Offset: 0x0056659B
+		// (set) Token: 0x0602783F RID: 161855 RVA: 0x005683A3 File Offset: 0x005665A3
 		public bool IsCircle { get; set; }
 
-		// Token: 0x1700A5DA RID: 42458
-		// (get) Token: 0x060253D9 RID: 152537 RVA: 0x00523960 File Offset: 0x00521B60
-		// (set) Token: 0x060253DA RID: 152538 RVA: 0x00523968 File Offset: 0x00521B68
+		// Token: 0x1700AEDD RID: 44765
+		// (get) Token: 0x06027840 RID: 161856 RVA: 0x005683AC File Offset: 0x005665AC
+		// (set) Token: 0x06027841 RID: 161857 RVA: 0x005683B4 File Offset: 0x005665B4
 		public List<IPatrolActionT> Actions { get; set; }
 
-		// Token: 0x1700A5DB RID: 42459
-		// (get) Token: 0x060253DB RID: 152539 RVA: 0x00523971 File Offset: 0x00521B71
-		// (set) Token: 0x060253DC RID: 152540 RVA: 0x00523979 File Offset: 0x00521B79
+		// Token: 0x1700AEDE RID: 44766
+		// (get) Token: 0x06027842 RID: 161858 RVA: 0x005683BD File Offset: 0x005665BD
+		// (set) Token: 0x06027843 RID: 161859 RVA: 0x005683C5 File Offset: 0x005665C5
 		public byte NullMask { get; set; }
 
-		// Token: 0x060253DD RID: 152541 RVA: 0x00523982 File Offset: 0x00521B82
+		// Token: 0x06027844 RID: 161860 RVA: 0x005683CE File Offset: 0x005665CE
 		public IPatrolT()
 		{
 			this.Disabled = false;

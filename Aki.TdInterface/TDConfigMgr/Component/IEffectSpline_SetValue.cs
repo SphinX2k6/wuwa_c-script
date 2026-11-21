@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002F4 RID: 756
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200033B RID: 827
 	public class IEffectSpline_SetValue
 	{
-		// Token: 0x04000CDB RID: 3291
+		// Token: 0x04000DC5 RID: 3525
 		public ESplineType Type;
 
-		// Token: 0x04000CDC RID: 3292
+		// Token: 0x04000DC6 RID: 3526
 		public string Effect;
 
-		// Token: 0x04000CDD RID: 3293
+		// Token: 0x04000DC7 RID: 3527
 		public IEffectSplineCreationMode CreateOption;
 
-		// Token: 0x04000CDE RID: 3294
+		// Token: 0x04000DC8 RID: 3528
 		public List<ICommonSplinePoint> Points;
 	}
 }

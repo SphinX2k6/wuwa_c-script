@@ -10,19 +10,19 @@ using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020030F7 RID: 12535
+// Token: 0x0200264F RID: 9807
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterSlideComponent : EntityComponent, IComponentDependency, IStaticVariableResetter
+public class CharacterSlideComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601AE09 RID: 110089 RVA: 0x007445C8 File Offset: 0x007427C8
+	// Token: 0x0601882E RID: 100398 RVA: 0x00769EC0 File Offset: 0x007680C0
 	static CharacterSlideComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CharacterSlideComponent.CreateStaticDefaultValue), new Action(CharacterSlideComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002511 RID: 9489
-	// (get) Token: 0x0601AE0A RID: 110090 RVA: 0x00744633 File Offset: 0x00742833
+	// Token: 0x170026A3 RID: 9891
+	// (get) Token: 0x0601882F RID: 100399 RVA: 0x00769F2B File Offset: 0x0076812B
 	protected static float[] SlideFallingCoefficientArray
 	{
 		get
@@ -31,8 +31,8 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x17002512 RID: 9490
-	// (get) Token: 0x0601AE0B RID: 110091 RVA: 0x0074463A File Offset: 0x0074283A
+	// Token: 0x170026A4 RID: 9892
+	// (get) Token: 0x06018830 RID: 100400 RVA: 0x00769F32 File Offset: 0x00768132
 	public static Slide SlideConfig
 	{
 		get
@@ -45,7 +45,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE0C RID: 110092 RVA: 0x00744658 File Offset: 0x00742858
+	// Token: 0x06018831 RID: 100401 RVA: 0x00769F50 File Offset: 0x00768150
 	public static void SetSlideConfig(int slideId)
 	{
 		if (((CharacterSlideComponent.SlideConfigInternal != null) ? CharacterSlideComponent.SlideConfigInternal.GetValueOrDefault().Id : null) == slideId.ToString())
@@ -103,7 +103,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		CharacterSlideComponent.SpeedReduceCurve = null;
 	}
 
-	// Token: 0x0601AE0D RID: 110093 RVA: 0x007448C8 File Offset: 0x00742AC8
+	// Token: 0x06018832 RID: 100402 RVA: 0x0076A1C0 File Offset: 0x007683C0
 	protected static float GetSlideFallingFriction(float cos)
 	{
 		if (CharacterSlideComponent.SlideConfigInternal == null)
@@ -118,8 +118,8 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return num;
 	}
 
-	// Token: 0x17002513 RID: 9491
-	// (get) Token: 0x0601AE0E RID: 110094 RVA: 0x0074490C File Offset: 0x00742B0C
+	// Token: 0x170026A5 RID: 9893
+	// (get) Token: 0x06018833 RID: 100403 RVA: 0x0076A204 File Offset: 0x00768404
 	protected static UCurveFloat JumpAddMoveCurve
 	{
 		get
@@ -132,10 +132,9 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x17002514 RID: 9492
-	// (get) Token: 0x0601AE0F RID: 110095 RVA: 0x0074492E File Offset: 0x00742B2E
-	[StaticVariableRuleIgnore]
-	public static Type[] Dependencies
+	// Token: 0x170026A6 RID: 9894
+	// (get) Token: 0x06018834 RID: 100404 RVA: 0x0076A226 File Offset: 0x00768426
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -148,7 +147,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE10 RID: 110096 RVA: 0x00744960 File Offset: 0x00742B60
+	// Token: 0x06018835 RID: 100405 RVA: 0x0076A258 File Offset: 0x00768458
 	private void OnMoveStateChanged(global::ECharMoveState oldState, global::ECharMoveState newState)
 	{
 		if (newState != global::ECharMoveState.Slide)
@@ -179,7 +178,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE11 RID: 110097 RVA: 0x00744AD4 File Offset: 0x00742CD4
+	// Token: 0x06018836 RID: 100406 RVA: 0x0076A3CC File Offset: 0x007685CC
 	private unsafe void OnMoveSki(float delta)
 	{
 		if (this.NeedInitSpeed)
@@ -244,7 +243,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE12 RID: 110098 RVA: 0x00744CE8 File Offset: 0x00742EE8
+	// Token: 0x06018837 RID: 100407 RVA: 0x0076A5E0 File Offset: 0x007687E0
 	private void CalcSkiSpeedParams(global::Vector outVec)
 	{
 		float num = this.SkiConfig.BaseAccForSpeedUp;
@@ -265,7 +264,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		outVec.Set((double)num, (double)this.SkiConfig.BaseAccForSpeedDown, (double)num2);
 	}
 
-	// Token: 0x0601AE13 RID: 110099 RVA: 0x00744DF4 File Offset: 0x00742FF4
+	// Token: 0x06018838 RID: 100408 RVA: 0x0076A6EC File Offset: 0x007688EC
 	private void CalcSkiDirection(float deltaTime, global::Vector outDirection)
 	{
 		global::Vector tmpVector = this.TmpVector;
@@ -333,7 +332,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		outDirection.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601AE14 RID: 110100 RVA: 0x0074510C File Offset: 0x0074330C
+	// Token: 0x06018839 RID: 100409 RVA: 0x0076AA04 File Offset: 0x00768C04
 	private float AngleNormalize(float angle)
 	{
 		float num;
@@ -347,7 +346,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return num;
 	}
 
-	// Token: 0x0601AE15 RID: 110101 RVA: 0x00745140 File Offset: 0x00743340
+	// Token: 0x0601883A RID: 100410 RVA: 0x0076AA38 File Offset: 0x00768C38
 	private void OnMoveSlide(float delta)
 	{
 		Slide slideConfig = CharacterSlideComponent.SlideConfig;
@@ -497,7 +496,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE16 RID: 110102 RVA: 0x0074563C File Offset: 0x0074383C
+	// Token: 0x0601883B RID: 100411 RVA: 0x0076AF34 File Offset: 0x00769134
 	private void OnInherit(Entity oldEntity, bool notInheritMoveAndAnim)
 	{
 		if (notInheritMoveAndAnim)
@@ -521,7 +520,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.SkiAccelCountDown = component.SkiAccelCountDown;
 	}
 
-	// Token: 0x0601AE17 RID: 110103 RVA: 0x00745710 File Offset: 0x00743910
+	// Token: 0x0601883C RID: 100412 RVA: 0x0076B008 File Offset: 0x00769208
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -558,7 +557,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return true;
 	}
 
-	// Token: 0x0601AE18 RID: 110104 RVA: 0x007458CC File Offset: 0x00743ACC
+	// Token: 0x0601883D RID: 100413 RVA: 0x0076B1C4 File Offset: 0x007693C4
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnMoveStateChanged));
@@ -573,7 +572,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return true;
 	}
 
-	// Token: 0x0601AE19 RID: 110105 RVA: 0x007459AC File Offset: 0x00743BAC
+	// Token: 0x0601883E RID: 100414 RVA: 0x0076B2A4 File Offset: 0x007694A4
 	protected override void OnTick(float delta)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -620,7 +619,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.TickSlideMode(delta);
 	}
 
-	// Token: 0x0601AE1A RID: 110106 RVA: 0x00745A8C File Offset: 0x00743C8C
+	// Token: 0x0601883F RID: 100415 RVA: 0x0076B384 File Offset: 0x00769584
 	private void FindStandMode(bool enterSlideFrame, Slide slideConfig)
 	{
 		this.SlideSwitchThisFrame = false;
@@ -659,7 +658,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE1B RID: 110107 RVA: 0x00745BD8 File Offset: 0x00743DD8
+	// Token: 0x06018840 RID: 100416 RVA: 0x0076B4D0 File Offset: 0x007696D0
 	private void SetInputRotator(bool enterSlideFrame)
 	{
 		if (this.SkiConfig != null)
@@ -708,7 +707,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.ActorComp.SetOverrideTurnSpeed(new float?(CharacterSlideComponent.SlideConfig.TurnSpeed));
 	}
 
-	// Token: 0x0601AE1C RID: 110108 RVA: 0x00745E2D File Offset: 0x0074402D
+	// Token: 0x06018841 RID: 100417 RVA: 0x0076B725 File Offset: 0x00769925
 	private void OnDisableTagChanged(int tagId, int newCount)
 	{
 		if (newCount == 0)
@@ -719,7 +718,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.DisableTagSet.Add(tagId);
 	}
 
-	// Token: 0x0601AE1D RID: 110109 RVA: 0x00745E50 File Offset: 0x00744050
+	// Token: 0x06018842 RID: 100418 RVA: 0x0076B748 File Offset: 0x00769948
 	private bool CheckExitSlide()
 	{
 		UTraceSphereElement actorTrace = TraceElementModel.Instance.GetActorTrace();
@@ -732,7 +731,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return !TraceElementCommon.Instance.ShapeTrace(this.ActorComp.Actor.CapsuleComponent, actorTrace, "slide", "slide");
 	}
 
-	// Token: 0x0601AE1E RID: 110110 RVA: 0x00745F28 File Offset: 0x00744128
+	// Token: 0x06018843 RID: 100419 RVA: 0x0076B820 File Offset: 0x00769A20
 	[NullableContext(2)]
 	private UKuroHitResult DetectFloor()
 	{
@@ -757,7 +756,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return actorTrace.HitResult;
 	}
 
-	// Token: 0x0601AE1F RID: 110111 RVA: 0x0074608C File Offset: 0x0074428C
+	// Token: 0x06018844 RID: 100420 RVA: 0x0076B984 File Offset: 0x00769B84
 	private bool TraceDetect()
 	{
 		UTraceSphereElement actorTrace = TraceElementModel.Instance.GetActorTrace();
@@ -786,7 +785,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return true;
 	}
 
-	// Token: 0x0601AE20 RID: 110112 RVA: 0x00746290 File Offset: 0x00744490
+	// Token: 0x06018845 RID: 100421 RVA: 0x0076BB88 File Offset: 0x00769D88
 	private bool TraceDetect2()
 	{
 		UTraceSphereElement actorTrace = TraceElementModel.Instance.GetActorTrace();
@@ -815,7 +814,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return this.TmpVector3.Normalize(9.99999993922529E-09);
 	}
 
-	// Token: 0x0601AE21 RID: 110113 RVA: 0x00746474 File Offset: 0x00744674
+	// Token: 0x06018846 RID: 100422 RVA: 0x0076BD6C File Offset: 0x00769F6C
 	public void OnJump()
 	{
 		if (this.ActorComp == null)
@@ -832,7 +831,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.TagComp.AddTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["关卡.关卡运动.关卡运动类型.滑雪"], new BaseTagComponent.TTagSwitchedCallback(this.OnExitSkiWhenJump), null);
 	}
 
-	// Token: 0x0601AE22 RID: 110114 RVA: 0x00746584 File Offset: 0x00744784
+	// Token: 0x06018847 RID: 100423 RVA: 0x0076BE7C File Offset: 0x0076A07C
 	public void SetSkiAccel(IAccelerateSkiConfig config)
 	{
 		CharacterUnifiedStateComponent unifiedStateComp = this.UnifiedStateComp;
@@ -861,7 +860,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.滑雪加速"]));
 	}
 
-	// Token: 0x0601AE23 RID: 110115 RVA: 0x007466B0 File Offset: 0x007448B0
+	// Token: 0x06018848 RID: 100424 RVA: 0x0076BFA8 File Offset: 0x0076A1A8
 	public void TickSlideMode(float delta)
 	{
 		if (this.ExitSlideThisFrame)
@@ -940,7 +939,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE24 RID: 110116 RVA: 0x00746920 File Offset: 0x00744B20
+	// Token: 0x06018849 RID: 100425 RVA: 0x0076C218 File Offset: 0x0076A418
 	public void TickSkiMode(float delta)
 	{
 		if (this.SkiAccelCountDown > 0f)
@@ -1059,7 +1058,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE25 RID: 110117 RVA: 0x00746C68 File Offset: 0x00744E68
+	// Token: 0x0601884A RID: 100426 RVA: 0x0076C560 File Offset: 0x0076A760
 	public void EnterSkiMode(IOpenSkiConfig config, bool needSetBase = false)
 	{
 		if (this.SkiConfig != null)
@@ -1081,7 +1080,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.EnterSkiModeRequest();
 	}
 
-	// Token: 0x0601AE26 RID: 110118 RVA: 0x00746D00 File Offset: 0x00744F00
+	// Token: 0x0601884B RID: 100427 RVA: 0x0076C5F8 File Offset: 0x0076A7F8
 	public void ExitSkiMode(bool sync = true)
 	{
 		if (this.SkiConfig == null)
@@ -1130,13 +1129,13 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE27 RID: 110119 RVA: 0x00746E0C File Offset: 0x0074500C
+	// Token: 0x0601884C RID: 100428 RVA: 0x0076C704 File Offset: 0x0076A904
 	private bool CheckSkiCondition()
 	{
 		return this.CacheBlockComp != null && (this.CacheBlockActor == null || !UKuroCollisionLibrary.ActorHasTag(this.CacheBlockActor, CharacterNameDefines.Instance.NO_SLIDE, this.CacheBlockIndex)) && !this.CacheBlockDirect.ContainsNaN() && GravityUtils.Instance.GetZnInGravityForActor(this.ActorComp, this.CacheBlockDirect) != 0.0 && (float)Math.Acos(global::Vector.DotProduct(this.CacheBlockDirect, this.ActorComp.MoveComp.GravityUp)) * 57.29578f < 75f;
 	}
 
-	// Token: 0x0601AE28 RID: 110120 RVA: 0x00746EAC File Offset: 0x007450AC
+	// Token: 0x0601884D RID: 100429 RVA: 0x0076C7A4 File Offset: 0x0076A9A4
 	private bool CheckSkiException(float delta)
 	{
 		if ((float)Math.Acos(global::Vector.DotProduct(this.GroundNormal, this.ActorComp.MoveComp.GravityUp)) * 57.29578f >= 75f)
@@ -1154,7 +1153,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return true;
 	}
 
-	// Token: 0x0601AE29 RID: 110121 RVA: 0x00746F38 File Offset: 0x00745138
+	// Token: 0x0601884E RID: 100430 RVA: 0x0076C830 File Offset: 0x0076AA30
 	private void OnExitSkiWhenJump(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -1168,7 +1167,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE2A RID: 110122 RVA: 0x00746FA0 File Offset: 0x007451A0
+	// Token: 0x0601884F RID: 100431 RVA: 0x0076C898 File Offset: 0x0076AA98
 	private void EnterSkiModeRequest()
 	{
 		LevelPlaySwitchSportModeRequest levelPlaySwitchSportModeRequest = LevelPlaySwitchSportModeRequest.Create();
@@ -1189,7 +1188,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}, 0);
 	}
 
-	// Token: 0x0601AE2B RID: 110123 RVA: 0x00746FE0 File Offset: 0x007451E0
+	// Token: 0x06018850 RID: 100432 RVA: 0x0076C8D8 File Offset: 0x0076AAD8
 	private void ExitSkiModeRequest()
 	{
 		LevelPlaySwitchSportModeRequest levelPlaySwitchSportModeRequest = LevelPlaySwitchSportModeRequest.Create();
@@ -1198,7 +1197,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		Net.Instance.Call(ERequestMessageId.LevelPlaySwitchSportModeRequest, levelPlaySwitchSportModeRequest, null, 0);
 	}
 
-	// Token: 0x0601AE2C RID: 110124 RVA: 0x00747014 File Offset: 0x00745214
+	// Token: 0x06018851 RID: 100433 RVA: 0x0076C90C File Offset: 0x0076AB0C
 	private void ApplySkiSpecialSettings()
 	{
 		if (this.SkiConfig == null)
@@ -1216,7 +1215,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE2D RID: 110125 RVA: 0x0074708C File Offset: 0x0074528C
+	// Token: 0x06018852 RID: 100434 RVA: 0x0076C984 File Offset: 0x0076AB84
 	private void RemoveSkiSpecialSettings()
 	{
 		this.RemoveSpecialJumpSettings();
@@ -1230,7 +1229,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		}
 	}
 
-	// Token: 0x0601AE2E RID: 110126 RVA: 0x007470FC File Offset: 0x007452FC
+	// Token: 0x06018853 RID: 100435 RVA: 0x0076C9F4 File Offset: 0x0076ABF4
 	private void ApplySpecialJumpSettings()
 	{
 		this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.超级跳跃"]));
@@ -1244,7 +1243,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.AttributeComp.SetBaseValue(EAttributeType.Jump, 10000f * this.SkiConfig.JumpHeightRate);
 	}
 
-	// Token: 0x0601AE2F RID: 110127 RVA: 0x0074719C File Offset: 0x0074539C
+	// Token: 0x06018854 RID: 100436 RVA: 0x0076CA94 File Offset: 0x0076AC94
 	private void RemoveSpecialJumpSettings()
 	{
 		this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.超级跳跃"]));
@@ -1258,7 +1257,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		this.AttributeComp.SetBaseValue(EAttributeType.Jump, 10000f);
 	}
 
-	// Token: 0x0601AE30 RID: 110128 RVA: 0x00747220 File Offset: 0x00745420
+	// Token: 0x06018855 RID: 100437 RVA: 0x0076CB18 File Offset: 0x0076AD18
 	private unsafe bool InitSkiParams(IOpenSkiConfig config)
 	{
 		string skiConfig = config.SkiConfig;
@@ -1282,7 +1281,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		return true;
 	}
 
-	// Token: 0x0601AE31 RID: 110129 RVA: 0x007472DA File Offset: 0x007454DA
+	// Token: 0x06018856 RID: 100438 RVA: 0x0076CBD2 File Offset: 0x0076ADD2
 	public static void CreateStaticDefaultValue()
 	{
 		CharacterSlideComponent.SlideConfigInternal = null;
@@ -1291,7 +1290,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		CharacterSlideComponent._SlideFallingCoefficientArray = new float[4];
 	}
 
-	// Token: 0x0601AE32 RID: 110130 RVA: 0x007472FE File Offset: 0x007454FE
+	// Token: 0x06018857 RID: 100439 RVA: 0x0076CBF6 File Offset: 0x0076ADF6
 	public static void ResetStaticDefaultValue()
 	{
 		CharacterSlideComponent.SlideConfigInternal = null;
@@ -1300,7 +1299,7 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		CharacterSlideComponent._SlideFallingCoefficientArray = null;
 	}
 
-	// Token: 0x0601AE33 RID: 110131 RVA: 0x00747320 File Offset: 0x00745520
+	// Token: 0x06018858 RID: 100440 RVA: 0x0076CC18 File Offset: 0x0076AE18
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1308,444 +1307,399 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 			return false;
 		}
 		CharacterSlideComponent characterSlideComponent = (CharacterSlideComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterSlideComponent.ActorComp == null)
 		{
-			if (characterSlideComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterSlideComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (characterSlideComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AttributeComp"))
-		{
-			if (characterSlideComponent.AttributeComp == null)
-			{
-				this.AttributeComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComp), "AttributeComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnifiedStateComp"))
-		{
-			if (characterSlideComponent.UnifiedStateComp == null)
-			{
-				this.UnifiedStateComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComp), "UnifiedStateComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillComp"))
-		{
-			if (characterSlideComponent.SkillComp == null)
-			{
-				this.SkillComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComp), "SkillComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterSlideComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InputComp"))
-		{
-			if (characterSlideComponent.InputComp == null)
-			{
-				this.InputComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterInputComponent>(this.InputComp), "InputComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TmpVector") && characterSlideComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector2") && characterSlideComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector2), "TmpVector2"))
+		if (characterSlideComponent.MoveComp == null)
+		{
+			this.MoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector3") && characterSlideComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector3), "TmpVector3"))
+		if (characterSlideComponent.AnimComp == null)
+		{
+			this.AnimComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector4") && characterSlideComponent.TmpVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector4), "TmpVector4"))
+		if (characterSlideComponent.AttributeComp == null)
+		{
+			this.AttributeComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComp), "AttributeComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector5") && characterSlideComponent.TmpVector5 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector5), "TmpVector5"))
+		if (characterSlideComponent.UnifiedStateComp == null)
+		{
+			this.UnifiedStateComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComp), "UnifiedStateComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpRotator") && characterSlideComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+		if (characterSlideComponent.SkillComp == null)
+		{
+			this.SkillComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComp), "SkillComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat") && characterSlideComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+		if (characterSlideComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpQuat2") && characterSlideComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat2), "TmpQuat2"))
+		if (characterSlideComponent.InputComp == null)
+		{
+			this.InputComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputComp), "InputComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SlideUp") && characterSlideComponent.SlideUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SlideUp), "SlideUp"))
+		if (characterSlideComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LeaveSlideCountDown"))
-		{
-			this.LeaveSlideCountDown = characterSlideComponent.LeaveSlideCountDown;
-		}
-		if (base.CanResetComponentProperty("SlideForward") && characterSlideComponent.SlideForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SlideForward), "SlideForward"))
+		if (characterSlideComponent.TmpVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("GroundNormal") && characterSlideComponent.GroundNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.GroundNormal), "GroundNormal"))
+		if (characterSlideComponent.TmpVector3 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector3), "TmpVector3"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagListeners") && characterSlideComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.TagListeners), "TagListeners"))
+		if (characterSlideComponent.TmpVector4 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector4), "TmpVector4"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DisableTagSet") && characterSlideComponent.DisableTagSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.DisableTagSet), "DisableTagSet"))
+		if (characterSlideComponent.TmpVector5 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector5), "TmpVector5"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastZ"))
-		{
-			this.LastZ = characterSlideComponent.LastZ;
-		}
-		if (base.CanResetComponentProperty("CurrentAirFriction"))
-		{
-			this.CurrentAirFriction = characterSlideComponent.CurrentAirFriction;
-		}
-		if (base.CanResetComponentProperty("SlideSwitchThisFrame"))
-		{
-			this.SlideSwitchThisFrame = characterSlideComponent.SlideSwitchThisFrame;
-		}
-		if (base.CanResetComponentProperty("StandMode"))
-		{
-			this.StandMode = characterSlideComponent.StandMode;
-		}
-		if (base.CanResetComponentProperty("LastAngleOffset"))
-		{
-			this.LastAngleOffset = characterSlideComponent.LastAngleOffset;
-		}
-		if (base.CanResetComponentProperty("JumpAddMoveHandler"))
-		{
-			this.JumpAddMoveHandler = characterSlideComponent.JumpAddMoveHandler;
-		}
-		if (base.CanResetComponentProperty("SkiAccelConfig"))
-		{
-			if (characterSlideComponent.SkiAccelConfig == null)
-			{
-				this.SkiAccelConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IAccelerateSkiConfig>(this.SkiAccelConfig), "SkiAccelConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkiAccelCountDown"))
-		{
-			this.SkiAccelCountDown = characterSlideComponent.SkiAccelCountDown;
-		}
-		if (base.CanResetComponentProperty("SkiConfig"))
-		{
-			if (characterSlideComponent.SkiConfig == null)
-			{
-				this.SkiConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SkiParams>(this.SkiConfig), "SkiConfig"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("NeedInitSpeed"))
-		{
-			this.NeedInitSpeed = characterSlideComponent.NeedInitSpeed;
-		}
-		if (base.CanResetComponentProperty("IsInSkiMode"))
-		{
-			this.IsInSkiMode = characterSlideComponent.IsInSkiMode;
-		}
-		if (base.CanResetComponentProperty("CacheBlockActor"))
-		{
-			if (characterSlideComponent.CacheBlockActor == null)
-			{
-				this.CacheBlockActor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CacheBlockActor), "CacheBlockActor"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheBlockComp"))
-		{
-			if (characterSlideComponent.CacheBlockComp == null)
-			{
-				this.CacheBlockComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.CacheBlockComp), "CacheBlockComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheBlockIndex"))
-		{
-			this.CacheBlockIndex = characterSlideComponent.CacheBlockIndex;
-		}
-		if (base.CanResetComponentProperty("CacheBlockDirect") && characterSlideComponent.CacheBlockDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CacheBlockDirect), "CacheBlockDirect"))
+		if (characterSlideComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VelocityBeforeJump") && characterSlideComponent.VelocityBeforeJump != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.VelocityBeforeJump), "VelocityBeforeJump"))
+		if (characterSlideComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SkiDirection") && characterSlideComponent.SkiDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SkiDirection), "SkiDirection"))
+		if (characterSlideComponent.TmpQuat2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat2), "TmpQuat2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SkiNeedSetBase"))
+		if (characterSlideComponent.SlideUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlideUp), "SlideUp"))
 		{
-			this.SkiNeedSetBase = characterSlideComponent.SkiNeedSetBase;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ExitSlideThisFrame"))
+		this.LeaveSlideCountDown = characterSlideComponent.LeaveSlideCountDown;
+		if (characterSlideComponent.SlideForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SlideForward), "SlideForward"))
 		{
-			this.ExitSlideThisFrame = characterSlideComponent.ExitSlideThisFrame;
+			return false;
 		}
+		if (characterSlideComponent.GroundNormal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroundNormal), "GroundNormal"))
+		{
+			return false;
+		}
+		if (characterSlideComponent.TagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagListeners), "TagListeners"))
+		{
+			return false;
+		}
+		if (characterSlideComponent.DisableTagSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.DisableTagSet), "DisableTagSet"))
+		{
+			return false;
+		}
+		this.LastZ = characterSlideComponent.LastZ;
+		this.CurrentAirFriction = characterSlideComponent.CurrentAirFriction;
+		this.SlideSwitchThisFrame = characterSlideComponent.SlideSwitchThisFrame;
+		this.StandMode = characterSlideComponent.StandMode;
+		this.LastAngleOffset = characterSlideComponent.LastAngleOffset;
+		this.JumpAddMoveHandler = characterSlideComponent.JumpAddMoveHandler;
+		if (characterSlideComponent.SkiAccelConfig == null)
+		{
+			this.SkiAccelConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkiAccelConfig), "SkiAccelConfig"))
+		{
+			return false;
+		}
+		this.SkiAccelCountDown = characterSlideComponent.SkiAccelCountDown;
+		if (characterSlideComponent.SkiConfig == null)
+		{
+			this.SkiConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkiConfig), "SkiConfig"))
+		{
+			return false;
+		}
+		this.NeedInitSpeed = characterSlideComponent.NeedInitSpeed;
+		this.IsInSkiMode = characterSlideComponent.IsInSkiMode;
+		if (characterSlideComponent.CacheBlockActor == null)
+		{
+			this.CacheBlockActor = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheBlockActor), "CacheBlockActor"))
+		{
+			return false;
+		}
+		if (characterSlideComponent.CacheBlockComp == null)
+		{
+			this.CacheBlockComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheBlockComp), "CacheBlockComp"))
+		{
+			return false;
+		}
+		this.CacheBlockIndex = characterSlideComponent.CacheBlockIndex;
+		if (characterSlideComponent.CacheBlockDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheBlockDirect), "CacheBlockDirect"))
+		{
+			return false;
+		}
+		if (characterSlideComponent.VelocityBeforeJump != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.VelocityBeforeJump), "VelocityBeforeJump"))
+		{
+			return false;
+		}
+		if (characterSlideComponent.SkiDirection != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkiDirection), "SkiDirection"))
+		{
+			return false;
+		}
+		this.SkiNeedSetBase = characterSlideComponent.SkiNeedSetBase;
+		this.ExitSlideThisFrame = characterSlideComponent.ExitSlideThisFrame;
 		return true;
 	}
 
-	// Token: 0x0400CFF6 RID: 53238
+	// Token: 0x170026A7 RID: 9895
+	// (get) Token: 0x06018859 RID: 100441 RVA: 0x0076D0F8 File Offset: 0x0076B2F8
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026A8 RID: 9896
+	// (get) Token: 0x0601885A RID: 100442 RVA: 0x0076D0FB File Offset: 0x0076B2FB
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026A9 RID: 9897
+	// (get) Token: 0x0601885B RID: 100443 RVA: 0x0076D0FE File Offset: 0x0076B2FE
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D3E7 RID: 54247
 	private const float LEAVE_SLIDE_TIME = 0.25f;
 
-	// Token: 0x0400CFF7 RID: 53239
+	// Token: 0x0400D3E8 RID: 54248
 	private const float LEAVE_SLIDE_MIN_HEIGHT = 5f;
 
-	// Token: 0x0400CFF8 RID: 53240
+	// Token: 0x0400D3E9 RID: 54249
 	private const string PROFILE_KEY = "slide";
 
-	// Token: 0x0400CFF9 RID: 53241
+	// Token: 0x0400D3EA RID: 54250
 	private const float CHANGE_FORWARD_ANGLE_THRESHOLD = 135f;
 
-	// Token: 0x0400CFFA RID: 53242
+	// Token: 0x0400D3EB RID: 54251
 	private const float COMBINE_NORMAL_Z_THRESHOLD = 0.707f;
 
-	// Token: 0x0400CFFB RID: 53243
+	// Token: 0x0400D3EC RID: 54252
 	private const float SLIDE_Z_THRESHOLD = 0.1f;
 
-	// Token: 0x0400CFFC RID: 53244
+	// Token: 0x0400D3ED RID: 54253
 	private const float LEAVE_SKI_TIME = 3f;
 
-	// Token: 0x0400CFFD RID: 53245
+	// Token: 0x0400D3EE RID: 54254
 	private const float SKI_GROUND_MAX_ANGLE = 75f;
 
-	// Token: 0x0400CFFE RID: 53246
+	// Token: 0x0400D3EF RID: 54255
 	private const float SKI_BRAKE_ANGLE_THRESHOLD = 135f;
 
-	// Token: 0x0400CFFF RID: 53247
+	// Token: 0x0400D3F0 RID: 54256
 	private const float SKI_MAX_INPUT_ANGLE = 135f;
 
-	// Token: 0x0400D000 RID: 53248
+	// Token: 0x0400D3F1 RID: 54257
 	private const float DEFAULT_SKI_MAX_TURN_ANGLE = 50f;
 
-	// Token: 0x0400D001 RID: 53249
+	// Token: 0x0400D3F2 RID: 54258
 	private const float DEFAULT_SKI_MAX_SPEED = 3500f;
 
-	// Token: 0x0400D002 RID: 53250
+	// Token: 0x0400D3F3 RID: 54259
 	private const float DEFAULT_SKI_MIN_SPEED = 20f;
 
-	// Token: 0x0400D003 RID: 53251
+	// Token: 0x0400D3F4 RID: 54260
 	private const float ENTER_SKI_BUFFER_TIME = 300f;
 
-	// Token: 0x0400D004 RID: 53252
+	// Token: 0x0400D3F5 RID: 54261
 	protected static Slide? SlideConfigInternal;
 
-	// Token: 0x0400D005 RID: 53253
+	// Token: 0x0400D3F6 RID: 54262
 	[Nullable(2)]
 	private static float[] _SlideFallingCoefficientArray;
 
-	// Token: 0x0400D006 RID: 53254
+	// Token: 0x0400D3F7 RID: 54263
 	[Nullable(2)]
 	protected static UCurveFloat SpeedReduceCurve;
 
-	// Token: 0x0400D007 RID: 53255
+	// Token: 0x0400D3F8 RID: 54264
 	[Nullable(2)]
 	private static UCurveFloat _jumpAddMoveCurveInternal;
 
-	// Token: 0x0400D008 RID: 53256
+	// Token: 0x0400D3F9 RID: 54265
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D009 RID: 53257
+	// Token: 0x0400D3FA RID: 54266
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400D00A RID: 53258
+	// Token: 0x0400D3FB RID: 54267
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D00B RID: 53259
+	// Token: 0x0400D3FC RID: 54268
 	[Nullable(2)]
 	private BaseAttributeComponent AttributeComp;
 
-	// Token: 0x0400D00C RID: 53260
+	// Token: 0x0400D3FD RID: 54269
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedStateComp;
 
-	// Token: 0x0400D00D RID: 53261
+	// Token: 0x0400D3FE RID: 54270
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x0400D00E RID: 53262
+	// Token: 0x0400D3FF RID: 54271
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400D00F RID: 53263
+	// Token: 0x0400D400 RID: 54272
 	[Nullable(2)]
 	private CharacterInputComponent InputComp;
 
-	// Token: 0x0400D010 RID: 53264
+	// Token: 0x0400D401 RID: 54273
 	private readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400D011 RID: 53265
+	// Token: 0x0400D402 RID: 54274
 	private readonly global::Vector TmpVector2 = global::Vector.Create();
 
-	// Token: 0x0400D012 RID: 53266
+	// Token: 0x0400D403 RID: 54275
 	private readonly global::Vector TmpVector3 = global::Vector.Create();
 
-	// Token: 0x0400D013 RID: 53267
+	// Token: 0x0400D404 RID: 54276
 	private readonly global::Vector TmpVector4 = global::Vector.Create();
 
-	// Token: 0x0400D014 RID: 53268
+	// Token: 0x0400D405 RID: 54277
 	private readonly global::Vector TmpVector5 = global::Vector.Create();
 
-	// Token: 0x0400D015 RID: 53269
+	// Token: 0x0400D406 RID: 54278
 	private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400D016 RID: 53270
+	// Token: 0x0400D407 RID: 54279
 	private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D017 RID: 53271
+	// Token: 0x0400D408 RID: 54280
 	private readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D018 RID: 53272
+	// Token: 0x0400D409 RID: 54281
 	private readonly global::Vector SlideUp = global::Vector.Create();
 
-	// Token: 0x0400D019 RID: 53273
+	// Token: 0x0400D40A RID: 54282
 	private float LeaveSlideCountDown;
 
-	// Token: 0x0400D01A RID: 53274
+	// Token: 0x0400D40B RID: 54283
 	public readonly global::Vector SlideForward = global::Vector.Create();
 
-	// Token: 0x0400D01B RID: 53275
+	// Token: 0x0400D40C RID: 54284
 	public readonly global::Vector GroundNormal = global::Vector.Create();
 
-	// Token: 0x0400D01C RID: 53276
+	// Token: 0x0400D40D RID: 54285
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-	// Token: 0x0400D01D RID: 53277
+	// Token: 0x0400D40E RID: 54286
 	private readonly HashSet<int> DisableTagSet = new HashSet<int>();
 
-	// Token: 0x0400D01E RID: 53278
+	// Token: 0x0400D40F RID: 54287
 	private float LastZ;
 
-	// Token: 0x0400D01F RID: 53279
+	// Token: 0x0400D410 RID: 54288
 	private float CurrentAirFriction;
 
-	// Token: 0x0400D020 RID: 53280
+	// Token: 0x0400D411 RID: 54289
 	public bool SlideSwitchThisFrame;
 
-	// Token: 0x0400D021 RID: 53281
+	// Token: 0x0400D412 RID: 54290
 	public bool StandMode;
 
-	// Token: 0x0400D022 RID: 53282
+	// Token: 0x0400D413 RID: 54291
 	public float LastAngleOffset;
 
-	// Token: 0x0400D023 RID: 53283
+	// Token: 0x0400D414 RID: 54292
 	private int? JumpAddMoveHandler;
 
-	// Token: 0x0400D024 RID: 53284
+	// Token: 0x0400D415 RID: 54293
 	[Nullable(2)]
 	private IAccelerateSkiConfig SkiAccelConfig;
 
-	// Token: 0x0400D025 RID: 53285
+	// Token: 0x0400D416 RID: 54294
 	private float SkiAccelCountDown;
 
-	// Token: 0x0400D026 RID: 53286
+	// Token: 0x0400D417 RID: 54295
 	[Nullable(2)]
 	private SkiParams SkiConfig;
 
-	// Token: 0x0400D027 RID: 53287
+	// Token: 0x0400D418 RID: 54296
 	private bool NeedInitSpeed;
 
-	// Token: 0x0400D028 RID: 53288
+	// Token: 0x0400D419 RID: 54297
 	private bool IsInSkiMode;
 
-	// Token: 0x0400D029 RID: 53289
+	// Token: 0x0400D41A RID: 54298
 	[Nullable(2)]
 	private AActor CacheBlockActor;
 
-	// Token: 0x0400D02A RID: 53290
+	// Token: 0x0400D41B RID: 54299
 	[Nullable(2)]
 	private UPrimitiveComponent CacheBlockComp;
 
-	// Token: 0x0400D02B RID: 53291
+	// Token: 0x0400D41C RID: 54300
 	private int CacheBlockIndex;
 
-	// Token: 0x0400D02C RID: 53292
+	// Token: 0x0400D41D RID: 54301
 	private readonly global::Vector CacheBlockDirect = global::Vector.Create();
 
-	// Token: 0x0400D02D RID: 53293
+	// Token: 0x0400D41E RID: 54302
 	private readonly global::Vector VelocityBeforeJump = global::Vector.Create();
 
-	// Token: 0x0400D02E RID: 53294
+	// Token: 0x0400D41F RID: 54303
 	private readonly global::Vector SkiDirection = global::Vector.Create();
 
-	// Token: 0x0400D02F RID: 53295
+	// Token: 0x0400D420 RID: 54304
 	[StaticVariableRuleIgnore]
 	private static readonly int[] DisableTags = new int[]
 	{
@@ -1754,9 +1708,9 @@ public class CharacterSlideComponent : EntityComponent, IComponentDependency, IS
 		GameplayTagDefine.EGameplayTagId["Damage.Frozen"]
 	};
 
-	// Token: 0x0400D030 RID: 53296
+	// Token: 0x0400D421 RID: 54305
 	private bool SkiNeedSetBase;
 
-	// Token: 0x0400D031 RID: 53297
+	// Token: 0x0400D422 RID: 54306
 	private bool ExitSlideThisFrame;
 }

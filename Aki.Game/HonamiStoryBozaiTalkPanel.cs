@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EF7 RID: 7927
+// Token: 0x020013B9 RID: 5049
 public class HonamiStoryBozaiTalkPanel : UiPanelBase
 {
-	// Token: 0x0600F406 RID: 62470 RVA: 0x003ADC04 File Offset: 0x003ABE04
+	// Token: 0x0600C825 RID: 51237 RVA: 0x003B96F8 File Offset: 0x003B78F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -22,7 +22,7 @@ public class HonamiStoryBozaiTalkPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F407 RID: 62471 RVA: 0x003ADC4C File Offset: 0x003ABE4C
+	// Token: 0x0600C826 RID: 51238 RVA: 0x003B9740 File Offset: 0x003B7940
 	public void SetTalkInfoTextAndPlayAudio(HonamiStoryOutDialog? config)
 	{
 		if (config == null)
@@ -46,14 +46,14 @@ public class HonamiStoryBozaiTalkPanel : UiPanelBase
 		AudioSystem.Instance.PostEvent(config.Value.AudioEvent);
 	}
 
-	// Token: 0x040070F7 RID: 28919
+	// Token: 0x040071D8 RID: 29144
 	[Nullable(1)]
 	private readonly Dictionary<EHonamiStoryOutDialogType, double> LastTimeMap = new Dictionary<EHonamiStoryOutDialogType, double>();
 
-	// Token: 0x020084F4 RID: 34036
+	// Token: 0x02007679 RID: 30329
 	private enum EBoZaiComponent
 	{
-		// Token: 0x0402B447 RID: 177223
+		// Token: 0x0402676B RID: 157547
 		TxtBoZaiTalk
 	}
 }

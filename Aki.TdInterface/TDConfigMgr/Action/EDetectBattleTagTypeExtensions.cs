@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002301 RID: 8961
+	// Token: 0x02002570 RID: 9584
 	public static class EDetectBattleTagTypeExtensions
 	{
-		// Token: 0x0600C403 RID: 50179 RVA: 0x001C9F08 File Offset: 0x001C8108
+		// Token: 0x0600CFD2 RID: 53202 RVA: 0x001E1DD0 File Offset: 0x001DFFD0
 		public static string ToEnumString(this EDetectBattleTagType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C404 RID: 50180 RVA: 0x001C9F30 File Offset: 0x001C8130
+		// Token: 0x0600CFD3 RID: 53203 RVA: 0x001E1DF8 File Offset: 0x001DFFF8
 		public static EDetectBattleTagType FromString(string name)
 		{
 			EDetectBattleTagType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C405 RID: 50181 RVA: 0x001C9F59 File Offset: 0x001C8159
+		// Token: 0x0600CFD4 RID: 53204 RVA: 0x001E1E21 File Offset: 0x001E0021
 		public static bool TryFromString(string name, out EDetectBattleTagType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C406 RID: 50182 RVA: 0x001C9F7E File Offset: 0x001C817E
+		// Token: 0x0600CFD5 RID: 53205 RVA: 0x001E1E46 File Offset: 0x001E0046
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C407 RID: 50183 RVA: 0x001C9F8E File Offset: 0x001C818E
+		// Token: 0x0600CFD6 RID: 53206 RVA: 0x001E1E56 File Offset: 0x001E0056
 		public static EDetectBattleTagType[] GetValues()
 		{
 			return new EDetectBattleTagType[1];
 		}
 
-		// Token: 0x0600C408 RID: 50184 RVA: 0x001C9F96 File Offset: 0x001C8196
+		// Token: 0x0600CFD7 RID: 53207 RVA: 0x001E1E5E File Offset: 0x001E005E
 		public static string[] GetNames()
 		{
 			return new string[]

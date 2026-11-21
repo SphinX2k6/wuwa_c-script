@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BBB RID: 3003
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C89 RID: 3209
 	public class INpcPerformOnInteract
 	{
-		// Token: 0x060044DC RID: 17628 RVA: 0x000AEB7C File Offset: 0x000ACD7C
+		// Token: 0x06004935 RID: 18741 RVA: 0x000B8C40 File Offset: 0x000B6E40
 		public static INpcPerformOnInteract Create(INpcPerformOnInteract? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001323 RID: 4899
-		// (get) Token: 0x060044DD RID: 17629 RVA: 0x000AEB9B File Offset: 0x000ACD9B
+		// Token: 0x1700141E RID: 5150
+		// (get) Token: 0x06004936 RID: 18742 RVA: 0x000B8C5F File Offset: 0x000B6E5F
 		public virtual string Montage
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001324 RID: 4900
-		// (get) Token: 0x060044DE RID: 17630 RVA: 0x000AEBA8 File Offset: 0x000ACDA8
+		// Token: 0x1700141F RID: 5151
+		// (get) Token: 0x06004937 RID: 18743 RVA: 0x000B8C6C File Offset: 0x000B6E6C
 		public virtual bool? NotInterruptMontageWhenFinishedInteract
 		{
 			get
@@ -46,7 +43,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026F4 RID: 9972
+		// Token: 0x0400293C RID: 10556
 		private INpcPerformOnInteract Instance;
 	}
 }

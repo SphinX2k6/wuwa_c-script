@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B05 RID: 19205
+	// Token: 0x02004FE0 RID: 20448
 	public struct ICheckPlayerUseSkillCondition : IFlatbufferObject
 	{
-		// Token: 0x17008B4D RID: 35661
-		// (get) Token: 0x0601E328 RID: 123688 RVA: 0x0043C138 File Offset: 0x0043A338
+		// Token: 0x1700924E RID: 37454
+		// (get) Token: 0x0601FE69 RID: 130665 RVA: 0x0046E1E4 File Offset: 0x0046C3E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E329 RID: 123689 RVA: 0x0043C145 File Offset: 0x0043A345
+		// Token: 0x0601FE6A RID: 130666 RVA: 0x0046E1F1 File Offset: 0x0046C3F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E32A RID: 123690 RVA: 0x0043C14C File Offset: 0x0043A34C
+		// Token: 0x0601FE6B RID: 130667 RVA: 0x0046E1F8 File Offset: 0x0046C3F8
 		public static ICheckPlayerUseSkillCondition GetRootAsICheckPlayerUseSkillCondition(ByteBuffer _bb)
 		{
 			return ICheckPlayerUseSkillCondition.GetRootAsICheckPlayerUseSkillCondition(_bb, default(ICheckPlayerUseSkillCondition));
 		}
 
-		// Token: 0x0601E32B RID: 123691 RVA: 0x0043C168 File Offset: 0x0043A368
+		// Token: 0x0601FE6C RID: 130668 RVA: 0x0046E214 File Offset: 0x0046C414
 		public static ICheckPlayerUseSkillCondition GetRootAsICheckPlayerUseSkillCondition(ByteBuffer _bb, ICheckPlayerUseSkillCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E32C RID: 123692 RVA: 0x0043C185 File Offset: 0x0043A385
+		// Token: 0x0601FE6D RID: 130669 RVA: 0x0046E231 File Offset: 0x0046C431
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E32D RID: 123693 RVA: 0x0043C194 File Offset: 0x0043A394
+		// Token: 0x0601FE6E RID: 130670 RVA: 0x0046E240 File Offset: 0x0046C440
 		public ICheckPlayerUseSkillCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B4E RID: 35662
-		// (get) Token: 0x0601E32E RID: 123694 RVA: 0x0043C1A4 File Offset: 0x0043A3A4
+		// Token: 0x1700924F RID: 37455
+		// (get) Token: 0x0601FE6F RID: 130671 RVA: 0x0046E250 File Offset: 0x0046C450
 		public ECondition Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B4F RID: 35663
-		// (get) Token: 0x0601E32F RID: 123695 RVA: 0x0043C1E0 File Offset: 0x0043A3E0
+		// Token: 0x17009250 RID: 37456
+		// (get) Token: 0x0601FE70 RID: 130672 RVA: 0x0046E28C File Offset: 0x0046C48C
 		public ECommonMatchType CheckType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E330 RID: 123696 RVA: 0x0043C21C File Offset: 0x0043A41C
+		// Token: 0x0601FE71 RID: 130673 RVA: 0x0046E2C8 File Offset: 0x0046C4C8
 		public ISkillUseTypeRoleSkill? CheckSkills(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new ISkillUseTypeRoleSkill?(default(ISkillUseTypeRoleSkill).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17008B50 RID: 35664
-		// (get) Token: 0x0601E331 RID: 123697 RVA: 0x0043C27C File Offset: 0x0043A47C
+		// Token: 0x17009251 RID: 37457
+		// (get) Token: 0x0601FE72 RID: 130674 RVA: 0x0046E328 File Offset: 0x0046C528
 		public int CheckSkillsLength
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E332 RID: 123698 RVA: 0x0043C2A7 File Offset: 0x0043A4A7
+		// Token: 0x0601FE73 RID: 130675 RVA: 0x0046E353 File Offset: 0x0046C553
 		public static Offset<ICheckPlayerUseSkillCondition> CreateICheckPlayerUseSkillCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECommonMatchType CheckType = ECommonMatchType.MatchAll, VectorOffset CheckSkillsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -114,31 +114,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerUseSkillCondition.EndICheckPlayerUseSkillCondition(builder);
 		}
 
-		// Token: 0x0601E333 RID: 123699 RVA: 0x0043C2CB File Offset: 0x0043A4CB
+		// Token: 0x0601FE74 RID: 130676 RVA: 0x0046E377 File Offset: 0x0046C577
 		public static void StartICheckPlayerUseSkillCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E334 RID: 123700 RVA: 0x0043C2D4 File Offset: 0x0043A4D4
+		// Token: 0x0601FE75 RID: 130677 RVA: 0x0046E380 File Offset: 0x0046C580
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E335 RID: 123701 RVA: 0x0043C2DF File Offset: 0x0043A4DF
+		// Token: 0x0601FE76 RID: 130678 RVA: 0x0046E38B File Offset: 0x0046C58B
 		public static void AddCheckType(FlatBufferBuilder builder, ECommonMatchType checkType)
 		{
 			builder.AddByte(1, (byte)checkType, 0);
 		}
 
-		// Token: 0x0601E336 RID: 123702 RVA: 0x0043C2EA File Offset: 0x0043A4EA
+		// Token: 0x0601FE77 RID: 130679 RVA: 0x0046E396 File Offset: 0x0046C596
 		public static void AddCheckSkills(FlatBufferBuilder builder, VectorOffset checkSkillsOffset)
 		{
 			builder.AddOffset(2, checkSkillsOffset.Value, 0);
 		}
 
-		// Token: 0x0601E337 RID: 123703 RVA: 0x0043C2FC File Offset: 0x0043A4FC
+		// Token: 0x0601FE78 RID: 130680 RVA: 0x0046E3A8 File Offset: 0x0046C5A8
 		public static VectorOffset CreateCheckSkillsVector(FlatBufferBuilder builder, Offset<ISkillUseTypeRoleSkill>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E338 RID: 123704 RVA: 0x0043C33C File Offset: 0x0043A53C
+		// Token: 0x0601FE79 RID: 130681 RVA: 0x0046E3E8 File Offset: 0x0046C5E8
 		public static VectorOffset CreateCheckSkillsVectorBlock(FlatBufferBuilder builder, Offset<ISkillUseTypeRoleSkill>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -157,7 +157,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E339 RID: 123705 RVA: 0x0043C356 File Offset: 0x0043A556
+		// Token: 0x0601FE7A RID: 130682 RVA: 0x0046E402 File Offset: 0x0046C602
 		public static VectorOffset CreateCheckSkillsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISkillUseTypeRoleSkill>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E33A RID: 123706 RVA: 0x0043C374 File Offset: 0x0043A574
+		// Token: 0x0601FE7B RID: 130683 RVA: 0x0046E420 File Offset: 0x0046C620
 		public static VectorOffset CreateCheckSkillsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -173,19 +173,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601E33B RID: 123707 RVA: 0x0043C38D File Offset: 0x0043A58D
+		// Token: 0x0601FE7C RID: 130684 RVA: 0x0046E439 File Offset: 0x0046C639
 		public static void StartCheckSkillsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601E33C RID: 123708 RVA: 0x0043C398 File Offset: 0x0043A598
+		// Token: 0x0601FE7D RID: 130685 RVA: 0x0046E444 File Offset: 0x0046C644
 		public static Offset<ICheckPlayerUseSkillCondition> EndICheckPlayerUseSkillCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerUseSkillCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E33D RID: 123709 RVA: 0x0043C3A8 File Offset: 0x0043A5A8
+		// Token: 0x0601FE7E RID: 130686 RVA: 0x0046E454 File Offset: 0x0046C654
 		public ICheckPlayerUseSkillConditionT UnPack()
 		{
 			ICheckPlayerUseSkillConditionT checkPlayerUseSkillConditionT = new ICheckPlayerUseSkillConditionT();
@@ -193,7 +193,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerUseSkillConditionT;
 		}
 
-		// Token: 0x0601E33E RID: 123710 RVA: 0x0043C3C4 File Offset: 0x0043A5C4
+		// Token: 0x0601FE7F RID: 130687 RVA: 0x0046E470 File Offset: 0x0046C670
 		public void UnPackTo(ICheckPlayerUseSkillConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E33F RID: 123711 RVA: 0x0043C43C File Offset: 0x0043A63C
+		// Token: 0x0601FE80 RID: 130688 RVA: 0x0046E4E8 File Offset: 0x0046C6E8
 		public static Offset<ICheckPlayerUseSkillCondition> Pack(FlatBufferBuilder builder, ICheckPlayerUseSkillConditionT _o)
 		{
 			if (_o == null)
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerUseSkillCondition.CreateICheckPlayerUseSkillCondition(builder, _o.Type, _o.CheckType, checkSkillsOffset);
 		}
 
-		// Token: 0x0400D39E RID: 54174
+		// Token: 0x0400DE8F RID: 56975
 		private Table __p;
 	}
 }

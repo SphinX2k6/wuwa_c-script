@@ -4,84 +4,84 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055AC RID: 21932
+	// Token: 0x02004582 RID: 17794
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameInfoInitData : IGameInfoInitData
 	{
-		// Token: 0x170086A3 RID: 34467
-		// (get) Token: 0x06037E49 RID: 228937 RVA: 0x00D3DCBF File Offset: 0x00D3BEBF
-		// (set) Token: 0x06037E4A RID: 228938 RVA: 0x00D3DCC7 File Offset: 0x00D3BEC7
+		// Token: 0x17005A6A RID: 23146
+		// (get) Token: 0x0602CD47 RID: 183623 RVA: 0x00C8BA07 File Offset: 0x00C89C07
+		// (set) Token: 0x0602CD48 RID: 183624 RVA: 0x00C8BA0F File Offset: 0x00C89C0F
 		public int InstanceId { get; set; }
 
-		// Token: 0x170086A4 RID: 34468
-		// (get) Token: 0x06037E4B RID: 228939 RVA: 0x00D3DCD0 File Offset: 0x00D3BED0
-		// (set) Token: 0x06037E4C RID: 228940 RVA: 0x00D3DCD8 File Offset: 0x00D3BED8
+		// Token: 0x17005A6B RID: 23147
+		// (get) Token: 0x0602CD49 RID: 183625 RVA: 0x00C8BA18 File Offset: 0x00C89C18
+		// (set) Token: 0x0602CD4A RID: 183626 RVA: 0x00C8BA20 File Offset: 0x00C89C20
 		public int RandomSeed { get; set; }
 
-		// Token: 0x170086A5 RID: 34469
-		// (get) Token: 0x06037E4D RID: 228941 RVA: 0x00D3DCE1 File Offset: 0x00D3BEE1
-		// (set) Token: 0x06037E4E RID: 228942 RVA: 0x00D3DCE9 File Offset: 0x00D3BEE9
+		// Token: 0x17005A6C RID: 23148
+		// (get) Token: 0x0602CD4B RID: 183627 RVA: 0x00C8BA29 File Offset: 0x00C89C29
+		// (set) Token: 0x0602CD4C RID: 183628 RVA: 0x00C8BA31 File Offset: 0x00C89C31
 		public int MoodMin { get; set; }
 
-		// Token: 0x170086A6 RID: 34470
-		// (get) Token: 0x06037E4F RID: 228943 RVA: 0x00D3DCF2 File Offset: 0x00D3BEF2
-		// (set) Token: 0x06037E50 RID: 228944 RVA: 0x00D3DCFA File Offset: 0x00D3BEFA
+		// Token: 0x17005A6D RID: 23149
+		// (get) Token: 0x0602CD4D RID: 183629 RVA: 0x00C8BA3A File Offset: 0x00C89C3A
+		// (set) Token: 0x0602CD4E RID: 183630 RVA: 0x00C8BA42 File Offset: 0x00C89C42
 		public int MoodMax { get; set; }
 
-		// Token: 0x170086A7 RID: 34471
-		// (get) Token: 0x06037E51 RID: 228945 RVA: 0x00D3DD03 File Offset: 0x00D3BF03
-		// (set) Token: 0x06037E52 RID: 228946 RVA: 0x00D3DD0B File Offset: 0x00D3BF0B
+		// Token: 0x17005A6E RID: 23150
+		// (get) Token: 0x0602CD4F RID: 183631 RVA: 0x00C8BA4B File Offset: 0x00C89C4B
+		// (set) Token: 0x0602CD50 RID: 183632 RVA: 0x00C8BA53 File Offset: 0x00C89C53
 		public int InitMood { get; set; }
 
-		// Token: 0x170086A8 RID: 34472
-		// (get) Token: 0x06037E53 RID: 228947 RVA: 0x00D3DD14 File Offset: 0x00D3BF14
-		// (set) Token: 0x06037E54 RID: 228948 RVA: 0x00D3DD1C File Offset: 0x00D3BF1C
+		// Token: 0x17005A6F RID: 23151
+		// (get) Token: 0x0602CD51 RID: 183633 RVA: 0x00C8BA5C File Offset: 0x00C89C5C
+		// (set) Token: 0x0602CD52 RID: 183634 RVA: 0x00C8BA64 File Offset: 0x00C89C64
 		public List<MapGridData> MapGrids { get; set; }
 
-		// Token: 0x170086A9 RID: 34473
-		// (get) Token: 0x06037E55 RID: 228949 RVA: 0x00D3DD25 File Offset: 0x00D3BF25
-		// (set) Token: 0x06037E56 RID: 228950 RVA: 0x00D3DD2D File Offset: 0x00D3BF2D
+		// Token: 0x17005A70 RID: 23152
+		// (get) Token: 0x0602CD53 RID: 183635 RVA: 0x00C8BA6D File Offset: 0x00C89C6D
+		// (set) Token: 0x0602CD54 RID: 183636 RVA: 0x00C8BA75 File Offset: 0x00C89C75
 		public int MapWidth { get; set; }
 
-		// Token: 0x170086AA RID: 34474
-		// (get) Token: 0x06037E57 RID: 228951 RVA: 0x00D3DD36 File Offset: 0x00D3BF36
-		// (set) Token: 0x06037E58 RID: 228952 RVA: 0x00D3DD3E File Offset: 0x00D3BF3E
+		// Token: 0x17005A71 RID: 23153
+		// (get) Token: 0x0602CD55 RID: 183637 RVA: 0x00C8BA7E File Offset: 0x00C89C7E
+		// (set) Token: 0x0602CD56 RID: 183638 RVA: 0x00C8BA86 File Offset: 0x00C89C86
 		public int MapHeight { get; set; }
 
-		// Token: 0x170086AB RID: 34475
-		// (get) Token: 0x06037E59 RID: 228953 RVA: 0x00D3DD47 File Offset: 0x00D3BF47
-		// (set) Token: 0x06037E5A RID: 228954 RVA: 0x00D3DD4F File Offset: 0x00D3BF4F
+		// Token: 0x17005A72 RID: 23154
+		// (get) Token: 0x0602CD57 RID: 183639 RVA: 0x00C8BA8F File Offset: 0x00C89C8F
+		// (set) Token: 0x0602CD58 RID: 183640 RVA: 0x00C8BA97 File Offset: 0x00C89C97
 		public int PlayerGridIndex { get; set; }
 
-		// Token: 0x170086AC RID: 34476
-		// (get) Token: 0x06037E5B RID: 228955 RVA: 0x00D3DD58 File Offset: 0x00D3BF58
-		// (set) Token: 0x06037E5C RID: 228956 RVA: 0x00D3DD60 File Offset: 0x00D3BF60
+		// Token: 0x17005A73 RID: 23155
+		// (get) Token: 0x0602CD59 RID: 183641 RVA: 0x00C8BAA0 File Offset: 0x00C89CA0
+		// (set) Token: 0x0602CD5A RID: 183642 RVA: 0x00C8BAA8 File Offset: 0x00C89CA8
 		public int TeamLv { get; set; }
 
-		// Token: 0x170086AD RID: 34477
-		// (get) Token: 0x06037E5D RID: 228957 RVA: 0x00D3DD69 File Offset: 0x00D3BF69
-		// (set) Token: 0x06037E5E RID: 228958 RVA: 0x00D3DD71 File Offset: 0x00D3BF71
+		// Token: 0x17005A74 RID: 23156
+		// (get) Token: 0x0602CD5B RID: 183643 RVA: 0x00C8BAB1 File Offset: 0x00C89CB1
+		// (set) Token: 0x0602CD5C RID: 183644 RVA: 0x00C8BAB9 File Offset: 0x00C89CB9
 		public bool InBattle { get; set; }
 
-		// Token: 0x170086AE RID: 34478
-		// (get) Token: 0x06037E5F RID: 228959 RVA: 0x00D3DD7A File Offset: 0x00D3BF7A
-		// (set) Token: 0x06037E60 RID: 228960 RVA: 0x00D3DD82 File Offset: 0x00D3BF82
+		// Token: 0x17005A75 RID: 23157
+		// (get) Token: 0x0602CD5D RID: 183645 RVA: 0x00C8BAC2 File Offset: 0x00C89CC2
+		// (set) Token: 0x0602CD5E RID: 183646 RVA: 0x00C8BACA File Offset: 0x00C89CCA
 		public int CurrencyItemId { get; set; }
 
-		// Token: 0x170086AF RID: 34479
-		// (get) Token: 0x06037E61 RID: 228961 RVA: 0x00D3DD8B File Offset: 0x00D3BF8B
-		// (set) Token: 0x06037E62 RID: 228962 RVA: 0x00D3DD93 File Offset: 0x00D3BF93
+		// Token: 0x17005A76 RID: 23158
+		// (get) Token: 0x0602CD5F RID: 183647 RVA: 0x00C8BAD3 File Offset: 0x00C89CD3
+		// (set) Token: 0x0602CD60 RID: 183648 RVA: 0x00C8BADB File Offset: 0x00C89CDB
 		public int MoodRuleId { get; set; }
 
-		// Token: 0x170086B0 RID: 34480
-		// (get) Token: 0x06037E63 RID: 228963 RVA: 0x00D3DD9C File Offset: 0x00D3BF9C
-		// (set) Token: 0x06037E64 RID: 228964 RVA: 0x00D3DDA4 File Offset: 0x00D3BFA4
+		// Token: 0x17005A77 RID: 23159
+		// (get) Token: 0x0602CD61 RID: 183649 RVA: 0x00C8BAE4 File Offset: 0x00C89CE4
+		// (set) Token: 0x0602CD62 RID: 183650 RVA: 0x00C8BAEC File Offset: 0x00C89CEC
 		public int RoleMaxStar { get; set; }
 
-		// Token: 0x170086B1 RID: 34481
-		// (get) Token: 0x06037E65 RID: 228965 RVA: 0x00D3DDAD File Offset: 0x00D3BFAD
-		// (set) Token: 0x06037E66 RID: 228966 RVA: 0x00D3DDB5 File Offset: 0x00D3BFB5
+		// Token: 0x17005A78 RID: 23160
+		// (get) Token: 0x0602CD63 RID: 183651 RVA: 0x00C8BAF5 File Offset: 0x00C89CF5
+		// (set) Token: 0x0602CD64 RID: 183652 RVA: 0x00C8BAFD File Offset: 0x00C89CFD
 		public int RoleLevel { get; set; }
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004440 RID: 17472
+	// Token: 0x020048A8 RID: 18600
 	public struct ICenterBullZone : IFlatbufferObject
 	{
-		// Token: 0x17007B1A RID: 31514
-		// (get) Token: 0x06019FE2 RID: 106466 RVA: 0x003B73BE File Offset: 0x003B55BE
+		// Token: 0x17008159 RID: 33113
+		// (get) Token: 0x0601B7B3 RID: 112563 RVA: 0x003E35CA File Offset: 0x003E17CA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x06019FE3 RID: 106467 RVA: 0x003B73CB File Offset: 0x003B55CB
+		// Token: 0x0601B7B4 RID: 112564 RVA: 0x003E35D7 File Offset: 0x003E17D7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019FE4 RID: 106468 RVA: 0x003B73D4 File Offset: 0x003B55D4
+		// Token: 0x0601B7B5 RID: 112565 RVA: 0x003E35E0 File Offset: 0x003E17E0
 		public static ICenterBullZone GetRootAsICenterBullZone(ByteBuffer _bb)
 		{
 			return ICenterBullZone.GetRootAsICenterBullZone(_bb, default(ICenterBullZone));
 		}
 
-		// Token: 0x06019FE5 RID: 106469 RVA: 0x003B73F0 File Offset: 0x003B55F0
+		// Token: 0x0601B7B6 RID: 112566 RVA: 0x003E35FC File Offset: 0x003E17FC
 		public static ICenterBullZone GetRootAsICenterBullZone(ByteBuffer _bb, ICenterBullZone obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019FE6 RID: 106470 RVA: 0x003B740D File Offset: 0x003B560D
+		// Token: 0x0601B7B7 RID: 112567 RVA: 0x003E3619 File Offset: 0x003E1819
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019FE7 RID: 106471 RVA: 0x003B741C File Offset: 0x003B561C
+		// Token: 0x0601B7B8 RID: 112568 RVA: 0x003E3628 File Offset: 0x003E1828
 		public ICenterBullZone __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B1B RID: 31515
-		// (get) Token: 0x06019FE8 RID: 106472 RVA: 0x003B742C File Offset: 0x003B562C
+		// Token: 0x1700815A RID: 33114
+		// (get) Token: 0x0601B7B9 RID: 112569 RVA: 0x003E3638 File Offset: 0x003E1838
 		public EDartboardZoneType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x06019FE9 RID: 106473 RVA: 0x003B7468 File Offset: 0x003B5668
+		// Token: 0x0601B7BA RID: 112570 RVA: 0x003E3674 File Offset: 0x003E1874
 		public static Offset<ICenterBullZone> CreateICenterBullZone(FlatBufferBuilder builder, EDartboardZoneType Type = EDartboardZoneType.CenterBull)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ICenterBullZone.EndICenterBullZone(builder);
 		}
 
-		// Token: 0x06019FEA RID: 106474 RVA: 0x003B747E File Offset: 0x003B567E
+		// Token: 0x0601B7BB RID: 112571 RVA: 0x003E368A File Offset: 0x003E188A
 		public static void StartICenterBullZone(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019FEB RID: 106475 RVA: 0x003B7487 File Offset: 0x003B5687
+		// Token: 0x0601B7BC RID: 112572 RVA: 0x003E3693 File Offset: 0x003E1893
 		public static void AddType(FlatBufferBuilder builder, EDartboardZoneType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019FEC RID: 106476 RVA: 0x003B7492 File Offset: 0x003B5692
+		// Token: 0x0601B7BD RID: 112573 RVA: 0x003E369E File Offset: 0x003E189E
 		public static Offset<ICenterBullZone> EndICenterBullZone(FlatBufferBuilder builder)
 		{
 			return new Offset<ICenterBullZone>(builder.EndTable());
 		}
 
-		// Token: 0x06019FED RID: 106477 RVA: 0x003B74A0 File Offset: 0x003B56A0
+		// Token: 0x0601B7BE RID: 112574 RVA: 0x003E36AC File Offset: 0x003E18AC
 		public ICenterBullZoneT UnPack()
 		{
 			ICenterBullZoneT centerBullZoneT = new ICenterBullZoneT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return centerBullZoneT;
 		}
 
-		// Token: 0x06019FEE RID: 106478 RVA: 0x003B74BB File Offset: 0x003B56BB
+		// Token: 0x0601B7BF RID: 112575 RVA: 0x003E36C7 File Offset: 0x003E18C7
 		public void UnPackTo(ICenterBullZoneT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06019FEF RID: 106479 RVA: 0x003B74CC File Offset: 0x003B56CC
+		// Token: 0x0601B7C0 RID: 112576 RVA: 0x003E36D8 File Offset: 0x003E18D8
 		public static Offset<ICenterBullZone> Pack(FlatBufferBuilder builder, ICenterBullZoneT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ICenterBullZone.CreateICenterBullZone(builder, _o.Type);
 		}
 
-		// Token: 0x0400C40E RID: 50190
+		// Token: 0x0400CE3C RID: 52796
 		private Table __p;
 	}
 }

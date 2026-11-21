@@ -7,25 +7,25 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727A RID: 29306
+	// Token: 0x020063F9 RID: 25593
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CombinationActionHandle
 	{
-		// Token: 0x06047D45 RID: 294213 RVA: 0x012606F3 File Offset: 0x0125E8F3
+		// Token: 0x0603E105 RID: 254213 RVA: 0x01200F33 File Offset: 0x011FF133
 		public void Clear()
 		{
 			this.PressCombinationActionBindingList = null;
 			this.BlockInputKeySet.Clear();
 		}
 
-		// Token: 0x06047D46 RID: 294214 RVA: 0x01260707 File Offset: 0x0125E907
+		// Token: 0x0603E106 RID: 254214 RVA: 0x01200F47 File Offset: 0x011FF147
 		public IReadOnlySet<string> GetBlockInputKeySet()
 		{
 			return this.BlockInputKeySet;
 		}
 
-		// Token: 0x06047D47 RID: 294215 RVA: 0x01260710 File Offset: 0x0125E910
+		// Token: 0x0603E107 RID: 254215 RVA: 0x01200F50 File Offset: 0x011FF150
 		public void PressAnyKey(string keyName)
 		{
 			if (this.PressMainKeyName == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Controller
 			this.TriggerPressCombinationAction(list);
 		}
 
-		// Token: 0x06047D48 RID: 294216 RVA: 0x012607EC File Offset: 0x0125E9EC
+		// Token: 0x0603E108 RID: 254216 RVA: 0x0120102C File Offset: 0x011FF22C
 		public void ReleaseAnyKey(string keyName)
 		{
 			if (this.PressSecondaryKeyName == keyName && this.PressCombinationActionBindingList != null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D49 RID: 294217 RVA: 0x01260828 File Offset: 0x0125EA28
+		// Token: 0x0603E109 RID: 254217 RVA: 0x01201068 File Offset: 0x011FF268
 		private void PressMainKey(string pressKeyName)
 		{
 			Log instance = Log.Instance;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Controller
 			this.PressMainKeyTimeStamp = (long)TimeUtil.Instance.GetServerTimeStamp();
 		}
 
-		// Token: 0x06047D4A RID: 294218 RVA: 0x01260874 File Offset: 0x0125EA74
+		// Token: 0x0603E10A RID: 254218 RVA: 0x012010B4 File Offset: 0x011FF2B4
 		private void ReleaseMainKey()
 		{
 			if (this.PressSecondaryKeyName != null && this.PressCombinationActionBindingList != null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Controller
 			this.BlockInputKeySet.Clear();
 		}
 
-		// Token: 0x06047D4B RID: 294219 RVA: 0x012608EC File Offset: 0x0125EAEC
+		// Token: 0x0603E10B RID: 254219 RVA: 0x0120112C File Offset: 0x011FF32C
 		private void TriggerPressCombinationAction(IReadOnlyList<InputCombinationActionBinding> combinationActionBindingList)
 		{
 			this.PressCombinationActionBindingList = combinationActionBindingList;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D4C RID: 294220 RVA: 0x012609C4 File Offset: 0x0125EBC4
+		// Token: 0x0603E10C RID: 254220 RVA: 0x01201204 File Offset: 0x011FF404
 		private void TriggerReleaseCombinationAction()
 		{
 			if (this.PressCombinationActionBindingList == null)
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D4D RID: 294221 RVA: 0x01260A68 File Offset: 0x0125EC68
+		// Token: 0x0603E10D RID: 254221 RVA: 0x012012A8 File Offset: 0x011FF4A8
 		public bool CheckCombinationAction(string actionName)
 		{
 			if (this.PressMainKeyName == null)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Controller
 			return true;
 		}
 
-		// Token: 0x06047D4E RID: 294222 RVA: 0x01260B34 File Offset: 0x0125ED34
+		// Token: 0x0603E10E RID: 254222 RVA: 0x01201374 File Offset: 0x011FF574
 		private bool IsCombinationActionOutputRespondable(string mainKeyName, string secondaryKeyName)
 		{
 			IReadOnlyDictionary<string, InputCombinationActionBinding> combinationActionBindingByKeyName = InputSettingsManager.Instance.GetCombinationActionBindingByKeyName(mainKeyName, secondaryKeyName);
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Controller
 			return false;
 		}
 
-		// Token: 0x06047D4F RID: 294223 RVA: 0x01260BBC File Offset: 0x0125EDBC
+		// Token: 0x0603E10F RID: 254223 RVA: 0x012013FC File Offset: 0x011FF5FC
 		public bool CheckCombinationActionByAxisName(string axisName)
 		{
 			if (this.PressMainKeyName == null)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Controller
 			return true;
 		}
 
-		// Token: 0x06047D50 RID: 294224 RVA: 0x01260C58 File Offset: 0x0125EE58
+		// Token: 0x0603E110 RID: 254224 RVA: 0x01201498 File Offset: 0x011FF698
 		private bool IsCombinationActionOutputBound(string mainKeyName, string secondaryKeyName)
 		{
 			IReadOnlyDictionary<string, InputCombinationActionBinding> combinationActionBindingByKeyName = InputSettingsManager.Instance.GetCombinationActionBindingByKeyName(mainKeyName, secondaryKeyName);
@@ -250,18 +250,18 @@ namespace CSharpScript.Game.Controller
 			return false;
 		}
 
-		// Token: 0x04025C42 RID: 154690
+		// Token: 0x04020F02 RID: 134914
 		[Nullable(2)]
 		private string PressMainKeyName;
 
-		// Token: 0x04025C43 RID: 154691
+		// Token: 0x04020F03 RID: 134915
 		[Nullable(2)]
 		private string PressSecondaryKeyName;
 
-		// Token: 0x04025C44 RID: 154692
+		// Token: 0x04020F04 RID: 134916
 		private long PressMainKeyTimeStamp;
 
-		// Token: 0x04025C45 RID: 154693
+		// Token: 0x04020F05 RID: 134917
 		[Nullable(new byte[]
 		{
 			2,
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Controller
 		})]
 		private IReadOnlyList<InputCombinationActionBinding> PressCombinationActionBindingList;
 
-		// Token: 0x04025C46 RID: 154694
+		// Token: 0x04020F06 RID: 134918
 		private readonly HashSet<string> BlockInputKeySet = new HashSet<string>();
 	}
 }

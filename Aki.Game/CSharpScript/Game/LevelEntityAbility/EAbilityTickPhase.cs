@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelEntityAbility
 {
-	// Token: 0x02006FB3 RID: 28595
+	// Token: 0x02006134 RID: 24884
 	public enum EAbilityTickPhase
 	{
-		// Token: 0x04024425 RID: 148517
+		// Token: 0x0401F6DA RID: 128730
 		Tick,
-		// Token: 0x04024426 RID: 148518
+		// Token: 0x0401F6DB RID: 128731
 		AfterTick,
-		// Token: 0x04024427 RID: 148519
+		// Token: 0x0401F6DC RID: 128732
 		Max
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020016C3 RID: 5827
+// Token: 0x02000B7B RID: 2939
 public class AdviceSelectItemData
 {
-	// Token: 0x0600A675 RID: 42613 RVA: 0x00253F89 File Offset: 0x00252189
+	// Token: 0x06007A55 RID: 31317 RVA: 0x0025E399 File Offset: 0x0025C599
 	public AdviceSelectItemData(EAdviceSelectItemEnum index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0600A676 RID: 42614 RVA: 0x00253F98 File Offset: 0x00252198
+	// Token: 0x06007A56 RID: 31318 RVA: 0x0025E3A8 File Offset: 0x0025C5A8
 	public EAdviceSelectItemEnum GetIndex()
 	{
 		return this.Index;
 	}
 
-	// Token: 0x04004B28 RID: 19240
+	// Token: 0x04004BCF RID: 19407
 	private readonly EAdviceSelectItemEnum Index;
 }

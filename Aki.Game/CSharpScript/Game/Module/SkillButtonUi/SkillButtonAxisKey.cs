@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C16 RID: 19478
+	// Token: 0x02003BC7 RID: 15303
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class SkillButtonAxisKey
 	{
-		// Token: 0x06032649 RID: 206409 RVA: 0x00BBB67C File Offset: 0x00BB987C
+		// Token: 0x060273F9 RID: 160761 RVA: 0x00B00200 File Offset: 0x00AFE400
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public SkillButtonAxisKey()
 		{
 		}
 
-		// Token: 0x0401AD2F RID: 109871
+		// Token: 0x0401568B RID: 87691
 		[RequiredMember]
 		public string AxisName;
 
-		// Token: 0x0401AD30 RID: 109872
+		// Token: 0x0401568C RID: 87692
 		[RequiredMember]
 		public string KeyName;
 
-		// Token: 0x0401AD31 RID: 109873
+		// Token: 0x0401568D RID: 87693
 		[RequiredMember]
 		public float Scale;
 	}

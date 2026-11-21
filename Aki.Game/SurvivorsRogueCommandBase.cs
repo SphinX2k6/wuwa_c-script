@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002AD8 RID: 10968
+// Token: 0x02002054 RID: 8276
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCommandBase
 {
-	// Token: 0x17001E52 RID: 7762
-	// (get) Token: 0x06016D3B RID: 93499 RVA: 0x005CBE8C File Offset: 0x005CA08C
+	// Token: 0x17001EAA RID: 7850
+	// (get) Token: 0x0601476C RID: 83820 RVA: 0x005F89E0 File Offset: 0x005F6BE0
 	public bool IsFinished
 	{
 		get
@@ -20,8 +19,8 @@ public class SurvivorsRogueCommandBase
 		}
 	}
 
-	// Token: 0x17001E53 RID: 7763
-	// (get) Token: 0x06016D3C RID: 93500 RVA: 0x005CBE9F File Offset: 0x005CA09F
+	// Token: 0x17001EAB RID: 7851
+	// (get) Token: 0x0601476D RID: 83821 RVA: 0x005F89F3 File Offset: 0x005F6BF3
 	public bool IsStarted
 	{
 		get
@@ -30,13 +29,13 @@ public class SurvivorsRogueCommandBase
 		}
 	}
 
-	// Token: 0x06016D3D RID: 93501 RVA: 0x005CBEAD File Offset: 0x005CA0AD
+	// Token: 0x0601476E RID: 83822 RVA: 0x005F8A01 File Offset: 0x005F6C01
 	public SurvivorsRogueCommandBase(ESurvivorsRogueCommandType type)
 	{
 		this.Type = type;
 	}
 
-	// Token: 0x06016D3E RID: 93502 RVA: 0x005CBED4 File Offset: 0x005CA0D4
+	// Token: 0x0601476F RID: 83823 RVA: 0x005F8A28 File Offset: 0x005F6C28
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(10, 1);
@@ -45,7 +44,7 @@ public class SurvivorsRogueCommandBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06016D3F RID: 93503 RVA: 0x005CBF0C File Offset: 0x005CA10C
+	// Token: 0x06014770 RID: 83824 RVA: 0x005F8A60 File Offset: 0x005F6C60
 	public void SetForegroundStatus(bool inForeground)
 	{
 		bool inForeground2 = this.InForeground;
@@ -70,7 +69,7 @@ public class SurvivorsRogueCommandBase
 		}
 	}
 
-	// Token: 0x06016D40 RID: 93504 RVA: 0x005CBF58 File Offset: 0x005CA158
+	// Token: 0x06014771 RID: 83825 RVA: 0x005F8AAC File Offset: 0x005F6CAC
 	public void Update(SurvivorsOpData data)
 	{
 		this.Data = data;
@@ -84,7 +83,7 @@ public class SurvivorsRogueCommandBase
 		viewProxy.Refresh();
 	}
 
-	// Token: 0x06016D41 RID: 93505 RVA: 0x005CBF88 File Offset: 0x005CA188
+	// Token: 0x06014772 RID: 83826 RVA: 0x005F8ADC File Offset: 0x005F6CDC
 	public void TryStartExecute()
 	{
 		if (this.IsStarted)
@@ -99,7 +98,7 @@ public class SurvivorsRogueCommandBase
 		this.OnStartExecute();
 	}
 
-	// Token: 0x06016D42 RID: 93506 RVA: 0x005CBFA9 File Offset: 0x005CA1A9
+	// Token: 0x06014773 RID: 83827 RVA: 0x005F8AFD File Offset: 0x005F6CFD
 	public void Execute()
 	{
 		if (this.IsFinished)
@@ -119,7 +118,7 @@ public class SurvivorsRogueCommandBase
 		this.OnExecute();
 	}
 
-	// Token: 0x06016D43 RID: 93507 RVA: 0x005CBFE0 File Offset: 0x005CA1E0
+	// Token: 0x06014774 RID: 83828 RVA: 0x005F8B34 File Offset: 0x005F6D34
 	[NullableContext(2)]
 	public void BindView(ISurvivorsRogueCommandView viewProxy)
 	{
@@ -127,13 +126,13 @@ public class SurvivorsRogueCommandBase
 		this.OnBindView();
 	}
 
-	// Token: 0x06016D44 RID: 93508 RVA: 0x005CBFEF File Offset: 0x005CA1EF
+	// Token: 0x06014775 RID: 83829 RVA: 0x005F8B43 File Offset: 0x005F6D43
 	private void Finish()
 	{
 		this.OnFinish();
 	}
 
-	// Token: 0x06016D45 RID: 93509 RVA: 0x005CBFF7 File Offset: 0x005CA1F7
+	// Token: 0x06014776 RID: 83830 RVA: 0x005F8B4B File Offset: 0x005F6D4B
 	public void Delete()
 	{
 		this.OnDelete();
@@ -149,7 +148,7 @@ public class SurvivorsRogueCommandBase
 		this.AfterDelete = true;
 	}
 
-	// Token: 0x06016D46 RID: 93510 RVA: 0x005CC026 File Offset: 0x005CA226
+	// Token: 0x06014777 RID: 83831 RVA: 0x005F8B7A File Offset: 0x005F6D7A
 	public void RequestCommand(int[] executeIds, [Nullable(2)] Action<bool> callback = null)
 	{
 		if (!this.InForeground)
@@ -160,10 +159,10 @@ public class SurvivorsRogueCommandBase
 			}
 			return;
 		}
-		SurvivorsRogueController.Instance.RequestCommandOperation(this.IncId, executeIds.ToList<int>(), callback);
+		SurvivorsRogueController.Instance.RequestCommandOperation(this.IncId, executeIds, callback);
 	}
 
-	// Token: 0x06016D47 RID: 93511 RVA: 0x005CC054 File Offset: 0x005CA254
+	// Token: 0x06014778 RID: 83832 RVA: 0x005F8BA4 File Offset: 0x005F6DA4
 	protected void OpenView(EUiViewName viewName, bool isMultipleView)
 	{
 		SurvivorsRogueCommandBase.<>c__DisplayClass22_0 CS$<>8__locals1 = new SurvivorsRogueCommandBase.<>c__DisplayClass22_0();
@@ -190,74 +189,74 @@ public class SurvivorsRogueCommandBase
 		TaskSystem.Instance.Run();
 	}
 
-	// Token: 0x06016D48 RID: 93512 RVA: 0x005CC0F0 File Offset: 0x005CA2F0
+	// Token: 0x06014779 RID: 83833 RVA: 0x005F8C40 File Offset: 0x005F6E40
 	protected virtual void OnUpdate()
 	{
 	}
 
-	// Token: 0x06016D49 RID: 93513 RVA: 0x005CC0F2 File Offset: 0x005CA2F2
+	// Token: 0x0601477A RID: 83834 RVA: 0x005F8C42 File Offset: 0x005F6E42
 	protected virtual void Back2Fore()
 	{
 	}
 
-	// Token: 0x06016D4A RID: 93514 RVA: 0x005CC0F4 File Offset: 0x005CA2F4
+	// Token: 0x0601477B RID: 83835 RVA: 0x005F8C44 File Offset: 0x005F6E44
 	protected virtual void Fore2Back()
 	{
 	}
 
-	// Token: 0x06016D4B RID: 93515 RVA: 0x005CC0F6 File Offset: 0x005CA2F6
+	// Token: 0x0601477C RID: 83836 RVA: 0x005F8C46 File Offset: 0x005F6E46
 	protected virtual void OnStartExecute()
 	{
 	}
 
-	// Token: 0x06016D4C RID: 93516 RVA: 0x005CC0F8 File Offset: 0x005CA2F8
+	// Token: 0x0601477D RID: 83837 RVA: 0x005F8C48 File Offset: 0x005F6E48
 	protected virtual void OnExecute()
 	{
 	}
 
-	// Token: 0x06016D4D RID: 93517 RVA: 0x005CC0FA File Offset: 0x005CA2FA
+	// Token: 0x0601477E RID: 83838 RVA: 0x005F8C4A File Offset: 0x005F6E4A
 	protected virtual void OnFinish()
 	{
 	}
 
-	// Token: 0x06016D4E RID: 93518 RVA: 0x005CC0FC File Offset: 0x005CA2FC
+	// Token: 0x0601477F RID: 83839 RVA: 0x005F8C4C File Offset: 0x005F6E4C
 	protected virtual void OnDelete()
 	{
 	}
 
-	// Token: 0x06016D4F RID: 93519 RVA: 0x005CC0FE File Offset: 0x005CA2FE
+	// Token: 0x06014780 RID: 83840 RVA: 0x005F8C4E File Offset: 0x005F6E4E
 	protected virtual void OnBindView()
 	{
 	}
 
-	// Token: 0x06016D50 RID: 93520 RVA: 0x005CC100 File Offset: 0x005CA300
+	// Token: 0x06014781 RID: 83841 RVA: 0x005F8C50 File Offset: 0x005F6E50
 	protected virtual bool CanCloseViewOnDelete()
 	{
 		return true;
 	}
 
-	// Token: 0x0400A998 RID: 43416
+	// Token: 0x0400AD9E RID: 44446
 	public int IncId = -1;
 
-	// Token: 0x0400A999 RID: 43417
+	// Token: 0x0400AD9F RID: 44447
 	protected int StepSize = 1;
 
-	// Token: 0x0400A99A RID: 43418
+	// Token: 0x0400ADA0 RID: 44448
 	protected int CurrentStep = -1;
 
-	// Token: 0x0400A99B RID: 43419
+	// Token: 0x0400ADA1 RID: 44449
 	[Nullable(2)]
 	protected ISurvivorsRogueCommandView ViewProxy;
 
-	// Token: 0x0400A99C RID: 43420
+	// Token: 0x0400ADA2 RID: 44450
 	public bool InForeground;
 
-	// Token: 0x0400A99D RID: 43421
+	// Token: 0x0400ADA3 RID: 44451
 	public SurvivorsOpData Data;
 
-	// Token: 0x0400A99E RID: 43422
+	// Token: 0x0400ADA4 RID: 44452
 	public bool AfterDelete;
 
-	// Token: 0x0400A99F RID: 43423
+	// Token: 0x0400ADA5 RID: 44453
 	public readonly ESurvivorsRogueCommandType Type;
 }

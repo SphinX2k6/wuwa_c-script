@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUiSet.View
 {
-	// Token: 0x02005E65 RID: 24165
+	// Token: 0x02004E4A RID: 20042
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EditMobileBattleView : UiPanelBase
 	{
-		// Token: 0x0603D6FD RID: 251645 RVA: 0x00ED2213 File Offset: 0x00ED0413
+		// Token: 0x0603268D RID: 206477 RVA: 0x00E23783 File Offset: 0x00E21983
 		public EditMobileBattleView(UUIItem parentItem)
 		{
 			base.CreateThenShowByResourceIdAsync("UiView_FightEdit", parentItem, false).Forget();
 		}
 
-		// Token: 0x0603D6FE RID: 251646 RVA: 0x00ED2238 File Offset: 0x00ED0438
+		// Token: 0x0603268E RID: 206478 RVA: 0x00E237A8 File Offset: 0x00E219A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			EditMobileBattleView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D6FF RID: 251647 RVA: 0x00ED227C File Offset: 0x00ED047C
+		// Token: 0x0603268F RID: 206479 RVA: 0x00E237EC File Offset: 0x00E219EC
 		protected override void OnAfterShow()
 		{
 			BattleUiSetModel instance = BattleUiSetModel.Instance;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D700 RID: 251648 RVA: 0x00ED22E0 File Offset: 0x00ED04E0
+		// Token: 0x06032690 RID: 206480 RVA: 0x00E23850 File Offset: 0x00E21A50
 		private UniTask InitializePanel()
 		{
 			EditMobileBattleView.<InitializePanel>d__4 <InitializePanel>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return <InitializePanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D701 RID: 251649 RVA: 0x00ED2324 File Offset: 0x00ED0524
+		// Token: 0x06032691 RID: 206481 RVA: 0x00E23894 File Offset: 0x00E21A94
 		public void ResetAllPanelItem()
 		{
 			foreach (EditMobileBattleViewPanel editMobileBattleViewPanel in this.PanelMap.Values)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D702 RID: 251650 RVA: 0x00ED237C File Offset: 0x00ED057C
+		// Token: 0x06032692 RID: 206482 RVA: 0x00E238EC File Offset: 0x00E21AEC
 		public void SavePanelItem()
 		{
 			foreach (EditMobileBattleViewPanel editMobileBattleViewPanel in this.PanelMap.Values)
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D703 RID: 251651 RVA: 0x00ED23D4 File Offset: 0x00ED05D4
+		// Token: 0x06032693 RID: 206483 RVA: 0x00E23944 File Offset: 0x00E21B44
 		[NullableContext(2)]
 		public EditMobileBattleViewPanel GetPanel(int panelIndex)
 		{
 			return this.PanelMap.GetValueOrDefault(panelIndex);
 		}
 
-		// Token: 0x0603D704 RID: 251652 RVA: 0x00ED23E4 File Offset: 0x00ED05E4
+		// Token: 0x06032694 RID: 206484 RVA: 0x00E23954 File Offset: 0x00E21B54
 		[return: Nullable(2)]
 		public EditMobileBattleViewPanelItem GetPanelItem(BattleUiSetPanelItemData panelItemData)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return editMobileBattleViewPanel.GetPanelItem(panelItemData.PanelItemIndex);
 		}
 
-		// Token: 0x0603D705 RID: 251653 RVA: 0x00ED2414 File Offset: 0x00ED0614
+		// Token: 0x06032695 RID: 206485 RVA: 0x00E23984 File Offset: 0x00E21B84
 		public void RefreshHierarchyIndex()
 		{
 			foreach (EditMobileBattleViewPanel editMobileBattleViewPanel in this.PanelMap.Values)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			}
 		}
 
-		// Token: 0x0603D706 RID: 251654 RVA: 0x00ED2480 File Offset: 0x00ED0680
+		// Token: 0x06032696 RID: 206486 RVA: 0x00E239F0 File Offset: 0x00E21BF0
 		public bool IsAnyItemOverlap(UUIItem item)
 		{
 			using (Dictionary<int, EditMobileBattleViewPanel>.ValueCollection.Enumerator enumerator = this.PanelMap.Values.GetEnumerator())
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUiSet.View
 			return false;
 		}
 
-		// Token: 0x040200F9 RID: 131321
+		// Token: 0x0401ABC0 RID: 109504
 		private readonly Dictionary<int, EditMobileBattleViewPanel> PanelMap = new Dictionary<int, EditMobileBattleViewPanel>();
 	}
 }

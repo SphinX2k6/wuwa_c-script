@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B0 RID: 17840
+	// Token: 0x020034D8 RID: 13528
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharMaterialControlRuntimeDataGroup
 	{
-		// Token: 0x0602E045 RID: 188485 RVA: 0x00A98FA4 File Offset: 0x00A971A4
+		// Token: 0x0602272F RID: 141103 RVA: 0x009C51C4 File Offset: 0x009C33C4
 		[NullableContext(1)]
 		public void Init(CharRenderingComponent charRenderingComponent, PD_CharacterControllerDataGroup_C dataGroup, [Nullable(2)] USkeletalMeshComponent animObject = null)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Render
 			});
 		}
 
-		// Token: 0x0602E046 RID: 188486 RVA: 0x00A99040 File Offset: 0x00A97240
+		// Token: 0x06022730 RID: 141104 RVA: 0x009C5260 File Offset: 0x009C3460
 		public void BeforeUpdateState(float deltaTime, float timeDilation)
 		{
 			if (!this.IgnoreTimeDilation)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Render
 			this.TempRemoveList = new List<PD_CharacterControllerData_C>();
 		}
 
-		// Token: 0x0602E047 RID: 188487 RVA: 0x00A9918C File Offset: 0x00A9738C
+		// Token: 0x06022731 RID: 141105 RVA: 0x009C53AC File Offset: 0x009C35AC
 		public void AfterUpdateState(float deltaTime)
 		{
 			if (!this.HaveRuntimeData && this.WholeSpawnTime <= 0f)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E048 RID: 188488 RVA: 0x00A99238 File Offset: 0x00A97438
+		// Token: 0x06022732 RID: 141106 RVA: 0x009C5458 File Offset: 0x009C3658
 		public void EndState()
 		{
 			this.TempRemoveList = new List<PD_CharacterControllerData_C>();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Render
 			this.IsDead = true;
 		}
 
-		// Token: 0x0602E049 RID: 188489 RVA: 0x00A992B0 File Offset: 0x00A974B0
+		// Token: 0x06022733 RID: 141107 RVA: 0x009C54D0 File Offset: 0x009C36D0
 		public void EndStateWithEnding()
 		{
 			this.TempRemoveList = new List<PD_CharacterControllerData_C>();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Render
 			this.IsDead = true;
 		}
 
-		// Token: 0x0602E04A RID: 188490 RVA: 0x00A99328 File Offset: 0x00A97528
+		// Token: 0x06022734 RID: 141108 RVA: 0x009C5548 File Offset: 0x009C3748
 		public void SetEffectProgress(float progress)
 		{
 			foreach (int handleId in this.MaterialHandles)
@@ -134,19 +134,19 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x04018910 RID: 100624
+		// Token: 0x04012F4B RID: 77643
 		public CharRenderingComponent CharRenderingComponent;
 
-		// Token: 0x04018911 RID: 100625
+		// Token: 0x04012F4C RID: 77644
 		public PD_CharacterControllerDataGroup_C DataGroup;
 
-		// Token: 0x04018912 RID: 100626
+		// Token: 0x04012F4D RID: 77645
 		public USkeletalMeshComponent AnimObject;
 
-		// Token: 0x04018913 RID: 100627
+		// Token: 0x04012F4E RID: 77646
 		public bool IsDead;
 
-		// Token: 0x04018914 RID: 100628
+		// Token: 0x04012F4F RID: 77647
 		[Nullable(new byte[]
 		{
 			2,
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public Dictionary<PD_CharacterControllerData_C, float> DataMap;
 
-		// Token: 0x04018915 RID: 100629
+		// Token: 0x04012F50 RID: 77648
 		[Nullable(new byte[]
 		{
 			2,
@@ -162,19 +162,19 @@ namespace CSharpScript.Game.Render
 		})]
 		private List<PD_CharacterControllerData_C> TempRemoveList;
 
-		// Token: 0x04018916 RID: 100630
+		// Token: 0x04012F51 RID: 77649
 		private List<int> MaterialHandles;
 
-		// Token: 0x04018917 RID: 100631
+		// Token: 0x04012F52 RID: 77650
 		private List<int> TempMaterialHandles;
 
-		// Token: 0x04018918 RID: 100632
+		// Token: 0x04012F53 RID: 77651
 		private float WholeSpawnTime;
 
-		// Token: 0x04018919 RID: 100633
+		// Token: 0x04012F54 RID: 77652
 		private bool HaveRuntimeData;
 
-		// Token: 0x0401891A RID: 100634
+		// Token: 0x04012F55 RID: 77653
 		private bool IgnoreTimeDilation;
 	}
 }

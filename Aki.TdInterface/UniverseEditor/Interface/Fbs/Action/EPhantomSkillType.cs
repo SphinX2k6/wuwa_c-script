@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FCA RID: 24522
+	// Token: 0x02006621 RID: 26145
 	public enum EPhantomSkillType : byte
 	{
-		// Token: 0x0400FF26 RID: 65318
+		// Token: 0x04010CEC RID: 68844
 		ChallengeSuccess,
-		// Token: 0x0400FF27 RID: 65319
+		// Token: 0x04010CED RID: 68845
 		ChallengeFailed
 	}
 }

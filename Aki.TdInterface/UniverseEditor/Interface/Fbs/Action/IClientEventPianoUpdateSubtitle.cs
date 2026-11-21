@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063A9 RID: 25513
+	// Token: 0x02006A1A RID: 27162
 	public struct IClientEventPianoUpdateSubtitle : IFlatbufferObject
 	{
-		// Token: 0x1700BE2B RID: 48683
-		// (get) Token: 0x0602C225 RID: 180773 RVA: 0x0060FA19 File Offset: 0x0060DC19
+		// Token: 0x1700C7AF RID: 51119
+		// (get) Token: 0x0602E987 RID: 190855 RVA: 0x0065AA51 File Offset: 0x00658C51
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C226 RID: 180774 RVA: 0x0060FA26 File Offset: 0x0060DC26
+		// Token: 0x0602E988 RID: 190856 RVA: 0x0065AA5E File Offset: 0x00658C5E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C227 RID: 180775 RVA: 0x0060FA30 File Offset: 0x0060DC30
+		// Token: 0x0602E989 RID: 190857 RVA: 0x0065AA68 File Offset: 0x00658C68
 		public static IClientEventPianoUpdateSubtitle GetRootAsIClientEventPianoUpdateSubtitle(ByteBuffer _bb)
 		{
 			return IClientEventPianoUpdateSubtitle.GetRootAsIClientEventPianoUpdateSubtitle(_bb, default(IClientEventPianoUpdateSubtitle));
 		}
 
-		// Token: 0x0602C228 RID: 180776 RVA: 0x0060FA4C File Offset: 0x0060DC4C
+		// Token: 0x0602E98A RID: 190858 RVA: 0x0065AA84 File Offset: 0x00658C84
 		public static IClientEventPianoUpdateSubtitle GetRootAsIClientEventPianoUpdateSubtitle(ByteBuffer _bb, IClientEventPianoUpdateSubtitle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C229 RID: 180777 RVA: 0x0060FA69 File Offset: 0x0060DC69
+		// Token: 0x0602E98B RID: 190859 RVA: 0x0065AAA1 File Offset: 0x00658CA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C22A RID: 180778 RVA: 0x0060FA78 File Offset: 0x0060DC78
+		// Token: 0x0602E98C RID: 190860 RVA: 0x0065AAB0 File Offset: 0x00658CB0
 		public IClientEventPianoUpdateSubtitle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE2C RID: 48684
-		// (get) Token: 0x0602C22B RID: 180779 RVA: 0x0060FA88 File Offset: 0x0060DC88
+		// Token: 0x1700C7B0 RID: 51120
+		// (get) Token: 0x0602E98D RID: 190861 RVA: 0x0065AAC0 File Offset: 0x00658CC0
 		public EClientEventPianoEventType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE2D RID: 48685
-		// (get) Token: 0x0602C22C RID: 180780 RVA: 0x0060FAC4 File Offset: 0x0060DCC4
+		// Token: 0x1700C7B1 RID: 51121
+		// (get) Token: 0x0602E98E RID: 190862 RVA: 0x0065AAFC File Offset: 0x00658CFC
 		public IPlayFlow? Flow
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BE2E RID: 48686
-		// (get) Token: 0x0602C22D RID: 180781 RVA: 0x0060FB24 File Offset: 0x0060DD24
+		// Token: 0x1700C7B2 RID: 51122
+		// (get) Token: 0x0602E98F RID: 190863 RVA: 0x0065AB5C File Offset: 0x00658D5C
 		public bool DisableMove
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C22E RID: 180782 RVA: 0x0060FB63 File Offset: 0x0060DD63
+		// Token: 0x0602E990 RID: 190864 RVA: 0x0065AB9B File Offset: 0x00658D9B
 		public static Offset<IClientEventPianoUpdateSubtitle> CreateIClientEventPianoUpdateSubtitle(FlatBufferBuilder builder, EClientEventPianoEventType Type = EClientEventPianoEventType.UpdateSubtitle, Offset<IPlayFlow> FlowOffset = default(Offset<IPlayFlow>), bool DisableMove = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventPianoUpdateSubtitle.EndIClientEventPianoUpdateSubtitle(builder);
 		}
 
-		// Token: 0x0602C22F RID: 180783 RVA: 0x0060FB87 File Offset: 0x0060DD87
+		// Token: 0x0602E991 RID: 190865 RVA: 0x0065ABBF File Offset: 0x00658DBF
 		public static void StartIClientEventPianoUpdateSubtitle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602C230 RID: 180784 RVA: 0x0060FB90 File Offset: 0x0060DD90
+		// Token: 0x0602E992 RID: 190866 RVA: 0x0065ABC8 File Offset: 0x00658DC8
 		public static void AddType(FlatBufferBuilder builder, EClientEventPianoEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C231 RID: 180785 RVA: 0x0060FB9B File Offset: 0x0060DD9B
+		// Token: 0x0602E993 RID: 190867 RVA: 0x0065ABD3 File Offset: 0x00658DD3
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IPlayFlow> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x0602C232 RID: 180786 RVA: 0x0060FBAB File Offset: 0x0060DDAB
+		// Token: 0x0602E994 RID: 190868 RVA: 0x0065ABE3 File Offset: 0x00658DE3
 		public static void AddDisableMove(FlatBufferBuilder builder, bool disableMove)
 		{
 			builder.AddBool(2, disableMove, false);
 		}
 
-		// Token: 0x0602C233 RID: 180787 RVA: 0x0060FBB6 File Offset: 0x0060DDB6
+		// Token: 0x0602E995 RID: 190869 RVA: 0x0065ABEE File Offset: 0x00658DEE
 		public static Offset<IClientEventPianoUpdateSubtitle> EndIClientEventPianoUpdateSubtitle(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientEventPianoUpdateSubtitle>(builder.EndTable());
 		}
 
-		// Token: 0x0602C234 RID: 180788 RVA: 0x0060FBC4 File Offset: 0x0060DDC4
+		// Token: 0x0602E996 RID: 190870 RVA: 0x0065ABFC File Offset: 0x00658DFC
 		public IClientEventPianoUpdateSubtitleT UnPack()
 		{
 			IClientEventPianoUpdateSubtitleT clientEventPianoUpdateSubtitleT = new IClientEventPianoUpdateSubtitleT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientEventPianoUpdateSubtitleT;
 		}
 
-		// Token: 0x0602C235 RID: 180789 RVA: 0x0060FBE0 File Offset: 0x0060DDE0
+		// Token: 0x0602E997 RID: 190871 RVA: 0x0065AC18 File Offset: 0x00658E18
 		public void UnPackTo(IClientEventPianoUpdateSubtitleT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.DisableMove = this.DisableMove;
 		}
 
-		// Token: 0x0602C236 RID: 180790 RVA: 0x0060FC34 File Offset: 0x0060DE34
+		// Token: 0x0602E998 RID: 190872 RVA: 0x0065AC6C File Offset: 0x00658E6C
 		public static Offset<IClientEventPianoUpdateSubtitle> Pack(FlatBufferBuilder builder, IClientEventPianoUpdateSubtitleT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientEventPianoUpdateSubtitle.CreateIClientEventPianoUpdateSubtitle(builder, _o.Type, flowOffset, _o.DisableMove);
 		}
 
-		// Token: 0x0401097C RID: 67964
+		// Token: 0x0401178F RID: 71567
 		private Table __p;
 	}
 }

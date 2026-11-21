@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007B7 RID: 1975
+	// Token: 0x020007D1 RID: 2001
 	public class ConfigRealmBetweenPhantomGainByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E5C RID: 11868 RVA: 0x0015F660 File Offset: 0x0015D860
+		// Token: 0x06002EF8 RID: 12024 RVA: 0x0016656C File Offset: 0x0016476C
 		static ConfigRealmBetweenPhantomGainByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRealmBetweenPhantomGainByActivityId.CreateStaticDefaultValue), new Action(ConfigRealmBetweenPhantomGainByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E5D RID: 11869 RVA: 0x0015F680 File Offset: 0x0015D880
+		// Token: 0x06002EF9 RID: 12025 RVA: 0x0016658C File Offset: 0x0016478C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRealmBetweenPhantomGainByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E5E RID: 11870 RVA: 0x0015F6FF File Offset: 0x0015D8FF
+		// Token: 0x06002EFA RID: 12026 RVA: 0x0016660B File Offset: 0x0016480B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRealmBetweenPhantomGainByActivityId.LogPair = null;
 			ConfigRealmBetweenPhantomGainByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x06002E5F RID: 11871 RVA: 0x0015F70D File Offset: 0x0015D90D
+		// Token: 0x06002EFB RID: 12027 RVA: 0x00166619 File Offset: 0x00164819
 		public static void Init()
 		{
 			ConfigRealmBetweenPhantomGainByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigRealmBetweenPhantomGainByActivityId.HandleId, "db_realmbetween.db", "select BinData from `RealmBetweenPhantomGain` where ActivityId=?");
 		}
 
-		// Token: 0x06002E60 RID: 11872 RVA: 0x0015F728 File Offset: 0x0015D928
+		// Token: 0x06002EFC RID: 12028 RVA: 0x00166634 File Offset: 0x00164834
 		[NullableContext(2)]
 		public static IReadOnlyList<RealmBetweenPhantomGain> GetConfigList(int p0ActivityId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040035E7 RID: 13799
+		// Token: 0x0400369D RID: 13981
 		private const string DB = "db_realmbetween.db";
 
-		// Token: 0x040035E8 RID: 13800
+		// Token: 0x0400369E RID: 13982
 		private const string FILE = "q.千岛路书3.5.xlsx";
 
-		// Token: 0x040035E9 RID: 13801
+		// Token: 0x0400369F RID: 13983
 		private const string TABLE = "RealmBetweenPhantomGain";
 
-		// Token: 0x040035EA RID: 13802
+		// Token: 0x040036A0 RID: 13984
 		private const string COMMAND = "select BinData from `RealmBetweenPhantomGain` where ActivityId=?";
 
-		// Token: 0x040035EB RID: 13803
+		// Token: 0x040036A1 RID: 13985
 		private const string KEY_PREFIX = "RealmBetweenPhantomGainByActivityId";
 
-		// Token: 0x040035EC RID: 13804
+		// Token: 0x040036A2 RID: 13986
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035ED RID: 13805
+		// Token: 0x040036A3 RID: 13987
 		private static int HandleId;
 	}
 }

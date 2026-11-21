@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018BE RID: 6334
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A4D RID: 6733
 	public class IClientGroupAiCommunicate : IExecClientBattleActionType
 	{
-		// Token: 0x060087E5 RID: 34789 RVA: 0x00141D40 File Offset: 0x0013FF40
+		// Token: 0x06008F1F RID: 36639 RVA: 0x00151730 File Offset: 0x0014F930
 		private IClientGroupAiCommunicate_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060087E6 RID: 34790 RVA: 0x00141D78 File Offset: 0x0013FF78
+		// Token: 0x06008F20 RID: 36640 RVA: 0x00151768 File Offset: 0x0014F968
 		public static IClientGroupAiCommunicate Create([Nullable(2)] IClientGroupAiCommunicate instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087E7 RID: 34791 RVA: 0x00141D8B File Offset: 0x0013FF8B
+		// Token: 0x06008F21 RID: 36641 RVA: 0x0015177B File Offset: 0x0014F97B
 		public static IClientGroupAiCommunicate CreateFromSetValue([Nullable(2)] IClientGroupAiCommunicate_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087E8 RID: 34792 RVA: 0x00141D9E File Offset: 0x0013FF9E
+		// Token: 0x06008F22 RID: 36642 RVA: 0x0015178E File Offset: 0x0014F98E
 		public new IClientGroupAiCommunicate_SetValue ToSetValue()
 		{
 			return new IClientGroupAiCommunicate_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C2A RID: 11306
-		// (get) Token: 0x060087E9 RID: 34793 RVA: 0x00141DC9 File Offset: 0x0013FFC9
-		// (set) Token: 0x060087EA RID: 34794 RVA: 0x00141DF4 File Offset: 0x0013FFF4
+		// Token: 0x17002E28 RID: 11816
+		// (get) Token: 0x06008F23 RID: 36643 RVA: 0x001517B9 File Offset: 0x0014F9B9
+		// (set) Token: 0x06008F24 RID: 36644 RVA: 0x001517E4 File Offset: 0x0014F9E4
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C2B RID: 11307
-		// (get) Token: 0x060087EB RID: 34795 RVA: 0x00141E02 File Offset: 0x00140002
-		// (set) Token: 0x060087EC RID: 34796 RVA: 0x00141E2D File Offset: 0x0014002D
+		// Token: 0x17002E29 RID: 11817
+		// (get) Token: 0x06008F25 RID: 36645 RVA: 0x001517F2 File Offset: 0x0014F9F2
+		// (set) Token: 0x06008F26 RID: 36646 RVA: 0x0015181D File Offset: 0x0014FA1D
 		public virtual int GroupEntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C2C RID: 11308
-		// (get) Token: 0x060087ED RID: 34797 RVA: 0x00141E3B File Offset: 0x0014003B
-		// (set) Token: 0x060087EE RID: 34798 RVA: 0x00141E62 File Offset: 0x00140062
+		// Token: 0x17002E2A RID: 11818
+		// (get) Token: 0x06008F27 RID: 36647 RVA: 0x0015182B File Offset: 0x0014FA2B
+		// (set) Token: 0x06008F28 RID: 36648 RVA: 0x00151852 File Offset: 0x0014FA52
 		public virtual IGroupAiCommunicateMode Option
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005571 RID: 21873
+		// Token: 0x040059C5 RID: 22981
 		[Nullable(2)]
 		protected new IClientGroupAiCommunicate FbInstance;
 
-		// Token: 0x04005572 RID: 21874
+		// Token: 0x040059C6 RID: 22982
 		[Nullable(2)]
 		protected new IClientGroupAiCommunicate_SetValue PocoInterface;
 	}

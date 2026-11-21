@@ -6,19 +6,19 @@ using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02003245 RID: 12869
+// Token: 0x020027B4 RID: 10164
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleInhalationComponent : EntityComponent
 {
-	// Token: 0x0601BC64 RID: 113764 RVA: 0x007A8441 File Offset: 0x007A6641
+	// Token: 0x06019816 RID: 104470 RVA: 0x007D0BA0 File Offset: 0x007CEDA0
 	protected override void OnActivate()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
 		this.DisableHandle = new int?(base.Disable("RoleInhalationComponent 默认关闭Tick"));
 	}
 
-	// Token: 0x0601BC65 RID: 113765 RVA: 0x007A846C File Offset: 0x007A666C
+	// Token: 0x06019817 RID: 104471 RVA: 0x007D0BCC File Offset: 0x007CEDCC
 	protected override void OnTick(float delta)
 	{
 		CreatureModel.Instance.GetEntitiesInRange(this.InhalationDistance, EEntityTypeQuery.SceneItem, this.QueryEntityResultCache, true, false);
@@ -68,7 +68,7 @@ public class RoleInhalationComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC66 RID: 113766 RVA: 0x007A8640 File Offset: 0x007A6840
+	// Token: 0x06019818 RID: 104472 RVA: 0x007D0DA0 File Offset: 0x007CEFA0
 	private bool CheckCanInhalation(Entity entity, bool isInhalation)
 	{
 		SceneItemInhaledItemComponent component = entity.GetComponent<SceneItemInhaledItemComponent>();
@@ -130,7 +130,7 @@ public class RoleInhalationComponent : EntityComponent
 		return !(inhaledStrength.GetValueOrDefault() > i & inhaledStrength != null);
 	}
 
-	// Token: 0x0601BC67 RID: 113767 RVA: 0x007A8820 File Offset: 0x007A6A20
+	// Token: 0x06019819 RID: 104473 RVA: 0x007D0F80 File Offset: 0x007CF180
 	[NullableContext(2)]
 	public void StartInhalation(float strength, float distance, bool isPowerfulMode, float checkAngle, FGameplayTag[] tags)
 	{
@@ -155,7 +155,7 @@ public class RoleInhalationComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC68 RID: 113768 RVA: 0x007A88D4 File Offset: 0x007A6AD4
+	// Token: 0x0601981A RID: 104474 RVA: 0x007D1034 File Offset: 0x007CF234
 	public void StopInhalation()
 	{
 		if (this.DisableHandle != null)
@@ -171,7 +171,7 @@ public class RoleInhalationComponent : EntityComponent
 		this.InhalingEntity.Clear();
 	}
 
-	// Token: 0x0601BC69 RID: 113769 RVA: 0x007A8960 File Offset: 0x007A6B60
+	// Token: 0x0601981B RID: 104475 RVA: 0x007D10C0 File Offset: 0x007CF2C0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -179,88 +179,87 @@ public class RoleInhalationComponent : EntityComponent
 			return false;
 		}
 		RoleInhalationComponent roleInhalationComponent = (RoleInhalationComponent)componentTemplate;
-		if (base.CanResetComponentProperty("DisableHandle"))
+		this.DisableHandle = roleInhalationComponent.DisableHandle;
+		if (roleInhalationComponent.ActorComp == null)
 		{
-			this.DisableHandle = roleInhalationComponent.DisableHandle;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (roleInhalationComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InhalationStrength"))
-		{
-			this.InhalationStrength = roleInhalationComponent.InhalationStrength;
-		}
-		if (base.CanResetComponentProperty("PowerfulMode"))
-		{
-			this.PowerfulMode = roleInhalationComponent.PowerfulMode;
-		}
-		if (base.CanResetComponentProperty("InhalationDistance"))
-		{
-			this.InhalationDistance = roleInhalationComponent.InhalationDistance;
-		}
-		if (base.CanResetComponentProperty("TagIds"))
-		{
-			if (roleInhalationComponent.TagIds == null)
-			{
-				this.TagIds = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.TagIds), "TagIds"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("QueryEntityResultCache") && roleInhalationComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<EntityHandle>>(this.QueryEntityResultCache), "QueryEntityResultCache"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InhalingEntity") && roleInhalationComponent.InhalingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemInhaledItemComponent>(this.InhalingEntity), "InhalingEntity"))
+		this.InhalationStrength = roleInhalationComponent.InhalationStrength;
+		this.PowerfulMode = roleInhalationComponent.PowerfulMode;
+		this.InhalationDistance = roleInhalationComponent.InhalationDistance;
+		if (roleInhalationComponent.TagIds == null)
+		{
+			this.TagIds = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagIds), "TagIds"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CheckAngle"))
+		if (roleInhalationComponent.QueryEntityResultCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.QueryEntityResultCache), "QueryEntityResultCache"))
 		{
-			this.CheckAngle = roleInhalationComponent.CheckAngle;
+			return false;
 		}
-		return !base.CanResetComponentProperty("TempCameraDir") || roleInhalationComponent.TempCameraDir == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempCameraDir), "TempCameraDir");
+		if (roleInhalationComponent.InhalingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemInhaledItemComponent>(this.InhalingEntity), "InhalingEntity"))
+		{
+			return false;
+		}
+		this.CheckAngle = roleInhalationComponent.CheckAngle;
+		return roleInhalationComponent.TempCameraDir == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempCameraDir), "TempCameraDir");
 	}
 
-	// Token: 0x0400DACD RID: 56013
+	// Token: 0x170028B1 RID: 10417
+	// (get) Token: 0x0601981C RID: 104476 RVA: 0x007D11D8 File Offset: 0x007CF3D8
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B2 RID: 10418
+	// (get) Token: 0x0601981D RID: 104477 RVA: 0x007D11DB File Offset: 0x007CF3DB
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF6C RID: 57196
 	private int? DisableHandle;
 
-	// Token: 0x0400DACE RID: 56014
+	// Token: 0x0400DF6D RID: 57197
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400DACF RID: 56015
+	// Token: 0x0400DF6E RID: 57198
 	private int InhalationStrength = -1;
 
-	// Token: 0x0400DAD0 RID: 56016
+	// Token: 0x0400DF6F RID: 57199
 	private bool PowerfulMode;
 
-	// Token: 0x0400DAD1 RID: 56017
+	// Token: 0x0400DF70 RID: 57200
 	private float InhalationDistance;
 
-	// Token: 0x0400DAD2 RID: 56018
+	// Token: 0x0400DF71 RID: 57201
 	[Nullable(2)]
 	private int[] TagIds;
 
-	// Token: 0x0400DAD3 RID: 56019
+	// Token: 0x0400DF72 RID: 57202
 	private readonly List<EntityHandle> QueryEntityResultCache = new List<EntityHandle>();
 
-	// Token: 0x0400DAD4 RID: 56020
+	// Token: 0x0400DF73 RID: 57203
 	private readonly HashSet<SceneItemInhaledItemComponent> InhalingEntity = new HashSet<SceneItemInhaledItemComponent>();
 
-	// Token: 0x0400DAD5 RID: 56021
+	// Token: 0x0400DF74 RID: 57204
 	private float CheckAngle = -1f;
 
-	// Token: 0x0400DAD6 RID: 56022
+	// Token: 0x0400DF75 RID: 57205
 	private readonly Vector TempCameraDir = Vector.Create();
 }

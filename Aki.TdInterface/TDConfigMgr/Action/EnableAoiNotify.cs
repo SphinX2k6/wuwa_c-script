@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001634 RID: 5684
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017A1 RID: 6049
 	public class EnableAoiNotify : ActionParams
 	{
-		// Token: 0x06007C23 RID: 31779 RVA: 0x0012AAFC File Offset: 0x00128CFC
+		// Token: 0x06008301 RID: 33537 RVA: 0x00139BA8 File Offset: 0x00137DA8
 		private EnableAoiNotify_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007C24 RID: 31780 RVA: 0x0012AB34 File Offset: 0x00128D34
+		// Token: 0x06008302 RID: 33538 RVA: 0x00139BE0 File Offset: 0x00137DE0
 		public static EnableAoiNotify Create([Nullable(2)] EnableAoiNotify instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C25 RID: 31781 RVA: 0x0012AB47 File Offset: 0x00128D47
+		// Token: 0x06008303 RID: 33539 RVA: 0x00139BF3 File Offset: 0x00137DF3
 		public static EnableAoiNotify CreateFromSetValue([Nullable(2)] EnableAoiNotify_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007C26 RID: 31782 RVA: 0x0012AB5A File Offset: 0x00128D5A
+		// Token: 0x06008304 RID: 33540 RVA: 0x00139C06 File Offset: 0x00137E06
 		public EnableAoiNotify_SetValue ToSetValue()
 		{
 			return new EnableAoiNotify_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002916 RID: 10518
-		// (get) Token: 0x06007C27 RID: 31783 RVA: 0x0012AB6D File Offset: 0x00128D6D
-		// (set) Token: 0x06007C28 RID: 31784 RVA: 0x0012AB98 File Offset: 0x00128D98
+		// Token: 0x17002B01 RID: 11009
+		// (get) Token: 0x06008305 RID: 33541 RVA: 0x00139C19 File Offset: 0x00137E19
+		// (set) Token: 0x06008306 RID: 33542 RVA: 0x00139C44 File Offset: 0x00137E44
 		public virtual EAoiNotifyState State
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C4A RID: 19530
+		// Token: 0x0400503E RID: 20542
 		[Nullable(2)]
 		protected new EnableAoiNotify FbInstance;
 
-		// Token: 0x04004C4B RID: 19531
+		// Token: 0x0400503F RID: 20543
 		[Nullable(2)]
 		protected EnableAoiNotify_SetValue PocoInterface;
 	}

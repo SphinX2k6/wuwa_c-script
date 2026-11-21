@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C0D RID: 19469
+	// Token: 0x02003BBE RID: 15294
 	public enum ESkillButtonDisableReason
 	{
-		// Token: 0x0401ACFE RID: 109822
+		// Token: 0x0401565A RID: 87642
 		None,
-		// Token: 0x0401ACFF RID: 109823
+		// Token: 0x0401565B RID: 87643
 		EnableTag,
-		// Token: 0x0401AD00 RID: 109824
+		// Token: 0x0401565C RID: 87644
 		BattleInputModel,
-		// Token: 0x0401AD01 RID: 109825
+		// Token: 0x0401565D RID: 87645
 		Attribute,
-		// Token: 0x0401AD02 RID: 109826
+		// Token: 0x0401565E RID: 87646
 		DisableTag,
-		// Token: 0x0401AD03 RID: 109827
+		// Token: 0x0401565F RID: 87647
 		DisableSkillIdTag,
-		// Token: 0x0401AD04 RID: 109828
+		// Token: 0x04015660 RID: 87648
 		MultiSkillInfo,
-		// Token: 0x0401AD05 RID: 109829
+		// Token: 0x04015661 RID: 87649
 		UseItem,
-		// Token: 0x0401AD06 RID: 109830
+		// Token: 0x04015662 RID: 87650
 		SkillCd,
-		// Token: 0x0401AD07 RID: 109831
+		// Token: 0x04015663 RID: 87651
 		VisionInAir,
-		// Token: 0x0401AD08 RID: 109832
+		// Token: 0x04015664 RID: 87652
 		CustomHandleForceEnable,
-		// Token: 0x0401AD09 RID: 109833
+		// Token: 0x04015665 RID: 87653
 		Vehicle
 	}
 }

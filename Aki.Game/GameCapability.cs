@@ -1,47 +1,47 @@
 ﻿using System;
 
-// Token: 0x02000229 RID: 553
+// Token: 0x0200022D RID: 557
 public class GameCapability : IGameCapability
 {
-	// Token: 0x0600226D RID: 8813 RVA: 0x000D93D3 File Offset: 0x000D75D3
+	// Token: 0x06002325 RID: 8997 RVA: 0x000DF893 File Offset: 0x000DDA93
 	public virtual bool ShouldActivate()
 	{
 		return false;
 	}
 
-	// Token: 0x0600226E RID: 8814 RVA: 0x000D93D6 File Offset: 0x000D75D6
+	// Token: 0x06002326 RID: 8998 RVA: 0x000DF896 File Offset: 0x000DDA96
 	public virtual void Activate()
 	{
 	}
 
-	// Token: 0x0600226F RID: 8815 RVA: 0x000D93D8 File Offset: 0x000D75D8
+	// Token: 0x06002327 RID: 8999 RVA: 0x000DF898 File Offset: 0x000DDA98
 	public virtual void OnActivated()
 	{
 	}
 
-	// Token: 0x06002270 RID: 8816 RVA: 0x000D93DA File Offset: 0x000D75DA
+	// Token: 0x06002328 RID: 9000 RVA: 0x000DF89A File Offset: 0x000DDA9A
 	public virtual bool ShouldDeactivate()
 	{
 		return false;
 	}
 
-	// Token: 0x06002271 RID: 8817 RVA: 0x000D93DD File Offset: 0x000D75DD
+	// Token: 0x06002329 RID: 9001 RVA: 0x000DF89D File Offset: 0x000DDA9D
 	public virtual void Deactivate()
 	{
 	}
 
-	// Token: 0x06002272 RID: 8818 RVA: 0x000D93DF File Offset: 0x000D75DF
+	// Token: 0x0600232A RID: 9002 RVA: 0x000DF89F File Offset: 0x000DDA9F
 	public virtual bool? ShouldTickActive()
 	{
 		return new bool?(false);
 	}
 
-	// Token: 0x06002273 RID: 8819 RVA: 0x000D93E7 File Offset: 0x000D75E7
+	// Token: 0x0600232B RID: 9003 RVA: 0x000DF8A7 File Offset: 0x000DDAA7
 	public virtual void OnDeactivated()
 	{
 	}
 
-	// Token: 0x06002274 RID: 8820 RVA: 0x000D93E9 File Offset: 0x000D75E9
+	// Token: 0x0600232C RID: 9004 RVA: 0x000DF8A9 File Offset: 0x000DDAA9
 	public virtual void TickActive(float deltaTime)
 	{
 	}

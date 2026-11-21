@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001A54 RID: 6740
+// Token: 0x02000F13 RID: 3859
 internal enum ERankMode
 {
-	// Token: 0x04005B67 RID: 23399
+	// Token: 0x04005C36 RID: 23606
 	Single,
-	// Token: 0x04005B68 RID: 23400
+	// Token: 0x04005C37 RID: 23607
 	Online
 }

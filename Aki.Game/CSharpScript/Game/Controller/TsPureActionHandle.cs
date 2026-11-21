@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727E RID: 29310
+	// Token: 0x020063FD RID: 25597
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TsPureActionHandle
 	{
-		// Token: 0x06047D89 RID: 294281 RVA: 0x01262276 File Offset: 0x01260476
+		// Token: 0x0603E149 RID: 254281 RVA: 0x01202CBA File Offset: 0x01200EBA
 		[NullableContext(1)]
 		public void Initialize(TsBasePlayerController playerController)
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Controller
 			this.OnReleaseStat = Stat.Create("TsPureActionHandle.OnReleaseAction", "", "STATGROUP_KuroBattle");
 		}
 
-		// Token: 0x06047D8A RID: 294282 RVA: 0x012622B4 File Offset: 0x012604B4
+		// Token: 0x0603E14A RID: 254282 RVA: 0x01202CF8 File Offset: 0x01200EF8
 		[NullableContext(1)]
 		public void AddActionBinding(string actionName, Action<string, bool, FKey> onInputAction)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Controller
 			UKuroInputDelegateLibrary.RegisterActionBinding(value, EInputEvent.IE_Released, this.PlayerController, this.OnReleaseActionDelegate);
 		}
 
-		// Token: 0x06047D8B RID: 294283 RVA: 0x01262340 File Offset: 0x01260540
+		// Token: 0x0603E14B RID: 254283 RVA: 0x01202D84 File Offset: 0x01200F84
 		[NullableContext(1)]
 		private void OnPressAction(FKey key)
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D8C RID: 294284 RVA: 0x0126235D File Offset: 0x0126055D
+		// Token: 0x0603E14C RID: 254284 RVA: 0x01202DA1 File Offset: 0x01200FA1
 		[NullableContext(1)]
 		private void OnReleaseAction(FKey key)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D8D RID: 294285 RVA: 0x0126237C File Offset: 0x0126057C
+		// Token: 0x0603E14D RID: 254285 RVA: 0x01202DC0 File Offset: 0x01200FC0
 		public void Reset()
 		{
 			this.PlayerController = null;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x04025C5C RID: 154716
+		// Token: 0x04020F1C RID: 134940
 		private TsBasePlayerController PlayerController;
 
-		// Token: 0x04025C5D RID: 154717
+		// Token: 0x04020F1D RID: 134941
 		private string ActionName;
 
-		// Token: 0x04025C5E RID: 154718
+		// Token: 0x04020F1E RID: 134942
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,16 +90,16 @@ namespace CSharpScript.Game.Controller
 		})]
 		private Action<string, bool, FKey> OnInputActionCallback;
 
-		// Token: 0x04025C5F RID: 154719
+		// Token: 0x04020F1F RID: 134943
 		private Stat OnPressStat;
 
-		// Token: 0x04025C60 RID: 154720
+		// Token: 0x04020F20 RID: 134944
 		private Stat OnReleaseStat;
 
-		// Token: 0x04025C61 RID: 154721
+		// Token: 0x04020F21 RID: 134945
 		private FActionBindingDelegate OnPressActionDelegate;
 
-		// Token: 0x04025C62 RID: 154722
+		// Token: 0x04020F22 RID: 134946
 		private FActionBindingDelegate OnReleaseActionDelegate;
 	}
 }

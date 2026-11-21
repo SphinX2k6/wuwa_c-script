@@ -4,24 +4,24 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B02 RID: 27394
+	// Token: 0x02005C7A RID: 23674
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventCheckBattleState : LevelEventBase
 	{
-		// Token: 0x0604404C RID: 278604 RVA: 0x010B6703 File Offset: 0x010B4903
+		// Token: 0x0603A19E RID: 237982 RVA: 0x0105FF9F File Offset: 0x0105E19F
 		public LevelEventCheckBattleState(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604404D RID: 278605 RVA: 0x010B670C File Offset: 0x010B490C
+		// Token: 0x0603A19F RID: 237983 RVA: 0x0105FFA8 File Offset: 0x0105E1A8
 		[NullableContext(1)]
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604404E RID: 278606 RVA: 0x010B6718 File Offset: 0x010B4918
+		// Token: 0x0603A1A0 RID: 237984 RVA: 0x0105FFB4 File Offset: 0x0105E1B4
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.StateOption.EntityId);
 		}
 
-		// Token: 0x0604404F RID: 278607 RVA: 0x010B67C8 File Offset: 0x010B49C8
+		// Token: 0x0603A1A1 RID: 237985 RVA: 0x01060064 File Offset: 0x0105E264
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			this.MaxWaitTime = this.StateOption.MaxWaitTime * (float)TimeUtil.Instance.InverseMillisecond;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.CheckType = new EDetectBattleConditionType?(this.StateOption.Type);
 		}
 
-		// Token: 0x06044050 RID: 278608 RVA: 0x010B6824 File Offset: 0x010B4A24
+		// Token: 0x0603A1A2 RID: 237986 RVA: 0x010600C0 File Offset: 0x0105E2C0
 		protected override void OnTick(float deltaTime)
 		{
 			float num = (this.BaseContext != null) ? (deltaTime * LevelGamePlayUtils.GetCustomTimeDilationByContext(this.BaseContext).GetValueOrDefault(1f)) : deltaTime;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044051 RID: 278609 RVA: 0x010B68E0 File Offset: 0x010B4AE0
+		// Token: 0x0603A1A3 RID: 237987 RVA: 0x0106017C File Offset: 0x0105E37C
 		private bool GetGameplayTag()
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -100,35 +100,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return component != null && component.HasTag(GameplayTagUtils.GetTagIdByName(tagName));
 		}
 
-		// Token: 0x06044052 RID: 278610 RVA: 0x010B696E File Offset: 0x010B4B6E
+		// Token: 0x0603A1A4 RID: 237988 RVA: 0x0106020A File Offset: 0x0105E40A
 		public override void Release()
 		{
 			base.Release();
 			this.EntityHandle = null;
 		}
 
-		// Token: 0x040238C2 RID: 145602
+		// Token: 0x0401EB64 RID: 125796
 		private bool GetResult;
 
-		// Token: 0x040238C3 RID: 145603
+		// Token: 0x0401EB65 RID: 125797
 		private EntityHandle EntityHandle;
 
-		// Token: 0x040238C4 RID: 145604
+		// Token: 0x0401EB66 RID: 125798
 		private IDetectBattleTag StateOption;
 
-		// Token: 0x040238C5 RID: 145605
+		// Token: 0x0401EB67 RID: 125799
 		private EDetectBattleConditionType? CheckType;
 
-		// Token: 0x040238C6 RID: 145606
+		// Token: 0x0401EB68 RID: 125800
 		private IDetectBattleMonsterOnGround BattleOption;
 
-		// Token: 0x040238C7 RID: 145607
+		// Token: 0x0401EB69 RID: 125801
 		private const int CheckInterval = 5;
 
-		// Token: 0x040238C8 RID: 145608
+		// Token: 0x0401EB6A RID: 125802
 		private int CurInterval;
 
-		// Token: 0x040238C9 RID: 145609
+		// Token: 0x0401EB6B RID: 125803
 		private float MaxWaitTime;
 	}
 }

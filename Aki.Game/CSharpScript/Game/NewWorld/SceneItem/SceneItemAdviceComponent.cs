@@ -7,12 +7,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716B RID: 29035
+	// Token: 0x0200621F RID: 25119
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemAdviceComponent : EntityComponent
 	{
-		// Token: 0x06046DFC RID: 290300 RVA: 0x011E0AA8 File Offset: 0x011DECA8
+		// Token: 0x0603C64E RID: 247374 RVA: 0x0113C40C File Offset: 0x0113A60C
 		protected override void OnActivate()
 		{
 			PawnInteractNewComponent component = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			component3.PawnName = text;
 		}
 
-		// Token: 0x06046DFD RID: 290301 RVA: 0x011E0B34 File Offset: 0x011DED34
+		// Token: 0x0603C64F RID: 247375 RVA: 0x0113C498 File Offset: 0x0113A698
 		public void DoInteract()
 		{
 			this.ClearTimer();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DFE RID: 290302 RVA: 0x011E0BE4 File Offset: 0x011DEDE4
+		// Token: 0x0603C650 RID: 247376 RVA: 0x0113C548 File Offset: 0x0113A748
 		private void OnInteractFinish(float delta)
 		{
 			this.ClearTimer();
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DFF RID: 290303 RVA: 0x011E0C62 File Offset: 0x011DEE62
+		// Token: 0x0603C651 RID: 247377 RVA: 0x0113C5C6 File Offset: 0x0113A7C6
 		private void ClearTimer()
 		{
 			if (this.RevertTimer != null)
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E00 RID: 290304 RVA: 0x011E0C84 File Offset: 0x011DEE84
+		// Token: 0x0603C652 RID: 247378 RVA: 0x0113C5E8 File Offset: 0x0113A7E8
 		protected override bool OnEnd()
 		{
 			this.ClearTimer();
 			return true;
 		}
 
-		// Token: 0x06046E01 RID: 290305 RVA: 0x011E0C90 File Offset: 0x011DEE90
+		// Token: 0x0603C653 RID: 247379 RVA: 0x0113C5F4 File Offset: 0x0113A7F4
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -95,38 +95,52 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemAdviceComponent sceneItemAdviceComponent = (SceneItemAdviceComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TagComponent"))
+			if (sceneItemAdviceComponent.TagComponent == null)
 			{
-				if (sceneItemAdviceComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("RevertTimer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
-				if (sceneItemAdviceComponent.RevertTimer == null)
-				{
-					this.RevertTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.RevertTimer), "RevertTimer"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemAdviceComponent.RevertTimer == null)
+			{
+				this.RevertTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RevertTimer), "RevertTimer"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025343 RID: 152387
+		// Token: 0x17007210 RID: 29200
+		// (get) Token: 0x0603C654 RID: 247380 RVA: 0x0113C66A File Offset: 0x0113A86A
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007211 RID: 29201
+		// (get) Token: 0x0603C655 RID: 247381 RVA: 0x0113C66D File Offset: 0x0113A86D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFAA RID: 130986
 		private const int REVERTIME = 3000;
 
-		// Token: 0x04025344 RID: 152388
+		// Token: 0x0401FFAB RID: 130987
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025345 RID: 152389
+		// Token: 0x0401FFAC RID: 130988
 		private TimerHandle RevertTimer;
 	}
 }

@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using CSharpScript.Game.Module.Roguelike;
 using CSharpScript.Module.InstanceDungeon;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058DF RID: 22751
+	// Token: 0x020048B7 RID: 18615
 	public class InstanceDungeonEntranceFlowRoguelike : InstanceDungeonEntranceFlowBase
 	{
-		// Token: 0x06039CCC RID: 236748 RVA: 0x00DBB0D4 File Offset: 0x00DB92D4
+		// Token: 0x0602EBEF RID: 191471 RVA: 0x00D0A02C File Offset: 0x00D0822C
 		protected override void OnCreate()
 		{
 			base.AddStep(delegate
@@ -21,9 +21,15 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			});
 			base.AddStep(delegate
 			{
-				RoguelikeController.Instance.RoguelikeStartRequest(false, InstanceDungeonEntranceModel.Instance.InstanceId, (from id in RoguelikeModel.Instance.GetEntranceViewModel().FormationIdList
-				where id != 0
-				select id).ToList<int>(), RoguelikeModel.Instance.GetEntranceViewModel().CurrentEntriesGroupData.Id);
+				List<int> list = new List<int>();
+				foreach (int num in RoguelikeModel.Instance.GetEntranceViewModel().FormationIdList)
+				{
+					if (num != 0)
+					{
+						list.Add(num);
+					}
+				}
+				RoguelikeController.Instance.RoguelikeStartRequest(false, InstanceDungeonEntranceModel.Instance.InstanceId, list, RoguelikeModel.Instance.GetEntranceViewModel().CurrentEntriesGroupData.Id);
 			});
 		}
 	}

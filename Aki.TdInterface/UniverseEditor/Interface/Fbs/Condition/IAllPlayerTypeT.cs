@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004968 RID: 18792
+	// Token: 0x02004E1F RID: 19999
 	public class IAllPlayerTypeT
 	{
-		// Token: 0x170087C5 RID: 34757
-		// (get) Token: 0x0601D49E RID: 119966 RVA: 0x00421C6E File Offset: 0x0041FE6E
-		// (set) Token: 0x0601D49F RID: 119967 RVA: 0x00421C76 File Offset: 0x0041FE76
+		// Token: 0x17008E80 RID: 36480
+		// (get) Token: 0x0601EEC3 RID: 126659 RVA: 0x00452122 File Offset: 0x00450322
+		// (set) Token: 0x0601EEC4 RID: 126660 RVA: 0x0045212A File Offset: 0x0045032A
 		public ECheckTargetType Type { get; set; }
 
-		// Token: 0x0601D4A0 RID: 119968 RVA: 0x00421C7F File Offset: 0x0041FE7F
+		// Token: 0x0601EEC5 RID: 126661 RVA: 0x00452133 File Offset: 0x00450333
 		public IAllPlayerTypeT()
 		{
 			this.Type = ECheckTargetType.AllPlayer;

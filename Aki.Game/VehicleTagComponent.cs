@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020032DD RID: 13021
+// Token: 0x0200284F RID: 10319
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleTagComponent : BaseTagComponent
 {
-	// Token: 0x1700273A RID: 10042
-	// (get) Token: 0x0601C501 RID: 115969 RVA: 0x007E7B21 File Offset: 0x007E5D21
+	// Token: 0x17002A86 RID: 10886
+	// (get) Token: 0x0601A1A2 RID: 106914 RVA: 0x0080E302 File Offset: 0x0080C502
 	protected Dictionary<int, int[]> VehicleToDriverTagIdMap
 	{
 		get
@@ -18,8 +18,8 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x1700273B RID: 10043
-	// (get) Token: 0x0601C502 RID: 115970 RVA: 0x007E7B33 File Offset: 0x007E5D33
+	// Token: 0x17002A87 RID: 10887
+	// (get) Token: 0x0601A1A3 RID: 106915 RVA: 0x0080E314 File Offset: 0x0080C514
 	protected Dictionary<int, int[]> DriverToVehicleTagIdMap
 	{
 		get
@@ -28,8 +28,8 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x1700273C RID: 10044
-	// (get) Token: 0x0601C503 RID: 115971 RVA: 0x007E7B45 File Offset: 0x007E5D45
+	// Token: 0x17002A88 RID: 10888
+	// (get) Token: 0x0601A1A4 RID: 106916 RVA: 0x0080E326 File Offset: 0x0080C526
 	protected Dictionary<int, long[]> VehicleToDriverBuffIdMap
 	{
 		get
@@ -38,7 +38,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C504 RID: 115972 RVA: 0x007E7B58 File Offset: 0x007E5D58
+	// Token: 0x0601A1A5 RID: 106917 RVA: 0x0080E338 File Offset: 0x0080C538
 	protected void VehicleTagChanged(int tagId, bool tagExist)
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -118,7 +118,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C505 RID: 115973 RVA: 0x007E7D54 File Offset: 0x007E5F54
+	// Token: 0x0601A1A6 RID: 106918 RVA: 0x0080E534 File Offset: 0x0080C734
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -131,7 +131,7 @@ public class VehicleTagComponent : BaseTagComponent
 		return true;
 	}
 
-	// Token: 0x0601C506 RID: 115974 RVA: 0x007E7DF4 File Offset: 0x007E5FF4
+	// Token: 0x0601A1A7 RID: 106919 RVA: 0x0080E5D4 File Offset: 0x0080C7D4
 	protected override void OnActivate()
 	{
 		base.OnActivate();
@@ -198,7 +198,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C507 RID: 115975 RVA: 0x007E7F8C File Offset: 0x007E618C
+	// Token: 0x0601A1A8 RID: 106920 RVA: 0x0080E76C File Offset: 0x0080C96C
 	protected override bool OnEnd()
 	{
 		foreach (int tagId in this.ListenedTags)
@@ -236,14 +236,14 @@ public class VehicleTagComponent : BaseTagComponent
 		return true;
 	}
 
-	// Token: 0x0601C508 RID: 115976 RVA: 0x007E8108 File Offset: 0x007E6308
+	// Token: 0x0601A1A9 RID: 106921 RVA: 0x0080E8E8 File Offset: 0x0080CAE8
 	protected override bool OnClear()
 	{
 		base.OnClear();
 		return true;
 	}
 
-	// Token: 0x0601C509 RID: 115977 RVA: 0x007E8114 File Offset: 0x007E6314
+	// Token: 0x0601A1AA RID: 106922 RVA: 0x0080E8F4 File Offset: 0x0080CAF4
 	protected unsafe void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (info.PassengerEntity == null)
@@ -343,7 +343,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C50A RID: 115978 RVA: 0x007E849C File Offset: 0x007E669C
+	// Token: 0x0601A1AB RID: 106923 RVA: 0x0080EC7C File Offset: 0x0080CE7C
 	protected void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (info.PassengerEntity == null)
@@ -392,7 +392,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C50B RID: 115979 RVA: 0x007E8640 File Offset: 0x007E6840
+	// Token: 0x0601A1AC RID: 106924 RVA: 0x0080EE20 File Offset: 0x0080D020
 	protected void AddEnterVehicleTagsForPassenger(Entity passengerEntity)
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -406,7 +406,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C50C RID: 115980 RVA: 0x007E86B4 File Offset: 0x007E68B4
+	// Token: 0x0601A1AD RID: 106925 RVA: 0x0080EE94 File Offset: 0x0080D094
 	protected void AddEnterVehicleTagsForVehicle()
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -420,7 +420,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C50D RID: 115981 RVA: 0x007E8740 File Offset: 0x007E6940
+	// Token: 0x0601A1AE RID: 106926 RVA: 0x0080EF20 File Offset: 0x0080D120
 	protected void RemoveEnterVehicleTagsForVehicle()
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -434,7 +434,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C50E RID: 115982 RVA: 0x007E87CC File Offset: 0x007E69CC
+	// Token: 0x0601A1AF RID: 106927 RVA: 0x0080EFAC File Offset: 0x0080D1AC
 	public void AddTagForPassenger(Entity passengerEntity, ETagChannel tagChannel, int tagId)
 	{
 		if (!passengerEntity || !this.PassengerTagMap.ContainsKey(passengerEntity))
@@ -449,7 +449,7 @@ public class VehicleTagComponent : BaseTagComponent
 		this.PassengerTagMap[passengerEntity].Add(tagId);
 	}
 
-	// Token: 0x0601C50F RID: 115983 RVA: 0x007E881C File Offset: 0x007E6A1C
+	// Token: 0x0601A1B0 RID: 106928 RVA: 0x0080EFFC File Offset: 0x0080D1FC
 	public void RemoveTagForPassenger(Entity passengerEntity, ETagChannel tagChannel, int tagId)
 	{
 		if (!passengerEntity)
@@ -469,7 +469,7 @@ public class VehicleTagComponent : BaseTagComponent
 		this.PassengerTagMap[passengerEntity].Remove(tagId);
 	}
 
-	// Token: 0x0601C510 RID: 115984 RVA: 0x007E8878 File Offset: 0x007E6A78
+	// Token: 0x0601A1B1 RID: 106929 RVA: 0x0080F058 File Offset: 0x0080D258
 	protected void RemoveAllTagsForPassenger(Entity passengerEntity)
 	{
 		if (!passengerEntity)
@@ -490,7 +490,7 @@ public class VehicleTagComponent : BaseTagComponent
 		this.PassengerTagMap.Remove(passengerEntity);
 	}
 
-	// Token: 0x0601C511 RID: 115985 RVA: 0x007E890C File Offset: 0x007E6B0C
+	// Token: 0x0601A1B2 RID: 106930 RVA: 0x0080F0EC File Offset: 0x0080D2EC
 	protected void ListenDriverTagChange(VehiclePassengerInfo info)
 	{
 		if (!info.IsDriver || info.PassengerEntity == null)
@@ -539,7 +539,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C512 RID: 115986 RVA: 0x007E8A14 File Offset: 0x007E6C14
+	// Token: 0x0601A1B3 RID: 106931 RVA: 0x0080F1F4 File Offset: 0x0080D3F4
 	protected void RemoveListenDriverTagChange(VehiclePassengerInfo info)
 	{
 		if (!info.IsDriver || info.PassengerEntity == null)
@@ -585,7 +585,7 @@ public class VehicleTagComponent : BaseTagComponent
 		}
 	}
 
-	// Token: 0x0601C513 RID: 115987 RVA: 0x007E8B0C File Offset: 0x007E6D0C
+	// Token: 0x0601A1B4 RID: 106932 RVA: 0x0080F2EC File Offset: 0x0080D4EC
 	protected unsafe void DriverTagChanged(int tagId, bool tagExist)
 	{
 		BaseVehiclePerformComponent performComp = this.PerformComp;
@@ -627,7 +627,7 @@ public class VehicleTagComponent : BaseTagComponent
 		this.DriverListenLoopLock = -1L;
 	}
 
-	// Token: 0x0601C514 RID: 115988 RVA: 0x007E8C18 File Offset: 0x007E6E18
+	// Token: 0x0601A1B5 RID: 106933 RVA: 0x0080F3F8 File Offset: 0x0080D5F8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -635,115 +635,141 @@ public class VehicleTagComponent : BaseTagComponent
 			return false;
 		}
 		VehicleTagComponent vehicleTagComponent = (VehicleTagComponent)componentTemplate;
-		if (base.CanResetComponentProperty("BaseActorComp"))
+		if (vehicleTagComponent.BaseActorComp == null)
 		{
-			if (vehicleTagComponent.BaseActorComp == null)
-			{
-				this.BaseActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.BaseActorComp), "BaseActorComp"))
-			{
-				return false;
-			}
+			this.BaseActorComp = null;
 		}
-		if (base.CanResetComponentProperty("VehicleActorComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BaseActorComp), "BaseActorComp"))
 		{
-			if (vehicleTagComponent.VehicleActorComp == null)
-			{
-				this.VehicleActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.VehicleActorComp), "VehicleActorComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PerformComp"))
+		if (vehicleTagComponent.VehicleActorComp == null)
 		{
-			if (vehicleTagComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
+			this.VehicleActorComp = null;
 		}
-		if (base.CanResetComponentProperty("VehicleBuffComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleActorComp), "VehicleActorComp"))
 		{
-			if (vehicleTagComponent.VehicleBuffComp == null)
-			{
-				this.VehicleBuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleBuffComponent>(this.VehicleBuffComp), "VehicleBuffComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PassengerTagMap"))
+		if (vehicleTagComponent.PerformComp == null)
 		{
-			if (vehicleTagComponent.PassengerTagMap == null)
-			{
-				this.PassengerTagMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<Entity, HashSet<int>>>(this.PassengerTagMap), "PassengerTagMap"))
-			{
-				return false;
-			}
+			this.PerformComp = null;
 		}
-		if (base.CanResetComponentProperty("ListenedTags"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 		{
-			if (vehicleTagComponent.ListenedTags == null)
-			{
-				this.ListenedTags = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ListenedTags), "ListenedTags"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DriverListenTags"))
+		if (vehicleTagComponent.VehicleBuffComp == null)
 		{
-			if (vehicleTagComponent.DriverListenTags == null)
-			{
-				this.DriverListenTags = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.DriverListenTags), "DriverListenTags"))
-			{
-				return false;
-			}
+			this.VehicleBuffComp = null;
 		}
-		if (base.CanResetComponentProperty("DriverListenLoopLock"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleBuffComp), "VehicleBuffComp"))
 		{
-			this.DriverListenLoopLock = vehicleTagComponent.DriverListenLoopLock;
+			return false;
 		}
+		if (vehicleTagComponent.PassengerTagMap == null)
+		{
+			this.PassengerTagMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PassengerTagMap), "PassengerTagMap"))
+		{
+			return false;
+		}
+		if (vehicleTagComponent.ListenedTags == null)
+		{
+			this.ListenedTags = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ListenedTags), "ListenedTags"))
+		{
+			return false;
+		}
+		if (vehicleTagComponent.DriverListenTags == null)
+		{
+			this.DriverListenTags = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.DriverListenTags), "DriverListenTags"))
+		{
+			return false;
+		}
+		this.DriverListenLoopLock = vehicleTagComponent.DriverListenLoopLock;
 		return true;
 	}
 
-	// Token: 0x0400E056 RID: 57430
+	// Token: 0x17002A89 RID: 10889
+	// (get) Token: 0x0601A1B6 RID: 106934 RVA: 0x0080F551 File Offset: 0x0080D751
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A8A RID: 10890
+	// (get) Token: 0x0601A1B7 RID: 106935 RVA: 0x0080F554 File Offset: 0x0080D754
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A8B RID: 10891
+	// (get) Token: 0x0601A1B8 RID: 106936 RVA: 0x0080F557 File Offset: 0x0080D757
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A8C RID: 10892
+	// (get) Token: 0x0601A1B9 RID: 106937 RVA: 0x0080F55A File Offset: 0x0080D75A
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A8D RID: 10893
+	// (get) Token: 0x0601A1BA RID: 106938 RVA: 0x0080F55D File Offset: 0x0080D75D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E501 RID: 58625
 	[Nullable(2)]
 	protected BaseActorComponent BaseActorComp;
 
-	// Token: 0x0400E057 RID: 57431
+	// Token: 0x0400E502 RID: 58626
 	[Nullable(2)]
 	protected VehicleActorComponent VehicleActorComp;
 
-	// Token: 0x0400E058 RID: 57432
+	// Token: 0x0400E503 RID: 58627
 	[Nullable(2)]
 	protected BaseVehiclePerformComponent PerformComp;
 
-	// Token: 0x0400E059 RID: 57433
+	// Token: 0x0400E504 RID: 58628
 	[Nullable(2)]
 	protected VehicleBuffComponent VehicleBuffComp;
 
-	// Token: 0x0400E05A RID: 57434
+	// Token: 0x0400E505 RID: 58629
 	protected Dictionary<Entity, HashSet<int>> PassengerTagMap = new Dictionary<Entity, HashSet<int>>();
 
-	// Token: 0x0400E05B RID: 57435
+	// Token: 0x0400E506 RID: 58630
 	protected HashSet<int> ListenedTags = new HashSet<int>();
 
-	// Token: 0x0400E05C RID: 57436
+	// Token: 0x0400E507 RID: 58631
 	protected HashSet<int> DriverListenTags = new HashSet<int>();
 
-	// Token: 0x0400E05D RID: 57437
+	// Token: 0x0400E508 RID: 58632
 	protected long DriverListenLoopLock = -1L;
 }

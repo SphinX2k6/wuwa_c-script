@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E4A RID: 24138
+	// Token: 0x02004E2F RID: 20015
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WeaknessBreakItem : UiPanelBase
 	{
-		// Token: 0x0603D645 RID: 251461 RVA: 0x00ECF608 File Offset: 0x00ECD808
+		// Token: 0x060325D5 RID: 206293 RVA: 0x00E20B78 File Offset: 0x00E1ED78
 		[NullableContext(1)]
 		public UniTask InitializeAsync(UUIItem parentItem)
 		{
@@ -25,13 +25,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D646 RID: 251462 RVA: 0x00ECF653 File Offset: 0x00ECD853
+		// Token: 0x060325D6 RID: 206294 RVA: 0x00E20BC3 File Offset: 0x00E1EDC3
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603D647 RID: 251463 RVA: 0x00ECF666 File Offset: 0x00ECD866
+		// Token: 0x060325D7 RID: 206295 RVA: 0x00E20BD6 File Offset: 0x00E1EDD6
 		public void Play()
 		{
 			if (this.IsPlaying)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Show(null);
 		}
 
-		// Token: 0x0603D648 RID: 251464 RVA: 0x00ECF680 File Offset: 0x00ECD880
+		// Token: 0x060325D8 RID: 206296 RVA: 0x00E20BF0 File Offset: 0x00E1EDF0
 		protected override void OnAfterShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BreakingTimer = TimerSystem.Instance.Delay(new TTimerAction(this.OnBreakingTimerEnd), 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603D649 RID: 251465 RVA: 0x00ECF6DD File Offset: 0x00ECD8DD
+		// Token: 0x060325D9 RID: 206297 RVA: 0x00E20C4D File Offset: 0x00E1EE4D
 		private void OnBreakingTimerEnd(float _)
 		{
 			this.BreakingTimer = null;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Hide(null);
 		}
 
-		// Token: 0x0603D64A RID: 251466 RVA: 0x00ECF6F4 File Offset: 0x00ECD8F4
+		// Token: 0x060325DA RID: 206298 RVA: 0x00E20C64 File Offset: 0x00E1EE64
 		private void RemoveBreakingTimer()
 		{
 			if (this.BreakingTimer != null)
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D64B RID: 251467 RVA: 0x00ECF716 File Offset: 0x00ECD916
+		// Token: 0x060325DB RID: 206299 RVA: 0x00E20C86 File Offset: 0x00E1EE86
 		protected override void OnBeforeHide()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveBreakingTimer();
 		}
 
-		// Token: 0x04020093 RID: 131219
+		// Token: 0x0401AB5A RID: 109402
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04020094 RID: 131220
+		// Token: 0x0401AB5B RID: 109403
 		private bool IsPlaying;
 
-		// Token: 0x04020095 RID: 131221
+		// Token: 0x0401AB5C RID: 109404
 		private TimerHandle BreakingTimer;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040FD RID: 16637
+	// Token: 0x0200453E RID: 17726
 	public enum ISaveConfigType_Union : byte
 	{
-		// Token: 0x0400BC9C RID: 48284
+		// Token: 0x0400C685 RID: 50821
 		NONE,
-		// Token: 0x0400BC9D RID: 48285
+		// Token: 0x0400C686 RID: 50822
 		ISaveConfigType,
-		// Token: 0x0400BC9E RID: 48286
+		// Token: 0x0400C687 RID: 50823
 		ISaveNew,
-		// Token: 0x0400BC9F RID: 48287
+		// Token: 0x0400C688 RID: 50824
 		ISavePoint
 	}
 }

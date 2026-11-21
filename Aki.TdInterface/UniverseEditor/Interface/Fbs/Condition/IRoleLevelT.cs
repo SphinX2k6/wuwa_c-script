@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CB3 RID: 19635
+	// Token: 0x020051AC RID: 20908
 	public class IRoleLevelT
 	{
-		// Token: 0x17008E95 RID: 36501
-		// (get) Token: 0x0601F285 RID: 127621 RVA: 0x00459FAF File Offset: 0x004581AF
-		// (set) Token: 0x0601F286 RID: 127622 RVA: 0x00459FB7 File Offset: 0x004581B7
+		// Token: 0x170095C3 RID: 38339
+		// (get) Token: 0x06020EA7 RID: 134823 RVA: 0x0048DAFF File Offset: 0x0048BCFF
+		// (set) Token: 0x06020EA8 RID: 134824 RVA: 0x0048DB07 File Offset: 0x0048BD07
 		public EFormationRoleInfoType Type { get; set; }
 
-		// Token: 0x17008E96 RID: 36502
-		// (get) Token: 0x0601F287 RID: 127623 RVA: 0x00459FC0 File Offset: 0x004581C0
-		// (set) Token: 0x0601F288 RID: 127624 RVA: 0x00459FC8 File Offset: 0x004581C8
+		// Token: 0x170095C4 RID: 38340
+		// (get) Token: 0x06020EA9 RID: 134825 RVA: 0x0048DB10 File Offset: 0x0048BD10
+		// (set) Token: 0x06020EAA RID: 134826 RVA: 0x0048DB18 File Offset: 0x0048BD18
 		public ISpecifyRoleLevelT Option { get; set; }
 
-		// Token: 0x0601F289 RID: 127625 RVA: 0x00459FD1 File Offset: 0x004581D1
+		// Token: 0x06020EAB RID: 134827 RVA: 0x0048DB21 File Offset: 0x0048BD21
 		public IRoleLevelT()
 		{
 			this.Type = EFormationRoleInfoType.RoleLevel;

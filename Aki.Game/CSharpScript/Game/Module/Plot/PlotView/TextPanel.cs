@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200503C RID: 20540
+	// Token: 0x0200400B RID: 16395
 	internal class TextPanel : UiPanelBase
 	{
-		// Token: 0x0603492F RID: 215343 RVA: 0x00C6A22C File Offset: 0x00C6842C
+		// Token: 0x0602980B RID: 169995 RVA: 0x00BB72CC File Offset: 0x00BB54CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034930 RID: 215344 RVA: 0x00C6A274 File Offset: 0x00C68474
+		// Token: 0x0602980C RID: 169996 RVA: 0x00BB7314 File Offset: 0x00BB5514
 		[NullableContext(1)]
 		public void SetText(string text)
 		{

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 {
-	// Token: 0x020054A1 RID: 21665
+	// Token: 0x02004484 RID: 17540
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapLifeEventDispatcher
 	{
-		// Token: 0x060375CC RID: 226764 RVA: 0x00D26FAA File Offset: 0x00D251AA
+		// Token: 0x0602C520 RID: 181536 RVA: 0x00C76BFE File Offset: 0x00C74DFE
 		public MapLifeEventDispatcher(BaseMap map)
 		{
 			this.TargetExpressionMap = map;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			this.Listeners = dictionary;
 		}
 
-		// Token: 0x060375CD RID: 226765 RVA: 0x00D26FD8 File Offset: 0x00D251D8
+		// Token: 0x0602C521 RID: 181537 RVA: 0x00C76C2C File Offset: 0x00C74E2C
 		public UniTask OnWorldMapBeforeStartAsync()
 		{
 			MapLifeEventDispatcher.<OnWorldMapBeforeStartAsync>d__3 <OnWorldMapBeforeStartAsync>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			return <OnWorldMapBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060375CE RID: 226766 RVA: 0x00D2701C File Offset: 0x00D2521C
+		// Token: 0x0602C522 RID: 181538 RVA: 0x00C76C70 File Offset: 0x00C74E70
 		public void OnWorldMapBeforeShow()
 		{
 			foreach (KeyValuePair<EMapLifeEventListenerType, MapLifeEventListener> keyValuePair in this.Listeners)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			}
 		}
 
-		// Token: 0x060375CF RID: 226767 RVA: 0x00D270A4 File Offset: 0x00D252A4
+		// Token: 0x0602C523 RID: 181539 RVA: 0x00C76CF8 File Offset: 0x00C74EF8
 		public void OnWorldMapAfterShow()
 		{
 			foreach (KeyValuePair<EMapLifeEventListenerType, MapLifeEventListener> keyValuePair in this.Listeners)
@@ -64,16 +64,16 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap.Assistant.MapLifeEvent
 			}
 		}
 
-		// Token: 0x060375D0 RID: 226768 RVA: 0x00D2712C File Offset: 0x00D2532C
+		// Token: 0x0602C524 RID: 181540 RVA: 0x00C76D80 File Offset: 0x00C74F80
 		public void OnWorldBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0401D2AF RID: 119471
+		// Token: 0x04017D4B RID: 97611
 		[Nullable(2)]
 		private readonly BaseMap TargetExpressionMap;
 
-		// Token: 0x0401D2B0 RID: 119472
+		// Token: 0x04017D4C RID: 97612
 		private readonly Dictionary<EMapLifeEventListenerType, MapLifeEventListener> Listeners;
 	}
 }

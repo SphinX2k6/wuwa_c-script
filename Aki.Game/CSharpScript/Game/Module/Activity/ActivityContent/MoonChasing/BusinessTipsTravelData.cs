@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x0200647A RID: 25722
+	// Token: 0x020053F8 RID: 21496
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BusinessTipsTravelData : IBusinessTipsTravelData
 	{
-		// Token: 0x170094A4 RID: 38052
-		// (get) Token: 0x06040A23 RID: 264739 RVA: 0x00FA56E1 File Offset: 0x00FA38E1
-		// (set) Token: 0x06040A24 RID: 264740 RVA: 0x00FA56E9 File Offset: 0x00FA38E9
+		// Token: 0x17006806 RID: 26630
+		// (get) Token: 0x060356E7 RID: 218855 RVA: 0x00EEC729 File Offset: 0x00EEA929
+		// (set) Token: 0x060356E8 RID: 218856 RVA: 0x00EEC731 File Offset: 0x00EEA931
 		public List<int> RoleList { get; set; } = new List<int>();
 
-		// Token: 0x170094A5 RID: 38053
-		// (get) Token: 0x06040A25 RID: 264741 RVA: 0x00FA56F2 File Offset: 0x00FA38F2
-		// (set) Token: 0x06040A26 RID: 264742 RVA: 0x00FA56FA File Offset: 0x00FA38FA
+		// Token: 0x17006807 RID: 26631
+		// (get) Token: 0x060356E9 RID: 218857 RVA: 0x00EEC73A File Offset: 0x00EEA93A
+		// (set) Token: 0x060356EA RID: 218858 RVA: 0x00EEC742 File Offset: 0x00EEA942
 		public List<int> LastLevelList { get; set; } = new List<int>();
 
-		// Token: 0x170094A6 RID: 38054
-		// (get) Token: 0x06040A27 RID: 264743 RVA: 0x00FA5703 File Offset: 0x00FA3903
-		// (set) Token: 0x06040A28 RID: 264744 RVA: 0x00FA570B File Offset: 0x00FA390B
+		// Token: 0x17006808 RID: 26632
+		// (get) Token: 0x060356EB RID: 218859 RVA: 0x00EEC74B File Offset: 0x00EEA94B
+		// (set) Token: 0x060356EC RID: 218860 RVA: 0x00EEC753 File Offset: 0x00EEA953
 		public int DelegateId { get; set; }
 	}
 }

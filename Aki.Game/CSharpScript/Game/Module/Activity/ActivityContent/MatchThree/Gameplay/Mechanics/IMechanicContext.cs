@@ -4,21 +4,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Mechanics
 {
-	// Token: 0x020064EB RID: 25835
+	// Token: 0x02005469 RID: 21609
 	[NullableContext(2)]
 	public interface IMechanicContext
 	{
-		// Token: 0x06040D97 RID: 265623
+		// Token: 0x06035A5B RID: 219739
 		[NullableContext(1)]
 		IReadOnlyList<GridPosition> PickGenerateCells(int count, IReadOnlyList<CellZone> zones);
 
-		// Token: 0x06040D98 RID: 265624
+		// Token: 0x06035A5C RID: 219740
 		int GetRecycleClearCount(EPieceType type);
 
-		// Token: 0x06040D99 RID: 265625
+		// Token: 0x06035A5D RID: 219741
 		void TransformPiece(int envId, GridPosition pos, EPieceType type, int[] extra = null);
 
-		// Token: 0x06040D9A RID: 265626
+		// Token: 0x06035A5E RID: 219742
 		void ShowTip(string textId, int remainingRounds, int generateCount);
 	}
 }

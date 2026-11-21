@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024B9 RID: 9401
+	// Token: 0x02002760 RID: 10080
 	public static class EVisualNovelTransitionTypeExtensions
 	{
-		// Token: 0x0600CBBF RID: 52159 RVA: 0x001E0014 File Offset: 0x001DE214
+		// Token: 0x0600D88A RID: 55434 RVA: 0x001FA400 File Offset: 0x001F8600
 		public static string ToEnumString(this EVisualNovelTransitionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBC0 RID: 52160 RVA: 0x001E004C File Offset: 0x001DE24C
+		// Token: 0x0600D88B RID: 55435 RVA: 0x001FA438 File Offset: 0x001F8638
 		public static EVisualNovelTransitionType FromString(string name)
 		{
 			EVisualNovelTransitionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CBC1 RID: 52161 RVA: 0x001E0075 File Offset: 0x001DE275
+		// Token: 0x0600D88C RID: 55436 RVA: 0x001FA461 File Offset: 0x001F8661
 		public static bool TryFromString(string name, out EVisualNovelTransitionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CBC2 RID: 52162 RVA: 0x001E00AE File Offset: 0x001DE2AE
+		// Token: 0x0600D88D RID: 55437 RVA: 0x001FA49A File Offset: 0x001F869A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBC3 RID: 52163 RVA: 0x001E00C6 File Offset: 0x001DE2C6
+		// Token: 0x0600D88E RID: 55438 RVA: 0x001FA4B2 File Offset: 0x001F86B2
 		public static EVisualNovelTransitionType[] GetValues()
 		{
 			return new EVisualNovelTransitionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CBC4 RID: 52164 RVA: 0x001E00D2 File Offset: 0x001DE2D2
+		// Token: 0x0600D88F RID: 55439 RVA: 0x001FA4BE File Offset: 0x001F86BE
 		public static string[] GetNames()
 		{
 			return new string[]

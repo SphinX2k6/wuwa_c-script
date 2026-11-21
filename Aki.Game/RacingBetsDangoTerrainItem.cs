@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002715 RID: 10005
+// Token: 0x02001C00 RID: 7168
 public class RacingBetsDangoTerrainItem : GridProxyAbstract<int>
 {
-	// Token: 0x0601481E RID: 83998 RVA: 0x0052DD80 File Offset: 0x0052BF80
+	// Token: 0x06011D00 RID: 72960 RVA: 0x0053CA9C File Offset: 0x0053AC9C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class RacingBetsDangoTerrainItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0601481F RID: 83999 RVA: 0x0052DDDC File Offset: 0x0052BFDC
+	// Token: 0x06011D01 RID: 72961 RVA: 0x0053CAF8 File Offset: 0x0053ACF8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		RacingBetsOrgan? organConfig = RacingBetsConfig.Instance.GetOrganConfig(data);
@@ -31,16 +31,16 @@ public class RacingBetsDangoTerrainItem : GridProxyAbstract<int>
 		base.SetTextureShowUntilLoaded(organConfig.Value.IconPath, base.GetTexture(0), null);
 	}
 
-	// Token: 0x02008D6A RID: 36202
+	// Token: 0x02007EF3 RID: 32499
 	private class EComponent
 	{
-		// Token: 0x0402DE2E RID: 187950
+		// Token: 0x04029145 RID: 168261
 		public const int TerrainIcon = 0;
 
-		// Token: 0x0402DE2F RID: 187951
+		// Token: 0x04029146 RID: 168262
 		public const int TerrainName = 1;
 
-		// Token: 0x0402DE30 RID: 187952
+		// Token: 0x04029147 RID: 168263
 		public const int TerrainDesc = 2;
 	}
 }

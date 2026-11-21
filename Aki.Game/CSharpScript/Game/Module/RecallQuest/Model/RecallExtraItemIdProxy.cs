@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RecallQuest.Model
 {
-	// Token: 0x02004F1E RID: 20254
+	// Token: 0x02003EE7 RID: 16103
 	public class RecallExtraItemIdProxy : IExtraItemIdProxy
 	{
-		// Token: 0x06033EF0 RID: 212720 RVA: 0x00C2C482 File Offset: 0x00C2A682
+		// Token: 0x06028D5B RID: 167259 RVA: 0x00B75AF6 File Offset: 0x00B73CF6
 		public int GetExtraItemId()
 		{
 			return this.CurrentItemId;
 		}
 
-		// Token: 0x06033EF1 RID: 212721 RVA: 0x00C2C48A File Offset: 0x00C2A68A
+		// Token: 0x06028D5C RID: 167260 RVA: 0x00B75AFE File Offset: 0x00B73CFE
 		public int? GetExtraItemIdReplaceOverride()
 		{
 			return new int?(this.CurrentItemId);
 		}
 
-		// Token: 0x06033EF2 RID: 212722 RVA: 0x00C2C497 File Offset: 0x00C2A697
+		// Token: 0x06028D5D RID: 167261 RVA: 0x00B75B0B File Offset: 0x00B73D0B
 		[NullableContext(2)]
 		public void SetExtraItemId(int itemId, Action<bool> callback = null)
 		{
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.RecallQuest.Model
 			}
 		}
 
-		// Token: 0x06033EF3 RID: 212723 RVA: 0x00C2C4BA File Offset: 0x00C2A6BA
+		// Token: 0x06028D5E RID: 167262 RVA: 0x00B75B2E File Offset: 0x00B73D2E
 		public void ApplyServerSnapshot(int itemId)
 		{
 			this.CurrentItemId = itemId;
 			RouletteController.Instance.TrySetExtraItemIdForReplace(itemId);
 		}
 
-		// Token: 0x0401B988 RID: 113032
+		// Token: 0x0401635B RID: 90971
 		private int CurrentItemId;
 	}
 }

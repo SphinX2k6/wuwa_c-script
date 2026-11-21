@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200487F RID: 18559
+	// Token: 0x020037F6 RID: 14326
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class VillageInfrTreeItem : UiPanelBase
 	{
-		// Token: 0x060308EE RID: 198894 RVA: 0x00B47288 File Offset: 0x00B45488
+		// Token: 0x0602541A RID: 152602 RVA: 0x00A8205C File Offset: 0x00A8025C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x060308EF RID: 198895 RVA: 0x00B473CE File Offset: 0x00B455CE
+		// Token: 0x0602541B RID: 152603 RVA: 0x00A821A2 File Offset: 0x00A803A2
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 			this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x060308F0 RID: 198896 RVA: 0x00B473FC File Offset: 0x00B455FC
+		// Token: 0x0602541C RID: 152604 RVA: 0x00A821D0 File Offset: 0x00A803D0
 		public void PlayLevelSequenceByName(string name)
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			seqPlayer.PlayLevelSequenceByName(name, false, null, false);
 		}
 
-		// Token: 0x060308F1 RID: 198897 RVA: 0x00B47425 File Offset: 0x00B45625
+		// Token: 0x0602541D RID: 152605 RVA: 0x00A821F9 File Offset: 0x00A803F9
 		private void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName == "GetL" || sequenceName == "GetR")
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x060308F2 RID: 198898 RVA: 0x00B4745E File Offset: 0x00B4565E
+		// Token: 0x0602541E RID: 152606 RVA: 0x00A82232 File Offset: 0x00A80432
 		private void OnClickTreeItem(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.SetSelected(true);
 		}
 
-		// Token: 0x060308F3 RID: 198899 RVA: 0x00B4748C File Offset: 0x00B4568C
+		// Token: 0x0602541F RID: 152607 RVA: 0x00A82260 File Offset: 0x00A80460
 		[NullableContext(2)]
 		public void Refresh(int id, EVillageInfrSelectType type, IVillageInfrBuildFinishTipParam param = null)
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshLock();
 		}
 
-		// Token: 0x060308F4 RID: 198900 RVA: 0x00B474E0 File Offset: 0x00B456E0
+		// Token: 0x06025420 RID: 152608 RVA: 0x00A822B4 File Offset: 0x00A804B4
 		private void RefreshName()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetSprite(11).SetUIActive(false);
 		}
 
-		// Token: 0x060308F5 RID: 198901 RVA: 0x00B47550 File Offset: 0x00B45750
+		// Token: 0x06025421 RID: 152609 RVA: 0x00A82324 File Offset: 0x00A80524
 		private bool IsFinish()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return this.Id >= infrMaxLevel;
 		}
 
-		// Token: 0x060308F6 RID: 198902 RVA: 0x00B4759C File Offset: 0x00B4579C
+		// Token: 0x06025422 RID: 152610 RVA: 0x00A82370 File Offset: 0x00A80570
 		private void RefreshFinish()
 		{
 			bool flag = this.IsFinish();
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshLineVisible();
 		}
 
-		// Token: 0x060308F7 RID: 198903 RVA: 0x00B475FC File Offset: 0x00B457FC
+		// Token: 0x06025423 RID: 152611 RVA: 0x00A823D0 File Offset: 0x00A805D0
 		private void RefreshLineVisible()
 		{
 			bool flag = this.IsFinish();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetTexture(10).SetUIActive(this.NeedPlayFinish);
 		}
 
-		// Token: 0x060308F8 RID: 198904 RVA: 0x00B47685 File Offset: 0x00B45885
+		// Token: 0x06025424 RID: 152612 RVA: 0x00A82459 File Offset: 0x00A80659
 		private void RefreshLevelUp()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetSprite(5).SetUIActive(VillageInfrModel.Instance.GetCanVillageLevelUp());
 		}
 
-		// Token: 0x060308F9 RID: 198905 RVA: 0x00B476C3 File Offset: 0x00B458C3
+		// Token: 0x06025425 RID: 152613 RVA: 0x00A82497 File Offset: 0x00A80697
 		private void RefreshLock()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Tree)
@@ -181,19 +181,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetItem(3).SetUIActive(false);
 		}
 
-		// Token: 0x060308FA RID: 198906 RVA: 0x00B476FB File Offset: 0x00B458FB
+		// Token: 0x06025426 RID: 152614 RVA: 0x00A824CF File Offset: 0x00A806CF
 		public void SetSelectCb(Action<int, EVillageInfrSelectType> cb)
 		{
 			this.SelectCb = cb;
 		}
 
-		// Token: 0x060308FB RID: 198907 RVA: 0x00B47704 File Offset: 0x00B45904
+		// Token: 0x06025427 RID: 152615 RVA: 0x00A824D8 File Offset: 0x00A806D8
 		public void SetOnGetSeqEnd(Action cb)
 		{
 			this.OnGetSeqEnd = cb;
 		}
 
-		// Token: 0x060308FC RID: 198908 RVA: 0x00B4770D File Offset: 0x00B4590D
+		// Token: 0x06025428 RID: 152616 RVA: 0x00A824E1 File Offset: 0x00A806E1
 		public void SetSelected(bool isSelected)
 		{
 			this.IsSelected = isSelected;
@@ -201,28 +201,28 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshLineVisible();
 		}
 
-		// Token: 0x0401A173 RID: 106867
+		// Token: 0x040149E6 RID: 84454
 		public int Id;
 
-		// Token: 0x0401A174 RID: 106868
+		// Token: 0x040149E7 RID: 84455
 		public EVillageInfrSelectType SelectType;
 
-		// Token: 0x0401A175 RID: 106869
+		// Token: 0x040149E8 RID: 84456
 		private bool IsSelected;
 
-		// Token: 0x0401A176 RID: 106870
+		// Token: 0x040149E9 RID: 84457
 		[Nullable(2)]
 		private Action<int, EVillageInfrSelectType> SelectCb;
 
-		// Token: 0x0401A177 RID: 106871
+		// Token: 0x040149EA RID: 84458
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401A178 RID: 106872
+		// Token: 0x040149EB RID: 84459
 		[Nullable(2)]
 		private Action OnGetSeqEnd;
 
-		// Token: 0x0401A179 RID: 106873
+		// Token: 0x040149EC RID: 84460
 		private bool NeedPlayFinish;
 	}
 }

@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044F8 RID: 17656
+	// Token: 0x02004960 RID: 18784
 	public class ILevelPlayInfoMappingNightmareSpawnPointT
 	{
-		// Token: 0x17007D1D RID: 32029
-		// (get) Token: 0x0601A80B RID: 108555 RVA: 0x003C9238 File Offset: 0x003C7438
-		// (set) Token: 0x0601A80C RID: 108556 RVA: 0x003C9240 File Offset: 0x003C7440
+		// Token: 0x1700835E RID: 33630
+		// (get) Token: 0x0601BFE0 RID: 114656 RVA: 0x003F54D4 File Offset: 0x003F36D4
+		// (set) Token: 0x0601BFE1 RID: 114657 RVA: 0x003F54DC File Offset: 0x003F36DC
 		public ELevelPlayInfoMappingType Type { get; set; }
 
-		// Token: 0x17007D1E RID: 32030
-		// (get) Token: 0x0601A80D RID: 108557 RVA: 0x003C9249 File Offset: 0x003C7449
-		// (set) Token: 0x0601A80E RID: 108558 RVA: 0x003C9251 File Offset: 0x003C7451
+		// Token: 0x1700835F RID: 33631
+		// (get) Token: 0x0601BFE2 RID: 114658 RVA: 0x003F54E5 File Offset: 0x003F36E5
+		// (set) Token: 0x0601BFE3 RID: 114659 RVA: 0x003F54ED File Offset: 0x003F36ED
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x17007D1F RID: 32031
-		// (get) Token: 0x0601A80F RID: 108559 RVA: 0x003C925A File Offset: 0x003C745A
-		// (set) Token: 0x0601A810 RID: 108560 RVA: 0x003C9262 File Offset: 0x003C7462
+		// Token: 0x17008360 RID: 33632
+		// (get) Token: 0x0601BFE4 RID: 114660 RVA: 0x003F54F6 File Offset: 0x003F36F6
+		// (set) Token: 0x0601BFE5 RID: 114661 RVA: 0x003F54FE File Offset: 0x003F36FE
 		public List<string> Vars { get; set; }
 
-		// Token: 0x17007D20 RID: 32032
-		// (get) Token: 0x0601A811 RID: 108561 RVA: 0x003C926B File Offset: 0x003C746B
-		// (set) Token: 0x0601A812 RID: 108562 RVA: 0x003C9273 File Offset: 0x003C7473
+		// Token: 0x17008361 RID: 33633
+		// (get) Token: 0x0601BFE6 RID: 114662 RVA: 0x003F5507 File Offset: 0x003F3707
+		// (set) Token: 0x0601BFE7 RID: 114663 RVA: 0x003F550F File Offset: 0x003F370F
 		public List<int> DefaultValues { get; set; }
 
-		// Token: 0x17007D21 RID: 32033
-		// (get) Token: 0x0601A813 RID: 108563 RVA: 0x003C927C File Offset: 0x003C747C
-		// (set) Token: 0x0601A814 RID: 108564 RVA: 0x003C9284 File Offset: 0x003C7484
+		// Token: 0x17008362 RID: 33634
+		// (get) Token: 0x0601BFE8 RID: 114664 RVA: 0x003F5518 File Offset: 0x003F3718
+		// (set) Token: 0x0601BFE9 RID: 114665 RVA: 0x003F5520 File Offset: 0x003F3720
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601A815 RID: 108565 RVA: 0x003C928D File Offset: 0x003C748D
+		// Token: 0x0601BFEA RID: 114666 RVA: 0x003F5529 File Offset: 0x003F3729
 		public ILevelPlayInfoMappingNightmareSpawnPointT()
 		{
 			this.Type = ELevelPlayInfoMappingType.PunishReport;

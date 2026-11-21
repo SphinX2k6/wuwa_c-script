@@ -4,41 +4,48 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200071C RID: 1820
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020007BD RID: 1981
 	public class IStateRotationConfig_SetValue
 	{
-		// Token: 0x04001A6C RID: 6764
-		[Nullable(1)]
+		// Token: 0x04001C6D RID: 7277
 		public string State;
 
-		// Token: 0x04001A6D RID: 6765
+		// Token: 0x04001C6E RID: 7278
 		public bool IsLoop;
 
-		// Token: 0x04001A6E RID: 6766
+		// Token: 0x04001C6F RID: 7279
+		[Nullable(2)]
 		public IStartRotationConfig StartRotationConfig;
 
-		// Token: 0x04001A6F RID: 6767
+		// Token: 0x04001C70 RID: 7280
+		[Nullable(2)]
 		public string RotatePoint;
 
-		// Token: 0x04001A70 RID: 6768
+		// Token: 0x04001C71 RID: 7281
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IRotationConfig> RotationConfig;
 
-		// Token: 0x04001A71 RID: 6769
+		// Token: 0x04001C72 RID: 7282
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IKeyRotatorConfig> KeyRotatorConfig;
 
-		// Token: 0x04001A72 RID: 6770
+		// Token: 0x04001C73 RID: 7283
+		[Nullable(new byte[]
+		{
+			2,
+			0
+		})]
+		public List<IAxisAngleMethodConfig> AxisAngleMethodConfig;
+
+		// Token: 0x04001C74 RID: 7284
 		public bool? KeepLastRotation;
 	}
 }

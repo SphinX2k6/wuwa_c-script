@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B5E RID: 7006
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D0B RID: 7435
 	public class IItemGetUiConfigBase
 	{
-		// Token: 0x060095FD RID: 38397 RVA: 0x0015A9A8 File Offset: 0x00158BA8
+		// Token: 0x06009DDF RID: 40415 RVA: 0x0016B554 File Offset: 0x00169754
 		private IItemGetUiConfigBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060095FE RID: 38398 RVA: 0x0015A9E0 File Offset: 0x00158BE0
+		// Token: 0x06009DE0 RID: 40416 RVA: 0x0016B58C File Offset: 0x0016978C
 		public static IItemGetUiConfigBase Create([Nullable(2)] IItemGetUiConfigBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060095FF RID: 38399 RVA: 0x0015A9F3 File Offset: 0x00158BF3
+		// Token: 0x06009DE1 RID: 40417 RVA: 0x0016B59F File Offset: 0x0016979F
 		public static IItemGetUiConfigBase CreateFromSetValue([Nullable(2)] IItemGetUiConfigBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009600 RID: 38400 RVA: 0x0015AA06 File Offset: 0x00158C06
+		// Token: 0x06009DE2 RID: 40418 RVA: 0x0016B5B2 File Offset: 0x001697B2
 		public IItemGetUiConfigBase_SetValue ToSetValue()
 		{
 			return new IItemGetUiConfigBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F48 RID: 12104
-		// (get) Token: 0x06009601 RID: 38401 RVA: 0x0015AA19 File Offset: 0x00158C19
-		// (set) Token: 0x06009602 RID: 38402 RVA: 0x0015AA44 File Offset: 0x00158C44
+		// Token: 0x1700316D RID: 12653
+		// (get) Token: 0x06009DE3 RID: 40419 RVA: 0x0016B5C5 File Offset: 0x001697C5
+		// (set) Token: 0x06009DE4 RID: 40420 RVA: 0x0016B5F0 File Offset: 0x001697F0
 		public virtual EItemGetUiType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BBF RID: 23487
+		// Token: 0x04006058 RID: 24664
 		[Nullable(2)]
 		protected IItemGetUiConfigBase FbInstance;
 
-		// Token: 0x04005BC0 RID: 23488
+		// Token: 0x04006059 RID: 24665
 		[Nullable(2)]
 		protected IItemGetUiConfigBase_SetValue PocoInterface;
 	}

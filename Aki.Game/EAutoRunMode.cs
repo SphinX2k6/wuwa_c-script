@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020016F5 RID: 5877
+// Token: 0x02000BAD RID: 2989
 public enum EAutoRunMode
 {
-	// Token: 0x04004CD8 RID: 19672
+	// Token: 0x04004D7F RID: 19839
 	Disabled,
-	// Token: 0x04004CD9 RID: 19673
+	// Token: 0x04004D80 RID: 19840
 	SkipToSpecChildQuestNode,
-	// Token: 0x04004CDA RID: 19674
+	// Token: 0x04004D81 RID: 19841
 	SkipCurChildQuestNode,
-	// Token: 0x04004CDB RID: 19675
+	// Token: 0x04004D82 RID: 19842
 	SkipCurChildQuestNodeToFinishAction,
-	// Token: 0x04004CDC RID: 19676
+	// Token: 0x04004D83 RID: 19843
 	SkipToTree,
-	// Token: 0x04004CDD RID: 19677
+	// Token: 0x04004D84 RID: 19844
 	ServerControlledSkip
 }

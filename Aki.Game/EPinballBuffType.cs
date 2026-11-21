@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001418 RID: 5144
+// Token: 0x020008CC RID: 2252
 public enum EPinballBuffType
 {
-	// Token: 0x04004037 RID: 16439
+	// Token: 0x040040CF RID: 16591
 	Special,
-	// Token: 0x04004038 RID: 16440
+	// Token: 0x040040D0 RID: 16592
 	Attack,
-	// Token: 0x04004039 RID: 16441
+	// Token: 0x040040D1 RID: 16593
 	Defense,
-	// Token: 0x0400403A RID: 16442
+	// Token: 0x040040D2 RID: 16594
 	Critical
 }

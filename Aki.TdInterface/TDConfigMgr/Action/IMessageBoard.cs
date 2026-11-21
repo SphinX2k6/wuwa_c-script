@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BDC RID: 7132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DC5 RID: 7621
 	public class IMessageBoard : IPhoneBoardTypeBase
 	{
-		// Token: 0x060098C1 RID: 39105 RVA: 0x0015FE50 File Offset: 0x0015E050
+		// Token: 0x0600A1CF RID: 41423 RVA: 0x00172A10 File Offset: 0x00170C10
 		private IMessageBoard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060098C2 RID: 39106 RVA: 0x0015FE88 File Offset: 0x0015E088
+		// Token: 0x0600A1D0 RID: 41424 RVA: 0x00172A48 File Offset: 0x00170C48
 		public static IMessageBoard Create([Nullable(2)] IMessageBoard instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098C3 RID: 39107 RVA: 0x0015FE9B File Offset: 0x0015E09B
+		// Token: 0x0600A1D1 RID: 41425 RVA: 0x00172A5B File Offset: 0x00170C5B
 		public static IMessageBoard CreateFromSetValue([Nullable(2)] IMessageBoard_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098C4 RID: 39108 RVA: 0x0015FEAE File Offset: 0x0015E0AE
+		// Token: 0x0600A1D2 RID: 41426 RVA: 0x00172A6E File Offset: 0x00170C6E
 		public new IMessageBoard_SetValue ToSetValue()
 		{
 			return new IMessageBoard_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FED RID: 12269
-		// (get) Token: 0x060098C5 RID: 39109 RVA: 0x0015FECD File Offset: 0x0015E0CD
-		// (set) Token: 0x060098C6 RID: 39110 RVA: 0x0015FEF8 File Offset: 0x0015E0F8
+		// Token: 0x1700324E RID: 12878
+		// (get) Token: 0x0600A1D3 RID: 41427 RVA: 0x00172A8D File Offset: 0x00170C8D
+		// (set) Token: 0x0600A1D4 RID: 41428 RVA: 0x00172AB8 File Offset: 0x00170CB8
 		public override EPhoneBoardType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FEE RID: 12270
-		// (get) Token: 0x060098C7 RID: 39111 RVA: 0x0015FF08 File Offset: 0x0015E108
-		// (set) Token: 0x060098C8 RID: 39112 RVA: 0x0015FF69 File Offset: 0x0015E169
+		// Token: 0x1700324F RID: 12879
+		// (get) Token: 0x0600A1D5 RID: 41429 RVA: 0x00172AC8 File Offset: 0x00170CC8
+		// (set) Token: 0x0600A1D6 RID: 41430 RVA: 0x00172B29 File Offset: 0x00170D29
 		public virtual IPhoneMessageBoardConfig MessageBoardConfig
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D1C RID: 23836
+		// Token: 0x04006235 RID: 25141
 		[Nullable(2)]
 		protected new IMessageBoard FbInstance;
 
-		// Token: 0x04005D1D RID: 23837
+		// Token: 0x04006236 RID: 25142
 		[Nullable(2)]
 		protected new IMessageBoard_SetValue PocoInterface;
 
-		// Token: 0x04005D1E RID: 23838
+		// Token: 0x04006237 RID: 25143
 		private IPhoneMessageBoardConfig _MessageBoardConfigCache;
 
-		// Token: 0x04005D1F RID: 23839
+		// Token: 0x04006238 RID: 25144
 		private bool _MessageBoardConfigInited;
 	}
 }

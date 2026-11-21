@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025D4 RID: 9684
+	// Token: 0x02002893 RID: 10387
 	public class ISubPlotModePromptWithProfilePic : ISubPlotModeBase
 	{
-		// Token: 0x0600D9B5 RID: 55733 RVA: 0x0020774E File Offset: 0x0020594E
-		[NullableContext(1)]
+		// Token: 0x0600E77D RID: 59261 RVA: 0x00223E02 File Offset: 0x00222002
 		public static ISubPlotModePromptWithProfilePic Create(ISubPlotModePromptWithProfilePic? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FCF RID: 16335
-		// (get) Token: 0x0600D9B6 RID: 55734 RVA: 0x0020776D File Offset: 0x0020596D
+		// Token: 0x17004305 RID: 17157
+		// (get) Token: 0x0600E77E RID: 59262 RVA: 0x00223E21 File Offset: 0x00222021
 		public override ESubPlotModeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078E8 RID: 30952
+		// Token: 0x04007F7F RID: 32639
 		private ISubPlotModePromptWithProfilePic Instance;
 	}
 }

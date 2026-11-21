@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002498 RID: 9368
+	// Token: 0x0200273B RID: 10043
 	public class EUnlockSystemItemTypeJsonConverter : JsonConverter<EUnlockSystemItemType>
 	{
-		// Token: 0x0600CB2C RID: 52012 RVA: 0x001DE974 File Offset: 0x001DCB74
+		// Token: 0x0600D7E5 RID: 55269 RVA: 0x001F8B3C File Offset: 0x001F6D3C
 		public override EUnlockSystemItemType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EUnlockSystemItemTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CB2D RID: 52013 RVA: 0x001DE998 File Offset: 0x001DCB98
+		// Token: 0x0600D7E6 RID: 55270 RVA: 0x001F8B60 File Offset: 0x001F6D60
 		public override void Write(Utf8JsonWriter writer, EUnlockSystemItemType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

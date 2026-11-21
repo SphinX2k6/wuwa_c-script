@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049A7 RID: 18855
+	// Token: 0x02004E5E RID: 20062
 	public class ICheckCollectedSunSpiritCountT
 	{
-		// Token: 0x1700884D RID: 34893
-		// (get) Token: 0x0601D6D0 RID: 120528 RVA: 0x0042594F File Offset: 0x00423B4F
-		// (set) Token: 0x0601D6D1 RID: 120529 RVA: 0x00425957 File Offset: 0x00423B57
+		// Token: 0x17008F08 RID: 36616
+		// (get) Token: 0x0601F0F5 RID: 127221 RVA: 0x00455E03 File Offset: 0x00454003
+		// (set) Token: 0x0601F0F6 RID: 127222 RVA: 0x00455E0B File Offset: 0x0045400B
 		public ECondition Type { get; set; }
 
-		// Token: 0x1700884E RID: 34894
-		// (get) Token: 0x0601D6D2 RID: 120530 RVA: 0x00425960 File Offset: 0x00423B60
-		// (set) Token: 0x0601D6D3 RID: 120531 RVA: 0x00425968 File Offset: 0x00423B68
+		// Token: 0x17008F09 RID: 36617
+		// (get) Token: 0x0601F0F7 RID: 127223 RVA: 0x00455E14 File Offset: 0x00454014
+		// (set) Token: 0x0601F0F8 RID: 127224 RVA: 0x00455E1C File Offset: 0x0045401C
 		public int DungeonId { get; set; }
 
-		// Token: 0x1700884F RID: 34895
-		// (get) Token: 0x0601D6D4 RID: 120532 RVA: 0x00425971 File Offset: 0x00423B71
-		// (set) Token: 0x0601D6D5 RID: 120533 RVA: 0x00425979 File Offset: 0x00423B79
+		// Token: 0x17008F0A RID: 36618
+		// (get) Token: 0x0601F0F9 RID: 127225 RVA: 0x00455E25 File Offset: 0x00454025
+		// (set) Token: 0x0601F0FA RID: 127226 RVA: 0x00455E2D File Offset: 0x0045402D
 		public int AreaId { get; set; }
 
-		// Token: 0x17008850 RID: 34896
-		// (get) Token: 0x0601D6D6 RID: 120534 RVA: 0x00425982 File Offset: 0x00423B82
-		// (set) Token: 0x0601D6D7 RID: 120535 RVA: 0x0042598A File Offset: 0x00423B8A
+		// Token: 0x17008F0B RID: 36619
+		// (get) Token: 0x0601F0FB RID: 127227 RVA: 0x00455E36 File Offset: 0x00454036
+		// (set) Token: 0x0601F0FC RID: 127228 RVA: 0x00455E3E File Offset: 0x0045403E
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008851 RID: 34897
-		// (get) Token: 0x0601D6D8 RID: 120536 RVA: 0x00425993 File Offset: 0x00423B93
-		// (set) Token: 0x0601D6D9 RID: 120537 RVA: 0x0042599B File Offset: 0x00423B9B
+		// Token: 0x17008F0C RID: 36620
+		// (get) Token: 0x0601F0FD RID: 127229 RVA: 0x00455E47 File Offset: 0x00454047
+		// (set) Token: 0x0601F0FE RID: 127230 RVA: 0x00455E4F File Offset: 0x0045404F
 		public int Count { get; set; }
 
-		// Token: 0x17008852 RID: 34898
-		// (get) Token: 0x0601D6DA RID: 120538 RVA: 0x004259A4 File Offset: 0x00423BA4
-		// (set) Token: 0x0601D6DB RID: 120539 RVA: 0x004259AC File Offset: 0x00423BAC
+		// Token: 0x17008F0D RID: 36621
+		// (get) Token: 0x0601F0FF RID: 127231 RVA: 0x00455E58 File Offset: 0x00454058
+		// (set) Token: 0x0601F100 RID: 127232 RVA: 0x00455E60 File Offset: 0x00454060
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601D6DC RID: 120540 RVA: 0x004259B5 File Offset: 0x00423BB5
+		// Token: 0x0601F101 RID: 127233 RVA: 0x00455E69 File Offset: 0x00454069
 		public ICheckCollectedSunSpiritCountT()
 		{
 			this.Type = ECondition.CompareVar;

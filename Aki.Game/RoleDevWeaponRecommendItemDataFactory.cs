@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x02002835 RID: 10293
+// Token: 0x02001DB0 RID: 7600
 public class RoleDevWeaponRecommendItemDataFactory
 {
-	// Token: 0x06015389 RID: 86921 RVA: 0x0055CF24 File Offset: 0x0055B124
+	// Token: 0x06012D87 RID: 77191 RVA: 0x00587C80 File Offset: 0x00585E80
 	[NullableContext(1)]
 	public static RoleDevWeaponRecommendItemDataBase Create(int roleId)
 	{

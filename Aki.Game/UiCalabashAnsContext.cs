@@ -2,25 +2,25 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C7C RID: 11388
+// Token: 0x020021D5 RID: 8661
 public class UiCalabashAnsContext : UiAnsContextBase
 {
-	// Token: 0x17001FF5 RID: 8181
-	// (get) Token: 0x06017CA7 RID: 97447 RVA: 0x0060D44D File Offset: 0x0060B64D
+	// Token: 0x17002046 RID: 8262
+	// (get) Token: 0x0601551A RID: 87322 RVA: 0x00632F31 File Offset: 0x00631131
 	public FName Socket { get; }
 
-	// Token: 0x17001FF6 RID: 8182
-	// (get) Token: 0x06017CA8 RID: 97448 RVA: 0x0060D455 File Offset: 0x0060B655
+	// Token: 0x17002047 RID: 8263
+	// (get) Token: 0x0601551B RID: 87323 RVA: 0x00632F39 File Offset: 0x00631139
 	public bool IsRotate { get; }
 
-	// Token: 0x06017CA9 RID: 97449 RVA: 0x0060D45D File Offset: 0x0060B65D
+	// Token: 0x0601551C RID: 87324 RVA: 0x00632F41 File Offset: 0x00631141
 	public UiCalabashAnsContext(FName socket, bool isRotate)
 	{
 		this.Socket = socket;
 		this.IsRotate = isRotate;
 	}
 
-	// Token: 0x06017CAA RID: 97450 RVA: 0x0060D474 File Offset: 0x0060B674
+	// Token: 0x0601551D RID: 87325 RVA: 0x00632F58 File Offset: 0x00631158
 	[NullableContext(1)]
 	public override bool IsEqual(UiAnsContextBase inAnsContext)
 	{

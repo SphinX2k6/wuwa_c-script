@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000539 RID: 1337
+	// Token: 0x020005A0 RID: 1440
 	public class IMovementPlatformConfig_SetValue
 	{
-		// Token: 0x040013AF RID: 5039
+		// Token: 0x04001519 RID: 5401
 		[Nullable(2)]
 		public List<int> PlayerAttachTags;
 
-		// Token: 0x040013B0 RID: 5040
+		// Token: 0x0400151A RID: 5402
 		public int? SafePointId;
 	}
 }

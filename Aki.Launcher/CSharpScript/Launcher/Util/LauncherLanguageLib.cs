@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x0200006E RID: 110
+	// Token: 0x02000070 RID: 112
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherLanguageLib : Singleton
 	{
-		// Token: 0x060002E3 RID: 739 RVA: 0x0000EFA8 File Offset: 0x0000D1A8
+		// Token: 0x060002E7 RID: 743 RVA: 0x0000F4D0 File Offset: 0x0000D6D0
 		protected override bool OnInit()
 		{
 			foreach (LaunchLangDefine launchLangDefine in this.LanguageList)
@@ -24,8 +24,8 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000044 RID: 68
-		// (get) Token: 0x060002E4 RID: 740 RVA: 0x0000F01C File Offset: 0x0000D21C
-		// (set) Token: 0x060002E5 RID: 741 RVA: 0x0000F024 File Offset: 0x0000D224
+		// (get) Token: 0x060002E8 RID: 744 RVA: 0x0000F544 File Offset: 0x0000D744
+		// (set) Token: 0x060002E9 RID: 745 RVA: 0x0000F54C File Offset: 0x0000D74C
 		[Nullable(2)]
 		public string PackageLanguage
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002E6 RID: 742 RVA: 0x0000F03E File Offset: 0x0000D23E
+		// Token: 0x060002EA RID: 746 RVA: 0x0000F566 File Offset: 0x0000D766
 		public string GetDefaultCulture(string currentCulture)
 		{
 			if (currentCulture.Contains("zh"))
@@ -52,7 +52,7 @@ namespace CSharpScript.Launcher.Util
 			return "en";
 		}
 
-		// Token: 0x060002E7 RID: 743 RVA: 0x0000F058 File Offset: 0x0000D258
+		// Token: 0x060002EB RID: 747 RVA: 0x0000F580 File Offset: 0x0000D780
 		[NullableContext(2)]
 		private Dictionary<int, double> LoadPlayMenuInfo()
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.Util
 			return global3;
 		}
 
-		// Token: 0x060002E8 RID: 744 RVA: 0x0000F110 File Offset: 0x0000D310
+		// Token: 0x060002EC RID: 748 RVA: 0x0000F638 File Offset: 0x0000D838
 		public unsafe void Initialize(bool bIsPlayerInEditor)
 		{
 			if (this.IsInit)
@@ -148,33 +148,33 @@ namespace CSharpScript.Launcher.Util
 			this.PackageAudioLanguage = languageDefineByCode.AudioCode;
 		}
 
-		// Token: 0x060002E9 RID: 745 RVA: 0x0000F340 File Offset: 0x0000D540
+		// Token: 0x060002ED RID: 749 RVA: 0x0000F868 File Offset: 0x0000DA68
 		[NullableContext(2)]
 		public string GetPackageLanguage()
 		{
 			return this.PackageLanguageInternal;
 		}
 
-		// Token: 0x060002EA RID: 746 RVA: 0x0000F348 File Offset: 0x0000D548
+		// Token: 0x060002EE RID: 750 RVA: 0x0000F870 File Offset: 0x0000DA70
 		public void SetPackageLanguage(string language)
 		{
 			this.PackageLanguageInternal = language;
 		}
 
-		// Token: 0x060002EB RID: 747 RVA: 0x0000F351 File Offset: 0x0000D551
+		// Token: 0x060002EF RID: 751 RVA: 0x0000F879 File Offset: 0x0000DA79
 		[NullableContext(2)]
 		public string GetPackageAudioLanguage()
 		{
 			return this.PackageAudioLanguage;
 		}
 
-		// Token: 0x060002EC RID: 748 RVA: 0x0000F359 File Offset: 0x0000D559
+		// Token: 0x060002F0 RID: 752 RVA: 0x0000F881 File Offset: 0x0000DA81
 		public IReadOnlyList<LaunchLangDefine> GetAllLanguageDefines()
 		{
 			return this.LanguageList;
 		}
 
-		// Token: 0x060002ED RID: 749 RVA: 0x0000F364 File Offset: 0x0000D564
+		// Token: 0x060002F1 RID: 753 RVA: 0x0000F88C File Offset: 0x0000DA8C
 		[NullableContext(2)]
 		public LaunchLangDefine GetLanguageDefineByType(int type)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x060002EE RID: 750 RVA: 0x0000F384 File Offset: 0x0000D584
+		// Token: 0x060002F2 RID: 754 RVA: 0x0000F8AC File Offset: 0x0000DAAC
 		[return: Nullable(2)]
 		public LaunchLangDefine GetLanguageDefineByCode(string code)
 		{
@@ -198,7 +198,7 @@ namespace CSharpScript.Launcher.Util
 			return result;
 		}
 
-		// Token: 0x060002EF RID: 751 RVA: 0x0000F3A4 File Offset: 0x0000D5A4
+		// Token: 0x060002F3 RID: 755 RVA: 0x0000F8CC File Offset: 0x0000DACC
 		public List<string> GetUsedAudioCodes()
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -230,7 +230,7 @@ namespace CSharpScript.Launcher.Util
 		}
 
 		// Token: 0x17000045 RID: 69
-		// (get) Token: 0x060002F0 RID: 752 RVA: 0x0000F4B0 File Offset: 0x0000D6B0
+		// (get) Token: 0x060002F4 RID: 756 RVA: 0x0000F9D8 File Offset: 0x0000DBD8
 		public static LauncherLanguageLib Instance
 		{
 			get
@@ -244,12 +244,12 @@ namespace CSharpScript.Launcher.Util
 			}
 		}
 
-		// Token: 0x060002F1 RID: 753 RVA: 0x0000F4D3 File Offset: 0x0000D6D3
+		// Token: 0x060002F5 RID: 757 RVA: 0x0000F9FB File Offset: 0x0000DBFB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060002F2 RID: 754 RVA: 0x0000F4D5 File Offset: 0x0000D6D5
+		// Token: 0x060002F6 RID: 758 RVA: 0x0000F9FD File Offset: 0x0000DBFD
 		public static void ResetStaticDefaultValue()
 		{
 			LauncherLanguageLib instance = LauncherLanguageLib._instance;
@@ -260,13 +260,13 @@ namespace CSharpScript.Launcher.Util
 			LauncherLanguageLib._instance = null;
 		}
 
-		// Token: 0x060002F3 RID: 755 RVA: 0x0000F4EE File Offset: 0x0000D6EE
+		// Token: 0x060002F7 RID: 759 RVA: 0x0000FA16 File Offset: 0x0000DC16
 		static LauncherLanguageLib()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LauncherLanguageLib.CreateStaticDefaultValue), new Action(LauncherLanguageLib.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060002F4 RID: 756 RVA: 0x0000F510 File Offset: 0x0000D710
+		// Token: 0x060002F8 RID: 760 RVA: 0x0000FA38 File Offset: 0x0000DC38
 		public LauncherLanguageLib()
 		{
 			Dictionary<string, Culture> dictionary = new Dictionary<string, Culture>();
@@ -289,55 +289,55 @@ namespace CSharpScript.Launcher.Util
 			base..ctor();
 		}
 
-		// Token: 0x040001D2 RID: 466
+		// Token: 0x040001FA RID: 506
 		private const int TEXTLANGUAGE = 51;
 
-		// Token: 0x040001D3 RID: 467
+		// Token: 0x040001FB RID: 507
 		private const int VOICELANGUAGE = 52;
 
-		// Token: 0x040001D4 RID: 468
+		// Token: 0x040001FC RID: 508
 		private const string CHS = "zh-Hans";
 
-		// Token: 0x040001D5 RID: 469
+		// Token: 0x040001FD RID: 509
 		private const string CHT = "zh-Hant";
 
-		// Token: 0x040001D6 RID: 470
+		// Token: 0x040001FE RID: 510
 		private const string CHINESE_ISO639_1 = "zh";
 
-		// Token: 0x040001D7 RID: 471
+		// Token: 0x040001FF RID: 511
 		public const string ENGLISH_ISO639_1 = "en";
 
-		// Token: 0x040001D8 RID: 472
+		// Token: 0x04000200 RID: 512
 		private const string JAPANESE_ISO639_1 = "ja";
 
-		// Token: 0x040001D9 RID: 473
+		// Token: 0x04000201 RID: 513
 		public const string KOREAN_ISO639_1 = "ko";
 
-		// Token: 0x040001DA RID: 474
+		// Token: 0x04000202 RID: 514
 		private const string RUSSIA_ISO639_1 = "ru";
 
-		// Token: 0x040001DB RID: 475
+		// Token: 0x04000203 RID: 515
 		private const string GERMANY_ISO639_1 = "de";
 
-		// Token: 0x040001DC RID: 476
+		// Token: 0x04000204 RID: 516
 		private const string SPAIN_ISO639_1 = "es";
 
-		// Token: 0x040001DD RID: 477
+		// Token: 0x04000205 RID: 517
 		private const string PORTUGAL_ISO639_1 = "pt";
 
-		// Token: 0x040001DE RID: 478
+		// Token: 0x04000206 RID: 518
 		private const string INDONESIA_ISO639_1 = "id";
 
-		// Token: 0x040001DF RID: 479
+		// Token: 0x04000207 RID: 519
 		private const string FRANCE_ISO639_1 = "fr";
 
-		// Token: 0x040001E0 RID: 480
+		// Token: 0x04000208 RID: 520
 		private const string VIETNAM_ISO639_1 = "vi";
 
-		// Token: 0x040001E1 RID: 481
+		// Token: 0x04000209 RID: 521
 		private const string THAILAND_ISO639_1 = "th";
 
-		// Token: 0x040001E2 RID: 482
+		// Token: 0x0400020A RID: 522
 		private readonly string[] AVAILABLE_LANGUAGES = new string[]
 		{
 			"zh-Hans",
@@ -355,13 +355,13 @@ namespace CSharpScript.Launcher.Util
 			"th"
 		};
 
-		// Token: 0x040001E3 RID: 483
+		// Token: 0x0400020B RID: 523
 		private const string CHS_AUDIO = "zh";
 
-		// Token: 0x040001E4 RID: 484
+		// Token: 0x0400020C RID: 524
 		private const string PUBLICATION_TYPE = "Publication";
 
-		// Token: 0x040001E5 RID: 485
+		// Token: 0x0400020D RID: 525
 		private readonly List<LaunchLangDefine> LanguageList = new List<LaunchLangDefine>
 		{
 			new LaunchLangDefine(0, "zh-Hans", "zh"),
@@ -379,27 +379,27 @@ namespace CSharpScript.Launcher.Util
 			new LaunchLangDefine(12, "th", "en")
 		};
 
-		// Token: 0x040001E6 RID: 486
+		// Token: 0x0400020E RID: 526
 		public readonly Dictionary<string, Culture> LanguageCultureMap;
 
-		// Token: 0x040001E7 RID: 487
+		// Token: 0x0400020F RID: 527
 		private readonly Dictionary<int, LaunchLangDefine> LanguageTypeMap;
 
-		// Token: 0x040001E8 RID: 488
+		// Token: 0x04000210 RID: 528
 		private readonly Dictionary<string, LaunchLangDefine> LanguageCodeMap;
 
-		// Token: 0x040001E9 RID: 489
+		// Token: 0x04000211 RID: 529
 		[Nullable(2)]
 		private string PackageLanguageInternal;
 
-		// Token: 0x040001EA RID: 490
+		// Token: 0x04000212 RID: 530
 		[Nullable(2)]
 		private string PackageAudioLanguage;
 
-		// Token: 0x040001EB RID: 491
+		// Token: 0x04000213 RID: 531
 		private bool IsInit;
 
-		// Token: 0x040001EC RID: 492
+		// Token: 0x04000214 RID: 532
 		[Nullable(2)]
 		private static LauncherLanguageLib _instance;
 	}

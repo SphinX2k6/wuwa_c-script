@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x02002354 RID: 9044
+// Token: 0x02001839 RID: 6201
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PayGiftModel : ModelBase
 {
-	// Token: 0x06012024 RID: 73764 RVA: 0x0046A7D8 File Offset: 0x004689D8
-	public void InitDataByServer(List<PayGiftInfo> infos, bool needRefreshEvent = false)
+	// Token: 0x0600F4D4 RID: 62676 RVA: 0x00477898 File Offset: 0x00475A98
+	public void InitDataByServer(IReadOnlyList<PayGiftInfo> infos, bool needRefreshEvent = false)
 	{
 		if (infos.Count == 0)
 		{
@@ -65,7 +64,7 @@ public class PayGiftModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012025 RID: 73765 RVA: 0x0046A994 File Offset: 0x00468B94
+	// Token: 0x0600F4D5 RID: 62677 RVA: 0x00477A50 File Offset: 0x00475C50
 	public bool IfHaveFreeGift()
 	{
 		using (List<PayPackageData>.Enumerator enumerator = this.PayGiftDataList.GetEnumerator())
@@ -81,7 +80,7 @@ public class PayGiftModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06012026 RID: 73766 RVA: 0x0046A9F8 File Offset: 0x00468BF8
+	// Token: 0x0600F4D6 RID: 62678 RVA: 0x00477AB4 File Offset: 0x00475CB4
 	public List<int> GetTabList()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -92,10 +91,10 @@ public class PayGiftModel : ModelBase
 				hashSet.Add(payShopGoods.GetTabId());
 			}
 		}
-		return hashSet.ToList<int>();
+		return new List<int>(hashSet);
 	}
 
-	// Token: 0x06012027 RID: 73767 RVA: 0x0046AA80 File Offset: 0x00468C80
+	// Token: 0x0600F4D7 RID: 62679 RVA: 0x00477B3C File Offset: 0x00475D3C
 	public List<int> GetSkinTabList()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -106,10 +105,10 @@ public class PayGiftModel : ModelBase
 				hashSet.Add(payPackageData.TabId);
 			}
 		}
-		return hashSet.ToList<int>();
+		return new List<int>(hashSet);
 	}
 
-	// Token: 0x06012028 RID: 73768 RVA: 0x0046AAF8 File Offset: 0x00468CF8
+	// Token: 0x0600F4D8 RID: 62680 RVA: 0x00477BB4 File Offset: 0x00475DB4
 	[NullableContext(2)]
 	public PayShopGoods GetPayShopGoodsById(int id)
 	{
@@ -127,13 +126,13 @@ public class PayGiftModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012029 RID: 73769 RVA: 0x0046AB47 File Offset: 0x00468D47
+	// Token: 0x0600F4D9 RID: 62681 RVA: 0x00477C03 File Offset: 0x00475E03
 	public List<PayPackageData> GetPayGiftDataList()
 	{
 		return this.PayGiftDataList;
 	}
 
-	// Token: 0x0601202A RID: 73770 RVA: 0x0046AB50 File Offset: 0x00468D50
+	// Token: 0x0600F4DA RID: 62682 RVA: 0x00477C0C File Offset: 0x00475E0C
 	[NullableContext(2)]
 	public PayPackageData GetPayGiftDataById(int id)
 	{
@@ -145,26 +144,26 @@ public class PayGiftModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601202B RID: 73771 RVA: 0x0046AB70 File Offset: 0x00468D70
+	// Token: 0x0600F4DB RID: 62683 RVA: 0x00477C2C File Offset: 0x00475E2C
 	public List<PayPackageData> GetPayGiftDataByType(EPayGiftType type)
 	{
 		return this.PayGiftDataList.FindAll((PayPackageData item) => item.Type == type);
 	}
 
-	// Token: 0x0601202C RID: 73772 RVA: 0x0046ABA1 File Offset: 0x00468DA1
+	// Token: 0x0600F4DC RID: 62684 RVA: 0x00477C5D File Offset: 0x00475E5D
 	public List<PayShopGoods> GetPayShopGoodsList()
 	{
 		return this.PayShopGoodsList;
 	}
 
-	// Token: 0x0601202D RID: 73773 RVA: 0x0046ABA9 File Offset: 0x00468DA9
+	// Token: 0x0600F4DD RID: 62685 RVA: 0x00477C65 File Offset: 0x00475E65
 	public List<PayPackageData> GetDataList()
 	{
 		return this.PayGiftDataList;
 	}
 
-	// Token: 0x1700178D RID: 6029
-	// (get) Token: 0x0601202E RID: 73774 RVA: 0x0046ABB1 File Offset: 0x00468DB1
+	// Token: 0x170017C7 RID: 6087
+	// (get) Token: 0x0600F4DE RID: 62686 RVA: 0x00477C6D File Offset: 0x00475E6D
 	public static PayGiftModel Instance
 	{
 		get
@@ -173,7 +172,7 @@ public class PayGiftModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601202F RID: 73775 RVA: 0x0046ABB8 File Offset: 0x00468DB8
+	// Token: 0x0600F4DF RID: 62687 RVA: 0x00477C74 File Offset: 0x00475E74
 	public static PayGiftModel GetOrCreateInstance()
 	{
 		if (PayGiftModel._Instance == null)
@@ -183,7 +182,7 @@ public class PayGiftModel : ModelBase
 		return PayGiftModel._Instance;
 	}
 
-	// Token: 0x06012030 RID: 73776 RVA: 0x0046ABCC File Offset: 0x00468DCC
+	// Token: 0x0600F4E0 RID: 62688 RVA: 0x00477C88 File Offset: 0x00475E88
 	public static bool CreateInstance()
 	{
 		if (PayGiftModel._Instance != null)
@@ -194,42 +193,42 @@ public class PayGiftModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012031 RID: 73777 RVA: 0x0046ABE2 File Offset: 0x00468DE2
+	// Token: 0x0600F4E1 RID: 62689 RVA: 0x00477C9E File Offset: 0x00475E9E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012032 RID: 73778 RVA: 0x0046ABE4 File Offset: 0x00468DE4
+	// Token: 0x0600F4E2 RID: 62690 RVA: 0x00477CA0 File Offset: 0x00475EA0
 	public static void ResetStaticDefaultValue()
 	{
 		PayGiftModel._Instance = null;
 	}
 
-	// Token: 0x06012033 RID: 73779 RVA: 0x0046ABEC File Offset: 0x00468DEC
+	// Token: 0x0600F4E3 RID: 62691 RVA: 0x00477CA8 File Offset: 0x00475EA8
 	static PayGiftModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PayGiftModel.CreateStaticDefaultValue), new Action(PayGiftModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008800 RID: 34816
+	// Token: 0x04008943 RID: 35139
 	public string Version = "";
 
-	// Token: 0x04008801 RID: 34817
+	// Token: 0x04008944 RID: 35140
 	private List<PayPackageData> PayGiftDataList = new List<PayPackageData>();
 
-	// Token: 0x04008802 RID: 34818
+	// Token: 0x04008945 RID: 35141
 	private List<PayShopGoods> PayShopGoodsList = new List<PayShopGoods>();
 
-	// Token: 0x04008803 RID: 34819
+	// Token: 0x04008946 RID: 35142
 	private readonly Dictionary<int, PayShopGoods> PayShopGoodsMap = new Dictionary<int, PayShopGoods>();
 
-	// Token: 0x04008804 RID: 34820
+	// Token: 0x04008947 RID: 35143
 	private readonly Dictionary<int, PayPackageData> PayGiftMap = new Dictionary<int, PayPackageData>();
 
-	// Token: 0x04008805 RID: 34821
+	// Token: 0x04008948 RID: 35144
 	private List<int> TabList = new List<int>();
 
-	// Token: 0x04008806 RID: 34822
+	// Token: 0x04008949 RID: 35145
 	[Nullable(2)]
 	private static PayGiftModel _Instance;
 }

@@ -2,22 +2,22 @@
 
 namespace UnrealEngine.Utils
 {
-	// Token: 0x02002AEC RID: 10988
+	// Token: 0x0200089B RID: 2203
 	public enum EUeLogVerbosity
 	{
-		// Token: 0x04016295 RID: 90773
+		// Token: 0x040056AC RID: 22188
 		Fatal = 1,
-		// Token: 0x04016296 RID: 90774
+		// Token: 0x040056AD RID: 22189
 		Error,
-		// Token: 0x04016297 RID: 90775
+		// Token: 0x040056AE RID: 22190
 		Warning,
-		// Token: 0x04016298 RID: 90776
+		// Token: 0x040056AF RID: 22191
 		Display,
-		// Token: 0x04016299 RID: 90777
+		// Token: 0x040056B0 RID: 22192
 		Log,
-		// Token: 0x0401629A RID: 90778
+		// Token: 0x040056B1 RID: 22193
 		Verbose,
-		// Token: 0x0401629B RID: 90779
+		// Token: 0x040056B2 RID: 22194
 		VeryVerbose
 	}
 }

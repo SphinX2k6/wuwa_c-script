@@ -8,31 +8,31 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004F9D RID: 20381
+	// Token: 0x02003F66 RID: 16230
 	[Controller(0)]
 	public class QuestMultiLineController : ControllerBase
 	{
-		// Token: 0x0603430A RID: 213770 RVA: 0x00C408C0 File Offset: 0x00C3EAC0
+		// Token: 0x06029178 RID: 168312 RVA: 0x00B8A06C File Offset: 0x00B8826C
 		protected override bool OnInit()
 		{
 			this.RegisterListeners();
 			return true;
 		}
 
-		// Token: 0x0603430B RID: 213771 RVA: 0x00C408C9 File Offset: 0x00C3EAC9
+		// Token: 0x06029179 RID: 168313 RVA: 0x00B8A075 File Offset: 0x00B88275
 		protected override bool OnClear()
 		{
 			this.UnregisterListeners();
 			return true;
 		}
 
-		// Token: 0x0603430C RID: 213772 RVA: 0x00C408D2 File Offset: 0x00C3EAD2
+		// Token: 0x0602917A RID: 168314 RVA: 0x00B8A07E File Offset: 0x00B8827E
 		public void OpenViewWithTestData()
 		{
 			this.OpenQuestMultiLineView(0, true, false);
 		}
 
-		// Token: 0x0603430D RID: 213773 RVA: 0x00C408E0 File Offset: 0x00C3EAE0
+		// Token: 0x0602917B RID: 168315 RVA: 0x00B8A08C File Offset: 0x00B8828C
 		public UniTask SendSelectBranchRequest(int branchPageId, int branchId)
 		{
 			QuestMultiLineController.<SendSelectBranchRequest>d__3 <SendSelectBranchRequest>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return <SendSelectBranchRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603430E RID: 213774 RVA: 0x00C4092C File Offset: 0x00C3EB2C
+		// Token: 0x0602917C RID: 168316 RVA: 0x00B8A0D8 File Offset: 0x00B882D8
 		public UniTask<int?> OpenQuestMultiLineView(int timePointId = 0, bool playTimePointComponentAnim = false, bool byPlot = false)
 		{
 			QuestMultiLineController.<OpenQuestMultiLineView>d__4 <OpenQuestMultiLineView>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return <OpenQuestMultiLineView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603430F RID: 213775 RVA: 0x00C40980 File Offset: 0x00C3EB80
+		// Token: 0x0602917D RID: 168317 RVA: 0x00B8A12C File Offset: 0x00B8832C
 		public UniTask<bool> OpenQuestMultiLineTipsViewAsync(int timePointId, bool byPlot = false, bool enableAnimation = false)
 		{
 			QuestMultiLineController.<OpenQuestMultiLineTipsViewAsync>d__5 <OpenQuestMultiLineTipsViewAsync>d__;
@@ -70,21 +70,21 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return <OpenQuestMultiLineTipsViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034310 RID: 213776 RVA: 0x00C409D3 File Offset: 0x00C3EBD3
+		// Token: 0x0602917E RID: 168318 RVA: 0x00B8A17F File Offset: 0x00B8837F
 		private void RegisterListeners()
 		{
 			EventSystem.Instance.Add(EEventName.EnterGameSuccess, new Action(this.OnEnterGameSuccess));
 			Net.Instance.Register(ENotifyMessageId.QuestBranchUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnQuestTimePointUpdateNotify));
 		}
 
-		// Token: 0x06034311 RID: 213777 RVA: 0x00C40A0A File Offset: 0x00C3EC0A
+		// Token: 0x0602917F RID: 168319 RVA: 0x00B8A1B6 File Offset: 0x00B883B6
 		private void UnregisterListeners()
 		{
 			EventSystem.Instance.Remove(EEventName.EnterGameSuccess, new Action(this.OnEnterGameSuccess));
 			Net.Instance.UnRegister(ENotifyMessageId.QuestBranchUpdateNotify);
 		}
 
-		// Token: 0x06034312 RID: 213778 RVA: 0x00C40A38 File Offset: 0x00C3EC38
+		// Token: 0x06029180 RID: 168320 RVA: 0x00B8A1E4 File Offset: 0x00B883E4
 		[NullableContext(2)]
 		private void OnQuestTimePointUpdateNotify(IMessage __msg, Net.CallbackStatus status)
 		{
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034313 RID: 213779 RVA: 0x00C40A64 File Offset: 0x00C3EC64
+		// Token: 0x06029181 RID: 168321 RVA: 0x00B8A210 File Offset: 0x00B88410
 		private void OnEnterGameSuccess()
 		{
 			this.RequestQuestBranchData();
 		}
 
-		// Token: 0x06034314 RID: 213780 RVA: 0x00C40A70 File Offset: 0x00C3EC70
+		// Token: 0x06029182 RID: 168322 RVA: 0x00B8A21C File Offset: 0x00B8841C
 		public UniTask RequestQuestBranchData()
 		{
 			QuestMultiLineController.<RequestQuestBranchData>d__10 <RequestQuestBranchData>d__;
@@ -111,8 +111,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return <RequestQuestBranchData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17007F6E RID: 32622
-		// (get) Token: 0x06034315 RID: 213781 RVA: 0x00C40AAB File Offset: 0x00C3ECAB
+		// Token: 0x1700531E RID: 21278
+		// (get) Token: 0x06029183 RID: 168323 RVA: 0x00B8A257 File Offset: 0x00B88457
 		[Nullable(1)]
 		public static QuestMultiLineController Instance
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034316 RID: 213782 RVA: 0x00C40AB2 File Offset: 0x00C3ECB2
+		// Token: 0x06029184 RID: 168324 RVA: 0x00B8A25E File Offset: 0x00B8845E
 		[NullableContext(1)]
 		public static QuestMultiLineController GetOrCreateInstance()
 		{
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return QuestMultiLineController._Instance;
 		}
 
-		// Token: 0x06034317 RID: 213783 RVA: 0x00C40AC6 File Offset: 0x00C3ECC6
+		// Token: 0x06029185 RID: 168325 RVA: 0x00B8A272 File Offset: 0x00B88472
 		public static bool CreateInstance()
 		{
 			if (QuestMultiLineController._Instance != null)
@@ -145,24 +145,24 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return true;
 		}
 
-		// Token: 0x06034318 RID: 213784 RVA: 0x00C40ADC File Offset: 0x00C3ECDC
+		// Token: 0x06029186 RID: 168326 RVA: 0x00B8A288 File Offset: 0x00B88488
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034319 RID: 213785 RVA: 0x00C40ADE File Offset: 0x00C3ECDE
+		// Token: 0x06029187 RID: 168327 RVA: 0x00B8A28A File Offset: 0x00B8848A
 		public static void ResetStaticDefaultValue()
 		{
 			QuestMultiLineController._Instance = null;
 		}
 
-		// Token: 0x0603431A RID: 213786 RVA: 0x00C40AE6 File Offset: 0x00C3ECE6
+		// Token: 0x06029188 RID: 168328 RVA: 0x00B8A292 File Offset: 0x00B88492
 		static QuestMultiLineController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QuestMultiLineController.CreateStaticDefaultValue), new Action(QuestMultiLineController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BBE5 RID: 113637
+		// Token: 0x040165BA RID: 91578
 		[Nullable(2)]
 		private static QuestMultiLineController _Instance;
 	}

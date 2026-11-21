@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B72 RID: 2930
+	// Token: 0x02000C40 RID: 3136
 	public class VisionComponent : IComponentBase
 	{
-		// Token: 0x06004382 RID: 17282 RVA: 0x000AC183 File Offset: 0x000AA383
-		[NullableContext(1)]
+		// Token: 0x060047DB RID: 18395 RVA: 0x000B6247 File Offset: 0x000B4447
 		public static VisionComponent Create(IVisionComponent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700125B RID: 4699
-		// (get) Token: 0x06004383 RID: 17283 RVA: 0x000AC1A4 File Offset: 0x000AA3A4
+		// Token: 0x17001356 RID: 4950
+		// (get) Token: 0x060047DC RID: 18396 RVA: 0x000B6268 File Offset: 0x000B4468
 		public override bool? Disabled
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700125C RID: 4700
-		// (get) Token: 0x06004384 RID: 17284 RVA: 0x000AC1DC File Offset: 0x000AA3DC
+		// Token: 0x17001357 RID: 4951
+		// (get) Token: 0x060047DD RID: 18397 RVA: 0x000B62A0 File Offset: 0x000B44A0
 		public override bool? EdIsLocked
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700125D RID: 4701
-		// (get) Token: 0x06004385 RID: 17285 RVA: 0x000AC1F2 File Offset: 0x000AA3F2
+		// Token: 0x17001358 RID: 4952
+		// (get) Token: 0x060047DE RID: 18398 RVA: 0x000B62B6 File Offset: 0x000B44B6
 		public virtual int VisionId
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002619 RID: 9753
+		// Token: 0x04002861 RID: 10337
 		private IVisionComponent Instance;
 	}
 }

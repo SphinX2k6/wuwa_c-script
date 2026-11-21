@@ -13,71 +13,71 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060A7 RID: 24743
+	// Token: 0x02005025 RID: 20517
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActivitySolarSpeedController : ActivityControllerBase
 	{
-		// Token: 0x0603E8BD RID: 256189 RVA: 0x00F1E20E File Offset: 0x00F1C40E
+		// Token: 0x06033581 RID: 210305 RVA: 0x00E64FD2 File Offset: 0x00E631D2
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, data.Id);
 		}
 
-		// Token: 0x0603E8BE RID: 256190 RVA: 0x00F1E226 File Offset: 0x00F1C426
+		// Token: 0x06033582 RID: 210306 RVA: 0x00E64FEA File Offset: 0x00E631EA
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_GongduolaOnlineGuide";
 		}
 
-		// Token: 0x0603E8BF RID: 256191 RVA: 0x00F1E22D File Offset: 0x00F1C42D
+		// Token: 0x06033583 RID: 210307 RVA: 0x00E64FF1 File Offset: 0x00E631F1
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new ActivitySolarSpeedSubView();
 		}
 
-		// Token: 0x0603E8C0 RID: 256192 RVA: 0x00F1E234 File Offset: 0x00F1C434
+		// Token: 0x06033584 RID: 210308 RVA: 0x00E64FF8 File Offset: 0x00E631F8
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return SolarSpeedModel.Instance.ActivityData;
 		}
 
-		// Token: 0x0603E8C1 RID: 256193 RVA: 0x00F1E240 File Offset: 0x00F1C440
+		// Token: 0x06033585 RID: 210309 RVA: 0x00E65004 File Offset: 0x00E63204
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603E8C2 RID: 256194 RVA: 0x00F1E243 File Offset: 0x00F1C443
+		// Token: 0x06033586 RID: 210310 RVA: 0x00E65007 File Offset: 0x00E63207
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.TeamParkourTaskNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleTeamParkourTaskNotify));
 			Net.Instance.Register(ENotifyMessageId.TeamParkourSettleNotify, new Action<IMessage, Net.CallbackStatus>(this.HandleTeamParkourSettleNotify));
 		}
 
-		// Token: 0x0603E8C3 RID: 256195 RVA: 0x00F1E27D File Offset: 0x00F1C47D
+		// Token: 0x06033587 RID: 210311 RVA: 0x00E65041 File Offset: 0x00E63241
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.TeamParkourTaskNotify);
 			Net.Instance.UnRegister(ENotifyMessageId.TeamParkourSettleNotify);
 		}
 
-		// Token: 0x0603E8C4 RID: 256196 RVA: 0x00F1E29F File Offset: 0x00F1C49F
+		// Token: 0x06033588 RID: 210312 RVA: 0x00E65063 File Offset: 0x00E63263
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnSelectInstanceIdChallenge, new Action<int>(this.HandleOnSelectInstanceIdChallenge));
 			EventSystem.Instance.Add<int>(EEventName.CloseInstanceEntrancePositively, new Action<int>(this.HandleCloseInstanceEntrancePositively));
 		}
 
-		// Token: 0x0603E8C5 RID: 256197 RVA: 0x00F1E2D9 File Offset: 0x00F1C4D9
+		// Token: 0x06033589 RID: 210313 RVA: 0x00E6509D File Offset: 0x00E6329D
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSelectInstanceIdChallenge, new Action<int>(this.HandleOnSelectInstanceIdChallenge));
 			EventSystem.Instance.Remove(EEventName.CloseInstanceEntrancePositively, new Action<int>(this.HandleCloseInstanceEntrancePositively));
 		}
 
-		// Token: 0x0603E8C6 RID: 256198 RVA: 0x00F1E314 File Offset: 0x00F1C514
+		// Token: 0x0603358A RID: 210314 RVA: 0x00E650D8 File Offset: 0x00E632D8
 		public override bool GetActivityLevelUnlockState(int instanceId)
 		{
 			bool flag;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return SolarSpeedModel.Instance.IsUnlockByInstanceId(instanceId) && flag2;
 		}
 
-		// Token: 0x0603E8C7 RID: 256199 RVA: 0x00F1E368 File Offset: 0x00F1C568
+		// Token: 0x0603358B RID: 210315 RVA: 0x00E6512C File Offset: 0x00E6332C
 		[NullableContext(0)]
 		public UniTask<bool> RequestTeamParkourRewardRequest(int uid)
 		{
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <RequestTeamParkourRewardRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E8C8 RID: 256200 RVA: 0x00F1E3AB File Offset: 0x00F1C5AB
+		// Token: 0x0603358C RID: 210316 RVA: 0x00E6516F File Offset: 0x00E6336F
 		public void SyncCurrentChosenLevelId(int id)
 		{
 			SolarSpeedModel.Instance.SetCurrentChosenTabInRewardView(id);
 		}
 
-		// Token: 0x0603E8C9 RID: 256201 RVA: 0x00F1E3B8 File Offset: 0x00F1C5B8
+		// Token: 0x0603358D RID: 210317 RVA: 0x00E6517C File Offset: 0x00E6337C
 		public void HandleConfirmClickInActivitySubView()
 		{
 			InstanceDungeonEntranceController.Instance.EnterEntrance(9000, 0, null);
 		}
 
-		// Token: 0x0603E8CA RID: 256202 RVA: 0x00F1E3CC File Offset: 0x00F1C5CC
+		// Token: 0x0603358E RID: 210318 RVA: 0x00E65190 File Offset: 0x00E63390
 		public void HandleOnClickRewardInActivitySubView()
 		{
 			SolarSpeedModel instance = SolarSpeedModel.Instance;
@@ -131,13 +131,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			ScrollingTipsController.Instance.ShowTipsByTextId("LianjiPaoku_Reward_Cannot_Open_Tips", Array.Empty<object>());
 		}
 
-		// Token: 0x0603E8CB RID: 256203 RVA: 0x00F1E41D File Offset: 0x00F1C61D
+		// Token: 0x0603358F RID: 210319 RVA: 0x00E651E1 File Offset: 0x00E633E1
 		public void HandleClickPlayerInResultView(int playerId)
 		{
 			FriendController.Instance.RequestFriendApplyAddSend(playerId, FriendApplyWay.RecentlyTeam);
 		}
 
-		// Token: 0x0603E8CC RID: 256204 RVA: 0x00F1E42C File Offset: 0x00F1C62C
+		// Token: 0x06033590 RID: 210320 RVA: 0x00E651F0 File Offset: 0x00E633F0
 		public void HandleClickNextInResultView()
 		{
 			SolarSpeedModel instance = SolarSpeedModel.Instance;
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}, null, null, null, null, null, null, null, instance.BuildSettleReachTargetData(), null, null, null);
 		}
 
-		// Token: 0x0603E8CD RID: 256205 RVA: 0x00F1E4B7 File Offset: 0x00F1C6B7
+		// Token: 0x06033591 RID: 210321 RVA: 0x00E6527B File Offset: 0x00E6347B
 		[NullableContext(2)]
 		public string GetInstanceSubtitleTextIdByInstanceId(int instanceId)
 		{
 			return SolarSpeedModel.Instance.GetInstanceSubtitleTextIdByInstanceId(instanceId);
 		}
 
-		// Token: 0x0603E8CE RID: 256206 RVA: 0x00F1E4C4 File Offset: 0x00F1C6C4
+		// Token: 0x06033592 RID: 210322 RVA: 0x00E65288 File Offset: 0x00E63488
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return SolarSpeedModel.Instance.GetInstanceSubtitleArgsByInstanceId(instanceId);
 		}
 
-		// Token: 0x0603E8CF RID: 256207 RVA: 0x00F1E4D4 File Offset: 0x00F1C6D4
+		// Token: 0x06033593 RID: 210323 RVA: 0x00E65298 File Offset: 0x00E63498
 		[NullableContext(2)]
 		private void HandleTeamParkourTaskNotify(IMessage __msg, Net.CallbackStatus _)
 		{
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, SolarSpeedModel.Instance.CurrentActivityId);
 		}
 
-		// Token: 0x0603E8D0 RID: 256208 RVA: 0x00F1E510 File Offset: 0x00F1C710
+		// Token: 0x06033594 RID: 210324 RVA: 0x00E652D4 File Offset: 0x00E634D4
 		[NullableContext(2)]
 		private void HandleTeamParkourSettleNotify(IMessage __msg, Net.CallbackStatus _)
 		{
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, instance.CurrentActivityId);
 		}
 
-		// Token: 0x0603E8D1 RID: 256209 RVA: 0x00F1E598 File Offset: 0x00F1C798
+		// Token: 0x06033595 RID: 210325 RVA: 0x00E6535C File Offset: 0x00E6355C
 		private void HandleOnSelectInstanceIdChallenge(int instanceId)
 		{
 			if (InstanceDungeonEntranceConfig.Instance.GetEntranceIdByInstanceId(instanceId) != 9000)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, instance.CurrentActivityId);
 		}
 
-		// Token: 0x0603E8D2 RID: 256210 RVA: 0x00F1E5EC File Offset: 0x00F1C7EC
+		// Token: 0x06033596 RID: 210326 RVA: 0x00E653B0 File Offset: 0x00E635B0
 		private void HandleCloseInstanceEntrancePositively(int entranceId)
 		{
 			if (entranceId != 9000)
@@ -223,8 +223,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}, 300f, null, null, true, 1f);
 		}
 
-		// Token: 0x1700909C RID: 37020
-		// (get) Token: 0x0603E8D3 RID: 256211 RVA: 0x00F1E657 File Offset: 0x00F1C857
+		// Token: 0x170063FE RID: 25598
+		// (get) Token: 0x06033597 RID: 210327 RVA: 0x00E6541B File Offset: 0x00E6361B
 		public static ActivitySolarSpeedController Instance
 		{
 			get
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			}
 		}
 
-		// Token: 0x0603E8D4 RID: 256212 RVA: 0x00F1E65E File Offset: 0x00F1C85E
+		// Token: 0x06033598 RID: 210328 RVA: 0x00E65422 File Offset: 0x00E63622
 		public static ActivitySolarSpeedController GetOrCreateInstance()
 		{
 			if (ActivitySolarSpeedController._Instance == null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return ActivitySolarSpeedController._Instance;
 		}
 
-		// Token: 0x0603E8D5 RID: 256213 RVA: 0x00F1E672 File Offset: 0x00F1C872
+		// Token: 0x06033599 RID: 210329 RVA: 0x00E65436 File Offset: 0x00E63636
 		public static bool CreateInstance()
 		{
 			if (ActivitySolarSpeedController._Instance != null)
@@ -254,31 +254,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return true;
 		}
 
-		// Token: 0x0603E8D6 RID: 256214 RVA: 0x00F1E688 File Offset: 0x00F1C888
+		// Token: 0x0603359A RID: 210330 RVA: 0x00E6544C File Offset: 0x00E6364C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603E8D7 RID: 256215 RVA: 0x00F1E68A File Offset: 0x00F1C88A
+		// Token: 0x0603359B RID: 210331 RVA: 0x00E6544E File Offset: 0x00E6364E
 		public static void ResetStaticDefaultValue()
 		{
 			ActivitySolarSpeedController._Instance = null;
 		}
 
-		// Token: 0x0603E8D8 RID: 256216 RVA: 0x00F1E692 File Offset: 0x00F1C892
+		// Token: 0x0603359C RID: 210332 RVA: 0x00E65456 File Offset: 0x00E63656
 		static ActivitySolarSpeedController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivitySolarSpeedController.CreateStaticDefaultValue), new Action(ActivitySolarSpeedController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603E8DA RID: 256218 RVA: 0x00F1E6B9 File Offset: 0x00F1C8B9
+		// Token: 0x0603359E RID: 210334 RVA: 0x00E6547D File Offset: 0x00E6367D
 		[CompilerGenerated]
 		internal static void <HandleClickNextInResultView>g__OnClickQuit|15_0(int _)
 		{
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x04020B86 RID: 134022
+		// Token: 0x0401B4B3 RID: 111795
 		[Nullable(2)]
 		private static ActivitySolarSpeedController _Instance;
 	}

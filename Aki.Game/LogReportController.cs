@@ -8,13 +8,13 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x020020AB RID: 8363
+// Token: 0x02001582 RID: 5506
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LogReportController : UiControllerBase
 {
-	// Token: 0x06010843 RID: 67651 RVA: 0x00409ABC File Offset: 0x00407CBC
+	// Token: 0x0600DCB3 RID: 56499 RVA: 0x004161C4 File Offset: 0x004143C4
 	protected override bool OnInit()
 	{
 		this.ClientVersion = BaseConfigController.Instance.GetVersionString();
@@ -32,7 +32,7 @@ public class LogReportController : UiControllerBase
 		return false;
 	}
 
-	// Token: 0x06010844 RID: 67652 RVA: 0x00409B3F File Offset: 0x00407D3F
+	// Token: 0x0600DCB4 RID: 56500 RVA: 0x00416247 File Offset: 0x00414447
 	protected override bool OnClear()
 	{
 		if (this.LogReportTimer != null)
@@ -43,7 +43,7 @@ public class LogReportController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010845 RID: 67653 RVA: 0x00409B64 File Offset: 0x00407D64
+	// Token: 0x0600DCB5 RID: 56501 RVA: 0x0041626C File Offset: 0x0041446C
 	public void LogReport(CommonLogData logData)
 	{
 		if (logData.event_id == "")
@@ -59,7 +59,7 @@ public class LogReportController : UiControllerBase
 		ThinkingAnalyticsReporter.Instance.Report("c" + logData.event_id, Json.Encode(logData, null) ?? "");
 	}
 
-	// Token: 0x06010846 RID: 67654 RVA: 0x00409BE0 File Offset: 0x00407DE0
+	// Token: 0x0600DCB6 RID: 56502 RVA: 0x004162E8 File Offset: 0x004144E8
 	public void UnitLogReport(IUnitLogData logData)
 	{
 		AssemblyLogData timerAssemblyLogData = LogReportModel.Instance.GetTimerAssemblyLogData(logData.event_id);
@@ -69,7 +69,7 @@ public class LogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010847 RID: 67655 RVA: 0x00409C08 File Offset: 0x00407E08
+	// Token: 0x0600DCB7 RID: 56503 RVA: 0x00416310 File Offset: 0x00414510
 	private void SetLogDataInfo(CommonLogData logData)
 	{
 		logData.client_version = this.ClientVersion;
@@ -94,7 +94,7 @@ public class LogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010848 RID: 67656 RVA: 0x00409D3C File Offset: 0x00407F3C
+	// Token: 0x0600DCB8 RID: 56504 RVA: 0x00416444 File Offset: 0x00414644
 	private void CheckLogReport(float delta)
 	{
 		IEnumerable<AssemblyLogData> allTimerAssemblyLogData = LogReportModel.Instance.GetAllTimerAssemblyLogData();
@@ -126,8 +126,8 @@ public class LogReportController : UiControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x1700145C RID: 5212
-	// (get) Token: 0x06010849 RID: 67657 RVA: 0x00409E4C File Offset: 0x0040804C
+	// Token: 0x17001489 RID: 5257
+	// (get) Token: 0x0600DCB9 RID: 56505 RVA: 0x00416554 File Offset: 0x00414754
 	public static LogReportController Instance
 	{
 		get
@@ -136,7 +136,7 @@ public class LogReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601084A RID: 67658 RVA: 0x00409E53 File Offset: 0x00408053
+	// Token: 0x0600DCBA RID: 56506 RVA: 0x0041655B File Offset: 0x0041475B
 	public static LogReportController GetOrCreateInstance()
 	{
 		if (LogReportController._Instance == null)
@@ -146,7 +146,7 @@ public class LogReportController : UiControllerBase
 		return LogReportController._Instance;
 	}
 
-	// Token: 0x0601084B RID: 67659 RVA: 0x00409E67 File Offset: 0x00408067
+	// Token: 0x0600DCBB RID: 56507 RVA: 0x0041656F File Offset: 0x0041476F
 	public static bool CreateInstance()
 	{
 		if (LogReportController._Instance != null)
@@ -157,31 +157,31 @@ public class LogReportController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601084C RID: 67660 RVA: 0x00409E7D File Offset: 0x0040807D
+	// Token: 0x0600DCBC RID: 56508 RVA: 0x00416585 File Offset: 0x00414785
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601084D RID: 67661 RVA: 0x00409E7F File Offset: 0x0040807F
+	// Token: 0x0600DCBD RID: 56509 RVA: 0x00416587 File Offset: 0x00414787
 	public static void ResetStaticDefaultValue()
 	{
 		LogReportController._Instance = null;
 	}
 
-	// Token: 0x0601084E RID: 67662 RVA: 0x00409E87 File Offset: 0x00408087
+	// Token: 0x0600DCBE RID: 56510 RVA: 0x0041658F File Offset: 0x0041478F
 	static LogReportController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LogReportController.CreateStaticDefaultValue), new Action(LogReportController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007A19 RID: 31257
+	// Token: 0x04007B17 RID: 31511
 	private string ClientVersion = "";
 
-	// Token: 0x04007A1A RID: 31258
+	// Token: 0x04007B18 RID: 31512
 	[Nullable(2)]
 	private TimerHandle LogReportTimer;
 
-	// Token: 0x04007A1B RID: 31259
+	// Token: 0x04007B19 RID: 31513
 	[Nullable(2)]
 	private static LogReportController _Instance;
 }

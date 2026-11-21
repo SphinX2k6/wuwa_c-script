@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.HotPatchKuroSdk;
 
-// Token: 0x02000E2F RID: 3631
+// Token: 0x020002E4 RID: 740
 public class SdkReportGameInitFinish : SdkReportData
 {
-	// Token: 0x06005766 RID: 22374 RVA: 0x000FBFD4 File Offset: 0x000FA1D4
+	// Token: 0x06002AF6 RID: 10998 RVA: 0x00103828 File Offset: 0x00101A28
 	public SdkReportGameInitFinish([Nullable(new byte[]
 	{
 		2,
@@ -16,7 +16,7 @@ public class SdkReportGameInitFinish : SdkReportData
 	{
 	}
 
-	// Token: 0x06005767 RID: 22375 RVA: 0x000FBFDD File Offset: 0x000FA1DD
+	// Token: 0x06002AF7 RID: 10999 RVA: 0x00103831 File Offset: 0x00101A31
 	[NullableContext(1)]
 	public override string GetEventName()
 	{

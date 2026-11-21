@@ -10,17 +10,18 @@ using CSharpScript.Game;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.SeamlessTravel;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002209 RID: 8713
+// Token: 0x020016ED RID: 5869
 [NullableContext(2)]
 [Nullable(0)]
 public class FilterCameraComponent
 {
-	// Token: 0x06010F9F RID: 69535 RVA: 0x0042344A File Offset: 0x0042164A
+	// Token: 0x0600E434 RID: 58420 RVA: 0x0042FFCE File Offset: 0x0042E1CE
 	public FilterCameraComponent([Nullable(new byte[]
 	{
 		1,
@@ -31,8 +32,8 @@ public class FilterCameraComponent
 		this.ViewName = new EUiViewName?(name);
 	}
 
-	// Token: 0x1700158F RID: 5519
-	// (get) Token: 0x06010FA0 RID: 69536 RVA: 0x00423488 File Offset: 0x00421688
+	// Token: 0x170015C6 RID: 5574
+	// (get) Token: 0x0600E435 RID: 58421 RVA: 0x0043000C File Offset: 0x0042E20C
 	public float ControlCameraRate
 	{
 		get
@@ -45,7 +46,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FA1 RID: 69537 RVA: 0x004234D4 File Offset: 0x004216D4
+	// Token: 0x0600E436 RID: 58422 RVA: 0x00430058 File Offset: 0x0042E258
 	[NullableContext(0)]
 	public UniTask<bool> TryOpenPhotograph()
 	{
@@ -57,7 +58,7 @@ public class FilterCameraComponent
 		return <TryOpenPhotograph>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010FA2 RID: 69538 RVA: 0x00423517 File Offset: 0x00421717
+	// Token: 0x0600E437 RID: 58423 RVA: 0x0043009B File Offset: 0x0042E29B
 	public void ClosePhotograph()
 	{
 		this.ResetPhotographBeforeBlackScreen();
@@ -67,14 +68,14 @@ public class FilterCameraComponent
 		UiLayer.Instance.SetLayerActive(ELayerType.HUD, true);
 	}
 
-	// Token: 0x06010FA3 RID: 69539 RVA: 0x00423550 File Offset: 0x00421750
+	// Token: 0x0600E438 RID: 58424 RVA: 0x004300D4 File Offset: 0x0042E2D4
 	public void ResetPhotograph()
 	{
 		this.ResetPhotographBeforeBlackScreen();
 		this.ResetPhotographInBlackScreen();
 	}
 
-	// Token: 0x06010FA4 RID: 69540 RVA: 0x0042355E File Offset: 0x0042175E
+	// Token: 0x0600E439 RID: 58425 RVA: 0x004300E2 File Offset: 0x0042E2E2
 	private void ResetPhotographBeforeBlackScreen()
 	{
 		this.FightCameraActor = null;
@@ -82,11 +83,11 @@ public class FilterCameraComponent
 		this.WidgetCineCameraComponent = null;
 	}
 
-	// Token: 0x06010FA5 RID: 69541 RVA: 0x00423578 File Offset: 0x00421778
+	// Token: 0x0600E43A RID: 58426 RVA: 0x004300FC File Offset: 0x0042E2FC
 	private void ResetPhotographInBlackScreen()
 	{
-		UiCameraManager.Destroy(0.5f, EViewTargetBlendFunction.VTBlend_Linear, 0f);
-		this.UiCameraPhotographerStructure = null;
+		UiCameraModel.Instance.ClearDisplay();
+		this.PhotographerComponent = null;
 		this.ResetEntityEnable();
 		this.PhotographOptionMap.Clear();
 		this.RemoveEntityEvents();
@@ -107,7 +108,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FA6 RID: 69542 RVA: 0x004235FC File Offset: 0x004217FC
+	// Token: 0x0600E43B RID: 58427 RVA: 0x00430178 File Offset: 0x0042E378
 	public void RemoveEntityEvents()
 	{
 		foreach (ITagTask tagTask in this.Tasks)
@@ -117,7 +118,7 @@ public class FilterCameraComponent
 		this.Tasks.Clear();
 	}
 
-	// Token: 0x06010FA7 RID: 69543 RVA: 0x00423658 File Offset: 0x00421858
+	// Token: 0x0600E43C RID: 58428 RVA: 0x004301D4 File Offset: 0x0042E3D4
 	private UniTask OpenBlackScreen()
 	{
 		FilterCameraComponent.<OpenBlackScreen>d__21 <OpenBlackScreen>d__;
@@ -127,7 +128,7 @@ public class FilterCameraComponent
 		return <OpenBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010FA8 RID: 69544 RVA: 0x00423694 File Offset: 0x00421894
+	// Token: 0x0600E43D RID: 58429 RVA: 0x00430210 File Offset: 0x0042E410
 	private UniTask CloseBlackScreen()
 	{
 		FilterCameraComponent.<CloseBlackScreen>d__22 <CloseBlackScreen>d__;
@@ -137,7 +138,7 @@ public class FilterCameraComponent
 		return <CloseBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010FA9 RID: 69545 RVA: 0x004236D0 File Offset: 0x004218D0
+	// Token: 0x0600E43E RID: 58430 RVA: 0x0043024C File Offset: 0x0042E44C
 	private void StopAutoMoving()
 	{
 		if (Global.BaseCharacter == null)
@@ -162,7 +163,7 @@ public class FilterCameraComponent
 		component.InterruptAutoMoving("打开眼保护界面", true);
 	}
 
-	// Token: 0x06010FAA RID: 69546 RVA: 0x00423720 File Offset: 0x00421920
+	// Token: 0x0600E43F RID: 58431 RVA: 0x0043029C File Offset: 0x0042E49C
 	private void AddEntityEvents()
 	{
 		this.AddTagTask(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]), new Action<int, bool>(this.OnTagChanged));
@@ -170,7 +171,7 @@ public class FilterCameraComponent
 		this.AddTagTask(new int?(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.水中"]), new Action<int, bool>(this.OnTagChanged));
 	}
 
-	// Token: 0x06010FAB RID: 69547 RVA: 0x004237A0 File Offset: 0x004219A0
+	// Token: 0x0600E440 RID: 58432 RVA: 0x0043031C File Offset: 0x0042E51C
 	[NullableContext(1)]
 	private void AddTagTask(int? tag, Action<int, bool> callback)
 	{
@@ -198,7 +199,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FAC RID: 69548 RVA: 0x00423822 File Offset: 0x00421A22
+	// Token: 0x0600E441 RID: 58433 RVA: 0x0043039E File Offset: 0x0042E59E
 	private void OnTagChanged(int tagId, bool tagExists)
 	{
 		if (!tagExists)
@@ -211,7 +212,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FAD RID: 69549 RVA: 0x00423858 File Offset: 0x00421A58
+	// Token: 0x0600E442 RID: 58434 RVA: 0x004303D4 File Offset: 0x0042E5D4
 	private bool CheckCanOpenPhotograph()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -294,7 +295,7 @@ public class FilterCameraComponent
 		return true;
 	}
 
-	// Token: 0x06010FAE RID: 69550 RVA: 0x00423BA4 File Offset: 0x00421DA4
+	// Token: 0x0600E443 RID: 58435 RVA: 0x00430720 File Offset: 0x0042E920
 	private void InitPhotographRelativeContent()
 	{
 		this.WidgetCameraActor = this.GetWidgetCameraActor();
@@ -333,29 +334,29 @@ public class FilterCameraComponent
 		FVectorDouble? location = fvectorDouble2;
 		FQuat rotation = cameraInitializeTransform.GetRotation();
 		FVector scale3D = cameraInitializeTransform.GetScale3D();
-		UiCameraPhotographerStructure uiCameraPhotographerStructure = this.SpawnPhotographerStructure(location, rotation, scale3D);
+		UiCameraPhotographerComponent uiCameraPhotographerComponent = this.SpawnPhotographerComponent(location, rotation, scale3D);
 		if (this.WidgetCineCameraComponent != null)
 		{
 			this.WidgetCineCameraComponent.FocusSettings.ManualFocusDistance = 300f;
 		}
-		if (uiCameraPhotographerStructure != null)
+		if (uiCameraPhotographerComponent != null)
 		{
-			uiCameraPhotographerStructure.SetPlayerSourceLocation(fvectorDouble2.Value);
+			uiCameraPhotographerComponent.SetPlayerSourceLocation(fvectorDouble2.Value);
 		}
-		if (uiCameraPhotographerStructure != null)
+		if (uiCameraPhotographerComponent != null)
 		{
-			uiCameraPhotographerStructure.SetCameraInitializeTransform(cameraInitializeTransform);
+			uiCameraPhotographerComponent.SetCameraInitializeTransform(cameraInitializeTransform);
 		}
-		if (uiCameraPhotographerStructure != null)
+		if (uiCameraPhotographerComponent != null)
 		{
-			uiCameraPhotographerStructure.SetFov(60);
+			uiCameraPhotographerComponent.SetFov(60);
 		}
-		this.UiCameraPhotographerStructure = uiCameraPhotographerStructure;
-		UiCameraManager.Get().Enter(0.5f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null);
+		this.PhotographerComponent = uiCameraPhotographerComponent;
+		UiCameraModel.Instance.GetOrCreateCamera().Enter(0.5f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null);
 		this.InitializeDefaultPhotographOption();
 	}
 
-	// Token: 0x06010FAF RID: 69551 RVA: 0x00423CDC File Offset: 0x00421EDC
+	// Token: 0x0600E444 RID: 58436 RVA: 0x0043085C File Offset: 0x0042EA5C
 	private void InitializeDefaultPhotographOption()
 	{
 		IReadOnlyList<PhotoSetup> allPhotoSetupConfig = PhotographConfig.Instance.GetAllPhotoSetupConfig();
@@ -382,7 +383,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FB0 RID: 69552 RVA: 0x00423D78 File Offset: 0x00421F78
+	// Token: 0x0600E445 RID: 58437 RVA: 0x004308F8 File Offset: 0x0042EAF8
 	private void SetPhotographOption(EPhotoSetupValueType setupValueType, float value)
 	{
 		if (this.PhotographOptionMap.ContainsKey(setupValueType))
@@ -457,7 +458,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FB1 RID: 69553 RVA: 0x00423EEC File Offset: 0x004220EC
+	// Token: 0x0600E446 RID: 58438 RVA: 0x00430A6C File Offset: 0x0042EC6C
 	private BP_CineCamera_C GetWidgetCameraActor()
 	{
 		WidgetCamera widgetCamera = CameraController.Instance.MainModel.WidgetCamera;
@@ -473,7 +474,7 @@ public class FilterCameraComponent
 		return component.CineCamera;
 	}
 
-	// Token: 0x06010FB2 RID: 69554 RVA: 0x00423F28 File Offset: 0x00422128
+	// Token: 0x0600E447 RID: 58439 RVA: 0x00430AA8 File Offset: 0x0042ECA8
 	public ACameraActor GetFightCameraActor()
 	{
 		FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -489,7 +490,7 @@ public class FilterCameraComponent
 		return component.CameraActor;
 	}
 
-	// Token: 0x06010FB3 RID: 69555 RVA: 0x00423F64 File Offset: 0x00422164
+	// Token: 0x0600E448 RID: 58440 RVA: 0x00430AE4 File Offset: 0x0042ECE4
 	private UCineCameraComponent GetWidgetCameraComponent()
 	{
 		BP_CineCamera_C widgetCameraActor = this.WidgetCameraActor;
@@ -500,7 +501,7 @@ public class FilterCameraComponent
 		return widgetCameraActor.GetCineCameraComponent();
 	}
 
-	// Token: 0x06010FB4 RID: 69556 RVA: 0x00423F94 File Offset: 0x00422194
+	// Token: 0x0600E449 RID: 58441 RVA: 0x00430B14 File Offset: 0x0042ED14
 	private FightCameraLogicComponent GetFightCameraLogicComponent()
 	{
 		FightCamera fightCamera = CameraController.Instance.MainModel.FightCamera;
@@ -511,8 +512,8 @@ public class FilterCameraComponent
 		return fightCamera.GetComponent<FightCameraLogicComponent>();
 	}
 
-	// Token: 0x06010FB5 RID: 69557 RVA: 0x00423FBC File Offset: 0x004221BC
-	private UiCameraPhotographerStructure SpawnPhotographerStructure(FVectorDouble? location, FQuat rotation, FVectorDouble scale)
+	// Token: 0x0600E44A RID: 58442 RVA: 0x00430B3C File Offset: 0x0042ED3C
+	private UiCameraPhotographerComponent SpawnPhotographerComponent(FVectorDouble? location, FQuat rotation, FVectorDouble scale)
 	{
 		if (location == null)
 		{
@@ -523,21 +524,22 @@ public class FilterCameraComponent
 		actorTransform.SetLocation(value);
 		actorTransform.SetRotation(rotation);
 		actorTransform.SetScale3D(scale);
-		UiCamera uiCamera = UiCameraManager.Get();
-		UiCameraPhotographerStructure uiCameraPhotographerStructure = uiCamera.PushStructure<UiCameraPhotographerStructure>();
-		if (uiCameraPhotographerStructure != null)
+		UiCameraModel instance = UiCameraModel.Instance;
+		instance.SwitchMode(EUiCameraMode.Photographer);
+		UiCameraPhotographerComponent component = instance.GetOrCreateCamera().GetMode<UiCameraPhotographerMode>().GetComponent<UiCameraPhotographerComponent>();
+		if (component != null)
 		{
-			uiCameraPhotographerStructure.SetActorTransform(actorTransform);
+			component.SetActorTransform(actorTransform);
 		}
-		UiCameraPostEffectComponent uiCameraComponent = uiCamera.GetUiCameraComponent<UiCameraPostEffectComponent>();
-		if (uiCameraComponent != null)
+		UiCameraDisplayComponent component2 = instance.GetOrCreateCamera().GetComponent<UiCameraDisplayComponent>();
+		if (component2 != null)
 		{
-			uiCameraComponent.SetCameraFocalDistance(300f);
+			component2.SetCameraFocalDistance(300f);
 		}
-		return uiCameraPhotographerStructure;
+		return component;
 	}
 
-	// Token: 0x06010FB6 RID: 69558 RVA: 0x0042402C File Offset: 0x0042222C
+	// Token: 0x0600E44B RID: 58443 RVA: 0x00430BC0 File Offset: 0x0042EDC0
 	[NullableContext(1)]
 	private void SetEntityEnable(EntityHandle handle, bool bEnable)
 	{
@@ -579,7 +581,7 @@ public class FilterCameraComponent
 		}
 	}
 
-	// Token: 0x06010FB7 RID: 69559 RVA: 0x0042410C File Offset: 0x0042230C
+	// Token: 0x0600E44C RID: 58444 RVA: 0x00430CA0 File Offset: 0x0042EEA0
 	private void ResetEntityEnable()
 	{
 		if (this.SetDisableEntity != null && this.EntityDisableId != null)
@@ -594,7 +596,7 @@ public class FilterCameraComponent
 		this.SetDisableEntity = null;
 	}
 
-	// Token: 0x06010FB8 RID: 69560 RVA: 0x00424168 File Offset: 0x00422368
+	// Token: 0x0600E44D RID: 58445 RVA: 0x00430CFC File Offset: 0x0042EEFC
 	[NullableContext(1)]
 	public void OnDragMoved(ULGUIPointerEventData eventData)
 	{
@@ -611,34 +613,34 @@ public class FilterCameraComponent
 		{
 			float num = (pointerPosition.Y - this.LastMoveVector.Value.Y) * this.ControlCameraRate;
 			float num2 = (this.LastMoveVector.Value.X - pointerPosition.X) * this.ControlCameraRate;
-			UiCameraPhotographerStructure uiCameraPhotographerStructure = this.UiCameraPhotographerStructure;
-			if (uiCameraPhotographerStructure != null)
+			UiCameraPhotographerComponent photographerComponent = this.PhotographerComponent;
+			if (photographerComponent != null)
 			{
-				uiCameraPhotographerStructure.AddCameraArmPitchInput(-num);
+				photographerComponent.AddCameraArmPitchInput(-num);
 			}
-			UiCameraPhotographerStructure uiCameraPhotographerStructure2 = this.UiCameraPhotographerStructure;
-			if (uiCameraPhotographerStructure2 != null)
+			UiCameraPhotographerComponent photographerComponent2 = this.PhotographerComponent;
+			if (photographerComponent2 != null)
 			{
-				uiCameraPhotographerStructure2.AddCameraArmYawInput(-num2);
+				photographerComponent2.AddCameraArmYawInput(-num2);
 			}
 		}
 		this.LastMoveVector = new FVector?(pointerPosition);
 	}
 
-	// Token: 0x06010FB9 RID: 69561 RVA: 0x0042420B File Offset: 0x0042240B
+	// Token: 0x0600E44E RID: 58446 RVA: 0x00430D9F File Offset: 0x0042EF9F
 	public void OnDragBegin()
 	{
 		this.CameraRotationLock = true;
 	}
 
-	// Token: 0x06010FBA RID: 69562 RVA: 0x00424214 File Offset: 0x00422414
+	// Token: 0x0600E44F RID: 58447 RVA: 0x00430DA8 File Offset: 0x0042EFA8
 	public void OnDragEnded()
 	{
 		this.LastMoveVector = null;
 		this.CameraRotationLock = false;
 	}
 
-	// Token: 0x06010FBB RID: 69563 RVA: 0x00424229 File Offset: 0x00422429
+	// Token: 0x0600E450 RID: 58448 RVA: 0x00430DBD File Offset: 0x0042EFBD
 	[NullableContext(1)]
 	public void OnInputUiLookUp(string axisName, float value)
 	{
@@ -654,15 +656,15 @@ public class FilterCameraComponent
 		{
 			return;
 		}
-		UiCameraPhotographerStructure uiCameraPhotographerStructure = this.UiCameraPhotographerStructure;
-		if (uiCameraPhotographerStructure == null)
+		UiCameraPhotographerComponent photographerComponent = this.PhotographerComponent;
+		if (photographerComponent == null)
 		{
 			return;
 		}
-		uiCameraPhotographerStructure.AddCameraArmPitchInput(-value);
+		photographerComponent.AddCameraArmPitchInput(-value);
 	}
 
-	// Token: 0x06010FBC RID: 69564 RVA: 0x00424265 File Offset: 0x00422465
+	// Token: 0x0600E451 RID: 58449 RVA: 0x00430DF9 File Offset: 0x0042EFF9
 	[NullableContext(1)]
 	public void OnInputUiTurn(string axisName, float value)
 	{
@@ -678,53 +680,53 @@ public class FilterCameraComponent
 		{
 			return;
 		}
-		UiCameraPhotographerStructure uiCameraPhotographerStructure = this.UiCameraPhotographerStructure;
-		if (uiCameraPhotographerStructure == null)
+		UiCameraPhotographerComponent photographerComponent = this.PhotographerComponent;
+		if (photographerComponent == null)
 		{
 			return;
 		}
-		uiCameraPhotographerStructure.AddCameraArmYawInput(value);
+		photographerComponent.AddCameraArmYawInput(value);
 	}
 
-	// Token: 0x04008111 RID: 33041
+	// Token: 0x0400824F RID: 33359
 	public FVector? LastMoveVector;
 
-	// Token: 0x04008112 RID: 33042
+	// Token: 0x04008250 RID: 33360
 	private BP_CineCamera_C WidgetCameraActor;
 
-	// Token: 0x04008113 RID: 33043
+	// Token: 0x04008251 RID: 33361
 	private ACameraActor FightCameraActor;
 
-	// Token: 0x04008114 RID: 33044
+	// Token: 0x04008252 RID: 33362
 	private UCineCameraComponent WidgetCineCameraComponent;
 
-	// Token: 0x04008115 RID: 33045
+	// Token: 0x04008253 RID: 33363
 	private readonly EUiViewName? ViewName;
 
-	// Token: 0x04008116 RID: 33046
-	public UiCameraPhotographerStructure UiCameraPhotographerStructure;
+	// Token: 0x04008254 RID: 33364
+	public UiCameraPhotographerComponent PhotographerComponent;
 
-	// Token: 0x04008117 RID: 33047
+	// Token: 0x04008255 RID: 33365
 	[Nullable(1)]
 	public readonly Dictionary<EPhotoSetupValueType, float> PhotographOptionMap = new Dictionary<EPhotoSetupValueType, float>();
 
-	// Token: 0x04008118 RID: 33048
+	// Token: 0x04008256 RID: 33366
 	public int? EntityDisableId = new int?(0);
 
-	// Token: 0x04008119 RID: 33049
+	// Token: 0x04008257 RID: 33367
 	public EntityHandle SetDisableEntity;
 
-	// Token: 0x0400811A RID: 33050
+	// Token: 0x04008258 RID: 33368
 	[Nullable(1)]
 	private readonly List<ITagTask> Tasks = new List<ITagTask>();
 
-	// Token: 0x0400811B RID: 33051
+	// Token: 0x04008259 RID: 33369
 	public bool CameraRotationLock;
 
-	// Token: 0x0400811C RID: 33052
+	// Token: 0x0400825A RID: 33370
 	private float? ControlCameraRateInternal;
 
-	// Token: 0x0400811D RID: 33053
+	// Token: 0x0400825B RID: 33371
 	[Nullable(new byte[]
 	{
 		2,

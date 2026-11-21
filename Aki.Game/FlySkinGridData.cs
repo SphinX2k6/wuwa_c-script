@@ -4,13 +4,13 @@ using Aki.Config;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A4F RID: 10831
+// Token: 0x02001FCA RID: 8138
 [NullableContext(1)]
 [Nullable(0)]
 public class FlySkinGridData
 {
-	// Token: 0x17001DF0 RID: 7664
-	// (get) Token: 0x060168F1 RID: 92401 RVA: 0x005B7925 File Offset: 0x005B5B25
+	// Token: 0x17001E48 RID: 7752
+	// (get) Token: 0x06014312 RID: 82706 RVA: 0x005E3A69 File Offset: 0x005E1C69
 	public bool IsEmptyData
 	{
 		get
@@ -19,7 +19,7 @@ public class FlySkinGridData
 		}
 	}
 
-	// Token: 0x060168F2 RID: 92402 RVA: 0x005B7930 File Offset: 0x005B5B30
+	// Token: 0x06014313 RID: 82707 RVA: 0x005E3A74 File Offset: 0x005E1C74
 	public FlySkinGridData(int skinId, int roleDataId, EFlySkinType skinType, FlySkinConfig? skinConfig = null)
 	{
 		this.SkinId = skinId;
@@ -28,19 +28,19 @@ public class FlySkinGridData
 		this.SkinConfig = skinConfig;
 	}
 
-	// Token: 0x060168F3 RID: 92403 RVA: 0x005B7955 File Offset: 0x005B5B55
+	// Token: 0x06014314 RID: 82708 RVA: 0x005E3A99 File Offset: 0x005E1C99
 	public bool GetIsLock()
 	{
 		return !this.IsEmptyData && InventoryModel.Instance.GetItemCountByConfigId(this.SkinId, 0) <= 0;
 	}
 
-	// Token: 0x060168F4 RID: 92404 RVA: 0x005B7978 File Offset: 0x005B5B78
+	// Token: 0x06014315 RID: 82709 RVA: 0x005E3ABC File Offset: 0x005E1CBC
 	public bool IsCurrentEquipSkinId()
 	{
 		return FlySkinModel.Instance.GetRoleEquipFlySkinId(this.RoleDataId, this.SkinType) == this.SkinId;
 	}
 
-	// Token: 0x060168F5 RID: 92405 RVA: 0x005B7998 File Offset: 0x005B5B98
+	// Token: 0x06014316 RID: 82710 RVA: 0x005E3ADC File Offset: 0x005E1CDC
 	public string GetName()
 	{
 		if (this.IsEmptyData)
@@ -50,7 +50,7 @@ public class FlySkinGridData
 		return this.SkinConfig.Value.Name;
 	}
 
-	// Token: 0x060168F6 RID: 92406 RVA: 0x005B79D4 File Offset: 0x005B5BD4
+	// Token: 0x06014317 RID: 82711 RVA: 0x005E3B18 File Offset: 0x005E1D18
 	public string GetTypeDescription()
 	{
 		if (this.IsEmptyData)
@@ -60,7 +60,7 @@ public class FlySkinGridData
 		return this.SkinConfig.Value.TypeDescription;
 	}
 
-	// Token: 0x060168F7 RID: 92407 RVA: 0x005B7A10 File Offset: 0x005B5C10
+	// Token: 0x06014318 RID: 82712 RVA: 0x005E3B54 File Offset: 0x005E1D54
 	public string GetDescription()
 	{
 		if (this.IsEmptyData)
@@ -70,7 +70,7 @@ public class FlySkinGridData
 		return this.SkinConfig.Value.BgDescription;
 	}
 
-	// Token: 0x060168F8 RID: 92408 RVA: 0x005B7A4C File Offset: 0x005B5C4C
+	// Token: 0x06014319 RID: 82713 RVA: 0x005E3B90 File Offset: 0x005E1D90
 	public int GetModelId()
 	{
 		if (this.IsEmptyData)
@@ -80,7 +80,7 @@ public class FlySkinGridData
 		return this.SkinConfig.Value.ModelId;
 	}
 
-	// Token: 0x060168F9 RID: 92409 RVA: 0x005B7A88 File Offset: 0x005B5C88
+	// Token: 0x0601431A RID: 82714 RVA: 0x005E3BCC File Offset: 0x005E1DCC
 	public string GetStandAnimPath()
 	{
 		if (this.IsEmptyData)
@@ -90,21 +90,21 @@ public class FlySkinGridData
 		return this.SkinConfig.Value.StandAnim;
 	}
 
-	// Token: 0x060168FA RID: 92410 RVA: 0x005B7AC1 File Offset: 0x005B5CC1
+	// Token: 0x0601431B RID: 82715 RVA: 0x005E3C05 File Offset: 0x005E1E05
 	public bool GetIsNew()
 	{
 		return !this.IsEmptyData && NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.FlySkinRedDot, this.SkinId);
 	}
 
-	// Token: 0x0400A778 RID: 42872
+	// Token: 0x0400AB7C RID: 43900
 	public readonly int SkinId;
 
-	// Token: 0x0400A779 RID: 42873
+	// Token: 0x0400AB7D RID: 43901
 	public readonly int RoleDataId;
 
-	// Token: 0x0400A77A RID: 42874
+	// Token: 0x0400AB7E RID: 43902
 	public readonly EFlySkinType SkinType;
 
-	// Token: 0x0400A77B RID: 42875
+	// Token: 0x0400AB7F RID: 43903
 	public readonly FlySkinConfig? SkinConfig;
 }

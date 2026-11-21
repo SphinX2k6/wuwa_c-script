@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C98 RID: 19608
+	// Token: 0x02005191 RID: 20881
 	public class IPreLevelPlayCondtionT
 	{
-		// Token: 0x17008E5F RID: 36447
-		// (get) Token: 0x0601F1A5 RID: 127397 RVA: 0x004587B4 File Offset: 0x004569B4
-		// (set) Token: 0x0601F1A6 RID: 127398 RVA: 0x004587BC File Offset: 0x004569BC
+		// Token: 0x1700958D RID: 38285
+		// (get) Token: 0x06020DC7 RID: 134599 RVA: 0x0048C304 File Offset: 0x0048A504
+		// (set) Token: 0x06020DC8 RID: 134600 RVA: 0x0048C30C File Offset: 0x0048A50C
 		public EAccessQuestCondition Type { get; set; }
 
-		// Token: 0x17008E60 RID: 36448
-		// (get) Token: 0x0601F1A7 RID: 127399 RVA: 0x004587C5 File Offset: 0x004569C5
-		// (set) Token: 0x0601F1A8 RID: 127400 RVA: 0x004587CD File Offset: 0x004569CD
+		// Token: 0x1700958E RID: 38286
+		// (get) Token: 0x06020DC9 RID: 134601 RVA: 0x0048C315 File Offset: 0x0048A515
+		// (set) Token: 0x06020DCA RID: 134602 RVA: 0x0048C31D File Offset: 0x0048A51D
 		public int PreLevelPlay { get; set; }
 
-		// Token: 0x0601F1A9 RID: 127401 RVA: 0x004587D6 File Offset: 0x004569D6
+		// Token: 0x06020DCB RID: 134603 RVA: 0x0048C326 File Offset: 0x0048A526
 		public IPreLevelPlayCondtionT()
 		{
 			this.Type = EAccessQuestCondition.ExploreLevel;

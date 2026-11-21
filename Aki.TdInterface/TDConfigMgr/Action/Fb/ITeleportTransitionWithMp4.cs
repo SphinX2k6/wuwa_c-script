@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200268F RID: 9871
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002952 RID: 10578
 	public class ITeleportTransitionWithMp4 : ITeleportTransitionType
 	{
-		// Token: 0x0600DD01 RID: 56577 RVA: 0x0020D9E6 File Offset: 0x0020BBE6
+		// Token: 0x0600EAD8 RID: 60120 RVA: 0x0022A186 File Offset: 0x00228386
 		public static ITeleportTransitionWithMp4 Create(ITeleportTransitionWithMp4? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041A5 RID: 16805
-		// (get) Token: 0x0600DD02 RID: 56578 RVA: 0x0020DA05 File Offset: 0x0020BC05
+		// Token: 0x170044E2 RID: 17634
+		// (get) Token: 0x0600EAD9 RID: 60121 RVA: 0x0022A1A5 File Offset: 0x002283A5
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A6 RID: 16806
-		// (get) Token: 0x0600DD03 RID: 56579 RVA: 0x0020DA12 File Offset: 0x0020BC12
+		// Token: 0x170044E3 RID: 17635
+		// (get) Token: 0x0600EADA RID: 60122 RVA: 0x0022A1B2 File Offset: 0x002283B2
 		public virtual string Mp4Path
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A7 RID: 16807
-		// (get) Token: 0x0600DD04 RID: 56580 RVA: 0x0020DA20 File Offset: 0x0020BC20
+		// Token: 0x170044E4 RID: 17636
+		// (get) Token: 0x0600EADB RID: 60123 RVA: 0x0022A1C0 File Offset: 0x002283C0
 		public virtual bool? IsFadeInScreenAfterTeleport
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A8 RID: 16808
-		// (get) Token: 0x0600DD05 RID: 56581 RVA: 0x0020DA58 File Offset: 0x0020BC58
+		// Token: 0x170044E5 RID: 17637
+		// (get) Token: 0x0600EADC RID: 60124 RVA: 0x0022A1F8 File Offset: 0x002283F8
 		public virtual bool? ReplayWhenReLogin
 		{
 			get
@@ -70,8 +68,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041A9 RID: 16809
-		// (get) Token: 0x0600DD06 RID: 56582 RVA: 0x0020DA8E File Offset: 0x0020BC8E
+		// Token: 0x170044E6 RID: 17638
+		// (get) Token: 0x0600EADD RID: 60125 RVA: 0x0022A22E File Offset: 0x0022842E
 		[Nullable(2)]
 		public virtual IMp4BackgroundColor BackgroundColor
 		{
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041AA RID: 16810
-		// (get) Token: 0x0600DD07 RID: 56583 RVA: 0x0020DAC4 File Offset: 0x0020BCC4
+		// Token: 0x170044E7 RID: 17639
+		// (get) Token: 0x0600EADE RID: 60126 RVA: 0x0022A264 File Offset: 0x00228464
 		public virtual EAfterTeleportScreenColor? AfterTeleportScreenColor
 		{
 			get
@@ -102,14 +100,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AC5 RID: 31429
+		// Token: 0x04008162 RID: 33122
 		private ITeleportTransitionWithMp4 Instance;
 
-		// Token: 0x04007AC6 RID: 31430
+		// Token: 0x04008163 RID: 33123
 		[Nullable(2)]
 		private IMp4BackgroundColor _BackgroundColorCache;
 
-		// Token: 0x04007AC7 RID: 31431
+		// Token: 0x04008164 RID: 33124
 		private bool _BackgroundColorInited;
 	}
 }

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C3 RID: 18627
+	// Token: 0x0200383A RID: 14394
 	[NullableContext(2)]
 	[Nullable(0)]
 	public abstract class GridAppearAnimationBase
 	{
-		// Token: 0x06030AF2 RID: 199410 RVA: 0x00B4E7BC File Offset: 0x00B4C9BC
+		// Token: 0x0602561E RID: 153118 RVA: 0x00A895C4 File Offset: 0x00A877C4
 		public GridAppearAnimationBase(IGridPreserver gridPreserver)
 		{
 			if (gridPreserver == null)
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Util
 			this.GridPreserver = gridPreserver;
 		}
 
-		// Token: 0x06030AF3 RID: 199411 RVA: 0x00B4E807 File Offset: 0x00B4CA07
+		// Token: 0x0602561F RID: 153119 RVA: 0x00A8960F File Offset: 0x00A8780F
 		public bool IsGridControlValid()
 		{
 			return !this.IsInGridAppearAnimation;
 		}
 
-		// Token: 0x06030AF4 RID: 199412 RVA: 0x00B4E814 File Offset: 0x00B4CA14
+		// Token: 0x06025620 RID: 153120 RVA: 0x00A8961C File Offset: 0x00A8781C
 		public void PlayGridAnim(int showLength, bool isScrollViewItem = false)
 		{
 			if (this.AnimController != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Util
 			this.Start();
 		}
 
-		// Token: 0x06030AF5 RID: 199413 RVA: 0x00B4E884 File Offset: 0x00B4CA84
+		// Token: 0x06025621 RID: 153121 RVA: 0x00A8968C File Offset: 0x00A8788C
 		public void Clear()
 		{
 			if (this.AnimController != null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Util
 			this.Interrupt();
 		}
 
-		// Token: 0x06030AF6 RID: 199414 RVA: 0x00B4E8E0 File Offset: 0x00B4CAE0
+		// Token: 0x06025622 RID: 153122 RVA: 0x00A896E8 File Offset: 0x00A878E8
 		public void RegisterAnimController()
 		{
 			this.AnimController = this.GridPreserver.GetUiAnimController();
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030AF7 RID: 199415 RVA: 0x00B4E92E File Offset: 0x00B4CB2E
+		// Token: 0x06025623 RID: 153123 RVA: 0x00A89736 File Offset: 0x00A87936
 		private void OnAnimFinish()
 		{
 			this.GridPreserver.NotifyAnimationEnd();
 		}
 
-		// Token: 0x06030AF8 RID: 199416 RVA: 0x00B4E93B File Offset: 0x00B4CB3B
+		// Token: 0x06025624 RID: 153124 RVA: 0x00A89743 File Offset: 0x00A87943
 		private void Interrupt()
 		{
 			this.GridPreserver.NotifyAnimationEnd();
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Util
 			this.OnInterrupt();
 		}
 
-		// Token: 0x06030AF9 RID: 199417 RVA: 0x00B4E954 File Offset: 0x00B4CB54
+		// Token: 0x06025625 RID: 153125 RVA: 0x00A8975C File Offset: 0x00A8795C
 		private void Start()
 		{
 			this.DisplayGridNum = this.GridPreserver.GetDisplayGridNum();
@@ -94,23 +94,23 @@ namespace CSharpScript.Game.Module.Util
 			this.OnStart();
 		}
 
-		// Token: 0x06030AFA RID: 199418 RVA: 0x00B4E973 File Offset: 0x00B4CB73
+		// Token: 0x06025626 RID: 153126 RVA: 0x00A8977B File Offset: 0x00A8797B
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x06030AFB RID: 199419 RVA: 0x00B4E975 File Offset: 0x00B4CB75
+		// Token: 0x06025627 RID: 153127 RVA: 0x00A8977D File Offset: 0x00A8797D
 		public void Tick(float deltaTimeMilliseconds)
 		{
 			this.OnUpdate(deltaTimeMilliseconds);
 		}
 
-		// Token: 0x06030AFC RID: 199420 RVA: 0x00B4E97E File Offset: 0x00B4CB7E
+		// Token: 0x06025628 RID: 153128 RVA: 0x00A89786 File Offset: 0x00A87986
 		protected virtual void OnUpdate(float deltaTimeMilliseconds)
 		{
 		}
 
-		// Token: 0x06030AFD RID: 199421 RVA: 0x00B4E980 File Offset: 0x00B4CB80
+		// Token: 0x06025629 RID: 153129 RVA: 0x00A89788 File Offset: 0x00A87988
 		protected void GridsForEach([Nullable(new byte[]
 		{
 			1,
@@ -125,19 +125,19 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030AFE RID: 199422 RVA: 0x00B4E9BC File Offset: 0x00B4CBBC
+		// Token: 0x0602562A RID: 153130 RVA: 0x00A897C4 File Offset: 0x00A879C4
 		protected void End()
 		{
 			this.RemoveTimer();
 			this.OnEnd();
 		}
 
-		// Token: 0x06030AFF RID: 199423 RVA: 0x00B4E9CA File Offset: 0x00B4CBCA
+		// Token: 0x0602562B RID: 153131 RVA: 0x00A897D2 File Offset: 0x00A879D2
 		protected virtual void OnEnd()
 		{
 		}
 
-		// Token: 0x06030B00 RID: 199424 RVA: 0x00B4E9CC File Offset: 0x00B4CBCC
+		// Token: 0x0602562C RID: 153132 RVA: 0x00A897D4 File Offset: 0x00A879D4
 		protected virtual void OnInterrupt()
 		{
 			foreach (LevelSequencePlayer levelSequencePlayer in this.ItemLevelSequenceMap.Values)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Util
 			this.ItemLevelSequenceMap.Clear();
 		}
 
-		// Token: 0x06030B01 RID: 199425 RVA: 0x00B4EA40 File Offset: 0x00B4CC40
+		// Token: 0x0602562D RID: 153133 RVA: 0x00A89848 File Offset: 0x00A87A48
 		[NullableContext(1)]
 		protected void ShowGrid(UUIItem grid, int gridIndex)
 		{
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Util
 			EventSystem.Instance.Emit<int, UUIItem>(EEventName.OnShowGridAnimation, gridIndex, grid);
 		}
 
-		// Token: 0x06030B02 RID: 199426 RVA: 0x00B4EAB7 File Offset: 0x00B4CCB7
+		// Token: 0x0602562E RID: 153134 RVA: 0x00A898BF File Offset: 0x00A87ABF
 		private void StartTimer()
 		{
 			if (this.TickId != -1)
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Util
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.Tick), "GridAppearAnimation", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x06030B03 RID: 199427 RVA: 0x00B4EAED File Offset: 0x00B4CCED
+		// Token: 0x0602562F RID: 153135 RVA: 0x00A898F5 File Offset: 0x00A87AF5
 		protected void RemoveTimer()
 		{
 			if (this.TickId == -1)
@@ -185,25 +185,25 @@ namespace CSharpScript.Game.Module.Util
 			this.TickId = -1;
 		}
 
-		// Token: 0x0401A29C RID: 107164
+		// Token: 0x04014B0F RID: 84751
 		protected readonly IGridPreserver GridPreserver;
 
-		// Token: 0x0401A29D RID: 107165
+		// Token: 0x04014B10 RID: 84752
 		private UUIInturnAnimController AnimController;
 
-		// Token: 0x0401A29E RID: 107166
+		// Token: 0x04014B11 RID: 84753
 		protected int DisplayGridNum;
 
-		// Token: 0x0401A29F RID: 107167
+		// Token: 0x04014B12 RID: 84754
 		private int TickId = -1;
 
-		// Token: 0x0401A2A0 RID: 107168
+		// Token: 0x04014B13 RID: 84755
 		protected bool IsInGridAppearAnimation;
 
-		// Token: 0x0401A2A1 RID: 107169
+		// Token: 0x04014B14 RID: 84756
 		protected bool HasShowFirstGrid;
 
-		// Token: 0x0401A2A2 RID: 107170
+		// Token: 0x04014B15 RID: 84757
 		[Nullable(1)]
 		private readonly Dictionary<UUIItem, LevelSequencePlayer> ItemLevelSequenceMap = new Dictionary<UUIItem, LevelSequencePlayer>();
 	}

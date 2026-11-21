@@ -4,60 +4,65 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E8D RID: 20109
+	// Token: 0x020053A7 RID: 21415
 	public class IAirWallSpawnerComponentT
 	{
-		// Token: 0x17009036 RID: 36918
-		// (get) Token: 0x0601FA46 RID: 129606 RVA: 0x00468464 File Offset: 0x00466664
-		// (set) Token: 0x0601FA47 RID: 129607 RVA: 0x0046846C File Offset: 0x0046666C
+		// Token: 0x1700977F RID: 38783
+		// (get) Token: 0x060216D5 RID: 136917 RVA: 0x0049CBF7 File Offset: 0x0049ADF7
+		// (set) Token: 0x060216D6 RID: 136918 RVA: 0x0049CBFF File Offset: 0x0049ADFF
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009037 RID: 36919
-		// (get) Token: 0x0601FA48 RID: 129608 RVA: 0x00468475 File Offset: 0x00466675
-		// (set) Token: 0x0601FA49 RID: 129609 RVA: 0x0046847D File Offset: 0x0046667D
+		// Token: 0x17009780 RID: 38784
+		// (get) Token: 0x060216D7 RID: 136919 RVA: 0x0049CC08 File Offset: 0x0049AE08
+		// (set) Token: 0x060216D8 RID: 136920 RVA: 0x0049CC10 File Offset: 0x0049AE10
 		public int SplineEntity { get; set; }
 
-		// Token: 0x17009038 RID: 36920
-		// (get) Token: 0x0601FA4A RID: 129610 RVA: 0x00468486 File Offset: 0x00466686
-		// (set) Token: 0x0601FA4B RID: 129611 RVA: 0x0046848E File Offset: 0x0046668E
+		// Token: 0x17009781 RID: 38785
+		// (get) Token: 0x060216D9 RID: 136921 RVA: 0x0049CC19 File Offset: 0x0049AE19
+		// (set) Token: 0x060216DA RID: 136922 RVA: 0x0049CC21 File Offset: 0x0049AE21
 		public string WallName { get; set; }
 
-		// Token: 0x17009039 RID: 36921
-		// (get) Token: 0x0601FA4C RID: 129612 RVA: 0x00468497 File Offset: 0x00466697
-		// (set) Token: 0x0601FA4D RID: 129613 RVA: 0x0046849F File Offset: 0x0046669F
+		// Token: 0x17009782 RID: 38786
+		// (get) Token: 0x060216DB RID: 136923 RVA: 0x0049CC2A File Offset: 0x0049AE2A
+		// (set) Token: 0x060216DC RID: 136924 RVA: 0x0049CC32 File Offset: 0x0049AE32
 		public float Thickness { get; set; }
 
-		// Token: 0x1700903A RID: 36922
-		// (get) Token: 0x0601FA4E RID: 129614 RVA: 0x004684A8 File Offset: 0x004666A8
-		// (set) Token: 0x0601FA4F RID: 129615 RVA: 0x004684B0 File Offset: 0x004666B0
+		// Token: 0x17009783 RID: 38787
+		// (get) Token: 0x060216DD RID: 136925 RVA: 0x0049CC3B File Offset: 0x0049AE3B
+		// (set) Token: 0x060216DE RID: 136926 RVA: 0x0049CC43 File Offset: 0x0049AE43
 		public float Height { get; set; }
 
-		// Token: 0x1700903B RID: 36923
-		// (get) Token: 0x0601FA50 RID: 129616 RVA: 0x004684B9 File Offset: 0x004666B9
-		// (set) Token: 0x0601FA51 RID: 129617 RVA: 0x004684C1 File Offset: 0x004666C1
+		// Token: 0x17009784 RID: 38788
+		// (get) Token: 0x060216DF RID: 136927 RVA: 0x0049CC4C File Offset: 0x0049AE4C
+		// (set) Token: 0x060216E0 RID: 136928 RVA: 0x0049CC54 File Offset: 0x0049AE54
 		public EBiasDirection BiasDirection { get; set; }
 
-		// Token: 0x1700903C RID: 36924
-		// (get) Token: 0x0601FA52 RID: 129618 RVA: 0x004684CA File Offset: 0x004666CA
-		// (set) Token: 0x0601FA53 RID: 129619 RVA: 0x004684D2 File Offset: 0x004666D2
+		// Token: 0x17009785 RID: 38789
+		// (get) Token: 0x060216E1 RID: 136929 RVA: 0x0049CC5D File Offset: 0x0049AE5D
+		// (set) Token: 0x060216E2 RID: 136930 RVA: 0x0049CC65 File Offset: 0x0049AE65
 		public bool IsExtend { get; set; }
 
-		// Token: 0x1700903D RID: 36925
-		// (get) Token: 0x0601FA54 RID: 129620 RVA: 0x004684DB File Offset: 0x004666DB
-		// (set) Token: 0x0601FA55 RID: 129621 RVA: 0x004684E3 File Offset: 0x004666E3
+		// Token: 0x17009786 RID: 38790
+		// (get) Token: 0x060216E3 RID: 136931 RVA: 0x0049CC6E File Offset: 0x0049AE6E
+		// (set) Token: 0x060216E4 RID: 136932 RVA: 0x0049CC76 File Offset: 0x0049AE76
 		public bool HasCover { get; set; }
 
-		// Token: 0x1700903E RID: 36926
-		// (get) Token: 0x0601FA56 RID: 129622 RVA: 0x004684EC File Offset: 0x004666EC
-		// (set) Token: 0x0601FA57 RID: 129623 RVA: 0x004684F4 File Offset: 0x004666F4
+		// Token: 0x17009787 RID: 38791
+		// (get) Token: 0x060216E5 RID: 136933 RVA: 0x0049CC7F File Offset: 0x0049AE7F
+		// (set) Token: 0x060216E6 RID: 136934 RVA: 0x0049CC87 File Offset: 0x0049AE87
 		public List<IActorRefT> WallActorsRef { get; set; }
 
-		// Token: 0x1700903F RID: 36927
-		// (get) Token: 0x0601FA58 RID: 129624 RVA: 0x004684FD File Offset: 0x004666FD
-		// (set) Token: 0x0601FA59 RID: 129625 RVA: 0x00468505 File Offset: 0x00466705
+		// Token: 0x17009788 RID: 38792
+		// (get) Token: 0x060216E7 RID: 136935 RVA: 0x0049CC90 File Offset: 0x0049AE90
+		// (set) Token: 0x060216E8 RID: 136936 RVA: 0x0049CC98 File Offset: 0x0049AE98
+		public IAirWallWholeSpawnModeT SpawnMode { get; set; }
+
+		// Token: 0x17009789 RID: 38793
+		// (get) Token: 0x060216E9 RID: 136937 RVA: 0x0049CCA1 File Offset: 0x0049AEA1
+		// (set) Token: 0x060216EA RID: 136938 RVA: 0x0049CCA9 File Offset: 0x0049AEA9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601FA5A RID: 129626 RVA: 0x00468510 File Offset: 0x00466710
+		// Token: 0x060216EB RID: 136939 RVA: 0x0049CCB4 File Offset: 0x0049AEB4
 		public IAirWallSpawnerComponentT()
 		{
 			this.Disabled = false;
@@ -69,6 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			this.IsExtend = false;
 			this.HasCover = false;
 			this.WallActorsRef = null;
+			this.SpawnMode = null;
 			this.NullMask = 0;
 		}
 	}

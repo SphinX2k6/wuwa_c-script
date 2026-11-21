@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EBE RID: 7870
+	// Token: 0x020020F7 RID: 8439
 	public class IStopGuestCartethyia_SetValue
 	{
-		// Token: 0x04006462 RID: 25698
+		// Token: 0x04006A51 RID: 27217
 		public EGuestUiAnimationType Type;
 	}
 }

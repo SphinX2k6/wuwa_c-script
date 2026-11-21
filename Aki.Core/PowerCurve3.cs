@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000E4 RID: 228
+// Token: 0x020000E6 RID: 230
 public class PowerCurve3 : CurveBase
 {
-	// Token: 0x060006EC RID: 1772 RVA: 0x00024C58 File Offset: 0x00022E58
+	// Token: 0x0600072D RID: 1837 RVA: 0x0002522C File Offset: 0x0002342C
 	[NullableContext(1)]
 	public PowerCurve3(params float[] @params) : base(Array.Empty<float>())
 	{
@@ -22,12 +22,12 @@ public class PowerCurve3 : CurveBase
 		this.N = @params[0];
 	}
 
-	// Token: 0x060006ED RID: 1773 RVA: 0x00024CBB File Offset: 0x00022EBB
+	// Token: 0x0600072E RID: 1838 RVA: 0x0002528F File Offset: 0x0002348F
 	public override float GetCurrentValueInternal(float key)
 	{
 		return (float)Math.Pow((double)key, (double)this.N);
 	}
 
-	// Token: 0x04000590 RID: 1424
+	// Token: 0x0400059F RID: 1439
 	private readonly float N;
 }

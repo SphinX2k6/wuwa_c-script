@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 {
-	// Token: 0x02005457 RID: 21591
+	// Token: 0x0200443A RID: 17466
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 	})]
 	public class BasicGraphicSettingSliderItem : GridProxyAbstract<BasicGraphicSettingSliderData>
 	{
-		// Token: 0x060371DD RID: 225757 RVA: 0x00D1071C File Offset: 0x00D0E91C
+		// Token: 0x0602C126 RID: 180518 RVA: 0x00C5FB34 File Offset: 0x00C5DD34
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			};
 		}
 
-		// Token: 0x060371DE RID: 225758 RVA: 0x00D107A4 File Offset: 0x00D0E9A4
+		// Token: 0x0602C127 RID: 180519 RVA: 0x00C5FBBC File Offset: 0x00C5DDBC
 		protected override void OnStart()
 		{
 			this.LongPressAdd = new LongPressButtonItem(new OneOf<UUIButtonComponent, UUIExtendToggle>?(base.GetButton(1)), new LongPressButtonItem.ELongPressConfigId?(LongPressButtonItem.ELongPressConfigId.LongPressOne), new Action<bool>(this.OnAdd));
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.Slider.OnValueChangeCb.Bind(new Action<float>(this.OnValueChange));
 		}
 
-		// Token: 0x060371DF RID: 225759 RVA: 0x00D1084E File Offset: 0x00D0EA4E
+		// Token: 0x0602C128 RID: 180520 RVA: 0x00C5FC66 File Offset: 0x00C5DE66
 		protected override void OnBeforeDestroy()
 		{
 			this.LongPressAdd.ShouldPlayLongPressSound = false;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.LongPressReduce = null;
 		}
 
-		// Token: 0x060371E0 RID: 225760 RVA: 0x00D1088C File Offset: 0x00D0EA8C
+		// Token: 0x0602C129 RID: 180521 RVA: 0x00C5FCA4 File Offset: 0x00C5DEA4
 		[NullableContext(1)]
 		public override void Refresh(BasicGraphicSettingSliderData data, bool isSelected, int gridIndex)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			base.GetText(3).SetText(sliderDisplayValue.ToString(), true);
 		}
 
-		// Token: 0x060371E1 RID: 225761 RVA: 0x00D10914 File Offset: 0x00D0EB14
+		// Token: 0x0602C12A RID: 180522 RVA: 0x00C5FD2C File Offset: 0x00C5DF2C
 		private void OnReduce(bool _)
 		{
 			if (this.Data == null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.Slider.SetValue(inValue, true);
 		}
 
-		// Token: 0x060371E2 RID: 225762 RVA: 0x00D1096C File Offset: 0x00D0EB6C
+		// Token: 0x0602C12B RID: 180523 RVA: 0x00C5FD84 File Offset: 0x00C5DF84
 		private void OnAdd(bool _)
 		{
 			if (this.Data == null)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			this.Slider.SetValue(inValue, true);
 		}
 
-		// Token: 0x060371E3 RID: 225763 RVA: 0x00D109C4 File Offset: 0x00D0EBC4
+		// Token: 0x0602C12C RID: 180524 RVA: 0x00C5FDDC File Offset: 0x00C5DFDC
 		private void OnValueChange(float value)
 		{
 			if (this.Data == null)
@@ -100,16 +100,16 @@ namespace CSharpScript.Game.Module.Menu.SubViews.BasicGraphicSetting
 			base.GetText(3).SetText(sliderDisplayValue.ToString(), true);
 		}
 
-		// Token: 0x0401D142 RID: 119106
+		// Token: 0x04017BDB RID: 97243
 		private BasicGraphicSettingSliderData Data;
 
-		// Token: 0x0401D143 RID: 119107
+		// Token: 0x04017BDC RID: 97244
 		private LongPressButtonItem LongPressAdd;
 
-		// Token: 0x0401D144 RID: 119108
+		// Token: 0x04017BDD RID: 97245
 		private LongPressButtonItem LongPressReduce;
 
-		// Token: 0x0401D145 RID: 119109
+		// Token: 0x04017BDE RID: 97246
 		private UUISliderComponent Slider;
 	}
 }

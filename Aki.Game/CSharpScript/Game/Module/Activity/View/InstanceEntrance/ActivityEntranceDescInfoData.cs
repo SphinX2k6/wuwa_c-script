@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F08 RID: 24328
+	// Token: 0x02004EEF RID: 20207
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityEntranceDescInfoData
 	{
-		// Token: 0x0603DD11 RID: 253201 RVA: 0x00EF134A File Offset: 0x00EEF54A
+		// Token: 0x06032CAC RID: 208044 RVA: 0x00E43052 File Offset: 0x00E41252
 		public string GetName(int dataIndex)
 		{
 			if (this.GetNameFunc == null)
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.GetNameFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD12 RID: 253202 RVA: 0x00EF1366 File Offset: 0x00EEF566
+		// Token: 0x06032CAD RID: 208045 RVA: 0x00E4306E File Offset: 0x00E4126E
 		public string GetDesc(int dataIndex)
 		{
 			if (this.GetDescFunc == null)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.GetDescFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD13 RID: 253203 RVA: 0x00EF1382 File Offset: 0x00EEF582
+		// Token: 0x06032CAE RID: 208046 RVA: 0x00E4308A File Offset: 0x00E4128A
 		public List<int> GetRecommendElement(int dataIndex)
 		{
 			if (this.GetRecommendElementFunc == null)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.GetRecommendElementFunc(dataIndex);
 		}
 
-		// Token: 0x0603DD14 RID: 253204 RVA: 0x00EF139E File Offset: 0x00EEF59E
+		// Token: 0x06032CAF RID: 208047 RVA: 0x00E430A6 File Offset: 0x00E412A6
 		public static ActivityEntranceDescInfoData Create(Func<int, string> getNameFunc, Func<int, string> getDescFunc, Func<int, List<int>> getRecommendElementFunc)
 		{
 			return new ActivityEntranceDescInfoData
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			};
 		}
 
-		// Token: 0x040204A4 RID: 132260
+		// Token: 0x0401AF76 RID: 110454
 		private Func<int, string> GetNameFunc;
 
-		// Token: 0x040204A5 RID: 132261
+		// Token: 0x0401AF77 RID: 110455
 		private Func<int, string> GetDescFunc;
 
-		// Token: 0x040204A6 RID: 132262
+		// Token: 0x0401AF78 RID: 110456
 		private Func<int, List<int>> GetRecommendElementFunc;
 	}
 }

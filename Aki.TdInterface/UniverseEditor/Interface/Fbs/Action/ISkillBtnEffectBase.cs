@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200712A RID: 28970
+	// Token: 0x020078F6 RID: 30966
 	public struct ISkillBtnEffectBase : IFlatbufferObject
 	{
-		// Token: 0x1700D756 RID: 55126
-		// (get) Token: 0x060335D5 RID: 210389 RVA: 0x006EC6E0 File Offset: 0x006EA8E0
+		// Token: 0x1700E339 RID: 58169
+		// (get) Token: 0x06036877 RID: 223351 RVA: 0x0074CCEC File Offset: 0x0074AEEC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060335D6 RID: 210390 RVA: 0x006EC6ED File Offset: 0x006EA8ED
+		// Token: 0x06036878 RID: 223352 RVA: 0x0074CCF9 File Offset: 0x0074AEF9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060335D7 RID: 210391 RVA: 0x006EC6F4 File Offset: 0x006EA8F4
+		// Token: 0x06036879 RID: 223353 RVA: 0x0074CD00 File Offset: 0x0074AF00
 		public static ISkillBtnEffectBase GetRootAsISkillBtnEffectBase(ByteBuffer _bb)
 		{
 			return ISkillBtnEffectBase.GetRootAsISkillBtnEffectBase(_bb, default(ISkillBtnEffectBase));
 		}
 
-		// Token: 0x060335D8 RID: 210392 RVA: 0x006EC710 File Offset: 0x006EA910
+		// Token: 0x0603687A RID: 223354 RVA: 0x0074CD1C File Offset: 0x0074AF1C
 		public static ISkillBtnEffectBase GetRootAsISkillBtnEffectBase(ByteBuffer _bb, ISkillBtnEffectBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060335D9 RID: 210393 RVA: 0x006EC72D File Offset: 0x006EA92D
+		// Token: 0x0603687B RID: 223355 RVA: 0x0074CD39 File Offset: 0x0074AF39
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060335DA RID: 210394 RVA: 0x006EC73C File Offset: 0x006EA93C
+		// Token: 0x0603687C RID: 223356 RVA: 0x0074CD48 File Offset: 0x0074AF48
 		public ISkillBtnEffectBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D757 RID: 55127
-		// (get) Token: 0x060335DB RID: 210395 RVA: 0x006EC74C File Offset: 0x006EA94C
+		// Token: 0x1700E33A RID: 58170
+		// (get) Token: 0x0603687D RID: 223357 RVA: 0x0074CD58 File Offset: 0x0074AF58
 		public ESkillBtnEffectType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060335DC RID: 210396 RVA: 0x006EC788 File Offset: 0x006EA988
+		// Token: 0x0603687E RID: 223358 RVA: 0x0074CD94 File Offset: 0x0074AF94
 		public static Offset<ISkillBtnEffectBase> CreateISkillBtnEffectBase(FlatBufferBuilder builder, ESkillBtnEffectType Type = ESkillBtnEffectType.MusicBattleBtnEffect)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISkillBtnEffectBase.EndISkillBtnEffectBase(builder);
 		}
 
-		// Token: 0x060335DD RID: 210397 RVA: 0x006EC79E File Offset: 0x006EA99E
+		// Token: 0x0603687F RID: 223359 RVA: 0x0074CDAA File Offset: 0x0074AFAA
 		public static void StartISkillBtnEffectBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060335DE RID: 210398 RVA: 0x006EC7A7 File Offset: 0x006EA9A7
+		// Token: 0x06036880 RID: 223360 RVA: 0x0074CDB3 File Offset: 0x0074AFB3
 		public static void AddType(FlatBufferBuilder builder, ESkillBtnEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060335DF RID: 210399 RVA: 0x006EC7B2 File Offset: 0x006EA9B2
+		// Token: 0x06036881 RID: 223361 RVA: 0x0074CDBE File Offset: 0x0074AFBE
 		public static Offset<ISkillBtnEffectBase> EndISkillBtnEffectBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ISkillBtnEffectBase>(builder.EndTable());
 		}
 
-		// Token: 0x060335E0 RID: 210400 RVA: 0x006EC7C0 File Offset: 0x006EA9C0
+		// Token: 0x06036882 RID: 223362 RVA: 0x0074CDCC File Offset: 0x0074AFCC
 		public ISkillBtnEffectBaseT UnPack()
 		{
 			ISkillBtnEffectBaseT skillBtnEffectBaseT = new ISkillBtnEffectBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return skillBtnEffectBaseT;
 		}
 
-		// Token: 0x060335E1 RID: 210401 RVA: 0x006EC7DB File Offset: 0x006EA9DB
+		// Token: 0x06036883 RID: 223363 RVA: 0x0074CDE7 File Offset: 0x0074AFE7
 		public void UnPackTo(ISkillBtnEffectBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060335E2 RID: 210402 RVA: 0x006EC7EC File Offset: 0x006EA9EC
+		// Token: 0x06036884 RID: 223364 RVA: 0x0074CDF8 File Offset: 0x0074AFF8
 		public static Offset<ISkillBtnEffectBase> Pack(FlatBufferBuilder builder, ISkillBtnEffectBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISkillBtnEffectBase.CreateISkillBtnEffectBase(builder, _o.Type);
 		}
 
-		// Token: 0x04011BC1 RID: 72641
+		// Token: 0x04012BAF RID: 76719
 		private Table __p;
 	}
 }

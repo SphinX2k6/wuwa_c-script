@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FF0 RID: 20464
+	// Token: 0x02003FBA RID: 16314
 	public enum EPlotCameraMode
 	{
-		// Token: 0x0401BDA8 RID: 114088
+		// Token: 0x04016784 RID: 92036
 		Plot,
-		// Token: 0x0401BDA9 RID: 114089
+		// Token: 0x04016785 RID: 92037
 		Main,
-		// Token: 0x0401BDAA RID: 114090
+		// Token: 0x04016786 RID: 92038
 		MainPlot,
-		// Token: 0x0401BDAB RID: 114091
+		// Token: 0x04016787 RID: 92039
 		PlotMain
 	}
 }

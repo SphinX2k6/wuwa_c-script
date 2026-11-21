@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007353 RID: 29523
+	// Token: 0x02007B2B RID: 31531
 	public class ITalkOptionSystemConditionT
 	{
-		// Token: 0x1700E02E RID: 57390
-		// (get) Token: 0x06035940 RID: 219456 RVA: 0x0074BEEF File Offset: 0x0074A0EF
-		// (set) Token: 0x06035941 RID: 219457 RVA: 0x0074BEF7 File Offset: 0x0074A0F7
+		// Token: 0x1700EC2A RID: 60458
+		// (get) Token: 0x06038C73 RID: 232563 RVA: 0x007ADA77 File Offset: 0x007ABC77
+		// (set) Token: 0x06038C74 RID: 232564 RVA: 0x007ADA7F File Offset: 0x007ABC7F
 		public ETalkOptionPreConditionType Type { get; set; }
 
-		// Token: 0x1700E02F RID: 57391
-		// (get) Token: 0x06035942 RID: 219458 RVA: 0x0074BF00 File Offset: 0x0074A100
-		// (set) Token: 0x06035943 RID: 219459 RVA: 0x0074BF08 File Offset: 0x0074A108
+		// Token: 0x1700EC2B RID: 60459
+		// (get) Token: 0x06038C75 RID: 232565 RVA: 0x007ADA88 File Offset: 0x007ABC88
+		// (set) Token: 0x06038C76 RID: 232566 RVA: 0x007ADA90 File Offset: 0x007ABC90
 		public ITalkOptionConditionSolarSchoolT System { get; set; }
 
-		// Token: 0x1700E030 RID: 57392
-		// (get) Token: 0x06035944 RID: 219460 RVA: 0x0074BF11 File Offset: 0x0074A111
-		// (set) Token: 0x06035945 RID: 219461 RVA: 0x0074BF19 File Offset: 0x0074A119
+		// Token: 0x1700EC2C RID: 60460
+		// (get) Token: 0x06038C77 RID: 232567 RVA: 0x007ADA99 File Offset: 0x007ABC99
+		// (set) Token: 0x06038C78 RID: 232568 RVA: 0x007ADAA1 File Offset: 0x007ABCA1
 		public bool HideWhenUnmet { get; set; }
 
-		// Token: 0x1700E031 RID: 57393
-		// (get) Token: 0x06035946 RID: 219462 RVA: 0x0074BF22 File Offset: 0x0074A122
-		// (set) Token: 0x06035947 RID: 219463 RVA: 0x0074BF2A File Offset: 0x0074A12A
+		// Token: 0x1700EC2D RID: 60461
+		// (get) Token: 0x06038C79 RID: 232569 RVA: 0x007ADAAA File Offset: 0x007ABCAA
+		// (set) Token: 0x06038C7A RID: 232570 RVA: 0x007ADAB2 File Offset: 0x007ABCB2
 		public bool HideConditionTextWhenUnmet { get; set; }
 
-		// Token: 0x1700E032 RID: 57394
-		// (get) Token: 0x06035948 RID: 219464 RVA: 0x0074BF33 File Offset: 0x0074A133
-		// (set) Token: 0x06035949 RID: 219465 RVA: 0x0074BF3B File Offset: 0x0074A13B
+		// Token: 0x1700EC2E RID: 60462
+		// (get) Token: 0x06038C7B RID: 232571 RVA: 0x007ADABB File Offset: 0x007ABCBB
+		// (set) Token: 0x06038C7C RID: 232572 RVA: 0x007ADAC3 File Offset: 0x007ABCC3
 		public string TidReplaceTextWhenUnmet { get; set; }
 
-		// Token: 0x1700E033 RID: 57395
-		// (get) Token: 0x0603594A RID: 219466 RVA: 0x0074BF44 File Offset: 0x0074A144
-		// (set) Token: 0x0603594B RID: 219467 RVA: 0x0074BF4C File Offset: 0x0074A14C
+		// Token: 0x1700EC2F RID: 60463
+		// (get) Token: 0x06038C7D RID: 232573 RVA: 0x007ADACC File Offset: 0x007ABCCC
+		// (set) Token: 0x06038C7E RID: 232574 RVA: 0x007ADAD4 File Offset: 0x007ABCD4
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603594C RID: 219468 RVA: 0x0074BF55 File Offset: 0x0074A155
+		// Token: 0x06038C7F RID: 232575 RVA: 0x007ADADD File Offset: 0x007ABCDD
 		public ITalkOptionSystemConditionT()
 		{
 			this.Type = ETalkOptionPreConditionType.PreOption;

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020014D1 RID: 5329
+// Token: 0x02000989 RID: 2441
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ActivityRunConfig : ConfigBase
 {
-	// Token: 0x0600975E RID: 38750 RVA: 0x0020B5F8 File Offset: 0x002097F8
+	// Token: 0x06006B38 RID: 27448 RVA: 0x00215338 File Offset: 0x00213538
 	public ParkourChallenge GetActivityRunChallengeConfig(int id)
 	{
 		return ConfigParkourChallengeById.GetConfig(id, true).Value;
 	}
 
-	// Token: 0x0600975F RID: 38751 RVA: 0x0020B614 File Offset: 0x00209814
+	// Token: 0x06006B39 RID: 27449 RVA: 0x00215354 File Offset: 0x00213554
 	public string GetActivityRunTitle(int id)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetActivityRunChallengeConfig(id).Title, null) ?? "";
 	}
 
-	// Token: 0x06009760 RID: 38752 RVA: 0x0020B640 File Offset: 0x00209840
+	// Token: 0x06006B3A RID: 27450 RVA: 0x00215380 File Offset: 0x00213580
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -46,20 +46,20 @@ public class ActivityRunConfig : ConfigBase
 		return dictionary;
 	}
 
-	// Token: 0x06009761 RID: 38753 RVA: 0x0020B6B4 File Offset: 0x002098B4
+	// Token: 0x06006B3B RID: 27451 RVA: 0x002153F4 File Offset: 0x002135F4
 	public int GetActivityRunMarkId(int id)
 	{
 		return this.GetActivityRunChallengeConfig(id).MarkId;
 	}
 
-	// Token: 0x06009762 RID: 38754 RVA: 0x0020B6D0 File Offset: 0x002098D0
+	// Token: 0x06006B3C RID: 27452 RVA: 0x00215410 File Offset: 0x00213610
 	public string GetActivityRunTexture(int id)
 	{
 		return this.GetActivityRunChallengeConfig(id).BackGroundTexture;
 	}
 
-	// Token: 0x17000D10 RID: 3344
-	// (get) Token: 0x06009763 RID: 38755 RVA: 0x0020B6EC File Offset: 0x002098EC
+	// Token: 0x17000D31 RID: 3377
+	// (get) Token: 0x06006B3D RID: 27453 RVA: 0x0021542C File Offset: 0x0021362C
 	public static ActivityRunConfig Instance
 	{
 		get
@@ -68,7 +68,7 @@ public class ActivityRunConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06009764 RID: 38756 RVA: 0x0020B6F3 File Offset: 0x002098F3
+	// Token: 0x06006B3E RID: 27454 RVA: 0x00215433 File Offset: 0x00213633
 	public static ActivityRunConfig GetOrCreateInstance()
 	{
 		if (ActivityRunConfig._Instance == null)
@@ -78,7 +78,7 @@ public class ActivityRunConfig : ConfigBase
 		return ActivityRunConfig._Instance;
 	}
 
-	// Token: 0x06009765 RID: 38757 RVA: 0x0020B707 File Offset: 0x00209907
+	// Token: 0x06006B3F RID: 27455 RVA: 0x00215447 File Offset: 0x00213647
 	public static bool CreateInstance()
 	{
 		if (ActivityRunConfig._Instance != null)
@@ -89,24 +89,24 @@ public class ActivityRunConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06009766 RID: 38758 RVA: 0x0020B71D File Offset: 0x0020991D
+	// Token: 0x06006B40 RID: 27456 RVA: 0x0021545D File Offset: 0x0021365D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009767 RID: 38759 RVA: 0x0020B71F File Offset: 0x0020991F
+	// Token: 0x06006B41 RID: 27457 RVA: 0x0021545F File Offset: 0x0021365F
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRunConfig._Instance = null;
 	}
 
-	// Token: 0x06009768 RID: 38760 RVA: 0x0020B727 File Offset: 0x00209927
+	// Token: 0x06006B42 RID: 27458 RVA: 0x00215467 File Offset: 0x00213667
 	static ActivityRunConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRunConfig.CreateStaticDefaultValue), new Action(ActivityRunConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040042AB RID: 17067
+	// Token: 0x04004350 RID: 17232
 	[Nullable(2)]
 	private static ActivityRunConfig _Instance;
 }

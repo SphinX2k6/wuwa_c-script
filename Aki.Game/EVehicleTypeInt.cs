@@ -1,28 +1,28 @@
 ﻿using System;
 
-// Token: 0x020032CE RID: 13006
+// Token: 0x0200283F RID: 10303
 public enum EVehicleTypeInt
 {
-	// Token: 0x0400DFA5 RID: 57253
+	// Token: 0x0400E448 RID: 58440
 	Unknown,
-	// Token: 0x0400DFA6 RID: 57254
+	// Token: 0x0400E449 RID: 58441
 	Gongduola,
-	// Token: 0x0400DFA7 RID: 57255
+	// Token: 0x0400E44A RID: 58442
 	AutoMoveGongduola,
-	// Token: 0x0400DFA8 RID: 57256
+	// Token: 0x0400E44B RID: 58443
 	NpcVehicle,
-	// Token: 0x0400DFA9 RID: 57257
+	// Token: 0x0400E44C RID: 58444
 	FishingBoat,
-	// Token: 0x0400DFAA RID: 57258
+	// Token: 0x0400E44D RID: 58445
 	SceneItemAutoMoveVehicle,
-	// Token: 0x0400DFAB RID: 57259
+	// Token: 0x0400E44E RID: 58446
 	Motorcycle,
-	// Token: 0x0400DFAC RID: 57260
+	// Token: 0x0400E44F RID: 58447
 	CoBathingEmptyVehicle,
-	// Token: 0x0400DFAD RID: 57261
+	// Token: 0x0400E450 RID: 58448
 	Thunderbird,
-	// Token: 0x0400DFAE RID: 57262
+	// Token: 0x0400E451 RID: 58449
 	CyberpunkShareEmptyVehicle,
-	// Token: 0x0400DFAF RID: 57263
+	// Token: 0x0400E452 RID: 58450
 	WoodenOxenAndFlowingHorses
 }

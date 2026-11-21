@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000176 RID: 374
+	// Token: 0x020000BA RID: 186
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/AIModule.EBTNodeResult")]
 	public enum EBTNodeResult
 	{
-		// Token: 0x04000672 RID: 1650
+		// Token: 0x040002A1 RID: 673
 		Succeeded,
-		// Token: 0x04000673 RID: 1651
+		// Token: 0x040002A2 RID: 674
 		Failed,
-		// Token: 0x04000674 RID: 1652
+		// Token: 0x040002A3 RID: 675
 		Aborted,
-		// Token: 0x04000675 RID: 1653
+		// Token: 0x040002A4 RID: 676
 		InProgress,
-		// Token: 0x04000676 RID: 1654
+		// Token: 0x040002A5 RID: 677
 		EBTNodeResult_MAX
 	}
 }

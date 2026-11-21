@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A4 RID: 9636
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002853 RID: 10323
 	public class IActorLookAt : ActionParams
 	{
-		// Token: 0x0600D8D7 RID: 55511 RVA: 0x00205D3B File Offset: 0x00203F3B
+		// Token: 0x0600E651 RID: 58961 RVA: 0x00221A0F File Offset: 0x0021FC0F
 		public static IActorLookAt Create(IActorLookAt? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F51 RID: 16209
-		// (get) Token: 0x0600D8D8 RID: 55512 RVA: 0x00205D5A File Offset: 0x00203F5A
+		// Token: 0x17004259 RID: 16985
+		// (get) Token: 0x0600E652 RID: 58962 RVA: 0x00221A2E File Offset: 0x0021FC2E
 		public virtual int ActorIndex
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F52 RID: 16210
-		// (get) Token: 0x0600D8D9 RID: 55513 RVA: 0x00205D67 File Offset: 0x00203F67
+		// Token: 0x1700425A RID: 16986
+		// (get) Token: 0x0600E653 RID: 58963 RVA: 0x00221A3B File Offset: 0x0021FC3B
 		public virtual IActorLookAtData Target
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F53 RID: 16211
-		// (get) Token: 0x0600D8DA RID: 55514 RVA: 0x00205D98 File Offset: 0x00203F98
+		// Token: 0x1700425B RID: 16987
+		// (get) Token: 0x0600E654 RID: 58964 RVA: 0x00221A6C File Offset: 0x0021FC6C
 		public virtual float? DelayTime
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F54 RID: 16212
-		// (get) Token: 0x0600D8DB RID: 55515 RVA: 0x00205DD0 File Offset: 0x00203FD0
+		// Token: 0x1700425C RID: 16988
+		// (get) Token: 0x0600E655 RID: 58965 RVA: 0x00221AA4 File Offset: 0x0021FCA4
 		public virtual float? LookAtSpeedRate
 		{
 			get
@@ -76,13 +73,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400787C RID: 30844
+		// Token: 0x04007EE3 RID: 32483
 		private IActorLookAt Instance;
 
-		// Token: 0x0400787D RID: 30845
+		// Token: 0x04007EE4 RID: 32484
 		private IActorLookAtData _TargetCache;
 
-		// Token: 0x0400787E RID: 30846
+		// Token: 0x04007EE5 RID: 32485
 		private bool _TargetInited;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D62 RID: 15714
+	// Token: 0x02004179 RID: 16761
 	public class ICheckPlayerPressButtonT
 	{
-		// Token: 0x17006BD8 RID: 27608
-		// (get) Token: 0x06015BE1 RID: 89057 RVA: 0x00322C6C File Offset: 0x00320E6C
-		// (set) Token: 0x06015BE2 RID: 89058 RVA: 0x00322C74 File Offset: 0x00320E74
+		// Token: 0x17007192 RID: 29074
+		// (get) Token: 0x06017119 RID: 94489 RVA: 0x00349EE4 File Offset: 0x003480E4
+		// (set) Token: 0x0601711A RID: 94490 RVA: 0x00349EEC File Offset: 0x003480EC
 		public ECheckPlayerInputType Type { get; set; }
 
-		// Token: 0x17006BD9 RID: 27609
-		// (get) Token: 0x06015BE3 RID: 89059 RVA: 0x00322C7D File Offset: 0x00320E7D
-		// (set) Token: 0x06015BE4 RID: 89060 RVA: 0x00322C85 File Offset: 0x00320E85
+		// Token: 0x17007193 RID: 29075
+		// (get) Token: 0x0601711B RID: 94491 RVA: 0x00349EF5 File Offset: 0x003480F5
+		// (set) Token: 0x0601711C RID: 94492 RVA: 0x00349EFD File Offset: 0x003480FD
 		public EPlayerButtonType ButtonType { get; set; }
 
-		// Token: 0x06015BE5 RID: 89061 RVA: 0x00322C8E File Offset: 0x00320E8E
+		// Token: 0x0601711D RID: 94493 RVA: 0x00349F06 File Offset: 0x00348106
 		public ICheckPlayerPressButtonT()
 		{
 			this.Type = ECheckPlayerInputType.PressButton;

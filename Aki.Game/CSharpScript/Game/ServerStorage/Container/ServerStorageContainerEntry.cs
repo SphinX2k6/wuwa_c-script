@@ -4,15 +4,15 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.ServerStorage.Container
 {
-	// Token: 0x02004586 RID: 17798
+	// Token: 0x020034AE RID: 13486
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ServerStorageContainerEntry<[Nullable(2)] T> : ServerStorageEntryBase
 	{
-		// Token: 0x0602DEB0 RID: 188080
+		// Token: 0x0602259A RID: 140698
 		protected abstract T CreateContainer();
 
-		// Token: 0x0602DEB1 RID: 188081 RVA: 0x00A8EE7D File Offset: 0x00A8D07D
+		// Token: 0x0602259B RID: 140699 RVA: 0x009BB09D File Offset: 0x009B929D
 		public T GetContainer()
 		{
 			if (this.Data == null)
@@ -22,12 +22,12 @@ namespace CSharpScript.Game.ServerStorage.Container
 			return this.Data;
 		}
 
-		// Token: 0x0602DEB2 RID: 188082 RVA: 0x00A8EE9E File Offset: 0x00A8D09E
+		// Token: 0x0602259C RID: 140700 RVA: 0x009BB0BE File Offset: 0x009B92BE
 		public ServerStorageContainerEntry(EClientStorageSystemIdType key) : base(key)
 		{
 		}
 
-		// Token: 0x04018848 RID: 100424
+		// Token: 0x04012E83 RID: 77443
 		[Nullable(2)]
 		private T Data;
 	}

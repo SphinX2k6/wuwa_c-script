@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053B0 RID: 21424
+	// Token: 0x02005936 RID: 22838
 	public struct IHoldingTrackTarget : IFlatbufferObject
 	{
-		// Token: 0x17009D6F RID: 40303
-		// (get) Token: 0x06023196 RID: 143766 RVA: 0x004DBDDA File Offset: 0x004D9FDA
+		// Token: 0x1700A5A7 RID: 42407
+		// (get) Token: 0x0602524A RID: 152138 RVA: 0x00518CAE File Offset: 0x00516EAE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023197 RID: 143767 RVA: 0x004DBDE7 File Offset: 0x004D9FE7
+		// Token: 0x0602524B RID: 152139 RVA: 0x00518CBB File Offset: 0x00516EBB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023198 RID: 143768 RVA: 0x004DBDF0 File Offset: 0x004D9FF0
+		// Token: 0x0602524C RID: 152140 RVA: 0x00518CC4 File Offset: 0x00516EC4
 		public static IHoldingTrackTarget GetRootAsIHoldingTrackTarget(ByteBuffer _bb)
 		{
 			return IHoldingTrackTarget.GetRootAsIHoldingTrackTarget(_bb, default(IHoldingTrackTarget));
 		}
 
-		// Token: 0x06023199 RID: 143769 RVA: 0x004DBE0C File Offset: 0x004DA00C
+		// Token: 0x0602524D RID: 152141 RVA: 0x00518CE0 File Offset: 0x00516EE0
 		public static IHoldingTrackTarget GetRootAsIHoldingTrackTarget(ByteBuffer _bb, IHoldingTrackTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602319A RID: 143770 RVA: 0x004DBE29 File Offset: 0x004DA029
+		// Token: 0x0602524E RID: 152142 RVA: 0x00518CFD File Offset: 0x00516EFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602319B RID: 143771 RVA: 0x004DBE38 File Offset: 0x004DA038
+		// Token: 0x0602524F RID: 152143 RVA: 0x00518D0C File Offset: 0x00516F0C
 		public IHoldingTrackTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009D70 RID: 40304
-		// (get) Token: 0x0602319C RID: 143772 RVA: 0x004DBE48 File Offset: 0x004DA048
+		// Token: 0x1700A5A8 RID: 42408
+		// (get) Token: 0x06025250 RID: 152144 RVA: 0x00518D1C File Offset: 0x00516F1C
 		public string EffectPath
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602319D RID: 143773 RVA: 0x004DBE7F File Offset: 0x004DA07F
+		// Token: 0x06025251 RID: 152145 RVA: 0x00518D53 File Offset: 0x00516F53
 		public Span<byte> GetEffectPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602319E RID: 143774 RVA: 0x004DBE8E File Offset: 0x004DA08E
+		// Token: 0x06025252 RID: 152146 RVA: 0x00518D62 File Offset: 0x00516F62
 		public byte[] GetEffectPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009D71 RID: 40305
-		// (get) Token: 0x0602319F RID: 143775 RVA: 0x004DBE9C File Offset: 0x004DA09C
+		// Token: 0x1700A5A9 RID: 42409
+		// (get) Token: 0x06025253 RID: 152147 RVA: 0x00518D70 File Offset: 0x00516F70
 		public int EffectLength
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009D72 RID: 40306
-		// (get) Token: 0x060231A0 RID: 143776 RVA: 0x004DBED8 File Offset: 0x004DA0D8
+		// Token: 0x1700A5AA RID: 42410
+		// (get) Token: 0x06025254 RID: 152148 RVA: 0x00518DAC File Offset: 0x00516FAC
 		public int EntityId
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060231A1 RID: 143777 RVA: 0x004DBF14 File Offset: 0x004DA114
+		// Token: 0x06025255 RID: 152149 RVA: 0x00518DE8 File Offset: 0x00516FE8
 		public static Offset<IHoldingTrackTarget> CreateIHoldingTrackTarget(FlatBufferBuilder builder, StringOffset EffectPathOffset = default(StringOffset), int EffectLength = 0, int EntityId = 0)
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHoldingTrackTarget.EndIHoldingTrackTarget(builder);
 		}
 
-		// Token: 0x060231A2 RID: 143778 RVA: 0x004DBF38 File Offset: 0x004DA138
+		// Token: 0x06025256 RID: 152150 RVA: 0x00518E0C File Offset: 0x0051700C
 		public static void StartIHoldingTrackTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060231A3 RID: 143779 RVA: 0x004DBF41 File Offset: 0x004DA141
+		// Token: 0x06025257 RID: 152151 RVA: 0x00518E15 File Offset: 0x00517015
 		public static void AddEffectPath(FlatBufferBuilder builder, StringOffset effectPathOffset)
 		{
 			builder.AddOffset(0, effectPathOffset.Value, 0);
 		}
 
-		// Token: 0x060231A4 RID: 143780 RVA: 0x004DBF51 File Offset: 0x004DA151
+		// Token: 0x06025258 RID: 152152 RVA: 0x00518E25 File Offset: 0x00517025
 		public static void AddEffectLength(FlatBufferBuilder builder, int effectLength)
 		{
 			builder.AddInt(1, effectLength, 0);
 		}
 
-		// Token: 0x060231A5 RID: 143781 RVA: 0x004DBF5C File Offset: 0x004DA15C
+		// Token: 0x06025259 RID: 152153 RVA: 0x00518E30 File Offset: 0x00517030
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(2, entityId, 0);
 		}
 
-		// Token: 0x060231A6 RID: 143782 RVA: 0x004DBF67 File Offset: 0x004DA167
+		// Token: 0x0602525A RID: 152154 RVA: 0x00518E3B File Offset: 0x0051703B
 		public static Offset<IHoldingTrackTarget> EndIHoldingTrackTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IHoldingTrackTarget>(builder.EndTable());
 		}
 
-		// Token: 0x060231A7 RID: 143783 RVA: 0x004DBF74 File Offset: 0x004DA174
+		// Token: 0x0602525B RID: 152155 RVA: 0x00518E48 File Offset: 0x00517048
 		public IHoldingTrackTargetT UnPack()
 		{
 			IHoldingTrackTargetT holdingTrackTargetT = new IHoldingTrackTargetT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return holdingTrackTargetT;
 		}
 
-		// Token: 0x060231A8 RID: 143784 RVA: 0x004DBF8F File Offset: 0x004DA18F
+		// Token: 0x0602525C RID: 152156 RVA: 0x00518E63 File Offset: 0x00517063
 		public void UnPackTo(IHoldingTrackTargetT _o)
 		{
 			_o.EffectPath = this.EffectPath;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.EntityId = this.EntityId;
 		}
 
-		// Token: 0x060231A9 RID: 143785 RVA: 0x004DBFB8 File Offset: 0x004DA1B8
+		// Token: 0x0602525D RID: 152157 RVA: 0x00518E8C File Offset: 0x0051708C
 		public static Offset<IHoldingTrackTarget> Pack(FlatBufferBuilder builder, IHoldingTrackTargetT _o)
 		{
 			if (_o == null)
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IHoldingTrackTarget.CreateIHoldingTrackTarget(builder, effectPathOffset, _o.EffectLength, _o.EntityId);
 		}
 
-		// Token: 0x0400E5A9 RID: 58793
+		// Token: 0x0400F1D9 RID: 61913
 		private Table __p;
 	}
 }

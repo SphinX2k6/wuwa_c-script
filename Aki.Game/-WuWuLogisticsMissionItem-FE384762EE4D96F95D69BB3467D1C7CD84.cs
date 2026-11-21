@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02001666 RID: 5734
+// Token: 0x02000B1E RID: 2846
 internal enum <WuWuLogisticsMissionItem>FE384762EE4D96F95D69BB3467D1C7CD8485DD827A992EB62829252E6D4951142__EComponents
 {
-	// Token: 0x04004980 RID: 18816
+	// Token: 0x04004A26 RID: 18982
 	TxtTitle,
-	// Token: 0x04004981 RID: 18817
+	// Token: 0x04004A27 RID: 18983
 	TxtValue,
-	// Token: 0x04004982 RID: 18818
+	// Token: 0x04004A28 RID: 18984
 	SvItem,
-	// Token: 0x04004983 RID: 18819
+	// Token: 0x04004A29 RID: 18985
 	UIItemItemBaseB,
-	// Token: 0x04004984 RID: 18820
+	// Token: 0x04004A2A RID: 18986
 	PnlLock,
-	// Token: 0x04004985 RID: 18821
+	// Token: 0x04004A2B RID: 18987
 	PnlUnlock,
-	// Token: 0x04004986 RID: 18822
+	// Token: 0x04004A2C RID: 18988
 	BtnConfirmC,
-	// Token: 0x04004987 RID: 18823
+	// Token: 0x04004A2D RID: 18989
 	PnlFinished
 }

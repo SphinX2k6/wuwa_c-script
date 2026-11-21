@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D3 RID: 18643
+	// Token: 0x0200384A RID: 14410
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RangeCheck
 	{
-		// Token: 0x06030B93 RID: 199571 RVA: 0x00B508CE File Offset: 0x00B4EACE
+		// Token: 0x060256BF RID: 153279 RVA: 0x00A8B6D6 File Offset: 0x00A898D6
 		public RangeCheck()
 		{
 			this.RangeMap = new Dictionary<int, SRangeContainer>();
 		}
 
-		// Token: 0x06030B94 RID: 199572 RVA: 0x00B508E1 File Offset: 0x00B4EAE1
+		// Token: 0x060256C0 RID: 153280 RVA: 0x00A8B6E9 File Offset: 0x00A898E9
 		public bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06030B95 RID: 199573 RVA: 0x00B508E4 File Offset: 0x00B4EAE4
+		// Token: 0x060256C1 RID: 153281 RVA: 0x00A8B6EC File Offset: 0x00A898EC
 		public bool OnClear()
 		{
 			if (this.RangeMap != null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x06030B96 RID: 199574 RVA: 0x00B50954 File Offset: 0x00B4EB54
+		// Token: 0x060256C2 RID: 153282 RVA: 0x00A8B75C File Offset: 0x00A8995C
 		[NullableContext(2)]
 		public SRangeContainer GetOrAdd(int entityId)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Util
 			return result2;
 		}
 
-		// Token: 0x06030B97 RID: 199575 RVA: 0x00B509AC File Offset: 0x00B4EBAC
+		// Token: 0x060256C3 RID: 153283 RVA: 0x00A8B7B4 File Offset: 0x00A899B4
 		public bool MakeRange(int entityId)
 		{
 			if (this.RangeMap == null)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x06030B98 RID: 199576 RVA: 0x00B509E8 File Offset: 0x00B4EBE8
+		// Token: 0x060256C4 RID: 153284 RVA: 0x00A8B7F0 File Offset: 0x00A899F0
 		public int[] MapCheckReached()
 		{
 			List<int> list = new List<int>();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Util
 			return list.ToArray();
 		}
 
-		// Token: 0x06030B99 RID: 199577 RVA: 0x00B50A74 File Offset: 0x00B4EC74
+		// Token: 0x060256C5 RID: 153285 RVA: 0x00A8B87C File Offset: 0x00A89A7C
 		public bool CheckReached(int? entityId)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Util
 			return false;
 		}
 
-		// Token: 0x06030B9A RID: 199578 RVA: 0x00B50B0C File Offset: 0x00B4ED0C
+		// Token: 0x060256C6 RID: 153286 RVA: 0x00A8B914 File Offset: 0x00A89B14
 		public void Remove(int entityId)
 		{
 			if (this.RangeMap == null || !this.RangeMap.ContainsKey(entityId))
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Util
 			this.RangeMap.Remove(entityId);
 		}
 
-		// Token: 0x06030B9B RID: 199579 RVA: 0x00B50B34 File Offset: 0x00B4ED34
+		// Token: 0x060256C7 RID: 153287 RVA: 0x00A8B93C File Offset: 0x00A89B3C
 		public int? MapCheckReachedPosition(Vector itemPosition)
 		{
 			int? result = null;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030B9C RID: 199580 RVA: 0x00B50BB8 File Offset: 0x00B4EDB8
+		// Token: 0x060256C8 RID: 153288 RVA: 0x00A8B9C0 File Offset: 0x00A89BC0
 		public bool CheckReachedPosition(int? entityId, Vector itemPosition)
 		{
 			if (entityId != null)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Util
 			return false;
 		}
 
-		// Token: 0x0401A2CB RID: 107211
+		// Token: 0x04014B3E RID: 84798
 		[Nullable(new byte[]
 		{
 			2,
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Util
 		})]
 		public Dictionary<int, SRangeContainer> RangeMap;
 
-		// Token: 0x0401A2CC RID: 107212
+		// Token: 0x04014B3F RID: 84799
 		[Nullable(2)]
 		public Vector PlayerPosition;
 	}

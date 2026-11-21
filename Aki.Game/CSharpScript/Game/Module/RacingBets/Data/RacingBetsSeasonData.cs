@@ -10,12 +10,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.RacingBets.Data
 {
-	// Token: 0x02004F2C RID: 20268
+	// Token: 0x02003EF5 RID: 16117
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RacingBetsSeasonData : ActivityBaseData
 	{
-		// Token: 0x06033FC2 RID: 212930 RVA: 0x00C2FFC4 File Offset: 0x00C2E1C4
+		// Token: 0x06028E30 RID: 167472 RVA: 0x00B7976C File Offset: 0x00B7796C
 		protected override void PhraseEx(ActivityData data)
 		{
 			RacingBetsActivityData racingBetsData = data.RacingBetsData;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			EventSystem.Instance.Emit<RacingBetsSeasonData>(EEventName.OnRacingBetsDataRefresh, this);
 		}
 
-		// Token: 0x06033FC3 RID: 212931 RVA: 0x00C300A0 File Offset: 0x00C2E2A0
+		// Token: 0x06028E31 RID: 167473 RVA: 0x00B79848 File Offset: 0x00B77A48
 		private void Refresh(RacingBetsActivityData activityInfo)
 		{
 			this.RefreshMatchData(new List<RacingBetsGroupMatchesInfo>(activityInfo.MatchInfos));
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			EventSystem.Instance.Emit<RacingBetsSeasonData>(EEventName.OnRacingBetsDataRefresh, this);
 		}
 
-		// Token: 0x06033FC4 RID: 212932 RVA: 0x00C3010C File Offset: 0x00C2E30C
+		// Token: 0x06028E32 RID: 167474 RVA: 0x00B798B4 File Offset: 0x00B77AB4
 		public void RefreshMatchInfo(RacingBetsMatchInfoResponse message)
 		{
 			this.RefreshMatchData(new List<RacingBetsGroupMatchesInfo>(message.MatchInfos));
 		}
 
-		// Token: 0x06033FC5 RID: 212933 RVA: 0x00C3011F File Offset: 0x00C2E31F
+		// Token: 0x06028E33 RID: 167475 RVA: 0x00B798C7 File Offset: 0x00B77AC7
 		protected override void OnActivityClose()
 		{
 			RacingBetsController.Instance.TryLeaveRacingBetsDungeon();
 		}
 
-		// Token: 0x06033FC6 RID: 212934 RVA: 0x00C3012C File Offset: 0x00C2E32C
+		// Token: 0x06028E34 RID: 167476 RVA: 0x00B798D4 File Offset: 0x00B77AD4
 		public override bool GetExDataRedPointShowState()
 		{
 			using (Dictionary<int, RacingBetsRewardData>.ValueCollection.Enumerator enumerator = this.RewardDataMap.Values.GetEnumerator())
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return legMatchState == ERacingBetsLegMatchState.EndOfMatch && curLegMatchData.Id > player2;
 		}
 
-		// Token: 0x06033FC7 RID: 212935 RVA: 0x00C301E4 File Offset: 0x00C2E3E4
+		// Token: 0x06028E35 RID: 167477 RVA: 0x00B7998C File Offset: 0x00B77B8C
 		private void InitMatchData(List<RacingBetsGroupMatchesInfo> matchInfos)
 		{
 			if (matchInfos == null || matchInfos.Count <= 0)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			});
 		}
 
-		// Token: 0x06033FC8 RID: 212936 RVA: 0x00C30360 File Offset: 0x00C2E560
+		// Token: 0x06028E36 RID: 167478 RVA: 0x00B79B08 File Offset: 0x00B77D08
 		private void UpdateGroupMatchDangoSource()
 		{
 			foreach (RacingBetsGroupMatchData racingBetsGroupMatchData in this.GroupMatchMap.Values)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FC9 RID: 212937 RVA: 0x00C303F8 File Offset: 0x00C2E5F8
+		// Token: 0x06028E37 RID: 167479 RVA: 0x00B79BA0 File Offset: 0x00B77DA0
 		private void RefreshMatchData(List<RacingBetsGroupMatchesInfo> matchInfos)
 		{
 			if (matchInfos == null || matchInfos.Count <= 0)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FCA RID: 212938 RVA: 0x00C304C8 File Offset: 0x00C2E6C8
+		// Token: 0x06028E38 RID: 167480 RVA: 0x00B79C70 File Offset: 0x00B77E70
 		public unsafe void RefreshPlayerData(RacingBetPlayerInfo playerInfo)
 		{
 			this.BetItemData = new TItem(new InventoryDefine.GetItemData(this.SeasonConfig.Id, 0), playerInfo.CurCash);
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			this.RefreshBetsInfo(new List<RacingBetsGearInfo>(playerInfo.GearInfo));
 		}
 
-		// Token: 0x06033FCB RID: 212939 RVA: 0x00C3058C File Offset: 0x00C2E78C
+		// Token: 0x06028E39 RID: 167481 RVA: 0x00B79D34 File Offset: 0x00B77F34
 		private void RefreshBetsInfo(List<RacingBetsGearInfo> betsInfo)
 		{
 			foreach (RacingBetsGearInfo racingBetsGearInfo in betsInfo)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FCC RID: 212940 RVA: 0x00C305E8 File Offset: 0x00C2E7E8
+		// Token: 0x06028E3A RID: 167482 RVA: 0x00B79D90 File Offset: 0x00B77F90
 		private void InitRewardData(List<ConditionTaskData> taskDataList)
 		{
 			this.RewardDataMap.Clear();
@@ -222,8 +222,8 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FCD RID: 212941 RVA: 0x00C3067C File Offset: 0x00C2E87C
-		public void RefreshRewardData(List<ConditionTaskData> taskDataList)
+		// Token: 0x06028E3B RID: 167483 RVA: 0x00B79E24 File Offset: 0x00B78024
+		public void RefreshRewardData(IEnumerable<ConditionTaskData> taskDataList)
 		{
 			foreach (ConditionTaskData conditionTaskData in taskDataList)
 			{
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FCE RID: 212942 RVA: 0x00C306D8 File Offset: 0x00C2E8D8
+		// Token: 0x06028E3C RID: 167484 RVA: 0x00B79E78 File Offset: 0x00B78078
 		private void InitRankUpdateTime(RepeatedField<long> rankTimeList)
 		{
 			int count = rankTimeList.Count;
@@ -242,13 +242,13 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			}
 		}
 
-		// Token: 0x06033FCF RID: 212943 RVA: 0x00C30721 File Offset: 0x00C2E921
+		// Token: 0x06028E3D RID: 167485 RVA: 0x00B79EC1 File Offset: 0x00B780C1
 		private void InitCloseSettleLegMatchIdList(List<int> closeSettleLegMatchIdList)
 		{
 			this.CloseSettleLegMatchIdList = closeSettleLegMatchIdList;
 		}
 
-		// Token: 0x06033FD0 RID: 212944 RVA: 0x00C3072A File Offset: 0x00C2E92A
+		// Token: 0x06028E3E RID: 167486 RVA: 0x00B79ECA File Offset: 0x00B780CA
 		public void AddCloseSettleLegMatchId(int legMatchId)
 		{
 			if (this.CloseSettleLegMatchIdList.Contains(legMatchId))
@@ -258,25 +258,25 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			this.CloseSettleLegMatchIdList.Add(legMatchId);
 		}
 
-		// Token: 0x06033FD1 RID: 212945 RVA: 0x00C30747 File Offset: 0x00C2E947
+		// Token: 0x06028E3F RID: 167487 RVA: 0x00B79EE7 File Offset: 0x00B780E7
 		public TItem GetBetItemData()
 		{
 			return this.BetItemData;
 		}
 
-		// Token: 0x06033FD2 RID: 212946 RVA: 0x00C3074F File Offset: 0x00C2E94F
+		// Token: 0x06028E40 RID: 167488 RVA: 0x00B79EEF File Offset: 0x00B780EF
 		public RacingBetsSeason GetSeasonConfig()
 		{
 			return this.SeasonConfig;
 		}
 
-		// Token: 0x06033FD3 RID: 212947 RVA: 0x00C30757 File Offset: 0x00C2E957
+		// Token: 0x06028E41 RID: 167489 RVA: 0x00B79EF7 File Offset: 0x00B780F7
 		public int GetTotalBetCount()
 		{
 			return this.AccumulateBetsCashCount;
 		}
 
-		// Token: 0x06033FD4 RID: 212948 RVA: 0x00C30760 File Offset: 0x00C2E960
+		// Token: 0x06028E42 RID: 167490 RVA: 0x00B79F00 File Offset: 0x00B78100
 		[NullableContext(2)]
 		public RacingBetsGroupMatchData GetGroupMatchData(int matchId)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return result;
 		}
 
-		// Token: 0x06033FD5 RID: 212949 RVA: 0x00C307B0 File Offset: 0x00C2E9B0
+		// Token: 0x06028E43 RID: 167491 RVA: 0x00B79F50 File Offset: 0x00B78150
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetLegMatchData(int legMatchId)
 		{
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return result;
 		}
 
-		// Token: 0x06033FD6 RID: 212950 RVA: 0x00C30800 File Offset: 0x00C2EA00
+		// Token: 0x06028E44 RID: 167492 RVA: 0x00B79FA0 File Offset: 0x00B781A0
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetCurLegMatchData()
 		{
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return this.GetLegMatchDataByIndex(curLegMatchDataIndex);
 		}
 
-		// Token: 0x06033FD7 RID: 212951 RVA: 0x00C3081C File Offset: 0x00C2EA1C
+		// Token: 0x06028E45 RID: 167493 RVA: 0x00B79FBC File Offset: 0x00B781BC
 		public int GetCurLegMatchDataIndex()
 		{
 			for (int i = this.LegMatchList.Count - 1; i >= 0; i--)
@@ -332,7 +332,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return this.LegMatchList.Count - 1;
 		}
 
-		// Token: 0x06033FD8 RID: 212952 RVA: 0x00C3086D File Offset: 0x00C2EA6D
+		// Token: 0x06028E46 RID: 167494 RVA: 0x00B7A00D File Offset: 0x00B7820D
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetLegMatchDataByIndex(int index)
 		{
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return this.LegMatchList[index];
 		}
 
-		// Token: 0x06033FD9 RID: 212953 RVA: 0x00C30890 File Offset: 0x00C2EA90
+		// Token: 0x06028E47 RID: 167495 RVA: 0x00B7A030 File Offset: 0x00B78230
 		[NullableContext(0)]
 		public ValueTuple<int, int> GetCurLegMatchRankOpenTime()
 		{
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return new ValueTuple<int, int>(item, item2);
 		}
 
-		// Token: 0x06033FDA RID: 212954 RVA: 0x00C308F0 File Offset: 0x00C2EAF0
+		// Token: 0x06028E48 RID: 167496 RVA: 0x00B7A090 File Offset: 0x00B78290
 		public int GetNextRankUpdateTime()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return -1;
 		}
 
-		// Token: 0x06033FDB RID: 212955 RVA: 0x00C30954 File Offset: 0x00C2EB54
+		// Token: 0x06028E49 RID: 167497 RVA: 0x00B7A0F4 File Offset: 0x00B782F4
 		public bool CheckRankOpen()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return serverTime >= (double)num;
 		}
 
-		// Token: 0x06033FDC RID: 212956 RVA: 0x00C30994 File Offset: 0x00C2EB94
+		// Token: 0x06028E4A RID: 167498 RVA: 0x00B7A134 File Offset: 0x00B78334
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return list;
 		}
 
-		// Token: 0x06033FDD RID: 212957 RVA: 0x00C309EC File Offset: 0x00C2EBEC
+		// Token: 0x06028E4B RID: 167499 RVA: 0x00B7A18C File Offset: 0x00B7838C
 		public bool IsFinalLegMatch(int legMatchId)
 		{
 			RacingBetsLegMatchData legMatchData = this.GetLegMatchData(legMatchId);
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return false;
 		}
 
-		// Token: 0x06033FDE RID: 212958 RVA: 0x00C30A38 File Offset: 0x00C2EC38
+		// Token: 0x06028E4C RID: 167500 RVA: 0x00B7A1D8 File Offset: 0x00B783D8
 		public int GetNextLegMatchIndex(int legMatchId)
 		{
 			for (int i = 0; i < this.LegMatchList.Count; i++)
@@ -435,7 +435,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return -1;
 		}
 
-		// Token: 0x06033FDF RID: 212959 RVA: 0x00C30A74 File Offset: 0x00C2EC74
+		// Token: 0x06028E4D RID: 167501 RVA: 0x00B7A214 File Offset: 0x00B78414
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetNextLegMatchData(int legMatchId)
 		{
@@ -443,7 +443,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return this.GetLegMatchDataByIndex(nextLegMatchIndex);
 		}
 
-		// Token: 0x06033FE0 RID: 212960 RVA: 0x00C30A90 File Offset: 0x00C2EC90
+		// Token: 0x06028E4E RID: 167502 RVA: 0x00B7A230 File Offset: 0x00B78430
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetEndOfMatchLegMatchData()
 		{
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return null;
 		}
 
-		// Token: 0x06033FE1 RID: 212961 RVA: 0x00C30AEC File Offset: 0x00C2ECEC
+		// Token: 0x06028E4F RID: 167503 RVA: 0x00B7A28C File Offset: 0x00B7848C
 		[NullableContext(2)]
 		public RacingBetsRewardData GetRewardData(int rewardId)
 		{
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return result;
 		}
 
-		// Token: 0x06033FE2 RID: 212962 RVA: 0x00C30B3C File Offset: 0x00C2ED3C
+		// Token: 0x06028E50 RID: 167504 RVA: 0x00B7A2DC File Offset: 0x00B784DC
 		public RacingBetsGroupRewardData GetGroupRewardData(ERacingBetsRewardType rewardType)
 		{
 			RacingBetsGroupRewardData racingBetsGroupRewardData;
@@ -487,43 +487,43 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return racingBetsGroupRewardData;
 		}
 
-		// Token: 0x06033FE3 RID: 212963 RVA: 0x00C30B70 File Offset: 0x00C2ED70
+		// Token: 0x06028E51 RID: 167505 RVA: 0x00B7A310 File Offset: 0x00B78510
 		public int GetHitNum()
 		{
 			return this.HitNum;
 		}
 
-		// Token: 0x06033FE4 RID: 212964 RVA: 0x00C30B78 File Offset: 0x00C2ED78
+		// Token: 0x06028E52 RID: 167506 RVA: 0x00B7A318 File Offset: 0x00B78518
 		public int GetCurrencyItemId()
 		{
 			return this.SeasonConfig.MoneyId;
 		}
 
-		// Token: 0x06033FE5 RID: 212965 RVA: 0x00C30B85 File Offset: 0x00C2ED85
+		// Token: 0x06028E53 RID: 167507 RVA: 0x00B7A325 File Offset: 0x00B78525
 		public int GetCurrencyCount()
 		{
 			return InventoryModel.Instance.GetCommonItemCount(this.SeasonConfig.MoneyId, 0);
 		}
 
-		// Token: 0x06033FE6 RID: 212966 RVA: 0x00C30B9D File Offset: 0x00C2ED9D
+		// Token: 0x06028E54 RID: 167508 RVA: 0x00B7A33D File Offset: 0x00B7853D
 		public int GetBetCostCount(RacingBettingGear gearConfig)
 		{
 			return (int)Math.Ceiling((double)(this.GetCurrencyCount() * gearConfig.Odds) / 100.0);
 		}
 
-		// Token: 0x06033FE7 RID: 212967 RVA: 0x00C30BBE File Offset: 0x00C2EDBE
+		// Token: 0x06028E55 RID: 167509 RVA: 0x00B7A35E File Offset: 0x00B7855E
 		public bool GetActivityTipNeedShowState()
 		{
 			return this.CheckIfInOpenTime() && this.CheckIfInShowTime() && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, 0, 0) == 0;
 		}
 
-		// Token: 0x06033FE8 RID: 212968 RVA: 0x00C30BE9 File Offset: 0x00C2EDE9
+		// Token: 0x06028E56 RID: 167510 RVA: 0x00B7A389 File Offset: 0x00B78589
 		public bool CheckLegMatchIsCloseSettle(int legMatchId)
 		{
 			return this.CloseSettleLegMatchIdList.Contains(legMatchId);
 		}
 
-		// Token: 0x06033FE9 RID: 212969 RVA: 0x00C30BF8 File Offset: 0x00C2EDF8
+		// Token: 0x06028E57 RID: 167511 RVA: 0x00B7A398 File Offset: 0x00B78598
 		[NullableContext(2)]
 		public RacingBetsLegMatchData GetLegMatchDataForMatchStateText()
 		{
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return endOfMatchLegMatchData;
 		}
 
-		// Token: 0x06033FEA RID: 212970 RVA: 0x00C30C64 File Offset: 0x00C2EE64
+		// Token: 0x06028E58 RID: 167512 RVA: 0x00B7A404 File Offset: 0x00B78604
 		public string GetMatchStateDisplayText()
 		{
 			RacingBetsLegMatchData legMatchDataForMatchStateText = this.GetLegMatchDataForMatchStateText();
@@ -561,7 +561,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return this.GetMatchStateDisplayTextForLeg(legMatchDataForMatchStateText);
 		}
 
-		// Token: 0x06033FEB RID: 212971 RVA: 0x00C30C88 File Offset: 0x00C2EE88
+		// Token: 0x06028E59 RID: 167513 RVA: 0x00B7A428 File Offset: 0x00B78628
 		public static string GetMatchStateDisplayTextForEntranceActivityId(int activityId)
 		{
 			RacingBetsSeasonData racingBetsSeasonData = ActivityModel.Instance.GetActivityById(activityId) as RacingBetsSeasonData;
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return ((racingBetsSeasonData2 != null) ? racingBetsSeasonData2.GetMatchStateDisplayText() : null) ?? "";
 		}
 
-		// Token: 0x06033FEC RID: 212972 RVA: 0x00C30CD0 File Offset: 0x00C2EED0
+		// Token: 0x06028E5A RID: 167514 RVA: 0x00B7A470 File Offset: 0x00B78670
 		public string GetMatchStateDisplayTextForLeg(RacingBetsLegMatchData legMatchData)
 		{
 			ERacingBetsLegMatchState legMatchState = legMatchData.GetLegMatchState();
@@ -600,7 +600,7 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			});
 		}
 
-		// Token: 0x06033FED RID: 212973 RVA: 0x00C30D80 File Offset: 0x00C2EF80
+		// Token: 0x06028E5B RID: 167515 RVA: 0x00B7A520 File Offset: 0x00B78720
 		private static string GetMatchStateTimeTextKey(ERacingBetsLegMatchState state, bool isFinalMatch)
 		{
 			if (state == ERacingBetsLegMatchState.BettingPeriod)
@@ -632,43 +632,43 @@ namespace CSharpScript.Game.Module.RacingBets.Data
 			return "Dango_ActivityPage_StatusTime_FinalRaceEnd";
 		}
 
-		// Token: 0x0401B9C5 RID: 113093
+		// Token: 0x0401639A RID: 91034
 		private const int OPEN_TIP_KEY = 1;
 
-		// Token: 0x0401B9C6 RID: 113094
+		// Token: 0x0401639B RID: 91035
 		private int AccumulateBetsCashCount;
 
-		// Token: 0x0401B9C7 RID: 113095
+		// Token: 0x0401639C RID: 91036
 		private TItem BetItemData;
 
-		// Token: 0x0401B9C8 RID: 113096
+		// Token: 0x0401639D RID: 91037
 		private RacingBetsSeason SeasonConfig;
 
-		// Token: 0x0401B9C9 RID: 113097
+		// Token: 0x0401639E RID: 91038
 		private int HitNum;
 
-		// Token: 0x0401B9CA RID: 113098
+		// Token: 0x0401639F RID: 91039
 		private readonly Dictionary<int, RacingBetsGroupMatchData> GroupMatchMap = new Dictionary<int, RacingBetsGroupMatchData>();
 
-		// Token: 0x0401B9CB RID: 113099
+		// Token: 0x040163A0 RID: 91040
 		private readonly Dictionary<int, RacingBetsLegMatchData> LegMatchMap = new Dictionary<int, RacingBetsLegMatchData>();
 
-		// Token: 0x0401B9CC RID: 113100
+		// Token: 0x040163A1 RID: 91041
 		private List<RacingBetsLegMatchData> LegMatchList = new List<RacingBetsLegMatchData>();
 
-		// Token: 0x0401B9CD RID: 113101
+		// Token: 0x040163A2 RID: 91042
 		private readonly Dictionary<ERacingBetsRewardType, RacingBetsGroupRewardData> RewardGroupDataMap = new Dictionary<ERacingBetsRewardType, RacingBetsGroupRewardData>();
 
-		// Token: 0x0401B9CE RID: 113102
+		// Token: 0x040163A3 RID: 91043
 		private readonly Dictionary<int, RacingBetsRewardData> RewardDataMap = new Dictionary<int, RacingBetsRewardData>();
 
-		// Token: 0x0401B9CF RID: 113103
+		// Token: 0x040163A4 RID: 91044
 		private List<int> RankListUpdateTime = new List<int>();
 
-		// Token: 0x0401B9D0 RID: 113104
+		// Token: 0x040163A5 RID: 91045
 		private List<int> CloseSettleLegMatchIdList = new List<int>();
 
-		// Token: 0x0401B9D1 RID: 113105
+		// Token: 0x040163A6 RID: 91046
 		private bool IsInit;
 	}
 }

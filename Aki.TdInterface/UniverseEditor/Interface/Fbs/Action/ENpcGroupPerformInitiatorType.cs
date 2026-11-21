@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FBE RID: 24510
+	// Token: 0x02006611 RID: 26129
 	public enum ENpcGroupPerformInitiatorType : byte
 	{
-		// Token: 0x0400FEF9 RID: 65273
+		// Token: 0x04010CB3 RID: 68787
 		Player
 	}
 }

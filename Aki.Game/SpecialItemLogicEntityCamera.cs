@@ -2,21 +2,21 @@
 using CSharpScript.Game.Module.Interaction;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002021 RID: 8225
+// Token: 0x020014F4 RID: 5364
 public class SpecialItemLogicEntityCamera : SpecialItemLogicBase
 {
-	// Token: 0x060101F3 RID: 66035 RVA: 0x003ECEB5 File Offset: 0x003EB0B5
+	// Token: 0x0600D65B RID: 54875 RVA: 0x003F94AD File Offset: 0x003F76AD
 	public SpecialItemLogicEntityCamera(int configId) : base(configId)
 	{
 	}
 
-	// Token: 0x060101F4 RID: 66036 RVA: 0x003ECEBE File Offset: 0x003EB0BE
+	// Token: 0x0600D65C RID: 54876 RVA: 0x003F94B6 File Offset: 0x003F76B6
 	public override bool CheckUseCondition()
 	{
 		return true;
 	}
 
-	// Token: 0x060101F5 RID: 66037 RVA: 0x003ECEC1 File Offset: 0x003EB0C1
+	// Token: 0x0600D65D RID: 54877 RVA: 0x003F94B9 File Offset: 0x003F76B9
 	public override void OnUse()
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.PhotographView) && PhotographController.Instance.TryOpenPhotograph(ECameraCaptureType.EntityCamera))

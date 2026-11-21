@@ -6,12 +6,12 @@ using Aki.Protocol;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000E91 RID: 3729
+// Token: 0x02000346 RID: 838
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowEffectManager
 {
-	// Token: 0x06005B77 RID: 23415 RVA: 0x0010B17F File Offset: 0x0010937F
+	// Token: 0x06002F0E RID: 12046 RVA: 0x00112E17 File Offset: 0x00111017
 	public static MotorcycleArrowEffectManager Create(MotorcycleArrowSubController controller)
 	{
 		return new MotorcycleArrowEffectManager
@@ -20,7 +20,7 @@ public class MotorcycleArrowEffectManager
 		};
 	}
 
-	// Token: 0x06005B78 RID: 23416 RVA: 0x0010B190 File Offset: 0x00109390
+	// Token: 0x06002F0F RID: 12047 RVA: 0x00112E28 File Offset: 0x00111028
 	public void AddBuffEffect(int buffEffectId, int? fixValidCount, bool bPlayerBuff)
 	{
 		MotorFightBuffEffect? buffEffectById = MotorcycleArrowConfig.Instance.GetBuffEffectById(buffEffectId);
@@ -62,14 +62,14 @@ public class MotorcycleArrowEffectManager
 		}
 	}
 
-	// Token: 0x06005B79 RID: 23417 RVA: 0x0010B37B File Offset: 0x0010957B
+	// Token: 0x06002F10 RID: 12048 RVA: 0x00113013 File Offset: 0x00111213
 	public void OnEnterNextWaveGroup()
 	{
 		this.OnEnterNextCount(this.PlayerWaveGroupBuff, true);
 		this.OnEnterNextCount(this.MonsterWaveGroupBuff, false);
 	}
 
-	// Token: 0x06005B7A RID: 23418 RVA: 0x0010B397 File Offset: 0x00109597
+	// Token: 0x06002F11 RID: 12049 RVA: 0x0011302F File Offset: 0x0011122F
 	public void OnEnterNextSubLevel()
 	{
 		this.OnEnterNextWaveGroup();
@@ -77,7 +77,7 @@ public class MotorcycleArrowEffectManager
 		this.OnEnterNextCount(this.MonsterLevelBuff, false);
 	}
 
-	// Token: 0x06005B7B RID: 23419 RVA: 0x0010B3BC File Offset: 0x001095BC
+	// Token: 0x06002F12 RID: 12050 RVA: 0x00113054 File Offset: 0x00111254
 	private void OnEnterNextCount(Dictionary<int, int> buffMap, bool bPlayerBuff)
 	{
 		List<int> list = new List<int>(buffMap.Keys);
@@ -104,7 +104,7 @@ public class MotorcycleArrowEffectManager
 		}
 	}
 
-	// Token: 0x06005B7C RID: 23420 RVA: 0x0010B428 File Offset: 0x00109628
+	// Token: 0x06002F13 RID: 12051 RVA: 0x001130C0 File Offset: 0x001112C0
 	public void RemovePlayerBuff(int buffId)
 	{
 		MotorcycleArrowSubModel motorcycleArrowSubModel = KuroSimpleCombatController.Instance.CurSubModel as MotorcycleArrowSubModel;
@@ -112,7 +112,7 @@ public class MotorcycleArrowEffectManager
 		KuroSimpleCombatController.Instance.ModifyBuffAsync(motorcycleArrowSubModel.MotorcycleKscEntityId, false, buffId);
 	}
 
-	// Token: 0x06005B7D RID: 23421 RVA: 0x0010B469 File Offset: 0x00109669
+	// Token: 0x06002F14 RID: 12052 RVA: 0x00113101 File Offset: 0x00111301
 	public void Clear()
 	{
 		this.PlayerLevelBuff.Clear();
@@ -123,7 +123,7 @@ public class MotorcycleArrowEffectManager
 		this.DamageAmplifyWaveGroupId = 0;
 	}
 
-	// Token: 0x06005B7E RID: 23422 RVA: 0x0010B4AC File Offset: 0x001096AC
+	// Token: 0x06002F15 RID: 12053 RVA: 0x00113144 File Offset: 0x00111344
 	public int? GetFixValidCount(MotorFightRoundBuffPb buffData)
 	{
 		MotorFightBuffEffect? buffEffectById = MotorcycleArrowConfig.Instance.GetBuffEffectById(buffData.BuffId);
@@ -149,7 +149,7 @@ public class MotorcycleArrowEffectManager
 		return null;
 	}
 
-	// Token: 0x06005B7F RID: 23423 RVA: 0x0010B5B8 File Offset: 0x001097B8
+	// Token: 0x06002F16 RID: 12054 RVA: 0x00113250 File Offset: 0x00111450
 	public void AddPlayerBornEffect(IList<MotorFightRoundBuffPb> buffs)
 	{
 		for (int i = 0; i < buffs.Count; i++)
@@ -160,7 +160,7 @@ public class MotorcycleArrowEffectManager
 		}
 	}
 
-	// Token: 0x06005B80 RID: 23424 RVA: 0x0010B5F4 File Offset: 0x001097F4
+	// Token: 0x06002F17 RID: 12055 RVA: 0x0011328C File Offset: 0x0011148C
 	public void AddMonsterBornEffect(IList<MotorFightRoundBuffPb> buffs)
 	{
 		for (int i = 0; i < buffs.Count; i++)
@@ -171,7 +171,7 @@ public class MotorcycleArrowEffectManager
 		}
 	}
 
-	// Token: 0x06005B81 RID: 23425 RVA: 0x0010B630 File Offset: 0x00109830
+	// Token: 0x06002F18 RID: 12056 RVA: 0x001132C8 File Offset: 0x001114C8
 	public void UpdateWaveDamageAmplify(int waveGroupId)
 	{
 		if (this.DamageAmplifyWaveGroupId == waveGroupId)
@@ -213,24 +213,24 @@ public class MotorcycleArrowEffectManager
 		}
 	}
 
-	// Token: 0x040029B4 RID: 10676
+	// Token: 0x04002A4F RID: 10831
 	public Dictionary<int, int> PlayerLevelBuff = new Dictionary<int, int>();
 
-	// Token: 0x040029B5 RID: 10677
+	// Token: 0x04002A50 RID: 10832
 	public Dictionary<int, int> PlayerWaveGroupBuff = new Dictionary<int, int>();
 
-	// Token: 0x040029B6 RID: 10678
+	// Token: 0x04002A51 RID: 10833
 	public MotorcycleArrowSubController Controller;
 
-	// Token: 0x040029B7 RID: 10679
+	// Token: 0x04002A52 RID: 10834
 	public HashSet<int> MonsterBuff = new HashSet<int>();
 
-	// Token: 0x040029B8 RID: 10680
+	// Token: 0x04002A53 RID: 10835
 	public Dictionary<int, int> MonsterLevelBuff = new Dictionary<int, int>();
 
-	// Token: 0x040029B9 RID: 10681
+	// Token: 0x04002A54 RID: 10836
 	public Dictionary<int, int> MonsterWaveGroupBuff = new Dictionary<int, int>();
 
-	// Token: 0x040029BA RID: 10682
+	// Token: 0x04002A55 RID: 10837
 	private int DamageAmplifyWaveGroupId;
 }

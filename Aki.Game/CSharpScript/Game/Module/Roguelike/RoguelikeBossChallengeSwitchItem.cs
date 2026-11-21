@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DCE RID: 19918
+	// Token: 0x02003D97 RID: 15767
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeBossChallengeSwitchItem : UiPanelBase
 	{
-		// Token: 0x06033678 RID: 210552 RVA: 0x00C0062C File Offset: 0x00BFE82C
+		// Token: 0x060284E5 RID: 165093 RVA: 0x00B49B6C File Offset: 0x00B47D6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033679 RID: 210553 RVA: 0x00C00758 File Offset: 0x00BFE958
+		// Token: 0x060284E6 RID: 165094 RVA: 0x00B49C98 File Offset: 0x00B47E98
 		protected override void OnStart()
 		{
 			this.PagePointLayout = new GenericLayout<RoguelikeBossChallengePagePointItem, bool>(base.GetHorizontalLayout(3), new Func<RoguelikeBossChallengePagePointItem>(this.CreatePagePointItem), null, false, true);
 		}
 
-		// Token: 0x0603367A RID: 210554 RVA: 0x00C0077B File Offset: 0x00BFE97B
+		// Token: 0x060284E7 RID: 165095 RVA: 0x00B49CBB File Offset: 0x00B47EBB
 		protected override void OnBeforeDestroy()
 		{
 			this.OnBossChangedCallback = null;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BossIdList = new List<int>();
 		}
 
-		// Token: 0x0603367B RID: 210555 RVA: 0x00C00796 File Offset: 0x00BFE996
+		// Token: 0x060284E8 RID: 165096 RVA: 0x00B49CD6 File Offset: 0x00B47ED6
 		public void SetOnBossChangedCallback(Action<ERoguelikeBossChallengeSwitchDirection> callback)
 		{
 			this.OnBossChangedCallback = callback;
 		}
 
-		// Token: 0x0603367C RID: 210556 RVA: 0x00C0079F File Offset: 0x00BFE99F
+		// Token: 0x060284E9 RID: 165097 RVA: 0x00B49CDF File Offset: 0x00B47EDF
 		public void RefreshBossList(List<int> idList)
 		{
 			this.BossIdList = idList;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshBossName();
 		}
 
-		// Token: 0x0603367D RID: 210557 RVA: 0x00C007C1 File Offset: 0x00BFE9C1
+		// Token: 0x060284EA RID: 165098 RVA: 0x00B49D01 File Offset: 0x00B47F01
 		public void SetSelectedIndex(int index)
 		{
 			if (index < 0 || index >= this.BossIdList.Count)
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshBossName();
 		}
 
-		// Token: 0x0603367E RID: 210558 RVA: 0x00C00801 File Offset: 0x00BFEA01
+		// Token: 0x060284EB RID: 165099 RVA: 0x00B49D41 File Offset: 0x00B47F41
 		public int GetCurrentIndex()
 		{
 			return this.CurrentIndex;
 		}
 
-		// Token: 0x0603367F RID: 210559 RVA: 0x00C00809 File Offset: 0x00BFEA09
+		// Token: 0x060284EC RID: 165100 RVA: 0x00B49D49 File Offset: 0x00B47F49
 		public int GetCurrentBossId()
 		{
 			if (this.CurrentIndex >= 0 && this.CurrentIndex < this.BossIdList.Count)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return 0;
 		}
 
-		// Token: 0x06033680 RID: 210560 RVA: 0x00C0083C File Offset: 0x00BFEA3C
+		// Token: 0x060284ED RID: 165101 RVA: 0x00B49D7C File Offset: 0x00B47F7C
 		private void RefreshSwitchButtonVisible()
 		{
 			bool uiactive = this.BossIdList.Count > 1;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetButton(1).RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06033681 RID: 210561 RVA: 0x00C0088C File Offset: 0x00BFEA8C
+		// Token: 0x060284EE RID: 165102 RVA: 0x00B49DCC File Offset: 0x00B47FCC
 		private void RefreshBossName()
 		{
 			if (this.CurrentIndex < 0 || this.CurrentIndex >= this.BossIdList.Count)
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), rogueTower.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06033682 RID: 210562 RVA: 0x00C00914 File Offset: 0x00BFEB14
+		// Token: 0x060284EF RID: 165103 RVA: 0x00B49E54 File Offset: 0x00B48054
 		private void RefreshPagePointLayout()
 		{
 			bool flag = this.BossIdList.Count > 1;
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033683 RID: 210563 RVA: 0x00C00996 File Offset: 0x00BFEB96
+		// Token: 0x060284F0 RID: 165104 RVA: 0x00B49ED6 File Offset: 0x00B480D6
 		private RoguelikeBossChallengePagePointItem CreatePagePointItem()
 		{
 			return new RoguelikeBossChallengePagePointItem();
 		}
 
-		// Token: 0x06033684 RID: 210564 RVA: 0x00C009A0 File Offset: 0x00BFEBA0
+		// Token: 0x060284F1 RID: 165105 RVA: 0x00B49EE0 File Offset: 0x00B480E0
 		private void OnBtnSwitchLeftClick()
 		{
 			if (this.BossIdList.Count <= 1)
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onBossChangedCallback(ERoguelikeBossChallengeSwitchDirection.Left);
 		}
 
-		// Token: 0x06033685 RID: 210565 RVA: 0x00C00A14 File Offset: 0x00BFEC14
+		// Token: 0x060284F2 RID: 165106 RVA: 0x00B49F54 File Offset: 0x00B48154
 		private void OnBtnSwitchRightClick()
 		{
 			if (this.BossIdList.Count <= 1)
@@ -210,11 +210,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			onBossChangedCallback(ERoguelikeBossChallengeSwitchDirection.Right);
 		}
 
-		// Token: 0x0401B4B4 RID: 111796
+		// Token: 0x04015E87 RID: 89735
 		[Nullable(2)]
 		private Action<ERoguelikeBossChallengeSwitchDirection> OnBossChangedCallback;
 
-		// Token: 0x0401B4B5 RID: 111797
+		// Token: 0x04015E88 RID: 89736
 		[Nullable(new byte[]
 		{
 			2,
@@ -222,29 +222,29 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikeBossChallengePagePointItem, bool> PagePointLayout;
 
-		// Token: 0x0401B4B6 RID: 111798
+		// Token: 0x04015E89 RID: 89737
 		private List<int> BossIdList = new List<int>();
 
-		// Token: 0x0401B4B7 RID: 111799
+		// Token: 0x04015E8A RID: 89738
 		private int CurrentIndex;
 
-		// Token: 0x0200AF45 RID: 44869
+		// Token: 0x0200997A RID: 39290
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403537F RID: 217983
+			// Token: 0x0402FDB4 RID: 196020
 			public const int BtnSwitchL = 0;
 
-			// Token: 0x04035380 RID: 217984
+			// Token: 0x0402FDB5 RID: 196021
 			public const int BtnSwitchR = 1;
 
-			// Token: 0x04035381 RID: 217985
+			// Token: 0x0402FDB6 RID: 196022
 			public const int TxtBossName = 2;
 
-			// Token: 0x04035382 RID: 217986
+			// Token: 0x0402FDB7 RID: 196023
 			public const int PnlPagePointLayout = 3;
 
-			// Token: 0x04035383 RID: 217987
+			// Token: 0x0402FDB8 RID: 196024
 			public const int UiItemPagePoint = 4;
 		}
 	}

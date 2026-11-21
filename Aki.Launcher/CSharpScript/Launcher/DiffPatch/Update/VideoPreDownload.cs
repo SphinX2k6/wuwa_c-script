@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x02000211 RID: 529
+	// Token: 0x02000216 RID: 534
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoPreDownload : Singleton
 	{
-		// Token: 0x06000DBC RID: 3516 RVA: 0x0005321C File Offset: 0x0005141C
+		// Token: 0x06000DFD RID: 3581 RVA: 0x00055D10 File Offset: 0x00053F10
 		public UniTask InitVideoPreDownload(string mixUri, string appVersion, string platform)
 		{
 			VideoPreDownload.<InitVideoPreDownload>d__4 <InitVideoPreDownload>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return <InitVideoPreDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DBD RID: 3517 RVA: 0x00053278 File Offset: 0x00051478
+		// Token: 0x06000DFE RID: 3582 RVA: 0x00055D6C File Offset: 0x00053F6C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -68,8 +68,8 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<List<LocalFileInfo>, List<RequireFileInfo>>(list, list2);
 		}
 
-		// Token: 0x1700014C RID: 332
-		// (get) Token: 0x06000DBE RID: 3518 RVA: 0x0005339C File Offset: 0x0005159C
+		// Token: 0x17000152 RID: 338
+		// (get) Token: 0x06000DFF RID: 3583 RVA: 0x00055E90 File Offset: 0x00054090
 		public static VideoPreDownload Instance
 		{
 			get
@@ -83,12 +83,12 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000DBF RID: 3519 RVA: 0x000533BF File Offset: 0x000515BF
+		// Token: 0x06000E00 RID: 3584 RVA: 0x00055EB3 File Offset: 0x000540B3
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000DC0 RID: 3520 RVA: 0x000533C1 File Offset: 0x000515C1
+		// Token: 0x06000E01 RID: 3585 RVA: 0x00055EB5 File Offset: 0x000540B5
 		public static void ResetStaticDefaultValue()
 		{
 			VideoPreDownload instance = VideoPreDownload._instance;
@@ -99,26 +99,26 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			VideoPreDownload._instance = null;
 		}
 
-		// Token: 0x06000DC1 RID: 3521 RVA: 0x000533DA File Offset: 0x000515DA
+		// Token: 0x06000E02 RID: 3586 RVA: 0x00055ECE File Offset: 0x000540CE
 		static VideoPreDownload()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(VideoPreDownload.CreateStaticDefaultValue), new Action(VideoPreDownload.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0400089B RID: 2203
+		// Token: 0x040008DC RID: 2268
 		[Nullable(2)]
 		private RemoteVideoConfigUpdateTime ConfigUpdateInfo;
 
-		// Token: 0x0400089C RID: 2204
+		// Token: 0x040008DD RID: 2269
 		private readonly Dictionary<string, VideoResourceInfo> Video = new Dictionary<string, VideoResourceInfo>();
 
-		// Token: 0x0400089D RID: 2205
+		// Token: 0x040008DE RID: 2270
 		private bool Inited;
 
-		// Token: 0x0400089E RID: 2206
+		// Token: 0x040008DF RID: 2271
 		private string Platform = "";
 
-		// Token: 0x0400089F RID: 2207
+		// Token: 0x040008E0 RID: 2272
 		[Nullable(2)]
 		private static VideoPreDownload _instance;
 	}

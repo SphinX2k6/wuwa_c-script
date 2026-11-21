@@ -8,20 +8,20 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.PackageUpdate;
 using UnrealEngine;
 
-// Token: 0x02002313 RID: 8979
+// Token: 0x020017F8 RID: 6136
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ParallelPackageController : ControllerBase
 {
-	// Token: 0x06011BDC RID: 72668 RVA: 0x0045DFBC File Offset: 0x0045C1BC
+	// Token: 0x0600F08A RID: 61578 RVA: 0x0046AFEB File Offset: 0x004691EB
 	protected override bool OnInit()
 	{
 		this.InitParallelPackageConfig();
 		return true;
 	}
 
-	// Token: 0x06011BDD RID: 72669 RVA: 0x0045DFC5 File Offset: 0x0045C1C5
+	// Token: 0x0600F08B RID: 61579 RVA: 0x0046AFF4 File Offset: 0x004691F4
 	public void TestParallelPackage()
 	{
 		this.GmTest = true;
@@ -33,7 +33,7 @@ public class ParallelPackageController : ControllerBase
 		this.InitParallelPackageConfig();
 	}
 
-	// Token: 0x06011BDE RID: 72670 RVA: 0x0045E000 File Offset: 0x0045C200
+	// Token: 0x0600F08C RID: 61580 RVA: 0x0046B030 File Offset: 0x00469230
 	private void InitParallelPackageConfig()
 	{
 		string appParallel = UKuroLauncherLibrary.GetAppParallel();
@@ -46,7 +46,17 @@ public class ParallelPackageController : ControllerBase
 		this.GetParallelPackageConfig(false, new Action<bool, string>(this.OnInitParallelPackageConfig));
 	}
 
-	// Token: 0x06011BDF RID: 72671 RVA: 0x0045E050 File Offset: 0x0045C250
+	// Token: 0x0600F08D RID: 61581 RVA: 0x0046B080 File Offset: 0x00469280
+	public void RefreshCdnConfigAndCheckVersion(Action<bool> onNeedUpdate)
+	{
+		this.GetParallelPackageConfig(false, delegate(bool state, string data)
+		{
+			this.OnInitParallelPackageConfig(state, data);
+			onNeedUpdate(this.CheckParallelPackageVersionOnly());
+		});
+	}
+
+	// Token: 0x0600F08E RID: 61582 RVA: 0x0046B0B4 File Offset: 0x004692B4
 	private void HttpGetInfo(string url, Action<bool, int, string> callBack, int currentTryCount = 0)
 	{
 		Log instance = Log.Instance;
@@ -66,7 +76,7 @@ public class ParallelPackageController : ControllerBase
 		}, null);
 	}
 
-	// Token: 0x06011BE0 RID: 72672 RVA: 0x0045E0B0 File Offset: 0x0045C2B0
+	// Token: 0x0600F08F RID: 61583 RVA: 0x0046B114 File Offset: 0x00469314
 	private void GetParallelPackageConfig(bool switchUrl, Action<bool, string> onGetConfig)
 	{
 		string url = "";
@@ -99,7 +109,7 @@ public class ParallelPackageController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06011BE1 RID: 72673 RVA: 0x0045E15C File Offset: 0x0045C35C
+	// Token: 0x0600F090 RID: 61584 RVA: 0x0046B1C0 File Offset: 0x004693C0
 	private void OnInitParallelPackageConfig(bool state, string data)
 	{
 		if (!state)
@@ -115,7 +125,7 @@ public class ParallelPackageController : ControllerBase
 		this.Config = Json.Parse<ParallelPackageConfig>(data, null);
 	}
 
-	// Token: 0x06011BE2 RID: 72674 RVA: 0x0045E1AC File Offset: 0x0045C3AC
+	// Token: 0x0600F091 RID: 61585 RVA: 0x0046B210 File Offset: 0x00469410
 	private string GetCacheParallelPackageVersion()
 	{
 		string global = LocalStorage.GetGlobal<string>(ELocalStorageGlobalKey.ParallelPackageVersion, null);
@@ -126,7 +136,7 @@ public class ParallelPackageController : ControllerBase
 		return global;
 	}
 
-	// Token: 0x06011BE3 RID: 72675 RVA: 0x0045E1D0 File Offset: 0x0045C3D0
+	// Token: 0x0600F092 RID: 61586 RVA: 0x0046B234 File Offset: 0x00469434
 	public bool CheckParallelPackageWithCache()
 	{
 		if (this.GmTest)
@@ -141,10 +151,16 @@ public class ParallelPackageController : ControllerBase
 		return !(this.GetCurrentPlatformParallelPackageVersionText() == cacheParallelPackageVersion) && this.CheckParallelPackage();
 	}
 
-	// Token: 0x06011BE4 RID: 72676 RVA: 0x0045E210 File Offset: 0x0045C410
+	// Token: 0x0600F093 RID: 61587 RVA: 0x0046B272 File Offset: 0x00469472
 	public bool CheckParallelPackage()
 	{
-		if (!Info.Instance.IsMobilePlatform() || this.Config == null)
+		return Info.Instance.IsMobilePlatform() && this.CheckParallelPackageVersionOnly();
+	}
+
+	// Token: 0x0600F094 RID: 61588 RVA: 0x0046B288 File Offset: 0x00469488
+	public bool CheckParallelPackageVersionOnly()
+	{
+		if (this.Config == null)
 		{
 			return false;
 		}
@@ -161,7 +177,7 @@ public class ParallelPackageController : ControllerBase
 		return !(this.GetSplitAppVersion(parentVersion) != this.GetSplitAppVersion(appVersion)) && float.TryParse(childVersion, out num) && float.TryParse(UKuroLauncherLibrary.GetAppChangeList(), out num2) && num > num2;
 	}
 
-	// Token: 0x06011BE5 RID: 72677 RVA: 0x0045E28C File Offset: 0x0045C48C
+	// Token: 0x0600F095 RID: 61589 RVA: 0x0046B2F8 File Offset: 0x004694F8
 	private string GetSplitAppVersion(string version)
 	{
 		string[] array = version.Split('.', StringSplitOptions.None);
@@ -172,7 +188,7 @@ public class ParallelPackageController : ControllerBase
 		return array[0] + "." + array[1];
 	}
 
-	// Token: 0x06011BE6 RID: 72678 RVA: 0x0045E2BC File Offset: 0x0045C4BC
+	// Token: 0x0600F096 RID: 61590 RVA: 0x0046B328 File Offset: 0x00469528
 	private string GetPackageUpdateContentByLanguageCode(string languageCode)
 	{
 		Dictionary<string, ParallelPackageLanguageContent> languageConfig = this.Config.languageConfig;
@@ -188,7 +204,7 @@ public class ParallelPackageController : ControllerBase
 		return parallelPackageLanguageContent.content;
 	}
 
-	// Token: 0x06011BE7 RID: 72679 RVA: 0x0045E2F8 File Offset: 0x0045C4F8
+	// Token: 0x0600F097 RID: 61591 RVA: 0x0046B364 File Offset: 0x00469564
 	private string GetPackageUpdateTitleByLanguageCode(string languageCode)
 	{
 		Dictionary<string, ParallelPackageLanguageContent> languageConfig = this.Config.languageConfig;
@@ -204,7 +220,7 @@ public class ParallelPackageController : ControllerBase
 		return parallelPackageLanguageContent.title;
 	}
 
-	// Token: 0x06011BE8 RID: 72680 RVA: 0x0045E334 File Offset: 0x0045C534
+	// Token: 0x0600F098 RID: 61592 RVA: 0x0046B3A0 File Offset: 0x004695A0
 	private string GetCurrentPlatformParallelPackageVersionText()
 	{
 		ParallelPackageUrlConfig currentPlatformParallelPackageVersion = this.GetCurrentPlatformParallelPackageVersion();
@@ -215,7 +231,7 @@ public class ParallelPackageController : ControllerBase
 		return currentPlatformParallelPackageVersion.parentVersion + "_" + currentPlatformParallelPackageVersion.childVersion;
 	}
 
-	// Token: 0x06011BE9 RID: 72681 RVA: 0x0045E368 File Offset: 0x0045C568
+	// Token: 0x0600F099 RID: 61593 RVA: 0x0046B3D4 File Offset: 0x004695D4
 	[NullableContext(2)]
 	private ParallelPackageUrlConfig GetCurrentPlatformParallelPackageVersion()
 	{
@@ -240,7 +256,7 @@ public class ParallelPackageController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06011BEA RID: 72682 RVA: 0x0045E3F4 File Offset: 0x0045C5F4
+	// Token: 0x0600F09A RID: 61594 RVA: 0x0046B460 File Offset: 0x00469660
 	public void TryShowParallelPackageUpdateConfirmBox(ParallelPackageDownloadBoxShowReason reason)
 	{
 		if (!this.CheckParallelPackageWithCache())
@@ -303,8 +319,8 @@ public class ParallelPackageController : ControllerBase
 		}
 	}
 
-	// Token: 0x170016B0 RID: 5808
-	// (get) Token: 0x06011BEB RID: 72683 RVA: 0x0045E576 File Offset: 0x0045C776
+	// Token: 0x170016EA RID: 5866
+	// (get) Token: 0x0600F09B RID: 61595 RVA: 0x0046B5E2 File Offset: 0x004697E2
 	public static ParallelPackageController Instance
 	{
 		get
@@ -313,7 +329,7 @@ public class ParallelPackageController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011BEC RID: 72684 RVA: 0x0045E57D File Offset: 0x0045C77D
+	// Token: 0x0600F09C RID: 61596 RVA: 0x0046B5E9 File Offset: 0x004697E9
 	public static ParallelPackageController GetOrCreateInstance()
 	{
 		if (ParallelPackageController._Instance == null)
@@ -323,7 +339,7 @@ public class ParallelPackageController : ControllerBase
 		return ParallelPackageController._Instance;
 	}
 
-	// Token: 0x06011BED RID: 72685 RVA: 0x0045E591 File Offset: 0x0045C791
+	// Token: 0x0600F09D RID: 61597 RVA: 0x0046B5FD File Offset: 0x004697FD
 	public static bool CreateInstance()
 	{
 		if (ParallelPackageController._Instance != null)
@@ -334,34 +350,34 @@ public class ParallelPackageController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06011BEE RID: 72686 RVA: 0x0045E5A7 File Offset: 0x0045C7A7
+	// Token: 0x0600F09E RID: 61598 RVA: 0x0046B613 File Offset: 0x00469813
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011BEF RID: 72687 RVA: 0x0045E5A9 File Offset: 0x0045C7A9
+	// Token: 0x0600F09F RID: 61599 RVA: 0x0046B615 File Offset: 0x00469815
 	public static void ResetStaticDefaultValue()
 	{
 		ParallelPackageController._Instance = null;
 	}
 
-	// Token: 0x06011BF0 RID: 72688 RVA: 0x0045E5B1 File Offset: 0x0045C7B1
+	// Token: 0x0600F0A0 RID: 61600 RVA: 0x0046B61D File Offset: 0x0046981D
 	static ParallelPackageController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ParallelPackageController.CreateStaticDefaultValue), new Action(ParallelPackageController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040086A5 RID: 34469
+	// Token: 0x040087E8 RID: 34792
 	public bool GmTest;
 
-	// Token: 0x040086A6 RID: 34470
+	// Token: 0x040087E9 RID: 34793
 	[Nullable(2)]
 	private ParallelPackageConfig Config;
 
-	// Token: 0x040086A7 RID: 34471
+	// Token: 0x040087EA RID: 34794
 	private bool CurrentLoginShowState;
 
-	// Token: 0x040086A8 RID: 34472
+	// Token: 0x040087EB RID: 34795
 	[Nullable(2)]
 	private static ParallelPackageController _Instance;
 }

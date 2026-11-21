@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200274F RID: 10063
+	// Token: 0x02000803 RID: 2051
 	[UnrealObjectPath("/Script/SharpherealTest.TestClass_UFunction_FStruct")]
 	[UnrealStructLayout(544, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 544)]
 	public class UTestClass_UFunction_FStruct : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060258A1 RID: 153761 RVA: 0x00388DED File Offset: 0x00386FED
+		// Token: 0x0600B37E RID: 45950 RVA: 0x00118364 File Offset: 0x00116564
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTestClass_UFunction_FStruct._ClassPtr;
 		}
 
-		// Token: 0x060258A2 RID: 153762 RVA: 0x00388DFC File Offset: 0x00386FFC
+		// Token: 0x0600B37F RID: 45951 RVA: 0x00118370 File Offset: 0x00116570
 		public UTestClass_UFunction_FStruct() : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_FStruct.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060258A3 RID: 153763 RVA: 0x00388E24 File Offset: 0x00387024
+		// Token: 0x0600B380 RID: 45952 RVA: 0x00118398 File Offset: 0x00116598
 		[NullableContext(1)]
 		public UTestClass_UFunction_FStruct(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTestClass_UFunction_FStruct.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170090C6 RID: 37062
-		// (get) Token: 0x060258A4 RID: 153764 RVA: 0x00388E57 File Offset: 0x00387057
-		// (set) Token: 0x060258A5 RID: 153765 RVA: 0x00388E6B File Offset: 0x0038706B
+		// Token: 0x170021AE RID: 8622
+		// (get) Token: 0x0600B381 RID: 45953 RVA: 0x001183CB File Offset: 0x001165CB
+		// (set) Token: 0x0600B382 RID: 45954 RVA: 0x001183DF File Offset: 0x001165DF
 		public unsafe FVector Vector
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090C7 RID: 37063
-		// (get) Token: 0x060258A6 RID: 153766 RVA: 0x00388E80 File Offset: 0x00387080
-		// (set) Token: 0x060258A7 RID: 153767 RVA: 0x00388EB9 File Offset: 0x003870B9
+		// Token: 0x170021AF RID: 8623
+		// (get) Token: 0x0600B383 RID: 45955 RVA: 0x001183F4 File Offset: 0x001165F4
+		// (set) Token: 0x0600B384 RID: 45956 RVA: 0x0011842D File Offset: 0x0011662D
 		[Nullable(1)]
 		public TArray<FVector> VectorArray
 		{
@@ -68,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090C8 RID: 37064
-		// (get) Token: 0x060258A8 RID: 153768 RVA: 0x00388EC8 File Offset: 0x003870C8
-		// (set) Token: 0x060258A9 RID: 153769 RVA: 0x00388F01 File Offset: 0x00387101
+		// Token: 0x170021B0 RID: 8624
+		// (get) Token: 0x0600B385 RID: 45957 RVA: 0x0011843C File Offset: 0x0011663C
+		// (set) Token: 0x0600B386 RID: 45958 RVA: 0x00118475 File Offset: 0x00116675
 		[Nullable(1)]
 		public TSet<FVector> VectorSet
 		{
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090C9 RID: 37065
-		// (get) Token: 0x060258AA RID: 153770 RVA: 0x00388F10 File Offset: 0x00387110
-		// (set) Token: 0x060258AB RID: 153771 RVA: 0x00388F49 File Offset: 0x00387149
+		// Token: 0x170021B1 RID: 8625
+		// (get) Token: 0x0600B387 RID: 45959 RVA: 0x00118484 File Offset: 0x00116684
+		// (set) Token: 0x0600B388 RID: 45960 RVA: 0x001184BD File Offset: 0x001166BD
 		[Nullable(1)]
 		public TMap<FVector, int> VectorMap
 		{
@@ -116,9 +116,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CA RID: 37066
-		// (get) Token: 0x060258AC RID: 153772 RVA: 0x00388F57 File Offset: 0x00387157
-		// (set) Token: 0x060258AD RID: 153773 RVA: 0x00388F6B File Offset: 0x0038716B
+		// Token: 0x170021B2 RID: 8626
+		// (get) Token: 0x0600B389 RID: 45961 RVA: 0x001184CB File Offset: 0x001166CB
+		// (set) Token: 0x0600B38A RID: 45962 RVA: 0x001184DF File Offset: 0x001166DF
 		public unsafe FQuat Quat
 		{
 			get
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CB RID: 37067
-		// (get) Token: 0x060258AE RID: 153774 RVA: 0x00388F80 File Offset: 0x00387180
-		// (set) Token: 0x060258AF RID: 153775 RVA: 0x00388FB9 File Offset: 0x003871B9
+		// Token: 0x170021B3 RID: 8627
+		// (get) Token: 0x0600B38B RID: 45963 RVA: 0x001184F4 File Offset: 0x001166F4
+		// (set) Token: 0x0600B38C RID: 45964 RVA: 0x0011852D File Offset: 0x0011672D
 		[Nullable(1)]
 		public TArray<FQuat> QuatArray
 		{
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CC RID: 37068
-		// (get) Token: 0x060258B0 RID: 153776 RVA: 0x00388FC7 File Offset: 0x003871C7
-		// (set) Token: 0x060258B1 RID: 153777 RVA: 0x00388FDB File Offset: 0x003871DB
+		// Token: 0x170021B4 RID: 8628
+		// (get) Token: 0x0600B38D RID: 45965 RVA: 0x0011853B File Offset: 0x0011673B
+		// (set) Token: 0x0600B38E RID: 45966 RVA: 0x0011854F File Offset: 0x0011674F
 		public unsafe FTransform Transform
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CD RID: 37069
-		// (get) Token: 0x060258B2 RID: 153778 RVA: 0x00388FF0 File Offset: 0x003871F0
-		// (set) Token: 0x060258B3 RID: 153779 RVA: 0x00389029 File Offset: 0x00387229
+		// Token: 0x170021B5 RID: 8629
+		// (get) Token: 0x0600B38F RID: 45967 RVA: 0x00118564 File Offset: 0x00116764
+		// (set) Token: 0x0600B390 RID: 45968 RVA: 0x0011859D File Offset: 0x0011679D
 		[Nullable(1)]
 		public TArray<FTransform> TransformArray
 		{
@@ -194,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CE RID: 37070
-		// (get) Token: 0x060258B4 RID: 153780 RVA: 0x00389038 File Offset: 0x00387238
-		// (set) Token: 0x060258B5 RID: 153781 RVA: 0x00389071 File Offset: 0x00387271
+		// Token: 0x170021B6 RID: 8630
+		// (get) Token: 0x0600B391 RID: 45969 RVA: 0x001185AC File Offset: 0x001167AC
+		// (set) Token: 0x0600B392 RID: 45970 RVA: 0x001185E5 File Offset: 0x001167E5
 		[Nullable(1)]
 		public FSharpherealTestSimpleStruct SimpleStruct
 		{
@@ -218,9 +218,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090CF RID: 37071
-		// (get) Token: 0x060258B6 RID: 153782 RVA: 0x00389094 File Offset: 0x00387294
-		// (set) Token: 0x060258B7 RID: 153783 RVA: 0x003890CD File Offset: 0x003872CD
+		// Token: 0x170021B7 RID: 8631
+		// (get) Token: 0x0600B393 RID: 45971 RVA: 0x00118608 File Offset: 0x00116808
+		// (set) Token: 0x0600B394 RID: 45972 RVA: 0x00118641 File Offset: 0x00116841
 		[Nullable(1)]
 		public TArray<FSharpherealTestSimpleStruct> SimpleStructArray
 		{
@@ -242,9 +242,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090D0 RID: 37072
-		// (get) Token: 0x060258B8 RID: 153784 RVA: 0x003890DC File Offset: 0x003872DC
-		// (set) Token: 0x060258B9 RID: 153785 RVA: 0x00389115 File Offset: 0x00387315
+		// Token: 0x170021B8 RID: 8632
+		// (get) Token: 0x0600B395 RID: 45973 RVA: 0x00118650 File Offset: 0x00116850
+		// (set) Token: 0x0600B396 RID: 45974 RVA: 0x00118689 File Offset: 0x00116889
 		[Nullable(1)]
 		public TSet<FSharpherealTestSimpleStruct> SimpleStructSet
 		{
@@ -266,9 +266,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170090D1 RID: 37073
-		// (get) Token: 0x060258BA RID: 153786 RVA: 0x00389124 File Offset: 0x00387324
-		// (set) Token: 0x060258BB RID: 153787 RVA: 0x0038915D File Offset: 0x0038735D
+		// Token: 0x170021B9 RID: 8633
+		// (get) Token: 0x0600B397 RID: 45975 RVA: 0x00118698 File Offset: 0x00116898
+		// (set) Token: 0x0600B398 RID: 45976 RVA: 0x001186D1 File Offset: 0x001168D1
 		[Nullable(1)]
 		public TMap<FSharpherealTestSimpleStruct, int> SimpleStructMap
 		{
@@ -290,10 +290,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060258BC RID: 153788 RVA: 0x0038916C File Offset: 0x0038736C
+		// Token: 0x0600B399 RID: 45977 RVA: 0x001186E0 File Offset: 0x001168E0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetVectorSet(TSet<FVector> InVectorSet)
 		{
 			UTestClass_UFunction_FStruct.__SetVectorSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetVectorSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetVectorSet_FunctionParams) & -16L;
@@ -302,14 +301,13 @@ namespace UnrealEngine
 			{
 				InVectorSet.CopyTo(&ptr->InVectorSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetVectorSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258BD RID: 153789 RVA: 0x003891D8 File Offset: 0x003873D8
+		// Token: 0x0600B39A RID: 45978 RVA: 0x0011874C File Offset: 0x0011694C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetVectorMap(TMap<FVector, int> InVectorMap)
 		{
 			UTestClass_UFunction_FStruct.__SetVectorMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetVectorMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetVectorMap_FunctionParams) & -16L;
@@ -318,14 +316,13 @@ namespace UnrealEngine
 			{
 				InVectorMap.CopyTo(&ptr->InVectorMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetVectorMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258BE RID: 153790 RVA: 0x00389244 File Offset: 0x00387444
+		// Token: 0x0600B39B RID: 45979 RVA: 0x001187B8 File Offset: 0x001169B8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetVectorArray(TArray<FVector> InVectorArray)
 		{
 			UTestClass_UFunction_FStruct.__SetVectorArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetVectorArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetVectorArray_FunctionParams) & -16L;
@@ -334,25 +331,23 @@ namespace UnrealEngine
 			{
 				InVectorArray.CopyTo(&ptr->InVectorArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVectorArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetVectorArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258BF RID: 153791 RVA: 0x003892B0 File Offset: 0x003874B0
+		// Token: 0x0600B39C RID: 45980 RVA: 0x00118824 File Offset: 0x00116A24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetVector(FVector InVector)
 		{
 			UTestClass_UFunction_FStruct.__SetVector_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetVector_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetVector_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__SetVector_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InVector = InVector;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetVector_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258C0 RID: 153792 RVA: 0x003892F8 File Offset: 0x003874F8
+		// Token: 0x0600B39D RID: 45981 RVA: 0x0011886C File Offset: 0x00116A6C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTransformArray(TArray<FTransform> InTransformArray)
 		{
 			UTestClass_UFunction_FStruct.__SetTransformArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetTransformArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetTransformArray_FunctionParams) & -16L;
@@ -361,24 +356,22 @@ namespace UnrealEngine
 			{
 				InTransformArray.CopyTo(&ptr->InTransformArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetTransformArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetTransformArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetTransformArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C1 RID: 153793 RVA: 0x00389364 File Offset: 0x00387564
+		// Token: 0x0600B39E RID: 45982 RVA: 0x001188D8 File Offset: 0x00116AD8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTransform(FTransform InTransform)
 		{
 			UTestClass_UFunction_FStruct.__SetTransform_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetTransform_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__SetTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InTransform = InTransform;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetTransform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258C2 RID: 153794 RVA: 0x003893AC File Offset: 0x003875AC
+		// Token: 0x0600B39F RID: 45983 RVA: 0x00118920 File Offset: 0x00116B20
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleStructSet([Nullable(new byte[]
 		{
 			2,
@@ -391,13 +384,12 @@ namespace UnrealEngine
 			{
 				InSimpleStructSet.CopyTo(&ptr->InSimpleStructSet, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructSet_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetSimpleStructSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C3 RID: 153795 RVA: 0x00389418 File Offset: 0x00387618
+		// Token: 0x0600B3A0 RID: 45984 RVA: 0x0011898C File Offset: 0x00116B8C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleStructMap([Nullable(new byte[]
 		{
 			2,
@@ -410,13 +402,12 @@ namespace UnrealEngine
 			{
 				InSimpleStructMap.CopyTo(&ptr->InSimpleStructMap, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructMap_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetSimpleStructMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C4 RID: 153796 RVA: 0x00389484 File Offset: 0x00387684
+		// Token: 0x0600B3A1 RID: 45985 RVA: 0x001189F8 File Offset: 0x00116BF8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleStructArray([Nullable(new byte[]
 		{
 			2,
@@ -429,14 +420,13 @@ namespace UnrealEngine
 			{
 				InSimpleStructArray.CopyTo(&ptr->InSimpleStructArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStructArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetSimpleStructArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C5 RID: 153797 RVA: 0x003894F0 File Offset: 0x003876F0
+		// Token: 0x0600B3A2 RID: 45986 RVA: 0x00118A64 File Offset: 0x00116C64
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetSimpleStruct(FSharpherealTestSimpleStruct InSimpleStruct)
 		{
 			UTestClass_UFunction_FStruct.__SetSimpleStruct_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetSimpleStruct_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetSimpleStruct_FunctionParams) & -16L;
@@ -445,14 +435,13 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealTestSimpleStruct.StaticStruct(), &ptr->InSimpleStruct, InSimpleStruct.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStruct_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetSimpleStruct_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetSimpleStruct_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C6 RID: 153798 RVA: 0x00389564 File Offset: 0x00387764
+		// Token: 0x0600B3A3 RID: 45987 RVA: 0x00118AD8 File Offset: 0x00116CD8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetQuatArray(TArray<FQuat> InQuatArray)
 		{
 			UTestClass_UFunction_FStruct.__SetQuatArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetQuatArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetQuatArray_FunctionParams) & -16L;
@@ -461,25 +450,23 @@ namespace UnrealEngine
 			{
 				InQuatArray.CopyTo(&ptr->InQuatArray, default(UScriptStructStackOnlyPtr));
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetQuatArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetQuatArray_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__SetQuatArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C7 RID: 153799 RVA: 0x003895D0 File Offset: 0x003877D0
+		// Token: 0x0600B3A4 RID: 45988 RVA: 0x00118B44 File Offset: 0x00116D44
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetQuat(FQuat InQuat)
 		{
 			UTestClass_UFunction_FStruct.__SetQuat_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__SetQuat_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__SetQuat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__SetQuat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InQuat = InQuat;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetQuat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__SetQuat_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258C8 RID: 153800 RVA: 0x00389618 File Offset: 0x00387818
+		// Token: 0x0600B3A5 RID: 45989 RVA: 0x00118B8C File Offset: 0x00116D8C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutVectorSet(ref TSet<FVector> OutVectorSet)
 		{
 			UTestClass_UFunction_FStruct.__OutVectorSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutVectorSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutVectorSet_FunctionParams) & -16L;
@@ -489,7 +476,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutVectorSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FVector> tset2 = OutVectorSet;
 			if (tset2 != null)
 			{
@@ -498,10 +485,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutVectorSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258C9 RID: 153801 RVA: 0x00389694 File Offset: 0x00387894
+		// Token: 0x0600B3A6 RID: 45990 RVA: 0x00118C04 File Offset: 0x00116E04
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutVectorMap(ref TMap<FVector, int> OutVectorMap)
 		{
 			UTestClass_UFunction_FStruct.__OutVectorMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutVectorMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutVectorMap_FunctionParams) & -16L;
@@ -511,7 +497,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutVectorMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FVector, int> tmap2 = OutVectorMap;
 			if (tmap2 != null)
 			{
@@ -520,10 +506,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutVectorMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258CA RID: 153802 RVA: 0x00389710 File Offset: 0x00387910
+		// Token: 0x0600B3A7 RID: 45991 RVA: 0x00118C7C File Offset: 0x00116E7C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutVectorArray(ref TArray<FVector> OutVectorArray)
 		{
 			UTestClass_UFunction_FStruct.__OutVectorArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutVectorArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutVectorArray_FunctionParams) & -16L;
@@ -533,7 +518,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutVectorArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVectorArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FVector> tarray2 = OutVectorArray;
 			if (tarray2 != null)
 			{
@@ -542,22 +527,20 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutVectorArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258CB RID: 153803 RVA: 0x0038978C File Offset: 0x0038798C
+		// Token: 0x0600B3A8 RID: 45992 RVA: 0x00118CF4 File Offset: 0x00116EF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutVector(ref FVector OutVector)
 		{
 			UTestClass_UFunction_FStruct.__OutVector_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutVector_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutVector_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__OutVector_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->OutVector = OutVector;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutVector_NativeFunctionPtr, (void*)ptr);
 			OutVector = ptr->OutVector;
 		}
 
-		// Token: 0x060258CC RID: 153804 RVA: 0x003897E4 File Offset: 0x003879E4
+		// Token: 0x0600B3A9 RID: 45993 RVA: 0x00118D4C File Offset: 0x00116F4C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutTransformArray(ref TArray<FTransform> OutTransformArray)
 		{
 			UTestClass_UFunction_FStruct.__OutTransformArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutTransformArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutTransformArray_FunctionParams) & -16L;
@@ -567,7 +550,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutTransformArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutTransformArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutTransformArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FTransform> tarray2 = OutTransformArray;
 			if (tarray2 != null)
 			{
@@ -576,21 +559,19 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutTransformArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258CD RID: 153805 RVA: 0x00389860 File Offset: 0x00387A60
+		// Token: 0x0600B3AA RID: 45994 RVA: 0x00118DC4 File Offset: 0x00116FC4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutTransform(ref FTransform OutTransform)
 		{
 			UTestClass_UFunction_FStruct.__OutTransform_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutTransform_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__OutTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->OutTransform = OutTransform;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutTransform_NativeFunctionPtr, (void*)ptr);
 			OutTransform = ptr->OutTransform;
 		}
 
-		// Token: 0x060258CE RID: 153806 RVA: 0x003898B8 File Offset: 0x00387AB8
+		// Token: 0x0600B3AB RID: 45995 RVA: 0x00118E1C File Offset: 0x0011701C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleStructSet([Nullable(new byte[]
 		{
 			2,
@@ -604,7 +585,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->OutSimpleStructSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSharpherealTestSimpleStruct> tset2 = OutSimpleStructSet;
 			if (tset2 != null)
 			{
@@ -613,9 +594,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutSimpleStructSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258CF RID: 153807 RVA: 0x00389934 File Offset: 0x00387B34
+		// Token: 0x0600B3AC RID: 45996 RVA: 0x00118E94 File Offset: 0x00117094
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleStructMap([Nullable(new byte[]
 		{
 			2,
@@ -629,7 +609,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->OutSimpleStructMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSharpherealTestSimpleStruct, int> tmap2 = OutSimpleStructMap;
 			if (tmap2 != null)
 			{
@@ -638,9 +618,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutSimpleStructMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D0 RID: 153808 RVA: 0x003899B0 File Offset: 0x00387BB0
+		// Token: 0x0600B3AD RID: 45997 RVA: 0x00118F0C File Offset: 0x0011710C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleStructArray([Nullable(new byte[]
 		{
 			2,
@@ -654,7 +633,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutSimpleStructArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStructArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSharpherealTestSimpleStruct> tarray2 = OutSimpleStructArray;
 			if (tarray2 != null)
 			{
@@ -663,10 +642,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutSimpleStructArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D1 RID: 153809 RVA: 0x00389A2C File Offset: 0x00387C2C
+		// Token: 0x0600B3AE RID: 45998 RVA: 0x00118F84 File Offset: 0x00117184
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutSimpleStruct(ref FSharpherealTestSimpleStruct OutSimpleStruct)
 		{
 			UTestClass_UFunction_FStruct.__OutSimpleStruct_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutSimpleStruct_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutSimpleStruct_FunctionParams) & -16L;
@@ -675,7 +653,7 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealTestSimpleStruct.StaticStruct(), &ptr->OutSimpleStruct, OutSimpleStruct.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStruct_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutSimpleStruct_NativeFunctionPtr, (void*)ptr);
 			if (OutSimpleStruct != null)
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealTestSimpleStruct.StaticStruct(), OutSimpleStruct.NativePtr, &ptr->OutSimpleStruct, 1, false);
@@ -683,10 +661,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutSimpleStruct_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D2 RID: 153810 RVA: 0x00389AC8 File Offset: 0x00387CC8
+		// Token: 0x0600B3AF RID: 45999 RVA: 0x0011901C File Offset: 0x0011721C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutQuatArray(ref TArray<FQuat> OutQuatArray)
 		{
 			UTestClass_UFunction_FStruct.__OutQuatArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutQuatArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutQuatArray_FunctionParams) & -16L;
@@ -696,7 +673,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutQuatArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutQuatArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutQuatArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FQuat> tarray2 = OutQuatArray;
 			if (tarray2 != null)
 			{
@@ -705,22 +682,20 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__OutQuatArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D3 RID: 153811 RVA: 0x00389B44 File Offset: 0x00387D44
+		// Token: 0x0600B3B0 RID: 46000 RVA: 0x00119094 File Offset: 0x00117294
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void OutQuat(ref FQuat OutQuat)
 		{
 			UTestClass_UFunction_FStruct.__OutQuat_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__OutQuat_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__OutQuat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__OutQuat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->OutQuat = OutQuat;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutQuat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__OutQuat_NativeFunctionPtr, (void*)ptr);
 			OutQuat = ptr->OutQuat;
 		}
 
-		// Token: 0x060258D4 RID: 153812 RVA: 0x00389B9C File Offset: 0x00387D9C
+		// Token: 0x0600B3B1 RID: 46001 RVA: 0x001190EC File Offset: 0x001172EC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InVectorSet(in TSet<FVector> InVectorSet)
 		{
 			UTestClass_UFunction_FStruct.__InVectorSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InVectorSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InVectorSet_FunctionParams) & -16L;
@@ -730,7 +705,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InVectorSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FVector> tset2 = InVectorSet;
 			if (tset2 != null)
 			{
@@ -739,10 +714,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InVectorSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D5 RID: 153813 RVA: 0x00389C18 File Offset: 0x00387E18
+		// Token: 0x0600B3B2 RID: 46002 RVA: 0x00119164 File Offset: 0x00117364
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InVectorMap(in TMap<FVector, int> InVectorMap)
 		{
 			UTestClass_UFunction_FStruct.__InVectorMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InVectorMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InVectorMap_FunctionParams) & -16L;
@@ -752,7 +726,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InVectorMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FVector, int> tmap2 = InVectorMap;
 			if (tmap2 != null)
 			{
@@ -761,10 +735,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InVectorMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D6 RID: 153814 RVA: 0x00389C94 File Offset: 0x00387E94
+		// Token: 0x0600B3B3 RID: 46003 RVA: 0x001191DC File Offset: 0x001173DC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InVectorArray(in TArray<FVector> InVectorArray)
 		{
 			UTestClass_UFunction_FStruct.__InVectorArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InVectorArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InVectorArray_FunctionParams) & -16L;
@@ -774,7 +747,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InVectorArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVectorArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FVector> tarray2 = InVectorArray;
 			if (tarray2 != null)
 			{
@@ -783,21 +756,19 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InVectorArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D7 RID: 153815 RVA: 0x00389D10 File Offset: 0x00387F10
+		// Token: 0x0600B3B4 RID: 46004 RVA: 0x00119254 File Offset: 0x00117454
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InVector(in FVector InVector)
 		{
 			UTestClass_UFunction_FStruct.__InVector_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InVector_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InVector_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__InVector_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InVector = InVector;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InVector_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258D8 RID: 153816 RVA: 0x00389D5C File Offset: 0x00387F5C
+		// Token: 0x0600B3B5 RID: 46005 RVA: 0x001192A0 File Offset: 0x001174A0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InTransformArray(in TArray<FTransform> InTransformArray)
 		{
 			UTestClass_UFunction_FStruct.__InTransformArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InTransformArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InTransformArray_FunctionParams) & -16L;
@@ -807,7 +778,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InTransformArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InTransformArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InTransformArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FTransform> tarray2 = InTransformArray;
 			if (tarray2 != null)
 			{
@@ -816,20 +787,18 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InTransformArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258D9 RID: 153817 RVA: 0x00389DD8 File Offset: 0x00387FD8
+		// Token: 0x0600B3B6 RID: 46006 RVA: 0x00119318 File Offset: 0x00117518
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InTransform(in FTransform InTransform)
 		{
 			UTestClass_UFunction_FStruct.__InTransform_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InTransform_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__InTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InTransform = InTransform;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InTransform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258DA RID: 153818 RVA: 0x00389E24 File Offset: 0x00388024
+		// Token: 0x0600B3B7 RID: 46007 RVA: 0x00119364 File Offset: 0x00117564
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleStructSet([Nullable(new byte[]
 		{
 			2,
@@ -843,7 +812,7 @@ namespace UnrealEngine
 			{
 				tset.MoveTo(&ptr->InSimpleStructSet);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSharpherealTestSimpleStruct> tset2 = InSimpleStructSet;
 			if (tset2 != null)
 			{
@@ -852,9 +821,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InSimpleStructSet_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DB RID: 153819 RVA: 0x00389EA0 File Offset: 0x003880A0
+		// Token: 0x0600B3B8 RID: 46008 RVA: 0x001193DC File Offset: 0x001175DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleStructMap([Nullable(new byte[]
 		{
 			2,
@@ -868,7 +836,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InSimpleStructMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSharpherealTestSimpleStruct, int> tmap2 = InSimpleStructMap;
 			if (tmap2 != null)
 			{
@@ -877,9 +845,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InSimpleStructMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DC RID: 153820 RVA: 0x00389F1C File Offset: 0x0038811C
+		// Token: 0x0600B3B9 RID: 46009 RVA: 0x00119454 File Offset: 0x00117654
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleStructArray([Nullable(new byte[]
 		{
 			2,
@@ -893,7 +860,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InSimpleStructArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStructArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSharpherealTestSimpleStruct> tarray2 = InSimpleStructArray;
 			if (tarray2 != null)
 			{
@@ -902,10 +869,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InSimpleStructArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DD RID: 153821 RVA: 0x00389F98 File Offset: 0x00388198
+		// Token: 0x0600B3BA RID: 46010 RVA: 0x001194CC File Offset: 0x001176CC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InSimpleStruct(in FSharpherealTestSimpleStruct InSimpleStruct)
 		{
 			UTestClass_UFunction_FStruct.__InSimpleStruct_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InSimpleStruct_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InSimpleStruct_FunctionParams) & -16L;
@@ -914,14 +880,13 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FSharpherealTestSimpleStruct.StaticStruct(), &ptr->InSimpleStruct, InSimpleStruct.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStruct_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InSimpleStruct_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InSimpleStruct_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DE RID: 153822 RVA: 0x0038A010 File Offset: 0x00388210
+		// Token: 0x0600B3BB RID: 46011 RVA: 0x00119540 File Offset: 0x00117740
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InQuatArray(in TArray<FQuat> InQuatArray)
 		{
 			UTestClass_UFunction_FStruct.__InQuatArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InQuatArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InQuatArray_FunctionParams) & -16L;
@@ -931,7 +896,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InQuatArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InQuatArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InQuatArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FQuat> tarray2 = InQuatArray;
 			if (tarray2 != null)
 			{
@@ -940,252 +905,239 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__InQuatArray_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060258DF RID: 153823 RVA: 0x0038A08C File Offset: 0x0038828C
+		// Token: 0x0600B3BC RID: 46012 RVA: 0x001195B8 File Offset: 0x001177B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void InQuat(in FQuat InQuat)
 		{
 			UTestClass_UFunction_FStruct.__InQuat_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__InQuat_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__InQuat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__InQuat_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InQuat = InQuat;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InQuat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__InQuat_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060258E0 RID: 153824 RVA: 0x0038A0D8 File Offset: 0x003882D8
+		// Token: 0x0600B3BD RID: 46013 RVA: 0x00119604 File Offset: 0x00117804
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<FVector> GetVectorSet()
 		{
 			UTestClass_UFunction_FStruct.__GetVectorSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetVectorSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetVectorSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetVectorSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FVector> result = new TSet<FVector>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetVectorSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E1 RID: 153825 RVA: 0x0038A138 File Offset: 0x00388338
+		// Token: 0x0600B3BE RID: 46014 RVA: 0x00119664 File Offset: 0x00117864
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<FVector, int> GetVectorMap()
 		{
 			UTestClass_UFunction_FStruct.__GetVectorMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetVectorMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetVectorMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetVectorMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FVector, int> result = new TMap<FVector, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetVectorMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E2 RID: 153826 RVA: 0x0038A198 File Offset: 0x00388398
+		// Token: 0x0600B3BF RID: 46015 RVA: 0x001196C4 File Offset: 0x001178C4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FVector> GetVectorArray()
 		{
 			UTestClass_UFunction_FStruct.__GetVectorArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetVectorArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetVectorArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetVectorArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVectorArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FVector> result = new TArray<FVector>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetVectorArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E3 RID: 153827 RVA: 0x0038A1F8 File Offset: 0x003883F8
+		// Token: 0x0600B3C0 RID: 46016 RVA: 0x00119724 File Offset: 0x00117924
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVector GetVector()
 		{
 			UTestClass_UFunction_FStruct.__GetVector_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetVector_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetVector_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetVector_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVector_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetVector_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060258E4 RID: 153828 RVA: 0x0038A240 File Offset: 0x00388440
+		// Token: 0x0600B3C1 RID: 46017 RVA: 0x0011976C File Offset: 0x0011796C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FTransform> GetTransformArray()
 		{
 			UTestClass_UFunction_FStruct.__GetTransformArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetTransformArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetTransformArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetTransformArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetTransformArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetTransformArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FTransform> result = new TArray<FTransform>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetTransformArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E5 RID: 153829 RVA: 0x0038A2A0 File Offset: 0x003884A0
+		// Token: 0x0600B3C2 RID: 46018 RVA: 0x001197CC File Offset: 0x001179CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FTransform GetTransform()
 		{
 			UTestClass_UFunction_FStruct.__GetTransform_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetTransform_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetTransform_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetTransform_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060258E6 RID: 153830 RVA: 0x0038A2E8 File Offset: 0x003884E8
+		// Token: 0x0600B3C3 RID: 46019 RVA: 0x00119814 File Offset: 0x00117A14
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TSet<FSharpherealTestSimpleStruct> GetSimpleStructSet()
 		{
 			UTestClass_UFunction_FStruct.__GetSimpleStructSet_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetSimpleStructSet_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetSimpleStructSet_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetSimpleStructSet_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructSet_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructSet_NativeFunctionPtr, (void*)ptr);
 			TSet<FSharpherealTestSimpleStruct> result = new TSet<FSharpherealTestSimpleStruct>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetSimpleStructSet_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E7 RID: 153831 RVA: 0x0038A348 File Offset: 0x00388548
+		// Token: 0x0600B3C4 RID: 46020 RVA: 0x00119874 File Offset: 0x00117A74
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<FSharpherealTestSimpleStruct, int> GetSimpleStructMap()
 		{
 			UTestClass_UFunction_FStruct.__GetSimpleStructMap_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetSimpleStructMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetSimpleStructMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetSimpleStructMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FSharpherealTestSimpleStruct, int> result = new TMap<FSharpherealTestSimpleStruct, int>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetSimpleStructMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E8 RID: 153832 RVA: 0x0038A3A8 File Offset: 0x003885A8
+		// Token: 0x0600B3C5 RID: 46021 RVA: 0x001198D4 File Offset: 0x00117AD4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FSharpherealTestSimpleStruct> GetSimpleStructArray()
 		{
 			UTestClass_UFunction_FStruct.__GetSimpleStructArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetSimpleStructArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetSimpleStructArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetSimpleStructArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStructArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FSharpherealTestSimpleStruct> result = new TArray<FSharpherealTestSimpleStruct>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetSimpleStructArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258E9 RID: 153833 RVA: 0x0038A408 File Offset: 0x00388608
+		// Token: 0x0600B3C6 RID: 46022 RVA: 0x00119934 File Offset: 0x00117B34
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FSharpherealTestSimpleStruct GetSimpleStruct()
 		{
 			UTestClass_UFunction_FStruct.__GetSimpleStruct_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetSimpleStruct_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetSimpleStruct_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetSimpleStruct_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStruct_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetSimpleStruct_NativeFunctionPtr, (void*)ptr);
 			FSharpherealTestSimpleStruct result = new FSharpherealTestSimpleStruct(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetSimpleStruct_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258EA RID: 153834 RVA: 0x0038A468 File Offset: 0x00388668
+		// Token: 0x0600B3C7 RID: 46023 RVA: 0x00119994 File Offset: 0x00117B94
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FQuat> GetQuatArray()
 		{
 			UTestClass_UFunction_FStruct.__GetQuatArray_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetQuatArray_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetQuatArray_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetQuatArray_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetQuatArray_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetQuatArray_NativeFunctionPtr, (void*)ptr);
 			TArray<FQuat> result = new TArray<FQuat>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(UTestClass_UFunction_FStruct.__GetQuatArray_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x060258EB RID: 153835 RVA: 0x0038A4C8 File Offset: 0x003886C8
+		// Token: 0x0600B3C8 RID: 46024 RVA: 0x001199F4 File Offset: 0x00117BF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FQuat GetQuat()
 		{
 			UTestClass_UFunction_FStruct.__GetQuat_FunctionParams* ptr = stackalloc UTestClass_UFunction_FStruct.__GetQuat_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UTestClass_UFunction_FStruct.__GetQuat_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTestClass_UFunction_FStruct.__GetQuat_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetQuat_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTestClass_UFunction_FStruct.__GetQuat_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060258EC RID: 153836 RVA: 0x0038A50E File Offset: 0x0038870E
+		// Token: 0x0600B3C9 RID: 46025 RVA: 0x00119A39 File Offset: 0x00117C39
 		static UTestClass_UFunction_FStruct()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SharpherealTest.TestClass_UFunction_FStruct");
 		}
 
-		// Token: 0x060258ED RID: 153837 RVA: 0x0038A51C File Offset: 0x0038871C
+		// Token: 0x0600B3CA RID: 46026 RVA: 0x00119A47 File Offset: 0x00117C47
 		protected UTestClass_UFunction_FStruct(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040145BF RID: 83391
+		// Token: 0x0400501E RID: 20510
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SharpherealTest.TestClass_UFunction_FStruct";
 
-		// Token: 0x040145C0 RID: 83392
+		// Token: 0x0400501F RID: 20511
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040145C1 RID: 83393
+		// Token: 0x04005020 RID: 20512
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040145C2 RID: 83394
+		// Token: 0x04005021 RID: 20513
 		internal static int __PropertyOffset_Vector;
 
-		// Token: 0x040145C3 RID: 83395
+		// Token: 0x04005022 RID: 20514
 		internal static int __PropertyOffset_VectorArray;
 
-		// Token: 0x040145C4 RID: 83396
+		// Token: 0x04005023 RID: 20515
 		[Nullable(2)]
 		private TArray<FVector> _VectorArray;
 
-		// Token: 0x040145C5 RID: 83397
+		// Token: 0x04005024 RID: 20516
 		internal static int __PropertyOffset_VectorSet;
 
-		// Token: 0x040145C6 RID: 83398
+		// Token: 0x04005025 RID: 20517
 		[Nullable(2)]
 		private TSet<FVector> _VectorSet;
 
-		// Token: 0x040145C7 RID: 83399
+		// Token: 0x04005026 RID: 20518
 		internal static int __PropertyOffset_VectorMap;
 
-		// Token: 0x040145C8 RID: 83400
+		// Token: 0x04005027 RID: 20519
 		[Nullable(2)]
 		private TMap<FVector, int> _VectorMap;
 
-		// Token: 0x040145C9 RID: 83401
+		// Token: 0x04005028 RID: 20520
 		internal static int __PropertyOffset_Quat;
 
-		// Token: 0x040145CA RID: 83402
+		// Token: 0x04005029 RID: 20521
 		internal static int __PropertyOffset_QuatArray;
 
-		// Token: 0x040145CB RID: 83403
+		// Token: 0x0400502A RID: 20522
 		[Nullable(2)]
 		private TArray<FQuat> _QuatArray;
 
-		// Token: 0x040145CC RID: 83404
+		// Token: 0x0400502B RID: 20523
 		internal static int __PropertyOffset_Transform;
 
-		// Token: 0x040145CD RID: 83405
+		// Token: 0x0400502C RID: 20524
 		internal static int __PropertyOffset_TransformArray;
 
-		// Token: 0x040145CE RID: 83406
+		// Token: 0x0400502D RID: 20525
 		[Nullable(2)]
 		private TArray<FTransform> _TransformArray;
 
-		// Token: 0x040145CF RID: 83407
+		// Token: 0x0400502E RID: 20526
 		internal static int __PropertyOffset_SimpleStruct;
 
-		// Token: 0x040145D0 RID: 83408
+		// Token: 0x0400502F RID: 20527
 		[Nullable(2)]
 		private FSharpherealTestSimpleStruct _SimpleStruct;
 
-		// Token: 0x040145D1 RID: 83409
+		// Token: 0x04005030 RID: 20528
 		internal static int __PropertyOffset_SimpleStructArray;
 
-		// Token: 0x040145D2 RID: 83410
+		// Token: 0x04005031 RID: 20529
 		[Nullable(new byte[]
 		{
 			2,
@@ -1193,10 +1145,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSharpherealTestSimpleStruct> _SimpleStructArray;
 
-		// Token: 0x040145D3 RID: 83411
+		// Token: 0x04005032 RID: 20530
 		internal static int __PropertyOffset_SimpleStructSet;
 
-		// Token: 0x040145D4 RID: 83412
+		// Token: 0x04005033 RID: 20531
 		[Nullable(new byte[]
 		{
 			2,
@@ -1204,10 +1156,10 @@ namespace UnrealEngine
 		})]
 		private TSet<FSharpherealTestSimpleStruct> _SimpleStructSet;
 
-		// Token: 0x040145D5 RID: 83413
+		// Token: 0x04005034 RID: 20532
 		internal static int __PropertyOffset_SimpleStructMap;
 
-		// Token: 0x040145D6 RID: 83414
+		// Token: 0x04005035 RID: 20533
 		[Nullable(new byte[]
 		{
 			2,
@@ -1215,626 +1167,626 @@ namespace UnrealEngine
 		})]
 		private TMap<FSharpherealTestSimpleStruct, int> _SimpleStructMap;
 
-		// Token: 0x040145D7 RID: 83415
+		// Token: 0x04005036 RID: 20534
 		private static IntPtr __SetVectorSet_NativeFunctionPtr;
 
-		// Token: 0x040145D8 RID: 83416
+		// Token: 0x04005037 RID: 20535
 		private static IntPtr __SetVectorMap_NativeFunctionPtr;
 
-		// Token: 0x040145D9 RID: 83417
+		// Token: 0x04005038 RID: 20536
 		private static IntPtr __SetVectorArray_NativeFunctionPtr;
 
-		// Token: 0x040145DA RID: 83418
+		// Token: 0x04005039 RID: 20537
 		private static IntPtr __SetVector_NativeFunctionPtr;
 
-		// Token: 0x040145DB RID: 83419
+		// Token: 0x0400503A RID: 20538
 		private static IntPtr __SetTransformArray_NativeFunctionPtr;
 
-		// Token: 0x040145DC RID: 83420
+		// Token: 0x0400503B RID: 20539
 		private static IntPtr __SetTransform_NativeFunctionPtr;
 
-		// Token: 0x040145DD RID: 83421
+		// Token: 0x0400503C RID: 20540
 		private static IntPtr __SetSimpleStructSet_NativeFunctionPtr;
 
-		// Token: 0x040145DE RID: 83422
+		// Token: 0x0400503D RID: 20541
 		private static IntPtr __SetSimpleStructMap_NativeFunctionPtr;
 
-		// Token: 0x040145DF RID: 83423
+		// Token: 0x0400503E RID: 20542
 		private static IntPtr __SetSimpleStructArray_NativeFunctionPtr;
 
-		// Token: 0x040145E0 RID: 83424
+		// Token: 0x0400503F RID: 20543
 		private static IntPtr __SetSimpleStruct_NativeFunctionPtr;
 
-		// Token: 0x040145E1 RID: 83425
+		// Token: 0x04005040 RID: 20544
 		private static IntPtr __SetQuatArray_NativeFunctionPtr;
 
-		// Token: 0x040145E2 RID: 83426
+		// Token: 0x04005041 RID: 20545
 		private static IntPtr __SetQuat_NativeFunctionPtr;
 
-		// Token: 0x040145E3 RID: 83427
+		// Token: 0x04005042 RID: 20546
 		private static IntPtr __OutVectorSet_NativeFunctionPtr;
 
-		// Token: 0x040145E4 RID: 83428
+		// Token: 0x04005043 RID: 20547
 		private static IntPtr __OutVectorMap_NativeFunctionPtr;
 
-		// Token: 0x040145E5 RID: 83429
+		// Token: 0x04005044 RID: 20548
 		private static IntPtr __OutVectorArray_NativeFunctionPtr;
 
-		// Token: 0x040145E6 RID: 83430
+		// Token: 0x04005045 RID: 20549
 		private static IntPtr __OutVector_NativeFunctionPtr;
 
-		// Token: 0x040145E7 RID: 83431
+		// Token: 0x04005046 RID: 20550
 		private static IntPtr __OutTransformArray_NativeFunctionPtr;
 
-		// Token: 0x040145E8 RID: 83432
+		// Token: 0x04005047 RID: 20551
 		private static IntPtr __OutTransform_NativeFunctionPtr;
 
-		// Token: 0x040145E9 RID: 83433
+		// Token: 0x04005048 RID: 20552
 		private static IntPtr __OutSimpleStructSet_NativeFunctionPtr;
 
-		// Token: 0x040145EA RID: 83434
+		// Token: 0x04005049 RID: 20553
 		private static IntPtr __OutSimpleStructMap_NativeFunctionPtr;
 
-		// Token: 0x040145EB RID: 83435
+		// Token: 0x0400504A RID: 20554
 		private static IntPtr __OutSimpleStructArray_NativeFunctionPtr;
 
-		// Token: 0x040145EC RID: 83436
+		// Token: 0x0400504B RID: 20555
 		private static IntPtr __OutSimpleStruct_NativeFunctionPtr;
 
-		// Token: 0x040145ED RID: 83437
+		// Token: 0x0400504C RID: 20556
 		private static IntPtr __OutQuatArray_NativeFunctionPtr;
 
-		// Token: 0x040145EE RID: 83438
+		// Token: 0x0400504D RID: 20557
 		private static IntPtr __OutQuat_NativeFunctionPtr;
 
-		// Token: 0x040145EF RID: 83439
+		// Token: 0x0400504E RID: 20558
 		private static IntPtr __InVectorSet_NativeFunctionPtr;
 
-		// Token: 0x040145F0 RID: 83440
+		// Token: 0x0400504F RID: 20559
 		private static IntPtr __InVectorMap_NativeFunctionPtr;
 
-		// Token: 0x040145F1 RID: 83441
+		// Token: 0x04005050 RID: 20560
 		private static IntPtr __InVectorArray_NativeFunctionPtr;
 
-		// Token: 0x040145F2 RID: 83442
+		// Token: 0x04005051 RID: 20561
 		private static IntPtr __InVector_NativeFunctionPtr;
 
-		// Token: 0x040145F3 RID: 83443
+		// Token: 0x04005052 RID: 20562
 		private static IntPtr __InTransformArray_NativeFunctionPtr;
 
-		// Token: 0x040145F4 RID: 83444
+		// Token: 0x04005053 RID: 20563
 		private static IntPtr __InTransform_NativeFunctionPtr;
 
-		// Token: 0x040145F5 RID: 83445
+		// Token: 0x04005054 RID: 20564
 		private static IntPtr __InSimpleStructSet_NativeFunctionPtr;
 
-		// Token: 0x040145F6 RID: 83446
+		// Token: 0x04005055 RID: 20565
 		private static IntPtr __InSimpleStructMap_NativeFunctionPtr;
 
-		// Token: 0x040145F7 RID: 83447
+		// Token: 0x04005056 RID: 20566
 		private static IntPtr __InSimpleStructArray_NativeFunctionPtr;
 
-		// Token: 0x040145F8 RID: 83448
+		// Token: 0x04005057 RID: 20567
 		private static IntPtr __InSimpleStruct_NativeFunctionPtr;
 
-		// Token: 0x040145F9 RID: 83449
+		// Token: 0x04005058 RID: 20568
 		private static IntPtr __InQuatArray_NativeFunctionPtr;
 
-		// Token: 0x040145FA RID: 83450
+		// Token: 0x04005059 RID: 20569
 		private static IntPtr __InQuat_NativeFunctionPtr;
 
-		// Token: 0x040145FB RID: 83451
+		// Token: 0x0400505A RID: 20570
 		private static IntPtr __GetVectorSet_NativeFunctionPtr;
 
-		// Token: 0x040145FC RID: 83452
+		// Token: 0x0400505B RID: 20571
 		private static IntPtr __GetVectorMap_NativeFunctionPtr;
 
-		// Token: 0x040145FD RID: 83453
+		// Token: 0x0400505C RID: 20572
 		private static IntPtr __GetVectorArray_NativeFunctionPtr;
 
-		// Token: 0x040145FE RID: 83454
+		// Token: 0x0400505D RID: 20573
 		private static IntPtr __GetVector_NativeFunctionPtr;
 
-		// Token: 0x040145FF RID: 83455
+		// Token: 0x0400505E RID: 20574
 		private static IntPtr __GetTransformArray_NativeFunctionPtr;
 
-		// Token: 0x04014600 RID: 83456
+		// Token: 0x0400505F RID: 20575
 		private static IntPtr __GetTransform_NativeFunctionPtr;
 
-		// Token: 0x04014601 RID: 83457
+		// Token: 0x04005060 RID: 20576
 		private static IntPtr __GetSimpleStructSet_NativeFunctionPtr;
 
-		// Token: 0x04014602 RID: 83458
+		// Token: 0x04005061 RID: 20577
 		private static IntPtr __GetSimpleStructMap_NativeFunctionPtr;
 
-		// Token: 0x04014603 RID: 83459
+		// Token: 0x04005062 RID: 20578
 		private static IntPtr __GetSimpleStructArray_NativeFunctionPtr;
 
-		// Token: 0x04014604 RID: 83460
+		// Token: 0x04005063 RID: 20579
 		private static IntPtr __GetSimpleStruct_NativeFunctionPtr;
 
-		// Token: 0x04014605 RID: 83461
+		// Token: 0x04005064 RID: 20580
 		private static IntPtr __GetQuatArray_NativeFunctionPtr;
 
-		// Token: 0x04014606 RID: 83462
+		// Token: 0x04005065 RID: 20581
 		private static IntPtr __GetQuat_NativeFunctionPtr;
 
-		// Token: 0x0200395D RID: 14685
+		// Token: 0x0200122F RID: 4655
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetVectorSet_FunctionParams
 		{
-			// Token: 0x04017A86 RID: 96902
+			// Token: 0x04006639 RID: 26169
 			[FieldOffset(0)]
 			public byte InVectorSet;
 		}
 
-		// Token: 0x0200395E RID: 14686
+		// Token: 0x02001230 RID: 4656
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetVectorMap_FunctionParams
 		{
-			// Token: 0x04017A87 RID: 96903
+			// Token: 0x0400663A RID: 26170
 			[FieldOffset(0)]
 			public byte InVectorMap;
 		}
 
-		// Token: 0x0200395F RID: 14687
+		// Token: 0x02001231 RID: 4657
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetVectorArray_FunctionParams
 		{
-			// Token: 0x04017A88 RID: 96904
+			// Token: 0x0400663B RID: 26171
 			[FieldOffset(0)]
 			public byte InVectorArray;
 		}
 
-		// Token: 0x02003960 RID: 14688
+		// Token: 0x02001232 RID: 4658
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __SetVector_FunctionParams
 		{
-			// Token: 0x04017A89 RID: 96905
+			// Token: 0x0400663C RID: 26172
 			[FieldOffset(0)]
 			public FVector InVector;
 		}
 
-		// Token: 0x02003961 RID: 14689
+		// Token: 0x02001233 RID: 4659
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetTransformArray_FunctionParams
 		{
-			// Token: 0x04017A8A RID: 96906
+			// Token: 0x0400663D RID: 26173
 			[FieldOffset(0)]
 			public byte InTransformArray;
 		}
 
-		// Token: 0x02003962 RID: 14690
+		// Token: 0x02001234 RID: 4660
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __SetTransform_FunctionParams
 		{
-			// Token: 0x04017A8B RID: 96907
+			// Token: 0x0400663E RID: 26174
 			[FieldOffset(0)]
 			public FTransform InTransform;
 		}
 
-		// Token: 0x02003963 RID: 14691
+		// Token: 0x02001235 RID: 4661
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSimpleStructSet_FunctionParams
 		{
-			// Token: 0x04017A8C RID: 96908
+			// Token: 0x0400663F RID: 26175
 			[FieldOffset(0)]
 			public byte InSimpleStructSet;
 		}
 
-		// Token: 0x02003964 RID: 14692
+		// Token: 0x02001236 RID: 4662
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetSimpleStructMap_FunctionParams
 		{
-			// Token: 0x04017A8D RID: 96909
+			// Token: 0x04006640 RID: 26176
 			[FieldOffset(0)]
 			public byte InSimpleStructMap;
 		}
 
-		// Token: 0x02003965 RID: 14693
+		// Token: 0x02001237 RID: 4663
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetSimpleStructArray_FunctionParams
 		{
-			// Token: 0x04017A8E RID: 96910
+			// Token: 0x04006641 RID: 26177
 			[FieldOffset(0)]
 			public byte InSimpleStructArray;
 		}
 
-		// Token: 0x02003966 RID: 14694
+		// Token: 0x02001238 RID: 4664
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __SetSimpleStruct_FunctionParams
 		{
-			// Token: 0x04017A8F RID: 96911
+			// Token: 0x04006642 RID: 26178
 			[FieldOffset(0)]
 			public byte InSimpleStruct;
 		}
 
-		// Token: 0x02003967 RID: 14695
+		// Token: 0x02001239 RID: 4665
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetQuatArray_FunctionParams
 		{
-			// Token: 0x04017A90 RID: 96912
+			// Token: 0x04006643 RID: 26179
 			[FieldOffset(0)]
 			public byte InQuatArray;
 		}
 
-		// Token: 0x02003968 RID: 14696
+		// Token: 0x0200123A RID: 4666
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SetQuat_FunctionParams
 		{
-			// Token: 0x04017A91 RID: 96913
+			// Token: 0x04006644 RID: 26180
 			[FieldOffset(0)]
 			public FQuat InQuat;
 		}
 
-		// Token: 0x02003969 RID: 14697
+		// Token: 0x0200123B RID: 4667
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutVectorSet_FunctionParams
 		{
-			// Token: 0x04017A92 RID: 96914
+			// Token: 0x04006645 RID: 26181
 			[FieldOffset(0)]
 			public byte OutVectorSet;
 		}
 
-		// Token: 0x0200396A RID: 14698
+		// Token: 0x0200123C RID: 4668
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutVectorMap_FunctionParams
 		{
-			// Token: 0x04017A93 RID: 96915
+			// Token: 0x04006646 RID: 26182
 			[FieldOffset(0)]
 			public byte OutVectorMap;
 		}
 
-		// Token: 0x0200396B RID: 14699
+		// Token: 0x0200123D RID: 4669
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutVectorArray_FunctionParams
 		{
-			// Token: 0x04017A94 RID: 96916
+			// Token: 0x04006647 RID: 26183
 			[FieldOffset(0)]
 			public byte OutVectorArray;
 		}
 
-		// Token: 0x0200396C RID: 14700
+		// Token: 0x0200123E RID: 4670
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __OutVector_FunctionParams
 		{
-			// Token: 0x04017A95 RID: 96917
+			// Token: 0x04006648 RID: 26184
 			[FieldOffset(0)]
 			public FVector OutVector;
 		}
 
-		// Token: 0x0200396D RID: 14701
+		// Token: 0x0200123F RID: 4671
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutTransformArray_FunctionParams
 		{
-			// Token: 0x04017A96 RID: 96918
+			// Token: 0x04006649 RID: 26185
 			[FieldOffset(0)]
 			public byte OutTransformArray;
 		}
 
-		// Token: 0x0200396E RID: 14702
+		// Token: 0x02001240 RID: 4672
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __OutTransform_FunctionParams
 		{
-			// Token: 0x04017A97 RID: 96919
+			// Token: 0x0400664A RID: 26186
 			[FieldOffset(0)]
 			public FTransform OutTransform;
 		}
 
-		// Token: 0x0200396F RID: 14703
+		// Token: 0x02001241 RID: 4673
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSimpleStructSet_FunctionParams
 		{
-			// Token: 0x04017A98 RID: 96920
+			// Token: 0x0400664B RID: 26187
 			[FieldOffset(0)]
 			public byte OutSimpleStructSet;
 		}
 
-		// Token: 0x02003970 RID: 14704
+		// Token: 0x02001242 RID: 4674
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __OutSimpleStructMap_FunctionParams
 		{
-			// Token: 0x04017A99 RID: 96921
+			// Token: 0x0400664C RID: 26188
 			[FieldOffset(0)]
 			public byte OutSimpleStructMap;
 		}
 
-		// Token: 0x02003971 RID: 14705
+		// Token: 0x02001243 RID: 4675
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutSimpleStructArray_FunctionParams
 		{
-			// Token: 0x04017A9A RID: 96922
+			// Token: 0x0400664D RID: 26189
 			[FieldOffset(0)]
 			public byte OutSimpleStructArray;
 		}
 
-		// Token: 0x02003972 RID: 14706
+		// Token: 0x02001244 RID: 4676
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __OutSimpleStruct_FunctionParams
 		{
-			// Token: 0x04017A9B RID: 96923
+			// Token: 0x0400664E RID: 26190
 			[FieldOffset(0)]
 			public byte OutSimpleStruct;
 		}
 
-		// Token: 0x02003973 RID: 14707
+		// Token: 0x02001245 RID: 4677
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutQuatArray_FunctionParams
 		{
-			// Token: 0x04017A9C RID: 96924
+			// Token: 0x0400664F RID: 26191
 			[FieldOffset(0)]
 			public byte OutQuatArray;
 		}
 
-		// Token: 0x02003974 RID: 14708
+		// Token: 0x02001246 RID: 4678
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OutQuat_FunctionParams
 		{
-			// Token: 0x04017A9D RID: 96925
+			// Token: 0x04006650 RID: 26192
 			[FieldOffset(0)]
 			public FQuat OutQuat;
 		}
 
-		// Token: 0x02003975 RID: 14709
+		// Token: 0x02001247 RID: 4679
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InVectorSet_FunctionParams
 		{
-			// Token: 0x04017A9E RID: 96926
+			// Token: 0x04006651 RID: 26193
 			[FieldOffset(0)]
 			public byte InVectorSet;
 		}
 
-		// Token: 0x02003976 RID: 14710
+		// Token: 0x02001248 RID: 4680
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InVectorMap_FunctionParams
 		{
-			// Token: 0x04017A9F RID: 96927
+			// Token: 0x04006652 RID: 26194
 			[FieldOffset(0)]
 			public byte InVectorMap;
 		}
 
-		// Token: 0x02003977 RID: 14711
+		// Token: 0x02001249 RID: 4681
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InVectorArray_FunctionParams
 		{
-			// Token: 0x04017AA0 RID: 96928
+			// Token: 0x04006653 RID: 26195
 			[FieldOffset(0)]
 			public byte InVectorArray;
 		}
 
-		// Token: 0x02003978 RID: 14712
+		// Token: 0x0200124A RID: 4682
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __InVector_FunctionParams
 		{
-			// Token: 0x04017AA1 RID: 96929
+			// Token: 0x04006654 RID: 26196
 			[FieldOffset(0)]
 			public FVector InVector;
 		}
 
-		// Token: 0x02003979 RID: 14713
+		// Token: 0x0200124B RID: 4683
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InTransformArray_FunctionParams
 		{
-			// Token: 0x04017AA2 RID: 96930
+			// Token: 0x04006655 RID: 26197
 			[FieldOffset(0)]
 			public byte InTransformArray;
 		}
 
-		// Token: 0x0200397A RID: 14714
+		// Token: 0x0200124C RID: 4684
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __InTransform_FunctionParams
 		{
-			// Token: 0x04017AA3 RID: 96931
+			// Token: 0x04006656 RID: 26198
 			[FieldOffset(0)]
 			public FTransform InTransform;
 		}
 
-		// Token: 0x0200397B RID: 14715
+		// Token: 0x0200124D RID: 4685
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSimpleStructSet_FunctionParams
 		{
-			// Token: 0x04017AA4 RID: 96932
+			// Token: 0x04006657 RID: 26199
 			[FieldOffset(0)]
 			public byte InSimpleStructSet;
 		}
 
-		// Token: 0x0200397C RID: 14716
+		// Token: 0x0200124E RID: 4686
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __InSimpleStructMap_FunctionParams
 		{
-			// Token: 0x04017AA5 RID: 96933
+			// Token: 0x04006658 RID: 26200
 			[FieldOffset(0)]
 			public byte InSimpleStructMap;
 		}
 
-		// Token: 0x0200397D RID: 14717
+		// Token: 0x0200124F RID: 4687
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InSimpleStructArray_FunctionParams
 		{
-			// Token: 0x04017AA6 RID: 96934
+			// Token: 0x04006659 RID: 26201
 			[FieldOffset(0)]
 			public byte InSimpleStructArray;
 		}
 
-		// Token: 0x0200397E RID: 14718
+		// Token: 0x02001250 RID: 4688
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __InSimpleStruct_FunctionParams
 		{
-			// Token: 0x04017AA7 RID: 96935
+			// Token: 0x0400665A RID: 26202
 			[FieldOffset(0)]
 			public byte InSimpleStruct;
 		}
 
-		// Token: 0x0200397F RID: 14719
+		// Token: 0x02001251 RID: 4689
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InQuatArray_FunctionParams
 		{
-			// Token: 0x04017AA8 RID: 96936
+			// Token: 0x0400665B RID: 26203
 			[FieldOffset(0)]
 			public byte InQuatArray;
 		}
 
-		// Token: 0x02003980 RID: 14720
+		// Token: 0x02001252 RID: 4690
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InQuat_FunctionParams
 		{
-			// Token: 0x04017AA9 RID: 96937
+			// Token: 0x0400665C RID: 26204
 			[FieldOffset(0)]
 			public FQuat InQuat;
 		}
 
-		// Token: 0x02003981 RID: 14721
+		// Token: 0x02001253 RID: 4691
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetVectorSet_FunctionParams
 		{
-			// Token: 0x04017AAA RID: 96938
+			// Token: 0x0400665D RID: 26205
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003982 RID: 14722
+		// Token: 0x02001254 RID: 4692
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetVectorMap_FunctionParams
 		{
-			// Token: 0x04017AAB RID: 96939
+			// Token: 0x0400665E RID: 26206
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003983 RID: 14723
+		// Token: 0x02001255 RID: 4693
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetVectorArray_FunctionParams
 		{
-			// Token: 0x04017AAC RID: 96940
+			// Token: 0x0400665F RID: 26207
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003984 RID: 14724
+		// Token: 0x02001256 RID: 4694
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __GetVector_FunctionParams
 		{
-			// Token: 0x04017AAD RID: 96941
+			// Token: 0x04006660 RID: 26208
 			[FieldOffset(0)]
 			public FVector __Result;
 		}
 
-		// Token: 0x02003985 RID: 14725
+		// Token: 0x02001257 RID: 4695
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetTransformArray_FunctionParams
 		{
-			// Token: 0x04017AAE RID: 96942
+			// Token: 0x04006661 RID: 26209
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003986 RID: 14726
+		// Token: 0x02001258 RID: 4696
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __GetTransform_FunctionParams
 		{
-			// Token: 0x04017AAF RID: 96943
+			// Token: 0x04006662 RID: 26210
 			[FieldOffset(0)]
 			public FTransform __Result;
 		}
 
-		// Token: 0x02003987 RID: 14727
+		// Token: 0x02001259 RID: 4697
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSimpleStructSet_FunctionParams
 		{
-			// Token: 0x04017AB0 RID: 96944
+			// Token: 0x04006663 RID: 26211
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003988 RID: 14728
+		// Token: 0x0200125A RID: 4698
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetSimpleStructMap_FunctionParams
 		{
-			// Token: 0x04017AB1 RID: 96945
+			// Token: 0x04006664 RID: 26212
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003989 RID: 14729
+		// Token: 0x0200125B RID: 4699
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSimpleStructArray_FunctionParams
 		{
-			// Token: 0x04017AB2 RID: 96946
+			// Token: 0x04006665 RID: 26213
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200398A RID: 14730
+		// Token: 0x0200125C RID: 4700
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __GetSimpleStruct_FunctionParams
 		{
-			// Token: 0x04017AB3 RID: 96947
+			// Token: 0x04006666 RID: 26214
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200398B RID: 14731
+		// Token: 0x0200125D RID: 4701
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetQuatArray_FunctionParams
 		{
-			// Token: 0x04017AB4 RID: 96948
+			// Token: 0x04006667 RID: 26215
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x0200398C RID: 14732
+		// Token: 0x0200125E RID: 4702
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetQuat_FunctionParams
 		{
-			// Token: 0x04017AB5 RID: 96949
+			// Token: 0x04006668 RID: 26216
 			[FieldOffset(0)]
 			public FQuat __Result;
 		}

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E1 RID: 10721
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CCE RID: 11470
 	public class IPreloadMp4s : IPreloadCharacterType
 	{
-		// Token: 0x0600ECD2 RID: 60626 RVA: 0x00229112 File Offset: 0x00227312
+		// Token: 0x0600FB69 RID: 64361 RVA: 0x00246A96 File Offset: 0x00244C96
 		public static IPreloadMp4s Create(IPreloadMp4s? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD2 RID: 19154
-		// (get) Token: 0x0600ECD3 RID: 60627 RVA: 0x00229131 File Offset: 0x00227331
+		// Token: 0x17004E7B RID: 20091
+		// (get) Token: 0x0600FB6A RID: 64362 RVA: 0x00246AB5 File Offset: 0x00244CB5
 		public override EPreloadObjectType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AD3 RID: 19155
-		// (get) Token: 0x0600ECD4 RID: 60628 RVA: 0x00229140 File Offset: 0x00227340
+		// Token: 0x17004E7C RID: 20092
+		// (get) Token: 0x0600FB6B RID: 64363 RVA: 0x00246AC4 File Offset: 0x00244CC4
 		public virtual List<string> Mp4s
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400826B RID: 33387
+		// Token: 0x0400895C RID: 35164
 		private IPreloadMp4s Instance;
 
-		// Token: 0x0400826C RID: 33388
+		// Token: 0x0400895D RID: 35165
 		private List<string> _Mp4sCache;
 
-		// Token: 0x0400826D RID: 33389
+		// Token: 0x0400895E RID: 35166
 		private bool _Mp4sInited;
 	}
 }

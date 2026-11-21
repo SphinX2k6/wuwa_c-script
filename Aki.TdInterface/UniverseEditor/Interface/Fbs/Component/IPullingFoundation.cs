@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057AE RID: 22446
+	// Token: 0x02005DB5 RID: 23989
 	public struct IPullingFoundation : IFlatbufferObject
 	{
-		// Token: 0x1700A791 RID: 42897
-		// (get) Token: 0x06025ABC RID: 154300 RVA: 0x0053248B File Offset: 0x0053068B
+		// Token: 0x1700B0B5 RID: 45237
+		// (get) Token: 0x06027FDC RID: 163804 RVA: 0x00578617 File Offset: 0x00576817
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025ABD RID: 154301 RVA: 0x00532498 File Offset: 0x00530698
+		// Token: 0x06027FDD RID: 163805 RVA: 0x00578624 File Offset: 0x00576824
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025ABE RID: 154302 RVA: 0x005324A0 File Offset: 0x005306A0
+		// Token: 0x06027FDE RID: 163806 RVA: 0x0057862C File Offset: 0x0057682C
 		public static IPullingFoundation GetRootAsIPullingFoundation(ByteBuffer _bb)
 		{
 			return IPullingFoundation.GetRootAsIPullingFoundation(_bb, default(IPullingFoundation));
 		}
 
-		// Token: 0x06025ABF RID: 154303 RVA: 0x005324BC File Offset: 0x005306BC
+		// Token: 0x06027FDF RID: 163807 RVA: 0x00578648 File Offset: 0x00576848
 		public static IPullingFoundation GetRootAsIPullingFoundation(ByteBuffer _bb, IPullingFoundation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025AC0 RID: 154304 RVA: 0x005324D9 File Offset: 0x005306D9
+		// Token: 0x06027FE0 RID: 163808 RVA: 0x00578665 File Offset: 0x00576865
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025AC1 RID: 154305 RVA: 0x005324E8 File Offset: 0x005306E8
+		// Token: 0x06027FE1 RID: 163809 RVA: 0x00578674 File Offset: 0x00576874
 		public IPullingFoundation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A792 RID: 42898
-		// (get) Token: 0x06025AC2 RID: 154306 RVA: 0x005324F8 File Offset: 0x005306F8
+		// Token: 0x1700B0B6 RID: 45238
+		// (get) Token: 0x06027FE2 RID: 163810 RVA: 0x00578684 File Offset: 0x00576884
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A793 RID: 42899
-		// (get) Token: 0x06025AC3 RID: 154307 RVA: 0x00532538 File Offset: 0x00530738
+		// Token: 0x1700B0B7 RID: 45239
+		// (get) Token: 0x06027FE3 RID: 163811 RVA: 0x005786C4 File Offset: 0x005768C4
 		public IPullingCategoryMatchingFoundation? Config
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A794 RID: 42900
-		// (get) Token: 0x06025AC4 RID: 154308 RVA: 0x00532598 File Offset: 0x00530798
+		// Token: 0x1700B0B8 RID: 45240
+		// (get) Token: 0x06027FE4 RID: 163812 RVA: 0x00578724 File Offset: 0x00576924
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025AC5 RID: 154309 RVA: 0x005325D4 File Offset: 0x005307D4
+		// Token: 0x06027FE5 RID: 163813 RVA: 0x00578760 File Offset: 0x00576960
 		public static Offset<IPullingFoundation> CreateIPullingFoundation(FlatBufferBuilder builder, bool Disabled = false, Offset<IPullingCategoryMatchingFoundation> ConfigOffset = default(Offset<IPullingCategoryMatchingFoundation>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPullingFoundation.EndIPullingFoundation(builder);
 		}
 
-		// Token: 0x06025AC6 RID: 154310 RVA: 0x005325F8 File Offset: 0x005307F8
+		// Token: 0x06027FE6 RID: 163814 RVA: 0x00578784 File Offset: 0x00576984
 		public static void StartIPullingFoundation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06025AC7 RID: 154311 RVA: 0x00532601 File Offset: 0x00530801
+		// Token: 0x06027FE7 RID: 163815 RVA: 0x0057878D File Offset: 0x0057698D
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06025AC8 RID: 154312 RVA: 0x0053260C File Offset: 0x0053080C
+		// Token: 0x06027FE8 RID: 163816 RVA: 0x00578798 File Offset: 0x00576998
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IPullingCategoryMatchingFoundation> configOffset)
 		{
 			builder.AddOffset(1, configOffset.Value, 0);
 		}
 
-		// Token: 0x06025AC9 RID: 154313 RVA: 0x0053261C File Offset: 0x0053081C
+		// Token: 0x06027FE9 RID: 163817 RVA: 0x005787A8 File Offset: 0x005769A8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06025ACA RID: 154314 RVA: 0x00532627 File Offset: 0x00530827
+		// Token: 0x06027FEA RID: 163818 RVA: 0x005787B3 File Offset: 0x005769B3
 		public static Offset<IPullingFoundation> EndIPullingFoundation(FlatBufferBuilder builder)
 		{
 			return new Offset<IPullingFoundation>(builder.EndTable());
 		}
 
-		// Token: 0x06025ACB RID: 154315 RVA: 0x00532634 File Offset: 0x00530834
+		// Token: 0x06027FEB RID: 163819 RVA: 0x005787C0 File Offset: 0x005769C0
 		public IPullingFoundationT UnPack()
 		{
 			IPullingFoundationT pullingFoundationT = new IPullingFoundationT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pullingFoundationT;
 		}
 
-		// Token: 0x06025ACC RID: 154316 RVA: 0x00532650 File Offset: 0x00530850
+		// Token: 0x06027FEC RID: 163820 RVA: 0x005787DC File Offset: 0x005769DC
 		public void UnPackTo(IPullingFoundationT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06025ACD RID: 154317 RVA: 0x005326A4 File Offset: 0x005308A4
+		// Token: 0x06027FED RID: 163821 RVA: 0x00578830 File Offset: 0x00576A30
 		public static Offset<IPullingFoundation> Pack(FlatBufferBuilder builder, IPullingFoundationT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPullingFoundation.CreateIPullingFoundation(builder, _o.Disabled, configOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EC85 RID: 60549
+		// Token: 0x0400F970 RID: 63856
 		private Table __p;
 	}
 }

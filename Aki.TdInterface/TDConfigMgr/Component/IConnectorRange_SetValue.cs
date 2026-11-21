@@ -4,46 +4,44 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000280 RID: 640
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002C3 RID: 707
 	public class IConnectorRange_SetValue
 	{
-		// Token: 0x04000B47 RID: 2887
+		// Token: 0x04000C28 RID: 3112
 		public EConnectorLogicType Type;
 
-		// Token: 0x04000B48 RID: 2888
+		// Token: 0x04000C29 RID: 3113
 		public IConnectorEffectConfig EffectConfig;
 
-		// Token: 0x04000B49 RID: 2889
+		// Token: 0x04000C2A RID: 3114
 		public string ActiveState;
 
-		// Token: 0x04000B4A RID: 2890
+		// Token: 0x04000C2B RID: 3115
 		public int EnterRange;
 
-		// Token: 0x04000B4B RID: 2891
+		// Token: 0x04000C2C RID: 3116
 		public int LeaveRange;
 
-		// Token: 0x04000B4C RID: 2892
+		// Token: 0x04000C2D RID: 3117
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IDynamicEntityMatch> MatchConditions;
 
-		// Token: 0x04000B4D RID: 2893
+		// Token: 0x04000C2E RID: 3118
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IDynamicEntityMatch> KeepConditions;
 
-		// Token: 0x04000B4E RID: 2894
+		// Token: 0x04000C2F RID: 3119
 		public string ConnectedState;
 
-		// Token: 0x04000B4F RID: 2895
+		// Token: 0x04000C30 RID: 3120
 		public string DisconnectedState;
 	}
 }

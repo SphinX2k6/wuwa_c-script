@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x02000124 RID: 292
+	// Token: 0x02000128 RID: 296
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class HotPatchInputManager : Singleton
 	{
-		// Token: 0x0600093F RID: 2367 RVA: 0x00041D74 File Offset: 0x0003FF74
+		// Token: 0x06000973 RID: 2419 RVA: 0x0004413C File Offset: 0x0004233C
 		private UniTask InitActionHandle()
 		{
 			HotPatchInputManager.<InitActionHandle>d__13 <InitActionHandle>d__;
@@ -27,18 +27,23 @@ namespace CSharpScript.Launcher.PlayerInput
 			return <InitActionHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000940 RID: 2368 RVA: 0x00041DB8 File Offset: 0x0003FFB8
+		// Token: 0x06000974 RID: 2420 RVA: 0x00044180 File Offset: 0x00042380
 		private void RegisterInputActionSettings(string actionName, string keyName)
 		{
 			UInputSettings inputSettings = UInputSettings.GetInputSettings();
-			FName actionName2 = new FName(actionName);
-			FKey key = new FKey(new FName(keyName));
-			FInputActionKeyMapping item = new FInputActionKeyMapping(actionName2, false, false, false, false, key);
+			FInputActionKeyMapping item = new FInputActionKeyMapping
+			{
+				ActionName = actionName,
+				Key = new FKey
+				{
+					KeyName = keyName
+				}
+			};
 			inputSettings.AddActionMapping(item, true);
 			this.InputActionKeyMappings.Add(item);
 		}
 
-		// Token: 0x06000941 RID: 2369 RVA: 0x00041DFC File Offset: 0x0003FFFC
+		// Token: 0x06000975 RID: 2421 RVA: 0x000441D0 File Offset: 0x000423D0
 		private void RegisterInputAxisSettings(string axisName, [Nullable(new byte[]
 		{
 			0,
@@ -46,14 +51,20 @@ namespace CSharpScript.Launcher.PlayerInput
 		})] ValueTuple<string, int> keyScale)
 		{
 			UInputSettings inputSettings = UInputSettings.GetInputSettings();
-			FName axisName2 = new FName(axisName);
-			FKey key = new FKey(new FName(keyScale.Item1));
-			FInputAxisKeyMapping item = new FInputAxisKeyMapping(axisName2, (float)keyScale.Item2, key);
+			FInputAxisKeyMapping item = new FInputAxisKeyMapping
+			{
+				AxisName = axisName,
+				Scale = (float)keyScale.Item2,
+				Key = new FKey
+				{
+					KeyName = keyScale.Item1
+				}
+			};
 			inputSettings.AddAxisMapping(item, true);
 			this.InputAxisKeyMappings.Add(item);
 		}
 
-		// Token: 0x06000942 RID: 2370 RVA: 0x00041E48 File Offset: 0x00040048
+		// Token: 0x06000976 RID: 2422 RVA: 0x00044234 File Offset: 0x00042434
 		private void RegisterAllInputSetting()
 		{
 			foreach (KeyValuePair<string, EMouseKey> keyValuePair in HotPatchInputDefine.Instance.pcInputMap)
@@ -70,7 +81,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000943 RID: 2371 RVA: 0x00041F74 File Offset: 0x00040174
+		// Token: 0x06000977 RID: 2423 RVA: 0x00044360 File Offset: 0x00042560
 		private void UnRegisterAllInputSetting()
 		{
 			UInputSettings inputSettings = UInputSettings.GetInputSettings();
@@ -92,7 +103,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000944 RID: 2372 RVA: 0x00041FE8 File Offset: 0x000401E8
+		// Token: 0x06000978 RID: 2424 RVA: 0x000443D4 File Offset: 0x000425D4
 		private void NewActionHandle(string actionName)
 		{
 			TsHotFixActionHandle_C tsHotFixActionHandle_C = new TsHotFixActionHandle_C(this.WorldContext, null, EObjectFlags.RF_NoFlags);
@@ -102,7 +113,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.ActionHandleMap[actionName] = tsHotFixActionHandle_C;
 		}
 
-		// Token: 0x06000945 RID: 2373 RVA: 0x00042044 File Offset: 0x00040244
+		// Token: 0x06000979 RID: 2425 RVA: 0x00044430 File Offset: 0x00042630
 		private void NewAxisHandle(string axisName)
 		{
 			TsHotFixActionHandle_C tsHotFixActionHandle_C = new TsHotFixActionHandle_C(this.WorldContext, null, EObjectFlags.RF_NoFlags);
@@ -111,7 +122,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.AxisHandleMap[axisName] = tsHotFixActionHandle_C;
 		}
 
-		// Token: 0x06000946 RID: 2374 RVA: 0x00042090 File Offset: 0x00040290
+		// Token: 0x0600097A RID: 2426 RVA: 0x0004447C File Offset: 0x0004267C
 		private void RegisterPcAndGamepadInput()
 		{
 			foreach (KeyValuePair<string, EMouseKey> keyValuePair in HotPatchInputDefine.Instance.pcInputMap)
@@ -128,7 +139,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000947 RID: 2375 RVA: 0x00042188 File Offset: 0x00040388
+		// Token: 0x0600097B RID: 2427 RVA: 0x00044574 File Offset: 0x00042774
 		private void RegisterMobileInput()
 		{
 			TsHotFixActionHandle_C tsHotFixActionHandle_C = new TsHotFixActionHandle_C(this.WorldContext, null, EObjectFlags.RF_NoFlags);
@@ -140,16 +151,22 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.TouchHandle = tsHotFixActionHandle_C;
 		}
 
-		// Token: 0x06000948 RID: 2376 RVA: 0x000421FC File Offset: 0x000403FC
+		// Token: 0x0600097C RID: 2428 RVA: 0x000445E8 File Offset: 0x000427E8
 		private void RegsiterAnyKeyInput()
 		{
 			TsHotFixActionHandle_C tsHotFixActionHandle_C = new TsHotFixActionHandle_C(this.WorldContext, null, EObjectFlags.RF_NoFlags);
 			tsHotFixActionHandle_C.OnAnyKeyPressCallback.Add(new Action<FKey>(this.OnAnyKeyPress));
-			tsHotFixActionHandle_C.AddAnyKeyPress(this.PlayerController, new FInputChord(new FKey(new FName("AnyKey")), false, false, false, false));
+			tsHotFixActionHandle_C.AddAnyKeyPress(this.PlayerController, new FInputChord
+			{
+				Key = new FKey
+				{
+					KeyName = "AnyKey"
+				}
+			});
 			this.AnyKeyHandle = tsHotFixActionHandle_C;
 		}
 
-		// Token: 0x06000949 RID: 2377 RVA: 0x0004225C File Offset: 0x0004045C
+		// Token: 0x0600097D RID: 2429 RVA: 0x00044650 File Offset: 0x00042850
 		private void InputActionCallback(bool isPress, string actionName, FKey key)
 		{
 			HashSet<TInputAction> hashSet;
@@ -163,7 +180,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x0600094A RID: 2378 RVA: 0x000422BC File Offset: 0x000404BC
+		// Token: 0x0600097E RID: 2430 RVA: 0x000446B0 File Offset: 0x000428B0
 		private void InputAxisCallback(float value, string axisName)
 		{
 			HashSet<TInputAxis> hashSet;
@@ -177,7 +194,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x0600094B RID: 2379 RVA: 0x0004231C File Offset: 0x0004051C
+		// Token: 0x0600097F RID: 2431 RVA: 0x00044710 File Offset: 0x00042910
 		[NullableContext(0)]
 		private void OnTouchActionCallback(bool isPress, TEnumAsByte<ETouchIndex> touchIndex, FVector position)
 		{
@@ -189,7 +206,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			touchAction(isPress, (int)touchIndex, position);
 		}
 
-		// Token: 0x0600094C RID: 2380 RVA: 0x00042336 File Offset: 0x00040536
+		// Token: 0x06000980 RID: 2432 RVA: 0x0004472A File Offset: 0x0004292A
 		[NullableContext(0)]
 		private void OnTouchMovedActionCallback(TEnumAsByte<ETouchIndex> touchIndex, FVector position)
 		{
@@ -201,14 +218,14 @@ namespace CSharpScript.Launcher.PlayerInput
 			touchMovedAction((int)touchIndex, position);
 		}
 
-		// Token: 0x0600094D RID: 2381 RVA: 0x0004234F File Offset: 0x0004054F
+		// Token: 0x06000981 RID: 2433 RVA: 0x00044743 File Offset: 0x00042943
 		private void InputChangeDelegate(EInputControllerType _, EInputControllerType __)
 		{
 			this.CurrentPanelConfig.RefreshTexture();
 			this.PlayerController.bShowMouseCursor = InputDevice.Instance.IsInKeyBoard();
 		}
 
-		// Token: 0x0600094E RID: 2382 RVA: 0x00042374 File Offset: 0x00040574
+		// Token: 0x06000982 RID: 2434 RVA: 0x00044768 File Offset: 0x00042968
 		private void OnAnyKeyPress(FKey key)
 		{
 			if (Platform.Instance.IsMobilePlatform())
@@ -232,7 +249,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			waitingAnyKeyPressCallBack();
 		}
 
-		// Token: 0x0600094F RID: 2383 RVA: 0x000423F0 File Offset: 0x000405F0
+		// Token: 0x06000983 RID: 2435 RVA: 0x000447E4 File Offset: 0x000429E4
 		public UniTask WaitAnyKeyPress()
 		{
 			UniTaskCompletionSource tcs = new UniTaskCompletionSource();
@@ -244,7 +261,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return tcs.Task;
 		}
 
-		// Token: 0x06000950 RID: 2384 RVA: 0x00042434 File Offset: 0x00040634
+		// Token: 0x06000984 RID: 2436 RVA: 0x00044828 File Offset: 0x00042A28
 		public UniTask Init(UObject worldContext)
 		{
 			HotPatchInputManager.<Init>d__30 <Init>d__;
@@ -256,7 +273,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000951 RID: 2385 RVA: 0x00042480 File Offset: 0x00040680
+		// Token: 0x06000985 RID: 2437 RVA: 0x00044874 File Offset: 0x00042A74
 		public void RegisterInputAction(string actionName, TInputAction inputActionFunc)
 		{
 			HashSet<TInputAction> hashSet;
@@ -268,7 +285,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			hashSet.Add(inputActionFunc);
 		}
 
-		// Token: 0x06000952 RID: 2386 RVA: 0x000424B8 File Offset: 0x000406B8
+		// Token: 0x06000986 RID: 2438 RVA: 0x000448AC File Offset: 0x00042AAC
 		public void UnRegisterInputAction(string actionName, TInputAction inputActionFunc)
 		{
 			HashSet<TInputAction> hashSet;
@@ -282,7 +299,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000953 RID: 2387 RVA: 0x000424F4 File Offset: 0x000406F4
+		// Token: 0x06000987 RID: 2439 RVA: 0x000448E8 File Offset: 0x00042AE8
 		public void RegisterInputAxis(string axisName, TInputAxis inputAxisFunc)
 		{
 			HashSet<TInputAxis> hashSet;
@@ -294,7 +311,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			hashSet.Add(inputAxisFunc);
 		}
 
-		// Token: 0x06000954 RID: 2388 RVA: 0x0004252C File Offset: 0x0004072C
+		// Token: 0x06000988 RID: 2440 RVA: 0x00044920 File Offset: 0x00042B20
 		public void UnRegisterInputAxis(string axisName, TInputAxis inputAxisFunc)
 		{
 			HashSet<TInputAxis> hashSet;
@@ -308,31 +325,31 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000955 RID: 2389 RVA: 0x00042568 File Offset: 0x00040768
+		// Token: 0x06000989 RID: 2441 RVA: 0x0004495C File Offset: 0x00042B5C
 		public void RegisterOnTouchAction(TTouchAction touchAction)
 		{
 			this.TouchAction = touchAction;
 		}
 
-		// Token: 0x06000956 RID: 2390 RVA: 0x00042571 File Offset: 0x00040771
+		// Token: 0x0600098A RID: 2442 RVA: 0x00044965 File Offset: 0x00042B65
 		public void UnRegisterOnTouchAction()
 		{
 			this.TouchAction = null;
 		}
 
-		// Token: 0x06000957 RID: 2391 RVA: 0x0004257A File Offset: 0x0004077A
+		// Token: 0x0600098B RID: 2443 RVA: 0x0004496E File Offset: 0x00042B6E
 		public void RegisterOnTouchMovedAction(TTouchMovedAction touchMovedAction)
 		{
 			this.TouchMovedAction = touchMovedAction;
 		}
 
-		// Token: 0x06000958 RID: 2392 RVA: 0x00042583 File Offset: 0x00040783
+		// Token: 0x0600098C RID: 2444 RVA: 0x00044977 File Offset: 0x00042B77
 		public void UnRegisterOnTouchMovedAction()
 		{
 			this.TouchMovedAction = null;
 		}
 
-		// Token: 0x06000959 RID: 2393 RVA: 0x0004258C File Offset: 0x0004078C
+		// Token: 0x0600098D RID: 2445 RVA: 0x00044980 File Offset: 0x00042B80
 		public void Destroy()
 		{
 			InputDevice.Instance.UnRegisterInputChangeDelegate(new Action<EInputControllerType, EInputControllerType>(this.InputChangeDelegate));
@@ -366,7 +383,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			this.PlayerController = null;
 		}
 
-		// Token: 0x0600095A RID: 2394 RVA: 0x000426E4 File Offset: 0x000408E4
+		// Token: 0x0600098E RID: 2446 RVA: 0x00044AD8 File Offset: 0x00042CD8
 		private UniTask InitHotPatchPanelConfigType()
 		{
 			HotPatchInputManager.<InitHotPatchPanelConfigType>d__43 <InitHotPatchPanelConfigType>d__;
@@ -377,13 +394,13 @@ namespace CSharpScript.Launcher.PlayerInput
 			return <InitHotPatchPanelConfigType>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600095B RID: 2395 RVA: 0x00042727 File Offset: 0x00040927
+		// Token: 0x0600098F RID: 2447 RVA: 0x00044B1B File Offset: 0x00042D1B
 		private void ClearTypeCache()
 		{
 			this.TypeCache.Clear();
 		}
 
-		// Token: 0x0600095C RID: 2396 RVA: 0x00042734 File Offset: 0x00040934
+		// Token: 0x06000990 RID: 2448 RVA: 0x00044B28 File Offset: 0x00042D28
 		public void InsertPanelConfig(TsHotPatchPanelConfig panelConfig)
 		{
 			TsHotPatchPanelConfig currentPanelConfig = this.CurrentPanelConfig;
@@ -402,7 +419,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			panelConfig.RegisterActionAndAxis();
 		}
 
-		// Token: 0x0600095D RID: 2397 RVA: 0x00042784 File Offset: 0x00040984
+		// Token: 0x06000991 RID: 2449 RVA: 0x00044B78 File Offset: 0x00042D78
 		public void RemovePanelConfig(TsHotPatchPanelConfig panelConfig)
 		{
 			panelConfig.HideTexture();
@@ -428,7 +445,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x0600095E RID: 2398 RVA: 0x00042818 File Offset: 0x00040A18
+		// Token: 0x06000992 RID: 2450 RVA: 0x00044C0C File Offset: 0x00042E0C
 		private UniTask LoadGamepadTexture()
 		{
 			HotPatchInputManager.<LoadGamepadTexture>d__49 <LoadGamepadTexture>d__;
@@ -439,7 +456,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return <LoadGamepadTexture>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0600095F RID: 2399 RVA: 0x0004285C File Offset: 0x00040A5C
+		// Token: 0x06000993 RID: 2451 RVA: 0x00044C50 File Offset: 0x00042E50
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -459,7 +476,7 @@ namespace CSharpScript.Launcher.PlayerInput
 			return tcs.Task;
 		}
 
-		// Token: 0x06000960 RID: 2400 RVA: 0x000428B4 File Offset: 0x00040AB4
+		// Token: 0x06000994 RID: 2452 RVA: 0x00044CA8 File Offset: 0x00042EA8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -479,14 +496,14 @@ namespace CSharpScript.Launcher.PlayerInput
 			return tcs.Task;
 		}
 
-		// Token: 0x06000961 RID: 2401 RVA: 0x00042909 File Offset: 0x00040B09
+		// Token: 0x06000995 RID: 2453 RVA: 0x00044CFD File Offset: 0x00042EFD
 		private void ClearTexture()
 		{
 			this.XboxKeyAndTextureMap.Clear();
 			this.PsKeyAndTextureMap.Clear();
 		}
 
-		// Token: 0x06000962 RID: 2402 RVA: 0x00042924 File Offset: 0x00040B24
+		// Token: 0x06000996 RID: 2454 RVA: 0x00044D18 File Offset: 0x00042F18
 		[return: Nullable(2)]
 		public UTexture GetTextureByActionName(string actionName)
 		{
@@ -515,8 +532,8 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x170000F6 RID: 246
-		// (get) Token: 0x06000963 RID: 2403 RVA: 0x0004297A File Offset: 0x00040B7A
+		// Token: 0x170000FC RID: 252
+		// (get) Token: 0x06000997 RID: 2455 RVA: 0x00044D6E File Offset: 0x00042F6E
 		public static HotPatchInputManager Instance
 		{
 			get
@@ -530,12 +547,12 @@ namespace CSharpScript.Launcher.PlayerInput
 			}
 		}
 
-		// Token: 0x06000964 RID: 2404 RVA: 0x0004299D File Offset: 0x00040B9D
+		// Token: 0x06000998 RID: 2456 RVA: 0x00044D91 File Offset: 0x00042F91
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000965 RID: 2405 RVA: 0x0004299F File Offset: 0x00040B9F
+		// Token: 0x06000999 RID: 2457 RVA: 0x00044D93 File Offset: 0x00042F93
 		public static void ResetStaticDefaultValue()
 		{
 			HotPatchInputManager instance = HotPatchInputManager._instance;
@@ -546,74 +563,74 @@ namespace CSharpScript.Launcher.PlayerInput
 			HotPatchInputManager._instance = null;
 		}
 
-		// Token: 0x06000966 RID: 2406 RVA: 0x000429B8 File Offset: 0x00040BB8
+		// Token: 0x0600099A RID: 2458 RVA: 0x00044DAC File Offset: 0x00042FAC
 		static HotPatchInputManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HotPatchInputManager.CreateStaticDefaultValue), new Action(HotPatchInputManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0400055D RID: 1373
+		// Token: 0x04000598 RID: 1432
 		[Nullable(2)]
 		private UObject WorldContext;
 
-		// Token: 0x0400055E RID: 1374
+		// Token: 0x04000599 RID: 1433
 		[Nullable(2)]
 		private APlayerController PlayerController;
 
-		// Token: 0x0400055F RID: 1375
+		// Token: 0x0400059A RID: 1434
 		private readonly Dictionary<string, HashSet<TInputAction>> InputActionMap = new Dictionary<string, HashSet<TInputAction>>();
 
-		// Token: 0x04000560 RID: 1376
+		// Token: 0x0400059B RID: 1435
 		private readonly Dictionary<string, HashSet<TInputAxis>> InputAxisMap = new Dictionary<string, HashSet<TInputAxis>>();
 
-		// Token: 0x04000561 RID: 1377
+		// Token: 0x0400059C RID: 1436
 		private readonly Dictionary<string, TsHotFixActionHandle_C> ActionHandleMap = new Dictionary<string, TsHotFixActionHandle_C>();
 
-		// Token: 0x04000562 RID: 1378
+		// Token: 0x0400059D RID: 1437
 		private readonly Dictionary<string, TsHotFixActionHandle_C> AxisHandleMap = new Dictionary<string, TsHotFixActionHandle_C>();
 
-		// Token: 0x04000563 RID: 1379
+		// Token: 0x0400059E RID: 1438
 		[Nullable(2)]
 		private TsHotFixActionHandle_C TouchHandle;
 
-		// Token: 0x04000564 RID: 1380
+		// Token: 0x0400059F RID: 1439
 		[Nullable(2)]
 		private TsHotFixActionHandle_C AnyKeyHandle;
 
-		// Token: 0x04000565 RID: 1381
+		// Token: 0x040005A0 RID: 1440
 		[Nullable(2)]
 		private TTouchAction TouchAction;
 
-		// Token: 0x04000566 RID: 1382
+		// Token: 0x040005A1 RID: 1441
 		[Nullable(2)]
 		private TTouchMovedAction TouchMovedAction;
 
-		// Token: 0x04000567 RID: 1383
+		// Token: 0x040005A2 RID: 1442
 		private readonly List<FInputActionKeyMapping> InputActionKeyMappings = new List<FInputActionKeyMapping>();
 
-		// Token: 0x04000568 RID: 1384
+		// Token: 0x040005A3 RID: 1443
 		private readonly List<FInputAxisKeyMapping> InputAxisKeyMappings = new List<FInputAxisKeyMapping>();
 
-		// Token: 0x04000569 RID: 1385
+		// Token: 0x040005A4 RID: 1444
 		[Nullable(2)]
 		private Action WaitingAnyKeyPressCallBack;
 
-		// Token: 0x0400056A RID: 1386
+		// Token: 0x040005A5 RID: 1445
 		private readonly List<TsHotPatchPanelConfig> PanelConfigList = new List<TsHotPatchPanelConfig>();
 
-		// Token: 0x0400056B RID: 1387
+		// Token: 0x040005A6 RID: 1446
 		private TsHotPatchPanelConfig CurrentPanelConfig;
 
-		// Token: 0x0400056C RID: 1388
+		// Token: 0x040005A7 RID: 1447
 		private readonly Dictionary<string, UObject> TypeCache = new Dictionary<string, UObject>();
 
-		// Token: 0x0400056D RID: 1389
+		// Token: 0x040005A8 RID: 1448
 		private readonly Dictionary<EGamepadKey, UTexture> XboxKeyAndTextureMap = new Dictionary<EGamepadKey, UTexture>();
 
-		// Token: 0x0400056E RID: 1390
+		// Token: 0x040005A9 RID: 1449
 		private readonly Dictionary<EGamepadKey, UTexture> PsKeyAndTextureMap = new Dictionary<EGamepadKey, UTexture>();
 
-		// Token: 0x0400056F RID: 1391
+		// Token: 0x040005AA RID: 1450
 		[Nullable(2)]
 		private static HotPatchInputManager _instance;
 	}

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x02005450 RID: 21584
+	// Token: 0x02004433 RID: 17459
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EyeProtectViewModel
 	{
-		// Token: 0x060371B6 RID: 225718 RVA: 0x00D0FEF4 File Offset: 0x00D0E0F4
+		// Token: 0x0602C0FF RID: 180479 RVA: 0x00C5F30C File Offset: 0x00C5D50C
 		public EyeProtectViewModel()
 		{
 			this.MenuMetaData = MenuModel.Instance.GetMenuDataByFunctionId(20210);
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x1700844C RID: 33868
-		// (get) Token: 0x060371B7 RID: 225719 RVA: 0x00D0FF7E File Offset: 0x00D0E17E
+		// Token: 0x17005818 RID: 22552
+		// (get) Token: 0x0602C100 RID: 180480 RVA: 0x00C5F396 File Offset: 0x00C5D596
 		public bool IsDirty
 		{
 			get
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			}
 		}
 
-		// Token: 0x060371B8 RID: 225720 RVA: 0x00D0FFA8 File Offset: 0x00D0E1A8
+		// Token: 0x0602C101 RID: 180481 RVA: 0x00C5F3C0 File Offset: 0x00C5D5C0
 		[NullableContext(0)]
 		public UniTask<bool> BuildComponentAndOpen()
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return <BuildComponentAndOpen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060371B9 RID: 225721 RVA: 0x00D0FFEC File Offset: 0x00D0E1EC
+		// Token: 0x0602C102 RID: 180482 RVA: 0x00C5F404 File Offset: 0x00C5D604
 		public void OnModeValueChange(int value)
 		{
 			this.ModeCurValue = new int?(value);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.IsModeDirty = (GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.EyeProtectionMode, 0, true) != value);
 		}
 
-		// Token: 0x060371BA RID: 225722 RVA: 0x00D10078 File Offset: 0x00D0E278
+		// Token: 0x0602C103 RID: 180483 RVA: 0x00C5F490 File Offset: 0x00C5D690
 		public void OnModeValueApply()
 		{
 			if (!this.IsModeDirty)
@@ -85,19 +85,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.IsModeDirty = false;
 		}
 
-		// Token: 0x060371BB RID: 225723 RVA: 0x00D100B2 File Offset: 0x00D0E2B2
+		// Token: 0x0602C104 RID: 180484 RVA: 0x00C5F4CA File Offset: 0x00C5D6CA
 		public string GetTitle()
 		{
 			return this.MenuMetaData.FunctionName;
 		}
 
-		// Token: 0x060371BC RID: 225724 RVA: 0x00D100BF File Offset: 0x00D0E2BF
+		// Token: 0x0602C105 RID: 180485 RVA: 0x00C5F4D7 File Offset: 0x00C5D6D7
 		public MenuData GetModeMetaData()
 		{
 			return this.ModeMetaData;
 		}
 
-		// Token: 0x060371BD RID: 225725 RVA: 0x00D100C8 File Offset: 0x00D0E2C8
+		// Token: 0x0602C106 RID: 180486 RVA: 0x00C5F4E0 File Offset: 0x00C5D6E0
 		public List<EyeProtectItemData> GetModeDataList()
 		{
 			List<EyeProtectItemData> list = new List<EyeProtectItemData>();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return list;
 		}
 
-		// Token: 0x060371BE RID: 225726 RVA: 0x00D1012C File Offset: 0x00D0E32C
+		// Token: 0x0602C107 RID: 180487 RVA: 0x00C5F544 File Offset: 0x00C5D744
 		public UniTask InitParam()
 		{
 			EyeProtectViewModel.<InitParam>d__20 <InitParam>d__;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return <InitParam>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060371BF RID: 225727 RVA: 0x00D10170 File Offset: 0x00D0E370
+		// Token: 0x0602C108 RID: 180488 RVA: 0x00C5F588 File Offset: 0x00C5D788
 		public void InitSliderDataList(EModeValue modeValue)
 		{
 			List<EyeProtectSliderData> list = new List<EyeProtectSliderData>();
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			this.SliderDataListMap[modeValue] = list;
 		}
 
-		// Token: 0x060371C0 RID: 225728 RVA: 0x00D101D8 File Offset: 0x00D0E3D8
+		// Token: 0x0602C109 RID: 180489 RVA: 0x00C5F5F0 File Offset: 0x00C5D7F0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			return null;
 		}
 
-		// Token: 0x060371C1 RID: 225729 RVA: 0x00D101F8 File Offset: 0x00D0E3F8
+		// Token: 0x0602C10A RID: 180490 RVA: 0x00C5F610 File Offset: 0x00C5D810
 		[NullableContext(2)]
 		public void OnDragMoved(ULGUIPointerEventData eventData)
 		{
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			filterCameraComponent.OnDragMoved(eventData);
 		}
 
-		// Token: 0x060371C2 RID: 225730 RVA: 0x00D1020F File Offset: 0x00D0E40F
+		// Token: 0x0602C10B RID: 180491 RVA: 0x00C5F627 File Offset: 0x00C5D827
 		public void OnDragBegin()
 		{
 			FilterCameraComponent filterCameraComponent = this.FilterCameraComponent;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			filterCameraComponent.OnDragBegin();
 		}
 
-		// Token: 0x060371C3 RID: 225731 RVA: 0x00D10221 File Offset: 0x00D0E421
+		// Token: 0x0602C10C RID: 180492 RVA: 0x00C5F639 File Offset: 0x00C5D839
 		public void OnDragEnded()
 		{
 			FilterCameraComponent filterCameraComponent = this.FilterCameraComponent;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			filterCameraComponent.OnDragEnded();
 		}
 
-		// Token: 0x060371C4 RID: 225732 RVA: 0x00D10233 File Offset: 0x00D0E433
+		// Token: 0x0602C10D RID: 180493 RVA: 0x00C5F64B File Offset: 0x00C5D84B
 		public void OnInputUiLookUp(string axisName, float value)
 		{
 			FilterCameraComponent filterCameraComponent = this.FilterCameraComponent;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			filterCameraComponent.OnInputUiLookUp(axisName, value);
 		}
 
-		// Token: 0x060371C5 RID: 225733 RVA: 0x00D10247 File Offset: 0x00D0E447
+		// Token: 0x0602C10E RID: 180494 RVA: 0x00C5F65F File Offset: 0x00C5D85F
 		public void OnInputUiTurn(string axisName, float value)
 		{
 			FilterCameraComponent filterCameraComponent = this.FilterCameraComponent;
@@ -217,39 +217,39 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			filterCameraComponent.OnInputUiTurn(axisName, value);
 		}
 
-		// Token: 0x0401D128 RID: 119080
+		// Token: 0x04017BC1 RID: 97217
 		[Nullable(2)]
 		protected MenuData MenuMetaData;
 
-		// Token: 0x0401D129 RID: 119081
+		// Token: 0x04017BC2 RID: 97218
 		[Nullable(2)]
 		protected MenuData ModeMetaData;
 
-		// Token: 0x0401D12A RID: 119082
+		// Token: 0x04017BC3 RID: 97219
 		public int? ModeCurValue;
 
-		// Token: 0x0401D12B RID: 119083
+		// Token: 0x04017BC4 RID: 97220
 		[Nullable(2)]
 		public FilterCameraComponent FilterCameraComponent;
 
-		// Token: 0x0401D12C RID: 119084
+		// Token: 0x04017BC5 RID: 97221
 		public bool IsModeDirty;
 
-		// Token: 0x0401D12D RID: 119085
+		// Token: 0x04017BC6 RID: 97222
 		public bool IsSliderDirty;
 
-		// Token: 0x0401D12E RID: 119086
+		// Token: 0x04017BC7 RID: 97223
 		protected readonly Dictionary<EModeValue, List<EyeProtectSliderData>> SliderDataListMap = new Dictionary<EModeValue, List<EyeProtectSliderData>>();
 
-		// Token: 0x0401D12F RID: 119087
+		// Token: 0x04017BC8 RID: 97224
 		[Nullable(2)]
 		public UKuroScreenBlueLightFilterParameter ParamStrong;
 
-		// Token: 0x0401D130 RID: 119088
+		// Token: 0x04017BC9 RID: 97225
 		[Nullable(2)]
 		public UKuroScreenBlueLightFilterParameter ParamWeak;
 
-		// Token: 0x0401D131 RID: 119089
+		// Token: 0x04017BCA RID: 97226
 		private readonly EFunction[] SliderDataFunctionList = new EFunction[]
 		{
 			EFunction.EyeProtectionTemp,
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 			EFunction.EyeProtectionTexture
 		};
 
-		// Token: 0x0401D132 RID: 119090
+		// Token: 0x04017BCB RID: 97227
 		[Nullable(2)]
 		public Action OnSliderValueChange;
 	}

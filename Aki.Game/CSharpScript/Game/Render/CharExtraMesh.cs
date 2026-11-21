@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A2 RID: 17826
+	// Token: 0x020034CA RID: 13514
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharExtraMesh : CharRenderBase
 	{
-		// Token: 0x0602DF65 RID: 188261 RVA: 0x00A927FD File Offset: 0x00A909FD
+		// Token: 0x0602264F RID: 140879 RVA: 0x009BEA1D File Offset: 0x009BCC1D
 		public override void Start()
 		{
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DF66 RID: 188262 RVA: 0x00A92808 File Offset: 0x00A90A08
+		// Token: 0x06022650 RID: 140880 RVA: 0x009BEA28 File Offset: 0x009BCC28
 		public void EnsureExtraMesh(string sourceSkeletalName)
 		{
 			if (this.ExtraMeshes.ContainsKey(sourceSkeletalName))
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Render
 			renderComponent.AddComponentWithEmptyMaterial(extraMeshInfo.Name, uskeletalMeshComponent);
 		}
 
-		// Token: 0x0602DF67 RID: 188263 RVA: 0x00A928C8 File Offset: 0x00A90AC8
+		// Token: 0x06022651 RID: 140881 RVA: 0x009BEAE8 File Offset: 0x009BCCE8
 		public void AddExtraSkeletalMeshUsage(string sourceSkeletalName)
 		{
 			if (!this.ExtraMeshes.ContainsKey(sourceSkeletalName))
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Render
 			this.ExtraMeshes[sourceSkeletalName].AddUsage();
 		}
 
-		// Token: 0x0602DF68 RID: 188264 RVA: 0x00A9291C File Offset: 0x00A90B1C
+		// Token: 0x06022652 RID: 140882 RVA: 0x009BEB3C File Offset: 0x009BCD3C
 		public void RemoveExtraSkeletalMeshUsage(string sourceSkeletalName)
 		{
 			if (!this.ExtraMeshes.ContainsKey(sourceSkeletalName))
@@ -82,19 +82,19 @@ namespace CSharpScript.Game.Render
 			this.ExtraMeshes[sourceSkeletalName].RemoveUsage();
 		}
 
-		// Token: 0x0602DF69 RID: 188265 RVA: 0x00A92970 File Offset: 0x00A90B70
+		// Token: 0x06022653 RID: 140883 RVA: 0x009BEB90 File Offset: 0x009BCD90
 		public override int GetComponentId()
 		{
 			return 12;
 		}
 
-		// Token: 0x0602DF6A RID: 188266 RVA: 0x00A92974 File Offset: 0x00A90B74
+		// Token: 0x06022654 RID: 140884 RVA: 0x009BEB94 File Offset: 0x009BCD94
 		public override string GetStatName()
 		{
 			return "CharExtraMesh";
 		}
 
-		// Token: 0x040188A1 RID: 100513
+		// Token: 0x04012EDC RID: 77532
 		protected Dictionary<string, ExtraMeshInfo> ExtraMeshes = new Dictionary<string, ExtraMeshInfo>();
 	}
 }

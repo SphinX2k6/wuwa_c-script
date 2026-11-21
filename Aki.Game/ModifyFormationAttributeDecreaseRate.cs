@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F39 RID: 12089
+// Token: 0x0200248C RID: 9356
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyFormationAttributeDecreaseRate : BuffEffect
 {
-	// Token: 0x06019BDD RID: 105437 RVA: 0x006B5223 File Offset: 0x006B3423
+	// Token: 0x060174E8 RID: 95464 RVA: 0x006DB54B File Offset: 0x006D974B
 	public ModifyFormationAttributeDecreaseRate(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BDE RID: 105438 RVA: 0x006B5232 File Offset: 0x006B3432
+	// Token: 0x060174E9 RID: 95465 RVA: 0x006DB55A File Offset: 0x006D975A
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019BDF RID: 105439 RVA: 0x006B5248 File Offset: 0x006B3448
+	// Token: 0x060174EA RID: 95466 RVA: 0x006DB570 File Offset: 0x006D9770
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -40,7 +40,7 @@ public class ModifyFormationAttributeDecreaseRate : BuffEffect
 		this.ModifierHandle = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06019BE0 RID: 105440 RVA: 0x006B52FD File Offset: 0x006B34FD
+	// Token: 0x060174EB RID: 95467 RVA: 0x006DB625 File Offset: 0x006D9825
 	public override void OnCreated()
 	{
 		if (this.AttributeId == null)
@@ -53,14 +53,14 @@ public class ModifyFormationAttributeDecreaseRate : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BE1 RID: 105441 RVA: 0x006B5339 File Offset: 0x006B3539
+	// Token: 0x060174EC RID: 95468 RVA: 0x006DB661 File Offset: 0x006D9861
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019BE2 RID: 105442 RVA: 0x006B533C File Offset: 0x006B353C
+	// Token: 0x060174ED RID: 95469 RVA: 0x006DB664 File Offset: 0x006D9864
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.AttributeId == null)
@@ -73,13 +73,13 @@ public class ModifyFormationAttributeDecreaseRate : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C212 RID: 49682
+	// Token: 0x0400C5B4 RID: 50612
 	protected EFormationAttributeId? AttributeId;
 
-	// Token: 0x0400C213 RID: 49683
+	// Token: 0x0400C5B5 RID: 50613
 	protected float Rate;
 
-	// Token: 0x0400C214 RID: 49684
+	// Token: 0x0400C5B6 RID: 50614
 	[Nullable(2)]
 	protected string ModifierHandle;
 }

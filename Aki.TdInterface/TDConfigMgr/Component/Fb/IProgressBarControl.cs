@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CA5 RID: 3237
+	// Token: 0x02000D87 RID: 3463
 	public class IProgressBarControl
 	{
-		// Token: 0x06004A00 RID: 18944 RVA: 0x000B9835 File Offset: 0x000B7A35
-		[NullableContext(1)]
+		// Token: 0x06004EAE RID: 20142 RVA: 0x000C4245 File Offset: 0x000C2445
 		public static IProgressBarControl Create(IProgressBarControl? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001673 RID: 5747
-		// (get) Token: 0x06004A01 RID: 18945 RVA: 0x000B9854 File Offset: 0x000B7A54
+		// Token: 0x1700179B RID: 6043
+		// (get) Token: 0x06004EAF RID: 20143 RVA: 0x000C4264 File Offset: 0x000C2464
 		public virtual EProgressBarControlType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001674 RID: 5748
-		// (get) Token: 0x06004A02 RID: 18946 RVA: 0x000B9861 File Offset: 0x000B7A61
+		// Token: 0x1700179C RID: 6044
+		// (get) Token: 0x06004EB0 RID: 20144 RVA: 0x000C4271 File Offset: 0x000C2471
 		public virtual int MaxValue
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001675 RID: 5749
-		// (get) Token: 0x06004A03 RID: 18947 RVA: 0x000B986E File Offset: 0x000B7A6E
+		// Token: 0x1700179D RID: 6045
+		// (get) Token: 0x06004EB1 RID: 20145 RVA: 0x000C427E File Offset: 0x000C247E
 		public virtual int InitValue
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001676 RID: 5750
-		// (get) Token: 0x06004A04 RID: 18948 RVA: 0x000B987C File Offset: 0x000B7A7C
+		// Token: 0x1700179E RID: 6046
+		// (get) Token: 0x06004EB2 RID: 20146 RVA: 0x000C428C File Offset: 0x000C248C
 		public virtual int? ProgressPerformanceAttribute
 		{
 			get
@@ -65,7 +63,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A4A RID: 10826
+		// Token: 0x04002CC4 RID: 11460
 		private IProgressBarControl Instance;
 	}
 }

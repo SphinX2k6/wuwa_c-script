@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CC1 RID: 19649
+	// Token: 0x02003C72 RID: 15474
 	public class MaterialItemData : IMaterialItemData
 	{
-		// Token: 0x17007D33 RID: 32051
-		// (get) Token: 0x06032BAC RID: 207788 RVA: 0x00BD51B3 File Offset: 0x00BD33B3
-		// (set) Token: 0x06032BAD RID: 207789 RVA: 0x00BD51BB File Offset: 0x00BD33BB
+		// Token: 0x170050DD RID: 20701
+		// (get) Token: 0x06027960 RID: 162144 RVA: 0x00B19F4B File Offset: 0x00B1814B
+		// (set) Token: 0x06027961 RID: 162145 RVA: 0x00B19F53 File Offset: 0x00B18153
 		public int ItemId { get; set; }
 
-		// Token: 0x17007D34 RID: 32052
-		// (get) Token: 0x06032BAE RID: 207790 RVA: 0x00BD51C4 File Offset: 0x00BD33C4
-		// (set) Token: 0x06032BAF RID: 207791 RVA: 0x00BD51CC File Offset: 0x00BD33CC
+		// Token: 0x170050DE RID: 20702
+		// (get) Token: 0x06027962 RID: 162146 RVA: 0x00B19F5C File Offset: 0x00B1815C
+		// (set) Token: 0x06027963 RID: 162147 RVA: 0x00B19F64 File Offset: 0x00B18164
 		public int RequiredCount { get; set; }
 	}
 }

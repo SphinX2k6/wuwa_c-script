@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002417 RID: 9239
+	// Token: 0x020026B6 RID: 9910
 	public static class ESimpleGameplayTypeExtensions
 	{
-		// Token: 0x0600C8E6 RID: 51430 RVA: 0x001D63D8 File Offset: 0x001D45D8
+		// Token: 0x0600D58D RID: 54669 RVA: 0x001EFFD4 File Offset: 0x001EE1D4
 		public static string ToEnumString(this ESimpleGameplayType value)
 		{
 			string result;
@@ -107,6 +107,15 @@ namespace Aki.TDConfigMgr.Action
 			case ESimpleGameplayType.RideFlyingCar:
 				result = "RideFlyingCar";
 				break;
+			case ESimpleGameplayType.FrequencyPaint:
+				result = "FrequencyPaint";
+				break;
+			case ESimpleGameplayType.FrequencyDetect:
+				result = "FrequencyDetect";
+				break;
+			case ESimpleGameplayType.TurntableConnector:
+				result = "TurntableConnector";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -114,7 +123,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8E7 RID: 51431 RVA: 0x001D65B4 File Offset: 0x001D47B4
+		// Token: 0x0600D58E RID: 54670 RVA: 0x001F01DC File Offset: 0x001EE3DC
 		public static ESimpleGameplayType FromString(string name)
 		{
 			ESimpleGameplayType result;
@@ -125,7 +134,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C8E8 RID: 51432 RVA: 0x001D65E0 File Offset: 0x001D47E0
+		// Token: 0x0600D58F RID: 54671 RVA: 0x001F0208 File Offset: 0x001EE408
 		public static bool TryFromString(string name, out ESimpleGameplayType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -347,48 +356,70 @@ namespace Aki.TDConfigMgr.Action
 					break;
 				}
 				case 14:
-					if (name == "ItemInspection")
-					{
-						value = ESimpleGameplayType.ItemInspection;
-						return true;
-					}
-					break;
-				case 15:
 				{
-					char c = name[1];
-					if (c <= 'i')
+					char c = name[0];
+					if (c != 'F')
 					{
-						if (c != 'c')
+						if (c == 'I')
 						{
-							if (c == 'i')
+							if (name == "ItemInspection")
 							{
-								if (name == "FishingRoulette")
-								{
-									value = ESimpleGameplayType.FishingRoulette;
-									return true;
-								}
-							}
-						}
-						else if (name == "SceneInspection")
-						{
-							value = ESimpleGameplayType.SceneInspection;
-							return true;
-						}
-					}
-					else if (c != 'l')
-					{
-						if (c == 'r')
-						{
-							if (name == "ProjectorPuzzle")
-							{
-								value = ESimpleGameplayType.ProjectorPuzzle;
+								value = ESimpleGameplayType.ItemInspection;
 								return true;
 							}
 						}
 					}
-					else if (name == "FlowerSeaEscape")
+					else if (name == "FrequencyPaint")
 					{
-						value = ESimpleGameplayType.FlowerSeaEscape;
+						value = ESimpleGameplayType.FrequencyPaint;
+						return true;
+					}
+					break;
+				}
+				case 15:
+				{
+					char c = name[3];
+					if (c <= 'j')
+					{
+						if (c != 'h')
+						{
+							if (c == 'j')
+							{
+								if (name == "ProjectorPuzzle")
+								{
+									value = ESimpleGameplayType.ProjectorPuzzle;
+									return true;
+								}
+							}
+						}
+						else if (name == "FishingRoulette")
+						{
+							value = ESimpleGameplayType.FishingRoulette;
+							return true;
+						}
+					}
+					else if (c != 'n')
+					{
+						if (c != 'q')
+						{
+							if (c == 'w')
+							{
+								if (name == "FlowerSeaEscape")
+								{
+									value = ESimpleGameplayType.FlowerSeaEscape;
+									return true;
+								}
+							}
+						}
+						else if (name == "FrequencyDetect")
+						{
+							value = ESimpleGameplayType.FrequencyDetect;
+							return true;
+						}
+					}
+					else if (name == "SceneInspection")
+					{
+						value = ESimpleGameplayType.SceneInspection;
 						return true;
 					}
 					break;
@@ -421,6 +452,13 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 					break;
+				case 18:
+					if (name == "TurntableConnector")
+					{
+						value = ESimpleGameplayType.TurntableConnector;
+						return true;
+					}
+					break;
 				case 21:
 					if (name == "DaolingAuthentication")
 					{
@@ -434,7 +472,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C8E9 RID: 51433 RVA: 0x001D6B18 File Offset: 0x001D4D18
+		// Token: 0x0600D590 RID: 54672 RVA: 0x001F07B4 File Offset: 0x001EE9B4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -470,11 +508,14 @@ namespace Aki.TDConfigMgr.Action
 				"PlayPiano",
 				"Dart",
 				"FlowerSeaEscape",
-				"RideFlyingCar"
+				"RideFlyingCar",
+				"FrequencyPaint",
+				"FrequencyDetect",
+				"TurntableConnector"
 			};
 		}
 
-		// Token: 0x0600C8EA RID: 51434 RVA: 0x001D6C43 File Offset: 0x001D4E43
+		// Token: 0x0600D591 RID: 54673 RVA: 0x001F08FA File Offset: 0x001EEAFA
 		public static ESimpleGameplayType[] GetValues()
 		{
 			return new ESimpleGameplayType[]
@@ -510,11 +551,14 @@ namespace Aki.TDConfigMgr.Action
 				ESimpleGameplayType.PlayPiano,
 				ESimpleGameplayType.Dart,
 				ESimpleGameplayType.FlowerSeaEscape,
-				ESimpleGameplayType.RideFlyingCar
+				ESimpleGameplayType.RideFlyingCar,
+				ESimpleGameplayType.FrequencyPaint,
+				ESimpleGameplayType.FrequencyDetect,
+				ESimpleGameplayType.TurntableConnector
 			};
 		}
 
-		// Token: 0x0600C8EB RID: 51435 RVA: 0x001D6C58 File Offset: 0x001D4E58
+		// Token: 0x0600D592 RID: 54674 RVA: 0x001F0910 File Offset: 0x001EEB10
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -550,7 +594,10 @@ namespace Aki.TDConfigMgr.Action
 				"PlayPiano",
 				"Dart",
 				"FlowerSeaEscape",
-				"RideFlyingCar"
+				"RideFlyingCar",
+				"FrequencyPaint",
+				"FrequencyDetect",
+				"TurntableConnector"
 			};
 		}
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,12 +11,12 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058D8 RID: 22744
+	// Token: 0x020048B0 RID: 18608
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonEntranceFlowFarmGold : InstanceDungeonEntranceFlowBase
 	{
-		// Token: 0x06039CAE RID: 236718 RVA: 0x00DBA743 File Offset: 0x00DB8943
+		// Token: 0x0602EBD1 RID: 191441 RVA: 0x00D0965B File Offset: 0x00D0785B
 		protected override void OnCreate()
 		{
 			base.AddStep(delegate
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			});
 		}
 
-		// Token: 0x06039CAF RID: 236719 RVA: 0x00DBA77C File Offset: 0x00DB897C
+		// Token: 0x0602EBD2 RID: 191442 RVA: 0x00D09694 File Offset: 0x00D07894
 		private MultiTeamRoleSelectData GetSelectViewData(FarmGoldData activityData)
 		{
 			RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -50,7 +49,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			{
 				if (roleInstance.GetRoleId() != 0)
 				{
-					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, value.RecommendFormationIter().Contains(roleInstance.GetRoleId()), false, false);
+					bool isHighlight = false;
+					using (IEnumerator<int> enumerator = value.RecommendFormationIter().GetEnumerator())
+					{
+						while (enumerator.MoveNext())
+						{
+							if (enumerator.Current == roleInstance.GetRoleId())
+							{
+								isHighlight = true;
+								break;
+							}
+						}
+					}
+					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, isHighlight, false, false, null, false, false, false);
 					list.Add(item);
 				}
 			}
@@ -61,7 +72,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 				RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(trialRoleConfigByGroupId.Value.Id, true);
 				if (roleDataById != null)
 				{
-					list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false));
+					list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false, null, false, false, false));
 				}
 			}
 			MultiTeamRoleData item2 = MultiTeamRoleData.Phrase("BossRushNormalRole", list);
@@ -76,14 +87,22 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			List<int> item4 = battleSelectRolesAndTags.Item1;
 			List<int> item5 = battleSelectRolesAndTags.Item2;
 			this.RemoveOutdatedMainRoleTrialIdsAndTags(item4, item5);
-			Action<bool> <>9__4;
+			Action<bool> <>9__3;
 			MultiTeamRoleSelectData multiTeamRoleSelectData = MultiTeamRoleSelectData.Phrase(new EFilterSortGroupId?(EFilterSortGroupId.EditFormation), 3, item4.ToArray(), delegate
 			{
 				this.RevertStep();
 				RoleModel.Instance.ClearGamePlayRoleEdit(ESkillBranchCacheType.FarmGold);
 			}, delegate(int[] roleIds)
 			{
-				if (roleIds.Count((int x) => x > 0) == 0)
+				int num = 0;
+				for (int j = 0; j < roleIds.Length; j++)
+				{
+					if (roleIds[j] > 0)
+					{
+						num++;
+					}
+				}
+				if (num == 0)
 				{
 					ScrollingTipsController.Instance.ShowTipsByTextId("Text_NoRole_Text", Array.Empty<object>());
 					return false;
@@ -91,7 +110,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 				return true;
 			}, delegate(int[] roleIds, int[] tags)
 			{
-				List<int> list4 = roleIds.ToList<int>();
+				List<int> list4 = new List<int>(roleIds);
 				activityData.SaveLevelBattleSelectRolesAndTags(instId, list4, tags);
 				FarmGoldCtx farmGoldCtx = FarmGoldCtx.Create();
 				for (int j = 0; j < roleIds.Length; j++)
@@ -105,9 +124,9 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 				int currentSelectEntranceId = FarmGoldData.CurrentSelectEntranceId;
 				UniTask<bool> task = InstanceDungeonController.Instance.PrewarTeamFightRequest(InstanceDungeonEntranceModel.Instance.InstanceId, list4, currentSelectEntranceId, 0, InstanceDungeonEntranceModel.Instance.TransitionOption, TowerDefenseModel.Instance.GetProtocolPhantomIdList(list4));
 				Action<bool> continuationFunction;
-				if ((continuationFunction = <>9__4) == null)
+				if ((continuationFunction = <>9__3) == null)
 				{
-					continuationFunction = (<>9__4 = delegate(bool result)
+					continuationFunction = (<>9__3 = delegate(bool result)
 					{
 						if (!result)
 						{
@@ -126,10 +145,10 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			return multiTeamRoleSelectData;
 		}
 
-		// Token: 0x06039CB0 RID: 236720 RVA: 0x00DBA9DC File Offset: 0x00DB8BDC
+		// Token: 0x0602EBD3 RID: 191443 RVA: 0x00D09934 File Offset: 0x00D07B34
 		private bool IfCanSelectCheck(int roleConfigId, int[] selectedRoleList)
 		{
-			if (selectedRoleList.Contains(roleConfigId))
+			if (Array.IndexOf<int>(selectedRoleList, roleConfigId) >= 0)
 			{
 				return true;
 			}
@@ -148,7 +167,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 					break;
 				}
 			}
-			if (num != roleConfigId && selectedRoleList.Contains(num))
+			if (num != roleConfigId && Array.IndexOf<int>(selectedRoleList, num) >= 0)
 			{
 				ScrollingTipsController.Instance.ShowTipsByTextId("BossRushSameFormation", Array.Empty<object>());
 				return false;
@@ -174,7 +193,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			return true;
 		}
 
-		// Token: 0x06039CB1 RID: 236721 RVA: 0x00DBAB2C File Offset: 0x00DB8D2C
+		// Token: 0x0602EBD4 RID: 191444 RVA: 0x00D09A84 File Offset: 0x00D07C84
 		public void RemoveOutdatedMainRoleTrialIdsAndTags(List<int> roleList, List<int> tags)
 		{
 			if (roleList.Count == 0 || tags.Count == 0 || tags.Count != roleList.Count)
@@ -210,7 +229,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define
 			}
 		}
 
-		// Token: 0x0401E2C6 RID: 123590
+		// Token: 0x04018D63 RID: 101731
 		private int CurrentFightFormationId;
 	}
 }

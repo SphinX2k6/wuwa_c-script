@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004946 RID: 18758
+	// Token: 0x020038BD RID: 14525
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationModeModule : IStaticVariableResetter
 	{
-		// Token: 0x06030F2D RID: 200493 RVA: 0x00B5D027 File Offset: 0x00B5B227
+		// Token: 0x06025A59 RID: 154201 RVA: 0x00A97E6B File Offset: 0x00A9606B
 		static UiNavigationModeModule()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationModeModule.CreateStaticDefaultValue), new Action(UiNavigationModeModule.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x170079D3 RID: 31187
-		// (get) Token: 0x06030F2E RID: 200494 RVA: 0x00B5D046 File Offset: 0x00B5B246
+		// Token: 0x17004D3B RID: 19771
+		// (get) Token: 0x06025A5A RID: 154202 RVA: 0x00A97E8A File Offset: 0x00A9608A
 		private static Vector TempValue
 		{
 			get
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079D4 RID: 31188
-		// (get) Token: 0x06030F2F RID: 200495 RVA: 0x00B5D04D File Offset: 0x00B5B24D
+		// Token: 0x17004D3C RID: 19772
+		// (get) Token: 0x06025A5B RID: 154203 RVA: 0x00A97E91 File Offset: 0x00A96091
 		public static FindOppositeNavigationResult FindOppositeNavigationResult
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F30 RID: 200496 RVA: 0x00B5D054 File Offset: 0x00B5B254
+		// Token: 0x06025A5C RID: 154204 RVA: 0x00A97E98 File Offset: 0x00A96098
 		public UiNavigationModeModule(TsUiNavigationBehaviorListener listener)
 		{
 			this.Listener = listener;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.NavigateToleranceReverse = listener.NavigateToleranceReverse;
 		}
 
-		// Token: 0x06030F31 RID: 200497 RVA: 0x00B5D094 File Offset: 0x00B5B294
+		// Token: 0x06025A5D RID: 154205 RVA: 0x00A97ED8 File Offset: 0x00A960D8
 		private static bool IsInItemRange(Vector offsetPosition, bool isVertical, TsUiNavigationBehaviorListener listener)
 		{
 			UUIItem rootComponent = listener.GetRootComponent();
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return num2 >= (double)localSpaceLeftBottomPoint.Y && num2 <= (double)localSpaceRightTopPoint.Y;
 		}
 
-		// Token: 0x06030F32 RID: 200498 RVA: 0x00B5D11C File Offset: 0x00B5B31C
+		// Token: 0x06025A5E RID: 154206 RVA: 0x00A97F60 File Offset: 0x00A96160
 		private static bool ReplaceBestByDistance(double distance, double positiveDistance)
 		{
 			return (Math.Abs(distance - positiveDistance) < 0.0001 && (UiNavigationModeModule.TempValue.X < 0.0 || UiNavigationModeModule.TempValue.Z > 0.0)) || positiveDistance - distance >= 0.0001;
 		}
 
-		// Token: 0x06030F33 RID: 200499 RVA: 0x00B5D179 File Offset: 0x00B5B379
+		// Token: 0x06025A5F RID: 154207 RVA: 0x00A97FBD File Offset: 0x00A961BD
 		private static bool CheckSkipByPriorityMode([Nullable(2)] UUIScrollViewWithScrollbarComponent srcScrollView, TsUiNavigationBehaviorListener otherListener, UINavigationPriorityMode mode)
 		{
 			if (mode == UINavigationPriorityMode.DistanceOnlySameScroll)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return false;
 		}
 
-		// Token: 0x06030F34 RID: 200500 RVA: 0x00B5D19C File Offset: 0x00B5B39C
+		// Token: 0x06025A60 RID: 154208 RVA: 0x00A97FE0 File Offset: 0x00A961E0
 		[return: Nullable(2)]
 		public static TsUiNavigationBehaviorListener FindOppositeNavigationComponent(Vector srcPosition, TsUiNavigationBehaviorListener[] listenerArray, UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, bool isVertical, double navigateTolerance, double navigateToleranceReverse, float verticalScrollValue, float horizontalScrollValue, [Nullable(2)] UUIScrollViewWithScrollbarComponent srcScrollView, NavigationGroup groupConfig, bool forceReturnNegative = false)
 		{
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F35 RID: 200501 RVA: 0x00B5D550 File Offset: 0x00B5B750
+		// Token: 0x06025A61 RID: 154209 RVA: 0x00A98394 File Offset: 0x00A96594
 		[NullableContext(2)]
 		private static bool IsNeedReturnBestPick(float verticalScrollValue, float horizontalScrollValue, TsUiNavigationBehaviorListener negativeBestPick, UUIScrollViewWithScrollbarComponent scrollView, [Nullable(1)] NavigationGroup groupConfig)
 		{
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return true;
 		}
 
-		// Token: 0x06030F36 RID: 200502 RVA: 0x00B5D66C File Offset: 0x00B5B86C
+		// Token: 0x06025A62 RID: 154210 RVA: 0x00A984B0 File Offset: 0x00A966B0
 		[return: Nullable(2)]
 		public static TsUiNavigationBehaviorListener FindDynamicScrollViewNavigationComponent(NavigationDynamicScrollViewFindContext context)
 		{
@@ -353,14 +353,14 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F37 RID: 200503 RVA: 0x00B5D802 File Offset: 0x00B5BA02
+		// Token: 0x06025A63 RID: 154211 RVA: 0x00A98646 File Offset: 0x00A96846
 		[NullableContext(2)]
 		private UUISelectableComponent FindNavigationComponentByMultiTemplateScrollView(UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, bool isVertical)
 		{
 			return this.Listener.GetNavigationComponent().FindMultiTemplateScrollViewNavigationComponent(UiNavigationModeModule.TempValue.ToUeVectorOld(), wrapMode, priorityMode, this.Direction, this.NavigateTolerance, this.NavigateToleranceReverse);
 		}
 
-		// Token: 0x06030F38 RID: 200504 RVA: 0x00B5D834 File Offset: 0x00B5BA34
+		// Token: 0x06025A64 RID: 154212 RVA: 0x00A98678 File Offset: 0x00A96878
 		[NullableContext(2)]
 		private ULGUIBehaviour FindNavigationComponentOld(UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, bool isVertical)
 		{
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return ulguibehaviour;
 		}
 
-		// Token: 0x06030F39 RID: 200505 RVA: 0x00B5D996 File Offset: 0x00B5BB96
+		// Token: 0x06025A65 RID: 154213 RVA: 0x00A987DA File Offset: 0x00A969DA
 		[NullableContext(2)]
 		private ULGUIBehaviour FindNavigationComponentByMode(UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, bool isVertical)
 		{
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.FindNavigationComponentOld(wrapMode, priorityMode, isVertical);
 		}
 
-		// Token: 0x06030F3A RID: 200506 RVA: 0x00B5D9B8 File Offset: 0x00B5BBB8
+		// Token: 0x06025A66 RID: 154214 RVA: 0x00A987FC File Offset: 0x00A969FC
 		[return: TupleElementNames(new string[]
 		{
 			"NeedScrollToIndex",
@@ -460,7 +460,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return new ValueTuple<int, bool, bool, bool>(item4, item, item2, item3);
 		}
 
-		// Token: 0x06030F3B RID: 200507 RVA: 0x00B5DA64 File Offset: 0x00B5BC64
+		// Token: 0x06025A67 RID: 154215 RVA: 0x00A988A8 File Offset: 0x00A96AA8
 		private void CreateDynamicNavigationContext(bool isVertical, UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode, NavigationGroup groupConfig, EDynamicScrollViewFindNextType nextType)
 		{
 			if (!this.Listener.HasDynamicScrollView())
@@ -512,7 +512,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F3C RID: 200508 RVA: 0x00B5DC67 File Offset: 0x00B5BE67
+		// Token: 0x06025A68 RID: 154216 RVA: 0x00A98AAB File Offset: 0x00A96CAB
 		private static List<TsUiNavigationBehaviorListener> GetListenerListenerList(TsUiNavigationBehaviorListener listener)
 		{
 			if (listener.HasDynamicScrollView())
@@ -522,7 +522,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return listener.GetNavigationGroup().ListenerList;
 		}
 
-		// Token: 0x06030F3D RID: 200509 RVA: 0x00B5DC88 File Offset: 0x00B5BE88
+		// Token: 0x06025A69 RID: 154217 RVA: 0x00A98ACC File Offset: 0x00A96CCC
 		[NullableContext(2)]
 		private ULGUIBehaviour GetNextNavigationComponent(bool isVertical, UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode)
 		{
@@ -582,7 +582,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F3E RID: 200510 RVA: 0x00B5DE54 File Offset: 0x00B5C054
+		// Token: 0x06025A6A RID: 154218 RVA: 0x00A98C98 File Offset: 0x00A96E98
 		[NullableContext(2)]
 		private ULGUIBehaviour GetPrevNavigationComponent(bool isVertical, UINavigationWrapMode wrapMode, UINavigationPriorityMode priorityMode)
 		{
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F3F RID: 200511 RVA: 0x00B5E020 File Offset: 0x00B5C220
+		// Token: 0x06025A6B RID: 154219 RVA: 0x00A98E64 File Offset: 0x00A97064
 		[return: Nullable(2)]
 		private ULGUIBehaviour FindNavigationComponent(NavigationGroup groupConfig)
 		{
@@ -684,7 +684,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F40 RID: 200512 RVA: 0x00B5E16C File Offset: 0x00B5C36C
+		// Token: 0x06025A6C RID: 154220 RVA: 0x00A98FB0 File Offset: 0x00A971B0
 		[NullableContext(2)]
 		private AActor GetNavigationModeActor(ELGUINavigationDirection direction)
 		{
@@ -707,7 +707,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F41 RID: 200513 RVA: 0x00B5E1D0 File Offset: 0x00B5C3D0
+		// Token: 0x06025A6D RID: 154221 RVA: 0x00A99014 File Offset: 0x00A97214
 		private EUISelectableNavigationMode? GetNavigationMode(ELGUINavigationDirection direction)
 		{
 			if (direction == ELGUINavigationDirection.Up)
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return null;
 		}
 
-		// Token: 0x06030F42 RID: 200514 RVA: 0x00B5E250 File Offset: 0x00B5C450
+		// Token: 0x06025A6E RID: 154222 RVA: 0x00A99094 File Offset: 0x00A97294
 		private void HandleTempValue(ELGUINavigationDirection direction)
 		{
 			this.Direction = direction;
@@ -755,7 +755,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F43 RID: 200515 RVA: 0x00B5E330 File Offset: 0x00B5C530
+		// Token: 0x06025A6F RID: 154223 RVA: 0x00A99174 File Offset: 0x00A97374
 		[NullableContext(2)]
 		private ULGUIBehaviour FindSelectable()
 		{
@@ -777,7 +777,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.FindSelectableByCanvas(null);
 		}
 
-		// Token: 0x06030F44 RID: 200516 RVA: 0x00B5E394 File Offset: 0x00B5C594
+		// Token: 0x06025A70 RID: 154224 RVA: 0x00A991D8 File Offset: 0x00A973D8
 		[NullableContext(2)]
 		private ULGUIBehaviour FindSelectableByCanvas(USceneComponent inParent)
 		{
@@ -816,7 +816,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return behaviorComponent;
 		}
 
-		// Token: 0x06030F45 RID: 200517 RVA: 0x00B5E4A4 File Offset: 0x00B5C6A4
+		// Token: 0x06025A71 RID: 154225 RVA: 0x00A992E8 File Offset: 0x00A974E8
 		private static Vector GetComponentPosition(TsUiNavigationBehaviorListener listener)
 		{
 			FVector2D localSpaceCenter = listener.GetRootComponent().GetLocalSpaceCenter();
@@ -825,7 +825,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return vector;
 		}
 
-		// Token: 0x06030F46 RID: 200518 RVA: 0x00B5E4F8 File Offset: 0x00B5C6F8
+		// Token: 0x06025A72 RID: 154226 RVA: 0x00A9933C File Offset: 0x00A9753C
 		[NullableContext(2)]
 		public USceneComponent FindActorByDirection(ELGUINavigationDirection direction, bool bCheckSelfActive = true)
 		{
@@ -875,37 +875,37 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F47 RID: 200519 RVA: 0x00B5E5FA File Offset: 0x00B5C7FA
+		// Token: 0x06025A73 RID: 154227 RVA: 0x00A9943E File Offset: 0x00A9763E
 		public static void CreateStaticDefaultValue()
 		{
 			UiNavigationModeModule._tempValue = Vector.Create();
 			UiNavigationModeModule._findOppositeNavigationResult = new FindOppositeNavigationResult();
 		}
 
-		// Token: 0x06030F48 RID: 200520 RVA: 0x00B5E610 File Offset: 0x00B5C810
+		// Token: 0x06025A74 RID: 154228 RVA: 0x00A99454 File Offset: 0x00A97654
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationModeModule._tempValue = null;
 			UiNavigationModeModule._findOppositeNavigationResult = null;
 		}
 
-		// Token: 0x0401A456 RID: 107606
+		// Token: 0x04014CC9 RID: 85193
 		private readonly TsUiNavigationBehaviorListener Listener;
 
-		// Token: 0x0401A457 RID: 107607
+		// Token: 0x04014CCA RID: 85194
 		private readonly float NavigateTolerance = 1E-08f;
 
-		// Token: 0x0401A458 RID: 107608
+		// Token: 0x04014CCB RID: 85195
 		private readonly float NavigateToleranceReverse = 0.0001f;
 
-		// Token: 0x0401A459 RID: 107609
+		// Token: 0x04014CCC RID: 85196
 		private ELGUINavigationDirection Direction;
 
-		// Token: 0x0401A45A RID: 107610
+		// Token: 0x04014CCD RID: 85197
 		[Nullable(2)]
 		private static Vector _tempValue;
 
-		// Token: 0x0401A45B RID: 107611
+		// Token: 0x04014CCE RID: 85198
 		[Nullable(2)]
 		public static FindOppositeNavigationResult _findOppositeNavigationResult;
 	}

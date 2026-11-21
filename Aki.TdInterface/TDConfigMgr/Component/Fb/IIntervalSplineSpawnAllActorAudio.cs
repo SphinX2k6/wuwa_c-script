@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E1E RID: 3614
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F1A RID: 3866
 	public class IIntervalSplineSpawnAllActorAudio : IIntervalSplineSpawnAudioConfigBase
 	{
-		// Token: 0x060051C3 RID: 20931 RVA: 0x000C997A File Offset: 0x000C7B7A
+		// Token: 0x060056EA RID: 22250 RVA: 0x000D5242 File Offset: 0x000D3442
 		public static IIntervalSplineSpawnAllActorAudio Create(IIntervalSplineSpawnAllActorAudio? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B44 RID: 6980
-		// (get) Token: 0x060051C4 RID: 20932 RVA: 0x000C9999 File Offset: 0x000C7B99
+		// Token: 0x17001CB1 RID: 7345
+		// (get) Token: 0x060056EB RID: 22251 RVA: 0x000D5261 File Offset: 0x000D3461
 		public override EIntervalSplineSpawnAudioConfigType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B45 RID: 6981
-		// (get) Token: 0x060051C5 RID: 20933 RVA: 0x000C99A6 File Offset: 0x000C7BA6
+		// Token: 0x17001CB2 RID: 7346
+		// (get) Token: 0x060056EC RID: 22252 RVA: 0x000D526E File Offset: 0x000D346E
 		public virtual string AkEvent
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B46 RID: 6982
-		// (get) Token: 0x060051C6 RID: 20934 RVA: 0x000C99B3 File Offset: 0x000C7BB3
+		// Token: 0x17001CB3 RID: 7347
+		// (get) Token: 0x060056ED RID: 22253 RVA: 0x000D527B File Offset: 0x000D347B
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -61,14 +59,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F15 RID: 12053
+		// Token: 0x040031DD RID: 12765
 		private IIntervalSplineSpawnAllActorAudio Instance;
 
-		// Token: 0x04002F16 RID: 12054
+		// Token: 0x040031DE RID: 12766
 		[Nullable(2)]
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x04002F17 RID: 12055
+		// Token: 0x040031DF RID: 12767
 		private bool _OffsetInited;
 	}
 }

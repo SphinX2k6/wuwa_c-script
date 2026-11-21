@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.NumberSelect
 {
-	// Token: 0x02005B4E RID: 23374
+	// Token: 0x02004B2D RID: 19245
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NumberSelectComponent : UiPanelBase
 	{
-		// Token: 0x0603B2C6 RID: 242374 RVA: 0x00E1BE0C File Offset: 0x00E1A00C
+		// Token: 0x0603020F RID: 197135 RVA: 0x00D6C254 File Offset: 0x00D6A454
 		[NullableContext(1)]
 		public NumberSelectComponent(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B2C7 RID: 242375 RVA: 0x00E1BE34 File Offset: 0x00E1A034
+		// Token: 0x06030210 RID: 197136 RVA: 0x00D6C27C File Offset: 0x00D6A47C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B2C8 RID: 242376 RVA: 0x00E1BFA0 File Offset: 0x00E1A1A0
+		// Token: 0x06030211 RID: 197137 RVA: 0x00D6C3E8 File Offset: 0x00D6A5E8
 		private void OnClickMax()
 		{
 			this.SelectMax();
 		}
 
-		// Token: 0x0603B2C9 RID: 242377 RVA: 0x00E1BFA8 File Offset: 0x00E1A1A8
+		// Token: 0x06030212 RID: 197138 RVA: 0x00D6C3F0 File Offset: 0x00D6A5F0
 		protected override void OnStart()
 		{
 			this.Slider = base.GetSlider(4);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.AddLongPress.ShouldPlayLongPressSound = true;
 		}
 
-		// Token: 0x0603B2CA RID: 242378 RVA: 0x00E1C068 File Offset: 0x00E1A268
+		// Token: 0x06030213 RID: 197139 RVA: 0x00D6C4B0 File Offset: 0x00D6A6B0
 		private void SliderValueChange(float value)
 		{
 			this.SelectNumber = (int)value;
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			valueChangeFunction(this.SelectNumber);
 		}
 
-		// Token: 0x0603B2CB RID: 242379 RVA: 0x00E1C12A File Offset: 0x00E1A32A
+		// Token: 0x06030214 RID: 197140 RVA: 0x00D6C572 File Offset: 0x00D6A772
 		private void ReducePointClick(bool _)
 		{
 			this.Slider.SetValue((float)(this.SelectNumber - 1), true);
 		}
 
-		// Token: 0x0603B2CC RID: 242380 RVA: 0x00E1C141 File Offset: 0x00E1A341
+		// Token: 0x06030215 RID: 197141 RVA: 0x00D6C589 File Offset: 0x00D6A789
 		private void AddPointClick(bool _)
 		{
 			this.Slider.SetValue((float)(this.SelectNumber + 1), true);
 		}
 
-		// Token: 0x0603B2CD RID: 242381 RVA: 0x00E1C158 File Offset: 0x00E1A358
+		// Token: 0x06030216 RID: 197142 RVA: 0x00D6C5A0 File Offset: 0x00D6A7A0
 		protected override void OnBeforeDestroy()
 		{
 			this.Slider.OnValueChangeCb.Unbind();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.AddLongPress.Clear();
 		}
 
-		// Token: 0x0603B2CE RID: 242382 RVA: 0x00E1C198 File Offset: 0x00E1A398
+		// Token: 0x06030217 RID: 197143 RVA: 0x00D6C5E0 File Offset: 0x00D6A7E0
 		private void InitSlider()
 		{
 			UUIText text = base.GetText(2);
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.SetComponentLimitState(ifLimit);
 		}
 
-		// Token: 0x0603B2CF RID: 242383 RVA: 0x00E1C248 File Offset: 0x00E1A448
+		// Token: 0x06030218 RID: 197144 RVA: 0x00D6C690 File Offset: 0x00D6A890
 		public void SetMaxBtnShowState(bool state)
 		{
 			UUIButtonComponent button = base.GetButton(7);
@@ -143,39 +143,39 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			button.RootUIComp.Get().SetUIActive(state);
 		}
 
-		// Token: 0x0603B2D0 RID: 242384 RVA: 0x00E1C274 File Offset: 0x00E1A474
+		// Token: 0x06030219 RID: 197145 RVA: 0x00D6C6BC File Offset: 0x00D6A8BC
 		public bool GetIfLimit()
 		{
 			return this.MaxValue <= 1;
 		}
 
-		// Token: 0x0603B2D1 RID: 242385 RVA: 0x00E1C282 File Offset: 0x00E1A482
+		// Token: 0x0603021A RID: 197146 RVA: 0x00D6C6CA File Offset: 0x00D6A8CA
 		public bool GetIfSelectMax()
 		{
 			return this.SelectNumber == this.MaxValue;
 		}
 
-		// Token: 0x0603B2D2 RID: 242386 RVA: 0x00E1C292 File Offset: 0x00E1A492
+		// Token: 0x0603021B RID: 197147 RVA: 0x00D6C6DA File Offset: 0x00D6A8DA
 		public void SelectMax()
 		{
 			this.Slider.SetValue((float)this.MaxValue, false);
 			this.SliderValueChange((float)this.MaxValue);
 		}
 
-		// Token: 0x0603B2D3 RID: 242387 RVA: 0x00E1C2B4 File Offset: 0x00E1A4B4
+		// Token: 0x0603021C RID: 197148 RVA: 0x00D6C6FC File Offset: 0x00D6A8FC
 		[NullableContext(1)]
 		public void SetNumberSelectTipsText(string text)
 		{
 			this.BuyNumberTips.SetText(text, true);
 		}
 
-		// Token: 0x0603B2D4 RID: 242388 RVA: 0x00E1C2C3 File Offset: 0x00E1A4C3
+		// Token: 0x0603021D RID: 197149 RVA: 0x00D6C70B File Offset: 0x00D6A90B
 		public void SetNumberSelectTipsVisible(bool bVisible)
 		{
 			this.BuyNumberTips.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603B2D5 RID: 242389 RVA: 0x00E1C2D1 File Offset: 0x00E1A4D1
+		// Token: 0x0603021E RID: 197150 RVA: 0x00D6C719 File Offset: 0x00D6A919
 		public virtual void SetComponentLimitState(bool isLimit)
 		{
 			this.SetMinTextShowState(!isLimit);
@@ -184,39 +184,39 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.SetAddReduceButtonActive(!isLimit);
 		}
 
-		// Token: 0x0603B2D6 RID: 242390 RVA: 0x00E1C306 File Offset: 0x00E1A506
+		// Token: 0x0603021F RID: 197151 RVA: 0x00D6C74E File Offset: 0x00D6A94E
 		public void SetMinTextShowState(bool state)
 		{
 			base.GetText(2).SetUIActive(state);
 		}
 
-		// Token: 0x0603B2D7 RID: 242391 RVA: 0x00E1C315 File Offset: 0x00E1A515
+		// Token: 0x06030220 RID: 197152 RVA: 0x00D6C75D File Offset: 0x00D6A95D
 		public void SetAddReduceButtonActive(bool state)
 		{
 			this.ReduceLongPress.SetActive(state);
 			this.AddLongPress.SetActive(state);
 		}
 
-		// Token: 0x0603B2D8 RID: 242392 RVA: 0x00E1C32F File Offset: 0x00E1A52F
+		// Token: 0x06030221 RID: 197153 RVA: 0x00D6C777 File Offset: 0x00D6A977
 		public void SetAddReduceButtonInteractive(bool state)
 		{
 			this.SetAddButtonInteractive(state);
 			this.SetReduceButtonInteractive(state);
 		}
 
-		// Token: 0x0603B2D9 RID: 242393 RVA: 0x00E1C33F File Offset: 0x00E1A53F
+		// Token: 0x06030222 RID: 197154 RVA: 0x00D6C787 File Offset: 0x00D6A987
 		public void SetAddButtonInteractive(bool state)
 		{
 			base.GetButton(1).SetSelfInteractive(state);
 		}
 
-		// Token: 0x0603B2DA RID: 242394 RVA: 0x00E1C34E File Offset: 0x00E1A54E
+		// Token: 0x06030223 RID: 197155 RVA: 0x00D6C796 File Offset: 0x00D6A996
 		public void SetReduceButtonInteractive(bool state)
 		{
 			base.GetButton(0).SetSelfInteractive(state);
 		}
 
-		// Token: 0x0603B2DB RID: 242395 RVA: 0x00E1C35D File Offset: 0x00E1A55D
+		// Token: 0x06030224 RID: 197156 RVA: 0x00D6C7A5 File Offset: 0x00D6A9A5
 		[NullableContext(1)]
 		public void Init(INumberSelectData data)
 		{
@@ -224,50 +224,50 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.Refresh(this.Data.MaxNumber);
 		}
 
-		// Token: 0x0603B2DC RID: 242396 RVA: 0x00E1C377 File Offset: 0x00E1A577
+		// Token: 0x06030225 RID: 197157 RVA: 0x00D6C7BF File Offset: 0x00D6A9BF
 		public int GetSelectNumber()
 		{
 			return this.SelectNumber;
 		}
 
-		// Token: 0x0603B2DD RID: 242397 RVA: 0x00E1C37F File Offset: 0x00E1A57F
+		// Token: 0x06030226 RID: 197158 RVA: 0x00D6C7C7 File Offset: 0x00D6A9C7
 		public void SetLimitMaxValue(int value)
 		{
 			this.LimitMaxValue = Math.Min(value, 9999);
 		}
 
-		// Token: 0x0603B2DE RID: 242398 RVA: 0x00E1C392 File Offset: 0x00E1A592
+		// Token: 0x06030227 RID: 197159 RVA: 0x00D6C7DA File Offset: 0x00D6A9DA
 		public void SetLimitMaxValueForce(int value)
 		{
 			this.LimitMaxValue = value;
 		}
 
-		// Token: 0x0603B2DF RID: 242399 RVA: 0x00E1C39B File Offset: 0x00E1A59B
+		// Token: 0x06030228 RID: 197160 RVA: 0x00D6C7E3 File Offset: 0x00D6A9E3
 		public void ResetLimitMaxValue()
 		{
 			this.LimitMaxValue = 9999;
 		}
 
-		// Token: 0x0603B2E0 RID: 242400 RVA: 0x00E1C3A8 File Offset: 0x00E1A5A8
+		// Token: 0x06030229 RID: 197161 RVA: 0x00D6C7F0 File Offset: 0x00D6A9F0
 		public void SetMinValue(int value)
 		{
 			this.MinValue = value;
 		}
 
-		// Token: 0x0603B2E1 RID: 242401 RVA: 0x00E1C3B1 File Offset: 0x00E1A5B1
+		// Token: 0x0603022A RID: 197162 RVA: 0x00D6C7F9 File Offset: 0x00D6A9F9
 		public void EnableUseCustomMinValue(bool enable)
 		{
 			this.UseCustomMinValue = enable;
 		}
 
-		// Token: 0x0603B2E2 RID: 242402 RVA: 0x00E1C3BA File Offset: 0x00E1A5BA
+		// Token: 0x0603022B RID: 197163 RVA: 0x00D6C802 File Offset: 0x00D6AA02
 		public void Refresh(int maxNumber)
 		{
 			this.MaxValue = MathUtils.Instance.Clamp(maxNumber, this.MinValue, this.LimitMaxValue);
 			this.InitSlider();
 		}
 
-		// Token: 0x0603B2E3 RID: 242403 RVA: 0x00E1C3DF File Offset: 0x00E1A5DF
+		// Token: 0x0603022C RID: 197164 RVA: 0x00D6C827 File Offset: 0x00D6AA27
 		public void ChangeValue(int value, bool forceRefresh = true)
 		{
 			if (!forceRefresh && this.SelectNumber == value)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			this.SliderValueChange((float)value);
 		}
 
-		// Token: 0x0603B2E4 RID: 242404 RVA: 0x00E1C404 File Offset: 0x00E1A604
+		// Token: 0x0603022D RID: 197165 RVA: 0x00D6C84C File Offset: 0x00D6AA4C
 		public void SetSliderAndButtonInteractive(bool state)
 		{
 			this.ReduceLongPress.SetInteractive(state);
@@ -287,58 +287,58 @@ namespace CSharpScript.Game.Module.Common.NumberSelect
 			base.GetItem(6).SetRaycastTarget(state);
 		}
 
-		// Token: 0x0401ED6A RID: 126314
+		// Token: 0x04019816 RID: 104470
 		private const int MAX_VALUE = 9999;
 
-		// Token: 0x0401ED6B RID: 126315
+		// Token: 0x04019817 RID: 104471
 		private LongPressButtonItem ReduceLongPress;
 
-		// Token: 0x0401ED6C RID: 126316
+		// Token: 0x04019818 RID: 104472
 		private LongPressButtonItem AddLongPress;
 
-		// Token: 0x0401ED6D RID: 126317
+		// Token: 0x04019819 RID: 104473
 		private UUISliderComponent Slider;
 
-		// Token: 0x0401ED6E RID: 126318
+		// Token: 0x0401981A RID: 104474
 		private UUIText BuyNumberTips;
 
-		// Token: 0x0401ED6F RID: 126319
+		// Token: 0x0401981B RID: 104475
 		private INumberSelectData Data;
 
-		// Token: 0x0401ED70 RID: 126320
+		// Token: 0x0401981C RID: 104476
 		private int SelectNumber;
 
-		// Token: 0x0401ED71 RID: 126321
+		// Token: 0x0401981D RID: 104477
 		private int MaxValue;
 
-		// Token: 0x0401ED72 RID: 126322
+		// Token: 0x0401981E RID: 104478
 		private int LimitMaxValue = 9999;
 
-		// Token: 0x0401ED73 RID: 126323
+		// Token: 0x0401981F RID: 104479
 		private int MinValue = 1;
 
-		// Token: 0x0401ED74 RID: 126324
+		// Token: 0x04019820 RID: 104480
 		private bool UseCustomMinValue;
 
-		// Token: 0x0200BD78 RID: 48504
+		// Token: 0x0200A782 RID: 42882
 		[NullableContext(0)]
 		public enum ECompDefine
 		{
-			// Token: 0x0403926E RID: 234094
+			// Token: 0x04033C3C RID: 212028
 			ReduceButton,
-			// Token: 0x0403926F RID: 234095
+			// Token: 0x04033C3D RID: 212029
 			AddButton,
-			// Token: 0x04039270 RID: 234096
+			// Token: 0x04033C3E RID: 212030
 			MinText,
-			// Token: 0x04039271 RID: 234097
+			// Token: 0x04033C3F RID: 212031
 			MaxText,
-			// Token: 0x04039272 RID: 234098
+			// Token: 0x04033C40 RID: 212032
 			Slider,
-			// Token: 0x04039273 RID: 234099
+			// Token: 0x04033C41 RID: 212033
 			BuyNumberTips,
-			// Token: 0x04039274 RID: 234100
+			// Token: 0x04033C42 RID: 212034
 			SpriteHandle,
-			// Token: 0x04039275 RID: 234101
+			// Token: 0x04033C43 RID: 212035
 			MaxButton
 		}
 	}

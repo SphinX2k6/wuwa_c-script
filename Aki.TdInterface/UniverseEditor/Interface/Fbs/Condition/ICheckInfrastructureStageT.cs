@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A79 RID: 19065
+	// Token: 0x02004F3F RID: 20287
 	public class ICheckInfrastructureStageT
 	{
-		// Token: 0x17008A17 RID: 35351
-		// (get) Token: 0x0601DE1E RID: 122398 RVA: 0x004327EC File Offset: 0x004309EC
-		// (set) Token: 0x0601DE1F RID: 122399 RVA: 0x004327F4 File Offset: 0x004309F4
+		// Token: 0x170090F3 RID: 37107
+		// (get) Token: 0x0601F8C1 RID: 129217 RVA: 0x00463978 File Offset: 0x00461B78
+		// (set) Token: 0x0601F8C2 RID: 129218 RVA: 0x00463980 File Offset: 0x00461B80
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x17008A18 RID: 35352
-		// (get) Token: 0x0601DE20 RID: 122400 RVA: 0x004327FD File Offset: 0x004309FD
-		// (set) Token: 0x0601DE21 RID: 122401 RVA: 0x00432805 File Offset: 0x00430A05
+		// Token: 0x170090F4 RID: 37108
+		// (get) Token: 0x0601F8C3 RID: 129219 RVA: 0x00463989 File Offset: 0x00461B89
+		// (set) Token: 0x0601F8C4 RID: 129220 RVA: 0x00463991 File Offset: 0x00461B91
 		public EInfrastructureStage InfrastructureStage { get; set; }
 
-		// Token: 0x0601DE22 RID: 122402 RVA: 0x0043280E File Offset: 0x00430A0E
+		// Token: 0x0601F8C5 RID: 129221 RVA: 0x0046399A File Offset: 0x00461B9A
 		public ICheckInfrastructureStageT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

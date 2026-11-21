@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,37 +10,41 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002A3D RID: 10813
+// Token: 0x02001FB8 RID: 8120
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashSkinController : UiControllerBase
 {
-	// Token: 0x0601684C RID: 92236 RVA: 0x005B5B70 File Offset: 0x005B3D70
+	// Token: 0x0601426D RID: 82541 RVA: 0x005E1CD8 File Offset: 0x005DFED8
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x0601684D RID: 92237 RVA: 0x005B5B8E File Offset: 0x005B3D8E
+	// Token: 0x0601426E RID: 82542 RVA: 0x005E1CF6 File Offset: 0x005DFEF6
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
 	}
 
-	// Token: 0x0601684E RID: 92238 RVA: 0x005B5BAC File Offset: 0x005B3DAC
+	// Token: 0x0601426F RID: 82543 RVA: 0x005E1D14 File Offset: 0x005DFF14
 	private void OnDataDone()
 	{
 		CalabashSkinController.Instance.RequestLoadCalabashSkinInfo();
 	}
 
-	// Token: 0x0601684F RID: 92239 RVA: 0x005B5BB8 File Offset: 0x005B3DB8
+	// Token: 0x06014270 RID: 82544 RVA: 0x005E1D20 File Offset: 0x005DFF20
 	protected unsafe override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.CalabashSkinUpdateNotify, delegate(IMessage msg, Net.CallbackStatus status)
 		{
 			CalabashSkinUpdateNotify calabashSkinUpdateNotify = (CalabashSkinUpdateNotify)msg;
-			CalabashSkinModel.Instance.NotifyAddUnlockSkinData(calabashSkinUpdateNotify.SkinIds.ToArray<int>());
-			InventoryController.Instance.AddCalabashSkinItemData(calabashSkinUpdateNotify.SkinIds.ToArray<int>());
+			int[] array = new int[calabashSkinUpdateNotify.SkinIds.Count];
+			calabashSkinUpdateNotify.SkinIds.CopyTo(array, 0);
+			CalabashSkinModel.Instance.NotifyAddUnlockSkinData(array);
+			int[] array2 = new int[calabashSkinUpdateNotify.SkinIds.Count];
+			calabashSkinUpdateNotify.SkinIds.CopyTo(array2, 0);
+			InventoryController.Instance.AddCalabashSkinItemData(array2);
 		});
 		Net.Instance.Register(ENotifyMessageId.CalabashSkinTakeOnNotify, delegate(IMessage msg, Net.CallbackStatus status)
 		{
@@ -79,7 +82,7 @@ public class CalabashSkinController : UiControllerBase
 		});
 	}
 
-	// Token: 0x06016850 RID: 92240 RVA: 0x005B5C52 File Offset: 0x005B3E52
+	// Token: 0x06014271 RID: 82545 RVA: 0x005E1DBA File Offset: 0x005DFFBA
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.CalabashSkinUpdateNotify);
@@ -87,7 +90,7 @@ public class CalabashSkinController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.EntityCalabashSkinChangeNotify);
 	}
 
-	// Token: 0x06016851 RID: 92241 RVA: 0x005B5C84 File Offset: 0x005B3E84
+	// Token: 0x06014272 RID: 82546 RVA: 0x005E1DEC File Offset: 0x005DFFEC
 	private void RequestLoadCalabashSkinInfo()
 	{
 		LoadCalabashSkinInfoRequest message = LoadCalabashSkinInfoRequest.Create();
@@ -100,15 +103,19 @@ public class CalabashSkinController : UiControllerBase
 			}
 			if (loadCalabashSkinInfoResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(loadCalabashSkinInfoResponse.ErrorCode, 17073, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(loadCalabashSkinInfoResponse.ErrorCode, 18646, null, true, true);
 				return;
 			}
-			CalabashSkinModel.Instance.NotifyCalabashSkinData(loadCalabashSkinInfoResponse.EquipSkinId, loadCalabashSkinInfoResponse.SkinItemIds.ToArray<int>());
-			InventoryController.Instance.InitCalabashSkinItemData(loadCalabashSkinInfoResponse.SkinItemIds.ToArray<int>());
+			int[] array = new int[loadCalabashSkinInfoResponse.SkinItemIds.Count];
+			loadCalabashSkinInfoResponse.SkinItemIds.CopyTo(array, 0);
+			CalabashSkinModel.Instance.NotifyCalabashSkinData(loadCalabashSkinInfoResponse.EquipSkinId, array);
+			int[] array2 = new int[loadCalabashSkinInfoResponse.SkinItemIds.Count];
+			loadCalabashSkinInfoResponse.SkinItemIds.CopyTo(array2, 0);
+			InventoryController.Instance.InitCalabashSkinItemData(array2);
 		}, 0);
 	}
 
-	// Token: 0x06016852 RID: 92242 RVA: 0x005B5CC8 File Offset: 0x005B3EC8
+	// Token: 0x06014273 RID: 82547 RVA: 0x005E1E30 File Offset: 0x005E0030
 	[NullableContext(0)]
 	public UniTask<bool> RequestCalabashSkinTakeOn(int skinId)
 	{
@@ -120,7 +127,7 @@ public class CalabashSkinController : UiControllerBase
 		return <RequestCalabashSkinTakeOn>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016853 RID: 92243 RVA: 0x005B5D0C File Offset: 0x005B3F0C
+	// Token: 0x06014274 RID: 82548 RVA: 0x005E1E74 File Offset: 0x005E0074
 	public void SelectedCalabashSkinChange(int skinId, int roleId, [Nullable(2)] UiModelBase calabashModel, string caseName = "TerminalCase")
 	{
 		if (calabashModel == null)
@@ -181,8 +188,8 @@ public class CalabashSkinController : UiControllerBase
 		uiModelLoadComponent.LoadModelByModelId(modelId, true, loadFinishCallBack, null);
 	}
 
-	// Token: 0x17001DD9 RID: 7641
-	// (get) Token: 0x06016854 RID: 92244 RVA: 0x005B5DBE File Offset: 0x005B3FBE
+	// Token: 0x17001E31 RID: 7729
+	// (get) Token: 0x06014275 RID: 82549 RVA: 0x005E1F26 File Offset: 0x005E0126
 	public static CalabashSkinController Instance
 	{
 		get
@@ -191,7 +198,7 @@ public class CalabashSkinController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06016855 RID: 92245 RVA: 0x005B5DC5 File Offset: 0x005B3FC5
+	// Token: 0x06014276 RID: 82550 RVA: 0x005E1F2D File Offset: 0x005E012D
 	public static CalabashSkinController GetOrCreateInstance()
 	{
 		if (CalabashSkinController._Instance == null)
@@ -201,7 +208,7 @@ public class CalabashSkinController : UiControllerBase
 		return CalabashSkinController._Instance;
 	}
 
-	// Token: 0x06016856 RID: 92246 RVA: 0x005B5DD9 File Offset: 0x005B3FD9
+	// Token: 0x06014277 RID: 82551 RVA: 0x005E1F41 File Offset: 0x005E0141
 	public static bool CreateInstance()
 	{
 		if (CalabashSkinController._Instance != null)
@@ -212,24 +219,24 @@ public class CalabashSkinController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06016857 RID: 92247 RVA: 0x005B5DEF File Offset: 0x005B3FEF
+	// Token: 0x06014278 RID: 82552 RVA: 0x005E1F57 File Offset: 0x005E0157
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016858 RID: 92248 RVA: 0x005B5DF1 File Offset: 0x005B3FF1
+	// Token: 0x06014279 RID: 82553 RVA: 0x005E1F59 File Offset: 0x005E0159
 	public static void ResetStaticDefaultValue()
 	{
 		CalabashSkinController._Instance = null;
 	}
 
-	// Token: 0x06016859 RID: 92249 RVA: 0x005B5DF9 File Offset: 0x005B3FF9
+	// Token: 0x0601427A RID: 82554 RVA: 0x005E1F61 File Offset: 0x005E0161
 	static CalabashSkinController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CalabashSkinController.CreateStaticDefaultValue), new Action(CalabashSkinController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A741 RID: 42817
+	// Token: 0x0400AB45 RID: 43845
 	[Nullable(2)]
 	private static CalabashSkinController _Instance;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003D4 RID: 980
+	// Token: 0x020003EA RID: 1002
 	public class ConfigHelpTextById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060016FF RID: 5887 RVA: 0x000DB7E7 File Offset: 0x000D99E7
+		// Token: 0x06001783 RID: 6019 RVA: 0x000E1F3B File Offset: 0x000E013B
 		static ConfigHelpTextById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHelpTextById.CreateStaticDefaultValue), new Action(ConfigHelpTextById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001700 RID: 5888 RVA: 0x000DB808 File Offset: 0x000D9A08
+		// Token: 0x06001784 RID: 6020 RVA: 0x000E1F5C File Offset: 0x000E015C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHelpTextById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001701 RID: 5889 RVA: 0x000DB887 File Offset: 0x000D9A87
+		// Token: 0x06001785 RID: 6021 RVA: 0x000E1FDB File Offset: 0x000E01DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHelpTextById.LogPair = null;
 			ConfigHelpTextById.HandleId = 0;
 		}
 
-		// Token: 0x06001702 RID: 5890 RVA: 0x000DB895 File Offset: 0x000D9A95
+		// Token: 0x06001786 RID: 6022 RVA: 0x000E1FE9 File Offset: 0x000E01E9
 		public static void Init()
 		{
 			ConfigHelpTextById.HandleId = ConfigCommon.InitDataStatement(ConfigHelpTextById.HandleId, "db_help.db", "select BinData from `HelpText` where Id=?");
 		}
 
-		// Token: 0x06001703 RID: 5891 RVA: 0x000DB8B0 File Offset: 0x000D9AB0
+		// Token: 0x06001787 RID: 6023 RVA: 0x000E2004 File Offset: 0x000E0204
 		public static HelpText? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHelpTextById.HandleId, ConfigHelpTextById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HelpText?(rootAsHelpText);
 		}
 
-		// Token: 0x04001AB0 RID: 6832
+		// Token: 0x04001B4A RID: 6986
 		private const string DB = "db_help.db";
 
-		// Token: 0x04001AB1 RID: 6833
+		// Token: 0x04001B4B RID: 6987
 		private const string FILE = "b.帮助.xlsx";
 
-		// Token: 0x04001AB2 RID: 6834
+		// Token: 0x04001B4C RID: 6988
 		private const string TABLE = "HelpText";
 
-		// Token: 0x04001AB3 RID: 6835
+		// Token: 0x04001B4D RID: 6989
 		private const string COMMAND = "select BinData from `HelpText` where Id=?";
 
-		// Token: 0x04001AB4 RID: 6836
+		// Token: 0x04001B4E RID: 6990
 		private const string KEY_PREFIX = "HelpTextById";
 
-		// Token: 0x04001AB5 RID: 6837
+		// Token: 0x04001B4F RID: 6991
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001AB6 RID: 6838
+		// Token: 0x04001B50 RID: 6992
 		private static int HandleId;
 	}
 }

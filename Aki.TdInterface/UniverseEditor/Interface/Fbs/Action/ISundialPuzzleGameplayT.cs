@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200723C RID: 29244
+	// Token: 0x02007A11 RID: 31249
 	public class ISundialPuzzleGameplayT
 	{
-		// Token: 0x1700D903 RID: 55555
-		// (get) Token: 0x06033DEE RID: 212462 RVA: 0x006FA82E File Offset: 0x006F8A2E
-		// (set) Token: 0x06033DEF RID: 212463 RVA: 0x006FA836 File Offset: 0x006F8A36
+		// Token: 0x1700E4FC RID: 58620
+		// (get) Token: 0x060370F0 RID: 225520 RVA: 0x0075BB8E File Offset: 0x00759D8E
+		// (set) Token: 0x060370F1 RID: 225521 RVA: 0x0075BB96 File Offset: 0x00759D96
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x06033DF0 RID: 212464 RVA: 0x006FA83F File Offset: 0x006F8A3F
+		// Token: 0x060370F2 RID: 225522 RVA: 0x0075BB9F File Offset: 0x00759D9F
 		public ISundialPuzzleGameplayT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

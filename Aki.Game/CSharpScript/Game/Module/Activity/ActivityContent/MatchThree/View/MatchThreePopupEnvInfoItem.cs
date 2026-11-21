@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x0200649D RID: 25757
+	// Token: 0x0200541B RID: 21531
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 	})]
 	public class MatchThreePopupEnvInfoItem : GridProxyAbstract<MatchThreeInfoItemData>
 	{
-		// Token: 0x06040AEA RID: 264938 RVA: 0x00FA855C File Offset: 0x00FA675C
+		// Token: 0x060357AE RID: 219054 RVA: 0x00EEF5A4 File Offset: 0x00EED7A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040AEB RID: 264939 RVA: 0x00FA8607 File Offset: 0x00FA6807
+		// Token: 0x060357AF RID: 219055 RVA: 0x00EEF64F File Offset: 0x00EED84F
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.ResolveSequenceBindItem());
 		}
 
-		// Token: 0x06040AEC RID: 264940 RVA: 0x00FA861A File Offset: 0x00FA681A
+		// Token: 0x060357B0 RID: 219056 RVA: 0x00EEF662 File Offset: 0x00EED862
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x06040AED RID: 264941 RVA: 0x00FA8634 File Offset: 0x00FA6834
+		// Token: 0x060357B1 RID: 219057 RVA: 0x00EEF67C File Offset: 0x00EED87C
 		[NullableContext(2)]
 		private UUIItem ResolveSequenceBindItem()
 		{
@@ -70,13 +70,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return uuiitem ?? rootItem;
 		}
 
-		// Token: 0x06040AEE RID: 264942 RVA: 0x00FA86A2 File Offset: 0x00FA68A2
+		// Token: 0x060357B2 RID: 219058 RVA: 0x00EEF6EA File Offset: 0x00EED8EA
 		private static bool HasSequence([Nullable(2)] UUIItem item, string sequenceName)
 		{
 			return item != null && item.IsValid() && item.LevelSequences != null && item.LevelSequences.Contains(sequenceName);
 		}
 
-		// Token: 0x06040AEF RID: 264943 RVA: 0x00FA86C8 File Offset: 0x00FA68C8
+		// Token: 0x060357B3 RID: 219059 RVA: 0x00EEF710 File Offset: 0x00EED910
 		public override void Refresh(MatchThreeInfoItemData data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), data.Name, Array.Empty<object>());
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ResetHighlight();
 		}
 
-		// Token: 0x06040AF0 RID: 264944 RVA: 0x00FA8730 File Offset: 0x00FA6930
+		// Token: 0x060357B4 RID: 219060 RVA: 0x00EEF778 File Offset: 0x00EED978
 		public void PlayStartSequence()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			sequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x06040AF1 RID: 264945 RVA: 0x00FA875C File Offset: 0x00FA695C
+		// Token: 0x060357B5 RID: 219061 RVA: 0x00EEF7A4 File Offset: 0x00EED9A4
 		public void PlayHighlight()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			sequencePlayer.PlayOrReplaySequenceByName("Tip", false, null);
 		}
 
-		// Token: 0x06040AF2 RID: 264946 RVA: 0x00FA8788 File Offset: 0x00FA6988
+		// Token: 0x060357B6 RID: 219062 RVA: 0x00EEF7D0 File Offset: 0x00EED9D0
 		public void ResetHighlight()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			sequencePlayer.StopSequenceByKey("Tip", false, true);
 		}
 
-		// Token: 0x06040AF3 RID: 264947 RVA: 0x00FA87A4 File Offset: 0x00FA69A4
+		// Token: 0x060357B7 RID: 219063 RVA: 0x00EEF7EC File Offset: 0x00EED9EC
 		[NullableContext(2)]
 		public UUIItem GetNavigationItem()
 		{
@@ -126,10 +126,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return ((button != null) ? button.RootUIComp.Get() : null) ?? base.GetRootItem();
 		}
 
-		// Token: 0x04021A7E RID: 137854
+		// Token: 0x0401C3AF RID: 115631
 		private const string TipSequenceName = "Tip";
 
-		// Token: 0x04021A7F RID: 137855
+		// Token: 0x0401C3B0 RID: 115632
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

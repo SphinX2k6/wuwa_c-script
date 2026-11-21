@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C25 RID: 19493
+	// Token: 0x02005118 RID: 20760
 	public struct IFeatureCollectionLevelPreCondition : IFlatbufferObject
 	{
-		// Token: 0x17008D9C RID: 36252
-		// (get) Token: 0x0601EE23 RID: 126499 RVA: 0x004528E0 File Offset: 0x00450AE0
+		// Token: 0x170094C5 RID: 38085
+		// (get) Token: 0x06020A27 RID: 133671 RVA: 0x004861BC File Offset: 0x004843BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE24 RID: 126500 RVA: 0x004528ED File Offset: 0x00450AED
+		// Token: 0x06020A28 RID: 133672 RVA: 0x004861C9 File Offset: 0x004843C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EE25 RID: 126501 RVA: 0x004528F4 File Offset: 0x00450AF4
+		// Token: 0x06020A29 RID: 133673 RVA: 0x004861D0 File Offset: 0x004843D0
 		public static IFeatureCollectionLevelPreCondition GetRootAsIFeatureCollectionLevelPreCondition(ByteBuffer _bb)
 		{
 			return IFeatureCollectionLevelPreCondition.GetRootAsIFeatureCollectionLevelPreCondition(_bb, default(IFeatureCollectionLevelPreCondition));
 		}
 
-		// Token: 0x0601EE26 RID: 126502 RVA: 0x00452910 File Offset: 0x00450B10
+		// Token: 0x06020A2A RID: 133674 RVA: 0x004861EC File Offset: 0x004843EC
 		public static IFeatureCollectionLevelPreCondition GetRootAsIFeatureCollectionLevelPreCondition(ByteBuffer _bb, IFeatureCollectionLevelPreCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EE27 RID: 126503 RVA: 0x0045292D File Offset: 0x00450B2D
+		// Token: 0x06020A2B RID: 133675 RVA: 0x00486209 File Offset: 0x00484409
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EE28 RID: 126504 RVA: 0x0045293C File Offset: 0x00450B3C
+		// Token: 0x06020A2C RID: 133676 RVA: 0x00486218 File Offset: 0x00484418
 		public IFeatureCollectionLevelPreCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D9D RID: 36253
-		// (get) Token: 0x0601EE29 RID: 126505 RVA: 0x0045294C File Offset: 0x00450B4C
+		// Token: 0x170094C6 RID: 38086
+		// (get) Token: 0x06020A2D RID: 133677 RVA: 0x00486228 File Offset: 0x00484428
 		public EAccessQuestCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D9E RID: 36254
-		// (get) Token: 0x0601EE2A RID: 126506 RVA: 0x00452988 File Offset: 0x00450B88
+		// Token: 0x170094C7 RID: 38087
+		// (get) Token: 0x06020A2E RID: 133678 RVA: 0x00486264 File Offset: 0x00484464
 		public int Id
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D9F RID: 36255
-		// (get) Token: 0x0601EE2B RID: 126507 RVA: 0x004529C4 File Offset: 0x00450BC4
+		// Token: 0x170094C8 RID: 38088
+		// (get) Token: 0x06020A2F RID: 133679 RVA: 0x004862A0 File Offset: 0x004844A0
 		public ECompare Compare
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008DA0 RID: 36256
-		// (get) Token: 0x0601EE2C RID: 126508 RVA: 0x00452A00 File Offset: 0x00450C00
+		// Token: 0x170094C9 RID: 38089
+		// (get) Token: 0x06020A30 RID: 133680 RVA: 0x004862DC File Offset: 0x004844DC
 		public int Level
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE2D RID: 126509 RVA: 0x00452A3D File Offset: 0x00450C3D
+		// Token: 0x06020A31 RID: 133681 RVA: 0x00486319 File Offset: 0x00484519
 		public static Offset<IFeatureCollectionLevelPreCondition> CreateIFeatureCollectionLevelPreCondition(FlatBufferBuilder builder, EAccessQuestCondition Type = EAccessQuestCondition.ExploreLevel, int Id = 0, ECompare Compare = ECompare.Eq, int Level = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IFeatureCollectionLevelPreCondition.EndIFeatureCollectionLevelPreCondition(builder);
 		}
 
-		// Token: 0x0601EE2E RID: 126510 RVA: 0x00452A69 File Offset: 0x00450C69
+		// Token: 0x06020A32 RID: 133682 RVA: 0x00486345 File Offset: 0x00484545
 		public static void StartIFeatureCollectionLevelPreCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601EE2F RID: 126511 RVA: 0x00452A72 File Offset: 0x00450C72
+		// Token: 0x06020A33 RID: 133683 RVA: 0x0048634E File Offset: 0x0048454E
 		public static void AddType(FlatBufferBuilder builder, EAccessQuestCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EE30 RID: 126512 RVA: 0x00452A7D File Offset: 0x00450C7D
+		// Token: 0x06020A34 RID: 133684 RVA: 0x00486359 File Offset: 0x00484559
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0601EE31 RID: 126513 RVA: 0x00452A88 File Offset: 0x00450C88
+		// Token: 0x06020A35 RID: 133685 RVA: 0x00486364 File Offset: 0x00484564
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601EE32 RID: 126514 RVA: 0x00452A93 File Offset: 0x00450C93
+		// Token: 0x06020A36 RID: 133686 RVA: 0x0048636F File Offset: 0x0048456F
 		public static void AddLevel(FlatBufferBuilder builder, int level)
 		{
 			builder.AddInt(3, level, 0);
 		}
 
-		// Token: 0x0601EE33 RID: 126515 RVA: 0x00452A9E File Offset: 0x00450C9E
+		// Token: 0x06020A37 RID: 133687 RVA: 0x0048637A File Offset: 0x0048457A
 		public static Offset<IFeatureCollectionLevelPreCondition> EndIFeatureCollectionLevelPreCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IFeatureCollectionLevelPreCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601EE34 RID: 126516 RVA: 0x00452AAC File Offset: 0x00450CAC
+		// Token: 0x06020A38 RID: 133688 RVA: 0x00486388 File Offset: 0x00484588
 		public IFeatureCollectionLevelPreConditionT UnPack()
 		{
 			IFeatureCollectionLevelPreConditionT featureCollectionLevelPreConditionT = new IFeatureCollectionLevelPreConditionT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return featureCollectionLevelPreConditionT;
 		}
 
-		// Token: 0x0601EE35 RID: 126517 RVA: 0x00452AC7 File Offset: 0x00450CC7
+		// Token: 0x06020A39 RID: 133689 RVA: 0x004863A3 File Offset: 0x004845A3
 		public void UnPackTo(IFeatureCollectionLevelPreConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Level = this.Level;
 		}
 
-		// Token: 0x0601EE36 RID: 126518 RVA: 0x00452AFC File Offset: 0x00450CFC
+		// Token: 0x06020A3A RID: 133690 RVA: 0x004863D8 File Offset: 0x004845D8
 		public static Offset<IFeatureCollectionLevelPreCondition> Pack(FlatBufferBuilder builder, IFeatureCollectionLevelPreConditionT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IFeatureCollectionLevelPreCondition.CreateIFeatureCollectionLevelPreCondition(builder, _o.Type, _o.Id, _o.Compare, _o.Level);
 		}
 
-		// Token: 0x0400D5BF RID: 54719
+		// Token: 0x0400E0DE RID: 57566
 		private Table __p;
 	}
 }

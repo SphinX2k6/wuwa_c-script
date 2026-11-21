@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F52 RID: 28498
+	// Token: 0x0200770C RID: 30476
 	public class ISeasonLoopConfigT
 	{
-		// Token: 0x1700D3C3 RID: 54211
-		// (get) Token: 0x06032593 RID: 206227 RVA: 0x006CC604 File Offset: 0x006CA804
-		// (set) Token: 0x06032594 RID: 206228 RVA: 0x006CC60C File Offset: 0x006CA80C
+		// Token: 0x1700DF82 RID: 57218
+		// (get) Token: 0x06035793 RID: 219027 RVA: 0x0072B8C0 File Offset: 0x00729AC0
+		// (set) Token: 0x06035794 RID: 219028 RVA: 0x0072B8C8 File Offset: 0x00729AC8
 		public float HoldTime { get; set; }
 
-		// Token: 0x1700D3C4 RID: 54212
-		// (get) Token: 0x06032595 RID: 206229 RVA: 0x006CC615 File Offset: 0x006CA815
-		// (set) Token: 0x06032596 RID: 206230 RVA: 0x006CC61D File Offset: 0x006CA81D
+		// Token: 0x1700DF83 RID: 57219
+		// (get) Token: 0x06035795 RID: 219029 RVA: 0x0072B8D1 File Offset: 0x00729AD1
+		// (set) Token: 0x06035796 RID: 219030 RVA: 0x0072B8D9 File Offset: 0x00729AD9
 		public float SwitchTime { get; set; }
 
-		// Token: 0x06032597 RID: 206231 RVA: 0x006CC626 File Offset: 0x006CA826
+		// Token: 0x06035797 RID: 219031 RVA: 0x0072B8E2 File Offset: 0x00729AE2
 		public ISeasonLoopConfigT()
 		{
 			this.HoldTime = 0f;

@@ -2,11 +2,11 @@
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001B1D RID: 6941
+// Token: 0x02000FDC RID: 4060
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchUiPopupRewardComponent)]
 public class FloroRanchUiPopupRewardComponent : FloroRanchEntityComponentBase
 {
-	// Token: 0x0600CE02 RID: 52738 RVA: 0x002EE58C File Offset: 0x002EC78C
+	// Token: 0x0600A213 RID: 41491 RVA: 0x002F966C File Offset: 0x002F786C
 	public UniTask ShowPopupReward(EFloroRanchPopupRewardType rewardType, long count)
 	{
 		FloroRanchUiPopupRewardComponent.<ShowPopupReward>d__0 <ShowPopupReward>d__;

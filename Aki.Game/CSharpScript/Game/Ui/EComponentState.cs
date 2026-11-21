@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004616 RID: 17942
+	// Token: 0x0200353F RID: 13631
 	internal enum EComponentState
 	{
-		// Token: 0x04018D22 RID: 101666
+		// Token: 0x04013361 RID: 78689
 		Register,
-		// Token: 0x04018D23 RID: 101667
+		// Token: 0x04013362 RID: 78690
 		Creating,
-		// Token: 0x04018D24 RID: 101668
+		// Token: 0x04013363 RID: 78691
 		Create,
-		// Token: 0x04018D25 RID: 101669
+		// Token: 0x04013364 RID: 78692
 		Starting,
-		// Token: 0x04018D26 RID: 101670
+		// Token: 0x04013365 RID: 78693
 		Start,
-		// Token: 0x04018D27 RID: 101671
+		// Token: 0x04013366 RID: 78694
 		Showing,
-		// Token: 0x04018D28 RID: 101672
+		// Token: 0x04013367 RID: 78695
 		Show,
-		// Token: 0x04018D29 RID: 101673
+		// Token: 0x04013368 RID: 78696
 		Hiding,
-		// Token: 0x04018D2A RID: 101674
+		// Token: 0x04013369 RID: 78697
 		Hide,
-		// Token: 0x04018D2B RID: 101675
+		// Token: 0x0401336A RID: 78698
 		Destroying,
-		// Token: 0x04018D2C RID: 101676
+		// Token: 0x0401336B RID: 78699
 		Destroy
 	}
 }

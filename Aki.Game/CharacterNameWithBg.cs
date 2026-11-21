@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200130A RID: 4874
+// Token: 0x020007BE RID: 1982
 public class CharacterNameWithBg : GridProxyAbstract<int>
 {
-	// Token: 0x06008710 RID: 34576 RVA: 0x001CD3FE File Offset: 0x001CB5FE
+	// Token: 0x06005AAB RID: 23211 RVA: 0x001D626A File Offset: 0x001D446A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class CharacterNameWithBg : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06008711 RID: 34577 RVA: 0x001CD438 File Offset: 0x001CB638
+	// Token: 0x06005AAC RID: 23212 RVA: 0x001D62A4 File Offset: 0x001D44A4
 	public override void Refresh(int characterId, bool isSelected, int gridIndex)
 	{
 		Character characterConfig = BusinessConfig.Instance.GetCharacterConfig(characterId);
@@ -25,13 +25,13 @@ public class CharacterNameWithBg : GridProxyAbstract<int>
 		base.GetSprite(0).SetColor(FColor.FromHex(characterConfig.Color));
 	}
 
-	// Token: 0x02007949 RID: 31049
+	// Token: 0x02006AD3 RID: 27347
 	private static class EComponentDefine
 	{
-		// Token: 0x04027F28 RID: 163624
+		// Token: 0x04023255 RID: 143957
 		public const int Sprite = 0;
 
-		// Token: 0x04027F29 RID: 163625
+		// Token: 0x04023256 RID: 143958
 		public const int Name = 1;
 	}
 }

@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005570 RID: 21872
+	// Token: 0x02004543 RID: 17731
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapNavigateCountryData : IWorldMapNavigateCountryData
 	{
-		// Token: 0x1700861D RID: 34333
-		// (get) Token: 0x06037C32 RID: 228402 RVA: 0x00D39007 File Offset: 0x00D37207
-		// (set) Token: 0x06037C33 RID: 228403 RVA: 0x00D3900F File Offset: 0x00D3720F
+		// Token: 0x170059C6 RID: 22982
+		// (get) Token: 0x0602CB0C RID: 183052 RVA: 0x00C86ADB File Offset: 0x00C84CDB
+		// (set) Token: 0x0602CB0D RID: 183053 RVA: 0x00C86AE3 File Offset: 0x00C84CE3
 		public int CountryId { get; set; }
 
-		// Token: 0x1700861E RID: 34334
-		// (get) Token: 0x06037C34 RID: 228404 RVA: 0x00D39018 File Offset: 0x00D37218
-		// (set) Token: 0x06037C35 RID: 228405 RVA: 0x00D39020 File Offset: 0x00D37220
+		// Token: 0x170059C7 RID: 22983
+		// (get) Token: 0x0602CB0E RID: 183054 RVA: 0x00C86AEC File Offset: 0x00C84CEC
+		// (set) Token: 0x0602CB0F RID: 183055 RVA: 0x00C86AF4 File Offset: 0x00C84CF4
 		public IWorldMapNavigateCountry NavigateCountry { get; set; }
 	}
 }

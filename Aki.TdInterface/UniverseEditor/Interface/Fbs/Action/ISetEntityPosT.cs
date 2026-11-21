@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FE4 RID: 28644
+	// Token: 0x020077AD RID: 30637
 	public class ISetEntityPosT
 	{
-		// Token: 0x1700D4AA RID: 54442
-		// (get) Token: 0x06032A46 RID: 207430 RVA: 0x006D51AD File Offset: 0x006D33AD
-		// (set) Token: 0x06032A47 RID: 207431 RVA: 0x006D51B5 File Offset: 0x006D33B5
+		// Token: 0x1700E07E RID: 57470
+		// (get) Token: 0x06035CAC RID: 220332 RVA: 0x00734DF1 File Offset: 0x00732FF1
+		// (set) Token: 0x06035CAD RID: 220333 RVA: 0x00734DF9 File Offset: 0x00732FF9
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D4AB RID: 54443
-		// (get) Token: 0x06032A48 RID: 207432 RVA: 0x006D51BE File Offset: 0x006D33BE
-		// (set) Token: 0x06032A49 RID: 207433 RVA: 0x006D51C6 File Offset: 0x006D33C6
+		// Token: 0x1700E07F RID: 57471
+		// (get) Token: 0x06035CAE RID: 220334 RVA: 0x00734E02 File Offset: 0x00733002
+		// (set) Token: 0x06035CAF RID: 220335 RVA: 0x00734E0A File Offset: 0x0073300A
 		public IPosAT Pos { get; set; }
 
-		// Token: 0x1700D4AC RID: 54444
-		// (get) Token: 0x06032A4A RID: 207434 RVA: 0x006D51CF File Offset: 0x006D33CF
-		// (set) Token: 0x06032A4B RID: 207435 RVA: 0x006D51D7 File Offset: 0x006D33D7
+		// Token: 0x1700E080 RID: 57472
+		// (get) Token: 0x06035CB0 RID: 220336 RVA: 0x00734E13 File Offset: 0x00733013
+		// (set) Token: 0x06035CB1 RID: 220337 RVA: 0x00734E1B File Offset: 0x0073301B
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x06032A4C RID: 207436 RVA: 0x006D51E0 File Offset: 0x006D33E0
+		// Token: 0x06035CB2 RID: 220338 RVA: 0x00734E24 File Offset: 0x00733024
 		public ISetEntityPosT()
 		{
 			this.EntityId = 0;

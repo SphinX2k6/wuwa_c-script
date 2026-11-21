@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007DB RID: 2011
+	// Token: 0x020007F7 RID: 2039
 	public class ConfigRegressSignRewardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F34 RID: 12084 RVA: 0x0016408C File Offset: 0x0016228C
+		// Token: 0x06002FDC RID: 12252 RVA: 0x0016B374 File Offset: 0x00169574
 		static ConfigRegressSignRewardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressSignRewardAll.CreateStaticDefaultValue), new Action(ConfigRegressSignRewardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F35 RID: 12085 RVA: 0x001640AC File Offset: 0x001622AC
+		// Token: 0x06002FDD RID: 12253 RVA: 0x0016B394 File Offset: 0x00169594
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressSignRewardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F36 RID: 12086 RVA: 0x0016412B File Offset: 0x0016232B
+		// Token: 0x06002FDE RID: 12254 RVA: 0x0016B413 File Offset: 0x00169613
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressSignRewardAll.LogPair = null;
 			ConfigRegressSignRewardAll.HandleId = 0;
 		}
 
-		// Token: 0x06002F37 RID: 12087 RVA: 0x00164139 File Offset: 0x00162339
+		// Token: 0x06002FDF RID: 12255 RVA: 0x0016B421 File Offset: 0x00169621
 		public static void Init()
 		{
 			ConfigRegressSignRewardAll.HandleId = ConfigCommon.InitDataStatement(ConfigRegressSignRewardAll.HandleId, "db_regressactivity.db", "select BinData from `RegressSignReward`");
 		}
 
-		// Token: 0x06002F38 RID: 12088 RVA: 0x00164154 File Offset: 0x00162354
+		// Token: 0x06002FE0 RID: 12256 RVA: 0x0016B43C File Offset: 0x0016963C
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressSignReward> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040036E3 RID: 14051
+		// Token: 0x040037A7 RID: 14247
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036E4 RID: 14052
+		// Token: 0x040037A8 RID: 14248
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036E5 RID: 14053
+		// Token: 0x040037A9 RID: 14249
 		private const string TABLE = "RegressSignReward";
 
-		// Token: 0x040036E6 RID: 14054
+		// Token: 0x040037AA RID: 14250
 		private const string COMMAND = "select BinData from `RegressSignReward`";
 
-		// Token: 0x040036E7 RID: 14055
+		// Token: 0x040037AB RID: 14251
 		private const string KEY_PREFIX = "RegressSignRewardAll";
 
-		// Token: 0x040036E8 RID: 14056
+		// Token: 0x040037AC RID: 14252
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036E9 RID: 14057
+		// Token: 0x040037AD RID: 14253
 		private static int HandleId;
 	}
 }

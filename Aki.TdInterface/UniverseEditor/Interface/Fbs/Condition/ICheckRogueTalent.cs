@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B1D RID: 19229
+	// Token: 0x02005004 RID: 20484
 	public struct ICheckRogueTalent : IFlatbufferObject
 	{
-		// Token: 0x17008B78 RID: 35704
-		// (get) Token: 0x0601E3E6 RID: 123878 RVA: 0x0043D564 File Offset: 0x0043B764
+		// Token: 0x17009288 RID: 37512
+		// (get) Token: 0x0601FF71 RID: 130929 RVA: 0x0046FD10 File Offset: 0x0046DF10
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E3E7 RID: 123879 RVA: 0x0043D571 File Offset: 0x0043B771
+		// Token: 0x0601FF72 RID: 130930 RVA: 0x0046FD1D File Offset: 0x0046DF1D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E3E8 RID: 123880 RVA: 0x0043D578 File Offset: 0x0043B778
+		// Token: 0x0601FF73 RID: 130931 RVA: 0x0046FD24 File Offset: 0x0046DF24
 		public static ICheckRogueTalent GetRootAsICheckRogueTalent(ByteBuffer _bb)
 		{
 			return ICheckRogueTalent.GetRootAsICheckRogueTalent(_bb, default(ICheckRogueTalent));
 		}
 
-		// Token: 0x0601E3E9 RID: 123881 RVA: 0x0043D594 File Offset: 0x0043B794
+		// Token: 0x0601FF74 RID: 130932 RVA: 0x0046FD40 File Offset: 0x0046DF40
 		public static ICheckRogueTalent GetRootAsICheckRogueTalent(ByteBuffer _bb, ICheckRogueTalent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E3EA RID: 123882 RVA: 0x0043D5B1 File Offset: 0x0043B7B1
+		// Token: 0x0601FF75 RID: 130933 RVA: 0x0046FD5D File Offset: 0x0046DF5D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E3EB RID: 123883 RVA: 0x0043D5C0 File Offset: 0x0043B7C0
+		// Token: 0x0601FF76 RID: 130934 RVA: 0x0046FD6C File Offset: 0x0046DF6C
 		public ICheckRogueTalent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B79 RID: 35705
-		// (get) Token: 0x0601E3EC RID: 123884 RVA: 0x0043D5D0 File Offset: 0x0043B7D0
+		// Token: 0x17009289 RID: 37513
+		// (get) Token: 0x0601FF77 RID: 130935 RVA: 0x0046FD7C File Offset: 0x0046DF7C
 		public ERogueStateType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B7A RID: 35706
-		// (get) Token: 0x0601E3ED RID: 123885 RVA: 0x0043D60C File Offset: 0x0043B80C
+		// Token: 0x1700928A RID: 37514
+		// (get) Token: 0x0601FF78 RID: 130936 RVA: 0x0046FDB8 File Offset: 0x0046DFB8
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E3EE RID: 123886 RVA: 0x0043D648 File Offset: 0x0043B848
+		// Token: 0x0601FF79 RID: 130937 RVA: 0x0046FDF4 File Offset: 0x0046DFF4
 		public static Offset<ICheckRogueTalent> CreateICheckRogueTalent(FlatBufferBuilder builder, ERogueStateType Type = ERogueStateType.Talent, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRogueTalent.EndICheckRogueTalent(builder);
 		}
 
-		// Token: 0x0601E3EF RID: 123887 RVA: 0x0043D665 File Offset: 0x0043B865
+		// Token: 0x0601FF7A RID: 130938 RVA: 0x0046FE11 File Offset: 0x0046E011
 		public static void StartICheckRogueTalent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E3F0 RID: 123888 RVA: 0x0043D66E File Offset: 0x0043B86E
+		// Token: 0x0601FF7B RID: 130939 RVA: 0x0046FE1A File Offset: 0x0046E01A
 		public static void AddType(FlatBufferBuilder builder, ERogueStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E3F1 RID: 123889 RVA: 0x0043D679 File Offset: 0x0043B879
+		// Token: 0x0601FF7C RID: 130940 RVA: 0x0046FE25 File Offset: 0x0046E025
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0601E3F2 RID: 123890 RVA: 0x0043D684 File Offset: 0x0043B884
+		// Token: 0x0601FF7D RID: 130941 RVA: 0x0046FE30 File Offset: 0x0046E030
 		public static Offset<ICheckRogueTalent> EndICheckRogueTalent(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckRogueTalent>(builder.EndTable());
 		}
 
-		// Token: 0x0601E3F3 RID: 123891 RVA: 0x0043D694 File Offset: 0x0043B894
+		// Token: 0x0601FF7E RID: 130942 RVA: 0x0046FE40 File Offset: 0x0046E040
 		public ICheckRogueTalentT UnPack()
 		{
 			ICheckRogueTalentT checkRogueTalentT = new ICheckRogueTalentT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkRogueTalentT;
 		}
 
-		// Token: 0x0601E3F4 RID: 123892 RVA: 0x0043D6AF File Offset: 0x0043B8AF
+		// Token: 0x0601FF7F RID: 130943 RVA: 0x0046FE5B File Offset: 0x0046E05B
 		public void UnPackTo(ICheckRogueTalentT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0601E3F5 RID: 123893 RVA: 0x0043D6CC File Offset: 0x0043B8CC
+		// Token: 0x0601FF80 RID: 130944 RVA: 0x0046FE78 File Offset: 0x0046E078
 		public static Offset<ICheckRogueTalent> Pack(FlatBufferBuilder builder, ICheckRogueTalentT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckRogueTalent.CreateICheckRogueTalent(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0400D3BD RID: 54205
+		// Token: 0x0400DEBC RID: 57020
 		private Table __p;
 	}
 }

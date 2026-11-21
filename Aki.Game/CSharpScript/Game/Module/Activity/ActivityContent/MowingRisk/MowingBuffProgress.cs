@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063DD RID: 25565
+	// Token: 0x0200535B RID: 21339
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingBuffProgress : UiPanelBase
 	{
-		// Token: 0x060404CA RID: 263370 RVA: 0x00F8D430 File Offset: 0x00F8B630
+		// Token: 0x0603518B RID: 217483 RVA: 0x00ED43C8 File Offset: 0x00ED25C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060404CB RID: 263371 RVA: 0x00F8D520 File Offset: 0x00F8B720
+		// Token: 0x0603518C RID: 217484 RVA: 0x00ED44B8 File Offset: 0x00ED26B8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MowingBuffProgress.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404CC RID: 263372 RVA: 0x00F8D564 File Offset: 0x00F8B764
+		// Token: 0x0603518D RID: 217485 RVA: 0x00ED44FC File Offset: 0x00ED26FC
 		private UniTask CreateBuffItem(int index)
 		{
 			MowingBuffProgress.<CreateBuffItem>d__12 <CreateBuffItem>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <CreateBuffItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404CD RID: 263373 RVA: 0x00F8D5B0 File Offset: 0x00F8B7B0
+		// Token: 0x0603518E RID: 217486 RVA: 0x00ED4548 File Offset: 0x00ED2748
 		public void RefreshByCustomData(IMowingBuffProgressData data)
 		{
 			MowingBuffProgress.<>c__DisplayClass13_0 CS$<>8__locals1 = new MowingBuffProgress.<>c__DisplayClass13_0();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060404CE RID: 263374 RVA: 0x00F8D5F4 File Offset: 0x00F8B7F4
+		// Token: 0x0603518F RID: 217487 RVA: 0x00ED458C File Offset: 0x00ED278C
 		public UniTask RefreshByCustomDataAsync(IMowingBuffProgressData data)
 		{
 			MowingBuffProgress.<RefreshByCustomDataAsync>d__14 <RefreshByCustomDataAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <RefreshByCustomDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404CF RID: 263375 RVA: 0x00F8D640 File Offset: 0x00F8B840
+		// Token: 0x06035190 RID: 217488 RVA: 0x00ED45D8 File Offset: 0x00ED27D8
 		public UniTask PlayStartSequenceAsync()
 		{
 			MowingBuffProgress.<PlayStartSequenceAsync>d__15 <PlayStartSequenceAsync>d__;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <PlayStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404D0 RID: 263376 RVA: 0x00F8D684 File Offset: 0x00F8B884
+		// Token: 0x06035191 RID: 217489 RVA: 0x00ED461C File Offset: 0x00ED281C
 		public UniTask PlayProgressTween()
 		{
 			MowingBuffProgress.<PlayProgressTween>d__16 <PlayProgressTween>d__;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			return <PlayProgressTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060404D1 RID: 263377 RVA: 0x00F8D6C8 File Offset: 0x00F8B8C8
+		// Token: 0x06035192 RID: 217490 RVA: 0x00ED4660 File Offset: 0x00ED2860
 		private void PlayFillAmount(float value)
 		{
 			base.GetSprite(1).SetFillAmount(value);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			}
 		}
 
-		// Token: 0x060404D2 RID: 263378 RVA: 0x00F8D720 File Offset: 0x00F8B920
+		// Token: 0x06035193 RID: 217491 RVA: 0x00ED46B8 File Offset: 0x00ED28B8
 		private void CheckKillTweener()
 		{
 			if (this.Tweener != null && this.Tweener.IsValid())
@@ -141,62 +141,62 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.Tweener = null;
 		}
 
-		// Token: 0x060404D3 RID: 263379 RVA: 0x00F8D74A File Offset: 0x00F8B94A
+		// Token: 0x06035194 RID: 217492 RVA: 0x00ED46E2 File Offset: 0x00ED28E2
 		protected override void OnBeforeDestroy()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.PlayFillAmount));
 			this.CheckKillTweener();
 		}
 
-		// Token: 0x04021753 RID: 137043
+		// Token: 0x0401C082 RID: 114818
 		private readonly List<MowingBuffUnit> BuffUnitList = new List<MowingBuffUnit>();
 
-		// Token: 0x04021754 RID: 137044
+		// Token: 0x0401C083 RID: 114819
 		private MowingBuffIntroduce BuffIntroduce;
 
-		// Token: 0x04021755 RID: 137045
+		// Token: 0x0401C084 RID: 114820
 		private UiSequencePlayer Player;
 
-		// Token: 0x04021756 RID: 137046
+		// Token: 0x0401C085 RID: 114821
 		[Nullable(2)]
 		protected FLTweenFloatSetterDynamic Delegate;
 
-		// Token: 0x04021757 RID: 137047
+		// Token: 0x0401C086 RID: 114822
 		[Nullable(2)]
 		protected ULTweener Tweener;
 
-		// Token: 0x04021758 RID: 137048
+		// Token: 0x0401C087 RID: 114823
 		private bool NeedPlayTween;
 
-		// Token: 0x04021759 RID: 137049
+		// Token: 0x0401C088 RID: 114824
 		private float FromProgress;
 
-		// Token: 0x0402175A RID: 137050
+		// Token: 0x0401C089 RID: 114825
 		private float ToProgress;
 
-		// Token: 0x0402175B RID: 137051
+		// Token: 0x0401C08A RID: 114826
 		private readonly Queue<BuffNodeTweenData> BuffNodeTweenDataQueue = new Queue<BuffNodeTweenData>(4);
 
-		// Token: 0x0200C5E2 RID: 50658
+		// Token: 0x0200AFC9 RID: 45001
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BBFA RID: 244730
+			// Token: 0x04036559 RID: 222553
 			public const int CountText = 0;
 
-			// Token: 0x0403BBFB RID: 244731
+			// Token: 0x0403655A RID: 222554
 			public const int ProgressSprite = 1;
 
-			// Token: 0x0403BBFC RID: 244732
+			// Token: 0x0403655B RID: 222555
 			public const int BuffLayout = 2;
 
-			// Token: 0x0403BBFD RID: 244733
+			// Token: 0x0403655C RID: 222556
 			public const int UpwardBuffTemplateItem = 3;
 
-			// Token: 0x0403BBFE RID: 244734
+			// Token: 0x0403655D RID: 222557
 			public const int DownwardBuffTemplateItem = 4;
 
-			// Token: 0x0403BBFF RID: 244735
+			// Token: 0x0403655E RID: 222558
 			public const int BuffIntroduceItem = 5;
 		}
 	}

@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A4A RID: 23114
+	// Token: 0x02004A26 RID: 18982
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeAreaPageDotItem : GridProxyAbstract<IFlagChallengeAreaPageDotItemData>
 	{
-		// Token: 0x0603A9D9 RID: 240089 RVA: 0x00DF3E75 File Offset: 0x00DF2075
+		// Token: 0x0602F922 RID: 194850 RVA: 0x00D443F9 File Offset: 0x00D425F9
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,13 +24,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A9DA RID: 240090 RVA: 0x00DF3E98 File Offset: 0x00DF2098
+		// Token: 0x0602F923 RID: 194851 RVA: 0x00D4441C File Offset: 0x00D4261C
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).SetSelfInteractive(false);
 		}
 
-		// Token: 0x0603A9DB RID: 240091 RVA: 0x00DF3EA8 File Offset: 0x00DF20A8
+		// Token: 0x0602F924 RID: 194852 RVA: 0x00D4442C File Offset: 0x00D4262C
 		public override void Refresh(IFlagChallengeAreaPageDotItemData data, bool isSelected, int gridIndex)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);

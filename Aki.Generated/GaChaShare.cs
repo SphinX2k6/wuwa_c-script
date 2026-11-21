@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CE3 RID: 3299
+	// Token: 0x02000DC7 RID: 3527
 	public struct GaChaShare : IFlatbufferObject
 	{
-		// Token: 0x170014B7 RID: 5303
-		// (get) Token: 0x0600783D RID: 30781 RVA: 0x00246251 File Offset: 0x00244451
+		// Token: 0x17001514 RID: 5396
+		// (get) Token: 0x06007E48 RID: 32328 RVA: 0x00264DCD File Offset: 0x00262FCD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600783E RID: 30782 RVA: 0x0024625E File Offset: 0x0024445E
+		// Token: 0x06007E49 RID: 32329 RVA: 0x00264DDA File Offset: 0x00262FDA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600783F RID: 30783 RVA: 0x00246268 File Offset: 0x00244468
+		// Token: 0x06007E4A RID: 32330 RVA: 0x00264DE4 File Offset: 0x00262FE4
 		public static GaChaShare GetRootAsGaChaShare(ByteBuffer _bb)
 		{
 			return GaChaShare.GetRootAsGaChaShare(_bb, default(GaChaShare));
 		}
 
-		// Token: 0x06007840 RID: 30784 RVA: 0x00246284 File Offset: 0x00244484
+		// Token: 0x06007E4B RID: 32331 RVA: 0x00264E00 File Offset: 0x00263000
 		public static GaChaShare GetRootAsGaChaShare(ByteBuffer _bb, GaChaShare obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007841 RID: 30785 RVA: 0x002462A1 File Offset: 0x002444A1
+		// Token: 0x06007E4C RID: 32332 RVA: 0x00264E1D File Offset: 0x0026301D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007842 RID: 30786 RVA: 0x002462B0 File Offset: 0x002444B0
+		// Token: 0x06007E4D RID: 32333 RVA: 0x00264E2C File Offset: 0x0026302C
 		public GaChaShare __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170014B8 RID: 5304
-		// (get) Token: 0x06007843 RID: 30787 RVA: 0x002462C0 File Offset: 0x002444C0
+		// Token: 0x17001515 RID: 5397
+		// (get) Token: 0x06007E4E RID: 32334 RVA: 0x00264E3C File Offset: 0x0026303C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B9 RID: 5305
-		// (get) Token: 0x06007844 RID: 30788 RVA: 0x002462FC File Offset: 0x002444FC
+		// Token: 0x17001516 RID: 5398
+		// (get) Token: 0x06007E4F RID: 32335 RVA: 0x00264E78 File Offset: 0x00263078
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007845 RID: 30789 RVA: 0x00246338 File Offset: 0x00244538
+		// Token: 0x06007E50 RID: 32336 RVA: 0x00264EB4 File Offset: 0x002630B4
 		public int ShareTypes(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170014BA RID: 5306
-		// (get) Token: 0x06007846 RID: 30790 RVA: 0x00246378 File Offset: 0x00244578
+		// Token: 0x17001517 RID: 5399
+		// (get) Token: 0x06007E51 RID: 32337 RVA: 0x00264EF4 File Offset: 0x002630F4
 		public int ShareTypesLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007847 RID: 30791 RVA: 0x002463A3 File Offset: 0x002445A3
+		// Token: 0x06007E52 RID: 32338 RVA: 0x00264F1F File Offset: 0x0026311F
 		public Span<int> GetShareTypesBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06007848 RID: 30792 RVA: 0x002463B2 File Offset: 0x002445B2
+		// Token: 0x06007E53 RID: 32339 RVA: 0x00264F2E File Offset: 0x0026312E
 		public int[] GetShareTypesArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170014BB RID: 5307
-		// (get) Token: 0x06007849 RID: 30793 RVA: 0x002463CC File Offset: 0x002445CC
+		// Token: 0x17001518 RID: 5400
+		// (get) Token: 0x06007E54 RID: 32340 RVA: 0x00264F48 File Offset: 0x00263148
 		public string Desc
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600784A RID: 30794 RVA: 0x00246404 File Offset: 0x00244604
+		// Token: 0x06007E55 RID: 32341 RVA: 0x00264F80 File Offset: 0x00263180
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600784B RID: 30795 RVA: 0x00246414 File Offset: 0x00244614
+		// Token: 0x06007E56 RID: 32342 RVA: 0x00264F90 File Offset: 0x00263190
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170014BC RID: 5308
-		// (get) Token: 0x0600784C RID: 30796 RVA: 0x0024642C File Offset: 0x0024462C
+		// Token: 0x17001519 RID: 5401
+		// (get) Token: 0x06007E57 RID: 32343 RVA: 0x00264FA8 File Offset: 0x002631A8
 		public string SharePic
 		{
 			get
@@ -159,37 +159,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600784D RID: 30797 RVA: 0x00246464 File Offset: 0x00244664
+		// Token: 0x06007E58 RID: 32344 RVA: 0x00264FE0 File Offset: 0x002631E0
 		public Span<byte> GetSharePicBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600784E RID: 30798 RVA: 0x00246474 File Offset: 0x00244674
+		// Token: 0x06007E59 RID: 32345 RVA: 0x00264FF0 File Offset: 0x002631F0
 		public byte[] GetSharePicArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600784F RID: 30799 RVA: 0x0024648C File Offset: 0x0024468C
+		// Token: 0x06007E5A RID: 32346 RVA: 0x00265008 File Offset: 0x00263208
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ShareTypesIter()或GetShareTypesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ShareTypes()
+		public int[] ShareTypes()
 		{
-			GaChaShare gaChaShare = this;
-			return gaChaShare.GetShareTypesArray() ?? Array.Empty<int>();
+			return this.GetShareTypesArray();
 		}
 
-		// Token: 0x06007850 RID: 30800 RVA: 0x002464B0 File Offset: 0x002446B0
+		// Token: 0x06007E5B RID: 32347 RVA: 0x00265010 File Offset: 0x00263210
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ShareTypesIter()
+		public IEnumerable<int> ShareTypesIter()
 		{
 			GaChaShare.<ShareTypesIter>d__26 <ShareTypesIter>d__ = new GaChaShare.<ShareTypesIter>d__26(-2);
 			<ShareTypesIter>d__.<>3__<>4__this = this;
 			return <ShareTypesIter>d__;
 		}
 
-		// Token: 0x04004D54 RID: 19796
+		// Token: 0x04005338 RID: 21304
 		private Table __p;
 	}
 }

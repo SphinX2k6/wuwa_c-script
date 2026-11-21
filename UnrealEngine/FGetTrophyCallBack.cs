@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EA3 RID: 7843
+	// Token: 0x020005C6 RID: 1478
 	public sealed class FGetTrophyCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601DC86 RID: 121990 RVA: 0x002C041C File Offset: 0x002BE61C
+		// Token: 0x06008387 RID: 33671 RVA: 0x000C2BE8 File Offset: 0x000C0DE8
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FGetTrophyCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601DC87 RID: 121991 RVA: 0x002C0428 File Offset: 0x002BE628
+		// Token: 0x06008388 RID: 33672 RVA: 0x000C2BF4 File Offset: 0x000C0DF4
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FGetTrophyCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FGetTrophyCallBack._FunctionPtr;
 		}
 
-		// Token: 0x0601DC88 RID: 121992 RVA: 0x002C044B File Offset: 0x002BE64B
+		// Token: 0x06008389 RID: 33673 RVA: 0x000C2C17 File Offset: 0x000C0E17
 		public FGetTrophyCallBack()
 		{
 		}
 
-		// Token: 0x0601DC89 RID: 121993 RVA: 0x002C0453 File Offset: 0x002BE653
+		// Token: 0x0600838A RID: 33674 RVA: 0x000C2C1F File Offset: 0x000C0E1F
 		[NullableContext(2)]
 		public FGetTrophyCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601DC8A RID: 121994 RVA: 0x002C045D File Offset: 0x002BE65D
+		// Token: 0x0600838B RID: 33675 RVA: 0x000C2C29 File Offset: 0x000C0E29
 		public FGetTrophyCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601DC8B RID: 121995 RVA: 0x002C0468 File Offset: 0x002BE668
+		// Token: 0x0600838C RID: 33676 RVA: 0x000C2C34 File Offset: 0x000C0E34
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FTrophyInfoData>) ?? ((Action<FTrophyInfoData>)Delegate.CreateDelegate(typeof(Action<FTrophyInfoData>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601DC8C RID: 121996 RVA: 0x002C049A File Offset: 0x002BE69A
+		// Token: 0x0600838D RID: 33677 RVA: 0x000C2C66 File Offset: 0x000C0E66
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FTrophyInfoData> Callback)
 		{
 			if (FGetTrophyCallBack.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FGetTrophyCallBack.RegisterId);
 		}
 
-		// Token: 0x0601DC8D RID: 121997 RVA: 0x002C04D4 File Offset: 0x002BE6D4
+		// Token: 0x0600838E RID: 33678 RVA: 0x000C2CA0 File Offset: 0x000C0EA0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FTrophyInfoData data)
 		{
 			FGetTrophyCallBack.__FGetTrophyCallBack_DelegateParams* ptr = stackalloc FGetTrophyCallBack.__FGetTrophyCallBack_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FGetTrophyCallBack.__FGetTrophyCallBack_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FGetTrophyCallBack._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601DC8E RID: 121998 RVA: 0x002C0540 File Offset: 0x002BE740
+		// Token: 0x0600838F RID: 33679 RVA: 0x000C2D0C File Offset: 0x000C0F0C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FTrophyInfoData> action = target as Action<FTrophyInfoData>;
@@ -96,31 +93,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x04010238 RID: 66104
+		// Token: 0x0400396F RID: 14703
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010239 RID: 66105
+		// Token: 0x04003970 RID: 14704
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.GetTrophyCallBack__DelegateSignature";
 
-		// Token: 0x0401023A RID: 66106
+		// Token: 0x04003971 RID: 14705
 		private static int RegisterId;
 
-		// Token: 0x020032E9 RID: 13033
+		// Token: 0x02000D43 RID: 3395
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FGetTrophyCallBack_DelegateParams
+		private ref struct __FGetTrophyCallBack_DelegateParams
 		{
-			// Token: 0x04017199 RID: 94617
+			// Token: 0x04005FE0 RID: 24544
 			[FieldOffset(0)]
 			public byte data;
 		}
 
-		// Token: 0x020032EA RID: 13034
+		// Token: 0x02000D44 RID: 3396
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401719A RID: 94618
+			// Token: 0x04005FE1 RID: 24545
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

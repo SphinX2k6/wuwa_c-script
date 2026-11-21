@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200487B RID: 18555
+	// Token: 0x020037F2 RID: 14322
 	public class VillageInfrBuildFinishTipView : UiViewBase
 	{
-		// Token: 0x060308C7 RID: 198855 RVA: 0x00B46541 File Offset: 0x00B44741
+		// Token: 0x060253F3 RID: 152563 RVA: 0x00A81315 File Offset: 0x00A7F515
 		[NullableContext(1)]
 		public VillageInfrBuildFinishTipView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060308C8 RID: 198856 RVA: 0x00B4654C File Offset: 0x00B4474C
+		// Token: 0x060253F4 RID: 152564 RVA: 0x00A81320 File Offset: 0x00A7F520
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x060308C9 RID: 198857 RVA: 0x00B465DF File Offset: 0x00B447DF
+		// Token: 0x060253F5 RID: 152565 RVA: 0x00A813B3 File Offset: 0x00A7F5B3
 		private void OnClickMask()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060308CA RID: 198858 RVA: 0x00B465E8 File Offset: 0x00B447E8
+		// Token: 0x060253F6 RID: 152566 RVA: 0x00A813BC File Offset: 0x00A7F5BC
 		protected override void OnStart()
 		{
 			IVillageInfrBuildFinishTipParam villageInfrBuildFinishTipParam = this.OpenParam as IVillageInfrBuildFinishTipParam;

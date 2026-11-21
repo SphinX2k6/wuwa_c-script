@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004D6 RID: 1238
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200052F RID: 1327
 	public class ILowViewDistance : IViewDistanceMode
 	{
-		// Token: 0x0600191E RID: 6430 RVA: 0x0004A844 File Offset: 0x00048A44
+		// Token: 0x06001AB8 RID: 6840 RVA: 0x0004E58C File Offset: 0x0004C78C
 		private ILowViewDistance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600191F RID: 6431 RVA: 0x0004A87C File Offset: 0x00048A7C
+		// Token: 0x06001AB9 RID: 6841 RVA: 0x0004E5C4 File Offset: 0x0004C7C4
 		public static ILowViewDistance Create([Nullable(2)] ILowViewDistance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001920 RID: 6432 RVA: 0x0004A88F File Offset: 0x00048A8F
+		// Token: 0x06001ABA RID: 6842 RVA: 0x0004E5D7 File Offset: 0x0004C7D7
 		public static ILowViewDistance CreateFromSetValue([Nullable(2)] ILowViewDistance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001921 RID: 6433 RVA: 0x0004A8A2 File Offset: 0x00048AA2
+		// Token: 0x06001ABB RID: 6843 RVA: 0x0004E5EA File Offset: 0x0004C7EA
 		public new ILowViewDistance_SetValue ToSetValue()
 		{
 			return new ILowViewDistance_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006AD RID: 1709
-		// (get) Token: 0x06001922 RID: 6434 RVA: 0x0004A8B5 File Offset: 0x00048AB5
-		// (set) Token: 0x06001923 RID: 6435 RVA: 0x0004A8E0 File Offset: 0x00048AE0
+		// Token: 0x17000714 RID: 1812
+		// (get) Token: 0x06001ABC RID: 6844 RVA: 0x0004E5FD File Offset: 0x0004C7FD
+		// (set) Token: 0x06001ABD RID: 6845 RVA: 0x0004E628 File Offset: 0x0004C828
 		public override EViewDistanceType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400127D RID: 4733
+		// Token: 0x0400139F RID: 5023
 		[Nullable(2)]
 		protected new ILowViewDistance FbInstance;
 
-		// Token: 0x0400127E RID: 4734
+		// Token: 0x040013A0 RID: 5024
 		[Nullable(2)]
 		protected new ILowViewDistance_SetValue PocoInterface;
 	}

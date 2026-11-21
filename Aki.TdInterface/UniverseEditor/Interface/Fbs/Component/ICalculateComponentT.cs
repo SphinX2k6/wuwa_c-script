@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F50 RID: 20304
+	// Token: 0x0200547F RID: 21631
 	public class ICalculateComponentT
 	{
-		// Token: 0x1700926E RID: 37486
-		// (get) Token: 0x060202C5 RID: 131781 RVA: 0x0047A276 File Offset: 0x00478476
-		// (set) Token: 0x060202C6 RID: 131782 RVA: 0x0047A27E File Offset: 0x0047847E
+		// Token: 0x170099E7 RID: 39399
+		// (get) Token: 0x06022017 RID: 139287 RVA: 0x004B0266 File Offset: 0x004AE466
+		// (set) Token: 0x06022018 RID: 139288 RVA: 0x004B026E File Offset: 0x004AE46E
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700926F RID: 37487
-		// (get) Token: 0x060202C7 RID: 131783 RVA: 0x0047A287 File Offset: 0x00478487
-		// (set) Token: 0x060202C8 RID: 131784 RVA: 0x0047A28F File Offset: 0x0047848F
+		// Token: 0x170099E8 RID: 39400
+		// (get) Token: 0x06022019 RID: 139289 RVA: 0x004B0277 File Offset: 0x004AE477
+		// (set) Token: 0x0602201A RID: 139290 RVA: 0x004B027F File Offset: 0x004AE47F
 		public List<INumberVarT> Vars { get; set; }
 
-		// Token: 0x17009270 RID: 37488
-		// (get) Token: 0x060202C9 RID: 131785 RVA: 0x0047A298 File Offset: 0x00478498
-		// (set) Token: 0x060202CA RID: 131786 RVA: 0x0047A2A0 File Offset: 0x004784A0
+		// Token: 0x170099E9 RID: 39401
+		// (get) Token: 0x0602201B RID: 139291 RVA: 0x004B0288 File Offset: 0x004AE488
+		// (set) Token: 0x0602201C RID: 139292 RVA: 0x004B0290 File Offset: 0x004AE490
 		public List<IFunctionT> Functions { get; set; }
 
-		// Token: 0x17009271 RID: 37489
-		// (get) Token: 0x060202CB RID: 131787 RVA: 0x0047A2A9 File Offset: 0x004784A9
-		// (set) Token: 0x060202CC RID: 131788 RVA: 0x0047A2B1 File Offset: 0x004784B1
+		// Token: 0x170099EA RID: 39402
+		// (get) Token: 0x0602201D RID: 139293 RVA: 0x004B0299 File Offset: 0x004AE499
+		// (set) Token: 0x0602201E RID: 139294 RVA: 0x004B02A1 File Offset: 0x004AE4A1
 		public byte NullMask { get; set; }
 
-		// Token: 0x060202CD RID: 131789 RVA: 0x0047A2BA File Offset: 0x004784BA
+		// Token: 0x0602201F RID: 139295 RVA: 0x004B02AA File Offset: 0x004AE4AA
 		public ICalculateComponentT()
 		{
 			this.Disabled = false;

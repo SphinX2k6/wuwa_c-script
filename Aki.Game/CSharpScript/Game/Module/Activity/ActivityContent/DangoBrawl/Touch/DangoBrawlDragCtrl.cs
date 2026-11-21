@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x02006857 RID: 26711
+	// Token: 0x020057A7 RID: 22439
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlDragCtrl
 	{
-		// Token: 0x17009766 RID: 38758
-		// (get) Token: 0x06042AE8 RID: 273128 RVA: 0x010387BD File Offset: 0x010369BD
+		// Token: 0x17006AA7 RID: 27303
+		// (get) Token: 0x0603763D RID: 226877 RVA: 0x00F79D09 File Offset: 0x00F77F09
 		public bool IsDragging
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x17009767 RID: 38759
-		// (get) Token: 0x06042AE9 RID: 273129 RVA: 0x010387C8 File Offset: 0x010369C8
+		// Token: 0x17006AA8 RID: 27304
+		// (get) Token: 0x0603763E RID: 226878 RVA: 0x00F79D14 File Offset: 0x00F77F14
 		public int? DraggingUid
 		{
 			get
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x17009768 RID: 38760
-		// (get) Token: 0x06042AEA RID: 273130 RVA: 0x010387F8 File Offset: 0x010369F8
+		// Token: 0x17006AA9 RID: 27305
+		// (get) Token: 0x0603763F RID: 226879 RVA: 0x00F79D44 File Offset: 0x00F77F44
 		[Nullable(2)]
 		public IDragVisual ActiveVisual
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042AEB RID: 273131 RVA: 0x0103880B File Offset: 0x01036A0B
+		// Token: 0x06037640 RID: 226880 RVA: 0x00F79D57 File Offset: 0x00F77F57
 		public DangoBrawlDragCtrl(ActivityDangoBrawlData data, DragContext context, DropResolver resolver, InteractionStateMachine fsm, DangoBrawlSourceAdapterRegistry sourceAdapters, BagHighlightPresenter highlight, DangoBrawlInteractionModeCtrl modes)
 		{
 			this.Data = data;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.Modes = modes;
 		}
 
-		// Token: 0x06042AEC RID: 273132 RVA: 0x01038848 File Offset: 0x01036A48
+		// Token: 0x06037641 RID: 226881 RVA: 0x00F79D94 File Offset: 0x00F77F94
 		public UniTask BeginDrag(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos)
 		{
 			DangoBrawlDragCtrl.<BeginDrag>d__15 <BeginDrag>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <BeginDrag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AED RID: 273133 RVA: 0x010388A3 File Offset: 0x01036AA3
+		// Token: 0x06037642 RID: 226882 RVA: 0x00F79DEF File Offset: 0x00F77FEF
 		public void UpdateDrag(FVector pointerPos)
 		{
 			if (this.Session == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.UpdateHighlightFromPointer(pointerPos);
 		}
 
-		// Token: 0x06042AEE RID: 273134 RVA: 0x010388D8 File Offset: 0x01036AD8
+		// Token: 0x06037643 RID: 226883 RVA: 0x00F79E24 File Offset: 0x00F78024
 		public UniTask EndDrag(FVector pointerPos)
 		{
 			DangoBrawlDragCtrl.<EndDrag>d__17 <EndDrag>d__;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <EndDrag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AEF RID: 273135 RVA: 0x01038924 File Offset: 0x01036B24
+		// Token: 0x06037644 RID: 226884 RVA: 0x00F79E70 File Offset: 0x00F78070
 		public void ResumeBlockingSession(FVector pointerPos)
 		{
 			if (this.Session != null || !this.InteractionFsm.IsBlocking())
@@ -140,14 +140,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit<EDragSourceKind, int>(EEventName.OnDangoBrawlDragBegin, payLoad.Visual.Source, payLoad.Visual.ConfigId);
 		}
 
-		// Token: 0x06042AF0 RID: 273136 RVA: 0x01038A80 File Offset: 0x01036C80
+		// Token: 0x06037645 RID: 226885 RVA: 0x00F79FCC File Offset: 0x00F781CC
 		public bool IsHoveringBlockingItem()
 		{
 			InteractionPayload payLoad = this.InteractionFsm.GetPayLoad();
 			return payLoad != null && this.Context.IsHovered(payLoad.Visual.Source, payLoad.Visual.SourceUid);
 		}
 
-		// Token: 0x06042AF1 RID: 273137 RVA: 0x01038AC0 File Offset: 0x01036CC0
+		// Token: 0x06037646 RID: 226886 RVA: 0x00F7A00C File Offset: 0x00F7820C
 		public void CancelCurrent()
 		{
 			DragSession session = this.Session;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlDragEndAnyWay);
 		}
 
-		// Token: 0x06042AF2 RID: 273138 RVA: 0x01038B45 File Offset: 0x01036D45
+		// Token: 0x06037647 RID: 226887 RVA: 0x00F7A091 File Offset: 0x00F78291
 		[NullableContext(2)]
 		public void ReleaseHoldingSourceView(IDangoBrawlDraggableView sourceView = null)
 		{
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.Highlight.Clear();
 		}
 
-		// Token: 0x06042AF3 RID: 273139 RVA: 0x01038B5B File Offset: 0x01036D5B
+		// Token: 0x06037648 RID: 226888 RVA: 0x00F7A0A7 File Offset: 0x00F782A7
 		public void RepositionAfterRotate()
 		{
 			if (this.Session == null)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.UpdateHighlightFromPointer(this.Session.LastPointerPos);
 		}
 
-		// Token: 0x06042AF4 RID: 273140 RVA: 0x01038B97 File Offset: 0x01036D97
+		// Token: 0x06037649 RID: 226889 RVA: 0x00F7A0E3 File Offset: 0x00F782E3
 		private void UpdateHighlightFromPointer(FVector pointerPos)
 		{
 			if (this.Session != null)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042AF5 RID: 273141 RVA: 0x01038BB8 File Offset: 0x01036DB8
+		// Token: 0x0603764A RID: 226890 RVA: 0x00F7A104 File Offset: 0x00F78304
 		[return: Nullable(2)]
 		private ItemSucAnchor GetAnchor(IDragVisual visual)
 		{
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042AF6 RID: 273142 RVA: 0x01038C28 File Offset: 0x01036E28
+		// Token: 0x0603764B RID: 226891 RVA: 0x00F7A174 File Offset: 0x00F78374
 		private void SnapHoldingVisualToGrid(IDragVisual visual, FVector2D pointerLguiPos)
 		{
 			DangoBrawlDropZone zone = this.Resolver.GetZone(EDragTargetKind.Bag);
@@ -257,28 +257,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			visual.MoveTo(valueTuple.Item3);
 		}
 
-		// Token: 0x04022B82 RID: 142210
+		// Token: 0x0401D3DF RID: 119775
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022B83 RID: 142211
+		// Token: 0x0401D3E0 RID: 119776
 		private readonly DragContext Context;
 
-		// Token: 0x04022B84 RID: 142212
+		// Token: 0x0401D3E1 RID: 119777
 		private readonly DangoBrawlSourceAdapterRegistry SourceAdapters;
 
-		// Token: 0x04022B85 RID: 142213
+		// Token: 0x0401D3E2 RID: 119778
 		private readonly InteractionStateMachine InteractionFsm;
 
-		// Token: 0x04022B86 RID: 142214
+		// Token: 0x0401D3E3 RID: 119779
 		private readonly DropResolver Resolver;
 
-		// Token: 0x04022B87 RID: 142215
+		// Token: 0x0401D3E4 RID: 119780
 		private readonly BagHighlightPresenter Highlight;
 
-		// Token: 0x04022B88 RID: 142216
+		// Token: 0x0401D3E5 RID: 119781
 		private readonly DangoBrawlInteractionModeCtrl Modes;
 
-		// Token: 0x04022B89 RID: 142217
+		// Token: 0x0401D3E6 RID: 119782
 		[Nullable(2)]
 		private DragSession Session;
 	}

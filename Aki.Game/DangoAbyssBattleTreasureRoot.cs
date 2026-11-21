@@ -6,19 +6,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A2D RID: 6701
+// Token: 0x02000EEC RID: 3820
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssBattleTreasureRoot : UiPanelBase
 {
-	// Token: 0x0600C520 RID: 50464 RVA: 0x002CB6EA File Offset: 0x002C98EA
+	// Token: 0x06009930 RID: 39216 RVA: 0x002D680A File Offset: 0x002D4A0A
 	public void InitItem(UUIItem rootItem, UUIItem templateItem)
 	{
 		this.CurrentCopyRootItem = rootItem;
 		this.CurrentCopyTemplateItem = templateItem;
 	}
 
-	// Token: 0x0600C521 RID: 50465 RVA: 0x002CB6FC File Offset: 0x002C98FC
+	// Token: 0x06009931 RID: 39217 RVA: 0x002D681C File Offset: 0x002D4A1C
 	public UniTask Init(Dictionary<int, int> rewardItemMap, float fullTime)
 	{
 		DangoAbyssBattleTreasureRoot.<Init>d__5 <Init>d__;
@@ -31,7 +31,7 @@ public class DangoAbyssBattleTreasureRoot : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C522 RID: 50466 RVA: 0x002CB750 File Offset: 0x002C9950
+	// Token: 0x06009932 RID: 39218 RVA: 0x002D6870 File Offset: 0x002D4A70
 	public void RefreshRewardItem(float progress)
 	{
 		foreach (DangoAbyssBattleTreasureItem dangoAbyssBattleTreasureItem in this.DangoAbyssBattleTreasureItemList)
@@ -40,17 +40,17 @@ public class DangoAbyssBattleTreasureRoot : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005ADA RID: 23258
+	// Token: 0x04005BA9 RID: 23465
 	[Nullable(2)]
 	private UUIItem CurrentCopyRootItem;
 
-	// Token: 0x04005ADB RID: 23259
+	// Token: 0x04005BAA RID: 23466
 	[Nullable(2)]
 	private UUIItem CurrentCopyTemplateItem;
 
-	// Token: 0x04005ADC RID: 23260
+	// Token: 0x04005BAB RID: 23467
 	private readonly List<UUIItem> RewardItemList = new List<UUIItem>();
 
-	// Token: 0x04005ADD RID: 23261
+	// Token: 0x04005BAC RID: 23468
 	private readonly List<DangoAbyssBattleTreasureItem> DangoAbyssBattleTreasureItemList = new List<DangoAbyssBattleTreasureItem>();
 }

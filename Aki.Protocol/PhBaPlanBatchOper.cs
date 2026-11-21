@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D16 RID: 3350
+	// Token: 0x02000D06 RID: 3334
 	public sealed class PhBaPlanBatchOper : IMessage<PhBaPlanBatchOper>, IMessage, IEquatable<PhBaPlanBatchOper>, IDeepCloneable<PhBaPlanBatchOper>, IBufferMessage
 	{
-		// Token: 0x06012194 RID: 74132 RVA: 0x002A5083 File Offset: 0x002A3283
+		// Token: 0x06012098 RID: 73880 RVA: 0x002A345F File Offset: 0x002A165F
 		[NullableContext(1)]
 		public static PhBaPlanBatchOper Create()
 		{
 			return new PhBaPlanBatchOper();
 		}
 
-		// Token: 0x17003BF9 RID: 15353
-		// (get) Token: 0x06012195 RID: 74133 RVA: 0x002A508A File Offset: 0x002A328A
+		// Token: 0x17003BC4 RID: 15300
+		// (get) Token: 0x06012099 RID: 73881 RVA: 0x002A3466 File Offset: 0x002A1666
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PhBaPlanBatchOper> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BFA RID: 15354
-		// (get) Token: 0x06012196 RID: 74134 RVA: 0x002A5091 File Offset: 0x002A3291
+		// Token: 0x17003BC5 RID: 15301
+		// (get) Token: 0x0601209A RID: 73882 RVA: 0x002A346D File Offset: 0x002A166D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BFB RID: 15355
-		// (get) Token: 0x06012197 RID: 74135 RVA: 0x002A5094 File Offset: 0x002A3294
+		// Token: 0x17003BC6 RID: 15302
+		// (get) Token: 0x0601209B RID: 73883 RVA: 0x002A3470 File Offset: 0x002A1670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012198 RID: 74136 RVA: 0x002A509B File Offset: 0x002A329B
+		// Token: 0x0601209C RID: 73884 RVA: 0x002A3477 File Offset: 0x002A1677
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanBatchOper()
 		{
 		}
 
-		// Token: 0x06012199 RID: 74137 RVA: 0x002A50AE File Offset: 0x002A32AE
+		// Token: 0x0601209D RID: 73885 RVA: 0x002A348A File Offset: 0x002A168A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanBatchOper(PhBaPlanBatchOper other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601219A RID: 74138 RVA: 0x002A50E4 File Offset: 0x002A32E4
+		// Token: 0x0601209E RID: 73886 RVA: 0x002A34C0 File Offset: 0x002A16C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhBaPlanBatchOper Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new PhBaPlanBatchOper(this);
 		}
 
-		// Token: 0x17003BFC RID: 15356
-		// (get) Token: 0x0601219B RID: 74139 RVA: 0x002A50EC File Offset: 0x002A32EC
-		// (set) Token: 0x0601219C RID: 74140 RVA: 0x002A50F4 File Offset: 0x002A32F4
+		// Token: 0x17003BC7 RID: 15303
+		// (get) Token: 0x0601209F RID: 73887 RVA: 0x002A34C8 File Offset: 0x002A16C8
+		// (set) Token: 0x060120A0 RID: 73888 RVA: 0x002A34D0 File Offset: 0x002A16D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBatchOper Oper
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003BFD RID: 15357
-		// (get) Token: 0x0601219D RID: 74141 RVA: 0x002A50FD File Offset: 0x002A32FD
+		// Token: 0x17003BC8 RID: 15304
+		// (get) Token: 0x060120A1 RID: 73889 RVA: 0x002A34D9 File Offset: 0x002A16D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> IncrId
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601219E RID: 74142 RVA: 0x002A5105 File Offset: 0x002A3305
+		// Token: 0x060120A2 RID: 73890 RVA: 0x002A34E1 File Offset: 0x002A16E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhBaPlanBatchOper);
 		}
 
-		// Token: 0x0601219F RID: 74143 RVA: 0x002A5114 File Offset: 0x002A3314
+		// Token: 0x060120A3 RID: 73891 RVA: 0x002A34F0 File Offset: 0x002A16F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhBaPlanBatchOper other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Oper == other.Oper && this.incrId_.Equals(other.incrId_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060121A0 RID: 74144 RVA: 0x002A5164 File Offset: 0x002A3364
+		// Token: 0x060120A4 RID: 73892 RVA: 0x002A3540 File Offset: 0x002A1740
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060121A1 RID: 74145 RVA: 0x002A51B7 File Offset: 0x002A33B7
+		// Token: 0x060120A5 RID: 73893 RVA: 0x002A3593 File Offset: 0x002A1793
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060121A2 RID: 74146 RVA: 0x002A51C4 File Offset: 0x002A33C4
+		// Token: 0x060120A6 RID: 73894 RVA: 0x002A35A0 File Offset: 0x002A17A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060121A3 RID: 74147 RVA: 0x002A51D0 File Offset: 0x002A33D0
+		// Token: 0x060120A7 RID: 73895 RVA: 0x002A35AC File Offset: 0x002A17AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060121A4 RID: 74148 RVA: 0x002A5220 File Offset: 0x002A3420
+		// Token: 0x060120A8 RID: 73896 RVA: 0x002A35FC File Offset: 0x002A17FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060121A5 RID: 74149 RVA: 0x002A5274 File Offset: 0x002A3474
+		// Token: 0x060120A9 RID: 73897 RVA: 0x002A3650 File Offset: 0x002A1850
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhBaPlanBatchOper other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060121A6 RID: 74150 RVA: 0x002A52C1 File Offset: 0x002A34C1
+		// Token: 0x060120AA RID: 73898 RVA: 0x002A369D File Offset: 0x002A189D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060121A7 RID: 74151 RVA: 0x002A52CC File Offset: 0x002A34CC
+		// Token: 0x060120AB RID: 73899 RVA: 0x002A36A8 File Offset: 0x002A18A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007136 RID: 28982
+		// Token: 0x0400714E RID: 29006
 		private static readonly MessageParser<PhBaPlanBatchOper> _parser = new MessageParser<PhBaPlanBatchOper>(() => new PhBaPlanBatchOper());
 
-		// Token: 0x04007137 RID: 28983
+		// Token: 0x0400714F RID: 29007
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007138 RID: 28984
+		// Token: 0x04007150 RID: 29008
 		public const int OperFieldNumber = 1;
 
-		// Token: 0x04007139 RID: 28985
+		// Token: 0x04007151 RID: 29009
 		private PhantomBatchOper oper_;
 
-		// Token: 0x0400713A RID: 28986
+		// Token: 0x04007152 RID: 29010
 		public const int IncrIdFieldNumber = 2;
 
-		// Token: 0x0400713B RID: 28987
+		// Token: 0x04007153 RID: 29011
 		private static readonly FieldCodec<int> _repeated_incrId_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x0400713C RID: 28988
+		// Token: 0x04007154 RID: 29012
 		private readonly RepeatedField<int> incrId_ = new RepeatedField<int>();
 	}
 }

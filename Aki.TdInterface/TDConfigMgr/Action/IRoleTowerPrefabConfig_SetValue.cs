@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DCF RID: 7631
+	// Token: 0x02001FE6 RID: 8166
 	public class IRoleTowerPrefabConfig_SetValue
 	{
-		// Token: 0x040061FB RID: 25083
+		// Token: 0x04006783 RID: 26499
 		public ECreatePrefabType Type;
 	}
 }

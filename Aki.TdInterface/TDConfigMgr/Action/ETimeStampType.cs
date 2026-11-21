@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016DC RID: 5852
+	// Token: 0x02001857 RID: 6231
 	[EnumExtensions]
 	public enum ETimeStampType
 	{
-		// Token: 0x04004F26 RID: 20262
+		// Token: 0x04005350 RID: 21328
 		DungeonBegin,
-		// Token: 0x04004F27 RID: 20263
+		// Token: 0x04005351 RID: 21329
 		DungeonFinish
 	}
 }

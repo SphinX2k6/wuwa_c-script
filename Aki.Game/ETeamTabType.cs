@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002BF7 RID: 11255
+// Token: 0x02002172 RID: 8562
 public enum ETeamTabType
 {
-	// Token: 0x0400AEEC RID: 44780
+	// Token: 0x0400B2F1 RID: 45809
 	RoleList,
-	// Token: 0x0400AEED RID: 44781
+	// Token: 0x0400B2F2 RID: 45810
 	UseTeam
 }

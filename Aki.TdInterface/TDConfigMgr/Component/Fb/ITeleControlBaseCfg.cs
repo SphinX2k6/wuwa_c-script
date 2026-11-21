@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B34 RID: 2868
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C02 RID: 3074
 	public class ITeleControlBaseCfg
 	{
-		// Token: 0x06004237 RID: 16951 RVA: 0x000A9989 File Offset: 0x000A7B89
+		// Token: 0x06004690 RID: 18064 RVA: 0x000B3A4D File Offset: 0x000B1C4D
 		public static ITeleControlBaseCfg Create(ITeleControlBaseCfg? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700118C RID: 4492
-		// (get) Token: 0x06004238 RID: 16952 RVA: 0x000A99A8 File Offset: 0x000A7BA8
+		// Token: 0x17001287 RID: 4743
+		// (get) Token: 0x06004691 RID: 18065 RVA: 0x000B3A6C File Offset: 0x000B1C6C
 		public virtual string CommonConfig
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700118D RID: 4493
-		// (get) Token: 0x06004239 RID: 16953 RVA: 0x000A99B8 File Offset: 0x000A7BB8
+		// Token: 0x17001288 RID: 4744
+		// (get) Token: 0x06004692 RID: 18066 RVA: 0x000B3A7C File Offset: 0x000B1C7C
 		public virtual bool? CanRotate
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700118E RID: 4494
-		// (get) Token: 0x0600423A RID: 16954 RVA: 0x000A99F0 File Offset: 0x000A7BF0
+		// Token: 0x17001289 RID: 4745
+		// (get) Token: 0x06004693 RID: 18067 RVA: 0x000B3AB4 File Offset: 0x000B1CB4
 		public virtual bool? InitialGravity
 		{
 			get
@@ -60,7 +57,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002557 RID: 9559
+		// Token: 0x0400279F RID: 10143
 		private ITeleControlBaseCfg Instance;
 	}
 }

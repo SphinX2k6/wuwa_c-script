@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002533 RID: 9523
+	// Token: 0x020027DA RID: 10202
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IActorFxEmotePlay : IActorFxEmoteType
 	{
-		// Token: 0x0600D441 RID: 54337 RVA: 0x001F6CE4 File Offset: 0x001F4EE4
-		[NullableContext(1)]
+		// Token: 0x0600E1A1 RID: 57761 RVA: 0x00212744 File Offset: 0x00210944
+		[NullableContext(0)]
 		public static IActorFxEmotePlay Create(IActorFxEmotePlay? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B9D RID: 15261
-		// (get) Token: 0x0600D442 RID: 54338 RVA: 0x001F6D03 File Offset: 0x001F4F03
+		// Token: 0x17003E9B RID: 16027
+		// (get) Token: 0x0600E1A2 RID: 57762 RVA: 0x00212763 File Offset: 0x00210963
 		public override EActorFxEmoteType Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B9E RID: 15262
-		// (get) Token: 0x0600D443 RID: 54339 RVA: 0x001F6D10 File Offset: 0x001F4F10
+		// Token: 0x17003E9C RID: 16028
+		// (get) Token: 0x0600E1A3 RID: 57763 RVA: 0x00212770 File Offset: 0x00210970
 		public virtual long FxEmoteId
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B9F RID: 15263
-		// (get) Token: 0x0600D444 RID: 54340 RVA: 0x001F6D1D File Offset: 0x001F4F1D
+		// Token: 0x17003E9D RID: 16029
+		// (get) Token: 0x0600E1A4 RID: 57764 RVA: 0x0021277D File Offset: 0x0021097D
 		public virtual IActorFxEmoteOverrideConfig OverrideConfig
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA0 RID: 15264
-		// (get) Token: 0x0600D445 RID: 54341 RVA: 0x001F6D54 File Offset: 0x001F4F54
+		// Token: 0x17003E9E RID: 16030
+		// (get) Token: 0x0600E1A5 RID: 57765 RVA: 0x002127B4 File Offset: 0x002109B4
 		public virtual float? DelayTime
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA1 RID: 15265
-		// (get) Token: 0x0600D446 RID: 54342 RVA: 0x001F6D8C File Offset: 0x001F4F8C
+		// Token: 0x17003E9F RID: 16031
+		// (get) Token: 0x0600E1A6 RID: 57766 RVA: 0x002127EC File Offset: 0x002109EC
 		public virtual bool? LoopPlay
 		{
 			get
@@ -87,8 +87,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BA2 RID: 15266
-		// (get) Token: 0x0600D447 RID: 54343 RVA: 0x001F6DC4 File Offset: 0x001F4FC4
+		// Token: 0x17003EA0 RID: 16032
+		// (get) Token: 0x0600E1A7 RID: 57767 RVA: 0x00212824 File Offset: 0x00210A24
 		public virtual bool? KeepPlay
 		{
 			get
@@ -101,13 +101,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007447 RID: 29767
+		// Token: 0x04007A9C RID: 31388
 		private IActorFxEmotePlay Instance;
 
-		// Token: 0x04007448 RID: 29768
+		// Token: 0x04007A9D RID: 31389
 		private IActorFxEmoteOverrideConfig _OverrideConfigCache;
 
-		// Token: 0x04007449 RID: 29769
+		// Token: 0x04007A9E RID: 31390
 		private bool _OverrideConfigInited;
 	}
 }

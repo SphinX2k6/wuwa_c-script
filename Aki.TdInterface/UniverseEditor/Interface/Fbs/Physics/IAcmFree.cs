@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x0200433C RID: 17212
+	// Token: 0x0200479E RID: 18334
 	public struct IAcmFree : IFlatbufferObject
 	{
-		// Token: 0x1700798A RID: 31114
-		// (get) Token: 0x06019847 RID: 104519 RVA: 0x003A7802 File Offset: 0x003A5A02
+		// Token: 0x17007FBF RID: 32703
+		// (get) Token: 0x0601AFD5 RID: 110549 RVA: 0x003D322A File Offset: 0x003D142A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x06019848 RID: 104520 RVA: 0x003A780F File Offset: 0x003A5A0F
+		// Token: 0x0601AFD6 RID: 110550 RVA: 0x003D3237 File Offset: 0x003D1437
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019849 RID: 104521 RVA: 0x003A7818 File Offset: 0x003A5A18
+		// Token: 0x0601AFD7 RID: 110551 RVA: 0x003D3240 File Offset: 0x003D1440
 		public static IAcmFree GetRootAsIAcmFree(ByteBuffer _bb)
 		{
 			return IAcmFree.GetRootAsIAcmFree(_bb, default(IAcmFree));
 		}
 
-		// Token: 0x0601984A RID: 104522 RVA: 0x003A7834 File Offset: 0x003A5A34
+		// Token: 0x0601AFD8 RID: 110552 RVA: 0x003D325C File Offset: 0x003D145C
 		public static IAcmFree GetRootAsIAcmFree(ByteBuffer _bb, IAcmFree obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601984B RID: 104523 RVA: 0x003A7851 File Offset: 0x003A5A51
+		// Token: 0x0601AFD9 RID: 110553 RVA: 0x003D3279 File Offset: 0x003D1479
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601984C RID: 104524 RVA: 0x003A7860 File Offset: 0x003A5A60
+		// Token: 0x0601AFDA RID: 110554 RVA: 0x003D3288 File Offset: 0x003D1488
 		public IAcmFree __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700798B RID: 31115
-		// (get) Token: 0x0601984D RID: 104525 RVA: 0x003A7870 File Offset: 0x003A5A70
+		// Token: 0x17007FC0 RID: 32704
+		// (get) Token: 0x0601AFDB RID: 110555 RVA: 0x003D3298 File Offset: 0x003D1498
 		public EAngularConstraintMotion Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x0601984E RID: 104526 RVA: 0x003A78AC File Offset: 0x003A5AAC
+		// Token: 0x0601AFDC RID: 110556 RVA: 0x003D32D4 File Offset: 0x003D14D4
 		public static Offset<IAcmFree> CreateIAcmFree(FlatBufferBuilder builder, EAngularConstraintMotion Type = EAngularConstraintMotion.ACM_Free)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAcmFree.EndIAcmFree(builder);
 		}
 
-		// Token: 0x0601984F RID: 104527 RVA: 0x003A78C2 File Offset: 0x003A5AC2
+		// Token: 0x0601AFDD RID: 110557 RVA: 0x003D32EA File Offset: 0x003D14EA
 		public static void StartIAcmFree(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06019850 RID: 104528 RVA: 0x003A78CB File Offset: 0x003A5ACB
+		// Token: 0x0601AFDE RID: 110558 RVA: 0x003D32F3 File Offset: 0x003D14F3
 		public static void AddType(FlatBufferBuilder builder, EAngularConstraintMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019851 RID: 104529 RVA: 0x003A78D6 File Offset: 0x003A5AD6
+		// Token: 0x0601AFDF RID: 110559 RVA: 0x003D32FE File Offset: 0x003D14FE
 		public static Offset<IAcmFree> EndIAcmFree(FlatBufferBuilder builder)
 		{
 			return new Offset<IAcmFree>(builder.EndTable());
 		}
 
-		// Token: 0x06019852 RID: 104530 RVA: 0x003A78E4 File Offset: 0x003A5AE4
+		// Token: 0x0601AFE0 RID: 110560 RVA: 0x003D330C File Offset: 0x003D150C
 		public IAcmFreeT UnPack()
 		{
 			IAcmFreeT acmFreeT = new IAcmFreeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return acmFreeT;
 		}
 
-		// Token: 0x06019853 RID: 104531 RVA: 0x003A78FF File Offset: 0x003A5AFF
+		// Token: 0x0601AFE1 RID: 110561 RVA: 0x003D3327 File Offset: 0x003D1527
 		public void UnPackTo(IAcmFreeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06019854 RID: 104532 RVA: 0x003A7910 File Offset: 0x003A5B10
+		// Token: 0x0601AFE2 RID: 110562 RVA: 0x003D3338 File Offset: 0x003D1538
 		public static Offset<IAcmFree> Pack(FlatBufferBuilder builder, IAcmFreeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAcmFree.CreateIAcmFree(builder, _o.Type);
 		}
 
-		// Token: 0x0400C117 RID: 49431
+		// Token: 0x0400CB35 RID: 52021
 		private Table __p;
 	}
 }

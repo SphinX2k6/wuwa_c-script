@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001994 RID: 6548
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B1B RID: 6939
 	public class IDetectBattleMonsterOnGround : IDetectBattleTagType
 	{
-		// Token: 0x06008C29 RID: 35881 RVA: 0x001490A0 File Offset: 0x001472A0
+		// Token: 0x0600934D RID: 37709 RVA: 0x001588B0 File Offset: 0x00156AB0
 		private IDetectBattleMonsterOnGround_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C2A RID: 35882 RVA: 0x001490D8 File Offset: 0x001472D8
+		// Token: 0x0600934E RID: 37710 RVA: 0x001588E8 File Offset: 0x00156AE8
 		public static IDetectBattleMonsterOnGround Create([Nullable(2)] IDetectBattleMonsterOnGround instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C2B RID: 35883 RVA: 0x001490EB File Offset: 0x001472EB
+		// Token: 0x0600934F RID: 37711 RVA: 0x001588FB File Offset: 0x00156AFB
 		public static IDetectBattleMonsterOnGround CreateFromSetValue([Nullable(2)] IDetectBattleMonsterOnGround_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C2C RID: 35884 RVA: 0x001490FE File Offset: 0x001472FE
+		// Token: 0x06009350 RID: 37712 RVA: 0x0015890E File Offset: 0x00156B0E
 		public new IDetectBattleMonsterOnGround_SetValue ToSetValue()
 		{
 			return new IDetectBattleMonsterOnGround_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D0B RID: 11531
-		// (get) Token: 0x06008C2D RID: 35885 RVA: 0x00149111 File Offset: 0x00147311
-		// (set) Token: 0x06008C2E RID: 35886 RVA: 0x0014913C File Offset: 0x0014733C
+		// Token: 0x17002F0A RID: 12042
+		// (get) Token: 0x06009351 RID: 37713 RVA: 0x00158921 File Offset: 0x00156B21
+		// (set) Token: 0x06009352 RID: 37714 RVA: 0x0015894C File Offset: 0x00156B4C
 		public override EDetectBattleTagType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400574C RID: 22348
+		// Token: 0x04005B95 RID: 23445
 		[Nullable(2)]
 		protected new IDetectBattleMonsterOnGround FbInstance;
 
-		// Token: 0x0400574D RID: 22349
+		// Token: 0x04005B96 RID: 23446
 		[Nullable(2)]
 		protected new IDetectBattleMonsterOnGround_SetValue PocoInterface;
 	}

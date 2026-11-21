@@ -2,22 +2,21 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003163 RID: 12643
+// Token: 0x020026D0 RID: 9936
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillUtils : IStaticVariableResetter
 {
-	// Token: 0x0601B32B RID: 111403 RVA: 0x00768D56 File Offset: 0x00766F56
+	// Token: 0x06018E30 RID: 101936 RVA: 0x00790722 File Offset: 0x0078E922
 	static SkillUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SkillUtils.CreateStaticDefaultValue), new Action(SkillUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B32C RID: 111404 RVA: 0x00768D80 File Offset: 0x00766F80
+	// Token: 0x06018E31 RID: 101937 RVA: 0x0079074C File Offset: 0x0078E94C
 	public static ESkillGenre[] GetSkillGenres([Nullable(2)] SSkillInfo info)
 	{
 		if (info == null)
@@ -40,7 +39,7 @@ public class SkillUtils : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0601B32D RID: 111405 RVA: 0x00768DF4 File Offset: 0x00766FF4
+	// Token: 0x06018E32 RID: 101938 RVA: 0x007907C0 File Offset: 0x0078E9C0
 	public static bool HasSkillGenre(SSkillInfo info, ESkillGenre genre)
 	{
 		TArray<TEnumAsByte<ESkillGenre>> skillGenreGroup = info.SkillGenreGroup;
@@ -51,7 +50,7 @@ public class SkillUtils : IStaticVariableResetter
 		return info.SkillGenre == genre;
 	}
 
-	// Token: 0x0601B32E RID: 111406 RVA: 0x00768E30 File Offset: 0x00767030
+	// Token: 0x06018E33 RID: 101939 RVA: 0x007907FC File Offset: 0x0078E9FC
 	[NullableContext(2)]
 	public static void GetSkillRotateDirect(EntityHandle entityHandle, SkillRotateTarget skillRotateTarget, AnimNotifyStateSkillRotateStyle skillRotateStyle, [Nullable(1)] global::Vector outVector)
 	{
@@ -181,7 +180,7 @@ public class SkillUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B32F RID: 111407 RVA: 0x00769150 File Offset: 0x00767350
+	// Token: 0x06018E34 RID: 101940 RVA: 0x00790B1C File Offset: 0x0078ED1C
 	public static UTraceLineElement GetStaticLineTrace()
 	{
 		if (SkillUtils._lineTrace == null)
@@ -197,7 +196,7 @@ public class SkillUtils : IStaticVariableResetter
 		return SkillUtils._lineTrace;
 	}
 
-	// Token: 0x0601B330 RID: 111408 RVA: 0x007691C4 File Offset: 0x007673C4
+	// Token: 0x06018E35 RID: 101941 RVA: 0x00790B90 File Offset: 0x0078ED90
 	public static FTransformDouble? GetTargetSocketTransform(Entity target, string socketName, ERelativeTransformSpace space, string reason, ESocketTransformDefault defaultTransform = ESocketTransformDefault.None)
 	{
 		CharacterActorComponent component = target.GetComponent<CharacterActorComponent>();
@@ -234,7 +233,7 @@ public class SkillUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B331 RID: 111409 RVA: 0x00769284 File Offset: 0x00767484
+	// Token: 0x06018E36 RID: 101942 RVA: 0x00790C50 File Offset: 0x0078EE50
 	private static void AddRemoveEntityListener(EntityHandle myHandle)
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -257,7 +256,7 @@ public class SkillUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B332 RID: 111410 RVA: 0x007692EC File Offset: 0x007674EC
+	// Token: 0x06018E37 RID: 101943 RVA: 0x00790CB8 File Offset: 0x0078EEB8
 	private static void RemoveRemoveEntityListener(EntityHandle myHandle)
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -280,14 +279,14 @@ public class SkillUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B333 RID: 111411 RVA: 0x00769352 File Offset: 0x00767552
+	// Token: 0x06018E38 RID: 101944 RVA: 0x00790D1E File Offset: 0x0078EF1E
 	private static void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		SkillUtils.EndAbsoluteTimeStop(handle.Id);
 		SkillUtils.EndTimeStopRequest(handle.Id);
 	}
 
-	// Token: 0x0601B334 RID: 111412 RVA: 0x0076936C File Offset: 0x0076756C
+	// Token: 0x06018E39 RID: 101945 RVA: 0x00790D38 File Offset: 0x0078EF38
 	public static void BeginAbsoluteTimeStop(int entityId, float duration, bool stopMove, float timeScale = 0f)
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -326,7 +325,7 @@ public class SkillUtils : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<bool, float>(entity, EEventName.OnAbsoluteTimeStop, true, duration);
 	}
 
-	// Token: 0x0601B335 RID: 111413 RVA: 0x007694C0 File Offset: 0x007676C0
+	// Token: 0x06018E3A RID: 101946 RVA: 0x00790E8C File Offset: 0x0078F08C
 	public static void EndAbsoluteTimeStop(int entityId)
 	{
 		if (!TimeController.Instance.RemoveLock(entityId))
@@ -350,7 +349,7 @@ public class SkillUtils : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<bool, float>(entity, EEventName.OnAbsoluteTimeStop, false, 0f);
 	}
 
-	// Token: 0x0601B336 RID: 111414 RVA: 0x00769594 File Offset: 0x00767794
+	// Token: 0x06018E3B RID: 101947 RVA: 0x00790F60 File Offset: 0x0078F160
 	public static void BeginTimeStopRequest(int entityId, float duration, float timeScale = 0f)
 	{
 		CharacterModel instance = CharacterModel.Instance;
@@ -383,7 +382,7 @@ public class SkillUtils : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<bool, float>(entity, EEventName.OnTimeStopRequest, true, duration);
 	}
 
-	// Token: 0x0601B337 RID: 111415 RVA: 0x007696A4 File Offset: 0x007678A4
+	// Token: 0x06018E3C RID: 101948 RVA: 0x00791070 File Offset: 0x0078F270
 	public static void EndTimeStopRequest(int entityId)
 	{
 		if (!TimeController.Instance.RemoveTimeStopRequestLock(entityId))
@@ -407,7 +406,7 @@ public class SkillUtils : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<bool, float>(entity, EEventName.OnTimeStopRequest, false, 0f);
 	}
 
-	// Token: 0x0601B338 RID: 111416 RVA: 0x00769778 File Offset: 0x00767978
+	// Token: 0x06018E3D RID: 101949 RVA: 0x00791144 File Offset: 0x0078F344
 	[NullableContext(2)]
 	public static bool IsTsActor(EntityHandle skillTarget)
 	{
@@ -435,7 +434,7 @@ public class SkillUtils : IStaticVariableResetter
 		return (eentityType3.GetValueOrDefault() == eentityType4 & eentityType3 != null) || eentityType2.GetValueOrDefault() == EEntityType.Npc || eentityType2.GetValueOrDefault() == EEntityType.Monster || eentityType2.GetValueOrDefault() == EEntityType.Vision;
 	}
 
-	// Token: 0x0601B339 RID: 111417 RVA: 0x00769800 File Offset: 0x00767A00
+	// Token: 0x06018E3E RID: 101950 RVA: 0x007911CC File Offset: 0x0078F3CC
 	public static void Log(CombatLog.ELogType logType, ESkillLogType skillLogType, Entity entity, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -444,30 +443,6 @@ public class SkillUtils : IStaticVariableResetter
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		if (Info.Instance.IsPlayInEditor)
-		{
-			CharacterGasDebugComponent component = entity.GetComponent<CharacterGasDebugComponent>();
-			if (component != null && component.Valid)
-			{
-				if (skillLogType != ESkillLogType.Skill)
-				{
-					if (skillLogType != ESkillLogType.SkillBehavior)
-					{
-						CombatLog instance = CombatLog.Instance;
-						CombatLog.EDebugModule flag = CombatLog.EDebugModule.Skill;
-						string message2 = "未知技能日志类型";
-						ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("skillLogType", skillLogType);
-						instance.Error(flag, entity, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-						return;
-					}
-					component.AddSkillBehaviorLogString(message, pairs);
-				}
-				else
-				{
-					component.AddSkillLogString(message, pairs);
-				}
-			}
-		}
 		switch (logType)
 		{
 		case CombatLog.ELogType.Info:
@@ -486,31 +461,31 @@ public class SkillUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B33A RID: 111418 RVA: 0x007698BB File Offset: 0x00767ABB
+	// Token: 0x06018E3F RID: 101951 RVA: 0x0079121F File Offset: 0x0078F41F
 	public static void CreateStaticDefaultValue()
 	{
 		SkillUtils._lineTrace = null;
 	}
 
-	// Token: 0x0601B33B RID: 111419 RVA: 0x007698C3 File Offset: 0x00767AC3
+	// Token: 0x06018E40 RID: 101952 RVA: 0x00791227 File Offset: 0x0078F427
 	public static void ResetStaticDefaultValue()
 	{
 		SkillUtils._lineTrace = null;
 	}
 
-	// Token: 0x0400D3BD RID: 54205
+	// Token: 0x0400D820 RID: 55328
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400D3BE RID: 54206
+	// Token: 0x0400D821 RID: 55329
 	[Nullable(2)]
 	private static UTraceLineElement _lineTrace;
 
-	// Token: 0x020096B8 RID: 38584
+	// Token: 0x020088DE RID: 35038
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x040304F2 RID: 197874
+		// Token: 0x0402BB87 RID: 179079
 		[Nullable(new byte[]
 		{
 			0,

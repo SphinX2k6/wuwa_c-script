@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E8 RID: 25832
+	// Token: 0x02005466 RID: 21606
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreeTrailEffectView : UiPanelBase
 	{
-		// Token: 0x06040D7A RID: 265594 RVA: 0x00FB50BB File Offset: 0x00FB32BB
+		// Token: 0x06035A3E RID: 219710 RVA: 0x00EFC0EB File Offset: 0x00EFA2EB
 		public void SetCurves(UCurveFloat curveX, UCurveFloat curveY)
 		{
 			this.CurveX = curveX;
 			this.CurveY = curveY;
 		}
 
-		// Token: 0x06040D7B RID: 265595 RVA: 0x00FB50CB File Offset: 0x00FB32CB
+		// Token: 0x06035A3F RID: 219711 RVA: 0x00EFC0FB File Offset: 0x00EFA2FB
 		public void BindBoard(float originX, float originY, float stepX, float stepY)
 		{
 			this.BoardOriginX = originX;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.CellStepY = stepY;
 		}
 
-		// Token: 0x06040D7C RID: 265596 RVA: 0x00FB50EC File Offset: 0x00FB32EC
+		// Token: 0x06035A40 RID: 219712 RVA: 0x00EFC11C File Offset: 0x00EFA31C
 		public void ResetForReuse(GridPosition origin)
 		{
 			this.KillTween();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootItem.SetUIActive(true);
 		}
 
-		// Token: 0x06040D7D RID: 265597 RVA: 0x00FB5140 File Offset: 0x00FB3340
+		// Token: 0x06035A41 RID: 219713 RVA: 0x00EFC170 File Offset: 0x00EFA370
 		[NullableContext(1)]
 		public void ResetForReuseAt(UUIItem from)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootItem.SetUIActive(true);
 		}
 
-		// Token: 0x06040D7E RID: 265598 RVA: 0x00FB517D File Offset: 0x00FB337D
+		// Token: 0x06035A42 RID: 219714 RVA: 0x00EFC1AD File Offset: 0x00EFA3AD
 		public void RecycleToPool()
 		{
 			this.KillTween();
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootItem.SetUIActive(false);
 		}
 
-		// Token: 0x06040D7F RID: 265599 RVA: 0x00FB5196 File Offset: 0x00FB3396
+		// Token: 0x06035A43 RID: 219715 RVA: 0x00EFC1C6 File Offset: 0x00EFA3C6
 		public UniTask FlyToAsync(GridPosition target, int extraMs = 0)
 		{
 			return this.FlyToAbsAsync(this.BoardOriginX + (float)target.Col * this.CellStepX, this.BoardOriginY - (float)target.Row * this.CellStepY, extraMs);
 		}
 
-		// Token: 0x06040D80 RID: 265600 RVA: 0x00FB51CC File Offset: 0x00FB33CC
+		// Token: 0x06035A44 RID: 219716 RVA: 0x00EFC1FC File Offset: 0x00EFA3FC
 		[NullableContext(1)]
 		public UniTask FlyToAsync(UUIItem target)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.FlyToAbsAsync(lguispaceCenterAbsolutePosition.X, lguispaceCenterAbsolutePosition.Y, 0);
 		}
 
-		// Token: 0x06040D81 RID: 265601 RVA: 0x00FB51F4 File Offset: 0x00FB33F4
+		// Token: 0x06035A45 RID: 219717 RVA: 0x00EFC224 File Offset: 0x00EFA424
 		private UniTask FlyToAbsAsync(float centerAbsX, float centerAbsY, int extraMs = 0)
 		{
 			this.KillTween();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.FlyToOffsetAsync(this.RootItem.GetAnchorOffsetX(), this.RootItem.GetAnchorOffsetY(), toX, toY, extraMs);
 		}
 
-		// Token: 0x06040D82 RID: 265602 RVA: 0x00FB5240 File Offset: 0x00FB3440
+		// Token: 0x06035A46 RID: 219718 RVA: 0x00EFC270 File Offset: 0x00EFA470
 		private UniTask FlyToOffsetAsync(float fromX, float fromY, float toX, float toY, int extraMs)
 		{
 			int num = MatchThreeTrailEffectView.FlyMs(fromX, fromY, toX, toY) + extraMs;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.Tcs.Task;
 		}
 
-		// Token: 0x06040D83 RID: 265603 RVA: 0x00FB52FC File Offset: 0x00FB34FC
+		// Token: 0x06035A47 RID: 219719 RVA: 0x00EFC32C File Offset: 0x00EFA52C
 		private ULTweener StartLineTween(float fromX, float fromY, float toX, float toY, int durationMs)
 		{
 			if (this.MoveSetter == null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return ULTweenBPLibrary.Vector2To(GlobalData.World, this.MoveSetter, this.TempFrom.ToUeVector2D(true), this.TempLocation.ToUeVector2D(true), (float)durationMs / 1000f, 0f, LTweenEase.InQuad);
 		}
 
-		// Token: 0x06040D84 RID: 265604 RVA: 0x00FB5380 File Offset: 0x00FB3580
+		// Token: 0x06035A48 RID: 219720 RVA: 0x00EFC3B0 File Offset: 0x00EFA5B0
 		private ULTweener StartCurveTween(float fromX, float fromY, float toX, float toY, int durationMs)
 		{
 			this.FromX = fromX;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return ULTweenBPLibrary.FloatTo(GlobalData.World, this.ProgressSetter, 0f, 1f, (float)durationMs / 1000f, 0f, LTweenEase.Linear);
 		}
 
-		// Token: 0x06040D85 RID: 265605 RVA: 0x00FB53F4 File Offset: 0x00FB35F4
+		// Token: 0x06035A49 RID: 219721 RVA: 0x00EFC424 File Offset: 0x00EFA624
 		private void MoveToAbs(float centerAbsX, float centerAbsY)
 		{
 			if (this.RootItem == null)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SetLocalOffset(x, y);
 		}
 
-		// Token: 0x06040D86 RID: 265606 RVA: 0x00FB5420 File Offset: 0x00FB3620
+		// Token: 0x06035A4A RID: 219722 RVA: 0x00EFC450 File Offset: 0x00EFA650
 		private void AbsToOffset(float centerAbsX, float centerAbsY, out float offsetX, out float offsetY)
 		{
 			FVector relativeLocation = this.RootItem.RelativeLocation;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			offsetY = centerAbsY - (0.5f - pivot.Y) * this.RootItem.GetHeight() - num2 - (relativeLocation.Y - this.RootItem.GetAnchorOffsetY());
 		}
 
-		// Token: 0x06040D87 RID: 265607 RVA: 0x00FB54D9 File Offset: 0x00FB36D9
+		// Token: 0x06035A4B RID: 219723 RVA: 0x00EFC509 File Offset: 0x00EFA709
 		private void SetLocalOffset(float x, float y)
 		{
 			this.TempLocation.Set((double)x, (double)y);
@@ -190,13 +190,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootItem.SetAnchorOffset(this.TempLocation.ToUeVector2D(true));
 		}
 
-		// Token: 0x06040D88 RID: 265608 RVA: 0x00FB5506 File Offset: 0x00FB3706
+		// Token: 0x06035A4C RID: 219724 RVA: 0x00EFC536 File Offset: 0x00EFA736
 		private static int FlyMs(float fromX, float fromY, float toX, float toY)
 		{
 			return (int)((Math.Abs(toX - fromX) + Math.Abs(toY - fromY)) / 2500f * 1000f);
 		}
 
-		// Token: 0x06040D89 RID: 265609 RVA: 0x00FB5526 File Offset: 0x00FB3726
+		// Token: 0x06035A4D RID: 219725 RVA: 0x00EFC556 File Offset: 0x00EFA756
 		private void OnTweenLocation(FVector2D value)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -207,13 +207,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootItem.SetAnchorOffset(value);
 		}
 
-		// Token: 0x06040D8A RID: 265610 RVA: 0x00FB553C File Offset: 0x00FB373C
+		// Token: 0x06035A4E RID: 219726 RVA: 0x00EFC56C File Offset: 0x00EFA76C
 		private void OnTweenProgress(float t)
 		{
 			this.SetLocalOffset(this.FromX + (this.ToX - this.FromX) * this.CurveX.GetFloatValue(t), this.FromY + (this.ToY - this.FromY) * this.CurveY.GetFloatValue(t));
 		}
 
-		// Token: 0x06040D8B RID: 265611 RVA: 0x00FB5591 File Offset: 0x00FB3791
+		// Token: 0x06035A4F RID: 219727 RVA: 0x00EFC5C1 File Offset: 0x00EFA7C1
 		private void OnTweenComplete()
 		{
 			this.Tweener = null;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			tcs.TrySetResult();
 		}
 
-		// Token: 0x06040D8C RID: 265612 RVA: 0x00FB55B4 File Offset: 0x00FB37B4
+		// Token: 0x06035A50 RID: 219728 RVA: 0x00EFC5E4 File Offset: 0x00EFA7E4
 		private void KillTween()
 		{
 			ULTweener tweener = this.Tweener;
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			tcs.TrySetResult();
 		}
 
-		// Token: 0x06040D8D RID: 265613 RVA: 0x00FB5600 File Offset: 0x00FB3800
+		// Token: 0x06035A51 RID: 219729 RVA: 0x00EFC630 File Offset: 0x00EFA830
 		protected override void OnBeforeDestroy()
 		{
 			this.KillTween();
@@ -262,57 +262,57 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ProgressSetter = null;
 		}
 
-		// Token: 0x04021C7F RID: 138367
+		// Token: 0x0401C5B0 RID: 116144
 		[Nullable(1)]
 		private readonly Vector2D TempLocation = Vector2D.Create();
 
-		// Token: 0x04021C80 RID: 138368
+		// Token: 0x0401C5B1 RID: 116145
 		[Nullable(1)]
 		private readonly Vector2D TempFrom = Vector2D.Create();
 
-		// Token: 0x04021C81 RID: 138369
+		// Token: 0x0401C5B2 RID: 116146
 		private ULTweener Tweener;
 
-		// Token: 0x04021C82 RID: 138370
+		// Token: 0x0401C5B3 RID: 116147
 		private AutoResetUniTaskCompletionSource Tcs;
 
-		// Token: 0x04021C83 RID: 138371
+		// Token: 0x0401C5B4 RID: 116148
 		private FLTweenVector2SetterDynamic MoveSetter;
 
-		// Token: 0x04021C84 RID: 138372
+		// Token: 0x0401C5B5 RID: 116149
 		private FLTweenFloatSetterDynamic ProgressSetter;
 
-		// Token: 0x04021C85 RID: 138373
+		// Token: 0x0401C5B6 RID: 116150
 		private Action CompleteAction;
 
-		// Token: 0x04021C86 RID: 138374
+		// Token: 0x0401C5B7 RID: 116151
 		private UCurveFloat CurveX;
 
-		// Token: 0x04021C87 RID: 138375
+		// Token: 0x0401C5B8 RID: 116152
 		private UCurveFloat CurveY;
 
-		// Token: 0x04021C88 RID: 138376
+		// Token: 0x0401C5B9 RID: 116153
 		private float FromX;
 
-		// Token: 0x04021C89 RID: 138377
+		// Token: 0x0401C5BA RID: 116154
 		private float FromY;
 
-		// Token: 0x04021C8A RID: 138378
+		// Token: 0x0401C5BB RID: 116155
 		private float ToX;
 
-		// Token: 0x04021C8B RID: 138379
+		// Token: 0x0401C5BC RID: 116156
 		private float ToY;
 
-		// Token: 0x04021C8C RID: 138380
+		// Token: 0x0401C5BD RID: 116157
 		private float BoardOriginX;
 
-		// Token: 0x04021C8D RID: 138381
+		// Token: 0x0401C5BE RID: 116158
 		private float BoardOriginY;
 
-		// Token: 0x04021C8E RID: 138382
+		// Token: 0x0401C5BF RID: 116159
 		private float CellStepX;
 
-		// Token: 0x04021C8F RID: 138383
+		// Token: 0x0401C5C0 RID: 116160
 		private float CellStepY;
 	}
 }

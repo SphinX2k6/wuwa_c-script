@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065BA RID: 26042
+	// Token: 0x02005538 RID: 21816
 	public class DockyardBuyTabView : UiTabViewBase
 	{
-		// Token: 0x0604152E RID: 267566 RVA: 0x00FD4A54 File Offset: 0x00FD2C54
+		// Token: 0x060361F3 RID: 221683 RVA: 0x00F1BA90 File Offset: 0x00F19C90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,27 +28,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604152F RID: 267567 RVA: 0x00FD4ABD File Offset: 0x00FD2CBD
+		// Token: 0x060361F4 RID: 221684 RVA: 0x00F1BAF9 File Offset: 0x00F19CF9
 		protected override void OnStart()
 		{
 			this.LoopScrollView = new LoopScrollView<DockyardShopGridItem, IPayShopUnionData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<DockyardShopGridItem>(this.InitItem), false);
 		}
 
-		// Token: 0x06041530 RID: 267568 RVA: 0x00FD4AEF File Offset: 0x00FD2CEF
+		// Token: 0x060361F5 RID: 221685 RVA: 0x00F1BB2B File Offset: 0x00F19D2B
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int, PayShopDefine.EPayShopTabType, int>(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 		}
 
-		// Token: 0x06041531 RID: 267569 RVA: 0x00FD4B29 File Offset: 0x00FD2D29
+		// Token: 0x060361F6 RID: 221686 RVA: 0x00F1BB65 File Offset: 0x00F19D65
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 			EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 		}
 
-		// Token: 0x06041532 RID: 267570 RVA: 0x00FD4B64 File Offset: 0x00FD2D64
+		// Token: 0x060361F7 RID: 221687 RVA: 0x00F1BBA0 File Offset: 0x00F19DA0
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			DockyardBuyTabView.<OnShowAsyncImplementImplement>d__6 <OnShowAsyncImplementImplement>d__;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041533 RID: 267571 RVA: 0x00FD4BA7 File Offset: 0x00FD2DA7
+		// Token: 0x060361F8 RID: 221688 RVA: 0x00F1BBE3 File Offset: 0x00F19DE3
 		private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 		{
 			this.LoopScrollView.RefreshAllGridProxies();
 		}
 
-		// Token: 0x06041534 RID: 267572 RVA: 0x00FD4BB4 File Offset: 0x00FD2DB4
+		// Token: 0x060361F9 RID: 221689 RVA: 0x00F1BBF0 File Offset: 0x00F19DF0
 		private void OnShopVersionCodeChange()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PayShopRefresh);
@@ -74,31 +74,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			Log.Instance.Info(ELogModule.Dockyard, ELogAuthor.XXJ, "PayShop:DockyardBuyTabView 商品VersionCode不同步,打开弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06041535 RID: 267573 RVA: 0x00FD4C0F File Offset: 0x00FD2E0F
+		// Token: 0x060361FA RID: 221690 RVA: 0x00F1BC4B File Offset: 0x00F19E4B
 		[NullableContext(1)]
 		private DockyardShopGridItem InitItem()
 		{
 			return new DockyardShopGridItem();
 		}
 
-		// Token: 0x06041537 RID: 267575 RVA: 0x00FD4C1E File Offset: 0x00FD2E1E
+		// Token: 0x060361FC RID: 221692 RVA: 0x00F1BC5A File Offset: 0x00F19E5A
 		[CompilerGenerated]
 		internal static void <OnShopVersionCodeChange>g__confirmFunction|8_0()
 		{
 			UiManager.Instance.CloseView(EUiViewName.DockyardShopMainView, null);
 		}
 
-		// Token: 0x04021FF7 RID: 139255
+		// Token: 0x0401C928 RID: 117032
 		[Nullable(1)]
 		protected LoopScrollView<DockyardShopGridItem, IPayShopUnionData> LoopScrollView;
 
-		// Token: 0x0200C7D5 RID: 51157
+		// Token: 0x0200B1B8 RID: 45496
 		private class EComponentDefine
 		{
-			// Token: 0x0403C5BD RID: 247229
+			// Token: 0x04036F0B RID: 225035
 			public const int Scroll = 0;
 
-			// Token: 0x0403C5BE RID: 247230
+			// Token: 0x04036F0C RID: 225036
 			public const int ShopItem = 1;
 		}
 	}

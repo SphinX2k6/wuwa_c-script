@@ -2,20 +2,20 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015BA RID: 5562
+	// Token: 0x02001719 RID: 5913
 	public enum ECreatePrefabType
 	{
-		// Token: 0x04004A25 RID: 18981
+		// Token: 0x04004DDD RID: 19933
 		PrefabId,
-		// Token: 0x04004A26 RID: 18982
+		// Token: 0x04004DDE RID: 19934
 		RandomPrefab,
-		// Token: 0x04004A27 RID: 18983
+		// Token: 0x04004DDF RID: 19935
 		TowerDungeon,
-		// Token: 0x04004A28 RID: 18984
+		// Token: 0x04004DE0 RID: 19936
 		Rogue,
-		// Token: 0x04004A29 RID: 18985
+		// Token: 0x04004DE1 RID: 19937
 		SlashTower,
-		// Token: 0x04004A2A RID: 18986
+		// Token: 0x04004DE2 RID: 19938
 		RoleTower
 	}
 }

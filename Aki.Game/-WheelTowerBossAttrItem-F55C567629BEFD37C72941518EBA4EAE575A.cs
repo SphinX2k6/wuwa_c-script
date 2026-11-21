@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001584 RID: 5508
+// Token: 0x02000A3C RID: 2620
 internal enum <WheelTowerBossAttrItem>F55C567629BEFD37C72941518EBA4EAE575A2A40120347B38E3375995293EAA80__EWheelTowerBossAttrItemComponent
 {
-	// Token: 0x04004517 RID: 17687
+	// Token: 0x040045BD RID: 17853
 	TexIconAttr,
-	// Token: 0x04004518 RID: 17688
+	// Token: 0x040045BE RID: 17854
 	TxtBossName,
-	// Token: 0x04004519 RID: 17689
+	// Token: 0x040045BF RID: 17855
 	TagLayout,
-	// Token: 0x0400451A RID: 17690
+	// Token: 0x040045C0 RID: 17856
 	TagItem
 }

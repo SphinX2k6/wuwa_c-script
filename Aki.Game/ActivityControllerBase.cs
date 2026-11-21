@@ -5,12 +5,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001672 RID: 5746
+// Token: 0x02000B2A RID: 2858
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class ActivityControllerBase : ControllerBase, IActivityControllerBase
 {
-	// Token: 0x0600A228 RID: 41512 RVA: 0x0023CB12 File Offset: 0x0023AD12
+	// Token: 0x06007606 RID: 30214 RVA: 0x002469A2 File Offset: 0x00244BA2
 	public override bool Init()
 	{
 		bool result = this.OnInit();
@@ -19,7 +19,7 @@ public abstract class ActivityControllerBase : ControllerBase, IActivityControll
 		return result;
 	}
 
-	// Token: 0x0600A229 RID: 41513 RVA: 0x0023CB26 File Offset: 0x0023AD26
+	// Token: 0x06007607 RID: 30215 RVA: 0x002469B6 File Offset: 0x00244BB6
 	public override bool Clear()
 	{
 		this.OnUnRegisterNetEvent();
@@ -27,26 +27,26 @@ public abstract class ActivityControllerBase : ControllerBase, IActivityControll
 		return base.Clear();
 	}
 
-	// Token: 0x0600A22A RID: 41514 RVA: 0x0023CB3C File Offset: 0x0023AD3C
+	// Token: 0x06007608 RID: 30216 RVA: 0x002469CC File Offset: 0x00244BCC
 	public string GetActivityResource(ActivityBaseData data)
 	{
 		string resourceId = this.OnGetActivityResource(data);
 		return UiResourceConfig.Instance.GetResourcePath(resourceId);
 	}
 
-	// Token: 0x0600A22B RID: 41515 RVA: 0x0023CB5C File Offset: 0x0023AD5C
+	// Token: 0x06007609 RID: 30217 RVA: 0x002469EC File Offset: 0x00244BEC
 	public ActivitySubViewBase CreateSubPageComponent(ActivityBaseData data)
 	{
 		return this.OnCreateSubPageComponent(data);
 	}
 
-	// Token: 0x0600A22C RID: 41516 RVA: 0x0023CB65 File Offset: 0x0023AD65
+	// Token: 0x0600760A RID: 30218 RVA: 0x002469F5 File Offset: 0x00244BF5
 	public void OpenView(ActivityBaseData data)
 	{
 		this.OnOpenView(data);
 	}
 
-	// Token: 0x0600A22D RID: 41517 RVA: 0x0023CB70 File Offset: 0x0023AD70
+	// Token: 0x0600760B RID: 30219 RVA: 0x00246A00 File Offset: 0x00244C00
 	[NullableContext(0)]
 	public UniTask<bool> OpenViewByViewName(EUiViewName viewName, int activityId = 0)
 	{
@@ -60,7 +60,7 @@ public abstract class ActivityControllerBase : ControllerBase, IActivityControll
 		return <OpenViewByViewName>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A22E RID: 41518 RVA: 0x0023CBC3 File Offset: 0x0023ADC3
+	// Token: 0x0600760C RID: 30220 RVA: 0x00246A53 File Offset: 0x00244C53
 	public ActivityBaseData CreateActivityData(ActivityData data)
 	{
 		ActivityBaseData activityBaseData = this.OnCreateActivityData(data);
@@ -68,60 +68,60 @@ public abstract class ActivityControllerBase : ControllerBase, IActivityControll
 		return activityBaseData;
 	}
 
-	// Token: 0x0600A22F RID: 41519 RVA: 0x0023CBD3 File Offset: 0x0023ADD3
+	// Token: 0x0600760D RID: 30221 RVA: 0x00246A63 File Offset: 0x00244C63
 	public bool GetIsOpeningActivityRelativeView()
 	{
 		return this.OnGetIsOpeningActivityRelativeView();
 	}
 
-	// Token: 0x0600A230 RID: 41520 RVA: 0x0023CBDB File Offset: 0x0023ADDB
+	// Token: 0x0600760E RID: 30222 RVA: 0x00246A6B File Offset: 0x00244C6B
 	protected virtual void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x0600A231 RID: 41521 RVA: 0x0023CBDD File Offset: 0x0023ADDD
+	// Token: 0x0600760F RID: 30223 RVA: 0x00246A6D File Offset: 0x00244C6D
 	protected virtual void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x0600A232 RID: 41522 RVA: 0x0023CBDF File Offset: 0x0023ADDF
+	// Token: 0x06007610 RID: 30224 RVA: 0x00246A6F File Offset: 0x00244C6F
 	protected virtual void OnAddEvents()
 	{
 	}
 
-	// Token: 0x0600A233 RID: 41523 RVA: 0x0023CBE1 File Offset: 0x0023ADE1
+	// Token: 0x06007611 RID: 30225 RVA: 0x00246A71 File Offset: 0x00244C71
 	protected virtual void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x0600A234 RID: 41524 RVA: 0x0023CBE3 File Offset: 0x0023ADE3
+	// Token: 0x06007612 RID: 30226 RVA: 0x00246A73 File Offset: 0x00244C73
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600A235 RID: 41525 RVA: 0x0023CBE6 File Offset: 0x0023ADE6
+	// Token: 0x06007613 RID: 30227 RVA: 0x00246A76 File Offset: 0x00244C76
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x0600A236 RID: 41526
+	// Token: 0x06007614 RID: 30228
 	protected abstract void OnOpenView(ActivityBaseData data);
 
-	// Token: 0x0600A237 RID: 41527
+	// Token: 0x06007615 RID: 30229
 	protected abstract string OnGetActivityResource(ActivityBaseData data);
 
-	// Token: 0x0600A238 RID: 41528
+	// Token: 0x06007616 RID: 30230
 	protected abstract ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data);
 
-	// Token: 0x0600A239 RID: 41529
+	// Token: 0x06007617 RID: 30231
 	protected abstract ActivityBaseData OnCreateActivityData(ActivityData data);
 
-	// Token: 0x0600A23A RID: 41530
+	// Token: 0x06007618 RID: 30232
 	protected abstract bool OnGetIsOpeningActivityRelativeView();
 
-	// Token: 0x0600A23B RID: 41531 RVA: 0x0023CBEC File Offset: 0x0023ADEC
+	// Token: 0x06007619 RID: 30233 RVA: 0x00246A7C File Offset: 0x00244C7C
 	[NullableContext(0)]
 	protected virtual UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 	{
@@ -132,24 +132,24 @@ public abstract class ActivityControllerBase : ControllerBase, IActivityControll
 		return <OnOpenSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A23C RID: 41532 RVA: 0x0023CC27 File Offset: 0x0023AE27
+	// Token: 0x0600761A RID: 30234 RVA: 0x00246AB7 File Offset: 0x00244CB7
 	public virtual bool GetActivityLevelUnlockState(int levelId)
 	{
 		return true;
 	}
 
-	// Token: 0x0600A23D RID: 41533 RVA: 0x0023CC2A File Offset: 0x0023AE2A
+	// Token: 0x0600761B RID: 30235 RVA: 0x00246ABA File Offset: 0x00244CBA
 	public virtual bool GetActivityMapMarkState(int markId)
 	{
 		return false;
 	}
 
-	// Token: 0x0600A23E RID: 41534 RVA: 0x0023CC2D File Offset: 0x0023AE2D
+	// Token: 0x0600761C RID: 30236 RVA: 0x00246ABD File Offset: 0x00244CBD
 	public virtual void OnActivityFirstUnlock(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x0600A23F RID: 41535 RVA: 0x0023CC30 File Offset: 0x0023AE30
+	// Token: 0x0600761D RID: 30237 RVA: 0x00246AC0 File Offset: 0x00244CC0
 	public virtual void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		if (data.LocalConfig != null && data.LocalConfig.Value.ShowUnlockTip)

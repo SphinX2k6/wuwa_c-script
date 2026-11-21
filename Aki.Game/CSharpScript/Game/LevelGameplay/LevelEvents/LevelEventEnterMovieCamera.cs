@@ -5,15 +5,15 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B1C RID: 27420
+	// Token: 0x02005C94 RID: 23700
 	public class LevelEventEnterMovieCamera : LevelEventBase
 	{
-		// Token: 0x060440B5 RID: 278709 RVA: 0x010B9ECF File Offset: 0x010B80CF
+		// Token: 0x0603A207 RID: 238087 RVA: 0x0106375B File Offset: 0x0106195B
 		public LevelEventEnterMovieCamera(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440B6 RID: 278710 RVA: 0x010B9ED8 File Offset: 0x010B80D8
+		// Token: 0x0603A208 RID: 238088 RVA: 0x01063764 File Offset: 0x01061964
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x040238EA RID: 145642
+		// Token: 0x0401EB8C RID: 125836
 		[Nullable(2)]
 		private EnterMovieCamera Params;
 	}

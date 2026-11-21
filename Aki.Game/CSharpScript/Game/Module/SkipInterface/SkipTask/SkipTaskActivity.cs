@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BA4 RID: 19364
+	// Token: 0x02003B4E RID: 15182
 	public class SkipTaskActivity : SkipTask
 	{
-		// Token: 0x060322C5 RID: 205509 RVA: 0x00BA8484 File Offset: 0x00BA6684
+		// Token: 0x06027056 RID: 159830 RVA: 0x00AEC6CC File Offset: 0x00AEA8CC
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

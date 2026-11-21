@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200148D RID: 5261
+// Token: 0x02000941 RID: 2369
 public class ActivityRegressCaptionNameListPanel : UiPanelBase
 {
-	// Token: 0x0600950A RID: 38154 RVA: 0x0020258C File Offset: 0x0020078C
+	// Token: 0x0600689F RID: 26783 RVA: 0x0020B4F4 File Offset: 0x002096F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class ActivityRegressCaptionNameListPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600950B RID: 38155 RVA: 0x002025E8 File Offset: 0x002007E8
+	// Token: 0x060068A0 RID: 26784 RVA: 0x0020B550 File Offset: 0x00209750
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressCaptionNameListPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -31,30 +31,30 @@ public class ActivityRegressCaptionNameListPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600950C RID: 38156 RVA: 0x0020262B File Offset: 0x0020082B
+	// Token: 0x060068A1 RID: 26785 RVA: 0x0020B593 File Offset: 0x00209793
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x0600950D RID: 38157 RVA: 0x0020262D File Offset: 0x0020082D
+	// Token: 0x060068A2 RID: 26786 RVA: 0x0020B595 File Offset: 0x00209795
 	public void RefreshData(EActivityMainSubViewType subViewType)
 	{
 	}
 
-	// Token: 0x040041F7 RID: 16887
+	// Token: 0x0400428F RID: 17039
 	[Nullable(2)]
 	private ActivityRecallCaptionPanel CaptionPanel;
 
-	// Token: 0x02007ABA RID: 31418
+	// Token: 0x02006C3E RID: 27710
 	private class EActivityRegressCaptionNameListPanelComponents
 	{
-		// Token: 0x04028618 RID: 165400
+		// Token: 0x04023932 RID: 145714
 		public const int Caption = 0;
 
-		// Token: 0x04028619 RID: 165401
+		// Token: 0x04023933 RID: 145715
 		public const int SvList = 1;
 
-		// Token: 0x0402861A RID: 165402
+		// Token: 0x04023934 RID: 145716
 		public const int List = 2;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200350C RID: 13580
+// Token: 0x02002A81 RID: 10881
 public enum ESubLevelProcessType
 {
-	// Token: 0x0400E9A7 RID: 59815
+	// Token: 0x0400EE62 RID: 61026
 	SwitchSubLevel,
-	// Token: 0x0400E9A8 RID: 59816
+	// Token: 0x0400EE63 RID: 61027
 	SetSubLevelVisible
 }

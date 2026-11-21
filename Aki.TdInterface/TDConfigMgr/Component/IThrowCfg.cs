@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000764 RID: 1892
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000805 RID: 2053
 	public class IThrowCfg
 	{
-		// Token: 0x060028E5 RID: 10469 RVA: 0x0006C2C4 File Offset: 0x0006A4C4
+		// Token: 0x06002C09 RID: 11273 RVA: 0x0007346C File Offset: 0x0007166C
 		private IThrowCfg_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060028E6 RID: 10470 RVA: 0x0006C2FC File Offset: 0x0006A4FC
+		// Token: 0x06002C0A RID: 11274 RVA: 0x000734A4 File Offset: 0x000716A4
 		public static IThrowCfg Create([Nullable(2)] IThrowCfg instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028E7 RID: 10471 RVA: 0x0006C30F File Offset: 0x0006A50F
+		// Token: 0x06002C0B RID: 11275 RVA: 0x000734B7 File Offset: 0x000716B7
 		public static IThrowCfg CreateFromSetValue([Nullable(2)] IThrowCfg_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028E8 RID: 10472 RVA: 0x0006C322 File Offset: 0x0006A522
+		// Token: 0x06002C0C RID: 11276 RVA: 0x000734CA File Offset: 0x000716CA
 		public IThrowCfg_SetValue ToSetValue()
 		{
 			return new IThrowCfg_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000ABD RID: 2749
-		// (get) Token: 0x060028E9 RID: 10473 RVA: 0x0006C335 File Offset: 0x0006A535
-		// (set) Token: 0x060028EA RID: 10474 RVA: 0x0006C35C File Offset: 0x0006A55C
+		// Token: 0x17000B7D RID: 2941
+		// (get) Token: 0x06002C0D RID: 11277 RVA: 0x000734DD File Offset: 0x000716DD
+		// (set) Token: 0x06002C0E RID: 11278 RVA: 0x00073504 File Offset: 0x00071704
 		public virtual IThrowMotion MotionConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B7E RID: 7038
+		// Token: 0x04001D83 RID: 7555
 		[Nullable(2)]
 		protected IThrowCfg FbInstance;
 
-		// Token: 0x04001B7F RID: 7039
+		// Token: 0x04001D84 RID: 7556
 		[Nullable(2)]
 		protected IThrowCfg_SetValue PocoInterface;
 	}

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Tetris.Activity;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Activity;
 using CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI;
@@ -12,7 +14,6 @@ using CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl;
 using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain;
 using CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity;
 using CSharpScript.Game.Module.Activity.ActivityContent.DropCatch;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Activity.ActivityContent.FarmGold;
 using CSharpScript.Game.Module.Activity.ActivityContent.FeiXue;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
@@ -41,7 +42,6 @@ using CSharpScript.Game.Module.Activity.ActivityContent.RougeActivity;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 using CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
-using CSharpScript.Game.Module.Activity.ActivityContent.Tetris;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
 using CSharpScript.Game.Module.Activity.ActivityContent.UniversalActivity;
 using CSharpScript.Game.Module.BossPiling;
@@ -53,30 +53,31 @@ using CSharpScript.Game.Module.Kurotato;
 using CSharpScript.Game.Module.PermanentRogue;
 using CSharpScript.Game.Module.PhantomArena;
 using CSharpScript.Game.Module.Sheriff;
+using CSharpScript.Game.Module.SolarSchool;
 using CSharpScript.Game.Module.VillageInfr;
 
-// Token: 0x0200167D RID: 5757
+// Token: 0x02000B35 RID: 2869
 public class ActivityManager : IStaticVariableResetter
 {
-	// Token: 0x0600A29E RID: 41630 RVA: 0x0023DD05 File Offset: 0x0023BF05
+	// Token: 0x0600767C RID: 30332 RVA: 0x00247B95 File Offset: 0x00245D95
 	static ActivityManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityManager.CreateStaticDefaultValue), new Action(ActivityManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600A29F RID: 41631 RVA: 0x0023DD24 File Offset: 0x0023BF24
+	// Token: 0x0600767D RID: 30333 RVA: 0x00247BB4 File Offset: 0x00245DB4
 	public static void CreateStaticDefaultValue()
 	{
 		ActivityManager.ActivityControllerInstance = new Dictionary<ActivityType, IActivityControllerBase>();
 	}
 
-	// Token: 0x0600A2A0 RID: 41632 RVA: 0x0023DD30 File Offset: 0x0023BF30
+	// Token: 0x0600767E RID: 30334 RVA: 0x00247BC0 File Offset: 0x00245DC0
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityManager.ActivityControllerInstance = null;
 	}
 
-	// Token: 0x0600A2A1 RID: 41633 RVA: 0x0023DD38 File Offset: 0x0023BF38
+	// Token: 0x0600767F RID: 30335 RVA: 0x00247BC8 File Offset: 0x00245DC8
 	public static void Init()
 	{
 		ActivityManager.InitActivityController();
@@ -96,7 +97,7 @@ public class ActivityManager : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600A2A2 RID: 41634 RVA: 0x0023DDD8 File Offset: 0x0023BFD8
+	// Token: 0x06007680 RID: 30336 RVA: 0x00247C68 File Offset: 0x00245E68
 	private static void InitActivityController()
 	{
 		ActivityManager.ActivityControllerInstance[ActivityType.Parkour] = ActivityRunController.Instance;
@@ -122,6 +123,7 @@ public class ActivityManager : IStaticVariableResetter
 		ActivityManager.ActivityControllerInstance[ActivityType.TrackMoonActivity] = ActivityMoonChasingController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.TowerGuideNew] = ActivityLoopTowerController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.SlashAndTowerLevelPlay] = ActivityShipTowerController.Instance;
+		ActivityManager.ActivityControllerInstance[ActivityType.RoleTower] = ActivityRoleTowerController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.DangoMonopoly] = ActivityDangoMonopolyController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.MoraleActivity] = ActivityMoraleController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.Explore] = ActivityMapExploreController.Instance;
@@ -214,9 +216,10 @@ public class ActivityManager : IStaticVariableResetter
 		ActivityManager.ActivityControllerInstance[ActivityType.DangoBrawl] = ActivityDangoBrawlController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.NewRoleGuideActivity] = ActivityPoiController.Instance;
 		ActivityManager.ActivityControllerInstance[ActivityType.GiantSystemActivity] = GiantActivityController.Instance;
+		ActivityManager.ActivityControllerInstance[ActivityType.SolarSchool] = SolarSchoolController.Instance;
 	}
 
-	// Token: 0x0600A2A3 RID: 41635 RVA: 0x0023E584 File Offset: 0x0023C784
+	// Token: 0x06007681 RID: 30337 RVA: 0x00248434 File Offset: 0x00246634
 	[NullableContext(1)]
 	public static IActivityControllerBase GetActivityController(ActivityType type)
 	{
@@ -228,20 +231,20 @@ public class ActivityManager : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0600A2A4 RID: 41636 RVA: 0x0023E5A3 File Offset: 0x0023C7A3
+	// Token: 0x06007682 RID: 30338 RVA: 0x00248453 File Offset: 0x00246653
 	[NullableContext(2)]
 	public static IActivityControllerBase GetActivityController(int type)
 	{
 		return ActivityManager.ActivityControllerInstance.GetValueOrDefault((ActivityType)type);
 	}
 
-	// Token: 0x0600A2A5 RID: 41637 RVA: 0x0023E5B0 File Offset: 0x0023C7B0
+	// Token: 0x06007683 RID: 30339 RVA: 0x00248460 File Offset: 0x00246660
 	public static void Clear()
 	{
 		ActivityManager.ActivityControllerInstance.Clear();
 	}
 
-	// Token: 0x04004A05 RID: 18949
+	// Token: 0x04004AAB RID: 19115
 	[Nullable(1)]
 	private static Dictionary<ActivityType, IActivityControllerBase> ActivityControllerInstance;
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012D4 RID: 4820
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200141A RID: 5146
 	public class IInformationBoardConfig
 	{
-		// Token: 0x06006E34 RID: 28212 RVA: 0x0010A87B File Offset: 0x00108A7B
+		// Token: 0x060074B2 RID: 29874 RVA: 0x00118B0B File Offset: 0x00116D0B
 		public static IInformationBoardConfig Create(IInformationBoardConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700225F RID: 8799
-		// (get) Token: 0x06006E35 RID: 28213 RVA: 0x0010A89A File Offset: 0x00108A9A
+		// Token: 0x17002420 RID: 9248
+		// (get) Token: 0x060074B3 RID: 29875 RVA: 0x00118B2A File Offset: 0x00116D2A
 		public virtual IDangoAbyssInformationBoard InformationBoard
 		{
 			get
@@ -38,14 +36,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F28 RID: 16168
+		// Token: 0x04004296 RID: 17046
 		private IInformationBoardConfig Instance;
 
-		// Token: 0x04003F29 RID: 16169
+		// Token: 0x04004297 RID: 17047
 		[Nullable(2)]
 		private IDangoAbyssInformationBoard _InformationBoardCache;
 
-		// Token: 0x04003F2A RID: 16170
+		// Token: 0x04004298 RID: 17048
 		private bool _InformationBoardInited;
 	}
 }

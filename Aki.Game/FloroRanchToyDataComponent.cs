@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001B1A RID: 6938
+// Token: 0x02000FD9 RID: 4057
 [NullableContext(1)]
 [Nullable(0)]
 [FloroRanchEntityComponent(EFloroRanchEntityComponent.FloroRanchToyDataComponent)]
 public class FloroRanchToyDataComponent : FloroRanchEntityDataBaseComponent
 {
-	// Token: 0x0600CDD0 RID: 52688 RVA: 0x002EDF54 File Offset: 0x002EC154
+	// Token: 0x0600A1E1 RID: 41441 RVA: 0x002F9034 File Offset: 0x002F7234
 	public override void RefreshEntityData(FloroRanchPlayUnit entityData)
 	{
 		if (entityData.Type != FloroRanchActionUnitType.Toy)
@@ -26,19 +26,19 @@ public class FloroRanchToyDataComponent : FloroRanchEntityDataBaseComponent
 		this.Level = (int)MathUtils.Instance.LongToBigInt(entityData.ToyLv);
 	}
 
-	// Token: 0x0600CDD1 RID: 52689 RVA: 0x002EDFCE File Offset: 0x002EC1CE
+	// Token: 0x0600A1E2 RID: 41442 RVA: 0x002F90AE File Offset: 0x002F72AE
 	public void RefreshLevel(int level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x0600CDD2 RID: 52690 RVA: 0x002EDFD7 File Offset: 0x002EC1D7
+	// Token: 0x0600A1E3 RID: 41443 RVA: 0x002F90B7 File Offset: 0x002F72B7
 	public override string Info()
 	{
 		return "Name:" + this.ToyData.Name;
 	}
 
-	// Token: 0x0600CDD3 RID: 52691 RVA: 0x002EDFF0 File Offset: 0x002EC1F0
+	// Token: 0x0600A1E4 RID: 41444 RVA: 0x002F90D0 File Offset: 0x002F72D0
 	public override string DebugInfo()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(1, 2);
@@ -48,10 +48,10 @@ public class FloroRanchToyDataComponent : FloroRanchEntityDataBaseComponent
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04005E66 RID: 24166
+	// Token: 0x04005F35 RID: 24373
 	[Nullable(2)]
 	public FloroRanchToyData ToyData;
 
-	// Token: 0x04005E67 RID: 24167
+	// Token: 0x04005F36 RID: 24374
 	public int Level;
 }

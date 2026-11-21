@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02001D8F RID: 7567
+// Token: 0x02001251 RID: 4689
 public enum ECustomTrackBoardPriority
 {
-	// Token: 0x04006A3C RID: 27196
+	// Token: 0x04006B1D RID: 27421
 	Undefined,
-	// Token: 0x04006A3D RID: 27197
+	// Token: 0x04006B1E RID: 27422
 	Default,
-	// Token: 0x04006A3E RID: 27198
+	// Token: 0x04006B1F RID: 27423
 	FastReturnDungeon,
-	// Token: 0x04006A3F RID: 27199
+	// Token: 0x04006B20 RID: 27424
 	PhoneMessage,
-	// Token: 0x04006A40 RID: 27200
+	// Token: 0x04006B21 RID: 27425
 	SheriffAnomalyProgress,
-	// Token: 0x04006A41 RID: 27201
+	// Token: 0x04006B22 RID: 27426
 	SheriffMainBoard,
-	// Token: 0x04006A42 RID: 27202
+	// Token: 0x04006B23 RID: 27427
 	SheriffClueDetail,
-	// Token: 0x04006A43 RID: 27203
+	// Token: 0x04006B24 RID: 27428
 	SheriffReasoning
 }

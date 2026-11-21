@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F6D RID: 20333
+	// Token: 0x0200549C RID: 21660
 	public struct ICategoryMatchingSucceed : IFlatbufferObject
 	{
-		// Token: 0x170092D3 RID: 37587
-		// (get) Token: 0x0602040D RID: 132109 RVA: 0x0047CEC3 File Offset: 0x0047B0C3
+		// Token: 0x17009A4C RID: 39500
+		// (get) Token: 0x0602215F RID: 139615 RVA: 0x004B2EB3 File Offset: 0x004B10B3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602040E RID: 132110 RVA: 0x0047CED0 File Offset: 0x0047B0D0
+		// Token: 0x06022160 RID: 139616 RVA: 0x004B2EC0 File Offset: 0x004B10C0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602040F RID: 132111 RVA: 0x0047CED8 File Offset: 0x0047B0D8
+		// Token: 0x06022161 RID: 139617 RVA: 0x004B2EC8 File Offset: 0x004B10C8
 		public static ICategoryMatchingSucceed GetRootAsICategoryMatchingSucceed(ByteBuffer _bb)
 		{
 			return ICategoryMatchingSucceed.GetRootAsICategoryMatchingSucceed(_bb, default(ICategoryMatchingSucceed));
 		}
 
-		// Token: 0x06020410 RID: 132112 RVA: 0x0047CEF4 File Offset: 0x0047B0F4
+		// Token: 0x06022162 RID: 139618 RVA: 0x004B2EE4 File Offset: 0x004B10E4
 		public static ICategoryMatchingSucceed GetRootAsICategoryMatchingSucceed(ByteBuffer _bb, ICategoryMatchingSucceed obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020411 RID: 132113 RVA: 0x0047CF11 File Offset: 0x0047B111
+		// Token: 0x06022163 RID: 139619 RVA: 0x004B2F01 File Offset: 0x004B1101
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020412 RID: 132114 RVA: 0x0047CF20 File Offset: 0x0047B120
+		// Token: 0x06022164 RID: 139620 RVA: 0x004B2F10 File Offset: 0x004B1110
 		public ICategoryMatchingSucceed __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170092D4 RID: 37588
-		// (get) Token: 0x06020413 RID: 132115 RVA: 0x0047CF30 File Offset: 0x0047B130
+		// Token: 0x17009A4D RID: 39501
+		// (get) Token: 0x06022165 RID: 139621 RVA: 0x004B2F20 File Offset: 0x004B1120
 		public bool IsSilent
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092D5 RID: 37589
-		// (get) Token: 0x06020414 RID: 132116 RVA: 0x0047CF70 File Offset: 0x0047B170
+		// Token: 0x17009A4E RID: 39502
+		// (get) Token: 0x06022166 RID: 139622 RVA: 0x004B2F60 File Offset: 0x004B1160
 		public bool IsDestroy
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092D6 RID: 37590
-		// (get) Token: 0x06020415 RID: 132117 RVA: 0x0047CFB0 File Offset: 0x0047B1B0
+		// Token: 0x17009A4F RID: 39503
+		// (get) Token: 0x06022167 RID: 139623 RVA: 0x004B2FA0 File Offset: 0x004B11A0
 		public bool SyncAdsorbatePerformance
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092D7 RID: 37591
-		// (get) Token: 0x06020416 RID: 132118 RVA: 0x0047CFF0 File Offset: 0x0047B1F0
+		// Token: 0x17009A50 RID: 39504
+		// (get) Token: 0x06022168 RID: 139624 RVA: 0x004B2FE0 File Offset: 0x004B11E0
 		public string ChangeSelfState
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020417 RID: 132119 RVA: 0x0047D028 File Offset: 0x0047B228
+		// Token: 0x06022169 RID: 139625 RVA: 0x004B3018 File Offset: 0x004B1218
 		public Span<byte> GetChangeSelfStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06020418 RID: 132120 RVA: 0x0047D038 File Offset: 0x0047B238
+		// Token: 0x0602216A RID: 139626 RVA: 0x004B3028 File Offset: 0x004B1228
 		public byte[] GetChangeSelfStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x170092D8 RID: 37592
-		// (get) Token: 0x06020419 RID: 132121 RVA: 0x0047D048 File Offset: 0x0047B248
+		// Token: 0x17009A51 RID: 39505
+		// (get) Token: 0x0602216B RID: 139627 RVA: 0x004B3038 File Offset: 0x004B1238
 		public IEntityState? ChangeItemState
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092D9 RID: 37593
-		// (get) Token: 0x0602041A RID: 132122 RVA: 0x0047D0A8 File Offset: 0x0047B2A8
+		// Token: 0x17009A52 RID: 39506
+		// (get) Token: 0x0602216C RID: 139628 RVA: 0x004B3098 File Offset: 0x004B1298
 		public int DelayDischarge
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092DA RID: 37594
-		// (get) Token: 0x0602041B RID: 132123 RVA: 0x0047D0E8 File Offset: 0x0047B2E8
+		// Token: 0x17009A53 RID: 39507
+		// (get) Token: 0x0602216D RID: 139629 RVA: 0x004B30D8 File Offset: 0x004B12D8
 		public IEntityState? ChangeItemStateAfterDischarged
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092DB RID: 37595
-		// (get) Token: 0x0602041C RID: 132124 RVA: 0x0047D148 File Offset: 0x0047B348
+		// Token: 0x17009A54 RID: 39508
+		// (get) Token: 0x0602216E RID: 139630 RVA: 0x004B3138 File Offset: 0x004B1338
 		public string ChangeSelfStateAfterDischarged
 		{
 			get
@@ -167,20 +167,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602041D RID: 132125 RVA: 0x0047D180 File Offset: 0x0047B380
+		// Token: 0x0602216F RID: 139631 RVA: 0x004B3170 File Offset: 0x004B1370
 		public Span<byte> GetChangeSelfStateAfterDischargedBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0602041E RID: 132126 RVA: 0x0047D190 File Offset: 0x0047B390
+		// Token: 0x06022170 RID: 139632 RVA: 0x004B3180 File Offset: 0x004B1380
 		public byte[] GetChangeSelfStateAfterDischargedArray()
 		{
 			return this.__p.__vector_as_array<byte>(18);
 		}
 
-		// Token: 0x170092DC RID: 37596
-		// (get) Token: 0x0602041F RID: 132127 RVA: 0x0047D1A0 File Offset: 0x0047B3A0
+		// Token: 0x17009A55 RID: 39509
+		// (get) Token: 0x06022171 RID: 139633 RVA: 0x004B3190 File Offset: 0x004B1390
 		public IItemChangeAdsorbateState? ChangeAdsorbateState
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092DD RID: 37597
-		// (get) Token: 0x06020420 RID: 132128 RVA: 0x0047D200 File Offset: 0x0047B400
+		// Token: 0x17009A56 RID: 39510
+		// (get) Token: 0x06022172 RID: 139634 RVA: 0x004B31F0 File Offset: 0x004B13F0
 		public string DischargeSequence
 		{
 			get
@@ -209,20 +209,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020421 RID: 132129 RVA: 0x0047D238 File Offset: 0x0047B438
+		// Token: 0x06022173 RID: 139635 RVA: 0x004B3228 File Offset: 0x004B1428
 		public Span<byte> GetDischargeSequenceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06020422 RID: 132130 RVA: 0x0047D248 File Offset: 0x0047B448
+		// Token: 0x06022174 RID: 139636 RVA: 0x004B3238 File Offset: 0x004B1438
 		public byte[] GetDischargeSequenceArray()
 		{
 			return this.__p.__vector_as_array<byte>(22);
 		}
 
-		// Token: 0x170092DE RID: 37598
-		// (get) Token: 0x06020423 RID: 132131 RVA: 0x0047D258 File Offset: 0x0047B458
+		// Token: 0x17009A57 RID: 39511
+		// (get) Token: 0x06022175 RID: 139637 RVA: 0x004B3248 File Offset: 0x004B1448
 		public byte NullMask
 		{
 			get
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020424 RID: 132132 RVA: 0x0047D298 File Offset: 0x0047B498
+		// Token: 0x06022176 RID: 139638 RVA: 0x004B3288 File Offset: 0x004B1488
 		public static Offset<ICategoryMatchingSucceed> CreateICategoryMatchingSucceed(FlatBufferBuilder builder, bool IsSilent = false, bool IsDestroy = false, bool SyncAdsorbatePerformance = false, StringOffset ChangeSelfStateOffset = default(StringOffset), Offset<IEntityState> ChangeItemStateOffset = default(Offset<IEntityState>), int DelayDischarge = 0, Offset<IEntityState> ChangeItemStateAfterDischargedOffset = default(Offset<IEntityState>), StringOffset ChangeSelfStateAfterDischargedOffset = default(StringOffset), Offset<IItemChangeAdsorbateState> ChangeAdsorbateStateOffset = default(Offset<IItemChangeAdsorbateState>), StringOffset DischargeSequenceOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(11);
@@ -254,85 +254,85 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingSucceed.EndICategoryMatchingSucceed(builder);
 		}
 
-		// Token: 0x06020425 RID: 132133 RVA: 0x0047D308 File Offset: 0x0047B508
+		// Token: 0x06022177 RID: 139639 RVA: 0x004B32F8 File Offset: 0x004B14F8
 		public static void StartICategoryMatchingSucceed(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x06020426 RID: 132134 RVA: 0x0047D312 File Offset: 0x0047B512
+		// Token: 0x06022178 RID: 139640 RVA: 0x004B3302 File Offset: 0x004B1502
 		public static void AddIsSilent(FlatBufferBuilder builder, bool isSilent)
 		{
 			builder.AddBool(0, isSilent, false);
 		}
 
-		// Token: 0x06020427 RID: 132135 RVA: 0x0047D31D File Offset: 0x0047B51D
+		// Token: 0x06022179 RID: 139641 RVA: 0x004B330D File Offset: 0x004B150D
 		public static void AddIsDestroy(FlatBufferBuilder builder, bool isDestroy)
 		{
 			builder.AddBool(1, isDestroy, false);
 		}
 
-		// Token: 0x06020428 RID: 132136 RVA: 0x0047D328 File Offset: 0x0047B528
+		// Token: 0x0602217A RID: 139642 RVA: 0x004B3318 File Offset: 0x004B1518
 		public static void AddSyncAdsorbatePerformance(FlatBufferBuilder builder, bool syncAdsorbatePerformance)
 		{
 			builder.AddBool(2, syncAdsorbatePerformance, false);
 		}
 
-		// Token: 0x06020429 RID: 132137 RVA: 0x0047D333 File Offset: 0x0047B533
+		// Token: 0x0602217B RID: 139643 RVA: 0x004B3323 File Offset: 0x004B1523
 		public static void AddChangeSelfState(FlatBufferBuilder builder, StringOffset changeSelfStateOffset)
 		{
 			builder.AddOffset(3, changeSelfStateOffset.Value, 0);
 		}
 
-		// Token: 0x0602042A RID: 132138 RVA: 0x0047D343 File Offset: 0x0047B543
+		// Token: 0x0602217C RID: 139644 RVA: 0x004B3333 File Offset: 0x004B1533
 		public static void AddChangeItemState(FlatBufferBuilder builder, Offset<IEntityState> changeItemStateOffset)
 		{
 			builder.AddOffset(4, changeItemStateOffset.Value, 0);
 		}
 
-		// Token: 0x0602042B RID: 132139 RVA: 0x0047D353 File Offset: 0x0047B553
+		// Token: 0x0602217D RID: 139645 RVA: 0x004B3343 File Offset: 0x004B1543
 		public static void AddDelayDischarge(FlatBufferBuilder builder, int delayDischarge)
 		{
 			builder.AddInt(5, delayDischarge, 0);
 		}
 
-		// Token: 0x0602042C RID: 132140 RVA: 0x0047D35E File Offset: 0x0047B55E
+		// Token: 0x0602217E RID: 139646 RVA: 0x004B334E File Offset: 0x004B154E
 		public static void AddChangeItemStateAfterDischarged(FlatBufferBuilder builder, Offset<IEntityState> changeItemStateAfterDischargedOffset)
 		{
 			builder.AddOffset(6, changeItemStateAfterDischargedOffset.Value, 0);
 		}
 
-		// Token: 0x0602042D RID: 132141 RVA: 0x0047D36E File Offset: 0x0047B56E
+		// Token: 0x0602217F RID: 139647 RVA: 0x004B335E File Offset: 0x004B155E
 		public static void AddChangeSelfStateAfterDischarged(FlatBufferBuilder builder, StringOffset changeSelfStateAfterDischargedOffset)
 		{
 			builder.AddOffset(7, changeSelfStateAfterDischargedOffset.Value, 0);
 		}
 
-		// Token: 0x0602042E RID: 132142 RVA: 0x0047D37E File Offset: 0x0047B57E
+		// Token: 0x06022180 RID: 139648 RVA: 0x004B336E File Offset: 0x004B156E
 		public static void AddChangeAdsorbateState(FlatBufferBuilder builder, Offset<IItemChangeAdsorbateState> changeAdsorbateStateOffset)
 		{
 			builder.AddOffset(8, changeAdsorbateStateOffset.Value, 0);
 		}
 
-		// Token: 0x0602042F RID: 132143 RVA: 0x0047D38E File Offset: 0x0047B58E
+		// Token: 0x06022181 RID: 139649 RVA: 0x004B337E File Offset: 0x004B157E
 		public static void AddDischargeSequence(FlatBufferBuilder builder, StringOffset dischargeSequenceOffset)
 		{
 			builder.AddOffset(9, dischargeSequenceOffset.Value, 0);
 		}
 
-		// Token: 0x06020430 RID: 132144 RVA: 0x0047D39F File Offset: 0x0047B59F
+		// Token: 0x06022182 RID: 139650 RVA: 0x004B338F File Offset: 0x004B158F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(10, nullMask, 0);
 		}
 
-		// Token: 0x06020431 RID: 132145 RVA: 0x0047D3AB File Offset: 0x0047B5AB
+		// Token: 0x06022183 RID: 139651 RVA: 0x004B339B File Offset: 0x004B159B
 		public static Offset<ICategoryMatchingSucceed> EndICategoryMatchingSucceed(FlatBufferBuilder builder)
 		{
 			return new Offset<ICategoryMatchingSucceed>(builder.EndTable());
 		}
 
-		// Token: 0x06020432 RID: 132146 RVA: 0x0047D3B8 File Offset: 0x0047B5B8
+		// Token: 0x06022184 RID: 139652 RVA: 0x004B33A8 File Offset: 0x004B15A8
 		public ICategoryMatchingSucceedT UnPack()
 		{
 			ICategoryMatchingSucceedT categoryMatchingSucceedT = new ICategoryMatchingSucceedT();
@@ -340,7 +340,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return categoryMatchingSucceedT;
 		}
 
-		// Token: 0x06020433 RID: 132147 RVA: 0x0047D3D4 File Offset: 0x0047B5D4
+		// Token: 0x06022185 RID: 139653 RVA: 0x004B33C4 File Offset: 0x004B15C4
 		public void UnPackTo(ICategoryMatchingSucceedT _o)
 		{
 			_o.IsSilent = this.IsSilent;
@@ -356,7 +356,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06020434 RID: 132148 RVA: 0x0047D4D0 File Offset: 0x0047B6D0
+		// Token: 0x06022186 RID: 139654 RVA: 0x004B34C0 File Offset: 0x004B16C0
 		public static Offset<ICategoryMatchingSucceed> Pack(FlatBufferBuilder builder, ICategoryMatchingSucceedT _o)
 		{
 			if (_o == null)
@@ -372,7 +372,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingSucceed.CreateICategoryMatchingSucceed(builder, _o.IsSilent, _o.IsDestroy, _o.SyncAdsorbatePerformance, changeSelfStateOffset, changeItemStateOffset, _o.DelayDischarge, changeItemStateAfterDischargedOffset, changeSelfStateAfterDischargedOffset, changeAdsorbateStateOffset, dischargeSequenceOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DE03 RID: 56835
+		// Token: 0x0400E9AD RID: 59821
 		private Table __p;
 	}
 }

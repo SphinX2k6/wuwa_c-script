@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014B1 RID: 5297
+// Token: 0x02000965 RID: 2405
 public class ActivityRegressTaskTitlePanel : UiPanelBase
 {
-	// Token: 0x06009619 RID: 38425 RVA: 0x002066A8 File Offset: 0x002048A8
+	// Token: 0x060069AE RID: 27054 RVA: 0x0020F614 File Offset: 0x0020D814
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,13 +20,13 @@ public class ActivityRegressTaskTitlePanel : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x0600961A RID: 38426 RVA: 0x00206723 File Offset: 0x00204923
+	// Token: 0x060069AF RID: 27055 RVA: 0x0020F68F File Offset: 0x0020D88F
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveTimerCheck();
 	}
 
-	// Token: 0x0600961B RID: 38427 RVA: 0x0020672C File Offset: 0x0020492C
+	// Token: 0x060069B0 RID: 27056 RVA: 0x0020F698 File Offset: 0x0020D898
 	[NullableContext(1)]
 	public void RefreshByData(ActivityRegressTaskDynamicData data)
 	{
@@ -47,14 +47,14 @@ public class ActivityRegressTaskTitlePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600961C RID: 38428 RVA: 0x002067E8 File Offset: 0x002049E8
+	// Token: 0x060069B1 RID: 27057 RVA: 0x0020F754 File Offset: 0x0020D954
 	private void RefreshTimerView(float _)
 	{
 		UUIText text = base.GetText(1);
 		LguiUtil.Instance.SetLocalTextNew(text, "RecallActivity_Task_Daily_Countdown", new <>z__ReadOnlySingleElementList<object>(ActivityRegressModel.Instance.ActivityData.GetNextRefreshTime()));
 	}
 
-	// Token: 0x0600961D RID: 38429 RVA: 0x00206821 File Offset: 0x00204A21
+	// Token: 0x060069B2 RID: 27058 RVA: 0x0020F78D File Offset: 0x0020D98D
 	private void RemoveTimerCheck()
 	{
 		if (this.TimerHandle != null)
@@ -64,23 +64,23 @@ public class ActivityRegressTaskTitlePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400424F RID: 16975
+	// Token: 0x040042E7 RID: 17127
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x02007AEB RID: 31467
+	// Token: 0x02006C6F RID: 27759
 	private class EComponents
 	{
-		// Token: 0x040286F4 RID: 165620
+		// Token: 0x04023A0E RID: 145934
 		public const int TxtTitle = 0;
 
-		// Token: 0x040286F5 RID: 165621
+		// Token: 0x04023A0F RID: 145935
 		public const int TxtTips = 1;
 
-		// Token: 0x040286F6 RID: 165622
+		// Token: 0x04023A10 RID: 145936
 		public const int TexBG1 = 2;
 
-		// Token: 0x040286F7 RID: 165623
+		// Token: 0x04023A11 RID: 145937
 		public const int TexBG2 = 3;
 	}
 }

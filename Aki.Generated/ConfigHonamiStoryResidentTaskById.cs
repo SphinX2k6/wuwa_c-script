@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000405 RID: 1029
+	// Token: 0x0200041B RID: 1051
 	public class ConfigHonamiStoryResidentTaskById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001825 RID: 6181 RVA: 0x000E24B7 File Offset: 0x000E06B7
+		// Token: 0x060018A9 RID: 6313 RVA: 0x000E8C0B File Offset: 0x000E6E0B
 		static ConfigHonamiStoryResidentTaskById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryResidentTaskById.CreateStaticDefaultValue), new Action(ConfigHonamiStoryResidentTaskById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001826 RID: 6182 RVA: 0x000E24D8 File Offset: 0x000E06D8
+		// Token: 0x060018AA RID: 6314 RVA: 0x000E8C2C File Offset: 0x000E6E2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryResidentTaskById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001827 RID: 6183 RVA: 0x000E2557 File Offset: 0x000E0757
+		// Token: 0x060018AB RID: 6315 RVA: 0x000E8CAB File Offset: 0x000E6EAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryResidentTaskById.LogPair = null;
 			ConfigHonamiStoryResidentTaskById.HandleId = 0;
 		}
 
-		// Token: 0x06001828 RID: 6184 RVA: 0x000E2565 File Offset: 0x000E0765
+		// Token: 0x060018AC RID: 6316 RVA: 0x000E8CB9 File Offset: 0x000E6EB9
 		public static void Init()
 		{
 			ConfigHonamiStoryResidentTaskById.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryResidentTaskById.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryResidentTask` where Id=?");
 		}
 
-		// Token: 0x06001829 RID: 6185 RVA: 0x000E2580 File Offset: 0x000E0780
+		// Token: 0x060018AD RID: 6317 RVA: 0x000E8CD4 File Offset: 0x000E6ED4
 		public static HonamiStoryResidentTask? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHonamiStoryResidentTaskById.HandleId, ConfigHonamiStoryResidentTaskById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HonamiStoryResidentTask?(rootAsHonamiStoryResidentTask);
 		}
 
-		// Token: 0x04001C07 RID: 7175
+		// Token: 0x04001CA1 RID: 7329
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001C08 RID: 7176
+		// Token: 0x04001CA2 RID: 7330
 		private const string FILE = "s.穗波奇妙物语局外.xlsx";
 
-		// Token: 0x04001C09 RID: 7177
+		// Token: 0x04001CA3 RID: 7331
 		private const string TABLE = "HonamiStoryResidentTask";
 
-		// Token: 0x04001C0A RID: 7178
+		// Token: 0x04001CA4 RID: 7332
 		private const string COMMAND = "select BinData from `HonamiStoryResidentTask` where Id=?";
 
-		// Token: 0x04001C0B RID: 7179
+		// Token: 0x04001CA5 RID: 7333
 		private const string KEY_PREFIX = "HonamiStoryResidentTaskById";
 
-		// Token: 0x04001C0C RID: 7180
+		// Token: 0x04001CA6 RID: 7334
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C0D RID: 7181
+		// Token: 0x04001CA7 RID: 7335
 		private static int HandleId;
 	}
 }

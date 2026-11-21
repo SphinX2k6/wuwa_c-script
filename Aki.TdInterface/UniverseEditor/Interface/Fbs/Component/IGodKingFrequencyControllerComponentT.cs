@@ -3,50 +3,50 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052F8 RID: 21240
+	// Token: 0x0200587B RID: 22651
 	public class IGodKingFrequencyControllerComponentT
 	{
-		// Token: 0x17009BEF RID: 39919
-		// (get) Token: 0x06022B00 RID: 142080 RVA: 0x004CEBD7 File Offset: 0x004CCDD7
-		// (set) Token: 0x06022B01 RID: 142081 RVA: 0x004CEBDF File Offset: 0x004CCDDF
+		// Token: 0x1700A420 RID: 42016
+		// (get) Token: 0x06024B9A RID: 150426 RVA: 0x0050B703 File Offset: 0x00509903
+		// (set) Token: 0x06024B9B RID: 150427 RVA: 0x0050B70B File Offset: 0x0050990B
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009BF0 RID: 39920
-		// (get) Token: 0x06022B02 RID: 142082 RVA: 0x004CEBE8 File Offset: 0x004CCDE8
-		// (set) Token: 0x06022B03 RID: 142083 RVA: 0x004CEBF0 File Offset: 0x004CCDF0
+		// Token: 0x1700A421 RID: 42017
+		// (get) Token: 0x06024B9C RID: 150428 RVA: 0x0050B714 File Offset: 0x00509914
+		// (set) Token: 0x06024B9D RID: 150429 RVA: 0x0050B71C File Offset: 0x0050991C
 		public List<int> StatueEntityIdList { get; set; }
 
-		// Token: 0x17009BF1 RID: 39921
-		// (get) Token: 0x06022B04 RID: 142084 RVA: 0x004CEBF9 File Offset: 0x004CCDF9
-		// (set) Token: 0x06022B05 RID: 142085 RVA: 0x004CEC01 File Offset: 0x004CCE01
+		// Token: 0x1700A422 RID: 42018
+		// (get) Token: 0x06024B9E RID: 150430 RVA: 0x0050B725 File Offset: 0x00509925
+		// (set) Token: 0x06024B9F RID: 150431 RVA: 0x0050B72D File Offset: 0x0050992D
 		public int InitialAttachStatue { get; set; }
 
-		// Token: 0x17009BF2 RID: 39922
-		// (get) Token: 0x06022B06 RID: 142086 RVA: 0x004CEC0A File Offset: 0x004CCE0A
-		// (set) Token: 0x06022B07 RID: 142087 RVA: 0x004CEC12 File Offset: 0x004CCE12
+		// Token: 0x1700A423 RID: 42019
+		// (get) Token: 0x06024BA0 RID: 150432 RVA: 0x0050B736 File Offset: 0x00509936
+		// (set) Token: 0x06024BA1 RID: 150433 RVA: 0x0050B73E File Offset: 0x0050993E
 		public int GodKingFrequencyEntity { get; set; }
 
-		// Token: 0x17009BF3 RID: 39923
-		// (get) Token: 0x06022B08 RID: 142088 RVA: 0x004CEC1B File Offset: 0x004CCE1B
-		// (set) Token: 0x06022B09 RID: 142089 RVA: 0x004CEC23 File Offset: 0x004CCE23
+		// Token: 0x1700A424 RID: 42020
+		// (get) Token: 0x06024BA2 RID: 150434 RVA: 0x0050B747 File Offset: 0x00509947
+		// (set) Token: 0x06024BA3 RID: 150435 RVA: 0x0050B74F File Offset: 0x0050994F
 		public string AttachSocket { get; set; }
 
-		// Token: 0x17009BF4 RID: 39924
-		// (get) Token: 0x06022B0A RID: 142090 RVA: 0x004CEC2C File Offset: 0x004CCE2C
-		// (set) Token: 0x06022B0B RID: 142091 RVA: 0x004CEC34 File Offset: 0x004CCE34
+		// Token: 0x1700A425 RID: 42021
+		// (get) Token: 0x06024BA4 RID: 150436 RVA: 0x0050B758 File Offset: 0x00509958
+		// (set) Token: 0x06024BA5 RID: 150437 RVA: 0x0050B760 File Offset: 0x00509960
 		public float FlySpeed { get; set; }
 
-		// Token: 0x17009BF5 RID: 39925
-		// (get) Token: 0x06022B0C RID: 142092 RVA: 0x004CEC3D File Offset: 0x004CCE3D
-		// (set) Token: 0x06022B0D RID: 142093 RVA: 0x004CEC45 File Offset: 0x004CCE45
+		// Token: 0x1700A426 RID: 42022
+		// (get) Token: 0x06024BA6 RID: 150438 RVA: 0x0050B769 File Offset: 0x00509969
+		// (set) Token: 0x06024BA7 RID: 150439 RVA: 0x0050B771 File Offset: 0x00509971
 		public float MaxFlyTime { get; set; }
 
-		// Token: 0x17009BF6 RID: 39926
-		// (get) Token: 0x06022B0E RID: 142094 RVA: 0x004CEC4E File Offset: 0x004CCE4E
-		// (set) Token: 0x06022B0F RID: 142095 RVA: 0x004CEC56 File Offset: 0x004CCE56
+		// Token: 0x1700A427 RID: 42023
+		// (get) Token: 0x06024BA8 RID: 150440 RVA: 0x0050B77A File Offset: 0x0050997A
+		// (set) Token: 0x06024BA9 RID: 150441 RVA: 0x0050B782 File Offset: 0x00509982
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022B10 RID: 142096 RVA: 0x004CEC60 File Offset: 0x004CCE60
+		// Token: 0x06024BAA RID: 150442 RVA: 0x0050B78C File Offset: 0x0050998C
 		public IGodKingFrequencyControllerComponentT()
 		{
 			this.Disabled = false;

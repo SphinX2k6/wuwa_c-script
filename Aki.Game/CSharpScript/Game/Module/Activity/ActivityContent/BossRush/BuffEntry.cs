@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006907 RID: 26887
+	// Token: 0x02005857 RID: 22615
 	public class BuffEntry : UiPanelBase
 	{
-		// Token: 0x060430B5 RID: 274613 RVA: 0x010559E8 File Offset: 0x01053BE8
+		// Token: 0x06037C0D RID: 228365 RVA: 0x00F9701C File Offset: 0x00F9521C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			};
 		}
 
-		// Token: 0x060430B6 RID: 274614 RVA: 0x01055AEC File Offset: 0x01053CEC
+		// Token: 0x06037C0E RID: 228366 RVA: 0x00F97120 File Offset: 0x00F95320
 		private void OnClickEntryButton()
 		{
 			BossRushBuffInfo currentSelectBuff = this.CurrentSelectBuff;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			EventSystem.Instance.Emit<EUiTabViewName>(EEventName.RequestChangeBossRushView, EUiTabViewName.BossRushBuffSelectView);
 		}
 
-		// Token: 0x060430B7 RID: 274615 RVA: 0x01055B64 File Offset: 0x01053D64
+		// Token: 0x06037C0F RID: 228367 RVA: 0x00F97198 File Offset: 0x00F95398
 		[NullableContext(1)]
 		public void Refresh(BossRushBuffInfo buff)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshBuffTips();
 		}
 
-		// Token: 0x060430B8 RID: 274616 RVA: 0x01055BDC File Offset: 0x01053DDC
+		// Token: 0x06037C10 RID: 228368 RVA: 0x00F97210 File Offset: 0x00F95410
 		private void RefreshBuffTips()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x060430B9 RID: 274617 RVA: 0x01055C41 File Offset: 0x01053E41
+		// Token: 0x06037C11 RID: 228369 RVA: 0x00F97275 File Offset: 0x00F95475
 		private void RefreshLockItemState()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetItem(8).SetUIActive(this.CurrentSelectBuff.State == BossRushBuffSelectionStatus.BuffLocked);
 		}
 
-		// Token: 0x060430BA RID: 274618 RVA: 0x01055C66 File Offset: 0x01053E66
+		// Token: 0x06037C12 RID: 228370 RVA: 0x00F9729A File Offset: 0x00F9549A
 		private void RefreshSwitchButton()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetItem(7).SetUIActive(this.CurrentSelectBuff.BuffId != 0 && this.CurrentSelectBuff.State != BossRushBuffSelectionStatus.BuffLocked);
 		}
 
-		// Token: 0x060430BB RID: 274619 RVA: 0x01055C9E File Offset: 0x01053E9E
+		// Token: 0x06037C13 RID: 228371 RVA: 0x00F972D2 File Offset: 0x00F954D2
 		private void RefreshNoneShow()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.GetItem(2).SetUIActive(this.CurrentSelectBuff.BuffId != 0);
 		}
 
-		// Token: 0x060430BC RID: 274620 RVA: 0x01055CDD File Offset: 0x01053EDD
+		// Token: 0x06037C14 RID: 228372 RVA: 0x00F97311 File Offset: 0x00F95511
 		private void RefreshBuffInfo()
 		{
 			if (this.CurrentSelectBuff == null || this.CurrentSelectBuff.BuffId == 0)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshBuffTexture();
 		}
 
-		// Token: 0x060430BD RID: 274621 RVA: 0x01055D08 File Offset: 0x01053F08
+		// Token: 0x06037C15 RID: 228373 RVA: 0x00F9733C File Offset: 0x00F9553C
 		private void RefreshBuffTexture()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			base.SetTextureByPath(texture, base.GetTexture(4), null, null);
 		}
 
-		// Token: 0x060430BE RID: 274622 RVA: 0x01055D68 File Offset: 0x01053F68
+		// Token: 0x06037C16 RID: 228374 RVA: 0x00F9739C File Offset: 0x00F9559C
 		private void RefreshBuffDesc()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(6), bossRushBuffConfigById.Value.Description, list.ToArray());
 		}
 
-		// Token: 0x060430BF RID: 274623 RVA: 0x01055E44 File Offset: 0x01054044
+		// Token: 0x06037C17 RID: 228375 RVA: 0x00F97478 File Offset: 0x00F95678
 		private void RefreshBuffName()
 		{
 			if (this.CurrentSelectBuff == null)
@@ -207,17 +207,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), bossRushBuffConfigById.Value.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x060430C0 RID: 274624 RVA: 0x01055E9F File Offset: 0x0105409F
+		// Token: 0x06037C18 RID: 228376 RVA: 0x00F974D3 File Offset: 0x00F956D3
 		public bool HaveBuff()
 		{
 			BossRushBuffInfo currentSelectBuff = this.CurrentSelectBuff;
 			return ((currentSelectBuff != null) ? currentSelectBuff.BuffId : 0) > 0;
 		}
 
-		// Token: 0x04022E78 RID: 142968
+		// Token: 0x0401D6D4 RID: 120532
 		public int SlotIndex;
 
-		// Token: 0x04022E79 RID: 142969
+		// Token: 0x0401D6D5 RID: 120533
 		[Nullable(2)]
 		private BossRushBuffInfo CurrentSelectBuff;
 	}

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020011C2 RID: 4546
+	// Token: 0x020011FC RID: 4604
 	[NetMessage(EMessageId.SelfPortraitStateRequest)]
 	public sealed class SelfPortraitStateRequest : IMessage<SelfPortraitStateRequest>, IMessage, IEquatable<SelfPortraitStateRequest>, IDeepCloneable<SelfPortraitStateRequest>, IBufferMessage
 	{
-		// Token: 0x06018418 RID: 99352 RVA: 0x00387EE8 File Offset: 0x003860E8
+		// Token: 0x060189B9 RID: 100793 RVA: 0x0039721C File Offset: 0x0039541C
 		[NullableContext(1)]
 		public static SelfPortraitStateRequest Create()
 		{
 			return new SelfPortraitStateRequest();
 		}
 
-		// Token: 0x170051B7 RID: 20919
-		// (get) Token: 0x06018419 RID: 99353 RVA: 0x00387EEF File Offset: 0x003860EF
+		// Token: 0x17005323 RID: 21283
+		// (get) Token: 0x060189BA RID: 100794 RVA: 0x00397223 File Offset: 0x00395423
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170051B8 RID: 20920
-		// (get) Token: 0x0601841A RID: 99354 RVA: 0x00387EF2 File Offset: 0x003860F2
+		// Token: 0x17005324 RID: 21284
+		// (get) Token: 0x060189BB RID: 100795 RVA: 0x00397226 File Offset: 0x00395426
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601841B RID: 99355 RVA: 0x00387EF9 File Offset: 0x003860F9
+		// Token: 0x060189BC RID: 100796 RVA: 0x0039722D File Offset: 0x0039542D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelfPortraitStateRequest()
 		{
 		}
 
-		// Token: 0x0601841C RID: 99356 RVA: 0x00387F01 File Offset: 0x00386101
+		// Token: 0x060189BD RID: 100797 RVA: 0x00397235 File Offset: 0x00395435
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelfPortraitStateRequest(SelfPortraitStateRequest other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601841D RID: 99357 RVA: 0x00387F26 File Offset: 0x00386126
+		// Token: 0x060189BE RID: 100798 RVA: 0x0039725A File Offset: 0x0039545A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelfPortraitStateRequest Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new SelfPortraitStateRequest(this);
 		}
 
-		// Token: 0x170051B9 RID: 20921
-		// (get) Token: 0x0601841E RID: 99358 RVA: 0x00387F2E File Offset: 0x0038612E
-		// (set) Token: 0x0601841F RID: 99359 RVA: 0x00387F36 File Offset: 0x00386136
+		// Token: 0x17005325 RID: 21285
+		// (get) Token: 0x060189BF RID: 100799 RVA: 0x00397262 File Offset: 0x00395462
+		// (set) Token: 0x060189C0 RID: 100800 RVA: 0x0039726A File Offset: 0x0039546A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SelfPortraitOpState State
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018420 RID: 99360 RVA: 0x00387F3F File Offset: 0x0038613F
+		// Token: 0x060189C1 RID: 100801 RVA: 0x00397273 File Offset: 0x00395473
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SelfPortraitStateRequest);
 		}
 
-		// Token: 0x06018421 RID: 99361 RVA: 0x00387F4D File Offset: 0x0038614D
+		// Token: 0x060189C2 RID: 100802 RVA: 0x00397281 File Offset: 0x00395481
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SelfPortraitStateRequest other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.State == other.State && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018422 RID: 99362 RVA: 0x00387F7C File Offset: 0x0038617C
+		// Token: 0x060189C3 RID: 100803 RVA: 0x003972B0 File Offset: 0x003954B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018423 RID: 99363 RVA: 0x00387FC1 File Offset: 0x003861C1
+		// Token: 0x060189C4 RID: 100804 RVA: 0x003972F5 File Offset: 0x003954F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018424 RID: 99364 RVA: 0x00387FCE File Offset: 0x003861CE
+		// Token: 0x060189C5 RID: 100805 RVA: 0x00397302 File Offset: 0x00395502
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018425 RID: 99365 RVA: 0x00387FD7 File Offset: 0x003861D7
+		// Token: 0x060189C6 RID: 100806 RVA: 0x0039730B File Offset: 0x0039550B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.State != SelfPortraitOpState.SelfPortraitEnter)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(104);
 				output.WriteEnum((int)this.State);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018426 RID: 99366 RVA: 0x0038800C File Offset: 0x0038620C
+		// Token: 0x060189C7 RID: 100807 RVA: 0x00397340 File Offset: 0x00395540
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018427 RID: 99367 RVA: 0x0038804A File Offset: 0x0038624A
+		// Token: 0x060189C8 RID: 100808 RVA: 0x0039737E File Offset: 0x0039557E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SelfPortraitStateRequest other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018428 RID: 99368 RVA: 0x0038807B File Offset: 0x0038627B
+		// Token: 0x060189C9 RID: 100809 RVA: 0x003973AF File Offset: 0x003955AF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018429 RID: 99369 RVA: 0x00388084 File Offset: 0x00386284
+		// Token: 0x060189CA RID: 100810 RVA: 0x003973B8 File Offset: 0x003955B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 120U)
+				if (num != 104U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008FCA RID: 36810
+		// Token: 0x0400925D RID: 37469
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008FCB RID: 36811
-		public const int StateFieldNumber = 15;
+		// Token: 0x0400925E RID: 37470
+		public const int StateFieldNumber = 13;
 
-		// Token: 0x04008FCC RID: 36812
+		// Token: 0x0400925F RID: 37471
 		private SelfPortraitOpState state_;
 	}
 }

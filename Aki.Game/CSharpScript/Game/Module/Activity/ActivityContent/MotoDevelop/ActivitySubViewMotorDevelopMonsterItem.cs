@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 {
-	// Token: 0x0200645C RID: 25692
+	// Token: 0x020053DA RID: 21466
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 	})]
 	public class ActivitySubViewMotorDevelopMonsterItem : GridProxyAbstract<ConditionTask>
 	{
-		// Token: 0x06040914 RID: 264468 RVA: 0x00FA0A2C File Offset: 0x00F9EC2C
+		// Token: 0x060355D5 RID: 218581 RVA: 0x00EE79A8 File Offset: 0x00EE5BA8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			};
 		}
 
-		// Token: 0x06040915 RID: 264469 RVA: 0x00FA0AEB File Offset: 0x00F9ECEB
+		// Token: 0x060355D6 RID: 218582 RVA: 0x00EE7A67 File Offset: 0x00EE5C67
 		protected override void OnStart()
 		{
 			this.RewardItem = new CommonItemSmallItemGrid();
@@ -62,12 +62,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			});
 		}
 
-		// Token: 0x06040916 RID: 264470 RVA: 0x00FA0B26 File Offset: 0x00F9ED26
+		// Token: 0x060355D7 RID: 218583 RVA: 0x00EE7AA2 File Offset: 0x00EE5CA2
 		private void OnClickBtnSelf()
 		{
 		}
 
-		// Token: 0x06040917 RID: 264471 RVA: 0x00FA0B28 File Offset: 0x00F9ED28
+		// Token: 0x060355D8 RID: 218584 RVA: 0x00EE7AA4 File Offset: 0x00EE5CA4
 		[NullableContext(1)]
 		public override void Refresh(ConditionTask taskData, bool isSelected, int gridIndex)
 		{
@@ -118,10 +118,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotoDevelop
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0402193D RID: 137533
+		// Token: 0x0401C26C RID: 115308
 		public ConditionTask Data;
 
-		// Token: 0x0402193E RID: 137534
+		// Token: 0x0401C26D RID: 115309
 		public CommonItemSmallItemGrid RewardItem;
 	}
 }

@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BC5 RID: 3013
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C93 RID: 3219
 	public class INpcUiInteractOnVillageInfr : INpcUiInteractType
 	{
-		// Token: 0x0600453F RID: 17727 RVA: 0x000AF748 File Offset: 0x000AD948
+		// Token: 0x06004998 RID: 18840 RVA: 0x000B980C File Offset: 0x000B7A0C
 		public static INpcUiInteractOnVillageInfr Create(INpcUiInteractOnVillageInfr? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001372 RID: 4978
-		// (get) Token: 0x06004540 RID: 17728 RVA: 0x000AF767 File Offset: 0x000AD967
+		// Token: 0x1700146D RID: 5229
+		// (get) Token: 0x06004999 RID: 18841 RVA: 0x000B982B File Offset: 0x000B7A2B
 		public override ENpcUiInteractType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001373 RID: 4979
-		// (get) Token: 0x06004541 RID: 17729 RVA: 0x000AF774 File Offset: 0x000AD974
+		// Token: 0x1700146E RID: 5230
+		// (get) Token: 0x0600499A RID: 18842 RVA: 0x000B9838 File Offset: 0x000B7A38
 		public virtual Aki.TDConfigMgr.Action.IMontageConfig EnterMontage
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001374 RID: 4980
-		// (get) Token: 0x06004542 RID: 17730 RVA: 0x000AF7A3 File Offset: 0x000AD9A3
+		// Token: 0x1700146F RID: 5231
+		// (get) Token: 0x0600499B RID: 18843 RVA: 0x000B9867 File Offset: 0x000B7A67
 		public virtual Aki.TDConfigMgr.Action.IMontageConfig DeliverSuccessMontage
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001375 RID: 4981
-		// (get) Token: 0x06004543 RID: 17731 RVA: 0x000AF7D2 File Offset: 0x000AD9D2
+		// Token: 0x17001470 RID: 5232
+		// (get) Token: 0x0600499C RID: 18844 RVA: 0x000B9896 File Offset: 0x000B7A96
 		public virtual Aki.TDConfigMgr.Action.IMontageConfig CompleteMontage
 		{
 			get
@@ -82,8 +80,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001376 RID: 4982
-		// (get) Token: 0x06004544 RID: 17732 RVA: 0x000AF801 File Offset: 0x000ADA01
+		// Token: 0x17001471 RID: 5233
+		// (get) Token: 0x0600499D RID: 18845 RVA: 0x000B98C5 File Offset: 0x000B7AC5
 		[Nullable(2)]
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow EnterFlow
 		{
@@ -100,8 +98,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001377 RID: 4983
-		// (get) Token: 0x06004545 RID: 17733 RVA: 0x000AF835 File Offset: 0x000ADA35
+		// Token: 0x17001472 RID: 5234
+		// (get) Token: 0x0600499E RID: 18846 RVA: 0x000B98F9 File Offset: 0x000B7AF9
 		[Nullable(2)]
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow DeliverSuccessFlow
 		{
@@ -118,8 +116,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001378 RID: 4984
-		// (get) Token: 0x06004546 RID: 17734 RVA: 0x000AF869 File Offset: 0x000ADA69
+		// Token: 0x17001473 RID: 5235
+		// (get) Token: 0x0600499F RID: 18847 RVA: 0x000B992D File Offset: 0x000B7B2D
 		[Nullable(2)]
 		public virtual Aki.TDConfigMgr.Action.Fb.PlayFlow CompleteFlow
 		{
@@ -136,46 +134,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400274E RID: 10062
+		// Token: 0x04002996 RID: 10646
 		private INpcUiInteractOnVillageInfr Instance;
 
-		// Token: 0x0400274F RID: 10063
+		// Token: 0x04002997 RID: 10647
 		private Aki.TDConfigMgr.Action.IMontageConfig _EnterMontageCache;
 
-		// Token: 0x04002750 RID: 10064
+		// Token: 0x04002998 RID: 10648
 		private bool _EnterMontageInited;
 
-		// Token: 0x04002751 RID: 10065
+		// Token: 0x04002999 RID: 10649
 		private Aki.TDConfigMgr.Action.IMontageConfig _DeliverSuccessMontageCache;
 
-		// Token: 0x04002752 RID: 10066
+		// Token: 0x0400299A RID: 10650
 		private bool _DeliverSuccessMontageInited;
 
-		// Token: 0x04002753 RID: 10067
+		// Token: 0x0400299B RID: 10651
 		private Aki.TDConfigMgr.Action.IMontageConfig _CompleteMontageCache;
 
-		// Token: 0x04002754 RID: 10068
+		// Token: 0x0400299C RID: 10652
 		private bool _CompleteMontageInited;
 
-		// Token: 0x04002755 RID: 10069
+		// Token: 0x0400299D RID: 10653
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _EnterFlowCache;
 
-		// Token: 0x04002756 RID: 10070
+		// Token: 0x0400299E RID: 10654
 		private bool _EnterFlowInited;
 
-		// Token: 0x04002757 RID: 10071
+		// Token: 0x0400299F RID: 10655
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _DeliverSuccessFlowCache;
 
-		// Token: 0x04002758 RID: 10072
+		// Token: 0x040029A0 RID: 10656
 		private bool _DeliverSuccessFlowInited;
 
-		// Token: 0x04002759 RID: 10073
+		// Token: 0x040029A1 RID: 10657
 		[Nullable(2)]
 		private Aki.TDConfigMgr.Action.Fb.PlayFlow _CompleteFlowCache;
 
-		// Token: 0x0400275A RID: 10074
+		// Token: 0x040029A2 RID: 10658
 		private bool _CompleteFlowInited;
 	}
 }

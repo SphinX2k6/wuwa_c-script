@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D9D RID: 23965
+	// Token: 0x020063DA RID: 25562
 	public enum IEaseCurveType_Union : byte
 	{
-		// Token: 0x0400F771 RID: 63345
+		// Token: 0x040104CC RID: 66764
 		NONE,
-		// Token: 0x0400F772 RID: 63346
+		// Token: 0x040104CD RID: 66765
 		IEaseCurveType,
-		// Token: 0x0400F773 RID: 63347
+		// Token: 0x040104CE RID: 66766
 		IEaseCurvePreset,
-		// Token: 0x0400F774 RID: 63348
+		// Token: 0x040104CF RID: 66767
 		IEaseCurveCustom
 	}
 }

@@ -3,7 +3,7 @@
 // Token: 0x02000109 RID: 265
 public class TsFloatRange
 {
-	// Token: 0x060009ED RID: 2541 RVA: 0x00032910 File Offset: 0x00030B10
+	// Token: 0x06000A3E RID: 2622 RVA: 0x0003326C File Offset: 0x0003146C
 	public TsFloatRange(bool exclusive, float min, float max)
 	{
 		this.Exclusive = exclusive;
@@ -11,7 +11,7 @@ public class TsFloatRange
 		this.Max = max;
 	}
 
-	// Token: 0x060009EE RID: 2542 RVA: 0x0003292D File Offset: 0x00030B2D
+	// Token: 0x06000A3F RID: 2623 RVA: 0x00033289 File Offset: 0x00031489
 	public bool InRange(float v)
 	{
 		if (this.Exclusive)
@@ -21,12 +21,12 @@ public class TsFloatRange
 		return v >= this.Min && v <= this.Max;
 	}
 
-	// Token: 0x04000698 RID: 1688
+	// Token: 0x040006A3 RID: 1699
 	public readonly bool Exclusive;
 
-	// Token: 0x04000699 RID: 1689
+	// Token: 0x040006A4 RID: 1700
 	public readonly float Min;
 
-	// Token: 0x0400069A RID: 1690
+	// Token: 0x040006A5 RID: 1701
 	public readonly float Max;
 }

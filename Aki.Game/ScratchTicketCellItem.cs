@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014EF RID: 5359
+// Token: 0x020009A7 RID: 2471
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -19,7 +19,7 @@ using UnrealEngine;
 })]
 public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 {
-	// Token: 0x060098BC RID: 39100 RVA: 0x0020FF40 File Offset: 0x0020E140
+	// Token: 0x06006C96 RID: 27798 RVA: 0x00219C2C File Offset: 0x00217E2C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -44,14 +44,14 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060098BD RID: 39101 RVA: 0x00210028 File Offset: 0x0020E228
+	// Token: 0x06006C97 RID: 27799 RVA: 0x00219D14 File Offset: 0x00217F14
 	protected override void OnBeforeCreate()
 	{
 		this.UiLevelSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiLevelSequence);
 	}
 
-	// Token: 0x060098BE RID: 39102 RVA: 0x00210044 File Offset: 0x0020E244
+	// Token: 0x06006C98 RID: 27800 RVA: 0x00219D30 File Offset: 0x00217F30
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ScratchTicketCellItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -62,13 +62,13 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060098BF RID: 39103 RVA: 0x00210087 File Offset: 0x0020E287
+	// Token: 0x06006C99 RID: 27801 RVA: 0x00219D73 File Offset: 0x00217F73
 	protected override void OnBeforeShow()
 	{
 		this.UiLevelSequence.AddSequenceFinishEvent("RevaelA", new Action<string>(this.OnRevealAnimationFinish), false);
 	}
 
-	// Token: 0x060098C0 RID: 39104 RVA: 0x002100A6 File Offset: 0x0020E2A6
+	// Token: 0x06006C9A RID: 27802 RVA: 0x00219D92 File Offset: 0x00217F92
 	public override void Refresh(ScratchTicketCellData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshUi(data);
@@ -77,7 +77,7 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		base.GetSprite(1).SetUIActive(false);
 	}
 
-	// Token: 0x060098C1 RID: 39105 RVA: 0x002100D6 File Offset: 0x0020E2D6
+	// Token: 0x06006C9B RID: 27803 RVA: 0x00219DC2 File Offset: 0x00217FC2
 	public void RefreshByResultData(ScratchTicketCellData cellData, IScratchTicketRewardResult resultData)
 	{
 		this.CellData = cellData;
@@ -88,7 +88,7 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		this.PlaySequence(resultData.SequenceType);
 	}
 
-	// Token: 0x060098C2 RID: 39106 RVA: 0x0021010C File Offset: 0x0020E30C
+	// Token: 0x06006C9C RID: 27804 RVA: 0x00219DF8 File Offset: 0x00217FF8
 	private void RefreshUi(ScratchTicketCellData data)
 	{
 		this.CellData = data;
@@ -112,7 +112,7 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		this.ItemGrid.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060098C3 RID: 39107 RVA: 0x002101D4 File Offset: 0x0020E3D4
+	// Token: 0x06006C9D RID: 27805 RVA: 0x00219EC0 File Offset: 0x002180C0
 	private void PlaySequence(ECellSequenceType sequenceType)
 	{
 		switch (sequenceType)
@@ -144,20 +144,20 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		}
 	}
 
-	// Token: 0x060098C4 RID: 39108 RVA: 0x002102C4 File Offset: 0x0020E4C4
+	// Token: 0x06006C9E RID: 27806 RVA: 0x00219FB0 File Offset: 0x002181B0
 	protected override void OnBeforeHide()
 	{
 		this.UiLevelSequence.RemoveSequenceFinishEvent("RevaelA", new Action<string>(this.OnRevealAnimationFinish));
 	}
 
-	// Token: 0x060098C5 RID: 39109 RVA: 0x002102E4 File Offset: 0x0020E4E4
+	// Token: 0x06006C9F RID: 27807 RVA: 0x00219FD0 File Offset: 0x002181D0
 	private void OnRevealAnimationFinish(string _)
 	{
 		this.RefreshUi(this.CellData);
 		this.UiLevelSequence.PlaySequence("RevaelB", false, null);
 	}
 
-	// Token: 0x060098C6 RID: 39110 RVA: 0x00210317 File Offset: 0x0020E517
+	// Token: 0x06006CA0 RID: 27808 RVA: 0x0021A003 File Offset: 0x00218203
 	private void OnClickRewardButton()
 	{
 		if (this.ClickCallBack != null)
@@ -166,24 +166,24 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 		}
 	}
 
-	// Token: 0x060098C7 RID: 39111 RVA: 0x00210332 File Offset: 0x0020E532
+	// Token: 0x06006CA1 RID: 27809 RVA: 0x0021A01E File Offset: 0x0021821E
 	public void SetClickCallback(Action<ScratchTicketCellData> callback)
 	{
 		this.ClickCallBack = callback;
 	}
 
-	// Token: 0x060098C8 RID: 39112 RVA: 0x0021033B File Offset: 0x0020E53B
+	// Token: 0x06006CA2 RID: 27810 RVA: 0x0021A027 File Offset: 0x00218227
 	[NullableContext(2)]
 	private bool CanRewardItemChangeToggle(object data, bool isForcedSelect, EToggleState toggleState)
 	{
 		return false;
 	}
 
-	// Token: 0x04004335 RID: 17205
+	// Token: 0x040043DA RID: 17370
 	[Nullable(2)]
 	private ScratchTicketCellData CellData;
 
-	// Token: 0x04004336 RID: 17206
+	// Token: 0x040043DB RID: 17371
 	[Nullable(new byte[]
 	{
 		2,
@@ -191,34 +191,34 @@ public class ScratchTicketCellItem : GridProxyAbstract<ScratchTicketCellData>
 	})]
 	private Action<ScratchTicketCellData> ClickCallBack;
 
-	// Token: 0x04004337 RID: 17207
+	// Token: 0x040043DC RID: 17372
 	[Nullable(2)]
 	public UiBehaviorLevelSequence UiLevelSequence;
 
-	// Token: 0x04004338 RID: 17208
+	// Token: 0x040043DD RID: 17373
 	[Nullable(2)]
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04004339 RID: 17209
+	// Token: 0x040043DE RID: 17374
 	private readonly Action<MediumItemGridExtendCallback> OnRewardItemClick = delegate(MediumItemGridExtendCallback callbackParameter)
 	{
-		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(((TItem)callbackParameter.Data).ItemData.ItemId, true, null, false);
 	};
 
-	// Token: 0x02007B21 RID: 31521
+	// Token: 0x02006CAD RID: 27821
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x040287F2 RID: 165874
+		// Token: 0x04023B30 RID: 146224
 		public const int RewardButton = 0;
 
-		// Token: 0x040287F3 RID: 165875
+		// Token: 0x04023B31 RID: 146225
 		public const int BgIcon = 1;
 
-		// Token: 0x040287F4 RID: 165876
+		// Token: 0x04023B32 RID: 146226
 		public const int RewardRoot = 2;
 
-		// Token: 0x040287F5 RID: 165877
+		// Token: 0x04023B33 RID: 146227
 		public const int ReceivedItem = 3;
 	}
 }

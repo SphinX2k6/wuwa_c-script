@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C2B RID: 3115
+	// Token: 0x02000CFE RID: 3326
 	public class IExtraRangeType
 	{
-		// Token: 0x0600475E RID: 18270 RVA: 0x000B3BC6 File Offset: 0x000B1DC6
-		[NullableContext(1)]
+		// Token: 0x06004BCE RID: 19406 RVA: 0x000BDF76 File Offset: 0x000BC176
 		public static IExtraRangeType Create(IExtraRangeType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014C5 RID: 5317
-		// (get) Token: 0x0600475F RID: 18271 RVA: 0x000B3BE5 File Offset: 0x000B1DE5
+		// Token: 0x170015CD RID: 5581
+		// (get) Token: 0x06004BCF RID: 19407 RVA: 0x000BDF95 File Offset: 0x000BC195
 		public virtual EExtraRangeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002884 RID: 10372
+		// Token: 0x04002AD9 RID: 10969
 		private IExtraRangeType Instance;
 	}
 }

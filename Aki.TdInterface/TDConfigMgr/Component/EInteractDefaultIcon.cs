@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000C2 RID: 194
+	// Token: 0x020000CA RID: 202
 	[EnumExtensions]
 	public enum EInteractDefaultIcon
 	{
-		// Token: 0x04000455 RID: 1109
+		// Token: 0x04000479 RID: 1145
 		Collect,
-		// Token: 0x04000456 RID: 1110
+		// Token: 0x0400047A RID: 1146
 		BigTeleporter,
-		// Token: 0x04000457 RID: 1111
+		// Token: 0x0400047B RID: 1147
 		SmallTeleporter,
-		// Token: 0x04000458 RID: 1112
+		// Token: 0x0400047C RID: 1148
 		TreasureBox,
-		// Token: 0x04000459 RID: 1113
+		// Token: 0x0400047D RID: 1149
 		UnknownCollect
 	}
 }

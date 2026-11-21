@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B8 RID: 22200
+	// Token: 0x0200468E RID: 18062
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginServerView : UiViewBase
 	{
-		// Token: 0x06038775 RID: 231285 RVA: 0x00D67F72 File Offset: 0x00D66172
+		// Token: 0x0602D672 RID: 185970 RVA: 0x00CB6136 File Offset: 0x00CB4336
 		public LoginServerView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038776 RID: 231286 RVA: 0x00D67F7C File Offset: 0x00D6617C
+		// Token: 0x0602D673 RID: 185971 RVA: 0x00CB6140 File Offset: 0x00CB4340
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Login
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038777 RID: 231287 RVA: 0x00D68088 File Offset: 0x00D66288
+		// Token: 0x0602D674 RID: 185972 RVA: 0x00CB624C File Offset: 0x00CB444C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LoginServerView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Login
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038778 RID: 231288 RVA: 0x00D680CC File Offset: 0x00D662CC
+		// Token: 0x0602D675 RID: 185973 RVA: 0x00CB6290 File Offset: 0x00CB4490
 		protected override void OnStart()
 		{
 			LoginServerModel.Instance.CurrentUiSelectSeverData = LoginServerModel.Instance.CurrentSelectServerData;
@@ -70,19 +70,19 @@ namespace CSharpScript.Game.Module.Login
 			this.TryMoveToItem(loginServersByClientRegion);
 		}
 
-		// Token: 0x06038779 RID: 231289 RVA: 0x00D68112 File Offset: 0x00D66312
+		// Token: 0x0602D676 RID: 185974 RVA: 0x00CB62D6 File Offset: 0x00CB44D6
 		private LoginServerItem OnItemCreate(ILoginServersData data, UUIItem uiItem, int index)
 		{
 			return new LoginServerItem();
 		}
 
-		// Token: 0x0603877A RID: 231290 RVA: 0x00D68119 File Offset: 0x00D66319
+		// Token: 0x0602D677 RID: 185975 RVA: 0x00CB62DD File Offset: 0x00CB44DD
 		private void OnClickExitBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603877B RID: 231291 RVA: 0x00D68124 File Offset: 0x00D66324
+		// Token: 0x0602D678 RID: 185976 RVA: 0x00CB62E8 File Offset: 0x00CB44E8
 		private void OnClickComfirmBtn()
 		{
 			ILoginServersData currentUiSelectSeverData = LoginServerModel.Instance.CurrentUiSelectSeverData;
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.Module.Login
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603877C RID: 231292 RVA: 0x00D6819B File Offset: 0x00D6639B
+		// Token: 0x0602D679 RID: 185977 RVA: 0x00CB635F File Offset: 0x00CB455F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnGetLoginPlayerInfo, new Action(this.OnGetLoginPlayerInfo));
 		}
 
-		// Token: 0x0603877D RID: 231293 RVA: 0x00D681B6 File Offset: 0x00D663B6
+		// Token: 0x0602D67A RID: 185978 RVA: 0x00CB637A File Offset: 0x00CB457A
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnGetLoginPlayerInfo, new Action(this.OnGetLoginPlayerInfo));
 		}
 
-		// Token: 0x0603877E RID: 231294 RVA: 0x00D681D4 File Offset: 0x00D663D4
+		// Token: 0x0602D67B RID: 185979 RVA: 0x00CB6398 File Offset: 0x00CB4598
 		private void OnGetLoginPlayerInfo()
 		{
 			if (this.ScrollView == null)
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x0603877F RID: 231295 RVA: 0x00D6821C File Offset: 0x00D6641C
+		// Token: 0x0602D67C RID: 185980 RVA: 0x00CB63E0 File Offset: 0x00CB45E0
 		private void TryMoveToItem(List<ILoginServersData> dataList)
 		{
 			if (dataList == null || dataList.Count == 0)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Login
 			uidynScrollViewComponent.ScrollToItemIndex(recommendedServerIndex, true, 0f, false);
 		}
 
-		// Token: 0x06038780 RID: 231296 RVA: 0x00D68258 File Offset: 0x00D66458
+		// Token: 0x0602D67D RID: 185981 RVA: 0x00CB641C File Offset: 0x00CB461C
 		private int GetRecommendedServerIndex(List<ILoginServersData> dataList)
 		{
 			ILoginServersData currentUiSelectSeverData = LoginServerModel.Instance.CurrentUiSelectSeverData;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Login
 			return 0;
 		}
 
-		// Token: 0x06038781 RID: 231297 RVA: 0x00D68293 File Offset: 0x00D66493
+		// Token: 0x0602D67E RID: 185982 RVA: 0x00CB6457 File Offset: 0x00CB4657
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ScrollView != null)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x0401DA7C RID: 121468
+		// Token: 0x04018507 RID: 99591
 		[Nullable(new byte[]
 		{
 			2,
@@ -183,20 +183,20 @@ namespace CSharpScript.Game.Module.Login
 		})]
 		private DynamicScrollView<LoginServerItem, LoginServerDynItem, ILoginServersData> ScrollView;
 
-		// Token: 0x0401DA7D RID: 121469
+		// Token: 0x04018508 RID: 99592
 		private LoginServerDynItem LoginServerDynItem;
 
-		// Token: 0x0200B878 RID: 47224
+		// Token: 0x0200A29F RID: 41631
 		[NullableContext(0)]
 		public enum EComponents
 		{
-			// Token: 0x04037D64 RID: 228708
+			// Token: 0x0403277E RID: 206718
 			ExitBtn,
-			// Token: 0x04037D65 RID: 228709
+			// Token: 0x0403277F RID: 206719
 			ComfirmBtn,
-			// Token: 0x04037D66 RID: 228710
+			// Token: 0x04032780 RID: 206720
 			ScrollView,
-			// Token: 0x04037D67 RID: 228711
+			// Token: 0x04032781 RID: 206721
 			ScrollItem
 		}
 	}

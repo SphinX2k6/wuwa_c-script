@@ -2,38 +2,38 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D63 RID: 11619
+// Token: 0x020022BD RID: 8893
 [NullableContext(1)]
 public interface IWeeklyRogueRewardPopViewData
 {
-	// Token: 0x170020F6 RID: 8438
-	// (get) Token: 0x060186E9 RID: 100073
-	// (set) Token: 0x060186EA RID: 100074
+	// Token: 0x17002151 RID: 8529
+	// (get) Token: 0x06015F8B RID: 89995
+	// (set) Token: 0x06015F8C RID: 89996
 	int SinglePowerCost { get; set; }
 
-	// Token: 0x170020F7 RID: 8439
-	// (get) Token: 0x060186EB RID: 100075
-	// (set) Token: 0x060186EC RID: 100076
+	// Token: 0x17002152 RID: 8530
+	// (get) Token: 0x06015F8D RID: 89997
+	// (set) Token: 0x06015F8E RID: 89998
 	Action<int, int> RewardCallBack { get; set; }
 
-	// Token: 0x170020F8 RID: 8440
-	// (get) Token: 0x060186ED RID: 100077
-	// (set) Token: 0x060186EE RID: 100078
+	// Token: 0x17002153 RID: 8531
+	// (get) Token: 0x06015F8F RID: 89999
+	// (set) Token: 0x06015F90 RID: 90000
 	[Nullable(2)]
 	Action CloseCallBack { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x170020F9 RID: 8441
-	// (get) Token: 0x060186EF RID: 100079
-	// (set) Token: 0x060186F0 RID: 100080
+	// Token: 0x17002154 RID: 8532
+	// (get) Token: 0x06015F91 RID: 90001
+	// (set) Token: 0x06015F92 RID: 90002
 	List<int> AvailableSilentArea { get; set; }
 
-	// Token: 0x170020FA RID: 8442
-	// (get) Token: 0x060186F1 RID: 100081
-	// (set) Token: 0x060186F2 RID: 100082
+	// Token: 0x17002155 RID: 8533
+	// (get) Token: 0x06015F93 RID: 90003
+	// (set) Token: 0x06015F94 RID: 90004
 	int FreeCount { get; set; }
 
-	// Token: 0x170020FB RID: 8443
-	// (get) Token: 0x060186F3 RID: 100083
-	// (set) Token: 0x060186F4 RID: 100084
+	// Token: 0x17002156 RID: 8534
+	// (get) Token: 0x06015F95 RID: 90005
+	// (set) Token: 0x06015F96 RID: 90006
 	int FreeMax { get; set; }
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200212F RID: 8495
+	// Token: 0x020006ED RID: 1773
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIBatchGeometryRenderable")]
 	[UnrealStructLayout(2192, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2192)]
 	public abstract class UUIBatchGeometryRenderable : UUIBaseRenderable, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601FF81 RID: 130945 RVA: 0x002F8AE1 File Offset: 0x002F6CE1
+		// Token: 0x06009671 RID: 38513 RVA: 0x000E2F41 File Offset: 0x000E1141
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIBatchGeometryRenderable._ClassPtr;
 		}
 
-		// Token: 0x17007D9E RID: 32158
-		// (get) Token: 0x0601FF82 RID: 130946 RVA: 0x002F8AF0 File Offset: 0x002F6CF0
-		// (set) Token: 0x0601FF83 RID: 130947 RVA: 0x002F8B29 File Offset: 0x002F6D29
+		// Token: 0x17001BE7 RID: 7143
+		// (get) Token: 0x06009672 RID: 38514 RVA: 0x000E2F50 File Offset: 0x000E1150
+		// (set) Token: 0x06009673 RID: 38515 RVA: 0x000E2F89 File Offset: 0x000E1189
 		[Nullable(1)]
 		public TMap<FName, float> CustomScalarParameterTMap
 		{
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D9F RID: 32159
-		// (get) Token: 0x0601FF84 RID: 130948 RVA: 0x002F8B38 File Offset: 0x002F6D38
-		// (set) Token: 0x0601FF85 RID: 130949 RVA: 0x002F8B71 File Offset: 0x002F6D71
+		// Token: 0x17001BE8 RID: 7144
+		// (get) Token: 0x06009674 RID: 38516 RVA: 0x000E2F98 File Offset: 0x000E1198
+		// (set) Token: 0x06009675 RID: 38517 RVA: 0x000E2FD1 File Offset: 0x000E11D1
 		[Nullable(1)]
 		public TMap<FName, UTexture> CustomTextureParameterTMap
 		{
@@ -67,9 +67,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA0 RID: 32160
-		// (get) Token: 0x0601FF86 RID: 130950 RVA: 0x002F8B80 File Offset: 0x002F6D80
-		// (set) Token: 0x0601FF87 RID: 130951 RVA: 0x002F8BB9 File Offset: 0x002F6DB9
+		// Token: 0x17001BE9 RID: 7145
+		// (get) Token: 0x06009676 RID: 38518 RVA: 0x000E2FE0 File Offset: 0x000E11E0
+		// (set) Token: 0x06009677 RID: 38519 RVA: 0x000E3019 File Offset: 0x000E1219
 		[Nullable(1)]
 		public TMap<FName, FLinearColor> CustomVectorParameterTMap
 		{
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA1 RID: 32161
-		// (get) Token: 0x0601FF88 RID: 130952 RVA: 0x002F8BC7 File Offset: 0x002F6DC7
-		// (set) Token: 0x0601FF89 RID: 130953 RVA: 0x002F8BDB File Offset: 0x002F6DDB
+		// Token: 0x17001BEA RID: 7146
+		// (get) Token: 0x06009678 RID: 38520 RVA: 0x000E3027 File Offset: 0x000E1227
+		// (set) Token: 0x06009679 RID: 38521 RVA: 0x000E303B File Offset: 0x000E123B
 		public unsafe UMaterialInterface CustomUIMaterial
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA2 RID: 32162
-		// (get) Token: 0x0601FF8A RID: 130954 RVA: 0x002F8BF0 File Offset: 0x002F6DF0
-		// (set) Token: 0x0601FF8B RID: 130955 RVA: 0x002F8C00 File Offset: 0x002F6E00
+		// Token: 0x17001BEB RID: 7147
+		// (get) Token: 0x0600967A RID: 38522 RVA: 0x000E3050 File Offset: 0x000E1250
+		// (set) Token: 0x0600967B RID: 38523 RVA: 0x000E3060 File Offset: 0x000E1260
 		public unsafe bool bIsSelfRender
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA3 RID: 32163
-		// (get) Token: 0x0601FF8C RID: 130956 RVA: 0x002F8C11 File Offset: 0x002F6E11
-		// (set) Token: 0x0601FF8D RID: 130957 RVA: 0x002F8C21 File Offset: 0x002F6E21
+		// Token: 0x17001BEC RID: 7148
+		// (get) Token: 0x0600967C RID: 38524 RVA: 0x000E3071 File Offset: 0x000E1271
+		// (set) Token: 0x0600967D RID: 38525 RVA: 0x000E3081 File Offset: 0x000E1281
 		public unsafe bool bIsGray
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA4 RID: 32164
-		// (get) Token: 0x0601FF8E RID: 130958 RVA: 0x002F8C32 File Offset: 0x002F6E32
-		// (set) Token: 0x0601FF8F RID: 130959 RVA: 0x002F8C42 File Offset: 0x002F6E42
+		// Token: 0x17001BED RID: 7149
+		// (get) Token: 0x0600967E RID: 38526 RVA: 0x000E3092 File Offset: 0x000E1292
+		// (set) Token: 0x0600967F RID: 38527 RVA: 0x000E30A2 File Offset: 0x000E12A2
 		public unsafe bool bIsColorRevert
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA5 RID: 32165
-		// (get) Token: 0x0601FF90 RID: 130960 RVA: 0x002F8C53 File Offset: 0x002F6E53
-		// (set) Token: 0x0601FF91 RID: 130961 RVA: 0x002F8C63 File Offset: 0x002F6E63
+		// Token: 0x17001BEE RID: 7150
+		// (get) Token: 0x06009680 RID: 38528 RVA: 0x000E30B3 File Offset: 0x000E12B3
+		// (set) Token: 0x06009681 RID: 38529 RVA: 0x000E30C3 File Offset: 0x000E12C3
 		public unsafe bool bRaycastComplex
 		{
 			get
@@ -166,24 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007DA6 RID: 32166
-		// (get) Token: 0x0601FF92 RID: 130962 RVA: 0x002F8C74 File Offset: 0x002F6E74
-		// (set) Token: 0x0601FF93 RID: 130963 RVA: 0x002F8C88 File Offset: 0x002F6E88
-		public unsafe UUIDrawcallMesh uiMesh
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UUIDrawcallMesh>(base.NativePtr / (IntPtr)sizeof(void*) + UUIBatchGeometryRenderable.__PropertyOffset_uiMesh);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UUIBatchGeometryRenderable.__PropertyOffset_uiMesh, value);
-			}
-		}
-
-		// Token: 0x17007DA7 RID: 32167
-		// (get) Token: 0x0601FF94 RID: 130964 RVA: 0x002F8C9D File Offset: 0x002F6E9D
-		// (set) Token: 0x0601FF95 RID: 130965 RVA: 0x002F8CB1 File Offset: 0x002F6EB1
+		// Token: 0x17001BEF RID: 7151
+		// (get) Token: 0x06009682 RID: 38530 RVA: 0x000E30D4 File Offset: 0x000E12D4
+		// (set) Token: 0x06009683 RID: 38531 RVA: 0x000E30E8 File Offset: 0x000E12E8
 		public unsafe UMaterialInstanceDynamic uiMaterial
 		{
 			get
@@ -196,212 +181,212 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FF96 RID: 130966 RVA: 0x002F8CC6 File Offset: 0x002F6EC6
+		// Token: 0x06009684 RID: 38532 RVA: 0x000E30FD File Offset: 0x000E12FD
 		public void SetRaycastComplex(bool newValue)
 		{
 			UUIBatchGeometryRenderable.__SetRaycastComplex_Internal(base.NativePtr, newValue);
 		}
 
-		// Token: 0x0601FF97 RID: 130967 RVA: 0x002F8CD4 File Offset: 0x002F6ED4
+		// Token: 0x06009685 RID: 38533 RVA: 0x000E310B File Offset: 0x000E130B
 		public void SetKuroRenderingMaterial(UMaterialInstanceDynamic inMat)
 		{
 			UUIBatchGeometryRenderable.__SetKuroRenderingMaterial_Internal(base.NativePtr, (inMat != null) ? inMat.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FF98 RID: 130968 RVA: 0x002F8CF1 File Offset: 0x002F6EF1
+		// Token: 0x06009686 RID: 38534 RVA: 0x000E3128 File Offset: 0x000E1328
 		public void SetIsSelfRender(bool value)
 		{
 			UUIBatchGeometryRenderable.__SetIsSelfRender_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0601FF99 RID: 130969 RVA: 0x002F8CFF File Offset: 0x002F6EFF
+		// Token: 0x06009687 RID: 38535 RVA: 0x000E3136 File Offset: 0x000E1336
 		public void SetIsGray(bool value)
 		{
 			UUIBatchGeometryRenderable.__SetIsGray_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0601FF9A RID: 130970 RVA: 0x002F8D0D File Offset: 0x002F6F0D
+		// Token: 0x06009688 RID: 38536 RVA: 0x000E3144 File Offset: 0x000E1344
 		public void SetIsColorRevert(bool value)
 		{
 			UUIBatchGeometryRenderable.__SetIsColorRevert_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x0601FF9B RID: 130971 RVA: 0x002F8D1B File Offset: 0x002F6F1B
+		// Token: 0x06009689 RID: 38537 RVA: 0x000E3152 File Offset: 0x000E1352
 		public void SetCustomUIMaterial(UMaterialInterface inMat)
 		{
 			UUIBatchGeometryRenderable.__SetCustomUIMaterial_Internal(base.NativePtr, (inMat != null) ? inMat.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FF9C RID: 130972 RVA: 0x002F8D38 File Offset: 0x002F6F38
+		// Token: 0x0600968A RID: 38538 RVA: 0x000E316F File Offset: 0x000E136F
 		public void SetCustomMaterialVectorParameter(FName paramterName, FLinearColor Value)
 		{
 			UUIBatchGeometryRenderable.__SetCustomMaterialVectorParameter_Internal(base.NativePtr, paramterName, Value);
 		}
 
-		// Token: 0x0601FF9D RID: 130973 RVA: 0x002F8D47 File Offset: 0x002F6F47
+		// Token: 0x0600968B RID: 38539 RVA: 0x000E317E File Offset: 0x000E137E
 		public void SetCustomMaterialTextureParameter(FName ParameterName, UTexture value)
 		{
 			UUIBatchGeometryRenderable.__SetCustomMaterialTextureParameter_Internal(base.NativePtr, ParameterName, (value != null) ? value.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FF9E RID: 130974 RVA: 0x002F8D65 File Offset: 0x002F6F65
+		// Token: 0x0600968C RID: 38540 RVA: 0x000E319C File Offset: 0x000E139C
 		public void SetCustomMaterialScalarParameter(FName paramterName, float value)
 		{
 			UUIBatchGeometryRenderable.__SetCustomMaterialScalarParameter_Internal(base.NativePtr, paramterName, value);
 		}
 
-		// Token: 0x0601FF9F RID: 130975 RVA: 0x002F8D74 File Offset: 0x002F6F74
+		// Token: 0x0600968D RID: 38541 RVA: 0x000E31AB File Offset: 0x000E13AB
 		public bool IsGray()
 		{
 			return UUIBatchGeometryRenderable.__IsGray_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FFA0 RID: 130976 RVA: 0x002F8D81 File Offset: 0x002F6F81
+		// Token: 0x0600968E RID: 38542 RVA: 0x000E31B8 File Offset: 0x000E13B8
 		public bool IsColorRevert()
 		{
 			return UUIBatchGeometryRenderable.__IsColorRevert_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FFA1 RID: 130977 RVA: 0x002F8D8E File Offset: 0x002F6F8E
+		// Token: 0x0600968F RID: 38543 RVA: 0x000E31C5 File Offset: 0x000E13C5
 		public bool GetRaycastComplex()
 		{
 			return UUIBatchGeometryRenderable.__GetRaycastComplex_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FFA2 RID: 130978 RVA: 0x002F8D9B File Offset: 0x002F6F9B
+		// Token: 0x06009690 RID: 38544 RVA: 0x000E31D2 File Offset: 0x000E13D2
 		public UMaterialInstanceDynamic GetMaterialInstanceDynamic()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInstanceDynamic>(UUIBatchGeometryRenderable.__GetMaterialInstanceDynamic_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601FFA3 RID: 130979 RVA: 0x002F8DAD File Offset: 0x002F6FAD
+		// Token: 0x06009691 RID: 38545 RVA: 0x000E31E4 File Offset: 0x000E13E4
 		public UMaterialInterface GetKuroRenderingMaterial()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInterface>(UUIBatchGeometryRenderable.__GetKuroRenderingMaterial_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601FFA4 RID: 130980 RVA: 0x002F8DBF File Offset: 0x002F6FBF
+		// Token: 0x06009692 RID: 38546 RVA: 0x000E31F6 File Offset: 0x000E13F6
 		public bool GetIsSelfRender()
 		{
 			return UUIBatchGeometryRenderable.__GetIsSelfRender_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FFA5 RID: 130981 RVA: 0x002F8DCC File Offset: 0x002F6FCC
+		// Token: 0x06009693 RID: 38547 RVA: 0x000E3203 File Offset: 0x000E1403
 		public UMaterialInterface GetCustomUIMaterial()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMaterialInterface>(UUIBatchGeometryRenderable.__GetCustomUIMaterial_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601FFA6 RID: 130982 RVA: 0x002F8DDE File Offset: 0x002F6FDE
+		// Token: 0x06009694 RID: 38548 RVA: 0x000E3215 File Offset: 0x000E1415
 		public void ClearCustomMaterialParameterInMap()
 		{
 			UUIBatchGeometryRenderable.__ClearCustomMaterialParameterInMap_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FFA7 RID: 130983
+		// Token: 0x06009695 RID: 38549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetRaycastComplex_Internal(IntPtr @this, bool newValue);
 
-		// Token: 0x0601FFA8 RID: 130984
+		// Token: 0x06009696 RID: 38550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetKuroRenderingMaterial_Internal(IntPtr @this, IntPtr inMat);
 
-		// Token: 0x0601FFA9 RID: 130985
+		// Token: 0x06009697 RID: 38551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIsSelfRender_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0601FFAA RID: 130986
+		// Token: 0x06009698 RID: 38552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIsGray_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0601FFAB RID: 130987
+		// Token: 0x06009699 RID: 38553
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetIsColorRevert_Internal(IntPtr @this, bool value);
 
-		// Token: 0x0601FFAC RID: 130988
+		// Token: 0x0600969A RID: 38554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomUIMaterial_Internal(IntPtr @this, IntPtr inMat);
 
-		// Token: 0x0601FFAD RID: 130989
+		// Token: 0x0600969B RID: 38555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomMaterialVectorParameter_Internal(IntPtr @this, FName paramterName, FLinearColor Value);
 
-		// Token: 0x0601FFAE RID: 130990
+		// Token: 0x0600969C RID: 38556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomMaterialTextureParameter_Internal(IntPtr @this, FName ParameterName, IntPtr value);
 
-		// Token: 0x0601FFAF RID: 130991
+		// Token: 0x0600969D RID: 38557
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCustomMaterialScalarParameter_Internal(IntPtr @this, FName paramterName, float value);
 
-		// Token: 0x0601FFB0 RID: 130992
+		// Token: 0x0600969E RID: 38558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsGray_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB1 RID: 130993
+		// Token: 0x0600969F RID: 38559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsColorRevert_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB2 RID: 130994
+		// Token: 0x060096A0 RID: 38560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetRaycastComplex_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB3 RID: 130995
+		// Token: 0x060096A1 RID: 38561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMaterialInstanceDynamic_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB4 RID: 130996
+		// Token: 0x060096A2 RID: 38562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetKuroRenderingMaterial_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB5 RID: 130997
+		// Token: 0x060096A3 RID: 38563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIsSelfRender_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB6 RID: 130998
+		// Token: 0x060096A4 RID: 38564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCustomUIMaterial_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB7 RID: 130999
+		// Token: 0x060096A5 RID: 38565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearCustomMaterialParameterInMap_Internal(IntPtr @this);
 
-		// Token: 0x0601FFB8 RID: 131000 RVA: 0x002F8DEB File Offset: 0x002F6FEB
+		// Token: 0x060096A6 RID: 38566 RVA: 0x000E3222 File Offset: 0x000E1422
 		static UUIBatchGeometryRenderable()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIBatchGeometryRenderable");
 		}
 
-		// Token: 0x0601FFB9 RID: 131001 RVA: 0x002F8DFC File Offset: 0x002F6FFC
+		// Token: 0x060096A7 RID: 38567 RVA: 0x000E3230 File Offset: 0x000E1430
 		protected UUIBatchGeometryRenderable() : this(BuiltinUtils.AllocNativeUObject(UUIBatchGeometryRenderable.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601FFBA RID: 131002 RVA: 0x002F8E24 File Offset: 0x002F7024
+		// Token: 0x060096A8 RID: 38568 RVA: 0x000E3258 File Offset: 0x000E1458
 		protected UUIBatchGeometryRenderable(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401136E RID: 70510
+		// Token: 0x0400416C RID: 16748
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIBatchGeometryRenderable";
 
-		// Token: 0x0401136F RID: 70511
+		// Token: 0x0400416D RID: 16749
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011370 RID: 70512
+		// Token: 0x0400416E RID: 16750
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011371 RID: 70513
+		// Token: 0x0400416F RID: 16751
 		internal static int __PropertyOffset_CustomScalarParameterTMap;
 
-		// Token: 0x04011372 RID: 70514
+		// Token: 0x04004170 RID: 16752
 		private TMap<FName, float> _CustomScalarParameterTMap;
 
-		// Token: 0x04011373 RID: 70515
+		// Token: 0x04004171 RID: 16753
 		internal static int __PropertyOffset_CustomTextureParameterTMap;
 
-		// Token: 0x04011374 RID: 70516
+		// Token: 0x04004172 RID: 16754
 		[Nullable(new byte[]
 		{
 			2,
@@ -409,31 +394,28 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, UTexture> _CustomTextureParameterTMap;
 
-		// Token: 0x04011375 RID: 70517
+		// Token: 0x04004173 RID: 16755
 		internal static int __PropertyOffset_CustomVectorParameterTMap;
 
-		// Token: 0x04011376 RID: 70518
+		// Token: 0x04004174 RID: 16756
 		private TMap<FName, FLinearColor> _CustomVectorParameterTMap;
 
-		// Token: 0x04011377 RID: 70519
+		// Token: 0x04004175 RID: 16757
 		internal static int __PropertyOffset_CustomUIMaterial;
 
-		// Token: 0x04011378 RID: 70520
+		// Token: 0x04004176 RID: 16758
 		internal static int __PropertyOffset_bIsSelfRender;
 
-		// Token: 0x04011379 RID: 70521
+		// Token: 0x04004177 RID: 16759
 		internal static int __PropertyOffset_bIsGray;
 
-		// Token: 0x0401137A RID: 70522
+		// Token: 0x04004178 RID: 16760
 		internal static int __PropertyOffset_bIsColorRevert;
 
-		// Token: 0x0401137B RID: 70523
+		// Token: 0x04004179 RID: 16761
 		internal static int __PropertyOffset_bRaycastComplex;
 
-		// Token: 0x0401137C RID: 70524
-		internal static int __PropertyOffset_uiMesh;
-
-		// Token: 0x0401137D RID: 70525
+		// Token: 0x0400417A RID: 16762
 		internal static int __PropertyOffset_uiMaterial;
 	}
 }

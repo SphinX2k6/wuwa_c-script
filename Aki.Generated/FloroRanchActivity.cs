@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C9F RID: 3231
+	// Token: 0x02000D83 RID: 3459
 	public struct FloroRanchActivity : IFlatbufferObject
 	{
-		// Token: 0x17001282 RID: 4738
-		// (get) Token: 0x0600723A RID: 29242 RVA: 0x0023850C File Offset: 0x0023670C
+		// Token: 0x170012DF RID: 4831
+		// (get) Token: 0x06007845 RID: 30789 RVA: 0x002574D4 File Offset: 0x002556D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600723B RID: 29243 RVA: 0x00238519 File Offset: 0x00236719
+		// Token: 0x06007846 RID: 30790 RVA: 0x002574E1 File Offset: 0x002556E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600723C RID: 29244 RVA: 0x00238520 File Offset: 0x00236720
+		// Token: 0x06007847 RID: 30791 RVA: 0x002574E8 File Offset: 0x002556E8
 		public static FloroRanchActivity GetRootAsFloroRanchActivity(ByteBuffer _bb)
 		{
 			return FloroRanchActivity.GetRootAsFloroRanchActivity(_bb, default(FloroRanchActivity));
 		}
 
-		// Token: 0x0600723D RID: 29245 RVA: 0x0023853C File Offset: 0x0023673C
+		// Token: 0x06007848 RID: 30792 RVA: 0x00257504 File Offset: 0x00255704
 		public static FloroRanchActivity GetRootAsFloroRanchActivity(ByteBuffer _bb, FloroRanchActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600723E RID: 29246 RVA: 0x00238559 File Offset: 0x00236759
+		// Token: 0x06007849 RID: 30793 RVA: 0x00257521 File Offset: 0x00255721
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600723F RID: 29247 RVA: 0x00238568 File Offset: 0x00236768
+		// Token: 0x0600784A RID: 30794 RVA: 0x00257530 File Offset: 0x00255730
 		public FloroRanchActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001283 RID: 4739
-		// (get) Token: 0x06007240 RID: 29248 RVA: 0x00238578 File Offset: 0x00236778
+		// Token: 0x170012E0 RID: 4832
+		// (get) Token: 0x0600784B RID: 30795 RVA: 0x00257540 File Offset: 0x00255740
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001284 RID: 4740
-		// (get) Token: 0x06007241 RID: 29249 RVA: 0x002385B4 File Offset: 0x002367B4
+		// Token: 0x170012E1 RID: 4833
+		// (get) Token: 0x0600784C RID: 30796 RVA: 0x0025757C File Offset: 0x0025577C
 		public int ActivityType
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001285 RID: 4741
-		// (get) Token: 0x06007242 RID: 29250 RVA: 0x002385F0 File Offset: 0x002367F0
+		// Token: 0x170012E2 RID: 4834
+		// (get) Token: 0x0600784D RID: 30797 RVA: 0x002575B8 File Offset: 0x002557B8
 		public int TechTreeCoinId
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001286 RID: 4742
-		// (get) Token: 0x06007243 RID: 29251 RVA: 0x0023862C File Offset: 0x0023682C
+		// Token: 0x170012E3 RID: 4835
+		// (get) Token: 0x0600784E RID: 30798 RVA: 0x002575F4 File Offset: 0x002557F4
 		public int ResetGachaBaseCost
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001287 RID: 4743
-		// (get) Token: 0x06007244 RID: 29252 RVA: 0x0023866C File Offset: 0x0023686C
+		// Token: 0x170012E4 RID: 4836
+		// (get) Token: 0x0600784F RID: 30799 RVA: 0x00257634 File Offset: 0x00255834
 		public int ResetGachaRiseCost
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001288 RID: 4744
-		// (get) Token: 0x06007245 RID: 29253 RVA: 0x002386AC File Offset: 0x002368AC
+		// Token: 0x170012E5 RID: 4837
+		// (get) Token: 0x06007850 RID: 30800 RVA: 0x00257674 File Offset: 0x00255874
 		public int ResetShopBaseCost
 		{
 			get
@@ -140,8 +140,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001289 RID: 4745
-		// (get) Token: 0x06007246 RID: 29254 RVA: 0x002386EC File Offset: 0x002368EC
+		// Token: 0x170012E6 RID: 4838
+		// (get) Token: 0x06007851 RID: 30801 RVA: 0x002576B4 File Offset: 0x002558B4
 		public int ResetShopRiseCost
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128A RID: 4746
-		// (get) Token: 0x06007247 RID: 29255 RVA: 0x0023872C File Offset: 0x0023692C
+		// Token: 0x170012E7 RID: 4839
+		// (get) Token: 0x06007852 RID: 30802 RVA: 0x002576F4 File Offset: 0x002558F4
 		public int UnlimitedParamBase
 		{
 			get
@@ -170,8 +170,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128B RID: 4747
-		// (get) Token: 0x06007248 RID: 29256 RVA: 0x0023876C File Offset: 0x0023696C
+		// Token: 0x170012E8 RID: 4840
+		// (get) Token: 0x06007853 RID: 30803 RVA: 0x00257734 File Offset: 0x00255934
 		public int UnlimitedParamRise
 		{
 			get
@@ -185,8 +185,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128C RID: 4748
-		// (get) Token: 0x06007249 RID: 29257 RVA: 0x002387AC File Offset: 0x002369AC
+		// Token: 0x170012E9 RID: 4841
+		// (get) Token: 0x06007854 RID: 30804 RVA: 0x00257774 File Offset: 0x00255974
 		public int EventCD
 		{
 			get
@@ -200,8 +200,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128D RID: 4749
-		// (get) Token: 0x0600724A RID: 29258 RVA: 0x002387EC File Offset: 0x002369EC
+		// Token: 0x170012EA RID: 4842
+		// (get) Token: 0x06007855 RID: 30805 RVA: 0x002577B4 File Offset: 0x002559B4
 		public int Speed
 		{
 			get
@@ -215,8 +215,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128E RID: 4750
-		// (get) Token: 0x0600724B RID: 29259 RVA: 0x0023882C File Offset: 0x00236A2C
+		// Token: 0x170012EB RID: 4843
+		// (get) Token: 0x06007856 RID: 30806 RVA: 0x002577F4 File Offset: 0x002559F4
 		public int MilestoneItemId
 		{
 			get
@@ -230,8 +230,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700128F RID: 4751
-		// (get) Token: 0x0600724C RID: 29260 RVA: 0x0023886C File Offset: 0x00236A6C
+		// Token: 0x170012EC RID: 4844
+		// (get) Token: 0x06007857 RID: 30807 RVA: 0x00257834 File Offset: 0x00255A34
 		public int CardItemId
 		{
 			get
@@ -245,8 +245,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001290 RID: 4752
-		// (get) Token: 0x0600724D RID: 29261 RVA: 0x002388AC File Offset: 0x00236AAC
+		// Token: 0x170012ED RID: 4845
+		// (get) Token: 0x06007858 RID: 30808 RVA: 0x00257874 File Offset: 0x00255A74
 		public int MaxToyNum
 		{
 			get
@@ -260,8 +260,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001291 RID: 4753
-		// (get) Token: 0x0600724E RID: 29262 RVA: 0x002388EC File Offset: 0x00236AEC
+		// Token: 0x170012EE RID: 4846
+		// (get) Token: 0x06007859 RID: 30809 RVA: 0x002578B4 File Offset: 0x00255AB4
 		public int TechPointItem
 		{
 			get
@@ -275,8 +275,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001292 RID: 4754
-		// (get) Token: 0x0600724F RID: 29263 RVA: 0x0023892C File Offset: 0x00236B2C
+		// Token: 0x170012EF RID: 4847
+		// (get) Token: 0x0600785A RID: 30810 RVA: 0x002578F4 File Offset: 0x00255AF4
 		public int AnimalNumLimit
 		{
 			get
@@ -290,8 +290,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001293 RID: 4755
-		// (get) Token: 0x06007250 RID: 29264 RVA: 0x0023896C File Offset: 0x00236B6C
+		// Token: 0x170012F0 RID: 4848
+		// (get) Token: 0x0600785B RID: 30811 RVA: 0x00257934 File Offset: 0x00255B34
 		public int ComicIntervalTime
 		{
 			get
@@ -305,8 +305,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001294 RID: 4756
-		// (get) Token: 0x06007251 RID: 29265 RVA: 0x002389AC File Offset: 0x00236BAC
+		// Token: 0x170012F1 RID: 4849
+		// (get) Token: 0x0600785C RID: 30812 RVA: 0x00257974 File Offset: 0x00255B74
 		public int RecommendQuestId
 		{
 			get
@@ -320,7 +320,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007252 RID: 29266 RVA: 0x002389EC File Offset: 0x00236BEC
+		// Token: 0x0600785D RID: 30813 RVA: 0x002579B4 File Offset: 0x00255BB4
 		public int RecommendQuestLinkList(int j)
 		{
 			int num = this.__p.__offset(40);
@@ -331,8 +331,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001295 RID: 4757
-		// (get) Token: 0x06007253 RID: 29267 RVA: 0x00238A2C File Offset: 0x00236C2C
+		// Token: 0x170012F2 RID: 4850
+		// (get) Token: 0x0600785E RID: 30814 RVA: 0x002579F4 File Offset: 0x00255BF4
 		public int RecommendQuestLinkListLength
 		{
 			get
@@ -346,20 +346,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007254 RID: 29268 RVA: 0x00238A58 File Offset: 0x00236C58
+		// Token: 0x0600785F RID: 30815 RVA: 0x00257A20 File Offset: 0x00255C20
 		public Span<int> GetRecommendQuestLinkListBytes()
 		{
 			return this.__p.__vector_as_span<int>(40, 4);
 		}
 
-		// Token: 0x06007255 RID: 29269 RVA: 0x00238A68 File Offset: 0x00236C68
+		// Token: 0x06007860 RID: 30816 RVA: 0x00257A30 File Offset: 0x00255C30
 		public int[] GetRecommendQuestLinkListArray()
 		{
 			return this.__p.__vector_as_array<int>(40) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001296 RID: 4758
-		// (get) Token: 0x06007256 RID: 29270 RVA: 0x00238A80 File Offset: 0x00236C80
+		// Token: 0x170012F3 RID: 4851
+		// (get) Token: 0x06007861 RID: 30817 RVA: 0x00257A48 File Offset: 0x00255C48
 		public string RecommendQuestLabel
 		{
 			get
@@ -373,19 +373,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007257 RID: 29271 RVA: 0x00238AB8 File Offset: 0x00236CB8
+		// Token: 0x06007862 RID: 30818 RVA: 0x00257A80 File Offset: 0x00255C80
 		public Span<byte> GetRecommendQuestLabelBytes()
 		{
 			return this.__p.__vector_as_span<byte>(42, 1);
 		}
 
-		// Token: 0x06007258 RID: 29272 RVA: 0x00238AC8 File Offset: 0x00236CC8
+		// Token: 0x06007863 RID: 30819 RVA: 0x00257A90 File Offset: 0x00255C90
 		public byte[] GetRecommendQuestLabelArray()
 		{
 			return this.__p.__vector_as_array<byte>(42) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06007259 RID: 29273 RVA: 0x00238AE0 File Offset: 0x00236CE0
+		// Token: 0x06007864 RID: 30820 RVA: 0x00257AA8 File Offset: 0x00255CA8
 		public string Spine(int j)
 		{
 			int num = this.__p.__offset(44);
@@ -396,8 +396,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001297 RID: 4759
-		// (get) Token: 0x0600725A RID: 29274 RVA: 0x00238B1C File Offset: 0x00236D1C
+		// Token: 0x170012F4 RID: 4852
+		// (get) Token: 0x06007865 RID: 30821 RVA: 0x00257AE4 File Offset: 0x00255CE4
 		public int SpineLength
 		{
 			get
@@ -411,7 +411,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600725B RID: 29275 RVA: 0x00238B48 File Offset: 0x00236D48
+		// Token: 0x06007866 RID: 30822 RVA: 0x00257B10 File Offset: 0x00255D10
 		public string SpineSkeletonData(int j)
 		{
 			int num = this.__p.__offset(46);
@@ -422,8 +422,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001298 RID: 4760
-		// (get) Token: 0x0600725C RID: 29276 RVA: 0x00238B84 File Offset: 0x00236D84
+		// Token: 0x170012F5 RID: 4853
+		// (get) Token: 0x06007867 RID: 30823 RVA: 0x00257B4C File Offset: 0x00255D4C
 		public int SpineSkeletonDataLength
 		{
 			get
@@ -437,59 +437,55 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600725D RID: 29277 RVA: 0x00238BB0 File Offset: 0x00236DB0
+		// Token: 0x06007868 RID: 30824 RVA: 0x00257B78 File Offset: 0x00255D78
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RecommendQuestLinkListIter()或GetRecommendQuestLinkListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RecommendQuestLinkList()
+		public int[] RecommendQuestLinkList()
 		{
-			FloroRanchActivity floroRanchActivity = this;
-			return floroRanchActivity.GetRecommendQuestLinkListArray() ?? Array.Empty<int>();
+			return this.GetRecommendQuestLinkListArray();
 		}
 
-		// Token: 0x0600725E RID: 29278 RVA: 0x00238BD4 File Offset: 0x00236DD4
+		// Token: 0x06007869 RID: 30825 RVA: 0x00257B80 File Offset: 0x00255D80
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RecommendQuestLinkListIter()
+		public IEnumerable<int> RecommendQuestLinkListIter()
 		{
 			FloroRanchActivity.<RecommendQuestLinkListIter>d__60 <RecommendQuestLinkListIter>d__ = new FloroRanchActivity.<RecommendQuestLinkListIter>d__60(-2);
 			<RecommendQuestLinkListIter>d__.<>3__<>4__this = this;
 			return <RecommendQuestLinkListIter>d__;
 		}
 
-		// Token: 0x0600725F RID: 29279 RVA: 0x00238BE9 File Offset: 0x00236DE9
+		// Token: 0x0600786A RID: 30826 RVA: 0x00257B95 File Offset: 0x00255D95
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpineIter()或GetSpineBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Spine()
+		public string[] Spine()
 		{
 			return this.SpineIter().ToArray<string>();
 		}
 
-		// Token: 0x06007260 RID: 29280 RVA: 0x00238BF6 File Offset: 0x00236DF6
+		// Token: 0x0600786B RID: 30827 RVA: 0x00257BA2 File Offset: 0x00255DA2
 		[NullableContext(1)]
-		public readonly IEnumerable<string> SpineIter()
+		public IEnumerable<string> SpineIter()
 		{
 			FloroRanchActivity.<SpineIter>d__62 <SpineIter>d__ = new FloroRanchActivity.<SpineIter>d__62(-2);
 			<SpineIter>d__.<>3__<>4__this = this;
 			return <SpineIter>d__;
 		}
 
-		// Token: 0x06007261 RID: 29281 RVA: 0x00238C0B File Offset: 0x00236E0B
+		// Token: 0x0600786C RID: 30828 RVA: 0x00257BB7 File Offset: 0x00255DB7
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SpineSkeletonDataIter()或GetSpineSkeletonDataBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] SpineSkeletonData()
+		public string[] SpineSkeletonData()
 		{
 			return this.SpineSkeletonDataIter().ToArray<string>();
 		}
 
-		// Token: 0x06007262 RID: 29282 RVA: 0x00238C18 File Offset: 0x00236E18
+		// Token: 0x0600786D RID: 30829 RVA: 0x00257BC4 File Offset: 0x00255DC4
 		[NullableContext(1)]
-		public readonly IEnumerable<string> SpineSkeletonDataIter()
+		public IEnumerable<string> SpineSkeletonDataIter()
 		{
 			FloroRanchActivity.<SpineSkeletonDataIter>d__64 <SpineSkeletonDataIter>d__ = new FloroRanchActivity.<SpineSkeletonDataIter>d__64(-2);
 			<SpineSkeletonDataIter>d__.<>3__<>4__this = this;
 			return <SpineSkeletonDataIter>d__;
 		}
 
-		// Token: 0x04004CFD RID: 19709
+		// Token: 0x040052E1 RID: 21217
 		private Table __p;
 	}
 }

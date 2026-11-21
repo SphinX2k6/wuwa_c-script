@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005854 RID: 22612
+	// Token: 0x02005E5E RID: 24158
 	public static class IRenderSpecifiedRangeType_UnionVerify
 	{
-		// Token: 0x060260F0 RID: 155888 RVA: 0x0053F470 File Offset: 0x0053D670
+		// Token: 0x0602863A RID: 165434 RVA: 0x00585D68 File Offset: 0x00583F68
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -26,6 +26,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 5:
 				result = IRenderQuantumFollowShooterVerify.Verify(verifier, tablePos);
+				break;
+			case 6:
+				result = IRenderBeforeYourEyesSceneRevealVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

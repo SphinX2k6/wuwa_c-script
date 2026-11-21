@@ -19,12 +19,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 using CSharpScript.Game.Render;
 using UnrealEngine;
 
-// Token: 0x020032AD RID: 12973
+// Token: 0x0200281E RID: 10270
 [NullableContext(1)]
 [Nullable(0)]
 public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResetter
 {
-	// Token: 0x0601C140 RID: 115008 RVA: 0x007CE884 File Offset: 0x007CCA84
+	// Token: 0x06019D78 RID: 105848 RVA: 0x007F5A68 File Offset: 0x007F3C68
 	static SceneItemActorComponent()
 	{
 		Dictionary<string, int> dictionary = new Dictionary<string, int>();
@@ -35,8 +35,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		StaticVariableRegister.RegisterAndExecute(new Action(SceneItemActorComponent.CreateStaticDefaultValue), new Action(SceneItemActorComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170026C6 RID: 9926
-	// (get) Token: 0x0601C141 RID: 115009 RVA: 0x007CE8D1 File Offset: 0x007CCAD1
+	// Token: 0x170029AA RID: 10666
+	// (get) Token: 0x06019D79 RID: 105849 RVA: 0x007F5AB5 File Offset: 0x007F3CB5
 	public bool IsReadyForOverlap
 	{
 		get
@@ -45,8 +45,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026C7 RID: 9927
-	// (get) Token: 0x0601C142 RID: 115010 RVA: 0x007CE8D9 File Offset: 0x007CCAD9
+	// Token: 0x170029AB RID: 10667
+	// (get) Token: 0x06019D7A RID: 105850 RVA: 0x007F5ABD File Offset: 0x007F3CBD
 	[Nullable(2)]
 	public AActor CurLevelPrefabShowActor
 	{
@@ -57,8 +57,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026C8 RID: 9928
-	// (get) Token: 0x0601C143 RID: 115011 RVA: 0x007CE8E1 File Offset: 0x007CCAE1
+	// Token: 0x170029AC RID: 10668
+	// (get) Token: 0x06019D7B RID: 105851 RVA: 0x007F5AC5 File Offset: 0x007F3CC5
 	public FVector Extent
 	{
 		get
@@ -67,8 +67,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026C9 RID: 9929
-	// (get) Token: 0x0601C144 RID: 115012 RVA: 0x007CE8E9 File Offset: 0x007CCAE9
+	// Token: 0x170029AD RID: 10669
+	// (get) Token: 0x06019D7C RID: 105852 RVA: 0x007F5ACD File Offset: 0x007F3CCD
 	public FVectorDouble Origin
 	{
 		get
@@ -77,8 +77,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026CA RID: 9930
-	// (get) Token: 0x0601C145 RID: 115013 RVA: 0x007CE8F1 File Offset: 0x007CCAF1
+	// Token: 0x170029AE RID: 10670
+	// (get) Token: 0x06019D7D RID: 105853 RVA: 0x007F5AD5 File Offset: 0x007F3CD5
 	public override USkeletalMeshComponent SkeletalMesh
 	{
 		get
@@ -87,8 +87,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026CB RID: 9931
-	// (get) Token: 0x0601C146 RID: 115014 RVA: 0x007CE8F9 File Offset: 0x007CCAF9
+	// Token: 0x170029AF RID: 10671
+	// (get) Token: 0x06019D7E RID: 105854 RVA: 0x007F5ADD File Offset: 0x007F3CDD
 	public UStaticMeshComponent StaticMesh
 	{
 		get
@@ -97,8 +97,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026CC RID: 9932
-	// (get) Token: 0x0601C147 RID: 115015 RVA: 0x007CE904 File Offset: 0x007CCB04
+	// Token: 0x170029B0 RID: 10672
+	// (get) Token: 0x06019D7F RID: 105855 RVA: 0x007F5AE8 File Offset: 0x007F3CE8
 	public FVector FakeGravityValue
 	{
 		get
@@ -112,19 +112,19 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C148 RID: 115016 RVA: 0x007CE95B File Offset: 0x007CCB5B
+	// Token: 0x06019D80 RID: 105856 RVA: 0x007F5B3F File Offset: 0x007F3D3F
 	public UStaticMeshComponent GetStaticMeshComponent()
 	{
 		return this.StaticMeshComponent;
 	}
 
-	// Token: 0x0601C149 RID: 115017 RVA: 0x007CE963 File Offset: 0x007CCB63
+	// Token: 0x06019D81 RID: 105857 RVA: 0x007F5B47 File Offset: 0x007F3D47
 	public UPrimitiveComponent GetPrimitiveComponent()
 	{
 		return this.SkeletalMeshComponent ?? this.StaticMeshComponent;
 	}
 
-	// Token: 0x0601C14A RID: 115018 RVA: 0x007CE975 File Offset: 0x007CCB75
+	// Token: 0x06019D82 RID: 105858 RVA: 0x007F5B59 File Offset: 0x007F3D59
 	[NullableContext(2)]
 	public AActor GetInteractionMainActor()
 	{
@@ -135,7 +135,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetSceneInteractionMainActor(this.SceneInteractionLevelHandleId);
 	}
 
-	// Token: 0x0601C14B RID: 115019 RVA: 0x007CE992 File Offset: 0x007CCB92
+	// Token: 0x06019D83 RID: 105859 RVA: 0x007F5B76 File Offset: 0x007F3D76
 	[NullableContext(2)]
 	public AActor GetMainCollisionActor()
 	{
@@ -146,7 +146,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetMainCollisionActor(this.SceneInteractionLevelHandleId);
 	}
 
-	// Token: 0x0601C14C RID: 115020 RVA: 0x007CE9AF File Offset: 0x007CCBAF
+	// Token: 0x06019D84 RID: 105860 RVA: 0x007F5B93 File Offset: 0x007F3D93
 	[NullableContext(2)]
 	public ASkeletalMeshActor GetInteractionSkeletalMeshActor()
 	{
@@ -157,7 +157,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetSceneInteractionSkeletalMeshActor(this.SceneInteractionLevelHandleId);
 	}
 
-	// Token: 0x0601C14D RID: 115021 RVA: 0x007CE9CC File Offset: 0x007CCBCC
+	// Token: 0x06019D85 RID: 105861 RVA: 0x007F5BB0 File Offset: 0x007F3DB0
 	public override bool HasMesh()
 	{
 		USkeletalMeshComponent skeletalMeshComponent = this.SkeletalMeshComponent;
@@ -169,7 +169,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return ((staticMeshComponent != null) ? staticMeshComponent.StaticMesh : null) != null;
 	}
 
-	// Token: 0x0601C14E RID: 115022 RVA: 0x007CE9FC File Offset: 0x007CCBFC
+	// Token: 0x06019D86 RID: 105862 RVA: 0x007F5BE0 File Offset: 0x007F3DE0
 	private void RefreshPrefabRadius()
 	{
 		if (this.CurLevelPrefabShowActorInternal == this.ActorInternal)
@@ -191,8 +191,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026CD RID: 9933
-	// (get) Token: 0x0601C14F RID: 115023 RVA: 0x007CEA98 File Offset: 0x007CCC98
+	// Token: 0x170029B1 RID: 10673
+	// (get) Token: 0x06019D87 RID: 105863 RVA: 0x007F5C7C File Offset: 0x007F3E7C
 	public float PrefabRadius
 	{
 		get
@@ -201,7 +201,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C150 RID: 115024 RVA: 0x007CEAA0 File Offset: 0x007CCCA0
+	// Token: 0x06019D88 RID: 105864 RVA: 0x007F5C84 File Offset: 0x007F3E84
 	public override float GetRadius()
 	{
 		if (!this.HasMesh())
@@ -224,15 +224,15 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return fboxSphereBounds.Value.BoxExtent.Y;
 	}
 
-	// Token: 0x0601C151 RID: 115025 RVA: 0x007CEB19 File Offset: 0x007CCD19
+	// Token: 0x06019D89 RID: 105865 RVA: 0x007F5CFD File Offset: 0x007F3EFD
 	public int GetSceneInteractionLevelHandleId()
 	{
 		return this.SceneInteractionLevelHandleId;
 	}
 
-	// Token: 0x170026CE RID: 9934
-	// (get) Token: 0x0601C152 RID: 115026 RVA: 0x007CEB21 File Offset: 0x007CCD21
-	// (set) Token: 0x0601C153 RID: 115027 RVA: 0x007CEB2C File Offset: 0x007CCD2C
+	// Token: 0x170029B2 RID: 10674
+	// (get) Token: 0x06019D8A RID: 105866 RVA: 0x007F5D05 File Offset: 0x007F3F05
+	// (set) Token: 0x06019D8B RID: 105867 RVA: 0x007F5D10 File Offset: 0x007F3F10
 	public SceneItemActorComponent.EPhysicsMode PhysicsMode
 	{
 		get
@@ -302,8 +302,8 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x170026CF RID: 9935
-	// (get) Token: 0x0601C154 RID: 115028 RVA: 0x007CEC55 File Offset: 0x007CCE55
+	// Token: 0x170029B3 RID: 10675
+	// (get) Token: 0x06019D8C RID: 105868 RVA: 0x007F5E39 File Offset: 0x007F4039
 	public bool EnableFakeGravity
 	{
 		get
@@ -312,13 +312,13 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C155 RID: 115029 RVA: 0x007CEC5D File Offset: 0x007CCE5D
+	// Token: 0x06019D8D RID: 105869 RVA: 0x007F5E41 File Offset: 0x007F4041
 	public void SimulatedFakeGravity()
 	{
 		this.GetPrimitiveComponent().AddForce(this.FakeGravityValue, FName.NAME_None, true);
 	}
 
-	// Token: 0x0601C156 RID: 115030 RVA: 0x007CEC76 File Offset: 0x007CCE76
+	// Token: 0x06019D8E RID: 105870 RVA: 0x007F5E5A File Offset: 0x007F405A
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -328,7 +328,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return base.InitCreatureData();
 	}
 
-	// Token: 0x0601C157 RID: 115031 RVA: 0x007CECA4 File Offset: 0x007CCEA4
+	// Token: 0x06019D8F RID: 105871 RVA: 0x007F5E88 File Offset: 0x007F4088
 	protected unsafe override bool OnInit()
 	{
 		base.OnInit();
@@ -456,7 +456,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return false;
 	}
 
-	// Token: 0x0601C158 RID: 115032 RVA: 0x007CF1D8 File Offset: 0x007CD3D8
+	// Token: 0x06019D90 RID: 105872 RVA: 0x007F63BC File Offset: 0x007F45BC
 	protected override bool OnStart()
 	{
 		if (base.Entity.GetComponent<SceneItemManipulatableComponent>() != null || base.Entity.GetComponent<SceneItemPhysicalAttachComponent>() != null)
@@ -480,7 +480,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601C159 RID: 115033 RVA: 0x007CF270 File Offset: 0x007CD470
+	// Token: 0x06019D91 RID: 105873 RVA: 0x007F6454 File Offset: 0x007F4654
 	private void RegisterPbEntityInActorSubSystem()
 	{
 		int pbDataId = this.CreatureDataInternal.GetPbDataId();
@@ -506,14 +506,14 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		actorSubSystem3.RegisterEntity(pbDataId, this.CreatureDataInternal.IsPreAwakeEntity);
 	}
 
-	// Token: 0x0601C15A RID: 115034 RVA: 0x007CF2F3 File Offset: 0x007CD4F3
+	// Token: 0x06019D92 RID: 105874 RVA: 0x007F64D7 File Offset: 0x007F46D7
 	private void RegisterEvents()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.OnSceneItemEntityHitByHitActorData, new Action<BulletHitActorData>(this.OnSceneItemEntityHitByHitActorData));
 		EventSystem.Instance.Add(EEventName.OnSceneInteractionAllEffectPlaying, new Action<int>(this.OnSceneInteractionAllEffectPlaying));
 	}
 
-	// Token: 0x0601C15B RID: 115035 RVA: 0x007CF334 File Offset: 0x007CD534
+	// Token: 0x06019D93 RID: 105875 RVA: 0x007F6518 File Offset: 0x007F4718
 	private void UnregisterPbEntityInActorSubSystem()
 	{
 		int pbDataId = this.CreatureDataInternal.GetPbDataId();
@@ -534,14 +534,14 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		actorSubSystem2.UnRegisterEntity(pbDataId);
 	}
 
-	// Token: 0x0601C15C RID: 115036 RVA: 0x007CF378 File Offset: 0x007CD578
+	// Token: 0x06019D94 RID: 105876 RVA: 0x007F655C File Offset: 0x007F475C
 	private void UnregisterEvents()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.OnSceneItemEntityHitByHitActorData, new Action<BulletHitActorData>(this.OnSceneItemEntityHitByHitActorData));
 		EventSystem.Instance.Remove(EEventName.OnSceneInteractionAllEffectPlaying, new Action<int>(this.OnSceneInteractionAllEffectPlaying));
 	}
 
-	// Token: 0x0601C15D RID: 115037 RVA: 0x007CF3B8 File Offset: 0x007CD5B8
+	// Token: 0x06019D95 RID: 105877 RVA: 0x007F659C File Offset: 0x007F479C
 	protected override bool OnEnd()
 	{
 		if (this.DelayFixBornTimer != null)
@@ -557,7 +557,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return base.OnEnd();
 	}
 
-	// Token: 0x0601C15E RID: 115038 RVA: 0x007CF418 File Offset: 0x007CD618
+	// Token: 0x06019D96 RID: 105878 RVA: 0x007F65FC File Offset: 0x007F47FC
 	protected override void OnEnable()
 	{
 		this.OnSetActorActive(true, null);
@@ -570,14 +570,14 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		this.ToggleSceneInteractionVisible(visible2, onLevelStreamingShowOrHideCallback, defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x0601C15F RID: 115039 RVA: 0x007CF482 File Offset: 0x007CD682
+	// Token: 0x06019D97 RID: 105879 RVA: 0x007F6666 File Offset: 0x007F4866
 	protected override void OnDisable(string reason)
 	{
 		this.OnSetActorActive(false, reason);
 		this.ToggleSceneInteractionVisible(false, new Action(this.ResetSceneInteractionWhenUnloadCompleted), "SceneItemActorComponent.OnDisable");
 	}
 
-	// Token: 0x0601C160 RID: 115040 RVA: 0x007CF4A4 File Offset: 0x007CD6A4
+	// Token: 0x06019D98 RID: 105880 RVA: 0x007F6688 File Offset: 0x007F4888
 	protected override void OnActivate()
 	{
 		base.SetActorVisible(true, "[SceneItemActorComponent.OnActivate] Visible");
@@ -587,7 +587,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		WorldController.Instance.SetActorDataByCreature(this.CreatureDataInternal, this.ActorInternal);
 	}
 
-	// Token: 0x0601C161 RID: 115041 RVA: 0x007CF4F4 File Offset: 0x007CD6F4
+	// Token: 0x06019D99 RID: 105881 RVA: 0x007F66D8 File Offset: 0x007F48D8
 	protected override bool OnClear()
 	{
 		if (this.ActorInternal != null)
@@ -605,7 +605,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return true;
 	}
 
-	// Token: 0x0601C162 RID: 115042 RVA: 0x007CF560 File Offset: 0x007CD760
+	// Token: 0x06019D9A RID: 105882 RVA: 0x007F6744 File Offset: 0x007F4944
 	private void OnSceneItemEntityHitByHitActorData(BulletHitActorData hitActorData)
 	{
 		if (!this.IsSceneInteractionLoadCompleted || this.SceneInteractionLevelHandleId == -1 || hitActorData.Actor == null)
@@ -615,7 +615,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PlayKuroSkeletalMeshDestruction(this.SceneInteractionLevelHandleId, hitActorData.Actor, false);
 	}
 
-	// Token: 0x0601C163 RID: 115043 RVA: 0x007CF593 File Offset: 0x007CD793
+	// Token: 0x06019D9B RID: 105883 RVA: 0x007F6777 File Offset: 0x007F4977
 	private void OnSceneInteractionAllEffectPlaying(int handle)
 	{
 		if (this.SceneInteractionLevelHandleId != handle)
@@ -628,7 +628,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C164 RID: 115044 RVA: 0x007CF5B0 File Offset: 0x007CD7B0
+	// Token: 0x06019D9C RID: 105884 RVA: 0x007F6794 File Offset: 0x007F4994
 	private void DestroySceneInteraction()
 	{
 		AActor sceneInteractionMainActor = SceneInteractionManager.Get().GetSceneInteractionMainActor(this.SceneInteractionLevelHandleId);
@@ -651,7 +651,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		this.SceneInteractionState = null;
 	}
 
-	// Token: 0x0601C165 RID: 115045 RVA: 0x007CF64C File Offset: 0x007CD84C
+	// Token: 0x06019D9D RID: 105885 RVA: 0x007F6830 File Offset: 0x007F4A30
 	[NullableContext(2)]
 	private unsafe void OnActorDestroy(AActor actor)
 	{
@@ -672,7 +672,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		base.Entity.ChangeTickInterval(0);
 	}
 
-	// Token: 0x0601C166 RID: 115046 RVA: 0x007CF744 File Offset: 0x007CD944
+	// Token: 0x06019D9E RID: 105886 RVA: 0x007F6928 File Offset: 0x007F4B28
 	public void InitSkeletalMeshComponent()
 	{
 		if (this.SkeletalMeshComponent == null)
@@ -681,7 +681,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C167 RID: 115047 RVA: 0x007CF790 File Offset: 0x007CD990
+	// Token: 0x06019D9F RID: 105887 RVA: 0x007F6974 File Offset: 0x007F4B74
 	private void InitMesh()
 	{
 		AActor actorInternal = this.ActorInternal;
@@ -707,7 +707,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C168 RID: 115048 RVA: 0x007CF848 File Offset: 0x007CDA48
+	// Token: 0x06019DA0 RID: 105888 RVA: 0x007F6A2C File Offset: 0x007F4C2C
 	public void LoadAndChangeStaticMesh(FGameplayTag tag)
 	{
 		SModelConfig modelConfig = this.CreatureDataInternal.GetModelConfig();
@@ -753,19 +753,19 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601C169 RID: 115049 RVA: 0x007CF8DF File Offset: 0x007CDADF
+	// Token: 0x06019DA1 RID: 105889 RVA: 0x007F6AC3 File Offset: 0x007F4CC3
 	public void SetIsSceneInteractionLoadCompleted(bool value = true)
 	{
 		this.IsSceneInteractionLoadCompleted = value;
 	}
 
-	// Token: 0x0601C16A RID: 115050 RVA: 0x007CF8E8 File Offset: 0x007CDAE8
+	// Token: 0x06019DA2 RID: 105890 RVA: 0x007F6ACC File Offset: 0x007F4CCC
 	public bool GetIsSceneInteractionLoadCompleted()
 	{
 		return this.IsSceneInteractionLoadCompleted;
 	}
 
-	// Token: 0x0601C16B RID: 115051 RVA: 0x007CF8F0 File Offset: 0x007CDAF0
+	// Token: 0x06019DA3 RID: 105891 RVA: 0x007F6AD4 File Offset: 0x007F4CD4
 	private void InitSceneInteractionLevel()
 	{
 		this.SceneInteractionLevelHandleId = -1;
@@ -773,7 +773,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		this.NeedOverrideStaticMesh = false;
 	}
 
-	// Token: 0x0601C16C RID: 115052 RVA: 0x007CF908 File Offset: 0x007CDB08
+	// Token: 0x06019DA4 RID: 105892 RVA: 0x007F6AEC File Offset: 0x007F4CEC
 	public void LoadSceneInteractionLevel(EKuroSceneInteractionState initState, bool isInitShow = false)
 	{
 		this.DestroySceneInteraction();
@@ -807,13 +807,13 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C16D RID: 115053 RVA: 0x007CFA12 File Offset: 0x007CDC12
+	// Token: 0x06019DA5 RID: 105893 RVA: 0x007F6BF6 File Offset: 0x007F4DF6
 	private void OnSceneInteractionLoadCompleted()
 	{
 		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.OnSceneInteractionLoadCompletedNew);
 	}
 
-	// Token: 0x0601C16E RID: 115054 RVA: 0x007CFA2C File Offset: 0x007CDC2C
+	// Token: 0x06019DA6 RID: 105894 RVA: 0x007F6C10 File Offset: 0x007F4E10
 	private int? GetLoadPriorityOverride()
 	{
 		if (base.CreatureData.GetEntityConfigType() != EntityConfigType.Level)
@@ -838,7 +838,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return null;
 	}
 
-	// Token: 0x0601C16F RID: 115055 RVA: 0x007CFAD0 File Offset: 0x007CDCD0
+	// Token: 0x06019DA7 RID: 105895 RVA: 0x007F6CB4 File Offset: 0x007F4EB4
 	public void SetupSceneInteractionWhenLoadCompleted()
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -936,7 +936,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		instance.SetGrassActorVisibleByEntity(pbDataId, false, this.ActorInternal);
 	}
 
-	// Token: 0x0601C170 RID: 115056 RVA: 0x007CFE5C File Offset: 0x007CE05C
+	// Token: 0x06019DA8 RID: 105896 RVA: 0x007F7040 File Offset: 0x007F5240
 	private void ResetSceneInteractionWhenUnloadCompleted()
 	{
 		this.IsSceneInteractionLoadCompleted = false;
@@ -956,7 +956,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C171 RID: 115057 RVA: 0x007CFEE4 File Offset: 0x007CE0E4
+	// Token: 0x06019DA9 RID: 105897 RVA: 0x007F70C8 File Offset: 0x007F52C8
 	public void TryRefreshShowActor()
 	{
 		AActor curLevelPrefabShowActor = this.CurLevelPrefabShowActor;
@@ -981,7 +981,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C172 RID: 115058 RVA: 0x007CFF50 File Offset: 0x007CE150
+	// Token: 0x06019DAA RID: 105898 RVA: 0x007F7134 File Offset: 0x007F5334
 	public void RefreshShowActor()
 	{
 		Entity entity = base.Entity;
@@ -1020,7 +1020,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C173 RID: 115059 RVA: 0x007D005C File Offset: 0x007CE25C
+	// Token: 0x06019DAB RID: 105899 RVA: 0x007F7240 File Offset: 0x007F5440
 	private void OverridePrefabParams()
 	{
 		if (base.CreatureData.GetEntityConfigType() != EntityConfigType.Level)
@@ -1083,7 +1083,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C174 RID: 115060 RVA: 0x007D0154 File Offset: 0x007CE354
+	// Token: 0x06019DAC RID: 105900 RVA: 0x007F7338 File Offset: 0x007F5538
 	private void DynamicOverrideDecalParams(ELoadEffectResult result, int handle)
 	{
 		if (result != ELoadEffectResult.Success)
@@ -1113,7 +1113,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		instance2.CollectMaterialFloatCurve(handle, value, value2);
 	}
 
-	// Token: 0x0601C175 RID: 115061 RVA: 0x007D02D0 File Offset: 0x007CE4D0
+	// Token: 0x06019DAD RID: 105901 RVA: 0x007F74B4 File Offset: 0x007F56B4
 	private void DynamicOverrideRushWarningEffectParams(ELoadEffectResult result, int handle)
 	{
 		if (result != ELoadEffectResult.Success)
@@ -1129,7 +1129,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		EffectSystem.Instance.SetEffectParameterNiagara(handle, effectParameterNiagara);
 	}
 
-	// Token: 0x0601C176 RID: 115062 RVA: 0x007D03BC File Offset: 0x007CE5BC
+	// Token: 0x06019DAE RID: 105902 RVA: 0x007F75A0 File Offset: 0x007F57A0
 	private void ApplyFireBoxLampParams(int handleId)
 	{
 		CreatureModel instance = CreatureModel.Instance;
@@ -1142,13 +1142,13 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		EffectSystem.Instance.SetEffectParameterNiagara(handleId, effectParameterNiagara);
 	}
 
-	// Token: 0x0601C177 RID: 115063 RVA: 0x007D0458 File Offset: 0x007CE658
+	// Token: 0x06019DAF RID: 105903 RVA: 0x007F763C File Offset: 0x007F583C
 	private void OnShowActorRemoveHandle(int handle)
 	{
 		this.RefreshShowActor();
 	}
 
-	// Token: 0x0601C178 RID: 115064 RVA: 0x007D0460 File Offset: 0x007CE660
+	// Token: 0x06019DB0 RID: 105904 RVA: 0x007F7644 File Offset: 0x007F5844
 	public void ToggleSceneInteractionVisible(bool visible, [Nullable(2)] Action onLevelStreamingShowOrHideCallback = null, string reason = "")
 	{
 		if (!this.IsSceneInteractionLoadCompleted)
@@ -1162,7 +1162,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().ToggleSceneInteractionVisible(this.SceneInteractionLevelHandleId, visible, base.CreatureData.GetRemoveState(), onLevelStreamingShowOrHideCallback, reason);
 	}
 
-	// Token: 0x0601C179 RID: 115065 RVA: 0x007D049C File Offset: 0x007CE69C
+	// Token: 0x06019DB1 RID: 105905 RVA: 0x007F7680 File Offset: 0x007F5880
 	public void SwitchToState(EKuroSceneInteractionState targetState, bool needTransition, bool jumpToEnd)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1180,7 +1180,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		this.RefreshShowActor();
 	}
 
-	// Token: 0x0601C17A RID: 115066 RVA: 0x007D0514 File Offset: 0x007CE714
+	// Token: 0x06019DB2 RID: 105906 RVA: 0x007F76F8 File Offset: 0x007F58F8
 	private void InitSepcialState()
 	{
 		EKuroSceneInteractionState? sceneInteractionState = this.SceneInteractionState;
@@ -1196,7 +1196,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C17B RID: 115067 RVA: 0x007D0580 File Offset: 0x007CE780
+	// Token: 0x06019DB3 RID: 105907 RVA: 0x007F7764 File Offset: 0x007F5964
 	private void SwitchToSpecialState(EKuroSceneInteractionState targetState, EKuroSceneInteractionState sourceState = EKuroSceneInteractionState.EKuroSceneInteractionState_MAX)
 	{
 		if (targetState == EKuroSceneInteractionState.ConcealedState)
@@ -1209,7 +1209,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C17C RID: 115068 RVA: 0x007D059A File Offset: 0x007CE79A
+	// Token: 0x06019DB4 RID: 105908 RVA: 0x007F777E File Offset: 0x007F597E
 	public void PlaySceneInteractionEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1219,7 +1219,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PlaySceneInteractionEffect(this.SceneInteractionLevelHandleId, effectKey);
 	}
 
-	// Token: 0x0601C17D RID: 115069 RVA: 0x007D05B7 File Offset: 0x007CE7B7
+	// Token: 0x06019DB5 RID: 105909 RVA: 0x007F779B File Offset: 0x007F599B
 	public void EndSceneInteractionEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1229,7 +1229,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().EndSceneInteractionEffect(this.SceneInteractionLevelHandleId, effectKey);
 	}
 
-	// Token: 0x0601C17E RID: 115070 RVA: 0x007D05D4 File Offset: 0x007CE7D4
+	// Token: 0x06019DB6 RID: 105910 RVA: 0x007F77B8 File Offset: 0x007F59B8
 	public void PlayExtraEffect(FGameplayTag tag, bool jumpToEnd = true)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1239,7 +1239,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PlayExtraEffectByTag(this.SceneInteractionLevelHandleId, tag, jumpToEnd);
 	}
 
-	// Token: 0x0601C17F RID: 115071 RVA: 0x007D05F2 File Offset: 0x007CE7F2
+	// Token: 0x06019DB7 RID: 105911 RVA: 0x007F77D6 File Offset: 0x007F59D6
 	public void StopExtraEffect(FGameplayTag tag)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1249,7 +1249,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().StopExtraEffectByTag(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C180 RID: 115072 RVA: 0x007D060F File Offset: 0x007CE80F
+	// Token: 0x06019DB8 RID: 105912 RVA: 0x007F77F3 File Offset: 0x007F59F3
 	public void UpdateHitInfo(global::Vector pos, FVector dir)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1259,7 +1259,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().UpdateHitInfo(this.SceneInteractionLevelHandleId, pos, dir);
 	}
 
-	// Token: 0x0601C181 RID: 115073 RVA: 0x007D062D File Offset: 0x007CE82D
+	// Token: 0x06019DB9 RID: 105913 RVA: 0x007F7811 File Offset: 0x007F5A11
 	public void SetOverrideSeqBindActor(AActor actorToBind, [Nullable(2)] string bindingName)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1269,7 +1269,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().SetOverrideSeqBindActor(this.SceneInteractionLevelHandleId, actorToBind, bindingName);
 	}
 
-	// Token: 0x0601C182 RID: 115074 RVA: 0x007D064B File Offset: 0x007CE84B
+	// Token: 0x06019DBA RID: 105914 RVA: 0x007F782F File Offset: 0x007F5A2F
 	public void UnsetOverrideSeqBindActor(AActor actorToUnBind, [Nullable(2)] string bindingName)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1279,7 +1279,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().UnsetOverrideSeqBindActor(this.SceneInteractionLevelHandleId, actorToUnBind, bindingName);
 	}
 
-	// Token: 0x0601C183 RID: 115075 RVA: 0x007D0669 File Offset: 0x007CE869
+	// Token: 0x06019DBB RID: 105915 RVA: 0x007F784D File Offset: 0x007F5A4D
 	public void PlaySceneInteractionEndEffect(ESceneInteractionEffect effectKey)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1289,7 +1289,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PlaySceneInteractionEndEffect(this.SceneInteractionLevelHandleId, effectKey);
 	}
 
-	// Token: 0x0601C184 RID: 115076 RVA: 0x007D0686 File Offset: 0x007CE886
+	// Token: 0x06019DBC RID: 105916 RVA: 0x007F786A File Offset: 0x007F5A6A
 	[return: Nullable(2)]
 	public AActor GetActorInSceneInteraction(string key)
 	{
@@ -1300,7 +1300,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetSceneInteractionActorByKey(this.SceneInteractionLevelHandleId, key);
 	}
 
-	// Token: 0x0601C185 RID: 115077 RVA: 0x007D06A4 File Offset: 0x007CE8A4
+	// Token: 0x06019DBD RID: 105917 RVA: 0x007F7888 File Offset: 0x007F5A88
 	public FTransformDouble? GetActorInSceneInteractionOriginalRelTransform(AActor actor)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1310,7 +1310,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetActorOriginalRelTransform(this.SceneInteractionLevelHandleId, actor);
 	}
 
-	// Token: 0x0601C186 RID: 115078 RVA: 0x007D06D5 File Offset: 0x007CE8D5
+	// Token: 0x06019DBE RID: 105918 RVA: 0x007F78B9 File Offset: 0x007F5AB9
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1325,7 +1325,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetRefSceneInteractionActorsByTag(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C187 RID: 115079 RVA: 0x007D06F3 File Offset: 0x007CE8F3
+	// Token: 0x06019DBF RID: 105919 RVA: 0x007F78D7 File Offset: 0x007F5AD7
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1340,7 +1340,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetSceneInteractionAllActorsInLevel(this.SceneInteractionLevelHandleId);
 	}
 
-	// Token: 0x0601C188 RID: 115080 RVA: 0x007D0710 File Offset: 0x007CE910
+	// Token: 0x06019DC0 RID: 105920 RVA: 0x007F78F4 File Offset: 0x007F5AF4
 	public void OverrideStaticMeshFromSceneInteraction()
 	{
 		this.NeedOverrideStaticMesh = true;
@@ -1350,7 +1350,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C189 RID: 115081 RVA: 0x007D0728 File Offset: 0x007CE928
+	// Token: 0x06019DC1 RID: 105921 RVA: 0x007F790C File Offset: 0x007F5B0C
 	private void OverrideStaticMesh()
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1387,7 +1387,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C18A RID: 115082 RVA: 0x007D0804 File Offset: 0x007CEA04
+	// Token: 0x06019DC2 RID: 105922 RVA: 0x007F79E8 File Offset: 0x007F5BE8
 	private void RefreshOverlaps()
 	{
 		AActor mainCollisionActor = SceneInteractionManager.Get().GetMainCollisionActor(this.SceneInteractionLevelHandleId);
@@ -1415,13 +1415,13 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		uprimitiveComponent.SetCollisionEnabled(ECollisionEnabled.QueryAndPhysics);
 	}
 
-	// Token: 0x0601C18B RID: 115083 RVA: 0x007D0890 File Offset: 0x007CEA90
+	// Token: 0x06019DC3 RID: 105923 RVA: 0x007F7A74 File Offset: 0x007F5C74
 	private bool CollisionEnabledHasPhysics(ECollisionEnabled collisionEnabled)
 	{
 		return collisionEnabled == ECollisionEnabled.PhysicsOnly || collisionEnabled == ECollisionEnabled.QueryAndPhysics;
 	}
 
-	// Token: 0x0601C18C RID: 115084 RVA: 0x007D089C File Offset: 0x007CEA9C
+	// Token: 0x06019DC4 RID: 105924 RVA: 0x007F7A80 File Offset: 0x007F5C80
 	public void ChangeSceneInteractionPlayDirection(bool bPlayBack)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1431,7 +1431,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().ChangeSceneInteractionPlayDirection(this.SceneInteractionLevelHandleId, bPlayBack);
 	}
 
-	// Token: 0x0601C18D RID: 115085 RVA: 0x007D08BC File Offset: 0x007CEABC
+	// Token: 0x06019DC5 RID: 105925 RVA: 0x007F7AA0 File Offset: 0x007F5CA0
 	public float? GetActiveTagSequencePlaybackProgress(FGameplayTag tag)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1441,7 +1441,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetActiveTagSequencePlaybackProgress(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C18E RID: 115086 RVA: 0x007D08ED File Offset: 0x007CEAED
+	// Token: 0x06019DC6 RID: 105926 RVA: 0x007F7AD1 File Offset: 0x007F5CD1
 	public void SetActiveTagSequencePlaybackProgress(FGameplayTag tag, float progress)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1451,7 +1451,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().SetActiveTagSequencePlaybackProgress(this.SceneInteractionLevelHandleId, tag, progress);
 	}
 
-	// Token: 0x0601C18F RID: 115087 RVA: 0x007D090C File Offset: 0x007CEB0C
+	// Token: 0x06019DC7 RID: 105927 RVA: 0x007F7AF0 File Offset: 0x007F5CF0
 	public double? GetActiveTagSequenceDurationTime(FGameplayTag tag)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1461,7 +1461,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetActiveTagSequenceDurationTime(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C190 RID: 115088 RVA: 0x007D093D File Offset: 0x007CEB3D
+	// Token: 0x06019DC8 RID: 105928 RVA: 0x007F7B21 File Offset: 0x007F5D21
 	public void SetActiveTagSequenceDurationTime(FGameplayTag tag, float durationSecond)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1471,7 +1471,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().SetActiveTagSequenceDurationTime(this.SceneInteractionLevelHandleId, tag, durationSecond);
 	}
 
-	// Token: 0x0601C191 RID: 115089 RVA: 0x007D095B File Offset: 0x007CEB5B
+	// Token: 0x06019DC9 RID: 105929 RVA: 0x007F7B3F File Offset: 0x007F5D3F
 	public void PauseActiveTagSequence(FGameplayTag tag)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1481,7 +1481,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PauseActiveTagSequence(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C192 RID: 115090 RVA: 0x007D0978 File Offset: 0x007CEB78
+	// Token: 0x06019DCA RID: 105930 RVA: 0x007F7B5C File Offset: 0x007F5D5C
 	public void ResumeActiveTagSequence(FGameplayTag tag, bool bReverseFromConfig = false)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1491,7 +1491,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().ResumeActiveTagSequence(this.SceneInteractionLevelHandleId, tag, bReverseFromConfig);
 	}
 
-	// Token: 0x0601C193 RID: 115091 RVA: 0x007D0998 File Offset: 0x007CEB98
+	// Token: 0x06019DCB RID: 105931 RVA: 0x007F7B7C File Offset: 0x007F5D7C
 	public bool? GetIsActiveTagSequencePlayReverseFromConfig(FGameplayTag tag)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1501,7 +1501,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return SceneInteractionManager.Get().GetIsActiveTagSequencePlayReverseFromConfig(this.SceneInteractionLevelHandleId, tag);
 	}
 
-	// Token: 0x0601C194 RID: 115092 RVA: 0x007D09C9 File Offset: 0x007CEBC9
+	// Token: 0x06019DCC RID: 105932 RVA: 0x007F7BAD File Offset: 0x007F5DAD
 	public void PlayActiveTagSequenceTo(FGameplayTag tag, float progress, bool bReverseFromConfig = false)
 	{
 		if (this.SceneInteractionLevelHandleId == -1)
@@ -1511,7 +1511,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		SceneInteractionManager.Get().PlayActiveTagSequenceTo(this.SceneInteractionLevelHandleId, tag, progress, bReverseFromConfig);
 	}
 
-	// Token: 0x0601C195 RID: 115093 RVA: 0x007D09E8 File Offset: 0x007CEBE8
+	// Token: 0x06019DCD RID: 105933 RVA: 0x007F7BCC File Offset: 0x007F5DCC
 	public void FixBornLocation(bool fixLocation, bool fixRotation)
 	{
 		ValueTuple<bool, UKuroHitResult> valueTuple = this.CheckGround();
@@ -1542,7 +1542,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		TraceElementModel.Instance.ClearLineTrace();
 	}
 
-	// Token: 0x0601C196 RID: 115094 RVA: 0x007D0AEC File Offset: 0x007CECEC
+	// Token: 0x06019DCE RID: 105934 RVA: 0x007F7CD0 File Offset: 0x007F5ED0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1567,7 +1567,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return new ValueTuple<bool, UKuroHitResult>(item, hitResult);
 	}
 
-	// Token: 0x0601C197 RID: 115095 RVA: 0x007D0BCC File Offset: 0x007CEDCC
+	// Token: 0x06019DCF RID: 105935 RVA: 0x007F7DB0 File Offset: 0x007F5FB0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -1604,7 +1604,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return new ValueTuple<bool, UKuroHitResult>?(new ValueTuple<bool, UKuroHitResult>(flag.Value, hitResult));
 	}
 
-	// Token: 0x0601C198 RID: 115096 RVA: 0x007D0D75 File Offset: 0x007CEF75
+	// Token: 0x06019DD0 RID: 105936 RVA: 0x007F7F59 File Offset: 0x007F6159
 	public void SetSceneItemActorHide(bool isHide)
 	{
 		AActor actorInternal = this.ActorInternal;
@@ -1614,7 +1614,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C199 RID: 115097 RVA: 0x007D0D98 File Offset: 0x007CEF98
+	// Token: 0x06019DD1 RID: 105937 RVA: 0x007F7F7C File Offset: 0x007F617C
 	private void SetSceneItemActorHiddInternal(AActor actor, bool isHide)
 	{
 		if (actor == null || !actor.IsValid())
@@ -1652,7 +1652,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		primitiveComponent.SetCollisionEnabled(isHide ? ECollisionEnabled.NoCollision : this.CollisionEnabledType);
 	}
 
-	// Token: 0x0601C19A RID: 115098 RVA: 0x007D0E58 File Offset: 0x007CF058
+	// Token: 0x06019DD2 RID: 105938 RVA: 0x007F803C File Offset: 0x007F623C
 	protected override void OnChangeTimeDilation(float timeDilation)
 	{
 		PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -1666,7 +1666,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C19B RID: 115099 RVA: 0x007D0EB0 File Offset: 0x007CF0B0
+	// Token: 0x06019DD3 RID: 105939 RVA: 0x007F8094 File Offset: 0x007F6294
 	public override FVectorDouble GetSocketLocation(FName socketName)
 	{
 		if (this.IsSceneInteractionLoadCompleted && !FNameUtil.IsNothing(socketName))
@@ -1680,7 +1680,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return base.ActorLocation;
 	}
 
-	// Token: 0x0601C19C RID: 115100 RVA: 0x007D0F04 File Offset: 0x007CF104
+	// Token: 0x06019DD4 RID: 105940 RVA: 0x007F80E8 File Offset: 0x007F62E8
 	public override FTransformDouble GetSocketTransform(FName socketName)
 	{
 		if (this.IsSceneInteractionLoadCompleted && !FNameUtil.IsNothing(socketName))
@@ -1694,7 +1694,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return base.ActorTransform;
 	}
 
-	// Token: 0x0601C19D RID: 115101 RVA: 0x007D0F58 File Offset: 0x007CF158
+	// Token: 0x06019DD5 RID: 105941 RVA: 0x007F813C File Offset: 0x007F633C
 	public void UpdateInteractionMaterialColorParam(string key, float r, float g, float b, float a = 1f)
 	{
 		SceneInteractionActor sceneInteractionActor = this.GetInteractionMainActor() as SceneInteractionActor;
@@ -1710,7 +1710,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		sceneInteractionActor.InteractionMaterialController.ChangeVectorParameter(this.InteractionMaterialColor.Value, key);
 	}
 
-	// Token: 0x0601C19E RID: 115102 RVA: 0x007D0FCA File Offset: 0x007CF1CA
+	// Token: 0x06019DD6 RID: 105942 RVA: 0x007F81AE File Offset: 0x007F63AE
 	[NullableContext(2)]
 	public AActor GetInteractCollisionActor()
 	{
@@ -1725,7 +1725,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return null;
 	}
 
-	// Token: 0x0601C19F RID: 115103 RVA: 0x007D0FF8 File Offset: 0x007CF1F8
+	// Token: 0x06019DD7 RID: 105943 RVA: 0x007F81DC File Offset: 0x007F63DC
 	[return: Nullable(2)]
 	public AActor GetReferenceActor(string key)
 	{
@@ -1742,7 +1742,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return null;
 	}
 
-	// Token: 0x0601C1A0 RID: 115104 RVA: 0x007D1024 File Offset: 0x007CF224
+	// Token: 0x06019DD8 RID: 105944 RVA: 0x007F8208 File Offset: 0x007F6408
 	public void UpdateAkFinalTimeScale(float akFinalTimeScale, bool forceUpdate = false)
 	{
 		if (!forceUpdate && akFinalTimeScale == this.LastAkFinalTimeScale)
@@ -1762,7 +1762,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		this.LastAkFinalTimeScale = akFinalTimeScale;
 	}
 
-	// Token: 0x0601C1A1 RID: 115105 RVA: 0x007D1078 File Offset: 0x007CF278
+	// Token: 0x06019DD9 RID: 105945 RVA: 0x007F825C File Offset: 0x007F645C
 	private void ApplyAkFinalTimeScaleToActor(AActor actor, float akTimeScale, float lastAkTimeScale)
 	{
 		AudioSystem.Instance.SetRtpcValue("entity_time_scale_combat", akTimeScale, new SetRtpcValueArgs?(new SetRtpcValueArgs
@@ -1780,7 +1780,7 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		}
 	}
 
-	// Token: 0x0601C1A2 RID: 115106 RVA: 0x007D1100 File Offset: 0x007CF300
+	// Token: 0x06019DDA RID: 105946 RVA: 0x007F82E4 File Offset: 0x007F64E4
 	public bool SetActorLocationAndRotationExceptSkeletalMesh(UKuroSceneItemModelBufferComponent modelBufferComponent, FVectorDouble location, FRotator rotation, string context, bool sweep = true)
 	{
 		this.CachedDesiredActorLocation.FromUeVector(location);
@@ -1796,18 +1796,18 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 		return result;
 	}
 
-	// Token: 0x0601C1A3 RID: 115107 RVA: 0x007D1171 File Offset: 0x007CF371
+	// Token: 0x06019DDB RID: 105947 RVA: 0x007F8355 File Offset: 0x007F6555
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C1A4 RID: 115108 RVA: 0x007D1173 File Offset: 0x007CF373
+	// Token: 0x06019DDC RID: 105948 RVA: 0x007F8357 File Offset: 0x007F6557
 	public static void ResetStaticDefaultValue()
 	{
 		SceneItemActorComponent.ActorSubSystem = null;
 	}
 
-	// Token: 0x0601C1A5 RID: 115109 RVA: 0x007D117C File Offset: 0x007CF37C
+	// Token: 0x06019DDD RID: 105949 RVA: 0x007F8360 File Offset: 0x007F6560
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1815,223 +1815,253 @@ public class SceneItemActorComponent : BaseActorComponent, IStaticVariableResett
 			return false;
 		}
 		SceneItemActorComponent sceneItemActorComponent = (SceneItemActorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("SkeletalMeshComponent"))
+		if (sceneItemActorComponent.SkeletalMeshComponent == null)
 		{
-			if (sceneItemActorComponent.SkeletalMeshComponent == null)
-			{
-				this.SkeletalMeshComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USkeletalMeshComponent>(this.SkeletalMeshComponent), "SkeletalMeshComponent"))
-			{
-				return false;
-			}
+			this.SkeletalMeshComponent = null;
 		}
-		if (base.CanResetComponentProperty("StaticMeshComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkeletalMeshComponent), "SkeletalMeshComponent"))
 		{
-			if (sceneItemActorComponent.StaticMeshComponent == null)
-			{
-				this.StaticMeshComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.StaticMeshComponent), "StaticMeshComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PhysicsModeInternal"))
+		if (sceneItemActorComponent.StaticMeshComponent == null)
 		{
-			this.PhysicsModeInternal = sceneItemActorComponent.PhysicsModeInternal;
+			this.StaticMeshComponent = null;
 		}
-		if (base.CanResetComponentProperty("SceneInteractionLevelHandleId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StaticMeshComponent), "StaticMeshComponent"))
 		{
-			this.SceneInteractionLevelHandleId = sceneItemActorComponent.SceneInteractionLevelHandleId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SceneInteractionState"))
+		this.PhysicsModeInternal = sceneItemActorComponent.PhysicsModeInternal;
+		this.SceneInteractionLevelHandleId = sceneItemActorComponent.SceneInteractionLevelHandleId;
+		this.SceneInteractionState = sceneItemActorComponent.SceneInteractionState;
+		this.IsSceneInteractionLoadCompleted = sceneItemActorComponent.IsSceneInteractionLoadCompleted;
+		this.NeedOverrideStaticMesh = sceneItemActorComponent.NeedOverrideStaticMesh;
+		if (sceneItemActorComponent.DelayFixBornTimer == null)
 		{
-			this.SceneInteractionState = sceneItemActorComponent.SceneInteractionState;
+			this.DelayFixBornTimer = null;
 		}
-		if (base.CanResetComponentProperty("IsSceneInteractionLoadCompleted"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayFixBornTimer), "DelayFixBornTimer"))
 		{
-			this.IsSceneInteractionLoadCompleted = sceneItemActorComponent.IsSceneInteractionLoadCompleted;
+			return false;
 		}
-		if (base.CanResetComponentProperty("NeedOverrideStaticMesh"))
+		this.ActorOrigin = sceneItemActorComponent.ActorOrigin;
+		this.ActorExtent = sceneItemActorComponent.ActorExtent;
+		this.CollisionEnabledType = sceneItemActorComponent.CollisionEnabledType;
+		if (sceneItemActorComponent.CurLevelPrefabShowActorInternal == null)
 		{
-			this.NeedOverrideStaticMesh = sceneItemActorComponent.NeedOverrideStaticMesh;
+			this.CurLevelPrefabShowActorInternal = null;
 		}
-		if (base.CanResetComponentProperty("DelayFixBornTimer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurLevelPrefabShowActorInternal), "CurLevelPrefabShowActorInternal"))
 		{
-			if (sceneItemActorComponent.DelayFixBornTimer == null)
-			{
-				this.DelayFixBornTimer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayFixBornTimer), "DelayFixBornTimer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ActorOrigin"))
+		this.IsShowInternal = sceneItemActorComponent.IsShowInternal;
+		this.IsReadyForOverlapInternal = sceneItemActorComponent.IsReadyForOverlapInternal;
+		this.EnableFakeGravityInternal = sceneItemActorComponent.EnableFakeGravityInternal;
+		if (sceneItemActorComponent.GravityInternal == null)
 		{
-			this.ActorOrigin = sceneItemActorComponent.ActorOrigin;
+			this.GravityInternal = null;
 		}
-		if (base.CanResetComponentProperty("ActorExtent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GravityInternal), "GravityInternal"))
 		{
-			this.ActorExtent = sceneItemActorComponent.ActorExtent;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CollisionEnabledType"))
-		{
-			this.CollisionEnabledType = sceneItemActorComponent.CollisionEnabledType;
-		}
-		if (base.CanResetComponentProperty("CurLevelPrefabShowActorInternal"))
-		{
-			if (sceneItemActorComponent.CurLevelPrefabShowActorInternal == null)
-			{
-				this.CurLevelPrefabShowActorInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CurLevelPrefabShowActorInternal), "CurLevelPrefabShowActorInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsShowInternal"))
-		{
-			this.IsShowInternal = sceneItemActorComponent.IsShowInternal;
-		}
-		if (base.CanResetComponentProperty("IsReadyForOverlapInternal"))
-		{
-			this.IsReadyForOverlapInternal = sceneItemActorComponent.IsReadyForOverlapInternal;
-		}
-		if (base.CanResetComponentProperty("EnableFakeGravityInternal"))
-		{
-			this.EnableFakeGravityInternal = sceneItemActorComponent.EnableFakeGravityInternal;
-		}
-		if (base.CanResetComponentProperty("GravityInternal"))
-		{
-			if (sceneItemActorComponent.GravityInternal == null)
-			{
-				this.GravityInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.GravityInternal), "GravityInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PrefabRadiusInternal"))
-		{
-			this.PrefabRadiusInternal = sceneItemActorComponent.PrefabRadiusInternal;
-		}
-		if (base.CanResetComponentProperty("PrefabExtent"))
-		{
-			this.PrefabExtent = sceneItemActorComponent.PrefabExtent;
-		}
-		if (base.CanResetComponentProperty("InteractionMaterialColor"))
-		{
-			this.InteractionMaterialColor = sceneItemActorComponent.InteractionMaterialColor;
-		}
-		if (base.CanResetComponentProperty("LastAkFinalTimeScale"))
-		{
-			this.LastAkFinalTimeScale = sceneItemActorComponent.LastAkFinalTimeScale;
-		}
+		this.PrefabRadiusInternal = sceneItemActorComponent.PrefabRadiusInternal;
+		this.PrefabExtent = sceneItemActorComponent.PrefabExtent;
+		this.InteractionMaterialColor = sceneItemActorComponent.InteractionMaterialColor;
+		this.LastAkFinalTimeScale = sceneItemActorComponent.LastAkFinalTimeScale;
 		return true;
 	}
 
-	// Token: 0x0400DDF6 RID: 56822
+	// Token: 0x170029B4 RID: 10676
+	// (get) Token: 0x06019DDE RID: 105950 RVA: 0x007F850B File Offset: 0x007F670B
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029B5 RID: 10677
+	// (get) Token: 0x06019DDF RID: 105951 RVA: 0x007F850E File Offset: 0x007F670E
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029B6 RID: 10678
+	// (get) Token: 0x06019DE0 RID: 105952 RVA: 0x007F8511 File Offset: 0x007F6711
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029B7 RID: 10679
+	// (get) Token: 0x06019DE1 RID: 105953 RVA: 0x007F8514 File Offset: 0x007F6714
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029B8 RID: 10680
+	// (get) Token: 0x06019DE2 RID: 105954 RVA: 0x007F8517 File Offset: 0x007F6717
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029B9 RID: 10681
+	// (get) Token: 0x06019DE3 RID: 105955 RVA: 0x007F851A File Offset: 0x007F671A
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029BA RID: 10682
+	// (get) Token: 0x06019DE4 RID: 105956 RVA: 0x007F851D File Offset: 0x007F671D
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029BB RID: 10683
+	// (get) Token: 0x06019DE5 RID: 105957 RVA: 0x007F8520 File Offset: 0x007F6720
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170029BC RID: 10684
+	// (get) Token: 0x06019DE6 RID: 105958 RVA: 0x007F8523 File Offset: 0x007F6723
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E29C RID: 58012
 	private const string PROFILE_KEY = "SceneItemActorFixBornLocation";
 
-	// Token: 0x0400DDF7 RID: 56823
+	// Token: 0x0400E29D RID: 58013
 	private const float FIX_SPAWN_TRACE_UP = 20f;
 
-	// Token: 0x0400DDF8 RID: 56824
+	// Token: 0x0400E29E RID: 58014
 	private const float FIX_SPAWN_TRACE_DOWN = -1000f;
 
-	// Token: 0x0400DDF9 RID: 56825
+	// Token: 0x0400E29F RID: 58015
 	private const float FAKE_GRAVITY_VALUE = -980f;
 
-	// Token: 0x0400DDFA RID: 56826
+	// Token: 0x0400E2A0 RID: 58016
 	private const string FIRE_BOX_LAMP_RANGE_RADIUS_PARAM_NAME = "Size";
 
-	// Token: 0x0400DDFB RID: 56827
+	// Token: 0x0400E2A1 RID: 58017
 	[StaticVariableRuleIgnore]
 	private static readonly IReadOnlyDictionary<string, int> SceneInteractionLoadPriorityOverrides;
 
-	// Token: 0x0400DDFC RID: 56828
+	// Token: 0x0400E2A2 RID: 58018
 	[Nullable(2)]
 	private USkeletalMeshComponent SkeletalMeshComponent;
 
-	// Token: 0x0400DDFD RID: 56829
+	// Token: 0x0400E2A3 RID: 58019
 	[Nullable(2)]
 	public UStaticMeshComponent StaticMeshComponent;
 
-	// Token: 0x0400DDFE RID: 56830
+	// Token: 0x0400E2A4 RID: 58020
 	private SceneItemActorComponent.EPhysicsMode PhysicsModeInternal = SceneItemActorComponent.EPhysicsMode.Dynamic;
 
-	// Token: 0x0400DDFF RID: 56831
+	// Token: 0x0400E2A5 RID: 58021
 	private int SceneInteractionLevelHandleId = -1;
 
-	// Token: 0x0400DE00 RID: 56832
+	// Token: 0x0400E2A6 RID: 58022
 	private EKuroSceneInteractionState? SceneInteractionState;
 
-	// Token: 0x0400DE01 RID: 56833
+	// Token: 0x0400E2A7 RID: 58023
 	private bool IsSceneInteractionLoadCompleted;
 
-	// Token: 0x0400DE02 RID: 56834
+	// Token: 0x0400E2A8 RID: 58024
 	private bool NeedOverrideStaticMesh;
 
-	// Token: 0x0400DE03 RID: 56835
+	// Token: 0x0400E2A9 RID: 58025
 	[Nullable(2)]
 	private TimerHandle DelayFixBornTimer;
 
-	// Token: 0x0400DE04 RID: 56836
+	// Token: 0x0400E2AA RID: 58026
 	private FVectorDouble ActorOrigin;
 
-	// Token: 0x0400DE05 RID: 56837
+	// Token: 0x0400E2AB RID: 58027
 	private FVector ActorExtent;
 
-	// Token: 0x0400DE06 RID: 56838
+	// Token: 0x0400E2AC RID: 58028
 	private ECollisionEnabled CollisionEnabledType;
 
-	// Token: 0x0400DE07 RID: 56839
+	// Token: 0x0400E2AD RID: 58029
 	[Nullable(2)]
 	private AActor CurLevelPrefabShowActorInternal;
 
-	// Token: 0x0400DE08 RID: 56840
+	// Token: 0x0400E2AE RID: 58030
 	private bool IsShowInternal = true;
 
-	// Token: 0x0400DE09 RID: 56841
+	// Token: 0x0400E2AF RID: 58031
 	private bool IsReadyForOverlapInternal;
 
-	// Token: 0x0400DE0A RID: 56842
+	// Token: 0x0400E2B0 RID: 58032
 	private bool EnableFakeGravityInternal;
 
-	// Token: 0x0400DE0B RID: 56843
+	// Token: 0x0400E2B1 RID: 58033
 	[Nullable(2)]
 	private global::Vector GravityInternal;
 
-	// Token: 0x0400DE0C RID: 56844
+	// Token: 0x0400E2B2 RID: 58034
 	[Nullable(2)]
 	private static UKuroActorSubsystem ActorSubSystem;
 
-	// Token: 0x0400DE0D RID: 56845
+	// Token: 0x0400E2B3 RID: 58035
 	private float PrefabRadiusInternal;
 
-	// Token: 0x0400DE0E RID: 56846
+	// Token: 0x0400E2B4 RID: 58036
 	private FVector? PrefabExtent;
 
-	// Token: 0x0400DE0F RID: 56847
+	// Token: 0x0400E2B5 RID: 58037
 	private FLinearColor? InteractionMaterialColor;
 
-	// Token: 0x0400DE10 RID: 56848
+	// Token: 0x0400E2B6 RID: 58038
 	private float LastAkFinalTimeScale = 1f;
 
-	// Token: 0x02009746 RID: 38726
+	// Token: 0x0200896D RID: 35181
 	[NullableContext(0)]
 	public enum EPhysicsMode
 	{
-		// Token: 0x04030666 RID: 198246
+		// Token: 0x0402BCFD RID: 179453
 		Kinematic,
-		// Token: 0x04030667 RID: 198247
+		// Token: 0x0402BCFE RID: 179454
 		Dynamic,
-		// Token: 0x04030668 RID: 198248
+		// Token: 0x0402BCFF RID: 179455
 		DynamicNoGravity,
-		// Token: 0x04030669 RID: 198249
+		// Token: 0x0402BD00 RID: 179456
 		DynamicWaitSleep
 	}
 }

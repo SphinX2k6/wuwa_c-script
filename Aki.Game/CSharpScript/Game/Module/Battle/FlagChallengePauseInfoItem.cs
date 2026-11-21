@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C3C RID: 23612
+	// Token: 0x02004C1C RID: 19484
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Battle
 	})]
 	public class FlagChallengePauseInfoItem : GridProxyAbstract<FlagChallengePauseInfo>
 	{
-		// Token: 0x0603BA78 RID: 244344 RVA: 0x00E3C4C4 File Offset: 0x00E3A6C4
+		// Token: 0x060309C3 RID: 199107 RVA: 0x00D8C834 File Offset: 0x00D8AA34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BA79 RID: 244345 RVA: 0x00E3C570 File Offset: 0x00E3A770
+		// Token: 0x060309C4 RID: 199108 RVA: 0x00D8C8E0 File Offset: 0x00D8AAE0
 		[NullableContext(1)]
 		public override void Refresh(FlagChallengePauseInfo data, bool isSelected, int gridIndex)
 		{
@@ -43,16 +43,16 @@ namespace CSharpScript.Game.Module.Battle
 			base.GetSprite(3).SetUIActive(data.ShowLine);
 		}
 
-		// Token: 0x0200BE31 RID: 48689
+		// Token: 0x0200A839 RID: 43065
 		private enum EInfoItemType
 		{
-			// Token: 0x040395A7 RID: 234919
+			// Token: 0x04033F6A RID: 212842
 			IconSprite,
-			// Token: 0x040395A8 RID: 234920
+			// Token: 0x04033F6B RID: 212843
 			TitleTxt,
-			// Token: 0x040395A9 RID: 234921
+			// Token: 0x04033F6C RID: 212844
 			ContentTxt,
-			// Token: 0x040395AA RID: 234922
+			// Token: 0x04033F6D RID: 212845
 			SplitSprite
 		}
 	}

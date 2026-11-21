@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200612C RID: 24876
+	// Token: 0x02006791 RID: 26513
 	public class IAddGuestCharacterT
 	{
-		// Token: 0x1700B75A RID: 46938
-		// (get) Token: 0x0602A869 RID: 174185 RVA: 0x005DB223 File Offset: 0x005D9423
-		// (set) Token: 0x0602A86A RID: 174186 RVA: 0x005DB22B File Offset: 0x005D942B
+		// Token: 0x1700C0CA RID: 49354
+		// (get) Token: 0x0602CF62 RID: 184162 RVA: 0x006253FF File Offset: 0x006235FF
+		// (set) Token: 0x0602CF63 RID: 184163 RVA: 0x00625407 File Offset: 0x00623607
 		public int GuestCharacterId { get; set; }
 
-		// Token: 0x1700B75B RID: 46939
-		// (get) Token: 0x0602A86B RID: 174187 RVA: 0x005DB234 File Offset: 0x005D9434
-		// (set) Token: 0x0602A86C RID: 174188 RVA: 0x005DB23C File Offset: 0x005D943C
+		// Token: 0x1700C0CB RID: 49355
+		// (get) Token: 0x0602CF64 RID: 184164 RVA: 0x00625410 File Offset: 0x00623610
+		// (set) Token: 0x0602CF65 RID: 184165 RVA: 0x00625418 File Offset: 0x00623618
 		public IActiveRangeT ActiveRange { get; set; }
 
-		// Token: 0x0602A86D RID: 174189 RVA: 0x005DB245 File Offset: 0x005D9445
+		// Token: 0x0602CF66 RID: 184166 RVA: 0x00625421 File Offset: 0x00623621
 		public IAddGuestCharacterT()
 		{
 			this.GuestCharacterId = 0;

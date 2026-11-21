@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200286B RID: 10347
+// Token: 0x02001DE6 RID: 7654
 public enum ERoleFavorDescComponentDefine
 {
-	// Token: 0x04009F29 RID: 40745
+	// Token: 0x0400A312 RID: 41746
 	ScrollView,
-	// Token: 0x04009F2A RID: 40746
+	// Token: 0x0400A313 RID: 41747
 	TitleText,
-	// Token: 0x04009F2B RID: 40747
+	// Token: 0x0400A314 RID: 41748
 	DescText
 }

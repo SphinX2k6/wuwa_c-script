@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 {
-	// Token: 0x02004CFD RID: 19709
+	// Token: 0x02003CAF RID: 15535
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 	})]
 	public class RoleLangCustomTabItem : GridProxyAbstract<IRoleLangCustomInfo>
 	{
-		// Token: 0x06032F40 RID: 208704 RVA: 0x00BE0B98 File Offset: 0x00BDED98
+		// Token: 0x06027D1B RID: 163099 RVA: 0x00B264A0 File Offset: 0x00B246A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -54,14 +54,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032F41 RID: 208705 RVA: 0x00BE0D27 File Offset: 0x00BDEF27
+		// Token: 0x06027D1C RID: 163100 RVA: 0x00B2662F File Offset: 0x00B2482F
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.ToggleCanChangeState));
 			base.GetExtendToggle(0).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x06032F42 RID: 208706 RVA: 0x00BE0D64 File Offset: 0x00BDEF64
+		// Token: 0x06027D1D RID: 163101 RVA: 0x00B2666C File Offset: 0x00B2486C
 		public override void Refresh(IRoleLangCustomInfo data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.RefreshButton();
 		}
 
-		// Token: 0x06032F43 RID: 208707 RVA: 0x00BE0DFC File Offset: 0x00BDEFFC
+		// Token: 0x06027D1E RID: 163102 RVA: 0x00B26704 File Offset: 0x00B24904
 		protected bool RefreshButton()
 		{
 			bool needTick = this.NeedTick;
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return needTick && !this.NeedTick;
 		}
 
-		// Token: 0x06032F44 RID: 208708 RVA: 0x00BE0F25 File Offset: 0x00BDF125
+		// Token: 0x06027D1F RID: 163103 RVA: 0x00B2682D File Offset: 0x00B24A2D
 		public bool OnTick()
 		{
 			return this.NeedTick && this.RefreshButton();
 		}
 
-		// Token: 0x06032F45 RID: 208709 RVA: 0x00BE0F38 File Offset: 0x00BDF138
+		// Token: 0x06027D20 RID: 163104 RVA: 0x00B26840 File Offset: 0x00B24A40
 		private bool ToggleCanChangeState()
 		{
 			if (this.CheckScrollActiveCallback != null && !this.CheckScrollActiveCallback())
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			return RoleLangCustomModel.Instance.GetDownloadStatus(info) == ELanguageDownloadStatus.Done;
 		}
 
-		// Token: 0x06032F46 RID: 208710 RVA: 0x00BE0F92 File Offset: 0x00BDF192
+		// Token: 0x06027D21 RID: 163105 RVA: 0x00B2689A File Offset: 0x00B24A9A
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<IRoleLangCustomInfo> onClickedCallback = this.OnClickedCallback;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			onClickedCallback(this.ItemData);
 		}
 
-		// Token: 0x06032F47 RID: 208711 RVA: 0x00BE0FAC File Offset: 0x00BDF1AC
+		// Token: 0x06027D22 RID: 163106 RVA: 0x00B268B4 File Offset: 0x00B24AB4
 		private void OnClickedBtnDownload()
 		{
 			if (RoleLangCustomModel.Instance.CheckPackageAudioDownloading(this.ItemData.LangIndex))
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			this.NeedTick = true;
 		}
 
-		// Token: 0x06032F48 RID: 208712 RVA: 0x00BE1020 File Offset: 0x00BDF220
+		// Token: 0x06027D23 RID: 163107 RVA: 0x00B26928 File Offset: 0x00B24B28
 		private void OnClickedBtnDownloadProgress()
 		{
 			RoleLangCustomLangPackageInfo info = new RoleLangCustomLangPackageInfo
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 			RoleLangCustomModel.Instance.StartDownloading(info);
 		}
 
-		// Token: 0x0401B1A2 RID: 111010
+		// Token: 0x04015B27 RID: 88871
 		[Nullable(new byte[]
 		{
 			2,
@@ -186,35 +186,35 @@ namespace CSharpScript.Game.Module.RoleUi.RoleFavor
 		})]
 		public Action<IRoleLangCustomInfo> OnClickedCallback;
 
-		// Token: 0x0401B1A3 RID: 111011
+		// Token: 0x04015B28 RID: 88872
 		[Nullable(2)]
 		public Func<bool> CheckScrollActiveCallback;
 
-		// Token: 0x0401B1A4 RID: 111012
+		// Token: 0x04015B29 RID: 88873
 		public bool NeedTick;
 
-		// Token: 0x0401B1A5 RID: 111013
+		// Token: 0x04015B2A RID: 88874
 		protected IRoleLangCustomInfo ItemData;
 
-		// Token: 0x0200AE8E RID: 44686
+		// Token: 0x020098AC RID: 39084
 		[NullableContext(0)]
 		private enum EToggle
 		{
-			// Token: 0x04035014 RID: 217108
+			// Token: 0x0402F9BC RID: 195004
 			ToggleItem,
-			// Token: 0x04035015 RID: 217109
+			// Token: 0x0402F9BD RID: 195005
 			TxtName,
-			// Token: 0x04035016 RID: 217110
+			// Token: 0x0402F9BE RID: 195006
 			PanelCheckState,
-			// Token: 0x04035017 RID: 217111
+			// Token: 0x0402F9BF RID: 195007
 			BtnDownloadProgress,
-			// Token: 0x04035018 RID: 217112
+			// Token: 0x0402F9C0 RID: 195008
 			SpriteDownloadFill,
-			// Token: 0x04035019 RID: 217113
+			// Token: 0x0402F9C1 RID: 195009
 			SpritePauseIcon,
-			// Token: 0x0403501A RID: 217114
+			// Token: 0x0402F9C2 RID: 195010
 			SpritePlayIcon,
-			// Token: 0x0403501B RID: 217115
+			// Token: 0x0402F9C3 RID: 195011
 			BtnDownload
 		}
 	}

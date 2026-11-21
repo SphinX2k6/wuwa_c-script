@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E26 RID: 20006
+	// Token: 0x02005335 RID: 21301
 	public enum ETargetGearGroupSuccessCondition : byte
 	{
-		// Token: 0x0400DB6D RID: 56173
+		// Token: 0x0400E6DF RID: 59103
 		SameSpecificState,
-		// Token: 0x0400DB6E RID: 56174
+		// Token: 0x0400E6E0 RID: 59104
 		SameArbitraryState,
-		// Token: 0x0400DB6F RID: 56175
+		// Token: 0x0400E6E1 RID: 59105
 		CountDownState,
-		// Token: 0x0400DB70 RID: 56176
+		// Token: 0x0400E6E2 RID: 59106
 		SpecificTargetState
 	}
 }

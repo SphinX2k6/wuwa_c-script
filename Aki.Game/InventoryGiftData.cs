@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001FAF RID: 8111
+// Token: 0x02001471 RID: 5233
 [NullableContext(1)]
 [Nullable(0)]
 public class InventoryGiftData : UiPopViewData
 {
-	// Token: 0x0600FCC4 RID: 64708 RVA: 0x003D6264 File Offset: 0x003D4464
+	// Token: 0x0600D0EA RID: 53482 RVA: 0x003E1C18 File Offset: 0x003DFE18
 	public InventoryGiftData(int configId, GiftItemData[] itemList, GiftPackage giftPackage, int? initSelectedId, int? selectedCount)
 	{
 		this.ConfigId = configId;
@@ -23,18 +23,18 @@ public class InventoryGiftData : UiPopViewData
 		this.SelectedCount = selectedCount;
 	}
 
-	// Token: 0x0400756A RID: 30058
+	// Token: 0x0400764C RID: 30284
 	public int ConfigId;
 
-	// Token: 0x0400756B RID: 30059
+	// Token: 0x0400764D RID: 30285
 	public GiftItemData[] ItemList;
 
-	// Token: 0x0400756C RID: 30060
+	// Token: 0x0400764E RID: 30286
 	public GiftPackage GiftPackage;
 
-	// Token: 0x0400756D RID: 30061
+	// Token: 0x0400764F RID: 30287
 	public int? InitializedSelectedId;
 
-	// Token: 0x0400756E RID: 30062
+	// Token: 0x04007650 RID: 30288
 	public int? SelectedCount;
 }

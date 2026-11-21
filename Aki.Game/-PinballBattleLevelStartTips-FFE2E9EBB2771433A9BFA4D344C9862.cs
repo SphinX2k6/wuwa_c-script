@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001CFE RID: 7422
+// Token: 0x020011C0 RID: 4544
 internal enum <PinballBattleLevelStartTips>FFE2E9EBB2771433A9BFA4D344C986255A1347D63AB4BB85A6CAE7AB74E7FEC22__EComp
 {
-	// Token: 0x040067B5 RID: 26549
+	// Token: 0x04006894 RID: 26772
 	Tips
 }

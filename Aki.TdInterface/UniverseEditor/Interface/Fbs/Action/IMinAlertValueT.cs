@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AA4 RID: 27300
+	// Token: 0x020071C9 RID: 29129
 	public class IMinAlertValueT
 	{
-		// Token: 0x1700CA9C RID: 51868
-		// (get) Token: 0x0602FD72 RID: 195954 RVA: 0x006821D2 File Offset: 0x006803D2
-		// (set) Token: 0x0602FD73 RID: 195955 RVA: 0x006821DA File Offset: 0x006803DA
+		// Token: 0x1700D54C RID: 54604
+		// (get) Token: 0x06032AAE RID: 207534 RVA: 0x006D8492 File Offset: 0x006D6692
+		// (set) Token: 0x06032AAF RID: 207535 RVA: 0x006D849A File Offset: 0x006D669A
 		public EValueChangeType Type { get; set; }
 
-		// Token: 0x0602FD74 RID: 195956 RVA: 0x006821E3 File Offset: 0x006803E3
+		// Token: 0x06032AB0 RID: 207536 RVA: 0x006D84A3 File Offset: 0x006D66A3
 		public IMinAlertValueT()
 		{
 			this.Type = EValueChangeType.AddOrSub;

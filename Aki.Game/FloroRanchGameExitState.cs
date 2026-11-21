@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.BlackScreen;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001B53 RID: 6995
+// Token: 0x02001012 RID: 4114
 public class FloroRanchGameExitState : FloroRanchStateBase
 {
-	// Token: 0x0600CF90 RID: 53136 RVA: 0x002F4722 File Offset: 0x002F2922
+	// Token: 0x0600A3A1 RID: 41889 RVA: 0x002FF7FA File Offset: 0x002FD9FA
 	[NullableContext(1)]
 	public FloroRanchGameExitState(FloroRanchStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x0600CF91 RID: 53137 RVA: 0x002F472C File Offset: 0x002F292C
+	// Token: 0x0600A3A2 RID: 41890 RVA: 0x002FF804 File Offset: 0x002FDA04
 	protected override void OnEnter()
 	{
 		if (FloroRanchGamePlayModel.Instance.NeedReStart)
@@ -29,7 +29,7 @@ public class FloroRanchGameExitState : FloroRanchStateBase
 		this.CloseView();
 	}
 
-	// Token: 0x0600CF92 RID: 53138 RVA: 0x002F4780 File Offset: 0x002F2980
+	// Token: 0x0600A3A3 RID: 41891 RVA: 0x002FF858 File Offset: 0x002FDA58
 	private void CloseView()
 	{
 		int activityId = FloroRanchGamePlayModel.Instance.ActivityId;

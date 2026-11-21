@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073F4 RID: 29684
+	// Token: 0x02007BDE RID: 31710
 	public struct IToggleAndHighlightItem : IFlatbufferObject
 	{
-		// Token: 0x1700E16D RID: 57709
-		// (get) Token: 0x06035EB5 RID: 220853 RVA: 0x00756788 File Offset: 0x00754988
+		// Token: 0x1700ED82 RID: 60802
+		// (get) Token: 0x06039268 RID: 234088 RVA: 0x007B8EFC File Offset: 0x007B70FC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035EB6 RID: 220854 RVA: 0x00756795 File Offset: 0x00754995
+		// Token: 0x06039269 RID: 234089 RVA: 0x007B8F09 File Offset: 0x007B7109
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035EB7 RID: 220855 RVA: 0x0075679C File Offset: 0x0075499C
+		// Token: 0x0603926A RID: 234090 RVA: 0x007B8F10 File Offset: 0x007B7110
 		public static IToggleAndHighlightItem GetRootAsIToggleAndHighlightItem(ByteBuffer _bb)
 		{
 			return IToggleAndHighlightItem.GetRootAsIToggleAndHighlightItem(_bb, default(IToggleAndHighlightItem));
 		}
 
-		// Token: 0x06035EB8 RID: 220856 RVA: 0x007567B8 File Offset: 0x007549B8
+		// Token: 0x0603926B RID: 234091 RVA: 0x007B8F2C File Offset: 0x007B712C
 		public static IToggleAndHighlightItem GetRootAsIToggleAndHighlightItem(ByteBuffer _bb, IToggleAndHighlightItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035EB9 RID: 220857 RVA: 0x007567D5 File Offset: 0x007549D5
+		// Token: 0x0603926C RID: 234092 RVA: 0x007B8F49 File Offset: 0x007B7149
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035EBA RID: 220858 RVA: 0x007567E4 File Offset: 0x007549E4
+		// Token: 0x0603926D RID: 234093 RVA: 0x007B8F58 File Offset: 0x007B7158
 		public IToggleAndHighlightItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E16E RID: 57710
-		// (get) Token: 0x06035EBB RID: 220859 RVA: 0x007567F4 File Offset: 0x007549F4
+		// Token: 0x1700ED83 RID: 60803
+		// (get) Token: 0x0603926E RID: 234094 RVA: 0x007B8F68 File Offset: 0x007B7168
 		public EHighlightExploreSkillIconType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E16F RID: 57711
-		// (get) Token: 0x06035EBC RID: 220860 RVA: 0x00756830 File Offset: 0x00754A30
+		// Token: 0x1700ED84 RID: 60804
+		// (get) Token: 0x0603926F RID: 234095 RVA: 0x007B8FA4 File Offset: 0x007B71A4
 		public EHighlightType HighlightType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E170 RID: 57712
-		// (get) Token: 0x06035EBD RID: 220861 RVA: 0x0075686C File Offset: 0x00754A6C
+		// Token: 0x1700ED85 RID: 60805
+		// (get) Token: 0x06039270 RID: 234096 RVA: 0x007B8FE0 File Offset: 0x007B71E0
 		public int ItemId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E171 RID: 57713
-		// (get) Token: 0x06035EBE RID: 220862 RVA: 0x007568A8 File Offset: 0x00754AA8
+		// Token: 0x1700ED86 RID: 60806
+		// (get) Token: 0x06039271 RID: 234097 RVA: 0x007B901C File Offset: 0x007B721C
 		public int SkillType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E172 RID: 57714
-		// (get) Token: 0x06035EBF RID: 220863 RVA: 0x007568E8 File Offset: 0x00754AE8
+		// Token: 0x1700ED87 RID: 60807
+		// (get) Token: 0x06039272 RID: 234098 RVA: 0x007B905C File Offset: 0x007B725C
 		public bool IsShowTips
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E173 RID: 57715
-		// (get) Token: 0x06035EC0 RID: 220864 RVA: 0x00756928 File Offset: 0x00754B28
+		// Token: 0x1700ED88 RID: 60808
+		// (get) Token: 0x06039273 RID: 234099 RVA: 0x007B909C File Offset: 0x007B729C
 		public bool IsSwitchBack
 		{
 			get
@@ -129,8 +129,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E174 RID: 57716
-		// (get) Token: 0x06035EC1 RID: 220865 RVA: 0x00756968 File Offset: 0x00754B68
+		// Token: 0x1700ED89 RID: 60809
+		// (get) Token: 0x06039274 RID: 234100 RVA: 0x007B90DC File Offset: 0x007B72DC
 		public byte NullMask
 		{
 			get
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035EC2 RID: 220866 RVA: 0x007569A8 File Offset: 0x00754BA8
+		// Token: 0x06039275 RID: 234101 RVA: 0x007B911C File Offset: 0x007B731C
 		public static Offset<IToggleAndHighlightItem> CreateIToggleAndHighlightItem(FlatBufferBuilder builder, EHighlightExploreSkillIconType Type = EHighlightExploreSkillIconType.Show, EHighlightType HighlightType = EHighlightType.CommonWhite, int ItemId = 0, int SkillType = 0, bool IsShowTips = false, bool IsSwitchBack = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -158,61 +158,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IToggleAndHighlightItem.EndIToggleAndHighlightItem(builder);
 		}
 
-		// Token: 0x06035EC3 RID: 220867 RVA: 0x007569F7 File Offset: 0x00754BF7
+		// Token: 0x06039276 RID: 234102 RVA: 0x007B916B File Offset: 0x007B736B
 		public static void StartIToggleAndHighlightItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x06035EC4 RID: 220868 RVA: 0x00756A00 File Offset: 0x00754C00
+		// Token: 0x06039277 RID: 234103 RVA: 0x007B9174 File Offset: 0x007B7374
 		public static void AddType(FlatBufferBuilder builder, EHighlightExploreSkillIconType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035EC5 RID: 220869 RVA: 0x00756A0B File Offset: 0x00754C0B
+		// Token: 0x06039278 RID: 234104 RVA: 0x007B917F File Offset: 0x007B737F
 		public static void AddHighlightType(FlatBufferBuilder builder, EHighlightType highlightType)
 		{
 			builder.AddByte(1, (byte)highlightType, 0);
 		}
 
-		// Token: 0x06035EC6 RID: 220870 RVA: 0x00756A16 File Offset: 0x00754C16
+		// Token: 0x06039279 RID: 234105 RVA: 0x007B918A File Offset: 0x007B738A
 		public static void AddItemId(FlatBufferBuilder builder, int itemId)
 		{
 			builder.AddInt(2, itemId, 0);
 		}
 
-		// Token: 0x06035EC7 RID: 220871 RVA: 0x00756A21 File Offset: 0x00754C21
+		// Token: 0x0603927A RID: 234106 RVA: 0x007B9195 File Offset: 0x007B7395
 		public static void AddSkillType(FlatBufferBuilder builder, int skillType)
 		{
 			builder.AddInt(3, skillType, 0);
 		}
 
-		// Token: 0x06035EC8 RID: 220872 RVA: 0x00756A2C File Offset: 0x00754C2C
+		// Token: 0x0603927B RID: 234107 RVA: 0x007B91A0 File Offset: 0x007B73A0
 		public static void AddIsShowTips(FlatBufferBuilder builder, bool isShowTips)
 		{
 			builder.AddBool(4, isShowTips, false);
 		}
 
-		// Token: 0x06035EC9 RID: 220873 RVA: 0x00756A37 File Offset: 0x00754C37
+		// Token: 0x0603927C RID: 234108 RVA: 0x007B91AB File Offset: 0x007B73AB
 		public static void AddIsSwitchBack(FlatBufferBuilder builder, bool isSwitchBack)
 		{
 			builder.AddBool(5, isSwitchBack, false);
 		}
 
-		// Token: 0x06035ECA RID: 220874 RVA: 0x00756A42 File Offset: 0x00754C42
+		// Token: 0x0603927D RID: 234109 RVA: 0x007B91B6 File Offset: 0x007B73B6
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x06035ECB RID: 220875 RVA: 0x00756A4D File Offset: 0x00754C4D
+		// Token: 0x0603927E RID: 234110 RVA: 0x007B91C1 File Offset: 0x007B73C1
 		public static Offset<IToggleAndHighlightItem> EndIToggleAndHighlightItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IToggleAndHighlightItem>(builder.EndTable());
 		}
 
-		// Token: 0x06035ECC RID: 220876 RVA: 0x00756A5C File Offset: 0x00754C5C
+		// Token: 0x0603927F RID: 234111 RVA: 0x007B91D0 File Offset: 0x007B73D0
 		public IToggleAndHighlightItemT UnPack()
 		{
 			IToggleAndHighlightItemT toggleAndHighlightItemT = new IToggleAndHighlightItemT();
@@ -220,7 +220,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return toggleAndHighlightItemT;
 		}
 
-		// Token: 0x06035ECD RID: 220877 RVA: 0x00756A78 File Offset: 0x00754C78
+		// Token: 0x06039280 RID: 234112 RVA: 0x007B91EC File Offset: 0x007B73EC
 		public void UnPackTo(IToggleAndHighlightItemT _o)
 		{
 			_o.Type = this.Type;
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06035ECE RID: 220878 RVA: 0x00756ADC File Offset: 0x00754CDC
+		// Token: 0x06039281 RID: 234113 RVA: 0x007B9250 File Offset: 0x007B7450
 		public static Offset<IToggleAndHighlightItem> Pack(FlatBufferBuilder builder, IToggleAndHighlightItemT _o)
 		{
 			if (_o == null)
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IToggleAndHighlightItem.CreateIToggleAndHighlightItem(builder, _o.Type, _o.HighlightType, _o.ItemId, _o.SkillType, _o.IsShowTips, _o.IsSwitchBack, _o.NullMask);
 		}
 
-		// Token: 0x04012251 RID: 74321
+		// Token: 0x0401326D RID: 78445
 		private Table __p;
 	}
 }

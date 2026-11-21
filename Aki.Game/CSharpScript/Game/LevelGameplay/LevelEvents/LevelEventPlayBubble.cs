@@ -6,17 +6,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B4B RID: 27467
+	// Token: 0x02005CC3 RID: 23747
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPlayBubble : LevelEventBase
 	{
-		// Token: 0x060441A0 RID: 278944 RVA: 0x010C19B2 File Offset: 0x010BFBB2
+		// Token: 0x0603A2F2 RID: 238322 RVA: 0x0106B54E File Offset: 0x0106974E
 		public LevelEventPlayBubble(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441A1 RID: 278945 RVA: 0x010C19BC File Offset: 0x010BFBBC
+		// Token: 0x0603A2F3 RID: 238323 RVA: 0x0106B558 File Offset: 0x01069758
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PlayBubble playBubble = inParams as PlayBubble;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441A2 RID: 278946 RVA: 0x010C1BD8 File Offset: 0x010BFDD8
+		// Token: 0x0603A2F4 RID: 238324 RVA: 0x0106B774 File Offset: 0x01069974
 		private unsafe CharacterDynamicFlowData CreateCharacterFlowDataFromPbDataId(int pbDataId, PlayBubble param)
 		{
 			CharacterDynamicFlowData characterDynamicFlowData = new CharacterDynamicFlowData();
@@ -98,6 +98,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			addPlayBubble.EntityIds = list;
 			addPlayBubble.Flow = param.Flow;
 			addPlayBubble.WaitTime = new int?(0);
+			addPlayBubble.IsRangeFollowEntity = param.IsRangeFollowEntity;
 			addPlayBubble.IsAudioOccludedByScene = param.IsAudioOccludedByScene;
 			AddPlayBubble bubbleData = addPlayBubble;
 			DynamicFlowActorInfo masterInfo = new DynamicFlowActorInfo();
@@ -112,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return characterDynamicFlowData;
 		}
 
-		// Token: 0x060441A3 RID: 278947 RVA: 0x010C1C8C File Offset: 0x010BFE8C
+		// Token: 0x0603A2F5 RID: 238325 RVA: 0x0106B834 File Offset: 0x01069A34
 		private CharacterDynamicFlowData CreateCharacterFlowDataFromCreatureId(long creatureId, PlayBubble param)
 		{
 			CharacterDynamicFlowData characterDynamicFlowData = new CharacterDynamicFlowData();
@@ -121,6 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 				EntityIds = new List<int>(),
 				Flow = param.Flow,
 				WaitTime = new int?(0),
+				IsRangeFollowEntity = param.IsRangeFollowEntity,
 				IsAudioOccludedByScene = param.IsAudioOccludedByScene
 			};
 			DynamicFlowActorInfo masterInfo = new DynamicFlowActorInfo();

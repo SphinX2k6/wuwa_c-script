@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C12 RID: 23570
+	// Token: 0x02006231 RID: 25137
 	public enum TEntityMatch : byte
 	{
-		// Token: 0x0400F3CA RID: 62410
+		// Token: 0x040100E5 RID: 65765
 		NONE,
-		// Token: 0x0400F3CB RID: 62411
+		// Token: 0x040100E6 RID: 65766
 		IEntityMatchAllCharacter,
-		// Token: 0x0400F3CC RID: 62412
+		// Token: 0x040100E7 RID: 65767
 		IEntityMatchDynamic,
-		// Token: 0x0400F3CD RID: 62413
+		// Token: 0x040100E8 RID: 65768
 		IEntityMatchPlayer,
-		// Token: 0x0400F3CE RID: 62414
+		// Token: 0x040100E9 RID: 65769
 		IEntityMatchSpecificBp
 	}
 }

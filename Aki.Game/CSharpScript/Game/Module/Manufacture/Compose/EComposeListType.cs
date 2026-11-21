@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Compose
 {
-	// Token: 0x02005656 RID: 22102
+	// Token: 0x0200462C RID: 17964
 	public enum EComposeListType
 	{
-		// Token: 0x0401D8FA RID: 121082
+		// Token: 0x04018385 RID: 99205
 		ReagentProduction = 1,
-		// Token: 0x0401D8FB RID: 121083
+		// Token: 0x04018386 RID: 99206
 		Structure,
-		// Token: 0x0401D8FC RID: 121084
+		// Token: 0x04018387 RID: 99207
 		Purification,
-		// Token: 0x0401D8FD RID: 121085
+		// Token: 0x04018388 RID: 99208
 		Exchange,
-		// Token: 0x0401D8FE RID: 121086
+		// Token: 0x04018389 RID: 99209
 		Collect
 	}
 }

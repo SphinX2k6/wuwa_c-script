@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001494 RID: 5268
+// Token: 0x02000948 RID: 2376
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressTabSwitchItemPanel : CommonTabItemBase, ITabViewRegister
 {
-	// Token: 0x06009545 RID: 38213 RVA: 0x00203268 File Offset: 0x00201468
+	// Token: 0x060068DA RID: 26842 RVA: 0x0020C1D0 File Offset: 0x0020A3D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class ActivityRegressTabSwitchItemPanel : CommonTabItemBase, ITabViewRegi
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009546 RID: 38214 RVA: 0x00203330 File Offset: 0x00201530
+	// Token: 0x060068DB RID: 26843 RVA: 0x0020C298 File Offset: 0x0020A498
 	public override void Refresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -42,20 +42,20 @@ public class ActivityRegressTabSwitchItemPanel : CommonTabItemBase, ITabViewRegi
 		this.GetTabToggle().RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x06009547 RID: 38215 RVA: 0x0020337F File Offset: 0x0020157F
+	// Token: 0x060068DC RID: 26844 RVA: 0x0020C2E7 File Offset: 0x0020A4E7
 	protected override void OnStart()
 	{
 		base.OnStart();
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06009548 RID: 38216 RVA: 0x00203398 File Offset: 0x00201598
+	// Token: 0x060068DD RID: 26845 RVA: 0x0020C300 File Offset: 0x0020A500
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{
 		tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 	}
 
-	// Token: 0x06009549 RID: 38217 RVA: 0x002033A6 File Offset: 0x002015A6
+	// Token: 0x060068DE RID: 26846 RVA: 0x0020C30E File Offset: 0x0020A50E
 	private void OnExtendToggleToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -64,13 +64,13 @@ public class ActivityRegressTabSwitchItemPanel : CommonTabItemBase, ITabViewRegi
 		}
 	}
 
-	// Token: 0x0600954A RID: 38218 RVA: 0x002033BF File Offset: 0x002015BF
+	// Token: 0x060068DF RID: 26847 RVA: 0x0020C327 File Offset: 0x0020A527
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(1).SetToggleStateForce(state, bFire, false, false);
 	}
 
-	// Token: 0x0600954B RID: 38219 RVA: 0x002033D1 File Offset: 0x002015D1
+	// Token: 0x060068E0 RID: 26848 RVA: 0x0020C339 File Offset: 0x0020A539
 	protected override void OnRefresh(CommonTabItemData data, bool isSelected, int gridIndex)
 	{
 		if (data.Data != null)
@@ -79,35 +79,35 @@ public class ActivityRegressTabSwitchItemPanel : CommonTabItemBase, ITabViewRegi
 		}
 	}
 
-	// Token: 0x0600954C RID: 38220 RVA: 0x002033F5 File Offset: 0x002015F5
+	// Token: 0x060068E1 RID: 26849 RVA: 0x0020C35D File Offset: 0x0020A55D
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x0600954D RID: 38221 RVA: 0x002033F7 File Offset: 0x002015F7
+	// Token: 0x060068E2 RID: 26850 RVA: 0x0020C35F File Offset: 0x0020A55F
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(1);
 	}
 
-	// Token: 0x0600954E RID: 38222 RVA: 0x00203400 File Offset: 0x00201600
+	// Token: 0x060068E3 RID: 26851 RVA: 0x0020C368 File Offset: 0x0020A568
 	public void UpdateView(ActivityRegressTabSwitchItemCommonData tabData)
 	{
 		UUIText text = base.GetText(0);
 		LguiUtil.Instance.SetLocalTextNew(text, tabData.Title, Array.Empty<object>());
 	}
 
-	// Token: 0x02007AC4 RID: 31428
+	// Token: 0x02006C48 RID: 27720
 	[NullableContext(0)]
 	private class EActivityRecallTabSwitchItemPanelComponents
 	{
-		// Token: 0x04028641 RID: 165441
+		// Token: 0x0402395B RID: 145755
 		public const int NameTxt = 0;
 
-		// Token: 0x04028642 RID: 165442
+		// Token: 0x0402395C RID: 145756
 		public const int SwitchToggle = 1;
 
-		// Token: 0x04028643 RID: 165443
+		// Token: 0x0402395D RID: 145757
 		public const int RedDotItem = 2;
 	}
 }

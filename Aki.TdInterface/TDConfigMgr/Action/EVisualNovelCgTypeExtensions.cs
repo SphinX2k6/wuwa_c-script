@@ -2,17 +2,17 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024A7 RID: 9383
+	// Token: 0x0200274A RID: 10058
 	public static class EVisualNovelCgTypeExtensions
 	{
-		// Token: 0x0600CB6E RID: 52078 RVA: 0x001DF1C4 File Offset: 0x001DD3C4
+		// Token: 0x0600D827 RID: 55335 RVA: 0x001F938C File Offset: 0x001F758C
 		public static string ToEnumString(this EVisualNovelCgType value)
 		{
 			string result;
 			switch (value)
 			{
-			case EVisualNovelCgType.LoadSpine:
-				result = "LoadSpine";
+			case EVisualNovelCgType.LoadPrefab:
+				result = "LoadPrefab";
 				break;
 			case EVisualNovelCgType.LoadImage:
 				result = "LoadImage";
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB6F RID: 52079 RVA: 0x001DF20C File Offset: 0x001DD40C
+		// Token: 0x0600D828 RID: 55336 RVA: 0x001F93D4 File Offset: 0x001F75D4
 		public static EVisualNovelCgType FromString(string name)
 		{
 			EVisualNovelCgType result;
@@ -38,17 +38,17 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB70 RID: 52080 RVA: 0x001DF238 File Offset: 0x001DD438
+		// Token: 0x0600D829 RID: 55337 RVA: 0x001F9400 File Offset: 0x001F7600
 		public static bool TryFromString(string name, out EVisualNovelCgType value)
 		{
 			if (string.IsNullOrEmpty(name))
 			{
-				value = EVisualNovelCgType.LoadSpine;
+				value = EVisualNovelCgType.LoadPrefab;
 				return false;
 			}
-			if (name == "LoadSpine")
+			if (name == "LoadPrefab")
 			{
-				value = EVisualNovelCgType.LoadSpine;
+				value = EVisualNovelCgType.LoadPrefab;
 				return true;
 			}
 			if (name == "LoadImage")
@@ -58,41 +58,41 @@ namespace Aki.TDConfigMgr.Action
 			}
 			if (!(name == "Clean"))
 			{
-				value = EVisualNovelCgType.LoadSpine;
+				value = EVisualNovelCgType.LoadPrefab;
 				return false;
 			}
 			value = EVisualNovelCgType.Clean;
 			return true;
 		}
 
-		// Token: 0x0600CB71 RID: 52081 RVA: 0x001DF28E File Offset: 0x001DD48E
+		// Token: 0x0600D82A RID: 55338 RVA: 0x001F9456 File Offset: 0x001F7656
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
-				"LoadSpine",
+				"LoadPrefab",
 				"LoadImage",
 				"Clean"
 			};
 		}
 
-		// Token: 0x0600CB72 RID: 52082 RVA: 0x001DF2AE File Offset: 0x001DD4AE
+		// Token: 0x0600D82B RID: 55339 RVA: 0x001F9476 File Offset: 0x001F7676
 		public static EVisualNovelCgType[] GetValues()
 		{
 			return new EVisualNovelCgType[]
 			{
-				EVisualNovelCgType.LoadSpine,
+				EVisualNovelCgType.LoadPrefab,
 				EVisualNovelCgType.LoadImage,
 				EVisualNovelCgType.Clean
 			};
 		}
 
-		// Token: 0x0600CB73 RID: 52083 RVA: 0x001DF2BE File Offset: 0x001DD4BE
+		// Token: 0x0600D82C RID: 55340 RVA: 0x001F9486 File Offset: 0x001F7686
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
-				"LoadSpine",
+				"LoadPrefab",
 				"LoadImage",
 				"Clean"
 			};

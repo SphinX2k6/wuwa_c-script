@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A4D RID: 6733
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001BE2 RID: 7138
 	[JsonConverter(typeof(IFadeBackgroundFadeOutEffectTypeBaseConverter))]
 	public class IFadeBackgroundFadeOutEffectTypeBase
 	{
-		// Token: 0x06009022 RID: 36898 RVA: 0x001501A8 File Offset: 0x0014E3A8
+		// Token: 0x0600978C RID: 38796 RVA: 0x001600D4 File Offset: 0x0015E2D4
 		private IFadeBackgroundFadeOutEffectTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009023 RID: 36899 RVA: 0x001501E0 File Offset: 0x0014E3E0
+		// Token: 0x0600978D RID: 38797 RVA: 0x0016010C File Offset: 0x0015E30C
 		public static IFadeBackgroundFadeOutEffectTypeBase Create([Nullable(2)] IFadeBackgroundFadeOutEffectTypeBase instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009024 RID: 36900 RVA: 0x001501F3 File Offset: 0x0014E3F3
+		// Token: 0x0600978E RID: 38798 RVA: 0x0016011F File Offset: 0x0015E31F
 		public static IFadeBackgroundFadeOutEffectTypeBase CreateFromSetValue([Nullable(2)] IFadeBackgroundFadeOutEffectTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009025 RID: 36901 RVA: 0x00150206 File Offset: 0x0014E406
+		// Token: 0x0600978F RID: 38799 RVA: 0x00160132 File Offset: 0x0015E332
 		public IFadeBackgroundFadeOutEffectTypeBase_SetValue ToSetValue()
 		{
 			return new IFadeBackgroundFadeOutEffectTypeBase_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DF3 RID: 11763
-		// (get) Token: 0x06009026 RID: 36902 RVA: 0x00150219 File Offset: 0x0014E419
-		// (set) Token: 0x06009027 RID: 36903 RVA: 0x00150244 File Offset: 0x0014E444
+		// Token: 0x17003000 RID: 12288
+		// (get) Token: 0x06009790 RID: 38800 RVA: 0x00160145 File Offset: 0x0015E345
+		// (set) Token: 0x06009791 RID: 38801 RVA: 0x00160170 File Offset: 0x0015E370
 		public virtual EFadeBackgroundFadeOutEffectType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005908 RID: 22792
+		// Token: 0x04005D6D RID: 23917
 		[Nullable(2)]
 		protected IFadeBackgroundFadeOutEffectTypeBase FbInstance;
 
-		// Token: 0x04005909 RID: 22793
+		// Token: 0x04005D6E RID: 23918
 		[Nullable(2)]
 		protected IFadeBackgroundFadeOutEffectTypeBase_SetValue PocoInterface;
 	}

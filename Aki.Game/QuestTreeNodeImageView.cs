@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026BB RID: 9915
+// Token: 0x02001BA6 RID: 7078
 public class QuestTreeNodeImageView : UiViewBase
 {
-	// Token: 0x06014545 RID: 83269 RVA: 0x00524B30 File Offset: 0x00522D30
+	// Token: 0x06011A27 RID: 72231 RVA: 0x00533868 File Offset: 0x00531A68
 	[NullableContext(1)]
 	public QuestTreeNodeImageView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06014546 RID: 83270 RVA: 0x00524B3C File Offset: 0x00522D3C
+	// Token: 0x06011A28 RID: 72232 RVA: 0x00533874 File Offset: 0x00531A74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class QuestTreeNodeImageView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014547 RID: 83271 RVA: 0x00524BE4 File Offset: 0x00522DE4
+	// Token: 0x06011A29 RID: 72233 RVA: 0x0053391C File Offset: 0x00531B1C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestTreeNodeImageView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,29 +48,29 @@ public class QuestTreeNodeImageView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014548 RID: 83272 RVA: 0x00524C27 File Offset: 0x00522E27
+	// Token: 0x06011A2A RID: 72234 RVA: 0x0053395F File Offset: 0x00531B5F
 	protected override void OnBeforeHide()
 	{
 		QuestTreeController.Instance.OpenNodeDetailView(this.Data);
 	}
 
-	// Token: 0x06014549 RID: 83273 RVA: 0x00524C39 File Offset: 0x00522E39
+	// Token: 0x06011A2B RID: 72235 RVA: 0x00533971 File Offset: 0x00531B71
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040098DC RID: 39132
+	// Token: 0x04009A34 RID: 39476
 	[Nullable(1)]
 	private QuestTreeNodeData Data;
 
-	// Token: 0x02008D18 RID: 36120
+	// Token: 0x02007EA1 RID: 32417
 	private class EComponentDefine
 	{
-		// Token: 0x0402DCC1 RID: 187585
+		// Token: 0x04028FD8 RID: 167896
 		public const int TextureDetail = 0;
 
-		// Token: 0x0402DCC2 RID: 187586
+		// Token: 0x04028FD9 RID: 167897
 		public const int BtnMask = 1;
 	}
 }

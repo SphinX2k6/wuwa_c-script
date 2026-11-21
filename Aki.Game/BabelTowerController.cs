@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,43 +16,43 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02001121 RID: 4385
+// Token: 0x020005D5 RID: 1493
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BabelTowerController : ActivityControllerBase
 {
-	// Token: 0x060072D0 RID: 29392 RVA: 0x00178CDC File Offset: 0x00176EDC
+	// Token: 0x06004666 RID: 18022 RVA: 0x001816CA File Offset: 0x0017F8CA
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060072D1 RID: 29393 RVA: 0x00178CDE File Offset: 0x00176EDE
+	// Token: 0x06004667 RID: 18023 RVA: 0x001816CC File Offset: 0x0017F8CC
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityBabel";
 	}
 
-	// Token: 0x060072D2 RID: 29394 RVA: 0x00178CE5 File Offset: 0x00176EE5
+	// Token: 0x06004668 RID: 18024 RVA: 0x001816D3 File Offset: 0x0017F8D3
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new BabelTowerSubView();
 	}
 
-	// Token: 0x060072D3 RID: 29395 RVA: 0x00178CEC File Offset: 0x00176EEC
+	// Token: 0x06004669 RID: 18025 RVA: 0x001816DA File Offset: 0x0017F8DA
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new BabelTowerData();
 	}
 
-	// Token: 0x060072D4 RID: 29396 RVA: 0x00178CFF File Offset: 0x00176EFF
+	// Token: 0x0600466A RID: 18026 RVA: 0x001816ED File Offset: 0x0017F8ED
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x060072D5 RID: 29397 RVA: 0x00178D04 File Offset: 0x00176F04
+	// Token: 0x0600466B RID: 18027 RVA: 0x001816F0 File Offset: 0x0017F8F0
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BabelActivityLevelInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.BabelActivityLevelInfoNotify));
@@ -66,7 +65,7 @@ public class BabelTowerController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.BabelActivityItemNumUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.BabelActivityItemNumUpdateNotify));
 	}
 
-	// Token: 0x060072D6 RID: 29398 RVA: 0x00178DF4 File Offset: 0x00176FF4
+	// Token: 0x0600466C RID: 18028 RVA: 0x001817E0 File Offset: 0x0017F9E0
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BabelActivityLevelInfoNotify);
@@ -79,19 +78,19 @@ public class BabelTowerController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.BabelActivityItemNumUpdateNotify);
 	}
 
-	// Token: 0x060072D7 RID: 29399 RVA: 0x00178E81 File Offset: 0x00177081
+	// Token: 0x0600466D RID: 18029 RVA: 0x0018186D File Offset: 0x0017FA6D
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x060072D8 RID: 29400 RVA: 0x00178E9F File Offset: 0x0017709F
+	// Token: 0x0600466E RID: 18030 RVA: 0x0018188B File Offset: 0x0017FA8B
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x060072D9 RID: 29401 RVA: 0x00178EBD File Offset: 0x001770BD
+	// Token: 0x0600466F RID: 18031 RVA: 0x001818A9 File Offset: 0x0017FAA9
 	private void OnRoleChangeEnd()
 	{
 		if (this.ActivityId <= 0)
@@ -106,7 +105,7 @@ public class BabelTowerController : ActivityControllerBase
 		babelTowerData.UpdateAllLevelRoleIds();
 	}
 
-	// Token: 0x060072DA RID: 29402 RVA: 0x00178EDC File Offset: 0x001770DC
+	// Token: 0x06004670 RID: 18032 RVA: 0x001818C8 File Offset: 0x0017FAC8
 	[NullableContext(2)]
 	private void BabelActivityLevelInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -115,7 +114,7 @@ public class BabelTowerController : ActivityControllerBase
 		EventSystem.Instance.Emit(EEventName.BabelTowerRefreshLevelInfo);
 	}
 
-	// Token: 0x060072DB RID: 29403 RVA: 0x00178F14 File Offset: 0x00177114
+	// Token: 0x06004671 RID: 18033 RVA: 0x00181900 File Offset: 0x0017FB00
 	[NullableContext(2)]
 	private void BabelActivityDeTermInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -127,7 +126,7 @@ public class BabelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060072DC RID: 29404 RVA: 0x00178F80 File Offset: 0x00177180
+	// Token: 0x06004672 RID: 18034 RVA: 0x0018196C File Offset: 0x0017FB6C
 	[NullableContext(2)]
 	private void BabelActivityBuffInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -139,7 +138,7 @@ public class BabelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060072DD RID: 29405 RVA: 0x00178FEC File Offset: 0x001771EC
+	// Token: 0x06004673 RID: 18035 RVA: 0x001819D8 File Offset: 0x0017FBD8
 	[NullableContext(2)]
 	private void BabelActivityTaskInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -153,7 +152,7 @@ public class BabelTowerController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, babelTowerData.Id);
 	}
 
-	// Token: 0x060072DE RID: 29406 RVA: 0x00179078 File Offset: 0x00177278
+	// Token: 0x06004674 RID: 18036 RVA: 0x00181A64 File Offset: 0x0017FC64
 	[NullableContext(2)]
 	private void BabelActivityDailyTaskInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -167,7 +166,7 @@ public class BabelTowerController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, babelTowerData.Id);
 	}
 
-	// Token: 0x060072DF RID: 29407 RVA: 0x00179104 File Offset: 0x00177304
+	// Token: 0x06004675 RID: 18037 RVA: 0x00181AF0 File Offset: 0x0017FCF0
 	[NullableContext(2)]
 	private void BabelActivitySettleInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -311,7 +310,7 @@ public class BabelTowerController : ActivityControllerBase
 		ItemRewardController.Instance.OpenExploreRewardViewNew(exploreRewardViewData);
 	}
 
-	// Token: 0x060072E0 RID: 29408 RVA: 0x0017941C File Offset: 0x0017761C
+	// Token: 0x06004676 RID: 18038 RVA: 0x00181E08 File Offset: 0x00180008
 	[NullableContext(2)]
 	private void BabelActivityInstInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -319,7 +318,7 @@ public class BabelTowerController : ActivityControllerBase
 		BabelTowerModel.Instance.UpdateCurrentChallengeInstDataByNotify(notify);
 	}
 
-	// Token: 0x060072E1 RID: 29409 RVA: 0x0017943C File Offset: 0x0017763C
+	// Token: 0x06004677 RID: 18039 RVA: 0x00181E28 File Offset: 0x00180028
 	[NullableContext(2)]
 	private void BabelActivityItemNumUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -327,7 +326,7 @@ public class BabelTowerController : ActivityControllerBase
 		this.GetBabelTowerData().CurrentItemCount = babelActivityItemNumUpdateNotify.ActivityItemNum;
 	}
 
-	// Token: 0x060072E2 RID: 29410 RVA: 0x00179464 File Offset: 0x00177664
+	// Token: 0x06004678 RID: 18040 RVA: 0x00181E50 File Offset: 0x00180050
 	[NullableContext(0)]
 	public UniTask<bool> SelectBabelActivityDeTermRequest(int levelId, [Nullable(1)] List<int> deTermList)
 	{
@@ -340,7 +339,7 @@ public class BabelTowerController : ActivityControllerBase
 		return <SelectBabelActivityDeTermRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060072E3 RID: 29411 RVA: 0x001794B0 File Offset: 0x001776B0
+	// Token: 0x06004679 RID: 18041 RVA: 0x00181E9C File Offset: 0x0018009C
 	public UniTask SubmitDeTermSelectionAndJump(int levelId, List<int> deTermList, int currentStar, bool jumpToPreBattle = true, int quickId = -1)
 	{
 		BabelTowerController.<SubmitDeTermSelectionAndJump>d__20 <SubmitDeTermSelectionAndJump>d__;
@@ -355,7 +354,7 @@ public class BabelTowerController : ActivityControllerBase
 		return <SubmitDeTermSelectionAndJump>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060072E4 RID: 29412 RVA: 0x00179514 File Offset: 0x00177714
+	// Token: 0x0600467A RID: 18042 RVA: 0x00181F00 File Offset: 0x00180100
 	public void OpenPreBattleView(int levelId, int currentStar)
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(levelId);
@@ -416,7 +415,7 @@ public class BabelTowerController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerHardLevelInfoViewNew, param, null);
 	}
 
-	// Token: 0x060072E5 RID: 29413 RVA: 0x00179688 File Offset: 0x00177888
+	// Token: 0x0600467B RID: 18043 RVA: 0x00182074 File Offset: 0x00180274
 	public void RemoveOutdatedMainRoleTrialIds(List<int> roleList)
 	{
 		if (roleList == null || roleList.Count == 0)
@@ -456,7 +455,7 @@ public class BabelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060072E6 RID: 29414 RVA: 0x00179768 File Offset: 0x00177968
+	// Token: 0x0600467C RID: 18044 RVA: 0x00182154 File Offset: 0x00180354
 	public void BabelTowerTaskRewardRequest(int taskId)
 	{
 		BabelTowerTaskRewardRequest babelTowerTaskRewardRequest = Aki.Protocol.BabelTowerTaskRewardRequest.Create();
@@ -470,14 +469,14 @@ public class BabelTowerController : ActivityControllerBase
 			}
 			if (babelTowerTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerTaskRewardResponse.ErrorCode, 21846, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerTaskRewardResponse.ErrorCode, 16607, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}, 0);
 	}
 
-	// Token: 0x060072E7 RID: 29415 RVA: 0x001797A0 File Offset: 0x001779A0
+	// Token: 0x0600467D RID: 18045 RVA: 0x0018218C File Offset: 0x0018038C
 	public void BabelTowerMultiTaskRewardRequest(List<int> taskIds)
 	{
 		if (taskIds.Count == 0)
@@ -496,14 +495,14 @@ public class BabelTowerController : ActivityControllerBase
 			}
 			if (babelTowerTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerTaskRewardResponse.ErrorCode, 21846, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerTaskRewardResponse.ErrorCode, 16607, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}, 0);
 	}
 
-	// Token: 0x060072E8 RID: 29416 RVA: 0x001797F4 File Offset: 0x001779F4
+	// Token: 0x0600467E RID: 18046 RVA: 0x001821E0 File Offset: 0x001803E0
 	public void BabelTowerDailyTaskRewardRequest(int taskId)
 	{
 		BabelTowerDailyTaskRewardRequest babelTowerDailyTaskRewardRequest = Aki.Protocol.BabelTowerDailyTaskRewardRequest.Create();
@@ -517,14 +516,14 @@ public class BabelTowerController : ActivityControllerBase
 			}
 			if (babelTowerDailyTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerDailyTaskRewardResponse.ErrorCode, 20492, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerDailyTaskRewardResponse.ErrorCode, 23540, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 		}, 0);
 	}
 
-	// Token: 0x060072E9 RID: 29417 RVA: 0x0017982C File Offset: 0x00177A2C
+	// Token: 0x0600467F RID: 18047 RVA: 0x00182218 File Offset: 0x00180418
 	public void ResetBabelTowerLevelRequest(int levelId)
 	{
 		ResetBabelTowerLevelRequest resetBabelTowerLevelRequest = Aki.Protocol.ResetBabelTowerLevelRequest.Create();
@@ -538,7 +537,7 @@ public class BabelTowerController : ActivityControllerBase
 			}
 			if (resetBabelTowerLevelResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(resetBabelTowerLevelResponse.ErrorCode, 22385, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(resetBabelTowerLevelResponse.ErrorCode, 27850, null, true, true);
 				return;
 			}
 			ScrollingTipsController.Instance.ShowTipsByTextId("BabelTowerResetLevelTips", Array.Empty<object>());
@@ -546,7 +545,7 @@ public class BabelTowerController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060072EA RID: 29418 RVA: 0x00179864 File Offset: 0x00177A64
+	// Token: 0x06004680 RID: 18048 RVA: 0x00182250 File Offset: 0x00180450
 	public void BabelTowerSettlementRequest()
 	{
 		BabelTowerSettlementRequest message = Aki.Protocol.BabelTowerSettlementRequest.Create();
@@ -559,12 +558,12 @@ public class BabelTowerController : ActivityControllerBase
 			}
 			if (babelTowerSettlementResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerSettlementResponse.ErrorCode, 24625, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(babelTowerSettlementResponse.ErrorCode, 22271, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060072EB RID: 29419 RVA: 0x001798A8 File Offset: 0x00177AA8
+	// Token: 0x06004681 RID: 18049 RVA: 0x00182294 File Offset: 0x00180494
 	public void ReChallengeBabelTower()
 	{
 		BabelTowerInstanceData currentChallengeInstData = BabelTowerModel.Instance.CurrentChallengeInstData;
@@ -574,7 +573,7 @@ public class BabelTowerController : ActivityControllerBase
 		this.BabelTowerStartRequest(instId, teamRoleConfigIdListWithFill, levelId, currentChallengeInstData.BuffSelection ?? new List<int>(), this.BuildSkillBranchListFromRoleList(teamRoleConfigIdListWithFill));
 	}
 
-	// Token: 0x060072EC RID: 29420 RVA: 0x0017990C File Offset: 0x00177B0C
+	// Token: 0x06004682 RID: 18050 RVA: 0x001822F8 File Offset: 0x001804F8
 	public List<int> GetTeamRoleConfigIdListWithFill()
 	{
 		List<int> list = new List<int>(SceneTeamModel.Instance.GetTeamRoleConfigIdList(false, false));
@@ -585,21 +584,27 @@ public class BabelTowerController : ActivityControllerBase
 		return list;
 	}
 
-	// Token: 0x060072ED RID: 29421 RVA: 0x00179944 File Offset: 0x00177B44
+	// Token: 0x06004683 RID: 18051 RVA: 0x00182330 File Offset: 0x00180530
 	public List<int> BuildSkillBranchListFromRoleList(List<int> roleList)
 	{
-		RoleModel roleModel = RoleModel.Instance;
-		return roleList.Select(delegate(int roleConfigId)
+		RoleModel instance = RoleModel.Instance;
+		List<int> list = new List<int>(roleList.Count);
+		for (int i = 0; i < roleList.Count; i++)
 		{
-			if (roleConfigId <= 0)
+			int num = roleList[i];
+			if (num <= 0)
 			{
-				return 0;
+				list.Add(0);
 			}
-			return roleModel.GetRoleSkillBranchIdInGamePlay(roleConfigId, ESkillBranchCacheType.BabelTower);
-		}).ToList<int>();
+			else
+			{
+				list.Add(instance.GetRoleSkillBranchIdInGamePlay(num, ESkillBranchCacheType.BabelTower));
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x060072EE RID: 29422 RVA: 0x0017997C File Offset: 0x00177B7C
+	// Token: 0x06004684 RID: 18052 RVA: 0x00182384 File Offset: 0x00180584
 	public void BabelTowerStartRequest(int instanceId, List<int> roleList, int levelId, List<int> buffList, List<int> skillBranchList)
 	{
 		BabelTowerData babelTowerData = this.GetBabelTowerData();
@@ -629,13 +634,13 @@ public class BabelTowerController : ActivityControllerBase
 		}).Forget();
 	}
 
-	// Token: 0x060072EF RID: 29423 RVA: 0x00179A77 File Offset: 0x00177C77
+	// Token: 0x06004685 RID: 18053 RVA: 0x0018247F File Offset: 0x0018067F
 	public BabelTowerData GetBabelTowerData()
 	{
 		return (BabelTowerData)ActivityModel.Instance.GetActivityById(this.ActivityId);
 	}
 
-	// Token: 0x060072F0 RID: 29424 RVA: 0x00179A90 File Offset: 0x00177C90
+	// Token: 0x06004686 RID: 18054 RVA: 0x00182498 File Offset: 0x00180698
 	public void OnClickInstanceDungeonExitButton()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -650,7 +655,7 @@ public class BabelTowerController : ActivityControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x060072F1 RID: 29425 RVA: 0x00179B08 File Offset: 0x00177D08
+	// Token: 0x06004687 RID: 18055 RVA: 0x00182510 File Offset: 0x00180710
 	public void SaveNewLevelData(int levelId)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.BabelTowerNewLevel, null) ?? new Dictionary<int, bool>();
@@ -658,7 +663,7 @@ public class BabelTowerController : ActivityControllerBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.BabelTowerNewLevel, dictionary);
 	}
 
-	// Token: 0x060072F2 RID: 29426 RVA: 0x00179B38 File Offset: 0x00177D38
+	// Token: 0x06004688 RID: 18056 RVA: 0x00182540 File Offset: 0x00180740
 	public void SaveNewLevelClickData(int levelId, EBabelTowerDifficulty difficulty)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.BabelTowerNewLevelHasClick, null) ?? new Dictionary<int, bool>();
@@ -669,7 +674,7 @@ public class BabelTowerController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 	}
 
-	// Token: 0x060072F3 RID: 29427 RVA: 0x00179BA0 File Offset: 0x00177DA0
+	// Token: 0x06004689 RID: 18057 RVA: 0x001825A8 File Offset: 0x001807A8
 	private void UpdateLocalLevelDataOnPass(int levelId, bool isDifficult, int curStarNum, BabelActivitySettleInfoNotify response)
 	{
 		BabelTowerData babelTowerData = this.GetBabelTowerData();
@@ -711,7 +716,7 @@ public class BabelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060072F4 RID: 29428 RVA: 0x00179C90 File Offset: 0x00177E90
+	// Token: 0x0600468A RID: 18058 RVA: 0x00182698 File Offset: 0x00180898
 	private UniTask HandleHardLevelPassSettle(int levelId, int curStarNum, int targetStarNum, int instId, BabelTowerInstanceData instData, BabelActivitySettleInfoNotify response)
 	{
 		BabelTowerController.<HandleHardLevelPassSettle>d__37 <HandleHardLevelPassSettle>d__;
@@ -728,7 +733,7 @@ public class BabelTowerController : ActivityControllerBase
 		return <HandleHardLevelPassSettle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060072F5 RID: 29429 RVA: 0x00179D08 File Offset: 0x00177F08
+	// Token: 0x0600468B RID: 18059 RVA: 0x00182710 File Offset: 0x00180910
 	public UniTask RequestRankDataList(BabelTowerData data, bool cacheMyRank = false)
 	{
 		BabelTowerController.<RequestRankDataList>d__38 <RequestRankDataList>d__;
@@ -740,7 +745,7 @@ public class BabelTowerController : ActivityControllerBase
 		return <RequestRankDataList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060072F6 RID: 29430 RVA: 0x00179D54 File Offset: 0x00177F54
+	// Token: 0x0600468C RID: 18060 RVA: 0x0018275C File Offset: 0x0018095C
 	public bool ConvertProtoToRankData(PublicBabelTowerInfo protoData, BabelTowerRankItemData rankItemData, int levelId)
 	{
 		RepeatedField<PublicBabelTowerChallengeInfo> challengeInfo = protoData.ChallengeInfo;
@@ -749,9 +754,25 @@ public class BabelTowerController : ActivityControllerBase
 			return false;
 		}
 		bool flag = levelId == -1;
-		List<PublicBabelTowerChallengeInfo> list = flag ? challengeInfo.ToList<PublicBabelTowerChallengeInfo>() : (from c in challengeInfo
-		where c.ChallengeId == levelId && c.UseTime > 0
-		select c).ToList<PublicBabelTowerChallengeInfo>();
+		List<PublicBabelTowerChallengeInfo> list = new List<PublicBabelTowerChallengeInfo>();
+		if (flag)
+		{
+			for (int i = 0; i < challengeInfo.Count; i++)
+			{
+				list.Add(challengeInfo[i]);
+			}
+		}
+		else
+		{
+			for (int j = 0; j < challengeInfo.Count; j++)
+			{
+				PublicBabelTowerChallengeInfo publicBabelTowerChallengeInfo = challengeInfo[j];
+				if (publicBabelTowerChallengeInfo.ChallengeId == levelId && publicBabelTowerChallengeInfo.UseTime > 0)
+				{
+					list.Add(publicBabelTowerChallengeInfo);
+				}
+			}
+		}
 		if (list.Count == 0)
 		{
 			return false;
@@ -760,11 +781,11 @@ public class BabelTowerController : ActivityControllerBase
 		int num2 = 0;
 		List<int> list2 = new List<int>();
 		List<int> list3 = new List<int>();
-		foreach (PublicBabelTowerChallengeInfo publicBabelTowerChallengeInfo in list)
+		foreach (PublicBabelTowerChallengeInfo publicBabelTowerChallengeInfo2 in list)
 		{
-			num += publicBabelTowerChallengeInfo.Star;
-			num2 += publicBabelTowerChallengeInfo.UseTime;
-			foreach (BabelPassRoleInfo babelPassRoleInfo in publicBabelTowerChallengeInfo.BabelPassRoleInfos)
+			num += publicBabelTowerChallengeInfo2.Star;
+			num2 += publicBabelTowerChallengeInfo2.UseTime;
+			foreach (BabelPassRoleInfo babelPassRoleInfo in publicBabelTowerChallengeInfo2.BabelPassRoleInfos)
 			{
 				list2.Add(babelPassRoleInfo.RoleId);
 				list3.Add(babelPassRoleInfo.RoleLevel);
@@ -790,7 +811,7 @@ public class BabelTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060072F7 RID: 29431 RVA: 0x00179F0C File Offset: 0x0017810C
+	// Token: 0x0600468D RID: 18061 RVA: 0x00182944 File Offset: 0x00180B44
 	public UniTask SetShowNameRequestAsync(int activityId, bool showName)
 	{
 		BabelTowerController.<SetShowNameRequestAsync>d__40 <SetShowNameRequestAsync>d__;
@@ -803,17 +824,21 @@ public class BabelTowerController : ActivityControllerBase
 		return <SetShowNameRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060072F8 RID: 29432 RVA: 0x00179F60 File Offset: 0x00178160
+	// Token: 0x0600468E RID: 18062 RVA: 0x00182998 File Offset: 0x00180B98
 	private void ReportBabelTowerRankChange(int levelId, int currentStar, int targetStar, int dungeonId, string traceId, int oldLevelRank, int newLevelRank, int oldTotalRank, int newTotalRank)
 	{
 		PublicBabelTowerInfo rawSelfData = this.GetBabelTowerData().GetRawSelfData();
 		int i_best_star = currentStar;
 		if (((rawSelfData != null) ? rawSelfData.ChallengeInfo : null) != null)
 		{
-			PublicBabelTowerChallengeInfo publicBabelTowerChallengeInfo = rawSelfData.ChallengeInfo.FirstOrDefault((PublicBabelTowerChallengeInfo c) => c.ChallengeId == levelId);
-			if (publicBabelTowerChallengeInfo != null)
+			RepeatedField<PublicBabelTowerChallengeInfo> challengeInfo = rawSelfData.ChallengeInfo;
+			for (int i = 0; i < challengeInfo.Count; i++)
 			{
-				i_best_star = publicBabelTowerChallengeInfo.Star;
+				if (challengeInfo[i].ChallengeId == levelId)
+				{
+					i_best_star = challengeInfo[i].Star;
+					break;
+				}
 			}
 		}
 		BabelTowerRankChangeEvent babelTowerRankChangeEvent = new BabelTowerRankChangeEvent();
@@ -830,7 +855,7 @@ public class BabelTowerController : ActivityControllerBase
 		LogReportController.Instance.LogReport(babelTowerRankChangeEvent);
 	}
 
-	// Token: 0x060072F9 RID: 29433 RVA: 0x0017A01C File Offset: 0x0017821C
+	// Token: 0x0600468F RID: 18063 RVA: 0x00182A5C File Offset: 0x00180C5C
 	private static bool IsSameDeTermSet(List<int> a, int[] b)
 	{
 		if (a == null || b == null)
@@ -866,22 +891,31 @@ public class BabelTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060072FA RID: 29434 RVA: 0x0017A0DC File Offset: 0x001782DC
+	// Token: 0x06004690 RID: 18064 RVA: 0x00182B1C File Offset: 0x00180D1C
 	private void ReportBabelTowerEnterSelection(string traceId, int levelId, List<int> buffList)
 	{
 		BabelTowerEnterSelectionLogEvent babelTowerEnterSelectionLogEvent = new BabelTowerEnterSelectionLogEvent();
-		List<int> list = (from buffId in buffList
-		where buffId > 0
-		select buffId).ToList<int>();
+		List<int> list = new List<int>();
+		for (int i = 0; i < buffList.Count; i++)
+		{
+			if (buffList[i] > 0)
+			{
+				list.Add(buffList[i]);
+			}
+		}
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(levelId);
 		int[] recommendBuffs = babelTowerLevelConfig.GetRecommendBuffArray() ?? Array.Empty<int>();
-		bool s_buff_selection = list.Count > 0 && list.All((int buffId) => recommendBuffs.Contains(buffId));
+		bool s_buff_selection = list.Count > 0 && list.TrueForAll((int buffId) => Array.IndexOf<int>(recommendBuffs, buffId) >= 0);
 		babelTowerEnterSelectionLogEvent.s_buff_selection = s_buff_selection;
-		babelTowerEnterSelectionLogEvent.o_buff_selection = (from buffId in list
-		select new BuffSelectionData
+		List<BuffSelectionData> list2 = new List<BuffSelectionData>(list.Count);
+		for (int j = 0; j < list.Count; j++)
 		{
-			i_buff_id = buffId
-		}).ToList<BuffSelectionData>();
+			list2.Add(new BuffSelectionData
+			{
+				i_buff_id = list[j]
+			});
+		}
+		babelTowerEnterSelectionLogEvent.o_buff_selection = list2;
 		List<int> allActiveDeTermList = BabelTowerModel.Instance.GetAllActiveDeTermList();
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (KeyValuePair<int, IBabelTowerSelectInfo> keyValuePair in BabelTowerModel.Instance.DeTermSelectInfo)
@@ -893,11 +927,15 @@ public class BabelTowerController : ActivityControllerBase
 				hashSet.Add(key);
 			}
 		}
-		babelTowerEnterSelectionLogEvent.o_debuff_selection = (from deTermId in hashSet
-		select new DeBuffSelectionData
+		List<DeBuffSelectionData> list3 = new List<DeBuffSelectionData>(hashSet.Count);
+		foreach (int i_debuff_id in hashSet)
 		{
-			i_debuff_id = deTermId
-		}).ToList<DeBuffSelectionData>();
+			list3.Add(new DeBuffSelectionData
+			{
+				i_debuff_id = i_debuff_id
+			});
+		}
+		babelTowerEnterSelectionLogEvent.o_debuff_selection = list3;
 		int currentQuickIndex = BabelTowerModel.Instance.CurrentQuickIndex;
 		string s_debuff_selection = "非预设";
 		if (currentQuickIndex >= 0)
@@ -918,8 +956,8 @@ public class BabelTowerController : ActivityControllerBase
 		LogReportController.Instance.LogReport(babelTowerEnterSelectionLogEvent);
 	}
 
-	// Token: 0x170009B2 RID: 2482
-	// (get) Token: 0x060072FB RID: 29435 RVA: 0x0017A2D8 File Offset: 0x001784D8
+	// Token: 0x170009D2 RID: 2514
+	// (get) Token: 0x06004691 RID: 18065 RVA: 0x00182D68 File Offset: 0x00180F68
 	public static BabelTowerController Instance
 	{
 		get
@@ -928,7 +966,7 @@ public class BabelTowerController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060072FC RID: 29436 RVA: 0x0017A2DF File Offset: 0x001784DF
+	// Token: 0x06004692 RID: 18066 RVA: 0x00182D6F File Offset: 0x00180F6F
 	public static BabelTowerController GetOrCreateInstance()
 	{
 		if (BabelTowerController._Instance == null)
@@ -938,7 +976,7 @@ public class BabelTowerController : ActivityControllerBase
 		return BabelTowerController._Instance;
 	}
 
-	// Token: 0x060072FD RID: 29437 RVA: 0x0017A2F3 File Offset: 0x001784F3
+	// Token: 0x06004693 RID: 18067 RVA: 0x00182D83 File Offset: 0x00180F83
 	public static bool CreateInstance()
 	{
 		if (BabelTowerController._Instance != null)
@@ -949,24 +987,24 @@ public class BabelTowerController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060072FE RID: 29438 RVA: 0x0017A309 File Offset: 0x00178509
+	// Token: 0x06004694 RID: 18068 RVA: 0x00182D99 File Offset: 0x00180F99
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060072FF RID: 29439 RVA: 0x0017A30B File Offset: 0x0017850B
+	// Token: 0x06004695 RID: 18069 RVA: 0x00182D9B File Offset: 0x00180F9B
 	public static void ResetStaticDefaultValue()
 	{
 		BabelTowerController._Instance = null;
 	}
 
-	// Token: 0x06007300 RID: 29440 RVA: 0x0017A313 File Offset: 0x00178513
+	// Token: 0x06004696 RID: 18070 RVA: 0x00182DA3 File Offset: 0x00180FA3
 	static BabelTowerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BabelTowerController.CreateStaticDefaultValue), new Action(BabelTowerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06007306 RID: 29446 RVA: 0x0017A484 File Offset: 0x00178684
+	// Token: 0x0600469C RID: 18076 RVA: 0x00182F14 File Offset: 0x00181114
 	[CompilerGenerated]
 	internal static void <OnClickInstanceDungeonExitButton>g__LeaveCallBack|33_0()
 	{
@@ -977,17 +1015,17 @@ public class BabelTowerController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerMainView, param, null);
 	}
 
-	// Token: 0x06007307 RID: 29447 RVA: 0x0017A4AF File Offset: 0x001786AF
+	// Token: 0x0600469D RID: 18077 RVA: 0x00182F3F File Offset: 0x0018113F
 	[CompilerGenerated]
 	private void <OnClickInstanceDungeonExitButton>g__ReChallengeCallBack|33_1()
 	{
 		this.ReChallengeBabelTower();
 	}
 
-	// Token: 0x04003518 RID: 13592
+	// Token: 0x040035B1 RID: 13745
 	public int ActivityId;
 
-	// Token: 0x04003519 RID: 13593
+	// Token: 0x040035B2 RID: 13746
 	[Nullable(2)]
 	private static BabelTowerController _Instance;
 }

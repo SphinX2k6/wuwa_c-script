@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB7 RID: 24503
+	// Token: 0x02004F9E RID: 20382
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUp37VideoFullScreenView : UiViewBase
 	{
-		// Token: 0x0603E1BC RID: 254396 RVA: 0x00EFF876 File Offset: 0x00EFDA76
+		// Token: 0x06033156 RID: 209238 RVA: 0x00E51532 File Offset: 0x00E4F732
 		public TotalTopUp37VideoFullScreenView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E1BD RID: 254397 RVA: 0x00EFF87F File Offset: 0x00EFDA7F
+		// Token: 0x06033157 RID: 209239 RVA: 0x00E5153B File Offset: 0x00E4F73B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E1BE RID: 254398 RVA: 0x00EFF8B8 File Offset: 0x00EFDAB8
+		// Token: 0x06033158 RID: 209240 RVA: 0x00E51574 File Offset: 0x00E4F774
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUp37VideoFullScreenView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1BF RID: 254399 RVA: 0x00EFF8FB File Offset: 0x00EFDAFB
+		// Token: 0x06033159 RID: 209241 RVA: 0x00E515B7 File Offset: 0x00E4F7B7
 		protected override void OnStart()
 		{
 			this.ShowSharedVideo();
 		}
 
-		// Token: 0x0603E1C0 RID: 254400 RVA: 0x00EFF904 File Offset: 0x00EFDB04
+		// Token: 0x0603315A RID: 209242 RVA: 0x00E515C0 File Offset: 0x00E4F7C0
 		private void ShowSharedVideo()
 		{
 			TotalTopUp37VideoFullScreenParam param = this.Param;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E1C1 RID: 254401 RVA: 0x00EFF944 File Offset: 0x00EFDB44
+		// Token: 0x0603315B RID: 209243 RVA: 0x00E51600 File Offset: 0x00E4F800
 		private UniTask LoadVideoMaterial()
 		{
 			TotalTopUp37VideoFullScreenView.<LoadVideoMaterial>d__8 <LoadVideoMaterial>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <LoadVideoMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E1C2 RID: 254402 RVA: 0x00EFF987 File Offset: 0x00EFDB87
+		// Token: 0x0603315C RID: 209244 RVA: 0x00E51643 File Offset: 0x00E4F843
 		private void OnClickClose()
 		{
 			base.CloseMe(delegate(bool _)
@@ -90,14 +90,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			});
 		}
 
-		// Token: 0x04020728 RID: 132904
+		// Token: 0x0401B1FA RID: 111098
 		private const string VIDEO_MATERIAL_ID = "M_VideoTextureMat_RectClip";
 
-		// Token: 0x04020729 RID: 132905
+		// Token: 0x0401B1FB RID: 111099
 		[Nullable(2)]
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0402072A RID: 132906
+		// Token: 0x0401B1FC RID: 111100
 		[Nullable(2)]
 		private TotalTopUp37VideoFullScreenParam Param;
 	}

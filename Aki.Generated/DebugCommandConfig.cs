@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BE4 RID: 3044
+	// Token: 0x02000CC6 RID: 3270
 	public struct DebugCommandConfig : IFlatbufferObject
 	{
-		// Token: 0x17000C3D RID: 3133
-		// (get) Token: 0x06006133 RID: 24883 RVA: 0x00211344 File Offset: 0x0020F544
+		// Token: 0x17000C83 RID: 3203
+		// (get) Token: 0x0600670C RID: 26380 RVA: 0x0023098C File Offset: 0x0022EB8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006134 RID: 24884 RVA: 0x00211351 File Offset: 0x0020F551
+		// Token: 0x0600670D RID: 26381 RVA: 0x00230999 File Offset: 0x0022EB99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006135 RID: 24885 RVA: 0x00211358 File Offset: 0x0020F558
+		// Token: 0x0600670E RID: 26382 RVA: 0x002309A0 File Offset: 0x0022EBA0
 		public static DebugCommandConfig GetRootAsDebugCommandConfig(ByteBuffer _bb)
 		{
 			return DebugCommandConfig.GetRootAsDebugCommandConfig(_bb, default(DebugCommandConfig));
 		}
 
-		// Token: 0x06006136 RID: 24886 RVA: 0x00211374 File Offset: 0x0020F574
+		// Token: 0x0600670F RID: 26383 RVA: 0x002309BC File Offset: 0x0022EBBC
 		public static DebugCommandConfig GetRootAsDebugCommandConfig(ByteBuffer _bb, DebugCommandConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006137 RID: 24887 RVA: 0x00211391 File Offset: 0x0020F591
+		// Token: 0x06006710 RID: 26384 RVA: 0x002309D9 File Offset: 0x0022EBD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006138 RID: 24888 RVA: 0x002113A0 File Offset: 0x0020F5A0
+		// Token: 0x06006711 RID: 26385 RVA: 0x002309E8 File Offset: 0x0022EBE8
 		public DebugCommandConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000C3E RID: 3134
-		// (get) Token: 0x06006139 RID: 24889 RVA: 0x002113B0 File Offset: 0x0020F5B0
+		// Token: 0x17000C84 RID: 3204
+		// (get) Token: 0x06006712 RID: 26386 RVA: 0x002309F8 File Offset: 0x0022EBF8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C3F RID: 3135
-		// (get) Token: 0x0600613A RID: 24890 RVA: 0x002113EC File Offset: 0x0020F5EC
+		// Token: 0x17000C85 RID: 3205
+		// (get) Token: 0x06006713 RID: 26387 RVA: 0x00230A34 File Offset: 0x0022EC34
 		public int GetTargetStage
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600613B RID: 24891 RVA: 0x00211428 File Offset: 0x0020F628
+		// Token: 0x06006714 RID: 26388 RVA: 0x00230A70 File Offset: 0x0022EC70
 		public string ParamGetTarget(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000C40 RID: 3136
-		// (get) Token: 0x0600613C RID: 24892 RVA: 0x00211464 File Offset: 0x0020F664
+		// Token: 0x17000C86 RID: 3206
+		// (get) Token: 0x06006715 RID: 26389 RVA: 0x00230AAC File Offset: 0x0022ECAC
 		public int ParamGetTargetLength
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C41 RID: 3137
-		// (get) Token: 0x0600613D RID: 24893 RVA: 0x00211490 File Offset: 0x0020F690
+		// Token: 0x17000C87 RID: 3207
+		// (get) Token: 0x06006716 RID: 26390 RVA: 0x00230AD8 File Offset: 0x0022ECD8
 		public int EffectStage
 		{
 			get
@@ -121,7 +121,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600613E RID: 24894 RVA: 0x002114D0 File Offset: 0x0020F6D0
+		// Token: 0x06006717 RID: 26391 RVA: 0x00230B18 File Offset: 0x0022ED18
 		public string ParamEffect(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -132,8 +132,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000C42 RID: 3138
-		// (get) Token: 0x0600613F RID: 24895 RVA: 0x0021150C File Offset: 0x0020F70C
+		// Token: 0x17000C88 RID: 3208
+		// (get) Token: 0x06006718 RID: 26392 RVA: 0x00230B54 File Offset: 0x0022ED54
 		public int ParamEffectLength
 		{
 			get
@@ -147,41 +147,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006140 RID: 24896 RVA: 0x00211538 File Offset: 0x0020F738
+		// Token: 0x06006719 RID: 26393 RVA: 0x00230B80 File Offset: 0x0022ED80
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamEffectIter()或GetParamEffectBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ParamEffect()
+		public string[] ParamEffect()
 		{
 			return this.ParamEffectIter().ToArray<string>();
 		}
 
-		// Token: 0x06006141 RID: 24897 RVA: 0x00211545 File Offset: 0x0020F745
+		// Token: 0x0600671A RID: 26394 RVA: 0x00230B8D File Offset: 0x0022ED8D
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ParamEffectIter()
+		public IEnumerable<string> ParamEffectIter()
 		{
 			DebugCommandConfig.<ParamEffectIter>d__21 <ParamEffectIter>d__ = new DebugCommandConfig.<ParamEffectIter>d__21(-2);
 			<ParamEffectIter>d__.<>3__<>4__this = this;
 			return <ParamEffectIter>d__;
 		}
 
-		// Token: 0x06006142 RID: 24898 RVA: 0x0021155A File Offset: 0x0020F75A
+		// Token: 0x0600671B RID: 26395 RVA: 0x00230BA2 File Offset: 0x0022EDA2
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamGetTargetIter()或GetParamGetTargetBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ParamGetTarget()
+		public string[] ParamGetTarget()
 		{
 			return this.ParamGetTargetIter().ToArray<string>();
 		}
 
-		// Token: 0x06006143 RID: 24899 RVA: 0x00211567 File Offset: 0x0020F767
+		// Token: 0x0600671C RID: 26396 RVA: 0x00230BAF File Offset: 0x0022EDAF
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ParamGetTargetIter()
+		public IEnumerable<string> ParamGetTargetIter()
 		{
 			DebugCommandConfig.<ParamGetTargetIter>d__23 <ParamGetTargetIter>d__ = new DebugCommandConfig.<ParamGetTargetIter>d__23(-2);
 			<ParamGetTargetIter>d__.<>3__<>4__this = this;
 			return <ParamGetTargetIter>d__;
 		}
 
-		// Token: 0x04004C11 RID: 19473
+		// Token: 0x040051F3 RID: 20979
 		private Table __p;
 	}
 }

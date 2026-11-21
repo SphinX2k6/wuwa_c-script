@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D45 RID: 27973
+	// Token: 0x02005EC2 RID: 24258
 	public class LevelConditionLiftLocation : LevelConditionBase
 	{
-		// Token: 0x06044730 RID: 280368 RVA: 0x010E2124 File Offset: 0x010E0324
+		// Token: 0x0603A890 RID: 239760 RVA: 0x0108C2B0 File Offset: 0x0108A4B0
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x0200454B RID: 17739
+	// Token: 0x02003473 RID: 13427
 	public enum ETimeScaleType
 	{
-		// Token: 0x040187A2 RID: 100258
+		// Token: 0x04012DDC RID: 77276
 		FollowEntity,
-		// Token: 0x040187A3 RID: 100259
+		// Token: 0x04012DDD RID: 77277
 		ImmuneForeverTimeScale
 	}
 }

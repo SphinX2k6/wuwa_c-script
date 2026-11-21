@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.Priority
 {
-	// Token: 0x02004562 RID: 17762
+	// Token: 0x0200348A RID: 13450
 	public class CustomPriorityManager<T> : IClear where T : struct, Enum
 	{
-		// Token: 0x0602DE25 RID: 187941 RVA: 0x00A8C380 File Offset: 0x00A8A580
+		// Token: 0x06022507 RID: 140551 RVA: 0x009B7A98 File Offset: 0x009B5C98
 		[NullableContext(1)]
 		private unsafe void LogInternal(string message, ELogLevel logLevel = ELogLevel.Error)
 		{
@@ -25,7 +24,7 @@ namespace CSharpScript.Game.Utils.Priority
 				ELogAuthor author = ELogAuthor.XDW;
 				string message2 = "[PriorityManager] [" + this.Identifier + "] " + message;
 				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Registry", this.Registry.Keys.ToList<T>());
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Registry", new List<T>(this.Registry.Keys));
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Top", this.PriorityQueue.Empty ? null : new T?(this.PriorityQueue.Top));
 				instance.Error(module, author, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 				return;
@@ -37,7 +36,7 @@ namespace CSharpScript.Game.Utils.Priority
 				ELogAuthor author2 = ELogAuthor.XDW;
 				string message3 = "[PriorityManager] [" + this.Identifier + "] " + message;
 				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("Registry", this.Registry.Keys.ToList<T>());
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("Registry", new List<T>(this.Registry.Keys));
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Top", this.PriorityQueue.Empty ? null : new T?(this.PriorityQueue.Top));
 				instance2.Warn(module2, author2, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 				return;
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.Utils.Priority
 				ELogAuthor author3 = ELogAuthor.XDW;
 				string message4 = "[PriorityManager] [" + this.Identifier + "] " + message;
 				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("Registry", this.Registry.Keys.ToList<T>());
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("Registry", new List<T>(this.Registry.Keys));
 				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("Top", this.PriorityQueue.Empty ? null : new T?(this.PriorityQueue.Top));
 				instance3.Info(module3, author3, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 				return;
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.Utils.Priority
 			}
 		}
 
-		// Token: 0x0602DE26 RID: 187942 RVA: 0x00A8C592 File Offset: 0x00A8A792
+		// Token: 0x06022508 RID: 140552 RVA: 0x009B7CAA File Offset: 0x009B5EAA
 		[NullableContext(1)]
 		public CustomPriorityManager(string identifier)
 		{
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Utils.Priority
 			});
 		}
 
-		// Token: 0x0602DE27 RID: 187943 RVA: 0x00A8C5C4 File Offset: 0x00A8A7C4
+		// Token: 0x06022509 RID: 140553 RVA: 0x009B7CDC File Offset: 0x009B5EDC
 		public bool Register(T enumValue, [Nullable(new byte[]
 		{
 			1,
@@ -156,14 +155,14 @@ namespace CSharpScript.Game.Utils.Priority
 			return true;
 		}
 
-		// Token: 0x0602DE28 RID: 187944 RVA: 0x00A8C71E File Offset: 0x00A8A91E
+		// Token: 0x0602250A RID: 140554 RVA: 0x009B7E36 File Offset: 0x009B6036
 		public void UnRegister(T enumValue)
 		{
 			this.TryExit(enumValue, "UnRegister");
 			this.Registry.Remove(enumValue);
 		}
 
-		// Token: 0x0602DE29 RID: 187945 RVA: 0x00A8C73A File Offset: 0x00A8A93A
+		// Token: 0x0602250B RID: 140555 RVA: 0x009B7E52 File Offset: 0x009B6052
 		public bool ClearObject()
 		{
 			this.TryExitAll("ClearObject");
@@ -171,7 +170,7 @@ namespace CSharpScript.Game.Utils.Priority
 			return true;
 		}
 
-		// Token: 0x0602DE2A RID: 187946 RVA: 0x00A8C754 File Offset: 0x00A8A954
+		// Token: 0x0602250C RID: 140556 RVA: 0x009B7E6C File Offset: 0x009B606C
 		public bool TryEnter(T enumValue, [Nullable(1)] string reason = "")
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(16, 2);
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Utils.Priority
 			return true;
 		}
 
-		// Token: 0x0602DE2B RID: 187947 RVA: 0x00A8C9E4 File Offset: 0x00A8ABE4
+		// Token: 0x0602250D RID: 140557 RVA: 0x009B80FC File Offset: 0x009B62FC
 		public bool TryExit(T enumValue, [Nullable(1)] string reason = "")
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 2);
@@ -301,7 +300,7 @@ namespace CSharpScript.Game.Utils.Priority
 			return true;
 		}
 
-		// Token: 0x0602DE2C RID: 187948 RVA: 0x00A8CB9C File Offset: 0x00A8AD9C
+		// Token: 0x0602250E RID: 140558 RVA: 0x009B82B4 File Offset: 0x009B64B4
 		[NullableContext(1)]
 		public void TryExitAll(string reason = "")
 		{
@@ -316,11 +315,11 @@ namespace CSharpScript.Game.Utils.Priority
 			}
 		}
 
-		// Token: 0x04018805 RID: 100357
+		// Token: 0x04012E3F RID: 77375
 		[Nullable(1)]
 		private const string DEBUG_KEY = "CustomPriorityManager";
 
-		// Token: 0x04018806 RID: 100358
+		// Token: 0x04012E40 RID: 77376
 		[Nullable(new byte[]
 		{
 			1,
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Utils.Priority
 		})]
 		private readonly Dictionary<T, ICustomPriorityConfigWrapper<T>> Registry = new Dictionary<T, ICustomPriorityConfigWrapper<T>>();
 
-		// Token: 0x04018807 RID: 100359
+		// Token: 0x04012E41 RID: 77377
 		[Nullable(new byte[]
 		{
 			1,
@@ -338,7 +337,7 @@ namespace CSharpScript.Game.Utils.Priority
 		})]
 		private readonly PriorityQueue<T> PriorityQueue;
 
-		// Token: 0x04018808 RID: 100360
+		// Token: 0x04012E42 RID: 77378
 		[Nullable(1)]
 		private readonly string Identifier;
 	}

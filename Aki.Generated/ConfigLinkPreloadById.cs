@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004E0 RID: 1248
+	// Token: 0x020004F6 RID: 1270
 	public class ConfigLinkPreloadById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D4B RID: 7499 RVA: 0x000FED30 File Offset: 0x000FCF30
+		// Token: 0x06001DCF RID: 7631 RVA: 0x00105484 File Offset: 0x00103684
 		static ConfigLinkPreloadById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLinkPreloadById.CreateStaticDefaultValue), new Action(ConfigLinkPreloadById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D4C RID: 7500 RVA: 0x000FED50 File Offset: 0x000FCF50
+		// Token: 0x06001DD0 RID: 7632 RVA: 0x001054A4 File Offset: 0x001036A4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLinkPreloadById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D4D RID: 7501 RVA: 0x000FEDCF File Offset: 0x000FCFCF
+		// Token: 0x06001DD1 RID: 7633 RVA: 0x00105523 File Offset: 0x00103723
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLinkPreloadById.LogPair = null;
 			ConfigLinkPreloadById.HandleId = 0;
 		}
 
-		// Token: 0x06001D4E RID: 7502 RVA: 0x000FEDDD File Offset: 0x000FCFDD
+		// Token: 0x06001DD2 RID: 7634 RVA: 0x00105531 File Offset: 0x00103731
 		public static void Init()
 		{
 			ConfigLinkPreloadById.HandleId = ConfigCommon.InitDataStatement(ConfigLinkPreloadById.HandleId, "db_link.db", "select BinData from `LinkPreload` where Id=?");
 		}
 
-		// Token: 0x06001D4F RID: 7503 RVA: 0x000FEDF8 File Offset: 0x000FCFF8
+		// Token: 0x06001DD3 RID: 7635 RVA: 0x0010554C File Offset: 0x0010374C
 		public static LinkPreload? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLinkPreloadById.HandleId, ConfigLinkPreloadById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LinkPreload?(rootAsLinkPreload);
 		}
 
-		// Token: 0x04002204 RID: 8708
+		// Token: 0x0400229E RID: 8862
 		private const string DB = "db_link.db";
 
-		// Token: 0x04002205 RID: 8709
+		// Token: 0x0400229F RID: 8863
 		private const string FILE = "l.Link功能.xlsx";
 
-		// Token: 0x04002206 RID: 8710
+		// Token: 0x040022A0 RID: 8864
 		private const string TABLE = "LinkPreload";
 
-		// Token: 0x04002207 RID: 8711
+		// Token: 0x040022A1 RID: 8865
 		private const string COMMAND = "select BinData from `LinkPreload` where Id=?";
 
-		// Token: 0x04002208 RID: 8712
+		// Token: 0x040022A2 RID: 8866
 		private const string KEY_PREFIX = "LinkPreloadById";
 
-		// Token: 0x04002209 RID: 8713
+		// Token: 0x040022A3 RID: 8867
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400220A RID: 8714
+		// Token: 0x040022A4 RID: 8868
 		private static int HandleId;
 	}
 }

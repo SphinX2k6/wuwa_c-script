@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
@@ -12,12 +11,12 @@ using CSharpScript.Game.NewWorld.SceneItem.BulletCaster;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200720D RID: 29197
+	// Token: 0x020062C2 RID: 25282
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BatchBulletCasterComponent : EntityComponent
 	{
-		// Token: 0x06047790 RID: 292752 RVA: 0x01234664 File Offset: 0x01232864
+		// Token: 0x0603D0A1 RID: 250017 RVA: 0x0118E0F4 File Offset: 0x0118C2F4
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object obj;
@@ -58,30 +57,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				list.Add(transform);
 			}
 			this.CycleTime = 0f;
-			this.CycleTime = batchBulletCasterComponent.BatchList.Aggregate(float.MinValue, delegate(float max, IBatchBulletItem current)
-			{
-				if ((float)current.Time <= max)
-				{
-					return max;
-				}
-				return (float)current.Time;
-			});
+			float num = float.MinValue;
 			foreach (IBatchBulletItem batchBulletItem in batchBulletCasterComponent.BatchList)
 			{
-				BulletCasterBatch item = new BulletCasterBatch(base.Entity, this.CycleTime, (float)batchBulletItem.Time, batchBulletItem.CasterList, batchBulletCasterComponent.WarningEffect, contextId, list, batchBulletCasterComponent.MovementType);
+				if ((float)batchBulletItem.Time > num)
+				{
+					num = (float)batchBulletItem.Time;
+				}
+			}
+			this.CycleTime = num;
+			foreach (IBatchBulletItem batchBulletItem2 in batchBulletCasterComponent.BatchList)
+			{
+				BulletCasterBatch item = new BulletCasterBatch(base.Entity, this.CycleTime, (float)batchBulletItem2.Time, batchBulletItem2.CasterList, batchBulletCasterComponent.WarningEffect, contextId, list, batchBulletCasterComponent.MovementType);
 				this.Batches.Add(item);
 			}
 			return true;
 		}
 
-		// Token: 0x06047791 RID: 292753 RVA: 0x012348B4 File Offset: 0x01232AB4
+		// Token: 0x0603D0A2 RID: 250018 RVA: 0x0118E370 File Offset: 0x0118C570
 		protected override bool OnStart()
 		{
 			this.StateComp = base.Entity.GetComponent<SceneItemStateComponent>();
 			return true;
 		}
 
-		// Token: 0x06047792 RID: 292754 RVA: 0x012348C8 File Offset: 0x01232AC8
+		// Token: 0x0603D0A3 RID: 250019 RVA: 0x0118E384 File Offset: 0x0118C584
 		protected override void OnActivate()
 		{
 			EventSystem.Instance.AddWithTargetUseHoldKey<int, bool>(this, base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnStateChange));
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047793 RID: 292755 RVA: 0x01234918 File Offset: 0x01232B18
+		// Token: 0x0603D0A4 RID: 250020 RVA: 0x0118E3D4 File Offset: 0x0118C5D4
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047794 RID: 292756 RVA: 0x01234930 File Offset: 0x01232B30
+		// Token: 0x0603D0A5 RID: 250021 RVA: 0x0118E3EC File Offset: 0x0118C5EC
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047795 RID: 292757 RVA: 0x012349A0 File Offset: 0x01232BA0
+		// Token: 0x0603D0A6 RID: 250022 RVA: 0x0118E45C File Offset: 0x0118C65C
 		private void OnStateChange(int _1 = 0, bool _2 = false)
 		{
 			SceneItemStateComponent stateComp = this.StateComp;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.StopAllBatches();
 		}
 
-		// Token: 0x06047796 RID: 292758 RVA: 0x012349C4 File Offset: 0x01232BC4
+		// Token: 0x0603D0A7 RID: 250023 RVA: 0x0118E480 File Offset: 0x0118C680
 		private void StartAllBatches()
 		{
 			if (this.CompConfig == null || this.CompConfig.BatchList.Count < 0 || this.CycleTime <= 0f)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047797 RID: 292759 RVA: 0x01234A50 File Offset: 0x01232C50
+		// Token: 0x0603D0A8 RID: 250024 RVA: 0x0118E50C File Offset: 0x0118C70C
 		private void StopAllBatches()
 		{
 			if (!this.IsBatchesStarted)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047798 RID: 292760 RVA: 0x01234AB0 File Offset: 0x01232CB0
+		// Token: 0x0603D0A9 RID: 250025 RVA: 0x0118E56C File Offset: 0x0118C76C
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -164,71 +164,96 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			BatchBulletCasterComponent batchBulletCasterComponent = (BatchBulletCasterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (batchBulletCasterComponent.CreatureDataComp == null)
 			{
-				if (batchBulletCasterComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (batchBulletCasterComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CompConfig"))
-			{
-				if (batchBulletCasterComponent.CompConfig == null)
-				{
-					this.CompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BatchBulletCasterComponent>(this.CompConfig), "CompConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CycleTime"))
-			{
-				this.CycleTime = batchBulletCasterComponent.CycleTime;
-			}
-			if (base.CanResetComponentProperty("Batches") && batchBulletCasterComponent.Batches != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<BulletCasterBatch>>(this.Batches), "Batches"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsBatchesStarted"))
+			if (batchBulletCasterComponent.StateComp == null)
 			{
-				this.IsBatchesStarted = batchBulletCasterComponent.IsBatchesStarted;
+				this.StateComp = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
+			{
+				return false;
+			}
+			if (batchBulletCasterComponent.CompConfig == null)
+			{
+				this.CompConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CompConfig), "CompConfig"))
+			{
+				return false;
+			}
+			this.CycleTime = batchBulletCasterComponent.CycleTime;
+			if (batchBulletCasterComponent.Batches != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Batches), "Batches"))
+			{
+				return false;
+			}
+			this.IsBatchesStarted = batchBulletCasterComponent.IsBatchesStarted;
 			return true;
 		}
 
-		// Token: 0x04025994 RID: 154004
+		// Token: 0x17007383 RID: 29571
+		// (get) Token: 0x0603D0AA RID: 250026 RVA: 0x0118E647 File Offset: 0x0118C847
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007384 RID: 29572
+		// (get) Token: 0x0603D0AB RID: 250027 RVA: 0x0118E64A File Offset: 0x0118C84A
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007385 RID: 29573
+		// (get) Token: 0x0603D0AC RID: 250028 RVA: 0x0118E64D File Offset: 0x0118C84D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007386 RID: 29574
+		// (get) Token: 0x0603D0AD RID: 250029 RVA: 0x0118E650 File Offset: 0x0118C850
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020603 RID: 132611
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025995 RID: 154005
+		// Token: 0x04020604 RID: 132612
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025996 RID: 154006
+		// Token: 0x04020605 RID: 132613
 		private BatchBulletCasterComponent CompConfig;
 
-		// Token: 0x04025997 RID: 154007
+		// Token: 0x04020606 RID: 132614
 		private float CycleTime;
 
-		// Token: 0x04025998 RID: 154008
+		// Token: 0x04020607 RID: 132615
 		[Nullable(1)]
 		private readonly List<BulletCasterBatch> Batches = new List<BulletCasterBatch>();
 
-		// Token: 0x04025999 RID: 154009
+		// Token: 0x04020608 RID: 132616
 		private bool IsBatchesStarted;
 	}
 }

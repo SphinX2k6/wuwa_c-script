@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews
 {
-	// Token: 0x020047BF RID: 18367
+	// Token: 0x020036F0 RID: 14064
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 	})]
 	public class MapVerticalLayoutItem : GridProxyAbstract<IMapSubViewListItemData>
 	{
-		// Token: 0x060301D5 RID: 197077 RVA: 0x00B27114 File Offset: 0x00B25314
+		// Token: 0x060249A5 RID: 149925 RVA: 0x00A56F20 File Offset: 0x00A55120
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060301D6 RID: 197078 RVA: 0x00B27240 File Offset: 0x00B25440
+		// Token: 0x060249A6 RID: 149926 RVA: 0x00A5704C File Offset: 0x00A5524C
 		[NullableContext(1)]
 		public override void Refresh(IMapSubViewListItemData data, bool isSelected, int gridIndex)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			}
 		}
 
-		// Token: 0x060301D7 RID: 197079 RVA: 0x00B273B7 File Offset: 0x00B255B7
+		// Token: 0x060249A7 RID: 149927 RVA: 0x00A571C3 File Offset: 0x00A553C3
 		private void OnBtnClickCb()
 		{
 			IMapSubViewListItemData data = this._data;
@@ -133,29 +133,29 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews
 			onBtnClickCb();
 		}
 
-		// Token: 0x04019ED3 RID: 106195
+		// Token: 0x04014584 RID: 83332
 		[Nullable(2)]
 		private IMapSubViewListItemData _data;
 
-		// Token: 0x0200AA81 RID: 43649
+		// Token: 0x02009434 RID: 37940
 		public static class EComponent
 		{
-			// Token: 0x04033E0D RID: 212493
+			// Token: 0x0402E596 RID: 189846
 			public const int TextLeft = 0;
 
-			// Token: 0x04033E0E RID: 212494
+			// Token: 0x0402E597 RID: 189847
 			public const int TextRight = 1;
 
-			// Token: 0x04033E0F RID: 212495
+			// Token: 0x0402E598 RID: 189848
 			public const int BtnHelp = 2;
 
-			// Token: 0x04033E10 RID: 212496
+			// Token: 0x0402E599 RID: 189849
 			public const int Icon = 3;
 
-			// Token: 0x04033E11 RID: 212497
+			// Token: 0x0402E59A RID: 189850
 			public const int Sprite = 4;
 
-			// Token: 0x04033E12 RID: 212498
+			// Token: 0x0402E59B RID: 189851
 			public const int SpriteScaleIcon = 5;
 		}
 	}

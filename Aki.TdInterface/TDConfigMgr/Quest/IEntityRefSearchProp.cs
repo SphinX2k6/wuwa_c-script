@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F5F RID: 3935
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001089 RID: 4233
 	public class IEntityRefSearchProp
 	{
-		// Token: 0x06005774 RID: 22388 RVA: 0x000D5D34 File Offset: 0x000D3F34
+		// Token: 0x06005D48 RID: 23880 RVA: 0x000E27A0 File Offset: 0x000E09A0
 		private IEntityRefSearchProp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005775 RID: 22389 RVA: 0x000D5D6C File Offset: 0x000D3F6C
+		// Token: 0x06005D49 RID: 23881 RVA: 0x000E27D8 File Offset: 0x000E09D8
 		public static IEntityRefSearchProp Create([Nullable(2)] IEntityRefSearchProp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005776 RID: 22390 RVA: 0x000D5D7F File Offset: 0x000D3F7F
+		// Token: 0x06005D4A RID: 23882 RVA: 0x000E27EB File Offset: 0x000E09EB
 		public static IEntityRefSearchProp CreateFromSetValue([Nullable(2)] IEntityRefSearchProp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005777 RID: 22391 RVA: 0x000D5D92 File Offset: 0x000D3F92
+		// Token: 0x06005D4B RID: 23883 RVA: 0x000E27FE File Offset: 0x000E09FE
 		public IEntityRefSearchProp_SetValue ToSetValue()
 		{
 			return new IEntityRefSearchProp_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D2D RID: 7469
-		// (get) Token: 0x06005778 RID: 22392 RVA: 0x000D5DBD File Offset: 0x000D3FBD
-		// (set) Token: 0x06005779 RID: 22393 RVA: 0x000D5DE8 File Offset: 0x000D3FE8
+		// Token: 0x17001ED3 RID: 7891
+		// (get) Token: 0x06005D4C RID: 23884 RVA: 0x000E2829 File Offset: 0x000E0A29
+		// (set) Token: 0x06005D4D RID: 23885 RVA: 0x000E2854 File Offset: 0x000E0A54
 		public virtual string SearchText
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D2E RID: 7470
-		// (get) Token: 0x0600577A RID: 22394 RVA: 0x000D5DF8 File Offset: 0x000D3FF8
-		// (set) Token: 0x0600577B RID: 22395 RVA: 0x000D5E32 File Offset: 0x000D4032
+		// Token: 0x17001ED4 RID: 7892
+		// (get) Token: 0x06005D4E RID: 23886 RVA: 0x000E2864 File Offset: 0x000E0A64
+		// (set) Token: 0x06005D4F RID: 23887 RVA: 0x000E289E File Offset: 0x000E0A9E
 		public virtual int? ResultCount
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D2F RID: 7471
-		// (get) Token: 0x0600577C RID: 22396 RVA: 0x000D5E40 File Offset: 0x000D4040
-		// (set) Token: 0x0600577D RID: 22397 RVA: 0x000D5E7A File Offset: 0x000D407A
+		// Token: 0x17001ED5 RID: 7893
+		// (get) Token: 0x06005D50 RID: 23888 RVA: 0x000E28AC File Offset: 0x000E0AAC
+		// (set) Token: 0x06005D51 RID: 23889 RVA: 0x000E28E6 File Offset: 0x000E0AE6
 		public virtual int? ResultIndex
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034E4 RID: 13540
+		// Token: 0x04003815 RID: 14357
 		[Nullable(2)]
 		protected IEntityRefSearchProp FbInstance;
 
-		// Token: 0x040034E5 RID: 13541
+		// Token: 0x04003816 RID: 14358
 		[Nullable(2)]
 		protected IEntityRefSearchProp_SetValue PocoInterface;
 	}

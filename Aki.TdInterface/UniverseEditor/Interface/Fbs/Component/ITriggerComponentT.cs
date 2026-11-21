@@ -6,75 +6,75 @@ using Aki.UniverseEditor.Interface.Fbs.Match;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005ADF RID: 23263
+	// Token: 0x020060EC RID: 24812
 	public class ITriggerComponentT
 	{
-		// Token: 0x1700AF60 RID: 44896
-		// (get) Token: 0x06027B06 RID: 162566 RVA: 0x00575C67 File Offset: 0x00573E67
-		// (set) Token: 0x06027B07 RID: 162567 RVA: 0x00575C6F File Offset: 0x00573E6F
+		// Token: 0x1700B89C RID: 47260
+		// (get) Token: 0x0602A092 RID: 172178 RVA: 0x005BD12B File Offset: 0x005BB32B
+		// (set) Token: 0x0602A093 RID: 172179 RVA: 0x005BD133 File Offset: 0x005BB333
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AF61 RID: 44897
-		// (get) Token: 0x06027B08 RID: 162568 RVA: 0x00575C78 File Offset: 0x00573E78
-		// (set) Token: 0x06027B09 RID: 162569 RVA: 0x00575C80 File Offset: 0x00573E80
+		// Token: 0x1700B89D RID: 47261
+		// (get) Token: 0x0602A094 RID: 172180 RVA: 0x005BD13C File Offset: 0x005BB33C
+		// (set) Token: 0x0602A095 RID: 172181 RVA: 0x005BD144 File Offset: 0x005BB344
 		public IEntityMatchT Match { get; set; }
 
-		// Token: 0x1700AF62 RID: 44898
-		// (get) Token: 0x06027B0A RID: 162570 RVA: 0x00575C89 File Offset: 0x00573E89
-		// (set) Token: 0x06027B0B RID: 162571 RVA: 0x00575C91 File Offset: 0x00573E91
+		// Token: 0x1700B89E RID: 47262
+		// (get) Token: 0x0602A096 RID: 172182 RVA: 0x005BD14D File Offset: 0x005BB34D
+		// (set) Token: 0x0602A097 RID: 172183 RVA: 0x005BD155 File Offset: 0x005BB355
 		public int MaxTriggerTimes { get; set; }
 
-		// Token: 0x1700AF63 RID: 44899
-		// (get) Token: 0x06027B0C RID: 162572 RVA: 0x00575C9A File Offset: 0x00573E9A
-		// (set) Token: 0x06027B0D RID: 162573 RVA: 0x00575CA2 File Offset: 0x00573EA2
+		// Token: 0x1700B89F RID: 47263
+		// (get) Token: 0x0602A098 RID: 172184 RVA: 0x005BD15E File Offset: 0x005BB35E
+		// (set) Token: 0x0602A099 RID: 172185 RVA: 0x005BD166 File Offset: 0x005BB366
 		public int MatchTypeCount { get; set; }
 
-		// Token: 0x1700AF64 RID: 44900
-		// (get) Token: 0x06027B0E RID: 162574 RVA: 0x00575CAB File Offset: 0x00573EAB
-		// (set) Token: 0x06027B0F RID: 162575 RVA: 0x00575CB3 File Offset: 0x00573EB3
+		// Token: 0x1700B8A0 RID: 47264
+		// (get) Token: 0x0602A09A RID: 172186 RVA: 0x005BD16F File Offset: 0x005BB36F
+		// (set) Token: 0x0602A09B RID: 172187 RVA: 0x005BD177 File Offset: 0x005BB377
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700AF65 RID: 44901
-		// (get) Token: 0x06027B10 RID: 162576 RVA: 0x00575CBC File Offset: 0x00573EBC
-		// (set) Token: 0x06027B11 RID: 162577 RVA: 0x00575CC4 File Offset: 0x00573EC4
+		// Token: 0x1700B8A1 RID: 47265
+		// (get) Token: 0x0602A09C RID: 172188 RVA: 0x005BD180 File Offset: 0x005BB380
+		// (set) Token: 0x0602A09D RID: 172189 RVA: 0x005BD188 File Offset: 0x005BB388
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700AF66 RID: 44902
-		// (get) Token: 0x06027B12 RID: 162578 RVA: 0x00575CCD File Offset: 0x00573ECD
-		// (set) Token: 0x06027B13 RID: 162579 RVA: 0x00575CD5 File Offset: 0x00573ED5
+		// Token: 0x1700B8A2 RID: 47266
+		// (get) Token: 0x0602A09E RID: 172190 RVA: 0x005BD191 File Offset: 0x005BB391
+		// (set) Token: 0x0602A09F RID: 172191 RVA: 0x005BD199 File Offset: 0x005BB399
 		public ITriggerExitConfigT ExitConfig { get; set; }
 
-		// Token: 0x1700AF67 RID: 44903
-		// (get) Token: 0x06027B14 RID: 162580 RVA: 0x00575CDE File Offset: 0x00573EDE
-		// (set) Token: 0x06027B15 RID: 162581 RVA: 0x00575CE6 File Offset: 0x00573EE6
+		// Token: 0x1700B8A3 RID: 47267
+		// (get) Token: 0x0602A0A0 RID: 172192 RVA: 0x005BD1A2 File Offset: 0x005BB3A2
+		// (set) Token: 0x0602A0A1 RID: 172193 RVA: 0x005BD1AA File Offset: 0x005BB3AA
 		public List<TMatchRoleOptionUnion> MatchRoleOption { get; set; }
 
-		// Token: 0x1700AF68 RID: 44904
-		// (get) Token: 0x06027B16 RID: 162582 RVA: 0x00575CEF File Offset: 0x00573EEF
-		// (set) Token: 0x06027B17 RID: 162583 RVA: 0x00575CF7 File Offset: 0x00573EF7
+		// Token: 0x1700B8A4 RID: 47268
+		// (get) Token: 0x0602A0A2 RID: 172194 RVA: 0x005BD1B3 File Offset: 0x005BB3B3
+		// (set) Token: 0x0602A0A3 RID: 172195 RVA: 0x005BD1BB File Offset: 0x005BB3BB
 		public bool ChangeRoleTrigger { get; set; }
 
-		// Token: 0x1700AF69 RID: 44905
-		// (get) Token: 0x06027B18 RID: 162584 RVA: 0x00575D00 File Offset: 0x00573F00
-		// (set) Token: 0x06027B19 RID: 162585 RVA: 0x00575D08 File Offset: 0x00573F08
+		// Token: 0x1700B8A5 RID: 47269
+		// (get) Token: 0x0602A0A4 RID: 172196 RVA: 0x005BD1C4 File Offset: 0x005BB3C4
+		// (set) Token: 0x0602A0A5 RID: 172197 RVA: 0x005BD1CC File Offset: 0x005BB3CC
 		public bool ClientPrePerformance { get; set; }
 
-		// Token: 0x1700AF6A RID: 44906
-		// (get) Token: 0x06027B1A RID: 162586 RVA: 0x00575D11 File Offset: 0x00573F11
-		// (set) Token: 0x06027B1B RID: 162587 RVA: 0x00575D19 File Offset: 0x00573F19
+		// Token: 0x1700B8A6 RID: 47270
+		// (get) Token: 0x0602A0A6 RID: 172198 RVA: 0x005BD1D5 File Offset: 0x005BB3D5
+		// (set) Token: 0x0602A0A7 RID: 172199 RVA: 0x005BD1DD File Offset: 0x005BB3DD
 		public bool OnlineDisableTip { get; set; }
 
-		// Token: 0x1700AF6B RID: 44907
-		// (get) Token: 0x06027B1C RID: 162588 RVA: 0x00575D22 File Offset: 0x00573F22
-		// (set) Token: 0x06027B1D RID: 162589 RVA: 0x00575D2A File Offset: 0x00573F2A
+		// Token: 0x1700B8A7 RID: 47271
+		// (get) Token: 0x0602A0A8 RID: 172200 RVA: 0x005BD1E6 File Offset: 0x005BB3E6
+		// (set) Token: 0x0602A0A9 RID: 172201 RVA: 0x005BD1EE File Offset: 0x005BB3EE
 		public bool OnlineAutoExit { get; set; }
 
-		// Token: 0x1700AF6C RID: 44908
-		// (get) Token: 0x06027B1E RID: 162590 RVA: 0x00575D33 File Offset: 0x00573F33
-		// (set) Token: 0x06027B1F RID: 162591 RVA: 0x00575D3B File Offset: 0x00573F3B
+		// Token: 0x1700B8A8 RID: 47272
+		// (get) Token: 0x0602A0AA RID: 172202 RVA: 0x005BD1F7 File Offset: 0x005BB3F7
+		// (set) Token: 0x0602A0AB RID: 172203 RVA: 0x005BD1FF File Offset: 0x005BB3FF
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027B20 RID: 162592 RVA: 0x00575D44 File Offset: 0x00573F44
+		// Token: 0x0602A0AC RID: 172204 RVA: 0x005BD208 File Offset: 0x005BB408
 		public ITriggerComponentT()
 		{
 			this.Disabled = false;

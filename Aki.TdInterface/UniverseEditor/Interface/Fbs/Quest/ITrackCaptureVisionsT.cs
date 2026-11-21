@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041EB RID: 16875
+	// Token: 0x02004644 RID: 17988
 	public class ITrackCaptureVisionsT
 	{
-		// Token: 0x170077B9 RID: 30649
-		// (get) Token: 0x06018E32 RID: 101938 RVA: 0x00394A96 File Offset: 0x00392C96
-		// (set) Token: 0x06018E33 RID: 101939 RVA: 0x00394A9E File Offset: 0x00392C9E
+		// Token: 0x17007DE5 RID: 32229
+		// (get) Token: 0x0601A588 RID: 107912 RVA: 0x003BFEEA File Offset: 0x003BE0EA
+		// (set) Token: 0x0601A589 RID: 107913 RVA: 0x003BFEF2 File Offset: 0x003BE0F2
 		public ETrackType Type { get; set; }
 
-		// Token: 0x170077BA RID: 30650
-		// (get) Token: 0x06018E34 RID: 101940 RVA: 0x00394AA7 File Offset: 0x00392CA7
-		// (set) Token: 0x06018E35 RID: 101941 RVA: 0x00394AAF File Offset: 0x00392CAF
+		// Token: 0x17007DE6 RID: 32230
+		// (get) Token: 0x0601A58A RID: 107914 RVA: 0x003BFEFB File Offset: 0x003BE0FB
+		// (set) Token: 0x0601A58B RID: 107915 RVA: 0x003BFF03 File Offset: 0x003BE103
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x170077BB RID: 30651
-		// (get) Token: 0x06018E36 RID: 101942 RVA: 0x00394AB8 File Offset: 0x00392CB8
-		// (set) Token: 0x06018E37 RID: 101943 RVA: 0x00394AC0 File Offset: 0x00392CC0
+		// Token: 0x17007DE7 RID: 32231
+		// (get) Token: 0x0601A58C RID: 107916 RVA: 0x003BFF0C File Offset: 0x003BE10C
+		// (set) Token: 0x0601A58D RID: 107917 RVA: 0x003BFF14 File Offset: 0x003BE114
 		public List<int> VisionDropEntities { get; set; }
 
-		// Token: 0x06018E38 RID: 101944 RVA: 0x00394AC9 File Offset: 0x00392CC9
+		// Token: 0x0601A58E RID: 107918 RVA: 0x003BFF1D File Offset: 0x003BE11D
 		public ITrackCaptureVisionsT()
 		{
 			this.Type = ETrackType.Locations;

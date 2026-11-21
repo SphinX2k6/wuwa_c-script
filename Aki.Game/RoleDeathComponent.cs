@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Teleport;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200323B RID: 12859
+// Token: 0x020027AA RID: 10154
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleDeathComponent : BaseDeathComponent
 {
-	// Token: 0x0601BBED RID: 113645 RVA: 0x007A44F4 File Offset: 0x007A26F4
+	// Token: 0x06019789 RID: 104329 RVA: 0x007CCD88 File Offset: 0x007CAF88
 	protected override bool OnInit()
 	{
 		this.ActorComponent = base.Entity.GetComponent<CharacterActorComponent>();
@@ -28,30 +28,34 @@ public class RoleDeathComponent : BaseDeathComponent
 		return true;
 	}
 
-	// Token: 0x0601BBEE RID: 113646 RVA: 0x007A458C File Offset: 0x007A278C
+	// Token: 0x0601978A RID: 104330 RVA: 0x007CCE20 File Offset: 0x007CB020
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
 		{
 			return false;
 		}
-		CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
-		if (creatureDataComponent != null && creatureDataComponent.GetLivingStatus().GetValueOrDefault() == LivingStatus.Dead)
+		LivingStatus? livingStatus = this.CreatureDataComponent.GetLivingStatus();
+		if (livingStatus.GetValueOrDefault() == LivingStatus.Dead)
 		{
 			this.ExecuteDeath(null);
+		}
+		else if (livingStatus.GetValueOrDefault() == LivingStatus.Dying)
+		{
+			this.ExecuteDying(null);
 		}
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.TeleportChangeLocation, new Action(this.ResetDrowning));
 		return true;
 	}
 
-	// Token: 0x0601BBEF RID: 113647 RVA: 0x007A45F5 File Offset: 0x007A27F5
+	// Token: 0x0601978B RID: 104331 RVA: 0x007CCE9C File Offset: 0x007CB09C
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.TeleportChangeLocation, new Action(this.ResetDrowning));
 		return true;
 	}
 
-	// Token: 0x0601BBF0 RID: 113648 RVA: 0x007A461A File Offset: 0x007A281A
+	// Token: 0x0601978C RID: 104332 RVA: 0x007CCEC1 File Offset: 0x007CB0C1
 	protected override bool OnClear()
 	{
 		this.MaterialHandles.Clear();
@@ -59,7 +63,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		return true;
 	}
 
-	// Token: 0x0601BBF1 RID: 113649 RVA: 0x007A4630 File Offset: 0x007A2830
+	// Token: 0x0601978D RID: 104333 RVA: 0x007CCED8 File Offset: 0x007CB0D8
 	public override bool ExecuteDeath(long? preMessageId)
 	{
 		if (!base.ExecuteDeath(preMessageId))
@@ -82,6 +86,56 @@ public class RoleDeathComponent : BaseDeathComponent
 		{
 			skillComponent.StopAllSkills("RoleDeathComponent.ExecuteDeath");
 		}
+		this.ClearUnifiedState("RoleDeathComponent.ExecuteDeath");
+		CharacterBuffComponent buffComponent2 = this.BuffComponent;
+		if (buffComponent2 != null)
+		{
+			buffComponent2.RemoveAllDurationBuffs("实体死亡清理持续型buff", ERemoveAllBuffsReasonType.Death);
+		}
+		BaseAttributeComponent attributeComponent = this.AttributeComponent;
+		if (attributeComponent != null)
+		{
+			attributeComponent.ClearSpecialEnergy();
+		}
+		this.PlayDeathAnimation(preMessageId);
+		this.PlayDeathAudio();
+		EventSystem.Instance.Emit<int>(EEventName.CharOnRoleDead, base.Entity.Id);
+		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.CharOnRoleDeadTargetSelf);
+		return true;
+	}
+
+	// Token: 0x0601978E RID: 104334 RVA: 0x007CCFCC File Offset: 0x007CB1CC
+	public override bool ExecuteDying(long? contextId)
+	{
+		if (!base.ExecuteDying(contextId))
+		{
+			return false;
+		}
+		CharacterBuffComponent buffComponent = this.BuffComponent;
+		if (buffComponent != null)
+		{
+			buffComponent.RemoveBuffByEffectType(EExtraEffectId.Frozen, "实体濒死移除冰冻buff");
+		}
+		CharacterSkillComponent skillComponent = this.SkillComponent;
+		if (skillComponent != null)
+		{
+			skillComponent.StopAllSkills("RoleDeathComponent.ExecuteDying");
+		}
+		this.ClearUnifiedState("RoleDeathComponent.ExecuteDying");
+		CharacterBuffComponent buffComponent2 = this.BuffComponent;
+		if (buffComponent2 != null)
+		{
+			buffComponent2.RemoveAllDurationBuffs("实体濒死清理持续型buff", ERemoveAllBuffsReasonType.Dying);
+		}
+		EventSystem.Instance.Emit<Entity>(EEventName.OnDying, base.Entity);
+		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.CharOnDying);
+		return true;
+	}
+
+	// Token: 0x0601978F RID: 104335 RVA: 0x007CD064 File Offset: 0x007CB264
+	[NullableContext(1)]
+	protected void ClearUnifiedState(string reason = "")
+	{
 		CharacterUnifiedStateComponent unifiedStateComponent = this.UnifiedStateComponent;
 		if (unifiedStateComponent != null && unifiedStateComponent.Valid && base.Entity.IsInit)
 		{
@@ -97,7 +151,7 @@ public class RoleDeathComponent : BaseDeathComponent
 						CharacterGlideComponent component = base.Entity.GetComponent<CharacterGlideComponent>();
 						if (component != null)
 						{
-							component.ExitGlideState("Death");
+							component.ExitGlideState(reason);
 						}
 					}
 					else if (moveState == global::ECharMoveState.Soar)
@@ -105,7 +159,7 @@ public class RoleDeathComponent : BaseDeathComponent
 						CharacterGlideComponent component2 = base.Entity.GetComponent<CharacterGlideComponent>();
 						if (component2 != null)
 						{
-							component2.ExitSoarState(EMovementMode.MOVE_Falling, "Death");
+							component2.ExitSoarState(EMovementMode.MOVE_Falling, reason);
 						}
 					}
 				}
@@ -119,30 +173,15 @@ public class RoleDeathComponent : BaseDeathComponent
 					{
 						Mode = EMovementMode.MOVE_Falling,
 						CustomMode = 0,
-						Context = "[RoleDeathComponent.ExecuteDeath]"
+						Context = reason
 					});
 				}
 			}
-			this.UnifiedStateComponent.ExitHitState("角色死亡");
+			this.UnifiedStateComponent.ExitHitState(reason);
 		}
-		CharacterBuffComponent buffComponent2 = this.BuffComponent;
-		if (buffComponent2 != null)
-		{
-			buffComponent2.RemoveAllDurationBuffs("实体死亡清理持续型buff");
-		}
-		BaseAttributeComponent attributeComponent = this.AttributeComponent;
-		if (attributeComponent != null)
-		{
-			attributeComponent.ClearSpecialEnergy();
-		}
-		this.PlayDeathAnimation(preMessageId);
-		this.PlayDeathAudio();
-		EventSystem.Instance.Emit<int>(EEventName.CharOnRoleDead, base.Entity.Id);
-		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.CharOnRoleDeadTargetSelf);
-		return true;
 	}
 
-	// Token: 0x0601BBF2 RID: 113650 RVA: 0x007A47F9 File Offset: 0x007A29F9
+	// Token: 0x06019790 RID: 104336 RVA: 0x007CD141 File Offset: 0x007CB341
 	protected void PlayDeathAudio()
 	{
 		if (base.Entity == null)
@@ -152,7 +191,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		RoleAudioController.Instance.OnPlayerDies(base.Entity);
 	}
 
-	// Token: 0x0601BBF3 RID: 113651 RVA: 0x007A4814 File Offset: 0x007A2A14
+	// Token: 0x06019791 RID: 104337 RVA: 0x007CD15C File Offset: 0x007CB35C
 	protected void PlayDeathAnimation(long? preMessageId)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -188,7 +227,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		this.OnDeathEnded();
 	}
 
-	// Token: 0x0601BBF4 RID: 113652 RVA: 0x007A4938 File Offset: 0x007A2B38
+	// Token: 0x06019792 RID: 104338 RVA: 0x007CD280 File Offset: 0x007CB480
 	protected override UAnimMontage GetDeathMontage(ECharacterDeathMontageType montageType)
 	{
 		UAnimMontage uanimMontage = null;
@@ -207,13 +246,13 @@ public class RoleDeathComponent : BaseDeathComponent
 		return uanimMontage;
 	}
 
-	// Token: 0x0601BBF5 RID: 113653 RVA: 0x007A4980 File Offset: 0x007A2B80
+	// Token: 0x06019793 RID: 104339 RVA: 0x007CD2C8 File Offset: 0x007CB4C8
 	public void OnDeathEnded(bool isInterrupted)
 	{
 		this.OnDeathEnded();
 	}
 
-	// Token: 0x0601BBF6 RID: 113654 RVA: 0x007A4988 File Offset: 0x007A2B88
+	// Token: 0x06019794 RID: 104340 RVA: 0x007CD2D0 File Offset: 0x007CB4D0
 	public void OnDeathEnded()
 	{
 		List<EntityHandle> teamEntities = SceneTeamModel.Instance.GetTeamEntities(true);
@@ -250,10 +289,10 @@ public class RoleDeathComponent : BaseDeathComponent
 		SceneTeamModel.Instance.RoleDeathEnded(base.Entity.Id);
 	}
 
-	// Token: 0x0601BBF7 RID: 113655 RVA: 0x007A4AB8 File Offset: 0x007A2CB8
+	// Token: 0x06019795 RID: 104341 RVA: 0x007CD400 File Offset: 0x007CB600
 	public unsafe void ExecuteRevive()
 	{
-		if (!this.IsDeadInternal)
+		if (!this.IsDeadInternal && !this.IsDyingInternal)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Character;
@@ -285,12 +324,15 @@ public class RoleDeathComponent : BaseDeathComponent
 		ptr = new ValueTuple<string, object>(item, num);
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		this.IsDeadInternal = false;
+		this.IsDyingInternal = false;
 		BaseTagComponent tagComponent = this.TagComponent;
 		if (tagComponent != null)
 		{
 			tagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.濒死"]));
 		}
 		this.RemoveMaterials();
+		EventSystem.Instance.EmitWithTarget(base.Entity, EEventName.CharOnAnyRevive);
+		EventSystem.Instance.Emit<Entity>(EEventName.OnAnyRevive, base.Entity);
 		CharacterActorComponent actorComponent = this.ActorComponent;
 		if (actorComponent != null && actorComponent.IsAutonomousProxy)
 		{
@@ -312,13 +354,13 @@ public class RoleDeathComponent : BaseDeathComponent
 		GlobalData.BpEventManager.当有角色复活时.Broadcast(角色);
 	}
 
-	// Token: 0x0601BBF8 RID: 113656 RVA: 0x007A4C65 File Offset: 0x007A2E65
+	// Token: 0x06019796 RID: 104342 RVA: 0x007CD5E8 File Offset: 0x007CB7E8
 	public void AddMaterialHandle(int handle)
 	{
 		this.MaterialHandles.Add(handle);
 	}
 
-	// Token: 0x0601BBF9 RID: 113657 RVA: 0x007A4C74 File Offset: 0x007A2E74
+	// Token: 0x06019797 RID: 104343 RVA: 0x007CD5F8 File Offset: 0x007CB7F8
 	public void RemoveMaterials()
 	{
 		CharacterActorComponent actorComponent = this.ActorComponent;
@@ -332,7 +374,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		}
 	}
 
-	// Token: 0x0601BBFA RID: 113658 RVA: 0x007A4CE4 File Offset: 0x007A2EE4
+	// Token: 0x06019798 RID: 104344 RVA: 0x007CD668 File Offset: 0x007CB868
 	[CombatListen(ENotifyMessageId.DrownNotify, true, false)]
 	public static void DrownNotify(Entity entity, [Nullable(1)] DrownNotify data, CombatCommon combatCommon = null)
 	{
@@ -348,7 +390,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		}
 	}
 
-	// Token: 0x0601BBFB RID: 113659 RVA: 0x007A4D44 File Offset: 0x007A2F44
+	// Token: 0x06019799 RID: 104345 RVA: 0x007CD6C8 File Offset: 0x007CB8C8
 	public void Drowning()
 	{
 		if (!this.IsDrowning())
@@ -374,14 +416,14 @@ public class RoleDeathComponent : BaseDeathComponent
 		CombatNet.Instance.Send(EPushMessageId.DrownPush, base.Entity, new DrownPush(), null, null, null);
 	}
 
-	// Token: 0x0601BBFC RID: 113660 RVA: 0x007A4E8A File Offset: 0x007A308A
+	// Token: 0x0601979A RID: 104346 RVA: 0x007CD80E File Offset: 0x007CBA0E
 	public bool IsDrowning()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
 		return tagComponent != null && tagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.溺水"]);
 	}
 
-	// Token: 0x0601BBFD RID: 113661 RVA: 0x007A4EAC File Offset: 0x007A30AC
+	// Token: 0x0601979B RID: 104347 RVA: 0x007CD830 File Offset: 0x007CBA30
 	public void ResetDrowning()
 	{
 		if (this.CanResetDrowning)
@@ -391,7 +433,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		}
 	}
 
-	// Token: 0x0601BBFE RID: 113662 RVA: 0x007A4EC3 File Offset: 0x007A30C3
+	// Token: 0x0601979C RID: 104348 RVA: 0x007CD847 File Offset: 0x007CBA47
 	private void RemoveDrowningEffect()
 	{
 		if (!base.IsDead())
@@ -400,7 +442,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		}
 	}
 
-	// Token: 0x0601BBFF RID: 113663 RVA: 0x007A4ED4 File Offset: 0x007A30D4
+	// Token: 0x0601979D RID: 104349 RVA: 0x007CD858 File Offset: 0x007CBA58
 	public void DrowningPunishment(bool _)
 	{
 		this.BuffComponent.AddBuff(1105L, new AddBuffParam
@@ -449,7 +491,7 @@ public class RoleDeathComponent : BaseDeathComponent
 		}
 	}
 
-	// Token: 0x0601BC00 RID: 113664 RVA: 0x007A5060 File Offset: 0x007A3260
+	// Token: 0x0601979E RID: 104350 RVA: 0x007CD9E4 File Offset: 0x007CBBE4
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -458,129 +500,142 @@ public class RoleDeathComponent : BaseDeathComponent
 			return false;
 		}
 		RoleDeathComponent roleDeathComponent = (RoleDeathComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (roleDeathComponent.ActorComponent == null)
 		{
-			if (roleDeathComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
-			if (roleDeathComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (roleDeathComponent.CreatureDataComponent == null)
 		{
-			if (roleDeathComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("SkillComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
-			if (roleDeathComponent.SkillComponent == null)
-			{
-				this.SkillComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComponent), "SkillComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffComponent"))
+		if (roleDeathComponent.TagComponent == null)
 		{
-			if (roleDeathComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (roleDeathComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AttributeComponent"))
+		if (roleDeathComponent.SkillComponent == null)
 		{
-			if (roleDeathComponent.AttributeComponent == null)
-			{
-				this.AttributeComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComponent), "AttributeComponent"))
-			{
-				return false;
-			}
+			this.SkillComponent = null;
 		}
-		if (base.CanResetComponentProperty("MorphComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 		{
-			if (roleDeathComponent.MorphComponent == null)
-			{
-				this.MorphComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMorphComponent>(this.MorphComponent), "MorphComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CanResetDrowning"))
+		if (roleDeathComponent.BuffComponent == null)
 		{
-			this.CanResetDrowning = roleDeathComponent.CanResetDrowning;
+			this.BuffComponent = null;
 		}
-		return !base.CanResetComponentProperty("MaterialHandles") || roleDeathComponent.MaterialHandles == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.MaterialHandles), "MaterialHandles");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
+		{
+			return false;
+		}
+		if (roleDeathComponent.UnifiedStateComponent == null)
+		{
+			this.UnifiedStateComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
+		{
+			return false;
+		}
+		if (roleDeathComponent.AttributeComponent == null)
+		{
+			this.AttributeComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComponent), "AttributeComponent"))
+		{
+			return false;
+		}
+		if (roleDeathComponent.MorphComponent == null)
+		{
+			this.MorphComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphComponent), "MorphComponent"))
+		{
+			return false;
+		}
+		this.CanResetDrowning = roleDeathComponent.CanResetDrowning;
+		return roleDeathComponent.MaterialHandles == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MaterialHandles), "MaterialHandles");
 	}
 
-	// Token: 0x0400DA93 RID: 55955
+	// Token: 0x17002898 RID: 10392
+	// (get) Token: 0x0601979F RID: 104351 RVA: 0x007CDB8A File Offset: 0x007CBD8A
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002899 RID: 10393
+	// (get) Token: 0x060197A0 RID: 104352 RVA: 0x007CDB8D File Offset: 0x007CBD8D
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700289A RID: 10394
+	// (get) Token: 0x060197A1 RID: 104353 RVA: 0x007CDB90 File Offset: 0x007CBD90
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700289B RID: 10395
+	// (get) Token: 0x060197A2 RID: 104354 RVA: 0x007CDB93 File Offset: 0x007CBD93
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF32 RID: 57138
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400DA94 RID: 55956
+	// Token: 0x0400DF33 RID: 57139
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400DA95 RID: 55957
+	// Token: 0x0400DF34 RID: 57140
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DA96 RID: 55958
+	// Token: 0x0400DF35 RID: 57141
 	private CharacterSkillComponent SkillComponent;
 
-	// Token: 0x0400DA97 RID: 55959
+	// Token: 0x0400DF36 RID: 57142
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400DA98 RID: 55960
+	// Token: 0x0400DF37 RID: 57143
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400DA99 RID: 55961
+	// Token: 0x0400DF38 RID: 57144
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400DA9A RID: 55962
+	// Token: 0x0400DF39 RID: 57145
 	private CharacterMorphComponent MorphComponent;
 
-	// Token: 0x0400DA9B RID: 55963
+	// Token: 0x0400DF3A RID: 57146
 	private bool CanResetDrowning;
 
-	// Token: 0x0400DA9C RID: 55964
+	// Token: 0x0400DF3B RID: 57147
 	[Nullable(1)]
 	private readonly List<int> MaterialHandles = new List<int>();
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024C9 RID: 9417
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200276E RID: 10094
 	public class IQuestActionContext : IActionContextType
 	{
-		// Token: 0x0600D265 RID: 53861 RVA: 0x001F38A2 File Offset: 0x001F1AA2
+		// Token: 0x0600DFBA RID: 57274 RVA: 0x0020F0FE File Offset: 0x0020D2FE
 		public static IQuestActionContext Create(IQuestActionContext? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003A95 RID: 14997
-		// (get) Token: 0x0600D266 RID: 53862 RVA: 0x001F38C1 File Offset: 0x001F1AC1
+		// Token: 0x17003D8C RID: 15756
+		// (get) Token: 0x0600DFBB RID: 57275 RVA: 0x0020F11D File Offset: 0x0020D31D
 		public new virtual string Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003A96 RID: 14998
-		// (get) Token: 0x0600D267 RID: 53863 RVA: 0x001F38D0 File Offset: 0x001F1AD0
+		// Token: 0x17003D8D RID: 15757
+		// (get) Token: 0x0600DFBC RID: 57276 RVA: 0x0020F12C File Offset: 0x0020D32C
 		public virtual bool? IsChildQuestOfDungeon
 		{
 			get
@@ -46,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007371 RID: 29553
+		// Token: 0x040079BE RID: 31166
 		private IQuestActionContext Instance;
 	}
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DBF RID: 23999
+	// Token: 0x02004DA3 RID: 19875
 	public class ShopButton : BattleChildView
 	{
-		// Token: 0x0603CFC2 RID: 249794 RVA: 0x00EA9920 File Offset: 0x00EA7B20
+		// Token: 0x06031F39 RID: 204601 RVA: 0x00DFA7FC File Offset: 0x00DF89FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CFC3 RID: 249795 RVA: 0x00EA99C6 File Offset: 0x00EA7BC6
+		// Token: 0x06031F3A RID: 204602 RVA: 0x00DFA8A2 File Offset: 0x00DF8AA2
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			RedDotController.Instance.BindRedDot(ERedDotName.BattleViewShopButton, base.GetItem(1), null, 0);
 		}
 
-		// Token: 0x0603CFC4 RID: 249796 RVA: 0x00EA99E3 File Offset: 0x00EA7BE3
+		// Token: 0x06031F3B RID: 204603 RVA: 0x00DFA8BF File Offset: 0x00DF8ABF
 		public override void Reset()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.BattleViewShopButton);
 			base.Reset();
 		}
 
-		// Token: 0x0603CFC5 RID: 249797 RVA: 0x00EA99F8 File Offset: 0x00EA7BF8
+		// Token: 0x06031F3C RID: 204604 RVA: 0x00DFA8D4 File Offset: 0x00DF8AD4
 		private void OnClickedShopButton()
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("BattleViewShopId");
@@ -59,12 +59,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.FirstOpenShop, false);
 		}
 
-		// Token: 0x0200C0BD RID: 49341
+		// Token: 0x0200AAC6 RID: 43718
 		private enum EChildType
 		{
-			// Token: 0x0403A281 RID: 238209
+			// Token: 0x04034C53 RID: 216147
 			ShopButton,
-			// Token: 0x0403A282 RID: 238210
+			// Token: 0x04034C54 RID: 216148
 			RedDotItem
 		}
 	}

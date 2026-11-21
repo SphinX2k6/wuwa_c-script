@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001932 RID: 6450
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001ABB RID: 6843
 	public class IContinualGamepadShake : IGamepadShakeConfig
 	{
-		// Token: 0x06008A49 RID: 35401 RVA: 0x00145E00 File Offset: 0x00144000
-		[NullableContext(1)]
+		// Token: 0x06009175 RID: 37237 RVA: 0x00155740 File Offset: 0x00153940
 		private IContinualGamepadShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008A4A RID: 35402 RVA: 0x00145E38 File Offset: 0x00144038
-		[NullableContext(1)]
+		// Token: 0x06009176 RID: 37238 RVA: 0x00155778 File Offset: 0x00153978
 		public static IContinualGamepadShake Create([Nullable(2)] IContinualGamepadShake instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A4B RID: 35403 RVA: 0x00145E4B File Offset: 0x0014404B
-		[NullableContext(1)]
+		// Token: 0x06009177 RID: 37239 RVA: 0x0015578B File Offset: 0x0015398B
 		public static IContinualGamepadShake CreateFromSetValue([Nullable(2)] IContinualGamepadShake_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008A4C RID: 35404 RVA: 0x00145E60 File Offset: 0x00144060
-		[NullableContext(1)]
+		// Token: 0x06009178 RID: 37240 RVA: 0x001557A0 File Offset: 0x001539A0
 		public new IContinualGamepadShake_SetValue ToSetValue()
 		{
 			return new IContinualGamepadShake_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CAE RID: 11438
-		// (get) Token: 0x06008A4D RID: 35405 RVA: 0x00145EAE File Offset: 0x001440AE
-		// (set) Token: 0x06008A4E RID: 35406 RVA: 0x00145ED9 File Offset: 0x001440D9
+		// Token: 0x17002EAE RID: 11950
+		// (get) Token: 0x06009179 RID: 37241 RVA: 0x001557EE File Offset: 0x001539EE
+		// (set) Token: 0x0600917A RID: 37242 RVA: 0x00155819 File Offset: 0x00153A19
 		public override EGamepadShakeType Type
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CAF RID: 11439
-		// (get) Token: 0x06008A4F RID: 35407 RVA: 0x00145EE8 File Offset: 0x001440E8
-		// (set) Token: 0x06008A50 RID: 35408 RVA: 0x00145F22 File Offset: 0x00144122
+		// Token: 0x17002EAF RID: 11951
+		// (get) Token: 0x0600917B RID: 37243 RVA: 0x00155828 File Offset: 0x00153A28
+		// (set) Token: 0x0600917C RID: 37244 RVA: 0x00155862 File Offset: 0x00153A62
 		public virtual bool? IsIgnoreTimeDilation
 		{
 			get
@@ -114,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CB0 RID: 11440
-		// (get) Token: 0x06008A51 RID: 35409 RVA: 0x00145F30 File Offset: 0x00144130
-		// (set) Token: 0x06008A52 RID: 35410 RVA: 0x00145F5F File Offset: 0x0014415F
+		// Token: 0x17002EB0 RID: 11952
+		// (get) Token: 0x0600917D RID: 37245 RVA: 0x00155870 File Offset: 0x00153A70
+		// (set) Token: 0x0600917E RID: 37246 RVA: 0x0015589F File Offset: 0x00153A9F
 		public virtual float Duration
 		{
 			get
@@ -137,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CB1 RID: 11441
-		// (get) Token: 0x06008A53 RID: 35411 RVA: 0x00145F6D File Offset: 0x0014416D
-		// (set) Token: 0x06008A54 RID: 35412 RVA: 0x00145F98 File Offset: 0x00144198
+		// Token: 0x17002EB1 RID: 11953
+		// (get) Token: 0x0600917F RID: 37247 RVA: 0x001558AD File Offset: 0x00153AAD
+		// (set) Token: 0x06009180 RID: 37248 RVA: 0x001558D8 File Offset: 0x00153AD8
 		public virtual bool IsLoop
 		{
 			get
@@ -156,11 +150,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CB2 RID: 11442
-		// (get) Token: 0x06008A55 RID: 35413 RVA: 0x00145FA6 File Offset: 0x001441A6
-		// (set) Token: 0x06008A56 RID: 35414 RVA: 0x00145FCD File Offset: 0x001441CD
+		// Token: 0x17002EB2 RID: 11954
+		// (get) Token: 0x06009181 RID: 37249 RVA: 0x001558E6 File Offset: 0x00153AE6
+		// (set) Token: 0x06009182 RID: 37250 RVA: 0x0015590D File Offset: 0x00153B0D
+		[Nullable(2)]
 		public virtual string GamepadShakeTag
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -174,16 +170,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.GamepadShakeTag;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().GamepadShakeTag = value;
 			}
 		}
 
-		// Token: 0x0400567B RID: 22139
+		// Token: 0x04005ACB RID: 23243
+		[Nullable(2)]
 		protected new IContinualGamepadShake FbInstance;
 
-		// Token: 0x0400567C RID: 22140
+		// Token: 0x04005ACC RID: 23244
+		[Nullable(2)]
 		protected new IContinualGamepadShake_SetValue PocoInterface;
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052FA RID: 21242
+	// Token: 0x0200587D RID: 22653
 	public struct IGrabComponent : IFlatbufferObject
 	{
-		// Token: 0x17009BF7 RID: 39927
-		// (get) Token: 0x06022B12 RID: 142098 RVA: 0x004CED4A File Offset: 0x004CCF4A
+		// Token: 0x1700A428 RID: 42024
+		// (get) Token: 0x06024BAC RID: 150444 RVA: 0x0050B876 File Offset: 0x00509A76
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022B13 RID: 142099 RVA: 0x004CED57 File Offset: 0x004CCF57
+		// Token: 0x06024BAD RID: 150445 RVA: 0x0050B883 File Offset: 0x00509A83
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022B14 RID: 142100 RVA: 0x004CED60 File Offset: 0x004CCF60
+		// Token: 0x06024BAE RID: 150446 RVA: 0x0050B88C File Offset: 0x00509A8C
 		public static IGrabComponent GetRootAsIGrabComponent(ByteBuffer _bb)
 		{
 			return IGrabComponent.GetRootAsIGrabComponent(_bb, default(IGrabComponent));
 		}
 
-		// Token: 0x06022B15 RID: 142101 RVA: 0x004CED7C File Offset: 0x004CCF7C
+		// Token: 0x06024BAF RID: 150447 RVA: 0x0050B8A8 File Offset: 0x00509AA8
 		public static IGrabComponent GetRootAsIGrabComponent(ByteBuffer _bb, IGrabComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022B16 RID: 142102 RVA: 0x004CED99 File Offset: 0x004CCF99
+		// Token: 0x06024BB0 RID: 150448 RVA: 0x0050B8C5 File Offset: 0x00509AC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022B17 RID: 142103 RVA: 0x004CEDA8 File Offset: 0x004CCFA8
+		// Token: 0x06024BB1 RID: 150449 RVA: 0x0050B8D4 File Offset: 0x00509AD4
 		public IGrabComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009BF8 RID: 39928
-		// (get) Token: 0x06022B18 RID: 142104 RVA: 0x004CEDB8 File Offset: 0x004CCFB8
+		// Token: 0x1700A429 RID: 42025
+		// (get) Token: 0x06024BB2 RID: 150450 RVA: 0x0050B8E4 File Offset: 0x00509AE4
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BF9 RID: 39929
-		// (get) Token: 0x06022B19 RID: 142105 RVA: 0x004CEDF8 File Offset: 0x004CCFF8
+		// Token: 0x1700A42A RID: 42026
+		// (get) Token: 0x06024BB3 RID: 150451 RVA: 0x0050B924 File Offset: 0x00509B24
 		public IVectorInfo? GrabPos
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BFA RID: 39930
-		// (get) Token: 0x06022B1A RID: 142106 RVA: 0x004CEE58 File Offset: 0x004CD058
+		// Token: 0x1700A42B RID: 42027
+		// (get) Token: 0x06024BB4 RID: 150452 RVA: 0x0050B984 File Offset: 0x00509B84
 		public int ThrowPow
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BFB RID: 39931
-		// (get) Token: 0x06022B1B RID: 142107 RVA: 0x004CEE94 File Offset: 0x004CD094
+		// Token: 0x1700A42C RID: 42028
+		// (get) Token: 0x06024BB5 RID: 150453 RVA: 0x0050B9C0 File Offset: 0x00509BC0
 		public int ThrowHight
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009BFC RID: 39932
-		// (get) Token: 0x06022B1C RID: 142108 RVA: 0x004CEED4 File Offset: 0x004CD0D4
+		// Token: 0x1700A42D RID: 42029
+		// (get) Token: 0x06024BB6 RID: 150454 RVA: 0x0050BA00 File Offset: 0x00509C00
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022B1D RID: 142109 RVA: 0x004CEF11 File Offset: 0x004CD111
+		// Token: 0x06024BB7 RID: 150455 RVA: 0x0050BA3D File Offset: 0x00509C3D
 		public static Offset<IGrabComponent> CreateIGrabComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IVectorInfo> GrabPosOffset = default(Offset<IVectorInfo>), int ThrowPow = 0, int ThrowHight = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGrabComponent.EndIGrabComponent(builder);
 		}
 
-		// Token: 0x06022B1E RID: 142110 RVA: 0x004CEF45 File Offset: 0x004CD145
+		// Token: 0x06024BB8 RID: 150456 RVA: 0x0050BA71 File Offset: 0x00509C71
 		public static void StartIGrabComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06022B1F RID: 142111 RVA: 0x004CEF4E File Offset: 0x004CD14E
+		// Token: 0x06024BB9 RID: 150457 RVA: 0x0050BA7A File Offset: 0x00509C7A
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022B20 RID: 142112 RVA: 0x004CEF59 File Offset: 0x004CD159
+		// Token: 0x06024BBA RID: 150458 RVA: 0x0050BA85 File Offset: 0x00509C85
 		public static void AddGrabPos(FlatBufferBuilder builder, Offset<IVectorInfo> grabPosOffset)
 		{
 			builder.AddOffset(1, grabPosOffset.Value, 0);
 		}
 
-		// Token: 0x06022B21 RID: 142113 RVA: 0x004CEF69 File Offset: 0x004CD169
+		// Token: 0x06024BBB RID: 150459 RVA: 0x0050BA95 File Offset: 0x00509C95
 		public static void AddThrowPow(FlatBufferBuilder builder, int throwPow)
 		{
 			builder.AddInt(2, throwPow, 0);
 		}
 
-		// Token: 0x06022B22 RID: 142114 RVA: 0x004CEF74 File Offset: 0x004CD174
+		// Token: 0x06024BBC RID: 150460 RVA: 0x0050BAA0 File Offset: 0x00509CA0
 		public static void AddThrowHight(FlatBufferBuilder builder, int throwHight)
 		{
 			builder.AddInt(3, throwHight, 0);
 		}
 
-		// Token: 0x06022B23 RID: 142115 RVA: 0x004CEF7F File Offset: 0x004CD17F
+		// Token: 0x06024BBD RID: 150461 RVA: 0x0050BAAB File Offset: 0x00509CAB
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06022B24 RID: 142116 RVA: 0x004CEF8A File Offset: 0x004CD18A
+		// Token: 0x06024BBE RID: 150462 RVA: 0x0050BAB6 File Offset: 0x00509CB6
 		public static Offset<IGrabComponent> EndIGrabComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IGrabComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022B25 RID: 142117 RVA: 0x004CEF98 File Offset: 0x004CD198
+		// Token: 0x06024BBF RID: 150463 RVA: 0x0050BAC4 File Offset: 0x00509CC4
 		public IGrabComponentT UnPack()
 		{
 			IGrabComponentT grabComponentT = new IGrabComponentT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return grabComponentT;
 		}
 
-		// Token: 0x06022B26 RID: 142118 RVA: 0x004CEFB4 File Offset: 0x004CD1B4
+		// Token: 0x06024BC0 RID: 150464 RVA: 0x0050BAE0 File Offset: 0x00509CE0
 		public void UnPackTo(IGrabComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022B27 RID: 142119 RVA: 0x004CF020 File Offset: 0x004CD220
+		// Token: 0x06024BC1 RID: 150465 RVA: 0x0050BB4C File Offset: 0x00509D4C
 		public static Offset<IGrabComponent> Pack(FlatBufferBuilder builder, IGrabComponentT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IGrabComponent.CreateIGrabComponent(builder, _o.Disabled, grabPosOffset, _o.ThrowPow, _o.ThrowHight, _o.NullMask);
 		}
 
-		// Token: 0x0400E4A6 RID: 58534
+		// Token: 0x0400F0D2 RID: 61650
 		private Table __p;
 	}
 }

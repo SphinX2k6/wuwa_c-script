@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D3F RID: 19775
+	// Token: 0x0200523B RID: 21051
 	public enum TComparedAlertValue : byte
 	{
-		// Token: 0x0400D763 RID: 55139
+		// Token: 0x0400E292 RID: 58002
 		NONE,
-		// Token: 0x0400D764 RID: 55140
+		// Token: 0x0400E293 RID: 58003
 		ICompareCustomAlertValue,
-		// Token: 0x0400D765 RID: 55141
+		// Token: 0x0400E294 RID: 58004
 		ICompareMaxAlertValue,
-		// Token: 0x0400D766 RID: 55142
+		// Token: 0x0400E295 RID: 58005
 		ICompareMinAlertValue
 	}
 }

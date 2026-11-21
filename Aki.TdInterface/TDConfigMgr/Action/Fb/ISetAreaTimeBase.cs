@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F6 RID: 9462
+	// Token: 0x0200279C RID: 10140
 	public class ISetAreaTimeBase
 	{
-		// Token: 0x0600D344 RID: 54084 RVA: 0x001F53C4 File Offset: 0x001F35C4
-		[NullableContext(1)]
+		// Token: 0x0600E0A0 RID: 57504 RVA: 0x00210DBC File Offset: 0x0020EFBC
 		public static ISetAreaTimeBase Create(ISetAreaTimeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B1A RID: 15130
-		// (get) Token: 0x0600D345 RID: 54085 RVA: 0x001F53E3 File Offset: 0x001F35E3
+		// Token: 0x17003E16 RID: 15894
+		// (get) Token: 0x0600E0A1 RID: 57505 RVA: 0x00210DDB File Offset: 0x0020EFDB
 		public virtual ESetAreaTime Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073D4 RID: 29652
+		// Token: 0x04007A26 RID: 31270
 		private ISetAreaTimeBase Instance;
 	}
 }

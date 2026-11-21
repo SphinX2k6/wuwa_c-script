@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.EffectSave
 {
-	// Token: 0x02005A8E RID: 23182
+	// Token: 0x02004A6A RID: 19050
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class EffectSaveController : ControllerBase
 	{
-		// Token: 0x0603AB73 RID: 240499 RVA: 0x00DFC534 File Offset: 0x00DFA734
+		// Token: 0x0602FABC RID: 195260 RVA: 0x00D4CAC8 File Offset: 0x00D4ACC8
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.DecalAddNotify, new Action<IMessage, Net.CallbackStatus>(this.EffectAddNotify));
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			return true;
 		}
 
-		// Token: 0x0603AB74 RID: 240500 RVA: 0x00DFC5D0 File Offset: 0x00DFA7D0
+		// Token: 0x0602FABD RID: 195261 RVA: 0x00D4CB64 File Offset: 0x00D4AD64
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.DecalAddNotify);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			return true;
 		}
 
-		// Token: 0x0603AB75 RID: 240501 RVA: 0x00DFC660 File Offset: 0x00DFA860
+		// Token: 0x0602FABE RID: 195262 RVA: 0x00D4CBF4 File Offset: 0x00D4ADF4
 		public unsafe void MarkEffectSave(string effectPath, IVector effectLocation, IRotator effectRotation)
 		{
 			EffectSave? config = ConfigEffectSaveByEffectPath.GetConfig(effectPath, true);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			}, 0);
 		}
 
-		// Token: 0x0603AB76 RID: 240502 RVA: 0x00DFC77C File Offset: 0x00DFA97C
+		// Token: 0x0602FABF RID: 195263 RVA: 0x00D4CD10 File Offset: 0x00D4AF10
 		[NullableContext(2)]
 		public void EffectAddNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			}
 		}
 
-		// Token: 0x0603AB77 RID: 240503 RVA: 0x00DFC9B0 File Offset: 0x00DFABB0
+		// Token: 0x0602FAC0 RID: 195264 RVA: 0x00D4CF44 File Offset: 0x00D4B144
 		[NullableContext(2)]
 		public void EffectRemoveNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -146,19 +146,19 @@ namespace CSharpScript.Game.Module.EffectSave
 			}
 		}
 
-		// Token: 0x0603AB78 RID: 240504 RVA: 0x00DFCA5C File Offset: 0x00DFAC5C
+		// Token: 0x0602FAC1 RID: 195265 RVA: 0x00D4CFF0 File Offset: 0x00D4B1F0
 		public void RemoveEffectOnOnlineModeChange()
 		{
 			this.RemoveAllEffect("[EffectSaveController] Remove By Online Mode Change");
 		}
 
-		// Token: 0x0603AB79 RID: 240505 RVA: 0x00DFCA69 File Offset: 0x00DFAC69
+		// Token: 0x0602FAC2 RID: 195266 RVA: 0x00D4CFFD File Offset: 0x00D4B1FD
 		public void OnLeaveInstanceDungeon()
 		{
 			this.RemoveAllEffect("[EffectSaveController] Remove By Leave Instance Dungeon");
 		}
 
-		// Token: 0x0603AB7A RID: 240506 RVA: 0x00DFCA78 File Offset: 0x00DFAC78
+		// Token: 0x0602FAC3 RID: 195267 RVA: 0x00D4D00C File Offset: 0x00D4B20C
 		private void RemoveAllEffect(string reason)
 		{
 			foreach (int num in EffectSaveModel.Instance.EffectSaveMap.Values)
@@ -171,8 +171,8 @@ namespace CSharpScript.Game.Module.EffectSave
 			EffectSaveModel.Instance.EffectSaveMap.Clear();
 		}
 
-		// Token: 0x17008BFE RID: 35838
-		// (get) Token: 0x0603AB7B RID: 240507 RVA: 0x00DFCB00 File Offset: 0x00DFAD00
+		// Token: 0x17005FCC RID: 24524
+		// (get) Token: 0x0602FAC4 RID: 195268 RVA: 0x00D4D094 File Offset: 0x00D4B294
 		public static EffectSaveController Instance
 		{
 			get
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			}
 		}
 
-		// Token: 0x0603AB7C RID: 240508 RVA: 0x00DFCB07 File Offset: 0x00DFAD07
+		// Token: 0x0602FAC5 RID: 195269 RVA: 0x00D4D09B File Offset: 0x00D4B29B
 		public static EffectSaveController GetOrCreateInstance()
 		{
 			if (EffectSaveController._Instance == null)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.EffectSave
 			return EffectSaveController._Instance;
 		}
 
-		// Token: 0x0603AB7D RID: 240509 RVA: 0x00DFCB1B File Offset: 0x00DFAD1B
+		// Token: 0x0602FAC6 RID: 195270 RVA: 0x00D4D0AF File Offset: 0x00D4B2AF
 		public static bool CreateInstance()
 		{
 			if (EffectSaveController._Instance != null)
@@ -202,24 +202,24 @@ namespace CSharpScript.Game.Module.EffectSave
 			return true;
 		}
 
-		// Token: 0x0603AB7E RID: 240510 RVA: 0x00DFCB31 File Offset: 0x00DFAD31
+		// Token: 0x0602FAC7 RID: 195271 RVA: 0x00D4D0C5 File Offset: 0x00D4B2C5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603AB7F RID: 240511 RVA: 0x00DFCB33 File Offset: 0x00DFAD33
+		// Token: 0x0602FAC8 RID: 195272 RVA: 0x00D4D0C7 File Offset: 0x00D4B2C7
 		public static void ResetStaticDefaultValue()
 		{
 			EffectSaveController._Instance = null;
 		}
 
-		// Token: 0x0603AB80 RID: 240512 RVA: 0x00DFCB3B File Offset: 0x00DFAD3B
+		// Token: 0x0602FAC9 RID: 195273 RVA: 0x00D4D0CF File Offset: 0x00D4B2CF
 		static EffectSaveController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(EffectSaveController.CreateStaticDefaultValue), new Action(EffectSaveController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EA61 RID: 125537
+		// Token: 0x04019508 RID: 103688
 		[Nullable(2)]
 		private static EffectSaveController _Instance;
 	}

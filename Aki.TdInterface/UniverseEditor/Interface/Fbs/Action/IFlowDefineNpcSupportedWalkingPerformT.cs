@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200680E RID: 26638
+	// Token: 0x02006E8E RID: 28302
 	public class IFlowDefineNpcSupportedWalkingPerformT
 	{
-		// Token: 0x1700C5B0 RID: 50608
-		// (get) Token: 0x0602E634 RID: 190004 RVA: 0x00654A43 File Offset: 0x00652C43
-		// (set) Token: 0x0602E635 RID: 190005 RVA: 0x00654A4B File Offset: 0x00652C4B
+		// Token: 0x1700CF66 RID: 53094
+		// (get) Token: 0x06030E7A RID: 200314 RVA: 0x006A2187 File Offset: 0x006A0387
+		// (set) Token: 0x06030E7B RID: 200315 RVA: 0x006A218F File Offset: 0x006A038F
 		public ENpcGroupPerformType Type { get; set; }
 
-		// Token: 0x1700C5B1 RID: 50609
-		// (get) Token: 0x0602E636 RID: 190006 RVA: 0x00654A54 File Offset: 0x00652C54
-		// (set) Token: 0x0602E637 RID: 190007 RVA: 0x00654A5C File Offset: 0x00652C5C
+		// Token: 0x1700CF67 RID: 53095
+		// (get) Token: 0x06030E7C RID: 200316 RVA: 0x006A2198 File Offset: 0x006A0398
+		// (set) Token: 0x06030E7D RID: 200317 RVA: 0x006A21A0 File Offset: 0x006A03A0
 		public string Key { get; set; }
 
-		// Token: 0x0602E638 RID: 190008 RVA: 0x00654A65 File Offset: 0x00652C65
+		// Token: 0x06030E7E RID: 200318 RVA: 0x006A21A9 File Offset: 0x006A03A9
 		public IFlowDefineNpcSupportedWalkingPerformT()
 		{
 			this.Type = ENpcGroupPerformType.HandInHand;

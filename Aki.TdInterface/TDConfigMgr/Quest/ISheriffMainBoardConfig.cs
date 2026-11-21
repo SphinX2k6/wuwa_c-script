@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001131 RID: 4401
+	// Token: 0x0200125F RID: 4703
 	public class ISheriffMainBoardConfig
 	{
-		// Token: 0x060063FA RID: 25594 RVA: 0x000F0B19 File Offset: 0x000EED19
-		[NullableContext(1)]
+		// Token: 0x060069F5 RID: 27125 RVA: 0x000FDC8D File Offset: 0x000FBE8D
 		public static ISheriffMainBoardConfig Create([Nullable(2)] ISheriffMainBoardConfig instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x04003C24 RID: 15396
+		// Token: 0x04003F72 RID: 16242
 		[Nullable(2)]
 		protected ISheriffMainBoardConfig FbInstance;
 	}

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 {
-	// Token: 0x020062E6 RID: 25318
+	// Token: 0x02005264 RID: 21092
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponEquipView : UiViewBase
 	{
-		// Token: 0x0603FB21 RID: 260897 RVA: 0x00F68DBC File Offset: 0x00F66FBC
+		// Token: 0x060347E2 RID: 215010 RVA: 0x00EAFD18 File Offset: 0x00EADF18
 		public PinballWeaponEquipView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FB22 RID: 260898 RVA: 0x00F68DF8 File Offset: 0x00F66FF8
+		// Token: 0x060347E3 RID: 215011 RVA: 0x00EAFD54 File Offset: 0x00EADF54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FB23 RID: 260899 RVA: 0x00F68FF0 File Offset: 0x00F671F0
+		// Token: 0x060347E4 RID: 215012 RVA: 0x00EAFF4C File Offset: 0x00EAE14C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballWeaponEquipView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB24 RID: 260900 RVA: 0x00F69033 File Offset: 0x00F67233
+		// Token: 0x060347E5 RID: 215013 RVA: 0x00EAFF8F File Offset: 0x00EAE18F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, bool>(EEventName.OnPinballWeaponLockChanged, new Action<int, bool>(this.OnPinballWeaponLockChanged));
 		}
 
-		// Token: 0x0603FB25 RID: 260901 RVA: 0x00F69051 File Offset: 0x00F67251
+		// Token: 0x060347E6 RID: 215014 RVA: 0x00EAFFAD File Offset: 0x00EAE1AD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, bool>(EEventName.OnPinballWeaponLockChanged, new Action<int, bool>(this.OnPinballWeaponLockChanged));
 		}
 
-		// Token: 0x0603FB26 RID: 260902 RVA: 0x00F69070 File Offset: 0x00F67270
+		// Token: 0x060347E7 RID: 215015 RVA: 0x00EAFFCC File Offset: 0x00EAE1CC
 		protected override void OnBeforeShow()
 		{
 			int num = 0;
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.RefreshWeaponCountText();
 		}
 
-		// Token: 0x0603FB27 RID: 260903 RVA: 0x00F69107 File Offset: 0x00F67307
+		// Token: 0x060347E8 RID: 215016 RVA: 0x00EB0063 File Offset: 0x00EAE263
 		protected override void OnAfterShow()
 		{
 			this.CheckToShowOverCapacityConfirm();
 		}
 
-		// Token: 0x0603FB28 RID: 260904 RVA: 0x00F69110 File Offset: 0x00F67310
+		// Token: 0x060347E9 RID: 215017 RVA: 0x00EB006C File Offset: 0x00EAE26C
 		private void UpdateWeaponGridDataList()
 		{
 			if (this.Data == null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FB29 RID: 260905 RVA: 0x00F691E8 File Offset: 0x00F673E8
+		// Token: 0x060347EA RID: 215018 RVA: 0x00EB0144 File Offset: 0x00EAE344
 		protected void UpdateGridData(List<IMultiTemplateGridData> sortDataList)
 		{
 			if (this.Data == null)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.GridDataList.AddRange(this.CanNotEquipWeaponGridDataList);
 		}
 
-		// Token: 0x0603FB2A RID: 260906 RVA: 0x00F69380 File Offset: 0x00F67580
+		// Token: 0x060347EB RID: 215019 RVA: 0x00EB02DC File Offset: 0x00EAE4DC
 		protected void UpdateWeaponGridDataIsCurRoleEquip(PinballWeaponMultiTemplateGridData weaponGridData)
 		{
 			IPinballItemSyncWeaponGridViewData data = weaponGridData.Data;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			data.IsCurRoleEquip = (roleId == num.GetValueOrDefault() & num != null);
 		}
 
-		// Token: 0x0603FB2B RID: 260907 RVA: 0x00F693DC File Offset: 0x00F675DC
+		// Token: 0x060347EC RID: 215020 RVA: 0x00EB0338 File Offset: 0x00EAE538
 		protected void SetSelectedGridData(int index)
 		{
 			if (index < 0 || index >= this.GridDataList.Count)
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.UpdateCurSelectedWeaponTipData();
 		}
 
-		// Token: 0x0603FB2C RID: 260908 RVA: 0x00F69448 File Offset: 0x00F67648
+		// Token: 0x060347ED RID: 215021 RVA: 0x00EB03A4 File Offset: 0x00EAE5A4
 		protected void UpdateCurSelectedWeaponTipData()
 		{
 			if (this.SelectedGridData == null)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.CurSelectedWeaponTipData = curSelectedWeaponTipData;
 		}
 
-		// Token: 0x0603FB2D RID: 260909 RVA: 0x00F694DC File Offset: 0x00F676DC
+		// Token: 0x060347EE RID: 215022 RVA: 0x00EB0438 File Offset: 0x00EAE638
 		protected void UpdateCurEquipWeaponTipData()
 		{
 			IPinballWeaponEquipViewData data = this.Data;
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.CurEquipWeaponTipData = curEquipWeaponTipData;
 		}
 
-		// Token: 0x0603FB2E RID: 260910 RVA: 0x00F69530 File Offset: 0x00F67730
+		// Token: 0x060347EF RID: 215023 RVA: 0x00EB048C File Offset: 0x00EAE68C
 		public void RefreshGrids()
 		{
 			MultiTemplateScrollViewRefreshContext multiTemplateScrollViewRefreshContext = new MultiTemplateScrollViewRefreshContext(this.GridDataList);
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			weaponMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x0603FB2F RID: 260911 RVA: 0x00F69561 File Offset: 0x00F67761
+		// Token: 0x060347F0 RID: 215024 RVA: 0x00EB04BD File Offset: 0x00EAE6BD
 		public void RefreshCurSelectedWeaponTip()
 		{
 			if (this.CurSelectedWeaponTipData == null)
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			curSelectedWeaponTipItem.Refresh(this.CurSelectedWeaponTipData);
 		}
 
-		// Token: 0x0603FB30 RID: 260912 RVA: 0x00F69582 File Offset: 0x00F67782
+		// Token: 0x060347F1 RID: 215025 RVA: 0x00EB04DE File Offset: 0x00EAE6DE
 		public void RefreshCurEquipWeaponTip()
 		{
 			if (this.CurEquipWeaponTipData == null)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			curEquipWeaponTipItem.Refresh(this.CurEquipWeaponTipData);
 		}
 
-		// Token: 0x0603FB31 RID: 260913 RVA: 0x00F695A3 File Offset: 0x00F677A3
+		// Token: 0x060347F2 RID: 215026 RVA: 0x00EB04FF File Offset: 0x00EAE6FF
 		public void RefreshCurEquipWeaponTipShowState()
 		{
 			if (this.CurEquipWeaponTipData == null)
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			item.SetUIActive(this.IsContrastEnabled);
 		}
 
-		// Token: 0x0603FB32 RID: 260914 RVA: 0x00F695C8 File Offset: 0x00F677C8
+		// Token: 0x060347F3 RID: 215027 RVA: 0x00EB0524 File Offset: 0x00EAE724
 		public void RefreshWeaponCountText()
 		{
 			int count = this.AllWeaponGridDataList.Count;
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}));
 		}
 
-		// Token: 0x0603FB33 RID: 260915 RVA: 0x00F6961C File Offset: 0x00F6781C
+		// Token: 0x060347F4 RID: 215028 RVA: 0x00EB0578 File Offset: 0x00EAE778
 		public void SelectGrid(int index)
 		{
 			int selectedIndex = this.SelectedIndex;
@@ -367,14 +367,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			uiViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x0603FB34 RID: 260916 RVA: 0x00F696AC File Offset: 0x00F678AC
+		// Token: 0x060347F5 RID: 215029 RVA: 0x00EB0608 File Offset: 0x00EAE808
 		public void EquipCurSelectedWeapon()
 		{
 			UiAsyncTask task = new UiAsyncTask("EquipCurSelectedWeapon", new Func<UniTask>(this.EquipCurSelectedWeaponAsync), null);
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FB35 RID: 260917 RVA: 0x00F696E0 File Offset: 0x00F678E0
+		// Token: 0x060347F6 RID: 215030 RVA: 0x00EB063C File Offset: 0x00EAE83C
 		public void OpenReplaceConfirmView()
 		{
 			IPinballWeaponEquipTipItemData curSelectedWeaponTipData = this.CurSelectedWeaponTipData;
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			PinballController.Instance.OpenPinballSmallConfirmBoxView(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603FB36 RID: 260918 RVA: 0x00F6977C File Offset: 0x00F6797C
+		// Token: 0x060347F7 RID: 215031 RVA: 0x00EB06D8 File Offset: 0x00EAE8D8
 		public UniTask EquipCurSelectedWeaponAsync()
 		{
 			PinballWeaponEquipView.<EquipCurSelectedWeaponAsync>d__38 <EquipCurSelectedWeaponAsync>d__;
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return <EquipCurSelectedWeaponAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB37 RID: 260919 RVA: 0x00F697C0 File Offset: 0x00F679C0
+		// Token: 0x060347F8 RID: 215032 RVA: 0x00EB071C File Offset: 0x00EAE91C
 		private void RefreshGridsByQuality(int quality)
 		{
 			if (quality <= 0)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FB38 RID: 260920 RVA: 0x00F69828 File Offset: 0x00F67A28
+		// Token: 0x060347F9 RID: 215033 RVA: 0x00EB0784 File Offset: 0x00EAE984
 		private void RefreshGridByWeaponIncId(int weaponIncId)
 		{
 			if (weaponIncId <= 0)
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.RefreshGridByIndex(gridIndexByWeaponIncId);
 		}
 
-		// Token: 0x0603FB39 RID: 260921 RVA: 0x00F6984E File Offset: 0x00F67A4E
+		// Token: 0x060347FA RID: 215034 RVA: 0x00EB07AA File Offset: 0x00EAE9AA
 		private void RefreshGridByIndex(int gridIndex)
 		{
 			if (gridIndex < 0)
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			weaponMultiTemplateScrollView.RefreshProxyDirectly(gridIndex);
 		}
 
-		// Token: 0x0603FB3A RID: 260922 RVA: 0x00F69868 File Offset: 0x00F67A68
+		// Token: 0x060347FB RID: 215035 RVA: 0x00EB07C4 File Offset: 0x00EAE9C4
 		private int GetCurEquipWeaponIncId()
 		{
 			IPinballWeaponEquipViewData data = this.Data;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return weaponData.IncId;
 		}
 
-		// Token: 0x0603FB3B RID: 260923 RVA: 0x00F698A0 File Offset: 0x00F67AA0
+		// Token: 0x060347FC RID: 215036 RVA: 0x00EB07FC File Offset: 0x00EAE9FC
 		private PinballWeaponMultiTemplateGridData GetGridDataByWeaponIncId(int weaponIncId)
 		{
 			foreach (IMultiTemplateGridData multiTemplateGridData in this.GridDataList)
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return null;
 		}
 
-		// Token: 0x0603FB3C RID: 260924 RVA: 0x00F69918 File Offset: 0x00F67B18
+		// Token: 0x060347FD RID: 215037 RVA: 0x00EB0874 File Offset: 0x00EAEA74
 		private int GetGridIndexByWeaponIncId(int weaponIncId)
 		{
 			for (int i = 0; i < this.GridDataList.Count; i++)
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			return -1;
 		}
 
-		// Token: 0x0603FB3D RID: 260925 RVA: 0x00F69978 File Offset: 0x00F67B78
+		// Token: 0x060347FE RID: 215038 RVA: 0x00EB08D4 File Offset: 0x00EAEAD4
 		private IPinballItemSyncWeaponGridViewData BuildWeaponGridData(PinballWeaponData weaponData, bool canEquip, bool isCurRoleEquip)
 		{
 			int qualityId = PinballConfig.Instance.GetPinballWeaponConfigById(weaponData.Id).Value.QualityId;
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			};
 		}
 
-		// Token: 0x0603FB3E RID: 260926 RVA: 0x00F699F8 File Offset: 0x00F67BF8
+		// Token: 0x060347FF RID: 215039 RVA: 0x00EB0954 File Offset: 0x00EAEB54
 		private void CheckToShowOverCapacityConfirm()
 		{
 			if (this.AllWeaponGridDataList.Count >= this.Capacity)
@@ -534,13 +534,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FB3F RID: 260927 RVA: 0x00F69A60 File Offset: 0x00F67C60
+		// Token: 0x06034800 RID: 215040 RVA: 0x00EB09BC File Offset: 0x00EAEBBC
 		private void OnPinballWeaponLockChanged(int incId, bool bLock)
 		{
 			this.RefreshGridByWeaponIncId(incId);
 		}
 
-		// Token: 0x0603FB40 RID: 260928 RVA: 0x00F69A6C File Offset: 0x00F67C6C
+		// Token: 0x06034801 RID: 215041 RVA: 0x00EB09C8 File Offset: 0x00EAEBC8
 		private void OnSortResult(List<IMultiTemplateGridData> dataList, bool isOutSideChange, EFilterSortType operationType)
 		{
 			this.UpdateGridData(dataList);
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FB41 RID: 260929 RVA: 0x00F69AD4 File Offset: 0x00F67CD4
+		// Token: 0x06034802 RID: 215042 RVA: 0x00EB0A30 File Offset: 0x00EAEC30
 		private void OnWeaponGridStateChange(IPinballItemToggleCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			}
 		}
 
-		// Token: 0x0603FB42 RID: 260930 RVA: 0x00F69B04 File Offset: 0x00F67D04
+		// Token: 0x06034803 RID: 215043 RVA: 0x00EB0A60 File Offset: 0x00EAEC60
 		private void OnClickEquipButton()
 		{
 			IPinballWeaponEquipTipItemData curSelectedWeaponTipData = this.CurSelectedWeaponTipData;
@@ -600,26 +600,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			this.EquipCurSelectedWeapon();
 		}
 
-		// Token: 0x0603FB43 RID: 260931 RVA: 0x00F69B79 File Offset: 0x00F67D79
+		// Token: 0x06034804 RID: 215044 RVA: 0x00EB0AD5 File Offset: 0x00EAECD5
 		private void OnClickContrastToggle(EToggleState state)
 		{
 			this.IsContrastEnabled = (state == EToggleState.ETT_Checked);
 			this.RefreshCurEquipWeaponTipShowState();
 		}
 
-		// Token: 0x0603FB44 RID: 260932 RVA: 0x00F69B8B File Offset: 0x00F67D8B
+		// Token: 0x06034805 RID: 215045 RVA: 0x00EB0AE7 File Offset: 0x00EAECE7
 		private void OnClickDecomposeButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballWeaponDecomposeView, null, null);
 		}
 
-		// Token: 0x0603FB45 RID: 260933 RVA: 0x00F69B9E File Offset: 0x00F67D9E
+		// Token: 0x06034806 RID: 215046 RVA: 0x00EB0AFA File Offset: 0x00EAECFA
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FB46 RID: 260934 RVA: 0x00F69BA8 File Offset: 0x00F67DA8
+		// Token: 0x06034807 RID: 215047 RVA: 0x00EB0B04 File Offset: 0x00EAED04
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams.Length == 0)
@@ -653,79 +653,79 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Weapon
 			};
 		}
 
-		// Token: 0x04021455 RID: 136277
+		// Token: 0x0401BD84 RID: 114052
 		private int SelectedIndex = -1;
 
-		// Token: 0x04021456 RID: 136278
+		// Token: 0x0401BD85 RID: 114053
 		private PinballWeaponMultiTemplateGridData SelectedGridData;
 
-		// Token: 0x04021457 RID: 136279
+		// Token: 0x0401BD86 RID: 114054
 		private IPinballWeaponEquipViewData Data;
 
-		// Token: 0x04021458 RID: 136280
+		// Token: 0x0401BD87 RID: 114055
 		private bool IsContrastEnabled;
 
-		// Token: 0x04021459 RID: 136281
+		// Token: 0x0401BD88 RID: 114056
 		private int Capacity;
 
-		// Token: 0x0402145A RID: 136282
+		// Token: 0x0401BD89 RID: 114057
 		protected List<IMultiTemplateGridData> GridDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402145B RID: 136283
+		// Token: 0x0401BD8A RID: 114058
 		protected List<IMultiTemplateGridData> CanEquipWeaponGridDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402145C RID: 136284
+		// Token: 0x0401BD8B RID: 114059
 		protected List<IMultiTemplateGridData> CanNotEquipWeaponGridDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402145D RID: 136285
+		// Token: 0x0401BD8C RID: 114060
 		protected List<IMultiTemplateGridData> AllWeaponGridDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402145E RID: 136286
+		// Token: 0x0401BD8D RID: 114061
 		protected IPinballWeaponEquipTipItemData CurSelectedWeaponTipData;
 
-		// Token: 0x0402145F RID: 136287
+		// Token: 0x0401BD8E RID: 114062
 		protected IPinballWeaponEquipTipItemData CurEquipWeaponTipData;
 
-		// Token: 0x04021460 RID: 136288
+		// Token: 0x0401BD8F RID: 114063
 		protected PinballWeaponEquipTipItem CurEquipWeaponTipItem;
 
-		// Token: 0x04021461 RID: 136289
+		// Token: 0x0401BD90 RID: 114064
 		protected PinballWeaponEquipTipItem CurSelectedWeaponTipItem;
 
-		// Token: 0x04021462 RID: 136290
+		// Token: 0x0401BD91 RID: 114065
 		protected MultiTemplateScrollView WeaponMultiTemplateScrollView;
 
-		// Token: 0x04021463 RID: 136291
+		// Token: 0x0401BD92 RID: 114066
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021464 RID: 136292
+		// Token: 0x0401BD93 RID: 114067
 		protected FilterSortEntrance<IMultiTemplateGridData> FilterSortEntrance;
 
-		// Token: 0x0200C4D0 RID: 50384
+		// Token: 0x0200AEB7 RID: 44727
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B63E RID: 243262
+			// Token: 0x04035FA0 RID: 221088
 			CaptionItem,
-			// Token: 0x0403B63F RID: 243263
+			// Token: 0x04035FA1 RID: 221089
 			ContrastToggle,
-			// Token: 0x0403B640 RID: 243264
+			// Token: 0x04035FA2 RID: 221090
 			WeaponMultiTemplateScrollView,
-			// Token: 0x0403B641 RID: 243265
+			// Token: 0x04035FA3 RID: 221091
 			WeaponCountText,
-			// Token: 0x0403B642 RID: 243266
+			// Token: 0x04035FA4 RID: 221092
 			SortFilterItem,
-			// Token: 0x0403B643 RID: 243267
+			// Token: 0x04035FA5 RID: 221093
 			DecomposeButton,
-			// Token: 0x0403B644 RID: 243268
+			// Token: 0x04035FA6 RID: 221094
 			PaddingItem,
-			// Token: 0x0403B645 RID: 243269
+			// Token: 0x04035FA7 RID: 221095
 			CurEquipWeaponTipRootItem,
-			// Token: 0x0403B646 RID: 243270
+			// Token: 0x04035FA8 RID: 221096
 			CurEquipWeaponTipItem,
-			// Token: 0x0403B647 RID: 243271
+			// Token: 0x04035FA9 RID: 221097
 			CurSelectedWeaponTipRootItem,
-			// Token: 0x0403B648 RID: 243272
+			// Token: 0x04035FAA RID: 221098
 			CurSelectedWeaponTipItem
 		}
 	}

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005566 RID: 21862
+	// Token: 0x02004538 RID: 17720
 	[NullableContext(1)]
 	public interface IBoxMark
 	{
-		// Token: 0x06037BE7 RID: 228327
+		// Token: 0x0602CAB7 RID: 182967
 		string GetTitleText();
 
-		// Token: 0x06037BE8 RID: 228328
+		// Token: 0x0602CAB8 RID: 182968
 		string GetDescText();
 
-		// Token: 0x170085F6 RID: 34294
-		// (get) Token: 0x06037BE9 RID: 228329
+		// Token: 0x17005996 RID: 22934
+		// (get) Token: 0x0602CAB9 RID: 182969
 		string IconPath { get; }
 	}
 }

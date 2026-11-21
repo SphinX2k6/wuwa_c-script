@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C31 RID: 27697
+	// Token: 0x02007398 RID: 29592
 	public class IOpenSoaringChallengeResultWithReturnT
 	{
-		// Token: 0x1700CE0A RID: 52746
-		// (get) Token: 0x06030BC8 RID: 199624 RVA: 0x0069E447 File Offset: 0x0069C647
-		// (set) Token: 0x06030BC9 RID: 199625 RVA: 0x0069E44F File Offset: 0x0069C64F
+		// Token: 0x1700D925 RID: 55589
+		// (get) Token: 0x06033B1F RID: 211743 RVA: 0x006F8857 File Offset: 0x006F6A57
+		// (set) Token: 0x06033B20 RID: 211744 RVA: 0x006F885F File Offset: 0x006F6A5F
 		public ESystemType Type { get; set; }
 
-		// Token: 0x1700CE0B RID: 52747
-		// (get) Token: 0x06030BCA RID: 199626 RVA: 0x0069E458 File Offset: 0x0069C658
-		// (set) Token: 0x06030BCB RID: 199627 RVA: 0x0069E460 File Offset: 0x0069C660
+		// Token: 0x1700D926 RID: 55590
+		// (get) Token: 0x06033B21 RID: 211745 RVA: 0x006F8868 File Offset: 0x006F6A68
+		// (set) Token: 0x06033B22 RID: 211746 RVA: 0x006F8870 File Offset: 0x006F6A70
 		public TVarRefUnion Score { get; set; }
 
-		// Token: 0x1700CE0C RID: 52748
-		// (get) Token: 0x06030BCC RID: 199628 RVA: 0x0069E469 File Offset: 0x0069C669
-		// (set) Token: 0x06030BCD RID: 199629 RVA: 0x0069E471 File Offset: 0x0069C671
+		// Token: 0x1700D927 RID: 55591
+		// (get) Token: 0x06033B23 RID: 211747 RVA: 0x006F8879 File Offset: 0x006F6A79
+		// (set) Token: 0x06033B24 RID: 211748 RVA: 0x006F8881 File Offset: 0x006F6A81
 		public int RankS { get; set; }
 
-		// Token: 0x1700CE0D RID: 52749
-		// (get) Token: 0x06030BCE RID: 199630 RVA: 0x0069E47A File Offset: 0x0069C67A
-		// (set) Token: 0x06030BCF RID: 199631 RVA: 0x0069E482 File Offset: 0x0069C682
+		// Token: 0x1700D928 RID: 55592
+		// (get) Token: 0x06033B25 RID: 211749 RVA: 0x006F888A File Offset: 0x006F6A8A
+		// (set) Token: 0x06033B26 RID: 211750 RVA: 0x006F8892 File Offset: 0x006F6A92
 		public int RankA { get; set; }
 
-		// Token: 0x1700CE0E RID: 52750
-		// (get) Token: 0x06030BD0 RID: 199632 RVA: 0x0069E48B File Offset: 0x0069C68B
-		// (set) Token: 0x06030BD1 RID: 199633 RVA: 0x0069E493 File Offset: 0x0069C693
+		// Token: 0x1700D929 RID: 55593
+		// (get) Token: 0x06033B27 RID: 211751 RVA: 0x006F889B File Offset: 0x006F6A9B
+		// (set) Token: 0x06033B28 RID: 211752 RVA: 0x006F88A3 File Offset: 0x006F6AA3
 		public int RankB { get; set; }
 
-		// Token: 0x1700CE0F RID: 52751
-		// (get) Token: 0x06030BD2 RID: 199634 RVA: 0x0069E49C File Offset: 0x0069C69C
-		// (set) Token: 0x06030BD3 RID: 199635 RVA: 0x0069E4A4 File Offset: 0x0069C6A4
+		// Token: 0x1700D92A RID: 55594
+		// (get) Token: 0x06033B29 RID: 211753 RVA: 0x006F88AC File Offset: 0x006F6AAC
+		// (set) Token: 0x06033B2A RID: 211754 RVA: 0x006F88B4 File Offset: 0x006F6AB4
 		public TVarRefUnion ReturnVar { get; set; }
 
-		// Token: 0x06030BD4 RID: 199636 RVA: 0x0069E4AD File Offset: 0x0069C6AD
+		// Token: 0x06033B2B RID: 211755 RVA: 0x006F88BD File Offset: 0x006F6ABD
 		public IOpenSoaringChallengeResultWithReturnT()
 		{
 			this.Type = ESystemType.Shop;

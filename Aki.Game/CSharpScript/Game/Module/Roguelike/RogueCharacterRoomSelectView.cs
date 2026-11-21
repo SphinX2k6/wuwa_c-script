@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF6 RID: 19958
+	// Token: 0x02003DBF RID: 15807
 	public class RogueCharacterRoomSelectView : UiViewBase
 	{
-		// Token: 0x06033806 RID: 210950 RVA: 0x00C0897C File Offset: 0x00C06B7C
+		// Token: 0x06028671 RID: 165489 RVA: 0x00B51E8C File Offset: 0x00B5008C
 		[NullableContext(1)]
 		public RogueCharacterRoomSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033807 RID: 210951 RVA: 0x00C0898C File Offset: 0x00C06B8C
+		// Token: 0x06028672 RID: 165490 RVA: 0x00B51E9C File Offset: 0x00B5009C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033808 RID: 210952 RVA: 0x00C08A74 File Offset: 0x00C06C74
+		// Token: 0x06028673 RID: 165491 RVA: 0x00B51F84 File Offset: 0x00B50184
 		private void BtnConfirmClick()
 		{
 			IRoguelikeCharacterSelectOpenParam roguelikeCharacterSelectOpenParam = this.OpenParam as IRoguelikeCharacterSelectOpenParam;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}).Forget();
 		}
 
-		// Token: 0x06033809 RID: 210953 RVA: 0x00C08ABC File Offset: 0x00C06CBC
+		// Token: 0x06028674 RID: 165492 RVA: 0x00B51FCC File Offset: 0x00B501CC
 		private void OnSelectRoom(int gridIndex, bool isSelected, int roomId)
 		{
 			if (isSelected)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetButton(3).SetSelfInteractive(isSelected);
 		}
 
-		// Token: 0x0603380A RID: 210954 RVA: 0x00C08B18 File Offset: 0x00C06D18
+		// Token: 0x06028675 RID: 165493 RVA: 0x00B52028 File Offset: 0x00B50228
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueCharacterRoomSelectView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -93,11 +93,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B543 RID: 111939
+		// Token: 0x04015F16 RID: 89878
 		[Nullable(2)]
 		private TopPanel TopPanelComponent;
 
-		// Token: 0x0401B544 RID: 111940
+		// Token: 0x04015F17 RID: 89879
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,22 +105,22 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RogueCharacterRoomItem, int> GenericLayout;
 
-		// Token: 0x0401B545 RID: 111941
+		// Token: 0x04015F18 RID: 89880
 		private int SelectRoomId = -1;
 
-		// Token: 0x0200AF7E RID: 44926
+		// Token: 0x020099B3 RID: 39347
 		private class ERogueCharacterRoomSelectViewDefine
 		{
-			// Token: 0x04035496 RID: 218262
+			// Token: 0x0402FEC9 RID: 196297
 			public const int TopPanel = 0;
 
-			// Token: 0x04035497 RID: 218263
+			// Token: 0x0402FECA RID: 196298
 			public const int PanelLayout = 1;
 
-			// Token: 0x04035498 RID: 218264
+			// Token: 0x0402FECB RID: 196299
 			public const int RoomSelectItem = 2;
 
-			// Token: 0x04035499 RID: 218265
+			// Token: 0x0402FECC RID: 196300
 			public const int BtnConfirm = 3;
 		}
 	}

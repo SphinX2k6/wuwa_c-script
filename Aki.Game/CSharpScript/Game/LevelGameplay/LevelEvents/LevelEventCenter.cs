@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.LevelGamePlay.LevelConditions;
-using CSharpScript.Game.LevelGamePlay.LevelEvents.DemoInteract;
 using CSharpScript.Game.LevelGamePlay.LevelEvents.LevelplayCapability;
 using CSharpScript.Game.LevelGamePlay.LevelEvents.SceneActorRef;
 using CSharpScript.Game.LevelGamePlay.LevelEvents.Vehicle;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AFB RID: 27387
+	// Token: 0x02005C73 RID: 23667
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventCenter
 	{
-		// Token: 0x06044027 RID: 278567 RVA: 0x010B2F3B File Offset: 0x010B113B
+		// Token: 0x0603A179 RID: 237945 RVA: 0x0105C80B File Offset: 0x0105AA0B
 		private static void Init()
 		{
 			LevelEventCenter.TickEvents = new Dictionary<int, List<LevelEventBase>>();
@@ -27,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventCenter.EventCapacityMap = new Dictionary<string, int>();
 		}
 
-		// Token: 0x06044028 RID: 278568 RVA: 0x010B2F7C File Offset: 0x010B117C
+		// Token: 0x0603A17A RID: 237946 RVA: 0x0105C84C File Offset: 0x0105AA4C
 		public static void RegistEvents()
 		{
 			LevelEventCenter.Init();
@@ -37,6 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventCenter.SetupEvent<LevelEventCaptureRequest>("ActionCaptureRequest", (int id) => new LevelEventCaptureRequest(id), 8, false);
 			LevelEventCenter.SetupEvent<LevelEventExecution>("ActionExecution", (int id) => new LevelEventExecution(id), 8, false);
 			LevelEventCenter.SetupEvent<LevelEventBreakWeakness>("BreakWeakness", (int id) => new LevelEventBreakWeakness(id), 8, false);
+			LevelEventCenter.SetupEvent<LevelEventUltraSkillInteract>("UltraSkillInteract", (int id) => new LevelEventUltraSkillInteract(id), 4, false);
 			LevelEventCenter.SetupEvent<LevelEventSendGameplayEventToPlayer>("ActionSendGameplayEvent", (int id) => new LevelEventSendGameplayEventToPlayer(id), 1, false);
 			LevelEventCenter.SetupEvent<LevelEventSubmitQuestBehavior>("ActionSubmitQuestBehavior", (int id) => new LevelEventSubmitQuestBehavior(id), 1, false);
 			LevelEventCenter.SetupEvent<LevelEventDeliverQuestBehavior>("ActionDeliverQuestBehavior", (int id) => new LevelEventDeliverQuestBehavior(id), 1, false);
@@ -193,11 +192,6 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventCenter.SetupEvent<LevelEventDriveMotorInSpecConfig>(EAction.DriveMotorInSpecConfig.ToEnumString(), (int id) => new LevelEventDriveMotorInSpecConfig(id), 4, false);
 			LevelEventCenter.SetupEvent<LevelEventVehicleSetSpeedImmediately>(EAction.VehicleSetSpeedImmediately.ToEnumString(), (int id) => new LevelEventVehicleSetSpeedImmediately(id), 1, false);
 			LevelEventCenter.SetupEvent<LevelEventMotorSoarInWindField>(EAction.MotorSoarInWindField.ToEnumString(), (int id) => new LevelEventMotorSoarInWindField(id), 1, false);
-			if (Info.Instance.IsPlayInEditor)
-			{
-				LevelEventCenter.SetupEvent<LevelEventSetDemoActorVar>(EAction.SetActorVar.ToEnumString(), (int id) => new LevelEventSetDemoActorVar(id), 1, false);
-				LevelEventCenter.SetupEvent<LevelEventRunDemoActorCustomEvent>(EAction.RunActorCustomEvent.ToEnumString(), (int id) => new LevelEventRunDemoActorCustomEvent(id), 1, false);
-			}
 			LevelEventCenter.SetupEvent<LevelEventBvbPlayDialog>(EAction.BvbPlayDialog.ToEnumString(), (int id) => new LevelEventBvbPlayDialog(id), 4, false);
 			LevelEventCenter.SetupEvent<LevelEventBvbPlayerOperationConstraint>(EAction.BvbPlayerOperationConstraint.ToEnumString(), (int id) => new LevelEventBvbPlayerOperationConstraint(id), 4, false);
 			LevelEventCenter.SetupEvent<LevelEventTrapDefensePlayerOperationConstraint>(EAction.TrapDefensePlayerOperationConstraint.ToEnumString(), (int id) => new LevelEventTrapDefensePlayerOperationConstraint(id), 4, false);
@@ -229,7 +223,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelEventCenter.SetupEvent<LevelEventGiantTriggerResponse>(EAction.GiantTriggerResponse.ToEnumString(), (int id) => new LevelEventGiantTriggerResponse(id), 8, true);
 		}
 
-		// Token: 0x06044029 RID: 278569 RVA: 0x010B52D4 File Offset: 0x010B34D4
+		// Token: 0x0603A17B RID: 237947 RVA: 0x0105EB70 File Offset: 0x0105CD70
 		private static void SetupEvent<[Nullable(0)] T>(string type, Func<int, T> ctor, int capacity = 1, bool expandCapacity = false) where T : LevelEventBase
 		{
 			if (LevelEventCenter.EventsMap.ContainsKey(type))
@@ -269,7 +263,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604402A RID: 278570 RVA: 0x010B5398 File Offset: 0x010B3598
+		// Token: 0x0603A17C RID: 237948 RVA: 0x0105EC34 File Offset: 0x0105CE34
 		[return: Nullable(2)]
 		public unsafe static LevelEventBase GetEvent(string type)
 		{
@@ -333,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return null;
 		}
 
-		// Token: 0x0604402B RID: 278571 RVA: 0x010B550C File Offset: 0x010B370C
+		// Token: 0x0603A17D RID: 237949 RVA: 0x0105EDA8 File Offset: 0x0105CFA8
 		private static void ReleaseEvent(LevelEventBase eventObj)
 		{
 			if (!LevelEventCenter.TickEventDefines.Contains(eventObj.Type))
@@ -355,7 +349,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604402C RID: 278572 RVA: 0x010B5558 File Offset: 0x010B3758
+		// Token: 0x0603A17E RID: 237950 RVA: 0x0105EDF4 File Offset: 0x0105CFF4
 		public static void AddToTickList(bool isAdd, LevelEventBase eventObj)
 		{
 			int groupId = eventObj.GroupId;
@@ -379,7 +373,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604402D RID: 278573 RVA: 0x010B55C4 File Offset: 0x010B37C4
+		// Token: 0x0603A17F RID: 237951 RVA: 0x0105EE60 File Offset: 0x0105D060
 		public static void RemoveEventGroup(int groupId)
 		{
 			List<LevelEventBase> list;
@@ -397,7 +391,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604402E RID: 278574 RVA: 0x010B5624 File Offset: 0x010B3824
+		// Token: 0x0603A180 RID: 237952 RVA: 0x0105EEC0 File Offset: 0x0105D0C0
 		public static void Tick(float deltaTime)
 		{
 			if (LevelEventCenter.WaitToRemoveList == null || LevelEventCenter.TickEvents == null)
@@ -441,31 +435,31 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604402F RID: 278575 RVA: 0x010B574C File Offset: 0x010B394C
+		// Token: 0x0603A181 RID: 237953 RVA: 0x0105EFE8 File Offset: 0x0105D1E8
 		public static bool IsNeedTick(string type)
 		{
 			return LevelEventCenter.TickEventDefines.Contains(type);
 		}
 
-		// Token: 0x06044030 RID: 278576 RVA: 0x010B5759 File Offset: 0x010B3959
+		// Token: 0x0603A182 RID: 237954 RVA: 0x0105EFF5 File Offset: 0x0105D1F5
 		public static bool HasAction(string type)
 		{
 			return LevelEventCenter.EventsMap.ContainsKey(type);
 		}
 
-		// Token: 0x040238AC RID: 145580
+		// Token: 0x0401EB4E RID: 125774
 		private const int DEFAULT = 1;
 
-		// Token: 0x040238AD RID: 145581
+		// Token: 0x0401EB4F RID: 125775
 		private const int LEVEL_1 = 4;
 
-		// Token: 0x040238AE RID: 145582
+		// Token: 0x0401EB50 RID: 125776
 		private const int LEVEL_2 = 8;
 
-		// Token: 0x040238AF RID: 145583
+		// Token: 0x0401EB51 RID: 125777
 		private const int LEVEL_MAX = 1024;
 
-		// Token: 0x040238B0 RID: 145584
+		// Token: 0x0401EB52 RID: 125778
 		[Nullable(new byte[]
 		{
 			2,
@@ -476,7 +470,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		[StaticVariableRuleIgnore]
 		private static Dictionary<string, List<LevelEventBase>> EventsMap;
 
-		// Token: 0x040238B1 RID: 145585
+		// Token: 0x0401EB53 RID: 125779
 		[Nullable(new byte[]
 		{
 			2,
@@ -486,7 +480,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		[StaticVariableRuleIgnore]
 		private static Dictionary<int, List<LevelEventBase>> TickEvents;
 
-		// Token: 0x040238B2 RID: 145586
+		// Token: 0x0401EB54 RID: 125780
 		[Nullable(new byte[]
 		{
 			2,
@@ -495,7 +489,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		[StaticVariableRuleIgnore]
 		private static List<LevelEventBase> WaitToRemoveList;
 
-		// Token: 0x040238B3 RID: 145587
+		// Token: 0x0401EB55 RID: 125781
 		[Nullable(new byte[]
 		{
 			2,
@@ -504,7 +498,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		[StaticVariableRuleIgnore]
 		private static HashSet<string> TickEventDefines;
 
-		// Token: 0x040238B4 RID: 145588
+		// Token: 0x0401EB56 RID: 125782
 		[Nullable(new byte[]
 		{
 			2,
@@ -515,7 +509,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 		[StaticVariableRuleIgnore]
 		private static Dictionary<string, Func<int, LevelEventBase>> ExpendCapacityEvents;
 
-		// Token: 0x040238B5 RID: 145589
+		// Token: 0x0401EB57 RID: 125783
 		[Nullable(new byte[]
 		{
 			2,

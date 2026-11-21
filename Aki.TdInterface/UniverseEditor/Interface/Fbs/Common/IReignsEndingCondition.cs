@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E54 RID: 24148
+	// Token: 0x02006494 RID: 25748
 	public struct IReignsEndingCondition : IFlatbufferObject
 	{
-		// Token: 0x1700B493 RID: 46227
-		// (get) Token: 0x060295A1 RID: 169377 RVA: 0x005AB525 File Offset: 0x005A9725
+		// Token: 0x1700BDFC RID: 48636
+		// (get) Token: 0x0602BC3D RID: 179261 RVA: 0x005F43CD File Offset: 0x005F25CD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295A2 RID: 169378 RVA: 0x005AB532 File Offset: 0x005A9732
+		// Token: 0x0602BC3E RID: 179262 RVA: 0x005F43DA File Offset: 0x005F25DA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060295A3 RID: 169379 RVA: 0x005AB53C File Offset: 0x005A973C
+		// Token: 0x0602BC3F RID: 179263 RVA: 0x005F43E4 File Offset: 0x005F25E4
 		public static IReignsEndingCondition GetRootAsIReignsEndingCondition(ByteBuffer _bb)
 		{
 			return IReignsEndingCondition.GetRootAsIReignsEndingCondition(_bb, default(IReignsEndingCondition));
 		}
 
-		// Token: 0x060295A4 RID: 169380 RVA: 0x005AB558 File Offset: 0x005A9758
+		// Token: 0x0602BC40 RID: 179264 RVA: 0x005F4400 File Offset: 0x005F2600
 		public static IReignsEndingCondition GetRootAsIReignsEndingCondition(ByteBuffer _bb, IReignsEndingCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060295A5 RID: 169381 RVA: 0x005AB575 File Offset: 0x005A9775
+		// Token: 0x0602BC41 RID: 179265 RVA: 0x005F441D File Offset: 0x005F261D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060295A6 RID: 169382 RVA: 0x005AB584 File Offset: 0x005A9784
+		// Token: 0x0602BC42 RID: 179266 RVA: 0x005F442C File Offset: 0x005F262C
 		public IReignsEndingCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B494 RID: 46228
-		// (get) Token: 0x060295A7 RID: 169383 RVA: 0x005AB594 File Offset: 0x005A9794
+		// Token: 0x1700BDFD RID: 48637
+		// (get) Token: 0x0602BC43 RID: 179267 RVA: 0x005F443C File Offset: 0x005F263C
 		public EReignsEndingConditionType ConditionType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295A8 RID: 169384 RVA: 0x005AB5D0 File Offset: 0x005A97D0
+		// Token: 0x0602BC44 RID: 179268 RVA: 0x005F4478 File Offset: 0x005F2678
 		public ICompareReignsProperty? Conditions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new ICompareReignsProperty?(default(ICompareReignsProperty).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700B495 RID: 46229
-		// (get) Token: 0x060295A9 RID: 169385 RVA: 0x005AB630 File Offset: 0x005A9830
+		// Token: 0x1700BDFE RID: 48638
+		// (get) Token: 0x0602BC45 RID: 179269 RVA: 0x005F44D8 File Offset: 0x005F26D8
 		public int ConditionsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295AA RID: 169386 RVA: 0x005AB65B File Offset: 0x005A985B
+		// Token: 0x0602BC46 RID: 179270 RVA: 0x005F4503 File Offset: 0x005F2703
 		public static Offset<IReignsEndingCondition> CreateIReignsEndingCondition(FlatBufferBuilder builder, EReignsEndingConditionType ConditionType = EReignsEndingConditionType.All, VectorOffset ConditionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IReignsEndingCondition.EndIReignsEndingCondition(builder);
 		}
 
-		// Token: 0x060295AB RID: 169387 RVA: 0x005AB678 File Offset: 0x005A9878
+		// Token: 0x0602BC47 RID: 179271 RVA: 0x005F4520 File Offset: 0x005F2720
 		public static void StartIReignsEndingCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060295AC RID: 169388 RVA: 0x005AB681 File Offset: 0x005A9881
+		// Token: 0x0602BC48 RID: 179272 RVA: 0x005F4529 File Offset: 0x005F2729
 		public static void AddConditionType(FlatBufferBuilder builder, EReignsEndingConditionType conditionType)
 		{
 			builder.AddByte(0, (byte)conditionType, 0);
 		}
 
-		// Token: 0x060295AD RID: 169389 RVA: 0x005AB68C File Offset: 0x005A988C
+		// Token: 0x0602BC49 RID: 179273 RVA: 0x005F4534 File Offset: 0x005F2734
 		public static void AddConditions(FlatBufferBuilder builder, VectorOffset conditionsOffset)
 		{
 			builder.AddOffset(1, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x060295AE RID: 169390 RVA: 0x005AB69C File Offset: 0x005A989C
+		// Token: 0x0602BC4A RID: 179274 RVA: 0x005F4544 File Offset: 0x005F2744
 		public static VectorOffset CreateConditionsVector(FlatBufferBuilder builder, Offset<ICompareReignsProperty>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060295AF RID: 169391 RVA: 0x005AB6DC File Offset: 0x005A98DC
+		// Token: 0x0602BC4B RID: 179275 RVA: 0x005F4584 File Offset: 0x005F2784
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, Offset<ICompareReignsProperty>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060295B0 RID: 169392 RVA: 0x005AB6F6 File Offset: 0x005A98F6
+		// Token: 0x0602BC4C RID: 179276 RVA: 0x005F459E File Offset: 0x005F279E
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ICompareReignsProperty>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060295B1 RID: 169393 RVA: 0x005AB714 File Offset: 0x005A9914
+		// Token: 0x0602BC4D RID: 179277 RVA: 0x005F45BC File Offset: 0x005F27BC
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return builder.EndVector();
 		}
 
-		// Token: 0x060295B2 RID: 169394 RVA: 0x005AB72D File Offset: 0x005A992D
+		// Token: 0x0602BC4E RID: 179278 RVA: 0x005F45D5 File Offset: 0x005F27D5
 		public static void StartConditionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060295B3 RID: 169395 RVA: 0x005AB738 File Offset: 0x005A9938
+		// Token: 0x0602BC4F RID: 179279 RVA: 0x005F45E0 File Offset: 0x005F27E0
 		public static Offset<IReignsEndingCondition> EndIReignsEndingCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IReignsEndingCondition>(builder.EndTable());
 		}
 
-		// Token: 0x060295B4 RID: 169396 RVA: 0x005AB748 File Offset: 0x005A9948
+		// Token: 0x0602BC50 RID: 179280 RVA: 0x005F45F0 File Offset: 0x005F27F0
 		public IReignsEndingConditionT UnPack()
 		{
 			IReignsEndingConditionT reignsEndingConditionT = new IReignsEndingConditionT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return reignsEndingConditionT;
 		}
 
-		// Token: 0x060295B5 RID: 169397 RVA: 0x005AB764 File Offset: 0x005A9964
+		// Token: 0x0602BC51 RID: 179281 RVA: 0x005F460C File Offset: 0x005F280C
 		public void UnPackTo(IReignsEndingConditionT _o)
 		{
 			_o.ConditionType = this.ConditionType;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295B6 RID: 169398 RVA: 0x005AB7D0 File Offset: 0x005A99D0
+		// Token: 0x0602BC52 RID: 179282 RVA: 0x005F4678 File Offset: 0x005F2878
 		public static Offset<IReignsEndingCondition> Pack(FlatBufferBuilder builder, IReignsEndingConditionT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IReignsEndingCondition.CreateIReignsEndingCondition(builder, _o.ConditionType, conditionsOffset);
 		}
 
-		// Token: 0x0400F85E RID: 63582
+		// Token: 0x040105BB RID: 67003
 		private Table __p;
 	}
 }

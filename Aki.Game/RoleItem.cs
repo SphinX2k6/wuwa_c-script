@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021A0 RID: 8608
+// Token: 0x02001684 RID: 5764
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class RoleItem : LoopScrollSmallItemGrid<RoleBrief>
 {
-	// Token: 0x06010BC9 RID: 68553 RVA: 0x00410CDC File Offset: 0x0040EEDC
+	// Token: 0x0600E05A RID: 57434 RVA: 0x0041D5C4 File Offset: 0x0041B7C4
 	protected override UniTask OnCreateAsync()
 	{
 		RoleItem.<OnCreateAsync>d__1 <OnCreateAsync>d__;
@@ -27,7 +27,7 @@ public class RoleItem : LoopScrollSmallItemGrid<RoleBrief>
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010BCA RID: 68554 RVA: 0x00410D20 File Offset: 0x0040EF20
+	// Token: 0x0600E05B RID: 57435 RVA: 0x0041D608 File Offset: 0x0041B808
 	protected override void OnRefresh(RoleBrief data, bool isSelected, int gridIndex)
 	{
 		int roleId = data.RoleId;
@@ -58,7 +58,7 @@ public class RoleItem : LoopScrollSmallItemGrid<RoleBrief>
 		noneRoleUi2.SetUIActive(true);
 	}
 
-	// Token: 0x04007F6F RID: 32623
+	// Token: 0x040080B6 RID: 32950
 	[Nullable(2)]
 	private UUIItem NoneRoleUi;
 }

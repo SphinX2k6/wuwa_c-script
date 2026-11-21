@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D20 RID: 23840
+	// Token: 0x02004D02 RID: 19714
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExecutionPanel : UiPanelBase
 	{
-		// Token: 0x0603C6FC RID: 247548 RVA: 0x00E7E10C File Offset: 0x00E7C30C
+		// Token: 0x06031655 RID: 202325 RVA: 0x00DCE8A4 File Offset: 0x00DCCAA4
 		[NullableContext(1)]
 		public void Init(UUIItem parentItem)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Initialize(parentItem).Forget();
 		}
 
-		// Token: 0x0603C6FD RID: 247549 RVA: 0x00E7E140 File Offset: 0x00E7C340
+		// Token: 0x06031656 RID: 202326 RVA: 0x00DCE8D8 File Offset: 0x00DCCAD8
 		[NullableContext(1)]
 		public UniTask Initialize(UUIItem parentItem)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C6FE RID: 247550 RVA: 0x00E7E18C File Offset: 0x00E7C38C
+		// Token: 0x06031657 RID: 202327 RVA: 0x00DCE924 File Offset: 0x00DCCB24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C6FF RID: 247551 RVA: 0x00E7E216 File Offset: 0x00E7C416
+		// Token: 0x06031658 RID: 202328 RVA: 0x00DCE9AE File Offset: 0x00DCCBAE
 		public UUIItem GetExecutionItem()
 		{
 			if (!base.IsShowOrShowing)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return base.GetItem(0);
 		}
 
-		// Token: 0x0603C700 RID: 247552 RVA: 0x00E7E22C File Offset: 0x00E7C42C
+		// Token: 0x06031659 RID: 202329 RVA: 0x00DCE9C4 File Offset: 0x00DCCBC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ExecutionPanel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C701 RID: 247553 RVA: 0x00E7E270 File Offset: 0x00E7C470
+		// Token: 0x0603165A RID: 202330 RVA: 0x00DCEA08 File Offset: 0x00DCCC08
 		[NullableContext(0)]
 		private UniTask<bool> NewSkillItem()
 		{
@@ -90,21 +90,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C702 RID: 247554 RVA: 0x00E7E2B3 File Offset: 0x00E7C4B3
+		// Token: 0x0603165B RID: 202331 RVA: 0x00DCEA4B File Offset: 0x00DCCC4B
 		protected override void OnStart()
 		{
 			this.InitTweenAnim(1);
 			this.InitTweenAnim(2);
 		}
 
-		// Token: 0x0603C703 RID: 247555 RVA: 0x00E7E2C3 File Offset: 0x00E7C4C3
+		// Token: 0x0603165C RID: 202332 RVA: 0x00DCEA5B File Offset: 0x00DCCC5B
 		protected override void OnAfterShow()
 		{
 			this.StopTweenAnim(2);
 			this.PlayTweenAnim(1);
 		}
 
-		// Token: 0x0603C704 RID: 247556 RVA: 0x00E7E2D4 File Offset: 0x00E7C4D4
+		// Token: 0x0603165D RID: 202333 RVA: 0x00DCEA6C File Offset: 0x00DCCC6C
 		protected override UniTask OnBeforeHideAsync()
 		{
 			ExecutionPanel.<OnBeforeHideAsync>d__19 <OnBeforeHideAsync>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C705 RID: 247557 RVA: 0x00E7E317 File Offset: 0x00E7C517
+		// Token: 0x0603165E RID: 202334 RVA: 0x00DCEAAF File Offset: 0x00DCCCAF
 		private void OnCloseAnimTimerEnd(float _)
 		{
 			this.CloseTimer = null;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Promise = null;
 		}
 
-		// Token: 0x0603C706 RID: 247558 RVA: 0x00E7E334 File Offset: 0x00E7C534
+		// Token: 0x0603165F RID: 202335 RVA: 0x00DCEACC File Offset: 0x00DCCCCC
 		protected override void OnBeforeDestroy()
 		{
 			if (this.CloseTimer != null)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603C707 RID: 247559 RVA: 0x00E7E38C File Offset: 0x00E7C58C
+		// Token: 0x06031660 RID: 202336 RVA: 0x00DCEB24 File Offset: 0x00DCCD24
 		private void AddEvents()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChildViewData.AddCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleChildVisibleChanged));
 		}
 
-		// Token: 0x0603C708 RID: 247560 RVA: 0x00E7E3DC File Offset: 0x00E7C5DC
+		// Token: 0x06031661 RID: 202337 RVA: 0x00DCEB74 File Offset: 0x00DCCD74
 		private void RemoveEvents()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ChildViewData.RemoveCallback(EBattleUiChild.BattleHud, new Action(this.OnBattleChildVisibleChanged));
 		}
 
-		// Token: 0x0603C709 RID: 247561 RVA: 0x00E7E429 File Offset: 0x00E7C629
+		// Token: 0x06031662 RID: 202338 RVA: 0x00DCEBC1 File Offset: 0x00DCCDC1
 		[NullableContext(1)]
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C70A RID: 247562 RVA: 0x00E7E438 File Offset: 0x00E7C638
+		// Token: 0x06031663 RID: 202339 RVA: 0x00DCEBD0 File Offset: 0x00DCCDD0
 		private void OnInteract()
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			component.InteractPawn(-1, null);
 		}
 
-		// Token: 0x0603C70B RID: 247563 RVA: 0x00E7E4B0 File Offset: 0x00E7C6B0
+		// Token: 0x06031664 RID: 202340 RVA: 0x00DCEC48 File Offset: 0x00DCCE48
 		private void OnBattleChildVisibleChanged()
 		{
 			this.ChildVisible = this.ChildViewData.GetChildVisible(EBattleUiChild.BattleHud);
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C70C RID: 247564 RVA: 0x00E7E50C File Offset: 0x00E7C70C
+		// Token: 0x06031665 RID: 202341 RVA: 0x00DCECA4 File Offset: 0x00DCCEA4
 		private void InitTweenAnim(int componentType)
 		{
 			TArray<UActorComponent> tarray = base.GetItem(componentType).GetOwner().K2_GetComponentsByClass(ULGUIPlayTweenComponent.StaticClass());
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimMap[componentType] = list;
 		}
 
-		// Token: 0x0603C70D RID: 247565 RVA: 0x00E7E5A0 File Offset: 0x00E7C7A0
+		// Token: 0x06031666 RID: 202342 RVA: 0x00DCED40 File Offset: 0x00DCCF40
 		private void PlayTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C70E RID: 247566 RVA: 0x00E7E604 File Offset: 0x00E7C804
+		// Token: 0x06031667 RID: 202343 RVA: 0x00DCEDA4 File Offset: 0x00DCCFA4
 		private void StopTweenAnim(int componentType)
 		{
 			List<ULGUIPlayTweenComponent> list;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C70F RID: 247567 RVA: 0x00E7E668 File Offset: 0x00E7C868
+		// Token: 0x06031668 RID: 202344 RVA: 0x00DCEE08 File Offset: 0x00DCD008
 		public void ShowByEntity(int entityId, ECustomOptionType? optionType)
 		{
 			ECustomOptionType? optionType2 = this.OptionType;
@@ -297,7 +297,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnAdd();
 		}
 
-		// Token: 0x0603C710 RID: 247568 RVA: 0x00E7E733 File Offset: 0x00E7C933
+		// Token: 0x06031669 RID: 202345 RVA: 0x00DCEED3 File Offset: 0x00DCD0D3
 		public void HideByEntity(int entityId)
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnRemove();
 		}
 
-		// Token: 0x0603C711 RID: 247569 RVA: 0x00E7E756 File Offset: 0x00E7C956
+		// Token: 0x0603166A RID: 202346 RVA: 0x00DCEEF6 File Offset: 0x00DCD0F6
 		private void OnAdd()
 		{
 			this.AddEntityEvents();
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.Custom, EBattleUiChild.InteractionHint, false, true, 0);
 		}
 
-		// Token: 0x0603C712 RID: 247570 RVA: 0x00E7E796 File Offset: 0x00E7C996
+		// Token: 0x0603166B RID: 202347 RVA: 0x00DCEF36 File Offset: 0x00DCD136
 		private void OnRemove()
 		{
 			this.RemoveEntityEvents();
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.ChildViewData.SetChildVisible(EBattleUiVisibleReason.Custom, EBattleUiChild.InteractionHint, true, true, 0);
 		}
 
-		// Token: 0x0603C713 RID: 247571 RVA: 0x00E7E7D5 File Offset: 0x00E7C9D5
+		// Token: 0x0603166C RID: 202348 RVA: 0x00DCEF75 File Offset: 0x00DCD175
 		private void AddEntityEvents()
 		{
 			if (this.EntityHandle == null)
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.AddWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x0603C714 RID: 247572 RVA: 0x00E7E802 File Offset: 0x00E7CA02
+		// Token: 0x0603166D RID: 202349 RVA: 0x00DCEFA2 File Offset: 0x00DCD1A2
 		private void RemoveEntityEvents()
 		{
 			if (this.EntityHandle == null)
@@ -353,20 +353,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.RemoveWithTarget(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 		}
 
-		// Token: 0x0603C715 RID: 247573 RVA: 0x00E7E82F File Offset: 0x00E7CA2F
+		// Token: 0x0603166E RID: 202350 RVA: 0x00DCEFCF File Offset: 0x00DCD1CF
 		[NullableContext(1)]
 		private void OnRemoveEntity(ERemoveEntityType eRemoveEntityType, EntityHandle entityHandle)
 		{
 			this.OnRemove();
 		}
 
-		// Token: 0x0401F7EC RID: 129004
+		// Token: 0x0401A2A5 RID: 107173
 		private const float CLOSE_ANIM_TIME = 300f;
 
-		// Token: 0x0401F7ED RID: 129005
+		// Token: 0x0401A2A6 RID: 107174
 		private const EBattleUiChild ChildType = EBattleUiChild.BattleHud;
 
-		// Token: 0x0401F7EE RID: 129006
+		// Token: 0x0401A2A7 RID: 107175
 		[Nullable(new byte[]
 		{
 			2,
@@ -375,36 +375,36 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Dictionary<int, List<ULGUIPlayTweenComponent>> TweenAnimMap;
 
-		// Token: 0x0401F7EF RID: 129007
+		// Token: 0x0401A2A8 RID: 107176
 		private EntityHandle EntityHandle;
 
-		// Token: 0x0401F7F0 RID: 129008
+		// Token: 0x0401A2A9 RID: 107177
 		private ExecutionItem SkillItem;
 
-		// Token: 0x0401F7F1 RID: 129009
+		// Token: 0x0401A2AA RID: 107178
 		private TimerHandle CloseTimer;
 
-		// Token: 0x0401F7F2 RID: 129010
+		// Token: 0x0401A2AB RID: 107179
 		private CustomPromise Promise;
 
-		// Token: 0x0401F7F3 RID: 129011
+		// Token: 0x0401A2AC RID: 107180
 		private BattleUiChildViewData ChildViewData;
 
-		// Token: 0x0401F7F4 RID: 129012
+		// Token: 0x0401A2AD RID: 107181
 		private bool ChildVisible = true;
 
-		// Token: 0x0401F7F5 RID: 129013
+		// Token: 0x0401A2AE RID: 107182
 		private ECustomOptionType? OptionType = new ECustomOptionType?(ECustomOptionType.Execution);
 
-		// Token: 0x0200BFA2 RID: 49058
+		// Token: 0x0200A9A8 RID: 43432
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039D08 RID: 236808
+			// Token: 0x040346CA RID: 214730
 			SkillItem,
-			// Token: 0x04039D09 RID: 236809
+			// Token: 0x040346CB RID: 214731
 			AnimStart,
-			// Token: 0x04039D0A RID: 236810
+			// Token: 0x040346CC RID: 214732
 			AnimClose
 		}
 	}

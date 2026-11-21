@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200135D RID: 4957
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014AD RID: 5293
 	public class ICheckEntityStateQuestCondition : IQuestCondition
 	{
-		// Token: 0x0600717C RID: 29052 RVA: 0x0011178A File Offset: 0x0010F98A
+		// Token: 0x0600781C RID: 30748 RVA: 0x0011FCF6 File Offset: 0x0011DEF6
 		public static ICheckEntityStateQuestCondition Create(ICheckEntityStateQuestCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002495 RID: 9365
-		// (get) Token: 0x0600717D RID: 29053 RVA: 0x001117A9 File Offset: 0x0010F9A9
+		// Token: 0x17002664 RID: 9828
+		// (get) Token: 0x0600781D RID: 30749 RVA: 0x0011FD15 File Offset: 0x0011DF15
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002496 RID: 9366
-		// (get) Token: 0x0600717E RID: 29054 RVA: 0x001117B6 File Offset: 0x0010F9B6
+		// Token: 0x17002665 RID: 9829
+		// (get) Token: 0x0600781E RID: 30750 RVA: 0x0011FD22 File Offset: 0x0011DF22
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002497 RID: 9367
-		// (get) Token: 0x0600717F RID: 29055 RVA: 0x001117EC File Offset: 0x0010F9EC
+		// Token: 0x17002666 RID: 9830
+		// (get) Token: 0x0600781F RID: 30751 RVA: 0x0011FD58 File Offset: 0x0011DF58
 		public virtual List<Aki.TDConfigMgr.Quest.Fb.IEntityStateCondition> Conditions
 		{
 			get
@@ -73,20 +71,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400418D RID: 16781
+		// Token: 0x04004509 RID: 17673
 		private ICheckEntityStateQuestCondition Instance;
 
-		// Token: 0x0400418E RID: 16782
+		// Token: 0x0400450A RID: 17674
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400418F RID: 16783
+		// Token: 0x0400450B RID: 17675
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004190 RID: 16784
+		// Token: 0x0400450C RID: 17676
 		private List<Aki.TDConfigMgr.Quest.Fb.IEntityStateCondition> _ConditionsCache;
 
-		// Token: 0x04004191 RID: 16785
+		// Token: 0x0400450D RID: 17677
 		private bool _ConditionsInited;
 	}
 }

@@ -8,31 +8,31 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001B2B RID: 6955
+// Token: 0x02000FEA RID: 4074
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FloroRanchController : ActivityControllerBase
 {
-	// Token: 0x0600CE68 RID: 52840 RVA: 0x002F0602 File Offset: 0x002EE802
+	// Token: 0x0600A279 RID: 41593 RVA: 0x002FB6E2 File Offset: 0x002F98E2
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		throw new NotImplementedException();
 	}
 
-	// Token: 0x0600CE69 RID: 52841 RVA: 0x002F0609 File Offset: 0x002EE809
+	// Token: 0x0600A27A RID: 41594 RVA: 0x002FB6E9 File Offset: 0x002F98E9
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityPastureGuide";
 	}
 
-	// Token: 0x0600CE6A RID: 52842 RVA: 0x002F0610 File Offset: 0x002EE810
+	// Token: 0x0600A27B RID: 41595 RVA: 0x002FB6F0 File Offset: 0x002F98F0
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new FloroRanchActivityView();
 	}
 
-	// Token: 0x0600CE6B RID: 52843 RVA: 0x002F0618 File Offset: 0x002EE818
+	// Token: 0x0600A27C RID: 41596 RVA: 0x002FB6F8 File Offset: 0x002F98F8
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		global::FloroRanchActivityData floroRanchActivityData = new global::FloroRanchActivityData();
@@ -41,19 +41,19 @@ public class FloroRanchController : ActivityControllerBase
 		return floroRanchActivityData;
 	}
 
-	// Token: 0x0600CE6C RID: 52844 RVA: 0x002F0649 File Offset: 0x002EE849
+	// Token: 0x0600A27D RID: 41597 RVA: 0x002FB729 File Offset: 0x002F9929
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x0600CE6D RID: 52845 RVA: 0x002F064C File Offset: 0x002EE84C
+	// Token: 0x0600A27E RID: 41598 RVA: 0x002FB72C File Offset: 0x002F992C
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchUnlockTipView, null, null);
 	}
 
-	// Token: 0x0600CE6E RID: 52846 RVA: 0x002F0660 File Offset: 0x002EE860
+	// Token: 0x0600A27F RID: 41599 RVA: 0x002FB740 File Offset: 0x002F9940
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.FloroRanchUpdatePlayerInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFloroRanchUpdatePlayerInfoNotify));
@@ -61,7 +61,7 @@ public class FloroRanchController : ActivityControllerBase
 		Net.Instance.Register(ENotifyMessageId.FloroRanchPlayWeeklyEndNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFloroRanchPlayWeeklyEndNotify));
 	}
 
-	// Token: 0x0600CE6F RID: 52847 RVA: 0x002F06C1 File Offset: 0x002EE8C1
+	// Token: 0x0600A280 RID: 41600 RVA: 0x002FB7A1 File Offset: 0x002F99A1
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.FloroRanchUpdatePlayerInfoNotify);
@@ -69,19 +69,19 @@ public class FloroRanchController : ActivityControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.FloroRanchPlayWeeklyEndNotify);
 	}
 
-	// Token: 0x0600CE70 RID: 52848 RVA: 0x002F06F3 File Offset: 0x002EE8F3
+	// Token: 0x0600A281 RID: 41601 RVA: 0x002FB7D3 File Offset: 0x002F99D3
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x0600CE71 RID: 52849 RVA: 0x002F0711 File Offset: 0x002EE911
+	// Token: 0x0600A282 RID: 41602 RVA: 0x002FB7F1 File Offset: 0x002F99F1
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x0600CE72 RID: 52850 RVA: 0x002F0730 File Offset: 0x002EE930
+	// Token: 0x0600A283 RID: 41603 RVA: 0x002FB810 File Offset: 0x002F9A10
 	[NullableContext(2)]
 	private void OnFloroRanchUpdatePlayerInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -124,7 +124,7 @@ public class FloroRanchController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600CE73 RID: 52851 RVA: 0x002F0810 File Offset: 0x002EEA10
+	// Token: 0x0600A284 RID: 41604 RVA: 0x002FB8F0 File Offset: 0x002F9AF0
 	[NullableContext(2)]
 	public unsafe void SendFloroRanchStartPlayRequest(int activityId, int subInstanceId, int[] races = null, int? skillId = null, Action<FloroRanchStartPlayResponse> callback = null)
 	{
@@ -177,7 +177,7 @@ public class FloroRanchController : ActivityControllerBase
 					activityData.SetUnFinishedSubDungeonId(subInstanceId);
 					return;
 				}
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchStartPlayResponse.ErrorCode, 26272, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchStartPlayResponse.ErrorCode, 23655, null, true, true);
 				Action<FloroRanchStartPlayResponse> callback4 = callback;
 				if (callback4 == null)
 				{
@@ -189,7 +189,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE74 RID: 52852 RVA: 0x002F089C File Offset: 0x002EEA9C
+	// Token: 0x0600A285 RID: 41605 RVA: 0x002FB97C File Offset: 0x002F9B7C
 	public void SendFloroRanchPlayNextDayRequest(int activityId, int subInstanceId, [Nullable(new byte[]
 	{
 		1,
@@ -209,7 +209,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchPlayNextDayResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayNextDayResponse.ErrorCode, 19866, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayNextDayResponse.ErrorCode, 26348, null, true, true);
 				callback(null);
 				return;
 			}
@@ -218,7 +218,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE75 RID: 52853 RVA: 0x002F08E8 File Offset: 0x002EEAE8
+	// Token: 0x0600A286 RID: 41606 RVA: 0x002FB9C8 File Offset: 0x002F9BC8
 	public void FloroRanchPlayGachaRequest(int activityId, int subInstanceId, int cardId, int incId, [Nullable(new byte[]
 	{
 		1,
@@ -240,7 +240,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (response.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 26482, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 26388, null, true, true);
 				callback(null);
 				return;
 			}
@@ -251,7 +251,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE76 RID: 52854 RVA: 0x002F0944 File Offset: 0x002EEB44
+	// Token: 0x0600A287 RID: 41607 RVA: 0x002FBA24 File Offset: 0x002F9C24
 	public void FloroRanchPlayRefreshGachaRequest(int activityId, int subInstanceId, int incId, [Nullable(new byte[]
 	{
 		1,
@@ -272,7 +272,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchPlayGachaRefreshResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayGachaRefreshResponse.ErrorCode, 22802, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayGachaRefreshResponse.ErrorCode, 18822, null, true, true);
 				callback(null);
 				return;
 			}
@@ -281,7 +281,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE77 RID: 52855 RVA: 0x002F0998 File Offset: 0x002EEB98
+	// Token: 0x0600A288 RID: 41608 RVA: 0x002FBA78 File Offset: 0x002F9C78
 	public void SendFloroRanchPlayShopBuyRequest(int activityId, int subInstanceId, int taskIncId, int id, int type, int goodIncId, [Nullable(new byte[]
 	{
 		1,
@@ -305,7 +305,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchPlayShopBuyResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayShopBuyResponse.ErrorCode, 21023, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayShopBuyResponse.ErrorCode, 15480, null, true, true);
 				callback(null);
 				return;
 			}
@@ -314,7 +314,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE78 RID: 52856 RVA: 0x002F0A04 File Offset: 0x002EEC04
+	// Token: 0x0600A289 RID: 41609 RVA: 0x002FBAE4 File Offset: 0x002F9CE4
 	public void SendFloroRanchPlayRefreshShopRequest(int activityId, int subInstanceId, int incId, [Nullable(new byte[]
 	{
 		1,
@@ -335,7 +335,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchPlayRefreshShopResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayRefreshShopResponse.ErrorCode, 18811, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayRefreshShopResponse.ErrorCode, 18191, null, true, true);
 				callback(null);
 				return;
 			}
@@ -344,7 +344,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE79 RID: 52857 RVA: 0x002F0A58 File Offset: 0x002EEC58
+	// Token: 0x0600A28A RID: 41610 RVA: 0x002FBB38 File Offset: 0x002F9D38
 	public void SendFloroRanchPlaySelectCardGroupRequest(int activityId, int subInstanceId, int[] cardIdList, [Nullable(new byte[]
 	{
 		1,
@@ -364,7 +364,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (response.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 24077, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 19257, null, true, true);
 				callback(null);
 				return;
 			}
@@ -375,7 +375,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7A RID: 52858 RVA: 0x002F0AB0 File Offset: 0x002EECB0
+	// Token: 0x0600A28B RID: 41611 RVA: 0x002FBB90 File Offset: 0x002F9D90
 	public void SendFloroRanchExecuteSkillPlayRequest(int activityId, int subInstanceId, Action<bool> callback)
 	{
 		FloroRanchExecuteSkillPlayRequest floroRanchExecuteSkillPlayRequest = FloroRanchExecuteSkillPlayRequest.Create();
@@ -391,7 +391,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchExecuteSkillPlayResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchExecuteSkillPlayResponse.ErrorCode, 26537, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchExecuteSkillPlayResponse.ErrorCode, 28746, null, true, true);
 				callback(false);
 				return;
 			}
@@ -400,7 +400,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7B RID: 52859 RVA: 0x002F0AFC File Offset: 0x002EECFC
+	// Token: 0x0600A28C RID: 41612 RVA: 0x002FBBDC File Offset: 0x002F9DDC
 	public void SendFloroRanchEventChoiceRequest(int activityId, int subInstanceId, int eventIncId, int choiceId, [Nullable(new byte[]
 	{
 		1,
@@ -422,7 +422,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchEventChoiceResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchEventChoiceResponse.ErrorCode, 21742, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchEventChoiceResponse.ErrorCode, 29916, null, true, true);
 				callback(null);
 				return;
 			}
@@ -431,7 +431,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7C RID: 52860 RVA: 0x002F0B58 File Offset: 0x002EED58
+	// Token: 0x0600A28D RID: 41613 RVA: 0x002FBC38 File Offset: 0x002F9E38
 	public void SendFloroRanchPlayTributeRequest(int activityId, int subInstanceId, [Nullable(new byte[]
 	{
 		1,
@@ -451,7 +451,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchPlayTributeResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayTributeResponse.ErrorCode, 19879, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayTributeResponse.ErrorCode, 27951, null, true, true);
 				callback(null);
 				return;
 			}
@@ -461,7 +461,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7D RID: 52861 RVA: 0x002F0BA4 File Offset: 0x002EEDA4
+	// Token: 0x0600A28E RID: 41614 RVA: 0x002FBC84 File Offset: 0x002F9E84
 	[NullableContext(2)]
 	public void SendFloroRanchPlayUnlimitedModeRequest(int activityId, int subInstanceId, Action<FloroRanchPlayUnlimitedModeResponse> callback = null)
 	{
@@ -483,7 +483,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			else if (floroRanchPlayUnlimitedModeResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayUnlimitedModeResponse.ErrorCode, 22265, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchPlayUnlimitedModeResponse.ErrorCode, 20504, null, true, true);
 				Action<FloroRanchPlayUnlimitedModeResponse> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -509,7 +509,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7E RID: 52862 RVA: 0x002F0BF0 File Offset: 0x002EEDF0
+	// Token: 0x0600A28F RID: 41615 RVA: 0x002FBCD0 File Offset: 0x002F9ED0
 	public void SendFloroRanchPlayRemoveUnitRequest(int activityId, int subInstanceId, int entityId, [Nullable(new byte[]
 	{
 		1,
@@ -530,7 +530,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (response.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 27510, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(response.ErrorCode, 16556, null, true, true);
 				callback(null);
 				return;
 			}
@@ -543,7 +543,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE7F RID: 52863 RVA: 0x002F0C50 File Offset: 0x002EEE50
+	// Token: 0x0600A290 RID: 41616 RVA: 0x002FBD30 File Offset: 0x002F9F30
 	public void SendFloroRanchSettleDataRequest(int activityId, int subInstanceId, [Nullable(new byte[]
 	{
 		1,
@@ -563,7 +563,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchSettleDataResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleDataResponse.ErrorCode, 21024, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleDataResponse.ErrorCode, 22164, null, true, true);
 				callback(null);
 				return;
 			}
@@ -571,7 +571,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE80 RID: 52864 RVA: 0x002F0C9C File Offset: 0x002EEE9C
+	// Token: 0x0600A291 RID: 41617 RVA: 0x002FBD7C File Offset: 0x002F9F7C
 	public unsafe void SendFloroRanchSettleRequest(int activityId, int subInstanceId, bool isSettle, [Nullable(new byte[]
 	{
 		1,
@@ -592,7 +592,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchSettleResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleResponse.ErrorCode, 25335, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleResponse.ErrorCode, 29820, null, true, true);
 				callback(null);
 				return;
 			}
@@ -619,7 +619,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE81 RID: 52865 RVA: 0x002F0CFC File Offset: 0x002EEEFC
+	// Token: 0x0600A292 RID: 41618 RVA: 0x002FBDDC File Offset: 0x002F9FDC
 	public void SendFloroRanchAbandonArchiveRequest(int activityId, int subInstanceId, [Nullable(new byte[]
 	{
 		1,
@@ -640,7 +640,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchSettleResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleResponse.ErrorCode, 25335, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchSettleResponse.ErrorCode, 29820, null, true, true);
 				callback(null);
 				return;
 			}
@@ -655,7 +655,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE82 RID: 52866 RVA: 0x002F0D5C File Offset: 0x002EEF5C
+	// Token: 0x0600A293 RID: 41619 RVA: 0x002FBE3C File Offset: 0x002FA03C
 	public UniTask SendFloroRanchReStartRequest(int activityId, int subInstanceId, int[] races, int skillId)
 	{
 		FloroRanchController.<SendFloroRanchReStartRequest>d__26 <SendFloroRanchReStartRequest>d__;
@@ -670,7 +670,7 @@ public class FloroRanchController : ActivityControllerBase
 		return <SendFloroRanchReStartRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CE83 RID: 52867 RVA: 0x002F0DC0 File Offset: 0x002EEFC0
+	// Token: 0x0600A294 RID: 41620 RVA: 0x002FBEA0 File Offset: 0x002FA0A0
 	[NullableContext(2)]
 	public void SendFloroRanchCloseTaskRequest(int activityId, int subInstanceId, int taskId, Action<FloroRanchCloseTaskResponse> callback = null)
 	{
@@ -693,7 +693,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			else if (floroRanchCloseTaskResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchCloseTaskResponse.ErrorCode, 22776, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchCloseTaskResponse.ErrorCode, 19666, null, true, true);
 				Action<FloroRanchCloseTaskResponse> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -715,7 +715,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE84 RID: 52868 RVA: 0x002F0E14 File Offset: 0x002EF014
+	// Token: 0x0600A295 RID: 41621 RVA: 0x002FBEF4 File Offset: 0x002FA0F4
 	public void SendFloroRanchOutRequest(int activityId, int subInstanceId)
 	{
 		FloroRanchOutRequest floroRanchOutRequest = FloroRanchOutRequest.Create();
@@ -730,19 +730,19 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchOutResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchOutResponse.ErrorCode, 21325, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchOutResponse.ErrorCode, 25979, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600CE85 RID: 52869 RVA: 0x002F0E68 File Offset: 0x002EF068
+	// Token: 0x0600A296 RID: 41622 RVA: 0x002FBF48 File Offset: 0x002FA148
 	[NullableContext(2)]
 	private void OnFloroRanchPlayGmInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		FloroRanchPlayGmInfoUpdateNotify floroRanchPlayGmInfoUpdateNotify = (FloroRanchPlayGmInfoUpdateNotify)msg;
 	}
 
-	// Token: 0x0600CE86 RID: 52870 RVA: 0x002F0E7C File Offset: 0x002EF07C
+	// Token: 0x0600A297 RID: 41623 RVA: 0x002FBF5C File Offset: 0x002FA15C
 	[NullableContext(2)]
 	private void OnFloroRanchPlayWeeklyEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -768,7 +768,7 @@ public class FloroRanchController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600CE87 RID: 52871 RVA: 0x002F0F2C File Offset: 0x002EF12C
+	// Token: 0x0600A298 RID: 41624 RVA: 0x002FC00C File Offset: 0x002FA20C
 	public void RequestTaskReward(int[] taskIds)
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -784,14 +784,14 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchRewardTaskResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchRewardTaskResponse.ErrorCode, 28020, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchRewardTaskResponse.ErrorCode, 24696, null, true, true);
 				return;
 			}
 			activityData.UpdateTaskRewardStatus(new List<int>(taskIds));
 		}, 0);
 	}
 
-	// Token: 0x0600CE88 RID: 52872 RVA: 0x002F0FA0 File Offset: 0x002EF1A0
+	// Token: 0x0600A299 RID: 41625 RVA: 0x002FC080 File Offset: 0x002FA280
 	public void RequestMilestoneReward(int[] rewardIds)
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -807,13 +807,13 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchRewardMilestoneResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchRewardMilestoneResponse.ErrorCode, 27049, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchRewardMilestoneResponse.ErrorCode, 24536, null, true, true);
 			}
 			activityData.UpdateFloroRanchMilestoneDataList(new List<int>(rewardIds));
 		}, 0);
 	}
 
-	// Token: 0x0600CE89 RID: 52873 RVA: 0x002F1014 File Offset: 0x002EF214
+	// Token: 0x0600A29A RID: 41626 RVA: 0x002FC0F4 File Offset: 0x002FA2F4
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, false);
@@ -831,7 +831,7 @@ public class FloroRanchController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600CE8A RID: 52874 RVA: 0x002F106C File Offset: 0x002EF26C
+	// Token: 0x0600A29B RID: 41627 RVA: 0x002FC14C File Offset: 0x002FA34C
 	public void RequestUnlockTechPoint(int technologyId, Action<FloroRanchUnlockTechPointResponse> callback)
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -847,7 +847,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchUnlockTechPointResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchUnlockTechPointResponse.ErrorCode, 23616, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchUnlockTechPointResponse.ErrorCode, 18079, null, true, true);
 				return;
 			}
 			activityData.UpdateFloroRanchTechnologyData(technologyId);
@@ -855,7 +855,7 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600CE8B RID: 52875 RVA: 0x002F10E0 File Offset: 0x002EF2E0
+	// Token: 0x0600A29C RID: 41628 RVA: 0x002FC1C0 File Offset: 0x002FA3C0
 	public void RequestComicRead()
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -874,14 +874,14 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchAnimationResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchAnimationResponse.ErrorCode, 18911, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchAnimationResponse.ErrorCode, 22651, null, true, true);
 				return;
 			}
 			activityData.ReadComic();
 		}, 0);
 	}
 
-	// Token: 0x0600CE8C RID: 52876 RVA: 0x002F1148 File Offset: 0x002EF348
+	// Token: 0x0600A29D RID: 41629 RVA: 0x002FC228 File Offset: 0x002FA428
 	public void RequestSubDungeonRead(int subDungeonId)
 	{
 		global::FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true);
@@ -897,7 +897,7 @@ public class FloroRanchController : ActivityControllerBase
 			}
 			if (floroRanchFirstEnterResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchFirstEnterResponse.ErrorCode, 21638, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(floroRanchFirstEnterResponse.ErrorCode, 27776, null, true, true);
 				return;
 			}
 			activityData.UpdateFloroRanchSubDungeonRedDot(new List<int>
@@ -908,8 +908,8 @@ public class FloroRanchController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17001138 RID: 4408
-	// (get) Token: 0x0600CE8D RID: 52877 RVA: 0x002F11B4 File Offset: 0x002EF3B4
+	// Token: 0x1700115D RID: 4445
+	// (get) Token: 0x0600A29E RID: 41630 RVA: 0x002FC294 File Offset: 0x002FA494
 	public static FloroRanchController Instance
 	{
 		get
@@ -918,7 +918,7 @@ public class FloroRanchController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600CE8E RID: 52878 RVA: 0x002F11BB File Offset: 0x002EF3BB
+	// Token: 0x0600A29F RID: 41631 RVA: 0x002FC29B File Offset: 0x002FA49B
 	public static FloroRanchController GetOrCreateInstance()
 	{
 		if (FloroRanchController._Instance == null)
@@ -928,7 +928,7 @@ public class FloroRanchController : ActivityControllerBase
 		return FloroRanchController._Instance;
 	}
 
-	// Token: 0x0600CE8F RID: 52879 RVA: 0x002F11CF File Offset: 0x002EF3CF
+	// Token: 0x0600A2A0 RID: 41632 RVA: 0x002FC2AF File Offset: 0x002FA4AF
 	public static bool CreateInstance()
 	{
 		if (FloroRanchController._Instance != null)
@@ -939,24 +939,24 @@ public class FloroRanchController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600CE90 RID: 52880 RVA: 0x002F11E5 File Offset: 0x002EF3E5
+	// Token: 0x0600A2A1 RID: 41633 RVA: 0x002FC2C5 File Offset: 0x002FA4C5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600CE91 RID: 52881 RVA: 0x002F11E7 File Offset: 0x002EF3E7
+	// Token: 0x0600A2A2 RID: 41634 RVA: 0x002FC2C7 File Offset: 0x002FA4C7
 	public static void ResetStaticDefaultValue()
 	{
 		FloroRanchController._Instance = null;
 	}
 
-	// Token: 0x0600CE92 RID: 52882 RVA: 0x002F11EF File Offset: 0x002EF3EF
+	// Token: 0x0600A2A3 RID: 41635 RVA: 0x002FC2CF File Offset: 0x002FA4CF
 	static FloroRanchController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FloroRanchController.CreateStaticDefaultValue), new Action(FloroRanchController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005E92 RID: 24210
+	// Token: 0x04005F61 RID: 24417
 	[Nullable(2)]
 	private static FloroRanchController _Instance;
 }

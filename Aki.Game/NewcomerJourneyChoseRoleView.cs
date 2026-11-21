@@ -10,16 +10,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013A2 RID: 5026
+// Token: 0x02000856 RID: 2134
 public class NewcomerJourneyChoseRoleView : UiViewBase
 {
-	// Token: 0x06008D3A RID: 36154 RVA: 0x001E5A1A File Offset: 0x001E3C1A
+	// Token: 0x060060D0 RID: 24784 RVA: 0x001EE64E File Offset: 0x001EC84E
 	[NullableContext(1)]
 	public NewcomerJourneyChoseRoleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008D3B RID: 36155 RVA: 0x001E5A24 File Offset: 0x001E3C24
+	// Token: 0x060060D1 RID: 24785 RVA: 0x001EE658 File Offset: 0x001EC858
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -50,7 +50,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D3C RID: 36156 RVA: 0x001E5B70 File Offset: 0x001E3D70
+	// Token: 0x060060D2 RID: 24786 RVA: 0x001EE7A4 File Offset: 0x001EC9A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		NewcomerJourneyChoseRoleView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008D3D RID: 36157 RVA: 0x001E5BB4 File Offset: 0x001E3DB4
+	// Token: 0x060060D3 RID: 24787 RVA: 0x001EE7E8 File Offset: 0x001EC9E8
 	protected override void OnStart()
 	{
 		ActivityNewcomerJourneyData newcomerJourneyData = ActivityNewcomerJourneyController.Instance.GetNewcomerJourneyData();
@@ -82,7 +82,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		base.GetItem(7).SetUIActive(false);
 	}
 
-	// Token: 0x06008D3E RID: 36158 RVA: 0x001E5C6C File Offset: 0x001E3E6C
+	// Token: 0x060060D4 RID: 24788 RVA: 0x001EE8A0 File Offset: 0x001ECAA0
 	private void OnClickConfirmBtn()
 	{
 		ActivityNewcomerJourneyData newcomerJourneyData = ActivityNewcomerJourneyController.Instance.GetNewcomerJourneyData();
@@ -93,7 +93,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008D3F RID: 36159 RVA: 0x001E5CAF File Offset: 0x001E3EAF
+	// Token: 0x060060D5 RID: 24789 RVA: 0x001EE8E3 File Offset: 0x001ECAE3
 	[NullableContext(1)]
 	private NewcomerJourneyRoleSelectItem CreateSelectionItem()
 	{
@@ -105,13 +105,13 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008D40 RID: 36160 RVA: 0x001E5CEC File Offset: 0x001E3EEC
+	// Token: 0x060060D6 RID: 24790 RVA: 0x001EE920 File Offset: 0x001ECB20
 	private void AfterOpenRoleView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008D41 RID: 36161 RVA: 0x001E5CF5 File Offset: 0x001E3EF5
+	// Token: 0x060060D7 RID: 24791 RVA: 0x001EE929 File Offset: 0x001ECB29
 	private void SelectItemByIndex(int gridIndex, int roleId)
 	{
 		GenericScrollViewNew<NewcomerJourneyRoleSelectItem, int> selectionScrollView = this.SelectionScrollView;
@@ -127,7 +127,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x06008D42 RID: 36162 RVA: 0x001E5D24 File Offset: 0x001E3F24
+	// Token: 0x060060D8 RID: 24792 RVA: 0x001EE958 File Offset: 0x001ECB58
 	private bool CanToggleChange(int gridIndex)
 	{
 		GenericScrollViewNew<NewcomerJourneyRoleSelectItem, int> selectionScrollView = this.SelectionScrollView;
@@ -146,7 +146,7 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		return !(gridIndex == num3.GetValueOrDefault() & num3 != null);
 	}
 
-	// Token: 0x06008D43 RID: 36163 RVA: 0x001E5D7C File Offset: 0x001E3F7C
+	// Token: 0x060060D9 RID: 24793 RVA: 0x001EE9B0 File Offset: 0x001ECBB0
 	private void OnItemSelect(int roleId)
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -164,10 +164,10 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 		curSelectedItem.Apply<CharacterSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x04003E90 RID: 16016
+	// Token: 0x04003F28 RID: 16168
 	private int RoleId;
 
-	// Token: 0x04003E91 RID: 16017
+	// Token: 0x04003F29 RID: 16169
 	[Nullable(new byte[]
 	{
 		2,
@@ -175,35 +175,35 @@ public class NewcomerJourneyChoseRoleView : UiViewBase
 	})]
 	private GenericScrollViewNew<NewcomerJourneyRoleSelectItem, int> SelectionScrollView;
 
-	// Token: 0x04003E92 RID: 16018
+	// Token: 0x04003F2A RID: 16170
 	[Nullable(2)]
 	private SmallItemGrid CurSelectedItem;
 
-	// Token: 0x02007A16 RID: 31254
+	// Token: 0x02006B9D RID: 27549
 	private class EComponentDefine
 	{
-		// Token: 0x040282F4 RID: 164596
+		// Token: 0x04023614 RID: 144916
 		public const int TitleText = 0;
 
-		// Token: 0x040282F5 RID: 164597
+		// Token: 0x04023615 RID: 144917
 		public const int SubTitleText = 1;
 
-		// Token: 0x040282F6 RID: 164598
+		// Token: 0x04023616 RID: 144918
 		public const int ScrollView = 2;
 
-		// Token: 0x040282F7 RID: 164599
+		// Token: 0x04023617 RID: 144919
 		public const int RoleItem = 3;
 
-		// Token: 0x040282F8 RID: 164600
+		// Token: 0x04023618 RID: 144920
 		public const int RoleNameText = 4;
 
-		// Token: 0x040282F9 RID: 164601
+		// Token: 0x04023619 RID: 144921
 		public const int ConfirmBtn = 5;
 
-		// Token: 0x040282FA RID: 164602
+		// Token: 0x0402361A RID: 144922
 		public const int SelectText = 6;
 
-		// Token: 0x040282FB RID: 164603
+		// Token: 0x0402361B RID: 144923
 		public const int TipsText = 7;
 	}
 }

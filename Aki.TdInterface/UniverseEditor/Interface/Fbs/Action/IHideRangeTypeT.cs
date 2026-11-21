@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068F5 RID: 26869
+	// Token: 0x02006FA8 RID: 28584
 	public class IHideRangeTypeT
 	{
-		// Token: 0x1700C75B RID: 51035
-		// (get) Token: 0x0602EE01 RID: 192001 RVA: 0x00664F76 File Offset: 0x00663176
-		// (set) Token: 0x0602EE02 RID: 192002 RVA: 0x00664F7E File Offset: 0x0066317E
+		// Token: 0x1700D15E RID: 53598
+		// (get) Token: 0x060317D1 RID: 202705 RVA: 0x006B545E File Offset: 0x006B365E
+		// (set) Token: 0x060317D2 RID: 202706 RVA: 0x006B5466 File Offset: 0x006B3666
 		public EHideType Type { get; set; }
 
-		// Token: 0x0602EE03 RID: 192003 RVA: 0x00664F87 File Offset: 0x00663187
+		// Token: 0x060317D3 RID: 202707 RVA: 0x006B546F File Offset: 0x006B366F
 		public IHideRangeTypeT()
 		{
 			this.Type = EHideType.WorldMonsterAndMonsterTreasure;

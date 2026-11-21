@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E3 RID: 6115
+	// Token: 0x0200196C RID: 6508
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAstrologyTextUiConfig_SetValue
 	{
-		// Token: 0x04005355 RID: 21333
+		// Token: 0x0400579D RID: 22429
 		public ETextUiType Type;
 
-		// Token: 0x04005356 RID: 21334
+		// Token: 0x0400579E RID: 22430
 		public string InitTipText;
 
-		// Token: 0x04005357 RID: 21335
+		// Token: 0x0400579F RID: 22431
 		public string ProgressTipText;
 
-		// Token: 0x04005358 RID: 21336
+		// Token: 0x040057A0 RID: 22432
 		public string SkipText;
 
-		// Token: 0x04005359 RID: 21337
+		// Token: 0x040057A1 RID: 22433
 		public string FinishText;
 
-		// Token: 0x0400535A RID: 21338
+		// Token: 0x040057A2 RID: 22434
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> InitDialogues;
 
-		// Token: 0x0400535B RID: 21339
+		// Token: 0x040057A3 RID: 22435
 		public int? SkipConfirmBoxId;
 
-		// Token: 0x0400535C RID: 21340
+		// Token: 0x040057A4 RID: 22436
 		public string LoopAudioEvent;
 	}
 }

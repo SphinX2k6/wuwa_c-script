@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004422 RID: 17442
+	// Token: 0x0200488A RID: 18570
 	public enum EFixedDateTimeType : byte
 	{
-		// Token: 0x0400C3A2 RID: 50082
+		// Token: 0x0400CDCF RID: 52687
 		Daily,
-		// Token: 0x0400C3A3 RID: 50083
+		// Token: 0x0400CDD0 RID: 52688
 		Weekly,
-		// Token: 0x0400C3A4 RID: 50084
+		// Token: 0x0400CDD1 RID: 52689
 		Monthly
 	}
 }

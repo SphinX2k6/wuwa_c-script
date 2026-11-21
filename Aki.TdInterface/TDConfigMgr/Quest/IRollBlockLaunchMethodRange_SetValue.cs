@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200111D RID: 4381
+	// Token: 0x0200124B RID: 4683
 	public class IRollBlockLaunchMethodRange_SetValue
 	{
-		// Token: 0x04003B4D RID: 15181
+		// Token: 0x04003E9B RID: 16027
 		public ERollBlockLaunchMethod Type;
 
-		// Token: 0x04003B4E RID: 15182
+		// Token: 0x04003E9C RID: 16028
 		public int TargetId;
 	}
 }

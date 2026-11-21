@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D59 RID: 27993
+	// Token: 0x020074D4 RID: 29908
 	public enum IPlotModeUiStyleBase_Union : byte
 	{
-		// Token: 0x0401170B RID: 71435
+		// Token: 0x04012687 RID: 75399
 		NONE,
-		// Token: 0x0401170C RID: 71436
+		// Token: 0x04012688 RID: 75400
 		IPlotModeUiStyleBase,
-		// Token: 0x0401170D RID: 71437
+		// Token: 0x04012689 RID: 75401
 		IPlotModeUiStyleLevelD
 	}
 }

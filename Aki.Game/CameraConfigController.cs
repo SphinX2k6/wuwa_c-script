@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
@@ -10,15 +8,14 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
-using UnrealEngine.Extension;
 
-// Token: 0x020001F7 RID: 503
+// Token: 0x020001FB RID: 507
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraConfigController : CameraControllerBase
 {
-	// Token: 0x06001F8F RID: 8079 RVA: 0x000A095C File Offset: 0x0009EB5C
+	// Token: 0x0600203E RID: 8254 RVA: 0x000A7D1C File Offset: 0x000A5F1C
 	private static Dictionary<int, float> ToIntConfig(Dictionary<EFightCameraDefault, float> source)
 	{
 		Dictionary<int, float> dictionary = new Dictionary<int, float>(source.Count);
@@ -34,15 +31,15 @@ public class CameraConfigController : CameraControllerBase
 		return dictionary;
 	}
 
-	// Token: 0x06001F90 RID: 8080 RVA: 0x000A09D4 File Offset: 0x0009EBD4
+	// Token: 0x0600203F RID: 8255 RVA: 0x000A7D94 File Offset: 0x000A5F94
 	public CameraConfig GetDefaultConfig()
 	{
 		return this.DefaultConfig;
 	}
 
-	// Token: 0x170004FB RID: 1275
-	// (get) Token: 0x06001F91 RID: 8081 RVA: 0x000A09DC File Offset: 0x0009EBDC
-	// (set) Token: 0x06001F92 RID: 8082 RVA: 0x000A09E4 File Offset: 0x0009EBE4
+	// Token: 0x1700051D RID: 1309
+	// (get) Token: 0x06002040 RID: 8256 RVA: 0x000A7D9C File Offset: 0x000A5F9C
+	// (set) Token: 0x06002041 RID: 8257 RVA: 0x000A7DA4 File Offset: 0x000A5FA4
 	[Nullable(2)]
 	protected EntityHandle SelfCharacterEntity
 	{
@@ -86,9 +83,9 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x170004FC RID: 1276
-	// (get) Token: 0x06001F93 RID: 8083 RVA: 0x000A0B28 File Offset: 0x0009ED28
-	// (set) Token: 0x06001F94 RID: 8084 RVA: 0x000A0B30 File Offset: 0x0009ED30
+	// Token: 0x1700051E RID: 1310
+	// (get) Token: 0x06002042 RID: 8258 RVA: 0x000A7EE8 File Offset: 0x000A60E8
+	// (set) Token: 0x06002043 RID: 8259 RVA: 0x000A7EF0 File Offset: 0x000A60F0
 	[Nullable(2)]
 	protected EntityHandle FloatCharacterEntity
 	{
@@ -132,7 +129,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F95 RID: 8085 RVA: 0x000A0C74 File Offset: 0x0009EE74
+	// Token: 0x06002044 RID: 8260 RVA: 0x000A8034 File Offset: 0x000A6234
 	private void OnSubTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (tagExist)
@@ -173,7 +170,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F96 RID: 8086 RVA: 0x000A0D18 File Offset: 0x0009EF18
+	// Token: 0x06002045 RID: 8261 RVA: 0x000A80D8 File Offset: 0x000A62D8
 	private void OnAccompanyTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (tagExist)
@@ -214,7 +211,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F97 RID: 8087 RVA: 0x000A0DB8 File Offset: 0x0009EFB8
+	// Token: 0x06002046 RID: 8262 RVA: 0x000A8178 File Offset: 0x000A6378
 	protected void UpdateFocusTargetAndSocket([Nullable(2)] Entity newTarget, string newSocket)
 	{
 		bool flag = false;
@@ -260,7 +257,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F98 RID: 8088 RVA: 0x000A0F18 File Offset: 0x0009F118
+	// Token: 0x06002047 RID: 8263 RVA: 0x000A82D8 File Offset: 0x000A64D8
 	private void OnFocusTagChanged(int gameplayTagId, bool tagExist)
 	{
 		if (tagExist)
@@ -303,7 +300,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F99 RID: 8089 RVA: 0x000A0FE0 File Offset: 0x0009F1E0
+	// Token: 0x06002048 RID: 8264 RVA: 0x000A83A0 File Offset: 0x000A65A0
 	protected override void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
 		if (this.AdjustCameraTagMap.Count <= 0)
@@ -321,7 +318,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001F9A RID: 8090 RVA: 0x000A1054 File Offset: 0x0009F254
+	// Token: 0x06002049 RID: 8265 RVA: 0x000A8414 File Offset: 0x000A6614
 	private void OnCameraCharacterChanged([Nullable(2)] EntityHandle newEntity, string cameraName)
 	{
 		CameraModelInstance cameraModel = base.CameraModel;
@@ -332,47 +329,32 @@ public class CameraConfigController : CameraControllerBase
 		this.SelfCharacterEntity = newEntity;
 	}
 
-	// Token: 0x06001F9B RID: 8091 RVA: 0x000A1078 File Offset: 0x0009F278
+	// Token: 0x0600204A RID: 8266 RVA: 0x000A8438 File Offset: 0x000A6638
 	private void OnFollowShooterPossessed(EntityHandle follower)
 	{
 		this.FloatCharacterEntity = follower;
 	}
 
-	// Token: 0x06001F9C RID: 8092 RVA: 0x000A1081 File Offset: 0x0009F281
+	// Token: 0x0600204B RID: 8267 RVA: 0x000A8441 File Offset: 0x000A6641
 	private void OnFollowShooterUnPossessed()
 	{
 		this.FloatCharacterEntity = null;
 	}
 
-	// Token: 0x170004FD RID: 1277
-	// (get) Token: 0x06001F9D RID: 8093 RVA: 0x000A108A File Offset: 0x0009F28A
-	[Nullable(2)]
-	private string PlatformCheckKey { [NullableContext(2)] get; }
-
-	// Token: 0x06001F9E RID: 8094 RVA: 0x000A1094 File Offset: 0x0009F294
+	// Token: 0x0600204C RID: 8268 RVA: 0x000A844C File Offset: 0x000A664C
 	public CameraConfigController(FightCameraLogicComponent camera) : base(camera)
 	{
 		this.CurrentConfigList = new RbTree<CameraConfig>(this.CameraConfigCompare);
-		string text;
-		if (Info.Instance.IsMobilePlatform())
-		{
-			text = "MobileValid";
-		}
-		else
-		{
-			text = "PcValid";
-		}
-		this.PlatformCheckKey = text;
 		this.LoadConfig();
 	}
 
-	// Token: 0x06001F9F RID: 8095 RVA: 0x000A11BA File Offset: 0x0009F3BA
+	// Token: 0x0600204D RID: 8269 RVA: 0x000A8551 File Offset: 0x000A6751
 	public override string Name()
 	{
 		return "ConfigController";
 	}
 
-	// Token: 0x06001FA0 RID: 8096 RVA: 0x000A11C4 File Offset: 0x0009F3C4
+	// Token: 0x0600204E RID: 8270 RVA: 0x000A8558 File Offset: 0x000A6758
 	public override void OnStart()
 	{
 		base.OnStart();
@@ -381,13 +363,13 @@ public class CameraConfigController : CameraControllerBase
 		EventSystem.Instance.Add(EEventName.OnPlayerFollowerUnPossessed, new Action(this.OnFollowShooterUnPossessed));
 	}
 
-	// Token: 0x06001FA1 RID: 8097 RVA: 0x000A122B File Offset: 0x0009F42B
+	// Token: 0x0600204F RID: 8271 RVA: 0x000A85BF File Offset: 0x000A67BF
 	protected override void UpdateInternal(float deltaTime)
 	{
 		this.UpdateConfig();
 	}
 
-	// Token: 0x06001FA2 RID: 8098 RVA: 0x000A1234 File Offset: 0x0009F434
+	// Token: 0x06002050 RID: 8272 RVA: 0x000A85C8 File Offset: 0x000A67C8
 	public void EnableHookConfig(EAdjustPlayerCamera adjustPlayerCamera, int? extraTagId = null)
 	{
 		int tagIdByName = GameplayTagUtils.GetTagIdByName(adjustPlayerCamera.ToEnumString());
@@ -414,7 +396,7 @@ public class CameraConfigController : CameraControllerBase
 		this.AdjustCameraTagMap[adjustPlayerCamera] = extraTagId;
 	}
 
-	// Token: 0x06001FA3 RID: 8099 RVA: 0x000A1314 File Offset: 0x0009F514
+	// Token: 0x06002051 RID: 8273 RVA: 0x000A86A8 File Offset: 0x000A68A8
 	public void DisableHookConfig(float? fadeOutTime = null)
 	{
 		if (fadeOutTime != null)
@@ -441,7 +423,7 @@ public class CameraConfigController : CameraControllerBase
 		this.AdjustCameraTagMap.Clear();
 	}
 
-	// Token: 0x06001FA4 RID: 8100 RVA: 0x000A1400 File Offset: 0x0009F600
+	// Token: 0x06002052 RID: 8274 RVA: 0x000A8794 File Offset: 0x000A6994
 	public void DisableHookConfigByType(EAdjustPlayerCamera adjustPlayerCamera)
 	{
 		foreach (EntityHandle entityHandle in this.AdjustCameraEntityHandleSet)
@@ -457,14 +439,14 @@ public class CameraConfigController : CameraControllerBase
 		this.AdjustCameraTagMap.Remove(adjustPlayerCamera);
 	}
 
-	// Token: 0x06001FA5 RID: 8101 RVA: 0x000A1498 File Offset: 0x0009F698
+	// Token: 0x06002053 RID: 8275 RVA: 0x000A882C File Offset: 0x000A6A2C
 	[NullableContext(2)]
 	public CameraConfig GetCameraConfigByTag(int hookTagId)
 	{
 		return this.SubConfigs.GetValueOrDefault(hookTagId);
 	}
 
-	// Token: 0x06001FA6 RID: 8102 RVA: 0x000A14A8 File Offset: 0x0009F6A8
+	// Token: 0x06002054 RID: 8276 RVA: 0x000A883C File Offset: 0x000A6A3C
 	public void LoadConfig()
 	{
 		this.ConfigsCache = CameraController.Instance.GetCameraConfigList(null);
@@ -480,12 +462,10 @@ public class CameraConfigController : CameraControllerBase
 			dtCameraConfig.AccompanyValidKeys.Clear();
 		}
 		int num = this.ConfigsCache.Num();
-		Type typeFromHandle = typeof(CameraConfig);
 		for (int i = 0; i < num; i++)
 		{
 			CameraConfig cameraConfig = new CameraConfig(this.ConfigsCache.Get(i));
-			FieldInfo field = typeFromHandle.GetField(this.PlatformCheckKey);
-			if (!(field == null) && (bool)field.GetValue(cameraConfig))
+			if (Info.Instance.IsMobilePlatform() ? cameraConfig.MobileValid : cameraConfig.PcValid)
 			{
 				if (cameraConfig.Type == EFightCameraType.基础镜头)
 				{
@@ -536,7 +516,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 		foreach (DtCameraConfig dtCameraConfig2 in this.CharacterCameraConfigs.Values)
 		{
-			dtCameraConfig2.SetToConfigs(this.SubConfigs, this.FocusConfigs, this.AccompanyConfigs, this.PlatformCheckKey);
+			dtCameraConfig2.SetToConfigs(this.SubConfigs, this.FocusConfigs, this.AccompanyConfigs);
 		}
 		this.IsFighting = false;
 		this.CurrentConfigList.Clear();
@@ -546,7 +526,7 @@ public class CameraConfigController : CameraControllerBase
 		this.UpdateConfig();
 	}
 
-	// Token: 0x06001FA7 RID: 8103 RVA: 0x000A1804 File Offset: 0x0009FA04
+	// Token: 0x06002055 RID: 8277 RVA: 0x000A8B64 File Offset: 0x000A6D64
 	[NullableContext(2)]
 	public void LoadCharacterConfig(UDataTable dataTable)
 	{
@@ -558,7 +538,7 @@ public class CameraConfigController : CameraControllerBase
 		if (!this.CharacterCameraConfigs.TryGetValue(dataTable, out dtCameraConfig))
 		{
 			dtCameraConfig = new DtCameraConfig(dataTable);
-			dtCameraConfig.SetToConfigs(this.SubConfigs, this.FocusConfigs, this.AccompanyConfigs, this.PlatformCheckKey);
+			dtCameraConfig.SetToConfigs(this.SubConfigs, this.FocusConfigs, this.AccompanyConfigs);
 			this.CharacterCameraConfigs[dataTable] = dtCameraConfig;
 			EntityHandle selfCharacterEntityInternal = this.SelfCharacterEntityInternal;
 			if (selfCharacterEntityInternal != null && selfCharacterEntityInternal.Valid)
@@ -639,7 +619,7 @@ public class CameraConfigController : CameraControllerBase
 		dtCameraConfig.ReferenceCount++;
 	}
 
-	// Token: 0x06001FA8 RID: 8104 RVA: 0x000A1B80 File Offset: 0x0009FD80
+	// Token: 0x06002056 RID: 8278 RVA: 0x000A8EDC File Offset: 0x000A70DC
 	[NullableContext(2)]
 	public void UnloadCharacterConfig(UDataTable dataTable)
 	{
@@ -650,12 +630,6 @@ public class CameraConfigController : CameraControllerBase
 		DtCameraConfig dtCameraConfig;
 		if (!this.CharacterCameraConfigs.TryGetValue(dataTable, out dtCameraConfig))
 		{
-			global::Log instance = global::Log.Instance;
-			ELogModule module = ELogModule.Camera;
-			ELogAuthor author = ELogAuthor.LJM;
-			string message = "没有加载Camera配置表格";
-			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("DT", dataTable.GetOuter());
-			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return;
 		}
 		dtCameraConfig.ReferenceCount--;
@@ -738,7 +712,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FA9 RID: 8105 RVA: 0x000A1EF8 File Offset: 0x000A00F8
+	// Token: 0x06002057 RID: 8279 RVA: 0x000A9228 File Offset: 0x000A7428
 	public void UpdateConfig()
 	{
 		if (this.Camera.Character == null)
@@ -767,7 +741,7 @@ public class CameraConfigController : CameraControllerBase
 		this.HasChangedConfig = false;
 	}
 
-	// Token: 0x06001FAA RID: 8106 RVA: 0x000A1FA8 File Offset: 0x000A01A8
+	// Token: 0x06002058 RID: 8280 RVA: 0x000A92D8 File Offset: 0x000A74D8
 	private bool UpdateMainFightConfig()
 	{
 		bool flag = this.Camera.ContainsTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"], false);
@@ -785,13 +759,15 @@ public class CameraConfigController : CameraControllerBase
 		return true;
 	}
 
-	// Token: 0x06001FAB RID: 8107 RVA: 0x000A2034 File Offset: 0x000A0234
+	// Token: 0x06002059 RID: 8281 RVA: 0x000A9364 File Offset: 0x000A7564
 	private void UpdateFocusTargetConfig()
 	{
-		foreach (int num in this.CurrentFocusTagSet.ToArray<int>())
+		int[] array = new int[this.CurrentFocusTagSet.Count];
+		this.CurrentFocusTagSet.CopyTo(array);
+		foreach (int num in array)
 		{
 			CameraConfig cameraConfig = this.FocusConfigs[num];
-			if (!this.Camera.TargetContainsTag(num) || !cameraConfig.LockOnParts.Contains(this.FocusTargetSocketName))
+			if (!this.Camera.TargetContainsTag(num) || Array.IndexOf<string>(cameraConfig.LockOnParts, this.FocusTargetSocketName) < 0)
 			{
 				this.CurrentConfigList.Remove(cameraConfig);
 				this.CurrentFocusTagSet.Remove(num);
@@ -805,7 +781,7 @@ public class CameraConfigController : CameraControllerBase
 			keyValuePair.Deconstruct(out i, out cameraConfig2);
 			int num2 = i;
 			CameraConfig cameraConfig3 = cameraConfig2;
-			if (this.Camera.TargetContainsTag(num2) && (cameraConfig3.LockOnParts.Length == 0 || cameraConfig3.LockOnParts.Contains(this.FocusTargetSocketName)) && !this.CurrentFocusTagSet.Contains(num2))
+			if (this.Camera.TargetContainsTag(num2) && (cameraConfig3.LockOnParts.Length == 0 || Array.IndexOf<string>(cameraConfig3.LockOnParts, this.FocusTargetSocketName) >= 0) && !this.CurrentFocusTagSet.Contains(num2))
 			{
 				this.CurrentConfigList.Insert(cameraConfig3);
 				this.CurrentFocusTagSet.Add(num2);
@@ -814,10 +790,12 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FAC RID: 8108 RVA: 0x000A2164 File Offset: 0x000A0364
+	// Token: 0x0600205A RID: 8282 RVA: 0x000A94AC File Offset: 0x000A76AC
 	private void UpdateTargetConfig()
 	{
-		foreach (int num in this.CurrentSubTagSet.ToArray<int>())
+		int[] array = new int[this.CurrentSubTagSet.Count];
+		this.CurrentSubTagSet.CopyTo(array);
+		foreach (int num in array)
 		{
 			CameraConfig cameraConfig = this.SubConfigs[num];
 			if (!this.Camera.ContainsTag(num, false))
@@ -843,10 +821,12 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FAD RID: 8109 RVA: 0x000A2260 File Offset: 0x000A0460
+	// Token: 0x0600205B RID: 8283 RVA: 0x000A95C0 File Offset: 0x000A77C0
 	private void UpdateAccompanyTargetConfig()
 	{
-		foreach (int num in this.CurrentAccompanyTagSet.ToArray<int>())
+		int[] array = new int[this.CurrentAccompanyTagSet.Count];
+		this.CurrentAccompanyTagSet.CopyTo(array);
+		foreach (int num in array)
 		{
 			CameraConfig cameraConfig = this.AccompanyConfigs[num];
 			if (!this.Camera.AccompanyContainsTag(num))
@@ -872,7 +852,7 @@ public class CameraConfigController : CameraControllerBase
 		}
 	}
 
-	// Token: 0x06001FAE RID: 8110 RVA: 0x000A235C File Offset: 0x000A055C
+	// Token: 0x0600205C RID: 8284 RVA: 0x000A96D0 File Offset: 0x000A78D0
 	private void UpdateFadeInConfig(CameraConfig cameraConfig)
 	{
 		float num = Math.Min(cameraConfig.FadeInTime, 10f);
@@ -900,7 +880,7 @@ public class CameraConfigController : CameraControllerBase
 		this.ConfigFadeInCurve = cameraConfig.FadeInCurve;
 	}
 
-	// Token: 0x06001FAF RID: 8111 RVA: 0x000A23DC File Offset: 0x000A05DC
+	// Token: 0x0600205D RID: 8285 RVA: 0x000A9750 File Offset: 0x000A7950
 	private void UpdateFadeOutConfig(CameraConfig cameraConfig)
 	{
 		float num = Math.Min(cameraConfig.FadeOutTime, 10f);
@@ -928,7 +908,7 @@ public class CameraConfigController : CameraControllerBase
 		this.ConfigFadeOutCurve = cameraConfig.FadeOutCurve;
 	}
 
-	// Token: 0x06001FB0 RID: 8112 RVA: 0x000A245C File Offset: 0x000A065C
+	// Token: 0x0600205E RID: 8286 RVA: 0x000A97D0 File Offset: 0x000A79D0
 	private bool IsFadeIn()
 	{
 		if (this.FadeInTriggered && this.FadeOutTriggered)
@@ -938,13 +918,13 @@ public class CameraConfigController : CameraControllerBase
 		return this.FadeInTriggered;
 	}
 
-	// Token: 0x06001FB1 RID: 8113 RVA: 0x000A2486 File Offset: 0x000A0686
+	// Token: 0x0600205F RID: 8287 RVA: 0x000A97FA File Offset: 0x000A79FA
 	[Conditional("DEBUG")]
 	private void UpdateSubCameraModification()
 	{
 	}
 
-	// Token: 0x06001FB2 RID: 8114 RVA: 0x000A2488 File Offset: 0x000A0688
+	// Token: 0x06002060 RID: 8288 RVA: 0x000A97FC File Offset: 0x000A79FC
 	private void ApplyAllConfigs()
 	{
 		this.ResetLockController();
@@ -1008,7 +988,7 @@ public class CameraConfigController : CameraControllerBase
 		this.ConfigFadeOutDuration = 10f;
 	}
 
-	// Token: 0x06001FB3 RID: 8115 RVA: 0x000A25BC File Offset: 0x000A07BC
+	// Token: 0x06002061 RID: 8289 RVA: 0x000A9930 File Offset: 0x000A7B30
 	private void SetHookConfigFadeOutTime(EAdjustPlayerCamera adjustPlayerCamera, float fadeOutTime)
 	{
 		CameraConfig cameraConfigByTag = this.GetCameraConfigByTag(GameplayTagUtils.GetTagIdByName(adjustPlayerCamera.ToEnumString()));
@@ -1019,7 +999,7 @@ public class CameraConfigController : CameraControllerBase
 		cameraConfigByTag.FadeOutTime = fadeOutTime;
 	}
 
-	// Token: 0x06001FB4 RID: 8116 RVA: 0x000A25E8 File Offset: 0x000A07E8
+	// Token: 0x06002062 RID: 8290 RVA: 0x000A995C File Offset: 0x000A7B5C
 	public string GetCameraConfigTagsContent()
 	{
 		string content = "";
@@ -1035,7 +1015,7 @@ public class CameraConfigController : CameraControllerBase
 		return content;
 	}
 
-	// Token: 0x06001FB5 RID: 8117 RVA: 0x000A2624 File Offset: 0x000A0824
+	// Token: 0x06002063 RID: 8291 RVA: 0x000A9998 File Offset: 0x000A7B98
 	private void ResetLockController()
 	{
 		if (!this.AutoCamera)
@@ -1071,7 +1051,7 @@ public class CameraConfigController : CameraControllerBase
 		this.Camera.CameraCollision.IsOpenBlend = true;
 	}
 
-	// Token: 0x06001FB6 RID: 8118 RVA: 0x000A2704 File Offset: 0x000A0904
+	// Token: 0x06002064 RID: 8292 RVA: 0x000A9A78 File Offset: 0x000A7C78
 	private void UpdateControllersConfig(CameraConfig config)
 	{
 		this.Camera.SetConfigs(config.DefaultConfig, config.DefaultCurveConfig, config.VehicleConfig, config.VehicleCurveConfig, (config.Tag != null) ? config.Tag.GetValueOrDefault().TagName : FName.NAME_None, config.CameraArmLocationSocketName, config.CameraArmLocationSocketOverrideType, false);
@@ -1088,7 +1068,7 @@ public class CameraConfigController : CameraControllerBase
 		this.Camera.CameraGravityController.SetConfigsCore(config.GravityConfig, config.GravityCurveConfig);
 	}
 
-	// Token: 0x06001FB7 RID: 8119 RVA: 0x000A2898 File Offset: 0x000A0A98
+	// Token: 0x06002065 RID: 8293 RVA: 0x000A9C0C File Offset: 0x000A7E0C
 	private void UpdateControllersLockStateByConfig(CameraConfig config)
 	{
 		if (!config.EnableAutoCamera)
@@ -1124,7 +1104,7 @@ public class CameraConfigController : CameraControllerBase
 		this.Camera.CameraCollision.IsOpenBlend = config.IsOpenMainLoop;
 	}
 
-	// Token: 0x06001FB8 RID: 8120 RVA: 0x000A297C File Offset: 0x000A0B7C
+	// Token: 0x06002066 RID: 8294 RVA: 0x000A9CF0 File Offset: 0x000A7EF0
 	private void ResetAllControllersDefaultConfig()
 	{
 		this.Camera.ResetDefaultConfig();
@@ -1141,13 +1121,13 @@ public class CameraConfigController : CameraControllerBase
 		this.Camera.CameraGravityController.ResetDefaultConfig();
 	}
 
-	// Token: 0x06001FB9 RID: 8121 RVA: 0x000A2A44 File Offset: 0x000A0C44
+	// Token: 0x06002067 RID: 8295 RVA: 0x000A9DB8 File Offset: 0x000A7FB8
 	public bool CheckIfInAdjustCamera()
 	{
 		return this.AdjustCameraTagMap.Count > 0 && this.AdjustCameraTagMap.ContainsKey(EAdjustPlayerCamera.Fixed);
 	}
 
-	// Token: 0x06001FBA RID: 8122 RVA: 0x000A2A64 File Offset: 0x000A0C64
+	// Token: 0x06002068 RID: 8296 RVA: 0x000A9DD8 File Offset: 0x000A7FD8
 	public override void OnEnd()
 	{
 		base.OnEnd();
@@ -1156,7 +1136,7 @@ public class CameraConfigController : CameraControllerBase
 		EventSystem.Instance.Remove(EEventName.OnPlayerFollowerUnPossessed, new Action(this.OnFollowShooterUnPossessed));
 	}
 
-	// Token: 0x06001FBB RID: 8123 RVA: 0x000A2ACC File Offset: 0x000A0CCC
+	// Token: 0x06002069 RID: 8297 RVA: 0x000A9E40 File Offset: 0x000A8040
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -1320,21 +1300,13 @@ public class CameraConfigController : CameraControllerBase
 				}
 				else if (c != 'F')
 				{
-					if (c != 'H')
+					if (c == 'H')
 					{
-						if (c == 'P')
+						if (key == "HasChangedConfig")
 						{
-							if (key == "PlatformCheckKey")
-							{
-								value = this.PlatformCheckKey;
-								return true;
-							}
+							value = this.HasChangedConfig;
+							return true;
 						}
-					}
-					else if (key == "HasChangedConfig")
-					{
-						value = this.HasChangedConfig;
-						return true;
 					}
 				}
 				else if (key == "FadeOutTriggered")
@@ -1519,7 +1491,7 @@ public class CameraConfigController : CameraControllerBase
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x06001FBC RID: 8124 RVA: 0x000A31A4 File Offset: 0x000A13A4
+	// Token: 0x0600206A RID: 8298 RVA: 0x000AA4F0 File Offset: 0x000A86F0
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -1810,22 +1782,22 @@ public class CameraConfigController : CameraControllerBase
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06001FBD RID: 8125 RVA: 0x000A3726 File Offset: 0x000A1926
+	// Token: 0x0600206B RID: 8299 RVA: 0x000AAA72 File Offset: 0x000A8C72
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
-		CameraConfigController.<MemberIter>d__86 <MemberIter>d__ = new CameraConfigController.<MemberIter>d__86(-2);
+		CameraConfigController.<MemberIter>d__83 <MemberIter>d__ = new CameraConfigController.<MemberIter>d__83(-2);
 		<MemberIter>d__.<>4__this = this;
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x04001384 RID: 4996
+	// Token: 0x040013C7 RID: 5063
 	private const int DEFAULT_MAX_FADE_TIME = 10;
 
-	// Token: 0x04001385 RID: 4997
+	// Token: 0x040013C8 RID: 5064
 	private static readonly int NoAimGameplayTag = GameplayTagDefine.EGameplayTagId["角色.Common.BUFF通用标识.禁止瞄准模式"];
 
-	// Token: 0x04001386 RID: 4998
+	// Token: 0x040013C9 RID: 5065
 	[Nullable(new byte[]
 	{
 		2,
@@ -1833,110 +1805,110 @@ public class CameraConfigController : CameraControllerBase
 	})]
 	private TArray<SCameraConfig> ConfigsCache;
 
-	// Token: 0x04001387 RID: 4999
+	// Token: 0x040013CA RID: 5066
 	[Nullable(2)]
 	private CameraConfig DefaultConfig;
 
-	// Token: 0x04001388 RID: 5000
+	// Token: 0x040013CB RID: 5067
 	[Nullable(2)]
 	private CameraConfig FightConfig;
 
-	// Token: 0x04001389 RID: 5001
+	// Token: 0x040013CC RID: 5068
 	private readonly Dictionary<int, CameraConfig> SubConfigs = new Dictionary<int, CameraConfig>();
 
-	// Token: 0x0400138A RID: 5002
+	// Token: 0x040013CD RID: 5069
 	private readonly Dictionary<int, CameraConfig> FocusConfigs = new Dictionary<int, CameraConfig>();
 
-	// Token: 0x0400138B RID: 5003
+	// Token: 0x040013CE RID: 5070
 	private readonly Dictionary<int, CameraConfig> AccompanyConfigs = new Dictionary<int, CameraConfig>();
 
-	// Token: 0x0400138C RID: 5004
+	// Token: 0x040013CF RID: 5071
 	private readonly HashSet<int> CurrentSubTagSet = new HashSet<int>();
 
-	// Token: 0x0400138D RID: 5005
+	// Token: 0x040013D0 RID: 5072
 	private readonly HashSet<int> CurrentFocusTagSet = new HashSet<int>();
 
-	// Token: 0x0400138E RID: 5006
+	// Token: 0x040013D1 RID: 5073
 	private readonly HashSet<int> CurrentAccompanyTagSet = new HashSet<int>();
 
-	// Token: 0x0400138F RID: 5007
+	// Token: 0x040013D2 RID: 5074
 	private readonly Comparison<CameraConfig> CameraConfigCompare = (CameraConfig a, CameraConfig b) => a.Priority - b.Priority;
 
-	// Token: 0x04001390 RID: 5008
+	// Token: 0x040013D3 RID: 5075
 	private readonly RbTree<CameraConfig> CurrentConfigList;
 
-	// Token: 0x04001391 RID: 5009
+	// Token: 0x040013D4 RID: 5076
 	private readonly Dictionary<UDataTable, DtCameraConfig> CharacterCameraConfigs = new Dictionary<UDataTable, DtCameraConfig>();
 
-	// Token: 0x04001392 RID: 5010
+	// Token: 0x040013D5 RID: 5077
 	public readonly Dictionary<EAdjustPlayerCamera, int?> AdjustCameraTagMap = new Dictionary<EAdjustPlayerCamera, int?>();
 
-	// Token: 0x04001393 RID: 5011
+	// Token: 0x040013D6 RID: 5078
 	public readonly HashSet<EntityHandle> AdjustCameraEntityHandleSet = new HashSet<EntityHandle>();
 
-	// Token: 0x04001394 RID: 5012
+	// Token: 0x040013D7 RID: 5079
 	private bool IsFighting;
 
-	// Token: 0x04001395 RID: 5013
+	// Token: 0x040013D8 RID: 5080
 	[Nullable(2)]
 	private EntityHandle SelfCharacterEntityInternal;
 
-	// Token: 0x04001396 RID: 5014
+	// Token: 0x040013D9 RID: 5081
 	[Nullable(2)]
 	private EntityHandle FloatCharacterEntityInternal;
 
-	// Token: 0x04001397 RID: 5015
+	// Token: 0x040013DA RID: 5082
 	[Nullable(2)]
 	private Entity FocusTarget;
 
-	// Token: 0x04001398 RID: 5016
+	// Token: 0x040013DB RID: 5083
 	private string FocusTargetSocketName = "";
 
-	// Token: 0x04001399 RID: 5017
+	// Token: 0x040013DC RID: 5084
 	private bool IsUniqueFade;
 
-	// Token: 0x0400139A RID: 5018
+	// Token: 0x040013DD RID: 5085
 	private bool FadeInTriggered;
 
-	// Token: 0x0400139B RID: 5019
+	// Token: 0x040013DE RID: 5086
 	private float ConfigFadeInDuration = 10f;
 
-	// Token: 0x0400139C RID: 5020
+	// Token: 0x040013DF RID: 5087
 	[Nullable(2)]
 	private CurveBase ConfigFadeInCurve;
 
-	// Token: 0x0400139D RID: 5021
+	// Token: 0x040013E0 RID: 5088
 	private bool FadeOutTriggered;
 
-	// Token: 0x0400139E RID: 5022
+	// Token: 0x040013E1 RID: 5089
 	private float ConfigFadeOutDuration = 10f;
 
-	// Token: 0x0400139F RID: 5023
+	// Token: 0x040013E2 RID: 5090
 	[Nullable(2)]
 	private CurveBase ConfigFadeOutCurve;
 
-	// Token: 0x040013A0 RID: 5024
+	// Token: 0x040013E3 RID: 5091
 	public bool AutoCamera = true;
 
-	// Token: 0x040013A1 RID: 5025
+	// Token: 0x040013E4 RID: 5092
 	public bool AdjustCamera = true;
 
-	// Token: 0x040013A2 RID: 5026
+	// Token: 0x040013E5 RID: 5093
 	public bool ModifyCamera = true;
 
-	// Token: 0x040013A3 RID: 5027
+	// Token: 0x040013E6 RID: 5094
 	public bool FocusCamera = true;
 
-	// Token: 0x040013A4 RID: 5028
+	// Token: 0x040013E7 RID: 5095
 	public bool SidestepCamera = true;
 
-	// Token: 0x040013A5 RID: 5029
+	// Token: 0x040013E8 RID: 5096
 	public bool ClimbCamera = true;
 
-	// Token: 0x040013A6 RID: 5030
+	// Token: 0x040013E9 RID: 5097
 	private bool HasChangedConfig = true;
 
-	// Token: 0x040013A8 RID: 5032
+	// Token: 0x040013EA RID: 5098
 	[TupleElementNames(new string[]
 	{
 		"Value",

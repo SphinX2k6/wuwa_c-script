@@ -5,19 +5,19 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002C91 RID: 11409
+// Token: 0x020021EA RID: 8682
 [NullableContext(2)]
 [Nullable(0)]
 public class UiModelMorphComponent : UiModelComponentBase
 {
-	// Token: 0x06017D7C RID: 97660 RVA: 0x00610667 File Offset: 0x0060E867
+	// Token: 0x060155F0 RID: 87536 RVA: 0x00636207 File Offset: 0x00634407
 	protected override void OnStart()
 	{
 		this.UiModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 		this.UiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 	}
 
-	// Token: 0x06017D7D RID: 97661 RVA: 0x0061068B File Offset: 0x0060E88B
+	// Token: 0x060155F1 RID: 87537 RVA: 0x0063622B File Offset: 0x0063442B
 	protected override void OnEnd()
 	{
 		this.MorphType = EUiModelMorphType.默认形态;
@@ -28,13 +28,13 @@ public class UiModelMorphComponent : UiModelComponentBase
 		this.IsEnableMorphInternal = false;
 	}
 
-	// Token: 0x06017D7E RID: 97662 RVA: 0x006106B7 File Offset: 0x0060E8B7
+	// Token: 0x060155F2 RID: 87538 RVA: 0x00636257 File Offset: 0x00634457
 	public EUiModelMorphType GetMorphType()
 	{
 		return this.MorphType;
 	}
 
-	// Token: 0x06017D7F RID: 97663 RVA: 0x006106C0 File Offset: 0x0060E8C0
+	// Token: 0x060155F3 RID: 87539 RVA: 0x00636260 File Offset: 0x00634460
 	public unsafe bool SetMorphType(EUiModelMorphType morphType)
 	{
 		if (!this.IsEnableMorphInternal)
@@ -84,7 +84,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 		return true;
 	}
 
-	// Token: 0x06017D80 RID: 97664 RVA: 0x0061080C File Offset: 0x0060EA0C
+	// Token: 0x060155F4 RID: 87540 RVA: 0x006363AC File Offset: 0x006345AC
 	public IUiMorphData GetCurrentMorphData()
 	{
 		if (this.MorphDataMap == null)
@@ -99,14 +99,14 @@ public class UiModelMorphComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D81 RID: 97665 RVA: 0x0061083B File Offset: 0x0060EA3B
+	// Token: 0x060155F5 RID: 87541 RVA: 0x006363DB File Offset: 0x006345DB
 	protected virtual void PreloadMorphId()
 	{
 		this.MorphIdMap = null;
 		this.IsEnableMorphInternal = false;
 	}
 
-	// Token: 0x06017D82 RID: 97666 RVA: 0x0061084C File Offset: 0x0060EA4C
+	// Token: 0x060155F6 RID: 87542 RVA: 0x006363EC File Offset: 0x006345EC
 	public void PreloadMorphData()
 	{
 		this.PreloadMorphId();
@@ -187,7 +187,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 		this.MorphType = EUiModelMorphType.默认形态;
 	}
 
-	// Token: 0x06017D83 RID: 97667 RVA: 0x00610A90 File Offset: 0x0060EC90
+	// Token: 0x060155F7 RID: 87543 RVA: 0x00636630 File Offset: 0x00634830
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -198,7 +198,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D84 RID: 97668 RVA: 0x00610A93 File Offset: 0x0060EC93
+	// Token: 0x060155F8 RID: 87544 RVA: 0x00636633 File Offset: 0x00634833
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -209,7 +209,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017D85 RID: 97669 RVA: 0x00610A96 File Offset: 0x0060EC96
+	// Token: 0x060155F9 RID: 87545 RVA: 0x00636636 File Offset: 0x00634836
 	public void ClearData()
 	{
 		if (this.MorphDataMap != null)
@@ -224,7 +224,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 		this.MorphIdMap = null;
 	}
 
-	// Token: 0x06017D86 RID: 97670 RVA: 0x00610ACC File Offset: 0x0060ECCC
+	// Token: 0x060155FA RID: 87546 RVA: 0x0063666C File Offset: 0x0063486C
 	[NullableContext(1)]
 	public List<UiModelDecorationParam> GetModelMeshDecorationList(TArray<SModelDecorationConfig> configArray)
 	{
@@ -261,13 +261,13 @@ public class UiModelMorphComponent : UiModelComponentBase
 		return list;
 	}
 
-	// Token: 0x0400B1C7 RID: 45511
+	// Token: 0x0400B532 RID: 46386
 	protected EUiModelMorphType MorphType;
 
-	// Token: 0x0400B1C8 RID: 45512
+	// Token: 0x0400B533 RID: 46387
 	protected bool IsEnableMorphInternal;
 
-	// Token: 0x0400B1C9 RID: 45513
+	// Token: 0x0400B534 RID: 46388
 	[Nullable(new byte[]
 	{
 		2,
@@ -275,7 +275,7 @@ public class UiModelMorphComponent : UiModelComponentBase
 	})]
 	protected Dictionary<EUiModelMorphType, IUiMorphData> MorphDataMap;
 
-	// Token: 0x0400B1CA RID: 45514
+	// Token: 0x0400B535 RID: 46389
 	[Nullable(new byte[]
 	{
 		2,
@@ -283,9 +283,9 @@ public class UiModelMorphComponent : UiModelComponentBase
 	})]
 	protected Dictionary<EUiModelMorphType, IUiMorphId> MorphIdMap;
 
-	// Token: 0x0400B1CB RID: 45515
+	// Token: 0x0400B536 RID: 46390
 	protected UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B1CC RID: 45516
+	// Token: 0x0400B537 RID: 46391
 	protected UiModelActorComponent UiModelActorComponent;
 }

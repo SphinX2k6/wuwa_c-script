@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001240 RID: 4672
+	// Token: 0x02001380 RID: 4992
 	public static class EFlagChallengeSystemVarTypeExtensions
 	{
-		// Token: 0x060069C7 RID: 27079 RVA: 0x000FD770 File Offset: 0x000FB970
+		// Token: 0x0600701A RID: 28698 RVA: 0x0010B39C File Offset: 0x0010959C
 		public static string ToEnumString(this EFlagChallengeSystemVarType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069C8 RID: 27080 RVA: 0x000FD798 File Offset: 0x000FB998
+		// Token: 0x0600701B RID: 28699 RVA: 0x0010B3C4 File Offset: 0x001095C4
 		public static EFlagChallengeSystemVarType FromString(string name)
 		{
 			EFlagChallengeSystemVarType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069C9 RID: 27081 RVA: 0x000FD7C1 File Offset: 0x000FB9C1
+		// Token: 0x0600701C RID: 28700 RVA: 0x0010B3ED File Offset: 0x001095ED
 		public static bool TryFromString(string name, out EFlagChallengeSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x060069CA RID: 27082 RVA: 0x000FD7E6 File Offset: 0x000FB9E6
+		// Token: 0x0600701D RID: 28701 RVA: 0x0010B412 File Offset: 0x00109612
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069CB RID: 27083 RVA: 0x000FD7F6 File Offset: 0x000FB9F6
+		// Token: 0x0600701E RID: 28702 RVA: 0x0010B422 File Offset: 0x00109622
 		public static EFlagChallengeSystemVarType[] GetValues()
 		{
 			return new EFlagChallengeSystemVarType[1];
 		}
 
-		// Token: 0x060069CC RID: 27084 RVA: 0x000FD7FE File Offset: 0x000FB9FE
+		// Token: 0x0600701F RID: 28703 RVA: 0x0010B42A File Offset: 0x0010962A
 		public static string[] GetNames()
 		{
 			return new string[]

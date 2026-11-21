@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF8 RID: 8184
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200223F RID: 8767
 	public class ITriggerActions
 	{
-		// Token: 0x0600B3FE RID: 46078 RVA: 0x001A2B84 File Offset: 0x001A0D84
+		// Token: 0x0600BF14 RID: 48916 RVA: 0x001B90F0 File Offset: 0x001B72F0
 		private ITriggerActions_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B3FF RID: 46079 RVA: 0x001A2BBC File Offset: 0x001A0DBC
+		// Token: 0x0600BF15 RID: 48917 RVA: 0x001B9128 File Offset: 0x001B7328
 		public static ITriggerActions Create([Nullable(2)] ITriggerActions instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B400 RID: 46080 RVA: 0x001A2BCF File Offset: 0x001A0DCF
+		// Token: 0x0600BF16 RID: 48918 RVA: 0x001B913B File Offset: 0x001B733B
 		public static ITriggerActions CreateFromSetValue([Nullable(2)] ITriggerActions_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B401 RID: 46081 RVA: 0x001A2BE2 File Offset: 0x001A0DE2
+		// Token: 0x0600BF17 RID: 48919 RVA: 0x001B914E File Offset: 0x001B734E
 		public ITriggerActions_SetValue ToSetValue()
 		{
 			return new ITriggerActions_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003763 RID: 14179
-		// (get) Token: 0x0600B402 RID: 46082 RVA: 0x001A2BF8 File Offset: 0x001A0DF8
-		// (set) Token: 0x0600B403 RID: 46083 RVA: 0x001A2C8B File Offset: 0x001A0E8B
+		// Token: 0x17003A3B RID: 14907
+		// (get) Token: 0x0600BF18 RID: 48920 RVA: 0x001B9164 File Offset: 0x001B7364
+		// (set) Token: 0x0600BF19 RID: 48921 RVA: 0x001B91F7 File Offset: 0x001B73F7
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C84 RID: 27780
+		// Token: 0x04007286 RID: 29318
 		[Nullable(2)]
 		protected ITriggerActions FbInstance;
 
-		// Token: 0x04006C85 RID: 27781
+		// Token: 0x04007287 RID: 29319
 		[Nullable(2)]
 		protected ITriggerActions_SetValue PocoInterface;
 
-		// Token: 0x04006C86 RID: 27782
+		// Token: 0x04007288 RID: 29320
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04006C87 RID: 27783
+		// Token: 0x04007289 RID: 29321
 		private bool _ActionsInited;
 	}
 }

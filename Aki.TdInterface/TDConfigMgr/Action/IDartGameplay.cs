@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001968 RID: 6504
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001AF3 RID: 6899
 	public class IDartGameplay : IUiGame
 	{
-		// Token: 0x06008B53 RID: 35667 RVA: 0x00147A80 File Offset: 0x00145C80
+		// Token: 0x06009289 RID: 37513 RVA: 0x001574BC File Offset: 0x001556BC
 		private IDartGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008B54 RID: 35668 RVA: 0x00147AB8 File Offset: 0x00145CB8
+		// Token: 0x0600928A RID: 37514 RVA: 0x001574F4 File Offset: 0x001556F4
 		public static IDartGameplay Create([Nullable(2)] IDartGameplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B55 RID: 35669 RVA: 0x00147ACB File Offset: 0x00145CCB
+		// Token: 0x0600928B RID: 37515 RVA: 0x00157507 File Offset: 0x00155707
 		public static IDartGameplay CreateFromSetValue([Nullable(2)] IDartGameplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008B56 RID: 35670 RVA: 0x00147ADE File Offset: 0x00145CDE
+		// Token: 0x0600928C RID: 37516 RVA: 0x0015751A File Offset: 0x0015571A
 		public new IDartGameplay_SetValue ToSetValue()
 		{
 			return new IDartGameplay_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002CE2 RID: 11490
-		// (get) Token: 0x06008B57 RID: 35671 RVA: 0x00147B09 File Offset: 0x00145D09
-		// (set) Token: 0x06008B58 RID: 35672 RVA: 0x00147B34 File Offset: 0x00145D34
+		// Token: 0x17002EE4 RID: 12004
+		// (get) Token: 0x0600928D RID: 37517 RVA: 0x00157545 File Offset: 0x00155745
+		// (set) Token: 0x0600928E RID: 37518 RVA: 0x00157570 File Offset: 0x00155770
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CE3 RID: 11491
-		// (get) Token: 0x06008B59 RID: 35673 RVA: 0x00147B42 File Offset: 0x00145D42
-		// (set) Token: 0x06008B5A RID: 35674 RVA: 0x00147B6D File Offset: 0x00145D6D
+		// Token: 0x17002EE5 RID: 12005
+		// (get) Token: 0x0600928F RID: 37519 RVA: 0x0015757E File Offset: 0x0015577E
+		// (set) Token: 0x06009290 RID: 37520 RVA: 0x001575A9 File Offset: 0x001557A9
 		public virtual int MachineEntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CE4 RID: 11492
-		// (get) Token: 0x06008B5B RID: 35675 RVA: 0x00147B7B File Offset: 0x00145D7B
-		// (set) Token: 0x06008B5C RID: 35676 RVA: 0x00147BA2 File Offset: 0x00145DA2
+		// Token: 0x17002EE6 RID: 12006
+		// (get) Token: 0x06009291 RID: 37521 RVA: 0x001575B7 File Offset: 0x001557B7
+		// (set) Token: 0x06009292 RID: 37522 RVA: 0x001575DE File Offset: 0x001557DE
 		public virtual IDartInteractTypeBase InteractType
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040056F1 RID: 22257
+		// Token: 0x04005B45 RID: 23365
 		[Nullable(2)]
 		protected new IDartGameplay FbInstance;
 
-		// Token: 0x040056F2 RID: 22258
+		// Token: 0x04005B46 RID: 23366
 		[Nullable(2)]
 		protected new IDartGameplay_SetValue PocoInterface;
 	}

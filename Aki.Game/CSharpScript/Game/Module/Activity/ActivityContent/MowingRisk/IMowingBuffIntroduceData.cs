@@ -3,53 +3,53 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063B7 RID: 25527
+	// Token: 0x02005335 RID: 21301
 	[NullableContext(1)]
 	public interface IMowingBuffIntroduceData
 	{
-		// Token: 0x17009395 RID: 37781
-		// (get) Token: 0x06040385 RID: 263045
-		// (set) Token: 0x06040386 RID: 263046
+		// Token: 0x170066F7 RID: 26359
+		// (get) Token: 0x06035046 RID: 217158
+		// (set) Token: 0x06035047 RID: 217159
 		string BackgroundPath { get; set; }
 
-		// Token: 0x17009396 RID: 37782
-		// (get) Token: 0x06040387 RID: 263047
-		// (set) Token: 0x06040388 RID: 263048
+		// Token: 0x170066F8 RID: 26360
+		// (get) Token: 0x06035048 RID: 217160
+		// (set) Token: 0x06035049 RID: 217161
 		string LevelTextId { get; set; }
 
-		// Token: 0x17009397 RID: 37783
-		// (get) Token: 0x06040389 RID: 263049
-		// (set) Token: 0x0604038A RID: 263050
+		// Token: 0x170066F9 RID: 26361
+		// (get) Token: 0x0603504A RID: 217162
+		// (set) Token: 0x0603504B RID: 217163
 		string[] LevelTextArgs { get; set; }
 
-		// Token: 0x17009398 RID: 37784
-		// (get) Token: 0x0604038B RID: 263051
-		// (set) Token: 0x0604038C RID: 263052
+		// Token: 0x170066FA RID: 26362
+		// (get) Token: 0x0603504C RID: 217164
+		// (set) Token: 0x0603504D RID: 217165
 		string NameTextId { get; set; }
 
-		// Token: 0x17009399 RID: 37785
-		// (get) Token: 0x0604038D RID: 263053
-		// (set) Token: 0x0604038E RID: 263054
+		// Token: 0x170066FB RID: 26363
+		// (get) Token: 0x0603504E RID: 217166
+		// (set) Token: 0x0603504F RID: 217167
 		string TipsTextId { get; set; }
 
-		// Token: 0x1700939A RID: 37786
-		// (get) Token: 0x0604038F RID: 263055
-		// (set) Token: 0x06040390 RID: 263056
+		// Token: 0x170066FC RID: 26364
+		// (get) Token: 0x06035050 RID: 217168
+		// (set) Token: 0x06035051 RID: 217169
 		string[] TipsArgs { get; set; }
 
-		// Token: 0x1700939B RID: 37787
-		// (get) Token: 0x06040391 RID: 263057
-		// (set) Token: 0x06040392 RID: 263058
+		// Token: 0x170066FD RID: 26365
+		// (get) Token: 0x06035052 RID: 217170
+		// (set) Token: 0x06035053 RID: 217171
 		string IconPath { get; set; }
 
-		// Token: 0x1700939C RID: 37788
-		// (get) Token: 0x06040393 RID: 263059
-		// (set) Token: 0x06040394 RID: 263060
+		// Token: 0x170066FE RID: 26366
+		// (get) Token: 0x06035054 RID: 217172
+		// (set) Token: 0x06035055 RID: 217173
 		string HexColor { get; set; }
 
-		// Token: 0x1700939D RID: 37789
-		// (get) Token: 0x06040395 RID: 263061
-		// (set) Token: 0x06040396 RID: 263062
+		// Token: 0x170066FF RID: 26367
+		// (get) Token: 0x06035056 RID: 217174
+		// (set) Token: 0x06035057 RID: 217175
 		bool IsUnlock { get; set; }
 	}
 }

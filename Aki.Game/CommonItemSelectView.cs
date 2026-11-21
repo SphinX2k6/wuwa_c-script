@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017F7 RID: 6135
+// Token: 0x02000CB0 RID: 3248
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemDataBase
 {
-	// Token: 0x0600B3AD RID: 45997 RVA: 0x00289B2B File Offset: 0x00287D2B
+	// Token: 0x06008797 RID: 34711 RVA: 0x00294227 File Offset: 0x00292427
 	[NullableContext(2)]
 	public CommonItemSelectView(UUIItem commonItemActor = null)
 	{
@@ -19,7 +19,7 @@ public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemD
 		}
 	}
 
-	// Token: 0x0600B3AE RID: 45998 RVA: 0x00289B44 File Offset: 0x00287D44
+	// Token: 0x06008798 RID: 34712 RVA: 0x00294240 File Offset: 0x00292440
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,13 +31,13 @@ public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemD
 		};
 	}
 
-	// Token: 0x0600B3AF RID: 45999 RVA: 0x00289BB4 File Offset: 0x00287DB4
+	// Token: 0x06008799 RID: 34713 RVA: 0x002942B0 File Offset: 0x002924B0
 	private void RefreshEmptyItem(List<T> itemDataBaseList)
 	{
 		base.GetItem(3).SetUIActive(itemDataBaseList == null || itemDataBaseList.Count <= 0);
 	}
 
-	// Token: 0x0600B3B0 RID: 46000 RVA: 0x00289BD4 File Offset: 0x00287DD4
+	// Token: 0x0600879A RID: 34714 RVA: 0x002942D0 File Offset: 0x002924D0
 	public void UpdateSelectableComponent(ESelectableComponentType selectableComponentType, List<T> itemDataBaseList, List<ISelectedData> selectedDataList, SelectableComponentData data, [Nullable(2)] CommonIntensifyPropExpData expData = null)
 	{
 		if (this.SelectableComponent == null)
@@ -58,44 +58,44 @@ public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemD
 		this.SelectableComponent.UpdateComponent(itemDataBaseList, selectedDataList, expData);
 	}
 
-	// Token: 0x0600B3B1 RID: 46001 RVA: 0x00289C4F File Offset: 0x00287E4F
+	// Token: 0x0600879B RID: 34715 RVA: 0x0029434B File Offset: 0x0029254B
 	public List<ISelectedData> GetCurrentSelectedData()
 	{
 		return this.SelectableComponent.GetCurrentSelectedData();
 	}
 
-	// Token: 0x0600B3B2 RID: 46002 RVA: 0x00289C5C File Offset: 0x00287E5C
+	// Token: 0x0600879C RID: 34716 RVA: 0x00294358 File Offset: 0x00292558
 	public void UpdateByDataList(List<T> itemDataBaseList)
 	{
 		this.SelectableComponent.UpdateDataList(itemDataBaseList);
 		this.RefreshEmptyItem(itemDataBaseList);
 	}
 
-	// Token: 0x0600B3B3 RID: 46003 RVA: 0x00289C71 File Offset: 0x00287E71
+	// Token: 0x0600879D RID: 34717 RVA: 0x0029436D File Offset: 0x0029256D
 	public void RefreshPartByIndex(int index)
 	{
 		this.SelectableComponent.RefreshPartByIndex(index);
 	}
 
-	// Token: 0x0600B3B4 RID: 46004 RVA: 0x00289C7F File Offset: 0x00287E7F
+	// Token: 0x0600879E RID: 34718 RVA: 0x0029437B File Offset: 0x0029257B
 	public void UpdateChangeItemSelectList()
 	{
 		this.SelectableComponent.UpdateChangeItemSelectList();
 	}
 
-	// Token: 0x0600B3B5 RID: 46005 RVA: 0x00289C8C File Offset: 0x00287E8C
+	// Token: 0x0600879F RID: 34719 RVA: 0x00294388 File Offset: 0x00292588
 	public void SetMaxSize(int maxSize)
 	{
 		this.SelectableComponent.SetMaxSize(maxSize);
 	}
 
-	// Token: 0x0600B3B6 RID: 46006 RVA: 0x00289C9A File Offset: 0x00287E9A
+	// Token: 0x060087A0 RID: 34720 RVA: 0x00294396 File Offset: 0x00292596
 	public void SetOnlyGold(bool onlyGold)
 	{
 		this.SelectableComponent.SetOnlyGold(onlyGold);
 	}
 
-	// Token: 0x0600B3B7 RID: 46007 RVA: 0x00289CA8 File Offset: 0x00287EA8
+	// Token: 0x060087A1 RID: 34721 RVA: 0x002943A4 File Offset: 0x002925A4
 	protected override void OnBeforeDestroy()
 	{
 		SelectableComponent<T> selectableComponent = this.SelectableComponent;
@@ -106,7 +106,7 @@ public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemD
 		selectableComponent.Destroy(null);
 	}
 
-	// Token: 0x0400515A RID: 20826
+	// Token: 0x04005205 RID: 20997
 	[Nullable(new byte[]
 	{
 		2,
@@ -114,17 +114,17 @@ public class CommonItemSelectView<[Nullable(0)] T> : UiPanelBase where T : ItemD
 	})]
 	private SelectableComponent<T> SelectableComponent;
 
-	// Token: 0x02007DF3 RID: 32243
+	// Token: 0x02006F79 RID: 28537
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029386 RID: 168838
+		// Token: 0x040246B1 RID: 149169
 		LoopScrooller,
-		// Token: 0x04029387 RID: 168839
+		// Token: 0x040246B2 RID: 149170
 		LoopItem,
-		// Token: 0x04029388 RID: 168840
+		// Token: 0x040246B3 RID: 149171
 		FilterItem,
-		// Token: 0x04029389 RID: 168841
+		// Token: 0x040246B4 RID: 149172
 		EmptyItem
 	}
 }

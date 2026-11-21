@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A71 RID: 19057
+	// Token: 0x02003A19 RID: 14873
 	public enum ETrapDefenseTalentTreePathType
 	{
-		// Token: 0x0401A6A4 RID: 108196
+		// Token: 0x04014FF6 RID: 86006
 		Solid,
-		// Token: 0x0401A6A5 RID: 108197
+		// Token: 0x04014FF7 RID: 86007
 		Dashed
 	}
 }

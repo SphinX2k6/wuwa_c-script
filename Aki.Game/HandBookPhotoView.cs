@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E0E RID: 7694
+// Token: 0x020012D0 RID: 4816
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookPhotoView : UiViewBase
 {
-	// Token: 0x0600E9FD RID: 59901 RVA: 0x00375DD1 File Offset: 0x00373FD1
+	// Token: 0x0600BE1C RID: 48668 RVA: 0x00381AD9 File Offset: 0x0037FCD9
 	public HandBookPhotoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E9FE RID: 59902 RVA: 0x00375DDC File Offset: 0x00373FDC
+	// Token: 0x0600BE1D RID: 48669 RVA: 0x00381AE4 File Offset: 0x0037FCE4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class HandBookPhotoView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E9FF RID: 59903 RVA: 0x00375F84 File Offset: 0x00374184
+	// Token: 0x0600BE1E RID: 48670 RVA: 0x00381C8C File Offset: 0x0037FE8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HandBookPhotoView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class HandBookPhotoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA00 RID: 59904 RVA: 0x00375FC7 File Offset: 0x003741C7
+	// Token: 0x0600BE1F RID: 48671 RVA: 0x00381CCF File Offset: 0x0037FECF
 	protected override void OnStart()
 	{
 		this.HandBookPhotoData = (this.OpenParam as HandBookPhotoData);
@@ -69,7 +69,7 @@ public class HandBookPhotoView : UiViewBase
 		this.UpdateShareBtnItem();
 	}
 
-	// Token: 0x0600EA01 RID: 59905 RVA: 0x00376006 File Offset: 0x00374206
+	// Token: 0x0600BE20 RID: 48672 RVA: 0x00381D0E File Offset: 0x0037FF0E
 	private void UpdateShareBtnItem()
 	{
 		if (this.ShareBtnItem == null)
@@ -102,7 +102,7 @@ public class HandBookPhotoView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600EA02 RID: 59906 RVA: 0x00376038 File Offset: 0x00374238
+	// Token: 0x0600BE21 RID: 48673 RVA: 0x00381D40 File Offset: 0x0037FF40
 	private void RefreshAllInfoByIndex(int index)
 	{
 		int count = this.HandBookPhotoData.TextureList.Count;
@@ -158,13 +158,13 @@ public class HandBookPhotoView : UiViewBase
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x0600EA03 RID: 59907 RVA: 0x003761E0 File Offset: 0x003743E0
+	// Token: 0x0600BE22 RID: 48674 RVA: 0x00381EE8 File Offset: 0x003800E8
 	private void SetTexture(string texturePath)
 	{
 		base.SetTextureByPath(texturePath, base.GetTexture(3), null, null);
 	}
 
-	// Token: 0x0600EA04 RID: 59908 RVA: 0x00376205 File Offset: 0x00374405
+	// Token: 0x0600BE23 RID: 48675 RVA: 0x00381F0D File Offset: 0x0038010D
 	private void OnClickLeftButton()
 	{
 		if (this.HandBookPhotoData == null)
@@ -179,7 +179,7 @@ public class HandBookPhotoView : UiViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600EA05 RID: 59909 RVA: 0x0037622D File Offset: 0x0037442D
+	// Token: 0x0600BE24 RID: 48676 RVA: 0x00381F35 File Offset: 0x00380135
 	private void OnClickRightButton()
 	{
 		if (this.HandBookPhotoData == null)
@@ -194,7 +194,7 @@ public class HandBookPhotoView : UiViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600EA06 RID: 59910 RVA: 0x00376268 File Offset: 0x00374468
+	// Token: 0x0600BE25 RID: 48677 RVA: 0x00381F70 File Offset: 0x00380170
 	private void Refresh()
 	{
 		if (this.HandBookPhotoData.HandBookType == EHandBookTabType.Geography)
@@ -213,21 +213,21 @@ public class HandBookPhotoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA07 RID: 59911 RVA: 0x003762C8 File Offset: 0x003744C8
+	// Token: 0x0600BE26 RID: 48678 RVA: 0x00381FD0 File Offset: 0x003801D0
 	private void RefreshChipPhoto(int index)
 	{
 		string texture = this.HandBookPhotoData.TextureList[index];
 		this.SetTexture(texture);
 	}
 
-	// Token: 0x0600EA08 RID: 59912 RVA: 0x003762EE File Offset: 0x003744EE
+	// Token: 0x0600BE27 RID: 48679 RVA: 0x00381FF6 File Offset: 0x003801F6
 	private void RefreshGeographyPhoto(int index)
 	{
 		this.ReadGeographyHandBook(index);
 		this.RefreshAllInfoByIndex(index);
 	}
 
-	// Token: 0x0600EA09 RID: 59913 RVA: 0x00376300 File Offset: 0x00374500
+	// Token: 0x0600BE28 RID: 48680 RVA: 0x00382008 File Offset: 0x00380208
 	private void ReadGeographyHandBook(int index)
 	{
 		int id = this.HandBookPhotoData.ConfigId[index];
@@ -242,14 +242,14 @@ public class HandBookPhotoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA0A RID: 59914 RVA: 0x00376340 File Offset: 0x00374540
+	// Token: 0x0600BE29 RID: 48681 RVA: 0x00382048 File Offset: 0x00380248
 	private void RefreshPlotPhoto(int index)
 	{
 		this.ReadPlotHandBook(index);
 		this.RefreshAllInfoByIndex(index);
 	}
 
-	// Token: 0x0600EA0B RID: 59915 RVA: 0x00376350 File Offset: 0x00374550
+	// Token: 0x0600BE2A RID: 48682 RVA: 0x00382058 File Offset: 0x00380258
 	private void ReadPlotHandBook(int index)
 	{
 		int id = this.HandBookPhotoData.ConfigId[index];
@@ -264,13 +264,13 @@ public class HandBookPhotoView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA0C RID: 59916 RVA: 0x00376390 File Offset: 0x00374590
+	// Token: 0x0600BE2B RID: 48683 RVA: 0x00382098 File Offset: 0x00380298
 	private void OnClickCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600EA0D RID: 59917 RVA: 0x00376399 File Offset: 0x00374599
+	// Token: 0x0600BE2C RID: 48684 RVA: 0x003820A1 File Offset: 0x003802A1
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.OnPhotoSelect, this.HandBookPhotoData.ConfigId[this.CurIndex]);
@@ -278,14 +278,14 @@ public class HandBookPhotoView : UiViewBase
 		this.CurIndex = 0;
 	}
 
-	// Token: 0x04006C97 RID: 27799
+	// Token: 0x04006D78 RID: 28024
 	[Nullable(2)]
 	private HandBookPhotoData HandBookPhotoData;
 
-	// Token: 0x04006C98 RID: 27800
+	// Token: 0x04006D79 RID: 28025
 	[Nullable(2)]
 	private ShareBtnItem ShareBtnItem;
 
-	// Token: 0x04006C99 RID: 27801
+	// Token: 0x04006D7A RID: 28026
 	private int CurIndex;
 }

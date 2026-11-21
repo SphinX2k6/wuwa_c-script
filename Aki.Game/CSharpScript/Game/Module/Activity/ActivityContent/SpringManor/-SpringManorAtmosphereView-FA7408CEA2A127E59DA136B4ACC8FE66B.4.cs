@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200607C RID: 24700
+	// Token: 0x02004FFA RID: 20474
 	internal enum <SpringManorAtmosphereView>FA7408CEA2A127E59DA136B4ACC8FE66B7D57F2B971AE2342A38959E9E953B533__EGetWayItem
 	{
-		// Token: 0x04020AB9 RID: 133817
+		// Token: 0x0401B3E6 RID: 111590
 		Button,
-		// Token: 0x04020ABA RID: 133818
+		// Token: 0x0401B3E7 RID: 111591
 		SprBg,
-		// Token: 0x04020ABB RID: 133819
+		// Token: 0x0401B3E8 RID: 111592
 		Desc,
-		// Token: 0x04020ABC RID: 133820
+		// Token: 0x0401B3E9 RID: 111593
 		Normal,
-		// Token: 0x04020ABD RID: 133821
+		// Token: 0x0401B3EA RID: 111594
 		Lock,
-		// Token: 0x04020ABE RID: 133822
+		// Token: 0x0401B3EB RID: 111595
 		Finish
 	}
 }

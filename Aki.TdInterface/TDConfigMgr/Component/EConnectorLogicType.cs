@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000087 RID: 135
+	// Token: 0x0200008C RID: 140
 	[EnumExtensions]
 	public enum EConnectorLogicType
 	{
-		// Token: 0x0400037E RID: 894
+		// Token: 0x04000397 RID: 919
 		Range,
-		// Token: 0x0400037F RID: 895
+		// Token: 0x04000398 RID: 920
 		PointToPointPathAdvance
 	}
 }

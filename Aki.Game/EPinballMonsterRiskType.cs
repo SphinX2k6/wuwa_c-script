@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001416 RID: 5142
+// Token: 0x020008CA RID: 2250
 public enum EPinballMonsterRiskType
 {
-	// Token: 0x04004030 RID: 16432
+	// Token: 0x040040C8 RID: 16584
 	Normal = 1,
-	// Token: 0x04004031 RID: 16433
+	// Token: 0x040040C9 RID: 16585
 	Elite,
-	// Token: 0x04004032 RID: 16434
+	// Token: 0x040040CA RID: 16586
 	Boss
 }

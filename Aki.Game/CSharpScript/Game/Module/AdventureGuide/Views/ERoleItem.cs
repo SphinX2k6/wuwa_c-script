@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005ED5 RID: 24277
+	// Token: 0x02004EBC RID: 20156
 	public enum ERoleItem
 	{
-		// Token: 0x040203B3 RID: 132019
+		// Token: 0x0401AE82 RID: 110210
 		Texture
 	}
 }

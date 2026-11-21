@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005459 RID: 21593
+	// Token: 0x020059DF RID: 23007
 	public class IInteractiveComponentT
 	{
-		// Token: 0x17009EFF RID: 40703
-		// (get) Token: 0x0602385F RID: 145503 RVA: 0x004EA22A File Offset: 0x004E842A
-		// (set) Token: 0x06023860 RID: 145504 RVA: 0x004EA232 File Offset: 0x004E8432
+		// Token: 0x1700A739 RID: 42809
+		// (get) Token: 0x06025917 RID: 153879 RVA: 0x0052729E File Offset: 0x0052549E
+		// (set) Token: 0x06025918 RID: 153880 RVA: 0x005272A6 File Offset: 0x005254A6
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009F00 RID: 40704
-		// (get) Token: 0x06023861 RID: 145505 RVA: 0x004EA23B File Offset: 0x004E843B
-		// (set) Token: 0x06023862 RID: 145506 RVA: 0x004EA243 File Offset: 0x004E8443
+		// Token: 0x1700A73A RID: 42810
+		// (get) Token: 0x06025919 RID: 153881 RVA: 0x005272AF File Offset: 0x005254AF
+		// (set) Token: 0x0602591A RID: 153882 RVA: 0x005272B7 File Offset: 0x005254B7
 		public string Content { get; set; }
 
-		// Token: 0x17009F01 RID: 40705
-		// (get) Token: 0x06023863 RID: 145507 RVA: 0x004EA24C File Offset: 0x004E844C
-		// (set) Token: 0x06023864 RID: 145508 RVA: 0x004EA254 File Offset: 0x004E8454
+		// Token: 0x1700A73B RID: 42811
+		// (get) Token: 0x0602591B RID: 153883 RVA: 0x005272C0 File Offset: 0x005254C0
+		// (set) Token: 0x0602591C RID: 153884 RVA: 0x005272C8 File Offset: 0x005254C8
 		public string Icon { get; set; }
 
-		// Token: 0x17009F02 RID: 40706
-		// (get) Token: 0x06023865 RID: 145509 RVA: 0x004EA25D File Offset: 0x004E845D
-		// (set) Token: 0x06023866 RID: 145510 RVA: 0x004EA265 File Offset: 0x004E8465
+		// Token: 0x1700A73C RID: 42812
+		// (get) Token: 0x0602591D RID: 153885 RVA: 0x005272D1 File Offset: 0x005254D1
+		// (set) Token: 0x0602591E RID: 153886 RVA: 0x005272D9 File Offset: 0x005254D9
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023867 RID: 145511 RVA: 0x004EA26E File Offset: 0x004E846E
+		// Token: 0x0602591F RID: 153887 RVA: 0x005272E2 File Offset: 0x005254E2
 		public IInteractiveComponentT()
 		{
 			this.Disabled = false;

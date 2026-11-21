@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200114E RID: 4430
+// Token: 0x02000602 RID: 1538
 public class BabelTowerDeTermSelectDesItem : GridProxyAbstract<int>
 {
-	// Token: 0x06007442 RID: 29762 RVA: 0x0017BE30 File Offset: 0x0017A030
+	// Token: 0x060047D9 RID: 18393 RVA: 0x0018497C File Offset: 0x00182B7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,13 +34,13 @@ public class BabelTowerDeTermSelectDesItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007443 RID: 29763 RVA: 0x0017BF18 File Offset: 0x0017A118
+	// Token: 0x060047DA RID: 18394 RVA: 0x00184A64 File Offset: 0x00182C64
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06007444 RID: 29764 RVA: 0x0017BF2C File Offset: 0x0017A12C
+	// Token: 0x060047DB RID: 18395 RVA: 0x00184A78 File Offset: 0x00182C78
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.DeTermId = data;
@@ -56,7 +56,7 @@ public class BabelTowerDeTermSelectDesItem : GridProxyAbstract<int>
 		levelSequencePlayer.StopCurrentSequence(false, true);
 	}
 
-	// Token: 0x06007445 RID: 29765 RVA: 0x0017BFBD File Offset: 0x0017A1BD
+	// Token: 0x060047DC RID: 18396 RVA: 0x00184B09 File Offset: 0x00182D09
 	private void OnClickBtn()
 	{
 		Action<int> onClickCallBack = this.OnClickCallBack;
@@ -67,7 +67,7 @@ public class BabelTowerDeTermSelectDesItem : GridProxyAbstract<int>
 		onClickCallBack(this.DeTermId);
 	}
 
-	// Token: 0x06007446 RID: 29766 RVA: 0x0017BFD8 File Offset: 0x0017A1D8
+	// Token: 0x060047DD RID: 18397 RVA: 0x00184B24 File Offset: 0x00182D24
 	public void PlayChoseSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -83,33 +83,33 @@ public class BabelTowerDeTermSelectDesItem : GridProxyAbstract<int>
 		levelSequencePlayer2.PlayLevelSequenceByName("Loop_Center_Once", false, null, false);
 	}
 
-	// Token: 0x0400358B RID: 13707
+	// Token: 0x04003624 RID: 13860
 	public int DeTermId;
 
-	// Token: 0x0400358C RID: 13708
+	// Token: 0x04003625 RID: 13861
 	[Nullable(2)]
 	public LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400358D RID: 13709
+	// Token: 0x04003626 RID: 13862
 	[Nullable(2)]
 	public Action<int> OnClickCallBack;
 
-	// Token: 0x020076FF RID: 30463
+	// Token: 0x0200688E RID: 26766
 	private class EComponentDefine
 	{
-		// Token: 0x0402741E RID: 160798
+		// Token: 0x0402275F RID: 141151
 		public const int NameText = 0;
 
-		// Token: 0x0402741F RID: 160799
+		// Token: 0x04022760 RID: 141152
 		public const int NumberText = 1;
 
-		// Token: 0x04027420 RID: 160800
+		// Token: 0x04022761 RID: 141153
 		public const int BgItem = 2;
 
-		// Token: 0x04027421 RID: 160801
+		// Token: 0x04022762 RID: 141154
 		public const int DeTermBtn = 3;
 
-		// Token: 0x04027422 RID: 160802
+		// Token: 0x04022763 RID: 141155
 		public const int TitleText = 4;
 	}
 }

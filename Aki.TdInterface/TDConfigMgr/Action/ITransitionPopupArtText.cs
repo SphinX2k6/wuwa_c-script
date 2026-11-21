@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FE0 RID: 8160
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002227 RID: 8743
 	public class ITransitionPopupArtText : ITransitionPopupStyle
 	{
-		// Token: 0x0600B388 RID: 45960 RVA: 0x001A1F4C File Offset: 0x001A014C
+		// Token: 0x0600BE9E RID: 48798 RVA: 0x001B84B8 File Offset: 0x001B66B8
 		private ITransitionPopupArtText_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B389 RID: 45961 RVA: 0x001A1F84 File Offset: 0x001A0184
+		// Token: 0x0600BE9F RID: 48799 RVA: 0x001B84F0 File Offset: 0x001B66F0
 		public static ITransitionPopupArtText Create([Nullable(2)] ITransitionPopupArtText instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B38A RID: 45962 RVA: 0x001A1F97 File Offset: 0x001A0197
+		// Token: 0x0600BEA0 RID: 48800 RVA: 0x001B8503 File Offset: 0x001B6703
 		public static ITransitionPopupArtText CreateFromSetValue([Nullable(2)] ITransitionPopupArtText_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B38B RID: 45963 RVA: 0x001A1FAA File Offset: 0x001A01AA
+		// Token: 0x0600BEA1 RID: 48801 RVA: 0x001B8516 File Offset: 0x001B6716
 		public new ITransitionPopupArtText_SetValue ToSetValue()
 		{
 			return new ITransitionPopupArtText_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700374C RID: 14156
-		// (get) Token: 0x0600B38C RID: 45964 RVA: 0x001A1FC9 File Offset: 0x001A01C9
-		// (set) Token: 0x0600B38D RID: 45965 RVA: 0x001A1FF4 File Offset: 0x001A01F4
+		// Token: 0x17003A24 RID: 14884
+		// (get) Token: 0x0600BEA2 RID: 48802 RVA: 0x001B8535 File Offset: 0x001B6735
+		// (set) Token: 0x0600BEA3 RID: 48803 RVA: 0x001B8560 File Offset: 0x001B6760
 		public override ETransitionPopupStyleType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700374D RID: 14157
-		// (get) Token: 0x0600B38E RID: 45966 RVA: 0x001A2004 File Offset: 0x001A0204
-		// (set) Token: 0x0600B38F RID: 45967 RVA: 0x001A2065 File Offset: 0x001A0265
+		// Token: 0x17003A25 RID: 14885
+		// (get) Token: 0x0600BEA4 RID: 48804 RVA: 0x001B8570 File Offset: 0x001B6770
+		// (set) Token: 0x0600BEA5 RID: 48805 RVA: 0x001B85D1 File Offset: 0x001B67D1
 		public virtual ITransitionPopupYuanChengArtText ArtTextType
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C51 RID: 27729
+		// Token: 0x04007253 RID: 29267
 		[Nullable(2)]
 		protected new ITransitionPopupArtText FbInstance;
 
-		// Token: 0x04006C52 RID: 27730
+		// Token: 0x04007254 RID: 29268
 		[Nullable(2)]
 		protected new ITransitionPopupArtText_SetValue PocoInterface;
 
-		// Token: 0x04006C53 RID: 27731
+		// Token: 0x04007255 RID: 29269
 		private ITransitionPopupYuanChengArtText _ArtTextTypeCache;
 
-		// Token: 0x04006C54 RID: 27732
+		// Token: 0x04007256 RID: 29270
 		private bool _ArtTextTypeInited;
 	}
 }

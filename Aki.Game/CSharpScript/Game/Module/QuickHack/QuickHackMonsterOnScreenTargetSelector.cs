@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F7D RID: 20349
+	// Token: 0x02003F46 RID: 16198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackMonsterOnScreenTargetSelector : QuickHackBaseOnScreenTargetSelector
 	{
-		// Token: 0x060341D1 RID: 213457 RVA: 0x00C3B2B1 File Offset: 0x00C394B1
+		// Token: 0x0602903F RID: 167999 RVA: 0x00B84A5D File Offset: 0x00B82C5D
 		protected override void OnInit()
 		{
 			this.EntityTypeQuery = (EEntityTypeQuery.PasserbyNPC | EEntityTypeQuery.Boss);
 			this.TargetHackType = EQuickHackTargetType.EnemyMonster;
 		}
 
-		// Token: 0x060341D2 RID: 213458 RVA: 0x00C3B2C8 File Offset: 0x00C394C8
+		// Token: 0x06029040 RID: 168000 RVA: 0x00B84A74 File Offset: 0x00B82C74
 		protected override bool CheckEntityValid(EntityHandle entityHandle)
 		{
 			if (!entityHandle.IsInit)
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.Module.QuickHack
 			return (component3 == null || !component3.IsDead()) && entity.GetComponent<BaseActorComponent>() != null;
 		}
 
-		// Token: 0x060341D3 RID: 213459 RVA: 0x00C3B358 File Offset: 0x00C39558
+		// Token: 0x06029041 RID: 168001 RVA: 0x00B84B04 File Offset: 0x00B82D04
 		protected override bool CheckEntityRendered(EntityHandle entityHandle)
 		{
 			AActor owner = entityHandle.Entity.GetComponent<BaseActorComponent>().Owner;
 			return owner != null && owner.WasRecentlyRenderedOnScreen(0.2f);
 		}
 
-		// Token: 0x060341D4 RID: 213460 RVA: 0x00C3B37A File Offset: 0x00C3957A
+		// Token: 0x06029042 RID: 168002 RVA: 0x00B84B26 File Offset: 0x00B82D26
 		protected override FVectorDouble GetEntityLocation(EntityHandle entityHandle)
 		{
 			return entityHandle.Entity.GetComponent<BaseActorComponent>().ActorLocation;

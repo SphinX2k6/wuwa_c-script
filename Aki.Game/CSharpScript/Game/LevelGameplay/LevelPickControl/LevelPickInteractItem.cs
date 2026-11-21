@@ -4,19 +4,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 {
-	// Token: 0x02006AD4 RID: 27348
+	// Token: 0x02005C4C RID: 23628
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelPickInteractItem : IStaticVariableResetter
 	{
-		// Token: 0x06043F3C RID: 278332 RVA: 0x010AA986 File Offset: 0x010A8B86
+		// Token: 0x0603A085 RID: 237701 RVA: 0x01054036 File Offset: 0x01052236
 		static LevelPickInteractItem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelPickInteractItem.CreateStaticDefaultValue), new Action(LevelPickInteractItem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x1700997C RID: 39292
-		// (get) Token: 0x06043F3D RID: 278333 RVA: 0x010AA9A5 File Offset: 0x010A8BA5
+		// Token: 0x17006E7F RID: 28287
+		// (get) Token: 0x0603A086 RID: 237702 RVA: 0x01054055 File Offset: 0x01052255
 		public bool IsValid
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F3E RID: 278334 RVA: 0x010AA9C4 File Offset: 0x010A8BC4
+		// Token: 0x0603A087 RID: 237703 RVA: 0x01054074 File Offset: 0x01052274
 		public void Init(AActor actor, Action<AActor> onClick, [Nullable(new byte[]
 		{
 			2,
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.OnPickCallback = onPick;
 		}
 
-		// Token: 0x06043F3F RID: 278335 RVA: 0x010AA9DC File Offset: 0x010A8BDC
+		// Token: 0x0603A088 RID: 237704 RVA: 0x0105408C File Offset: 0x0105228C
 		public void RefreshBox(AActor actor)
 		{
 			if (UKuroLevelPlayLibrary.GetActorScreenBoundingBox(Global.CharacterController, actor, ref LevelPickInteractItem.ScreenMinRef, ref LevelPickInteractItem.ScreenMaxRef))
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.ScreenBoundingBoxMax.Y = 0.0;
 		}
 
-		// Token: 0x06043F40 RID: 278336 RVA: 0x010AAAB0 File Offset: 0x010A8CB0
+		// Token: 0x0603A089 RID: 237705 RVA: 0x01054160 File Offset: 0x01052360
 		public bool CheckInside(Vector2D mousePosition)
 		{
 			return mousePosition.X > this.ScreenBoundingBoxMin.X && mousePosition.Y > this.ScreenBoundingBoxMin.Y && mousePosition.X < this.ScreenBoundingBoxMax.X && mousePosition.Y < this.ScreenBoundingBoxMax.Y;
 		}
 
-		// Token: 0x06043F41 RID: 278337 RVA: 0x010AAB0C File Offset: 0x010A8D0C
+		// Token: 0x0603A08A RID: 237706 RVA: 0x010541BC File Offset: 0x010523BC
 		public void OnPick()
 		{
 			if (this.Owner == null)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F42 RID: 278338 RVA: 0x010AAB8C File Offset: 0x010A8D8C
+		// Token: 0x0603A08B RID: 237707 RVA: 0x0105423C File Offset: 0x0105243C
 		public void OnClick()
 		{
 			if (this.Owner == null)
@@ -101,35 +101,35 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x06043F43 RID: 278339 RVA: 0x010AAC09 File Offset: 0x010A8E09
+		// Token: 0x0603A08C RID: 237708 RVA: 0x010542B9 File Offset: 0x010524B9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043F44 RID: 278340 RVA: 0x010AAC0B File Offset: 0x010A8E0B
+		// Token: 0x0603A08D RID: 237709 RVA: 0x010542BB File Offset: 0x010524BB
 		public static void ResetStaticDefaultValue()
 		{
 			LevelPickInteractItem.ScreenMinRef = default(FVector2D);
 			LevelPickInteractItem.ScreenMaxRef = default(FVector2D);
 		}
 
-		// Token: 0x04023851 RID: 145489
+		// Token: 0x0401EAF1 RID: 125681
 		private static FVector2D ScreenMinRef;
 
-		// Token: 0x04023852 RID: 145490
+		// Token: 0x0401EAF2 RID: 125682
 		private static FVector2D ScreenMaxRef;
 
-		// Token: 0x04023853 RID: 145491
+		// Token: 0x0401EAF3 RID: 125683
 		private readonly Vector2D ScreenBoundingBoxMin = Vector2D.Create();
 
-		// Token: 0x04023854 RID: 145492
+		// Token: 0x0401EAF4 RID: 125684
 		private readonly Vector2D ScreenBoundingBoxMax = Vector2D.Create();
 
-		// Token: 0x04023855 RID: 145493
+		// Token: 0x0401EAF5 RID: 125685
 		[Nullable(2)]
 		private AActor Owner;
 
-		// Token: 0x04023856 RID: 145494
+		// Token: 0x0401EAF6 RID: 125686
 		[Nullable(new byte[]
 		{
 			2,
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 		})]
 		private Action<AActor> OnClickCallback;
 
-		// Token: 0x04023857 RID: 145495
+		// Token: 0x0401EAF7 RID: 125687
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020023A4 RID: 9124
+// Token: 0x02001889 RID: 6281
 public interface IWeekRewardData
 {
-	// Token: 0x170017AF RID: 6063
-	// (get) Token: 0x060123F8 RID: 74744
-	// (set) Token: 0x060123F9 RID: 74745
+	// Token: 0x170017E9 RID: 6121
+	// (get) Token: 0x0600F8AA RID: 63658
+	// (set) Token: 0x0600F8AB RID: 63659
 	int ItemId { get; set; }
 
-	// Token: 0x170017B0 RID: 6064
-	// (get) Token: 0x060123FA RID: 74746
-	// (set) Token: 0x060123FB RID: 74747
+	// Token: 0x170017EA RID: 6122
+	// (get) Token: 0x0600F8AC RID: 63660
+	// (set) Token: 0x0600F8AD RID: 63661
 	int Count { get; set; }
 }

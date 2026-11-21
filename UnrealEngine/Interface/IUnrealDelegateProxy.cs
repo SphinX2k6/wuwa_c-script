@@ -2,10 +2,10 @@
 
 namespace UnrealEngine.Interface
 {
-	// Token: 0x02002B19 RID: 11033
+	// Token: 0x020008C9 RID: 2249
 	public interface IUnrealDelegateProxy : IUnrealObject
 	{
-		// Token: 0x060284EA RID: 165098
+		// Token: 0x0600BEA4 RID: 48804
 		public abstract static UFunctionStackOnlyPtr StaticFunction();
 	}
 }

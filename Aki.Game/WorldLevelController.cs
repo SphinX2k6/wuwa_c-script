@@ -8,13 +8,13 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002D6F RID: 11631
+// Token: 0x020022C9 RID: 8905
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class WorldLevelController : UiControllerBase
 {
-	// Token: 0x06018755 RID: 100181 RVA: 0x00639D00 File Offset: 0x00637F00
+	// Token: 0x06015FF7 RID: 90103 RVA: 0x0065FD18 File Offset: 0x0065DF18
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OriginWorldLevelUp, new Action(this.OnOriginWorldLevelUp));
@@ -25,7 +25,7 @@ public class WorldLevelController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.TsSyncOriginWorldLevelUpEvent, new Action(this.TsSyncOriginWorldLevelUpEvent));
 	}
 
-	// Token: 0x06018756 RID: 100182 RVA: 0x00639DB4 File Offset: 0x00637FB4
+	// Token: 0x06015FF8 RID: 90104 RVA: 0x0065FDCC File Offset: 0x0065DFCC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OriginWorldLevelUp, new Action(this.OnOriginWorldLevelUp));
@@ -36,29 +36,29 @@ public class WorldLevelController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.TsSyncOriginWorldLevelUpEvent, new Action(this.TsSyncOriginWorldLevelUpEvent));
 	}
 
-	// Token: 0x06018757 RID: 100183 RVA: 0x00639E66 File Offset: 0x00638066
+	// Token: 0x06015FF9 RID: 90105 RVA: 0x0065FE7E File Offset: 0x0065E07E
 	protected override void OnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06018758 RID: 100184 RVA: 0x00639E68 File Offset: 0x00638068
+	// Token: 0x06015FFA RID: 90106 RVA: 0x0065FE80 File Offset: 0x0065E080
 	protected override void OnUnRegisterNetEvent()
 	{
 	}
 
-	// Token: 0x06018759 RID: 100185 RVA: 0x00639E6A File Offset: 0x0063806A
+	// Token: 0x06015FFB RID: 90107 RVA: 0x0065FE82 File Offset: 0x0065E082
 	public void OnBasicInfoNotify(RepeatedField<PlayerAttr> attributes)
 	{
 		this.SetWorldLevelAttributes(attributes);
 	}
 
-	// Token: 0x0601875A RID: 100186 RVA: 0x00639E73 File Offset: 0x00638073
+	// Token: 0x06015FFC RID: 90108 RVA: 0x0065FE8B File Offset: 0x0065E08B
 	public void OnPlayerAttrNotify(RepeatedField<PlayerAttr> attributes)
 	{
 		this.SetWorldLevelAttributes(attributes);
 	}
 
-	// Token: 0x0601875B RID: 100187 RVA: 0x00639E7C File Offset: 0x0063807C
+	// Token: 0x06015FFD RID: 90109 RVA: 0x0065FE94 File Offset: 0x0065E094
 	public void SetWorldLevelAttributes(RepeatedField<PlayerAttr> attributes)
 	{
 		foreach (PlayerAttr playerAttr in attributes)
@@ -98,7 +98,7 @@ public class WorldLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601875C RID: 100188 RVA: 0x00639FAC File Offset: 0x006381AC
+	// Token: 0x06015FFE RID: 90110 RVA: 0x0065FFC4 File Offset: 0x0065E1C4
 	public void OnOriginWorldLevelUp()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.WorldLevelUpView))
@@ -109,7 +109,7 @@ public class WorldLevelController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.WorldLevelUpView, null, null);
 	}
 
-	// Token: 0x0601875D RID: 100189 RVA: 0x00639FE1 File Offset: 0x006381E1
+	// Token: 0x06015FFF RID: 90111 RVA: 0x0065FFF9 File Offset: 0x0065E1F9
 	public void OpenWorldLevelInfoView()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.WorldLevelInfoView))
@@ -118,7 +118,7 @@ public class WorldLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601875E RID: 100190 RVA: 0x0063A008 File Offset: 0x00638208
+	// Token: 0x06016000 RID: 90112 RVA: 0x00660020 File Offset: 0x0065E220
 	public void SendWorldLevelDownRequest()
 	{
 		WorldLevelDownRequest message = WorldLevelDownRequest.Create();
@@ -137,11 +137,11 @@ public class WorldLevelController : UiControllerBase
 				ScrollingTipsController.Instance.ShowTipsByText(this.GetLocalText("WorldLevelAdjustTo", WorldLevelModel.Instance.CurWorldLevel.ToString()));
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(worldLevelDownResponse.ErrorCode, 27079, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(worldLevelDownResponse.ErrorCode, 28190, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0601875F RID: 100191 RVA: 0x0063A038 File Offset: 0x00638238
+	// Token: 0x06016001 RID: 90113 RVA: 0x00660050 File Offset: 0x0065E250
 	public void SendWorldLevelRegainRequest()
 	{
 		WorldLevelRegainRequest message = WorldLevelRegainRequest.Create();
@@ -160,11 +160,11 @@ public class WorldLevelController : UiControllerBase
 				ScrollingTipsController.Instance.ShowTipsByText(this.GetLocalText("WorldLevelAdjustTo", WorldLevelModel.Instance.CurWorldLevel.ToString()));
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(worldLevelRegainResponse.ErrorCode, 22321, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(worldLevelRegainResponse.ErrorCode, 23479, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x06018760 RID: 100192 RVA: 0x0063A068 File Offset: 0x00638268
+	// Token: 0x06016002 RID: 90114 RVA: 0x00660080 File Offset: 0x0065E280
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.FunctionView && UiManager.Instance.IsViewShow(EUiViewName.WorldLevelInfoView))
@@ -173,7 +173,7 @@ public class WorldLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018761 RID: 100193 RVA: 0x0063A098 File Offset: 0x00638298
+	// Token: 0x06016003 RID: 90115 RVA: 0x006600B0 File Offset: 0x0065E2B0
 	private void OnBackLoginView()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.WorldLevelInfoView))
@@ -182,7 +182,7 @@ public class WorldLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018762 RID: 100194 RVA: 0x0063A0BC File Offset: 0x006382BC
+	// Token: 0x06016004 RID: 90116 RVA: 0x006600D4 File Offset: 0x0065E2D4
 	public string GetLocalText(string textId, string param1)
 	{
 		string textById = TextConfig.Instance.GetTextById(textId);
@@ -191,26 +191,26 @@ public class WorldLevelController : UiControllerBase
 		return UKuroStaticLibrary.KuroFormatText(textById ?? "", tarray);
 	}
 
-	// Token: 0x06018763 RID: 100195 RVA: 0x0063A0F0 File Offset: 0x006382F0
+	// Token: 0x06016005 RID: 90117 RVA: 0x00660108 File Offset: 0x0065E308
 	private void OnTsResponseWorldLevelChangeInFight(bool state)
 	{
 		WorldLevelModel.Instance.TsFightState = state;
 	}
 
-	// Token: 0x06018764 RID: 100196 RVA: 0x0063A0FD File Offset: 0x006382FD
+	// Token: 0x06016006 RID: 90118 RVA: 0x00660115 File Offset: 0x0065E315
 	private void TsSyncWorldLevelChangeEvent()
 	{
 		EventSystem.Instance.Emit(EEventName.CurWorldLevelChange);
 	}
 
-	// Token: 0x06018765 RID: 100197 RVA: 0x0063A10F File Offset: 0x0063830F
+	// Token: 0x06016007 RID: 90119 RVA: 0x00660127 File Offset: 0x0065E327
 	private void TsSyncOriginWorldLevelUpEvent()
 	{
 		EventSystem.Instance.Emit(EEventName.OriginWorldLevelUp);
 	}
 
-	// Token: 0x1700210A RID: 8458
-	// (get) Token: 0x06018766 RID: 100198 RVA: 0x0063A121 File Offset: 0x00638321
+	// Token: 0x17002165 RID: 8549
+	// (get) Token: 0x06016008 RID: 90120 RVA: 0x00660139 File Offset: 0x0065E339
 	public static WorldLevelController Instance
 	{
 		get
@@ -219,7 +219,7 @@ public class WorldLevelController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018767 RID: 100199 RVA: 0x0063A128 File Offset: 0x00638328
+	// Token: 0x06016009 RID: 90121 RVA: 0x00660140 File Offset: 0x0065E340
 	public static WorldLevelController GetOrCreateInstance()
 	{
 		if (WorldLevelController._Instance == null)
@@ -229,7 +229,7 @@ public class WorldLevelController : UiControllerBase
 		return WorldLevelController._Instance;
 	}
 
-	// Token: 0x06018768 RID: 100200 RVA: 0x0063A13C File Offset: 0x0063833C
+	// Token: 0x0601600A RID: 90122 RVA: 0x00660154 File Offset: 0x0065E354
 	public static bool CreateInstance()
 	{
 		if (WorldLevelController._Instance != null)
@@ -240,24 +240,24 @@ public class WorldLevelController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06018769 RID: 100201 RVA: 0x0063A152 File Offset: 0x00638352
+	// Token: 0x0601600B RID: 90123 RVA: 0x0066016A File Offset: 0x0065E36A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601876A RID: 100202 RVA: 0x0063A154 File Offset: 0x00638354
+	// Token: 0x0601600C RID: 90124 RVA: 0x0066016C File Offset: 0x0065E36C
 	public static void ResetStaticDefaultValue()
 	{
 		WorldLevelController._Instance = null;
 	}
 
-	// Token: 0x0601876B RID: 100203 RVA: 0x0063A15C File Offset: 0x0063835C
+	// Token: 0x0601600D RID: 90125 RVA: 0x00660174 File Offset: 0x0065E374
 	static WorldLevelController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WorldLevelController.CreateStaticDefaultValue), new Action(WorldLevelController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B556 RID: 46422
+	// Token: 0x0400B8CB RID: 47307
 	[Nullable(2)]
 	private static WorldLevelController _Instance;
 }

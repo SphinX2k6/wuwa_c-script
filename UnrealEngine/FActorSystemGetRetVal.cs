@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200188A RID: 6282
+	// Token: 0x020003AE RID: 942
 	public sealed class FActorSystemGetRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601726B RID: 94827 RVA: 0x0021BC00 File Offset: 0x00219E00
+		// Token: 0x06005D16 RID: 23830 RVA: 0x000830A0 File Offset: 0x000812A0
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FActorSystemGetRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601726C RID: 94828 RVA: 0x0021BC0C File Offset: 0x00219E0C
+		// Token: 0x06005D17 RID: 23831 RVA: 0x000830AC File Offset: 0x000812AC
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FActorSystemGetRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FActorSystemGetRetVal._FunctionPtr;
 		}
 
-		// Token: 0x0601726D RID: 94829 RVA: 0x0021BC2F File Offset: 0x00219E2F
+		// Token: 0x06005D18 RID: 23832 RVA: 0x000830CF File Offset: 0x000812CF
 		public FActorSystemGetRetVal()
 		{
 		}
 
-		// Token: 0x0601726E RID: 94830 RVA: 0x0021BC37 File Offset: 0x00219E37
+		// Token: 0x06005D19 RID: 23833 RVA: 0x000830D7 File Offset: 0x000812D7
 		[NullableContext(2)]
 		public FActorSystemGetRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601726F RID: 94831 RVA: 0x0021BC41 File Offset: 0x00219E41
+		// Token: 0x06005D1A RID: 23834 RVA: 0x000830E1 File Offset: 0x000812E1
 		public FActorSystemGetRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017270 RID: 94832 RVA: 0x0021BC4C File Offset: 0x00219E4C
+		// Token: 0x06005D1B RID: 23835 RVA: 0x000830EC File Offset: 0x000812EC
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate) ?? ((FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate)Delegate.CreateDelegate(typeof(FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017271 RID: 94833 RVA: 0x0021BC7E File Offset: 0x00219E7E
+		// Token: 0x06005D1C RID: 23836 RVA: 0x0008311E File Offset: 0x0008131E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate Callback)
 		{
 			if (FActorSystemGetRetVal.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FActorSystemGetRetVal.RegisterId);
 		}
 
-		// Token: 0x06017272 RID: 94834 RVA: 0x0021BCB8 File Offset: 0x00219EB8
+		// Token: 0x06005D1D RID: 23837 RVA: 0x00083158 File Offset: 0x00081358
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe AActor Execute([Nullable(new byte[]
 		{
 			0,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(ptr->__Result);
 		}
 
-		// Token: 0x06017273 RID: 94835 RVA: 0x0021BD0C File Offset: 0x00219F0C
+		// Token: 0x06005D1E RID: 23838 RVA: 0x000831AC File Offset: 0x000813AC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate factorSystemGetRetVal_ScriptDelegate = target as FActorSystemGetRetVal.FActorSystemGetRetVal_ScriptDelegate;
@@ -98,30 +95,30 @@ namespace UnrealEngine
 			((FActorSystemGetRetVal.__FActorSystemGetRetVal_DelegateParams*)__Parameters)->__Result = ((aactor != null) ? aactor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0400C8E6 RID: 51430
+		// Token: 0x040026CF RID: 9935
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C8E7 RID: 51431
+		// Token: 0x040026D0 RID: 9936
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.ActorSystemGetRetVal__DelegateSignature";
 
-		// Token: 0x0400C8E8 RID: 51432
+		// Token: 0x040026D1 RID: 9937
 		private static int RegisterId;
 
-		// Token: 0x02002F84 RID: 12164
-		// (Invoke) Token: 0x06028582 RID: 165250
+		// Token: 0x02000AA7 RID: 2727
+		// (Invoke) Token: 0x0600BEF3 RID: 48883
 		public delegate AActor FActorSystemGetRetVal_ScriptDelegate([Nullable(new byte[]
 		{
 			0,
 			1
 		})] TSubclassOf<AActor> Class, in FTransformDouble Transform);
 
-		// Token: 0x02002F85 RID: 12165
+		// Token: 0x02000AA8 RID: 2728
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 96)]
-		protected ref struct __FActorSystemGetRetVal_DelegateParams
+		private ref struct __FActorSystemGetRetVal_DelegateParams
 		{
-			// Token: 0x04016B44 RID: 92996
+			// Token: 0x04005B01 RID: 23297
 			[Nullable(new byte[]
 			{
 				0,
@@ -130,20 +127,20 @@ namespace UnrealEngine
 			[FieldOffset(0)]
 			public TSubclassOf<AActor> Class;
 
-			// Token: 0x04016B45 RID: 92997
+			// Token: 0x04005B02 RID: 23298
 			[FieldOffset(16)]
 			public FTransformDouble Transform;
 
-			// Token: 0x04016B46 RID: 92998
+			// Token: 0x04005B03 RID: 23299
 			[FieldOffset(80)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002F86 RID: 12166
+		// Token: 0x02000AA9 RID: 2729
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B47 RID: 92999
+			// Token: 0x04005B04 RID: 23300
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

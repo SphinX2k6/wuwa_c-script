@@ -16,13 +16,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ECE RID: 28366
+	// Token: 0x0200604E RID: 24654
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemDollGrabMachineComponent : EntityComponent
 	{
-		// Token: 0x17009AD7 RID: 39639
-		// (get) Token: 0x06045162 RID: 282978 RVA: 0x011121F7 File Offset: 0x011103F7
+		// Token: 0x1700700E RID: 28686
+		// (get) Token: 0x0603B303 RID: 242435 RVA: 0x010BC2D3 File Offset: 0x010BA4D3
 		public float TimeLimit
 		{
 			get
@@ -36,8 +36,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD8 RID: 39640
-		// (get) Token: 0x06045163 RID: 282979 RVA: 0x0111220E File Offset: 0x0111040E
+		// Token: 0x1700700F RID: 28687
+		// (get) Token: 0x0603B304 RID: 242436 RVA: 0x010BC2EA File Offset: 0x010BA4EA
 		public FTransformDouble ActorTransform
 		{
 			get
@@ -46,8 +46,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AD9 RID: 39641
-		// (get) Token: 0x06045164 RID: 282980 RVA: 0x0111221B File Offset: 0x0111041B
+		// Token: 0x17007010 RID: 28688
+		// (get) Token: 0x0603B305 RID: 242437 RVA: 0x010BC2F7 File Offset: 0x010BA4F7
 		public bool IsEndlessMode
 		{
 			get
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADA RID: 39642
-		// (get) Token: 0x06045165 RID: 282981 RVA: 0x01112223 File Offset: 0x01110423
+		// Token: 0x17007011 RID: 28689
+		// (get) Token: 0x0603B306 RID: 242438 RVA: 0x010BC2FF File Offset: 0x010BA4FF
 		public int LeaveDollCount
 		{
 			get
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADB RID: 39643
-		// (get) Token: 0x06045166 RID: 282982 RVA: 0x0111222C File Offset: 0x0111042C
+		// Token: 0x17007012 RID: 28690
+		// (get) Token: 0x0603B307 RID: 242439 RVA: 0x010BC308 File Offset: 0x010BA508
 		[Nullable(1)]
 		public List<IGrabItemData> CurrentDropItemList
 		{
@@ -92,8 +92,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADC RID: 39644
-		// (get) Token: 0x06045167 RID: 282983 RVA: 0x011122AC File Offset: 0x011104AC
+		// Token: 0x17007013 RID: 28691
+		// (get) Token: 0x0603B308 RID: 242440 RVA: 0x010BC388 File Offset: 0x010BA588
 		public float PlayCost
 		{
 			get
@@ -103,8 +103,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADD RID: 39645
-		// (get) Token: 0x06045168 RID: 282984 RVA: 0x011122DB File Offset: 0x011104DB
+		// Token: 0x17007014 RID: 28692
+		// (get) Token: 0x0603B309 RID: 242441 RVA: 0x010BC3B7 File Offset: 0x010BA5B7
 		public bool IsMachineActive
 		{
 			get
@@ -113,8 +113,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADE RID: 39646
-		// (get) Token: 0x06045169 RID: 282985 RVA: 0x011122E3 File Offset: 0x011104E3
+		// Token: 0x17007015 RID: 28693
+		// (get) Token: 0x0603B30A RID: 242442 RVA: 0x010BC3BF File Offset: 0x010BA5BF
 		public bool IsMachinePause
 		{
 			get
@@ -123,8 +123,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ADF RID: 39647
-		// (get) Token: 0x0604516A RID: 282986 RVA: 0x011122EB File Offset: 0x011104EB
+		// Token: 0x17007016 RID: 28694
+		// (get) Token: 0x0603B30B RID: 242443 RVA: 0x010BC3C7 File Offset: 0x010BA5C7
 		public IDollGrabInfiniteRewardData EndlessRewardData
 		{
 			get
@@ -133,8 +133,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE0 RID: 39648
-		// (get) Token: 0x0604516B RID: 282987 RVA: 0x011122F3 File Offset: 0x011104F3
+		// Token: 0x17007017 RID: 28695
+		// (get) Token: 0x0603B30C RID: 242444 RVA: 0x010BC3CF File Offset: 0x010BA5CF
 		public BP_DollActor_C MainDollActor
 		{
 			get
@@ -148,8 +148,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE1 RID: 39649
-		// (get) Token: 0x0604516C RID: 282988 RVA: 0x01112308 File Offset: 0x01110508
+		// Token: 0x17007018 RID: 28696
+		// (get) Token: 0x0603B30D RID: 242445 RVA: 0x010BC3E4 File Offset: 0x010BA5E4
 		public int ConditionId
 		{
 			get
@@ -170,8 +170,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE2 RID: 39650
-		// (get) Token: 0x0604516D RID: 282989 RVA: 0x0111234C File Offset: 0x0111054C
+		// Token: 0x17007019 RID: 28697
+		// (get) Token: 0x0603B30E RID: 242446 RVA: 0x010BC428 File Offset: 0x010BA628
 		public IDollGrabInfiniteShowCaseRewardData CurrentScoreRewardData
 		{
 			get
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604516E RID: 282990 RVA: 0x011123BC File Offset: 0x011105BC
+		// Token: 0x0603B30F RID: 242447 RVA: 0x010BC498 File Offset: 0x010BA698
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x0604516F RID: 282991 RVA: 0x01112520 File Offset: 0x01110720
+		// Token: 0x0603B310 RID: 242448 RVA: 0x010BC5FC File Offset: 0x010BA7FC
 		private void OnInitEndlessModeData()
 		{
 			if (this.IsEndlessModeInternal)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045170 RID: 282992 RVA: 0x0111274C File Offset: 0x0111094C
+		// Token: 0x0603B311 RID: 242449 RVA: 0x010BC828 File Offset: 0x010BAA28
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x06045171 RID: 282993 RVA: 0x0111288B File Offset: 0x01110A8B
+		// Token: 0x0603B312 RID: 242450 RVA: 0x010BC967 File Offset: 0x010BAB67
 		protected override void OnActivate()
 		{
 			if (!this.ActorComp.GetIsSceneInteractionLoadCompleted())
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.OnSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x06045172 RID: 282994 RVA: 0x011128C4 File Offset: 0x01110AC4
+		// Token: 0x0603B313 RID: 242451 RVA: 0x010BC9A0 File Offset: 0x010BABA0
 		protected override bool OnEnd()
 		{
 			DgmClawStateController clawStateController = this.ClawStateController;
@@ -394,13 +394,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x06045173 RID: 282995 RVA: 0x011129D9 File Offset: 0x01110BD9
+		// Token: 0x0603B314 RID: 242452 RVA: 0x010BCAB5 File Offset: 0x010BACB5
 		private void OnStateChange(int stateId, bool isReady)
 		{
 			this.CheckSceneItemState();
 		}
 
-		// Token: 0x06045174 RID: 282996 RVA: 0x011129E4 File Offset: 0x01110BE4
+		// Token: 0x0603B315 RID: 242453 RVA: 0x010BCAC0 File Offset: 0x010BACC0
 		public void ExecuteTick(float deltaTime)
 		{
 			if (!this.IsActiveInternal)
@@ -440,13 +440,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045175 RID: 282997 RVA: 0x01112A81 File Offset: 0x01110C81
+		// Token: 0x0603B316 RID: 242454 RVA: 0x010BCB5D File Offset: 0x010BAD5D
 		private bool IsTickEnabled()
 		{
 			return DollGrabMachineController.Instance.CheckRegisterTick(this);
 		}
 
-		// Token: 0x06045176 RID: 282998 RVA: 0x01112A8E File Offset: 0x01110C8E
+		// Token: 0x0603B317 RID: 242455 RVA: 0x010BCB6A File Offset: 0x010BAD6A
 		private void EnableTick()
 		{
 			if (!this.IsTickEnabled())
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045177 RID: 282999 RVA: 0x01112AA3 File Offset: 0x01110CA3
+		// Token: 0x0603B318 RID: 242456 RVA: 0x010BCB7F File Offset: 0x010BAD7F
 		private void DisableTick()
 		{
 			if (this.IsTickEnabled())
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045178 RID: 283000 RVA: 0x01112AB8 File Offset: 0x01110CB8
+		// Token: 0x0603B319 RID: 242457 RVA: 0x010BCB94 File Offset: 0x010BAD94
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.InitDropTriggerActor();
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.CheckSceneItemState();
 		}
 
-		// Token: 0x06045179 RID: 283001 RVA: 0x01112DA4 File Offset: 0x01110FA4
+		// Token: 0x0603B31A RID: 242458 RVA: 0x010BCE84 File Offset: 0x010BB084
 		private void InitDropTriggerActor()
 		{
 			AActor referenceActor = this.ActorComp.GetReferenceActor("DropTriggerBox");
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.GrabEffectTransform = new FTransformDouble?(value);
 		}
 
-		// Token: 0x0604517A RID: 283002 RVA: 0x01112EF8 File Offset: 0x011110F8
+		// Token: 0x0603B31B RID: 242459 RVA: 0x010BCFD8 File Offset: 0x010BB1D8
 		private void InitLightGroup()
 		{
 			AActor referenceActor = this.ActorComp.GetReferenceActor("Lights");
@@ -617,7 +617,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604517B RID: 283003 RVA: 0x01112FA4 File Offset: 0x011111A4
+		// Token: 0x0603B31C RID: 242460 RVA: 0x010BD084 File Offset: 0x010BB284
 		private void InitTeleportTriggerActor()
 		{
 			AActor referenceActor = this.ActorComp.GetReferenceActor("RecycleGroup");
@@ -653,7 +653,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604517C RID: 283004 RVA: 0x011130C8 File Offset: 0x011112C8
+		// Token: 0x0603B31D RID: 242461 RVA: 0x010BD1B0 File Offset: 0x010BB3B0
 		private void InitClawActor()
 		{
 			AActor referenceActor = this.ActorComp.GetReferenceActor("Claw");
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.RoofActor = referenceActor4;
 		}
 
-		// Token: 0x0604517D RID: 283005 RVA: 0x01113211 File Offset: 0x01111411
+		// Token: 0x0603B31E RID: 242462 RVA: 0x010BD2F9 File Offset: 0x010BB4F9
 		public void OnClawSequenceLoaded()
 		{
 			if (this.NeedInitClawStateController && this.ClawStateController != null)
@@ -711,7 +711,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.NeedInitClawStateController = false;
 		}
 
-		// Token: 0x0604517E RID: 283006 RVA: 0x01113238 File Offset: 0x01111438
+		// Token: 0x0603B31F RID: 242463 RVA: 0x010BD320 File Offset: 0x010BB520
 		private void CheckSceneItemState()
 		{
 			if (this.StateComp != null && this.StateComp.State == SceneItemStateComponent.ESceneItemState.Completed)
@@ -743,7 +743,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604517F RID: 283007 RVA: 0x01113340 File Offset: 0x01111540
+		// Token: 0x0603B320 RID: 242464 RVA: 0x010BD428 File Offset: 0x010BB628
 		public void OnStartDollGrabMachine()
 		{
 			if (this.DropTriggerActor != null)
@@ -818,7 +818,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.CurrentDropItemListInternal.Clear();
 		}
 
-		// Token: 0x06045180 RID: 283008 RVA: 0x01113598 File Offset: 0x01111798
+		// Token: 0x0603B321 RID: 242465 RVA: 0x010BD680 File Offset: 0x010BB880
 		[NullableContext(1)]
 		public void OnStopDollGrabMachine(DollGrabStopResponse response)
 		{
@@ -925,7 +925,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			clawStateController.SetTargetState(EDollGrabMachineClawState.Reset);
 		}
 
-		// Token: 0x06045181 RID: 283009 RVA: 0x01113938 File Offset: 0x01111B38
+		// Token: 0x0603B322 RID: 242466 RVA: 0x010BDA20 File Offset: 0x010BBC20
 		public void ChangeClawState(EDollGrabMachineClawState newState)
 		{
 			DgmClawStateController clawStateController = this.ClawStateController;
@@ -936,7 +936,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			clawStateController.SetTargetState(newState);
 		}
 
-		// Token: 0x06045182 RID: 283010 RVA: 0x0111394C File Offset: 0x01111B4C
+		// Token: 0x0603B323 RID: 242467 RVA: 0x010BDA34 File Offset: 0x010BBC34
 		public void StartClawTriggerOverlap()
 		{
 			if (this.ClawActor != null)
@@ -952,7 +952,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045183 RID: 283011 RVA: 0x011139BD File Offset: 0x01111BBD
+		// Token: 0x0603B324 RID: 242468 RVA: 0x010BDAA5 File Offset: 0x010BBCA5
 		public void StopClawTriggerOverlap()
 		{
 			if (this.ClawActor != null)
@@ -962,7 +962,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045184 RID: 283012 RVA: 0x011139E8 File Offset: 0x01111BE8
+		// Token: 0x0603B325 RID: 242469 RVA: 0x010BDAD0 File Offset: 0x010BBCD0
 		private void OnClawTriggerActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null || !this.IsMachineActive)
@@ -984,7 +984,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			EventSystem.Instance.Emit<bool>(EEventName.OnDollGrabMachineGrabbingActorChanged, this.HasGrabbingActor);
 		}
 
-		// Token: 0x06045185 RID: 283013 RVA: 0x01113A49 File Offset: 0x01111C49
+		// Token: 0x0603B326 RID: 242470 RVA: 0x010BDB31 File Offset: 0x010BBD31
 		private void OnClawTriggerActorEndOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null)
@@ -1000,7 +1000,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			EventSystem.Instance.Emit<bool>(EEventName.OnDollGrabMachineGrabbingActorChanged, this.HasGrabbingActor);
 		}
 
-		// Token: 0x06045186 RID: 283014 RVA: 0x01113A88 File Offset: 0x01111C88
+		// Token: 0x0603B327 RID: 242471 RVA: 0x010BDB70 File Offset: 0x010BBD70
 		public void CheckTouchGetItemInClawTrigger()
 		{
 			if (!this.IsMachineActive)
@@ -1036,8 +1036,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE3 RID: 39651
-		// (get) Token: 0x06045187 RID: 283015 RVA: 0x01113B80 File Offset: 0x01111D80
+		// Token: 0x1700701A RID: 28698
+		// (get) Token: 0x0603B328 RID: 242472 RVA: 0x010BDC68 File Offset: 0x010BBE68
 		public bool HasGrabbingActor
 		{
 			get
@@ -1046,8 +1046,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE4 RID: 39652
-		// (get) Token: 0x06045188 RID: 283016 RVA: 0x01113B90 File Offset: 0x01111D90
+		// Token: 0x1700701B RID: 28699
+		// (get) Token: 0x0603B329 RID: 242473 RVA: 0x010BDC78 File Offset: 0x010BBE78
 		[Nullable(1)]
 		public DgmClawBaseMoveState ClawState
 		{
@@ -1063,9 +1063,9 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE5 RID: 39653
-		// (get) Token: 0x06045189 RID: 283017 RVA: 0x01113BA3 File Offset: 0x01111DA3
-		// (set) Token: 0x0604518A RID: 283018 RVA: 0x01113BAB File Offset: 0x01111DAB
+		// Token: 0x1700701C RID: 28700
+		// (get) Token: 0x0603B32A RID: 242474 RVA: 0x010BDC8B File Offset: 0x010BBE8B
+		// (set) Token: 0x0603B32B RID: 242475 RVA: 0x010BDC93 File Offset: 0x010BBE93
 		[Nullable(1)]
 		public DollGrabMachineClawDirection ClawMoveDirection
 		{
@@ -1082,8 +1082,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE6 RID: 39654
-		// (get) Token: 0x0604518B RID: 283019 RVA: 0x01113BCF File Offset: 0x01111DCF
+		// Token: 0x1700701D RID: 28701
+		// (get) Token: 0x0603B32C RID: 242476 RVA: 0x010BDCB7 File Offset: 0x010BBEB7
 		public AKuroLevelSequenceActor ClawAnimSeqActor
 		{
 			get
@@ -1097,8 +1097,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009AE7 RID: 39655
-		// (get) Token: 0x0604518C RID: 283020 RVA: 0x01113BE4 File Offset: 0x01111DE4
+		// Token: 0x1700701E RID: 28702
+		// (get) Token: 0x0603B32D RID: 242477 RVA: 0x010BDCCC File Offset: 0x010BBECC
 		public EDollGrabMachineClawState? LastClawState
 		{
 			get
@@ -1112,7 +1112,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604518D RID: 283021 RVA: 0x01113C0C File Offset: 0x01111E0C
+		// Token: 0x0603B32E RID: 242478 RVA: 0x010BDCF4 File Offset: 0x010BBEF4
 		private unsafe void InitDollItem()
 		{
 			if (this.DollItemPoolActor == null || this.Config == null || this.Config.Items.Count == 0)
@@ -1194,7 +1194,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604518E RID: 283022 RVA: 0x01113F34 File Offset: 0x01112134
+		// Token: 0x0603B32F RID: 242479 RVA: 0x010BE01C File Offset: 0x010BC21C
 		private void OnDropTriggerActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null || !this.IsMachineActive)
@@ -1220,7 +1220,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.NotifyDollGrabRequest(dollGrabMachineItem, dollGrabMachineItem.IsTouchGet);
 		}
 
-		// Token: 0x0604518F RID: 283023 RVA: 0x01113FB4 File Offset: 0x011121B4
+		// Token: 0x0603B330 RID: 242480 RVA: 0x010BE09C File Offset: 0x010BC29C
 		[NullableContext(1)]
 		private void NotifyDollGrabRequest(DollGrabMachineItem itemInfo, bool isTimeBall = false)
 		{
@@ -1373,7 +1373,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}, 0);
 		}
 
-		// Token: 0x06045190 RID: 283024 RVA: 0x011140B2 File Offset: 0x011122B2
+		// Token: 0x0603B331 RID: 242481 RVA: 0x010BE19A File Offset: 0x010BC39A
 		[NullableContext(1)]
 		private void ToggleEnableDollItemActor(BP_DollActor_C dollActor, bool toggleVisibility, bool togglePhysics, bool toggleIdleAnim)
 		{
@@ -1388,7 +1388,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045191 RID: 283025 RVA: 0x011140E4 File Offset: 0x011122E4
+		// Token: 0x0603B332 RID: 242482 RVA: 0x010BE1CC File Offset: 0x010BC3CC
 		private void OnTeleportTriggerActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null)
@@ -1415,7 +1415,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			bp_DollActor_C.D_K2_SetActorLocation(this.TeleportTargetLocationList[num], false, ref fhitResult, true);
 		}
 
-		// Token: 0x06045192 RID: 283026 RVA: 0x01114154 File Offset: 0x01112354
+		// Token: 0x0603B333 RID: 242483 RVA: 0x010BE23C File Offset: 0x010BC43C
 		private void EnableConveyorBelt(bool enable)
 		{
 			if (this.ConveyorBeltActorList.Count == 0)
@@ -1442,7 +1442,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			DollGrabModel.Instance.ToggleCancelShadowCache(enable);
 		}
 
-		// Token: 0x06045193 RID: 283027 RVA: 0x0111421C File Offset: 0x0111241C
+		// Token: 0x0603B334 RID: 242484 RVA: 0x010BE304 File Offset: 0x010BC504
 		private void InitEndlessSpawnPoints()
 		{
 			AActor referenceActor = this.ActorComp.GetReferenceActor("EndlessSpawnPoints");
@@ -1462,7 +1462,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045194 RID: 283028 RVA: 0x011142DC File Offset: 0x011124DC
+		// Token: 0x0603B335 RID: 242485 RVA: 0x010BE3CC File Offset: 0x010BC5CC
 		private void OnEndlessSpawnPointActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null)
@@ -1476,7 +1476,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045195 RID: 283029 RVA: 0x0111433C File Offset: 0x0111253C
+		// Token: 0x0603B336 RID: 242486 RVA: 0x010BE42C File Offset: 0x010BC62C
 		private void OnEndlessSpawnPointActorEndOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null)
@@ -1493,7 +1493,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045196 RID: 283030 RVA: 0x011143AC File Offset: 0x011125AC
+		// Token: 0x0603B337 RID: 242487 RVA: 0x010BE49C File Offset: 0x010BC69C
 		[NullableContext(1)]
 		private void OnEndlessDollGrabResponse(DollGrabMachineItem itemInfo, bool isTimeBall)
 		{
@@ -1527,7 +1527,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.DollItemMap[randomItem] = dollGrabMachineItem;
 		}
 
-		// Token: 0x06045197 RID: 283031 RVA: 0x011144A8 File Offset: 0x011126A8
+		// Token: 0x0603B338 RID: 242488 RVA: 0x010BE598 File Offset: 0x010BC798
 		[NullableContext(1)]
 		private void SpawnEndlessDollItemActor(DollGrabMachineItem itemInfo)
 		{
@@ -1568,7 +1568,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.ToggleEnableDollItemActor(itemInfo.ItemActor, true, true, true);
 		}
 
-		// Token: 0x06045198 RID: 283032 RVA: 0x0111459C File Offset: 0x0111279C
+		// Token: 0x0603B339 RID: 242489 RVA: 0x010BE68C File Offset: 0x010BC88C
 		private void StartEndlessDropTimer()
 		{
 			if (this.EndlessDropTimer != null || this.RefreshIntervalCurve == null)
@@ -1596,7 +1596,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.EndlessDropTimer = TimerSystem.Instance.Delay(ttimerAction, floatValue * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06045199 RID: 283033 RVA: 0x01114614 File Offset: 0x01112814
+		// Token: 0x0603B33A RID: 242490 RVA: 0x010BE704 File Offset: 0x010BC904
 		private void RevertEndlessStartItem()
 		{
 			if (!this.IsEndlessModeInternal)
@@ -1662,7 +1662,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604519A RID: 283034 RVA: 0x011148BC File Offset: 0x01112ABC
+		// Token: 0x0603B33B RID: 242491 RVA: 0x010BE9AC File Offset: 0x010BCBAC
 		private void StartEndlessAudioState()
 		{
 			foreach (EndlessAudioStateInfo endlessAudioStateInfo in this.EndlessAudioDataInternal.Values)
@@ -1671,7 +1671,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604519B RID: 283035 RVA: 0x01114914 File Offset: 0x01112B14
+		// Token: 0x0603B33C RID: 242492 RVA: 0x010BEA04 File Offset: 0x010BCC04
 		private void StopEndlessAudioState()
 		{
 			foreach (EndlessAudioStateInfo endlessAudioStateInfo in this.EndlessAudioDataInternal.Values)
@@ -1680,7 +1680,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604519C RID: 283036 RVA: 0x0111496C File Offset: 0x01112B6C
+		// Token: 0x0603B33D RID: 242493 RVA: 0x010BEA5C File Offset: 0x010BCC5C
 		private void PauseEndlessAudioState()
 		{
 			foreach (EndlessAudioStateInfo endlessAudioStateInfo in this.EndlessAudioDataInternal.Values)
@@ -1693,7 +1693,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604519D RID: 283037 RVA: 0x011149E4 File Offset: 0x01112BE4
+		// Token: 0x0603B33E RID: 242494 RVA: 0x010BEAD4 File Offset: 0x010BCCD4
 		private void ResumeEndlessAudioState()
 		{
 			foreach (EndlessAudioStateInfo endlessAudioStateInfo in this.EndlessAudioDataInternal.Values)
@@ -1706,7 +1706,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604519E RID: 283038 RVA: 0x01114A5C File Offset: 0x01112C5C
+		// Token: 0x0603B33F RID: 242495 RVA: 0x010BEB4C File Offset: 0x010BCD4C
 		private void StartGameplayAudio()
 		{
 			if (!this.IsMachineActive || string.IsNullOrEmpty(this.AkEvent))
@@ -1730,7 +1730,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}));
 		}
 
-		// Token: 0x0604519F RID: 283039 RVA: 0x01114AF4 File Offset: 0x01112CF4
+		// Token: 0x0603B340 RID: 242496 RVA: 0x010BEBE4 File Offset: 0x010BCDE4
 		public void StartDissolve()
 		{
 			if (this.DissolveActor == null || this.DissolveRadius <= 0f || this.DissolvePerSecond <= 0f || this.DissolveActor.DissolveRadius >= this.DissolveRadius || this.DissolveStartTimer != null)
@@ -1788,7 +1788,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060451A0 RID: 283040 RVA: 0x01114CD4 File Offset: 0x01112ED4
+		// Token: 0x0603B341 RID: 242497 RVA: 0x010BEDC4 File Offset: 0x010BCFC4
 		public void StopDissolve()
 		{
 			if (this.DissolveActor == null || this.DissolveRadius <= 0f || this.DissolvePerSecond <= 0f || this.DissolveActor.DissolveRadius <= 0f || this.DissolveCloseTimer != null)
@@ -1853,7 +1853,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060451A1 RID: 283041 RVA: 0x01114EDC File Offset: 0x011130DC
+		// Token: 0x0603B342 RID: 242498 RVA: 0x010BEFCC File Offset: 0x010BD1CC
 		public void PauseDollGrabMachine()
 		{
 			if (!this.IsActiveInternal)
@@ -1894,7 +1894,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.PauseEndlessAudioState();
 		}
 
-		// Token: 0x060451A2 RID: 283042 RVA: 0x01115058 File Offset: 0x01113258
+		// Token: 0x0603B343 RID: 242499 RVA: 0x010BF148 File Offset: 0x010BD348
 		public void ResumeDollGrabMachine()
 		{
 			this.IsActiveInternal = true;
@@ -1935,7 +1935,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.ResumeEndlessAudioState();
 		}
 
-		// Token: 0x060451A3 RID: 283043 RVA: 0x011151D4 File Offset: 0x011133D4
+		// Token: 0x0603B344 RID: 242500 RVA: 0x010BF2C4 File Offset: 0x010BD4C4
 		private void OnBoundaryTriggerActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
 			if (overlappedActor == null || otherActor == null)
@@ -1962,7 +1962,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			dollGrabMachineItem.ItemActor.D_K2_SetActorLocation(newLocation, false, ref fhitResult, true);
 		}
 
-		// Token: 0x060451A4 RID: 283044 RVA: 0x01115264 File Offset: 0x01113464
+		// Token: 0x0603B345 RID: 242501 RVA: 0x010BF354 File Offset: 0x010BD554
 		public void SwitchLightGroup(EDollGrabMachineLightGroupState state)
 		{
 			ULevelSequence sequence;
@@ -1995,7 +1995,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			sequencePlayer3.Play();
 		}
 
-		// Token: 0x060451A5 RID: 283045 RVA: 0x01115344 File Offset: 0x01113544
+		// Token: 0x0603B346 RID: 242502 RVA: 0x010BF434 File Offset: 0x010BD634
 		[NullableContext(1)]
 		private void ResetEndlessRewardData(DollGrabStopResponse response)
 		{
@@ -2010,7 +2010,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060451A6 RID: 283046 RVA: 0x011153D0 File Offset: 0x011135D0
+		// Token: 0x0603B347 RID: 242503 RVA: 0x010BF4C0 File Offset: 0x010BD6C0
 		[NullableContext(1)]
 		private UniTask SetDollActorEndlessMaterial(DollGrabMachineItem itemInfo)
 		{
@@ -2022,7 +2022,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return <SetDollActorEndlessMaterial>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060451A7 RID: 283047 RVA: 0x01115414 File Offset: 0x01113614
+		// Token: 0x0603B348 RID: 242504 RVA: 0x010BF504 File Offset: 0x010BD704
 		public void ToggleShowMainDollActor(bool toggle, bool canClear)
 		{
 			if (this.MainDollActorItem == null)
@@ -2053,7 +2053,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x060451A8 RID: 283048 RVA: 0x011154E0 File Offset: 0x011136E0
+		// Token: 0x0603B349 RID: 242505 RVA: 0x010BF5D0 File Offset: 0x010BD7D0
 		private void OnDollActorBeginPlay(BP_DollActor_C actor)
 		{
 			Log.Instance.Info(ELogModule.DollGrabMachine, ELogAuthor.FJH, "[DollGrabMachineComp] OnDollActorBeginPlay", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2069,7 +2069,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.ToggleEnableDollItemActor(actor, true, false, false);
 		}
 
-		// Token: 0x060451A9 RID: 283049 RVA: 0x01115540 File Offset: 0x01113740
+		// Token: 0x0603B34A RID: 242506 RVA: 0x010BF630 File Offset: 0x010BD830
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -2078,598 +2078,496 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 				return false;
 			}
 			SceneItemDollGrabMachineComponent sceneItemDollGrabMachineComponent = (SceneItemDollGrabMachineComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemDollGrabMachineComponent.CreatureDataComp == null)
 			{
-				if (sceneItemDollGrabMachineComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemDollGrabMachineComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemDollGrabMachineComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemDollGrabMachineComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (sceneItemDollGrabMachineComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DollGrabMachineComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClawActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.ClawActor == null)
-				{
-					this.ClawActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.ClawActor), "ClawActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClawRootCtrlActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.ClawRootCtrlActor == null)
-				{
-					this.ClawRootCtrlActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.ClawRootCtrlActor), "ClawRootCtrlActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClawChainActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.ClawChainActor == null)
-				{
-					this.ClawChainActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.ClawChainActor), "ClawChainActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DropTriggerActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.DropTriggerActor == null)
-				{
-					this.DropTriggerActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.DropTriggerActor), "DropTriggerActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DollItemPoolActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.DollItemPoolActor == null)
-				{
-					this.DollItemPoolActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.DollItemPoolActor), "DollItemPoolActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TeleportTriggerActorList") && sceneItemDollGrabMachineComponent.TeleportTriggerActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.TeleportTriggerActorList), "TeleportTriggerActorList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TeleportTargetLocationList") && sceneItemDollGrabMachineComponent.TeleportTargetLocationList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<FVectorDouble>>(this.TeleportTargetLocationList), "TeleportTargetLocationList"))
+			if (sceneItemDollGrabMachineComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConveyorBeltActorList") && sceneItemDollGrabMachineComponent.ConveyorBeltActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<BP_DollGrabMahcineConveyorBelt_C>>(this.ConveyorBeltActorList), "ConveyorBeltActorList"))
+			if (sceneItemDollGrabMachineComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConveyorBeltMeshBpActor"))
+			if (sceneItemDollGrabMachineComponent.TagComp == null)
 			{
-				if (sceneItemDollGrabMachineComponent.ConveyorBeltMeshBpActor == null)
-				{
-					this.ConveyorBeltMeshBpActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_ConveyorBelt_C>(this.ConveyorBeltMeshBpActor), "ConveyorBeltMeshBpActor"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("DissolveActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.DissolveActor == null)
-				{
-					this.DissolveActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_CenterDissolvePosition_C>(this.DissolveActor), "DissolveActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BoundaryTriggerActorList") && sceneItemDollGrabMachineComponent.BoundaryTriggerActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.BoundaryTriggerActorList), "BoundaryTriggerActorList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RoofActor"))
+			if (sceneItemDollGrabMachineComponent.Config == null)
 			{
-				if (sceneItemDollGrabMachineComponent.RoofActor == null)
-				{
-					this.RoofActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.RoofActor), "RoofActor"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("LightActorGroup"))
-			{
-				if (sceneItemDollGrabMachineComponent.LightActorGroup == null)
-				{
-					this.LightActorGroup = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.LightActorGroup), "LightActorGroup"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClawStateController"))
-			{
-				if (sceneItemDollGrabMachineComponent.ClawStateController == null)
-				{
-					this.ClawStateController = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DgmClawStateController>(this.ClawStateController), "ClawStateController"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ClawMoveDirectionInternal") && sceneItemDollGrabMachineComponent.ClawMoveDirectionInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<DollGrabMachineClawDirection>(this.ClawMoveDirectionInternal), "ClawMoveDirectionInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("NeedInitClawStateController"))
+			if (sceneItemDollGrabMachineComponent.ClawActor == null)
 			{
-				this.NeedInitClawStateController = sceneItemDollGrabMachineComponent.NeedInitClawStateController;
+				this.ClawActor = null;
 			}
-			if (base.CanResetComponentProperty("DollItemMap"))
-			{
-				if (sceneItemDollGrabMachineComponent.DollItemMap == null)
-				{
-					this.DollItemMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, DollGrabMachineItem>>(this.DollItemMap), "DollItemMap"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GrabbedItemList"))
-			{
-				if (sceneItemDollGrabMachineComponent.GrabbedItemList == null)
-				{
-					this.GrabbedItemList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.GrabbedItemList), "GrabbedItemList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GrabbingActorList"))
-			{
-				if (sceneItemDollGrabMachineComponent.GrabbingActorList == null)
-				{
-					this.GrabbingActorList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.GrabbingActorList), "GrabbingActorList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("LeaveDollCountInternal"))
-			{
-				this.LeaveDollCountInternal = sceneItemDollGrabMachineComponent.LeaveDollCountInternal;
-			}
-			if (base.CanResetComponentProperty("CurrentDropItemListInternal") && sceneItemDollGrabMachineComponent.CurrentDropItemListInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.CurrentDropItemListInternal), "CurrentDropItemListInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClawActor), "ClawActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsActiveInternal"))
+			if (sceneItemDollGrabMachineComponent.ClawRootCtrlActor == null)
 			{
-				this.IsActiveInternal = sceneItemDollGrabMachineComponent.IsActiveInternal;
+				this.ClawRootCtrlActor = null;
 			}
-			if (base.CanResetComponentProperty("IsPauseInternal"))
-			{
-				this.IsPauseInternal = sceneItemDollGrabMachineComponent.IsPauseInternal;
-			}
-			if (base.CanResetComponentProperty("IsCacheCheckTouchAction"))
-			{
-				this.IsCacheCheckTouchAction = sceneItemDollGrabMachineComponent.IsCacheCheckTouchAction;
-			}
-			if (base.CanResetComponentProperty("AkEvent"))
-			{
-				this.AkEvent = sceneItemDollGrabMachineComponent.AkEvent;
-			}
-			if (base.CanResetComponentProperty("AkEventHandle"))
-			{
-				this.AkEventHandle = sceneItemDollGrabMachineComponent.AkEventHandle;
-			}
-			if (base.CanResetComponentProperty("GrabEffectTransform"))
-			{
-				this.GrabEffectTransform = sceneItemDollGrabMachineComponent.GrabEffectTransform;
-			}
-			if (base.CanResetComponentProperty("ItemRotationDamping"))
-			{
-				this.ItemRotationDamping = sceneItemDollGrabMachineComponent.ItemRotationDamping;
-			}
-			if (base.CanResetComponentProperty("ItemMoveDamping"))
-			{
-				this.ItemMoveDamping = sceneItemDollGrabMachineComponent.ItemMoveDamping;
-			}
-			if (base.CanResetComponentProperty("LightGroupSequenceActor"))
-			{
-				if (sceneItemDollGrabMachineComponent.LightGroupSequenceActor == null)
-				{
-					this.LightGroupSequenceActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AKuroLevelSequenceActor>(this.LightGroupSequenceActor), "LightGroupSequenceActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MainDollActorItem"))
-			{
-				if (sceneItemDollGrabMachineComponent.MainDollActorItem == null)
-				{
-					this.MainDollActorItem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DollGrabMachineItem>(this.MainDollActorItem), "MainDollActorItem"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DissolveStartTimer"))
-			{
-				if (sceneItemDollGrabMachineComponent.DissolveStartTimer == null)
-				{
-					this.DissolveStartTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DissolveStartTimer), "DissolveStartTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DissolveCloseTimer"))
-			{
-				if (sceneItemDollGrabMachineComponent.DissolveCloseTimer == null)
-				{
-					this.DissolveCloseTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DissolveCloseTimer), "DissolveCloseTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("DissolvePerSecond"))
-			{
-				this.DissolvePerSecond = sceneItemDollGrabMachineComponent.DissolvePerSecond;
-			}
-			if (base.CanResetComponentProperty("DissolveProgress"))
-			{
-				this.DissolveProgress = sceneItemDollGrabMachineComponent.DissolveProgress;
-			}
-			if (base.CanResetComponentProperty("DissolveRadius"))
-			{
-				this.DissolveRadius = sceneItemDollGrabMachineComponent.DissolveRadius;
-			}
-			if (base.CanResetComponentProperty("IsEndlessModeInternal"))
-			{
-				this.IsEndlessModeInternal = sceneItemDollGrabMachineComponent.IsEndlessModeInternal;
-			}
-			if (base.CanResetComponentProperty("EndlessSpawnPoints") && sceneItemDollGrabMachineComponent.EndlessSpawnPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, FVectorDouble>>(this.EndlessSpawnPoints), "EndlessSpawnPoints"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClawRootCtrlActor), "ClawRootCtrlActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EndlessAvailableSpawnPoints") && sceneItemDollGrabMachineComponent.EndlessAvailableSpawnPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.EndlessAvailableSpawnPoints), "EndlessAvailableSpawnPoints"))
+			if (sceneItemDollGrabMachineComponent.ClawChainActor == null)
+			{
+				this.ClawChainActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClawChainActor), "ClawChainActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EndlessAvailableSpawnPointsMap") && sceneItemDollGrabMachineComponent.EndlessAvailableSpawnPointsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, HashSet<AActor>>>(this.EndlessAvailableSpawnPointsMap), "EndlessAvailableSpawnPointsMap"))
+			if (sceneItemDollGrabMachineComponent.DropTriggerActor == null)
+			{
+				this.DropTriggerActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DropTriggerActor), "DropTriggerActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EndlessIdleItemPool") && sceneItemDollGrabMachineComponent.EndlessIdleItemPool != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, DollGrabMachineItem>>(this.EndlessIdleItemPool), "EndlessIdleItemPool"))
+			if (sceneItemDollGrabMachineComponent.DollItemPoolActor == null)
+			{
+				this.DollItemPoolActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DollItemPoolActor), "DollItemPoolActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EndlessIdleItemIdList") && sceneItemDollGrabMachineComponent.EndlessIdleItemIdList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.EndlessIdleItemIdList), "EndlessIdleItemIdList"))
+			if (sceneItemDollGrabMachineComponent.TeleportTriggerActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TeleportTriggerActorList), "TeleportTriggerActorList"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("IsDropRefreshTime"))
-			{
-				this.IsDropRefreshTime = sceneItemDollGrabMachineComponent.IsDropRefreshTime;
-			}
-			if (base.CanResetComponentProperty("PendingDropItemInfoList"))
-			{
-				if (sceneItemDollGrabMachineComponent.PendingDropItemInfoList == null)
-				{
-					this.PendingDropItemInfoList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<DollGrabMachineItem>>(this.PendingDropItemInfoList), "PendingDropItemInfoList"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RefreshIntervalCurve"))
-			{
-				if (sceneItemDollGrabMachineComponent.RefreshIntervalCurve == null)
-				{
-					this.RefreshIntervalCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.RefreshIntervalCurve), "RefreshIntervalCurve"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EndlessElapsedTime"))
-			{
-				this.EndlessElapsedTime = sceneItemDollGrabMachineComponent.EndlessElapsedTime;
-			}
-			if (base.CanResetComponentProperty("EndlessDropTimer"))
-			{
-				if (sceneItemDollGrabMachineComponent.EndlessDropTimer == null)
-				{
-					this.EndlessDropTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.EndlessDropTimer), "EndlessDropTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EndlessRewardDataInternal"))
-			{
-				if (sceneItemDollGrabMachineComponent.EndlessRewardDataInternal == null)
-				{
-					this.EndlessRewardDataInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IDollGrabInfiniteRewardData>(this.EndlessRewardDataInternal), "EndlessRewardDataInternal"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EndlessAudioDataInternal") && sceneItemDollGrabMachineComponent.EndlessAudioDataInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<float, EndlessAudioStateInfo>>(this.EndlessAudioDataInternal), "EndlessAudioDataInternal"))
+			if (sceneItemDollGrabMachineComponent.TeleportTargetLocationList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TeleportTargetLocationList), "TeleportTargetLocationList"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ConveyorBeltEventHandle"))
+			if (sceneItemDollGrabMachineComponent.ConveyorBeltActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConveyorBeltActorList), "ConveyorBeltActorList"))
 			{
-				this.ConveyorBeltEventHandle = sceneItemDollGrabMachineComponent.ConveyorBeltEventHandle;
+				return false;
 			}
-			if (base.CanResetComponentProperty("RoofDissolveEventHandle"))
+			if (sceneItemDollGrabMachineComponent.ConveyorBeltMeshBpActor == null)
 			{
-				this.RoofDissolveEventHandle = sceneItemDollGrabMachineComponent.RoofDissolveEventHandle;
+				this.ConveyorBeltMeshBpActor = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConveyorBeltMeshBpActor), "ConveyorBeltMeshBpActor"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.DissolveActor == null)
+			{
+				this.DissolveActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DissolveActor), "DissolveActor"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.BoundaryTriggerActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoundaryTriggerActorList), "BoundaryTriggerActorList"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.RoofActor == null)
+			{
+				this.RoofActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoofActor), "RoofActor"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.LightActorGroup == null)
+			{
+				this.LightActorGroup = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LightActorGroup), "LightActorGroup"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.ClawStateController == null)
+			{
+				this.ClawStateController = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClawStateController), "ClawStateController"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.ClawMoveDirectionInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ClawMoveDirectionInternal), "ClawMoveDirectionInternal"))
+			{
+				return false;
+			}
+			this.NeedInitClawStateController = sceneItemDollGrabMachineComponent.NeedInitClawStateController;
+			if (sceneItemDollGrabMachineComponent.DollItemMap == null)
+			{
+				this.DollItemMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DollItemMap), "DollItemMap"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.GrabbedItemList == null)
+			{
+				this.GrabbedItemList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GrabbedItemList), "GrabbedItemList"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.GrabbingActorList == null)
+			{
+				this.GrabbingActorList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GrabbingActorList), "GrabbingActorList"))
+			{
+				return false;
+			}
+			this.LeaveDollCountInternal = sceneItemDollGrabMachineComponent.LeaveDollCountInternal;
+			if (sceneItemDollGrabMachineComponent.CurrentDropItemListInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentDropItemListInternal), "CurrentDropItemListInternal"))
+			{
+				return false;
+			}
+			this.IsActiveInternal = sceneItemDollGrabMachineComponent.IsActiveInternal;
+			this.IsPauseInternal = sceneItemDollGrabMachineComponent.IsPauseInternal;
+			this.IsCacheCheckTouchAction = sceneItemDollGrabMachineComponent.IsCacheCheckTouchAction;
+			this.AkEvent = sceneItemDollGrabMachineComponent.AkEvent;
+			this.AkEventHandle = sceneItemDollGrabMachineComponent.AkEventHandle;
+			this.GrabEffectTransform = sceneItemDollGrabMachineComponent.GrabEffectTransform;
+			this.ItemRotationDamping = sceneItemDollGrabMachineComponent.ItemRotationDamping;
+			this.ItemMoveDamping = sceneItemDollGrabMachineComponent.ItemMoveDamping;
+			if (sceneItemDollGrabMachineComponent.LightGroupSequenceActor == null)
+			{
+				this.LightGroupSequenceActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LightGroupSequenceActor), "LightGroupSequenceActor"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.MainDollActorItem == null)
+			{
+				this.MainDollActorItem = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainDollActorItem), "MainDollActorItem"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.DissolveStartTimer == null)
+			{
+				this.DissolveStartTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DissolveStartTimer), "DissolveStartTimer"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.DissolveCloseTimer == null)
+			{
+				this.DissolveCloseTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DissolveCloseTimer), "DissolveCloseTimer"))
+			{
+				return false;
+			}
+			this.DissolvePerSecond = sceneItemDollGrabMachineComponent.DissolvePerSecond;
+			this.DissolveProgress = sceneItemDollGrabMachineComponent.DissolveProgress;
+			this.DissolveRadius = sceneItemDollGrabMachineComponent.DissolveRadius;
+			this.IsEndlessModeInternal = sceneItemDollGrabMachineComponent.IsEndlessModeInternal;
+			if (sceneItemDollGrabMachineComponent.EndlessSpawnPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessSpawnPoints), "EndlessSpawnPoints"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessAvailableSpawnPoints != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessAvailableSpawnPoints), "EndlessAvailableSpawnPoints"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessAvailableSpawnPointsMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessAvailableSpawnPointsMap), "EndlessAvailableSpawnPointsMap"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessIdleItemPool != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessIdleItemPool), "EndlessIdleItemPool"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessIdleItemIdList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessIdleItemIdList), "EndlessIdleItemIdList"))
+			{
+				return false;
+			}
+			this.IsDropRefreshTime = sceneItemDollGrabMachineComponent.IsDropRefreshTime;
+			if (sceneItemDollGrabMachineComponent.PendingDropItemInfoList == null)
+			{
+				this.PendingDropItemInfoList = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingDropItemInfoList), "PendingDropItemInfoList"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.RefreshIntervalCurve == null)
+			{
+				this.RefreshIntervalCurve = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefreshIntervalCurve), "RefreshIntervalCurve"))
+			{
+				return false;
+			}
+			this.EndlessElapsedTime = sceneItemDollGrabMachineComponent.EndlessElapsedTime;
+			if (sceneItemDollGrabMachineComponent.EndlessDropTimer == null)
+			{
+				this.EndlessDropTimer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessDropTimer), "EndlessDropTimer"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessRewardDataInternal == null)
+			{
+				this.EndlessRewardDataInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessRewardDataInternal), "EndlessRewardDataInternal"))
+			{
+				return false;
+			}
+			if (sceneItemDollGrabMachineComponent.EndlessAudioDataInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndlessAudioDataInternal), "EndlessAudioDataInternal"))
+			{
+				return false;
+			}
+			this.ConveyorBeltEventHandle = sceneItemDollGrabMachineComponent.ConveyorBeltEventHandle;
+			this.RoofDissolveEventHandle = sceneItemDollGrabMachineComponent.RoofDissolveEventHandle;
 			return true;
 		}
 
-		// Token: 0x04023F8B RID: 147339
+		// Token: 0x1700701F RID: 28703
+		// (get) Token: 0x0603B34B RID: 242507 RVA: 0x010BFD1E File Offset: 0x010BDF1E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007020 RID: 28704
+		// (get) Token: 0x0603B34C RID: 242508 RVA: 0x010BFD21 File Offset: 0x010BDF21
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007021 RID: 28705
+		// (get) Token: 0x0603B34D RID: 242509 RVA: 0x010BFD24 File Offset: 0x010BDF24
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F23E RID: 127550
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04023F8C RID: 147340
+		// Token: 0x0401F23F RID: 127551
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04023F8D RID: 147341
+		// Token: 0x0401F240 RID: 127552
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04023F8E RID: 147342
+		// Token: 0x0401F241 RID: 127553
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04023F8F RID: 147343
+		// Token: 0x0401F242 RID: 127554
 		private DollGrabMachineComponent Config;
 
-		// Token: 0x04023F90 RID: 147344
+		// Token: 0x0401F243 RID: 127555
 		private AActor ClawActor;
 
-		// Token: 0x04023F91 RID: 147345
+		// Token: 0x0401F244 RID: 127556
 		private AActor ClawRootCtrlActor;
 
-		// Token: 0x04023F92 RID: 147346
+		// Token: 0x0401F245 RID: 127557
 		private AActor ClawChainActor;
 
-		// Token: 0x04023F93 RID: 147347
+		// Token: 0x0401F246 RID: 127558
 		private AActor DropTriggerActor;
 
-		// Token: 0x04023F94 RID: 147348
+		// Token: 0x0401F247 RID: 127559
 		private AActor DollItemPoolActor;
 
-		// Token: 0x04023F95 RID: 147349
+		// Token: 0x0401F248 RID: 127560
 		[Nullable(1)]
 		private readonly List<AActor> TeleportTriggerActorList = new List<AActor>();
 
-		// Token: 0x04023F96 RID: 147350
+		// Token: 0x0401F249 RID: 127561
 		[Nullable(1)]
 		private readonly List<FVectorDouble> TeleportTargetLocationList = new List<FVectorDouble>();
 
-		// Token: 0x04023F97 RID: 147351
+		// Token: 0x0401F24A RID: 127562
 		[Nullable(1)]
 		private readonly List<BP_DollGrabMahcineConveyorBelt_C> ConveyorBeltActorList = new List<BP_DollGrabMahcineConveyorBelt_C>();
 
-		// Token: 0x04023F98 RID: 147352
+		// Token: 0x0401F24B RID: 127563
 		private BP_ConveyorBelt_C ConveyorBeltMeshBpActor;
 
-		// Token: 0x04023F99 RID: 147353
+		// Token: 0x0401F24C RID: 127564
 		private BP_CenterDissolvePosition_C DissolveActor;
 
-		// Token: 0x04023F9A RID: 147354
+		// Token: 0x0401F24D RID: 127565
 		[Nullable(1)]
 		private readonly List<AActor> BoundaryTriggerActorList = new List<AActor>();
 
-		// Token: 0x04023F9B RID: 147355
+		// Token: 0x0401F24E RID: 127566
 		private AActor RoofActor;
 
-		// Token: 0x04023F9C RID: 147356
+		// Token: 0x0401F24F RID: 127567
 		[Nullable(1)]
 		private List<AActor> LightActorGroup = new List<AActor>();
 
-		// Token: 0x04023F9D RID: 147357
+		// Token: 0x0401F250 RID: 127568
 		private DgmClawStateController ClawStateController;
 
-		// Token: 0x04023F9E RID: 147358
+		// Token: 0x0401F251 RID: 127569
 		[Nullable(1)]
 		private readonly DollGrabMachineClawDirection ClawMoveDirectionInternal = new DollGrabMachineClawDirection(0f, 0f);
 
-		// Token: 0x04023F9F RID: 147359
+		// Token: 0x0401F252 RID: 127570
 		private bool NeedInitClawStateController;
 
-		// Token: 0x04023FA0 RID: 147360
+		// Token: 0x0401F253 RID: 127571
 		[Nullable(1)]
 		private Dictionary<int, DollGrabMachineItem> DollItemMap = new Dictionary<int, DollGrabMachineItem>();
 
-		// Token: 0x04023FA1 RID: 147361
+		// Token: 0x0401F254 RID: 127572
 		[Nullable(1)]
 		private List<int> GrabbedItemList = new List<int>();
 
-		// Token: 0x04023FA2 RID: 147362
+		// Token: 0x0401F255 RID: 127573
 		[Nullable(1)]
 		private List<AActor> GrabbingActorList = new List<AActor>();
 
-		// Token: 0x04023FA3 RID: 147363
+		// Token: 0x0401F256 RID: 127574
 		private int LeaveDollCountInternal;
 
-		// Token: 0x04023FA4 RID: 147364
+		// Token: 0x0401F257 RID: 127575
 		[Nullable(1)]
 		private readonly Dictionary<int, int> CurrentDropItemListInternal = new Dictionary<int, int>();
 
-		// Token: 0x04023FA5 RID: 147365
+		// Token: 0x0401F258 RID: 127576
 		private bool IsActiveInternal;
 
-		// Token: 0x04023FA6 RID: 147366
+		// Token: 0x0401F259 RID: 127577
 		private bool IsPauseInternal;
 
-		// Token: 0x04023FA7 RID: 147367
+		// Token: 0x0401F25A RID: 127578
 		private bool IsCacheCheckTouchAction;
 
-		// Token: 0x04023FA8 RID: 147368
+		// Token: 0x0401F25B RID: 127579
 		private string AkEvent;
 
-		// Token: 0x04023FA9 RID: 147369
+		// Token: 0x0401F25C RID: 127580
 		private int AkEventHandle = -1;
 
-		// Token: 0x04023FAA RID: 147370
+		// Token: 0x0401F25D RID: 127581
 		private FTransformDouble? GrabEffectTransform;
 
-		// Token: 0x04023FAB RID: 147371
+		// Token: 0x0401F25E RID: 127582
 		private float ItemRotationDamping;
 
-		// Token: 0x04023FAC RID: 147372
+		// Token: 0x0401F25F RID: 127583
 		private float ItemMoveDamping;
 
-		// Token: 0x04023FAD RID: 147373
+		// Token: 0x0401F260 RID: 127584
 		private AKuroLevelSequenceActor LightGroupSequenceActor;
 
-		// Token: 0x04023FAE RID: 147374
+		// Token: 0x0401F261 RID: 127585
 		private DollGrabMachineItem MainDollActorItem;
 
-		// Token: 0x04023FAF RID: 147375
+		// Token: 0x0401F262 RID: 127586
 		private TimerHandle DissolveStartTimer;
 
-		// Token: 0x04023FB0 RID: 147376
+		// Token: 0x0401F263 RID: 127587
 		private TimerHandle DissolveCloseTimer;
 
-		// Token: 0x04023FB1 RID: 147377
+		// Token: 0x0401F264 RID: 127588
 		private float DissolvePerSecond;
 
-		// Token: 0x04023FB2 RID: 147378
+		// Token: 0x0401F265 RID: 127589
 		private float DissolveProgress;
 
-		// Token: 0x04023FB3 RID: 147379
+		// Token: 0x0401F266 RID: 127590
 		private float DissolveRadius;
 
-		// Token: 0x04023FB4 RID: 147380
+		// Token: 0x0401F267 RID: 127591
 		private bool IsEndlessModeInternal;
 
-		// Token: 0x04023FB5 RID: 147381
+		// Token: 0x0401F268 RID: 127592
 		[Nullable(1)]
 		private readonly Dictionary<AActor, FVectorDouble> EndlessSpawnPoints = new Dictionary<AActor, FVectorDouble>();
 
-		// Token: 0x04023FB6 RID: 147382
+		// Token: 0x0401F269 RID: 127593
 		[Nullable(1)]
 		private readonly List<AActor> EndlessAvailableSpawnPoints = new List<AActor>();
 
-		// Token: 0x04023FB7 RID: 147383
+		// Token: 0x0401F26A RID: 127594
 		[Nullable(1)]
 		private readonly Dictionary<AActor, HashSet<AActor>> EndlessAvailableSpawnPointsMap = new Dictionary<AActor, HashSet<AActor>>();
 
-		// Token: 0x04023FB8 RID: 147384
+		// Token: 0x0401F26B RID: 127595
 		[Nullable(1)]
 		private readonly Dictionary<int, DollGrabMachineItem> EndlessIdleItemPool = new Dictionary<int, DollGrabMachineItem>();
 
-		// Token: 0x04023FB9 RID: 147385
+		// Token: 0x0401F26C RID: 127596
 		[Nullable(1)]
 		private readonly List<int> EndlessIdleItemIdList = new List<int>();
 
-		// Token: 0x04023FBA RID: 147386
+		// Token: 0x0401F26D RID: 127597
 		private bool IsDropRefreshTime;
 
-		// Token: 0x04023FBB RID: 147387
+		// Token: 0x0401F26E RID: 127598
 		[Nullable(1)]
 		private List<DollGrabMachineItem> PendingDropItemInfoList = new List<DollGrabMachineItem>();
 
-		// Token: 0x04023FBC RID: 147388
+		// Token: 0x0401F26F RID: 127599
 		private UCurveFloat RefreshIntervalCurve;
 
-		// Token: 0x04023FBD RID: 147389
+		// Token: 0x0401F270 RID: 127600
 		private float EndlessElapsedTime;
 
-		// Token: 0x04023FBE RID: 147390
+		// Token: 0x0401F271 RID: 127601
 		private TimerHandle EndlessDropTimer;
 
-		// Token: 0x04023FBF RID: 147391
+		// Token: 0x0401F272 RID: 127602
 		private IDollGrabInfiniteRewardData EndlessRewardDataInternal;
 
-		// Token: 0x04023FC0 RID: 147392
+		// Token: 0x0401F273 RID: 127603
 		[Nullable(1)]
 		private readonly Dictionary<float, EndlessAudioStateInfo> EndlessAudioDataInternal = new Dictionary<float, EndlessAudioStateInfo>();
 
-		// Token: 0x04023FC1 RID: 147393
+		// Token: 0x0401F274 RID: 127604
 		private int ConveyorBeltEventHandle = -1;
 
-		// Token: 0x04023FC2 RID: 147394
+		// Token: 0x0401F275 RID: 127605
 		private int RoofDissolveEventHandle = -1;
 	}
 }

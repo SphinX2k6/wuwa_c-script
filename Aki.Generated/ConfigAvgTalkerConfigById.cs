@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000BD RID: 189
+	// Token: 0x020000CC RID: 204
 	public class ConfigAvgTalkerConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600046F RID: 1135 RVA: 0x00072CFC File Offset: 0x00070EFC
+		// Token: 0x060004C9 RID: 1225 RVA: 0x00078660 File Offset: 0x00076860
 		static ConfigAvgTalkerConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAvgTalkerConfigById.CreateStaticDefaultValue), new Action(ConfigAvgTalkerConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000470 RID: 1136 RVA: 0x00072D1C File Offset: 0x00070F1C
+		// Token: 0x060004CA RID: 1226 RVA: 0x00078680 File Offset: 0x00076880
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAvgTalkerConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000471 RID: 1137 RVA: 0x00072D9B File Offset: 0x00070F9B
+		// Token: 0x060004CB RID: 1227 RVA: 0x000786FF File Offset: 0x000768FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAvgTalkerConfigById.LogPair = null;
 			ConfigAvgTalkerConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000472 RID: 1138 RVA: 0x00072DA9 File Offset: 0x00070FA9
+		// Token: 0x060004CC RID: 1228 RVA: 0x0007870D File Offset: 0x0007690D
 		public static void Init()
 		{
 			ConfigAvgTalkerConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigAvgTalkerConfigById.HandleId, "db_avgtalkerconfig.db", "select BinData from `AvgTalkerConfig` where Id=?");
 		}
 
-		// Token: 0x06000473 RID: 1139 RVA: 0x00072DC4 File Offset: 0x00070FC4
+		// Token: 0x060004CD RID: 1229 RVA: 0x00078728 File Offset: 0x00076928
 		public static AvgTalkerConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAvgTalkerConfigById.HandleId, ConfigAvgTalkerConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AvgTalkerConfig?(rootAsAvgTalkerConfig);
 		}
 
-		// Token: 0x0400050F RID: 1295
+		// Token: 0x04000578 RID: 1400
 		private const string DB = "db_avgtalkerconfig.db";
 
-		// Token: 0x04000510 RID: 1296
+		// Token: 0x04000579 RID: 1401
 		private const string FILE = "k.可视化编辑/c.Csv/a.AVG对话人配置/*.csv*";
 
-		// Token: 0x04000511 RID: 1297
+		// Token: 0x0400057A RID: 1402
 		private const string TABLE = "AvgTalkerConfig";
 
-		// Token: 0x04000512 RID: 1298
+		// Token: 0x0400057B RID: 1403
 		private const string COMMAND = "select BinData from `AvgTalkerConfig` where Id=?";
 
-		// Token: 0x04000513 RID: 1299
+		// Token: 0x0400057C RID: 1404
 		private const string KEY_PREFIX = "AvgTalkerConfigById";
 
-		// Token: 0x04000514 RID: 1300
+		// Token: 0x0400057D RID: 1405
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000515 RID: 1301
+		// Token: 0x0400057E RID: 1406
 		private static int HandleId;
 	}
 }

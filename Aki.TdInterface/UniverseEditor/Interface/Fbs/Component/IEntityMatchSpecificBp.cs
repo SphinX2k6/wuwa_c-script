@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051A1 RID: 20897
+	// Token: 0x02005706 RID: 22278
 	public struct IEntityMatchSpecificBp : IFlatbufferObject
 	{
-		// Token: 0x170098AD RID: 39085
-		// (get) Token: 0x06021CFD RID: 138493 RVA: 0x004B0CBF File Offset: 0x004AEEBF
+		// Token: 0x1700A09C RID: 41116
+		// (get) Token: 0x06023C55 RID: 146517 RVA: 0x004EAD27 File Offset: 0x004E8F27
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021CFE RID: 138494 RVA: 0x004B0CCC File Offset: 0x004AEECC
+		// Token: 0x06023C56 RID: 146518 RVA: 0x004EAD34 File Offset: 0x004E8F34
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021CFF RID: 138495 RVA: 0x004B0CD4 File Offset: 0x004AEED4
+		// Token: 0x06023C57 RID: 146519 RVA: 0x004EAD3C File Offset: 0x004E8F3C
 		public static IEntityMatchSpecificBp GetRootAsIEntityMatchSpecificBp(ByteBuffer _bb)
 		{
 			return IEntityMatchSpecificBp.GetRootAsIEntityMatchSpecificBp(_bb, default(IEntityMatchSpecificBp));
 		}
 
-		// Token: 0x06021D00 RID: 138496 RVA: 0x004B0CF0 File Offset: 0x004AEEF0
+		// Token: 0x06023C58 RID: 146520 RVA: 0x004EAD58 File Offset: 0x004E8F58
 		public static IEntityMatchSpecificBp GetRootAsIEntityMatchSpecificBp(ByteBuffer _bb, IEntityMatchSpecificBp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021D01 RID: 138497 RVA: 0x004B0D0D File Offset: 0x004AEF0D
+		// Token: 0x06023C59 RID: 146521 RVA: 0x004EAD75 File Offset: 0x004E8F75
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021D02 RID: 138498 RVA: 0x004B0D1C File Offset: 0x004AEF1C
+		// Token: 0x06023C5A RID: 146522 RVA: 0x004EAD84 File Offset: 0x004E8F84
 		public IEntityMatchSpecificBp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170098AE RID: 39086
-		// (get) Token: 0x06021D03 RID: 138499 RVA: 0x004B0D2C File Offset: 0x004AEF2C
+		// Token: 0x1700A09D RID: 41117
+		// (get) Token: 0x06023C5B RID: 146523 RVA: 0x004EAD94 File Offset: 0x004E8F94
 		public EEntityMatchType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021D04 RID: 138500 RVA: 0x004B0D68 File Offset: 0x004AEF68
+		// Token: 0x06023C5C RID: 146524 RVA: 0x004EADD0 File Offset: 0x004E8FD0
 		public string SpecificBpList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170098AF RID: 39087
-		// (get) Token: 0x06021D05 RID: 138501 RVA: 0x004B0DA4 File Offset: 0x004AEFA4
+		// Token: 0x1700A09E RID: 41118
+		// (get) Token: 0x06023C5D RID: 146525 RVA: 0x004EAE0C File Offset: 0x004E900C
 		public int SpecificBpListLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021D06 RID: 138502 RVA: 0x004B0DCF File Offset: 0x004AEFCF
+		// Token: 0x06023C5E RID: 146526 RVA: 0x004EAE37 File Offset: 0x004E9037
 		public static Offset<IEntityMatchSpecificBp> CreateIEntityMatchSpecificBp(FlatBufferBuilder builder, EEntityMatchType Type = EEntityMatchType.Player, VectorOffset SpecificBpListOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -98,25 +98,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityMatchSpecificBp.EndIEntityMatchSpecificBp(builder);
 		}
 
-		// Token: 0x06021D07 RID: 138503 RVA: 0x004B0DEC File Offset: 0x004AEFEC
+		// Token: 0x06023C5F RID: 146527 RVA: 0x004EAE54 File Offset: 0x004E9054
 		public static void StartIEntityMatchSpecificBp(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021D08 RID: 138504 RVA: 0x004B0DF5 File Offset: 0x004AEFF5
+		// Token: 0x06023C60 RID: 146528 RVA: 0x004EAE5D File Offset: 0x004E905D
 		public static void AddType(FlatBufferBuilder builder, EEntityMatchType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021D09 RID: 138505 RVA: 0x004B0E00 File Offset: 0x004AF000
+		// Token: 0x06023C61 RID: 146529 RVA: 0x004EAE68 File Offset: 0x004E9068
 		public static void AddSpecificBpList(FlatBufferBuilder builder, VectorOffset specificBpListOffset)
 		{
 			builder.AddOffset(1, specificBpListOffset.Value, 0);
 		}
 
-		// Token: 0x06021D0A RID: 138506 RVA: 0x004B0E10 File Offset: 0x004AF010
+		// Token: 0x06023C62 RID: 146530 RVA: 0x004EAE78 File Offset: 0x004E9078
 		public static VectorOffset CreateSpecificBpListVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -127,7 +127,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021D0B RID: 138507 RVA: 0x004B0E50 File Offset: 0x004AF050
+		// Token: 0x06023C63 RID: 146531 RVA: 0x004EAEB8 File Offset: 0x004E90B8
 		public static VectorOffset CreateSpecificBpListVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021D0C RID: 138508 RVA: 0x004B0E6A File Offset: 0x004AF06A
+		// Token: 0x06023C64 RID: 146532 RVA: 0x004EAED2 File Offset: 0x004E90D2
 		public static VectorOffset CreateSpecificBpListVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -143,7 +143,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021D0D RID: 138509 RVA: 0x004B0E88 File Offset: 0x004AF088
+		// Token: 0x06023C65 RID: 146533 RVA: 0x004EAEF0 File Offset: 0x004E90F0
 		public static VectorOffset CreateSpecificBpListVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -151,19 +151,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021D0E RID: 138510 RVA: 0x004B0EA1 File Offset: 0x004AF0A1
+		// Token: 0x06023C66 RID: 146534 RVA: 0x004EAF09 File Offset: 0x004E9109
 		public static void StartSpecificBpListVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06021D0F RID: 138511 RVA: 0x004B0EAC File Offset: 0x004AF0AC
+		// Token: 0x06023C67 RID: 146535 RVA: 0x004EAF14 File Offset: 0x004E9114
 		public static Offset<IEntityMatchSpecificBp> EndIEntityMatchSpecificBp(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityMatchSpecificBp>(builder.EndTable());
 		}
 
-		// Token: 0x06021D10 RID: 138512 RVA: 0x004B0EBC File Offset: 0x004AF0BC
+		// Token: 0x06023C68 RID: 146536 RVA: 0x004EAF24 File Offset: 0x004E9124
 		public IEntityMatchSpecificBpT UnPack()
 		{
 			IEntityMatchSpecificBpT entityMatchSpecificBpT = new IEntityMatchSpecificBpT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return entityMatchSpecificBpT;
 		}
 
-		// Token: 0x06021D11 RID: 138513 RVA: 0x004B0ED8 File Offset: 0x004AF0D8
+		// Token: 0x06023C69 RID: 146537 RVA: 0x004EAF40 File Offset: 0x004E9140
 		public void UnPackTo(IEntityMatchSpecificBpT _o)
 		{
 			_o.Type = this.Type;
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021D12 RID: 138514 RVA: 0x004B0F20 File Offset: 0x004AF120
+		// Token: 0x06023C6A RID: 146538 RVA: 0x004EAF88 File Offset: 0x004E9188
 		public static Offset<IEntityMatchSpecificBp> Pack(FlatBufferBuilder builder, IEntityMatchSpecificBpT _o)
 		{
 			if (_o == null)
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEntityMatchSpecificBp.CreateIEntityMatchSpecificBp(builder, _o.Type, specificBpListOffset);
 		}
 
-		// Token: 0x0400E27F RID: 57983
+		// Token: 0x0400EE7D RID: 61053
 		private Table __p;
 	}
 }

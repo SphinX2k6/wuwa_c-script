@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200091A RID: 2330
+	// Token: 0x020009C7 RID: 2503
 	public static class ECurveControlTypeExtensions
 	{
-		// Token: 0x060034A6 RID: 13478 RVA: 0x00089CF8 File Offset: 0x00087EF8
+		// Token: 0x06003812 RID: 14354 RVA: 0x00091878 File Offset: 0x0008FA78
 		public static string ToEnumString(this ECurveControlType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034A7 RID: 13479 RVA: 0x00089D20 File Offset: 0x00087F20
+		// Token: 0x06003813 RID: 14355 RVA: 0x000918A0 File Offset: 0x0008FAA0
 		public static ECurveControlType FromString(string name)
 		{
 			ECurveControlType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060034A8 RID: 13480 RVA: 0x00089D49 File Offset: 0x00087F49
+		// Token: 0x06003814 RID: 14356 RVA: 0x000918C9 File Offset: 0x0008FAC9
 		public static bool TryFromString(string name, out ECurveControlType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060034A9 RID: 13481 RVA: 0x00089D6E File Offset: 0x00087F6E
+		// Token: 0x06003815 RID: 14357 RVA: 0x000918EE File Offset: 0x0008FAEE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060034AA RID: 13482 RVA: 0x00089D7E File Offset: 0x00087F7E
+		// Token: 0x06003816 RID: 14358 RVA: 0x000918FE File Offset: 0x0008FAFE
 		public static ECurveControlType[] GetValues()
 		{
 			return new ECurveControlType[1];
 		}
 
-		// Token: 0x060034AB RID: 13483 RVA: 0x00089D86 File Offset: 0x00087F86
+		// Token: 0x06003817 RID: 14359 RVA: 0x00091906 File Offset: 0x0008FB06
 		public static string[] GetNames()
 		{
 			return new string[]

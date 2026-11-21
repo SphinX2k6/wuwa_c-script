@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D09 RID: 23817
+	// Token: 0x0200633D RID: 25405
 	public enum EReignsPropertyCompare : byte
 	{
-		// Token: 0x0400F690 RID: 63120
+		// Token: 0x040103DF RID: 66527
 		Eq,
-		// Token: 0x0400F691 RID: 63121
+		// Token: 0x040103E0 RID: 66528
 		Ne,
-		// Token: 0x0400F692 RID: 63122
+		// Token: 0x040103E1 RID: 66529
 		Ge,
-		// Token: 0x0400F693 RID: 63123
+		// Token: 0x040103E2 RID: 66530
 		Gt,
-		// Token: 0x0400F694 RID: 63124
+		// Token: 0x040103E3 RID: 66531
 		Le,
-		// Token: 0x0400F695 RID: 63125
+		// Token: 0x040103E4 RID: 66532
 		Lt
 	}
 }

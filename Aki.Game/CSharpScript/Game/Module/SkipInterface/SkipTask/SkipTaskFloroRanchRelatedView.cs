@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BAC RID: 19372
+	// Token: 0x02003B56 RID: 15190
 	public class SkipTaskFloroRanchRelatedView : SkipTask
 	{
-		// Token: 0x060322E2 RID: 205538 RVA: 0x00BA8DE5 File Offset: 0x00BA6FE5
+		// Token: 0x06027073 RID: 159859 RVA: 0x00AED059 File Offset: 0x00AEB259
 		public SkipTaskFloroRanchRelatedView()
 		{
 			this.OpenView = delegate(EUiViewName viewName)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			};
 		}
 
-		// Token: 0x060322E3 RID: 205539 RVA: 0x00BA8E00 File Offset: 0x00BA7000
+		// Token: 0x06027074 RID: 159860 RVA: 0x00AED074 File Offset: 0x00AEB274
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x060322E4 RID: 205540 RVA: 0x00BA8EF2 File Offset: 0x00BA70F2
+		// Token: 0x06027075 RID: 159861 RVA: 0x00AED166 File Offset: 0x00AEB366
 		private bool CheckViewExistAndReset(EUiViewName viewName)
 		{
 			if (UiManager.Instance.IsViewOpen(viewName))
@@ -72,20 +72,20 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			return false;
 		}
 
-		// Token: 0x0401AB8B RID: 109451
+		// Token: 0x040154E0 RID: 87264
 		[Nullable(1)]
 		private readonly Action<EUiViewName> OpenView;
 
-		// Token: 0x0200ADD0 RID: 44496
+		// Token: 0x020097EF RID: 38895
 		private enum EFloroRanchViewDefine
 		{
-			// Token: 0x04034CA6 RID: 216230
+			// Token: 0x0402F64D RID: 194125
 			MainView = 1,
-			// Token: 0x04034CA7 RID: 216231
+			// Token: 0x0402F64E RID: 194126
 			TechView,
-			// Token: 0x04034CA8 RID: 216232
+			// Token: 0x0402F64F RID: 194127
 			SelectDungeon,
-			// Token: 0x04034CA9 RID: 216233
+			// Token: 0x0402F650 RID: 194128
 			HandBook
 		}
 	}

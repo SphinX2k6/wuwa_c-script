@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BBB RID: 23483
+	// Token: 0x020061D1 RID: 25041
 	public struct IWuWaGoHintStepMove : IFlatbufferObject
 	{
-		// Token: 0x1700B16B RID: 45419
-		// (get) Token: 0x06028369 RID: 164713 RVA: 0x005867CD File Offset: 0x005849CD
+		// Token: 0x1700BAB3 RID: 47795
+		// (get) Token: 0x0602A92D RID: 174381 RVA: 0x005CE25D File Offset: 0x005CC45D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602836A RID: 164714 RVA: 0x005867DA File Offset: 0x005849DA
+		// Token: 0x0602A92E RID: 174382 RVA: 0x005CE26A File Offset: 0x005CC46A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602836B RID: 164715 RVA: 0x005867E4 File Offset: 0x005849E4
+		// Token: 0x0602A92F RID: 174383 RVA: 0x005CE274 File Offset: 0x005CC474
 		public static IWuWaGoHintStepMove GetRootAsIWuWaGoHintStepMove(ByteBuffer _bb)
 		{
 			return IWuWaGoHintStepMove.GetRootAsIWuWaGoHintStepMove(_bb, default(IWuWaGoHintStepMove));
 		}
 
-		// Token: 0x0602836C RID: 164716 RVA: 0x00586800 File Offset: 0x00584A00
+		// Token: 0x0602A930 RID: 174384 RVA: 0x005CE290 File Offset: 0x005CC490
 		public static IWuWaGoHintStepMove GetRootAsIWuWaGoHintStepMove(ByteBuffer _bb, IWuWaGoHintStepMove obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602836D RID: 164717 RVA: 0x0058681D File Offset: 0x00584A1D
+		// Token: 0x0602A931 RID: 174385 RVA: 0x005CE2AD File Offset: 0x005CC4AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602836E RID: 164718 RVA: 0x0058682C File Offset: 0x00584A2C
+		// Token: 0x0602A932 RID: 174386 RVA: 0x005CE2BC File Offset: 0x005CC4BC
 		public IWuWaGoHintStepMove __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B16C RID: 45420
-		// (get) Token: 0x0602836F RID: 164719 RVA: 0x0058683C File Offset: 0x00584A3C
+		// Token: 0x1700BAB4 RID: 47796
+		// (get) Token: 0x0602A933 RID: 174387 RVA: 0x005CE2CC File Offset: 0x005CC4CC
 		public EWuWaGoHintStepType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B16D RID: 45421
-		// (get) Token: 0x06028370 RID: 164720 RVA: 0x00586878 File Offset: 0x00584A78
+		// Token: 0x1700BAB5 RID: 47797
+		// (get) Token: 0x0602A934 RID: 174388 RVA: 0x005CE308 File Offset: 0x005CC508
 		public IVectorInfo? Position
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028371 RID: 164721 RVA: 0x005868D5 File Offset: 0x00584AD5
+		// Token: 0x0602A935 RID: 174389 RVA: 0x005CE365 File Offset: 0x005CC565
 		public static Offset<IWuWaGoHintStepMove> CreateIWuWaGoHintStepMove(FlatBufferBuilder builder, EWuWaGoHintStepType Type = EWuWaGoHintStepType.Move, Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoHintStepMove.EndIWuWaGoHintStepMove(builder);
 		}
 
-		// Token: 0x06028372 RID: 164722 RVA: 0x005868F2 File Offset: 0x00584AF2
+		// Token: 0x0602A936 RID: 174390 RVA: 0x005CE382 File Offset: 0x005CC582
 		public static void StartIWuWaGoHintStepMove(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06028373 RID: 164723 RVA: 0x005868FB File Offset: 0x00584AFB
+		// Token: 0x0602A937 RID: 174391 RVA: 0x005CE38B File Offset: 0x005CC58B
 		public static void AddType(FlatBufferBuilder builder, EWuWaGoHintStepType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028374 RID: 164724 RVA: 0x00586906 File Offset: 0x00584B06
+		// Token: 0x0602A938 RID: 174392 RVA: 0x005CE396 File Offset: 0x005CC596
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(1, positionOffset.Value, 0);
 		}
 
-		// Token: 0x06028375 RID: 164725 RVA: 0x00586916 File Offset: 0x00584B16
+		// Token: 0x0602A939 RID: 174393 RVA: 0x005CE3A6 File Offset: 0x005CC5A6
 		public static Offset<IWuWaGoHintStepMove> EndIWuWaGoHintStepMove(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoHintStepMove>(builder.EndTable());
 		}
 
-		// Token: 0x06028376 RID: 164726 RVA: 0x00586924 File Offset: 0x00584B24
+		// Token: 0x0602A93A RID: 174394 RVA: 0x005CE3B4 File Offset: 0x005CC5B4
 		public IWuWaGoHintStepMoveT UnPack()
 		{
 			IWuWaGoHintStepMoveT wuWaGoHintStepMoveT = new IWuWaGoHintStepMoveT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoHintStepMoveT;
 		}
 
-		// Token: 0x06028377 RID: 164727 RVA: 0x00586940 File Offset: 0x00584B40
+		// Token: 0x0602A93B RID: 174395 RVA: 0x005CE3D0 File Offset: 0x005CC5D0
 		public void UnPackTo(IWuWaGoHintStepMoveT _o)
 		{
 			_o.Type = this.Type;
 			_o.Position = ((this.Position != null) ? this.Position.Value.UnPack() : null);
 		}
 
-		// Token: 0x06028378 RID: 164728 RVA: 0x00586988 File Offset: 0x00584B88
+		// Token: 0x0602A93C RID: 174396 RVA: 0x005CE418 File Offset: 0x005CC618
 		public static Offset<IWuWaGoHintStepMove> Pack(FlatBufferBuilder builder, IWuWaGoHintStepMoveT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoHintStepMove.CreateIWuWaGoHintStepMove(builder, _o.Type, positionOffset);
 		}
 
-		// Token: 0x0400F333 RID: 62259
+		// Token: 0x04010039 RID: 65593
 		private Table __p;
 	}
 }

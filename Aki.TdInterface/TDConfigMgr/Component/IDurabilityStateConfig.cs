@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002D7 RID: 727
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200031E RID: 798
 	public class IDurabilityStateConfig
 	{
-		// Token: 0x06000DE1 RID: 3553 RVA: 0x000331E4 File Offset: 0x000313E4
+		// Token: 0x06000F11 RID: 3857 RVA: 0x00036118 File Offset: 0x00034318
 		private IDurabilityStateConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000DE2 RID: 3554 RVA: 0x0003321C File Offset: 0x0003141C
+		// Token: 0x06000F12 RID: 3858 RVA: 0x00036150 File Offset: 0x00034350
 		public static IDurabilityStateConfig Create([Nullable(2)] IDurabilityStateConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DE3 RID: 3555 RVA: 0x0003322F File Offset: 0x0003142F
+		// Token: 0x06000F13 RID: 3859 RVA: 0x00036163 File Offset: 0x00034363
 		public static IDurabilityStateConfig CreateFromSetValue([Nullable(2)] IDurabilityStateConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DE4 RID: 3556 RVA: 0x00033242 File Offset: 0x00031442
+		// Token: 0x06000F14 RID: 3860 RVA: 0x00036176 File Offset: 0x00034376
 		public IDurabilityStateConfig_SetValue ToSetValue()
 		{
 			return new IDurabilityStateConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700040B RID: 1035
-		// (get) Token: 0x06000DE5 RID: 3557 RVA: 0x00033264 File Offset: 0x00031464
-		// (set) Token: 0x06000DE6 RID: 3558 RVA: 0x0003329E File Offset: 0x0003149E
+		// Token: 0x17000458 RID: 1112
+		// (get) Token: 0x06000F15 RID: 3861 RVA: 0x00036198 File Offset: 0x00034398
+		// (set) Token: 0x06000F16 RID: 3862 RVA: 0x000361D2 File Offset: 0x000343D2
 		public virtual bool? NonDestructable
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700040C RID: 1036
-		// (get) Token: 0x06000DE7 RID: 3559 RVA: 0x000332AC File Offset: 0x000314AC
-		// (set) Token: 0x06000DE8 RID: 3560 RVA: 0x0003333F File Offset: 0x0003153F
+		// Token: 0x17000459 RID: 1113
+		// (get) Token: 0x06000F17 RID: 3863 RVA: 0x000361E0 File Offset: 0x000343E0
+		// (set) Token: 0x06000F18 RID: 3864 RVA: 0x00036273 File Offset: 0x00034473
 		public virtual List<IDurabilityState> DurabilityStates
 		{
 			get
@@ -123,18 +121,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C70 RID: 3184
+		// Token: 0x04000D5A RID: 3418
 		[Nullable(2)]
 		protected IDurabilityStateConfig FbInstance;
 
-		// Token: 0x04000C71 RID: 3185
+		// Token: 0x04000D5B RID: 3419
 		[Nullable(2)]
 		protected IDurabilityStateConfig_SetValue PocoInterface;
 
-		// Token: 0x04000C72 RID: 3186
+		// Token: 0x04000D5C RID: 3420
 		private List<IDurabilityState> _DurabilityStatesCache;
 
-		// Token: 0x04000C73 RID: 3187
+		// Token: 0x04000D5D RID: 3421
 		private bool _DurabilityStatesInited;
 	}
 }

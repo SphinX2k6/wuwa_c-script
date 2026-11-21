@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C68 RID: 3176
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D47 RID: 3399
 	public class AirWallSpawnerComponent : IComponentBase
 	{
-		// Token: 0x060048CA RID: 18634 RVA: 0x000B6C89 File Offset: 0x000B4E89
+		// Token: 0x06004D68 RID: 19816 RVA: 0x000C1459 File Offset: 0x000BF659
 		public static AirWallSpawnerComponent Create(IAirWallSpawnerComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015B7 RID: 5559
-		// (get) Token: 0x060048CB RID: 18635 RVA: 0x000B6CA8 File Offset: 0x000B4EA8
+		// Token: 0x170016D5 RID: 5845
+		// (get) Token: 0x06004D69 RID: 19817 RVA: 0x000C1478 File Offset: 0x000BF678
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015B8 RID: 5560
-		// (get) Token: 0x060048CC RID: 18636 RVA: 0x000B6CE0 File Offset: 0x000B4EE0
+		// Token: 0x170016D6 RID: 5846
+		// (get) Token: 0x06004D6A RID: 19818 RVA: 0x000C14B0 File Offset: 0x000BF6B0
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015B9 RID: 5561
-		// (get) Token: 0x060048CD RID: 18637 RVA: 0x000B6CF6 File Offset: 0x000B4EF6
+		// Token: 0x170016D7 RID: 5847
+		// (get) Token: 0x06004D6B RID: 19819 RVA: 0x000C14C6 File Offset: 0x000BF6C6
 		public virtual int SplineEntity
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BA RID: 5562
-		// (get) Token: 0x060048CE RID: 18638 RVA: 0x000B6D03 File Offset: 0x000B4F03
+		// Token: 0x170016D8 RID: 5848
+		// (get) Token: 0x06004D6C RID: 19820 RVA: 0x000C14D3 File Offset: 0x000BF6D3
 		public virtual string WallName
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BB RID: 5563
-		// (get) Token: 0x060048CF RID: 18639 RVA: 0x000B6D10 File Offset: 0x000B4F10
+		// Token: 0x170016D9 RID: 5849
+		// (get) Token: 0x06004D6D RID: 19821 RVA: 0x000C14E0 File Offset: 0x000BF6E0
 		public virtual float Thickness
 		{
 			get
@@ -78,8 +76,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BC RID: 5564
-		// (get) Token: 0x060048D0 RID: 18640 RVA: 0x000B6D1D File Offset: 0x000B4F1D
+		// Token: 0x170016DA RID: 5850
+		// (get) Token: 0x06004D6E RID: 19822 RVA: 0x000C14ED File Offset: 0x000BF6ED
 		public virtual float Height
 		{
 			get
@@ -88,8 +86,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BD RID: 5565
-		// (get) Token: 0x060048D1 RID: 18641 RVA: 0x000B6D2A File Offset: 0x000B4F2A
+		// Token: 0x170016DB RID: 5851
+		// (get) Token: 0x06004D6F RID: 19823 RVA: 0x000C14FA File Offset: 0x000BF6FA
 		public virtual EBiasDirection BiasDirection
 		{
 			get
@@ -98,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BE RID: 5566
-		// (get) Token: 0x060048D2 RID: 18642 RVA: 0x000B6D38 File Offset: 0x000B4F38
+		// Token: 0x170016DC RID: 5852
+		// (get) Token: 0x06004D70 RID: 19824 RVA: 0x000C1508 File Offset: 0x000BF708
 		public virtual bool? IsExtend
 		{
 			get
@@ -112,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015BF RID: 5567
-		// (get) Token: 0x060048D3 RID: 18643 RVA: 0x000B6D6E File Offset: 0x000B4F6E
+		// Token: 0x170016DD RID: 5853
+		// (get) Token: 0x06004D71 RID: 19825 RVA: 0x000C153E File Offset: 0x000BF73E
 		public virtual bool HasCover
 		{
 			get
@@ -122,8 +120,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C0 RID: 5568
-		// (get) Token: 0x060048D4 RID: 18644 RVA: 0x000B6D7C File Offset: 0x000B4F7C
+		// Token: 0x170016DE RID: 5854
+		// (get) Token: 0x06004D72 RID: 19826 RVA: 0x000C154C File Offset: 0x000BF74C
 		public virtual List<IActorRef> WallActorsRef
 		{
 			get
@@ -143,13 +141,38 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002983 RID: 10627
+		// Token: 0x170016DF RID: 5855
+		// (get) Token: 0x06004D73 RID: 19827 RVA: 0x000C15B5 File Offset: 0x000BF7B5
+		[Nullable(2)]
+		public virtual IAirWallWholeSpawnMode SpawnMode
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._SpawnModeInited)
+				{
+					return this._SpawnModeCache;
+				}
+				this._SpawnModeInited = true;
+				this._SpawnModeCache = IAirWallWholeSpawnMode.Create(this.Instance.SpawnMode);
+				return this._SpawnModeCache;
+			}
+		}
+
+		// Token: 0x04002BEE RID: 11246
 		private IAirWallSpawnerComponent Instance;
 
-		// Token: 0x04002984 RID: 10628
+		// Token: 0x04002BEF RID: 11247
 		private List<IActorRef> _WallActorsRefCache;
 
-		// Token: 0x04002985 RID: 10629
+		// Token: 0x04002BF0 RID: 11248
 		private bool _WallActorsRefInited;
+
+		// Token: 0x04002BF1 RID: 11249
+		[Nullable(2)]
+		private IAirWallWholeSpawnMode _SpawnModeCache;
+
+		// Token: 0x04002BF2 RID: 11250
+		private bool _SpawnModeInited;
 	}
 }

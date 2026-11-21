@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F7D RID: 28541
+	// Token: 0x020060FE RID: 24830
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowCameraLookAtPosition : LevelFlowActionBase
 	{
-		// Token: 0x060456C9 RID: 284361 RVA: 0x011365BD File Offset: 0x011347BD
+		// Token: 0x0603B877 RID: 243831 RVA: 0x010E03C1 File Offset: 0x010DE5C1
 		public LevelFlowCameraLookAtPosition Init(CameraLookAt inParams, bool isAsync)
 		{
 			this.InParams = inParams;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456CA RID: 284362 RVA: 0x011365D0 File Offset: 0x011347D0
+		// Token: 0x0603B878 RID: 243832 RVA: 0x010E03D4 File Offset: 0x010DE5D4
 		protected unsafe override void OnExecute()
 		{
 			if (this.InParams == null)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456CB RID: 284363 RVA: 0x01136DE0 File Offset: 0x01134FE0
+		// Token: 0x0603B879 RID: 243833 RVA: 0x010E0BE4 File Offset: 0x010DEDE4
 		private bool GetEntityPosition(int pbDataId, Vector outVector)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -281,26 +281,26 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return false;
 		}
 
-		// Token: 0x040243A2 RID: 148386
+		// Token: 0x0401F657 RID: 128599
 		[Nullable(2)]
 		private CameraLookAt InParams;
 
-		// Token: 0x040243A3 RID: 148387
+		// Token: 0x0401F658 RID: 128600
 		private readonly Vector TempPosition = Vector.Create();
 
-		// Token: 0x040243A4 RID: 148388
+		// Token: 0x0401F659 RID: 128601
 		private readonly Vector TempEndPosition = Vector.Create();
 
-		// Token: 0x040243A5 RID: 148389
+		// Token: 0x0401F65A RID: 128602
 		private readonly string Reason = "CameraLookAtPosition Ban Input";
 
-		// Token: 0x040243A6 RID: 148390
+		// Token: 0x0401F65B RID: 128603
 		private bool IsAsync;
 
-		// Token: 0x040243A7 RID: 148391
+		// Token: 0x0401F65C RID: 128604
 		private readonly bool EnableDebugLog = true;
 
-		// Token: 0x040243A8 RID: 148392
+		// Token: 0x0401F65D RID: 128605
 		private const int MILLIONSECOND_PER_SECOND = 1000;
 	}
 }

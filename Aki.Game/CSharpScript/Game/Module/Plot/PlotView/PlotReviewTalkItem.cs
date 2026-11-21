@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200505D RID: 20573
+	// Token: 0x0200402D RID: 16429
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotReviewTalkItem : UiPanelBase
 	{
-		// Token: 0x06034A4E RID: 215630 RVA: 0x00C709B0 File Offset: 0x00C6EBB0
+		// Token: 0x06029941 RID: 170305 RVA: 0x00BBDC50 File Offset: 0x00BBBE50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,19 +39,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06034A4F RID: 215631 RVA: 0x00C70A98 File Offset: 0x00C6EC98
+		// Token: 0x06029942 RID: 170306 RVA: 0x00BBDD38 File Offset: 0x00BBBF38
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(3).CanExecuteChange.Bind(new Func<bool>(this.CanToggleChangeInternal));
 		}
 
-		// Token: 0x06034A50 RID: 215632 RVA: 0x00C70AB7 File Offset: 0x00C6ECB7
+		// Token: 0x06029943 RID: 170307 RVA: 0x00BBDD57 File Offset: 0x00BBBF57
 		protected override void OnBeforeDestroy()
 		{
 			TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(1));
 		}
 
-		// Token: 0x06034A51 RID: 215633 RVA: 0x00C70ACA File Offset: 0x00C6ECCA
+		// Token: 0x06029944 RID: 170308 RVA: 0x00BBDD6A File Offset: 0x00BBBF6A
 		private void OnToggleClickInternal(EToggleState toggleState)
 		{
 			Action<int> onToggleClick = this.OnToggleClick;
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			onToggleClick(this.Index);
 		}
 
-		// Token: 0x06034A52 RID: 215634 RVA: 0x00C70AE2 File Offset: 0x00C6ECE2
+		// Token: 0x06029945 RID: 170309 RVA: 0x00BBDD82 File Offset: 0x00BBBF82
 		private bool CanToggleChangeInternal()
 		{
 			return this.CanToggleChange == null || this.CanToggleChange(this.Index);
 		}
 
-		// Token: 0x06034A53 RID: 215635 RVA: 0x00C70B00 File Offset: 0x00C6ED00
+		// Token: 0x06029946 RID: 170310 RVA: 0x00BBDDA0 File Offset: 0x00BBBFA0
 		[NullableContext(1)]
 		public void Update(PlotReviewTalkItemData data, int index)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Refresh();
 		}
 
-		// Token: 0x06034A54 RID: 215636 RVA: 0x00C70B80 File Offset: 0x00C6ED80
+		// Token: 0x06029947 RID: 170311 RVA: 0x00BBDE20 File Offset: 0x00BBC020
 		public void Refresh()
 		{
 			this.RefreshName();
@@ -99,12 +99,21 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.RefreshAudio();
 		}
 
-		// Token: 0x06034A55 RID: 215637 RVA: 0x00C70B94 File Offset: 0x00C6ED94
+		// Token: 0x06029948 RID: 170312 RVA: 0x00BBDE34 File Offset: 0x00BBC034
 		public void RefreshName()
 		{
+			UUIItem text = base.GetText(0);
 			PlotReviewTalkItemData data = this.Data;
-			ITalkItemDialog talkItemDialog = ((data != null) ? data.TalkItem : null) as ITalkItemDialog;
-			string text;
+			text.SetUIActive(data == null || data.ShowSpeakerName);
+			PlotReviewTalkItemData data2 = this.Data;
+			if (data2 != null && !data2.ShowSpeakerName)
+			{
+				return;
+			}
+			PlotReviewTalkItemData data3 = this.Data;
+			ITalkItem talkItem = (data3 != null) ? data3.TalkItem : null;
+			ITalkItemDialog talkItemDialog = talkItem as ITalkItemDialog;
+			string text2;
 			if (talkItemDialog != null)
 			{
 				ETalkItemType? type = talkItemDialog.Type;
@@ -114,20 +123,20 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 					ITalkItemStyle style = talkItemDialog.Style;
 					if (style != null && style.Type == ETalkItemStyle.InnerVoice)
 					{
-						text = ConfigMultiTextLang.GetLocalTextNew("PlotReview_3", null);
-						goto IL_F8;
+						text2 = ConfigMultiTextLang.GetLocalTextNew("PlotReview_3", null);
+						goto IL_132;
 					}
 				}
 			}
-			Speaker? config = ConfigSpeakerById.GetConfig(((talkItemDialog != null) ? talkItemDialog.WhoId : null).GetValueOrDefault(), true);
-			string text2 = (config != null) ? PublicUtil.Instance.GetConfigTextByTable(ETableText.SpeakerName, new int?(config.Value.Id)) : null;
-			string text3 = (config != null) ? PublicUtil.Instance.GetConfigTextByTable(ETableText.SpeakerTitle, new int?(config.Value.Id)) : null;
-			text = (string.IsNullOrEmpty(text2) ? text3 : text2);
-			IL_F8:
-			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "PlotReview_1", new <>z__ReadOnlySingleElementList<object>(text ?? ""));
+			Speaker? config = ConfigSpeakerById.GetConfig(((talkItem != null) ? talkItem.WhoId : null).GetValueOrDefault(), true);
+			string text3 = (config != null) ? PublicUtil.Instance.GetConfigTextByTable(ETableText.SpeakerName, new int?(config.Value.Id)) : null;
+			string text4 = (config != null) ? PublicUtil.Instance.GetConfigTextByTable(ETableText.SpeakerTitle, new int?(config.Value.Id)) : null;
+			text2 = (string.IsNullOrEmpty(text3) ? text4 : text3);
+			IL_132:
+			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "PlotReview_1", new <>z__ReadOnlySingleElementList<object>(text2 ?? ""));
 		}
 
-		// Token: 0x06034A56 RID: 215638 RVA: 0x00C70CC0 File Offset: 0x00C6EEC0
+		// Token: 0x06029949 RID: 170313 RVA: 0x00BBDF98 File Offset: 0x00BBC198
 		public void RefreshContent()
 		{
 			string tidTalk = this.Data.TalkItem.TidTalk;
@@ -144,7 +153,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x06034A57 RID: 215639 RVA: 0x00C70D1C File Offset: 0x00C6EF1C
+		// Token: 0x0602994A RID: 170314 RVA: 0x00BBDFF4 File Offset: 0x00BBC1F4
 		public void RefreshAudio()
 		{
 			ITalkItem talkItem = this.Data.TalkItem;
@@ -154,25 +163,25 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SetToggleState(toggleState);
 		}
 
-		// Token: 0x06034A58 RID: 215640 RVA: 0x00C70D74 File Offset: 0x00C6EF74
+		// Token: 0x0602994B RID: 170315 RVA: 0x00BBE04C File Offset: 0x00BBC24C
 		public void SetToggleState(EToggleState state)
 		{
 			base.GetExtendToggle(3).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0401C0EA RID: 114922
+		// Token: 0x04016B15 RID: 92949
 		protected int Index = -1;
 
-		// Token: 0x0401C0EB RID: 114923
+		// Token: 0x04016B16 RID: 92950
 		private PlotReviewTalkItemData Data;
 
-		// Token: 0x0401C0EC RID: 114924
+		// Token: 0x04016B17 RID: 92951
 		public Action<int> OnToggleClick;
 
-		// Token: 0x0401C0ED RID: 114925
+		// Token: 0x04016B18 RID: 92952
 		public Func<int, bool> CanToggleChange;
 
-		// Token: 0x0401C0EE RID: 114926
+		// Token: 0x04016B19 RID: 92953
 		private bool CanPlayVoice;
 	}
 }

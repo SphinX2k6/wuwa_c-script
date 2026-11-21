@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E00 RID: 24064
+	// Token: 0x0200643D RID: 25661
 	public struct IGravityDirectionVectorInfo : IFlatbufferObject
 	{
-		// Token: 0x1700B40C RID: 46092
-		// (get) Token: 0x06029306 RID: 168710 RVA: 0x005A69BC File Offset: 0x005A4BBC
+		// Token: 0x1700BD72 RID: 48498
+		// (get) Token: 0x0602B990 RID: 178576 RVA: 0x005EF6EC File Offset: 0x005ED8EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029307 RID: 168711 RVA: 0x005A69C9 File Offset: 0x005A4BC9
+		// Token: 0x0602B991 RID: 178577 RVA: 0x005EF6F9 File Offset: 0x005ED8F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029308 RID: 168712 RVA: 0x005A69D0 File Offset: 0x005A4BD0
+		// Token: 0x0602B992 RID: 178578 RVA: 0x005EF700 File Offset: 0x005ED900
 		public static IGravityDirectionVectorInfo GetRootAsIGravityDirectionVectorInfo(ByteBuffer _bb)
 		{
 			return IGravityDirectionVectorInfo.GetRootAsIGravityDirectionVectorInfo(_bb, default(IGravityDirectionVectorInfo));
 		}
 
-		// Token: 0x06029309 RID: 168713 RVA: 0x005A69EC File Offset: 0x005A4BEC
+		// Token: 0x0602B993 RID: 178579 RVA: 0x005EF71C File Offset: 0x005ED91C
 		public static IGravityDirectionVectorInfo GetRootAsIGravityDirectionVectorInfo(ByteBuffer _bb, IGravityDirectionVectorInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602930A RID: 168714 RVA: 0x005A6A09 File Offset: 0x005A4C09
+		// Token: 0x0602B994 RID: 178580 RVA: 0x005EF739 File Offset: 0x005ED939
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602930B RID: 168715 RVA: 0x005A6A18 File Offset: 0x005A4C18
+		// Token: 0x0602B995 RID: 178581 RVA: 0x005EF748 File Offset: 0x005ED948
 		public IGravityDirectionVectorInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B40D RID: 46093
-		// (get) Token: 0x0602930C RID: 168716 RVA: 0x005A6A28 File Offset: 0x005A4C28
+		// Token: 0x1700BD73 RID: 48499
+		// (get) Token: 0x0602B996 RID: 178582 RVA: 0x005EF758 File Offset: 0x005ED958
 		public EGravityDirectionType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B40E RID: 46094
-		// (get) Token: 0x0602930D RID: 168717 RVA: 0x005A6A64 File Offset: 0x005A4C64
+		// Token: 0x1700BD74 RID: 48500
+		// (get) Token: 0x0602B997 RID: 178583 RVA: 0x005EF794 File Offset: 0x005ED994
 		public IVectorInfo? Direction
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602930E RID: 168718 RVA: 0x005A6AC1 File Offset: 0x005A4CC1
+		// Token: 0x0602B998 RID: 178584 RVA: 0x005EF7F1 File Offset: 0x005ED9F1
 		public static Offset<IGravityDirectionVectorInfo> CreateIGravityDirectionVectorInfo(FlatBufferBuilder builder, EGravityDirectionType Type = EGravityDirectionType.SelfRotation, Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionVectorInfo.EndIGravityDirectionVectorInfo(builder);
 		}
 
-		// Token: 0x0602930F RID: 168719 RVA: 0x005A6ADE File Offset: 0x005A4CDE
+		// Token: 0x0602B999 RID: 178585 RVA: 0x005EF80E File Offset: 0x005EDA0E
 		public static void StartIGravityDirectionVectorInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06029310 RID: 168720 RVA: 0x005A6AE7 File Offset: 0x005A4CE7
+		// Token: 0x0602B99A RID: 178586 RVA: 0x005EF817 File Offset: 0x005EDA17
 		public static void AddType(FlatBufferBuilder builder, EGravityDirectionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029311 RID: 168721 RVA: 0x005A6AF2 File Offset: 0x005A4CF2
+		// Token: 0x0602B99B RID: 178587 RVA: 0x005EF822 File Offset: 0x005EDA22
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(1, directionOffset.Value, 0);
 		}
 
-		// Token: 0x06029312 RID: 168722 RVA: 0x005A6B02 File Offset: 0x005A4D02
+		// Token: 0x0602B99C RID: 178588 RVA: 0x005EF832 File Offset: 0x005EDA32
 		public static Offset<IGravityDirectionVectorInfo> EndIGravityDirectionVectorInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IGravityDirectionVectorInfo>(builder.EndTable());
 		}
 
-		// Token: 0x06029313 RID: 168723 RVA: 0x005A6B10 File Offset: 0x005A4D10
+		// Token: 0x0602B99D RID: 178589 RVA: 0x005EF840 File Offset: 0x005EDA40
 		public IGravityDirectionVectorInfoT UnPack()
 		{
 			IGravityDirectionVectorInfoT gravityDirectionVectorInfoT = new IGravityDirectionVectorInfoT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return gravityDirectionVectorInfoT;
 		}
 
-		// Token: 0x06029314 RID: 168724 RVA: 0x005A6B2C File Offset: 0x005A4D2C
+		// Token: 0x0602B99E RID: 178590 RVA: 0x005EF85C File Offset: 0x005EDA5C
 		public void UnPackTo(IGravityDirectionVectorInfoT _o)
 		{
 			_o.Type = this.Type;
 			_o.Direction = ((this.Direction != null) ? this.Direction.Value.UnPack() : null);
 		}
 
-		// Token: 0x06029315 RID: 168725 RVA: 0x005A6B74 File Offset: 0x005A4D74
+		// Token: 0x0602B99F RID: 178591 RVA: 0x005EF8A4 File Offset: 0x005EDAA4
 		public static Offset<IGravityDirectionVectorInfo> Pack(FlatBufferBuilder builder, IGravityDirectionVectorInfoT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGravityDirectionVectorInfo.CreateIGravityDirectionVectorInfo(builder, _o.Type, directionOffset);
 		}
 
-		// Token: 0x0400F7F2 RID: 63474
+		// Token: 0x0401054D RID: 66893
 		private Table __p;
 	}
 }

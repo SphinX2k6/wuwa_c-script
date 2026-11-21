@@ -1,39 +1,46 @@
 ﻿using System;
+using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200621C RID: 25116
+	// Token: 0x0200688D RID: 26765
 	public class IBounceT
 	{
-		// Token: 0x1700BB2B RID: 47915
-		// (get) Token: 0x0602B4B6 RID: 177334 RVA: 0x005F678D File Offset: 0x005F498D
-		// (set) Token: 0x0602B4B7 RID: 177335 RVA: 0x005F6795 File Offset: 0x005F4995
+		// Token: 0x1700C4B2 RID: 50354
+		// (get) Token: 0x0602DC15 RID: 187413 RVA: 0x00641543 File Offset: 0x0063F743
+		// (set) Token: 0x0602DC16 RID: 187414 RVA: 0x0064154B File Offset: 0x0063F74B
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x1700BB2C RID: 47916
-		// (get) Token: 0x0602B4B8 RID: 177336 RVA: 0x005F679E File Offset: 0x005F499E
-		// (set) Token: 0x0602B4B9 RID: 177337 RVA: 0x005F67A6 File Offset: 0x005F49A6
+		// Token: 0x1700C4B3 RID: 50355
+		// (get) Token: 0x0602DC17 RID: 187415 RVA: 0x00641554 File Offset: 0x0063F754
+		// (set) Token: 0x0602DC18 RID: 187416 RVA: 0x0064155C File Offset: 0x0063F75C
+		public TCommonTargetUnion Target { get; set; }
+
+		// Token: 0x1700C4B4 RID: 50356
+		// (get) Token: 0x0602DC19 RID: 187417 RVA: 0x00641565 File Offset: 0x0063F765
+		// (set) Token: 0x0602DC1A RID: 187418 RVA: 0x0064156D File Offset: 0x0063F76D
 		public int Height { get; set; }
 
-		// Token: 0x1700BB2D RID: 47917
-		// (get) Token: 0x0602B4BA RID: 177338 RVA: 0x005F67AF File Offset: 0x005F49AF
-		// (set) Token: 0x0602B4BB RID: 177339 RVA: 0x005F67B7 File Offset: 0x005F49B7
+		// Token: 0x1700C4B5 RID: 50357
+		// (get) Token: 0x0602DC1B RID: 187419 RVA: 0x00641576 File Offset: 0x0063F776
+		// (set) Token: 0x0602DC1C RID: 187420 RVA: 0x0064157E File Offset: 0x0063F77E
 		public float Time { get; set; }
 
-		// Token: 0x1700BB2E RID: 47918
-		// (get) Token: 0x0602B4BC RID: 177340 RVA: 0x005F67C0 File Offset: 0x005F49C0
-		// (set) Token: 0x0602B4BD RID: 177341 RVA: 0x005F67C8 File Offset: 0x005F49C8
+		// Token: 0x1700C4B6 RID: 50358
+		// (get) Token: 0x0602DC1D RID: 187421 RVA: 0x00641587 File Offset: 0x0063F787
+		// (set) Token: 0x0602DC1E RID: 187422 RVA: 0x0064158F File Offset: 0x0063F78F
 		public string MotionCurve { get; set; }
 
-		// Token: 0x1700BB2F RID: 47919
-		// (get) Token: 0x0602B4BE RID: 177342 RVA: 0x005F67D1 File Offset: 0x005F49D1
-		// (set) Token: 0x0602B4BF RID: 177343 RVA: 0x005F67D9 File Offset: 0x005F49D9
+		// Token: 0x1700C4B7 RID: 50359
+		// (get) Token: 0x0602DC1F RID: 187423 RVA: 0x00641598 File Offset: 0x0063F798
+		// (set) Token: 0x0602DC20 RID: 187424 RVA: 0x006415A0 File Offset: 0x0063F7A0
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B4C0 RID: 177344 RVA: 0x005F67E2 File Offset: 0x005F49E2
+		// Token: 0x0602DC21 RID: 187425 RVA: 0x006415A9 File Offset: 0x0063F7A9
 		public IBounceT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;
+			this.Target = null;
 			this.Height = 0;
 			this.Time = 0f;
 			this.MotionCurve = null;

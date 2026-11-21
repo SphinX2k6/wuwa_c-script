@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000101 RID: 257
+	// Token: 0x02000110 RID: 272
 	public class ConfigBlockSwitchById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000607 RID: 1543 RVA: 0x0007BC14 File Offset: 0x00079E14
+		// Token: 0x06000661 RID: 1633 RVA: 0x00081578 File Offset: 0x0007F778
 		static ConfigBlockSwitchById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBlockSwitchById.CreateStaticDefaultValue), new Action(ConfigBlockSwitchById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000608 RID: 1544 RVA: 0x0007BC34 File Offset: 0x00079E34
+		// Token: 0x06000662 RID: 1634 RVA: 0x00081598 File Offset: 0x0007F798
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBlockSwitchById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000609 RID: 1545 RVA: 0x0007BCB3 File Offset: 0x00079EB3
+		// Token: 0x06000663 RID: 1635 RVA: 0x00081617 File Offset: 0x0007F817
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBlockSwitchById.LogPair = null;
 			ConfigBlockSwitchById.HandleId = 0;
 		}
 
-		// Token: 0x0600060A RID: 1546 RVA: 0x0007BCC1 File Offset: 0x00079EC1
+		// Token: 0x06000664 RID: 1636 RVA: 0x00081625 File Offset: 0x0007F825
 		public static void Init()
 		{
 			ConfigBlockSwitchById.HandleId = ConfigCommon.InitDataStatement(ConfigBlockSwitchById.HandleId, "db_map.db", "select BinData from `BlockSwitch` where Id=?");
 		}
 
-		// Token: 0x0600060B RID: 1547 RVA: 0x0007BCDC File Offset: 0x00079EDC
+		// Token: 0x06000665 RID: 1637 RVA: 0x00081640 File Offset: 0x0007F840
 		public static BlockSwitch? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBlockSwitchById.HandleId, ConfigBlockSwitchById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BlockSwitch?(rootAsBlockSwitch);
 		}
 
-		// Token: 0x040006EB RID: 1771
+		// Token: 0x04000754 RID: 1876
 		private const string DB = "db_map.db";
 
-		// Token: 0x040006EC RID: 1772
+		// Token: 0x04000755 RID: 1877
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x040006ED RID: 1773
+		// Token: 0x04000756 RID: 1878
 		private const string TABLE = "BlockSwitch";
 
-		// Token: 0x040006EE RID: 1774
+		// Token: 0x04000757 RID: 1879
 		private const string COMMAND = "select BinData from `BlockSwitch` where Id=?";
 
-		// Token: 0x040006EF RID: 1775
+		// Token: 0x04000758 RID: 1880
 		private const string KEY_PREFIX = "BlockSwitchById";
 
-		// Token: 0x040006F0 RID: 1776
+		// Token: 0x04000759 RID: 1881
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040006F1 RID: 1777
+		// Token: 0x0400075A RID: 1882
 		private static int HandleId;
 	}
 }

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F31 RID: 24369
+	// Token: 0x02004F18 RID: 20248
 	public interface IWheelTowerBossHandBookBuffDescData
 	{
-		// Token: 0x17008F2C RID: 36652
-		// (get) Token: 0x0603DE7A RID: 253562
-		// (set) Token: 0x0603DE7B RID: 253563
+		// Token: 0x170062FE RID: 25342
+		// (get) Token: 0x06032E15 RID: 208405
+		// (set) Token: 0x06032E16 RID: 208406
 		int BuffId { get; set; }
 
-		// Token: 0x17008F2D RID: 36653
-		// (get) Token: 0x0603DE7C RID: 253564
-		// (set) Token: 0x0603DE7D RID: 253565
+		// Token: 0x170062FF RID: 25343
+		// (get) Token: 0x06032E17 RID: 208407
+		// (set) Token: 0x06032E18 RID: 208408
 		bool IsActivate { get; set; }
 	}
 }

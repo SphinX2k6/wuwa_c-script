@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BCD RID: 7117
+// Token: 0x0200108C RID: 4236
 [NullableContext(2)]
 [Nullable(0)]
 public class FormationSkillBranchToggleHandler
 {
-	// Token: 0x0600D43E RID: 54334 RVA: 0x0030D7F5 File Offset: 0x0030B9F5
+	// Token: 0x0600A850 RID: 43088 RVA: 0x00318969 File Offset: 0x00316B69
 	public FormationSkillBranchToggleHandler([Nullable(new byte[]
 	{
 		1,
@@ -16,7 +16,7 @@ public class FormationSkillBranchToggleHandler
 		this.GetToggleItem = getToggleItem;
 	}
 
-	// Token: 0x0600D43F RID: 54335 RVA: 0x0030D804 File Offset: 0x0030BA04
+	// Token: 0x0600A851 RID: 43089 RVA: 0x00318978 File Offset: 0x00316B78
 	public void Refresh(int configId, IRoleSlotDisplayData.SkillBranchData branch)
 	{
 		this.CurrentConfigId = configId;
@@ -24,7 +24,7 @@ public class FormationSkillBranchToggleHandler
 		this.ApplyDto(branch);
 	}
 
-	// Token: 0x0600D440 RID: 54336 RVA: 0x0030D81B File Offset: 0x0030BA1B
+	// Token: 0x0600A852 RID: 43090 RVA: 0x0031898F File Offset: 0x00316B8F
 	public void Clear()
 	{
 		this.CurrentConfigId = 0;
@@ -37,13 +37,13 @@ public class FormationSkillBranchToggleHandler
 		commonRoleSkillBranchSwitchItem.SetUiActive(false);
 	}
 
-	// Token: 0x0600D441 RID: 54337 RVA: 0x0030D841 File Offset: 0x0030BA41
+	// Token: 0x0600A853 RID: 43091 RVA: 0x003189B5 File Offset: 0x00316BB5
 	public void ApplyLastDto()
 	{
 		this.ApplyDto(this.LastBranchDto);
 	}
 
-	// Token: 0x0600D442 RID: 54338 RVA: 0x0030D850 File Offset: 0x0030BA50
+	// Token: 0x0600A854 RID: 43092 RVA: 0x003189C4 File Offset: 0x00316BC4
 	public void OnRoleSkillBranchChanged(int roleId)
 	{
 		if (roleId != this.CurrentConfigId || this.LastBranchDto == null || (this.LastBranchDto.IsMulti && !this.LastBranchDto.IsSelf))
@@ -65,7 +65,7 @@ public class FormationSkillBranchToggleHandler
 		commonRoleSkillBranchSwitchItem.SetUiActive(false);
 	}
 
-	// Token: 0x0600D443 RID: 54339 RVA: 0x0030D8C8 File Offset: 0x0030BAC8
+	// Token: 0x0600A855 RID: 43093 RVA: 0x00318A3C File Offset: 0x00316C3C
 	public void SwitchBranchHandler(int skillBranch)
 	{
 		if (this.CurrentConfigId <= 0)
@@ -83,7 +83,7 @@ public class FormationSkillBranchToggleHandler
 		});
 	}
 
-	// Token: 0x0600D444 RID: 54340 RVA: 0x0030D8F0 File Offset: 0x0030BAF0
+	// Token: 0x0600A856 RID: 43094 RVA: 0x00318A64 File Offset: 0x00316C64
 	private void ApplyDto(IRoleSlotDisplayData.SkillBranchData branch)
 	{
 		CommonRoleSkillBranchSwitchItem commonRoleSkillBranchSwitchItem = this.GetToggleItem();
@@ -102,14 +102,14 @@ public class FormationSkillBranchToggleHandler
 		commonRoleSkillBranchSwitchItem.RefreshIcon(new Func<int, string>(this.OnRefreshIcon));
 	}
 
-	// Token: 0x0600D445 RID: 54341 RVA: 0x0030D95C File Offset: 0x0030BB5C
+	// Token: 0x0600A857 RID: 43095 RVA: 0x00318AD0 File Offset: 0x00316CD0
 	[NullableContext(1)]
 	private string OnRefreshIcon(int index)
 	{
 		return FormationConfig.Instance.GetSkillBranchIcon(this.CurrentConfigId, index);
 	}
 
-	// Token: 0x04006105 RID: 24837
+	// Token: 0x040061D4 RID: 25044
 	[Nullable(new byte[]
 	{
 		1,
@@ -117,9 +117,9 @@ public class FormationSkillBranchToggleHandler
 	})]
 	private readonly Func<CommonRoleSkillBranchSwitchItem> GetToggleItem;
 
-	// Token: 0x04006106 RID: 24838
+	// Token: 0x040061D5 RID: 25045
 	private int CurrentConfigId;
 
-	// Token: 0x04006107 RID: 24839
+	// Token: 0x040061D6 RID: 25046
 	private IRoleSlotDisplayData.SkillBranchData LastBranchDto;
 }

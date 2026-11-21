@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001892 RID: 6290
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A1D RID: 6685
 	public class ICheckFlowLookAtConfig
 	{
-		// Token: 0x06008715 RID: 34581 RVA: 0x00140794 File Offset: 0x0013E994
+		// Token: 0x06008E3D RID: 36413 RVA: 0x0014FFC8 File Offset: 0x0014E1C8
 		private ICheckFlowLookAtConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008716 RID: 34582 RVA: 0x001407CC File Offset: 0x0013E9CC
+		// Token: 0x06008E3E RID: 36414 RVA: 0x00150000 File Offset: 0x0014E200
 		public static ICheckFlowLookAtConfig Create([Nullable(2)] ICheckFlowLookAtConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008717 RID: 34583 RVA: 0x001407DF File Offset: 0x0013E9DF
+		// Token: 0x06008E3F RID: 36415 RVA: 0x00150013 File Offset: 0x0014E213
 		public static ICheckFlowLookAtConfig CreateFromSetValue([Nullable(2)] ICheckFlowLookAtConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008718 RID: 34584 RVA: 0x001407F2 File Offset: 0x0013E9F2
+		// Token: 0x06008E40 RID: 36416 RVA: 0x00150026 File Offset: 0x0014E226
 		public ICheckFlowLookAtConfig_SetValue ToSetValue()
 		{
 			return new ICheckFlowLookAtConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C04 RID: 11268
-		// (get) Token: 0x06008719 RID: 34585 RVA: 0x00140820 File Offset: 0x0013EA20
-		// (set) Token: 0x0600871A RID: 34586 RVA: 0x00140881 File Offset: 0x0013EA81
+		// Token: 0x17002DFF RID: 11775
+		// (get) Token: 0x06008E41 RID: 36417 RVA: 0x00150054 File Offset: 0x0014E254
+		// (set) Token: 0x06008E42 RID: 36418 RVA: 0x001500B5 File Offset: 0x0014E2B5
 		public virtual PlayFlow Flow
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C05 RID: 11269
-		// (get) Token: 0x0600871B RID: 34587 RVA: 0x00140896 File Offset: 0x0013EA96
-		// (set) Token: 0x0600871C RID: 34588 RVA: 0x001408BD File Offset: 0x0013EABD
+		// Token: 0x17002E00 RID: 11776
+		// (get) Token: 0x06008E43 RID: 36419 RVA: 0x001500CA File Offset: 0x0014E2CA
+		// (set) Token: 0x06008E44 RID: 36420 RVA: 0x001500F1 File Offset: 0x0014E2F1
 		public virtual ICheckFlowLookAtTarget Target
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C06 RID: 11270
-		// (get) Token: 0x0600871D RID: 34589 RVA: 0x001408CC File Offset: 0x0013EACC
-		// (set) Token: 0x0600871E RID: 34590 RVA: 0x0014092D File Offset: 0x0013EB2D
+		// Token: 0x17002E01 RID: 11777
+		// (get) Token: 0x06008E45 RID: 36421 RVA: 0x00150100 File Offset: 0x0014E300
+		// (set) Token: 0x06008E46 RID: 36422 RVA: 0x00150161 File Offset: 0x0014E361
 		[Nullable(2)]
 		public virtual IEntityLookAtPerform EntityLookAtPerform
 		{
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005515 RID: 21781
+		// Token: 0x04005962 RID: 22882
 		[Nullable(2)]
 		protected ICheckFlowLookAtConfig FbInstance;
 
-		// Token: 0x04005516 RID: 21782
+		// Token: 0x04005963 RID: 22883
 		[Nullable(2)]
 		protected ICheckFlowLookAtConfig_SetValue PocoInterface;
 
-		// Token: 0x04005517 RID: 21783
+		// Token: 0x04005964 RID: 22884
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04005518 RID: 21784
+		// Token: 0x04005965 RID: 22885
 		private bool _FlowInited;
 
-		// Token: 0x04005519 RID: 21785
+		// Token: 0x04005966 RID: 22886
 		private IEntityLookAtPerform _EntityLookAtPerformCache;
 
-		// Token: 0x0400551A RID: 21786
+		// Token: 0x04005967 RID: 22887
 		private bool _EntityLookAtPerformInited;
 	}
 }

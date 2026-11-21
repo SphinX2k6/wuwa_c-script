@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005764 RID: 22372
+	// Token: 0x0200473B RID: 18235
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoHandBookRolePanel : UiPanelBase
 	{
-		// Token: 0x06038D5D RID: 232797 RVA: 0x00D806B4 File Offset: 0x00D7E8B4
+		// Token: 0x0602DC6D RID: 187501 RVA: 0x00CCF15C File Offset: 0x00CCD35C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -63,7 +62,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D5E RID: 232798 RVA: 0x00D808F4 File Offset: 0x00D7EAF4
+		// Token: 0x0602DC6E RID: 187502 RVA: 0x00CCF39C File Offset: 0x00CCD59C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoHandBookRolePanel.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -74,13 +73,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D5F RID: 232799 RVA: 0x00D80937 File Offset: 0x00D7EB37
+		// Token: 0x0602DC6F RID: 187503 RVA: 0x00CCF3DF File Offset: 0x00CCD5DF
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06038D60 RID: 232800 RVA: 0x00D8094A File Offset: 0x00D7EB4A
+		// Token: 0x0602DC70 RID: 187504 RVA: 0x00CCF3F2 File Offset: 0x00CCD5F2
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -91,7 +90,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x06038D61 RID: 232801 RVA: 0x00D8095C File Offset: 0x00D7EB5C
+		// Token: 0x0602DC71 RID: 187505 RVA: 0x00CCF404 File Offset: 0x00CCD604
 		private UniTask RefreshView()
 		{
 			KurotatoHandBookRolePanel.<RefreshView>d__15 <RefreshView>d__;
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <RefreshView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D62 RID: 232802 RVA: 0x00D809A0 File Offset: 0x00D7EBA0
+		// Token: 0x0602DC72 RID: 187506 RVA: 0x00CCF448 File Offset: 0x00CCD648
 		private void RefreshRecordInfo()
 		{
 			KurotatoRoleData kurotatoRoleData = this.KurotatoActivityData.GetKurotatoRoleData(this.RoleId);
@@ -127,7 +126,8 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}
 			foreach (KurotatoWaveLevel kurotatoWaveLevel in KurotatoConfig.Instance.GetWaveLevelConfigList())
 			{
-				if (kurotatoWaveLevel.WaveRangeIter().ToList<int>()[0] <= kurotatoRoleData.HistoryWave && kurotatoRoleData.HistoryWave <= kurotatoWaveLevel.WaveRangeIter().ToList<int>()[1])
+				List<int> list = new List<int>(kurotatoWaveLevel.WaveRangeIter());
+				if (list[0] <= kurotatoRoleData.HistoryWave && kurotatoRoleData.HistoryWave <= list[1])
 				{
 					base.SetTextureByPath(kurotatoWaveLevel.Icon, base.GetTexture(13), null, null);
 					break;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}
 		}
 
-		// Token: 0x06038D63 RID: 232803 RVA: 0x00D80AB8 File Offset: 0x00D7ECB8
+		// Token: 0x0602DC73 RID: 187507 RVA: 0x00CCF55C File Offset: 0x00CCD75C
 		private UniTask OnRoleToggleClickCallback(int roleId)
 		{
 			KurotatoHandBookRolePanel.<OnRoleToggleClickCallback>d__17 <OnRoleToggleClickCallback>d__;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OnRoleToggleClickCallback>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038D64 RID: 232804 RVA: 0x00D80B03 File Offset: 0x00D7ED03
+		// Token: 0x0602DC74 RID: 187508 RVA: 0x00CCF5A7 File Offset: 0x00CCD7A7
 		public void RefreshRoleList()
 		{
 			LoopScrollView<KurotatoRoleGridItem, int> roleLoopScrollView = this.RoleLoopScrollView;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			roleLoopScrollView.RefreshAllGridProxies();
 		}
 
-		// Token: 0x06038D65 RID: 232805 RVA: 0x00D80B15 File Offset: 0x00D7ED15
+		// Token: 0x0602DC75 RID: 187509 RVA: 0x00CCF5B9 File Offset: 0x00CCD7B9
 		private KurotatoRoleGridItem CreateRoleItem()
 		{
 			KurotatoRoleGridItem kurotatoRoleGridItem = new KurotatoRoleGridItem();
@@ -170,27 +170,31 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return kurotatoRoleGridItem;
 		}
 
-		// Token: 0x06038D66 RID: 232806 RVA: 0x00D80B38 File Offset: 0x00D7ED38
+		// Token: 0x0602DC76 RID: 187510 RVA: 0x00CCF5DC File Offset: 0x00CCD7DC
 		private void OnWeaponToggleClickCallback(IKurotatoSmallItemGridData data)
 		{
 			KurotatoRoleData kurotatoRoleData = this.KurotatoActivityData.GetKurotatoRoleData(this.RoleId);
-			List<KurotatoCardTip> collection = (from id in kurotatoRoleData.InitWeaponIds
-			select new KurotatoCardTip
-			{
-				CardType = EKurotatoCardType.Weapon,
-				SelectId = id,
-				IsConfigId = new bool?(true)
-			}).ToList<KurotatoCardTip>();
-			List<KurotatoCardTip> collection2 = (from id in kurotatoRoleData.InitItemIds
-			select new KurotatoCardTip
-			{
-				CardType = EKurotatoCardType.Item,
-				SelectId = id,
-				IsConfigId = new bool?(true)
-			}).ToList<KurotatoCardTip>();
 			List<KurotatoCardTip> list = new List<KurotatoCardTip>();
-			list.AddRange(collection);
-			list.AddRange(collection2);
+			List<int> initWeaponIds = kurotatoRoleData.InitWeaponIds;
+			for (int i = 0; i < initWeaponIds.Count; i++)
+			{
+				list.Add(new KurotatoCardTip
+				{
+					CardType = EKurotatoCardType.Weapon,
+					SelectId = initWeaponIds[i],
+					IsConfigId = new bool?(true)
+				});
+			}
+			List<int> initItemIds = kurotatoRoleData.InitItemIds;
+			for (int j = 0; j < initItemIds.Count; j++)
+			{
+				list.Add(new KurotatoCardTip
+				{
+					CardType = EKurotatoCardType.Item,
+					SelectId = initItemIds[j],
+					IsConfigId = new bool?(true)
+				});
+			}
 			List<int> list2 = new List<int>();
 			list2.AddRange(kurotatoRoleData.InitWeaponIds);
 			list2.AddRange(kurotatoRoleData.InitItemIds);
@@ -202,7 +206,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			}, null);
 		}
 
-		// Token: 0x06038D67 RID: 232807 RVA: 0x00D80C40 File Offset: 0x00D7EE40
+		// Token: 0x0602DC77 RID: 187511 RVA: 0x00CCF704 File Offset: 0x00CCD904
 		private CSharpScript.Game.Module.Kurotato.View.Components.KurotatoWeaponSmallItemGrid CreateItem()
 		{
 			CSharpScript.Game.Module.Kurotato.View.Components.KurotatoWeaponSmallItemGrid item = new CSharpScript.Game.Module.Kurotato.View.Components.KurotatoWeaponSmallItemGrid(false);
@@ -221,13 +225,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return item;
 		}
 
-		// Token: 0x06038D68 RID: 232808 RVA: 0x00D80C83 File Offset: 0x00D7EE83
+		// Token: 0x0602DC78 RID: 187512 RVA: 0x00CCF747 File Offset: 0x00CCD947
 		private void OnLockBtnClick()
 		{
 			this.OpenConditionViewAsync().Forget();
 		}
 
-		// Token: 0x06038D69 RID: 232809 RVA: 0x00D80C90 File Offset: 0x00D7EE90
+		// Token: 0x0602DC79 RID: 187513 RVA: 0x00CCF754 File Offset: 0x00CCD954
 		private UniTask OpenConditionViewAsync()
 		{
 			KurotatoHandBookRolePanel.<OpenConditionViewAsync>d__23 <OpenConditionViewAsync>d__;
@@ -238,23 +242,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			return <OpenConditionViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401DCFB RID: 122107
+		// Token: 0x04018791 RID: 100241
 		private const int INIT_WEAPON_MAX_NUM = 4;
 
-		// Token: 0x0401DCFC RID: 122108
+		// Token: 0x04018792 RID: 100242
 		private KurotatoActivityData KurotatoActivityData;
 
-		// Token: 0x0401DCFD RID: 122109
+		// Token: 0x04018793 RID: 100243
 		[Nullable(2)]
 		private KurotatoLevelSelectViewData LevelSelectViewData;
 
-		// Token: 0x0401DCFE RID: 122110
+		// Token: 0x04018794 RID: 100244
 		private int RoleId;
 
-		// Token: 0x0401DCFF RID: 122111
+		// Token: 0x04018795 RID: 100245
 		private List<int> RoleIdList = new List<int>();
 
-		// Token: 0x0401DD00 RID: 122112
+		// Token: 0x04018796 RID: 100246
 		[Nullable(new byte[]
 		{
 			2,
@@ -262,7 +266,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 		})]
 		private LoopScrollView<KurotatoRoleGridItem, int> RoleLoopScrollView;
 
-		// Token: 0x0401DD01 RID: 122113
+		// Token: 0x04018797 RID: 100247
 		[Nullable(new byte[]
 		{
 			2,
@@ -271,53 +275,53 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 		})]
 		private GenericLayout<CSharpScript.Game.Module.Kurotato.View.Components.KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData> WeaponLayout;
 
-		// Token: 0x0401DD02 RID: 122114
+		// Token: 0x04018798 RID: 100248
 		[Nullable(2)]
 		private FunctionalPanelConditionLock LockPanel;
 
-		// Token: 0x0401DD03 RID: 122115
+		// Token: 0x04018799 RID: 100249
 		[Nullable(2)]
 		public Action OnCloseView;
 
-		// Token: 0x0401DD04 RID: 122116
+		// Token: 0x0401879A RID: 100250
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B95F RID: 47455
+		// Token: 0x0200A37B RID: 41851
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x040380E4 RID: 229604
+			// Token: 0x04032AE6 RID: 207590
 			LoopScrollRole,
-			// Token: 0x040380E5 RID: 229605
+			// Token: 0x04032AE7 RID: 207591
 			ItemRole,
-			// Token: 0x040380E6 RID: 229606
+			// Token: 0x04032AE8 RID: 207592
 			SpineRole,
-			// Token: 0x040380E7 RID: 229607
+			// Token: 0x04032AE9 RID: 207593
 			TextRoleName,
-			// Token: 0x040380E8 RID: 229608
+			// Token: 0x04032AEA RID: 207594
 			TextRoleDesc,
-			// Token: 0x040380E9 RID: 229609
+			// Token: 0x04032AEB RID: 207595
 			LayoutWeapon,
-			// Token: 0x040380EA RID: 229610
+			// Token: 0x04032AEC RID: 207596
 			ItemWeapon,
-			// Token: 0x040380EB RID: 229611
+			// Token: 0x04032AED RID: 207597
 			ItemGotoBtn,
-			// Token: 0x040380EC RID: 229612
+			// Token: 0x04032AEE RID: 207598
 			ItemContinueBtn,
-			// Token: 0x040380ED RID: 229613
+			// Token: 0x04032AEF RID: 207599
 			ItemLockPanel,
-			// Token: 0x040380EE RID: 229614
+			// Token: 0x04032AF0 RID: 207600
 			BtnArchive,
-			// Token: 0x040380EF RID: 229615
+			// Token: 0x04032AF1 RID: 207601
 			ItemRecordPanel,
-			// Token: 0x040380F0 RID: 229616
+			// Token: 0x04032AF2 RID: 207602
 			TextKillNum,
-			// Token: 0x040380F1 RID: 229617
+			// Token: 0x04032AF3 RID: 207603
 			TextureWaveLevel,
-			// Token: 0x040380F2 RID: 229618
+			// Token: 0x04032AF4 RID: 207604
 			ItemBtnPanel,
-			// Token: 0x040380F3 RID: 229619
+			// Token: 0x04032AF5 RID: 207605
 			TextWave = 18
 		}
 	}

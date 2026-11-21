@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B00 RID: 15104
+	// Token: 0x02003F02 RID: 16130
 	public class IVarDefineT
 	{
-		// Token: 0x17006796 RID: 26518
-		// (get) Token: 0x06014989 RID: 84361 RVA: 0x002FFC83 File Offset: 0x002FDE83
-		// (set) Token: 0x0601498A RID: 84362 RVA: 0x002FFC8B File Offset: 0x002FDE8B
+		// Token: 0x17006D31 RID: 27953
+		// (get) Token: 0x06015E33 RID: 89651 RVA: 0x00325F13 File Offset: 0x00324113
+		// (set) Token: 0x06015E34 RID: 89652 RVA: 0x00325F1B File Offset: 0x0032411B
 		public string Name { get; set; }
 
-		// Token: 0x17006797 RID: 26519
-		// (get) Token: 0x0601498B RID: 84363 RVA: 0x002FFC94 File Offset: 0x002FDE94
-		// (set) Token: 0x0601498C RID: 84364 RVA: 0x002FFC9C File Offset: 0x002FDE9C
+		// Token: 0x17006D32 RID: 27954
+		// (get) Token: 0x06015E35 RID: 89653 RVA: 0x00325F24 File Offset: 0x00324124
+		// (set) Token: 0x06015E36 RID: 89654 RVA: 0x00325F2C File Offset: 0x0032412C
 		public EVar Type { get; set; }
 
-		// Token: 0x17006798 RID: 26520
-		// (get) Token: 0x0601498D RID: 84365 RVA: 0x002FFCA5 File Offset: 0x002FDEA5
-		// (set) Token: 0x0601498E RID: 84366 RVA: 0x002FFCAD File Offset: 0x002FDEAD
+		// Token: 0x17006D33 RID: 27955
+		// (get) Token: 0x06015E37 RID: 89655 RVA: 0x00325F35 File Offset: 0x00324135
+		// (set) Token: 0x06015E38 RID: 89656 RVA: 0x00325F3D File Offset: 0x0032413D
 		public TVarValueUnion Value { get; set; }
 
-		// Token: 0x17006799 RID: 26521
-		// (get) Token: 0x0601498F RID: 84367 RVA: 0x002FFCB6 File Offset: 0x002FDEB6
-		// (set) Token: 0x06014990 RID: 84368 RVA: 0x002FFCBE File Offset: 0x002FDEBE
+		// Token: 0x17006D34 RID: 27956
+		// (get) Token: 0x06015E39 RID: 89657 RVA: 0x00325F46 File Offset: 0x00324146
+		// (set) Token: 0x06015E3A RID: 89658 RVA: 0x00325F4E File Offset: 0x0032414E
 		public EVarAccess Access { get; set; }
 
-		// Token: 0x1700679A RID: 26522
-		// (get) Token: 0x06014991 RID: 84369 RVA: 0x002FFCC7 File Offset: 0x002FDEC7
-		// (set) Token: 0x06014992 RID: 84370 RVA: 0x002FFCCF File Offset: 0x002FDECF
+		// Token: 0x17006D35 RID: 27957
+		// (get) Token: 0x06015E3B RID: 89659 RVA: 0x00325F57 File Offset: 0x00324157
+		// (set) Token: 0x06015E3C RID: 89660 RVA: 0x00325F5F File Offset: 0x0032415F
 		public bool IsIgnoreOnRollBack { get; set; }
 
-		// Token: 0x1700679B RID: 26523
-		// (get) Token: 0x06014993 RID: 84371 RVA: 0x002FFCD8 File Offset: 0x002FDED8
-		// (set) Token: 0x06014994 RID: 84372 RVA: 0x002FFCE0 File Offset: 0x002FDEE0
+		// Token: 0x17006D36 RID: 27958
+		// (get) Token: 0x06015E3D RID: 89661 RVA: 0x00325F68 File Offset: 0x00324168
+		// (set) Token: 0x06015E3E RID: 89662 RVA: 0x00325F70 File Offset: 0x00324170
 		public bool IsClient { get; set; }
 
-		// Token: 0x1700679C RID: 26524
-		// (get) Token: 0x06014995 RID: 84373 RVA: 0x002FFCE9 File Offset: 0x002FDEE9
-		// (set) Token: 0x06014996 RID: 84374 RVA: 0x002FFCF1 File Offset: 0x002FDEF1
+		// Token: 0x17006D37 RID: 27959
+		// (get) Token: 0x06015E3F RID: 89663 RVA: 0x00325F79 File Offset: 0x00324179
+		// (set) Token: 0x06015E40 RID: 89664 RVA: 0x00325F81 File Offset: 0x00324181
 		public TVarValidateConfigUnion ValidateConfig { get; set; }
 
-		// Token: 0x1700679D RID: 26525
-		// (get) Token: 0x06014997 RID: 84375 RVA: 0x002FFCFA File Offset: 0x002FDEFA
-		// (set) Token: 0x06014998 RID: 84376 RVA: 0x002FFD02 File Offset: 0x002FDF02
+		// Token: 0x17006D38 RID: 27960
+		// (get) Token: 0x06015E41 RID: 89665 RVA: 0x00325F8A File Offset: 0x0032418A
+		// (set) Token: 0x06015E42 RID: 89666 RVA: 0x00325F92 File Offset: 0x00324192
 		public bool IsClientEditable { get; set; }
 
-		// Token: 0x1700679E RID: 26526
-		// (get) Token: 0x06014999 RID: 84377 RVA: 0x002FFD0B File Offset: 0x002FDF0B
-		// (set) Token: 0x0601499A RID: 84378 RVA: 0x002FFD13 File Offset: 0x002FDF13
+		// Token: 0x17006D39 RID: 27961
+		// (get) Token: 0x06015E43 RID: 89667 RVA: 0x00325F9B File Offset: 0x0032419B
+		// (set) Token: 0x06015E44 RID: 89668 RVA: 0x00325FA3 File Offset: 0x003241A3
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601499B RID: 84379 RVA: 0x002FFD1C File Offset: 0x002FDF1C
+		// Token: 0x06015E45 RID: 89669 RVA: 0x00325FAC File Offset: 0x003241AC
 		public IVarDefineT()
 		{
 			this.Name = null;

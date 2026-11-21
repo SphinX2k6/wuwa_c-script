@@ -8,30 +8,30 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x02002637 RID: 9783
+// Token: 0x02001B22 RID: 6946
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class QuestTrackAssistant : ControllerAssistantBase
 {
-	// Token: 0x06014070 RID: 82032 RVA: 0x0050B403 File Offset: 0x00509603
+	// Token: 0x06011552 RID: 70994 RVA: 0x0051A323 File Offset: 0x00518523
 	protected override void OnDestroy()
 	{
 	}
 
-	// Token: 0x06014071 RID: 82033 RVA: 0x0050B405 File Offset: 0x00509605
+	// Token: 0x06011553 RID: 70995 RVA: 0x0051A325 File Offset: 0x00518525
 	public override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TraceQuestNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTraceQuestNotify));
 	}
 
-	// Token: 0x06014072 RID: 82034 RVA: 0x0050B423 File Offset: 0x00509623
+	// Token: 0x06011554 RID: 70996 RVA: 0x0051A343 File Offset: 0x00518543
 	public override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TraceQuestNotify);
 	}
 
-	// Token: 0x06014073 RID: 82035 RVA: 0x0050B438 File Offset: 0x00509638
+	// Token: 0x06011555 RID: 70997 RVA: 0x0051A358 File Offset: 0x00518558
 	public override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<long, int, EBehaviorTreeSuspendType>(EEventName.GeneralLogicTreeSuspend, new Action<long, int, EBehaviorTreeSuspendType>(this.OnGeneralLogicTreeSuspend));
@@ -39,7 +39,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		InputDistributeController.Instance.BindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 	}
 
-	// Token: 0x06014074 RID: 82036 RVA: 0x0050B498 File Offset: 0x00509698
+	// Token: 0x06011556 RID: 70998 RVA: 0x0051A3B8 File Offset: 0x005185B8
 	public override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<long, int, EBehaviorTreeSuspendType>(EEventName.GeneralLogicTreeSuspend, new Action<long, int, EBehaviorTreeSuspendType>(this.OnGeneralLogicTreeSuspend));
@@ -47,7 +47,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		InputDistributeController.Instance.UnBindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 	}
 
-	// Token: 0x06014075 RID: 82037 RVA: 0x0050B4F8 File Offset: 0x005096F8
+	// Token: 0x06011557 RID: 70999 RVA: 0x0051A418 File Offset: 0x00518618
 	private void OnTraceQuestNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		TraceQuestNotify traceQuestNotify = (TraceQuestNotify)msg;
@@ -58,7 +58,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		QuestNewModel.Instance.SetQuestTrackState(traceQuestNotify.QuestId, true, ESetTrackReason.None);
 	}
 
-	// Token: 0x06014076 RID: 82038 RVA: 0x0050B528 File Offset: 0x00509728
+	// Token: 0x06011558 RID: 71000 RVA: 0x0051A448 File Offset: 0x00518648
 	[NullableContext(1)]
 	private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification _)
 	{
@@ -71,7 +71,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		EventSystem.Instance.Emit<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, p, (curTrackedQuest != null) ? curTrackedQuest.TreeId : null);
 	}
 
-	// Token: 0x06014077 RID: 82039 RVA: 0x0050B57C File Offset: 0x0050977C
+	// Token: 0x06011559 RID: 71001 RVA: 0x0051A49C File Offset: 0x0051869C
 	public void RefreshCurTrackQuest()
 	{
 		global::Quest curTrackedQuest = QuestNewModel.Instance.GetCurTrackedQuest();
@@ -91,7 +91,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06014078 RID: 82040 RVA: 0x0050B5D0 File Offset: 0x005097D0
+	// Token: 0x0601155A RID: 71002 RVA: 0x0051A4F0 File Offset: 0x005186F0
 	public ESetTrackResult RequestTrackQuest(int questId, bool bTrack, ERequestTrackOperate operate, ESetTrackReason reason = ESetTrackReason.None, Action finishCallback = null)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -164,7 +164,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 				TraceQuestResponse traceQuestResponse = (TraceQuestResponse)msg;
 				if (traceQuestResponse != null && traceQuestResponse.ErrorId != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(traceQuestResponse.ErrorId, 29698, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(traceQuestResponse.ErrorId, 15680, null, true, true);
 				}
 				Action finishCallback6 = finishCallback;
 				if (finishCallback6 == null)
@@ -189,7 +189,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 			TraceRecallQuestResponse traceRecallQuestResponse = (TraceRecallQuestResponse)msg;
 			if (traceRecallQuestResponse != null && traceRecallQuestResponse.ErrorId != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(traceRecallQuestResponse.ErrorId, 27297, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(traceRecallQuestResponse.ErrorId, 28806, null, true, true);
 				Action finishCallback6 = finishCallback;
 				if (finishCallback6 == null)
 				{
@@ -201,7 +201,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		return ESetTrackResult.Success;
 	}
 
-	// Token: 0x06014079 RID: 82041 RVA: 0x0050B7B4 File Offset: 0x005099B4
+	// Token: 0x0601155B RID: 71003 RVA: 0x0051A6D4 File Offset: 0x005188D4
 	public bool TryChangeTrackedQuest(int newQuestId)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -242,7 +242,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		return true;
 	}
 
-	// Token: 0x0601407A RID: 82042 RVA: 0x0050B864 File Offset: 0x00509A64
+	// Token: 0x0601155C RID: 71004 RVA: 0x0051A784 File Offset: 0x00518984
 	public bool TryChangeTrackedQuest2(int? newQuestId)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -290,7 +290,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		return false;
 	}
 
-	// Token: 0x0601407B RID: 82043 RVA: 0x0050B98C File Offset: 0x00509B8C
+	// Token: 0x0601155D RID: 71005 RVA: 0x0051A8AC File Offset: 0x00518AAC
 	private void OnGeneralLogicTreeSuspend(long treeIncId, int nodeId, EBehaviorTreeSuspendType suspendType)
 	{
 		BaseBehaviorTree behaviorTree = GeneralLogicTreeModel.Instance.GetBehaviorTree(new long?(treeIncId), false);
@@ -320,7 +320,7 @@ public class QuestTrackAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x0601407C RID: 82044 RVA: 0x0050BA1A File Offset: 0x00509C1A
+	// Token: 0x0601155E RID: 71006 RVA: 0x0051A93A File Offset: 0x00518B3A
 	private void OnTsNotifyQuestTrackState(int questId, bool bTrack, int reason)
 	{
 		QuestNewModel.Instance.SetQuestTrackState(questId, bTrack, (ESetTrackReason)reason);

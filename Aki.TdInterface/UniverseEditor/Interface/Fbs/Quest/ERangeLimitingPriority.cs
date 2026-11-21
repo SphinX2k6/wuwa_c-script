@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CBE RID: 15550
+	// Token: 0x020040D2 RID: 16594
 	public enum ERangeLimitingPriority : byte
 	{
-		// Token: 0x0400B47F RID: 46207
+		// Token: 0x0400BE21 RID: 48673
 		Low,
-		// Token: 0x0400B480 RID: 46208
+		// Token: 0x0400BE22 RID: 48674
 		High
 	}
 }

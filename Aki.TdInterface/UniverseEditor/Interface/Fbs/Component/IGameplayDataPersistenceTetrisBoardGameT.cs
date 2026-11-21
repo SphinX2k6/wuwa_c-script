@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052E9 RID: 21225
+	// Token: 0x0200586C RID: 22636
 	public class IGameplayDataPersistenceTetrisBoardGameT
 	{
-		// Token: 0x17009BCB RID: 39883
-		// (get) Token: 0x06022A76 RID: 141942 RVA: 0x004CDAC7 File Offset: 0x004CBCC7
-		// (set) Token: 0x06022A77 RID: 141943 RVA: 0x004CDACF File Offset: 0x004CBCCF
+		// Token: 0x1700A3FC RID: 41980
+		// (get) Token: 0x06024B10 RID: 150288 RVA: 0x0050A5F3 File Offset: 0x005087F3
+		// (set) Token: 0x06024B11 RID: 150289 RVA: 0x0050A5FB File Offset: 0x005087FB
 		public EDataPersistenceGameplayType Type { get; set; }
 
-		// Token: 0x17009BCC RID: 39884
-		// (get) Token: 0x06022A78 RID: 141944 RVA: 0x004CDAD8 File Offset: 0x004CBCD8
-		// (set) Token: 0x06022A79 RID: 141945 RVA: 0x004CDAE0 File Offset: 0x004CBCE0
+		// Token: 0x1700A3FD RID: 41981
+		// (get) Token: 0x06024B12 RID: 150290 RVA: 0x0050A604 File Offset: 0x00508804
+		// (set) Token: 0x06024B13 RID: 150291 RVA: 0x0050A60C File Offset: 0x0050880C
 		public TVarRefUnion HighestScoreSyncVar { get; set; }
 
-		// Token: 0x06022A7A RID: 141946 RVA: 0x004CDAE9 File Offset: 0x004CBCE9
+		// Token: 0x06024B14 RID: 150292 RVA: 0x0050A615 File Offset: 0x00508815
 		public IGameplayDataPersistenceTetrisBoardGameT()
 		{
 			this.Type = EDataPersistenceGameplayType.TetrisBoardGame;

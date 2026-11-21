@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008E6 RID: 2278
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200098B RID: 2443
 	public class WeaponComponent : IComponentBase
 	{
-		// Token: 0x060033B1 RID: 13233 RVA: 0x0008451C File Offset: 0x0008271C
+		// Token: 0x060036F9 RID: 14073 RVA: 0x0008BB58 File Offset: 0x00089D58
 		private WeaponComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033B2 RID: 13234 RVA: 0x00084554 File Offset: 0x00082754
+		// Token: 0x060036FA RID: 14074 RVA: 0x0008BB90 File Offset: 0x00089D90
 		public static WeaponComponent Create([Nullable(2)] WeaponComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033B3 RID: 13235 RVA: 0x00084567 File Offset: 0x00082767
+		// Token: 0x060036FB RID: 14075 RVA: 0x0008BBA3 File Offset: 0x00089DA3
 		public static WeaponComponent CreateFromSetValue([Nullable(2)] WeaponComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033B4 RID: 13236 RVA: 0x0008457A File Offset: 0x0008277A
+		// Token: 0x060036FC RID: 14076 RVA: 0x0008BBB6 File Offset: 0x00089DB6
 		public new WeaponComponent_SetValue ToSetValue()
 		{
 			return new WeaponComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DE7 RID: 3559
-		// (get) Token: 0x060033B5 RID: 13237 RVA: 0x000845A8 File Offset: 0x000827A8
-		// (set) Token: 0x060033B6 RID: 13238 RVA: 0x000845E2 File Offset: 0x000827E2
+		// Token: 0x17000EB3 RID: 3763
+		// (get) Token: 0x060036FD RID: 14077 RVA: 0x0008BBE4 File Offset: 0x00089DE4
+		// (set) Token: 0x060036FE RID: 14078 RVA: 0x0008BC1E File Offset: 0x00089E1E
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE8 RID: 3560
-		// (get) Token: 0x060033B7 RID: 13239 RVA: 0x000845F0 File Offset: 0x000827F0
-		// (set) Token: 0x060033B8 RID: 13240 RVA: 0x0008461A File Offset: 0x0008281A
+		// Token: 0x17000EB4 RID: 3764
+		// (get) Token: 0x060036FF RID: 14079 RVA: 0x0008BC2C File Offset: 0x00089E2C
+		// (set) Token: 0x06003700 RID: 14080 RVA: 0x0008BC56 File Offset: 0x00089E56
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DE9 RID: 3561
-		// (get) Token: 0x060033B9 RID: 13241 RVA: 0x00084628 File Offset: 0x00082828
-		// (set) Token: 0x060033BA RID: 13242 RVA: 0x00084653 File Offset: 0x00082853
+		// Token: 0x17000EB5 RID: 3765
+		// (get) Token: 0x06003701 RID: 14081 RVA: 0x0008BC64 File Offset: 0x00089E64
+		// (set) Token: 0x06003702 RID: 14082 RVA: 0x0008BC8F File Offset: 0x00089E8F
 		public virtual int WeaponId
 		{
 			get
@@ -127,11 +125,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040021DA RID: 8666
+		// Token: 0x040023F1 RID: 9201
 		[Nullable(2)]
 		protected new WeaponComponent FbInstance;
 
-		// Token: 0x040021DB RID: 8667
+		// Token: 0x040023F2 RID: 9202
 		[Nullable(2)]
 		protected new WeaponComponent_SetValue PocoInterface;
 	}

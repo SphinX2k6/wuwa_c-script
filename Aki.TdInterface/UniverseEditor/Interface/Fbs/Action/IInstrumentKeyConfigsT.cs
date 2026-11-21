@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006970 RID: 26992
+	// Token: 0x02007023 RID: 28707
 	public class IInstrumentKeyConfigsT
 	{
-		// Token: 0x1700C82E RID: 51246
-		// (get) Token: 0x0602F21A RID: 193050 RVA: 0x0066BDA1 File Offset: 0x00669FA1
-		// (set) Token: 0x0602F21B RID: 193051 RVA: 0x0066BDA9 File Offset: 0x00669FA9
+		// Token: 0x1700D231 RID: 53809
+		// (get) Token: 0x06031BEA RID: 203754 RVA: 0x006BC289 File Offset: 0x006BA489
+		// (set) Token: 0x06031BEB RID: 203755 RVA: 0x006BC291 File Offset: 0x006BA491
 		public List<IInstrumentKeyAttributeT> Grids { get; set; }
 
-		// Token: 0x1700C82F RID: 51247
-		// (get) Token: 0x0602F21C RID: 193052 RVA: 0x0066BDB2 File Offset: 0x00669FB2
-		// (set) Token: 0x0602F21D RID: 193053 RVA: 0x0066BDBA File Offset: 0x00669FBA
+		// Token: 0x1700D232 RID: 53810
+		// (get) Token: 0x06031BEC RID: 203756 RVA: 0x006BC29A File Offset: 0x006BA49A
+		// (set) Token: 0x06031BED RID: 203757 RVA: 0x006BC2A2 File Offset: 0x006BA4A2
 		public IInstrumentBoardSizeT BoardSize { get; set; }
 
-		// Token: 0x0602F21E RID: 193054 RVA: 0x0066BDC3 File Offset: 0x00669FC3
+		// Token: 0x06031BEE RID: 203758 RVA: 0x006BC2AB File Offset: 0x006BA4AB
 		public IInstrumentKeyConfigsT()
 		{
 			this.Grids = null;

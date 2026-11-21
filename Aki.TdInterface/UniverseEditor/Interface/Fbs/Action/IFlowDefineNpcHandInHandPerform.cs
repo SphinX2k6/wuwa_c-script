@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006807 RID: 26631
+	// Token: 0x02006E87 RID: 28295
 	public struct IFlowDefineNpcHandInHandPerform : IFlatbufferObject
 	{
-		// Token: 0x1700C5A3 RID: 50595
-		// (get) Token: 0x0602E5F2 RID: 189938 RVA: 0x0065440E File Offset: 0x0065260E
+		// Token: 0x1700CF59 RID: 53081
+		// (get) Token: 0x06030E38 RID: 200248 RVA: 0x006A1B52 File Offset: 0x0069FD52
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E5F3 RID: 189939 RVA: 0x0065441B File Offset: 0x0065261B
+		// Token: 0x06030E39 RID: 200249 RVA: 0x006A1B5F File Offset: 0x0069FD5F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E5F4 RID: 189940 RVA: 0x00654424 File Offset: 0x00652624
+		// Token: 0x06030E3A RID: 200250 RVA: 0x006A1B68 File Offset: 0x0069FD68
 		public static IFlowDefineNpcHandInHandPerform GetRootAsIFlowDefineNpcHandInHandPerform(ByteBuffer _bb)
 		{
 			return IFlowDefineNpcHandInHandPerform.GetRootAsIFlowDefineNpcHandInHandPerform(_bb, default(IFlowDefineNpcHandInHandPerform));
 		}
 
-		// Token: 0x0602E5F5 RID: 189941 RVA: 0x00654440 File Offset: 0x00652640
+		// Token: 0x06030E3B RID: 200251 RVA: 0x006A1B84 File Offset: 0x0069FD84
 		public static IFlowDefineNpcHandInHandPerform GetRootAsIFlowDefineNpcHandInHandPerform(ByteBuffer _bb, IFlowDefineNpcHandInHandPerform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E5F6 RID: 189942 RVA: 0x0065445D File Offset: 0x0065265D
+		// Token: 0x06030E3C RID: 200252 RVA: 0x006A1BA1 File Offset: 0x0069FDA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E5F7 RID: 189943 RVA: 0x0065446C File Offset: 0x0065266C
+		// Token: 0x06030E3D RID: 200253 RVA: 0x006A1BB0 File Offset: 0x0069FDB0
 		public IFlowDefineNpcHandInHandPerform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C5A4 RID: 50596
-		// (get) Token: 0x0602E5F8 RID: 189944 RVA: 0x0065447C File Offset: 0x0065267C
+		// Token: 0x1700CF5A RID: 53082
+		// (get) Token: 0x06030E3E RID: 200254 RVA: 0x006A1BC0 File Offset: 0x0069FDC0
 		public ENpcGroupPerformType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C5A5 RID: 50597
-		// (get) Token: 0x0602E5F9 RID: 189945 RVA: 0x006544B8 File Offset: 0x006526B8
+		// Token: 0x1700CF5B RID: 53083
+		// (get) Token: 0x06030E3F RID: 200255 RVA: 0x006A1BFC File Offset: 0x0069FDFC
 		public string Key
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E5FA RID: 189946 RVA: 0x006544EF File Offset: 0x006526EF
+		// Token: 0x06030E40 RID: 200256 RVA: 0x006A1C33 File Offset: 0x0069FE33
 		public Span<byte> GetKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E5FB RID: 189947 RVA: 0x006544FE File Offset: 0x006526FE
+		// Token: 0x06030E41 RID: 200257 RVA: 0x006A1C42 File Offset: 0x0069FE42
 		public byte[] GetKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602E5FC RID: 189948 RVA: 0x0065450C File Offset: 0x0065270C
+		// Token: 0x06030E42 RID: 200258 RVA: 0x006A1C50 File Offset: 0x0069FE50
 		public static Offset<IFlowDefineNpcHandInHandPerform> CreateIFlowDefineNpcHandInHandPerform(FlatBufferBuilder builder, ENpcGroupPerformType Type = ENpcGroupPerformType.HandInHand, StringOffset KeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowDefineNpcHandInHandPerform.EndIFlowDefineNpcHandInHandPerform(builder);
 		}
 
-		// Token: 0x0602E5FD RID: 189949 RVA: 0x00654529 File Offset: 0x00652729
+		// Token: 0x06030E43 RID: 200259 RVA: 0x006A1C6D File Offset: 0x0069FE6D
 		public static void StartIFlowDefineNpcHandInHandPerform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E5FE RID: 189950 RVA: 0x00654532 File Offset: 0x00652732
+		// Token: 0x06030E44 RID: 200260 RVA: 0x006A1C76 File Offset: 0x0069FE76
 		public static void AddType(FlatBufferBuilder builder, ENpcGroupPerformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E5FF RID: 189951 RVA: 0x0065453D File Offset: 0x0065273D
+		// Token: 0x06030E45 RID: 200261 RVA: 0x006A1C81 File Offset: 0x0069FE81
 		public static void AddKey(FlatBufferBuilder builder, StringOffset keyOffset)
 		{
 			builder.AddOffset(1, keyOffset.Value, 0);
 		}
 
-		// Token: 0x0602E600 RID: 189952 RVA: 0x0065454D File Offset: 0x0065274D
+		// Token: 0x06030E46 RID: 200262 RVA: 0x006A1C91 File Offset: 0x0069FE91
 		public static Offset<IFlowDefineNpcHandInHandPerform> EndIFlowDefineNpcHandInHandPerform(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowDefineNpcHandInHandPerform>(builder.EndTable());
 		}
 
-		// Token: 0x0602E601 RID: 189953 RVA: 0x0065455C File Offset: 0x0065275C
+		// Token: 0x06030E47 RID: 200263 RVA: 0x006A1CA0 File Offset: 0x0069FEA0
 		public IFlowDefineNpcHandInHandPerformT UnPack()
 		{
 			IFlowDefineNpcHandInHandPerformT flowDefineNpcHandInHandPerformT = new IFlowDefineNpcHandInHandPerformT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flowDefineNpcHandInHandPerformT;
 		}
 
-		// Token: 0x0602E602 RID: 189954 RVA: 0x00654577 File Offset: 0x00652777
+		// Token: 0x06030E48 RID: 200264 RVA: 0x006A1CBB File Offset: 0x0069FEBB
 		public void UnPackTo(IFlowDefineNpcHandInHandPerformT _o)
 		{
 			_o.Type = this.Type;
 			_o.Key = this.Key;
 		}
 
-		// Token: 0x0602E603 RID: 189955 RVA: 0x00654594 File Offset: 0x00652794
+		// Token: 0x06030E49 RID: 200265 RVA: 0x006A1CD8 File Offset: 0x0069FED8
 		public static Offset<IFlowDefineNpcHandInHandPerform> Pack(FlatBufferBuilder builder, IFlowDefineNpcHandInHandPerformT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowDefineNpcHandInHandPerform.CreateIFlowDefineNpcHandInHandPerform(builder, _o.Type, keyOffset);
 		}
 
-		// Token: 0x04010F2B RID: 69419
+		// Token: 0x04011D5D RID: 73053
 		private Table __p;
 	}
 }

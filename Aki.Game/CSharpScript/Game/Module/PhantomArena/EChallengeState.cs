@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005110 RID: 20752
+	// Token: 0x020040E0 RID: 16608
 	public enum EChallengeState
 	{
-		// Token: 0x0401C443 RID: 115779
+		// Token: 0x04016E78 RID: 93816
 		Lock,
-		// Token: 0x0401C444 RID: 115780
+		// Token: 0x04016E79 RID: 93817
 		Pending,
-		// Token: 0x0401C445 RID: 115781
+		// Token: 0x04016E7A RID: 93818
 		Finish
 	}
 }

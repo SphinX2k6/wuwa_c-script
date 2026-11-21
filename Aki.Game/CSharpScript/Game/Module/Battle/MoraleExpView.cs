@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C4F RID: 23631
+	// Token: 0x02004C2F RID: 19503
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MoraleExpView : BattleVisibleChildView
 	{
-		// Token: 0x0603BB97 RID: 244631 RVA: 0x00E432FC File Offset: 0x00E414FC
+		// Token: 0x06030AE2 RID: 199394 RVA: 0x00D936C8 File Offset: 0x00D918C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BB98 RID: 244632 RVA: 0x00E434D8 File Offset: 0x00E416D8
+		// Token: 0x06030AE3 RID: 199395 RVA: 0x00D938A4 File Offset: 0x00D91AA4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleExpView.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Battle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BB99 RID: 244633 RVA: 0x00E4351C File Offset: 0x00E4171C
+		// Token: 0x06030AE4 RID: 199396 RVA: 0x00D938E8 File Offset: 0x00D91AE8
 		protected override void OnStart()
 		{
 			this.AddExpBar = base.GetSprite(0);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEnd), false);
 		}
 
-		// Token: 0x0603BB9A RID: 244634 RVA: 0x00E4361D File Offset: 0x00E4181D
+		// Token: 0x06030AE5 RID: 199397 RVA: 0x00D939E9 File Offset: 0x00D91BE9
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.AddEvents();
 		}
 
-		// Token: 0x0603BB9B RID: 244635 RVA: 0x00E4363B File Offset: 0x00E4183B
+		// Token: 0x06030AE6 RID: 199398 RVA: 0x00D93A07 File Offset: 0x00D91C07
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Battle
 			base.Reset();
 		}
 
-		// Token: 0x0603BB9C RID: 244636 RVA: 0x00E43674 File Offset: 0x00E41874
+		// Token: 0x06030AE7 RID: 199399 RVA: 0x00D93A40 File Offset: 0x00D91C40
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnMoraleExpChanged, new Action<int, int, int, int>(this.OnMoraleExpChanged));
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Add(EEventName.OnMoraleBattleFail, new Action(this.OnMoraleBattleFail));
 		}
 
-		// Token: 0x0603BB9D RID: 244637 RVA: 0x00E4372C File Offset: 0x00E4192C
+		// Token: 0x06030AE8 RID: 199400 RVA: 0x00D93AF8 File Offset: 0x00D91CF8
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMoraleExpChanged, new Action<int, int, int, int>(this.OnMoraleExpChanged));
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.Battle
 			EventSystem.Instance.Remove(EEventName.OnMoraleBattleFail, new Action(this.OnMoraleBattleFail));
 		}
 
-		// Token: 0x0603BB9E RID: 244638 RVA: 0x00E437E1 File Offset: 0x00E419E1
+		// Token: 0x06030AE9 RID: 199401 RVA: 0x00D93BAD File Offset: 0x00D91DAD
 		protected override void OnShowBattleChildView()
 		{
 			this.RefreshMoraleInfo();
 		}
 
-		// Token: 0x0603BB9F RID: 244639 RVA: 0x00E437E9 File Offset: 0x00E419E9
+		// Token: 0x06030AEA RID: 199402 RVA: 0x00D93BB5 File Offset: 0x00D91DB5
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBA0 RID: 244640 RVA: 0x00E4380C File Offset: 0x00E41A0C
+		// Token: 0x06030AEB RID: 199403 RVA: 0x00D93BD8 File Offset: 0x00D91DD8
 		public void StartShow()
 		{
 			this.IsShowMoraleUi = true;
@@ -186,14 +186,14 @@ namespace CSharpScript.Game.Module.Battle
 			this.OnBattleStateChanged(FormationDataController.Instance.GlobalIsInFight);
 		}
 
-		// Token: 0x0603BBA1 RID: 244641 RVA: 0x00E43839 File Offset: 0x00E41A39
+		// Token: 0x06030AEC RID: 199404 RVA: 0x00D93C05 File Offset: 0x00D91E05
 		public void EndShow()
 		{
 			this.IsShowMoraleUi = false;
 			this.PlayEndShowAnim();
 		}
 
-		// Token: 0x0603BBA2 RID: 244642 RVA: 0x00E43848 File Offset: 0x00E41A48
+		// Token: 0x06030AED RID: 199405 RVA: 0x00D93C14 File Offset: 0x00D91E14
 		private void PlayStartShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Battle
 			moraleAnimItem2.SetUiActive(true);
 		}
 
-		// Token: 0x0603BBA3 RID: 244643 RVA: 0x00E438B0 File Offset: 0x00E41AB0
+		// Token: 0x06030AEE RID: 199406 RVA: 0x00D93C7C File Offset: 0x00D91E7C
 		private void PlayEndShowAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Battle
 			moraleAnimItem2.SetUiActive(true);
 		}
 
-		// Token: 0x0603BBA4 RID: 244644 RVA: 0x00E43918 File Offset: 0x00E41B18
+		// Token: 0x06030AEF RID: 199407 RVA: 0x00D93CE4 File Offset: 0x00D91EE4
 		private void PlayLevelUpAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Battle
 			levelSequencePlayer3.PlaySequencePurely("Up", false, false, null, null, false);
 		}
 
-		// Token: 0x0603BBA5 RID: 244645 RVA: 0x00E43978 File Offset: 0x00E41B78
+		// Token: 0x06030AF0 RID: 199408 RVA: 0x00D93D44 File Offset: 0x00D91F44
 		public void Tick(float delta)
 		{
 			if (!base.GetVisible() || this.ProgressAnimSpeed == 0f)
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Module.Battle
 			currentExpText.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603BBA6 RID: 244646 RVA: 0x00E43D3C File Offset: 0x00E41F3C
+		// Token: 0x06030AF1 RID: 199409 RVA: 0x00D94108 File Offset: 0x00D92308
 		private void RefreshMoraleInfo()
 		{
 			int num = MoraleBattleModel.Instance.GetMoraleLevel();
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.RefreshLevelMaxItem();
 		}
 
-		// Token: 0x0603BBA7 RID: 244647 RVA: 0x00E43E08 File Offset: 0x00E42008
+		// Token: 0x06030AF2 RID: 199410 RVA: 0x00D941D4 File Offset: 0x00D923D4
 		private void OnMoraleExpChanged(int oldExp, int newExp, int oldLevel, int newLevel)
 		{
 			if (!base.GetVisible())
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.Module.Battle
 			moraleAnimItem.SetUiActive(false);
 		}
 
-		// Token: 0x0603BBA8 RID: 244648 RVA: 0x00E43F70 File Offset: 0x00E42170
+		// Token: 0x06030AF3 RID: 199411 RVA: 0x00D9433C File Offset: 0x00D9253C
 		private void OnBattleStateChanged(bool isInBattleState)
 		{
 			if (!this.IsShowMoraleUi)
@@ -539,13 +539,13 @@ namespace CSharpScript.Game.Module.Battle
 			sprite.SetChangeColor(isInBattleState, fcolor);
 		}
 
-		// Token: 0x0603BBA9 RID: 244649 RVA: 0x00E44089 File Offset: 0x00E42289
+		// Token: 0x06030AF4 RID: 199412 RVA: 0x00D94455 File Offset: 0x00D92655
 		private void OnMoralePromptShow()
 		{
 			this.PlayStartShowAnim();
 		}
 
-		// Token: 0x0603BBAA RID: 244650 RVA: 0x00E44091 File Offset: 0x00E42291
+		// Token: 0x06030AF5 RID: 199413 RVA: 0x00D9445D File Offset: 0x00D9265D
 		private void OnRefreshPendingChangeInfo()
 		{
 			if (this.IsPendingChangeInfo)
@@ -555,13 +555,13 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBAB RID: 244651 RVA: 0x00E440A8 File Offset: 0x00E422A8
+		// Token: 0x06030AF6 RID: 199414 RVA: 0x00D94474 File Offset: 0x00D92674
 		private void OnMoraleBattleFail()
 		{
 			this.IsPendingChangeInfo = true;
 		}
 
-		// Token: 0x0603BBAC RID: 244652 RVA: 0x00E440B4 File Offset: 0x00E422B4
+		// Token: 0x06030AF7 RID: 199415 RVA: 0x00D94480 File Offset: 0x00D92680
 		private void OnMoralePlayIndomitableLevelAnim()
 		{
 			int moraleIndomitableLevel = MoraleBattleModel.Instance.GetMoraleIndomitableLevel();
@@ -573,7 +573,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BBAD RID: 244653 RVA: 0x00E440F4 File Offset: 0x00E422F4
+		// Token: 0x06030AF8 RID: 199416 RVA: 0x00D944C0 File Offset: 0x00D926C0
 		private void DelayHideExpText()
 		{
 			if (this.ExpTextTimer != null)
@@ -604,7 +604,7 @@ namespace CSharpScript.Game.Module.Battle
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603BBAE RID: 244654 RVA: 0x00E44143 File Offset: 0x00E42343
+		// Token: 0x06030AF9 RID: 199417 RVA: 0x00D9450F File Offset: 0x00D9270F
 		private void RefreshLevelMaxItem()
 		{
 			if (this.CurrentLevel == this.MaxLevel)
@@ -629,120 +629,120 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0401F181 RID: 127361
+		// Token: 0x04019C32 RID: 105522
 		private const float UI_BAR_MIN_PERCENT = 0f;
 
-		// Token: 0x0401F182 RID: 127362
+		// Token: 0x04019C33 RID: 105523
 		private const float UI_BAR_MAX_PERCENT = 0.3f;
 
-		// Token: 0x0401F183 RID: 127363
+		// Token: 0x04019C34 RID: 105524
 		private const float PROGRESS_ANIM_DURATION = 1000f;
 
-		// Token: 0x0401F184 RID: 127364
+		// Token: 0x04019C35 RID: 105525
 		private const float EXP_TEXT_STAY_DURATION = 2000f;
 
-		// Token: 0x0401F185 RID: 127365
+		// Token: 0x04019C36 RID: 105526
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]MoraleExpView", "", "");
 
-		// Token: 0x0401F186 RID: 127366
+		// Token: 0x04019C37 RID: 105527
 		private UUISprite AddExpBar;
 
-		// Token: 0x0401F187 RID: 127367
+		// Token: 0x04019C38 RID: 105528
 		private UUISprite ChangeExpBar;
 
-		// Token: 0x0401F188 RID: 127368
+		// Token: 0x04019C39 RID: 105529
 		private UUIArtText LevelText;
 
-		// Token: 0x0401F189 RID: 127369
+		// Token: 0x04019C3A RID: 105530
 		private UUIItem ExpValuePanel;
 
-		// Token: 0x0401F18A RID: 127370
+		// Token: 0x04019C3B RID: 105531
 		private UUIText AddExpText;
 
-		// Token: 0x0401F18B RID: 127371
+		// Token: 0x04019C3C RID: 105532
 		private UUIText CurrentExpText;
 
-		// Token: 0x0401F18C RID: 127372
+		// Token: 0x04019C3D RID: 105533
 		private MoraleAnimItem MoraleAnimItem;
 
-		// Token: 0x0401F18D RID: 127373
+		// Token: 0x04019C3E RID: 105534
 		private int CurrentLevel;
 
-		// Token: 0x0401F18E RID: 127374
+		// Token: 0x04019C3F RID: 105535
 		private float CurrentExpProgress;
 
-		// Token: 0x0401F18F RID: 127375
+		// Token: 0x04019C40 RID: 105536
 		private int TargetLevel;
 
-		// Token: 0x0401F190 RID: 127376
+		// Token: 0x04019C41 RID: 105537
 		private float TargetExpProgress;
 
-		// Token: 0x0401F191 RID: 127377
+		// Token: 0x04019C42 RID: 105538
 		private float ProgressAnimSpeed;
 
-		// Token: 0x0401F192 RID: 127378
+		// Token: 0x04019C43 RID: 105539
 		private bool IsAddProgress = true;
 
-		// Token: 0x0401F193 RID: 127379
+		// Token: 0x04019C44 RID: 105540
 		private bool IsLevelUp;
 
-		// Token: 0x0401F194 RID: 127380
+		// Token: 0x04019C45 RID: 105541
 		private int MaxLevel;
 
-		// Token: 0x0401F195 RID: 127381
+		// Token: 0x04019C46 RID: 105542
 		private bool IsPendingChangeInfo;
 
-		// Token: 0x0401F196 RID: 127382
+		// Token: 0x04019C47 RID: 105543
 		private bool IsNeedLevelUpAnim = true;
 
-		// Token: 0x0401F197 RID: 127383
+		// Token: 0x04019C48 RID: 105544
 		private bool IsShowMoraleUi;
 
-		// Token: 0x0401F198 RID: 127384
+		// Token: 0x04019C49 RID: 105545
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F199 RID: 127385
+		// Token: 0x04019C4A RID: 105546
 		private TimerHandle ExpTextTimer;
 
-		// Token: 0x0200BE5D RID: 48733
+		// Token: 0x0200A863 RID: 43107
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x04039685 RID: 235141
+			// Token: 0x04034046 RID: 213062
 			Default = 1
 		}
 
-		// Token: 0x0200BE5E RID: 48734
+		// Token: 0x0200A864 RID: 43108
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039687 RID: 235143
+			// Token: 0x04034048 RID: 213064
 			AddExpBar,
-			// Token: 0x04039688 RID: 235144
+			// Token: 0x04034049 RID: 213065
 			ChangeExpBar,
-			// Token: 0x04039689 RID: 235145
+			// Token: 0x0403404A RID: 213066
 			LevelText,
-			// Token: 0x0403968A RID: 235146
+			// Token: 0x0403404B RID: 213067
 			ExpValuePanel,
-			// Token: 0x0403968B RID: 235147
+			// Token: 0x0403404C RID: 213068
 			AddExpText,
-			// Token: 0x0403968C RID: 235148
+			// Token: 0x0403404D RID: 213069
 			CurrentExpText,
-			// Token: 0x0403968D RID: 235149
+			// Token: 0x0403404E RID: 213070
 			MoraleAnimItem,
-			// Token: 0x0403968E RID: 235150
+			// Token: 0x0403404F RID: 213071
 			LevelMaxItem,
-			// Token: 0x0403968F RID: 235151
+			// Token: 0x04034050 RID: 213072
 			LevelMaxLightTexture,
-			// Token: 0x04039690 RID: 235152
+			// Token: 0x04034051 RID: 213073
 			LevelMaxBgTexture,
-			// Token: 0x04039691 RID: 235153
+			// Token: 0x04034052 RID: 213074
 			LevelMaxText,
-			// Token: 0x04039692 RID: 235154
+			// Token: 0x04034053 RID: 213075
 			LevelBgTexture,
-			// Token: 0x04039693 RID: 235155
+			// Token: 0x04034054 RID: 213076
 			LevelBgSprite
 		}
 	}

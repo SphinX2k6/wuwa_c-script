@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042A7 RID: 17063
+	// Token: 0x02003302 RID: 13058
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ECurveMoveTargetBlackboardType.ECurveMoveTargetBlackboardType")]
 	public enum ECurveMoveTargetBlackboardType : byte
 	{
-		// Token: 0x04017345 RID: 95045
+		// Token: 0x04012043 RID: 73795
 		Entity,
-		// Token: 0x04017346 RID: 95046
+		// Token: 0x04012044 RID: 73796
 		EntityId,
-		// Token: 0x04017347 RID: 95047
+		// Token: 0x04012045 RID: 73797
 		CreatureDataId,
-		// Token: 0x04017348 RID: 95048
+		// Token: 0x04012046 RID: 73798
 		LocationVector,
-		// Token: 0x04017349 RID: 95049
+		// Token: 0x04012047 RID: 73799
 		ECurveMoveTargetBlackboardType_MAX
 	}
 }

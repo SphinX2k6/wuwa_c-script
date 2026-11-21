@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005933 RID: 22835
+	// Token: 0x02005F40 RID: 24384
 	public class ISlidePerformType_UnionUnion
 	{
-		// Token: 0x1700AB5B RID: 43867
-		// (get) Token: 0x06026A16 RID: 158230 RVA: 0x005521FD File Offset: 0x005503FD
-		// (set) Token: 0x06026A17 RID: 158231 RVA: 0x00552205 File Offset: 0x00550405
+		// Token: 0x1700B48F RID: 46223
+		// (get) Token: 0x06028F80 RID: 167808 RVA: 0x00598E69 File Offset: 0x00597069
+		// (set) Token: 0x06028F81 RID: 167809 RVA: 0x00598E71 File Offset: 0x00597071
 		public ISlidePerformType_Union Type { get; set; }
 
-		// Token: 0x1700AB5C RID: 43868
-		// (get) Token: 0x06026A18 RID: 158232 RVA: 0x0055220E File Offset: 0x0055040E
-		// (set) Token: 0x06026A19 RID: 158233 RVA: 0x00552216 File Offset: 0x00550416
+		// Token: 0x1700B490 RID: 46224
+		// (get) Token: 0x06028F82 RID: 167810 RVA: 0x00598E7A File Offset: 0x0059707A
+		// (set) Token: 0x06028F83 RID: 167811 RVA: 0x00598E82 File Offset: 0x00597082
 		public object Value { get; set; }
 
-		// Token: 0x06026A1A RID: 158234 RVA: 0x0055221F File Offset: 0x0055041F
+		// Token: 0x06028F84 RID: 167812 RVA: 0x00598E8B File Offset: 0x0059708B
 		public ISlidePerformType_UnionUnion()
 		{
 			this.Type = ISlidePerformType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026A1B RID: 158235 RVA: 0x00552235 File Offset: 0x00550435
+		// Token: 0x06028F85 RID: 167813 RVA: 0x00598EA1 File Offset: 0x005970A1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026A1C RID: 158236 RVA: 0x00552247 File Offset: 0x00550447
+		// Token: 0x06028F86 RID: 167814 RVA: 0x00598EB3 File Offset: 0x005970B3
 		public ISlidePerformTypeT AsISlidePerformType()
 		{
 			return this.As<ISlidePerformTypeT>();
 		}
 
-		// Token: 0x06026A1D RID: 158237 RVA: 0x0055224F File Offset: 0x0055044F
+		// Token: 0x06028F87 RID: 167815 RVA: 0x00598EBB File Offset: 0x005970BB
 		public static ISlidePerformType_UnionUnion FromISlidePerformType(ISlidePerformTypeT _islideperformtype)
 		{
 			return new ISlidePerformType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026A1E RID: 158238 RVA: 0x00552264 File Offset: 0x00550464
+		// Token: 0x06028F88 RID: 167816 RVA: 0x00598ED0 File Offset: 0x005970D0
 		public ISlopeSlidePerformT AsISlopeSlidePerform()
 		{
 			return this.As<ISlopeSlidePerformT>();
 		}
 
-		// Token: 0x06026A1F RID: 158239 RVA: 0x0055226C File Offset: 0x0055046C
+		// Token: 0x06028F89 RID: 167817 RVA: 0x00598ED8 File Offset: 0x005970D8
 		public static ISlidePerformType_UnionUnion FromISlopeSlidePerform(ISlopeSlidePerformT _islopeslideperform)
 		{
 			return new ISlidePerformType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026A20 RID: 158240 RVA: 0x00552284 File Offset: 0x00550484
+		// Token: 0x06028F8A RID: 167818 RVA: 0x00598EF0 File Offset: 0x005970F0
 		public static int Pack(FlatBufferBuilder builder, ISlidePerformType_UnionUnion _o)
 		{
 			ISlidePerformType_Union type = _o.Type;

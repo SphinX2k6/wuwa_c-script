@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x02004904 RID: 18692
+	// Token: 0x02004D9F RID: 19871
 	public static class ILoopTeleportClientLogicItemBase_UnionVerify
 	{
-		// Token: 0x0601D383 RID: 119683 RVA: 0x0041F5A8 File Offset: 0x0041D7A8
+		// Token: 0x0601ED1C RID: 126236 RVA: 0x0044ED08 File Offset: 0x0044CF08
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

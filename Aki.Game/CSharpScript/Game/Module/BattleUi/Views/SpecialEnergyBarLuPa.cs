@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DF2 RID: 24050
+	// Token: 0x02004DD7 RID: 19927
 	public class SpecialEnergyBarLuPa : SpecialEnergyBarBase
 	{
-		// Token: 0x0603D22F RID: 250415 RVA: 0x00EB8640 File Offset: 0x00EB6840
+		// Token: 0x060321BE RID: 205246 RVA: 0x00E09B88 File Offset: 0x00E07D88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D230 RID: 250416 RVA: 0x00EB8791 File Offset: 0x00EB6991
+		// Token: 0x060321BF RID: 205247 RVA: 0x00E09CD9 File Offset: 0x00E07ED9
 		protected override void OnInitData()
 		{
 			base.OnInitData();
 			base.ListenForTagCountChanged(GameplayTagDefine.EGameplayTagId["角色.R2T1LupaMd10011.状态标识.能量转换层数"], new BaseTagComponent.TTagChangedCallback(this.OnTagCountChanged));
 		}
 
-		// Token: 0x0603D231 RID: 250417 RVA: 0x00EB87BC File Offset: 0x00EB69BC
+		// Token: 0x060321C0 RID: 205248 RVA: 0x00E09D04 File Offset: 0x00E07F04
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpecialEnergyBarLuPa.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D232 RID: 250418 RVA: 0x00EB8800 File Offset: 0x00EB6A00
+		// Token: 0x060321C1 RID: 205249 RVA: 0x00E09D48 File Offset: 0x00E07F48
 		protected UniTask InitBarItem()
 		{
 			SpecialEnergyBarLuPa.<InitBarItem>d__6 <InitBarItem>d__;
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitBarItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D233 RID: 250419 RVA: 0x00EB8843 File Offset: 0x00EB6A43
+		// Token: 0x060321C2 RID: 205250 RVA: 0x00E09D8B File Offset: 0x00E07F8B
 		private void OnTagCountChanged(int count, int tagId, int exactTagId, int oldCount)
 		{
 			this.RefreshTagCount(count, false);
 		}
 
-		// Token: 0x0603D234 RID: 250420 RVA: 0x00EB8850 File Offset: 0x00EB6A50
+		// Token: 0x060321C3 RID: 205251 RVA: 0x00E09D98 File Offset: 0x00E07F98
 		protected override void OnStart()
 		{
 			base.InitTweenAnim(3);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshTagCount(tagCount, true);
 		}
 
-		// Token: 0x0603D235 RID: 250421 RVA: 0x00EB88A4 File Offset: 0x00EB6AA4
+		// Token: 0x060321C4 RID: 205252 RVA: 0x00E09DEC File Offset: 0x00E07FEC
 		private void RefreshTagCount(int tagCount, bool isStart = false)
 		{
 			if (tagCount == this.TagCount && !isStart)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D236 RID: 250422 RVA: 0x00EB8991 File Offset: 0x00EB6B91
+		// Token: 0x060321C5 RID: 205253 RVA: 0x00E09ED9 File Offset: 0x00E080D9
 		private void SetBottomLineState(bool isLight)
 		{
 			UUIItem item = base.GetItem(1);
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			item2.SetUIActive(isLight);
 		}
 
-		// Token: 0x0603D237 RID: 250423 RVA: 0x00EB89BB File Offset: 0x00EB6BBB
+		// Token: 0x060321C6 RID: 205254 RVA: 0x00E09F03 File Offset: 0x00E08103
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -175,33 +175,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barItem.Tick(delta);
 		}
 
-		// Token: 0x0401FDE7 RID: 130535
+		// Token: 0x0401A8AE RID: 108718
 		private int TagCount;
 
-		// Token: 0x0401FDE8 RID: 130536
+		// Token: 0x0401A8AF RID: 108719
 		[Nullable(2)]
 		private SpecialEnergyBarLuPaSlot BarItem;
 
-		// Token: 0x0200C12E RID: 49454
+		// Token: 0x0200AB3D RID: 43837
 		private enum EChildType
 		{
-			// Token: 0x0403A56C RID: 238956
+			// Token: 0x04034F5E RID: 216926
 			SlotItem,
-			// Token: 0x0403A56D RID: 238957
+			// Token: 0x04034F5F RID: 216927
 			StateItemA,
-			// Token: 0x0403A56E RID: 238958
+			// Token: 0x04034F60 RID: 216928
 			StateItemB,
-			// Token: 0x0403A56F RID: 238959
+			// Token: 0x04034F61 RID: 216929
 			AniLeftIn,
-			// Token: 0x0403A570 RID: 238960
+			// Token: 0x04034F62 RID: 216930
 			AniLeftOut,
-			// Token: 0x0403A571 RID: 238961
+			// Token: 0x04034F63 RID: 216931
 			EffectRight,
-			// Token: 0x0403A572 RID: 238962
+			// Token: 0x04034F64 RID: 216932
 			EffectLeft,
-			// Token: 0x0403A573 RID: 238963
+			// Token: 0x04034F65 RID: 216933
 			AniRightIn,
-			// Token: 0x0403A574 RID: 238964
+			// Token: 0x04034F66 RID: 216934
 			AniRightOut
 		}
 	}

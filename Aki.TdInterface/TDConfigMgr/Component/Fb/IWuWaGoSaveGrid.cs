@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E11 RID: 3601
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F0D RID: 3853
 	public class IWuWaGoSaveGrid : IWuWaGoEntityBase
 	{
-		// Token: 0x06005175 RID: 20853 RVA: 0x000C8E98 File Offset: 0x000C7098
+		// Token: 0x0600569C RID: 22172 RVA: 0x000D4760 File Offset: 0x000D2960
 		public static IWuWaGoSaveGrid Create(IWuWaGoSaveGrid? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B10 RID: 6928
-		// (get) Token: 0x06005176 RID: 20854 RVA: 0x000C8EB7 File Offset: 0x000C70B7
+		// Token: 0x17001C7D RID: 7293
+		// (get) Token: 0x0600569D RID: 22173 RVA: 0x000D477F File Offset: 0x000D297F
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B11 RID: 6929
-		// (get) Token: 0x06005177 RID: 20855 RVA: 0x000C8EC4 File Offset: 0x000C70C4
+		// Token: 0x17001C7E RID: 7294
+		// (get) Token: 0x0600569E RID: 22174 RVA: 0x000D478C File Offset: 0x000D298C
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -49,19 +47,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B12 RID: 6930
-		// (get) Token: 0x06005178 RID: 20856 RVA: 0x000C8EF8 File Offset: 0x000C70F8
+		// Token: 0x17001C7F RID: 7295
+		// (get) Token: 0x0600569F RID: 22175 RVA: 0x000D47C0 File Offset: 0x000D29C0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IWuWaGoHintStepBase> HintSteps
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -79,25 +77,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EE8 RID: 12008
+		// Token: 0x040031B0 RID: 12720
 		private IWuWaGoSaveGrid Instance;
 
-		// Token: 0x04002EE9 RID: 12009
+		// Token: 0x040031B1 RID: 12721
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04002EEA RID: 12010
+		// Token: 0x040031B2 RID: 12722
 		private bool _LinkDataInited;
 
-		// Token: 0x04002EEB RID: 12011
+		// Token: 0x040031B3 RID: 12723
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IWuWaGoHintStepBase> _HintStepsCache;
 
-		// Token: 0x04002EEC RID: 12012
+		// Token: 0x040031B4 RID: 12724
 		private bool _HintStepsInited;
 	}
 }

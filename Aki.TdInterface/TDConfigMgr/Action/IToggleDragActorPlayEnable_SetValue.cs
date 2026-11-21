@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FCF RID: 8143
+	// Token: 0x02002214 RID: 8724
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IToggleDragActorPlayEnable_SetValue
 	{
-		// Token: 0x04006C18 RID: 27672
+		// Token: 0x04007217 RID: 29207
 		public EToggleDragActorPlayType Type;
 
-		// Token: 0x04006C19 RID: 27673
-		[Nullable(1)]
+		// Token: 0x04007218 RID: 29208
+		[Nullable(0)]
 		public IFixedCameraConfig CameraConfig;
 
-		// Token: 0x04006C1A RID: 27674
+		// Token: 0x04007219 RID: 29209
 		public string TidMainText;
 
-		// Token: 0x04006C1B RID: 27675
+		// Token: 0x0400721A RID: 29210
 		public string TidSubText;
 
-		// Token: 0x04006C1C RID: 27676
+		// Token: 0x0400721B RID: 29211
 		public string TidHintText;
 
-		// Token: 0x04006C1D RID: 27677
+		// Token: 0x0400721C RID: 29212
 		public bool? KeepDialog;
 
-		// Token: 0x04006C1E RID: 27678
+		// Token: 0x0400721D RID: 29213
 		public bool? DisableExit;
 
-		// Token: 0x04006C1F RID: 27679
+		// Token: 0x0400721E RID: 29214
 		public string EdTidMainText;
 
-		// Token: 0x04006C20 RID: 27680
+		// Token: 0x0400721F RID: 29215
 		public string EdTidSubText;
 
-		// Token: 0x04006C21 RID: 27681
+		// Token: 0x04007220 RID: 29216
 		public string EdTidHintText;
 	}
 }

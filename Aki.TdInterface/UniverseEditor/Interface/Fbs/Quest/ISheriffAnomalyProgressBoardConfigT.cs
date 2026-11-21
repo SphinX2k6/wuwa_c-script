@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004110 RID: 16656
+	// Token: 0x02004551 RID: 17745
 	public class ISheriffAnomalyProgressBoardConfigT
 	{
-		// Token: 0x17007601 RID: 30209
-		// (get) Token: 0x06018649 RID: 99913 RVA: 0x00384E8E File Offset: 0x0038308E
-		// (set) Token: 0x0601864A RID: 99914 RVA: 0x00384E96 File Offset: 0x00383096
+		// Token: 0x17007C07 RID: 31751
+		// (get) Token: 0x06019CEC RID: 105708 RVA: 0x003AEE96 File Offset: 0x003AD096
+		// (set) Token: 0x06019CED RID: 105709 RVA: 0x003AEE9E File Offset: 0x003AD09E
 		public int AnomalyId { get; set; }
 
-		// Token: 0x0601864B RID: 99915 RVA: 0x00384E9F File Offset: 0x0038309F
+		// Token: 0x06019CEE RID: 105710 RVA: 0x003AEEA7 File Offset: 0x003AD0A7
 		public ISheriffAnomalyProgressBoardConfigT()
 		{
 			this.AnomalyId = 0;

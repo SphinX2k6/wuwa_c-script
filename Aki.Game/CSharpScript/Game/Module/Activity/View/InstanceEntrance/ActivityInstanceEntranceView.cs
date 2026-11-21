@@ -13,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F1A RID: 24346
+	// Token: 0x02004F01 RID: 20225
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityInstanceEntranceView : UiTickViewBase
 	{
-		// Token: 0x0603DDA1 RID: 253345 RVA: 0x00EF31F2 File Offset: 0x00EF13F2
+		// Token: 0x06032D3C RID: 208188 RVA: 0x00E44EFA File Offset: 0x00E430FA
 		[NullableContext(1)]
 		public ActivityInstanceEntranceView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603DDA2 RID: 253346 RVA: 0x00EF31FC File Offset: 0x00EF13FC
+		// Token: 0x06032D3D RID: 208189 RVA: 0x00E44F04 File Offset: 0x00E43104
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DDA3 RID: 253347 RVA: 0x00EF3350 File Offset: 0x00EF1550
+		// Token: 0x06032D3E RID: 208190 RVA: 0x00E45058 File Offset: 0x00E43258
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityInstanceEntranceView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -63,27 +63,27 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DDA4 RID: 253348 RVA: 0x00EF3393 File Offset: 0x00EF1593
+		// Token: 0x06032D3F RID: 208191 RVA: 0x00E4509B File Offset: 0x00E4329B
 		[NullableContext(1)]
 		private ActivityInstanceEntranceScrollItem CreateInstanceGrid(ActivityEntranceItemData data, UUIItem uiItem, int index)
 		{
 			return new ActivityInstanceEntranceScrollItem();
 		}
 
-		// Token: 0x0603DDA5 RID: 253349 RVA: 0x00EF339A File Offset: 0x00EF159A
+		// Token: 0x06032D40 RID: 208192 RVA: 0x00E450A2 File Offset: 0x00E432A2
 		protected override void OnStart()
 		{
 			this.UiViewSequence.AddSequenceFinishEvent("Close01", new Action<string>(this.FinishCloseSequenceEvent), false);
 		}
 
-		// Token: 0x0603DDA6 RID: 253350 RVA: 0x00EF33B9 File Offset: 0x00EF15B9
+		// Token: 0x06032D41 RID: 208193 RVA: 0x00E450C1 File Offset: 0x00E432C1
 		[NullableContext(1)]
 		private void FinishCloseSequenceEvent(string _)
 		{
 			UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 		}
 
-		// Token: 0x0603DDA7 RID: 253351 RVA: 0x00EF33D4 File Offset: 0x00EF15D4
+		// Token: 0x06032D42 RID: 208194 RVA: 0x00E450DC File Offset: 0x00E432DC
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshActivityEntranceScroller, new Action<int>(this.OnSelectActivityEntranceScrollItem));
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			EventSystem.Instance.Add(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		}
 
-		// Token: 0x0603DDA8 RID: 253352 RVA: 0x00EF3438 File Offset: 0x00EF1638
+		// Token: 0x06032D43 RID: 208195 RVA: 0x00E45140 File Offset: 0x00E43340
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshActivityEntranceScroller, new Action<int>(this.OnSelectActivityEntranceScrollItem));
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			EventSystem.Instance.Remove(EEventName.OnRefreshInstancedRecommendLevel, new Action(this.OnRefreshInstancedRecommendLevel));
 		}
 
-		// Token: 0x0603DDA9 RID: 253353 RVA: 0x00EF3499 File Offset: 0x00EF1699
+		// Token: 0x06032D44 RID: 208196 RVA: 0x00E451A1 File Offset: 0x00E433A1
 		private void OnRefreshInstancedRecommendLevel()
 		{
 			ActivityInstanceEntranceInfoItem activityInstanceEntranceInfoItem = this.ActivityInstanceEntranceInfoItem;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			activityInstanceEntranceInfoItem2.RefreshRecommendLevelItem(this.ViewData).Forget();
 		}
 
-		// Token: 0x0603DDAA RID: 253354 RVA: 0x00EF34D4 File Offset: 0x00EF16D4
+		// Token: 0x06032D45 RID: 208197 RVA: 0x00E451DC File Offset: 0x00E433DC
 		private void OnRefreshActivityEntranceItemContent(int uiIndex)
 		{
 			this.CurrentSelectMainUiIndex = uiIndex;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.UiViewSequence.PlaySequence("Xz", false, null);
 		}
 
-		// Token: 0x0603DDAB RID: 253355 RVA: 0x00EF3528 File Offset: 0x00EF1728
+		// Token: 0x06032D46 RID: 208198 RVA: 0x00E45230 File Offset: 0x00E43430
 		private void OnSelectActivityEntranceScrollItem(int uiIndex)
 		{
 			this.CurrentSelectMainUiIndex = uiIndex;
@@ -143,25 +143,25 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.UiViewSequence.PlaySequence("Xz", false, null);
 		}
 
-		// Token: 0x0603DDAC RID: 253356 RVA: 0x00EF357F File Offset: 0x00EF177F
+		// Token: 0x06032D47 RID: 208199 RVA: 0x00E45287 File Offset: 0x00E43487
 		private void OnClickCaptionStateBtn()
 		{
 			HelpController.Instance.OpenHelpById(242);
 		}
 
-		// Token: 0x0603DDAD RID: 253357 RVA: 0x00EF3590 File Offset: 0x00EF1790
+		// Token: 0x06032D48 RID: 208200 RVA: 0x00E45298 File Offset: 0x00E43498
 		protected override void OnBeforeShow()
 		{
 			this.RefreshScrollView();
 		}
 
-		// Token: 0x0603DDAE RID: 253358 RVA: 0x00EF3598 File Offset: 0x00EF1798
+		// Token: 0x06032D49 RID: 208201 RVA: 0x00E452A0 File Offset: 0x00E434A0
 		protected override void OnAfterShow()
 		{
 			this.CheckAndShowDungeonArchiveExpireTips();
 		}
 
-		// Token: 0x0603DDAF RID: 253359 RVA: 0x00EF35A0 File Offset: 0x00EF17A0
+		// Token: 0x06032D4A RID: 208202 RVA: 0x00E452A8 File Offset: 0x00E434A8
 		private void CheckAndShowDungeonArchiveExpireTips()
 		{
 			ActivityEntranceSelectItemData activityEntranceSelectItemData = this.ViewData.GetActivityEntranceSelectItemData();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			InstanceDungeonController.Instance.CheckAndShowDungeonArchiveExpireTips(dungeonId);
 		}
 
-		// Token: 0x0603DDB0 RID: 253360 RVA: 0x00EF35DC File Offset: 0x00EF17DC
+		// Token: 0x06032D4B RID: 208203 RVA: 0x00E452E4 File Offset: 0x00E434E4
 		private void RefreshCaptionItemByData(ActivityEntranceCaptionItemData captionData)
 		{
 			this.InstanceDungeonCaptionItem.SetCloseCallBack(new Action(this.OnClickBtnClose));
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			instanceDungeonCaptionItem3.SetUiActive(false);
 		}
 
-		// Token: 0x0603DDB1 RID: 253361 RVA: 0x00EF36A8 File Offset: 0x00EF18A8
+		// Token: 0x06032D4C RID: 208204 RVA: 0x00E453B0 File Offset: 0x00E435B0
 		private void RefreshCaptionStateItemByData(ActivityEntranceItemData entranceItemData)
 		{
 			int dungeonId = (entranceItemData != null) ? entranceItemData.GetInstanceDungeonId() : 0;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DDB2 RID: 253362 RVA: 0x00EF373C File Offset: 0x00EF193C
+		// Token: 0x06032D4D RID: 208205 RVA: 0x00E45444 File Offset: 0x00E43644
 		private void UpdateInstanceBg(ActivityInstanceEntranceData data)
 		{
 			if (data == null || data.GetActivityEntranceSelectItemData() == null)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DDB3 RID: 253363 RVA: 0x00EF37B2 File Offset: 0x00EF19B2
+		// Token: 0x06032D4E RID: 208206 RVA: 0x00E454BA File Offset: 0x00E436BA
 		private void RefreshScoreItem(ActivityEntrancePointData data)
 		{
 			if (data == null)
@@ -287,13 +287,13 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			activityInstanceEntranceScoreItem2.RefreshView(data);
 		}
 
-		// Token: 0x0603DDB4 RID: 253364 RVA: 0x00EF37DB File Offset: 0x00EF19DB
+		// Token: 0x06032D4F RID: 208207 RVA: 0x00E454E3 File Offset: 0x00E436E3
 		private void OnClickBtnClose()
 		{
 			this.UiViewSequence.PlaySequencePurely("Close01", true, false);
 		}
 
-		// Token: 0x0603DDB5 RID: 253365 RVA: 0x00EF37F0 File Offset: 0x00EF19F0
+		// Token: 0x06032D50 RID: 208208 RVA: 0x00E454F8 File Offset: 0x00E436F8
 		private void RefreshScrollView()
 		{
 			IReadOnlyList<ActivityEntranceItemData> showDataBySelectElement = this.ViewData.GetActivityEntranceSelectItemData().GetShowDataBySelectElement(this.CurrentSelectMainUiIndex, 0);
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.InstanceLoopScroll.RefreshByData(showDataBySelectElement, false, false);
 		}
 
-		// Token: 0x0603DDB6 RID: 253366 RVA: 0x00EF3878 File Offset: 0x00EF1A78
+		// Token: 0x06032D51 RID: 208209 RVA: 0x00E45580 File Offset: 0x00E43780
 		private void UpdateScrollView()
 		{
 			IReadOnlyList<ActivityEntranceItemData> showDataBySelectElement = this.ViewData.GetActivityEntranceSelectItemData().GetShowDataBySelectElement(this.CurrentSelectMainUiIndex, 0);
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DDB7 RID: 253367 RVA: 0x00EF38D9 File Offset: 0x00EF1AD9
+		// Token: 0x06032D52 RID: 208210 RVA: 0x00E455E1 File Offset: 0x00E437E1
 		protected override void OnBeforeDestroy()
 		{
 			if (this.InstanceLoopScroll != null)
@@ -336,25 +336,25 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x040204DB RID: 132315
+		// Token: 0x0401AFAD RID: 110509
 		private ActivityInstanceEntranceData ViewData;
 
-		// Token: 0x040204DC RID: 132316
+		// Token: 0x0401AFAE RID: 110510
 		private ActivityInstanceEntranceInfoItem ActivityInstanceEntranceInfoItem;
 
-		// Token: 0x040204DD RID: 132317
+		// Token: 0x0401AFAF RID: 110511
 		private PopupCaptionItem InstanceDungeonCaptionItem;
 
-		// Token: 0x040204DE RID: 132318
+		// Token: 0x0401AFB0 RID: 110512
 		private ActivityInstanceEntranceScoreItem ActivityInstanceEntranceScoreItem;
 
-		// Token: 0x040204DF RID: 132319
+		// Token: 0x0401AFB1 RID: 110513
 		private int CurrentSelectMainUiIndex;
 
-		// Token: 0x040204E0 RID: 132320
+		// Token: 0x0401AFB2 RID: 110514
 		private ActivityInstanceEntranceDynItem InstanceDetectDynamicItem;
 
-		// Token: 0x040204E1 RID: 132321
+		// Token: 0x0401AFB3 RID: 110515
 		[Nullable(new byte[]
 		{
 			2,
@@ -364,27 +364,27 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 		})]
 		private DynamicScrollView<ActivityInstanceEntranceScrollItem, ActivityInstanceEntranceDynItem, ActivityEntranceItemData> InstanceLoopScroll;
 
-		// Token: 0x0200C251 RID: 49745
+		// Token: 0x0200AC5E RID: 44126
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403AB44 RID: 240452
+			// Token: 0x04035536 RID: 218422
 			DynScrollView,
-			// Token: 0x0403AB45 RID: 240453
+			// Token: 0x04035537 RID: 218423
 			ScrollItem,
-			// Token: 0x0403AB46 RID: 240454
+			// Token: 0x04035538 RID: 218424
 			UiItemEntrance,
-			// Token: 0x0403AB47 RID: 240455
+			// Token: 0x04035539 RID: 218425
 			TextureInstanceBG,
-			// Token: 0x0403AB48 RID: 240456
+			// Token: 0x0403553A RID: 218426
 			TopItem,
-			// Token: 0x0403AB49 RID: 240457
+			// Token: 0x0403553B RID: 218427
 			ContentItem,
-			// Token: 0x0403AB4A RID: 240458
+			// Token: 0x0403553C RID: 218428
 			CaptionItem,
-			// Token: 0x0403AB4B RID: 240459
+			// Token: 0x0403553D RID: 218429
 			TimeAndCountItem,
-			// Token: 0x0403AB4C RID: 240460
+			// Token: 0x0403553E RID: 218430
 			LeftRewardItem
 		}
 	}

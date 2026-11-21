@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E48 RID: 7752
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200207D RID: 8317
 	public class ISetTeleControlConfig
 	{
-		// Token: 0x0600A5DD RID: 42461 RVA: 0x00177978 File Offset: 0x00175B78
+		// Token: 0x0600B095 RID: 45205 RVA: 0x0018D678 File Offset: 0x0018B878
 		private ISetTeleControlConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A5DE RID: 42462 RVA: 0x001779B0 File Offset: 0x00175BB0
+		// Token: 0x0600B096 RID: 45206 RVA: 0x0018D6B0 File Offset: 0x0018B8B0
 		public static ISetTeleControlConfig Create([Nullable(2)] ISetTeleControlConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5DF RID: 42463 RVA: 0x001779C3 File Offset: 0x00175BC3
+		// Token: 0x0600B097 RID: 45207 RVA: 0x0018D6C3 File Offset: 0x0018B8C3
 		public static ISetTeleControlConfig CreateFromSetValue([Nullable(2)] ISetTeleControlConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A5E0 RID: 42464 RVA: 0x001779D6 File Offset: 0x00175BD6
+		// Token: 0x0600B098 RID: 45208 RVA: 0x0018D6D6 File Offset: 0x0018B8D6
 		public ISetTeleControlConfig_SetValue ToSetValue()
 		{
 			return new ISetTeleControlConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032D9 RID: 13017
-		// (get) Token: 0x0600A5E1 RID: 42465 RVA: 0x001779F5 File Offset: 0x00175BF5
-		// (set) Token: 0x0600A5E2 RID: 42466 RVA: 0x00177A20 File Offset: 0x00175C20
+		// Token: 0x1700359D RID: 13725
+		// (get) Token: 0x0600B099 RID: 45209 RVA: 0x0018D6F5 File Offset: 0x0018B8F5
+		// (set) Token: 0x0600B09A RID: 45210 RVA: 0x0018D720 File Offset: 0x0018B920
 		public virtual ESetTeleControlType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170032DA RID: 13018
-		// (get) Token: 0x0600A5E3 RID: 42467 RVA: 0x00177A2E File Offset: 0x00175C2E
-		// (set) Token: 0x0600A5E4 RID: 42468 RVA: 0x00177A59 File Offset: 0x00175C59
+		// Token: 0x1700359E RID: 13726
+		// (get) Token: 0x0600B09B RID: 45211 RVA: 0x0018D72E File Offset: 0x0018B92E
+		// (set) Token: 0x0600B09C RID: 45212 RVA: 0x0018D759 File Offset: 0x0018B959
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006326 RID: 25382
+		// Token: 0x0400690A RID: 26890
 		[Nullable(2)]
 		protected ISetTeleControlConfig FbInstance;
 
-		// Token: 0x04006327 RID: 25383
+		// Token: 0x0400690B RID: 26891
 		[Nullable(2)]
 		protected ISetTeleControlConfig_SetValue PocoInterface;
 	}

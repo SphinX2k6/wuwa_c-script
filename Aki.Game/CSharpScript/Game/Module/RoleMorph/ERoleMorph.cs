@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleMorph
 {
-	// Token: 0x02004D66 RID: 19814
+	// Token: 0x02003D2F RID: 15663
 	public enum ERoleMorph
 	{
-		// Token: 0x0401B315 RID: 111381
+		// Token: 0x04015CE7 RID: 89319
 		PaoTai = 5012,
-		// Token: 0x0401B316 RID: 111382
+		// Token: 0x04015CE8 RID: 89320
 		LiuLiDaoLing = 5020,
-		// Token: 0x0401B317 RID: 111383
+		// Token: 0x04015CE9 RID: 89321
 		GuYingXiongKai
 	}
 }

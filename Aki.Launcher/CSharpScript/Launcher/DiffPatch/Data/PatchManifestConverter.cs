@@ -7,7 +7,7 @@ using CSharpScript.Launcher.Util.Json;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000222 RID: 546
+	// Token: 0x02000227 RID: 551
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 	})]
 	public class PatchManifestConverter : JsonConverter<PatchManifest>
 	{
-		// Token: 0x06000E06 RID: 3590 RVA: 0x00054654 File Offset: 0x00052854
+		// Token: 0x06000E47 RID: 3655 RVA: 0x00057148 File Offset: 0x00055348
 		public override PatchManifest Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			if (reader.TokenType != JsonTokenType.StartObject)
@@ -128,7 +128,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			throw new JsonException("Unexpected end of JSON input");
 		}
 
-		// Token: 0x06000E07 RID: 3591 RVA: 0x0005498C File Offset: 0x00052B8C
+		// Token: 0x06000E48 RID: 3656 RVA: 0x00057480 File Offset: 0x00055680
 		public override void Write(Utf8JsonWriter writer, PatchManifest value, JsonSerializerOptions options)
 		{
 			writer.WriteStartObject();

@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DC7 RID: 24007
+	// Token: 0x02004DAB RID: 19883
 	public class SpecialEnergyBarMotorcycleSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D017 RID: 249879 RVA: 0x00EAAD49 File Offset: 0x00EA8F49
+		// Token: 0x06031F8E RID: 204686 RVA: 0x00DFBC25 File Offset: 0x00DF9E25
 		[NullableContext(1)]
 		public void InitMotorcycleData([Nullable(2)] EntityHandle entityHandle, SpecialEnergyBarInfo config, bool needInitKeyItem = true)
 		{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PercentMachine.Init(0f);
 		}
 
-		// Token: 0x0603D018 RID: 249880 RVA: 0x00EAAD7C File Offset: 0x00EA8F7C
+		// Token: 0x06031F8F RID: 204687 RVA: 0x00DFBC58 File Offset: 0x00DF9E58
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D019 RID: 249881 RVA: 0x00EAADD8 File Offset: 0x00EA8FD8
+		// Token: 0x06031F90 RID: 204688 RVA: 0x00DFBCB4 File Offset: 0x00DF9EB4
 		public void UpdatePercent(float percent, bool keyEnable, bool isStart)
 		{
 			for (int i = 0; i < this.SlotItemList.Count; i++)

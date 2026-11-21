@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056EA RID: 22250
+	// Token: 0x02005CD9 RID: 23769
 	public class IPathDrivenActorInitialSpawnConfigT
 	{
-		// Token: 0x1700A5A5 RID: 42405
-		// (get) Token: 0x060252FA RID: 152314 RVA: 0x00521F5D File Offset: 0x0052015D
-		// (set) Token: 0x060252FB RID: 152315 RVA: 0x00521F65 File Offset: 0x00520165
+		// Token: 0x1700AEA8 RID: 44712
+		// (get) Token: 0x06027761 RID: 161633 RVA: 0x005669A9 File Offset: 0x00564BA9
+		// (set) Token: 0x06027762 RID: 161634 RVA: 0x005669B1 File Offset: 0x00564BB1
 		public bool EnableInitialSpawn { get; set; }
 
-		// Token: 0x1700A5A6 RID: 42406
-		// (get) Token: 0x060252FC RID: 152316 RVA: 0x00521F6E File Offset: 0x0052016E
-		// (set) Token: 0x060252FD RID: 152317 RVA: 0x00521F76 File Offset: 0x00520176
+		// Token: 0x1700AEA9 RID: 44713
+		// (get) Token: 0x06027763 RID: 161635 RVA: 0x005669BA File Offset: 0x00564BBA
+		// (set) Token: 0x06027764 RID: 161636 RVA: 0x005669C2 File Offset: 0x00564BC2
 		public List<IPathDrivenActorInitialSpawnHandleT> InitialSpawnHandles { get; set; }
 
-		// Token: 0x1700A5A7 RID: 42407
-		// (get) Token: 0x060252FE RID: 152318 RVA: 0x00521F7F File Offset: 0x0052017F
-		// (set) Token: 0x060252FF RID: 152319 RVA: 0x00521F87 File Offset: 0x00520187
+		// Token: 0x1700AEAA RID: 44714
+		// (get) Token: 0x06027765 RID: 161637 RVA: 0x005669CB File Offset: 0x00564BCB
+		// (set) Token: 0x06027766 RID: 161638 RVA: 0x005669D3 File Offset: 0x00564BD3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025300 RID: 152320 RVA: 0x00521F90 File Offset: 0x00520190
+		// Token: 0x06027767 RID: 161639 RVA: 0x005669DC File Offset: 0x00564BDC
 		public IPathDrivenActorInitialSpawnConfigT()
 		{
 			this.EnableInitialSpawn = false;

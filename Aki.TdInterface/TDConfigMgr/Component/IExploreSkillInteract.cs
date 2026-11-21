@@ -7,13 +7,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200034D RID: 845
+	// Token: 0x02000396 RID: 918
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IExploreSkillInteract
 	{
-		// Token: 0x060010BE RID: 4286 RVA: 0x00039988 File Offset: 0x00037B88
-		[NullableContext(1)]
+		// Token: 0x06001202 RID: 4610 RVA: 0x0003CC54 File Offset: 0x0003AE54
+		[NullableContext(0)]
 		private IExploreSkillInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060010BF RID: 4287 RVA: 0x000399C0 File Offset: 0x00037BC0
-		[NullableContext(1)]
+		// Token: 0x06001203 RID: 4611 RVA: 0x0003CC8C File Offset: 0x0003AE8C
+		[NullableContext(0)]
 		public static IExploreSkillInteract Create([Nullable(2)] IExploreSkillInteract instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010C0 RID: 4288 RVA: 0x000399D3 File Offset: 0x00037BD3
-		[NullableContext(1)]
+		// Token: 0x06001204 RID: 4612 RVA: 0x0003CC9F File Offset: 0x0003AE9F
+		[NullableContext(0)]
 		public static IExploreSkillInteract CreateFromSetValue([Nullable(2)] IExploreSkillInteract_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060010C1 RID: 4289 RVA: 0x000399E8 File Offset: 0x00037BE8
-		[NullableContext(1)]
+		// Token: 0x06001205 RID: 4613 RVA: 0x0003CCB4 File Offset: 0x0003AEB4
+		[NullableContext(0)]
 		public IExploreSkillInteract_SetValue ToSetValue()
 		{
 			return new IExploreSkillInteract_SetValue
@@ -73,9 +73,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004C8 RID: 1224
-		// (get) Token: 0x060010C2 RID: 4290 RVA: 0x00039A5A File Offset: 0x00037C5A
-		// (set) Token: 0x060010C3 RID: 4291 RVA: 0x00039A81 File Offset: 0x00037C81
+		// Token: 0x1700051C RID: 1308
+		// (get) Token: 0x06001206 RID: 4614 RVA: 0x0003CD26 File Offset: 0x0003AF26
+		// (set) Token: 0x06001207 RID: 4615 RVA: 0x0003CD4D File Offset: 0x0003AF4D
 		public virtual string ExploreSkillUiResource
 		{
 			get
@@ -97,13 +97,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004C9 RID: 1225
-		// (get) Token: 0x060010C4 RID: 4292 RVA: 0x00039A8F File Offset: 0x00037C8F
-		// (set) Token: 0x060010C5 RID: 4293 RVA: 0x00039AB6 File Offset: 0x00037CB6
-		[Nullable(1)]
+		// Token: 0x1700051D RID: 1309
+		// (get) Token: 0x06001208 RID: 4616 RVA: 0x0003CD5B File Offset: 0x0003AF5B
+		// (set) Token: 0x06001209 RID: 4617 RVA: 0x0003CD82 File Offset: 0x0003AF82
+		[Nullable(0)]
 		public virtual IExploreSkillInteractType Option
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -117,16 +117,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.Option;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Option = value;
 			}
 		}
 
-		// Token: 0x170004CA RID: 1226
-		// (get) Token: 0x060010C6 RID: 4294 RVA: 0x00039AC4 File Offset: 0x00037CC4
-		// (set) Token: 0x060010C7 RID: 4295 RVA: 0x00039AFE File Offset: 0x00037CFE
+		// Token: 0x1700051E RID: 1310
+		// (get) Token: 0x0600120A RID: 4618 RVA: 0x0003CD90 File Offset: 0x0003AF90
+		// (set) Token: 0x0600120B RID: 4619 RVA: 0x0003CDCA File Offset: 0x0003AFCA
 		public virtual int? PlayerStateRestritionId
 		{
 			get
@@ -148,20 +148,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004CB RID: 1227
-		// (get) Token: 0x060010C8 RID: 4296 RVA: 0x00039B0C File Offset: 0x00037D0C
-		// (set) Token: 0x060010C9 RID: 4297 RVA: 0x00039B33 File Offset: 0x00037D33
+		// Token: 0x1700051F RID: 1311
+		// (get) Token: 0x0600120C RID: 4620 RVA: 0x0003CDD8 File Offset: 0x0003AFD8
+		// (set) Token: 0x0600120D RID: 4621 RVA: 0x0003CDFF File Offset: 0x0003AFFF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -179,7 +179,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -187,9 +187,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004CC RID: 1228
-		// (get) Token: 0x060010CA RID: 4298 RVA: 0x00039B44 File Offset: 0x00037D44
-		// (set) Token: 0x060010CB RID: 4299 RVA: 0x00039BA5 File Offset: 0x00037DA5
+		// Token: 0x17000520 RID: 1312
+		// (get) Token: 0x0600120E RID: 4622 RVA: 0x0003CE10 File Offset: 0x0003B010
+		// (set) Token: 0x0600120F RID: 4623 RVA: 0x0003CE71 File Offset: 0x0003B071
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -217,9 +217,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004CD RID: 1229
-		// (get) Token: 0x060010CC RID: 4300 RVA: 0x00039BBA File Offset: 0x00037DBA
-		// (set) Token: 0x060010CD RID: 4301 RVA: 0x00039BE1 File Offset: 0x00037DE1
+		// Token: 0x17000521 RID: 1313
+		// (get) Token: 0x06001210 RID: 4624 RVA: 0x0003CE86 File Offset: 0x0003B086
+		// (set) Token: 0x06001211 RID: 4625 RVA: 0x0003CEAD File Offset: 0x0003B0AD
 		public virtual IExploreSkillSearchTargetCfg SearchTargetCfg
 		{
 			get
@@ -241,9 +241,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004CE RID: 1230
-		// (get) Token: 0x060010CE RID: 4302 RVA: 0x00039BF0 File Offset: 0x00037DF0
-		// (set) Token: 0x060010CF RID: 4303 RVA: 0x00039C51 File Offset: 0x00037E51
+		// Token: 0x17000522 RID: 1314
+		// (get) Token: 0x06001212 RID: 4626 RVA: 0x0003CEBC File Offset: 0x0003B0BC
+		// (set) Token: 0x06001213 RID: 4627 RVA: 0x0003CF1D File Offset: 0x0003B11D
 		public virtual IIgnoresCollisionCfg IgnoresCollisionCfg
 		{
 			get
@@ -271,20 +271,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004CF RID: 1231
-		// (get) Token: 0x060010D0 RID: 4304 RVA: 0x00039C66 File Offset: 0x00037E66
-		// (set) Token: 0x060010D1 RID: 4305 RVA: 0x00039C8D File Offset: 0x00037E8D
+		// Token: 0x17000523 RID: 1315
+		// (get) Token: 0x06001214 RID: 4628 RVA: 0x0003CF32 File Offset: 0x0003B132
+		// (set) Token: 0x06001215 RID: 4629 RVA: 0x0003CF59 File Offset: 0x0003B159
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SelfInteractBlockDetectionKeys
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -302,7 +302,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -310,24 +310,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000DFF RID: 3583
+		// Token: 0x04000EF6 RID: 3830
 		protected IExploreSkillInteract FbInstance;
 
-		// Token: 0x04000E00 RID: 3584
+		// Token: 0x04000EF7 RID: 3831
 		protected IExploreSkillInteract_SetValue PocoInterface;
 
-		// Token: 0x04000E01 RID: 3585
-		[Nullable(1)]
+		// Token: 0x04000EF8 RID: 3832
+		[Nullable(0)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04000E02 RID: 3586
+		// Token: 0x04000EF9 RID: 3833
 		private bool _ConditionInited;
 
-		// Token: 0x04000E03 RID: 3587
-		[Nullable(1)]
+		// Token: 0x04000EFA RID: 3834
+		[Nullable(0)]
 		private IIgnoresCollisionCfg _IgnoresCollisionCfgCache;
 
-		// Token: 0x04000E04 RID: 3588
+		// Token: 0x04000EFB RID: 3835
 		private bool _IgnoresCollisionCfgInited;
 	}
 }

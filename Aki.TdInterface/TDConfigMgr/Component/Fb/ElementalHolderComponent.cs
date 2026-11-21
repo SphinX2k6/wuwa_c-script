@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E26 RID: 3622
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F22 RID: 3874
 	public class ElementalHolderComponent : IComponentBase
 	{
-		// Token: 0x060051ED RID: 20973 RVA: 0x000C9E82 File Offset: 0x000C8082
+		// Token: 0x06005714 RID: 22292 RVA: 0x000D574A File Offset: 0x000D394A
 		public static ElementalHolderComponent Create(IElementalHolderComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B5E RID: 7006
-		// (get) Token: 0x060051EE RID: 20974 RVA: 0x000C9EA4 File Offset: 0x000C80A4
+		// Token: 0x17001CCB RID: 7371
+		// (get) Token: 0x06005715 RID: 22293 RVA: 0x000D576C File Offset: 0x000D396C
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B5F RID: 7007
-		// (get) Token: 0x060051EF RID: 20975 RVA: 0x000C9EDC File Offset: 0x000C80DC
+		// Token: 0x17001CCC RID: 7372
+		// (get) Token: 0x06005716 RID: 22294 RVA: 0x000D57A4 File Offset: 0x000D39A4
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B60 RID: 7008
-		// (get) Token: 0x060051F0 RID: 20976 RVA: 0x000C9EF2 File Offset: 0x000C80F2
+		// Token: 0x17001CCD RID: 7373
+		// (get) Token: 0x06005717 RID: 22295 RVA: 0x000D57BA File Offset: 0x000D39BA
 		public virtual IElementalAbilityConfig AbilityConfig
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F2F RID: 12079
+		// Token: 0x040031F7 RID: 12791
 		private IElementalHolderComponent Instance;
 
-		// Token: 0x04002F30 RID: 12080
+		// Token: 0x040031F8 RID: 12792
 		[Nullable(2)]
 		private IElementalAbilityConfig _AbilityConfigCache;
 
-		// Token: 0x04002F31 RID: 12081
+		// Token: 0x040031F9 RID: 12793
 		private bool _AbilityConfigInited;
 	}
 }

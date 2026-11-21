@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Flow
 {
-	// Token: 0x02004748 RID: 18248
+	// Token: 0x02004BB0 RID: 19376
 	public struct IPlotPosition : IFlatbufferObject
 	{
-		// Token: 0x170082EE RID: 33518
-		// (get) Token: 0x0601C14F RID: 115023 RVA: 0x003FA923 File Offset: 0x003F8B23
+		// Token: 0x1700892F RID: 35119
+		// (get) Token: 0x0601D924 RID: 121124 RVA: 0x00426BBF File Offset: 0x00424DBF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			}
 		}
 
-		// Token: 0x0601C150 RID: 115024 RVA: 0x003FA930 File Offset: 0x003F8B30
+		// Token: 0x0601D925 RID: 121125 RVA: 0x00426BCC File Offset: 0x00424DCC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C151 RID: 115025 RVA: 0x003FA938 File Offset: 0x003F8B38
+		// Token: 0x0601D926 RID: 121126 RVA: 0x00426BD4 File Offset: 0x00424DD4
 		public static IPlotPosition GetRootAsIPlotPosition(ByteBuffer _bb)
 		{
 			return IPlotPosition.GetRootAsIPlotPosition(_bb, default(IPlotPosition));
 		}
 
-		// Token: 0x0601C152 RID: 115026 RVA: 0x003FA954 File Offset: 0x003F8B54
+		// Token: 0x0601D927 RID: 121127 RVA: 0x00426BF0 File Offset: 0x00424DF0
 		public static IPlotPosition GetRootAsIPlotPosition(ByteBuffer _bb, IPlotPosition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C153 RID: 115027 RVA: 0x003FA971 File Offset: 0x003F8B71
+		// Token: 0x0601D928 RID: 121128 RVA: 0x00426C0D File Offset: 0x00424E0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C154 RID: 115028 RVA: 0x003FA980 File Offset: 0x003F8B80
+		// Token: 0x0601D929 RID: 121129 RVA: 0x00426C1C File Offset: 0x00424E1C
 		public IPlotPosition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0601C155 RID: 115029 RVA: 0x003FA990 File Offset: 0x003F8B90
+		// Token: 0x0601D92A RID: 121130 RVA: 0x00426C2C File Offset: 0x00424E2C
 		public IPlotPosPlayFlow? PlayFlow(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return new IPlotPosPlayFlow?(default(IPlotPosPlayFlow).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170082EF RID: 33519
-		// (get) Token: 0x0601C156 RID: 115030 RVA: 0x003FA9F0 File Offset: 0x003F8BF0
+		// Token: 0x17008930 RID: 35120
+		// (get) Token: 0x0601D92B RID: 121131 RVA: 0x00426C8C File Offset: 0x00424E8C
 		public int PlayFlowLength
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			}
 		}
 
-		// Token: 0x0601C157 RID: 115031 RVA: 0x003FAA1C File Offset: 0x003F8C1C
+		// Token: 0x0601D92C RID: 121132 RVA: 0x00426CB8 File Offset: 0x00424EB8
 		public IPlotPosFlowState? FlowState(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return new IPlotPosFlowState?(default(IPlotPosFlowState).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170082F0 RID: 33520
-		// (get) Token: 0x0601C158 RID: 115032 RVA: 0x003FAA7C File Offset: 0x003F8C7C
+		// Token: 0x17008931 RID: 35121
+		// (get) Token: 0x0601D92D RID: 121133 RVA: 0x00426D18 File Offset: 0x00424F18
 		public int FlowStateLength
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			}
 		}
 
-		// Token: 0x0601C159 RID: 115033 RVA: 0x003FAAA7 File Offset: 0x003F8CA7
+		// Token: 0x0601D92E RID: 121134 RVA: 0x00426D43 File Offset: 0x00424F43
 		public static Offset<IPlotPosition> CreateIPlotPosition(FlatBufferBuilder builder, VectorOffset PlayFlowOffset = default(VectorOffset), VectorOffset FlowStateOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -109,19 +109,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return IPlotPosition.EndIPlotPosition(builder);
 		}
 
-		// Token: 0x0601C15A RID: 115034 RVA: 0x003FAAC4 File Offset: 0x003F8CC4
+		// Token: 0x0601D92F RID: 121135 RVA: 0x00426D60 File Offset: 0x00424F60
 		public static void StartIPlotPosition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601C15B RID: 115035 RVA: 0x003FAACD File Offset: 0x003F8CCD
+		// Token: 0x0601D930 RID: 121136 RVA: 0x00426D69 File Offset: 0x00424F69
 		public static void AddPlayFlow(FlatBufferBuilder builder, VectorOffset playFlowOffset)
 		{
 			builder.AddOffset(0, playFlowOffset.Value, 0);
 		}
 
-		// Token: 0x0601C15C RID: 115036 RVA: 0x003FAAE0 File Offset: 0x003F8CE0
+		// Token: 0x0601D931 RID: 121137 RVA: 0x00426D7C File Offset: 0x00424F7C
 		public static VectorOffset CreatePlayFlowVector(FlatBufferBuilder builder, Offset<IPlotPosPlayFlow>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C15D RID: 115037 RVA: 0x003FAB20 File Offset: 0x003F8D20
+		// Token: 0x0601D932 RID: 121138 RVA: 0x00426DBC File Offset: 0x00424FBC
 		public static VectorOffset CreatePlayFlowVectorBlock(FlatBufferBuilder builder, Offset<IPlotPosPlayFlow>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C15E RID: 115038 RVA: 0x003FAB3A File Offset: 0x003F8D3A
+		// Token: 0x0601D933 RID: 121139 RVA: 0x00426DD6 File Offset: 0x00424FD6
 		public static VectorOffset CreatePlayFlowVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPlotPosPlayFlow>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C15F RID: 115039 RVA: 0x003FAB58 File Offset: 0x003F8D58
+		// Token: 0x0601D934 RID: 121140 RVA: 0x00426DF4 File Offset: 0x00424FF4
 		public static VectorOffset CreatePlayFlowVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -156,19 +156,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C160 RID: 115040 RVA: 0x003FAB71 File Offset: 0x003F8D71
+		// Token: 0x0601D935 RID: 121141 RVA: 0x00426E0D File Offset: 0x0042500D
 		public static void StartPlayFlowVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601C161 RID: 115041 RVA: 0x003FAB7C File Offset: 0x003F8D7C
+		// Token: 0x0601D936 RID: 121142 RVA: 0x00426E18 File Offset: 0x00425018
 		public static void AddFlowState(FlatBufferBuilder builder, VectorOffset flowStateOffset)
 		{
 			builder.AddOffset(1, flowStateOffset.Value, 0);
 		}
 
-		// Token: 0x0601C162 RID: 115042 RVA: 0x003FAB8C File Offset: 0x003F8D8C
+		// Token: 0x0601D937 RID: 121143 RVA: 0x00426E28 File Offset: 0x00425028
 		public static VectorOffset CreateFlowStateVector(FlatBufferBuilder builder, Offset<IPlotPosFlowState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C163 RID: 115043 RVA: 0x003FABCC File Offset: 0x003F8DCC
+		// Token: 0x0601D938 RID: 121144 RVA: 0x00426E68 File Offset: 0x00425068
 		public static VectorOffset CreateFlowStateVectorBlock(FlatBufferBuilder builder, Offset<IPlotPosFlowState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C164 RID: 115044 RVA: 0x003FABE6 File Offset: 0x003F8DE6
+		// Token: 0x0601D939 RID: 121145 RVA: 0x00426E82 File Offset: 0x00425082
 		public static VectorOffset CreateFlowStateVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPlotPosFlowState>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C165 RID: 115045 RVA: 0x003FAC04 File Offset: 0x003F8E04
+		// Token: 0x0601D93A RID: 121146 RVA: 0x00426EA0 File Offset: 0x004250A0
 		public static VectorOffset CreateFlowStateVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -203,19 +203,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601C166 RID: 115046 RVA: 0x003FAC1D File Offset: 0x003F8E1D
+		// Token: 0x0601D93B RID: 121147 RVA: 0x00426EB9 File Offset: 0x004250B9
 		public static void StartFlowStateVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601C167 RID: 115047 RVA: 0x003FAC28 File Offset: 0x003F8E28
+		// Token: 0x0601D93C RID: 121148 RVA: 0x00426EC4 File Offset: 0x004250C4
 		public static Offset<IPlotPosition> EndIPlotPosition(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlotPosition>(builder.EndTable());
 		}
 
-		// Token: 0x0601C168 RID: 115048 RVA: 0x003FAC38 File Offset: 0x003F8E38
+		// Token: 0x0601D93D RID: 121149 RVA: 0x00426ED4 File Offset: 0x004250D4
 		public IPlotPositionT UnPack()
 		{
 			IPlotPositionT plotPositionT = new IPlotPositionT();
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return plotPositionT;
 		}
 
-		// Token: 0x0601C169 RID: 115049 RVA: 0x003FAC54 File Offset: 0x003F8E54
+		// Token: 0x0601D93E RID: 121150 RVA: 0x00426EF0 File Offset: 0x004250F0
 		public void UnPackTo(IPlotPositionT _o)
 		{
 			_o.PlayFlow = new List<IPlotPosPlayFlowT>();
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			}
 		}
 
-		// Token: 0x0601C16A RID: 115050 RVA: 0x003FAD08 File Offset: 0x003F8F08
+		// Token: 0x0601D93F RID: 121151 RVA: 0x00426FA4 File Offset: 0x004251A4
 		public static Offset<IPlotPosition> Pack(FlatBufferBuilder builder, IPlotPositionT _o)
 		{
 			if (_o == null)
@@ -268,7 +268,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Flow
 			return IPlotPosition.CreateIPlotPosition(builder, playFlowOffset, flowStateOffset);
 		}
 
-		// Token: 0x0400CA36 RID: 51766
+		// Token: 0x0400D465 RID: 54373
 		private Table __p;
 	}
 }

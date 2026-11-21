@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200695D RID: 26973
+	// Token: 0x02005AB8 RID: 23224
 	public class LevelGameplayActionsDefine
 	{
-		// Token: 0x06043306 RID: 275206 RVA: 0x01062023 File Offset: 0x01060223
+		// Token: 0x0603933D RID: 234301 RVA: 0x01006283 File Offset: 0x01004483
 		// Note: this type is marked as 'beforefieldinit'.
 		static LevelGameplayActionsDefine()
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			LevelGameplayActionsDefine.optionTypeLogString = dictionary;
 		}
 
-		// Token: 0x04022FD1 RID: 143313
+		// Token: 0x0401E1BB RID: 123323
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EOptionType, string> optionTypeLogString;

@@ -16,13 +16,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 {
-	// Token: 0x020071F2 RID: 29170
+	// Token: 0x020062A7 RID: 25255
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemJigsawBaseComponent : EntityComponent
 	{
-		// Token: 0x17009E07 RID: 40455
-		// (get) Token: 0x0604763E RID: 292414 RVA: 0x01229B4E File Offset: 0x01227D4E
+		// Token: 0x1700735E RID: 29534
+		// (get) Token: 0x0603CF40 RID: 249664 RVA: 0x011839A2 File Offset: 0x01181BA2
 		public bool IsTicTacToe
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604763F RID: 292415 RVA: 0x01229B5C File Offset: 0x01227D5C
+		// Token: 0x0603CF41 RID: 249665 RVA: 0x011839B0 File Offset: 0x01181BB0
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x06047640 RID: 292416 RVA: 0x01229CA8 File Offset: 0x01227EA8
+		// Token: 0x0603CF42 RID: 249666 RVA: 0x01183AFC File Offset: 0x01181CFC
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x06047641 RID: 292417 RVA: 0x01229CE0 File Offset: 0x01227EE0
+		// Token: 0x0603CF43 RID: 249667 RVA: 0x01183B34 File Offset: 0x01181D34
 		protected override void OnActivate()
 		{
 			this.GenDynamicBlock();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.IsBoardCanMovePiece = this.CreatureDataComp.BoardCanMove;
 		}
 
-		// Token: 0x06047642 RID: 292418 RVA: 0x01229E54 File Offset: 0x01228054
+		// Token: 0x0603CF44 RID: 249668 RVA: 0x01183CA8 File Offset: 0x01181EA8
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.Has<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.MatchItemAfterAddEntity)))
@@ -114,14 +114,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x06047643 RID: 292419 RVA: 0x01229EBC File Offset: 0x012280BC
+		// Token: 0x0603CF45 RID: 249669 RVA: 0x01183D10 File Offset: 0x01181F10
 		public void DeleteItem(SceneItemJigsawItemComponent item)
 		{
 			string key = item.PutDownIndex.GetKey();
 			this.ItemOnBase.Remove(key);
 		}
 
-		// Token: 0x06047644 RID: 292420 RVA: 0x01229EE4 File Offset: 0x012280E4
+		// Token: 0x0603CF46 RID: 249670 RVA: 0x01183D38 File Offset: 0x01181F38
 		private void MatchItemAfterAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 		{
 			CreatureDataComponent component = handle.Entity.GetComponent<CreatureDataComponent>();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047645 RID: 292421 RVA: 0x01229F74 File Offset: 0x01228174
+		// Token: 0x0603CF47 RID: 249671 RVA: 0x01183DC8 File Offset: 0x01181FC8
 		private void MatchItem(EntityHandle handle)
 		{
 			SceneItemJigsawItemComponent component = handle.Entity.GetComponent<SceneItemJigsawItemComponent>();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047646 RID: 292422 RVA: 0x0122A0E4 File Offset: 0x012282E4
+		// Token: 0x0603CF48 RID: 249672 RVA: 0x01183F38 File Offset: 0x01182138
 		private void GenDynamicBlock()
 		{
 			int? modelId = this.Config.ModelId;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.MultiActorComp.SetIsFinish(true);
 		}
 
-		// Token: 0x06047647 RID: 292423 RVA: 0x0122A2D8 File Offset: 0x012284D8
+		// Token: 0x0603CF49 RID: 249673 RVA: 0x0118412C File Offset: 0x0118232C
 		[return: Nullable(2)]
 		public global::Vector GetBlockLocationByIndex(JigsawIndex index, bool addOffset = true)
 		{
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return vector3;
 		}
 
-		// Token: 0x06047648 RID: 292424 RVA: 0x0122A534 File Offset: 0x01228734
+		// Token: 0x0603CF4A RID: 249674 RVA: 0x01184388 File Offset: 0x01182588
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return new ValueTuple<global::Vector, JigsawIndex>(vector5, jigsawIndex);
 		}
 
-		// Token: 0x06047649 RID: 292425 RVA: 0x0122A6D0 File Offset: 0x012288D0
+		// Token: 0x0603CF4B RID: 249675 RVA: 0x01184524 File Offset: 0x01182724
 		public bool CheckJigsawBlockIllegal(SceneItemJigsawItemComponent item, JigsawIndex socketIndex)
 		{
 			if (item.Config.FillCfg.Type == EFillType.Direction)
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return false;
 		}
 
-		// Token: 0x0604764A RID: 292426 RVA: 0x0122A790 File Offset: 0x01228990
+		// Token: 0x0603CF4C RID: 249676 RVA: 0x011845E4 File Offset: 0x011827E4
 		public bool CheckJigsawBlockCorrect(SceneItemJigsawItemComponent item, JigsawIndex socketIndex)
 		{
 			foreach (JigsawIndex jigsawIndex in item.GetActiveBlockOffset(null))
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x0604764B RID: 292427 RVA: 0x0122A828 File Offset: 0x01228A28
+		// Token: 0x0603CF4D RID: 249677 RVA: 0x0118467C File Offset: 0x0118287C
 		public void PutDownItem(SceneItemJigsawItemComponent item, JigsawIndex socketIndex, EItemFoundation type, bool needCheck = true)
 		{
 			SceneItemLevitateMagnetComponent component = item.Entity.GetComponent<SceneItemLevitateMagnetComponent>();
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604764C RID: 292428 RVA: 0x0122AB2C File Offset: 0x01228D2C
+		// Token: 0x0603CF4E RID: 249678 RVA: 0x01184980 File Offset: 0x01182B80
 		public void CheckFinish()
 		{
 			switch (this.Config.CompleteCondition.Type)
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.RequestFinish();
 		}
 
-		// Token: 0x0604764D RID: 292429 RVA: 0x0122AC70 File Offset: 0x01228E70
+		// Token: 0x0603CF4F RID: 249679 RVA: 0x01184AC4 File Offset: 0x01182CC4
 		public unsafe void PickUpItem(SceneItemJigsawItemComponent item, JigsawIndex socketIndex, EItemFoundation type, bool needCheck = true)
 		{
 			item.OnPickUpFormBase(this);
@@ -596,14 +596,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604764E RID: 292430 RVA: 0x0122AF5C File Offset: 0x0122915C
+		// Token: 0x0603CF50 RID: 249680 RVA: 0x01184DB0 File Offset: 0x01182FB0
 		public EJigsawSocketState GetBlockStateByIndex(JigsawIndex index)
 		{
 			string key = index.GetKey();
 			return this.AllSockets[key].State;
 		}
 
-		// Token: 0x0604764F RID: 292431 RVA: 0x0122AF84 File Offset: 0x01229184
+		// Token: 0x0603CF51 RID: 249681 RVA: 0x01184DD8 File Offset: 0x01182FD8
 		public void AimBlockByIndex(JigsawIndex index, SceneItemJigsawItemComponent item)
 		{
 			string key = index.GetKey();
@@ -675,7 +675,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047650 RID: 292432 RVA: 0x0122B194 File Offset: 0x01229394
+		// Token: 0x0603CF52 RID: 249682 RVA: 0x01184FE8 File Offset: 0x011831E8
 		private List<JigsawIndex> GetNeedShowAimBlock(JigsawIndex index, SceneItemJigsawItemComponent item, int? rotation = null)
 		{
 			EFillType type = item.Config.FillCfg.Type;
@@ -690,7 +690,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return this.GetNeedActivatedIndexByDirection(index, item.Direction, rotation ?? item.Rotation);
 		}
 
-		// Token: 0x06047651 RID: 292433 RVA: 0x0122B1F5 File Offset: 0x012293F5
+		// Token: 0x0603CF53 RID: 249683 RVA: 0x01185049 File Offset: 0x01183249
 		private void TryAddHideHintEvent()
 		{
 			if (this.IsShowing)
@@ -701,7 +701,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.IsShowing = true;
 		}
 
-		// Token: 0x06047652 RID: 292434 RVA: 0x0122B223 File Offset: 0x01229423
+		// Token: 0x0603CF54 RID: 249684 RVA: 0x01185077 File Offset: 0x01183277
 		private void TryRemoveHideHintEvent()
 		{
 			if (!this.IsShowing)
@@ -712,14 +712,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.IsShowing = false;
 		}
 
-		// Token: 0x06047653 RID: 292435 RVA: 0x0122B251 File Offset: 0x01229451
+		// Token: 0x0603CF55 RID: 249685 RVA: 0x011850A5 File Offset: 0x011832A5
 		private void OnHideHint()
 		{
 			this.HideExistingHint();
 			this.TryRemoveHideHintEvent();
 		}
 
-		// Token: 0x06047654 RID: 292436 RVA: 0x0122B260 File Offset: 0x01229460
+		// Token: 0x0603CF56 RID: 249686 RVA: 0x011850B4 File Offset: 0x011832B4
 		private void HideExistingHint()
 		{
 			if (this.CurrentAimIndex != null && this.CurrentAimItem != null)
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.CurrentAimItem = null;
 		}
 
-		// Token: 0x06047655 RID: 292437 RVA: 0x0122B3EC File Offset: 0x012295EC
+		// Token: 0x0603CF57 RID: 249687 RVA: 0x01185240 File Offset: 0x01183440
 		public void RequestPutDownOrPickUpItem(SceneItemJigsawItemComponent item, JigsawIndex index, bool isPutDown)
 		{
 			PlaceItemOnBoardRequest placeItemOnBoardRequest = PlaceItemOnBoardRequest.Create();
@@ -795,7 +795,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}, 0);
 		}
 
-		// Token: 0x06047656 RID: 292438 RVA: 0x0122B530 File Offset: 0x01229730
+		// Token: 0x0603CF58 RID: 249688 RVA: 0x01185384 File Offset: 0x01183584
 		private void RequestFinish()
 		{
 			CommitBoardRequest commitBoardRequest = CommitBoardRequest.Create();
@@ -818,7 +818,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}, 0);
 		}
 
-		// Token: 0x06047657 RID: 292439 RVA: 0x0122B574 File Offset: 0x01229774
+		// Token: 0x0603CF59 RID: 249689 RVA: 0x011853C8 File Offset: 0x011835C8
 		public void OnFinish()
 		{
 			foreach (KeyValuePair<string, SceneItemJigsawBaseComponent.JigsawState> keyValuePair in this.AllSockets)
@@ -846,7 +846,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047658 RID: 292440 RVA: 0x0122B6D4 File Offset: 0x012298D4
+		// Token: 0x0603CF5A RID: 249690 RVA: 0x01185528 File Offset: 0x01183728
 		private List<JigsawIndex> GetNeedActivatedIndexByDirection(JigsawIndex baseIndex, int direction, int angle)
 		{
 			List<JigsawIndex> list = new List<JigsawIndex>
@@ -872,13 +872,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x06047659 RID: 292441 RVA: 0x0122B764 File Offset: 0x01229964
+		// Token: 0x0603CF5B RID: 249691 RVA: 0x011855B8 File Offset: 0x011837B8
 		private bool HasDirectionMarking(int direction, EJigsawItemDirectionBit directionBit)
 		{
 			return (direction >> (int)directionBit & 1) == 1;
 		}
 
-		// Token: 0x0604765A RID: 292442 RVA: 0x0122B774 File Offset: 0x01229974
+		// Token: 0x0603CF5C RID: 249692 RVA: 0x011855C8 File Offset: 0x011837C8
 		private unsafe List<JigsawIndex> GetNeedActivatedIndexByAngle(JigsawIndex baseIndex, int angle)
 		{
 			List<JigsawIndex> list = new List<JigsawIndex>();
@@ -924,7 +924,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x0604765B RID: 292443 RVA: 0x0122B930 File Offset: 0x01229B30
+		// Token: 0x0603CF5D RID: 249693 RVA: 0x01185784 File Offset: 0x01183984
 		public unsafe JigsawIndex GetNextPosByDirection(JigsawIndex index, global::Vector direction, Entity item)
 		{
 			JigsawIndex jigsawIndex = new JigsawIndex(index.Row, index.Col);
@@ -996,7 +996,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return jigsawIndex;
 		}
 
-		// Token: 0x0604765C RID: 292444 RVA: 0x0122BC1F File Offset: 0x01229E1F
+		// Token: 0x0603CF5E RID: 249694 RVA: 0x01185A73 File Offset: 0x01183C73
 		public void OnItemMove(SceneItemJigsawItemComponent item, JigsawIndex targetIndex)
 		{
 			this.PickUpItem(item, item.PutDownIndex, EItemFoundation.BuildingBlock, false);
@@ -1005,7 +1005,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.CheckFinish();
 		}
 
-		// Token: 0x0604765D RID: 292445 RVA: 0x0122BC4C File Offset: 0x01229E4C
+		// Token: 0x0603CF5F RID: 249695 RVA: 0x01185AA0 File Offset: 0x01183CA0
 		public void RequestMoveItem(SceneItemJigsawItemComponent item, JigsawIndex index, [Nullable(2)] JigsawIndex sourceIndex = null)
 		{
 			MovePlacementRequest movePlacementRequest = MovePlacementRequest.Create();
@@ -1070,7 +1070,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}, 0);
 		}
 
-		// Token: 0x0604765E RID: 292446 RVA: 0x0122BDD4 File Offset: 0x01229FD4
+		// Token: 0x0603CF60 RID: 249696 RVA: 0x01185C28 File Offset: 0x01183E28
 		public void OnBoardCanMovePlacementNotify(bool canMove)
 		{
 			JigsawFoundation config = this.Config;
@@ -1097,7 +1097,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			onPiecePostMoveEventStart();
 		}
 
-		// Token: 0x0604765F RID: 292447 RVA: 0x0122BE34 File Offset: 0x0122A034
+		// Token: 0x0603CF61 RID: 249697 RVA: 0x01185C88 File Offset: 0x01183E88
 		public void RemoveMagnetTipsTag(JigsawIndex index)
 		{
 			this.MultiActorComp.RemoveTagsByIndex(index, GameplayTagDefine.EGameplayTagId["关卡.Common.表现.悬浮磁石.底座.提示.前"]);
@@ -1106,7 +1106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.MultiActorComp.RemoveTagsByIndex(index, GameplayTagDefine.EGameplayTagId["关卡.Common.表现.悬浮磁石.底座.提示.右"]);
 		}
 
-		// Token: 0x06047660 RID: 292448 RVA: 0x0122BEB0 File Offset: 0x0122A0B0
+		// Token: 0x0603CF62 RID: 249698 RVA: 0x01185D04 File Offset: 0x01183F04
 		private unsafe void CheckMagnetTipsTag(JigsawIndex index, SceneItemJigsawItemComponent itemComp)
 		{
 			if (this.AllSockets[index.GetKey()].State == EJigsawSocketState.Correct)
@@ -1183,7 +1183,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.BoxTraceMap[itemComp.Entity] = list;
 		}
 
-		// Token: 0x06047661 RID: 292449 RVA: 0x0122C170 File Offset: 0x0122A370
+		// Token: 0x0603CF63 RID: 249699 RVA: 0x01185FC4 File Offset: 0x011841C4
 		public bool HasEmptySocket()
 		{
 			foreach (SceneItemJigsawBaseComponent.JigsawState jigsawState in this.AllSockets.Values)
@@ -1196,7 +1196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return false;
 		}
 
-		// Token: 0x06047662 RID: 292450 RVA: 0x0122C1D8 File Offset: 0x0122A3D8
+		// Token: 0x0603CF64 RID: 249700 RVA: 0x0118602C File Offset: 0x0118422C
 		public void DynamicModifySocketState(JigsawIndex index, EJigsawSocketState newState)
 		{
 			SceneItemJigsawBaseComponent.JigsawState jigsawState = this.AllSockets[index.GetKey()];
@@ -1252,7 +1252,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047663 RID: 292451 RVA: 0x0122C354 File Offset: 0x0122A554
+		// Token: 0x0603CF65 RID: 249701 RVA: 0x011861A8 File Offset: 0x011843A8
 		private void BoxTraceCheck(float _)
 		{
 			if (this.BoxTraceMap.Count == 0 && this.BoxTraceTimer != null)
@@ -1288,7 +1288,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047664 RID: 292452 RVA: 0x0122C4B8 File Offset: 0x0122A6B8
+		// Token: 0x0603CF66 RID: 249702 RVA: 0x0118630C File Offset: 0x0118450C
 		public List<SceneItemJigsawItemComponent> GetAllItemOnBase()
 		{
 			List<SceneItemJigsawItemComponent> list = new List<SceneItemJigsawItemComponent>();
@@ -1299,7 +1299,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x06047665 RID: 292453 RVA: 0x0122C518 File Offset: 0x0122A718
+		// Token: 0x0603CF67 RID: 249703 RVA: 0x0118636C File Offset: 0x0118456C
 		[return: Nullable(2)]
 		public JigsawIndex GetPutItemIndex(SceneItemJigsawItemComponent inItem)
 		{
@@ -1322,7 +1322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return JigsawIndex.GenObjFromKey(text);
 		}
 
-		// Token: 0x06047666 RID: 292454 RVA: 0x0122C594 File Offset: 0x0122A794
+		// Token: 0x0603CF68 RID: 249704 RVA: 0x011863E8 File Offset: 0x011845E8
 		private void RefreshPieceCircleMovePoints(int oldIndex, int newIndex)
 		{
 			if (this.PieceMovePoint0 == null)
@@ -1394,9 +1394,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			pieceMovePoint3.FromUeVector(fvectorDouble2);
 		}
 
-		// Token: 0x17009E08 RID: 40456
-		// (get) Token: 0x06047667 RID: 292455 RVA: 0x0122CA5F File Offset: 0x0122AC5F
-		// (set) Token: 0x06047668 RID: 292456 RVA: 0x0122CA68 File Offset: 0x0122AC68
+		// Token: 0x1700735F RID: 29535
+		// (get) Token: 0x0603CF69 RID: 249705 RVA: 0x011868B3 File Offset: 0x01184AB3
+		// (set) Token: 0x0603CF6A RID: 249706 RVA: 0x011868BC File Offset: 0x01184ABC
 		private bool IsTicTacToePieceMoving
 		{
 			get
@@ -1416,7 +1416,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047669 RID: 292457 RVA: 0x0122CACC File Offset: 0x0122ACCC
+		// Token: 0x0603CF6B RID: 249707 RVA: 0x01186920 File Offset: 0x01184B20
 		private void OnTicTacToePieceMove(int oldIndex, int newIndex)
 		{
 			int column = this.Config.JigsawConfig.Column;
@@ -1473,7 +1473,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604766A RID: 292458 RVA: 0x0122CC47 File Offset: 0x0122AE47
+		// Token: 0x0603CF6C RID: 249708 RVA: 0x01186A9B File Offset: 0x01184C9B
 		private void AfterTicTacToePieceMove(AActor actor, SceneItemJigsawItemComponent item, JigsawIndex newJigsawIndex)
 		{
 			if (this.RefreshPickBoundsEvent != null && actor != null)
@@ -1483,7 +1483,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.MoveTicTacTocItem(item, newJigsawIndex, true, true);
 		}
 
-		// Token: 0x0604766B RID: 292459 RVA: 0x0122CC6C File Offset: 0x0122AE6C
+		// Token: 0x0603CF6D RID: 249709 RVA: 0x01186AC0 File Offset: 0x01184CC0
 		private void AfterTicTacToePieceMoveEventFinish()
 		{
 			if (!this.IsTicTacToeRoundRunning)
@@ -1512,7 +1512,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604766C RID: 292460 RVA: 0x0122CCD8 File Offset: 0x0122AED8
+		// Token: 0x0603CF6E RID: 249710 RVA: 0x01186B2C File Offset: 0x01184D2C
 		private void OnTicTacToeGamePiecesFinish()
 		{
 			List<IJigsawPieceMatch> initMatchList = this.Config.InitMatchList;
@@ -1582,7 +1582,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604766D RID: 292461 RVA: 0x0122CF08 File Offset: 0x0122B108
+		// Token: 0x0603CF6F RID: 249711 RVA: 0x01186D5C File Offset: 0x01184F5C
 		private void InitTicTacToeGame()
 		{
 			JigsawFoundation config = this.Config;
@@ -1719,8 +1719,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x17009E09 RID: 40457
-		// (get) Token: 0x0604766E RID: 292462 RVA: 0x0122D3D8 File Offset: 0x0122B5D8
+		// Token: 0x17007360 RID: 29536
+		// (get) Token: 0x0603CF70 RID: 249712 RVA: 0x0118722C File Offset: 0x0118542C
 		public bool WaitingInitPiecesComplete
 		{
 			get
@@ -1729,7 +1729,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604766F RID: 292463 RVA: 0x0122D3E8 File Offset: 0x0122B5E8
+		// Token: 0x0603CF71 RID: 249713 RVA: 0x0118723C File Offset: 0x0118543C
 		private void OnPieceAdd(int pbDataId)
 		{
 			if (this.WaitInitPieces.Remove(pbDataId) && this.WaitInitPieces.Count == 0 && (this.MultiActorComp == null || this.MultiActorComp.GetIsFinish()))
@@ -1738,7 +1738,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047670 RID: 292464 RVA: 0x0122D420 File Offset: 0x0122B620
+		// Token: 0x0603CF72 RID: 249714 RVA: 0x01187274 File Offset: 0x01185474
 		private void OnMultiInteractionActorsFinish()
 		{
 			if (this.TicTacToeGame == null)
@@ -1751,7 +1751,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047671 RID: 292465 RVA: 0x0122D454 File Offset: 0x0122B654
+		// Token: 0x0603CF73 RID: 249715 RVA: 0x011872A8 File Offset: 0x011854A8
 		private void OnTicTacToeGameEnvironmentInitFinish()
 		{
 			this.OnTicTacToeGamePiecesFinish();
@@ -1774,7 +1774,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}, 0);
 		}
 
-		// Token: 0x06047672 RID: 292466 RVA: 0x0122D4CC File Offset: 0x0122B6CC
+		// Token: 0x0603CF74 RID: 249716 RVA: 0x01187320 File Offset: 0x01185520
 		public unsafe void ResetTicTacToeGame()
 		{
 			if (this.TicTacToeGame == null || (this.TicTacToeGame.IsFinish && !this.TicTacToeGameOverFailed))
@@ -1850,7 +1850,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047673 RID: 292467 RVA: 0x0122D594 File Offset: 0x0122B794
+		// Token: 0x0603CF75 RID: 249717 RVA: 0x011873E8 File Offset: 0x011855E8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1886,7 +1886,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return this.TicTacToeSelectLocations;
 		}
 
-		// Token: 0x06047674 RID: 292468 RVA: 0x0122D678 File Offset: 0x0122B878
+		// Token: 0x0603CF76 RID: 249718 RVA: 0x011874CC File Offset: 0x011856CC
 		public bool OnGridTicTacToeClick(JigsawIndex index)
 		{
 			SceneItemPickInteractComponent chessSelectItem = this.ChessSelectItem;
@@ -1910,7 +1910,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return true;
 		}
 
-		// Token: 0x06047675 RID: 292469 RVA: 0x0122D6F4 File Offset: 0x0122B8F4
+		// Token: 0x0603CF77 RID: 249719 RVA: 0x01187548 File Offset: 0x01185748
 		private void MoveTicTacTocItem(SceneItemJigsawItemComponent item, JigsawIndex targetIndex, bool checkFinish = true, bool requestMove = true)
 		{
 			JigsawIndex sourceIndex = null;
@@ -1935,7 +1935,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047676 RID: 292470 RVA: 0x0122D76C File Offset: 0x0122B96C
+		// Token: 0x0603CF78 RID: 249720 RVA: 0x011875C0 File Offset: 0x011857C0
 		public void OnItemTicTacToeMove(SceneItemJigsawItemComponent item, JigsawIndex targetIndex)
 		{
 			if (!this.IsTicTacToe)
@@ -1948,7 +1948,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.TicTacToeGame.OnIndexMove(oldIndex, newIndex);
 		}
 
-		// Token: 0x06047677 RID: 292471 RVA: 0x0122D7CC File Offset: 0x0122B9CC
+		// Token: 0x0603CF79 RID: 249721 RVA: 0x01187620 File Offset: 0x01185820
 		public List<AActor> GetPickItemActors()
 		{
 			this.PickPieceMap.Clear();
@@ -1999,7 +1999,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			return list;
 		}
 
-		// Token: 0x06047678 RID: 292472 RVA: 0x0122D974 File Offset: 0x0122BB74
+		// Token: 0x0603CF7A RID: 249722 RVA: 0x011877C8 File Offset: 0x011859C8
 		public void ClearLevelPickSelect()
 		{
 			if (this.LastSelectPickPiece != null)
@@ -2015,7 +2015,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.IsTicTacToePieceMoving = false;
 		}
 
-		// Token: 0x06047679 RID: 292473 RVA: 0x0122D9C0 File Offset: 0x0122BBC0
+		// Token: 0x0603CF7B RID: 249723 RVA: 0x01187814 File Offset: 0x01185A14
 		public void LevelPickSelectUndefined()
 		{
 			if (this.LastSelectPickPiece == null)
@@ -2029,7 +2029,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604767A RID: 292474 RVA: 0x0122DA24 File Offset: 0x0122BC24
+		// Token: 0x0603CF7C RID: 249724 RVA: 0x01187878 File Offset: 0x01185A78
 		public void ForceResetPieceSelect(bool isEnter)
 		{
 			if (isEnter)
@@ -2052,7 +2052,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604767B RID: 292475 RVA: 0x0122DAC8 File Offset: 0x0122BCC8
+		// Token: 0x0603CF7D RID: 249725 RVA: 0x0118791C File Offset: 0x01185B1C
 		public void OnLevelPickClick(AActor actor)
 		{
 			TicTacToeGame ticTacToeGame = this.TicTacToeGame;
@@ -2090,7 +2090,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x0604767C RID: 292476 RVA: 0x0122DBA8 File Offset: 0x0122BDA8
+		// Token: 0x0603CF7E RID: 249726 RVA: 0x011879FC File Offset: 0x01185BFC
 		private void OnTicTacToeGameOver()
 		{
 			global::Log instance = global::Log.Instance;
@@ -2116,7 +2116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			ticTacToeGameOverEvent(ticTacToeGame3 != null && ticTacToeGame3.PlayerWin);
 		}
 
-		// Token: 0x0604767D RID: 292477 RVA: 0x0122DC56 File Offset: 0x0122BE56
+		// Token: 0x0603CF7F RID: 249727 RVA: 0x01187AAA File Offset: 0x01185CAA
 		public void RegisterPickControllerEvents(Action<AActor> refreshPickBoundsEvent, Action<bool> ticTacToeGameOverEvent, Action onWaitInitPiecesComplete, Action onPiecePostMoveEventStart, Action onPiecePostMoveEventEnd)
 		{
 			this.IsInPickInteraction = true;
@@ -2127,7 +2127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.OnPiecePostMoveEventEnd = onPiecePostMoveEventEnd;
 		}
 
-		// Token: 0x0604767E RID: 292478 RVA: 0x0122DC84 File Offset: 0x0122BE84
+		// Token: 0x0603CF80 RID: 249728 RVA: 0x01187AD8 File Offset: 0x01185CD8
 		public void UnregisterPickControllerEvents()
 		{
 			this.IsInPickInteraction = false;
@@ -2138,7 +2138,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.OnPiecePostMoveEventEnd = null;
 		}
 
-		// Token: 0x0604767F RID: 292479 RVA: 0x0122DCB0 File Offset: 0x0122BEB0
+		// Token: 0x0603CF81 RID: 249729 RVA: 0x01187B04 File Offset: 0x01185D04
 		[NullableContext(2)]
 		public void RegisterAiInfo(BP_AIGearStrategy_C config)
 		{
@@ -2152,7 +2152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			}
 		}
 
-		// Token: 0x06047680 RID: 292480 RVA: 0x0122DCCA File Offset: 0x0122BECA
+		// Token: 0x0603CF82 RID: 249730 RVA: 0x01187B1E File Offset: 0x01185D1E
 		public void RefreshAiEnable(bool enable)
 		{
 			if (this.TicTacToeGame == null)
@@ -2162,7 +2162,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 			this.TicTacToeGame.RefreshAiEnable(enable);
 		}
 
-		// Token: 0x06047681 RID: 292481 RVA: 0x0122DCE4 File Offset: 0x0122BEE4
+		// Token: 0x0603CF83 RID: 249731 RVA: 0x01187B38 File Offset: 0x01185D38
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -2170,433 +2170,370 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 				return false;
 			}
 			SceneItemJigsawBaseComponent sceneItemJigsawBaseComponent = (SceneItemJigsawBaseComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemJigsawBaseComponent.Config == null)
 			{
-				if (sceneItemJigsawBaseComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawFoundation>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemJigsawBaseComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemJigsawBaseComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MultiActorComp"))
-			{
-				if (sceneItemJigsawBaseComponent.MultiActorComp == null)
-				{
-					this.MultiActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMultiInteractionActorComponent>(this.MultiActorComp), "MultiActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AllSockets") && sceneItemJigsawBaseComponent.AllSockets != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SceneItemJigsawBaseComponent.JigsawState>>(this.AllSockets), "AllSockets"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CacheIndexLocation") && sceneItemJigsawBaseComponent.CacheIndexLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, global::Vector>>(this.CacheIndexLocation), "CacheIndexLocation"))
+			if (sceneItemJigsawBaseComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ItemOnBase") && sceneItemJigsawBaseComponent.ItemOnBase != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SceneItemJigsawItemComponent>>(this.ItemOnBase), "ItemOnBase"))
+			if (sceneItemJigsawBaseComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentAimIndex"))
+			if (sceneItemJigsawBaseComponent.MultiActorComp == null)
 			{
-				if (sceneItemJigsawBaseComponent.CurrentAimIndex == null)
-				{
-					this.CurrentAimIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.CurrentAimIndex), "CurrentAimIndex"))
-				{
-					return false;
-				}
+				this.MultiActorComp = null;
 			}
-			if (base.CanResetComponentProperty("CurrentAimItem"))
-			{
-				if (sceneItemJigsawBaseComponent.CurrentAimItem == null)
-				{
-					this.CurrentAimItem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawItemComponent>(this.CurrentAimItem), "CurrentAimItem"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CurrentAimRotation"))
-			{
-				this.CurrentAimRotation = sceneItemJigsawBaseComponent.CurrentAimRotation;
-			}
-			if (base.CanResetComponentProperty("IsShowing"))
-			{
-				this.IsShowing = sceneItemJigsawBaseComponent.IsShowing;
-			}
-			if (base.CanResetComponentProperty("WaitAddingEntity") && sceneItemJigsawBaseComponent.WaitAddingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitAddingEntity), "WaitAddingEntity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MultiActorComp), "MultiActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BoxTraceMap") && sceneItemJigsawBaseComponent.BoxTraceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<Entity, List<SceneItemJigsawBaseComponent.BoxTraceCheckData>>>(this.BoxTraceMap), "BoxTraceMap"))
+			if (sceneItemJigsawBaseComponent.AllSockets != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.AllSockets), "AllSockets"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BoxTraceTimer"))
-			{
-				if (sceneItemJigsawBaseComponent.BoxTraceTimer == null)
-				{
-					this.BoxTraceTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.BoxTraceTimer), "BoxTraceTimer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TicTacToeGame"))
-			{
-				if (sceneItemJigsawBaseComponent.TicTacToeGame == null)
-				{
-					this.TicTacToeGame = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TicTacToeGame>(this.TicTacToeGame), "TicTacToeGame"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TicTacToeGameOverFailed"))
-			{
-				this.TicTacToeGameOverFailed = sceneItemJigsawBaseComponent.TicTacToeGameOverFailed;
-			}
-			if (base.CanResetComponentProperty("IsRequestingMove"))
-			{
-				this.IsRequestingMove = sceneItemJigsawBaseComponent.IsRequestingMove;
-			}
-			if (base.CanResetComponentProperty("RequestMoveSourceIndex"))
-			{
-				if (sceneItemJigsawBaseComponent.RequestMoveSourceIndex == null)
-				{
-					this.RequestMoveSourceIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.RequestMoveSourceIndex), "RequestMoveSourceIndex"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsBoardCanMovePiece"))
-			{
-				this.IsBoardCanMovePiece = sceneItemJigsawBaseComponent.IsBoardCanMovePiece;
-			}
-			if (base.CanResetComponentProperty("PieceMovePoint0"))
-			{
-				if (sceneItemJigsawBaseComponent.PieceMovePoint0 == null)
-				{
-					this.PieceMovePoint0 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PieceMovePoint0), "PieceMovePoint0"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PieceMovePoint1"))
-			{
-				if (sceneItemJigsawBaseComponent.PieceMovePoint1 == null)
-				{
-					this.PieceMovePoint1 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PieceMovePoint1), "PieceMovePoint1"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PieceMovePoint2"))
-			{
-				if (sceneItemJigsawBaseComponent.PieceMovePoint2 == null)
-				{
-					this.PieceMovePoint2 = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PieceMovePoint2), "PieceMovePoint2"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OldPieceOffset"))
-			{
-				if (sceneItemJigsawBaseComponent.OldPieceOffset == null)
-				{
-					this.OldPieceOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.OldPieceOffset), "OldPieceOffset"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NewPieceOffset"))
-			{
-				if (sceneItemJigsawBaseComponent.NewPieceOffset == null)
-				{
-					this.NewPieceOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.NewPieceOffset), "NewPieceOffset"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsTicTacToeRoundRunning"))
-			{
-				this.IsTicTacToeRoundRunning = sceneItemJigsawBaseComponent.IsTicTacToeRoundRunning;
-			}
-			if (base.CanResetComponentProperty("IsTicTacToePieceMovingInternal"))
-			{
-				this.IsTicTacToePieceMovingInternal = sceneItemJigsawBaseComponent.IsTicTacToePieceMovingInternal;
-			}
-			if (base.CanResetComponentProperty("TicTacToeSelectLocations"))
-			{
-				if (sceneItemJigsawBaseComponent.TicTacToeSelectLocations == null)
-				{
-					this.TicTacToeSelectLocations = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<global::Vector>>(this.TicTacToeSelectLocations), "TicTacToeSelectLocations"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TempJigsawIndex"))
-			{
-				if (sceneItemJigsawBaseComponent.TempJigsawIndex == null)
-				{
-					this.TempJigsawIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.TempJigsawIndex), "TempJigsawIndex"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PickPieceMap") && sceneItemJigsawBaseComponent.PickPieceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, SceneItemPickInteractComponent>>(this.PickPieceMap), "PickPieceMap"))
+			if (sceneItemJigsawBaseComponent.CacheIndexLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheIndexLocation), "CacheIndexLocation"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PickGridMap") && sceneItemJigsawBaseComponent.PickGridMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, JigsawIndex>>(this.PickGridMap), "PickGridMap"))
+			if (sceneItemJigsawBaseComponent.ItemOnBase != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemOnBase), "ItemOnBase"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ChessSelectItem"))
+			if (sceneItemJigsawBaseComponent.CurrentAimIndex == null)
 			{
-				if (sceneItemJigsawBaseComponent.ChessSelectItem == null)
-				{
-					this.ChessSelectItem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPickInteractComponent>(this.ChessSelectItem), "ChessSelectItem"))
-				{
-					return false;
-				}
+				this.CurrentAimIndex = null;
 			}
-			if (base.CanResetComponentProperty("PlayerPieceChessmans") && sceneItemJigsawBaseComponent.PlayerPieceChessmans != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemChessmanComponent>(this.PlayerPieceChessmans), "PlayerPieceChessmans"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentAimIndex), "CurrentAimIndex"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("WaitInitPieces") && sceneItemJigsawBaseComponent.WaitInitPieces != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitInitPieces), "WaitInitPieces"))
+			if (sceneItemJigsawBaseComponent.CurrentAimItem == null)
+			{
+				this.CurrentAimItem = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentAimItem), "CurrentAimItem"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ChildPiecePbdataIds") && sceneItemJigsawBaseComponent.ChildPiecePbdataIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ChildPiecePbdataIds), "ChildPiecePbdataIds"))
+			this.CurrentAimRotation = sceneItemJigsawBaseComponent.CurrentAimRotation;
+			this.IsShowing = sceneItemJigsawBaseComponent.IsShowing;
+			if (sceneItemJigsawBaseComponent.WaitAddingEntity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitAddingEntity), "WaitAddingEntity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("LastSelectPickPiece"))
+			if (sceneItemJigsawBaseComponent.BoxTraceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoxTraceMap), "BoxTraceMap"))
 			{
-				if (sceneItemJigsawBaseComponent.LastSelectPickPiece == null)
-				{
-					this.LastSelectPickPiece = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPickInteractComponent>(this.LastSelectPickPiece), "LastSelectPickPiece"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RefreshPickBoundsEvent"))
+			if (sceneItemJigsawBaseComponent.BoxTraceTimer == null)
 			{
-				if (sceneItemJigsawBaseComponent.RefreshPickBoundsEvent == null)
-				{
-					this.RefreshPickBoundsEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<AActor>>(this.RefreshPickBoundsEvent), "RefreshPickBoundsEvent"))
-				{
-					return false;
-				}
+				this.BoxTraceTimer = null;
 			}
-			if (base.CanResetComponentProperty("TicTacToeGameOverEvent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BoxTraceTimer), "BoxTraceTimer"))
 			{
-				if (sceneItemJigsawBaseComponent.TicTacToeGameOverEvent == null)
-				{
-					this.TicTacToeGameOverEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<bool>>(this.TicTacToeGameOverEvent), "TicTacToeGameOverEvent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnWaitInitPiecesComplete"))
+			if (sceneItemJigsawBaseComponent.TicTacToeGame == null)
 			{
-				if (sceneItemJigsawBaseComponent.OnWaitInitPiecesComplete == null)
-				{
-					this.OnWaitInitPiecesComplete = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnWaitInitPiecesComplete), "OnWaitInitPiecesComplete"))
-				{
-					return false;
-				}
+				this.TicTacToeGame = null;
 			}
-			if (base.CanResetComponentProperty("OnPiecePostMoveEventStart"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TicTacToeGame), "TicTacToeGame"))
 			{
-				if (sceneItemJigsawBaseComponent.OnPiecePostMoveEventStart == null)
-				{
-					this.OnPiecePostMoveEventStart = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnPiecePostMoveEventStart), "OnPiecePostMoveEventStart"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnPiecePostMoveEventEnd"))
+			this.TicTacToeGameOverFailed = sceneItemJigsawBaseComponent.TicTacToeGameOverFailed;
+			this.IsRequestingMove = sceneItemJigsawBaseComponent.IsRequestingMove;
+			if (sceneItemJigsawBaseComponent.RequestMoveSourceIndex == null)
 			{
-				if (sceneItemJigsawBaseComponent.OnPiecePostMoveEventEnd == null)
-				{
-					this.OnPiecePostMoveEventEnd = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnPiecePostMoveEventEnd), "OnPiecePostMoveEventEnd"))
-				{
-					return false;
-				}
+				this.RequestMoveSourceIndex = null;
 			}
-			if (base.CanResetComponentProperty("IsInPickInteraction"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RequestMoveSourceIndex), "RequestMoveSourceIndex"))
 			{
-				this.IsInPickInteraction = sceneItemJigsawBaseComponent.IsInPickInteraction;
+				return false;
 			}
+			this.IsBoardCanMovePiece = sceneItemJigsawBaseComponent.IsBoardCanMovePiece;
+			if (sceneItemJigsawBaseComponent.PieceMovePoint0 == null)
+			{
+				this.PieceMovePoint0 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PieceMovePoint0), "PieceMovePoint0"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.PieceMovePoint1 == null)
+			{
+				this.PieceMovePoint1 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PieceMovePoint1), "PieceMovePoint1"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.PieceMovePoint2 == null)
+			{
+				this.PieceMovePoint2 = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PieceMovePoint2), "PieceMovePoint2"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.OldPieceOffset == null)
+			{
+				this.OldPieceOffset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OldPieceOffset), "OldPieceOffset"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.NewPieceOffset == null)
+			{
+				this.NewPieceOffset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.NewPieceOffset), "NewPieceOffset"))
+			{
+				return false;
+			}
+			this.IsTicTacToeRoundRunning = sceneItemJigsawBaseComponent.IsTicTacToeRoundRunning;
+			this.IsTicTacToePieceMovingInternal = sceneItemJigsawBaseComponent.IsTicTacToePieceMovingInternal;
+			if (sceneItemJigsawBaseComponent.TicTacToeSelectLocations == null)
+			{
+				this.TicTacToeSelectLocations = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TicTacToeSelectLocations), "TicTacToeSelectLocations"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.TempJigsawIndex == null)
+			{
+				this.TempJigsawIndex = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempJigsawIndex), "TempJigsawIndex"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.PickPieceMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PickPieceMap), "PickPieceMap"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.PickGridMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PickGridMap), "PickGridMap"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.ChessSelectItem == null)
+			{
+				this.ChessSelectItem = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChessSelectItem), "ChessSelectItem"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.PlayerPieceChessmans != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemChessmanComponent>(this.PlayerPieceChessmans), "PlayerPieceChessmans"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.WaitInitPieces != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.WaitInitPieces), "WaitInitPieces"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.ChildPiecePbdataIds != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ChildPiecePbdataIds), "ChildPiecePbdataIds"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.LastSelectPickPiece == null)
+			{
+				this.LastSelectPickPiece = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSelectPickPiece), "LastSelectPickPiece"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.RefreshPickBoundsEvent == null)
+			{
+				this.RefreshPickBoundsEvent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefreshPickBoundsEvent), "RefreshPickBoundsEvent"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.TicTacToeGameOverEvent == null)
+			{
+				this.TicTacToeGameOverEvent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TicTacToeGameOverEvent), "TicTacToeGameOverEvent"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.OnWaitInitPiecesComplete == null)
+			{
+				this.OnWaitInitPiecesComplete = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnWaitInitPiecesComplete), "OnWaitInitPiecesComplete"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.OnPiecePostMoveEventStart == null)
+			{
+				this.OnPiecePostMoveEventStart = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnPiecePostMoveEventStart), "OnPiecePostMoveEventStart"))
+			{
+				return false;
+			}
+			if (sceneItemJigsawBaseComponent.OnPiecePostMoveEventEnd == null)
+			{
+				this.OnPiecePostMoveEventEnd = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnPiecePostMoveEventEnd), "OnPiecePostMoveEventEnd"))
+			{
+				return false;
+			}
+			this.IsInPickInteraction = sceneItemJigsawBaseComponent.IsInPickInteraction;
 			return true;
 		}
 
-		// Token: 0x040258BD RID: 153789
+		// Token: 0x17007361 RID: 29537
+		// (get) Token: 0x0603CF84 RID: 249732 RVA: 0x011880E9 File Offset: 0x011862E9
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007362 RID: 29538
+		// (get) Token: 0x0603CF85 RID: 249733 RVA: 0x011880EC File Offset: 0x011862EC
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007363 RID: 29539
+		// (get) Token: 0x0603CF86 RID: 249734 RVA: 0x011880EF File Offset: 0x011862EF
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402052C RID: 132396
 		private static readonly float COS_45 = (float)Math.Cos(0.7853981633974483);
 
-		// Token: 0x040258BE RID: 153790
+		// Token: 0x0402052D RID: 132397
 		private const int TIMER_PERIOD = 500;
 
-		// Token: 0x040258BF RID: 153791
+		// Token: 0x0402052E RID: 132398
 		[Nullable(2)]
 		public JigsawFoundation Config;
 
-		// Token: 0x040258C0 RID: 153792
+		// Token: 0x0402052F RID: 132399
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040258C1 RID: 153793
+		// Token: 0x04020530 RID: 132400
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040258C2 RID: 153794
+		// Token: 0x04020531 RID: 132401
 		[Nullable(2)]
 		private SceneItemMultiInteractionActorComponent MultiActorComp;
 
-		// Token: 0x040258C3 RID: 153795
+		// Token: 0x04020532 RID: 132402
 		private readonly Dictionary<string, SceneItemJigsawBaseComponent.JigsawState> AllSockets = new Dictionary<string, SceneItemJigsawBaseComponent.JigsawState>();
 
-		// Token: 0x040258C4 RID: 153796
+		// Token: 0x04020533 RID: 132403
 		private readonly Dictionary<string, global::Vector> CacheIndexLocation = new Dictionary<string, global::Vector>();
 
-		// Token: 0x040258C5 RID: 153797
+		// Token: 0x04020534 RID: 132404
 		private readonly Dictionary<string, SceneItemJigsawItemComponent> ItemOnBase = new Dictionary<string, SceneItemJigsawItemComponent>();
 
-		// Token: 0x040258C6 RID: 153798
+		// Token: 0x04020535 RID: 132405
 		[Nullable(2)]
 		private JigsawIndex CurrentAimIndex;
 
-		// Token: 0x040258C7 RID: 153799
+		// Token: 0x04020536 RID: 132406
 		[Nullable(2)]
 		private SceneItemJigsawItemComponent CurrentAimItem;
 
-		// Token: 0x040258C8 RID: 153800
+		// Token: 0x04020537 RID: 132407
 		private int CurrentAimRotation;
 
-		// Token: 0x040258C9 RID: 153801
+		// Token: 0x04020538 RID: 132408
 		private bool IsShowing;
 
-		// Token: 0x040258CA RID: 153802
+		// Token: 0x04020539 RID: 132409
 		private readonly HashSet<int> WaitAddingEntity = new HashSet<int>();
 
-		// Token: 0x040258CB RID: 153803
+		// Token: 0x0402053A RID: 132410
 		private readonly Dictionary<Entity, List<SceneItemJigsawBaseComponent.BoxTraceCheckData>> BoxTraceMap = new Dictionary<Entity, List<SceneItemJigsawBaseComponent.BoxTraceCheckData>>();
 
-		// Token: 0x040258CC RID: 153804
+		// Token: 0x0402053B RID: 132411
 		[Nullable(2)]
 		private TimerHandle BoxTraceTimer;
 
-		// Token: 0x040258CD RID: 153805
+		// Token: 0x0402053C RID: 132412
 		[Nullable(2)]
 		private TicTacToeGame TicTacToeGame;
 
-		// Token: 0x040258CE RID: 153806
+		// Token: 0x0402053D RID: 132413
 		private bool TicTacToeGameOverFailed;
 
-		// Token: 0x040258CF RID: 153807
+		// Token: 0x0402053E RID: 132414
 		private bool IsRequestingMove;
 
-		// Token: 0x040258D0 RID: 153808
+		// Token: 0x0402053F RID: 132415
 		[Nullable(2)]
 		private JigsawIndex RequestMoveSourceIndex;
 
-		// Token: 0x040258D1 RID: 153809
+		// Token: 0x04020540 RID: 132416
 		private bool IsBoardCanMovePiece = true;
 
-		// Token: 0x040258D2 RID: 153810
+		// Token: 0x04020541 RID: 132417
 		[Nullable(2)]
 		private global::Vector PieceMovePoint0;
 
-		// Token: 0x040258D3 RID: 153811
+		// Token: 0x04020542 RID: 132418
 		[Nullable(2)]
 		private global::Vector PieceMovePoint1;
 
-		// Token: 0x040258D4 RID: 153812
+		// Token: 0x04020543 RID: 132419
 		[Nullable(2)]
 		private global::Vector PieceMovePoint2;
 
-		// Token: 0x040258D5 RID: 153813
+		// Token: 0x04020544 RID: 132420
 		[Nullable(2)]
 		private global::Vector OldPieceOffset;
 
-		// Token: 0x040258D6 RID: 153814
+		// Token: 0x04020545 RID: 132421
 		[Nullable(2)]
 		private global::Vector NewPieceOffset;
 
-		// Token: 0x040258D7 RID: 153815
+		// Token: 0x04020546 RID: 132422
 		private bool IsTicTacToeRoundRunning;
 
-		// Token: 0x040258D8 RID: 153816
+		// Token: 0x04020547 RID: 132423
 		private bool IsTicTacToePieceMovingInternal;
 
-		// Token: 0x040258D9 RID: 153817
+		// Token: 0x04020548 RID: 132424
 		[Nullable(new byte[]
 		{
 			2,
@@ -2604,34 +2541,34 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 		})]
 		private List<global::Vector> TicTacToeSelectLocations;
 
-		// Token: 0x040258DA RID: 153818
+		// Token: 0x04020549 RID: 132425
 		[Nullable(2)]
 		private JigsawIndex TempJigsawIndex;
 
-		// Token: 0x040258DB RID: 153819
+		// Token: 0x0402054A RID: 132426
 		private readonly Dictionary<AActor, SceneItemPickInteractComponent> PickPieceMap = new Dictionary<AActor, SceneItemPickInteractComponent>();
 
-		// Token: 0x040258DC RID: 153820
+		// Token: 0x0402054B RID: 132427
 		private readonly Dictionary<AActor, JigsawIndex> PickGridMap = new Dictionary<AActor, JigsawIndex>();
 
-		// Token: 0x040258DD RID: 153821
+		// Token: 0x0402054C RID: 132428
 		[Nullable(2)]
 		private SceneItemPickInteractComponent ChessSelectItem;
 
-		// Token: 0x040258DE RID: 153822
+		// Token: 0x0402054D RID: 132429
 		private readonly HashSet<SceneItemChessmanComponent> PlayerPieceChessmans = new HashSet<SceneItemChessmanComponent>();
 
-		// Token: 0x040258DF RID: 153823
+		// Token: 0x0402054E RID: 132430
 		private readonly HashSet<int> WaitInitPieces = new HashSet<int>();
 
-		// Token: 0x040258E0 RID: 153824
+		// Token: 0x0402054F RID: 132431
 		private readonly HashSet<int> ChildPiecePbdataIds = new HashSet<int>();
 
-		// Token: 0x040258E1 RID: 153825
+		// Token: 0x04020550 RID: 132432
 		[Nullable(2)]
 		private SceneItemPickInteractComponent LastSelectPickPiece;
 
-		// Token: 0x040258E2 RID: 153826
+		// Token: 0x04020551 RID: 132433
 		[Nullable(new byte[]
 		{
 			2,
@@ -2639,30 +2576,30 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 		})]
 		private Action<AActor> RefreshPickBoundsEvent;
 
-		// Token: 0x040258E3 RID: 153827
+		// Token: 0x04020552 RID: 132434
 		[Nullable(2)]
 		private Action<bool> TicTacToeGameOverEvent;
 
-		// Token: 0x040258E4 RID: 153828
+		// Token: 0x04020553 RID: 132435
 		[Nullable(2)]
 		private Action OnWaitInitPiecesComplete;
 
-		// Token: 0x040258E5 RID: 153829
+		// Token: 0x04020554 RID: 132436
 		[Nullable(2)]
 		private Action OnPiecePostMoveEventStart;
 
-		// Token: 0x040258E6 RID: 153830
+		// Token: 0x04020555 RID: 132437
 		[Nullable(2)]
 		private Action OnPiecePostMoveEventEnd;
 
-		// Token: 0x040258E7 RID: 153831
+		// Token: 0x04020556 RID: 132438
 		private bool IsInPickInteraction;
 
-		// Token: 0x0200CF2D RID: 53037
+		// Token: 0x0200BAC2 RID: 47810
 		[NullableContext(0)]
 		private class JigsawState
 		{
-			// Token: 0x06052062 RID: 335970 RVA: 0x0164AC04 File Offset: 0x01648E04
+			// Token: 0x0604880C RID: 296972 RVA: 0x0161CD20 File Offset: 0x0161AF20
 			public JigsawState(EJigsawSocketState? state = null, bool? occupancy = null, int? activatedNum = null)
 			{
 				this.State = state.GetValueOrDefault();
@@ -2670,21 +2607,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 				this.ActivatedNum = activatedNum.GetValueOrDefault();
 			}
 
-			// Token: 0x0403E4C3 RID: 255171
+			// Token: 0x040397E8 RID: 235496
 			public EJigsawSocketState State;
 
-			// Token: 0x0403E4C4 RID: 255172
+			// Token: 0x040397E9 RID: 235497
 			public bool Occupancy;
 
-			// Token: 0x0403E4C5 RID: 255173
+			// Token: 0x040397EA RID: 235498
 			public int ActivatedNum;
 		}
 
-		// Token: 0x0200CF2E RID: 53038
+		// Token: 0x0200BAC3 RID: 47811
 		[Nullable(0)]
 		private class BoxTraceCheckData
 		{
-			// Token: 0x06052063 RID: 335971 RVA: 0x0164AC33 File Offset: 0x01648E33
+			// Token: 0x0604880D RID: 296973 RVA: 0x0161CD4F File Offset: 0x0161AF4F
 			public BoxTraceCheckData(global::Vector location, int tagId, JigsawIndex curIndex)
 			{
 				this.Location = location;
@@ -2692,32 +2629,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Jigsaw
 				this.CurIndex = curIndex;
 			}
 
-			// Token: 0x0403E4C6 RID: 255174
+			// Token: 0x040397EB RID: 235499
 			public global::Vector Location = global::Vector.Create();
 
-			// Token: 0x0403E4C7 RID: 255175
+			// Token: 0x040397EC RID: 235500
 			public int TagId;
 
-			// Token: 0x0403E4C8 RID: 255176
+			// Token: 0x040397ED RID: 235501
 			[Nullable(2)]
 			public JigsawIndex CurIndex;
 		}
 
-		// Token: 0x0200CF2F RID: 53039
+		// Token: 0x0200BAC4 RID: 47812
 		[NullableContext(0)]
 		private struct Direction
 		{
-			// Token: 0x0403E4C9 RID: 255177
+			// Token: 0x040397EE RID: 235502
 			[Nullable(1)]
 			public global::Vector Vector;
 
-			// Token: 0x0403E4CA RID: 255178
+			// Token: 0x040397EF RID: 235503
 			public int Tag;
 
-			// Token: 0x0403E4CB RID: 255179
+			// Token: 0x040397F0 RID: 235504
 			public int RowDelta;
 
-			// Token: 0x0403E4CC RID: 255180
+			// Token: 0x040397F1 RID: 235505
 			public int ColDelta;
 		}
 	}

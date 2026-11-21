@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B3F RID: 15167
+	// Token: 0x02003F41 RID: 16193
 	public class QuestStateValueT
 	{
-		// Token: 0x1700680F RID: 26639
-		// (get) Token: 0x06014BB3 RID: 84915 RVA: 0x0030399A File Offset: 0x00301B9A
-		// (set) Token: 0x06014BB4 RID: 84916 RVA: 0x003039A2 File Offset: 0x00301BA2
+		// Token: 0x17006DAA RID: 28074
+		// (get) Token: 0x0601605D RID: 90205 RVA: 0x00329C2A File Offset: 0x00327E2A
+		// (set) Token: 0x0601605E RID: 90206 RVA: 0x00329C32 File Offset: 0x00327E32
 		public EQuestState Value { get; set; }
 
-		// Token: 0x06014BB5 RID: 84917 RVA: 0x003039AB File Offset: 0x00301BAB
+		// Token: 0x0601605F RID: 90207 RVA: 0x00329C3B File Offset: 0x00327E3B
 		public QuestStateValueT()
 		{
 			this.Value = EQuestState.InActive;

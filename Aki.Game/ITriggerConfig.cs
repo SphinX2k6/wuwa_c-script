@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003002 RID: 12290
+// Token: 0x02002558 RID: 9560
 [NullableContext(1)]
 public interface ITriggerConfig
 {
-	// Token: 0x170023C1 RID: 9153
-	// (get) Token: 0x0601A08A RID: 106634
-	// (set) Token: 0x0601A08B RID: 106635
+	// Token: 0x17002483 RID: 9347
+	// (get) Token: 0x060179C6 RID: 96710
+	// (set) Token: 0x060179C7 RID: 96711
 	string Type { get; set; }
 
-	// Token: 0x170023C2 RID: 9154
-	// (get) Token: 0x0601A08C RID: 106636
-	// (set) Token: 0x0601A08D RID: 106637
+	// Token: 0x17002484 RID: 9348
+	// (get) Token: 0x060179C8 RID: 96712
+	// (set) Token: 0x060179C9 RID: 96713
 	string[] Preset { get; set; }
 
-	// Token: 0x170023C3 RID: 9155
-	// (get) Token: 0x0601A08E RID: 106638
-	// (set) Token: 0x0601A08F RID: 106639
+	// Token: 0x17002485 RID: 9349
+	// (get) Token: 0x060179CA RID: 96714
+	// (set) Token: 0x060179CB RID: 96715
 	string Params { get; set; }
 
-	// Token: 0x170023C4 RID: 9156
-	// (get) Token: 0x0601A090 RID: 106640
-	// (set) Token: 0x0601A091 RID: 106641
+	// Token: 0x17002486 RID: 9350
+	// (get) Token: 0x060179CC RID: 96716
+	// (set) Token: 0x060179CD RID: 96717
 	string Formula { get; set; }
 
-	// Token: 0x170023C5 RID: 9157
-	// (get) Token: 0x0601A092 RID: 106642
-	// (set) Token: 0x0601A093 RID: 106643
+	// Token: 0x17002487 RID: 9351
+	// (get) Token: 0x060179CE RID: 96718
+	// (set) Token: 0x060179CF RID: 96719
 	EExecuteType ExecuteType { get; set; }
 }

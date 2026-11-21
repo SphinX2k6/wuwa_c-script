@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015DD RID: 5597
+	// Token: 0x020002D1 RID: 721
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KRDataAnalyticsPlugin.EKASaveMode")]
 	public enum EKASaveMode : byte
 	{
-		// Token: 0x0400AF98 RID: 44952
+		// Token: 0x04001F42 RID: 8002
 		None_Save,
-		// Token: 0x0400AF99 RID: 44953
+		// Token: 0x04001F43 RID: 8003
 		SaveGame,
-		// Token: 0x0400AF9A RID: 44954
+		// Token: 0x04001F44 RID: 8004
 		Sqlite,
-		// Token: 0x0400AF9B RID: 44955
+		// Token: 0x04001F45 RID: 8005
 		EKASaveMode_MAX
 	}
 }

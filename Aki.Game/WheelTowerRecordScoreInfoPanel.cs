@@ -6,10 +6,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015A5 RID: 5541
+// Token: 0x02000A5D RID: 2653
 public class WheelTowerRecordScoreInfoPanel : UiPanelBase
 {
-	// Token: 0x06009D9B RID: 40347 RVA: 0x0022376C File Offset: 0x0022196C
+	// Token: 0x06007179 RID: 29049 RVA: 0x0022D51C File Offset: 0x0022B71C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class WheelTowerRecordScoreInfoPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D9C RID: 40348 RVA: 0x002237F8 File Offset: 0x002219F8
+	// Token: 0x0600717A RID: 29050 RVA: 0x0022D5A8 File Offset: 0x0022B7A8
 	public void Refresh()
 	{
 		WheelTowerModel instance = WheelTowerModel.Instance;

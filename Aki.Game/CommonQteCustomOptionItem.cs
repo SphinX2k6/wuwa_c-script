@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200260F RID: 9743
+// Token: 0x02001AFA RID: 6906
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonQteCustomOptionItem : UiPanelBase
 {
-	// Token: 0x06013E02 RID: 81410 RVA: 0x004FDB3E File Offset: 0x004FBD3E
+	// Token: 0x060112E4 RID: 70372 RVA: 0x0050C97A File Offset: 0x0050AB7A
 	[NullableContext(1)]
 	public void Init(int index, SCommonQteButton config, CommonQteCustomOptionPanel parent)
 	{
@@ -23,7 +23,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.ParentItem = parent;
 	}
 
-	// Token: 0x06013E03 RID: 81411 RVA: 0x004FDB58 File Offset: 0x004FBD58
+	// Token: 0x060112E5 RID: 70373 RVA: 0x0050C994 File Offset: 0x0050AB94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E04 RID: 81412 RVA: 0x004FDC0C File Offset: 0x004FBE0C
+	// Token: 0x060112E6 RID: 70374 RVA: 0x0050CA48 File Offset: 0x0050AC48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteCustomOptionItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013E05 RID: 81413 RVA: 0x004FDC50 File Offset: 0x004FBE50
+	// Token: 0x060112E7 RID: 70375 RVA: 0x0050CA8C File Offset: 0x0050AC8C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -103,7 +103,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEndEvent), false);
 	}
 
-	// Token: 0x06013E06 RID: 81414 RVA: 0x004FDD60 File Offset: 0x004FBF60
+	// Token: 0x060112E8 RID: 70376 RVA: 0x0050CB9C File Offset: 0x0050AD9C
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -124,7 +124,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.ParentItem = null;
 	}
 
-	// Token: 0x06013E07 RID: 81415 RVA: 0x004FDDC0 File Offset: 0x004FBFC0
+	// Token: 0x060112E9 RID: 70377 RVA: 0x0050CBFC File Offset: 0x0050ADFC
 	[NullableContext(1)]
 	public void SetQteContext(CommonQteContextBase context)
 	{
@@ -170,7 +170,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.RefreshUiOffset();
 	}
 
-	// Token: 0x06013E08 RID: 81416 RVA: 0x004FDE90 File Offset: 0x004FC090
+	// Token: 0x060112EA RID: 70378 RVA: 0x0050CCCC File Offset: 0x0050AECC
 	public void PlayQteStart()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -183,7 +183,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		base.SetUiActive(true);
 	}
 
-	// Token: 0x06013E09 RID: 81417 RVA: 0x004FDED8 File Offset: 0x004FC0D8
+	// Token: 0x060112EB RID: 70379 RVA: 0x0050CD14 File Offset: 0x0050AF14
 	public void PlayQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -222,7 +222,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.UnbindAction();
 	}
 
-	// Token: 0x06013E0A RID: 81418 RVA: 0x004FDFA4 File Offset: 0x004FC1A4
+	// Token: 0x060112EC RID: 70380 RVA: 0x0050CDE0 File Offset: 0x0050AFE0
 	[NullableContext(1)]
 	private void OnSequenceEndEvent(string sequenceName)
 	{
@@ -255,7 +255,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E0B RID: 81419 RVA: 0x004FE028 File Offset: 0x004FC228
+	// Token: 0x060112ED RID: 70381 RVA: 0x0050CE64 File Offset: 0x0050B064
 	private void BindAction()
 	{
 		if (this.HasBindAction)
@@ -273,7 +273,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E0C RID: 81420 RVA: 0x004FE09C File Offset: 0x004FC29C
+	// Token: 0x060112EE RID: 70382 RVA: 0x0050CED8 File Offset: 0x0050B0D8
 	private void UnbindAction()
 	{
 		if (!this.HasBindAction)
@@ -291,7 +291,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E0D RID: 81421 RVA: 0x004FE10E File Offset: 0x004FC30E
+	// Token: 0x060112EF RID: 70383 RVA: 0x0050CF4A File Offset: 0x0050B14A
 	[NullableContext(1)]
 	private void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
@@ -303,7 +303,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.OnInput(actionType);
 	}
 
-	// Token: 0x06013E0E RID: 81422 RVA: 0x004FE130 File Offset: 0x004FC330
+	// Token: 0x060112F0 RID: 70384 RVA: 0x0050CF6C File Offset: 0x0050B16C
 	[NullableContext(1)]
 	private void OnInputInteract(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
@@ -342,7 +342,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E0F RID: 81423 RVA: 0x004FE1DD File Offset: 0x004FC3DD
+	// Token: 0x060112F1 RID: 70385 RVA: 0x0050D019 File Offset: 0x0050B219
 	public void OnPress()
 	{
 		CommonQteCustomOptionPanel parentItem = this.ParentItem;
@@ -353,7 +353,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		this.OnInput(InputDistributeDefine.EActionType.Press);
 	}
 
-	// Token: 0x06013E10 RID: 81424 RVA: 0x004FE200 File Offset: 0x004FC400
+	// Token: 0x060112F2 RID: 70386 RVA: 0x0050D03C File Offset: 0x0050B23C
 	private void OnInput(InputDistributeDefine.EActionType actionType)
 	{
 		if (this.CommonQteContext != null && this.CommonQteContext.IsActive() && this.CommonQteContext.IsPending() && actionType == InputDistributeDefine.EActionType.Press)
@@ -363,19 +363,19 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013E11 RID: 81425 RVA: 0x004FE24E File Offset: 0x004FC44E
+	// Token: 0x060112F3 RID: 70387 RVA: 0x0050D08A File Offset: 0x0050B28A
 	public void OnQtePause()
 	{
 		this.UnbindAction();
 	}
 
-	// Token: 0x06013E12 RID: 81426 RVA: 0x004FE256 File Offset: 0x004FC456
+	// Token: 0x060112F4 RID: 70388 RVA: 0x0050D092 File Offset: 0x0050B292
 	public void OnQteResume()
 	{
 		this.BindAction();
 	}
 
-	// Token: 0x06013E13 RID: 81427 RVA: 0x004FE25E File Offset: 0x004FC45E
+	// Token: 0x060112F5 RID: 70389 RVA: 0x0050D09A File Offset: 0x0050B29A
 	public void SetProgress(Number progress)
 	{
 		UUISliderComponent durationBar = this.DurationBar;
@@ -386,7 +386,7 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		durationBar.SetValue(progress, true);
 	}
 
-	// Token: 0x06013E14 RID: 81428 RVA: 0x004FE278 File Offset: 0x004FC478
+	// Token: 0x060112F6 RID: 70390 RVA: 0x0050D0B4 File Offset: 0x0050B2B4
 	public void RefreshUiOffset()
 	{
 		SCommonQteButton uiConfig = this.UiConfig;
@@ -406,52 +406,52 @@ public class CommonQteCustomOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040095C6 RID: 38342
+	// Token: 0x0400971D RID: 38685
 	private int Index = -1;
 
-	// Token: 0x040095C7 RID: 38343
+	// Token: 0x0400971E RID: 38686
 	[Nullable(1)]
 	private string QteAction = "";
 
-	// Token: 0x040095C8 RID: 38344
+	// Token: 0x0400971F RID: 38687
 	private bool HasBindAction;
 
-	// Token: 0x040095C9 RID: 38345
+	// Token: 0x04009720 RID: 38688
 	private CommonQteSelectOptionContext CommonQteContext;
 
-	// Token: 0x040095CA RID: 38346
+	// Token: 0x04009721 RID: 38689
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040095CB RID: 38347
+	// Token: 0x04009722 RID: 38690
 	private SCommonQteButton UiConfig;
 
-	// Token: 0x040095CC RID: 38348
+	// Token: 0x04009723 RID: 38691
 	private CommonQteCustomOptionPanel ParentItem;
 
-	// Token: 0x040095CD RID: 38349
+	// Token: 0x04009724 RID: 38692
 	private UUIButtonComponent BtnMain;
 
-	// Token: 0x040095CE RID: 38350
+	// Token: 0x04009725 RID: 38693
 	private UUISliderComponent DurationBar;
 
-	// Token: 0x040095CF RID: 38351
+	// Token: 0x04009726 RID: 38694
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x02008C4E RID: 35918
+	// Token: 0x02007DD7 RID: 32215
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D8C0 RID: 186560
+		// Token: 0x04028BD7 RID: 166871
 		BtnMain,
-		// Token: 0x0402D8C1 RID: 186561
+		// Token: 0x04028BD8 RID: 166872
 		DescText,
-		// Token: 0x0402D8C2 RID: 186562
+		// Token: 0x04028BD9 RID: 166873
 		DurationPanel,
-		// Token: 0x0402D8C3 RID: 186563
+		// Token: 0x04028BDA RID: 166874
 		DurationBar,
-		// Token: 0x0402D8C4 RID: 186564
+		// Token: 0x04028BDB RID: 166875
 		AnimItem,
-		// Token: 0x0402D8C5 RID: 186565
+		// Token: 0x04028BDC RID: 166876
 		KeyItem
 	}
 }

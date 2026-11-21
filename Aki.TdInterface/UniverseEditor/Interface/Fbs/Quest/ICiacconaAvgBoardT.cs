@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D8F RID: 15759
+	// Token: 0x020041A6 RID: 16806
 	public class ICiacconaAvgBoardT
 	{
-		// Token: 0x17006C5C RID: 27740
-		// (get) Token: 0x06015E1A RID: 89626 RVA: 0x00328FE6 File Offset: 0x003271E6
-		// (set) Token: 0x06015E1B RID: 89627 RVA: 0x00328FEE File Offset: 0x003271EE
+		// Token: 0x17007216 RID: 29206
+		// (get) Token: 0x06017352 RID: 95058 RVA: 0x00350312 File Offset: 0x0034E512
+		// (set) Token: 0x06017353 RID: 95059 RVA: 0x0035031A File Offset: 0x0034E51A
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x17006C5D RID: 27741
-		// (get) Token: 0x06015E1C RID: 89628 RVA: 0x00328FF7 File Offset: 0x003271F7
-		// (set) Token: 0x06015E1D RID: 89629 RVA: 0x00328FFF File Offset: 0x003271FF
+		// Token: 0x17007217 RID: 29207
+		// (get) Token: 0x06017354 RID: 95060 RVA: 0x00350323 File Offset: 0x0034E523
+		// (set) Token: 0x06017355 RID: 95061 RVA: 0x0035032B File Offset: 0x0034E52B
 		public int EndingId { get; set; }
 
-		// Token: 0x17006C5E RID: 27742
-		// (get) Token: 0x06015E1E RID: 89630 RVA: 0x00329008 File Offset: 0x00327208
-		// (set) Token: 0x06015E1F RID: 89631 RVA: 0x00329010 File Offset: 0x00327210
+		// Token: 0x17007218 RID: 29208
+		// (get) Token: 0x06017356 RID: 95062 RVA: 0x00350334 File Offset: 0x0034E534
+		// (set) Token: 0x06017357 RID: 95063 RVA: 0x0035033C File Offset: 0x0034E53C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015E20 RID: 89632 RVA: 0x00329019 File Offset: 0x00327219
+		// Token: 0x06017358 RID: 95064 RVA: 0x00350345 File Offset: 0x0034E545
 		public ICiacconaAvgBoardT()
 		{
 			this.Type = EShowUiType.All;

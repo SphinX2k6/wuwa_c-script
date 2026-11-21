@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.FirstPersonTurret.View
 {
-	// Token: 0x02005A81 RID: 23169
+	// Token: 0x02004A5D RID: 19037
 	internal enum EFightRoleHpComp
 	{
-		// Token: 0x0401EA0B RID: 125451
+		// Token: 0x040194B2 RID: 103602
 		PnlHp,
-		// Token: 0x0401EA0C RID: 125452
+		// Token: 0x040194B3 RID: 103603
 		PnlConcertoState,
-		// Token: 0x0401EA0D RID: 125453
+		// Token: 0x040194B4 RID: 103604
 		PnlEnergyBar,
-		// Token: 0x0401EA0E RID: 125454
+		// Token: 0x040194B5 RID: 103605
 		PnlBuffList,
-		// Token: 0x0401EA0F RID: 125455
+		// Token: 0x040194B6 RID: 103606
 		PnlEnergyBarBig,
-		// Token: 0x0401EA10 RID: 125456
+		// Token: 0x040194B7 RID: 103607
 		PnlBuffTop,
-		// Token: 0x0401EA11 RID: 125457
+		// Token: 0x040194B8 RID: 103608
 		PnlActiveState
 	}
 }

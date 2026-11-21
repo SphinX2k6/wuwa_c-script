@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200755A RID: 30042
+	// Token: 0x02007D50 RID: 32080
 	public class IVisualNovelBackgroundBaseT
 	{
-		// Token: 0x1700E3E8 RID: 58344
-		// (get) Token: 0x06036A88 RID: 223880 RVA: 0x0076C746 File Offset: 0x0076A946
-		// (set) Token: 0x06036A89 RID: 223881 RVA: 0x0076C74E File Offset: 0x0076A94E
+		// Token: 0x1700F012 RID: 61458
+		// (get) Token: 0x06039E9E RID: 237214 RVA: 0x007CF9EE File Offset: 0x007CDBEE
+		// (set) Token: 0x06039E9F RID: 237215 RVA: 0x007CF9F6 File Offset: 0x007CDBF6
 		public EVisualNovelBackgroundType Type { get; set; }
 
-		// Token: 0x06036A8A RID: 223882 RVA: 0x0076C757 File Offset: 0x0076A957
+		// Token: 0x06039EA0 RID: 237216 RVA: 0x007CF9FF File Offset: 0x007CDBFF
 		public IVisualNovelBackgroundBaseT()
 		{
 			this.Type = EVisualNovelBackgroundType.Load;

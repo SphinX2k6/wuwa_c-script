@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using AkiClient.Game.Aki.Sequence.Manager;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Module.LevelLoading;
 using CSharpScript.Game.Module.Plot.Flow;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005035 RID: 20533
+	// Token: 0x02004002 RID: 16386
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceAssistant : SeqBaseAssistant
 	{
-		// Token: 0x060348D5 RID: 215253 RVA: 0x00C65C24 File Offset: 0x00C63E24
+		// Token: 0x06029793 RID: 169875 RVA: 0x00BB1F84 File Offset: 0x00BB0184
 		[NullableContext(2)]
 		public override void Load(Action<bool> callback = null)
 		{
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			});
 		}
 
-		// Token: 0x060348D6 RID: 215254 RVA: 0x00C65CBC File Offset: 0x00C63EBC
+		// Token: 0x06029794 RID: 169876 RVA: 0x00BB201C File Offset: 0x00BB021C
 		[NullableContext(2)]
 		public unsafe override void PreAllPlay(Action<bool> callback = null)
 		{
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348D7 RID: 215255 RVA: 0x00C65F34 File Offset: 0x00C64134
+		// Token: 0x06029795 RID: 169877 RVA: 0x00BB2294 File Offset: 0x00BB0494
 		public override void PreEachPlay()
 		{
 			if (!ObjectUtils.IsValid(this.Model.GetCurrentSequence()))
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.ReadBakedSeqFrameInfo();
 		}
 
-		// Token: 0x060348D8 RID: 215256 RVA: 0x00C65FC0 File Offset: 0x00C641C0
+		// Token: 0x06029796 RID: 169878 RVA: 0x00BB2320 File Offset: 0x00BB0520
 		public void Play(Action endCallback)
 		{
 			global::Log instance = global::Log.Instance;
@@ -160,7 +159,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.PlaySequence(endCallback);
 		}
 
-		// Token: 0x060348D9 RID: 215257 RVA: 0x00C66074 File Offset: 0x00C64274
+		// Token: 0x06029797 RID: 169879 RVA: 0x00BB23D4 File Offset: 0x00BB05D4
 		private void PlaySequence(Action endCallback)
 		{
 			this.Model.NeedsQueueLatentAction = new bool?(true);
@@ -208,7 +207,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.CurLevelSeqActor.SequencePlayer.OnStop.Add(endCallback);
 		}
 
-		// Token: 0x060348DA RID: 215258 RVA: 0x00C662FC File Offset: 0x00C644FC
+		// Token: 0x06029798 RID: 169880 RVA: 0x00BB265C File Offset: 0x00BB085C
 		public override void EachStop()
 		{
 			SequenceController.Instance.FlushDialogueState();
@@ -229,13 +228,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.ClearFrameInfo();
 		}
 
-		// Token: 0x060348DB RID: 215259 RVA: 0x00C6646D File Offset: 0x00C6466D
+		// Token: 0x06029799 RID: 169881 RVA: 0x00BB27CD File Offset: 0x00BB09CD
 		[NullableContext(2)]
 		public override void AllStop(Action<bool> callback = null)
 		{
 		}
 
-		// Token: 0x060348DC RID: 215260 RVA: 0x00C66470 File Offset: 0x00C64670
+		// Token: 0x0602979A RID: 169882 RVA: 0x00BB27D0 File Offset: 0x00BB09D0
 		public override void End()
 		{
 			if (this.SeqDataLoadingId != -1)
@@ -265,7 +264,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.SubSequenceMap.Clear();
 		}
 
-		// Token: 0x060348DD RID: 215261 RVA: 0x00C66574 File Offset: 0x00C64774
+		// Token: 0x0602979B RID: 169883 RVA: 0x00BB28D4 File Offset: 0x00BB0AD4
 		private void Reattach()
 		{
 			TArray<FName> tarray = new TArray<FName>();
@@ -312,7 +311,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348DE RID: 215262 RVA: 0x00C666AC File Offset: 0x00C648AC
+		// Token: 0x0602979C RID: 169884 RVA: 0x00BB2A0C File Offset: 0x00BB0C0C
 		private void MuteUnusedTrack()
 		{
 			ULevelSequence currentSequence = this.Model.GetCurrentSequence();
@@ -370,7 +369,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348DF RID: 215263 RVA: 0x00C66844 File Offset: 0x00C64A44
+		// Token: 0x0602979D RID: 169885 RVA: 0x00BB2BA4 File Offset: 0x00BB0DA4
 		private void CreateSequencePlayer()
 		{
 			ULevelSequence currentSequence = this.Model.GetCurrentSequence();
@@ -395,7 +394,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348E0 RID: 215264 RVA: 0x00C66984 File Offset: 0x00C64B84
+		// Token: 0x0602979E RID: 169886 RVA: 0x00BB2CE4 File Offset: 0x00BB0EE4
 		private unsafe void ReadOriginTransform()
 		{
 			FTransformDouble? ftransformDouble = null;
@@ -476,7 +475,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.RelativeTransform.SetScale3D(global::Vector.OneVectorProxy);
 		}
 
-		// Token: 0x060348E1 RID: 215265 RVA: 0x00C66C90 File Offset: 0x00C64E90
+		// Token: 0x0602979F RID: 169887 RVA: 0x00BB2FF0 File Offset: 0x00BB11F0
 		private void SetOriginTransform()
 		{
 			this.Model.CurLevelSeqActor.bOverrideInstanceData = true;
@@ -487,7 +486,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348E2 RID: 215266 RVA: 0x00C66CE8 File Offset: 0x00C64EE8
+		// Token: 0x060297A0 RID: 169888 RVA: 0x00BB3048 File Offset: 0x00BB1248
 		private void ClearFrameInfo()
 		{
 			this.Model.CurSubtitleStartFrames.Clear();
@@ -498,7 +497,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.CurEndFrame = null;
 		}
 
-		// Token: 0x060348E3 RID: 215267 RVA: 0x00C66D58 File Offset: 0x00C64F58
+		// Token: 0x060297A1 RID: 169889 RVA: 0x00BB30B8 File Offset: 0x00BB12B8
 		private void ReadBakedSeqFrameInfo()
 		{
 			SSequencesKeyFrames currentKeyFramesInfo = this.Model.GetCurrentKeyFramesInfo();
@@ -528,7 +527,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348E4 RID: 215268 RVA: 0x00C66E54 File Offset: 0x00C65054
+		// Token: 0x060297A2 RID: 169890 RVA: 0x00BB31B4 File Offset: 0x00BB13B4
 		private void ReadFadeEndRuntime()
 		{
 			this.Model.IsFadeEnd.Clear();
@@ -582,7 +581,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348E5 RID: 215269 RVA: 0x00C66FE4 File Offset: 0x00C651E4
+		// Token: 0x060297A3 RID: 169891 RVA: 0x00BB3344 File Offset: 0x00BB1544
 		public float GetFadeAmountAt(ULevelSequence sequence, int frameNumber)
 		{
 			TArray<UMovieSceneTrack> tarray = UKuroSequenceRuntimeFunctionLibrary.FindMasterTracksByType(sequence, UMovieSceneFadeTrack.StaticClass());
@@ -604,7 +603,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 				return -1f;
 			}
 			float result = 0f;
-			FFrameTime frame = new FFrameTime(new FFrameNumber(frameNumber), 0f);
+			FFrameTime frame = new FFrameTime
+			{
+				FrameNumber = new FFrameNumber
+				{
+					Value = frameNumber
+				}
+			};
 			foreach (UMovieSceneSection umovieSceneSection in list)
 			{
 				UMovieSceneFadeSection umovieSceneFadeSection = umovieSceneSection as UMovieSceneFadeSection;
@@ -617,7 +622,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return result;
 		}
 
-		// Token: 0x060348E6 RID: 215270 RVA: 0x00C67108 File Offset: 0x00C65308
+		// Token: 0x060297A4 RID: 169892 RVA: 0x00BB3470 File Offset: 0x00BB1670
 		private void ReadFadeEnd()
 		{
 			if (this.Model.SequenceData.GeneratedData == null)
@@ -631,7 +636,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348E7 RID: 215271 RVA: 0x00C67194 File Offset: 0x00C65394
+		// Token: 0x060297A5 RID: 169893 RVA: 0x00BB34FC File Offset: 0x00BB16FC
 		private void ReadFinalPos()
 		{
 			if (this.Model.SequenceData.GeneratedData != null)
@@ -669,26 +674,26 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			global::Log.Instance.Warn(ELogModule.Plot, ELogAuthor.ZWY, "使用了最终位置，但是没有后处理位置。", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060348E8 RID: 215272 RVA: 0x00C672AD File Offset: 0x00C654AD
+		// Token: 0x060297A6 RID: 169894 RVA: 0x00BB3615 File Offset: 0x00BB1815
 		public void JumpToNextSubtitleOrChildSeq()
 		{
 			this.GoToNextSubtitleOrChildSeq(false);
 		}
 
-		// Token: 0x060348E9 RID: 215273 RVA: 0x00C672B6 File Offset: 0x00C654B6
+		// Token: 0x060297A7 RID: 169895 RVA: 0x00BB361E File Offset: 0x00BB181E
 		public void AccelerateToNextSubtitleOrChildSeq(Action finishCallback)
 		{
 			this.AccelerateFinishCallback = finishCallback;
 			this.GoToNextSubtitleOrChildSeq(true);
 		}
 
-		// Token: 0x060348EA RID: 215274 RVA: 0x00C672C6 File Offset: 0x00C654C6
+		// Token: 0x060297A8 RID: 169896 RVA: 0x00BB362E File Offset: 0x00BB182E
 		public void ClearAccelerateCallback()
 		{
 			this.AccelerateFinishCallback = null;
 		}
 
-		// Token: 0x060348EB RID: 215275 RVA: 0x00C672D0 File Offset: 0x00C654D0
+		// Token: 0x060297A9 RID: 169897 RVA: 0x00BB3638 File Offset: 0x00BB1838
 		private void GoToNextSubtitleOrChildSeq(bool useAccelerate)
 		{
 			if (this.Model.IsPaused.GetValueOrDefault())
@@ -739,7 +744,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348EC RID: 215276 RVA: 0x00C673D0 File Offset: 0x00C655D0
+		// Token: 0x060297AA RID: 169898 RVA: 0x00BB3738 File Offset: 0x00BB1938
 		private int? GetNextSubtitleOrChildSeqTargetFrame(int curFrame)
 		{
 			int num = 99999999;
@@ -785,7 +790,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return this.Model.CurEndFrame;
 		}
 
-		// Token: 0x060348ED RID: 215277 RVA: 0x00C6750C File Offset: 0x00C6570C
+		// Token: 0x060297AB RID: 169899 RVA: 0x00BB3874 File Offset: 0x00BB1A74
 		private void JumpToSequenceEnd(int curFrame, UMovieSceneSequencePlayer sequencePlayer)
 		{
 			int value = this.Model.CurEndFrame.Value;
@@ -819,7 +824,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348EE RID: 215278 RVA: 0x00C67658 File Offset: 0x00C65858
+		// Token: 0x060297AC RID: 169900 RVA: 0x00BB39C0 File Offset: 0x00BB1BC0
 		private void AccelerateSequenceToFrame(int curFrame, int targetFrame, UMovieSceneSequencePlayer sequencePlayer)
 		{
 			float value = this.AcceleratingSkipRecoverPlayRate.GetValueOrDefault();
@@ -836,7 +841,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			sequencePlayer.PlayTo(this.CreatePlaybackParams(targetFrame, EUpdatePositionMethod.Play));
 		}
 
-		// Token: 0x060348EF RID: 215279 RVA: 0x00C676DC File Offset: 0x00C658DC
+		// Token: 0x060297AD RID: 169901 RVA: 0x00BB3A44 File Offset: 0x00BB1C44
 		private void OnAcceleratingSkipPause()
 		{
 			int? acceleratingSkipTargetFrame = this.AcceleratingSkipTargetFrame;
@@ -860,7 +865,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			ulevelSequencePlayer.Play();
 		}
 
-		// Token: 0x060348F0 RID: 215280 RVA: 0x00C6775F File Offset: 0x00C6595F
+		// Token: 0x060297AE RID: 169902 RVA: 0x00BB3AC7 File Offset: 0x00BB1CC7
 		private void OnAcceleratingSkipPlay()
 		{
 			if (!this.IsAcceleratingSkipPaused || this.Model.IsPaused.GetValueOrDefault())
@@ -870,7 +875,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.ResumeAcceleratingSkip();
 		}
 
-		// Token: 0x060348F1 RID: 215281 RVA: 0x00C67782 File Offset: 0x00C65982
+		// Token: 0x060297AF RID: 169903 RVA: 0x00BB3AEA File Offset: 0x00BB1CEA
 		private void AddAcceleratingSkipDelegates(UMovieSceneSequencePlayer sequencePlayer)
 		{
 			if (this.IsAcceleratingSkipDelegateBound)
@@ -882,7 +887,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			sequencePlayer.OnPlay.Add(new Action(this.OnAcceleratingSkipPlay));
 		}
 
-		// Token: 0x060348F2 RID: 215282 RVA: 0x00C677C4 File Offset: 0x00C659C4
+		// Token: 0x060297B0 RID: 169904 RVA: 0x00BB3B2C File Offset: 0x00BB1D2C
 		private void RemoveAcceleratingSkipDelegates()
 		{
 			if (!this.IsAcceleratingSkipDelegateBound)
@@ -902,7 +907,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.IsAcceleratingSkipDelegateBound = false;
 		}
 
-		// Token: 0x060348F3 RID: 215283 RVA: 0x00C67834 File Offset: 0x00C65A34
+		// Token: 0x060297B1 RID: 169905 RVA: 0x00BB3B9C File Offset: 0x00BB1D9C
 		private void StopAcceleratingSkip()
 		{
 			float? acceleratingSkipRecoverPlayRate = this.AcceleratingSkipRecoverPlayRate;
@@ -932,7 +937,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348F4 RID: 215284 RVA: 0x00C678B4 File Offset: 0x00C65AB4
+		// Token: 0x060297B2 RID: 169906 RVA: 0x00BB3C1C File Offset: 0x00BB1E1C
 		private void PauseAcceleratingSkip()
 		{
 			float? acceleratingSkipRecoverPlayRate = this.AcceleratingSkipRecoverPlayRate;
@@ -954,7 +959,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			sequencePlayer.SetPlayRate(acceleratingSkipRecoverPlayRate.Value);
 		}
 
-		// Token: 0x060348F5 RID: 215285 RVA: 0x00C6790C File Offset: 0x00C65B0C
+		// Token: 0x060297B3 RID: 169907 RVA: 0x00BB3C74 File Offset: 0x00BB1E74
 		private void ResumeAcceleratingSkip()
 		{
 			int? acceleratingSkipTargetFrame = this.AcceleratingSkipTargetFrame;
@@ -975,7 +980,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			ulevelSequencePlayer.PlayTo(this.CreatePlaybackParams(acceleratingSkipTargetFrame.Value, EUpdatePositionMethod.Play));
 		}
 
-		// Token: 0x060348F6 RID: 215286 RVA: 0x00C679B4 File Offset: 0x00C65BB4
+		// Token: 0x060297B4 RID: 169908 RVA: 0x00BB3D1C File Offset: 0x00BB1F1C
 		private void SequenceJumpToFrame(int targetFrame, EUpdatePositionMethod updatePositionMethod = EUpdatePositionMethod.Play, bool noEval = true)
 		{
 			if (this.Model.State != ESequenceState.Playing)
@@ -992,13 +997,26 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Animation.ForbiddenEvaluateTwice 1", null);
 		}
 
-		// Token: 0x060348F7 RID: 215287 RVA: 0x00C67A2E File Offset: 0x00C65C2E
+		// Token: 0x060297B5 RID: 169909 RVA: 0x00BB3D98 File Offset: 0x00BB1F98
 		private FMovieSceneSequencePlaybackParams CreatePlaybackParams(int targetFrame, EUpdatePositionMethod updatePositionMethod = EUpdatePositionMethod.Play)
 		{
-			return new FMovieSceneSequencePlaybackParams(new FFrameTime(new FFrameNumber(targetFrame), 0f), 0f, "", EMovieScenePositionType.Frame, updatePositionMethod);
+			FFrameNumber frameNumber = new FFrameNumber
+			{
+				Value = targetFrame
+			};
+			FFrameTime frame = new FFrameTime
+			{
+				FrameNumber = frameNumber
+			};
+			return new FMovieSceneSequencePlaybackParams
+			{
+				Frame = frame,
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = updatePositionMethod
+			};
 		}
 
-		// Token: 0x060348F8 RID: 215288 RVA: 0x00C67A54 File Offset: 0x00C65C54
+		// Token: 0x060297B6 RID: 169910 RVA: 0x00BB3DDC File Offset: 0x00BB1FDC
 		[NullableContext(2)]
 		public void PauseSequence(string reason = null)
 		{
@@ -1020,7 +1038,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348F9 RID: 215289 RVA: 0x00C67B14 File Offset: 0x00C65D14
+		// Token: 0x060297B7 RID: 169911 RVA: 0x00BB3E9C File Offset: 0x00BB209C
 		[NullableContext(2)]
 		public void ResumeSequence(string reason = null, bool? goToNextFrame = null)
 		{
@@ -1060,7 +1078,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.PauseFrame = null;
 		}
 
-		// Token: 0x060348FA RID: 215290 RVA: 0x00C67C2C File Offset: 0x00C65E2C
+		// Token: 0x060297B8 RID: 169912 RVA: 0x00BB3FB4 File Offset: 0x00BB21B4
 		private void ReadDataRuntime()
 		{
 			ULevelSequence ulevelSequence = this.Model.SequenceData.剧情资源.Get(this.Model.SubSeqIndex);
@@ -1185,7 +1203,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.QteKeyFrames.Sort((int a, int b) => a - b);
 		}
 
-		// Token: 0x060348FB RID: 215291 RVA: 0x00C681EC File Offset: 0x00C663EC
+		// Token: 0x060297B9 RID: 169913 RVA: 0x00BB4574 File Offset: 0x00BB2774
 		[return: Nullable(2)]
 		private unsafe List<int> GetShotSectionFrames(ULevelSequence inSeq)
 		{
@@ -1241,10 +1259,6 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Id", fsequencerBindingRuntimeProxy.BindingID);
 						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Name", item);
 						instance.LogError(text, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-						if (!Info.Instance.IsBuildShipping)
-						{
-							ScrollingTipsController.Instance.ShowTipsByText("当前Seq内存在IsEditorOnly组件");
-						}
 					}
 					else if (objectTemplate.GetClass() == ACineCameraActor.StaticClass())
 					{
@@ -1278,10 +1292,27 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return list;
 		}
 
-		// Token: 0x060348FC RID: 215292 RVA: 0x00C684D8 File Offset: 0x00C666D8
-		private void ReadFinalPositionRuntime()
+		// Token: 0x060297BA RID: 169914 RVA: 0x00BB4840 File Offset: 0x00BB2A40
+		private unsafe void ReadFinalPositionRuntime()
 		{
 			BP_SequenceData_C sequenceData = this.Model.SequenceData;
+			string flowName = FlowController.Instance.GetFlowName();
+			FName? fname = null;
+			if (!string.IsNullOrEmpty(flowName) && FlowLaunchResCheckHardCodingList.TempReadFinalPosByGenderTag.Contains(flowName))
+			{
+				EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
+				if (playerGender != EPlayerGender.Female)
+				{
+					if (playerGender == EPlayerGender.Male)
+					{
+						fname = new FName?(SequenceDefine.MALE_TAG);
+					}
+				}
+				else
+				{
+					fname = new FName?(SequenceDefine.FEMALE_TAG);
+				}
+			}
 			for (int i = 0; i < sequenceData.剧情资源.Num(); i++)
 			{
 				ULevelSequence ulevelSequence = sequenceData.剧情资源.Get(i);
@@ -1293,9 +1324,26 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 				}
 				else
 				{
-					ULevelSequence sequence = ulevelSequence;
-					BP_SequenceData_Generated_C generatedData2 = sequenceData.GeneratedData;
-					ftransform = this.GetFinalPosition(sequence, FNameUtil.IsNothing((generatedData2 != null) ? new FName?(generatedData2.BlendOutTag) : null) ? SequenceDefine.HERO_TAG : sequenceData.GeneratedData.BlendOutTag);
+					if (fname != null)
+					{
+						ftransform = this.GetFinalPosition(ulevelSequence, fname.Value);
+						global::Log instance = global::Log.Instance;
+						ELogModule module = ELogModule.Plot;
+						ELogAuthor author = ELogAuthor.HYF;
+						string message = "[ReadFinalPositionRuntime] 按性别Tag提取最终坐标";
+						<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("index", i);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("tag", fname.Value);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("found", ftransform != null);
+						instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+					}
+					FTransform? ftransform2 = ftransform;
+					if (ftransform2 == null)
+					{
+						ULevelSequence sequence = ulevelSequence;
+						BP_SequenceData_Generated_C generatedData2 = sequenceData.GeneratedData;
+						ftransform = this.GetFinalPosition(sequence, FNameUtil.IsNothing((generatedData2 != null) ? new FName?(generatedData2.BlendOutTag) : null) ? SequenceDefine.HERO_TAG : sequenceData.GeneratedData.BlendOutTag);
+					}
 				}
 				if (ftransform == null)
 				{
@@ -1311,10 +1359,10 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 					}
 					if (vector.IsNearlyZero(9.999999747378752E-05))
 					{
-						FlowController instance = FlowController.Instance;
+						FlowController instance2 = FlowController.Instance;
 						string text = "Seq最终位置提取到0点坐标";
 						ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("name", ulevelSequence);
-						instance.LogError(text, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+						instance2.LogError(text, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 					}
 					Transform trans = Transform.Create(rotator.Quaternion(null), vector, global::Vector.OneVectorProxy);
 					this.Model.AddFinalPos(trans);
@@ -1322,11 +1370,23 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348FD RID: 215293 RVA: 0x00C68670 File Offset: 0x00C66870
+		// Token: 0x060297BB RID: 169915 RVA: 0x00BB4AEC File Offset: 0x00BB2CEC
 		public FTransform? GetFinalPosition(ULevelSequence sequence, FName targetTag)
 		{
-			FFrameTime fframeTime = new FFrameTime(new FFrameNumber(UKuroSequenceRuntimeFunctionLibrary.GetPlaybackStart(sequence)), 0f);
-			FFrameTime fframeTime2 = new FFrameTime(new FFrameNumber(UKuroSequenceRuntimeFunctionLibrary.GetPlaybackEnd(sequence) - 1), 0f);
+			FFrameTime fframeTime = new FFrameTime
+			{
+				FrameNumber = new FFrameNumber
+				{
+					Value = UKuroSequenceRuntimeFunctionLibrary.GetPlaybackStart(sequence)
+				}
+			};
+			FFrameTime fframeTime2 = new FFrameTime
+			{
+				FrameNumber = new FFrameNumber
+				{
+					Value = UKuroSequenceRuntimeFunctionLibrary.GetPlaybackEnd(sequence) - 1
+				}
+			};
 			Transform transform = Transform.Create();
 			if (this.GetSequenceLastTransform(sequence, targetTag, fframeTime, fframeTime2, transform))
 			{
@@ -1375,7 +1435,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return null;
 		}
 
-		// Token: 0x060348FE RID: 215294 RVA: 0x00C68938 File Offset: 0x00C66B38
+		// Token: 0x060297BC RID: 169916 RVA: 0x00BB4DC0 File Offset: 0x00BB2FC0
 		public bool GetSequenceLastTransform(ULevelSequence sequence, FName tag, FFrameTime beginFrame, FFrameTime endFrame, Transform outTransform)
 		{
 			TArray<FMovieSceneObjectBindingID> tarray = sequence.FindBindingsByTag(tag);
@@ -1416,7 +1476,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 				{
 					if (fframeTime == null)
 					{
-						fframeTime = new FFrameTime(new FFrameNumber(endFrame2.Value.Value - 1), 0f);
+						fframeTime = new FFrameTime
+						{
+							FrameNumber = new FFrameNumber
+							{
+								Value = endFrame2.Value.Value - 1
+							}
+						};
 					}
 					else if (endFrame2.Value.Value - 1 > fframeTime.FrameNumber.Value)
 					{
@@ -1433,7 +1499,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return false;
 		}
 
-		// Token: 0x060348FF RID: 215295 RVA: 0x00C68AE4 File Offset: 0x00C66CE4
+		// Token: 0x060297BD RID: 169917 RVA: 0x00BB4F74 File Offset: 0x00BB3174
 		[NullableContext(2)]
 		private bool CheckSequenceConstrainAspect(ULevelSequence levelSequence)
 		{
@@ -1527,7 +1593,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return result;
 		}
 
-		// Token: 0x06034900 RID: 215296 RVA: 0x00C68D0C File Offset: 0x00C66F0C
+		// Token: 0x060297BE RID: 169918 RVA: 0x00BB519C File Offset: 0x00BB339C
 		[return: Nullable(2)]
 		private FMovieSceneBinding FindChildBindingByFatherTag(ULevelSequence levelSequence, FName tag)
 		{
@@ -1569,7 +1635,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return this.FindGuidInBinding(levelSequence, fmovieScenePossessable.Guid);
 		}
 
-		// Token: 0x06034901 RID: 215297 RVA: 0x00C68DF4 File Offset: 0x00C66FF4
+		// Token: 0x060297BF RID: 169919 RVA: 0x00BB5284 File Offset: 0x00BB3484
 		[return: Nullable(2)]
 		private FMovieSceneBinding FindGuidInBinding(ULevelSequence levelSequence, FGuid a)
 		{
@@ -1587,7 +1653,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return result;
 		}
 
-		// Token: 0x06034902 RID: 215298 RVA: 0x00C68E3C File Offset: 0x00C6703C
+		// Token: 0x060297C0 RID: 169920 RVA: 0x00BB52CC File Offset: 0x00BB34CC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1624,13 +1690,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return null;
 		}
 
-		// Token: 0x06034903 RID: 215299 RVA: 0x00C68EF6 File Offset: 0x00C670F6
+		// Token: 0x060297C1 RID: 169921 RVA: 0x00BB5386 File Offset: 0x00BB3586
 		private bool CompareGuid(FGuid a, FGuid b)
 		{
 			return a.A == b.A && a.B == b.B && a.C == b.C && a.D == b.D;
 		}
 
-		// Token: 0x06034904 RID: 215300 RVA: 0x00C68F34 File Offset: 0x00C67134
+		// Token: 0x060297C2 RID: 169922 RVA: 0x00BB53C4 File Offset: 0x00BB35C4
 		[NullableContext(2)]
 		public override void LoadNecessaryData(Action callback = null)
 		{
@@ -1693,7 +1759,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06034905 RID: 215301 RVA: 0x00C68F88 File Offset: 0x00C67188
+		// Token: 0x060297C3 RID: 169923 RVA: 0x00BB5418 File Offset: 0x00BB3618
 		public bool ReadNeedHidePlayer()
 		{
 			ULevelSequence currentSequence = SequenceModel.Instance.GetCurrentSequence();
@@ -1737,7 +1803,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			return false;
 		}
 
-		// Token: 0x06034906 RID: 215302 RVA: 0x00C69098 File Offset: 0x00C67298
+		// Token: 0x060297C4 RID: 169924 RVA: 0x00BB5528 File Offset: 0x00BB3728
 		private void MakeSubSequenceMap()
 		{
 			BP_SequenceData_C sequenceData = this.Model.SequenceData;
@@ -1750,7 +1816,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x06034907 RID: 215303 RVA: 0x00C690E4 File Offset: 0x00C672E4
+		// Token: 0x060297C5 RID: 169925 RVA: 0x00BB5574 File Offset: 0x00BB3774
 		private void UpdateSubSequenceMap(ULevelSequence sequence)
 		{
 			TArray<UMovieSceneTrack> masterTracks = sequence.MovieScene.MasterTracks;
@@ -1790,51 +1856,51 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x0401C00A RID: 114698
+		// Token: 0x04016A15 RID: 92693
 		private static readonly FName CONSTRAIN = new FName("bConstrainAspectRatio");
 
-		// Token: 0x0401C00B RID: 114699
+		// Token: 0x04016A16 RID: 92694
 		private const int MAX_FRAME = 99999999;
 
-		// Token: 0x0401C00C RID: 114700
+		// Token: 0x04016A17 RID: 92695
 		private int SeqDataLoadingId = -1;
 
-		// Token: 0x0401C00D RID: 114701
+		// Token: 0x04016A18 RID: 92696
 		[Nullable(2)]
 		private TimerHandle LastSubtitleDelay;
 
-		// Token: 0x0401C00E RID: 114702
+		// Token: 0x04016A19 RID: 92697
 		private bool IsSequencePlay;
 
-		// Token: 0x0401C00F RID: 114703
+		// Token: 0x04016A1A RID: 92698
 		[Nullable(2)]
 		private Action OnStopCallBack;
 
-		// Token: 0x0401C010 RID: 114704
+		// Token: 0x04016A1B RID: 92699
 		private int AspectLoadingTime;
 
-		// Token: 0x0401C011 RID: 114705
+		// Token: 0x04016A1C RID: 92700
 		private readonly HashSet<string> PauseReasonSet = new HashSet<string>();
 
-		// Token: 0x0401C012 RID: 114706
+		// Token: 0x04016A1D RID: 92701
 		private bool NeedGoToNextFrameWhenResume;
 
-		// Token: 0x0401C013 RID: 114707
+		// Token: 0x04016A1E RID: 92702
 		private readonly Dictionary<ULevelSequence, SubSeqInfo> SubSequenceMap = new Dictionary<ULevelSequence, SubSeqInfo>();
 
-		// Token: 0x0401C014 RID: 114708
+		// Token: 0x04016A1F RID: 92703
 		private int? AcceleratingSkipTargetFrame;
 
-		// Token: 0x0401C015 RID: 114709
+		// Token: 0x04016A20 RID: 92704
 		private float? AcceleratingSkipRecoverPlayRate;
 
-		// Token: 0x0401C016 RID: 114710
+		// Token: 0x04016A21 RID: 92705
 		private bool IsAcceleratingSkipPaused;
 
-		// Token: 0x0401C017 RID: 114711
+		// Token: 0x04016A22 RID: 92706
 		private bool IsAcceleratingSkipDelegateBound;
 
-		// Token: 0x0401C018 RID: 114712
+		// Token: 0x04016A23 RID: 92707
 		[Nullable(2)]
 		private Action AccelerateFinishCallback;
 	}

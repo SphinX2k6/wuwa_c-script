@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006306 RID: 25350
+	// Token: 0x02005284 RID: 21124
 	public class PinballRoleAttributeTabItem : UiPanelBase
 	{
-		// Token: 0x0603FC88 RID: 261256 RVA: 0x00F6E6E4 File Offset: 0x00F6C8E4
+		// Token: 0x06034949 RID: 215369 RVA: 0x00EB5640 File Offset: 0x00EB3840
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FC89 RID: 261257 RVA: 0x00F6E78A File Offset: 0x00F6C98A
+		// Token: 0x0603494A RID: 215370 RVA: 0x00EB56E6 File Offset: 0x00EB38E6
 		[NullableContext(1)]
 		public void Refresh(IPinballRoleAttributeTabItemData data)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.RefreshSelectState(true);
 		}
 
-		// Token: 0x0603FC8A RID: 261258 RVA: 0x00F6E7A8 File Offset: 0x00F6C9A8
+		// Token: 0x0603494B RID: 215371 RVA: 0x00EB5704 File Offset: 0x00EB3904
 		public void RefreshSelectState(bool bJumpToLastFrame)
 		{
 			IPinballRoleAttributeTabItemData data = this.Data;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			extendToggle.SetToggleState(state, false, false, bJumpToLastFrame);
 		}
 
-		// Token: 0x0603FC8B RID: 261259 RVA: 0x00F6E7E4 File Offset: 0x00F6C9E4
+		// Token: 0x0603494C RID: 215372 RVA: 0x00EB5740 File Offset: 0x00EB3940
 		private void OnSelectedInternal()
 		{
 			IPinballRoleAttributeTabItemData data = this.Data;
@@ -73,20 +73,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			onSelectedDelegate(epinballRoleAttributeTabIndex.Value);
 		}
 
-		// Token: 0x040214A7 RID: 136359
+		// Token: 0x0401BDD6 RID: 114134
 		[Nullable(2)]
 		protected IPinballRoleAttributeTabItemData Data;
 
-		// Token: 0x040214A8 RID: 136360
+		// Token: 0x0401BDD7 RID: 114135
 		[Nullable(2)]
 		public Action<EPinballRoleAttributeTabIndex> OnSelectedDelegate;
 
-		// Token: 0x0200C4FB RID: 50427
+		// Token: 0x0200AEE2 RID: 44770
 		private enum EComponent
 		{
-			// Token: 0x0403B723 RID: 243491
+			// Token: 0x04036085 RID: 221317
 			ItemToggle,
-			// Token: 0x0403B724 RID: 243492
+			// Token: 0x04036086 RID: 221318
 			NameText
 		}
 	}

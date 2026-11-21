@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200053A RID: 1338
+	// Token: 0x02000550 RID: 1360
 	public class ConfigMaterialReplaceByGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F68 RID: 8040 RVA: 0x0010AD8B File Offset: 0x00108F8B
+		// Token: 0x06001FEC RID: 8172 RVA: 0x001114DF File Offset: 0x0010F6DF
 		static ConfigMaterialReplaceByGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMaterialReplaceByGroupId.CreateStaticDefaultValue), new Action(ConfigMaterialReplaceByGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F69 RID: 8041 RVA: 0x0010ADAC File Offset: 0x00108FAC
+		// Token: 0x06001FED RID: 8173 RVA: 0x00111500 File Offset: 0x0010F700
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMaterialReplaceByGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F6A RID: 8042 RVA: 0x0010AE2B File Offset: 0x0010902B
+		// Token: 0x06001FEE RID: 8174 RVA: 0x0011157F File Offset: 0x0010F77F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMaterialReplaceByGroupId.LogPair = null;
 			ConfigMaterialReplaceByGroupId.HandleId = 0;
 		}
 
-		// Token: 0x06001F6B RID: 8043 RVA: 0x0010AE39 File Offset: 0x00109039
+		// Token: 0x06001FEF RID: 8175 RVA: 0x0011158D File Offset: 0x0010F78D
 		public static void Init()
 		{
 			ConfigMaterialReplaceByGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigMaterialReplaceByGroupId.HandleId, "db_compose.db", "select BinData from `MaterialReplace` where GroupId = ?");
 		}
 
-		// Token: 0x06001F6C RID: 8044 RVA: 0x0010AE54 File Offset: 0x00109054
+		// Token: 0x06001FF0 RID: 8176 RVA: 0x001115A8 File Offset: 0x0010F7A8
 		[NullableContext(2)]
 		public static IReadOnlyList<MaterialReplace> GetConfigList(int p0GroupId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400247A RID: 9338
+		// Token: 0x04002514 RID: 9492
 		private const string DB = "db_compose.db";
 
-		// Token: 0x0400247B RID: 9339
+		// Token: 0x04002515 RID: 9493
 		private const string FILE = "h.合成.xlsx";
 
-		// Token: 0x0400247C RID: 9340
+		// Token: 0x04002516 RID: 9494
 		private const string TABLE = "MaterialReplace";
 
-		// Token: 0x0400247D RID: 9341
+		// Token: 0x04002517 RID: 9495
 		private const string COMMAND = "select BinData from `MaterialReplace` where GroupId = ?";
 
-		// Token: 0x0400247E RID: 9342
+		// Token: 0x04002518 RID: 9496
 		private const string KEY_PREFIX = "MaterialReplaceByGroupId";
 
-		// Token: 0x0400247F RID: 9343
+		// Token: 0x04002519 RID: 9497
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002480 RID: 9344
+		// Token: 0x0400251A RID: 9498
 		private static int HandleId;
 	}
 }

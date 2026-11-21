@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A95 RID: 6805
+	// Token: 0x020004AE RID: 1198
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.FSRayCastingActor")]
 	[UnrealStructLayout(1544, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1544)]
 	public class AFSRayCastingActor : AKuroBPActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601919A RID: 102810 RVA: 0x00250F12 File Offset: 0x0024F112
+		// Token: 0x06006EB4 RID: 28340 RVA: 0x000A33E7 File Offset: 0x000A15E7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AFSRayCastingActor._ClassPtr;
 		}
 
-		// Token: 0x0601919B RID: 102811 RVA: 0x00250F20 File Offset: 0x0024F120
+		// Token: 0x06006EB5 RID: 28341 RVA: 0x000A33F4 File Offset: 0x000A15F4
 		public AFSRayCastingActor() : this(BuiltinUtils.AllocNativeUObject(AFSRayCastingActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601919C RID: 102812 RVA: 0x00250F48 File Offset: 0x0024F148
+		// Token: 0x06006EB6 RID: 28342 RVA: 0x000A341C File Offset: 0x000A161C
 		[NullableContext(1)]
 		public AFSRayCastingActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AFSRayCastingActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170063B5 RID: 25525
-		// (get) Token: 0x0601919D RID: 102813 RVA: 0x00250F7B File Offset: 0x0024F17B
-		// (set) Token: 0x0601919E RID: 102814 RVA: 0x00250F8B File Offset: 0x0024F18B
+		// Token: 0x1700159E RID: 5534
+		// (get) Token: 0x06006EB7 RID: 28343 RVA: 0x000A344F File Offset: 0x000A164F
+		// (set) Token: 0x06006EB8 RID: 28344 RVA: 0x000A345F File Offset: 0x000A165F
 		public unsafe bool bUseAsyncTrace
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170063B6 RID: 25526
-		// (get) Token: 0x0601919F RID: 102815 RVA: 0x00250F9C File Offset: 0x0024F19C
-		// (set) Token: 0x060191A0 RID: 102816 RVA: 0x00250FAC File Offset: 0x0024F1AC
+		// Token: 0x1700159F RID: 5535
+		// (get) Token: 0x06006EB9 RID: 28345 RVA: 0x000A3470 File Offset: 0x000A1670
+		// (set) Token: 0x06006EBA RID: 28346 RVA: 0x000A3480 File Offset: 0x000A1680
 		public unsafe bool bDebugAsyncStats
 		{
 			get
@@ -59,23 +59,21 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060191A1 RID: 102817 RVA: 0x00250FC0 File Offset: 0x0024F1C0
+		// Token: 0x06006EBB RID: 28347 RVA: 0x000A3494 File Offset: 0x000A1694
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static double P_FS_PointToIndex_Local_Double(USceneComponent PlaneComponent, int N)
 		{
 			AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->PlaneComponent = ((PlaneComponent != null) ? PlaneComponent.NativePtr : IntPtr.Zero);
 			ptr->N = N;
-			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_PointToIndex_Local_Double_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060191A2 RID: 102818 RVA: 0x00251024 File Offset: 0x0024F224
+		// Token: 0x06006EBC RID: 28348 RVA: 0x000A34F8 File Offset: 0x000A16F8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool P_FS_IsPointInTriangle_ZProjection_With_EPS(in FVector P, in FVector A, in FVector B, in FVector C, float EPS, ref float OutDistance, float Epsilon = 1E-06f)
 		{
 			AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_With_EPS_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_With_EPS_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_With_EPS_FunctionParams) & -16L;
@@ -87,14 +85,13 @@ namespace UnrealEngine
 			ptr->EPS = EPS;
 			ptr->OutDistance = OutDistance;
 			ptr->Epsilon = Epsilon;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_With_EPS_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_With_EPS_NativeFunctionPtr, (void*)ptr);
 			OutDistance = ptr->OutDistance;
 			return ptr->__Result;
 		}
 
-		// Token: 0x060191A3 RID: 102819 RVA: 0x002510C0 File Offset: 0x0024F2C0
+		// Token: 0x06006EBD RID: 28349 RVA: 0x000A3590 File Offset: 0x000A1790
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool P_FS_IsPointInTriangle_ZProjection(in FVector P, in FVector A, in FVector B, in FVector C, ref float OutDistance, float Epsilon = 1E-06f)
 		{
 			AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_FunctionParams[(UIntPtr)75] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_FunctionParams) & -16L;
@@ -105,15 +102,14 @@ namespace UnrealEngine
 			ptr->C = C;
 			ptr->OutDistance = OutDistance;
 			ptr->Epsilon = Epsilon;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_IsPointInTriangle_ZProjection_NativeFunctionPtr, (void*)ptr);
 			OutDistance = ptr->OutDistance;
 			return ptr->__Result;
 		}
 
-		// Token: 0x060191A4 RID: 102820 RVA: 0x00251154 File Offset: 0x0024F354
+		// Token: 0x06006EBE RID: 28350 RVA: 0x000A3620 File Offset: 0x000A1820
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool P_FS_IsPlayerOutOfRayCastingRange2D(USceneComponent PlaneComponent, float InRayCastingDetectDis, bool UseDetectOutofRange)
 		{
 			AFSRayCastingActor.__P_FS_IsPlayerOutOfRayCastingRange2D_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_IsPlayerOutOfRayCastingRange2D_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_IsPlayerOutOfRayCastingRange2D_FunctionParams) & -16L;
@@ -121,14 +117,13 @@ namespace UnrealEngine
 			ptr->PlaneComponent = ((PlaneComponent != null) ? PlaneComponent.NativePtr : IntPtr.Zero);
 			ptr->InRayCastingDetectDis = InRayCastingDetectDis;
 			ptr->UseDetectOutofRange = UseDetectOutofRange;
-			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_IsPlayerOutOfRayCastingRange2D_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_IsPlayerOutOfRayCastingRange2D_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060191A5 RID: 102821 RVA: 0x002511C0 File Offset: 0x0024F3C0
+		// Token: 0x06006EBF RID: 28351 RVA: 0x000A3688 File Offset: 0x000A1888
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void P_FS_InitializeArrays(USceneComponent PlaneComponent, float RayCastingDetectDis, ref TArray<FVector> Dir, ref TArray<FVector> EndPos, ref TArray<float> Dis, int ParticleCount)
 		{
 			AFSRayCastingActor.__P_FS_InitializeArrays_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_InitializeArrays_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_InitializeArrays_FunctionParams) & -16L;
@@ -151,7 +146,7 @@ namespace UnrealEngine
 				tarray3.MoveTo(&ptr->Dis);
 			}
 			ptr->ParticleCount = ParticleCount;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_InitializeArrays_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_InitializeArrays_NativeFunctionPtr, (void*)ptr);
 			TArray<FVector> tarray4 = Dir;
 			if (tarray4 != null)
 			{
@@ -170,10 +165,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(AFSRayCastingActor.__P_FS_InitializeArrays_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060191A6 RID: 102822 RVA: 0x002512B4 File Offset: 0x0024F4B4
+		// Token: 0x06006EC0 RID: 28352 RVA: 0x000A377C File Offset: 0x000A197C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool P_FS_DetectPlayer_Two_With_EPS(USceneComponent PlaneComponent, double Index, int ParticleCount, in TArray<float> Dis, in TArray<FVector> Dirs, float eps, ref float OutDistance)
 		{
 			AFSRayCastingActor.__P_FS_DetectPlayer_Two_With_EPS_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_DetectPlayer_Two_With_EPS_FunctionParams[(UIntPtr)87] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_DetectPlayer_Two_With_EPS_FunctionParams) & -16L;
@@ -193,7 +187,7 @@ namespace UnrealEngine
 			}
 			ptr->eps = eps;
 			ptr->OutDistance = OutDistance;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_DetectPlayer_Two_With_EPS_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_DetectPlayer_Two_With_EPS_NativeFunctionPtr, (void*)ptr);
 			TArray<float> tarray3 = Dis;
 			if (tarray3 != null)
 			{
@@ -210,10 +204,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x060191A7 RID: 102823 RVA: 0x002513A0 File Offset: 0x0024F5A0
+		// Token: 0x06006EC1 RID: 28353 RVA: 0x000A3864 File Offset: 0x000A1A64
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool P_FS_DetectPlayer_Two(USceneComponent PlaneComponent, double Index, int ParticleCount, in TArray<float> Dis, in TArray<FVector> Dirs, ref float OutDistance)
 		{
 			AFSRayCastingActor.__P_FS_DetectPlayer_Two_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_DetectPlayer_Two_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_DetectPlayer_Two_FunctionParams) & -16L;
@@ -232,7 +225,7 @@ namespace UnrealEngine
 				tarray2.MoveTo(&ptr->Dirs);
 			}
 			ptr->OutDistance = OutDistance;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_DetectPlayer_Two_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_DetectPlayer_Two_NativeFunctionPtr, (void*)ptr);
 			TArray<float> tarray3 = Dis;
 			if (tarray3 != null)
 			{
@@ -249,10 +242,9 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x060191A8 RID: 102824 RVA: 0x00251484 File Offset: 0x0024F684
+		// Token: 0x06006EC2 RID: 28354 RVA: 0x000A3944 File Offset: 0x000A1B44
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static FRotator P_FS_ComputeTilt_ByHeightH2(ref FVectorDouble LastFrameNormal, USceneComponent PlaneComponent, float RayCastingDetectRange, double MaxDegreeAngle, float MinActiveRadius, float MaxActiveRadius, double FollowSpeedRate, double ReturnSpeedRate, bool bPlayerColliding, bool bLinear, ref bool OutDebugBlockReturn, float ReturnBlockVerticalLimit = 80f, float ReturnBlockSwitchThreshold = 80f)
 		{
 			AFSRayCastingActor.__P_FS_ComputeTilt_ByHeightH2_FunctionParams* ptr = stackalloc AFSRayCastingActor.__P_FS_ComputeTilt_ByHeightH2_FunctionParams[(UIntPtr)111] + 15L / (long)sizeof(AFSRayCastingActor.__P_FS_ComputeTilt_ByHeightH2_FunctionParams) & -16L;
@@ -270,16 +262,15 @@ namespace UnrealEngine
 			ptr->OutDebugBlockReturn = OutDebugBlockReturn;
 			ptr->ReturnBlockVerticalLimit = ReturnBlockVerticalLimit;
 			ptr->ReturnBlockSwitchThreshold = ReturnBlockSwitchThreshold;
-			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_ComputeTilt_ByHeightH2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_ComputeTilt_ByHeightH2_NativeFunctionPtr, (void*)ptr);
 			LastFrameNormal = ptr->LastFrameNormal;
 			OutDebugBlockReturn = ptr->OutDebugBlockReturn;
 			return ptr->__Result;
 		}
 
-		// Token: 0x060191A9 RID: 102825 RVA: 0x00251558 File Offset: 0x0024F758
+		// Token: 0x06006EC3 RID: 28355 RVA: 0x000A3A18 File Offset: 0x000A1C18
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void P_FS_CheckFrontObstacle2_VertexBuffer(USceneComponent PlaneComponent, float RayCastingDetectDis, UObject WorldContextObject, ETraceTypeQuery TraceChannel, ref float OutDistance, ref TArray<FVector> Dir, ref TArray<FVector> EndPos, ref TArray<float> Dis, bool debugLine, int CountIndex, int BatchSize, int ParticleCount, ref int OutNewCountIndex, [Nullable(new byte[]
 		{
 			2,
@@ -331,7 +322,7 @@ namespace UnrealEngine
 				tarray6.MoveTo(&ptr->SkipTraceBoxExtents);
 			}
 			ptr->OutAsyncReadBack = OutAsyncReadBack;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_VertexBuffer_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_VertexBuffer_NativeFunctionPtr, (void*)ptr);
 			OutDistance = ptr->OutDistance;
 			TArray<FVector> tarray7 = Dir;
 			if (tarray7 != null)
@@ -368,10 +359,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(AFSRayCastingActor.__P_FS_CheckFrontObstacle2_VertexBuffer_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060191AA RID: 102826 RVA: 0x00251750 File Offset: 0x0024F950
+		// Token: 0x06006EC4 RID: 28356 RVA: 0x000A3C10 File Offset: 0x000A1E10
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static void P_FS_CheckFrontObstacle2_Shuffled(USceneComponent PlaneComponent, float RayCastingDetectDis, UObject WorldContextObject, ETraceTypeQuery TraceChannel, ref float OutDistance, ref TArray<FVector> Dir, ref TArray<FVector> EndPos, ref TArray<float> Dis, ref TArray<FName> ParamNames, UMaterialInstanceDynamic MID, bool debugLine, int CountIndex, int BatchSize, int ParticleCount, ref int OutNewCountIndex, [Nullable(new byte[]
 		{
 			2,
@@ -423,7 +413,7 @@ namespace UnrealEngine
 			}
 			ptr->Rng = Rng;
 			ptr->bReshuffleWhenWrap = bReshuffleWhenWrap;
-			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_Shuffled_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(AFSRayCastingActor._ClassDefaultObjectPtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_Shuffled_NativeFunctionPtr, (void*)ptr);
 			OutDistance = ptr->OutDistance;
 			TArray<FVector> tarray7 = Dir;
 			if (tarray7 != null)
@@ -460,10 +450,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(AFSRayCastingActor.__P_FS_CheckFrontObstacle2_Shuffled_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060191AB RID: 102827 RVA: 0x0025195C File Offset: 0x0024FB5C
+		// Token: 0x06006EC5 RID: 28357 RVA: 0x000A3E1C File Offset: 0x000A201C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void P_FS_CheckFrontObstacle2(USceneComponent PlaneComponent, float RayCastingDetectDis, UObject WorldContextObject, ETraceTypeQuery TraceChannel, ref float OutDistance, ref TArray<FVector> Dir, ref TArray<FVector> EndPos, ref TArray<float> Dis, ref TArray<FName> ParamNames, UMaterialInstanceDynamic MID, bool debugLine, int CountIndex, int BatchSize, int ParticleCount, ref int OutNewCountIndex, [Nullable(new byte[]
 		{
 			2,
@@ -508,7 +497,7 @@ namespace UnrealEngine
 			{
 				tarray5.MoveTo(&ptr->ActorsToIgnore);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, AFSRayCastingActor.__P_FS_CheckFrontObstacle2_NativeFunctionPtr, (void*)ptr);
 			OutDistance = ptr->OutDistance;
 			TArray<FVector> tarray6 = Dir;
 			if (tarray6 != null)
@@ -539,572 +528,572 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(AFSRayCastingActor.__P_FS_CheckFrontObstacle2_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060191AC RID: 102828 RVA: 0x00251B1E File Offset: 0x0024FD1E
+		// Token: 0x06006EC6 RID: 28358 RVA: 0x000A3FDD File Offset: 0x000A21DD
 		static AFSRayCastingActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.FSRayCastingActor");
 		}
 
-		// Token: 0x060191AD RID: 102829 RVA: 0x00251B2C File Offset: 0x0024FD2C
+		// Token: 0x06006EC7 RID: 28359 RVA: 0x000A3FEB File Offset: 0x000A21EB
 		protected AFSRayCastingActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400DAD8 RID: 56024
+		// Token: 0x04002FDD RID: 12253
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.FSRayCastingActor";
 
-		// Token: 0x0400DAD9 RID: 56025
+		// Token: 0x04002FDE RID: 12254
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400DADA RID: 56026
+		// Token: 0x04002FDF RID: 12255
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400DADB RID: 56027
+		// Token: 0x04002FE0 RID: 12256
 		internal static int __PropertyOffset_bUseAsyncTrace;
 
-		// Token: 0x0400DADC RID: 56028
+		// Token: 0x04002FE1 RID: 12257
 		internal static int __PropertyOffset_bDebugAsyncStats;
 
-		// Token: 0x0400DADD RID: 56029
+		// Token: 0x04002FE2 RID: 12258
 		private static IntPtr __P_FS_PointToIndex_Local_Double_NativeFunctionPtr;
 
-		// Token: 0x0400DADE RID: 56030
+		// Token: 0x04002FE3 RID: 12259
 		private static IntPtr __P_FS_IsPointInTriangle_ZProjection_With_EPS_NativeFunctionPtr;
 
-		// Token: 0x0400DADF RID: 56031
+		// Token: 0x04002FE4 RID: 12260
 		private static IntPtr __P_FS_IsPointInTriangle_ZProjection_NativeFunctionPtr;
 
-		// Token: 0x0400DAE0 RID: 56032
+		// Token: 0x04002FE5 RID: 12261
 		private static IntPtr __P_FS_IsPlayerOutOfRayCastingRange2D_NativeFunctionPtr;
 
-		// Token: 0x0400DAE1 RID: 56033
+		// Token: 0x04002FE6 RID: 12262
 		private static IntPtr __P_FS_InitializeArrays_NativeFunctionPtr;
 
-		// Token: 0x0400DAE2 RID: 56034
+		// Token: 0x04002FE7 RID: 12263
 		private static IntPtr __P_FS_DetectPlayer_Two_With_EPS_NativeFunctionPtr;
 
-		// Token: 0x0400DAE3 RID: 56035
+		// Token: 0x04002FE8 RID: 12264
 		private static IntPtr __P_FS_DetectPlayer_Two_NativeFunctionPtr;
 
-		// Token: 0x0400DAE4 RID: 56036
+		// Token: 0x04002FE9 RID: 12265
 		private static IntPtr __P_FS_ComputeTilt_ByHeightH2_NativeFunctionPtr;
 
-		// Token: 0x0400DAE5 RID: 56037
+		// Token: 0x04002FEA RID: 12266
 		private static IntPtr __P_FS_CheckFrontObstacle2_VertexBuffer_NativeFunctionPtr;
 
-		// Token: 0x0400DAE6 RID: 56038
+		// Token: 0x04002FEB RID: 12267
 		private static IntPtr __P_FS_CheckFrontObstacle2_Shuffled_NativeFunctionPtr;
 
-		// Token: 0x0400DAE7 RID: 56039
+		// Token: 0x04002FEC RID: 12268
 		private static IntPtr __P_FS_CheckFrontObstacle2_NativeFunctionPtr;
 
-		// Token: 0x02003119 RID: 12569
+		// Token: 0x02000BEE RID: 3054
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __P_FS_PointToIndex_Local_Double_FunctionParams
 		{
-			// Token: 0x04016EAF RID: 93871
+			// Token: 0x04005DA9 RID: 23977
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EB0 RID: 93872
+			// Token: 0x04005DAA RID: 23978
 			[FieldOffset(8)]
 			public int N;
 
-			// Token: 0x04016EB1 RID: 93873
+			// Token: 0x04005DAB RID: 23979
 			[FieldOffset(16)]
 			public double __Result;
 		}
 
-		// Token: 0x0200311A RID: 12570
+		// Token: 0x02000BEF RID: 3055
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __P_FS_IsPointInTriangle_ZProjection_With_EPS_FunctionParams
 		{
-			// Token: 0x04016EB2 RID: 93874
+			// Token: 0x04005DAC RID: 23980
 			[FieldOffset(0)]
 			public FVector P;
 
-			// Token: 0x04016EB3 RID: 93875
+			// Token: 0x04005DAD RID: 23981
 			[FieldOffset(12)]
 			public FVector A;
 
-			// Token: 0x04016EB4 RID: 93876
+			// Token: 0x04005DAE RID: 23982
 			[FieldOffset(24)]
 			public FVector B;
 
-			// Token: 0x04016EB5 RID: 93877
+			// Token: 0x04005DAF RID: 23983
 			[FieldOffset(36)]
 			public FVector C;
 
-			// Token: 0x04016EB6 RID: 93878
+			// Token: 0x04005DB0 RID: 23984
 			[FieldOffset(48)]
 			public float EPS;
 
-			// Token: 0x04016EB7 RID: 93879
+			// Token: 0x04005DB1 RID: 23985
 			[FieldOffset(52)]
 			public float OutDistance;
 
-			// Token: 0x04016EB8 RID: 93880
+			// Token: 0x04005DB2 RID: 23986
 			[FieldOffset(56)]
 			public float Epsilon;
 
-			// Token: 0x04016EB9 RID: 93881
+			// Token: 0x04005DB3 RID: 23987
 			[FieldOffset(60)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200311B RID: 12571
+		// Token: 0x02000BF0 RID: 3056
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 60)]
 		protected ref struct __P_FS_IsPointInTriangle_ZProjection_FunctionParams
 		{
-			// Token: 0x04016EBA RID: 93882
+			// Token: 0x04005DB4 RID: 23988
 			[FieldOffset(0)]
 			public FVector P;
 
-			// Token: 0x04016EBB RID: 93883
+			// Token: 0x04005DB5 RID: 23989
 			[FieldOffset(12)]
 			public FVector A;
 
-			// Token: 0x04016EBC RID: 93884
+			// Token: 0x04005DB6 RID: 23990
 			[FieldOffset(24)]
 			public FVector B;
 
-			// Token: 0x04016EBD RID: 93885
+			// Token: 0x04005DB7 RID: 23991
 			[FieldOffset(36)]
 			public FVector C;
 
-			// Token: 0x04016EBE RID: 93886
+			// Token: 0x04005DB8 RID: 23992
 			[FieldOffset(48)]
 			public float OutDistance;
 
-			// Token: 0x04016EBF RID: 93887
+			// Token: 0x04005DB9 RID: 23993
 			[FieldOffset(52)]
 			public float Epsilon;
 
-			// Token: 0x04016EC0 RID: 93888
+			// Token: 0x04005DBA RID: 23994
 			[FieldOffset(56)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200311C RID: 12572
+		// Token: 0x02000BF1 RID: 3057
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __P_FS_IsPlayerOutOfRayCastingRange2D_FunctionParams
 		{
-			// Token: 0x04016EC1 RID: 93889
+			// Token: 0x04005DBB RID: 23995
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EC2 RID: 93890
+			// Token: 0x04005DBC RID: 23996
 			[FieldOffset(8)]
 			public float InRayCastingDetectDis;
 
-			// Token: 0x04016EC3 RID: 93891
+			// Token: 0x04005DBD RID: 23997
 			[FieldOffset(12)]
 			public bool UseDetectOutofRange;
 
-			// Token: 0x04016EC4 RID: 93892
+			// Token: 0x04005DBE RID: 23998
 			[FieldOffset(13)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200311D RID: 12573
+		// Token: 0x02000BF2 RID: 3058
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __P_FS_InitializeArrays_FunctionParams
 		{
-			// Token: 0x04016EC5 RID: 93893
+			// Token: 0x04005DBF RID: 23999
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EC6 RID: 93894
+			// Token: 0x04005DC0 RID: 24000
 			[FieldOffset(8)]
 			public float RayCastingDetectDis;
 
-			// Token: 0x04016EC7 RID: 93895
+			// Token: 0x04005DC1 RID: 24001
 			[FieldOffset(16)]
 			public byte Dir;
 
-			// Token: 0x04016EC8 RID: 93896
+			// Token: 0x04005DC2 RID: 24002
 			[FieldOffset(32)]
 			public byte EndPos;
 
-			// Token: 0x04016EC9 RID: 93897
+			// Token: 0x04005DC3 RID: 24003
 			[FieldOffset(48)]
 			public byte Dis;
 
-			// Token: 0x04016ECA RID: 93898
+			// Token: 0x04005DC4 RID: 24004
 			[FieldOffset(64)]
 			public int ParticleCount;
 		}
 
-		// Token: 0x0200311E RID: 12574
+		// Token: 0x02000BF3 RID: 3059
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 72)]
 		protected ref struct __P_FS_DetectPlayer_Two_With_EPS_FunctionParams
 		{
-			// Token: 0x04016ECB RID: 93899
+			// Token: 0x04005DC5 RID: 24005
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016ECC RID: 93900
+			// Token: 0x04005DC6 RID: 24006
 			[FieldOffset(8)]
 			public double Index;
 
-			// Token: 0x04016ECD RID: 93901
+			// Token: 0x04005DC7 RID: 24007
 			[FieldOffset(16)]
 			public int ParticleCount;
 
-			// Token: 0x04016ECE RID: 93902
+			// Token: 0x04005DC8 RID: 24008
 			[FieldOffset(24)]
 			public byte Dis;
 
-			// Token: 0x04016ECF RID: 93903
+			// Token: 0x04005DC9 RID: 24009
 			[FieldOffset(40)]
 			public byte Dirs;
 
-			// Token: 0x04016ED0 RID: 93904
+			// Token: 0x04005DCA RID: 24010
 			[FieldOffset(56)]
 			public float eps;
 
-			// Token: 0x04016ED1 RID: 93905
+			// Token: 0x04005DCB RID: 24011
 			[FieldOffset(60)]
 			public float OutDistance;
 
-			// Token: 0x04016ED2 RID: 93906
+			// Token: 0x04005DCC RID: 24012
 			[FieldOffset(64)]
 			public bool __Result;
 		}
 
-		// Token: 0x0200311F RID: 12575
+		// Token: 0x02000BF4 RID: 3060
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __P_FS_DetectPlayer_Two_FunctionParams
 		{
-			// Token: 0x04016ED3 RID: 93907
+			// Token: 0x04005DCD RID: 24013
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016ED4 RID: 93908
+			// Token: 0x04005DCE RID: 24014
 			[FieldOffset(8)]
 			public double Index;
 
-			// Token: 0x04016ED5 RID: 93909
+			// Token: 0x04005DCF RID: 24015
 			[FieldOffset(16)]
 			public int ParticleCount;
 
-			// Token: 0x04016ED6 RID: 93910
+			// Token: 0x04005DD0 RID: 24016
 			[FieldOffset(24)]
 			public byte Dis;
 
-			// Token: 0x04016ED7 RID: 93911
+			// Token: 0x04005DD1 RID: 24017
 			[FieldOffset(40)]
 			public byte Dirs;
 
-			// Token: 0x04016ED8 RID: 93912
+			// Token: 0x04005DD2 RID: 24018
 			[FieldOffset(56)]
 			public float OutDistance;
 
-			// Token: 0x04016ED9 RID: 93913
+			// Token: 0x04005DD3 RID: 24019
 			[FieldOffset(60)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003120 RID: 12576
+		// Token: 0x02000BF5 RID: 3061
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 96)]
 		protected ref struct __P_FS_ComputeTilt_ByHeightH2_FunctionParams
 		{
-			// Token: 0x04016EDA RID: 93914
+			// Token: 0x04005DD4 RID: 24020
 			[FieldOffset(0)]
 			public FVectorDouble LastFrameNormal;
 
-			// Token: 0x04016EDB RID: 93915
+			// Token: 0x04005DD5 RID: 24021
 			[FieldOffset(24)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EDC RID: 93916
+			// Token: 0x04005DD6 RID: 24022
 			[FieldOffset(32)]
 			public float RayCastingDetectRange;
 
-			// Token: 0x04016EDD RID: 93917
+			// Token: 0x04005DD7 RID: 24023
 			[FieldOffset(40)]
 			public double MaxDegreeAngle;
 
-			// Token: 0x04016EDE RID: 93918
+			// Token: 0x04005DD8 RID: 24024
 			[FieldOffset(48)]
 			public float MinActiveRadius;
 
-			// Token: 0x04016EDF RID: 93919
+			// Token: 0x04005DD9 RID: 24025
 			[FieldOffset(52)]
 			public float MaxActiveRadius;
 
-			// Token: 0x04016EE0 RID: 93920
+			// Token: 0x04005DDA RID: 24026
 			[FieldOffset(56)]
 			public double FollowSpeedRate;
 
-			// Token: 0x04016EE1 RID: 93921
+			// Token: 0x04005DDB RID: 24027
 			[FieldOffset(64)]
 			public double ReturnSpeedRate;
 
-			// Token: 0x04016EE2 RID: 93922
+			// Token: 0x04005DDC RID: 24028
 			[FieldOffset(72)]
 			public bool bPlayerColliding;
 
-			// Token: 0x04016EE3 RID: 93923
+			// Token: 0x04005DDD RID: 24029
 			[FieldOffset(73)]
 			public bool bLinear;
 
-			// Token: 0x04016EE4 RID: 93924
+			// Token: 0x04005DDE RID: 24030
 			[FieldOffset(74)]
 			public bool OutDebugBlockReturn;
 
-			// Token: 0x04016EE5 RID: 93925
+			// Token: 0x04005DDF RID: 24031
 			[FieldOffset(76)]
 			public float ReturnBlockVerticalLimit;
 
-			// Token: 0x04016EE6 RID: 93926
+			// Token: 0x04005DE0 RID: 24032
 			[FieldOffset(80)]
 			public float ReturnBlockSwitchThreshold;
 
-			// Token: 0x04016EE7 RID: 93927
+			// Token: 0x04005DE1 RID: 24033
 			[FieldOffset(84)]
 			public FRotator __Result;
 		}
 
-		// Token: 0x02003121 RID: 12577
+		// Token: 0x02000BF6 RID: 3062
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 168)]
 		protected ref struct __P_FS_CheckFrontObstacle2_VertexBuffer_FunctionParams
 		{
-			// Token: 0x04016EE8 RID: 93928
+			// Token: 0x04005DE2 RID: 24034
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EE9 RID: 93929
+			// Token: 0x04005DE3 RID: 24035
 			[FieldOffset(8)]
 			public float RayCastingDetectDis;
 
-			// Token: 0x04016EEA RID: 93930
+			// Token: 0x04005DE4 RID: 24036
 			[FieldOffset(16)]
 			public IntPtr WorldContextObject;
 
-			// Token: 0x04016EEB RID: 93931
+			// Token: 0x04005DE5 RID: 24037
 			[FieldOffset(24)]
 			public TEnumAsByte<ETraceTypeQuery> TraceChannel;
 
-			// Token: 0x04016EEC RID: 93932
+			// Token: 0x04005DE6 RID: 24038
 			[FieldOffset(28)]
 			public float OutDistance;
 
-			// Token: 0x04016EED RID: 93933
+			// Token: 0x04005DE7 RID: 24039
 			[FieldOffset(32)]
 			public byte Dir;
 
-			// Token: 0x04016EEE RID: 93934
+			// Token: 0x04005DE8 RID: 24040
 			[FieldOffset(48)]
 			public byte EndPos;
 
-			// Token: 0x04016EEF RID: 93935
+			// Token: 0x04005DE9 RID: 24041
 			[FieldOffset(64)]
 			public byte Dis;
 
-			// Token: 0x04016EF0 RID: 93936
+			// Token: 0x04005DEA RID: 24042
 			[FieldOffset(80)]
 			public bool debugLine;
 
-			// Token: 0x04016EF1 RID: 93937
+			// Token: 0x04005DEB RID: 24043
 			[FieldOffset(84)]
 			public int CountIndex;
 
-			// Token: 0x04016EF2 RID: 93938
+			// Token: 0x04005DEC RID: 24044
 			[FieldOffset(88)]
 			public int BatchSize;
 
-			// Token: 0x04016EF3 RID: 93939
+			// Token: 0x04005DED RID: 24045
 			[FieldOffset(92)]
 			public int ParticleCount;
 
-			// Token: 0x04016EF4 RID: 93940
+			// Token: 0x04005DEE RID: 24046
 			[FieldOffset(96)]
 			public int OutNewCountIndex;
 
-			// Token: 0x04016EF5 RID: 93941
+			// Token: 0x04005DEF RID: 24047
 			[FieldOffset(104)]
 			public byte ActorsToIgnore;
 
-			// Token: 0x04016EF6 RID: 93942
+			// Token: 0x04005DF0 RID: 24048
 			[FieldOffset(120)]
 			public bool doNotNeedRayCasting;
 
-			// Token: 0x04016EF7 RID: 93943
+			// Token: 0x04005DF1 RID: 24049
 			[FieldOffset(121)]
 			public bool isBeginPlayOrNot;
 
-			// Token: 0x04016EF8 RID: 93944
+			// Token: 0x04005DF2 RID: 24050
 			[FieldOffset(128)]
 			public byte SkipTraceBoxOrigins;
 
-			// Token: 0x04016EF9 RID: 93945
+			// Token: 0x04005DF3 RID: 24051
 			[FieldOffset(144)]
 			public byte SkipTraceBoxExtents;
 
-			// Token: 0x04016EFA RID: 93946
+			// Token: 0x04005DF4 RID: 24052
 			[FieldOffset(160)]
 			public int OutAsyncReadBack;
 		}
 
-		// Token: 0x02003122 RID: 12578
+		// Token: 0x02000BF7 RID: 3063
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 176)]
 		protected ref struct __P_FS_CheckFrontObstacle2_Shuffled_FunctionParams
 		{
-			// Token: 0x04016EFB RID: 93947
+			// Token: 0x04005DF5 RID: 24053
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016EFC RID: 93948
+			// Token: 0x04005DF6 RID: 24054
 			[FieldOffset(8)]
 			public float RayCastingDetectDis;
 
-			// Token: 0x04016EFD RID: 93949
+			// Token: 0x04005DF7 RID: 24055
 			[FieldOffset(16)]
 			public IntPtr WorldContextObject;
 
-			// Token: 0x04016EFE RID: 93950
+			// Token: 0x04005DF8 RID: 24056
 			[FieldOffset(24)]
 			public TEnumAsByte<ETraceTypeQuery> TraceChannel;
 
-			// Token: 0x04016EFF RID: 93951
+			// Token: 0x04005DF9 RID: 24057
 			[FieldOffset(28)]
 			public float OutDistance;
 
-			// Token: 0x04016F00 RID: 93952
+			// Token: 0x04005DFA RID: 24058
 			[FieldOffset(32)]
 			public byte Dir;
 
-			// Token: 0x04016F01 RID: 93953
+			// Token: 0x04005DFB RID: 24059
 			[FieldOffset(48)]
 			public byte EndPos;
 
-			// Token: 0x04016F02 RID: 93954
+			// Token: 0x04005DFC RID: 24060
 			[FieldOffset(64)]
 			public byte Dis;
 
-			// Token: 0x04016F03 RID: 93955
+			// Token: 0x04005DFD RID: 24061
 			[FieldOffset(80)]
 			public byte ParamNames;
 
-			// Token: 0x04016F04 RID: 93956
+			// Token: 0x04005DFE RID: 24062
 			[FieldOffset(96)]
 			public IntPtr MID;
 
-			// Token: 0x04016F05 RID: 93957
+			// Token: 0x04005DFF RID: 24063
 			[FieldOffset(104)]
 			public bool debugLine;
 
-			// Token: 0x04016F06 RID: 93958
+			// Token: 0x04005E00 RID: 24064
 			[FieldOffset(108)]
 			public int CountIndex;
 
-			// Token: 0x04016F07 RID: 93959
+			// Token: 0x04005E01 RID: 24065
 			[FieldOffset(112)]
 			public int BatchSize;
 
-			// Token: 0x04016F08 RID: 93960
+			// Token: 0x04005E02 RID: 24066
 			[FieldOffset(116)]
 			public int ParticleCount;
 
-			// Token: 0x04016F09 RID: 93961
+			// Token: 0x04005E03 RID: 24067
 			[FieldOffset(120)]
 			public int OutNewCountIndex;
 
-			// Token: 0x04016F0A RID: 93962
+			// Token: 0x04005E04 RID: 24068
 			[FieldOffset(128)]
 			public byte ActorsToIgnore;
 
-			// Token: 0x04016F0B RID: 93963
+			// Token: 0x04005E05 RID: 24069
 			[FieldOffset(144)]
 			public byte ShuffleOrder;
 
-			// Token: 0x04016F0C RID: 93964
+			// Token: 0x04005E06 RID: 24070
 			[FieldOffset(160)]
 			public FRandomStream Rng;
 
-			// Token: 0x04016F0D RID: 93965
+			// Token: 0x04005E07 RID: 24071
 			[FieldOffset(168)]
 			public bool bReshuffleWhenWrap;
 		}
 
-		// Token: 0x02003123 RID: 12579
+		// Token: 0x02000BF8 RID: 3064
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 144)]
 		protected ref struct __P_FS_CheckFrontObstacle2_FunctionParams
 		{
-			// Token: 0x04016F0E RID: 93966
+			// Token: 0x04005E08 RID: 24072
 			[FieldOffset(0)]
 			public IntPtr PlaneComponent;
 
-			// Token: 0x04016F0F RID: 93967
+			// Token: 0x04005E09 RID: 24073
 			[FieldOffset(8)]
 			public float RayCastingDetectDis;
 
-			// Token: 0x04016F10 RID: 93968
+			// Token: 0x04005E0A RID: 24074
 			[FieldOffset(16)]
 			public IntPtr WorldContextObject;
 
-			// Token: 0x04016F11 RID: 93969
+			// Token: 0x04005E0B RID: 24075
 			[FieldOffset(24)]
 			public TEnumAsByte<ETraceTypeQuery> TraceChannel;
 
-			// Token: 0x04016F12 RID: 93970
+			// Token: 0x04005E0C RID: 24076
 			[FieldOffset(28)]
 			public float OutDistance;
 
-			// Token: 0x04016F13 RID: 93971
+			// Token: 0x04005E0D RID: 24077
 			[FieldOffset(32)]
 			public byte Dir;
 
-			// Token: 0x04016F14 RID: 93972
+			// Token: 0x04005E0E RID: 24078
 			[FieldOffset(48)]
 			public byte EndPos;
 
-			// Token: 0x04016F15 RID: 93973
+			// Token: 0x04005E0F RID: 24079
 			[FieldOffset(64)]
 			public byte Dis;
 
-			// Token: 0x04016F16 RID: 93974
+			// Token: 0x04005E10 RID: 24080
 			[FieldOffset(80)]
 			public byte ParamNames;
 
-			// Token: 0x04016F17 RID: 93975
+			// Token: 0x04005E11 RID: 24081
 			[FieldOffset(96)]
 			public IntPtr MID;
 
-			// Token: 0x04016F18 RID: 93976
+			// Token: 0x04005E12 RID: 24082
 			[FieldOffset(104)]
 			public bool debugLine;
 
-			// Token: 0x04016F19 RID: 93977
+			// Token: 0x04005E13 RID: 24083
 			[FieldOffset(108)]
 			public int CountIndex;
 
-			// Token: 0x04016F1A RID: 93978
+			// Token: 0x04005E14 RID: 24084
 			[FieldOffset(112)]
 			public int BatchSize;
 
-			// Token: 0x04016F1B RID: 93979
+			// Token: 0x04005E15 RID: 24085
 			[FieldOffset(116)]
 			public int ParticleCount;
 
-			// Token: 0x04016F1C RID: 93980
+			// Token: 0x04005E16 RID: 24086
 			[FieldOffset(120)]
 			public int OutNewCountIndex;
 
-			// Token: 0x04016F1D RID: 93981
+			// Token: 0x04005E17 RID: 24087
 			[FieldOffset(128)]
 			public byte ActorsToIgnore;
 		}

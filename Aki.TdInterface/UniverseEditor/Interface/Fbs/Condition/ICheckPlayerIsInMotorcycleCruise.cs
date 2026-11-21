@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AF0 RID: 19184
+	// Token: 0x02004FCB RID: 20427
 	public struct ICheckPlayerIsInMotorcycleCruise : IFlatbufferObject
 	{
-		// Token: 0x17008B1A RID: 35610
-		// (get) Token: 0x0601E254 RID: 123476 RVA: 0x0043A5AE File Offset: 0x004387AE
+		// Token: 0x1700921B RID: 37403
+		// (get) Token: 0x0601FD95 RID: 130453 RVA: 0x0046C65A File Offset: 0x0046A85A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E255 RID: 123477 RVA: 0x0043A5BB File Offset: 0x004387BB
+		// Token: 0x0601FD96 RID: 130454 RVA: 0x0046C667 File Offset: 0x0046A867
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E256 RID: 123478 RVA: 0x0043A5C4 File Offset: 0x004387C4
+		// Token: 0x0601FD97 RID: 130455 RVA: 0x0046C670 File Offset: 0x0046A870
 		public static ICheckPlayerIsInMotorcycleCruise GetRootAsICheckPlayerIsInMotorcycleCruise(ByteBuffer _bb)
 		{
 			return ICheckPlayerIsInMotorcycleCruise.GetRootAsICheckPlayerIsInMotorcycleCruise(_bb, default(ICheckPlayerIsInMotorcycleCruise));
 		}
 
-		// Token: 0x0601E257 RID: 123479 RVA: 0x0043A5E0 File Offset: 0x004387E0
+		// Token: 0x0601FD98 RID: 130456 RVA: 0x0046C68C File Offset: 0x0046A88C
 		public static ICheckPlayerIsInMotorcycleCruise GetRootAsICheckPlayerIsInMotorcycleCruise(ByteBuffer _bb, ICheckPlayerIsInMotorcycleCruise obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E258 RID: 123480 RVA: 0x0043A5FD File Offset: 0x004387FD
+		// Token: 0x0601FD99 RID: 130457 RVA: 0x0046C6A9 File Offset: 0x0046A8A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E259 RID: 123481 RVA: 0x0043A60C File Offset: 0x0043880C
+		// Token: 0x0601FD9A RID: 130458 RVA: 0x0046C6B8 File Offset: 0x0046A8B8
 		public ICheckPlayerIsInMotorcycleCruise __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008B1B RID: 35611
-		// (get) Token: 0x0601E25A RID: 123482 RVA: 0x0043A61C File Offset: 0x0043881C
+		// Token: 0x1700921C RID: 37404
+		// (get) Token: 0x0601FD9B RID: 130459 RVA: 0x0046C6C8 File Offset: 0x0046A8C8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008B1C RID: 35612
-		// (get) Token: 0x0601E25B RID: 123483 RVA: 0x0043A658 File Offset: 0x00438858
+		// Token: 0x1700921D RID: 37405
+		// (get) Token: 0x0601FD9C RID: 130460 RVA: 0x0046C704 File Offset: 0x0046A904
 		public bool IsInMotorcycleCruise
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E25C RID: 123484 RVA: 0x0043A697 File Offset: 0x00438897
+		// Token: 0x0601FD9D RID: 130461 RVA: 0x0046C743 File Offset: 0x0046A943
 		public static Offset<ICheckPlayerIsInMotorcycleCruise> CreateICheckPlayerIsInMotorcycleCruise(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool IsInMotorcycleCruise = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerIsInMotorcycleCruise.EndICheckPlayerIsInMotorcycleCruise(builder);
 		}
 
-		// Token: 0x0601E25D RID: 123485 RVA: 0x0043A6B4 File Offset: 0x004388B4
+		// Token: 0x0601FD9E RID: 130462 RVA: 0x0046C760 File Offset: 0x0046A960
 		public static void StartICheckPlayerIsInMotorcycleCruise(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601E25E RID: 123486 RVA: 0x0043A6BD File Offset: 0x004388BD
+		// Token: 0x0601FD9F RID: 130463 RVA: 0x0046C769 File Offset: 0x0046A969
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E25F RID: 123487 RVA: 0x0043A6C8 File Offset: 0x004388C8
+		// Token: 0x0601FDA0 RID: 130464 RVA: 0x0046C774 File Offset: 0x0046A974
 		public static void AddIsInMotorcycleCruise(FlatBufferBuilder builder, bool isInMotorcycleCruise)
 		{
 			builder.AddBool(1, isInMotorcycleCruise, false);
 		}
 
-		// Token: 0x0601E260 RID: 123488 RVA: 0x0043A6D3 File Offset: 0x004388D3
+		// Token: 0x0601FDA1 RID: 130465 RVA: 0x0046C77F File Offset: 0x0046A97F
 		public static Offset<ICheckPlayerIsInMotorcycleCruise> EndICheckPlayerIsInMotorcycleCruise(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerIsInMotorcycleCruise>(builder.EndTable());
 		}
 
-		// Token: 0x0601E261 RID: 123489 RVA: 0x0043A6E0 File Offset: 0x004388E0
+		// Token: 0x0601FDA2 RID: 130466 RVA: 0x0046C78C File Offset: 0x0046A98C
 		public ICheckPlayerIsInMotorcycleCruiseT UnPack()
 		{
 			ICheckPlayerIsInMotorcycleCruiseT checkPlayerIsInMotorcycleCruiseT = new ICheckPlayerIsInMotorcycleCruiseT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkPlayerIsInMotorcycleCruiseT;
 		}
 
-		// Token: 0x0601E262 RID: 123490 RVA: 0x0043A6FB File Offset: 0x004388FB
+		// Token: 0x0601FDA3 RID: 130467 RVA: 0x0046C7A7 File Offset: 0x0046A9A7
 		public void UnPackTo(ICheckPlayerIsInMotorcycleCruiseT _o)
 		{
 			_o.Type = this.Type;
 			_o.IsInMotorcycleCruise = this.IsInMotorcycleCruise;
 		}
 
-		// Token: 0x0601E263 RID: 123491 RVA: 0x0043A718 File Offset: 0x00438918
+		// Token: 0x0601FDA4 RID: 130468 RVA: 0x0046C7C4 File Offset: 0x0046A9C4
 		public static Offset<ICheckPlayerIsInMotorcycleCruise> Pack(FlatBufferBuilder builder, ICheckPlayerIsInMotorcycleCruiseT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckPlayerIsInMotorcycleCruise.CreateICheckPlayerIsInMotorcycleCruise(builder, _o.Type, _o.IsInMotorcycleCruise);
 		}
 
-		// Token: 0x0400D381 RID: 54145
+		// Token: 0x0400DE72 RID: 56946
 		private Table __p;
 	}
 }

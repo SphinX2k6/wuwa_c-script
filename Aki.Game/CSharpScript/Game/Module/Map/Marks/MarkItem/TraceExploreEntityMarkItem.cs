@@ -4,19 +4,18 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054FD RID: 21757
+	// Token: 0x020044D0 RID: 17616
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TraceExploreEntityMarkItem : ServerMarkItem
 	{
-		// Token: 0x17008595 RID: 34197
-		// (get) Token: 0x0603795E RID: 227678 RVA: 0x00D32A3F File Offset: 0x00D30C3F
-		// (set) Token: 0x0603795F RID: 227679 RVA: 0x00D32A4C File Offset: 0x00D30C4C
+		// Token: 0x17005930 RID: 22832
+		// (get) Token: 0x0602C82D RID: 182317 RVA: 0x00C80A1B File Offset: 0x00C7EC1B
+		// (set) Token: 0x0602C82E RID: 182318 RVA: 0x00C80A28 File Offset: 0x00C7EC28
 		public MapMark MarkConfig
 		{
 			get
@@ -29,8 +28,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008596 RID: 34198
-		// (get) Token: 0x06037960 RID: 227680 RVA: 0x00D32A5A File Offset: 0x00D30C5A
+		// Token: 0x17005931 RID: 22833
+		// (get) Token: 0x0602C82F RID: 182319 RVA: 0x00C80A36 File Offset: 0x00C7EC36
 		public override int MapId
 		{
 			get
@@ -39,8 +38,8 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x17008597 RID: 34199
-		// (get) Token: 0x06037961 RID: 227681 RVA: 0x00D32A67 File Offset: 0x00D30C67
+		// Token: 0x17005932 RID: 22834
+		// (get) Token: 0x0602C830 RID: 182320 RVA: 0x00C80A43 File Offset: 0x00C7EC43
 		public override int? InstanceDungeonId
 		{
 			get
@@ -49,12 +48,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037962 RID: 227682 RVA: 0x00D32A74 File Offset: 0x00D30C74
+		// Token: 0x0602C831 RID: 182321 RVA: 0x00C80A50 File Offset: 0x00C7EC50
 		public TraceExploreEntityMarkItem(DynamicMarkCreateInfo markPointInfo, UUIItem parent, EMapType mapType, float markScale) : base(markPointInfo, parent, mapType, markScale)
 		{
 		}
 
-		// Token: 0x06037963 RID: 227683 RVA: 0x00D32A84 File Offset: 0x00D30C84
+		// Token: 0x0602C832 RID: 182322 RVA: 0x00C80A60 File Offset: 0x00C7EC60
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
@@ -64,19 +63,19 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.UpdateVisibleRelativeState();
 		}
 
-		// Token: 0x06037964 RID: 227684 RVA: 0x00D32ABC File Offset: 0x00D30CBC
+		// Token: 0x0602C833 RID: 182323 RVA: 0x00C80A98 File Offset: 0x00C7EC98
 		public void SetConfigId(int configId)
 		{
 			this.ServerMarkInfo.MarkConfigId = configId;
 			this.OnSetConfigId(configId);
 		}
 
-		// Token: 0x06037965 RID: 227685 RVA: 0x00D32AD4 File Offset: 0x00D30CD4
+		// Token: 0x0602C834 RID: 182324 RVA: 0x00C80AB0 File Offset: 0x00C7ECB0
 		public void OnSetConfigId(int configId)
 		{
 			MapMark value = MapConfig.Instance.GetConfigMark(configId).Value;
 			this.MarkConfigInternal = new MapMark?(value);
-			base.MarkItemEntity.GetComponent<MarkConfigComponent>(EMapComponent.MarkConfig).Config = value;
+			this.Config = new MapMarkConfig(value);
 			this.OnAfterSetConfigId(new MarkItemData
 			{
 				ShowRange = value.ShowRange(),
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			});
 		}
 
-		// Token: 0x06037966 RID: 227686 RVA: 0x00D32B74 File Offset: 0x00D30D74
+		// Token: 0x0602C835 RID: 182325 RVA: 0x00C80B44 File Offset: 0x00C7ED44
 		public override bool CheckCanShowView()
 		{
 			if (!this.CanConditionShowView())
@@ -109,21 +108,21 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return true;
 		}
 
-		// Token: 0x06037967 RID: 227687 RVA: 0x00D32BE4 File Offset: 0x00D30DE4
+		// Token: 0x0602C836 RID: 182326 RVA: 0x00C80BB4 File Offset: 0x00C7EDB4
 		public bool CanConditionShowView()
 		{
 			HashSet<int> pendingAddTempMapMarkList = MapModel.Instance.GetPendingAddTempMapMarkList();
-			base.MarkItemEntity.IsTempMapMark = pendingAddTempMapMarkList.Contains(this.MarkId);
-			return base.MarkItemEntity.IsTempMapMark && this.IsTempMapMarkShow();
+			this.IsTempMapMark = pendingAddTempMapMarkList.Contains(this.MarkId);
+			return this.IsTempMapMark && this.IsTempMapMarkShow();
 		}
 
-		// Token: 0x06037968 RID: 227688 RVA: 0x00D32C2C File Offset: 0x00D30E2C
+		// Token: 0x0602C837 RID: 182327 RVA: 0x00C80BF4 File Offset: 0x00C7EDF4
 		public override string GetTitleText()
 		{
 			return MapConfig.Instance.GetLocalText(this.MarkConfig.MarkTitle);
 		}
 
-		// Token: 0x0401D3FF RID: 119807
+		// Token: 0x04017E85 RID: 97925
 		private MapMark? MarkConfigInternal;
 	}
 }

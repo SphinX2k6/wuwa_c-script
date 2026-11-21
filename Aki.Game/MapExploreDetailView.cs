@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AC9 RID: 6857
+// Token: 0x02000F88 RID: 3976
 [NullableContext(1)]
 [Nullable(0)]
 public class MapExploreDetailView : UiTickViewBase
 {
-	// Token: 0x0600CB4F RID: 52047 RVA: 0x002E5B9F File Offset: 0x002E3D9F
+	// Token: 0x06009F60 RID: 40800 RVA: 0x002F0CFF File Offset: 0x002EEEFF
 	public MapExploreDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CB50 RID: 52048 RVA: 0x002E5BC0 File Offset: 0x002E3DC0
+	// Token: 0x06009F61 RID: 40801 RVA: 0x002F0D20 File Offset: 0x002EEF20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 32;
@@ -117,7 +116,7 @@ public class MapExploreDetailView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CB51 RID: 52049 RVA: 0x002E6134 File Offset: 0x002E4334
+	// Token: 0x06009F62 RID: 40802 RVA: 0x002F1294 File Offset: 0x002EF494
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapExploreDetailView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -128,7 +127,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB52 RID: 52050 RVA: 0x002E6178 File Offset: 0x002E4378
+	// Token: 0x06009F63 RID: 40803 RVA: 0x002F12D8 File Offset: 0x002EF4D8
 	private UniTask CreateStageRewardPanel()
 	{
 		MapExploreDetailView.<CreateStageRewardPanel>d__14 <CreateStageRewardPanel>d__;
@@ -139,7 +138,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return <CreateStageRewardPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB53 RID: 52051 RVA: 0x002E61BC File Offset: 0x002E43BC
+	// Token: 0x06009F64 RID: 40804 RVA: 0x002F131C File Offset: 0x002EF51C
 	private UniTask CreatePlayProgressPanel()
 	{
 		MapExploreDetailView.<CreatePlayProgressPanel>d__15 <CreatePlayProgressPanel>d__;
@@ -150,7 +149,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return <CreatePlayProgressPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB54 RID: 52052 RVA: 0x002E6200 File Offset: 0x002E4400
+	// Token: 0x06009F65 RID: 40805 RVA: 0x002F1360 File Offset: 0x002EF560
 	private UniTask CreateExploreDetailLockItem()
 	{
 		MapExploreDetailView.<CreateExploreDetailLockItem>d__16 <CreateExploreDetailLockItem>d__;
@@ -161,7 +160,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return <CreateExploreDetailLockItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB55 RID: 52053 RVA: 0x002E6244 File Offset: 0x002E4444
+	// Token: 0x06009F66 RID: 40806 RVA: 0x002F13A4 File Offset: 0x002EF5A4
 	private UniTask CreateExploreTrackButton()
 	{
 		MapExploreDetailView.<CreateExploreTrackButton>d__17 <CreateExploreTrackButton>d__;
@@ -172,7 +171,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return <CreateExploreTrackButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB56 RID: 52054 RVA: 0x002E6287 File Offset: 0x002E4487
+	// Token: 0x06009F67 RID: 40807 RVA: 0x002F13E7 File Offset: 0x002EF5E7
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(25);
@@ -183,16 +182,14 @@ public class MapExploreDetailView : UiTickViewBase
 		text.SetText("0", true);
 	}
 
-	// Token: 0x0600CB57 RID: 52055 RVA: 0x002E62A4 File Offset: 0x002E44A4
+	// Token: 0x06009F68 RID: 40808 RVA: 0x002F1404 File Offset: 0x002EF604
 	private void GetRewardCallback()
 	{
-		int[] rewardIds = (from data in this.CurAreaData.GetStageRewardDataList()
-		where data.State == EDailyActiveState.FinishedAndNotTaken
-		select data.Id).ToArray<int>();
+		int[] rewardIds = NoLinq.WhereSelectToArray<DailyActivityDefine.IActivityGoalData, int>(this.CurAreaData.GetStageRewardDataList(), (DailyActivityDefine.IActivityGoalData reward) => reward.State == EDailyActiveState.FinishedAndNotTaken, (DailyActivityDefine.IActivityGoalData reward) => reward.Id);
 		ExploreProgressController.Instance.ReceiveAreaStageRewardAsyncRequest(rewardIds);
 	}
 
-	// Token: 0x0600CB58 RID: 52056 RVA: 0x002E6318 File Offset: 0x002E4518
+	// Token: 0x06009F69 RID: 40809 RVA: 0x002F146C File Offset: 0x002EF66C
 	private void UpdateStageRewardByArea()
 	{
 		MapAreaRewardPanel stageRewardPanel = this.StageRewardPanel;
@@ -209,7 +206,7 @@ public class MapExploreDetailView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600CB59 RID: 52057 RVA: 0x002E6380 File Offset: 0x002E4580
+	// Token: 0x06009F6A RID: 40810 RVA: 0x002F14D4 File Offset: 0x002EF6D4
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.OnReceiveAreaStageRewardResponse, new Action<IReadOnlyList<int>>(this.EventReceiveAreaStageRewardResponse));
@@ -220,7 +217,7 @@ public class MapExploreDetailView : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.OpenExploreAreaDetailViewFromMap, new <>f__AnonymousDelegate6<int, EExploreType?>(this.EventOpenExploreAreaDetailViewFromMap));
 	}
 
-	// Token: 0x0600CB5A RID: 52058 RVA: 0x002E6438 File Offset: 0x002E4638
+	// Token: 0x06009F6B RID: 40811 RVA: 0x002F158C File Offset: 0x002EF78C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnReceiveAreaStageRewardResponse, new Action<IReadOnlyList<int>>(this.EventReceiveAreaStageRewardResponse));
@@ -231,7 +228,7 @@ public class MapExploreDetailView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OpenExploreAreaDetailViewFromMap, new <>f__AnonymousDelegate6<int, EExploreType?>(this.EventOpenExploreAreaDetailViewFromMap));
 	}
 
-	// Token: 0x0600CB5B RID: 52059 RVA: 0x002E64ED File Offset: 0x002E46ED
+	// Token: 0x06009F6C RID: 40812 RVA: 0x002F1641 File Offset: 0x002EF841
 	protected override void OnBeforeShow()
 	{
 		if (!this.UpdateViewByAreaData())
@@ -240,21 +237,21 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB5C RID: 52060 RVA: 0x002E64FE File Offset: 0x002E46FE
+	// Token: 0x06009F6D RID: 40813 RVA: 0x002F1652 File Offset: 0x002EF852
 	protected override void OnBeforeDestroy()
 	{
 		this.StageRewardPanel = null;
 		this.PopupCaption = null;
 	}
 
-	// Token: 0x0600CB5D RID: 52061 RVA: 0x002E6510 File Offset: 0x002E4710
+	// Token: 0x06009F6E RID: 40814 RVA: 0x002F1664 File Offset: 0x002EF864
 	protected void InitExploreScroll()
 	{
 		UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(3);
 		this.ExploreScroll = new LoopScrollView<MapExploreDetailItem, ExploreAreaItemData>(loopScrollViewComponent, base.GetItem(20).GetOwner() as AUIBaseActor, new Func<MapExploreDetailItem>(this.InitHandExploreDetailItem), false);
 	}
 
-	// Token: 0x0600CB5E RID: 52062 RVA: 0x002E6550 File Offset: 0x002E4750
+	// Token: 0x06009F6F RID: 40815 RVA: 0x002F16A4 File Offset: 0x002EF8A4
 	private void UpdateExploreScrollList()
 	{
 		LoopScrollView<MapExploreDetailItem, ExploreAreaItemData> exploreScroll = this.ExploreScroll;
@@ -265,7 +262,7 @@ public class MapExploreDetailView : UiTickViewBase
 		exploreScroll.RefreshByData(this.CurAreaData.GetAllExploreAreaItemData(), false, new Action(this.ExploreScrollSelectIndex), true);
 	}
 
-	// Token: 0x0600CB5F RID: 52063 RVA: 0x002E657C File Offset: 0x002E477C
+	// Token: 0x06009F70 RID: 40816 RVA: 0x002F16D0 File Offset: 0x002EF8D0
 	private void ExploreScrollSelectIndex()
 	{
 		int selectAreaItemIndex = this.GetSelectAreaItemIndex();
@@ -292,7 +289,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB60 RID: 52064 RVA: 0x002E65F4 File Offset: 0x002E47F4
+	// Token: 0x06009F71 RID: 40817 RVA: 0x002F1748 File Offset: 0x002EF948
 	private int GetSelectAreaItemIndex()
 	{
 		List<ExploreAreaItemData> allExploreAreaItemData = this.CurAreaData.GetAllExploreAreaItemData();
@@ -309,13 +306,13 @@ public class MapExploreDetailView : UiTickViewBase
 		return num;
 	}
 
-	// Token: 0x0600CB61 RID: 52065 RVA: 0x002E663E File Offset: 0x002E483E
+	// Token: 0x06009F72 RID: 40818 RVA: 0x002F1792 File Offset: 0x002EF992
 	private MapExploreDetailItem InitHandExploreDetailItem()
 	{
 		return new MapExploreDetailItem();
 	}
 
-	// Token: 0x0600CB62 RID: 52066 RVA: 0x002E6648 File Offset: 0x002E4848
+	// Token: 0x06009F73 RID: 40819 RVA: 0x002F179C File Offset: 0x002EF99C
 	private void OnAreaBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MapAreaShowView, new MapAreaShowViewParams
@@ -326,7 +323,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}, null);
 	}
 
-	// Token: 0x0600CB63 RID: 52067 RVA: 0x002E66A8 File Offset: 0x002E48A8
+	// Token: 0x06009F74 RID: 40820 RVA: 0x002F17FC File Offset: 0x002EF9FC
 	private void OnStoryBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MapExploreStoryView, new MapExploreStoryViewParams
@@ -335,7 +332,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}, new TOpenViewCallBack(this.AddViewToChild));
 	}
 
-	// Token: 0x0600CB64 RID: 52068 RVA: 0x002E66D8 File Offset: 0x002E48D8
+	// Token: 0x06009F75 RID: 40821 RVA: 0x002F182C File Offset: 0x002EFA2C
 	private void OnExploreToolTips()
 	{
 		ExploreAreaItemData curAreaItemData = this.CurAreaItemData;
@@ -346,7 +343,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB65 RID: 52069 RVA: 0x002E671A File Offset: 0x002E491A
+	// Token: 0x06009F76 RID: 40822 RVA: 0x002F186E File Offset: 0x002EFA6E
 	private void OnAreaTaskBtn()
 	{
 		if (this.CurAreaItemData != null)
@@ -355,7 +352,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB66 RID: 52070 RVA: 0x002E674F File Offset: 0x002E494F
+	// Token: 0x06009F77 RID: 40823 RVA: 0x002F18A3 File Offset: 0x002EFAA3
 	private void OnExploreProgressBarDetailBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MapPlayPointDetailView, new MapPlayPointDetailViewParams
@@ -364,7 +361,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}, new TOpenViewCallBack(this.AddViewToChild));
 	}
 
-	// Token: 0x0600CB67 RID: 52071 RVA: 0x002E677D File Offset: 0x002E497D
+	// Token: 0x06009F78 RID: 40824 RVA: 0x002F18D1 File Offset: 0x002EFAD1
 	private void AddViewToChild(bool success, int viewId)
 	{
 		if (success)
@@ -378,7 +375,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB68 RID: 52072 RVA: 0x002E679C File Offset: 0x002E499C
+	// Token: 0x06009F79 RID: 40825 RVA: 0x002F18F0 File Offset: 0x002EFAF0
 	private void OnExploreTrackBtn(int index)
 	{
 		if (this.CurAreaItemData != null && !this.CurAreaItemData.IsUnlocked())
@@ -401,27 +398,27 @@ public class MapExploreDetailView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600CB69 RID: 52073 RVA: 0x002E680B File Offset: 0x002E4A0B
+	// Token: 0x06009F7A RID: 40826 RVA: 0x002F195F File Offset: 0x002EFB5F
 	private void OnCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600CB6A RID: 52074 RVA: 0x002E6814 File Offset: 0x002E4A14
+	// Token: 0x06009F7B RID: 40827 RVA: 0x002F1968 File Offset: 0x002EFB68
 	private void OnAreaChangeLeftBtn()
 	{
 		this.ChangeAreaDataByAddIndex(-1);
 		base.PlaySequence("SwitchLeft", null, false);
 	}
 
-	// Token: 0x0600CB6B RID: 52075 RVA: 0x002E682A File Offset: 0x002E4A2A
+	// Token: 0x06009F7C RID: 40828 RVA: 0x002F197E File Offset: 0x002EFB7E
 	private void OnAreaChangeRightBtn()
 	{
 		this.ChangeAreaDataByAddIndex(1);
 		base.PlaySequence("SwitchRight", null, false);
 	}
 
-	// Token: 0x0600CB6C RID: 52076 RVA: 0x002E6840 File Offset: 0x002E4A40
+	// Token: 0x06009F7D RID: 40829 RVA: 0x002F1994 File Offset: 0x002EFB94
 	private void ChangeAreaDataByAddIndex(int add)
 	{
 		int count = this.AreaDataList.Count;
@@ -436,7 +433,7 @@ public class MapExploreDetailView : UiTickViewBase
 		this.UpdateViewByAreaData();
 	}
 
-	// Token: 0x0600CB6D RID: 52077 RVA: 0x002E689C File Offset: 0x002E4A9C
+	// Token: 0x06009F7E RID: 40830 RVA: 0x002F19F0 File Offset: 0x002EFBF0
 	private bool UpdateViewByAreaData()
 	{
 		if (this.CurAreaData == null)
@@ -469,7 +466,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x0600CB6E RID: 52078 RVA: 0x002E6968 File Offset: 0x002E4B68
+	// Token: 0x06009F7F RID: 40831 RVA: 0x002F1ABC File Offset: 0x002EFCBC
 	private void UpdateAreaBase()
 	{
 		UUIText text = base.GetText(5);
@@ -497,7 +494,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB6F RID: 52079 RVA: 0x002E6A04 File Offset: 0x002E4C04
+	// Token: 0x06009F80 RID: 40832 RVA: 0x002F1B58 File Offset: 0x002EFD58
 	private void OnMapAreaShowClickArea(int areaId)
 	{
 		if (base.IsDestroyOrDestroying)
@@ -520,7 +517,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB70 RID: 52080 RVA: 0x002E6A5C File Offset: 0x002E4C5C
+	// Token: 0x06009F81 RID: 40833 RVA: 0x002F1BB0 File Offset: 0x002EFDB0
 	private bool UpdateAreaDataByAreaId(int areaId)
 	{
 		ExploreAreaData exploreAreaData = ExploreProgressModel.Instance.GetExploreAreaData(areaId);
@@ -546,7 +543,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x0600CB71 RID: 52081 RVA: 0x002E6B30 File Offset: 0x002E4D30
+	// Token: 0x06009F82 RID: 40834 RVA: 0x002F1C84 File Offset: 0x002EFE84
 	protected override void OnTick(float delta)
 	{
 		MapAreaRewardPanel stageRewardPanel = this.StageRewardPanel;
@@ -557,7 +554,7 @@ public class MapExploreDetailView : UiTickViewBase
 		stageRewardPanel.OnTickRefresh(delta);
 	}
 
-	// Token: 0x0600CB72 RID: 52082 RVA: 0x002E6B43 File Offset: 0x002E4D43
+	// Token: 0x06009F83 RID: 40835 RVA: 0x002F1C97 File Offset: 0x002EFE97
 	private void EventReceiveAreaStageRewardResponse(IReadOnlyList<int> rewardIds)
 	{
 		MapAreaRewardPanel stageRewardPanel = this.StageRewardPanel;
@@ -568,7 +565,7 @@ public class MapExploreDetailView : UiTickViewBase
 		stageRewardPanel.UpdateRewardIds(rewardIds);
 	}
 
-	// Token: 0x0600CB73 RID: 52083 RVA: 0x002E6B56 File Offset: 0x002E4D56
+	// Token: 0x06009F84 RID: 40836 RVA: 0x002F1CAA File Offset: 0x002EFEAA
 	private void EventAreaExploreProgressUpdate(int areaId)
 	{
 		ExploreAreaData curAreaData = this.CurAreaData;
@@ -584,14 +581,14 @@ public class MapExploreDetailView : UiTickViewBase
 		stageRewardPanel.RefreshProgressBarDynamic(this.CurAreaData.GetProgress());
 	}
 
-	// Token: 0x0600CB74 RID: 52084 RVA: 0x002E6B8E File Offset: 0x002E4D8E
+	// Token: 0x06009F85 RID: 40837 RVA: 0x002F1CE2 File Offset: 0x002EFEE2
 	private void EventMapExploreDetailItemClick(ExploreAreaItemData areaItemData)
 	{
 		this.CurAreaItemData = areaItemData;
 		this.UpdateExploreDetail();
 	}
 
-	// Token: 0x0600CB75 RID: 52085 RVA: 0x002E6B9D File Offset: 0x002E4D9D
+	// Token: 0x06009F86 RID: 40838 RVA: 0x002F1CF1 File Offset: 0x002EFEF1
 	private void EventAreaPlayPointUpdate(int areaId)
 	{
 		ExploreAreaData curAreaData = this.CurAreaData;
@@ -602,13 +599,13 @@ public class MapExploreDetailView : UiTickViewBase
 		this.UpdateExploreDetail();
 	}
 
-	// Token: 0x0600CB76 RID: 52086 RVA: 0x002E6BC0 File Offset: 0x002E4DC0
+	// Token: 0x06009F87 RID: 40839 RVA: 0x002F1D14 File Offset: 0x002EFF14
 	private void EventAreaStoryProgressSave()
 	{
 		this.UpdateStoryRedDot();
 	}
 
-	// Token: 0x0600CB77 RID: 52087 RVA: 0x002E6BC8 File Offset: 0x002E4DC8
+	// Token: 0x06009F88 RID: 40840 RVA: 0x002F1D1C File Offset: 0x002EFF1C
 	private void EventOpenExploreAreaDetailViewFromMap(int areaId, EExploreType? exploreType = null)
 	{
 		ExploreAreaData curAreaData = this.CurAreaData;
@@ -620,7 +617,7 @@ public class MapExploreDetailView : UiTickViewBase
 		this.ForceChangeArea(areaId, exploreType);
 	}
 
-	// Token: 0x0600CB78 RID: 52088 RVA: 0x002E6BF4 File Offset: 0x002E4DF4
+	// Token: 0x06009F89 RID: 40841 RVA: 0x002F1D48 File Offset: 0x002EFF48
 	private void ForceChangeAreaItem(EExploreType? exploreType, bool isUpdate = true)
 	{
 		if (exploreType == null)
@@ -646,7 +643,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB79 RID: 52089 RVA: 0x002E6C6D File Offset: 0x002E4E6D
+	// Token: 0x06009F8A RID: 40842 RVA: 0x002F1DC1 File Offset: 0x002EFFC1
 	private void ForceChangeArea(int areaId, EExploreType? exploreType = null)
 	{
 		if (!this.UpdateAreaDataByAreaId(areaId))
@@ -657,7 +654,7 @@ public class MapExploreDetailView : UiTickViewBase
 		this.UpdateViewByAreaData();
 	}
 
-	// Token: 0x0600CB7A RID: 52090 RVA: 0x002E6C88 File Offset: 0x002E4E88
+	// Token: 0x06009F8B RID: 40843 RVA: 0x002F1DDC File Offset: 0x002EFFDC
 	private void UpdateExploreDetail()
 	{
 		ExploreAreaItemData curAreaItemData = this.CurAreaItemData;
@@ -722,7 +719,7 @@ public class MapExploreDetailView : UiTickViewBase
 		this.UpdateHighLightTips();
 	}
 
-	// Token: 0x0600CB7B RID: 52091 RVA: 0x002E6E5C File Offset: 0x002E505C
+	// Token: 0x06009F8C RID: 40844 RVA: 0x002F1FB0 File Offset: 0x002F01B0
 	private void UpdateLockState()
 	{
 		UUIItem item = base.GetItem(22);
@@ -760,7 +757,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB7C RID: 52092 RVA: 0x002E6F54 File Offset: 0x002E5154
+	// Token: 0x06009F8D RID: 40845 RVA: 0x002F20A8 File Offset: 0x002F02A8
 	private void UpdateExploreProgressBar()
 	{
 		ExploreAreaItemData curAreaItemData = this.CurAreaItemData;
@@ -782,7 +779,7 @@ public class MapExploreDetailView : UiTickViewBase
 		EventSystem.Instance.Emit(EEventName.OnUpdateExploreProgressBar);
 	}
 
-	// Token: 0x0600CB7D RID: 52093 RVA: 0x002E6FBC File Offset: 0x002E51BC
+	// Token: 0x06009F8E RID: 40846 RVA: 0x002F2110 File Offset: 0x002F0310
 	private bool UpdateExploreDetailLockItem()
 	{
 		ExploreAreaItemData curAreaItemData = this.CurAreaItemData;
@@ -818,7 +815,7 @@ public class MapExploreDetailView : UiTickViewBase
 		return result;
 	}
 
-	// Token: 0x0600CB7E RID: 52094 RVA: 0x002E709C File Offset: 0x002E529C
+	// Token: 0x06009F8F RID: 40847 RVA: 0x002F21F0 File Offset: 0x002F03F0
 	private void UpdateChangeAreaRedDot()
 	{
 		foreach (ExploreAreaData exploreAreaData in this.AreaDataList)
@@ -842,7 +839,7 @@ public class MapExploreDetailView : UiTickViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600CB7F RID: 52095 RVA: 0x002E712C File Offset: 0x002E532C
+	// Token: 0x06009F90 RID: 40848 RVA: 0x002F2280 File Offset: 0x002F0480
 	private void UpdateStoryRedDot()
 	{
 		bool uiactive = this.CurAreaData.HasNewStoryUnlocked();
@@ -854,8 +851,8 @@ public class MapExploreDetailView : UiTickViewBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x170010D1 RID: 4305
-	// (get) Token: 0x0600CB80 RID: 52096 RVA: 0x002E7158 File Offset: 0x002E5358
+	// Token: 0x170010F6 RID: 4342
+	// (get) Token: 0x06009F91 RID: 40849 RVA: 0x002F22AC File Offset: 0x002F04AC
 	public bool? IsShowProgressBar
 	{
 		get
@@ -869,7 +866,7 @@ public class MapExploreDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600CB81 RID: 52097 RVA: 0x002E7184 File Offset: 0x002E5384
+	// Token: 0x06009F92 RID: 40850 RVA: 0x002F22D8 File Offset: 0x002F04D8
 	private void UpdateHighLightTips()
 	{
 		base.GetItem(30).SetUIActive(false);
@@ -903,21 +900,21 @@ public class MapExploreDetailView : UiTickViewBase
 		base.GetItem(30).SetUIActive(true);
 	}
 
-	// Token: 0x04005D93 RID: 23955
+	// Token: 0x04005E62 RID: 24162
 	[Nullable(2)]
 	private ExploreAreaData CurAreaData;
 
-	// Token: 0x04005D94 RID: 23956
+	// Token: 0x04005E63 RID: 24163
 	private List<ExploreAreaData> AreaDataList = new List<ExploreAreaData>();
 
-	// Token: 0x04005D95 RID: 23957
+	// Token: 0x04005E64 RID: 24164
 	private int CurAreaDataIndex;
 
-	// Token: 0x04005D96 RID: 23958
+	// Token: 0x04005E65 RID: 24165
 	[Nullable(2)]
 	private MapAreaRewardPanel StageRewardPanel;
 
-	// Token: 0x04005D97 RID: 23959
+	// Token: 0x04005E66 RID: 24166
 	[Nullable(new byte[]
 	{
 		2,
@@ -926,92 +923,92 @@ public class MapExploreDetailView : UiTickViewBase
 	})]
 	protected LoopScrollView<MapExploreDetailItem, ExploreAreaItemData> ExploreScroll;
 
-	// Token: 0x04005D98 RID: 23960
+	// Token: 0x04005E67 RID: 24167
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x04005D99 RID: 23961
+	// Token: 0x04005E68 RID: 24168
 	[Nullable(2)]
 	private ExploreAreaItemData CurAreaItemData;
 
-	// Token: 0x04005D9A RID: 23962
+	// Token: 0x04005E69 RID: 24169
 	[Nullable(2)]
 	private MapExplorePlayProgressPanel PlayProgressPanel;
 
-	// Token: 0x04005D9B RID: 23963
+	// Token: 0x04005E6A RID: 24170
 	[Nullable(2)]
 	private ExploreDetailLockItem ExploreDetailLockItem;
 
-	// Token: 0x04005D9C RID: 23964
+	// Token: 0x04005E6B RID: 24171
 	private readonly ButtonItem ExploreTrackButton = new ButtonItem(null);
 
-	// Token: 0x02008021 RID: 32801
+	// Token: 0x020071AF RID: 29103
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D4A RID: 171338
+		// Token: 0x0402507E RID: 151678
 		ItemCaption,
-		// Token: 0x04029D4B RID: 171339
+		// Token: 0x0402507F RID: 151679
 		AreaChangeLeftBtn,
-		// Token: 0x04029D4C RID: 171340
+		// Token: 0x04025080 RID: 151680
 		AreaChangeRightBtn,
-		// Token: 0x04029D4D RID: 171341
+		// Token: 0x04025081 RID: 151681
 		ExploreScrollView,
-		// Token: 0x04029D4E RID: 171342
+		// Token: 0x04025082 RID: 151682
 		StoryBtn,
-		// Token: 0x04029D4F RID: 171343
+		// Token: 0x04025083 RID: 151683
 		AreaName,
-		// Token: 0x04029D50 RID: 171344
+		// Token: 0x04025084 RID: 151684
 		AreaBtn,
-		// Token: 0x04029D51 RID: 171345
+		// Token: 0x04025085 RID: 151685
 		StageReward,
-		// Token: 0x04029D52 RID: 171346
+		// Token: 0x04025086 RID: 151686
 		AreaPercent,
-		// Token: 0x04029D53 RID: 171347
+		// Token: 0x04025087 RID: 151687
 		AreaRedDot,
-		// Token: 0x04029D54 RID: 171348
+		// Token: 0x04025088 RID: 151688
 		AreaTaskBtn,
-		// Token: 0x04029D55 RID: 171349
+		// Token: 0x04025089 RID: 151689
 		ExploreItemBg,
-		// Token: 0x04029D56 RID: 171350
+		// Token: 0x0402508A RID: 151690
 		ExploreDesc,
-		// Token: 0x04029D57 RID: 171351
+		// Token: 0x0402508B RID: 151691
 		ExploreToolItem,
-		// Token: 0x04029D58 RID: 171352
+		// Token: 0x0402508C RID: 151692
 		ExploreToolDesc,
-		// Token: 0x04029D59 RID: 171353
+		// Token: 0x0402508D RID: 151693
 		ExploreToolTips,
-		// Token: 0x04029D5A RID: 171354
+		// Token: 0x0402508E RID: 151694
 		ExploreProgressBar,
-		// Token: 0x04029D5B RID: 171355
+		// Token: 0x0402508F RID: 151695
 		ExploreProgressBarDetailBtn,
-		// Token: 0x04029D5C RID: 171356
+		// Token: 0x04025090 RID: 151696
 		ExploreTrackBtn,
-		// Token: 0x04029D5D RID: 171357
+		// Token: 0x04025091 RID: 151697
 		ExploreProgressBarRoot,
-		// Token: 0x04029D5E RID: 171358
+		// Token: 0x04025092 RID: 151698
 		ExploreScrollItem,
-		// Token: 0x04029D5F RID: 171359
+		// Token: 0x04025093 RID: 151699
 		ExploreDetailRoot,
-		// Token: 0x04029D60 RID: 171360
+		// Token: 0x04025094 RID: 151700
 		ExploreDetailLockedRoot,
-		// Token: 0x04029D61 RID: 171361
+		// Token: 0x04025095 RID: 151701
 		ExploreDetailLockedDesc,
-		// Token: 0x04029D62 RID: 171362
+		// Token: 0x04025096 RID: 151702
 		ExploreDetailFinishedRoot,
-		// Token: 0x04029D63 RID: 171363
+		// Token: 0x04025097 RID: 151703
 		ExploreZero,
-		// Token: 0x04029D64 RID: 171364
+		// Token: 0x04025098 RID: 151704
 		StoryProgress,
-		// Token: 0x04029D65 RID: 171365
+		// Token: 0x04025099 RID: 151705
 		StoryRedDot,
-		// Token: 0x04029D66 RID: 171366
+		// Token: 0x0402509A RID: 151706
 		ExploreDetailLockRoot,
-		// Token: 0x04029D67 RID: 171367
+		// Token: 0x0402509B RID: 151707
 		ExploreDetailProgressImageRoot,
-		// Token: 0x04029D68 RID: 171368
+		// Token: 0x0402509C RID: 151708
 		PanelHighLightTips,
-		// Token: 0x04029D69 RID: 171369
+		// Token: 0x0402509D RID: 151709
 		TextHighLightTips
 	}
 }

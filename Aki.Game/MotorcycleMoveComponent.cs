@@ -9,14 +9,14 @@ using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020032FA RID: 13050
+// Token: 0x0200286C RID: 10348
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleMoveComponent : VehicleMoveComponent
 {
-	// Token: 0x1700274F RID: 10063
-	// (get) Token: 0x0601C6A3 RID: 116387 RVA: 0x007F60C9 File Offset: 0x007F42C9
-	// (set) Token: 0x0601C6A4 RID: 116388 RVA: 0x007F60D4 File Offset: 0x007F42D4
+	// Token: 0x17002AD5 RID: 10965
+	// (get) Token: 0x0601A37D RID: 107389 RVA: 0x0081C495 File Offset: 0x0081A695
+	// (set) Token: 0x0601A37E RID: 107390 RVA: 0x0081C4A0 File Offset: 0x0081A6A0
 	private EMotorDriftModel DriftModel
 	{
 		get
@@ -50,9 +50,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002750 RID: 10064
-	// (get) Token: 0x0601C6A5 RID: 116389 RVA: 0x007F6158 File Offset: 0x007F4358
-	// (set) Token: 0x0601C6A6 RID: 116390 RVA: 0x007F6160 File Offset: 0x007F4360
+	// Token: 0x17002AD6 RID: 10966
+	// (get) Token: 0x0601A37F RID: 107391 RVA: 0x0081C524 File Offset: 0x0081A724
+	// (set) Token: 0x0601A380 RID: 107392 RVA: 0x0081C52C File Offset: 0x0081A72C
 	public bool BackBraking
 	{
 		get
@@ -65,9 +65,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002751 RID: 10065
-	// (get) Token: 0x0601C6A7 RID: 116391 RVA: 0x007F6169 File Offset: 0x007F4369
-	// (set) Token: 0x0601C6A8 RID: 116392 RVA: 0x007F6174 File Offset: 0x007F4374
+	// Token: 0x17002AD7 RID: 10967
+	// (get) Token: 0x0601A381 RID: 107393 RVA: 0x0081C535 File Offset: 0x0081A735
+	// (set) Token: 0x0601A382 RID: 107394 RVA: 0x0081C540 File Offset: 0x0081A740
 	public bool DriftingState
 	{
 		get
@@ -130,9 +130,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002752 RID: 10066
-	// (get) Token: 0x0601C6A9 RID: 116393 RVA: 0x007F62EA File Offset: 0x007F44EA
-	// (set) Token: 0x0601C6AA RID: 116394 RVA: 0x007F62F4 File Offset: 0x007F44F4
+	// Token: 0x17002AD8 RID: 10968
+	// (get) Token: 0x0601A383 RID: 107395 RVA: 0x0081C6B6 File Offset: 0x0081A8B6
+	// (set) Token: 0x0601A384 RID: 107396 RVA: 0x0081C6C0 File Offset: 0x0081A8C0
 	public bool FrontBrakingState
 	{
 		get
@@ -169,9 +169,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002753 RID: 10067
-	// (get) Token: 0x0601C6AB RID: 116395 RVA: 0x007F635F File Offset: 0x007F455F
-	// (set) Token: 0x0601C6AC RID: 116396 RVA: 0x007F6368 File Offset: 0x007F4568
+	// Token: 0x17002AD9 RID: 10969
+	// (get) Token: 0x0601A385 RID: 107397 RVA: 0x0081C72B File Offset: 0x0081A92B
+	// (set) Token: 0x0601A386 RID: 107398 RVA: 0x0081C734 File Offset: 0x0081A934
 	public bool BackBrakingState
 	{
 		get
@@ -208,9 +208,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002754 RID: 10068
-	// (get) Token: 0x0601C6AD RID: 116397 RVA: 0x007F63D3 File Offset: 0x007F45D3
-	// (set) Token: 0x0601C6AE RID: 116398 RVA: 0x007F63DC File Offset: 0x007F45DC
+	// Token: 0x17002ADA RID: 10970
+	// (get) Token: 0x0601A387 RID: 107399 RVA: 0x0081C79F File Offset: 0x0081A99F
+	// (set) Token: 0x0601A388 RID: 107400 RVA: 0x0081C7A8 File Offset: 0x0081A9A8
 	protected bool SideSlide
 	{
 		get
@@ -247,9 +247,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002755 RID: 10069
-	// (get) Token: 0x0601C6AF RID: 116399 RVA: 0x007F6447 File Offset: 0x007F4647
-	// (set) Token: 0x0601C6B0 RID: 116400 RVA: 0x007F6450 File Offset: 0x007F4650
+	// Token: 0x17002ADB RID: 10971
+	// (get) Token: 0x0601A389 RID: 107401 RVA: 0x0081C813 File Offset: 0x0081AA13
+	// (set) Token: 0x0601A38A RID: 107402 RVA: 0x0081C81C File Offset: 0x0081AA1C
 	public EMotorSubState MotorSubState
 	{
 		get
@@ -278,9 +278,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002756 RID: 10070
-	// (get) Token: 0x0601C6B1 RID: 116401 RVA: 0x007F6510 File Offset: 0x007F4710
-	// (set) Token: 0x0601C6B2 RID: 116402 RVA: 0x007F6518 File Offset: 0x007F4718
+	// Token: 0x17002ADC RID: 10972
+	// (get) Token: 0x0601A38B RID: 107403 RVA: 0x0081C8DC File Offset: 0x0081AADC
+	// (set) Token: 0x0601A38C RID: 107404 RVA: 0x0081C8E4 File Offset: 0x0081AAE4
 	public bool AllowSoar
 	{
 		get
@@ -317,9 +317,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002757 RID: 10071
-	// (get) Token: 0x0601C6B3 RID: 116403 RVA: 0x007F6583 File Offset: 0x007F4783
-	// (set) Token: 0x0601C6B4 RID: 116404 RVA: 0x007F658C File Offset: 0x007F478C
+	// Token: 0x17002ADD RID: 10973
+	// (get) Token: 0x0601A38D RID: 107405 RVA: 0x0081C94F File Offset: 0x0081AB4F
+	// (set) Token: 0x0601A38E RID: 107406 RVA: 0x0081C958 File Offset: 0x0081AB58
 	private bool BackingMotor
 	{
 		get
@@ -362,9 +362,9 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x17002758 RID: 10072
-	// (get) Token: 0x0601C6B5 RID: 116405 RVA: 0x007F662B File Offset: 0x007F482B
-	// (set) Token: 0x0601C6B6 RID: 116406 RVA: 0x007F6634 File Offset: 0x007F4834
+	// Token: 0x17002ADE RID: 10974
+	// (get) Token: 0x0601A38F RID: 107407 RVA: 0x0081C9F7 File Offset: 0x0081ABF7
+	// (set) Token: 0x0601A390 RID: 107408 RVA: 0x0081CA00 File Offset: 0x0081AC00
 	protected long CurrentMoveBuff
 	{
 		get
@@ -415,13 +415,13 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6B7 RID: 116407 RVA: 0x007F6756 File Offset: 0x007F4956
+	// Token: 0x0601A391 RID: 107409 RVA: 0x0081CB22 File Offset: 0x0081AD22
 	public void SetIsFunctionOpenOverride(bool? @override)
 	{
 		this.IsFunctionOpenOverride = @override;
 	}
 
-	// Token: 0x0601C6B8 RID: 116408 RVA: 0x007F675F File Offset: 0x007F495F
+	// Token: 0x0601A392 RID: 107410 RVA: 0x0081CB2B File Offset: 0x0081AD2B
 	private bool IsSoarFunctionOpen()
 	{
 		if (this.IsFunctionOpenOverride != null)
@@ -431,7 +431,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		return FunctionModel.Instance.IsOpen(EFunctionType.MotorSoar) && !FunctionModel.Instance.IsLimit(10154);
 	}
 
-	// Token: 0x0601C6B9 RID: 116409 RVA: 0x007F67A0 File Offset: 0x007F49A0
+	// Token: 0x0601A393 RID: 107411 RVA: 0x0081CB6C File Offset: 0x0081AD6C
 	public void OnSkill(int skillId, bool _)
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -444,17 +444,17 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		LogReportController.Instance.LogReport(motorSkillLogEvent);
 	}
 
-	// Token: 0x0601C6BA RID: 116410 RVA: 0x007F67E3 File Offset: 0x007F49E3
+	// Token: 0x0601A394 RID: 107412 RVA: 0x0081CBAF File Offset: 0x0081ADAF
 	protected override void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (!byChangeRole)
 		{
-			this.SetMotorSubState(EMotorSubState.TwoWheelMoving);
+			this.SetMotorSubState(EMotorSubState.TwoWheelMoving, ESetMotorSubStateSource.LeaveVehicle);
 		}
 		base.OnLeaveVehicle(info, byChangeRole);
 	}
 
-	// Token: 0x0601C6BB RID: 116411 RVA: 0x007F67F8 File Offset: 0x007F49F8
+	// Token: 0x0601A395 RID: 107413 RVA: 0x0081CBC4 File Offset: 0x0081ADC4
 	public void OnSprintTagChange(int tagId, bool tagExist)
 	{
 		if (!tagExist)
@@ -501,7 +501,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6BC RID: 116412 RVA: 0x007F6900 File Offset: 0x007F4B00
+	// Token: 0x0601A396 RID: 107414 RVA: 0x0081CCCC File Offset: 0x0081AECC
 	[NullableContext(2)]
 	private void OnVehicleDriverChange(Entity oldDriver, Entity newDriver)
 	{
@@ -526,7 +526,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		this.DriftModel = EMotorDriftModel.None;
 	}
 
-	// Token: 0x0601C6BD RID: 116413 RVA: 0x007F69CA File Offset: 0x007F4BCA
+	// Token: 0x0601A397 RID: 107415 RVA: 0x0081CD96 File Offset: 0x0081AF96
 	private void OnRefreshMenuSetting(EFunction functionId)
 	{
 		if (functionId == EFunction.MotorDriftModel)
@@ -535,7 +535,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6BE RID: 116414 RVA: 0x007F69EC File Offset: 0x007F4BEC
+	// Token: 0x0601A398 RID: 107416 RVA: 0x0081CDB8 File Offset: 0x0081AFB8
 	protected override bool OnStart()
 	{
 		bool flag = base.OnStart();
@@ -618,7 +618,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		return flag;
 	}
 
-	// Token: 0x0601C6BF RID: 116415 RVA: 0x007F6C74 File Offset: 0x007F4E74
+	// Token: 0x0601A399 RID: 107417 RVA: 0x0081D040 File Offset: 0x0081B240
 	protected override bool OnEnd()
 	{
 		bool result = base.OnEnd();
@@ -645,14 +645,14 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		return result;
 	}
 
-	// Token: 0x0601C6C0 RID: 116416 RVA: 0x007F6D67 File Offset: 0x007F4F67
+	// Token: 0x0601A39A RID: 107418 RVA: 0x0081D133 File Offset: 0x0081B333
 	protected override void OnDisable(string reason)
 	{
 		base.OnDisable(reason);
 		this.ClearAllCacheData();
 	}
 
-	// Token: 0x0601C6C1 RID: 116417 RVA: 0x007F6D78 File Offset: 0x007F4F78
+	// Token: 0x0601A39B RID: 107419 RVA: 0x0081D144 File Offset: 0x0081B344
 	private void ClearAllCacheData()
 	{
 		this.BackingMotor = false;
@@ -665,7 +665,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6C2 RID: 116418 RVA: 0x007F6DD0 File Offset: 0x007F4FD0
+	// Token: 0x0601A39C RID: 107420 RVA: 0x0081D19C File Offset: 0x0081B39C
 	protected override void SetInputOrder()
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -715,7 +715,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		ukuroVehicleMovementComponent.SetMotorInput(this.TmpInputDirect.ToUeVectorOld(), (float)num, (float)num2, new FVector?((this.ActorComp as MotorcycleActorComponent).AirRotateInputProxy.ToUeVectorOld()));
 	}
 
-	// Token: 0x0601C6C3 RID: 116419 RVA: 0x007F6F88 File Offset: 0x007F5188
+	// Token: 0x0601A39D RID: 107421 RVA: 0x0081D354 File Offset: 0x0081B554
 	protected override void OnTick(float delta)
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -758,7 +758,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		this.CheckAllowSoar();
 	}
 
-	// Token: 0x0601C6C4 RID: 116420 RVA: 0x007F70F0 File Offset: 0x007F52F0
+	// Token: 0x0601A39E RID: 107422 RVA: 0x0081D4BC File Offset: 0x0081B6BC
 	public override void MoveAlongPath(IMoveVehicleConfig config)
 	{
 		MotorcyclePathMoveTask mainTask = VehiclePathMoveController.Instance.CreateMotorcycleMoveTaskFromSplineId(base.Entity, config.SplineId);
@@ -839,7 +839,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		this.DebugCurve = ((curveInfo3 != null) ? curveInfo3.SplineCurve : null);
 	}
 
-	// Token: 0x0601C6C5 RID: 116421 RVA: 0x007F7454 File Offset: 0x007F5654
+	// Token: 0x0601A39F RID: 107423 RVA: 0x0081D820 File Offset: 0x0081BA20
 	protected void UpdateMoveBuff()
 	{
 		double num = (double)this.VehicleMovement.MotorAccelConfig.MaxSpeed;
@@ -873,7 +873,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6C6 RID: 116422 RVA: 0x007F7554 File Offset: 0x007F5754
+	// Token: 0x0601A3A0 RID: 107424 RVA: 0x0081D920 File Offset: 0x0081BB20
 	private void UpdateMoveState()
 	{
 		this.MotorSubState = this.VehicleMovement.MotorSubState;
@@ -905,7 +905,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		this.SideSlide = (Math.Abs(value) > 200.0);
 	}
 
-	// Token: 0x0601C6C7 RID: 116423 RVA: 0x007F7710 File Offset: 0x007F5910
+	// Token: 0x0601A3A1 RID: 107425 RVA: 0x0081DADC File Offset: 0x0081BCDC
 	private void UpdateBaseMovement()
 	{
 		UKuroVehicleMovementComponent vehicleMovement = this.VehicleMovement;
@@ -934,7 +934,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6C8 RID: 116424 RVA: 0x007F77F4 File Offset: 0x007F59F4
+	// Token: 0x0601A3A2 RID: 107426 RVA: 0x0081DBC0 File Offset: 0x0081BDC0
 	private void InitSeatTrans()
 	{
 		IReadOnlyList<float> floatArrayConfig = ConfigCommonParamById.GetFloatArrayConfig("MotorGetOnSeatTrans");
@@ -949,7 +949,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	}
 
-	// Token: 0x0601C6C9 RID: 116425 RVA: 0x007F78A0 File Offset: 0x007F5AA0
+	// Token: 0x0601A3A3 RID: 107427 RVA: 0x0081DC6C File Offset: 0x0081BE6C
 	[NullableContext(2)]
 	public unsafe Transform GetMotorcycleSummonTrans(int entityId, FTransform? trans = null)
 	{
@@ -1011,7 +1011,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		return MotorcycleMoveComponent.tmpTrans;
 	}
 
-	// Token: 0x0601C6CA RID: 116426 RVA: 0x007F7B53 File Offset: 0x007F5D53
+	// Token: 0x0601A3A4 RID: 107428 RVA: 0x0081DF1F File Offset: 0x0081C11F
 	protected override void UpdateUeMovementDisableState(float delta)
 	{
 		if (this.CurrentBaseMovement.Count > 0)
@@ -1023,7 +1023,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		base.UpdateUeMovementDisableState(delta);
 	}
 
-	// Token: 0x0601C6CB RID: 116427 RVA: 0x007F7B84 File Offset: 0x007F5D84
+	// Token: 0x0601A3A5 RID: 107429 RVA: 0x0081DF50 File Offset: 0x0081C150
 	protected void CheckAllowSoar()
 	{
 		if (this.MotorSubState == EMotorSubState.Soaring)
@@ -1058,14 +1058,14 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		this.AllowSoar = false;
 	}
 
-	// Token: 0x0601C6CC RID: 116428 RVA: 0x007F7C7F File Offset: 0x007F5E7F
-	public override void SetMotorSubState(EMotorSubState subState)
+	// Token: 0x0601A3A6 RID: 107430 RVA: 0x0081E04B File Offset: 0x0081C24B
+	public override void SetMotorSubState(EMotorSubState subState, ESetMotorSubStateSource source)
 	{
-		base.SetMotorSubState(subState);
+		base.SetMotorSubState(subState, source);
 		this.MotorSubState = this.VehicleMovement.MotorSubState;
 	}
 
-	// Token: 0x0601C6CD RID: 116429 RVA: 0x007F7C9C File Offset: 0x007F5E9C
+	// Token: 0x0601A3A7 RID: 107431 RVA: 0x0081E068 File Offset: 0x0081C268
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1073,226 +1073,214 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 			return false;
 		}
 		MotorcycleMoveComponent motorcycleMoveComponent = (MotorcycleMoveComponent)componentTemplate;
-		if (base.CanResetComponentProperty("BuffComp"))
+		if (motorcycleMoveComponent.BuffComp == null)
 		{
-			if (motorcycleMoveComponent.BuffComp == null)
-			{
-				this.BuffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleBuffComponent>(this.BuffComp), "BuffComp"))
-			{
-				return false;
-			}
+			this.BuffComp = null;
 		}
-		if (base.CanResetComponentProperty("PerformComp"))
-		{
-			if (motorcycleMoveComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TmpInputDirect") && motorcycleMoveComponent.TmpInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpInputDirect), "TmpInputDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComp), "BuffComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DefaultSeatTrans") && motorcycleMoveComponent.DefaultSeatTrans != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.DefaultSeatTrans), "DefaultSeatTrans"))
+		if (motorcycleMoveComponent.PerformComp == null)
+		{
+			this.PerformComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("BaseMovementArray"))
-		{
-			if (motorcycleMoveComponent.BaseMovementArray == null)
-			{
-				this.BaseMovementArray = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.BaseMovementArray), "BaseMovementArray"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CurrentBaseMovement"))
-		{
-			if (motorcycleMoveComponent.CurrentBaseMovement == null)
-			{
-				this.CurrentBaseMovement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.CurrentBaseMovement), "CurrentBaseMovement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("NextBaseMovement"))
-		{
-			if (motorcycleMoveComponent.NextBaseMovement == null)
-			{
-				this.NextBaseMovement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.NextBaseMovement), "NextBaseMovement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DriftModelInternal"))
-		{
-			this.DriftModelInternal = motorcycleMoveComponent.DriftModelInternal;
-		}
-		if (base.CanResetComponentProperty("BackInputTime"))
-		{
-			this.BackInputTime = motorcycleMoveComponent.BackInputTime;
-		}
-		if (base.CanResetComponentProperty("BackBrakingInternal"))
-		{
-			this.BackBrakingInternal = motorcycleMoveComponent.BackBrakingInternal;
-		}
-		if (base.CanResetComponentProperty("DriftingStateInternal"))
-		{
-			this.DriftingStateInternal = motorcycleMoveComponent.DriftingStateInternal;
-		}
-		if (base.CanResetComponentProperty("DriftDistance"))
-		{
-			this.DriftDistance = motorcycleMoveComponent.DriftDistance;
-		}
-		if (base.CanResetComponentProperty("DriftStartTime"))
-		{
-			this.DriftStartTime = motorcycleMoveComponent.DriftStartTime;
-		}
-		if (base.CanResetComponentProperty("DriftLastLocation") && motorcycleMoveComponent.DriftLastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.DriftLastLocation), "DriftLastLocation"))
+		if (motorcycleMoveComponent.TmpInputDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpInputDirect), "TmpInputDirect"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("FrontBrakingStateInternal"))
-		{
-			this.FrontBrakingStateInternal = motorcycleMoveComponent.FrontBrakingStateInternal;
-		}
-		if (base.CanResetComponentProperty("BackBrakingStateInternal"))
-		{
-			this.BackBrakingStateInternal = motorcycleMoveComponent.BackBrakingStateInternal;
-		}
-		if (base.CanResetComponentProperty("SideSlideInternal"))
-		{
-			this.SideSlideInternal = motorcycleMoveComponent.SideSlideInternal;
-		}
-		if (base.CanResetComponentProperty("MotorSubStateInternal"))
-		{
-			this.MotorSubStateInternal = motorcycleMoveComponent.MotorSubStateInternal;
-		}
-		if (base.CanResetComponentProperty("NextCheckAllowTime"))
-		{
-			this.NextCheckAllowTime = motorcycleMoveComponent.NextCheckAllowTime;
-		}
-		if (base.CanResetComponentProperty("LastCheckAllowHeightPosition") && motorcycleMoveComponent.LastCheckAllowHeightPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastCheckAllowHeightPosition), "LastCheckAllowHeightPosition"))
+		if (motorcycleMoveComponent.DefaultSeatTrans != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultSeatTrans), "DefaultSeatTrans"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AllowSoarInternal"))
+		if (motorcycleMoveComponent.BaseMovementArray == null)
 		{
-			this.AllowSoarInternal = motorcycleMoveComponent.AllowSoarInternal;
+			this.BaseMovementArray = null;
 		}
-		if (base.CanResetComponentProperty("DriftBuffId"))
-		{
-			this.DriftBuffId = motorcycleMoveComponent.DriftBuffId;
-		}
-		if (base.CanResetComponentProperty("BackMotorBuff"))
-		{
-			this.BackMotorBuff = motorcycleMoveComponent.BackMotorBuff;
-		}
-		if (base.CanResetComponentProperty("BackingMotorInternal"))
-		{
-			this.BackingMotorInternal = motorcycleMoveComponent.BackingMotorInternal;
-		}
-		if (base.CanResetComponentProperty("SpeedBuffNotSprint") && motorcycleMoveComponent.SpeedBuffNotSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<float, long>>>(this.SpeedBuffNotSprint), "SpeedBuffNotSprint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.BaseMovementArray), "BaseMovementArray"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SpeedBuffSprint") && motorcycleMoveComponent.SpeedBuffSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<float, long>>>(this.SpeedBuffSprint), "SpeedBuffSprint"))
+		if (motorcycleMoveComponent.CurrentBaseMovement == null)
+		{
+			this.CurrentBaseMovement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.CurrentBaseMovement), "CurrentBaseMovement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SpeedBuffSoarSprint") && motorcycleMoveComponent.SpeedBuffSoarSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ValueTuple<float, long>>>(this.SpeedBuffSoarSprint), "SpeedBuffSoarSprint"))
+		if (motorcycleMoveComponent.NextBaseMovement == null)
+		{
+			this.NextBaseMovement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UPrimitiveComponent>(this.NextBaseMovement), "NextBaseMovement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentMoveBuffInternal"))
+		this.DriftModelInternal = motorcycleMoveComponent.DriftModelInternal;
+		this.BackInputTime = motorcycleMoveComponent.BackInputTime;
+		this.BackBrakingInternal = motorcycleMoveComponent.BackBrakingInternal;
+		this.DriftingStateInternal = motorcycleMoveComponent.DriftingStateInternal;
+		this.DriftDistance = motorcycleMoveComponent.DriftDistance;
+		this.DriftStartTime = motorcycleMoveComponent.DriftStartTime;
+		if (motorcycleMoveComponent.DriftLastLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DriftLastLocation), "DriftLastLocation"))
 		{
-			this.CurrentMoveBuffInternal = motorcycleMoveComponent.CurrentMoveBuffInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("SprintCameraShake"))
+		this.FrontBrakingStateInternal = motorcycleMoveComponent.FrontBrakingStateInternal;
+		this.BackBrakingStateInternal = motorcycleMoveComponent.BackBrakingStateInternal;
+		this.SideSlideInternal = motorcycleMoveComponent.SideSlideInternal;
+		this.MotorSubStateInternal = motorcycleMoveComponent.MotorSubStateInternal;
+		this.NextCheckAllowTime = motorcycleMoveComponent.NextCheckAllowTime;
+		if (motorcycleMoveComponent.LastCheckAllowHeightPosition != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastCheckAllowHeightPosition), "LastCheckAllowHeightPosition"))
 		{
-			if (motorcycleMoveComponent.SprintCameraShake == null)
-			{
-				this.SprintCameraShake = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UClass>(this.SprintCameraShake), "SprintCameraShake"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsFunctionOpenOverride"))
+		this.AllowSoarInternal = motorcycleMoveComponent.AllowSoarInternal;
+		this.DriftBuffId = motorcycleMoveComponent.DriftBuffId;
+		this.BackMotorBuff = motorcycleMoveComponent.BackMotorBuff;
+		this.BackingMotorInternal = motorcycleMoveComponent.BackingMotorInternal;
+		if (motorcycleMoveComponent.SpeedBuffNotSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpeedBuffNotSprint), "SpeedBuffNotSprint"))
 		{
-			this.IsFunctionOpenOverride = motorcycleMoveComponent.IsFunctionOpenOverride;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DisableSprintTagFrame"))
+		if (motorcycleMoveComponent.SpeedBuffSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpeedBuffSprint), "SpeedBuffSprint"))
 		{
-			this.DisableSprintTagFrame = motorcycleMoveComponent.DisableSprintTagFrame;
+			return false;
 		}
-		return (!base.CanResetComponentProperty("Stat0") || motorcycleMoveComponent.Stat0 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.Stat0), "Stat0")) && (!base.CanResetComponentProperty("Stat1") || motorcycleMoveComponent.Stat1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.Stat1), "Stat1")) && (!base.CanResetComponentProperty("Stat2") || motorcycleMoveComponent.Stat2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.Stat2), "Stat2")) && (!base.CanResetComponentProperty("Stat3") || motorcycleMoveComponent.Stat3 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.Stat3), "Stat3")) && (!base.CanResetComponentProperty("Stat4") || motorcycleMoveComponent.Stat4 == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Stat>(this.Stat4), "Stat4"));
+		if (motorcycleMoveComponent.SpeedBuffSoarSprint != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpeedBuffSoarSprint), "SpeedBuffSoarSprint"))
+		{
+			return false;
+		}
+		this.CurrentMoveBuffInternal = motorcycleMoveComponent.CurrentMoveBuffInternal;
+		if (motorcycleMoveComponent.SprintCameraShake == null)
+		{
+			this.SprintCameraShake = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SprintCameraShake), "SprintCameraShake"))
+		{
+			return false;
+		}
+		this.IsFunctionOpenOverride = motorcycleMoveComponent.IsFunctionOpenOverride;
+		this.DisableSprintTagFrame = motorcycleMoveComponent.DisableSprintTagFrame;
+		return (motorcycleMoveComponent.Stat0 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Stat0), "Stat0")) && (motorcycleMoveComponent.Stat1 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Stat1), "Stat1")) && (motorcycleMoveComponent.Stat2 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Stat2), "Stat2")) && (motorcycleMoveComponent.Stat3 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Stat3), "Stat3")) && (motorcycleMoveComponent.Stat4 == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Stat4), "Stat4"));
 	}
 
-	// Token: 0x0400E16E RID: 57710
+	// Token: 0x17002ADF RID: 10975
+	// (get) Token: 0x0601A3A8 RID: 107432 RVA: 0x0081E3FA File Offset: 0x0081C5FA
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE0 RID: 10976
+	// (get) Token: 0x0601A3A9 RID: 107433 RVA: 0x0081E3FD File Offset: 0x0081C5FD
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE1 RID: 10977
+	// (get) Token: 0x0601A3AA RID: 107434 RVA: 0x0081E400 File Offset: 0x0081C600
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE2 RID: 10978
+	// (get) Token: 0x0601A3AB RID: 107435 RVA: 0x0081E403 File Offset: 0x0081C603
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE3 RID: 10979
+	// (get) Token: 0x0601A3AC RID: 107436 RVA: 0x0081E406 File Offset: 0x0081C606
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AE4 RID: 10980
+	// (get) Token: 0x0601A3AD RID: 107437 RVA: 0x0081E409 File Offset: 0x0081C609
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E619 RID: 58905
 	private const float BRAKE_FORWARD_SPEED_THRESHOLD = 200f;
 
-	// Token: 0x0400E16F RID: 57711
+	// Token: 0x0400E61A RID: 58906
 	private const float BRAKE_RIGHT_SPEED_THRESHOLD = 500f;
 
-	// Token: 0x0400E170 RID: 57712
+	// Token: 0x0400E61B RID: 58907
 	private const float BACK_TIME_THRESHOLD = 100f;
 
-	// Token: 0x0400E171 RID: 57713
+	// Token: 0x0400E61C RID: 58908
 	private const float SIDE_SLIDE_SPEED_THRESHOLD = 200f;
 
-	// Token: 0x0400E172 RID: 57714
+	// Token: 0x0400E61D RID: 58909
 	private const double DRIFT_INPUT_X_THRESHOLD = -1E-08;
 
-	// Token: 0x0400E173 RID: 57715
+	// Token: 0x0400E61E RID: 58910
 	private const double DRIFT_INPUT_Y_THRESHOLD = 0.5;
 
-	// Token: 0x0400E174 RID: 57716
+	// Token: 0x0400E61F RID: 58911
 	private const double DRIFT_SPEED_THRESHOLD = 500.0;
 
-	// Token: 0x0400E175 RID: 57717
+	// Token: 0x0400E620 RID: 58912
 	private const float CHECK_ALLOW_SOAR_PERIOD = 200f;
 
-	// Token: 0x0400E176 RID: 57718
+	// Token: 0x0400E621 RID: 58913
 	private const float CHECK_ALLOW_SOAR_HEIGHT_THRESHOLD = 100f;
 
-	// Token: 0x0400E177 RID: 57719
+	// Token: 0x0400E622 RID: 58914
 	private const float ALLOW_SOAR_HEIGHT = 800f;
 
-	// Token: 0x0400E178 RID: 57720
+	// Token: 0x0400E623 RID: 58915
 	[StaticVariableRuleIgnore]
 	private static readonly Transform tmpTrans = Transform.Create();
 
-	// Token: 0x0400E179 RID: 57721
+	// Token: 0x0400E624 RID: 58916
 	[StaticVariableRuleIgnore]
 	private static readonly Quat tmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E17A RID: 57722
+	// Token: 0x0400E625 RID: 58917
 	[StaticVariableRuleIgnore]
 	private static readonly Quat tmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400E17B RID: 57723
+	// Token: 0x0400E626 RID: 58918
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector tmpVector = global::Vector.Create();
 
-	// Token: 0x0400E17C RID: 57724
+	// Token: 0x0400E627 RID: 58919
 	[StaticVariableRuleIgnore]
 	private static readonly Quat leftTurn90 = Rotator.Create(0f, -90f, 0f).Quaternion(null);
 
-	// Token: 0x0400E17D RID: 57725
+	// Token: 0x0400E628 RID: 58920
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EMotorDriftModel, int> driftModelTagMap = new Dictionary<EMotorDriftModel, int>
 	{
@@ -1302,7 +1290,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	};
 
-	// Token: 0x0400E17E RID: 57726
+	// Token: 0x0400E629 RID: 58921
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EMotorSubState, int> motorSubStateTagMap = new Dictionary<EMotorSubState, int>
 	{
@@ -1332,81 +1320,81 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 		}
 	};
 
-	// Token: 0x0400E17F RID: 57727
+	// Token: 0x0400E62A RID: 58922
 	[Nullable(2)]
 	private VehicleBuffComponent BuffComp;
 
-	// Token: 0x0400E180 RID: 57728
+	// Token: 0x0400E62B RID: 58923
 	[Nullable(2)]
 	private BaseVehiclePerformComponent PerformComp;
 
-	// Token: 0x0400E181 RID: 57729
+	// Token: 0x0400E62C RID: 58924
 	private readonly global::Vector TmpInputDirect = global::Vector.Create();
 
-	// Token: 0x0400E182 RID: 57730
+	// Token: 0x0400E62D RID: 58925
 	private readonly Transform DefaultSeatTrans = Transform.Create();
 
-	// Token: 0x0400E183 RID: 57731
+	// Token: 0x0400E62E RID: 58926
 	private TArray<UPrimitiveComponent> BaseMovementArray = new TArray<UPrimitiveComponent>();
 
-	// Token: 0x0400E184 RID: 57732
+	// Token: 0x0400E62F RID: 58927
 	private HashSet<UPrimitiveComponent> CurrentBaseMovement = new HashSet<UPrimitiveComponent>();
 
-	// Token: 0x0400E185 RID: 57733
+	// Token: 0x0400E630 RID: 58928
 	private HashSet<UPrimitiveComponent> NextBaseMovement = new HashSet<UPrimitiveComponent>();
 
-	// Token: 0x0400E186 RID: 57734
+	// Token: 0x0400E631 RID: 58929
 	private EMotorDriftModel DriftModelInternal;
 
-	// Token: 0x0400E187 RID: 57735
+	// Token: 0x0400E632 RID: 58930
 	private double BackInputTime;
 
-	// Token: 0x0400E188 RID: 57736
+	// Token: 0x0400E633 RID: 58931
 	private bool BackBrakingInternal;
 
-	// Token: 0x0400E189 RID: 57737
+	// Token: 0x0400E634 RID: 58932
 	private bool DriftingStateInternal;
 
-	// Token: 0x0400E18A RID: 57738
+	// Token: 0x0400E635 RID: 58933
 	private double DriftDistance;
 
-	// Token: 0x0400E18B RID: 57739
+	// Token: 0x0400E636 RID: 58934
 	private double DriftStartTime;
 
-	// Token: 0x0400E18C RID: 57740
+	// Token: 0x0400E637 RID: 58935
 	private readonly global::Vector DriftLastLocation = global::Vector.Create();
 
-	// Token: 0x0400E18D RID: 57741
+	// Token: 0x0400E638 RID: 58936
 	private bool FrontBrakingStateInternal;
 
-	// Token: 0x0400E18E RID: 57742
+	// Token: 0x0400E639 RID: 58937
 	private bool BackBrakingStateInternal;
 
-	// Token: 0x0400E18F RID: 57743
+	// Token: 0x0400E63A RID: 58938
 	private bool SideSlideInternal;
 
-	// Token: 0x0400E190 RID: 57744
+	// Token: 0x0400E63B RID: 58939
 	private EMotorSubState MotorSubStateInternal = EMotorSubState.TwoWheelMoving;
 
-	// Token: 0x0400E191 RID: 57745
+	// Token: 0x0400E63C RID: 58940
 	private double NextCheckAllowTime;
 
-	// Token: 0x0400E192 RID: 57746
+	// Token: 0x0400E63D RID: 58941
 	private readonly global::Vector LastCheckAllowHeightPosition = global::Vector.Create();
 
-	// Token: 0x0400E193 RID: 57747
+	// Token: 0x0400E63E RID: 58942
 	private bool AllowSoarInternal;
 
-	// Token: 0x0400E194 RID: 57748
+	// Token: 0x0400E63F RID: 58943
 	private long DriftBuffId;
 
-	// Token: 0x0400E195 RID: 57749
+	// Token: 0x0400E640 RID: 58944
 	private long BackMotorBuff;
 
-	// Token: 0x0400E196 RID: 57750
+	// Token: 0x0400E641 RID: 58945
 	private bool BackingMotorInternal;
 
-	// Token: 0x0400E197 RID: 57751
+	// Token: 0x0400E642 RID: 58946
 	[Nullable(new byte[]
 	{
 		1,
@@ -1414,7 +1402,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 	})]
 	private readonly List<ValueTuple<float, long>> SpeedBuffNotSprint = new List<ValueTuple<float, long>>();
 
-	// Token: 0x0400E198 RID: 57752
+	// Token: 0x0400E643 RID: 58947
 	[Nullable(new byte[]
 	{
 		1,
@@ -1422,7 +1410,7 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 	})]
 	private readonly List<ValueTuple<float, long>> SpeedBuffSprint = new List<ValueTuple<float, long>>();
 
-	// Token: 0x0400E199 RID: 57753
+	// Token: 0x0400E644 RID: 58948
 	[Nullable(new byte[]
 	{
 		1,
@@ -1430,36 +1418,36 @@ public class MotorcycleMoveComponent : VehicleMoveComponent
 	})]
 	private readonly List<ValueTuple<float, long>> SpeedBuffSoarSprint = new List<ValueTuple<float, long>>();
 
-	// Token: 0x0400E19A RID: 57754
+	// Token: 0x0400E645 RID: 58949
 	private long CurrentMoveBuffInternal;
 
-	// Token: 0x0400E19B RID: 57755
+	// Token: 0x0400E646 RID: 58950
 	[Nullable(2)]
 	private UClass SprintCameraShake;
 
-	// Token: 0x0400E19C RID: 57756
+	// Token: 0x0400E647 RID: 58951
 	private bool? IsFunctionOpenOverride;
 
-	// Token: 0x0400E19D RID: 57757
+	// Token: 0x0400E648 RID: 58952
 	private int DisableSprintTagFrame;
 
-	// Token: 0x0400E19E RID: 57758
+	// Token: 0x0400E649 RID: 58953
 	[StaticVariableRuleIgnore]
 	private readonly Stat Stat0 = Stat.Create("BackingMotor", "", "");
 
-	// Token: 0x0400E19F RID: 57759
+	// Token: 0x0400E64A RID: 58954
 	[StaticVariableRuleIgnore]
 	private readonly Stat Stat1 = Stat.Create("super.OnTick", "", "");
 
-	// Token: 0x0400E1A0 RID: 57760
+	// Token: 0x0400E64B RID: 58955
 	[StaticVariableRuleIgnore]
 	private readonly Stat Stat2 = Stat.Create("UpdateMoveState", "", "");
 
-	// Token: 0x0400E1A1 RID: 57761
+	// Token: 0x0400E64C RID: 58956
 	[StaticVariableRuleIgnore]
 	private readonly Stat Stat3 = Stat.Create("UpdateMoveBuff", "", "");
 
-	// Token: 0x0400E1A2 RID: 57762
+	// Token: 0x0400E64D RID: 58957
 	[StaticVariableRuleIgnore]
 	private readonly Stat Stat4 = Stat.Create("UpdateBaseMovement", "", "");
 }

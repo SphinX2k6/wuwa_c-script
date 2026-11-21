@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200211F RID: 8479
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002380 RID: 9088
 	public class PlaySequenceData : ActionParams
 	{
-		// Token: 0x0600BAB2 RID: 47794 RVA: 0x001AF65C File Offset: 0x001AD85C
+		// Token: 0x0600C640 RID: 50752 RVA: 0x001C6810 File Offset: 0x001C4A10
 		private PlaySequenceData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BAB3 RID: 47795 RVA: 0x001AF694 File Offset: 0x001AD894
+		// Token: 0x0600C641 RID: 50753 RVA: 0x001C6848 File Offset: 0x001C4A48
 		public static PlaySequenceData Create([Nullable(2)] PlaySequenceData instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BAB4 RID: 47796 RVA: 0x001AF6A7 File Offset: 0x001AD8A7
+		// Token: 0x0600C642 RID: 50754 RVA: 0x001C685B File Offset: 0x001C4A5B
 		public static PlaySequenceData CreateFromSetValue([Nullable(2)] PlaySequenceData_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BAB5 RID: 47797 RVA: 0x001AF6BC File Offset: 0x001AD8BC
+		// Token: 0x0600C643 RID: 50755 RVA: 0x001C6870 File Offset: 0x001C4A70
 		public PlaySequenceData_SetValue ToSetValue()
 		{
 			return new PlaySequenceData_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003904 RID: 14596
-		// (get) Token: 0x0600BAB6 RID: 47798 RVA: 0x001AF722 File Offset: 0x001AD922
-		// (set) Token: 0x0600BAB7 RID: 47799 RVA: 0x001AF74D File Offset: 0x001AD94D
+		// Token: 0x17003BF1 RID: 15345
+		// (get) Token: 0x0600C644 RID: 50756 RVA: 0x001C68D6 File Offset: 0x001C4AD6
+		// (set) Token: 0x0600C645 RID: 50757 RVA: 0x001C6901 File Offset: 0x001C4B01
 		public virtual string Path
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003905 RID: 14597
-		// (get) Token: 0x0600BAB8 RID: 47800 RVA: 0x001AF75C File Offset: 0x001AD95C
-		// (set) Token: 0x0600BAB9 RID: 47801 RVA: 0x001AF796 File Offset: 0x001AD996
+		// Token: 0x17003BF2 RID: 15346
+		// (get) Token: 0x0600C646 RID: 50758 RVA: 0x001C6910 File Offset: 0x001C4B10
+		// (set) Token: 0x0600C647 RID: 50759 RVA: 0x001C694A File Offset: 0x001C4B4A
 		public virtual bool? ResetCamera
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003906 RID: 14598
-		// (get) Token: 0x0600BABA RID: 47802 RVA: 0x001AF7A4 File Offset: 0x001AD9A4
-		// (set) Token: 0x0600BABB RID: 47803 RVA: 0x001AF7DE File Offset: 0x001AD9DE
+		// Token: 0x17003BF3 RID: 15347
+		// (get) Token: 0x0600C648 RID: 50760 RVA: 0x001C6958 File Offset: 0x001C4B58
+		// (set) Token: 0x0600C649 RID: 50761 RVA: 0x001C6992 File Offset: 0x001C4B92
 		public virtual bool? KeepCamera
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003907 RID: 14599
-		// (get) Token: 0x0600BABC RID: 47804 RVA: 0x001AF7EC File Offset: 0x001AD9EC
-		// (set) Token: 0x0600BABD RID: 47805 RVA: 0x001AF826 File Offset: 0x001ADA26
+		// Token: 0x17003BF4 RID: 15348
+		// (get) Token: 0x0600C64A RID: 50762 RVA: 0x001C69A0 File Offset: 0x001C4BA0
+		// (set) Token: 0x0600C64B RID: 50763 RVA: 0x001C69DA File Offset: 0x001C4BDA
 		public virtual bool? PreLoadRenderAssets
 		{
 			get
@@ -161,20 +159,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003908 RID: 14600
-		// (get) Token: 0x0600BABE RID: 47806 RVA: 0x001AF834 File Offset: 0x001ADA34
-		// (set) Token: 0x0600BABF RID: 47807 RVA: 0x001AF8C7 File Offset: 0x001ADAC7
+		// Token: 0x17003BF5 RID: 15349
+		// (get) Token: 0x0600C64C RID: 50764 RVA: 0x001C69E8 File Offset: 0x001C4BE8
+		// (set) Token: 0x0600C64D RID: 50765 RVA: 0x001C6A7B File Offset: 0x001C4C7B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ISequenceFrameEvent> FrameEvents
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -205,7 +203,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -214,9 +212,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003909 RID: 14601
-		// (get) Token: 0x0600BAC0 RID: 47808 RVA: 0x001AF8DC File Offset: 0x001ADADC
-		// (set) Token: 0x0600BAC1 RID: 47809 RVA: 0x001AF916 File Offset: 0x001ADB16
+		// Token: 0x17003BF6 RID: 15350
+		// (get) Token: 0x0600C64E RID: 50766 RVA: 0x001C6A90 File Offset: 0x001C4C90
+		// (set) Token: 0x0600C64F RID: 50767 RVA: 0x001C6ACA File Offset: 0x001C4CCA
 		public virtual bool? SaveFinalPos
 		{
 			get
@@ -238,9 +236,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700390A RID: 14602
-		// (get) Token: 0x0600BAC2 RID: 47810 RVA: 0x001AF924 File Offset: 0x001ADB24
-		// (set) Token: 0x0600BAC3 RID: 47811 RVA: 0x001AF985 File Offset: 0x001ADB85
+		// Token: 0x17003BF7 RID: 15351
+		// (get) Token: 0x0600C650 RID: 50768 RVA: 0x001C6AD8 File Offset: 0x001C4CD8
+		// (set) Token: 0x0600C651 RID: 50769 RVA: 0x001C6B39 File Offset: 0x001C4D39
 		[Nullable(2)]
 		public virtual SetBlendAnim SeqBlendAnim
 		{
@@ -271,29 +269,29 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006FBF RID: 28607
+		// Token: 0x040075F4 RID: 30196
 		[Nullable(2)]
 		protected new PlaySequenceData FbInstance;
 
-		// Token: 0x04006FC0 RID: 28608
+		// Token: 0x040075F5 RID: 30197
 		[Nullable(2)]
 		protected PlaySequenceData_SetValue PocoInterface;
 
-		// Token: 0x04006FC1 RID: 28609
+		// Token: 0x040075F6 RID: 30198
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ISequenceFrameEvent> _FrameEventsCache;
 
-		// Token: 0x04006FC2 RID: 28610
+		// Token: 0x040075F7 RID: 30199
 		private bool _FrameEventsInited;
 
-		// Token: 0x04006FC3 RID: 28611
+		// Token: 0x040075F8 RID: 30200
 		private SetBlendAnim _SeqBlendAnimCache;
 
-		// Token: 0x04006FC4 RID: 28612
+		// Token: 0x040075F9 RID: 30201
 		private bool _SeqBlendAnimInited;
 	}
 }

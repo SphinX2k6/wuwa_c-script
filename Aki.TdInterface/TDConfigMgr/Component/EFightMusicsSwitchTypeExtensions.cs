@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000948 RID: 2376
+	// Token: 0x020009F7 RID: 2551
 	public static class EFightMusicsSwitchTypeExtensions
 	{
-		// Token: 0x06003575 RID: 13685 RVA: 0x0008B95C File Offset: 0x00089B5C
+		// Token: 0x060038EA RID: 14570 RVA: 0x00093614 File Offset: 0x00091814
 		public static string ToEnumString(this EFightMusicsSwitchType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003576 RID: 13686 RVA: 0x0008B984 File Offset: 0x00089B84
+		// Token: 0x060038EB RID: 14571 RVA: 0x0009363C File Offset: 0x0009183C
 		public static EFightMusicsSwitchType FromString(string name)
 		{
 			EFightMusicsSwitchType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003577 RID: 13687 RVA: 0x0008B9AD File Offset: 0x00089BAD
+		// Token: 0x060038EC RID: 14572 RVA: 0x00093665 File Offset: 0x00091865
 		public static bool TryFromString(string name, out EFightMusicsSwitchType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003578 RID: 13688 RVA: 0x0008B9D2 File Offset: 0x00089BD2
+		// Token: 0x060038ED RID: 14573 RVA: 0x0009368A File Offset: 0x0009188A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003579 RID: 13689 RVA: 0x0008B9E2 File Offset: 0x00089BE2
+		// Token: 0x060038EE RID: 14574 RVA: 0x0009369A File Offset: 0x0009189A
 		public static EFightMusicsSwitchType[] GetValues()
 		{
 			return new EFightMusicsSwitchType[1];
 		}
 
-		// Token: 0x0600357A RID: 13690 RVA: 0x0008B9EA File Offset: 0x00089BEA
+		// Token: 0x060038EF RID: 14575 RVA: 0x000936A2 File Offset: 0x000918A2
 		public static string[] GetNames()
 		{
 			return new string[]

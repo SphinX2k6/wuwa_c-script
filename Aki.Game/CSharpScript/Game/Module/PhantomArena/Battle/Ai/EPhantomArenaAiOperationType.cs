@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E1 RID: 21217
+	// Token: 0x020042B1 RID: 17073
 	public enum EPhantomArenaAiOperationType
 	{
-		// Token: 0x0401CAFA RID: 117498
+		// Token: 0x0401752F RID: 95535
 		SettingCard,
-		// Token: 0x0401CAFB RID: 117499
+		// Token: 0x04017530 RID: 95536
 		EvolveCard,
-		// Token: 0x0401CAFC RID: 117500
+		// Token: 0x04017531 RID: 95537
 		ChangeCard,
-		// Token: 0x0401CAFD RID: 117501
+		// Token: 0x04017532 RID: 95538
 		UseRoleSkill,
-		// Token: 0x0401CAFE RID: 117502
+		// Token: 0x04017533 RID: 95539
 		UseCardSkill,
-		// Token: 0x0401CAFF RID: 117503
+		// Token: 0x04017534 RID: 95540
 		AddBuff,
-		// Token: 0x0401CB00 RID: 117504
+		// Token: 0x04017535 RID: 95541
 		BackToLibrary,
-		// Token: 0x0401CB01 RID: 117505
+		// Token: 0x04017536 RID: 95542
 		SkillTrigger,
-		// Token: 0x0401CB02 RID: 117506
+		// Token: 0x04017537 RID: 95543
 		GamerStatus,
-		// Token: 0x0401CB03 RID: 117507
+		// Token: 0x04017538 RID: 95544
 		CardAttr,
-		// Token: 0x0401CB04 RID: 117508
+		// Token: 0x04017539 RID: 95545
 		DiscardCard,
-		// Token: 0x0401CB05 RID: 117509
+		// Token: 0x0401753A RID: 95546
 		FourCostTask,
-		// Token: 0x0401CB06 RID: 117510
+		// Token: 0x0401753B RID: 95547
 		LeaveSlot,
-		// Token: 0x0401CB07 RID: 117511
+		// Token: 0x0401753C RID: 95548
 		BackSlotCardLibrary,
-		// Token: 0x0401CB08 RID: 117512
+		// Token: 0x0401753D RID: 95549
 		ReserveCard,
-		// Token: 0x0401CB09 RID: 117513
+		// Token: 0x0401753E RID: 95550
 		NpcCardUpdate,
-		// Token: 0x0401CB0A RID: 117514
+		// Token: 0x0401753F RID: 95551
 		ClickCardSkill
 	}
 }

@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E88 RID: 16008
+	// Token: 0x020042C3 RID: 17091
 	public class IHandInGroupT
 	{
-		// Token: 0x17006F10 RID: 28432
-		// (get) Token: 0x0601692E RID: 92462 RVA: 0x00342FF9 File Offset: 0x003411F9
-		// (set) Token: 0x0601692F RID: 92463 RVA: 0x00343001 File Offset: 0x00341201
+		// Token: 0x170074F8 RID: 29944
+		// (get) Token: 0x06017F65 RID: 98149 RVA: 0x0036BD7D File Offset: 0x00369F7D
+		// (set) Token: 0x06017F66 RID: 98150 RVA: 0x0036BD85 File Offset: 0x00369F85
 		public EHandInItemType HandInType { get; set; }
 
-		// Token: 0x17006F11 RID: 28433
-		// (get) Token: 0x06016930 RID: 92464 RVA: 0x0034300A File Offset: 0x0034120A
-		// (set) Token: 0x06016931 RID: 92465 RVA: 0x00343012 File Offset: 0x00341212
+		// Token: 0x170074F9 RID: 29945
+		// (get) Token: 0x06017F67 RID: 98151 RVA: 0x0036BD8E File Offset: 0x00369F8E
+		// (set) Token: 0x06017F68 RID: 98152 RVA: 0x0036BD96 File Offset: 0x00369F96
 		public List<int> ItemIds { get; set; }
 
-		// Token: 0x17006F12 RID: 28434
-		// (get) Token: 0x06016932 RID: 92466 RVA: 0x0034301B File Offset: 0x0034121B
-		// (set) Token: 0x06016933 RID: 92467 RVA: 0x00343023 File Offset: 0x00341223
+		// Token: 0x170074FA RID: 29946
+		// (get) Token: 0x06017F69 RID: 98153 RVA: 0x0036BD9F File Offset: 0x00369F9F
+		// (set) Token: 0x06017F6A RID: 98154 RVA: 0x0036BDA7 File Offset: 0x00369FA7
 		public int Count { get; set; }
 
-		// Token: 0x17006F13 RID: 28435
-		// (get) Token: 0x06016934 RID: 92468 RVA: 0x0034302C File Offset: 0x0034122C
-		// (set) Token: 0x06016935 RID: 92469 RVA: 0x00343034 File Offset: 0x00341234
+		// Token: 0x170074FB RID: 29947
+		// (get) Token: 0x06017F6B RID: 98155 RVA: 0x0036BDB0 File Offset: 0x00369FB0
+		// (set) Token: 0x06017F6C RID: 98156 RVA: 0x0036BDB8 File Offset: 0x00369FB8
 		public int Slot { get; set; }
 
-		// Token: 0x17006F14 RID: 28436
-		// (get) Token: 0x06016936 RID: 92470 RVA: 0x0034303D File Offset: 0x0034123D
-		// (set) Token: 0x06016937 RID: 92471 RVA: 0x00343045 File Offset: 0x00341245
+		// Token: 0x170074FC RID: 29948
+		// (get) Token: 0x06017F6D RID: 98157 RVA: 0x0036BDC1 File Offset: 0x00369FC1
+		// (set) Token: 0x06017F6E RID: 98158 RVA: 0x0036BDC9 File Offset: 0x00369FC9
 		public IHandInItemRangeT ChoiceRange { get; set; }
 
-		// Token: 0x06016938 RID: 92472 RVA: 0x0034304E File Offset: 0x0034124E
+		// Token: 0x06017F6F RID: 98159 RVA: 0x0036BDD2 File Offset: 0x00369FD2
 		public IHandInGroupT()
 		{
 			this.HandInType = EHandInItemType.ItemIds;

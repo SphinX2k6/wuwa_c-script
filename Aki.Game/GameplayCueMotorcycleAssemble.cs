@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.Npc;
 using UnrealEngine;
 
-// Token: 0x02002FCB RID: 12235
+// Token: 0x0200251F RID: 9503
 public class GameplayCueMotorcycleAssemble : GameplayCueBase
 {
-	// Token: 0x06019F07 RID: 106247 RVA: 0x006C91EC File Offset: 0x006C73EC
+	// Token: 0x06017819 RID: 96281 RVA: 0x006EFAC0 File Offset: 0x006EDCC0
 	protected override void OnInit()
 	{
 		base.OnInit();
 		this.Resource = null;
 	}
 
-	// Token: 0x06019F08 RID: 106248 RVA: 0x006C91FB File Offset: 0x006C73FB
+	// Token: 0x0601781A RID: 96282 RVA: 0x006EFACF File Offset: 0x006EDCCF
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
 	}
 
-	// Token: 0x06019F09 RID: 106249 RVA: 0x006C9204 File Offset: 0x006C7404
+	// Token: 0x0601781B RID: 96283 RVA: 0x006EFAD8 File Offset: 0x006EDCD8
 	protected override void OnCreate()
 	{
 		base.OnCreate();
@@ -34,7 +34,7 @@ public class GameplayCueMotorcycleAssemble : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019F0A RID: 106250 RVA: 0x006C9230 File Offset: 0x006C7430
+	// Token: 0x0601781C RID: 96284 RVA: 0x006EFB04 File Offset: 0x006EDD04
 	protected override void OnDestroy()
 	{
 		base.OnDestroy();
@@ -42,7 +42,7 @@ public class GameplayCueMotorcycleAssemble : GameplayCueBase
 		this.RemoveMotorcycleAssemble();
 	}
 
-	// Token: 0x06019F0B RID: 106251 RVA: 0x006C9248 File Offset: 0x006C7448
+	// Token: 0x0601781D RID: 96285 RVA: 0x006EFB1C File Offset: 0x006EDD1C
 	private unsafe void AddMotorcycleAssemble()
 	{
 		if (!this.ActorInternal.IsValid() || this.Resource == null)
@@ -65,7 +65,7 @@ public class GameplayCueMotorcycleAssemble : GameplayCueBase
 		instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06019F0C RID: 106252 RVA: 0x006C92F4 File Offset: 0x006C74F4
+	// Token: 0x0601781E RID: 96286 RVA: 0x006EFBC8 File Offset: 0x006EDDC8
 	private void RemoveMotorcycleAssemble()
 	{
 		CharRenderingComponent charRenderingComponent = base.GetCharRenderingComponent();
@@ -82,7 +82,7 @@ public class GameplayCueMotorcycleAssemble : GameplayCueBase
 		charRenderingComponent.RemoveMotorExtraComp();
 	}
 
-	// Token: 0x0400C44D RID: 50253
+	// Token: 0x0400C7F6 RID: 51190
 	[Nullable(2)]
 	private UObject Resource;
 }

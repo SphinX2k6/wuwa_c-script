@@ -4,12 +4,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020018FD RID: 6397
+// Token: 0x02000DB6 RID: 3510
 [NullableContext(1)]
 [Nullable(0)]
 public class MediaPlayer
 {
-	// Token: 0x0600BB9C RID: 48028 RVA: 0x002A8AD8 File Offset: 0x002A6CD8
+	// Token: 0x06008F86 RID: 36742 RVA: 0x002B3234 File Offset: 0x002B1434
 	public MediaPlayer(UUITexture texture)
 	{
 		this.CgTexture = texture;
@@ -25,7 +25,7 @@ public class MediaPlayer
 		this.MediaPlayerObj.OnMediaOpenFailed.Add(new Action<string>(this.OnVideoOpenFailed));
 	}
 
-	// Token: 0x0600BB9D RID: 48029 RVA: 0x002A8B98 File Offset: 0x002A6D98
+	// Token: 0x06008F87 RID: 36743 RVA: 0x002B32F4 File Offset: 0x002B14F4
 	public void Clear()
 	{
 		this.CleanVideo();
@@ -52,7 +52,7 @@ public class MediaPlayer
 		this.MediaPlayerObj = null;
 	}
 
-	// Token: 0x0600BB9E RID: 48030 RVA: 0x002A8C2C File Offset: 0x002A6E2C
+	// Token: 0x06008F88 RID: 36744 RVA: 0x002B3388 File Offset: 0x002B1588
 	private void OnMediaOpen(string _)
 	{
 		if (this.StartSeekTime != null)
@@ -77,7 +77,7 @@ public class MediaPlayer
 		onVideoStartCallback(this.VideoName);
 	}
 
-	// Token: 0x0600BB9F RID: 48031 RVA: 0x002A8C8E File Offset: 0x002A6E8E
+	// Token: 0x06008F89 RID: 36745 RVA: 0x002B33EA File Offset: 0x002B15EA
 	private void OnVideoEnd()
 	{
 		Action<string> onVideoEndCallback = this.OnVideoEndCallback;
@@ -88,7 +88,7 @@ public class MediaPlayer
 		onVideoEndCallback(this.VideoName);
 	}
 
-	// Token: 0x0600BBA0 RID: 48032 RVA: 0x002A8CA8 File Offset: 0x002A6EA8
+	// Token: 0x06008F8A RID: 36746 RVA: 0x002B3404 File Offset: 0x002B1604
 	private void OnVideoOpenFailed(string _)
 	{
 		Log instance = Log.Instance;
@@ -99,7 +99,7 @@ public class MediaPlayer
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600BBA1 RID: 48033 RVA: 0x002A8CE4 File Offset: 0x002A6EE4
+	// Token: 0x06008F8B RID: 36747 RVA: 0x002B3440 File Offset: 0x002B1640
 	private void CleanVideo()
 	{
 		if (this.LoadHandle != -1)
@@ -114,7 +114,7 @@ public class MediaPlayer
 		this.VideoName = null;
 	}
 
-	// Token: 0x0600BBA2 RID: 48034 RVA: 0x002A8D38 File Offset: 0x002A6F38
+	// Token: 0x06008F8C RID: 36748 RVA: 0x002B3494 File Offset: 0x002B1694
 	public unsafe void PlayVideo(string videoName, string videoPath, bool isLooping = false)
 	{
 		if (string.IsNullOrEmpty(videoPath))
@@ -166,7 +166,7 @@ public class MediaPlayer
 		}
 	}
 
-	// Token: 0x0600BBA3 RID: 48035 RVA: 0x002A8E10 File Offset: 0x002A7010
+	// Token: 0x06008F8D RID: 36749 RVA: 0x002B356C File Offset: 0x002B176C
 	public UniTask LoadVideoAndPlay(string videoName, string videoPath, bool isLooping = false)
 	{
 		MediaPlayer.<LoadVideoAndPlay>d__14 <LoadVideoAndPlay>d__;
@@ -180,7 +180,7 @@ public class MediaPlayer
 		return <LoadVideoAndPlay>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600BBA4 RID: 48036 RVA: 0x002A8E6B File Offset: 0x002A706B
+	// Token: 0x06008F8E RID: 36750 RVA: 0x002B35C7 File Offset: 0x002B17C7
 	public void StopVideo(string videoName)
 	{
 		if (this.VideoName != videoName)
@@ -194,7 +194,7 @@ public class MediaPlayer
 		this.VideoName = null;
 	}
 
-	// Token: 0x0600BBA5 RID: 48037 RVA: 0x002A8EA8 File Offset: 0x002A70A8
+	// Token: 0x06008F8F RID: 36751 RVA: 0x002B3604 File Offset: 0x002B1804
 	public void PauseVideo(string videoName)
 	{
 		if (this.VideoName != videoName)
@@ -207,7 +207,7 @@ public class MediaPlayer
 		}
 	}
 
-	// Token: 0x0600BBA6 RID: 48038 RVA: 0x002A8ED2 File Offset: 0x002A70D2
+	// Token: 0x06008F90 RID: 36752 RVA: 0x002B362E File Offset: 0x002B182E
 	public void ResumeVideo(string videoName)
 	{
 		if (this.VideoName != videoName)
@@ -220,7 +220,7 @@ public class MediaPlayer
 		}
 	}
 
-	// Token: 0x0600BBA7 RID: 48039 RVA: 0x002A8EFC File Offset: 0x002A70FC
+	// Token: 0x06008F91 RID: 36753 RVA: 0x002B3658 File Offset: 0x002B1858
 	public void BindCallbackOnVideoEnd([Nullable(new byte[]
 	{
 		1,
@@ -230,7 +230,7 @@ public class MediaPlayer
 		this.OnVideoEndCallback = callback;
 	}
 
-	// Token: 0x0600BBA8 RID: 48040 RVA: 0x002A8F05 File Offset: 0x002A7105
+	// Token: 0x06008F92 RID: 36754 RVA: 0x002B3661 File Offset: 0x002B1861
 	public void BindCallbackOnVideoStart([Nullable(new byte[]
 	{
 		1,
@@ -240,13 +240,13 @@ public class MediaPlayer
 		this.OnVideoStartCallback = callback;
 	}
 
-	// Token: 0x0600BBA9 RID: 48041 RVA: 0x002A8F0E File Offset: 0x002A710E
+	// Token: 0x06008F93 RID: 36755 RVA: 0x002B366A File Offset: 0x002B186A
 	public float GetVideoAspect(int trackIndex = 0, int formatIndex = 0)
 	{
 		return this.MediaPlayerObj.GetVideoTrackAspectRatio(trackIndex, formatIndex);
 	}
 
-	// Token: 0x0600BBAA RID: 48042 RVA: 0x002A8F1D File Offset: 0x002A711D
+	// Token: 0x06008F94 RID: 36756 RVA: 0x002B3679 File Offset: 0x002B1879
 	[NullableContext(2)]
 	public FTimespan GetPlayTime()
 	{
@@ -258,37 +258,37 @@ public class MediaPlayer
 		return mediaPlayerObj.GetTime();
 	}
 
-	// Token: 0x0600BBAB RID: 48043 RVA: 0x002A8F30 File Offset: 0x002A7130
+	// Token: 0x06008F95 RID: 36757 RVA: 0x002B368C File Offset: 0x002B188C
 	[NullableContext(2)]
 	public void SetStartSeekTime(FTimespan time)
 	{
 		this.StartSeekTime = time;
 	}
 
-	// Token: 0x0400551F RID: 21791
+	// Token: 0x040055CA RID: 21962
 	[Nullable(2)]
 	protected UUITexture CgTexture;
 
-	// Token: 0x04005520 RID: 21792
+	// Token: 0x040055CB RID: 21963
 	[Nullable(2)]
 	protected UMediaPlayer MediaPlayerObj;
 
-	// Token: 0x04005521 RID: 21793
+	// Token: 0x040055CC RID: 21964
 	[Nullable(2)]
 	protected string VideoName;
 
-	// Token: 0x04005522 RID: 21794
+	// Token: 0x040055CD RID: 21965
 	private int LoadHandle = -1;
 
-	// Token: 0x04005523 RID: 21795
+	// Token: 0x040055CE RID: 21966
 	[Nullable(2)]
 	private Action<string> OnVideoEndCallback;
 
-	// Token: 0x04005524 RID: 21796
+	// Token: 0x040055CF RID: 21967
 	[Nullable(2)]
 	private Action<string> OnVideoStartCallback;
 
-	// Token: 0x04005525 RID: 21797
+	// Token: 0x040055D0 RID: 21968
 	[Nullable(2)]
 	private FTimespan StartSeekTime;
 }

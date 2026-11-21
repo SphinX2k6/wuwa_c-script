@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000819 RID: 2073
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008BC RID: 2236
 	public class IWuWaGoSpikeTrap : IWuWaGoEntityBase
 	{
-		// Token: 0x06002D05 RID: 11525 RVA: 0x00074B34 File Offset: 0x00072D34
+		// Token: 0x06003035 RID: 12341 RVA: 0x0007BE98 File Offset: 0x0007A098
 		private IWuWaGoSpikeTrap_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D06 RID: 11526 RVA: 0x00074B6C File Offset: 0x00072D6C
+		// Token: 0x06003036 RID: 12342 RVA: 0x0007BED0 File Offset: 0x0007A0D0
 		public static IWuWaGoSpikeTrap Create([Nullable(2)] IWuWaGoSpikeTrap instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D07 RID: 11527 RVA: 0x00074B7F File Offset: 0x00072D7F
+		// Token: 0x06003037 RID: 12343 RVA: 0x0007BEE3 File Offset: 0x0007A0E3
 		public static IWuWaGoSpikeTrap CreateFromSetValue([Nullable(2)] IWuWaGoSpikeTrap_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D08 RID: 11528 RVA: 0x00074B92 File Offset: 0x00072D92
+		// Token: 0x06003038 RID: 12344 RVA: 0x0007BEF6 File Offset: 0x0007A0F6
 		public new IWuWaGoSpikeTrap_SetValue ToSetValue()
 		{
 			return new IWuWaGoSpikeTrap_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BC0 RID: 3008
-		// (get) Token: 0x06002D09 RID: 11529 RVA: 0x00074BB1 File Offset: 0x00072DB1
-		// (set) Token: 0x06002D0A RID: 11530 RVA: 0x00074BDC File Offset: 0x00072DDC
+		// Token: 0x17000C83 RID: 3203
+		// (get) Token: 0x06003039 RID: 12345 RVA: 0x0007BF15 File Offset: 0x0007A115
+		// (set) Token: 0x0600303A RID: 12346 RVA: 0x0007BF40 File Offset: 0x0007A140
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BC1 RID: 3009
-		// (get) Token: 0x06002D0B RID: 11531 RVA: 0x00074BEC File Offset: 0x00072DEC
-		// (set) Token: 0x06002D0C RID: 11532 RVA: 0x00074C4D File Offset: 0x00072E4D
+		// Token: 0x17000C84 RID: 3204
+		// (get) Token: 0x0600303B RID: 12347 RVA: 0x0007BF50 File Offset: 0x0007A150
+		// (set) Token: 0x0600303C RID: 12348 RVA: 0x0007BFB1 File Offset: 0x0007A1B1
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001DCC RID: 7628
+		// Token: 0x04001FD8 RID: 8152
 		[Nullable(2)]
 		protected new IWuWaGoSpikeTrap FbInstance;
 
-		// Token: 0x04001DCD RID: 7629
+		// Token: 0x04001FD9 RID: 8153
 		[Nullable(2)]
 		protected new IWuWaGoSpikeTrap_SetValue PocoInterface;
 
-		// Token: 0x04001DCE RID: 7630
+		// Token: 0x04001FDA RID: 8154
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04001DCF RID: 7631
+		// Token: 0x04001FDB RID: 8155
 		private bool _LinkDataInited;
 	}
 }

@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003ADC RID: 15068
+	// Token: 0x02003EDE RID: 16094
 	public class ISystemVarDefineT
 	{
-		// Token: 0x1700675B RID: 26459
-		// (get) Token: 0x06014849 RID: 84041 RVA: 0x002FCEAC File Offset: 0x002FB0AC
-		// (set) Token: 0x0601484A RID: 84042 RVA: 0x002FCEB4 File Offset: 0x002FB0B4
+		// Token: 0x17006CF6 RID: 27894
+		// (get) Token: 0x06015CF3 RID: 89331 RVA: 0x0032313C File Offset: 0x0032133C
+		// (set) Token: 0x06015CF4 RID: 89332 RVA: 0x00323144 File Offset: 0x00321344
 		public string Name { get; set; }
 
-		// Token: 0x1700675C RID: 26460
-		// (get) Token: 0x0601484B RID: 84043 RVA: 0x002FCEBD File Offset: 0x002FB0BD
-		// (set) Token: 0x0601484C RID: 84044 RVA: 0x002FCEC5 File Offset: 0x002FB0C5
+		// Token: 0x17006CF7 RID: 27895
+		// (get) Token: 0x06015CF5 RID: 89333 RVA: 0x0032314D File Offset: 0x0032134D
+		// (set) Token: 0x06015CF6 RID: 89334 RVA: 0x00323155 File Offset: 0x00321355
 		public string Type { get; set; }
 
-		// Token: 0x1700675D RID: 26461
-		// (get) Token: 0x0601484D RID: 84045 RVA: 0x002FCECE File Offset: 0x002FB0CE
-		// (set) Token: 0x0601484E RID: 84046 RVA: 0x002FCED6 File Offset: 0x002FB0D6
+		// Token: 0x17006CF8 RID: 27896
+		// (get) Token: 0x06015CF7 RID: 89335 RVA: 0x0032315E File Offset: 0x0032135E
+		// (set) Token: 0x06015CF8 RID: 89336 RVA: 0x00323166 File Offset: 0x00321366
 		public ESystemModuleName ModuleName { get; set; }
 
-		// Token: 0x1700675E RID: 26462
-		// (get) Token: 0x0601484F RID: 84047 RVA: 0x002FCEDF File Offset: 0x002FB0DF
-		// (set) Token: 0x06014850 RID: 84048 RVA: 0x002FCEE7 File Offset: 0x002FB0E7
+		// Token: 0x17006CF9 RID: 27897
+		// (get) Token: 0x06015CF9 RID: 89337 RVA: 0x0032316F File Offset: 0x0032136F
+		// (set) Token: 0x06015CFA RID: 89338 RVA: 0x00323177 File Offset: 0x00321377
 		public string CnName { get; set; }
 
-		// Token: 0x1700675F RID: 26463
-		// (get) Token: 0x06014851 RID: 84049 RVA: 0x002FCEF0 File Offset: 0x002FB0F0
-		// (set) Token: 0x06014852 RID: 84050 RVA: 0x002FCEF8 File Offset: 0x002FB0F8
+		// Token: 0x17006CFA RID: 27898
+		// (get) Token: 0x06015CFB RID: 89339 RVA: 0x00323180 File Offset: 0x00321380
+		// (set) Token: 0x06015CFC RID: 89340 RVA: 0x00323188 File Offset: 0x00321388
 		public bool Readonly { get; set; }
 
-		// Token: 0x17006760 RID: 26464
-		// (get) Token: 0x06014853 RID: 84051 RVA: 0x002FCF01 File Offset: 0x002FB101
-		// (set) Token: 0x06014854 RID: 84052 RVA: 0x002FCF09 File Offset: 0x002FB109
+		// Token: 0x17006CFB RID: 27899
+		// (get) Token: 0x06015CFD RID: 89341 RVA: 0x00323191 File Offset: 0x00321391
+		// (set) Token: 0x06015CFE RID: 89342 RVA: 0x00323199 File Offset: 0x00321399
 		public bool HasArgs { get; set; }
 
-		// Token: 0x06014855 RID: 84053 RVA: 0x002FCF12 File Offset: 0x002FB112
+		// Token: 0x06015CFF RID: 89343 RVA: 0x003231A2 File Offset: 0x003213A2
 		public ISystemVarDefineT()
 		{
 			this.Name = null;

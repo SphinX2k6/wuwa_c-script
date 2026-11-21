@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200197C RID: 6524
+// Token: 0x02000E39 RID: 3641
 public interface ISmallItemGridLockAndDeprecate
 {
-	// Token: 0x17000FEE RID: 4078
-	// (get) Token: 0x0600BEF0 RID: 48880
-	// (set) Token: 0x0600BEF1 RID: 48881
+	// Token: 0x17001012 RID: 4114
+	// (get) Token: 0x060092F8 RID: 37624
+	// (set) Token: 0x060092F9 RID: 37625
 	bool? IsLock { get; set; }
 
-	// Token: 0x17000FEF RID: 4079
-	// (get) Token: 0x0600BEF2 RID: 48882
-	// (set) Token: 0x0600BEF3 RID: 48883
+	// Token: 0x17001013 RID: 4115
+	// (get) Token: 0x060092FA RID: 37626
+	// (set) Token: 0x060092FB RID: 37627
 	bool? IsDeprecate { get; set; }
 }

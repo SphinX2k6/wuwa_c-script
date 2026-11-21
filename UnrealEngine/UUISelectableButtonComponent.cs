@@ -6,57 +6,57 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021A8 RID: 8616
+	// Token: 0x02000720 RID: 1824
 	[UnrealObjectPath("/Script/LGUI.UISelectableButtonComponent")]
 	[UnrealStructLayout(1688, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1688)]
 	public class UUISelectableButtonComponent : UUIButtonComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020B70 RID: 134000 RVA: 0x0030621D File Offset: 0x0030441D
+		// Token: 0x06009D81 RID: 40321 RVA: 0x000EAB34 File Offset: 0x000E8D34
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUISelectableButtonComponent._ClassPtr;
 		}
 
-		// Token: 0x06020B71 RID: 134001 RVA: 0x0030622C File Offset: 0x0030442C
+		// Token: 0x06009D82 RID: 40322 RVA: 0x000EAB40 File Offset: 0x000E8D40
 		public UUISelectableButtonComponent() : this(BuiltinUtils.AllocNativeUObject(UUISelectableButtonComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020B72 RID: 134002 RVA: 0x00306254 File Offset: 0x00304454
+		// Token: 0x06009D83 RID: 40323 RVA: 0x000EAB68 File Offset: 0x000E8D68
 		[NullableContext(1)]
 		public UUISelectableButtonComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUISelectableButtonComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06020B73 RID: 134003 RVA: 0x00306287 File Offset: 0x00304487
+		// Token: 0x06009D84 RID: 40324 RVA: 0x000EAB9B File Offset: 0x000E8D9B
 		public void SetForceSelect(bool forceSelect)
 		{
 			UUISelectableButtonComponent.__SetForceSelect_Internal(base.NativePtr, forceSelect);
 		}
 
-		// Token: 0x06020B74 RID: 134004
+		// Token: 0x06009D85 RID: 40325
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetForceSelect_Internal(IntPtr @this, bool forceSelect);
 
-		// Token: 0x06020B75 RID: 134005 RVA: 0x00306295 File Offset: 0x00304495
+		// Token: 0x06009D86 RID: 40326 RVA: 0x000EABA9 File Offset: 0x000E8DA9
 		static UUISelectableButtonComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UISelectableButtonComponent");
 		}
 
-		// Token: 0x06020B76 RID: 134006 RVA: 0x003062A3 File Offset: 0x003044A3
+		// Token: 0x06009D87 RID: 40327 RVA: 0x000EABB7 File Offset: 0x000E8DB7
 		protected UUISelectableButtonComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040117DF RID: 71647
+		// Token: 0x040043C6 RID: 17350
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UISelectableButtonComponent";
 
-		// Token: 0x040117E0 RID: 71648
+		// Token: 0x040043C7 RID: 17351
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040117E1 RID: 71649
+		// Token: 0x040043C8 RID: 17352
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

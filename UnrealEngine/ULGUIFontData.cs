@@ -6,33 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200207A RID: 8314
-	[NullableContext(2)]
+	// Token: 0x0200069B RID: 1691
+	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIFontData")]
-	[UnrealStructLayout(1296, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1296)]
+	[UnrealStructLayout(1304, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1304)]
 	public class ULGUIFontData : ULGUIFontData_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F5C0 RID: 128448 RVA: 0x002E94AA File Offset: 0x002E76AA
+		// Token: 0x060091AD RID: 37293 RVA: 0x000DB4B6 File Offset: 0x000D96B6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIFontData._ClassPtr;
 		}
 
-		// Token: 0x0601F5C1 RID: 128449 RVA: 0x002E94B8 File Offset: 0x002E76B8
+		// Token: 0x060091AE RID: 37294 RVA: 0x000DB4C4 File Offset: 0x000D96C4
 		public ULGUIFontData() : this(BuiltinUtils.AllocNativeUObject(ULGUIFontData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F5C2 RID: 128450 RVA: 0x002E94E0 File Offset: 0x002E76E0
-		[NullableContext(1)]
+		// Token: 0x060091AF RID: 37295 RVA: 0x000DB4EC File Offset: 0x000D96EC
 		public ULGUIFontData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIFontData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007BCE RID: 31694
-		// (get) Token: 0x0601F5C3 RID: 128451 RVA: 0x002E9513 File Offset: 0x002E7713
-		// (set) Token: 0x0601F5C4 RID: 128452 RVA: 0x002E9523 File Offset: 0x002E7723
+		// Token: 0x17001B2B RID: 6955
+		// (get) Token: 0x060091B0 RID: 37296 RVA: 0x000DB51F File Offset: 0x000D971F
+		// (set) Token: 0x060091B1 RID: 37297 RVA: 0x000DB52F File Offset: 0x000D972F
 		public unsafe Culture CurrentMainCulture
 		{
 			get
@@ -45,42 +44,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BCF RID: 31695
-		// (get) Token: 0x0601F5C5 RID: 128453 RVA: 0x002E9534 File Offset: 0x002E7734
-		// (set) Token: 0x0601F5C6 RID: 128454 RVA: 0x002E9544 File Offset: 0x002E7744
-		public unsafe ELGUIDynamicFontDataType fontType
-		{
-			get
-			{
-				return (ELGUIDynamicFontDataType)(*(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_fontType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_fontType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007BD0 RID: 31696
-		// (get) Token: 0x0601F5C7 RID: 128455 RVA: 0x002E9555 File Offset: 0x002E7755
-		// (set) Token: 0x0601F5C8 RID: 128456 RVA: 0x002E9569 File Offset: 0x002E7769
-		[Nullable(1)]
+		// Token: 0x17001B2C RID: 6956
+		// (get) Token: 0x060091B2 RID: 37298 RVA: 0x000DB540 File Offset: 0x000D9740
+		// (set) Token: 0x060091B3 RID: 37299 RVA: 0x000DB554 File Offset: 0x000D9754
 		public unsafe string fontFilePath
 		{
-			[NullableContext(1)]
 			get
 			{
 				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)ULGUIFontData.__PropertyOffset_fontFilePath)));
 			}
-			[NullableContext(1)]
 			set
 			{
 				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)ULGUIFontData.__PropertyOffset_fontFilePath)), value);
 			}
 		}
 
-		// Token: 0x17007BD1 RID: 31697
-		// (get) Token: 0x0601F5C9 RID: 128457 RVA: 0x002E957E File Offset: 0x002E777E
-		// (set) Token: 0x0601F5CA RID: 128458 RVA: 0x002E958E File Offset: 0x002E778E
+		// Token: 0x17001B2D RID: 6957
+		// (get) Token: 0x060091B4 RID: 37300 RVA: 0x000DB569 File Offset: 0x000D9769
+		// (set) Token: 0x060091B5 RID: 37301 RVA: 0x000DB579 File Offset: 0x000D9779
 		public unsafe bool useRelativeFilePath
 		{
 			get
@@ -93,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD2 RID: 31698
-		// (get) Token: 0x0601F5CB RID: 128459 RVA: 0x002E959F File Offset: 0x002E779F
-		// (set) Token: 0x0601F5CC RID: 128460 RVA: 0x002E95AF File Offset: 0x002E77AF
+		// Token: 0x17001B2E RID: 6958
+		// (get) Token: 0x060091B6 RID: 37302 RVA: 0x000DB58A File Offset: 0x000D978A
+		// (set) Token: 0x060091B7 RID: 37303 RVA: 0x000DB59A File Offset: 0x000D979A
 		public unsafe bool useExternalFileOrEmbedInToUAsset
 		{
 			get
@@ -108,24 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD3 RID: 31699
-		// (get) Token: 0x0601F5CD RID: 128461 RVA: 0x002E95C0 File Offset: 0x002E77C0
-		// (set) Token: 0x0601F5CE RID: 128462 RVA: 0x002E95D4 File Offset: 0x002E77D4
-		public unsafe UFontFace unrealFont
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UFontFace>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_unrealFont);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_unrealFont, value);
-			}
-		}
-
-		// Token: 0x17007BD4 RID: 31700
-		// (get) Token: 0x0601F5CF RID: 128463 RVA: 0x002E95E9 File Offset: 0x002E77E9
-		// (set) Token: 0x0601F5D0 RID: 128464 RVA: 0x002E95F9 File Offset: 0x002E77F9
+		// Token: 0x17001B2F RID: 6959
+		// (get) Token: 0x060091B8 RID: 37304 RVA: 0x000DB5AB File Offset: 0x000D97AB
+		// (set) Token: 0x060091B9 RID: 37305 RVA: 0x000DB5BB File Offset: 0x000D97BB
 		public unsafe int fontFace
 		{
 			get
@@ -138,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD5 RID: 31701
-		// (get) Token: 0x0601F5D1 RID: 128465 RVA: 0x002E960A File Offset: 0x002E780A
-		// (set) Token: 0x0601F5D2 RID: 128466 RVA: 0x002E961A File Offset: 0x002E781A
+		// Token: 0x17001B30 RID: 6960
+		// (get) Token: 0x060091BA RID: 37306 RVA: 0x000DB5CC File Offset: 0x000D97CC
+		// (set) Token: 0x060091BB RID: 37307 RVA: 0x000DB5DC File Offset: 0x000D97DC
 		public unsafe float fixedVerticalOffset
 		{
 			get
@@ -153,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD6 RID: 31702
-		// (get) Token: 0x0601F5D3 RID: 128467 RVA: 0x002E962B File Offset: 0x002E782B
-		// (set) Token: 0x0601F5D4 RID: 128468 RVA: 0x002E963B File Offset: 0x002E783B
+		// Token: 0x17001B31 RID: 6961
+		// (get) Token: 0x060091BC RID: 37308 RVA: 0x000DB5ED File Offset: 0x000D97ED
+		// (set) Token: 0x060091BD RID: 37309 RVA: 0x000DB5FD File Offset: 0x000D97FD
 		public unsafe float italicAngle
 		{
 			get
@@ -168,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD7 RID: 31703
-		// (get) Token: 0x0601F5D5 RID: 128469 RVA: 0x002E964C File Offset: 0x002E784C
-		// (set) Token: 0x0601F5D6 RID: 128470 RVA: 0x002E965C File Offset: 0x002E785C
+		// Token: 0x17001B32 RID: 6962
+		// (get) Token: 0x060091BE RID: 37310 RVA: 0x000DB60E File Offset: 0x000D980E
+		// (set) Token: 0x060091BF RID: 37311 RVA: 0x000DB61E File Offset: 0x000D981E
 		public unsafe float boldRatio
 		{
 			get
@@ -183,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD8 RID: 31704
-		// (get) Token: 0x0601F5D7 RID: 128471 RVA: 0x002E966D File Offset: 0x002E786D
-		// (set) Token: 0x0601F5D8 RID: 128472 RVA: 0x002E967D File Offset: 0x002E787D
+		// Token: 0x17001B33 RID: 6963
+		// (get) Token: 0x060091C0 RID: 37312 RVA: 0x000DB62F File Offset: 0x000D982F
+		// (set) Token: 0x060091C1 RID: 37313 RVA: 0x000DB63F File Offset: 0x000D983F
 		public unsafe int boldDrawNum
 		{
 			get
@@ -198,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BD9 RID: 31705
-		// (get) Token: 0x0601F5D9 RID: 128473 RVA: 0x002E968E File Offset: 0x002E788E
-		// (set) Token: 0x0601F5DA RID: 128474 RVA: 0x002E96A2 File Offset: 0x002E78A2
+		// Token: 0x17001B34 RID: 6964
+		// (get) Token: 0x060091C2 RID: 37314 RVA: 0x000DB650 File Offset: 0x000D9850
+		// (set) Token: 0x060091C3 RID: 37315 RVA: 0x000DB664 File Offset: 0x000D9864
 		public unsafe FName packingTag
 		{
 			get
@@ -213,123 +179,78 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BDA RID: 31706
-		// (get) Token: 0x0601F5DB RID: 128475 RVA: 0x002E96B7 File Offset: 0x002E78B7
-		// (set) Token: 0x0601F5DC RID: 128476 RVA: 0x002E96CB File Offset: 0x002E78CB
+		// Token: 0x17001B35 RID: 6965
+		// (get) Token: 0x060091C4 RID: 37316 RVA: 0x000DB679 File Offset: 0x000D9879
+		// (set) Token: 0x060091C5 RID: 37317 RVA: 0x000DB68D File Offset: 0x000D988D
+		[Nullable(2)]
 		public unsafe UTexture2D texture
 		{
+			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_texture);
 			}
+			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_texture, value);
 			}
 		}
 
-		// Token: 0x17007BDB RID: 31707
-		// (get) Token: 0x0601F5DD RID: 128477 RVA: 0x002E96E0 File Offset: 0x002E78E0
-		// (set) Token: 0x0601F5DE RID: 128478 RVA: 0x002E96F0 File Offset: 0x002E78F0
-		public unsafe ELGUIAtlasTextureSizeType initialSize
-		{
-			get
-			{
-				return (ELGUIAtlasTextureSizeType)(*(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_initialSize));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_initialSize) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007BDC RID: 31708
-		// (get) Token: 0x0601F5DF RID: 128479 RVA: 0x002E9704 File Offset: 0x002E7904
-		// (set) Token: 0x0601F5E0 RID: 128480 RVA: 0x002E973D File Offset: 0x002E793D
-		[Nullable(1)]
-		public TArray<FLGUISubFontData> SubFonts
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FLGUISubFontData> result;
-				if ((result = this._SubFonts) == null)
-				{
-					result = (this._SubFonts = new TArray<FLGUISubFontData>(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_SubFonts, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.SubFonts.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17007BDD RID: 31709
-		// (get) Token: 0x0601F5E1 RID: 128481 RVA: 0x002E974B File Offset: 0x002E794B
-		// (set) Token: 0x0601F5E2 RID: 128482 RVA: 0x002E975F File Offset: 0x002E795F
-		public unsafe UDataAsset ThConfig
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UDataAsset>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_ThConfig);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_ThConfig, value);
-			}
-		}
-
-		// Token: 0x17007BDE RID: 31710
-		// (get) Token: 0x0601F5E3 RID: 128483 RVA: 0x002E9774 File Offset: 0x002E7974
-		// (set) Token: 0x0601F5E4 RID: 128484 RVA: 0x002E9788 File Offset: 0x002E7988
+		// Token: 0x17001B36 RID: 6966
+		// (get) Token: 0x060091C6 RID: 37318 RVA: 0x000DB6A2 File Offset: 0x000D98A2
+		// (set) Token: 0x060091C7 RID: 37319 RVA: 0x000DB6B6 File Offset: 0x000D98B6
+		[Nullable(2)]
 		public unsafe UDataTable ThDict
 		{
+			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_ThDict);
 			}
+			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_ThDict, value);
 			}
 		}
 
-		// Token: 0x17007BDF RID: 31711
-		// (get) Token: 0x0601F5E5 RID: 128485 RVA: 0x002E979D File Offset: 0x002E799D
-		// (set) Token: 0x0601F5E6 RID: 128486 RVA: 0x002E97B1 File Offset: 0x002E79B1
+		// Token: 0x17001B37 RID: 6967
+		// (get) Token: 0x060091C8 RID: 37320 RVA: 0x000DB6CB File Offset: 0x000D98CB
+		// (set) Token: 0x060091C9 RID: 37321 RVA: 0x000DB6DF File Offset: 0x000D98DF
+		[Nullable(2)]
 		public unsafe UDataTable CachedThDict
 		{
+			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UDataTable>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_CachedThDict);
 			}
+			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_CachedThDict, value);
 			}
 		}
 
-		// Token: 0x17007BE0 RID: 31712
-		// (get) Token: 0x0601F5E7 RID: 128487 RVA: 0x002E97C6 File Offset: 0x002E79C6
-		// (set) Token: 0x0601F5E8 RID: 128488 RVA: 0x002E97DA File Offset: 0x002E79DA
-		public unsafe ULGUIMobileFontAtlasTextureSizeWhiteList MobileFontAtlasTextureSizeWhiteList
+		// Token: 0x17001B38 RID: 6968
+		// (get) Token: 0x060091CA RID: 37322 RVA: 0x000DB6F4 File Offset: 0x000D98F4
+		// (set) Token: 0x060091CB RID: 37323 RVA: 0x000DB704 File Offset: 0x000D9904
+		public unsafe bool bMMapMode
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ULGUIMobileFontAtlasTextureSizeWhiteList>(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_MobileFontAtlasTextureSizeWhiteList);
+				return *(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_bMMapMode) != 0;
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ULGUIFontData.__PropertyOffset_MobileFontAtlasTextureSizeWhiteList, value);
+				*(base.NativePtr + (IntPtr)ULGUIFontData.__PropertyOffset_bMMapMode) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17007BE1 RID: 31713
-		// (get) Token: 0x0601F5E9 RID: 128489 RVA: 0x002E97F0 File Offset: 0x002E79F0
-		// (set) Token: 0x0601F5EA RID: 128490 RVA: 0x002E9829 File Offset: 0x002E7A29
+		// Token: 0x17001B39 RID: 6969
+		// (get) Token: 0x060091CC RID: 37324 RVA: 0x000DB718 File Offset: 0x000D9918
+		// (set) Token: 0x060091CD RID: 37325 RVA: 0x000DB751 File Offset: 0x000D9951
 		[Nullable(new byte[]
 		{
 			1,
@@ -366,13 +287,11 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BE2 RID: 31714
-		// (get) Token: 0x0601F5EB RID: 128491 RVA: 0x002E9838 File Offset: 0x002E7A38
-		// (set) Token: 0x0601F5EC RID: 128492 RVA: 0x002E9871 File Offset: 0x002E7A71
-		[Nullable(1)]
+		// Token: 0x17001B3A RID: 6970
+		// (get) Token: 0x060091CE RID: 37326 RVA: 0x000DB760 File Offset: 0x000D9960
+		// (set) Token: 0x060091CF RID: 37327 RVA: 0x000DB799 File Offset: 0x000D9999
 		public TArray<byte> fontBinaryArray
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -383,20 +302,17 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.fontBinaryArray.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17007BE3 RID: 31715
-		// (get) Token: 0x0601F5ED RID: 128493 RVA: 0x002E9880 File Offset: 0x002E7A80
-		// (set) Token: 0x0601F5EE RID: 128494 RVA: 0x002E98B9 File Offset: 0x002E7AB9
-		[Nullable(1)]
+		// Token: 0x17001B3B RID: 6971
+		// (get) Token: 0x060091D0 RID: 37328 RVA: 0x000DB7A8 File Offset: 0x000D99A8
+		// (set) Token: 0x060091D1 RID: 37329 RVA: 0x000DB7E1 File Offset: 0x000D99E1
 		public TArray<byte> tempFontBinaryArray
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -407,198 +323,173 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.tempFontBinaryArray.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x0601F5EF RID: 128495
+		// Token: 0x060091D2 RID: 37330
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetAllFontCurrentCulture(Culture newCulture);
 
-		// Token: 0x0601F5F0 RID: 128496
+		// Token: 0x060091D3 RID: 37331
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void RebuildAllFontText();
 
-		// Token: 0x0601F5F1 RID: 128497 RVA: 0x002E98C7 File Offset: 0x002E7AC7
+		// Token: 0x060091D4 RID: 37332 RVA: 0x000DB7EF File Offset: 0x000D99EF
 		public int GetUsedRectNum()
 		{
 			return ULGUIFontData.__GetUsedRectNum_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F5F2 RID: 128498 RVA: 0x002E98D4 File Offset: 0x002E7AD4
+		// Token: 0x060091D5 RID: 37333 RVA: 0x000DB7FC File Offset: 0x000D99FC
 		public int GetTobeClearNum()
 		{
 			return ULGUIFontData.__GetTobeClearNum_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F5F3 RID: 128499 RVA: 0x002E98E1 File Offset: 0x002E7AE1
+		// Token: 0x060091D6 RID: 37334 RVA: 0x000DB809 File Offset: 0x000D9A09
 		public int GetFreeRectNum()
 		{
 			return ULGUIFontData.__GetFreeRectNum_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F5F4 RID: 128500 RVA: 0x002E98EE File Offset: 0x002E7AEE
+		// Token: 0x060091D7 RID: 37335 RVA: 0x000DB816 File Offset: 0x000D9A16
+		[NullableContext(2)]
 		public UTexture2D GetFontTexture()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UTexture2D>(ULGUIFontData.__GetFontTexture_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601F5F5 RID: 128501 RVA: 0x002E9900 File Offset: 0x002E7B00
-		[NullableContext(1)]
+		// Token: 0x060091D8 RID: 37336 RVA: 0x000DB828 File Offset: 0x000D9A28
 		public static TArray<ULGUIFontData> GetFonts()
 		{
 			return new TArray<ULGUIFontData>(ULGUIFontData.__GetFonts_Internal(), null);
 		}
 
-		// Token: 0x0601F5F6 RID: 128502 RVA: 0x002E990D File Offset: 0x002E7B0D
-		[NullableContext(1)]
+		// Token: 0x060091D9 RID: 37337 RVA: 0x000DB835 File Offset: 0x000D9A35
 		public string GetFontPath()
 		{
 			return FString.ToStringAndDeleteNativePtr(ULGUIFontData.__GetFontPath_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0601F5F7 RID: 128503 RVA: 0x002E991F File Offset: 0x002E7B1F
+		// Token: 0x060091DA RID: 37338 RVA: 0x000DB847 File Offset: 0x000D9A47
+		[NullableContext(2)]
 		public static ULGUIFontData GetDefaultFont()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<ULGUIFontData>(ULGUIFontData.__GetDefaultFont_Internal());
 		}
 
-		// Token: 0x0601F5F8 RID: 128504
+		// Token: 0x060091DB RID: 37339
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern EUILanguageType GetCurrentLanguageType();
 
-		// Token: 0x0601F5F9 RID: 128505 RVA: 0x002E992B File Offset: 0x002E7B2B
+		// Token: 0x060091DC RID: 37340 RVA: 0x000DB853 File Offset: 0x000D9A53
 		public int GetCharMapSize()
 		{
 			return ULGUIFontData.__GetCharMapSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601F5FA RID: 128506
+		// Token: 0x060091DD RID: 37341
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetUsedRectNum_Internal(IntPtr @this);
 
-		// Token: 0x0601F5FB RID: 128507
+		// Token: 0x060091DE RID: 37342
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetTobeClearNum_Internal(IntPtr @this);
 
-		// Token: 0x0601F5FC RID: 128508
+		// Token: 0x060091DF RID: 37343
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetFreeRectNum_Internal(IntPtr @this);
 
-		// Token: 0x0601F5FD RID: 128509
+		// Token: 0x060091E0 RID: 37344
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetFontTexture_Internal(IntPtr @this);
 
-		// Token: 0x0601F5FE RID: 128510
+		// Token: 0x060091E1 RID: 37345
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetFonts_Internal();
 
-		// Token: 0x0601F5FF RID: 128511
+		// Token: 0x060091E2 RID: 37346
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetFontPath_Internal(IntPtr @this);
 
-		// Token: 0x0601F600 RID: 128512
+		// Token: 0x060091E3 RID: 37347
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDefaultFont_Internal();
 
-		// Token: 0x0601F601 RID: 128513
+		// Token: 0x060091E4 RID: 37348
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetCharMapSize_Internal(IntPtr @this);
 
-		// Token: 0x0601F602 RID: 128514 RVA: 0x002E9938 File Offset: 0x002E7B38
+		// Token: 0x060091E5 RID: 37349 RVA: 0x000DB860 File Offset: 0x000D9A60
 		static ULGUIFontData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIFontData");
 		}
 
-		// Token: 0x0601F603 RID: 128515 RVA: 0x002E9946 File Offset: 0x002E7B46
+		// Token: 0x060091E6 RID: 37350 RVA: 0x000DB86E File Offset: 0x000D9A6E
 		protected ULGUIFontData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010F17 RID: 69399
-		[Nullable(1)]
+		// Token: 0x04003F7E RID: 16254
 		public new const string __ObjectPath = "/Script/LGUI.LGUIFontData";
 
-		// Token: 0x04010F18 RID: 69400
+		// Token: 0x04003F7F RID: 16255
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010F19 RID: 69401
+		// Token: 0x04003F80 RID: 16256
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010F1A RID: 69402
+		// Token: 0x04003F81 RID: 16257
 		internal static int __PropertyOffset_CurrentMainCulture;
 
-		// Token: 0x04010F1B RID: 69403
-		internal static int __PropertyOffset_fontType;
-
-		// Token: 0x04010F1C RID: 69404
+		// Token: 0x04003F82 RID: 16258
 		internal static int __PropertyOffset_fontFilePath;
 
-		// Token: 0x04010F1D RID: 69405
+		// Token: 0x04003F83 RID: 16259
 		internal static int __PropertyOffset_useRelativeFilePath;
 
-		// Token: 0x04010F1E RID: 69406
+		// Token: 0x04003F84 RID: 16260
 		internal static int __PropertyOffset_useExternalFileOrEmbedInToUAsset;
 
-		// Token: 0x04010F1F RID: 69407
-		internal static int __PropertyOffset_unrealFont;
-
-		// Token: 0x04010F20 RID: 69408
+		// Token: 0x04003F85 RID: 16261
 		internal static int __PropertyOffset_fontFace;
 
-		// Token: 0x04010F21 RID: 69409
+		// Token: 0x04003F86 RID: 16262
 		internal static int __PropertyOffset_fixedVerticalOffset;
 
-		// Token: 0x04010F22 RID: 69410
+		// Token: 0x04003F87 RID: 16263
 		internal static int __PropertyOffset_italicAngle;
 
-		// Token: 0x04010F23 RID: 69411
+		// Token: 0x04003F88 RID: 16264
 		internal static int __PropertyOffset_boldRatio;
 
-		// Token: 0x04010F24 RID: 69412
+		// Token: 0x04003F89 RID: 16265
 		internal static int __PropertyOffset_boldDrawNum;
 
-		// Token: 0x04010F25 RID: 69413
+		// Token: 0x04003F8A RID: 16266
 		internal static int __PropertyOffset_packingTag;
 
-		// Token: 0x04010F26 RID: 69414
+		// Token: 0x04003F8B RID: 16267
 		internal static int __PropertyOffset_texture;
 
-		// Token: 0x04010F27 RID: 69415
-		internal static int __PropertyOffset_initialSize;
-
-		// Token: 0x04010F28 RID: 69416
-		internal static int __PropertyOffset_SubFonts;
-
-		// Token: 0x04010F29 RID: 69417
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FLGUISubFontData> _SubFonts;
-
-		// Token: 0x04010F2A RID: 69418
-		internal static int __PropertyOffset_ThConfig;
-
-		// Token: 0x04010F2B RID: 69419
+		// Token: 0x04003F8C RID: 16268
 		internal static int __PropertyOffset_ThDict;
 
-		// Token: 0x04010F2C RID: 69420
+		// Token: 0x04003F8D RID: 16269
 		internal static int __PropertyOffset_CachedThDict;
 
-		// Token: 0x04010F2D RID: 69421
-		internal static int __PropertyOffset_MobileFontAtlasTextureSizeWhiteList;
+		// Token: 0x04003F8E RID: 16270
+		internal static int __PropertyOffset_bMMapMode;
 
-		// Token: 0x04010F2E RID: 69422
+		// Token: 0x04003F8F RID: 16271
 		internal static int __PropertyOffset_renderTextArray;
 
-		// Token: 0x04010F2F RID: 69423
+		// Token: 0x04003F90 RID: 16272
 		[Nullable(new byte[]
 		{
 			2,
@@ -607,16 +498,18 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<UUIText>> _renderTextArray;
 
-		// Token: 0x04010F30 RID: 69424
+		// Token: 0x04003F91 RID: 16273
 		internal static int __PropertyOffset_fontBinaryArray;
 
-		// Token: 0x04010F31 RID: 69425
+		// Token: 0x04003F92 RID: 16274
+		[Nullable(2)]
 		private TArray<byte> _fontBinaryArray;
 
-		// Token: 0x04010F32 RID: 69426
+		// Token: 0x04003F93 RID: 16275
 		internal static int __PropertyOffset_tempFontBinaryArray;
 
-		// Token: 0x04010F33 RID: 69427
+		// Token: 0x04003F94 RID: 16276
+		[Nullable(2)]
 		private TArray<byte> _tempFontBinaryArray;
 	}
 }

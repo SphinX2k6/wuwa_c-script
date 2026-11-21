@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200117D RID: 4477
+// Token: 0x02000631 RID: 1585
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerQuestView : UiViewBase
 {
-	// Token: 0x0600765A RID: 30298 RVA: 0x00189584 File Offset: 0x00187784
+	// Token: 0x060049F1 RID: 18929 RVA: 0x00192134 File Offset: 0x00190334
 	public BabelTowerQuestView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600765B RID: 30299 RVA: 0x001895B0 File Offset: 0x001877B0
+	// Token: 0x060049F2 RID: 18930 RVA: 0x00192160 File Offset: 0x00190360
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -49,19 +49,19 @@ public class BabelTowerQuestView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600765C RID: 30300 RVA: 0x00189701 File Offset: 0x00187901
+	// Token: 0x060049F3 RID: 18931 RVA: 0x001922B1 File Offset: 0x001904B1
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshQuestState, new Action(this.BabelTowerRefreshQuestState));
 	}
 
-	// Token: 0x0600765D RID: 30301 RVA: 0x0018971F File Offset: 0x0018791F
+	// Token: 0x060049F4 RID: 18932 RVA: 0x001922CF File Offset: 0x001904CF
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshQuestState, new Action(this.BabelTowerRefreshQuestState));
 	}
 
-	// Token: 0x0600765E RID: 30302 RVA: 0x00189740 File Offset: 0x00187940
+	// Token: 0x060049F5 RID: 18933 RVA: 0x001922F0 File Offset: 0x001904F0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerQuestView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -72,7 +72,7 @@ public class BabelTowerQuestView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600765F RID: 30303 RVA: 0x00189784 File Offset: 0x00187984
+	// Token: 0x060049F6 RID: 18934 RVA: 0x00192334 File Offset: 0x00190534
 	protected override void OnStart()
 	{
 		base.GetItem(5).SetUIActive(false);
@@ -136,14 +136,14 @@ public class BabelTowerQuestView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06007660 RID: 30304 RVA: 0x00189898 File Offset: 0x00187A98
+	// Token: 0x060049F7 RID: 18935 RVA: 0x00192448 File Offset: 0x00190648
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 		EventSystem.Instance.Emit(EEventName.BabelTowerRefreshQuestState);
 	}
 
-	// Token: 0x06007661 RID: 30305 RVA: 0x001898B0 File Offset: 0x00187AB0
+	// Token: 0x060049F8 RID: 18936 RVA: 0x00192460 File Offset: 0x00190660
 	private void RefreshView()
 	{
 		EBabelTowerTabItem currentSelect = this.CurrentSelect;
@@ -202,7 +202,7 @@ public class BabelTowerQuestView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06007662 RID: 30306 RVA: 0x001899B7 File Offset: 0x00187BB7
+	// Token: 0x060049F9 RID: 18937 RVA: 0x00192567 File Offset: 0x00190767
 	private BabelTowerQuestTabItem InitTabItem()
 	{
 		return new BabelTowerQuestTabItem
@@ -211,13 +211,13 @@ public class BabelTowerQuestView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007663 RID: 30307 RVA: 0x001899D0 File Offset: 0x00187BD0
+	// Token: 0x060049FA RID: 18938 RVA: 0x00192580 File Offset: 0x00190780
 	private BabelTowerNormalQuestItem InitNormalQuestItem()
 	{
 		return new BabelTowerNormalQuestItem();
 	}
 
-	// Token: 0x06007664 RID: 30308 RVA: 0x001899D7 File Offset: 0x00187BD7
+	// Token: 0x060049FB RID: 18939 RVA: 0x00192587 File Offset: 0x00190787
 	private void OnClickTabItem(UUIExtendToggle toggle, int index)
 	{
 		UUIExtendToggle currentSelectToggle = this.CurrentSelectToggle;
@@ -230,7 +230,7 @@ public class BabelTowerQuestView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06007665 RID: 30309 RVA: 0x00189A04 File Offset: 0x00187C04
+	// Token: 0x060049FC RID: 18940 RVA: 0x001925B4 File Offset: 0x001907B4
 	private void SortItemList()
 	{
 		BabelTowerData data = BabelTowerController.Instance.GetBabelTowerData();
@@ -256,18 +256,18 @@ public class BabelTowerQuestView : UiViewBase
 		});
 	}
 
-	// Token: 0x06007666 RID: 30310 RVA: 0x00189A55 File Offset: 0x00187C55
+	// Token: 0x060049FD RID: 18941 RVA: 0x00192605 File Offset: 0x00190805
 	private void BabelTowerRefreshQuestState()
 	{
 		this.SortItemList();
 		this.RefreshView();
 	}
 
-	// Token: 0x04003641 RID: 13889
+	// Token: 0x040036DA RID: 14042
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003642 RID: 13890
+	// Token: 0x040036DB RID: 14043
 	[Nullable(new byte[]
 	{
 		2,
@@ -275,7 +275,7 @@ public class BabelTowerQuestView : UiViewBase
 	})]
 	private GenericScrollViewNew<BabelTowerQuestTabItem, int> TabScrollerView;
 
-	// Token: 0x04003643 RID: 13891
+	// Token: 0x040036DC RID: 14044
 	[Nullable(new byte[]
 	{
 		2,
@@ -283,51 +283,51 @@ public class BabelTowerQuestView : UiViewBase
 	})]
 	private GenericScrollViewNew<BabelTowerNormalQuestItem, int> NormalLoopScrollerView;
 
-	// Token: 0x04003644 RID: 13892
+	// Token: 0x040036DD RID: 14045
 	private EBabelTowerTabItem CurrentSelect;
 
-	// Token: 0x04003645 RID: 13893
+	// Token: 0x040036DE RID: 14046
 	private readonly List<int> NormalSimpleList = new List<int>();
 
-	// Token: 0x04003646 RID: 13894
+	// Token: 0x040036DF RID: 14047
 	private readonly List<int> NormalDifficultyList = new List<int>();
 
-	// Token: 0x04003647 RID: 13895
+	// Token: 0x040036E0 RID: 14048
 	private readonly List<EBabelTowerTabItem> QuestTypeList = new List<EBabelTowerTabItem>();
 
-	// Token: 0x04003648 RID: 13896
+	// Token: 0x040036E1 RID: 14049
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x02007750 RID: 30544
+	// Token: 0x020068DD RID: 26845
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040275C5 RID: 161221
+		// Token: 0x040228FE RID: 141566
 		public const int CaptionItem = 0;
 
-		// Token: 0x040275C6 RID: 161222
+		// Token: 0x040228FF RID: 141567
 		public const int NormalQuestLoopScrollerView = 1;
 
-		// Token: 0x040275C7 RID: 161223
+		// Token: 0x04022900 RID: 141568
 		public const int NormalQuestLoopScrollerItem = 2;
 
-		// Token: 0x040275C8 RID: 161224
+		// Token: 0x04022901 RID: 141569
 		public const int TabScrollerView = 3;
 
-		// Token: 0x040275C9 RID: 161225
+		// Token: 0x04022902 RID: 141570
 		public const int TabItem = 4;
 
-		// Token: 0x040275CA RID: 161226
+		// Token: 0x04022903 RID: 141571
 		public const int DailyQuestItem = 5;
 
-		// Token: 0x040275CB RID: 161227
+		// Token: 0x04022904 RID: 141572
 		public const int RefreshTimeText = 6;
 
-		// Token: 0x040275CC RID: 161228
+		// Token: 0x04022905 RID: 141573
 		public const int DailyQuestLoopScrollerView = 7;
 
-		// Token: 0x040275CD RID: 161229
+		// Token: 0x04022906 RID: 141574
 		public const int DailyQuestLoopScrollerItem = 8;
 	}
 }

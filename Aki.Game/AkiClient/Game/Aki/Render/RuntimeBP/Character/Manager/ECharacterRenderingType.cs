@@ -4,32 +4,32 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager
 {
-	// Token: 0x02003E29 RID: 15913
+	// Token: 0x0200313D RID: 12605
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/Manager/ECharacterRenderingType.ECharacterRenderingType")]
 	public enum ECharacterRenderingType : byte
 	{
-		// Token: 0x040143B8 RID: 82872
+		// Token: 0x04010842 RID: 67650
 		LocalPlayer,
-		// Token: 0x040143B9 RID: 82873
+		// Token: 0x04010843 RID: 67651
 		RemotePlayer,
-		// Token: 0x040143BA RID: 82874
+		// Token: 0x04010844 RID: 67652
 		Monster,
-		// Token: 0x040143BB RID: 82875
+		// Token: 0x04010845 RID: 67653
 		Npc,
-		// Token: 0x040143BC RID: 82876
+		// Token: 0x04010846 RID: 67654
 		Pet,
-		// Token: 0x040143BD RID: 82877
+		// Token: 0x04010847 RID: 67655
 		UI,
-		// Token: 0x040143BE RID: 82878
+		// Token: 0x04010848 RID: 67656
 		Sequence,
-		// Token: 0x040143BF RID: 82879
+		// Token: 0x04010849 RID: 67657
 		Default,
-		// Token: 0x040143C0 RID: 82880
+		// Token: 0x0401084A RID: 67658
 		Effect,
-		// Token: 0x040143C1 RID: 82881
+		// Token: 0x0401084B RID: 67659
 		Error,
-		// Token: 0x040143C2 RID: 82882
+		// Token: 0x0401084C RID: 67660
 		ECharacterRenderingType_MAX
 	}
 }

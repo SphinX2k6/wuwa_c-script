@@ -3,27 +3,27 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B33 RID: 27443
+	// Token: 0x02005CAB RID: 23723
 	internal interface ILeaveAreaItem
 	{
-		// Token: 0x17009982 RID: 39298
-		// (get) Token: 0x06044129 RID: 278825
-		// (set) Token: 0x0604412A RID: 278826
+		// Token: 0x17006E85 RID: 28293
+		// (get) Token: 0x0603A27B RID: 238203
+		// (set) Token: 0x0603A27C RID: 238204
 		int QuestId { get; set; }
 
-		// Token: 0x17009983 RID: 39299
-		// (get) Token: 0x0604412B RID: 278827
-		// (set) Token: 0x0604412C RID: 278828
+		// Token: 0x17006E86 RID: 28294
+		// (get) Token: 0x0603A27D RID: 238205
+		// (set) Token: 0x0603A27E RID: 238206
 		int NodeId { get; set; }
 
-		// Token: 0x17009984 RID: 39300
-		// (get) Token: 0x0604412D RID: 278829
-		// (set) Token: 0x0604412E RID: 278830
+		// Token: 0x17006E87 RID: 28295
+		// (get) Token: 0x0603A27F RID: 238207
+		// (set) Token: 0x0603A280 RID: 238208
 		int LeaveAreaId { get; set; }
 
-		// Token: 0x17009985 RID: 39301
-		// (get) Token: 0x0604412F RID: 278831
-		// (set) Token: 0x06044130 RID: 278832
+		// Token: 0x17006E88 RID: 28296
+		// (get) Token: 0x0603A281 RID: 238209
+		// (set) Token: 0x0603A282 RID: 238210
 		NodeStatus NodeState { get; set; }
 	}
 }

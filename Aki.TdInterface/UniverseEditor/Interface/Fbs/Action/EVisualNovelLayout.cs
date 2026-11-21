@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200605A RID: 24666
+	// Token: 0x020066BB RID: 26299
 	public enum EVisualNovelLayout : byte
 	{
-		// Token: 0x040101F6 RID: 66038
+		// Token: 0x04010FE9 RID: 69609
 		Portrait,
-		// Token: 0x040101F7 RID: 66039
+		// Token: 0x04010FEA RID: 69610
 		TextBox
 	}
 }

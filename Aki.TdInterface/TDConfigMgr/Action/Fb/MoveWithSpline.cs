@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002725 RID: 10021
+	// Token: 0x020029EF RID: 10735
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MoveWithSpline : ActionParams
 	{
-		// Token: 0x0600DF74 RID: 57204 RVA: 0x00211C93 File Offset: 0x0020FE93
-		[NullableContext(1)]
+		// Token: 0x0600ED6C RID: 60780 RVA: 0x0022E723 File Offset: 0x0022C923
+		[NullableContext(0)]
 		public static MoveWithSpline Create(IMoveWithSpline? instance)
 		{
 			if (instance == null)
@@ -23,12 +23,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042EC RID: 17132
-		// (get) Token: 0x0600DF75 RID: 57205 RVA: 0x00211CB2 File Offset: 0x0020FEB2
-		[Nullable(1)]
+		// Token: 0x1700463C RID: 17980
+		// (get) Token: 0x0600ED6D RID: 60781 RVA: 0x0022E742 File Offset: 0x0022C942
+		[Nullable(0)]
 		public virtual ISplineMoveTargetType MoveTarget
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._MoveTargetInited)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042ED RID: 17133
-		// (get) Token: 0x0600DF76 RID: 57206 RVA: 0x00211CE1 File Offset: 0x0020FEE1
+		// Token: 0x1700463D RID: 17981
+		// (get) Token: 0x0600ED6E RID: 60782 RVA: 0x0022E771 File Offset: 0x0022C971
 		public virtual int SplineEntityId
 		{
 			get
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042EE RID: 17134
-		// (get) Token: 0x0600DF77 RID: 57207 RVA: 0x00211CEE File Offset: 0x0020FEEE
+		// Token: 0x1700463E RID: 17982
+		// (get) Token: 0x0600ED6F RID: 60783 RVA: 0x0022E77E File Offset: 0x0022C97E
 		public virtual ICheckClimb CheckClimb
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042EF RID: 17135
-		// (get) Token: 0x0600DF78 RID: 57208 RVA: 0x00211D22 File Offset: 0x0020FF22
+		// Token: 0x1700463F RID: 17983
+		// (get) Token: 0x0600ED70 RID: 60784 RVA: 0x0022E7B2 File Offset: 0x0022C9B2
 		public virtual IMoveOnWallConfig MoveOnWallConfig
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F0 RID: 17136
-		// (get) Token: 0x0600DF79 RID: 57209 RVA: 0x00211D58 File Offset: 0x0020FF58
+		// Token: 0x17004640 RID: 17984
+		// (get) Token: 0x0600ED71 RID: 60785 RVA: 0x0022E7E8 File Offset: 0x0022C9E8
 		public virtual EMoveSpeed? MoveState
 		{
 			get
@@ -97,8 +97,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F1 RID: 17137
-		// (get) Token: 0x0600DF7A RID: 57210 RVA: 0x00211D90 File Offset: 0x0020FF90
+		// Token: 0x17004641 RID: 17985
+		// (get) Token: 0x0600ED72 RID: 60786 RVA: 0x0022E820 File Offset: 0x0022CA20
 		public virtual int? StartPointIndex
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F2 RID: 17138
-		// (get) Token: 0x0600DF7B RID: 57211 RVA: 0x00211DC8 File Offset: 0x0020FFC8
+		// Token: 0x17004642 RID: 17986
+		// (get) Token: 0x0600ED73 RID: 60787 RVA: 0x0022E858 File Offset: 0x0022CA58
 		public virtual int? EndPointIndex
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F3 RID: 17139
-		// (get) Token: 0x0600DF7C RID: 57212 RVA: 0x00211E00 File Offset: 0x00210000
+		// Token: 0x17004643 RID: 17987
+		// (get) Token: 0x0600ED74 RID: 60788 RVA: 0x0022E890 File Offset: 0x0022CA90
 		public virtual bool? IsFollowStrictly
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F4 RID: 17140
-		// (get) Token: 0x0600DF7D RID: 57213 RVA: 0x00211E38 File Offset: 0x00210038
+		// Token: 0x17004644 RID: 17988
+		// (get) Token: 0x0600ED75 RID: 60789 RVA: 0x0022E8C8 File Offset: 0x0022CAC8
 		public virtual bool? IsForceToFirstPoint
 		{
 			get
@@ -153,8 +153,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F5 RID: 17141
-		// (get) Token: 0x0600DF7E RID: 57214 RVA: 0x00211E70 File Offset: 0x00210070
+		// Token: 0x17004645 RID: 17989
+		// (get) Token: 0x0600ED76 RID: 60790 RVA: 0x0022E900 File Offset: 0x0022CB00
 		public virtual bool? IsLookDir
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F6 RID: 17142
-		// (get) Token: 0x0600DF7F RID: 57215 RVA: 0x00211EA7 File Offset: 0x002100A7
+		// Token: 0x17004646 RID: 17990
+		// (get) Token: 0x0600ED77 RID: 60791 RVA: 0x0022E937 File Offset: 0x0022CB37
 		public virtual INpcFollowConfig NpcFollow
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042F7 RID: 17143
-		// (get) Token: 0x0600DF80 RID: 57216 RVA: 0x00211EDC File Offset: 0x002100DC
+		// Token: 0x17004647 RID: 17991
+		// (get) Token: 0x0600ED78 RID: 60792 RVA: 0x0022E96C File Offset: 0x0022CB6C
 		public virtual bool? NpcCollisionEnabled
 		{
 			get
@@ -197,32 +197,32 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C05 RID: 31749
+		// Token: 0x040082AF RID: 33455
 		private IMoveWithSpline Instance;
 
-		// Token: 0x04007C06 RID: 31750
-		[Nullable(1)]
+		// Token: 0x040082B0 RID: 33456
+		[Nullable(0)]
 		private ISplineMoveTargetType _MoveTargetCache;
 
-		// Token: 0x04007C07 RID: 31751
+		// Token: 0x040082B1 RID: 33457
 		private bool _MoveTargetInited;
 
-		// Token: 0x04007C08 RID: 31752
+		// Token: 0x040082B2 RID: 33458
 		private ICheckClimb _CheckClimbCache;
 
-		// Token: 0x04007C09 RID: 31753
+		// Token: 0x040082B3 RID: 33459
 		private bool _CheckClimbInited;
 
-		// Token: 0x04007C0A RID: 31754
+		// Token: 0x040082B4 RID: 33460
 		private IMoveOnWallConfig _MoveOnWallConfigCache;
 
-		// Token: 0x04007C0B RID: 31755
+		// Token: 0x040082B5 RID: 33461
 		private bool _MoveOnWallConfigInited;
 
-		// Token: 0x04007C0C RID: 31756
+		// Token: 0x040082B6 RID: 33462
 		private INpcFollowConfig _NpcFollowCache;
 
-		// Token: 0x04007C0D RID: 31757
+		// Token: 0x040082B7 RID: 33463
 		private bool _NpcFollowInited;
 	}
 }

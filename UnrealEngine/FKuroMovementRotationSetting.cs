@@ -7,14 +7,14 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CFA RID: 3322
+	// Token: 0x0200022B RID: 555
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 24)]
 	[UnrealObjectPath("/Script/Engine.KuroMovementRotationSetting")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 24)]
 	public struct FKuroMovementRotationSetting : IEqualityOperators<FKuroMovementRotationSetting, FKuroMovementRotationSetting, bool>, IEquatable<FKuroMovementRotationSetting>, IUnrealScriptStruct
 	{
-		// Token: 0x0600B0E2 RID: 45282 RVA: 0x000FB340 File Offset: 0x000F9540
+		// Token: 0x06002CD9 RID: 11481 RVA: 0x0003F5E6 File Offset: 0x0003D7E6
 		public FKuroMovementRotationSetting(float MaxRotationSpeed, float MaxAngleOffset, float MinRotationSpeed, float MinAngleOffset, int CurveType, float CurveN)
 		{
 			this.MaxRotationSpeed = MaxRotationSpeed;
@@ -25,25 +25,25 @@ namespace UnrealEngine
 			this.CurveN = CurveN;
 		}
 
-		// Token: 0x0600B0E3 RID: 45283 RVA: 0x000FB370 File Offset: 0x000F9570
+		// Token: 0x06002CDA RID: 11482 RVA: 0x0003F618 File Offset: 0x0003D818
 		public static bool operator ==(FKuroMovementRotationSetting left, FKuroMovementRotationSetting right)
 		{
 			return left.MaxRotationSpeed == right.MaxRotationSpeed && left.MaxAngleOffset == right.MaxAngleOffset && left.MinRotationSpeed == right.MinRotationSpeed && left.MinAngleOffset == right.MinAngleOffset && left.CurveType == right.CurveType && left.CurveN == right.CurveN;
 		}
 
-		// Token: 0x0600B0E4 RID: 45284 RVA: 0x000FB3D3 File Offset: 0x000F95D3
+		// Token: 0x06002CDB RID: 11483 RVA: 0x0003F67B File Offset: 0x0003D87B
 		public static bool operator !=(FKuroMovementRotationSetting left, FKuroMovementRotationSetting right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x0600B0E5 RID: 45285 RVA: 0x000FB3DF File Offset: 0x000F95DF
+		// Token: 0x06002CDC RID: 11484 RVA: 0x0003F687 File Offset: 0x0003D887
 		public bool Equals(FKuroMovementRotationSetting other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600B0E6 RID: 45286 RVA: 0x000FB3F0 File Offset: 0x000F95F0
+		// Token: 0x06002CDD RID: 11485 RVA: 0x0003F698 File Offset: 0x0003D898
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -55,46 +55,46 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600B0E7 RID: 45287 RVA: 0x000FB415 File Offset: 0x000F9615
+		// Token: 0x06002CDE RID: 11486 RVA: 0x0003F6BD File Offset: 0x0003D8BD
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<float, float, float, float, int, float>(this.MaxRotationSpeed, this.MaxAngleOffset, this.MinRotationSpeed, this.MinAngleOffset, this.CurveType, this.CurveN);
 		}
 
-		// Token: 0x0600B0E8 RID: 45288 RVA: 0x000FB440 File Offset: 0x000F9640
+		// Token: 0x06002CDF RID: 11487 RVA: 0x0003F6E8 File Offset: 0x0003D8E8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroMovementRotationSetting._ScriptStructPtr != 0) ? FKuroMovementRotationSetting._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.KuroMovementRotationSetting", ref FKuroMovementRotationSetting._ScriptStructPtr);
 		}
 
-		// Token: 0x04005CB2 RID: 23730
+		// Token: 0x04000E35 RID: 3637
 		[FieldOffset(0)]
 		public readonly float MaxRotationSpeed;
 
-		// Token: 0x04005CB3 RID: 23731
+		// Token: 0x04000E36 RID: 3638
 		[FieldOffset(4)]
 		public readonly float MaxAngleOffset;
 
-		// Token: 0x04005CB4 RID: 23732
+		// Token: 0x04000E37 RID: 3639
 		[FieldOffset(8)]
 		public readonly float MinRotationSpeed;
 
-		// Token: 0x04005CB5 RID: 23733
+		// Token: 0x04000E38 RID: 3640
 		[FieldOffset(12)]
 		public readonly float MinAngleOffset;
 
-		// Token: 0x04005CB6 RID: 23734
+		// Token: 0x04000E39 RID: 3641
 		[FieldOffset(16)]
 		public readonly int CurveType;
 
-		// Token: 0x04005CB7 RID: 23735
+		// Token: 0x04000E3A RID: 3642
 		[FieldOffset(20)]
 		public readonly float CurveN;
 
-		// Token: 0x04005CB8 RID: 23736
+		// Token: 0x04000E3B RID: 3643
 		public const string __ObjectPath = "/Script/Engine.KuroMovementRotationSetting";
 
-		// Token: 0x04005CB9 RID: 23737
+		// Token: 0x04000E3C RID: 3644
 		private static IntPtr _ScriptStructPtr;
 	}
 }

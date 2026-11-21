@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EC7 RID: 20167
+	// Token: 0x020053F6 RID: 21494
 	public static class IAttachTiming_UnionVerify
 	{
-		// Token: 0x0601FC3E RID: 130110 RVA: 0x0046BE80 File Offset: 0x0046A080
+		// Token: 0x06021982 RID: 137602 RVA: 0x004A1C40 File Offset: 0x0049FE40
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 3:
 				result = IOnMoveWithSplineEndAttachTimingVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = IOnEntityStateChangeAttachTimingVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

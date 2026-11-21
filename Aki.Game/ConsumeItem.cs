@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001813 RID: 6163
+// Token: 0x02000CCC RID: 3276
 [NullableContext(2)]
 [Nullable(0)]
 public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 {
-	// Token: 0x0600B4B7 RID: 46263 RVA: 0x0028C659 File Offset: 0x0028A859
+	// Token: 0x060088A2 RID: 34978 RVA: 0x00296D79 File Offset: 0x00294F79
 	public ConsumeItem(UUIItem uiItem = null, EUiViewName? belongView = null)
 	{
 		this.BelongView = belongView;
@@ -22,7 +22,7 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		}
 	}
 
-	// Token: 0x0600B4B8 RID: 46264 RVA: 0x0028C678 File Offset: 0x0028A878
+	// Token: 0x060088A3 RID: 34979 RVA: 0x00296D98 File Offset: 0x00294F98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -59,7 +59,7 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B4B9 RID: 46265 RVA: 0x0028C82C File Offset: 0x0028AA2C
+	// Token: 0x060088A4 RID: 34980 RVA: 0x00296F4C File Offset: 0x0029514C
 	private void ButtonClick()
 	{
 		if (this.ButtonFunction != null)
@@ -72,7 +72,7 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		}
 	}
 
-	// Token: 0x0600B4BA RID: 46266 RVA: 0x0028C88C File Offset: 0x0028AA8C
+	// Token: 0x060088A5 RID: 34981 RVA: 0x00296FAC File Offset: 0x002951AC
 	protected void SetIconState()
 	{
 		InventoryDefine.GetItemData getItemData = new InventoryDefine.GetItemData(this.Data.ItemId, this.Data.IncId);
@@ -102,7 +102,7 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		sprite2.SetUIActive(false);
 	}
 
-	// Token: 0x0600B4BB RID: 46267 RVA: 0x0028C994 File Offset: 0x0028AB94
+	// Token: 0x060088A6 RID: 34982 RVA: 0x002970B4 File Offset: 0x002952B4
 	public override void Refresh(TCommonMultipleConsumeData data, bool isSelected, int gridIndex)
 	{
 		ConsumeItemData data2 = null;
@@ -113,7 +113,7 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		this.UpdateItem(data2);
 	}
 
-	// Token: 0x0600B4BC RID: 46268 RVA: 0x0028C9C8 File Offset: 0x0028ABC8
+	// Token: 0x060088A7 RID: 34983 RVA: 0x002970E8 File Offset: 0x002952E8
 	public void UpdateItem(ConsumeItemData data)
 	{
 		UUIItem item = base.GetItem(1);
@@ -132,54 +132,54 @@ public class ConsumeItem : GridProxyAbstract<TCommonMultipleConsumeData>
 		base.GetText(8).SetText(this.Data.BottomText, true);
 	}
 
-	// Token: 0x0600B4BD RID: 46269 RVA: 0x0028CA31 File Offset: 0x0028AC31
+	// Token: 0x060088A8 RID: 34984 RVA: 0x00297151 File Offset: 0x00295351
 	[NullableContext(1)]
 	public void SetButtonFunction(TConsumeItemFunction buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x0400518A RID: 20874
+	// Token: 0x04005235 RID: 21045
 	protected ConsumeItemData Data;
 
-	// Token: 0x0400518B RID: 20875
+	// Token: 0x04005236 RID: 21046
 	protected TConsumeItemFunction ButtonFunction;
 
-	// Token: 0x0400518C RID: 20876
+	// Token: 0x04005237 RID: 21047
 	public EUiViewName? BelongView;
 
-	// Token: 0x02007E02 RID: 32258
+	// Token: 0x02006F88 RID: 28552
 	[NullableContext(0)]
 	private class EConsumeItem
 	{
-		// Token: 0x040293C4 RID: 168900
+		// Token: 0x040246EF RID: 149231
 		public const int SelectedSprite = 0;
 
-		// Token: 0x040293C5 RID: 168901
+		// Token: 0x040246F0 RID: 149232
 		public const int EmptyItem = 1;
 
-		// Token: 0x040293C6 RID: 168902
+		// Token: 0x040246F1 RID: 149233
 		public const int MaterialItem = 2;
 
-		// Token: 0x040293C7 RID: 168903
+		// Token: 0x040246F2 RID: 149234
 		public const int ChipSprite = 3;
 
-		// Token: 0x040293C8 RID: 168904
+		// Token: 0x040246F3 RID: 149235
 		public const int IconTexture = 4;
 
-		// Token: 0x040293C9 RID: 168905
+		// Token: 0x040246F4 RID: 149236
 		public const int QualitySprite = 5;
 
-		// Token: 0x040293CA RID: 168906
+		// Token: 0x040246F5 RID: 149237
 		public const int ResonanceText = 6;
 
-		// Token: 0x040293CB RID: 168907
+		// Token: 0x040246F6 RID: 149238
 		public const int ResonanceItem = 7;
 
-		// Token: 0x040293CC RID: 168908
+		// Token: 0x040246F7 RID: 149239
 		public const int BottomText = 8;
 
-		// Token: 0x040293CD RID: 168909
+		// Token: 0x040246F8 RID: 149240
 		public const int Button = 9;
 	}
 }

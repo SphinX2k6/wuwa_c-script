@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001890 RID: 6288
+// Token: 0x02000D49 RID: 3401
 public enum EPinballRoleSelectSortWayType
 {
-	// Token: 0x04005357 RID: 21335
+	// Token: 0x04005402 RID: 21506
 	Id = 1,
-	// Token: 0x04005358 RID: 21336
+	// Token: 0x04005403 RID: 21507
 	Level,
-	// Token: 0x04005359 RID: 21337
+	// Token: 0x04005404 RID: 21508
 	LockState,
-	// Token: 0x0400535A RID: 21338
+	// Token: 0x04005405 RID: 21509
 	FormationFirst
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000976 RID: 2422
+	// Token: 0x02000965 RID: 2405
 	[NetMessage(EMessageId.MailDeleteNotify)]
 	public sealed class MailDeleteNotify : IMessage<MailDeleteNotify>, IMessage, IEquatable<MailDeleteNotify>, IDeepCloneable<MailDeleteNotify>, IBufferMessage
 	{
-		// Token: 0x0600D51A RID: 54554 RVA: 0x001F5B0D File Offset: 0x001F3D0D
+		// Token: 0x0600D400 RID: 54272 RVA: 0x001F3925 File Offset: 0x001F1B25
 		[NullableContext(1)]
 		public static MailDeleteNotify Create()
 		{
 			return new MailDeleteNotify();
 		}
 
-		// Token: 0x17002B23 RID: 11043
-		// (get) Token: 0x0600D51B RID: 54555 RVA: 0x001F5B14 File Offset: 0x001F3D14
+		// Token: 0x17002AE5 RID: 10981
+		// (get) Token: 0x0600D401 RID: 54273 RVA: 0x001F392C File Offset: 0x001F1B2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B24 RID: 11044
-		// (get) Token: 0x0600D51C RID: 54556 RVA: 0x001F5B17 File Offset: 0x001F3D17
+		// Token: 0x17002AE6 RID: 10982
+		// (get) Token: 0x0600D402 RID: 54274 RVA: 0x001F392F File Offset: 0x001F1B2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D51D RID: 54557 RVA: 0x001F5B1E File Offset: 0x001F3D1E
+		// Token: 0x0600D403 RID: 54275 RVA: 0x001F3936 File Offset: 0x001F1B36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailDeleteNotify()
 		{
 		}
 
-		// Token: 0x0600D51E RID: 54558 RVA: 0x001F5B31 File Offset: 0x001F3D31
+		// Token: 0x0600D404 RID: 54276 RVA: 0x001F3949 File Offset: 0x001F1B49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailDeleteNotify(MailDeleteNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D51F RID: 54559 RVA: 0x001F5B62 File Offset: 0x001F3D62
+		// Token: 0x0600D405 RID: 54277 RVA: 0x001F397A File Offset: 0x001F1B7A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailDeleteNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new MailDeleteNotify(this);
 		}
 
-		// Token: 0x17002B25 RID: 11045
-		// (get) Token: 0x0600D520 RID: 54560 RVA: 0x001F5B6A File Offset: 0x001F3D6A
-		// (set) Token: 0x0600D521 RID: 54561 RVA: 0x001F5B72 File Offset: 0x001F3D72
+		// Token: 0x17002AE7 RID: 10983
+		// (get) Token: 0x0600D406 RID: 54278 RVA: 0x001F3982 File Offset: 0x001F1B82
+		// (set) Token: 0x0600D407 RID: 54279 RVA: 0x001F398A File Offset: 0x001F1B8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Id
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B26 RID: 11046
-		// (get) Token: 0x0600D522 RID: 54562 RVA: 0x001F5B85 File Offset: 0x001F3D85
-		// (set) Token: 0x0600D523 RID: 54563 RVA: 0x001F5B8D File Offset: 0x001F3D8D
+		// Token: 0x17002AE8 RID: 10984
+		// (get) Token: 0x0600D408 RID: 54280 RVA: 0x001F399D File Offset: 0x001F1B9D
+		// (set) Token: 0x0600D409 RID: 54281 RVA: 0x001F39A5 File Offset: 0x001F1BA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailDeleteReason Reason
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D524 RID: 54564 RVA: 0x001F5B96 File Offset: 0x001F3D96
+		// Token: 0x0600D40A RID: 54282 RVA: 0x001F39AE File Offset: 0x001F1BAE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MailDeleteNotify);
 		}
 
-		// Token: 0x0600D525 RID: 54565 RVA: 0x001F5BA4 File Offset: 0x001F3DA4
+		// Token: 0x0600D40B RID: 54283 RVA: 0x001F39BC File Offset: 0x001F1BBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MailDeleteNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.Id != other.Id) && this.Reason == other.Reason && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D526 RID: 54566 RVA: 0x001F5BF4 File Offset: 0x001F3DF4
+		// Token: 0x0600D40C RID: 54284 RVA: 0x001F3A0C File Offset: 0x001F1C0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D527 RID: 54567 RVA: 0x001F5C54 File Offset: 0x001F3E54
+		// Token: 0x0600D40D RID: 54285 RVA: 0x001F3A6C File Offset: 0x001F1C6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D528 RID: 54568 RVA: 0x001F5C61 File Offset: 0x001F3E61
+		// Token: 0x0600D40E RID: 54286 RVA: 0x001F3A79 File Offset: 0x001F1C79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D529 RID: 54569 RVA: 0x001F5C6C File Offset: 0x001F3E6C
+		// Token: 0x0600D40F RID: 54287 RVA: 0x001F3A84 File Offset: 0x001F1C84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.Reason != MailDeleteReason.OverTime)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(32);
 				output.WriteEnum((int)this.Reason);
 			}
 			if (this.Id.Length != 0)
 			{
-				output.WriteRawTag(50);
+				output.WriteRawTag(114);
 				output.WriteString(this.Id);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D52A RID: 54570 RVA: 0x001F5CCC File Offset: 0x001F3ECC
+		// Token: 0x0600D410 RID: 54288 RVA: 0x001F3AE4 File Offset: 0x001F1CE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D52B RID: 54571 RVA: 0x001F5D28 File Offset: 0x001F3F28
+		// Token: 0x0600D411 RID: 54289 RVA: 0x001F3B40 File Offset: 0x001F1D40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MailDeleteNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D52C RID: 54572 RVA: 0x001F5D7D File Offset: 0x001F3F7D
+		// Token: 0x0600D412 RID: 54290 RVA: 0x001F3B95 File Offset: 0x001F1D95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D52D RID: 54573 RVA: 0x001F5D88 File Offset: 0x001F3F88
+		// Token: 0x0600D413 RID: 54291 RVA: 0x001F3BA0 File Offset: 0x001F1DA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 32U)
 				{
-					if (num != 50U)
+					if (num != 114U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005940 RID: 22848
+		// Token: 0x04005949 RID: 22857
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005941 RID: 22849
-		public const int IdFieldNumber = 6;
+		// Token: 0x0400594A RID: 22858
+		public const int IdFieldNumber = 14;
 
-		// Token: 0x04005942 RID: 22850
+		// Token: 0x0400594B RID: 22859
 		private string id_ = "";
 
-		// Token: 0x04005943 RID: 22851
-		public const int ReasonFieldNumber = 3;
+		// Token: 0x0400594C RID: 22860
+		public const int ReasonFieldNumber = 4;
 
-		// Token: 0x04005944 RID: 22852
+		// Token: 0x0400594D RID: 22861
 		private MailDeleteReason reason_;
 	}
 }

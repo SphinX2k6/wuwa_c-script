@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200638F RID: 25487
+	// Token: 0x02006A00 RID: 27136
 	public class IClientDisableAllPlayerOperationT
 	{
-		// Token: 0x1700BE06 RID: 48646
-		// (get) Token: 0x0602C168 RID: 180584 RVA: 0x0060E1D6 File Offset: 0x0060C3D6
-		// (set) Token: 0x0602C169 RID: 180585 RVA: 0x0060E1DE File Offset: 0x0060C3DE
+		// Token: 0x1700C78A RID: 51082
+		// (get) Token: 0x0602E8CA RID: 190666 RVA: 0x0065920E File Offset: 0x0065740E
+		// (set) Token: 0x0602E8CB RID: 190667 RVA: 0x00659216 File Offset: 0x00657416
 		public EPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700BE07 RID: 48647
-		// (get) Token: 0x0602C16A RID: 180586 RVA: 0x0060E1E7 File Offset: 0x0060C3E7
-		// (set) Token: 0x0602C16B RID: 180587 RVA: 0x0060E1EF File Offset: 0x0060C3EF
+		// Token: 0x1700C78B RID: 51083
+		// (get) Token: 0x0602E8CC RID: 190668 RVA: 0x0065921F File Offset: 0x0065741F
+		// (set) Token: 0x0602E8CD RID: 190669 RVA: 0x00659227 File Offset: 0x00657427
 		public EDisplayModeInPlayerOp DisplayMode { get; set; }
 
-		// Token: 0x1700BE08 RID: 48648
-		// (get) Token: 0x0602C16C RID: 180588 RVA: 0x0060E1F8 File Offset: 0x0060C3F8
-		// (set) Token: 0x0602C16D RID: 180589 RVA: 0x0060E200 File Offset: 0x0060C400
+		// Token: 0x1700C78C RID: 51084
+		// (get) Token: 0x0602E8CE RID: 190670 RVA: 0x00659230 File Offset: 0x00657430
+		// (set) Token: 0x0602E8CF RID: 190671 RVA: 0x00659238 File Offset: 0x00657438
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C16E RID: 180590 RVA: 0x0060E209 File Offset: 0x0060C409
+		// Token: 0x0602E8D0 RID: 190672 RVA: 0x00659241 File Offset: 0x00657441
 		public IClientDisableAllPlayerOperationT()
 		{
 			this.Type = EPlayerOperationType.EnableAll;

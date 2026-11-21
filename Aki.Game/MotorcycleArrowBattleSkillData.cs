@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.GameMainView.Data;
 using CSharpScript.Game.Module.SkillButtonUi;
 using UnrealEngine;
 
-// Token: 0x02001CD3 RID: 7379
+// Token: 0x02001195 RID: 4501
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 {
-	// Token: 0x0600DF78 RID: 57208 RVA: 0x00345830 File Offset: 0x00343A30
+	// Token: 0x0600B395 RID: 45973 RVA: 0x00351258 File Offset: 0x0034F458
 	public MotorcycleArrowBattleSkillData(int skillId)
 	{
 		this.SkillId = skillId;
@@ -42,7 +42,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		}
 	}
 
-	// Token: 0x0600DF79 RID: 57209 RVA: 0x00345902 File Offset: 0x00343B02
+	// Token: 0x0600B396 RID: 45974 RVA: 0x0035132A File Offset: 0x0034F52A
 	protected override void OnInitData()
 	{
 		if (this.SkillId == 0)
@@ -52,7 +52,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		this.SkillButtonConfig = this.GetActiveSkillButtonConfig();
 	}
 
-	// Token: 0x0600DF7A RID: 57210 RVA: 0x0034591C File Offset: 0x00343B1C
+	// Token: 0x0600B397 RID: 45975 RVA: 0x00351344 File Offset: 0x0034F544
 	private SkillGameplayButton? GetActiveSkillButtonConfig()
 	{
 		IReadOnlyList<SkillGameplayButton> configList = ConfigSkillGameplayButtonByGameplayType.GetConfigList(5, true);
@@ -72,13 +72,13 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return null;
 	}
 
-	// Token: 0x0600DF7B RID: 57211 RVA: 0x0034597F File Offset: 0x00343B7F
+	// Token: 0x0600B398 RID: 45976 RVA: 0x003513A7 File Offset: 0x0034F5A7
 	public override int GetSkillId()
 	{
 		return this.SkillId;
 	}
 
-	// Token: 0x0600DF7C RID: 57212 RVA: 0x00345988 File Offset: 0x00343B88
+	// Token: 0x0600B399 RID: 45977 RVA: 0x003513B0 File Offset: 0x0034F5B0
 	public override string GetSkillTexturePath()
 	{
 		if (this.SkillButtonConfig == null)
@@ -88,7 +88,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return this.SkillButtonConfig.GetValueOrDefault().SkillIcon;
 	}
 
-	// Token: 0x0600DF7D RID: 57213 RVA: 0x003459B4 File Offset: 0x00343BB4
+	// Token: 0x0600B39A RID: 45978 RVA: 0x003513DC File Offset: 0x0034F5DC
 	public override EInputAction GetActionType()
 	{
 		if (this.SkillButtonConfig != null)
@@ -98,7 +98,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return EInputAction.None;
 	}
 
-	// Token: 0x0600DF7E RID: 57214 RVA: 0x003459F0 File Offset: 0x00343BF0
+	// Token: 0x0600B39B RID: 45979 RVA: 0x00351418 File Offset: 0x0034F618
 	public override ESkillButtonType GetButtonType()
 	{
 		if (this.SkillButtonConfig != null)
@@ -108,19 +108,19 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return ESkillButtonType.None;
 	}
 
-	// Token: 0x0600DF7F RID: 57215 RVA: 0x00345A1F File Offset: 0x00343C1F
+	// Token: 0x0600B39C RID: 45980 RVA: 0x00351447 File Offset: 0x0034F647
 	public override FColor? GetFrameSpriteColor()
 	{
 		return this.FrameSpriteColor;
 	}
 
-	// Token: 0x0600DF80 RID: 57216 RVA: 0x00345A27 File Offset: 0x00343C27
+	// Token: 0x0600B39D RID: 45981 RVA: 0x0035144F File Offset: 0x0034F64F
 	public override FLinearColor? GetMaxAttributeColor()
 	{
 		return this.MaxAttributeColor;
 	}
 
-	// Token: 0x0600DF81 RID: 57217 RVA: 0x00345A2F File Offset: 0x00343C2F
+	// Token: 0x0600B39E RID: 45982 RVA: 0x00351457 File Offset: 0x0034F657
 	[NullableContext(1)]
 	public override string GetMaxAttributeEffectPath()
 	{
@@ -131,7 +131,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return this.MaxAttributeEffect;
 	}
 
-	// Token: 0x0600DF82 RID: 57218 RVA: 0x00345A4C File Offset: 0x00343C4C
+	// Token: 0x0600B39F RID: 45983 RVA: 0x00351474 File Offset: 0x0034F674
 	public override void RefreshIsEnable()
 	{
 		float attribute = this.GetAttribute();
@@ -144,13 +144,13 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		this.IsEnableInternal = false;
 	}
 
-	// Token: 0x0600DF83 RID: 57219 RVA: 0x00345A82 File Offset: 0x00343C82
+	// Token: 0x0600B3A0 RID: 45984 RVA: 0x003514AA File Offset: 0x0034F6AA
 	public override bool IsEnable()
 	{
 		return this.IsEnableInternal;
 	}
 
-	// Token: 0x0600DF84 RID: 57220 RVA: 0x00345A8C File Offset: 0x00343C8C
+	// Token: 0x0600B3A1 RID: 45985 RVA: 0x003514B4 File Offset: 0x0034F6B4
 	public override float GetAttribute()
 	{
 		if (this.AttrMap == null)
@@ -161,7 +161,7 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return (float)(this.AttrMap.TryGetValue(this.KscAttrId, out num) ? num : 0);
 	}
 
-	// Token: 0x0600DF85 RID: 57221 RVA: 0x00345AC4 File Offset: 0x00343CC4
+	// Token: 0x0600B3A2 RID: 45986 RVA: 0x003514EC File Offset: 0x0034F6EC
 	public override float GetMaxAttribute()
 	{
 		if (this.AttrMap == null)
@@ -172,13 +172,13 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		return (float)(this.AttrMap.TryGetValue(this.MaxKscAttributeId, out num) ? num : 0);
 	}
 
-	// Token: 0x0600DF86 RID: 57222 RVA: 0x00345AF9 File Offset: 0x00343CF9
+	// Token: 0x0600B3A3 RID: 45987 RVA: 0x00351521 File Offset: 0x0034F721
 	public override bool HasAttribute()
 	{
 		return true;
 	}
 
-	// Token: 0x0600DF87 RID: 57223 RVA: 0x00345AFC File Offset: 0x00343CFC
+	// Token: 0x0600B3A4 RID: 45988 RVA: 0x00351524 File Offset: 0x0034F724
 	[NullableContext(1)]
 	public void InitAttrData(AKSC_Entity kscEntity)
 	{
@@ -209,32 +209,32 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		this.RefreshIsEnable();
 	}
 
-	// Token: 0x0600DF88 RID: 57224 RVA: 0x00345BD1 File Offset: 0x00343DD1
+	// Token: 0x0600B3A5 RID: 45989 RVA: 0x003515F9 File Offset: 0x0034F7F9
 	private void OnAttrChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateAttrChange();
 	}
 
-	// Token: 0x0600DF89 RID: 57225 RVA: 0x00345BD9 File Offset: 0x00343DD9
+	// Token: 0x0600B3A6 RID: 45990 RVA: 0x00351601 File Offset: 0x0034F801
 	private void OnMaxAttrChange(EKSC_AttrType attrType, int value)
 	{
 		this.UpdateAttrChange();
 	}
 
-	// Token: 0x0600DF8A RID: 57226 RVA: 0x00345BE1 File Offset: 0x00343DE1
+	// Token: 0x0600B3A7 RID: 45991 RVA: 0x00351609 File Offset: 0x0034F809
 	protected void UpdateAttrChange()
 	{
 		this.RefreshIsEnable();
 		EventSystem.Instance.Emit<ESkillButtonType>(EEventName.OnSkillButtonAttributeRefresh, this.GetButtonType());
 	}
 
-	// Token: 0x0600DF8B RID: 57227 RVA: 0x00345BFF File Offset: 0x00343DFF
+	// Token: 0x0600B3A8 RID: 45992 RVA: 0x00351627 File Offset: 0x0034F827
 	public void SetVisible(bool visible)
 	{
 		this.IsVisibleInternal = visible;
 	}
 
-	// Token: 0x0600DF8C RID: 57228 RVA: 0x00345C08 File Offset: 0x00343E08
+	// Token: 0x0600B3A9 RID: 45993 RVA: 0x00351630 File Offset: 0x0034F830
 	public void Clear()
 	{
 		if (this.AttrSet != null)
@@ -255,44 +255,44 @@ public class MotorcycleArrowBattleSkillData : BattleSkillDataBase
 		DelegateUtils.ReleaseManualReleaseDelegate(new Action<EKSC_AttrType, int>(this.OnMaxAttrChange));
 	}
 
-	// Token: 0x040066C8 RID: 26312
+	// Token: 0x040067A7 RID: 26535
 	private bool IsEnableInternal;
 
-	// Token: 0x040066C9 RID: 26313
+	// Token: 0x040067A8 RID: 26536
 	private readonly int SkillId;
 
-	// Token: 0x040066CA RID: 26314
+	// Token: 0x040067A9 RID: 26537
 	private SkillGameplayButton? SkillButtonConfig;
 
-	// Token: 0x040066CB RID: 26315
+	// Token: 0x040067AA RID: 26538
 	private TMap<EKSC_AttrType, int> AttrMap;
 
-	// Token: 0x040066CC RID: 26316
+	// Token: 0x040067AB RID: 26539
 	private UKSC_AttrSet AttrSet;
 
-	// Token: 0x040066CD RID: 26317
+	// Token: 0x040067AC RID: 26540
 	private readonly EKSC_AttrType KscAttrId = EKSC_AttrType.SpecialChange1;
 
-	// Token: 0x040066CE RID: 26318
+	// Token: 0x040067AD RID: 26541
 	private readonly EKSC_AttrType MaxKscAttributeId = EKSC_AttrType.SpecialChange0;
 
-	// Token: 0x040066CF RID: 26319
+	// Token: 0x040067AE RID: 26542
 	private readonly FColor? FrameSpriteColor;
 
-	// Token: 0x040066D0 RID: 26320
+	// Token: 0x040067AF RID: 26543
 	private readonly FLinearColor? MaxAttributeColor;
 
-	// Token: 0x040066D1 RID: 26321
+	// Token: 0x040067B0 RID: 26544
 	[Nullable(1)]
 	private readonly string MaxAttributeEffect = "";
 
-	// Token: 0x040066D2 RID: 26322
+	// Token: 0x040067B1 RID: 26545
 	[Nullable(1)]
 	private readonly string MaxAttributeEffectPc = "";
 
-	// Token: 0x040066D3 RID: 26323
+	// Token: 0x040067B2 RID: 26546
 	public FOnKSCAttrChange DelegateAttrChange;
 
-	// Token: 0x040066D4 RID: 26324
+	// Token: 0x040067B3 RID: 26547
 	public FOnKSCAttrChange DelegateMaxAttrChange;
 }

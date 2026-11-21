@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000056 RID: 86
+	// Token: 0x0200005E RID: 94
 	public class ConfigActivityTimeShowById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000204 RID: 516 RVA: 0x00065158 File Offset: 0x00063358
+		// Token: 0x06000234 RID: 564 RVA: 0x00069A0C File Offset: 0x00067C0C
 		static ConfigActivityTimeShowById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityTimeShowById.CreateStaticDefaultValue), new Action(ConfigActivityTimeShowById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000205 RID: 517 RVA: 0x00065178 File Offset: 0x00063378
+		// Token: 0x06000235 RID: 565 RVA: 0x00069A2C File Offset: 0x00067C2C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityTimeShowById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000206 RID: 518 RVA: 0x000651F7 File Offset: 0x000633F7
+		// Token: 0x06000236 RID: 566 RVA: 0x00069AAB File Offset: 0x00067CAB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityTimeShowById.LogPair = null;
 			ConfigActivityTimeShowById.HandleId = 0;
 		}
 
-		// Token: 0x06000207 RID: 519 RVA: 0x00065205 File Offset: 0x00063405
+		// Token: 0x06000237 RID: 567 RVA: 0x00069AB9 File Offset: 0x00067CB9
 		public static void Init()
 		{
 			ConfigActivityTimeShowById.HandleId = ConfigCommon.InitDataStatement(ConfigActivityTimeShowById.HandleId, "db_activity.db", "select BinData from `ActivityTimeShow` where Id=?");
 		}
 
-		// Token: 0x06000208 RID: 520 RVA: 0x00065220 File Offset: 0x00063420
+		// Token: 0x06000238 RID: 568 RVA: 0x00069AD4 File Offset: 0x00067CD4
 		public static ActivityTimeShow? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivityTimeShowById.HandleId, ConfigActivityTimeShowById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ActivityTimeShow?(rootAsActivityTimeShow);
 		}
 
-		// Token: 0x0400023E RID: 574
+		// Token: 0x04000276 RID: 630
 		private const string DB = "db_activity.db";
 
-		// Token: 0x0400023F RID: 575
+		// Token: 0x04000277 RID: 631
 		private const string FILE = "h.活动.xlsx";
 
-		// Token: 0x04000240 RID: 576
+		// Token: 0x04000278 RID: 632
 		private const string TABLE = "ActivityTimeShow";
 
-		// Token: 0x04000241 RID: 577
+		// Token: 0x04000279 RID: 633
 		private const string COMMAND = "select BinData from `ActivityTimeShow` where Id=?";
 
-		// Token: 0x04000242 RID: 578
+		// Token: 0x0400027A RID: 634
 		private const string KEY_PREFIX = "ActivityTimeShowById";
 
-		// Token: 0x04000243 RID: 579
+		// Token: 0x0400027B RID: 635
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000244 RID: 580
+		// Token: 0x0400027C RID: 636
 		private static int HandleId;
 	}
 }

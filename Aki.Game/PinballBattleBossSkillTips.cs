@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CFC RID: 7420
+// Token: 0x020011BE RID: 4542
 public class PinballBattleBossSkillTips : PinballBattleTipsBase
 {
-	// Token: 0x0600E0A5 RID: 57509 RVA: 0x0034AFCB File Offset: 0x003491CB
+	// Token: 0x0600B4C2 RID: 46274 RVA: 0x003569FB File Offset: 0x00354BFB
 	[NullableContext(1)]
 	public PinballBattleBossSkillTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E0A6 RID: 57510 RVA: 0x0034AFD4 File Offset: 0x003491D4
+	// Token: 0x0600B4C3 RID: 46275 RVA: 0x00356A04 File Offset: 0x00354C04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class PinballBattleBossSkillTips : PinballBattleTipsBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0A7 RID: 57511 RVA: 0x0034B01C File Offset: 0x0034921C
+	// Token: 0x0600B4C4 RID: 46276 RVA: 0x00356A4C File Offset: 0x00354C4C
 	protected override void OnStart()
 	{
 		base.OnStart();

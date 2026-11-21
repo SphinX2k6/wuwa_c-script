@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200041E RID: 1054
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000477 RID: 1143
 	public class IHitLogicActionByHitType : IHitLogicType
 	{
-		// Token: 0x06001545 RID: 5445 RVA: 0x00042DE8 File Offset: 0x00040FE8
+		// Token: 0x060016DF RID: 5855 RVA: 0x00046B30 File Offset: 0x00044D30
 		private IHitLogicActionByHitType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001546 RID: 5446 RVA: 0x00042E20 File Offset: 0x00041020
+		// Token: 0x060016E0 RID: 5856 RVA: 0x00046B68 File Offset: 0x00044D68
 		public static IHitLogicActionByHitType Create([Nullable(2)] IHitLogicActionByHitType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001547 RID: 5447 RVA: 0x00042E33 File Offset: 0x00041033
+		// Token: 0x060016E1 RID: 5857 RVA: 0x00046B7B File Offset: 0x00044D7B
 		public static IHitLogicActionByHitType CreateFromSetValue([Nullable(2)] IHitLogicActionByHitType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001548 RID: 5448 RVA: 0x00042E46 File Offset: 0x00041046
+		// Token: 0x060016E2 RID: 5858 RVA: 0x00046B8E File Offset: 0x00044D8E
 		public new IHitLogicActionByHitType_SetValue ToSetValue()
 		{
 			return new IHitLogicActionByHitType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005D3 RID: 1491
-		// (get) Token: 0x06001549 RID: 5449 RVA: 0x00042E65 File Offset: 0x00041065
-		// (set) Token: 0x0600154A RID: 5450 RVA: 0x00042E90 File Offset: 0x00041090
+		// Token: 0x1700063A RID: 1594
+		// (get) Token: 0x060016E3 RID: 5859 RVA: 0x00046BAD File Offset: 0x00044DAD
+		// (set) Token: 0x060016E4 RID: 5860 RVA: 0x00046BD8 File Offset: 0x00044DD8
 		public override EHitLogicType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005D4 RID: 1492
-		// (get) Token: 0x0600154B RID: 5451 RVA: 0x00042EA0 File Offset: 0x000410A0
-		// (set) Token: 0x0600154C RID: 5452 RVA: 0x00042F33 File Offset: 0x00041133
+		// Token: 0x1700063B RID: 1595
+		// (get) Token: 0x060016E5 RID: 5861 RVA: 0x00046BE8 File Offset: 0x00044DE8
+		// (set) Token: 0x060016E6 RID: 5862 RVA: 0x00046C7B File Offset: 0x00044E7B
 		public virtual List<IActionByHitTypeConfig> Configs
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400107E RID: 4222
+		// Token: 0x040011A0 RID: 4512
 		[Nullable(2)]
 		protected new IHitLogicActionByHitType FbInstance;
 
-		// Token: 0x0400107F RID: 4223
+		// Token: 0x040011A1 RID: 4513
 		[Nullable(2)]
 		protected new IHitLogicActionByHitType_SetValue PocoInterface;
 
-		// Token: 0x04001080 RID: 4224
+		// Token: 0x040011A2 RID: 4514
 		private List<IActionByHitTypeConfig> _ConfigsCache;
 
-		// Token: 0x04001081 RID: 4225
+		// Token: 0x040011A3 RID: 4515
 		private bool _ConfigsInited;
 	}
 }

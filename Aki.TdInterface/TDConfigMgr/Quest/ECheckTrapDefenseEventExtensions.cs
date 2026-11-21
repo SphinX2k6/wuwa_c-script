@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001230 RID: 4656
+	// Token: 0x0200136C RID: 4972
 	public static class ECheckTrapDefenseEventExtensions
 	{
-		// Token: 0x0600697F RID: 27007 RVA: 0x000FB75C File Offset: 0x000F995C
+		// Token: 0x06006FC0 RID: 28608 RVA: 0x00109068 File Offset: 0x00107268
 		public static string ToEnumString(this ECheckTrapDefenseEvent value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006980 RID: 27008 RVA: 0x000FB794 File Offset: 0x000F9994
+		// Token: 0x06006FC1 RID: 28609 RVA: 0x001090A0 File Offset: 0x001072A0
 		public static ECheckTrapDefenseEvent FromString(string name)
 		{
 			ECheckTrapDefenseEvent result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006981 RID: 27009 RVA: 0x000FB7BD File Offset: 0x000F99BD
+		// Token: 0x06006FC2 RID: 28610 RVA: 0x001090C9 File Offset: 0x001072C9
 		public static bool TryFromString(string name, out ECheckTrapDefenseEvent value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006982 RID: 27010 RVA: 0x000FB7F6 File Offset: 0x000F99F6
+		// Token: 0x06006FC3 RID: 28611 RVA: 0x00109102 File Offset: 0x00107302
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006983 RID: 27011 RVA: 0x000FB80E File Offset: 0x000F9A0E
+		// Token: 0x06006FC4 RID: 28612 RVA: 0x0010911A File Offset: 0x0010731A
 		public static ECheckTrapDefenseEvent[] GetValues()
 		{
 			return new ECheckTrapDefenseEvent[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006984 RID: 27012 RVA: 0x000FB81A File Offset: 0x000F9A1A
+		// Token: 0x06006FC5 RID: 28613 RVA: 0x00109126 File Offset: 0x00107326
 		public static string[] GetNames()
 		{
 			return new string[]

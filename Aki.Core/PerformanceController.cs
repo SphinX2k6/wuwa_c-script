@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using UnrealEngine;
 
-// Token: 0x020000C3 RID: 195
+// Token: 0x020000C5 RID: 197
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformanceController : Singleton
 {
-	// Token: 0x170000CC RID: 204
-	// (get) Token: 0x060005F9 RID: 1529 RVA: 0x0001FCBF File Offset: 0x0001DEBF
+	// Token: 0x170000DE RID: 222
+	// (get) Token: 0x0600063A RID: 1594 RVA: 0x000201EB File Offset: 0x0001E3EB
 	public bool IsEntityTickPerformanceTest
 	{
 		get
@@ -19,8 +19,8 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x170000CD RID: 205
-	// (get) Token: 0x060005FA RID: 1530 RVA: 0x0001FCC7 File Offset: 0x0001DEC7
+	// Token: 0x170000DF RID: 223
+	// (get) Token: 0x0600063B RID: 1595 RVA: 0x000201F3 File Offset: 0x0001E3F3
 	public bool IsEntityPerformanceTest
 	{
 		get
@@ -29,8 +29,8 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x170000CE RID: 206
-	// (get) Token: 0x060005FB RID: 1531 RVA: 0x0001FCD9 File Offset: 0x0001DED9
+	// Token: 0x170000E0 RID: 224
+	// (get) Token: 0x0600063C RID: 1596 RVA: 0x00020205 File Offset: 0x0001E405
 	public bool IsPlayerPerformanceTest
 	{
 		get
@@ -39,7 +39,7 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x060005FC RID: 1532 RVA: 0x0001FCE4 File Offset: 0x0001DEE4
+	// Token: 0x0600063D RID: 1597 RVA: 0x00020210 File Offset: 0x0001E410
 	public void SetEntityTickPerformanceTest(bool isOpen)
 	{
 		this.IsEntityTickPerformanceTestInternal = isOpen;
@@ -59,7 +59,7 @@ public class PerformanceController : Singleton
 		this.EntityComponentTickDataMap = null;
 	}
 
-	// Token: 0x060005FD RID: 1533 RVA: 0x0001FD64 File Offset: 0x0001DF64
+	// Token: 0x0600063E RID: 1598 RVA: 0x00020290 File Offset: 0x0001E490
 	public void SetPlayerTickPerformanceTest(bool isOpen)
 	{
 		this.IsPlayerTickPerformanceTestInternal = isOpen;
@@ -79,13 +79,13 @@ public class PerformanceController : Singleton
 		this.EntityComponentTickDataMap = null;
 	}
 
-	// Token: 0x060005FE RID: 1534 RVA: 0x0001FDE3 File Offset: 0x0001DFE3
+	// Token: 0x0600063F RID: 1599 RVA: 0x0002030F File Offset: 0x0001E50F
 	public void SetEntityGpuPerformanceTest(bool isOpen)
 	{
 		this.IsEntityGpuPerformanceTestInternal = isOpen;
 	}
 
-	// Token: 0x060005FF RID: 1535 RVA: 0x0001FDEC File Offset: 0x0001DFEC
+	// Token: 0x06000640 RID: 1600 RVA: 0x00020318 File Offset: 0x0001E518
 	public void CollectPlayerSkeletalTickPerformanceInfo(string key, int entityId, float tickTime, long? bornFrame = null)
 	{
 		if (bornFrame != null)
@@ -127,7 +127,7 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x06000600 RID: 1536 RVA: 0x0001FF08 File Offset: 0x0001E108
+	// Token: 0x06000641 RID: 1601 RVA: 0x00020434 File Offset: 0x0001E634
 	public void CollectTickPerformanceInfo(string key, bool isTickCount, double tickTime, EMeasureMode measureMode = EMeasureMode.Tick, long? bornFrame = null)
 	{
 		if (bornFrame != null)
@@ -202,7 +202,7 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x06000601 RID: 1537 RVA: 0x00020100 File Offset: 0x0001E300
+	// Token: 0x06000642 RID: 1602 RVA: 0x0002062C File Offset: 0x0001E82C
 	public unsafe double ConsumeTickTime(string key)
 	{
 		double[] array;
@@ -225,7 +225,7 @@ public class PerformanceController : Singleton
 		return result;
 	}
 
-	// Token: 0x06000602 RID: 1538 RVA: 0x000201B4 File Offset: 0x0001E3B4
+	// Token: 0x06000643 RID: 1603 RVA: 0x000206E0 File Offset: 0x0001E8E0
 	public void CollectComponentTickPerformanceInfo(int entityId, string componentName, bool isTickCount, float tickTime)
 	{
 		if (this.EntityComponentTickDataMap == null)
@@ -291,7 +291,7 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x06000603 RID: 1539 RVA: 0x00020334 File Offset: 0x0001E534
+	// Token: 0x06000644 RID: 1604 RVA: 0x00020860 File Offset: 0x0001EA60
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -328,7 +328,7 @@ public class PerformanceController : Singleton
 		return this.TempComponentOutMap;
 	}
 
-	// Token: 0x06000604 RID: 1540 RVA: 0x00020444 File Offset: 0x0001E644
+	// Token: 0x06000645 RID: 1605 RVA: 0x00020970 File Offset: 0x0001EB70
 	public void CollectEffectTickPerformanceInfo(string key, bool isTickCount, double startTime, double endTime, EMeasureMode measureMode, long bornFrame, int? particleCount = null, int? emitterCount = null)
 	{
 		long? startFrameCount = this.StartFrameCount;
@@ -373,7 +373,7 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x06000605 RID: 1541 RVA: 0x000205AC File Offset: 0x0001E7AC
+	// Token: 0x06000646 RID: 1606 RVA: 0x00020AD8 File Offset: 0x0001ECD8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -443,7 +443,7 @@ public class PerformanceController : Singleton
 		return this.TempEffectOutMap;
 	}
 
-	// Token: 0x06000606 RID: 1542 RVA: 0x000208BC File Offset: 0x0001EABC
+	// Token: 0x06000647 RID: 1607 RVA: 0x00020DE8 File Offset: 0x0001EFE8
 	public void SetStatisticsMode(bool isOpen, int targetEntity, string sectionName = "")
 	{
 		this.InStatisticsMode = isOpen;
@@ -475,7 +475,7 @@ public class PerformanceController : Singleton
 		this.TargetEntity = -1;
 	}
 
-	// Token: 0x06000607 RID: 1543 RVA: 0x00020A20 File Offset: 0x0001EC20
+	// Token: 0x06000648 RID: 1608 RVA: 0x00020F4C File Offset: 0x0001F14C
 	private void AddStatistics(string tag, EMeasureMode measureMode, double time, long? frame = null)
 	{
 		if (this.CurSectionName == null)
@@ -492,8 +492,8 @@ public class PerformanceController : Singleton
 		UPerformanceStatisticsLibrary.AddStatistics(this.CurSectionName.Value, (int)((frame != null) ? frame.Value : frameCount), tag, (int)measureMode, (float)time, "");
 	}
 
-	// Token: 0x170000CF RID: 207
-	// (get) Token: 0x06000608 RID: 1544 RVA: 0x00020A95 File Offset: 0x0001EC95
+	// Token: 0x170000E1 RID: 225
+	// (get) Token: 0x06000649 RID: 1609 RVA: 0x00020FC1 File Offset: 0x0001F1C1
 	public static PerformanceController Instance
 	{
 		get
@@ -507,12 +507,12 @@ public class PerformanceController : Singleton
 		}
 	}
 
-	// Token: 0x06000609 RID: 1545 RVA: 0x00020AB8 File Offset: 0x0001ECB8
+	// Token: 0x0600064A RID: 1610 RVA: 0x00020FE4 File Offset: 0x0001F1E4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600060A RID: 1546 RVA: 0x00020ABA File Offset: 0x0001ECBA
+	// Token: 0x0600064B RID: 1611 RVA: 0x00020FE6 File Offset: 0x0001F1E6
 	public static void ResetStaticDefaultValue()
 	{
 		PerformanceController instance = PerformanceController._instance;
@@ -523,28 +523,28 @@ public class PerformanceController : Singleton
 		PerformanceController._instance = null;
 	}
 
-	// Token: 0x0600060B RID: 1547 RVA: 0x00020AD3 File Offset: 0x0001ECD3
+	// Token: 0x0600064C RID: 1612 RVA: 0x00020FFF File Offset: 0x0001F1FF
 	static PerformanceController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerformanceController.CreateStaticDefaultValue), new Action(PerformanceController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040004DF RID: 1247
+	// Token: 0x040004ED RID: 1261
 	public bool IsInAnyEntitySkillTickTest;
 
-	// Token: 0x040004E0 RID: 1248
+	// Token: 0x040004EE RID: 1262
 	public bool IsOpenCatchWorldEntity;
 
-	// Token: 0x040004E1 RID: 1249
+	// Token: 0x040004EF RID: 1263
 	private bool IsEntityTickPerformanceTestInternal;
 
-	// Token: 0x040004E2 RID: 1250
+	// Token: 0x040004F0 RID: 1264
 	private bool IsPlayerTickPerformanceTestInternal;
 
-	// Token: 0x040004E3 RID: 1251
+	// Token: 0x040004F1 RID: 1265
 	private bool IsEntityGpuPerformanceTestInternal;
 
-	// Token: 0x040004E4 RID: 1252
+	// Token: 0x040004F2 RID: 1266
 	[Nullable(new byte[]
 	{
 		2,
@@ -553,7 +553,7 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<string, double[]> TickPerformanceMap;
 
-	// Token: 0x040004E5 RID: 1253
+	// Token: 0x040004F3 RID: 1267
 	[Nullable(new byte[]
 	{
 		2,
@@ -563,7 +563,7 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<int, Dictionary<string, double[]>> EntityComponentTickDataMap;
 
-	// Token: 0x040004E6 RID: 1254
+	// Token: 0x040004F4 RID: 1268
 	[Nullable(new byte[]
 	{
 		2,
@@ -572,7 +572,7 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<string, EffectPerformanceRecords> EffectTickPerformanceMap;
 
-	// Token: 0x040004E7 RID: 1255
+	// Token: 0x040004F5 RID: 1269
 	[Nullable(new byte[]
 	{
 		2,
@@ -584,7 +584,7 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<string, List<ValueTuple<string, string>>> TempEffectOutMap;
 
-	// Token: 0x040004E8 RID: 1256
+	// Token: 0x040004F6 RID: 1270
 	[Nullable(new byte[]
 	{
 		2,
@@ -593,19 +593,19 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<string, string> TempComponentOutMap;
 
-	// Token: 0x040004E9 RID: 1257
+	// Token: 0x040004F7 RID: 1271
 	private bool InStatisticsMode;
 
-	// Token: 0x040004EA RID: 1258
+	// Token: 0x040004F8 RID: 1272
 	private FName? CurSectionName;
 
-	// Token: 0x040004EB RID: 1259
+	// Token: 0x040004F9 RID: 1273
 	private int TargetEntity = -1;
 
-	// Token: 0x040004EC RID: 1260
+	// Token: 0x040004FA RID: 1274
 	private long? FrameCount;
 
-	// Token: 0x040004ED RID: 1261
+	// Token: 0x040004FB RID: 1275
 	[Nullable(new byte[]
 	{
 		2,
@@ -614,7 +614,7 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<string, ValueTuple<long, double, int, bool>> TickFrameTimeMap;
 
-	// Token: 0x040004EE RID: 1262
+	// Token: 0x040004FC RID: 1276
 	[Nullable(new byte[]
 	{
 		2,
@@ -622,10 +622,10 @@ public class PerformanceController : Singleton
 	})]
 	private Dictionary<int, string> MeasureModeStringMap;
 
-	// Token: 0x040004EF RID: 1263
+	// Token: 0x040004FD RID: 1277
 	private long? StartFrameCount;
 
-	// Token: 0x040004F0 RID: 1264
+	// Token: 0x040004FE RID: 1278
 	[Nullable(2)]
 	private static PerformanceController _instance;
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E57 RID: 7767
+	// Token: 0x0200208C RID: 8332
 	public class ISheriffStartTrack_SetValue
 	{
-		// Token: 0x04006348 RID: 25416
+		// Token: 0x0400692C RID: 26924
 		public ECommonTipType Type;
 
-		// Token: 0x04006349 RID: 25417
+		// Token: 0x0400692D RID: 26925
 		public int AnomalyId;
 	}
 }

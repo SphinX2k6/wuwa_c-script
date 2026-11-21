@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200061C RID: 1564
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006B9 RID: 1721
 	public class IPrefabCompTransformItem
 	{
-		// Token: 0x06002160 RID: 8544 RVA: 0x0005C724 File Offset: 0x0005A924
+		// Token: 0x06002466 RID: 9318 RVA: 0x00063438 File Offset: 0x00061638
 		private IPrefabCompTransformItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002161 RID: 8545 RVA: 0x0005C75C File Offset: 0x0005A95C
+		// Token: 0x06002467 RID: 9319 RVA: 0x00063470 File Offset: 0x00061670
 		public static IPrefabCompTransformItem Create([Nullable(2)] IPrefabCompTransformItem instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002162 RID: 8546 RVA: 0x0005C76F File Offset: 0x0005A96F
+		// Token: 0x06002468 RID: 9320 RVA: 0x00063483 File Offset: 0x00061683
 		public static IPrefabCompTransformItem CreateFromSetValue([Nullable(2)] IPrefabCompTransformItem_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002163 RID: 8547 RVA: 0x0005C782 File Offset: 0x0005A982
+		// Token: 0x06002469 RID: 9321 RVA: 0x00063496 File Offset: 0x00061696
 		public IPrefabCompTransformItem_SetValue ToSetValue()
 		{
 			return new IPrefabCompTransformItem_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008E5 RID: 2277
-		// (get) Token: 0x06002164 RID: 8548 RVA: 0x0005C7A1 File Offset: 0x0005A9A1
-		// (set) Token: 0x06002165 RID: 8549 RVA: 0x0005C7CC File Offset: 0x0005A9CC
+		// Token: 0x1700099C RID: 2460
+		// (get) Token: 0x0600246A RID: 9322 RVA: 0x000634B5 File Offset: 0x000616B5
+		// (set) Token: 0x0600246B RID: 9323 RVA: 0x000634E0 File Offset: 0x000616E0
 		public virtual bool IsAbsolute
 		{
 			get
@@ -80,9 +78,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008E6 RID: 2278
-		// (get) Token: 0x06002166 RID: 8550 RVA: 0x0005C7DC File Offset: 0x0005A9DC
-		// (set) Token: 0x06002167 RID: 8551 RVA: 0x0005C83D File Offset: 0x0005AA3D
+		// Token: 0x1700099D RID: 2461
+		// (get) Token: 0x0600246C RID: 9324 RVA: 0x000634F0 File Offset: 0x000616F0
+		// (set) Token: 0x0600246D RID: 9325 RVA: 0x00063551 File Offset: 0x00061751
 		public virtual VectorInfo Value
 		{
 			get
@@ -110,18 +108,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001755 RID: 5973
+		// Token: 0x04001947 RID: 6471
 		[Nullable(2)]
 		protected IPrefabCompTransformItem FbInstance;
 
-		// Token: 0x04001756 RID: 5974
+		// Token: 0x04001948 RID: 6472
 		[Nullable(2)]
 		protected IPrefabCompTransformItem_SetValue PocoInterface;
 
-		// Token: 0x04001757 RID: 5975
+		// Token: 0x04001949 RID: 6473
 		private VectorInfo _ValueCache;
 
-		// Token: 0x04001758 RID: 5976
+		// Token: 0x0400194A RID: 6474
 		private bool _ValueInited;
 	}
 }

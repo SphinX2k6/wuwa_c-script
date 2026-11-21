@@ -5,22 +5,22 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001E35 RID: 7733
+// Token: 0x020012F7 RID: 4855
 internal class MonsterHandBookMonsterItem : LoopScrollMediumItemGrid<int>
 {
-	// Token: 0x0600EB0D RID: 60173 RVA: 0x0037AEE8 File Offset: 0x003790E8
+	// Token: 0x0600BF2C RID: 48940 RVA: 0x00386B74 File Offset: 0x00384D74
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600EB0E RID: 60174 RVA: 0x0037AF06 File Offset: 0x00379106
+	// Token: 0x0600BF2D RID: 48941 RVA: 0x00386B92 File Offset: 0x00384D92
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnHandBookRead, new Action<EHandBookTabType, int>(this.OnHandBookRead));
 	}
 
-	// Token: 0x0600EB0F RID: 60175 RVA: 0x0037AF24 File Offset: 0x00379124
+	// Token: 0x0600BF2E RID: 48942 RVA: 0x00386BB0 File Offset: 0x00384DB0
 	protected override void OnRefresh(int data, bool isSelected, int gridIndex)
 	{
 		this.HandBookId = data;
@@ -57,7 +57,7 @@ internal class MonsterHandBookMonsterItem : LoopScrollMediumItemGrid<int>
 		base.Apply<PhantomMediumItemGrid>(parameters2);
 	}
 
-	// Token: 0x0600EB10 RID: 60176 RVA: 0x0037B0AB File Offset: 0x003792AB
+	// Token: 0x0600BF2F RID: 48943 RVA: 0x00386D37 File Offset: 0x00384F37
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, true);
@@ -67,13 +67,13 @@ internal class MonsterHandBookMonsterItem : LoopScrollMediumItemGrid<int>
 		}
 	}
 
-	// Token: 0x0600EB11 RID: 60177 RVA: 0x0037B0BF File Offset: 0x003792BF
+	// Token: 0x0600BF30 RID: 48944 RVA: 0x00386D4B File Offset: 0x00384F4B
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x0600EB12 RID: 60178 RVA: 0x0037B0C9 File Offset: 0x003792C9
+	// Token: 0x0600BF31 RID: 48945 RVA: 0x00386D55 File Offset: 0x00384F55
 	protected override void OnExtendToggleStateChanged(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -87,7 +87,7 @@ internal class MonsterHandBookMonsterItem : LoopScrollMediumItemGrid<int>
 		}
 	}
 
-	// Token: 0x0600EB13 RID: 60179 RVA: 0x0037B0F1 File Offset: 0x003792F1
+	// Token: 0x0600BF32 RID: 48946 RVA: 0x00386D7D File Offset: 0x00384F7D
 	protected void OnHandBookRead(EHandBookTabType type, int id)
 	{
 		if (type != EHandBookTabType.Monster || id != this.HandBookId)
@@ -97,13 +97,13 @@ internal class MonsterHandBookMonsterItem : LoopScrollMediumItemGrid<int>
 		base.SetNewVisible(new bool?(false));
 	}
 
-	// Token: 0x04006D0A RID: 27914
+	// Token: 0x04006DEB RID: 28139
 	public int HandBookId;
 
-	// Token: 0x04006D0B RID: 27915
+	// Token: 0x04006DEC RID: 28140
 	private bool IsLock = true;
 
-	// Token: 0x04006D0C RID: 27916
+	// Token: 0x04006DED RID: 28141
 	[Nullable(new byte[]
 	{
 		2,

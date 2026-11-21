@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000978 RID: 2424
+	// Token: 0x02000A2B RID: 2603
 	public static class EInteractScreenDetectShapeExtensions
 	{
-		// Token: 0x0600364D RID: 13901 RVA: 0x0008D9DC File Offset: 0x0008BBDC
+		// Token: 0x060039D4 RID: 14804 RVA: 0x00095948 File Offset: 0x00093B48
 		public static string ToEnumString(this EInteractScreenDetectShape value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600364E RID: 13902 RVA: 0x0008DA04 File Offset: 0x0008BC04
+		// Token: 0x060039D5 RID: 14805 RVA: 0x00095970 File Offset: 0x00093B70
 		public static EInteractScreenDetectShape FromString(string name)
 		{
 			EInteractScreenDetectShape result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600364F RID: 13903 RVA: 0x0008DA2D File Offset: 0x0008BC2D
+		// Token: 0x060039D6 RID: 14806 RVA: 0x00095999 File Offset: 0x00093B99
 		public static bool TryFromString(string name, out EInteractScreenDetectShape value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003650 RID: 13904 RVA: 0x0008DA52 File Offset: 0x0008BC52
+		// Token: 0x060039D7 RID: 14807 RVA: 0x000959BE File Offset: 0x00093BBE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003651 RID: 13905 RVA: 0x0008DA62 File Offset: 0x0008BC62
+		// Token: 0x060039D8 RID: 14808 RVA: 0x000959CE File Offset: 0x00093BCE
 		public static EInteractScreenDetectShape[] GetValues()
 		{
 			return new EInteractScreenDetectShape[1];
 		}
 
-		// Token: 0x06003652 RID: 13906 RVA: 0x0008DA6A File Offset: 0x0008BC6A
+		// Token: 0x060039D9 RID: 14809 RVA: 0x000959D6 File Offset: 0x00093BD6
 		public static string[] GetNames()
 		{
 			return new string[]

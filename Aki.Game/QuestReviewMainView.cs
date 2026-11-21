@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200267C RID: 9852
+// Token: 0x02001B67 RID: 7015
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewMainView : UiViewBase
 {
-	// Token: 0x06014300 RID: 82688 RVA: 0x00518ADF File Offset: 0x00516CDF
+	// Token: 0x060117E2 RID: 71650 RVA: 0x00527817 File Offset: 0x00525A17
 	public QuestReviewMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014301 RID: 82689 RVA: 0x00518AE8 File Offset: 0x00516CE8
+	// Token: 0x060117E3 RID: 71651 RVA: 0x00527820 File Offset: 0x00525A20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -43,7 +43,7 @@ public class QuestReviewMainView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014302 RID: 82690 RVA: 0x00518BF6 File Offset: 0x00516DF6
+	// Token: 0x060117E4 RID: 71652 RVA: 0x0052792E File Offset: 0x00525B2E
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -51,13 +51,13 @@ public class QuestReviewMainView : UiViewBase
 		this.WaitTabUnlock();
 	}
 
-	// Token: 0x06014303 RID: 82691 RVA: 0x00518C22 File Offset: 0x00516E22
+	// Token: 0x060117E5 RID: 71653 RVA: 0x0052795A File Offset: 0x00525B5A
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 	}
 
-	// Token: 0x06014304 RID: 82692 RVA: 0x00518C40 File Offset: 0x00516E40
+	// Token: 0x060117E6 RID: 71654 RVA: 0x00527978 File Offset: 0x00525B78
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestReviewMainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ public class QuestReviewMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014305 RID: 82693 RVA: 0x00518C84 File Offset: 0x00516E84
+	// Token: 0x060117E7 RID: 71655 RVA: 0x005279BC File Offset: 0x00525BBC
 	protected override void OnStart()
 	{
 		object[] array = this.OpenParam as object[];
@@ -93,13 +93,13 @@ public class QuestReviewMainView : UiViewBase
 		this.UiViewSequence.StartSequenceName = "Start";
 	}
 
-	// Token: 0x06014306 RID: 82694 RVA: 0x00518DBE File Offset: 0x00516FBE
+	// Token: 0x060117E8 RID: 71656 RVA: 0x00527AF6 File Offset: 0x00525CF6
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Emit(EEventName.OnQuestReviewMainViewBeforeHide);
 	}
 
-	// Token: 0x06014307 RID: 82695 RVA: 0x00518DD0 File Offset: 0x00516FD0
+	// Token: 0x060117E9 RID: 71657 RVA: 0x00527B08 File Offset: 0x00525D08
 	protected override void OnBeforeDestroy()
 	{
 		QuestReviewController.Instance.RemoveViewRefreshDelegate(new Action<int?>(this.RefreshDelegate));
@@ -121,13 +121,13 @@ public class QuestReviewMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014308 RID: 82696 RVA: 0x00518E82 File Offset: 0x00517082
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x060117EA RID: 71658 RVA: 0x00527BBA File Offset: 0x00525DBA
+	public override bool GetBgmSwitch()
 	{
 		return this.UseLoopMusic;
 	}
 
-	// Token: 0x06014309 RID: 82697 RVA: 0x00518E8C File Offset: 0x0051708C
+	// Token: 0x060117EB RID: 71659 RVA: 0x00527BC4 File Offset: 0x00525DC4
 	private void RefreshView()
 	{
 		this.RefreshTabs(this.Data);
@@ -135,7 +135,7 @@ public class QuestReviewMainView : UiViewBase
 		this.RefreshQuestTree(questReviewTreeDataById);
 	}
 
-	// Token: 0x0601430A RID: 82698 RVA: 0x00518EC4 File Offset: 0x005170C4
+	// Token: 0x060117EC RID: 71660 RVA: 0x00527BFC File Offset: 0x00525DFC
 	private void RefreshQuestTree(QuestReviewTreeData treeData)
 	{
 		List<QuestReviewLineData> list = new List<QuestReviewLineData>();
@@ -151,7 +151,7 @@ public class QuestReviewMainView : UiViewBase
 		this.LayoutQuestTree.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601430B RID: 82699 RVA: 0x00518F80 File Offset: 0x00517180
+	// Token: 0x060117ED RID: 71661 RVA: 0x00527CB8 File Offset: 0x00525EB8
 	private void RefreshAfterBurn()
 	{
 		QuestReviewLineData questReviewLineDataById = QuestReviewModel.Instance.GetQuestReviewLineDataById(3100);
@@ -173,7 +173,7 @@ public class QuestReviewMainView : UiViewBase
 		QuestReviewModel.Instance.SetQuestLineFused();
 	}
 
-	// Token: 0x0601430C RID: 82700 RVA: 0x0051901C File Offset: 0x0051721C
+	// Token: 0x060117EE RID: 71662 RVA: 0x00527D54 File Offset: 0x00525F54
 	private void RefreshTabs(QuestReviewEntryData entryData)
 	{
 		List<QuestReviewTabData> list = new List<QuestReviewTabData>();
@@ -197,7 +197,7 @@ public class QuestReviewMainView : UiViewBase
 		this.LayoutTabs.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601430D RID: 82701 RVA: 0x00519108 File Offset: 0x00517308
+	// Token: 0x060117EF RID: 71663 RVA: 0x00527E40 File Offset: 0x00526040
 	private UniTask WaitFusionFinish()
 	{
 		QuestReviewMainView.<WaitFusionFinish>d__19 <WaitFusionFinish>d__;
@@ -207,7 +207,7 @@ public class QuestReviewMainView : UiViewBase
 		return <WaitFusionFinish>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601430E RID: 82702 RVA: 0x00519144 File Offset: 0x00517344
+	// Token: 0x060117F0 RID: 71664 RVA: 0x00527E7C File Offset: 0x0052607C
 	private UniTask WaitTabUnlock()
 	{
 		QuestReviewMainView.<WaitTabUnlock>d__20 <WaitTabUnlock>d__;
@@ -217,7 +217,7 @@ public class QuestReviewMainView : UiViewBase
 		return <WaitTabUnlock>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601430F RID: 82703 RVA: 0x00519180 File Offset: 0x00517380
+	// Token: 0x060117F1 RID: 71665 RVA: 0x00527EB8 File Offset: 0x005260B8
 	private void RefreshDelegate(int? tabId = 0)
 	{
 		int? num = tabId;
@@ -258,19 +258,19 @@ public class QuestReviewMainView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06014310 RID: 82704 RVA: 0x005192E4 File Offset: 0x005174E4
+	// Token: 0x060117F2 RID: 71666 RVA: 0x0052801C File Offset: 0x0052621C
 	private QuestReviewLineItem CreateQuestLineItem()
 	{
 		return new QuestReviewLineItem();
 	}
 
-	// Token: 0x06014311 RID: 82705 RVA: 0x005192EB File Offset: 0x005174EB
+	// Token: 0x060117F3 RID: 71667 RVA: 0x00528023 File Offset: 0x00526223
 	private QuestReviewTabItem CreateTabItem()
 	{
 		return new QuestReviewTabItem();
 	}
 
-	// Token: 0x06014312 RID: 82706 RVA: 0x005192F2 File Offset: 0x005174F2
+	// Token: 0x060117F4 RID: 71668 RVA: 0x0052802A File Offset: 0x0052622A
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "Start")
@@ -284,7 +284,7 @@ public class QuestReviewMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014313 RID: 82707 RVA: 0x0051932F File Offset: 0x0051752F
+	// Token: 0x060117F5 RID: 71669 RVA: 0x00528067 File Offset: 0x00526267
 	private void OnFirstStartSeqEnd(string _)
 	{
 		QuestReviewEntryData data = this.Data;
@@ -294,47 +294,47 @@ public class QuestReviewMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x040097FB RID: 38907
+	// Token: 0x04009953 RID: 39251
 	private GenericLayout<QuestReviewLineItem, QuestReviewLineData> LayoutQuestTree;
 
-	// Token: 0x040097FC RID: 38908
+	// Token: 0x04009954 RID: 39252
 	private GenericLayout<QuestReviewTabItem, QuestReviewTabData> LayoutTabs;
 
-	// Token: 0x040097FD RID: 38909
+	// Token: 0x04009955 RID: 39253
 	private PopupCaptionItem Caption;
 
-	// Token: 0x040097FE RID: 38910
+	// Token: 0x04009956 RID: 39254
 	private QuestReviewEntryData Data;
 
-	// Token: 0x040097FF RID: 38911
+	// Token: 0x04009957 RID: 39255
 	private bool UseLoopMusic;
 
-	// Token: 0x04009800 RID: 38912
+	// Token: 0x04009958 RID: 39256
 	private QuestReviewTabData CurrentTabData;
 
-	// Token: 0x02008CC3 RID: 36035
+	// Token: 0x02007E4C RID: 32332
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DAEA RID: 187114
+		// Token: 0x04028E01 RID: 167425
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402DAEB RID: 187115
+		// Token: 0x04028E02 RID: 167426
 		public const int LayoutQuestTree = 1;
 
-		// Token: 0x0402DAEC RID: 187116
+		// Token: 0x04028E03 RID: 167427
 		public const int ItemQuestLine = 2;
 
-		// Token: 0x0402DAED RID: 187117
+		// Token: 0x04028E04 RID: 167428
 		public const int LayoutTab = 3;
 
-		// Token: 0x0402DAEE RID: 187118
+		// Token: 0x04028E05 RID: 167429
 		public const int ItemTab = 4;
 
-		// Token: 0x0402DAEF RID: 187119
+		// Token: 0x04028E06 RID: 167430
 		public const int SpineBookA = 5;
 
-		// Token: 0x0402DAF0 RID: 187120
+		// Token: 0x04028E07 RID: 167431
 		public const int SpineBookB = 6;
 	}
 }

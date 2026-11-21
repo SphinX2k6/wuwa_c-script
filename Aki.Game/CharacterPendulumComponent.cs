@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003080 RID: 12416
+// Token: 0x020025D7 RID: 9687
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterPendulumComponent : EntityComponent
 {
-	// Token: 0x1700247C RID: 9340
-	// (get) Token: 0x0601A851 RID: 108625 RVA: 0x007192FC File Offset: 0x007174FC
-	// (set) Token: 0x0601A852 RID: 108626 RVA: 0x00719304 File Offset: 0x00717504
+	// Token: 0x170025CA RID: 9674
+	// (get) Token: 0x0601822B RID: 98859 RVA: 0x0073F8F0 File Offset: 0x0073DAF0
+	// (set) Token: 0x0601822C RID: 98860 RVA: 0x0073F8F8 File Offset: 0x0073DAF8
 	public bool Hooked
 	{
 		get
@@ -23,9 +23,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700247D RID: 9341
-	// (get) Token: 0x0601A853 RID: 108627 RVA: 0x0071930D File Offset: 0x0071750D
-	// (set) Token: 0x0601A854 RID: 108628 RVA: 0x00719315 File Offset: 0x00717515
+	// Token: 0x170025CB RID: 9675
+	// (get) Token: 0x0601822D RID: 98861 RVA: 0x0073F901 File Offset: 0x0073DB01
+	// (set) Token: 0x0601822E RID: 98862 RVA: 0x0073F909 File Offset: 0x0073DB09
 	public double UpLength
 	{
 		get
@@ -38,9 +38,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700247E RID: 9342
-	// (get) Token: 0x0601A855 RID: 108629 RVA: 0x0071931E File Offset: 0x0071751E
-	// (set) Token: 0x0601A856 RID: 108630 RVA: 0x0071932C File Offset: 0x0071752C
+	// Token: 0x170025CC RID: 9676
+	// (get) Token: 0x0601822F RID: 98863 RVA: 0x0073F912 File Offset: 0x0073DB12
+	// (set) Token: 0x06018230 RID: 98864 RVA: 0x0073F920 File Offset: 0x0073DB20
 	public FVectorDouble GrabPoint
 	{
 		get
@@ -53,9 +53,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700247F RID: 9343
-	// (get) Token: 0x0601A857 RID: 108631 RVA: 0x0071933B File Offset: 0x0071753B
-	// (set) Token: 0x0601A858 RID: 108632 RVA: 0x00719343 File Offset: 0x00717543
+	// Token: 0x170025CD RID: 9677
+	// (get) Token: 0x06018231 RID: 98865 RVA: 0x0073F92F File Offset: 0x0073DB2F
+	// (set) Token: 0x06018232 RID: 98866 RVA: 0x0073F937 File Offset: 0x0073DB37
 	public string SocketName
 	{
 		get
@@ -68,9 +68,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002480 RID: 9344
-	// (get) Token: 0x0601A859 RID: 108633 RVA: 0x0071934C File Offset: 0x0071754C
-	// (set) Token: 0x0601A85A RID: 108634 RVA: 0x00719354 File Offset: 0x00717554
+	// Token: 0x170025CE RID: 9678
+	// (get) Token: 0x06018233 RID: 98867 RVA: 0x0073F940 File Offset: 0x0073DB40
+	// (set) Token: 0x06018234 RID: 98868 RVA: 0x0073F948 File Offset: 0x0073DB48
 	public double RopeForce
 	{
 		get
@@ -83,9 +83,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002481 RID: 9345
-	// (get) Token: 0x0601A85B RID: 108635 RVA: 0x0071935D File Offset: 0x0071755D
-	// (set) Token: 0x0601A85C RID: 108636 RVA: 0x00719365 File Offset: 0x00717565
+	// Token: 0x170025CF RID: 9679
+	// (get) Token: 0x06018235 RID: 98869 RVA: 0x0073F951 File Offset: 0x0073DB51
+	// (set) Token: 0x06018236 RID: 98870 RVA: 0x0073F959 File Offset: 0x0073DB59
 	public double DistanceRopeToActor
 	{
 		get
@@ -98,9 +98,9 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002482 RID: 9346
-	// (get) Token: 0x0601A85D RID: 108637 RVA: 0x0071936E File Offset: 0x0071756E
-	// (set) Token: 0x0601A85E RID: 108638 RVA: 0x00719376 File Offset: 0x00717576
+	// Token: 0x170025D0 RID: 9680
+	// (get) Token: 0x06018237 RID: 98871 RVA: 0x0073F962 File Offset: 0x0073DB62
+	// (set) Token: 0x06018238 RID: 98872 RVA: 0x0073F96A File Offset: 0x0073DB6A
 	public float AirControl
 	{
 		get
@@ -113,7 +113,7 @@ public class CharacterPendulumComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A85F RID: 108639 RVA: 0x00719380 File Offset: 0x00717580
+	// Token: 0x06018239 RID: 98873 RVA: 0x0073F974 File Offset: 0x0073DB74
 	protected override bool OnStart()
 	{
 		CharacterActorComponent characterActorComponent = base.Entity.CheckGetComponent<CharacterActorComponent>();
@@ -125,7 +125,7 @@ public class CharacterPendulumComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A860 RID: 108640 RVA: 0x007193F8 File Offset: 0x007175F8
+	// Token: 0x0601823A RID: 98874 RVA: 0x0073F9EC File Offset: 0x0073DBEC
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<float>(base.Entity, EEventName.CustomMovePendulum, this.ReceivePendulumEvent);
@@ -134,7 +134,7 @@ public class CharacterPendulumComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A861 RID: 108641 RVA: 0x00719436 File Offset: 0x00717636
+	// Token: 0x0601823B RID: 98875 RVA: 0x0073FA2A File Offset: 0x0073DC2A
 	protected override void OnTick(float delta)
 	{
 		if (1 == this.FrameIndex)
@@ -145,7 +145,7 @@ public class CharacterPendulumComponent : EntityComponent
 		this.ThrowRopeAndSwing((double)delta);
 	}
 
-	// Token: 0x0601A862 RID: 108642 RVA: 0x00719454 File Offset: 0x00717654
+	// Token: 0x0601823C RID: 98876 RVA: 0x0073FA48 File Offset: 0x0073DC48
 	protected void DrawCube(FTransformDouble transform, float duration)
 	{
 		int num = 156;
@@ -167,7 +167,7 @@ public class CharacterPendulumComponent : EntityComponent
 		UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, lineStart2, lineEnd2, lineColor, duration, (float)num5);
 	}
 
-	// Token: 0x0601A863 RID: 108643 RVA: 0x00719578 File Offset: 0x00717778
+	// Token: 0x0601823D RID: 98877 RVA: 0x0073FB6C File Offset: 0x0073DD6C
 	private void ThrowRopeAndSwing(double delta)
 	{
 		if (!this.HookedInternal)
@@ -206,28 +206,28 @@ public class CharacterPendulumComponent : EntityComponent
 		characterMovement.AirControl = this.AirControlInternal;
 	}
 
-	// Token: 0x0601A864 RID: 108644 RVA: 0x0071973D File Offset: 0x0071793D
+	// Token: 0x0601823E RID: 98878 RVA: 0x0073FD31 File Offset: 0x0073DF31
 	private void BreakRope()
 	{
 		this.HookedInternal = false;
 		base.Entity.GetComponent<CharacterMoveComponent>().CharacterMovement.AirControl = this.DefaultAirControl;
 	}
 
-	// Token: 0x0601A865 RID: 108645 RVA: 0x00719761 File Offset: 0x00717961
+	// Token: 0x0601823F RID: 98879 RVA: 0x0073FD55 File Offset: 0x0073DF55
 	public void SetPendulumData(double addVelocityX, double addVelocityY, double addVelocityZ, double forwardLossPercentage, double lossPercentage, double gravity, double friction, double deceleration, double accelerator, double maxSpeed, double maxFallingSpeed)
 	{
 		this.HookedInternal = true;
 		this.FrameIndex = 1;
 	}
 
-	// Token: 0x0601A866 RID: 108646 RVA: 0x00719771 File Offset: 0x00717971
+	// Token: 0x06018240 RID: 98880 RVA: 0x0073FD65 File Offset: 0x0073DF65
 	public void Reset()
 	{
 		this.FrameIndex = 0;
 		this.BreakRope();
 	}
 
-	// Token: 0x0601A867 RID: 108647 RVA: 0x00719780 File Offset: 0x00717980
+	// Token: 0x06018241 RID: 98881 RVA: 0x0073FD74 File Offset: 0x0073DF74
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -235,115 +235,118 @@ public class CharacterPendulumComponent : EntityComponent
 			return false;
 		}
 		CharacterPendulumComponent characterPendulumComponent = (CharacterPendulumComponent)componentTemplate;
-		if (base.CanResetComponentProperty("Player"))
+		if (characterPendulumComponent.Player == null)
 		{
-			if (characterPendulumComponent.Player == null)
-			{
-				this.Player = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.Player), "Player"))
-			{
-				return false;
-			}
+			this.Player = null;
 		}
-		if (base.CanResetComponentProperty("HookedInternal"))
-		{
-			this.HookedInternal = characterPendulumComponent.HookedInternal;
-		}
-		if (base.CanResetComponentProperty("UpLengthInternal"))
-		{
-			this.UpLengthInternal = characterPendulumComponent.UpLengthInternal;
-		}
-		if (base.CanResetComponentProperty("GrabPointInternal") && characterPendulumComponent.GrabPointInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.GrabPointInternal), "GrabPointInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Player), "Player"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SocketNameInternal"))
+		this.HookedInternal = characterPendulumComponent.HookedInternal;
+		this.UpLengthInternal = characterPendulumComponent.UpLengthInternal;
+		if (characterPendulumComponent.GrabPointInternal != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GrabPointInternal), "GrabPointInternal"))
 		{
-			this.SocketNameInternal = characterPendulumComponent.SocketNameInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("RopeForceInternal"))
-		{
-			this.RopeForceInternal = characterPendulumComponent.RopeForceInternal;
-		}
-		if (base.CanResetComponentProperty("DistanceRopeToActorInternal"))
-		{
-			this.DistanceRopeToActorInternal = characterPendulumComponent.DistanceRopeToActorInternal;
-		}
-		if (base.CanResetComponentProperty("AirControlInternal"))
-		{
-			this.AirControlInternal = characterPendulumComponent.AirControlInternal;
-		}
-		if (base.CanResetComponentProperty("FrameIndex"))
-		{
-			this.FrameIndex = characterPendulumComponent.FrameIndex;
-		}
-		if (base.CanResetComponentProperty("DefaultAirControl"))
-		{
-			this.DefaultAirControl = characterPendulumComponent.DefaultAirControl;
-		}
-		return (!base.CanResetComponentProperty("Velocity") || characterPendulumComponent.Velocity == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.Velocity), "Velocity")) && (!base.CanResetComponentProperty("ReceivePendulumEvent") || characterPendulumComponent.ReceivePendulumEvent == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Action<float>>(this.ReceivePendulumEvent), "ReceivePendulumEvent")) && (!base.CanResetComponentProperty("OnCharMovementModeChanged") || characterPendulumComponent.OnCharMovementModeChanged == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Action<int, EMovementMode, EMovementMode, byte, byte>>(this.OnCharMovementModeChanged), "OnCharMovementModeChanged"));
+		this.SocketNameInternal = characterPendulumComponent.SocketNameInternal;
+		this.RopeForceInternal = characterPendulumComponent.RopeForceInternal;
+		this.DistanceRopeToActorInternal = characterPendulumComponent.DistanceRopeToActorInternal;
+		this.AirControlInternal = characterPendulumComponent.AirControlInternal;
+		this.FrameIndex = characterPendulumComponent.FrameIndex;
+		this.DefaultAirControl = characterPendulumComponent.DefaultAirControl;
+		return (characterPendulumComponent.Velocity == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Velocity), "Velocity")) && (characterPendulumComponent.ReceivePendulumEvent == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReceivePendulumEvent), "ReceivePendulumEvent")) && (characterPendulumComponent.OnCharMovementModeChanged == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnCharMovementModeChanged), "OnCharMovementModeChanged"));
 	}
 
-	// Token: 0x0400CBA1 RID: 52129
+	// Token: 0x170025D1 RID: 9681
+	// (get) Token: 0x06018242 RID: 98882 RVA: 0x0073FEA7 File Offset: 0x0073E0A7
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025D2 RID: 9682
+	// (get) Token: 0x06018243 RID: 98883 RVA: 0x0073FEAA File Offset: 0x0073E0AA
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025D3 RID: 9683
+	// (get) Token: 0x06018244 RID: 98884 RVA: 0x0073FEAD File Offset: 0x0073E0AD
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CF84 RID: 53124
 	private const int LIMIT_FRAME_TIME = 33;
 
-	// Token: 0x0400CBA2 RID: 52130
+	// Token: 0x0400CF85 RID: 53125
 	private const int LIMIT_FRAME_TIME2 = 50;
 
-	// Token: 0x0400CBA3 RID: 52131
+	// Token: 0x0400CF86 RID: 53126
 	private const int UPDATE_UP_Z = 5;
 
-	// Token: 0x0400CBA4 RID: 52132
+	// Token: 0x0400CF87 RID: 53127
 	private const int UPDATE_UP_Z2 = 11;
 
-	// Token: 0x0400CBA5 RID: 52133
+	// Token: 0x0400CF88 RID: 53128
 	private const int LIMIT_FORCE = 600000;
 
-	// Token: 0x0400CBA6 RID: 52134
+	// Token: 0x0400CF89 RID: 53129
 	[StaticVariableRuleIgnore]
 	protected static Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400CBA7 RID: 52135
+	// Token: 0x0400CF8A RID: 53130
 	[Nullable(2)]
 	private TsBaseCharacter Player;
 
-	// Token: 0x0400CBA8 RID: 52136
+	// Token: 0x0400CF8B RID: 53131
 	private bool HookedInternal;
 
-	// Token: 0x0400CBA9 RID: 52137
+	// Token: 0x0400CF8C RID: 53132
 	private double UpLengthInternal;
 
-	// Token: 0x0400CBAA RID: 52138
+	// Token: 0x0400CF8D RID: 53133
 	private readonly Vector GrabPointInternal = Vector.Create();
 
-	// Token: 0x0400CBAB RID: 52139
+	// Token: 0x0400CF8E RID: 53134
 	private string SocketNameInternal = "";
 
-	// Token: 0x0400CBAC RID: 52140
+	// Token: 0x0400CF8F RID: 53135
 	private double RopeForceInternal;
 
-	// Token: 0x0400CBAD RID: 52141
+	// Token: 0x0400CF90 RID: 53136
 	private double DistanceRopeToActorInternal;
 
-	// Token: 0x0400CBAE RID: 52142
+	// Token: 0x0400CF91 RID: 53137
 	private float AirControlInternal;
 
-	// Token: 0x0400CBAF RID: 52143
+	// Token: 0x0400CF92 RID: 53138
 	private int FrameIndex;
 
-	// Token: 0x0400CBB0 RID: 52144
+	// Token: 0x0400CF93 RID: 53139
 	private float DefaultAirControl;
 
-	// Token: 0x0400CBB1 RID: 52145
+	// Token: 0x0400CF94 RID: 53140
 	private readonly Vector Velocity = Vector.Create();
 
-	// Token: 0x0400CBB2 RID: 52146
+	// Token: 0x0400CF95 RID: 53141
 	private readonly Action<float> ReceivePendulumEvent = delegate(float deltaTime)
 	{
 	};
 
-	// Token: 0x0400CBB3 RID: 52147
+	// Token: 0x0400CF96 RID: 53142
 	private readonly Action<int, EMovementMode, EMovementMode, byte, byte> OnCharMovementModeChanged = delegate(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 	};

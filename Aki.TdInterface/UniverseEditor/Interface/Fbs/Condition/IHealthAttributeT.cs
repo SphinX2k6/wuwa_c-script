@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C3B RID: 19515
+	// Token: 0x0200512E RID: 20782
 	public class IHealthAttributeT
 	{
-		// Token: 0x17008DC6 RID: 36294
-		// (get) Token: 0x0601EEE5 RID: 126693 RVA: 0x00453D4A File Offset: 0x00451F4A
-		// (set) Token: 0x0601EEE6 RID: 126694 RVA: 0x00453D52 File Offset: 0x00451F52
+		// Token: 0x170094EF RID: 38127
+		// (get) Token: 0x06020AE9 RID: 133865 RVA: 0x00487626 File Offset: 0x00485826
+		// (set) Token: 0x06020AEA RID: 133866 RVA: 0x0048762E File Offset: 0x0048582E
 		public EPlayerAttributeType Type { get; set; }
 
-		// Token: 0x17008DC7 RID: 36295
-		// (get) Token: 0x0601EEE7 RID: 126695 RVA: 0x00453D5B File Offset: 0x00451F5B
-		// (set) Token: 0x0601EEE8 RID: 126696 RVA: 0x00453D63 File Offset: 0x00451F63
+		// Token: 0x170094F0 RID: 38128
+		// (get) Token: 0x06020AEB RID: 133867 RVA: 0x00487637 File Offset: 0x00485837
+		// (set) Token: 0x06020AEC RID: 133868 RVA: 0x0048763F File Offset: 0x0048583F
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008DC8 RID: 36296
-		// (get) Token: 0x0601EEE9 RID: 126697 RVA: 0x00453D6C File Offset: 0x00451F6C
-		// (set) Token: 0x0601EEEA RID: 126698 RVA: 0x00453D74 File Offset: 0x00451F74
+		// Token: 0x170094F1 RID: 38129
+		// (get) Token: 0x06020AED RID: 133869 RVA: 0x00487648 File Offset: 0x00485848
+		// (set) Token: 0x06020AEE RID: 133870 RVA: 0x00487650 File Offset: 0x00485850
 		public float Value { get; set; }
 
-		// Token: 0x0601EEEB RID: 126699 RVA: 0x00453D7D File Offset: 0x00451F7D
+		// Token: 0x06020AEF RID: 133871 RVA: 0x00487659 File Offset: 0x00485859
 		public IHealthAttributeT()
 		{
 			this.Type = EPlayerAttributeType.Health;

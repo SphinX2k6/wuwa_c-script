@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C9 RID: 24777
+	// Token: 0x02005047 RID: 20551
 	internal class AbyssDangoLikeItem : UiPanelBase
 	{
-		// Token: 0x0603EA4A RID: 256586 RVA: 0x00F20E54 File Offset: 0x00F1F054
+		// Token: 0x0603370E RID: 210702 RVA: 0x00E67C24 File Offset: 0x00E65E24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EA4B RID: 256587 RVA: 0x00F20F1C File Offset: 0x00F1F11C
+		// Token: 0x0603370F RID: 210703 RVA: 0x00E67CEC File Offset: 0x00E65EEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AbyssDangoLikeItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA4C RID: 256588 RVA: 0x00F20F5F File Offset: 0x00F1F15F
+		// Token: 0x06033710 RID: 210704 RVA: 0x00E67D2F File Offset: 0x00E65F2F
 		private void OnClickLikeBtn()
 		{
 			DangoAbyssController.Instance.AbyssLikePlayer(this.CurrentPlayerId.Value);
 		}
 
-		// Token: 0x0603EA4D RID: 256589 RVA: 0x00F20F78 File Offset: 0x00F1F178
+		// Token: 0x06033711 RID: 210705 RVA: 0x00E67D48 File Offset: 0x00E65F48
 		public void Refresh(int data, int playerId, bool afterLike = false)
 		{
 			this.CurrentPlayerId = new int?(playerId);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			button.RootUIComp.Get().SetUIActive(!afterLike);
 		}
 
-		// Token: 0x0603EA4E RID: 256590 RVA: 0x00F20FCB File Offset: 0x00F1F1CB
+		// Token: 0x06033712 RID: 210706 RVA: 0x00E67D9B File Offset: 0x00E65F9B
 		public void RefreshLineState(bool isShow)
 		{
 			UUIItem item = base.GetItem(2);
@@ -77,21 +77,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x04020C03 RID: 134147
+		// Token: 0x0401B530 RID: 111920
 		[Nullable(1)]
 		private AbyssDangoLikeCountItem AbyssDangoLikeCountItem;
 
-		// Token: 0x04020C04 RID: 134148
+		// Token: 0x0401B531 RID: 111921
 		private int? CurrentPlayerId;
 
-		// Token: 0x0200C314 RID: 49940
+		// Token: 0x0200ACFF RID: 44287
 		private enum ELikeItem
 		{
-			// Token: 0x0403AE7F RID: 241279
+			// Token: 0x040357E7 RID: 219111
 			LikeBtn,
-			// Token: 0x0403AE80 RID: 241280
+			// Token: 0x040357E8 RID: 219112
 			LikeCountItem,
-			// Token: 0x0403AE81 RID: 241281
+			// Token: 0x040357E9 RID: 219113
 			LikeLine
 		}
 	}

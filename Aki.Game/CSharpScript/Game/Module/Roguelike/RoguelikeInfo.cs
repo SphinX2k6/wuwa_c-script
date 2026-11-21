@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA2 RID: 19874
+	// Token: 0x02003D6B RID: 15723
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeInfo
 	{
-		// Token: 0x0603351B RID: 210203 RVA: 0x00BFA178 File Offset: 0x00BF8378
+		// Token: 0x06028388 RID: 164744 RVA: 0x00B43774 File Offset: 0x00B41974
 		public RoguelikeInfo(RoguelikeInstInfo roguelikeInfo)
 		{
 			this.RoleEntry = new RogueGainEntry(roguelikeInfo.RoleEntry, null);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603351C RID: 210204 RVA: 0x00BFA308 File Offset: 0x00BF8508
+		// Token: 0x06028389 RID: 164745 RVA: 0x00B43904 File Offset: 0x00B41B04
 		public void Update(RoguelikeGainDataUpdateNotify notify)
 		{
 			if (notify.GainDataUpdateType == GainDataUpdateType.GainDataUpdate)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603351D RID: 210205 RVA: 0x00BFA630 File Offset: 0x00BF8830
+		// Token: 0x0602838A RID: 164746 RVA: 0x00B43C2C File Offset: 0x00B41E2C
 		public bool GetIsUnlock(AffixEntry affixEntry)
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in affixEntry.ElementDict)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x0603351E RID: 210206 RVA: 0x00BFA6B4 File Offset: 0x00BF88B4
+		// Token: 0x0602838B RID: 164747 RVA: 0x00B43CB0 File Offset: 0x00B41EB0
 		public float GetAttributeValue(int attrId)
 		{
 			if (this.AttributeDict.Count > 0)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return roleDataById.GetShowAttributeValueById(attrId);
 		}
 
-		// Token: 0x0603351F RID: 210207 RVA: 0x00BFA728 File Offset: 0x00BF8928
+		// Token: 0x0602838C RID: 164748 RVA: 0x00B43D24 File Offset: 0x00B41F24
 		public List<AttrListScrollData> GetShowAttrList()
 		{
 			if (this.AttributeDict.Count > 0)
@@ -239,23 +239,23 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B445 RID: 111685
+		// Token: 0x04015E18 RID: 89624
 		public RogueGainEntry RoleEntry;
 
-		// Token: 0x0401B446 RID: 111686
+		// Token: 0x04015E19 RID: 89625
 		[Nullable(2)]
 		public RogueGainEntry PhantomEntry;
 
-		// Token: 0x0401B447 RID: 111687
+		// Token: 0x04015E1A RID: 89626
 		public List<RogueGainEntry> BuffEntryList;
 
-		// Token: 0x0401B448 RID: 111688
+		// Token: 0x04015E1B RID: 89627
 		public Dictionary<int, int> ElementDict;
 
-		// Token: 0x0401B449 RID: 111689
+		// Token: 0x04015E1C RID: 89628
 		public List<RogueGainEntry> SpecialEntryList;
 
-		// Token: 0x0401B44A RID: 111690
+		// Token: 0x04015E1D RID: 89629
 		public Dictionary<int, int> AttributeDict = new Dictionary<int, int>();
 	}
 }

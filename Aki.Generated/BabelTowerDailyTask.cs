@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B1D RID: 2845
+	// Token: 0x02000BFD RID: 3069
 	public struct BabelTowerDailyTask : IFlatbufferObject
 	{
-		// Token: 0x170003E9 RID: 1001
-		// (get) Token: 0x06004A9B RID: 19099 RVA: 0x001DC88C File Offset: 0x001DAA8C
+		// Token: 0x17000429 RID: 1065
+		// (get) Token: 0x0600505D RID: 20573 RVA: 0x001FCDF0 File Offset: 0x001FAFF0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004A9C RID: 19100 RVA: 0x001DC899 File Offset: 0x001DAA99
+		// Token: 0x0600505E RID: 20574 RVA: 0x001FCDFD File Offset: 0x001FAFFD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004A9D RID: 19101 RVA: 0x001DC8A0 File Offset: 0x001DAAA0
+		// Token: 0x0600505F RID: 20575 RVA: 0x001FCE04 File Offset: 0x001FB004
 		public static BabelTowerDailyTask GetRootAsBabelTowerDailyTask(ByteBuffer _bb)
 		{
 			return BabelTowerDailyTask.GetRootAsBabelTowerDailyTask(_bb, default(BabelTowerDailyTask));
 		}
 
-		// Token: 0x06004A9E RID: 19102 RVA: 0x001DC8BC File Offset: 0x001DAABC
+		// Token: 0x06005060 RID: 20576 RVA: 0x001FCE20 File Offset: 0x001FB020
 		public static BabelTowerDailyTask GetRootAsBabelTowerDailyTask(ByteBuffer _bb, BabelTowerDailyTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004A9F RID: 19103 RVA: 0x001DC8D9 File Offset: 0x001DAAD9
+		// Token: 0x06005061 RID: 20577 RVA: 0x001FCE3D File Offset: 0x001FB03D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004AA0 RID: 19104 RVA: 0x001DC8E8 File Offset: 0x001DAAE8
+		// Token: 0x06005062 RID: 20578 RVA: 0x001FCE4C File Offset: 0x001FB04C
 		public BabelTowerDailyTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170003EA RID: 1002
-		// (get) Token: 0x06004AA1 RID: 19105 RVA: 0x001DC8F8 File Offset: 0x001DAAF8
+		// Token: 0x1700042A RID: 1066
+		// (get) Token: 0x06005063 RID: 20579 RVA: 0x001FCE5C File Offset: 0x001FB05C
 		public int TaskId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003EB RID: 1003
-		// (get) Token: 0x06004AA2 RID: 19106 RVA: 0x001DC934 File Offset: 0x001DAB34
+		// Token: 0x1700042B RID: 1067
+		// (get) Token: 0x06005064 RID: 20580 RVA: 0x001FCE98 File Offset: 0x001FB098
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003EC RID: 1004
-		// (get) Token: 0x06004AA3 RID: 19107 RVA: 0x001DC970 File Offset: 0x001DAB70
+		// Token: 0x1700042C RID: 1068
+		// (get) Token: 0x06005065 RID: 20581 RVA: 0x001FCED4 File Offset: 0x001FB0D4
 		public int GroupId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003ED RID: 1005
-		// (get) Token: 0x06004AA4 RID: 19108 RVA: 0x001DC9AC File Offset: 0x001DABAC
+		// Token: 0x1700042D RID: 1069
+		// (get) Token: 0x06005066 RID: 20582 RVA: 0x001FCF10 File Offset: 0x001FB110
 		public int Weight
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003EE RID: 1006
-		// (get) Token: 0x06004AA5 RID: 19109 RVA: 0x001DC9EC File Offset: 0x001DABEC
+		// Token: 0x1700042E RID: 1070
+		// (get) Token: 0x06005067 RID: 20583 RVA: 0x001FCF50 File Offset: 0x001FB150
 		public int DropId
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170003EF RID: 1007
-		// (get) Token: 0x06004AA6 RID: 19110 RVA: 0x001DCA2C File Offset: 0x001DAC2C
+		// Token: 0x1700042F RID: 1071
+		// (get) Token: 0x06005068 RID: 20584 RVA: 0x001FCF90 File Offset: 0x001FB190
 		public string Title
 		{
 			get
@@ -139,19 +139,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AA7 RID: 19111 RVA: 0x001DCA64 File Offset: 0x001DAC64
+		// Token: 0x06005069 RID: 20585 RVA: 0x001FCFC8 File Offset: 0x001FB1C8
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06004AA8 RID: 19112 RVA: 0x001DCA74 File Offset: 0x001DAC74
+		// Token: 0x0600506A RID: 20586 RVA: 0x001FCFD8 File Offset: 0x001FB1D8
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004AA9 RID: 19113 RVA: 0x001DCA8C File Offset: 0x001DAC8C
+		// Token: 0x0600506B RID: 20587 RVA: 0x001FCFF0 File Offset: 0x001FB1F0
 		public int ShowDeTerm(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -162,8 +162,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170003F0 RID: 1008
-		// (get) Token: 0x06004AAA RID: 19114 RVA: 0x001DCACC File Offset: 0x001DACCC
+		// Token: 0x17000430 RID: 1072
+		// (get) Token: 0x0600506C RID: 20588 RVA: 0x001FD030 File Offset: 0x001FB230
 		public int ShowDeTermLength
 		{
 			get
@@ -177,19 +177,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AAB RID: 19115 RVA: 0x001DCAF8 File Offset: 0x001DACF8
+		// Token: 0x0600506D RID: 20589 RVA: 0x001FD05C File Offset: 0x001FB25C
 		public Span<int> GetShowDeTermBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x06004AAC RID: 19116 RVA: 0x001DCB08 File Offset: 0x001DAD08
+		// Token: 0x0600506E RID: 20590 RVA: 0x001FD06C File Offset: 0x001FB26C
 		public int[] GetShowDeTermArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004AAD RID: 19117 RVA: 0x001DCB20 File Offset: 0x001DAD20
+		// Token: 0x0600506F RID: 20591 RVA: 0x001FD084 File Offset: 0x001FB284
 		public int ShowBuff(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -200,8 +200,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170003F1 RID: 1009
-		// (get) Token: 0x06004AAE RID: 19118 RVA: 0x001DCB60 File Offset: 0x001DAD60
+		// Token: 0x17000431 RID: 1073
+		// (get) Token: 0x06005070 RID: 20592 RVA: 0x001FD0C4 File Offset: 0x001FB2C4
 		public int ShowBuffLength
 		{
 			get
@@ -215,20 +215,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AAF RID: 19119 RVA: 0x001DCB8C File Offset: 0x001DAD8C
+		// Token: 0x06005071 RID: 20593 RVA: 0x001FD0F0 File Offset: 0x001FB2F0
 		public Span<int> GetShowBuffBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06004AB0 RID: 19120 RVA: 0x001DCB9C File Offset: 0x001DAD9C
+		// Token: 0x06005072 RID: 20594 RVA: 0x001FD100 File Offset: 0x001FB300
 		public int[] GetShowBuffArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170003F2 RID: 1010
-		// (get) Token: 0x06004AB1 RID: 19121 RVA: 0x001DCBB4 File Offset: 0x001DADB4
+		// Token: 0x17000432 RID: 1074
+		// (get) Token: 0x06005073 RID: 20595 RVA: 0x001FD118 File Offset: 0x001FB318
 		public int JumpToLevelId
 		{
 			get
@@ -242,43 +242,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004AB2 RID: 19122 RVA: 0x001DCBF4 File Offset: 0x001DADF4
+		// Token: 0x06005074 RID: 20596 RVA: 0x001FD155 File Offset: 0x001FB355
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ShowBuffIter()或GetShowBuffBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ShowBuff()
+		public int[] ShowBuff()
 		{
-			BabelTowerDailyTask babelTowerDailyTask = this;
-			return babelTowerDailyTask.GetShowBuffArray() ?? Array.Empty<int>();
+			return this.GetShowBuffArray();
 		}
 
-		// Token: 0x06004AB3 RID: 19123 RVA: 0x001DCC18 File Offset: 0x001DAE18
+		// Token: 0x06005075 RID: 20597 RVA: 0x001FD15D File Offset: 0x001FB35D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ShowBuffIter()
+		public IEnumerable<int> ShowBuffIter()
 		{
 			BabelTowerDailyTask.<ShowBuffIter>d__35 <ShowBuffIter>d__ = new BabelTowerDailyTask.<ShowBuffIter>d__35(-2);
 			<ShowBuffIter>d__.<>3__<>4__this = this;
 			return <ShowBuffIter>d__;
 		}
 
-		// Token: 0x06004AB4 RID: 19124 RVA: 0x001DCC30 File Offset: 0x001DAE30
+		// Token: 0x06005076 RID: 20598 RVA: 0x001FD172 File Offset: 0x001FB372
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ShowDeTermIter()或GetShowDeTermBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ShowDeTerm()
+		public int[] ShowDeTerm()
 		{
-			BabelTowerDailyTask babelTowerDailyTask = this;
-			return babelTowerDailyTask.GetShowDeTermArray() ?? Array.Empty<int>();
+			return this.GetShowDeTermArray();
 		}
 
-		// Token: 0x06004AB5 RID: 19125 RVA: 0x001DCC54 File Offset: 0x001DAE54
+		// Token: 0x06005077 RID: 20599 RVA: 0x001FD17A File Offset: 0x001FB37A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ShowDeTermIter()
+		public IEnumerable<int> ShowDeTermIter()
 		{
 			BabelTowerDailyTask.<ShowDeTermIter>d__37 <ShowDeTermIter>d__ = new BabelTowerDailyTask.<ShowDeTermIter>d__37(-2);
 			<ShowDeTermIter>d__.<>3__<>4__this = this;
 			return <ShowDeTermIter>d__;
 		}
 
-		// Token: 0x04004B0D RID: 19213
+		// Token: 0x040050ED RID: 20717
 		private Table __p;
 	}
 }

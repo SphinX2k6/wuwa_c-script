@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x020030DA RID: 12506
-// (Invoke) Token: 0x0601AC9B RID: 109723
+// Token: 0x02002632 RID: 9778
+// (Invoke) Token: 0x060186B7 RID: 100023
 public delegate void TCbEntityAddCallback(EntityHandle handle);

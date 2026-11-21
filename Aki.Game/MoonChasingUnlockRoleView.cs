@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200136B RID: 4971
+// Token: 0x0200081F RID: 2079
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingUnlockRoleView : UiViewBase
 {
-	// Token: 0x06008A99 RID: 35481 RVA: 0x001D9DF7 File Offset: 0x001D7FF7
+	// Token: 0x06005E34 RID: 24116 RVA: 0x001E2C53 File Offset: 0x001E0E53
 	public MoonChasingUnlockRoleView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008A9A RID: 35482 RVA: 0x001D9E00 File Offset: 0x001D8000
+	// Token: 0x06005E35 RID: 24117 RVA: 0x001E2C5C File Offset: 0x001E0E5C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008A9B RID: 35483 RVA: 0x001D9EAC File Offset: 0x001D80AC
+	// Token: 0x06005E36 RID: 24118 RVA: 0x001E2D08 File Offset: 0x001E0F08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonChasingUnlockRoleView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A9C RID: 35484 RVA: 0x001D9EF0 File Offset: 0x001D80F0
+	// Token: 0x06005E37 RID: 24119 RVA: 0x001E2D4C File Offset: 0x001E0F4C
 	private UniTask RefreshSpine(EntrustRole config)
 	{
 		MoonChasingUnlockRoleView.<RefreshSpine>d__5 <RefreshSpine>d__;
@@ -57,7 +57,7 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		return <RefreshSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A9D RID: 35485 RVA: 0x001D9F3C File Offset: 0x001D813C
+	// Token: 0x06005E38 RID: 24120 RVA: 0x001E2D98 File Offset: 0x001E0F98
 	private UniTask Refresh()
 	{
 		MoonChasingUnlockRoleView.<Refresh>d__6 <Refresh>d__;
@@ -68,7 +68,7 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A9E RID: 35486 RVA: 0x001D9F80 File Offset: 0x001D8180
+	// Token: 0x06005E39 RID: 24121 RVA: 0x001E2DDC File Offset: 0x001E0FDC
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		MoonChasingUnlockRoleView.<OnBeforeShowAsyncImplement>d__7 <OnBeforeShowAsyncImplement>d__;
@@ -79,13 +79,13 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A9F RID: 35487 RVA: 0x001D9FC3 File Offset: 0x001D81C3
+	// Token: 0x06005E3A RID: 24122 RVA: 0x001E2E1F File Offset: 0x001E101F
 	private CharacterItemWithLine InitCharacterItem()
 	{
 		return new CharacterItemWithLine();
 	}
 
-	// Token: 0x06008AA0 RID: 35488 RVA: 0x001D9FCC File Offset: 0x001D81CC
+	// Token: 0x06005E3B RID: 24123 RVA: 0x001E2E28 File Offset: 0x001E1028
 	private void OnClose()
 	{
 		this.RoleId = MoonChasingBusinessModel.Instance.PopUnlockRoleId();
@@ -102,29 +102,29 @@ public class MoonChasingUnlockRoleView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04003DBD RID: 15805
+	// Token: 0x04003E55 RID: 15957
 	protected CharacterListModule<CharacterItemWithLine> CharacterListModule;
 
-	// Token: 0x04003DBE RID: 15806
+	// Token: 0x04003E56 RID: 15958
 	protected int? RoleId;
 
-	// Token: 0x020079DF RID: 31199
+	// Token: 0x02006B69 RID: 27497
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040281D4 RID: 164308
+		// Token: 0x04023501 RID: 144641
 		public const int RoleSpine = 0;
 
-		// Token: 0x040281D5 RID: 164309
+		// Token: 0x04023502 RID: 144642
 		public const int Name = 1;
 
-		// Token: 0x040281D6 RID: 164310
+		// Token: 0x04023503 RID: 144643
 		public const int CharacterListItem = 2;
 
-		// Token: 0x040281D7 RID: 164311
+		// Token: 0x04023504 RID: 144644
 		public const int CloseBtn = 3;
 
-		// Token: 0x040281D8 RID: 164312
+		// Token: 0x04023505 RID: 144645
 		public const int Dialog = 4;
 	}
 }

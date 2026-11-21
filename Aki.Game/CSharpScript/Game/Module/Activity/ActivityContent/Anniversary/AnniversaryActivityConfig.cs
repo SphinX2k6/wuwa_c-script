@@ -5,55 +5,55 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006910 RID: 26896
+	// Token: 0x02005860 RID: 22624
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Config(0)]
 	public class AnniversaryActivityConfig : ConfigBase
 	{
-		// Token: 0x0604311B RID: 274715 RVA: 0x010575C3 File Offset: 0x010557C3
+		// Token: 0x06037C73 RID: 228467 RVA: 0x00F98BEF File Offset: 0x00F96DEF
 		public IReadOnlyList<AnniversaryEntrance> GetAnniversaryEntranceAll()
 		{
 			return ConfigAnniversaryEntranceAll.GetConfigList(true);
 		}
 
-		// Token: 0x0604311C RID: 274716 RVA: 0x010575CB File Offset: 0x010557CB
+		// Token: 0x06037C74 RID: 228468 RVA: 0x00F98BF7 File Offset: 0x00F96DF7
 		public IReadOnlyList<PersonProgressCurve> GetPersonProgressCurveAll()
 		{
 			return ConfigPersonProgressCurveAll.GetConfigList(true);
 		}
 
-		// Token: 0x0604311D RID: 274717 RVA: 0x010575D3 File Offset: 0x010557D3
+		// Token: 0x06037C75 RID: 228469 RVA: 0x00F98BFF File Offset: 0x00F96DFF
 		public IReadOnlyList<WorldProgressCurve> GetWorldProgressCurveAll()
 		{
 			return ConfigWorldProgressCurveAll.GetConfigList(true);
 		}
 
-		// Token: 0x0604311E RID: 274718 RVA: 0x010575DB File Offset: 0x010557DB
+		// Token: 0x06037C76 RID: 228470 RVA: 0x00F98C07 File Offset: 0x00F96E07
 		public AnniversaryEntrance? GetAnniversaryEntranceById(int id)
 		{
 			return ConfigAnniversaryEntranceById.GetConfig(id, true);
 		}
 
-		// Token: 0x0604311F RID: 274719 RVA: 0x010575E4 File Offset: 0x010557E4
+		// Token: 0x06037C77 RID: 228471 RVA: 0x00F98C10 File Offset: 0x00F96E10
 		public AnniversaryEntrance? GetAnniversaryEntranceByActivityId(int activityId)
 		{
 			return ConfigAnniversaryEntranceByActivityId.GetConfig(activityId, true);
 		}
 
-		// Token: 0x06043120 RID: 274720 RVA: 0x010575ED File Offset: 0x010557ED
+		// Token: 0x06037C78 RID: 228472 RVA: 0x00F98C19 File Offset: 0x00F96E19
 		public PersonProgressCurve? GetPersonProgressCurveById(int id)
 		{
 			return ConfigPersonProgressCurveById.GetConfig(id, true);
 		}
 
-		// Token: 0x06043121 RID: 274721 RVA: 0x010575F6 File Offset: 0x010557F6
+		// Token: 0x06037C79 RID: 228473 RVA: 0x00F98C22 File Offset: 0x00F96E22
 		public WorldProgressCurve? GetWorldProgressCurveById(int id)
 		{
 			return ConfigWorldProgressCurveById.GetConfig(id, true);
 		}
 
-		// Token: 0x06043122 RID: 274722 RVA: 0x01057600 File Offset: 0x01055800
+		// Token: 0x06037C7A RID: 228474 RVA: 0x00F98C2C File Offset: 0x00F96E2C
 		public IReadOnlyList<WorldProgressCurve> GetWorldProgressCurveHadReward()
 		{
 			IReadOnlyList<WorldProgressCurve> configList = ConfigWorldProgressCurveAll.GetConfigList(true);
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return null;
 		}
 
-		// Token: 0x170097E7 RID: 38887
-		// (get) Token: 0x06043123 RID: 274723 RVA: 0x01057668 File Offset: 0x01055868
+		// Token: 0x17006B27 RID: 27431
+		// (get) Token: 0x06037C7B RID: 228475 RVA: 0x00F98C94 File Offset: 0x00F96E94
 		[Nullable(1)]
 		public static AnniversaryActivityConfig Instance
 		{
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043124 RID: 274724 RVA: 0x0105766F File Offset: 0x0105586F
+		// Token: 0x06037C7C RID: 228476 RVA: 0x00F98C9B File Offset: 0x00F96E9B
 		[NullableContext(1)]
 		public static AnniversaryActivityConfig GetOrCreateInstance()
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return AnniversaryActivityConfig._Instance;
 		}
 
-		// Token: 0x06043125 RID: 274725 RVA: 0x01057683 File Offset: 0x01055883
+		// Token: 0x06037C7D RID: 228477 RVA: 0x00F98CAF File Offset: 0x00F96EAF
 		public static bool CreateInstance()
 		{
 			if (AnniversaryActivityConfig._Instance != null)
@@ -106,24 +106,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return true;
 		}
 
-		// Token: 0x06043126 RID: 274726 RVA: 0x01057699 File Offset: 0x01055899
+		// Token: 0x06037C7E RID: 228478 RVA: 0x00F98CC5 File Offset: 0x00F96EC5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043127 RID: 274727 RVA: 0x0105769B File Offset: 0x0105589B
+		// Token: 0x06037C7F RID: 228479 RVA: 0x00F98CC7 File Offset: 0x00F96EC7
 		public static void ResetStaticDefaultValue()
 		{
 			AnniversaryActivityConfig._Instance = null;
 		}
 
-		// Token: 0x06043128 RID: 274728 RVA: 0x010576A3 File Offset: 0x010558A3
+		// Token: 0x06037C80 RID: 228480 RVA: 0x00F98CCF File Offset: 0x00F96ECF
 		static AnniversaryActivityConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AnniversaryActivityConfig.CreateStaticDefaultValue), new Action(AnniversaryActivityConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022E91 RID: 142993
+		// Token: 0x0401D6ED RID: 120557
 		private static AnniversaryActivityConfig _Instance;
 	}
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200141B RID: 5147
+// Token: 0x020008CF RID: 2255
 public enum EPinballGameTipsType
 {
-	// Token: 0x04004040 RID: 16448
+	// Token: 0x040040D8 RID: 16600
 	WaveStart,
-	// Token: 0x04004041 RID: 16449
+	// Token: 0x040040D9 RID: 16601
 	Success,
-	// Token: 0x04004042 RID: 16450
+	// Token: 0x040040DA RID: 16602
 	Failure,
-	// Token: 0x04004043 RID: 16451
+	// Token: 0x040040DB RID: 16603
 	RoleEnergyMax,
-	// Token: 0x04004044 RID: 16452
+	// Token: 0x040040DC RID: 16604
 	RoleSkillRelease,
-	// Token: 0x04004045 RID: 16453
+	// Token: 0x040040DD RID: 16605
 	BossComing,
-	// Token: 0x04004046 RID: 16454
+	// Token: 0x040040DE RID: 16606
 	BossSkill
 }

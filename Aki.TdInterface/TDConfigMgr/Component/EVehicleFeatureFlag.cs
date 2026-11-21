@@ -2,20 +2,20 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200015B RID: 347
+	// Token: 0x02000170 RID: 368
 	public enum EVehicleFeatureFlag
 	{
-		// Token: 0x04000697 RID: 1687
+		// Token: 0x040006E4 RID: 1764
 		Movement = 1,
-		// Token: 0x04000698 RID: 1688
+		// Token: 0x040006E5 RID: 1765
 		Battle,
-		// Token: 0x04000699 RID: 1689
+		// Token: 0x040006E6 RID: 1766
 		Audio = 4,
-		// Token: 0x0400069A RID: 1690
+		// Token: 0x040006E7 RID: 1767
 		MovablePlatform = 8,
-		// Token: 0x0400069B RID: 1691
+		// Token: 0x040006E8 RID: 1768
 		Sharing = 16,
-		// Token: 0x0400069C RID: 1692
+		// Token: 0x040006E9 RID: 1769
 		Performance = 32
 	}
 }

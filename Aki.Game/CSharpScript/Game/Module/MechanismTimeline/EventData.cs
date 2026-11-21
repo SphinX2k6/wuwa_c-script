@@ -3,45 +3,45 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MechanismTimeline
 {
-	// Token: 0x0200547E RID: 21630
+	// Token: 0x02004461 RID: 17505
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class EventData : IEventData
 	{
-		// Token: 0x17008462 RID: 33890
-		// (get) Token: 0x06037307 RID: 226055 RVA: 0x00D16561 File Offset: 0x00D14761
-		// (set) Token: 0x06037308 RID: 226056 RVA: 0x00D16569 File Offset: 0x00D14769
+		// Token: 0x1700582E RID: 22574
+		// (get) Token: 0x0602C250 RID: 180816 RVA: 0x00C659B9 File Offset: 0x00C63BB9
+		// (set) Token: 0x0602C251 RID: 180817 RVA: 0x00C659C1 File Offset: 0x00C63BC1
 		[RequiredMember]
 		public string EventName { get; set; }
 
-		// Token: 0x17008463 RID: 33891
-		// (get) Token: 0x06037309 RID: 226057 RVA: 0x00D16572 File Offset: 0x00D14772
-		// (set) Token: 0x0603730A RID: 226058 RVA: 0x00D1657A File Offset: 0x00D1477A
+		// Token: 0x1700582F RID: 22575
+		// (get) Token: 0x0602C252 RID: 180818 RVA: 0x00C659CA File Offset: 0x00C63BCA
+		// (set) Token: 0x0602C253 RID: 180819 RVA: 0x00C659D2 File Offset: 0x00C63BD2
 		[RequiredMember]
 		public string EventType { get; set; }
 
-		// Token: 0x17008464 RID: 33892
-		// (get) Token: 0x0603730B RID: 226059 RVA: 0x00D16583 File Offset: 0x00D14783
-		// (set) Token: 0x0603730C RID: 226060 RVA: 0x00D1658B File Offset: 0x00D1478B
+		// Token: 0x17005830 RID: 22576
+		// (get) Token: 0x0602C254 RID: 180820 RVA: 0x00C659DB File Offset: 0x00C63BDB
+		// (set) Token: 0x0602C255 RID: 180821 RVA: 0x00C659E3 File Offset: 0x00C63BE3
 		public bool IsAnimNotifyState { get; set; }
 
-		// Token: 0x17008465 RID: 33893
-		// (get) Token: 0x0603730D RID: 226061 RVA: 0x00D16594 File Offset: 0x00D14794
-		// (set) Token: 0x0603730E RID: 226062 RVA: 0x00D1659C File Offset: 0x00D1479C
+		// Token: 0x17005831 RID: 22577
+		// (get) Token: 0x0602C256 RID: 180822 RVA: 0x00C659EC File Offset: 0x00C63BEC
+		// (set) Token: 0x0602C257 RID: 180823 RVA: 0x00C659F4 File Offset: 0x00C63BF4
 		public int StartFrame { get; set; }
 
-		// Token: 0x17008466 RID: 33894
-		// (get) Token: 0x0603730F RID: 226063 RVA: 0x00D165A5 File Offset: 0x00D147A5
-		// (set) Token: 0x06037310 RID: 226064 RVA: 0x00D165AD File Offset: 0x00D147AD
+		// Token: 0x17005832 RID: 22578
+		// (get) Token: 0x0602C258 RID: 180824 RVA: 0x00C659FD File Offset: 0x00C63BFD
+		// (set) Token: 0x0602C259 RID: 180825 RVA: 0x00C65A05 File Offset: 0x00C63C05
 		public int EndFrame { get; set; }
 
-		// Token: 0x17008467 RID: 33895
-		// (get) Token: 0x06037311 RID: 226065 RVA: 0x00D165B6 File Offset: 0x00D147B6
-		// (set) Token: 0x06037312 RID: 226066 RVA: 0x00D165BE File Offset: 0x00D147BE
+		// Token: 0x17005833 RID: 22579
+		// (get) Token: 0x0602C25A RID: 180826 RVA: 0x00C65A0E File Offset: 0x00C63C0E
+		// (set) Token: 0x0602C25B RID: 180827 RVA: 0x00C65A16 File Offset: 0x00C63C16
 		public int RowIndex { get; set; }
 
-		// Token: 0x06037313 RID: 226067 RVA: 0x00D165C7 File Offset: 0x00D147C7
+		// Token: 0x0602C25C RID: 180828 RVA: 0x00C65A1F File Offset: 0x00C63C1F
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public EventData()

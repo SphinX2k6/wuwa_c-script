@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Entity.Enum
 {
-	// Token: 0x02003F92 RID: 16274
+	// Token: 0x02003226 RID: 12838
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Entity/Enum/EBossStateViewType.EBossStateViewType")]
 	public enum EBossStateViewType : byte
 	{
-		// Token: 0x04015532 RID: 87346
+		// Token: 0x040113A8 RID: 70568
 		None,
-		// Token: 0x04015533 RID: 87347
+		// Token: 0x040113A9 RID: 70569
 		Common,
-		// Token: 0x04015534 RID: 87348
+		// Token: 0x040113AA RID: 70570
 		EBossStateViewType_MAX
 	}
 }

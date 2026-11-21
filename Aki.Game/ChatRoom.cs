@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02001798 RID: 6040
+// Token: 0x02000C51 RID: 3153
 [NullableContext(1)]
 [Nullable(0)]
 public class ChatRoom
 {
-	// Token: 0x0600B009 RID: 45065 RVA: 0x0027BC60 File Offset: 0x00279E60
+	// Token: 0x060083F1 RID: 33777 RVA: 0x00286100 File Offset: 0x00284300
 	public ChatRoom(EChatRoomType chatRoomType, int configId)
 	{
 		this.ChatRoomType = chatRoomType;
@@ -24,7 +23,7 @@ public class ChatRoom
 		}
 	}
 
-	// Token: 0x0600B00A RID: 45066 RVA: 0x0027BCF1 File Offset: 0x00279EF1
+	// Token: 0x060083F2 RID: 33778 RVA: 0x00286191 File Offset: 0x00284391
 	public void Reset()
 	{
 		this.ChatContentList.Clear();
@@ -32,7 +31,7 @@ public class ChatRoom
 		this.IsOpen = false;
 	}
 
-	// Token: 0x0600B00B RID: 45067 RVA: 0x0027BD14 File Offset: 0x00279F14
+	// Token: 0x060083F3 RID: 33779 RVA: 0x002861B4 File Offset: 0x002843B4
 	public void Open()
 	{
 		if (this.IsOpen)
@@ -49,7 +48,7 @@ public class ChatRoom
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600B00C RID: 45068 RVA: 0x0027BD74 File Offset: 0x00279F74
+	// Token: 0x060083F4 RID: 33780 RVA: 0x00286214 File Offset: 0x00284414
 	public void Close()
 	{
 		if (!this.IsOpen)
@@ -67,67 +66,67 @@ public class ChatRoom
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600B00D RID: 45069 RVA: 0x0027BDDE File Offset: 0x00279FDE
+	// Token: 0x060083F5 RID: 33781 RVA: 0x0028627E File Offset: 0x0028447E
 	public bool GetIsOpen()
 	{
 		return this.IsOpen;
 	}
 
-	// Token: 0x0600B00E RID: 45070 RVA: 0x0027BDE6 File Offset: 0x00279FE6
+	// Token: 0x060083F6 RID: 33782 RVA: 0x00286286 File Offset: 0x00284486
 	public void SetIsShowRedDot(bool bShow)
 	{
 		this.IsShowRedDot = bShow;
 	}
 
-	// Token: 0x0600B00F RID: 45071 RVA: 0x0027BDEF File Offset: 0x00279FEF
+	// Token: 0x060083F7 RID: 33783 RVA: 0x0028628F File Offset: 0x0028448F
 	public bool GetIsShowRedDot()
 	{
 		return this.IsShowRedDot;
 	}
 
-	// Token: 0x0600B010 RID: 45072 RVA: 0x0027BDF7 File Offset: 0x00279FF7
+	// Token: 0x060083F8 RID: 33784 RVA: 0x00286297 File Offset: 0x00284497
 	public int GetConfigId()
 	{
 		return this.ConfigId;
 	}
 
-	// Token: 0x0600B011 RID: 45073 RVA: 0x0027BDFF File Offset: 0x00279FFF
+	// Token: 0x060083F9 RID: 33785 RVA: 0x0028629F File Offset: 0x0028449F
 	public virtual int GetUniqueId()
 	{
 		return -1;
 	}
 
-	// Token: 0x0600B012 RID: 45074 RVA: 0x0027BE02 File Offset: 0x0027A002
+	// Token: 0x060083FA RID: 33786 RVA: 0x002862A2 File Offset: 0x002844A2
 	public Chat? GetChatConfig()
 	{
 		return ChatConfig.Instance.GetChatConfig(this.ConfigId);
 	}
 
-	// Token: 0x0600B013 RID: 45075 RVA: 0x0027BE14 File Offset: 0x0027A014
+	// Token: 0x060083FB RID: 33787 RVA: 0x002862B4 File Offset: 0x002844B4
 	public IReadOnlyList<ChatContentData> GetChatContentList()
 	{
 		return this.ChatContentList;
 	}
 
-	// Token: 0x0600B014 RID: 45076 RVA: 0x0027BE1C File Offset: 0x0027A01C
+	// Token: 0x060083FC RID: 33788 RVA: 0x002862BC File Offset: 0x002844BC
 	public string GetEarliestHistoryContentUniqueId()
 	{
 		return this.EarliestHistoryContentUniqueId;
 	}
 
-	// Token: 0x0600B015 RID: 45077 RVA: 0x0027BE24 File Offset: 0x0027A024
+	// Token: 0x060083FD RID: 33789 RVA: 0x002862C4 File Offset: 0x002844C4
 	public double GetCreateTimeStamp()
 	{
 		return this.CreateTimeStamp;
 	}
 
-	// Token: 0x0600B016 RID: 45078 RVA: 0x0027BE2C File Offset: 0x0027A02C
+	// Token: 0x060083FE RID: 33790 RVA: 0x002862CC File Offset: 0x002844CC
 	public void ClearCreateTime()
 	{
 		this.CreateTimeStamp = -1.0;
 	}
 
-	// Token: 0x0600B017 RID: 45079 RVA: 0x0027BE40 File Offset: 0x0027A040
+	// Token: 0x060083FF RID: 33791 RVA: 0x002862E0 File Offset: 0x002844E0
 	public double GetLastTimeStamp()
 	{
 		int num = this.ChatContentList.Count - 1;
@@ -138,7 +137,7 @@ public class ChatRoom
 		return this.ChatContentList[num].TimeStamp;
 	}
 
-	// Token: 0x0600B018 RID: 45080 RVA: 0x0027BE7C File Offset: 0x0027A07C
+	// Token: 0x06008400 RID: 33792 RVA: 0x0028631C File Offset: 0x0028451C
 	public ChatContentData AddChatContent(string contentUniqueId, int senderPlayerId, string content, ChatContentType contentType, ChatChannelNoticeType noticeType, bool isOfflineMassage, double timeStamp, double lastTimeStamp, [Nullable(2)] string senderPlayerName = null, int? senderPlayerIcon = null, [Nullable(2)] string thirdOnlineId = null, [Nullable(2)] string thirdAvoidId = null)
 	{
 		ChatContentData chatContentData = new ChatContentData(contentUniqueId, senderPlayerId, content, contentType, noticeType, isOfflineMassage, timeStamp, lastTimeStamp, this.ChatRoomType, senderPlayerName, senderPlayerIcon, thirdOnlineId, thirdAvoidId);
@@ -146,7 +145,7 @@ public class ChatRoom
 		return chatContentData;
 	}
 
-	// Token: 0x0600B019 RID: 45081 RVA: 0x0027BEB8 File Offset: 0x0027A0B8
+	// Token: 0x06008401 RID: 33793 RVA: 0x00286358 File Offset: 0x00284558
 	[NullableContext(2)]
 	public ChatContentData GetLastChatContentData(int lastIndex = 1)
 	{
@@ -158,7 +157,7 @@ public class ChatRoom
 		return this.ChatContentList[num];
 	}
 
-	// Token: 0x0600B01A RID: 45082 RVA: 0x0027BEE8 File Offset: 0x0027A0E8
+	// Token: 0x06008402 RID: 33794 RVA: 0x00286388 File Offset: 0x00284588
 	public virtual void AddHistoryChatContent(List<IChatHistory> chatContents)
 	{
 		chatContents.Sort(delegate(IChatHistory a, IChatHistory b)
@@ -200,33 +199,42 @@ public class ChatRoom
 			chatContentData = chatContentData2;
 			list.Add(chatContentData2);
 		}
-		this.ChatContentList = list.Concat(this.ChatContentList).ToList<ChatContentData>();
+		List<ChatContentData> list2 = new List<ChatContentData>();
+		foreach (ChatContentData item in list)
+		{
+			list2.Add(item);
+		}
+		foreach (ChatContentData item2 in this.ChatContentList)
+		{
+			list2.Add(item2);
+		}
+		this.ChatContentList = list2;
 	}
 
-	// Token: 0x04004FEF RID: 20463
+	// Token: 0x04005099 RID: 20633
 	public readonly EChatRoomType ChatRoomType;
 
-	// Token: 0x04004FF0 RID: 20464
+	// Token: 0x0400509A RID: 20634
 	protected List<ChatContentData> ChatContentList = new List<ChatContentData>();
 
-	// Token: 0x04004FF1 RID: 20465
+	// Token: 0x0400509B RID: 20635
 	private double CreateTimeStamp = -1.0;
 
-	// Token: 0x04004FF2 RID: 20466
+	// Token: 0x0400509C RID: 20636
 	private bool IsShowRedDot;
 
-	// Token: 0x04004FF3 RID: 20467
+	// Token: 0x0400509D RID: 20637
 	private readonly int ConfigId;
 
-	// Token: 0x04004FF4 RID: 20468
+	// Token: 0x0400509E RID: 20638
 	protected string EarliestHistoryContentUniqueId = "";
 
-	// Token: 0x04004FF5 RID: 20469
+	// Token: 0x0400509F RID: 20639
 	private bool IsOpen;
 
-	// Token: 0x04004FF6 RID: 20470
+	// Token: 0x040050A0 RID: 20640
 	public int LocalSaveMsgLimit;
 
-	// Token: 0x04004FF7 RID: 20471
+	// Token: 0x040050A1 RID: 20641
 	public int ChatCd;
 }

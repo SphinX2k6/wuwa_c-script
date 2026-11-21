@@ -3,43 +3,43 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001A8A RID: 6794
+// Token: 0x02000F49 RID: 3913
 [NullableContext(1)]
 [Nullable(0)]
 public class UiTabSequence : UiTabViewBehavior
 {
-	// Token: 0x0600C87A RID: 51322 RVA: 0x002DBAF1 File Offset: 0x002D9CF1
+	// Token: 0x06009C8B RID: 40075 RVA: 0x002E6C99 File Offset: 0x002E4E99
 	public void SetRootItem(UiTabViewBase tabView)
 	{
 		this.TabView = tabView;
 	}
 
-	// Token: 0x0600C87B RID: 51323 RVA: 0x002DBAFA File Offset: 0x002D9CFA
+	// Token: 0x06009C8C RID: 40076 RVA: 0x002E6CA2 File Offset: 0x002E4EA2
 	public override void Init()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.TabView.GetRootItem());
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.FinishSequenceEvent), false);
 	}
 
-	// Token: 0x0600C87C RID: 51324 RVA: 0x002DBB2C File Offset: 0x002D9D2C
+	// Token: 0x06009C8D RID: 40077 RVA: 0x002E6CD4 File Offset: 0x002E4ED4
 	public override void Begin()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600C87D RID: 51325 RVA: 0x002DBB54 File Offset: 0x002D9D54
+	// Token: 0x06009C8E RID: 40078 RVA: 0x002E6CFC File Offset: 0x002E4EFC
 	public override void ShowFromToggle()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Sle", false, null, false);
 	}
 
-	// Token: 0x0600C87E RID: 51326 RVA: 0x002DBB7C File Offset: 0x002D9D7C
+	// Token: 0x06009C8F RID: 40079 RVA: 0x002E6D24 File Offset: 0x002E4F24
 	public override void ShowFromView()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("ShowView", false, null, false);
 	}
 
-	// Token: 0x0600C87F RID: 51327 RVA: 0x002DBBA4 File Offset: 0x002D9DA4
+	// Token: 0x06009C90 RID: 40080 RVA: 0x002E6D4C File Offset: 0x002E4F4C
 	public override void Hide()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -50,7 +50,7 @@ public class UiTabSequence : UiTabViewBehavior
 		levelSequencePlayer.StopCurrentSequence(false, false);
 	}
 
-	// Token: 0x0600C880 RID: 51328 RVA: 0x002DBBB8 File Offset: 0x002D9DB8
+	// Token: 0x06009C91 RID: 40081 RVA: 0x002E6D60 File Offset: 0x002E4F60
 	public override void Destroy()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -67,7 +67,7 @@ public class UiTabSequence : UiTabViewBehavior
 		sequenceFinishEvent.Clear();
 	}
 
-	// Token: 0x0600C881 RID: 51329 RVA: 0x002DBBE4 File Offset: 0x002D9DE4
+	// Token: 0x06009C92 RID: 40082 RVA: 0x002E6D8C File Offset: 0x002E4F8C
 	public void PlaySequence(string sequenceName)
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -78,7 +78,7 @@ public class UiTabSequence : UiTabViewBehavior
 		levelSequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x0600C882 RID: 51330 RVA: 0x002DBC10 File Offset: 0x002D9E10
+	// Token: 0x06009C93 RID: 40083 RVA: 0x002E6DB8 File Offset: 0x002E4FB8
 	public void AddSequenceFinishEvent(string sequenceName, Action finishEvent, bool clear = false)
 	{
 		if (this.SequenceFinishEvent == null)
@@ -98,14 +98,14 @@ public class UiTabSequence : UiTabViewBehavior
 		hashSet.Add(finishEvent);
 	}
 
-	// Token: 0x0600C883 RID: 51331 RVA: 0x002DBC66 File Offset: 0x002D9E66
+	// Token: 0x06009C94 RID: 40084 RVA: 0x002E6E0E File Offset: 0x002E500E
 	[NullableContext(2)]
 	public LevelSequencePlayer GetLevelSequencePlayer()
 	{
 		return this.LevelSequencePlayer;
 	}
 
-	// Token: 0x0600C884 RID: 51332 RVA: 0x002DBC70 File Offset: 0x002D9E70
+	// Token: 0x06009C95 RID: 40085 RVA: 0x002E6E18 File Offset: 0x002E5018
 	private void FinishSequenceEvent(string sequenceName)
 	{
 		Dictionary<string, HashSet<Action>> sequenceFinishEvent = this.SequenceFinishEvent;
@@ -123,11 +123,11 @@ public class UiTabSequence : UiTabViewBehavior
 		}
 	}
 
-	// Token: 0x04005C6C RID: 23660
+	// Token: 0x04005D3B RID: 23867
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04005C6D RID: 23661
+	// Token: 0x04005D3C RID: 23868
 	[Nullable(new byte[]
 	{
 		2,
@@ -137,7 +137,7 @@ public class UiTabSequence : UiTabViewBehavior
 	})]
 	private Dictionary<string, HashSet<Action>> SequenceFinishEvent;
 
-	// Token: 0x04005C6E RID: 23662
+	// Token: 0x04005D3D RID: 23869
 	[Nullable(2)]
 	private UiTabViewBase TabView;
 }

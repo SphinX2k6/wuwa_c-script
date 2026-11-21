@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011BF RID: 4543
+// Token: 0x02000673 RID: 1651
 public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 {
-	// Token: 0x060078F5 RID: 30965 RVA: 0x00196BB8 File Offset: 0x00194DB8
+	// Token: 0x06004C8C RID: 19596 RVA: 0x0019F868 File Offset: 0x0019DA68
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -34,13 +34,13 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060078F6 RID: 30966 RVA: 0x00196CC6 File Offset: 0x00194EC6
+	// Token: 0x06004C8D RID: 19597 RVA: 0x0019F976 File Offset: 0x0019DB76
 	protected override void OnSetData()
 	{
 		this.ActivityTimePointRewardData = (this.ActivityBaseData as ActivityTimePointRewardData);
 	}
 
-	// Token: 0x060078F7 RID: 30967 RVA: 0x00196CDC File Offset: 0x00194EDC
+	// Token: 0x06004C8E RID: 19598 RVA: 0x0019F98C File Offset: 0x0019DB8C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AnniversaryCelebrationAwardSubView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060078F8 RID: 30968 RVA: 0x00196D1F File Offset: 0x00194F1F
+	// Token: 0x06004C8F RID: 19599 RVA: 0x0019F9CF File Offset: 0x0019DBCF
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x060078F9 RID: 30969 RVA: 0x00196D3D File Offset: 0x00194F3D
+	// Token: 0x06004C90 RID: 19600 RVA: 0x0019F9ED File Offset: 0x0019DBED
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x060078FA RID: 30970 RVA: 0x00196D5C File Offset: 0x00194F5C
+	// Token: 0x06004C91 RID: 19601 RVA: 0x0019FA0C File Offset: 0x0019DC0C
 	protected override void OnStart()
 	{
 		base.GetText(4).SetText(this.ActivityBaseData.GetTitle(), true);
@@ -75,7 +75,7 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		this.ActivityTimePointRewardData.SaveClickRedDotState();
 	}
 
-	// Token: 0x060078FB RID: 30971 RVA: 0x00196DBC File Offset: 0x00194FBC
+	// Token: 0x06004C92 RID: 19602 RVA: 0x0019FA6C File Offset: 0x0019DC6C
 	private void RefreshRewardPanels()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -88,7 +88,7 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060078FC RID: 30972 RVA: 0x00196E16 File Offset: 0x00195016
+	// Token: 0x06004C93 RID: 19603 RVA: 0x0019FAC6 File Offset: 0x0019DCC6
 	[NullableContext(1)]
 	private string GetTipsTextId(int i)
 	{
@@ -99,7 +99,7 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		return "Anniversary_WelfareTime_523";
 	}
 
-	// Token: 0x060078FD RID: 30973 RVA: 0x00196E28 File Offset: 0x00195028
+	// Token: 0x06004C94 RID: 19604 RVA: 0x0019FAD8 File Offset: 0x0019DCD8
 	private void RefreshRewardState()
 	{
 		List<TimePointRewardData> rewardDataList = this.ActivityTimePointRewardData.GetRewardDataList();
@@ -111,7 +111,7 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x060078FE RID: 30974 RVA: 0x00196E78 File Offset: 0x00195078
+	// Token: 0x06004C95 RID: 19605 RVA: 0x0019FB28 File Offset: 0x0019DD28
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.ActivityBaseData.Id != id)
@@ -122,7 +122,7 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		this.RefreshRewardState();
 	}
 
-	// Token: 0x060078FF RID: 30975 RVA: 0x00196E98 File Offset: 0x00195098
+	// Token: 0x06004C96 RID: 19606 RVA: 0x0019FB48 File Offset: 0x0019DD48
 	private void RefreshTimeTitle()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(this.ActivityTimePointRewardData, null);
@@ -132,49 +132,49 @@ public class AnniversaryCelebrationAwardSubView : ActivitySubViewBase
 		base.GetItem(0).SetUIActive(item);
 	}
 
-	// Token: 0x06007900 RID: 30976 RVA: 0x00196EDE File Offset: 0x001950DE
+	// Token: 0x06004C97 RID: 19607 RVA: 0x0019FB8E File Offset: 0x0019DD8E
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshRewardState();
 		this.RefreshTimeTitle();
 	}
 
-	// Token: 0x0400379D RID: 14237
+	// Token: 0x04003836 RID: 14390
 	[Nullable(2)]
 	protected ActivityTimePointRewardData ActivityTimePointRewardData;
 
-	// Token: 0x0400379E RID: 14238
+	// Token: 0x04003837 RID: 14391
 	[Nullable(1)]
 	private readonly List<AwardPanel> AwardPanelArray = new List<AwardPanel>();
 
-	// Token: 0x0400379F RID: 14239
+	// Token: 0x04003838 RID: 14392
 	private const int AwardPanelBegin = 2;
 
-	// Token: 0x040037A0 RID: 14240
+	// Token: 0x04003839 RID: 14393
 	private const int AwardPanelEnd = 3;
 
-	// Token: 0x020077AC RID: 30636
+	// Token: 0x02006937 RID: 26935
 	private class EComponentDefine
 	{
-		// Token: 0x04027740 RID: 161600
+		// Token: 0x04022A72 RID: 141938
 		public const int TimeItem = 0;
 
-		// Token: 0x04027741 RID: 161601
+		// Token: 0x04022A73 RID: 141939
 		public const int TimeText = 1;
 
-		// Token: 0x04027742 RID: 161602
+		// Token: 0x04022A74 RID: 141940
 		public const int AwardItemA = 2;
 
-		// Token: 0x04027743 RID: 161603
+		// Token: 0x04022A75 RID: 141941
 		public const int AwardItemB = 3;
 
-		// Token: 0x04027744 RID: 161604
+		// Token: 0x04022A76 RID: 141942
 		public const int TitleText = 4;
 
-		// Token: 0x04027745 RID: 161605
+		// Token: 0x04022A77 RID: 141943
 		public const int TipsText = 5;
 
-		// Token: 0x04027746 RID: 161606
+		// Token: 0x04022A78 RID: 141944
 		public const int ActivityLogoTexture = 6;
 	}
 }

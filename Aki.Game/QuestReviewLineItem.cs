@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200267D RID: 9853
+// Token: 0x02001B68 RID: 7016
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class QuestReviewLineItem : GridProxyAbstract<QuestReviewLineData>
 {
-	// Token: 0x06014315 RID: 82709 RVA: 0x0051935C File Offset: 0x0051755C
+	// Token: 0x060117F7 RID: 71671 RVA: 0x00528094 File Offset: 0x00526294
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,13 +28,13 @@ public class QuestReviewLineItem : GridProxyAbstract<QuestReviewLineData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014316 RID: 82710 RVA: 0x005193C5 File Offset: 0x005175C5
+	// Token: 0x060117F8 RID: 71672 RVA: 0x005280FD File Offset: 0x005262FD
 	protected override void OnStart()
 	{
 		this.LayoutLine = new GenericLayout<QuestReviewNodeItem, QuestReviewNodeParam>(base.GetHorizontalLayout(0), new Func<QuestReviewNodeItem>(this.CreateNodeItem), null, false, true);
 	}
 
-	// Token: 0x06014317 RID: 82711 RVA: 0x005193E8 File Offset: 0x005175E8
+	// Token: 0x060117F9 RID: 71673 RVA: 0x00528120 File Offset: 0x00526320
 	public override void Refresh(QuestReviewLineData data, bool isSelected, int gridIndex)
 	{
 		if (!QuestReviewModel.Instance.IsQuestLineHasAnyVisibleNode(data.Id))
@@ -105,23 +105,23 @@ public class QuestReviewLineItem : GridProxyAbstract<QuestReviewLineData>
 		}, null, null);
 	}
 
-	// Token: 0x06014318 RID: 82712 RVA: 0x00519601 File Offset: 0x00517801
+	// Token: 0x060117FA RID: 71674 RVA: 0x00528339 File Offset: 0x00526539
 	private QuestReviewNodeItem CreateNodeItem()
 	{
 		return new QuestReviewNodeItem();
 	}
 
-	// Token: 0x04009801 RID: 38913
+	// Token: 0x04009959 RID: 39257
 	private GenericLayout<QuestReviewNodeItem, QuestReviewNodeParam> LayoutLine;
 
-	// Token: 0x02008CC8 RID: 36040
+	// Token: 0x02007E51 RID: 32337
 	[NullableContext(0)]
 	private class EQuestLineComponentDefine
 	{
-		// Token: 0x0402DAFD RID: 187133
+		// Token: 0x04028E14 RID: 167444
 		public const int LayoutSelf = 0;
 
-		// Token: 0x0402DAFE RID: 187134
+		// Token: 0x04028E15 RID: 167445
 		public const int ItemNode = 1;
 	}
 }

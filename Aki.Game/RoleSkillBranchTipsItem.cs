@@ -8,13 +8,13 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028A6 RID: 10406
+// Token: 0x02001E21 RID: 7713
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillBranchTipsItem : UiPanelBase
 {
-	// Token: 0x17001CD6 RID: 7382
-	// (get) Token: 0x06015795 RID: 87957 RVA: 0x0056A6B7 File Offset: 0x005688B7
+	// Token: 0x17001D2E RID: 7470
+	// (get) Token: 0x06013195 RID: 78229 RVA: 0x005954FF File Offset: 0x005936FF
 	public bool IsTipsVisible
 	{
 		get
@@ -23,7 +23,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015796 RID: 87958 RVA: 0x0056A6C0 File Offset: 0x005688C0
+	// Token: 0x06013196 RID: 78230 RVA: 0x00595508 File Offset: 0x00593708
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -39,7 +39,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015797 RID: 87959 RVA: 0x0056A74C File Offset: 0x0056894C
+	// Token: 0x06013197 RID: 78231 RVA: 0x00595594 File Offset: 0x00593794
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -48,13 +48,13 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		this.ContentLayout = new GenericLayout<RoleSkillBranchTipsContentItem, IRoleSkillBranchTipsContentItemData>(base.GetVerticalLayout(1), new Func<RoleSkillBranchTipsContentItem>(this.CreateItem), null, false, true);
 	}
 
-	// Token: 0x06015798 RID: 87960 RVA: 0x0056A7BA File Offset: 0x005689BA
+	// Token: 0x06013198 RID: 78232 RVA: 0x00595602 File Offset: 0x00593802
 	private RoleSkillBranchTipsContentItem CreateItem()
 	{
 		return new RoleSkillBranchTipsContentItem();
 	}
 
-	// Token: 0x06015799 RID: 87961 RVA: 0x0056A7C4 File Offset: 0x005689C4
+	// Token: 0x06013199 RID: 78233 RVA: 0x0059560C File Offset: 0x0059380C
 	public void RefreshView(int roleId, bool showActivated = true)
 	{
 		int roleCurrentBranchId = RoleModel.Instance.GetRoleCurrentBranchId(roleId);
@@ -74,7 +74,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		this.ContentLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601579A RID: 87962 RVA: 0x0056A884 File Offset: 0x00568A84
+	// Token: 0x0601319A RID: 78234 RVA: 0x005956CC File Offset: 0x005938CC
 	public void SetTipsVisible(bool isVisible, bool playAnim = true)
 	{
 		this.IsTipsVisibleIntl = isVisible;
@@ -92,7 +92,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x0601579B RID: 87963 RVA: 0x0056A8EF File Offset: 0x00568AEF
+	// Token: 0x0601319B RID: 78235 RVA: 0x00595737 File Offset: 0x00593937
 	private void OnSequenceStart(string sequenceName)
 	{
 		if (sequenceName == "Start".ToString())
@@ -101,7 +101,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601579C RID: 87964 RVA: 0x0056A90F File Offset: 0x00568B0F
+	// Token: 0x0601319C RID: 78236 RVA: 0x00595757 File Offset: 0x00593957
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "Close".ToString())
@@ -110,7 +110,7 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A00B RID: 40971
+	// Token: 0x0400A3F4 RID: 41972
 	[Nullable(new byte[]
 	{
 		2,
@@ -119,22 +119,22 @@ public class RoleSkillBranchTipsItem : UiPanelBase
 	})]
 	private GenericLayout<RoleSkillBranchTipsContentItem, IRoleSkillBranchTipsContentItemData> ContentLayout;
 
-	// Token: 0x0400A00C RID: 40972
+	// Token: 0x0400A3F5 RID: 41973
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400A00D RID: 40973
+	// Token: 0x0400A3F6 RID: 41974
 	private bool IsTipsVisibleIntl;
 
-	// Token: 0x02008EAE RID: 36526
+	// Token: 0x020080F5 RID: 33013
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E43B RID: 189499
+		// Token: 0x04029B38 RID: 170808
 		RootItem,
-		// Token: 0x0402E43C RID: 189500
+		// Token: 0x04029B39 RID: 170809
 		ContentLayout,
-		// Token: 0x0402E43D RID: 189501
+		// Token: 0x04029B3A RID: 170810
 		ContentItem
 	}
 }

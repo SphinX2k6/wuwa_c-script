@@ -15,13 +15,13 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Module.InstanceDungeon
 {
-	// Token: 0x0200451D RID: 17693
+	// Token: 0x0200343F RID: 13375
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class InstanceDungeonEntranceModel : ModelBase
 	{
-		// Token: 0x0602D84F RID: 186447 RVA: 0x00A46058 File Offset: 0x00A44258
+		// Token: 0x06021F1F RID: 139039 RVA: 0x00971E68 File Offset: 0x00970068
 		protected override bool OnLeaveLevel()
 		{
 			int matchingId = this.GetMatchingId();
@@ -33,9 +33,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x170073F6 RID: 29686
-		// (get) Token: 0x0602D850 RID: 186448 RVA: 0x00A4608A File Offset: 0x00A4428A
-		// (set) Token: 0x0602D851 RID: 186449 RVA: 0x00A46092 File Offset: 0x00A44292
+		// Token: 0x170046AE RID: 18094
+		// (get) Token: 0x06021F20 RID: 139040 RVA: 0x00971E9A File Offset: 0x0097009A
+		// (set) Token: 0x06021F21 RID: 139041 RVA: 0x00971EA2 File Offset: 0x009700A2
 		public int EntranceId
 		{
 			get
@@ -48,9 +48,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073F7 RID: 29687
-		// (get) Token: 0x0602D852 RID: 186450 RVA: 0x00A4609B File Offset: 0x00A4429B
-		// (set) Token: 0x0602D853 RID: 186451 RVA: 0x00A460A3 File Offset: 0x00A442A3
+		// Token: 0x170046AF RID: 18095
+		// (get) Token: 0x06021F22 RID: 139042 RVA: 0x00971EAB File Offset: 0x009700AB
+		// (set) Token: 0x06021F23 RID: 139043 RVA: 0x00971EB3 File Offset: 0x009700B3
 		public int InstanceId
 		{
 			get
@@ -63,9 +63,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073F8 RID: 29688
-		// (get) Token: 0x0602D854 RID: 186452 RVA: 0x00A460AC File Offset: 0x00A442AC
-		// (set) Token: 0x0602D855 RID: 186453 RVA: 0x00A460B4 File Offset: 0x00A442B4
+		// Token: 0x170046B0 RID: 18096
+		// (get) Token: 0x06021F24 RID: 139044 RVA: 0x00971EBC File Offset: 0x009700BC
+		// (set) Token: 0x06021F25 RID: 139045 RVA: 0x00971EC4 File Offset: 0x009700C4
 		public int SelectInstanceId
 		{
 			get
@@ -79,9 +79,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073F9 RID: 29689
-		// (get) Token: 0x0602D856 RID: 186454 RVA: 0x00A460CD File Offset: 0x00A442CD
-		// (set) Token: 0x0602D857 RID: 186455 RVA: 0x00A460D5 File Offset: 0x00A442D5
+		// Token: 0x170046B1 RID: 18097
+		// (get) Token: 0x06021F26 RID: 139046 RVA: 0x00971EDD File Offset: 0x009700DD
+		// (set) Token: 0x06021F27 RID: 139047 RVA: 0x00971EE5 File Offset: 0x009700E5
 		public int LastInstanceId
 		{
 			get
@@ -94,9 +94,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073FA RID: 29690
-		// (get) Token: 0x0602D858 RID: 186456 RVA: 0x00A460DE File Offset: 0x00A442DE
-		// (set) Token: 0x0602D859 RID: 186457 RVA: 0x00A460E6 File Offset: 0x00A442E6
+		// Token: 0x170046B2 RID: 18098
+		// (get) Token: 0x06021F28 RID: 139048 RVA: 0x00971EEE File Offset: 0x009700EE
+		// (set) Token: 0x06021F29 RID: 139049 RVA: 0x00971EF6 File Offset: 0x009700F6
 		[Nullable(2)]
 		public TransitionOptionPb TransitionOption
 		{
@@ -112,9 +112,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073FB RID: 29691
-		// (get) Token: 0x0602D85A RID: 186458 RVA: 0x00A460EF File Offset: 0x00A442EF
-		// (set) Token: 0x0602D85B RID: 186459 RVA: 0x00A460F7 File Offset: 0x00A442F7
+		// Token: 0x170046B3 RID: 18099
+		// (get) Token: 0x06021F2A RID: 139050 RVA: 0x00971EFF File Offset: 0x009700FF
+		// (set) Token: 0x06021F2B RID: 139051 RVA: 0x00971F07 File Offset: 0x00970107
 		public List<int> EntranceInstanceIdList
 		{
 			get
@@ -127,9 +127,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073FC RID: 29692
-		// (get) Token: 0x0602D85C RID: 186460 RVA: 0x00A46100 File Offset: 0x00A44300
-		// (set) Token: 0x0602D85D RID: 186461 RVA: 0x00A46108 File Offset: 0x00A44308
+		// Token: 0x170046B4 RID: 18100
+		// (get) Token: 0x06021F2C RID: 139052 RVA: 0x00971F10 File Offset: 0x00970110
+		// (set) Token: 0x06021F2D RID: 139053 RVA: 0x00971F18 File Offset: 0x00970118
 		public long EntranceEndTime
 		{
 			get
@@ -142,7 +142,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D85E RID: 186462 RVA: 0x00A46114 File Offset: 0x00A44314
+		// Token: 0x06021F2E RID: 139054 RVA: 0x00971F24 File Offset: 0x00970124
 		public long? GetInstanceResetTime(int instanceId)
 		{
 			long value;
@@ -153,13 +153,13 @@ namespace CSharpScript.Module.InstanceDungeon
 			return new long?(value);
 		}
 
-		// Token: 0x0602D85F RID: 186463 RVA: 0x00A46141 File Offset: 0x00A44341
+		// Token: 0x06021F2F RID: 139055 RVA: 0x00971F51 File Offset: 0x00970151
 		public void SetInstanceResetTime(int instanceId, long time)
 		{
 			this.InstanceResetTimeInternal[instanceId] = time;
 		}
 
-		// Token: 0x0602D860 RID: 186464 RVA: 0x00A46150 File Offset: 0x00A44350
+		// Token: 0x06021F30 RID: 139056 RVA: 0x00971F60 File Offset: 0x00970160
 		public ArchiveType GetDungeonArchiveType(int dungeonId)
 		{
 			ArchiveType result;
@@ -170,14 +170,14 @@ namespace CSharpScript.Module.InstanceDungeon
 			return result;
 		}
 
-		// Token: 0x0602D861 RID: 186465 RVA: 0x00A46170 File Offset: 0x00A44370
+		// Token: 0x06021F31 RID: 139057 RVA: 0x00971F80 File Offset: 0x00970180
 		public bool IsDungeonArchiveExpire(int dungeonId)
 		{
 			ArchiveType dungeonArchiveType = this.GetDungeonArchiveType(dungeonId);
 			return dungeonArchiveType != ArchiveType.NormalArchive && dungeonArchiveType > ArchiveType.NoneArchive;
 		}
 
-		// Token: 0x0602D862 RID: 186466 RVA: 0x00A46190 File Offset: 0x00A44390
+		// Token: 0x06021F32 RID: 139058 RVA: 0x00971FA0 File Offset: 0x009701A0
 		public unsafe string GetDungeonArchiveExpireLocalTips(int dungeonId)
 		{
 			ArchiveType dungeonArchiveType = this.GetDungeonArchiveType(dungeonId);
@@ -204,13 +204,13 @@ namespace CSharpScript.Module.InstanceDungeon
 			return "";
 		}
 
-		// Token: 0x0602D863 RID: 186467 RVA: 0x00A46225 File Offset: 0x00A44425
+		// Token: 0x06021F33 RID: 139059 RVA: 0x00972035 File Offset: 0x00970235
 		public bool HasDungeonArchive(int dungeonId)
 		{
 			return this.GetDungeonArchiveType(dungeonId) == ArchiveType.NormalArchive;
 		}
 
-		// Token: 0x0602D864 RID: 186468 RVA: 0x00A46234 File Offset: 0x00A44434
+		// Token: 0x06021F34 RID: 139060 RVA: 0x00972044 File Offset: 0x00970244
 		public bool IsDungeonSupportArchive(int dungeonId)
 		{
 			if (dungeonId <= 0)
@@ -221,7 +221,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return ((config != null) ? config.GetValueOrDefault().SaveDays : 0) > 0;
 		}
 
-		// Token: 0x0602D865 RID: 186469 RVA: 0x00A46274 File Offset: 0x00A44474
+		// Token: 0x06021F35 RID: 139061 RVA: 0x00972084 File Offset: 0x00970284
 		public bool IsDungeonSupportAndWithoutArchive(int dungeonId)
 		{
 			bool flag = this.IsDungeonSupportArchive(dungeonId);
@@ -229,39 +229,39 @@ namespace CSharpScript.Module.InstanceDungeon
 			return flag && !flag2;
 		}
 
-		// Token: 0x0602D866 RID: 186470 RVA: 0x00A46298 File Offset: 0x00A44498
+		// Token: 0x06021F36 RID: 139062 RVA: 0x009720A8 File Offset: 0x009702A8
 		public bool IsDungeonArchiveActivate(int dungeonId)
 		{
 			return !OnlineModel.Instance.GetIsTeamModel() && this.IsDungeonSupportArchive(dungeonId);
 		}
 
-		// Token: 0x0602D867 RID: 186471 RVA: 0x00A462AF File Offset: 0x00A444AF
+		// Token: 0x06021F37 RID: 139063 RVA: 0x009720BF File Offset: 0x009702BF
 		public void SetDungeonArchiveInfo(int dungeonId, int archiveType)
 		{
 			this.DungeonArchiveInfoMap[dungeonId] = (ArchiveType)archiveType;
 		}
 
-		// Token: 0x0602D868 RID: 186472 RVA: 0x00A462BE File Offset: 0x00A444BE
+		// Token: 0x06021F38 RID: 139064 RVA: 0x009720CE File Offset: 0x009702CE
 		public bool IsDungeonArchiveExpireTipsShow(int dungeonId)
 		{
 			return this.DungeonArchiveExpireShowFlagSet.Contains(dungeonId);
 		}
 
-		// Token: 0x0602D869 RID: 186473 RVA: 0x00A462CC File Offset: 0x00A444CC
+		// Token: 0x06021F39 RID: 139065 RVA: 0x009720DC File Offset: 0x009702DC
 		public void SetDungeonArchiveExpireTipsShow(int dungeonId)
 		{
 			this.DungeonArchiveExpireShowFlagSet.Add(dungeonId);
 		}
 
-		// Token: 0x0602D86A RID: 186474 RVA: 0x00A462DB File Offset: 0x00A444DB
+		// Token: 0x06021F3A RID: 139066 RVA: 0x009720EB File Offset: 0x009702EB
 		public void ClearDungeonArchiveInfo()
 		{
 			this.DungeonArchiveInfoMap.Clear();
 			this.DungeonArchiveExpireShowFlagSet.Clear();
 		}
 
-		// Token: 0x170073FD RID: 29693
-		// (get) Token: 0x0602D86B RID: 186475 RVA: 0x00A462F3 File Offset: 0x00A444F3
+		// Token: 0x170046B5 RID: 18101
+		// (get) Token: 0x06021F3B RID: 139067 RVA: 0x00972103 File Offset: 0x00970303
 		public TItem[] SettleRewardItemList
 		{
 			get
@@ -270,8 +270,8 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x170073FE RID: 29694
-		// (get) Token: 0x0602D86C RID: 186476 RVA: 0x00A46300 File Offset: 0x00A44500
+		// Token: 0x170046B6 RID: 18102
+		// (get) Token: 0x06021F3C RID: 139068 RVA: 0x00972110 File Offset: 0x00970310
 		public bool IsNeedErrorCodeForEnterInstance
 		{
 			get
@@ -280,7 +280,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D86D RID: 186477 RVA: 0x00A46314 File Offset: 0x00A44514
+		// Token: 0x06021F3D RID: 139069 RVA: 0x00972124 File Offset: 0x00970324
 		[NullableContext(2)]
 		public InstanceDungeonData GetInstanceData(int shareId)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return result;
 		}
 
-		// Token: 0x0602D86E RID: 186478 RVA: 0x00A46350 File Offset: 0x00A44550
+		// Token: 0x06021F3E RID: 139070 RVA: 0x00972160 File Offset: 0x00970360
 		public void SetInstanceData(InstEnterInfoPb data)
 		{
 			int id = data.Id;
@@ -315,9 +315,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			instanceDungeonData.ChallengedTimes = data.EnterCount;
 		}
 
-		// Token: 0x170073FF RID: 29695
-		// (get) Token: 0x0602D86F RID: 186479 RVA: 0x00A46398 File Offset: 0x00A44598
-		// (set) Token: 0x0602D870 RID: 186480 RVA: 0x00A463A0 File Offset: 0x00A445A0
+		// Token: 0x170046B7 RID: 18103
+		// (get) Token: 0x06021F3F RID: 139071 RVA: 0x009721A8 File Offset: 0x009703A8
+		// (set) Token: 0x06021F40 RID: 139072 RVA: 0x009721B0 File Offset: 0x009703B0
 		public int MatchingTime
 		{
 			get
@@ -330,15 +330,15 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D871 RID: 186481 RVA: 0x00A463A9 File Offset: 0x00A445A9
+		// Token: 0x06021F41 RID: 139073 RVA: 0x009721B9 File Offset: 0x009703B9
 		public void MatchingTimeIncrease()
 		{
 			this.MatchingTimeInternal++;
 		}
 
-		// Token: 0x17007400 RID: 29696
-		// (get) Token: 0x0602D872 RID: 186482 RVA: 0x00A463B9 File Offset: 0x00A445B9
-		// (set) Token: 0x0602D873 RID: 186483 RVA: 0x00A463C1 File Offset: 0x00A445C1
+		// Token: 0x170046B8 RID: 18104
+		// (get) Token: 0x06021F42 RID: 139074 RVA: 0x009721C9 File Offset: 0x009703C9
+		// (set) Token: 0x06021F43 RID: 139075 RVA: 0x009721D1 File Offset: 0x009703D1
 		[Nullable(2)]
 		public TimerHandle MatchingTimer
 		{
@@ -354,7 +354,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D874 RID: 186484 RVA: 0x00A463CC File Offset: 0x00A445CC
+		// Token: 0x06021F44 RID: 139076 RVA: 0x009721DC File Offset: 0x009703DC
 		public void CancelMatchingTimer()
 		{
 			if (this.MatchingTimer != null)
@@ -373,31 +373,31 @@ namespace CSharpScript.Module.InstanceDungeon
 			EventSystem.Instance.Emit(EEventName.OnMatchingChange);
 		}
 
-		// Token: 0x0602D875 RID: 186485 RVA: 0x00A46438 File Offset: 0x00A44638
+		// Token: 0x06021F45 RID: 139077 RVA: 0x00972248 File Offset: 0x00970448
 		public EInstanceMatchState GetMatchingState()
 		{
 			return this.MatchingState;
 		}
 
-		// Token: 0x0602D876 RID: 186486 RVA: 0x00A46440 File Offset: 0x00A44640
+		// Token: 0x06021F46 RID: 139078 RVA: 0x00972250 File Offset: 0x00970450
 		public void SetMatchingState(EInstanceMatchState newState)
 		{
 			this.MatchingState = newState;
 		}
 
-		// Token: 0x0602D877 RID: 186487 RVA: 0x00A46449 File Offset: 0x00A44649
+		// Token: 0x06021F47 RID: 139079 RVA: 0x00972259 File Offset: 0x00970459
 		public int GetMatchingId()
 		{
 			return this.MatchingId;
 		}
 
-		// Token: 0x0602D878 RID: 186488 RVA: 0x00A46451 File Offset: 0x00A44651
+		// Token: 0x06021F48 RID: 139080 RVA: 0x00972261 File Offset: 0x00970461
 		public void SetMatchingId(int newId)
 		{
 			this.MatchingId = newId;
 		}
 
-		// Token: 0x0602D879 RID: 186489 RVA: 0x00A4645C File Offset: 0x00A4465C
+		// Token: 0x06021F49 RID: 139081 RVA: 0x0097226C File Offset: 0x0097046C
 		public void InitInstanceDataList(IEnumerable<InstEnterInfoPb> dataList)
 		{
 			foreach (InstEnterInfoPb instanceData in dataList)
@@ -406,7 +406,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D87A RID: 186490 RVA: 0x00A464A4 File Offset: 0x00A446A4
+		// Token: 0x06021F4A RID: 139082 RVA: 0x009722B4 File Offset: 0x009704B4
 		public int? GetInstancePowerCost(int configId)
 		{
 			if (configId <= 0)
@@ -427,8 +427,8 @@ namespace CSharpScript.Module.InstanceDungeon
 			return exchangeRewardInfo.Value.GetCost(key);
 		}
 
-		// Token: 0x17007401 RID: 29697
-		// (get) Token: 0x0602D87B RID: 186491 RVA: 0x00A46525 File Offset: 0x00A44725
+		// Token: 0x170046B9 RID: 18105
+		// (get) Token: 0x06021F4B RID: 139083 RVA: 0x00972335 File Offset: 0x00970535
 		public bool EditBattleTeamMatching
 		{
 			get
@@ -437,14 +437,14 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D87C RID: 186492 RVA: 0x00A4652D File Offset: 0x00A4472D
+		// Token: 0x06021F4C RID: 139084 RVA: 0x0097233D File Offset: 0x0097053D
 		public void SetEditBattleTeamMatching(bool bMatching)
 		{
 			this.EditBattleTeamMatchingInternal = bMatching;
 			EventSystem.Instance.Emit<bool>(EEventName.MatchTeamFlagChange, bMatching);
 		}
 
-		// Token: 0x0602D87D RID: 186493 RVA: 0x00A46548 File Offset: 0x00A44748
+		// Token: 0x06021F4D RID: 139085 RVA: 0x00972358 File Offset: 0x00970558
 		public void SyncSettleRewardItemList(MapField<int, RewardItemInfoList> data)
 		{
 			this.SettleRewardItemListInternal.Clear();
@@ -462,7 +462,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D87E RID: 186494 RVA: 0x00A46600 File Offset: 0x00A44800
+		// Token: 0x06021F4E RID: 139086 RVA: 0x00972410 File Offset: 0x00970610
 		[NullableContext(2)]
 		public List<int> GetSortedEntranceInstanceIdList(int entranceId)
 		{
@@ -483,7 +483,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return list;
 		}
 
-		// Token: 0x0602D87F RID: 186495 RVA: 0x00A46690 File Offset: 0x00A44890
+		// Token: 0x06021F4F RID: 139087 RVA: 0x009724A0 File Offset: 0x009706A0
 		[NullableContext(2)]
 		public Dictionary<int, int> GetSortedByTitleEntranceInstanceIdList(int entranceId)
 		{
@@ -501,7 +501,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return dictionary;
 		}
 
-		// Token: 0x0602D880 RID: 186496 RVA: 0x00A46714 File Offset: 0x00A44914
+		// Token: 0x06021F50 RID: 139088 RVA: 0x00972524 File Offset: 0x00970724
 		public bool CheckInstanceFinished(int instanceId)
 		{
 			int enterControlId = InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.EnterControlId;
@@ -513,7 +513,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return InstanceDungeonConfig.Instance.GetCountConfig(enterControlId).Value.EnterCount <= challengedTimes;
 		}
 
-		// Token: 0x0602D881 RID: 186497 RVA: 0x00A46774 File Offset: 0x00A44974
+		// Token: 0x06021F51 RID: 139089 RVA: 0x00972584 File Offset: 0x00970784
 		public bool CheckInstanceCanChallenge(int instanceId)
 		{
 			int enterControlId = InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.EnterControlId;
@@ -525,7 +525,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return instanceData == null || instanceData.CanChallenge;
 		}
 
-		// Token: 0x0602D882 RID: 186498 RVA: 0x00A467B8 File Offset: 0x00A449B8
+		// Token: 0x06021F52 RID: 139090 RVA: 0x009725C8 File Offset: 0x009707C8
 		public bool CheckInstanceLevelTooLow(int instanceId)
 		{
 			InstanceDungeon? instanceDungeon;
@@ -539,7 +539,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return unlockCondition != null && WorldLevelModel.Instance.OriginWorldLevel > unlockCondition[1] + num.Value;
 		}
 
-		// Token: 0x0602D883 RID: 186499 RVA: 0x00A46844 File Offset: 0x00A44A44
+		// Token: 0x06021F53 RID: 139091 RVA: 0x00972654 File Offset: 0x00970854
 		public bool CheckInstanceCanReward(int instanceId)
 		{
 			int enterControlId = InstanceDungeonConfig.Instance.GetConfig(instanceId).Value.EnterControlId;
@@ -551,7 +551,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return instanceData == null || instanceData.CanReward;
 		}
 
-		// Token: 0x0602D884 RID: 186500 RVA: 0x00A46888 File Offset: 0x00A44A88
+		// Token: 0x06021F54 RID: 139092 RVA: 0x00972698 File Offset: 0x00970898
 		public bool CheckInstanceUnlock(int instanceId)
 		{
 			int[] unlockCondition = InstanceDungeonConfig.Instance.GetUnlockCondition(instanceId);
@@ -597,9 +597,9 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x17007402 RID: 29698
-		// (get) Token: 0x0602D885 RID: 186501 RVA: 0x00A4698F File Offset: 0x00A44B8F
-		// (set) Token: 0x0602D886 RID: 186502 RVA: 0x00A46997 File Offset: 0x00A44B97
+		// Token: 0x170046BA RID: 18106
+		// (get) Token: 0x06021F55 RID: 139093 RVA: 0x0097279F File Offset: 0x0097099F
+		// (set) Token: 0x06021F56 RID: 139094 RVA: 0x009727A7 File Offset: 0x009709A7
 		public int EntranceEntityId
 		{
 			get
@@ -612,7 +612,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D887 RID: 186503 RVA: 0x00A469A0 File Offset: 0x00A44BA0
+		// Token: 0x06021F57 RID: 139095 RVA: 0x009727B0 File Offset: 0x009709B0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -652,7 +652,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D888 RID: 186504 RVA: 0x00A46A80 File Offset: 0x00A44C80
+		// Token: 0x06021F58 RID: 139096 RVA: 0x00972890 File Offset: 0x00970A90
 		public bool IsMowingInstanceDungeon()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -660,7 +660,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().InstSubType == 19;
 		}
 
-		// Token: 0x0602D889 RID: 186505 RVA: 0x00A46AC4 File Offset: 0x00A44CC4
+		// Token: 0x06021F59 RID: 139097 RVA: 0x009728D4 File Offset: 0x00970AD4
 		public bool IsFarmGoldInstanceDungeon()
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -668,7 +668,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return config != null && config.GetValueOrDefault().InstSubType == 25;
 		}
 
-		// Token: 0x0602D88A RID: 186506 RVA: 0x00A46B08 File Offset: 0x00A44D08
+		// Token: 0x06021F5A RID: 139098 RVA: 0x00972918 File Offset: 0x00970B18
 		public bool IsSpecificInstanceDungeonBySubType(EDungeonSubType subType)
 		{
 			if (this.SelectInstanceId == 0)
@@ -680,7 +680,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return num.GetValueOrDefault() == (int)subType & num != null;
 		}
 
-		// Token: 0x0602D88B RID: 186507 RVA: 0x00A46B70 File Offset: 0x00A44D70
+		// Token: 0x06021F5B RID: 139099 RVA: 0x00972980 File Offset: 0x00970B80
 		[NullableContext(2)]
 		public string GetUnlockTextIdById(int instanceId)
 		{
@@ -697,7 +697,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return InstanceDungeonConfig.Instance.GetUnlockConditionGroupHintText(instanceId);
 		}
 
-		// Token: 0x0602D88C RID: 186508 RVA: 0x00A46BD0 File Offset: 0x00A44DD0
+		// Token: 0x06021F5C RID: 139100 RVA: 0x009729E0 File Offset: 0x00970BE0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -718,8 +718,8 @@ namespace CSharpScript.Module.InstanceDungeon
 			return null;
 		}
 
-		// Token: 0x17007403 RID: 29699
-		// (get) Token: 0x0602D88D RID: 186509 RVA: 0x00A46C23 File Offset: 0x00A44E23
+		// Token: 0x170046BB RID: 18107
+		// (get) Token: 0x06021F5D RID: 139101 RVA: 0x00972A33 File Offset: 0x00970C33
 		public static InstanceDungeonEntranceModel Instance
 		{
 			get
@@ -728,7 +728,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x0602D88E RID: 186510 RVA: 0x00A46C2A File Offset: 0x00A44E2A
+		// Token: 0x06021F5E RID: 139102 RVA: 0x00972A3A File Offset: 0x00970C3A
 		public static InstanceDungeonEntranceModel GetOrCreateInstance()
 		{
 			if (InstanceDungeonEntranceModel._Instance == null)
@@ -738,7 +738,7 @@ namespace CSharpScript.Module.InstanceDungeon
 			return InstanceDungeonEntranceModel._Instance;
 		}
 
-		// Token: 0x0602D88F RID: 186511 RVA: 0x00A46C3E File Offset: 0x00A44E3E
+		// Token: 0x06021F5F RID: 139103 RVA: 0x00972A4E File Offset: 0x00970C4E
 		public static bool CreateInstance()
 		{
 			if (InstanceDungeonEntranceModel._Instance != null)
@@ -749,88 +749,91 @@ namespace CSharpScript.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x0602D890 RID: 186512 RVA: 0x00A46C54 File Offset: 0x00A44E54
+		// Token: 0x06021F60 RID: 139104 RVA: 0x00972A64 File Offset: 0x00970C64
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602D891 RID: 186513 RVA: 0x00A46C56 File Offset: 0x00A44E56
+		// Token: 0x06021F61 RID: 139105 RVA: 0x00972A66 File Offset: 0x00970C66
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonEntranceModel._Instance = null;
 		}
 
-		// Token: 0x0602D892 RID: 186514 RVA: 0x00A46C5E File Offset: 0x00A44E5E
+		// Token: 0x06021F62 RID: 139106 RVA: 0x00972A6E File Offset: 0x00970C6E
 		static InstanceDungeonEntranceModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonEntranceModel.CreateStaticDefaultValue), new Action(InstanceDungeonEntranceModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018570 RID: 99696
+		// Token: 0x04012B98 RID: 76696
 		private int EntranceIdInternal;
 
-		// Token: 0x04018571 RID: 99697
+		// Token: 0x04012B99 RID: 76697
 		private int InstanceIdInternal;
 
-		// Token: 0x04018572 RID: 99698
+		// Token: 0x04012B9A RID: 76698
 		private int SelectInstanceIdInternal;
 
-		// Token: 0x04018573 RID: 99699
+		// Token: 0x04012B9B RID: 76699
 		private int LastInstanceIdInternal;
 
-		// Token: 0x04018574 RID: 99700
+		// Token: 0x04012B9C RID: 76700
 		[Nullable(2)]
 		private TransitionOptionPb TransitionOptionInternal;
 
-		// Token: 0x04018575 RID: 99701
+		// Token: 0x04012B9D RID: 76701
+		public bool IsBanMapSound;
+
+		// Token: 0x04012B9E RID: 76702
 		private List<int> EntranceInstanceIdListInternal = new List<int>();
 
-		// Token: 0x04018576 RID: 99702
+		// Token: 0x04012B9F RID: 76703
 		private long EntranceEndTimeInternal;
 
-		// Token: 0x04018577 RID: 99703
+		// Token: 0x04012BA0 RID: 76704
 		private readonly Dictionary<int, long> InstanceResetTimeInternal = new Dictionary<int, long>();
 
-		// Token: 0x04018578 RID: 99704
+		// Token: 0x04012BA1 RID: 76705
 		private readonly Dictionary<int, ArchiveType> DungeonArchiveInfoMap = new Dictionary<int, ArchiveType>();
 
-		// Token: 0x04018579 RID: 99705
+		// Token: 0x04012BA2 RID: 76706
 		private readonly HashSet<int> DungeonArchiveExpireShowFlagSet = new HashSet<int>();
 
-		// Token: 0x0401857A RID: 99706
+		// Token: 0x04012BA3 RID: 76707
 		private readonly Dictionary<int, InstanceDungeonData> InstanceDataMap = new Dictionary<int, InstanceDungeonData>();
 
-		// Token: 0x0401857B RID: 99707
+		// Token: 0x04012BA4 RID: 76708
 		private readonly List<TItem> SettleRewardItemListInternal = new List<TItem>();
 
-		// Token: 0x0401857C RID: 99708
+		// Token: 0x04012BA5 RID: 76709
 		private EInstanceMatchState MatchingState;
 
-		// Token: 0x0401857D RID: 99709
+		// Token: 0x04012BA6 RID: 76710
 		private int MatchingTimeInternal;
 
-		// Token: 0x0401857E RID: 99710
+		// Token: 0x04012BA7 RID: 76711
 		[Nullable(2)]
 		private TimerHandle MatchingTimerInternal;
 
-		// Token: 0x0401857F RID: 99711
+		// Token: 0x04012BA8 RID: 76712
 		[Nullable(2)]
 		public Func<bool> OnStopTimer;
 
-		// Token: 0x04018580 RID: 99712
+		// Token: 0x04012BA9 RID: 76713
 		[Nullable(2)]
 		public Action OnStopHandle;
 
-		// Token: 0x04018581 RID: 99713
+		// Token: 0x04012BAA RID: 76714
 		private int MatchingId;
 
-		// Token: 0x04018582 RID: 99714
+		// Token: 0x04012BAB RID: 76715
 		private bool EditBattleTeamMatchingInternal;
 
-		// Token: 0x04018583 RID: 99715
+		// Token: 0x04012BAC RID: 76716
 		private int EntityId;
 
-		// Token: 0x04018584 RID: 99716
+		// Token: 0x04012BAD RID: 76717
 		[Nullable(2)]
 		private static InstanceDungeonEntranceModel _Instance;
 	}

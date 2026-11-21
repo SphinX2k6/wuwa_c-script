@@ -6,19 +6,19 @@ using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E6A RID: 7786
+// Token: 0x0200132C RID: 4908
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryAreaData
 {
-	// Token: 0x0600ECF3 RID: 60659 RVA: 0x00387550 File Offset: 0x00385750
+	// Token: 0x0600C112 RID: 49426 RVA: 0x0039317C File Offset: 0x0039137C
 	public HonamiStoryAreaData(int areaId)
 	{
 		this.AreaId = areaId;
 		this.AreaStateInternal = EHonamiStoryAreaState.Lock;
 	}
 
-	// Token: 0x0600ECF4 RID: 60660 RVA: 0x00387568 File Offset: 0x00385768
+	// Token: 0x0600C113 RID: 49427 RVA: 0x00393194 File Offset: 0x00391394
 	public void UpdateData(HonamiStoryAreaInfo areaInfo)
 	{
 		this.SecretStateInternal = (EHonamiStoryCollectState)areaInfo.SecreteStatus;
@@ -39,14 +39,14 @@ public class HonamiStoryAreaData
 		this.AreaStateInternal = status;
 	}
 
-	// Token: 0x0600ECF5 RID: 60661 RVA: 0x003875F1 File Offset: 0x003857F1
+	// Token: 0x0600C114 RID: 49428 RVA: 0x0039321D File Offset: 0x0039141D
 	public void UpdateCollectMascotState(EHonamiStoryCollectState state)
 	{
 		this.SecretStateInternal = state;
 	}
 
-	// Token: 0x17001298 RID: 4760
-	// (get) Token: 0x0600ECF6 RID: 60662 RVA: 0x003875FA File Offset: 0x003857FA
+	// Token: 0x170012C2 RID: 4802
+	// (get) Token: 0x0600C115 RID: 49429 RVA: 0x00393226 File Offset: 0x00391426
 	public EHonamiStoryCollectState CollectMascotState
 	{
 		get
@@ -55,8 +55,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x17001299 RID: 4761
-	// (get) Token: 0x0600ECF7 RID: 60663 RVA: 0x00387602 File Offset: 0x00385802
+	// Token: 0x170012C3 RID: 4803
+	// (get) Token: 0x0600C116 RID: 49430 RVA: 0x0039322E File Offset: 0x0039142E
 	public HonamiStoryArea? Config
 	{
 		get
@@ -65,8 +65,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129A RID: 4762
-	// (get) Token: 0x0600ECF8 RID: 60664 RVA: 0x00387614 File Offset: 0x00385814
+	// Token: 0x170012C4 RID: 4804
+	// (get) Token: 0x0600C117 RID: 49431 RVA: 0x00393240 File Offset: 0x00391440
 	public int Id
 	{
 		get
@@ -75,8 +75,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129B RID: 4763
-	// (get) Token: 0x0600ECF9 RID: 60665 RVA: 0x0038761C File Offset: 0x0038581C
+	// Token: 0x170012C5 RID: 4805
+	// (get) Token: 0x0600C118 RID: 49432 RVA: 0x00393248 File Offset: 0x00391448
 	public string Name
 	{
 		get
@@ -85,8 +85,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129C RID: 4764
-	// (get) Token: 0x0600ECFA RID: 60666 RVA: 0x00387640 File Offset: 0x00385840
+	// Token: 0x170012C6 RID: 4806
+	// (get) Token: 0x0600C119 RID: 49433 RVA: 0x0039326C File Offset: 0x0039146C
 	public string Desc
 	{
 		get
@@ -95,8 +95,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129D RID: 4765
-	// (get) Token: 0x0600ECFB RID: 60667 RVA: 0x00387664 File Offset: 0x00385864
+	// Token: 0x170012C7 RID: 4807
+	// (get) Token: 0x0600C11A RID: 49434 RVA: 0x00393290 File Offset: 0x00391490
 	public int DropId
 	{
 		get
@@ -105,8 +105,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129E RID: 4766
-	// (get) Token: 0x0600ECFC RID: 60668 RVA: 0x00387687 File Offset: 0x00385887
+	// Token: 0x170012C8 RID: 4808
+	// (get) Token: 0x0600C11B RID: 49435 RVA: 0x003932B3 File Offset: 0x003914B3
 	public bool IsAreaUnlock
 	{
 		get
@@ -115,8 +115,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x1700129F RID: 4767
-	// (get) Token: 0x0600ECFD RID: 60669 RVA: 0x00387692 File Offset: 0x00385892
+	// Token: 0x170012C9 RID: 4809
+	// (get) Token: 0x0600C11C RID: 49436 RVA: 0x003932BE File Offset: 0x003914BE
 	public EHonamiStoryAreaState GetAreaState
 	{
 		get
@@ -125,8 +125,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x170012A0 RID: 4768
-	// (get) Token: 0x0600ECFE RID: 60670 RVA: 0x0038769A File Offset: 0x0038589A
+	// Token: 0x170012CA RID: 4810
+	// (get) Token: 0x0600C11D RID: 49437 RVA: 0x003932C6 File Offset: 0x003914C6
 	public bool IsAreaCanEnter
 	{
 		get
@@ -135,8 +135,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x170012A1 RID: 4769
-	// (get) Token: 0x0600ECFF RID: 60671 RVA: 0x003876A5 File Offset: 0x003858A5
+	// Token: 0x170012CB RID: 4811
+	// (get) Token: 0x0600C11E RID: 49438 RVA: 0x003932D1 File Offset: 0x003914D1
 	public bool IsSecretFinished
 	{
 		get
@@ -145,8 +145,8 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x170012A2 RID: 4770
-	// (get) Token: 0x0600ED00 RID: 60672 RVA: 0x003876B0 File Offset: 0x003858B0
+	// Token: 0x170012CC RID: 4812
+	// (get) Token: 0x0600C11F RID: 49439 RVA: 0x003932DC File Offset: 0x003914DC
 	public int LevelPlayId
 	{
 		get
@@ -155,12 +155,12 @@ public class HonamiStoryAreaData
 		}
 	}
 
-	// Token: 0x04006E09 RID: 28169
+	// Token: 0x04006EEA RID: 28394
 	private readonly int AreaId;
 
-	// Token: 0x04006E0A RID: 28170
+	// Token: 0x04006EEB RID: 28395
 	private EHonamiStoryCollectState SecretStateInternal;
 
-	// Token: 0x04006E0B RID: 28171
+	// Token: 0x04006EEC RID: 28396
 	private EHonamiStoryAreaState AreaStateInternal;
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200019A RID: 410
+	// Token: 0x0200019E RID: 414
 	[NetMessage(EMessageId.BirthDayInfoNotify)]
 	public sealed class BirthDayInfoNotify : IMessage<BirthDayInfoNotify>, IMessage, IEquatable<BirthDayInfoNotify>, IDeepCloneable<BirthDayInfoNotify>, IBufferMessage
 	{
-		// Token: 0x06003087 RID: 12423 RVA: 0x0007BCC5 File Offset: 0x00079EC5
+		// Token: 0x06003114 RID: 12564 RVA: 0x0007D431 File Offset: 0x0007B631
 		[NullableContext(1)]
 		public static BirthDayInfoNotify Create()
 		{
 			return new BirthDayInfoNotify();
 		}
 
-		// Token: 0x1700077D RID: 1917
-		// (get) Token: 0x06003088 RID: 12424 RVA: 0x0007BCCC File Offset: 0x00079ECC
+		// Token: 0x17000796 RID: 1942
+		// (get) Token: 0x06003115 RID: 12565 RVA: 0x0007D438 File Offset: 0x0007B638
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700077E RID: 1918
-		// (get) Token: 0x06003089 RID: 12425 RVA: 0x0007BCCF File Offset: 0x00079ECF
+		// Token: 0x17000797 RID: 1943
+		// (get) Token: 0x06003116 RID: 12566 RVA: 0x0007D43B File Offset: 0x0007B63B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600308A RID: 12426 RVA: 0x0007BCD6 File Offset: 0x00079ED6
+		// Token: 0x06003117 RID: 12567 RVA: 0x0007D442 File Offset: 0x0007B642
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayInfoNotify()
 		{
 		}
 
-		// Token: 0x0600308B RID: 12427 RVA: 0x0007BCEC File Offset: 0x00079EEC
+		// Token: 0x06003118 RID: 12568 RVA: 0x0007D458 File Offset: 0x0007B658
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayInfoNotify(BirthDayInfoNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600308C RID: 12428 RVA: 0x0007BD39 File Offset: 0x00079F39
+		// Token: 0x06003119 RID: 12569 RVA: 0x0007D4A5 File Offset: 0x0007B6A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BirthDayInfoNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new BirthDayInfoNotify(this);
 		}
 
-		// Token: 0x1700077F RID: 1919
-		// (get) Token: 0x0600308D RID: 12429 RVA: 0x0007BD41 File Offset: 0x00079F41
-		// (set) Token: 0x0600308E RID: 12430 RVA: 0x0007BD49 File Offset: 0x00079F49
+		// Token: 0x17000798 RID: 1944
+		// (get) Token: 0x0600311A RID: 12570 RVA: 0x0007D4AD File Offset: 0x0007B6AD
+		// (set) Token: 0x0600311B RID: 12571 RVA: 0x0007D4B5 File Offset: 0x0007B6B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool BirthDayReset
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000780 RID: 1920
-		// (get) Token: 0x0600308F RID: 12431 RVA: 0x0007BD52 File Offset: 0x00079F52
-		// (set) Token: 0x06003090 RID: 12432 RVA: 0x0007BD5A File Offset: 0x00079F5A
+		// Token: 0x17000799 RID: 1945
+		// (get) Token: 0x0600311C RID: 12572 RVA: 0x0007D4BE File Offset: 0x0007B6BE
+		// (set) Token: 0x0600311D RID: 12573 RVA: 0x0007D4C6 File Offset: 0x0007B6C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RecentRewardTime
@@ -103,8 +103,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000781 RID: 1921
-		// (get) Token: 0x06003091 RID: 12433 RVA: 0x0007BD63 File Offset: 0x00079F63
+		// Token: 0x1700079A RID: 1946
+		// (get) Token: 0x0600311E RID: 12574 RVA: 0x0007D4CF File Offset: 0x0007B6CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BirthRoleSelect> Roles
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003092 RID: 12434 RVA: 0x0007BD6B File Offset: 0x00079F6B
+		// Token: 0x0600311F RID: 12575 RVA: 0x0007D4D7 File Offset: 0x0007B6D7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BirthDayInfoNotify);
 		}
 
-		// Token: 0x06003093 RID: 12435 RVA: 0x0007BD7C File Offset: 0x00079F7C
+		// Token: 0x06003120 RID: 12576 RVA: 0x0007D4E8 File Offset: 0x0007B6E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BirthDayInfoNotify other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BirthDayReset == other.BirthDayReset && this.RecentRewardTime == other.RecentRewardTime && this.roles_.Equals(other.roles_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003094 RID: 12436 RVA: 0x0007BDDC File Offset: 0x00079FDC
+		// Token: 0x06003121 RID: 12577 RVA: 0x0007D548 File Offset: 0x0007B748
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003095 RID: 12437 RVA: 0x0007BE42 File Offset: 0x0007A042
+		// Token: 0x06003122 RID: 12578 RVA: 0x0007D5AE File Offset: 0x0007B7AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003096 RID: 12438 RVA: 0x0007BE4F File Offset: 0x0007A04F
+		// Token: 0x06003123 RID: 12579 RVA: 0x0007D5BB File Offset: 0x0007B7BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,19 +169,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003097 RID: 12439 RVA: 0x0007BE58 File Offset: 0x0007A058
+		// Token: 0x06003124 RID: 12580 RVA: 0x0007D5C4 File Offset: 0x0007B7C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.RecentRewardTime != 0)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(8);
 				output.WriteInt32(this.RecentRewardTime);
 			}
 			if (this.BirthDayReset)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(16);
 				output.WriteBool(this.BirthDayReset);
 			}
 			this.roles_.WriteTo(ref output, BirthDayInfoNotify._repeated_roles_codec);
@@ -191,7 +191,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003098 RID: 12440 RVA: 0x0007BEC4 File Offset: 0x0007A0C4
+		// Token: 0x06003125 RID: 12581 RVA: 0x0007D630 File Offset: 0x0007B830
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003099 RID: 12441 RVA: 0x0007BF24 File Offset: 0x0007A124
+		// Token: 0x06003126 RID: 12582 RVA: 0x0007D690 File Offset: 0x0007B890
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BirthDayInfoNotify other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600309A RID: 12442 RVA: 0x0007BF85 File Offset: 0x0007A185
+		// Token: 0x06003127 RID: 12583 RVA: 0x0007D6F1 File Offset: 0x0007B8F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600309B RID: 12443 RVA: 0x0007BF90 File Offset: 0x0007A190
+		// Token: 0x06003128 RID: 12584 RVA: 0x0007D6FC File Offset: 0x0007B8FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,11 +254,11 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 8U)
 				{
-					if (num != 96U)
+					if (num != 16U)
 					{
-						if (num != 122U)
+						if (num != 90U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
@@ -279,28 +279,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040028F8 RID: 10488
+		// Token: 0x04002973 RID: 10611
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040028F9 RID: 10489
-		public const int BirthDayResetFieldNumber = 12;
+		// Token: 0x04002974 RID: 10612
+		public const int BirthDayResetFieldNumber = 2;
 
-		// Token: 0x040028FA RID: 10490
+		// Token: 0x04002975 RID: 10613
 		private bool birthDayReset_;
 
-		// Token: 0x040028FB RID: 10491
-		public const int RecentRewardTimeFieldNumber = 3;
+		// Token: 0x04002976 RID: 10614
+		public const int RecentRewardTimeFieldNumber = 1;
 
-		// Token: 0x040028FC RID: 10492
+		// Token: 0x04002977 RID: 10615
 		private int recentRewardTime_;
 
-		// Token: 0x040028FD RID: 10493
-		public const int RolesFieldNumber = 15;
+		// Token: 0x04002978 RID: 10616
+		public const int RolesFieldNumber = 11;
 
-		// Token: 0x040028FE RID: 10494
-		private static readonly FieldCodec<BirthRoleSelect> _repeated_roles_codec = FieldCodec.ForMessage<BirthRoleSelect>(122U, BirthRoleSelect.Parser);
+		// Token: 0x04002979 RID: 10617
+		private static readonly FieldCodec<BirthRoleSelect> _repeated_roles_codec = FieldCodec.ForMessage<BirthRoleSelect>(90U, BirthRoleSelect.Parser);
 
-		// Token: 0x040028FF RID: 10495
+		// Token: 0x0400297A RID: 10618
 		private readonly RepeatedField<BirthRoleSelect> roles_ = new RepeatedField<BirthRoleSelect>();
 	}
 }

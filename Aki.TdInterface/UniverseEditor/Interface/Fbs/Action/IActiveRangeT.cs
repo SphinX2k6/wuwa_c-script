@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006099 RID: 24729
+	// Token: 0x020066FB RID: 26363
 	public class IActiveRangeT
 	{
-		// Token: 0x1700B636 RID: 46646
-		// (get) Token: 0x0602A356 RID: 172886 RVA: 0x005D1D11 File Offset: 0x005CFF11
-		// (set) Token: 0x0602A357 RID: 172887 RVA: 0x005D1D19 File Offset: 0x005CFF19
+		// Token: 0x1700BFA1 RID: 49057
+		// (get) Token: 0x0602CA37 RID: 182839 RVA: 0x0061BCB9 File Offset: 0x00619EB9
+		// (set) Token: 0x0602CA38 RID: 182840 RVA: 0x0061BCC1 File Offset: 0x00619EC1
 		public IVectorInfoT CheckPoint { get; set; }
 
-		// Token: 0x1700B637 RID: 46647
-		// (get) Token: 0x0602A358 RID: 172888 RVA: 0x005D1D22 File Offset: 0x005CFF22
-		// (set) Token: 0x0602A359 RID: 172889 RVA: 0x005D1D2A File Offset: 0x005CFF2A
+		// Token: 0x1700BFA2 RID: 49058
+		// (get) Token: 0x0602CA39 RID: 182841 RVA: 0x0061BCCA File Offset: 0x00619ECA
+		// (set) Token: 0x0602CA3A RID: 182842 RVA: 0x0061BCD2 File Offset: 0x00619ED2
 		public int CheckEnterRange { get; set; }
 
-		// Token: 0x1700B638 RID: 46648
-		// (get) Token: 0x0602A35A RID: 172890 RVA: 0x005D1D33 File Offset: 0x005CFF33
-		// (set) Token: 0x0602A35B RID: 172891 RVA: 0x005D1D3B File Offset: 0x005CFF3B
+		// Token: 0x1700BFA3 RID: 49059
+		// (get) Token: 0x0602CA3B RID: 182843 RVA: 0x0061BCDB File Offset: 0x00619EDB
+		// (set) Token: 0x0602CA3C RID: 182844 RVA: 0x0061BCE3 File Offset: 0x00619EE3
 		public int CheckLeaveRange { get; set; }
 
-		// Token: 0x1700B639 RID: 46649
-		// (get) Token: 0x0602A35C RID: 172892 RVA: 0x005D1D44 File Offset: 0x005CFF44
-		// (set) Token: 0x0602A35D RID: 172893 RVA: 0x005D1D4C File Offset: 0x005CFF4C
+		// Token: 0x1700BFA4 RID: 49060
+		// (get) Token: 0x0602CA3D RID: 182845 RVA: 0x0061BCEC File Offset: 0x00619EEC
+		// (set) Token: 0x0602CA3E RID: 182846 RVA: 0x0061BCF4 File Offset: 0x00619EF4
 		public bool AllowRangeExceed { get; set; }
 
-		// Token: 0x1700B63A RID: 46650
-		// (get) Token: 0x0602A35E RID: 172894 RVA: 0x005D1D55 File Offset: 0x005CFF55
-		// (set) Token: 0x0602A35F RID: 172895 RVA: 0x005D1D5D File Offset: 0x005CFF5D
+		// Token: 0x1700BFA5 RID: 49061
+		// (get) Token: 0x0602CA3F RID: 182847 RVA: 0x0061BCFD File Offset: 0x00619EFD
+		// (set) Token: 0x0602CA40 RID: 182848 RVA: 0x0061BD05 File Offset: 0x00619F05
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A360 RID: 172896 RVA: 0x005D1D66 File Offset: 0x005CFF66
+		// Token: 0x0602CA41 RID: 182849 RVA: 0x0061BD0E File Offset: 0x00619F0E
 		public IActiveRangeT()
 		{
 			this.CheckPoint = null;

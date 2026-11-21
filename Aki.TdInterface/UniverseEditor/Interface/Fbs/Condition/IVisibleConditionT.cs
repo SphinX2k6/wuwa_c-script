@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D13 RID: 19731
+	// Token: 0x0200520F RID: 21007
 	public class IVisibleConditionT
 	{
-		// Token: 0x17008F19 RID: 36633
-		// (get) Token: 0x0601F518 RID: 128280 RVA: 0x0045E1C4 File Offset: 0x0045C3C4
-		// (set) Token: 0x0601F519 RID: 128281 RVA: 0x0045E1CC File Offset: 0x0045C3CC
+		// Token: 0x17009652 RID: 38482
+		// (get) Token: 0x0602115D RID: 135517 RVA: 0x00492114 File Offset: 0x00490314
+		// (set) Token: 0x0602115E RID: 135518 RVA: 0x0049211C File Offset: 0x0049031C
 		public EVisibleCondition Type { get; set; }
 
-		// Token: 0x17008F1A RID: 36634
-		// (get) Token: 0x0601F51A RID: 128282 RVA: 0x0045E1D5 File Offset: 0x0045C3D5
-		// (set) Token: 0x0601F51B RID: 128283 RVA: 0x0045E1DD File Offset: 0x0045C3DD
+		// Token: 0x17009653 RID: 38483
+		// (get) Token: 0x0602115F RID: 135519 RVA: 0x00492125 File Offset: 0x00490325
+		// (set) Token: 0x06021160 RID: 135520 RVA: 0x0049212D File Offset: 0x0049032D
 		public ECompare Compare { get; set; }
 
-		// Token: 0x0601F51C RID: 128284 RVA: 0x0045E1E6 File Offset: 0x0045C3E6
+		// Token: 0x06021161 RID: 135521 RVA: 0x00492136 File Offset: 0x00490336
 		public IVisibleConditionT()
 		{
 			this.Type = EVisibleCondition.Weather;

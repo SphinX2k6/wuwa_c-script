@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200681E RID: 26654
+	// Token: 0x0200576E RID: 22382
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlLevelItem : GridProxyAbstract<DangoBrawlLevelData>
 	{
-		// Token: 0x1700973B RID: 38715
-		// (get) Token: 0x06042824 RID: 272420 RVA: 0x01028DE3 File Offset: 0x01026FE3
-		// (set) Token: 0x06042825 RID: 272421 RVA: 0x01028DEB File Offset: 0x01026FEB
+		// Token: 0x17006A7C RID: 27260
+		// (get) Token: 0x06037379 RID: 226169 RVA: 0x00F6A327 File Offset: 0x00F68527
+		// (set) Token: 0x0603737A RID: 226170 RVA: 0x00F6A32F File Offset: 0x00F6852F
 		public DangoBrawlLevelData LevelData { get; private set; }
 
-		// Token: 0x06042826 RID: 272422 RVA: 0x01028DF4 File Offset: 0x01026FF4
+		// Token: 0x0603737B RID: 226171 RVA: 0x00F6A338 File Offset: 0x00F68538
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042827 RID: 272423 RVA: 0x01029050 File Offset: 0x01027250
+		// Token: 0x0603737C RID: 226172 RVA: 0x00F6A594 File Offset: 0x00F68794
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			texture2.SetUIActive(false);
 		}
 
-		// Token: 0x06042828 RID: 272424 RVA: 0x010290B8 File Offset: 0x010272B8
+		// Token: 0x0603737D RID: 226173 RVA: 0x00F6A5FC File Offset: 0x00F687FC
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlLevelData data, bool isSelected, int gridIndex)
 		{
@@ -196,19 +196,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042829 RID: 272425 RVA: 0x01029331 File Offset: 0x01027531
+		// Token: 0x0603737E RID: 226174 RVA: 0x00F6A875 File Offset: 0x00F68A75
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true, fireEvent);
 		}
 
-		// Token: 0x0604282A RID: 272426 RVA: 0x0102933B File Offset: 0x0102753B
+		// Token: 0x0603737F RID: 226175 RVA: 0x00F6A87F File Offset: 0x00F68A7F
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, fireEvent);
 		}
 
-		// Token: 0x0604282B RID: 272427 RVA: 0x01029348 File Offset: 0x01027548
+		// Token: 0x06037380 RID: 226176 RVA: 0x00F6A88C File Offset: 0x00F68A8C
 		private void SetToggleState(bool state, bool fireEvent)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -230,14 +230,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			texture2.SetUIActive(state);
 		}
 
-		// Token: 0x0604282C RID: 272428 RVA: 0x0102939C File Offset: 0x0102759C
+		// Token: 0x06037381 RID: 226177 RVA: 0x00F6A8E0 File Offset: 0x00F68AE0
 		private bool OnCanExecuteChange()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 			return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x0604282D RID: 272429 RVA: 0x010293C2 File Offset: 0x010275C2
+		// Token: 0x06037382 RID: 226178 RVA: 0x00F6A906 File Offset: 0x00F68B06
 		public void SetRedDotVisible(bool isNew)
 		{
 			UUIItem item = base.GetItem(10);
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(isNew);
 		}
 
-		// Token: 0x0604282E RID: 272430 RVA: 0x010293D7 File Offset: 0x010275D7
+		// Token: 0x06037383 RID: 226179 RVA: 0x00F6A91B File Offset: 0x00F68B1B
 		private void OnClickLevel(EToggleState state)
 		{
 			if (this.LevelData == null)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickToggleBack(this);
 		}
 
-		// Token: 0x04022A82 RID: 141954
+		// Token: 0x0401D2DF RID: 119519
 		[Nullable(new byte[]
 		{
 			2,
@@ -271,50 +271,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<DangoBrawlLevelItem> OnClickToggleBack;
 
-		// Token: 0x04022A84 RID: 141956
+		// Token: 0x0401D2E1 RID: 119521
 		private bool IsFinalAdventure;
 
-		// Token: 0x04022A85 RID: 141957
+		// Token: 0x0401D2E2 RID: 119522
 		[Nullable(1)]
 		private const string DefaultColor = "FFFFFF";
 
-		// Token: 0x04022A86 RID: 141958
+		// Token: 0x0401D2E3 RID: 119523
 		[Nullable(1)]
 		private const string DarkColor = "B2B2B2";
 
-		// Token: 0x0200C9B6 RID: 51638
+		// Token: 0x0200B383 RID: 45955
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CEEC RID: 249580
+			// Token: 0x040377D9 RID: 227289
 			Toggle,
-			// Token: 0x0403CEED RID: 249581
+			// Token: 0x040377DA RID: 227290
 			StoryModeItem,
-			// Token: 0x0403CEEE RID: 249582
+			// Token: 0x040377DB RID: 227291
 			TexLevelRole,
-			// Token: 0x0403CEEF RID: 249583
+			// Token: 0x040377DC RID: 227292
 			TexLevelRoleSelect,
-			// Token: 0x0403CEF0 RID: 249584
+			// Token: 0x040377DD RID: 227293
 			AdventureModeItem,
-			// Token: 0x0403CEF1 RID: 249585
+			// Token: 0x040377DE RID: 227294
 			SprSword,
-			// Token: 0x0403CEF2 RID: 249586
+			// Token: 0x040377DF RID: 227295
 			SprRomanNum,
-			// Token: 0x0403CEF3 RID: 249587
+			// Token: 0x040377E0 RID: 227296
 			TxtLevelName,
-			// Token: 0x0403CEF4 RID: 249588
+			// Token: 0x040377E1 RID: 227297
 			UnlockItem,
-			// Token: 0x0403CEF5 RID: 249589
+			// Token: 0x040377E2 RID: 227298
 			LockItem,
-			// Token: 0x0403CEF6 RID: 249590
+			// Token: 0x040377E3 RID: 227299
 			RedDotItem,
-			// Token: 0x0403CEF7 RID: 249591
+			// Token: 0x040377E4 RID: 227300
 			FinishItem,
-			// Token: 0x0403CEF8 RID: 249592
+			// Token: 0x040377E5 RID: 227301
 			NormalBgItem,
-			// Token: 0x0403CEF9 RID: 249593
+			// Token: 0x040377E6 RID: 227302
 			SpecialBgItem,
-			// Token: 0x0403CEFA RID: 249594
+			// Token: 0x040377E7 RID: 227303
 			SprSwordHard
 		}
 	}

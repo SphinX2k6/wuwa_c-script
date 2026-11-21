@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D6 RID: 18134
+	// Token: 0x02003606 RID: 13830
 	public class UiNiagaraSettingModule : UiResourceLoadModule
 	{
-		// Token: 0x0602EC90 RID: 191632 RVA: 0x00AD52D8 File Offset: 0x00AD34D8
+		// Token: 0x060233CA RID: 144330 RVA: 0x00A02D7C File Offset: 0x00A00F7C
 		[NullableContext(2)]
 		public void SetNiagaraByPath([Nullable(1)] string path, UUINiagara uiNiagara, Action<bool> callback = null)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Ui
 			base.SetResourceId(uiNiagara, resourceId);
 		}
 
-		// Token: 0x0602EC91 RID: 191633 RVA: 0x00AD5364 File Offset: 0x00AD3564
+		// Token: 0x060233CB RID: 144331 RVA: 0x00A02E08 File Offset: 0x00A01008
 		[NullableContext(1)]
 		public UniTask SetNiagaraByPathAsync(string path, UUINiagara uiNiagara)
 		{

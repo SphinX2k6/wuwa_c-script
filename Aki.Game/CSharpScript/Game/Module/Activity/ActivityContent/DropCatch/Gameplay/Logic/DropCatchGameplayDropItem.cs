@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x0200672D RID: 26413
+	// Token: 0x0200567D RID: 22141
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayDropItem : IDropItemInstance
 	{
-		// Token: 0x06041EC5 RID: 270021 RVA: 0x00FFD7FC File Offset: 0x00FFB9FC
+		// Token: 0x06036A11 RID: 223761 RVA: 0x00F3EBC8 File Offset: 0x00F3CDC8
 		public UniTask OnInit(IDropCatchDropItemParams @params)
 		{
 			DropCatchGameplayDropItem.<OnInit>d__13 <OnInit>d__;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return <OnInit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041EC6 RID: 270022 RVA: 0x00FFD848 File Offset: 0x00FFBA48
+		// Token: 0x06036A12 RID: 223762 RVA: 0x00F3EC14 File Offset: 0x00F3CE14
 		private UniTask InitView()
 		{
 			DropCatchGameplayDropItem.<InitView>d__14 <InitView>d__;
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return <InitView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041EC7 RID: 270023 RVA: 0x00FFD88B File Offset: 0x00FFBA8B
+		// Token: 0x06036A13 RID: 223763 RVA: 0x00F3EC57 File Offset: 0x00F3CE57
 		public void OnTick(float deltaTime)
 		{
 			this.UpdatePosition(deltaTime);
 			this.UpdateBounds();
 		}
 
-		// Token: 0x06041EC8 RID: 270024 RVA: 0x00FFD89C File Offset: 0x00FFBA9C
+		// Token: 0x06036A14 RID: 223764 RVA: 0x00F3EC68 File Offset: 0x00F3CE68
 		private void UpdatePosition(float deltaTime)
 		{
 			double num = this.Pos.Y - (double)(this.Speed * deltaTime);
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			view.GetRootItem().SetAnchorOffset(this.Pos.ToUeVector2D(false));
 		}
 
-		// Token: 0x06041EC9 RID: 270025 RVA: 0x00FFD8FC File Offset: 0x00FFBAFC
+		// Token: 0x06036A15 RID: 223765 RVA: 0x00F3ECC8 File Offset: 0x00F3CEC8
 		private void UpdateBounds()
 		{
 			DropCatchGameplayHelper.CalculateBounds(this.Pos, this.ItemSize, this.ItemBounds);
 		}
 
-		// Token: 0x06041ECA RID: 270026 RVA: 0x00FFD918 File Offset: 0x00FFBB18
+		// Token: 0x06036A16 RID: 223766 RVA: 0x00F3ECE4 File Offset: 0x00F3CEE4
 		private bool CheckDestroy(double posY)
 		{
 			if (posY + this.ItemSize.Y / 2.0 < this.Context.GetGameplayArea().MinY)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return false;
 		}
 
-		// Token: 0x06041ECB RID: 270027 RVA: 0x00FFD968 File Offset: 0x00FFBB68
+		// Token: 0x06036A17 RID: 223767 RVA: 0x00F3ED34 File Offset: 0x00F3CF34
 		private void CheckEnableCollision()
 		{
 			IRoleInstance role = this.Context.GetGameplayRoleMgr().GetRole();
@@ -96,25 +96,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041ECC RID: 270028 RVA: 0x00FFDA06 File Offset: 0x00FFBC06
+		// Token: 0x06036A18 RID: 223768 RVA: 0x00F3EDD2 File Offset: 0x00F3CFD2
 		public IDropCatchBounds GetItemBounds()
 		{
 			return this.ItemBounds;
 		}
 
-		// Token: 0x06041ECD RID: 270029 RVA: 0x00FFDA0E File Offset: 0x00FFBC0E
+		// Token: 0x06036A19 RID: 223769 RVA: 0x00F3EDDA File Offset: 0x00F3CFDA
 		public int GetInstanceId()
 		{
 			return this.InstanceId;
 		}
 
-		// Token: 0x06041ECE RID: 270030 RVA: 0x00FFDA16 File Offset: 0x00FFBC16
+		// Token: 0x06036A1A RID: 223770 RVA: 0x00F3EDE2 File Offset: 0x00F3CFE2
 		public int GetItemId()
 		{
 			return this.ItemId;
 		}
 
-		// Token: 0x06041ECF RID: 270031 RVA: 0x00FFDA20 File Offset: 0x00FFBC20
+		// Token: 0x06036A1B RID: 223771 RVA: 0x00F3EDEC File Offset: 0x00F3CFEC
 		public unsafe void OnCollision(IRoleInstance role)
 		{
 			Log instance = Log.Instance;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.Context.GetProxy().AddDropItemRecord(this.ItemTemplate);
 		}
 
-		// Token: 0x06041ED0 RID: 270032 RVA: 0x00FFDB33 File Offset: 0x00FFBD33
+		// Token: 0x06036A1C RID: 223772 RVA: 0x00F3EEFF File Offset: 0x00F3D0FF
 		protected void OnAddScore()
 		{
 			if (this.Score == 0)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.Context.GetProxy().AddScore((float)this.Score);
 		}
 
-		// Token: 0x06041ED1 RID: 270033 RVA: 0x00FFDB55 File Offset: 0x00FFBD55
+		// Token: 0x06036A1D RID: 223773 RVA: 0x00F3EF21 File Offset: 0x00F3D121
 		protected void OnAddEnergy()
 		{
 			IRoleInstance role = this.Context.GetGameplayRoleMgr().GetRole();
@@ -171,13 +171,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			role.AddEnergy((float)this.Energy, true);
 		}
 
-		// Token: 0x06041ED2 RID: 270034 RVA: 0x00FFDB79 File Offset: 0x00FFBD79
+		// Token: 0x06036A1E RID: 223774 RVA: 0x00F3EF45 File Offset: 0x00F3D145
 		private void ExecuteEffectCommands()
 		{
 			this.Context.GetGameplayCommandMgr().ExecuteDropItemEffectCommand(this.ItemId);
 		}
 
-		// Token: 0x06041ED3 RID: 270035 RVA: 0x00FFDB94 File Offset: 0x00FFBD94
+		// Token: 0x06036A1F RID: 223775 RVA: 0x00F3EF60 File Offset: 0x00F3D160
 		protected void OnPerformance()
 		{
 			if (!(this.NiagaraType != EDropCatchDropItemNiagaraType.High))
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			AudioSystem.Instance.PostEvent("play_ui_goldcatch_com_tip");
 		}
 
-		// Token: 0x06041ED4 RID: 270036 RVA: 0x00FFDC4C File Offset: 0x00FFBE4C
+		// Token: 0x06036A20 RID: 223776 RVA: 0x00F3F018 File Offset: 0x00F3D218
 		public void OnRecycle()
 		{
 			DropCatchGameplayDropItemView view = this.View;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			view.Hide(null);
 		}
 
-		// Token: 0x06041ED5 RID: 270037 RVA: 0x00FFDC5F File Offset: 0x00FFBE5F
+		// Token: 0x06036A21 RID: 223777 RVA: 0x00F3F02B File Offset: 0x00F3D22B
 		public void Destroy()
 		{
 			DropCatchGameplayDropItemView view = this.View;
@@ -236,25 +236,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.View = null;
 		}
 
-		// Token: 0x04022586 RID: 140678
+		// Token: 0x0401CDDF RID: 118239
 		private int InstanceId;
 
-		// Token: 0x04022587 RID: 140679
+		// Token: 0x0401CDE0 RID: 118240
 		private int ItemId;
 
-		// Token: 0x04022588 RID: 140680
+		// Token: 0x0401CDE1 RID: 118241
 		private EDropCatchDropItemEffectType ItemEffectType;
 
-		// Token: 0x04022589 RID: 140681
+		// Token: 0x0401CDE2 RID: 118242
 		private float Speed;
 
-		// Token: 0x0402258A RID: 140682
+		// Token: 0x0401CDE3 RID: 118243
 		private readonly Vector2D Pos = Vector2D.Create();
 
-		// Token: 0x0402258B RID: 140683
+		// Token: 0x0401CDE4 RID: 118244
 		private readonly Vector2D ItemSize = Vector2D.Create();
 
-		// Token: 0x0402258C RID: 140684
+		// Token: 0x0401CDE5 RID: 118245
 		private readonly IDropCatchBounds ItemBounds = new IDropCatchBounds
 		{
 			Left = 0.0,
@@ -263,23 +263,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			Bottom = 0.0
 		};
 
-		// Token: 0x0402258D RID: 140685
+		// Token: 0x0401CDE6 RID: 118246
 		[Nullable(2)]
 		private DropCatchGameplayDropItemView View;
 
-		// Token: 0x0402258E RID: 140686
+		// Token: 0x0401CDE7 RID: 118247
 		private IGameplayLogicContext Context;
 
-		// Token: 0x0402258F RID: 140687
+		// Token: 0x0401CDE8 RID: 118248
 		private int Score;
 
-		// Token: 0x04022590 RID: 140688
+		// Token: 0x0401CDE9 RID: 118249
 		private int Energy;
 
-		// Token: 0x04022591 RID: 140689
+		// Token: 0x0401CDEA RID: 118250
 		private EDropCatchDropItemNiagaraType? NiagaraType;
 
-		// Token: 0x04022592 RID: 140690
+		// Token: 0x0401CDEB RID: 118251
 		private int ItemTemplate;
 	}
 }

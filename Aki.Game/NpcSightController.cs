@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003216 RID: 12822
+// Token: 0x02002785 RID: 10117
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcSightController
 {
-	// Token: 0x0601BA73 RID: 113267 RVA: 0x007994BC File Offset: 0x007976BC
+	// Token: 0x060195F8 RID: 103928 RVA: 0x007C1C58 File Offset: 0x007BFE58
 	[NullableContext(1)]
 	public NpcSightController(Entity entity)
 	{
@@ -19,7 +19,7 @@ public class NpcSightController
 		this.PerformComp = this.Entity.GetComponent<CommonNpcPerformComponent>();
 	}
 
-	// Token: 0x0601BA74 RID: 113268 RVA: 0x0079954C File Offset: 0x0079774C
+	// Token: 0x060195F9 RID: 103929 RVA: 0x007C1CE8 File Offset: 0x007BFEE8
 	public void Init()
 	{
 		CommonNpcPerformComponent performComp = this.PerformComp;
@@ -30,7 +30,7 @@ public class NpcSightController
 		performComp.HandleCachedStareAction();
 	}
 
-	// Token: 0x0601BA75 RID: 113269 RVA: 0x00799560 File Offset: 0x00797760
+	// Token: 0x060195FA RID: 103930 RVA: 0x007C1CFC File Offset: 0x007BFEFC
 	public void ChangeSightTarget([Nullable(new byte[]
 	{
 		0,
@@ -99,7 +99,7 @@ public class NpcSightController
 		this.RefreshSight(false);
 	}
 
-	// Token: 0x0601BA76 RID: 113270 RVA: 0x007996F5 File Offset: 0x007978F5
+	// Token: 0x060195FB RID: 103931 RVA: 0x007C1E91 File Offset: 0x007C0091
 	public void DelaySetBlendSpaceLookAt(bool enable)
 	{
 		if (this.CharacterAnimComp == null || this.CharacterAnimComp.EnableBlendSpaceLookAt == enable)
@@ -111,7 +111,7 @@ public class NpcSightController
 		this.BlendSpaceLookAtDelayTarget = this.GetCurrentSightTarget();
 	}
 
-	// Token: 0x0601BA77 RID: 113271 RVA: 0x00799730 File Offset: 0x00797930
+	// Token: 0x060195FC RID: 103932 RVA: 0x007C1ECC File Offset: 0x007C00CC
 	[NullableContext(1)]
 	public unsafe void EnableSightChange(bool enable, string reason)
 	{
@@ -147,7 +147,7 @@ public class NpcSightController
 		animComp.SetSightTargetItem(null);
 	}
 
-	// Token: 0x0601BA78 RID: 113272 RVA: 0x00799820 File Offset: 0x00797A20
+	// Token: 0x060195FD RID: 103933 RVA: 0x007C1FBC File Offset: 0x007C01BC
 	public unsafe void LockSightChange(EStareActionType type, bool bLock)
 	{
 		if (!bLock)
@@ -183,7 +183,7 @@ public class NpcSightController
 		this.RefreshSight(true);
 	}
 
-	// Token: 0x0601BA79 RID: 113273 RVA: 0x0079992C File Offset: 0x00797B2C
+	// Token: 0x060195FE RID: 103934 RVA: 0x007C20C8 File Offset: 0x007C02C8
 	protected void RefreshSight(bool bForce = false)
 	{
 		if (this.AnimComp == null || this.DisableSightTarget)
@@ -219,7 +219,7 @@ public class NpcSightController
 		this.AnimComp.SetSightTargetPoint(stareActionInfo2.TargetLocation);
 	}
 
-	// Token: 0x0601BA7A RID: 113274 RVA: 0x00799A54 File Offset: 0x00797C54
+	// Token: 0x060195FF RID: 103935 RVA: 0x007C21F0 File Offset: 0x007C03F0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -245,7 +245,7 @@ public class NpcSightController
 		return new OneOf<BaseActorComponent, Vector, AActor>?((animComp3 != null) ? animComp3.GetSightTargetActor() : null);
 	}
 
-	// Token: 0x0601BA7B RID: 113275 RVA: 0x00799AC8 File Offset: 0x00797CC8
+	// Token: 0x06019600 RID: 103936 RVA: 0x007C2264 File Offset: 0x007C0464
 	private bool IsSightTargetEqual([Nullable(new byte[]
 	{
 		0,
@@ -277,7 +277,7 @@ public class NpcSightController
 		return left.Value.Equals(right.Value);
 	}
 
-	// Token: 0x0601BA7C RID: 113276 RVA: 0x00799C0C File Offset: 0x00797E0C
+	// Token: 0x06019601 RID: 103937 RVA: 0x007C23A8 File Offset: 0x007C05A8
 	private void TryApplyDelayedBlendSpaceLookAt([Nullable(new byte[]
 	{
 		0,
@@ -302,14 +302,14 @@ public class NpcSightController
 		}
 	}
 
-	// Token: 0x0601BA7D RID: 113277 RVA: 0x00799C65 File Offset: 0x00797E65
+	// Token: 0x06019602 RID: 103938 RVA: 0x007C2401 File Offset: 0x007C0601
 	private void ClearDelayedBlendSpaceLookAt()
 	{
 		this.PendingBlendSpaceLookAt = NpcSightController.EBlendSpacePendingState.None;
 		this.BlendSpaceLookAtDelayTarget = null;
 	}
 
-	// Token: 0x0601BA7E RID: 113278 RVA: 0x00799C7C File Offset: 0x00797E7C
+	// Token: 0x06019603 RID: 103939 RVA: 0x007C2418 File Offset: 0x007C0618
 	protected void RefreshTargetType()
 	{
 		StareActionInfo stareActionInfo;
@@ -319,7 +319,7 @@ public class NpcSightController
 		}
 	}
 
-	// Token: 0x0601BA7F RID: 113279 RVA: 0x00799CBF File Offset: 0x00797EBF
+	// Token: 0x06019604 RID: 103940 RVA: 0x007C245B File Offset: 0x007C065B
 	protected void RefreshTargetLockType()
 	{
 		while (this.LockActionType >= 0 && !this.LockedStareActionTypeSet.Contains((EStareActionType)this.LockActionType))
@@ -328,45 +328,45 @@ public class NpcSightController
 		}
 	}
 
-	// Token: 0x0400D982 RID: 55682
+	// Token: 0x0400DE21 RID: 56865
 	protected Entity Entity;
 
-	// Token: 0x0400D983 RID: 55683
+	// Token: 0x0400DE22 RID: 56866
 	protected BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400D984 RID: 55684
+	// Token: 0x0400DE23 RID: 56867
 	protected BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400D985 RID: 55685
+	// Token: 0x0400DE24 RID: 56868
 	protected CharacterAnimationComponent CharacterAnimComp;
 
-	// Token: 0x0400D986 RID: 55686
+	// Token: 0x0400DE25 RID: 56869
 	protected CommonNpcPerformComponent PerformComp;
 
-	// Token: 0x0400D987 RID: 55687
+	// Token: 0x0400DE26 RID: 56870
 	[Nullable(1)]
 	protected Dictionary<EStareActionType, StareActionInfo> StareActionStackMap = new Dictionary<EStareActionType, StareActionInfo>();
 
-	// Token: 0x0400D988 RID: 55688
+	// Token: 0x0400DE27 RID: 56871
 	protected int TarActionType = -1;
 
-	// Token: 0x0400D989 RID: 55689
+	// Token: 0x0400DE28 RID: 56872
 	protected int CurActionType = -1;
 
-	// Token: 0x0400D98A RID: 55690
+	// Token: 0x0400DE29 RID: 56873
 	[Nullable(1)]
 	protected HashSet<EStareActionType> LockedStareActionTypeSet = new HashSet<EStareActionType>();
 
-	// Token: 0x0400D98B RID: 55691
+	// Token: 0x0400DE2A RID: 56874
 	protected int LockActionType = -1;
 
-	// Token: 0x0400D98C RID: 55692
+	// Token: 0x0400DE2B RID: 56875
 	protected bool DisableSightTarget;
 
-	// Token: 0x0400D98D RID: 55693
+	// Token: 0x0400DE2C RID: 56876
 	private NpcSightController.EBlendSpacePendingState PendingBlendSpaceLookAt = NpcSightController.EBlendSpacePendingState.None;
 
-	// Token: 0x0400D98E RID: 55694
+	// Token: 0x0400DE2D RID: 56877
 	[Nullable(new byte[]
 	{
 		0,
@@ -376,15 +376,15 @@ public class NpcSightController
 	})]
 	private OneOf<BaseActorComponent, Vector, AActor>? BlendSpaceLookAtDelayTarget;
 
-	// Token: 0x0200971B RID: 38683
+	// Token: 0x02008941 RID: 35137
 	[NullableContext(0)]
 	private enum EBlendSpacePendingState
 	{
-		// Token: 0x040305FA RID: 198138
+		// Token: 0x0402BC90 RID: 179344
 		On,
-		// Token: 0x040305FB RID: 198139
+		// Token: 0x0402BC91 RID: 179345
 		Off,
-		// Token: 0x040305FC RID: 198140
+		// Token: 0x0402BC92 RID: 179346
 		None
 	}
 }

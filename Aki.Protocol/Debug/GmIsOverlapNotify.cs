@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Debug
 {
-	// Token: 0x0200169A RID: 5786
+	// Token: 0x02001716 RID: 5910
 	[NetMessage(EMessageId.GmIsOverlapNotify)]
 	public sealed class GmIsOverlapNotify : IMessage<GmIsOverlapNotify>, IMessage, IEquatable<GmIsOverlapNotify>, IDeepCloneable<GmIsOverlapNotify>, IBufferMessage
 	{
-		// Token: 0x0601D001 RID: 118785 RVA: 0x0043EC75 File Offset: 0x0043CE75
+		// Token: 0x0601DAD0 RID: 121552 RVA: 0x0045A9B5 File Offset: 0x00458BB5
 		[NullableContext(1)]
 		public static GmIsOverlapNotify Create()
 		{
 			return new GmIsOverlapNotify();
 		}
 
-		// Token: 0x17006268 RID: 25192
-		// (get) Token: 0x0601D002 RID: 118786 RVA: 0x0043EC7C File Offset: 0x0043CE7C
+		// Token: 0x1700650D RID: 25869
+		// (get) Token: 0x0601DAD1 RID: 121553 RVA: 0x0045A9BC File Offset: 0x00458BBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006269 RID: 25193
-		// (get) Token: 0x0601D003 RID: 118787 RVA: 0x0043EC7F File Offset: 0x0043CE7F
+		// Token: 0x1700650E RID: 25870
+		// (get) Token: 0x0601DAD2 RID: 121554 RVA: 0x0045A9BF File Offset: 0x00458BBF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D004 RID: 118788 RVA: 0x0043EC86 File Offset: 0x0043CE86
+		// Token: 0x0601DAD3 RID: 121555 RVA: 0x0045A9C6 File Offset: 0x00458BC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmIsOverlapNotify()
 		{
 		}
 
-		// Token: 0x0601D005 RID: 118789 RVA: 0x0043EC90 File Offset: 0x0043CE90
+		// Token: 0x0601DAD4 RID: 121556 RVA: 0x0045A9D0 File Offset: 0x00458BD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmIsOverlapNotify(GmIsOverlapNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol.Debug
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601D006 RID: 118790 RVA: 0x0043ECE8 File Offset: 0x0043CEE8
+		// Token: 0x0601DAD5 RID: 121557 RVA: 0x0045AA28 File Offset: 0x00458C28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GmIsOverlapNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol.Debug
 			return new GmIsOverlapNotify(this);
 		}
 
-		// Token: 0x1700626A RID: 25194
-		// (get) Token: 0x0601D007 RID: 118791 RVA: 0x0043ECF0 File Offset: 0x0043CEF0
-		// (set) Token: 0x0601D008 RID: 118792 RVA: 0x0043ECF8 File Offset: 0x0043CEF8
+		// Token: 0x1700650F RID: 25871
+		// (get) Token: 0x0601DAD6 RID: 121558 RVA: 0x0045AA30 File Offset: 0x00458C30
+		// (set) Token: 0x0601DAD7 RID: 121559 RVA: 0x0045AA38 File Offset: 0x00458C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float CellSize
@@ -86,9 +86,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700626B RID: 25195
-		// (get) Token: 0x0601D009 RID: 118793 RVA: 0x0043ED01 File Offset: 0x0043CF01
-		// (set) Token: 0x0601D00A RID: 118794 RVA: 0x0043ED09 File Offset: 0x0043CF09
+		// Token: 0x17006510 RID: 25872
+		// (get) Token: 0x0601DAD8 RID: 121560 RVA: 0x0045AA41 File Offset: 0x00458C41
+		// (set) Token: 0x0601DAD9 RID: 121561 RVA: 0x0045AA49 File Offset: 0x00458C49
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VoxelSpan Box
@@ -103,9 +103,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700626C RID: 25196
-		// (get) Token: 0x0601D00B RID: 118795 RVA: 0x0043ED12 File Offset: 0x0043CF12
-		// (set) Token: 0x0601D00C RID: 118796 RVA: 0x0043ED1A File Offset: 0x0043CF1A
+		// Token: 0x17006511 RID: 25873
+		// (get) Token: 0x0601DADA RID: 121562 RVA: 0x0045AA52 File Offset: 0x00458C52
+		// (set) Token: 0x0601DADB RID: 121563 RVA: 0x0045AA5A File Offset: 0x00458C5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsOverlap
@@ -120,7 +120,7 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D00D RID: 118797 RVA: 0x0043ED23 File Offset: 0x0043CF23
+		// Token: 0x0601DADC RID: 121564 RVA: 0x0045AA63 File Offset: 0x00458C63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol.Debug
 			return this.Equals(other as GmIsOverlapNotify);
 		}
 
-		// Token: 0x0601D00E RID: 118798 RVA: 0x0043ED34 File Offset: 0x0043CF34
+		// Token: 0x0601DADD RID: 121565 RVA: 0x0045AA74 File Offset: 0x00458C74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(GmIsOverlapNotify other)
@@ -136,7 +136,7 @@ namespace Aki.Protocol.Debug
 			return other != null && (other == this || (ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.CellSize, other.CellSize) && object.Equals(this.Box, other.Box) && this.IsOverlap == other.IsOverlap && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601D00F RID: 118799 RVA: 0x0043ED9C File Offset: 0x0043CF9C
+		// Token: 0x0601DADE RID: 121566 RVA: 0x0045AADC File Offset: 0x00458CDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -161,7 +161,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601D010 RID: 118800 RVA: 0x0043EE11 File Offset: 0x0043D011
+		// Token: 0x0601DADF RID: 121567 RVA: 0x0045AB51 File Offset: 0x00458D51
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -169,7 +169,7 @@ namespace Aki.Protocol.Debug
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601D011 RID: 118801 RVA: 0x0043EE1E File Offset: 0x0043D01E
+		// Token: 0x0601DAE0 RID: 121568 RVA: 0x0045AB5E File Offset: 0x00458D5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -177,25 +177,25 @@ namespace Aki.Protocol.Debug
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601D012 RID: 118802 RVA: 0x0043EE28 File Offset: 0x0043D028
+		// Token: 0x0601DAE1 RID: 121569 RVA: 0x0045AB68 File Offset: 0x00458D68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.CellSize != 0f)
+			{
+				output.WriteRawTag(13);
+				output.WriteFloat(this.CellSize);
+			}
 			if (this.IsOverlap)
 			{
-				output.WriteRawTag(24);
+				output.WriteRawTag(88);
 				output.WriteBool(this.IsOverlap);
 			}
 			if (this.box_ != null)
 			{
-				output.WriteRawTag(34);
+				output.WriteRawTag(122);
 				output.WriteMessage(this.Box);
-			}
-			if (this.CellSize != 0f)
-			{
-				output.WriteRawTag(77);
-				output.WriteFloat(this.CellSize);
 			}
 			if (this._unknownFields != null)
 			{
@@ -203,7 +203,7 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601D013 RID: 118803 RVA: 0x0043EEA4 File Offset: 0x0043D0A4
+		// Token: 0x0601DAE2 RID: 121570 RVA: 0x0045ABE4 File Offset: 0x00458DE4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -228,7 +228,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601D014 RID: 118804 RVA: 0x0043EF00 File Offset: 0x0043D100
+		// Token: 0x0601DAE3 RID: 121571 RVA: 0x0045AC40 File Offset: 0x00458E40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(GmIsOverlapNotify other)
@@ -256,7 +256,7 @@ namespace Aki.Protocol.Debug
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601D015 RID: 118805 RVA: 0x0043EF81 File Offset: 0x0043D181
+		// Token: 0x0601DAE4 RID: 121572 RVA: 0x0045ACC1 File Offset: 0x00458EC1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -264,7 +264,7 @@ namespace Aki.Protocol.Debug
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601D016 RID: 118806 RVA: 0x0043EF8C File Offset: 0x0043D18C
+		// Token: 0x0601DAE5 RID: 121573 RVA: 0x0045ACCC File Offset: 0x00458ECC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -276,54 +276,54 @@ namespace Aki.Protocol.Debug
 				{
 					return;
 				}
-				if (num != 24U)
+				if (num != 13U)
 				{
-					if (num != 34U)
+					if (num != 88U)
 					{
-						if (num != 77U)
+						if (num != 122U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.CellSize = input.ReadFloat();
+							if (this.box_ == null)
+							{
+								this.Box = new VoxelSpan();
+							}
+							input.ReadMessage(this.Box);
 						}
 					}
 					else
 					{
-						if (this.box_ == null)
-						{
-							this.Box = new VoxelSpan();
-						}
-						input.ReadMessage(this.Box);
+						this.IsOverlap = input.ReadBool();
 					}
 				}
 				else
 				{
-					this.IsOverlap = input.ReadBool();
+					this.CellSize = input.ReadFloat();
 				}
 			}
 		}
 
-		// Token: 0x0400C3D0 RID: 50128
+		// Token: 0x0400C8FF RID: 51455
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C3D1 RID: 50129
-		public const int CellSizeFieldNumber = 9;
+		// Token: 0x0400C900 RID: 51456
+		public const int CellSizeFieldNumber = 1;
 
-		// Token: 0x0400C3D2 RID: 50130
+		// Token: 0x0400C901 RID: 51457
 		private float cellSize_;
 
-		// Token: 0x0400C3D3 RID: 50131
-		public const int BoxFieldNumber = 4;
+		// Token: 0x0400C902 RID: 51458
+		public const int BoxFieldNumber = 15;
 
-		// Token: 0x0400C3D4 RID: 50132
+		// Token: 0x0400C903 RID: 51459
 		private VoxelSpan box_;
 
-		// Token: 0x0400C3D5 RID: 50133
-		public const int IsOverlapFieldNumber = 3;
+		// Token: 0x0400C904 RID: 51460
+		public const int IsOverlapFieldNumber = 11;
 
-		// Token: 0x0400C3D6 RID: 50134
+		// Token: 0x0400C905 RID: 51461
 		private bool isOverlap_;
 	}
 }

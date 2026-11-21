@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013D9 RID: 5081
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001530 RID: 5424
 	public class IFinishTrapDefenseCondition : IQuestCondition
 	{
-		// Token: 0x060073E9 RID: 29673 RVA: 0x00115CF0 File Offset: 0x00113EF0
+		// Token: 0x06007AAA RID: 31402 RVA: 0x001246D4 File Offset: 0x001228D4
 		public static IFinishTrapDefenseCondition Create(IFinishTrapDefenseCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700260A RID: 9738
-		// (get) Token: 0x060073EA RID: 29674 RVA: 0x00115D0F File Offset: 0x00113F0F
+		// Token: 0x170027EC RID: 10220
+		// (get) Token: 0x06007AAB RID: 31403 RVA: 0x001246F3 File Offset: 0x001228F3
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700260B RID: 9739
-		// (get) Token: 0x060073EB RID: 29675 RVA: 0x00115D1C File Offset: 0x00113F1C
+		// Token: 0x170027ED RID: 10221
+		// (get) Token: 0x06007AAC RID: 31404 RVA: 0x00124700 File Offset: 0x00122900
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700260C RID: 9740
-		// (get) Token: 0x060073EC RID: 29676 RVA: 0x00115D50 File Offset: 0x00113F50
+		// Token: 0x170027EE RID: 10222
+		// (get) Token: 0x06007AAD RID: 31405 RVA: 0x00124734 File Offset: 0x00122934
 		public virtual ITrapDefenseConditionStepBase Step
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700260D RID: 9741
-		// (get) Token: 0x060073ED RID: 29677 RVA: 0x00115D7F File Offset: 0x00113F7F
+		// Token: 0x170027EF RID: 10223
+		// (get) Token: 0x06007AAE RID: 31406 RVA: 0x00124763 File Offset: 0x00122963
 		public virtual VarRef Batch
 		{
 			get
@@ -84,8 +82,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700260E RID: 9742
-		// (get) Token: 0x060073EE RID: 29678 RVA: 0x00115DB0 File Offset: 0x00113FB0
+		// Token: 0x170027F0 RID: 10224
+		// (get) Token: 0x06007AAF RID: 31407 RVA: 0x00124794 File Offset: 0x00122994
 		public virtual bool? NeedArchive
 		{
 			get
@@ -98,26 +96,26 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004317 RID: 17175
+		// Token: 0x040046A8 RID: 18088
 		private IFinishTrapDefenseCondition Instance;
 
-		// Token: 0x04004318 RID: 17176
+		// Token: 0x040046A9 RID: 18089
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004319 RID: 17177
+		// Token: 0x040046AA RID: 18090
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400431A RID: 17178
+		// Token: 0x040046AB RID: 18091
 		private ITrapDefenseConditionStepBase _StepCache;
 
-		// Token: 0x0400431B RID: 17179
+		// Token: 0x040046AC RID: 18092
 		private bool _StepInited;
 
-		// Token: 0x0400431C RID: 17180
+		// Token: 0x040046AD RID: 18093
 		private VarRef _BatchCache;
 
-		// Token: 0x0400431D RID: 17181
+		// Token: 0x040046AE RID: 18094
 		private bool _BatchInited;
 	}
 }

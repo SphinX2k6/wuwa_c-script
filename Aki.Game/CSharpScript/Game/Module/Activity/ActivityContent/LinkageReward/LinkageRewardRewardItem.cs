@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006557 RID: 25943
+	// Token: 0x020054D5 RID: 21717
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 	})]
 	public class LinkageRewardRewardItem : GridProxyAbstract<TimePointRewardData>
 	{
-		// Token: 0x06041029 RID: 266281 RVA: 0x00FC14A8 File Offset: 0x00FBF6A8
+		// Token: 0x06035CEE RID: 220398 RVA: 0x00F08490 File Offset: 0x00F06690
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604102A RID: 266282 RVA: 0x00FC1658 File Offset: 0x00FBF858
+		// Token: 0x06035CEF RID: 220399 RVA: 0x00F08640 File Offset: 0x00F06840
 		protected override UniTask OnBeforeStartAsync()
 		{
 			LinkageRewardRewardItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604102B RID: 266283 RVA: 0x00FC169C File Offset: 0x00FBF89C
+		// Token: 0x06035CF0 RID: 220400 RVA: 0x00F08684 File Offset: 0x00F06884
 		[NullableContext(1)]
 		public override void Refresh(TimePointRewardData data, bool isSelected, int gridIndex)
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			this.RewardItemGrid.Apply<PropSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x0604102C RID: 266284 RVA: 0x00FC17B0 File Offset: 0x00FBF9B0
+		// Token: 0x06035CF1 RID: 220401 RVA: 0x00F08798 File Offset: 0x00F06998
 		public UUIItem GetNavigationFocusItem()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return rootItem;
 		}
 
-		// Token: 0x0604102D RID: 266285 RVA: 0x00FC1830 File Offset: 0x00FBFA30
+		// Token: 0x06035CF2 RID: 220402 RVA: 0x00F08818 File Offset: 0x00F06A18
 		private void ClearRewardVisual()
 		{
 			UUIItem item = base.GetItem(6);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			item4.SetUIActive(false);
 		}
 
-		// Token: 0x0604102E RID: 266286 RVA: 0x00FC18D8 File Offset: 0x00FBFAD8
+		// Token: 0x06035CF3 RID: 220403 RVA: 0x00F088C0 File Offset: 0x00F06AC0
 		private void ApplyRewardState(ETimePointRewardState state, int gridIndex)
 		{
 			bool uiactive = state == ETimePointRewardState.Lock;
@@ -243,19 +243,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			sprite3.SetUIActive(uiactive3);
 		}
 
-		// Token: 0x0604102F RID: 266287 RVA: 0x00FC19DA File Offset: 0x00FBFBDA
+		// Token: 0x06035CF4 RID: 220404 RVA: 0x00F089C2 File Offset: 0x00F06BC2
 		private void OnClickedButton()
 		{
 			this.TryHandleRewardClick();
 		}
 
-		// Token: 0x06041030 RID: 266288 RVA: 0x00FC19E2 File Offset: 0x00FBFBE2
+		// Token: 0x06035CF5 RID: 220405 RVA: 0x00F089CA File Offset: 0x00F06BCA
 		private void OnClickedGrid()
 		{
 			this.TryHandleRewardClick();
 		}
 
-		// Token: 0x06041031 RID: 266289 RVA: 0x00FC19EC File Offset: 0x00FBFBEC
+		// Token: 0x06035CF6 RID: 220406 RVA: 0x00F089D4 File Offset: 0x00F06BD4
 		private void TryHandleRewardClick()
 		{
 			TimePointRewardData data = this.Data;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			{
 				if (this.TipItemConfigId > 0)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(this.TipItemConfigId, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(this.TipItemConfigId, true, null, false);
 				}
 				return;
 			}
@@ -275,50 +275,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			onClickToGet(this.Data.Id, base.GridIndex, false);
 		}
 
-		// Token: 0x04021E59 RID: 138841
+		// Token: 0x0401C78A RID: 116618
 		private TimePointRewardData Data;
 
-		// Token: 0x04021E5A RID: 138842
+		// Token: 0x0401C78B RID: 116619
 		private SmallItemGrid RewardItemGrid;
 
-		// Token: 0x04021E5B RID: 138843
+		// Token: 0x0401C78C RID: 116620
 		private int TipItemConfigId;
 
-		// Token: 0x04021E5C RID: 138844
+		// Token: 0x0401C78D RID: 116621
 		public Action<int, int, bool> OnClickToGet;
 
-		// Token: 0x0200C74B RID: 51019
+		// Token: 0x0200B130 RID: 45360
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403C363 RID: 246627
+			// Token: 0x04036CB5 RID: 224437
 			public const int BtnReward = 0;
 
-			// Token: 0x0403C364 RID: 246628
+			// Token: 0x04036CB6 RID: 224438
 			public const int TxtDay = 1;
 
-			// Token: 0x0403C365 RID: 246629
+			// Token: 0x04036CB7 RID: 224439
 			public const int SprBgLock = 2;
 
-			// Token: 0x0403C366 RID: 246630
+			// Token: 0x04036CB8 RID: 224440
 			public const int SprBgSelect = 3;
 
-			// Token: 0x0403C367 RID: 246631
+			// Token: 0x04036CB9 RID: 224441
 			public const int SprBgFinish = 4;
 
-			// Token: 0x0403C368 RID: 246632
+			// Token: 0x04036CBA RID: 224442
 			public const int UiItemItemBaseB = 5;
 
-			// Token: 0x0403C369 RID: 246633
+			// Token: 0x04036CBB RID: 224443
 			public const int PnlRectLock = 6;
 
-			// Token: 0x0403C36A RID: 246634
+			// Token: 0x04036CBC RID: 224444
 			public const int PnlRectSelect = 7;
 
-			// Token: 0x0403C36B RID: 246635
+			// Token: 0x04036CBD RID: 224445
 			public const int PnlRectFinish = 8;
 
-			// Token: 0x0403C36C RID: 246636
+			// Token: 0x04036CBE RID: 224446
 			public const int ItemRedDot = 9;
 		}
 	}

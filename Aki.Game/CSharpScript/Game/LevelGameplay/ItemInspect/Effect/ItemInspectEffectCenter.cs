@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 {
-	// Token: 0x02006DF4 RID: 28148
+	// Token: 0x02005F73 RID: 24435
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemInspectEffectCenter
 	{
-		// Token: 0x06044ABE RID: 281278 RVA: 0x010F35A8 File Offset: 0x010F17A8
+		// Token: 0x0603AC22 RID: 240674 RVA: 0x0109D870 File Offset: 0x0109BA70
 		public void Init()
 		{
 			this.RegisterEffect(EInteractEffectType.ModifyTipText, () => new ItemInspectEffectModifyTipText(), true);
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			this.RegisterEffect(EInteractEffectType.TriggerVoiceDialogues, () => new ItemInspectEffectTriggerVoiceDialogues(), true);
 		}
 
-		// Token: 0x06044ABF RID: 281279 RVA: 0x010F3654 File Offset: 0x010F1854
+		// Token: 0x0603AC23 RID: 240675 RVA: 0x0109D91C File Offset: 0x0109BB1C
 		private void RegisterEffect(EInteractEffectType type, Func<ItemInspectEffectBase> effectClass, bool repeatable = false)
 		{
 			ItemInspectEffectDefine itemInspectEffectDefine = new ItemInspectEffectDefine();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			this.EffectMap[type] = itemInspectEffectDefine;
 		}
 
-		// Token: 0x06044AC0 RID: 281280 RVA: 0x010F367C File Offset: 0x010F187C
+		// Token: 0x0603AC24 RID: 240676 RVA: 0x0109D944 File Offset: 0x0109BB44
 		public void ExecuteEffects(List<IInteractEffect> effectConfigs, bool isChecked, float protectTime, [Nullable(2)] Action onFinish = null)
 		{
 			this.ClearEffects();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			this.CheckFinish();
 		}
 
-		// Token: 0x06044AC1 RID: 281281 RVA: 0x010F3754 File Offset: 0x010F1954
+		// Token: 0x0603AC25 RID: 240677 RVA: 0x0109DA1C File Offset: 0x0109BC1C
 		public void ClearEffects()
 		{
 			this.ExecutingEffectSet.Clear();
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			this.OnExecuteEffectsFinish = null;
 		}
 
-		// Token: 0x06044AC2 RID: 281282 RVA: 0x010F3781 File Offset: 0x010F1981
+		// Token: 0x0603AC26 RID: 240678 RVA: 0x0109DA49 File Offset: 0x0109BC49
 		private void OnExecuteEffectFinish(bool result, ItemInspectEffectBase effect)
 		{
 			this.ExecutingEffectSet.Remove(effect);
 			this.CheckFinish();
 		}
 
-		// Token: 0x06044AC3 RID: 281283 RVA: 0x010F3796 File Offset: 0x010F1996
+		// Token: 0x0603AC27 RID: 240679 RVA: 0x0109DA5E File Offset: 0x0109BC5E
 		private void CheckFinish()
 		{
 			if (this.ExecutingEffectSet.Count == 0 && this.ProtectHandle == null)
@@ -87,17 +87,17 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Effect
 			}
 		}
 
-		// Token: 0x04023BA0 RID: 146336
+		// Token: 0x0401EE42 RID: 126530
 		private readonly Dictionary<EInteractEffectType, ItemInspectEffectDefine> EffectMap = new Dictionary<EInteractEffectType, ItemInspectEffectDefine>();
 
-		// Token: 0x04023BA1 RID: 146337
+		// Token: 0x0401EE43 RID: 126531
 		private readonly HashSet<ItemInspectEffectBase> ExecutingEffectSet = new HashSet<ItemInspectEffectBase>();
 
-		// Token: 0x04023BA2 RID: 146338
+		// Token: 0x0401EE44 RID: 126532
 		[Nullable(2)]
 		private Action OnExecuteEffectsFinish;
 
-		// Token: 0x04023BA3 RID: 146339
+		// Token: 0x0401EE45 RID: 126533
 		[Nullable(2)]
 		private TimerHandle ProtectHandle;
 	}

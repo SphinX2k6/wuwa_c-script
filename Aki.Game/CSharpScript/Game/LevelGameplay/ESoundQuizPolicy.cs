@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006984 RID: 27012
+	// Token: 0x02005AE0 RID: 23264
 	public enum ESoundQuizPolicy
 	{
-		// Token: 0x0402304F RID: 143439
+		// Token: 0x0401E239 RID: 123449
 		AssignIndividual,
-		// Token: 0x04023050 RID: 143440
+		// Token: 0x0401E23A RID: 123450
 		AssignType,
-		// Token: 0x04023051 RID: 143441
+		// Token: 0x0401E23B RID: 123451
 		NoAssign
 	}
 }

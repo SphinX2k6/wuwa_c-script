@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015A2 RID: 5538
+	// Token: 0x02001614 RID: 5652
 	public enum BathCameraType
 	{
-		// Token: 0x0400A822 RID: 43042
+		// Token: 0x0400ACA1 RID: 44193
 		[OriginalName("Third")]
 		Third,
-		// Token: 0x0400A823 RID: 43043
+		// Token: 0x0400ACA2 RID: 44194
 		[OriginalName("First")]
 		First
 	}

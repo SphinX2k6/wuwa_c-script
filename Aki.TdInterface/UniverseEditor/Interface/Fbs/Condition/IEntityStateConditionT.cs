@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C1A RID: 19482
+	// Token: 0x02005107 RID: 20743
 	public class IEntityStateConditionT
 	{
-		// Token: 0x17008D89 RID: 36233
-		// (get) Token: 0x0601EDD7 RID: 126423 RVA: 0x004521E7 File Offset: 0x004503E7
-		// (set) Token: 0x0601EDD8 RID: 126424 RVA: 0x004521EF File Offset: 0x004503EF
+		// Token: 0x170094AD RID: 38061
+		// (get) Token: 0x060209BD RID: 133565 RVA: 0x0048584F File Offset: 0x00483A4F
+		// (set) Token: 0x060209BE RID: 133566 RVA: 0x00485857 File Offset: 0x00483A57
 		public int EntityId { get; set; }
 
-		// Token: 0x17008D8A RID: 36234
-		// (get) Token: 0x0601EDD9 RID: 126425 RVA: 0x004521F8 File Offset: 0x004503F8
-		// (set) Token: 0x0601EDDA RID: 126426 RVA: 0x00452200 File Offset: 0x00450400
+		// Token: 0x170094AE RID: 38062
+		// (get) Token: 0x060209BF RID: 133567 RVA: 0x00485860 File Offset: 0x00483A60
+		// (set) Token: 0x060209C0 RID: 133568 RVA: 0x00485868 File Offset: 0x00483A68
 		public string State { get; set; }
 
-		// Token: 0x0601EDDB RID: 126427 RVA: 0x00452209 File Offset: 0x00450409
+		// Token: 0x060209C1 RID: 133569 RVA: 0x00485871 File Offset: 0x00483A71
 		public IEntityStateConditionT()
 		{
 			this.EntityId = 0;

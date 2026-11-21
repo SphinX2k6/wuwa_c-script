@@ -12,41 +12,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 {
-	// Token: 0x020047C5 RID: 18373
+	// Token: 0x020036F6 RID: 14070
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapSecondaryUiAutoPilotContext
 	{
-		// Token: 0x17007892 RID: 30866
-		// (get) Token: 0x06030213 RID: 197139 RVA: 0x00B279A6 File Offset: 0x00B25BA6
-		// (set) Token: 0x06030214 RID: 197140 RVA: 0x00B279AE File Offset: 0x00B25BAE
+		// Token: 0x17004B4F RID: 19279
+		// (get) Token: 0x060249E3 RID: 149987 RVA: 0x00A577B2 File Offset: 0x00A559B2
+		// (set) Token: 0x060249E4 RID: 149988 RVA: 0x00A577BA File Offset: 0x00A559BA
 		public WorldMapSecondaryUiContext LayoutContext { get; private set; }
 
-		// Token: 0x17007893 RID: 30867
-		// (get) Token: 0x06030215 RID: 197141 RVA: 0x00B279B7 File Offset: 0x00B25BB7
-		// (set) Token: 0x06030216 RID: 197142 RVA: 0x00B279BF File Offset: 0x00B25BBF
+		// Token: 0x17004B50 RID: 19280
+		// (get) Token: 0x060249E5 RID: 149989 RVA: 0x00A577C3 File Offset: 0x00A559C3
+		// (set) Token: 0x060249E6 RID: 149990 RVA: 0x00A577CB File Offset: 0x00A559CB
 		[Nullable(2)]
 		public Action<MarkItem> RefreshPanelCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x06030217 RID: 197143 RVA: 0x00B279C8 File Offset: 0x00B25BC8
+		// Token: 0x060249E7 RID: 149991 RVA: 0x00A577D4 File Offset: 0x00A559D4
 		public WorldMapSecondaryUiAutoPilotContext(WorldMapSecondaryUiContext layoutContext)
 		{
 			this.LayoutContext = layoutContext;
 		}
 
-		// Token: 0x06030218 RID: 197144 RVA: 0x00B279D7 File Offset: 0x00B25BD7
+		// Token: 0x060249E8 RID: 149992 RVA: 0x00A577E3 File Offset: 0x00A559E3
 		public void SetUiParent(UUIItem uiParent)
 		{
 			this.UiParent = uiParent;
 		}
 
-		// Token: 0x06030219 RID: 197145 RVA: 0x00B279E0 File Offset: 0x00B25BE0
+		// Token: 0x060249E9 RID: 149993 RVA: 0x00A577EC File Offset: 0x00A559EC
 		public void SetDownStateBtnRoot(UUIItem downStateBtnRoot)
 		{
 			this.DownStateBtnRoot = downStateBtnRoot;
 		}
 
-		// Token: 0x0603021A RID: 197146 RVA: 0x00B279E9 File Offset: 0x00B25BE9
+		// Token: 0x060249EA RID: 149994 RVA: 0x00A577F5 File Offset: 0x00A559F5
 		public void SetDownStateBtnRootActive(bool isActive)
 		{
 			UUIItem downStateBtnRoot = this.DownStateBtnRoot;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			downStateBtnRoot.SetUIActive(isActive);
 		}
 
-		// Token: 0x0603021B RID: 197147 RVA: 0x00B279FC File Offset: 0x00B25BFC
+		// Token: 0x060249EB RID: 149995 RVA: 0x00A57808 File Offset: 0x00A55A08
 		public void SetAutoPilotNavBtnActive(bool isActive)
 		{
 			AutoPilotNavBtnView autoPilotNavBtnView = this.AutoPilotNavBtnView;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			originalItem.SetUIActive(isActive);
 		}
 
-		// Token: 0x0603021C RID: 197148 RVA: 0x00B27A19 File Offset: 0x00B25C19
+		// Token: 0x060249EC RID: 149996 RVA: 0x00A57825 File Offset: 0x00A55A25
 		public void UpdateAutoPilotNavBtn(bool isAutoPilotTracked, bool isInteractive)
 		{
 			AutoPilotNavBtnView autoPilotNavBtnView = this.AutoPilotNavBtnView;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			autoPilotNavBtnView.RefreshUi(isAutoPilotTracked, isInteractive);
 		}
 
-		// Token: 0x0603021D RID: 197149 RVA: 0x00B27A30 File Offset: 0x00B25C30
+		// Token: 0x060249ED RID: 149997 RVA: 0x00A5783C File Offset: 0x00A55A3C
 		public void RefreshAutoPilotTrackBtnGroup(bool isAutoPilotTrack)
 		{
 			AutoPilotTrackBtnGroup autoPilotTrackBtnGroup = this.AutoPilotTrackBtnGroup;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}
 		}
 
-		// Token: 0x0603021E RID: 197150 RVA: 0x00B27A8C File Offset: 0x00B25C8C
+		// Token: 0x060249EE RID: 149998 RVA: 0x00A57898 File Offset: 0x00A55A98
 		public void SetBtnGoQuickEnable(bool isEnable)
 		{
 			AutoPilotTrackBtnGroup autoPilotTrackBtnGroup = this.AutoPilotTrackBtnGroup;
@@ -114,20 +114,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			autoPilotTrackBtnGroup.SetBtnGoQuickEnable(isEnable);
 		}
 
-		// Token: 0x0603021F RID: 197151 RVA: 0x00B27A9F File Offset: 0x00B25C9F
+		// Token: 0x060249EF RID: 149999 RVA: 0x00A578AB File Offset: 0x00A55AAB
 		public void SetCloseSecondaryUiFunction(Action func)
 		{
 			this.CloseSecondaryUiFunction = func;
 		}
 
-		// Token: 0x06030220 RID: 197152 RVA: 0x00B27AA8 File Offset: 0x00B25CA8
+		// Token: 0x060249F0 RID: 150000 RVA: 0x00A578B4 File Offset: 0x00A55AB4
 		[NullableContext(2)]
 		public void SetMap(BaseMap map)
 		{
 			this.Map = map;
 		}
 
-		// Token: 0x06030221 RID: 197153 RVA: 0x00B27AB4 File Offset: 0x00B25CB4
+		// Token: 0x060249F1 RID: 150001 RVA: 0x00A578C0 File Offset: 0x00A55AC0
 		public UniTask InitAutoPilotUi()
 		{
 			WorldMapSecondaryUiAutoPilotContext.<InitAutoPilotUi>d__24 <InitAutoPilotUi>d__;
@@ -138,19 +138,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return <InitAutoPilotUi>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030222 RID: 197154 RVA: 0x00B27AF7 File Offset: 0x00B25CF7
+		// Token: 0x060249F2 RID: 150002 RVA: 0x00A57903 File Offset: 0x00A55B03
 		private void OnAutoPilotNavBtnClick()
 		{
 			this.OnHandleTrackAutoPilot(true).Forget();
 		}
 
-		// Token: 0x06030223 RID: 197155 RVA: 0x00B27B05 File Offset: 0x00B25D05
+		// Token: 0x060249F3 RID: 150003 RVA: 0x00A57911 File Offset: 0x00A55B11
 		private void OnCancelAutoPilotTrackBtnClick()
 		{
 			this.OnHandleTrackAutoPilot(false).Forget();
 		}
 
-		// Token: 0x06030224 RID: 197156 RVA: 0x00B27B13 File Offset: 0x00B25D13
+		// Token: 0x060249F4 RID: 150004 RVA: 0x00A5791F File Offset: 0x00A55B1F
 		private void OnQuickGoBtnClick()
 		{
 			if (AutoPilotModel.Instance.HideQuickTransferConfirmBox)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.ShowAutoPilotQuickGoToTeleportConfirmBox(new Action(this.HandleQuickGotoAutoPilot));
 		}
 
-		// Token: 0x06030225 RID: 197157 RVA: 0x00B27B3C File Offset: 0x00B25D3C
+		// Token: 0x060249F5 RID: 150005 RVA: 0x00A57948 File Offset: 0x00A55B48
 		protected UniTask OnHandleTrackAutoPilot(bool isAutoPilotTrack)
 		{
 			WorldMapSecondaryUiAutoPilotContext.<OnHandleTrackAutoPilot>d__28 <OnHandleTrackAutoPilot>d__;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return <OnHandleTrackAutoPilot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030226 RID: 197158 RVA: 0x00B27B88 File Offset: 0x00B25D88
+		// Token: 0x060249F6 RID: 150006 RVA: 0x00A57994 File Offset: 0x00A55B94
 		private UniTask HandleTrackAndUiPerform(MarkItem markItem, bool isAutoPilotTrack)
 		{
 			WorldMapSecondaryUiAutoPilotContext.<HandleTrackAndUiPerform>d__29 <HandleTrackAndUiPerform>d__;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return <HandleTrackAndUiPerform>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030227 RID: 197159 RVA: 0x00B27BDC File Offset: 0x00B25DDC
+		// Token: 0x060249F7 RID: 150007 RVA: 0x00A579E8 File Offset: 0x00A55BE8
 		private void OnCreateMarkItem(DynamicMarkCreateInfo info)
 		{
 			if (info.MarkType != EMarkType.Custom)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.HandleTrackAndUiPerform(customMarkItem, true).Forget();
 		}
 
-		// Token: 0x06030228 RID: 197160 RVA: 0x00B27C6C File Offset: 0x00B25E6C
+		// Token: 0x060249F8 RID: 150008 RVA: 0x00A57A78 File Offset: 0x00A55C78
 		protected void HandleQuickGotoAutoPilot()
 		{
 			AutoPilotFindPathResult findPathResult = AutoPilotModel.Instance.GetFindPathResult();
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			}).Forget();
 		}
 
-		// Token: 0x06030229 RID: 197161 RVA: 0x00B27DAC File Offset: 0x00B25FAC
+		// Token: 0x060249F9 RID: 150009 RVA: 0x00A57BB8 File Offset: 0x00A55DB8
 		private void ShowAutoPilotQuickGoToTeleportConfirmBox(Action callback)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.AutoPilotQuickGoToTeleportConfirm);
@@ -286,40 +286,40 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603022A RID: 197162 RVA: 0x00B27E41 File Offset: 0x00B26041
+		// Token: 0x060249FA RID: 150010 RVA: 0x00A57C4D File Offset: 0x00A55E4D
 		public void UpdateAutoPilotState()
 		{
 			WorldMapSecondaryUiLayoutHelper.UpdateAutoPilotState(this);
 		}
 
-		// Token: 0x0603022B RID: 197163 RVA: 0x00B27E4C File Offset: 0x00B2604C
+		// Token: 0x060249FB RID: 150011 RVA: 0x00A57C58 File Offset: 0x00A55E58
 		public bool IsNeedCustomMarkCreate()
 		{
 			MarkItem markItem = this.LayoutContext.MarkItem;
 			return markItem.MarkType == EMarkType.Custom && !(markItem as CustomMarkItem).IsCreated;
 		}
 
-		// Token: 0x04019EDF RID: 106207
+		// Token: 0x04014590 RID: 83344
 		[Nullable(2)]
 		private UUIItem UiParent;
 
-		// Token: 0x04019EE0 RID: 106208
+		// Token: 0x04014591 RID: 83345
 		[Nullable(2)]
 		private UUIItem DownStateBtnRoot;
 
-		// Token: 0x04019EE1 RID: 106209
+		// Token: 0x04014592 RID: 83346
 		[Nullable(2)]
 		private AutoPilotNavBtnView AutoPilotNavBtnView;
 
-		// Token: 0x04019EE2 RID: 106210
+		// Token: 0x04014593 RID: 83347
 		[Nullable(2)]
 		private AutoPilotTrackBtnGroup AutoPilotTrackBtnGroup;
 
-		// Token: 0x04019EE3 RID: 106211
+		// Token: 0x04014594 RID: 83348
 		[Nullable(2)]
 		private Action CloseSecondaryUiFunction;
 
-		// Token: 0x04019EE4 RID: 106212
+		// Token: 0x04014595 RID: 83349
 		[Nullable(2)]
 		private BaseMap Map;
 	}

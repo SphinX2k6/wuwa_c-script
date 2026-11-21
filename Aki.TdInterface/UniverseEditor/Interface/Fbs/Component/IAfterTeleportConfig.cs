@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E6E RID: 20078
+	// Token: 0x0200537F RID: 21375
 	public struct IAfterTeleportConfig : IFlatbufferObject
 	{
-		// Token: 0x17008FB9 RID: 36793
-		// (get) Token: 0x0601F87E RID: 129150 RVA: 0x0046427A File Offset: 0x0046247A
+		// Token: 0x170096F2 RID: 38642
+		// (get) Token: 0x060214C9 RID: 136393 RVA: 0x00498292 File Offset: 0x00496492
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F87F RID: 129151 RVA: 0x00464287 File Offset: 0x00462487
+		// Token: 0x060214CA RID: 136394 RVA: 0x0049829F File Offset: 0x0049649F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F880 RID: 129152 RVA: 0x00464290 File Offset: 0x00462490
+		// Token: 0x060214CB RID: 136395 RVA: 0x004982A8 File Offset: 0x004964A8
 		public static IAfterTeleportConfig GetRootAsIAfterTeleportConfig(ByteBuffer _bb)
 		{
 			return IAfterTeleportConfig.GetRootAsIAfterTeleportConfig(_bb, default(IAfterTeleportConfig));
 		}
 
-		// Token: 0x0601F881 RID: 129153 RVA: 0x004642AC File Offset: 0x004624AC
+		// Token: 0x060214CC RID: 136396 RVA: 0x004982C4 File Offset: 0x004964C4
 		public static IAfterTeleportConfig GetRootAsIAfterTeleportConfig(ByteBuffer _bb, IAfterTeleportConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F882 RID: 129154 RVA: 0x004642C9 File Offset: 0x004624C9
+		// Token: 0x060214CD RID: 136397 RVA: 0x004982E1 File Offset: 0x004964E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F883 RID: 129155 RVA: 0x004642D8 File Offset: 0x004624D8
+		// Token: 0x060214CE RID: 136398 RVA: 0x004982F0 File Offset: 0x004964F0
 		public IAfterTeleportConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008FBA RID: 36794
-		// (get) Token: 0x0601F884 RID: 129156 RVA: 0x004642E8 File Offset: 0x004624E8
+		// Token: 0x170096F3 RID: 38643
+		// (get) Token: 0x060214CF RID: 136399 RVA: 0x00498300 File Offset: 0x00496500
 		public IVectorInfo? Direction
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F885 RID: 129157 RVA: 0x00464348 File Offset: 0x00462548
+		// Token: 0x060214D0 RID: 136400 RVA: 0x00498360 File Offset: 0x00496560
 		public int BuffEffectIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17008FBB RID: 36795
-		// (get) Token: 0x0601F886 RID: 129158 RVA: 0x00464388 File Offset: 0x00462588
+		// Token: 0x170096F4 RID: 38644
+		// (get) Token: 0x060214D1 RID: 136401 RVA: 0x004983A0 File Offset: 0x004965A0
 		public int BuffEffectIdsLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F887 RID: 129159 RVA: 0x004643B3 File Offset: 0x004625B3
+		// Token: 0x060214D2 RID: 136402 RVA: 0x004983CB File Offset: 0x004965CB
 		public Span<int> GetBuffEffectIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0601F888 RID: 129160 RVA: 0x004643C2 File Offset: 0x004625C2
+		// Token: 0x060214D3 RID: 136403 RVA: 0x004983DA File Offset: 0x004965DA
 		public int[] GetBuffEffectIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x17008FBC RID: 36796
-		// (get) Token: 0x0601F889 RID: 129161 RVA: 0x004643D0 File Offset: 0x004625D0
+		// Token: 0x170096F5 RID: 38645
+		// (get) Token: 0x060214D4 RID: 136404 RVA: 0x004983E8 File Offset: 0x004965E8
 		public IVectorInfo? TeleportToSelfPos
 		{
 			get
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FBD RID: 36797
-		// (get) Token: 0x0601F88A RID: 129162 RVA: 0x00464430 File Offset: 0x00462630
+		// Token: 0x170096F6 RID: 38646
+		// (get) Token: 0x060214D5 RID: 136405 RVA: 0x00498448 File Offset: 0x00496648
 		public int RailEntityId
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17008FBE RID: 36798
-		// (get) Token: 0x0601F88B RID: 129163 RVA: 0x00464470 File Offset: 0x00462670
+		// Token: 0x170096F7 RID: 38647
+		// (get) Token: 0x060214D6 RID: 136406 RVA: 0x00498488 File Offset: 0x00496688
 		public string SlidePerformDaPath
 		{
 			get
@@ -147,20 +147,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F88C RID: 129164 RVA: 0x004644A8 File Offset: 0x004626A8
+		// Token: 0x060214D7 RID: 136407 RVA: 0x004984C0 File Offset: 0x004966C0
 		public Span<byte> GetSlidePerformDaPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0601F88D RID: 129165 RVA: 0x004644B8 File Offset: 0x004626B8
+		// Token: 0x060214D8 RID: 136408 RVA: 0x004984D0 File Offset: 0x004966D0
 		public byte[] GetSlidePerformDaPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x17008FBF RID: 36799
-		// (get) Token: 0x0601F88E RID: 129166 RVA: 0x004644C8 File Offset: 0x004626C8
+		// Token: 0x170096F8 RID: 38648
+		// (get) Token: 0x060214D9 RID: 136409 RVA: 0x004984E0 File Offset: 0x004966E0
 		public byte NullMask
 		{
 			get
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601F88F RID: 129167 RVA: 0x00464505 File Offset: 0x00462705
+		// Token: 0x060214DA RID: 136410 RVA: 0x0049851D File Offset: 0x0049671D
 		public static Offset<IAfterTeleportConfig> CreateIAfterTeleportConfig(FlatBufferBuilder builder, Offset<IVectorInfo> DirectionOffset = default(Offset<IVectorInfo>), VectorOffset BuffEffectIdsOffset = default(VectorOffset), Offset<IVectorInfo> TeleportToSelfPosOffset = default(Offset<IVectorInfo>), int RailEntityId = 0, StringOffset SlidePerformDaPathOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -187,25 +187,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAfterTeleportConfig.EndIAfterTeleportConfig(builder);
 		}
 
-		// Token: 0x0601F890 RID: 129168 RVA: 0x00464541 File Offset: 0x00462741
+		// Token: 0x060214DB RID: 136411 RVA: 0x00498559 File Offset: 0x00496759
 		public static void StartIAfterTeleportConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601F891 RID: 129169 RVA: 0x0046454A File Offset: 0x0046274A
+		// Token: 0x060214DC RID: 136412 RVA: 0x00498562 File Offset: 0x00496762
 		public static void AddDirection(FlatBufferBuilder builder, Offset<IVectorInfo> directionOffset)
 		{
 			builder.AddOffset(0, directionOffset.Value, 0);
 		}
 
-		// Token: 0x0601F892 RID: 129170 RVA: 0x0046455A File Offset: 0x0046275A
+		// Token: 0x060214DD RID: 136413 RVA: 0x00498572 File Offset: 0x00496772
 		public static void AddBuffEffectIds(FlatBufferBuilder builder, VectorOffset buffEffectIdsOffset)
 		{
 			builder.AddOffset(1, buffEffectIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0601F893 RID: 129171 RVA: 0x0046456C File Offset: 0x0046276C
+		// Token: 0x060214DE RID: 136414 RVA: 0x00498584 File Offset: 0x00496784
 		public static VectorOffset CreateBuffEffectIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F894 RID: 129172 RVA: 0x004645A3 File Offset: 0x004627A3
+		// Token: 0x060214DF RID: 136415 RVA: 0x004985BB File Offset: 0x004967BB
 		public static VectorOffset CreateBuffEffectIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F895 RID: 129173 RVA: 0x004645BD File Offset: 0x004627BD
+		// Token: 0x060214E0 RID: 136416 RVA: 0x004985D5 File Offset: 0x004967D5
 		public static VectorOffset CreateBuffEffectIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F896 RID: 129174 RVA: 0x004645DB File Offset: 0x004627DB
+		// Token: 0x060214E1 RID: 136417 RVA: 0x004985F3 File Offset: 0x004967F3
 		public static VectorOffset CreateBuffEffectIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -240,43 +240,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601F897 RID: 129175 RVA: 0x004645F4 File Offset: 0x004627F4
+		// Token: 0x060214E2 RID: 136418 RVA: 0x0049860C File Offset: 0x0049680C
 		public static void StartBuffEffectIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601F898 RID: 129176 RVA: 0x004645FF File Offset: 0x004627FF
+		// Token: 0x060214E3 RID: 136419 RVA: 0x00498617 File Offset: 0x00496817
 		public static void AddTeleportToSelfPos(FlatBufferBuilder builder, Offset<IVectorInfo> teleportToSelfPosOffset)
 		{
 			builder.AddOffset(2, teleportToSelfPosOffset.Value, 0);
 		}
 
-		// Token: 0x0601F899 RID: 129177 RVA: 0x0046460F File Offset: 0x0046280F
+		// Token: 0x060214E4 RID: 136420 RVA: 0x00498627 File Offset: 0x00496827
 		public static void AddRailEntityId(FlatBufferBuilder builder, int railEntityId)
 		{
 			builder.AddInt(3, railEntityId, 0);
 		}
 
-		// Token: 0x0601F89A RID: 129178 RVA: 0x0046461A File Offset: 0x0046281A
+		// Token: 0x060214E5 RID: 136421 RVA: 0x00498632 File Offset: 0x00496832
 		public static void AddSlidePerformDaPath(FlatBufferBuilder builder, StringOffset slidePerformDaPathOffset)
 		{
 			builder.AddOffset(4, slidePerformDaPathOffset.Value, 0);
 		}
 
-		// Token: 0x0601F89B RID: 129179 RVA: 0x0046462A File Offset: 0x0046282A
+		// Token: 0x060214E6 RID: 136422 RVA: 0x00498642 File Offset: 0x00496842
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0601F89C RID: 129180 RVA: 0x00464635 File Offset: 0x00462835
+		// Token: 0x060214E7 RID: 136423 RVA: 0x0049864D File Offset: 0x0049684D
 		public static Offset<IAfterTeleportConfig> EndIAfterTeleportConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAfterTeleportConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601F89D RID: 129181 RVA: 0x00464644 File Offset: 0x00462844
+		// Token: 0x060214E8 RID: 136424 RVA: 0x0049865C File Offset: 0x0049685C
 		public IAfterTeleportConfigT UnPack()
 		{
 			IAfterTeleportConfigT afterTeleportConfigT = new IAfterTeleportConfigT();
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return afterTeleportConfigT;
 		}
 
-		// Token: 0x0601F89E RID: 129182 RVA: 0x00464660 File Offset: 0x00462860
+		// Token: 0x060214E9 RID: 136425 RVA: 0x00498678 File Offset: 0x00496878
 		public void UnPackTo(IAfterTeleportConfigT _o)
 		{
 			_o.Direction = ((this.Direction != null) ? this.Direction.Value.UnPack() : null);
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601F89F RID: 129183 RVA: 0x00464720 File Offset: 0x00462920
+		// Token: 0x060214EA RID: 136426 RVA: 0x00498738 File Offset: 0x00496938
 		public static Offset<IAfterTeleportConfig> Pack(FlatBufferBuilder builder, IAfterTeleportConfigT _o)
 		{
 			if (_o == null)
@@ -318,7 +318,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAfterTeleportConfig.CreateIAfterTeleportConfig(builder, directionOffset, buffEffectIdsOffset, teleportToSelfPosOffset, _o.RailEntityId, slidePerformDaPathOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DC17 RID: 56343
+		// Token: 0x0400E791 RID: 59281
 		private Table __p;
 	}
 }

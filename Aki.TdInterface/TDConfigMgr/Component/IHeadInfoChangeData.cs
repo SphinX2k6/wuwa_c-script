@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000406 RID: 1030
+	// Token: 0x0200045F RID: 1119
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IHeadInfoChangeData
 	{
-		// Token: 0x060014C3 RID: 5315 RVA: 0x00041F24 File Offset: 0x00040124
-		[NullableContext(1)]
+		// Token: 0x0600165D RID: 5725 RVA: 0x00045C6C File Offset: 0x00043E6C
+		[NullableContext(0)]
 		private IHeadInfoChangeData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014C4 RID: 5316 RVA: 0x00041F5C File Offset: 0x0004015C
-		[NullableContext(1)]
+		// Token: 0x0600165E RID: 5726 RVA: 0x00045CA4 File Offset: 0x00043EA4
+		[NullableContext(0)]
 		public static IHeadInfoChangeData Create([Nullable(2)] IHeadInfoChangeData instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014C5 RID: 5317 RVA: 0x00041F6F File Offset: 0x0004016F
-		[NullableContext(1)]
+		// Token: 0x0600165F RID: 5727 RVA: 0x00045CB7 File Offset: 0x00043EB7
+		[NullableContext(0)]
 		public static IHeadInfoChangeData CreateFromSetValue([Nullable(2)] IHeadInfoChangeData_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014C6 RID: 5318 RVA: 0x00041F84 File Offset: 0x00040184
-		[NullableContext(1)]
+		// Token: 0x06001660 RID: 5728 RVA: 0x00045CCC File Offset: 0x00043ECC
+		[NullableContext(0)]
 		public IHeadInfoChangeData_SetValue ToSetValue()
 		{
 			return new IHeadInfoChangeData_SetValue
@@ -69,13 +69,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005B6 RID: 1462
-		// (get) Token: 0x060014C7 RID: 5319 RVA: 0x00041FE0 File Offset: 0x000401E0
-		// (set) Token: 0x060014C8 RID: 5320 RVA: 0x00042041 File Offset: 0x00040241
-		[Nullable(1)]
+		// Token: 0x1700061D RID: 1565
+		// (get) Token: 0x06001661 RID: 5729 RVA: 0x00045D28 File Offset: 0x00043F28
+		// (set) Token: 0x06001662 RID: 5730 RVA: 0x00045D89 File Offset: 0x00043F89
+		[Nullable(0)]
 		public virtual IConditionGroup Conditions
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ConditionsInited)
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._ConditionsCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Conditions = value;
@@ -102,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005B7 RID: 1463
-		// (get) Token: 0x060014C9 RID: 5321 RVA: 0x00042056 File Offset: 0x00040256
-		// (set) Token: 0x060014CA RID: 5322 RVA: 0x0004207D File Offset: 0x0004027D
+		// Token: 0x1700061E RID: 1566
+		// (get) Token: 0x06001663 RID: 5731 RVA: 0x00045D9E File Offset: 0x00043F9E
+		// (set) Token: 0x06001664 RID: 5732 RVA: 0x00045DC5 File Offset: 0x00043FC5
 		public virtual string TidName
 		{
 			get
@@ -126,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005B8 RID: 1464
-		// (get) Token: 0x060014CB RID: 5323 RVA: 0x0004208B File Offset: 0x0004028B
-		// (set) Token: 0x060014CC RID: 5324 RVA: 0x000420B2 File Offset: 0x000402B2
+		// Token: 0x1700061F RID: 1567
+		// (get) Token: 0x06001665 RID: 5733 RVA: 0x00045DD3 File Offset: 0x00043FD3
+		// (set) Token: 0x06001666 RID: 5734 RVA: 0x00045DFA File Offset: 0x00043FFA
 		public virtual string Icon
 		{
 			get
@@ -150,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005B9 RID: 1465
-		// (get) Token: 0x060014CD RID: 5325 RVA: 0x000420C0 File Offset: 0x000402C0
-		// (set) Token: 0x060014CE RID: 5326 RVA: 0x000420E7 File Offset: 0x000402E7
+		// Token: 0x17000620 RID: 1568
+		// (get) Token: 0x06001667 RID: 5735 RVA: 0x00045E08 File Offset: 0x00044008
+		// (set) Token: 0x06001668 RID: 5736 RVA: 0x00045E2F File Offset: 0x0004402F
 		public virtual string TidSecondaryName
 		{
 			get
@@ -174,9 +174,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005BA RID: 1466
-		// (get) Token: 0x060014CF RID: 5327 RVA: 0x000420F5 File Offset: 0x000402F5
-		// (set) Token: 0x060014D0 RID: 5328 RVA: 0x0004210C File Offset: 0x0004030C
+		// Token: 0x17000621 RID: 1569
+		// (get) Token: 0x06001669 RID: 5737 RVA: 0x00045E3D File Offset: 0x0004403D
+		// (set) Token: 0x0600166A RID: 5738 RVA: 0x00045E54 File Offset: 0x00044054
 		public virtual string EdTidName
 		{
 			get
@@ -193,9 +193,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005BB RID: 1467
-		// (get) Token: 0x060014D1 RID: 5329 RVA: 0x0004211A File Offset: 0x0004031A
-		// (set) Token: 0x060014D2 RID: 5330 RVA: 0x00042131 File Offset: 0x00040331
+		// Token: 0x17000622 RID: 1570
+		// (get) Token: 0x0600166B RID: 5739 RVA: 0x00045E62 File Offset: 0x00044062
+		// (set) Token: 0x0600166C RID: 5740 RVA: 0x00045E79 File Offset: 0x00044079
 		public virtual string EdTidSecondaryName
 		{
 			get
@@ -212,17 +212,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400103F RID: 4159
+		// Token: 0x04001161 RID: 4449
 		protected IHeadInfoChangeData FbInstance;
 
-		// Token: 0x04001040 RID: 4160
+		// Token: 0x04001162 RID: 4450
 		protected IHeadInfoChangeData_SetValue PocoInterface;
 
-		// Token: 0x04001041 RID: 4161
-		[Nullable(1)]
+		// Token: 0x04001163 RID: 4451
+		[Nullable(0)]
 		private IConditionGroup _ConditionsCache;
 
-		// Token: 0x04001042 RID: 4162
+		// Token: 0x04001164 RID: 4452
 		private bool _ConditionsInited;
 	}
 }

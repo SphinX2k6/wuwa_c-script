@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002660 RID: 9824
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002924 RID: 10532
 	public class ITransitionPopupYuanChengArtText : ITransitionPopupArtTextTypeBase
 	{
-		// Token: 0x0600DC30 RID: 56368 RVA: 0x0020C252 File Offset: 0x0020A452
+		// Token: 0x0600EA0C RID: 59916 RVA: 0x00228B2A File Offset: 0x00226D2A
 		public static ITransitionPopupYuanChengArtText Create(ITransitionPopupYuanChengArtText? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004132 RID: 16690
-		// (get) Token: 0x0600DC31 RID: 56369 RVA: 0x0020C271 File Offset: 0x0020A471
+		// Token: 0x17004472 RID: 17522
+		// (get) Token: 0x0600EA0D RID: 59917 RVA: 0x00228B49 File Offset: 0x00226D49
 		public override ETransitionPopupArtTextType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004133 RID: 16691
-		// (get) Token: 0x0600DC32 RID: 56370 RVA: 0x0020C27E File Offset: 0x0020A47E
+		// Token: 0x17004473 RID: 17523
+		// (get) Token: 0x0600EA0E RID: 59918 RVA: 0x00228B56 File Offset: 0x00226D56
 		public virtual IVector2 Position
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004134 RID: 16692
-		// (get) Token: 0x0600DC33 RID: 56371 RVA: 0x0020C2B2 File Offset: 0x0020A4B2
+		// Token: 0x17004474 RID: 17524
+		// (get) Token: 0x0600EA0F RID: 59919 RVA: 0x00228B8A File Offset: 0x00226D8A
 		public virtual string Texture
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004135 RID: 16693
-		// (get) Token: 0x0600DC34 RID: 56372 RVA: 0x0020C2BF File Offset: 0x0020A4BF
+		// Token: 0x17004475 RID: 17525
+		// (get) Token: 0x0600EA10 RID: 59920 RVA: 0x00228B97 File Offset: 0x00226D97
 		[Nullable(2)]
 		public virtual string SubtitleText
 		{
@@ -71,14 +69,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A5E RID: 31326
+		// Token: 0x04008100 RID: 33024
 		private ITransitionPopupYuanChengArtText Instance;
 
-		// Token: 0x04007A5F RID: 31327
+		// Token: 0x04008101 RID: 33025
 		[Nullable(2)]
 		private IVector2 _PositionCache;
 
-		// Token: 0x04007A60 RID: 31328
+		// Token: 0x04008102 RID: 33026
 		private bool _PositionInited;
 	}
 }

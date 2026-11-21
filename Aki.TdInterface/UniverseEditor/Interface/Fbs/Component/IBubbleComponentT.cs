@@ -4,70 +4,70 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F26 RID: 20262
+	// Token: 0x02005458 RID: 21592
 	public class IBubbleComponentT
 	{
-		// Token: 0x170091FC RID: 37372
-		// (get) Token: 0x060200E6 RID: 131302 RVA: 0x00475F3E File Offset: 0x0047413E
-		// (set) Token: 0x060200E7 RID: 131303 RVA: 0x00475F46 File Offset: 0x00474146
+		// Token: 0x1700997E RID: 39294
+		// (get) Token: 0x06021E56 RID: 138838 RVA: 0x004AC2D2 File Offset: 0x004AA4D2
+		// (set) Token: 0x06021E57 RID: 138839 RVA: 0x004AC2DA File Offset: 0x004AA4DA
 		public bool Disabled { get; set; }
 
-		// Token: 0x170091FD RID: 37373
-		// (get) Token: 0x060200E8 RID: 131304 RVA: 0x00475F4F File Offset: 0x0047414F
-		// (set) Token: 0x060200E9 RID: 131305 RVA: 0x00475F57 File Offset: 0x00474157
+		// Token: 0x1700997F RID: 39295
+		// (get) Token: 0x06021E58 RID: 138840 RVA: 0x004AC2E3 File Offset: 0x004AA4E3
+		// (set) Token: 0x06021E59 RID: 138841 RVA: 0x004AC2EB File Offset: 0x004AA4EB
 		public List<int> NpcIds { get; set; }
 
-		// Token: 0x170091FE RID: 37374
-		// (get) Token: 0x060200EA RID: 131306 RVA: 0x00475F60 File Offset: 0x00474160
-		// (set) Token: 0x060200EB RID: 131307 RVA: 0x00475F68 File Offset: 0x00474168
+		// Token: 0x17009980 RID: 39296
+		// (get) Token: 0x06021E5A RID: 138842 RVA: 0x004AC2F4 File Offset: 0x004AA4F4
+		// (set) Token: 0x06021E5B RID: 138843 RVA: 0x004AC2FC File Offset: 0x004AA4FC
 		public float EnterRange { get; set; }
 
-		// Token: 0x170091FF RID: 37375
-		// (get) Token: 0x060200EC RID: 131308 RVA: 0x00475F71 File Offset: 0x00474171
-		// (set) Token: 0x060200ED RID: 131309 RVA: 0x00475F79 File Offset: 0x00474179
+		// Token: 0x17009981 RID: 39297
+		// (get) Token: 0x06021E5C RID: 138844 RVA: 0x004AC305 File Offset: 0x004AA505
+		// (set) Token: 0x06021E5D RID: 138845 RVA: 0x004AC30D File Offset: 0x004AA50D
 		public float LeaveRange { get; set; }
 
-		// Token: 0x17009200 RID: 37376
-		// (get) Token: 0x060200EE RID: 131310 RVA: 0x00475F82 File Offset: 0x00474182
-		// (set) Token: 0x060200EF RID: 131311 RVA: 0x00475F8A File Offset: 0x0047418A
+		// Token: 0x17009982 RID: 39298
+		// (get) Token: 0x06021E5E RID: 138846 RVA: 0x004AC316 File Offset: 0x004AA516
+		// (set) Token: 0x06021E5F RID: 138847 RVA: 0x004AC31E File Offset: 0x004AA51E
 		public bool IsRangeFollowEntity { get; set; }
 
-		// Token: 0x17009201 RID: 37377
-		// (get) Token: 0x060200F0 RID: 131312 RVA: 0x00475F93 File Offset: 0x00474193
-		// (set) Token: 0x060200F1 RID: 131313 RVA: 0x00475F9B File Offset: 0x0047419B
+		// Token: 0x17009983 RID: 39299
+		// (get) Token: 0x06021E60 RID: 138848 RVA: 0x004AC327 File Offset: 0x004AA527
+		// (set) Token: 0x06021E61 RID: 138849 RVA: 0x004AC32F File Offset: 0x004AA52F
 		public List<IConditionBubbleDataT> Flows { get; set; }
 
-		// Token: 0x17009202 RID: 37378
-		// (get) Token: 0x060200F2 RID: 131314 RVA: 0x00475FA4 File Offset: 0x004741A4
-		// (set) Token: 0x060200F3 RID: 131315 RVA: 0x00475FAC File Offset: 0x004741AC
+		// Token: 0x17009984 RID: 39300
+		// (get) Token: 0x06021E62 RID: 138850 RVA: 0x004AC338 File Offset: 0x004AA538
+		// (set) Token: 0x06021E63 RID: 138851 RVA: 0x004AC340 File Offset: 0x004AA540
 		public int TimberId { get; set; }
 
-		// Token: 0x17009203 RID: 37379
-		// (get) Token: 0x060200F4 RID: 131316 RVA: 0x00475FB5 File Offset: 0x004741B5
-		// (set) Token: 0x060200F5 RID: 131317 RVA: 0x00475FBD File Offset: 0x004741BD
+		// Token: 0x17009985 RID: 39301
+		// (get) Token: 0x06021E64 RID: 138852 RVA: 0x004AC349 File Offset: 0x004AA549
+		// (set) Token: 0x06021E65 RID: 138853 RVA: 0x004AC351 File Offset: 0x004AA551
 		public float Scale { get; set; }
 
-		// Token: 0x17009204 RID: 37380
-		// (get) Token: 0x060200F6 RID: 131318 RVA: 0x00475FC6 File Offset: 0x004741C6
-		// (set) Token: 0x060200F7 RID: 131319 RVA: 0x00475FCE File Offset: 0x004741CE
+		// Token: 0x17009986 RID: 39302
+		// (get) Token: 0x06021E66 RID: 138854 RVA: 0x004AC35A File Offset: 0x004AA55A
+		// (set) Token: 0x06021E67 RID: 138855 RVA: 0x004AC362 File Offset: 0x004AA562
 		public bool IsAudioOccludedByScene { get; set; }
 
-		// Token: 0x17009205 RID: 37381
-		// (get) Token: 0x060200F8 RID: 131320 RVA: 0x00475FD7 File Offset: 0x004741D7
-		// (set) Token: 0x060200F9 RID: 131321 RVA: 0x00475FDF File Offset: 0x004741DF
+		// Token: 0x17009987 RID: 39303
+		// (get) Token: 0x06021E68 RID: 138856 RVA: 0x004AC36B File Offset: 0x004AA56B
+		// (set) Token: 0x06021E69 RID: 138857 RVA: 0x004AC373 File Offset: 0x004AA573
 		public IBubbleRangeCylinderConfigT TriggerCylinderConfig { get; set; }
 
-		// Token: 0x17009206 RID: 37382
-		// (get) Token: 0x060200FA RID: 131322 RVA: 0x00475FE8 File Offset: 0x004741E8
-		// (set) Token: 0x060200FB RID: 131323 RVA: 0x00475FF0 File Offset: 0x004741F0
+		// Token: 0x17009988 RID: 39304
+		// (get) Token: 0x06021E6A RID: 138858 RVA: 0x004AC37C File Offset: 0x004AA57C
+		// (set) Token: 0x06021E6B RID: 138859 RVA: 0x004AC384 File Offset: 0x004AA584
 		public bool IsPlayMouthAnim { get; set; }
 
-		// Token: 0x17009207 RID: 37383
-		// (get) Token: 0x060200FC RID: 131324 RVA: 0x00475FF9 File Offset: 0x004741F9
-		// (set) Token: 0x060200FD RID: 131325 RVA: 0x00476001 File Offset: 0x00474201
+		// Token: 0x17009989 RID: 39305
+		// (get) Token: 0x06021E6C RID: 138860 RVA: 0x004AC38D File Offset: 0x004AA58D
+		// (set) Token: 0x06021E6D RID: 138861 RVA: 0x004AC395 File Offset: 0x004AA595
 		public byte NullMask { get; set; }
 
-		// Token: 0x060200FE RID: 131326 RVA: 0x0047600C File Offset: 0x0047420C
+		// Token: 0x06021E6E RID: 138862 RVA: 0x004AC3A0 File Offset: 0x004AA5A0
 		public IBubbleComponentT()
 		{
 			this.Disabled = false;

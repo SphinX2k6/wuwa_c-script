@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.UiNavigation;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002568 RID: 9576
+// Token: 0x02001A53 RID: 6739
 public class PhotoFilterPointItem : UiPanelBase
 {
-	// Token: 0x06013540 RID: 79168 RVA: 0x004CF11C File Offset: 0x004CD31C
+	// Token: 0x06010A22 RID: 68130 RVA: 0x004DDD54 File Offset: 0x004DBF54
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ public class PhotoFilterPointItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013541 RID: 79169 RVA: 0x004CF21D File Offset: 0x004CD41D
+	// Token: 0x06010A23 RID: 68131 RVA: 0x004DDE55 File Offset: 0x004DC055
 	[NullableContext(2)]
 	public void SetViewModel(FilterSettingViewModel viewModel)
 	{
 		this.ViewModel = viewModel;
 	}
 
-	// Token: 0x06013542 RID: 79170 RVA: 0x004CF228 File Offset: 0x004CD428
+	// Token: 0x06010A24 RID: 68132 RVA: 0x004DDE60 File Offset: 0x004DC060
 	protected override void OnStart()
 	{
 		if (this.ViewModel != null)
@@ -60,7 +60,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		this.BindAxes();
 	}
 
-	// Token: 0x06013543 RID: 79171 RVA: 0x004CF2E0 File Offset: 0x004CD4E0
+	// Token: 0x06010A25 RID: 68133 RVA: 0x004DDF18 File Offset: 0x004DC118
 	private void BindAxes()
 	{
 		InputDistributeController instance = InputDistributeController.Instance;
@@ -68,7 +68,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		instance.BindAxis("UiMoveRight", new TInputHandle<float>(this.OnInputUiMoveRight));
 	}
 
-	// Token: 0x06013544 RID: 79172 RVA: 0x004CF314 File Offset: 0x004CD514
+	// Token: 0x06010A26 RID: 68134 RVA: 0x004DDF4C File Offset: 0x004DC14C
 	public void OnPointTick(float delta)
 	{
 		if (this.ViewModel == null)
@@ -142,13 +142,13 @@ public class PhotoFilterPointItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013545 RID: 79173 RVA: 0x004CF596 File Offset: 0x004CD796
+	// Token: 0x06010A27 RID: 68135 RVA: 0x004DE1CE File Offset: 0x004DC3CE
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindAxes();
 	}
 
-	// Token: 0x06013546 RID: 79174 RVA: 0x004CF59E File Offset: 0x004CD79E
+	// Token: 0x06010A28 RID: 68136 RVA: 0x004DE1D6 File Offset: 0x004DC3D6
 	private void UnBindAxes()
 	{
 		InputDistributeController instance = InputDistributeController.Instance;
@@ -156,7 +156,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		instance.UnBindAxis("UiMoveRight", new TInputHandle<float>(this.OnInputUiMoveRight));
 	}
 
-	// Token: 0x06013547 RID: 79175 RVA: 0x004CF5D2 File Offset: 0x004CD7D2
+	// Token: 0x06010A29 RID: 68137 RVA: 0x004DE20A File Offset: 0x004DC40A
 	private bool IsFilterNavigationFocused()
 	{
 		if (!this.IsPointSubTab)
@@ -177,7 +177,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		return a == "GroupFilter";
 	}
 
-	// Token: 0x06013548 RID: 79176 RVA: 0x004CF60A File Offset: 0x004CD80A
+	// Token: 0x06010A2A RID: 68138 RVA: 0x004DE242 File Offset: 0x004DC442
 	[NullableContext(1)]
 	private void OnInputUiMoveForward(string axisName, float value, InputIdentification _)
 	{
@@ -198,7 +198,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		onInputUiMoveForward(axisName, value);
 	}
 
-	// Token: 0x06013549 RID: 79177 RVA: 0x004CF631 File Offset: 0x004CD831
+	// Token: 0x06010A2B RID: 68139 RVA: 0x004DE269 File Offset: 0x004DC469
 	[NullableContext(1)]
 	private void OnInputUiMoveRight(string axisName, float value, InputIdentification _)
 	{
@@ -219,13 +219,13 @@ public class PhotoFilterPointItem : UiPanelBase
 		onInputUiMoveRight(axisName, value);
 	}
 
-	// Token: 0x0601354A RID: 79178 RVA: 0x004CF658 File Offset: 0x004CD858
+	// Token: 0x06010A2C RID: 68140 RVA: 0x004DE290 File Offset: 0x004DC490
 	public void SetPointSubTabActive(bool isPoint)
 	{
 		this.IsPointSubTab = isPoint;
 	}
 
-	// Token: 0x0601354B RID: 79179 RVA: 0x004CF661 File Offset: 0x004CD861
+	// Token: 0x06010A2D RID: 68141 RVA: 0x004DE299 File Offset: 0x004DC499
 	public void RefreshTitle()
 	{
 		FilterSettingViewModel viewModel = this.ViewModel;
@@ -236,7 +236,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), this.ViewModel.FilterNameTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x0601354C RID: 79180 RVA: 0x004CF699 File Offset: 0x004CD899
+	// Token: 0x06010A2E RID: 68142 RVA: 0x004DE2D1 File Offset: 0x004DC4D1
 	private void OnResetClick()
 	{
 		FilterSettingViewModel viewModel = this.ViewModel;
@@ -251,7 +251,7 @@ public class PhotoFilterPointItem : UiPanelBase
 		this.RefreshResetBtn();
 	}
 
-	// Token: 0x0601354D RID: 79181 RVA: 0x004CF6BD File Offset: 0x004CD8BD
+	// Token: 0x06010A2F RID: 68143 RVA: 0x004DE2F5 File Offset: 0x004DC4F5
 	public void RefreshResetBtn()
 	{
 		UUIButtonComponent button = base.GetButton(7);
@@ -262,33 +262,33 @@ public class PhotoFilterPointItem : UiPanelBase
 		button.SetSelfInteractive(FilterSettingController.Instance.IsFilterPointChanged());
 	}
 
-	// Token: 0x040091BE RID: 37310
+	// Token: 0x04009317 RID: 37655
 	[Nullable(2)]
 	private FilterSettingViewModel ViewModel;
 
-	// Token: 0x040091BF RID: 37311
+	// Token: 0x04009318 RID: 37656
 	private bool IsPointSubTab;
 
-	// Token: 0x02008B4B RID: 35659
+	// Token: 0x02007CD1 RID: 31953
 	private enum EComponents
 	{
-		// Token: 0x0402D39C RID: 185244
+		// Token: 0x040286A9 RID: 165545
 		TextureFilter,
-		// Token: 0x0402D39D RID: 185245
+		// Token: 0x040286AA RID: 165546
 		TexturePointSele,
-		// Token: 0x0402D39E RID: 185246
+		// Token: 0x040286AB RID: 165547
 		ItemUpLeft,
-		// Token: 0x0402D39F RID: 185247
+		// Token: 0x040286AC RID: 165548
 		ItemUpRight,
-		// Token: 0x0402D3A0 RID: 185248
+		// Token: 0x040286AD RID: 165549
 		ItemDownLeft,
-		// Token: 0x0402D3A1 RID: 185249
+		// Token: 0x040286AE RID: 165550
 		ItemDownRight,
-		// Token: 0x0402D3A2 RID: 185250
+		// Token: 0x040286AF RID: 165551
 		TextNum,
-		// Token: 0x0402D3A3 RID: 185251
+		// Token: 0x040286B0 RID: 165552
 		BtnReset,
-		// Token: 0x0402D3A4 RID: 185252
+		// Token: 0x040286B1 RID: 165553
 		TextTitle
 	}
 }

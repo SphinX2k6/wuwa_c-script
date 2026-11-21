@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001CBF RID: 7359
+// Token: 0x02001181 RID: 4481
 public class KurotatoTipsPanelBase : UiPanelBase
 {
-	// Token: 0x0600DE9A RID: 56986 RVA: 0x003416E2 File Offset: 0x0033F8E2
+	// Token: 0x0600B2B7 RID: 45751 RVA: 0x0034D10A File Offset: 0x0034B30A
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -19,7 +19,7 @@ public class KurotatoTipsPanelBase : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600DE9B RID: 56987 RVA: 0x0034170D File Offset: 0x0033F90D
+	// Token: 0x0600B2B8 RID: 45752 RVA: 0x0034D135 File Offset: 0x0034B335
 	protected override void OnBeforeShow()
 	{
 		this.OnAddEventListener();
@@ -27,7 +27,7 @@ public class KurotatoTipsPanelBase : UiPanelBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600DE9C RID: 56988 RVA: 0x00341746 File Offset: 0x0033F946
+	// Token: 0x0600B2B9 RID: 45753 RVA: 0x0034D16E File Offset: 0x0034B36E
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
@@ -35,27 +35,27 @@ public class KurotatoTipsPanelBase : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600DE9D RID: 56989 RVA: 0x0034177F File Offset: 0x0033F97F
+	// Token: 0x0600B2BA RID: 45754 RVA: 0x0034D1A7 File Offset: 0x0034B3A7
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x0600DE9E RID: 56990 RVA: 0x00341781 File Offset: 0x0033F981
+	// Token: 0x0600B2BB RID: 45755 RVA: 0x0034D1A9 File Offset: 0x0034B3A9
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600DE9F RID: 56991 RVA: 0x00341783 File Offset: 0x0033F983
+	// Token: 0x0600B2BC RID: 45756 RVA: 0x0034D1AB File Offset: 0x0034B3AB
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 	}
 
-	// Token: 0x0600DEA0 RID: 56992 RVA: 0x00341785 File Offset: 0x0033F985
+	// Token: 0x0600B2BD RID: 45757 RVA: 0x0034D1AD File Offset: 0x0034B3AD
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 	}
 
-	// Token: 0x0600DEA1 RID: 56993 RVA: 0x00341788 File Offset: 0x0033F988
+	// Token: 0x0600B2BE RID: 45758 RVA: 0x0034D1B0 File Offset: 0x0034B3B0
 	public virtual void ShowTips()
 	{
 		base.Show(null);
@@ -63,7 +63,7 @@ public class KurotatoTipsPanelBase : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600DEA2 RID: 56994 RVA: 0x003417C4 File Offset: 0x0033F9C4
+	// Token: 0x0600B2BF RID: 45759 RVA: 0x0034D1EC File Offset: 0x0034B3EC
 	public void HideTips()
 	{
 		if (!base.IsShowOrShowing)
@@ -74,7 +74,7 @@ public class KurotatoTipsPanelBase : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x0400663B RID: 26171
+	// Token: 0x0400671A RID: 26394
 	[Nullable(1)]
 	protected LevelSequencePlayer SequencePlayer;
 }

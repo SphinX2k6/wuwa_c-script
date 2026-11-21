@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028E8 RID: 10472
+	// Token: 0x02002BC0 RID: 11200
 	public class ICloseRacingTrackMove : ICloseSplineMovePattern
 	{
-		// Token: 0x0600E8A9 RID: 59561 RVA: 0x0022246A File Offset: 0x0022066A
-		[NullableContext(1)]
+		// Token: 0x0600F6EA RID: 63210 RVA: 0x0023F622 File Offset: 0x0023D822
 		public static ICloseRacingTrackMove Create(ICloseRacingTrackMove? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700489B RID: 18587
-		// (get) Token: 0x0600E8AA RID: 59562 RVA: 0x00222489 File Offset: 0x00220689
+		// Token: 0x17004C18 RID: 19480
+		// (get) Token: 0x0600F6EB RID: 63211 RVA: 0x0023F641 File Offset: 0x0023D841
 		public override ESplineMovePattern Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700489C RID: 18588
-		// (get) Token: 0x0600E8AB RID: 59563 RVA: 0x00222498 File Offset: 0x00220698
+		// Token: 0x17004C19 RID: 19481
+		// (get) Token: 0x0600F6EC RID: 63212 RVA: 0x0023F650 File Offset: 0x0023D850
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008072 RID: 32882
+		// Token: 0x04008736 RID: 34614
 		private ICloseRacingTrackMove Instance;
 	}
 }

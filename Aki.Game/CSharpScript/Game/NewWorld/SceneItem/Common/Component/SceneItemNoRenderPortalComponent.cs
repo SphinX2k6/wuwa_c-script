@@ -23,18 +23,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007220 RID: 29216
+	// Token: 0x020062D5 RID: 25301
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemNoRenderPortalComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x060478A8 RID: 293032 RVA: 0x01241414 File Offset: 0x0123F614
+		// Token: 0x0603D1E0 RID: 250336 RVA: 0x0119A8A8 File Offset: 0x01198AA8
 		static SceneItemNoRenderPortalComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemNoRenderPortalComponent.CreateStaticDefaultValue), new Action(SceneItemNoRenderPortalComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060478A9 RID: 293033 RVA: 0x012414D8 File Offset: 0x0123F6D8
+		// Token: 0x0603D1E1 RID: 250337 RVA: 0x0119A96C File Offset: 0x01198B6C
 		public static void CreateStaticDefaultValue()
 		{
 			SceneItemNoRenderPortalComponent._passPortalScreenEffectHandleId = null;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			SceneItemNoRenderPortalComponent._tempVectors = new List<global::Vector>();
 		}
 
-		// Token: 0x060478AA RID: 293034 RVA: 0x01241514 File Offset: 0x0123F714
+		// Token: 0x0603D1E2 RID: 250338 RVA: 0x0119A9A8 File Offset: 0x01198BA8
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemNoRenderPortalComponent._passPortalScreenEffectHandleId = null;
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			SceneItemNoRenderPortalComponent._tempVectors = null;
 		}
 
-		// Token: 0x17009E2C RID: 40492
-		// (get) Token: 0x060478AB RID: 293035 RVA: 0x01241544 File Offset: 0x0123F744
+		// Token: 0x170073BA RID: 29626
+		// (get) Token: 0x0603D1E3 RID: 250339 RVA: 0x0119A9D8 File Offset: 0x01198BD8
 		public bool IsPortalPrepared
 		{
 			get
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x17009E2D RID: 40493
-		// (get) Token: 0x060478AC RID: 293036 RVA: 0x0124154D File Offset: 0x0123F74D
+		// Token: 0x170073BB RID: 29627
+		// (get) Token: 0x0603D1E4 RID: 250340 RVA: 0x0119A9E1 File Offset: 0x01198BE1
 		public bool IsPortalConnected
 		{
 			get
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478AD RID: 293037 RVA: 0x01241556 File Offset: 0x0123F756
+		// Token: 0x0603D1E5 RID: 250341 RVA: 0x0119A9EA File Offset: 0x01198BEA
 		private bool GetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag flag)
 		{
 			return (this.PortalStateFlags & (int)flag) != 0;
 		}
 
-		// Token: 0x060478AE RID: 293038 RVA: 0x01241563 File Offset: 0x0123F763
+		// Token: 0x0603D1E6 RID: 250342 RVA: 0x0119A9F7 File Offset: 0x01198BF7
 		private void SetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag flag, bool match)
 		{
 			if (match)
@@ -93,37 +93,37 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.PortalStateFlags &= (int)(~(int)flag);
 		}
 
-		// Token: 0x060478AF RID: 293039 RVA: 0x01241586 File Offset: 0x0123F786
+		// Token: 0x0603D1E7 RID: 250343 RVA: 0x0119AA1A File Offset: 0x01198C1A
 		public int GetPbDataId()
 		{
 			return this.PbDataId;
 		}
 
-		// Token: 0x060478B0 RID: 293040 RVA: 0x0124158E File Offset: 0x0123F78E
+		// Token: 0x0603D1E8 RID: 250344 RVA: 0x0119AA22 File Offset: 0x01198C22
 		public long GetCreatureDataId()
 		{
 			return this.CreatureDataId;
 		}
 
-		// Token: 0x060478B1 RID: 293041 RVA: 0x01241596 File Offset: 0x0123F796
+		// Token: 0x0603D1E9 RID: 250345 RVA: 0x0119AA2A File Offset: 0x01198C2A
 		public EPortalModel GetPortalModel()
 		{
 			return this.PortalModelType;
 		}
 
-		// Token: 0x060478B2 RID: 293042 RVA: 0x0124159E File Offset: 0x0123F79E
+		// Token: 0x0603D1EA RID: 250346 RVA: 0x0119AA32 File Offset: 0x01198C32
 		public long GetTargetCreatureDataId()
 		{
 			return this.TargetCreatureDataId;
 		}
 
-		// Token: 0x060478B3 RID: 293043 RVA: 0x012415A6 File Offset: 0x0123F7A6
+		// Token: 0x0603D1EB RID: 250347 RVA: 0x0119AA3A File Offset: 0x01198C3A
 		public void SetTargetCreatureDataId(long id)
 		{
 			this.TargetCreatureDataId = id;
 		}
 
-		// Token: 0x060478B4 RID: 293044 RVA: 0x012415B0 File Offset: 0x0123F7B0
+		// Token: 0x0603D1EC RID: 250348 RVA: 0x0119AA44 File Offset: 0x01198C44
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -144,14 +144,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478B5 RID: 293045 RVA: 0x01241647 File Offset: 0x0123F847
+		// Token: 0x0603D1ED RID: 250349 RVA: 0x0119AADB File Offset: 0x01198CDB
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
 			return true;
 		}
 
-		// Token: 0x060478B6 RID: 293046 RVA: 0x0124165C File Offset: 0x0123F85C
+		// Token: 0x0603D1EE RID: 250350 RVA: 0x0119AAF0 File Offset: 0x01198CF0
 		protected override void OnActivate()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478B7 RID: 293047 RVA: 0x012416DC File Offset: 0x0123F8DC
+		// Token: 0x0603D1EF RID: 250351 RVA: 0x0119AB70 File Offset: 0x01198D70
 		protected override bool OnEnd()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478B8 RID: 293048 RVA: 0x01241754 File Offset: 0x0123F954
+		// Token: 0x0603D1F0 RID: 250352 RVA: 0x0119ABE8 File Offset: 0x01198DE8
 		protected override void OnDisable(string reason)
 		{
 			if (!base.Entity.IsInit)
@@ -195,14 +195,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.UnPreparePortal();
 		}
 
-		// Token: 0x060478B9 RID: 293049 RVA: 0x01241770 File Offset: 0x0123F970
+		// Token: 0x0603D1F1 RID: 250353 RVA: 0x0119AC04 File Offset: 0x01198E04
 		private void OnSceneInteractionLoadCompleted()
 		{
 			this.PreparePortal();
 			this.TryConnectPortal();
 		}
 
-		// Token: 0x060478BA RID: 293050 RVA: 0x01241780 File Offset: 0x0123F980
+		// Token: 0x0603D1F2 RID: 250354 RVA: 0x0119AC14 File Offset: 0x01198E14
 		private bool CanPreparePortal()
 		{
 			if ((base.Entity.Flag & EExecutedFlag.Start) == EExecutedFlag.None)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(entityOnlineInteractType, false);
 		}
 
-		// Token: 0x060478BB RID: 293051 RVA: 0x012417D9 File Offset: 0x0123F9D9
+		// Token: 0x0603D1F3 RID: 250355 RVA: 0x0119AC6D File Offset: 0x01198E6D
 		private void PreparePortal()
 		{
 			if (!this.CanPreparePortal())
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.SetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag.Prepared, true);
 		}
 
-		// Token: 0x060478BC RID: 293052 RVA: 0x01241808 File Offset: 0x0123FA08
+		// Token: 0x0603D1F4 RID: 250356 RVA: 0x0119AC9C File Offset: 0x01198E9C
 		private void UnPreparePortal()
 		{
 			if (!this.IsPortalPrepared)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.SetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag.Prepared, false);
 		}
 
-		// Token: 0x060478BD RID: 293053 RVA: 0x01241830 File Offset: 0x0123FA30
+		// Token: 0x0603D1F5 RID: 250357 RVA: 0x0119ACC4 File Offset: 0x01198EC4
 		public bool CanConnectPortal()
 		{
 			if ((base.Entity.Flag & EExecutedFlag.Start) == EExecutedFlag.None)
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return component == null || component.IsPortalPrepared;
 		}
 
-		// Token: 0x060478BE RID: 293054 RVA: 0x012418D4 File Offset: 0x0123FAD4
+		// Token: 0x0603D1F6 RID: 250358 RVA: 0x0119AD68 File Offset: 0x01198F68
 		private void TryConnectPortal()
 		{
 			if (!this.CanConnectPortal())
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478BF RID: 293055 RVA: 0x012419B8 File Offset: 0x0123FBB8
+		// Token: 0x0603D1F7 RID: 250359 RVA: 0x0119AE4C File Offset: 0x0119904C
 		private void TryDisConnectPortal()
 		{
 			if (!this.IsPortalConnected)
@@ -352,21 +352,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			obj2.AfterDisconnectPair();
 		}
 
-		// Token: 0x060478C0 RID: 293056 RVA: 0x01241A30 File Offset: 0x0123FC30
+		// Token: 0x0603D1F8 RID: 250360 RVA: 0x0119AEC4 File Offset: 0x011990C4
 		public void AfterConnectPair()
 		{
 			this.SetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag.Connected, true);
 			this.AddTriggerOverlapEvent();
 		}
 
-		// Token: 0x060478C1 RID: 293057 RVA: 0x01241A40 File Offset: 0x0123FC40
+		// Token: 0x0603D1F9 RID: 250361 RVA: 0x0119AED4 File Offset: 0x011990D4
 		public void AfterDisconnectPair()
 		{
 			this.SetPortalStateFlagsMatch(SceneItemNoRenderPortalComponent.EPortalStateFlag.Connected, false);
 			this.RemoveTriggerOverlapEvent();
 		}
 
-		// Token: 0x060478C2 RID: 293058 RVA: 0x01241A50 File Offset: 0x0123FC50
+		// Token: 0x0603D1FA RID: 250362 RVA: 0x0119AEE4 File Offset: 0x011990E4
 		private void OnTargetEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (handle == null || !handle.Valid)
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478C3 RID: 293059 RVA: 0x01241B10 File Offset: 0x0123FD10
+		// Token: 0x0603D1FB RID: 250363 RVA: 0x0119AFA4 File Offset: 0x011991A4
 		[NullableContext(2)]
 		public AWorldPartitionStreamingPortal GetOrCreateWpStreamingPortal()
 		{
@@ -430,7 +430,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.WpStreamingPortal;
 		}
 
-		// Token: 0x060478C4 RID: 293060 RVA: 0x01241C00 File Offset: 0x0123FE00
+		// Token: 0x0603D1FC RID: 250364 RVA: 0x0119B094 File Offset: 0x01199294
 		private void ClearWpStreamingPortal()
 		{
 			if (Platform.Instance.IsMobilePlatform() && SceneItemNoRenderPortalComponent.JGZD_PORTAL_CONFIG_IDS.Contains(this.PbDataId))
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.WpStreamingPortal = null;
 		}
 
-		// Token: 0x060478C5 RID: 293061 RVA: 0x01241C90 File Offset: 0x0123FE90
+		// Token: 0x0603D1FD RID: 250365 RVA: 0x0119B124 File Offset: 0x01199324
 		[NullableContext(2)]
 		private void SetTargetWpStreamingPortal(AWorldPartitionStreamingPortal target)
 		{
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.WpStreamingPortal.SetTargetStreamingSourceComponent((target != null) ? target.GetStreamingSourceComponent() : null);
 		}
 
-		// Token: 0x060478C6 RID: 293062 RVA: 0x01241CF8 File Offset: 0x0123FEF8
+		// Token: 0x0603D1FE RID: 250366 RVA: 0x0119B18C File Offset: 0x0119938C
 		[NullableContext(2)]
 		public AActor GetTriggerActor()
 		{
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return actorByKey;
 		}
 
-		// Token: 0x060478C7 RID: 293063 RVA: 0x01241D4C File Offset: 0x0123FF4C
+		// Token: 0x0603D1FF RID: 250367 RVA: 0x0119B1E0 File Offset: 0x011993E0
 		[NullableContext(2)]
 		public UShapeComponent GetTriggerComp()
 		{
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return triggerActor.GetComponentByClass(UShapeComponent.StaticClass()) as UShapeComponent;
 		}
 
-		// Token: 0x060478C8 RID: 293064 RVA: 0x01241D7C File Offset: 0x0123FF7C
+		// Token: 0x0603D200 RID: 250368 RVA: 0x0119B210 File Offset: 0x01199410
 		[NullableContext(2)]
 		public global::Transform GetTeleportToSelfTransformProxy()
 		{
@@ -544,7 +544,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.TeleportToSelfTransformProxy;
 		}
 
-		// Token: 0x060478C9 RID: 293065 RVA: 0x01241E50 File Offset: 0x01240050
+		// Token: 0x0603D201 RID: 250369 RVA: 0x0119B2E4 File Offset: 0x011994E4
 		[NullableContext(2)]
 		public List<int> GetBuffEffectIds()
 		{
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return afterTeleportConfig.BuffEffectIds;
 		}
 
-		// Token: 0x060478CA RID: 293066 RVA: 0x01241E88 File Offset: 0x01240088
+		// Token: 0x0603D202 RID: 250370 RVA: 0x0119B31C File Offset: 0x0119951C
 		public int GetTeleportStreamRadius()
 		{
 			NoRenderPortalComponent compConfig = this.CompConfig;
@@ -581,7 +581,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return teleportStreamRadius.Value;
 		}
 
-		// Token: 0x060478CB RID: 293067 RVA: 0x01241EE0 File Offset: 0x012400E0
+		// Token: 0x0603D203 RID: 250371 RVA: 0x0119B374 File Offset: 0x01199574
 		[NullableContext(2)]
 		public List<int> GetAllowTeleportEntityConfigIds()
 		{
@@ -594,7 +594,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return staticNoRenderPortal.NpcMonsterEntityIds;
 		}
 
-		// Token: 0x060478CC RID: 293068 RVA: 0x01241F0C File Offset: 0x0124010C
+		// Token: 0x0603D204 RID: 250372 RVA: 0x0119B3A0 File Offset: 0x011995A0
 		private void AddTriggerOverlapEvent()
 		{
 			AActor triggerActor = this.GetTriggerActor();
@@ -614,7 +614,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			});
 		}
 
-		// Token: 0x060478CD RID: 293069 RVA: 0x01241F6C File Offset: 0x0124016C
+		// Token: 0x0603D205 RID: 250373 RVA: 0x0119B400 File Offset: 0x01199600
 		private void RemoveTriggerOverlapEvent()
 		{
 			AActor triggerActor = this.GetTriggerActor();
@@ -634,7 +634,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.ClearRecentTeleportRecordsByPortal();
 		}
 
-		// Token: 0x060478CE RID: 293070 RVA: 0x01241FC0 File Offset: 0x012401C0
+		// Token: 0x0603D206 RID: 250374 RVA: 0x0119B454 File Offset: 0x01199654
 		[NullableContext(2)]
 		private void TriggerEndOverlapEvent(AActor otherActor)
 		{
@@ -645,7 +645,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.TryMarkActorLeftExitTrigger(otherActor);
 		}
 
-		// Token: 0x060478CF RID: 293071 RVA: 0x01241FD0 File Offset: 0x012401D0
+		// Token: 0x0603D207 RID: 250375 RVA: 0x0119B464 File Offset: 0x01199664
 		[NullableContext(2)]
 		private unsafe void TriggerOverlapEvent(AActor otherActor)
 		{
@@ -849,7 +849,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.BeforeTeleport(otherActor, flag, (entityByActor != null) ? entityByActor.Entity : null, vehicleEntity);
 		}
 
-		// Token: 0x060478D0 RID: 293072 RVA: 0x012424EC File Offset: 0x012406EC
+		// Token: 0x0603D208 RID: 250376 RVA: 0x0119B980 File Offset: 0x01199B80
 		[NullableContext(2)]
 		private unsafe void BeforeTeleport([Nullable(1)] AActor otherActor, bool isRole, Entity otherEntity, Entity vehicleEntity)
 		{
@@ -1072,7 +1072,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.ExecTeleport(noRenderPortalTeleportParam);
 		}
 
-		// Token: 0x060478D1 RID: 293073 RVA: 0x01242B08 File Offset: 0x01240D08
+		// Token: 0x0603D209 RID: 250377 RVA: 0x0119BF9C File Offset: 0x0119A19C
 		private FTransformDouble TryOverrideRotation(FTransformDouble actorAfterTpTf)
 		{
 			NoRenderPortalComponent compConfig = this.CompConfig;
@@ -1095,7 +1095,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return actorAfterTpTf;
 		}
 
-		// Token: 0x060478D2 RID: 293074 RVA: 0x01242BC0 File Offset: 0x01240DC0
+		// Token: 0x0603D20A RID: 250378 RVA: 0x0119C054 File Offset: 0x0119A254
 		private unsafe void ExecTeleport(SceneItemNoRenderPortalComponent.NoRenderPortalTeleportParam param)
 		{
 			FVectorDouble location = param.AfterTeleportTransform.GetLocation();
@@ -1224,7 +1224,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478D3 RID: 293075 RVA: 0x01242F6C File Offset: 0x0124116C
+		// Token: 0x0603D20B RID: 250379 RVA: 0x0119C400 File Offset: 0x0119A600
 		private unsafe void AfterTeleport(SceneItemNoRenderPortalComponent.NoRenderPortalTeleportParam param)
 		{
 			Log instance = Log.Instance;
@@ -1315,7 +1315,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, null, null);
 		}
 
-		// Token: 0x060478D4 RID: 293076 RVA: 0x01243220 File Offset: 0x01241420
+		// Token: 0x0603D20C RID: 250380 RVA: 0x0119C6B4 File Offset: 0x0119A8B4
 		private void ProcessBlackHoleBeforeTeleport(AActor otherActor)
 		{
 			this.CacheTeleportActor = otherActor;
@@ -1351,7 +1351,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x060478D5 RID: 293077 RVA: 0x01243324 File Offset: 0x01241524
+		// Token: 0x0603D20D RID: 250381 RVA: 0x0119C7B8 File Offset: 0x0119A9B8
 		private void OnActorInOutRangeLocal(bool isEnter, AActor actor)
 		{
 			if (isEnter)
@@ -1401,7 +1401,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.RemoveActorInOutRangeEvent();
 		}
 
-		// Token: 0x060478D6 RID: 293078 RVA: 0x012433C0 File Offset: 0x012415C0
+		// Token: 0x0603D20E RID: 250382 RVA: 0x0119C854 File Offset: 0x0119AA54
 		private void RemoveActorInOutRangeEvent()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.TargetEntityPbDataId);
@@ -1412,7 +1412,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478D7 RID: 293079 RVA: 0x01243428 File Offset: 0x01241628
+		// Token: 0x0603D20F RID: 250383 RVA: 0x0119C8BC File Offset: 0x0119AABC
 		private void DoActionAfterTeleport(SceneItemNoRenderPortalComponent.NoRenderPortalTeleportParam param)
 		{
 			ETeleportActionType? eteleportActionType = null;
@@ -1443,7 +1443,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478D8 RID: 293080 RVA: 0x012434AC File Offset: 0x012416AC
+		// Token: 0x0603D210 RID: 250384 RVA: 0x0119C940 File Offset: 0x0119AB40
 		private unsafe void RailSlideAfterTeleport(SceneItemNoRenderPortalComponent.NoRenderPortalTeleportParam param)
 		{
 			if (param.VehicleEntity != null)
@@ -1533,7 +1533,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			instance5.Info(module5, author5, message5, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 5));
 		}
 
-		// Token: 0x060478D9 RID: 293081 RVA: 0x012438B4 File Offset: 0x01241AB4
+		// Token: 0x0603D211 RID: 250385 RVA: 0x0119CD48 File Offset: 0x0119AF48
 		private unsafe void RequestRolePassPortal(SceneItemNoRenderPortalComponent.NoRenderPortalTeleportParam param)
 		{
 			FTransformDouble afterTeleportTransform = param.AfterTeleportTransform;
@@ -1571,7 +1571,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			});
 		}
 
-		// Token: 0x060478DA RID: 293082 RVA: 0x01243968 File Offset: 0x01241B68
+		// Token: 0x0603D212 RID: 250386 RVA: 0x0119CDFC File Offset: 0x0119AFFC
 		private void RecordRecentTeleportActor(AActor otherActor)
 		{
 			if (otherActor == null || !otherActor.IsValid())
@@ -1596,7 +1596,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			portalRecentTeleportRecord.HasLeftTrigger = !flag;
 		}
 
-		// Token: 0x060478DB RID: 293083 RVA: 0x01243A08 File Offset: 0x01241C08
+		// Token: 0x0603D213 RID: 250387 RVA: 0x0119CE9C File Offset: 0x0119B09C
 		private void TryMarkActorLeftExitTrigger(AActor otherActor)
 		{
 			if (otherActor == null || !otherActor.IsValid() || SceneItemNoRenderPortalComponent._recentTeleportActors == null)
@@ -1614,7 +1614,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478DC RID: 293084 RVA: 0x01243A54 File Offset: 0x01241C54
+		// Token: 0x0603D214 RID: 250388 RVA: 0x0119CEE8 File Offset: 0x0119B0E8
 		private void ClearRecentTeleportRecord(AActor otherActor)
 		{
 			if (SceneItemNoRenderPortalComponent._recentTeleportActors == null)
@@ -1632,7 +1632,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478DD RID: 293085 RVA: 0x01243A94 File Offset: 0x01241C94
+		// Token: 0x0603D215 RID: 250389 RVA: 0x0119CF28 File Offset: 0x0119B128
 		[return: Nullable(2)]
 		private SceneItemNoRenderPortalComponent.PortalRecentTeleportRecord GetRecentTeleportRecord(AActor otherActor)
 		{
@@ -1653,7 +1653,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return portalRecentTeleportRecord;
 		}
 
-		// Token: 0x060478DE RID: 293086 RVA: 0x01243AE0 File Offset: 0x01241CE0
+		// Token: 0x0603D216 RID: 250390 RVA: 0x0119CF74 File Offset: 0x0119B174
 		private static void InitTempVectors()
 		{
 			if (SceneItemNoRenderPortalComponent._tempVectors == null)
@@ -1666,7 +1666,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478DF RID: 293087 RVA: 0x01243B14 File Offset: 0x01241D14
+		// Token: 0x0603D217 RID: 250391 RVA: 0x0119CFA8 File Offset: 0x0119B1A8
 		private unsafe bool CanReEnterAfterRecentTeleport(AActor otherActor, [Nullable(2)] Entity vehicleEntity)
 		{
 			SceneItemNoRenderPortalComponent.PortalRecentTeleportRecord recentTeleportRecord = this.GetRecentTeleportRecord(otherActor);
@@ -1809,7 +1809,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478E0 RID: 293088 RVA: 0x01244174 File Offset: 0x01242374
+		// Token: 0x0603D218 RID: 250392 RVA: 0x0119D608 File Offset: 0x0119B808
 		private bool GetTeleportReenterVelocityAndGravity(AActor otherActor, [Nullable(2)] Entity vehicleEntity, global::Vector outVelocityDir, global::Vector outGravityDir)
 		{
 			if (vehicleEntity != null)
@@ -1857,7 +1857,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478E1 RID: 293089 RVA: 0x01244280 File Offset: 0x01242480
+		// Token: 0x0603D219 RID: 250393 RVA: 0x0119D714 File Offset: 0x0119B914
 		private void ProjectVectorToGravityPlane(global::Vector vec, global::Vector gravityDir)
 		{
 			global::Vector vector = global::Vector.Create(gravityDir);
@@ -1865,7 +1865,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			vec.SubtractionEqual(vector);
 		}
 
-		// Token: 0x060478E2 RID: 293090 RVA: 0x012442AC File Offset: 0x012424AC
+		// Token: 0x0603D21A RID: 250394 RVA: 0x0119D740 File Offset: 0x0119B940
 		private unsafe void ClearRecentTeleportRecordsByPortal()
 		{
 			if (SceneItemNoRenderPortalComponent._recentTeleportActors == null)
@@ -1903,7 +1903,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060478E3 RID: 293091 RVA: 0x01244424 File Offset: 0x01242624
+		// Token: 0x0603D21B RID: 250395 RVA: 0x0119D8B8 File Offset: 0x0119BAB8
 		private void LogReEnterIntercept(string reason, AActor otherActor, SceneItemNoRenderPortalComponent.PortalRecentTeleportRecord record, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -1933,7 +1933,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Log.Instance.Info(ELogModule.SceneItem, ELogAuthor.HF, "无画面传送门: 出口门防抖拦截", pairs);
 		}
 
-		// Token: 0x060478E4 RID: 293092 RVA: 0x01244550 File Offset: 0x01242750
+		// Token: 0x0603D21C RID: 250396 RVA: 0x0119D9E4 File Offset: 0x0119BBE4
 		private bool IsActorOnTheFrontOfPortal(AActor actor)
 		{
 			AActor triggerActor = this.GetTriggerActor();
@@ -1950,7 +1950,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return vector2.DotProduct(vector3) > -1E-08;
 		}
 
-		// Token: 0x060478E5 RID: 293093 RVA: 0x012445CC File Offset: 0x012427CC
+		// Token: 0x0603D21D RID: 250397 RVA: 0x0119DA60 File Offset: 0x0119BC60
 		private bool IsEntityPassPortalFromTheFront(BaseActorComponent otherActorComp)
 		{
 			AActor triggerActor = this.GetTriggerActor();
@@ -1972,7 +1972,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return flag && flag2;
 		}
 
-		// Token: 0x060478E6 RID: 293094 RVA: 0x0124468C File Offset: 0x0124288C
+		// Token: 0x0603D21E RID: 250398 RVA: 0x0119DB20 File Offset: 0x0119BD20
 		private unsafe bool CanActorPassPortalSafely(AActor otherActor, bool isRole)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(this.TargetCreatureDataId);
@@ -2055,7 +2055,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060478E7 RID: 293095 RVA: 0x012448B4 File Offset: 0x01242AB4
+		// Token: 0x0603D21F RID: 250399 RVA: 0x0119DD48 File Offset: 0x0119BF48
 		[NullableContext(2)]
 		private bool CheckMatchPassPortalCondition(AActor inTrigger)
 		{
@@ -2074,7 +2074,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return LevelGeneralController.Instance.CheckConditionNew(conditionGroup, inTrigger, context, null);
 		}
 
-		// Token: 0x060478E8 RID: 293096 RVA: 0x01244918 File Offset: 0x01242B18
+		// Token: 0x0603D220 RID: 250400 RVA: 0x0119DDAC File Offset: 0x0119BFAC
 		[NullableContext(2)]
 		public static void PlayNoLoadingPassPortalEffects(string screenEffectPath, string worldEffectPath, float maxInterval)
 		{
@@ -2105,7 +2105,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, maxInterval, null, null, true, 1f);
 		}
 
-		// Token: 0x060478E9 RID: 293097 RVA: 0x01244A28 File Offset: 0x01242C28
+		// Token: 0x0603D221 RID: 250401 RVA: 0x0119DEBC File Offset: 0x0119C0BC
 		private static void EndNoLoadingPassPortalEffects()
 		{
 			if (SceneItemNoRenderPortalComponent._passPortalScreenEffectHandleId != null)
@@ -2126,7 +2126,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			SceneItemNoRenderPortalComponent._endPassPortalEffectTimerHandle = null;
 		}
 
-		// Token: 0x060478EA RID: 293098 RVA: 0x01244ADC File Offset: 0x01242CDC
+		// Token: 0x0603D222 RID: 250402 RVA: 0x0119DF70 File Offset: 0x0119C170
 		private bool RoleTeleportTraceBlock(IVector startLocation, IVector endLocation, [Nullable(2)] IVector outHitLocation, CharacterActorComponent roleActorComp)
 		{
 			if (this.RoleTeleportTraceElement == null)
@@ -2171,7 +2171,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return false;
 		}
 
-		// Token: 0x060478EB RID: 293099 RVA: 0x01244CDC File Offset: 0x01242EDC
+		// Token: 0x0603D223 RID: 250403 RVA: 0x0119E170 File Offset: 0x0119C370
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -2179,164 +2179,165 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemNoRenderPortalComponent sceneItemNoRenderPortalComponent = (SceneItemNoRenderPortalComponent)componentTemplate;
-			if (base.CanResetComponentProperty("TmpVelocity") && sceneItemNoRenderPortalComponent.TmpVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVelocity), "TmpVelocity"))
+			if (sceneItemNoRenderPortalComponent.TmpVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVelocity), "TmpVelocity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpGravity") && sceneItemNoRenderPortalComponent.TmpGravity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpGravity), "TmpGravity"))
+			if (sceneItemNoRenderPortalComponent.TmpGravity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpGravity), "TmpGravity"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("PortalModelType"))
+			this.PortalModelType = sceneItemNoRenderPortalComponent.PortalModelType;
+			this.PbDataId = sceneItemNoRenderPortalComponent.PbDataId;
+			this.CreatureDataId = sceneItemNoRenderPortalComponent.CreatureDataId;
+			this.TargetEntityPbDataId = sceneItemNoRenderPortalComponent.TargetEntityPbDataId;
+			this.TargetCreatureDataId = sceneItemNoRenderPortalComponent.TargetCreatureDataId;
+			if (sceneItemNoRenderPortalComponent.ActorComp == null)
 			{
-				this.PortalModelType = sceneItemNoRenderPortalComponent.PortalModelType;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PbDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.PbDataId = sceneItemNoRenderPortalComponent.PbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CreatureDataId"))
+			if (sceneItemNoRenderPortalComponent.PortalTriggerActorCache == null)
 			{
-				this.CreatureDataId = sceneItemNoRenderPortalComponent.CreatureDataId;
+				this.PortalTriggerActorCache = null;
 			}
-			if (base.CanResetComponentProperty("TargetEntityPbDataId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PortalTriggerActorCache), "PortalTriggerActorCache"))
 			{
-				this.TargetEntityPbDataId = sceneItemNoRenderPortalComponent.TargetEntityPbDataId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetCreatureDataId"))
+			if (sceneItemNoRenderPortalComponent.TeleportToSelfTransformProxy == null)
 			{
-				this.TargetCreatureDataId = sceneItemNoRenderPortalComponent.TargetCreatureDataId;
+				this.TeleportToSelfTransformProxy = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TeleportToSelfTransformProxy), "TeleportToSelfTransformProxy"))
 			{
-				if (sceneItemNoRenderPortalComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PortalTriggerActorCache"))
+			this.PortalStateFlags = sceneItemNoRenderPortalComponent.PortalStateFlags;
+			if (sceneItemNoRenderPortalComponent.CompConfig == null)
 			{
-				if (sceneItemNoRenderPortalComponent.PortalTriggerActorCache == null)
-				{
-					this.PortalTriggerActorCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.PortalTriggerActorCache), "PortalTriggerActorCache"))
-				{
-					return false;
-				}
+				this.CompConfig = null;
 			}
-			if (base.CanResetComponentProperty("TeleportToSelfTransformProxy"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CompConfig), "CompConfig"))
 			{
-				if (sceneItemNoRenderPortalComponent.TeleportToSelfTransformProxy == null)
-				{
-					this.TeleportToSelfTransformProxy = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Transform>(this.TeleportToSelfTransformProxy), "TeleportToSelfTransformProxy"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PortalStateFlags"))
+			if (sceneItemNoRenderPortalComponent.CacheTeleportActor == null)
 			{
-				this.PortalStateFlags = sceneItemNoRenderPortalComponent.PortalStateFlags;
+				this.CacheTeleportActor = null;
 			}
-			if (base.CanResetComponentProperty("CompConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheTeleportActor), "CacheTeleportActor"))
 			{
-				if (sceneItemNoRenderPortalComponent.CompConfig == null)
-				{
-					this.CompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NoRenderPortalComponent>(this.CompConfig), "CompConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CacheTeleportActor"))
+			if (sceneItemNoRenderPortalComponent.WpStreamingPortal == null)
 			{
-				if (sceneItemNoRenderPortalComponent.CacheTeleportActor == null)
-				{
-					this.CacheTeleportActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CacheTeleportActor), "CacheTeleportActor"))
-				{
-					return false;
-				}
+				this.WpStreamingPortal = null;
 			}
-			if (base.CanResetComponentProperty("WpStreamingPortal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WpStreamingPortal), "WpStreamingPortal"))
 			{
-				if (sceneItemNoRenderPortalComponent.WpStreamingPortal == null)
-				{
-					this.WpStreamingPortal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AWorldPartitionStreamingPortal>(this.WpStreamingPortal), "WpStreamingPortal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RoleTeleportTraceElement"))
+			if (sceneItemNoRenderPortalComponent.RoleTeleportTraceElement == null)
 			{
-				if (sceneItemNoRenderPortalComponent.RoleTeleportTraceElement == null)
-				{
-					this.RoleTeleportTraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceCapsuleElement>(this.RoleTeleportTraceElement), "RoleTeleportTraceElement"))
-				{
-					return false;
-				}
+				this.RoleTeleportTraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RoleTeleportTraceElement), "RoleTeleportTraceElement"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025A2B RID: 154155
+		// Token: 0x170073BC RID: 29628
+		// (get) Token: 0x0603D224 RID: 250404 RVA: 0x0119E349 File Offset: 0x0119C549
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073BD RID: 29629
+		// (get) Token: 0x0603D225 RID: 250405 RVA: 0x0119E34C File Offset: 0x0119C54C
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073BE RID: 29630
+		// (get) Token: 0x0603D226 RID: 250406 RVA: 0x0119E34F File Offset: 0x0119C54F
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073BF RID: 29631
+		// (get) Token: 0x0603D227 RID: 250407 RVA: 0x0119E352 File Offset: 0x0119C552
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402069A RID: 132762
 		private const int INVALID_ENTITY = 0;
 
-		// Token: 0x04025A2C RID: 154156
+		// Token: 0x0402069B RID: 132763
 		private const string TELEPORT_TRIGGER_REF = "TeleportTrigger";
 
-		// Token: 0x04025A2D RID: 154157
+		// Token: 0x0402069C RID: 132764
 		private const string PORTAL_DEBUG_KEY = "Portal";
 
-		// Token: 0x04025A2E RID: 154158
+		// Token: 0x0402069D RID: 132765
 		private const float PORTAL_TELEPORT_OFFSET = 0f;
 
-		// Token: 0x04025A2F RID: 154159
+		// Token: 0x0402069E RID: 132766
 		private const float PORTAL_TELEPORT_VEHICLE_OFFSET = 0f;
 
-		// Token: 0x04025A30 RID: 154160
+		// Token: 0x0402069F RID: 132767
 		private const float NO_LOADING_SCREEN_EFFECT_MAX_INTERVAL = 1000f;
 
-		// Token: 0x04025A31 RID: 154161
+		// Token: 0x040206A0 RID: 132768
 		private const float PORTAL_REENTER_GRAVITY_ONLY_DOT_THRESHOLD = 0.98f;
 
-		// Token: 0x04025A32 RID: 154162
+		// Token: 0x040206A1 RID: 132769
 		private const float PORTAL_REENTER_COOLDOWN_MS = 2000f;
 
-		// Token: 0x04025A33 RID: 154163
+		// Token: 0x040206A2 RID: 132770
 		private const float PORTAL_ENTER_DIRECTION_DOT_THRESHOLD = 0f;
 
-		// Token: 0x04025A34 RID: 154164
+		// Token: 0x040206A3 RID: 132771
 		private const float PORTAL_DEFAULT_DIRECTION_VALUE = 0f;
 
-		// Token: 0x04025A35 RID: 154165
+		// Token: 0x040206A4 RID: 132772
 		private const int PORTAL_TEMP_VECTOR_COUNT = 6;
 
-		// Token: 0x04025A36 RID: 154166
+		// Token: 0x040206A5 RID: 132773
 		private const float PORTAL_MOVE_FORWARD_INPUT_SCALE = 1f;
 
-		// Token: 0x04025A37 RID: 154167
+		// Token: 0x040206A6 RID: 132774
 		private const int INVALID_VEHICLE_SERVER_ENTITY_ID = 0;
 
-		// Token: 0x04025A38 RID: 154168
+		// Token: 0x040206A7 RID: 132775
 		private const float BLACK_HOLE_SHIELD_RETRACT_DURATION_MS = 3000f;
 
-		// Token: 0x04025A39 RID: 154169
+		// Token: 0x040206A8 RID: 132776
 		private const int WP_STREAMING_PORTAL_COLLISION_RADIUS = 5000;
 
-		// Token: 0x04025A3A RID: 154170
+		// Token: 0x040206A9 RID: 132777
 		private static readonly IReadOnlySet<int> JGZD_PORTAL_CONFIG_IDS = new HashSet<int>
 		{
 			688751185,
@@ -2353,50 +2354,50 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			688751234
 		};
 
-		// Token: 0x04025A3B RID: 154171
+		// Token: 0x040206AA RID: 132778
 		private readonly global::Vector TmpVelocity = global::Vector.Create();
 
-		// Token: 0x04025A3C RID: 154172
+		// Token: 0x040206AB RID: 132779
 		private readonly global::Vector TmpGravity = global::Vector.Create();
 
-		// Token: 0x04025A3D RID: 154173
+		// Token: 0x040206AC RID: 132780
 		private EPortalModel PortalModelType;
 
-		// Token: 0x04025A3E RID: 154174
+		// Token: 0x040206AD RID: 132781
 		private int PbDataId;
 
-		// Token: 0x04025A3F RID: 154175
+		// Token: 0x040206AE RID: 132782
 		private long CreatureDataId;
 
-		// Token: 0x04025A40 RID: 154176
+		// Token: 0x040206AF RID: 132783
 		private int TargetEntityPbDataId;
 
-		// Token: 0x04025A41 RID: 154177
+		// Token: 0x040206B0 RID: 132784
 		private long TargetCreatureDataId;
 
-		// Token: 0x04025A42 RID: 154178
+		// Token: 0x040206B1 RID: 132785
 		[Nullable(2)]
 		public SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025A43 RID: 154179
+		// Token: 0x040206B2 RID: 132786
 		[Nullable(2)]
 		private AActor PortalTriggerActorCache;
 
-		// Token: 0x04025A44 RID: 154180
+		// Token: 0x040206B3 RID: 132787
 		[Nullable(2)]
 		private global::Transform TeleportToSelfTransformProxy;
 
-		// Token: 0x04025A45 RID: 154181
+		// Token: 0x040206B4 RID: 132788
 		private static int? _passPortalScreenEffectHandleId;
 
-		// Token: 0x04025A46 RID: 154182
+		// Token: 0x040206B5 RID: 132789
 		private static int? _passPortalPostProcessEffectHandleId;
 
-		// Token: 0x04025A47 RID: 154183
+		// Token: 0x040206B6 RID: 132790
 		[Nullable(2)]
 		private static TimerHandle _endPassPortalEffectTimerHandle;
 
-		// Token: 0x04025A48 RID: 154184
+		// Token: 0x040206B7 RID: 132791
 		[Nullable(new byte[]
 		{
 			2,
@@ -2404,7 +2405,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private static HashSet<AActor> _actorTeleporting;
 
-		// Token: 0x04025A49 RID: 154185
+		// Token: 0x040206B8 RID: 132792
 		[Nullable(new byte[]
 		{
 			2,
@@ -2413,7 +2414,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private static Dictionary<AActor, SceneItemNoRenderPortalComponent.PortalRecentTeleportRecord> _recentTeleportActors;
 
-		// Token: 0x04025A4A RID: 154186
+		// Token: 0x040206B9 RID: 132793
 		[Nullable(new byte[]
 		{
 			2,
@@ -2421,86 +2422,86 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private static List<global::Vector> _tempVectors;
 
-		// Token: 0x04025A4B RID: 154187
+		// Token: 0x040206BA RID: 132794
 		private int PortalStateFlags;
 
-		// Token: 0x04025A4C RID: 154188
+		// Token: 0x040206BB RID: 132795
 		[Nullable(2)]
 		private NoRenderPortalComponent CompConfig;
 
-		// Token: 0x04025A4D RID: 154189
+		// Token: 0x040206BC RID: 132796
 		[Nullable(2)]
 		private AActor CacheTeleportActor;
 
-		// Token: 0x04025A4E RID: 154190
+		// Token: 0x040206BD RID: 132797
 		[Nullable(2)]
 		private AWorldPartitionStreamingPortal WpStreamingPortal;
 
-		// Token: 0x04025A4F RID: 154191
+		// Token: 0x040206BE RID: 132798
 		[Nullable(2)]
 		private UTraceCapsuleElement RoleTeleportTraceElement;
 
-		// Token: 0x0200CF5E RID: 53086
+		// Token: 0x0200BAF3 RID: 47859
 		[NullableContext(0)]
 		[Flags]
 		private enum EPortalStateFlag
 		{
-			// Token: 0x0403E55A RID: 255322
+			// Token: 0x04039880 RID: 235648
 			None = 0,
-			// Token: 0x0403E55B RID: 255323
+			// Token: 0x04039881 RID: 235649
 			Prepared = 1,
-			// Token: 0x0403E55C RID: 255324
+			// Token: 0x04039882 RID: 235650
 			Connected = 2
 		}
 
-		// Token: 0x0200CF5F RID: 53087
+		// Token: 0x0200BAF4 RID: 47860
 		[Nullable(0)]
 		private class NoRenderPortalTeleportParam
 		{
-			// Token: 0x060520B8 RID: 336056 RVA: 0x0164C276 File Offset: 0x0164A476
+			// Token: 0x06048863 RID: 297059 RVA: 0x0161E38E File Offset: 0x0161C58E
 			public NoRenderPortalTeleportParam(AActor otherActor, bool isRole, [Nullable(2)] Entity otherEntity, [Nullable(2)] Entity vehicleEntity, SceneItemNoRenderPortalComponent inPortalComp, FTransformDouble afterTeleportTransform)
 			{
 			}
 
-			// Token: 0x0403E55D RID: 255325
+			// Token: 0x04039883 RID: 235651
 			public AActor OtherActor = otherActor;
 
-			// Token: 0x0403E55E RID: 255326
+			// Token: 0x04039884 RID: 235652
 			public bool IsRole = isRole;
 
-			// Token: 0x0403E55F RID: 255327
+			// Token: 0x04039885 RID: 235653
 			[Nullable(2)]
 			public Entity OtherEntity = otherEntity;
 
-			// Token: 0x0403E560 RID: 255328
+			// Token: 0x04039886 RID: 235654
 			[Nullable(2)]
 			public Entity VehicleEntity = vehicleEntity;
 
-			// Token: 0x0403E561 RID: 255329
+			// Token: 0x04039887 RID: 235655
 			public SceneItemNoRenderPortalComponent InPortalComp = inPortalComp;
 
-			// Token: 0x0403E562 RID: 255330
+			// Token: 0x04039888 RID: 235656
 			public FTransformDouble AfterTeleportTransform = afterTeleportTransform;
 
-			// Token: 0x0403E563 RID: 255331
+			// Token: 0x04039889 RID: 235657
 			public bool OriginEnableMovementSync;
 
-			// Token: 0x0403E564 RID: 255332
+			// Token: 0x0403988A RID: 235658
 			[Nullable(2)]
 			public IVector AfterTeleportGravityDirect;
 		}
 
-		// Token: 0x0200CF60 RID: 53088
+		// Token: 0x0200BAF5 RID: 47861
 		[NullableContext(0)]
 		private class PortalRecentTeleportRecord
 		{
-			// Token: 0x0403E565 RID: 255333
+			// Token: 0x0403988B RID: 235659
 			public int PortalPbDataId;
 
-			// Token: 0x0403E566 RID: 255334
+			// Token: 0x0403988C RID: 235660
 			public double LastTeleportTimeMs;
 
-			// Token: 0x0403E567 RID: 255335
+			// Token: 0x0403988D RID: 235661
 			public bool HasLeftTrigger;
 		}
 	}

@@ -2,88 +2,88 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A69 RID: 23145
+	// Token: 0x02004A45 RID: 19013
 	internal enum <FlagChallengeMainView>F28F54E85C3CCEA5B1F42262720EFB2DB214879A26E02BE75187D7403AF35E46B__EComponentType
 	{
-		// Token: 0x0401E96C RID: 125292
+		// Token: 0x04019413 RID: 103443
 		CaptionItem,
-		// Token: 0x0401E96D RID: 125293
+		// Token: 0x04019414 RID: 103444
 		MapBgTex,
-		// Token: 0x0401E96E RID: 125294
+		// Token: 0x04019415 RID: 103445
 		MapBgTopTex,
-		// Token: 0x0401E96F RID: 125295
+		// Token: 0x04019416 RID: 103446
 		DetailBgTex,
-		// Token: 0x0401E970 RID: 125296
+		// Token: 0x04019417 RID: 103447
 		CG,
-		// Token: 0x0401E971 RID: 125297
+		// Token: 0x04019418 RID: 103448
 		FrameTex,
-		// Token: 0x0401E972 RID: 125298
+		// Token: 0x04019419 RID: 103449
 		FrameBgTex,
-		// Token: 0x0401E973 RID: 125299
+		// Token: 0x0401941A RID: 103450
 		AreaItem1,
-		// Token: 0x0401E974 RID: 125300
+		// Token: 0x0401941B RID: 103451
 		AreaItem2,
-		// Token: 0x0401E975 RID: 125301
+		// Token: 0x0401941C RID: 103452
 		AreaItem3,
-		// Token: 0x0401E976 RID: 125302
+		// Token: 0x0401941D RID: 103453
 		AreaItem4,
-		// Token: 0x0401E977 RID: 125303
+		// Token: 0x0401941E RID: 103454
 		AreaItem5,
-		// Token: 0x0401E978 RID: 125304
+		// Token: 0x0401941F RID: 103455
 		RoleLevelItem,
-		// Token: 0x0401E979 RID: 125305
+		// Token: 0x04019420 RID: 103456
 		BuffBtn,
-		// Token: 0x0401E97A RID: 125306
+		// Token: 0x04019421 RID: 103457
 		BuffRedDot,
-		// Token: 0x0401E97B RID: 125307
+		// Token: 0x04019422 RID: 103458
 		LevelLayout,
-		// Token: 0x0401E97C RID: 125308
+		// Token: 0x04019423 RID: 103459
 		LevelItem,
-		// Token: 0x0401E97D RID: 125309
+		// Token: 0x04019424 RID: 103460
 		TaskBtn,
-		// Token: 0x0401E97E RID: 125310
+		// Token: 0x04019425 RID: 103461
 		TaskProgressTxt,
-		// Token: 0x0401E97F RID: 125311
+		// Token: 0x04019426 RID: 103462
 		LevelBgTex,
-		// Token: 0x0401E980 RID: 125312
+		// Token: 0x04019427 RID: 103463
 		LevelArtText,
-		// Token: 0x0401E981 RID: 125313
+		// Token: 0x04019428 RID: 103464
 		LevelNameTxt,
-		// Token: 0x0401E982 RID: 125314
+		// Token: 0x04019429 RID: 103465
 		LevelLowerLimitBgSprite,
-		// Token: 0x0401E983 RID: 125315
+		// Token: 0x0401942A RID: 103466
 		LevelLowerLimitArtText,
-		// Token: 0x0401E984 RID: 125316
+		// Token: 0x0401942B RID: 103467
 		LevelUpperLimitBgSprite,
-		// Token: 0x0401E985 RID: 125317
+		// Token: 0x0401942C RID: 103468
 		LevelUpperLimitArtText,
-		// Token: 0x0401E986 RID: 125318
+		// Token: 0x0401942D RID: 103469
 		ContentTxt,
-		// Token: 0x0401E987 RID: 125319
+		// Token: 0x0401942E RID: 103470
 		DetailBtn,
-		// Token: 0x0401E988 RID: 125320
+		// Token: 0x0401942F RID: 103471
 		ChallengeBtn,
-		// Token: 0x0401E989 RID: 125321
+		// Token: 0x04019430 RID: 103472
 		SelectAreaRoot,
-		// Token: 0x0401E98A RID: 125322
+		// Token: 0x04019431 RID: 103473
 		AreaNameTxt,
-		// Token: 0x0401E98B RID: 125323
+		// Token: 0x04019432 RID: 103474
 		WarningItem,
-		// Token: 0x0401E98C RID: 125324
+		// Token: 0x04019433 RID: 103475
 		EffectItem1,
-		// Token: 0x0401E98D RID: 125325
+		// Token: 0x04019434 RID: 103476
 		EffectItem2,
-		// Token: 0x0401E98E RID: 125326
+		// Token: 0x04019435 RID: 103477
 		EffectItem3,
-		// Token: 0x0401E98F RID: 125327
+		// Token: 0x04019436 RID: 103478
 		LevelScrollView,
-		// Token: 0x0401E990 RID: 125328
+		// Token: 0x04019437 RID: 103479
 		TaskRedDotItem,
-		// Token: 0x0401E991 RID: 125329
+		// Token: 0x04019438 RID: 103480
 		StrongholdNameTxt,
-		// Token: 0x0401E992 RID: 125330
+		// Token: 0x04019439 RID: 103481
 		AreaIndexSprite,
-		// Token: 0x0401E993 RID: 125331
+		// Token: 0x0401943A RID: 103482
 		CompleteItem
 	}
 }

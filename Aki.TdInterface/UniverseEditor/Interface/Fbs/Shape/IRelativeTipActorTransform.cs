@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C31 RID: 15409
+	// Token: 0x02004040 RID: 16448
 	public struct IRelativeTipActorTransform : IFlatbufferObject
 	{
-		// Token: 0x17006A13 RID: 27155
-		// (get) Token: 0x06015449 RID: 87113 RVA: 0x003141C2 File Offset: 0x003123C2
+		// Token: 0x17006FC4 RID: 28612
+		// (get) Token: 0x0601695D RID: 92509 RVA: 0x0033B062 File Offset: 0x00339262
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601544A RID: 87114 RVA: 0x003141CF File Offset: 0x003123CF
+		// Token: 0x0601695E RID: 92510 RVA: 0x0033B06F File Offset: 0x0033926F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601544B RID: 87115 RVA: 0x003141D8 File Offset: 0x003123D8
+		// Token: 0x0601695F RID: 92511 RVA: 0x0033B078 File Offset: 0x00339278
 		public static IRelativeTipActorTransform GetRootAsIRelativeTipActorTransform(ByteBuffer _bb)
 		{
 			return IRelativeTipActorTransform.GetRootAsIRelativeTipActorTransform(_bb, default(IRelativeTipActorTransform));
 		}
 
-		// Token: 0x0601544C RID: 87116 RVA: 0x003141F4 File Offset: 0x003123F4
+		// Token: 0x06016960 RID: 92512 RVA: 0x0033B094 File Offset: 0x00339294
 		public static IRelativeTipActorTransform GetRootAsIRelativeTipActorTransform(ByteBuffer _bb, IRelativeTipActorTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601544D RID: 87117 RVA: 0x00314211 File Offset: 0x00312411
+		// Token: 0x06016961 RID: 92513 RVA: 0x0033B0B1 File Offset: 0x003392B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601544E RID: 87118 RVA: 0x00314220 File Offset: 0x00312420
+		// Token: 0x06016962 RID: 92514 RVA: 0x0033B0C0 File Offset: 0x003392C0
 		public IRelativeTipActorTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A14 RID: 27156
-		// (get) Token: 0x0601544F RID: 87119 RVA: 0x00314230 File Offset: 0x00312430
+		// Token: 0x17006FC5 RID: 28613
+		// (get) Token: 0x06016963 RID: 92515 RVA: 0x0033B0D0 File Offset: 0x003392D0
 		public ETipsActorTransformType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A15 RID: 27157
-		// (get) Token: 0x06015450 RID: 87120 RVA: 0x0031426C File Offset: 0x0031246C
+		// Token: 0x17006FC6 RID: 28614
+		// (get) Token: 0x06016964 RID: 92516 RVA: 0x0033B10C File Offset: 0x0033930C
 		public IVectorInfo? Pos
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A16 RID: 27158
-		// (get) Token: 0x06015451 RID: 87121 RVA: 0x003142CC File Offset: 0x003124CC
+		// Token: 0x17006FC7 RID: 28615
+		// (get) Token: 0x06016965 RID: 92517 RVA: 0x0033B16C File Offset: 0x0033936C
 		public IVectorInfo? Rot
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A17 RID: 27159
-		// (get) Token: 0x06015452 RID: 87122 RVA: 0x0031432C File Offset: 0x0031252C
+		// Token: 0x17006FC8 RID: 28616
+		// (get) Token: 0x06016966 RID: 92518 RVA: 0x0033B1CC File Offset: 0x003393CC
 		public int RelativeEntityId
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015453 RID: 87123 RVA: 0x00314369 File Offset: 0x00312569
+		// Token: 0x06016967 RID: 92519 RVA: 0x0033B209 File Offset: 0x00339409
 		public static Offset<IRelativeTipActorTransform> CreateIRelativeTipActorTransform(FlatBufferBuilder builder, ETipsActorTransformType Type = ETipsActorTransformType.Absolute, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>), int RelativeEntityId = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IRelativeTipActorTransform.EndIRelativeTipActorTransform(builder);
 		}
 
-		// Token: 0x06015454 RID: 87124 RVA: 0x00314395 File Offset: 0x00312595
+		// Token: 0x06016968 RID: 92520 RVA: 0x0033B235 File Offset: 0x00339435
 		public static void StartIRelativeTipActorTransform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06015455 RID: 87125 RVA: 0x0031439E File Offset: 0x0031259E
+		// Token: 0x06016969 RID: 92521 RVA: 0x0033B23E File Offset: 0x0033943E
 		public static void AddType(FlatBufferBuilder builder, ETipsActorTransformType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015456 RID: 87126 RVA: 0x003143A9 File Offset: 0x003125A9
+		// Token: 0x0601696A RID: 92522 RVA: 0x0033B249 File Offset: 0x00339449
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(1, posOffset.Value, 0);
 		}
 
-		// Token: 0x06015457 RID: 87127 RVA: 0x003143B9 File Offset: 0x003125B9
+		// Token: 0x0601696B RID: 92523 RVA: 0x0033B259 File Offset: 0x00339459
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(2, rotOffset.Value, 0);
 		}
 
-		// Token: 0x06015458 RID: 87128 RVA: 0x003143C9 File Offset: 0x003125C9
+		// Token: 0x0601696C RID: 92524 RVA: 0x0033B269 File Offset: 0x00339469
 		public static void AddRelativeEntityId(FlatBufferBuilder builder, int relativeEntityId)
 		{
 			builder.AddInt(3, relativeEntityId, 0);
 		}
 
-		// Token: 0x06015459 RID: 87129 RVA: 0x003143D4 File Offset: 0x003125D4
+		// Token: 0x0601696D RID: 92525 RVA: 0x0033B274 File Offset: 0x00339474
 		public static Offset<IRelativeTipActorTransform> EndIRelativeTipActorTransform(FlatBufferBuilder builder)
 		{
 			return new Offset<IRelativeTipActorTransform>(builder.EndTable());
 		}
 
-		// Token: 0x0601545A RID: 87130 RVA: 0x003143E4 File Offset: 0x003125E4
+		// Token: 0x0601696E RID: 92526 RVA: 0x0033B284 File Offset: 0x00339484
 		public IRelativeTipActorTransformT UnPack()
 		{
 			IRelativeTipActorTransformT relativeTipActorTransformT = new IRelativeTipActorTransformT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return relativeTipActorTransformT;
 		}
 
-		// Token: 0x0601545B RID: 87131 RVA: 0x00314400 File Offset: 0x00312600
+		// Token: 0x0601696F RID: 92527 RVA: 0x0033B2A0 File Offset: 0x003394A0
 		public void UnPackTo(IRelativeTipActorTransformT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.RelativeEntityId = this.RelativeEntityId;
 		}
 
-		// Token: 0x0601545C RID: 87132 RVA: 0x00314484 File Offset: 0x00312684
+		// Token: 0x06016970 RID: 92528 RVA: 0x0033B324 File Offset: 0x00339524
 		public static Offset<IRelativeTipActorTransform> Pack(FlatBufferBuilder builder, IRelativeTipActorTransformT _o)
 		{
 			if (_o == null)
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IRelativeTipActorTransform.CreateIRelativeTipActorTransform(builder, _o.Type, posOffset, rotOffset, _o.RelativeEntityId);
 		}
 
-		// Token: 0x0400B22C RID: 45612
+		// Token: 0x0400BBBC RID: 48060
 		private Table __p;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B14 RID: 6932
+	// Token: 0x02001CC3 RID: 7363
 	public class IHonamiStoryCorruptedChestConfirmBox_SetValue
 	{
-		// Token: 0x04005B01 RID: 23297
+		// Token: 0x04005F9F RID: 24479
 		public EInteractionConfirmBoxType Type;
 
-		// Token: 0x04005B02 RID: 23298
+		// Token: 0x04005FA0 RID: 24480
 		public int Id;
 	}
 }

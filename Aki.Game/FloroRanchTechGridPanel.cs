@@ -7,27 +7,27 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001BA3 RID: 7075
+// Token: 0x02001062 RID: 4194
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchTechGridPanel : UiPanelBase, IGridProxy<List<FloroRanchTechnologyData>>
 {
-	// Token: 0x17001165 RID: 4453
-	// (get) Token: 0x0600D2A7 RID: 53927 RVA: 0x00306B03 File Offset: 0x00304D03
-	// (set) Token: 0x0600D2A8 RID: 53928 RVA: 0x00306B0B File Offset: 0x00304D0B
+	// Token: 0x1700118A RID: 4490
+	// (get) Token: 0x0600A6B8 RID: 42680 RVA: 0x00311BE3 File Offset: 0x0030FDE3
+	// (set) Token: 0x0600A6B9 RID: 42681 RVA: 0x00311BEB File Offset: 0x0030FDEB
 	public IScrollViewDelegate<IGridProxy<List<FloroRanchTechnologyData>>, List<FloroRanchTechnologyData>> ScrollViewDelegate { get; set; }
 
-	// Token: 0x17001166 RID: 4454
-	// (get) Token: 0x0600D2A9 RID: 53929 RVA: 0x00306B14 File Offset: 0x00304D14
-	// (set) Token: 0x0600D2AA RID: 53930 RVA: 0x00306B1C File Offset: 0x00304D1C
+	// Token: 0x1700118B RID: 4491
+	// (get) Token: 0x0600A6BA RID: 42682 RVA: 0x00311BF4 File Offset: 0x0030FDF4
+	// (set) Token: 0x0600A6BB RID: 42683 RVA: 0x00311BFC File Offset: 0x0030FDFC
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001167 RID: 4455
-	// (get) Token: 0x0600D2AB RID: 53931 RVA: 0x00306B25 File Offset: 0x00304D25
-	// (set) Token: 0x0600D2AC RID: 53932 RVA: 0x00306B2D File Offset: 0x00304D2D
+	// Token: 0x1700118C RID: 4492
+	// (get) Token: 0x0600A6BC RID: 42684 RVA: 0x00311C05 File Offset: 0x0030FE05
+	// (set) Token: 0x0600A6BD RID: 42685 RVA: 0x00311C0D File Offset: 0x0030FE0D
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600D2AD RID: 53933 RVA: 0x00306B38 File Offset: 0x00304D38
+	// Token: 0x0600A6BE RID: 42686 RVA: 0x00311C18 File Offset: 0x0030FE18
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -43,7 +43,7 @@ public class FloroRanchTechGridPanel : UiPanelBase, IGridProxy<List<FloroRanchTe
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D2AE RID: 53934 RVA: 0x00306BC4 File Offset: 0x00304DC4
+	// Token: 0x0600A6BF RID: 42687 RVA: 0x00311CA4 File Offset: 0x0030FEA4
 	public void Refresh(List<FloroRanchTechnologyData> dataList, bool isSelected, int gridIndex)
 	{
 		foreach (FloroRanchTechnologyData floroRanchTechnologyData in dataList)
@@ -75,47 +75,47 @@ public class FloroRanchTechGridPanel : UiPanelBase, IGridProxy<List<FloroRanchTe
 		}
 	}
 
-	// Token: 0x0600D2AF RID: 53935 RVA: 0x00306CD8 File Offset: 0x00304ED8
+	// Token: 0x0600A6C0 RID: 42688 RVA: 0x00311DB8 File Offset: 0x0030FFB8
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600D2B0 RID: 53936 RVA: 0x00306CDA File Offset: 0x00304EDA
+	// Token: 0x0600A6C1 RID: 42689 RVA: 0x00311DBA File Offset: 0x0030FFBA
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600D2B1 RID: 53937 RVA: 0x00306CDC File Offset: 0x00304EDC
+	// Token: 0x0600A6C2 RID: 42690 RVA: 0x00311DBC File Offset: 0x0030FFBC
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600D2B2 RID: 53938 RVA: 0x00306CDE File Offset: 0x00304EDE
+	// Token: 0x0600A6C3 RID: 42691 RVA: 0x00311DBE File Offset: 0x0030FFBE
 	[return: Nullable(2)]
 	public object GetKey(List<FloroRanchTechnologyData> data, int gridIndex)
 	{
 		return null;
 	}
 
-	// Token: 0x04006090 RID: 24720
+	// Token: 0x0400615F RID: 24927
 	private readonly List<FloroRanchTechNodeItem> TechNodeItemList = new List<FloroRanchTechNodeItem>();
 
-	// Token: 0x04006092 RID: 24722
+	// Token: 0x04006161 RID: 24929
 	public Action<FloroRanchTechNodeItem> OnSelectTechNode = delegate(FloroRanchTechNodeItem technologyNode)
 	{
 	};
 
-	// Token: 0x02008140 RID: 33088
+	// Token: 0x020072CE RID: 29390
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A306 RID: 172806
+		// Token: 0x0402563A RID: 153146
 		public const int Pos1 = 0;
 
-		// Token: 0x0402A307 RID: 172807
+		// Token: 0x0402563B RID: 153147
 		public const int Pos2 = 1;
 
-		// Token: 0x0402A308 RID: 172808
+		// Token: 0x0402563C RID: 153148
 		public const int Pos3 = 2;
 	}
 }

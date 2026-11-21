@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006712 RID: 26386
+	// Token: 0x02006D92 RID: 28050
 	public class IExecResurrectionT
 	{
-		// Token: 0x1700C402 RID: 50178
-		// (get) Token: 0x0602DE51 RID: 187985 RVA: 0x006468FA File Offset: 0x00644AFA
-		// (set) Token: 0x0602DE52 RID: 187986 RVA: 0x00646902 File Offset: 0x00644B02
+		// Token: 0x1700CDB8 RID: 52664
+		// (get) Token: 0x06030697 RID: 198295 RVA: 0x0069403E File Offset: 0x0069223E
+		// (set) Token: 0x06030698 RID: 198296 RVA: 0x00694046 File Offset: 0x00692246
 		public int ReviveId { get; set; }
 
-		// Token: 0x0602DE53 RID: 187987 RVA: 0x0064690B File Offset: 0x00644B0B
+		// Token: 0x06030699 RID: 198297 RVA: 0x0069404F File Offset: 0x0069224F
 		public IExecResurrectionT()
 		{
 			this.ReviveId = 0;

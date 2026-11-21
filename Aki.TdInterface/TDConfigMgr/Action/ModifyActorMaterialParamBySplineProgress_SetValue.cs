@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020D6 RID: 8406
+	// Token: 0x02002333 RID: 9011
 	public class ModifyActorMaterialParamBySplineProgress_SetValue
 	{
-		// Token: 0x04006EA8 RID: 28328
-		[Nullable(1)]
+		// Token: 0x040074D2 RID: 29906
 		public IModifyActorMaterialParamBySplineProgressConfig Config;
 	}
 }

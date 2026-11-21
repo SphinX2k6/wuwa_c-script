@@ -5,20 +5,20 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200035B RID: 859
+	// Token: 0x020003A4 RID: 932
 	public class IExploreSkillQuantumDiffusion_SetValue
 	{
-		// Token: 0x04000E2D RID: 3629
+		// Token: 0x04000F24 RID: 3876
 		public EExploreSkillInteractType Type;
 
-		// Token: 0x04000E2E RID: 3630
+		// Token: 0x04000F25 RID: 3877
 		public bool? NeedFollowShooter;
 
-		// Token: 0x04000E2F RID: 3631
+		// Token: 0x04000F26 RID: 3878
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 	}

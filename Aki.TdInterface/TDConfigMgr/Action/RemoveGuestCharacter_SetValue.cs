@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200214F RID: 8527
+	// Token: 0x020023B0 RID: 9136
 	public class RemoveGuestCharacter_SetValue
 	{
-		// Token: 0x04007033 RID: 28723
+		// Token: 0x04007668 RID: 30312
 		public int GuestCharacterId;
 	}
 }

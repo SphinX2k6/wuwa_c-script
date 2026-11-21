@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EFD RID: 7933
+// Token: 0x020013BF RID: 5055
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStoryQuestDataBase>
 {
-	// Token: 0x0600F43D RID: 62525 RVA: 0x003AEA54 File Offset: 0x003ACC54
+	// Token: 0x0600C85C RID: 51292 RVA: 0x003BA548 File Offset: 0x003B8748
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -50,7 +50,7 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F43E RID: 62526 RVA: 0x003AEC04 File Offset: 0x003ACE04
+	// Token: 0x0600C85D RID: 51293 RVA: 0x003BA6F8 File Offset: 0x003B88F8
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -61,7 +61,7 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x0600F43F RID: 62527 RVA: 0x003AEC28 File Offset: 0x003ACE28
+	// Token: 0x0600C85E RID: 51294 RVA: 0x003BA71C File Offset: 0x003B891C
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -72,8 +72,8 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		extendToggle.OnStateChange.Remove(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x17001310 RID: 4880
-	// (get) Token: 0x0600F440 RID: 62528 RVA: 0x003AEC4C File Offset: 0x003ACE4C
+	// Token: 0x1700133A RID: 4922
+	// (get) Token: 0x0600C85F RID: 51295 RVA: 0x003BA740 File Offset: 0x003B8940
 	[Nullable(2)]
 	public HonamiStoryQuestDataBase Data
 	{
@@ -84,9 +84,9 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		}
 	}
 
-	// Token: 0x17001311 RID: 4881
-	// (get) Token: 0x0600F441 RID: 62529 RVA: 0x003AEC54 File Offset: 0x003ACE54
-	// (set) Token: 0x0600F442 RID: 62530 RVA: 0x003AEC5C File Offset: 0x003ACE5C
+	// Token: 0x1700133B RID: 4923
+	// (get) Token: 0x0600C860 RID: 51296 RVA: 0x003BA748 File Offset: 0x003B8948
+	// (set) Token: 0x0600C861 RID: 51297 RVA: 0x003BA750 File Offset: 0x003B8950
 	[Nullable(new byte[]
 	{
 		2,
@@ -108,17 +108,17 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		1
 	})] set; }
 
-	// Token: 0x17001312 RID: 4882
-	// (get) Token: 0x0600F443 RID: 62531 RVA: 0x003AEC65 File Offset: 0x003ACE65
-	// (set) Token: 0x0600F444 RID: 62532 RVA: 0x003AEC6D File Offset: 0x003ACE6D
+	// Token: 0x1700133C RID: 4924
+	// (get) Token: 0x0600C862 RID: 51298 RVA: 0x003BA759 File Offset: 0x003B8959
+	// (set) Token: 0x0600C863 RID: 51299 RVA: 0x003BA761 File Offset: 0x003B8961
 	public int GridIndex { get; set; }
 
-	// Token: 0x17001313 RID: 4883
-	// (get) Token: 0x0600F445 RID: 62533 RVA: 0x003AEC76 File Offset: 0x003ACE76
-	// (set) Token: 0x0600F446 RID: 62534 RVA: 0x003AEC7E File Offset: 0x003ACE7E
+	// Token: 0x1700133D RID: 4925
+	// (get) Token: 0x0600C864 RID: 51300 RVA: 0x003BA76A File Offset: 0x003B896A
+	// (set) Token: 0x0600C865 RID: 51301 RVA: 0x003BA772 File Offset: 0x003B8972
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600F447 RID: 62535 RVA: 0x003AEC88 File Offset: 0x003ACE88
+	// Token: 0x0600C866 RID: 51302 RVA: 0x003BA77C File Offset: 0x003B897C
 	public void Refresh(HonamiStoryQuestDataBase data, bool isSelected, int gridIndex)
 	{
 		if (this.ActivityData == null)
@@ -131,7 +131,7 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		base.GetText(8).SetUIActive(false);
 	}
 
-	// Token: 0x0600F448 RID: 62536 RVA: 0x003AECD8 File Offset: 0x003ACED8
+	// Token: 0x0600C867 RID: 51303 RVA: 0x003BA7CC File Offset: 0x003B89CC
 	private void RefreshTaskInfo()
 	{
 		string text = ConfigMultiTextLang.GetLocalTextNew(this.TaskData.GetNameKey(), null) ?? this.TaskData.GetNameKey();
@@ -174,13 +174,13 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		base.GetItem(9).SetUIActive(this.TaskData.IsFinished());
 	}
 
-	// Token: 0x0600F449 RID: 62537 RVA: 0x003AEDE1 File Offset: 0x003ACFE1
+	// Token: 0x0600C868 RID: 51304 RVA: 0x003BA8D5 File Offset: 0x003B8AD5
 	public void BindOnClickTask(Action<HonamiStoryQuestItemChildItem> callback)
 	{
 		this.OnClickTask = callback;
 	}
 
-	// Token: 0x0600F44A RID: 62538 RVA: 0x003AEDEA File Offset: 0x003ACFEA
+	// Token: 0x0600C869 RID: 51305 RVA: 0x003BA8DE File Offset: 0x003B8ADE
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		Action<HonamiStoryQuestItemChildItem> onClickTask = this.OnClickTask;
@@ -191,62 +191,62 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 		onClickTask(this);
 	}
 
-	// Token: 0x0600F44B RID: 62539 RVA: 0x003AEDFD File Offset: 0x003ACFFD
+	// Token: 0x0600C86A RID: 51306 RVA: 0x003BA8F1 File Offset: 0x003B8AF1
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600F44C RID: 62540 RVA: 0x003AEDFF File Offset: 0x003ACFFF
+	// Token: 0x0600C86B RID: 51307 RVA: 0x003BA8F3 File Offset: 0x003B8AF3
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F44D RID: 62541 RVA: 0x003AEE01 File Offset: 0x003AD001
+	// Token: 0x0600C86C RID: 51308 RVA: 0x003BA8F5 File Offset: 0x003B8AF5
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600F44E RID: 62542 RVA: 0x003AEE03 File Offset: 0x003AD003
+	// Token: 0x0600C86D RID: 51309 RVA: 0x003BA8F7 File Offset: 0x003B8AF7
 	public void OnSelected()
 	{
 		base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		this.RefreshTaskInfo();
 	}
 
-	// Token: 0x0600F44F RID: 62543 RVA: 0x003AEE1C File Offset: 0x003AD01C
+	// Token: 0x0600C86E RID: 51310 RVA: 0x003BA910 File Offset: 0x003B8B10
 	public void OnDeselected()
 	{
 		base.GetExtendToggle(4).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		this.RefreshTaskInfo();
 	}
 
-	// Token: 0x0600F450 RID: 62544 RVA: 0x003AEE35 File Offset: 0x003AD035
+	// Token: 0x0600C86F RID: 51311 RVA: 0x003BA929 File Offset: 0x003B8B29
 	public object GetKey(HonamiStoryQuestDataBase data, int gridIndex)
 	{
 		return this.GridIndex;
 	}
 
-	// Token: 0x0600F451 RID: 62545 RVA: 0x003AEE42 File Offset: 0x003AD042
+	// Token: 0x0600C870 RID: 51312 RVA: 0x003BA936 File Offset: 0x003B8B36
 	private void OnToggleStateChange(EToggleState _)
 	{
 		this.RefreshTaskInfo();
 	}
 
-	// Token: 0x0400710D RID: 28941
+	// Token: 0x040071EE RID: 29166
 	private const string RICHTXT_SELECTED = "<color=#5988a5>{0}</color>";
 
-	// Token: 0x0400710E RID: 28942
+	// Token: 0x040071EF RID: 29167
 	private const string RICHTXT_DESELECTED = "<color=#b3dffa>{0}</color>";
 
-	// Token: 0x0400710F RID: 28943
+	// Token: 0x040071F0 RID: 29168
 	[Nullable(2)]
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x04007110 RID: 28944
+	// Token: 0x040071F1 RID: 29169
 	[Nullable(2)]
 	private HonamiStoryQuestDataBase TaskData;
 
-	// Token: 0x04007111 RID: 28945
+	// Token: 0x040071F2 RID: 29170
 	[Nullable(new byte[]
 	{
 		2,
@@ -254,29 +254,29 @@ public class HonamiStoryQuestItemChildItem : UiPanelBase, IGridProxy<HonamiStory
 	})]
 	private Action<HonamiStoryQuestItemChildItem> OnClickTask;
 
-	// Token: 0x020084FD RID: 34045
+	// Token: 0x02007682 RID: 30338
 	[NullableContext(0)]
 	private enum EHonamiStoryQuestItemChildItemComponent
 	{
-		// Token: 0x0402B471 RID: 177265
+		// Token: 0x04026795 RID: 157589
 		TraceItem,
-		// Token: 0x0402B472 RID: 177266
+		// Token: 0x04026796 RID: 157590
 		LockItem,
-		// Token: 0x0402B473 RID: 177267
+		// Token: 0x04026797 RID: 157591
 		NameText,
-		// Token: 0x0402B474 RID: 177268
+		// Token: 0x04026798 RID: 157592
 		DistanceText,
-		// Token: 0x0402B475 RID: 177269
+		// Token: 0x04026799 RID: 157593
 		Toggle,
-		// Token: 0x0402B476 RID: 177270
+		// Token: 0x0402679A RID: 157594
 		QualityColorItem,
-		// Token: 0x0402B477 RID: 177271
+		// Token: 0x0402679B RID: 157595
 		RedDotItem,
-		// Token: 0x0402B478 RID: 177272
+		// Token: 0x0402679C RID: 157596
 		CircleSprite,
-		// Token: 0x0402B479 RID: 177273
+		// Token: 0x0402679D RID: 157597
 		LockText,
-		// Token: 0x0402B47A RID: 177274
+		// Token: 0x0402679E RID: 157598
 		FinishItem
 	}
 }

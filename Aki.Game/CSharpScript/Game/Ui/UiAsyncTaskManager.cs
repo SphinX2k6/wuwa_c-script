@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004625 RID: 17957
+	// Token: 0x0200354E RID: 13646
 	public class UiAsyncTaskManager
 	{
-		// Token: 0x0602E427 RID: 189479 RVA: 0x00AB1EFC File Offset: 0x00AB00FC
+		// Token: 0x06022B1C RID: 142108 RVA: 0x009DE5F0 File Offset: 0x009DC7F0
 		public UniTask<bool> RunTask([Nullable(1)] UiAsyncTask task)
 		{
 			UiAsyncTaskManager.<RunTask>d__1 <RunTask>d__;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Ui
 			return <RunTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E428 RID: 189480 RVA: 0x00AB1F48 File Offset: 0x00AB0148
+		// Token: 0x06022B1D RID: 142109 RVA: 0x009DE63C File Offset: 0x009DC83C
 		public void CancelAllTask()
 		{
 			if (this.TaskQueueMap == null || this.TaskQueueMap.Count == 0)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Ui
 			this.TaskQueueMap.Clear();
 		}
 
-		// Token: 0x0602E429 RID: 189481 RVA: 0x00AB1FC0 File Offset: 0x00AB01C0
+		// Token: 0x06022B1E RID: 142110 RVA: 0x009DE6B4 File Offset: 0x009DC8B4
 		[NullableContext(1)]
 		public void CancelPendingByName(string name)
 		{
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E42A RID: 189482 RVA: 0x00AB1FE3 File Offset: 0x00AB01E3
+		// Token: 0x06022B1F RID: 142111 RVA: 0x009DE6D7 File Offset: 0x009DC8D7
 		[NullableContext(2)]
 		public void LogInfo(string key)
 		{
 		}
 
-		// Token: 0x04018D4B RID: 101707
+		// Token: 0x0401338A RID: 78730
 		[Nullable(1)]
 		private Dictionary<string, UiAsyncTaskQueue> TaskQueueMap;
 	}

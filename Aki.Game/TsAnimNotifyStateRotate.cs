@@ -9,16 +9,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200015A RID: 346
+// Token: 0x0200015E RID: 350
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateRotate.TsAnimNotifyStateRotate_C")]
 public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700037D RID: 893
-	// (get) Token: 0x06001575 RID: 5493 RVA: 0x0007636C File Offset: 0x0007456C
-	// (set) Token: 0x06001576 RID: 5494 RVA: 0x0007637C File Offset: 0x0007457C
+	// Token: 0x1700039F RID: 927
+	// (get) Token: 0x06001612 RID: 5650 RVA: 0x0007B9E0 File Offset: 0x00079BE0
+	// (set) Token: 0x06001613 RID: 5651 RVA: 0x0007B9F0 File Offset: 0x00079BF0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 旋转速度
 	{
@@ -32,9 +32,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700037E RID: 894
-	// (get) Token: 0x06001577 RID: 5495 RVA: 0x0007638D File Offset: 0x0007458D
-	// (set) Token: 0x06001578 RID: 5496 RVA: 0x0007639D File Offset: 0x0007459D
+	// Token: 0x170003A0 RID: 928
+	// (get) Token: 0x06001614 RID: 5652 RVA: 0x0007BA01 File Offset: 0x00079C01
+	// (set) Token: 0x06001615 RID: 5653 RVA: 0x0007BA11 File Offset: 0x00079C11
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否自动朝向目标
 	{
@@ -48,9 +48,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700037F RID: 895
-	// (get) Token: 0x06001579 RID: 5497 RVA: 0x000763AE File Offset: 0x000745AE
-	// (set) Token: 0x0600157A RID: 5498 RVA: 0x000763BE File Offset: 0x000745BE
+	// Token: 0x170003A1 RID: 929
+	// (get) Token: 0x06001616 RID: 5654 RVA: 0x0007BA22 File Offset: 0x00079C22
+	// (set) Token: 0x06001617 RID: 5655 RVA: 0x0007BA32 File Offset: 0x00079C32
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否平滑旋转
 	{
@@ -64,9 +64,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000380 RID: 896
-	// (get) Token: 0x0600157B RID: 5499 RVA: 0x000763CF File Offset: 0x000745CF
-	// (set) Token: 0x0600157C RID: 5500 RVA: 0x000763E3 File Offset: 0x000745E3
+	// Token: 0x170003A2 RID: 930
+	// (get) Token: 0x06001618 RID: 5656 RVA: 0x0007BA43 File Offset: 0x00079C43
+	// (set) Token: 0x06001619 RID: 5657 RVA: 0x0007BA57 File Offset: 0x00079C57
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCurveFloat Curve
@@ -83,9 +83,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000381 RID: 897
-	// (get) Token: 0x0600157D RID: 5501 RVA: 0x000763F8 File Offset: 0x000745F8
-	// (set) Token: 0x0600157E RID: 5502 RVA: 0x00076408 File Offset: 0x00074608
+	// Token: 0x170003A3 RID: 931
+	// (get) Token: 0x0600161A RID: 5658 RVA: 0x0007BA6C File Offset: 0x00079C6C
+	// (set) Token: 0x0600161B RID: 5659 RVA: 0x0007BA7C File Offset: 0x00079C7C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否应用旋转偏移
 	{
@@ -99,9 +99,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000382 RID: 898
-	// (get) Token: 0x0600157F RID: 5503 RVA: 0x00076419 File Offset: 0x00074619
-	// (set) Token: 0x06001580 RID: 5504 RVA: 0x00076429 File Offset: 0x00074629
+	// Token: 0x170003A4 RID: 932
+	// (get) Token: 0x0600161C RID: 5660 RVA: 0x0007BA8D File Offset: 0x00079C8D
+	// (set) Token: 0x0600161D RID: 5661 RVA: 0x0007BA9D File Offset: 0x00079C9D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 旋转偏移
 	{
@@ -115,9 +115,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000383 RID: 899
-	// (get) Token: 0x06001581 RID: 5505 RVA: 0x0007643A File Offset: 0x0007463A
-	// (set) Token: 0x06001582 RID: 5506 RVA: 0x0007644A File Offset: 0x0007464A
+	// Token: 0x170003A5 RID: 933
+	// (get) Token: 0x0600161E RID: 5662 RVA: 0x0007BAAE File Offset: 0x00079CAE
+	// (set) Token: 0x0600161F RID: 5663 RVA: 0x0007BABE File Offset: 0x00079CBE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 设置为朝向黑板目标
 	{
@@ -131,9 +131,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000384 RID: 900
-	// (get) Token: 0x06001583 RID: 5507 RVA: 0x0007645B File Offset: 0x0007465B
-	// (set) Token: 0x06001584 RID: 5508 RVA: 0x0007646B File Offset: 0x0007466B
+	// Token: 0x170003A6 RID: 934
+	// (get) Token: 0x06001620 RID: 5664 RVA: 0x0007BACF File Offset: 0x00079CCF
+	// (set) Token: 0x06001621 RID: 5665 RVA: 0x0007BADF File Offset: 0x00079CDF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EAnsRotateBlackboardType 黑板类型
 	{
@@ -147,9 +147,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000385 RID: 901
-	// (get) Token: 0x06001585 RID: 5509 RVA: 0x0007647C File Offset: 0x0007467C
-	// (set) Token: 0x06001586 RID: 5510 RVA: 0x00076490 File Offset: 0x00074690
+	// Token: 0x170003A7 RID: 935
+	// (get) Token: 0x06001622 RID: 5666 RVA: 0x0007BAF0 File Offset: 0x00079CF0
+	// (set) Token: 0x06001623 RID: 5667 RVA: 0x0007BB04 File Offset: 0x00079D04
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string 朝向黑板目标名
 	{
@@ -163,9 +163,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000386 RID: 902
-	// (get) Token: 0x06001587 RID: 5511 RVA: 0x000764A5 File Offset: 0x000746A5
-	// (set) Token: 0x06001588 RID: 5512 RVA: 0x000764B5 File Offset: 0x000746B5
+	// Token: 0x170003A8 RID: 936
+	// (get) Token: 0x06001624 RID: 5668 RVA: 0x0007BB19 File Offset: 0x00079D19
+	// (set) Token: 0x06001625 RID: 5669 RVA: 0x0007BB29 File Offset: 0x00079D29
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 停止旋转阈值
 	{
@@ -179,9 +179,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000387 RID: 903
-	// (get) Token: 0x06001589 RID: 5513 RVA: 0x000764C6 File Offset: 0x000746C6
-	// (set) Token: 0x0600158A RID: 5514 RVA: 0x000764D6 File Offset: 0x000746D6
+	// Token: 0x170003A9 RID: 937
+	// (get) Token: 0x06001626 RID: 5670 RVA: 0x0007BB3A File Offset: 0x00079D3A
+	// (set) Token: 0x06001627 RID: 5671 RVA: 0x0007BB4A File Offset: 0x00079D4A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 继续旋转阈值
 	{
@@ -195,9 +195,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000388 RID: 904
-	// (get) Token: 0x0600158B RID: 5515 RVA: 0x000764E7 File Offset: 0x000746E7
-	// (set) Token: 0x0600158C RID: 5516 RVA: 0x000764F7 File Offset: 0x000746F7
+	// Token: 0x170003AA RID: 938
+	// (get) Token: 0x06001628 RID: 5672 RVA: 0x0007BB5B File Offset: 0x00079D5B
+	// (set) Token: 0x06001629 RID: 5673 RVA: 0x0007BB6B File Offset: 0x00079D6B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 在横板模式中禁用
 	{
@@ -211,9 +211,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x17000389 RID: 905
-	// (get) Token: 0x0600158D RID: 5517 RVA: 0x00076508 File Offset: 0x00074708
-	// (set) Token: 0x0600158E RID: 5518 RVA: 0x00076518 File Offset: 0x00074718
+	// Token: 0x170003AB RID: 939
+	// (get) Token: 0x0600162A RID: 5674 RVA: 0x0007BB7C File Offset: 0x00079D7C
+	// (set) Token: 0x0600162B RID: 5675 RVA: 0x0007BB8C File Offset: 0x00079D8C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 只在横板模式中生效
 	{
@@ -227,9 +227,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038A RID: 906
-	// (get) Token: 0x0600158F RID: 5519 RVA: 0x00076529 File Offset: 0x00074729
-	// (set) Token: 0x06001590 RID: 5520 RVA: 0x00076539 File Offset: 0x00074739
+	// Token: 0x170003AC RID: 940
+	// (get) Token: 0x0600162C RID: 5676 RVA: 0x0007BB9D File Offset: 0x00079D9D
+	// (set) Token: 0x0600162D RID: 5677 RVA: 0x0007BBAD File Offset: 0x00079DAD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 定向旋转功能
 	{
@@ -243,9 +243,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038B RID: 907
-	// (get) Token: 0x06001591 RID: 5521 RVA: 0x0007654A File Offset: 0x0007474A
-	// (set) Token: 0x06001592 RID: 5522 RVA: 0x0007655A File Offset: 0x0007475A
+	// Token: 0x170003AD RID: 941
+	// (get) Token: 0x0600162E RID: 5678 RVA: 0x0007BBBE File Offset: 0x00079DBE
+	// (set) Token: 0x0600162F RID: 5679 RVA: 0x0007BBCE File Offset: 0x00079DCE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 定向旋转阈值最小值
 	{
@@ -259,9 +259,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038C RID: 908
-	// (get) Token: 0x06001593 RID: 5523 RVA: 0x0007656B File Offset: 0x0007476B
-	// (set) Token: 0x06001594 RID: 5524 RVA: 0x0007657B File Offset: 0x0007477B
+	// Token: 0x170003AE RID: 942
+	// (get) Token: 0x06001630 RID: 5680 RVA: 0x0007BBDF File Offset: 0x00079DDF
+	// (set) Token: 0x06001631 RID: 5681 RVA: 0x0007BBEF File Offset: 0x00079DEF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 定向旋转阈值最大值
 	{
@@ -275,9 +275,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038D RID: 909
-	// (get) Token: 0x06001595 RID: 5525 RVA: 0x0007658C File Offset: 0x0007478C
-	// (set) Token: 0x06001596 RID: 5526 RVA: 0x0007659C File Offset: 0x0007479C
+	// Token: 0x170003AF RID: 943
+	// (get) Token: 0x06001632 RID: 5682 RVA: 0x0007BC00 File Offset: 0x00079E00
+	// (set) Token: 0x06001633 RID: 5683 RVA: 0x0007BC10 File Offset: 0x00079E10
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EAnsRotateDetectionType 定向旋转方式
 	{
@@ -291,9 +291,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038E RID: 910
-	// (get) Token: 0x06001597 RID: 5527 RVA: 0x000765AD File Offset: 0x000747AD
-	// (set) Token: 0x06001598 RID: 5528 RVA: 0x000765BD File Offset: 0x000747BD
+	// Token: 0x170003B0 RID: 944
+	// (get) Token: 0x06001634 RID: 5684 RVA: 0x0007BC21 File Offset: 0x00079E21
+	// (set) Token: 0x06001635 RID: 5685 RVA: 0x0007BC31 File Offset: 0x00079E31
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 调试定向旋转范围
 	{
@@ -307,9 +307,9 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x1700038F RID: 911
-	// (get) Token: 0x06001599 RID: 5529 RVA: 0x000765D0 File Offset: 0x000747D0
-	// (set) Token: 0x0600159A RID: 5530 RVA: 0x00076609 File Offset: 0x00074809
+	// Token: 0x170003B1 RID: 945
+	// (get) Token: 0x06001636 RID: 5686 RVA: 0x0007BC44 File Offset: 0x00079E44
+	// (set) Token: 0x06001637 RID: 5687 RVA: 0x0007BC7D File Offset: 0x00079E7D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer 屏蔽标签列表
 	{
@@ -329,33 +329,29 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x0600159B RID: 5531 RVA: 0x00076634 File Offset: 0x00074834
+	// Token: 0x06001638 RID: 5688 RVA: 0x0007BCA8 File Offset: 0x00079EA8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateRotate) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateRotate.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600159C RID: 5532 RVA: 0x000766DC File Offset: 0x000748DC
+	// Token: 0x06001639 RID: 5689 RVA: 0x0007BD68 File Offset: 0x00079F68
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -429,33 +425,29 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return false;
 	}
 
-	// Token: 0x0600159D RID: 5533 RVA: 0x00076860 File Offset: 0x00074A60
+	// Token: 0x0600163A RID: 5690 RVA: 0x0007BEEC File Offset: 0x0007A0EC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateRotate) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyTick"), TsAnimNotifyStateRotate.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->FrameDeltaTime = frameDeltaTime;
+			return this.K2_NotifyTick_Implementation(meshComp, animation, frameDeltaTime);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->FrameDeltaTime = frameDeltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0600159E RID: 5534 RVA: 0x00076908 File Offset: 0x00074B08
+	// Token: 0x0600163B RID: 5691 RVA: 0x0007BFAC File Offset: 0x0007A1AC
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyTick_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
@@ -521,7 +513,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return true;
 	}
 
-	// Token: 0x0600159F RID: 5535 RVA: 0x00076AC8 File Offset: 0x00074CC8
+	// Token: 0x0600163C RID: 5692 RVA: 0x0007C16C File Offset: 0x0007A36C
 	private float GetSkillRotateAngle(CharacterActorComponent actorComp, CharacterSkillComponent skillComp)
 	{
 		Vector actorForwardProxy = actorComp.ActorForwardProxy;
@@ -533,32 +525,28 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return GravityUtils.Instance.GetAngleOffsetInGravityAbsForActor(actorComp, actorForwardProxy, skillRotateDirect);
 	}
 
-	// Token: 0x060015A0 RID: 5536 RVA: 0x00076B18 File Offset: 0x00074D18
+	// Token: 0x0600163D RID: 5693 RVA: 0x0007C1BC File Offset: 0x0007A3BC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateRotate) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateRotate.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060015A1 RID: 5537 RVA: 0x00076BB8 File Offset: 0x00074DB8
+	// Token: 0x0600163E RID: 5694 RVA: 0x0007C274 File Offset: 0x0007A474
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -592,7 +580,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return false;
 	}
 
-	// Token: 0x060015A2 RID: 5538 RVA: 0x00076C37 File Offset: 0x00074E37
+	// Token: 0x0600163F RID: 5695 RVA: 0x0007C2F3 File Offset: 0x0007A4F3
 	private void Initialize()
 	{
 		if (this.IsInitialize)
@@ -603,35 +591,31 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		this.ParamsMap = new Dictionary<int, AnsRotateParam>();
 	}
 
-	// Token: 0x060015A3 RID: 5539 RVA: 0x00076C54 File Offset: 0x00074E54
+	// Token: 0x06001640 RID: 5696 RVA: 0x0007C310 File Offset: 0x0007A510
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateRotate) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateRotate.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x060015A4 RID: 5540 RVA: 0x00076CCF File Offset: 0x00074ECF
+	// Token: 0x06001641 RID: 5697 RVA: 0x0007C3A0 File Offset: 0x0007A5A0
 	protected override string GetNotifyName_Implementation()
 	{
 		return "旋转到黑板目标或技能目标或输入方向";
 	}
 
-	// Token: 0x060015A5 RID: 5541 RVA: 0x00076CD8 File Offset: 0x00074ED8
+	// Token: 0x06001642 RID: 5698 RVA: 0x0007C3A8 File Offset: 0x0007A5A8
 	private void UpdateBlackBoardTargetType(BaseSkillComponent skillComp)
 	{
 		if (this.设置为朝向黑板目标)
@@ -657,7 +641,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x060015A6 RID: 5542 RVA: 0x00076D4C File Offset: 0x00074F4C
+	// Token: 0x06001643 RID: 5699 RVA: 0x0007C41C File Offset: 0x0007A61C
 	private void UpdateAnsBlackBoardTargetType(AnsRotateParam ansRotateParam)
 	{
 		if (this.设置为朝向黑板目标)
@@ -683,7 +667,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x060015A7 RID: 5543 RVA: 0x00076DC0 File Offset: 0x00074FC0
+	// Token: 0x06001644 RID: 5700 RVA: 0x0007C490 File Offset: 0x0007A690
 	private bool IsInContinueDetectionAngle(float angle)
 	{
 		float num = (this.定向旋转阈值最大值 - this.定向旋转阈值最小值) % 360f;
@@ -697,7 +681,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return -180f <= num3 && num3 <= num4;
 	}
 
-	// Token: 0x060015A8 RID: 5544 RVA: 0x00076E80 File Offset: 0x00075080
+	// Token: 0x06001645 RID: 5701 RVA: 0x0007C550 File Offset: 0x0007A750
 	private void UpdateContinueDetection(AnsRotateParam ansRotateParam, BaseSkillComponent skillComp, CharacterActorComponent actorComp)
 	{
 		Vector tmpVector = this.TmpVector;
@@ -753,13 +737,13 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		}
 	}
 
-	// Token: 0x060015A9 RID: 5545 RVA: 0x00076F83 File Offset: 0x00075183
+	// Token: 0x06001646 RID: 5702 RVA: 0x0007C653 File Offset: 0x0007A853
 	[Conditional("DEBUG")]
 	private void DebugDraw(AnsRotateParam ansRotateParam, CharacterActorComponent actorComp)
 	{
 	}
 
-	// Token: 0x060015AA RID: 5546 RVA: 0x00076F85 File Offset: 0x00075185
+	// Token: 0x06001647 RID: 5703 RVA: 0x0007C655 File Offset: 0x0007A855
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateRotate._ClassPtr == IntPtr.Zero)
@@ -769,22 +753,22 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		return TsAnimNotifyStateRotate._ClassPtr;
 	}
 
-	// Token: 0x060015AB RID: 5547 RVA: 0x00076FAC File Offset: 0x000751AC
+	// Token: 0x06001648 RID: 5704 RVA: 0x0007C67C File Offset: 0x0007A87C
 	public TsAnimNotifyStateRotate() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateRotate.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060015AC RID: 5548 RVA: 0x00076FD4 File Offset: 0x000751D4
+	// Token: 0x06001649 RID: 5705 RVA: 0x0007C6A4 File Offset: 0x0007A8A4
 	public TsAnimNotifyStateRotate(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateRotate.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060015AD RID: 5549 RVA: 0x00077008 File Offset: 0x00075208
+	// Token: 0x0600164A RID: 5706 RVA: 0x0007C6D8 File Offset: 0x0007A8D8
 	protected TsAnimNotifyStateRotate(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060015AE RID: 5550 RVA: 0x00077064 File Offset: 0x00075264
+	// Token: 0x0600164B RID: 5707 RVA: 0x0007C734 File Offset: 0x0007A934
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -793,7 +777,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060015AF RID: 5551 RVA: 0x000770A0 File Offset: 0x000752A0
+	// Token: 0x0600164C RID: 5708 RVA: 0x0007C770 File Offset: 0x0007A970
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
@@ -802,7 +786,7 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_NotifyTick_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x060015B0 RID: 5552 RVA: 0x000770DC File Offset: 0x000752DC
+	// Token: 0x0600164D RID: 5709 RVA: 0x0007C7AC File Offset: 0x0007A9AC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -811,17 +795,17 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060015B1 RID: 5553 RVA: 0x0007710F File Offset: 0x0007530F
+	// Token: 0x0600164E RID: 5710 RVA: 0x0007C7DF File Offset: 0x0007A9DF
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04000F23 RID: 3875
+	// Token: 0x04000F66 RID: 3942
 	private const int DEBUG_DRAW_LENGTH = 500;
 
-	// Token: 0x04000F24 RID: 3876
+	// Token: 0x04000F67 RID: 3943
 	[Nullable(new byte[]
 	{
 		2,
@@ -829,85 +813,85 @@ public class TsAnimNotifyStateRotate : TsAnimNotifyStateBase, IUnrealUObject, IU
 	})]
 	private Dictionary<int, AnsRotateParam> ParamsMap;
 
-	// Token: 0x04000F25 RID: 3877
+	// Token: 0x04000F68 RID: 3944
 	private bool IsInitialize;
 
-	// Token: 0x04000F26 RID: 3878
+	// Token: 0x04000F69 RID: 3945
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x04000F27 RID: 3879
+	// Token: 0x04000F6A RID: 3946
 	private readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x04000F28 RID: 3880
+	// Token: 0x04000F6B RID: 3947
 	public readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04000F29 RID: 3881
+	// Token: 0x04000F6C RID: 3948
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateRotate.TsAnimNotifyStateRotate_C";
 
-	// Token: 0x04000F2A RID: 3882
+	// Token: 0x04000F6D RID: 3949
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000F2B RID: 3883
+	// Token: 0x04000F6E RID: 3950
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000F2C RID: 3884
+	// Token: 0x04000F6F RID: 3951
 	private static int __PropertyOffset_旋转速度;
 
-	// Token: 0x04000F2D RID: 3885
+	// Token: 0x04000F70 RID: 3952
 	private static int __PropertyOffset_是否自动朝向目标;
 
-	// Token: 0x04000F2E RID: 3886
+	// Token: 0x04000F71 RID: 3953
 	private static int __PropertyOffset_是否平滑旋转;
 
-	// Token: 0x04000F2F RID: 3887
+	// Token: 0x04000F72 RID: 3954
 	private static int __PropertyOffset_Curve;
 
-	// Token: 0x04000F30 RID: 3888
+	// Token: 0x04000F73 RID: 3955
 	private static int __PropertyOffset_是否应用旋转偏移;
 
-	// Token: 0x04000F31 RID: 3889
+	// Token: 0x04000F74 RID: 3956
 	private static int __PropertyOffset_旋转偏移;
 
-	// Token: 0x04000F32 RID: 3890
+	// Token: 0x04000F75 RID: 3957
 	private static int __PropertyOffset_设置为朝向黑板目标;
 
-	// Token: 0x04000F33 RID: 3891
+	// Token: 0x04000F76 RID: 3958
 	private static int __PropertyOffset_黑板类型;
 
-	// Token: 0x04000F34 RID: 3892
+	// Token: 0x04000F77 RID: 3959
 	private static int __PropertyOffset_朝向黑板目标名;
 
-	// Token: 0x04000F35 RID: 3893
+	// Token: 0x04000F78 RID: 3960
 	private static int __PropertyOffset_停止旋转阈值;
 
-	// Token: 0x04000F36 RID: 3894
+	// Token: 0x04000F79 RID: 3961
 	private static int __PropertyOffset_继续旋转阈值;
 
-	// Token: 0x04000F37 RID: 3895
+	// Token: 0x04000F7A RID: 3962
 	private static int __PropertyOffset_在横板模式中禁用;
 
-	// Token: 0x04000F38 RID: 3896
+	// Token: 0x04000F7B RID: 3963
 	private static int __PropertyOffset_只在横板模式中生效;
 
-	// Token: 0x04000F39 RID: 3897
+	// Token: 0x04000F7C RID: 3964
 	private static int __PropertyOffset_定向旋转功能;
 
-	// Token: 0x04000F3A RID: 3898
+	// Token: 0x04000F7D RID: 3965
 	private static int __PropertyOffset_定向旋转阈值最小值;
 
-	// Token: 0x04000F3B RID: 3899
+	// Token: 0x04000F7E RID: 3966
 	private static int __PropertyOffset_定向旋转阈值最大值;
 
-	// Token: 0x04000F3C RID: 3900
+	// Token: 0x04000F7F RID: 3967
 	private static int __PropertyOffset_定向旋转方式;
 
-	// Token: 0x04000F3D RID: 3901
+	// Token: 0x04000F80 RID: 3968
 	private static int __PropertyOffset_调试定向旋转范围;
 
-	// Token: 0x04000F3E RID: 3902
+	// Token: 0x04000F81 RID: 3969
 	private static int __PropertyOffset_屏蔽标签列表;
 
-	// Token: 0x04000F3F RID: 3903
+	// Token: 0x04000F82 RID: 3970
 	[Nullable(2)]
 	private FGameplayTagContainer _屏蔽标签列表;
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006040 RID: 24640
+	// Token: 0x020066A1 RID: 26273
 	public enum ETrackingEventType : byte
 	{
-		// Token: 0x0401018A RID: 65930
+		// Token: 0x04010F7D RID: 69501
 		EasterEgg,
-		// Token: 0x0401018B RID: 65931
+		// Token: 0x04010F7E RID: 69502
 		MotorParkour
 	}
 }

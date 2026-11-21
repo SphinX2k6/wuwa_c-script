@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001036 RID: 4150
+	// Token: 0x02001026 RID: 4134
 	public sealed class RogueWeeklyEntry : IMessage<RogueWeeklyEntry>, IMessage, IEquatable<RogueWeeklyEntry>, IDeepCloneable<RogueWeeklyEntry>, IBufferMessage
 	{
-		// Token: 0x060162D7 RID: 90839 RVA: 0x00338CA6 File Offset: 0x00336EA6
+		// Token: 0x060161F2 RID: 90610 RVA: 0x003375E2 File Offset: 0x003357E2
 		[NullableContext(1)]
 		public static RogueWeeklyEntry Create()
 		{
 			return new RogueWeeklyEntry();
 		}
 
-		// Token: 0x17004A21 RID: 18977
-		// (get) Token: 0x060162D8 RID: 90840 RVA: 0x00338CAD File Offset: 0x00336EAD
+		// Token: 0x170049F7 RID: 18935
+		// (get) Token: 0x060161F3 RID: 90611 RVA: 0x003375E9 File Offset: 0x003357E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<RogueWeeklyEntry> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A22 RID: 18978
-		// (get) Token: 0x060162D9 RID: 90841 RVA: 0x00338CB4 File Offset: 0x00336EB4
+		// Token: 0x170049F8 RID: 18936
+		// (get) Token: 0x060161F4 RID: 90612 RVA: 0x003375F0 File Offset: 0x003357F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A23 RID: 18979
-		// (get) Token: 0x060162DA RID: 90842 RVA: 0x00338CB7 File Offset: 0x00336EB7
+		// Token: 0x170049F9 RID: 18937
+		// (get) Token: 0x060161F5 RID: 90613 RVA: 0x003375F3 File Offset: 0x003357F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162DB RID: 90843 RVA: 0x00338CBE File Offset: 0x00336EBE
+		// Token: 0x060161F6 RID: 90614 RVA: 0x003375FA File Offset: 0x003357FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyEntry()
 		{
 		}
 
-		// Token: 0x060162DC RID: 90844 RVA: 0x00338CC8 File Offset: 0x00336EC8
+		// Token: 0x060161F7 RID: 90615 RVA: 0x00337604 File Offset: 0x00335804
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyEntry(RogueWeeklyEntry other) : this()
@@ -84,7 +84,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060162DD RID: 90845 RVA: 0x00338D51 File Offset: 0x00336F51
+		// Token: 0x060161F8 RID: 90616 RVA: 0x0033768D File Offset: 0x0033588D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyEntry Clone()
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			return new RogueWeeklyEntry(this);
 		}
 
-		// Token: 0x17004A24 RID: 18980
-		// (get) Token: 0x060162DE RID: 90846 RVA: 0x00338D59 File Offset: 0x00336F59
-		// (set) Token: 0x060162DF RID: 90847 RVA: 0x00338D61 File Offset: 0x00336F61
+		// Token: 0x170049FA RID: 18938
+		// (get) Token: 0x060161F9 RID: 90617 RVA: 0x00337695 File Offset: 0x00335895
+		// (set) Token: 0x060161FA RID: 90618 RVA: 0x0033769D File Offset: 0x0033589D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Index
@@ -109,9 +109,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A25 RID: 18981
-		// (get) Token: 0x060162E0 RID: 90848 RVA: 0x00338D6A File Offset: 0x00336F6A
-		// (set) Token: 0x060162E1 RID: 90849 RVA: 0x00338D72 File Offset: 0x00336F72
+		// Token: 0x170049FB RID: 18939
+		// (get) Token: 0x060161FB RID: 90619 RVA: 0x003376A6 File Offset: 0x003358A6
+		// (set) Token: 0x060161FC RID: 90620 RVA: 0x003376AE File Offset: 0x003358AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyEntryType Type
@@ -126,9 +126,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A26 RID: 18982
-		// (get) Token: 0x060162E2 RID: 90850 RVA: 0x00338D7B File Offset: 0x00336F7B
-		// (set) Token: 0x060162E3 RID: 90851 RVA: 0x00338D83 File Offset: 0x00336F83
+		// Token: 0x170049FC RID: 18940
+		// (get) Token: 0x060161FD RID: 90621 RVA: 0x003376B7 File Offset: 0x003358B7
+		// (set) Token: 0x060161FE RID: 90622 RVA: 0x003376BF File Offset: 0x003358BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConfigId
@@ -143,9 +143,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A27 RID: 18983
-		// (get) Token: 0x060162E4 RID: 90852 RVA: 0x00338D8C File Offset: 0x00336F8C
-		// (set) Token: 0x060162E5 RID: 90853 RVA: 0x00338DA4 File Offset: 0x00336FA4
+		// Token: 0x170049FD RID: 18941
+		// (get) Token: 0x060161FF RID: 90623 RVA: 0x003376C8 File Offset: 0x003358C8
+		// (set) Token: 0x06016200 RID: 90624 RVA: 0x003376E0 File Offset: 0x003358E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyBuff RogueWeeklyBuff
@@ -165,9 +165,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A28 RID: 18984
-		// (get) Token: 0x060162E6 RID: 90854 RVA: 0x00338DBA File Offset: 0x00336FBA
-		// (set) Token: 0x060162E7 RID: 90855 RVA: 0x00338DD2 File Offset: 0x00336FD2
+		// Token: 0x170049FE RID: 18942
+		// (get) Token: 0x06016201 RID: 90625 RVA: 0x003376F6 File Offset: 0x003358F6
+		// (set) Token: 0x06016202 RID: 90626 RVA: 0x0033770E File Offset: 0x0033590E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyGoods RogueWeeklyGoods
@@ -187,9 +187,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A29 RID: 18985
-		// (get) Token: 0x060162E8 RID: 90856 RVA: 0x00338DE8 File Offset: 0x00336FE8
-		// (set) Token: 0x060162E9 RID: 90857 RVA: 0x00338DF0 File Offset: 0x00336FF0
+		// Token: 0x170049FF RID: 18943
+		// (get) Token: 0x06016203 RID: 90627 RVA: 0x00337724 File Offset: 0x00335924
+		// (set) Token: 0x06016204 RID: 90628 RVA: 0x0033772C File Offset: 0x0033592C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsRecommend
@@ -204,8 +204,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A2A RID: 18986
-		// (get) Token: 0x060162EA RID: 90858 RVA: 0x00338DF9 File Offset: 0x00336FF9
+		// Token: 0x17004A00 RID: 18944
+		// (get) Token: 0x06016205 RID: 90629 RVA: 0x00337735 File Offset: 0x00335935
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyEntry.DataOneofCase DataCase
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162EB RID: 90859 RVA: 0x00338E01 File Offset: 0x00337001
+		// Token: 0x06016206 RID: 90630 RVA: 0x0033773D File Offset: 0x0033593D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -225,7 +225,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x060162EC RID: 90860 RVA: 0x00338E11 File Offset: 0x00337011
+		// Token: 0x06016207 RID: 90631 RVA: 0x0033774D File Offset: 0x0033594D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueWeeklyEntry);
 		}
 
-		// Token: 0x060162ED RID: 90861 RVA: 0x00338E20 File Offset: 0x00337020
+		// Token: 0x06016208 RID: 90632 RVA: 0x0033775C File Offset: 0x0033595C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueWeeklyEntry other)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Index == other.Index && this.Type == other.Type && this.ConfigId == other.ConfigId && object.Equals(this.RogueWeeklyBuff, other.RogueWeeklyBuff) && object.Equals(this.RogueWeeklyGoods, other.RogueWeeklyGoods) && this.IsRecommend == other.IsRecommend && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060162EE RID: 90862 RVA: 0x00338EC4 File Offset: 0x003370C4
+		// Token: 0x06016209 RID: 90633 RVA: 0x00337800 File Offset: 0x00335A00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -279,7 +279,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060162EF RID: 90863 RVA: 0x00338F8B File Offset: 0x0033718B
+		// Token: 0x0601620A RID: 90634 RVA: 0x003378C7 File Offset: 0x00335AC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -287,7 +287,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060162F0 RID: 90864 RVA: 0x00338F98 File Offset: 0x00337198
+		// Token: 0x0601620B RID: 90635 RVA: 0x003378D4 File Offset: 0x00335AD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -295,7 +295,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060162F1 RID: 90865 RVA: 0x00338FA4 File Offset: 0x003371A4
+		// Token: 0x0601620C RID: 90636 RVA: 0x003378E0 File Offset: 0x00335AE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -336,7 +336,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060162F2 RID: 90866 RVA: 0x00339074 File Offset: 0x00337274
+		// Token: 0x0601620D RID: 90637 RVA: 0x003379B0 File Offset: 0x00335BB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -373,7 +373,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060162F3 RID: 90867 RVA: 0x00339120 File Offset: 0x00337320
+		// Token: 0x0601620E RID: 90638 RVA: 0x00337A5C File Offset: 0x00335C5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueWeeklyEntry other)
@@ -421,7 +421,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060162F4 RID: 90868 RVA: 0x003391F3 File Offset: 0x003373F3
+		// Token: 0x0601620F RID: 90639 RVA: 0x00337B2F File Offset: 0x00335D2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -429,7 +429,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060162F5 RID: 90869 RVA: 0x003391FC File Offset: 0x003373FC
+		// Token: 0x06016210 RID: 90640 RVA: 0x00337B38 File Offset: 0x00335D38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -493,56 +493,56 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040084BF RID: 33983
+		// Token: 0x040084E9 RID: 34025
 		private static readonly MessageParser<RogueWeeklyEntry> _parser = new MessageParser<RogueWeeklyEntry>(() => new RogueWeeklyEntry());
 
-		// Token: 0x040084C0 RID: 33984
+		// Token: 0x040084EA RID: 34026
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040084C1 RID: 33985
+		// Token: 0x040084EB RID: 34027
 		public const int IndexFieldNumber = 1;
 
-		// Token: 0x040084C2 RID: 33986
+		// Token: 0x040084EC RID: 34028
 		private int index_;
 
-		// Token: 0x040084C3 RID: 33987
+		// Token: 0x040084ED RID: 34029
 		public const int TypeFieldNumber = 2;
 
-		// Token: 0x040084C4 RID: 33988
+		// Token: 0x040084EE RID: 34030
 		private RogueWeeklyEntryType type_;
 
-		// Token: 0x040084C5 RID: 33989
+		// Token: 0x040084EF RID: 34031
 		public const int ConfigIdFieldNumber = 3;
 
-		// Token: 0x040084C6 RID: 33990
+		// Token: 0x040084F0 RID: 34032
 		private int configId_;
 
-		// Token: 0x040084C7 RID: 33991
+		// Token: 0x040084F1 RID: 34033
 		public const int RogueWeeklyBuffFieldNumber = 4;
 
-		// Token: 0x040084C8 RID: 33992
+		// Token: 0x040084F2 RID: 34034
 		public const int RogueWeeklyGoodsFieldNumber = 5;
 
-		// Token: 0x040084C9 RID: 33993
+		// Token: 0x040084F3 RID: 34035
 		public const int IsRecommendFieldNumber = 100;
 
-		// Token: 0x040084CA RID: 33994
+		// Token: 0x040084F4 RID: 34036
 		private bool isRecommend_;
 
-		// Token: 0x040084CB RID: 33995
+		// Token: 0x040084F5 RID: 34037
 		private object data_;
 
-		// Token: 0x040084CC RID: 33996
+		// Token: 0x040084F6 RID: 34038
 		private RogueWeeklyEntry.DataOneofCase dataCase_;
 
-		// Token: 0x02001946 RID: 6470
+		// Token: 0x020019BE RID: 6590
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C9A9 RID: 51625
+			// Token: 0x0400CED4 RID: 52948
 			None,
-			// Token: 0x0400C9AA RID: 51626
+			// Token: 0x0400CED5 RID: 52949
 			RogueWeeklyBuff = 4,
-			// Token: 0x0400C9AB RID: 51627
+			// Token: 0x0400CED6 RID: 52950
 			RogueWeeklyGoods
 		}
 	}

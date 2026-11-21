@@ -5,17 +5,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B06 RID: 27398
+	// Token: 0x02005C7E RID: 23678
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventClientModifyTargetTag : LevelEventBase
 	{
-		// Token: 0x0604405B RID: 278619 RVA: 0x010B6CB0 File Offset: 0x010B4EB0
+		// Token: 0x0603A1AD RID: 237997 RVA: 0x0106053C File Offset: 0x0105E73C
 		public LevelEventClientModifyTargetTag(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604405C RID: 278620 RVA: 0x010B6CBC File Offset: 0x010B4EBC
+		// Token: 0x0603A1AE RID: 237998 RVA: 0x01060548 File Offset: 0x0105E748
 		private bool ModifySceneItemTag(int? contextEntityId, ClientModifyTargetTag clientModifyTargetTagParams)
 		{
 			EntityHandle entityHandle = null;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return false;
 		}
 
-		// Token: 0x0604405D RID: 278621 RVA: 0x010B6E48 File Offset: 0x010B5048
+		// Token: 0x0603A1AF RID: 237999 RVA: 0x010606D4 File Offset: 0x0105E8D4
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			ClientModifyTargetTag clientModifyTargetTag = inParams as ClientModifyTargetTag;

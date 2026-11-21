@@ -3,58 +3,58 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020017C1 RID: 6081
+// Token: 0x02000C7A RID: 3194
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ComboTeachingController : UiControllerBase
 {
-	// Token: 0x0600B193 RID: 45459 RVA: 0x0028301B File Offset: 0x0028121B
+	// Token: 0x0600857B RID: 34171 RVA: 0x0028D5B3 File Offset: 0x0028B7B3
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.ComboTeachingViewOpen, new Action<int>(this.OnOpenComboTeachingView));
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x0600B194 RID: 45460 RVA: 0x00283055 File Offset: 0x00281255
+	// Token: 0x0600857C RID: 34172 RVA: 0x0028D5ED File Offset: 0x0028B7ED
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ComboTeachingViewOpen, new Action<int>(this.OnOpenComboTeachingView));
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 	}
 
-	// Token: 0x0600B195 RID: 45461 RVA: 0x0028308F File Offset: 0x0028128F
+	// Token: 0x0600857D RID: 34173 RVA: 0x0028D627 File Offset: 0x0028B827
 	private void OnOpenComboTeachingView(int comboId)
 	{
 		ComboTeachingModel.Instance.RecoveryComboId = comboId;
 		UiManager.Instance.OpenView(EUiViewName.ComboTeachingView, comboId, null);
 	}
 
-	// Token: 0x0600B196 RID: 45462 RVA: 0x002830B2 File Offset: 0x002812B2
+	// Token: 0x0600857E RID: 34174 RVA: 0x0028D64A File Offset: 0x0028B84A
 	private void OnWorldDone()
 	{
 		ComboTeachingModel.Instance.InitStart = true;
 	}
 
-	// Token: 0x0600B197 RID: 45463 RVA: 0x002830BF File Offset: 0x002812BF
+	// Token: 0x0600857F RID: 34175 RVA: 0x0028D657 File Offset: 0x0028B857
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.ComboTeachingView, new Func<EUiViewName, object, bool>(this.CheckOpenComboTeachingView), "ComboTeachingController.CheckOpenComboTeachingView");
 	}
 
-	// Token: 0x0600B198 RID: 45464 RVA: 0x002830E1 File Offset: 0x002812E1
+	// Token: 0x06008580 RID: 34176 RVA: 0x0028D679 File Offset: 0x0028B879
 	private bool CheckOpenComboTeachingView(EUiViewName viewName, object param)
 	{
 		return GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x0600B199 RID: 45465 RVA: 0x002830ED File Offset: 0x002812ED
+	// Token: 0x06008581 RID: 34177 RVA: 0x0028D685 File Offset: 0x0028B885
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.ComboTeachingView, new Func<EUiViewName, object, bool>(this.CheckOpenComboTeachingView));
 	}
 
-	// Token: 0x0600B19A RID: 45466 RVA: 0x0028310C File Offset: 0x0028130C
+	// Token: 0x06008582 RID: 34178 RVA: 0x0028D6A4 File Offset: 0x0028B8A4
 	public BaseCheckCondition GetSuccessChecker(int type, string conditionString)
 	{
 		switch (type)
@@ -96,13 +96,13 @@ public class ComboTeachingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600B19B RID: 45467 RVA: 0x002831E8 File Offset: 0x002813E8
+	// Token: 0x06008583 RID: 34179 RVA: 0x0028D780 File Offset: 0x0028B980
 	public BaseCheckCondition GetFailChecker(int type, string conditionString)
 	{
 		switch (type)
 		{
 		case 0:
-			return new CheckSkillIdFailCondition(conditionString, false);
+			return new CheckSkillIdFailCondition(conditionString, false, EComboTeachingFailCondition.SkillIdChecker);
 		case 1:
 			return new CheckSkillExitNextAttrCondition(conditionString, false);
 		case 2:
@@ -119,6 +119,8 @@ public class ComboTeachingController : UiControllerBase
 			return new CheckKeyInputCondition(conditionString, false);
 		case 8:
 			return new CheckKeyHoldingCondition(conditionString, false);
+		case 9:
+			return new CheckSkillIdFailCondition(conditionString, false, EComboTeachingFailCondition.HoldSkillIdChecker);
 		default:
 		{
 			Log instance = Log.Instance;
@@ -132,8 +134,8 @@ public class ComboTeachingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17000EBE RID: 3774
-	// (get) Token: 0x0600B19C RID: 45468 RVA: 0x0028329F File Offset: 0x0028149F
+	// Token: 0x17000EE1 RID: 3809
+	// (get) Token: 0x06008584 RID: 34180 RVA: 0x0028D846 File Offset: 0x0028BA46
 	public static ComboTeachingController Instance
 	{
 		get
@@ -142,7 +144,7 @@ public class ComboTeachingController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600B19D RID: 45469 RVA: 0x002832A6 File Offset: 0x002814A6
+	// Token: 0x06008585 RID: 34181 RVA: 0x0028D84D File Offset: 0x0028BA4D
 	public static ComboTeachingController GetOrCreateInstance()
 	{
 		if (ComboTeachingController._Instance == null)
@@ -152,7 +154,7 @@ public class ComboTeachingController : UiControllerBase
 		return ComboTeachingController._Instance;
 	}
 
-	// Token: 0x0600B19E RID: 45470 RVA: 0x002832BA File Offset: 0x002814BA
+	// Token: 0x06008586 RID: 34182 RVA: 0x0028D861 File Offset: 0x0028BA61
 	public static bool CreateInstance()
 	{
 		if (ComboTeachingController._Instance != null)
@@ -163,24 +165,24 @@ public class ComboTeachingController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600B19F RID: 45471 RVA: 0x002832D0 File Offset: 0x002814D0
+	// Token: 0x06008587 RID: 34183 RVA: 0x0028D877 File Offset: 0x0028BA77
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B1A0 RID: 45472 RVA: 0x002832D2 File Offset: 0x002814D2
+	// Token: 0x06008588 RID: 34184 RVA: 0x0028D879 File Offset: 0x0028BA79
 	public static void ResetStaticDefaultValue()
 	{
 		ComboTeachingController._Instance = null;
 	}
 
-	// Token: 0x0600B1A1 RID: 45473 RVA: 0x002832DA File Offset: 0x002814DA
+	// Token: 0x06008589 RID: 34185 RVA: 0x0028D881 File Offset: 0x0028BA81
 	static ComboTeachingController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ComboTeachingController.CreateStaticDefaultValue), new Action(ComboTeachingController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400508C RID: 20620
+	// Token: 0x04005136 RID: 20790
 	[Nullable(2)]
 	private static ComboTeachingController _Instance;
 }

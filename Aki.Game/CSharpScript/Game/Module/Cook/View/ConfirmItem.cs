@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B19 RID: 23321
+	// Token: 0x02004AFA RID: 19194
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfirmItem : UiPanelBase
 	{
-		// Token: 0x0603B097 RID: 241815 RVA: 0x00E13088 File Offset: 0x00E11288
+		// Token: 0x06030009 RID: 196617 RVA: 0x00D63DA0 File Offset: 0x00D61FA0
 		public UniTask Initialize(UUIItem uiItem)
 		{
 			ConfirmItem.<Initialize>d__2 <Initialize>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B098 RID: 241816 RVA: 0x00E130D4 File Offset: 0x00E112D4
+		// Token: 0x0603000A RID: 196618 RVA: 0x00D63DEC File Offset: 0x00D61FEC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -53,19 +53,19 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B099 RID: 241817 RVA: 0x00E1319B File Offset: 0x00E1139B
+		// Token: 0x0603000B RID: 196619 RVA: 0x00D63EB3 File Offset: 0x00D620B3
 		protected override void OnStart()
 		{
 			base.GetButton(0).SetCanClickWhenDisable(true);
 		}
 
-		// Token: 0x0603B09A RID: 241818 RVA: 0x00E131AA File Offset: 0x00E113AA
+		// Token: 0x0603000C RID: 196620 RVA: 0x00D63EC2 File Offset: 0x00D620C2
 		public void ShowConfirmItem(bool isShow)
 		{
 			this.SetActive(isShow);
 		}
 
-		// Token: 0x0603B09B RID: 241819 RVA: 0x00E131B4 File Offset: 0x00E113B4
+		// Token: 0x0603000D RID: 196621 RVA: 0x00D63ECC File Offset: 0x00D620CC
 		public void SetEnable()
 		{
 			int cookerMaxLevel = CookModel.Instance.GetCookerMaxLevel();
@@ -84,20 +84,20 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetItem(2).SetUIActive(totalProficiencys >= sumExpByLevel);
 		}
 
-		// Token: 0x0603B09C RID: 241820 RVA: 0x00E1326F File Offset: 0x00E1146F
+		// Token: 0x0603000E RID: 196622 RVA: 0x00D63F87 File Offset: 0x00D62187
 		[NullableContext(2)]
 		public UUIItem GetRedDot()
 		{
 			return base.GetItem(2);
 		}
 
-		// Token: 0x0603B09D RID: 241821 RVA: 0x00E13278 File Offset: 0x00E11478
+		// Token: 0x0603000F RID: 196623 RVA: 0x00D63F90 File Offset: 0x00D62190
 		public void BindOnClickedCallback(Action onConfirmCallback)
 		{
 			this.OnConfirmCallback = onConfirmCallback;
 		}
 
-		// Token: 0x0603B09E RID: 241822 RVA: 0x00E13281 File Offset: 0x00E11481
+		// Token: 0x06030010 RID: 196624 RVA: 0x00D63F99 File Offset: 0x00D62199
 		private void OnConfirm()
 		{
 			if (this.OnConfirmCallback != null)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0401ECB9 RID: 126137
+		// Token: 0x04019775 RID: 104309
 		[Nullable(2)]
 		private Action OnConfirmCallback;
 	}

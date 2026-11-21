@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -10,25 +10,25 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 {
-	// Token: 0x020069BB RID: 27067
+	// Token: 0x02005B17 RID: 23319
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class TurntableControlController : UiControllerBase
 	{
-		// Token: 0x060435A5 RID: 275877 RVA: 0x01075584 File Offset: 0x01073784
+		// Token: 0x060395E1 RID: 234977 RVA: 0x01019A18 File Offset: 0x01017C18
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandleFail, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandleFail));
 		}
 
-		// Token: 0x060435A6 RID: 275878 RVA: 0x010755A2 File Offset: 0x010737A2
+		// Token: 0x060395E2 RID: 234978 RVA: 0x01019A36 File Offset: 0x01017C36
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandleFail, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandleFail));
 		}
 
-		// Token: 0x060435A7 RID: 275879 RVA: 0x010755C0 File Offset: 0x010737C0
+		// Token: 0x060395E3 RID: 234979 RVA: 0x01019A54 File Offset: 0x01017C54
 		private void OnActivateUiCameraAnimationHandleFail(UiCameraHandleData _)
 		{
 			Log.Instance.Warn(ELogModule.SceneItem, ELogAuthor.ZYL, "[TurntableControlView] 激活UI相机Seq失败，关闭UI", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435A8 RID: 275880 RVA: 0x0107560A File Offset: 0x0107380A
+		// Token: 0x060395E4 RID: 234980 RVA: 0x01019A9E File Offset: 0x01017C9E
 		public override bool Clear()
 		{
 			this.RemoveControllerEntityEvents();
 			return base.Clear();
 		}
 
-		// Token: 0x060435A9 RID: 275881 RVA: 0x01075618 File Offset: 0x01073818
+		// Token: 0x060395E5 RID: 234981 RVA: 0x01019AAC File Offset: 0x01017CAC
 		private void AddControllerEntityEvents()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435AA RID: 275882 RVA: 0x01075680 File Offset: 0x01073880
+		// Token: 0x060395E6 RID: 234982 RVA: 0x01019B14 File Offset: 0x01017D14
 		private void RemoveControllerEntityEvents()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435AB RID: 275883 RVA: 0x010756E7 File Offset: 0x010738E7
+		// Token: 0x060395E7 RID: 234983 RVA: 0x01019B7B File Offset: 0x01017D7B
 		private void HandleControllerUpdateState(int stateId, bool isReady)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.完成"] && isReady)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435AC RID: 275884 RVA: 0x01075718 File Offset: 0x01073918
+		// Token: 0x060395E8 RID: 234984 RVA: 0x01019BAC File Offset: 0x01017DAC
 		[NullableContext(0)]
 		public UniTask<bool> OpenTurntableControlView(int controllerEntityId)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return <OpenTurntableControlView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060435AD RID: 275885 RVA: 0x01075764 File Offset: 0x01073964
+		// Token: 0x060395E9 RID: 234985 RVA: 0x01019BF8 File Offset: 0x01017DF8
 		public void HandleTurntableControlViewClose()
 		{
 			this.RemoveControllerEntityEvents();
@@ -111,14 +111,14 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			instance.ClearCurControllerEntity();
 		}
 
-		// Token: 0x060435AE RID: 275886 RVA: 0x0107579F File Offset: 0x0107399F
+		// Token: 0x060395EA RID: 234986 RVA: 0x01019C33 File Offset: 0x01017E33
 		[NullableContext(2)]
 		public Entity GetControllerEntity()
 		{
 			return TurntableControlModel.Instance.CurControllerEntity;
 		}
 
-		// Token: 0x060435AF RID: 275887 RVA: 0x010757AC File Offset: 0x010739AC
+		// Token: 0x060395EB RID: 234987 RVA: 0x01019C40 File Offset: 0x01017E40
 		public void StartRotateSelected()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			instance.CurControllerEntityComp.TriggerStartSelectedRingsRotate();
 		}
 
-		// Token: 0x060435B0 RID: 275888 RVA: 0x010757DC File Offset: 0x010739DC
+		// Token: 0x060395EC RID: 234988 RVA: 0x01019C70 File Offset: 0x01017E70
 		public void StopAllRotate()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -143,21 +143,21 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435B1 RID: 275889 RVA: 0x01075818 File Offset: 0x01073A18
+		// Token: 0x060395ED RID: 234989 RVA: 0x01019CAC File Offset: 0x01017EAC
 		public bool IsAllRingsAtTarget()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
 			return ((instance != null) ? instance.CurControllerEntityComp : null) != null && instance.CurControllerEntityComp.IsAllRingsAtTarget();
 		}
 
-		// Token: 0x060435B2 RID: 275890 RVA: 0x01075848 File Offset: 0x01073A48
+		// Token: 0x060395EE RID: 234990 RVA: 0x01019CDC File Offset: 0x01017EDC
 		public bool IsBusyRotating()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
 			return ((instance != null) ? instance.CurControllerEntityComp : null) != null && instance.CurControllerEntityComp.IsBusyRotating();
 		}
 
-		// Token: 0x060435B3 RID: 275891 RVA: 0x01075878 File Offset: 0x01073A78
+		// Token: 0x060395EF RID: 234991 RVA: 0x01019D0C File Offset: 0x01017F0C
 		public void SwitchSelectedRing()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			this.SelectRingByIndex(0, true);
 		}
 
-		// Token: 0x060435B4 RID: 275892 RVA: 0x010758EC File Offset: 0x01073AEC
+		// Token: 0x060395F0 RID: 234992 RVA: 0x01019D80 File Offset: 0x01017F80
 		public void SelectRingByIndex(int index, bool exclusive)
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			instance.CurControllerEntityComp.SelectRingByIndex(index, true);
 		}
 
-		// Token: 0x060435B5 RID: 275893 RVA: 0x01075944 File Offset: 0x01073B44
+		// Token: 0x060395F1 RID: 234993 RVA: 0x01019DD8 File Offset: 0x01017FD8
 		public void DeselectRingByIndex(int index)
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			instance.CurControllerEntityComp.DeselectRingByIndex(index, true);
 		}
 
-		// Token: 0x060435B6 RID: 275894 RVA: 0x01075974 File Offset: 0x01073B74
+		// Token: 0x060395F2 RID: 234994 RVA: 0x01019E08 File Offset: 0x01018008
 		public void ResetRingsAngle()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			instance.CurControllerEntityComp.TriggerResetAllRingsToInitAngle(false);
 		}
 
-		// Token: 0x060435B7 RID: 275895 RVA: 0x010759A4 File Offset: 0x01073BA4
+		// Token: 0x060395F3 RID: 234995 RVA: 0x01019E38 File Offset: 0x01018038
 		public EControllerType? GetControlType()
 		{
 			TurntableControlModel instance = TurntableControlModel.Instance;
@@ -229,8 +229,8 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return new EControllerType?(instance.CurControllerEntityComp.GetControlType());
 		}
 
-		// Token: 0x17009860 RID: 39008
-		// (get) Token: 0x060435B8 RID: 275896 RVA: 0x010759DF File Offset: 0x01073BDF
+		// Token: 0x17006D40 RID: 27968
+		// (get) Token: 0x060395F4 RID: 234996 RVA: 0x01019E73 File Offset: 0x01018073
 		public static TurntableControlController Instance
 		{
 			get
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			}
 		}
 
-		// Token: 0x060435B9 RID: 275897 RVA: 0x010759E6 File Offset: 0x01073BE6
+		// Token: 0x060395F5 RID: 234997 RVA: 0x01019E7A File Offset: 0x0101807A
 		public static TurntableControlController GetOrCreateInstance()
 		{
 			if (TurntableControlController._Instance == null)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return TurntableControlController._Instance;
 		}
 
-		// Token: 0x060435BA RID: 275898 RVA: 0x010759FA File Offset: 0x01073BFA
+		// Token: 0x060395F6 RID: 234998 RVA: 0x01019E8E File Offset: 0x0101808E
 		public static bool CreateInstance()
 		{
 			if (TurntableControlController._Instance != null)
@@ -260,24 +260,24 @@ namespace CSharpScript.Game.LevelGamePlay.TurntableControl
 			return true;
 		}
 
-		// Token: 0x060435BB RID: 275899 RVA: 0x01075A10 File Offset: 0x01073C10
+		// Token: 0x060395F7 RID: 234999 RVA: 0x01019EA4 File Offset: 0x010180A4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060435BC RID: 275900 RVA: 0x01075A12 File Offset: 0x01073C12
+		// Token: 0x060395F8 RID: 235000 RVA: 0x01019EA6 File Offset: 0x010180A6
 		public static void ResetStaticDefaultValue()
 		{
 			TurntableControlController._Instance = null;
 		}
 
-		// Token: 0x060435BD RID: 275901 RVA: 0x01075A1A File Offset: 0x01073C1A
+		// Token: 0x060395F9 RID: 235001 RVA: 0x01019EAE File Offset: 0x010180AE
 		static TurntableControlController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TurntableControlController.CreateStaticDefaultValue), new Action(TurntableControlController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023227 RID: 143911
+		// Token: 0x0401E417 RID: 123927
 		[Nullable(2)]
 		private static TurntableControlController _Instance;
 	}

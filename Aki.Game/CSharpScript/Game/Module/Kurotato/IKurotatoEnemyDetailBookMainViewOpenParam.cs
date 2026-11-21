@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005708 RID: 22280
+	// Token: 0x020046DF RID: 18143
 	public interface IKurotatoEnemyDetailBookMainViewOpenParam
 	{
-		// Token: 0x17008834 RID: 34868
-		// (get) Token: 0x06038A54 RID: 232020
-		// (set) Token: 0x06038A55 RID: 232021
+		// Token: 0x17005BFC RID: 23548
+		// (get) Token: 0x0602D964 RID: 186724
+		// (set) Token: 0x0602D965 RID: 186725
 		int TargetLevel { get; set; }
 
-		// Token: 0x17008835 RID: 34869
-		// (get) Token: 0x06038A56 RID: 232022
-		// (set) Token: 0x06038A57 RID: 232023
+		// Token: 0x17005BFD RID: 23549
+		// (get) Token: 0x0602D966 RID: 186726
+		// (set) Token: 0x0602D967 RID: 186727
 		int TargetWave { get; set; }
 	}
 }

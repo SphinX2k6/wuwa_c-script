@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006812 RID: 26642
+	// Token: 0x02005762 RID: 22370
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlOccupationTitleItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0604276D RID: 272237 RVA: 0x01025694 File Offset: 0x01023894
+		// Token: 0x060372C2 RID: 225986 RVA: 0x00F66BD8 File Offset: 0x00F64DD8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604276E RID: 272238 RVA: 0x0102579D File Offset: 0x0102399D
+		// Token: 0x060372C3 RID: 225987 RVA: 0x00F66CE1 File Offset: 0x00F64EE1
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 		}
 
-		// Token: 0x0604276F RID: 272239 RVA: 0x010257D2 File Offset: 0x010239D2
+		// Token: 0x060372C4 RID: 225988 RVA: 0x00F66D16 File Offset: 0x00F64F16
 		protected override void OnBeforeDestroy()
 		{
 			this.CancelLoadSpine();
 		}
 
-		// Token: 0x06042770 RID: 272240 RVA: 0x010257DC File Offset: 0x010239DC
+		// Token: 0x060372C5 RID: 225989 RVA: 0x00F66D20 File Offset: 0x00F64F20
 		public override void Refresh(int id, bool isSelected, int gridIndex)
 		{
 			this.OccupationId = id;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetToggleState(isSelected);
 		}
 
-		// Token: 0x06042771 RID: 272241 RVA: 0x010258E4 File Offset: 0x01023AE4
+		// Token: 0x060372C6 RID: 225990 RVA: 0x00F66E28 File Offset: 0x00F65028
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new ValueTuple<string, string>(config.SpineAtlasPaths(num) ?? "", config.SpineSkeletonDataPaths(j) ?? "");
 		}
 
-		// Token: 0x06042772 RID: 272242 RVA: 0x01025964 File Offset: 0x01023B64
+		// Token: 0x060372C7 RID: 225991 RVA: 0x00F66EA8 File Offset: 0x00F650A8
 		private void RefreshSpine(string atlasPath, string skeletonPath, string spineAnim)
 		{
 			this.RefreshSpineAsync(atlasPath, skeletonPath, spineAnim).Forget();
 		}
 
-		// Token: 0x06042773 RID: 272243 RVA: 0x01025974 File Offset: 0x01023B74
+		// Token: 0x060372C8 RID: 225992 RVA: 0x00F66EB8 File Offset: 0x00F650B8
 		private UniTask RefreshSpineAsync(string atlasPath, string skeletonPath, string spineAnim)
 		{
 			DangoBrawlOccupationTitleItem.<RefreshSpineAsync>d__16 <RefreshSpineAsync>d__;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042774 RID: 272244 RVA: 0x010259D0 File Offset: 0x01023BD0
+		// Token: 0x060372C9 RID: 225993 RVA: 0x00F66F14 File Offset: 0x00F65114
 		[return: Nullable(0)]
 		private UniTask<bool> LoadSpineAsync(string atlasPath, string skeletonPath)
 		{
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <LoadSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042775 RID: 272245 RVA: 0x01025A23 File Offset: 0x01023C23
+		// Token: 0x060372CA RID: 225994 RVA: 0x00F66F67 File Offset: 0x00F65167
 		private void CancelLoadSpine()
 		{
 			LoadAsyncPromise<USpineAtlasAsset> spineAtlasPromise = this.SpineAtlasPromise;
@@ -165,13 +165,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SpineSkeletonDataPromise = null;
 		}
 
-		// Token: 0x06042776 RID: 272246 RVA: 0x01025A55 File Offset: 0x01023C55
+		// Token: 0x060372CB RID: 225995 RVA: 0x00F66F99 File Offset: 0x00F65199
 		public void PlaySpine()
 		{
 			this.PlaySpineAnim(this.SpineAnim);
 		}
 
-		// Token: 0x06042777 RID: 272247 RVA: 0x01025A64 File Offset: 0x01023C64
+		// Token: 0x060372CC RID: 225996 RVA: 0x00F66FA8 File Offset: 0x00F651A8
 		private void PlaySpineAnim(string anim)
 		{
 			if (this.IsLoading || string.IsNullOrEmpty(anim))
@@ -186,20 +186,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			spine.SetAnimation(0, anim, true);
 		}
 
-		// Token: 0x06042778 RID: 272248 RVA: 0x01025AA0 File Offset: 0x01023CA0
+		// Token: 0x060372CD RID: 225997 RVA: 0x00F66FE4 File Offset: 0x00F651E4
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 			this.PlaySpine();
 		}
 
-		// Token: 0x06042779 RID: 272249 RVA: 0x01025AAF File Offset: 0x01023CAF
+		// Token: 0x060372CE RID: 225998 RVA: 0x00F66FF3 File Offset: 0x00F651F3
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x0604277A RID: 272250 RVA: 0x01025AB8 File Offset: 0x01023CB8
+		// Token: 0x060372CF RID: 225999 RVA: 0x00F66FFC File Offset: 0x00F651FC
 		private void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -211,14 +211,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleStateForce(state2, false, false, false);
 		}
 
-		// Token: 0x0604277B RID: 272251 RVA: 0x01025AE2 File Offset: 0x01023CE2
+		// Token: 0x060372D0 RID: 226000 RVA: 0x00F67026 File Offset: 0x00F65226
 		private bool OnCanExecuteChange()
 		{
 			Func<int, bool> isCurrentOccupation = this.IsCurrentOccupation;
 			return isCurrentOccupation == null || !isCurrentOccupation(this.OccupationId);
 		}
 
-		// Token: 0x0604277C RID: 272252 RVA: 0x01025AFE File Offset: 0x01023CFE
+		// Token: 0x060372D1 RID: 226001 RVA: 0x00F67042 File Offset: 0x00F65242
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<int, int> onClickToggleBack = this.OnClickToggleBack;
@@ -229,30 +229,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickToggleBack(base.GridIndex, this.OccupationId);
 		}
 
-		// Token: 0x04022A2C RID: 141868
+		// Token: 0x0401D289 RID: 119433
 		private int OccupationId;
 
-		// Token: 0x04022A2D RID: 141869
+		// Token: 0x0401D28A RID: 119434
 		[Nullable(2)]
 		public Action<int, int> OnClickToggleBack;
 
-		// Token: 0x04022A2E RID: 141870
+		// Token: 0x0401D28B RID: 119435
 		[Nullable(2)]
 		public Func<int, bool> IsCurrentOccupation;
 
-		// Token: 0x04022A2F RID: 141871
+		// Token: 0x0401D28C RID: 119436
 		private string LoadedAtlasPath = "";
 
-		// Token: 0x04022A30 RID: 141872
+		// Token: 0x0401D28D RID: 119437
 		private string LoadedSkeletonPath = "";
 
-		// Token: 0x04022A31 RID: 141873
+		// Token: 0x0401D28E RID: 119438
 		private string SpineAnim = "";
 
-		// Token: 0x04022A32 RID: 141874
+		// Token: 0x0401D28F RID: 119439
 		private bool IsLoading;
 
-		// Token: 0x04022A33 RID: 141875
+		// Token: 0x0401D290 RID: 119440
 		[Nullable(new byte[]
 		{
 			2,
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineAtlasAsset> SpineAtlasPromise;
 
-		// Token: 0x04022A34 RID: 141876
+		// Token: 0x0401D291 RID: 119441
 		[Nullable(new byte[]
 		{
 			2,
@@ -268,19 +268,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private LoadAsyncPromise<USpineSkeletonDataAsset> SpineSkeletonDataPromise;
 
-		// Token: 0x0200C99C RID: 51612
+		// Token: 0x0200B369 RID: 45929
 		[NullableContext(0)]
 		private enum EItemComponent
 		{
-			// Token: 0x0403CE42 RID: 249410
+			// Token: 0x0403772F RID: 227119
 			SprRole,
-			// Token: 0x0403CE43 RID: 249411
+			// Token: 0x04037730 RID: 227120
 			TxtMainTitle,
-			// Token: 0x0403CE44 RID: 249412
+			// Token: 0x04037731 RID: 227121
 			TxtSubTitle,
-			// Token: 0x0403CE45 RID: 249413
+			// Token: 0x04037732 RID: 227122
 			TogItem,
-			// Token: 0x0403CE46 RID: 249414
+			// Token: 0x04037733 RID: 227123
 			SpineRole
 		}
 	}

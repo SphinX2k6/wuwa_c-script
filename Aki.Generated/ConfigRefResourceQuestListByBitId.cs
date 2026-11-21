@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C6 RID: 1990
+	// Token: 0x020007E2 RID: 2018
 	public class ConfigRefResourceQuestListByBitId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EB6 RID: 11958 RVA: 0x00161537 File Offset: 0x0015F737
+		// Token: 0x06002F5E RID: 12126 RVA: 0x0016881F File Offset: 0x00166A1F
 		static ConfigRefResourceQuestListByBitId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRefResourceQuestListByBitId.CreateStaticDefaultValue), new Action(ConfigRefResourceQuestListByBitId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EB7 RID: 11959 RVA: 0x00161558 File Offset: 0x0015F758
+		// Token: 0x06002F5F RID: 12127 RVA: 0x00168840 File Offset: 0x00166A40
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRefResourceQuestListByBitId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EB8 RID: 11960 RVA: 0x001615D7 File Offset: 0x0015F7D7
+		// Token: 0x06002F60 RID: 12128 RVA: 0x001688BF File Offset: 0x00166ABF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRefResourceQuestListByBitId.LogPair = null;
 			ConfigRefResourceQuestListByBitId.HandleId = 0;
 		}
 
-		// Token: 0x06002EB9 RID: 11961 RVA: 0x001615E5 File Offset: 0x0015F7E5
+		// Token: 0x06002F61 RID: 12129 RVA: 0x001688CD File Offset: 0x00166ACD
 		public static void Init()
 		{
 			ConfigRefResourceQuestListByBitId.HandleId = ConfigCommon.InitDataStatement(ConfigRefResourceQuestListByBitId.HandleId, "db_refresourcequestlist.db", "select BinData from `RefResourceQuestList` where BitId=?");
 		}
 
-		// Token: 0x06002EBA RID: 11962 RVA: 0x00161600 File Offset: 0x0015F800
+		// Token: 0x06002F62 RID: 12130 RVA: 0x001688E8 File Offset: 0x00166AE8
 		public static RefResourceQuestList? GetConfig(int p0BitId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRefResourceQuestListByBitId.HandleId, ConfigRefResourceQuestListByBitId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RefResourceQuestList?(rootAsRefResourceQuestList);
 		}
 
-		// Token: 0x04003650 RID: 13904
+		// Token: 0x04003714 RID: 14100
 		private const string DB = "db_refresourcequestlist.db";
 
-		// Token: 0x04003651 RID: 13905
+		// Token: 0x04003715 RID: 14101
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/RefResourceQuestList.csv";
 
-		// Token: 0x04003652 RID: 13906
+		// Token: 0x04003716 RID: 14102
 		private const string TABLE = "RefResourceQuestList";
 
-		// Token: 0x04003653 RID: 13907
+		// Token: 0x04003717 RID: 14103
 		private const string COMMAND = "select BinData from `RefResourceQuestList` where BitId=?";
 
-		// Token: 0x04003654 RID: 13908
+		// Token: 0x04003718 RID: 14104
 		private const string KEY_PREFIX = "RefResourceQuestListByBitId";
 
-		// Token: 0x04003655 RID: 13909
+		// Token: 0x04003719 RID: 14105
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003656 RID: 13910
+		// Token: 0x0400371A RID: 14106
 		private static int HandleId;
 	}
 }

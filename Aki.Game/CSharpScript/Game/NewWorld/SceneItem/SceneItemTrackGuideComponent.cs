@@ -15,12 +15,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007198 RID: 29080
+	// Token: 0x0200624D RID: 25165
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemTrackGuideComponent : EntityComponent
 	{
-		// Token: 0x06047264 RID: 291428 RVA: 0x012121D0 File Offset: 0x012103D0
+		// Token: 0x0603CB4F RID: 248655 RVA: 0x0116C6EC File Offset: 0x0116A8EC
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			FollowTrackComponent followTrackComponent = args.GetP1<CreateEntityData>().GetParam<SceneItemTrackGuideComponent>() as FollowTrackComponent;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047265 RID: 291429 RVA: 0x012123BC File Offset: 0x012105BC
+		// Token: 0x0603CB50 RID: 248656 RVA: 0x0116C8D8 File Offset: 0x0116AAD8
 		private void AddEvents()
 		{
 			if (this.UseCommonEffect)
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Add(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x06047266 RID: 291430 RVA: 0x01212454 File Offset: 0x01210654
+		// Token: 0x0603CB51 RID: 248657 RVA: 0x0116C970 File Offset: 0x0116AB70
 		private void RemoveEvents()
 		{
 			if (this.UseCommonEffect)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Remove(EEventName.ChangeModeFinish, new Action(this.OnChangeModeFinish));
 		}
 
-		// Token: 0x06047267 RID: 291431 RVA: 0x012124EC File Offset: 0x012106EC
+		// Token: 0x0603CB52 RID: 248658 RVA: 0x0116CA08 File Offset: 0x0116AC08
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047268 RID: 291432 RVA: 0x012126C9 File Offset: 0x012108C9
+		// Token: 0x0603CB53 RID: 248659 RVA: 0x0116CBE5 File Offset: 0x0116ADE5
 		protected override void OnActivate()
 		{
 			if (GameModeModel.Instance.IsMulti && !LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(this.OnlineInteractType.Value, false))
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047269 RID: 291433 RVA: 0x01212708 File Offset: 0x01210908
+		// Token: 0x0603CB54 RID: 248660 RVA: 0x0116CC24 File Offset: 0x0116AE24
 		private void InitSpline()
 		{
 			USplineComponent usplineComponent = GameSplineModel.Instance.LoadAndGetSplineComponent(this.SplineEntityId, this.ActorComp.CreatureData.GetPbDataId(), EIdType.PbDataId);
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604726A RID: 291434 RVA: 0x0121293C File Offset: 0x01210B3C
+		// Token: 0x0603CB55 RID: 248661 RVA: 0x0116CE58 File Offset: 0x0116B058
 		private static bool IsSplinePointIgnored(ISplineType splineData, int index)
 		{
 			IButterflySpline butterflySpline = splineData as IButterflySpline;
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return result;
 		}
 
-		// Token: 0x0604726B RID: 291435 RVA: 0x01212994 File Offset: 0x01210B94
+		// Token: 0x0603CB56 RID: 248662 RVA: 0x0116CEB0 File Offset: 0x0116B0B0
 		private static float GetSplinePointMoveSpeed(ISplineType splineData, int index)
 		{
 			IButterflySpline butterflySpline = splineData as IButterflySpline;
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return (float)num;
 		}
 
-		// Token: 0x0604726C RID: 291436 RVA: 0x012129E7 File Offset: 0x01210BE7
+		// Token: 0x0603CB57 RID: 248663 RVA: 0x0116CF03 File Offset: 0x0116B103
 		protected override void OnTick(float delta)
 		{
 			if (this.HasFinished || (this.UseCommonEffect && !this.CommonEffectInit))
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.UpdateSplineMovement(delta);
 		}
 
-		// Token: 0x0604726D RID: 291437 RVA: 0x01212A1C File Offset: 0x01210C1C
+		// Token: 0x0603CB58 RID: 248664 RVA: 0x0116CF38 File Offset: 0x0116B138
 		private void UpdateSplineMovement(float delta)
 		{
 			USplineComponent pathLine = this.PathLine;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604726E RID: 291438 RVA: 0x01212C14 File Offset: 0x01210E14
+		// Token: 0x0603CB59 RID: 248665 RVA: 0x0116D130 File Offset: 0x0116B330
 		private void SplineMoveStopCallback()
 		{
 			this.ShouldBeMoving = false;
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604726F RID: 291439 RVA: 0x01212D9C File Offset: 0x01210F9C
+		// Token: 0x0603CB5A RID: 248666 RVA: 0x0116D2B8 File Offset: 0x0116B4B8
 		private void UpdateNoSplineMovement(float delta)
 		{
 			if (this.NeedCheckWait && this.CheckAndUpdateIfNeedWaiting())
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047270 RID: 291440 RVA: 0x01212EE0 File Offset: 0x012110E0
+		// Token: 0x0603CB5B RID: 248667 RVA: 0x0116D3FC File Offset: 0x0116B5FC
 		private void UpdateToSplineStart(float delta)
 		{
 			USplineComponent pathLine = this.PathLine;
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.HasMoveStart = true;
 		}
 
-		// Token: 0x06047271 RID: 291441 RVA: 0x01212F8C File Offset: 0x0121118C
+		// Token: 0x0603CB5C RID: 248668 RVA: 0x0116D4A8 File Offset: 0x0116B6A8
 		private void UpdateToFoundation(float delta)
 		{
 			bool flag = (this.FoundationId ?? 0) == 0;
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			moveComp2.AddMoveTarget(new SceneItemMoveComponent.MoveTarget(global::Vector.Create(this.FoundationLocation), (float)num, 0f, -1f, -1f));
 		}
 
-		// Token: 0x06047272 RID: 291442 RVA: 0x012130A0 File Offset: 0x012112A0
+		// Token: 0x0603CB5D RID: 248669 RVA: 0x0116D5BC File Offset: 0x0116B7BC
 		private void UpdateToStopAtEnd(float delta)
 		{
 			this.ActorComp.SetActorLocation(this.SplineEndLocation.ToUeVector(false), "unknown", true);
@@ -548,7 +548,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			syncComp.SetEnableMovementSync(true, "UpdateNoSplineMovement UpdateToStopAtEnd");
 		}
 
-		// Token: 0x06047273 RID: 291443 RVA: 0x012130D8 File Offset: 0x012112D8
+		// Token: 0x0603CB5E RID: 248670 RVA: 0x0116D5F4 File Offset: 0x0116B7F4
 		private void OnTrackGuideFinish()
 		{
 			SceneItemMoveComponent moveComp = this.MoveComp;
@@ -574,7 +574,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			});
 		}
 
-		// Token: 0x06047274 RID: 291444 RVA: 0x01213190 File Offset: 0x01211390
+		// Token: 0x0603CB5F RID: 248671 RVA: 0x0116D6AC File Offset: 0x0116B8AC
 		private void OnTrackGuideReset()
 		{
 			this.ActorComp.SetActorLocation(this.SplineStartLocation.ToUeVector(false), "unknown", true);
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.PerformanceComp.ApplyNiagaraParameters("IsMoving", 0f);
 		}
 
-		// Token: 0x06047275 RID: 291445 RVA: 0x0121323C File Offset: 0x0121143C
+		// Token: 0x0603CB60 RID: 248672 RVA: 0x0116D758 File Offset: 0x0116B958
 		private bool CheckAndUpdateIfNeedWaiting()
 		{
 			USplineComponent pathLine = this.PathLine;
@@ -632,32 +632,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.NeedCheckWait;
 		}
 
-		// Token: 0x06047276 RID: 291446 RVA: 0x012132E0 File Offset: 0x012114E0
+		// Token: 0x0603CB61 RID: 248673 RVA: 0x0116D7FC File Offset: 0x0116B9FC
 		[NullableContext(1)]
 		private bool CheckIfReach(global::Vector location)
 		{
 			return this.ActorComp != null && global::Vector.DistSquared(this.ActorComp.ActorLocationProxy, location) <= 2500.0;
 		}
 
-		// Token: 0x06047277 RID: 291447 RVA: 0x0121330B File Offset: 0x0121150B
+		// Token: 0x0603CB62 RID: 248674 RVA: 0x0116D827 File Offset: 0x0116BA27
 		private void OnAddCommonEffect()
 		{
 			this.CommonEffectInit = true;
 		}
 
-		// Token: 0x06047278 RID: 291448 RVA: 0x01213314 File Offset: 0x01211514
+		// Token: 0x0603CB63 RID: 248675 RVA: 0x0116D830 File Offset: 0x0116BA30
 		private void OnEnterLogicRange()
 		{
 			this.IsInRange = true;
 		}
 
-		// Token: 0x06047279 RID: 291449 RVA: 0x0121331D File Offset: 0x0121151D
+		// Token: 0x0603CB64 RID: 248676 RVA: 0x0116D839 File Offset: 0x0116BA39
 		private void OnLeaveLogicRange()
 		{
 			this.IsInRange = false;
 		}
 
-		// Token: 0x0604727A RID: 291450 RVA: 0x01213328 File Offset: 0x01211528
+		// Token: 0x0603CB65 RID: 248677 RVA: 0x0116D844 File Offset: 0x0116BA44
 		private void OnChangeModeFinish()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -687,7 +687,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604727B RID: 291451 RVA: 0x012133FF File Offset: 0x012115FF
+		// Token: 0x0603CB66 RID: 248678 RVA: 0x0116D91B File Offset: 0x0116BB1B
 		private void Reset()
 		{
 			if (this.HasFinished)
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnTrackGuideReset();
 		}
 
-		// Token: 0x0604727C RID: 291452 RVA: 0x01213410 File Offset: 0x01211610
+		// Token: 0x0603CB67 RID: 248679 RVA: 0x0116D92C File Offset: 0x0116BB2C
 		protected override bool OnEnd()
 		{
 			this.RemoveEvents();
@@ -708,7 +708,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x0604727D RID: 291453 RVA: 0x01213444 File Offset: 0x01211644
+		// Token: 0x0603CB68 RID: 248680 RVA: 0x0116D960 File Offset: 0x0116BB60
 		private void ReportTrigger()
 		{
 			if (this.HasReportTriggered)
@@ -728,7 +728,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.HasReportTriggered = true;
 		}
 
-		// Token: 0x0604727E RID: 291454 RVA: 0x01213568 File Offset: 0x01211768
+		// Token: 0x0603CB69 RID: 248681 RVA: 0x0116DA84 File Offset: 0x0116BC84
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -737,442 +737,371 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemTrackGuideComponent sceneItemTrackGuideComponent = (SceneItemTrackGuideComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (sceneItemTrackGuideComponent.ActorComp == null)
 			{
-				if (sceneItemTrackGuideComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PerformanceComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemTrackGuideComponent.PerformanceComp == null)
-				{
-					this.PerformanceComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PerformanceComponent>(this.PerformanceComp), "PerformanceComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			if (sceneItemTrackGuideComponent.PerformanceComp == null)
 			{
-				if (sceneItemTrackGuideComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				this.PerformanceComp = null;
 			}
-			if (base.CanResetComponentProperty("PropertyComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformanceComp), "PerformanceComp"))
 			{
-				if (sceneItemTrackGuideComponent.PropertyComp == null)
-				{
-					this.PropertyComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemPropertyComponent>(this.PropertyComp), "PropertyComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ReachedEndOfSplineType"))
+			if (sceneItemTrackGuideComponent.MoveComp == null)
 			{
-				this.ReachedEndOfSplineType = sceneItemTrackGuideComponent.ReachedEndOfSplineType;
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("SyncComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				if (sceneItemTrackGuideComponent.SyncComp == null)
-				{
-					this.SyncComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMovementSyncComponent>(this.SyncComp), "SyncComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FoundationId"))
+			if (sceneItemTrackGuideComponent.PropertyComp == null)
 			{
-				this.FoundationId = sceneItemTrackGuideComponent.FoundationId;
+				this.PropertyComp = null;
 			}
-			if (base.CanResetComponentProperty("FoundationOffset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PropertyComp), "PropertyComp"))
 			{
-				if (sceneItemTrackGuideComponent.FoundationOffset == null)
-				{
-					this.FoundationOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.FoundationOffset), "FoundationOffset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FoundationEntity"))
+			this.ReachedEndOfSplineType = sceneItemTrackGuideComponent.ReachedEndOfSplineType;
+			if (sceneItemTrackGuideComponent.SyncComp == null)
 			{
-				if (sceneItemTrackGuideComponent.FoundationEntity == null)
-				{
-					this.FoundationEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.FoundationEntity), "FoundationEntity"))
-				{
-					return false;
-				}
+				this.SyncComp = null;
 			}
-			if (base.CanResetComponentProperty("FoundationLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SyncComp), "SyncComp"))
 			{
-				if (sceneItemTrackGuideComponent.FoundationLocation == null)
-				{
-					this.FoundationLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.FoundationLocation), "FoundationLocation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PathLine"))
+			this.FoundationId = sceneItemTrackGuideComponent.FoundationId;
+			if (sceneItemTrackGuideComponent.FoundationOffset == null)
 			{
-				if (sceneItemTrackGuideComponent.PathLine == null)
-				{
-					this.PathLine = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.PathLine), "PathLine"))
-				{
-					return false;
-				}
+				this.FoundationOffset = null;
 			}
-			if (base.CanResetComponentProperty("SplineStartLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FoundationOffset), "FoundationOffset"))
 			{
-				if (sceneItemTrackGuideComponent.SplineStartLocation == null)
-				{
-					this.SplineStartLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SplineStartLocation), "SplineStartLocation"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineEndLocation"))
+			if (sceneItemTrackGuideComponent.FoundationEntity == null)
 			{
-				if (sceneItemTrackGuideComponent.SplineEndLocation == null)
-				{
-					this.SplineEndLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SplineEndLocation), "SplineEndLocation"))
-				{
-					return false;
-				}
+				this.FoundationEntity = null;
 			}
-			if (base.CanResetComponentProperty("DistanceAlongSpline"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FoundationEntity), "FoundationEntity"))
 			{
-				this.DistanceAlongSpline = sceneItemTrackGuideComponent.DistanceAlongSpline;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetPointIndex"))
+			if (sceneItemTrackGuideComponent.FoundationLocation == null)
 			{
-				this.TargetPointIndex = sceneItemTrackGuideComponent.TargetPointIndex;
+				this.FoundationLocation = null;
 			}
-			if (base.CanResetComponentProperty("NumSplinePoints"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FoundationLocation), "FoundationLocation"))
 			{
-				this.NumSplinePoints = sceneItemTrackGuideComponent.NumSplinePoints;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineLength"))
+			if (sceneItemTrackGuideComponent.PathLine == null)
 			{
-				this.SplineLength = sceneItemTrackGuideComponent.SplineLength;
+				this.PathLine = null;
 			}
-			if (base.CanResetComponentProperty("DistanceBetweenLastTwoPointsInverse"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PathLine), "PathLine"))
 			{
-				this.DistanceBetweenLastTwoPointsInverse = sceneItemTrackGuideComponent.DistanceBetweenLastTwoPointsInverse;
+				return false;
 			}
-			if (base.CanResetComponentProperty("WaitConfig"))
+			if (sceneItemTrackGuideComponent.SplineStartLocation == null)
 			{
-				if (sceneItemTrackGuideComponent.WaitConfig == null)
-				{
-					this.WaitConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<bool>>(this.WaitConfig), "WaitConfig"))
-				{
-					return false;
-				}
+				this.SplineStartLocation = null;
 			}
-			if (base.CanResetComponentProperty("SpeedConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineStartLocation), "SplineStartLocation"))
 			{
-				if (sceneItemTrackGuideComponent.SpeedConfig == null)
-				{
-					this.SpeedConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<float>>(this.SpeedConfig), "SpeedConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineMoveParam"))
+			if (sceneItemTrackGuideComponent.SplineEndLocation == null)
 			{
-				if (sceneItemTrackGuideComponent.SplineMoveParam == null)
-				{
-					this.SplineMoveParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam>(this.SplineMoveParam), "SplineMoveParam"))
-				{
-					return false;
-				}
+				this.SplineEndLocation = null;
 			}
-			if (base.CanResetComponentProperty("NeedCheckWait"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineEndLocation), "SplineEndLocation"))
 			{
-				this.NeedCheckWait = sceneItemTrackGuideComponent.NeedCheckWait;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsInRange"))
+			this.DistanceAlongSpline = sceneItemTrackGuideComponent.DistanceAlongSpline;
+			this.TargetPointIndex = sceneItemTrackGuideComponent.TargetPointIndex;
+			this.NumSplinePoints = sceneItemTrackGuideComponent.NumSplinePoints;
+			this.SplineLength = sceneItemTrackGuideComponent.SplineLength;
+			this.DistanceBetweenLastTwoPointsInverse = sceneItemTrackGuideComponent.DistanceBetweenLastTwoPointsInverse;
+			if (sceneItemTrackGuideComponent.WaitConfig == null)
 			{
-				this.IsInRange = sceneItemTrackGuideComponent.IsInRange;
+				this.WaitConfig = null;
 			}
-			if (base.CanResetComponentProperty("UpdateState"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitConfig), "WaitConfig"))
 			{
-				this.UpdateState = sceneItemTrackGuideComponent.UpdateState;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HasFinished"))
+			if (sceneItemTrackGuideComponent.SpeedConfig == null)
 			{
-				this.HasFinished = sceneItemTrackGuideComponent.HasFinished;
+				this.SpeedConfig = null;
 			}
-			if (base.CanResetComponentProperty("DirectionCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SpeedConfig), "SpeedConfig"))
 			{
-				if (sceneItemTrackGuideComponent.DirectionCache == null)
-				{
-					this.DirectionCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.DirectionCache), "DirectionCache"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PawnSensoryInfo"))
+			if (sceneItemTrackGuideComponent.SplineMoveParam == null)
 			{
-				if (sceneItemTrackGuideComponent.PawnSensoryInfo == null)
-				{
-					this.PawnSensoryInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.PawnSensoryInfo), "PawnSensoryInfo"))
-				{
-					return false;
-				}
+				this.SplineMoveParam = null;
 			}
-			if (base.CanResetComponentProperty("UseCommonEffect"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineMoveParam), "SplineMoveParam"))
 			{
-				this.UseCommonEffect = sceneItemTrackGuideComponent.UseCommonEffect;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CommonEffectInit"))
+			this.NeedCheckWait = sceneItemTrackGuideComponent.NeedCheckWait;
+			this.IsInRange = sceneItemTrackGuideComponent.IsInRange;
+			this.UpdateState = sceneItemTrackGuideComponent.UpdateState;
+			this.HasFinished = sceneItemTrackGuideComponent.HasFinished;
+			if (sceneItemTrackGuideComponent.DirectionCache == null)
 			{
-				this.CommonEffectInit = sceneItemTrackGuideComponent.CommonEffectInit;
+				this.DirectionCache = null;
 			}
-			if (base.CanResetComponentProperty("HasMoveStart"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DirectionCache), "DirectionCache"))
 			{
-				this.HasMoveStart = sceneItemTrackGuideComponent.HasMoveStart;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ShouldBeMoving"))
+			if (sceneItemTrackGuideComponent.PawnSensoryInfo == null)
 			{
-				this.ShouldBeMoving = sceneItemTrackGuideComponent.ShouldBeMoving;
+				this.PawnSensoryInfo = null;
 			}
-			if (base.CanResetComponentProperty("LastSpeed"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryInfo), "PawnSensoryInfo"))
 			{
-				this.LastSpeed = sceneItemTrackGuideComponent.LastSpeed;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnlineInteractType"))
-			{
-				this.OnlineInteractType = sceneItemTrackGuideComponent.OnlineInteractType;
-			}
-			if (base.CanResetComponentProperty("DisableHandle"))
-			{
-				this.DisableHandle = sceneItemTrackGuideComponent.DisableHandle;
-			}
-			if (base.CanResetComponentProperty("HasTriggered"))
-			{
-				this.HasTriggered = sceneItemTrackGuideComponent.HasTriggered;
-			}
-			if (base.CanResetComponentProperty("HasReportTriggered"))
-			{
-				this.HasReportTriggered = sceneItemTrackGuideComponent.HasReportTriggered;
-			}
-			if (base.CanResetComponentProperty("SplineEntityId"))
-			{
-				this.SplineEntityId = sceneItemTrackGuideComponent.SplineEntityId;
-			}
+			this.UseCommonEffect = sceneItemTrackGuideComponent.UseCommonEffect;
+			this.CommonEffectInit = sceneItemTrackGuideComponent.CommonEffectInit;
+			this.HasMoveStart = sceneItemTrackGuideComponent.HasMoveStart;
+			this.ShouldBeMoving = sceneItemTrackGuideComponent.ShouldBeMoving;
+			this.LastSpeed = sceneItemTrackGuideComponent.LastSpeed;
+			this.OnlineInteractType = sceneItemTrackGuideComponent.OnlineInteractType;
+			this.DisableHandle = sceneItemTrackGuideComponent.DisableHandle;
+			this.HasTriggered = sceneItemTrackGuideComponent.HasTriggered;
+			this.HasReportTriggered = sceneItemTrackGuideComponent.HasReportTriggered;
+			this.SplineEntityId = sceneItemTrackGuideComponent.SplineEntityId;
 			return true;
 		}
 
-		// Token: 0x0402567D RID: 153213
+		// Token: 0x170072D8 RID: 29400
+		// (get) Token: 0x0603CB6A RID: 248682 RVA: 0x0116DE50 File Offset: 0x0116C050
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072D9 RID: 29401
+		// (get) Token: 0x0603CB6B RID: 248683 RVA: 0x0116DE53 File Offset: 0x0116C053
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072DA RID: 29402
+		// (get) Token: 0x0603CB6C RID: 248684 RVA: 0x0116DE56 File Offset: 0x0116C056
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072DB RID: 29403
+		// (get) Token: 0x0603CB6D RID: 248685 RVA: 0x0116DE59 File Offset: 0x0116C059
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040202ED RID: 131821
 		private const int DISTANCE_SPLINE_FOUNDATION_THRESHOLD = 10000;
 
-		// Token: 0x0402567E RID: 153214
+		// Token: 0x040202EE RID: 131822
 		private const int SPLINE_FOUNDATION_SPEED = 150;
 
-		// Token: 0x0402567F RID: 153215
+		// Token: 0x040202EF RID: 131823
 		private const int DISTANCE_SQUARE_THRESHOLD = 2500;
 
-		// Token: 0x04025680 RID: 153216
+		// Token: 0x040202F0 RID: 131824
 		private const int MOVEMENT_SPEED = 600;
 
-		// Token: 0x04025681 RID: 153217
+		// Token: 0x040202F1 RID: 131825
 		private const int CONFIG_DEFAULT_MOVEMENT_SPEED = 50;
 
-		// Token: 0x04025682 RID: 153218
+		// Token: 0x040202F2 RID: 131826
 		private const int MAX_MOVEMENT_SPEED = 800;
 
-		// Token: 0x04025683 RID: 153219
+		// Token: 0x040202F3 RID: 131827
 		private const int NORMAL_RADIUS = 50;
 
-		// Token: 0x04025684 RID: 153220
+		// Token: 0x040202F4 RID: 131828
 		private const int COMPRESS_RADIUS = 0;
 
-		// Token: 0x04025685 RID: 153221
+		// Token: 0x040202F5 RID: 131829
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025686 RID: 153222
+		// Token: 0x040202F6 RID: 131830
 		private PerformanceComponent PerformanceComp;
 
-		// Token: 0x04025687 RID: 153223
+		// Token: 0x040202F7 RID: 131831
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x04025688 RID: 153224
+		// Token: 0x040202F8 RID: 131832
 		private SceneItemPropertyComponent PropertyComp;
 
-		// Token: 0x04025689 RID: 153225
+		// Token: 0x040202F9 RID: 131833
 		private EFollowTrackEndType? ReachedEndOfSplineType;
 
-		// Token: 0x0402568A RID: 153226
+		// Token: 0x040202FA RID: 131834
 		private SceneItemMovementSyncComponent SyncComp;
 
-		// Token: 0x0402568B RID: 153227
+		// Token: 0x040202FB RID: 131835
 		private int? FoundationId;
 
-		// Token: 0x0402568C RID: 153228
+		// Token: 0x040202FC RID: 131836
 		private global::Vector FoundationOffset;
 
-		// Token: 0x0402568D RID: 153229
+		// Token: 0x040202FD RID: 131837
 		private EntityHandle FoundationEntity;
 
-		// Token: 0x0402568E RID: 153230
+		// Token: 0x040202FE RID: 131838
 		private global::Vector FoundationLocation;
 
-		// Token: 0x0402568F RID: 153231
+		// Token: 0x040202FF RID: 131839
 		private USplineComponent PathLine;
 
-		// Token: 0x04025690 RID: 153232
+		// Token: 0x04020300 RID: 131840
 		private global::Vector SplineStartLocation;
 
-		// Token: 0x04025691 RID: 153233
+		// Token: 0x04020301 RID: 131841
 		private global::Vector SplineEndLocation;
 
-		// Token: 0x04025692 RID: 153234
+		// Token: 0x04020302 RID: 131842
 		private float DistanceAlongSpline;
 
-		// Token: 0x04025693 RID: 153235
+		// Token: 0x04020303 RID: 131843
 		private int TargetPointIndex;
 
-		// Token: 0x04025694 RID: 153236
+		// Token: 0x04020304 RID: 131844
 		private int NumSplinePoints;
 
-		// Token: 0x04025695 RID: 153237
+		// Token: 0x04020305 RID: 131845
 		private float SplineLength;
 
-		// Token: 0x04025696 RID: 153238
+		// Token: 0x04020306 RID: 131846
 		private float DistanceBetweenLastTwoPointsInverse;
 
-		// Token: 0x04025697 RID: 153239
+		// Token: 0x04020307 RID: 131847
 		private List<bool> WaitConfig;
 
-		// Token: 0x04025698 RID: 153240
+		// Token: 0x04020308 RID: 131848
 		private List<float> SpeedConfig;
 
-		// Token: 0x04025699 RID: 153241
+		// Token: 0x04020309 RID: 131849
 		private SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam SplineMoveParam;
 
-		// Token: 0x0402569A RID: 153242
+		// Token: 0x0402030A RID: 131850
 		private bool NeedCheckWait = true;
 
-		// Token: 0x0402569B RID: 153243
+		// Token: 0x0402030B RID: 131851
 		private bool IsInRange;
 
-		// Token: 0x0402569C RID: 153244
+		// Token: 0x0402030C RID: 131852
 		private SceneItemTrackGuideComponent.EUpdateState UpdateState;
 
-		// Token: 0x0402569D RID: 153245
+		// Token: 0x0402030D RID: 131853
 		private bool HasFinished;
 
-		// Token: 0x0402569E RID: 153246
+		// Token: 0x0402030E RID: 131854
 		private global::Vector DirectionCache;
 
-		// Token: 0x0402569F RID: 153247
+		// Token: 0x0402030F RID: 131855
 		private PawnSensoryInfoComponent PawnSensoryInfo;
 
-		// Token: 0x040256A0 RID: 153248
+		// Token: 0x04020310 RID: 131856
 		private bool UseCommonEffect;
 
-		// Token: 0x040256A1 RID: 153249
+		// Token: 0x04020311 RID: 131857
 		private bool CommonEffectInit;
 
-		// Token: 0x040256A2 RID: 153250
+		// Token: 0x04020312 RID: 131858
 		private bool HasMoveStart;
 
-		// Token: 0x040256A3 RID: 153251
+		// Token: 0x04020313 RID: 131859
 		private bool ShouldBeMoving;
 
-		// Token: 0x040256A4 RID: 153252
+		// Token: 0x04020314 RID: 131860
 		private float LastSpeed;
 
-		// Token: 0x040256A5 RID: 153253
+		// Token: 0x04020315 RID: 131861
 		private EOnlineInteractType? OnlineInteractType;
 
-		// Token: 0x040256A6 RID: 153254
+		// Token: 0x04020316 RID: 131862
 		private int? DisableHandle;
 
-		// Token: 0x040256A7 RID: 153255
+		// Token: 0x04020317 RID: 131863
 		private bool HasTriggered;
 
-		// Token: 0x040256A8 RID: 153256
+		// Token: 0x04020318 RID: 131864
 		private bool HasReportTriggered;
 
-		// Token: 0x040256A9 RID: 153257
+		// Token: 0x04020319 RID: 131865
 		private int SplineEntityId;
 
-		// Token: 0x0200CEE5 RID: 52965
+		// Token: 0x0200BA7B RID: 47739
 		[NullableContext(0)]
 		private enum EUpdateState
 		{
-			// Token: 0x0403E3D9 RID: 254937
+			// Token: 0x040396FF RID: 235263
 			UpdateToSplineStart,
-			// Token: 0x0403E3DA RID: 254938
+			// Token: 0x04039700 RID: 235264
 			UpdateToSplineEnd,
-			// Token: 0x0403E3DB RID: 254939
+			// Token: 0x04039701 RID: 235265
 			UpdateToFoundation,
-			// Token: 0x0403E3DC RID: 254940
+			// Token: 0x04039702 RID: 235266
 			UpdateToStopAtEnd
 		}
 
-		// Token: 0x0200CEE6 RID: 52966
+		// Token: 0x0200BA7C RID: 47740
 		[NullableContext(1)]
 		[Nullable(0)]
 		private class ButterflyTriggerData : PlayerCommonLogData
 		{
-			// Token: 0x0403E3DD RID: 254941
+			// Token: 0x04039703 RID: 235267
 			public int i_inst_id;
 
-			// Token: 0x0403E3DE RID: 254942
+			// Token: 0x04039704 RID: 235268
 			public string i_config_id = "";
 
-			// Token: 0x0403E3DF RID: 254943
+			// Token: 0x04039705 RID: 235269
 			public string f_player_pos_x = "";
 
-			// Token: 0x0403E3E0 RID: 254944
+			// Token: 0x04039706 RID: 235270
 			public string f_player_pos_y = "";
 
-			// Token: 0x0403E3E1 RID: 254945
+			// Token: 0x04039707 RID: 235271
 			public string f_player_pos_z = "";
 
-			// Token: 0x0403E3E2 RID: 254946
+			// Token: 0x04039708 RID: 235272
 			public string i_area_id = "";
 
-			// Token: 0x0403E3E3 RID: 254947
+			// Token: 0x04039709 RID: 235273
 			public string s_tag = "";
 		}
 	}

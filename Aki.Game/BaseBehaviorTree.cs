@@ -14,13 +14,13 @@ using CSharpScript.Game.Module.GeneralLogicTree.Define;
 using CSharpScript.Game.Module.Sheriff;
 using UnrealEngine;
 
-// Token: 0x02001D53 RID: 7507
+// Token: 0x02001215 RID: 4629
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseBehaviorTree
 {
-	// Token: 0x1700122F RID: 4655
-	// (get) Token: 0x0600E3B9 RID: 58297 RVA: 0x00357A3F File Offset: 0x00355C3F
+	// Token: 0x17001259 RID: 4697
+	// (get) Token: 0x0600B7D6 RID: 47062 RVA: 0x003634AF File Offset: 0x003616AF
 	public BtType BtType
 	{
 		get
@@ -29,8 +29,8 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x17001230 RID: 4656
-	// (get) Token: 0x0600E3BA RID: 58298 RVA: 0x00357A4C File Offset: 0x00355C4C
+	// Token: 0x1700125A RID: 4698
+	// (get) Token: 0x0600B7D7 RID: 47063 RVA: 0x003634BC File Offset: 0x003616BC
 	public long TreeIncId
 	{
 		get
@@ -39,8 +39,8 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x17001231 RID: 4657
-	// (get) Token: 0x0600E3BB RID: 58299 RVA: 0x00357A59 File Offset: 0x00355C59
+	// Token: 0x1700125B RID: 4699
+	// (get) Token: 0x0600B7D8 RID: 47064 RVA: 0x003634C9 File Offset: 0x003616C9
 	public int TreeConfigId
 	{
 		get
@@ -49,8 +49,8 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x17001232 RID: 4658
-	// (get) Token: 0x0600E3BC RID: 58300 RVA: 0x00357A66 File Offset: 0x00355C66
+	// Token: 0x1700125C RID: 4700
+	// (get) Token: 0x0600B7D9 RID: 47065 RVA: 0x003634D6 File Offset: 0x003616D6
 	public int DungeonId
 	{
 		get
@@ -59,8 +59,8 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x17001233 RID: 4659
-	// (get) Token: 0x0600E3BD RID: 58301 RVA: 0x00357A73 File Offset: 0x00355C73
+	// Token: 0x1700125D RID: 4701
+	// (get) Token: 0x0600B7DA RID: 47066 RVA: 0x003634E3 File Offset: 0x003616E3
 	public int FailNodeId
 	{
 		get
@@ -69,13 +69,13 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3BE RID: 58302 RVA: 0x00357A7B File Offset: 0x00355C7B
+	// Token: 0x0600B7DB RID: 47067 RVA: 0x003634EB File Offset: 0x003616EB
 	public void ClearFailNodeId()
 	{
 		this.InnerFailNodeId = 0;
 	}
 
-	// Token: 0x0600E3BF RID: 58303 RVA: 0x00357A84 File Offset: 0x00355C84
+	// Token: 0x0600B7DC RID: 47068 RVA: 0x003634F4 File Offset: 0x003616F4
 	public BaseBehaviorTree(long id, int configId, BtType btType, int dungeonId, int taskMarkTableId, string onlineType, int showPriority, bool? bNewQuest = null, bool? bDisableExpression = null)
 	{
 		this.BlackBoard.Init(btType, id, configId, dungeonId, taskMarkTableId, onlineType, showPriority, bDisableExpression.GetValueOrDefault());
@@ -85,7 +85,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3C0 RID: 58304 RVA: 0x00357AF0 File Offset: 0x00355CF0
+	// Token: 0x0600B7DD RID: 47069 RVA: 0x00363560 File Offset: 0x00361760
 	public void InitTree(TreeInfo treeInfo, bool bSleep = false)
 	{
 		this.InitComponents();
@@ -94,10 +94,15 @@ public class BaseBehaviorTree
 		this.OnAddEvent();
 	}
 
-	// Token: 0x0600E3C1 RID: 58305 RVA: 0x00357B0C File Offset: 0x00355D0C
+	// Token: 0x0600B7DE RID: 47070 RVA: 0x0036357C File Offset: 0x0036177C
 	public void Destroy()
 	{
 		this.OnRemoveEvent();
+		ForceClosedRestrictionComponentHolder forceClosedRestrictionHolder = this.ForceClosedRestrictionHolder;
+		if (forceClosedRestrictionHolder != null)
+		{
+			forceClosedRestrictionHolder.Destroy();
+		}
 		this.BlackBoard.Dispose();
 		BehaviorTreeExpressionComponent expression = this.Expression;
 		if (expression != null)
@@ -122,7 +127,7 @@ public class BaseBehaviorTree
 		bindingExpressionHolder.Destroy();
 	}
 
-	// Token: 0x0600E3C2 RID: 58306 RVA: 0x00357B70 File Offset: 0x00355D70
+	// Token: 0x0600B7DF RID: 47071 RVA: 0x003635F0 File Offset: 0x003617F0
 	[return: Nullable(2)]
 	protected BehaviorNodeBase CreateNode(ENodeStatusUpdateReason reason, global::NodeInfo data)
 	{
@@ -153,21 +158,28 @@ public class BaseBehaviorTree
 		this.BlackBoard.AddNode(data.NodeId, behaviorNodeBase);
 		this.BlackBoard.AddNodeToStatusGroup(behaviorNodeBase, data.Info.Status);
 		behaviorNodeBase.Init(this.BlackBoard, reason, data, nodeConfig, this.BtType);
+		ForceClosedRestrictionComponentHolder forceClosedRestrictionHolder = this.ForceClosedRestrictionHolder;
+		if (forceClosedRestrictionHolder != null)
+		{
+			forceClosedRestrictionHolder.RefreshNode();
+		}
 		return behaviorNodeBase;
 	}
 
-	// Token: 0x0600E3C3 RID: 58307 RVA: 0x00357C0E File Offset: 0x00355E0E
+	// Token: 0x0600B7E0 RID: 47072 RVA: 0x0036369F File Offset: 0x0036189F
 	private void AddToPendingProcessList(BehaviorTreePendingProcess data)
 	{
 		this.PendingProcess.Push(data);
 	}
 
-	// Token: 0x0600E3C4 RID: 58308 RVA: 0x00357C1C File Offset: 0x00355E1C
+	// Token: 0x0600B7E1 RID: 47073 RVA: 0x003636B0 File Offset: 0x003618B0
 	private void InitComponents()
 	{
 		this.FlowInfo = new DynamicFlowInfo();
 		this.TimerCenter = new BehaviorTreeTimerCenter(this.TreeIncId, this.BlackBoard);
 		this.Suspend = new BehaviorTreeSuspendComponent(this.TreeIncId, this.BlackBoard);
+		this.ForceClosedRestrictionHolder = new ForceClosedRestrictionComponentHolder(this.BlackBoard);
+		this.ForceClosedRestrictionHolder.Init();
 		if (!this.BlackBoard.NoExpression)
 		{
 			this.Expression = new BehaviorTreeExpressionComponent(this.BlackBoard);
@@ -177,7 +189,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3C5 RID: 58309 RVA: 0x00357CA8 File Offset: 0x00355EA8
+	// Token: 0x0600B7E2 RID: 47074 RVA: 0x00363758 File Offset: 0x00361958
 	[NullableContext(2)]
 	public void Recover(TreeInfo treeInfo)
 	{
@@ -192,7 +204,7 @@ public class BaseBehaviorTree
 		PerformController.Instance.RecoverTreeInfo(treeInfo.CharacterLookAtInfos);
 	}
 
-	// Token: 0x0600E3C6 RID: 58310 RVA: 0x00357D08 File Offset: 0x00355F08
+	// Token: 0x0600B7E3 RID: 47075 RVA: 0x003637B8 File Offset: 0x003619B8
 	private void RecoverNodes(IDictionary<int, Aki.Protocol.NodeInfo> nodes)
 	{
 		foreach (int num in nodes.Keys)
@@ -218,7 +230,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3C7 RID: 58311 RVA: 0x00357DB4 File Offset: 0x00355FB4
+	// Token: 0x0600B7E4 RID: 47076 RVA: 0x00363864 File Offset: 0x00361A64
 	private void RecoverTimers(IList<TimerInfoPb> timerInfos)
 	{
 		foreach (TimerInfoPb timerInfo in timerInfos)
@@ -227,7 +239,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3C8 RID: 58312 RVA: 0x00357DFC File Offset: 0x00355FFC
+	// Token: 0x0600B7E5 RID: 47077 RVA: 0x003638AC File Offset: 0x00361AAC
 	private void RecoverVars(IDictionary<string, VarDefinePb> vars)
 	{
 		foreach (string text in vars.Keys)
@@ -237,13 +249,13 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3C9 RID: 58313 RVA: 0x00357E58 File Offset: 0x00356058
+	// Token: 0x0600B7E6 RID: 47078 RVA: 0x00363908 File Offset: 0x00361B08
 	private void OnAddEvent()
 	{
 		EventSystem.Instance.AddWithTarget(this.BlackBoard, EEventName.GeneralLogicTreeRollbackWaitingUpdate, new Action(this.OnGeneralLogicTreeRollbackWaitingUpdate));
 	}
 
-	// Token: 0x0600E3CA RID: 58314 RVA: 0x00357E7C File Offset: 0x0035607C
+	// Token: 0x0600B7E7 RID: 47079 RVA: 0x0036392C File Offset: 0x00361B2C
 	private void OnRemoveEvent()
 	{
 		if (EventSystem.Instance.Has<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(EEventName.OnTeamLivingStateChange, new Action<bool, ETeamGroupType, ETeamLivingState, ETeamLivingState>(this.OnTeamLivingStateChange)))
@@ -256,7 +268,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3CB RID: 58315 RVA: 0x00357F08 File Offset: 0x00356108
+	// Token: 0x0600B7E8 RID: 47080 RVA: 0x003639B8 File Offset: 0x00361BB8
 	public void SetSleep(bool value)
 	{
 		this.BlackBoard.IsSleeping = value;
@@ -342,7 +354,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3CC RID: 58316 RVA: 0x003580D8 File Offset: 0x003562D8
+	// Token: 0x0600B7E9 RID: 47081 RVA: 0x00363B88 File Offset: 0x00361D88
 	public void UpdateNodeState(ENodeStatusUpdateReason reason, int nodeId, NodeStatus nodeStatus)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -357,24 +369,30 @@ public class BaseBehaviorTree
 			return;
 		}
 		BehaviorNodeBase node = this.GetNode(nodeId);
-		if (node != null)
+		if (node == null)
 		{
-			this.BlackBoard.UpdateNodeInStatusGroup(node, node.Status, nodeStatus);
-			node.UpdateStatus(reason, nodeStatus);
+			global::NodeInfo data2 = new global::NodeInfo
+			{
+				NodeId = nodeId,
+				Info = new Aki.Protocol.NodeInfo
+				{
+					Status = nodeStatus
+				}
+			};
+			this.CreateNode(reason, data2);
 			return;
 		}
-		global::NodeInfo data2 = new global::NodeInfo
+		this.BlackBoard.UpdateNodeInStatusGroup(node, node.Status, nodeStatus);
+		node.UpdateStatus(reason, nodeStatus);
+		ForceClosedRestrictionComponentHolder forceClosedRestrictionHolder = this.ForceClosedRestrictionHolder;
+		if (forceClosedRestrictionHolder == null)
 		{
-			NodeId = nodeId,
-			Info = new Aki.Protocol.NodeInfo
-			{
-				Status = nodeStatus
-			}
-		};
-		this.CreateNode(reason, data2);
+			return;
+		}
+		forceClosedRestrictionHolder.RefreshNode();
 	}
 
-	// Token: 0x0600E3CD RID: 58317 RVA: 0x00358164 File Offset: 0x00356364
+	// Token: 0x0600B7EA RID: 47082 RVA: 0x00363C24 File Offset: 0x00361E24
 	[NullableContext(2)]
 	public void UpdateNodeProgress(int nodeId, ChildQuestNodeProgress data)
 	{
@@ -400,7 +418,7 @@ public class BaseBehaviorTree
 		node.UpdateProgress(data);
 	}
 
-	// Token: 0x0600E3CE RID: 58318 RVA: 0x003581B4 File Offset: 0x003563B4
+	// Token: 0x0600B7EB RID: 47083 RVA: 0x00363C74 File Offset: 0x00361E74
 	public void UpdateChildQuestNodeState(int nodeId, ChildQuestNodeStatus nodeStatus, ENodeStatusUpdateReason reason)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -422,14 +440,14 @@ public class BaseBehaviorTree
 		childQuestNodeBase.UpdateChildQuestStatus(nodeStatus, reason);
 	}
 
-	// Token: 0x0600E3CF RID: 58319 RVA: 0x0035820A File Offset: 0x0035640A
+	// Token: 0x0600B7EC RID: 47084 RVA: 0x00363CCA File Offset: 0x00361ECA
 	[NullableContext(2)]
 	public BehaviorNodeBase GetNode(int nodeId)
 	{
 		return this.BlackBoard.GetNode(new int?(nodeId));
 	}
 
-	// Token: 0x0600E3D0 RID: 58320 RVA: 0x0035821D File Offset: 0x0035641D
+	// Token: 0x0600B7ED RID: 47085 RVA: 0x00363CDD File Offset: 0x00361EDD
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -440,26 +458,26 @@ public class BaseBehaviorTree
 		return this.BlackBoard.GetNodesByGroupId(group);
 	}
 
-	// Token: 0x0600E3D1 RID: 58321 RVA: 0x0035822B File Offset: 0x0035642B
+	// Token: 0x0600B7EE RID: 47086 RVA: 0x00363CEB File Offset: 0x00361EEB
 	[return: Nullable(2)]
 	public VarDefinePb GetTreeVarByKey(string key)
 	{
 		return this.BlackBoard.GetTreeVar(key);
 	}
 
-	// Token: 0x0600E3D2 RID: 58322 RVA: 0x00358239 File Offset: 0x00356439
+	// Token: 0x0600B7EF RID: 47087 RVA: 0x00363CF9 File Offset: 0x00361EF9
 	public void AddTreeVarUpdateDelegate(string key, TTreeVarUpdateDelegate delegat)
 	{
 		this.BlackBoard.AddTreeVarUpdateDelegate(key, delegat);
 	}
 
-	// Token: 0x0600E3D3 RID: 58323 RVA: 0x00358248 File Offset: 0x00356448
+	// Token: 0x0600B7F0 RID: 47088 RVA: 0x00363D08 File Offset: 0x00361F08
 	public void RemoveTreeVarUpdateDelegate(string key, TTreeVarUpdateDelegate @delegate)
 	{
 		this.BlackBoard.RemoveTreeVarUpdateDelegate(key, @delegate);
 	}
 
-	// Token: 0x0600E3D4 RID: 58324 RVA: 0x00358258 File Offset: 0x00356458
+	// Token: 0x0600B7F1 RID: 47089 RVA: 0x00363D18 File Offset: 0x00361F18
 	public bool CheckCanGiveUp()
 	{
 		if (!CreatureModel.Instance.IsMyWorld())
@@ -492,7 +510,7 @@ public class BaseBehaviorTree
 		return result;
 	}
 
-	// Token: 0x0600E3D5 RID: 58325 RVA: 0x00358304 File Offset: 0x00356504
+	// Token: 0x0600B7F2 RID: 47090 RVA: 0x00363DC4 File Offset: 0x00361FC4
 	[NullableContext(2)]
 	public QuestFailedBehaviorNode GetProcessingCanGiveupFailedNode()
 	{
@@ -514,7 +532,7 @@ public class BaseBehaviorTree
 		return result;
 	}
 
-	// Token: 0x0600E3D6 RID: 58326 RVA: 0x0035837C File Offset: 0x0035657C
+	// Token: 0x0600B7F3 RID: 47091 RVA: 0x00363E3C File Offset: 0x0036203C
 	[NullableContext(2)]
 	public QuestFailedBehaviorNode GetProcessingFailedNode()
 	{
@@ -535,21 +553,21 @@ public class BaseBehaviorTree
 		return result;
 	}
 
-	// Token: 0x0600E3D7 RID: 58327 RVA: 0x003583EC File Offset: 0x003565EC
+	// Token: 0x0600B7F4 RID: 47092 RVA: 0x00363EAC File Offset: 0x003620AC
 	[NullableContext(2)]
 	public BehaviorNodeBase GetCurrentActiveChildQuestNode(bool bIgnoreNoTrackExpression = true)
 	{
 		return this.BlackBoard.GetCurrentActiveChildQuestNode(bIgnoreNoTrackExpression);
 	}
 
-	// Token: 0x0600E3D8 RID: 58328 RVA: 0x003583FA File Offset: 0x003565FA
+	// Token: 0x0600B7F5 RID: 47093 RVA: 0x00363EBA File Offset: 0x003620BA
 	[NullableContext(2)]
 	public List<int> GetActiveChildQuestNodesId()
 	{
 		return this.BlackBoard.GetActiveChildQuestNodesId();
 	}
 
-	// Token: 0x0600E3D9 RID: 58329 RVA: 0x00358407 File Offset: 0x00356607
+	// Token: 0x0600B7F6 RID: 47094 RVA: 0x00363EC7 File Offset: 0x003620C7
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -560,7 +578,7 @@ public class BaseBehaviorTree
 		return this.BlackBoard.GetActiveChildQuestNodes();
 	}
 
-	// Token: 0x0600E3DA RID: 58330 RVA: 0x00358414 File Offset: 0x00356614
+	// Token: 0x0600B7F7 RID: 47095 RVA: 0x00363ED4 File Offset: 0x003620D4
 	public List<BehaviorNodeBase> GetCurrentActiveLogicNodes()
 	{
 		Dictionary<int, BehaviorNodeBase> nodesByGroupId = this.BlackBoard.GetNodesByGroupId(ENodeGroup.IsProcessing);
@@ -579,7 +597,7 @@ public class BaseBehaviorTree
 		return list;
 	}
 
-	// Token: 0x0600E3DB RID: 58331 RVA: 0x003584AC File Offset: 0x003566AC
+	// Token: 0x0600B7F8 RID: 47096 RVA: 0x00363F6C File Offset: 0x0036216C
 	[NullableContext(2)]
 	public IReadOnlyList<int> GetCurrentCorrelativeEntities()
 	{
@@ -607,25 +625,25 @@ public class BaseBehaviorTree
 		return this.CurrentCorrelativeEntities;
 	}
 
-	// Token: 0x0600E3DC RID: 58332 RVA: 0x00358544 File Offset: 0x00356744
+	// Token: 0x0600B7F9 RID: 47097 RVA: 0x00364004 File Offset: 0x00362204
 	public bool ContainTag(EBehaviorTreeTag tag)
 	{
 		return this.BlackBoard.ContainTag(tag);
 	}
 
-	// Token: 0x0600E3DD RID: 58333 RVA: 0x00358552 File Offset: 0x00356752
+	// Token: 0x0600B7FA RID: 47098 RVA: 0x00364012 File Offset: 0x00362212
 	public Blackboard GetBlackBoard()
 	{
 		return this.BlackBoard;
 	}
 
-	// Token: 0x0600E3DE RID: 58334 RVA: 0x0035855A File Offset: 0x0035675A
+	// Token: 0x0600B7FB RID: 47099 RVA: 0x0036401A File Offset: 0x0036221A
 	public void AddDynamicFlowNpc(int npcPbDataId)
 	{
 		this.FlowInfo.AddDynamicFlowNpc(npcPbDataId);
 	}
 
-	// Token: 0x0600E3DF RID: 58335 RVA: 0x00358568 File Offset: 0x00356768
+	// Token: 0x0600B7FC RID: 47100 RVA: 0x00364028 File Offset: 0x00362228
 	public void PrepareRollback(FailReason? reason = null, int? failNodeId = null)
 	{
 		this.SetRollbackWaiting(true);
@@ -644,7 +662,7 @@ public class BaseBehaviorTree
 		this.TryRollback(reason);
 	}
 
-	// Token: 0x0600E3E0 RID: 58336 RVA: 0x0035861C File Offset: 0x0035681C
+	// Token: 0x0600B7FD RID: 47101 RVA: 0x003640DC File Offset: 0x003622DC
 	public void StopCurrentActions()
 	{
 		foreach (int sessionId in this.BlackBoard.GetCurrentExecuteActions())
@@ -653,29 +671,27 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3E1 RID: 58337 RVA: 0x00358674 File Offset: 0x00356874
+	// Token: 0x0600B7FE RID: 47102 RVA: 0x00364134 File Offset: 0x00362334
 	public unsafe void ExecuteTreeGuaranteeActions(ETreeRemoveReason removeReason = ETreeRemoveReason.TreeDestroy)
 	{
-		List<GuaranteeActionInfo> guaranteeActions = this.BlackBoard.GetGuaranteeActions();
+		List<GuaranteeActionInfo> guaranteeActions = this.BlackBoard.GetGuaranteeActions(true);
 		if (guaranteeActions.Count == 0)
 		{
 			return;
 		}
-		List<GuaranteeActionInfo> list = new List<GuaranteeActionInfo>(guaranteeActions);
-		list.Reverse();
 		GuaranteeContext context = (removeReason == ETreeRemoveReason.TreeRollback) ? GuaranteeContext.Create(null, EGuaranteeReason.TreeRollback) : GuaranteeContext.Create(null, EGuaranteeReason.TreeDestroy);
-		GuaranteeController.Instance.ExecuteActions(list, context);
+		GuaranteeController.Instance.ExecuteActions(guaranteeActions, context);
 		global::Log instance = global::Log.Instance;
 		ELogModule module = ELogModule.LevelEvent;
 		ELogAuthor author = ELogAuthor.ZYL;
 		string message = "树保底行为已全部完成";
 		<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("treeIncId", this.BlackBoard.TreeConfigId);
-		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("保底行为列表", list);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("保底行为列表", guaranteeActions);
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0600E3E2 RID: 58338 RVA: 0x00358738 File Offset: 0x00356938
+	// Token: 0x0600B7FF RID: 47103 RVA: 0x003641EA File Offset: 0x003623EA
 	private void OnTeamLivingStateChange(bool isMyTeam, ETeamGroupType groupType, ETeamLivingState state, ETeamLivingState oldState)
 	{
 		if (isMyTeam && groupType == ETeamGroupType.Battle && state == ETeamLivingState.Alive)
@@ -685,13 +701,13 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3E3 RID: 58339 RVA: 0x00358770 File Offset: 0x00356970
+	// Token: 0x0600B800 RID: 47104 RVA: 0x00364220 File Offset: 0x00362420
 	private void OnGeneralLogicTreeRollbackWaitingUpdate()
 	{
 		this.TryRollback(null);
 	}
 
-	// Token: 0x0600E3E4 RID: 58340 RVA: 0x0035878C File Offset: 0x0035698C
+	// Token: 0x0600B801 RID: 47105 RVA: 0x0036423C File Offset: 0x0036243C
 	private void TryRollback(FailReason? reason = null)
 	{
 		if (this.BlackBoard.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -700,7 +716,7 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3E5 RID: 58341 RVA: 0x003587B0 File Offset: 0x003569B0
+	// Token: 0x0600B802 RID: 47106 RVA: 0x00364260 File Offset: 0x00362460
 	public void SetRollbackWaiting(bool value)
 	{
 		if (value && !this.BlackBoard.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -714,13 +730,13 @@ public class BaseBehaviorTree
 		}
 	}
 
-	// Token: 0x0600E3E6 RID: 58342 RVA: 0x00358802 File Offset: 0x00356A02
+	// Token: 0x0600B803 RID: 47107 RVA: 0x003642B2 File Offset: 0x003624B2
 	public bool IsTracking()
 	{
 		return this.BlackBoard.IsTracking;
 	}
 
-	// Token: 0x0600E3E7 RID: 58343 RVA: 0x00358810 File Offset: 0x00356A10
+	// Token: 0x0600B804 RID: 47108 RVA: 0x003642C0 File Offset: 0x003624C0
 	public unsafe void SetTrack(bool value, ESetTrackReason reason = ESetTrackReason.None)
 	{
 		if (value && this.BlackBoard.IsSuspend())
@@ -772,25 +788,25 @@ public class BaseBehaviorTree
 		EventSystem.Instance.Emit<BtType, long?>(EEventName.OnLogicTreeTrackUpdate, this.BtType, new long?(this.TreeIncId));
 	}
 
-	// Token: 0x0600E3E8 RID: 58344 RVA: 0x00358987 File Offset: 0x00356B87
+	// Token: 0x0600B805 RID: 47109 RVA: 0x00364437 File Offset: 0x00362637
 	public void SetMapMarkResident(bool bResident)
 	{
 		this.BlackBoard.SetMapMarkResident(bResident);
 	}
 
-	// Token: 0x0600E3E9 RID: 58345 RVA: 0x00358995 File Offset: 0x00356B95
+	// Token: 0x0600B806 RID: 47110 RVA: 0x00364445 File Offset: 0x00362645
 	public bool GetMapMarkResident()
 	{
 		return this.BlackBoard.GetMapMarkResident();
 	}
 
-	// Token: 0x0600E3EA RID: 58346 RVA: 0x003589A2 File Offset: 0x00356BA2
+	// Token: 0x0600B807 RID: 47111 RVA: 0x00364452 File Offset: 0x00362652
 	public void SetUseInnerTrackIconId(bool bUseInner)
 	{
 		this.BlackBoard.SetUseInnerTrackIconId(bUseInner);
 	}
 
-	// Token: 0x0600E3EB RID: 58347 RVA: 0x003589B0 File Offset: 0x00356BB0
+	// Token: 0x0600B808 RID: 47112 RVA: 0x00364460 File Offset: 0x00362660
 	public void StartTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
@@ -801,7 +817,7 @@ public class BaseBehaviorTree
 		expression.StartTextExpress(reason);
 	}
 
-	// Token: 0x0600E3EC RID: 58348 RVA: 0x003589C3 File Offset: 0x00356BC3
+	// Token: 0x0600B809 RID: 47113 RVA: 0x00364473 File Offset: 0x00362673
 	public void EndTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
@@ -812,41 +828,41 @@ public class BaseBehaviorTree
 		expression.EndTextExpress(reason);
 	}
 
-	// Token: 0x0600E3ED RID: 58349 RVA: 0x003589D6 File Offset: 0x00356BD6
+	// Token: 0x0600B80A RID: 47114 RVA: 0x00364486 File Offset: 0x00362686
 	[NullableContext(2)]
 	public SilentAreaShowInfo GetSilentAreaShowInfo()
 	{
 		return this.BlackBoard.GetSilentAreaShowInfo();
 	}
 
-	// Token: 0x0600E3EE RID: 58350 RVA: 0x003589E3 File Offset: 0x00356BE3
+	// Token: 0x0600B80B RID: 47115 RVA: 0x00364493 File Offset: 0x00362693
 	[NullableContext(2)]
 	public ModifyTrackAreaConfig GetModifyTrackAreaConfig()
 	{
 		return this.BlackBoard.GetModifyTrackAreaConfig();
 	}
 
-	// Token: 0x0600E3EF RID: 58351 RVA: 0x003589F0 File Offset: 0x00356BF0
+	// Token: 0x0600B80C RID: 47116 RVA: 0x003644A0 File Offset: 0x003626A0
 	public int GetTrackIconId()
 	{
 		return this.BlackBoard.TaskMarkTableId;
 	}
 
-	// Token: 0x0600E3F0 RID: 58352 RVA: 0x003589FD File Offset: 0x00356BFD
+	// Token: 0x0600B80D RID: 47117 RVA: 0x003644AD File Offset: 0x003626AD
 	public bool CheckCanShow()
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
 		return expression != null && expression.CheckCanShow(null);
 	}
 
-	// Token: 0x0600E3F1 RID: 58353 RVA: 0x00358A11 File Offset: 0x00356C11
+	// Token: 0x0600B80E RID: 47118 RVA: 0x003644C1 File Offset: 0x003626C1
 	public bool CanShowTrackExpression()
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
 		return expression != null && expression.CheckCanShowTrackExpression();
 	}
 
-	// Token: 0x0600E3F2 RID: 58354 RVA: 0x00358A24 File Offset: 0x00356C24
+	// Token: 0x0600B80F RID: 47119 RVA: 0x003644D4 File Offset: 0x003626D4
 	[NullableContext(2)]
 	public global::Vector GetNodeTrackPosition(int nodeId)
 	{
@@ -863,7 +879,7 @@ public class BaseBehaviorTree
 		return expression.GetNodeTrackPosition(nodeId);
 	}
 
-	// Token: 0x0600E3F3 RID: 58355 RVA: 0x00358A58 File Offset: 0x00356C58
+	// Token: 0x0600B810 RID: 47120 RVA: 0x00364508 File Offset: 0x00362708
 	public int GetClosestMapMarkId()
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
@@ -874,7 +890,7 @@ public class BaseBehaviorTree
 		return expression.GetClosestMapMarkId();
 	}
 
-	// Token: 0x0600E3F4 RID: 58356 RVA: 0x00358A6C File Offset: 0x00356C6C
+	// Token: 0x0600B811 RID: 47121 RVA: 0x0036451C File Offset: 0x0036271C
 	public int? GetTrackAreaInfo(int nodeId)
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
@@ -885,7 +901,7 @@ public class BaseBehaviorTree
 		return expression.GetTrackAreaInfo(nodeId);
 	}
 
-	// Token: 0x0600E3F5 RID: 58357 RVA: 0x00358A93 File Offset: 0x00356C93
+	// Token: 0x0600B812 RID: 47122 RVA: 0x00364543 File Offset: 0x00362743
 	public double GetTrackDistance(int nodeId)
 	{
 		BindingExpressionComponentHolder bindingExpressionHolder = this.BindingExpressionHolder;
@@ -901,7 +917,7 @@ public class BaseBehaviorTree
 		return expression.GetTrackDistance(nodeId);
 	}
 
-	// Token: 0x0600E3F6 RID: 58358 RVA: 0x00358AD0 File Offset: 0x00356CD0
+	// Token: 0x0600B813 RID: 47123 RVA: 0x00364580 File Offset: 0x00362780
 	public int? GetDefaultMark(int nodeId)
 	{
 		BindingExpressionComponentHolder bindingExpressionHolder = this.BindingExpressionHolder;
@@ -917,19 +933,19 @@ public class BaseBehaviorTree
 		return expression.GetDefaultMark(nodeId);
 	}
 
-	// Token: 0x0600E3F7 RID: 58359 RVA: 0x00358B1C File Offset: 0x00356D1C
+	// Token: 0x0600B814 RID: 47124 RVA: 0x003645CC File Offset: 0x003627CC
 	public bool IsInTrackRange()
 	{
 		return this.BlackBoard.ContainTag(EBehaviorTreeTag.InTrackRange);
 	}
 
-	// Token: 0x0600E3F8 RID: 58360 RVA: 0x00358B2B File Offset: 0x00356D2B
+	// Token: 0x0600B815 RID: 47125 RVA: 0x003645DB File Offset: 0x003627DB
 	public bool IsRangeTrack(int nodeId)
 	{
 		return this.GetRangeMarkSize(nodeId) != 0.0;
 	}
 
-	// Token: 0x0600E3F9 RID: 58361 RVA: 0x00358B42 File Offset: 0x00356D42
+	// Token: 0x0600B816 RID: 47126 RVA: 0x003645F2 File Offset: 0x003627F2
 	public double GetRangeMarkSize(int nodeId)
 	{
 		BindingExpressionComponentHolder bindingExpressionHolder = this.BindingExpressionHolder;
@@ -945,7 +961,7 @@ public class BaseBehaviorTree
 		return expression.GetRangeMarkSize(nodeId);
 	}
 
-	// Token: 0x0600E3FA RID: 58362 RVA: 0x00358B80 File Offset: 0x00356D80
+	// Token: 0x0600B817 RID: 47127 RVA: 0x00364630 File Offset: 0x00362830
 	public double GetRangeMarkShowDis(int nodeId)
 	{
 		BindingExpressionComponentHolder bindingExpressionHolder = this.BindingExpressionHolder;
@@ -957,7 +973,7 @@ public class BaseBehaviorTree
 		return ((expression != null) ? expression.GetRangeMarkShowDis(nodeId) : null).GetValueOrDefault();
 	}
 
-	// Token: 0x0600E3FB RID: 58363 RVA: 0x00358BD0 File Offset: 0x00356DD0
+	// Token: 0x0600B818 RID: 47128 RVA: 0x00364680 File Offset: 0x00362880
 	public double GetGuideLineHideDistance(int nodeId)
 	{
 		if (!this.IsInTrackRange())
@@ -967,7 +983,7 @@ public class BaseBehaviorTree
 		return this.GetRangeMarkSize(nodeId);
 	}
 
-	// Token: 0x0600E3FC RID: 58364 RVA: 0x00358BEC File Offset: 0x00356DEC
+	// Token: 0x0600B819 RID: 47129 RVA: 0x0036469C File Offset: 0x0036289C
 	public EActiveNodeShortcutShow GetCurrentNodeShortcutShow()
 	{
 		if (this.BlackBoard.ContainTag(EBehaviorTreeTag.CanCommunicateAgain))
@@ -1014,7 +1030,7 @@ public class BaseBehaviorTree
 		return EActiveNodeShortcutShow.None;
 	}
 
-	// Token: 0x0600E3FD RID: 58365 RVA: 0x00358C98 File Offset: 0x00356E98
+	// Token: 0x0600B81A RID: 47130 RVA: 0x00364748 File Offset: 0x00362948
 	public string GetGiveUpText()
 	{
 		QuestFailedBehaviorNode processingCanGiveupFailedNode = this.GetProcessingCanGiveupFailedNode();
@@ -1025,7 +1041,7 @@ public class BaseBehaviorTree
 		return PublicUtil.Instance.GetConfigTextByKey(processingCanGiveupFailedNode.GiveUpText);
 	}
 
-	// Token: 0x0600E3FE RID: 58366 RVA: 0x00358CD2 File Offset: 0x00356ED2
+	// Token: 0x0600B81B RID: 47131 RVA: 0x00364782 File Offset: 0x00362982
 	public void CreateMapMarks()
 	{
 		BehaviorTreeExpressionComponent expression = this.Expression;
@@ -1036,7 +1052,7 @@ public class BaseBehaviorTree
 		expression.CreateMapMarks();
 	}
 
-	// Token: 0x0600E3FF RID: 58367 RVA: 0x00358CE4 File Offset: 0x00356EE4
+	// Token: 0x0600B81C RID: 47132 RVA: 0x00364794 File Offset: 0x00362994
 	[NullableContext(2)]
 	public ITrackCustomBoard GetCurrentNodeCustomTrackBoard()
 	{
@@ -1063,7 +1079,7 @@ public class BaseBehaviorTree
 		return trackCustomBoard;
 	}
 
-	// Token: 0x0600E400 RID: 58368 RVA: 0x00358D8C File Offset: 0x00356F8C
+	// Token: 0x0600B81D RID: 47133 RVA: 0x0036483C File Offset: 0x00362A3C
 	public ECustomTrackBoardPriority GetNodeCustomTrackBoardPriority(BehaviorNodeBase node)
 	{
 		if (node.NodeType != EBtNode.ChildQuest)
@@ -1103,7 +1119,7 @@ public class BaseBehaviorTree
 		return ECustomTrackBoardPriority.Default;
 	}
 
-	// Token: 0x0600E401 RID: 58369 RVA: 0x00358E20 File Offset: 0x00357020
+	// Token: 0x0600B81E RID: 47134 RVA: 0x003648D0 File Offset: 0x00362AD0
 	public unsafe void DoAction(GameCtxPb context, int nodeId, int playerId, int sessionId, int startIndex, int endIndex, bool needFinishReq)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -1301,7 +1317,7 @@ public class BaseBehaviorTree
 		});
 	}
 
-	// Token: 0x0600E402 RID: 58370 RVA: 0x003592EC File Offset: 0x003574EC
+	// Token: 0x0600B81F RID: 47135 RVA: 0x00364D9C File Offset: 0x00362F9C
 	public void UpdateTimer(TimerInfoPb timerInfo)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -1317,7 +1333,7 @@ public class BaseBehaviorTree
 		EventSystem.Instance.Emit<long>(EEventName.OnGeneralLogicTreeTimerUpdate, this.TreeIncId);
 	}
 
-	// Token: 0x0600E403 RID: 58371 RVA: 0x00359340 File Offset: 0x00357540
+	// Token: 0x0600B820 RID: 47136 RVA: 0x00364DF0 File Offset: 0x00362FF0
 	public double GetChallengeRemainTime(ETimerType? timerType = null)
 	{
 		ETimerType value = timerType.GetValueOrDefault();
@@ -1329,7 +1345,7 @@ public class BaseBehaviorTree
 		return this.TimerCenter.GetRemainTime(timerType);
 	}
 
-	// Token: 0x0600E404 RID: 58372 RVA: 0x00359374 File Offset: 0x00357574
+	// Token: 0x0600B821 RID: 47137 RVA: 0x00364E24 File Offset: 0x00363024
 	public bool HasRunningTimers([Nullable(new byte[]
 	{
 		2,
@@ -1343,7 +1359,7 @@ public class BaseBehaviorTree
 		return this.TimerCenter.HasRunningTimers(includes, excludes);
 	}
 
-	// Token: 0x0600E405 RID: 58373 RVA: 0x00359384 File Offset: 0x00357584
+	// Token: 0x0600B822 RID: 47138 RVA: 0x00364E34 File Offset: 0x00363034
 	public void UpdateTreeVars(BtVarUpdateNotify notify)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -1359,32 +1375,32 @@ public class BaseBehaviorTree
 		EventSystem.Instance.Emit<long>(EEventName.GeneralLogicTreeViewForceRefresh, this.TreeIncId);
 	}
 
-	// Token: 0x0600E406 RID: 58374 RVA: 0x003593E0 File Offset: 0x003575E0
+	// Token: 0x0600B823 RID: 47139 RVA: 0x00364E90 File Offset: 0x00363090
 	public bool IsSuspend()
 	{
 		return this.BlackBoard.IsSuspend();
 	}
 
-	// Token: 0x0600E407 RID: 58375 RVA: 0x003593ED File Offset: 0x003575ED
+	// Token: 0x0600B824 RID: 47140 RVA: 0x00364E9D File Offset: 0x0036309D
 	public EBehaviorTreeSuspendType GetSuspendType()
 	{
 		return this.Suspend.GetSuspendType();
 	}
 
-	// Token: 0x0600E408 RID: 58376 RVA: 0x003593FA File Offset: 0x003575FA
+	// Token: 0x0600B825 RID: 47141 RVA: 0x00364EAA File Offset: 0x003630AA
 	[NullableContext(2)]
 	public string GetSuspendText()
 	{
 		return this.Suspend.GetSuspendText();
 	}
 
-	// Token: 0x0600E409 RID: 58377 RVA: 0x00359407 File Offset: 0x00357607
+	// Token: 0x0600B826 RID: 47142 RVA: 0x00364EB7 File Offset: 0x003630B7
 	public IReadOnlyList<IOccupationInfo> GetOccupations()
 	{
 		return this.Suspend.GetOccupations();
 	}
 
-	// Token: 0x0600E40A RID: 58378 RVA: 0x00359414 File Offset: 0x00357614
+	// Token: 0x0600B827 RID: 47143 RVA: 0x00364EC4 File Offset: 0x003630C4
 	public void UpdateOccupations(int suspendNodeId, int suspendType, IReadOnlyList<OccupationPbInfo> occupationInfo)
 	{
 		if (this.BlackBoard.IsSleeping)
@@ -1399,85 +1415,109 @@ public class BaseBehaviorTree
 			return;
 		}
 		this.Suspend.UpdateOccupations(suspendNodeId, suspendType, occupationInfo);
+		if (suspendType == 0)
+		{
+			ForceClosedRestrictionComponentHolder forceClosedRestrictionHolder = this.ForceClosedRestrictionHolder;
+			if (forceClosedRestrictionHolder == null)
+			{
+				return;
+			}
+			forceClosedRestrictionHolder.OnCancelSuspend();
+			return;
+		}
+		else
+		{
+			ForceClosedRestrictionComponentHolder forceClosedRestrictionHolder2 = this.ForceClosedRestrictionHolder;
+			if (forceClosedRestrictionHolder2 == null)
+			{
+				return;
+			}
+			forceClosedRestrictionHolder2.OnSuspend();
+			return;
+		}
 	}
 
-	// Token: 0x0600E40B RID: 58379 RVA: 0x0035945F File Offset: 0x0035765F
+	// Token: 0x0600B828 RID: 47144 RVA: 0x00364F33 File Offset: 0x00363133
 	public bool HasRefOccupiedEntity()
 	{
 		return this.BlackBoard.HasRefOccupiedEntity();
 	}
 
-	// Token: 0x0600E40C RID: 58380 RVA: 0x0035946C File Offset: 0x0035766C
+	// Token: 0x0600B829 RID: 47145 RVA: 0x00364F40 File Offset: 0x00363140
 	[NullableContext(2)]
 	public string GetRefOccupiedEntityText()
 	{
 		return this.BlackBoard.GetRefOccupiedEntityText();
 	}
 
-	// Token: 0x0600E40D RID: 58381 RVA: 0x00359479 File Offset: 0x00357679
+	// Token: 0x0600B82A RID: 47146 RVA: 0x00364F4D File Offset: 0x0036314D
 	[NullableContext(2)]
 	public IBtNode GetNodeConfig(int nodeId)
 	{
 		return this.BlackBoard.GetNodeConfig(nodeId);
 	}
 
-	// Token: 0x0600E40E RID: 58382 RVA: 0x00359487 File Offset: 0x00357687
+	// Token: 0x0600B82B RID: 47147 RVA: 0x00364F5B File Offset: 0x0036315B
 	public void AddGuaranteeActionInfo(string instigatorName, int nodeId, GuaranteeActionInfo targetActionInfo, EActionFilterMode compareMode)
 	{
 		this.BlackBoard.AddGuaranteeActionInfo(instigatorName, nodeId, targetActionInfo, compareMode);
 	}
 
-	// Token: 0x0600E40F RID: 58383 RVA: 0x00359499 File Offset: 0x00357699
+	// Token: 0x0600B82C RID: 47148 RVA: 0x00364F6D File Offset: 0x0036316D
 	[return: Nullable(2)]
 	public GuaranteeActionInfo PopGuaranteeActionInfo(string instigatorName, GuaranteeActionInfo targetActionInfo, EActionFilterMode compareMode = EActionFilterMode.SameAction)
 	{
 		return this.BlackBoard.PopGuaranteeActionInfo(instigatorName, targetActionInfo, compareMode);
 	}
 
-	// Token: 0x0600E410 RID: 58384 RVA: 0x003594A9 File Offset: 0x003576A9
+	// Token: 0x0600B82D RID: 47149 RVA: 0x00364F7D File Offset: 0x0036317D
 	public void ClearGuaranteeActions(int nodeId = 0)
 	{
 		this.BlackBoard.ClearGuaranteeActions(nodeId);
 	}
 
-	// Token: 0x0600E411 RID: 58385 RVA: 0x003594B7 File Offset: 0x003576B7
+	// Token: 0x0600B82E RID: 47150 RVA: 0x00364F8B File Offset: 0x0036318B
 	public int GetRollbackPoint()
 	{
 		return this.BlackBoard.RollbackPoint;
 	}
 
-	// Token: 0x0400691E RID: 26910
+	// Token: 0x040069FD RID: 27133
 	protected readonly Blackboard BlackBoard = new Blackboard();
 
-	// Token: 0x0400691F RID: 26911
+	// Token: 0x040069FE RID: 27134
 	[Nullable(2)]
 	protected DynamicFlowInfo FlowInfo;
 
-	// Token: 0x04006920 RID: 26912
+	// Token: 0x040069FF RID: 27135
 	[Nullable(2)]
 	public BehaviorTreeExpressionComponent Expression;
 
-	// Token: 0x04006921 RID: 26913
+	// Token: 0x04006A00 RID: 27136
 	[Nullable(2)]
 	public BindingExpressionComponentHolder BindingExpressionHolder;
 
-	// Token: 0x04006922 RID: 26914
+	// Token: 0x04006A01 RID: 27137
+	[Nullable(2)]
+	public ForceClosedRestrictionComponentHolder ForceClosedRestrictionHolder;
+
+	// Token: 0x04006A02 RID: 27138
 	[Nullable(2)]
 	protected BehaviorTreeTimerCenter TimerCenter;
 
-	// Token: 0x04006923 RID: 26915
+	// Token: 0x04006A03 RID: 27139
 	[Nullable(2)]
 	protected BehaviorTreeSuspendComponent Suspend;
 
-	// Token: 0x04006924 RID: 26916
+	// Token: 0x04006A04 RID: 27140
 	private readonly List<int> CurrentCorrelativeEntities = new List<int>();
 
-	// Token: 0x04006925 RID: 26917
+	// Token: 0x04006A05 RID: 27141
 	private readonly Queue<BehaviorTreePendingProcess> PendingProcess = new Queue<BehaviorTreePendingProcess>(4);
 
-	// Token: 0x04006926 RID: 26918
+	// Token: 0x04006A06 RID: 27142
 	protected int InnerFailNodeId;
 
-	// Token: 0x04006927 RID: 26919
+	// Token: 0x04006A07 RID: 27143
 	public bool IsPendingDestroy;
 }

@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D5F RID: 19807
+	// Token: 0x0200525B RID: 21083
 	public static class TVehicleConditionVerify
 	{
-		// Token: 0x0601F6CD RID: 128717 RVA: 0x00460B84 File Offset: 0x0045ED84
+		// Token: 0x06021316 RID: 135958 RVA: 0x00494B58 File Offset: 0x00492D58
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

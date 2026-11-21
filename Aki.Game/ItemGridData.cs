@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020010B0 RID: 4272
+// Token: 0x02000564 RID: 1380
 public class ItemGridData : IItemGridData
 {
-	// Token: 0x1700094F RID: 2383
-	// (get) Token: 0x06006F31 RID: 28465 RVA: 0x0016B5A4 File Offset: 0x001697A4
-	// (set) Token: 0x06006F32 RID: 28466 RVA: 0x0016B5AC File Offset: 0x001697AC
+	// Token: 0x1700096F RID: 2415
+	// (get) Token: 0x060042C7 RID: 17095 RVA: 0x00173F1C File Offset: 0x0017211C
+	// (set) Token: 0x060042C8 RID: 17096 RVA: 0x00173F24 File Offset: 0x00172124
 	public TItem Item { get; set; }
 
-	// Token: 0x17000950 RID: 2384
-	// (get) Token: 0x06006F33 RID: 28467 RVA: 0x0016B5B5 File Offset: 0x001697B5
-	// (set) Token: 0x06006F34 RID: 28468 RVA: 0x0016B5BD File Offset: 0x001697BD
+	// Token: 0x17000970 RID: 2416
+	// (get) Token: 0x060042C9 RID: 17097 RVA: 0x00173F2D File Offset: 0x0017212D
+	// (set) Token: 0x060042CA RID: 17098 RVA: 0x00173F35 File Offset: 0x00172135
 	public bool HasClaimed { get; set; }
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002848 RID: 10312
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B1B RID: 11035
 	public class IFocusObjectRotationConfig
 	{
-		// Token: 0x0600E498 RID: 58520 RVA: 0x0021A3DC File Offset: 0x002185DC
+		// Token: 0x0600F2BD RID: 62141 RVA: 0x00237240 File Offset: 0x00235440
 		public static IFocusObjectRotationConfig Create(IFocusObjectRotationConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045CA RID: 17866
-		// (get) Token: 0x0600E499 RID: 58521 RVA: 0x0021A3FB File Offset: 0x002185FB
+		// Token: 0x17004935 RID: 18741
+		// (get) Token: 0x0600F2BE RID: 62142 RVA: 0x0023725F File Offset: 0x0023545F
 		public virtual VectorInfo TargetRotation
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045CB RID: 17867
-		// (get) Token: 0x0600E49A RID: 58522 RVA: 0x0021A42F File Offset: 0x0021862F
+		// Token: 0x17004936 RID: 18742
+		// (get) Token: 0x0600F2BF RID: 62143 RVA: 0x00237293 File Offset: 0x00235493
 		[Nullable(2)]
 		public virtual string SpeedCurve
 		{
@@ -51,14 +49,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E74 RID: 32372
+		// Token: 0x04008531 RID: 34097
 		private IFocusObjectRotationConfig Instance;
 
-		// Token: 0x04007E75 RID: 32373
+		// Token: 0x04008532 RID: 34098
 		[Nullable(2)]
 		private VectorInfo _TargetRotationCache;
 
-		// Token: 0x04007E76 RID: 32374
+		// Token: 0x04008533 RID: 34099
 		private bool _TargetRotationInited;
 	}
 }

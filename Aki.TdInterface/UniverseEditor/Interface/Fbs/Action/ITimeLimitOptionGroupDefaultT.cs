@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073E3 RID: 29667
+	// Token: 0x02007BCD RID: 31693
 	public class ITimeLimitOptionGroupDefaultT
 	{
-		// Token: 0x1700E15B RID: 57691
-		// (get) Token: 0x06035E4F RID: 220751 RVA: 0x00755C86 File Offset: 0x00753E86
-		// (set) Token: 0x06035E50 RID: 220752 RVA: 0x00755C8E File Offset: 0x00753E8E
+		// Token: 0x1700ED70 RID: 60784
+		// (get) Token: 0x06039202 RID: 233986 RVA: 0x007B83FA File Offset: 0x007B65FA
+		// (set) Token: 0x06039203 RID: 233987 RVA: 0x007B8402 File Offset: 0x007B6602
 		public ETimeLimitOptionGroupStyle Type { get; set; }
 
-		// Token: 0x1700E15C RID: 57692
-		// (get) Token: 0x06035E51 RID: 220753 RVA: 0x00755C97 File Offset: 0x00753E97
-		// (set) Token: 0x06035E52 RID: 220754 RVA: 0x00755C9F File Offset: 0x00753E9F
+		// Token: 0x1700ED71 RID: 60785
+		// (get) Token: 0x06039204 RID: 233988 RVA: 0x007B840B File Offset: 0x007B660B
+		// (set) Token: 0x06039205 RID: 233989 RVA: 0x007B8413 File Offset: 0x007B6613
 		public int TimeoutOptionIndex { get; set; }
 
-		// Token: 0x1700E15D RID: 57693
-		// (get) Token: 0x06035E53 RID: 220755 RVA: 0x00755CA8 File Offset: 0x00753EA8
-		// (set) Token: 0x06035E54 RID: 220756 RVA: 0x00755CB0 File Offset: 0x00753EB0
+		// Token: 0x1700ED72 RID: 60786
+		// (get) Token: 0x06039206 RID: 233990 RVA: 0x007B841C File Offset: 0x007B661C
+		// (set) Token: 0x06039207 RID: 233991 RVA: 0x007B8424 File Offset: 0x007B6624
 		public float TimeLimit { get; set; }
 
-		// Token: 0x06035E55 RID: 220757 RVA: 0x00755CB9 File Offset: 0x00753EB9
+		// Token: 0x06039208 RID: 233992 RVA: 0x007B842D File Offset: 0x007B662D
 		public ITimeLimitOptionGroupDefaultT()
 		{
 			this.Type = ETimeLimitOptionGroupStyle.Default;

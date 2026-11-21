@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x0200112E RID: 4398
+// Token: 0x020005E2 RID: 1506
 public interface IBabelTowerBuffInfo
 {
-	// Token: 0x170009C7 RID: 2503
-	// (get) Token: 0x06007360 RID: 29536
-	// (set) Token: 0x06007361 RID: 29537
+	// Token: 0x170009E7 RID: 2535
+	// (get) Token: 0x060046F7 RID: 18167
+	// (set) Token: 0x060046F8 RID: 18168
 	int Id { get; set; }
 
-	// Token: 0x170009C8 RID: 2504
-	// (get) Token: 0x06007362 RID: 29538
-	// (set) Token: 0x06007363 RID: 29539
+	// Token: 0x170009E8 RID: 2536
+	// (get) Token: 0x060046F9 RID: 18169
+	// (set) Token: 0x060046FA RID: 18170
 	EBabelTowerBuffState State { get; set; }
 
-	// Token: 0x170009C9 RID: 2505
-	// (get) Token: 0x06007364 RID: 29540
-	// (set) Token: 0x06007365 RID: 29541
+	// Token: 0x170009E9 RID: 2537
+	// (get) Token: 0x060046FB RID: 18171
+	// (set) Token: 0x060046FC RID: 18172
 	int? LevelId { get; set; }
 
-	// Token: 0x170009CA RID: 2506
-	// (get) Token: 0x06007366 RID: 29542
-	// (set) Token: 0x06007367 RID: 29543
+	// Token: 0x170009EA RID: 2538
+	// (get) Token: 0x060046FD RID: 18173
+	// (set) Token: 0x060046FE RID: 18174
 	bool IsRecommend { get; set; }
 }

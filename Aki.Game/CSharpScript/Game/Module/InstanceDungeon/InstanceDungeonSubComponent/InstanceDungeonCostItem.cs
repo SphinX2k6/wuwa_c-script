@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x02005899 RID: 22681
+	// Token: 0x02004871 RID: 18545
 	public class InstanceDungeonCostItem : UiPanelBase
 	{
-		// Token: 0x06039B59 RID: 236377 RVA: 0x00DB6B90 File Offset: 0x00DB4D90
+		// Token: 0x0602EA7C RID: 191100 RVA: 0x00D05AA8 File Offset: 0x00D03CA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039B5A RID: 236378 RVA: 0x00DB6C78 File Offset: 0x00DB4E78
+		// Token: 0x0602EA7D RID: 191101 RVA: 0x00D05B90 File Offset: 0x00D03D90
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(3);
@@ -56,13 +56,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			EventSystem.Instance.Add(EEventName.OnPowerChanged, new Action(this.OnPowerChanged));
 		}
 
-		// Token: 0x06039B5B RID: 236379 RVA: 0x00DB6CED File Offset: 0x00DB4EED
+		// Token: 0x0602EA7E RID: 191102 RVA: 0x00D05C05 File Offset: 0x00D03E05
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPowerChanged, new Action(this.OnPowerChanged));
 		}
 
-		// Token: 0x06039B5C RID: 236380 RVA: 0x00DB6D0B File Offset: 0x00DB4F0B
+		// Token: 0x0602EA7F RID: 191103 RVA: 0x00D05C23 File Offset: 0x00D03E23
 		private void OnPowerChanged()
 		{
 			if (this.ItemDataHandle != null && this.ItemDataHandle.Item.ItemData.ItemId == 5)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039B5D RID: 236381 RVA: 0x00DB6D40 File Offset: 0x00DB4F40
+		// Token: 0x0602EA80 RID: 191104 RVA: 0x00D05C58 File Offset: 0x00D03E58
 		public void RefreshItem(TItem item)
 		{
 			this.ItemDataHandle = new InstanceDungeonCostItemData
@@ -98,26 +98,26 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			base.SetItemIcon(base.GetTexture(0), item.ItemData.ItemId, null, null);
 		}
 
-		// Token: 0x06039B5E RID: 236382 RVA: 0x00DB6DF4 File Offset: 0x00DB4FF4
+		// Token: 0x0602EA81 RID: 191105 RVA: 0x00D05D0C File Offset: 0x00D03F0C
 		private void OnClickBtnPowerHelp()
 		{
 			HelpController.Instance.OpenHelpById(26);
 		}
 
-		// Token: 0x0401E24D RID: 123469
+		// Token: 0x04018CEA RID: 101610
 		[Nullable(2)]
 		private InstanceDungeonCostItemData ItemDataHandle;
 
-		// Token: 0x0200BAF2 RID: 47858
+		// Token: 0x0200A50B RID: 42251
 		private enum EChildType
 		{
-			// Token: 0x040387C6 RID: 231366
+			// Token: 0x040331C7 RID: 209351
 			TextureConsume,
-			// Token: 0x040387C7 RID: 231367
+			// Token: 0x040331C8 RID: 209352
 			TextConsume,
-			// Token: 0x040387C8 RID: 231368
+			// Token: 0x040331C9 RID: 209353
 			ButtonPowerHelp,
-			// Token: 0x040387C9 RID: 231369
+			// Token: 0x040331CA RID: 209354
 			PowerCostDiscountsItem
 		}
 	}

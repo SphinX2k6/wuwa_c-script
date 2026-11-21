@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DEC RID: 7660
+// Token: 0x020012AE RID: 4782
 public class HandBookContentItem : UiPanelBase
 {
-	// Token: 0x0600E96A RID: 59754 RVA: 0x00373A7B File Offset: 0x00371C7B
+	// Token: 0x0600BD89 RID: 48521 RVA: 0x0037F783 File Offset: 0x0037D983
 	[NullableContext(1)]
 	public HandBookContentItem(HandBookContentItemData handBookContentItemData, UUIItem uiItem)
 	{
@@ -15,7 +15,7 @@ public class HandBookContentItem : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600E96B RID: 59755 RVA: 0x00373A97 File Offset: 0x00371C97
+	// Token: 0x0600BD8A RID: 48522 RVA: 0x0037F79F File Offset: 0x0037D99F
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class HandBookContentItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E96C RID: 59756 RVA: 0x00373AD0 File Offset: 0x00371CD0
+	// Token: 0x0600BD8B RID: 48523 RVA: 0x0037F7D8 File Offset: 0x0037D9D8
 	protected override void OnStart()
 	{
 		if (this.HandBookContentItemData == null)
@@ -52,22 +52,22 @@ public class HandBookContentItem : UiPanelBase
 		text2.SetUIActive(false);
 	}
 
-	// Token: 0x0600E96D RID: 59757 RVA: 0x00373B5D File Offset: 0x00371D5D
+	// Token: 0x0600BD8C RID: 48524 RVA: 0x0037F865 File Offset: 0x0037DA65
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x04006C16 RID: 27670
+	// Token: 0x04006CF7 RID: 27895
 	[Nullable(1)]
 	public HandBookContentItemData HandBookContentItemData;
 
-	// Token: 0x020083BC RID: 33724
+	// Token: 0x02007541 RID: 30017
 	private class EHandBookContentItemDefine
 	{
-		// Token: 0x0402AE61 RID: 175713
+		// Token: 0x04026184 RID: 156036
 		public const int TitleText = 0;
 
-		// Token: 0x0402AE62 RID: 175714
+		// Token: 0x04026185 RID: 156037
 		public const int ContentText = 1;
 	}
 }

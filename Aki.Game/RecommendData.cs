@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002427 RID: 9255
+// Token: 0x0200190C RID: 6412
 public class RecommendData
 {
-	// Token: 0x0601290C RID: 76044 RVA: 0x0049336F File Offset: 0x0049156F
+	// Token: 0x0600FDC2 RID: 64962 RVA: 0x004A093C File Offset: 0x0049EB3C
 	public RecommendData()
 	{
 		this.MonsterIdList = new List<int>();
 	}
 
-	// Token: 0x04008BE6 RID: 35814
+	// Token: 0x04008D2D RID: 36141
 	public int RoleId;
 
-	// Token: 0x04008BE7 RID: 35815
+	// Token: 0x04008D2E RID: 36142
 	[Nullable(1)]
 	public List<int> MonsterIdList;
 
-	// Token: 0x04008BE8 RID: 35816
+	// Token: 0x04008D2F RID: 36143
 	public int FetterGroupId;
 
-	// Token: 0x04008BE9 RID: 35817
+	// Token: 0x04008D30 RID: 36144
 	public int MainPropId;
 }

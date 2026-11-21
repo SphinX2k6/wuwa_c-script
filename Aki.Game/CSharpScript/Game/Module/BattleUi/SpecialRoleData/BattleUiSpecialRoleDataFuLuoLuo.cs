@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 {
-	// Token: 0x02005E4E RID: 24142
+	// Token: 0x02004E33 RID: 20019
 	public class BattleUiSpecialRoleDataFuLuoLuo : BattleUiSpecialRoleDataBase
 	{
-		// Token: 0x0603D66B RID: 251499 RVA: 0x00ECFCAB File Offset: 0x00ECDEAB
+		// Token: 0x060325FB RID: 206331 RVA: 0x00E2121B File Offset: 0x00E1F41B
 		protected override void OnInit()
 		{
 			if (this.RoleData != null)
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.BattleUi.SpecialRoleData
 			}
 		}
 
-		// Token: 0x0603D66C RID: 251500 RVA: 0x00ECFCE8 File Offset: 0x00ECDEE8
+		// Token: 0x060325FC RID: 206332 RVA: 0x00E21258 File Offset: 0x00E1F458
 		private void OnEnergyTagChanged(int tagId, bool tagExist)
 		{
 			BattleUiRoleData roleData = this.RoleData;

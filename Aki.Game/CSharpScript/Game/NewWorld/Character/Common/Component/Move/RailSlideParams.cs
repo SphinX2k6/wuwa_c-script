@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F8 RID: 28920
+	// Token: 0x020063A8 RID: 25512
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RailSlideParams
 	{
-		// Token: 0x0604699F RID: 289183 RVA: 0x011C2E34 File Offset: 0x011C1034
+		// Token: 0x0603DD98 RID: 253336 RVA: 0x011F1FE8 File Offset: 0x011F01E8
 		public RailSlideParams(BP_RailSlideConfig_C asset = null, bool? isKatixiya = null, int pbDataId = 0)
 		{
 			if (asset != null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469A0 RID: 289184 RVA: 0x011C312C File Offset: 0x011C132C
+		// Token: 0x0603DD99 RID: 253337 RVA: 0x011F22E0 File Offset: 0x011F04E0
 		[NullableContext(1)]
 		public void SetControlState(bool innerArc, List<ISwordRiderRailSplinePoint> points, float halfHeight)
 		{
@@ -66,26 +66,26 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.ControlData.InitSplinePoints(innerArc, points, halfHeight);
 		}
 
-		// Token: 0x060469A1 RID: 289185 RVA: 0x011C3143 File Offset: 0x011C1343
+		// Token: 0x0603DD9A RID: 253338 RVA: 0x011F22F7 File Offset: 0x011F04F7
 		public void ClearControlState()
 		{
 			this.IsControlState = false;
 		}
 
-		// Token: 0x060469A2 RID: 289186 RVA: 0x011C314C File Offset: 0x011C134C
+		// Token: 0x0603DD9B RID: 253339 RVA: 0x011F2300 File Offset: 0x011F0500
 		public bool IsCurrentFreeJump()
 		{
 			return this.CurrentFreeJump;
 		}
 
-		// Token: 0x060469A3 RID: 289187 RVA: 0x011C3154 File Offset: 0x011C1354
+		// Token: 0x0603DD9C RID: 253340 RVA: 0x011F2308 File Offset: 0x011F0508
 		public void SetCurrentFreeJump(bool value)
 		{
 			this.CurrentFreeJump = value;
 		}
 
-		// Token: 0x17009CEF RID: 40175
-		// (get) Token: 0x060469A4 RID: 289188 RVA: 0x011C315D File Offset: 0x011C135D
+		// Token: 0x17007578 RID: 30072
+		// (get) Token: 0x0603DD9D RID: 253341 RVA: 0x011F2311 File Offset: 0x011F0511
 		public int BaseJumpHeight
 		{
 			get
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF0 RID: 40176
-		// (get) Token: 0x060469A5 RID: 289189 RVA: 0x011C3186 File Offset: 0x011C1386
+		// Token: 0x17007579 RID: 30073
+		// (get) Token: 0x0603DD9E RID: 253342 RVA: 0x011F233A File Offset: 0x011F053A
 		public float BaseJumpDistanceRate
 		{
 			get
@@ -112,8 +112,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF1 RID: 40177
-		// (get) Token: 0x060469A6 RID: 289190 RVA: 0x011C31AF File Offset: 0x011C13AF
+		// Token: 0x1700757A RID: 30074
+		// (get) Token: 0x0603DD9F RID: 253343 RVA: 0x011F2363 File Offset: 0x011F0563
 		public int MaxJumpDistance
 		{
 			get
@@ -126,8 +126,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF2 RID: 40178
-		// (get) Token: 0x060469A7 RID: 289191 RVA: 0x011C31D8 File Offset: 0x011C13D8
+		// Token: 0x1700757B RID: 30075
+		// (get) Token: 0x0603DDA0 RID: 253344 RVA: 0x011F238C File Offset: 0x011F058C
 		public int MaxJumpHeight
 		{
 			get
@@ -140,8 +140,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF3 RID: 40179
-		// (get) Token: 0x060469A8 RID: 289192 RVA: 0x011C3201 File Offset: 0x011C1401
+		// Token: 0x1700757C RID: 30076
+		// (get) Token: 0x0603DDA1 RID: 253345 RVA: 0x011F23B5 File Offset: 0x011F05B5
 		public int JumpAcceleration
 		{
 			get
@@ -154,8 +154,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF4 RID: 40180
-		// (get) Token: 0x060469A9 RID: 289193 RVA: 0x011C322A File Offset: 0x011C142A
+		// Token: 0x1700757D RID: 30077
+		// (get) Token: 0x0603DDA2 RID: 253346 RVA: 0x011F23DE File Offset: 0x011F05DE
 		public int TargetSpeedForJump
 		{
 			get
@@ -168,8 +168,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF5 RID: 40181
-		// (get) Token: 0x060469AA RID: 289194 RVA: 0x011C3253 File Offset: 0x011C1453
+		// Token: 0x1700757E RID: 30078
+		// (get) Token: 0x0603DDA3 RID: 253347 RVA: 0x011F2407 File Offset: 0x011F0607
 		public int AllTimeForJump
 		{
 			get
@@ -182,8 +182,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF6 RID: 40182
-		// (get) Token: 0x060469AB RID: 289195 RVA: 0x011C327C File Offset: 0x011C147C
+		// Token: 0x1700757F RID: 30079
+		// (get) Token: 0x0603DDA4 RID: 253348 RVA: 0x011F2430 File Offset: 0x011F0630
 		public int JumpBlendTime
 		{
 			get
@@ -196,8 +196,8 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x17009CF7 RID: 40183
-		// (get) Token: 0x060469AC RID: 289196 RVA: 0x011C32A5 File Offset: 0x011C14A5
+		// Token: 0x17007580 RID: 30080
+		// (get) Token: 0x0603DDA5 RID: 253349 RVA: 0x011F2459 File Offset: 0x011F0659
 		public int LandBlendTime
 		{
 			get
@@ -210,102 +210,102 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x04025092 RID: 151698
+		// Token: 0x04020D27 RID: 134439
 		public int InitSpeed = 700;
 
-		// Token: 0x04025093 RID: 151699
+		// Token: 0x04020D28 RID: 134440
 		public int BaseTargetSpeed = 1000;
 
-		// Token: 0x04025094 RID: 151700
+		// Token: 0x04020D29 RID: 134441
 		public int BaseAcceleration = 300;
 
-		// Token: 0x04025095 RID: 151701
+		// Token: 0x04020D2A RID: 134442
 		public int AccelerationForUp = -300;
 
-		// Token: 0x04025096 RID: 151702
+		// Token: 0x04020D2B RID: 134443
 		public int TargetSpeedForUp = 700;
 
-		// Token: 0x04025097 RID: 151703
+		// Token: 0x04020D2C RID: 134444
 		public int AccelerationForDown = 300;
 
-		// Token: 0x04025098 RID: 151704
+		// Token: 0x04020D2D RID: 134445
 		public int TargetSpeedForDown = 1000;
 
-		// Token: 0x04025099 RID: 151705
+		// Token: 0x04020D2E RID: 134446
 		public int AccelerationAngle = 20;
 
-		// Token: 0x0402509A RID: 151706
+		// Token: 0x04020D2F RID: 134447
 		public int MaxLandSpeed = 2000;
 
-		// Token: 0x0402509B RID: 151707
+		// Token: 0x04020D30 RID: 134448
 		public int MinLandSpeed = 500;
 
-		// Token: 0x0402509C RID: 151708
+		// Token: 0x04020D31 RID: 134449
 		public RailSlideJumpParams SideJumpParams;
 
-		// Token: 0x0402509D RID: 151709
+		// Token: 0x04020D32 RID: 134450
 		public RailSlideJumpParams FreeJumpParams;
 
-		// Token: 0x0402509E RID: 151710
+		// Token: 0x04020D33 RID: 134451
 		public RailControlData ControlData;
 
-		// Token: 0x0402509F RID: 151711
+		// Token: 0x04020D34 RID: 134452
 		public float LeaningBlendAlpha = 0.1f;
 
-		// Token: 0x040250A0 RID: 151712
+		// Token: 0x04020D35 RID: 134453
 		public int MaxLeaningAngle = 45;
 
-		// Token: 0x040250A1 RID: 151713
+		// Token: 0x04020D36 RID: 134454
 		public int LimitInputAngle = 5;
 
-		// Token: 0x040250A2 RID: 151714
+		// Token: 0x04020D37 RID: 134455
 		public bool DisableGravityLean;
 
-		// Token: 0x040250A3 RID: 151715
+		// Token: 0x04020D38 RID: 134456
 		public bool DisablePitchLean;
 
-		// Token: 0x040250A4 RID: 151716
+		// Token: 0x04020D39 RID: 134457
 		public int ChangeRailCooldownTime = 1000;
 
-		// Token: 0x040250A5 RID: 151717
+		// Token: 0x04020D3A RID: 134458
 		public int ChangeRailDistance = 1000;
 
-		// Token: 0x040250A6 RID: 151718
+		// Token: 0x04020D3B RID: 134459
 		public int ChangeRailHeight = 400;
 
-		// Token: 0x040250A7 RID: 151719
+		// Token: 0x04020D3C RID: 134460
 		public int ChangeRailSpeed = 1000;
 
-		// Token: 0x040250A8 RID: 151720
+		// Token: 0x04020D3D RID: 134461
 		public int StartJumpSpeed = 1000;
 
-		// Token: 0x040250A9 RID: 151721
+		// Token: 0x04020D3E RID: 134462
 		[Nullable(1)]
 		public List<long> InterruptSkillList = new List<long>();
 
-		// Token: 0x040250AA RID: 151722
+		// Token: 0x04020D3F RID: 134463
 		public UCurveFloat MoveCurve;
 
-		// Token: 0x040250AB RID: 151723
+		// Token: 0x04020D40 RID: 134464
 		[Nullable(1)]
 		public List<int> TagList = new List<int>();
 
-		// Token: 0x040250AC RID: 151724
+		// Token: 0x04020D41 RID: 134465
 		public bool DebugDraw;
 
-		// Token: 0x040250AD RID: 151725
+		// Token: 0x04020D42 RID: 134466
 		public bool LandAnimation;
 
-		// Token: 0x040250AE RID: 151726
+		// Token: 0x04020D43 RID: 134467
 		public ERailSlideAnimType AnimationType;
 
-		// Token: 0x040250AF RID: 151727
+		// Token: 0x04020D44 RID: 134468
 		private readonly int PbDataId;
 
-		// Token: 0x040250B0 RID: 151728
+		// Token: 0x04020D45 RID: 134469
 		public bool IsControlState;
 
-		// Token: 0x040250B1 RID: 151729
+		// Token: 0x04020D46 RID: 134470
 		private bool CurrentFreeJump;
 	}
 }

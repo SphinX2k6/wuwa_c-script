@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x0200482D RID: 18477
+	// Token: 0x02004C95 RID: 19605
 	public class IBuffDurationBase_UnionUnion
 	{
-		// Token: 0x1700849D RID: 33949
-		// (get) Token: 0x0601C8F3 RID: 116979 RVA: 0x00409F2D File Offset: 0x0040812D
-		// (set) Token: 0x0601C8F4 RID: 116980 RVA: 0x00409F35 File Offset: 0x00408135
+		// Token: 0x17008AE8 RID: 35560
+		// (get) Token: 0x0601E0F0 RID: 123120 RVA: 0x0043687D File Offset: 0x00434A7D
+		// (set) Token: 0x0601E0F1 RID: 123121 RVA: 0x00436885 File Offset: 0x00434A85
 		public IBuffDurationBase_Union Type { get; set; }
 
-		// Token: 0x1700849E RID: 33950
-		// (get) Token: 0x0601C8F5 RID: 116981 RVA: 0x00409F3E File Offset: 0x0040813E
-		// (set) Token: 0x0601C8F6 RID: 116982 RVA: 0x00409F46 File Offset: 0x00408146
+		// Token: 0x17008AE9 RID: 35561
+		// (get) Token: 0x0601E0F2 RID: 123122 RVA: 0x0043688E File Offset: 0x00434A8E
+		// (set) Token: 0x0601E0F3 RID: 123123 RVA: 0x00436896 File Offset: 0x00434A96
 		public object Value { get; set; }
 
-		// Token: 0x0601C8F7 RID: 116983 RVA: 0x00409F4F File Offset: 0x0040814F
+		// Token: 0x0601E0F4 RID: 123124 RVA: 0x0043689F File Offset: 0x00434A9F
 		public IBuffDurationBase_UnionUnion()
 		{
 			this.Type = IBuffDurationBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601C8F8 RID: 116984 RVA: 0x00409F65 File Offset: 0x00408165
+		// Token: 0x0601E0F5 RID: 123125 RVA: 0x004368B5 File Offset: 0x00434AB5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601C8F9 RID: 116985 RVA: 0x00409F77 File Offset: 0x00408177
+		// Token: 0x0601E0F6 RID: 123126 RVA: 0x004368C7 File Offset: 0x00434AC7
 		public IBuffDurationBaseT AsIBuffDurationBase()
 		{
 			return this.As<IBuffDurationBaseT>();
 		}
 
-		// Token: 0x0601C8FA RID: 116986 RVA: 0x00409F7F File Offset: 0x0040817F
+		// Token: 0x0601E0F7 RID: 123127 RVA: 0x004368CF File Offset: 0x00434ACF
 		public static IBuffDurationBase_UnionUnion FromIBuffDurationBase(IBuffDurationBaseT _ibuffdurationbase)
 		{
 			return new IBuffDurationBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C8FB RID: 116987 RVA: 0x00409F94 File Offset: 0x00408194
+		// Token: 0x0601E0F8 RID: 123128 RVA: 0x004368E4 File Offset: 0x00434AE4
 		public IBuffDurationInstantT AsIBuffDurationInstant()
 		{
 			return this.As<IBuffDurationInstantT>();
 		}
 
-		// Token: 0x0601C8FC RID: 116988 RVA: 0x00409F9C File Offset: 0x0040819C
+		// Token: 0x0601E0F9 RID: 123129 RVA: 0x004368EC File Offset: 0x00434AEC
 		public static IBuffDurationBase_UnionUnion FromIBuffDurationInstant(IBuffDurationInstantT _ibuffdurationinstant)
 		{
 			return new IBuffDurationBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C8FD RID: 116989 RVA: 0x00409FB1 File Offset: 0x004081B1
+		// Token: 0x0601E0FA RID: 123130 RVA: 0x00436901 File Offset: 0x00434B01
 		public IBuffDurationPermanentT AsIBuffDurationPermanent()
 		{
 			return this.As<IBuffDurationPermanentT>();
 		}
 
-		// Token: 0x0601C8FE RID: 116990 RVA: 0x00409FB9 File Offset: 0x004081B9
+		// Token: 0x0601E0FB RID: 123131 RVA: 0x00436909 File Offset: 0x00434B09
 		public static IBuffDurationBase_UnionUnion FromIBuffDurationPermanent(IBuffDurationPermanentT _ibuffdurationpermanent)
 		{
 			return new IBuffDurationBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C8FF RID: 116991 RVA: 0x00409FCE File Offset: 0x004081CE
+		// Token: 0x0601E0FC RID: 123132 RVA: 0x0043691E File Offset: 0x00434B1E
 		public IBuffHasDurationT AsIBuffHasDuration()
 		{
 			return this.As<IBuffHasDurationT>();
 		}
 
-		// Token: 0x0601C900 RID: 116992 RVA: 0x00409FD6 File Offset: 0x004081D6
+		// Token: 0x0601E0FD RID: 123133 RVA: 0x00436926 File Offset: 0x00434B26
 		public static IBuffDurationBase_UnionUnion FromIBuffHasDuration(IBuffHasDurationT _ibuffhasduration)
 		{
 			return new IBuffDurationBase_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601C901 RID: 116993 RVA: 0x00409FEC File Offset: 0x004081EC
+		// Token: 0x0601E0FE RID: 123134 RVA: 0x0043693C File Offset: 0x00434B3C
 		public static int Pack(FlatBufferBuilder builder, IBuffDurationBase_UnionUnion _o)
 		{
 			switch (_o.Type)

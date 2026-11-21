@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004883 RID: 18563
+	// Token: 0x020037FA RID: 14330
 	internal class RewardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06030904 RID: 198916 RVA: 0x00B47954 File Offset: 0x00B45B54
+		// Token: 0x06025430 RID: 152624 RVA: 0x00A82728 File Offset: 0x00A80928
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x06030905 RID: 198917 RVA: 0x00B479B0 File Offset: 0x00B45BB0
+		// Token: 0x06025431 RID: 152625 RVA: 0x00A82784 File Offset: 0x00A80984
 		protected override void OnStart()
 		{
 			this.RewardItemGrid.Initialize(base.GetItem(2).GetOwner());
@@ -40,11 +40,11 @@ namespace CSharpScript.Game.Module.VillageInfr
 					return;
 				}
 				TItem? titem = callbackParameter.Data as TItem?;
-				ItemController.Instance.OpenItemTipsByItemId(titem.Value.ItemData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(titem.Value.ItemData.ItemId, true, null, false);
 			});
 		}
 
-		// Token: 0x06030906 RID: 198918 RVA: 0x00B47A18 File Offset: 0x00B45C18
+		// Token: 0x06025432 RID: 152626 RVA: 0x00A827EC File Offset: 0x00A809EC
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.Id = data;
@@ -64,10 +64,10 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetText(1).SetText(scoreRewardById.Value.Score.ToString(), true);
 		}
 
-		// Token: 0x0401A185 RID: 106885
+		// Token: 0x040149F8 RID: 84472
 		private int Id;
 
-		// Token: 0x0401A186 RID: 106886
+		// Token: 0x040149F9 RID: 84473
 		[Nullable(1)]
 		private readonly SmallItemGrid RewardItemGrid = new SmallItemGrid();
 	}

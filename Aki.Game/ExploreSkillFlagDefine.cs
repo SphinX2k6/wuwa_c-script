@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x02001C43 RID: 7235
+// Token: 0x02001102 RID: 4354
 public class ExploreSkillFlagDefine : IStaticVariableResetter
 {
-	// Token: 0x0600DA32 RID: 55858 RVA: 0x0032B053 File Offset: 0x00329253
+	// Token: 0x0600AE48 RID: 44616 RVA: 0x00336453 File Offset: 0x00334653
 	static ExploreSkillFlagDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExploreSkillFlagDefine.CreateStaticDefaultValue), new Action(ExploreSkillFlagDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600DA33 RID: 55859 RVA: 0x0032B074 File Offset: 0x00329274
+	// Token: 0x0600AE49 RID: 44617 RVA: 0x00336474 File Offset: 0x00334674
 	public static void CreateStaticDefaultValue()
 	{
 		ExploreSkillFlagDefine.levelExploreSkillFlagDefaultVal = new Dictionary<EExploreSkillType, bool>
@@ -66,6 +66,10 @@ public class ExploreSkillFlagDefine : IStaticVariableResetter
 				true
 			},
 			{
+				EExploreSkillType.SummonMotorcyclePark,
+				true
+			},
+			{
 				EExploreSkillType.MotorcycleCruise,
 				true
 			}
@@ -84,18 +88,18 @@ public class ExploreSkillFlagDefine : IStaticVariableResetter
 		ExploreSkillFlagDefine.levelOperationRestrictExploreSkillTypes = array;
 	}
 
-	// Token: 0x0600DA34 RID: 55860 RVA: 0x0032B1A0 File Offset: 0x003293A0
+	// Token: 0x0600AE4A RID: 44618 RVA: 0x003365AC File Offset: 0x003347AC
 	public static void ResetStaticDefaultValue()
 	{
 		ExploreSkillFlagDefine.levelExploreSkillFlagDefaultVal = null;
 		ExploreSkillFlagDefine.levelOperationRestrictExploreSkillTypes = null;
 	}
 
-	// Token: 0x0400635C RID: 25436
+	// Token: 0x0400642E RID: 25646
 	[Nullable(2)]
 	public static Dictionary<EExploreSkillType, bool> levelExploreSkillFlagDefaultVal;
 
-	// Token: 0x0400635D RID: 25437
+	// Token: 0x0400642F RID: 25647
 	[Nullable(2)]
 	public static EExploreSkillType[] levelOperationRestrictExploreSkillTypes;
 }

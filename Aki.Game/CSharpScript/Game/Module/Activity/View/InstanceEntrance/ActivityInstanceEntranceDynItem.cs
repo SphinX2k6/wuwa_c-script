@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F13 RID: 24339
+	// Token: 0x02004EFA RID: 20218
 	public class ActivityInstanceEntranceDynItem : UiPanelBase, IDynamicScrollBaseItem<ActivityEntranceItemData>
 	{
-		// Token: 0x0603DD66 RID: 253286 RVA: 0x00EF1FF8 File Offset: 0x00EF01F8
+		// Token: 0x06032D01 RID: 208129 RVA: 0x00E43D00 File Offset: 0x00E41F00
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD67 RID: 253287 RVA: 0x00EF2044 File Offset: 0x00EF0244
+		// Token: 0x06032D02 RID: 208130 RVA: 0x00E43D4C File Offset: 0x00E41F4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DD68 RID: 253288 RVA: 0x00EF20B0 File Offset: 0x00EF02B0
+		// Token: 0x06032D03 RID: 208131 RVA: 0x00E43DB8 File Offset: 0x00E41FB8
 		[NullableContext(1)]
 		public FVector2D GetItemSize(ActivityEntranceItemData data)
 		{
@@ -53,24 +53,24 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return new FVector2D(item2.GetWidth(), item2.GetHeight());
 		}
 
-		// Token: 0x0603DD69 RID: 253289 RVA: 0x00EF20F8 File Offset: 0x00EF02F8
+		// Token: 0x06032D04 RID: 208132 RVA: 0x00E43E00 File Offset: 0x00E42000
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0200C242 RID: 49730
+		// Token: 0x0200AC4F RID: 44111
 		private class EComponent
 		{
-			// Token: 0x0403AAFB RID: 240379
+			// Token: 0x040354ED RID: 218349
 			public const int InstanceSeriesItem = 0;
 
-			// Token: 0x0403AAFC RID: 240380
+			// Token: 0x040354EE RID: 218350
 			public const int InstanceItem = 1;
 
-			// Token: 0x0403AAFD RID: 240381
+			// Token: 0x040354EF RID: 218351
 			public const int LockInstanceSeriesItem = 2;
 
-			// Token: 0x0403AAFE RID: 240382
+			// Token: 0x040354F0 RID: 218352
 			public const int LockInstanceItem = 3;
 		}
 	}

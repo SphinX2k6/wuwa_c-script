@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054DF RID: 21727
+	// Token: 0x02005A65 RID: 23141
 	public struct ILevelPlayComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A035 RID: 41013
-		// (get) Token: 0x06023D3E RID: 146750 RVA: 0x004F40BF File Offset: 0x004F22BF
+		// Token: 0x1700A86F RID: 43119
+		// (get) Token: 0x06025DF6 RID: 155126 RVA: 0x00531133 File Offset: 0x0052F333
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023D3F RID: 146751 RVA: 0x004F40CC File Offset: 0x004F22CC
+		// Token: 0x06025DF7 RID: 155127 RVA: 0x00531140 File Offset: 0x0052F340
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023D40 RID: 146752 RVA: 0x004F40D4 File Offset: 0x004F22D4
+		// Token: 0x06025DF8 RID: 155128 RVA: 0x00531148 File Offset: 0x0052F348
 		public static ILevelPlayComponent GetRootAsILevelPlayComponent(ByteBuffer _bb)
 		{
 			return ILevelPlayComponent.GetRootAsILevelPlayComponent(_bb, default(ILevelPlayComponent));
 		}
 
-		// Token: 0x06023D41 RID: 146753 RVA: 0x004F40F0 File Offset: 0x004F22F0
+		// Token: 0x06025DF9 RID: 155129 RVA: 0x00531164 File Offset: 0x0052F364
 		public static ILevelPlayComponent GetRootAsILevelPlayComponent(ByteBuffer _bb, ILevelPlayComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023D42 RID: 146754 RVA: 0x004F410D File Offset: 0x004F230D
+		// Token: 0x06025DFA RID: 155130 RVA: 0x00531181 File Offset: 0x0052F381
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023D43 RID: 146755 RVA: 0x004F411C File Offset: 0x004F231C
+		// Token: 0x06025DFB RID: 155131 RVA: 0x00531190 File Offset: 0x0052F390
 		public ILevelPlayComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A036 RID: 41014
-		// (get) Token: 0x06023D44 RID: 146756 RVA: 0x004F412C File Offset: 0x004F232C
+		// Token: 0x1700A870 RID: 43120
+		// (get) Token: 0x06025DFC RID: 155132 RVA: 0x005311A0 File Offset: 0x0052F3A0
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A037 RID: 41015
-		// (get) Token: 0x06023D45 RID: 146757 RVA: 0x004F416C File Offset: 0x004F236C
+		// Token: 0x1700A871 RID: 43121
+		// (get) Token: 0x06025DFD RID: 155133 RVA: 0x005311E0 File Offset: 0x0052F3E0
 		public int LevelPlayId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A038 RID: 41016
-		// (get) Token: 0x06023D46 RID: 146758 RVA: 0x004F41A8 File Offset: 0x004F23A8
+		// Token: 0x1700A872 RID: 43122
+		// (get) Token: 0x06025DFE RID: 155134 RVA: 0x0053121C File Offset: 0x0052F41C
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023D47 RID: 146759 RVA: 0x004F41E4 File Offset: 0x004F23E4
+		// Token: 0x06025DFF RID: 155135 RVA: 0x00531258 File Offset: 0x0052F458
 		public static Offset<ILevelPlayComponent> CreateILevelPlayComponent(FlatBufferBuilder builder, bool Disabled = false, int LevelPlayId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelPlayComponent.EndILevelPlayComponent(builder);
 		}
 
-		// Token: 0x06023D48 RID: 146760 RVA: 0x004F4208 File Offset: 0x004F2408
+		// Token: 0x06025E00 RID: 155136 RVA: 0x0053127C File Offset: 0x0052F47C
 		public static void StartILevelPlayComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06023D49 RID: 146761 RVA: 0x004F4211 File Offset: 0x004F2411
+		// Token: 0x06025E01 RID: 155137 RVA: 0x00531285 File Offset: 0x0052F485
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023D4A RID: 146762 RVA: 0x004F421C File Offset: 0x004F241C
+		// Token: 0x06025E02 RID: 155138 RVA: 0x00531290 File Offset: 0x0052F490
 		public static void AddLevelPlayId(FlatBufferBuilder builder, int levelPlayId)
 		{
 			builder.AddInt(1, levelPlayId, 0);
 		}
 
-		// Token: 0x06023D4B RID: 146763 RVA: 0x004F4227 File Offset: 0x004F2427
+		// Token: 0x06025E03 RID: 155139 RVA: 0x0053129B File Offset: 0x0052F49B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06023D4C RID: 146764 RVA: 0x004F4232 File Offset: 0x004F2432
+		// Token: 0x06025E04 RID: 155140 RVA: 0x005312A6 File Offset: 0x0052F4A6
 		public static Offset<ILevelPlayComponent> EndILevelPlayComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06023D4D RID: 146765 RVA: 0x004F4240 File Offset: 0x004F2440
+		// Token: 0x06025E05 RID: 155141 RVA: 0x005312B4 File Offset: 0x0052F4B4
 		public ILevelPlayComponentT UnPack()
 		{
 			ILevelPlayComponentT levelPlayComponentT = new ILevelPlayComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelPlayComponentT;
 		}
 
-		// Token: 0x06023D4E RID: 146766 RVA: 0x004F425B File Offset: 0x004F245B
+		// Token: 0x06025E06 RID: 155142 RVA: 0x005312CF File Offset: 0x0052F4CF
 		public void UnPackTo(ILevelPlayComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023D4F RID: 146767 RVA: 0x004F4284 File Offset: 0x004F2484
+		// Token: 0x06025E07 RID: 155143 RVA: 0x005312F8 File Offset: 0x0052F4F8
 		public static Offset<ILevelPlayComponent> Pack(FlatBufferBuilder builder, ILevelPlayComponentT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelPlayComponent.CreateILevelPlayComponent(builder, _o.Disabled, _o.LevelPlayId, _o.NullMask);
 		}
 
-		// Token: 0x0400E7B0 RID: 59312
+		// Token: 0x0400F3E1 RID: 62433
 		private Table __p;
 	}
 }

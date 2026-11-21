@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D4F RID: 23887
+	// Token: 0x02004D31 RID: 19761
 	public class RageBufferStateMachine
 	{
-		// Token: 0x0603CA58 RID: 248408 RVA: 0x00E8E0F8 File Offset: 0x00E8C2F8
+		// Token: 0x060319B1 RID: 203185 RVA: 0x00DDE8AC File Offset: 0x00DDCAAC
 		public RageBufferStateMachine()
 		{
 			this.ConfigHitDelayTimes = ConfigCommonParamById.GetIntConfig("HitDelayTime").Value;
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentTime = (float)this.HitBufferDisappearTime;
 		}
 
-		// Token: 0x0603CA59 RID: 248409 RVA: 0x00E8E17F File Offset: 0x00E8C37F
+		// Token: 0x060319B2 RID: 203186 RVA: 0x00DDE933 File Offset: 0x00DDCB33
 		[NullableContext(1)]
 		public void SetUpdateCallback(RageBufferStateMachine.OnUpdateLittleReduce updateLittleReduce, RageBufferStateMachine.OnUpdateLargeReduce updateLargeReduce, Action notifyEmpty)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NotifyEmpty = notifyEmpty;
 		}
 
-		// Token: 0x0603CA5A RID: 248410 RVA: 0x00E8E198 File Offset: 0x00E8C398
+		// Token: 0x060319B3 RID: 203187 RVA: 0x00DDE94C File Offset: 0x00DDCB4C
 		public void Update(float delta)
 		{
 			if (this.CurrentEmptyState == RageBufferStateMachine.EState.Animation)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CA5B RID: 248411 RVA: 0x00E8E32C File Offset: 0x00E8C52C
+		// Token: 0x060319B4 RID: 203188 RVA: 0x00DDEAE0 File Offset: 0x00DDCCE0
 		public void GetHit(float curPercent, float oldPercent)
 		{
 			if (oldPercent < curPercent)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsNewLittleHit = true;
 		}
 
-		// Token: 0x0603CA5C RID: 248412 RVA: 0x00E8E442 File Offset: 0x00E8C642
+		// Token: 0x060319B5 RID: 203189 RVA: 0x00DDEBF6 File Offset: 0x00DDCDF6
 		public void Reset()
 		{
 			this.CurrentLittleState = RageBufferStateMachine.EState.Origin;
@@ -156,85 +156,85 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentEmptyState = RageBufferStateMachine.EState.Origin;
 		}
 
-		// Token: 0x0401F966 RID: 129382
+		// Token: 0x0401A41F RID: 107551
 		private const float LARGE_TIME = 1000f;
 
-		// Token: 0x0401F967 RID: 129383
+		// Token: 0x0401A420 RID: 107552
 		private RageBufferStateMachine.EState CurrentLittleState;
 
-		// Token: 0x0401F968 RID: 129384
+		// Token: 0x0401A421 RID: 107553
 		private RageBufferStateMachine.EState CurrentLargeState;
 
-		// Token: 0x0401F969 RID: 129385
+		// Token: 0x0401A422 RID: 107554
 		private RageBufferStateMachine.EState CurrentEmptyState;
 
-		// Token: 0x0401F96A RID: 129386
+		// Token: 0x0401A423 RID: 107555
 		private float BufferCountDown;
 
-		// Token: 0x0401F96B RID: 129387
+		// Token: 0x0401A424 RID: 107556
 		private int HitTimes;
 
-		// Token: 0x0401F96C RID: 129388
+		// Token: 0x0401A425 RID: 107557
 		public float TargetPercent;
 
-		// Token: 0x0401F96D RID: 129389
+		// Token: 0x0401A426 RID: 107558
 		public float CurrentPercent;
 
-		// Token: 0x0401F96E RID: 129390
+		// Token: 0x0401A427 RID: 107559
 		private float CurrentTime;
 
-		// Token: 0x0401F96F RID: 129391
+		// Token: 0x0401A428 RID: 107560
 		private float TargetLargePercent;
 
-		// Token: 0x0401F970 RID: 129392
+		// Token: 0x0401A429 RID: 107561
 		private float CurrentLargePercent;
 
-		// Token: 0x0401F971 RID: 129393
+		// Token: 0x0401A42A RID: 107562
 		private float CurrentLargeTime;
 
-		// Token: 0x0401F972 RID: 129394
+		// Token: 0x0401A42B RID: 107563
 		private bool IsNewLittleHit;
 
-		// Token: 0x0401F973 RID: 129395
+		// Token: 0x0401A42C RID: 107564
 		private readonly int ConfigHitDelayTimes;
 
-		// Token: 0x0401F974 RID: 129396
+		// Token: 0x0401A42D RID: 107565
 		private readonly int HitRefreshTimes;
 
-		// Token: 0x0401F975 RID: 129397
+		// Token: 0x0401A42E RID: 107566
 		private readonly int HitBufferDisappearTime;
 
-		// Token: 0x0401F976 RID: 129398
+		// Token: 0x0401A42F RID: 107567
 		private readonly float HitLargePercent;
 
-		// Token: 0x0401F977 RID: 129399
+		// Token: 0x0401A430 RID: 107568
 		[Nullable(2)]
 		private RageBufferStateMachine.OnUpdateLittleReduce UpdateLittleReduce;
 
-		// Token: 0x0401F978 RID: 129400
+		// Token: 0x0401A431 RID: 107569
 		[Nullable(2)]
 		private RageBufferStateMachine.OnUpdateLargeReduce UpdateLargeReduce;
 
-		// Token: 0x0401F979 RID: 129401
+		// Token: 0x0401A432 RID: 107570
 		[Nullable(2)]
 		private Action NotifyEmpty;
 
-		// Token: 0x0200BFF2 RID: 49138
-		// (Invoke) Token: 0x06050280 RID: 328320
+		// Token: 0x0200A9F8 RID: 43512
+		// (Invoke) Token: 0x060467C3 RID: 288707
 		public delegate void OnUpdateLittleReduce(float curPercent, float targetPercent, bool isNewHit);
 
-		// Token: 0x0200BFF3 RID: 49139
-		// (Invoke) Token: 0x06050284 RID: 328324
+		// Token: 0x0200A9F9 RID: 43513
+		// (Invoke) Token: 0x060467C7 RID: 288711
 		public delegate void OnUpdateLargeReduce(float curPercent, float targetPercent);
 
-		// Token: 0x0200BFF4 RID: 49140
+		// Token: 0x0200A9FA RID: 43514
 		private enum EState
 		{
-			// Token: 0x04039ED4 RID: 237268
+			// Token: 0x04034896 RID: 215190
 			Origin,
-			// Token: 0x04039ED5 RID: 237269
+			// Token: 0x04034897 RID: 215191
 			Hit,
-			// Token: 0x04039ED6 RID: 237270
+			// Token: 0x04034898 RID: 215192
 			Animation
 		}
 	}

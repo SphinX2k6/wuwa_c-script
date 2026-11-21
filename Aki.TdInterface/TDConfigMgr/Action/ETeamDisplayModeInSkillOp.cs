@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016CE RID: 5838
+	// Token: 0x02001848 RID: 6216
 	[JsonConverter(typeof(ETeamDisplayModeInSkillOpJsonConverter))]
 	[EnumExtensions]
 	public enum ETeamDisplayModeInSkillOp
 	{
-		// Token: 0x04004EEA RID: 20202
+		// Token: 0x04005310 RID: 21264
 		Normal,
-		// Token: 0x04004EEB RID: 20203
+		// Token: 0x04005311 RID: 21265
 		Lock
 	}
 }

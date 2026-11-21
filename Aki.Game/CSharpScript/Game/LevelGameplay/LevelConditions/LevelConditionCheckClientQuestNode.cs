@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C62 RID: 27746
+	// Token: 0x02005DDC RID: 24028
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckClientQuestNode : LevelConditionBase
 	{
-		// Token: 0x0604454B RID: 279883 RVA: 0x010D81C4 File Offset: 0x010D63C4
+		// Token: 0x0603A6A5 RID: 239269 RVA: 0x0108215C File Offset: 0x0108035C
 		public override bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604454C RID: 279884 RVA: 0x010D838C File Offset: 0x010D658C
+		// Token: 0x0603A6A6 RID: 239270 RVA: 0x01082324 File Offset: 0x01080524
 		public override bool CheckNew(ICondition2 inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			ICheckChildQuestFinished checkChildQuestFinished = inConditionInfo as ICheckChildQuestFinished;

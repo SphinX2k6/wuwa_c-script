@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000E7 RID: 231
+// Token: 0x020000E9 RID: 233
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,19 +11,19 @@ using UnrealEngine;
 })]
 public class InterpCurvePointVector : ICurvePoint<Vector>
 {
-	// Token: 0x060006EF RID: 1775 RVA: 0x00024CF5 File Offset: 0x00022EF5
+	// Token: 0x06000730 RID: 1840 RVA: 0x000252C9 File Offset: 0x000234C9
 	public InterpCurvePointVector(global::EInterpCurveMode param)
 	{
 		this.InterpMode = param;
 	}
 
-	// Token: 0x060006F0 RID: 1776 RVA: 0x00024D04 File Offset: 0x00022F04
+	// Token: 0x06000731 RID: 1841 RVA: 0x000252D8 File Offset: 0x000234D8
 	public InterpCurvePointVector(UnrealEngine.EInterpCurveMode param)
 	{
 		this.InterpMode = SplineCurve.getTsInterpCurveMode(param);
 	}
 
-	// Token: 0x060006F1 RID: 1777 RVA: 0x00024D18 File Offset: 0x00022F18
+	// Token: 0x06000732 RID: 1842 RVA: 0x000252EC File Offset: 0x000234EC
 	public void DeepCopy(InterpCurvePointVector param)
 	{
 		this.InVal = param.InVal;
@@ -33,7 +33,7 @@ public class InterpCurvePointVector : ICurvePoint<Vector>
 		this.InterpMode = param.InterpMode;
 	}
 
-	// Token: 0x060006F2 RID: 1778 RVA: 0x00024D70 File Offset: 0x00022F70
+	// Token: 0x06000733 RID: 1843 RVA: 0x00025344 File Offset: 0x00023544
 	public void DeepCopy(FInterpCurvePointVector param)
 	{
 		this.InVal = param.InVal;
@@ -49,7 +49,7 @@ public class InterpCurvePointVector : ICurvePoint<Vector>
 		this.InterpMode = SplineCurve.getTsInterpCurveMode(param.InterpMode);
 	}
 
-	// Token: 0x060006F3 RID: 1779 RVA: 0x00024DED File Offset: 0x00022FED
+	// Token: 0x06000734 RID: 1844 RVA: 0x000253C1 File Offset: 0x000235C1
 	public void Clear()
 	{
 		this.InVal = 0f;
@@ -58,6 +58,6 @@ public class InterpCurvePointVector : ICurvePoint<Vector>
 		this.OutVal.Reset();
 	}
 
-	// Token: 0x0400059D RID: 1437
+	// Token: 0x040005AC RID: 1452
 	public global::EInterpCurveMode InterpMode;
 }

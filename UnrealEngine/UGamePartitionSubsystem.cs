@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001874 RID: 6260
+	// Token: 0x020003A0 RID: 928
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGamePartition.GamePartitionSubsystem")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public class UGamePartitionSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060170E0 RID: 94432 RVA: 0x0021982D File Offset: 0x00217A2D
+		// Token: 0x06005BF5 RID: 23541 RVA: 0x00081857 File Offset: 0x0007FA57
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UGamePartitionSubsystem._ClassPtr;
 		}
 
-		// Token: 0x060170E1 RID: 94433 RVA: 0x0021983C File Offset: 0x00217A3C
+		// Token: 0x06005BF6 RID: 23542 RVA: 0x00081864 File Offset: 0x0007FA64
 		public UGamePartitionSubsystem() : this(BuiltinUtils.AllocNativeUObject(UGamePartitionSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060170E2 RID: 94434 RVA: 0x00219864 File Offset: 0x00217A64
+		// Token: 0x06005BF7 RID: 23543 RVA: 0x0008188C File Offset: 0x0007FA8C
 		public UGamePartitionSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UGamePartitionSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005CB4 RID: 23732
-		// (get) Token: 0x060170E3 RID: 94435 RVA: 0x00219898 File Offset: 0x00217A98
-		// (set) Token: 0x060170E4 RID: 94436 RVA: 0x002198D2 File Offset: 0x00217AD2
+		// Token: 0x17001215 RID: 4629
+		// (get) Token: 0x06005BF8 RID: 23544 RVA: 0x000818C0 File Offset: 0x0007FAC0
+		// (set) Token: 0x06005BF9 RID: 23545 RVA: 0x000818FA File Offset: 0x0007FAFA
 		public TFixedArray<UGamePartition> GamePartition
 		{
 			get
@@ -50,41 +50,41 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060170E5 RID: 94437 RVA: 0x002198E0 File Offset: 0x00217AE0
+		// Token: 0x06005BFA RID: 23546 RVA: 0x00081908 File Offset: 0x0007FB08
 		[NullableContext(2)]
 		public UGamePartition GetGamePartition(EGamePartitionCellSizeType CellSizeType = EGamePartitionCellSizeType.Default)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UGamePartition>(UGamePartitionSubsystem.__GetGamePartition_Internal(base.NativePtr, CellSizeType));
 		}
 
-		// Token: 0x060170E6 RID: 94438
+		// Token: 0x06005BFB RID: 23547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetGamePartition_Internal(IntPtr @this, EGamePartitionCellSizeType CellSizeType);
 
-		// Token: 0x060170E7 RID: 94439 RVA: 0x002198F3 File Offset: 0x00217AF3
+		// Token: 0x06005BFC RID: 23548 RVA: 0x0008191B File Offset: 0x0007FB1B
 		static UGamePartitionSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGamePartition.GamePartitionSubsystem");
 		}
 
-		// Token: 0x060170E8 RID: 94440 RVA: 0x00219901 File Offset: 0x00217B01
+		// Token: 0x06005BFD RID: 23549 RVA: 0x00081929 File Offset: 0x0007FB29
 		protected UGamePartitionSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C827 RID: 51239
+		// Token: 0x04002644 RID: 9796
 		public new const string __ObjectPath = "/Script/KuroGamePartition.GamePartitionSubsystem";
 
-		// Token: 0x0400C828 RID: 51240
+		// Token: 0x04002645 RID: 9797
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C829 RID: 51241
+		// Token: 0x04002646 RID: 9798
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C82A RID: 51242
+		// Token: 0x04002647 RID: 9799
 		internal static int __PropertyOffset_GamePartition;
 
-		// Token: 0x0400C82B RID: 51243
+		// Token: 0x04002648 RID: 9800
 		[Nullable(new byte[]
 		{
 			2,

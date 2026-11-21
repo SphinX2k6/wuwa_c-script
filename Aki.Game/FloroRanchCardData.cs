@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AF0 RID: 6896
+// Token: 0x02000FAF RID: 4015
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchCardData : IFloroRanchCardOrToyData
 {
-	// Token: 0x0600CCAB RID: 52395 RVA: 0x002EBFCF File Offset: 0x002EA1CF
+	// Token: 0x0600A0BC RID: 41148 RVA: 0x002F70BB File Offset: 0x002F52BB
 	public FloroRanchCardData(FloroRanchCard config)
 	{
 		this.Config = config;
 		this.TagData.SetTagId(this.Config.Tag);
 	}
 
-	// Token: 0x170010DC RID: 4316
-	// (get) Token: 0x0600CCAC RID: 52396 RVA: 0x002EC000 File Offset: 0x002EA200
+	// Token: 0x17001101 RID: 4353
+	// (get) Token: 0x0600A0BD RID: 41149 RVA: 0x002F70EC File Offset: 0x002F52EC
 	public int Id
 	{
 		get
@@ -24,14 +24,14 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x0600CCAD RID: 52397 RVA: 0x002EC01C File Offset: 0x002EA21C
+	// Token: 0x0600A0BE RID: 41150 RVA: 0x002F7108 File Offset: 0x002F5308
 	public string GetName()
 	{
 		return this.Config.Name;
 	}
 
-	// Token: 0x170010DD RID: 4317
-	// (get) Token: 0x0600CCAE RID: 52398 RVA: 0x002EC038 File Offset: 0x002EA238
+	// Token: 0x17001102 RID: 4354
+	// (get) Token: 0x0600A0BF RID: 41151 RVA: 0x002F7124 File Offset: 0x002F5324
 	public string Name
 	{
 		get
@@ -40,8 +40,8 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x170010DE RID: 4318
-	// (get) Token: 0x0600CCAF RID: 52399 RVA: 0x002EC059 File Offset: 0x002EA259
+	// Token: 0x17001103 RID: 4355
+	// (get) Token: 0x0600A0C0 RID: 41152 RVA: 0x002F7145 File Offset: 0x002F5345
 	public string Desc
 	{
 		get
@@ -50,88 +50,88 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x0600CCB0 RID: 52400 RVA: 0x002EC068 File Offset: 0x002EA268
+	// Token: 0x0600A0C1 RID: 41153 RVA: 0x002F7154 File Offset: 0x002F5354
 	public FloroRanchRarityData GetCardQualityData()
 	{
 		int rarityId = this.Config.RarityId;
 		return FloroRanchModel.Instance.GetFloroRanchRarity(rarityId);
 	}
 
-	// Token: 0x0600CCB1 RID: 52401 RVA: 0x002EC090 File Offset: 0x002EA290
+	// Token: 0x0600A0C2 RID: 41154 RVA: 0x002F717C File Offset: 0x002F537C
 	public int GetDeleteCost()
 	{
 		return this.Config.Cost;
 	}
 
-	// Token: 0x0600CCB2 RID: 52402 RVA: 0x002EC0AC File Offset: 0x002EA2AC
+	// Token: 0x0600A0C3 RID: 41155 RVA: 0x002F7198 File Offset: 0x002F5398
 	public string GetIcon()
 	{
 		return this.Config.Icon;
 	}
 
-	// Token: 0x0600CCB3 RID: 52403 RVA: 0x002EC0C8 File Offset: 0x002EA2C8
+	// Token: 0x0600A0C4 RID: 41156 RVA: 0x002F71B4 File Offset: 0x002F53B4
 	public string GetRaceName()
 	{
 		int race = this.Config.Race;
 		return FloroRanchModel.Instance.GetFloroRanchRaceData(race).GetRaceName();
 	}
 
-	// Token: 0x0600CCB4 RID: 52404 RVA: 0x002EC0F4 File Offset: 0x002EA2F4
+	// Token: 0x0600A0C5 RID: 41157 RVA: 0x002F71E0 File Offset: 0x002F53E0
 	public int GetBasicSalary()
 	{
 		return this.Config.Salary;
 	}
 
-	// Token: 0x0600CCB5 RID: 52405 RVA: 0x002EC110 File Offset: 0x002EA310
+	// Token: 0x0600A0C6 RID: 41158 RVA: 0x002F71FC File Offset: 0x002F53FC
 	public int GetRace()
 	{
 		return this.Config.Race;
 	}
 
-	// Token: 0x0600CCB6 RID: 52406 RVA: 0x002EC12C File Offset: 0x002EA32C
+	// Token: 0x0600A0C7 RID: 41159 RVA: 0x002F7218 File Offset: 0x002F5418
 	public int GetRarity()
 	{
 		return this.Config.RarityId;
 	}
 
-	// Token: 0x0600CCB7 RID: 52407 RVA: 0x002EC148 File Offset: 0x002EA348
+	// Token: 0x0600A0C8 RID: 41160 RVA: 0x002F7234 File Offset: 0x002F5434
 	public int GetCardSalary()
 	{
 		return this.Config.Salary;
 	}
 
-	// Token: 0x0600CCB8 RID: 52408 RVA: 0x002EC164 File Offset: 0x002EA364
+	// Token: 0x0600A0C9 RID: 41161 RVA: 0x002F7250 File Offset: 0x002F5450
 	public string GetSpineAtlas()
 	{
 		return this.Config.Spine;
 	}
 
-	// Token: 0x0600CCB9 RID: 52409 RVA: 0x002EC180 File Offset: 0x002EA380
+	// Token: 0x0600A0CA RID: 41162 RVA: 0x002F726C File Offset: 0x002F546C
 	public string GetSpineData()
 	{
 		return this.Config.SpineSkeletonData;
 	}
 
-	// Token: 0x0600CCBA RID: 52410 RVA: 0x002EC19C File Offset: 0x002EA39C
+	// Token: 0x0600A0CB RID: 41163 RVA: 0x002F7288 File Offset: 0x002F5488
 	public int GetEvolveItemOffsetY()
 	{
 		return this.Config.EvolveItemOffsetY;
 	}
 
-	// Token: 0x0600CCBB RID: 52411 RVA: 0x002EC1B8 File Offset: 0x002EA3B8
+	// Token: 0x0600A0CC RID: 41164 RVA: 0x002F72A4 File Offset: 0x002F54A4
 	public EFloroRanchCardDirection GetCardDefaultDirection()
 	{
 		return (EFloroRanchCardDirection)this.Config.Towards;
 	}
 
-	// Token: 0x0600CCBC RID: 52412 RVA: 0x002EC1D4 File Offset: 0x002EA3D4
+	// Token: 0x0600A0CD RID: 41165 RVA: 0x002F72C0 File Offset: 0x002F54C0
 	public EFloroRanchSpecialEffectType GetCardSpecialEffect()
 	{
 		return (EFloroRanchSpecialEffectType)this.Config.SpeicalEffectshow;
 	}
 
-	// Token: 0x170010DF RID: 4319
-	// (get) Token: 0x0600CCBD RID: 52413 RVA: 0x002EC1F0 File Offset: 0x002EA3F0
+	// Token: 0x17001104 RID: 4356
+	// (get) Token: 0x0600A0CE RID: 41166 RVA: 0x002F72DC File Offset: 0x002F54DC
 	public bool IsShowInHandBook
 	{
 		get
@@ -140,8 +140,8 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x170010E0 RID: 4320
-	// (get) Token: 0x0600CCBE RID: 52414 RVA: 0x002EC20C File Offset: 0x002EA40C
+	// Token: 0x17001105 RID: 4357
+	// (get) Token: 0x0600A0CF RID: 41167 RVA: 0x002F72F8 File Offset: 0x002F54F8
 	public bool IsSpecialPhantom
 	{
 		get
@@ -150,8 +150,8 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x170010E1 RID: 4321
-	// (get) Token: 0x0600CCBF RID: 52415 RVA: 0x002EC228 File Offset: 0x002EA428
+	// Token: 0x17001106 RID: 4358
+	// (get) Token: 0x0600A0D0 RID: 41168 RVA: 0x002F7314 File Offset: 0x002F5514
 	public string Video
 	{
 		get
@@ -160,9 +160,9 @@ public class FloroRanchCardData : IFloroRanchCardOrToyData
 		}
 	}
 
-	// Token: 0x04005DFC RID: 24060
+	// Token: 0x04005ECB RID: 24267
 	private readonly FloroRanchCard Config;
 
-	// Token: 0x04005DFD RID: 24061
+	// Token: 0x04005ECC RID: 24268
 	public FloroRanchTagData TagData = new FloroRanchTagData();
 }

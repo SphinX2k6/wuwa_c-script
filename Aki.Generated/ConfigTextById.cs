@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009E1 RID: 2529
+	// Token: 0x02000AB6 RID: 2742
 	public class ConfigTextById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003B5A RID: 15194 RVA: 0x001A967D File Offset: 0x001A787D
+		// Token: 0x06004058 RID: 16472 RVA: 0x001C8A11 File Offset: 0x001C6C11
 		static ConfigTextById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTextById.CreateStaticDefaultValue), new Action(ConfigTextById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003B5B RID: 15195 RVA: 0x001A969C File Offset: 0x001A789C
+		// Token: 0x06004059 RID: 16473 RVA: 0x001C8A30 File Offset: 0x001C6C30
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTextById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003B5C RID: 15196 RVA: 0x001A971B File Offset: 0x001A791B
+		// Token: 0x0600405A RID: 16474 RVA: 0x001C8AAF File Offset: 0x001C6CAF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTextById.LogPair = null;
 			ConfigTextById.HandleId = 0;
 		}
 
-		// Token: 0x06003B5D RID: 15197 RVA: 0x001A9729 File Offset: 0x001A7929
+		// Token: 0x0600405B RID: 16475 RVA: 0x001C8ABD File Offset: 0x001C6CBD
 		public static void Init()
 		{
 			ConfigTextById.HandleId = ConfigCommon.InitDataStatement(ConfigTextById.HandleId, "db_text.db", "select BinData from `Text` where Id = ?");
 		}
 
-		// Token: 0x06003B5E RID: 15198 RVA: 0x001A9744 File Offset: 0x001A7944
+		// Token: 0x0600405C RID: 16476 RVA: 0x001C8AD8 File Offset: 0x001C6CD8
 		public static Text? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTextById.HandleId, ConfigTextById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Text?(rootAsText);
 		}
 
-		// Token: 0x0400450D RID: 17677
+		// Token: 0x04004AE0 RID: 19168
 		private const string DB = "db_text.db";
 
-		// Token: 0x0400450E RID: 17678
+		// Token: 0x04004AE1 RID: 19169
 		private const string FILE = "w.文本(通用).xlsx";
 
-		// Token: 0x0400450F RID: 17679
+		// Token: 0x04004AE2 RID: 19170
 		private const string TABLE = "Text";
 
-		// Token: 0x04004510 RID: 17680
+		// Token: 0x04004AE3 RID: 19171
 		private const string COMMAND = "select BinData from `Text` where Id = ?";
 
-		// Token: 0x04004511 RID: 17681
+		// Token: 0x04004AE4 RID: 19172
 		private const string KEY_PREFIX = "TextById";
 
-		// Token: 0x04004512 RID: 17682
+		// Token: 0x04004AE5 RID: 19173
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004513 RID: 17683
+		// Token: 0x04004AE6 RID: 19174
 		private static int HandleId;
 	}
 }

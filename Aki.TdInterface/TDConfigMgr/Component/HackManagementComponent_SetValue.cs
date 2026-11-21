@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000192 RID: 402
+	// Token: 0x020001A9 RID: 425
 	public class HackManagementComponent_SetValue
 	{
-		// Token: 0x0400079C RID: 1948
+		// Token: 0x040007F2 RID: 2034
 		public bool? Disabled;
 
-		// Token: 0x0400079D RID: 1949
+		// Token: 0x040007F3 RID: 2035
 		public bool? EdIsLocked;
 
-		// Token: 0x0400079E RID: 1950
+		// Token: 0x040007F4 RID: 2036
 		public int MaxHackingCount;
 
-		// Token: 0x0400079F RID: 1951
+		// Token: 0x040007F5 RID: 2037
 		public float ValidDistance;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,18 +8,18 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using UnrealEngine;
 
-// Token: 0x020018F8 RID: 6392
+// Token: 0x02000DB1 RID: 3505
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsWeaponComponent : TipsBaseSubComponent
 {
-	// Token: 0x0600BB62 RID: 47970 RVA: 0x002A7764 File Offset: 0x002A5964
+	// Token: 0x06008F4C RID: 36684 RVA: 0x002B1EC4 File Offset: 0x002B00C4
 	public TipsWeaponComponent(UUIItem rootUiItem) : base(rootUiItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_TipsWeapon", rootUiItem, false);
 	}
 
-	// Token: 0x0600BB63 RID: 47971 RVA: 0x002A777C File Offset: 0x002A597C
+	// Token: 0x06008F4D RID: 36685 RVA: 0x002B1EDC File Offset: 0x002B00DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -66,7 +65,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BB64 RID: 47972 RVA: 0x002A7A00 File Offset: 0x002A5C00
+	// Token: 0x06008F4E RID: 36686 RVA: 0x002B2160 File Offset: 0x002B0360
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(5);
@@ -77,7 +76,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		this.StarLayout = new GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData>(base.GetHorizontalLayout(3), new Func<CSharpScript.Game.Module.RoleUi.StarItem>(this.InitStarItem), null, false, true);
 	}
 
-	// Token: 0x0600BB65 RID: 47973 RVA: 0x002A7A76 File Offset: 0x002A5C76
+	// Token: 0x06008F4F RID: 36687 RVA: 0x002B21D6 File Offset: 0x002B03D6
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Data != null)
@@ -87,7 +86,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB66 RID: 47974 RVA: 0x002A7A94 File Offset: 0x002A5C94
+	// Token: 0x06008F50 RID: 36688 RVA: 0x002B21F4 File Offset: 0x002B03F4
 	public override void Refresh(ItemTipsData data)
 	{
 		TipsWeaponData tipsWeaponData = (TipsWeaponData)data;
@@ -129,7 +128,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x0600BB67 RID: 47975 RVA: 0x002A7AE8 File Offset: 0x002A5CE8
+	// Token: 0x06008F51 RID: 36689 RVA: 0x002B2248 File Offset: 0x002B0448
 	private ILayoutItem<TipsAttributeItem> CreateAttributeItem(object data, UUIItem uiItem, int index)
 	{
 		TipsAttributeItem value = new TipsAttributeItem(uiItem, (ITipsAttributeItemData)data);
@@ -140,13 +139,13 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		};
 	}
 
-	// Token: 0x0600BB68 RID: 47976 RVA: 0x002A7B1A File Offset: 0x002A5D1A
+	// Token: 0x06008F52 RID: 36690 RVA: 0x002B227A File Offset: 0x002B047A
 	private CSharpScript.Game.Module.RoleUi.StarItem InitStarItem()
 	{
 		return new CSharpScript.Game.Module.RoleUi.StarItem();
 	}
 
-	// Token: 0x0600BB69 RID: 47977 RVA: 0x002A7B24 File Offset: 0x002A5D24
+	// Token: 0x06008F53 RID: 36691 RVA: 0x002B2284 File Offset: 0x002B0484
 	private void UpdateStar(int breachLevel, int maxLevel)
 	{
 		IStarItemData[] array = new IStarItemData[maxLevel];
@@ -163,10 +162,10 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 			};
 			array[i] = starItemData;
 		}
-		this.StarLayout.RefreshByData(array.ToList<IStarItemData>(), null, false);
+		this.StarLayout.RefreshByData(array, null, false);
 	}
 
-	// Token: 0x0600BB6A RID: 47978 RVA: 0x002A7B94 File Offset: 0x002A5D94
+	// Token: 0x06008F54 RID: 36692 RVA: 0x002B22EF File Offset: 0x002B04EF
 	private void RefreshGetWayPanel(IGetWayItemData[] getWayData)
 	{
 		base.GetItem(12).SetUIActive(getWayData.Length != 0);
@@ -176,7 +175,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB6B RID: 47979 RVA: 0x002A7BB7 File Offset: 0x002A5DB7
+	// Token: 0x06008F55 RID: 36693 RVA: 0x002B2312 File Offset: 0x002B0512
 	private void RefreshLimitTimePanel(string limitTimeTxt)
 	{
 		base.GetItem(13).SetUIActive(limitTimeTxt != null);
@@ -186,7 +185,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB6C RID: 47980 RVA: 0x002A7BE0 File Offset: 0x002A5DE0
+	// Token: 0x06008F56 RID: 36694 RVA: 0x002B233C File Offset: 0x002B053C
 	private void RefreshEquipPanel(bool isEquipped, int? equippedId = null)
 	{
 		base.GetItem(15).SetUIActive(isEquipped);
@@ -202,7 +201,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		}
 	}
 
-	// Token: 0x0600BB6D RID: 47981 RVA: 0x002A7C74 File Offset: 0x002A5E74
+	// Token: 0x06008F57 RID: 36695 RVA: 0x002B23D0 File Offset: 0x002B05D0
 	public override void SetLockButtonShow(bool isShow)
 	{
 		Action action = delegate()
@@ -217,19 +216,19 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 		action();
 	}
 
-	// Token: 0x0400550C RID: 21772
+	// Token: 0x040055B7 RID: 21943
 	[Nullable(2)]
 	private TipsWeaponData Data;
 
-	// Token: 0x0400550D RID: 21773
+	// Token: 0x040055B8 RID: 21944
 	[Nullable(2)]
 	private TipsLockButton TipsLockButton;
 
-	// Token: 0x0400550E RID: 21774
+	// Token: 0x040055B9 RID: 21945
 	[Nullable(2)]
 	private TipsGetWayPanel TipsGetWayPanel;
 
-	// Token: 0x0400550F RID: 21775
+	// Token: 0x040055BA RID: 21946
 	[Nullable(new byte[]
 	{
 		2,
@@ -237,7 +236,7 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 	})]
 	private GenericLayoutNew<TipsAttributeItem> TipsAttributePanel;
 
-	// Token: 0x04005510 RID: 21776
+	// Token: 0x040055BB RID: 21947
 	[Nullable(new byte[]
 	{
 		2,
@@ -246,62 +245,62 @@ public class TipsWeaponComponent : TipsBaseSubComponent
 	})]
 	protected GenericLayout<CSharpScript.Game.Module.RoleUi.StarItem, IStarItemData> StarLayout;
 
-	// Token: 0x02007E73 RID: 32371
+	// Token: 0x02006FFA RID: 28666
 	[NullableContext(0)]
 	private class ETipsWeaponNode
 	{
-		// Token: 0x04029605 RID: 169477
+		// Token: 0x04024931 RID: 149809
 		public const int TxtWeaponType = 0;
 
-		// Token: 0x04029606 RID: 169478
+		// Token: 0x04024932 RID: 149810
 		public const int TxtLevel = 1;
 
-		// Token: 0x04029607 RID: 169479
+		// Token: 0x04024933 RID: 149811
 		public const int TxtLevelLimit = 2;
 
-		// Token: 0x04029608 RID: 169480
+		// Token: 0x04024934 RID: 149812
 		public const int PanelStar = 3;
 
-		// Token: 0x04029609 RID: 169481
+		// Token: 0x04024935 RID: 149813
 		public const int ItemStar = 4;
 
-		// Token: 0x0402960A RID: 169482
+		// Token: 0x04024936 RID: 149814
 		public const int LockButton = 5;
 
-		// Token: 0x0402960B RID: 169483
+		// Token: 0x04024937 RID: 149815
 		public const int PanelAttribute = 6;
 
-		// Token: 0x0402960C RID: 169484
+		// Token: 0x04024938 RID: 149816
 		public const int ItemAttribute = 7;
 
-		// Token: 0x0402960D RID: 169485
+		// Token: 0x04024939 RID: 149817
 		public const int TxtWeaponStage = 8;
 
-		// Token: 0x0402960E RID: 169486
+		// Token: 0x0402493A RID: 149818
 		public const int TxtSkillName = 9;
 
-		// Token: 0x0402960F RID: 169487
+		// Token: 0x0402493B RID: 149819
 		public const int TxtWeaponEffect = 10;
 
-		// Token: 0x04029610 RID: 169488
+		// Token: 0x0402493C RID: 149820
 		public const int TxtDescription = 11;
 
-		// Token: 0x04029611 RID: 169489
+		// Token: 0x0402493D RID: 149821
 		public const int PanelPath = 12;
 
-		// Token: 0x04029612 RID: 169490
+		// Token: 0x0402493E RID: 149822
 		public const int PanelLimitTime = 13;
 
-		// Token: 0x04029613 RID: 169491
+		// Token: 0x0402493F RID: 149823
 		public const int TxtLimitTime = 14;
 
-		// Token: 0x04029614 RID: 169492
+		// Token: 0x04024940 RID: 149824
 		public const int PanelEquip = 15;
 
-		// Token: 0x04029615 RID: 169493
+		// Token: 0x04024941 RID: 149825
 		public const int TextureEquipIcon = 16;
 
-		// Token: 0x04029616 RID: 169494
+		// Token: 0x04024942 RID: 149826
 		public const int TxtEquip = 17;
 	}
 }

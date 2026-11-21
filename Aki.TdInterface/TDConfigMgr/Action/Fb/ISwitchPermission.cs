@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002892 RID: 10386
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B67 RID: 11111
 	public class ISwitchPermission : SwitchSubLevels
 	{
-		// Token: 0x0600E604 RID: 58884 RVA: 0x0021CEA8 File Offset: 0x0021B0A8
+		// Token: 0x0600F433 RID: 62515 RVA: 0x00239E28 File Offset: 0x00238028
 		public static ISwitchPermission Create(ISwitchPermission? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046A2 RID: 18082
-		// (get) Token: 0x0600E605 RID: 58885 RVA: 0x0021CEC7 File Offset: 0x0021B0C7
+		// Token: 0x17004A13 RID: 18963
+		// (get) Token: 0x0600F434 RID: 62516 RVA: 0x00239E47 File Offset: 0x00238047
 		public override ESwitchSubLevelsType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046A3 RID: 18083
-		// (get) Token: 0x0600E606 RID: 58886 RVA: 0x0021CED4 File Offset: 0x0021B0D4
+		// Token: 0x17004A14 RID: 18964
+		// (get) Token: 0x0600F435 RID: 62517 RVA: 0x00239E54 File Offset: 0x00238054
 		public virtual bool IsAllowClientSwitch
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046A4 RID: 18084
-		// (get) Token: 0x0600E607 RID: 58887 RVA: 0x0021CEE4 File Offset: 0x0021B0E4
+		// Token: 0x17004A15 RID: 18965
+		// (get) Token: 0x0600F436 RID: 62518 RVA: 0x00239E64 File Offset: 0x00238064
 		public virtual List<string> Levels
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F2A RID: 32554
+		// Token: 0x040085E9 RID: 34281
 		private ISwitchPermission Instance;
 
-		// Token: 0x04007F2B RID: 32555
+		// Token: 0x040085EA RID: 34282
 		private List<string> _LevelsCache;
 
-		// Token: 0x04007F2C RID: 32556
+		// Token: 0x040085EB RID: 34283
 		private bool _LevelsInited;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002817 RID: 10263
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AEA RID: 10986
 	public class INpcSitDown : INpcLeisureInteractType
 	{
-		// Token: 0x0600E3AA RID: 58282 RVA: 0x00218B8A File Offset: 0x00216D8A
+		// Token: 0x0600F1CF RID: 61903 RVA: 0x002359EE File Offset: 0x00233BEE
 		public static INpcSitDown Create(INpcSitDown? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700453E RID: 17726
-		// (get) Token: 0x0600E3AB RID: 58283 RVA: 0x00218BA9 File Offset: 0x00216DA9
+		// Token: 0x170048A9 RID: 18601
+		// (get) Token: 0x0600F1D0 RID: 61904 RVA: 0x00235A0D File Offset: 0x00233C0D
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700453F RID: 17727
-		// (get) Token: 0x0600E3AC RID: 58284 RVA: 0x00218BB8 File Offset: 0x00216DB8
+		// Token: 0x170048AA RID: 18602
+		// (get) Token: 0x0600F1D1 RID: 61905 RVA: 0x00235A1C File Offset: 0x00233C1C
 		public override bool? KeepState
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004540 RID: 17728
-		// (get) Token: 0x0600E3AD RID: 58285 RVA: 0x00218BEE File Offset: 0x00216DEE
+		// Token: 0x170048AB RID: 18603
+		// (get) Token: 0x0600F1D2 RID: 61906 RVA: 0x00235A52 File Offset: 0x00233C52
 		public virtual IMontageId MontageId
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004541 RID: 17729
-		// (get) Token: 0x0600E3AE RID: 58286 RVA: 0x00218C22 File Offset: 0x00216E22
+		// Token: 0x170048AC RID: 18604
+		// (get) Token: 0x0600F1D3 RID: 61907 RVA: 0x00235A86 File Offset: 0x00233C86
 		public virtual int PosEntityId
 		{
 			get
@@ -72,8 +70,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004542 RID: 17730
-		// (get) Token: 0x0600E3AF RID: 58287 RVA: 0x00218C2F File Offset: 0x00216E2F
+		// Token: 0x170048AD RID: 18605
+		// (get) Token: 0x0600F1D4 RID: 61908 RVA: 0x00235A93 File Offset: 0x00233C93
 		public virtual float Duration
 		{
 			get
@@ -82,14 +80,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E0B RID: 32267
+		// Token: 0x040084C8 RID: 33992
 		private INpcSitDown Instance;
 
-		// Token: 0x04007E0C RID: 32268
+		// Token: 0x040084C9 RID: 33993
 		[Nullable(2)]
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x04007E0D RID: 32269
+		// Token: 0x040084CA RID: 33994
 		private bool _MontageIdInited;
 	}
 }

@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Config
 {
-	// Token: 0x02000160 RID: 352
+	// Token: 0x02000165 RID: 357
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonDbConnectManager : IStaticVariableResetter
 	{
-		// Token: 0x06000C13 RID: 3091 RVA: 0x000390B8 File Offset: 0x000372B8
+		// Token: 0x06000C72 RID: 3186 RVA: 0x00039DFC File Offset: 0x00037FFC
 		static CommonDbConnectManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CommonDbConnectManager.CreateStaticDefaultValue), new Action(CommonDbConnectManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C14 RID: 3092 RVA: 0x000390E1 File Offset: 0x000372E1
+		// Token: 0x06000C73 RID: 3187 RVA: 0x00039E25 File Offset: 0x00038025
 		private static int CreateIncrementId()
 		{
 			return ++CommonDbConnectManager.IncrementId;
 		}
 
-		// Token: 0x06000C15 RID: 3093 RVA: 0x000390F0 File Offset: 0x000372F0
+		// Token: 0x06000C74 RID: 3188 RVA: 0x00039E34 File Offset: 0x00038034
 		[NullableContext(1)]
 		private static ConnectDbObject LruCreator(int incrementId)
 		{
@@ -41,14 +41,14 @@ namespace CSharpScript.Core.Config
 			throw new Exception(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06000C16 RID: 3094 RVA: 0x0003914F File Offset: 0x0003734F
+		// Token: 0x06000C75 RID: 3189 RVA: 0x00039E93 File Offset: 0x00038093
 		[NullableContext(1)]
 		private static void LruClearer(ConnectDbObject data)
 		{
 			data.DisConnectStatement();
 		}
 
-		// Token: 0x06000C17 RID: 3095 RVA: 0x00039158 File Offset: 0x00037358
+		// Token: 0x06000C76 RID: 3190 RVA: 0x00039E9C File Offset: 0x0003809C
 		private static ConnectDbObject CreateOrGetConnectDbObject(int incrementId)
 		{
 			ConnectDbObject connectDbObject = CommonDbConnectManager.DbConnectLru.Get(incrementId);
@@ -71,7 +71,7 @@ namespace CSharpScript.Core.Config
 			return connectDbObject;
 		}
 
-		// Token: 0x06000C18 RID: 3096 RVA: 0x000391E0 File Offset: 0x000373E0
+		// Token: 0x06000C77 RID: 3191 RVA: 0x00039F24 File Offset: 0x00038124
 		[NullableContext(1)]
 		private static CommonDbData InitConnectDbData(string dbName, string command, string culture)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Core.Config
 			return commonDbData;
 		}
 
-		// Token: 0x06000C19 RID: 3097 RVA: 0x0003920C File Offset: 0x0003740C
+		// Token: 0x06000C78 RID: 3192 RVA: 0x00039F50 File Offset: 0x00038150
 		[NullableContext(1)]
 		public static int InitDataStatement(int incrementId, string dbName, string command)
 		{
@@ -96,7 +96,7 @@ namespace CSharpScript.Core.Config
 			return CommonDbConnectManager.InitConnectDbData(dbName, command, string.Empty).IncrementId;
 		}
 
-		// Token: 0x06000C1A RID: 3098 RVA: 0x00039254 File Offset: 0x00037454
+		// Token: 0x06000C79 RID: 3193 RVA: 0x00039F98 File Offset: 0x00038198
 		[NullableContext(1)]
 		public unsafe static int GetLangStatementId(string tableName, string dbName, string command, string culture = "")
 		{
@@ -158,7 +158,7 @@ namespace CSharpScript.Core.Config
 			return incrementId;
 		}
 
-		// Token: 0x06000C1B RID: 3099 RVA: 0x000393B8 File Offset: 0x000375B8
+		// Token: 0x06000C7A RID: 3194 RVA: 0x0003A0FC File Offset: 0x000382FC
 		[NullableContext(1)]
 		public static void ClearLangAllStatementId(string tableName, string dbName)
 		{
@@ -174,7 +174,7 @@ namespace CSharpScript.Core.Config
 			CommonDbConnectManager.HandleIdMap.Remove(key);
 		}
 
-		// Token: 0x06000C1C RID: 3100 RVA: 0x00039434 File Offset: 0x00037634
+		// Token: 0x06000C7B RID: 3195 RVA: 0x0003A178 File Offset: 0x00038378
 		public static bool CheckStatement(int incrementId, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -218,7 +218,7 @@ namespace CSharpScript.Core.Config
 			return result;
 		}
 
-		// Token: 0x06000C1D RID: 3101 RVA: 0x000394D0 File Offset: 0x000376D0
+		// Token: 0x06000C7C RID: 3196 RVA: 0x0003A214 File Offset: 0x00038414
 		public static bool BindBigInt(int incrementId, int bindingIndex, long value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -245,7 +245,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C1E RID: 3102 RVA: 0x00039570 File Offset: 0x00037770
+		// Token: 0x06000C7D RID: 3197 RVA: 0x0003A2B4 File Offset: 0x000384B4
 		public static bool BindInt(int incrementId, int bindingIndex, int value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -272,7 +272,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C1F RID: 3103 RVA: 0x00039610 File Offset: 0x00037810
+		// Token: 0x06000C7E RID: 3198 RVA: 0x0003A354 File Offset: 0x00038554
 		public static bool BindFloat(int incrementId, int bindingIndex, float value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -299,7 +299,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C20 RID: 3104 RVA: 0x000396B0 File Offset: 0x000378B0
+		// Token: 0x06000C7F RID: 3199 RVA: 0x0003A3F4 File Offset: 0x000385F4
 		public static bool BindFloat64(int incrementId, int bindingIndex, double value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -326,7 +326,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C21 RID: 3105 RVA: 0x00039750 File Offset: 0x00037950
+		// Token: 0x06000C80 RID: 3200 RVA: 0x0003A494 File Offset: 0x00038694
 		public static bool BindBool(int incrementId, int bindingIndex, bool value, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -353,7 +353,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C22 RID: 3106 RVA: 0x000397F0 File Offset: 0x000379F0
+		// Token: 0x06000C81 RID: 3201 RVA: 0x0003A534 File Offset: 0x00038734
 		[NullableContext(1)]
 		public static bool BindString(int incrementId, int bindingIndex, string value, [ParamCollection] [Nullable(new byte[]
 		{
@@ -381,7 +381,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C23 RID: 3107 RVA: 0x00039888 File Offset: 0x00037A88
+		// Token: 0x06000C82 RID: 3202 RVA: 0x0003A5CC File Offset: 0x000387CC
 		public static bool Reset(int incrementId, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -406,7 +406,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C24 RID: 3108 RVA: 0x000398F8 File Offset: 0x00037AF8
+		// Token: 0x06000C83 RID: 3203 RVA: 0x0003A63C File Offset: 0x0003883C
 		public static int Step(int incrementId, bool errZero = false, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -450,7 +450,7 @@ namespace CSharpScript.Core.Config
 			return result;
 		}
 
-		// Token: 0x06000C25 RID: 3109 RVA: 0x000399B4 File Offset: 0x00037BB4
+		// Token: 0x06000C84 RID: 3204 RVA: 0x0003A6F8 File Offset: 0x000388F8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -488,7 +488,7 @@ namespace CSharpScript.Core.Config
 			return new ValueTuple<bool, byte[]>(columnValueBytes, item);
 		}
 
-		// Token: 0x06000C26 RID: 3110 RVA: 0x00039A88 File Offset: 0x00037C88
+		// Token: 0x06000C85 RID: 3205 RVA: 0x0003A7CC File Offset: 0x000389CC
 		[NullableContext(0)]
 		public static ValueTuple<bool, int?> GetValueInt(int incrementId, int columnIndex, [ParamCollection] [Nullable(new byte[]
 		{
@@ -516,7 +516,7 @@ namespace CSharpScript.Core.Config
 			return new ValueTuple<bool, int?>(columnValueInt, new int?(value));
 		}
 
-		// Token: 0x06000C27 RID: 3111 RVA: 0x00039B20 File Offset: 0x00037D20
+		// Token: 0x06000C86 RID: 3206 RVA: 0x0003A864 File Offset: 0x00038A64
 		public static void ClearBind(int incrementId)
 		{
 			ConnectDbObject connectDbObject = CommonDbConnectManager.DbConnectLru.Get(incrementId);
@@ -528,7 +528,7 @@ namespace CSharpScript.Core.Config
 			Log.Instance.Error(ELogModule.CommonDbConnect, ELogAuthor.XXJ, "[ClearBind]未调用InitDataStatement进行初始化", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06000C28 RID: 3112 RVA: 0x00039B60 File Offset: 0x00037D60
+		// Token: 0x06000C87 RID: 3207 RVA: 0x0003A8A4 File Offset: 0x00038AA4
 		[NullableContext(1)]
 		public static bool UnloadDb(string dbName)
 		{
@@ -578,7 +578,7 @@ namespace CSharpScript.Core.Config
 			return flag;
 		}
 
-		// Token: 0x06000C29 RID: 3113 RVA: 0x00039C80 File Offset: 0x00037E80
+		// Token: 0x06000C88 RID: 3208 RVA: 0x0003A9C4 File Offset: 0x00038BC4
 		public static void CloseAllConnection()
 		{
 			Log.Instance.Info(ELogModule.CommonDbConnect, ELogAuthor.XXJ, "[CloseAllConnection]关闭所有Db连接", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -588,7 +588,7 @@ namespace CSharpScript.Core.Config
 			ConfigStatementLibSync.CloseAllConnection();
 		}
 
-		// Token: 0x06000C2A RID: 3114 RVA: 0x00039CCC File Offset: 0x00037ECC
+		// Token: 0x06000C89 RID: 3209 RVA: 0x0003AA10 File Offset: 0x00038C10
 		public static void LogConnection()
 		{
 			int size = CommonDbConnectManager.DbConnectLru.Size;
@@ -600,7 +600,7 @@ namespace CSharpScript.Core.Config
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06000C2B RID: 3115 RVA: 0x00039D10 File Offset: 0x00037F10
+		// Token: 0x06000C8A RID: 3210 RVA: 0x0003AA54 File Offset: 0x00038C54
 		public static void DynamicChangeLruCapacity(int capacity)
 		{
 			CommonDbConnectManager.DbConnectLru.Capacity = capacity;
@@ -612,14 +612,14 @@ namespace CSharpScript.Core.Config
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x06000C2C RID: 3116 RVA: 0x00039D54 File Offset: 0x00037F54
+		// Token: 0x06000C8B RID: 3211 RVA: 0x0003AA98 File Offset: 0x00038C98
 		[NullableContext(1)]
 		private static string NormalizeDbName(string dbName)
 		{
 			return dbName.Trim().ToLowerInvariant();
 		}
 
-		// Token: 0x06000C2D RID: 3117 RVA: 0x00039D64 File Offset: 0x00037F64
+		// Token: 0x06000C8C RID: 3212 RVA: 0x0003AAA8 File Offset: 0x00038CA8
 		public static void CreateStaticDefaultValue()
 		{
 			CommonDbConnectManager.InitDataStatementStat = Stat.Create("CommonDbConnectManager.InitDataStatement", "", "");
@@ -650,7 +650,7 @@ namespace CSharpScript.Core.Config
 			CommonDbConnectManager.DbConnectLru = new Lru<int, ConnectDbObject>(db_CONNECT_LRU_SIZE, creator, clearer);
 		}
 
-		// Token: 0x06000C2E RID: 3118 RVA: 0x00039ED0 File Offset: 0x000380D0
+		// Token: 0x06000C8D RID: 3213 RVA: 0x0003AC14 File Offset: 0x00038E14
 		public static void ResetStaticDefaultValue()
 		{
 			CommonDbConnectManager.InitDataStatementStat = null;
@@ -670,43 +670,43 @@ namespace CSharpScript.Core.Config
 			CommonDbConnectManager.DbConnectLru = null;
 		}
 
-		// Token: 0x04000709 RID: 1801
+		// Token: 0x04000718 RID: 1816
 		private static readonly int DB_CONNECT_LRU_SIZE = 200;
 
-		// Token: 0x0400070A RID: 1802
+		// Token: 0x04000719 RID: 1817
 		private static Stat InitDataStatementStat;
 
-		// Token: 0x0400070B RID: 1803
+		// Token: 0x0400071A RID: 1818
 		private static Stat GetLangStatementIdStat;
 
-		// Token: 0x0400070C RID: 1804
+		// Token: 0x0400071B RID: 1819
 		private static Stat BindBigIntStat;
 
-		// Token: 0x0400070D RID: 1805
+		// Token: 0x0400071C RID: 1820
 		private static Stat BindIntStat;
 
-		// Token: 0x0400070E RID: 1806
+		// Token: 0x0400071D RID: 1821
 		private static Stat BindFloatStat;
 
-		// Token: 0x0400070F RID: 1807
+		// Token: 0x0400071E RID: 1822
 		private static Stat BindBoolStat;
 
-		// Token: 0x04000710 RID: 1808
+		// Token: 0x0400071F RID: 1823
 		private static Stat BindStringStat;
 
-		// Token: 0x04000711 RID: 1809
+		// Token: 0x04000720 RID: 1824
 		private static Stat BindFloat64Stat;
 
-		// Token: 0x04000712 RID: 1810
+		// Token: 0x04000721 RID: 1825
 		private static Stat GetValueStat;
 
-		// Token: 0x04000713 RID: 1811
+		// Token: 0x04000722 RID: 1826
 		private static Stat GetValueIntStat;
 
-		// Token: 0x04000714 RID: 1812
+		// Token: 0x04000723 RID: 1827
 		private static int IncrementId;
 
-		// Token: 0x04000715 RID: 1813
+		// Token: 0x04000724 RID: 1828
 		[Nullable(new byte[]
 		{
 			2,
@@ -716,7 +716,7 @@ namespace CSharpScript.Core.Config
 		})]
 		private static Dictionary<string, Dictionary<string, int>> HandleIdMap;
 
-		// Token: 0x04000716 RID: 1814
+		// Token: 0x04000725 RID: 1829
 		[Nullable(new byte[]
 		{
 			2,
@@ -724,7 +724,7 @@ namespace CSharpScript.Core.Config
 		})]
 		private static Dictionary<int, CommonDbData> CommonDbDataMap;
 
-		// Token: 0x04000717 RID: 1815
+		// Token: 0x04000726 RID: 1830
 		[Nullable(new byte[]
 		{
 			2,
@@ -732,7 +732,7 @@ namespace CSharpScript.Core.Config
 		})]
 		private static Lru<int, ConnectDbObject> DbConnectLru;
 
-		// Token: 0x04000718 RID: 1816
+		// Token: 0x04000727 RID: 1831
 		[Nullable(new byte[]
 		{
 			2,
@@ -740,11 +740,11 @@ namespace CSharpScript.Core.Config
 		})]
 		public static Func<CommonDbData, bool> EditorCheckDbReconnectCreated;
 
-		// Token: 0x020001E6 RID: 486
+		// Token: 0x020001EA RID: 490
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040008ED RID: 2285
+			// Token: 0x0400090E RID: 2318
 			[Nullable(new byte[]
 			{
 				0,
@@ -752,7 +752,7 @@ namespace CSharpScript.Core.Config
 			})]
 			public static Func<int, ConnectDbObject> <0>__LruCreator;
 
-			// Token: 0x040008EE RID: 2286
+			// Token: 0x0400090F RID: 2319
 			[Nullable(new byte[]
 			{
 				0,

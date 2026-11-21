@@ -3,17 +3,38 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001E4 RID: 484
+	// Token: 0x020001E9 RID: 489
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LauncherSdkOpenHarmony : LauncherSdkBase
 	{
-		// Token: 0x06000CD6 RID: 3286 RVA: 0x0004E098 File Offset: 0x0004C298
+		// Token: 0x06000D16 RID: 3350 RVA: 0x00050B2C File Offset: 0x0004ED2C
+		[return: Nullable(2)]
+		protected override string ParseGameWindowStateStatusJson(string result)
+		{
+			OpenHarmonyGameWindowStateData openHarmonyGameWindowStateData = JsonSerializer.Deserialize<OpenHarmonyGameWindowStateData>(result, new JsonSerializerOptions
+			{
+				IncludeFields = true,
+				NumberHandling = JsonNumberHandling.AllowReadingFromString
+			});
+			if (openHarmonyGameWindowStateData == null)
+			{
+				return null;
+			}
+			if (openHarmonyGameWindowStateData.status == null)
+			{
+				return null;
+			}
+			return openHarmonyGameWindowStateData.status.GetValueOrDefault().ToString();
+		}
+
+		// Token: 0x06000D17 RID: 3351 RVA: 0x00050B78 File Offset: 0x0004ED78
 		public override void CloseWebView(string reason)
 		{
 			if (PlatformSdkManagerNew.Instance.IsSdkOn)
@@ -37,7 +58,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			}
 		}
 
-		// Token: 0x06000CD7 RID: 3287 RVA: 0x0004E104 File Offset: 0x0004C304
+		// Token: 0x06000D18 RID: 3352 RVA: 0x00050BE4 File Offset: 0x0004EDE4
 		public override void OpenUrl(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier = "Default")
 		{
 			string data = JsonSerializer.Serialize<Dictionary<string, object>>(new Dictionary<string, object>
@@ -82,7 +103,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			UKuroSDKManager.OpenWebView(url, title, isLandscape, transparent, webAccelerated, identifier, data);
 		}
 
-		// Token: 0x06000CD8 RID: 3288 RVA: 0x0004E1BC File Offset: 0x0004C3BC
+		// Token: 0x06000D19 RID: 3353 RVA: 0x00050C9C File Offset: 0x0004EE9C
 		protected override string GetPlatformFontStr()
 		{
 			string value = "Font/" + base.GetDeviceFontAsset();
@@ -97,7 +118,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			return JsonSerializer.Serialize<Dictionary<string, string>>(dictionary, options);
 		}
 
-		// Token: 0x06000CD9 RID: 3289 RVA: 0x0004E218 File Offset: 0x0004C418
+		// Token: 0x06000D1A RID: 3354 RVA: 0x00050CF8 File Offset: 0x0004EEF8
 		public override string GetChannelId()
 		{
 			string sdkParams = UKuroSDKManager.GetSdkParams("");
@@ -105,7 +126,10 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 			{
 				return "";
 			}
-			UserInfo userInfo = JsonSerializer.Deserialize<UserInfo>(sdkParams, null);
+			UserInfo userInfo = JsonSerializer.Deserialize<UserInfo>(sdkParams, new JsonSerializerOptions
+			{
+				IncludeFields = true
+			});
 			return ((userInfo != null) ? userInfo.channelId : null) ?? "";
 		}
 	}

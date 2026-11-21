@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001770 RID: 6000
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018F1 RID: 6385
 	public class IActorFxEmoteStopSockets : IActorFxEmoteStopSubType
 	{
-		// Token: 0x06007F0D RID: 32525 RVA: 0x0012FF50 File Offset: 0x0012E150
+		// Token: 0x060085FD RID: 34301 RVA: 0x0013F1B0 File Offset: 0x0013D3B0
 		private IActorFxEmoteStopSockets_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F0E RID: 32526 RVA: 0x0012FF88 File Offset: 0x0012E188
+		// Token: 0x060085FE RID: 34302 RVA: 0x0013F1E8 File Offset: 0x0013D3E8
 		public static IActorFxEmoteStopSockets Create([Nullable(2)] IActorFxEmoteStopSockets instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F0F RID: 32527 RVA: 0x0012FF9B File Offset: 0x0012E19B
+		// Token: 0x060085FF RID: 34303 RVA: 0x0013F1FB File Offset: 0x0013D3FB
 		public static IActorFxEmoteStopSockets CreateFromSetValue([Nullable(2)] IActorFxEmoteStopSockets_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F10 RID: 32528 RVA: 0x0012FFAE File Offset: 0x0012E1AE
+		// Token: 0x06008600 RID: 34304 RVA: 0x0013F20E File Offset: 0x0013D40E
 		public new IActorFxEmoteStopSockets_SetValue ToSetValue()
 		{
 			return new IActorFxEmoteStopSockets_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029B3 RID: 10675
-		// (get) Token: 0x06007F11 RID: 32529 RVA: 0x0012FFCD File Offset: 0x0012E1CD
-		// (set) Token: 0x06007F12 RID: 32530 RVA: 0x0012FFF8 File Offset: 0x0012E1F8
+		// Token: 0x17002BA1 RID: 11169
+		// (get) Token: 0x06008601 RID: 34305 RVA: 0x0013F22D File Offset: 0x0013D42D
+		// (set) Token: 0x06008602 RID: 34306 RVA: 0x0013F258 File Offset: 0x0013D458
 		public override EActorFxEmoteStopSubType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029B4 RID: 10676
-		// (get) Token: 0x06007F13 RID: 32531 RVA: 0x00130006 File Offset: 0x0012E206
-		// (set) Token: 0x06007F14 RID: 32532 RVA: 0x0013002D File Offset: 0x0012E22D
+		// Token: 0x17002BA2 RID: 11170
+		// (get) Token: 0x06008603 RID: 34307 RVA: 0x0013F266 File Offset: 0x0013D466
+		// (set) Token: 0x06008604 RID: 34308 RVA: 0x0013F28D File Offset: 0x0013D48D
 		public virtual List<string> Sockets
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050D4 RID: 20692
+		// Token: 0x0400550A RID: 21770
 		[Nullable(2)]
 		protected new IActorFxEmoteStopSockets FbInstance;
 
-		// Token: 0x040050D5 RID: 20693
+		// Token: 0x0400550B RID: 21771
 		[Nullable(2)]
 		protected new IActorFxEmoteStopSockets_SetValue PocoInterface;
 	}

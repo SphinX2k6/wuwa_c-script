@@ -2,30 +2,30 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015EE RID: 5614
+	// Token: 0x0200174F RID: 5967
 	public enum EGondolaVoiceTriggeredType
 	{
-		// Token: 0x04004AEA RID: 19178
+		// Token: 0x04004EAD RID: 20141
 		FindTreasure,
-		// Token: 0x04004AEB RID: 19179
+		// Token: 0x04004EAE RID: 20142
 		OpenCompass,
-		// Token: 0x04004AEC RID: 19180
+		// Token: 0x04004EAF RID: 20143
 		KeepMoving,
-		// Token: 0x04004AED RID: 19181
+		// Token: 0x04004EB0 RID: 20144
 		StopMoving,
-		// Token: 0x04004AEE RID: 19182
+		// Token: 0x04004EB1 RID: 20145
 		StayIdle,
-		// Token: 0x04004AEF RID: 19183
+		// Token: 0x04004EB2 RID: 20146
 		InviteRole,
-		// Token: 0x04004AF0 RID: 19184
+		// Token: 0x04004EB3 RID: 20147
 		InArea0,
-		// Token: 0x04004AF1 RID: 19185
+		// Token: 0x04004EB4 RID: 20148
 		InArea1,
-		// Token: 0x04004AF2 RID: 19186
+		// Token: 0x04004EB5 RID: 20149
 		InArea2,
-		// Token: 0x04004AF3 RID: 19187
+		// Token: 0x04004EB6 RID: 20150
 		NearFishingPoint,
-		// Token: 0x04004AF4 RID: 19188
+		// Token: 0x04004EB7 RID: 20151
 		KeepMovingByCustomSec
 	}
 }

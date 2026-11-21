@@ -1,10 +1,10 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02002446 RID: 9286
+// Token: 0x0200192B RID: 6443
 public class VisionAssembleAttrData
 {
-	// Token: 0x060129EE RID: 76270 RVA: 0x004984CC File Offset: 0x004966CC
+	// Token: 0x0600FEA4 RID: 65188 RVA: 0x004A5A98 File Offset: 0x004A3C98
 	public int GetPriority()
 	{
 		int[] visionAttrSortArray = PhantomBattleConfig.Instance.GetVisionAttrSortArray();
@@ -24,7 +24,7 @@ public class VisionAssembleAttrData
 		return 999 - num;
 	}
 
-	// Token: 0x060129EF RID: 76271 RVA: 0x00498510 File Offset: 0x00496710
+	// Token: 0x0600FEA5 RID: 65189 RVA: 0x004A5ADC File Offset: 0x004A3CDC
 	public int GetId()
 	{
 		PropertyIndex? propertyIndexInfo = PropertyIndexConfig.Instance.GetPropertyIndexInfo(this.AttrId);
@@ -35,21 +35,21 @@ public class VisionAssembleAttrData
 		return propertyIndexInfo.Value.Id;
 	}
 
-	// Token: 0x04008C58 RID: 35928
+	// Token: 0x04008D9F RID: 36255
 	public bool CompareMode;
 
-	// Token: 0x04008C59 RID: 35929
+	// Token: 0x04008DA0 RID: 36256
 	public int AttrId;
 
-	// Token: 0x04008C5A RID: 35930
+	// Token: 0x04008DA1 RID: 36257
 	public bool IfPercentage;
 
-	// Token: 0x04008C5B RID: 35931
+	// Token: 0x04008DA2 RID: 36258
 	public int CurrentValue;
 
-	// Token: 0x04008C5C RID: 35932
+	// Token: 0x04008DA3 RID: 36259
 	public int CompareValue;
 
-	// Token: 0x04008C5D RID: 35933
+	// Token: 0x04008DA4 RID: 36260
 	public bool IsHighLight;
 }

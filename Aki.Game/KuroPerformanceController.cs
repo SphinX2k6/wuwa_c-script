@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Teleport;
 using UnrealEngine;
 
-// Token: 0x02002050 RID: 8272
+// Token: 0x02001523 RID: 5411
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class KuroPerformanceController : ControllerBase
 {
-	// Token: 0x0601040D RID: 66573 RVA: 0x003F6964 File Offset: 0x003F4B64
+	// Token: 0x0600D875 RID: 55413 RVA: 0x00402F30 File Offset: 0x00401130
 	protected override bool OnInit()
 	{
 		this.IsEnable = UKuroPerformanceBPLibrary.IsPerformanceAdaptiveInitialize();
@@ -44,11 +43,10 @@ public class KuroPerformanceController : ControllerBase
 		EventSystem.Instance.Add<bool, bool>(EEventName.ChangePerformanceLimitMode, new Action<bool, bool>(this.OnPerformanceLimitModeChanged));
 		EventSystem.Instance.Add<bool>(EEventName.TeleportStart, new Action<bool>(this.OnTeleportStart));
 		EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
-		this.ReportDelegate = this.CreatePerformanceReportDelegate();
 		return true;
 	}
 
-	// Token: 0x0601040E RID: 66574 RVA: 0x003F6AD0 File Offset: 0x003F4CD0
+	// Token: 0x0600D876 RID: 55414 RVA: 0x00403090 File Offset: 0x00401290
 	private void ApplicationHasEnteredForeground()
 	{
 		bool flag = UKuroPerformanceBPLibrary.SetForeground(true);
@@ -60,7 +58,7 @@ public class KuroPerformanceController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601040F RID: 66575 RVA: 0x003F6B14 File Offset: 0x003F4D14
+	// Token: 0x0600D877 RID: 55415 RVA: 0x004030D4 File Offset: 0x004012D4
 	private void ApplicationWillEnterBackground()
 	{
 		bool flag = UKuroPerformanceBPLibrary.SetForeground(false);
@@ -72,7 +70,7 @@ public class KuroPerformanceController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010410 RID: 66576 RVA: 0x003F6B58 File Offset: 0x003F4D58
+	// Token: 0x0600D878 RID: 55416 RVA: 0x00403118 File Offset: 0x00401318
 	protected override bool OnClear()
 	{
 		if (!this.IsEnable)
@@ -91,7 +89,7 @@ public class KuroPerformanceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010411 RID: 66577 RVA: 0x003F6C39 File Offset: 0x003F4E39
+	// Token: 0x0600D879 RID: 55417 RVA: 0x004031F9 File Offset: 0x004013F9
 	protected override void OnTick(float delta)
 	{
 		if (!this.IsEnable)
@@ -106,7 +104,7 @@ public class KuroPerformanceController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010412 RID: 66578 RVA: 0x003F6C70 File Offset: 0x003F4E70
+	// Token: 0x0600D87A RID: 55418 RVA: 0x00403230 File Offset: 0x00401430
 	private void OnBattleStateChanged(bool bStart)
 	{
 		if (bStart)
@@ -117,7 +115,7 @@ public class KuroPerformanceController : ControllerBase
 		this.Close(this.BattleHandle);
 	}
 
-	// Token: 0x06010413 RID: 66579 RVA: 0x003F6C93 File Offset: 0x003F4E93
+	// Token: 0x0600D87B RID: 55419 RVA: 0x00403253 File Offset: 0x00401453
 	private void OnSettingFrameRateChanged(int frameRate)
 	{
 		if (this.PerformanceMap.Count > 0)
@@ -127,7 +125,7 @@ public class KuroPerformanceController : ControllerBase
 		UKuroPerformanceBPLibrary.UpdateGameConfigFPS(frameRate);
 	}
 
-	// Token: 0x06010414 RID: 66580 RVA: 0x003F6CB2 File Offset: 0x003F4EB2
+	// Token: 0x0600D87C RID: 55420 RVA: 0x00403272 File Offset: 0x00401472
 	private void OnPerformanceLimitModeChanged(bool isPerformanceLimitMode, bool forceDisable)
 	{
 		if (isPerformanceLimitMode && !forceDisable)
@@ -138,7 +136,7 @@ public class KuroPerformanceController : ControllerBase
 		this.Close(this.PerformanceLimitModeHandle);
 	}
 
-	// Token: 0x06010415 RID: 66581 RVA: 0x003F6CD8 File Offset: 0x003F4ED8
+	// Token: 0x0600D87D RID: 55421 RVA: 0x00403298 File Offset: 0x00401498
 	private void OnTeleportStart(bool _)
 	{
 		bool flag = UKuroPerformanceBPLibrary.UpdateGameConfigSceneTransition(true);
@@ -150,7 +148,7 @@ public class KuroPerformanceController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010416 RID: 66582 RVA: 0x003F6D1C File Offset: 0x003F4F1C
+	// Token: 0x0600D87E RID: 55422 RVA: 0x004032DC File Offset: 0x004014DC
 	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext _)
 	{
@@ -163,7 +161,7 @@ public class KuroPerformanceController : ControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010417 RID: 66583 RVA: 0x003F6D60 File Offset: 0x003F4F60
+	// Token: 0x0600D87F RID: 55423 RVA: 0x00403320 File Offset: 0x00401520
 	public unsafe int Open(string reason)
 	{
 		int num = this.PerformanceCount + 1;
@@ -186,7 +184,7 @@ public class KuroPerformanceController : ControllerBase
 		return num2;
 	}
 
-	// Token: 0x06010418 RID: 66584 RVA: 0x003F6E0C File Offset: 0x003F500C
+	// Token: 0x0600D880 RID: 55424 RVA: 0x004033CC File Offset: 0x004015CC
 	public unsafe void Close(int handle)
 	{
 		string item;
@@ -216,56 +214,19 @@ public class KuroPerformanceController : ControllerBase
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06010419 RID: 66585 RVA: 0x003F6ED8 File Offset: 0x003F50D8
+	// Token: 0x0600D881 RID: 55425 RVA: 0x00403498 File Offset: 0x00401698
 	private void TickPerformanceAdaptive()
 	{
-		if (this.PerformanceMap.Count > 0)
-		{
-			MethodInfo method = typeof(UKuroPerformanceBPLibrary).GetMethod("GetTickedPerformanceReportAndAdvice", BindingFlags.Static | BindingFlags.Public);
-			if (method != null)
-			{
-				method.Invoke(null, new object[]
-				{
-					this.ReportDelegate
-				});
-			}
-		}
+		int count = this.PerformanceMap.Count;
 	}
 
-	// Token: 0x0601041A RID: 66586 RVA: 0x003F6F2C File Offset: 0x003F512C
-	[NullableContext(2)]
-	private Delegate CreatePerformanceReportDelegate()
-	{
-		MethodInfo method = base.GetType().GetMethod("OnGetTickedPerformanceReportAndAdvice", BindingFlags.Instance | BindingFlags.NonPublic);
-		MethodInfo method2 = typeof(UKuroPerformanceBPLibrary).GetMethod("GetTickedPerformanceReportAndAdvice", BindingFlags.Static | BindingFlags.Public);
-		if (method == null || method2 == null)
-		{
-			return null;
-		}
-		ParameterInfo[] parameters = method2.GetParameters();
-		if (parameters.Length != 1)
-		{
-			return null;
-		}
-		Delegate result;
-		try
-		{
-			result = Delegate.CreateDelegate(parameters[0].ParameterType, this, method, false);
-		}
-		catch
-		{
-			result = null;
-		}
-		return result;
-	}
-
-	// Token: 0x0601041B RID: 66587 RVA: 0x003F6FB0 File Offset: 0x003F51B0
+	// Token: 0x0600D882 RID: 55426 RVA: 0x004034A8 File Offset: 0x004016A8
 	private void OnGetTickedPerformanceReportAndAdvice(FKuroPerformanceReport performanceReport)
 	{
 	}
 
-	// Token: 0x170013F3 RID: 5107
-	// (get) Token: 0x0601041C RID: 66588 RVA: 0x003F6FBD File Offset: 0x003F51BD
+	// Token: 0x17001420 RID: 5152
+	// (get) Token: 0x0600D883 RID: 55427 RVA: 0x004034B5 File Offset: 0x004016B5
 	public static KuroPerformanceController Instance
 	{
 		get
@@ -274,7 +235,7 @@ public class KuroPerformanceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601041D RID: 66589 RVA: 0x003F6FC4 File Offset: 0x003F51C4
+	// Token: 0x0600D884 RID: 55428 RVA: 0x004034BC File Offset: 0x004016BC
 	public static KuroPerformanceController GetOrCreateInstance()
 	{
 		if (KuroPerformanceController._Instance == null)
@@ -284,7 +245,7 @@ public class KuroPerformanceController : ControllerBase
 		return KuroPerformanceController._Instance;
 	}
 
-	// Token: 0x0601041E RID: 66590 RVA: 0x003F6FD8 File Offset: 0x003F51D8
+	// Token: 0x0600D885 RID: 55429 RVA: 0x004034D0 File Offset: 0x004016D0
 	public static bool CreateInstance()
 	{
 		if (KuroPerformanceController._Instance != null)
@@ -295,58 +256,58 @@ public class KuroPerformanceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601041F RID: 66591 RVA: 0x003F6FEE File Offset: 0x003F51EE
+	// Token: 0x0600D886 RID: 55430 RVA: 0x004034E6 File Offset: 0x004016E6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010420 RID: 66592 RVA: 0x003F6FF0 File Offset: 0x003F51F0
+	// Token: 0x0600D887 RID: 55431 RVA: 0x004034E8 File Offset: 0x004016E8
 	public static void ResetStaticDefaultValue()
 	{
 		KuroPerformanceController._Instance = null;
 	}
 
-	// Token: 0x06010421 RID: 66593 RVA: 0x003F6FF8 File Offset: 0x003F51F8
+	// Token: 0x0600D888 RID: 55432 RVA: 0x004034F0 File Offset: 0x004016F0
 	static KuroPerformanceController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KuroPerformanceController.CreateStaticDefaultValue), new Action(KuroPerformanceController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007833 RID: 30771
+	// Token: 0x0400791C RID: 31004
 	private const bool BOOST_SWITCH = true;
 
-	// Token: 0x04007834 RID: 30772
+	// Token: 0x0400791D RID: 31005
 	private const float GAP_TIME = 1000f;
 
-	// Token: 0x04007835 RID: 30773
+	// Token: 0x0400791E RID: 31006
 	private const int SERVICE_CODE = 79;
 
-	// Token: 0x04007836 RID: 30774
+	// Token: 0x0400791F RID: 31007
 	public bool IsEnable = true;
 
-	// Token: 0x04007837 RID: 30775
+	// Token: 0x04007920 RID: 31008
 	private float TimeCount;
 
-	// Token: 0x04007838 RID: 30776
+	// Token: 0x04007921 RID: 31009
 	private int PerformanceCount;
 
-	// Token: 0x04007839 RID: 30777
+	// Token: 0x04007922 RID: 31010
 	private readonly Dictionary<int, string> PerformanceMap = new Dictionary<int, string>();
 
-	// Token: 0x0400783A RID: 30778
+	// Token: 0x04007923 RID: 31011
 	private int BattleHandle;
 
-	// Token: 0x0400783B RID: 30779
+	// Token: 0x04007924 RID: 31012
 	private int PerformanceLimitModeHandle;
 
-	// Token: 0x0400783C RID: 30780
+	// Token: 0x04007925 RID: 31013
 	private const bool DebugLogEnabled = false;
 
-	// Token: 0x0400783D RID: 30781
+	// Token: 0x04007926 RID: 31014
 	[Nullable(2)]
-	private Delegate ReportDelegate;
+	private FGetTickedPerformanceReportAndAdviceDelegate ReportDelegate;
 
-	// Token: 0x0400783E RID: 30782
+	// Token: 0x04007927 RID: 31015
 	[Nullable(2)]
 	private static KuroPerformanceController _Instance;
 }

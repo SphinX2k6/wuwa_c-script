@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200235F RID: 9055
+	// Token: 0x020025D4 RID: 9684
 	public static class EInteractIconExtensions
 	{
-		// Token: 0x0600C5AA RID: 50602 RVA: 0x001CD854 File Offset: 0x001CBA54
+		// Token: 0x0600D194 RID: 53652 RVA: 0x001E5B34 File Offset: 0x001E3D34
 		public static string ToEnumString(this EInteractIcon value)
 		{
 			string result;
@@ -183,7 +183,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5AB RID: 50603 RVA: 0x001CDB88 File Offset: 0x001CBD88
+		// Token: 0x0600D195 RID: 53653 RVA: 0x001E5E68 File Offset: 0x001E4068
 		public static EInteractIcon FromString(string name)
 		{
 			EInteractIcon result;
@@ -194,7 +194,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5AC RID: 50604 RVA: 0x001CDBB4 File Offset: 0x001CBDB4
+		// Token: 0x0600D196 RID: 53654 RVA: 0x001E5E94 File Offset: 0x001E4094
 		public static bool TryFromString(string name, out EInteractIcon value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -742,7 +742,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C5AD RID: 50605 RVA: 0x001CE498 File Offset: 0x001CC698
+		// Token: 0x0600D197 RID: 53655 RVA: 0x001E6778 File Offset: 0x001E4978
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -805,7 +805,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5AE RID: 50606 RVA: 0x001CE692 File Offset: 0x001CC892
+		// Token: 0x0600D198 RID: 53656 RVA: 0x001E6972 File Offset: 0x001E4B72
 		public static EInteractIcon[] GetValues()
 		{
 			return new EInteractIcon[]
@@ -868,7 +868,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5AF RID: 50607 RVA: 0x001CE6A8 File Offset: 0x001CC8A8
+		// Token: 0x0600D199 RID: 53657 RVA: 0x001E6988 File Offset: 0x001E4B88
 		public static string[] GetNames()
 		{
 			return new string[]

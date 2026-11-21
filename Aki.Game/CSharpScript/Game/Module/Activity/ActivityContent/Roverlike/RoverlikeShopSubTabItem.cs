@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006174 RID: 24948
+	// Token: 0x020050F2 RID: 20722
 	public class RoverlikeShopSubTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F108 RID: 258312 RVA: 0x00F3D5CC File Offset: 0x00F3B7CC
+		// Token: 0x06033DC8 RID: 212424 RVA: 0x00E844A0 File Offset: 0x00E826A0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,20 +31,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F109 RID: 258313 RVA: 0x00F3D672 File Offset: 0x00F3B872
+		// Token: 0x06033DC9 RID: 212425 RVA: 0x00E84546 File Offset: 0x00E82746
 		public void SetShopId(int shopId)
 		{
 			this.ShopId = shopId;
 		}
 
-		// Token: 0x0603F10A RID: 258314 RVA: 0x00F3D67B File Offset: 0x00F3B87B
+		// Token: 0x06033DCA RID: 212426 RVA: 0x00E8454F File Offset: 0x00E8274F
 		[NullableContext(1)]
 		public void SetOnToggle(Action<int> callback)
 		{
 			this.OnToggle = callback;
 		}
 
-		// Token: 0x0603F10B RID: 258315 RVA: 0x00F3D684 File Offset: 0x00F3B884
+		// Token: 0x06033DCB RID: 212427 RVA: 0x00E84558 File Offset: 0x00E82758
 		public override void Refresh(int dataId, bool isSelected, int gridIndex)
 		{
 			this.TabId = dataId;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetText((payShopTabDataByPayShopIdAndTabId != null) ? payShopTabDataByPayShopIdAndTabId.Name : "", true);
 		}
 
-		// Token: 0x0603F10C RID: 258316 RVA: 0x00F3D6CC File Offset: 0x00F3B8CC
+		// Token: 0x06033DCC RID: 212428 RVA: 0x00E845A0 File Offset: 0x00E827A0
 		public void SetToggleState(bool bSelected)
 		{
 			EToggleState state = bSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -69,14 +69,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603F10D RID: 258317 RVA: 0x00F3D6F7 File Offset: 0x00F3B8F7
+		// Token: 0x06033DCD RID: 212429 RVA: 0x00E845CB File Offset: 0x00E827CB
 		[NullableContext(1)]
 		public override object GetKey(int data, int displayIndex)
 		{
 			return data;
 		}
 
-		// Token: 0x0603F10E RID: 258318 RVA: 0x00F3D6FF File Offset: 0x00F3B8FF
+		// Token: 0x06033DCE RID: 212430 RVA: 0x00E845D3 File Offset: 0x00E827D3
 		private void OnToggleClick(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -90,26 +90,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020E37 RID: 134711
+		// Token: 0x0401B764 RID: 112484
 		private int ShopId;
 
-		// Token: 0x04020E38 RID: 134712
+		// Token: 0x0401B765 RID: 112485
 		private int TabId;
 
-		// Token: 0x04020E39 RID: 134713
+		// Token: 0x0401B766 RID: 112486
 		[Nullable(2)]
 		private Action<int> OnToggle;
 
-		// Token: 0x0200C3DD RID: 50141
+		// Token: 0x0200ADC4 RID: 44484
 		private class EComponent
 		{
-			// Token: 0x0403B1A7 RID: 242087
+			// Token: 0x04035B08 RID: 219912
 			public const int Name = 0;
 
-			// Token: 0x0403B1A8 RID: 242088
+			// Token: 0x04035B09 RID: 219913
 			public const int Toggle = 1;
 
-			// Token: 0x0403B1A9 RID: 242089
+			// Token: 0x04035B0A RID: 219914
 			public const int Reddot = 2;
 		}
 	}

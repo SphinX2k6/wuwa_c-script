@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F23 RID: 16163
+	// Token: 0x02004361 RID: 17249
 	public enum IMechaTrackScoreDetectionType_Union : byte
 	{
-		// Token: 0x0400B92A RID: 47402
+		// Token: 0x0400C307 RID: 49927
 		NONE,
-		// Token: 0x0400B92B RID: 47403
+		// Token: 0x0400C308 RID: 49928
 		IMechaTrackScoreDetectionType,
-		// Token: 0x0400B92C RID: 47404
+		// Token: 0x0400C309 RID: 49929
 		IMechaTrackScoreStuntAction,
-		// Token: 0x0400B92D RID: 47405
+		// Token: 0x0400C30A RID: 49930
 		IMechaTrackScoreMechanismState,
-		// Token: 0x0400B92E RID: 47406
+		// Token: 0x0400C30B RID: 49931
 		IMechaTrackScoreTagDetection
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200591B RID: 22811
+	// Token: 0x020048F4 RID: 18676
 	public class InfrMaterialsDeliveryLockItem : InfrMaterialsDeliveryLockItemBase
 	{
-		// Token: 0x06039EE7 RID: 237287 RVA: 0x00DC46B0 File Offset: 0x00DC28B0
+		// Token: 0x0602EE0A RID: 192010 RVA: 0x00D139A4 File Offset: 0x00D11BA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,14 +32,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039EE8 RID: 237288 RVA: 0x00DC4777 File Offset: 0x00DC2977
+		// Token: 0x0602EE0B RID: 192011 RVA: 0x00D13A6B File Offset: 0x00D11C6B
 		[NullableContext(1)]
 		public void SetOnClickFunction(Action cb)
 		{
 			this.OnClickFunctionCb = cb;
 		}
 
-		// Token: 0x06039EE9 RID: 237289 RVA: 0x00DC4780 File Offset: 0x00DC2980
+		// Token: 0x0602EE0C RID: 192012 RVA: 0x00D13A74 File Offset: 0x00D11C74
 		private void OnClickFunction()
 		{
 			Action onClickFunctionCb = this.OnClickFunctionCb;
@@ -50,20 +50,20 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickFunctionCb();
 		}
 
-		// Token: 0x0401E349 RID: 123721
+		// Token: 0x04018DE6 RID: 101862
 		[Nullable(1)]
 		private Action OnClickFunctionCb;
 
-		// Token: 0x0200BBA3 RID: 48035
+		// Token: 0x0200A5B3 RID: 42419
 		private class EChildType
 		{
-			// Token: 0x04038A64 RID: 232036
+			// Token: 0x0403344A RID: 209994
 			public const int LockSprite = 0;
 
-			// Token: 0x04038A65 RID: 232037
+			// Token: 0x0403344B RID: 209995
 			public const int LockDescriptionText = 1;
 
-			// Token: 0x04038A66 RID: 232038
+			// Token: 0x0403344C RID: 209996
 			public const int FunctionButton = 2;
 		}
 	}

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EB4 RID: 24244
+	// Token: 0x02004E99 RID: 20121
 	public enum EWorldDungeonSubType
 	{
-		// Token: 0x04020304 RID: 131844
+		// Token: 0x0401ADCB RID: 110027
 		Default,
-		// Token: 0x04020305 RID: 131845
+		// Token: 0x0401ADCC RID: 110028
 		DangoSmallWorld,
-		// Token: 0x04020306 RID: 131846
+		// Token: 0x0401ADCD RID: 110029
 		SpringManorWorld
 	}
 }

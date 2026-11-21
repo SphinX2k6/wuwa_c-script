@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 {
-	// Token: 0x02006544 RID: 25924
+	// Token: 0x020054C2 RID: 21698
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityMatchThreeSubView : ActivitySubViewBase
 	{
-		// Token: 0x06040FBB RID: 266171 RVA: 0x00FBF5D1 File Offset: 0x00FBD7D1
+		// Token: 0x06035C80 RID: 220288 RVA: 0x00F065C1 File Offset: 0x00F047C1
 		protected override void OnSetData()
 		{
 			this.MatchThreeData = (this.ActivityBaseData as ActivityMatchThreeData);
 		}
 
-		// Token: 0x06040FBC RID: 266172 RVA: 0x00FBF5E4 File Offset: 0x00FBD7E4
+		// Token: 0x06035C81 RID: 220289 RVA: 0x00F065D4 File Offset: 0x00F047D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040FBD RID: 266173 RVA: 0x00FBF670 File Offset: 0x00FBD870
+		// Token: 0x06035C82 RID: 220290 RVA: 0x00F06660 File Offset: 0x00F04860
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityMatchThreeSubView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,28 +48,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040FBE RID: 266174 RVA: 0x00FBF6B3 File Offset: 0x00FBD8B3
+		// Token: 0x06035C83 RID: 220291 RVA: 0x00F066A3 File Offset: 0x00F048A3
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnActivityRedDotRefresh));
 			EventSystem.Instance.Add<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 		}
 
-		// Token: 0x06040FBF RID: 266175 RVA: 0x00FBF6ED File Offset: 0x00FBD8ED
+		// Token: 0x06035C84 RID: 220292 RVA: 0x00F066DD File Offset: 0x00F048DD
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnActivityRedDotRefresh));
 			EventSystem.Instance.Remove<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 		}
 
-		// Token: 0x06040FC0 RID: 266176 RVA: 0x00FBF727 File Offset: 0x00FBD927
+		// Token: 0x06035C85 RID: 220293 RVA: 0x00F06717 File Offset: 0x00F04917
 		protected override void OnStart()
 		{
 			this.RefreshProgress();
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06040FC1 RID: 266177 RVA: 0x00FBF735 File Offset: 0x00FBD935
+		// Token: 0x06035C86 RID: 220294 RVA: 0x00F06725 File Offset: 0x00F04925
 		protected override void OnRefreshView()
 		{
 			ActivitySubViewGeneralInfo commonInfoPanel = this.CommonInfoPanel;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06040FC2 RID: 266178 RVA: 0x00FBF754 File Offset: 0x00FBD954
+		// Token: 0x06035C87 RID: 220295 RVA: 0x00F06744 File Offset: 0x00F04944
 		private void RefreshProgress()
 		{
 			if (this.MatchThreeData == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06040FC3 RID: 266179 RVA: 0x00FBF7F6 File Offset: 0x00FBD9F6
+		// Token: 0x06035C88 RID: 220296 RVA: 0x00F067E6 File Offset: 0x00F049E6
 		private void RefreshRedDot()
 		{
 			if (this.MatchThreeData == null || this.CommonInfoPanel == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			this.CommonInfoPanel.SetFunctionRedDotVisible(this.MatchThreeData.GetExDataRedPointShowState());
 		}
 
-		// Token: 0x06040FC4 RID: 266180 RVA: 0x00FBF81F File Offset: 0x00FBDA1F
+		// Token: 0x06035C89 RID: 220297 RVA: 0x00F0680F File Offset: 0x00F04A0F
 		private void OnClickedGo(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			});
 		}
 
-		// Token: 0x06040FC5 RID: 266181 RVA: 0x00FBF83D File Offset: 0x00FBDA3D
+		// Token: 0x06035C8A RID: 220298 RVA: 0x00F0682D File Offset: 0x00F04A2D
 		private void OnActivityRedDotRefresh(int activityId)
 		{
 			if (this.MatchThreeData == null || activityId != this.MatchThreeData.Id)
@@ -162,17 +162,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x06040FC6 RID: 266182 RVA: 0x00FBF862 File Offset: 0x00FBDA62
+		// Token: 0x06035C8B RID: 220299 RVA: 0x00F06852 File Offset: 0x00F04A52
 		private void OnChallengeStateUpdate(int challengeId)
 		{
 			this.RefreshProgress();
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x04021E18 RID: 138776
+		// Token: 0x0401C749 RID: 116553
 		private ActivityMatchThreeData MatchThreeData;
 
-		// Token: 0x04021E19 RID: 138777
+		// Token: 0x0401C74A RID: 116554
 		protected ActivitySubViewGeneralInfo CommonInfoPanel;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002927 RID: 10535
+	// Token: 0x02002C03 RID: 11267
 	public class IRoguePrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600E9CE RID: 59854 RVA: 0x00224356 File Offset: 0x00222556
-		[NullableContext(1)]
+		// Token: 0x0600F820 RID: 63520 RVA: 0x002416AE File Offset: 0x0023F8AE
 		public static IRoguePrefabConfig Create(IRoguePrefabConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004942 RID: 18754
-		// (get) Token: 0x0600E9CF RID: 59855 RVA: 0x00224375 File Offset: 0x00222575
+		// Token: 0x17004CC8 RID: 19656
+		// (get) Token: 0x0600F821 RID: 63521 RVA: 0x002416CD File Offset: 0x0023F8CD
 		public override ECreatePrefabType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004943 RID: 18755
-		// (get) Token: 0x0600E9D0 RID: 59856 RVA: 0x00224382 File Offset: 0x00222582
+		// Token: 0x17004CC9 RID: 19657
+		// (get) Token: 0x0600F822 RID: 63522 RVA: 0x002416DA File Offset: 0x0023F8DA
 		public virtual int Index
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080F9 RID: 33017
+		// Token: 0x040087C7 RID: 34759
 		private IRoguePrefabConfig Instance;
 	}
 }

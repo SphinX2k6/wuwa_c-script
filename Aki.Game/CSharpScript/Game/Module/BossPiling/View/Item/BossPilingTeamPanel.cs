@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,18 +13,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C28 RID: 23592
+	// Token: 0x02004C08 RID: 19464
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingTeamPanel : UiPanelBase
 	{
-		// Token: 0x0603B97E RID: 244094 RVA: 0x00E37135 File Offset: 0x00E35335
+		// Token: 0x060308C9 RID: 198857 RVA: 0x00D87491 File Offset: 0x00D85691
 		public BossPilingTeamPanel(int levelId)
 		{
 			this.LevelId = levelId;
 		}
 
-		// Token: 0x0603B97F RID: 244095 RVA: 0x00E37168 File Offset: 0x00E35368
+		// Token: 0x060308CA RID: 198858 RVA: 0x00D874C4 File Offset: 0x00D856C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B980 RID: 244096 RVA: 0x00E372B4 File Offset: 0x00E354B4
+		// Token: 0x060308CB RID: 198859 RVA: 0x00D87610 File Offset: 0x00D85810
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingTeamPanel.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B981 RID: 244097 RVA: 0x00E372F8 File Offset: 0x00E354F8
+		// Token: 0x060308CC RID: 198860 RVA: 0x00D87654 File Offset: 0x00D85854
 		protected override void OnStart()
 		{
 			BossPilingLevels value = BossPilingConfig.Instance.GetLevelInfo(this.LevelId).Value;
@@ -130,14 +129,14 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			EventSystem.Instance.Add<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleTagChange));
 		}
 
-		// Token: 0x0603B982 RID: 244098 RVA: 0x00E37499 File Offset: 0x00E35699
+		// Token: 0x060308CD RID: 198861 RVA: 0x00D877F5 File Offset: 0x00D859F5
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 			EventSystem.Instance.Remove<int>(EEventName.OnRoleSkillBranchInGamePlayChanged, new Action<int>(this.OnRoleTagChange));
 		}
 
-		// Token: 0x0603B983 RID: 244099 RVA: 0x00E374D3 File Offset: 0x00E356D3
+		// Token: 0x060308CE RID: 198862 RVA: 0x00D8782F File Offset: 0x00D85A2F
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -149,7 +148,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return new ValueTuple<List<int>, List<int>>(this.RoleData, this.TagData);
 		}
 
-		// Token: 0x0603B984 RID: 244100 RVA: 0x00E374E8 File Offset: 0x00E356E8
+		// Token: 0x060308CF RID: 198863 RVA: 0x00D87844 File Offset: 0x00D85A44
 		protected void RefreshRoleList()
 		{
 			List<BossPilingTeamRoleInfo> list = new List<BossPilingTeamRoleInfo>();
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.Layout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603B985 RID: 244101 RVA: 0x00E37550 File Offset: 0x00E35750
+		// Token: 0x060308D0 RID: 198864 RVA: 0x00D878AC File Offset: 0x00D85AAC
 		private BossPilingRoleItem CreateItem()
 		{
 			return new BossPilingRoleItem
@@ -174,7 +173,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			};
 		}
 
-		// Token: 0x0603B986 RID: 244102 RVA: 0x00E3756C File Offset: 0x00E3576C
+		// Token: 0x060308D1 RID: 198865 RVA: 0x00D878C8 File Offset: 0x00D85AC8
 		private MultiTeamRoleSelectData GetSelectViewData()
 		{
 			RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -186,7 +185,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			{
 				if (roleInstance.GetRoleId() != 0)
 				{
-					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, value2.RecommendFormation().Contains(roleInstance.GetRoleId()), false, false);
+					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, Array.IndexOf<int>(value2.RecommendFormation(), roleInstance.GetRoleId()) >= 0, false, false, null, false, false, false);
 					list.Add(item);
 				}
 			}
@@ -197,7 +196,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 				RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(trialRoleConfigByGroupId.Value.Id, true);
 				if (roleDataById != null)
 				{
-					list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false));
+					list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false, null, false, false, false));
 				}
 			}
 			MultiTeamRoleData item2 = MultiTeamRoleData.Phrase("BossRushNormalRole", list);
@@ -250,7 +249,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return multiTeamRoleSelectData;
 		}
 
-		// Token: 0x0603B987 RID: 244103 RVA: 0x00E37768 File Offset: 0x00E35968
+		// Token: 0x060308D2 RID: 198866 RVA: 0x00D87AD0 File Offset: 0x00D85CD0
 		private bool IfCanSelectCheck(int roleConfigId, int[] selectedRoleList)
 		{
 			RoleConfig instance = RoleConfig.Instance;
@@ -272,19 +271,19 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			return true;
 		}
 
-		// Token: 0x0603B988 RID: 244104 RVA: 0x00E37811 File Offset: 0x00E35A11
+		// Token: 0x060308D3 RID: 198867 RVA: 0x00D87B79 File Offset: 0x00D85D79
 		private void OnClickedCb(int roleId, int index)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MultiTeamRoleSelectView, this.GetSelectViewData(), null);
 		}
 
-		// Token: 0x0603B989 RID: 244105 RVA: 0x00E37829 File Offset: 0x00E35A29
+		// Token: 0x060308D4 RID: 198868 RVA: 0x00D87B91 File Offset: 0x00D85D91
 		private void OnClickedBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MultiTeamRoleSelectView, this.GetSelectViewData(), null);
 		}
 
-		// Token: 0x0603B98A RID: 244106 RVA: 0x00E37844 File Offset: 0x00E35A44
+		// Token: 0x060308D5 RID: 198869 RVA: 0x00D87BAC File Offset: 0x00D85DAC
 		private void OnRoleChangeEnd()
 		{
 			for (int i = 0; i < this.RoleData.Count; i++)
@@ -309,50 +308,50 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.RefreshRoleList();
 		}
 
-		// Token: 0x0603B98B RID: 244107 RVA: 0x00E378D9 File Offset: 0x00E35AD9
+		// Token: 0x060308D6 RID: 198870 RVA: 0x00D87C41 File Offset: 0x00D85E41
 		private void OnRoleTagChange(int roleId)
 		{
 			this.TagChangeRoleSet.Add(roleId);
 		}
 
-		// Token: 0x0401F069 RID: 127081
+		// Token: 0x04019B1A RID: 105242
 		protected GenericLayout<BossPilingRoleItem, BossPilingTeamRoleInfo> Layout;
 
-		// Token: 0x0401F06A RID: 127082
+		// Token: 0x04019B1B RID: 105243
 		protected BossPilingFetterItem Element1;
 
-		// Token: 0x0401F06B RID: 127083
+		// Token: 0x04019B1C RID: 105244
 		protected BossPilingFetterItem Element2;
 
-		// Token: 0x0401F06C RID: 127084
+		// Token: 0x04019B1D RID: 105245
 		protected List<int> RoleData = new List<int>();
 
-		// Token: 0x0401F06D RID: 127085
+		// Token: 0x04019B1E RID: 105246
 		protected HashSet<int> TagChangeRoleSet = new HashSet<int>();
 
-		// Token: 0x0401F06E RID: 127086
+		// Token: 0x04019B1F RID: 105247
 		protected List<int> TagData = new List<int>();
 
-		// Token: 0x0401F06F RID: 127087
+		// Token: 0x04019B20 RID: 105248
 		protected int LevelId;
 
-		// Token: 0x0200BE11 RID: 48657
+		// Token: 0x0200A819 RID: 43033
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x0403950F RID: 234767
+			// Token: 0x04033ED2 RID: 212690
 			Btn,
-			// Token: 0x04039510 RID: 234768
+			// Token: 0x04033ED3 RID: 212691
 			TxtLevel,
-			// Token: 0x04039511 RID: 234769
+			// Token: 0x04033ED4 RID: 212692
 			TxtFetter,
-			// Token: 0x04039512 RID: 234770
+			// Token: 0x04033ED5 RID: 212693
 			ElementItem1,
-			// Token: 0x04039513 RID: 234771
+			// Token: 0x04033ED6 RID: 212694
 			ElementItem2,
-			// Token: 0x04039514 RID: 234772
+			// Token: 0x04033ED7 RID: 212695
 			PanelRole,
-			// Token: 0x04039515 RID: 234773
+			// Token: 0x04033ED8 RID: 212696
 			RoleItem
 		}
 	}

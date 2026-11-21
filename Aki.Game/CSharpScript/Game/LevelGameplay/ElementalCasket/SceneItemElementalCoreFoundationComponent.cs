@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E70 RID: 28272
+	// Token: 0x02005FF1 RID: 24561
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemElementalCoreFoundationComponent : EntityComponent
 	{
-		// Token: 0x06044E41 RID: 282177 RVA: 0x0110245C File Offset: 0x0110065C
+		// Token: 0x0603AFD5 RID: 241621 RVA: 0x010AC9CC File Offset: 0x010AABCC
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			Entity entity = base.Entity;
@@ -38,13 +38,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044E42 RID: 282178 RVA: 0x0110251B File Offset: 0x0110071B
+		// Token: 0x0603AFD6 RID: 241622 RVA: 0x010ACA8B File Offset: 0x010AAC8B
 		protected override void OnActivate()
 		{
 			this.RefreshCoreVisual();
 		}
 
-		// Token: 0x06044E43 RID: 282179 RVA: 0x01102524 File Offset: 0x01100724
+		// Token: 0x0603AFD7 RID: 241623 RVA: 0x010ACA94 File Offset: 0x010AAC94
 		public FTransformDouble? GetCoreTransform()
 		{
 			SceneItemActorComponent component = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return new FTransformDouble?(aactor2.D_GetTransform());
 		}
 
-		// Token: 0x06044E44 RID: 282180 RVA: 0x011025B4 File Offset: 0x011007B4
+		// Token: 0x0603AFD8 RID: 241624 RVA: 0x010ACB24 File Offset: 0x010AAD24
 		public void OnServerCoreChanged(FoundationCoreInfo coreInfo)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshCoreVisual();
 		}
 
-		// Token: 0x06044E45 RID: 282181 RVA: 0x011025FC File Offset: 0x011007FC
+		// Token: 0x0603AFD9 RID: 241625 RVA: 0x010ACB6C File Offset: 0x010AAD6C
 		public void RefreshCoreVisual()
 		{
 			if (this.HasElementalCore())
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.HiddenCoreActor();
 		}
 
-		// Token: 0x06044E46 RID: 282182 RVA: 0x01102613 File Offset: 0x01100813
+		// Token: 0x0603AFDA RID: 241626 RVA: 0x010ACB83 File Offset: 0x010AAD83
 		private void TryFlushPendingVisual()
 		{
 			if (this.IsOperating() || !this.PendingVisualRefresh)
@@ -99,43 +99,43 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshCoreVisual();
 		}
 
-		// Token: 0x06044E47 RID: 282183 RVA: 0x01102633 File Offset: 0x01100833
+		// Token: 0x0603AFDB RID: 241627 RVA: 0x010ACBA3 File Offset: 0x010AADA3
 		public bool HasElementalCore()
 		{
 			return this.CoreData != null;
 		}
 
-		// Token: 0x06044E48 RID: 282184 RVA: 0x0110263E File Offset: 0x0110083E
+		// Token: 0x0603AFDC RID: 241628 RVA: 0x010ACBAE File Offset: 0x010AADAE
 		public ElementalCoreData GetElementalCoreData()
 		{
 			return this.CoreData;
 		}
 
-		// Token: 0x06044E49 RID: 282185 RVA: 0x01102646 File Offset: 0x01100846
+		// Token: 0x0603AFDD RID: 241629 RVA: 0x010ACBB6 File Offset: 0x010AADB6
 		public EElementalType? GetElementalType()
 		{
 			return this.ElementalType;
 		}
 
-		// Token: 0x06044E4A RID: 282186 RVA: 0x0110264E File Offset: 0x0110084E
+		// Token: 0x0603AFDE RID: 241630 RVA: 0x010ACBBE File Offset: 0x010AADBE
 		public int GetResetDistance()
 		{
 			return this.ResetDistance;
 		}
 
-		// Token: 0x06044E4B RID: 282187 RVA: 0x01102656 File Offset: 0x01100856
+		// Token: 0x0603AFDF RID: 241631 RVA: 0x010ACBC6 File Offset: 0x010AADC6
 		public int GetMappingFoundationPbDataId()
 		{
 			return this.MappingFoundationPbDataId;
 		}
 
-		// Token: 0x06044E4C RID: 282188 RVA: 0x0110265E File Offset: 0x0110085E
+		// Token: 0x0603AFE0 RID: 241632 RVA: 0x010ACBCE File Offset: 0x010AADCE
 		public bool IsOperating()
 		{
 			return this.RequestPending || this.Animating;
 		}
 
-		// Token: 0x06044E4D RID: 282189 RVA: 0x01102670 File Offset: 0x01100870
+		// Token: 0x0603AFE1 RID: 241633 RVA: 0x010ACBE0 File Offset: 0x010AADE0
 		public void SetRequesting(bool requesting)
 		{
 			this.RequestPending = requesting;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E4E RID: 282190 RVA: 0x01102682 File Offset: 0x01100882
+		// Token: 0x0603AFE2 RID: 241634 RVA: 0x010ACBF2 File Offset: 0x010AADF2
 		public void SetAnimating(bool animating)
 		{
 			this.Animating = animating;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E4F RID: 282191 RVA: 0x01102694 File Offset: 0x01100894
+		// Token: 0x0603AFE3 RID: 241635 RVA: 0x010ACC04 File Offset: 0x010AAE04
 		private void HiddenCoreActor()
 		{
 			BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E50 RID: 282192 RVA: 0x011026D0 File Offset: 0x011008D0
+		// Token: 0x0603AFE4 RID: 241636 RVA: 0x010ACC40 File Offset: 0x010AAE40
 		private void ShowCoreActor()
 		{
 			BaseTagComponent component = base.Entity.GetComponent<BaseTagComponent>();
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044E51 RID: 282193 RVA: 0x01102700 File Offset: 0x01100900
+		// Token: 0x0603AFE5 RID: 241637 RVA: 0x010ACC70 File Offset: 0x010AAE70
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -184,71 +184,60 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 				return false;
 			}
 			SceneItemElementalCoreFoundationComponent sceneItemElementalCoreFoundationComponent = (SceneItemElementalCoreFoundationComponent)componentTemplate;
-			if (base.CanResetComponentProperty("RequestPending"))
+			this.RequestPending = sceneItemElementalCoreFoundationComponent.RequestPending;
+			this.Animating = sceneItemElementalCoreFoundationComponent.Animating;
+			this.PendingVisualRefresh = sceneItemElementalCoreFoundationComponent.PendingVisualRefresh;
+			if (sceneItemElementalCoreFoundationComponent.CoreData == null)
 			{
-				this.RequestPending = sceneItemElementalCoreFoundationComponent.RequestPending;
+				this.CoreData = null;
 			}
-			if (base.CanResetComponentProperty("Animating"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CoreData), "CoreData"))
 			{
-				this.Animating = sceneItemElementalCoreFoundationComponent.Animating;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingVisualRefresh"))
-			{
-				this.PendingVisualRefresh = sceneItemElementalCoreFoundationComponent.PendingVisualRefresh;
-			}
-			if (base.CanResetComponentProperty("CoreData"))
-			{
-				if (sceneItemElementalCoreFoundationComponent.CoreData == null)
-				{
-					this.CoreData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ElementalCoreData>(this.CoreData), "CoreData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ElementalType"))
-			{
-				this.ElementalType = sceneItemElementalCoreFoundationComponent.ElementalType;
-			}
-			if (base.CanResetComponentProperty("ResetDistance"))
-			{
-				this.ResetDistance = sceneItemElementalCoreFoundationComponent.ResetDistance;
-			}
-			if (base.CanResetComponentProperty("MappingFoundationPbDataId"))
-			{
-				this.MappingFoundationPbDataId = sceneItemElementalCoreFoundationComponent.MappingFoundationPbDataId;
-			}
+			this.ElementalType = sceneItemElementalCoreFoundationComponent.ElementalType;
+			this.ResetDistance = sceneItemElementalCoreFoundationComponent.ResetDistance;
+			this.MappingFoundationPbDataId = sceneItemElementalCoreFoundationComponent.MappingFoundationPbDataId;
 			return true;
 		}
 
-		// Token: 0x04023DEE RID: 146926
+		// Token: 0x17006F6E RID: 28526
+		// (get) Token: 0x0603AFE6 RID: 241638 RVA: 0x010ACD03 File Offset: 0x010AAF03
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0A3 RID: 127139
 		[Nullable(1)]
 		private const string CORE_BOX_NODE_KEY = "BoxNode";
 
-		// Token: 0x04023DEF RID: 146927
+		// Token: 0x0401F0A4 RID: 127140
 		[StaticVariableRuleIgnore]
 		private static readonly int hiddenCoreTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.表现.匣子底座.核心隐藏"];
 
-		// Token: 0x04023DF0 RID: 146928
+		// Token: 0x0401F0A5 RID: 127141
 		private bool RequestPending;
 
-		// Token: 0x04023DF1 RID: 146929
+		// Token: 0x0401F0A6 RID: 127142
 		private bool Animating;
 
-		// Token: 0x04023DF2 RID: 146930
+		// Token: 0x0401F0A7 RID: 127143
 		private bool PendingVisualRefresh;
 
-		// Token: 0x04023DF3 RID: 146931
+		// Token: 0x0401F0A8 RID: 127144
 		private ElementalCoreData CoreData;
 
-		// Token: 0x04023DF4 RID: 146932
+		// Token: 0x0401F0A9 RID: 127145
 		private EElementalType? ElementalType;
 
-		// Token: 0x04023DF5 RID: 146933
+		// Token: 0x0401F0AA RID: 127146
 		private int ResetDistance;
 
-		// Token: 0x04023DF6 RID: 146934
+		// Token: 0x0401F0AB RID: 127147
 		private int MappingFoundationPbDataId;
 	}
 }

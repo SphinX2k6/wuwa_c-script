@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002172 RID: 8562
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023D3 RID: 9171
 	public class RogueReceiveReward : ActionParams
 	{
-		// Token: 0x0600BC48 RID: 48200 RVA: 0x001B234C File Offset: 0x001B054C
+		// Token: 0x0600C7D6 RID: 51158 RVA: 0x001C9500 File Offset: 0x001C7700
 		private RogueReceiveReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC49 RID: 48201 RVA: 0x001B2384 File Offset: 0x001B0584
+		// Token: 0x0600C7D7 RID: 51159 RVA: 0x001C9538 File Offset: 0x001C7738
 		public static RogueReceiveReward Create([Nullable(2)] RogueReceiveReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC4A RID: 48202 RVA: 0x001B2397 File Offset: 0x001B0597
+		// Token: 0x0600C7D8 RID: 51160 RVA: 0x001C954B File Offset: 0x001C774B
 		public static RogueReceiveReward CreateFromSetValue([Nullable(2)] RogueReceiveReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC4B RID: 48203 RVA: 0x001B23AA File Offset: 0x001B05AA
+		// Token: 0x0600C7D9 RID: 51161 RVA: 0x001C955E File Offset: 0x001C775E
 		public RogueReceiveReward_SetValue ToSetValue()
 		{
 			return new RogueReceiveReward_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003958 RID: 14680
-		// (get) Token: 0x0600BC4C RID: 48204 RVA: 0x001B23C0 File Offset: 0x001B05C0
-		// (set) Token: 0x0600BC4D RID: 48205 RVA: 0x001B23FA File Offset: 0x001B05FA
+		// Token: 0x17003C45 RID: 15429
+		// (get) Token: 0x0600C7DA RID: 51162 RVA: 0x001C9574 File Offset: 0x001C7774
+		// (set) Token: 0x0600C7DB RID: 51163 RVA: 0x001C95AE File Offset: 0x001C77AE
 		public virtual ERogueRewardReceiveType? RogueRewardReceiveType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007078 RID: 28792
+		// Token: 0x040076AD RID: 30381
 		[Nullable(2)]
 		protected new RogueReceiveReward FbInstance;
 
-		// Token: 0x04007079 RID: 28793
+		// Token: 0x040076AE RID: 30382
 		[Nullable(2)]
 		protected RogueReceiveReward_SetValue PocoInterface;
 	}

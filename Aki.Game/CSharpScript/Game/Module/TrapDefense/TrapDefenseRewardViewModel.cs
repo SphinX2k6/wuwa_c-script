@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A89 RID: 19081
+	// Token: 0x02003A31 RID: 14897
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseRewardViewModel
 	{
-		// Token: 0x06031764 RID: 202596 RVA: 0x00B76F7B File Offset: 0x00B7517B
+		// Token: 0x060264F4 RID: 156916 RVA: 0x00ABAF2F File Offset: 0x00AB912F
 		public static TrapDefenseRewardViewModel Create()
 		{
 			return new TrapDefenseRewardViewModel();
 		}
 
-		// Token: 0x06031765 RID: 202597 RVA: 0x00B76F82 File Offset: 0x00B75182
+		// Token: 0x060264F5 RID: 156917 RVA: 0x00ABAF36 File Offset: 0x00AB9136
 		public void Clear()
 		{
 			this.CurSelectRewardType = ETrapDefenseRewardType.Default;
 			this.OnSelectRewardTypeChangeDelegates.Clear();
 		}
 
-		// Token: 0x06031766 RID: 202598 RVA: 0x00B76F96 File Offset: 0x00B75196
+		// Token: 0x060264F6 RID: 156918 RVA: 0x00ABAF4A File Offset: 0x00AB914A
 		public void RegisterOnSelectRewardTypeChange(Action<ETrapDefenseRewardType> @delegate)
 		{
 			if (this.OnSelectRewardTypeChangeDelegates.Contains(@delegate))
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.OnSelectRewardTypeChangeDelegates.Add(@delegate);
 		}
 
-		// Token: 0x06031767 RID: 202599 RVA: 0x00B76FB4 File Offset: 0x00B751B4
+		// Token: 0x060264F7 RID: 156919 RVA: 0x00ABAF68 File Offset: 0x00AB9168
 		public void UnregisterOnSelectRewardTypeChange(Action<ETrapDefenseRewardType> @delegate)
 		{
 			int num = this.OnSelectRewardTypeChangeDelegates.IndexOf(@delegate);
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031768 RID: 202600 RVA: 0x00B76FDE File Offset: 0x00B751DE
+		// Token: 0x060264F8 RID: 156920 RVA: 0x00ABAF92 File Offset: 0x00AB9192
 		public void SetCurSelectRewardType(ETrapDefenseRewardType type)
 		{
 			if (this.CurSelectRewardType == type)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.NotifyOnSelectRewardTypeChange(type);
 		}
 
-		// Token: 0x06031769 RID: 202601 RVA: 0x00B76FF8 File Offset: 0x00B751F8
+		// Token: 0x060264F9 RID: 156921 RVA: 0x00ABAFAC File Offset: 0x00AB91AC
 		public List<TrapDefenseRewardTabData> GetRewardTypeDataList()
 		{
 			List<TrapDefenseRewardTabData> list = new List<TrapDefenseRewardTabData>();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x0603176A RID: 202602 RVA: 0x00B77040 File Offset: 0x00B75240
+		// Token: 0x060264FA RID: 156922 RVA: 0x00ABAFF4 File Offset: 0x00AB91F4
 		private void NotifyOnSelectRewardTypeChange(ETrapDefenseRewardType type)
 		{
 			foreach (Action<ETrapDefenseRewardType> action in this.OnSelectRewardTypeChangeDelegates)
@@ -77,10 +77,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A735 RID: 108341
+		// Token: 0x04015087 RID: 86151
 		public ETrapDefenseRewardType CurSelectRewardType;
 
-		// Token: 0x0401A736 RID: 108342
+		// Token: 0x04015088 RID: 86152
 		private readonly List<Action<ETrapDefenseRewardType>> OnSelectRewardTypeChangeDelegates = new List<Action<ETrapDefenseRewardType>>();
 	}
 }

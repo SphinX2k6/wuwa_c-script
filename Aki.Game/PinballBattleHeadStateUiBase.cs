@@ -4,12 +4,12 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D0C RID: 7436
+// Token: 0x020011CE RID: 4558
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleHeadStateUiBase : UiPanelBase
 {
-	// Token: 0x0600E0D2 RID: 57554 RVA: 0x0034B809 File Offset: 0x00349A09
+	// Token: 0x0600B4EF RID: 46319 RVA: 0x00357239 File Offset: 0x00355439
 	protected override void OnStart()
 	{
 		if (this.InitHeadHpContext != null)
@@ -19,7 +19,7 @@ public class PinballBattleHeadStateUiBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E0D3 RID: 57555 RVA: 0x0034B82C File Offset: 0x00349A2C
+	// Token: 0x0600B4F0 RID: 46320 RVA: 0x0035725C File Offset: 0x0035545C
 	public void UpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
 		if (this.RootItem == null)
@@ -30,18 +30,18 @@ public class PinballBattleHeadStateUiBase : UiPanelBase
 		this.OnUpdateByHeadInfo(headInfo);
 	}
 
-	// Token: 0x0600E0D4 RID: 57556 RVA: 0x0034B845 File Offset: 0x00349A45
+	// Token: 0x0600B4F1 RID: 46321 RVA: 0x00357275 File Offset: 0x00355475
 	protected virtual void OnUpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
 	}
 
-	// Token: 0x0600E0D5 RID: 57557 RVA: 0x0034B847 File Offset: 0x00349A47
+	// Token: 0x0600B4F2 RID: 46322 RVA: 0x00357277 File Offset: 0x00355477
 	public void InitScaleCurve(UCurveFloat headStateScaleCurve)
 	{
 		this.HeadStateScaleCurve = headStateScaleCurve;
 	}
 
-	// Token: 0x0600E0D6 RID: 57558 RVA: 0x0034B850 File Offset: 0x00349A50
+	// Token: 0x0600B4F3 RID: 46323 RVA: 0x00357280 File Offset: 0x00355480
 	protected void UpdateHeadStateLocation(FVectorDouble location)
 	{
 		Vector commonTempVector = MathUtils.Instance.CommonTempVector;
@@ -60,7 +60,7 @@ public class PinballBattleHeadStateUiBase : UiPanelBase
 		rootItem2.SetUIItemScale(new FVector(num, num, num));
 	}
 
-	// Token: 0x0600E0D7 RID: 57559 RVA: 0x0034B8A8 File Offset: 0x00349AA8
+	// Token: 0x0600B4F4 RID: 46324 RVA: 0x003572D8 File Offset: 0x003554D8
 	protected void UpdateHeadStateRotation()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -77,7 +77,7 @@ public class PinballBattleHeadStateUiBase : UiPanelBase
 		rootItem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0600E0D8 RID: 57560 RVA: 0x0034B918 File Offset: 0x00349B18
+	// Token: 0x0600B4F5 RID: 46325 RVA: 0x00357348 File Offset: 0x00355548
 	protected float CalculateScaleByDistance(Vector worldLocation)
 	{
 		double num = Vector.DistSquared(CameraController.Instance.MainModel.CameraLocation, worldLocation);
@@ -88,11 +88,11 @@ public class PinballBattleHeadStateUiBase : UiPanelBase
 		return this.HeadStateScaleCurve.GetFloatValue((float)num);
 	}
 
-	// Token: 0x040067CC RID: 26572
+	// Token: 0x040068AB RID: 26795
 	[Nullable(2)]
 	private FKSC_HeadHpContext InitHeadHpContext;
 
-	// Token: 0x040067CD RID: 26573
+	// Token: 0x040068AC RID: 26796
 	[Nullable(2)]
 	protected UCurveFloat HeadStateScaleCurve;
 }

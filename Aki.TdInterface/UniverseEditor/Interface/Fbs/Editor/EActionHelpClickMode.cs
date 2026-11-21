@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004801 RID: 18433
+	// Token: 0x02004C69 RID: 19561
 	public enum EActionHelpClickMode : byte
 	{
-		// Token: 0x0400CCA6 RID: 52390
+		// Token: 0x0400D6E0 RID: 55008
 		OpenDetailByClick,
-		// Token: 0x0400CCA7 RID: 52391
+		// Token: 0x0400D6E1 RID: 55009
 		OpenUrlByClick
 	}
 }

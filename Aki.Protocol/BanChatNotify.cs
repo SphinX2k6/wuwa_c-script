@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000157 RID: 343
+	// Token: 0x0200015A RID: 346
 	[NetMessage(EMessageId.BanChatNotify)]
 	public sealed class BanChatNotify : IMessage<BanChatNotify>, IMessage, IEquatable<BanChatNotify>, IDeepCloneable<BanChatNotify>, IBufferMessage
 	{
-		// Token: 0x06002B55 RID: 11093 RVA: 0x0007108D File Offset: 0x0006F28D
+		// Token: 0x06002BCC RID: 11212 RVA: 0x000724B9 File Offset: 0x000706B9
 		[NullableContext(1)]
 		public static BanChatNotify Create()
 		{
 			return new BanChatNotify();
 		}
 
-		// Token: 0x17000672 RID: 1650
-		// (get) Token: 0x06002B56 RID: 11094 RVA: 0x00071094 File Offset: 0x0006F294
+		// Token: 0x17000686 RID: 1670
+		// (get) Token: 0x06002BCD RID: 11213 RVA: 0x000724C0 File Offset: 0x000706C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000673 RID: 1651
-		// (get) Token: 0x06002B57 RID: 11095 RVA: 0x00071097 File Offset: 0x0006F297
+		// Token: 0x17000687 RID: 1671
+		// (get) Token: 0x06002BCE RID: 11214 RVA: 0x000724C3 File Offset: 0x000706C3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B58 RID: 11096 RVA: 0x0007109E File Offset: 0x0006F29E
+		// Token: 0x06002BCF RID: 11215 RVA: 0x000724CA File Offset: 0x000706CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanChatNotify()
 		{
 		}
 
-		// Token: 0x06002B59 RID: 11097 RVA: 0x000710A6 File Offset: 0x0006F2A6
+		// Token: 0x06002BD0 RID: 11216 RVA: 0x000724D2 File Offset: 0x000706D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanChatNotify(BanChatNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002B5A RID: 11098 RVA: 0x000710D7 File Offset: 0x0006F2D7
+		// Token: 0x06002BD1 RID: 11217 RVA: 0x00072503 File Offset: 0x00070703
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanChatNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new BanChatNotify(this);
 		}
 
-		// Token: 0x17000674 RID: 1652
-		// (get) Token: 0x06002B5B RID: 11099 RVA: 0x000710DF File Offset: 0x0006F2DF
-		// (set) Token: 0x06002B5C RID: 11100 RVA: 0x000710E7 File Offset: 0x0006F2E7
+		// Token: 0x17000688 RID: 1672
+		// (get) Token: 0x06002BD2 RID: 11218 RVA: 0x0007250B File Offset: 0x0007070B
+		// (set) Token: 0x06002BD3 RID: 11219 RVA: 0x00072513 File Offset: 0x00070713
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long BanEndTime
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000675 RID: 1653
-		// (get) Token: 0x06002B5D RID: 11101 RVA: 0x000710F0 File Offset: 0x0006F2F0
-		// (set) Token: 0x06002B5E RID: 11102 RVA: 0x000710F8 File Offset: 0x0006F2F8
+		// Token: 0x17000689 RID: 1673
+		// (get) Token: 0x06002BD4 RID: 11220 RVA: 0x0007251C File Offset: 0x0007071C
+		// (set) Token: 0x06002BD5 RID: 11221 RVA: 0x00072524 File Offset: 0x00070724
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BanChatType BanChatType
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B5F RID: 11103 RVA: 0x00071101 File Offset: 0x0006F301
+		// Token: 0x06002BD6 RID: 11222 RVA: 0x0007252D File Offset: 0x0007072D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BanChatNotify);
 		}
 
-		// Token: 0x06002B60 RID: 11104 RVA: 0x0007110F File Offset: 0x0006F30F
+		// Token: 0x06002BD7 RID: 11223 RVA: 0x0007253B File Offset: 0x0007073B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BanChatNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BanEndTime == other.BanEndTime && this.BanChatType == other.BanChatType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002B61 RID: 11105 RVA: 0x00071150 File Offset: 0x0006F350
+		// Token: 0x06002BD8 RID: 11224 RVA: 0x0007257C File Offset: 0x0007077C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B62 RID: 11106 RVA: 0x000711AE File Offset: 0x0006F3AE
+		// Token: 0x06002BD9 RID: 11225 RVA: 0x000725DA File Offset: 0x000707DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002B63 RID: 11107 RVA: 0x000711BB File Offset: 0x0006F3BB
+		// Token: 0x06002BDA RID: 11226 RVA: 0x000725E7 File Offset: 0x000707E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002B64 RID: 11108 RVA: 0x000711C4 File Offset: 0x0006F3C4
+		// Token: 0x06002BDB RID: 11227 RVA: 0x000725F0 File Offset: 0x000707F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.BanChatType != BanChatType.None)
-			{
-				output.WriteRawTag(8);
-				output.WriteEnum((int)this.BanChatType);
-			}
 			if (this.BanEndTime != 0L)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(24);
 				output.WriteInt64(this.BanEndTime);
+			}
+			if (this.BanChatType != BanChatType.None)
+			{
+				output.WriteRawTag(120);
+				output.WriteEnum((int)this.BanChatType);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002B65 RID: 11109 RVA: 0x0007121C File Offset: 0x0006F41C
+		// Token: 0x06002BDC RID: 11228 RVA: 0x0007264C File Offset: 0x0007084C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002B66 RID: 11110 RVA: 0x00071274 File Offset: 0x0006F474
+		// Token: 0x06002BDD RID: 11229 RVA: 0x000726A4 File Offset: 0x000708A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BanChatNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002B67 RID: 11111 RVA: 0x000712C4 File Offset: 0x0006F4C4
+		// Token: 0x06002BDE RID: 11230 RVA: 0x000726F4 File Offset: 0x000708F4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002B68 RID: 11112 RVA: 0x000712D0 File Offset: 0x0006F4D0
+		// Token: 0x06002BDF RID: 11231 RVA: 0x00072700 File Offset: 0x00070900
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 8U)
+				if (num != 24U)
 				{
-					if (num != 48U)
+					if (num != 120U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.BanEndTime = input.ReadInt64();
+						this.BanChatType = (BanChatType)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.BanChatType = (BanChatType)input.ReadEnum();
+					this.BanEndTime = input.ReadInt64();
 				}
 			}
 		}
 
-		// Token: 0x04002798 RID: 10136
+		// Token: 0x0400280C RID: 10252
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002799 RID: 10137
-		public const int BanEndTimeFieldNumber = 6;
+		// Token: 0x0400280D RID: 10253
+		public const int BanEndTimeFieldNumber = 3;
 
-		// Token: 0x0400279A RID: 10138
+		// Token: 0x0400280E RID: 10254
 		private long banEndTime_;
 
-		// Token: 0x0400279B RID: 10139
-		public const int BanChatTypeFieldNumber = 1;
+		// Token: 0x0400280F RID: 10255
+		public const int BanChatTypeFieldNumber = 15;
 
-		// Token: 0x0400279C RID: 10140
+		// Token: 0x04002810 RID: 10256
 		private BanChatType banChatType_;
 	}
 }

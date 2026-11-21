@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200245D RID: 9309
+	// Token: 0x020026FE RID: 9982
 	public static class ETalkOptionPreConditionTypeExtensions
 	{
-		// Token: 0x0600CA21 RID: 51745 RVA: 0x001DBCE0 File Offset: 0x001D9EE0
+		// Token: 0x0600D6D1 RID: 54993 RVA: 0x001F5D94 File Offset: 0x001F3F94
 		public static string ToEnumString(this ETalkOptionPreConditionType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA22 RID: 51746 RVA: 0x001DBD34 File Offset: 0x001D9F34
+		// Token: 0x0600D6D2 RID: 54994 RVA: 0x001F5DE8 File Offset: 0x001F3FE8
 		public static ETalkOptionPreConditionType FromString(string name)
 		{
 			ETalkOptionPreConditionType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA23 RID: 51747 RVA: 0x001DBD60 File Offset: 0x001D9F60
+		// Token: 0x0600D6D3 RID: 54995 RVA: 0x001F5E14 File Offset: 0x001F4014
 		public static bool TryFromString(string name, out ETalkOptionPreConditionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA24 RID: 51748 RVA: 0x001DBDC8 File Offset: 0x001D9FC8
+		// Token: 0x0600D6D4 RID: 54996 RVA: 0x001F5E7C File Offset: 0x001F407C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA25 RID: 51749 RVA: 0x001DBDF0 File Offset: 0x001D9FF0
+		// Token: 0x0600D6D5 RID: 54997 RVA: 0x001F5EA4 File Offset: 0x001F40A4
 		public static ETalkOptionPreConditionType[] GetValues()
 		{
 			return new ETalkOptionPreConditionType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA26 RID: 51750 RVA: 0x001DBE03 File Offset: 0x001DA003
+		// Token: 0x0600D6D6 RID: 54998 RVA: 0x001F5EB7 File Offset: 0x001F40B7
 		public static string[] GetNames()
 		{
 			return new string[]

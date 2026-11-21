@@ -4,10 +4,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050AE RID: 20654
+	// Token: 0x0200407E RID: 16510
 	public class FlowActionChangeEntitySelfState : FlowActionBase
 	{
-		// Token: 0x06034EB4 RID: 216756 RVA: 0x00C88B14 File Offset: 0x00C86D14
+		// Token: 0x06029DAD RID: 171437 RVA: 0x00BD5DD0 File Offset: 0x00BD3FD0
 		protected override void OnExecute()
 		{
 			int tagIdByName = GameplayTagUtils.GetTagIdByName((this.ActionInfo.Params as ChangeSelfEntityState).EntityState);

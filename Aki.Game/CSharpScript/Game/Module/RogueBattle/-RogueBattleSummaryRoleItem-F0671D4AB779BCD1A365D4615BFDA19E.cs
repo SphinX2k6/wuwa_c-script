@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EAA RID: 20138
+	// Token: 0x02003E73 RID: 15987
 	internal enum <RogueBattleSummaryRoleItem>F0671D4AB779BCD1A365D4615BFDA19E699D0679BADAE160AD878D21680B1C9E0__EComponentDefine
 	{
-		// Token: 0x0401B7B7 RID: 112567
+		// Token: 0x0401618A RID: 90506
 		TxtTitle,
-		// Token: 0x0401B7B8 RID: 112568
+		// Token: 0x0401618B RID: 90507
 		AttributeItem,
-		// Token: 0x0401B7B9 RID: 112569
+		// Token: 0x0401618C RID: 90508
 		PanelAttribute,
-		// Token: 0x0401B7BA RID: 112570
+		// Token: 0x0401618D RID: 90509
 		BtnMore,
-		// Token: 0x0401B7BB RID: 112571
+		// Token: 0x0401618E RID: 90510
 		TxtTitle2,
-		// Token: 0x0401B7BC RID: 112572
+		// Token: 0x0401618F RID: 90511
 		RoleItemScroll,
-		// Token: 0x0401B7BD RID: 112573
+		// Token: 0x04016190 RID: 90512
 		RoleItem
 	}
 }

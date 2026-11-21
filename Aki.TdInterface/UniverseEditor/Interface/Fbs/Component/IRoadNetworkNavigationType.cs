@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005870 RID: 22640
+	// Token: 0x02005E7D RID: 24189
 	public struct IRoadNetworkNavigationType : IFlatbufferObject
 	{
-		// Token: 0x1700A95E RID: 43358
-		// (get) Token: 0x06026268 RID: 156264 RVA: 0x00542BB5 File Offset: 0x00540DB5
+		// Token: 0x1700B28E RID: 45710
+		// (get) Token: 0x060287CA RID: 165834 RVA: 0x00589701 File Offset: 0x00587901
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026269 RID: 156265 RVA: 0x00542BC2 File Offset: 0x00540DC2
+		// Token: 0x060287CB RID: 165835 RVA: 0x0058970E File Offset: 0x0058790E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602626A RID: 156266 RVA: 0x00542BCC File Offset: 0x00540DCC
+		// Token: 0x060287CC RID: 165836 RVA: 0x00589718 File Offset: 0x00587918
 		public static IRoadNetworkNavigationType GetRootAsIRoadNetworkNavigationType(ByteBuffer _bb)
 		{
 			return IRoadNetworkNavigationType.GetRootAsIRoadNetworkNavigationType(_bb, default(IRoadNetworkNavigationType));
 		}
 
-		// Token: 0x0602626B RID: 156267 RVA: 0x00542BE8 File Offset: 0x00540DE8
+		// Token: 0x060287CD RID: 165837 RVA: 0x00589734 File Offset: 0x00587934
 		public static IRoadNetworkNavigationType GetRootAsIRoadNetworkNavigationType(ByteBuffer _bb, IRoadNetworkNavigationType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602626C RID: 156268 RVA: 0x00542C05 File Offset: 0x00540E05
+		// Token: 0x060287CE RID: 165838 RVA: 0x00589751 File Offset: 0x00587951
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602626D RID: 156269 RVA: 0x00542C14 File Offset: 0x00540E14
+		// Token: 0x060287CF RID: 165839 RVA: 0x00589760 File Offset: 0x00587960
 		public IRoadNetworkNavigationType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A95F RID: 43359
-		// (get) Token: 0x0602626E RID: 156270 RVA: 0x00542C24 File Offset: 0x00540E24
+		// Token: 0x1700B28F RID: 45711
+		// (get) Token: 0x060287D0 RID: 165840 RVA: 0x00589770 File Offset: 0x00587970
 		public ERoadNetworkNavigationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602626F RID: 156271 RVA: 0x00542C60 File Offset: 0x00540E60
+		// Token: 0x060287D1 RID: 165841 RVA: 0x005897AC File Offset: 0x005879AC
 		public static Offset<IRoadNetworkNavigationType> CreateIRoadNetworkNavigationType(FlatBufferBuilder builder, ERoadNetworkNavigationType Type = ERoadNetworkNavigationType.Traffic)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoadNetworkNavigationType.EndIRoadNetworkNavigationType(builder);
 		}
 
-		// Token: 0x06026270 RID: 156272 RVA: 0x00542C76 File Offset: 0x00540E76
+		// Token: 0x060287D2 RID: 165842 RVA: 0x005897C2 File Offset: 0x005879C2
 		public static void StartIRoadNetworkNavigationType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06026271 RID: 156273 RVA: 0x00542C7F File Offset: 0x00540E7F
+		// Token: 0x060287D3 RID: 165843 RVA: 0x005897CB File Offset: 0x005879CB
 		public static void AddType(FlatBufferBuilder builder, ERoadNetworkNavigationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026272 RID: 156274 RVA: 0x00542C8A File Offset: 0x00540E8A
+		// Token: 0x060287D4 RID: 165844 RVA: 0x005897D6 File Offset: 0x005879D6
 		public static Offset<IRoadNetworkNavigationType> EndIRoadNetworkNavigationType(FlatBufferBuilder builder)
 		{
 			return new Offset<IRoadNetworkNavigationType>(builder.EndTable());
 		}
 
-		// Token: 0x06026273 RID: 156275 RVA: 0x00542C98 File Offset: 0x00540E98
+		// Token: 0x060287D5 RID: 165845 RVA: 0x005897E4 File Offset: 0x005879E4
 		public IRoadNetworkNavigationTypeT UnPack()
 		{
 			IRoadNetworkNavigationTypeT roadNetworkNavigationTypeT = new IRoadNetworkNavigationTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return roadNetworkNavigationTypeT;
 		}
 
-		// Token: 0x06026274 RID: 156276 RVA: 0x00542CB3 File Offset: 0x00540EB3
+		// Token: 0x060287D6 RID: 165846 RVA: 0x005897FF File Offset: 0x005879FF
 		public void UnPackTo(IRoadNetworkNavigationTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06026275 RID: 156277 RVA: 0x00542CC4 File Offset: 0x00540EC4
+		// Token: 0x060287D7 RID: 165847 RVA: 0x00589810 File Offset: 0x00587A10
 		public static Offset<IRoadNetworkNavigationType> Pack(FlatBufferBuilder builder, IRoadNetworkNavigationTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRoadNetworkNavigationType.CreateIRoadNetworkNavigationType(builder, _o.Type);
 		}
 
-		// Token: 0x0400EDB7 RID: 60855
+		// Token: 0x0400FAAA RID: 64170
 		private Table __p;
 	}
 }

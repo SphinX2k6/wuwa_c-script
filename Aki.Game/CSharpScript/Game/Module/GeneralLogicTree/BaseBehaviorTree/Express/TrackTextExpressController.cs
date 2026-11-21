@@ -8,19 +8,19 @@ using CSharpScript.Game.Module.BattleUi.Views;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 {
-	// Token: 0x020059F0 RID: 23024
+	// Token: 0x020049CA RID: 18890
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrackTextExpressController
 	{
-		// Token: 0x0603A5A9 RID: 239017 RVA: 0x00DE2571 File Offset: 0x00DE0771
+		// Token: 0x0602F4DA RID: 193754 RVA: 0x00D31E84 File Offset: 0x00D30084
 		public TrackTextExpressController(Blackboard blackboard)
 		{
 			this.Blackboard = blackboard;
 			this.UiBlackBoardTrackTextInfo = blackboard.UiTrackTextInfo;
 		}
 
-		// Token: 0x0603A5AA RID: 239018 RVA: 0x00DE25B0 File Offset: 0x00DE07B0
+		// Token: 0x0602F4DB RID: 193755 RVA: 0x00D31EC0 File Offset: 0x00D300C0
 		public void Clear()
 		{
 			this.UiCustomTrackTextInfo.Clear();
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EndTextExpress(ETreeTextExpressReason.None);
 		}
 
-		// Token: 0x0603A5AB RID: 239019 RVA: 0x00DE2610 File Offset: 0x00DE0810
+		// Token: 0x0602F4DC RID: 193756 RVA: 0x00D31F20 File Offset: 0x00D30120
 		public void EnableTrack(bool value, ESetTrackReason reason = ESetTrackReason.None)
 		{
 			if (value)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EndTextExpress(reason2);
 		}
 
-		// Token: 0x0603A5AC RID: 239020 RVA: 0x00DE2637 File Offset: 0x00DE0837
+		// Token: 0x0602F4DD RID: 193757 RVA: 0x00D31F47 File Offset: 0x00D30147
 		public void StartTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 		{
 			this.TextExpressUse[(int)reason] = true;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.StartShowTextImp(reason);
 		}
 
-		// Token: 0x0603A5AD RID: 239021 RVA: 0x00DE266C File Offset: 0x00DE086C
+		// Token: 0x0602F4DE RID: 193758 RVA: 0x00D31F7C File Offset: 0x00D3017C
 		private void StartShowTextImp(ETreeTextExpressReason reason)
 		{
 			if (this.Blackboard.IsTrackBoundToParent)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.TextExpressing = true;
 		}
 
-		// Token: 0x0603A5AE RID: 239022 RVA: 0x00DE26D5 File Offset: 0x00DE08D5
+		// Token: 0x0602F4DF RID: 193759 RVA: 0x00D31FE5 File Offset: 0x00D301E5
 		public void EndTextExpress(ETreeTextExpressReason reason = ETreeTextExpressReason.None)
 		{
 			if (reason == ETreeTextExpressReason.QuestFinished)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EndShowTextImp(reason);
 		}
 
-		// Token: 0x0603A5AF RID: 239023 RVA: 0x00DE270C File Offset: 0x00DE090C
+		// Token: 0x0602F4E0 RID: 193760 RVA: 0x00D3201C File Offset: 0x00D3021C
 		public void UpdateOnNodeStatusChange(BehaviorNodeBase node, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{
 			this.UpdateTrackTextData(node, newStatus);
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.UpdateTextExpress(bSentUpdateTips);
 		}
 
-		// Token: 0x0603A5B0 RID: 239024 RVA: 0x00DE2732 File Offset: 0x00DE0932
+		// Token: 0x0602F4E1 RID: 193761 RVA: 0x00D32042 File Offset: 0x00D30242
 		public void UpdateTextDataOnly()
 		{
 			this.SetCommonTextData();
 		}
 
-		// Token: 0x0603A5B1 RID: 239025 RVA: 0x00DE273A File Offset: 0x00DE093A
+		// Token: 0x0602F4E2 RID: 193762 RVA: 0x00D3204A File Offset: 0x00D3024A
 		public void OnBtApplyExpressionOccupation(bool bSelf)
 		{
 			if (bSelf)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EndShowTextImp(ETreeTextExpressReason.TextOccupation);
 		}
 
-		// Token: 0x0603A5B2 RID: 239026 RVA: 0x00DE2747 File Offset: 0x00DE0947
+		// Token: 0x0602F4E3 RID: 193763 RVA: 0x00D32057 File Offset: 0x00D30257
 		public void OnBtReleaseExpressionOccupation(bool bSelf)
 		{
 			if (bSelf)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5B3 RID: 239027 RVA: 0x00DE2761 File Offset: 0x00DE0961
+		// Token: 0x0602F4E4 RID: 193764 RVA: 0x00D32071 File Offset: 0x00D30271
 		public void OnSuspend(int nodeId, EBehaviorTreeSuspendType suspendType)
 		{
 			if (suspendType == EBehaviorTreeSuspendType.Occupation)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.EndShowTextImp(ETreeTextExpressReason.Online);
 		}
 
-		// Token: 0x0603A5B4 RID: 239028 RVA: 0x00DE277C File Offset: 0x00DE097C
+		// Token: 0x0602F4E5 RID: 193765 RVA: 0x00D3208C File Offset: 0x00D3028C
 		public void OnCancelSuspend()
 		{
 			this.ProcessChallengeUi();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5B5 RID: 239029 RVA: 0x00DE2798 File Offset: 0x00DE0998
+		// Token: 0x0602F4E6 RID: 193766 RVA: 0x00D320A8 File Offset: 0x00D302A8
 		private void EndShowTextImp(ETreeTextExpressReason reason)
 		{
 			if (this.Blackboard.IsTrackBoundToParent)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5B6 RID: 239030 RVA: 0x00DE2838 File Offset: 0x00DE0A38
+		// Token: 0x0602F4E7 RID: 193767 RVA: 0x00D32148 File Offset: 0x00D30348
 		private void UpdateTextExpress(bool bSentUpdateTips)
 		{
 			if (this.Blackboard.IsTrackBoundToParent)
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.UpdateTrackTextTimerHandle = this.DoDelayUpdate();
 		}
 
-		// Token: 0x0603A5B7 RID: 239031 RVA: 0x00DE2890 File Offset: 0x00DE0A90
+		// Token: 0x0602F4E8 RID: 193768 RVA: 0x00D321A0 File Offset: 0x00D303A0
 		[NullableContext(2)]
 		private TimerHandle DoDelayUpdate()
 		{
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603A5B8 RID: 239032 RVA: 0x00DE28B8 File Offset: 0x00DE0AB8
+		// Token: 0x0602F4E9 RID: 193769 RVA: 0x00D321C8 File Offset: 0x00D303C8
 		private bool SendUpdateTips(BehaviorNodeBase node, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 		{
 			if (reason != ENodeStatusUpdateReason.ServerUpdateNodeStatus || newStatus != NodeStatus.Activated || (this.Blackboard.BtType != BtType.Quest && this.Blackboard.BtType != BtType.Recall))
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			return true;
 		}
 
-		// Token: 0x0603A5B9 RID: 239033 RVA: 0x00DE2984 File Offset: 0x00DE0B84
+		// Token: 0x0602F4EA RID: 193770 RVA: 0x00D32294 File Offset: 0x00D30494
 		private void UpdateTrackTextData(BehaviorNodeBase node, NodeStatus newStatus)
 		{
 			LogicNodeBase logicNodeBase = node as LogicNodeBase;
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.SetCommonTextData();
 		}
 
-		// Token: 0x0603A5BA RID: 239034 RVA: 0x00DE29FC File Offset: 0x00DE0BFC
+		// Token: 0x0602F4EB RID: 193771 RVA: 0x00D3230C File Offset: 0x00D3050C
 		[NullableContext(2)]
 		private void SetCustomUiConfig(int nodeId, IQuestScheduleConfig config)
 		{
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			LevelPlayModel.Instance.ChangeLevelPlayTrackRange(this.Blackboard.TreeConfigId, trackRadius);
 		}
 
-		// Token: 0x0603A5BB RID: 239035 RVA: 0x00DE2B58 File Offset: 0x00DE0D58
+		// Token: 0x0602F4EC RID: 193772 RVA: 0x00D32468 File Offset: 0x00D30668
 		private void SetCommonTextData()
 		{
 			this.UiBlackBoardTrackTextInfo.Clear();
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.UiBlackBoardTrackTextInfo.SetMainTitle(null);
 		}
 
-		// Token: 0x0603A5BC RID: 239036 RVA: 0x00DE2C94 File Offset: 0x00DE0E94
+		// Token: 0x0602F4ED RID: 193773 RVA: 0x00D325A4 File Offset: 0x00D307A4
 		private void UpdateSuspendTrackTextData(int nodeId, EBehaviorTreeSuspendType suspendType)
 		{
 			this.UiBlackBoardTrackTextInfo.Clear();
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			}
 		}
 
-		// Token: 0x0603A5BD RID: 239037 RVA: 0x00DE2D10 File Offset: 0x00DE0F10
+		// Token: 0x0602F4EE RID: 193774 RVA: 0x00D32620 File Offset: 0x00D30820
 		private void ProcessChallengeUi()
 		{
 			if (!this.Blackboard.ContainTag(EBehaviorTreeTag.CustomUi))
@@ -402,25 +402,25 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BaseBehaviorTree.Express
 			this.UiBlackBoardTrackTextInfo.CopyConfig(this.UiCustomTrackTextInfo);
 		}
 
-		// Token: 0x0401E6BB RID: 124603
+		// Token: 0x0401915C RID: 102748
 		private readonly Blackboard Blackboard;
 
-		// Token: 0x0401E6BC RID: 124604
+		// Token: 0x0401915D RID: 102749
 		private readonly TreeTrackTextExpressionInfo UiBlackBoardTrackTextInfo;
 
-		// Token: 0x0401E6BD RID: 124605
+		// Token: 0x0401915E RID: 102750
 		private readonly TreeTrackTextExpressionInfo UiCustomTrackTextInfo = new TreeTrackTextExpressionInfo();
 
-		// Token: 0x0401E6BE RID: 124606
+		// Token: 0x0401915F RID: 102751
 		private readonly Dictionary<int, bool> TextExpressUse = new Dictionary<int, bool>();
 
-		// Token: 0x0401E6BF RID: 124607
+		// Token: 0x04019160 RID: 102752
 		private readonly List<BtCustomUiConfig> CustomUiConfigs = new List<BtCustomUiConfig>();
 
-		// Token: 0x0401E6C0 RID: 124608
+		// Token: 0x04019161 RID: 102753
 		private bool TextExpressing;
 
-		// Token: 0x0401E6C1 RID: 124609
+		// Token: 0x04019162 RID: 102754
 		[Nullable(2)]
 		private TimerHandle UpdateTrackTextTimerHandle;
 	}

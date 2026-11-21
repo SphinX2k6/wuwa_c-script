@@ -4,23 +4,23 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B66 RID: 27494
+	// Token: 0x02005CDE RID: 23774
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventRogueReceiveReward : LevelEventBase
 	{
-		// Token: 0x060441FE RID: 279038 RVA: 0x010C5243 File Offset: 0x010C3443
+		// Token: 0x0603A350 RID: 238416 RVA: 0x0106EE13 File Offset: 0x0106D013
 		public LevelEventRogueReceiveReward(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441FF RID: 279039 RVA: 0x010C524C File Offset: 0x010C344C
+		// Token: 0x0603A351 RID: 238417 RVA: 0x0106EE1C File Offset: 0x0106D01C
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044200 RID: 279040 RVA: 0x010C5257 File Offset: 0x010C3457
+		// Token: 0x0603A352 RID: 238418 RVA: 0x0106EE27 File Offset: 0x0106D027
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 		}

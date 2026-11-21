@@ -2,20 +2,20 @@
 
 namespace UnrealEngine
 {
-	// Token: 0x02000088 RID: 136
+	// Token: 0x0200006D RID: 109
 	public enum ETextComparisonLevel
 	{
-		// Token: 0x040001DA RID: 474
+		// Token: 0x04000193 RID: 403
 		Default,
-		// Token: 0x040001DB RID: 475
+		// Token: 0x04000194 RID: 404
 		Primary,
-		// Token: 0x040001DC RID: 476
+		// Token: 0x04000195 RID: 405
 		Secondary,
-		// Token: 0x040001DD RID: 477
+		// Token: 0x04000196 RID: 406
 		Tertiary,
-		// Token: 0x040001DE RID: 478
+		// Token: 0x04000197 RID: 407
 		Quaternary,
-		// Token: 0x040001DF RID: 479
+		// Token: 0x04000198 RID: 408
 		Quinary
 	}
 }

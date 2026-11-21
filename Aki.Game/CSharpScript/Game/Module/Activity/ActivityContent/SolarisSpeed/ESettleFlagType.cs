@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060AD RID: 24749
+	// Token: 0x0200502B RID: 20523
 	public enum ESettleFlagType
 	{
-		// Token: 0x04020BBD RID: 134077
+		// Token: 0x0401B4EA RID: 111850
 		JiXianKuangBiao = 1,
-		// Token: 0x04020BBE RID: 134078
+		// Token: 0x0401B4EB RID: 111851
 		ShanDianChongXian,
-		// Token: 0x04020BBF RID: 134079
+		// Token: 0x0401B4EC RID: 111852
 		ZhengFenDuoMiao = 4,
-		// Token: 0x04020BC0 RID: 134080
+		// Token: 0x0401B4ED RID: 111853
 		ChaZhiHaoLi = 6,
-		// Token: 0x04020BC1 RID: 134081
+		// Token: 0x0401B4EE RID: 111854
 		JuWaiRen
 	}
 }

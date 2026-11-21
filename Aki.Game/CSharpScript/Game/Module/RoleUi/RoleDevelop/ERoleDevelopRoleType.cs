@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D0C RID: 19724
+	// Token: 0x02003CBF RID: 15551
 	public enum ERoleDevelopRoleType
 	{
-		// Token: 0x0401B1E0 RID: 111072
+		// Token: 0x04015B6B RID: 88939
 		Normal,
-		// Token: 0x0401B1E1 RID: 111073
+		// Token: 0x04015B6C RID: 88940
 		Prospect
 	}
 }

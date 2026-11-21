@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200532E RID: 21294
+	// Token: 0x020042FE RID: 17150
 	public class RogueResSkillLine : UiPanelBase
 	{
-		// Token: 0x06036711 RID: 222993 RVA: 0x00CE35CC File Offset: 0x00CE17CC
+		// Token: 0x0602B60D RID: 177677 RVA: 0x00C30F9C File Offset: 0x00C2F19C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036712 RID: 222994 RVA: 0x00CE3654 File Offset: 0x00CE1854
+		// Token: 0x0602B60E RID: 177678 RVA: 0x00C31024 File Offset: 0x00C2F224
 		public void Refresh(bool isUnlock, int offset, int pos)
 		{
 			if (isUnlock)

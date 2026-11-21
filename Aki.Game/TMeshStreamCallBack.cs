@@ -2,8 +2,8 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200220E RID: 8718
-// (Invoke) Token: 0x06010FF1 RID: 69617
+// Token: 0x020016F2 RID: 5874
+// (Invoke) Token: 0x0600E486 RID: 58502
 public delegate void TMeshStreamCallBack([Nullable(new byte[]
 {
 	2,

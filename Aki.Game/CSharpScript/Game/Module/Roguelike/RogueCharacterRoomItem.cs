@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DF7 RID: 19959
+	// Token: 0x02003DC0 RID: 15808
 	public class RogueCharacterRoomItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603380E RID: 210958 RVA: 0x00C08B88 File Offset: 0x00C06D88
+		// Token: 0x06028679 RID: 165497 RVA: 0x00B52098 File Offset: 0x00B50298
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603380F RID: 210959 RVA: 0x00C08C94 File Offset: 0x00C06E94
+		// Token: 0x0602867A RID: 165498 RVA: 0x00B521A4 File Offset: 0x00B503A4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueCharacterRoomItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -51,20 +51,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033810 RID: 210960 RVA: 0x00C08CD7 File Offset: 0x00C06ED7
+		// Token: 0x0602867B RID: 165499 RVA: 0x00B521E7 File Offset: 0x00B503E7
 		[NullableContext(1)]
 		private CommonElementItem CreateElement()
 		{
 			return new CommonElementItem();
 		}
 
-		// Token: 0x06033811 RID: 210961 RVA: 0x00C08CDE File Offset: 0x00C06EDE
+		// Token: 0x0602867C RID: 165500 RVA: 0x00B521EE File Offset: 0x00B503EE
 		public void SetItemToggleState(EToggleState state)
 		{
 			base.GetExtendToggle(3).SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x06033812 RID: 210962 RVA: 0x00C08CF1 File Offset: 0x00C06EF1
+		// Token: 0x0602867D RID: 165501 RVA: 0x00B52201 File Offset: 0x00B50401
 		private void ToggleCallBackInternal(EToggleState state)
 		{
 			if (this.ClickCallback != null)
@@ -73,25 +73,25 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033813 RID: 210963 RVA: 0x00C08D18 File Offset: 0x00C06F18
+		// Token: 0x0602867E RID: 165502 RVA: 0x00B52228 File Offset: 0x00B50428
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetItemToggleState(EToggleState.ETT_UnChecked);
 		}
 
-		// Token: 0x06033814 RID: 210964 RVA: 0x00C08D21 File Offset: 0x00C06F21
+		// Token: 0x0602867F RID: 165503 RVA: 0x00B52231 File Offset: 0x00B50431
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetItemToggleState(EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06033815 RID: 210965 RVA: 0x00C08D2A File Offset: 0x00C06F2A
+		// Token: 0x06028680 RID: 165504 RVA: 0x00B5223A File Offset: 0x00B5043A
 		public bool IsSelectRoom()
 		{
 			return base.GetExtendToggle(3).GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06033816 RID: 210966 RVA: 0x00C08D3C File Offset: 0x00C06F3C
+		// Token: 0x06028681 RID: 165505 RVA: 0x00B5224C File Offset: 0x00B5044C
 		public override void Refresh(int roomId, bool isSelected, int gridIndex)
 		{
 			this.RoomId = roomId;
@@ -129,14 +129,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), rogueRoomShowConfig.Value.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0401B546 RID: 111942
+		// Token: 0x04015F19 RID: 89881
 		[Nullable(2)]
 		public Action<int, bool, int> ClickCallback;
 
-		// Token: 0x0401B547 RID: 111943
+		// Token: 0x04015F1A RID: 89882
 		public int RoomId = -1;
 
-		// Token: 0x0401B548 RID: 111944
+		// Token: 0x04015F1B RID: 89883
 		[Nullable(new byte[]
 		{
 			2,
@@ -144,22 +144,22 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<CommonElementItem, int> GenericLayout;
 
-		// Token: 0x0200AF80 RID: 44928
+		// Token: 0x020099B5 RID: 39349
 		private class ERogueCharacterRoomItemDefine
 		{
-			// Token: 0x0403549E RID: 218270
+			// Token: 0x0402FED1 RID: 196305
 			public const int TextureIcon = 0;
 
-			// Token: 0x0403549F RID: 218271
+			// Token: 0x0402FED2 RID: 196306
 			public const int TxtName = 1;
 
-			// Token: 0x040354A0 RID: 218272
+			// Token: 0x0402FED3 RID: 196307
 			public const int TxtDesc = 2;
 
-			// Token: 0x040354A1 RID: 218273
+			// Token: 0x0402FED4 RID: 196308
 			public const int ExtendToggle = 3;
 
-			// Token: 0x040354A2 RID: 218274
+			// Token: 0x0402FED5 RID: 196309
 			public const int ElementLayout = 4;
 		}
 	}

@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063C6 RID: 25542
+	// Token: 0x02005344 RID: 21316
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskInstanceDetailAttributeItemData : IMowingRiskInstanceDetailAttributeItemData
 	{
-		// Token: 0x170093D5 RID: 37845
-		// (get) Token: 0x0604040C RID: 263180 RVA: 0x00F8B8B0 File Offset: 0x00F89AB0
-		// (set) Token: 0x0604040D RID: 263181 RVA: 0x00F8B8B8 File Offset: 0x00F89AB8
+		// Token: 0x17006737 RID: 26423
+		// (get) Token: 0x060350CD RID: 217293 RVA: 0x00ED2848 File Offset: 0x00ED0A48
+		// (set) Token: 0x060350CE RID: 217294 RVA: 0x00ED2850 File Offset: 0x00ED0A50
 		public string IconPath { get; set; }
 
-		// Token: 0x170093D6 RID: 37846
-		// (get) Token: 0x0604040E RID: 263182 RVA: 0x00F8B8C1 File Offset: 0x00F89AC1
-		// (set) Token: 0x0604040F RID: 263183 RVA: 0x00F8B8C9 File Offset: 0x00F89AC9
+		// Token: 0x17006738 RID: 26424
+		// (get) Token: 0x060350CF RID: 217295 RVA: 0x00ED2859 File Offset: 0x00ED0A59
+		// (set) Token: 0x060350D0 RID: 217296 RVA: 0x00ED2861 File Offset: 0x00ED0A61
 		public string AttributeTextId { get; set; }
 	}
 }

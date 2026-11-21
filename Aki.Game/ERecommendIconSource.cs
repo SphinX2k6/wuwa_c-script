@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200109C RID: 4252
+// Token: 0x02000550 RID: 1360
 public enum ERecommendIconSource
 {
-	// Token: 0x04003364 RID: 13156
+	// Token: 0x040033FD RID: 13309
 	None,
-	// Token: 0x04003365 RID: 13157
+	// Token: 0x040033FE RID: 13310
 	Sprite,
-	// Token: 0x04003366 RID: 13158
+	// Token: 0x040033FF RID: 13311
 	Texture
 }

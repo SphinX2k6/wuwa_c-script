@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200028D RID: 653
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002D0 RID: 720
 	public class ICountDownTextTip : ITrampleTipType
 	{
-		// Token: 0x06000C2D RID: 3117 RVA: 0x0002FB54 File Offset: 0x0002DD54
+		// Token: 0x06000D47 RID: 3399 RVA: 0x00032844 File Offset: 0x00030A44
 		private ICountDownTextTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C2E RID: 3118 RVA: 0x0002FB8C File Offset: 0x0002DD8C
+		// Token: 0x06000D48 RID: 3400 RVA: 0x0003287C File Offset: 0x00030A7C
 		public static ICountDownTextTip Create([Nullable(2)] ICountDownTextTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C2F RID: 3119 RVA: 0x0002FB9F File Offset: 0x0002DD9F
+		// Token: 0x06000D49 RID: 3401 RVA: 0x0003288F File Offset: 0x00030A8F
 		public static ICountDownTextTip CreateFromSetValue([Nullable(2)] ICountDownTextTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C30 RID: 3120 RVA: 0x0002FBB2 File Offset: 0x0002DDB2
+		// Token: 0x06000D4A RID: 3402 RVA: 0x000328A2 File Offset: 0x00030AA2
 		public new ICountDownTextTip_SetValue ToSetValue()
 		{
 			return new ICountDownTextTip_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003A0 RID: 928
-		// (get) Token: 0x06000C31 RID: 3121 RVA: 0x0002FBDD File Offset: 0x0002DDDD
-		// (set) Token: 0x06000C32 RID: 3122 RVA: 0x0002FC08 File Offset: 0x0002DE08
+		// Token: 0x170003E8 RID: 1000
+		// (get) Token: 0x06000D4B RID: 3403 RVA: 0x000328CD File Offset: 0x00030ACD
+		// (set) Token: 0x06000D4C RID: 3404 RVA: 0x000328F8 File Offset: 0x00030AF8
 		public override ETrampleTipType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003A1 RID: 929
-		// (get) Token: 0x06000C33 RID: 3123 RVA: 0x0002FC16 File Offset: 0x0002DE16
-		// (set) Token: 0x06000C34 RID: 3124 RVA: 0x0002FC41 File Offset: 0x0002DE41
+		// Token: 0x170003E9 RID: 1001
+		// (get) Token: 0x06000D4D RID: 3405 RVA: 0x00032906 File Offset: 0x00030B06
+		// (set) Token: 0x06000D4E RID: 3406 RVA: 0x00032931 File Offset: 0x00030B31
 		public virtual string TidCountDownTip
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003A2 RID: 930
-		// (get) Token: 0x06000C35 RID: 3125 RVA: 0x0002FC4F File Offset: 0x0002DE4F
-		// (set) Token: 0x06000C36 RID: 3126 RVA: 0x0002FC66 File Offset: 0x0002DE66
+		// Token: 0x170003EA RID: 1002
+		// (get) Token: 0x06000D4F RID: 3407 RVA: 0x0003293F File Offset: 0x00030B3F
+		// (set) Token: 0x06000D50 RID: 3408 RVA: 0x00032956 File Offset: 0x00030B56
 		[Nullable(2)]
 		public virtual string EdTidCountDownTip
 		{
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B8D RID: 2957
+		// Token: 0x04000C6E RID: 3182
 		[Nullable(2)]
 		protected new ICountDownTextTip FbInstance;
 
-		// Token: 0x04000B8E RID: 2958
+		// Token: 0x04000C6F RID: 3183
 		[Nullable(2)]
 		protected new ICountDownTextTip_SetValue PocoInterface;
 	}

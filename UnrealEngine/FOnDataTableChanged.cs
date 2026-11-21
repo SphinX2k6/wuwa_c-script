@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A3D RID: 6717
+	// Token: 0x0200049D RID: 1181
 	public sealed class FOnDataTableChanged : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018DD6 RID: 101846 RVA: 0x0024BC08 File Offset: 0x00249E08
+		// Token: 0x06006E1B RID: 28187 RVA: 0x000A209F File Offset: 0x000A029F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnDataTableChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018DD7 RID: 101847 RVA: 0x0024BC14 File Offset: 0x00249E14
+		// Token: 0x06006E1C RID: 28188 RVA: 0x000A20AB File Offset: 0x000A02AB
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnDataTableChanged._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FOnDataTableChanged._FunctionPtr;
 		}
 
-		// Token: 0x06018DD8 RID: 101848 RVA: 0x0024BC37 File Offset: 0x00249E37
+		// Token: 0x06006E1D RID: 28189 RVA: 0x000A20CE File Offset: 0x000A02CE
 		public FOnDataTableChanged()
 		{
 		}
 
-		// Token: 0x06018DD9 RID: 101849 RVA: 0x0024BC3F File Offset: 0x00249E3F
+		// Token: 0x06006E1E RID: 28190 RVA: 0x000A20D6 File Offset: 0x000A02D6
 		[NullableContext(2)]
 		public FOnDataTableChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018DDA RID: 101850 RVA: 0x0024BC49 File Offset: 0x00249E49
+		// Token: 0x06006E1F RID: 28191 RVA: 0x000A20E0 File Offset: 0x000A02E0
 		public FOnDataTableChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018DDB RID: 101851 RVA: 0x0024BC54 File Offset: 0x00249E54
+		// Token: 0x06006E20 RID: 28192 RVA: 0x000A20EB File Offset: 0x000A02EB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018DDC RID: 101852 RVA: 0x0024BC86 File Offset: 0x00249E86
+		// Token: 0x06006E21 RID: 28193 RVA: 0x000A211D File Offset: 0x000A031D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FOnDataTableChanged.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnDataTableChanged.RegisterId);
 		}
 
-		// Token: 0x06018DDD RID: 101853 RVA: 0x0024BCC0 File Offset: 0x00249EC0
+		// Token: 0x06006E22 RID: 28194 RVA: 0x000A2157 File Offset: 0x000A0357
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06018DDE RID: 101854 RVA: 0x0024BCCC File Offset: 0x00249ECC
+		// Token: 0x06006E23 RID: 28195 RVA: 0x000A2164 File Offset: 0x000A0364
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400D6EA RID: 55018
+		// Token: 0x04002F2A RID: 12074
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D6EB RID: 55019
+		// Token: 0x04002F2B RID: 12075
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroPuertsWrapper.OnDataTableChanged__DelegateSignature";
 
-		// Token: 0x0400D6EC RID: 55020
+		// Token: 0x04002F2C RID: 12076
 		private static int RegisterId;
 
-		// Token: 0x020030FF RID: 12543
+		// Token: 0x02000BD4 RID: 3028
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016E85 RID: 93829
+			// Token: 0x04005D7F RID: 23935
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

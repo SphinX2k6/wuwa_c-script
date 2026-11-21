@@ -10,25 +10,25 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.BattleUiSet
 {
-	// Token: 0x02005E5D RID: 24157
+	// Token: 0x02004E42 RID: 20034
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleUiSetController : UiControllerBase
 	{
-		// Token: 0x0603D6AC RID: 251564 RVA: 0x00ED0893 File Offset: 0x00ECEA93
+		// Token: 0x0603263C RID: 206396 RVA: 0x00E21E03 File Offset: 0x00E20003
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603D6AD RID: 251565 RVA: 0x00ED0896 File Offset: 0x00ECEA96
+		// Token: 0x0603263D RID: 206397 RVA: 0x00E21E06 File Offset: 0x00E20006
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x0603D6AE RID: 251566 RVA: 0x00ED0899 File Offset: 0x00ECEA99
+		// Token: 0x0603263E RID: 206398 RVA: 0x00E21E09 File Offset: 0x00E20009
 		protected override void OnRegisterNetEvent()
 		{
 			Net instance = Net.Instance;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			instance.Register(id, callback);
 		}
 
-		// Token: 0x0603D6AF RID: 251567 RVA: 0x00ED08C6 File Offset: 0x00ECEAC6
+		// Token: 0x0603263F RID: 206399 RVA: 0x00E21E36 File Offset: 0x00E20036
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.SettingNotify);
 		}
 
-		// Token: 0x0603D6B0 RID: 251568 RVA: 0x00ED08D8 File Offset: 0x00ECEAD8
+		// Token: 0x06032640 RID: 206400 RVA: 0x00E21E48 File Offset: 0x00E20048
 		[NullableContext(2)]
 		private static void SettingNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			}
 		}
 
-		// Token: 0x0603D6B1 RID: 251569 RVA: 0x00ED0A10 File Offset: 0x00ECEC10
+		// Token: 0x06032641 RID: 206401 RVA: 0x00E21F80 File Offset: 0x00E20180
 		public static void MobileButtonSettingUpdateRequest(IReadOnlyList<MobileButtonSetting> settings)
 		{
 			MobileButtonSettingUpdateRequest mobileButtonSettingUpdateRequest = Aki.Protocol.MobileButtonSettingUpdateRequest.Create();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			instance2.Call(requestMessageId, message2, handle, 0);
 		}
 
-		// Token: 0x0603D6B2 RID: 251570 RVA: 0x00ED0A88 File Offset: 0x00ECEC88
+		// Token: 0x06032642 RID: 206402 RVA: 0x00E21FF8 File Offset: 0x00E201F8
 		[NullableContext(2)]
 		private static void MobileButtonSettingUpdateResponse(IMessage msg, Net.CallbackStatus status)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			if (mobileButtonSettingUpdateResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mobileButtonSettingUpdateResponse.ErrorCode, 27442, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mobileButtonSettingUpdateResponse.ErrorCode, 22058, null, true, true);
 				return;
 			}
 			GenericPromptController instance2 = GenericPromptController.Instance;
@@ -128,8 +128,8 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			instance2.ShowPromptByCode((pureModeData != null && pureModeData.IsOpen) ? "SaveButtonPureMode" : "SaveButton", Array.Empty<object>());
 		}
 
-		// Token: 0x17008E75 RID: 36469
-		// (get) Token: 0x0603D6B3 RID: 251571 RVA: 0x00ED0B1A File Offset: 0x00ECED1A
+		// Token: 0x17006247 RID: 25159
+		// (get) Token: 0x06032643 RID: 206403 RVA: 0x00E2208A File Offset: 0x00E2028A
 		public static BattleUiSetController Instance
 		{
 			get
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			}
 		}
 
-		// Token: 0x0603D6B4 RID: 251572 RVA: 0x00ED0B21 File Offset: 0x00ECED21
+		// Token: 0x06032644 RID: 206404 RVA: 0x00E22091 File Offset: 0x00E20291
 		public static BattleUiSetController GetOrCreateInstance()
 		{
 			if (BattleUiSetController._Instance == null)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return BattleUiSetController._Instance;
 		}
 
-		// Token: 0x0603D6B5 RID: 251573 RVA: 0x00ED0B35 File Offset: 0x00ECED35
+		// Token: 0x06032645 RID: 206405 RVA: 0x00E220A5 File Offset: 0x00E202A5
 		public static bool CreateInstance()
 		{
 			if (BattleUiSetController._Instance != null)
@@ -159,32 +159,32 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return true;
 		}
 
-		// Token: 0x0603D6B6 RID: 251574 RVA: 0x00ED0B4B File Offset: 0x00ECED4B
+		// Token: 0x06032646 RID: 206406 RVA: 0x00E220BB File Offset: 0x00E202BB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D6B7 RID: 251575 RVA: 0x00ED0B4D File Offset: 0x00ECED4D
+		// Token: 0x06032647 RID: 206407 RVA: 0x00E220BD File Offset: 0x00E202BD
 		public static void ResetStaticDefaultValue()
 		{
 			BattleUiSetController._Instance = null;
 		}
 
-		// Token: 0x0603D6B8 RID: 251576 RVA: 0x00ED0B55 File Offset: 0x00ECED55
+		// Token: 0x06032648 RID: 206408 RVA: 0x00E220C5 File Offset: 0x00E202C5
 		static BattleUiSetController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleUiSetController.CreateStaticDefaultValue), new Action(BattleUiSetController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040200C7 RID: 131271
+		// Token: 0x0401AB8E RID: 109454
 		[Nullable(2)]
 		private static BattleUiSetController _Instance;
 
-		// Token: 0x0200C1D3 RID: 49619
+		// Token: 0x0200ABE2 RID: 44002
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403A936 RID: 239926
+			// Token: 0x04035328 RID: 217896
 			[Nullable(new byte[]
 			{
 				0,
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__SettingNotify;
 
-			// Token: 0x0403A937 RID: 239927
+			// Token: 0x04035329 RID: 217897
 			[Nullable(new byte[]
 			{
 				0,

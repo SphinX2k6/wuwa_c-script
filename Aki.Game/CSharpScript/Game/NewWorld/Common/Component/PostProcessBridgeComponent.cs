@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200708A RID: 28810
+	// Token: 0x0200620B RID: 25099
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PostProcessBridgeComponent : EntityComponent
 	{
-		// Token: 0x060462ED RID: 287469 RVA: 0x01189EBC File Offset: 0x011880BC
+		// Token: 0x0603C51C RID: 247068 RVA: 0x01133258 File Offset: 0x01131458
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			SkyboxComponent skyboxComponent = args.GetP1<CreateEntityData>().GetParam<PostProcessBridgeComponent>() as SkyboxComponent;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462EE RID: 287470 RVA: 0x0118A0D0 File Offset: 0x011882D0
+		// Token: 0x0603C51D RID: 247069 RVA: 0x0113346C File Offset: 0x0113166C
 		protected unsafe override bool OnStart()
 		{
 			AActor owner = base.Entity.GetComponent<BaseActorComponent>().Owner;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x060462EF RID: 287471 RVA: 0x0118A2DE File Offset: 0x011884DE
+		// Token: 0x0603C51E RID: 247070 RVA: 0x0113367A File Offset: 0x0113187A
 		private void OnPlayerTrigger(bool isEnter)
 		{
 			if (isEnter)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.OnTriggerExit();
 		}
 
-		// Token: 0x060462F0 RID: 287472 RVA: 0x0118A2F0 File Offset: 0x011884F0
+		// Token: 0x0603C51F RID: 247071 RVA: 0x0113368C File Offset: 0x0113188C
 		public void OnTriggerEnter()
 		{
 			if (!this.IsInit || !this.IsEnabled)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetTargetBlendWeight(1f, false);
 		}
 
-		// Token: 0x060462F1 RID: 287473 RVA: 0x0118A316 File Offset: 0x01188516
+		// Token: 0x0603C520 RID: 247072 RVA: 0x011336B2 File Offset: 0x011318B2
 		public void OnTriggerExit()
 		{
 			if (!this.IsInit || !this.IsEnabled)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetTargetBlendWeight(0f, false);
 		}
 
-		// Token: 0x060462F2 RID: 287474 RVA: 0x0118A33C File Offset: 0x0118853C
+		// Token: 0x0603C521 RID: 247073 RVA: 0x011336D8 File Offset: 0x011318D8
 		public void SetTargetBlendWeight(float blendWeight, bool immediately = false)
 		{
 			if (!this.IsInit)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462F3 RID: 287475 RVA: 0x0118A37C File Offset: 0x0118857C
+		// Token: 0x0603C522 RID: 247074 RVA: 0x01133718 File Offset: 0x01131918
 		public void EnableComponent()
 		{
 			if (!this.IsInit)
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462F4 RID: 287476 RVA: 0x0118A3E4 File Offset: 0x011885E4
+		// Token: 0x0603C523 RID: 247075 RVA: 0x01133780 File Offset: 0x01131980
 		public void DisableComponent()
 		{
 			if (!this.IsInit)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.SetTargetBlendWeight(0f, false);
 		}
 
-		// Token: 0x060462F5 RID: 287477 RVA: 0x0118A402 File Offset: 0x01188602
+		// Token: 0x0603C524 RID: 247076 RVA: 0x0113379E File Offset: 0x0113199E
 		protected override void OnActivate()
 		{
 			if (!Info.Instance.EnableForceTick && base.Active)
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462F6 RID: 287478 RVA: 0x0118A42F File Offset: 0x0118862F
+		// Token: 0x0603C525 RID: 247077 RVA: 0x011337CB File Offset: 0x011319CB
 		protected override void OnEnable()
 		{
 			if (!Info.Instance.EnableForceTick)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462F7 RID: 287479 RVA: 0x0118A468 File Offset: 0x01188668
+		// Token: 0x0603C526 RID: 247078 RVA: 0x01133804 File Offset: 0x01131A04
 		[NullableContext(1)]
 		protected override void OnDisable(string reason)
 		{
@@ -258,13 +258,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462F8 RID: 287480 RVA: 0x0118A481 File Offset: 0x01188681
+		// Token: 0x0603C527 RID: 247079 RVA: 0x0113381D File Offset: 0x01131A1D
 		protected override void OnForceTick(float delta)
 		{
 			this.ForceTickInternal(delta);
 		}
 
-		// Token: 0x060462F9 RID: 287481 RVA: 0x0118A48C File Offset: 0x0118868C
+		// Token: 0x0603C528 RID: 247080 RVA: 0x01133828 File Offset: 0x01131A28
 		private void ForceTickInternal(float delta)
 		{
 			if (!this.IsInit)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.UpdatePostProcessComponentEnable();
 		}
 
-		// Token: 0x060462FA RID: 287482 RVA: 0x0118A564 File Offset: 0x01188764
+		// Token: 0x0603C529 RID: 247081 RVA: 0x01133900 File Offset: 0x01131B00
 		private void CheckInTriggerByTriggerDistance(float delta)
 		{
 			this.TickTime += delta;
@@ -330,13 +330,13 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x060462FB RID: 287483 RVA: 0x0118A60C File Offset: 0x0118880C
+		// Token: 0x0603C52A RID: 247082 RVA: 0x011339A8 File Offset: 0x01131BA8
 		private void UpdatePostProcessComponentEnable()
 		{
 			this.KuroPostProcessComponent.bEnabled = (this.CurBlendWeight > 0f);
 		}
 
-		// Token: 0x060462FC RID: 287484 RVA: 0x0118A628 File Offset: 0x01188828
+		// Token: 0x0603C52B RID: 247083 RVA: 0x011339C4 File Offset: 0x01131BC4
 		protected override bool OnEnd()
 		{
 			if (this.RangeComponent != null)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x060462FD RID: 287485 RVA: 0x0118A67C File Offset: 0x0118887C
+		// Token: 0x0603C52C RID: 247084 RVA: 0x01133A18 File Offset: 0x01131C18
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -361,181 +361,187 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			PostProcessBridgeComponent postProcessBridgeComponent = (PostProcessBridgeComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsInit"))
+			this.IsInit = postProcessBridgeComponent.IsInit;
+			this.IsEnabled = postProcessBridgeComponent.IsEnabled;
+			this.WeatherDataAssetPath = postProcessBridgeComponent.WeatherDataAssetPath;
+			this.TodDataAssetPath = postProcessBridgeComponent.TodDataAssetPath;
+			if (postProcessBridgeComponent.WeatherDataAsset == null)
 			{
-				this.IsInit = postProcessBridgeComponent.IsInit;
+				this.WeatherDataAsset = null;
 			}
-			if (base.CanResetComponentProperty("IsEnabled"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WeatherDataAsset), "WeatherDataAsset"))
 			{
-				this.IsEnabled = postProcessBridgeComponent.IsEnabled;
+				return false;
 			}
-			if (base.CanResetComponentProperty("WeatherDataAssetPath"))
+			if (postProcessBridgeComponent.TodDataAsset == null)
 			{
-				this.WeatherDataAssetPath = postProcessBridgeComponent.WeatherDataAssetPath;
+				this.TodDataAsset = null;
 			}
-			if (base.CanResetComponentProperty("TodDataAssetPath"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TodDataAsset), "TodDataAsset"))
 			{
-				this.TodDataAssetPath = postProcessBridgeComponent.TodDataAssetPath;
+				return false;
 			}
-			if (base.CanResetComponentProperty("WeatherDataAsset"))
+			if (postProcessBridgeComponent.RangeComponent == null)
 			{
-				if (postProcessBridgeComponent.WeatherDataAsset == null)
-				{
-					this.WeatherDataAsset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroWeatherDataAsset>(this.WeatherDataAsset), "WeatherDataAsset"))
-				{
-					return false;
-				}
+				this.RangeComponent = null;
 			}
-			if (base.CanResetComponentProperty("TodDataAsset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComponent), "RangeComponent"))
 			{
-				if (postProcessBridgeComponent.TodDataAsset == null)
-				{
-					this.TodDataAsset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroTODData>(this.TodDataAsset), "TodDataAsset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("RangeComponent"))
+			if (postProcessBridgeComponent.KuroPostProcessComponent == null)
 			{
-				if (postProcessBridgeComponent.RangeComponent == null)
-				{
-					this.RangeComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComponent), "RangeComponent"))
-				{
-					return false;
-				}
+				this.KuroPostProcessComponent = null;
 			}
-			if (base.CanResetComponentProperty("KuroPostProcessComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KuroPostProcessComponent), "KuroPostProcessComponent"))
 			{
-				if (postProcessBridgeComponent.KuroPostProcessComponent == null)
-				{
-					this.KuroPostProcessComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroPostProcessComponent>(this.KuroPostProcessComponent), "KuroPostProcessComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Actor"))
+			if (postProcessBridgeComponent.Actor == null)
 			{
-				if (postProcessBridgeComponent.Actor == null)
-				{
-					this.Actor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.Actor), "Actor"))
-				{
-					return false;
-				}
+				this.Actor = null;
 			}
-			if (base.CanResetComponentProperty("ActiveByTriggerComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Actor), "Actor"))
 			{
-				this.ActiveByTriggerComponent = postProcessBridgeComponent.ActiveByTriggerComponent;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TriggerMode"))
+			this.ActiveByTriggerComponent = postProcessBridgeComponent.ActiveByTriggerComponent;
+			if (postProcessBridgeComponent.TriggerMode == null)
 			{
-				if (postProcessBridgeComponent.TriggerMode == null)
-				{
-					this.TriggerMode = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ISkyboxTrigger>(this.TriggerMode), "TriggerMode"))
-				{
-					return false;
-				}
+				this.TriggerMode = null;
 			}
-			if (base.CanResetComponentProperty("TriggerDistanceSquared"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TriggerMode), "TriggerMode"))
 			{
-				this.TriggerDistanceSquared = postProcessBridgeComponent.TriggerDistanceSquared;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TickTime"))
-			{
-				this.TickTime = postProcessBridgeComponent.TickTime;
-			}
-			if (base.CanResetComponentProperty("InTrigger"))
-			{
-				this.InTrigger = postProcessBridgeComponent.InTrigger;
-			}
-			if (base.CanResetComponentProperty("ChangeSpeed"))
-			{
-				this.ChangeSpeed = postProcessBridgeComponent.ChangeSpeed;
-			}
-			if (base.CanResetComponentProperty("Priority"))
-			{
-				this.Priority = postProcessBridgeComponent.Priority;
-			}
-			if (base.CanResetComponentProperty("TargetBlendWeight"))
-			{
-				this.TargetBlendWeight = postProcessBridgeComponent.TargetBlendWeight;
-			}
-			if (base.CanResetComponentProperty("CurBlendWeight"))
-			{
-				this.CurBlendWeight = postProcessBridgeComponent.CurBlendWeight;
-			}
+			this.TriggerDistanceSquared = postProcessBridgeComponent.TriggerDistanceSquared;
+			this.TickTime = postProcessBridgeComponent.TickTime;
+			this.InTrigger = postProcessBridgeComponent.InTrigger;
+			this.ChangeSpeed = postProcessBridgeComponent.ChangeSpeed;
+			this.Priority = postProcessBridgeComponent.Priority;
+			this.TargetBlendWeight = postProcessBridgeComponent.TargetBlendWeight;
+			this.CurBlendWeight = postProcessBridgeComponent.CurBlendWeight;
 			return true;
 		}
 
-		// Token: 0x04024C30 RID: 150576
+		// Token: 0x170071DA RID: 29146
+		// (get) Token: 0x0603C52D RID: 247085 RVA: 0x01133BCA File Offset: 0x01131DCA
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071DB RID: 29147
+		// (get) Token: 0x0603C52E RID: 247086 RVA: 0x01133BCD File Offset: 0x01131DCD
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071DC RID: 29148
+		// (get) Token: 0x0603C52F RID: 247087 RVA: 0x01133BD0 File Offset: 0x01131DD0
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071DD RID: 29149
+		// (get) Token: 0x0603C530 RID: 247088 RVA: 0x01133BD3 File Offset: 0x01131DD3
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071DE RID: 29150
+		// (get) Token: 0x0603C531 RID: 247089 RVA: 0x01133BD6 File Offset: 0x01131DD6
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071DF RID: 29151
+		// (get) Token: 0x0603C532 RID: 247090 RVA: 0x01133BD9 File Offset: 0x01131DD9
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEEB RID: 130795
 		private const int DEFAULT_PRIORITY = 10;
 
-		// Token: 0x04024C31 RID: 150577
+		// Token: 0x0401FEEC RID: 130796
 		private const int TICK_TIME = 1000;
 
-		// Token: 0x04024C32 RID: 150578
+		// Token: 0x0401FEED RID: 130797
 		private bool IsInit;
 
-		// Token: 0x04024C33 RID: 150579
+		// Token: 0x0401FEEE RID: 130798
 		private bool IsEnabled;
 
-		// Token: 0x04024C34 RID: 150580
+		// Token: 0x0401FEEF RID: 130799
 		private string WeatherDataAssetPath;
 
-		// Token: 0x04024C35 RID: 150581
+		// Token: 0x0401FEF0 RID: 130800
 		private string TodDataAssetPath;
 
-		// Token: 0x04024C36 RID: 150582
+		// Token: 0x0401FEF1 RID: 130801
 		private UKuroWeatherDataAsset WeatherDataAsset;
 
-		// Token: 0x04024C37 RID: 150583
+		// Token: 0x0401FEF2 RID: 130802
 		private UKuroTODData TodDataAsset;
 
-		// Token: 0x04024C38 RID: 150584
+		// Token: 0x0401FEF3 RID: 130803
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComponent;
 
-		// Token: 0x04024C39 RID: 150585
+		// Token: 0x0401FEF4 RID: 130804
 		private UKuroPostProcessComponent KuroPostProcessComponent;
 
-		// Token: 0x04024C3A RID: 150586
+		// Token: 0x0401FEF5 RID: 130805
 		private AActor Actor;
 
-		// Token: 0x04024C3B RID: 150587
+		// Token: 0x0401FEF6 RID: 130806
 		private bool ActiveByTriggerComponent = true;
 
-		// Token: 0x04024C3C RID: 150588
+		// Token: 0x0401FEF7 RID: 130807
 		private ISkyboxTrigger TriggerMode;
 
-		// Token: 0x04024C3D RID: 150589
+		// Token: 0x0401FEF8 RID: 130808
 		private float? TriggerDistanceSquared;
 
-		// Token: 0x04024C3E RID: 150590
+		// Token: 0x0401FEF9 RID: 130809
 		private float TickTime;
 
-		// Token: 0x04024C3F RID: 150591
+		// Token: 0x0401FEFA RID: 130810
 		private bool InTrigger;
 
-		// Token: 0x04024C40 RID: 150592
+		// Token: 0x0401FEFB RID: 130811
 		private float ChangeSpeed = 0.001f;
 
-		// Token: 0x04024C41 RID: 150593
+		// Token: 0x0401FEFC RID: 130812
 		private float Priority = 10f;
 
-		// Token: 0x04024C42 RID: 150594
+		// Token: 0x0401FEFD RID: 130813
 		private float TargetBlendWeight;
 
-		// Token: 0x04024C43 RID: 150595
+		// Token: 0x0401FEFE RID: 130814
 		private float CurBlendWeight;
 	}
 }

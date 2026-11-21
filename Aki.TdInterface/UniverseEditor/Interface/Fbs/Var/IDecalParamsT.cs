@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A94 RID: 14996
+	// Token: 0x02003E6F RID: 15983
 	public class IDecalParamsT
 	{
-		// Token: 0x170066BD RID: 26301
-		// (get) Token: 0x06014596 RID: 83350 RVA: 0x002F80D2 File Offset: 0x002F62D2
-		// (set) Token: 0x06014597 RID: 83351 RVA: 0x002F80DA File Offset: 0x002F62DA
+		// Token: 0x17006BED RID: 27629
+		// (get) Token: 0x060158B2 RID: 88242 RVA: 0x0031B2BE File Offset: 0x003194BE
+		// (set) Token: 0x060158B3 RID: 88243 RVA: 0x0031B2C6 File Offset: 0x003194C6
 		public EParamsPreset Type { get; set; }
 
-		// Token: 0x170066BE RID: 26302
-		// (get) Token: 0x06014598 RID: 83352 RVA: 0x002F80E3 File Offset: 0x002F62E3
-		// (set) Token: 0x06014599 RID: 83353 RVA: 0x002F80EB File Offset: 0x002F62EB
+		// Token: 0x17006BEE RID: 27630
+		// (get) Token: 0x060158B4 RID: 88244 RVA: 0x0031B2CF File Offset: 0x003194CF
+		// (set) Token: 0x060158B5 RID: 88245 RVA: 0x0031B2D7 File Offset: 0x003194D7
 		public float SpreadRadius { get; set; }
 
-		// Token: 0x170066BF RID: 26303
-		// (get) Token: 0x0601459A RID: 83354 RVA: 0x002F80F4 File Offset: 0x002F62F4
-		// (set) Token: 0x0601459B RID: 83355 RVA: 0x002F80FC File Offset: 0x002F62FC
+		// Token: 0x17006BEF RID: 27631
+		// (get) Token: 0x060158B6 RID: 88246 RVA: 0x0031B2E0 File Offset: 0x003194E0
+		// (set) Token: 0x060158B7 RID: 88247 RVA: 0x0031B2E8 File Offset: 0x003194E8
 		public float SpreadTime { get; set; }
 
-		// Token: 0x0601459C RID: 83356 RVA: 0x002F8105 File Offset: 0x002F6305
+		// Token: 0x060158B8 RID: 88248 RVA: 0x0031B2F1 File Offset: 0x003194F1
 		public IDecalParamsT()
 		{
 			this.Type = EParamsPreset.Decal;

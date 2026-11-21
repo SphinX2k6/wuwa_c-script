@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070F0 RID: 28912
+	// Token: 0x020063A0 RID: 25504
 	public interface ICableWayRailData : IRailParam
 	{
 	}

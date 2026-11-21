@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B4D RID: 2893
+	// Token: 0x02000C1B RID: 3099
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAngularVelocityConfig
 	{
-		// Token: 0x060042AA RID: 17066 RVA: 0x000AA367 File Offset: 0x000A8567
-		[NullableContext(1)]
+		// Token: 0x06004703 RID: 18179 RVA: 0x000B442B File Offset: 0x000B262B
+		[NullableContext(0)]
 		public static IAngularVelocityConfig Create(IAngularVelocityConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011CD RID: 4557
-		// (get) Token: 0x060042AB RID: 17067 RVA: 0x000AA386 File Offset: 0x000A8586
+		// Token: 0x170012C8 RID: 4808
+		// (get) Token: 0x06004704 RID: 18180 RVA: 0x000B444A File Offset: 0x000B264A
 		public virtual IRangedRandom X
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011CE RID: 4558
-		// (get) Token: 0x060042AC RID: 17068 RVA: 0x000AA3BA File Offset: 0x000A85BA
+		// Token: 0x170012C9 RID: 4809
+		// (get) Token: 0x06004705 RID: 18181 RVA: 0x000B447E File Offset: 0x000B267E
 		public virtual IRangedRandom Y
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011CF RID: 4559
-		// (get) Token: 0x060042AD RID: 17069 RVA: 0x000AA3EE File Offset: 0x000A85EE
+		// Token: 0x170012CA RID: 4810
+		// (get) Token: 0x06004706 RID: 18182 RVA: 0x000B44B2 File Offset: 0x000B26B2
 		public virtual IRangedRandom Z
 		{
 			get
@@ -71,25 +71,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002584 RID: 9604
+		// Token: 0x040027CC RID: 10188
 		private IAngularVelocityConfig Instance;
 
-		// Token: 0x04002585 RID: 9605
+		// Token: 0x040027CD RID: 10189
 		private IRangedRandom _XCache;
 
-		// Token: 0x04002586 RID: 9606
+		// Token: 0x040027CE RID: 10190
 		private bool _XInited;
 
-		// Token: 0x04002587 RID: 9607
+		// Token: 0x040027CF RID: 10191
 		private IRangedRandom _YCache;
 
-		// Token: 0x04002588 RID: 9608
+		// Token: 0x040027D0 RID: 10192
 		private bool _YInited;
 
-		// Token: 0x04002589 RID: 9609
+		// Token: 0x040027D1 RID: 10193
 		private IRangedRandom _ZCache;
 
-		// Token: 0x0400258A RID: 9610
+		// Token: 0x040027D2 RID: 10194
 		private bool _ZInited;
 	}
 }

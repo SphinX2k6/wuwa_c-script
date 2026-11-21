@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BD7 RID: 27607
+	// Token: 0x0200733B RID: 29499
 	public class INpcLookAtTypeBase_UnionUnion
 	{
-		// Token: 0x1700CD23 RID: 52515
-		// (get) Token: 0x060307F2 RID: 198642 RVA: 0x00695AD9 File Offset: 0x00693CD9
-		// (set) Token: 0x060307F3 RID: 198643 RVA: 0x00695AE1 File Offset: 0x00693CE1
+		// Token: 0x1700D82F RID: 55343
+		// (get) Token: 0x0603370E RID: 210702 RVA: 0x006EF3D9 File Offset: 0x006ED5D9
+		// (set) Token: 0x0603370F RID: 210703 RVA: 0x006EF3E1 File Offset: 0x006ED5E1
 		public INpcLookAtTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700CD24 RID: 52516
-		// (get) Token: 0x060307F4 RID: 198644 RVA: 0x00695AEA File Offset: 0x00693CEA
-		// (set) Token: 0x060307F5 RID: 198645 RVA: 0x00695AF2 File Offset: 0x00693CF2
+		// Token: 0x1700D830 RID: 55344
+		// (get) Token: 0x06033710 RID: 210704 RVA: 0x006EF3EA File Offset: 0x006ED5EA
+		// (set) Token: 0x06033711 RID: 210705 RVA: 0x006EF3F2 File Offset: 0x006ED5F2
 		public object Value { get; set; }
 
-		// Token: 0x060307F6 RID: 198646 RVA: 0x00695AFB File Offset: 0x00693CFB
+		// Token: 0x06033712 RID: 210706 RVA: 0x006EF3FB File Offset: 0x006ED5FB
 		public INpcLookAtTypeBase_UnionUnion()
 		{
 			this.Type = INpcLookAtTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060307F7 RID: 198647 RVA: 0x00695B11 File Offset: 0x00693D11
+		// Token: 0x06033713 RID: 210707 RVA: 0x006EF411 File Offset: 0x006ED611
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060307F8 RID: 198648 RVA: 0x00695B23 File Offset: 0x00693D23
+		// Token: 0x06033714 RID: 210708 RVA: 0x006EF423 File Offset: 0x006ED623
 		public INpcLookAtTypeBaseT AsINpcLookAtTypeBase()
 		{
 			return this.As<INpcLookAtTypeBaseT>();
 		}
 
-		// Token: 0x060307F9 RID: 198649 RVA: 0x00695B2B File Offset: 0x00693D2B
+		// Token: 0x06033715 RID: 210709 RVA: 0x006EF42B File Offset: 0x006ED62B
 		public static INpcLookAtTypeBase_UnionUnion FromINpcLookAtTypeBase(INpcLookAtTypeBaseT _inpclookattypebase)
 		{
 			return new INpcLookAtTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060307FA RID: 198650 RVA: 0x00695B40 File Offset: 0x00693D40
+		// Token: 0x06033716 RID: 210710 RVA: 0x006EF440 File Offset: 0x006ED640
 		public INpcLookAtPlayerT AsINpcLookAtPlayer()
 		{
 			return this.As<INpcLookAtPlayerT>();
 		}
 
-		// Token: 0x060307FB RID: 198651 RVA: 0x00695B48 File Offset: 0x00693D48
+		// Token: 0x06033717 RID: 210711 RVA: 0x006EF448 File Offset: 0x006ED648
 		public static INpcLookAtTypeBase_UnionUnion FromINpcLookAtPlayer(INpcLookAtPlayerT _inpclookatplayer)
 		{
 			return new INpcLookAtTypeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060307FC RID: 198652 RVA: 0x00695B5D File Offset: 0x00693D5D
+		// Token: 0x06033718 RID: 210712 RVA: 0x006EF45D File Offset: 0x006ED65D
 		public INpcLookAtEntityT AsINpcLookAtEntity()
 		{
 			return this.As<INpcLookAtEntityT>();
 		}
 
-		// Token: 0x060307FD RID: 198653 RVA: 0x00695B65 File Offset: 0x00693D65
+		// Token: 0x06033719 RID: 210713 RVA: 0x006EF465 File Offset: 0x006ED665
 		public static INpcLookAtTypeBase_UnionUnion FromINpcLookAtEntity(INpcLookAtEntityT _inpclookatentity)
 		{
 			return new INpcLookAtTypeBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060307FE RID: 198654 RVA: 0x00695B7A File Offset: 0x00693D7A
+		// Token: 0x0603371A RID: 210714 RVA: 0x006EF47A File Offset: 0x006ED67A
 		public INpcLookAtPositionT AsINpcLookAtPosition()
 		{
 			return this.As<INpcLookAtPositionT>();
 		}
 
-		// Token: 0x060307FF RID: 198655 RVA: 0x00695B82 File Offset: 0x00693D82
+		// Token: 0x0603371B RID: 210715 RVA: 0x006EF482 File Offset: 0x006ED682
 		public static INpcLookAtTypeBase_UnionUnion FromINpcLookAtPosition(INpcLookAtPositionT _inpclookatposition)
 		{
 			return new INpcLookAtTypeBase_UnionUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06030800 RID: 198656 RVA: 0x00695B98 File Offset: 0x00693D98
+		// Token: 0x0603371C RID: 210716 RVA: 0x006EF498 File Offset: 0x006ED698
 		public static int Pack(FlatBufferBuilder builder, INpcLookAtTypeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

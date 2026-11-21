@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E88 RID: 20104
+	// Token: 0x02003E51 RID: 15953
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleRandomEventItem : GridProxyAbstract<RogueResGainData>
 	{
-		// Token: 0x06033B64 RID: 211812 RVA: 0x00C1CE68 File Offset: 0x00C1B068
+		// Token: 0x060289CF RID: 166351 RVA: 0x00B66384 File Offset: 0x00B64584
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B65 RID: 211813 RVA: 0x00C1CEE5 File Offset: 0x00C1B0E5
+		// Token: 0x060289D0 RID: 166352 RVA: 0x00B66401 File Offset: 0x00B64601
 		private void OnBtnExtendToggle(EToggleState state)
 		{
 			if (base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_Checked)
@@ -45,27 +45,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033B66 RID: 211814 RVA: 0x00C1CF13 File Offset: 0x00C1B113
+		// Token: 0x060289D1 RID: 166353 RVA: 0x00B6642F File Offset: 0x00B6462F
 		public override void Refresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06033B67 RID: 211815 RVA: 0x00C1CF1C File Offset: 0x00C1B11C
+		// Token: 0x060289D2 RID: 166354 RVA: 0x00B66438 File Offset: 0x00B64638
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 			RogueBattleModel.Instance.SelectGainData = this.Data;
 		}
 
-		// Token: 0x06033B68 RID: 211816 RVA: 0x00C1CF3F File Offset: 0x00C1B13F
+		// Token: 0x060289D3 RID: 166355 RVA: 0x00B6645B File Offset: 0x00B6465B
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 			RogueBattleModel.Instance.SelectGainData = null;
 		}
 
-		// Token: 0x0401B741 RID: 112449
+		// Token: 0x04016114 RID: 90388
 		[Nullable(2)]
 		public RogueResGainData Data;
 	}

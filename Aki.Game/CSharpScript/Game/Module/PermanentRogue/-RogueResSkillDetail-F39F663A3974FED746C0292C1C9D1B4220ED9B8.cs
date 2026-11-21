@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005329 RID: 21289
+	// Token: 0x020042F9 RID: 17145
 	internal enum <RogueResSkillDetail>F39F663A3974FED746C0292C1C9D1B4220ED9B87D3E6CBA9A4E7C72F379BDEC7D__ERogueResSkillDetailDefine
 	{
-		// Token: 0x0401CC70 RID: 117872
+		// Token: 0x040176A6 RID: 95910
 		TxtSkillName,
-		// Token: 0x0401CC71 RID: 117873
+		// Token: 0x040176A7 RID: 95911
 		SprSkillIcon,
-		// Token: 0x0401CC72 RID: 117874
+		// Token: 0x040176A8 RID: 95912
 		PanelCurLevel,
-		// Token: 0x0401CC73 RID: 117875
+		// Token: 0x040176A9 RID: 95913
 		TxtCurLevel,
-		// Token: 0x0401CC74 RID: 117876
+		// Token: 0x040176AA RID: 95914
 		TxtCurDesc,
-		// Token: 0x0401CC75 RID: 117877
+		// Token: 0x040176AB RID: 95915
 		PanelNextItem,
-		// Token: 0x0401CC76 RID: 117878
+		// Token: 0x040176AC RID: 95916
 		TxtNextLevel,
-		// Token: 0x0401CC77 RID: 117879
+		// Token: 0x040176AD RID: 95917
 		TxtNextDesc,
-		// Token: 0x0401CC78 RID: 117880
+		// Token: 0x040176AE RID: 95918
 		TxtCost,
-		// Token: 0x0401CC79 RID: 117881
+		// Token: 0x040176AF RID: 95919
 		BtnUpgrade,
-		// Token: 0x0401CC7A RID: 117882
+		// Token: 0x040176B0 RID: 95920
 		TxtBtnUpgrade,
-		// Token: 0x0401CC7B RID: 117883
+		// Token: 0x040176B1 RID: 95921
 		CostPanel,
-		// Token: 0x0401CC7C RID: 117884
+		// Token: 0x040176B2 RID: 95922
 		TexCostIcon,
-		// Token: 0x0401CC7D RID: 117885
+		// Token: 0x040176B3 RID: 95923
 		PanelMaxLevel,
-		// Token: 0x0401CC7E RID: 117886
+		// Token: 0x040176B4 RID: 95924
 		PanelActivateCondition,
-		// Token: 0x0401CC7F RID: 117887
+		// Token: 0x040176B5 RID: 95925
 		TxtActivateCondition,
-		// Token: 0x0401CC80 RID: 117888
+		// Token: 0x040176B6 RID: 95926
 		PanelCost
 	}
 }

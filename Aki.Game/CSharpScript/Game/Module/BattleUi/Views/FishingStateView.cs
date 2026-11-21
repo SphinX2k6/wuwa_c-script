@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D24 RID: 23844
+	// Token: 0x02004D06 RID: 19718
 	public class FishingStateView : BattleVisibleChildView
 	{
-		// Token: 0x0603C721 RID: 247585 RVA: 0x00E7EA68 File Offset: 0x00E7CC68
+		// Token: 0x0603167A RID: 202362 RVA: 0x00DCF208 File Offset: 0x00DCD408
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C722 RID: 247586 RVA: 0x00E7EAD4 File Offset: 0x00E7CCD4
+		// Token: 0x0603167B RID: 202363 RVA: 0x00DCF274 File Offset: 0x00DCD474
 		protected override void OnStart()
 		{
 			base.InitChildType(EBattleUiChild.Ignore);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshData();
 		}
 
-		// Token: 0x0603C723 RID: 247587 RVA: 0x00E7EB37 File Offset: 0x00E7CD37
+		// Token: 0x0603167C RID: 202364 RVA: 0x00DCF2D7 File Offset: 0x00DCD4D7
 		public override void Reset()
 		{
 			this.RemoveEvents();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C724 RID: 247588 RVA: 0x00E7EB4C File Offset: 0x00E7CD4C
+		// Token: 0x0603167D RID: 202365 RVA: 0x00DCF2EC File Offset: 0x00DCD4EC
 		private void AddEvents()
 		{
 			if (this.AttributeComp == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeComp.AddListener(EAttributeType.LifeMax, new Action<EAttributeType, float, float>(this.OnHealthChanged), null);
 		}
 
-		// Token: 0x0603C725 RID: 247589 RVA: 0x00E7EB89 File Offset: 0x00E7CD89
+		// Token: 0x0603167E RID: 202366 RVA: 0x00DCF329 File Offset: 0x00DCD529
 		private void RemoveEvents()
 		{
 			if (this.AttributeComp == null)
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeComp.RemoveListener(EAttributeType.LifeMax, new Action<EAttributeType, float, float>(this.OnHealthChanged));
 		}
 
-		// Token: 0x0603C726 RID: 247590 RVA: 0x00E7EBC6 File Offset: 0x00E7CDC6
+		// Token: 0x0603167F RID: 202367 RVA: 0x00DCF366 File Offset: 0x00DCD566
 		private void OnHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshData();
 		}
 
-		// Token: 0x0603C727 RID: 247591 RVA: 0x00E7EBD0 File Offset: 0x00E7CDD0
+		// Token: 0x06031680 RID: 202368 RVA: 0x00DCF370 File Offset: 0x00DCD570
 		private void RefreshData()
 		{
 			if (this.AttributeComp == null)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C728 RID: 247592 RVA: 0x00E7EC74 File Offset: 0x00E7CE74
+		// Token: 0x06031681 RID: 202369 RVA: 0x00DCF414 File Offset: 0x00DCD614
 		private void AddSingleItem()
 		{
 			UUIItem item = base.GetItem(0);
@@ -136,20 +136,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ItemList.Add(fishingHpItem);
 		}
 
-		// Token: 0x0401F7F9 RID: 129017
+		// Token: 0x0401A2B2 RID: 107186
 		[Nullable(2)]
 		private BaseAttributeComponent AttributeComp;
 
-		// Token: 0x0401F7FA RID: 129018
+		// Token: 0x0401A2B3 RID: 107187
 		[Nullable(1)]
 		private readonly List<FishingHpItem> ItemList = new List<FishingHpItem>();
 
-		// Token: 0x0200BFAA RID: 49066
+		// Token: 0x0200A9B0 RID: 43440
 		private enum EChildType
 		{
-			// Token: 0x04039D29 RID: 236841
+			// Token: 0x040346EB RID: 214763
 			ItemContainer,
-			// Token: 0x04039D2A RID: 236842
+			// Token: 0x040346EC RID: 214764
 			Item
 		}
 	}

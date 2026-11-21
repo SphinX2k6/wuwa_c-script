@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C1F RID: 23583
+	// Token: 0x0200623E RID: 25150
 	public class TFanInteractOptionUnion
 	{
-		// Token: 0x1700B1F2 RID: 45554
-		// (get) Token: 0x06028721 RID: 165665 RVA: 0x00590F0E File Offset: 0x0058F10E
-		// (set) Token: 0x06028722 RID: 165666 RVA: 0x00590F16 File Offset: 0x0058F116
+		// Token: 0x1700BB40 RID: 47936
+		// (get) Token: 0x0602AD13 RID: 175379 RVA: 0x005D8E9E File Offset: 0x005D709E
+		// (set) Token: 0x0602AD14 RID: 175380 RVA: 0x005D8EA6 File Offset: 0x005D70A6
 		public TFanInteractOption Type { get; set; }
 
-		// Token: 0x1700B1F3 RID: 45555
-		// (get) Token: 0x06028723 RID: 165667 RVA: 0x00590F1F File Offset: 0x0058F11F
-		// (set) Token: 0x06028724 RID: 165668 RVA: 0x00590F27 File Offset: 0x0058F127
+		// Token: 0x1700BB41 RID: 47937
+		// (get) Token: 0x0602AD15 RID: 175381 RVA: 0x005D8EAF File Offset: 0x005D70AF
+		// (set) Token: 0x0602AD16 RID: 175382 RVA: 0x005D8EB7 File Offset: 0x005D70B7
 		public object Value { get; set; }
 
-		// Token: 0x06028725 RID: 165669 RVA: 0x00590F30 File Offset: 0x0058F130
+		// Token: 0x0602AD17 RID: 175383 RVA: 0x005D8EC0 File Offset: 0x005D70C0
 		public TFanInteractOptionUnion()
 		{
 			this.Type = TFanInteractOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028726 RID: 165670 RVA: 0x00590F46 File Offset: 0x0058F146
+		// Token: 0x0602AD18 RID: 175384 RVA: 0x005D8ED6 File Offset: 0x005D70D6
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028727 RID: 165671 RVA: 0x00590F58 File Offset: 0x0058F158
+		// Token: 0x0602AD19 RID: 175385 RVA: 0x005D8EE8 File Offset: 0x005D70E8
 		public IFanInteractByFKeyT AsIFanInteractByFKey()
 		{
 			return this.As<IFanInteractByFKeyT>();
 		}
 
-		// Token: 0x06028728 RID: 165672 RVA: 0x00590F60 File Offset: 0x0058F160
+		// Token: 0x0602AD1A RID: 175386 RVA: 0x005D8EF0 File Offset: 0x005D70F0
 		public static TFanInteractOptionUnion FromIFanInteractByFKey(IFanInteractByFKeyT _ifaninteractbyfkey)
 		{
 			return new TFanInteractOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028729 RID: 165673 RVA: 0x00590F75 File Offset: 0x0058F175
+		// Token: 0x0602AD1B RID: 175387 RVA: 0x005D8F05 File Offset: 0x005D7105
 		public IFanInteractByHitT AsIFanInteractByHit()
 		{
 			return this.As<IFanInteractByHitT>();
 		}
 
-		// Token: 0x0602872A RID: 165674 RVA: 0x00590F7D File Offset: 0x0058F17D
+		// Token: 0x0602AD1C RID: 175388 RVA: 0x005D8F0D File Offset: 0x005D710D
 		public static TFanInteractOptionUnion FromIFanInteractByHit(IFanInteractByHitT _ifaninteractbyhit)
 		{
 			return new TFanInteractOptionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602872B RID: 165675 RVA: 0x00590F94 File Offset: 0x0058F194
+		// Token: 0x0602AD1D RID: 175389 RVA: 0x005D8F24 File Offset: 0x005D7124
 		public static int Pack(FlatBufferBuilder builder, TFanInteractOptionUnion _o)
 		{
 			TFanInteractOption type = _o.Type;

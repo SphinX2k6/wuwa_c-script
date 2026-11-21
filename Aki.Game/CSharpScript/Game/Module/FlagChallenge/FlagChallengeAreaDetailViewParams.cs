@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A44 RID: 23108
+	// Token: 0x02004A20 RID: 18976
 	public class FlagChallengeAreaDetailViewParams
 	{
-		// Token: 0x0401E87F RID: 125055
+		// Token: 0x04019326 RID: 103206
 		public int ActivityId;
 
-		// Token: 0x0401E880 RID: 125056
+		// Token: 0x04019327 RID: 103207
 		public int LevelId;
 
-		// Token: 0x0401E881 RID: 125057
+		// Token: 0x04019328 RID: 103208
 		public int AreaId;
 
-		// Token: 0x0401E882 RID: 125058
+		// Token: 0x04019329 RID: 103209
 		public int? StrongholdId;
 	}
 }

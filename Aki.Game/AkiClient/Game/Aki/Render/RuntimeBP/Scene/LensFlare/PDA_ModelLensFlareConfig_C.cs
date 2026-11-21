@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.LensFlare
 {
-	// Token: 0x02003B36 RID: 15158
+	// Token: 0x020030B6 RID: 12470
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/LensFlare/PDA_ModelLensFlareConfig.PDA_ModelLensFlareConfig_C")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 128)]
 	public class PDA_ModelLensFlareConfig_C : USunLensFlareConfig, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021862 RID: 137314 RVA: 0x008EE97C File Offset: 0x008ECB7C
+		// Token: 0x0601DF63 RID: 122723 RVA: 0x00907271 File Offset: 0x00905471
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PDA_ModelLensFlareConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,30 +22,30 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.LensFlare
 			return PDA_ModelLensFlareConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06021863 RID: 137315 RVA: 0x008EE9A0 File Offset: 0x008ECBA0
+		// Token: 0x0601DF64 RID: 122724 RVA: 0x00907298 File Offset: 0x00905498
 		public PDA_ModelLensFlareConfig_C() : this(BuiltinUtils.AllocNativeUObject(PDA_ModelLensFlareConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021864 RID: 137316 RVA: 0x008EE9C8 File Offset: 0x008ECBC8
+		// Token: 0x0601DF65 RID: 122725 RVA: 0x009072C0 File Offset: 0x009054C0
 		[NullableContext(1)]
 		public PDA_ModelLensFlareConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PDA_ModelLensFlareConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06021865 RID: 137317 RVA: 0x008EE9FB File Offset: 0x008ECBFB
+		// Token: 0x0601DF66 RID: 122726 RVA: 0x009072F3 File Offset: 0x009054F3
 		protected PDA_ModelLensFlareConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010563 RID: 66915
+		// Token: 0x0400FD44 RID: 64836
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/LensFlare/PDA_ModelLensFlareConfig.PDA_ModelLensFlareConfig_C";
 
-		// Token: 0x04010564 RID: 66916
+		// Token: 0x0400FD45 RID: 64837
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010565 RID: 66917
+		// Token: 0x0400FD46 RID: 64838
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

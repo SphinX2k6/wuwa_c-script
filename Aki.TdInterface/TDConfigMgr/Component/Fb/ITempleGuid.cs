@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A5C RID: 2652
+	// Token: 0x02000B25 RID: 2853
 	public class ITempleGuid
 	{
-		// Token: 0x06003D13 RID: 15635 RVA: 0x0009D0D9 File Offset: 0x0009B2D9
-		[NullableContext(1)]
+		// Token: 0x06004133 RID: 16691 RVA: 0x000A6551 File Offset: 0x000A4751
 		public static ITempleGuid Create(ITempleGuid? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E18 RID: 3608
-		// (get) Token: 0x06003D14 RID: 15636 RVA: 0x0009D0F8 File Offset: 0x0009B2F8
+		// Token: 0x17000EE4 RID: 3812
+		// (get) Token: 0x06004134 RID: 16692 RVA: 0x000A6570 File Offset: 0x000A4770
 		public virtual int TempleGuid
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002207 RID: 8711
+		// Token: 0x0400241E RID: 9246
 		private ITempleGuid Instance;
 	}
 }

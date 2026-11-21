@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001B83 RID: 7043
+// Token: 0x02001042 RID: 4162
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchCommonTipItem : UiPanelBase
 {
-	// Token: 0x0600D1AB RID: 53675 RVA: 0x00300CF8 File Offset: 0x002FEEF8
+	// Token: 0x0600A5BC RID: 42428 RVA: 0x0030BDD0 File Offset: 0x00309FD0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 27;
@@ -84,7 +84,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D1AC RID: 53676 RVA: 0x003010EB File Offset: 0x002FF2EB
+	// Token: 0x0600A5BD RID: 42429 RVA: 0x0030C1C3 File Offset: 0x0030A3C3
 	protected override void OnStart()
 	{
 		this.BuffLayout = new GenericLayout<FloroRanchBuffItem, FloroRanchBuffData>(base.GetVerticalLayout(12), this.CreateBuffItem, null, false, true);
@@ -96,13 +96,13 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		this.RegisterTermExplanation();
 	}
 
-	// Token: 0x0600D1AD RID: 53677 RVA: 0x00301126 File Offset: 0x002FF326
+	// Token: 0x0600A5BE RID: 42430 RVA: 0x0030C1FE File Offset: 0x0030A3FE
 	protected override void OnBeforeDestroy()
 	{
 		this.UnRegisterTermExplanation();
 	}
 
-	// Token: 0x0600D1AE RID: 53678 RVA: 0x00301130 File Offset: 0x002FF330
+	// Token: 0x0600A5BF RID: 42431 RVA: 0x0030C208 File Offset: 0x0030A408
 	public void RefreshInfoTipByParam(IFloroRanchCommonTipParam param)
 	{
 		this.ParamData = param;
@@ -135,7 +135,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		rootItem.SetUIActive(true);
 	}
 
-	// Token: 0x0600D1AF RID: 53679 RVA: 0x003011C0 File Offset: 0x002FF3C0
+	// Token: 0x0600A5C0 RID: 42432 RVA: 0x0030C298 File Offset: 0x0030A498
 	private void InitTipItem()
 	{
 		UUIText text = base.GetText(2);
@@ -186,7 +186,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		text2.SetUIActive(false);
 	}
 
-	// Token: 0x0600D1B0 RID: 53680 RVA: 0x0030128C File Offset: 0x002FF48C
+	// Token: 0x0600A5C1 RID: 42433 RVA: 0x0030C364 File Offset: 0x0030A564
 	private void RefreshCurrencyTip()
 	{
 		IFloroRanchCommonTipParam paramData = this.ParamData;
@@ -213,7 +213,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		this.Price = 0;
 	}
 
-	// Token: 0x0600D1B1 RID: 53681 RVA: 0x00301360 File Offset: 0x002FF560
+	// Token: 0x0600A5C2 RID: 42434 RVA: 0x0030C438 File Offset: 0x0030A638
 	private void RefreshEntityTip()
 	{
 		IFloroRanchCommonTipParam paramData = this.ParamData;
@@ -283,7 +283,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		this.RefreshBuffTip(floroRanchEntityBase);
 	}
 
-	// Token: 0x0600D1B2 RID: 53682 RVA: 0x003014FC File Offset: 0x002FF6FC
+	// Token: 0x0600A5C3 RID: 42435 RVA: 0x0030C5D4 File Offset: 0x0030A7D4
 	private void RefreshCardTip(FloroRanchCardData cardData, FloroRanchCurrencyData currencyData)
 	{
 		UUIText text = base.GetText(2);
@@ -361,7 +361,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		item2.SetUIActive(cardData.IsSpecialPhantom);
 	}
 
-	// Token: 0x0600D1B3 RID: 53683 RVA: 0x003016F8 File Offset: 0x002FF8F8
+	// Token: 0x0600A5C4 RID: 42436 RVA: 0x0030C7D0 File Offset: 0x0030A9D0
 	private void RefreshToyTip(FloroRanchToyData toyData)
 	{
 		UUIText text = base.GetText(2);
@@ -406,7 +406,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		this.Price = 0;
 	}
 
-	// Token: 0x0600D1B4 RID: 53684 RVA: 0x00301834 File Offset: 0x002FFA34
+	// Token: 0x0600A5C5 RID: 42437 RVA: 0x0030C90C File Offset: 0x0030AB0C
 	private void RefreshTag(FloroRanchTagData tagData)
 	{
 		if (tagData.TagId <= 0)
@@ -436,7 +436,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600D1B5 RID: 53685 RVA: 0x0030188C File Offset: 0x002FFA8C
+	// Token: 0x0600A5C6 RID: 42438 RVA: 0x0030C964 File Offset: 0x0030AB64
 	private void RefreshBuffTip(FloroRanchEntityBase entityData)
 	{
 		FloroRanchEntityDataComponent floroRanchEntityDataComponent = entityData.CheckGetComponent<FloroRanchEntityDataComponent>();
@@ -462,7 +462,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600D1B6 RID: 53686 RVA: 0x003018E0 File Offset: 0x002FFAE0
+	// Token: 0x0600A5C7 RID: 42439 RVA: 0x0030C9B8 File Offset: 0x0030ABB8
 	private void RegisterTermExplanation()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -476,13 +476,13 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600D1B7 RID: 53687 RVA: 0x00301938 File Offset: 0x002FFB38
+	// Token: 0x0600A5C8 RID: 42440 RVA: 0x0030CA10 File Offset: 0x0030AC10
 	private void UnRegisterTermExplanation()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(10));
 	}
 
-	// Token: 0x0600D1B8 RID: 53688 RVA: 0x0030194C File Offset: 0x002FFB4C
+	// Token: 0x0600A5C9 RID: 42441 RVA: 0x0030CA24 File Offset: 0x0030AC24
 	private void OnDeleteButtonClick()
 	{
 		if (this.ParamData == null || this.ParamData.TipType != EFloroRanchCommonTipType.Entity)
@@ -533,7 +533,7 @@ public class FloroRanchCommonTipItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x04006031 RID: 24625
+	// Token: 0x04006100 RID: 24832
 	[Nullable(new byte[]
 	{
 		2,
@@ -542,101 +542,101 @@ public class FloroRanchCommonTipItem : UiPanelBase
 	})]
 	private GenericLayout<FloroRanchBuffItem, FloroRanchBuffData> BuffLayout;
 
-	// Token: 0x04006032 RID: 24626
+	// Token: 0x04006101 RID: 24833
 	private IFloroRanchCommonTipParam ParamData;
 
-	// Token: 0x04006033 RID: 24627
+	// Token: 0x04006102 RID: 24834
 	private int Price;
 
-	// Token: 0x04006034 RID: 24628
+	// Token: 0x04006103 RID: 24835
 	public ETermExplanationGroup TermGroup;
 
-	// Token: 0x04006035 RID: 24629
+	// Token: 0x04006104 RID: 24836
 	private readonly Func<FloroRanchBuffItem> CreateBuffItem = () => new FloroRanchBuffItem();
 
-	// Token: 0x02008104 RID: 33028
+	// Token: 0x02007292 RID: 29330
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A1BE RID: 172478
+		// Token: 0x040254F2 RID: 152818
 		public const int TipItem = 0;
 
-		// Token: 0x0402A1BF RID: 172479
+		// Token: 0x040254F3 RID: 152819
 		public const int Name = 1;
 
-		// Token: 0x0402A1C0 RID: 172480
+		// Token: 0x040254F4 RID: 152820
 		public const int TypeName = 2;
 
-		// Token: 0x0402A1C1 RID: 172481
+		// Token: 0x040254F5 RID: 152821
 		public const int IconTexture = 3;
 
-		// Token: 0x0402A1C2 RID: 172482
+		// Token: 0x040254F6 RID: 152822
 		public const int CardRaceItem = 4;
 
-		// Token: 0x0402A1C3 RID: 172483
+		// Token: 0x040254F7 RID: 152823
 		public const int CardRaceIcon = 5;
 
-		// Token: 0x0402A1C4 RID: 172484
+		// Token: 0x040254F8 RID: 152824
 		public const int CardRace = 6;
 
-		// Token: 0x0402A1C5 RID: 172485
+		// Token: 0x040254F9 RID: 152825
 		public const int SalaryItem = 7;
 
-		// Token: 0x0402A1C6 RID: 172486
+		// Token: 0x040254FA RID: 152826
 		public const int BasicSalaryIconTexture = 8;
 
-		// Token: 0x0402A1C7 RID: 172487
+		// Token: 0x040254FB RID: 152827
 		public const int Salary = 9;
 
-		// Token: 0x0402A1C8 RID: 172488
+		// Token: 0x040254FC RID: 152828
 		public const int TagDesc = 10;
 
-		// Token: 0x0402A1C9 RID: 172489
+		// Token: 0x040254FD RID: 152829
 		public const int BuffPanel = 11;
 
-		// Token: 0x0402A1CA RID: 172490
+		// Token: 0x040254FE RID: 152830
 		public const int BuffLayout = 12;
 
-		// Token: 0x0402A1CB RID: 172491
+		// Token: 0x040254FF RID: 152831
 		public const int BuffItem = 13;
 
-		// Token: 0x0402A1CC RID: 172492
+		// Token: 0x04025500 RID: 152832
 		public const int DeleteButton = 14;
 
-		// Token: 0x0402A1CD RID: 172493
+		// Token: 0x04025501 RID: 152833
 		public const int DeleteIconTexture = 15;
 
-		// Token: 0x0402A1CE RID: 172494
+		// Token: 0x04025502 RID: 152834
 		public const int DeleteNumber = 16;
 
-		// Token: 0x0402A1CF RID: 172495
+		// Token: 0x04025503 RID: 152835
 		public const int DeleteButtonText = 17;
 
-		// Token: 0x0402A1D0 RID: 172496
+		// Token: 0x04025504 RID: 152836
 		public const int QualityTexture = 18;
 
-		// Token: 0x0402A1D1 RID: 172497
+		// Token: 0x04025505 RID: 152837
 		public const int QualityBTexture = 19;
 
-		// Token: 0x0402A1D2 RID: 172498
+		// Token: 0x04025506 RID: 152838
 		public const int PhantomIconItem = 20;
 
-		// Token: 0x0402A1D3 RID: 172499
+		// Token: 0x04025507 RID: 152839
 		public const int ToyRaceItem = 21;
 
-		// Token: 0x0402A1D4 RID: 172500
+		// Token: 0x04025508 RID: 152840
 		public const int ToyRaceIcon = 22;
 
-		// Token: 0x0402A1D5 RID: 172501
+		// Token: 0x04025509 RID: 152841
 		public const int ScrollView = 23;
 
-		// Token: 0x0402A1D6 RID: 172502
+		// Token: 0x0402550A RID: 152842
 		public const int Toggle = 24;
 
-		// Token: 0x0402A1D7 RID: 172503
+		// Token: 0x0402550B RID: 152843
 		public const int ToyLevelText = 25;
 
-		// Token: 0x0402A1D8 RID: 172504
+		// Token: 0x0402550C RID: 152844
 		public const int NoSellItem = 26;
 	}
 }

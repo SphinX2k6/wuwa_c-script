@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E30 RID: 20016
+	// Token: 0x02003DF9 RID: 15865
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSkillView : UiViewBase
 	{
-		// Token: 0x060339C2 RID: 211394 RVA: 0x00C13C33 File Offset: 0x00C11E33
+		// Token: 0x0602882D RID: 165933 RVA: 0x00B5D15F File Offset: 0x00B5B35F
 		public RoguelikeSkillView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060339C3 RID: 211395 RVA: 0x00C13C3C File Offset: 0x00C11E3C
+		// Token: 0x0602882E RID: 165934 RVA: 0x00B5D168 File Offset: 0x00B5B368
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060339C4 RID: 211396 RVA: 0x00C13D68 File Offset: 0x00C11F68
+		// Token: 0x0602882F RID: 165935 RVA: 0x00B5D294 File Offset: 0x00B5B494
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeSkillView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060339C5 RID: 211397 RVA: 0x00C13DAC File Offset: 0x00C11FAC
+		// Token: 0x06028830 RID: 165936 RVA: 0x00B5D2D8 File Offset: 0x00B5B4D8
 		protected override void OnStart()
 		{
 			RoguelikeTalentTreeNodeData defaultSelectNode = this.Vm.GetDefaultSelectNode();
@@ -68,25 +68,25 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ScrollToNode(defaultSelectNode, true);
 		}
 
-		// Token: 0x060339C6 RID: 211398 RVA: 0x00C13DD6 File Offset: 0x00C11FD6
+		// Token: 0x06028831 RID: 165937 RVA: 0x00B5D302 File Offset: 0x00B5B502
 		protected override void OnBeforeDestroy()
 		{
 			RoguelikeModel.Instance.ClearTalentTreeViewModel();
 		}
 
-		// Token: 0x060339C7 RID: 211399 RVA: 0x00C13DE2 File Offset: 0x00C11FE2
+		// Token: 0x06028832 RID: 165938 RVA: 0x00B5D30E File Offset: 0x00B5B50E
 		protected RoguelikeTalentTreeNodeRowItem CreateRowItem()
 		{
 			return new RoguelikeTalentTreeNodeRowItem();
 		}
 
-		// Token: 0x060339C8 RID: 211400 RVA: 0x00C13DE9 File Offset: 0x00C11FE9
+		// Token: 0x06028833 RID: 165939 RVA: 0x00B5D315 File Offset: 0x00B5B515
 		protected void OnBtnSkillOverViewClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeSkillOverView, null, null);
 		}
 
-		// Token: 0x060339C9 RID: 211401 RVA: 0x00C13DFC File Offset: 0x00C11FFC
+		// Token: 0x06028834 RID: 165940 RVA: 0x00B5D328 File Offset: 0x00B5B528
 		private UniTask ScrollToNode(RoguelikeTalentTreeNodeData node, bool tween = false)
 		{
 			RoguelikeSkillView.<ScrollToNode>d__12 <ScrollToNode>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <ScrollToNode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060339CA RID: 211402 RVA: 0x00C13E50 File Offset: 0x00C12050
+		// Token: 0x06028835 RID: 165941 RVA: 0x00B5D37C File Offset: 0x00B5B57C
 		private void OnClickNode(bool isSelect, RoguelikeTalentTreeNodeData data)
 		{
 			if (!isSelect)
@@ -123,18 +123,18 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SkillDetailPanel.Refresh(data.Config);
 		}
 
-		// Token: 0x0401B5FA RID: 112122
+		// Token: 0x04015FCD RID: 90061
 		private RoguelikeTalentTreeViewModel Vm;
 
-		// Token: 0x0401B5FB RID: 112123
+		// Token: 0x04015FCE RID: 90062
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B5FC RID: 112124
+		// Token: 0x04015FCF RID: 90063
 		[Nullable(2)]
 		private RoguelikeSkillDetail SkillDetailPanel;
 
-		// Token: 0x0401B5FD RID: 112125
+		// Token: 0x04015FD0 RID: 90064
 		[Nullable(new byte[]
 		{
 			2,
@@ -143,26 +143,26 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericScrollViewNew<RoguelikeTalentTreeNodeRowItem, RoguelikeTalentTreeNodeRowData> ScrollView;
 
-		// Token: 0x0200AFE5 RID: 45029
+		// Token: 0x02009A17 RID: 39447
 		[NullableContext(0)]
 		private class ERoguelikeSkillViewDefine
 		{
-			// Token: 0x04035667 RID: 218727
+			// Token: 0x04030097 RID: 196759
 			public const int CaptionItem = 0;
 
-			// Token: 0x04035668 RID: 218728
+			// Token: 0x04030098 RID: 196760
 			public const int SkillDetailPanelItem = 1;
 
-			// Token: 0x04035669 RID: 218729
+			// Token: 0x04030099 RID: 196761
 			public const int BtnSkillOverView = 2;
 
-			// Token: 0x0403566A RID: 218730
+			// Token: 0x0403009A RID: 196762
 			public const int ScrollView = 3;
 
-			// Token: 0x0403566B RID: 218731
+			// Token: 0x0403009B RID: 196763
 			public const int TalentContentItem = 4;
 
-			// Token: 0x0403566C RID: 218732
+			// Token: 0x0403009C RID: 196764
 			public const int BtnMask = 5;
 		}
 	}

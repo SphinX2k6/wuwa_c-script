@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053DB RID: 21467
+	// Token: 0x02005961 RID: 22881
 	public class IHookSpaceStationEnergyCoreT
 	{
-		// Token: 0x17009DF1 RID: 40433
-		// (get) Token: 0x060233CD RID: 144333 RVA: 0x004E1496 File Offset: 0x004DF696
-		// (set) Token: 0x060233CE RID: 144334 RVA: 0x004E149E File Offset: 0x004DF69E
+		// Token: 0x1700A62B RID: 42539
+		// (get) Token: 0x06025485 RID: 152709 RVA: 0x0051E4C2 File Offset: 0x0051C6C2
+		// (set) Token: 0x06025486 RID: 152710 RVA: 0x0051E4CA File Offset: 0x0051C6CA
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x17009DF2 RID: 40434
-		// (get) Token: 0x060233CF RID: 144335 RVA: 0x004E14A7 File Offset: 0x004DF6A7
-		// (set) Token: 0x060233D0 RID: 144336 RVA: 0x004E14AF File Offset: 0x004DF6AF
+		// Token: 0x1700A62C RID: 42540
+		// (get) Token: 0x06025487 RID: 152711 RVA: 0x0051E4D3 File Offset: 0x0051C6D3
+		// (set) Token: 0x06025488 RID: 152712 RVA: 0x0051E4DB File Offset: 0x0051C6DB
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x17009DF3 RID: 40435
-		// (get) Token: 0x060233D1 RID: 144337 RVA: 0x004E14B8 File Offset: 0x004DF6B8
-		// (set) Token: 0x060233D2 RID: 144338 RVA: 0x004E14C0 File Offset: 0x004DF6C0
+		// Token: 0x1700A62D RID: 42541
+		// (get) Token: 0x06025489 RID: 152713 RVA: 0x0051E4E4 File Offset: 0x0051C6E4
+		// (set) Token: 0x0602548A RID: 152714 RVA: 0x0051E4EC File Offset: 0x0051C6EC
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x17009DF4 RID: 40436
-		// (get) Token: 0x060233D3 RID: 144339 RVA: 0x004E14C9 File Offset: 0x004DF6C9
-		// (set) Token: 0x060233D4 RID: 144340 RVA: 0x004E14D1 File Offset: 0x004DF6D1
+		// Token: 0x1700A62E RID: 42542
+		// (get) Token: 0x0602548B RID: 152715 RVA: 0x0051E4F5 File Offset: 0x0051C6F5
+		// (set) Token: 0x0602548C RID: 152716 RVA: 0x0051E4FD File Offset: 0x0051C6FD
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x17009DF5 RID: 40437
-		// (get) Token: 0x060233D5 RID: 144341 RVA: 0x004E14DA File Offset: 0x004DF6DA
-		// (set) Token: 0x060233D6 RID: 144342 RVA: 0x004E14E2 File Offset: 0x004DF6E2
+		// Token: 0x1700A62F RID: 42543
+		// (get) Token: 0x0602548D RID: 152717 RVA: 0x0051E506 File Offset: 0x0051C706
+		// (set) Token: 0x0602548E RID: 152718 RVA: 0x0051E50E File Offset: 0x0051C70E
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x17009DF6 RID: 40438
-		// (get) Token: 0x060233D7 RID: 144343 RVA: 0x004E14EB File Offset: 0x004DF6EB
-		// (set) Token: 0x060233D8 RID: 144344 RVA: 0x004E14F3 File Offset: 0x004DF6F3
+		// Token: 0x1700A630 RID: 42544
+		// (get) Token: 0x0602548F RID: 152719 RVA: 0x0051E517 File Offset: 0x0051C717
+		// (set) Token: 0x06025490 RID: 152720 RVA: 0x0051E51F File Offset: 0x0051C71F
 		public int HookSpeed { get; set; }
 
-		// Token: 0x17009DF7 RID: 40439
-		// (get) Token: 0x060233D9 RID: 144345 RVA: 0x004E14FC File Offset: 0x004DF6FC
-		// (set) Token: 0x060233DA RID: 144346 RVA: 0x004E1504 File Offset: 0x004DF704
+		// Token: 0x1700A631 RID: 42545
+		// (get) Token: 0x06025491 RID: 152721 RVA: 0x0051E528 File Offset: 0x0051C728
+		// (set) Token: 0x06025492 RID: 152722 RVA: 0x0051E530 File Offset: 0x0051C730
 		public byte NullMask { get; set; }
 
-		// Token: 0x060233DB RID: 144347 RVA: 0x004E150D File Offset: 0x004DF70D
+		// Token: 0x06025493 RID: 152723 RVA: 0x0051E539 File Offset: 0x0051C739
 		public IHookSpaceStationEnergyCoreT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

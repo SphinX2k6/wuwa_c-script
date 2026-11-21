@@ -4,23 +4,23 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E2F RID: 28207
+	// Token: 0x02005FB0 RID: 24496
 	public class FishingQteGameInfo
 	{
-		// Token: 0x06044C24 RID: 281636 RVA: 0x010F787B File Offset: 0x010F5A7B
+		// Token: 0x0603ADB2 RID: 241074 RVA: 0x010A1F4C File Offset: 0x010A014C
 		public void CreateRingInfo(EArrowDirection arrowDirection)
 		{
 			this.RingInfo = new FishingQteRingInfo(arrowDirection);
 		}
 
-		// Token: 0x06044C25 RID: 281637 RVA: 0x010F7889 File Offset: 0x010F5A89
+		// Token: 0x0603ADB3 RID: 241075 RVA: 0x010A1F5A File Offset: 0x010A015A
 		[NullableContext(1)]
 		public FishingQteRingInfo GetRingInfo()
 		{
 			return this.RingInfo;
 		}
 
-		// Token: 0x06044C26 RID: 281638 RVA: 0x010F7891 File Offset: 0x010F5A91
+		// Token: 0x0603ADB4 RID: 241076 RVA: 0x010A1F62 File Offset: 0x010A0162
 		public void Clear()
 		{
 			FishingQteRingInfo ringInfo = this.RingInfo;
@@ -35,54 +35,54 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.MaxRound = 0;
 		}
 
-		// Token: 0x06044C27 RID: 281639 RVA: 0x010F78CB File Offset: 0x010F5ACB
+		// Token: 0x0603ADB5 RID: 241077 RVA: 0x010A1F9C File Offset: 0x010A019C
 		public void SetGameStage(EFishingQteStage stage)
 		{
 			this.GameStage = stage;
 			EventSystem.Instance.Emit<EFishingQteStage>(EEventName.OnFishingQteStageUpdate, this.GameStage);
 		}
 
-		// Token: 0x06044C28 RID: 281640 RVA: 0x010F78EA File Offset: 0x010F5AEA
+		// Token: 0x0603ADB6 RID: 241078 RVA: 0x010A1FBB File Offset: 0x010A01BB
 		public EFishingQteStage GetGameStage()
 		{
 			return this.GameStage;
 		}
 
-		// Token: 0x06044C29 RID: 281641 RVA: 0x010F78F2 File Offset: 0x010F5AF2
+		// Token: 0x0603ADB7 RID: 241079 RVA: 0x010A1FC3 File Offset: 0x010A01C3
 		public bool IsGamePause()
 		{
 			return this.GameStage != EFishingQteStage.OnGoing;
 		}
 
-		// Token: 0x06044C2A RID: 281642 RVA: 0x010F7900 File Offset: 0x010F5B00
+		// Token: 0x0603ADB8 RID: 241080 RVA: 0x010A1FD1 File Offset: 0x010A01D1
 		public bool IsGameEnd()
 		{
 			return this.GameStage >= EFishingQteStage.End;
 		}
 
-		// Token: 0x04023C54 RID: 146516
+		// Token: 0x0401EF09 RID: 126729
 		[Nullable(2)]
 		private FishingQteRingInfo RingInfo;
 
-		// Token: 0x04023C55 RID: 146517
+		// Token: 0x0401EF0A RID: 126730
 		private EFishingQteStage GameStage;
 
-		// Token: 0x04023C56 RID: 146518
+		// Token: 0x0401EF0B RID: 126731
 		public float CurrentScore;
 
-		// Token: 0x04023C57 RID: 146519
+		// Token: 0x0401EF0C RID: 126732
 		public int CurrentRound;
 
-		// Token: 0x04023C58 RID: 146520
+		// Token: 0x0401EF0D RID: 126733
 		public int MaxRound;
 
-		// Token: 0x04023C59 RID: 146521
+		// Token: 0x0401EF0E RID: 126734
 		public float CursorSpeed;
 
-		// Token: 0x04023C5A RID: 146522
+		// Token: 0x0401EF0F RID: 126735
 		public float RingSpeed;
 
-		// Token: 0x04023C5B RID: 146523
+		// Token: 0x0401EF10 RID: 126736
 		public float PerfectAppearRate;
 	}
 }

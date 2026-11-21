@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E5B RID: 15963
+	// Token: 0x02004296 RID: 17046
 	public class IFlagChallengeSystemVarT
 	{
-		// Token: 0x17006EB3 RID: 28339
-		// (get) Token: 0x06016794 RID: 92052 RVA: 0x0033FD1B File Offset: 0x0033DF1B
-		// (set) Token: 0x06016795 RID: 92053 RVA: 0x0033FD23 File Offset: 0x0033DF23
+		// Token: 0x17007497 RID: 29847
+		// (get) Token: 0x06017DBB RID: 97723 RVA: 0x0036884B File Offset: 0x00366A4B
+		// (set) Token: 0x06017DBC RID: 97724 RVA: 0x00368853 File Offset: 0x00366A53
 		public EFlagChallengeSystemVarType VarType { get; set; }
 
-		// Token: 0x17006EB4 RID: 28340
-		// (get) Token: 0x06016796 RID: 92054 RVA: 0x0033FD2C File Offset: 0x0033DF2C
-		// (set) Token: 0x06016797 RID: 92055 RVA: 0x0033FD34 File Offset: 0x0033DF34
+		// Token: 0x17007498 RID: 29848
+		// (get) Token: 0x06017DBD RID: 97725 RVA: 0x0036885C File Offset: 0x00366A5C
+		// (set) Token: 0x06017DBE RID: 97726 RVA: 0x00368864 File Offset: 0x00366A64
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x06016798 RID: 92056 RVA: 0x0033FD3D File Offset: 0x0033DF3D
+		// Token: 0x06017DBF RID: 97727 RVA: 0x0036886D File Offset: 0x00366A6D
 		public IFlagChallengeSystemVarT()
 		{
 			this.VarType = EFlagChallengeSystemVarType.IsCompleted;

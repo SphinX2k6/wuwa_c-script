@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005344 RID: 21316
+	// Token: 0x02004314 RID: 17172
 	public class RogueTaskRoleItem : UiPanelBase
 	{
-		// Token: 0x0603676B RID: 223083 RVA: 0x00CE59C9 File Offset: 0x00CE3BC9
+		// Token: 0x0602B667 RID: 177767 RVA: 0x00C33399 File Offset: 0x00C31599
 		public RogueTaskRoleItem(int roleId, bool bIsLock)
 		{
 			this.RoleId = roleId;
 			this.IsLock = bIsLock;
 		}
 
-		// Token: 0x0603676C RID: 223084 RVA: 0x00CE59E6 File Offset: 0x00CE3BE6
+		// Token: 0x0602B668 RID: 177768 RVA: 0x00C333B6 File Offset: 0x00C315B6
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x0603676D RID: 223085 RVA: 0x00CE5A20 File Offset: 0x00CE3C20
+		// Token: 0x0602B669 RID: 177769 RVA: 0x00C333F0 File Offset: 0x00C315F0
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			base.SetTextureByPath(RoleConfig.Instance.GetRoleConfig(this.RoleId).Value.FormationRoleCard, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0603676E RID: 223086 RVA: 0x00CE5A8D File Offset: 0x00CE3C8D
+		// Token: 0x0602B66A RID: 177770 RVA: 0x00C3345D File Offset: 0x00C3165D
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x0603676F RID: 223087 RVA: 0x00CE5A98 File Offset: 0x00CE3C98
+		// Token: 0x0602B66B RID: 177771 RVA: 0x00C33468 File Offset: 0x00C31668
 		public void SetCharUnlock()
 		{
 			if (!this.IsLock)
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			levelSequencePlayer.PlayLevelSequenceByName("Unlock", false, null, false);
 		}
 
-		// Token: 0x0401CD02 RID: 118018
+		// Token: 0x04017738 RID: 96056
 		protected int RoleId;
 
-		// Token: 0x0401CD03 RID: 118019
+		// Token: 0x04017739 RID: 96057
 		protected bool IsLock = true;
 
-		// Token: 0x0401CD04 RID: 118020
+		// Token: 0x0401773A RID: 96058
 		[Nullable(2)]
 		public LevelSequencePlayer LevelSequencePlayer;
 	}

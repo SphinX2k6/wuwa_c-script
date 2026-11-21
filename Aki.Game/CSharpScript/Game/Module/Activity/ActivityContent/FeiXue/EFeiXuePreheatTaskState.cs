@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x02006635 RID: 26165
+	// Token: 0x020055B3 RID: 21939
 	public enum EFeiXuePreheatTaskState
 	{
-		// Token: 0x040221F5 RID: 139765
+		// Token: 0x0401CB26 RID: 117542
 		Lock,
-		// Token: 0x040221F6 RID: 139766
+		// Token: 0x0401CB27 RID: 117543
 		UnLock,
-		// Token: 0x040221F7 RID: 139767
+		// Token: 0x0401CB28 RID: 117544
 		Claimable,
-		// Token: 0x040221F8 RID: 139768
+		// Token: 0x0401CB29 RID: 117545
 		Finished
 	}
 }

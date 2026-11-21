@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056FC RID: 22268
+	// Token: 0x02005CEB RID: 23787
 	public class IPathDrivenActorSpawnerComponentT
 	{
-		// Token: 0x1700A5BC RID: 42428
-		// (get) Token: 0x0602536F RID: 152431 RVA: 0x00522C2F File Offset: 0x00520E2F
-		// (set) Token: 0x06025370 RID: 152432 RVA: 0x00522C37 File Offset: 0x00520E37
+		// Token: 0x1700AEBF RID: 44735
+		// (get) Token: 0x060277D6 RID: 161750 RVA: 0x0056767B File Offset: 0x0056587B
+		// (set) Token: 0x060277D7 RID: 161751 RVA: 0x00567683 File Offset: 0x00565883
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A5BD RID: 42429
-		// (get) Token: 0x06025371 RID: 152433 RVA: 0x00522C40 File Offset: 0x00520E40
-		// (set) Token: 0x06025372 RID: 152434 RVA: 0x00522C48 File Offset: 0x00520E48
+		// Token: 0x1700AEC0 RID: 44736
+		// (get) Token: 0x060277D8 RID: 161752 RVA: 0x0056768C File Offset: 0x0056588C
+		// (set) Token: 0x060277D9 RID: 161753 RVA: 0x00567694 File Offset: 0x00565894
 		public IIntervalSplineSpawnT SpawnRule { get; set; }
 
-		// Token: 0x1700A5BE RID: 42430
-		// (get) Token: 0x06025373 RID: 152435 RVA: 0x00522C51 File Offset: 0x00520E51
-		// (set) Token: 0x06025374 RID: 152436 RVA: 0x00522C59 File Offset: 0x00520E59
+		// Token: 0x1700AEC1 RID: 44737
+		// (get) Token: 0x060277DA RID: 161754 RVA: 0x0056769D File Offset: 0x0056589D
+		// (set) Token: 0x060277DB RID: 161755 RVA: 0x005676A5 File Offset: 0x005658A5
 		public TTargetEntityUnion Target { get; set; }
 
-		// Token: 0x1700A5BF RID: 42431
-		// (get) Token: 0x06025375 RID: 152437 RVA: 0x00522C62 File Offset: 0x00520E62
-		// (set) Token: 0x06025376 RID: 152438 RVA: 0x00522C6A File Offset: 0x00520E6A
+		// Token: 0x1700AEC2 RID: 44738
+		// (get) Token: 0x060277DC RID: 161756 RVA: 0x005676AE File Offset: 0x005658AE
+		// (set) Token: 0x060277DD RID: 161757 RVA: 0x005676B6 File Offset: 0x005658B6
 		public byte NullMask { get; set; }
 
-		// Token: 0x06025377 RID: 152439 RVA: 0x00522C73 File Offset: 0x00520E73
+		// Token: 0x060277DE RID: 161758 RVA: 0x005676BF File Offset: 0x005658BF
 		public IPathDrivenActorSpawnerComponentT()
 		{
 			this.Disabled = false;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200249F RID: 9375
+	// Token: 0x02002742 RID: 10050
 	public static class EVillageInfrBuildTypeExtensions
 	{
-		// Token: 0x0600CB4A RID: 52042 RVA: 0x001DED30 File Offset: 0x001DCF30
+		// Token: 0x0600D803 RID: 55299 RVA: 0x001F8EF8 File Offset: 0x001F70F8
 		public static string ToEnumString(this EVillageInfrBuildType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB4B RID: 52043 RVA: 0x001DED68 File Offset: 0x001DCF68
+		// Token: 0x0600D804 RID: 55300 RVA: 0x001F8F30 File Offset: 0x001F7130
 		public static EVillageInfrBuildType FromString(string name)
 		{
 			EVillageInfrBuildType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB4C RID: 52044 RVA: 0x001DED91 File Offset: 0x001DCF91
+		// Token: 0x0600D805 RID: 55301 RVA: 0x001F8F59 File Offset: 0x001F7159
 		public static bool TryFromString(string name, out EVillageInfrBuildType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CB4D RID: 52045 RVA: 0x001DEDCA File Offset: 0x001DCFCA
+		// Token: 0x0600D806 RID: 55302 RVA: 0x001F8F92 File Offset: 0x001F7192
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB4E RID: 52046 RVA: 0x001DEDE2 File Offset: 0x001DCFE2
+		// Token: 0x0600D807 RID: 55303 RVA: 0x001F8FAA File Offset: 0x001F71AA
 		public static EVillageInfrBuildType[] GetValues()
 		{
 			return new EVillageInfrBuildType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB4F RID: 52047 RVA: 0x001DEDEE File Offset: 0x001DCFEE
+		// Token: 0x0600D808 RID: 55304 RVA: 0x001F8FB6 File Offset: 0x001F71B6
 		public static string[] GetNames()
 		{
 			return new string[]

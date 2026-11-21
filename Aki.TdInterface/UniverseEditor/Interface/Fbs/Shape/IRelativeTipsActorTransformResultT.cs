@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C35 RID: 15413
+	// Token: 0x02004044 RID: 16452
 	public class IRelativeTipsActorTransformResultT
 	{
-		// Token: 0x17006A23 RID: 27171
-		// (get) Token: 0x06015481 RID: 87169 RVA: 0x00314A7D File Offset: 0x00312C7D
-		// (set) Token: 0x06015482 RID: 87170 RVA: 0x00314A85 File Offset: 0x00312C85
+		// Token: 0x17006FD4 RID: 28628
+		// (get) Token: 0x06016995 RID: 92565 RVA: 0x0033B91D File Offset: 0x00339B1D
+		// (set) Token: 0x06016996 RID: 92566 RVA: 0x0033B925 File Offset: 0x00339B25
 		public bool IsSuccess { get; set; }
 
-		// Token: 0x17006A24 RID: 27172
-		// (get) Token: 0x06015483 RID: 87171 RVA: 0x00314A8E File Offset: 0x00312C8E
-		// (set) Token: 0x06015484 RID: 87172 RVA: 0x00314A96 File Offset: 0x00312C96
+		// Token: 0x17006FD5 RID: 28629
+		// (get) Token: 0x06016997 RID: 92567 RVA: 0x0033B92E File Offset: 0x00339B2E
+		// (set) Token: 0x06016998 RID: 92568 RVA: 0x0033B936 File Offset: 0x00339B36
 		public string Reason { get; set; }
 
-		// Token: 0x17006A25 RID: 27173
-		// (get) Token: 0x06015485 RID: 87173 RVA: 0x00314A9F File Offset: 0x00312C9F
-		// (set) Token: 0x06015486 RID: 87174 RVA: 0x00314AA7 File Offset: 0x00312CA7
+		// Token: 0x17006FD6 RID: 28630
+		// (get) Token: 0x06016999 RID: 92569 RVA: 0x0033B93F File Offset: 0x00339B3F
+		// (set) Token: 0x0601699A RID: 92570 RVA: 0x0033B947 File Offset: 0x00339B47
 		public ETipsActorTransformType Type { get; set; }
 
-		// Token: 0x17006A26 RID: 27174
-		// (get) Token: 0x06015487 RID: 87175 RVA: 0x00314AB0 File Offset: 0x00312CB0
-		// (set) Token: 0x06015488 RID: 87176 RVA: 0x00314AB8 File Offset: 0x00312CB8
+		// Token: 0x17006FD7 RID: 28631
+		// (get) Token: 0x0601699B RID: 92571 RVA: 0x0033B950 File Offset: 0x00339B50
+		// (set) Token: 0x0601699C RID: 92572 RVA: 0x0033B958 File Offset: 0x00339B58
 		public IShapeTransformT TransformWorld { get; set; }
 
-		// Token: 0x17006A27 RID: 27175
-		// (get) Token: 0x06015489 RID: 87177 RVA: 0x00314AC1 File Offset: 0x00312CC1
-		// (set) Token: 0x0601548A RID: 87178 RVA: 0x00314AC9 File Offset: 0x00312CC9
+		// Token: 0x17006FD8 RID: 28632
+		// (get) Token: 0x0601699D RID: 92573 RVA: 0x0033B961 File Offset: 0x00339B61
+		// (set) Token: 0x0601699E RID: 92574 RVA: 0x0033B969 File Offset: 0x00339B69
 		public IHollowTipsActorComponentT HollowTipsActorComponent { get; set; }
 
-		// Token: 0x17006A28 RID: 27176
-		// (get) Token: 0x0601548B RID: 87179 RVA: 0x00314AD2 File Offset: 0x00312CD2
-		// (set) Token: 0x0601548C RID: 87180 RVA: 0x00314ADA File Offset: 0x00312CDA
+		// Token: 0x17006FD9 RID: 28633
+		// (get) Token: 0x0601699F RID: 92575 RVA: 0x0033B972 File Offset: 0x00339B72
+		// (set) Token: 0x060169A0 RID: 92576 RVA: 0x0033B97A File Offset: 0x00339B7A
 		public IShapeTransformT TransformEntity { get; set; }
 
-		// Token: 0x0601548D RID: 87181 RVA: 0x00314AE3 File Offset: 0x00312CE3
+		// Token: 0x060169A1 RID: 92577 RVA: 0x0033B983 File Offset: 0x00339B83
 		public IRelativeTipsActorTransformResultT()
 		{
 			this.IsSuccess = false;

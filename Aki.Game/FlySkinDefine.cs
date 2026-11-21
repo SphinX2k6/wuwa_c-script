@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A4E RID: 10830
+// Token: 0x02001FC9 RID: 8137
 public class FlySkinDefine : IStaticVariableResetter
 {
-	// Token: 0x060168ED RID: 92397 RVA: 0x005B787B File Offset: 0x005B5A7B
+	// Token: 0x0601430E RID: 82702 RVA: 0x005E39BF File Offset: 0x005E1BBF
 	static FlySkinDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FlySkinDefine.CreateStaticDefaultValue), new Action(FlySkinDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060168EE RID: 92398 RVA: 0x005B789C File Offset: 0x005B5A9C
+	// Token: 0x0601430F RID: 82703 RVA: 0x005E39E0 File Offset: 0x005E1BE0
 	public static void CreateStaticDefaultValue()
 	{
 		FlySkinDefine.FLY_SKIN_APPLY_TO_ALL_HELP_ID = new int?(243);
@@ -40,7 +40,7 @@ public class FlySkinDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x060168EF RID: 92399 RVA: 0x005B78FE File Offset: 0x005B5AFE
+	// Token: 0x06014310 RID: 82704 RVA: 0x005E3A42 File Offset: 0x005E1C42
 	public static void ResetStaticDefaultValue()
 	{
 		FlySkinDefine.FLY_SKIN_APPLY_TO_ALL_HELP_ID = null;
@@ -49,18 +49,18 @@ public class FlySkinDefine : IStaticVariableResetter
 		FlySkinDefine.flySkinTypeToCase = null;
 	}
 
-	// Token: 0x0400A774 RID: 42868
+	// Token: 0x0400AB78 RID: 43896
 	public static int? FLY_SKIN_APPLY_TO_ALL_HELP_ID;
 
-	// Token: 0x0400A775 RID: 42869
+	// Token: 0x0400AB79 RID: 43897
 	[Nullable(2)]
 	public static Dictionary<EFlySkinTab, EFlySkinType> flySkinTabToType;
 
-	// Token: 0x0400A776 RID: 42870
+	// Token: 0x0400AB7A RID: 43898
 	[Nullable(2)]
 	public static string DEFAULT_FLY_SKIN_CASE;
 
-	// Token: 0x0400A777 RID: 42871
+	// Token: 0x0400AB7B RID: 43899
 	[Nullable(new byte[]
 	{
 		2,

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF8 RID: 3832
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200100E RID: 4110
 	public class ICheckSpringFestivalGameplayCompleted : IQuestCondition
 	{
-		// Token: 0x0600548A RID: 21642 RVA: 0x000CF81C File Offset: 0x000CDA1C
+		// Token: 0x06005A06 RID: 23046 RVA: 0x000DB9C4 File Offset: 0x000D9BC4
 		private ICheckSpringFestivalGameplayCompleted_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600548B RID: 21643 RVA: 0x000CF854 File Offset: 0x000CDA54
+		// Token: 0x06005A07 RID: 23047 RVA: 0x000DB9FC File Offset: 0x000D9BFC
 		public static ICheckSpringFestivalGameplayCompleted Create([Nullable(2)] ICheckSpringFestivalGameplayCompleted instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600548C RID: 21644 RVA: 0x000CF867 File Offset: 0x000CDA67
+		// Token: 0x06005A08 RID: 23048 RVA: 0x000DBA0F File Offset: 0x000D9C0F
 		public static ICheckSpringFestivalGameplayCompleted CreateFromSetValue([Nullable(2)] ICheckSpringFestivalGameplayCompleted_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600548D RID: 21645 RVA: 0x000CF87A File Offset: 0x000CDA7A
+		// Token: 0x06005A09 RID: 23049 RVA: 0x000DBA22 File Offset: 0x000D9C22
 		public new ICheckSpringFestivalGameplayCompleted_SetValue ToSetValue()
 		{
 			return new ICheckSpringFestivalGameplayCompleted_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C52 RID: 7250
-		// (get) Token: 0x0600548E RID: 21646 RVA: 0x000CF8A5 File Offset: 0x000CDAA5
-		// (set) Token: 0x0600548F RID: 21647 RVA: 0x000CF8D0 File Offset: 0x000CDAD0
+		// Token: 0x17001DEA RID: 7658
+		// (get) Token: 0x06005A0A RID: 23050 RVA: 0x000DBA4D File Offset: 0x000D9C4D
+		// (set) Token: 0x06005A0B RID: 23051 RVA: 0x000DBA78 File Offset: 0x000D9C78
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C53 RID: 7251
-		// (get) Token: 0x06005490 RID: 21648 RVA: 0x000CF8E0 File Offset: 0x000CDAE0
-		// (set) Token: 0x06005491 RID: 21649 RVA: 0x000CF941 File Offset: 0x000CDB41
+		// Token: 0x17001DEB RID: 7659
+		// (get) Token: 0x06005A0C RID: 23052 RVA: 0x000DBA88 File Offset: 0x000D9C88
+		// (set) Token: 0x06005A0D RID: 23053 RVA: 0x000DBAE9 File Offset: 0x000D9CE9
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C54 RID: 7252
-		// (get) Token: 0x06005492 RID: 21650 RVA: 0x000CF956 File Offset: 0x000CDB56
-		// (set) Token: 0x06005493 RID: 21651 RVA: 0x000CF97D File Offset: 0x000CDB7D
+		// Token: 0x17001DEC RID: 7660
+		// (get) Token: 0x06005A0E RID: 23054 RVA: 0x000DBAFE File Offset: 0x000D9CFE
+		// (set) Token: 0x06005A0F RID: 23055 RVA: 0x000DBB25 File Offset: 0x000D9D25
 		public virtual ICheckSpringFestivalGameplayType GameplayType
 		{
 			get
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003335 RID: 13109
+		// Token: 0x04003642 RID: 13890
 		[Nullable(2)]
 		protected new ICheckSpringFestivalGameplayCompleted FbInstance;
 
-		// Token: 0x04003336 RID: 13110
+		// Token: 0x04003643 RID: 13891
 		[Nullable(2)]
 		protected new ICheckSpringFestivalGameplayCompleted_SetValue PocoInterface;
 
-		// Token: 0x04003337 RID: 13111
+		// Token: 0x04003644 RID: 13892
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003338 RID: 13112
+		// Token: 0x04003645 RID: 13893
 		private bool _PreConditionsInited;
 	}
 }

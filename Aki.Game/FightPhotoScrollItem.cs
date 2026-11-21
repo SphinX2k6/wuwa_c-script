@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.AutoAttach;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020025BC RID: 9660
+// Token: 0x02001AA7 RID: 6823
 public class FightPhotoScrollItem : FightPhotoSetupBase
 {
-	// Token: 0x06013967 RID: 80231 RVA: 0x004E5C74 File Offset: 0x004E3E74
+	// Token: 0x06010E47 RID: 69191 RVA: 0x004F4874 File Offset: 0x004F2A74
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		};
 	}
 
-	// Token: 0x06013968 RID: 80232 RVA: 0x004E5CFC File Offset: 0x004E3EFC
+	// Token: 0x06010E48 RID: 69192 RVA: 0x004F48FC File Offset: 0x004F2AFC
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -38,7 +38,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		EventSystem.Instance.Add<int>(EEventName.OnSyncFightPhotoTiltAngle, new Action<int>(this.OnSyncFightPhotoTiltAngle));
 	}
 
-	// Token: 0x06013969 RID: 80233 RVA: 0x004E5DB8 File Offset: 0x004E3FB8
+	// Token: 0x06010E49 RID: 69193 RVA: 0x004F49B8 File Offset: 0x004F2BB8
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null)
@@ -69,7 +69,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		angleAttachView.ReloadView(array.Length, array, attachTo);
 	}
 
-	// Token: 0x0601396A RID: 80234 RVA: 0x004E5EF8 File Offset: 0x004E40F8
+	// Token: 0x06010E4A RID: 69194 RVA: 0x004F4AF8 File Offset: 0x004F2CF8
 	protected override void OnBeforeDestroy()
 	{
 		if (EventSystem.Instance.Has<int>(EEventName.OnSyncFightPhotoTiltAngle, new Action<int>(this.OnSyncFightPhotoTiltAngle)))
@@ -79,7 +79,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		this.AngleAttachView = null;
 	}
 
-	// Token: 0x0601396B RID: 80235 RVA: 0x004E5F45 File Offset: 0x004E4145
+	// Token: 0x06010E4B RID: 69195 RVA: 0x004F4B45 File Offset: 0x004F2D45
 	[NullableContext(1)]
 	private FightPhotoAngleItem CreateMarkItem(AActor actor, int index, int showNum)
 	{
@@ -89,14 +89,14 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		return fightPhotoAngleItem;
 	}
 
-	// Token: 0x0601396C RID: 80236 RVA: 0x004E5F6C File Offset: 0x004E416C
+	// Token: 0x06010E4C RID: 69196 RVA: 0x004F4B6C File Offset: 0x004F2D6C
 	private void OnAngleSelect(int angle)
 	{
 		this.RefreshAngleText(angle);
 		base.OnSetupValueChange(angle);
 	}
 
-	// Token: 0x0601396D RID: 80237 RVA: 0x004E5F7C File Offset: 0x004E417C
+	// Token: 0x06010E4D RID: 69197 RVA: 0x004F4B7C File Offset: 0x004F2D7C
 	private void RefreshAngleText(int angle)
 	{
 		string newText = MathUtils.Instance.GetFloatPointFloorString((double)angle, this.SetupConfig.Value.Digits) + this.SetupConfig.Value.Unit;
@@ -108,7 +108,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x0601396E RID: 80238 RVA: 0x004E5FD4 File Offset: 0x004E41D4
+	// Token: 0x06010E4E RID: 69198 RVA: 0x004F4BD4 File Offset: 0x004F2DD4
 	private void OnSyncFightPhotoTiltAngle(int angle)
 	{
 		if (this.SetupConfig == null || this.SetupConfig.GetValueOrDefault().Id != 3 || this.AngleAttachView == null)
@@ -120,7 +120,7 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 		this.AngleAttachView.AttachToIndex(num - this.AngleMin, true);
 	}
 
-	// Token: 0x040093D3 RID: 37843
+	// Token: 0x04009529 RID: 38185
 	[Nullable(new byte[]
 	{
 		2,
@@ -128,24 +128,24 @@ public class FightPhotoScrollItem : FightPhotoSetupBase
 	})]
 	private NoCircleAttachView<int?, FightPhotoAngleItem> AngleAttachView;
 
-	// Token: 0x040093D4 RID: 37844
+	// Token: 0x0400952A RID: 38186
 	private int AngleMin;
 
-	// Token: 0x040093D5 RID: 37845
+	// Token: 0x0400952B RID: 38187
 	private int AngleMax;
 
-	// Token: 0x02008BCA RID: 35786
+	// Token: 0x02007D52 RID: 32082
 	private enum EChildType
 	{
-		// Token: 0x0402D5F7 RID: 185847
+		// Token: 0x0402890C RID: 166156
 		Draggable,
-		// Token: 0x0402D5F8 RID: 185848
+		// Token: 0x0402890D RID: 166157
 		ItemContent,
-		// Token: 0x0402D5F9 RID: 185849
+		// Token: 0x0402890E RID: 166158
 		ItemScaleMark,
-		// Token: 0x0402D5FA RID: 185850
+		// Token: 0x0402890F RID: 166159
 		TxtAngleNum,
-		// Token: 0x0402D5FB RID: 185851
+		// Token: 0x04028910 RID: 166160
 		TxtTitle
 	}
 }

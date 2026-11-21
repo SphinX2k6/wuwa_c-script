@@ -9,16 +9,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001AD7 RID: 6871
+// Token: 0x02000F96 RID: 3990
 public class FeedbackRewardStartView : UiViewBase
 {
-	// Token: 0x0600CBE6 RID: 52198 RVA: 0x002E8864 File Offset: 0x002E6A64
+	// Token: 0x06009FF7 RID: 40951 RVA: 0x002F39F8 File Offset: 0x002F1BF8
 	[NullableContext(1)]
 	public FeedbackRewardStartView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600CBE7 RID: 52199 RVA: 0x002E8870 File Offset: 0x002E6A70
+	// Token: 0x06009FF8 RID: 40952 RVA: 0x002F3A04 File Offset: 0x002F1C04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -41,7 +41,7 @@ public class FeedbackRewardStartView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CBE8 RID: 52200 RVA: 0x002E8938 File Offset: 0x002E6B38
+	// Token: 0x06009FF9 RID: 40953 RVA: 0x002F3ACC File Offset: 0x002F1CCC
 	protected override void OnStart()
 	{
 		List<int> canFinishRewardId = FeedbackRewardModel.Instance.GetCanFinishRewardId();
@@ -91,27 +91,27 @@ public class FeedbackRewardStartView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600CBE9 RID: 52201 RVA: 0x002E8B10 File Offset: 0x002E6D10
+	// Token: 0x06009FFA RID: 40954 RVA: 0x002F3CA4 File Offset: 0x002F1EA4
 	protected override void OnBeforeShow()
 	{
 		SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.FeedbackReward);
 	}
 
-	// Token: 0x0600CBEA RID: 52202 RVA: 0x002E8B1D File Offset: 0x002E6D1D
+	// Token: 0x06009FFB RID: 40955 RVA: 0x002F3CB1 File Offset: 0x002F1EB1
 	[NullableContext(1)]
 	private CommonItemSmallItemGrid InitItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600CBEB RID: 52203 RVA: 0x002E8B24 File Offset: 0x002E6D24
+	// Token: 0x06009FFC RID: 40956 RVA: 0x002F3CB8 File Offset: 0x002F1EB8
 	private void OnClickBtn()
 	{
 		base.CloseMe(null);
 		UiManager.Instance.OpenView(EUiViewName.FeedbackRewardMainView, null, null);
 	}
 
-	// Token: 0x04005DBF RID: 23999
+	// Token: 0x04005E8E RID: 24206
 	[Nullable(new byte[]
 	{
 		2,
@@ -119,14 +119,14 @@ public class FeedbackRewardStartView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x02008035 RID: 32821
+	// Token: 0x020071C3 RID: 29123
 	private enum ECompDefine
 	{
-		// Token: 0x04029DC0 RID: 171456
+		// Token: 0x040250F4 RID: 151796
 		Button,
-		// Token: 0x04029DC1 RID: 171457
+		// Token: 0x040250F5 RID: 151797
 		PointText,
-		// Token: 0x04029DC2 RID: 171458
+		// Token: 0x040250F6 RID: 151798
 		RewardLayout
 	}
 }

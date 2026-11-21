@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent
 {
-	// Token: 0x02004B01 RID: 19201
+	// Token: 0x02003AA9 RID: 15017
 	public class TowerDefenseEventConfig
 	{
-		// Token: 0x06031B92 RID: 203666 RVA: 0x00B8C560 File Offset: 0x00B8A760
+		// Token: 0x06026922 RID: 157986 RVA: 0x00AD05C4 File Offset: 0x00ACE7C4
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public static string FillUpModelInfo(ITowerDefenseEventCombatInfo model, bool @override = false)

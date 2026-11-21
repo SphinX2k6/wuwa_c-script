@@ -8,13 +8,13 @@ using CSharpScript.Game.Module.Sheriff;
 using CSharpScript.Game.RedDot.RedDots.ComposeSystem;
 using CSharpScript.Game.RedDot.RedDots.CookSystem;
 
-// Token: 0x0200332D RID: 13101
+// Token: 0x0200289F RID: 10399
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RedDotModel : ModelBase
 {
-	// Token: 0x0601C903 RID: 116995 RVA: 0x00802264 File Offset: 0x00800464
+	// Token: 0x0601A5FB RID: 108027 RVA: 0x00828808 File Offset: 0x00826A08
 	protected override bool OnInit()
 	{
 		this.Add(ERedDotName.Test, new RedDotTest());
@@ -323,18 +323,20 @@ public class RedDotModel : ModelBase
 		this.Add(ERedDotName.GiantAccessNew, new RedDotGiantAccessNew());
 		this.Add(ERedDotName.GiantInteract, new RedDotGiantInteract());
 		this.Add(ERedDotName.GiantCommission, new RedDotGiantCommission());
+		this.Add(ERedDotName.RedDotSolarSchoolQuest, new RedDotSolarSchoolQuest());
+		this.Add(ERedDotName.RedDotSolarSchoolQuestItem, new RedDotSolarSchoolQuestItem());
 		this.ConstructRelationships();
 		return true;
 	}
 
-	// Token: 0x0601C904 RID: 116996 RVA: 0x0080342D File Offset: 0x0080162D
+	// Token: 0x0601A5FC RID: 108028 RVA: 0x008299F1 File Offset: 0x00827BF1
 	private void Add(ERedDotName name, RedDotBase redDot)
 	{
 		redDot.Init(name);
 		this.TryGetRedDotTree(name, redDot);
 	}
 
-	// Token: 0x0601C905 RID: 116997 RVA: 0x00803440 File Offset: 0x00801640
+	// Token: 0x0601A5FD RID: 108029 RVA: 0x00829A04 File Offset: 0x00827C04
 	private void ConstructRelationships()
 	{
 		Dictionary<ERedDotName, ERedDotName?> relativeNameMap = RedDotConfig.GetRelativeNameMap();
@@ -355,7 +357,7 @@ public class RedDotModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C906 RID: 116998 RVA: 0x008034F8 File Offset: 0x008016F8
+	// Token: 0x0601A5FE RID: 108030 RVA: 0x00829ABC File Offset: 0x00827CBC
 	private Tree<RedDotBase> TryGetRedDotTree(ERedDotName name, RedDotBase redDot)
 	{
 		Tree<RedDotBase> tree;
@@ -367,7 +369,7 @@ public class RedDotModel : ModelBase
 		return tree;
 	}
 
-	// Token: 0x0601C907 RID: 116999 RVA: 0x0080352C File Offset: 0x0080172C
+	// Token: 0x0601A5FF RID: 108031 RVA: 0x00829AF0 File Offset: 0x00827CF0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -389,7 +391,7 @@ public class RedDotModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601C908 RID: 117000 RVA: 0x00803578 File Offset: 0x00801778
+	// Token: 0x0601A600 RID: 108032 RVA: 0x00829B3C File Offset: 0x00827D3C
 	[NullableContext(2)]
 	public RedDotBase GetRedDot(ERedDotName name)
 	{
@@ -407,7 +409,7 @@ public class RedDotModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601C909 RID: 117001 RVA: 0x008035CC File Offset: 0x008017CC
+	// Token: 0x0601A601 RID: 108033 RVA: 0x00829B90 File Offset: 0x00827D90
 	private void GetAllRedDot(RedDotBase redDot, HashSet<RedDotBase> outSet)
 	{
 		outSet.Add(redDot);
@@ -425,7 +427,7 @@ public class RedDotModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C90A RID: 117002 RVA: 0x0080364C File Offset: 0x0080184C
+	// Token: 0x0601A602 RID: 108034 RVA: 0x00829C10 File Offset: 0x00827E10
 	public void LogAllRedDotTree(ERedDotName name)
 	{
 		RedDotBase redDot = this.GetRedDot(name);
@@ -442,7 +444,7 @@ public class RedDotModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C90B RID: 117003 RVA: 0x008036E0 File Offset: 0x008018E0
+	// Token: 0x0601A603 RID: 108035 RVA: 0x00829CA4 File Offset: 0x00827EA4
 	public void LogAllRedDotState(ERedDotName name)
 	{
 		RedDotBase redDot = this.GetRedDot(name);
@@ -470,7 +472,7 @@ public class RedDotModel : ModelBase
 		instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0601C90C RID: 117004 RVA: 0x008037A0 File Offset: 0x008019A0
+	// Token: 0x0601A604 RID: 108036 RVA: 0x00829D64 File Offset: 0x00827F64
 	public void SwitchAllRedDot(bool bShow)
 	{
 		RedDotData.StateByGm = bShow;
@@ -486,8 +488,8 @@ public class RedDotModel : ModelBase
 		}
 	}
 
-	// Token: 0x170027A1 RID: 10145
-	// (get) Token: 0x0601C90D RID: 117005 RVA: 0x00803848 File Offset: 0x00801A48
+	// Token: 0x17002B3D RID: 11069
+	// (get) Token: 0x0601A605 RID: 108037 RVA: 0x00829E0C File Offset: 0x0082800C
 	public static RedDotModel Instance
 	{
 		get
@@ -496,7 +498,7 @@ public class RedDotModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C90E RID: 117006 RVA: 0x0080384F File Offset: 0x00801A4F
+	// Token: 0x0601A606 RID: 108038 RVA: 0x00829E13 File Offset: 0x00828013
 	public static RedDotModel GetOrCreateInstance()
 	{
 		if (RedDotModel._Instance == null)
@@ -506,7 +508,7 @@ public class RedDotModel : ModelBase
 		return RedDotModel._Instance;
 	}
 
-	// Token: 0x0601C90F RID: 117007 RVA: 0x00803863 File Offset: 0x00801A63
+	// Token: 0x0601A607 RID: 108039 RVA: 0x00829E27 File Offset: 0x00828027
 	public static bool CreateInstance()
 	{
 		if (RedDotModel._Instance != null)
@@ -517,27 +519,27 @@ public class RedDotModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601C910 RID: 117008 RVA: 0x00803879 File Offset: 0x00801A79
+	// Token: 0x0601A608 RID: 108040 RVA: 0x00829E3D File Offset: 0x0082803D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C911 RID: 117009 RVA: 0x0080387B File Offset: 0x00801A7B
+	// Token: 0x0601A609 RID: 108041 RVA: 0x00829E3F File Offset: 0x0082803F
 	public static void ResetStaticDefaultValue()
 	{
 		RedDotModel._Instance = null;
 	}
 
-	// Token: 0x0601C912 RID: 117010 RVA: 0x00803883 File Offset: 0x00801A83
+	// Token: 0x0601A60A RID: 108042 RVA: 0x00829E47 File Offset: 0x00828047
 	static RedDotModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RedDotModel.CreateStaticDefaultValue), new Action(RedDotModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E400 RID: 58368
+	// Token: 0x0400E8B2 RID: 59570
 	private readonly Dictionary<ERedDotName, Tree<RedDotBase>> RedDotTreeMap = new Dictionary<ERedDotName, Tree<RedDotBase>>();
 
-	// Token: 0x0400E401 RID: 58369
+	// Token: 0x0400E8B3 RID: 59571
 	[Nullable(2)]
 	private static RedDotModel _Instance;
 }

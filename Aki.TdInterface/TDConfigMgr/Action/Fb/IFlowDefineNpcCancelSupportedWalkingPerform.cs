@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A85 RID: 10885
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D79 RID: 11641
 	public class IFlowDefineNpcCancelSupportedWalkingPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x0600EF3B RID: 61243 RVA: 0x0022CA05 File Offset: 0x0022AC05
+		// Token: 0x0600FDF1 RID: 65009 RVA: 0x0024A711 File Offset: 0x00248911
 		public static IFlowDefineNpcCancelSupportedWalkingPerform Create(IFlowDefineNpcCancelSupportedWalkingPerform? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BF3 RID: 19443
-		// (get) Token: 0x0600EF3C RID: 61244 RVA: 0x0022CA24 File Offset: 0x0022AC24
+		// Token: 0x17004FAD RID: 20397
+		// (get) Token: 0x0600FDF2 RID: 65010 RVA: 0x0024A730 File Offset: 0x00248930
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BF4 RID: 19444
-		// (get) Token: 0x0600EF3D RID: 61245 RVA: 0x0022CA31 File Offset: 0x0022AC31
+		// Token: 0x17004FAE RID: 20398
+		// (get) Token: 0x0600FDF3 RID: 65011 RVA: 0x0024A73D File Offset: 0x0024893D
 		public virtual string Key
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083A1 RID: 33697
+		// Token: 0x04008AA5 RID: 35493
 		private IFlowDefineNpcCancelSupportedWalkingPerform Instance;
 	}
 }

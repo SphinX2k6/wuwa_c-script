@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006338 RID: 25400
+	// Token: 0x020052B6 RID: 21174
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 	})]
 	public class PinballMainView : PinballMainChildViewBase<PinballMainViewModel>
 	{
-		// Token: 0x0603FE80 RID: 261760 RVA: 0x00F759B4 File Offset: 0x00F73BB4
+		// Token: 0x06034B41 RID: 215873 RVA: 0x00EBC910 File Offset: 0x00EBAB10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FE81 RID: 261761 RVA: 0x00F75BF0 File Offset: 0x00F73DF0
+		// Token: 0x06034B42 RID: 215874 RVA: 0x00EBCB4C File Offset: 0x00EBAD4C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballMainView.<OnBeforeStartAsync>d__41 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE82 RID: 261762 RVA: 0x00F75C33 File Offset: 0x00F73E33
+		// Token: 0x06034B43 RID: 215875 RVA: 0x00EBCB8F File Offset: 0x00EBAD8F
 		protected override void OnBeforeShow()
 		{
 			this.LastGamepadChapterIndex = -1;
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.StartScrollTick();
 		}
 
-		// Token: 0x0603FE83 RID: 261763 RVA: 0x00F75C72 File Offset: 0x00F73E72
+		// Token: 0x06034B44 RID: 215876 RVA: 0x00EBCBCE File Offset: 0x00EBADCE
 		protected override void OnBeforeHide()
 		{
 			this.StopScrollTick();
 			this.ScrollProgressTween.KillTween();
 		}
 
-		// Token: 0x0603FE84 RID: 261764 RVA: 0x00F75C88 File Offset: 0x00F73E88
+		// Token: 0x06034B45 RID: 215877 RVA: 0x00EBCBE4 File Offset: 0x00EBADE4
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveScrollTick();
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.ButtonConfigList = new List<IPinballMainButtonConfig>();
 		}
 
-		// Token: 0x0603FE85 RID: 261765 RVA: 0x00F75D04 File Offset: 0x00F73F04
+		// Token: 0x06034B46 RID: 215878 RVA: 0x00EBCC60 File Offset: 0x00EBAE60
 		private void InitButtonConfigs()
 		{
 			if (this.ButtonConfigList.Count > 0)
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.ButtonConfigList.Add(item4);
 		}
 
-		// Token: 0x0603FE86 RID: 261766 RVA: 0x00F75E90 File Offset: 0x00F74090
+		// Token: 0x06034B47 RID: 215879 RVA: 0x00EBCDEC File Offset: 0x00EBAFEC
 		private UniTask LoadCurveResource()
 		{
 			PinballMainView.<LoadCurveResource>d__46 <LoadCurveResource>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <LoadCurveResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE87 RID: 261767 RVA: 0x00F75ED4 File Offset: 0x00F740D4
+		// Token: 0x06034B48 RID: 215880 RVA: 0x00EBCE30 File Offset: 0x00EBB030
 		private UniTask CreateButtons()
 		{
 			PinballMainView.<CreateButtons>d__47 <CreateButtons>d__;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CreateButtons>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE88 RID: 261768 RVA: 0x00F75F18 File Offset: 0x00F74118
+		// Token: 0x06034B49 RID: 215881 RVA: 0x00EBCE74 File Offset: 0x00EBB074
 		private UUIItem CreateChapterUiItem(bool isTower = false)
 		{
 			UUIItem item = isTower ? base.GetItem(2) : base.GetItem(1);
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return LguiUtil.Instance.CopyItem(item, uiitem);
 		}
 
-		// Token: 0x0603FE89 RID: 261769 RVA: 0x00F75F60 File Offset: 0x00F74160
+		// Token: 0x06034B4A RID: 215882 RVA: 0x00EBCEBC File Offset: 0x00EBB0BC
 		private UniTask CreateAllChapterItems()
 		{
 			PinballMainView.<CreateAllChapterItems>d__49 <CreateAllChapterItems>d__;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return <CreateAllChapterItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FE8A RID: 261770 RVA: 0x00F75FA4 File Offset: 0x00F741A4
+		// Token: 0x06034B4B RID: 215883 RVA: 0x00EBCF00 File Offset: 0x00EBB100
 		private void SetChapterItemOffset(UUIItem item, int index, int totalCount, float stepOffset = 0f, float contentOffsetX = 0f)
 		{
 			int num = totalCount - 1;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			item.SetAnchorOffset(this.UiOffset.ToUeVector2D(false));
 		}
 
-		// Token: 0x0603FE8B RID: 261771 RVA: 0x00F76058 File Offset: 0x00F74258
+		// Token: 0x06034B4C RID: 215884 RVA: 0x00EBCFB4 File Offset: 0x00EBB1B4
 		private void SetCaptionInfo()
 		{
 			if (base.ViewModel != null)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE8C RID: 261772 RVA: 0x00F760BC File Offset: 0x00F742BC
+		// Token: 0x06034B4D RID: 215885 RVA: 0x00EBD018 File Offset: 0x00EBB218
 		private void RefreshLimitRewardMainButton()
 		{
 			PinballMainButtonItem pinballMainButtonItem;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE8D RID: 261773 RVA: 0x00F760F4 File Offset: 0x00F742F4
+		// Token: 0x06034B4E RID: 215886 RVA: 0x00EBD050 File Offset: 0x00EBB250
 		private void RefreshNormalButtonStates()
 		{
 			foreach (PinballMainButtonItem pinballMainButtonItem in this.ButtonItems.Values)
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE8E RID: 261774 RVA: 0x00F761F8 File Offset: 0x00F743F8
+		// Token: 0x06034B4F RID: 215887 RVA: 0x00EBD154 File Offset: 0x00EBB354
 		private void BindAllButtonRedDot()
 		{
 			foreach (PinballMainButtonItem pinballMainButtonItem in this.ButtonItems.Values)
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE8F RID: 261775 RVA: 0x00F76250 File Offset: 0x00F74450
+		// Token: 0x06034B50 RID: 215888 RVA: 0x00EBD1AC File Offset: 0x00EBB3AC
 		private void RefreshAllChapterItems()
 		{
 			this.NeedPlayTweenChapterItemMap.Clear();
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE90 RID: 261776 RVA: 0x00F763B0 File Offset: 0x00F745B0
+		// Token: 0x06034B51 RID: 215889 RVA: 0x00EBD30C File Offset: 0x00EBB50C
 		private void InitChapterScrollTween()
 		{
 			if (this.IsInitialChapterScroll || this.ChapterUiItemList.Count <= 0)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			});
 		}
 
-		// Token: 0x0603FE91 RID: 261777 RVA: 0x00F7643C File Offset: 0x00F7463C
+		// Token: 0x06034B52 RID: 215890 RVA: 0x00EBD398 File Offset: 0x00EBB598
 		private void PlayChapterUnlockTween()
 		{
 			if (this.NeedPlayTweenChapterItemMap.Count <= 0)
@@ -386,13 +386,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			UniTask.WhenAll(list.ToArray()).Forget();
 		}
 
-		// Token: 0x0603FE92 RID: 261778 RVA: 0x00F764D4 File Offset: 0x00F746D4
+		// Token: 0x06034B53 RID: 215891 RVA: 0x00EBD430 File Offset: 0x00EBB630
 		private void AddScrollTick()
 		{
 			this.ScrollTickId = TickSystem.Instance.Add(new Action<float>(this.OnScrollTick), "PinballMainViewChapterScroll", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x0603FE93 RID: 261779 RVA: 0x00F76500 File Offset: 0x00F74700
+		// Token: 0x06034B54 RID: 215892 RVA: 0x00EBD45C File Offset: 0x00EBB65C
 		private void StartScrollTick()
 		{
 			if (this.ScrollTickId != -1)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE94 RID: 261780 RVA: 0x00F7651C File Offset: 0x00F7471C
+		// Token: 0x06034B55 RID: 215893 RVA: 0x00EBD478 File Offset: 0x00EBB678
 		private void StopScrollTick()
 		{
 			if (this.ScrollTickId != -1)
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE95 RID: 261781 RVA: 0x00F76538 File Offset: 0x00F74738
+		// Token: 0x06034B56 RID: 215894 RVA: 0x00EBD494 File Offset: 0x00EBB694
 		private void RemoveScrollTick()
 		{
 			if (this.ScrollTickId != -1)
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE96 RID: 261782 RVA: 0x00F7655C File Offset: 0x00F7475C
+		// Token: 0x06034B57 RID: 215895 RVA: 0x00EBD4B8 File Offset: 0x00EBB6B8
 		private void OnScrollTick(float deltaTime)
 		{
 			this.LimitRewardButtonRefreshTime += deltaTime;
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.OnRefreshAllChapterItemsTick(deltaTime);
 		}
 
-		// Token: 0x0603FE97 RID: 261783 RVA: 0x00F765B3 File Offset: 0x00F747B3
+		// Token: 0x06034B58 RID: 215896 RVA: 0x00EBD50F File Offset: 0x00EBB70F
 		private void OnRefreshAllChapterItemsTick(float deltaTime)
 		{
 			this.AllChaptersRefreshTime += deltaTime;
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FE98 RID: 261784 RVA: 0x00F765E8 File Offset: 0x00F747E8
+		// Token: 0x06034B59 RID: 215897 RVA: 0x00EBD544 File Offset: 0x00EBB744
 		private int GetLatestUnlockedChapterIndex()
 		{
 			List<PinballChapterData> mainChapterList = this.ActivityData.GetMainChapterList();
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return result;
 		}
 
-		// Token: 0x0603FE99 RID: 261785 RVA: 0x00F7667C File Offset: 0x00F7487C
+		// Token: 0x06034B5A RID: 215898 RVA: 0x00EBD5D8 File Offset: 0x00EBB7D8
 		private float GetEntranceProgress()
 		{
 			int num = this.ChapterUiItemList.Count - 1;
@@ -495,7 +495,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return (float)(-(float)num) * num6 / maxStepOffset;
 		}
 
-		// Token: 0x0603FE9A RID: 261786 RVA: 0x00F76708 File Offset: 0x00F74908
+		// Token: 0x06034B5B RID: 215899 RVA: 0x00EBD664 File Offset: 0x00EBB864
 		private float GetScrollProgressByIndex(int targetIndex)
 		{
 			int num = this.ChapterUiItemList.Count - 1;
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return MathUtils.Instance.Clamp(num5 / maxStepOffset, 0f, 1f);
 		}
 
-		// Token: 0x0603FE9B RID: 261787 RVA: 0x00F7676C File Offset: 0x00F7496C
+		// Token: 0x06034B5C RID: 215900 RVA: 0x00EBD6C8 File Offset: 0x00EBB8C8
 		private float GetMaxStepOffset(int totalStepCount)
 		{
 			float num = 0.79999995f / (float)totalStepCount;
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return MathUtils.Instance.Clamp(currentValue2, 0f, (float)totalStepCount);
 		}
 
-		// Token: 0x0603FE9C RID: 261788 RVA: 0x00F7684D File Offset: 0x00F74A4D
+		// Token: 0x06034B5D RID: 215901 RVA: 0x00EBD7A9 File Offset: 0x00EBB9A9
 		[NullableContext(2)]
 		private void PlayScrollProgressTween(float startProgress, float endProgress, float duration, Action finishedCallBack = null)
 		{
@@ -531,7 +531,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.ScrollTweenCallback = finishedCallBack;
 		}
 
-		// Token: 0x0603FE9D RID: 261789 RVA: 0x00F76868 File Offset: 0x00F74A68
+		// Token: 0x06034B5E RID: 215902 RVA: 0x00EBD7C4 File Offset: 0x00EBB9C4
 		private void BindScrollProgressTween()
 		{
 			this.ScrollProgressTween.BindStartTween(new Action(this.OnScrollProgressTweenStart));
@@ -539,14 +539,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.ScrollProgressTween.BindCompleteTween(new Action(this.OnScrollProgressTweenComplete));
 		}
 
-		// Token: 0x0603FE9E RID: 261790 RVA: 0x00F768BA File Offset: 0x00F74ABA
+		// Token: 0x06034B5F RID: 215903 RVA: 0x00EBD816 File Offset: 0x00EBBA16
 		private void OnScrollProgressTweenStart()
 		{
 			this.IsScrollAnimating = true;
 			this.ViewMask.SetMask("PinballMainScrollMoveTween", true);
 		}
 
-		// Token: 0x0603FE9F RID: 261791 RVA: 0x00F768D4 File Offset: 0x00F74AD4
+		// Token: 0x06034B60 RID: 215904 RVA: 0x00EBD830 File Offset: 0x00EBBA30
 		private void OnScrollProgressTweenUpdate(float value)
 		{
 			this.DisplayScrollProgress = value;
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.UpdateChapterItemsByCurve(this.DisplayScrollProgress);
 		}
 
-		// Token: 0x0603FEA0 RID: 261792 RVA: 0x00F768F8 File Offset: 0x00F74AF8
+		// Token: 0x06034B61 RID: 215905 RVA: 0x00EBD854 File Offset: 0x00EBBA54
 		private void OnScrollProgressTweenComplete()
 		{
 			this.IsScrollAnimating = false;
@@ -571,7 +571,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			scrollTweenCallback();
 		}
 
-		// Token: 0x0603FEA1 RID: 261793 RVA: 0x00F7692C File Offset: 0x00F74B2C
+		// Token: 0x06034B62 RID: 215906 RVA: 0x00EBD888 File Offset: 0x00EBBA88
 		private void SyncScrollProgress(float scrollProgress)
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(0);
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			scrollViewWithScrollbar.SetScrollProgress(scrollProgress2);
 		}
 
-		// Token: 0x0603FEA2 RID: 261794 RVA: 0x00F76978 File Offset: 0x00F74B78
+		// Token: 0x06034B63 RID: 215907 RVA: 0x00EBD8D4 File Offset: 0x00EBBAD4
 		private void OnScrollValueChange(FVector2D progress)
 		{
 			if (this.ChapterScrollCurve == null || this.ChapterUiItemList.Count <= 0)
@@ -606,7 +606,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.UpdateChapterItemsByCurve(num2);
 		}
 
-		// Token: 0x0603FEA3 RID: 261795 RVA: 0x00F769F8 File Offset: 0x00F74BF8
+		// Token: 0x06034B64 RID: 215908 RVA: 0x00EBD954 File Offset: 0x00EBBB54
 		private void UpdateChapterItemsByCurve(float scrollProgress)
 		{
 			int totalStepCount = this.ChapterUiItemList.Count - 1;
@@ -620,31 +620,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FEA4 RID: 261796 RVA: 0x00F76A75 File Offset: 0x00F74C75
+		// Token: 0x06034B65 RID: 215909 RVA: 0x00EBD9D1 File Offset: 0x00EBBBD1
 		private void OnBtnPermanentReward()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballPermanentRewardView, this.ActivityData, null);
 		}
 
-		// Token: 0x0603FEA5 RID: 261797 RVA: 0x00F76A8D File Offset: 0x00F74C8D
+		// Token: 0x06034B66 RID: 215910 RVA: 0x00EBD9E9 File Offset: 0x00EBBBE9
 		private void OnBtnLimitReward()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballLimitedRewardView, this.ActivityData, null);
 		}
 
-		// Token: 0x0603FEA6 RID: 261798 RVA: 0x00F76AA5 File Offset: 0x00F74CA5
+		// Token: 0x06034B67 RID: 215911 RVA: 0x00EBDA01 File Offset: 0x00EBBC01
 		private void OnBtnShop()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballShopView, null, null);
 		}
 
-		// Token: 0x0603FEA7 RID: 261799 RVA: 0x00F76AB8 File Offset: 0x00F74CB8
+		// Token: 0x06034B68 RID: 215912 RVA: 0x00EBDA14 File Offset: 0x00EBBC14
 		private void OnBtnRole()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballRoleView, null, null);
 		}
 
-		// Token: 0x0603FEA8 RID: 261800 RVA: 0x00F76ACC File Offset: 0x00F74CCC
+		// Token: 0x06034B69 RID: 215913 RVA: 0x00EBDA28 File Offset: 0x00EBBC28
 		[NullableContext(2)]
 		private void OnBtnPermanentRewardProgress(UUIText item)
 		{
@@ -661,7 +661,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FEA9 RID: 261801 RVA: 0x00F76B28 File Offset: 0x00F74D28
+		// Token: 0x06034B6A RID: 215914 RVA: 0x00EBDA84 File Offset: 0x00EBBC84
 		[NullableContext(2)]
 		private void OnBtnLimitRewardProgress(UUIText item)
 		{
@@ -678,7 +678,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			}
 		}
 
-		// Token: 0x0603FEAA RID: 261802 RVA: 0x00F76B84 File Offset: 0x00F74D84
+		// Token: 0x06034B6B RID: 215915 RVA: 0x00EBDAE0 File Offset: 0x00EBBCE0
 		private bool OnShowPermanentRewardRedDot()
 		{
 			using (List<PinballTaskData>.Enumerator enumerator = this.ActivityData.GetPermanentTaskList().GetEnumerator())
@@ -694,7 +694,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return false;
 		}
 
-		// Token: 0x0603FEAB RID: 261803 RVA: 0x00F76BE4 File Offset: 0x00F74DE4
+		// Token: 0x06034B6C RID: 215916 RVA: 0x00EBDB40 File Offset: 0x00EBBD40
 		private bool OnShowLimitRewardRedDot()
 		{
 			if (!this.ActivityData.CheckIfInRewardTime())
@@ -714,21 +714,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return false;
 		}
 
-		// Token: 0x0603FEAC RID: 261804 RVA: 0x00F76C54 File Offset: 0x00F74E54
+		// Token: 0x06034B6D RID: 215917 RVA: 0x00EBDBB0 File Offset: 0x00EBBDB0
 		private bool OnShowLimitRewardButton()
 		{
 			PinballActivityData activityData = this.ActivityData;
 			return activityData != null && activityData.CheckIfInRewardTime();
 		}
 
-		// Token: 0x0603FEAD RID: 261805 RVA: 0x00F76C67 File Offset: 0x00F74E67
+		// Token: 0x06034B6E RID: 215918 RVA: 0x00EBDBC3 File Offset: 0x00EBBDC3
 		private bool OnShowShopRedDot()
 		{
 			PinballActivityData activityData = this.ActivityData;
 			return activityData != null && activityData.IsShopEntranceHasRedDot();
 		}
 
-		// Token: 0x0603FEAE RID: 261806 RVA: 0x00F76C7A File Offset: 0x00F74E7A
+		// Token: 0x06034B6F RID: 215919 RVA: 0x00EBDBD6 File Offset: 0x00EBBDD6
 		private void OnClickChapterBack(PinballChapterData chapterData, List<PinballLevelRecordData> levelDataList)
 		{
 			PinballActivityData activityData = this.ActivityData;
@@ -741,7 +741,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.OpenChildView("PinballLevelView");
 		}
 
-		// Token: 0x0603FEAF RID: 261807 RVA: 0x00F76CB7 File Offset: 0x00F74EB7
+		// Token: 0x06034B70 RID: 215920 RVA: 0x00EBDC13 File Offset: 0x00EBBE13
 		private void OnClickTowerBack(PinballChapterData chapterData, List<PinballLevelRecordData> levelDataList)
 		{
 			PinballActivityData activityData = this.ActivityData;
@@ -754,7 +754,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			base.OpenChildView("PinballTowerLevelView");
 		}
 
-		// Token: 0x0603FEB0 RID: 261808 RVA: 0x00F76CF4 File Offset: 0x00F74EF4
+		// Token: 0x06034B71 RID: 215921 RVA: 0x00EBDC50 File Offset: 0x00EBBE50
 		private void OnPointEnterChapterBack(string planetPath, string planetMaskPath, int chapterId)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -784,7 +784,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.OldPlanetPath = planetPath;
 		}
 
-		// Token: 0x0603FEB1 RID: 261809 RVA: 0x00F76D7C File Offset: 0x00F74F7C
+		// Token: 0x06034B72 RID: 215922 RVA: 0x00EBDCD8 File Offset: 0x00EBBED8
 		private void OnGamepadEnterChapter(int chapterId)
 		{
 			if (!this.IsInitialChapterScroll || this.ActivityData == null)
@@ -801,7 +801,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			this.PlayScrollProgressTween(this.DisplayScrollProgress, scrollProgressByIndex, 0.3f, null);
 		}
 
-		// Token: 0x0603FEB2 RID: 261810 RVA: 0x00F76DD4 File Offset: 0x00F74FD4
+		// Token: 0x06034B73 RID: 215923 RVA: 0x00EBDD30 File Offset: 0x00EBBF30
 		private int GetChapterIndexById(int chapterId)
 		{
 			List<PinballChapterData> mainChapterList = this.ActivityData.GetMainChapterList();
@@ -820,13 +820,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			return -1;
 		}
 
-		// Token: 0x0603FEB3 RID: 261811 RVA: 0x00F76E36 File Offset: 0x00F75036
+		// Token: 0x06034B74 RID: 215924 RVA: 0x00EBDD92 File Offset: 0x00EBBF92
 		private void OnBtnDailyLevelClick()
 		{
 			base.OpenChildView("PinballDailyLevelView");
 		}
 
-		// Token: 0x0603FEB4 RID: 261812 RVA: 0x00F76E43 File Offset: 0x00F75043
+		// Token: 0x06034B75 RID: 215925 RVA: 0x00EBDD9F File Offset: 0x00EBBF9F
 		private void OnBtnNewTowerLevelClick()
 		{
 			this.PlayScrollProgressTween(this.DisplayScrollProgress, 1f, 1f, delegate
@@ -856,13 +856,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			});
 		}
 
-		// Token: 0x0603FEB5 RID: 261813 RVA: 0x00F76E67 File Offset: 0x00F75067
+		// Token: 0x06034B76 RID: 215926 RVA: 0x00EBDDC3 File Offset: 0x00EBBFC3
 		private void OnBtnBackClick()
 		{
 			base.BackToLastView();
 		}
 
-		// Token: 0x0603FEB6 RID: 261814 RVA: 0x00F76E70 File Offset: 0x00F75070
+		// Token: 0x06034B77 RID: 215927 RVA: 0x00EBDDCC File Offset: 0x00EBBFCC
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -900,160 +900,160 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 			};
 		}
 
-		// Token: 0x0402154D RID: 136525
+		// Token: 0x0401BE7C RID: 114300
 		private const int ITEM_OFFSET_X = 95;
 
-		// Token: 0x0402154E RID: 136526
+		// Token: 0x0401BE7D RID: 114301
 		private const int ITEM_OFFSET_Y = 100;
 
-		// Token: 0x0402154F RID: 136527
+		// Token: 0x0401BE7E RID: 114302
 		private const float CHAPTER_CURVE_PROGRESS_MIN = 0.1f;
 
-		// Token: 0x04021550 RID: 136528
+		// Token: 0x0401BE7F RID: 114303
 		private const float CHAPTER_CURVE_PROGRESS_MAX = 0.9f;
 
-		// Token: 0x04021551 RID: 136529
+		// Token: 0x0401BE80 RID: 114304
 		private const float CHAPTER_ITEM_X_SPACING_SCALE = 1f;
 
-		// Token: 0x04021552 RID: 136530
+		// Token: 0x0401BE81 RID: 114305
 		private const float CHAPTER_LAST_ITEM_X_GAP_RATIO = 1.125f;
 
-		// Token: 0x04021553 RID: 136531
+		// Token: 0x0401BE82 RID: 114306
 		private const float CHAPTER_INITIAL_SCROLL_TWEEN_DURATION = 1f;
 
-		// Token: 0x04021554 RID: 136532
+		// Token: 0x0401BE83 RID: 114307
 		private const float CHAPTER_GAMEPAD_SCROLL_TWEEN_DURATION = 0.3f;
 
-		// Token: 0x04021555 RID: 136533
+		// Token: 0x0401BE84 RID: 114308
 		private const int CHAPTER_LAST_ITEM_RIGHT_MARGIN = 80;
 
-		// Token: 0x04021556 RID: 136534
+		// Token: 0x0401BE85 RID: 114309
 		private const int AUTO_REFRESH_CHAPTER_ITEMS_INTERVAL = 1000;
 
-		// Token: 0x04021557 RID: 136535
+		// Token: 0x0401BE86 RID: 114310
 		[Nullable(2)]
 		private PinballActivityData ActivityData;
 
-		// Token: 0x04021558 RID: 136536
+		// Token: 0x0401BE87 RID: 114311
 		private List<IPinballMainButtonConfig> ButtonConfigList = new List<IPinballMainButtonConfig>();
 
-		// Token: 0x04021559 RID: 136537
+		// Token: 0x0401BE88 RID: 114312
 		private readonly Dictionary<EPinballMainButtonFunctionType, PinballMainButtonItem> ButtonItems = new Dictionary<EPinballMainButtonFunctionType, PinballMainButtonItem>();
 
-		// Token: 0x0402155A RID: 136538
+		// Token: 0x0401BE89 RID: 114313
 		private readonly List<PinballMainChapterItem> ChapterItemList = new List<PinballMainChapterItem>();
 
-		// Token: 0x0402155B RID: 136539
+		// Token: 0x0401BE8A RID: 114314
 		private readonly Dictionary<IPinballChapterItem, PinballChapterData> NeedPlayTweenChapterItemMap = new Dictionary<IPinballChapterItem, PinballChapterData>();
 
-		// Token: 0x0402155C RID: 136540
+		// Token: 0x0401BE8B RID: 114315
 		[Nullable(2)]
 		private PinballTowerChapterItem TowerChapterItem;
 
-		// Token: 0x0402155D RID: 136541
+		// Token: 0x0401BE8C RID: 114316
 		private readonly List<UUIItem> ChapterUiItemList = new List<UUIItem>();
 
-		// Token: 0x0402155E RID: 136542
+		// Token: 0x0401BE8D RID: 114317
 		[Nullable(2)]
 		private UUIItem ContentItem;
 
-		// Token: 0x0402155F RID: 136543
+		// Token: 0x0401BE8E RID: 114318
 		private readonly Vector2D UiOffset = Vector2D.Create();
 
-		// Token: 0x04021560 RID: 136544
+		// Token: 0x0401BE8F RID: 114319
 		[Nullable(2)]
 		private UCurveFloat ChapterScrollCurve;
 
-		// Token: 0x04021561 RID: 136545
+		// Token: 0x0401BE90 RID: 114320
 		[Nullable(2)]
 		private UUIInturnAnimController ScrollAnimController;
 
-		// Token: 0x04021562 RID: 136546
+		// Token: 0x0401BE91 RID: 114321
 		private readonly LguiFloatTween ScrollProgressTween = new LguiFloatTween();
 
-		// Token: 0x04021563 RID: 136547
+		// Token: 0x0401BE92 RID: 114322
 		protected UiMask ViewMask = new UiMask();
 
-		// Token: 0x04021564 RID: 136548
+		// Token: 0x0401BE93 RID: 114323
 		[Nullable(2)]
 		private Action ScrollTweenCallback;
 
-		// Token: 0x04021565 RID: 136549
+		// Token: 0x0401BE94 RID: 114324
 		private float ViewPortStretchLeft;
 
-		// Token: 0x04021566 RID: 136550
+		// Token: 0x0401BE95 RID: 114325
 		private float ContentWidth;
 
-		// Token: 0x04021567 RID: 136551
+		// Token: 0x0401BE96 RID: 114326
 		private float ContentHeight;
 
-		// Token: 0x04021568 RID: 136552
+		// Token: 0x0401BE97 RID: 114327
 		private float ViewportWidth;
 
-		// Token: 0x04021569 RID: 136553
+		// Token: 0x0401BE98 RID: 114328
 		private float TotalCurveWidth;
 
-		// Token: 0x0402156A RID: 136554
+		// Token: 0x0401BE99 RID: 114329
 		private float HorizontalOffsetOriX;
 
-		// Token: 0x0402156B RID: 136555
+		// Token: 0x0401BE9A RID: 114330
 		private float HorizontalOffsetOriY;
 
-		// Token: 0x0402156C RID: 136556
+		// Token: 0x0401BE9B RID: 114331
 		private bool IsInitialChapterScroll;
 
-		// Token: 0x0402156D RID: 136557
+		// Token: 0x0401BE9C RID: 114332
 		private bool IsScrollAnimating;
 
-		// Token: 0x0402156E RID: 136558
+		// Token: 0x0401BE9D RID: 114333
 		private float DisplayScrollProgress;
 
-		// Token: 0x0402156F RID: 136559
+		// Token: 0x0401BE9E RID: 114334
 		private int LastGamepadChapterIndex;
 
-		// Token: 0x04021570 RID: 136560
+		// Token: 0x0401BE9F RID: 114335
 		private int ScrollTickId;
 
-		// Token: 0x04021571 RID: 136561
+		// Token: 0x0401BEA0 RID: 114336
 		private float AllChaptersRefreshTime;
 
-		// Token: 0x04021572 RID: 136562
+		// Token: 0x0401BEA1 RID: 114337
 		private float LimitRewardButtonRefreshTime;
 
-		// Token: 0x04021573 RID: 136563
+		// Token: 0x0401BEA2 RID: 114338
 		private string OldPlanetPath = "";
 
-		// Token: 0x0200C543 RID: 50499
+		// Token: 0x0200AF2A RID: 44842
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B88D RID: 243853
+			// Token: 0x040361EF RID: 221679
 			ChapterScroll,
-			// Token: 0x0403B88E RID: 243854
+			// Token: 0x040361F0 RID: 221680
 			ChapterItem,
-			// Token: 0x0403B88F RID: 243855
+			// Token: 0x040361F1 RID: 221681
 			TowerChapterItem,
-			// Token: 0x0403B890 RID: 243856
+			// Token: 0x040361F2 RID: 221682
 			PermanentRewardItem,
-			// Token: 0x0403B891 RID: 243857
+			// Token: 0x040361F3 RID: 221683
 			LimitRewardItem,
-			// Token: 0x0403B892 RID: 243858
+			// Token: 0x040361F4 RID: 221684
 			ShopItem,
-			// Token: 0x0403B893 RID: 243859
+			// Token: 0x040361F5 RID: 221685
 			RoleItem,
-			// Token: 0x0403B894 RID: 243860
+			// Token: 0x040361F6 RID: 221686
 			BtnDailyLevel,
-			// Token: 0x0403B895 RID: 243861
+			// Token: 0x040361F7 RID: 221687
 			DailyRewardProgressLayout,
-			// Token: 0x0403B896 RID: 243862
+			// Token: 0x040361F8 RID: 221688
 			DailyRewardCheckMarkItem,
-			// Token: 0x0403B897 RID: 243863
+			// Token: 0x040361F9 RID: 221689
 			TxtDailyRewardProgress,
-			// Token: 0x0403B898 RID: 243864
+			// Token: 0x040361FA RID: 221690
 			DailyRewardItem,
-			// Token: 0x0403B899 RID: 243865
+			// Token: 0x040361FB RID: 221691
 			BtnNewTowerLevel,
-			// Token: 0x0403B89A RID: 243866
+			// Token: 0x040361FC RID: 221692
 			TxtDailyTitle
 		}
 	}

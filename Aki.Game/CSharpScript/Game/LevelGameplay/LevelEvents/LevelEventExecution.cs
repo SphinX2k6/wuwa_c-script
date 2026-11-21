@@ -4,15 +4,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B25 RID: 27429
+	// Token: 0x02005C9D RID: 23709
 	public class LevelEventExecution : LevelEventBase
 	{
-		// Token: 0x060440F5 RID: 278773 RVA: 0x010BBFDA File Offset: 0x010BA1DA
+		// Token: 0x0603A247 RID: 238151 RVA: 0x01065866 File Offset: 0x01063A66
 		public LevelEventExecution(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440F6 RID: 278774 RVA: 0x010BBFE4 File Offset: 0x010BA1E4
+		// Token: 0x0603A248 RID: 238152 RVA: 0x01065870 File Offset: 0x01063A70
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440F7 RID: 278775 RVA: 0x010BC060 File Offset: 0x010BA260
+		// Token: 0x0603A249 RID: 238153 RVA: 0x010658EC File Offset: 0x01063AEC
 		private void HandleExecutionSuccess()
 		{
 			Entity entity = EntitySystem.Instance.Get(this.EntityId);
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			component.StartExecution();
 		}
 
-		// Token: 0x060440F8 RID: 278776 RVA: 0x010BC0AE File Offset: 0x010BA2AE
+		// Token: 0x0603A24A RID: 238154 RVA: 0x0106593A File Offset: 0x01063B3A
 		protected override void OnReset()
 		{
 			this.EntityId = 0;
 		}
 
-		// Token: 0x040238FA RID: 145658
+		// Token: 0x0401EB9C RID: 125852
 		private int EntityId;
 	}
 }

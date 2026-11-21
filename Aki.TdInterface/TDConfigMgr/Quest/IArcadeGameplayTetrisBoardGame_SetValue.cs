@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EC7 RID: 3783
+	// Token: 0x02000FDD RID: 4061
 	public class IArcadeGameplayTetrisBoardGame_SetValue
 	{
-		// Token: 0x0400329C RID: 12956
+		// Token: 0x040035A9 RID: 13737
 		public EArcadeGameplayType Type;
 
-		// Token: 0x0400329D RID: 12957
+		// Token: 0x040035AA RID: 13738
 		public int LevelId;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200224D RID: 8781
+// Token: 0x02001731 RID: 5937
 public enum EMotorLevelConditionType
 {
-	// Token: 0x0400826F RID: 33391
+	// Token: 0x040083AD RID: 33709
 	Quest = 1,
-	// Token: 0x04008270 RID: 33392
+	// Token: 0x040083AE RID: 33710
 	WorldGameplay,
-	// Token: 0x04008271 RID: 33393
+	// Token: 0x040083AF RID: 33711
 	Help
 }

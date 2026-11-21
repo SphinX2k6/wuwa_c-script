@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D97 RID: 11671
+// Token: 0x020022F1 RID: 8945
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionSummonBullet : BulletActionBase
 {
-	// Token: 0x0601884B RID: 100427 RVA: 0x00642877 File Offset: 0x00640A77
+	// Token: 0x060160EF RID: 90351 RVA: 0x00668633 File Offset: 0x00666833
 	public BulletActionSummonBullet(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x0601884C RID: 100428 RVA: 0x00642880 File Offset: 0x00640A80
+	// Token: 0x060160F0 RID: 90352 RVA: 0x0066863C File Offset: 0x0066683C
 	protected override void OnExecute()
 	{
 		this.ChildInfo = this.BulletInfo.ChildInfo;
@@ -31,7 +31,7 @@ public class BulletActionSummonBullet : BulletActionBase
 		this.SummonBulletOnHit(bulletActionInfoSummonBullet);
 	}
 
-	// Token: 0x0601884D RID: 100429 RVA: 0x006428E0 File Offset: 0x00640AE0
+	// Token: 0x060160F1 RID: 90353 RVA: 0x0066869C File Offset: 0x0066689C
 	public override void Clear()
 	{
 		base.Clear();
@@ -39,7 +39,7 @@ public class BulletActionSummonBullet : BulletActionBase
 		this.ChildBulletData = null;
 	}
 
-	// Token: 0x0601884E RID: 100430 RVA: 0x006428F8 File Offset: 0x00640AF8
+	// Token: 0x060160F2 RID: 90354 RVA: 0x006686B4 File Offset: 0x006668B4
 	private void SummonBulletOnHit(BulletActionInfoSummonBullet actionInfo)
 	{
 		BulletDataChild[] childBulletData = this.ChildBulletData;
@@ -108,7 +108,7 @@ public class BulletActionSummonBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x0601884F RID: 100431 RVA: 0x00642BD4 File Offset: 0x00640DD4
+	// Token: 0x060160F3 RID: 90355 RVA: 0x00668990 File Offset: 0x00666B90
 	private void SummonBulletOnCharacterStayBullet(BulletActionInfoSummonBullet actionInfo)
 	{
 		int num = this.ChildBulletData.Length;
@@ -154,11 +154,11 @@ public class BulletActionSummonBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x0400B5E0 RID: 46560
+	// Token: 0x0400B956 RID: 47446
 	[Nullable(2)]
 	public BulletChildInfo ChildInfo;
 
-	// Token: 0x0400B5E1 RID: 46561
+	// Token: 0x0400B957 RID: 47447
 	[Nullable(new byte[]
 	{
 		2,

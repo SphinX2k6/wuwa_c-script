@@ -2,10 +2,10 @@
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001816 RID: 6166
+// Token: 0x02000CCF RID: 3279
 public class ConsumeMediumItemGrid : LoopScrollMediumItemGrid<TCommonMultipleConsumeData>
 {
-	// Token: 0x0600B4C3 RID: 46275 RVA: 0x0028CB60 File Offset: 0x0028AD60
+	// Token: 0x060088AE RID: 34990 RVA: 0x00297280 File Offset: 0x00295480
 	protected override void OnRefresh(TCommonMultipleConsumeData data, bool isSelected, int gridIndex)
 	{
 		InventoryConfig instance = InventoryConfig.Instance;

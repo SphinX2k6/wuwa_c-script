@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020034A2 RID: 13474
+// Token: 0x02002A16 RID: 10774
 [NullableContext(1)]
 [Nullable(0)]
 public class LguiResourceManager : Singleton
 {
-	// Token: 0x0601D564 RID: 120164 RVA: 0x0082D824 File Offset: 0x0082BA24
+	// Token: 0x0601B261 RID: 111201 RVA: 0x008549D0 File Offset: 0x00852BD0
 	public int LoadPrefabByResourceId(string resourceId, [Nullable(2)] UUIItem parent = null, [Nullable(new byte[]
 	{
 		2,
@@ -20,7 +20,7 @@ public class LguiResourceManager : Singleton
 		return this.LoadPrefab(resourcePath, parent, callback, memoryTag);
 	}
 
-	// Token: 0x0601D565 RID: 120165 RVA: 0x0082D848 File Offset: 0x0082BA48
+	// Token: 0x0601B262 RID: 111202 RVA: 0x008549F4 File Offset: 0x00852BF4
 	public int LoadPrefab(string path, [Nullable(2)] UUIItem parent = null, [Nullable(new byte[]
 	{
 		2,
@@ -88,7 +88,7 @@ public class LguiResourceManager : Singleton
 		return handleId;
 	}
 
-	// Token: 0x0601D566 RID: 120166 RVA: 0x0082D900 File Offset: 0x0082BB00
+	// Token: 0x0601B263 RID: 111203 RVA: 0x00854AAC File Offset: 0x00852CAC
 	public void CancelLoadPrefab(int handleId)
 	{
 		if (this.InvalidId == handleId)
@@ -104,8 +104,8 @@ public class LguiResourceManager : Singleton
 		ResourceSystem.Instance.CancelAsyncLoad(handleId);
 	}
 
-	// Token: 0x170028B6 RID: 10422
-	// (get) Token: 0x0601D567 RID: 120167 RVA: 0x0082D940 File Offset: 0x0082BB40
+	// Token: 0x17002C4E RID: 11342
+	// (get) Token: 0x0601B264 RID: 111204 RVA: 0x00854AEC File Offset: 0x00852CEC
 	public static LguiResourceManager Instance
 	{
 		get
@@ -119,12 +119,12 @@ public class LguiResourceManager : Singleton
 		}
 	}
 
-	// Token: 0x0601D568 RID: 120168 RVA: 0x0082D963 File Offset: 0x0082BB63
+	// Token: 0x0601B265 RID: 111205 RVA: 0x00854B0F File Offset: 0x00852D0F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D569 RID: 120169 RVA: 0x0082D965 File Offset: 0x0082BB65
+	// Token: 0x0601B266 RID: 111206 RVA: 0x00854B11 File Offset: 0x00852D11
 	public static void ResetStaticDefaultValue()
 	{
 		LguiResourceManager instance = LguiResourceManager._instance;
@@ -135,19 +135,19 @@ public class LguiResourceManager : Singleton
 		LguiResourceManager._instance = null;
 	}
 
-	// Token: 0x0601D56A RID: 120170 RVA: 0x0082D97E File Offset: 0x0082BB7E
+	// Token: 0x0601B267 RID: 111207 RVA: 0x00854B2A File Offset: 0x00852D2A
 	static LguiResourceManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LguiResourceManager.CreateStaticDefaultValue), new Action(LguiResourceManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E71A RID: 59162
+	// Token: 0x0400EBCE RID: 60366
 	private readonly Dictionary<int, string> LguiResourceLoadMap = new Dictionary<int, string>();
 
-	// Token: 0x0400E71B RID: 59163
+	// Token: 0x0400EBCF RID: 60367
 	public readonly int InvalidId = -1;
 
-	// Token: 0x0400E71C RID: 59164
+	// Token: 0x0400EBD0 RID: 60368
 	[Nullable(2)]
 	private static LguiResourceManager _instance;
 }

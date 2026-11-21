@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x020028F0 RID: 10480
+// Token: 0x02001E6B RID: 7787
 public enum ERoleAttrItemDefine
 {
-	// Token: 0x0400A0E8 RID: 41192
+	// Token: 0x0400A4D3 RID: 42195
 	ToggleBase,
-	// Token: 0x0400A0E9 RID: 41193
+	// Token: 0x0400A4D4 RID: 42196
 	SpriteBase,
-	// Token: 0x0400A0EA RID: 41194
+	// Token: 0x0400A4D5 RID: 42197
 	AttrIconTexture,
-	// Token: 0x0400A0EB RID: 41195
+	// Token: 0x0400A4D6 RID: 42198
 	AttrNameText,
-	// Token: 0x0400A0EC RID: 41196
+	// Token: 0x0400A4D7 RID: 42199
 	AttrBaseValue,
-	// Token: 0x0400A0ED RID: 41197
+	// Token: 0x0400A4D8 RID: 42200
 	AttrAddValue,
-	// Token: 0x0400A0EE RID: 41198
+	// Token: 0x0400A4D9 RID: 42201
 	Arrow,
-	// Token: 0x0400A0EF RID: 41199
+	// Token: 0x0400A4DA RID: 42202
 	PanelDescription,
-	// Token: 0x0400A0F0 RID: 41200
+	// Token: 0x0400A4DB RID: 42203
 	TextDescription,
-	// Token: 0x0400A0F1 RID: 41201
+	// Token: 0x0400A4DC RID: 42204
 	SpriteBaseBg
 }

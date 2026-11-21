@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EF6 RID: 7926
+// Token: 0x020013B8 RID: 5048
 public class HonamiWeaponRewardView : UiViewBase
 {
-	// Token: 0x0600F3FA RID: 62458 RVA: 0x003AD8CC File Offset: 0x003ABACC
+	// Token: 0x0600C819 RID: 51225 RVA: 0x003B93C0 File Offset: 0x003B75C0
 	[NullableContext(1)]
 	public HonamiWeaponRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3FB RID: 62459 RVA: 0x003AD8D8 File Offset: 0x003ABAD8
+	// Token: 0x0600C81A RID: 51226 RVA: 0x003B93CC File Offset: 0x003B75CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class HonamiWeaponRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F3FC RID: 62460 RVA: 0x003AD9E4 File Offset: 0x003ABBE4
+	// Token: 0x0600C81B RID: 51227 RVA: 0x003B94D8 File Offset: 0x003B76D8
 	protected override void OnStart()
 	{
 		RewardData<ICommonRewardInfo> rewardData = (RewardData<ICommonRewardInfo>)this.OpenParam;
@@ -68,13 +68,13 @@ public class HonamiWeaponRewardView : UiViewBase
 		ItemRewardController.Instance.PlayAudio(audioId, null);
 	}
 
-	// Token: 0x0600F3FD RID: 62461 RVA: 0x003ADA61 File Offset: 0x003ABC61
+	// Token: 0x0600C81C RID: 51228 RVA: 0x003B9555 File Offset: 0x003B7755
 	protected override void OnAfterDestroy()
 	{
 		this.RewardData = null;
 	}
 
-	// Token: 0x0600F3FE RID: 62462 RVA: 0x003ADA6A File Offset: 0x003ABC6A
+	// Token: 0x0600C81D RID: 51229 RVA: 0x003B955E File Offset: 0x003B775E
 	protected override void OnBeforeDestroyImplement()
 	{
 		Action onCloseCallback = this.RewardData.GetRewardInfo().OnCloseCallback;
@@ -85,13 +85,13 @@ public class HonamiWeaponRewardView : UiViewBase
 		ItemRewardModel.Instance.ClearCurrentRewardData();
 	}
 
-	// Token: 0x0600F3FF RID: 62463 RVA: 0x003ADA91 File Offset: 0x003ABC91
+	// Token: 0x0600C81E RID: 51230 RVA: 0x003B9585 File Offset: 0x003B7785
 	private void OnClickedMaskButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F400 RID: 62464 RVA: 0x003ADA9C File Offset: 0x003ABC9C
+	// Token: 0x0600C81F RID: 51231 RVA: 0x003B9590 File Offset: 0x003B7790
 	private bool RefreshTitleVisible()
 	{
 		bool flag = !StringUtils.IsEmpty(this.RewardData.GetRewardInfo().Title);
@@ -99,7 +99,7 @@ public class HonamiWeaponRewardView : UiViewBase
 		return flag;
 	}
 
-	// Token: 0x0600F401 RID: 62465 RVA: 0x003ADAD0 File Offset: 0x003ABCD0
+	// Token: 0x0600C820 RID: 51232 RVA: 0x003B95C4 File Offset: 0x003B77C4
 	private void RefreshTitle()
 	{
 		string title = this.RewardData.GetRewardInfo().Title;
@@ -111,7 +111,7 @@ public class HonamiWeaponRewardView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F402 RID: 62466 RVA: 0x003ADB10 File Offset: 0x003ABD10
+	// Token: 0x0600C821 RID: 51233 RVA: 0x003B9604 File Offset: 0x003B7804
 	private bool RefreshContinueTextVisible()
 	{
 		bool flag = !StringUtils.IsEmpty(this.RewardData.GetRewardInfo().ContinueText);
@@ -119,7 +119,7 @@ public class HonamiWeaponRewardView : UiViewBase
 		return flag;
 	}
 
-	// Token: 0x0600F403 RID: 62467 RVA: 0x003ADB44 File Offset: 0x003ABD44
+	// Token: 0x0600C822 RID: 51234 RVA: 0x003B9638 File Offset: 0x003B7838
 	private void RefreshContinueText()
 	{
 		string continueText = this.RewardData.GetRewardInfo().ContinueText;
@@ -131,7 +131,7 @@ public class HonamiWeaponRewardView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, continueText, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F404 RID: 62468 RVA: 0x003ADB84 File Offset: 0x003ABD84
+	// Token: 0x0600C823 RID: 51235 RVA: 0x003B9678 File Offset: 0x003B7878
 	private bool RefreshItemListVisible()
 	{
 		bool isItemVisible = this.RewardData.GetRewardInfo().IsItemVisible;
@@ -144,14 +144,14 @@ public class HonamiWeaponRewardView : UiViewBase
 		return flag;
 	}
 
-	// Token: 0x0600F405 RID: 62469 RVA: 0x003ADBDC File Offset: 0x003ABDDC
+	// Token: 0x0600C824 RID: 51236 RVA: 0x003B96D0 File Offset: 0x003B78D0
 	private void RefreshItemList()
 	{
 		List<RewardItemData> itemList = this.RewardData.GetItemList();
 		this.RewardItemList.Refresh(itemList);
 	}
 
-	// Token: 0x040070F5 RID: 28917
+	// Token: 0x040071D6 RID: 29142
 	[Nullable(new byte[]
 	{
 		2,
@@ -159,22 +159,22 @@ public class HonamiWeaponRewardView : UiViewBase
 	})]
 	private RewardData<ICommonRewardInfo> RewardData;
 
-	// Token: 0x040070F6 RID: 28918
+	// Token: 0x040071D7 RID: 29143
 	[Nullable(2)]
 	private QuestRewardItemList RewardItemList;
 
-	// Token: 0x020084F3 RID: 34035
+	// Token: 0x02007678 RID: 30328
 	private enum EChildType
 	{
-		// Token: 0x0402B441 RID: 177217
+		// Token: 0x04026765 RID: 157541
 		MaskButton,
-		// Token: 0x0402B442 RID: 177218
+		// Token: 0x04026766 RID: 157542
 		TitleText,
-		// Token: 0x0402B443 RID: 177219
+		// Token: 0x04026767 RID: 157543
 		TitlePanelItem,
-		// Token: 0x0402B444 RID: 177220
+		// Token: 0x04026768 RID: 157544
 		RewardItemListItem,
-		// Token: 0x0402B445 RID: 177221
+		// Token: 0x04026769 RID: 157545
 		ContinueText
 	}
 }

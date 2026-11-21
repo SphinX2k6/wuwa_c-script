@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A53 RID: 10835
+	// Token: 0x02002D40 RID: 11584
 	public class ReignsTriggerGuide : ActionParams
 	{
-		// Token: 0x0600EE6C RID: 61036 RVA: 0x0022B50F File Offset: 0x0022970F
-		[NullableContext(1)]
+		// Token: 0x0600FD04 RID: 64772 RVA: 0x00248EC3 File Offset: 0x002470C3
 		public static ReignsTriggerGuide Create(IReignsTriggerGuide? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B88 RID: 19336
-		// (get) Token: 0x0600EE6D RID: 61037 RVA: 0x0022B52E File Offset: 0x0022972E
+		// Token: 0x17004F32 RID: 20274
+		// (get) Token: 0x0600FD05 RID: 64773 RVA: 0x00248EE2 File Offset: 0x002470E2
 		public virtual int GuideId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832F RID: 33583
+		// Token: 0x04008A22 RID: 35362
 		private IReignsTriggerGuide Instance;
 	}
 }

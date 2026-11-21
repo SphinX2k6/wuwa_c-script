@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000093 RID: 147
+	// Token: 0x0200009B RID: 155
 	public class ConfigAkiMapByMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000372 RID: 882 RVA: 0x0006D0CF File Offset: 0x0006B2CF
+		// Token: 0x060003A2 RID: 930 RVA: 0x00071983 File Offset: 0x0006FB83
 		static ConfigAkiMapByMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAkiMapByMapId.CreateStaticDefaultValue), new Action(ConfigAkiMapByMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000373 RID: 883 RVA: 0x0006D0F0 File Offset: 0x0006B2F0
+		// Token: 0x060003A3 RID: 931 RVA: 0x000719A4 File Offset: 0x0006FBA4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAkiMapByMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000374 RID: 884 RVA: 0x0006D16F File Offset: 0x0006B36F
+		// Token: 0x060003A4 RID: 932 RVA: 0x00071A23 File Offset: 0x0006FC23
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAkiMapByMapId.LogPair = null;
 			ConfigAkiMapByMapId.HandleId = 0;
 		}
 
-		// Token: 0x06000375 RID: 885 RVA: 0x0006D17D File Offset: 0x0006B37D
+		// Token: 0x060003A5 RID: 933 RVA: 0x00071A31 File Offset: 0x0006FC31
 		public static void Init()
 		{
 			ConfigAkiMapByMapId.HandleId = ConfigCommon.InitDataStatement(ConfigAkiMapByMapId.HandleId, "db_map.db", "select BinData from `AkiMap` where MapId=?");
 		}
 
-		// Token: 0x06000376 RID: 886 RVA: 0x0006D198 File Offset: 0x0006B398
+		// Token: 0x060003A6 RID: 934 RVA: 0x00071A4C File Offset: 0x0006FC4C
 		public static AkiMap? GetConfig(int p0MapId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAkiMapByMapId.HandleId, ConfigAkiMapByMapId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AkiMap?(rootAsAkiMap);
 		}
 
-		// Token: 0x040003E9 RID: 1001
+		// Token: 0x04000421 RID: 1057
 		private const string DB = "db_map.db";
 
-		// Token: 0x040003EA RID: 1002
+		// Token: 0x04000422 RID: 1058
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x040003EB RID: 1003
+		// Token: 0x04000423 RID: 1059
 		private const string TABLE = "AkiMap";
 
-		// Token: 0x040003EC RID: 1004
+		// Token: 0x04000424 RID: 1060
 		private const string COMMAND = "select BinData from `AkiMap` where MapId=?";
 
-		// Token: 0x040003ED RID: 1005
+		// Token: 0x04000425 RID: 1061
 		private const string KEY_PREFIX = "AkiMapByMapId";
 
-		// Token: 0x040003EE RID: 1006
+		// Token: 0x04000426 RID: 1062
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003EF RID: 1007
+		// Token: 0x04000427 RID: 1063
 		private static int HandleId;
 	}
 }

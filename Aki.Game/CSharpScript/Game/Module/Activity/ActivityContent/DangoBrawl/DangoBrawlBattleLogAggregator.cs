@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006757 RID: 26455
+	// Token: 0x020056A7 RID: 22183
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleLogAggregator
 	{
-		// Token: 0x060420FD RID: 270589 RVA: 0x01007245 File Offset: 0x01005445
+		// Token: 0x06036C4F RID: 224335 RVA: 0x00F486C9 File Offset: 0x00F468C9
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return this.SelfDmgMap;
 		}
 
-		// Token: 0x060420FE RID: 270590 RVA: 0x01007257 File Offset: 0x01005457
+		// Token: 0x06036C50 RID: 224336 RVA: 0x00F486DB File Offset: 0x00F468DB
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return this.SelfHealMap;
 		}
 
-		// Token: 0x060420FF RID: 270591 RVA: 0x01007269 File Offset: 0x01005469
+		// Token: 0x06036C51 RID: 224337 RVA: 0x00F486ED File Offset: 0x00F468ED
 		public void AddDamage(DangoBrawlDamageEvent evt, bool isSelfSide)
 		{
 			if (isSelfSide)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OppDmgTotal = DangoBrawlBattleLogAggregator.AddTo(evt, this.OppDmgMap, this.OppDmgTotal);
 		}
 
-		// Token: 0x06042100 RID: 270592 RVA: 0x0100729F File Offset: 0x0100549F
+		// Token: 0x06036C52 RID: 224338 RVA: 0x00F48723 File Offset: 0x00F46923
 		public void AddHeal(DangoBrawlDamageEvent evt, bool isSelfSide)
 		{
 			if (isSelfSide)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OppHealTotal = DangoBrawlBattleLogAggregator.AddTo(evt, this.OppHealMap, this.OppHealTotal);
 		}
 
-		// Token: 0x06042101 RID: 270593 RVA: 0x010072D8 File Offset: 0x010054D8
+		// Token: 0x06036C53 RID: 224339 RVA: 0x00F4875C File Offset: 0x00F4695C
 		public void Reset()
 		{
 			this.SelfDmgMap.Clear();
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OppHealTotal = 0;
 		}
 
-		// Token: 0x06042102 RID: 270594 RVA: 0x01007330 File Offset: 0x01005530
+		// Token: 0x06036C54 RID: 224340 RVA: 0x00F487B4 File Offset: 0x00F469B4
 		private static int AddTo(DangoBrawlDamageEvent evt, [Nullable(new byte[]
 		{
 			1,
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return total;
 		}
 
-		// Token: 0x06042103 RID: 270595 RVA: 0x01007424 File Offset: 0x01005624
+		// Token: 0x06036C55 RID: 224341 RVA: 0x00F488A8 File Offset: 0x00F46AA8
 		private static bool CanLogEntry(DangoBrawlDamageEvent evt)
 		{
 			return evt.SourceConfigId > 0 || evt.SourceConfigId == -1001 || evt.SourceConfigId == -1002;
 		}
 
-		// Token: 0x0402265A RID: 140890
+		// Token: 0x0401CEB3 RID: 118451
 		[Nullable(new byte[]
 		{
 			1,
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private readonly Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo> SelfDmgMap = new Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo>();
 
-		// Token: 0x0402265B RID: 140891
+		// Token: 0x0401CEB4 RID: 118452
 		[Nullable(new byte[]
 		{
 			1,
@@ -138,13 +138,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private readonly Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo> OppDmgMap = new Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo>();
 
-		// Token: 0x0402265C RID: 140892
+		// Token: 0x0401CEB5 RID: 118453
 		private int SelfDmgTotal;
 
-		// Token: 0x0402265D RID: 140893
+		// Token: 0x0401CEB6 RID: 118454
 		private int OppDmgTotal;
 
-		// Token: 0x0402265E RID: 140894
+		// Token: 0x0401CEB7 RID: 118455
 		[Nullable(new byte[]
 		{
 			1,
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private readonly Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo> SelfHealMap = new Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo>();
 
-		// Token: 0x0402265F RID: 140895
+		// Token: 0x0401CEB8 RID: 118456
 		[Nullable(new byte[]
 		{
 			1,
@@ -162,10 +162,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private readonly Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo> OppHealMap = new Dictionary<ValueTuple<EDangoBrawlDamageSource, int>, DangoBrawlBattleLogInfo>();
 
-		// Token: 0x04022660 RID: 140896
+		// Token: 0x0401CEB9 RID: 118457
 		private int SelfHealTotal;
 
-		// Token: 0x04022661 RID: 140897
+		// Token: 0x0401CEBA RID: 118458
 		private int OppHealTotal;
 	}
 }

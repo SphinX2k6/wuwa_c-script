@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006586 RID: 25990
+	// Token: 0x02005504 RID: 21764
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingRewardProgressItem : GridProxyAbstract<FishingRewardProgressData>
 	{
-		// Token: 0x0604122E RID: 266798 RVA: 0x00FC910C File Offset: 0x00FC730C
+		// Token: 0x06035EF3 RID: 220915 RVA: 0x00F100C0 File Offset: 0x00F0E2C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604122F RID: 266799 RVA: 0x00FC9198 File Offset: 0x00FC7398
+		// Token: 0x06035EF4 RID: 220916 RVA: 0x00F1014C File Offset: 0x00F0E34C
 		protected override void OnStart()
 		{
 			this.RewardItemGrid = new SmallItemGrid();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RewardItemGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 		}
 
-		// Token: 0x06041230 RID: 266800 RVA: 0x00FC9208 File Offset: 0x00FC7408
+		// Token: 0x06035EF5 RID: 220917 RVA: 0x00F101BC File Offset: 0x00F0E3BC
 		public override void Refresh(FishingRewardProgressData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshGrid();
 		}
 
-		// Token: 0x06041231 RID: 266801 RVA: 0x00FC92A8 File Offset: 0x00FC74A8
+		// Token: 0x06035EF6 RID: 220918 RVA: 0x00F1025C File Offset: 0x00F0E45C
 		private void RefreshGrid()
 		{
 			bool lockBlackVisible = !this.Data.IsFulfilled();
@@ -78,12 +78,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RewardItemGrid.SetLockBlackVisible(lockBlackVisible);
 		}
 
-		// Token: 0x06041232 RID: 266802 RVA: 0x00FC936C File Offset: 0x00FC756C
+		// Token: 0x06035EF7 RID: 220919 RVA: 0x00F10320 File Offset: 0x00F0E520
 		private void OnClickedGrid(MediumItemGridExtendCallback callback)
 		{
 			if (!this.Data.IsReceivable())
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null, false);
 				return;
 			}
 			Action onClickToGet = this.OnClickToGet;
@@ -94,31 +94,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			onClickToGet();
 		}
 
-		// Token: 0x04021EEB RID: 138987
+		// Token: 0x0401C81C RID: 116764
 		private FishingRewardProgressData Data;
 
-		// Token: 0x04021EEC RID: 138988
+		// Token: 0x0401C81D RID: 116765
 		[Nullable(2)]
 		private SmallItemGrid RewardItemGrid;
 
-		// Token: 0x04021EED RID: 138989
+		// Token: 0x0401C81E RID: 116766
 		private TItem? RewardItem;
 
-		// Token: 0x04021EEE RID: 138990
+		// Token: 0x0401C81F RID: 116767
 		[Nullable(2)]
 		public Action OnClickToGet;
 
-		// Token: 0x0200C77D RID: 51069
+		// Token: 0x0200B162 RID: 45410
 		[NullableContext(0)]
 		private class EItemComponent
 		{
-			// Token: 0x0403C457 RID: 246871
+			// Token: 0x04036DA8 RID: 224680
 			public const int SpriteBg = 0;
 
-			// Token: 0x0403C458 RID: 246872
+			// Token: 0x04036DA9 RID: 224681
 			public const int TxtGoal = 1;
 
-			// Token: 0x0403C459 RID: 246873
+			// Token: 0x04036DAA RID: 224682
 			public const int RewardItem = 2;
 		}
 	}

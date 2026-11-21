@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A52 RID: 2642
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B1B RID: 2843
 	public class IComponentConfig
 	{
-		// Token: 0x06003CDA RID: 15578 RVA: 0x0009C91E File Offset: 0x0009AB1E
+		// Token: 0x060040FA RID: 16634 RVA: 0x000A5D96 File Offset: 0x000A3F96
 		public static IComponentConfig Create(IComponentConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000DF3 RID: 3571
-		// (get) Token: 0x06003CDB RID: 15579 RVA: 0x0009C940 File Offset: 0x0009AB40
+		// Token: 0x17000EBF RID: 3775
+		// (get) Token: 0x060040FB RID: 16635 RVA: 0x000A5DB8 File Offset: 0x000A3FB8
 		public virtual List<EAction> BaseActions
 		{
 			get
@@ -45,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000DF4 RID: 3572
-		// (get) Token: 0x06003CDC RID: 15580 RVA: 0x0009C9A4 File Offset: 0x0009ABA4
+		// Token: 0x17000EC0 RID: 3776
+		// (get) Token: 0x060040FC RID: 16636 RVA: 0x000A5E1C File Offset: 0x000A401C
 		public virtual string ActionsByComponent
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040021ED RID: 8685
+		// Token: 0x04002404 RID: 9220
 		private IComponentConfig Instance;
 
-		// Token: 0x040021EE RID: 8686
+		// Token: 0x04002405 RID: 9221
 		private List<EAction> _BaseActionsCache;
 
-		// Token: 0x040021EF RID: 8687
+		// Token: 0x04002406 RID: 9222
 		private bool _BaseActionsInited;
 	}
 }

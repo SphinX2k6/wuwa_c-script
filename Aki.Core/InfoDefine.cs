@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [Nullable(0)]
 public static class InfoDefine
 {
-	// Token: 0x040000EB RID: 235
+	// Token: 0x040000EC RID: 236
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<ESourcePlatformType, EInputControllerType> DefaultPlatformAndInputControllerMap = new Dictionary<ESourcePlatformType, EInputControllerType>
 	{
@@ -57,7 +57,7 @@ public static class InfoDefine
 		}
 	};
 
-	// Token: 0x040000EC RID: 236
+	// Token: 0x040000ED RID: 237
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EInputControllerType, EOperationType> ShowTypeAndInputControllerMap = new Dictionary<EInputControllerType, EOperationType>
 	{
@@ -99,7 +99,7 @@ public static class InfoDefine
 		}
 	};
 
-	// Token: 0x040000ED RID: 237
+	// Token: 0x040000EE RID: 238
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EInputControllerType, EInputControllerMainType> InputControllerMainTypeMap = new Dictionary<EInputControllerType, EInputControllerMainType>
 	{

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002E61 RID: 11873
+// Token: 0x020023B3 RID: 9139
 public enum EBuffComponentType
 {
-	// Token: 0x0400BC46 RID: 48198
+	// Token: 0x0400BFDB RID: 49115
 	Default,
-	// Token: 0x0400BC47 RID: 48199
+	// Token: 0x0400BFDC RID: 49116
 	TeamBuffComponent,
-	// Token: 0x0400BC48 RID: 48200
+	// Token: 0x0400BFDD RID: 49117
 	RoleBuffComponent
 }

@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A74 RID: 10868
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D68 RID: 11624
 	public class ICheckFlowLookAtConfig
 	{
-		// Token: 0x0600EEF2 RID: 61170 RVA: 0x0022C1DE File Offset: 0x0022A3DE
+		// Token: 0x0600FDA8 RID: 64936 RVA: 0x00249EEA File Offset: 0x002480EA
 		public static ICheckFlowLookAtConfig Create(ICheckFlowLookAtConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BCC RID: 19404
-		// (get) Token: 0x0600EEF3 RID: 61171 RVA: 0x0022C1FD File Offset: 0x0022A3FD
+		// Token: 0x17004F86 RID: 20358
+		// (get) Token: 0x0600FDA9 RID: 64937 RVA: 0x00249F09 File Offset: 0x00248109
 		public virtual PlayFlow Flow
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BCD RID: 19405
-		// (get) Token: 0x0600EEF4 RID: 61172 RVA: 0x0022C231 File Offset: 0x0022A431
+		// Token: 0x17004F87 RID: 20359
+		// (get) Token: 0x0600FDAA RID: 64938 RVA: 0x00249F3D File Offset: 0x0024813D
 		public virtual ICheckFlowLookAtTarget Target
 		{
 			get
@@ -54,8 +52,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BCE RID: 19406
-		// (get) Token: 0x0600EEF5 RID: 61173 RVA: 0x0022C260 File Offset: 0x0022A460
+		// Token: 0x17004F88 RID: 20360
+		// (get) Token: 0x0600FDAB RID: 64939 RVA: 0x00249F6C File Offset: 0x0024816C
 		[Nullable(2)]
 		public virtual IEntityLookAtPerform EntityLookAtPerform
 		{
@@ -72,27 +70,27 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008370 RID: 33648
+		// Token: 0x04008A74 RID: 35444
 		private ICheckFlowLookAtConfig Instance;
 
-		// Token: 0x04008371 RID: 33649
+		// Token: 0x04008A75 RID: 35445
 		[Nullable(2)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04008372 RID: 33650
+		// Token: 0x04008A76 RID: 35446
 		private bool _FlowInited;
 
-		// Token: 0x04008373 RID: 33651
+		// Token: 0x04008A77 RID: 35447
 		private ICheckFlowLookAtTarget _TargetCache;
 
-		// Token: 0x04008374 RID: 33652
+		// Token: 0x04008A78 RID: 35448
 		private bool _TargetInited;
 
-		// Token: 0x04008375 RID: 33653
+		// Token: 0x04008A79 RID: 35449
 		[Nullable(2)]
 		private IEntityLookAtPerform _EntityLookAtPerformCache;
 
-		// Token: 0x04008376 RID: 33654
+		// Token: 0x04008A7A RID: 35450
 		private bool _EntityLookAtPerformInited;
 	}
 }

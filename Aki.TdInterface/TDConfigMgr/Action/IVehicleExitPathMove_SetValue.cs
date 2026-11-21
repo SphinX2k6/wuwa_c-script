@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002040 RID: 8256
+	// Token: 0x02002289 RID: 8841
 	public class IVehicleExitPathMove_SetValue
 	{
-		// Token: 0x04006D2D RID: 27949
+		// Token: 0x04007336 RID: 29494
 		public EVehicleControlType Type;
 
-		// Token: 0x04006D2E RID: 27950
+		// Token: 0x04007337 RID: 29495
 		[Nullable(2)]
 		public ICloseSplineMovePattern Pattern;
 	}

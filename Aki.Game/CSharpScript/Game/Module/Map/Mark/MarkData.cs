@@ -4,39 +4,39 @@ using CSharpScript.Game.Module.Map.MapDefine;
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B8 RID: 21688
+	// Token: 0x0200449B RID: 17563
 	[RequiredMember]
 	public class MarkData
 	{
-		// Token: 0x0603764B RID: 226891 RVA: 0x00D27B77 File Offset: 0x00D25D77
+		// Token: 0x0602C5A1 RID: 181665 RVA: 0x00C778F3 File Offset: 0x00C75AF3
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public MarkData()
 		{
 		}
 
-		// Token: 0x0401D2EE RID: 119534
+		// Token: 0x04017D8A RID: 97674
 		[Nullable(1)]
 		[RequiredMember]
 		public string Icon;
 
-		// Token: 0x0401D2EF RID: 119535
+		// Token: 0x04017D8B RID: 97675
 		[Nullable(2)]
 		public TTrackTarget TrackTarget;
 
-		// Token: 0x0401D2F0 RID: 119536
+		// Token: 0x04017D8C RID: 97676
 		public bool? TrackHudEnable;
 
-		// Token: 0x0401D2F1 RID: 119537
+		// Token: 0x04017D8D RID: 97677
 		public float? TrackAutoCancelDistance;
 
-		// Token: 0x0401D2F2 RID: 119538
+		// Token: 0x04017D8E RID: 97678
 		public int TargetInstanceOrMapId;
 
-		// Token: 0x0401D2F3 RID: 119539
+		// Token: 0x04017D8F RID: 97679
 		public int? MultiMapId;
 
-		// Token: 0x0401D2F4 RID: 119540
+		// Token: 0x04017D90 RID: 97680
 		public int? AreaId;
 	}
 }

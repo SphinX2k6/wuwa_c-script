@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001F1 RID: 497
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200021A RID: 538
 	public class IBeamLayoutConfig
 	{
-		// Token: 0x0600081E RID: 2078 RVA: 0x00026380 File Offset: 0x00024580
+		// Token: 0x0600089E RID: 2206 RVA: 0x00027CD4 File Offset: 0x00025ED4
 		private IBeamLayoutConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600081F RID: 2079 RVA: 0x000263B8 File Offset: 0x000245B8
+		// Token: 0x0600089F RID: 2207 RVA: 0x00027D0C File Offset: 0x00025F0C
 		public static IBeamLayoutConfig Create([Nullable(2)] IBeamLayoutConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000820 RID: 2080 RVA: 0x000263CB File Offset: 0x000245CB
+		// Token: 0x060008A0 RID: 2208 RVA: 0x00027D1F File Offset: 0x00025F1F
 		public static IBeamLayoutConfig CreateFromSetValue([Nullable(2)] IBeamLayoutConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000821 RID: 2081 RVA: 0x000263DE File Offset: 0x000245DE
+		// Token: 0x060008A1 RID: 2209 RVA: 0x00027D32 File Offset: 0x00025F32
 		public IBeamLayoutConfig_SetValue ToSetValue()
 		{
 			return new IBeamLayoutConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000283 RID: 643
-		// (get) Token: 0x06000822 RID: 2082 RVA: 0x000263F1 File Offset: 0x000245F1
-		// (set) Token: 0x06000823 RID: 2083 RVA: 0x0002641C File Offset: 0x0002461C
+		// Token: 0x170002A5 RID: 677
+		// (get) Token: 0x060008A2 RID: 2210 RVA: 0x00027D45 File Offset: 0x00025F45
+		// (set) Token: 0x060008A3 RID: 2211 RVA: 0x00027D70 File Offset: 0x00025F70
 		public virtual EBeamLayoutType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008FB RID: 2299
+		// Token: 0x0400098C RID: 2444
 		[Nullable(2)]
 		protected IBeamLayoutConfig FbInstance;
 
-		// Token: 0x040008FC RID: 2300
+		// Token: 0x0400098D RID: 2445
 		[Nullable(2)]
 		protected IBeamLayoutConfig_SetValue PocoInterface;
 	}

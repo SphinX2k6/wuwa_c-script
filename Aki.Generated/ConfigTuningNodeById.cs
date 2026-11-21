@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A5A RID: 2650
+	// Token: 0x02000B2F RID: 2863
 	public class ConfigTuningNodeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E30 RID: 15920 RVA: 0x001B990F File Offset: 0x001B7B0F
+		// Token: 0x0600432E RID: 17198 RVA: 0x001D8CA3 File Offset: 0x001D6EA3
 		static ConfigTuningNodeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTuningNodeById.CreateStaticDefaultValue), new Action(ConfigTuningNodeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E31 RID: 15921 RVA: 0x001B9930 File Offset: 0x001B7B30
+		// Token: 0x0600432F RID: 17199 RVA: 0x001D8CC4 File Offset: 0x001D6EC4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTuningNodeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E32 RID: 15922 RVA: 0x001B99AF File Offset: 0x001B7BAF
+		// Token: 0x06004330 RID: 17200 RVA: 0x001D8D43 File Offset: 0x001D6F43
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTuningNodeById.LogPair = null;
 			ConfigTuningNodeById.HandleId = 0;
 		}
 
-		// Token: 0x06003E33 RID: 15923 RVA: 0x001B99BD File Offset: 0x001B7BBD
+		// Token: 0x06004331 RID: 17201 RVA: 0x001D8D51 File Offset: 0x001D6F51
 		public static void Init()
 		{
 			ConfigTuningNodeById.HandleId = ConfigCommon.InitDataStatement(ConfigTuningNodeById.HandleId, "db_tuningnode.db", "select BinData from `TuningNode` where Id=?");
 		}
 
-		// Token: 0x06003E34 RID: 15924 RVA: 0x001B99D8 File Offset: 0x001B7BD8
+		// Token: 0x06004332 RID: 17202 RVA: 0x001D8D6C File Offset: 0x001D6F6C
 		public static TuningNode? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTuningNodeById.HandleId, ConfigTuningNodeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TuningNode?(rootAsTuningNode);
 		}
 
-		// Token: 0x0400485C RID: 18524
+		// Token: 0x04004E2F RID: 20015
 		private const string DB = "db_tuningnode.db";
 
-		// Token: 0x0400485D RID: 18525
+		// Token: 0x04004E30 RID: 20016
 		private const string FILE = "k.可视化编辑/c.Csv/t.调律台音符/*.csv*";
 
-		// Token: 0x0400485E RID: 18526
+		// Token: 0x04004E31 RID: 20017
 		private const string TABLE = "TuningNode";
 
-		// Token: 0x0400485F RID: 18527
+		// Token: 0x04004E32 RID: 20018
 		private const string COMMAND = "select BinData from `TuningNode` where Id=?";
 
-		// Token: 0x04004860 RID: 18528
+		// Token: 0x04004E33 RID: 20019
 		private const string KEY_PREFIX = "TuningNodeById";
 
-		// Token: 0x04004861 RID: 18529
+		// Token: 0x04004E34 RID: 20020
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004862 RID: 18530
+		// Token: 0x04004E35 RID: 20021
 		private static int HandleId;
 	}
 }

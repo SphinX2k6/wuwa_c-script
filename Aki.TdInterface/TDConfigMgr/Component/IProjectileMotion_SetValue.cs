@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200062F RID: 1583
+	// Token: 0x020006CC RID: 1740
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IProjectileMotion_SetValue
 	{
-		// Token: 0x0400178F RID: 6031
+		// Token: 0x04001981 RID: 6529
 		public EThrowMotion Type;
 
-		// Token: 0x04001790 RID: 6032
+		// Token: 0x04001982 RID: 6530
 		public float Velocity;
 
-		// Token: 0x04001791 RID: 6033
+		// Token: 0x04001983 RID: 6531
 		public float AngularVelocity;
 
-		// Token: 0x04001792 RID: 6034
+		// Token: 0x04001984 RID: 6532
 		public string CameraShake;
 
-		// Token: 0x04001793 RID: 6035
+		// Token: 0x04001985 RID: 6533
 		public ISpeedCurveMotion MatchSpeedCurve;
 	}
 }

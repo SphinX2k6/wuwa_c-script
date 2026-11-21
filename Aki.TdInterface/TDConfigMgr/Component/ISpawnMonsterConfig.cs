@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E6 RID: 1766
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000787 RID: 1927
 	public class ISpawnMonsterConfig
 	{
-		// Token: 0x06002608 RID: 9736 RVA: 0x00066148 File Offset: 0x00064348
+		// Token: 0x06002928 RID: 10536 RVA: 0x0006D1B8 File Offset: 0x0006B3B8
 		private ISpawnMonsterConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002609 RID: 9737 RVA: 0x00066180 File Offset: 0x00064380
+		// Token: 0x06002929 RID: 10537 RVA: 0x0006D1F0 File Offset: 0x0006B3F0
 		public static ISpawnMonsterConfig Create([Nullable(2)] ISpawnMonsterConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600260A RID: 9738 RVA: 0x00066193 File Offset: 0x00064393
+		// Token: 0x0600292A RID: 10538 RVA: 0x0006D203 File Offset: 0x0006B403
 		public static ISpawnMonsterConfig CreateFromSetValue([Nullable(2)] ISpawnMonsterConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600260B RID: 9739 RVA: 0x000661A8 File Offset: 0x000643A8
+		// Token: 0x0600292B RID: 10539 RVA: 0x0006D218 File Offset: 0x0006B418
 		public ISpawnMonsterConfig_SetValue ToSetValue()
 		{
 			return new ISpawnMonsterConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A0A RID: 2570
-		// (get) Token: 0x0600260C RID: 9740 RVA: 0x000661F6 File Offset: 0x000643F6
-		// (set) Token: 0x0600260D RID: 9741 RVA: 0x00066221 File Offset: 0x00064421
+		// Token: 0x17000AC8 RID: 2760
+		// (get) Token: 0x0600292C RID: 10540 RVA: 0x0006D266 File Offset: 0x0006B466
+		// (set) Token: 0x0600292D RID: 10541 RVA: 0x0006D291 File Offset: 0x0006B491
 		public virtual int Id
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A0B RID: 2571
-		// (get) Token: 0x0600260E RID: 9742 RVA: 0x0006622F File Offset: 0x0006442F
-		// (set) Token: 0x0600260F RID: 9743 RVA: 0x0006625E File Offset: 0x0006445E
+		// Token: 0x17000AC9 RID: 2761
+		// (get) Token: 0x0600292E RID: 10542 RVA: 0x0006D29F File Offset: 0x0006B49F
+		// (set) Token: 0x0600292F RID: 10543 RVA: 0x0006D2CE File Offset: 0x0006B4CE
 		public virtual float DelayTime
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A0C RID: 2572
-		// (get) Token: 0x06002610 RID: 9744 RVA: 0x0006626C File Offset: 0x0006446C
-		// (set) Token: 0x06002611 RID: 9745 RVA: 0x00066293 File Offset: 0x00064493
+		// Token: 0x17000ACA RID: 2762
+		// (get) Token: 0x06002930 RID: 10544 RVA: 0x0006D2DC File Offset: 0x0006B4DC
+		// (set) Token: 0x06002931 RID: 10545 RVA: 0x0006D303 File Offset: 0x0006B503
 		[Nullable(2)]
 		public virtual List<int> TargetsToAwake
 		{
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A0D RID: 2573
-		// (get) Token: 0x06002612 RID: 9746 RVA: 0x000662A1 File Offset: 0x000644A1
-		// (set) Token: 0x06002613 RID: 9747 RVA: 0x000662C8 File Offset: 0x000644C8
+		// Token: 0x17000ACB RID: 2763
+		// (get) Token: 0x06002932 RID: 10546 RVA: 0x0006D311 File Offset: 0x0006B511
+		// (set) Token: 0x06002933 RID: 10547 RVA: 0x0006D338 File Offset: 0x0006B538
 		public virtual ISpawnMonsterCompleteCondition CompleteCondition
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A0E RID: 2574
-		// (get) Token: 0x06002614 RID: 9748 RVA: 0x000662D8 File Offset: 0x000644D8
-		// (set) Token: 0x06002615 RID: 9749 RVA: 0x00066339 File Offset: 0x00064539
+		// Token: 0x17000ACC RID: 2764
+		// (get) Token: 0x06002934 RID: 10548 RVA: 0x0006D348 File Offset: 0x0006B548
+		// (set) Token: 0x06002935 RID: 10549 RVA: 0x0006D3A9 File Offset: 0x0006B5A9
 		public virtual ISpawnMonsterPreDependOnPreceding PreCondition
 		{
 			get
@@ -191,18 +189,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019E2 RID: 6626
+		// Token: 0x04001BE1 RID: 7137
 		[Nullable(2)]
 		protected ISpawnMonsterConfig FbInstance;
 
-		// Token: 0x040019E3 RID: 6627
+		// Token: 0x04001BE2 RID: 7138
 		[Nullable(2)]
 		protected ISpawnMonsterConfig_SetValue PocoInterface;
 
-		// Token: 0x040019E4 RID: 6628
+		// Token: 0x04001BE3 RID: 7139
 		private ISpawnMonsterPreDependOnPreceding _PreConditionCache;
 
-		// Token: 0x040019E5 RID: 6629
+		// Token: 0x04001BE4 RID: 7140
 		private bool _PreConditionInited;
 	}
 }

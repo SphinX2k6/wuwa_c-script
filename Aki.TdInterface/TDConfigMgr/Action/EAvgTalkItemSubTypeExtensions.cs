@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B1 RID: 8881
+	// Token: 0x02002520 RID: 9504
 	public static class EAvgTalkItemSubTypeExtensions
 	{
-		// Token: 0x0600C29B RID: 49819 RVA: 0x001C6F8C File Offset: 0x001C518C
+		// Token: 0x0600CE6A RID: 52842 RVA: 0x001DED94 File Offset: 0x001DCF94
 		public static string ToEnumString(this EAvgTalkItemSubType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C29C RID: 49820 RVA: 0x001C6FF8 File Offset: 0x001C51F8
+		// Token: 0x0600CE6B RID: 52843 RVA: 0x001DEE00 File Offset: 0x001DD000
 		public static EAvgTalkItemSubType FromString(string name)
 		{
 			EAvgTalkItemSubType result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C29D RID: 49821 RVA: 0x001C7024 File Offset: 0x001C5224
+		// Token: 0x0600CE6C RID: 52844 RVA: 0x001DEE2C File Offset: 0x001DD02C
 		public static bool TryFromString(string name, out EAvgTalkItemSubType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C29E RID: 49822 RVA: 0x001C70B0 File Offset: 0x001C52B0
+		// Token: 0x0600CE6D RID: 52845 RVA: 0x001DEEB8 File Offset: 0x001DD0B8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C29F RID: 49823 RVA: 0x001C70E8 File Offset: 0x001C52E8
+		// Token: 0x0600CE6E RID: 52846 RVA: 0x001DEEF0 File Offset: 0x001DD0F0
 		public static EAvgTalkItemSubType[] GetValues()
 		{
 			return new EAvgTalkItemSubType[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2A0 RID: 49824 RVA: 0x001C70FB File Offset: 0x001C52FB
+		// Token: 0x0600CE6F RID: 52847 RVA: 0x001DEF03 File Offset: 0x001DD103
 		public static string[] GetNames()
 		{
 			return new string[]

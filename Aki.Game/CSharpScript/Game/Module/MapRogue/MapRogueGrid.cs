@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005610 RID: 22032
+	// Token: 0x020045E6 RID: 17894
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueGrid : UiPanelBase
 	{
-		// Token: 0x0603810A RID: 229642 RVA: 0x00D47184 File Offset: 0x00D45384
+		// Token: 0x0602D008 RID: 184328 RVA: 0x00C94ECC File Offset: 0x00C930CC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603810B RID: 229643 RVA: 0x00D47238 File Offset: 0x00D45438
+		// Token: 0x0602D009 RID: 184329 RVA: 0x00C94F80 File Offset: 0x00C93180
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,12 +46,12 @@ namespace CSharpScript.Game.Module.MapRogue
 			extendToggle.OnUnHover.Add(new Action(this.OnUnHover));
 		}
 
-		// Token: 0x0603810C RID: 229644 RVA: 0x00D47317 File Offset: 0x00D45517
+		// Token: 0x0602D00A RID: 184330 RVA: 0x00C9505F File Offset: 0x00C9325F
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603810D RID: 229645 RVA: 0x00D4731C File Offset: 0x00D4551C
+		// Token: 0x0602D00B RID: 184331 RVA: 0x00C95064 File Offset: 0x00C93264
 		private void OnPointerDown(EToggleState state)
 		{
 			foreach (ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase> valueTuple in this.SelectPanel)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			onExtendTogglePointerDown(state, this.Data);
 		}
 
-		// Token: 0x0603810E RID: 229646 RVA: 0x00D473A0 File Offset: 0x00D455A0
+		// Token: 0x0602D00C RID: 184332 RVA: 0x00C950E8 File Offset: 0x00C932E8
 		private void OnPointerUp(EToggleState state)
 		{
 			foreach (ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase> valueTuple in this.SelectPanel)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603810F RID: 229647 RVA: 0x00D4740C File Offset: 0x00D4560C
+		// Token: 0x0602D00D RID: 184333 RVA: 0x00C95154 File Offset: 0x00C93354
 		private void ExtendToggleStateChanged(EToggleState state)
 		{
 			string seqDefine = (state == EToggleState.ETT_Checked) ? "Sle" : "UnSle";
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			onExtendToggleStateChanged(state, this.Data);
 		}
 
-		// Token: 0x06038110 RID: 229648 RVA: 0x00D4749C File Offset: 0x00D4569C
+		// Token: 0x0602D00E RID: 184334 RVA: 0x00C951E4 File Offset: 0x00C933E4
 		private bool CanExecuteChange()
 		{
 			return this.OnCanExecuteChangeFunc == null || this.OnCanExecuteChangeFunc(base.GetExtendToggle(0).GetToggleState(), this.Data);
 		}
 
-		// Token: 0x06038111 RID: 229649 RVA: 0x00D474C8 File Offset: 0x00D456C8
+		// Token: 0x0602D00F RID: 184335 RVA: 0x00C95210 File Offset: 0x00C93410
 		private void OnHover()
 		{
 			Action<MapGridData> onHoverFunc = this.OnHoverFunc;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038112 RID: 229650 RVA: 0x00D47558 File Offset: 0x00D45758
+		// Token: 0x0602D010 RID: 184336 RVA: 0x00C952A0 File Offset: 0x00C934A0
 		private void OnUnHover()
 		{
 			foreach (ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase> valueTuple in this.SelectPanel)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			onUnHoverFunc(this.Data);
 		}
 
-		// Token: 0x06038113 RID: 229651 RVA: 0x00D475DC File Offset: 0x00D457DC
+		// Token: 0x0602D011 RID: 184337 RVA: 0x00C95324 File Offset: 0x00C93524
 		public void SetGridToggleState(bool bSelectOn, bool bFireEvent = false)
 		{
 			if (!this.Data.Walkable)
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038114 RID: 229652 RVA: 0x00D4768C File Offset: 0x00D4588C
+		// Token: 0x0602D012 RID: 184338 RVA: 0x00C953D4 File Offset: 0x00C935D4
 		public void SetToggleMoveEnable(bool bEnable)
 		{
 			if (!this.Data.Walkable)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038115 RID: 229653 RVA: 0x00D47704 File Offset: 0x00D45904
+		// Token: 0x0602D013 RID: 184339 RVA: 0x00C9544C File Offset: 0x00C9364C
 		public void SetSelectPanel(MapRogueGridSelectBase back, MapRogueGridSelectBase front)
 		{
 			back.GetRootItem().SetUIParent(this.GetPanelSelectBack(), false);
@@ -192,31 +192,31 @@ namespace CSharpScript.Game.Module.MapRogue
 			front.SetUiActive(true);
 		}
 
-		// Token: 0x06038116 RID: 229654 RVA: 0x00D477E8 File Offset: 0x00D459E8
+		// Token: 0x0602D014 RID: 184340 RVA: 0x00C95530 File Offset: 0x00C93730
 		public void ClearSelectPanel()
 		{
 			this.SelectPanel.Clear();
 		}
 
-		// Token: 0x06038117 RID: 229655 RVA: 0x00D477F5 File Offset: 0x00D459F5
+		// Token: 0x0602D015 RID: 184341 RVA: 0x00C9553D File Offset: 0x00C9373D
 		public UUIItem GetPanelEvent()
 		{
 			return base.GetItem(3);
 		}
 
-		// Token: 0x06038118 RID: 229656 RVA: 0x00D477FE File Offset: 0x00D459FE
+		// Token: 0x0602D016 RID: 184342 RVA: 0x00C95546 File Offset: 0x00C93746
 		public UUIItem GetPanelSelectFront()
 		{
 			return base.GetItem(5);
 		}
 
-		// Token: 0x06038119 RID: 229657 RVA: 0x00D47807 File Offset: 0x00D45A07
+		// Token: 0x0602D017 RID: 184343 RVA: 0x00C9554F File Offset: 0x00C9374F
 		public UUIItem GetPanelSelectBack()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x0603811A RID: 229658 RVA: 0x00D47810 File Offset: 0x00D45A10
+		// Token: 0x0602D018 RID: 184344 RVA: 0x00C95558 File Offset: 0x00C93758
 		public void Refresh(MapGridData data)
 		{
 			this.Data = data;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.SetActive(true);
 		}
 
-		// Token: 0x0603811B RID: 229659 RVA: 0x00D47B58 File Offset: 0x00D45D58
+		// Token: 0x0602D019 RID: 184345 RVA: 0x00C958A0 File Offset: 0x00C93AA0
 		public void SetVision(bool bHasVision)
 		{
 			if (this.HasDecoration)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603811C RID: 229660 RVA: 0x00D47B70 File Offset: 0x00D45D70
+		// Token: 0x0602D01A RID: 184346 RVA: 0x00C958B8 File Offset: 0x00C93AB8
 		public void SetPerspectiveMode(bool bOn)
 		{
 			if (!this.HasDecoration)
@@ -329,16 +329,16 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0401D792 RID: 120722
+		// Token: 0x0401821D RID: 98845
 		private MapGridData Data;
 
-		// Token: 0x0401D793 RID: 120723
+		// Token: 0x0401821E RID: 98846
 		private int PerspectiveModeCount;
 
-		// Token: 0x0401D794 RID: 120724
+		// Token: 0x0401821F RID: 98847
 		private bool IsInPerspectiveMode;
 
-		// Token: 0x0401D795 RID: 120725
+		// Token: 0x04018220 RID: 98848
 		[Nullable(new byte[]
 		{
 			2,
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Action<EToggleState, MapGridData> OnExtendTogglePointerDown;
 
-		// Token: 0x0401D796 RID: 120726
+		// Token: 0x04018221 RID: 98849
 		[Nullable(new byte[]
 		{
 			2,
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Action<EToggleState, MapGridData> OnExtendToggleStateChanged;
 
-		// Token: 0x0401D797 RID: 120727
+		// Token: 0x04018222 RID: 98850
 		[Nullable(new byte[]
 		{
 			2,
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Func<EToggleState, MapGridData, bool> OnCanExecuteChangeFunc;
 
-		// Token: 0x0401D798 RID: 120728
+		// Token: 0x04018223 RID: 98851
 		[Nullable(new byte[]
 		{
 			2,
@@ -370,7 +370,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Action<MapGridData> OnHoverFunc;
 
-		// Token: 0x0401D799 RID: 120729
+		// Token: 0x04018224 RID: 98852
 		[Nullable(new byte[]
 		{
 			2,
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public Action<MapGridData> OnUnHoverFunc;
 
-		// Token: 0x0401D79A RID: 120730
+		// Token: 0x04018225 RID: 98853
 		[Nullable(new byte[]
 		{
 			1,
@@ -388,10 +388,10 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		public List<ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase>> SelectPanel = new List<ValueTuple<MapRogueGridSelectBase, MapRogueGridSelectBase>>();
 
-		// Token: 0x0401D79B RID: 120731
+		// Token: 0x04018226 RID: 98854
 		private bool WalkEnable = true;
 
-		// Token: 0x0401D79C RID: 120732
+		// Token: 0x04018227 RID: 98855
 		private bool HasDecoration;
 	}
 }

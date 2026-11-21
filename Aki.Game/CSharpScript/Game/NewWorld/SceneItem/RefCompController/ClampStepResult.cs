@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.RefCompController
 {
-	// Token: 0x020071BA RID: 29114
+	// Token: 0x0200626F RID: 25199
 	public readonly struct ClampStepResult
 	{
-		// Token: 0x060473FA RID: 291834 RVA: 0x0121E170 File Offset: 0x0121C370
+		// Token: 0x0603CCF5 RID: 249077 RVA: 0x0117807C File Offset: 0x0117627C
 		public ClampStepResult(float? step, float nextAccumulated)
 		{
 			this.Step = step;
 			this.NextAccumulated = nextAccumulated;
 		}
 
-		// Token: 0x17009DBD RID: 40381
-		// (get) Token: 0x060473FB RID: 291835 RVA: 0x0121E180 File Offset: 0x0121C380
+		// Token: 0x1700730D RID: 29453
+		// (get) Token: 0x0603CCF6 RID: 249078 RVA: 0x0117808C File Offset: 0x0117628C
 		public float? Step { get; }
 
-		// Token: 0x17009DBE RID: 40382
-		// (get) Token: 0x060473FC RID: 291836 RVA: 0x0121E188 File Offset: 0x0121C388
+		// Token: 0x1700730E RID: 29454
+		// (get) Token: 0x0603CCF7 RID: 249079 RVA: 0x01178094 File Offset: 0x01176294
 		public float NextAccumulated { get; }
 	}
 }

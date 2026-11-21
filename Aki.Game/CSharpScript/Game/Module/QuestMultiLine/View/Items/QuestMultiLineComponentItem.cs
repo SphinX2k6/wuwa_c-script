@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FB3 RID: 20403
+	// Token: 0x02003F7C RID: 16252
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineComponentItem : UiPanelBase
 	{
-		// Token: 0x060343AC RID: 213932 RVA: 0x00C42C84 File Offset: 0x00C40E84
+		// Token: 0x0602921A RID: 168474 RVA: 0x00B8C430 File Offset: 0x00B8A630
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			};
 		}
 
-		// Token: 0x060343AD RID: 213933 RVA: 0x00C42D88 File Offset: 0x00C40F88
+		// Token: 0x0602921B RID: 168475 RVA: 0x00B8C534 File Offset: 0x00B8A734
 		public UniTask RefreshComponent(QuestMultiLineComponentData componentData)
 		{
 			QuestMultiLineComponentItem.<RefreshComponent>d__10 <RefreshComponent>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <RefreshComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343AE RID: 213934 RVA: 0x00C42DD4 File Offset: 0x00C40FD4
+		// Token: 0x0602921C RID: 168476 RVA: 0x00B8C580 File Offset: 0x00B8A780
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuestMultiLineComponentItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343AF RID: 213935 RVA: 0x00C42E17 File Offset: 0x00C41017
+		// Token: 0x0602921D RID: 168477 RVA: 0x00B8C5C3 File Offset: 0x00B8A7C3
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x060343B0 RID: 213936 RVA: 0x00C42E2A File Offset: 0x00C4102A
+		// Token: 0x0602921E RID: 168478 RVA: 0x00B8C5D6 File Offset: 0x00B8A7D6
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343B1 RID: 213937 RVA: 0x00C42E60 File Offset: 0x00C41060
+		// Token: 0x0602921F RID: 168479 RVA: 0x00B8C60C File Offset: 0x00B8A80C
 		public void RefreshSelected(bool isSelected)
 		{
 			base.GetItem(1).SetUIActive(isSelected);
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343B2 RID: 213938 RVA: 0x00C42EAC File Offset: 0x00C410AC
+		// Token: 0x06029220 RID: 168480 RVA: 0x00B8C658 File Offset: 0x00B8A858
 		public void RefreshRoleState(int statusType)
 		{
 			if (statusType == 0)
@@ -115,13 +115,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			base.GetSprite(2).SetUIActive(false);
 		}
 
-		// Token: 0x060343B3 RID: 213939 RVA: 0x00C42F2A File Offset: 0x00C4112A
+		// Token: 0x06029221 RID: 168481 RVA: 0x00B8C6D6 File Offset: 0x00B8A8D6
 		public void SetComponentFunction(Action<QuestMultiLineComponentData> componentFunction)
 		{
 			this.ComponentFunction = componentFunction;
 		}
 
-		// Token: 0x060343B4 RID: 213940 RVA: 0x00C42F33 File Offset: 0x00C41133
+		// Token: 0x06029222 RID: 168482 RVA: 0x00B8C6DF File Offset: 0x00B8A8DF
 		public void SetClickable(bool clickable)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(5);
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			extendToggle.SetSelfInteractive(clickable);
 		}
 
-		// Token: 0x060343B5 RID: 213941 RVA: 0x00C42F48 File Offset: 0x00C41148
+		// Token: 0x06029223 RID: 168483 RVA: 0x00B8C6F4 File Offset: 0x00B8A8F4
 		private UniTask RefreshFightState(QuestMultiLineComponentData componentData)
 		{
 			QuestMultiLineComponentItem.<RefreshFightState>d__18 <RefreshFightState>d__;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <RefreshFightState>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343B6 RID: 213942 RVA: 0x00C42F94 File Offset: 0x00C41194
+		// Token: 0x06029224 RID: 168484 RVA: 0x00B8C740 File Offset: 0x00B8A940
 		private void RefreshHeadLoopEffect(QuestMultiLineComponentData componentData)
 		{
 			if (this.SequencePlayer == null)
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343B7 RID: 213943 RVA: 0x00C4303C File Offset: 0x00C4123C
+		// Token: 0x06029225 RID: 168485 RVA: 0x00B8C7E8 File Offset: 0x00B8A9E8
 		public void RefreshDialogueSide()
 		{
 			if (this.ComponentData != null)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343B8 RID: 213944 RVA: 0x00C43054 File Offset: 0x00C41254
+		// Token: 0x06029226 RID: 168486 RVA: 0x00B8C800 File Offset: 0x00B8AA00
 		private void RefreshDialogue(QuestMultiLineComponentData componentData)
 		{
 			if (QuestMultiLineUtils.IsComponentFinish(componentData))
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343B9 RID: 213945 RVA: 0x00C430D8 File Offset: 0x00C412D8
+		// Token: 0x06029227 RID: 168487 RVA: 0x00B8C884 File Offset: 0x00B8AA84
 		private bool ShouldUseLeftDialogue()
 		{
 			UUIItem item = base.GetItem(3);
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return uuiitem2.GetPositionInViewportWithPivot(bIsScaledByDPI2, fvector2D).X >= 0f;
 		}
 
-		// Token: 0x060343BA RID: 213946 RVA: 0x00C43167 File Offset: 0x00C41367
+		// Token: 0x06029228 RID: 168488 RVA: 0x00B8C913 File Offset: 0x00B8AB13
 		private void OnClickComponent()
 		{
 			if (QuestMultiLineUtils.IsComponentClickable(this.ComponentData))
@@ -260,13 +260,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			}
 		}
 
-		// Token: 0x060343BB RID: 213947 RVA: 0x00C4318C File Offset: 0x00C4138C
+		// Token: 0x06029229 RID: 168489 RVA: 0x00B8C938 File Offset: 0x00B8AB38
 		private void OnToggleClickComponent(EToggleState state)
 		{
 			this.OnClickComponent();
 		}
 
-		// Token: 0x060343BC RID: 213948 RVA: 0x00C43194 File Offset: 0x00C41394
+		// Token: 0x0602922A RID: 168490 RVA: 0x00B8C940 File Offset: 0x00B8AB40
 		public void SetVisibleForAnim(bool visible)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			rootItem.SetUIActive(visible);
 		}
 
-		// Token: 0x060343BD RID: 213949 RVA: 0x00C431A8 File Offset: 0x00C413A8
+		// Token: 0x0602922B RID: 168491 RVA: 0x00B8C954 File Offset: 0x00B8AB54
 		public UniTask PlayAppearAsync()
 		{
 			QuestMultiLineComponentItem.<PlayAppearAsync>d__26 <PlayAppearAsync>d__;
@@ -288,10 +288,10 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayAppearAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401BC57 RID: 113751
+		// Token: 0x0401662C RID: 91692
 		private const float ROLE_ICON_DESIGN_SIZE = 160f;
 
-		// Token: 0x0401BC58 RID: 113752
+		// Token: 0x0401662D RID: 91693
 		[Nullable(new byte[]
 		{
 			2,
@@ -299,30 +299,30 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 		})]
 		private Action<QuestMultiLineComponentData> ComponentFunction;
 
-		// Token: 0x0401BC59 RID: 113753
+		// Token: 0x0401662E RID: 91694
 		[Nullable(2)]
 		private QuestMultiLineComponentData ComponentData;
 
-		// Token: 0x0401BC5A RID: 113754
+		// Token: 0x0401662F RID: 91695
 		[Nullable(2)]
 		private QuestMultiLineDialogueItem DialogLeftPanel;
 
-		// Token: 0x0401BC5B RID: 113755
+		// Token: 0x04016630 RID: 91696
 		[Nullable(2)]
 		private QuestMultiLineDialogueItem DialogRightPanel;
 
-		// Token: 0x0401BC5C RID: 113756
+		// Token: 0x04016631 RID: 91697
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401BC5D RID: 113757
+		// Token: 0x04016632 RID: 91698
 		[Nullable(2)]
 		private QuestMultiLineFightStateItem FightStateItem;
 
-		// Token: 0x0401BC5E RID: 113758
+		// Token: 0x04016633 RID: 91699
 		private string FightStatePrefabPath = string.Empty;
 
-		// Token: 0x0401BC5F RID: 113759
+		// Token: 0x04016634 RID: 91700
 		private string HeadLoopEffectKey = string.Empty;
 	}
 }

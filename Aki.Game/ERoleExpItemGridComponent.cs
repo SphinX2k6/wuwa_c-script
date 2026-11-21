@@ -1,38 +1,38 @@
 ﻿using System;
 
-// Token: 0x0200287F RID: 10367
+// Token: 0x02001DFA RID: 7674
 public enum ERoleExpItemGridComponent
 {
-	// Token: 0x04009F67 RID: 40807
+	// Token: 0x0400A350 RID: 41808
 	AddMaterialText,
-	// Token: 0x04009F68 RID: 40808
+	// Token: 0x0400A351 RID: 41809
 	PanelButton,
-	// Token: 0x04009F69 RID: 40809
+	// Token: 0x0400A352 RID: 41810
 	ConditionButton,
-	// Token: 0x04009F6A RID: 40810
+	// Token: 0x0400A353 RID: 41811
 	AutoButton,
-	// Token: 0x04009F6B RID: 40811
+	// Token: 0x0400A354 RID: 41812
 	LoopItem,
-	// Token: 0x04009F6C RID: 40812
+	// Token: 0x0400A355 RID: 41813
 	ScrollView,
-	// Token: 0x04009F6D RID: 40813
+	// Token: 0x0400A356 RID: 41814
 	CostRootItem,
-	// Token: 0x04009F6E RID: 40814
+	// Token: 0x0400A357 RID: 41815
 	ConsumeTexture,
-	// Token: 0x04009F6F RID: 40815
+	// Token: 0x0400A358 RID: 41816
 	ConsumeText,
-	// Token: 0x04009F70 RID: 40816
+	// Token: 0x0400A359 RID: 41817
 	ConditionText,
-	// Token: 0x04009F71 RID: 40817
+	// Token: 0x0400A35A RID: 41818
 	MaterialRootItem,
-	// Token: 0x04009F72 RID: 40818
+	// Token: 0x0400A35B RID: 41819
 	StrengthItem,
-	// Token: 0x04009F73 RID: 40819
+	// Token: 0x0400A35C RID: 41820
 	MaxItem,
-	// Token: 0x04009F74 RID: 40820
+	// Token: 0x0400A35D RID: 41821
 	LockItem,
-	// Token: 0x04009F75 RID: 40821
+	// Token: 0x0400A35E RID: 41822
 	TopButtons,
-	// Token: 0x04009F76 RID: 40822
+	// Token: 0x0400A35F RID: 41823
 	AutoButtonText
 }

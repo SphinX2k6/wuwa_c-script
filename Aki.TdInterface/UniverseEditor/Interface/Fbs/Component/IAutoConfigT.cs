@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EE1 RID: 20193
+	// Token: 0x02005410 RID: 21520
 	public class IAutoConfigT
 	{
-		// Token: 0x170090F1 RID: 37105
-		// (get) Token: 0x0601FD45 RID: 130373 RVA: 0x0046DC98 File Offset: 0x0046BE98
-		// (set) Token: 0x0601FD46 RID: 130374 RVA: 0x0046DCA0 File Offset: 0x0046BEA0
+		// Token: 0x17009864 RID: 39012
+		// (get) Token: 0x06021A89 RID: 137865 RVA: 0x004A3A68 File Offset: 0x004A1C68
+		// (set) Token: 0x06021A8A RID: 137866 RVA: 0x004A3A70 File Offset: 0x004A1C70
 		public bool IsCircle { get; set; }
 
-		// Token: 0x170090F2 RID: 37106
-		// (get) Token: 0x0601FD47 RID: 130375 RVA: 0x0046DCA9 File Offset: 0x0046BEA9
-		// (set) Token: 0x0601FD48 RID: 130376 RVA: 0x0046DCB1 File Offset: 0x0046BEB1
+		// Token: 0x17009865 RID: 39013
+		// (get) Token: 0x06021A8B RID: 137867 RVA: 0x004A3A79 File Offset: 0x004A1C79
+		// (set) Token: 0x06021A8C RID: 137868 RVA: 0x004A3A81 File Offset: 0x004A1C81
 		public int Interval { get; set; }
 
-		// Token: 0x0601FD49 RID: 130377 RVA: 0x0046DCBA File Offset: 0x0046BEBA
+		// Token: 0x06021A8D RID: 137869 RVA: 0x004A3A8A File Offset: 0x004A1C8A
 		public IAutoConfigT()
 		{
 			this.IsCircle = false;

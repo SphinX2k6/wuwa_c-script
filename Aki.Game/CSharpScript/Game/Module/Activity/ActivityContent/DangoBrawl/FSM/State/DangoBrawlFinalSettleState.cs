@@ -5,15 +5,15 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 {
-	// Token: 0x0200688B RID: 26763
+	// Token: 0x020057DB RID: 22491
 	public class DangoBrawlFinalSettleState : ActivityGameplayTurnStateBase<EDangoBrawlFsmState>
 	{
-		// Token: 0x06042CF4 RID: 273652 RVA: 0x01043588 File Offset: 0x01041788
+		// Token: 0x0603784C RID: 227404 RVA: 0x00F84B08 File Offset: 0x00F82D08
 		public override void Enter(EDangoBrawlFsmState? prev)
 		{
 		}
 
-		// Token: 0x06042CF5 RID: 273653 RVA: 0x0104358C File Offset: 0x0104178C
+		// Token: 0x0603784D RID: 227405 RVA: 0x00F84B0C File Offset: 0x00F82D0C
 		public override UniTask EnterAsync(EDangoBrawlFsmState? prev)
 		{
 			DangoBrawlFinalSettleState.<EnterAsync>d__1 <EnterAsync>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM.State
 			return <EnterAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042CF6 RID: 273654 RVA: 0x010435CF File Offset: 0x010417CF
+		// Token: 0x0603784E RID: 227406 RVA: 0x00F84B4F File Offset: 0x00F82D4F
 		public override void Exit(EDangoBrawlFsmState? next)
 		{
 		}

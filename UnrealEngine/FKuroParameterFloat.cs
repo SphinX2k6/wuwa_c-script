@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018FD RID: 6397
+	// Token: 0x020003F8 RID: 1016
 	[UnrealObjectPath("/Script/KuroGameplay.KuroParameterFloat")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class FKuroParameterFloat : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06017BD6 RID: 97238 RVA: 0x0022C88F File Offset: 0x0022AA8F
+		// Token: 0x060063DE RID: 25566 RVA: 0x0008EC1D File Offset: 0x0008CE1D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroParameterFloat._ScriptStructPtr != 0) ? FKuroParameterFloat._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroParameterFloat", ref FKuroParameterFloat._ScriptStructPtr);
 		}
 
-		// Token: 0x17005F9C RID: 24476
-		// (get) Token: 0x06017BD7 RID: 97239 RVA: 0x0022C8B3 File Offset: 0x0022AAB3
-		// (set) Token: 0x06017BD8 RID: 97240 RVA: 0x0022C8C7 File Offset: 0x0022AAC7
+		// Token: 0x17001419 RID: 5145
+		// (get) Token: 0x060063DF RID: 25567 RVA: 0x0008EC41 File Offset: 0x0008CE41
+		// (set) Token: 0x060063E0 RID: 25568 RVA: 0x0008EC55 File Offset: 0x0008CE55
 		public unsafe FName Name
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005F9D RID: 24477
-		// (get) Token: 0x06017BD9 RID: 97241 RVA: 0x0022C8DC File Offset: 0x0022AADC
-		// (set) Token: 0x06017BDA RID: 97242 RVA: 0x0022C8EC File Offset: 0x0022AAEC
+		// Token: 0x1700141A RID: 5146
+		// (get) Token: 0x060063E1 RID: 25569 RVA: 0x0008EC6A File Offset: 0x0008CE6A
+		// (set) Token: 0x060063E2 RID: 25570 RVA: 0x0008EC7A File Offset: 0x0008CE7A
 		public unsafe float Value
 		{
 			get
@@ -46,60 +46,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017BDB RID: 97243 RVA: 0x0022C8FD File Offset: 0x0022AAFD
+		// Token: 0x060063E3 RID: 25571 RVA: 0x0008EC8B File Offset: 0x0008CE8B
 		public FKuroParameterFloat()
 		{
 		}
 
-		// Token: 0x06017BDC RID: 97244 RVA: 0x0022C905 File Offset: 0x0022AB05
-		public FKuroParameterFloat(FName Name, float Value)
-		{
-			this.Name = Name;
-			this.Value = Value;
-		}
-
-		// Token: 0x06017BDD RID: 97245 RVA: 0x0022C91B File Offset: 0x0022AB1B
+		// Token: 0x060063E4 RID: 25572 RVA: 0x0008EC93 File Offset: 0x0008CE93
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroParameterFloat.StaticStruct();
 		}
 
-		// Token: 0x06017BDE RID: 97246 RVA: 0x0022C927 File Offset: 0x0022AB27
+		// Token: 0x060063E5 RID: 25573 RVA: 0x0008EC9F File Offset: 0x0008CE9F
 		[NullableContext(2)]
 		public FKuroParameterFloat(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017BDF RID: 97247 RVA: 0x0022C931 File Offset: 0x0022AB31
+		// Token: 0x060063E6 RID: 25574 RVA: 0x0008ECA9 File Offset: 0x0008CEA9
 		public FKuroParameterFloat(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017BE0 RID: 97248 RVA: 0x0022C93C File Offset: 0x0022AB3C
+		// Token: 0x060063E7 RID: 25575 RVA: 0x0008ECB4 File Offset: 0x0008CEB4
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroParameterFloat(Pointer, false, true);
 		}
 
-		// Token: 0x06017BE1 RID: 97249 RVA: 0x0022C946 File Offset: 0x0022AB46
+		// Token: 0x060063E8 RID: 25576 RVA: 0x0008ECBE File Offset: 0x0008CEBE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroParameterFloat(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CE21 RID: 52769
+		// Token: 0x04002A31 RID: 10801
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroParameterFloat";
 
-		// Token: 0x0400CE22 RID: 52770
+		// Token: 0x04002A32 RID: 10802
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CE23 RID: 52771
+		// Token: 0x04002A33 RID: 10803
 		internal static int __PropertyOffset_Name;
 
-		// Token: 0x0400CE24 RID: 52772
+		// Token: 0x04002A34 RID: 10804
 		internal static int __PropertyOffset_Value;
 	}
 }

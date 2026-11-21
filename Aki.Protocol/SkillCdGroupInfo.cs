@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001235 RID: 4661
+	// Token: 0x02001272 RID: 4722
 	public sealed class SkillCdGroupInfo : IMessage<SkillCdGroupInfo>, IMessage, IEquatable<SkillCdGroupInfo>, IDeepCloneable<SkillCdGroupInfo>, IBufferMessage
 	{
-		// Token: 0x06018D6D RID: 101741 RVA: 0x0039D4C1 File Offset: 0x0039B6C1
+		// Token: 0x06019357 RID: 103255 RVA: 0x003AD424 File Offset: 0x003AB624
 		[NullableContext(1)]
 		public static SkillCdGroupInfo Create()
 		{
 			return new SkillCdGroupInfo();
 		}
 
-		// Token: 0x170053BD RID: 21437
-		// (get) Token: 0x06018D6E RID: 101742 RVA: 0x0039D4C8 File Offset: 0x0039B6C8
+		// Token: 0x1700553C RID: 21820
+		// (get) Token: 0x06019358 RID: 103256 RVA: 0x003AD42B File Offset: 0x003AB62B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SkillCdGroupInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170053BE RID: 21438
-		// (get) Token: 0x06018D6F RID: 101743 RVA: 0x0039D4CF File Offset: 0x0039B6CF
+		// Token: 0x1700553D RID: 21821
+		// (get) Token: 0x06019359 RID: 103257 RVA: 0x003AD432 File Offset: 0x003AB632
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170053BF RID: 21439
-		// (get) Token: 0x06018D70 RID: 101744 RVA: 0x0039D4D2 File Offset: 0x0039B6D2
+		// Token: 0x1700553E RID: 21822
+		// (get) Token: 0x0601935A RID: 103258 RVA: 0x003AD435 File Offset: 0x003AB635
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018D71 RID: 101745 RVA: 0x0039D4D9 File Offset: 0x0039B6D9
+		// Token: 0x0601935B RID: 103259 RVA: 0x003AD43C File Offset: 0x003AB63C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillCdGroupInfo()
 		{
 		}
 
-		// Token: 0x06018D72 RID: 101746 RVA: 0x0039D4E4 File Offset: 0x0039B6E4
+		// Token: 0x0601935C RID: 103260 RVA: 0x003AD444 File Offset: 0x003AB644
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillCdGroupInfo(SkillCdGroupInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06018D73 RID: 101747 RVA: 0x0039D530 File Offset: 0x0039B730
+		// Token: 0x0601935D RID: 103261 RVA: 0x003AD490 File Offset: 0x003AB690
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillCdGroupInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new SkillCdGroupInfo(this);
 		}
 
-		// Token: 0x170053C0 RID: 21440
-		// (get) Token: 0x06018D74 RID: 101748 RVA: 0x0039D538 File Offset: 0x0039B738
-		// (set) Token: 0x06018D75 RID: 101749 RVA: 0x0039D540 File Offset: 0x0039B740
+		// Token: 0x1700553F RID: 21823
+		// (get) Token: 0x0601935E RID: 103262 RVA: 0x003AD498 File Offset: 0x003AB698
+		// (set) Token: 0x0601935F RID: 103263 RVA: 0x003AD4A0 File Offset: 0x003AB6A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ShareGroupId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170053C1 RID: 21441
-		// (get) Token: 0x06018D76 RID: 101750 RVA: 0x0039D549 File Offset: 0x0039B749
-		// (set) Token: 0x06018D77 RID: 101751 RVA: 0x0039D551 File Offset: 0x0039B751
+		// Token: 0x17005540 RID: 21824
+		// (get) Token: 0x06019360 RID: 103264 RVA: 0x003AD4A9 File Offset: 0x003AB6A9
+		// (set) Token: 0x06019361 RID: 103265 RVA: 0x003AD4B1 File Offset: 0x003AB6B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillCdInfo SkillCdInfo
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018D78 RID: 101752 RVA: 0x0039D55A File Offset: 0x0039B75A
+		// Token: 0x06019362 RID: 103266 RVA: 0x003AD4BA File Offset: 0x003AB6BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SkillCdGroupInfo);
 		}
 
-		// Token: 0x06018D79 RID: 101753 RVA: 0x0039D568 File Offset: 0x0039B768
+		// Token: 0x06019363 RID: 103267 RVA: 0x003AD4C8 File Offset: 0x003AB6C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SkillCdGroupInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ShareGroupId == other.ShareGroupId && object.Equals(this.SkillCdInfo, other.SkillCdInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06018D7A RID: 101754 RVA: 0x0039D5B8 File Offset: 0x0039B7B8
+		// Token: 0x06019364 RID: 103268 RVA: 0x003AD518 File Offset: 0x003AB718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018D7B RID: 101755 RVA: 0x0039D60D File Offset: 0x0039B80D
+		// Token: 0x06019365 RID: 103269 RVA: 0x003AD56D File Offset: 0x003AB76D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06018D7C RID: 101756 RVA: 0x0039D61A File Offset: 0x0039B81A
+		// Token: 0x06019366 RID: 103270 RVA: 0x003AD57A File Offset: 0x003AB77A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06018D7D RID: 101757 RVA: 0x0039D624 File Offset: 0x0039B824
+		// Token: 0x06019367 RID: 103271 RVA: 0x003AD584 File Offset: 0x003AB784
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06018D7E RID: 101758 RVA: 0x0039D67C File Offset: 0x0039B87C
+		// Token: 0x06019368 RID: 103272 RVA: 0x003AD5DC File Offset: 0x003AB7DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06018D7F RID: 101759 RVA: 0x0039D6D4 File Offset: 0x0039B8D4
+		// Token: 0x06019369 RID: 103273 RVA: 0x003AD634 File Offset: 0x003AB834
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SkillCdGroupInfo other)
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06018D80 RID: 101760 RVA: 0x0039D73C File Offset: 0x0039B93C
+		// Token: 0x0601936A RID: 103274 RVA: 0x003AD69C File Offset: 0x003AB89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -239,7 +239,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06018D81 RID: 101761 RVA: 0x0039D748 File Offset: 0x0039B948
+		// Token: 0x0601936B RID: 103275 RVA: 0x003AD6A8 File Offset: 0x003AB8A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -273,22 +273,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009286 RID: 37510
+		// Token: 0x04009538 RID: 38200
 		private static readonly MessageParser<SkillCdGroupInfo> _parser = new MessageParser<SkillCdGroupInfo>(() => new SkillCdGroupInfo());
 
-		// Token: 0x04009287 RID: 37511
+		// Token: 0x04009539 RID: 38201
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009288 RID: 37512
+		// Token: 0x0400953A RID: 38202
 		public const int ShareGroupIdFieldNumber = 1;
 
-		// Token: 0x04009289 RID: 37513
+		// Token: 0x0400953B RID: 38203
 		private int shareGroupId_;
 
-		// Token: 0x0400928A RID: 37514
+		// Token: 0x0400953C RID: 38204
 		public const int SkillCdInfoFieldNumber = 2;
 
-		// Token: 0x0400928B RID: 37515
+		// Token: 0x0400953D RID: 38205
 		private SkillCdInfo skillCdInfo_;
 	}
 }

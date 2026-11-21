@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200282D RID: 10285
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B00 RID: 11008
 	public class StopSceneItemMove : ActionParams
 	{
-		// Token: 0x0600E417 RID: 58391 RVA: 0x0021969E File Offset: 0x0021789E
+		// Token: 0x0600F23C RID: 62012 RVA: 0x00236502 File Offset: 0x00234702
 		public static StopSceneItemMove Create(IStopSceneItemMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700457F RID: 17791
-		// (get) Token: 0x0600E418 RID: 58392 RVA: 0x002196C0 File Offset: 0x002178C0
+		// Token: 0x170048EA RID: 18666
+		// (get) Token: 0x0600F23D RID: 62013 RVA: 0x00236524 File Offset: 0x00234724
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004580 RID: 17792
-		// (get) Token: 0x0600E419 RID: 58393 RVA: 0x00219724 File Offset: 0x00217924
+		// Token: 0x170048EB RID: 18667
+		// (get) Token: 0x0600F23E RID: 62014 RVA: 0x00236588 File Offset: 0x00234788
 		public virtual EStopSceneItemMoveType? StopType
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E39 RID: 32313
+		// Token: 0x040084F6 RID: 34038
 		private IStopSceneItemMove Instance;
 
-		// Token: 0x04007E3A RID: 32314
+		// Token: 0x040084F7 RID: 34039
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007E3B RID: 32315
+		// Token: 0x040084F8 RID: 34040
 		private bool _EntityIdsInited;
 	}
 }

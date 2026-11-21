@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B14 RID: 2836
+	// Token: 0x02000B03 RID: 2819
 	[NetMessage(EMessageId.NewHandInItemRequest)]
 	public sealed class NewHandInItemRequest : IMessage<NewHandInItemRequest>, IMessage, IEquatable<NewHandInItemRequest>, IDeepCloneable<NewHandInItemRequest>, IBufferMessage
 	{
-		// Token: 0x0600F64C RID: 63052 RVA: 0x0023EC2B File Offset: 0x0023CE2B
+		// Token: 0x0600F532 RID: 62770 RVA: 0x0023CA1F File Offset: 0x0023AC1F
 		[NullableContext(1)]
 		public static NewHandInItemRequest Create()
 		{
 			return new NewHandInItemRequest();
 		}
 
-		// Token: 0x17003229 RID: 12841
-		// (get) Token: 0x0600F64D RID: 63053 RVA: 0x0023EC32 File Offset: 0x0023CE32
+		// Token: 0x170031EB RID: 12779
+		// (get) Token: 0x0600F533 RID: 62771 RVA: 0x0023CA26 File Offset: 0x0023AC26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700322A RID: 12842
-		// (get) Token: 0x0600F64E RID: 63054 RVA: 0x0023EC35 File Offset: 0x0023CE35
+		// Token: 0x170031EC RID: 12780
+		// (get) Token: 0x0600F534 RID: 62772 RVA: 0x0023CA29 File Offset: 0x0023AC29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F64F RID: 63055 RVA: 0x0023EC3C File Offset: 0x0023CE3C
+		// Token: 0x0600F535 RID: 62773 RVA: 0x0023CA30 File Offset: 0x0023AC30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewHandInItemRequest()
 		{
 		}
 
-		// Token: 0x0600F650 RID: 63056 RVA: 0x0023EC44 File Offset: 0x0023CE44
+		// Token: 0x0600F536 RID: 62774 RVA: 0x0023CA38 File Offset: 0x0023AC38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewHandInItemRequest(NewHandInItemRequest other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F651 RID: 63057 RVA: 0x0023EC77 File Offset: 0x0023CE77
+		// Token: 0x0600F537 RID: 62775 RVA: 0x0023CA6B File Offset: 0x0023AC6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewHandInItemRequest Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new NewHandInItemRequest(this);
 		}
 
-		// Token: 0x1700322B RID: 12843
-		// (get) Token: 0x0600F652 RID: 63058 RVA: 0x0023EC7F File Offset: 0x0023CE7F
-		// (set) Token: 0x0600F653 RID: 63059 RVA: 0x0023EC97 File Offset: 0x0023CE97
+		// Token: 0x170031ED RID: 12781
+		// (get) Token: 0x0600F538 RID: 62776 RVA: 0x0023CA73 File Offset: 0x0023AC73
+		// (set) Token: 0x0600F539 RID: 62777 RVA: 0x0023CA8B File Offset: 0x0023AC8B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewHandInItemsProjectionMachinePb ProjectionMachine
@@ -91,8 +91,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700322C RID: 12844
-		// (get) Token: 0x0600F654 RID: 63060 RVA: 0x0023ECAD File Offset: 0x0023CEAD
+		// Token: 0x170031EE RID: 12782
+		// (get) Token: 0x0600F53A RID: 62778 RVA: 0x0023CAA1 File Offset: 0x0023ACA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewHandInItemRequest.HandInfosOneofCase HandInfosCase
@@ -103,7 +103,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F655 RID: 63061 RVA: 0x0023ECB5 File Offset: 0x0023CEB5
+		// Token: 0x0600F53B RID: 62779 RVA: 0x0023CAA9 File Offset: 0x0023ACA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearHandInfos()
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			this.handInfos_ = null;
 		}
 
-		// Token: 0x0600F656 RID: 63062 RVA: 0x0023ECC5 File Offset: 0x0023CEC5
+		// Token: 0x0600F53C RID: 62780 RVA: 0x0023CAB9 File Offset: 0x0023ACB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NewHandInItemRequest);
 		}
 
-		// Token: 0x0600F657 RID: 63063 RVA: 0x0023ECD4 File Offset: 0x0023CED4
+		// Token: 0x0600F53D RID: 62781 RVA: 0x0023CAC8 File Offset: 0x0023ACC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NewHandInItemRequest other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.ProjectionMachine, other.ProjectionMachine) && this.HandInfosCase == other.HandInfosCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F658 RID: 63064 RVA: 0x0023ED24 File Offset: 0x0023CF24
+		// Token: 0x0600F53E RID: 62782 RVA: 0x0023CB18 File Offset: 0x0023AD18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F659 RID: 63065 RVA: 0x0023ED6A File Offset: 0x0023CF6A
+		// Token: 0x0600F53F RID: 62783 RVA: 0x0023CB5E File Offset: 0x0023AD5E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F65A RID: 63066 RVA: 0x0023ED77 File Offset: 0x0023CF77
+		// Token: 0x0600F540 RID: 62784 RVA: 0x0023CB6B File Offset: 0x0023AD6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -162,14 +162,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F65B RID: 63067 RVA: 0x0023ED80 File Offset: 0x0023CF80
+		// Token: 0x0600F541 RID: 62785 RVA: 0x0023CB74 File Offset: 0x0023AD74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.handInfosCase_ == NewHandInItemRequest.HandInfosOneofCase.ProjectionMachine)
 			{
-				output.WriteRawTag(10);
+				output.WriteRawTag(66);
 				output.WriteMessage(this.ProjectionMachine);
 			}
 			if (this._unknownFields != null)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F65C RID: 63068 RVA: 0x0023EDB4 File Offset: 0x0023CFB4
+		// Token: 0x0600F542 RID: 62786 RVA: 0x0023CBA8 File Offset: 0x0023ADA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F65D RID: 63069 RVA: 0x0023EDF4 File Offset: 0x0023CFF4
+		// Token: 0x0600F543 RID: 62787 RVA: 0x0023CBE8 File Offset: 0x0023ADE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NewHandInItemRequest other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F65E RID: 63070 RVA: 0x0023EE49 File Offset: 0x0023D049
+		// Token: 0x0600F544 RID: 62788 RVA: 0x0023CC3D File Offset: 0x0023AE3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F65F RID: 63071 RVA: 0x0023EE54 File Offset: 0x0023D054
+		// Token: 0x0600F545 RID: 62789 RVA: 0x0023CC48 File Offset: 0x0023AE48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 10U)
+				if (num != 66U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -252,25 +252,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040062F0 RID: 25328
+		// Token: 0x040062F9 RID: 25337
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040062F1 RID: 25329
-		public const int ProjectionMachineFieldNumber = 1;
+		// Token: 0x040062FA RID: 25338
+		public const int ProjectionMachineFieldNumber = 8;
 
-		// Token: 0x040062F2 RID: 25330
+		// Token: 0x040062FB RID: 25339
 		private object handInfos_;
 
-		// Token: 0x040062F3 RID: 25331
+		// Token: 0x040062FC RID: 25340
 		private NewHandInItemRequest.HandInfosOneofCase handInfosCase_;
 
-		// Token: 0x0200185E RID: 6238
+		// Token: 0x020018D6 RID: 6358
 		public enum HandInfosOneofCase
 		{
-			// Token: 0x0400C837 RID: 51255
+			// Token: 0x0400CD62 RID: 52578
 			None,
-			// Token: 0x0400C838 RID: 51256
-			ProjectionMachine
+			// Token: 0x0400CD63 RID: 52579
+			ProjectionMachine = 8
 		}
 	}
 }

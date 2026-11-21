@@ -4,16 +4,16 @@ using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D89 RID: 23945
+	// Token: 0x02004D6B RID: 19819
 	public class SpringManorPendingProcessControllerRuleConfig : PendingProcessControllerRuleConfigBase
 	{
-		// Token: 0x0603CC5E RID: 248926 RVA: 0x00E9728D File Offset: 0x00E9548D
+		// Token: 0x06031BBA RID: 203706 RVA: 0x00DE7AD5 File Offset: 0x00DE5CD5
 		public override bool IsActive()
 		{
 			return SpringManorModel.Instance.CheckInInstance();
 		}
 
-		// Token: 0x0603CC5F RID: 248927 RVA: 0x00E9729C File Offset: 0x00E9549C
+		// Token: 0x06031BBB RID: 203707 RVA: 0x00DE7AE4 File Offset: 0x00DE5CE4
 		[NullableContext(1)]
 		public override bool PendingProgressExCheck(TPendingProcess process)
 		{

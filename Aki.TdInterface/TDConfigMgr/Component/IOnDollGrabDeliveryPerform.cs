@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005A8 RID: 1448
+	// Token: 0x02000611 RID: 1553
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IOnDollGrabDeliveryPerform
 	{
-		// Token: 0x06001E90 RID: 7824 RVA: 0x000567CC File Offset: 0x000549CC
-		[NullableContext(1)]
+		// Token: 0x06002096 RID: 8342 RVA: 0x0005B688 File Offset: 0x00059888
+		[NullableContext(0)]
 		private IOnDollGrabDeliveryPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001E91 RID: 7825 RVA: 0x00056804 File Offset: 0x00054A04
-		[NullableContext(1)]
+		// Token: 0x06002097 RID: 8343 RVA: 0x0005B6C0 File Offset: 0x000598C0
+		[NullableContext(0)]
 		public static IOnDollGrabDeliveryPerform Create([Nullable(2)] IOnDollGrabDeliveryPerform instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E92 RID: 7826 RVA: 0x00056817 File Offset: 0x00054A17
-		[NullableContext(1)]
+		// Token: 0x06002098 RID: 8344 RVA: 0x0005B6D3 File Offset: 0x000598D3
+		[NullableContext(0)]
 		public static IOnDollGrabDeliveryPerform CreateFromSetValue([Nullable(2)] IOnDollGrabDeliveryPerform_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001E93 RID: 7827 RVA: 0x0005682A File Offset: 0x00054A2A
-		[NullableContext(1)]
+		// Token: 0x06002099 RID: 8345 RVA: 0x0005B6E6 File Offset: 0x000598E6
+		[NullableContext(0)]
 		public IOnDollGrabDeliveryPerform_SetValue ToSetValue()
 		{
 			return new IOnDollGrabDeliveryPerform_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700082B RID: 2091
-		// (get) Token: 0x06001E94 RID: 7828 RVA: 0x00056861 File Offset: 0x00054A61
-		// (set) Token: 0x06001E95 RID: 7829 RVA: 0x00056888 File Offset: 0x00054A88
+		// Token: 0x170008B0 RID: 2224
+		// (get) Token: 0x0600209A RID: 8346 RVA: 0x0005B71D File Offset: 0x0005991D
+		// (set) Token: 0x0600209B RID: 8347 RVA: 0x0005B744 File Offset: 0x00059944
 		public virtual string EventMontage
 		{
 			get
@@ -91,9 +91,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700082C RID: 2092
-		// (get) Token: 0x06001E96 RID: 7830 RVA: 0x00056896 File Offset: 0x00054A96
-		// (set) Token: 0x06001E97 RID: 7831 RVA: 0x000568BD File Offset: 0x00054ABD
+		// Token: 0x170008B1 RID: 2225
+		// (get) Token: 0x0600209C RID: 8348 RVA: 0x0005B752 File Offset: 0x00059952
+		// (set) Token: 0x0600209D RID: 8349 RVA: 0x0005B779 File Offset: 0x00059979
 		public virtual string StandByMontage
 		{
 			get
@@ -115,9 +115,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700082D RID: 2093
-		// (get) Token: 0x06001E98 RID: 7832 RVA: 0x000568CC File Offset: 0x00054ACC
-		// (set) Token: 0x06001E99 RID: 7833 RVA: 0x0005692D File Offset: 0x00054B2D
+		// Token: 0x170008B2 RID: 2226
+		// (get) Token: 0x0600209E RID: 8350 RVA: 0x0005B788 File Offset: 0x00059988
+		// (set) Token: 0x0600209F RID: 8351 RVA: 0x0005B7E9 File Offset: 0x000599E9
 		public virtual PlayFlow Flow
 		{
 			get
@@ -145,9 +145,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700082E RID: 2094
-		// (get) Token: 0x06001E9A RID: 7834 RVA: 0x00056944 File Offset: 0x00054B44
-		// (set) Token: 0x06001E9B RID: 7835 RVA: 0x0005697E File Offset: 0x00054B7E
+		// Token: 0x170008B3 RID: 2227
+		// (get) Token: 0x060020A0 RID: 8352 RVA: 0x0005B800 File Offset: 0x00059A00
+		// (set) Token: 0x060020A1 RID: 8353 RVA: 0x0005B83A File Offset: 0x00059A3A
 		public virtual float? PerformDuration
 		{
 			get
@@ -169,17 +169,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015C5 RID: 5573
+		// Token: 0x04001733 RID: 5939
 		protected IOnDollGrabDeliveryPerform FbInstance;
 
-		// Token: 0x040015C6 RID: 5574
+		// Token: 0x04001734 RID: 5940
 		protected IOnDollGrabDeliveryPerform_SetValue PocoInterface;
 
-		// Token: 0x040015C7 RID: 5575
-		[Nullable(1)]
+		// Token: 0x04001735 RID: 5941
+		[Nullable(0)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x040015C8 RID: 5576
+		// Token: 0x04001736 RID: 5942
 		private bool _FlowInited;
 	}
 }

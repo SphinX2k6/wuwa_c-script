@@ -6,12 +6,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D88 RID: 19848
+	// Token: 0x02003D51 RID: 15697
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AffixEntry
 	{
-		// Token: 0x060334E2 RID: 210146 RVA: 0x00BF994C File Offset: 0x00BF7B4C
+		// Token: 0x0602834F RID: 164687 RVA: 0x00B42F48 File Offset: 0x00B41148
 		public AffixEntry(AffixEntry affixEntry)
 		{
 			this.Id = new int?(affixEntry.Id);
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060334E3 RID: 210147 RVA: 0x00BF99EC File Offset: 0x00BF7BEC
+		// Token: 0x06028350 RID: 164688 RVA: 0x00B42FE8 File Offset: 0x00B411E8
 		public List<ElementInfo> GetSortElementInfoArrayByCount(bool bIgnoreTotal = false)
 		{
 			int num = 9;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x060334E4 RID: 210148 RVA: 0x00BF9A94 File Offset: 0x00BF7C94
+		// Token: 0x06028351 RID: 164689 RVA: 0x00B43090 File Offset: 0x00B41290
 		public string GetAffixDesc()
 		{
 			RoguelikeConfig instance = RoguelikeConfig.Instance;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return result;
 		}
 
-		// Token: 0x0401B3AF RID: 111535
+		// Token: 0x04015D82 RID: 89474
 		public int? Id;
 
-		// Token: 0x0401B3B0 RID: 111536
+		// Token: 0x04015D83 RID: 89475
 		public bool? IsUnlock;
 
-		// Token: 0x0401B3B1 RID: 111537
+		// Token: 0x04015D84 RID: 89476
 		public readonly Dictionary<int, int> ElementDict;
 	}
 }

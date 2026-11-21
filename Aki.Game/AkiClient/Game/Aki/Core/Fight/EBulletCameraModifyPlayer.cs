@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Core.Fight
 {
-	// Token: 0x02003FF6 RID: 16374
+	// Token: 0x0200325C RID: 12892
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Core/Fight/EBulletCameraModifyPlayer.EBulletCameraModifyPlayer")]
 	public enum EBulletCameraModifyPlayer : byte
 	{
-		// Token: 0x04015930 RID: 88368
+		// Token: 0x04011598 RID: 71064
 		Attacker,
-		// Token: 0x04015931 RID: 88369
+		// Token: 0x04011599 RID: 71065
 		Victim,
-		// Token: 0x04015932 RID: 88370
+		// Token: 0x0401159A RID: 71066
 		AttackerAndVictim,
-		// Token: 0x04015933 RID: 88371
+		// Token: 0x0401159B RID: 71067
 		EBulletCameraModifyPlayer_MAX
 	}
 }

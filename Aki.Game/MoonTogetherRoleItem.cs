@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020029FF RID: 10751
+// Token: 0x02001F7A RID: 8058
 public class MoonTogetherRoleItem : UiPanelBase
 {
-	// Token: 0x060164EB RID: 91371 RVA: 0x005A5294 File Offset: 0x005A3494
+	// Token: 0x06013EF2 RID: 81650 RVA: 0x005D026C File Offset: 0x005CE46C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class MoonTogetherRoleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060164EC RID: 91372 RVA: 0x005A531A File Offset: 0x005A351A
+	// Token: 0x06013EF3 RID: 81651 RVA: 0x005D02F2 File Offset: 0x005CE4F2
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
@@ -32,7 +32,7 @@ public class MoonTogetherRoleItem : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x060164ED RID: 91373 RVA: 0x005A5340 File Offset: 0x005A3540
+	// Token: 0x06013EF4 RID: 81652 RVA: 0x005D0318 File Offset: 0x005CE518
 	public void RefreshRoleInfo(int roleId)
 	{
 		if (roleId > 0)
@@ -65,7 +65,7 @@ public class MoonTogetherRoleItem : UiPanelBase
 		texture4.SetUIActive(false);
 	}
 
-	// Token: 0x060164EE RID: 91374 RVA: 0x005A53EF File Offset: 0x005A35EF
+	// Token: 0x06013EF5 RID: 81653 RVA: 0x005D03C7 File Offset: 0x005CE5C7
 	private void OnSetRoleSkinIcon(bool success)
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -76,22 +76,22 @@ public class MoonTogetherRoleItem : UiPanelBase
 		texture.SetUIActive(true);
 	}
 
-	// Token: 0x0200903C RID: 36924
+	// Token: 0x02008283 RID: 33411
 	private class EMoonTogetherRoleItem
 	{
-		// Token: 0x0402EB3F RID: 191295
+		// Token: 0x0402A237 RID: 172599
 		public const int Toggle = 0;
 
-		// Token: 0x0402EB40 RID: 191296
+		// Token: 0x0402A238 RID: 172600
 		public const int EmptyTexture = 1;
 
-		// Token: 0x0402EB41 RID: 191297
+		// Token: 0x0402A239 RID: 172601
 		public const int RoleIconTexture = 2;
 
-		// Token: 0x0402EB42 RID: 191298
+		// Token: 0x0402A23A RID: 172602
 		public const int BathNumPanel = 3;
 
-		// Token: 0x0402EB43 RID: 191299
+		// Token: 0x0402A23B RID: 172603
 		public const int BathNumText = 4;
 	}
 }

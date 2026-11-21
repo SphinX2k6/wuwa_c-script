@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001253 RID: 4691
+// Token: 0x02000707 RID: 1799
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoMonopolyTipsView : UiViewBase
 {
-	// Token: 0x17000AD0 RID: 2768
-	// (get) Token: 0x06007F75 RID: 32629 RVA: 0x001B013A File Offset: 0x001AE33A
+	// Token: 0x17000AF0 RID: 2800
+	// (get) Token: 0x0600530C RID: 21260 RVA: 0x001B8DEA File Offset: 0x001B6FEA
 	public new DangoMonopolyTipsViewParams OpenParam
 	{
 		get
@@ -21,13 +21,13 @@ public class DangoMonopolyTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007F76 RID: 32630 RVA: 0x001B0147 File Offset: 0x001AE347
+	// Token: 0x0600530D RID: 21261 RVA: 0x001B8DF7 File Offset: 0x001B6FF7
 	[NullableContext(1)]
 	public DangoMonopolyTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007F77 RID: 32631 RVA: 0x001B0150 File Offset: 0x001AE350
+	// Token: 0x0600530E RID: 21262 RVA: 0x001B8E00 File Offset: 0x001B7000
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,12 +37,12 @@ public class DangoMonopolyTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007F78 RID: 32632 RVA: 0x001B0189 File Offset: 0x001AE389
+	// Token: 0x0600530F RID: 21263 RVA: 0x001B8E39 File Offset: 0x001B7039
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007F79 RID: 32633 RVA: 0x001B018C File Offset: 0x001AE38C
+	// Token: 0x06005310 RID: 21264 RVA: 0x001B8E3C File Offset: 0x001B703C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyTipsView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -53,13 +53,13 @@ public class DangoMonopolyTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F7A RID: 32634 RVA: 0x001B01CF File Offset: 0x001AE3CF
+	// Token: 0x06005311 RID: 21265 RVA: 0x001B8E7F File Offset: 0x001B707F
 	protected override void OnBeforeShow()
 	{
 		this.ShowData().Forget();
 	}
 
-	// Token: 0x06007F7B RID: 32635 RVA: 0x001B01DC File Offset: 0x001AE3DC
+	// Token: 0x06005312 RID: 21266 RVA: 0x001B8E8C File Offset: 0x001B708C
 	public UniTask ShowData()
 	{
 		DangoMonopolyTipsView.<ShowData>d__8 <ShowData>d__;
@@ -70,7 +70,7 @@ public class DangoMonopolyTipsView : UiViewBase
 		return <ShowData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007F7C RID: 32636 RVA: 0x001B021F File Offset: 0x001AE41F
+	// Token: 0x06005313 RID: 21267 RVA: 0x001B8ECF File Offset: 0x001B70CF
 	public void UpdateIcon(string icon)
 	{
 		if (icon != null)
@@ -79,13 +79,13 @@ public class DangoMonopolyTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0200786C RID: 30828
+	// Token: 0x020069F7 RID: 27127
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027AE5 RID: 162533
+		// Token: 0x04022E16 RID: 142870
 		TextureIcon,
-		// Token: 0x04027AE6 RID: 162534
+		// Token: 0x04022E17 RID: 142871
 		TxtDesc
 	}
 }

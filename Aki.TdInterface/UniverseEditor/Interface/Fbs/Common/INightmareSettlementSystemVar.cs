@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E0F RID: 24079
+	// Token: 0x0200644C RID: 25676
 	public struct INightmareSettlementSystemVar : IFlatbufferObject
 	{
-		// Token: 0x1700B42D RID: 46125
-		// (get) Token: 0x06029391 RID: 168849 RVA: 0x005A7ADC File Offset: 0x005A5CDC
+		// Token: 0x1700BD93 RID: 48531
+		// (get) Token: 0x0602BA1B RID: 178715 RVA: 0x005F080C File Offset: 0x005EEA0C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029392 RID: 168850 RVA: 0x005A7AE9 File Offset: 0x005A5CE9
+		// Token: 0x0602BA1C RID: 178716 RVA: 0x005F0819 File Offset: 0x005EEA19
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029393 RID: 168851 RVA: 0x005A7AF0 File Offset: 0x005A5CF0
+		// Token: 0x0602BA1D RID: 178717 RVA: 0x005F0820 File Offset: 0x005EEA20
 		public static INightmareSettlementSystemVar GetRootAsINightmareSettlementSystemVar(ByteBuffer _bb)
 		{
 			return INightmareSettlementSystemVar.GetRootAsINightmareSettlementSystemVar(_bb, default(INightmareSettlementSystemVar));
 		}
 
-		// Token: 0x06029394 RID: 168852 RVA: 0x005A7B0C File Offset: 0x005A5D0C
+		// Token: 0x0602BA1E RID: 178718 RVA: 0x005F083C File Offset: 0x005EEA3C
 		public static INightmareSettlementSystemVar GetRootAsINightmareSettlementSystemVar(ByteBuffer _bb, INightmareSettlementSystemVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029395 RID: 168853 RVA: 0x005A7B29 File Offset: 0x005A5D29
+		// Token: 0x0602BA1F RID: 178719 RVA: 0x005F0859 File Offset: 0x005EEA59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029396 RID: 168854 RVA: 0x005A7B38 File Offset: 0x005A5D38
+		// Token: 0x0602BA20 RID: 178720 RVA: 0x005F0868 File Offset: 0x005EEA68
 		public INightmareSettlementSystemVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B42E RID: 46126
-		// (get) Token: 0x06029397 RID: 168855 RVA: 0x005A7B48 File Offset: 0x005A5D48
+		// Token: 0x1700BD94 RID: 48532
+		// (get) Token: 0x0602BA21 RID: 178721 RVA: 0x005F0878 File Offset: 0x005EEA78
 		public ENightmareSettlementSystemVarType VarType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B42F RID: 46127
-		// (get) Token: 0x06029398 RID: 168856 RVA: 0x005A7B84 File Offset: 0x005A5D84
+		// Token: 0x1700BD95 RID: 48533
+		// (get) Token: 0x0602BA22 RID: 178722 RVA: 0x005F08B4 File Offset: 0x005EEAB4
 		public TVarRef VarRefType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029399 RID: 168857 RVA: 0x005A7BC0 File Offset: 0x005A5DC0
+		// Token: 0x0602BA23 RID: 178723 RVA: 0x005F08F0 File Offset: 0x005EEAF0
 		public TTable? VarRef<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602939A RID: 168858 RVA: 0x005A7C04 File Offset: 0x005A5E04
+		// Token: 0x0602BA24 RID: 178724 RVA: 0x005F0934 File Offset: 0x005EEB34
 		public IConstVarRef VarRefAsIConstVarRef()
 		{
 			return this.VarRef<IConstVarRef>().Value;
 		}
 
-		// Token: 0x0602939B RID: 168859 RVA: 0x005A7C20 File Offset: 0x005A5E20
+		// Token: 0x0602BA25 RID: 178725 RVA: 0x005F0950 File Offset: 0x005EEB50
 		public IGlobalVarRef VarRefAsIGlobalVarRef()
 		{
 			return this.VarRef<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x0602939C RID: 168860 RVA: 0x005A7C3C File Offset: 0x005A5E3C
+		// Token: 0x0602BA26 RID: 178726 RVA: 0x005F096C File Offset: 0x005EEB6C
 		public IOtherVarRef VarRefAsIOtherVarRef()
 		{
 			return this.VarRef<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x0602939D RID: 168861 RVA: 0x005A7C58 File Offset: 0x005A5E58
+		// Token: 0x0602BA27 RID: 178727 RVA: 0x005F0988 File Offset: 0x005EEB88
 		public ISelfVarRef VarRefAsISelfVarRef()
 		{
 			return this.VarRef<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0602939E RID: 168862 RVA: 0x005A7C74 File Offset: 0x005A5E74
+		// Token: 0x0602BA28 RID: 178728 RVA: 0x005F09A4 File Offset: 0x005EEBA4
 		public ISystemVarRef VarRefAsISystemVarRef()
 		{
 			return this.VarRef<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0602939F RID: 168863 RVA: 0x005A7C8F File Offset: 0x005A5E8F
+		// Token: 0x0602BA29 RID: 178729 RVA: 0x005F09BF File Offset: 0x005EEBBF
 		public static Offset<INightmareSettlementSystemVar> CreateINightmareSettlementSystemVar(FlatBufferBuilder builder, ENightmareSettlementSystemVarType VarType = ENightmareSettlementSystemVarType.MonsterKilled, TVarRef VarRef_type = TVarRef.NONE, int VarRefOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return INightmareSettlementSystemVar.EndINightmareSettlementSystemVar(builder);
 		}
 
-		// Token: 0x060293A0 RID: 168864 RVA: 0x005A7CB3 File Offset: 0x005A5EB3
+		// Token: 0x0602BA2A RID: 178730 RVA: 0x005F09E3 File Offset: 0x005EEBE3
 		public static void StartINightmareSettlementSystemVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060293A1 RID: 168865 RVA: 0x005A7CBC File Offset: 0x005A5EBC
+		// Token: 0x0602BA2B RID: 178731 RVA: 0x005F09EC File Offset: 0x005EEBEC
 		public static void AddVarType(FlatBufferBuilder builder, ENightmareSettlementSystemVarType varType)
 		{
 			builder.AddByte(0, (byte)varType, 0);
 		}
 
-		// Token: 0x060293A2 RID: 168866 RVA: 0x005A7CC7 File Offset: 0x005A5EC7
+		// Token: 0x0602BA2C RID: 178732 RVA: 0x005F09F7 File Offset: 0x005EEBF7
 		public static void AddVarRefType(FlatBufferBuilder builder, TVarRef varRefType)
 		{
 			builder.AddByte(1, (byte)varRefType, 0);
 		}
 
-		// Token: 0x060293A3 RID: 168867 RVA: 0x005A7CD2 File Offset: 0x005A5ED2
+		// Token: 0x0602BA2D RID: 178733 RVA: 0x005F0A02 File Offset: 0x005EEC02
 		public static void AddVarRef(FlatBufferBuilder builder, int varRefOffset)
 		{
 			builder.AddOffset(2, varRefOffset, 0);
 		}
 
-		// Token: 0x060293A4 RID: 168868 RVA: 0x005A7CDD File Offset: 0x005A5EDD
+		// Token: 0x0602BA2E RID: 178734 RVA: 0x005F0A0D File Offset: 0x005EEC0D
 		public static Offset<INightmareSettlementSystemVar> EndINightmareSettlementSystemVar(FlatBufferBuilder builder)
 		{
 			return new Offset<INightmareSettlementSystemVar>(builder.EndTable());
 		}
 
-		// Token: 0x060293A5 RID: 168869 RVA: 0x005A7CEC File Offset: 0x005A5EEC
+		// Token: 0x0602BA2F RID: 178735 RVA: 0x005F0A1C File Offset: 0x005EEC1C
 		public INightmareSettlementSystemVarT UnPack()
 		{
 			INightmareSettlementSystemVarT nightmareSettlementSystemVarT = new INightmareSettlementSystemVarT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return nightmareSettlementSystemVarT;
 		}
 
-		// Token: 0x060293A6 RID: 168870 RVA: 0x005A7D08 File Offset: 0x005A5F08
+		// Token: 0x0602BA30 RID: 178736 RVA: 0x005F0A38 File Offset: 0x005EEC38
 		public void UnPackTo(INightmareSettlementSystemVarT _o)
 		{
 			_o.VarType = this.VarType;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060293A7 RID: 168871 RVA: 0x005A7E74 File Offset: 0x005A6074
+		// Token: 0x0602BA31 RID: 178737 RVA: 0x005F0BA4 File Offset: 0x005EEDA4
 		public static Offset<INightmareSettlementSystemVar> Pack(FlatBufferBuilder builder, INightmareSettlementSystemVarT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return INightmareSettlementSystemVar.CreateINightmareSettlementSystemVar(builder, _o.VarType, varRef_type, varRefOffset);
 		}
 
-		// Token: 0x0400F805 RID: 63493
+		// Token: 0x04010560 RID: 66912
 		private Table __p;
 	}
 }

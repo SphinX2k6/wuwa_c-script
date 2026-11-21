@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F94 RID: 8084
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021D7 RID: 8663
 	public class ITelePortAfterTimeOut : ITeammateTeleportConfig
 	{
-		// Token: 0x0600B1C8 RID: 45512 RVA: 0x0019EA30 File Offset: 0x0019CC30
+		// Token: 0x0600BCCC RID: 48332 RVA: 0x001B4DE0 File Offset: 0x001B2FE0
 		private ITelePortAfterTimeOut_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B1C9 RID: 45513 RVA: 0x0019EA68 File Offset: 0x0019CC68
+		// Token: 0x0600BCCD RID: 48333 RVA: 0x001B4E18 File Offset: 0x001B3018
 		public static ITelePortAfterTimeOut Create([Nullable(2)] ITelePortAfterTimeOut instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1CA RID: 45514 RVA: 0x0019EA7B File Offset: 0x0019CC7B
+		// Token: 0x0600BCCE RID: 48334 RVA: 0x001B4E2B File Offset: 0x001B302B
 		public static ITelePortAfterTimeOut CreateFromSetValue([Nullable(2)] ITelePortAfterTimeOut_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B1CB RID: 45515 RVA: 0x0019EA8E File Offset: 0x0019CC8E
+		// Token: 0x0600BCCF RID: 48335 RVA: 0x001B4E3E File Offset: 0x001B303E
 		public new ITelePortAfterTimeOut_SetValue ToSetValue()
 		{
 			return new ITelePortAfterTimeOut_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036DE RID: 14046
-		// (get) Token: 0x0600B1CC RID: 45516 RVA: 0x0019EAAD File Offset: 0x0019CCAD
-		// (set) Token: 0x0600B1CD RID: 45517 RVA: 0x0019EAD8 File Offset: 0x0019CCD8
+		// Token: 0x170039B3 RID: 14771
+		// (get) Token: 0x0600BCD0 RID: 48336 RVA: 0x001B4E5D File Offset: 0x001B305D
+		// (set) Token: 0x0600BCD1 RID: 48337 RVA: 0x001B4E88 File Offset: 0x001B3088
 		public override ETeammateTeleportType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036DF RID: 14047
-		// (get) Token: 0x0600B1CE RID: 45518 RVA: 0x0019EAE6 File Offset: 0x0019CCE6
-		// (set) Token: 0x0600B1CF RID: 45519 RVA: 0x0019EB11 File Offset: 0x0019CD11
+		// Token: 0x170039B4 RID: 14772
+		// (get) Token: 0x0600BCD2 RID: 48338 RVA: 0x001B4E96 File Offset: 0x001B3096
+		// (set) Token: 0x0600BCD3 RID: 48339 RVA: 0x001B4EC1 File Offset: 0x001B30C1
 		public virtual int TimeOut
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B71 RID: 27505
+		// Token: 0x0400716C RID: 29036
 		[Nullable(2)]
 		protected new ITelePortAfterTimeOut FbInstance;
 
-		// Token: 0x04006B72 RID: 27506
+		// Token: 0x0400716D RID: 29037
 		[Nullable(2)]
 		protected new ITelePortAfterTimeOut_SetValue PocoInterface;
 	}

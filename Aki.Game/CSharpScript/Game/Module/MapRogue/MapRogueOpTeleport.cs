@@ -6,24 +6,24 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055BE RID: 21950
+	// Token: 0x02004594 RID: 17812
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueOpTeleport : MapRogueOp
 	{
-		// Token: 0x170086D4 RID: 34516
-		// (get) Token: 0x06037F58 RID: 229208 RVA: 0x00D41FCD File Offset: 0x00D401CD
-		// (set) Token: 0x06037F59 RID: 229209 RVA: 0x00D41FD5 File Offset: 0x00D401D5
+		// Token: 0x17005A9B RID: 23195
+		// (get) Token: 0x0602CE56 RID: 183894 RVA: 0x00C8FD15 File Offset: 0x00C8DF15
+		// (set) Token: 0x0602CE57 RID: 183895 RVA: 0x00C8FD1D File Offset: 0x00C8DF1D
 		public override int StepSize { get; set; } = 1;
 
-		// Token: 0x06037F5A RID: 229210 RVA: 0x00D41FDE File Offset: 0x00D401DE
+		// Token: 0x0602CE58 RID: 183896 RVA: 0x00C8FD26 File Offset: 0x00C8DF26
 		public MapRogueOpTeleport()
 		{
 			this.ExecuteInMapView = true;
 			this.ExecuteAfterMapViewShow = true;
 		}
 
-		// Token: 0x06037F5B RID: 229211 RVA: 0x00D41FFC File Offset: 0x00D401FC
+		// Token: 0x0602CE59 RID: 183897 RVA: 0x00C8FD44 File Offset: 0x00C8DF44
 		public override string ToString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(25, 2);
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06037F5C RID: 229212 RVA: 0x00D4206A File Offset: 0x00D4026A
+		// Token: 0x0602CE5A RID: 183898 RVA: 0x00C8FDB2 File Offset: 0x00C8DFB2
 		protected override void OnStartExecute(MapRogueGameInfo gameInfo)
 		{
 			base.Execute(gameInfo, null);
 		}
 
-		// Token: 0x06037F5D RID: 229213 RVA: 0x00D42074 File Offset: 0x00D40274
+		// Token: 0x0602CE5B RID: 183899 RVA: 0x00C8FDBC File Offset: 0x00C8DFBC
 		protected override void OnExecute(MapRogueGameInfo gameInfo)
 		{
 			MapTeleportByLocationOp mapTeleportByLocationOp = this.Data.MapTeleportByLocationOp;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			});
 		}
 
-		// Token: 0x06037F5E RID: 229214 RVA: 0x00D420DB File Offset: 0x00D402DB
+		// Token: 0x0602CE5C RID: 183900 RVA: 0x00C8FE23 File Offset: 0x00C8E023
 		protected override void OnFinish(MapRogueGameInfo gameInfo)
 		{
 		}

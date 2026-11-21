@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F4B RID: 8011
+// Token: 0x0200140D RID: 5133
 public class LockExecutionUnit : HudUnitBase
 {
-	// Token: 0x0600F7B8 RID: 63416 RVA: 0x003BEB98 File Offset: 0x003BCD98
+	// Token: 0x0600CBD7 RID: 52183 RVA: 0x003CA684 File Offset: 0x003C8884
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class LockExecutionUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F7B9 RID: 63417 RVA: 0x003BEC22 File Offset: 0x003BCE22
+	// Token: 0x0600CBD8 RID: 52184 RVA: 0x003CA70E File Offset: 0x003C890E
 	protected override void OnStart()
 	{
 		this.RootItem.SetAnchorAlign(UIAnchorHorizontalAlign.Center, UIAnchorVerticalAlign.Middle);
@@ -34,7 +34,7 @@ public class LockExecutionUnit : HudUnitBase
 		base.InitTweenAnim(2);
 	}
 
-	// Token: 0x0600F7BA RID: 63418 RVA: 0x003BEC46 File Offset: 0x003BCE46
+	// Token: 0x0600CBD9 RID: 52185 RVA: 0x003CA732 File Offset: 0x003C8932
 	public void TryShow()
 	{
 		if (!base.IsShowOrShowing)
@@ -43,7 +43,7 @@ public class LockExecutionUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7BB RID: 63419 RVA: 0x003BEC57 File Offset: 0x003BCE57
+	// Token: 0x0600CBDA RID: 52186 RVA: 0x003CA743 File Offset: 0x003C8943
 	protected override void OnAfterShow()
 	{
 		base.StopTweenAnim(2);
@@ -51,7 +51,7 @@ public class LockExecutionUnit : HudUnitBase
 		base.PlayTweenAnim(1);
 	}
 
-	// Token: 0x0600F7BC RID: 63420 RVA: 0x003BEC6E File Offset: 0x003BCE6E
+	// Token: 0x0600CBDB RID: 52187 RVA: 0x003CA75A File Offset: 0x003C895A
 	public void TryHide(bool playCloseAnim)
 	{
 		this.PlayCloseAnim = playCloseAnim;
@@ -61,7 +61,7 @@ public class LockExecutionUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7BD RID: 63421 RVA: 0x003BEC88 File Offset: 0x003BCE88
+	// Token: 0x0600CBDC RID: 52188 RVA: 0x003CA774 File Offset: 0x003C8974
 	protected override UniTask OnBeforeHideAsync()
 	{
 		LockExecutionUnit.<OnBeforeHideAsync>d__10 <OnBeforeHideAsync>d__;
@@ -72,7 +72,7 @@ public class LockExecutionUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F7BE RID: 63422 RVA: 0x003BECCB File Offset: 0x003BCECB
+	// Token: 0x0600CBDD RID: 52189 RVA: 0x003CA7B7 File Offset: 0x003C89B7
 	private void OnCloseAnimTimerEnd()
 	{
 		this.CloseTimer = null;
@@ -80,7 +80,7 @@ public class LockExecutionUnit : HudUnitBase
 		this.Promise = null;
 	}
 
-	// Token: 0x0600F7BF RID: 63423 RVA: 0x003BECE6 File Offset: 0x003BCEE6
+	// Token: 0x0600CBDE RID: 52190 RVA: 0x003CA7D2 File Offset: 0x003C89D2
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CloseTimer != null)
@@ -91,28 +91,28 @@ public class LockExecutionUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x040072DE RID: 29406
+	// Token: 0x040073BF RID: 29631
 	private const int CLOSE_ANIM_TIME = 200;
 
-	// Token: 0x040072DF RID: 29407
+	// Token: 0x040073C0 RID: 29632
 	[Nullable(2)]
 	private TimerHandle CloseTimer;
 
-	// Token: 0x040072E0 RID: 29408
+	// Token: 0x040073C1 RID: 29633
 	private bool PlayCloseAnim;
 
-	// Token: 0x040072E1 RID: 29409
+	// Token: 0x040073C2 RID: 29634
 	[Nullable(2)]
 	private CustomPromise Promise;
 
-	// Token: 0x02008540 RID: 34112
+	// Token: 0x020076C5 RID: 30405
 	private enum EChildType
 	{
-		// Token: 0x0402B61A RID: 177690
+		// Token: 0x0402693E RID: 158014
 		AnimStart,
-		// Token: 0x0402B61B RID: 177691
+		// Token: 0x0402693F RID: 158015
 		AnimLoop,
-		// Token: 0x0402B61C RID: 177692
+		// Token: 0x04026940 RID: 158016
 		AnimClose
 	}
 }

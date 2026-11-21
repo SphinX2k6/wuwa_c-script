@@ -4,69 +4,69 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02000E7D RID: 3709
+// Token: 0x02000332 RID: 818
 [NullableContext(2)]
 public interface IKscEntityParam
 {
-	// Token: 0x17000683 RID: 1667
-	// (get) Token: 0x06005A74 RID: 23156
-	// (set) Token: 0x06005A75 RID: 23157
+	// Token: 0x170006A7 RID: 1703
+	// (get) Token: 0x06002E0B RID: 11787
+	// (set) Token: 0x06002E0C RID: 11788
 	long CreatureId { get; set; }
 
-	// Token: 0x17000684 RID: 1668
-	// (get) Token: 0x06005A76 RID: 23158
-	// (set) Token: 0x06005A77 RID: 23159
+	// Token: 0x170006A8 RID: 1704
+	// (get) Token: 0x06002E0D RID: 11789
+	// (set) Token: 0x06002E0E RID: 11790
 	int SimpleCombatId { get; set; }
 
-	// Token: 0x17000685 RID: 1669
-	// (get) Token: 0x06005A78 RID: 23160
-	// (set) Token: 0x06005A79 RID: 23161
+	// Token: 0x170006A9 RID: 1705
+	// (get) Token: 0x06002E0F RID: 11791
+	// (set) Token: 0x06002E10 RID: 11792
 	[Nullable(1)]
 	string AssetPath { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000686 RID: 1670
-	// (get) Token: 0x06005A7A RID: 23162
-	// (set) Token: 0x06005A7B RID: 23163
+	// Token: 0x170006AA RID: 1706
+	// (get) Token: 0x06002E11 RID: 11793
+	// (set) Token: 0x06002E12 RID: 11794
 	int PropertyId { get; set; }
 
-	// Token: 0x17000687 RID: 1671
-	// (get) Token: 0x06005A7C RID: 23164
-	// (set) Token: 0x06005A7D RID: 23165
+	// Token: 0x170006AB RID: 1707
+	// (get) Token: 0x06002E13 RID: 11795
+	// (set) Token: 0x06002E14 RID: 11796
 	FTransformDouble Transform { get; set; }
 
-	// Token: 0x17000688 RID: 1672
-	// (get) Token: 0x06005A7E RID: 23166
-	// (set) Token: 0x06005A7F RID: 23167
+	// Token: 0x170006AC RID: 1708
+	// (get) Token: 0x06002E15 RID: 11797
+	// (set) Token: 0x06002E16 RID: 11798
 	USplineComponent Spline { get; set; }
 
-	// Token: 0x17000689 RID: 1673
-	// (get) Token: 0x06005A80 RID: 23168
-	// (set) Token: 0x06005A81 RID: 23169
+	// Token: 0x170006AD RID: 1709
+	// (get) Token: 0x06002E17 RID: 11799
+	// (set) Token: 0x06002E18 RID: 11800
 	Dictionary<int, int> Buffs { get; set; }
 
-	// Token: 0x1700068A RID: 1674
-	// (get) Token: 0x06005A82 RID: 23170
-	// (set) Token: 0x06005A83 RID: 23171
+	// Token: 0x170006AE RID: 1710
+	// (get) Token: 0x06002E19 RID: 11801
+	// (set) Token: 0x06002E1A RID: 11802
 	Dictionary<int, int> AttributeMap { get; set; }
 
-	// Token: 0x1700068B RID: 1675
-	// (get) Token: 0x06005A84 RID: 23172
-	// (set) Token: 0x06005A85 RID: 23173
+	// Token: 0x170006AF RID: 1711
+	// (get) Token: 0x06002E1B RID: 11803
+	// (set) Token: 0x06002E1C RID: 11804
 	EKSC_Faction? Faction { get; set; }
 
-	// Token: 0x1700068C RID: 1676
-	// (get) Token: 0x06005A86 RID: 23174
-	// (set) Token: 0x06005A87 RID: 23175
+	// Token: 0x170006B0 RID: 1712
+	// (get) Token: 0x06002E1D RID: 11805
+	// (set) Token: 0x06002E1E RID: 11806
 	AActor RenderActor { get; set; }
 
-	// Token: 0x1700068D RID: 1677
-	// (get) Token: 0x06005A88 RID: 23176
-	// (set) Token: 0x06005A89 RID: 23177
+	// Token: 0x170006B1 RID: 1713
+	// (get) Token: 0x06002E1F RID: 11807
+	// (set) Token: 0x06002E20 RID: 11808
 	bool? IsPreview { get; set; }
 
-	// Token: 0x1700068E RID: 1678
-	// (get) Token: 0x06005A8A RID: 23178
-	// (set) Token: 0x06005A8B RID: 23179
+	// Token: 0x170006B2 RID: 1714
+	// (get) Token: 0x06002E21 RID: 11809
+	// (set) Token: 0x06002E22 RID: 11810
 	[Nullable(new byte[]
 	{
 		2,
@@ -82,9 +82,9 @@ public interface IKscEntityParam
 		1
 	})] set; }
 
-	// Token: 0x1700068F RID: 1679
-	// (get) Token: 0x06005A8C RID: 23180
-	// (set) Token: 0x06005A8D RID: 23181
+	// Token: 0x170006B3 RID: 1715
+	// (get) Token: 0x06002E23 RID: 11811
+	// (set) Token: 0x06002E24 RID: 11812
 	[Nullable(new byte[]
 	{
 		2,
@@ -100,8 +100,8 @@ public interface IKscEntityParam
 		1
 	})] set; }
 
-	// Token: 0x17000690 RID: 1680
-	// (get) Token: 0x06005A8E RID: 23182
-	// (set) Token: 0x06005A8F RID: 23183
+	// Token: 0x170006B4 RID: 1716
+	// (get) Token: 0x06002E25 RID: 11813
+	// (set) Token: 0x06002E26 RID: 11814
 	UniTask? WaitToBegin { get; set; }
 }

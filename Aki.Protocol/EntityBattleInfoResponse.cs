@@ -9,19 +9,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200046D RID: 1133
+	// Token: 0x02000456 RID: 1110
 	[NetMessage(EMessageId.EntityBattleInfoResponse)]
 	public sealed class EntityBattleInfoResponse : IMessage<EntityBattleInfoResponse>, IMessage, IEquatable<EntityBattleInfoResponse>, IDeepCloneable<EntityBattleInfoResponse>, IBufferMessage
 	{
-		// Token: 0x06006C0E RID: 27662 RVA: 0x00104B31 File Offset: 0x00102D31
+		// Token: 0x06006A80 RID: 27264 RVA: 0x00101ABD File Offset: 0x000FFCBD
 		[NullableContext(1)]
 		public static EntityBattleInfoResponse Create()
 		{
 			return new EntityBattleInfoResponse();
 		}
 
-		// Token: 0x17001480 RID: 5248
-		// (get) Token: 0x06006C0F RID: 27663 RVA: 0x00104B38 File Offset: 0x00102D38
+		// Token: 0x1700142C RID: 5164
+		// (get) Token: 0x06006A81 RID: 27265 RVA: 0x00101AC4 File Offset: 0x000FFCC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,8 +32,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001481 RID: 5249
-		// (get) Token: 0x06006C10 RID: 27664 RVA: 0x00104B3B File Offset: 0x00102D3B
+		// Token: 0x1700142D RID: 5165
+		// (get) Token: 0x06006A82 RID: 27266 RVA: 0x00101AC7 File Offset: 0x000FFCC7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -44,14 +44,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006C11 RID: 27665 RVA: 0x00104B44 File Offset: 0x00102D44
+		// Token: 0x06006A83 RID: 27267 RVA: 0x00101AD0 File Offset: 0x000FFCD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityBattleInfoResponse()
 		{
 		}
 
-		// Token: 0x06006C12 RID: 27666 RVA: 0x00104B9C File Offset: 0x00102D9C
+		// Token: 0x06006A84 RID: 27268 RVA: 0x00101B28 File Offset: 0x000FFD28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityBattleInfoResponse(EntityBattleInfoResponse other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006C13 RID: 27667 RVA: 0x00104C8D File Offset: 0x00102E8D
+		// Token: 0x06006A85 RID: 27269 RVA: 0x00101C19 File Offset: 0x000FFE19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityBattleInfoResponse Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new EntityBattleInfoResponse(this);
 		}
 
-		// Token: 0x17001482 RID: 5250
-		// (get) Token: 0x06006C14 RID: 27668 RVA: 0x00104C95 File Offset: 0x00102E95
-		// (set) Token: 0x06006C15 RID: 27669 RVA: 0x00104C9D File Offset: 0x00102E9D
+		// Token: 0x1700142E RID: 5166
+		// (get) Token: 0x06006A86 RID: 27270 RVA: 0x00101C21 File Offset: 0x000FFE21
+		// (set) Token: 0x06006A87 RID: 27271 RVA: 0x00101C29 File Offset: 0x000FFE29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001483 RID: 5251
-		// (get) Token: 0x06006C16 RID: 27670 RVA: 0x00104CA6 File Offset: 0x00102EA6
-		// (set) Token: 0x06006C17 RID: 27671 RVA: 0x00104CAE File Offset: 0x00102EAE
+		// Token: 0x1700142F RID: 5167
+		// (get) Token: 0x06006A88 RID: 27272 RVA: 0x00101C32 File Offset: 0x000FFE32
+		// (set) Token: 0x06006A89 RID: 27273 RVA: 0x00101C3A File Offset: 0x000FFE3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001484 RID: 5252
-		// (get) Token: 0x06006C18 RID: 27672 RVA: 0x00104CB7 File Offset: 0x00102EB7
-		// (set) Token: 0x06006C19 RID: 27673 RVA: 0x00104CBF File Offset: 0x00102EBF
+		// Token: 0x17001430 RID: 5168
+		// (get) Token: 0x06006A8A RID: 27274 RVA: 0x00101C43 File Offset: 0x000FFE43
+		// (set) Token: 0x06006A8B RID: 27275 RVA: 0x00101C4B File Offset: 0x000FFE4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FightBuffComponentPb FightBuffComponentPb
@@ -129,8 +129,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001485 RID: 5253
-		// (get) Token: 0x06006C1A RID: 27674 RVA: 0x00104CC8 File Offset: 0x00102EC8
+		// Token: 0x17001431 RID: 5169
+		// (get) Token: 0x06006A8C RID: 27276 RVA: 0x00101C54 File Offset: 0x000FFE54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EntityBattleTagInfo> EntityBattleTagInfo
@@ -141,8 +141,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001486 RID: 5254
-		// (get) Token: 0x06006C1B RID: 27675 RVA: 0x00104CD0 File Offset: 0x00102ED0
+		// Token: 0x17001432 RID: 5170
+		// (get) Token: 0x06006A8D RID: 27277 RVA: 0x00101C5C File Offset: 0x000FFE5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GameplayAttributeData> Attributes
@@ -153,8 +153,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001487 RID: 5255
-		// (get) Token: 0x06006C1C RID: 27676 RVA: 0x00104CD8 File Offset: 0x00102ED8
+		// Token: 0x17001433 RID: 5171
+		// (get) Token: 0x06006A8E RID: 27278 RVA: 0x00101C64 File Offset: 0x000FFE64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FormationAttr> FormationAttrs
@@ -165,9 +165,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001488 RID: 5256
-		// (get) Token: 0x06006C1D RID: 27677 RVA: 0x00104CE0 File Offset: 0x00102EE0
-		// (set) Token: 0x06006C1E RID: 27678 RVA: 0x00104CE8 File Offset: 0x00102EE8
+		// Token: 0x17001434 RID: 5172
+		// (get) Token: 0x06006A8F RID: 27279 RVA: 0x00101C6C File Offset: 0x000FFE6C
+		// (set) Token: 0x06006A90 RID: 27280 RVA: 0x00101C74 File Offset: 0x000FFE74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartComponentPb PartComponentPb
@@ -182,8 +182,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001489 RID: 5257
-		// (get) Token: 0x06006C1F RID: 27679 RVA: 0x00104CF1 File Offset: 0x00102EF1
+		// Token: 0x17001435 RID: 5173
+		// (get) Token: 0x06006A91 RID: 27281 RVA: 0x00101C7D File Offset: 0x000FFE7D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AiHateEntity> HateList
@@ -194,9 +194,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700148A RID: 5258
-		// (get) Token: 0x06006C20 RID: 27680 RVA: 0x00104CF9 File Offset: 0x00102EF9
-		// (set) Token: 0x06006C21 RID: 27681 RVA: 0x00104D01 File Offset: 0x00102F01
+		// Token: 0x17001436 RID: 5174
+		// (get) Token: 0x06006A92 RID: 27282 RVA: 0x00101C85 File Offset: 0x000FFE85
+		// (set) Token: 0x06006A93 RID: 27283 RVA: 0x00101C8D File Offset: 0x000FFE8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShieldComponentPb ShieldComponentPb
@@ -211,8 +211,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700148B RID: 5259
-		// (get) Token: 0x06006C22 RID: 27682 RVA: 0x00104D0A File Offset: 0x00102F0A
+		// Token: 0x17001437 RID: 5175
+		// (get) Token: 0x06006A94 RID: 27284 RVA: 0x00101C96 File Offset: 0x000FFE96
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<EntityBattleTagInfo> PlayerTagInfos
@@ -223,9 +223,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700148C RID: 5260
-		// (get) Token: 0x06006C23 RID: 27683 RVA: 0x00104D12 File Offset: 0x00102F12
-		// (set) Token: 0x06006C24 RID: 27684 RVA: 0x00104D1A File Offset: 0x00102F1A
+		// Token: 0x17001438 RID: 5176
+		// (get) Token: 0x06006A95 RID: 27285 RVA: 0x00101C9E File Offset: 0x000FFE9E
+		// (set) Token: 0x06006A96 RID: 27286 RVA: 0x00101CA6 File Offset: 0x000FFEA6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string EntityPassiveSkillInfo
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006C25 RID: 27685 RVA: 0x00104D2D File Offset: 0x00102F2D
+		// Token: 0x06006A97 RID: 27287 RVA: 0x00101CB9 File Offset: 0x000FFEB9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -248,7 +248,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EntityBattleInfoResponse);
 		}
 
-		// Token: 0x06006C26 RID: 27686 RVA: 0x00104D3C File Offset: 0x00102F3C
+		// Token: 0x06006A98 RID: 27288 RVA: 0x00101CC8 File Offset: 0x000FFEC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EntityBattleInfoResponse other)
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.EntityId == other.EntityId && this.ErrorCode == other.ErrorCode && object.Equals(this.FightBuffComponentPb, other.FightBuffComponentPb) && this.entityBattleTagInfo_.Equals(other.entityBattleTagInfo_) && this.attributes_.Equals(other.attributes_) && this.formationAttrs_.Equals(other.formationAttrs_) && object.Equals(this.PartComponentPb, other.PartComponentPb) && this.hateList_.Equals(other.hateList_) && object.Equals(this.ShieldComponentPb, other.ShieldComponentPb) && this.playerTagInfos_.Equals(other.playerTagInfos_) && !(this.EntityPassiveSkillInfo != other.EntityPassiveSkillInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006C27 RID: 27687 RVA: 0x00104E44 File Offset: 0x00103044
+		// Token: 0x06006A99 RID: 27289 RVA: 0x00101DD0 File Offset: 0x000FFFD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -298,7 +298,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006C28 RID: 27688 RVA: 0x00104F45 File Offset: 0x00103145
+		// Token: 0x06006A9A RID: 27290 RVA: 0x00101ED1 File Offset: 0x001000D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -306,7 +306,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006C29 RID: 27689 RVA: 0x00104F52 File Offset: 0x00103152
+		// Token: 0x06006A9B RID: 27291 RVA: 0x00101EDE File Offset: 0x001000DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -314,45 +314,45 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06006C2A RID: 27690 RVA: 0x00104F5C File Offset: 0x0010315C
+		// Token: 0x06006A9C RID: 27292 RVA: 0x00101EE8 File Offset: 0x001000E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.partComponentPb_ != null)
+			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(10);
-				output.WriteMessage(this.PartComponentPb);
+				output.WriteRawTag(8);
+				output.WriteEnum((int)this.ErrorCode);
+			}
+			this.hateList_.WriteTo(ref output, EntityBattleInfoResponse._repeated_hateList_codec);
+			this.playerTagInfos_.WriteTo(ref output, EntityBattleInfoResponse._repeated_playerTagInfos_codec);
+			this.attributes_.WriteTo(ref output, EntityBattleInfoResponse._repeated_attributes_codec);
+			if (this.EntityPassiveSkillInfo.Length != 0)
+			{
+				output.WriteRawTag(66);
+				output.WriteString(this.EntityPassiveSkillInfo);
 			}
 			if (this.fightBuffComponentPb_ != null)
 			{
-				output.WriteRawTag(18);
+				output.WriteRawTag(74);
 				output.WriteMessage(this.FightBuffComponentPb);
 			}
-			if (this.shieldComponentPb_ != null)
+			if (this.partComponentPb_ != null)
 			{
-				output.WriteRawTag(34);
-				output.WriteMessage(this.ShieldComponentPb);
+				output.WriteRawTag(82);
+				output.WriteMessage(this.PartComponentPb);
 			}
 			if (this.EntityId != 0L)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(96);
 				output.WriteInt64(this.EntityId);
 			}
 			this.entityBattleTagInfo_.WriteTo(ref output, EntityBattleInfoResponse._repeated_entityBattleTagInfo_codec);
 			this.formationAttrs_.WriteTo(ref output, EntityBattleInfoResponse._repeated_formationAttrs_codec);
-			this.attributes_.WriteTo(ref output, EntityBattleInfoResponse._repeated_attributes_codec);
-			if (this.EntityPassiveSkillInfo.Length != 0)
+			if (this.shieldComponentPb_ != null)
 			{
-				output.WriteRawTag(98);
-				output.WriteString(this.EntityPassiveSkillInfo);
-			}
-			this.playerTagInfos_.WriteTo(ref output, EntityBattleInfoResponse._repeated_playerTagInfos_codec);
-			this.hateList_.WriteTo(ref output, EntityBattleInfoResponse._repeated_hateList_codec);
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(120);
-				output.WriteEnum((int)this.ErrorCode);
+				output.WriteRawTag(122);
+				output.WriteMessage(this.ShieldComponentPb);
 			}
 			if (this._unknownFields != null)
 			{
@@ -360,7 +360,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006C2B RID: 27691 RVA: 0x00105080 File Offset: 0x00103280
+		// Token: 0x06006A9D RID: 27293 RVA: 0x0010200C File Offset: 0x0010020C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -402,7 +402,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006C2C RID: 27692 RVA: 0x0010519C File Offset: 0x0010339C
+		// Token: 0x06006A9E RID: 27294 RVA: 0x00102128 File Offset: 0x00100328
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EntityBattleInfoResponse other)
@@ -455,7 +455,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06006C2D RID: 27693 RVA: 0x001052DE File Offset: 0x001034DE
+		// Token: 0x06006A9F RID: 27295 RVA: 0x0010226A File Offset: 0x0010046A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -463,7 +463,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06006C2E RID: 27694 RVA: 0x001052E8 File Offset: 0x001034E8
+		// Token: 0x06006AA0 RID: 27296 RVA: 0x00102274 File Offset: 0x00100474
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -477,65 +477,61 @@ namespace Aki.Protocol
 				}
 				if (num <= 66U)
 				{
-					if (num <= 18U)
+					if (num <= 26U)
 					{
-						if (num == 10U)
+						if (num == 8U)
 						{
-							if (this.partComponentPb_ == null)
-							{
-								this.PartComponentPb = new PartComponentPb();
-							}
-							input.ReadMessage(this.PartComponentPb);
+							this.ErrorCode = (ErrorCode)input.ReadEnum();
 							continue;
 						}
-						if (num == 18U)
+						if (num == 26U)
 						{
-							if (this.fightBuffComponentPb_ == null)
-							{
-								this.FightBuffComponentPb = new FightBuffComponentPb();
-							}
-							input.ReadMessage(this.FightBuffComponentPb);
+							this.hateList_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_hateList_codec);
 							continue;
 						}
 					}
 					else
 					{
-						if (num == 34U)
+						if (num == 42U)
 						{
-							if (this.shieldComponentPb_ == null)
-							{
-								this.ShieldComponentPb = new ShieldComponentPb();
-							}
-							input.ReadMessage(this.ShieldComponentPb);
+							this.playerTagInfos_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_playerTagInfos_codec);
 							continue;
 						}
-						if (num == 48U)
+						if (num == 50U)
 						{
-							this.EntityId = input.ReadInt64();
+							this.attributes_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_attributes_codec);
 							continue;
 						}
 						if (num == 66U)
 						{
-							this.entityBattleTagInfo_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_entityBattleTagInfo_codec);
+							this.EntityPassiveSkillInfo = input.ReadString();
 							continue;
 						}
 					}
 				}
-				else if (num <= 98U)
+				else if (num <= 96U)
 				{
+					if (num == 74U)
+					{
+						if (this.fightBuffComponentPb_ == null)
+						{
+							this.FightBuffComponentPb = new FightBuffComponentPb();
+						}
+						input.ReadMessage(this.FightBuffComponentPb);
+						continue;
+					}
 					if (num == 82U)
 					{
-						this.formationAttrs_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_formationAttrs_codec);
+						if (this.partComponentPb_ == null)
+						{
+							this.PartComponentPb = new PartComponentPb();
+						}
+						input.ReadMessage(this.PartComponentPb);
 						continue;
 					}
-					if (num == 90U)
+					if (num == 96U)
 					{
-						this.attributes_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_attributes_codec);
-						continue;
-					}
-					if (num == 98U)
-					{
-						this.EntityPassiveSkillInfo = input.ReadString();
+						this.EntityId = input.ReadInt64();
 						continue;
 					}
 				}
@@ -543,17 +539,21 @@ namespace Aki.Protocol
 				{
 					if (num == 106U)
 					{
-						this.playerTagInfos_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_playerTagInfos_codec);
+						this.entityBattleTagInfo_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_entityBattleTagInfo_codec);
 						continue;
 					}
 					if (num == 114U)
 					{
-						this.hateList_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_hateList_codec);
+						this.formationAttrs_.AddEntriesFrom(ref input, EntityBattleInfoResponse._repeated_formationAttrs_codec);
 						continue;
 					}
-					if (num == 120U)
+					if (num == 122U)
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						if (this.shieldComponentPb_ == null)
+						{
+							this.ShieldComponentPb = new ShieldComponentPb();
+						}
+						input.ReadMessage(this.ShieldComponentPb);
 						continue;
 					}
 				}
@@ -561,88 +561,88 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003AC5 RID: 15045
+		// Token: 0x04003AB3 RID: 15027
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003AC6 RID: 15046
-		public const int EntityIdFieldNumber = 6;
+		// Token: 0x04003AB4 RID: 15028
+		public const int EntityIdFieldNumber = 12;
 
-		// Token: 0x04003AC7 RID: 15047
+		// Token: 0x04003AB5 RID: 15029
 		private long entityId_;
 
-		// Token: 0x04003AC8 RID: 15048
-		public const int ErrorCodeFieldNumber = 15;
+		// Token: 0x04003AB6 RID: 15030
+		public const int ErrorCodeFieldNumber = 1;
 
-		// Token: 0x04003AC9 RID: 15049
+		// Token: 0x04003AB7 RID: 15031
 		private ErrorCode errorCode_;
 
-		// Token: 0x04003ACA RID: 15050
-		public const int FightBuffComponentPbFieldNumber = 2;
+		// Token: 0x04003AB8 RID: 15032
+		public const int FightBuffComponentPbFieldNumber = 9;
 
-		// Token: 0x04003ACB RID: 15051
+		// Token: 0x04003AB9 RID: 15033
 		private FightBuffComponentPb fightBuffComponentPb_;
 
-		// Token: 0x04003ACC RID: 15052
-		public const int EntityBattleTagInfoFieldNumber = 8;
+		// Token: 0x04003ABA RID: 15034
+		public const int EntityBattleTagInfoFieldNumber = 13;
 
-		// Token: 0x04003ACD RID: 15053
-		private static readonly FieldCodec<EntityBattleTagInfo> _repeated_entityBattleTagInfo_codec = FieldCodec.ForMessage<EntityBattleTagInfo>(66U, Aki.Protocol.EntityBattleTagInfo.Parser);
+		// Token: 0x04003ABB RID: 15035
+		private static readonly FieldCodec<EntityBattleTagInfo> _repeated_entityBattleTagInfo_codec = FieldCodec.ForMessage<EntityBattleTagInfo>(106U, Aki.Protocol.EntityBattleTagInfo.Parser);
 
-		// Token: 0x04003ACE RID: 15054
+		// Token: 0x04003ABC RID: 15036
 		private readonly RepeatedField<EntityBattleTagInfo> entityBattleTagInfo_ = new RepeatedField<EntityBattleTagInfo>();
 
-		// Token: 0x04003ACF RID: 15055
-		public const int AttributesFieldNumber = 11;
+		// Token: 0x04003ABD RID: 15037
+		public const int AttributesFieldNumber = 6;
 
-		// Token: 0x04003AD0 RID: 15056
-		private static readonly FieldCodec<GameplayAttributeData> _repeated_attributes_codec = FieldCodec.ForMessage<GameplayAttributeData>(90U, GameplayAttributeData.Parser);
+		// Token: 0x04003ABE RID: 15038
+		private static readonly FieldCodec<GameplayAttributeData> _repeated_attributes_codec = FieldCodec.ForMessage<GameplayAttributeData>(50U, GameplayAttributeData.Parser);
 
-		// Token: 0x04003AD1 RID: 15057
+		// Token: 0x04003ABF RID: 15039
 		private readonly RepeatedField<GameplayAttributeData> attributes_ = new RepeatedField<GameplayAttributeData>();
 
-		// Token: 0x04003AD2 RID: 15058
-		public const int FormationAttrsFieldNumber = 10;
+		// Token: 0x04003AC0 RID: 15040
+		public const int FormationAttrsFieldNumber = 14;
 
-		// Token: 0x04003AD3 RID: 15059
-		private static readonly FieldCodec<FormationAttr> _repeated_formationAttrs_codec = FieldCodec.ForMessage<FormationAttr>(82U, FormationAttr.Parser);
+		// Token: 0x04003AC1 RID: 15041
+		private static readonly FieldCodec<FormationAttr> _repeated_formationAttrs_codec = FieldCodec.ForMessage<FormationAttr>(114U, FormationAttr.Parser);
 
-		// Token: 0x04003AD4 RID: 15060
+		// Token: 0x04003AC2 RID: 15042
 		private readonly RepeatedField<FormationAttr> formationAttrs_ = new RepeatedField<FormationAttr>();
 
-		// Token: 0x04003AD5 RID: 15061
-		public const int PartComponentPbFieldNumber = 1;
+		// Token: 0x04003AC3 RID: 15043
+		public const int PartComponentPbFieldNumber = 10;
 
-		// Token: 0x04003AD6 RID: 15062
+		// Token: 0x04003AC4 RID: 15044
 		private PartComponentPb partComponentPb_;
 
-		// Token: 0x04003AD7 RID: 15063
-		public const int HateListFieldNumber = 14;
+		// Token: 0x04003AC5 RID: 15045
+		public const int HateListFieldNumber = 3;
 
-		// Token: 0x04003AD8 RID: 15064
-		private static readonly FieldCodec<AiHateEntity> _repeated_hateList_codec = FieldCodec.ForMessage<AiHateEntity>(114U, AiHateEntity.Parser);
+		// Token: 0x04003AC6 RID: 15046
+		private static readonly FieldCodec<AiHateEntity> _repeated_hateList_codec = FieldCodec.ForMessage<AiHateEntity>(26U, AiHateEntity.Parser);
 
-		// Token: 0x04003AD9 RID: 15065
+		// Token: 0x04003AC7 RID: 15047
 		private readonly RepeatedField<AiHateEntity> hateList_ = new RepeatedField<AiHateEntity>();
 
-		// Token: 0x04003ADA RID: 15066
-		public const int ShieldComponentPbFieldNumber = 4;
+		// Token: 0x04003AC8 RID: 15048
+		public const int ShieldComponentPbFieldNumber = 15;
 
-		// Token: 0x04003ADB RID: 15067
+		// Token: 0x04003AC9 RID: 15049
 		private ShieldComponentPb shieldComponentPb_;
 
-		// Token: 0x04003ADC RID: 15068
-		public const int PlayerTagInfosFieldNumber = 13;
+		// Token: 0x04003ACA RID: 15050
+		public const int PlayerTagInfosFieldNumber = 5;
 
-		// Token: 0x04003ADD RID: 15069
-		private static readonly FieldCodec<EntityBattleTagInfo> _repeated_playerTagInfos_codec = FieldCodec.ForMessage<EntityBattleTagInfo>(106U, Aki.Protocol.EntityBattleTagInfo.Parser);
+		// Token: 0x04003ACB RID: 15051
+		private static readonly FieldCodec<EntityBattleTagInfo> _repeated_playerTagInfos_codec = FieldCodec.ForMessage<EntityBattleTagInfo>(42U, Aki.Protocol.EntityBattleTagInfo.Parser);
 
-		// Token: 0x04003ADE RID: 15070
+		// Token: 0x04003ACC RID: 15052
 		private readonly RepeatedField<EntityBattleTagInfo> playerTagInfos_ = new RepeatedField<EntityBattleTagInfo>();
 
-		// Token: 0x04003ADF RID: 15071
-		public const int EntityPassiveSkillInfoFieldNumber = 12;
+		// Token: 0x04003ACD RID: 15053
+		public const int EntityPassiveSkillInfoFieldNumber = 8;
 
-		// Token: 0x04003AE0 RID: 15072
+		// Token: 0x04003ACE RID: 15054
 		private string entityPassiveSkillInfo_ = "";
 	}
 }

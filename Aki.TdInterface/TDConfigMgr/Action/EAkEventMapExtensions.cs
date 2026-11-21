@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200229D RID: 8861
+	// Token: 0x0200250A RID: 9482
 	public static class EAkEventMapExtensions
 	{
-		// Token: 0x0600C241 RID: 49729 RVA: 0x001C6274 File Offset: 0x001C4474
+		// Token: 0x0600CE07 RID: 52743 RVA: 0x001DDF68 File Offset: 0x001DC168
 		public static string ToEnumString(this EAkEventMap value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C242 RID: 49730 RVA: 0x001C629C File Offset: 0x001C449C
+		// Token: 0x0600CE08 RID: 52744 RVA: 0x001DDF90 File Offset: 0x001DC190
 		public static EAkEventMap FromString(string name)
 		{
 			EAkEventMap result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C243 RID: 49731 RVA: 0x001C62C5 File Offset: 0x001C44C5
+		// Token: 0x0600CE09 RID: 52745 RVA: 0x001DDFB9 File Offset: 0x001DC1B9
 		public static bool TryFromString(string name, out EAkEventMap value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C244 RID: 49732 RVA: 0x001C62EA File Offset: 0x001C44EA
+		// Token: 0x0600CE0A RID: 52746 RVA: 0x001DDFDE File Offset: 0x001DC1DE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C245 RID: 49733 RVA: 0x001C62FA File Offset: 0x001C44FA
+		// Token: 0x0600CE0B RID: 52747 RVA: 0x001DDFEE File Offset: 0x001DC1EE
 		public static EAkEventMap[] GetValues()
 		{
 			return new EAkEventMap[1];
 		}
 
-		// Token: 0x0600C246 RID: 49734 RVA: 0x001C6302 File Offset: 0x001C4502
+		// Token: 0x0600CE0C RID: 52748 RVA: 0x001DDFF6 File Offset: 0x001DC1F6
 		public static string[] GetNames()
 		{
 			return new string[]

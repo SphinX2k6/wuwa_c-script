@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FA4 RID: 8100
+	// Token: 0x020021E7 RID: 8679
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportTransitionInSeamlessType : ITeleportTransitionType
 	{
-		// Token: 0x0600B210 RID: 45584 RVA: 0x0019F11C File Offset: 0x0019D31C
-		[NullableContext(1)]
+		// Token: 0x0600BD14 RID: 48404 RVA: 0x001B54CC File Offset: 0x001B36CC
+		[NullableContext(0)]
 		private ITeleportTransitionInSeamlessType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B211 RID: 45585 RVA: 0x0019F154 File Offset: 0x0019D354
-		[NullableContext(1)]
+		// Token: 0x0600BD15 RID: 48405 RVA: 0x001B5504 File Offset: 0x001B3704
+		[NullableContext(0)]
 		public static ITeleportTransitionInSeamlessType Create([Nullable(2)] ITeleportTransitionInSeamlessType instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B212 RID: 45586 RVA: 0x0019F167 File Offset: 0x0019D367
-		[NullableContext(1)]
+		// Token: 0x0600BD16 RID: 48406 RVA: 0x001B5517 File Offset: 0x001B3717
+		[NullableContext(0)]
 		public static ITeleportTransitionInSeamlessType CreateFromSetValue([Nullable(2)] ITeleportTransitionInSeamlessType_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B213 RID: 45587 RVA: 0x0019F17C File Offset: 0x0019D37C
-		[NullableContext(1)]
+		// Token: 0x0600BD17 RID: 48407 RVA: 0x001B552C File Offset: 0x001B372C
+		[NullableContext(0)]
 		public new ITeleportTransitionInSeamlessType_SetValue ToSetValue()
 		{
 			return new ITeleportTransitionInSeamlessType_SetValue
@@ -75,9 +75,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036EA RID: 14058
-		// (get) Token: 0x0600B214 RID: 45588 RVA: 0x0019F21E File Offset: 0x0019D41E
-		// (set) Token: 0x0600B215 RID: 45589 RVA: 0x0019F249 File Offset: 0x0019D449
+		// Token: 0x170039BF RID: 14783
+		// (get) Token: 0x0600BD18 RID: 48408 RVA: 0x001B55CE File Offset: 0x001B37CE
+		// (set) Token: 0x0600BD19 RID: 48409 RVA: 0x001B55F9 File Offset: 0x001B37F9
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -98,13 +98,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036EB RID: 14059
-		// (get) Token: 0x0600B216 RID: 45590 RVA: 0x0019F257 File Offset: 0x0019D457
-		// (set) Token: 0x0600B217 RID: 45591 RVA: 0x0019F282 File Offset: 0x0019D482
-		[Nullable(1)]
+		// Token: 0x170039C0 RID: 14784
+		// (get) Token: 0x0600BD1A RID: 48410 RVA: 0x001B5607 File Offset: 0x001B3807
+		// (set) Token: 0x0600BD1B RID: 48411 RVA: 0x001B5632 File Offset: 0x001B3832
+		[Nullable(0)]
 		public virtual string EffectDaPath
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -117,16 +117,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this.PocoInterface.EffectDaPath;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().EffectDaPath = value;
 			}
 		}
 
-		// Token: 0x170036EC RID: 14060
-		// (get) Token: 0x0600B218 RID: 45592 RVA: 0x0019F290 File Offset: 0x0019D490
-		// (set) Token: 0x0600B219 RID: 45593 RVA: 0x0019F2BF File Offset: 0x0019D4BF
+		// Token: 0x170039C1 RID: 14785
+		// (get) Token: 0x0600BD1C RID: 48412 RVA: 0x001B5640 File Offset: 0x001B3840
+		// (set) Token: 0x0600BD1D RID: 48413 RVA: 0x001B566F File Offset: 0x001B386F
 		public virtual float LeastTime
 		{
 			get
@@ -147,9 +147,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036ED RID: 14061
-		// (get) Token: 0x0600B21A RID: 45594 RVA: 0x0019F2CD File Offset: 0x0019D4CD
-		// (set) Token: 0x0600B21B RID: 45595 RVA: 0x0019F2FC File Offset: 0x0019D4FC
+		// Token: 0x170039C2 RID: 14786
+		// (get) Token: 0x0600BD1E RID: 48414 RVA: 0x001B567D File Offset: 0x001B387D
+		// (set) Token: 0x0600BD1F RID: 48415 RVA: 0x001B56AC File Offset: 0x001B38AC
 		public virtual float EffectExpandTime
 		{
 			get
@@ -170,9 +170,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036EE RID: 14062
-		// (get) Token: 0x0600B21C RID: 45596 RVA: 0x0019F30A File Offset: 0x0019D50A
-		// (set) Token: 0x0600B21D RID: 45597 RVA: 0x0019F339 File Offset: 0x0019D539
+		// Token: 0x170039C3 RID: 14787
+		// (get) Token: 0x0600BD20 RID: 48416 RVA: 0x001B56BA File Offset: 0x001B38BA
+		// (set) Token: 0x0600BD21 RID: 48417 RVA: 0x001B56E9 File Offset: 0x001B38E9
 		public virtual float EffectCollapseTime
 		{
 			get
@@ -193,9 +193,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036EF RID: 14063
-		// (get) Token: 0x0600B21E RID: 45598 RVA: 0x0019F347 File Offset: 0x0019D547
-		// (set) Token: 0x0600B21F RID: 45599 RVA: 0x0019F36E File Offset: 0x0019D56E
+		// Token: 0x170039C4 RID: 14788
+		// (get) Token: 0x0600BD22 RID: 48418 RVA: 0x001B56F7 File Offset: 0x001B38F7
+		// (set) Token: 0x0600BD23 RID: 48419 RVA: 0x001B571E File Offset: 0x001B391E
 		public virtual string SceneEffectDaPath
 		{
 			get
@@ -217,9 +217,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F0 RID: 14064
-		// (get) Token: 0x0600B220 RID: 45600 RVA: 0x0019F37C File Offset: 0x0019D57C
-		// (set) Token: 0x0600B221 RID: 45601 RVA: 0x0019F3A3 File Offset: 0x0019D5A3
+		// Token: 0x170039C5 RID: 14789
+		// (get) Token: 0x0600BD24 RID: 48420 RVA: 0x001B572C File Offset: 0x001B392C
+		// (set) Token: 0x0600BD25 RID: 48421 RVA: 0x001B5753 File Offset: 0x001B3953
 		public virtual string TransitionWeatherDaPath
 		{
 			get
@@ -241,9 +241,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F1 RID: 14065
-		// (get) Token: 0x0600B222 RID: 45602 RVA: 0x0019F3B4 File Offset: 0x0019D5B4
-		// (set) Token: 0x0600B223 RID: 45603 RVA: 0x0019F415 File Offset: 0x0019D615
+		// Token: 0x170039C6 RID: 14790
+		// (get) Token: 0x0600BD26 RID: 48422 RVA: 0x001B5764 File Offset: 0x001B3964
+		// (set) Token: 0x0600BD27 RID: 48423 RVA: 0x001B57C5 File Offset: 0x001B39C5
 		public virtual IFloorSettings FloorSettings
 		{
 			get
@@ -271,9 +271,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F2 RID: 14066
-		// (get) Token: 0x0600B224 RID: 45604 RVA: 0x0019F42C File Offset: 0x0019D62C
-		// (set) Token: 0x0600B225 RID: 45605 RVA: 0x0019F466 File Offset: 0x0019D666
+		// Token: 0x170039C7 RID: 14791
+		// (get) Token: 0x0600BD28 RID: 48424 RVA: 0x001B57DC File Offset: 0x001B39DC
+		// (set) Token: 0x0600BD29 RID: 48425 RVA: 0x001B5816 File Offset: 0x001B3A16
 		public virtual bool? IsTeleportInPlace
 		{
 			get
@@ -295,9 +295,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F3 RID: 14067
-		// (get) Token: 0x0600B226 RID: 45606 RVA: 0x0019F474 File Offset: 0x0019D674
-		// (set) Token: 0x0600B227 RID: 45607 RVA: 0x0019F49B File Offset: 0x0019D69B
+		// Token: 0x170039C8 RID: 14792
+		// (get) Token: 0x0600BD2A RID: 48426 RVA: 0x001B5824 File Offset: 0x001B3A24
+		// (set) Token: 0x0600BD2B RID: 48427 RVA: 0x001B584B File Offset: 0x001B3A4B
 		public virtual List<EKeepMovementState> KeepMovementStates
 		{
 			get
@@ -319,9 +319,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F4 RID: 14068
-		// (get) Token: 0x0600B228 RID: 45608 RVA: 0x0019F4AC File Offset: 0x0019D6AC
-		// (set) Token: 0x0600B229 RID: 45609 RVA: 0x0019F50D File Offset: 0x0019D70D
+		// Token: 0x170039C9 RID: 14793
+		// (get) Token: 0x0600BD2C RID: 48428 RVA: 0x001B585C File Offset: 0x001B3A5C
+		// (set) Token: 0x0600BD2D RID: 48429 RVA: 0x001B58BD File Offset: 0x001B3ABD
 		public virtual ISeamlessTeleportFinishConfig SeamlessTeleportFinishConfig
 		{
 			get
@@ -349,9 +349,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170036F5 RID: 14069
-		// (get) Token: 0x0600B22A RID: 45610 RVA: 0x0019F524 File Offset: 0x0019D724
-		// (set) Token: 0x0600B22B RID: 45611 RVA: 0x0019F55E File Offset: 0x0019D75E
+		// Token: 0x170039CA RID: 14794
+		// (get) Token: 0x0600BD2E RID: 48430 RVA: 0x001B58D4 File Offset: 0x001B3AD4
+		// (set) Token: 0x0600BD2F RID: 48431 RVA: 0x001B590E File Offset: 0x001B3B0E
 		public virtual bool? IsNormalStreamingLoad
 		{
 			get
@@ -373,24 +373,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B8D RID: 27533
+		// Token: 0x04007188 RID: 29064
 		protected new ITeleportTransitionInSeamlessType FbInstance;
 
-		// Token: 0x04006B8E RID: 27534
+		// Token: 0x04007189 RID: 29065
 		protected new ITeleportTransitionInSeamlessType_SetValue PocoInterface;
 
-		// Token: 0x04006B8F RID: 27535
-		[Nullable(1)]
+		// Token: 0x0400718A RID: 29066
+		[Nullable(0)]
 		private IFloorSettings _FloorSettingsCache;
 
-		// Token: 0x04006B90 RID: 27536
+		// Token: 0x0400718B RID: 29067
 		private bool _FloorSettingsInited;
 
-		// Token: 0x04006B91 RID: 27537
-		[Nullable(1)]
+		// Token: 0x0400718C RID: 29068
+		[Nullable(0)]
 		private ISeamlessTeleportFinishConfig _SeamlessTeleportFinishConfigCache;
 
-		// Token: 0x04006B92 RID: 27538
+		// Token: 0x0400718D RID: 29069
 		private bool _SeamlessTeleportFinishConfigInited;
 	}
 }

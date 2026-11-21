@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001ECE RID: 7886
+// Token: 0x02001390 RID: 5008
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryLimitTaskItem : GridProxyAbstract<HonamiStoryLimitTaskData>
 {
-	// Token: 0x0600F274 RID: 62068 RVA: 0x003A70AC File Offset: 0x003A52AC
+	// Token: 0x0600C693 RID: 50835 RVA: 0x003B2BAC File Offset: 0x003B0DAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -51,19 +51,19 @@ public class HonamiStoryLimitTaskItem : GridProxyAbstract<HonamiStoryLimitTaskDa
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F275 RID: 62069 RVA: 0x003A723B File Offset: 0x003A543B
+	// Token: 0x0600C694 RID: 50836 RVA: 0x003B2D3B File Offset: 0x003B0F3B
 	protected override void OnStart()
 	{
 		this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(6), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 	}
 
-	// Token: 0x0600F276 RID: 62070 RVA: 0x003A725E File Offset: 0x003A545E
+	// Token: 0x0600C695 RID: 50837 RVA: 0x003B2D5E File Offset: 0x003B0F5E
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600F277 RID: 62071 RVA: 0x003A7268 File Offset: 0x003A5468
+	// Token: 0x0600C696 RID: 50838 RVA: 0x003B2D68 File Offset: 0x003B0F68
 	public override void Refresh(HonamiStoryLimitTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -87,13 +87,13 @@ public class HonamiStoryLimitTaskItem : GridProxyAbstract<HonamiStoryLimitTaskDa
 		}));
 	}
 
-	// Token: 0x0600F278 RID: 62072 RVA: 0x003A7380 File Offset: 0x003A5580
+	// Token: 0x0600C697 RID: 50839 RVA: 0x003B2E80 File Offset: 0x003B1080
 	private void OnJumpBtnClick()
 	{
 		SkipTaskManager.RunByConfigId(this.Data.JumpId, null);
 	}
 
-	// Token: 0x0600F279 RID: 62073 RVA: 0x003A7393 File Offset: 0x003A5593
+	// Token: 0x0600C698 RID: 50840 RVA: 0x003B2E93 File Offset: 0x003B1093
 	private void OnGetBtnClick()
 	{
 		Action<int> onClickToGet = this.OnClickToGet;
@@ -104,16 +104,16 @@ public class HonamiStoryLimitTaskItem : GridProxyAbstract<HonamiStoryLimitTaskDa
 		onClickToGet(this.Data.Id);
 	}
 
-	// Token: 0x04007051 RID: 28753
+	// Token: 0x04007132 RID: 28978
 	[Nullable(2)]
 	private HonamiStoryLimitTaskData Data;
 
-	// Token: 0x04007052 RID: 28754
+	// Token: 0x04007133 RID: 28979
 	public Action<int> OnClickToGet = delegate(int _)
 	{
 	};
 
-	// Token: 0x04007053 RID: 28755
+	// Token: 0x04007134 RID: 28980
 	[Nullable(new byte[]
 	{
 		2,

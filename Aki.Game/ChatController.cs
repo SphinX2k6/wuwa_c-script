@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,13 +13,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200178A RID: 6026
+// Token: 0x02000C43 RID: 3139
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ChatController : UiControllerBase
 {
-	// Token: 0x0600AF3E RID: 44862 RVA: 0x00279445 File Offset: 0x00277645
+	// Token: 0x06008326 RID: 33574 RVA: 0x00283979 File Offset: 0x00281B79
 	protected override bool OnClear()
 	{
 		if (this.DelayPrivateChatDataRequestTimer != null && TimerSystem.GameplayTimeInstance.Has(this.DelayPrivateChatDataRequestTimer))
@@ -31,7 +30,7 @@ public class ChatController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600AF3F RID: 44863 RVA: 0x0027947C File Offset: 0x0027767C
+	// Token: 0x06008327 RID: 33575 RVA: 0x002839B0 File Offset: 0x00281BB0
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnSelectChatFriend, this.OnSelectChatFriend);
@@ -53,7 +52,7 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Add<int>(EEventName.TsSyncRemoveMutePlayer, new Action<int>(this.TsSyncRemoveMutePlayer));
 	}
 
-	// Token: 0x0600AF40 RID: 44864 RVA: 0x0027964C File Offset: 0x0027784C
+	// Token: 0x06008328 RID: 33576 RVA: 0x00283B80 File Offset: 0x00281D80
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnSelectChatFriend, this.OnSelectChatFriend);
@@ -75,7 +74,7 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.TsSyncRemoveMutePlayer, new Action<int>(this.TsSyncRemoveMutePlayer));
 	}
 
-	// Token: 0x0600AF41 RID: 44865 RVA: 0x0027981C File Offset: 0x00277A1C
+	// Token: 0x06008329 RID: 33577 RVA: 0x00283D50 File Offset: 0x00281F50
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PrivateMessageNotify, new Action<IMessage, Net.CallbackStatus>(this.PrivateMessageNotify));
@@ -87,7 +86,7 @@ public class ChatController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.PrivateChatClearNotify, new Action<IMessage, Net.CallbackStatus>(this.PrivateChatClearNotify));
 	}
 
-	// Token: 0x0600AF42 RID: 44866 RVA: 0x002798F0 File Offset: 0x00277AF0
+	// Token: 0x0600832A RID: 33578 RVA: 0x00283E24 File Offset: 0x00282024
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PrivateMessageNotify);
@@ -99,7 +98,7 @@ public class ChatController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.PrivateChatClearNotify);
 	}
 
-	// Token: 0x0600AF43 RID: 44867 RVA: 0x0027996D File Offset: 0x00277B6D
+	// Token: 0x0600832B RID: 33579 RVA: 0x00283EA1 File Offset: 0x002820A1
 	private void OnEnterOnlineWorld()
 	{
 		if (ChatModel.Instance.GetWorldChatRoom() == null)
@@ -108,7 +107,7 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF44 RID: 44868 RVA: 0x00279990 File Offset: 0x00277B90
+	// Token: 0x0600832C RID: 33580 RVA: 0x00283EC4 File Offset: 0x002820C4
 	private void OnLeaveOnlineWorld()
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -125,14 +124,14 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF45 RID: 44869 RVA: 0x002799E4 File Offset: 0x00277BE4
+	// Token: 0x0600832D RID: 33581 RVA: 0x00283F18 File Offset: 0x00282118
 	private void OnEnterTeam()
 	{
 		ChatModel instance = ChatModel.Instance;
 		instance.SetTeamChatRoom(instance.NewTeamChatRoom());
 	}
 
-	// Token: 0x0600AF46 RID: 44870 RVA: 0x002799F8 File Offset: 0x00277BF8
+	// Token: 0x0600832E RID: 33582 RVA: 0x00283F2C File Offset: 0x0028212C
 	private void OnLeaveTeam()
 	{
 		ChatModel instance = ChatModel.Instance;
@@ -149,25 +148,25 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF47 RID: 44871 RVA: 0x00279A4C File Offset: 0x00277C4C
+	// Token: 0x0600832F RID: 33583 RVA: 0x00283F80 File Offset: 0x00282180
 	private void OnTsSyncTime(double serverTime, double flowTime, double predictedServerCombatTimeOffset, double predictedServerStopTimeOffset)
 	{
 		Time.Instance.SyncTime(serverTime, flowTime, predictedServerCombatTimeOffset, predictedServerStopTimeOffset);
 	}
 
-	// Token: 0x0600AF48 RID: 44872 RVA: 0x00279A5D File Offset: 0x00277C5D
+	// Token: 0x06008330 RID: 33584 RVA: 0x00283F91 File Offset: 0x00282191
 	private void TsSyncAddMutePlayer(int playerId)
 	{
 		ChatModel.Instance.AddMutePlayer(playerId);
 	}
 
-	// Token: 0x0600AF49 RID: 44873 RVA: 0x00279A6A File Offset: 0x00277C6A
+	// Token: 0x06008331 RID: 33585 RVA: 0x00283F9E File Offset: 0x0028219E
 	private void TsSyncRemoveMutePlayer(int playerId)
 	{
 		ChatModel.Instance.RemoveMutePlayer(playerId);
 	}
 
-	// Token: 0x0600AF4A RID: 44874 RVA: 0x00279A78 File Offset: 0x00277C78
+	// Token: 0x06008332 RID: 33586 RVA: 0x00283FAC File Offset: 0x002821AC
 	public void PrivateChatRequest(ChatContentType chatContentType, string content, int targetPlayerId)
 	{
 		List<int> limitedPlayerIdList = new List<int>();
@@ -207,7 +206,7 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF4B RID: 44875 RVA: 0x00279AF8 File Offset: 0x00277CF8
+	// Token: 0x06008333 RID: 33587 RVA: 0x0028402C File Offset: 0x0028222C
 	private UniTask OpenThirdPartyMessageBox()
 	{
 		ChatController.<OpenThirdPartyMessageBox>d__19 <OpenThirdPartyMessageBox>d__;
@@ -217,7 +216,7 @@ public class ChatController : UiControllerBase
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF4C RID: 44876 RVA: 0x00279B34 File Offset: 0x00277D34
+	// Token: 0x06008334 RID: 33588 RVA: 0x00284068 File Offset: 0x00282268
 	public void ChannelChatRequest(ChatContentType chatContentType, string content, SubChatChannelType subChannelType)
 	{
 		List<int> list = new List<int>();
@@ -290,7 +289,7 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF4D RID: 44877 RVA: 0x00279CA8 File Offset: 0x00277EA8
+	// Token: 0x06008335 RID: 33589 RVA: 0x002841DC File Offset: 0x002823DC
 	private UniTask OnPrivateMessageNotify(PrivateMessageNotify notify, [Nullable(2)] Net.CallbackStatus status)
 	{
 		ChatController.<OnPrivateMessageNotify>d__21 <OnPrivateMessageNotify>d__;
@@ -302,7 +301,7 @@ public class ChatController : UiControllerBase
 		return <OnPrivateMessageNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF4E RID: 44878 RVA: 0x00279CF4 File Offset: 0x00277EF4
+	// Token: 0x06008336 RID: 33590 RVA: 0x00284228 File Offset: 0x00282428
 	[NullableContext(2)]
 	private void PrivateMessageNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -313,11 +312,6 @@ public class ChatController : UiControllerBase
 		string message = "PrivateMessageNotify 私聊聊天服务端通知";
 		ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("notify", notify);
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateMessageNotify 玩家没有UGC权限，无法接收私聊消息", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return;
-		}
 		KuroSdkController.Instance.GetCommunicationRestricted(PlayerInfoModel.Instance.GetThirdPartyAccountId(), delegate(ESdkCommunicationRestricted state)
 		{
 			if (state == ESdkCommunicationRestricted.Yes)
@@ -328,7 +322,7 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF4F RID: 44879 RVA: 0x00279D9C File Offset: 0x00277F9C
+	// Token: 0x06008337 RID: 33591 RVA: 0x002842A4 File Offset: 0x002824A4
 	private UniTask OnChannelChatMessageNotify(ChannelChatMessageNotify notify, [Nullable(2)] Net.CallbackStatus status)
 	{
 		ChatController.<OnChannelChatMessageNotify>d__23 <OnChannelChatMessageNotify>d__;
@@ -339,7 +333,7 @@ public class ChatController : UiControllerBase
 		return <OnChannelChatMessageNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF50 RID: 44880 RVA: 0x00279DE0 File Offset: 0x00277FE0
+	// Token: 0x06008338 RID: 33592 RVA: 0x002842E8 File Offset: 0x002824E8
 	[NullableContext(2)]
 	private void ChannelChatMessageNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -360,14 +354,9 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF51 RID: 44881 RVA: 0x00279E54 File Offset: 0x00278054
+	// Token: 0x06008339 RID: 33593 RVA: 0x0028435C File Offset: 0x0028255C
 	public void PrivateChatHistoryRequest(int playerId)
 	{
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateMessageNotify 玩家没有UGC权限，无法接收私聊消息", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return;
-		}
 		Action<IMessage, Net.CallbackStatus> <>9__1;
 		KuroSdkController.Instance.GetCommunicationRestricted(PlayerInfoModel.Instance.GetThirdPartyAccountId(), delegate(ESdkCommunicationRestricted state)
 		{
@@ -418,7 +407,7 @@ public class ChatController : UiControllerBase
 					{
 						return;
 					}
-					this.SavePrivateHistoryChatAndOpenChatPad(privateChatRoom, repeatedField.ToList<ChatContentProto>(), playerId).Forget();
+					this.SavePrivateHistoryChatAndOpenChatPad(privateChatRoom, repeatedField, playerId).Forget();
 				});
 			}
 			Action<IMessage, Net.CallbackStatus> handle = action;
@@ -426,8 +415,8 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF52 RID: 44882 RVA: 0x00279EC4 File Offset: 0x002780C4
-	private UniTask SavePrivateHistoryChatAndOpenChatPad(PrivateChatRoom chatRoom, List<ChatContentProto> data, int playerId)
+	// Token: 0x0600833A RID: 33594 RVA: 0x002843A0 File Offset: 0x002825A0
+	private UniTask SavePrivateHistoryChatAndOpenChatPad(PrivateChatRoom chatRoom, IEnumerable<ChatContentProto> data, int playerId)
 	{
 		ChatController.<SavePrivateHistoryChatAndOpenChatPad>d__26 <SavePrivateHistoryChatAndOpenChatPad>d__;
 		<SavePrivateHistoryChatAndOpenChatPad>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
@@ -440,7 +429,7 @@ public class ChatController : UiControllerBase
 		return <SavePrivateHistoryChatAndOpenChatPad>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF53 RID: 44883 RVA: 0x00279F20 File Offset: 0x00278120
+	// Token: 0x0600833B RID: 33595 RVA: 0x002843FC File Offset: 0x002825FC
 	private UniTask OnPrivateChatHistoryNotify(PrivateChatHistoryNotify notify, [Nullable(2)] Net.CallbackStatus status)
 	{
 		ChatController.<OnPrivateChatHistoryNotify>d__27 <OnPrivateChatHistoryNotify>d__;
@@ -452,17 +441,12 @@ public class ChatController : UiControllerBase
 		return <OnPrivateChatHistoryNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF54 RID: 44884 RVA: 0x00279F6C File Offset: 0x0027816C
+	// Token: 0x0600833C RID: 33596 RVA: 0x00284448 File Offset: 0x00282648
 	[NullableContext(2)]
 	private void PrivateChatHistoryNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		PrivateChatHistoryNotify notify = (PrivateChatHistoryNotify)msg;
 		Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateChatHistoryNotify 服务端推送最近的私人聊天历史记录", default(ReadOnlySpan<ValueTuple<string, object>>));
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateMessageNotify 玩家没有UGC权限，无法接收私聊消息", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return;
-		}
 		KuroSdkController.Instance.GetCommunicationRestricted(PlayerInfoModel.Instance.GetThirdPartyAccountId(), delegate(ESdkCommunicationRestricted state)
 		{
 			if (state == ESdkCommunicationRestricted.Yes)
@@ -473,7 +457,7 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF55 RID: 44885 RVA: 0x0027A004 File Offset: 0x00278204
+	// Token: 0x0600833D RID: 33597 RVA: 0x002844B4 File Offset: 0x002826B4
 	private UniTask OnChannelChatHistoryNotify(ChannelChatHistoryNotify notify, [Nullable(2)] Net.CallbackStatus status)
 	{
 		ChatController.<OnChannelChatHistoryNotify>d__29 <OnChannelChatHistoryNotify>d__;
@@ -484,17 +468,12 @@ public class ChatController : UiControllerBase
 		return <OnChannelChatHistoryNotify>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AF56 RID: 44886 RVA: 0x0027A048 File Offset: 0x00278248
+	// Token: 0x0600833E RID: 33598 RVA: 0x002844F8 File Offset: 0x002826F8
 	[NullableContext(2)]
 	private void ChannelChatHistoryNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ChannelChatHistoryNotify notify = (ChannelChatHistoryNotify)msg;
 		Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "ChannelChatHistoryNotify 服务端推送最近的队伍聊天历史记录", default(ReadOnlySpan<ValueTuple<string, object>>));
-		if (!KuroSdkController.Instance.CheckPrivilege(ESdkPrivilege.UserGeneratedContent))
-		{
-			Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateMessageNotify 玩家没有UGC权限，无法接收私聊消息", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return;
-		}
 		KuroSdkController.Instance.GetCommunicationRestricted(PlayerInfoModel.Instance.GetThirdPartyAccountId(), delegate(ESdkCommunicationRestricted state)
 		{
 			if (state == ESdkCommunicationRestricted.Yes)
@@ -505,7 +484,7 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600AF57 RID: 44887 RVA: 0x0027A0D8 File Offset: 0x002782D8
+	// Token: 0x0600833F RID: 33599 RVA: 0x0028455C File Offset: 0x0028275C
 	[NullableContext(2)]
 	private void ChatMutePlayerListNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -524,7 +503,7 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF58 RID: 44888 RVA: 0x0027A164 File Offset: 0x00278364
+	// Token: 0x06008340 RID: 33600 RVA: 0x002845E8 File Offset: 0x002827E8
 	public void ChatMutePlayerRequest(int playerId, bool bMute)
 	{
 		ChatMutePlayerRequest chatMutePlayerRequest = Aki.Protocol.ChatMutePlayerRequest.Create();
@@ -547,7 +526,7 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.CsRequestRemoveMutePlayer, playerId);
 	}
 
-	// Token: 0x0600AF59 RID: 44889 RVA: 0x0027A208 File Offset: 0x00278408
+	// Token: 0x06008341 RID: 33601 RVA: 0x0028468C File Offset: 0x0028288C
 	[NullableContext(2)]
 	private void ChatMutePlayerResponse(IMessage msg, Net.CallbackStatus status)
 	{
@@ -571,12 +550,12 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF5A RID: 44890 RVA: 0x0027A2B8 File Offset: 0x002784B8
+	// Token: 0x06008342 RID: 33602 RVA: 0x0028473C File Offset: 0x0028293C
 	public void ChatReportPush(int targetPlayerId)
 	{
 	}
 
-	// Token: 0x0600AF5B RID: 44891 RVA: 0x0027A2BC File Offset: 0x002784BC
+	// Token: 0x06008343 RID: 33603 RVA: 0x00284740 File Offset: 0x00282940
 	[NullableContext(2)]
 	private void BanChatNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -584,7 +563,7 @@ public class ChatController : UiControllerBase
 		this.ShowBanTips(banChatNotify.BanEndTime);
 	}
 
-	// Token: 0x0600AF5C RID: 44892 RVA: 0x0027A2DC File Offset: 0x002784DC
+	// Token: 0x06008344 RID: 33604 RVA: 0x00284760 File Offset: 0x00282960
 	private void ShowBanTips(long time)
 	{
 		CommonDefine.ICountDown remainTimeDataFormat = TimeUtil.Instance.GetRemainTimeDataFormat8((double)time - TimeUtil.Instance.GetServerTime());
@@ -595,7 +574,7 @@ public class ChatController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsByText(text);
 	}
 
-	// Token: 0x0600AF5D RID: 44893 RVA: 0x0027A32C File Offset: 0x0027852C
+	// Token: 0x06008345 RID: 33605 RVA: 0x002847B0 File Offset: 0x002829B0
 	[NullableContext(2)]
 	private void PrivateChatClearNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -619,7 +598,7 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnRefreshChatRowData, false);
 	}
 
-	// Token: 0x0600AF5E RID: 44894 RVA: 0x0027A3E8 File Offset: 0x002785E8
+	// Token: 0x06008346 RID: 33606 RVA: 0x0028486C File Offset: 0x00282A6C
 	public void PrivateChatOperateRequest(PrivateChatOperateType operateType, int targetPlayerId)
 	{
 		PrivateChatOperateRequest privateChatOperateRequest = Aki.Protocol.PrivateChatOperateRequest.Create();
@@ -638,7 +617,7 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF5F RID: 44895 RVA: 0x0027A460 File Offset: 0x00278660
+	// Token: 0x06008347 RID: 33607 RVA: 0x002848E4 File Offset: 0x00282AE4
 	[NullableContext(2)]
 	private void PrivateChatOperateResponse(IMessage msg, Net.CallbackStatus status)
 	{
@@ -655,14 +634,14 @@ public class ChatController : UiControllerBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0600AF60 RID: 44896 RVA: 0x0027A4AE File Offset: 0x002786AE
+	// Token: 0x06008348 RID: 33608 RVA: 0x00284932 File Offset: 0x00282B32
 	public void OpenFriendChat(int friendPlayerId)
 	{
 		ChatModel.Instance.SelectedPrivateChatFriend(friendPlayerId);
 		UiManager.Instance.OpenView(EUiViewName.ChatView, null, null);
 	}
 
-	// Token: 0x0600AF61 RID: 44897 RVA: 0x0027A4CC File Offset: 0x002786CC
+	// Token: 0x06008349 RID: 33609 RVA: 0x00284950 File Offset: 0x00282B50
 	public void TryActiveDeleteFriendTips(int playerId)
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.ChatView))
@@ -685,13 +664,13 @@ public class ChatController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsById("DeleteFriendText", Array.Empty<object>());
 	}
 
-	// Token: 0x0600AF62 RID: 44898 RVA: 0x0027A526 File Offset: 0x00278726
+	// Token: 0x0600834A RID: 33610 RVA: 0x002849AA File Offset: 0x00282BAA
 	private void OnGetFriendInitData()
 	{
 		this.PrivateChatDataRequest();
 	}
 
-	// Token: 0x0600AF63 RID: 44899 RVA: 0x0027A530 File Offset: 0x00278730
+	// Token: 0x0600834B RID: 33611 RVA: 0x002849B4 File Offset: 0x00282BB4
 	private void PrivateChatDataRequest()
 	{
 		PrivateChatDataRequest message = Aki.Protocol.PrivateChatDataRequest.Create();
@@ -715,7 +694,7 @@ public class ChatController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600AF64 RID: 44900 RVA: 0x0027A560 File Offset: 0x00278760
+	// Token: 0x0600834C RID: 33612 RVA: 0x002849E4 File Offset: 0x00282BE4
 	private void OnDelayPrivateChatDataRequest(float delta)
 	{
 		Log.Instance.Info(ELogModule.Chat, ELogAuthor.LJQ, "PrivateChatDataResponse 开始重新请求", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -723,7 +702,7 @@ public class ChatController : UiControllerBase
 		this.DelayPrivateChatDataRequestTimer = null;
 	}
 
-	// Token: 0x0600AF65 RID: 44901 RVA: 0x0027A598 File Offset: 0x00278798
+	// Token: 0x0600834D RID: 33613 RVA: 0x00284A1C File Offset: 0x00282C1C
 	private void OnWorldTeamPlayerInfoChanged(WorldTeamPlayerInfoChangeNotify message)
 	{
 		int playerId = message.PlayerId;
@@ -750,7 +729,7 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.OnChatPlayerInfoChanged, playerId);
 	}
 
-	// Token: 0x0600AF66 RID: 44902 RVA: 0x0027A630 File Offset: 0x00278830
+	// Token: 0x0600834E RID: 33614 RVA: 0x00284AB4 File Offset: 0x00282CB4
 	public void RequestChatOption(int playerId)
 	{
 		FriendController.Instance.RequestPlayerCurrentDeactivationState(playerId, delegate(bool deactivation)
@@ -768,8 +747,8 @@ public class ChatController : UiControllerBase
 		});
 	}
 
-	// Token: 0x17000E84 RID: 3716
-	// (get) Token: 0x0600AF67 RID: 44903 RVA: 0x0027A666 File Offset: 0x00278866
+	// Token: 0x17000EA7 RID: 3751
+	// (get) Token: 0x0600834F RID: 33615 RVA: 0x00284AEA File Offset: 0x00282CEA
 	public static ChatController Instance
 	{
 		get
@@ -778,7 +757,7 @@ public class ChatController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AF68 RID: 44904 RVA: 0x0027A66D File Offset: 0x0027886D
+	// Token: 0x06008350 RID: 33616 RVA: 0x00284AF1 File Offset: 0x00282CF1
 	public static ChatController GetOrCreateInstance()
 	{
 		if (ChatController._Instance == null)
@@ -788,7 +767,7 @@ public class ChatController : UiControllerBase
 		return ChatController._Instance;
 	}
 
-	// Token: 0x0600AF69 RID: 44905 RVA: 0x0027A681 File Offset: 0x00278881
+	// Token: 0x06008351 RID: 33617 RVA: 0x00284B05 File Offset: 0x00282D05
 	public static bool CreateInstance()
 	{
 		if (ChatController._Instance != null)
@@ -799,24 +778,24 @@ public class ChatController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600AF6A RID: 44906 RVA: 0x0027A697 File Offset: 0x00278897
+	// Token: 0x06008352 RID: 33618 RVA: 0x00284B1B File Offset: 0x00282D1B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AF6B RID: 44907 RVA: 0x0027A699 File Offset: 0x00278899
+	// Token: 0x06008353 RID: 33619 RVA: 0x00284B1D File Offset: 0x00282D1D
 	public static void ResetStaticDefaultValue()
 	{
 		ChatController._Instance = null;
 	}
 
-	// Token: 0x0600AF6C RID: 44908 RVA: 0x0027A6A1 File Offset: 0x002788A1
+	// Token: 0x06008354 RID: 33620 RVA: 0x00284B25 File Offset: 0x00282D25
 	static ChatController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ChatController.CreateStaticDefaultValue), new Action(ChatController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600AF6E RID: 44910 RVA: 0x0027A768 File Offset: 0x00278968
+	// Token: 0x06008356 RID: 33622 RVA: 0x00284BEC File Offset: 0x00282DEC
 	[NullableContext(2)]
 	[CompilerGenerated]
 	internal static void <ChannelChatRequest>g__ResponseCallback|20_1(IMessage msg, Net.CallbackStatus _)
@@ -837,17 +816,17 @@ public class ChatController : UiControllerBase
 			ChatController.Instance.ShowBanTips((channelChatResponse != null) ? channelChatResponse.BanEndTime : 0L);
 			return;
 		}
-		ErrorCodeController.Instance.OpenErrorCodeTipView((channelChatResponse != null) ? channelChatResponse.ErrorCode : Aki.Protocol.ErrorCode.Success, 18195, null, true, true);
+		ErrorCodeController.Instance.OpenErrorCodeTipView((channelChatResponse != null) ? channelChatResponse.ErrorCode : Aki.Protocol.ErrorCode.Success, 20052, null, true, true);
 	}
 
-	// Token: 0x04004FAF RID: 20399
+	// Token: 0x04005059 RID: 20569
 	public bool IsInRequestHistory;
 
-	// Token: 0x04004FB0 RID: 20400
+	// Token: 0x0400505A RID: 20570
 	[Nullable(2)]
 	private TimerHandle DelayPrivateChatDataRequestTimer;
 
-	// Token: 0x04004FB1 RID: 20401
+	// Token: 0x0400505B RID: 20571
 	private readonly Action OnPlayerDead = delegate()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.ChatView))
@@ -857,13 +836,13 @@ public class ChatController : UiControllerBase
 		UiManager.Instance.CloseView(EUiViewName.ChatView, null);
 	};
 
-	// Token: 0x04004FB2 RID: 20402
+	// Token: 0x0400505C RID: 20572
 	private readonly Action<int> OnSelectChatFriend = delegate(int playerId)
 	{
 		ChatModel.Instance.SelectedPrivateChatFriend(playerId);
 	};
 
-	// Token: 0x04004FB3 RID: 20403
+	// Token: 0x0400505D RID: 20573
 	private readonly Action<EUiViewName, int> OnOpenView = delegate(EUiViewName viewName, int id)
 	{
 		if (viewName != EUiViewName.ChatView)
@@ -874,21 +853,21 @@ public class ChatController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.OnRefreshChatRedDot);
 	};
 
-	// Token: 0x04004FB4 RID: 20404
+	// Token: 0x0400505E RID: 20574
 	private readonly Action<int> OnRemoveFriend = delegate(int playerId)
 	{
 		ChatModel.Instance.RemovePrivateChatRoom(playerId);
 	};
 
-	// Token: 0x04004FB5 RID: 20405
+	// Token: 0x0400505F RID: 20575
 	[Nullable(2)]
 	private static ChatController _Instance;
 
-	// Token: 0x02007D98 RID: 32152
+	// Token: 0x02006F1E RID: 28446
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04029207 RID: 168455
+		// Token: 0x04024532 RID: 148786
 		[Nullable(new byte[]
 		{
 			0,

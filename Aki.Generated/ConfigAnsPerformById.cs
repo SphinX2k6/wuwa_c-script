@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200009D RID: 157
+	// Token: 0x020000A5 RID: 165
 	public class ConfigAnsPerformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003AE RID: 942 RVA: 0x0006E5D4 File Offset: 0x0006C7D4
+		// Token: 0x060003DE RID: 990 RVA: 0x00072E88 File Offset: 0x00071088
 		static ConfigAnsPerformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAnsPerformById.CreateStaticDefaultValue), new Action(ConfigAnsPerformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003AF RID: 943 RVA: 0x0006E5F4 File Offset: 0x0006C7F4
+		// Token: 0x060003DF RID: 991 RVA: 0x00072EA8 File Offset: 0x000710A8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAnsPerformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003B0 RID: 944 RVA: 0x0006E673 File Offset: 0x0006C873
+		// Token: 0x060003E0 RID: 992 RVA: 0x00072F27 File Offset: 0x00071127
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAnsPerformById.LogPair = null;
 			ConfigAnsPerformById.HandleId = 0;
 		}
 
-		// Token: 0x060003B1 RID: 945 RVA: 0x0006E681 File Offset: 0x0006C881
+		// Token: 0x060003E1 RID: 993 RVA: 0x00072F35 File Offset: 0x00071135
 		public static void Init()
 		{
 			ConfigAnsPerformById.HandleId = ConfigCommon.InitDataStatement(ConfigAnsPerformById.HandleId, "db_ansperform.db", "select BinData from `AnsPerform` where Id=?");
 		}
 
-		// Token: 0x060003B2 RID: 946 RVA: 0x0006E69C File Offset: 0x0006C89C
+		// Token: 0x060003E2 RID: 994 RVA: 0x00072F50 File Offset: 0x00071150
 		public static AnsPerform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAnsPerformById.HandleId, ConfigAnsPerformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AnsPerform?(rootAsAnsPerform);
 		}
 
-		// Token: 0x0400042F RID: 1071
+		// Token: 0x04000467 RID: 1127
 		private const string DB = "db_ansperform.db";
 
-		// Token: 0x04000430 RID: 1072
+		// Token: 0x04000468 RID: 1128
 		private const string FILE = "k.可视化编辑/c.Csv/a.ANS表演表/*.csv*";
 
-		// Token: 0x04000431 RID: 1073
+		// Token: 0x04000469 RID: 1129
 		private const string TABLE = "AnsPerform";
 
-		// Token: 0x04000432 RID: 1074
+		// Token: 0x0400046A RID: 1130
 		private const string COMMAND = "select BinData from `AnsPerform` where Id=?";
 
-		// Token: 0x04000433 RID: 1075
+		// Token: 0x0400046B RID: 1131
 		private const string KEY_PREFIX = "AnsPerformById";
 
-		// Token: 0x04000434 RID: 1076
+		// Token: 0x0400046C RID: 1132
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000435 RID: 1077
+		// Token: 0x0400046D RID: 1133
 		private static int HandleId;
 	}
 }

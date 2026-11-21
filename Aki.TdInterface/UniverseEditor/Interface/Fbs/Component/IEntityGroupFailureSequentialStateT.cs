@@ -4,25 +4,25 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005187 RID: 20871
+	// Token: 0x020056EC RID: 22252
 	public class IEntityGroupFailureSequentialStateT
 	{
-		// Token: 0x1700987A RID: 39034
-		// (get) Token: 0x06021BFD RID: 138237 RVA: 0x004AECF5 File Offset: 0x004ACEF5
-		// (set) Token: 0x06021BFE RID: 138238 RVA: 0x004AECFD File Offset: 0x004ACEFD
+		// Token: 0x1700A069 RID: 41065
+		// (get) Token: 0x06023B55 RID: 146261 RVA: 0x004E8D15 File Offset: 0x004E6F15
+		// (set) Token: 0x06023B56 RID: 146262 RVA: 0x004E8D1D File Offset: 0x004E6F1D
 		public EEntityGroupFailureCondition Type { get; set; }
 
-		// Token: 0x1700987B RID: 39035
-		// (get) Token: 0x06021BFF RID: 138239 RVA: 0x004AED06 File Offset: 0x004ACF06
-		// (set) Token: 0x06021C00 RID: 138240 RVA: 0x004AED0E File Offset: 0x004ACF0E
+		// Token: 0x1700A06A RID: 41066
+		// (get) Token: 0x06023B57 RID: 146263 RVA: 0x004E8D26 File Offset: 0x004E6F26
+		// (set) Token: 0x06023B58 RID: 146264 RVA: 0x004E8D2E File Offset: 0x004E6F2E
 		public List<IEntityStateConditionT> Order { get; set; }
 
-		// Token: 0x1700987C RID: 39036
-		// (get) Token: 0x06021C01 RID: 138241 RVA: 0x004AED17 File Offset: 0x004ACF17
-		// (set) Token: 0x06021C02 RID: 138242 RVA: 0x004AED1F File Offset: 0x004ACF1F
+		// Token: 0x1700A06B RID: 41067
+		// (get) Token: 0x06023B59 RID: 146265 RVA: 0x004E8D37 File Offset: 0x004E6F37
+		// (set) Token: 0x06023B5A RID: 146266 RVA: 0x004E8D3F File Offset: 0x004E6F3F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021C03 RID: 138243 RVA: 0x004AED28 File Offset: 0x004ACF28
+		// Token: 0x06023B5B RID: 146267 RVA: 0x004E8D48 File Offset: 0x004E6F48
 		public IEntityGroupFailureSequentialStateT()
 		{
 			this.Type = EEntityGroupFailureCondition.SequentialState;

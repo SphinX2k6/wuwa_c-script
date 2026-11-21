@@ -7,16 +7,15 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001879 RID: 6265
+	// Token: 0x020003A3 RID: 931
 	[UnrealObjectPath("/Script/KuroGameplayInterface.KuroWaterDetectedInterface")]
 	public interface IKuroWaterDetectedInterface : IUnrealNativeInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x06017126 RID: 94502
+		// Token: 0x06005C30 RID: 23600
 		int InterfaceOffset();
 
-		// Token: 0x06017127 RID: 94503 RVA: 0x00219F5C File Offset: 0x0021815C
+		// Token: 0x06005C31 RID: 23601 RVA: 0x00081E7C File Offset: 0x0008007C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void BroadcastWaterDetectedTick(float DeltaTime, float WaterSurface, in FVectorDouble Location)
 		{
 			IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams* ptr = stackalloc IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams) & -16L;
@@ -27,9 +26,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06017128 RID: 94504 RVA: 0x00219FB8 File Offset: 0x002181B8
+		// Token: 0x06005C32 RID: 23602 RVA: 0x00081ED8 File Offset: 0x000800D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void BroadcastWaterDetectedTick_Implementation(float DeltaTime, float WaterSurface, in FVectorDouble Location)
 		{
 			IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams* ptr = stackalloc IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(IKuroWaterDetectedInterface.__BroadcastWaterDetectedTick_FunctionParams) & -16L;
@@ -37,59 +35,55 @@ namespace UnrealEngine
 			ptr->DeltaTime = DeltaTime;
 			ptr->WaterSurface = WaterSurface;
 			ptr->Location = Location;
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06017129 RID: 94505 RVA: 0x0021A012 File Offset: 0x00218212
+		// Token: 0x06005C33 RID: 23603 RVA: 0x00081F31 File Offset: 0x00080131
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void BroadcastWaterDetectedStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601712A RID: 94506 RVA: 0x0021A026 File Offset: 0x00218226
+		// Token: 0x06005C34 RID: 23604 RVA: 0x00081F45 File Offset: 0x00080145
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void BroadcastWaterDetectedStart_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedStart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601712B RID: 94507 RVA: 0x0021A03B File Offset: 0x0021823B
+		// Token: 0x06005C35 RID: 23605 RVA: 0x00081F59 File Offset: 0x00080159
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void BroadcastWaterDetectedEnd()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0601712C RID: 94508 RVA: 0x0021A04F File Offset: 0x0021824F
+		// Token: 0x06005C36 RID: 23606 RVA: 0x00081F6D File Offset: 0x0008016D
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		void BroadcastWaterDetectedEnd_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedEnd_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(this.NativePtr, IKuroWaterDetectedInterface_ReflectionImplementationFields.__BroadcastWaterDetectedEnd_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0400C853 RID: 51283
+		// Token: 0x0400266A RID: 9834
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplayInterface.KuroWaterDetectedInterface";
 
-		// Token: 0x02002F7F RID: 12159
+		// Token: 0x02000AA4 RID: 2724
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __BroadcastWaterDetectedTick_FunctionParams
 		{
-			// Token: 0x04016B3D RID: 92989
+			// Token: 0x04005AFC RID: 23292
 			[FieldOffset(0)]
 			public float DeltaTime;
 
-			// Token: 0x04016B3E RID: 92990
+			// Token: 0x04005AFD RID: 23293
 			[FieldOffset(4)]
 			public float WaterSurface;
 
-			// Token: 0x04016B3F RID: 92991
+			// Token: 0x04005AFE RID: 23294
 			[FieldOffset(8)]
 			public FVectorDouble Location;
 		}

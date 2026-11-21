@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F65 RID: 3941
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200108F RID: 4239
 	public class IFailedTeleport
 	{
-		// Token: 0x06005792 RID: 22418 RVA: 0x000D6054 File Offset: 0x000D4254
+		// Token: 0x06005D66 RID: 23910 RVA: 0x000E2AC0 File Offset: 0x000E0CC0
 		private IFailedTeleport_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005793 RID: 22419 RVA: 0x000D608C File Offset: 0x000D428C
+		// Token: 0x06005D67 RID: 23911 RVA: 0x000E2AF8 File Offset: 0x000E0CF8
 		public static IFailedTeleport Create([Nullable(2)] IFailedTeleport instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005794 RID: 22420 RVA: 0x000D609F File Offset: 0x000D429F
+		// Token: 0x06005D68 RID: 23912 RVA: 0x000E2B0B File Offset: 0x000E0D0B
 		public static IFailedTeleport CreateFromSetValue([Nullable(2)] IFailedTeleport_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005795 RID: 22421 RVA: 0x000D60B4 File Offset: 0x000D42B4
+		// Token: 0x06005D69 RID: 23913 RVA: 0x000E2B20 File Offset: 0x000E0D20
 		public IFailedTeleport_SetValue ToSetValue()
 		{
 			return new IFailedTeleport_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D33 RID: 7475
-		// (get) Token: 0x06005796 RID: 22422 RVA: 0x000D6110 File Offset: 0x000D4310
-		// (set) Token: 0x06005797 RID: 22423 RVA: 0x000D6171 File Offset: 0x000D4371
+		// Token: 0x17001ED9 RID: 7897
+		// (get) Token: 0x06005D6A RID: 23914 RVA: 0x000E2B7C File Offset: 0x000E0D7C
+		// (set) Token: 0x06005D6B RID: 23915 RVA: 0x000E2BDD File Offset: 0x000E0DDD
 		public virtual PosA Position
 		{
 			get
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D34 RID: 7476
-		// (get) Token: 0x06005798 RID: 22424 RVA: 0x000D6188 File Offset: 0x000D4388
-		// (set) Token: 0x06005799 RID: 22425 RVA: 0x000D61C2 File Offset: 0x000D43C2
+		// Token: 0x17001EDA RID: 7898
+		// (get) Token: 0x06005D6C RID: 23916 RVA: 0x000E2BF4 File Offset: 0x000E0DF4
+		// (set) Token: 0x06005D6D RID: 23917 RVA: 0x000E2C2E File Offset: 0x000E0E2E
 		public virtual int? PositionEntityId
 		{
 			get
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D35 RID: 7477
-		// (get) Token: 0x0600579A RID: 22426 RVA: 0x000D61D0 File Offset: 0x000D43D0
-		// (set) Token: 0x0600579B RID: 22427 RVA: 0x000D61FB File Offset: 0x000D43FB
+		// Token: 0x17001EDB RID: 7899
+		// (get) Token: 0x06005D6E RID: 23918 RVA: 0x000E2C3C File Offset: 0x000E0E3C
+		// (set) Token: 0x06005D6F RID: 23919 RVA: 0x000E2C67 File Offset: 0x000E0E67
 		public virtual bool IsConfirm
 		{
 			get
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D36 RID: 7478
-		// (get) Token: 0x0600579C RID: 22428 RVA: 0x000D6209 File Offset: 0x000D4409
-		// (set) Token: 0x0600579D RID: 22429 RVA: 0x000D6234 File Offset: 0x000D4434
+		// Token: 0x17001EDC RID: 7900
+		// (get) Token: 0x06005D70 RID: 23920 RVA: 0x000E2C75 File Offset: 0x000E0E75
+		// (set) Token: 0x06005D71 RID: 23921 RVA: 0x000E2CA0 File Offset: 0x000E0EA0
 		public virtual int ConfirmId
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D37 RID: 7479
-		// (get) Token: 0x0600579E RID: 22430 RVA: 0x000D6242 File Offset: 0x000D4442
-		// (set) Token: 0x0600579F RID: 22431 RVA: 0x000D6269 File Offset: 0x000D4469
+		// Token: 0x17001EDD RID: 7901
+		// (get) Token: 0x06005D72 RID: 23922 RVA: 0x000E2CAE File Offset: 0x000E0EAE
+		// (set) Token: 0x06005D73 RID: 23923 RVA: 0x000E2CD5 File Offset: 0x000E0ED5
 		[Nullable(2)]
 		public virtual ITeleportTransitionType TransitionOption
 		{
@@ -188,9 +186,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D38 RID: 7480
-		// (get) Token: 0x060057A0 RID: 22432 RVA: 0x000D6278 File Offset: 0x000D4478
-		// (set) Token: 0x060057A1 RID: 22433 RVA: 0x000D62B2 File Offset: 0x000D44B2
+		// Token: 0x17001EDE RID: 7902
+		// (get) Token: 0x06005D74 RID: 23924 RVA: 0x000E2CE4 File Offset: 0x000E0EE4
+		// (set) Token: 0x06005D75 RID: 23925 RVA: 0x000E2D1E File Offset: 0x000E0F1E
 		public virtual bool? GravityFlip
 		{
 			get
@@ -212,18 +210,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034F0 RID: 13552
+		// Token: 0x04003821 RID: 14369
 		[Nullable(2)]
 		protected IFailedTeleport FbInstance;
 
-		// Token: 0x040034F1 RID: 13553
+		// Token: 0x04003822 RID: 14370
 		[Nullable(2)]
 		protected IFailedTeleport_SetValue PocoInterface;
 
-		// Token: 0x040034F2 RID: 13554
+		// Token: 0x04003823 RID: 14371
 		private PosA _PositionCache;
 
-		// Token: 0x040034F3 RID: 13555
+		// Token: 0x04003824 RID: 14372
 		private bool _PositionInited;
 	}
 }

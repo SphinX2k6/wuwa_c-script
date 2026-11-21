@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ADD RID: 19165
+	// Token: 0x02003A85 RID: 14981
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBdSumBdDescPanel : UiPanelBase
 	{
-		// Token: 0x06031A3F RID: 203327 RVA: 0x00B84714 File Offset: 0x00B82914
+		// Token: 0x060267CF RID: 157647 RVA: 0x00AC86C8 File Offset: 0x00AC68C8
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseBdSumBdDescPanel.<Init>d__3 <Init>d__;
@@ -28,12 +28,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A40 RID: 203328 RVA: 0x00B8475F File Offset: 0x00B8295F
+		// Token: 0x060267D0 RID: 157648 RVA: 0x00AC8713 File Offset: 0x00AC6913
 		protected override void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x06031A41 RID: 203329 RVA: 0x00B84764 File Offset: 0x00B82964
+		// Token: 0x060267D1 RID: 157649 RVA: 0x00AC8718 File Offset: 0x00AC6918
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031A42 RID: 203330 RVA: 0x00B84872 File Offset: 0x00B82A72
+		// Token: 0x060267D2 RID: 157650 RVA: 0x00AC8826 File Offset: 0x00AC6A26
 		[Conditional("WITH_EDITOR")]
 		private void EditorShowActorLabel()
 		{
 		}
 
-		// Token: 0x06031A43 RID: 203331 RVA: 0x00B84874 File Offset: 0x00B82A74
+		// Token: 0x060267D3 RID: 157651 RVA: 0x00AC8828 File Offset: 0x00AC6A28
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBdSumBdDescPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -74,22 +74,22 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A44 RID: 203332 RVA: 0x00B848B7 File Offset: 0x00B82AB7
+		// Token: 0x060267D4 RID: 157652 RVA: 0x00AC886B File Offset: 0x00AC6A6B
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06031A45 RID: 203333 RVA: 0x00B848B9 File Offset: 0x00B82AB9
+		// Token: 0x060267D5 RID: 157653 RVA: 0x00AC886D File Offset: 0x00AC6A6D
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06031A46 RID: 203334 RVA: 0x00B848BB File Offset: 0x00B82ABB
+		// Token: 0x060267D6 RID: 157654 RVA: 0x00AC886F File Offset: 0x00AC6A6F
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06031A47 RID: 203335 RVA: 0x00B848C0 File Offset: 0x00B82AC0
+		// Token: 0x060267D7 RID: 157655 RVA: 0x00AC8874 File Offset: 0x00AC6A74
 		public void UpdateData(TrapDefenseBdData data)
 		{
 			this.BdData = data;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A48 RID: 203336 RVA: 0x00B8494C File Offset: 0x00B82B4C
+		// Token: 0x060267D8 RID: 157656 RVA: 0x00AC8900 File Offset: 0x00AC6B00
 		public void UpdateGoldQualityBuffShow()
 		{
 			List<TrapDefenseBdBuffData> goldQualityBuffDataList = this.BdData.GetGoldQualityBuffDataList();
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A49 RID: 203337 RVA: 0x00B84993 File Offset: 0x00B82B93
+		// Token: 0x060267D9 RID: 157657 RVA: 0x00AC8947 File Offset: 0x00AC6B47
 		private TrapDefenseBdBuffItem CreateItemBdBuff()
 		{
 			return new TrapDefenseBdBuffItem
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031A4A RID: 203338 RVA: 0x00B849C0 File Offset: 0x00B82BC0
+		// Token: 0x060267DA RID: 157658 RVA: 0x00AC8974 File Offset: 0x00AC6B74
 		private void OnClickBdBuffItem(TrapDefenseBdBuffData data)
 		{
 			TrapDefenseBdData belongBdData = data.GetBelongBdData();
@@ -155,23 +155,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseModel.Instance.OpenViewBdQuality(belongBdData.Id, new ETrapDefenseBdBuffQuality?((ETrapDefenseBdBuffQuality)quality), new bool?(bdQualityShowNew), new int?(data.Id));
 		}
 
-		// Token: 0x06031A4B RID: 203339 RVA: 0x00B84A10 File Offset: 0x00B82C10
+		// Token: 0x060267DB RID: 157659 RVA: 0x00AC89C4 File Offset: 0x00AC6BC4
 		public bool GetBdQualityShowNew(TrapDefenseBdData bdData, ETrapDefenseBdBuffQuality quality)
 		{
 			return TrapDefenseModel.Instance.ViewModelBdSum.IsInstance && bdData.GetCurActiveQualityPool() == quality;
 		}
 
-		// Token: 0x06031A4C RID: 203340 RVA: 0x00B84A2E File Offset: 0x00B82C2E
+		// Token: 0x060267DC RID: 157660 RVA: 0x00AC89E2 File Offset: 0x00AC6BE2
 		private bool BdBuffCanExecuteChange(TrapDefenseBdBuffData _)
 		{
 			return false;
 		}
 
-		// Token: 0x0401A834 RID: 108596
+		// Token: 0x04015186 RID: 86406
 		[Nullable(2)]
 		public TrapDefenseBdData BdData;
 
-		// Token: 0x0401A835 RID: 108597
+		// Token: 0x04015187 RID: 86407
 		[Nullable(new byte[]
 		{
 			2,
@@ -180,29 +180,29 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public GenericLayout<TrapDefenseBdBuffItem, TrapDefenseBdBuffData> LayoutBdBuff;
 
-		// Token: 0x0200AC61 RID: 44129
+		// Token: 0x02009681 RID: 38529
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034632 RID: 214578
+			// Token: 0x0402EFE3 RID: 192483
 			public const int ItemBdInfoRoot = 0;
 
-			// Token: 0x04034633 RID: 214579
+			// Token: 0x0402EFE4 RID: 192484
 			public const int ItemLockRoot = 1;
 
-			// Token: 0x04034634 RID: 214580
+			// Token: 0x0402EFE5 RID: 192485
 			public const int TextTitle = 2;
 
-			// Token: 0x04034635 RID: 214581
+			// Token: 0x0402EFE6 RID: 192486
 			public const int TextDesc = 3;
 
-			// Token: 0x04034636 RID: 214582
+			// Token: 0x0402EFE7 RID: 192487
 			public const int ItemBdBuffRoot = 4;
 
-			// Token: 0x04034637 RID: 214583
+			// Token: 0x0402EFE8 RID: 192488
 			public const int LayoutBdBuff = 5;
 
-			// Token: 0x04034638 RID: 214584
+			// Token: 0x0402EFE9 RID: 192489
 			public const int ItemBdBuff = 6;
 		}
 	}

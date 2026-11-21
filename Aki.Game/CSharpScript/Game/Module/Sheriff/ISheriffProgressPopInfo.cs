@@ -3,17 +3,17 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C4D RID: 19533
+	// Token: 0x02003BFE RID: 15358
 	public interface ISheriffProgressPopInfo
 	{
-		// Token: 0x17007CC6 RID: 31942
-		// (get) Token: 0x06032803 RID: 206851
-		// (set) Token: 0x06032804 RID: 206852
+		// Token: 0x17005070 RID: 20592
+		// (get) Token: 0x060275B6 RID: 161206
+		// (set) Token: 0x060275B7 RID: 161207
 		SheriffProgress Progress { get; set; }
 
-		// Token: 0x17007CC7 RID: 31943
-		// (get) Token: 0x06032805 RID: 206853
-		// (set) Token: 0x06032806 RID: 206854
+		// Token: 0x17005071 RID: 20593
+		// (get) Token: 0x060275B8 RID: 161208
+		// (set) Token: 0x060275B9 RID: 161209
 		bool NeedAnim { get; set; }
 	}
 }

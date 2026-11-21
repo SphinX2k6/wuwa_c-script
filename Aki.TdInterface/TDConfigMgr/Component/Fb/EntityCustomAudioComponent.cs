@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE2 RID: 2786
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BAC RID: 2988
 	public class EntityCustomAudioComponent : EntityAudioComponent
 	{
-		// Token: 0x06004025 RID: 16421 RVA: 0x000A3CD9 File Offset: 0x000A1ED9
+		// Token: 0x0600444F RID: 17487 RVA: 0x000AD2CD File Offset: 0x000AB4CD
 		public static EntityCustomAudioComponent Create(IEntityCustomAudioComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700101E RID: 4126
-		// (get) Token: 0x06004026 RID: 16422 RVA: 0x000A3CF8 File Offset: 0x000A1EF8
+		// Token: 0x170010F2 RID: 4338
+		// (get) Token: 0x06004450 RID: 17488 RVA: 0x000AD2EC File Offset: 0x000AB4EC
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700101F RID: 4127
-		// (get) Token: 0x06004027 RID: 16423 RVA: 0x000A3D2E File Offset: 0x000A1F2E
+		// Token: 0x170010F3 RID: 4339
+		// (get) Token: 0x06004451 RID: 17489 RVA: 0x000AD322 File Offset: 0x000AB522
 		public override IAkEventTypeConfig AkEventType
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001020 RID: 4128
-		// (get) Token: 0x06004028 RID: 16424 RVA: 0x000A3D5D File Offset: 0x000A1F5D
+		// Token: 0x170010F4 RID: 4340
+		// (get) Token: 0x06004452 RID: 17490 RVA: 0x000AD351 File Offset: 0x000AB551
 		public override EAudioRangeType AudioRangeType
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001021 RID: 4129
-		// (get) Token: 0x06004029 RID: 16425 RVA: 0x000A3D6C File Offset: 0x000A1F6C
+		// Token: 0x170010F5 RID: 4341
+		// (get) Token: 0x06004453 RID: 17491 RVA: 0x000AD360 File Offset: 0x000AB560
 		public override bool? EdIsLocked
 		{
 			get
@@ -72,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001022 RID: 4130
-		// (get) Token: 0x0600402A RID: 16426 RVA: 0x000A3D82 File Offset: 0x000A1F82
+		// Token: 0x170010F6 RID: 4342
+		// (get) Token: 0x06004454 RID: 17492 RVA: 0x000AD376 File Offset: 0x000AB576
 		public virtual IAudioControlType AudioControlType
 		{
 			get
@@ -88,19 +85,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023AF RID: 9135
+		// Token: 0x040025CB RID: 9675
 		private IEntityCustomAudioComponent Instance;
 
-		// Token: 0x040023B0 RID: 9136
+		// Token: 0x040025CC RID: 9676
 		private IAkEventTypeConfig _AkEventTypeCache;
 
-		// Token: 0x040023B1 RID: 9137
+		// Token: 0x040025CD RID: 9677
 		private bool _AkEventTypeInited;
 
-		// Token: 0x040023B2 RID: 9138
+		// Token: 0x040025CE RID: 9678
 		private IAudioControlType _AudioControlTypeCache;
 
-		// Token: 0x040023B3 RID: 9139
+		// Token: 0x040025CF RID: 9679
 		private bool _AudioControlTypeInited;
 	}
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BC3 RID: 19395
+	// Token: 0x02003B6D RID: 15213
 	public class SkipToComposeExchange : SkipTask
 	{
-		// Token: 0x06032315 RID: 205589 RVA: 0x00BA9E04 File Offset: 0x00BA8004
+		// Token: 0x060270A6 RID: 159910 RVA: 0x00AEE0B0 File Offset: 0x00AEC2B0
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

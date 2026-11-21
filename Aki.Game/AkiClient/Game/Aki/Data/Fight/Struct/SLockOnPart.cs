@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Fight.Struct
 {
-	// Token: 0x02003F6D RID: 16237
+	// Token: 0x0200320E RID: 12814
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,150 +14,140 @@ namespace AkiClient.Game.Aki.Data.Fight.Struct
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class SLockOnPart : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029668 RID: 169576 RVA: 0x009C3560 File Offset: 0x009C1760
+		// Token: 0x0601FEEB RID: 130795 RVA: 0x009394A8 File Offset: 0x009376A8
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SLockOnPart._ScriptStructPtr != 0) ? SLockOnPart._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Fight/Struct/SLockOnPart.SLockOnPart", ref SLockOnPart._ScriptStructPtr);
 		}
 
-		// Token: 0x17006306 RID: 25350
-		// (get) Token: 0x06029669 RID: 169577 RVA: 0x009C3584 File Offset: 0x009C1784
-		// (set) Token: 0x0602966A RID: 169578 RVA: 0x009C3598 File Offset: 0x009C1798
+		// Token: 0x17003C42 RID: 15426
+		// (get) Token: 0x0601FEEC RID: 130796 RVA: 0x009394CC File Offset: 0x009376CC
+		// (set) Token: 0x0601FEED RID: 130797 RVA: 0x009394E0 File Offset: 0x009376E0
 		public unsafe string BoneName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_BoneName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_BoneName)), value);
 			}
 		}
 
-		// Token: 0x17006307 RID: 25351
-		// (get) Token: 0x0602966B RID: 169579 RVA: 0x009C35AD File Offset: 0x009C17AD
-		// (set) Token: 0x0602966C RID: 169580 RVA: 0x009C35BD File Offset: 0x009C17BD
+		// Token: 0x17003C43 RID: 15427
+		// (get) Token: 0x0601FEEE RID: 130798 RVA: 0x009394F5 File Offset: 0x009376F5
+		// (set) Token: 0x0601FEEF RID: 130799 RVA: 0x00939505 File Offset: 0x00937705
 		public unsafe bool SoftLockValid
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_SoftLockValid) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_SoftLockValid) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006308 RID: 25352
-		// (get) Token: 0x0602966D RID: 169581 RVA: 0x009C35CE File Offset: 0x009C17CE
-		// (set) Token: 0x0602966E RID: 169582 RVA: 0x009C35DE File Offset: 0x009C17DE
+		// Token: 0x17003C44 RID: 15428
+		// (get) Token: 0x0601FEF0 RID: 130800 RVA: 0x00939516 File Offset: 0x00937716
+		// (set) Token: 0x0601FEF1 RID: 130801 RVA: 0x00939526 File Offset: 0x00937726
 		public unsafe bool HardLockValid
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_HardLockValid) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SLockOnPart.__PropertyOffset_HardLockValid) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006309 RID: 25353
-		// (get) Token: 0x0602966F RID: 169583 RVA: 0x009C35EF File Offset: 0x009C17EF
-		// (set) Token: 0x06029670 RID: 169584 RVA: 0x009C3603 File Offset: 0x009C1803
+		// Token: 0x17003C45 RID: 15429
+		// (get) Token: 0x0601FEF2 RID: 130802 RVA: 0x00939537 File Offset: 0x00937737
+		// (set) Token: 0x0601FEF3 RID: 130803 RVA: 0x0093954B File Offset: 0x0093774B
 		public unsafe string AimPartBoneName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_AimPartBoneName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_AimPartBoneName)), value);
 			}
 		}
 
-		// Token: 0x1700630A RID: 25354
-		// (get) Token: 0x06029671 RID: 169585 RVA: 0x009C3618 File Offset: 0x009C1818
-		// (set) Token: 0x06029672 RID: 169586 RVA: 0x009C362C File Offset: 0x009C182C
+		// Token: 0x17003C46 RID: 15430
+		// (get) Token: 0x0601FEF4 RID: 130804 RVA: 0x00939560 File Offset: 0x00937760
+		// (set) Token: 0x0601FEF5 RID: 130805 RVA: 0x00939574 File Offset: 0x00937774
 		public unsafe string EnablePartName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_4)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_EnablePartName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_4)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SLockOnPart.__PropertyOffset_EnablePartName)), value);
 			}
 		}
 
-		// Token: 0x06029673 RID: 169587 RVA: 0x009C3641 File Offset: 0x009C1841
+		// Token: 0x0601FEF6 RID: 130806 RVA: 0x00939589 File Offset: 0x00937789
 		public SLockOnPart()
 		{
 		}
 
-		// Token: 0x06029674 RID: 169588 RVA: 0x009C3649 File Offset: 0x009C1849
-		public SLockOnPart(string BoneName, bool SoftLockValid, bool HardLockValid, string AimPartBoneName, string EnablePartName)
-		{
-			this.BoneName = BoneName;
-			this.SoftLockValid = SoftLockValid;
-			this.HardLockValid = HardLockValid;
-			this.AimPartBoneName = AimPartBoneName;
-			this.EnablePartName = EnablePartName;
-		}
-
-		// Token: 0x06029675 RID: 169589 RVA: 0x009C3676 File Offset: 0x009C1876
+		// Token: 0x0601FEF7 RID: 130807 RVA: 0x00939591 File Offset: 0x00937791
 		protected override IntPtr GetUStructPtr()
 		{
 			return SLockOnPart.StaticStruct();
 		}
 
-		// Token: 0x06029676 RID: 169590 RVA: 0x009C3682 File Offset: 0x009C1882
+		// Token: 0x0601FEF8 RID: 130808 RVA: 0x0093959D File Offset: 0x0093779D
 		[NullableContext(2)]
 		public SLockOnPart(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029677 RID: 169591 RVA: 0x009C368C File Offset: 0x009C188C
+		// Token: 0x0601FEF9 RID: 130809 RVA: 0x009395A7 File Offset: 0x009377A7
 		public SLockOnPart(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029678 RID: 169592 RVA: 0x009C3697 File Offset: 0x009C1897
+		// Token: 0x0601FEFA RID: 130810 RVA: 0x009395B2 File Offset: 0x009377B2
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SLockOnPart(Pointer, false, true);
 		}
 
-		// Token: 0x06029679 RID: 169593 RVA: 0x009C36A1 File Offset: 0x009C18A1
+		// Token: 0x0601FEFB RID: 130811 RVA: 0x009395BC File Offset: 0x009377BC
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SLockOnPart(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401536D RID: 86893
+		// Token: 0x04011261 RID: 70241
 		public const string __ObjectPath = "/Game/Aki/Data/Fight/Struct/SLockOnPart.SLockOnPart";
 
-		// Token: 0x0401536E RID: 86894
+		// Token: 0x04011262 RID: 70242
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401536F RID: 86895
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011263 RID: 70243
+		internal static int __PropertyOffset_BoneName;
 
-		// Token: 0x04015370 RID: 86896
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011264 RID: 70244
+		internal static int __PropertyOffset_SoftLockValid;
 
-		// Token: 0x04015371 RID: 86897
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011265 RID: 70245
+		internal static int __PropertyOffset_HardLockValid;
 
-		// Token: 0x04015372 RID: 86898
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011266 RID: 70246
+		internal static int __PropertyOffset_AimPartBoneName;
 
-		// Token: 0x04015373 RID: 86899
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011267 RID: 70247
+		internal static int __PropertyOffset_EnablePartName;
 	}
 }

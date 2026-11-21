@@ -4,15 +4,15 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001FFA RID: 8186
+// Token: 0x020014CD RID: 5325
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ItemHintModel : ModelBase
 {
-	// Token: 0x1700136A RID: 4970
-	// (get) Token: 0x06010093 RID: 65683 RVA: 0x003E908B File Offset: 0x003E728B
-	// (set) Token: 0x06010094 RID: 65684 RVA: 0x003E9093 File Offset: 0x003E7293
+	// Token: 0x17001397 RID: 5015
+	// (get) Token: 0x0600D4FB RID: 54523 RVA: 0x003F5683 File Offset: 0x003F3883
+	// (set) Token: 0x0600D4FC RID: 54524 RVA: 0x003F568B File Offset: 0x003F388B
 	public bool Visibility
 	{
 		get
@@ -25,14 +25,14 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010095 RID: 65685 RVA: 0x003E909C File Offset: 0x003E729C
+	// Token: 0x0600D4FD RID: 54525 RVA: 0x003F5694 File Offset: 0x003F3894
 	protected override bool OnInit()
 	{
 		this.VisibilityInternal = true;
 		return true;
 	}
 
-	// Token: 0x06010096 RID: 65686 RVA: 0x003E90A6 File Offset: 0x003E72A6
+	// Token: 0x0600D4FE RID: 54526 RVA: 0x003F569E File Offset: 0x003F389E
 	protected override bool OnClear()
 	{
 		this.MainInterfaceData.Clear();
@@ -41,7 +41,7 @@ public class ItemHintModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010097 RID: 65687 RVA: 0x003E90CC File Offset: 0x003E72CC
+	// Token: 0x0600D4FF RID: 54527 RVA: 0x003F56C4 File Offset: 0x003F38C4
 	public void AddItemRewardList(ItemRewardNotify itemRewardInfo)
 	{
 		ItemRewardData itemRewardData = new ItemRewardData();
@@ -49,7 +49,7 @@ public class ItemHintModel : ModelBase
 		this.ItemRewardDataArray.Add(itemRewardData);
 	}
 
-	// Token: 0x06010098 RID: 65688 RVA: 0x003E90F4 File Offset: 0x003E72F4
+	// Token: 0x0600D500 RID: 54528 RVA: 0x003F56EC File Offset: 0x003F38EC
 	public void AddAchievementItemRewardList(ItemRewardNotify itemRewardInfo)
 	{
 		ItemRewardData itemRewardData = new ItemRewardData();
@@ -57,7 +57,7 @@ public class ItemHintModel : ModelBase
 		this.AchievementItemRewardDataArray.Add(itemRewardData);
 	}
 
-	// Token: 0x06010099 RID: 65689 RVA: 0x003E911C File Offset: 0x003E731C
+	// Token: 0x0600D501 RID: 54529 RVA: 0x003F5714 File Offset: 0x003F3914
 	public void AddItemRewardTest()
 	{
 		ItemRewardNotify itemRewardNotify = ItemRewardNotify.Create();
@@ -73,7 +73,7 @@ public class ItemHintModel : ModelBase
 		this.ItemRewardDataArray.Add(itemRewardData);
 	}
 
-	// Token: 0x0601009A RID: 65690 RVA: 0x003E9186 File Offset: 0x003E7386
+	// Token: 0x0600D502 RID: 54530 RVA: 0x003F577E File Offset: 0x003F397E
 	[NullableContext(2)]
 	public ItemRewardData ShiftItemRewardListFirst()
 	{
@@ -86,7 +86,7 @@ public class ItemHintModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601009B RID: 65691 RVA: 0x003E91B0 File Offset: 0x003E73B0
+	// Token: 0x0600D503 RID: 54531 RVA: 0x003F57A8 File Offset: 0x003F39A8
 	[NullableContext(2)]
 	public ItemRewardData ShiftAchievementItemRewardListFirst()
 	{
@@ -99,20 +99,20 @@ public class ItemHintModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0601009C RID: 65692 RVA: 0x003E91DA File Offset: 0x003E73DA
+	// Token: 0x0600D504 RID: 54532 RVA: 0x003F57D2 File Offset: 0x003F39D2
 	public ItemRewardData PeekItemRewardListFirst()
 	{
 		return this.ItemRewardDataArray[0];
 	}
 
-	// Token: 0x0601009D RID: 65693 RVA: 0x003E91E8 File Offset: 0x003E73E8
+	// Token: 0x0600D505 RID: 54533 RVA: 0x003F57E0 File Offset: 0x003F39E0
 	public void CleanItemRewardList()
 	{
 		this.ItemRewardDataArray = new List<ItemRewardData>();
 	}
 
-	// Token: 0x1700136B RID: 4971
-	// (get) Token: 0x0601009E RID: 65694 RVA: 0x003E91F5 File Offset: 0x003E73F5
+	// Token: 0x17001398 RID: 5016
+	// (get) Token: 0x0600D506 RID: 54534 RVA: 0x003F57ED File Offset: 0x003F39ED
 	public bool IsItemRewardListEmpty
 	{
 		get
@@ -121,8 +121,8 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700136C RID: 4972
-	// (get) Token: 0x0601009F RID: 65695 RVA: 0x003E9208 File Offset: 0x003E7408
+	// Token: 0x17001399 RID: 5017
+	// (get) Token: 0x0600D507 RID: 54535 RVA: 0x003F5800 File Offset: 0x003F3A00
 	public bool IsAchievementItemRewardListEmpty
 	{
 		get
@@ -131,7 +131,7 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x060100A0 RID: 65696 RVA: 0x003E921C File Offset: 0x003E741C
+	// Token: 0x0600D508 RID: 54536 RVA: 0x003F5814 File Offset: 0x003F3A14
 	public void MainInterfaceInsertItemRewardInfo(AddCountItemInfo[] addCountItemInfo)
 	{
 		foreach (AddCountItemInfo addCountItemInfo2 in addCountItemInfo)
@@ -161,7 +161,7 @@ public class ItemHintModel : ModelBase
 		this.PriorInterfaceData.SortWaitList();
 	}
 
-	// Token: 0x060100A1 RID: 65697 RVA: 0x003E92F4 File Offset: 0x003E74F4
+	// Token: 0x0600D509 RID: 54537 RVA: 0x003F58EC File Offset: 0x003F3AEC
 	public void AddItemToPriorInterfaceData(int itemId, int count, int qualityId)
 	{
 		ItemRewardInfo itemRewardInfo = new ItemRewardInfo();
@@ -171,8 +171,8 @@ public class ItemHintModel : ModelBase
 		this.PriorInterfaceData.AddItemRewardInfo(itemRewardInfo);
 	}
 
-	// Token: 0x1700136D RID: 4973
-	// (get) Token: 0x060100A2 RID: 65698 RVA: 0x003E9332 File Offset: 0x003E7532
+	// Token: 0x1700139A RID: 5018
+	// (get) Token: 0x0600D50A RID: 54538 RVA: 0x003F592A File Offset: 0x003F3B2A
 	public bool IsMainInterfaceDataEmpty
 	{
 		get
@@ -181,8 +181,8 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700136E RID: 4974
-	// (get) Token: 0x060100A3 RID: 65699 RVA: 0x003E934A File Offset: 0x003E754A
+	// Token: 0x1700139B RID: 5019
+	// (get) Token: 0x0600D50B RID: 54539 RVA: 0x003F5942 File Offset: 0x003F3B42
 	public bool IsPriorInterfaceDataEmpty
 	{
 		get
@@ -191,7 +191,7 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x060100A4 RID: 65700 RVA: 0x003E9362 File Offset: 0x003E7562
+	// Token: 0x0600D50C RID: 54540 RVA: 0x003F595A File Offset: 0x003F3B5A
 	[NullableContext(2)]
 	public ItemRewardInfo ShiftMainInterfaceData()
 	{
@@ -204,7 +204,7 @@ public class ItemHintModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060100A5 RID: 65701 RVA: 0x003E939B File Offset: 0x003E759B
+	// Token: 0x0600D50D RID: 54541 RVA: 0x003F5993 File Offset: 0x003F3B93
 	[NullableContext(2)]
 	public ItemRewardInfo ShiftPriorInterfaceData()
 	{
@@ -217,7 +217,7 @@ public class ItemHintModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060100A6 RID: 65702 RVA: 0x003E93D4 File Offset: 0x003E75D4
+	// Token: 0x0600D50E RID: 54542 RVA: 0x003F59CC File Offset: 0x003F3BCC
 	public void GmClear()
 	{
 		this.MainInterfaceData.WaitList.Clear();
@@ -226,8 +226,8 @@ public class ItemHintModel : ModelBase
 		this.AchievementItemRewardDataArray.Clear();
 	}
 
-	// Token: 0x1700136F RID: 4975
-	// (get) Token: 0x060100A7 RID: 65703 RVA: 0x003E9407 File Offset: 0x003E7607
+	// Token: 0x1700139C RID: 5020
+	// (get) Token: 0x0600D50F RID: 54543 RVA: 0x003F59FF File Offset: 0x003F3BFF
 	public static ItemHintModel Instance
 	{
 		get
@@ -236,7 +236,7 @@ public class ItemHintModel : ModelBase
 		}
 	}
 
-	// Token: 0x060100A8 RID: 65704 RVA: 0x003E940E File Offset: 0x003E760E
+	// Token: 0x0600D510 RID: 54544 RVA: 0x003F5A06 File Offset: 0x003F3C06
 	public static ItemHintModel GetOrCreateInstance()
 	{
 		if (ItemHintModel._Instance == null)
@@ -246,7 +246,7 @@ public class ItemHintModel : ModelBase
 		return ItemHintModel._Instance;
 	}
 
-	// Token: 0x060100A9 RID: 65705 RVA: 0x003E9422 File Offset: 0x003E7622
+	// Token: 0x0600D511 RID: 54545 RVA: 0x003F5A1A File Offset: 0x003F3C1A
 	public static bool CreateInstance()
 	{
 		if (ItemHintModel._Instance != null)
@@ -257,42 +257,42 @@ public class ItemHintModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060100AA RID: 65706 RVA: 0x003E9438 File Offset: 0x003E7638
+	// Token: 0x0600D512 RID: 54546 RVA: 0x003F5A30 File Offset: 0x003F3C30
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060100AB RID: 65707 RVA: 0x003E943A File Offset: 0x003E763A
+	// Token: 0x0600D513 RID: 54547 RVA: 0x003F5A32 File Offset: 0x003F3C32
 	public static void ResetStaticDefaultValue()
 	{
 		ItemHintModel._Instance = null;
 	}
 
-	// Token: 0x060100AC RID: 65708 RVA: 0x003E9442 File Offset: 0x003E7642
+	// Token: 0x0600D514 RID: 54548 RVA: 0x003F5A3A File Offset: 0x003F3C3A
 	static ItemHintModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ItemHintModel.CreateStaticDefaultValue), new Action(ItemHintModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040076B3 RID: 30387
+	// Token: 0x0400779C RID: 30620
 	private const int HIGH_QUALITY = 4;
 
-	// Token: 0x040076B4 RID: 30388
+	// Token: 0x0400779D RID: 30621
 	private readonly MainInterfaceData MainInterfaceData = new MainInterfaceData();
 
-	// Token: 0x040076B5 RID: 30389
+	// Token: 0x0400779E RID: 30622
 	private readonly MainInterfaceData PriorInterfaceData = new MainInterfaceData();
 
-	// Token: 0x040076B6 RID: 30390
+	// Token: 0x0400779F RID: 30623
 	private List<ItemRewardData> ItemRewardDataArray = new List<ItemRewardData>();
 
-	// Token: 0x040076B7 RID: 30391
+	// Token: 0x040077A0 RID: 30624
 	private readonly List<ItemRewardData> AchievementItemRewardDataArray = new List<ItemRewardData>();
 
-	// Token: 0x040076B8 RID: 30392
+	// Token: 0x040077A1 RID: 30625
 	private bool VisibilityInternal;
 
-	// Token: 0x040076B9 RID: 30393
+	// Token: 0x040077A2 RID: 30626
 	[Nullable(2)]
 	private static ItemHintModel _Instance;
 }

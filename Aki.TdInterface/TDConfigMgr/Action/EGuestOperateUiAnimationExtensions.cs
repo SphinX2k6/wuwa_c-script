@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200234D RID: 9037
+	// Token: 0x020025C0 RID: 9664
 	public static class EGuestOperateUiAnimationExtensions
 	{
-		// Token: 0x0600C559 RID: 50521 RVA: 0x001CCE28 File Offset: 0x001CB028
+		// Token: 0x0600D13A RID: 53562 RVA: 0x001E4FF4 File Offset: 0x001E31F4
 		public static string ToEnumString(this EGuestOperateUiAnimation value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C55A RID: 50522 RVA: 0x001CCE60 File Offset: 0x001CB060
+		// Token: 0x0600D13B RID: 53563 RVA: 0x001E502C File Offset: 0x001E322C
 		public static EGuestOperateUiAnimation FromString(string name)
 		{
 			EGuestOperateUiAnimation result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C55B RID: 50523 RVA: 0x001CCE89 File Offset: 0x001CB089
+		// Token: 0x0600D13C RID: 53564 RVA: 0x001E5055 File Offset: 0x001E3255
 		public static bool TryFromString(string name, out EGuestOperateUiAnimation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C55C RID: 50524 RVA: 0x001CCEC2 File Offset: 0x001CB0C2
+		// Token: 0x0600D13D RID: 53565 RVA: 0x001E508E File Offset: 0x001E328E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C55D RID: 50525 RVA: 0x001CCEDA File Offset: 0x001CB0DA
+		// Token: 0x0600D13E RID: 53566 RVA: 0x001E50A6 File Offset: 0x001E32A6
 		public static EGuestOperateUiAnimation[] GetValues()
 		{
 			return new EGuestOperateUiAnimation[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C55E RID: 50526 RVA: 0x001CCEE6 File Offset: 0x001CB0E6
+		// Token: 0x0600D13F RID: 53567 RVA: 0x001E50B2 File Offset: 0x001E32B2
 		public static string[] GetNames()
 		{
 			return new string[]

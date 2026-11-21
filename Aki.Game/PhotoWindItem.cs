@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002566 RID: 9574
+// Token: 0x02001A51 RID: 6737
 public class PhotoWindItem : GridProxyAbstract<PhotoWindDirection>
 {
-	// Token: 0x0601351B RID: 79131 RVA: 0x004CE7C4 File Offset: 0x004CC9C4
+	// Token: 0x060109FD RID: 68093 RVA: 0x004DD3FC File Offset: 0x004DB5FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,13 +27,13 @@ public class PhotoWindItem : GridProxyAbstract<PhotoWindDirection>
 		};
 	}
 
-	// Token: 0x0601351C RID: 79132 RVA: 0x004CE899 File Offset: 0x004CCA99
+	// Token: 0x060109FE RID: 68094 RVA: 0x004DD4D1 File Offset: 0x004DB6D1
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).bLockStateOnSelect = true;
 	}
 
-	// Token: 0x0601351D RID: 79133 RVA: 0x004CE8A8 File Offset: 0x004CCAA8
+	// Token: 0x060109FF RID: 68095 RVA: 0x004DD4E0 File Offset: 0x004DB6E0
 	public override void Refresh(PhotoWindDirection data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -66,7 +66,7 @@ public class PhotoWindItem : GridProxyAbstract<PhotoWindDirection>
 		this.SetToggleState(isSelected, false);
 	}
 
-	// Token: 0x0601351E RID: 79134 RVA: 0x004CE95F File Offset: 0x004CCB5F
+	// Token: 0x06010A00 RID: 68096 RVA: 0x004DD597 File Offset: 0x004DB797
 	private void SetToggleState(bool isSelect, bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -77,26 +77,26 @@ public class PhotoWindItem : GridProxyAbstract<PhotoWindDirection>
 		extendToggle.SetToggleStateForce(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x0601351F RID: 79135 RVA: 0x004CE97C File Offset: 0x004CCB7C
+	// Token: 0x06010A01 RID: 68097 RVA: 0x004DD5B4 File Offset: 0x004DB7B4
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(true, fireEvent);
 	}
 
-	// Token: 0x06013520 RID: 79136 RVA: 0x004CE986 File Offset: 0x004CCB86
+	// Token: 0x06010A02 RID: 68098 RVA: 0x004DD5BE File Offset: 0x004DB7BE
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(false, fireEvent);
 	}
 
-	// Token: 0x06013521 RID: 79137 RVA: 0x004CE990 File Offset: 0x004CCB90
+	// Token: 0x06010A03 RID: 68099 RVA: 0x004DD5C8 File Offset: 0x004DB7C8
 	[NullableContext(1)]
 	public override object GetKey(PhotoWindDirection data, int displayIndex)
 	{
 		return data.IsDefault ? -1 : data.Id;
 	}
 
-	// Token: 0x06013522 RID: 79138 RVA: 0x004CE9AA File Offset: 0x004CCBAA
+	// Token: 0x06010A04 RID: 68100 RVA: 0x004DD5E2 File Offset: 0x004DB7E2
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -106,31 +106,31 @@ public class PhotoWindItem : GridProxyAbstract<PhotoWindDirection>
 		this.OnWindClick(base.GridIndex);
 	}
 
-	// Token: 0x040091B5 RID: 37301
+	// Token: 0x0400930E RID: 37646
 	private PhotoWindDirection Data;
 
-	// Token: 0x040091B6 RID: 37302
+	// Token: 0x0400930F RID: 37647
 	[Nullable(1)]
 	public Action<int> OnWindClick = delegate(int gridIndex)
 	{
 	};
 
-	// Token: 0x02008B42 RID: 35650
+	// Token: 0x02007CC8 RID: 31944
 	private enum EComponents
 	{
-		// Token: 0x0402D366 RID: 185190
+		// Token: 0x04028673 RID: 165491
 		ToggleItem,
-		// Token: 0x0402D367 RID: 185191
+		// Token: 0x04028674 RID: 165492
 		ItemNormalState,
-		// Token: 0x0402D368 RID: 185192
+		// Token: 0x04028675 RID: 165493
 		ItemContent,
-		// Token: 0x0402D369 RID: 185193
+		// Token: 0x04028676 RID: 165494
 		TextTitle,
-		// Token: 0x0402D36A RID: 185194
+		// Token: 0x04028677 RID: 165495
 		SpriteIcon,
-		// Token: 0x0402D36B RID: 185195
+		// Token: 0x04028678 RID: 165496
 		SpriteRedDot,
-		// Token: 0x0402D36C RID: 185196
+		// Token: 0x04028679 RID: 165497
 		ItemLockState
 	}
 }

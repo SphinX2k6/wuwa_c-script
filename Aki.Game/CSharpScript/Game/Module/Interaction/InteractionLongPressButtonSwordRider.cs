@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585B RID: 22619
+	// Token: 0x02004833 RID: 18483
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionLongPressButtonSwordRider : InteractionLongPressButton
 	{
-		// Token: 0x06039817 RID: 235543 RVA: 0x00DA7164 File Offset: 0x00DA5364
+		// Token: 0x0602E734 RID: 190260 RVA: 0x00CF5E8C File Offset: 0x00CF408C
 		protected override void OnRegisterComponent()
 		{
 			this.IsMobile = Info.Instance.IsInTouch();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Interaction
 			};
 		}
 
-		// Token: 0x06039818 RID: 235544 RVA: 0x00DA7294 File Offset: 0x00DA5494
+		// Token: 0x0602E735 RID: 190261 RVA: 0x00CF5FBC File Offset: 0x00CF41BC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			InteractionLongPressButtonSwordRider.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039819 RID: 235545 RVA: 0x00DA72D8 File Offset: 0x00DA54D8
+		// Token: 0x0602E736 RID: 190262 RVA: 0x00CF6000 File Offset: 0x00CF4200
 		protected override void ResolveComponents()
 		{
 			int name = this.IsMobile ? 0 : 0;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SequencePlayer = ((this.RootItem != null) ? new UiSequencePlayer(this.RootItem) : null);
 		}
 
-		// Token: 0x0603981A RID: 235546 RVA: 0x00DA7335 File Offset: 0x00DA5535
+		// Token: 0x0602E737 RID: 190263 RVA: 0x00CF605D File Offset: 0x00CF425D
 		protected override void SetProgress(float progress)
 		{
 			UUITexture progressFill = this.ProgressFill;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Interaction
 			progressFill.SetFillAmount(progress);
 		}
 
-		// Token: 0x0603981B RID: 235547 RVA: 0x00DA7348 File Offset: 0x00DA5548
+		// Token: 0x0602E738 RID: 190264 RVA: 0x00CF6070 File Offset: 0x00CF4270
 		protected override void RefreshKeyItem(string actionName)
 		{
 			if (this.KeyItem == null)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.KeyItem.SetActive(true);
 		}
 
-		// Token: 0x0603981C RID: 235548 RVA: 0x00DA7380 File Offset: 0x00DA5580
+		// Token: 0x0602E739 RID: 190265 RVA: 0x00CF60A8 File Offset: 0x00CF42A8
 		protected override void HideKeyItem()
 		{
 			InputMultiKeyItem keyItem = this.KeyItem;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Interaction
 			keyItem.SetActive(false);
 		}
 
-		// Token: 0x0603981D RID: 235549 RVA: 0x00DA7394 File Offset: 0x00DA5594
+		// Token: 0x0602E73A RID: 190266 RVA: 0x00CF60BC File Offset: 0x00CF42BC
 		protected override void PlayEnterSequence()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Interaction
 			sequencePlayer.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x0603981E RID: 235550 RVA: 0x00DA73C0 File Offset: 0x00DA55C0
+		// Token: 0x0602E73B RID: 190267 RVA: 0x00CF60E8 File Offset: 0x00CF42E8
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -123,49 +123,49 @@ namespace CSharpScript.Game.Module.Interaction
 			this.KeyItem = null;
 		}
 
-		// Token: 0x0401E10A RID: 123146
+		// Token: 0x04018BA7 RID: 101287
 		private UUITexture ProgressFill;
 
-		// Token: 0x0401E10B RID: 123147
+		// Token: 0x04018BA8 RID: 101288
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401E10C RID: 123148
+		// Token: 0x04018BA9 RID: 101289
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0401E10D RID: 123149
+		// Token: 0x04018BAA RID: 101290
 		private bool IsMobile;
 
-		// Token: 0x0200BA82 RID: 47746
+		// Token: 0x0200A499 RID: 42137
 		[NullableContext(0)]
 		private enum EChildTypeMobile
 		{
-			// Token: 0x04038604 RID: 230916
+			// Token: 0x04032FFB RID: 208891
 			Button,
-			// Token: 0x04038605 RID: 230917
+			// Token: 0x04032FFC RID: 208892
 			ProgressFill,
-			// Token: 0x04038606 RID: 230918
+			// Token: 0x04032FFD RID: 208893
 			Icon,
-			// Token: 0x04038607 RID: 230919
+			// Token: 0x04032FFE RID: 208894
 			InfoPanel,
-			// Token: 0x04038608 RID: 230920
+			// Token: 0x04032FFF RID: 208895
 			TipsText
 		}
 
-		// Token: 0x0200BA83 RID: 47747
+		// Token: 0x0200A49A RID: 42138
 		[NullableContext(0)]
 		private enum EChildTypePc
 		{
-			// Token: 0x0403860A RID: 230922
+			// Token: 0x04033001 RID: 208897
 			Button,
-			// Token: 0x0403860B RID: 230923
+			// Token: 0x04033002 RID: 208898
 			ProgressFill,
-			// Token: 0x0403860C RID: 230924
+			// Token: 0x04033003 RID: 208899
 			Icon,
-			// Token: 0x0403860D RID: 230925
+			// Token: 0x04033004 RID: 208900
 			KeyItem,
-			// Token: 0x0403860E RID: 230926
+			// Token: 0x04033005 RID: 208901
 			InfoPanel,
-			// Token: 0x0403860F RID: 230927
+			// Token: 0x04033006 RID: 208902
 			TipsText
 		}
 	}

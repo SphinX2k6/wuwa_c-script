@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020DE RID: 8414
+	// Token: 0x020006CA RID: 1738
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIVertsData")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 88)]
 	public class ULGUIVertsData : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601FAEB RID: 129771 RVA: 0x002F1FF0 File Offset: 0x002F01F0
+		// Token: 0x0600943F RID: 37951 RVA: 0x000DFB12 File Offset: 0x000DDD12
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULGUIVertsData._ClassPtr;
 		}
 
-		// Token: 0x0601FAEC RID: 129772 RVA: 0x002F1FFC File Offset: 0x002F01FC
+		// Token: 0x06009440 RID: 37952 RVA: 0x000DFB20 File Offset: 0x000DDD20
 		public ULGUIVertsData() : this(BuiltinUtils.AllocNativeUObject(ULGUIVertsData.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601FAED RID: 129773 RVA: 0x002F2024 File Offset: 0x002F0224
+		// Token: 0x06009441 RID: 37953 RVA: 0x000DFB48 File Offset: 0x000DDD48
 		public ULGUIVertsData(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULGUIVertsData.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007CDC RID: 31964
-		// (get) Token: 0x0601FAEE RID: 129774 RVA: 0x002F2058 File Offset: 0x002F0258
-		// (set) Token: 0x0601FAEF RID: 129775 RVA: 0x002F2091 File Offset: 0x002F0291
+		// Token: 0x17001B97 RID: 7063
+		// (get) Token: 0x06009442 RID: 37954 RVA: 0x000DFB7C File Offset: 0x000DDD7C
+		// (set) Token: 0x06009443 RID: 37955 RVA: 0x000DFBB5 File Offset: 0x000DDDB5
 		public TArray<FVector2D> Points
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007CDD RID: 31965
-		// (get) Token: 0x0601FAF0 RID: 129776 RVA: 0x002F209F File Offset: 0x002F029F
-		// (set) Token: 0x0601FAF1 RID: 129777 RVA: 0x002F20B3 File Offset: 0x002F02B3
+		// Token: 0x17001B98 RID: 7064
+		// (get) Token: 0x06009444 RID: 37956 RVA: 0x000DFBC3 File Offset: 0x000DDDC3
+		// (set) Token: 0x06009445 RID: 37957 RVA: 0x000DFBD7 File Offset: 0x000DDDD7
 		[Nullable(2)]
 		public unsafe UObject SourceAsset
 		{
@@ -68,54 +68,54 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FAF2 RID: 129778 RVA: 0x002F20C8 File Offset: 0x002F02C8
+		// Token: 0x06009446 RID: 37958 RVA: 0x000DFBEC File Offset: 0x000DDDEC
 		public TSoftObjectPtr<UObject> GetSourceAsset()
 		{
 			return new TSoftObjectPtr<UObject>(ULGUIVertsData.__GetSourceAsset_Internal(base.NativePtr), true, true);
 		}
 
-		// Token: 0x0601FAF3 RID: 129779 RVA: 0x002F20DC File Offset: 0x002F02DC
+		// Token: 0x06009447 RID: 37959 RVA: 0x000DFC00 File Offset: 0x000DDE00
 		public TArray<FVector2D> GetPoints()
 		{
 			return new TArray<FVector2D>(ULGUIVertsData.__GetPoints_Internal(base.NativePtr), null);
 		}
 
-		// Token: 0x0601FAF4 RID: 129780
+		// Token: 0x06009448 RID: 37960
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSourceAsset_Internal(IntPtr @this);
 
-		// Token: 0x0601FAF5 RID: 129781
+		// Token: 0x06009449 RID: 37961
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetPoints_Internal(IntPtr @this);
 
-		// Token: 0x0601FAF6 RID: 129782 RVA: 0x002F20EF File Offset: 0x002F02EF
+		// Token: 0x0600944A RID: 37962 RVA: 0x000DFC13 File Offset: 0x000DDE13
 		static ULGUIVertsData()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIVertsData");
 		}
 
-		// Token: 0x0601FAF7 RID: 129783 RVA: 0x002F20FD File Offset: 0x002F02FD
+		// Token: 0x0600944B RID: 37963 RVA: 0x000DFC21 File Offset: 0x000DDE21
 		protected ULGUIVertsData(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401117C RID: 70012
+		// Token: 0x04004093 RID: 16531
 		public new const string __ObjectPath = "/Script/LGUI.LGUIVertsData";
 
-		// Token: 0x0401117D RID: 70013
+		// Token: 0x04004094 RID: 16532
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401117E RID: 70014
+		// Token: 0x04004095 RID: 16533
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401117F RID: 70015
+		// Token: 0x04004096 RID: 16534
 		internal static int __PropertyOffset_Points;
 
-		// Token: 0x04011180 RID: 70016
+		// Token: 0x04004097 RID: 16535
 		[Nullable(2)]
 		private TArray<FVector2D> _Points;
 
-		// Token: 0x04011181 RID: 70017
+		// Token: 0x04004098 RID: 16536
 		internal static int __PropertyOffset_SourceAsset;
 	}
 }

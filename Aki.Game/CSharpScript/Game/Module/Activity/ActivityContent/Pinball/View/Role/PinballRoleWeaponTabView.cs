@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x0200631A RID: 25370
+	// Token: 0x02005298 RID: 21144
 	public class PinballRoleWeaponTabView : UiTabViewBase, IPinballRoleTabViewRoleChange, IPinballRoleTabViewRefresh
 	{
-		// Token: 0x0603FD44 RID: 261444 RVA: 0x00F712C8 File Offset: 0x00F6F4C8
+		// Token: 0x06034A05 RID: 215557 RVA: 0x00EB8224 File Offset: 0x00EB6424
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FD45 RID: 261445 RVA: 0x00F714C0 File Offset: 0x00F6F6C0
+		// Token: 0x06034A06 RID: 215558 RVA: 0x00EB841C File Offset: 0x00EB661C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRoleWeaponTabView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD46 RID: 261446 RVA: 0x00F71504 File Offset: 0x00F6F704
+		// Token: 0x06034A07 RID: 215559 RVA: 0x00EB8460 File Offset: 0x00EB6660
 		protected override void OnBeforeShow()
 		{
 			this.ViewProxy = (IPinballRoleWeaponTabViewProxy)this.ExtraParams;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			uiViewSequence.PlayOrReplaySequenceByName("Start", false, null);
 		}
 
-		// Token: 0x0603FD47 RID: 261447 RVA: 0x00F71548 File Offset: 0x00F6F748
+		// Token: 0x06034A08 RID: 215560 RVA: 0x00EB84A4 File Offset: 0x00EB66A4
 		public void RefreshView()
 		{
 			IPinballRoleWeaponTabViewProxy viewProxy = this.ViewProxy;
@@ -125,25 +125,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			confirmButtonItem.SetRedDotVisible(PinballModel.Instance.GetWeaponRedDot(this.ViewProxy.GetActivityData().Id, this.ViewProxy.GetRoleData().GetId()));
 		}
 
-		// Token: 0x0603FD48 RID: 261448 RVA: 0x00F7172C File Offset: 0x00F6F92C
+		// Token: 0x06034A09 RID: 215561 RVA: 0x00EB8688 File Offset: 0x00EB6888
 		public void RefreshByRoleChange()
 		{
 			this.RefreshView();
 		}
 
-		// Token: 0x0603FD49 RID: 261449 RVA: 0x00F71734 File Offset: 0x00F6F934
+		// Token: 0x06034A0A RID: 215562 RVA: 0x00EB8690 File Offset: 0x00EB6890
 		private void OnClickWeaponButton()
 		{
 			this.OpenWeaponEquipView();
 		}
 
-		// Token: 0x0603FD4A RID: 261450 RVA: 0x00F7173C File Offset: 0x00F6F93C
+		// Token: 0x06034A0B RID: 215563 RVA: 0x00EB8698 File Offset: 0x00EB6898
 		private void OnClickConfirmButton()
 		{
 			this.OpenWeaponEquipView();
 		}
 
-		// Token: 0x0603FD4B RID: 261451 RVA: 0x00F71744 File Offset: 0x00F6F944
+		// Token: 0x06034A0C RID: 215564 RVA: 0x00EB86A0 File Offset: 0x00EB68A0
 		public void OpenWeaponEquipView()
 		{
 			IPinballRoleWeaponTabViewProxy viewProxy = this.ViewProxy;
@@ -162,42 +162,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			UiManager.Instance.OpenView(EUiViewName.PinballWeaponEquipView, param, null);
 		}
 
-		// Token: 0x040214E5 RID: 136421
+		// Token: 0x0401BE14 RID: 114196
 		[Nullable(2)]
 		protected IPinballRoleWeaponTabViewProxy ViewProxy;
 
-		// Token: 0x040214E6 RID: 136422
+		// Token: 0x0401BE15 RID: 114197
 		[Nullable(2)]
 		protected PinballWeaponAttrView AttrView;
 
-		// Token: 0x040214E7 RID: 136423
+		// Token: 0x0401BE16 RID: 114198
 		[Nullable(2)]
 		protected ButtonItem ConfirmButtonItem;
 
-		// Token: 0x0200C517 RID: 50455
+		// Token: 0x0200AEFE RID: 44798
 		private enum EComponent
 		{
-			// Token: 0x0403B7A8 RID: 243624
+			// Token: 0x0403610A RID: 221450
 			ActiveRootItem,
-			// Token: 0x0403B7A9 RID: 243625
+			// Token: 0x0403610B RID: 221451
 			TypeIconTexture,
-			// Token: 0x0403B7AA RID: 243626
+			// Token: 0x0403610C RID: 221452
 			WeaponNameText,
-			// Token: 0x0403B7AB RID: 243627
+			// Token: 0x0403610D RID: 221453
 			WeaponTypeText,
-			// Token: 0x0403B7AC RID: 243628
+			// Token: 0x0403610E RID: 221454
 			WeaponButton,
-			// Token: 0x0403B7AD RID: 243629
+			// Token: 0x0403610F RID: 221455
 			WeaponIconTexture,
-			// Token: 0x0403B7AE RID: 243630
+			// Token: 0x04036110 RID: 221456
 			WeaponAttrRootItem,
-			// Token: 0x0403B7AF RID: 243631
+			// Token: 0x04036111 RID: 221457
 			ConfirmButton,
-			// Token: 0x0403B7B0 RID: 243632
+			// Token: 0x04036112 RID: 221458
 			LockItem,
-			// Token: 0x0403B7B1 RID: 243633
+			// Token: 0x04036113 RID: 221459
 			LockConditionItem,
-			// Token: 0x0403B7B2 RID: 243634
+			// Token: 0x04036114 RID: 221460
 			LockText
 		}
 	}

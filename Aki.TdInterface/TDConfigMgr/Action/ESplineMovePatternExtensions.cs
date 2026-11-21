@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002429 RID: 9257
+	// Token: 0x020026CA RID: 9930
 	public static class ESplineMovePatternExtensions
 	{
-		// Token: 0x0600C937 RID: 51511 RVA: 0x001D7640 File Offset: 0x001D5840
+		// Token: 0x0600D5E7 RID: 54759 RVA: 0x001F13F0 File Offset: 0x001EF5F0
 		public static string ToEnumString(this ESplineMovePattern value)
 		{
 			string result;
@@ -29,6 +29,9 @@ namespace Aki.TDConfigMgr.Action
 			case ESplineMovePattern.MechaAirPassage:
 				result = "MechaAirPassage";
 				break;
+			case ESplineMovePattern.PetalGrabMove:
+				result = "PetalGrabMove";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -36,7 +39,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C938 RID: 51512 RVA: 0x001D76AC File Offset: 0x001D58AC
+		// Token: 0x0600D5E8 RID: 54760 RVA: 0x001F1468 File Offset: 0x001EF668
 		public static ESplineMovePattern FromString(string name)
 		{
 			ESplineMovePattern result;
@@ -47,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C939 RID: 51513 RVA: 0x001D76D8 File Offset: 0x001D58D8
+		// Token: 0x0600D5E9 RID: 54761 RVA: 0x001F1494 File Offset: 0x001EF694
 		public static bool TryFromString(string name, out ESplineMovePattern value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -55,41 +58,80 @@ namespace Aki.TDConfigMgr.Action
 				value = ESplineMovePattern.PathLine;
 				return false;
 			}
-			if (name == "PathLine")
+			if (name != null)
 			{
-				value = ESplineMovePattern.PathLine;
-				return true;
+				switch (name.Length)
+				{
+				case 8:
+					if (name == "PathLine")
+					{
+						value = ESplineMovePattern.PathLine;
+						return true;
+					}
+					break;
+				case 10:
+				{
+					char c = name[0];
+					if (c != 'A')
+					{
+						if (c == 'S')
+						{
+							if (name == "SlideTrack")
+							{
+								value = ESplineMovePattern.SlideTrack;
+								return true;
+							}
+						}
+					}
+					else if (name == "AirPassage")
+					{
+						value = ESplineMovePattern.AirPassage;
+						return true;
+					}
+					break;
+				}
+				case 11:
+					if (name == "RacingTrack")
+					{
+						value = ESplineMovePattern.RacingTrack;
+						return true;
+					}
+					break;
+				case 13:
+					if (name == "PetalGrabMove")
+					{
+						value = ESplineMovePattern.PetalGrabMove;
+						return true;
+					}
+					break;
+				case 15:
+				{
+					char c = name[1];
+					if (c != 'e')
+					{
+						if (c == 'o')
+						{
+							if (name == "MotorcycleTrack")
+							{
+								value = ESplineMovePattern.MotorcycleTrack;
+								return true;
+							}
+						}
+					}
+					else if (name == "MechaAirPassage")
+					{
+						value = ESplineMovePattern.MechaAirPassage;
+						return true;
+					}
+					break;
+				}
+				}
 			}
-			if (name == "RacingTrack")
-			{
-				value = ESplineMovePattern.RacingTrack;
-				return true;
-			}
-			if (name == "SlideTrack")
-			{
-				value = ESplineMovePattern.SlideTrack;
-				return true;
-			}
-			if (name == "AirPassage")
-			{
-				value = ESplineMovePattern.AirPassage;
-				return true;
-			}
-			if (name == "MotorcycleTrack")
-			{
-				value = ESplineMovePattern.MotorcycleTrack;
-				return true;
-			}
-			if (!(name == "MechaAirPassage"))
-			{
-				value = ESplineMovePattern.PathLine;
-				return false;
-			}
-			value = ESplineMovePattern.MechaAirPassage;
-			return true;
+			value = ESplineMovePattern.PathLine;
+			return false;
 		}
 
-		// Token: 0x0600C93A RID: 51514 RVA: 0x001D7764 File Offset: 0x001D5964
+		// Token: 0x0600D5EA RID: 54762 RVA: 0x001F15A6 File Offset: 0x001EF7A6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -99,11 +141,12 @@ namespace Aki.TDConfigMgr.Action
 				"SlideTrack",
 				"AirPassage",
 				"MotorcycleTrack",
-				"MechaAirPassage"
+				"MechaAirPassage",
+				"PetalGrabMove"
 			};
 		}
 
-		// Token: 0x0600C93B RID: 51515 RVA: 0x001D779C File Offset: 0x001D599C
+		// Token: 0x0600D5EB RID: 54763 RVA: 0x001F15E6 File Offset: 0x001EF7E6
 		public static ESplineMovePattern[] GetValues()
 		{
 			return new ESplineMovePattern[]
@@ -113,11 +156,12 @@ namespace Aki.TDConfigMgr.Action
 				ESplineMovePattern.SlideTrack,
 				ESplineMovePattern.AirPassage,
 				ESplineMovePattern.MotorcycleTrack,
-				ESplineMovePattern.MechaAirPassage
+				ESplineMovePattern.MechaAirPassage,
+				ESplineMovePattern.PetalGrabMove
 			};
 		}
 
-		// Token: 0x0600C93C RID: 51516 RVA: 0x001D77AF File Offset: 0x001D59AF
+		// Token: 0x0600D5EC RID: 54764 RVA: 0x001F15F9 File Offset: 0x001EF7F9
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -127,7 +171,8 @@ namespace Aki.TDConfigMgr.Action
 				"SlideTrack",
 				"AirPassage",
 				"MotorcycleTrack",
-				"MechaAirPassage"
+				"MechaAirPassage",
+				"PetalGrabMove"
 			};
 		}
 	}

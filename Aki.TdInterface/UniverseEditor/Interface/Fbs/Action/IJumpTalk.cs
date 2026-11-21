@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069D5 RID: 27093
+	// Token: 0x02007085 RID: 28805
 	public struct IJumpTalk : IFlatbufferObject
 	{
-		// Token: 0x1700C90D RID: 51469
-		// (get) Token: 0x0602F5CB RID: 193995 RVA: 0x006732B7 File Offset: 0x006714B7
+		// Token: 0x1700D30D RID: 54029
+		// (get) Token: 0x06031F8B RID: 204683 RVA: 0x006C360F File Offset: 0x006C180F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F5CC RID: 193996 RVA: 0x006732C4 File Offset: 0x006714C4
+		// Token: 0x06031F8C RID: 204684 RVA: 0x006C361C File Offset: 0x006C181C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F5CD RID: 193997 RVA: 0x006732CC File Offset: 0x006714CC
+		// Token: 0x06031F8D RID: 204685 RVA: 0x006C3624 File Offset: 0x006C1824
 		public static IJumpTalk GetRootAsIJumpTalk(ByteBuffer _bb)
 		{
 			return IJumpTalk.GetRootAsIJumpTalk(_bb, default(IJumpTalk));
 		}
 
-		// Token: 0x0602F5CE RID: 193998 RVA: 0x006732E8 File Offset: 0x006714E8
+		// Token: 0x06031F8E RID: 204686 RVA: 0x006C3640 File Offset: 0x006C1840
 		public static IJumpTalk GetRootAsIJumpTalk(ByteBuffer _bb, IJumpTalk obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F5CF RID: 193999 RVA: 0x00673305 File Offset: 0x00671505
+		// Token: 0x06031F8F RID: 204687 RVA: 0x006C365D File Offset: 0x006C185D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F5D0 RID: 194000 RVA: 0x00673314 File Offset: 0x00671514
+		// Token: 0x06031F90 RID: 204688 RVA: 0x006C366C File Offset: 0x006C186C
 		public IJumpTalk __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C90E RID: 51470
-		// (get) Token: 0x0602F5D1 RID: 194001 RVA: 0x00673324 File Offset: 0x00671524
+		// Token: 0x1700D30E RID: 54030
+		// (get) Token: 0x06031F91 RID: 204689 RVA: 0x006C367C File Offset: 0x006C187C
 		public int TalkId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F5D2 RID: 194002 RVA: 0x00673360 File Offset: 0x00671560
+		// Token: 0x06031F92 RID: 204690 RVA: 0x006C36B8 File Offset: 0x006C18B8
 		public static Offset<IJumpTalk> CreateIJumpTalk(FlatBufferBuilder builder, int TalkId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IJumpTalk.EndIJumpTalk(builder);
 		}
 
-		// Token: 0x0602F5D3 RID: 194003 RVA: 0x00673376 File Offset: 0x00671576
+		// Token: 0x06031F93 RID: 204691 RVA: 0x006C36CE File Offset: 0x006C18CE
 		public static void StartIJumpTalk(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602F5D4 RID: 194004 RVA: 0x0067337F File Offset: 0x0067157F
+		// Token: 0x06031F94 RID: 204692 RVA: 0x006C36D7 File Offset: 0x006C18D7
 		public static void AddTalkId(FlatBufferBuilder builder, int talkId)
 		{
 			builder.AddInt(0, talkId, 0);
 		}
 
-		// Token: 0x0602F5D5 RID: 194005 RVA: 0x0067338A File Offset: 0x0067158A
+		// Token: 0x06031F95 RID: 204693 RVA: 0x006C36E2 File Offset: 0x006C18E2
 		public static Offset<IJumpTalk> EndIJumpTalk(FlatBufferBuilder builder)
 		{
 			return new Offset<IJumpTalk>(builder.EndTable());
 		}
 
-		// Token: 0x0602F5D6 RID: 194006 RVA: 0x00673398 File Offset: 0x00671598
+		// Token: 0x06031F96 RID: 204694 RVA: 0x006C36F0 File Offset: 0x006C18F0
 		public IJumpTalkT UnPack()
 		{
 			IJumpTalkT jumpTalkT = new IJumpTalkT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return jumpTalkT;
 		}
 
-		// Token: 0x0602F5D7 RID: 194007 RVA: 0x006733B3 File Offset: 0x006715B3
+		// Token: 0x06031F97 RID: 204695 RVA: 0x006C370B File Offset: 0x006C190B
 		public void UnPackTo(IJumpTalkT _o)
 		{
 			_o.TalkId = this.TalkId;
 		}
 
-		// Token: 0x0602F5D8 RID: 194008 RVA: 0x006733C4 File Offset: 0x006715C4
+		// Token: 0x06031F98 RID: 204696 RVA: 0x006C371C File Offset: 0x006C191C
 		public static Offset<IJumpTalk> Pack(FlatBufferBuilder builder, IJumpTalkT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IJumpTalk.CreateIJumpTalk(builder, _o.TalkId);
 		}
 
-		// Token: 0x04011195 RID: 70037
+		// Token: 0x04011FFF RID: 73727
 		private Table __p;
 	}
 }

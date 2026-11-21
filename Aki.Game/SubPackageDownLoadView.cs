@@ -8,21 +8,22 @@ using CSharpScript.Game.Module.ResManager;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.DiffPatch.Update;
+using CSharpScript.Launcher.Platform;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AB0 RID: 10928
+// Token: 0x0200202C RID: 8236
 [NullableContext(1)]
 [Nullable(0)]
 public class SubPackageDownLoadView : UiViewBase
 {
-	// Token: 0x06016C04 RID: 93188 RVA: 0x005C6145 File Offset: 0x005C4345
+	// Token: 0x06014633 RID: 83507 RVA: 0x005F2BD9 File Offset: 0x005F0DD9
 	public SubPackageDownLoadView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016C05 RID: 93189 RVA: 0x005C6170 File Offset: 0x005C4370
+	// Token: 0x06014634 RID: 83508 RVA: 0x005F2C04 File Offset: 0x005F0E04
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +38,8 @@ public class SubPackageDownLoadView : UiViewBase
 			new ValueTuple<int, Type>(7, typeof(UUIItem)),
 			new ValueTuple<int, Type>(8, typeof(UUIItem)),
 			new ValueTuple<int, Type>(9, typeof(UUIText)),
-			new ValueTuple<int, Type>(10, typeof(UUIItem))
+			new ValueTuple<int, Type>(10, typeof(UUIItem)),
+			new ValueTuple<int, Type>(11, typeof(UUIText))
 		};
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>
 		{
@@ -46,7 +48,7 @@ public class SubPackageDownLoadView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016C06 RID: 93190 RVA: 0x005C62B8 File Offset: 0x005C44B8
+	// Token: 0x06014635 RID: 83509 RVA: 0x005F2D64 File Offset: 0x005F0F64
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackDownLoadState, new Action(this.OnRefreshSubPackDownLoadState));
@@ -54,7 +56,7 @@ public class SubPackageDownLoadView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnRefreshSubPackUseCellData, new Action(this.OnRefreshSubPackUseCellData));
 	}
 
-	// Token: 0x06016C07 RID: 93191 RVA: 0x005C631C File Offset: 0x005C451C
+	// Token: 0x06014636 RID: 83510 RVA: 0x005F2DC8 File Offset: 0x005F0FC8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackageDownLoadByPriority, new Action(this.OnRefreshSubPackageDownLoadByPriority));
@@ -62,7 +64,7 @@ public class SubPackageDownLoadView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnRefreshSubPackUseCellData, new Action(this.OnRefreshSubPackUseCellData));
 	}
 
-	// Token: 0x06016C08 RID: 93192 RVA: 0x005C6380 File Offset: 0x005C4580
+	// Token: 0x06014637 RID: 83511 RVA: 0x005F2E2C File Offset: 0x005F102C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SubPackageDownLoadView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -73,14 +75,24 @@ public class SubPackageDownLoadView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016C09 RID: 93193 RVA: 0x005C63C4 File Offset: 0x005C45C4
+	// Token: 0x06014638 RID: 83512 RVA: 0x005F2E70 File Offset: 0x005F1070
 	protected override void OnStart()
 	{
 		SubPackageDownLoadModel.Instance.UpdaterDownLoadSize();
 		SubPackageDownLoadModel.Instance.UpdaterFinishState();
 		ResourceManagerController.Instance.ChangeHttpTickFrequency();
+		UUIExtendToggle extendToggle = base.GetExtendToggle(3);
+		if (Platform.Instance.IsPcPlatform())
+		{
+			extendToggle.RootUIComp.Get().SetUIActive(false);
+			UUIText text = base.GetText(11);
+			if (text != null)
+			{
+				text.SetUIActive(false);
+			}
+		}
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.SubDownLoadAgreeUseCellData, false);
-		base.GetExtendToggle(3).SetToggleState(player ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
+		extendToggle.SetToggleState(player ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		SubPackageDownLoadViewOpenData param = this.OpenParam as SubPackageDownLoadViewOpenData;
 		List<int> subPackageList = new List<int>();
 		SubPackageDownLoadViewOpenData param2 = param;
@@ -204,7 +216,7 @@ public class SubPackageDownLoadView : UiViewBase
 		this.AniPlay(SubPackageDownLoadView.StartTag);
 	}
 
-	// Token: 0x06016C0A RID: 93194 RVA: 0x005C66E4 File Offset: 0x005C48E4
+	// Token: 0x06014639 RID: 83513 RVA: 0x005F31C8 File Offset: 0x005F13C8
 	private void RefreshDownLoadState()
 	{
 		for (int i = 0; i < this.SubPackageDownLoadItemList.Count; i++)
@@ -213,20 +225,20 @@ public class SubPackageDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016C0B RID: 93195 RVA: 0x005C6718 File Offset: 0x005C4918
+	// Token: 0x0601463A RID: 83514 RVA: 0x005F31FC File Offset: 0x005F13FC
 	private void RefreshFreeSpace()
 	{
 		long freeSpace = VideoResUpdate.Instance.GetFreeSpace();
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(6), "SubPackageDownLoad_FreeSpace", new <>z__ReadOnlySingleElementList<object>(SubPackageDownLoadModel.Instance.ByteConverter(freeSpace)));
 	}
 
-	// Token: 0x06016C0C RID: 93196 RVA: 0x005C6756 File Offset: 0x005C4956
+	// Token: 0x0601463B RID: 83515 RVA: 0x005F323A File Offset: 0x005F143A
 	protected override void OnBeforeHide()
 	{
 		this.AniPlay(SubPackageDownLoadView.CloseTag);
 	}
 
-	// Token: 0x06016C0D RID: 93197 RVA: 0x005C6763 File Offset: 0x005C4963
+	// Token: 0x0601463C RID: 83516 RVA: 0x005F3247 File Offset: 0x005F1447
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer.SetBanned(this.LevelSequenceBannadHandle);
@@ -238,7 +250,7 @@ public class SubPackageDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016C0E RID: 93198 RVA: 0x005C679C File Offset: 0x005C499C
+	// Token: 0x0601463D RID: 83517 RVA: 0x005F3280 File Offset: 0x005F1480
 	private SubPackageDownLoadItem CreateNodeGrid(SubPackageDownLoadDynamicData data, UUIItem uiItem, int index)
 	{
 		SubPackageDownLoadItem subPackageDownLoadItem = new SubPackageDownLoadItem();
@@ -249,7 +261,7 @@ public class SubPackageDownLoadView : UiViewBase
 		return subPackageDownLoadItem;
 	}
 
-	// Token: 0x06016C0F RID: 93199 RVA: 0x005C67F2 File Offset: 0x005C49F2
+	// Token: 0x0601463E RID: 83518 RVA: 0x005F32D6 File Offset: 0x005F14D6
 	private SubPackageTab InitTabItem()
 	{
 		return new SubPackageTab
@@ -258,7 +270,7 @@ public class SubPackageDownLoadView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016C10 RID: 93200 RVA: 0x005C680C File Offset: 0x005C4A0C
+	// Token: 0x0601463F RID: 83519 RVA: 0x005F32F0 File Offset: 0x005F14F0
 	private void OnClickSubPackageDownLoadVersionCallBack(int versionId, bool isShowSubItem)
 	{
 		List<SubPackageDownLoadDynamicData> list = (this.CurrentTabType == 0) ? this.KeySubPackageDataList : this.ExpendSubPackageDataList;
@@ -376,7 +388,7 @@ public class SubPackageDownLoadView : UiViewBase
 		});
 	}
 
-	// Token: 0x06016C11 RID: 93201 RVA: 0x005C6AD0 File Offset: 0x005C4CD0
+	// Token: 0x06014640 RID: 83520 RVA: 0x005F35B4 File Offset: 0x005F17B4
 	private void OnRefreshSubPackageDownLoadByPriority()
 	{
 		List<SubPackageDownLoadDynamicData> list = new List<SubPackageDownLoadDynamicData>();
@@ -477,13 +489,13 @@ public class SubPackageDownLoadView : UiViewBase
 		this.RefreshStartBtn();
 	}
 
-	// Token: 0x06016C12 RID: 93202 RVA: 0x005C6CBC File Offset: 0x005C4EBC
+	// Token: 0x06014641 RID: 83521 RVA: 0x005F37A0 File Offset: 0x005F19A0
 	private void OnRefreshSubPackUseCellData()
 	{
 		base.GetExtendToggle(3).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06016C13 RID: 93203 RVA: 0x005C6CD0 File Offset: 0x005C4ED0
+	// Token: 0x06014642 RID: 83522 RVA: 0x005F37B4 File Offset: 0x005F19B4
 	private int SortSubPackage(SubPackageDownLoadDynamicData a, SubPackageDownLoadDynamicData b)
 	{
 		ESubPackageDownLoadState subPackageDownLoadItemStateById = SubPackageDownLoadModel.Instance.GetSubPackageDownLoadItemStateById(a.SubPackageId.Value);
@@ -496,7 +508,7 @@ public class SubPackageDownLoadView : UiViewBase
 		int num2 = SubPackageDownLoadModel.Instance.SubPackageDownLoadList.IndexOf(b.SubPackageId.Value);
 		if (num == num2 && num == -1)
 		{
-			return a.SubPackageId.Value - b.SubPackageId.Value;
+			return this.CompareBySortId(a, b);
 		}
 		if (num != num2 && (num == -1 || num2 == -1))
 		{
@@ -506,17 +518,44 @@ public class SubPackageDownLoadView : UiViewBase
 		{
 			return num - num2;
 		}
+		return this.CompareBySortId(a, b);
+	}
+
+	// Token: 0x06014643 RID: 83523 RVA: 0x005F385C File Offset: 0x005F1A5C
+	private int CompareBySortId(SubPackageDownLoadDynamicData a, SubPackageDownLoadDynamicData b)
+	{
+		int subPackageSortId = this.GetSubPackageSortId(a.SubPackageId.Value);
+		int subPackageSortId2 = this.GetSubPackageSortId(b.SubPackageId.Value);
+		if (subPackageSortId != subPackageSortId2)
+		{
+			return subPackageSortId2 - subPackageSortId;
+		}
 		return a.SubPackageId.Value - b.SubPackageId.Value;
 	}
 
-	// Token: 0x06016C14 RID: 93204 RVA: 0x005C6D96 File Offset: 0x005C4F96
+	// Token: 0x06014644 RID: 83524 RVA: 0x005F38AC File Offset: 0x005F1AAC
+	private int GetSubPackageSortId(int subPackageId)
+	{
+		if (SubPackageDefine.IsDynamicRecallId(subPackageId))
+		{
+			return 0;
+		}
+		DownLoadSubPackage? downLoadSubPackageById = SubPackageConfig.Instance.GetDownLoadSubPackageById(subPackageId);
+		if (downLoadSubPackageById == null)
+		{
+			return 0;
+		}
+		return downLoadSubPackageById.GetValueOrDefault().SortId;
+	}
+
+	// Token: 0x06014645 RID: 83525 RVA: 0x005F38E9 File Offset: 0x005F1AE9
 	private void OnRefreshSubPackDownLoadState()
 	{
 		this.RefreshFreeSpace();
 		this.RefreshStartBtn();
 	}
 
-	// Token: 0x06016C15 RID: 93205 RVA: 0x005C6DA4 File Offset: 0x005C4FA4
+	// Token: 0x06014646 RID: 83526 RVA: 0x005F38F8 File Offset: 0x005F1AF8
 	private void OnClickSubPackageDownLoadVersionTipsCallBack(int versionId, UUIItem item)
 	{
 		FVectorDouble fvectorDouble = item.D_K2_GetComponentLocation();
@@ -538,7 +577,7 @@ public class SubPackageDownLoadView : UiViewBase
 		versionTipsView2.SetUiActive(true);
 	}
 
-	// Token: 0x06016C16 RID: 93206 RVA: 0x005C6DFF File Offset: 0x005C4FFF
+	// Token: 0x06014647 RID: 83527 RVA: 0x005F3953 File Offset: 0x005F1B53
 	private void OnClickTabCallBack(UUIExtendToggle toggle, int type)
 	{
 		UUIExtendToggle currentTabToggle = this.CurrentTabToggle;
@@ -551,7 +590,7 @@ public class SubPackageDownLoadView : UiViewBase
 		this.RefreshSubPackageDownLoadScrollView(type);
 	}
 
-	// Token: 0x06016C17 RID: 93207 RVA: 0x005C6E2C File Offset: 0x005C502C
+	// Token: 0x06014648 RID: 83528 RVA: 0x005F3980 File Offset: 0x005F1B80
 	private void RefreshSubPackageDownLoadScrollView(int type)
 	{
 		if (type != 0)
@@ -583,7 +622,7 @@ public class SubPackageDownLoadView : UiViewBase
 		subPackageDownLoadScrollView2.RefreshByData(this.KeySubPackageDataList.ToArray(), true, true);
 	}
 
-	// Token: 0x06016C18 RID: 93208 RVA: 0x005C6EC4 File Offset: 0x005C50C4
+	// Token: 0x06014649 RID: 83529 RVA: 0x005F3A18 File Offset: 0x005F1C18
 	private void OnStartBtnClick()
 	{
 		if (!SubPackageDownLoadModel.Instance.IsKeyPackageDownLoadingFinish())
@@ -609,7 +648,7 @@ public class SubPackageDownLoadView : UiViewBase
 		loginPrepareResCheckPromise.SetResult();
 	}
 
-	// Token: 0x06016C19 RID: 93209 RVA: 0x005C6F68 File Offset: 0x005C5168
+	// Token: 0x0601464A RID: 83530 RVA: 0x005F3ABC File Offset: 0x005F1CBC
 	private void OnClickMobileDataToggle(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -632,7 +671,7 @@ public class SubPackageDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016C1A RID: 93210 RVA: 0x005C7030 File Offset: 0x005C5230
+	// Token: 0x0601464B RID: 83531 RVA: 0x005F3B84 File Offset: 0x005F1D84
 	private void RefreshStartBtn()
 	{
 		bool selfInteractive = SubPackageDownLoadModel.Instance.IsKeyPackageDownLoadingFinish();
@@ -644,7 +683,7 @@ public class SubPackageDownLoadView : UiViewBase
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x06016C1B RID: 93211 RVA: 0x005C705C File Offset: 0x005C525C
+	// Token: 0x0601464C RID: 83532 RVA: 0x005F3BB0 File Offset: 0x005F1DB0
 	public void AniPlay(FName tag)
 	{
 		UUIItem item = base.GetItem(10);
@@ -670,23 +709,23 @@ public class SubPackageDownLoadView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016C1C RID: 93212 RVA: 0x005C70BE File Offset: 0x005C52BE
+	// Token: 0x0601464D RID: 83533 RVA: 0x005F3C12 File Offset: 0x005F1E12
 	private void OnClickChileItemBtn(SubPackageDownLoadDynamicData data)
 	{
 		this.TargetData = data;
 	}
 
-	// Token: 0x0400A8E0 RID: 43232
+	// Token: 0x0400ACE6 RID: 44262
 	private static readonly FName StartTag = new FName("Start");
 
-	// Token: 0x0400A8E1 RID: 43233
+	// Token: 0x0400ACE7 RID: 44263
 	private static readonly FName CloseTag = new FName("Close");
 
-	// Token: 0x0400A8E2 RID: 43234
+	// Token: 0x0400ACE8 RID: 44264
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A8E3 RID: 43235
+	// Token: 0x0400ACE9 RID: 44265
 	[Nullable(new byte[]
 	{
 		2,
@@ -696,11 +735,11 @@ public class SubPackageDownLoadView : UiViewBase
 	})]
 	private DynamicScrollView<SubPackageDownLoadItem, SubPackageDownLoadDynamicItem, SubPackageDownLoadDynamicData> SubPackageDownLoadScrollView;
 
-	// Token: 0x0400A8E4 RID: 43236
+	// Token: 0x0400ACEA RID: 44266
 	[Nullable(2)]
 	private SubPackageDownLoadVersionTipsView VersionTipsView;
 
-	// Token: 0x0400A8E5 RID: 43237
+	// Token: 0x0400ACEB RID: 44267
 	[Nullable(new byte[]
 	{
 		2,
@@ -708,72 +747,75 @@ public class SubPackageDownLoadView : UiViewBase
 	})]
 	private GenericLayout<SubPackageTab, int> TabScrollview;
 
-	// Token: 0x0400A8E6 RID: 43238
+	// Token: 0x0400ACEC RID: 44268
 	[Nullable(2)]
 	private UUIExtendToggle CurrentTabToggle;
 
-	// Token: 0x0400A8E7 RID: 43239
+	// Token: 0x0400ACED RID: 44269
 	[Nullable(2)]
 	private SubPackageDownLoadDynamicItem SubPackageDownLoadItem;
 
-	// Token: 0x0400A8E8 RID: 43240
+	// Token: 0x0400ACEE RID: 44270
 	private readonly List<SubPackageDownLoadItem> SubPackageDownLoadItemList = new List<SubPackageDownLoadItem>();
 
-	// Token: 0x0400A8E9 RID: 43241
+	// Token: 0x0400ACEF RID: 44271
 	private int CurrentTabType;
 
-	// Token: 0x0400A8EA RID: 43242
+	// Token: 0x0400ACF0 RID: 44272
 	private List<SubPackageDownLoadDynamicData> KeySubPackageDataList = new List<SubPackageDownLoadDynamicData>();
 
-	// Token: 0x0400A8EB RID: 43243
+	// Token: 0x0400ACF1 RID: 44273
 	private List<SubPackageDownLoadDynamicData> ExpendSubPackageDataList = new List<SubPackageDownLoadDynamicData>();
 
-	// Token: 0x0400A8EC RID: 43244
+	// Token: 0x0400ACF2 RID: 44274
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x0400A8ED RID: 43245
+	// Token: 0x0400ACF3 RID: 44275
 	private bool LevelSequenceBannadHandle;
 
-	// Token: 0x0400A8EE RID: 43246
+	// Token: 0x0400ACF4 RID: 44276
 	[Nullable(2)]
 	private SubPackageDownLoadDynamicData TargetData;
 
-	// Token: 0x020090DF RID: 37087
+	// Token: 0x02008323 RID: 33571
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402EEF6 RID: 192246
+		// Token: 0x0402A5FB RID: 173563
 		public const int TitleItem = 0;
 
-		// Token: 0x0402EEF7 RID: 192247
+		// Token: 0x0402A5FC RID: 173564
 		public const int LogoTexture = 1;
 
-		// Token: 0x0402EEF8 RID: 192248
+		// Token: 0x0402A5FD RID: 173565
 		public const int TabVerticalLayout = 2;
 
-		// Token: 0x0402EEF9 RID: 192249
+		// Token: 0x0402A5FE RID: 173566
 		public const int MobileDataToggle = 3;
 
-		// Token: 0x0402EEFA RID: 192250
+		// Token: 0x0402A5FF RID: 173567
 		public const int SubPackageDyncScrollView = 4;
 
-		// Token: 0x0402EEFB RID: 192251
+		// Token: 0x0402A600 RID: 173568
 		public const int StartBtn = 5;
 
-		// Token: 0x0402EEFC RID: 192252
+		// Token: 0x0402A601 RID: 173569
 		public const int LeftMemoryText = 6;
 
-		// Token: 0x0402EEFD RID: 192253
+		// Token: 0x0402A602 RID: 173570
 		public const int VersionTipsParentItem = 7;
 
-		// Token: 0x0402EEFE RID: 192254
+		// Token: 0x0402A603 RID: 173571
 		public const int SubPackageItem = 8;
 
-		// Token: 0x0402EEFF RID: 192255
+		// Token: 0x0402A604 RID: 173572
 		public const int StartBtnText = 9;
 
-		// Token: 0x0402EF00 RID: 192256
+		// Token: 0x0402A605 RID: 173573
 		public const int ContentItem = 10;
+
+		// Token: 0x0402A606 RID: 173574
+		public const int MobileDataText = 11;
 	}
 }

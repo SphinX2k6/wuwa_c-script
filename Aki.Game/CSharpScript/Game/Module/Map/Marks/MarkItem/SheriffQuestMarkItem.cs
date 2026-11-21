@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054F7 RID: 21751
+	// Token: 0x020044CA RID: 17610
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffQuestMarkItem : ConfigMarkItem
 	{
-		// Token: 0x060378FF RID: 227583 RVA: 0x00D31004 File Offset: 0x00D2F204
+		// Token: 0x0602C7CE RID: 182222 RVA: 0x00C7EF50 File Offset: 0x00C7D150
 		public SheriffQuestMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 			SheriffQuest? questConfigByMarkId = SheriffConfig.Instance.GetQuestConfigByMarkId(this.MarkId);
@@ -27,41 +27,29 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037900 RID: 227584 RVA: 0x00D31085 File Offset: 0x00D2F285
-		protected override void OnInitialize()
-		{
-			base.OnInitialize();
-			this.UpdateGamePlayState();
-		}
-
-		// Token: 0x06037901 RID: 227585 RVA: 0x00D31094 File Offset: 0x00D2F294
-		private void UpdateGamePlayState()
+		// Token: 0x0602C7CF RID: 182223 RVA: 0x00C7EFD4 File Offset: 0x00C7D1D4
+		protected override bool IsGamePlayFinishRaw()
 		{
 			SheriffQuest? questConfigByMarkId = SheriffConfig.Instance.GetQuestConfigByMarkId(this.MarkId);
-			if (questConfigByMarkId == null)
-			{
-				return;
-			}
-			EQuestState questState = QuestNewModel.Instance.GetQuestState(questConfigByMarkId.Value.QuestId);
-			base.MarkItemEntity.GamePlay.GamePlayState = ((questState == EQuestState.Finish) ? EMarkGamePlayState.Finish : EMarkGamePlayState.Processing);
+			return questConfigByMarkId != null && QuestNewModel.Instance.GetQuestState(questConfigByMarkId.Value.QuestId) == EQuestState.Finish;
 		}
 
-		// Token: 0x06037902 RID: 227586 RVA: 0x00D310EE File Offset: 0x00D2F2EE
+		// Token: 0x0602C7D0 RID: 182224 RVA: 0x00C7F019 File Offset: 0x00C7D219
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.SheriffQuestMarkItemView;
 		}
 
-		// Token: 0x06037903 RID: 227587 RVA: 0x00D310F2 File Offset: 0x00D2F2F2
+		// Token: 0x0602C7D1 RID: 182225 RVA: 0x00C7F01D File Offset: 0x00C7D21D
 		[PreserveBaseOverrides]
 		protected new virtual SheriffQuestMarkItemView CreateView()
 		{
 			return new SheriffQuestMarkItemView(this);
 		}
 
-		// Token: 0x1700857E RID: 34174
-		// (get) Token: 0x06037904 RID: 227588 RVA: 0x00D310FC File Offset: 0x00D2F2FC
-		// (set) Token: 0x06037905 RID: 227589 RVA: 0x00D31127 File Offset: 0x00D2F327
+		// Token: 0x17005919 RID: 22809
+		// (get) Token: 0x0602C7D2 RID: 182226 RVA: 0x00C7F028 File Offset: 0x00C7D228
+		// (set) Token: 0x0602C7D3 RID: 182227 RVA: 0x00C7F053 File Offset: 0x00C7D253
 		public override string IconPath
 		{
 			get
@@ -74,14 +62,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x06037906 RID: 227590 RVA: 0x00D3112C File Offset: 0x00D2F32C
+		// Token: 0x0602C7D4 RID: 182228 RVA: 0x00C7F058 File Offset: 0x00C7D258
 		private string GetSheriffQuestMarkIcon(int questType, EQuestState state)
 		{
 			string resourceId = SheriffDefineData.SheriffQuestMarkIconRecord[questType][(int)state];
-			return UiResourceConfig.Instance.GetResourcePath(resourceId) ?? "";
+			return UiResourceConfig.Instance.GetResourcePath(resourceId);
 		}
 
-		// Token: 0x06037907 RID: 227591 RVA: 0x00D31160 File Offset: 0x00D2F360
+		// Token: 0x0602C7D5 RID: 182229 RVA: 0x00C7F084 File Offset: 0x00C7D284
 		public override bool CheckCanShowView()
 		{
 			if (MapModel.Instance.IsExtraUiMarkType(base.MapType, this.MarkType))
@@ -93,7 +81,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return false;
 		}
 
-		// Token: 0x06037908 RID: 227592 RVA: 0x00D311B8 File Offset: 0x00D2F3B8
+		// Token: 0x0602C7D6 RID: 182230 RVA: 0x00C7F0DC File Offset: 0x00C7D2DC
 		protected override bool IsTracking()
 		{
 			if (!MapModel.Instance.IsExtraUiMarkType(base.MapType, this.MarkType))
@@ -119,23 +107,19 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			return false;
 		}
 
-		// Token: 0x06037909 RID: 227593 RVA: 0x00D3126F File Offset: 0x00D2F46F
+		// Token: 0x0602C7D7 RID: 182231 RVA: 0x00C7F193 File Offset: 0x00C7D393
 		public override string GetTitleText()
 		{
 			return PublicUtil.Instance.GetConfigTextByKey(QuestNewModel.Instance.GetQuestConfig(this.QuestId).TidName);
 		}
 
-		// Token: 0x0401D3D4 RID: 119764
-		[Nullable(2)]
-		public SheriffQuestMarkItemView InnerView;
-
-		// Token: 0x0401D3D5 RID: 119765
+		// Token: 0x04017E5C RID: 97884
 		public int QuestId;
 
-		// Token: 0x0401D3D6 RID: 119766
+		// Token: 0x04017E5D RID: 97885
 		private readonly ESheriffQuestType QuestType = ESheriffQuestType.POI;
 
-		// Token: 0x0401D3D7 RID: 119767
+		// Token: 0x04017E5E RID: 97886
 		public int TextVisibleScale;
 	}
 }

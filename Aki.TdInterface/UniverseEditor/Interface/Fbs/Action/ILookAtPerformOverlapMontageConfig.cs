@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A5C RID: 27228
+	// Token: 0x0200717E RID: 29054
 	public struct ILookAtPerformOverlapMontageConfig : IFlatbufferObject
 	{
-		// Token: 0x1700C9FD RID: 51709
-		// (get) Token: 0x0602FADC RID: 195292 RVA: 0x0067D2E5 File Offset: 0x0067B4E5
+		// Token: 0x1700D4A8 RID: 54440
+		// (get) Token: 0x06032802 RID: 206850 RVA: 0x006D33A5 File Offset: 0x006D15A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FADD RID: 195293 RVA: 0x0067D2F2 File Offset: 0x0067B4F2
+		// Token: 0x06032803 RID: 206851 RVA: 0x006D33B2 File Offset: 0x006D15B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602FADE RID: 195294 RVA: 0x0067D2FC File Offset: 0x0067B4FC
+		// Token: 0x06032804 RID: 206852 RVA: 0x006D33BC File Offset: 0x006D15BC
 		public static ILookAtPerformOverlapMontageConfig GetRootAsILookAtPerformOverlapMontageConfig(ByteBuffer _bb)
 		{
 			return ILookAtPerformOverlapMontageConfig.GetRootAsILookAtPerformOverlapMontageConfig(_bb, default(ILookAtPerformOverlapMontageConfig));
 		}
 
-		// Token: 0x0602FADF RID: 195295 RVA: 0x0067D318 File Offset: 0x0067B518
+		// Token: 0x06032805 RID: 206853 RVA: 0x006D33D8 File Offset: 0x006D15D8
 		public static ILookAtPerformOverlapMontageConfig GetRootAsILookAtPerformOverlapMontageConfig(ByteBuffer _bb, ILookAtPerformOverlapMontageConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602FAE0 RID: 195296 RVA: 0x0067D335 File Offset: 0x0067B535
+		// Token: 0x06032806 RID: 206854 RVA: 0x006D33F5 File Offset: 0x006D15F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602FAE1 RID: 195297 RVA: 0x0067D344 File Offset: 0x0067B544
+		// Token: 0x06032807 RID: 206855 RVA: 0x006D3404 File Offset: 0x006D1604
 		public ILookAtPerformOverlapMontageConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C9FE RID: 51710
-		// (get) Token: 0x0602FAE2 RID: 195298 RVA: 0x0067D354 File Offset: 0x0067B554
+		// Token: 0x1700D4A9 RID: 54441
+		// (get) Token: 0x06032808 RID: 206856 RVA: 0x006D3414 File Offset: 0x006D1614
 		public float OverlapMontageLoopDuration
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C9FF RID: 51711
-		// (get) Token: 0x0602FAE3 RID: 195299 RVA: 0x0067D394 File Offset: 0x0067B594
+		// Token: 0x1700D4AA RID: 54442
+		// (get) Token: 0x06032809 RID: 206857 RVA: 0x006D3454 File Offset: 0x006D1654
 		public int OverlapMontageRepeatTimes
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CA00 RID: 51712
-		// (get) Token: 0x0602FAE4 RID: 195300 RVA: 0x0067D3D0 File Offset: 0x0067B5D0
+		// Token: 0x1700D4AB RID: 54443
+		// (get) Token: 0x0603280A RID: 206858 RVA: 0x006D3490 File Offset: 0x006D1690
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602FAE5 RID: 195301 RVA: 0x0067D40C File Offset: 0x0067B60C
+		// Token: 0x0603280B RID: 206859 RVA: 0x006D34CC File Offset: 0x006D16CC
 		public static Offset<ILookAtPerformOverlapMontageConfig> CreateILookAtPerformOverlapMontageConfig(FlatBufferBuilder builder, float OverlapMontageLoopDuration = 0f, int OverlapMontageRepeatTimes = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILookAtPerformOverlapMontageConfig.EndILookAtPerformOverlapMontageConfig(builder);
 		}
 
-		// Token: 0x0602FAE6 RID: 195302 RVA: 0x0067D430 File Offset: 0x0067B630
+		// Token: 0x0603280C RID: 206860 RVA: 0x006D34F0 File Offset: 0x006D16F0
 		public static void StartILookAtPerformOverlapMontageConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602FAE7 RID: 195303 RVA: 0x0067D439 File Offset: 0x0067B639
+		// Token: 0x0603280D RID: 206861 RVA: 0x006D34F9 File Offset: 0x006D16F9
 		public static void AddOverlapMontageLoopDuration(FlatBufferBuilder builder, float overlapMontageLoopDuration)
 		{
 			builder.AddFloat(0, overlapMontageLoopDuration, 0.0);
 		}
 
-		// Token: 0x0602FAE8 RID: 195304 RVA: 0x0067D44C File Offset: 0x0067B64C
+		// Token: 0x0603280E RID: 206862 RVA: 0x006D350C File Offset: 0x006D170C
 		public static void AddOverlapMontageRepeatTimes(FlatBufferBuilder builder, int overlapMontageRepeatTimes)
 		{
 			builder.AddInt(1, overlapMontageRepeatTimes, 0);
 		}
 
-		// Token: 0x0602FAE9 RID: 195305 RVA: 0x0067D457 File Offset: 0x0067B657
+		// Token: 0x0603280F RID: 206863 RVA: 0x006D3517 File Offset: 0x006D1717
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602FAEA RID: 195306 RVA: 0x0067D462 File Offset: 0x0067B662
+		// Token: 0x06032810 RID: 206864 RVA: 0x006D3522 File Offset: 0x006D1722
 		public static Offset<ILookAtPerformOverlapMontageConfig> EndILookAtPerformOverlapMontageConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ILookAtPerformOverlapMontageConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602FAEB RID: 195307 RVA: 0x0067D470 File Offset: 0x0067B670
+		// Token: 0x06032811 RID: 206865 RVA: 0x006D3530 File Offset: 0x006D1730
 		public ILookAtPerformOverlapMontageConfigT UnPack()
 		{
 			ILookAtPerformOverlapMontageConfigT lookAtPerformOverlapMontageConfigT = new ILookAtPerformOverlapMontageConfigT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return lookAtPerformOverlapMontageConfigT;
 		}
 
-		// Token: 0x0602FAEC RID: 195308 RVA: 0x0067D48B File Offset: 0x0067B68B
+		// Token: 0x06032812 RID: 206866 RVA: 0x006D354B File Offset: 0x006D174B
 		public void UnPackTo(ILookAtPerformOverlapMontageConfigT _o)
 		{
 			_o.OverlapMontageLoopDuration = this.OverlapMontageLoopDuration;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602FAED RID: 195309 RVA: 0x0067D4B4 File Offset: 0x0067B6B4
+		// Token: 0x06032813 RID: 206867 RVA: 0x006D3574 File Offset: 0x006D1774
 		public static Offset<ILookAtPerformOverlapMontageConfig> Pack(FlatBufferBuilder builder, ILookAtPerformOverlapMontageConfigT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ILookAtPerformOverlapMontageConfig.CreateILookAtPerformOverlapMontageConfig(builder, _o.OverlapMontageLoopDuration, _o.OverlapMontageRepeatTimes, _o.NullMask);
 		}
 
-		// Token: 0x0401127C RID: 70268
+		// Token: 0x04012174 RID: 74100
 		private Table __p;
 	}
 }

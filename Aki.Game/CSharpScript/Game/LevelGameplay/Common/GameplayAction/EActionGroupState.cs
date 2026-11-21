@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 {
-	// Token: 0x02006F23 RID: 28451
+	// Token: 0x020060A4 RID: 24740
 	public enum EActionGroupState
 	{
-		// Token: 0x0402418D RID: 147853
+		// Token: 0x0401F442 RID: 128066
 		Pending,
-		// Token: 0x0402418E RID: 147854
+		// Token: 0x0401F443 RID: 128067
 		Executing,
-		// Token: 0x0402418F RID: 147855
+		// Token: 0x0401F444 RID: 128068
 		Finish
 	}
 }

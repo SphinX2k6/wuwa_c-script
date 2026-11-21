@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model
 {
-	// Token: 0x02004737 RID: 18231
+	// Token: 0x02003668 RID: 13928
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class GridRollbackCapture : IRollbackCapture
 	{
-		// Token: 0x0602FA49 RID: 195145 RVA: 0x00B0AE1B File Offset: 0x00B0901B
+		// Token: 0x06024213 RID: 147987 RVA: 0x00A3AD6F File Offset: 0x00A38F6F
 		public GridRollbackCapture(WuWaGoGrid grid)
 		{
 			this.Grid = grid;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.PreCoordinate.DeepCopy(this.Grid.Coordinate);
 		}
 
-		// Token: 0x0602FA4A RID: 195146 RVA: 0x00B0AE4C File Offset: 0x00B0904C
+		// Token: 0x06024214 RID: 147988 RVA: 0x00A3ADA0 File Offset: 0x00A38FA0
 		public void Restore()
 		{
 			Transform originTransform = WuWaGoModel.Instance.GameData.OriginTransform;
@@ -46,10 +46,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			this.Grid.SetCoordinate(this.PreCoordinate);
 		}
 
-		// Token: 0x04019BA5 RID: 105381
+		// Token: 0x04014255 RID: 82517
 		private readonly Vector PreCoordinate;
 
-		// Token: 0x04019BA6 RID: 105382
+		// Token: 0x04014256 RID: 82518
 		private readonly WuWaGoGrid Grid;
 	}
 }

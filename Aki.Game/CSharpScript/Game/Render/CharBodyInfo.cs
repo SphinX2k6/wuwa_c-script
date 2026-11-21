@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045AB RID: 17835
+	// Token: 0x020034D3 RID: 13523
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharBodyInfo
 	{
-		// Token: 0x0602DFCD RID: 188365 RVA: 0x00A94188 File Offset: 0x00A92388
+		// Token: 0x060226B7 RID: 140983 RVA: 0x009C03A8 File Offset: 0x009BE5A8
 		[NullableContext(1)]
 		public void Init(string actorName, string skelName, USkeletalMeshComponent skeletalComp, CharMaterialContainer materialContainer, bool useEmptyMaterial = false)
 		{
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Render
 			this.StatUpdateBattleMask = Stat.CreateNoFlameGraph("Render_CharBodyInfo_UpdateBattleMask_" + str, "", "");
 		}
 
-		// Token: 0x0602DFCE RID: 188366 RVA: 0x00A9453C File Offset: 0x00A9273C
+		// Token: 0x060226B8 RID: 140984 RVA: 0x009C075C File Offset: 0x009BE95C
 		[NullableContext(1)]
 		private static int[] AppendIndex(int[] array, int index)
 		{
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Render
 			return array2;
 		}
 
-		// Token: 0x0602DFCF RID: 188367 RVA: 0x00A94564 File Offset: 0x00A92764
+		// Token: 0x060226B9 RID: 140985 RVA: 0x009C0784 File Offset: 0x009BE984
 		public unsafe void UseBattleMaskCommon()
 		{
 			this.UseBattleMaskCount++;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD0 RID: 188368 RVA: 0x00A945F8 File Offset: 0x00A927F8
+		// Token: 0x060226BA RID: 140986 RVA: 0x009C0818 File Offset: 0x009BEA18
 		public unsafe void UseBattleMask(int sectionIndex)
 		{
 			int num = this.UseBattleMaskBitCount.Length;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD1 RID: 188369 RVA: 0x00A9471D File Offset: 0x00A9291D
+		// Token: 0x060226BB RID: 140987 RVA: 0x009C093D File Offset: 0x009BEB3D
 		public void RevertBattleMaskCommon()
 		{
 			if (this.UseBattleMaskCount > 0)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateBattleMask();
 		}
 
-		// Token: 0x0602DFD2 RID: 188370 RVA: 0x00A94744 File Offset: 0x00A92944
+		// Token: 0x060226BC RID: 140988 RVA: 0x009C0964 File Offset: 0x009BEB64
 		public unsafe void RevertBattleMask(int sectionIndex)
 		{
 			int num = this.UseBattleMaskBitCount.Length;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD3 RID: 188371 RVA: 0x00A94804 File Offset: 0x00A92A04
+		// Token: 0x060226BD RID: 140989 RVA: 0x009C0A24 File Offset: 0x009BEC24
 		public unsafe void UseBattleCommon()
 		{
 			this.UseBattleCount++;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD4 RID: 188372 RVA: 0x00A94898 File Offset: 0x00A92A98
+		// Token: 0x060226BE RID: 140990 RVA: 0x009C0AB8 File Offset: 0x009BECB8
 		public unsafe void UseBattle(int sectionIndex)
 		{
 			int num = this.UseBattleBitCount.Length;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD5 RID: 188373 RVA: 0x00A949C3 File Offset: 0x00A92BC3
+		// Token: 0x060226BF RID: 140991 RVA: 0x009C0BE3 File Offset: 0x009BEDE3
 		public void RevertBattleCommon()
 		{
 			if (this.UseBattleCount > 0)
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateBattle();
 		}
 
-		// Token: 0x0602DFD6 RID: 188374 RVA: 0x00A949EC File Offset: 0x00A92BEC
+		// Token: 0x060226C0 RID: 140992 RVA: 0x009C0C0C File Offset: 0x009BEE0C
 		public unsafe void RevertBattle(int sectionIndex)
 		{
 			int num = this.UseBattleBitCount.Length;
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD7 RID: 188375 RVA: 0x00A94AAC File Offset: 0x00A92CAC
+		// Token: 0x060226C1 RID: 140993 RVA: 0x009C0CCC File Offset: 0x009BEECC
 		public unsafe void UseAlphaTestCommon()
 		{
 			this.UseAlphaTestCount++;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD8 RID: 188376 RVA: 0x00A94B3C File Offset: 0x00A92D3C
+		// Token: 0x060226C2 RID: 140994 RVA: 0x009C0D5C File Offset: 0x009BEF5C
 		public unsafe void UseAlphaTest(int sectionIndex)
 		{
 			int num = this.UseAlphaTestMaskCount.Length;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFD9 RID: 188377 RVA: 0x00A94C61 File Offset: 0x00A92E61
+		// Token: 0x060226C3 RID: 140995 RVA: 0x009C0E81 File Offset: 0x009BF081
 		public void RevertAlphaTestCommon()
 		{
 			if (this.UseAlphaTestCount > 0)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateAlphaTest();
 		}
 
-		// Token: 0x0602DFDA RID: 188378 RVA: 0x00A94C88 File Offset: 0x00A92E88
+		// Token: 0x060226C4 RID: 140996 RVA: 0x009C0EA8 File Offset: 0x009BF0A8
 		public unsafe void RevertAlphaTest(int sectionIndex)
 		{
 			int num = this.UseAlphaTestMaskCount.Length;
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFDB RID: 188379 RVA: 0x00A94D48 File Offset: 0x00A92F48
+		// Token: 0x060226C5 RID: 140997 RVA: 0x009C0F68 File Offset: 0x009BF168
 		public unsafe void UseOutlineStencilTestCommon()
 		{
 			this.UseOutlineStencilCount++;
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFDC RID: 188380 RVA: 0x00A94DD8 File Offset: 0x00A92FD8
+		// Token: 0x060226C6 RID: 140998 RVA: 0x009C0FF8 File Offset: 0x009BF1F8
 		public unsafe void UseOutlineStencilTest(int sectionIndex)
 		{
 			int num = this.UseOutlineStencilMaskCount.Length;
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFDD RID: 188381 RVA: 0x00A94EFD File Offset: 0x00A930FD
+		// Token: 0x060226C7 RID: 140999 RVA: 0x009C111D File Offset: 0x009BF31D
 		public void RevertOutlineStencilTestCommon()
 		{
 			if (this.UseOutlineStencilCount > 0)
@@ -456,7 +456,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateStencilOutlineTest();
 		}
 
-		// Token: 0x0602DFDE RID: 188382 RVA: 0x00A94F24 File Offset: 0x00A93124
+		// Token: 0x060226C8 RID: 141000 RVA: 0x009C1144 File Offset: 0x009BF344
 		public unsafe void RevertOutlineStencilTest(int sectionIndex)
 		{
 			int num = this.UseOutlineStencilMaskCount.Length;
@@ -483,7 +483,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFDF RID: 188383 RVA: 0x00A94FE4 File Offset: 0x00A931E4
+		// Token: 0x060226C9 RID: 141001 RVA: 0x009C1204 File Offset: 0x009BF404
 		public void SetColor(FName propertyName, FLinearColor color, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
 			int[] array = this.SpecifiedSlotList[(int)specifiedSlotType];
@@ -494,7 +494,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE0 RID: 188384 RVA: 0x00A9501C File Offset: 0x00A9321C
+		// Token: 0x060226CA RID: 141002 RVA: 0x009C123C File Offset: 0x009BF43C
 		public void RevertColor(FName propertyName, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
 			int[] array = this.SpecifiedSlotList[(int)specifiedSlotType];
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE1 RID: 188385 RVA: 0x00A95060 File Offset: 0x00A93260
+		// Token: 0x060226CB RID: 141003 RVA: 0x009C1280 File Offset: 0x009BF480
 		public void SetFloat(FName propertyName, float value, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
 			int[] array = this.SpecifiedSlotList[(int)specifiedSlotType];
@@ -517,7 +517,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE2 RID: 188386 RVA: 0x00A95098 File Offset: 0x00A93298
+		// Token: 0x060226CC RID: 141004 RVA: 0x009C12B8 File Offset: 0x009BF4B8
 		public void RevertFloat(FName propertyName, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
 			int[] array = this.SpecifiedSlotList[(int)specifiedSlotType];
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE3 RID: 188387 RVA: 0x00A950DC File Offset: 0x00A932DC
+		// Token: 0x060226CD RID: 141005 RVA: 0x009C12FC File Offset: 0x009BF4FC
 		[NullableContext(1)]
 		public void SetTexture(FName propertyName, UTexture texture, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE4 RID: 188388 RVA: 0x00A95114 File Offset: 0x00A93314
+		// Token: 0x060226CE RID: 141006 RVA: 0x009C1334 File Offset: 0x009BF534
 		public void RevertTexture(FName propertyName, ECharacterSlotSpecifiedType specifiedSlotType)
 		{
 			int[] array = this.SpecifiedSlotList[(int)specifiedSlotType];
@@ -553,7 +553,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE5 RID: 188389 RVA: 0x00A95158 File Offset: 0x00A93358
+		// Token: 0x060226CF RID: 141007 RVA: 0x009C1378 File Offset: 0x009BF578
 		public void SetStarScarEnergy(float value)
 		{
 			int num = this.MaterialSlotList.Length;
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE6 RID: 188390 RVA: 0x00A95188 File Offset: 0x00A93388
+		// Token: 0x060226D0 RID: 141008 RVA: 0x009C13A8 File Offset: 0x009BF5A8
 		public void SetNoWater(bool value)
 		{
 			if (this.SkeletalComp != null && this.SkeletalComp.IsValid())
@@ -572,7 +572,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFE7 RID: 188391 RVA: 0x00A951AC File Offset: 0x00A933AC
+		// Token: 0x060226D1 RID: 141009 RVA: 0x009C13CC File Offset: 0x009BF5CC
 		public int Update(EMaterialShadingRate? meshShadingRate = null)
 		{
 			if (meshShadingRate != null && this.SkeletalComp != null && this.SkeletalComp.IsValid())
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.Render
 			return result;
 		}
 
-		// Token: 0x0602DFE8 RID: 188392 RVA: 0x00A95208 File Offset: 0x00A93408
+		// Token: 0x060226D2 RID: 141010 RVA: 0x009C1428 File Offset: 0x009BF628
 		public void ResetAllState()
 		{
 			this.AlphaTestDirty = true;
@@ -605,7 +605,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateBattleMask();
 		}
 
-		// Token: 0x0602DFE9 RID: 188393 RVA: 0x00A952B0 File Offset: 0x00A934B0
+		// Token: 0x060226D3 RID: 141011 RVA: 0x009C14D0 File Offset: 0x009BF6D0
 		private void DebugPrint()
 		{
 			CharMaterialController charMaterialController = this.MaterialContainer.GetRenderingComponent().GetComponent(2) as CharMaterialController;
@@ -615,7 +615,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFEA RID: 188394 RVA: 0x00A952E0 File Offset: 0x00A934E0
+		// Token: 0x060226D4 RID: 141012 RVA: 0x009C1500 File Offset: 0x009BF700
 		private int UpdateMaterial()
 		{
 			if (this.SkeletalComp == null || !this.SkeletalComp.IsValid())
@@ -633,7 +633,7 @@ namespace CSharpScript.Game.Render
 			return num;
 		}
 
-		// Token: 0x0602DFEB RID: 188395 RVA: 0x00A9533C File Offset: 0x00A9353C
+		// Token: 0x060226D5 RID: 141013 RVA: 0x009C155C File Offset: 0x009BF75C
 		public void UpdateBattleMask()
 		{
 			if (!this.BattleMaskDirty)
@@ -669,7 +669,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFEC RID: 188396 RVA: 0x00A953DC File Offset: 0x00A935DC
+		// Token: 0x060226D6 RID: 141014 RVA: 0x009C15FC File Offset: 0x009BF7FC
 		public void UpdateBattle()
 		{
 			if (!this.BattleDirty)
@@ -705,7 +705,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFED RID: 188397 RVA: 0x00A9547C File Offset: 0x00A9367C
+		// Token: 0x060226D7 RID: 141015 RVA: 0x009C169C File Offset: 0x009BF89C
 		public void UpdateAlphaTest()
 		{
 			if (!this.AlphaTestDirty)
@@ -741,7 +741,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DFEE RID: 188398 RVA: 0x00A9551C File Offset: 0x00A9371C
+		// Token: 0x060226D8 RID: 141016 RVA: 0x009C173C File Offset: 0x009BF93C
 		public void UpdateStencilOutlineTest()
 		{
 			if (!this.OutlineStencilDirty)
@@ -777,18 +777,18 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x040188CE RID: 100558
+		// Token: 0x04012F09 RID: 77577
 		[Nullable(1)]
 		public string ActorName = string.Empty;
 
-		// Token: 0x040188CF RID: 100559
+		// Token: 0x04012F0A RID: 77578
 		[Nullable(1)]
 		public string BodyName = string.Empty;
 
-		// Token: 0x040188D0 RID: 100560
+		// Token: 0x04012F0B RID: 77579
 		public ECharacterBodyType? BodyType;
 
-		// Token: 0x040188D1 RID: 100561
+		// Token: 0x04012F0C RID: 77580
 		[Nullable(new byte[]
 		{
 			2,
@@ -796,7 +796,7 @@ namespace CSharpScript.Game.Render
 		})]
 		public CharMaterialSlot[] MaterialSlotList;
 
-		// Token: 0x040188D2 RID: 100562
+		// Token: 0x04012F0D RID: 77581
 		[Nullable(new byte[]
 		{
 			2,
@@ -804,70 +804,70 @@ namespace CSharpScript.Game.Render
 		})]
 		public int[][] SpecifiedSlotList;
 
-		// Token: 0x040188D3 RID: 100563
+		// Token: 0x04012F0E RID: 77582
 		public USkeletalMeshComponent SkeletalComp;
 
-		// Token: 0x040188D4 RID: 100564
+		// Token: 0x04012F0F RID: 77583
 		public USkeletalMesh SkeletalMesh;
 
-		// Token: 0x040188D5 RID: 100565
+		// Token: 0x04012F10 RID: 77584
 		private int[] SectionMainMatIndex;
 
-		// Token: 0x040188D6 RID: 100566
+		// Token: 0x04012F11 RID: 77585
 		private bool AlphaTestDirty;
 
-		// Token: 0x040188D7 RID: 100567
+		// Token: 0x04012F12 RID: 77586
 		private bool OutlineStencilDirty;
 
-		// Token: 0x040188D8 RID: 100568
+		// Token: 0x04012F13 RID: 77587
 		private bool BattleDirty;
 
-		// Token: 0x040188D9 RID: 100569
+		// Token: 0x04012F14 RID: 77588
 		private bool BattleMaskDirty;
 
-		// Token: 0x040188DA RID: 100570
+		// Token: 0x04012F15 RID: 77589
 		private int UseAlphaTestCount;
 
-		// Token: 0x040188DB RID: 100571
+		// Token: 0x04012F16 RID: 77590
 		private int UseOutlineStencilCount;
 
-		// Token: 0x040188DC RID: 100572
+		// Token: 0x04012F17 RID: 77591
 		private int UseBattleCount;
 
-		// Token: 0x040188DD RID: 100573
+		// Token: 0x04012F18 RID: 77592
 		private int UseBattleMaskCount;
 
-		// Token: 0x040188DE RID: 100574
+		// Token: 0x04012F19 RID: 77593
 		private int[] UseAlphaTestMaskCount;
 
-		// Token: 0x040188DF RID: 100575
+		// Token: 0x04012F1A RID: 77594
 		private int[] UseOutlineStencilMaskCount;
 
-		// Token: 0x040188E0 RID: 100576
+		// Token: 0x04012F1B RID: 77595
 		private int[] UseBattleBitCount;
 
-		// Token: 0x040188E1 RID: 100577
+		// Token: 0x04012F1C RID: 77596
 		private int[] UseBattleMaskBitCount;
 
-		// Token: 0x040188E2 RID: 100578
+		// Token: 0x04012F1D RID: 77597
 		private Stat StatUpdateMaterial;
 
-		// Token: 0x040188E3 RID: 100579
+		// Token: 0x04012F1E RID: 77598
 		private Stat StatUpdateAlphaTest;
 
-		// Token: 0x040188E4 RID: 100580
+		// Token: 0x04012F1F RID: 77599
 		private Stat StatUpdateBattle;
 
-		// Token: 0x040188E5 RID: 100581
+		// Token: 0x04012F20 RID: 77600
 		private Stat StatUpdateBattleMask;
 
-		// Token: 0x040188E6 RID: 100582
+		// Token: 0x04012F21 RID: 77601
 		private Stat StatUpdateOutlineStencil;
 
-		// Token: 0x040188E7 RID: 100583
+		// Token: 0x04012F22 RID: 77602
 		private CharMaterialContainer MaterialContainer;
 
-		// Token: 0x040188E8 RID: 100584
+		// Token: 0x04012F23 RID: 77603
 		public int LastUpdateCounter;
 	}
 }

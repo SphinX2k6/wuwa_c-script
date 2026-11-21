@@ -5,12 +5,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8D RID: 28557
+	// Token: 0x0200610E RID: 24846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowModifyTargetTag : LevelFlowActionBase
 	{
-		// Token: 0x0604571A RID: 284442 RVA: 0x01138759 File Offset: 0x01136959
+		// Token: 0x0603B8C8 RID: 243912 RVA: 0x010E255D File Offset: 0x010E075D
 		public LevelFlowModifyTargetTag Init(int entityId, bool isAddTag, List<string> tagList)
 		{
 			this.EntityId = entityId;
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604571B RID: 284443 RVA: 0x01138774 File Offset: 0x01136974
+		// Token: 0x0603B8C9 RID: 243913 RVA: 0x010E2578 File Offset: 0x010E0778
 		protected override void OnExecute()
 		{
 			EntityHandle entityById = CreatureModel.Instance.GetEntityById(this.EntityId);
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(false);
 		}
 
-		// Token: 0x0604571C RID: 284444 RVA: 0x01138914 File Offset: 0x01136B14
+		// Token: 0x0603B8CA RID: 243914 RVA: 0x010E2718 File Offset: 0x010E0918
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 		}
 
-		// Token: 0x040243BF RID: 148415
+		// Token: 0x0401F674 RID: 128628
 		private int EntityId;
 
-		// Token: 0x040243C0 RID: 148416
+		// Token: 0x0401F675 RID: 128629
 		private bool IsAddTag;
 
-		// Token: 0x040243C1 RID: 148417
+		// Token: 0x0401F676 RID: 128630
 		private List<string> TagList = new List<string>();
 	}
 }

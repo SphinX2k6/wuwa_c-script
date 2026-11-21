@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200269C RID: 9884
+	// Token: 0x0200295F RID: 10591
 	public class ICustomScreenSpine : ICustomScreenTypeBase
 	{
-		// Token: 0x0600DD3A RID: 56634 RVA: 0x0020DF7A File Offset: 0x0020C17A
-		[NullableContext(1)]
+		// Token: 0x0600EB11 RID: 60177 RVA: 0x0022A71A File Offset: 0x0022891A
 		public static ICustomScreenSpine Create(ICustomScreenSpine? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041C4 RID: 16836
-		// (get) Token: 0x0600DD3B RID: 56635 RVA: 0x0020DF99 File Offset: 0x0020C199
+		// Token: 0x17004501 RID: 17665
+		// (get) Token: 0x0600EB12 RID: 60178 RVA: 0x0022A739 File Offset: 0x00228939
 		public override ECustomScreenType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041C5 RID: 16837
-		// (get) Token: 0x0600DD3C RID: 56636 RVA: 0x0020DFA6 File Offset: 0x0020C1A6
+		// Token: 0x17004502 RID: 17666
+		// (get) Token: 0x0600EB13 RID: 60179 RVA: 0x0022A746 File Offset: 0x00228946
 		public virtual int SpineId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AE0 RID: 31456
+		// Token: 0x0400817D RID: 33149
 		private ICustomScreenSpine Instance;
 	}
 }

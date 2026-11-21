@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A9D RID: 19101
+	// Token: 0x02003A45 RID: 14917
 	public class TrapDefenseDevelopPreviewLevelPointItem : GridProxyAbstract<bool>
 	{
-		// Token: 0x06031826 RID: 202790 RVA: 0x00B7A2A0 File Offset: 0x00B784A0
+		// Token: 0x060265B6 RID: 157110 RVA: 0x00ABE254 File Offset: 0x00ABC454
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031827 RID: 202791 RVA: 0x00B7A2E8 File Offset: 0x00B784E8
+		// Token: 0x060265B7 RID: 157111 RVA: 0x00ABE29C File Offset: 0x00ABC49C
 		public override void Refresh(bool data, bool isSelected, int gridIndex)
 		{
 			UUIItem item = base.GetItem(0);
@@ -32,10 +32,10 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(data);
 		}
 
-		// Token: 0x0200ABF5 RID: 44021
+		// Token: 0x02009615 RID: 38421
 		private class ELevelPoint
 		{
-			// Token: 0x0403440E RID: 214030
+			// Token: 0x0402EDBF RID: 191935
 			public const int Point = 0;
 		}
 	}

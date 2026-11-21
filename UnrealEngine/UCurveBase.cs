@@ -6,18 +6,18 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000978 RID: 2424
+	// Token: 0x020001BF RID: 447
 	[UnrealObjectPath("/Script/Engine.CurveBase")]
 	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public abstract class UCurveBase : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06008927 RID: 35111 RVA: 0x000C4683 File Offset: 0x000C2883
+		// Token: 0x060020D6 RID: 8406 RVA: 0x0003039F File Offset: 0x0002E59F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCurveBase._ClassPtr;
 		}
 
-		// Token: 0x06008928 RID: 35112 RVA: 0x000C4690 File Offset: 0x000C2890
+		// Token: 0x060020D7 RID: 8407 RVA: 0x000303AC File Offset: 0x0002E5AC
 		public unsafe void GetValueRange(ref float MinValue, ref float MaxValue)
 		{
 			fixed (float* ptr = &MinValue)
@@ -32,7 +32,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008929 RID: 35113 RVA: 0x000C46BC File Offset: 0x000C28BC
+		// Token: 0x060020D8 RID: 8408 RVA: 0x000303D8 File Offset: 0x0002E5D8
 		public unsafe void GetTimeRange(ref float MinTime, ref float MaxTime)
 		{
 			fixed (float* ptr = &MinTime)
@@ -47,38 +47,38 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600892A RID: 35114
+		// Token: 0x060020D9 RID: 8409
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetValueRange_Internal(IntPtr @this, ref float MinValue, ref float MaxValue);
 
-		// Token: 0x0600892B RID: 35115
+		// Token: 0x060020DA RID: 8410
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __GetTimeRange_Internal(IntPtr @this, ref float MinTime, ref float MaxTime);
 
-		// Token: 0x0600892C RID: 35116 RVA: 0x000C46E6 File Offset: 0x000C28E6
+		// Token: 0x060020DB RID: 8411 RVA: 0x00030402 File Offset: 0x0002E602
 		static UCurveBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.CurveBase");
 		}
 
-		// Token: 0x0600892D RID: 35117 RVA: 0x000C46F4 File Offset: 0x000C28F4
+		// Token: 0x060020DC RID: 8412 RVA: 0x00030410 File Offset: 0x0002E610
 		protected UCurveBase() : this(BuiltinUtils.AllocNativeUObject(UCurveBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600892E RID: 35118 RVA: 0x000C471C File Offset: 0x000C291C
+		// Token: 0x060020DD RID: 8413 RVA: 0x00030438 File Offset: 0x0002E638
 		protected UCurveBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04004126 RID: 16678
+		// Token: 0x04000AE5 RID: 2789
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.CurveBase";
 
-		// Token: 0x04004127 RID: 16679
+		// Token: 0x04000AE6 RID: 2790
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04004128 RID: 16680
+		// Token: 0x04000AE7 RID: 2791
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

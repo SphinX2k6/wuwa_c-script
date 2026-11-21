@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026DB RID: 9947
+	// Token: 0x0200299F RID: 10655
 	public class IBattleStatePerceptionBehaviorType
 	{
-		// Token: 0x0600DE43 RID: 56899 RVA: 0x0020FB07 File Offset: 0x0020DD07
-		[NullableContext(1)]
+		// Token: 0x0600EC1F RID: 60447 RVA: 0x0022C347 File Offset: 0x0022A547
 		public static IBattleStatePerceptionBehaviorType Create(IBattleStatePerceptionBehaviorType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700424F RID: 16975
-		// (get) Token: 0x0600DE44 RID: 56900 RVA: 0x0020FB26 File Offset: 0x0020DD26
+		// Token: 0x1700458F RID: 17807
+		// (get) Token: 0x0600EC20 RID: 60448 RVA: 0x0022C366 File Offset: 0x0022A566
 		public virtual EBattleStatePerceptionBehavior Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B63 RID: 31587
+		// Token: 0x04008203 RID: 33283
 		private IBattleStatePerceptionBehaviorType Instance;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048E8 RID: 18664
+	// Token: 0x02004D4D RID: 19789
 	public class TBuffDurationUnion
 	{
-		// Token: 0x17008772 RID: 34674
-		// (get) Token: 0x0601D300 RID: 119552 RVA: 0x0041E7B8 File Offset: 0x0041C9B8
-		// (set) Token: 0x0601D301 RID: 119553 RVA: 0x0041E7C0 File Offset: 0x0041C9C0
+		// Token: 0x17008DBA RID: 36282
+		// (get) Token: 0x0601EAED RID: 125677 RVA: 0x0044AF54 File Offset: 0x00449154
+		// (set) Token: 0x0601EAEE RID: 125678 RVA: 0x0044AF5C File Offset: 0x0044915C
 		public TBuffDuration Type { get; set; }
 
-		// Token: 0x17008773 RID: 34675
-		// (get) Token: 0x0601D302 RID: 119554 RVA: 0x0041E7C9 File Offset: 0x0041C9C9
-		// (set) Token: 0x0601D303 RID: 119555 RVA: 0x0041E7D1 File Offset: 0x0041C9D1
+		// Token: 0x17008DBB RID: 36283
+		// (get) Token: 0x0601EAEF RID: 125679 RVA: 0x0044AF65 File Offset: 0x00449165
+		// (set) Token: 0x0601EAF0 RID: 125680 RVA: 0x0044AF6D File Offset: 0x0044916D
 		public object Value { get; set; }
 
-		// Token: 0x0601D304 RID: 119556 RVA: 0x0041E7DA File Offset: 0x0041C9DA
+		// Token: 0x0601EAF1 RID: 125681 RVA: 0x0044AF76 File Offset: 0x00449176
 		public TBuffDurationUnion()
 		{
 			this.Type = TBuffDuration.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D305 RID: 119557 RVA: 0x0041E7F0 File Offset: 0x0041C9F0
+		// Token: 0x0601EAF2 RID: 125682 RVA: 0x0044AF8C File Offset: 0x0044918C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D306 RID: 119558 RVA: 0x0041E802 File Offset: 0x0041CA02
+		// Token: 0x0601EAF3 RID: 125683 RVA: 0x0044AF9E File Offset: 0x0044919E
 		public IBuffDurationInstantT AsIBuffDurationInstant()
 		{
 			return this.As<IBuffDurationInstantT>();
 		}
 
-		// Token: 0x0601D307 RID: 119559 RVA: 0x0041E80A File Offset: 0x0041CA0A
+		// Token: 0x0601EAF4 RID: 125684 RVA: 0x0044AFA6 File Offset: 0x004491A6
 		public static TBuffDurationUnion FromIBuffDurationInstant(IBuffDurationInstantT _ibuffdurationinstant)
 		{
 			return new TBuffDurationUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D308 RID: 119560 RVA: 0x0041E81F File Offset: 0x0041CA1F
+		// Token: 0x0601EAF5 RID: 125685 RVA: 0x0044AFBB File Offset: 0x004491BB
 		public IBuffDurationPermanentT AsIBuffDurationPermanent()
 		{
 			return this.As<IBuffDurationPermanentT>();
 		}
 
-		// Token: 0x0601D309 RID: 119561 RVA: 0x0041E827 File Offset: 0x0041CA27
+		// Token: 0x0601EAF6 RID: 125686 RVA: 0x0044AFC3 File Offset: 0x004491C3
 		public static TBuffDurationUnion FromIBuffDurationPermanent(IBuffDurationPermanentT _ibuffdurationpermanent)
 		{
 			return new TBuffDurationUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D30A RID: 119562 RVA: 0x0041E83C File Offset: 0x0041CA3C
+		// Token: 0x0601EAF7 RID: 125687 RVA: 0x0044AFD8 File Offset: 0x004491D8
 		public IBuffHasDurationT AsIBuffHasDuration()
 		{
 			return this.As<IBuffHasDurationT>();
 		}
 
-		// Token: 0x0601D30B RID: 119563 RVA: 0x0041E844 File Offset: 0x0041CA44
+		// Token: 0x0601EAF8 RID: 125688 RVA: 0x0044AFE0 File Offset: 0x004491E0
 		public static TBuffDurationUnion FromIBuffHasDuration(IBuffHasDurationT _ibuffhasduration)
 		{
 			return new TBuffDurationUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D30C RID: 119564 RVA: 0x0041E85C File Offset: 0x0041CA5C
+		// Token: 0x0601EAF9 RID: 125689 RVA: 0x0044AFF8 File Offset: 0x004491F8
 		public static int Pack(FlatBufferBuilder builder, TBuffDurationUnion _o)
 		{
 			switch (_o.Type)

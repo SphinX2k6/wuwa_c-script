@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019F4 RID: 6644
+	// Token: 0x02001B87 RID: 7047
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IEnableSubLevelTransitionWithSceneCapture : IEnableSubLevelTransitionType
 	{
-		// Token: 0x06008E57 RID: 36439 RVA: 0x0014D020 File Offset: 0x0014B220
-		[NullableContext(1)]
+		// Token: 0x060095B9 RID: 38329 RVA: 0x0015CE90 File Offset: 0x0015B090
+		[NullableContext(0)]
 		private IEnableSubLevelTransitionWithSceneCapture_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E58 RID: 36440 RVA: 0x0014D058 File Offset: 0x0014B258
-		[NullableContext(1)]
+		// Token: 0x060095BA RID: 38330 RVA: 0x0015CEC8 File Offset: 0x0015B0C8
+		[NullableContext(0)]
 		public static IEnableSubLevelTransitionWithSceneCapture Create([Nullable(2)] IEnableSubLevelTransitionWithSceneCapture instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E59 RID: 36441 RVA: 0x0014D06B File Offset: 0x0014B26B
-		[NullableContext(1)]
+		// Token: 0x060095BB RID: 38331 RVA: 0x0015CEDB File Offset: 0x0015B0DB
+		[NullableContext(0)]
 		public static IEnableSubLevelTransitionWithSceneCapture CreateFromSetValue([Nullable(2)] IEnableSubLevelTransitionWithSceneCapture_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E5A RID: 36442 RVA: 0x0014D080 File Offset: 0x0014B280
-		[NullableContext(1)]
+		// Token: 0x060095BC RID: 38332 RVA: 0x0015CEF0 File Offset: 0x0015B0F0
+		[NullableContext(0)]
 		public new IEnableSubLevelTransitionWithSceneCapture_SetValue ToSetValue()
 		{
 			return new IEnableSubLevelTransitionWithSceneCapture_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D92 RID: 11666
-		// (get) Token: 0x06008E5B RID: 36443 RVA: 0x0014D0DA File Offset: 0x0014B2DA
-		// (set) Token: 0x06008E5C RID: 36444 RVA: 0x0014D105 File Offset: 0x0014B305
+		// Token: 0x17002F9E RID: 12190
+		// (get) Token: 0x060095BD RID: 38333 RVA: 0x0015CF4A File Offset: 0x0015B14A
+		// (set) Token: 0x060095BE RID: 38334 RVA: 0x0015CF75 File Offset: 0x0015B175
 		public override EEnableSubLevelTransitionType Type
 		{
 			get
@@ -91,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D93 RID: 11667
-		// (get) Token: 0x06008E5D RID: 36445 RVA: 0x0014D113 File Offset: 0x0014B313
-		// (set) Token: 0x06008E5E RID: 36446 RVA: 0x0014D13A File Offset: 0x0014B33A
+		// Token: 0x17002F9F RID: 12191
+		// (get) Token: 0x060095BF RID: 38335 RVA: 0x0015CF83 File Offset: 0x0015B183
+		// (set) Token: 0x060095C0 RID: 38336 RVA: 0x0015CFAA File Offset: 0x0015B1AA
 		public virtual string SceneCaptureEffect
 		{
 			get
@@ -115,9 +115,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D94 RID: 11668
-		// (get) Token: 0x06008E5F RID: 36447 RVA: 0x0014D148 File Offset: 0x0014B348
-		// (set) Token: 0x06008E60 RID: 36448 RVA: 0x0014D16F File Offset: 0x0014B36F
+		// Token: 0x17002FA0 RID: 12192
+		// (get) Token: 0x060095C1 RID: 38337 RVA: 0x0015CFB8 File Offset: 0x0015B1B8
+		// (set) Token: 0x060095C2 RID: 38338 RVA: 0x0015CFDF File Offset: 0x0015B1DF
 		public virtual string ScreenEffect
 		{
 			get
@@ -139,9 +139,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D95 RID: 11669
-		// (get) Token: 0x06008E61 RID: 36449 RVA: 0x0014D17D File Offset: 0x0014B37D
-		// (set) Token: 0x06008E62 RID: 36450 RVA: 0x0014D1A4 File Offset: 0x0014B3A4
+		// Token: 0x17002FA1 RID: 12193
+		// (get) Token: 0x060095C3 RID: 38339 RVA: 0x0015CFED File Offset: 0x0015B1ED
+		// (set) Token: 0x060095C4 RID: 38340 RVA: 0x0015D014 File Offset: 0x0015B214
 		public virtual string ScreenEffectLoop
 		{
 			get
@@ -163,9 +163,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D96 RID: 11670
-		// (get) Token: 0x06008E63 RID: 36451 RVA: 0x0014D1B4 File Offset: 0x0014B3B4
-		// (set) Token: 0x06008E64 RID: 36452 RVA: 0x0014D1EE File Offset: 0x0014B3EE
+		// Token: 0x17002FA2 RID: 12194
+		// (get) Token: 0x060095C5 RID: 38341 RVA: 0x0015D024 File Offset: 0x0015B224
+		// (set) Token: 0x060095C6 RID: 38342 RVA: 0x0015D05E File Offset: 0x0015B25E
 		public virtual float? DelayTime
 		{
 			get
@@ -187,9 +187,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D97 RID: 11671
-		// (get) Token: 0x06008E65 RID: 36453 RVA: 0x0014D1FC File Offset: 0x0014B3FC
-		// (set) Token: 0x06008E66 RID: 36454 RVA: 0x0014D236 File Offset: 0x0014B436
+		// Token: 0x17002FA3 RID: 12195
+		// (get) Token: 0x060095C7 RID: 38343 RVA: 0x0015D06C File Offset: 0x0015B26C
+		// (set) Token: 0x060095C8 RID: 38344 RVA: 0x0015D0A6 File Offset: 0x0015B2A6
 		public virtual bool? IsAllowInput
 		{
 			get
@@ -211,10 +211,10 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005841 RID: 22593
+		// Token: 0x04005CA3 RID: 23715
 		protected new IEnableSubLevelTransitionWithSceneCapture FbInstance;
 
-		// Token: 0x04005842 RID: 22594
+		// Token: 0x04005CA4 RID: 23716
 		protected new IEnableSubLevelTransitionWithSceneCapture_SetValue PocoInterface;
 	}
 }

@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016BE RID: 5822
+	// Token: 0x02001838 RID: 6200
 	[EnumExtensions]
 	public enum ESyncOpenSystemBoardFinishTiming
 	{
-		// Token: 0x04004E21 RID: 20001
+		// Token: 0x04005240 RID: 21056
 		OpenFinished
 	}
 }

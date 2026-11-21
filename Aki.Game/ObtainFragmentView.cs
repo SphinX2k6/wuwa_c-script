@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C27 RID: 7207
+// Token: 0x020010E6 RID: 4326
 [NullableContext(1)]
 [Nullable(0)]
 public class ObtainFragmentView : UiViewBase
 {
-	// Token: 0x0600D898 RID: 55448 RVA: 0x00322D5E File Offset: 0x00320F5E
+	// Token: 0x0600ACAE RID: 44206 RVA: 0x0032E136 File Offset: 0x0032C336
 	public ObtainFragmentView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x0600D899 RID: 55449 RVA: 0x00322D68 File Offset: 0x00320F68
+	// Token: 0x0600ACAF RID: 44207 RVA: 0x0032E140 File Offset: 0x0032C340
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -40,7 +40,7 @@ public class ObtainFragmentView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D89A RID: 55450 RVA: 0x00322E50 File Offset: 0x00321050
+	// Token: 0x0600ACB0 RID: 44208 RVA: 0x0032E228 File Offset: 0x0032C428
 	private void OnConfirmBtnClick()
 	{
 		if (this.CurrentObtainCollectData == null)
@@ -67,7 +67,7 @@ public class ObtainFragmentView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D89B RID: 55451 RVA: 0x00322EA8 File Offset: 0x003210A8
+	// Token: 0x0600ACB1 RID: 44209 RVA: 0x0032E280 File Offset: 0x0032C480
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -87,7 +87,7 @@ public class ObtainFragmentView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600D89C RID: 55452 RVA: 0x00322F11 File Offset: 0x00321111
+	// Token: 0x0600ACB2 RID: 44210 RVA: 0x0032E2E9 File Offset: 0x0032C4E9
 	private void RefreshView()
 	{
 		this.RefreshFragmentTexture();
@@ -95,7 +95,7 @@ public class ObtainFragmentView : UiViewBase
 		this.RefreshTime();
 	}
 
-	// Token: 0x0600D89D RID: 55453 RVA: 0x00322F25 File Offset: 0x00321125
+	// Token: 0x0600ACB3 RID: 44211 RVA: 0x0032E2FD File Offset: 0x0032C4FD
 	private string GetFragmentTexture()
 	{
 		if (this.CurrentObtainCollectData == null)
@@ -105,7 +105,7 @@ public class ObtainFragmentView : UiViewBase
 		return this.CurrentObtainCollectData.GetThemeBg();
 	}
 
-	// Token: 0x0600D89E RID: 55454 RVA: 0x00322F40 File Offset: 0x00321140
+	// Token: 0x0600ACB4 RID: 44212 RVA: 0x0032E318 File Offset: 0x0032C518
 	private void RefreshFragmentTexture()
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -115,7 +115,7 @@ public class ObtainFragmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D89F RID: 55455 RVA: 0x00322F6F File Offset: 0x0032116F
+	// Token: 0x0600ACB5 RID: 44213 RVA: 0x0032E347 File Offset: 0x0032C547
 	private string GetName()
 	{
 		if (this.CurrentObtainCollectData == null)
@@ -125,7 +125,7 @@ public class ObtainFragmentView : UiViewBase
 		return this.CurrentObtainCollectData.GetTitle();
 	}
 
-	// Token: 0x0600D8A0 RID: 55456 RVA: 0x00322F8C File Offset: 0x0032118C
+	// Token: 0x0600ACB6 RID: 44214 RVA: 0x0032E364 File Offset: 0x0032C564
 	private void RefreshName()
 	{
 		UUIText text = base.GetText(1);
@@ -135,7 +135,7 @@ public class ObtainFragmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D8A1 RID: 55457 RVA: 0x00322FBA File Offset: 0x003211BA
+	// Token: 0x0600ACB7 RID: 44215 RVA: 0x0032E392 File Offset: 0x0032C592
 	private string GetTime()
 	{
 		if (this.CurrentObtainCollectData == null)
@@ -145,7 +145,7 @@ public class ObtainFragmentView : UiViewBase
 		return this.CurrentObtainCollectData.GetTimeText();
 	}
 
-	// Token: 0x0600D8A2 RID: 55458 RVA: 0x00322FD8 File Offset: 0x003211D8
+	// Token: 0x0600ACB8 RID: 44216 RVA: 0x0032E3B0 File Offset: 0x0032C5B0
 	private void RefreshTime()
 	{
 		UUIText text = base.GetText(2);
@@ -155,24 +155,24 @@ public class ObtainFragmentView : UiViewBase
 		}
 	}
 
-	// Token: 0x040062B6 RID: 25270
+	// Token: 0x04006388 RID: 25480
 	[Nullable(2)]
 	private FragmentMemoryCollectData CurrentObtainCollectData;
 
-	// Token: 0x020081E0 RID: 33248
+	// Token: 0x02007369 RID: 29545
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A63C RID: 173628
+		// Token: 0x04025963 RID: 153955
 		public const int FragmentTexture = 0;
 
-		// Token: 0x0402A63D RID: 173629
+		// Token: 0x04025964 RID: 153956
 		public const int NameText = 1;
 
-		// Token: 0x0402A63E RID: 173630
+		// Token: 0x04025965 RID: 153957
 		public const int TimeText = 2;
 
-		// Token: 0x0402A63F RID: 173631
+		// Token: 0x04025966 RID: 153958
 		public const int ConfirmBtn = 3;
 	}
 }

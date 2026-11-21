@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004158 RID: 16728
+	// Token: 0x0200459C RID: 17820
 	public class ISurvivorsRougeConditionStepBattleT
 	{
-		// Token: 0x1700768B RID: 30347
-		// (get) Token: 0x0601891E RID: 100638 RVA: 0x0038A742 File Offset: 0x00388942
-		// (set) Token: 0x0601891F RID: 100639 RVA: 0x0038A74A File Offset: 0x0038894A
+		// Token: 0x17007C9A RID: 31898
+		// (get) Token: 0x06019FE6 RID: 106470 RVA: 0x003B4CFE File Offset: 0x003B2EFE
+		// (set) Token: 0x06019FE7 RID: 106471 RVA: 0x003B4D06 File Offset: 0x003B2F06
 		public ESurvivorsRougeConditionStep Type { get; set; }
 
-		// Token: 0x06018920 RID: 100640 RVA: 0x0038A753 File Offset: 0x00388953
+		// Token: 0x06019FE8 RID: 106472 RVA: 0x003B4D0F File Offset: 0x003B2F0F
 		public ISurvivorsRougeConditionStepBattleT()
 		{
 			this.Type = ESurvivorsRougeConditionStep.Prepare;

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001099 RID: 4249
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011C7 RID: 4551
 	public class IQuestScheduleBtTreeVar : IQuestScheduleType
 	{
-		// Token: 0x06005FD0 RID: 24528 RVA: 0x000E7EA4 File Offset: 0x000E60A4
+		// Token: 0x060065C9 RID: 26057 RVA: 0x000F4FC4 File Offset: 0x000F31C4
 		private IQuestScheduleBtTreeVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FD1 RID: 24529 RVA: 0x000E7EDC File Offset: 0x000E60DC
+		// Token: 0x060065CA RID: 26058 RVA: 0x000F4FFC File Offset: 0x000F31FC
 		public static IQuestScheduleBtTreeVar Create([Nullable(2)] IQuestScheduleBtTreeVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FD2 RID: 24530 RVA: 0x000E7EEF File Offset: 0x000E60EF
+		// Token: 0x060065CB RID: 26059 RVA: 0x000F500F File Offset: 0x000F320F
 		public static IQuestScheduleBtTreeVar CreateFromSetValue([Nullable(2)] IQuestScheduleBtTreeVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FD3 RID: 24531 RVA: 0x000E7F02 File Offset: 0x000E6102
+		// Token: 0x060065CC RID: 26060 RVA: 0x000F5022 File Offset: 0x000F3222
 		public new IQuestScheduleBtTreeVar_SetValue ToSetValue()
 		{
 			return new IQuestScheduleBtTreeVar_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F86 RID: 8070
-		// (get) Token: 0x06005FD4 RID: 24532 RVA: 0x000E7F2D File Offset: 0x000E612D
-		// (set) Token: 0x06005FD5 RID: 24533 RVA: 0x000E7F58 File Offset: 0x000E6158
+		// Token: 0x17002138 RID: 8504
+		// (get) Token: 0x060065CD RID: 26061 RVA: 0x000F504D File Offset: 0x000F324D
+		// (set) Token: 0x060065CE RID: 26062 RVA: 0x000F5078 File Offset: 0x000F3278
 		public override EQuestScheduleType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F87 RID: 8071
-		// (get) Token: 0x06005FD6 RID: 24534 RVA: 0x000E7F66 File Offset: 0x000E6166
-		// (set) Token: 0x06005FD7 RID: 24535 RVA: 0x000E7F8D File Offset: 0x000E618D
+		// Token: 0x17002139 RID: 8505
+		// (get) Token: 0x060065CF RID: 26063 RVA: 0x000F5086 File Offset: 0x000F3286
+		// (set) Token: 0x060065D0 RID: 26064 RVA: 0x000F50AD File Offset: 0x000F32AD
 		public virtual VarRef Var
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F88 RID: 8072
-		// (get) Token: 0x06005FD8 RID: 24536 RVA: 0x000E7F9C File Offset: 0x000E619C
-		// (set) Token: 0x06005FD9 RID: 24537 RVA: 0x000E7FFD File Offset: 0x000E61FD
+		// Token: 0x1700213A RID: 8506
+		// (get) Token: 0x060065D1 RID: 26065 RVA: 0x000F50BC File Offset: 0x000F32BC
+		// (set) Token: 0x060065D2 RID: 26066 RVA: 0x000F511D File Offset: 0x000F331D
 		[Nullable(2)]
 		public virtual IWordArtConfig ShowAsWordArt
 		{
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039C7 RID: 14791
+		// Token: 0x04003D14 RID: 15636
 		[Nullable(2)]
 		protected new IQuestScheduleBtTreeVar FbInstance;
 
-		// Token: 0x040039C8 RID: 14792
+		// Token: 0x04003D15 RID: 15637
 		[Nullable(2)]
 		protected new IQuestScheduleBtTreeVar_SetValue PocoInterface;
 
-		// Token: 0x040039C9 RID: 14793
+		// Token: 0x04003D16 RID: 15638
 		private IWordArtConfig _ShowAsWordArtCache;
 
-		// Token: 0x040039CA RID: 14794
+		// Token: 0x04003D17 RID: 15639
 		private bool _ShowAsWordArtInited;
 	}
 }

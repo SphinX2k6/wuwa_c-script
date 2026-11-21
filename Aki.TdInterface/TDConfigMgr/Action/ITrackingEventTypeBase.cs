@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FDC RID: 8156
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002223 RID: 8739
 	public class ITrackingEventTypeBase
 	{
-		// Token: 0x0600B372 RID: 45938 RVA: 0x001A1C38 File Offset: 0x0019FE38
+		// Token: 0x0600BE88 RID: 48776 RVA: 0x001B81A4 File Offset: 0x001B63A4
 		private ITrackingEventTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B373 RID: 45939 RVA: 0x001A1C70 File Offset: 0x0019FE70
+		// Token: 0x0600BE89 RID: 48777 RVA: 0x001B81DC File Offset: 0x001B63DC
 		public static ITrackingEventTypeBase Create([Nullable(2)] ITrackingEventTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B374 RID: 45940 RVA: 0x001A1C83 File Offset: 0x0019FE83
+		// Token: 0x0600BE8A RID: 48778 RVA: 0x001B81EF File Offset: 0x001B63EF
 		public static ITrackingEventTypeBase CreateFromSetValue([Nullable(2)] ITrackingEventTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B375 RID: 45941 RVA: 0x001A1C96 File Offset: 0x0019FE96
+		// Token: 0x0600BE8B RID: 48779 RVA: 0x001B8202 File Offset: 0x001B6402
 		public ITrackingEventTypeBase_SetValue ToSetValue()
 		{
 			return new ITrackingEventTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003747 RID: 14151
-		// (get) Token: 0x0600B376 RID: 45942 RVA: 0x001A1CA9 File Offset: 0x0019FEA9
-		// (set) Token: 0x0600B377 RID: 45943 RVA: 0x001A1CD4 File Offset: 0x0019FED4
+		// Token: 0x17003A1F RID: 14879
+		// (get) Token: 0x0600BE8C RID: 48780 RVA: 0x001B8215 File Offset: 0x001B6415
+		// (set) Token: 0x0600BE8D RID: 48781 RVA: 0x001B8240 File Offset: 0x001B6440
 		public virtual ETrackingEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C42 RID: 27714
+		// Token: 0x04007244 RID: 29252
 		[Nullable(2)]
 		protected ITrackingEventTypeBase FbInstance;
 
-		// Token: 0x04006C43 RID: 27715
+		// Token: 0x04007245 RID: 29253
 		[Nullable(2)]
 		protected ITrackingEventTypeBase_SetValue PocoInterface;
 	}

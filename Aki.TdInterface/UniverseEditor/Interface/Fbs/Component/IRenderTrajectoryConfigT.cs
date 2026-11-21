@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005856 RID: 22614
+	// Token: 0x02005E63 RID: 24163
 	public class IRenderTrajectoryConfigT
 	{
-		// Token: 0x1700A8FE RID: 43262
-		// (get) Token: 0x06026103 RID: 155907 RVA: 0x0053F6AB File Offset: 0x0053D8AB
-		// (set) Token: 0x06026104 RID: 155908 RVA: 0x0053F6B3 File Offset: 0x0053D8B3
+		// Token: 0x1700B22E RID: 45614
+		// (get) Token: 0x06028665 RID: 165477 RVA: 0x005861F7 File Offset: 0x005843F7
+		// (set) Token: 0x06028666 RID: 165478 RVA: 0x005861FF File Offset: 0x005843FF
 		public float Time { get; set; }
 
-		// Token: 0x1700A8FF RID: 43263
-		// (get) Token: 0x06026105 RID: 155909 RVA: 0x0053F6BC File Offset: 0x0053D8BC
-		// (set) Token: 0x06026106 RID: 155910 RVA: 0x0053F6C4 File Offset: 0x0053D8C4
+		// Token: 0x1700B22F RID: 45615
+		// (get) Token: 0x06028667 RID: 165479 RVA: 0x00586208 File Offset: 0x00584408
+		// (set) Token: 0x06028668 RID: 165480 RVA: 0x00586210 File Offset: 0x00584410
 		public string Effect { get; set; }
 
-		// Token: 0x06026107 RID: 155911 RVA: 0x0053F6CD File Offset: 0x0053D8CD
+		// Token: 0x06028669 RID: 165481 RVA: 0x00586219 File Offset: 0x00584419
 		public IRenderTrajectoryConfigT()
 		{
 			this.Time = 0f;

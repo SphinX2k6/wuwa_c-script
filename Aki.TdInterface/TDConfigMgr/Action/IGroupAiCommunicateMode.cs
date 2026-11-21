@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AE1 RID: 6881
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C88 RID: 7304
 	public class IGroupAiCommunicateMode
 	{
-		// Token: 0x06009378 RID: 37752 RVA: 0x0015636C File Offset: 0x0015456C
+		// Token: 0x06009B36 RID: 39734 RVA: 0x00166B8C File Offset: 0x00164D8C
 		private IGroupAiCommunicateMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009379 RID: 37753 RVA: 0x001563A4 File Offset: 0x001545A4
+		// Token: 0x06009B37 RID: 39735 RVA: 0x00166BC4 File Offset: 0x00164DC4
 		public static IGroupAiCommunicateMode Create([Nullable(2)] IGroupAiCommunicateMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600937A RID: 37754 RVA: 0x001563B7 File Offset: 0x001545B7
+		// Token: 0x06009B38 RID: 39736 RVA: 0x00166BD7 File Offset: 0x00164DD7
 		public static IGroupAiCommunicateMode CreateFromSetValue([Nullable(2)] IGroupAiCommunicateMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600937B RID: 37755 RVA: 0x001563CA File Offset: 0x001545CA
+		// Token: 0x06009B39 RID: 39737 RVA: 0x00166BEA File Offset: 0x00164DEA
 		public IGroupAiCommunicateMode_SetValue ToSetValue()
 		{
 			return new IGroupAiCommunicateMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EC0 RID: 11968
-		// (get) Token: 0x0600937C RID: 37756 RVA: 0x001563DD File Offset: 0x001545DD
-		// (set) Token: 0x0600937D RID: 37757 RVA: 0x00156408 File Offset: 0x00154608
+		// Token: 0x170030DC RID: 12508
+		// (get) Token: 0x06009B3A RID: 39738 RVA: 0x00166BFD File Offset: 0x00164DFD
+		// (set) Token: 0x06009B3B RID: 39739 RVA: 0x00166C28 File Offset: 0x00164E28
 		public virtual EGroupAiCommunicateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A9F RID: 23199
+		// Token: 0x04005F29 RID: 24361
 		[Nullable(2)]
 		protected IGroupAiCommunicateMode FbInstance;
 
-		// Token: 0x04005AA0 RID: 23200
+		// Token: 0x04005F2A RID: 24362
 		[Nullable(2)]
 		protected IGroupAiCommunicateMode_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000044 RID: 68
+	// Token: 0x0200004C RID: 76
 	public class ConfigActivityLinkageUrlByIdAndIsNational : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000198 RID: 408 RVA: 0x00062C3D File Offset: 0x00060E3D
+		// Token: 0x060001C8 RID: 456 RVA: 0x000674F1 File Offset: 0x000656F1
 		static ConfigActivityLinkageUrlByIdAndIsNational()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityLinkageUrlByIdAndIsNational.CreateStaticDefaultValue), new Action(ConfigActivityLinkageUrlByIdAndIsNational.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000199 RID: 409 RVA: 0x00062C5C File Offset: 0x00060E5C
+		// Token: 0x060001C9 RID: 457 RVA: 0x00067510 File Offset: 0x00065710
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityLinkageUrlByIdAndIsNational.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600019A RID: 410 RVA: 0x00062CDB File Offset: 0x00060EDB
+		// Token: 0x060001CA RID: 458 RVA: 0x0006758F File Offset: 0x0006578F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityLinkageUrlByIdAndIsNational.LogPair = null;
 			ConfigActivityLinkageUrlByIdAndIsNational.HandleId = 0;
 		}
 
-		// Token: 0x0600019B RID: 411 RVA: 0x00062CE9 File Offset: 0x00060EE9
+		// Token: 0x060001CB RID: 459 RVA: 0x0006759D File Offset: 0x0006579D
 		public static void Init()
 		{
 			ConfigActivityLinkageUrlByIdAndIsNational.HandleId = ConfigCommon.InitDataStatement(ConfigActivityLinkageUrlByIdAndIsNational.HandleId, "db_activitylinkage.db", "select BinData from `ActivityLinkageUrl` where ActivityLinkageId=? And IsNational=?");
 		}
 
-		// Token: 0x0600019C RID: 412 RVA: 0x00062D04 File Offset: 0x00060F04
+		// Token: 0x060001CC RID: 460 RVA: 0x000675B8 File Offset: 0x000657B8
 		public static ActivityLinkageUrl? GetConfig(int p0ActivityLinkageId, bool p1IsNational, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivityLinkageUrlByIdAndIsNational.HandleId, ConfigActivityLinkageUrlByIdAndIsNational.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new ActivityLinkageUrl?(rootAsActivityLinkageUrl);
 		}
 
-		// Token: 0x040001C0 RID: 448
+		// Token: 0x040001F8 RID: 504
 		private const string DB = "db_activitylinkage.db";
 
-		// Token: 0x040001C1 RID: 449
+		// Token: 0x040001F9 RID: 505
 		private const string FILE = "h.活动联动页活动.xlsx";
 
-		// Token: 0x040001C2 RID: 450
+		// Token: 0x040001FA RID: 506
 		private const string TABLE = "ActivityLinkageUrl";
 
-		// Token: 0x040001C3 RID: 451
+		// Token: 0x040001FB RID: 507
 		private const string COMMAND = "select BinData from `ActivityLinkageUrl` where ActivityLinkageId=? And IsNational=?";
 
-		// Token: 0x040001C4 RID: 452
+		// Token: 0x040001FC RID: 508
 		private const string KEY_PREFIX = "ActivityLinkageUrlByIdAndIsNational";
 
-		// Token: 0x040001C5 RID: 453
+		// Token: 0x040001FD RID: 509
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040001C6 RID: 454
+		// Token: 0x040001FE RID: 510
 		private static int HandleId;
 	}
 }

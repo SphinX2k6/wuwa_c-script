@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002CF9 RID: 11513
+// Token: 0x02002253 RID: 8787
 [NullableContext(2)]
 [Nullable(0)]
 public class WeaponTrialData : WeaponDataBase
 {
-	// Token: 0x060182F0 RID: 99056 RVA: 0x00626D59 File Offset: 0x00624F59
+	// Token: 0x06015B91 RID: 88977 RVA: 0x0064CD21 File Offset: 0x0064AF21
 	public void SetTrialId(int trialId, bool needFullLevelWeaponData = true)
 	{
 		this.TrialId = trialId;
@@ -22,7 +22,7 @@ public class WeaponTrialData : WeaponDataBase
 		this.FullLevelWeaponData = null;
 	}
 
-	// Token: 0x060182F1 RID: 99057 RVA: 0x00626D90 File Offset: 0x00624F90
+	// Token: 0x06015B92 RID: 88978 RVA: 0x0064CD58 File Offset: 0x0064AF58
 	protected void InitWeaponBreachLevel()
 	{
 		IEnumerable<WeaponBreach> breachConfigList = base.GetBreachConfigList();
@@ -37,7 +37,7 @@ public class WeaponTrialData : WeaponDataBase
 		}
 	}
 
-	// Token: 0x060182F2 RID: 99058 RVA: 0x00626DF8 File Offset: 0x00624FF8
+	// Token: 0x06015B93 RID: 88979 RVA: 0x0064CDC0 File Offset: 0x0064AFC0
 	protected void InitFullLevelWeaponData()
 	{
 		int fullLevelTrialId = this.TrialConfig.Value.FullLevelTrialId;
@@ -55,13 +55,13 @@ public class WeaponTrialData : WeaponDataBase
 		this.FullLevelWeaponData.SetTrialId(trialWeaponConfig.Value.Id, false);
 	}
 
-	// Token: 0x060182F3 RID: 99059 RVA: 0x00626E64 File Offset: 0x00625064
+	// Token: 0x06015B94 RID: 88980 RVA: 0x0064CE2C File Offset: 0x0064B02C
 	public override int GetItemId()
 	{
 		return this.TrialConfig.Value.WeaponId;
 	}
 
-	// Token: 0x060182F4 RID: 99060 RVA: 0x00626E84 File Offset: 0x00625084
+	// Token: 0x06015B95 RID: 88981 RVA: 0x0064CE4C File Offset: 0x0064B04C
 	public int GetSkinId()
 	{
 		if (this.TrialConfig.Value.WeaponSkinId > 0)
@@ -71,78 +71,78 @@ public class WeaponTrialData : WeaponDataBase
 		return -1;
 	}
 
-	// Token: 0x060182F5 RID: 99061 RVA: 0x00626EBC File Offset: 0x006250BC
+	// Token: 0x06015B96 RID: 88982 RVA: 0x0064CE84 File Offset: 0x0064B084
 	public override int GetLevel()
 	{
 		return this.TrialConfig.Value.WeaponLevel;
 	}
 
-	// Token: 0x060182F6 RID: 99062 RVA: 0x00626EDC File Offset: 0x006250DC
+	// Token: 0x06015B97 RID: 88983 RVA: 0x0064CEA4 File Offset: 0x0064B0A4
 	public override int GetResonanceLevel()
 	{
 		return this.TrialConfig.Value.WeaponResonanceLevel;
 	}
 
-	// Token: 0x060182F7 RID: 99063 RVA: 0x00626EFC File Offset: 0x006250FC
+	// Token: 0x06015B98 RID: 88984 RVA: 0x0064CEC4 File Offset: 0x0064B0C4
 	public override int GetBreachLevel()
 	{
 		return this.BreachLevel;
 	}
 
-	// Token: 0x060182F8 RID: 99064 RVA: 0x00626F04 File Offset: 0x00625104
+	// Token: 0x06015B99 RID: 88985 RVA: 0x0064CECC File Offset: 0x0064B0CC
 	public override bool HasRole()
 	{
 		return this.RoleId != 0;
 	}
 
-	// Token: 0x060182F9 RID: 99065 RVA: 0x00626F0F File Offset: 0x0062510F
+	// Token: 0x06015B9A RID: 88986 RVA: 0x0064CED7 File Offset: 0x0064B0D7
 	public override void SetRoleId(int roleId)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x060182FA RID: 99066 RVA: 0x00626F18 File Offset: 0x00625118
+	// Token: 0x06015B9B RID: 88987 RVA: 0x0064CEE0 File Offset: 0x0064B0E0
 	public override int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x060182FB RID: 99067 RVA: 0x00626F20 File Offset: 0x00625120
+	// Token: 0x06015B9C RID: 88988 RVA: 0x0064CEE8 File Offset: 0x0064B0E8
 	public override bool IsTrial()
 	{
 		return true;
 	}
 
-	// Token: 0x060182FC RID: 99068 RVA: 0x00626F23 File Offset: 0x00625123
+	// Token: 0x06015B9D RID: 88989 RVA: 0x0064CEEB File Offset: 0x0064B0EB
 	public override bool CanGoBreach()
 	{
 		return false;
 	}
 
-	// Token: 0x060182FD RID: 99069 RVA: 0x00626F26 File Offset: 0x00625126
+	// Token: 0x06015B9E RID: 88990 RVA: 0x0064CEEE File Offset: 0x0064B0EE
 	public TrialWeaponInfo? GetTrialConfig()
 	{
 		return this.TrialConfig;
 	}
 
-	// Token: 0x060182FE RID: 99070 RVA: 0x00626F2E File Offset: 0x0062512E
+	// Token: 0x06015B9F RID: 88991 RVA: 0x0064CEF6 File Offset: 0x0064B0F6
 	public WeaponTrialData GetFullLevelWeaponData()
 	{
 		return this.FullLevelWeaponData;
 	}
 
-	// Token: 0x0400B3D2 RID: 46034
+	// Token: 0x0400B747 RID: 46919
 	protected int TrialId;
 
-	// Token: 0x0400B3D3 RID: 46035
+	// Token: 0x0400B748 RID: 46920
 	protected TrialWeaponInfo? TrialConfig;
 
-	// Token: 0x0400B3D4 RID: 46036
+	// Token: 0x0400B749 RID: 46921
 	protected WeaponTrialData FullLevelWeaponData;
 
-	// Token: 0x0400B3D5 RID: 46037
+	// Token: 0x0400B74A RID: 46922
 	protected int RoleId;
 
-	// Token: 0x0400B3D6 RID: 46038
+	// Token: 0x0400B74B RID: 46923
 	protected int BreachLevel;
 }

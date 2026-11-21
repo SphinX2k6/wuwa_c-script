@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074A4 RID: 29860
+	// Token: 0x02007C9A RID: 31898
 	public static class IUiGame_UnionVerify
 	{
-		// Token: 0x060364AB RID: 222379 RVA: 0x0076113C File Offset: 0x0075F33C
+		// Token: 0x060398B4 RID: 235700 RVA: 0x007C4194 File Offset: 0x007C2394
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -73,42 +73,51 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				result = IRideFlyingCarVerify.Verify(verifier, tablePos);
 				break;
 			case 21:
-				result = IFishingRouletteVerify.Verify(verifier, tablePos);
+				result = IFrequencyPaintVerify.Verify(verifier, tablePos);
 				break;
 			case 22:
-				result = IDaolingAuthenticationVerify.Verify(verifier, tablePos);
+				result = IFrequencyDetectVerify.Verify(verifier, tablePos);
 				break;
 			case 23:
-				result = IDragActorVerify.Verify(verifier, tablePos);
+				result = ITurntableConnectorUiGameplayVerify.Verify(verifier, tablePos);
 				break;
 			case 24:
-				result = IWuWaGoGameVerify.Verify(verifier, tablePos);
+				result = IFishingRouletteVerify.Verify(verifier, tablePos);
 				break;
 			case 25:
-				result = IWriteLetterVerify.Verify(verifier, tablePos);
+				result = IDaolingAuthenticationVerify.Verify(verifier, tablePos);
 				break;
 			case 26:
-				result = IQteHourglassVerify.Verify(verifier, tablePos);
+				result = IDragActorVerify.Verify(verifier, tablePos);
 				break;
 			case 27:
-				result = IInstrumentQteGameplayVerify.Verify(verifier, tablePos);
+				result = IWuWaGoGameVerify.Verify(verifier, tablePos);
 				break;
 			case 28:
-				result = IPlayPianoGameplayVerify.Verify(verifier, tablePos);
+				result = IWriteLetterVerify.Verify(verifier, tablePos);
 				break;
 			case 29:
-				result = IDartGameplayVerify.Verify(verifier, tablePos);
+				result = IQteHourglassVerify.Verify(verifier, tablePos);
 				break;
 			case 30:
-				result = ISceneInspectionVerify.Verify(verifier, tablePos);
+				result = IInstrumentQteGameplayVerify.Verify(verifier, tablePos);
 				break;
 			case 31:
-				result = ITuningStandVerify.Verify(verifier, tablePos);
+				result = IPlayPianoGameplayVerify.Verify(verifier, tablePos);
 				break;
 			case 32:
-				result = ITraceTracingVerify.Verify(verifier, tablePos);
+				result = IDartGameplayVerify.Verify(verifier, tablePos);
 				break;
 			case 33:
+				result = ISceneInspectionVerify.Verify(verifier, tablePos);
+				break;
+			case 34:
+				result = ITuningStandVerify.Verify(verifier, tablePos);
+				break;
+			case 35:
+				result = ITraceTracingVerify.Verify(verifier, tablePos);
+				break;
+			case 36:
 				result = ISheriffReasoningVerify.Verify(verifier, tablePos);
 				break;
 			default:

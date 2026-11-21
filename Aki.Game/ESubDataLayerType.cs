@@ -1,17 +1,17 @@
 ﻿using System;
 using CSharpScript.Core.Common;
 
-// Token: 0x0200352D RID: 13613
+// Token: 0x02002AA2 RID: 10914
 [EnumExtensions]
 public enum ESubDataLayerType
 {
-	// Token: 0x0400EAF2 RID: 60146
+	// Token: 0x0400EFAF RID: 61359
 	[EnumStringMember("")]
 	Default,
-	// Token: 0x0400EAF3 RID: 60147
+	// Token: 0x0400EFB0 RID: 61360
 	[EnumStringMember("DataLayerRuntime_EncloseSpaceSub")]
 	Cave,
-	// Token: 0x0400EAF4 RID: 60148
+	// Token: 0x0400EFB1 RID: 61361
 	[EnumStringMember("DataLayerRuntime_EncloseSpaceSubRoom")]
 	Room
 }

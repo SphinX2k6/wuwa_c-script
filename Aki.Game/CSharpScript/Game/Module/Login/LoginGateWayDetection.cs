@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056AA RID: 22186
+	// Token: 0x02004680 RID: 18048
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoginGateWayDetection
 	{
-		// Token: 0x1700878F RID: 34703
-		// (get) Token: 0x06038738 RID: 231224 RVA: 0x00D67028 File Offset: 0x00D65228
+		// Token: 0x17005B56 RID: 23382
+		// (get) Token: 0x0602D635 RID: 185909 RVA: 0x00CB5184 File Offset: 0x00CB3384
 		public bool IsSuccess
 		{
 			get
@@ -22,8 +21,8 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x17008790 RID: 34704
-		// (get) Token: 0x06038739 RID: 231225 RVA: 0x00D67030 File Offset: 0x00D65230
+		// Token: 0x17005B57 RID: 23383
+		// (get) Token: 0x0602D636 RID: 185910 RVA: 0x00CB518C File Offset: 0x00CB338C
 		public double AvgLatencyMs
 		{
 			get
@@ -32,7 +31,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x0603873A RID: 231226 RVA: 0x00D67038 File Offset: 0x00D65238
+		// Token: 0x0602D637 RID: 185911 RVA: 0x00CB5194 File Offset: 0x00CB3394
 		public LoginGateWayDetection(string host, int port, int detectCount, int timeOutMs)
 		{
 			this.Host = host;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.Login
 			}
 		}
 
-		// Token: 0x0603873B RID: 231227 RVA: 0x00D6709C File Offset: 0x00D6529C
+		// Token: 0x0602D638 RID: 185912 RVA: 0x00CB51F8 File Offset: 0x00CB33F8
 		public UniTask Start()
 		{
 			LoginGateWayDetection.<Start>d__11 <Start>d__;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Login
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603873C RID: 231228 RVA: 0x00D670E0 File Offset: 0x00D652E0
+		// Token: 0x0602D639 RID: 185913 RVA: 0x00CB523C File Offset: 0x00CB343C
 		public void Stop()
 		{
 			foreach (LoginGateWayPingTest loginGateWayPingTest in this.PingTests)
@@ -66,29 +65,33 @@ namespace CSharpScript.Game.Module.Login
 			this.IsSuccessInner = false;
 		}
 
-		// Token: 0x0603873D RID: 231229 RVA: 0x00D67138 File Offset: 0x00D65338
+		// Token: 0x0602D63A RID: 185914 RVA: 0x00CB5294 File Offset: 0x00CB3494
 		public List<double> GetPingCosts()
 		{
-			return (from pt in this.PingTests
-			select pt.PingCostMs).ToList<double>();
+			List<double> list = new List<double>(this.PingTests.Count);
+			foreach (LoginGateWayPingTest loginGateWayPingTest in this.PingTests)
+			{
+				list.Add(loginGateWayPingTest.PingCostMs);
+			}
+			return list;
 		}
 
-		// Token: 0x0401DA4C RID: 121420
+		// Token: 0x040184D7 RID: 99543
 		private readonly int DetectCount = 1;
 
-		// Token: 0x0401DA4D RID: 121421
+		// Token: 0x040184D8 RID: 99544
 		public string Host;
 
-		// Token: 0x0401DA4E RID: 121422
+		// Token: 0x040184D9 RID: 99545
 		public int Port;
 
-		// Token: 0x0401DA4F RID: 121423
+		// Token: 0x040184DA RID: 99546
 		private readonly List<LoginGateWayPingTest> PingTests = new List<LoginGateWayPingTest>();
 
-		// Token: 0x0401DA50 RID: 121424
+		// Token: 0x040184DB RID: 99547
 		private bool IsSuccessInner;
 
-		// Token: 0x0401DA51 RID: 121425
+		// Token: 0x040184DC RID: 99548
 		private double AvgLatencyMsInner;
 	}
 }

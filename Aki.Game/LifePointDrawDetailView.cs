@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001297 RID: 4759
+// Token: 0x0200074B RID: 1867
 [NullableContext(1)]
 [Nullable(0)]
 public class LifePointDrawDetailView : UiViewBase
 {
-	// Token: 0x06008235 RID: 33333 RVA: 0x001B9985 File Offset: 0x001B7B85
+	// Token: 0x060055CC RID: 21964 RVA: 0x001C2655 File Offset: 0x001C0855
 	public LifePointDrawDetailView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008236 RID: 33334 RVA: 0x001B9990 File Offset: 0x001B7B90
+	// Token: 0x060055CD RID: 21965 RVA: 0x001C2660 File Offset: 0x001C0860
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.LifePointDrawDetailViewModel = (this.OpenParam as LifePointDrawViewModel);
@@ -61,7 +61,7 @@ public class LifePointDrawDetailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008237 RID: 33335 RVA: 0x001B9B64 File Offset: 0x001B7D64
+	// Token: 0x060055CE RID: 21966 RVA: 0x001C2834 File Offset: 0x001C0A34
 	private void OnClickBtn()
 	{
 		LifePointDrawActivityController instance = LifePointDrawActivityController.Instance;
@@ -82,7 +82,7 @@ public class LifePointDrawDetailView : UiViewBase
 		instance.RequestStartChallenge(valueOrDefault, (lifePointDrawDetailViewModel2 != null) ? lifePointDrawDetailViewModel2.GetCurrentChallengeId() : 0);
 	}
 
-	// Token: 0x06008238 RID: 33336 RVA: 0x001B9BC8 File Offset: 0x001B7DC8
+	// Token: 0x060055CF RID: 21967 RVA: 0x001C2898 File Offset: 0x001C0A98
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LifePointDrawDetailView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ public class LifePointDrawDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008239 RID: 33337 RVA: 0x001B9C0B File Offset: 0x001B7E0B
+	// Token: 0x060055D0 RID: 21968 RVA: 0x001C28DB File Offset: 0x001C0ADB
 	private LifePointDrawDetailItem CreateChallengeItem()
 	{
 		LifePointDrawDetailItem lifePointDrawDetailItem = new LifePointDrawDetailItem();
@@ -101,14 +101,14 @@ public class LifePointDrawDetailView : UiViewBase
 		return lifePointDrawDetailItem;
 	}
 
-	// Token: 0x0600823A RID: 33338 RVA: 0x001B9C1E File Offset: 0x001B7E1E
+	// Token: 0x060055D1 RID: 21969 RVA: 0x001C28EE File Offset: 0x001C0AEE
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600823B RID: 33339 RVA: 0x001B9C28 File Offset: 0x001B7E28
-	public void RefreshLayout(List<int> list)
+	// Token: 0x060055D2 RID: 21970 RVA: 0x001C28F8 File Offset: 0x001C0AF8
+	public void RefreshLayout(IReadOnlyList<int> list)
 	{
 		GenericLayout<LifePointDrawDetailItem, int> challengeLayout = this.ChallengeLayout;
 		if (challengeLayout != null)
@@ -123,7 +123,7 @@ public class LifePointDrawDetailView : UiViewBase
 		verticalLayout.RootUIComp.Get().SetUIActive(list.Count > 1);
 	}
 
-	// Token: 0x0600823C RID: 33340 RVA: 0x001B9C70 File Offset: 0x001B7E70
+	// Token: 0x060055D3 RID: 21971 RVA: 0x001C2940 File Offset: 0x001C0B40
 	public void RefreshRewardLayout(List<TItem> list)
 	{
 		GenericScrollViewNew<CommonItemSmallItemGrid, TItem> rewardLayout = this.RewardLayout;
@@ -134,7 +134,7 @@ public class LifePointDrawDetailView : UiViewBase
 		rewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600823D RID: 33341 RVA: 0x001B9C85 File Offset: 0x001B7E85
+	// Token: 0x060055D4 RID: 21972 RVA: 0x001C2955 File Offset: 0x001C0B55
 	protected override void OnBeforeShow()
 	{
 		LifePointDrawViewModel lifePointDrawDetailViewModel = this.LifePointDrawDetailViewModel;
@@ -145,45 +145,45 @@ public class LifePointDrawDetailView : UiViewBase
 		lifePointDrawDetailViewModel.OnShowView();
 	}
 
-	// Token: 0x0600823E RID: 33342 RVA: 0x001B9C97 File Offset: 0x001B7E97
+	// Token: 0x060055D5 RID: 21973 RVA: 0x001C2967 File Offset: 0x001C0B67
 	public void ShowRightUpTitle(string title)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), title, Array.Empty<object>());
 	}
 
-	// Token: 0x0600823F RID: 33343 RVA: 0x001B9CB0 File Offset: 0x001B7EB0
+	// Token: 0x060055D6 RID: 21974 RVA: 0x001C2980 File Offset: 0x001C0B80
 	public void ShowDescText(string desc)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), desc, Array.Empty<object>());
 	}
 
-	// Token: 0x06008240 RID: 33344 RVA: 0x001B9CCC File Offset: 0x001B7ECC
+	// Token: 0x060055D7 RID: 21975 RVA: 0x001C299C File Offset: 0x001C0B9C
 	public void RefreshLevelNumSprite(string sprite)
 	{
 		this.SetSpriteByPath(sprite, base.GetSprite(8), false, null, null);
 	}
 
-	// Token: 0x06008241 RID: 33345 RVA: 0x001B9CF4 File Offset: 0x001B7EF4
+	// Token: 0x060055D8 RID: 21976 RVA: 0x001C29C4 File Offset: 0x001C0BC4
 	public void RefreshDifficultTexture(string texture)
 	{
 		base.SetTextureByPath(texture, base.GetTexture(7), null, null);
 	}
 
-	// Token: 0x06008242 RID: 33346 RVA: 0x001B9D19 File Offset: 0x001B7F19
+	// Token: 0x060055D9 RID: 21977 RVA: 0x001C29E9 File Offset: 0x001C0BE9
 	public void PlaySwitchSequence()
 	{
 		base.PlaySequence("Switch", null, false);
 	}
 
-	// Token: 0x04003ADA RID: 15066
+	// Token: 0x04003B72 RID: 15218
 	[Nullable(2)]
 	private LifePointDrawViewModel LifePointDrawDetailViewModel;
 
-	// Token: 0x04003ADB RID: 15067
+	// Token: 0x04003B73 RID: 15219
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003ADC RID: 15068
+	// Token: 0x04003B74 RID: 15220
 	[Nullable(new byte[]
 	{
 		2,
@@ -191,7 +191,7 @@ public class LifePointDrawDetailView : UiViewBase
 	})]
 	private GenericLayout<LifePointDrawDetailItem, int> ChallengeLayout;
 
-	// Token: 0x04003ADD RID: 15069
+	// Token: 0x04003B75 RID: 15221
 	[Nullable(new byte[]
 	{
 		2,
@@ -199,38 +199,38 @@ public class LifePointDrawDetailView : UiViewBase
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x020078AB RID: 30891
+	// Token: 0x02006A36 RID: 27190
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04027C0B RID: 162827
+		// Token: 0x04022F3C RID: 143164
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027C0C RID: 162828
+		// Token: 0x04022F3D RID: 143165
 		public const int VerticalLayout = 1;
 
-		// Token: 0x04027C0D RID: 162829
+		// Token: 0x04022F3E RID: 143166
 		public const int LayoutItem = 2;
 
-		// Token: 0x04027C0E RID: 162830
+		// Token: 0x04022F3F RID: 143167
 		public const int RightUpTitleText = 3;
 
-		// Token: 0x04027C0F RID: 162831
+		// Token: 0x04022F40 RID: 143168
 		public const int DescText = 4;
 
-		// Token: 0x04027C10 RID: 162832
+		// Token: 0x04022F41 RID: 143169
 		public const int RewardLayout = 5;
 
-		// Token: 0x04027C11 RID: 162833
+		// Token: 0x04022F42 RID: 143170
 		public const int RewardItem = 6;
 
-		// Token: 0x04027C12 RID: 162834
+		// Token: 0x04022F43 RID: 143171
 		public const int DifficultTexture = 7;
 
-		// Token: 0x04027C13 RID: 162835
+		// Token: 0x04022F44 RID: 143172
 		public const int LevelNumSprite = 8;
 
-		// Token: 0x04027C14 RID: 162836
+		// Token: 0x04022F45 RID: 143173
 		public const int Btn = 9;
 	}
 }

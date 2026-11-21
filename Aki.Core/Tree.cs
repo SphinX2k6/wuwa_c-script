@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000060 RID: 96
+// Token: 0x02000062 RID: 98
 [NullableContext(1)]
 [Nullable(0)]
 public class Tree<[Nullable(2)] T>
 {
-	// Token: 0x060002D2 RID: 722 RVA: 0x0000FAB4 File Offset: 0x0000DCB4
+	// Token: 0x0600030D RID: 781 RVA: 0x0001089C File Offset: 0x0000EA9C
 	public Tree(T element, [Nullable(new byte[]
 	{
 		2,
@@ -18,8 +18,8 @@ public class Tree<[Nullable(2)] T>
 		this.Parent = parent;
 	}
 
-	// Token: 0x17000066 RID: 102
-	// (get) Token: 0x060002D3 RID: 723 RVA: 0x0000FACA File Offset: 0x0000DCCA
+	// Token: 0x1700006D RID: 109
+	// (get) Token: 0x0600030E RID: 782 RVA: 0x000108B2 File Offset: 0x0000EAB2
 	public Dictionary<T, Tree<T>> ChildMap
 	{
 		get
@@ -32,7 +32,7 @@ public class Tree<[Nullable(2)] T>
 		}
 	}
 
-	// Token: 0x060002D4 RID: 724 RVA: 0x0000FAE8 File Offset: 0x0000DCE8
+	// Token: 0x0600030F RID: 783 RVA: 0x000108D0 File Offset: 0x0000EAD0
 	public void AddChild(Tree<T> child)
 	{
 		T element = child.Element;
@@ -50,7 +50,7 @@ public class Tree<[Nullable(2)] T>
 		this.ChildMap[element] = child;
 	}
 
-	// Token: 0x060002D5 RID: 725 RVA: 0x0000FB4C File Offset: 0x0000DD4C
+	// Token: 0x06000310 RID: 784 RVA: 0x00010934 File Offset: 0x0000EB34
 	public void AddChildElement(T element)
 	{
 		if (this.ChildMap.ContainsKey(element))
@@ -68,7 +68,7 @@ public class Tree<[Nullable(2)] T>
 		this.ChildMap[element] = tree;
 	}
 
-	// Token: 0x060002D6 RID: 726 RVA: 0x0000FBB0 File Offset: 0x0000DDB0
+	// Token: 0x06000311 RID: 785 RVA: 0x00010998 File Offset: 0x0000EB98
 	public void AddParent(Tree<T> parent)
 	{
 		if (this.Parent != null)
@@ -85,7 +85,7 @@ public class Tree<[Nullable(2)] T>
 		parent.ChildMap[this.Element] = this;
 	}
 
-	// Token: 0x060002D7 RID: 727 RVA: 0x0000FC10 File Offset: 0x0000DE10
+	// Token: 0x06000312 RID: 786 RVA: 0x000109F8 File Offset: 0x0000EBF8
 	public void AddParentElement(T element)
 	{
 		if (this.Parent != null)
@@ -102,7 +102,7 @@ public class Tree<[Nullable(2)] T>
 		this.Parent.ChildMap[this.Element] = this;
 	}
 
-	// Token: 0x060002D8 RID: 728 RVA: 0x0000FC7B File Offset: 0x0000DE7B
+	// Token: 0x06000313 RID: 787 RVA: 0x00010A63 File Offset: 0x0000EC63
 	public Tree<T> GetRoot()
 	{
 		if (this.Parent == null)
@@ -112,22 +112,22 @@ public class Tree<[Nullable(2)] T>
 		return this.Parent.GetRoot();
 	}
 
-	// Token: 0x060002D9 RID: 729 RVA: 0x0000FC92 File Offset: 0x0000DE92
+	// Token: 0x06000314 RID: 788 RVA: 0x00010A7A File Offset: 0x0000EC7A
 	public bool IsRoot()
 	{
 		return this.Parent == null;
 	}
 
-	// Token: 0x060002DA RID: 730 RVA: 0x0000FC9D File Offset: 0x0000DE9D
+	// Token: 0x06000315 RID: 789 RVA: 0x00010A85 File Offset: 0x0000EC85
 	public bool IsLeaf()
 	{
 		return this.ChildMap.Count <= 0;
 	}
 
-	// Token: 0x040001FF RID: 511
+	// Token: 0x04000215 RID: 533
 	public T Element;
 
-	// Token: 0x04000200 RID: 512
+	// Token: 0x04000216 RID: 534
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,7 +135,7 @@ public class Tree<[Nullable(2)] T>
 	})]
 	public Tree<T> Parent;
 
-	// Token: 0x04000201 RID: 513
+	// Token: 0x04000217 RID: 535
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C54 RID: 23636
+	// Token: 0x02006279 RID: 25209
 	public enum TLevelAIBehaviour : byte
 	{
-		// Token: 0x0400F482 RID: 62594
+		// Token: 0x040101AC RID: 65964
 		NONE,
-		// Token: 0x0400F483 RID: 62595
+		// Token: 0x040101AD RID: 65965
 		IInteractBehaviourActions,
-		// Token: 0x0400F484 RID: 62596
+		// Token: 0x040101AE RID: 65966
 		ILevelAIBehaviourSpline
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.Item;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
@@ -13,18 +13,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A3E RID: 6718
+// Token: 0x02000EFD RID: 3837
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssInsSelectView : UiViewBase
 {
-	// Token: 0x0600C581 RID: 50561 RVA: 0x002CCE00 File Offset: 0x002CB000
+	// Token: 0x06009991 RID: 39313 RVA: 0x002D7F24 File Offset: 0x002D6124
 	[NullableContext(1)]
 	public DangoAbyssInsSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C582 RID: 50562 RVA: 0x002CCE0C File Offset: 0x002CB00C
+	// Token: 0x06009992 RID: 39314 RVA: 0x002D7F30 File Offset: 0x002D6130
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -69,7 +69,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600C583 RID: 50563 RVA: 0x002CD138 File Offset: 0x002CB338
+	// Token: 0x06009993 RID: 39315 RVA: 0x002D825C File Offset: 0x002D645C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
@@ -77,7 +77,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		EventSystem.Instance.Add(EEventName.OnAbyssUnlockChallengeStateUpdate, new Action(this.OnAbyssUnlockChallengeStateUpdate));
 	}
 
-	// Token: 0x0600C584 RID: 50564 RVA: 0x002CD19C File Offset: 0x002CB39C
+	// Token: 0x06009994 RID: 39316 RVA: 0x002D82C0 File Offset: 0x002D64C0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
@@ -85,7 +85,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnAbyssUnlockChallengeStateUpdate, new Action(this.OnAbyssUnlockChallengeStateUpdate));
 	}
 
-	// Token: 0x0600C585 RID: 50565 RVA: 0x002CD200 File Offset: 0x002CB400
+	// Token: 0x06009995 RID: 39317 RVA: 0x002D8324 File Offset: 0x002D6524
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssInsSelectView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -96,7 +96,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C586 RID: 50566 RVA: 0x002CD244 File Offset: 0x002CB444
+	// Token: 0x06009996 RID: 39318 RVA: 0x002D8368 File Offset: 0x002D6568
 	private void OnConfirmB2tnClick(int _)
 	{
 		if (!DangoAbyssModel.Instance.GetAbyssUnLockState(this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value.Id))
@@ -105,7 +105,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 			Dictionary<int, int> dictionary = this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value.ConsumeItem();
 			if (dictionary.Count > 0)
 			{
-				int key = dictionary.Keys.ToList<int>()[0];
+				int key = new List<int>(dictionary.Keys)[0];
 				confirmBoxDataNew.SetTextArgs(new string[]
 				{
 					dictionary[key].ToString()
@@ -132,7 +132,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C587 RID: 50567 RVA: 0x002CD3B0 File Offset: 0x002CB5B0
+	// Token: 0x06009997 RID: 39319 RVA: 0x002D84D4 File Offset: 0x002D66D4
 	private void OnConfirm1BtnClick(int _)
 	{
 		if (!DangoAbyssModel.Instance.GetAbyssUnLockState(this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value.Id))
@@ -141,7 +141,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 			Dictionary<int, int> dictionary = this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value.ConsumeItem();
 			if (dictionary.Count > 0)
 			{
-				int key = dictionary.Keys.ToList<int>()[0];
+				int key = new List<int>(dictionary.Keys)[0];
 				confirmBoxDataNew.SetTextArgs(new string[]
 				{
 					dictionary[key].ToString()
@@ -160,7 +160,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C588 RID: 50568 RVA: 0x002CD490 File Offset: 0x002CB690
+	// Token: 0x06009998 RID: 39320 RVA: 0x002D85B4 File Offset: 0x002D67B4
 	private void OnClickMatch()
 	{
 		if (!OnlineController.Instance.ShowTipsWhenOnlineDisabled(new EDisableOnlineType[]
@@ -217,7 +217,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		ScrollingTipsController.Instance.ShowTipsById("CanNotMatching", Array.Empty<object>());
 	}
 
-	// Token: 0x0600C589 RID: 50569 RVA: 0x002CD648 File Offset: 0x002CB848
+	// Token: 0x06009999 RID: 39321 RVA: 0x002D876C File Offset: 0x002D696C
 	private void OnClickSingle()
 	{
 		BattleTeamModel.Instance.Context.SetMultiEntry(false);
@@ -227,7 +227,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		DangoAbyssController.Instance.StartAbyssChallenge(id);
 	}
 
-	// Token: 0x0600C58A RID: 50570 RVA: 0x002CD6D4 File Offset: 0x002CB8D4
+	// Token: 0x0600999A RID: 39322 RVA: 0x002D87F8 File Offset: 0x002D69F8
 	private void OnClickMultiple()
 	{
 		AbyssInst value = this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value;
@@ -261,7 +261,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600C58B RID: 50571 RVA: 0x002CD7E8 File Offset: 0x002CB9E8
+	// Token: 0x0600999B RID: 39323 RVA: 0x002D890C File Offset: 0x002D6B0C
 	protected override void OnAfterShow()
 	{
 		this.MatchingCountDownItem.BindOnClickBtnCancelMatching(delegate
@@ -287,7 +287,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C58C RID: 50572 RVA: 0x002CD86C File Offset: 0x002CBA6C
+	// Token: 0x0600999C RID: 39324 RVA: 0x002D8990 File Offset: 0x002D6B90
 	public void RefreshRedDot()
 	{
 		AbyssButtonItem limitRewardBtnItem = this.LimitRewardBtnItem;
@@ -332,7 +332,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		friendRankBtnItem.SetRedDotVisible(false);
 	}
 
-	// Token: 0x0600C58D RID: 50573 RVA: 0x002CD91C File Offset: 0x002CBB1C
+	// Token: 0x0600999D RID: 39325 RVA: 0x002D8A40 File Offset: 0x002D6C40
 	private void UnbindRedDot()
 	{
 		AbyssButtonItem limitRewardBtnItem = this.LimitRewardBtnItem;
@@ -348,27 +348,27 @@ public class DangoAbyssInsSelectView : UiViewBase
 		activityRewardBtnItem.UnBindRedDot();
 	}
 
-	// Token: 0x0600C58E RID: 50574 RVA: 0x002CD93F File Offset: 0x002CBB3F
+	// Token: 0x0600999E RID: 39326 RVA: 0x002D8A63 File Offset: 0x002D6C63
 	[NullableContext(1)]
 	private DangoScrollItem InitItem()
 	{
 		return new DangoScrollItem();
 	}
 
-	// Token: 0x0600C58F RID: 50575 RVA: 0x002CD946 File Offset: 0x002CBB46
+	// Token: 0x0600999F RID: 39327 RVA: 0x002D8A6A File Offset: 0x002D6C6A
 	[NullableContext(1)]
 	public CommonItemSmallItemGrid InitCommonGridItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600C590 RID: 50576 RVA: 0x002CD94D File Offset: 0x002CBB4D
+	// Token: 0x060099A0 RID: 39328 RVA: 0x002D8A71 File Offset: 0x002D6C71
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C591 RID: 50577 RVA: 0x002CD958 File Offset: 0x002CBB58
+	// Token: 0x060099A1 RID: 39329 RVA: 0x002D8A7C File Offset: 0x002D6C7C
 	private void OnBtnBackClick()
 	{
 		base.PlaySequence("PreLeft", null, false);
@@ -390,7 +390,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C592 RID: 50578 RVA: 0x002CD9BC File Offset: 0x002CBBBC
+	// Token: 0x060099A2 RID: 39330 RVA: 0x002D8AE0 File Offset: 0x002D6CE0
 	private void OnBtnNextClick()
 	{
 		base.PlaySequence("PreRight", null, false);
@@ -412,7 +412,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C593 RID: 50579 RVA: 0x002CDA20 File Offset: 0x002CBC20
+	// Token: 0x060099A3 RID: 39331 RVA: 0x002D8B44 File Offset: 0x002D6D44
 	protected override void OnBeforeShow()
 	{
 		DangoWorldQuestItem dangoWorldQuestItem = this.DangoWorldQuestItem;
@@ -421,19 +421,19 @@ public class DangoAbyssInsSelectView : UiViewBase
 			dangoWorldQuestItem.Refresh();
 		}
 		DangoAbyssModel.Instance.SetInAbyssFlow(false);
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName("DangoAbyssLoop2", true, true, "1001", false, null, null);
+		UiCameraModel.Instance.PushCameraHandleByHandleName("DangoAbyssLoop2", true, true, "1001", false, null);
 		DangoAbyssModel.Instance.SetInAbyssFlow(false);
 		this.RefreshView();
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600C594 RID: 50580 RVA: 0x002CDA82 File Offset: 0x002CBC82
+	// Token: 0x060099A4 RID: 39332 RVA: 0x002D8B9D File Offset: 0x002D6D9D
 	protected override void OnBeforeHide()
 	{
 		this.UnbindRedDot();
 	}
 
-	// Token: 0x0600C595 RID: 50581 RVA: 0x002CDA8C File Offset: 0x002CBC8C
+	// Token: 0x060099A5 RID: 39333 RVA: 0x002D8BA8 File Offset: 0x002D6DA8
 	private void RefreshView()
 	{
 		int id = this.ViewData.AbyssDataList[this.CurrentSelectedIndex].GetConfig().Value.Id;
@@ -457,7 +457,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		this.RefreshMaxProgressByChallengeId(id);
 	}
 
-	// Token: 0x0600C596 RID: 50582 RVA: 0x002CDB50 File Offset: 0x002CBD50
+	// Token: 0x060099A6 RID: 39334 RVA: 0x002D8C6C File Offset: 0x002D6E6C
 	private void RefreshInsNameText(int challengeId)
 	{
 		AbyssInst? config = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetConfig();
@@ -467,7 +467,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C597 RID: 50583 RVA: 0x002CDBA4 File Offset: 0x002CBDA4
+	// Token: 0x060099A7 RID: 39335 RVA: 0x002D8CC0 File Offset: 0x002D6EC0
 	private void RefreshSceneNiagaraByCurrentChallenge(int challengeId)
 	{
 		AActor actorWithTag = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("shenyuan").Value, ECollectActorType.UI);
@@ -488,7 +488,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C598 RID: 50584 RVA: 0x002CDC30 File Offset: 0x002CBE30
+	// Token: 0x060099A8 RID: 39336 RVA: 0x002D8D4C File Offset: 0x002D6F4C
 	private void RefreshRankItemShowState(int challengeId)
 	{
 		bool rankOpen = DangoAbyssModel.Instance.GetRankOpen();
@@ -500,7 +500,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		friendRankBtnItem.SetActive(rankOpen);
 	}
 
-	// Token: 0x0600C599 RID: 50585 RVA: 0x002CDC5C File Offset: 0x002CBE5C
+	// Token: 0x060099A9 RID: 39337 RVA: 0x002D8D78 File Offset: 0x002D6F78
 	[NullableContext(1)]
 	private void RefreshLimitItemShowState(DangoAbyssInsSelectViewData data)
 	{
@@ -519,7 +519,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C59A RID: 50586 RVA: 0x002CDCA0 File Offset: 0x002CBEA0
+	// Token: 0x060099AA RID: 39338 RVA: 0x002D8DBC File Offset: 0x002D6FBC
 	[NullableContext(1)]
 	private void RefreshRewardProgressText(DangoAbyssInsSelectViewData data)
 	{
@@ -532,7 +532,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		activityRewardBtnItem.SetNumText(rewardFinishProgressText);
 	}
 
-	// Token: 0x0600C59B RID: 50587 RVA: 0x002CDCCC File Offset: 0x002CBECC
+	// Token: 0x060099AB RID: 39339 RVA: 0x002D8DE8 File Offset: 0x002D6FE8
 	[NullableContext(1)]
 	private void RefreshChangeIndexBtnVisible(DangoAbyssInsSelectViewData data)
 	{
@@ -553,7 +553,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		base.GetButton(3).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600C59C RID: 50588 RVA: 0x002CDD6C File Offset: 0x002CBF6C
+	// Token: 0x060099AC RID: 39340 RVA: 0x002D8E88 File Offset: 0x002D7088
 	private void RefreshTitleByChallengeId(int challengeId)
 	{
 		AbyssInst? config = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetConfig();
@@ -563,7 +563,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C59D RID: 50589 RVA: 0x002CDDC0 File Offset: 0x002CBFC0
+	// Token: 0x060099AD RID: 39341 RVA: 0x002D8EDC File Offset: 0x002D70DC
 	private void RefreshSubTitleByChallengeId(int challengeId)
 	{
 		AbyssInst? config = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetConfig();
@@ -573,7 +573,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C59E RID: 50590 RVA: 0x002CDE14 File Offset: 0x002CC014
+	// Token: 0x060099AE RID: 39342 RVA: 0x002D8F30 File Offset: 0x002D7130
 	private void RefreshDescByChallengeId(int challengeId)
 	{
 		AbyssInst? config = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetConfig();
@@ -583,18 +583,18 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C59F RID: 50591 RVA: 0x002CDE68 File Offset: 0x002CC068
+	// Token: 0x060099AF RID: 39343 RVA: 0x002D8F84 File Offset: 0x002D7184
 	private void RefreshDangoRewardByChallengeId(int challengeId)
 	{
 		AbyssInst? config = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetConfig();
 		if (config != null)
 		{
-			this.DangoRewardLayout.RefreshByData(config.Value.UnlockLittleRole().ToList<int>(), null, false);
+			this.DangoRewardLayout.RefreshByData(config.Value.UnlockLittleRole(), null, false);
 			base.GetItem(28).SetUIActive(config.Value.UnlockLittleRole().Length != 0);
 		}
 	}
 
-	// Token: 0x0600C5A0 RID: 50592 RVA: 0x002CDED8 File Offset: 0x002CC0D8
+	// Token: 0x060099B0 RID: 39344 RVA: 0x002D8FF0 File Offset: 0x002D71F0
 	private void RefreshMaxProgressByChallengeId(int challengeId)
 	{
 		bool challengeButtonCanShow = this.GetChallengeButtonCanShow(challengeId);
@@ -609,14 +609,14 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C5A1 RID: 50593 RVA: 0x002CDF38 File Offset: 0x002CC138
+	// Token: 0x060099B1 RID: 39345 RVA: 0x002D9050 File Offset: 0x002D7250
 	private void RefreshRewardItemLayout(int challengeId)
 	{
 		TItem[] reward = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetReward();
-		this.ItemLayout.RefreshByData(reward.ToList<TItem>(), null, false);
+		this.ItemLayout.RefreshByData(reward, null, false);
 	}
 
-	// Token: 0x0600C5A2 RID: 50594 RVA: 0x002CDF70 File Offset: 0x002CC170
+	// Token: 0x060099B2 RID: 39346 RVA: 0x002D9084 File Offset: 0x002D7284
 	private void RefreshConsumeInfoByChallengeId(int challengeId)
 	{
 		bool flag = !DangoAbyssModel.Instance.GetAbyssUnLockState(challengeId);
@@ -627,7 +627,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 			Dictionary<int, int> dictionary = config.Value.ConsumeItem();
 			if (dictionary.Count > 0)
 			{
-				int num = dictionary.Keys.ToList<int>()[0];
+				int num = new List<int>(dictionary.Keys)[0];
 				int num2 = dictionary[num];
 				base.SetTextureByPath(ItemConfig.Instance.GetConfig(num).Value.Icon, base.GetTexture(14), null, null);
 				base.GetText(16).SetText(num2.ToString(), true);
@@ -635,7 +635,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C5A3 RID: 50595 RVA: 0x002CE044 File Offset: 0x002CC244
+	// Token: 0x060099B3 RID: 39347 RVA: 0x002D9158 File Offset: 0x002D7358
 	private bool GetChallengeButtonCanShow(int challengeId)
 	{
 		bool canChallenge = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetCanChallenge();
@@ -645,7 +645,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		return canChallenge && abyssPreChallengeFinishState && abyssConditionFinishState && abyssTimeLimitState;
 	}
 
-	// Token: 0x0600C5A4 RID: 50596 RVA: 0x002CE094 File Offset: 0x002CC294
+	// Token: 0x060099B4 RID: 39348 RVA: 0x002D91A8 File Offset: 0x002D73A8
 	private void RefreshButtonVisible(int challengeId)
 	{
 		bool challengeButtonCanShow = this.GetChallengeButtonCanShow(challengeId);
@@ -680,7 +680,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnAbyssTeamBtnVisibleRefresh, p);
 	}
 
-	// Token: 0x0600C5A5 RID: 50597 RVA: 0x002CE1B5 File Offset: 0x002CC3B5
+	// Token: 0x060099B5 RID: 39349 RVA: 0x002D92C9 File Offset: 0x002D74C9
 	private void RefreshButtonRedDot(int challengeId)
 	{
 		ButtonItem confirmBtn = this.ConfirmBtn1;
@@ -696,7 +696,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		confirmBtn2.SetRedDotVisible(false);
 	}
 
-	// Token: 0x0600C5A6 RID: 50598 RVA: 0x002CE1DC File Offset: 0x002CC3DC
+	// Token: 0x060099B6 RID: 39350 RVA: 0x002D92F0 File Offset: 0x002D74F0
 	private void RefreshInActiveItemVisible(int challengeId)
 	{
 		bool canChallenge = this.ViewData.ActivityData.GetAbyssChallengeDataById(challengeId).GetCanChallenge();
@@ -711,7 +711,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		panelLock.SetActive(!canChallenge || !abyssTimeLimitState || !abyssPreChallengeFinishState || !abyssConditionFinishState);
 	}
 
-	// Token: 0x0600C5A7 RID: 50599 RVA: 0x002CE244 File Offset: 0x002CC444
+	// Token: 0x060099B7 RID: 39351 RVA: 0x002D9358 File Offset: 0x002D7558
 	private void RefreshUnlockDescription(int challengeId)
 	{
 		if (DangoAbyssModel.Instance.GetAbyssPreChallengeFinishState(challengeId))
@@ -758,7 +758,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		panelLock3.SetTextByTextId("AbyssNeedPreChallengeFinish", Array.Empty<string>());
 	}
 
-	// Token: 0x0600C5A8 RID: 50600 RVA: 0x002CE324 File Offset: 0x002CC524
+	// Token: 0x060099B8 RID: 39352 RVA: 0x002D9438 File Offset: 0x002D7638
 	private void OnMatchingChange()
 	{
 		switch (InstanceDungeonEntranceModel.Instance.GetMatchingState())
@@ -812,13 +812,13 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C5A9 RID: 50601 RVA: 0x002CE435 File Offset: 0x002CC635
+	// Token: 0x060099B9 RID: 39353 RVA: 0x002D9549 File Offset: 0x002D7749
 	private void OnAbyssUnlockChallengeStateUpdate()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600C5AA RID: 50602 RVA: 0x002CE440 File Offset: 0x002CC640
+	// Token: 0x060099BA RID: 39354 RVA: 0x002D9554 File Offset: 0x002D7754
 	private void OnMatchingBegin()
 	{
 		this.SetMatchingItemActive(true);
@@ -835,21 +835,21 @@ public class DangoAbyssInsSelectView : UiViewBase
 		this.BeginMatching();
 	}
 
-	// Token: 0x0600C5AB RID: 50603 RVA: 0x002CE4A0 File Offset: 0x002CC6A0
+	// Token: 0x060099BB RID: 39355 RVA: 0x002D95B4 File Offset: 0x002D77B4
 	private void SetMatchingItemActive(bool state)
 	{
 		base.GetItem(19).SetUIActive(state);
 		base.GetItem(25).SetUIActive(!state);
 	}
 
-	// Token: 0x0600C5AC RID: 50604 RVA: 0x002CE4C1 File Offset: 0x002CC6C1
+	// Token: 0x060099BC RID: 39356 RVA: 0x002D95D5 File Offset: 0x002D77D5
 	private void BeginMatching()
 	{
 		this.MatchingCountDownItem.SetMatchingTime(0);
 		this.MatchingCountDownItem.StartTimer();
 	}
 
-	// Token: 0x0600C5AD RID: 50605 RVA: 0x002CE4DC File Offset: 0x002CC6DC
+	// Token: 0x060099BD RID: 39357 RVA: 0x002D95F0 File Offset: 0x002D77F0
 	private void RefreshGoalLayout()
 	{
 		List<global::Quest> questsByTypeAndSubType = QuestNewModel.Instance.GetQuestsByTypeAndSubType(10, 1);
@@ -863,7 +863,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C5AE RID: 50606 RVA: 0x002CE55C File Offset: 0x002CC75C
+	// Token: 0x060099BE RID: 39358 RVA: 0x002D9670 File Offset: 0x002D7870
 	protected override void OnBeforeDestroy()
 	{
 		CommonCurrencyItem currencyItem = this.CurrencyItem;
@@ -879,44 +879,44 @@ public class DangoAbyssInsSelectView : UiViewBase
 		dangoWorldQuestItem.Clear();
 	}
 
-	// Token: 0x04005B13 RID: 23315
+	// Token: 0x04005BE2 RID: 23522
 	[Nullable(1)]
 	private const string ENTRANCELOOP = "DangoAbyssLoop2";
 
-	// Token: 0x04005B14 RID: 23316
+	// Token: 0x04005BE3 RID: 23523
 	private const int MATCHING_ITEM_OFFSET = -98;
 
-	// Token: 0x04005B15 RID: 23317
+	// Token: 0x04005BE4 RID: 23524
 	private InstanceDungeonMatchingCountDown MatchingCountDownItem;
 
-	// Token: 0x04005B16 RID: 23318
+	// Token: 0x04005BE5 RID: 23525
 	private CommonCurrencyItem CurrencyItem;
 
-	// Token: 0x04005B17 RID: 23319
+	// Token: 0x04005BE6 RID: 23526
 	private DangoAbyssInsSelectViewData ViewData;
 
-	// Token: 0x04005B18 RID: 23320
+	// Token: 0x04005BE7 RID: 23527
 	private int CurrentSelectedIndex;
 
-	// Token: 0x04005B19 RID: 23321
+	// Token: 0x04005BE8 RID: 23528
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x04005B1A RID: 23322
+	// Token: 0x04005BE9 RID: 23529
 	private AbyssButtonItem FriendRankBtnItem;
 
-	// Token: 0x04005B1B RID: 23323
+	// Token: 0x04005BEA RID: 23530
 	private AbyssButtonItem LimitRewardBtnItem;
 
-	// Token: 0x04005B1C RID: 23324
+	// Token: 0x04005BEB RID: 23531
 	private AbyssButtonItem ActivityRewardBtnItem;
 
-	// Token: 0x04005B1D RID: 23325
+	// Token: 0x04005BEC RID: 23532
 	private ButtonItem ConfirmBtn1;
 
-	// Token: 0x04005B1E RID: 23326
+	// Token: 0x04005BED RID: 23533
 	private ButtonItem ConfirmBtn2;
 
-	// Token: 0x04005B1F RID: 23327
+	// Token: 0x04005BEE RID: 23534
 	[Nullable(new byte[]
 	{
 		2,
@@ -924,7 +924,7 @@ public class DangoAbyssInsSelectView : UiViewBase
 	})]
 	private GenericLayout<DangoScrollItem, int> DangoRewardLayout;
 
-	// Token: 0x04005B20 RID: 23328
+	// Token: 0x04005BEF RID: 23535
 	[Nullable(new byte[]
 	{
 		2,
@@ -932,74 +932,74 @@ public class DangoAbyssInsSelectView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x04005B21 RID: 23329
+	// Token: 0x04005BF0 RID: 23536
 	private DangoWorldQuestItem DangoWorldQuestItem;
 
-	// Token: 0x02007F83 RID: 32643
+	// Token: 0x02007112 RID: 28946
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029A00 RID: 170496
+		// Token: 0x04024D3D RID: 150845
 		BackBtn,
-		// Token: 0x04029A01 RID: 170497
+		// Token: 0x04024D3E RID: 150846
 		InsNameText,
-		// Token: 0x04029A02 RID: 170498
+		// Token: 0x04024D3F RID: 150847
 		BtnBack,
-		// Token: 0x04029A03 RID: 170499
+		// Token: 0x04024D40 RID: 150848
 		BtnNext,
-		// Token: 0x04029A04 RID: 170500
+		// Token: 0x04024D41 RID: 150849
 		FriendRankBtnItem,
-		// Token: 0x04029A05 RID: 170501
+		// Token: 0x04024D42 RID: 150850
 		LimitRewardBtnItem,
-		// Token: 0x04029A06 RID: 170502
+		// Token: 0x04024D43 RID: 150851
 		ActivityRewardBtnItem,
-		// Token: 0x04029A07 RID: 170503
+		// Token: 0x04024D44 RID: 150852
 		TitleText,
-		// Token: 0x04029A08 RID: 170504
+		// Token: 0x04024D45 RID: 150853
 		SubTitleText,
-		// Token: 0x04029A09 RID: 170505
+		// Token: 0x04024D46 RID: 150854
 		DescText,
-		// Token: 0x04029A0A RID: 170506
+		// Token: 0x04024D47 RID: 150855
 		UnlockDangoLayout,
-		// Token: 0x04029A0B RID: 170507
+		// Token: 0x04024D48 RID: 150856
 		DangoItem,
-		// Token: 0x04029A0C RID: 170508
+		// Token: 0x04024D49 RID: 150857
 		RewardItemLayout,
-		// Token: 0x04029A0D RID: 170509
+		// Token: 0x04024D4A RID: 150858
 		RewardItem,
-		// Token: 0x04029A0E RID: 170510
+		// Token: 0x04024D4B RID: 150859
 		ConsumeItemTexture,
-		// Token: 0x04029A0F RID: 170511
+		// Token: 0x04024D4C RID: 150860
 		ConsumeItemMask,
-		// Token: 0x04029A10 RID: 170512
+		// Token: 0x04024D4D RID: 150861
 		ConsumeItemText,
-		// Token: 0x04029A11 RID: 170513
+		// Token: 0x04024D4E RID: 150862
 		ConfirmBtn1,
-		// Token: 0x04029A12 RID: 170514
+		// Token: 0x04024D4F RID: 150863
 		ConfirmBtn2,
-		// Token: 0x04029A13 RID: 170515
+		// Token: 0x04024D50 RID: 150864
 		MatchingTextItem,
-		// Token: 0x04029A14 RID: 170516
+		// Token: 0x04024D51 RID: 150865
 		InActiveItem,
-		// Token: 0x04029A15 RID: 170517
+		// Token: 0x04024D52 RID: 150866
 		TopItem,
-		// Token: 0x04029A16 RID: 170518
+		// Token: 0x04024D53 RID: 150867
 		CostItem,
-		// Token: 0x04029A17 RID: 170519
+		// Token: 0x04024D54 RID: 150868
 		ConsumeItem,
-		// Token: 0x04029A18 RID: 170520
+		// Token: 0x04024D55 RID: 150869
 		ConsumeCostItem,
-		// Token: 0x04029A19 RID: 170521
+		// Token: 0x04024D56 RID: 150870
 		DownButtonItem,
-		// Token: 0x04029A1A RID: 170522
+		// Token: 0x04024D57 RID: 150871
 		GoalScroller,
-		// Token: 0x04029A1B RID: 170523
+		// Token: 0x04024D58 RID: 150872
 		GoalItem,
-		// Token: 0x04029A1C RID: 170524
+		// Token: 0x04024D59 RID: 150873
 		DangoRootItem,
-		// Token: 0x04029A1D RID: 170525
+		// Token: 0x04024D5A RID: 150874
 		MaxProgressItem,
-		// Token: 0x04029A1E RID: 170526
+		// Token: 0x04024D5B RID: 150875
 		MaxProgressText
 	}
 }

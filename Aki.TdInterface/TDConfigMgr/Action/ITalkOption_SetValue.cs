@@ -4,62 +4,62 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F69 RID: 8041
+	// Token: 0x020021A4 RID: 8612
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITalkOption_SetValue
 	{
-		// Token: 0x04006B0F RID: 27407
+		// Token: 0x040070F7 RID: 28919
 		public string TidTalkOption;
 
-		// Token: 0x04006B10 RID: 27408
+		// Token: 0x040070F8 RID: 28920
 		public int? TextId;
 
-		// Token: 0x04006B11 RID: 27409
+		// Token: 0x040070F9 RID: 28921
 		public int? PlotLineId;
 
-		// Token: 0x04006B12 RID: 27410
+		// Token: 0x040070FA RID: 28922
 		public string PlotLineKey;
 
-		// Token: 0x04006B13 RID: 27411
+		// Token: 0x040070FB RID: 28923
 		public int? Icon;
 
-		// Token: 0x04006B14 RID: 27412
+		// Token: 0x040070FC RID: 28924
 		public IChangeIcon ChangeIcon;
 
-		// Token: 0x04006B15 RID: 27413
+		// Token: 0x040070FD RID: 28925
 		public bool? ReadMarkEnabled;
 
-		// Token: 0x04006B16 RID: 27414
+		// Token: 0x040070FE RID: 28926
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Actions;
 
-		// Token: 0x04006B17 RID: 27415
+		// Token: 0x040070FF RID: 28927
 		public ETalkOptionStyle? OptionStyle;
 
-		// Token: 0x04006B18 RID: 27416
+		// Token: 0x04007100 RID: 28928
 		public ITalkOptionPreConditionBase PreCondition;
 
-		// Token: 0x04006B19 RID: 27417
+		// Token: 0x04007101 RID: 28929
 		public bool? _folded;
 
-		// Token: 0x04006B1A RID: 27418
+		// Token: 0x04007102 RID: 28930
 		public EEditFlag? _editFlag;
 
-		// Token: 0x04006B1B RID: 27419
+		// Token: 0x04007103 RID: 28931
 		public IOptionLockTip OptionLockTip;
 
-		// Token: 0x04006B1C RID: 27420
+		// Token: 0x04007104 RID: 28932
 		public ITalkOptionParamType TypeParams;
 
-		// Token: 0x04006B1D RID: 27421
+		// Token: 0x04007105 RID: 28933
 		public bool? HiddenOption;
 
-		// Token: 0x04006B1E RID: 27422
+		// Token: 0x04007106 RID: 28934
 		public string EdOptionComment;
 	}
 }

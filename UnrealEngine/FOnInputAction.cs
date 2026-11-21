@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029A4 RID: 10660
+	// Token: 0x02000864 RID: 2148
 	public sealed class FOnInputAction : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060276F3 RID: 161523 RVA: 0x003C254B File Offset: 0x003C074B
+		// Token: 0x0600BADF RID: 47839 RVA: 0x0012B20A File Offset: 0x0012940A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnInputAction.StaticFunctionPtr();
 		}
 
-		// Token: 0x060276F4 RID: 161524 RVA: 0x003C2557 File Offset: 0x003C0757
+		// Token: 0x0600BAE0 RID: 47840 RVA: 0x0012B216 File Offset: 0x00129416
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnInputAction._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FOnInputAction._FunctionPtr;
 		}
 
-		// Token: 0x060276F5 RID: 161525 RVA: 0x003C257A File Offset: 0x003C077A
+		// Token: 0x0600BAE1 RID: 47841 RVA: 0x0012B239 File Offset: 0x00129439
 		public FOnInputAction()
 		{
 		}
 
-		// Token: 0x060276F6 RID: 161526 RVA: 0x003C2582 File Offset: 0x003C0782
+		// Token: 0x0600BAE2 RID: 47842 RVA: 0x0012B241 File Offset: 0x00129441
 		[NullableContext(2)]
 		public FOnInputAction(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060276F7 RID: 161527 RVA: 0x003C258C File Offset: 0x003C078C
+		// Token: 0x0600BAE3 RID: 47843 RVA: 0x0012B24B File Offset: 0x0012944B
 		public FOnInputAction(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060276F8 RID: 161528 RVA: 0x003C2597 File Offset: 0x003C0797
+		// Token: 0x0600BAE4 RID: 47844 RVA: 0x0012B256 File Offset: 0x00129456
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060276F9 RID: 161529 RVA: 0x003C25C9 File Offset: 0x003C07C9
+		// Token: 0x0600BAE5 RID: 47845 RVA: 0x0012B288 File Offset: 0x00129488
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FOnInputAction.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnInputAction.RegisterId);
 		}
 
-		// Token: 0x060276FA RID: 161530 RVA: 0x003C2603 File Offset: 0x003C0803
+		// Token: 0x0600BAE6 RID: 47846 RVA: 0x0012B2C2 File Offset: 0x001294C2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x060276FB RID: 161531 RVA: 0x003C2610 File Offset: 0x003C0810
+		// Token: 0x0600BAE7 RID: 47847 RVA: 0x0012B2D0 File Offset: 0x001294D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04015A4C RID: 88652
+		// Token: 0x040054B6 RID: 21686
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015A4D RID: 88653
+		// Token: 0x040054B7 RID: 21687
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.OnInputAction__DelegateSignature";
 
-		// Token: 0x04015A4E RID: 88654
+		// Token: 0x040054B8 RID: 21688
 		private static int RegisterId;
 
-		// Token: 0x02003BA1 RID: 15265
+		// Token: 0x020013FE RID: 5118
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D7F RID: 97663
+			// Token: 0x040068A8 RID: 26792
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

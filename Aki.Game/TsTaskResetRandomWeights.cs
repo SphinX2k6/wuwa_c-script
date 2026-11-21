@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskResetRandomWeights.TsTaskResetRandomWeights_C")]
 public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001E8 RID: 488
-	// (get) Token: 0x06000A8D RID: 2701 RVA: 0x00034749 File Offset: 0x00032949
-	// (set) Token: 0x06000A8E RID: 2702 RVA: 0x0003475D File Offset: 0x0003295D
+	// Token: 0x170001EB RID: 491
+	// (get) Token: 0x06000A93 RID: 2707 RVA: 0x00035931 File Offset: 0x00033B31
+	// (set) Token: 0x06000A94 RID: 2708 RVA: 0x00035945 File Offset: 0x00033B45
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string NodeKey
 	{
@@ -29,9 +29,9 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170001E9 RID: 489
-	// (get) Token: 0x06000A8F RID: 2703 RVA: 0x00034772 File Offset: 0x00032972
-	// (set) Token: 0x06000A90 RID: 2704 RVA: 0x00034782 File Offset: 0x00032982
+	// Token: 0x170001EC RID: 492
+	// (get) Token: 0x06000A95 RID: 2709 RVA: 0x0003595A File Offset: 0x00033B5A
+	// (set) Token: 0x06000A96 RID: 2710 RVA: 0x0003596A File Offset: 0x00033B6A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool ResetAll
 	{
@@ -45,8 +45,8 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170001EA RID: 490
-	// (get) Token: 0x06000A91 RID: 2705 RVA: 0x00034794 File Offset: 0x00032994
+	// Token: 0x170001ED RID: 493
+	// (get) Token: 0x06000A97 RID: 2711 RVA: 0x0003597C File Offset: 0x00033B7C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> WeightsOverride
 	{
@@ -62,30 +62,27 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06000A92 RID: 2706 RVA: 0x000347D0 File Offset: 0x000329D0
+	// Token: 0x06000A98 RID: 2712 RVA: 0x000359B8 File Offset: 0x00033BB8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskResetRandomWeights) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskResetRandomWeights.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000A93 RID: 2707 RVA: 0x0003486C File Offset: 0x00032A6C
+	// Token: 0x06000A99 RID: 2713 RVA: 0x00035A68 File Offset: 0x00033C68
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -119,7 +116,7 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000A94 RID: 2708 RVA: 0x00034917 File Offset: 0x00032B17
+	// Token: 0x06000A9A RID: 2714 RVA: 0x00035B13 File Offset: 0x00033D13
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskResetRandomWeights._ClassPtr == IntPtr.Zero)
@@ -129,22 +126,22 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		return TsTaskResetRandomWeights._ClassPtr;
 	}
 
-	// Token: 0x06000A95 RID: 2709 RVA: 0x0003493C File Offset: 0x00032B3C
+	// Token: 0x06000A9B RID: 2715 RVA: 0x00035B38 File Offset: 0x00033D38
 	public TsTaskResetRandomWeights() : this(BuiltinUtils.AllocNativeUObject(TsTaskResetRandomWeights.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A96 RID: 2710 RVA: 0x00034964 File Offset: 0x00032B64
+	// Token: 0x06000A9C RID: 2716 RVA: 0x00035B60 File Offset: 0x00033D60
 	public TsTaskResetRandomWeights(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskResetRandomWeights.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A97 RID: 2711 RVA: 0x00034997 File Offset: 0x00032B97
+	// Token: 0x06000A9D RID: 2717 RVA: 0x00035B93 File Offset: 0x00033D93
 	protected TsTaskResetRandomWeights(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A98 RID: 2712 RVA: 0x000349A0 File Offset: 0x00032BA0
+	// Token: 0x06000A9E RID: 2718 RVA: 0x00035B9C File Offset: 0x00033D9C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -153,25 +150,25 @@ public class TsTaskResetRandomWeights : TsTaskAbortImmediatelyBase, IUnrealUObje
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000829 RID: 2089
+	// Token: 0x04000831 RID: 2097
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskResetRandomWeights.TsTaskResetRandomWeights_C";
 
-	// Token: 0x0400082A RID: 2090
+	// Token: 0x04000832 RID: 2098
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400082B RID: 2091
+	// Token: 0x04000833 RID: 2099
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400082C RID: 2092
+	// Token: 0x04000834 RID: 2100
 	private static int __PropertyOffset_NodeKey;
 
-	// Token: 0x0400082D RID: 2093
+	// Token: 0x04000835 RID: 2101
 	private static int __PropertyOffset_ResetAll;
 
-	// Token: 0x0400082E RID: 2094
+	// Token: 0x04000836 RID: 2102
 	private static int __PropertyOffset_WeightsOverride;
 
-	// Token: 0x0400082F RID: 2095
+	// Token: 0x04000837 RID: 2103
 	[Nullable(2)]
 	private TArray<int> _WeightsOverride;
 }

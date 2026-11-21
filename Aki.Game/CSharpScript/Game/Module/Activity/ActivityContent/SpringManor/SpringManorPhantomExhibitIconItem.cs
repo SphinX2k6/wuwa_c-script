@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200604C RID: 24652
+	// Token: 0x02004FCA RID: 20426
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,19 +14,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class SpringManorPhantomExhibitIconItem : LoopScrollSmallItemGrid<SpringManorPhantomDisplayItem>
 	{
-		// Token: 0x0603E627 RID: 255527 RVA: 0x00F1126E File Offset: 0x00F0F46E
+		// Token: 0x060332EB RID: 209643 RVA: 0x00E58032 File Offset: 0x00E56232
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0603E628 RID: 255528 RVA: 0x00F11278 File Offset: 0x00F0F478
+		// Token: 0x060332EC RID: 209644 RVA: 0x00E5803C File Offset: 0x00E5623C
 		protected override void OnRefresh(SpringManorPhantomDisplayItem data, bool isSelected, int gridIndex)
 		{
 			this.Refresh(data);
 		}
 
-		// Token: 0x0603E629 RID: 255529 RVA: 0x00F11284 File Offset: 0x00F0F484
+		// Token: 0x060332ED RID: 209645 RVA: 0x00E58048 File Offset: 0x00E56248
 		public void Refresh(SpringManorPhantomDisplayItem data)
 		{
 			this.PhantomId = data.PhantomId;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			base.Apply<PhantomSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x0402097C RID: 133500
+		// Token: 0x0401B2A9 RID: 111273
 		private int PhantomId;
 	}
 }

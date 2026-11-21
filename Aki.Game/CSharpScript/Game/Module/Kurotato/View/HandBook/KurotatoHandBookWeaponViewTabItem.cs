@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 {
-	// Token: 0x02005768 RID: 22376
+	// Token: 0x0200473F RID: 18239
 	public class KurotatoHandBookWeaponViewTabItem : GridProxyAbstract<EKurotatoCardType>
 	{
-		// Token: 0x06038D87 RID: 232839 RVA: 0x00D81408 File Offset: 0x00D7F608
+		// Token: 0x0602DC97 RID: 187543 RVA: 0x00CCFF04 File Offset: 0x00CCE104
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038D88 RID: 232840 RVA: 0x00D814D0 File Offset: 0x00D7F6D0
+		// Token: 0x0602DC98 RID: 187544 RVA: 0x00CCFFCC File Offset: 0x00CCE1CC
 		public override void Refresh(EKurotatoCardType tabType, bool isSelected, int gridIndex)
 		{
 			this.TabType = tabType;
@@ -43,46 +43,46 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			this.BindRedDot();
 		}
 
-		// Token: 0x06038D89 RID: 232841 RVA: 0x00D81513 File Offset: 0x00D7F713
+		// Token: 0x0602DC99 RID: 187545 RVA: 0x00CD000F File Offset: 0x00CCE20F
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x06038D8A RID: 232842 RVA: 0x00D8151C File Offset: 0x00D7F71C
+		// Token: 0x0602DC9A RID: 187546 RVA: 0x00CD0018 File Offset: 0x00CCE218
 		private void BindRedDot()
 		{
 			ERedDotName name = (this.TabType == EKurotatoCardType.Weapon) ? ERedDotName.RedDotKurotatoWeapon : ERedDotName.RedDotKurotatoProp;
 			RedDotController.Instance.BindRedDot(name, base.GetItem(2), null, 0);
 		}
 
-		// Token: 0x06038D8B RID: 232843 RVA: 0x00D81554 File Offset: 0x00D7F754
+		// Token: 0x0602DC9B RID: 187547 RVA: 0x00CD0050 File Offset: 0x00CCE250
 		private void UnBindRedDot()
 		{
 			ERedDotName name = (this.TabType == EKurotatoCardType.Weapon) ? ERedDotName.RedDotKurotatoWeapon : ERedDotName.RedDotKurotatoProp;
 			RedDotController.Instance.UnBindRedDot(name);
 		}
 
-		// Token: 0x06038D8C RID: 232844 RVA: 0x00D81584 File Offset: 0x00D7F784
+		// Token: 0x0602DC9C RID: 187548 RVA: 0x00CD0080 File Offset: 0x00CCE280
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x06038D8D RID: 232845 RVA: 0x00D815AA File Offset: 0x00D7F7AA
+		// Token: 0x0602DC9D RID: 187549 RVA: 0x00CD00A6 File Offset: 0x00CCE2A6
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06038D8E RID: 232846 RVA: 0x00D815B3 File Offset: 0x00D7F7B3
+		// Token: 0x0602DC9E RID: 187550 RVA: 0x00CD00AF File Offset: 0x00CCE2AF
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06038D8F RID: 232847 RVA: 0x00D815BC File Offset: 0x00D7F7BC
+		// Token: 0x0602DC9F RID: 187551 RVA: 0x00CD00B8 File Offset: 0x00CCE2B8
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<EKurotatoCardType> onToggleCallBack = this.OnToggleCallBack;
@@ -93,21 +93,21 @@ namespace CSharpScript.Game.Module.Kurotato.View.HandBook
 			onToggleCallBack(this.TabType);
 		}
 
-		// Token: 0x0401DD0E RID: 122126
+		// Token: 0x040187A4 RID: 100260
 		private EKurotatoCardType TabType;
 
-		// Token: 0x0401DD0F RID: 122127
+		// Token: 0x040187A5 RID: 100261
 		[Nullable(2)]
 		public Action<EKurotatoCardType> OnToggleCallBack;
 
-		// Token: 0x0200B971 RID: 47473
+		// Token: 0x0200A38B RID: 41867
 		private enum EComponents
 		{
-			// Token: 0x04038131 RID: 229681
+			// Token: 0x04032B2B RID: 207659
 			ToggleRoot,
-			// Token: 0x04038132 RID: 229682
+			// Token: 0x04032B2C RID: 207660
 			TextTabName,
-			// Token: 0x04038133 RID: 229683
+			// Token: 0x04032B2D RID: 207661
 			ItemRedDot
 		}
 	}

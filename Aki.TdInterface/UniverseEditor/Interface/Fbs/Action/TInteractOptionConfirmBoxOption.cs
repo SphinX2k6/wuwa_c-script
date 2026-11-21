@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076FE RID: 30462
+	// Token: 0x02007F12 RID: 32530
 	public enum TInteractOptionConfirmBoxOption : byte
 	{
-		// Token: 0x040127B2 RID: 75698
+		// Token: 0x04013810 RID: 79888
 		NONE,
-		// Token: 0x040127B3 RID: 75699
+		// Token: 0x04013811 RID: 79889
 		ICommonConfirmBox,
-		// Token: 0x040127B4 RID: 75700
+		// Token: 0x04013812 RID: 79890
 		IHonamiStoryCorruptedChestConfirmBox,
-		// Token: 0x040127B5 RID: 75701
+		// Token: 0x04013813 RID: 79891
 		IHonamiStoryEvacuateConfirmBox
 	}
 }

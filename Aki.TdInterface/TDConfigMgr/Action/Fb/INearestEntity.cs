@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B7 RID: 9911
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200297A RID: 10618
 	public class INearestEntity : ITeleportConfig
 	{
-		// Token: 0x0600DDBB RID: 56763 RVA: 0x0020EC7A File Offset: 0x0020CE7A
+		// Token: 0x0600EB92 RID: 60306 RVA: 0x0022B41A File Offset: 0x0022961A
 		public static INearestEntity Create(INearestEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700420F RID: 16911
-		// (get) Token: 0x0600DDBC RID: 56764 RVA: 0x0020EC99 File Offset: 0x0020CE99
+		// Token: 0x1700454C RID: 17740
+		// (get) Token: 0x0600EB93 RID: 60307 RVA: 0x0022B439 File Offset: 0x00229639
 		public override ETeleportType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004210 RID: 16912
-		// (get) Token: 0x0600DDBD RID: 56765 RVA: 0x0020ECA8 File Offset: 0x0020CEA8
+		// Token: 0x1700454D RID: 17741
+		// (get) Token: 0x0600EB94 RID: 60308 RVA: 0x0022B448 File Offset: 0x00229648
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B1B RID: 31515
+		// Token: 0x040081B8 RID: 33208
 		private INearestEntity Instance;
 
-		// Token: 0x04007B1C RID: 31516
+		// Token: 0x040081B9 RID: 33209
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007B1D RID: 31517
+		// Token: 0x040081BA RID: 33210
 		private bool _EntityIdsInited;
 	}
 }

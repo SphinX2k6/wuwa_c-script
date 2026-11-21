@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A07 RID: 14855
+	// Token: 0x02003DE2 RID: 15842
 	public class FloatValueT
 	{
-		// Token: 0x170065CD RID: 26061
-		// (get) Token: 0x06014117 RID: 82199 RVA: 0x002F0456 File Offset: 0x002EE656
-		// (set) Token: 0x06014118 RID: 82200 RVA: 0x002F045E File Offset: 0x002EE65E
+		// Token: 0x17006AFD RID: 27389
+		// (get) Token: 0x06015433 RID: 87091 RVA: 0x00313642 File Offset: 0x00311842
+		// (set) Token: 0x06015434 RID: 87092 RVA: 0x0031364A File Offset: 0x0031184A
 		public float Value { get; set; }
 
-		// Token: 0x06014119 RID: 82201 RVA: 0x002F0467 File Offset: 0x002EE667
+		// Token: 0x06015435 RID: 87093 RVA: 0x00313653 File Offset: 0x00311853
 		public FloatValueT()
 		{
 			this.Value = 0f;

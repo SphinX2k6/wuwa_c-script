@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB7 RID: 7607
+	// Token: 0x02001FCE RID: 8142
 	public class IResetTeleControlEntity_SetValue
 	{
-		// Token: 0x040061CB RID: 25035
+		// Token: 0x04006753 RID: 26451
 		public EResetEntityType Type;
 
-		// Token: 0x040061CC RID: 25036
-		[Nullable(1)]
+		// Token: 0x04006754 RID: 26452
 		public List<int> EntityIds;
 	}
 }

@@ -2,48 +2,48 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200533F RID: 21311
+	// Token: 0x0200430F RID: 17167
 	internal enum <RogueSeasonMainView>F6EC1F0AB03F9D0790295D2128F867A17F3955FCEDE032CA9FD0FBC54745CD3DE__EChildComponentType
 	{
-		// Token: 0x0401CCD8 RID: 117976
+		// Token: 0x0401770E RID: 96014
 		CaptionItem,
-		// Token: 0x0401CCD9 RID: 117977
+		// Token: 0x0401770F RID: 96015
 		BtnHelpInfo,
-		// Token: 0x0401CCDA RID: 117978
+		// Token: 0x04017710 RID: 96016
 		TxtSeasonTitle,
-		// Token: 0x0401CCDB RID: 117979
+		// Token: 0x04017711 RID: 96017
 		BtnIllustrate,
-		// Token: 0x0401CCDC RID: 117980
+		// Token: 0x04017712 RID: 96018
 		BtnTask,
-		// Token: 0x0401CCDD RID: 117981
+		// Token: 0x04017713 RID: 96019
 		BtnShop,
-		// Token: 0x0401CCDE RID: 117982
+		// Token: 0x04017714 RID: 96020
 		BtnSkillTree,
-		// Token: 0x0401CCDF RID: 117983
+		// Token: 0x04017715 RID: 96021
 		BtnAchievement,
-		// Token: 0x0401CCE0 RID: 117984
+		// Token: 0x04017716 RID: 96022
 		TxtExplore,
-		// Token: 0x0401CCE1 RID: 117985
+		// Token: 0x04017717 RID: 96023
 		BtnCancel,
-		// Token: 0x0401CCE2 RID: 117986
+		// Token: 0x04017718 RID: 96024
 		PanelCancel,
-		// Token: 0x0401CCE3 RID: 117987
+		// Token: 0x04017719 RID: 96025
 		BtnDungeonEntry,
-		// Token: 0x0401CCE4 RID: 117988
+		// Token: 0x0401771A RID: 96026
 		BtnOnTrial,
-		// Token: 0x0401CCE5 RID: 117989
+		// Token: 0x0401771B RID: 96027
 		TexRole,
-		// Token: 0x0401CCE6 RID: 117990
+		// Token: 0x0401771C RID: 96028
 		Spine,
-		// Token: 0x0401CCE7 RID: 117991
+		// Token: 0x0401771D RID: 96029
 		RedDotTrial,
-		// Token: 0x0401CCE8 RID: 117992
+		// Token: 0x0401771E RID: 96030
 		RedDotInst,
-		// Token: 0x0401CCE9 RID: 117993
+		// Token: 0x0401771F RID: 96031
 		PanelBtnA,
-		// Token: 0x0401CCEA RID: 117994
+		// Token: 0x04017720 RID: 96032
 		PanelBtnB,
-		// Token: 0x0401CCEB RID: 117995
+		// Token: 0x04017721 RID: 96033
 		PanelBtnC
 	}
 }

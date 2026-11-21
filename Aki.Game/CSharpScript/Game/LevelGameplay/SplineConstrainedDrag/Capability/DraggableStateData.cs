@@ -7,24 +7,24 @@ using CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface;
 
 namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 {
-	// Token: 0x0200694F RID: 26959
+	// Token: 0x02005AAA RID: 23210
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DraggableStateData : CapabilityData
 	{
-		// Token: 0x060432D0 RID: 275152 RVA: 0x01061044 File Offset: 0x0105F244
+		// Token: 0x06039307 RID: 234247 RVA: 0x010052A4 File Offset: 0x010034A4
 		[NullableContext(2)]
 		public DraggableStateData(ICapabilityGameObject ownerGameObject = null) : base(ownerGameObject)
 		{
 		}
 
-		// Token: 0x060432D1 RID: 275153 RVA: 0x01061079 File Offset: 0x0105F279
+		// Token: 0x06039308 RID: 234248 RVA: 0x010052D9 File Offset: 0x010034D9
 		public override void OnAdded()
 		{
 			this.ResetSpeedSample();
 		}
 
-		// Token: 0x060432D2 RID: 275154 RVA: 0x01061081 File Offset: 0x0105F281
+		// Token: 0x06039309 RID: 234249 RVA: 0x010052E1 File Offset: 0x010034E1
 		public override void OnRemoved()
 		{
 			this.Appliers.Clear();
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.ResetSpeedSample();
 		}
 
-		// Token: 0x060432D3 RID: 275155 RVA: 0x010610B8 File Offset: 0x0105F2B8
+		// Token: 0x0603930A RID: 234250 RVA: 0x01005318 File Offset: 0x01003518
 		public void PushRegister(IKuroSplineConstrainedDrag drag)
 		{
 			string actorKey = drag.GetActorKey();
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.PendingRegister[actorKey] = drag;
 		}
 
-		// Token: 0x060432D4 RID: 275156 RVA: 0x010610E8 File Offset: 0x0105F2E8
+		// Token: 0x0603930B RID: 234251 RVA: 0x01005348 File Offset: 0x01003548
 		public void PushUnregister(IKuroSplineConstrainedDrag drag)
 		{
 			string actorKey = drag.GetActorKey();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.PendingUnregister[actorKey] = drag;
 		}
 
-		// Token: 0x060432D5 RID: 275157 RVA: 0x01061116 File Offset: 0x0105F316
+		// Token: 0x0603930C RID: 234252 RVA: 0x01005376 File Offset: 0x01003576
 		public void ResetSpeedSample()
 		{
 			this.SpeedSampleDrag = null;
@@ -60,32 +60,32 @@ namespace CSharpScript.Game.LevelGameplay.SplineConstrainedDrag.Capability
 			this.LowSpeedDurationSeconds = 0f;
 		}
 
-		// Token: 0x04022FAB RID: 143275
+		// Token: 0x0401E195 RID: 123285
 		public readonly Dictionary<string, IDraggableStateApplier> Appliers = new Dictionary<string, IDraggableStateApplier>();
 
-		// Token: 0x04022FAC RID: 143276
+		// Token: 0x0401E196 RID: 123286
 		public readonly Dictionary<string, EDraggableState> States = new Dictionary<string, EDraggableState>();
 
-		// Token: 0x04022FAD RID: 143277
+		// Token: 0x0401E197 RID: 123287
 		public readonly Dictionary<string, IKuroSplineConstrainedDrag> PendingRegister = new Dictionary<string, IKuroSplineConstrainedDrag>();
 
-		// Token: 0x04022FAE RID: 143278
+		// Token: 0x0401E198 RID: 123288
 		public readonly Dictionary<string, IKuroSplineConstrainedDrag> PendingUnregister = new Dictionary<string, IKuroSplineConstrainedDrag>();
 
-		// Token: 0x04022FAF RID: 143279
+		// Token: 0x0401E199 RID: 123289
 		[Nullable(2)]
 		public IKuroSplineConstrainedDrag SpeedSampleDrag;
 
-		// Token: 0x04022FB0 RID: 143280
+		// Token: 0x0401E19A RID: 123290
 		public float SpeedSampleDistance;
 
-		// Token: 0x04022FB1 RID: 143281
+		// Token: 0x0401E19B RID: 123291
 		public float SelectedMovingSpeed;
 
-		// Token: 0x04022FB2 RID: 143282
+		// Token: 0x0401E19C RID: 123292
 		public bool ActiveDragMoving;
 
-		// Token: 0x04022FB3 RID: 143283
+		// Token: 0x0401E19D RID: 123293
 		public float LowSpeedDurationSeconds;
 	}
 }

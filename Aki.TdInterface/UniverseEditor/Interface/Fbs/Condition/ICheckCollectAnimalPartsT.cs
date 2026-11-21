@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049A4 RID: 18852
+	// Token: 0x02004E5B RID: 20059
 	public class ICheckCollectAnimalPartsT
 	{
-		// Token: 0x17008841 RID: 34881
-		// (get) Token: 0x0601D6A8 RID: 120488 RVA: 0x004253E1 File Offset: 0x004235E1
-		// (set) Token: 0x0601D6A9 RID: 120489 RVA: 0x004253E9 File Offset: 0x004235E9
+		// Token: 0x17008EFC RID: 36604
+		// (get) Token: 0x0601F0CD RID: 127181 RVA: 0x00455895 File Offset: 0x00453A95
+		// (set) Token: 0x0601F0CE RID: 127182 RVA: 0x0045589D File Offset: 0x00453A9D
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008842 RID: 34882
-		// (get) Token: 0x0601D6AA RID: 120490 RVA: 0x004253F2 File Offset: 0x004235F2
-		// (set) Token: 0x0601D6AB RID: 120491 RVA: 0x004253FA File Offset: 0x004235FA
+		// Token: 0x17008EFD RID: 36605
+		// (get) Token: 0x0601F0CF RID: 127183 RVA: 0x004558A6 File Offset: 0x00453AA6
+		// (set) Token: 0x0601F0D0 RID: 127184 RVA: 0x004558AE File Offset: 0x00453AAE
 		public int TargetAnimal { get; set; }
 
-		// Token: 0x17008843 RID: 34883
-		// (get) Token: 0x0601D6AC RID: 120492 RVA: 0x00425403 File Offset: 0x00423603
-		// (set) Token: 0x0601D6AD RID: 120493 RVA: 0x0042540B File Offset: 0x0042360B
+		// Token: 0x17008EFE RID: 36606
+		// (get) Token: 0x0601F0D1 RID: 127185 RVA: 0x004558B7 File Offset: 0x00453AB7
+		// (set) Token: 0x0601F0D2 RID: 127186 RVA: 0x004558BF File Offset: 0x00453ABF
 		public ECheckEntityPerformanceAttributeType CheckType { get; set; }
 
-		// Token: 0x17008844 RID: 34884
-		// (get) Token: 0x0601D6AE RID: 120494 RVA: 0x00425414 File Offset: 0x00423614
-		// (set) Token: 0x0601D6AF RID: 120495 RVA: 0x0042541C File Offset: 0x0042361C
+		// Token: 0x17008EFF RID: 36607
+		// (get) Token: 0x0601F0D3 RID: 127187 RVA: 0x004558C8 File Offset: 0x00453AC8
+		// (set) Token: 0x0601F0D4 RID: 127188 RVA: 0x004558D0 File Offset: 0x00453AD0
 		public List<ECollectAnimalPartSlot> Slots { get; set; }
 
-		// Token: 0x17008845 RID: 34885
-		// (get) Token: 0x0601D6B0 RID: 120496 RVA: 0x00425425 File Offset: 0x00423625
-		// (set) Token: 0x0601D6B1 RID: 120497 RVA: 0x0042542D File Offset: 0x0042362D
+		// Token: 0x17008F00 RID: 36608
+		// (get) Token: 0x0601F0D5 RID: 127189 RVA: 0x004558D9 File Offset: 0x00453AD9
+		// (set) Token: 0x0601F0D6 RID: 127190 RVA: 0x004558E1 File Offset: 0x00453AE1
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601D6B2 RID: 120498 RVA: 0x00425436 File Offset: 0x00423636
+		// Token: 0x0601F0D7 RID: 127191 RVA: 0x004558EA File Offset: 0x00453AEA
 		public ICheckCollectAnimalPartsT()
 		{
 			this.Type = ECondition.CompareVar;

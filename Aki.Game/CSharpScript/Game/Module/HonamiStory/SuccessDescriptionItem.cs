@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x02005951 RID: 22865
+	// Token: 0x0200492A RID: 18730
 	internal class SuccessDescriptionItem : UiPanelBase
 	{
-		// Token: 0x0603A058 RID: 237656 RVA: 0x00DCA9D4 File Offset: 0x00DC8BD4
+		// Token: 0x0602EF7B RID: 192379 RVA: 0x00D19C88 File Offset: 0x00D17E88
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.HonamiStory
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A059 RID: 237657 RVA: 0x00DCAA1C File Offset: 0x00DC8C1C
+		// Token: 0x0602EF7C RID: 192380 RVA: 0x00D19CD0 File Offset: 0x00D17ED0
 		[NullableContext(1)]
 		public void SetDescriptionText(string desc, string[] param)
 		{

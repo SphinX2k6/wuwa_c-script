@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027BA RID: 10170
+	// Token: 0x02002A8D RID: 10893
 	public class ITargetEntity : ITargetEntityType
 	{
-		// Token: 0x0600E242 RID: 57922 RVA: 0x00216CBE File Offset: 0x00214EBE
-		[NullableContext(1)]
+		// Token: 0x0600F064 RID: 61540 RVA: 0x00233A92 File Offset: 0x00231C92
 		public static ITargetEntity Create(ITargetEntity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004490 RID: 17552
-		// (get) Token: 0x0600E243 RID: 57923 RVA: 0x00216CDD File Offset: 0x00214EDD
+		// Token: 0x170047F8 RID: 18424
+		// (get) Token: 0x0600F065 RID: 61541 RVA: 0x00233AB1 File Offset: 0x00231CB1
 		public override ETargetEntityType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004491 RID: 17553
-		// (get) Token: 0x0600E244 RID: 57924 RVA: 0x00216CEA File Offset: 0x00214EEA
+		// Token: 0x170047F9 RID: 18425
+		// (get) Token: 0x0600F066 RID: 61542 RVA: 0x00233ABE File Offset: 0x00231CBE
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D7A RID: 32122
+		// Token: 0x04008431 RID: 33841
 		private ITargetEntity Instance;
 	}
 }

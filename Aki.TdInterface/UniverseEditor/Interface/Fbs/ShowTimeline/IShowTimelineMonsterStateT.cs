@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BC6 RID: 15302
+	// Token: 0x02003FCE RID: 16334
 	public class IShowTimelineMonsterStateT
 	{
-		// Token: 0x170068FA RID: 26874
-		// (get) Token: 0x0601504F RID: 86095 RVA: 0x0030C30B File Offset: 0x0030A50B
-		// (set) Token: 0x06015050 RID: 86096 RVA: 0x0030C313 File Offset: 0x0030A513
+		// Token: 0x17006E9D RID: 28317
+		// (get) Token: 0x06016527 RID: 91431 RVA: 0x00332B67 File Offset: 0x00330D67
+		// (set) Token: 0x06016528 RID: 91432 RVA: 0x00332B6F File Offset: 0x00330D6F
 		public int MonsterEntityId { get; set; }
 
-		// Token: 0x170068FB RID: 26875
-		// (get) Token: 0x06015051 RID: 86097 RVA: 0x0030C31C File Offset: 0x0030A51C
-		// (set) Token: 0x06015052 RID: 86098 RVA: 0x0030C324 File Offset: 0x0030A524
+		// Token: 0x17006E9E RID: 28318
+		// (get) Token: 0x06016529 RID: 91433 RVA: 0x00332B78 File Offset: 0x00330D78
+		// (set) Token: 0x0601652A RID: 91434 RVA: 0x00332B80 File Offset: 0x00330D80
 		public ITransformT Transform { get; set; }
 
-		// Token: 0x170068FC RID: 26876
-		// (get) Token: 0x06015053 RID: 86099 RVA: 0x0030C32D File Offset: 0x0030A52D
-		// (set) Token: 0x06015054 RID: 86100 RVA: 0x0030C335 File Offset: 0x0030A535
+		// Token: 0x17006E9F RID: 28319
+		// (get) Token: 0x0601652B RID: 91435 RVA: 0x00332B89 File Offset: 0x00330D89
+		// (set) Token: 0x0601652C RID: 91436 RVA: 0x00332B91 File Offset: 0x00330D91
 		public List<int> Attributes { get; set; }
 
-		// Token: 0x170068FD RID: 26877
-		// (get) Token: 0x06015055 RID: 86101 RVA: 0x0030C33E File Offset: 0x0030A53E
-		// (set) Token: 0x06015056 RID: 86102 RVA: 0x0030C346 File Offset: 0x0030A546
+		// Token: 0x17006EA0 RID: 28320
+		// (get) Token: 0x0601652D RID: 91437 RVA: 0x00332B9A File Offset: 0x00330D9A
+		// (set) Token: 0x0601652E RID: 91438 RVA: 0x00332BA2 File Offset: 0x00330DA2
 		public List<int> Buffs { get; set; }
 
-		// Token: 0x170068FE RID: 26878
-		// (get) Token: 0x06015057 RID: 86103 RVA: 0x0030C34F File Offset: 0x0030A54F
-		// (set) Token: 0x06015058 RID: 86104 RVA: 0x0030C357 File Offset: 0x0030A557
+		// Token: 0x17006EA1 RID: 28321
+		// (get) Token: 0x0601652F RID: 91439 RVA: 0x00332BAB File Offset: 0x00330DAB
+		// (set) Token: 0x06016530 RID: 91440 RVA: 0x00332BB3 File Offset: 0x00330DB3
 		public List<long> BuffIds { get; set; }
 
-		// Token: 0x170068FF RID: 26879
-		// (get) Token: 0x06015059 RID: 86105 RVA: 0x0030C360 File Offset: 0x0030A560
-		// (set) Token: 0x0601505A RID: 86106 RVA: 0x0030C368 File Offset: 0x0030A568
+		// Token: 0x17006EA2 RID: 28322
+		// (get) Token: 0x06016531 RID: 91441 RVA: 0x00332BBC File Offset: 0x00330DBC
+		// (set) Token: 0x06016532 RID: 91442 RVA: 0x00332BC4 File Offset: 0x00330DC4
 		public List<string> Tags { get; set; }
 
-		// Token: 0x0601505B RID: 86107 RVA: 0x0030C371 File Offset: 0x0030A571
+		// Token: 0x06016533 RID: 91443 RVA: 0x00332BCD File Offset: 0x00330DCD
 		public IShowTimelineMonsterStateT()
 		{
 			this.MonsterEntityId = 0;

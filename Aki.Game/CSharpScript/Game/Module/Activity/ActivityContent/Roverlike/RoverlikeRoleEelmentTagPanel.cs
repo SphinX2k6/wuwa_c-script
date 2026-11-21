@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200617D RID: 24957
+	// Token: 0x020050FB RID: 20731
 	public class RoverlikeRoleEelmentTagPanel : UiPanelBase
 	{
-		// Token: 0x0603F140 RID: 258368 RVA: 0x00F3E3EC File Offset: 0x00F3C5EC
+		// Token: 0x06033E00 RID: 212480 RVA: 0x00E852B4 File Offset: 0x00E834B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F141 RID: 258369 RVA: 0x00F3E478 File Offset: 0x00F3C678
+		// Token: 0x06033E01 RID: 212481 RVA: 0x00E85340 File Offset: 0x00E83540
 		[NullableContext(2)]
 		public void Refresh(string iconPath, string textId)
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LguiUtil.Instance.TrySetLocalTextNew(text, textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F142 RID: 258370 RVA: 0x00F3E4B9 File Offset: 0x00F3C6B9
+		// Token: 0x06033E02 RID: 212482 RVA: 0x00E85381 File Offset: 0x00E83581
 		public void SetTagBgColor(FColor color)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -47,16 +47,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			sprite.SetColor(color);
 		}
 
-		// Token: 0x0200C3E8 RID: 50152
+		// Token: 0x0200ADCF RID: 44495
 		private class ETagComponents
 		{
-			// Token: 0x0403B1D5 RID: 242133
+			// Token: 0x04035B36 RID: 219958
 			public const int SprTagBg = 0;
 
-			// Token: 0x0403B1D6 RID: 242134
+			// Token: 0x04035B37 RID: 219959
 			public const int SprTypeIcon = 1;
 
-			// Token: 0x0403B1D7 RID: 242135
+			// Token: 0x04035B38 RID: 219960
 			public const int TxtType = 2;
 		}
 	}

@@ -2,21 +2,21 @@
 using Aki.Config;
 using CSharpScript.Game.Module.PhoneMessage;
 
-// Token: 0x02002516 RID: 9494
+// Token: 0x020019FD RID: 6653
 public class PhoneMsgPanelViewData
 {
-	// Token: 0x04008FF6 RID: 36854
+	// Token: 0x0400914A RID: 37194
 	public ShortMessage? ShortMessage;
 
-	// Token: 0x04008FF7 RID: 36855
+	// Token: 0x0400914B RID: 37195
 	public bool NeedShowTips;
 
-	// Token: 0x04008FF8 RID: 36856
+	// Token: 0x0400914C RID: 37196
 	public bool NeedForceReadAllMsg;
 
-	// Token: 0x04008FF9 RID: 36857
+	// Token: 0x0400914D RID: 37197
 	public EPhoneMsgOpenWay OpenWay;
 
-	// Token: 0x04008FFA RID: 36858
+	// Token: 0x0400914E RID: 37198
 	public EPhoneMsgViewType ViewType;
 }

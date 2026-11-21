@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007E1 RID: 2017
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000884 RID: 2180
 	public class IWellStreamingRenderPointConfig
 	{
-		// Token: 0x06002BCF RID: 11215 RVA: 0x00072208 File Offset: 0x00070408
+		// Token: 0x06002EFF RID: 12031 RVA: 0x0007956C File Offset: 0x0007776C
 		private IWellStreamingRenderPointConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002BD0 RID: 11216 RVA: 0x00072240 File Offset: 0x00070440
+		// Token: 0x06002F00 RID: 12032 RVA: 0x000795A4 File Offset: 0x000777A4
 		public static IWellStreamingRenderPointConfig Create([Nullable(2)] IWellStreamingRenderPointConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BD1 RID: 11217 RVA: 0x00072253 File Offset: 0x00070453
+		// Token: 0x06002F01 RID: 12033 RVA: 0x000795B7 File Offset: 0x000777B7
 		public static IWellStreamingRenderPointConfig CreateFromSetValue([Nullable(2)] IWellStreamingRenderPointConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002BD2 RID: 11218 RVA: 0x00072268 File Offset: 0x00070468
+		// Token: 0x06002F02 RID: 12034 RVA: 0x000795CC File Offset: 0x000777CC
 		public IWellStreamingRenderPointConfig_SetValue ToSetValue()
 		{
 			return new IWellStreamingRenderPointConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B79 RID: 2937
-		// (get) Token: 0x06002BD3 RID: 11219 RVA: 0x000722B8 File Offset: 0x000704B8
-		// (set) Token: 0x06002BD4 RID: 11220 RVA: 0x00072319 File Offset: 0x00070519
+		// Token: 0x17000C3C RID: 3132
+		// (get) Token: 0x06002F03 RID: 12035 RVA: 0x0007961C File Offset: 0x0007781C
+		// (set) Token: 0x06002F04 RID: 12036 RVA: 0x0007967D File Offset: 0x0007787D
 		public virtual IPortalRenderConfig TargetConfig
 		{
 			get
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B7A RID: 2938
-		// (get) Token: 0x06002BD5 RID: 11221 RVA: 0x00072330 File Offset: 0x00070530
-		// (set) Token: 0x06002BD6 RID: 11222 RVA: 0x00072391 File Offset: 0x00070591
+		// Token: 0x17000C3D RID: 3133
+		// (get) Token: 0x06002F05 RID: 12037 RVA: 0x00079694 File Offset: 0x00077894
+		// (set) Token: 0x06002F06 RID: 12038 RVA: 0x000796F5 File Offset: 0x000778F5
 		public virtual IRtSize RtSize
 		{
 			get
@@ -123,9 +121,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B7B RID: 2939
-		// (get) Token: 0x06002BD7 RID: 11223 RVA: 0x000723A8 File Offset: 0x000705A8
-		// (set) Token: 0x06002BD8 RID: 11224 RVA: 0x000723E2 File Offset: 0x000705E2
+		// Token: 0x17000C3E RID: 3134
+		// (get) Token: 0x06002F07 RID: 12039 RVA: 0x0007970C File Offset: 0x0007790C
+		// (set) Token: 0x06002F08 RID: 12040 RVA: 0x00079746 File Offset: 0x00077946
 		public virtual bool? IsRenderStreamingPointEntity
 		{
 			get
@@ -147,9 +145,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B7C RID: 2940
-		// (get) Token: 0x06002BD9 RID: 11225 RVA: 0x000723F0 File Offset: 0x000705F0
-		// (set) Token: 0x06002BDA RID: 11226 RVA: 0x00072417 File Offset: 0x00070617
+		// Token: 0x17000C3F RID: 3135
+		// (get) Token: 0x06002F09 RID: 12041 RVA: 0x00079754 File Offset: 0x00077954
+		// (set) Token: 0x06002F0A RID: 12042 RVA: 0x0007977B File Offset: 0x0007797B
 		[Nullable(2)]
 		public virtual string RtRenderRefPosActorKey
 		{
@@ -174,9 +172,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B7D RID: 2941
-		// (get) Token: 0x06002BDB RID: 11227 RVA: 0x00072425 File Offset: 0x00070625
-		// (set) Token: 0x06002BDC RID: 11228 RVA: 0x00072450 File Offset: 0x00070650
+		// Token: 0x17000C40 RID: 3136
+		// (get) Token: 0x06002F0B RID: 12043 RVA: 0x00079789 File Offset: 0x00077989
+		// (set) Token: 0x06002F0C RID: 12044 RVA: 0x000797B4 File Offset: 0x000779B4
 		public virtual string FallbackCubeMapTexturePath
 		{
 			get
@@ -197,24 +195,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001D11 RID: 7441
+		// Token: 0x04001F1D RID: 7965
 		[Nullable(2)]
 		protected IWellStreamingRenderPointConfig FbInstance;
 
-		// Token: 0x04001D12 RID: 7442
+		// Token: 0x04001F1E RID: 7966
 		[Nullable(2)]
 		protected IWellStreamingRenderPointConfig_SetValue PocoInterface;
 
-		// Token: 0x04001D13 RID: 7443
+		// Token: 0x04001F1F RID: 7967
 		private IPortalRenderConfig _TargetConfigCache;
 
-		// Token: 0x04001D14 RID: 7444
+		// Token: 0x04001F20 RID: 7968
 		private bool _TargetConfigInited;
 
-		// Token: 0x04001D15 RID: 7445
+		// Token: 0x04001F21 RID: 7969
 		private IRtSize _RtSizeCache;
 
-		// Token: 0x04001D16 RID: 7446
+		// Token: 0x04001F22 RID: 7970
 		private bool _RtSizeInited;
 	}
 }

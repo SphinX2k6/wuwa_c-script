@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DE9 RID: 24041
+	// Token: 0x02006426 RID: 25638
 	public class IGiantTriggerRoleStateT
 	{
-		// Token: 0x1700B3F3 RID: 46067
-		// (get) Token: 0x06029278 RID: 168568 RVA: 0x005A5C18 File Offset: 0x005A3E18
-		// (set) Token: 0x06029279 RID: 168569 RVA: 0x005A5C20 File Offset: 0x005A3E20
+		// Token: 0x1700BD59 RID: 48473
+		// (get) Token: 0x0602B902 RID: 178434 RVA: 0x005EE948 File Offset: 0x005ECB48
+		// (set) Token: 0x0602B903 RID: 178435 RVA: 0x005EE950 File Offset: 0x005ECB50
 		public EGiantTriggerType Type { get; set; }
 
-		// Token: 0x1700B3F4 RID: 46068
-		// (get) Token: 0x0602927A RID: 168570 RVA: 0x005A5C29 File Offset: 0x005A3E29
-		// (set) Token: 0x0602927B RID: 168571 RVA: 0x005A5C31 File Offset: 0x005A3E31
+		// Token: 0x1700BD5A RID: 48474
+		// (get) Token: 0x0602B904 RID: 178436 RVA: 0x005EE959 File Offset: 0x005ECB59
+		// (set) Token: 0x0602B905 RID: 178437 RVA: 0x005EE961 File Offset: 0x005ECB61
 		public EGiantRoleState RoleState { get; set; }
 
-		// Token: 0x0602927C RID: 168572 RVA: 0x005A5C3A File Offset: 0x005A3E3A
+		// Token: 0x0602B906 RID: 178438 RVA: 0x005EE96A File Offset: 0x005ECB6A
 		public IGiantTriggerRoleStateT()
 		{
 			this.Type = EGiantTriggerType.RoleState;

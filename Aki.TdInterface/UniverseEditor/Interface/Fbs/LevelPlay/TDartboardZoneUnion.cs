@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045FD RID: 17917
+	// Token: 0x02004A65 RID: 19045
 	public class TDartboardZoneUnion
 	{
-		// Token: 0x17007F5D RID: 32605
-		// (get) Token: 0x0601B23F RID: 111167 RVA: 0x003DE11E File Offset: 0x003DC31E
-		// (set) Token: 0x0601B240 RID: 111168 RVA: 0x003DE126 File Offset: 0x003DC326
+		// Token: 0x1700859E RID: 34206
+		// (get) Token: 0x0601CA14 RID: 117268 RVA: 0x0040A3BA File Offset: 0x004085BA
+		// (set) Token: 0x0601CA15 RID: 117269 RVA: 0x0040A3C2 File Offset: 0x004085C2
 		public TDartboardZone Type { get; set; }
 
-		// Token: 0x17007F5E RID: 32606
-		// (get) Token: 0x0601B241 RID: 111169 RVA: 0x003DE12F File Offset: 0x003DC32F
-		// (set) Token: 0x0601B242 RID: 111170 RVA: 0x003DE137 File Offset: 0x003DC337
+		// Token: 0x1700859F RID: 34207
+		// (get) Token: 0x0601CA16 RID: 117270 RVA: 0x0040A3CB File Offset: 0x004085CB
+		// (set) Token: 0x0601CA17 RID: 117271 RVA: 0x0040A3D3 File Offset: 0x004085D3
 		public object Value { get; set; }
 
-		// Token: 0x0601B243 RID: 111171 RVA: 0x003DE140 File Offset: 0x003DC340
+		// Token: 0x0601CA18 RID: 117272 RVA: 0x0040A3DC File Offset: 0x004085DC
 		public TDartboardZoneUnion()
 		{
 			this.Type = TDartboardZone.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B244 RID: 111172 RVA: 0x003DE156 File Offset: 0x003DC356
+		// Token: 0x0601CA19 RID: 117273 RVA: 0x0040A3F2 File Offset: 0x004085F2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B245 RID: 111173 RVA: 0x003DE168 File Offset: 0x003DC368
+		// Token: 0x0601CA1A RID: 117274 RVA: 0x0040A404 File Offset: 0x00408604
 		public ICenterBullZoneT AsICenterBullZone()
 		{
 			return this.As<ICenterBullZoneT>();
 		}
 
-		// Token: 0x0601B246 RID: 111174 RVA: 0x003DE170 File Offset: 0x003DC370
+		// Token: 0x0601CA1B RID: 117275 RVA: 0x0040A40C File Offset: 0x0040860C
 		public static TDartboardZoneUnion FromICenterBullZone(ICenterBullZoneT _icenterbullzone)
 		{
 			return new TDartboardZoneUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B247 RID: 111175 RVA: 0x003DE185 File Offset: 0x003DC385
+		// Token: 0x0601CA1C RID: 117276 RVA: 0x0040A421 File Offset: 0x00408621
 		public IDoubleScoreZoneT AsIDoubleScoreZone()
 		{
 			return this.As<IDoubleScoreZoneT>();
 		}
 
-		// Token: 0x0601B248 RID: 111176 RVA: 0x003DE18D File Offset: 0x003DC38D
+		// Token: 0x0601CA1D RID: 117277 RVA: 0x0040A429 File Offset: 0x00408629
 		public static TDartboardZoneUnion FromIDoubleScoreZone(IDoubleScoreZoneT _idoublescorezone)
 		{
 			return new TDartboardZoneUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B249 RID: 111177 RVA: 0x003DE1A2 File Offset: 0x003DC3A2
+		// Token: 0x0601CA1E RID: 117278 RVA: 0x0040A43E File Offset: 0x0040863E
 		public IOuterBullZoneT AsIOuterBullZone()
 		{
 			return this.As<IOuterBullZoneT>();
 		}
 
-		// Token: 0x0601B24A RID: 111178 RVA: 0x003DE1AA File Offset: 0x003DC3AA
+		// Token: 0x0601CA1F RID: 117279 RVA: 0x0040A446 File Offset: 0x00408646
 		public static TDartboardZoneUnion FromIOuterBullZone(IOuterBullZoneT _iouterbullzone)
 		{
 			return new TDartboardZoneUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B24B RID: 111179 RVA: 0x003DE1BF File Offset: 0x003DC3BF
+		// Token: 0x0601CA20 RID: 117280 RVA: 0x0040A45B File Offset: 0x0040865B
 		public ISingleScoreZoneT AsISingleScoreZone()
 		{
 			return this.As<ISingleScoreZoneT>();
 		}
 
-		// Token: 0x0601B24C RID: 111180 RVA: 0x003DE1C7 File Offset: 0x003DC3C7
+		// Token: 0x0601CA21 RID: 117281 RVA: 0x0040A463 File Offset: 0x00408663
 		public static TDartboardZoneUnion FromISingleScoreZone(ISingleScoreZoneT _isinglescorezone)
 		{
 			return new TDartboardZoneUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B24D RID: 111181 RVA: 0x003DE1DC File Offset: 0x003DC3DC
+		// Token: 0x0601CA22 RID: 117282 RVA: 0x0040A478 File Offset: 0x00408678
 		public ITripleScoreZoneT AsITripleScoreZone()
 		{
 			return this.As<ITripleScoreZoneT>();
 		}
 
-		// Token: 0x0601B24E RID: 111182 RVA: 0x003DE1E4 File Offset: 0x003DC3E4
+		// Token: 0x0601CA23 RID: 117283 RVA: 0x0040A480 File Offset: 0x00408680
 		public static TDartboardZoneUnion FromITripleScoreZone(ITripleScoreZoneT _itriplescorezone)
 		{
 			return new TDartboardZoneUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B24F RID: 111183 RVA: 0x003DE1FC File Offset: 0x003DC3FC
+		// Token: 0x0601CA24 RID: 117284 RVA: 0x0040A498 File Offset: 0x00408698
 		public static int Pack(FlatBufferBuilder builder, TDartboardZoneUnion _o)
 		{
 			switch (_o.Type)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,33 +7,33 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x0200139F RID: 5023
+// Token: 0x02000853 RID: 2131
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityNewcomerJourneyController : ActivityControllerBase
 {
-	// Token: 0x06008CF5 RID: 36085 RVA: 0x001E4015 File Offset: 0x001E2215
+	// Token: 0x0600608B RID: 24715 RVA: 0x001ECC39 File Offset: 0x001EAE39
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add<int, IReadOnlyList<int>>(EEventName.OnReceiveActivityData, new Action<int, IReadOnlyList<int>>(this.OnReceiveActivityData));
 	}
 
-	// Token: 0x06008CF6 RID: 36086 RVA: 0x001E404F File Offset: 0x001E224F
+	// Token: 0x0600608C RID: 24716 RVA: 0x001ECC73 File Offset: 0x001EAE73
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove<int, IReadOnlyList<int>>(EEventName.OnReceiveActivityData, new Action<int, IReadOnlyList<int>>(this.OnReceiveActivityData));
 	}
 
-	// Token: 0x06008CF7 RID: 36087 RVA: 0x001E4089 File Offset: 0x001E2289
+	// Token: 0x0600608D RID: 24717 RVA: 0x001ECCAD File Offset: 0x001EAEAD
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.NewbieAdventureTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnNewbieAdventureTaskUpdateNotify));
 	}
 
-	// Token: 0x06008CF8 RID: 36088 RVA: 0x001E40A8 File Offset: 0x001E22A8
+	// Token: 0x0600608E RID: 24718 RVA: 0x001ECCCC File Offset: 0x001EAECC
 	private void OnReceiveActivityData(int type, IReadOnlyList<int> activityIds)
 	{
 		if (!this.PendingSplashAfterActivitySync)
@@ -58,7 +57,7 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		this.TryPushNewcomerSplash(activitySevenDaySignData, false);
 	}
 
-	// Token: 0x06008CF9 RID: 36089 RVA: 0x001E40EC File Offset: 0x001E22EC
+	// Token: 0x0600608F RID: 24719 RVA: 0x001ECD10 File Offset: 0x001EAF10
 	private void OnWorldDone()
 	{
 		if (PublicUtil.Instance.GetIsSilentLogin())
@@ -74,7 +73,7 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		this.TryPushNewcomerSplash(activitySevenDaySignData, false);
 	}
 
-	// Token: 0x06008CFA RID: 36090 RVA: 0x001E4120 File Offset: 0x001E2320
+	// Token: 0x06006090 RID: 24720 RVA: 0x001ECD44 File Offset: 0x001EAF44
 	[NullableContext(2)]
 	public ActivitySevenDaySignData TryGetSignInActivityData()
 	{
@@ -109,7 +108,7 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		return activitySevenDaySignData;
 	}
 
-	// Token: 0x06008CFB RID: 36091 RVA: 0x001E41D4 File Offset: 0x001E23D4
+	// Token: 0x06006091 RID: 24721 RVA: 0x001ECDF8 File Offset: 0x001EAFF8
 	private void TryPushNewcomerSplash(ActivitySevenDaySignData data, bool isInstantly = false)
 	{
 		int activityId = data.Id;
@@ -125,13 +124,13 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, isInstantly);
 	}
 
-	// Token: 0x06008CFC RID: 36092 RVA: 0x001E422A File Offset: 0x001E242A
+	// Token: 0x06006092 RID: 24722 RVA: 0x001ECE4E File Offset: 0x001EB04E
 	public bool HasShowedSplash(int activityId)
 	{
 		return ActivityModel.Instance.GetActivityCacheData(activityId, 0, 1, 0, 0) == 1;
 	}
 
-	// Token: 0x06008CFD RID: 36093 RVA: 0x001E423E File Offset: 0x001E243E
+	// Token: 0x06006093 RID: 24723 RVA: 0x001ECE62 File Offset: 0x001EB062
 	public void SaveShowSplash(int activityId)
 	{
 		if (!this.HasShowedSplash(activityId))
@@ -140,59 +139,59 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008CFE RID: 36094 RVA: 0x001E4258 File Offset: 0x001E2458
+	// Token: 0x06006094 RID: 24724 RVA: 0x001ECE7C File Offset: 0x001EB07C
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.NewbieAdventureTaskUpdateNotify);
 	}
 
-	// Token: 0x06008CFF RID: 36095 RVA: 0x001E426A File Offset: 0x001E246A
+	// Token: 0x06006095 RID: 24725 RVA: 0x001ECE8E File Offset: 0x001EB08E
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008D00 RID: 36096 RVA: 0x001E426C File Offset: 0x001E246C
+	// Token: 0x06006096 RID: 24726 RVA: 0x001ECE90 File Offset: 0x001EB090
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_NewcomerExperienceMain";
 	}
 
-	// Token: 0x06008D01 RID: 36097 RVA: 0x001E4273 File Offset: 0x001E2473
+	// Token: 0x06006097 RID: 24727 RVA: 0x001ECE97 File Offset: 0x001EB097
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewNewcomerJourney();
 	}
 
-	// Token: 0x06008D02 RID: 36098 RVA: 0x001E427A File Offset: 0x001E247A
+	// Token: 0x06006098 RID: 24728 RVA: 0x001ECE9E File Offset: 0x001EB09E
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new ActivityNewcomerJourneyData();
 	}
 
-	// Token: 0x06008D03 RID: 36099 RVA: 0x001E428D File Offset: 0x001E248D
+	// Token: 0x06006099 RID: 24729 RVA: 0x001ECEB1 File Offset: 0x001EB0B1
 	public ActivityNewcomerJourneyData GetNewcomerJourneyData()
 	{
 		return ActivityModel.Instance.GetActivityById(this.ActivityId) as ActivityNewcomerJourneyData;
 	}
 
-	// Token: 0x06008D04 RID: 36100 RVA: 0x001E42A4 File Offset: 0x001E24A4
+	// Token: 0x0600609A RID: 24730 RVA: 0x001ECEC8 File Offset: 0x001EB0C8
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008D05 RID: 36101 RVA: 0x001E42A8 File Offset: 0x001E24A8
+	// Token: 0x0600609B RID: 24731 RVA: 0x001ECECC File Offset: 0x001EB0CC
 	[NullableContext(2)]
 	private void OnNewbieAdventureTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		NewbieAdventureTaskUpdateNotify newbieAdventureTaskUpdateNotify = (NewbieAdventureTaskUpdateNotify)msg;
-		(ActivityModel.Instance.GetActivityById(newbieAdventureTaskUpdateNotify.ActivityId) as ActivityNewcomerJourneyData).UpdateChapterData(newbieAdventureTaskUpdateNotify.Chapter.ToList<NewbieAdventureV2ChapterPb>());
+		(ActivityModel.Instance.GetActivityById(newbieAdventureTaskUpdateNotify.ActivityId) as ActivityNewcomerJourneyData).UpdateChapterData(newbieAdventureTaskUpdateNotify.Chapter);
 		EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, newbieAdventureTaskUpdateNotify.ActivityId);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, newbieAdventureTaskUpdateNotify.ActivityId);
 	}
 
-	// Token: 0x06008D06 RID: 36102 RVA: 0x001E4310 File Offset: 0x001E2510
+	// Token: 0x0600609C RID: 24732 RVA: 0x001ECF2C File Offset: 0x001EB12C
 	public void GetTaskReward(int activityId, List<int> taskIds)
 	{
 		NewbieAdventureTaskRewardRequest newbieAdventureTaskRewardRequest = NewbieAdventureTaskRewardRequest.Create();
@@ -203,12 +202,12 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 			NewbieAdventureTaskRewardResponse newbieAdventureTaskRewardResponse = (NewbieAdventureTaskRewardResponse)msg;
 			if (newbieAdventureTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureTaskRewardResponse.ErrorCode, 20663, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureTaskRewardResponse.ErrorCode, 15720, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06008D07 RID: 36103 RVA: 0x001E4368 File Offset: 0x001E2568
+	// Token: 0x0600609D RID: 24733 RVA: 0x001ECF84 File Offset: 0x001EB184
 	public void GetChapterReward(int activityId, int chapterId)
 	{
 		NewbieAdventureChapterDropRequest newbieAdventureChapterDropRequest = NewbieAdventureChapterDropRequest.Create();
@@ -219,12 +218,12 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 			NewbieAdventureChapterDropResponse newbieAdventureChapterDropResponse = (NewbieAdventureChapterDropResponse)msg;
 			if (newbieAdventureChapterDropResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureChapterDropResponse.ErrorCode, 20800, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureChapterDropResponse.ErrorCode, 19337, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x06008D08 RID: 36104 RVA: 0x001E43BC File Offset: 0x001E25BC
+	// Token: 0x0600609E RID: 24734 RVA: 0x001ECFD8 File Offset: 0x001EB1D8
 	public void GetSelectRole(int activityId, int chapterId, int roleId)
 	{
 		NewbieAdventureRoleRewardRequest newbieAdventureRoleRewardRequest = NewbieAdventureRoleRewardRequest.Create();
@@ -236,13 +235,13 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 			NewbieAdventureRoleRewardResponse newbieAdventureRoleRewardResponse = (NewbieAdventureRoleRewardResponse)msg;
 			if (newbieAdventureRoleRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureRoleRewardResponse.ErrorCode, 25004, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(newbieAdventureRoleRewardResponse.ErrorCode, 17073, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x17000BE4 RID: 3044
-	// (get) Token: 0x06008D09 RID: 36105 RVA: 0x001E4414 File Offset: 0x001E2614
+	// Token: 0x17000C04 RID: 3076
+	// (get) Token: 0x0600609F RID: 24735 RVA: 0x001ED030 File Offset: 0x001EB230
 	public static ActivityNewcomerJourneyController Instance
 	{
 		get
@@ -251,7 +250,7 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008D0A RID: 36106 RVA: 0x001E441B File Offset: 0x001E261B
+	// Token: 0x060060A0 RID: 24736 RVA: 0x001ED037 File Offset: 0x001EB237
 	public static ActivityNewcomerJourneyController GetOrCreateInstance()
 	{
 		if (ActivityNewcomerJourneyController._Instance == null)
@@ -261,7 +260,7 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		return ActivityNewcomerJourneyController._Instance;
 	}
 
-	// Token: 0x06008D0B RID: 36107 RVA: 0x001E442F File Offset: 0x001E262F
+	// Token: 0x060060A1 RID: 24737 RVA: 0x001ED04B File Offset: 0x001EB24B
 	public static bool CreateInstance()
 	{
 		if (ActivityNewcomerJourneyController._Instance != null)
@@ -272,33 +271,33 @@ public class ActivityNewcomerJourneyController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008D0C RID: 36108 RVA: 0x001E4445 File Offset: 0x001E2645
+	// Token: 0x060060A2 RID: 24738 RVA: 0x001ED061 File Offset: 0x001EB261
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008D0D RID: 36109 RVA: 0x001E4447 File Offset: 0x001E2647
+	// Token: 0x060060A3 RID: 24739 RVA: 0x001ED063 File Offset: 0x001EB263
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityNewcomerJourneyController._Instance = null;
 	}
 
-	// Token: 0x06008D0E RID: 36110 RVA: 0x001E444F File Offset: 0x001E264F
+	// Token: 0x060060A4 RID: 24740 RVA: 0x001ED06B File Offset: 0x001EB26B
 	static ActivityNewcomerJourneyController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityNewcomerJourneyController.CreateStaticDefaultValue), new Action(ActivityNewcomerJourneyController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003E7F RID: 15999
+	// Token: 0x04003F17 RID: 16151
 	private const int NEWCOMER_SPLASH_CACHE_KEY = 1;
 
-	// Token: 0x04003E80 RID: 16000
+	// Token: 0x04003F18 RID: 16152
 	private bool PendingSplashAfterActivitySync;
 
-	// Token: 0x04003E81 RID: 16001
+	// Token: 0x04003F19 RID: 16153
 	private int ActivityId;
 
-	// Token: 0x04003E82 RID: 16002
+	// Token: 0x04003F1A RID: 16154
 	[Nullable(2)]
 	private static ActivityNewcomerJourneyController _Instance;
 }

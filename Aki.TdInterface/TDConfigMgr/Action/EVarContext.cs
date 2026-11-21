@@ -2,20 +2,20 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016F1 RID: 5873
+	// Token: 0x0200186D RID: 6253
 	public enum EVarContext
 	{
-		// Token: 0x04004F7A RID: 20346
+		// Token: 0x040053A7 RID: 21415
 		Entity = 1,
-		// Token: 0x04004F7B RID: 20347
+		// Token: 0x040053A8 RID: 21416
 		Quest,
-		// Token: 0x04004F7C RID: 20348
+		// Token: 0x040053A9 RID: 21417
 		LevelPlay,
-		// Token: 0x04004F7D RID: 20349
+		// Token: 0x040053AA RID: 21418
 		EntityTemplate,
-		// Token: 0x04004F7E RID: 20350
+		// Token: 0x040053AB RID: 21419
 		BehaviorTreeFragment,
-		// Token: 0x04004F7F RID: 20351
+		// Token: 0x040053AC RID: 21420
 		CommonBt
 	}
 }

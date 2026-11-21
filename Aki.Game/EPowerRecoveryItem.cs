@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02002014 RID: 8212
+// Token: 0x020014E7 RID: 5351
 public enum EPowerRecoveryItem
 {
-	// Token: 0x04007732 RID: 30514
+	// Token: 0x0400781B RID: 30747
 	PowerRecoveryItem = 10800
 }

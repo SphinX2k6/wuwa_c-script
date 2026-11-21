@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200224A RID: 8778
+// Token: 0x0200172E RID: 5934
 public enum EMotorLevelAttrType
 {
-	// Token: 0x0400825E RID: 33374
+	// Token: 0x0400839C RID: 33692
 	Speed = 1,
-	// Token: 0x0400825F RID: 33375
+	// Token: 0x0400839D RID: 33693
 	NitrogenLimit,
-	// Token: 0x04008260 RID: 33376
+	// Token: 0x0400839E RID: 33694
 	Attack,
-	// Token: 0x04008261 RID: 33377
+	// Token: 0x0400839F RID: 33695
 	ShieldUpLimit,
-	// Token: 0x04008262 RID: 33378
+	// Token: 0x040083A0 RID: 33696
 	NitrogenSpeed,
-	// Token: 0x04008263 RID: 33379
+	// Token: 0x040083A1 RID: 33697
 	NitrogenCost,
-	// Token: 0x04008264 RID: 33380
+	// Token: 0x040083A2 RID: 33698
 	NitrogenRecoverRate,
-	// Token: 0x04008265 RID: 33381
+	// Token: 0x040083A3 RID: 33699
 	NitrogenCd,
-	// Token: 0x04008266 RID: 33382
+	// Token: 0x040083A4 RID: 33700
 	InitialShield,
-	// Token: 0x04008267 RID: 33383
+	// Token: 0x040083A5 RID: 33701
 	ShieldRecover,
-	// Token: 0x04008268 RID: 33384
+	// Token: 0x040083A6 RID: 33702
 	ShieldCd,
-	// Token: 0x04008269 RID: 33385
+	// Token: 0x040083A7 RID: 33703
 	SoaringEnergy
 }

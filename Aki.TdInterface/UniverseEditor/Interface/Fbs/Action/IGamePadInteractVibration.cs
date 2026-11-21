@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200686A RID: 26730
+	// Token: 0x02006F0B RID: 28427
 	public struct IGamePadInteractVibration : IFlatbufferObject
 	{
-		// Token: 0x1700C690 RID: 50832
-		// (get) Token: 0x0602E9DB RID: 190939 RVA: 0x0065BA8C File Offset: 0x00659C8C
+		// Token: 0x1700D076 RID: 53366
+		// (get) Token: 0x06031315 RID: 201493 RVA: 0x006AAB0C File Offset: 0x006A8D0C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E9DC RID: 190940 RVA: 0x0065BA99 File Offset: 0x00659C99
+		// Token: 0x06031316 RID: 201494 RVA: 0x006AAB19 File Offset: 0x006A8D19
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E9DD RID: 190941 RVA: 0x0065BAA0 File Offset: 0x00659CA0
+		// Token: 0x06031317 RID: 201495 RVA: 0x006AAB20 File Offset: 0x006A8D20
 		public static IGamePadInteractVibration GetRootAsIGamePadInteractVibration(ByteBuffer _bb)
 		{
 			return IGamePadInteractVibration.GetRootAsIGamePadInteractVibration(_bb, default(IGamePadInteractVibration));
 		}
 
-		// Token: 0x0602E9DE RID: 190942 RVA: 0x0065BABC File Offset: 0x00659CBC
+		// Token: 0x06031318 RID: 201496 RVA: 0x006AAB3C File Offset: 0x006A8D3C
 		public static IGamePadInteractVibration GetRootAsIGamePadInteractVibration(ByteBuffer _bb, IGamePadInteractVibration obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E9DF RID: 190943 RVA: 0x0065BAD9 File Offset: 0x00659CD9
+		// Token: 0x06031319 RID: 201497 RVA: 0x006AAB59 File Offset: 0x006A8D59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E9E0 RID: 190944 RVA: 0x0065BAE8 File Offset: 0x00659CE8
+		// Token: 0x0603131A RID: 201498 RVA: 0x006AAB68 File Offset: 0x006A8D68
 		public IGamePadInteractVibration __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C691 RID: 50833
-		// (get) Token: 0x0602E9E1 RID: 190945 RVA: 0x0065BAF8 File Offset: 0x00659CF8
+		// Token: 0x1700D077 RID: 53367
+		// (get) Token: 0x0603131B RID: 201499 RVA: 0x006AAB78 File Offset: 0x006A8D78
 		public string LongPressingEffect
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E9E2 RID: 190946 RVA: 0x0065BB2F File Offset: 0x00659D2F
+		// Token: 0x0603131C RID: 201500 RVA: 0x006AABAF File Offset: 0x006A8DAF
 		public Span<byte> GetLongPressingEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602E9E3 RID: 190947 RVA: 0x0065BB3E File Offset: 0x00659D3E
+		// Token: 0x0603131D RID: 201501 RVA: 0x006AABBE File Offset: 0x006A8DBE
 		public byte[] GetLongPressingEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700C692 RID: 50834
-		// (get) Token: 0x0602E9E4 RID: 190948 RVA: 0x0065BB4C File Offset: 0x00659D4C
+		// Token: 0x1700D078 RID: 53368
+		// (get) Token: 0x0603131E RID: 201502 RVA: 0x006AABCC File Offset: 0x006A8DCC
 		public string LongPressFinishedEffect
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E9E5 RID: 190949 RVA: 0x0065BB83 File Offset: 0x00659D83
+		// Token: 0x0603131F RID: 201503 RVA: 0x006AAC03 File Offset: 0x006A8E03
 		public Span<byte> GetLongPressFinishedEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E9E6 RID: 190950 RVA: 0x0065BB92 File Offset: 0x00659D92
+		// Token: 0x06031320 RID: 201504 RVA: 0x006AAC12 File Offset: 0x006A8E12
 		public byte[] GetLongPressFinishedEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0602E9E7 RID: 190951 RVA: 0x0065BBA0 File Offset: 0x00659DA0
+		// Token: 0x06031321 RID: 201505 RVA: 0x006AAC20 File Offset: 0x006A8E20
 		public static Offset<IGamePadInteractVibration> CreateIGamePadInteractVibration(FlatBufferBuilder builder, StringOffset LongPressingEffectOffset = default(StringOffset), StringOffset LongPressFinishedEffectOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGamePadInteractVibration.EndIGamePadInteractVibration(builder);
 		}
 
-		// Token: 0x0602E9E8 RID: 190952 RVA: 0x0065BBBD File Offset: 0x00659DBD
+		// Token: 0x06031322 RID: 201506 RVA: 0x006AAC3D File Offset: 0x006A8E3D
 		public static void StartIGamePadInteractVibration(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E9E9 RID: 190953 RVA: 0x0065BBC6 File Offset: 0x00659DC6
+		// Token: 0x06031323 RID: 201507 RVA: 0x006AAC46 File Offset: 0x006A8E46
 		public static void AddLongPressingEffect(FlatBufferBuilder builder, StringOffset longPressingEffectOffset)
 		{
 			builder.AddOffset(0, longPressingEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602E9EA RID: 190954 RVA: 0x0065BBD6 File Offset: 0x00659DD6
+		// Token: 0x06031324 RID: 201508 RVA: 0x006AAC56 File Offset: 0x006A8E56
 		public static void AddLongPressFinishedEffect(FlatBufferBuilder builder, StringOffset longPressFinishedEffectOffset)
 		{
 			builder.AddOffset(1, longPressFinishedEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602E9EB RID: 190955 RVA: 0x0065BBE6 File Offset: 0x00659DE6
+		// Token: 0x06031325 RID: 201509 RVA: 0x006AAC66 File Offset: 0x006A8E66
 		public static Offset<IGamePadInteractVibration> EndIGamePadInteractVibration(FlatBufferBuilder builder)
 		{
 			return new Offset<IGamePadInteractVibration>(builder.EndTable());
 		}
 
-		// Token: 0x0602E9EC RID: 190956 RVA: 0x0065BBF4 File Offset: 0x00659DF4
+		// Token: 0x06031326 RID: 201510 RVA: 0x006AAC74 File Offset: 0x006A8E74
 		public IGamePadInteractVibrationT UnPack()
 		{
 			IGamePadInteractVibrationT gamePadInteractVibrationT = new IGamePadInteractVibrationT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return gamePadInteractVibrationT;
 		}
 
-		// Token: 0x0602E9ED RID: 190957 RVA: 0x0065BC0F File Offset: 0x00659E0F
+		// Token: 0x06031327 RID: 201511 RVA: 0x006AAC8F File Offset: 0x006A8E8F
 		public void UnPackTo(IGamePadInteractVibrationT _o)
 		{
 			_o.LongPressingEffect = this.LongPressingEffect;
 			_o.LongPressFinishedEffect = this.LongPressFinishedEffect;
 		}
 
-		// Token: 0x0602E9EE RID: 190958 RVA: 0x0065BC2C File Offset: 0x00659E2C
+		// Token: 0x06031328 RID: 201512 RVA: 0x006AACAC File Offset: 0x006A8EAC
 		public static Offset<IGamePadInteractVibration> Pack(FlatBufferBuilder builder, IGamePadInteractVibrationT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGamePadInteractVibration.CreateIGamePadInteractVibration(builder, longPressingEffectOffset, longPressFinishedEffectOffset);
 		}
 
-		// Token: 0x04010FBC RID: 69564
+		// Token: 0x04011E11 RID: 73233
 		private Table __p;
 	}
 }

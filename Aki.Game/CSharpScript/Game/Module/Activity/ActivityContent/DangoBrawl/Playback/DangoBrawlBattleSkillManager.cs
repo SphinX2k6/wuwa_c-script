@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 {
-	// Token: 0x02006865 RID: 26725
+	// Token: 0x020057B5 RID: 22453
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleSkillManager
 	{
-		// Token: 0x06042BD1 RID: 273361 RVA: 0x0103D86E File Offset: 0x0103BA6E
+		// Token: 0x06037728 RID: 227112 RVA: 0x00F7ED4E File Offset: 0x00F7CF4E
 		public void Init()
 		{
 			this.LoadSkillEffectConfig();
 		}
 
-		// Token: 0x06042BD2 RID: 273362 RVA: 0x0103D878 File Offset: 0x0103BA78
+		// Token: 0x06037729 RID: 227113 RVA: 0x00F7ED58 File Offset: 0x00F7CF58
 		public void OnActivateGroup(IBattleActionGroup group)
 		{
 			foreach (IDangoBrawlBattleAction dangoBrawlBattleAction in group.Actions)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BD3 RID: 273363 RVA: 0x0103D960 File Offset: 0x0103BB60
+		// Token: 0x0603772A RID: 227114 RVA: 0x00F7EE40 File Offset: 0x00F7D040
 		public void Destroy()
 		{
 			DangoBrawlSkillPerformer[] array = this.ActivePerformers.ToArray();
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.OffsetActiveList.Clear();
 		}
 
-		// Token: 0x06042BD4 RID: 273364 RVA: 0x0103D9BB File Offset: 0x0103BBBB
+		// Token: 0x0603772B RID: 227115 RVA: 0x00F7EE9B File Offset: 0x00F7D09B
 		public void Unregister(DangoBrawlSkillPerformer performer)
 		{
 			this.ActivePerformers.Remove(performer);
 		}
 
-		// Token: 0x06042BD5 RID: 273365 RVA: 0x0103D9CC File Offset: 0x0103BBCC
+		// Token: 0x0603772C RID: 227116 RVA: 0x00F7EEAC File Offset: 0x00F7D0AC
 		[NullableContext(2)]
 		public bool TryClaimOffsetOrigin(string groupName)
 		{
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return true;
 		}
 
-		// Token: 0x06042BD6 RID: 273366 RVA: 0x0103DA08 File Offset: 0x0103BC08
+		// Token: 0x0603772D RID: 227117 RVA: 0x00F7EEE8 File Offset: 0x00F7D0E8
 		[NullableContext(2)]
 		public void ReleaseOffsetOrigin(string groupName)
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			this.OffsetOriginOccupied.Remove(key);
 		}
 
-		// Token: 0x06042BD7 RID: 273367 RVA: 0x0103DA30 File Offset: 0x0103BC30
+		// Token: 0x0603772E RID: 227118 RVA: 0x00F7EF10 File Offset: 0x00F7D110
 		public void RegisterOffset([Nullable(2)] string groupName, global::Vector offset)
 		{
 			string key = groupName ?? string.Empty;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			list.Add(offset);
 		}
 
-		// Token: 0x06042BD8 RID: 273368 RVA: 0x0103DA74 File Offset: 0x0103BC74
+		// Token: 0x0603772F RID: 227119 RVA: 0x00F7EF54 File Offset: 0x00F7D154
 		public void UnregisterOffset([Nullable(2)] string groupName, global::Vector offset)
 		{
 			string key = groupName ?? string.Empty;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BD9 RID: 273369 RVA: 0x0103DAA4 File Offset: 0x0103BCA4
+		// Token: 0x06037730 RID: 227120 RVA: 0x00F7EF84 File Offset: 0x00F7D184
 		public List<global::Vector> GetActiveOffsets([Nullable(2)] string groupName)
 		{
 			string key = groupName ?? string.Empty;
@@ -128,8 +128,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return result;
 		}
 
-		// Token: 0x1700978C RID: 38796
-		// (get) Token: 0x06042BDA RID: 273370 RVA: 0x0103DAD3 File Offset: 0x0103BCD3
+		// Token: 0x17006ACD RID: 27341
+		// (get) Token: 0x06037731 RID: 227121 RVA: 0x00F7EFB3 File Offset: 0x00F7D1B3
 		public bool HasActivePerformer
 		{
 			get
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BDB RID: 273371 RVA: 0x0103DAE4 File Offset: 0x0103BCE4
+		// Token: 0x06037732 RID: 227122 RVA: 0x00F7EFC4 File Offset: 0x00F7D1C4
 		public void Tick(float delta)
 		{
 			for (int i = this.ActivePerformers.Count - 1; i >= 0; i--)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x06042BDC RID: 273372 RVA: 0x0103DB1C File Offset: 0x0103BD1C
+		// Token: 0x06037733 RID: 227123 RVA: 0x00F7EFFC File Offset: 0x00F7D1FC
 		public int GetSegmentHitDelayMs(int skillConfigId, int segmentIndex)
 		{
 			SDangoBrawlSkillEffectInfo effectConfigBySkillId = this.GetEffectConfigBySkillId(skillConfigId);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return (int)(damageHitDelay.Get(num) * 1000f);
 		}
 
-		// Token: 0x06042BDD RID: 273373 RVA: 0x0103DB7C File Offset: 0x0103BD7C
+		// Token: 0x06037734 RID: 227124 RVA: 0x00F7F05C File Offset: 0x00F7D25C
 		public int GetMontageLoopTimeMs(int skillConfigId)
 		{
 			SDangoBrawlSkillEffectInfo effectConfigBySkillId = this.GetEffectConfigBySkillId(skillConfigId);
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return (int)(effectConfigBySkillId.MontageLoopTime * 1000f);
 		}
 
-		// Token: 0x06042BDE RID: 273374 RVA: 0x0103DBAC File Offset: 0x0103BDAC
+		// Token: 0x06037735 RID: 227125 RVA: 0x00F7F08C File Offset: 0x00F7D28C
 		[NullableContext(2)]
 		private unsafe SDangoBrawlSkillEffectInfo GetEffectConfigBySkillId(int skillConfigId)
 		{
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			return result;
 		}
 
-		// Token: 0x06042BDF RID: 273375 RVA: 0x0103DC54 File Offset: 0x0103BE54
+		// Token: 0x06037736 RID: 227126 RVA: 0x00F7F134 File Offset: 0x00F7D334
 		private unsafe void LoadSkillEffectConfig()
 		{
 			this.RowMap.Clear();
@@ -243,19 +243,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Playback
 			}
 		}
 
-		// Token: 0x04022BD2 RID: 142290
+		// Token: 0x0401D42F RID: 119855
 		private const string SkillEffectConfigResourceId = "DangoBrawlSkillEffectConfig";
 
-		// Token: 0x04022BD3 RID: 142291
+		// Token: 0x0401D430 RID: 119856
 		private readonly Dictionary<int, SDangoBrawlSkillEffectInfo> RowMap = new Dictionary<int, SDangoBrawlSkillEffectInfo>();
 
-		// Token: 0x04022BD4 RID: 142292
+		// Token: 0x0401D431 RID: 119857
 		private readonly List<DangoBrawlSkillPerformer> ActivePerformers = new List<DangoBrawlSkillPerformer>();
 
-		// Token: 0x04022BD5 RID: 142293
+		// Token: 0x0401D432 RID: 119858
 		private readonly Dictionary<string, bool> OffsetOriginOccupied = new Dictionary<string, bool>();
 
-		// Token: 0x04022BD6 RID: 142294
+		// Token: 0x0401D433 RID: 119859
 		private readonly Dictionary<string, List<global::Vector>> OffsetActiveList = new Dictionary<string, List<global::Vector>>();
 	}
 }

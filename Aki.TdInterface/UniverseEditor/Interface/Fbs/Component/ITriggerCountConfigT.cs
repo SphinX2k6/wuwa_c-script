@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AE2 RID: 23266
+	// Token: 0x020060EF RID: 24815
 	public class ITriggerCountConfigT
 	{
-		// Token: 0x1700AF70 RID: 44912
-		// (get) Token: 0x06027B32 RID: 162610 RVA: 0x005760B0 File Offset: 0x005742B0
-		// (set) Token: 0x06027B33 RID: 162611 RVA: 0x005760B8 File Offset: 0x005742B8
+		// Token: 0x1700B8AC RID: 47276
+		// (get) Token: 0x0602A0BE RID: 172222 RVA: 0x005BD574 File Offset: 0x005BB774
+		// (set) Token: 0x0602A0BF RID: 172223 RVA: 0x005BD57C File Offset: 0x005BB77C
 		public int TriggerCount { get; set; }
 
-		// Token: 0x1700AF71 RID: 44913
-		// (get) Token: 0x06027B34 RID: 162612 RVA: 0x005760C1 File Offset: 0x005742C1
-		// (set) Token: 0x06027B35 RID: 162613 RVA: 0x005760C9 File Offset: 0x005742C9
+		// Token: 0x1700B8AD RID: 47277
+		// (get) Token: 0x0602A0C0 RID: 172224 RVA: 0x005BD585 File Offset: 0x005BB785
+		// (set) Token: 0x0602A0C1 RID: 172225 RVA: 0x005BD58D File Offset: 0x005BB78D
 		public float TriggerInterval { get; set; }
 
-		// Token: 0x06027B36 RID: 162614 RVA: 0x005760D2 File Offset: 0x005742D2
+		// Token: 0x0602A0C2 RID: 172226 RVA: 0x005BD596 File Offset: 0x005BB796
 		public ITriggerCountConfigT()
 		{
 			this.TriggerCount = 0;

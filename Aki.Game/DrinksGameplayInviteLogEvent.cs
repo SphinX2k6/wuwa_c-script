@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200214E RID: 8526
+// Token: 0x02001626 RID: 5670
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksGameplayInviteLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014F3 RID: 5363
-	// (get) Token: 0x06010A24 RID: 68132 RVA: 0x0040BF98 File Offset: 0x0040A198
-	// (set) Token: 0x06010A25 RID: 68133 RVA: 0x0040BFA0 File Offset: 0x0040A1A0
+	// Token: 0x17001521 RID: 5409
+	// (get) Token: 0x0600DE97 RID: 56983 RVA: 0x004186E0 File Offset: 0x004168E0
+	// (set) Token: 0x0600DE98 RID: 56984 RVA: 0x004186E8 File Offset: 0x004168E8
 	public override string event_id { get; set; } = "1833";
 
-	// Token: 0x04007DC5 RID: 32197
+	// Token: 0x04007ED5 RID: 32469
 	public int i_activity_id;
 
-	// Token: 0x04007DC6 RID: 32198
+	// Token: 0x04007ED6 RID: 32470
 	public int i_role_id;
 
-	// Token: 0x04007DC7 RID: 32199
+	// Token: 0x04007ED7 RID: 32471
 	public int i_inst_id;
 
-	// Token: 0x04007DC8 RID: 32200
+	// Token: 0x04007ED8 RID: 32472
 	public int i_first_pass;
 
-	// Token: 0x04007DC9 RID: 32201
+	// Token: 0x04007ED9 RID: 32473
 	public string s_trace_id = "";
 }

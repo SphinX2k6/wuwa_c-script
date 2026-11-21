@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200184A RID: 6218
+// Token: 0x02000D03 RID: 3331
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionDestroyFilterLogic
 {
-	// Token: 0x0600B622 RID: 46626 RVA: 0x00292F48 File Offset: 0x00291148
+	// Token: 0x06008A0B RID: 35339 RVA: 0x0029D638 File Offset: 0x0029B838
 	private static int GetDataConfigId(object data)
 	{
 		PhantomItemData phantomItemData = data as PhantomItemData;
@@ -24,7 +23,7 @@ public class VisionDestroyFilterLogic
 		return 0;
 	}
 
-	// Token: 0x0600B623 RID: 46627 RVA: 0x00292F78 File Offset: 0x00291178
+	// Token: 0x06008A0C RID: 35340 RVA: 0x0029D668 File Offset: 0x0029B868
 	private static int GetDataUniqueId(object data)
 	{
 		PhantomItemData phantomItemData = data as PhantomItemData;
@@ -40,33 +39,33 @@ public class VisionDestroyFilterLogic
 		return 0;
 	}
 
-	// Token: 0x0600B624 RID: 46628 RVA: 0x00292FA8 File Offset: 0x002911A8
+	// Token: 0x06008A0D RID: 35341 RVA: 0x0029D698 File Offset: 0x0029B898
 	public static object GetPhantomRarity(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(VisionDestroyFilterLogic.GetDataConfigId(data)).PhantomItem.GetValueOrDefault().Rarity;
 	}
 
-	// Token: 0x0600B625 RID: 46629 RVA: 0x00292FE0 File Offset: 0x002911E0
+	// Token: 0x06008A0E RID: 35342 RVA: 0x0029D6D0 File Offset: 0x0029B8D0
 	public static object GetPhantomCost(object data, Dictionary<int, string> currentSelectMap)
 	{
 		int cost = PhantomBattleModel.Instance.GetPhantomDataBase(VisionDestroyFilterLogic.GetDataUniqueId(data)).GetCost();
 		return PhantomBattleConfigDefine.COSTLIST.IndexOf(cost);
 	}
 
-	// Token: 0x0600B626 RID: 46630 RVA: 0x00293014 File Offset: 0x00291214
+	// Token: 0x06008A0F RID: 35343 RVA: 0x0029D704 File Offset: 0x0029B904
 	public static object GetPhantomQuality(object data, Dictionary<int, string> currentSelectMap)
 	{
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(VisionDestroyFilterLogic.GetDataConfigId(data)).PhantomItem.GetValueOrDefault().QualityId;
 	}
 
-	// Token: 0x0600B627 RID: 46631 RVA: 0x0029304B File Offset: 0x0029124B
+	// Token: 0x06008A10 RID: 35344 RVA: 0x0029D73B File Offset: 0x0029B93B
 	public static object GetVisionDestroyFetterGroup(object data, Dictionary<int, string> currentSelectMap)
 	{
 		PhantomDataBase phantomDataBase = PhantomBattleModel.Instance.GetPhantomDataBase(VisionDestroyFilterLogic.GetDataUniqueId(data));
 		return (phantomDataBase != null) ? phantomDataBase.GetFetterGroupId() : 0;
 	}
 
-	// Token: 0x0600B628 RID: 46632 RVA: 0x00293070 File Offset: 0x00291270
+	// Token: 0x06008A11 RID: 35345 RVA: 0x0029D760 File Offset: 0x0029B960
 	public static object GetVisionDestroyAttribute(object data, Dictionary<int, string> currentSelectMap)
 	{
 		List<int> list = new List<int>(currentSelectMap.Keys);
@@ -78,7 +77,7 @@ public class VisionDestroyFilterLogic
 			if (num >= 1000)
 			{
 				List<PhantomSortStruct> propData = (phantomBattleData != null) ? phantomBattleData.GetMainPropArray() : null;
-				bool ifPercentage = PhantomBattleConfig.Instance.GetVisionMainPercentageAttributeSortArray().Contains(num);
+				bool ifPercentage = Array.IndexOf<int>(PhantomBattleConfig.Instance.GetVisionMainPercentageAttributeSortArray(), num) >= 0;
 				int mainAttributeKey = PhantomBattleModel.Instance.GetMainAttributeKey(num);
 				int mainAttributeCost = PhantomBattleModel.Instance.GetMainAttributeCost(num);
 				if (phantomBattleData.GetCost() != mainAttributeCost)
@@ -90,14 +89,14 @@ public class VisionDestroyFilterLogic
 			else if (num >= 23)
 			{
 				List<PhantomSortStruct> propData2 = (phantomBattleData != null) ? phantomBattleData.GetSubPropArray() : null;
-				bool ifPercentage2 = PhantomBattleConfig.Instance.GetVisionSubPercentageAttributeSortArray().Contains(num);
+				bool ifPercentage2 = Array.IndexOf<int>(PhantomBattleConfig.Instance.GetVisionSubPercentageAttributeSortArray(), num) >= 0;
 				int subAttributeKey = PhantomBattleModel.Instance.GetSubAttributeKey(num);
 				visionAttribute = VisionDestroyFilterLogic.GetVisionAttribute(propData2, subAttributeKey, ifPercentage2);
 			}
 			else
 			{
 				List<PhantomSortStruct> propData3 = (phantomBattleData != null) ? phantomBattleData.GetMainPropArray() : null;
-				bool ifPercentage3 = PhantomBattleConfig.Instance.GetVisionMainPercentageAttributeSortArray().Contains(num);
+				bool ifPercentage3 = Array.IndexOf<int>(PhantomBattleConfig.Instance.GetVisionMainPercentageAttributeSortArray(), num) >= 0;
 				int mainAttributeKey2 = PhantomBattleModel.Instance.GetMainAttributeKey(num);
 				visionAttribute = VisionDestroyFilterLogic.GetVisionAttribute(propData3, mainAttributeKey2, ifPercentage3);
 			}
@@ -114,7 +113,7 @@ public class VisionDestroyFilterLogic
 		return new int[1];
 	}
 
-	// Token: 0x0600B629 RID: 46633 RVA: 0x002931D8 File Offset: 0x002913D8
+	// Token: 0x06008A12 RID: 35346 RVA: 0x0029D8E8 File Offset: 0x0029BAE8
 	private static int GetVisionAttribute([Nullable(new byte[]
 	{
 		2,
@@ -143,7 +142,7 @@ public class VisionDestroyFilterLogic
 		return 0;
 	}
 
-	// Token: 0x0600B62A RID: 46634 RVA: 0x0029324C File Offset: 0x0029144C
+	// Token: 0x06008A13 RID: 35347 RVA: 0x0029D95C File Offset: 0x0029BB5C
 	public static object GetPhantomDeprecate(object data, Dictionary<int, string> currentSelectMap)
 	{
 		PhantomDataBase phantomDataBase = PhantomBattleModel.Instance.GetPhantomDataBase(VisionDestroyFilterLogic.GetDataUniqueId(data));
@@ -154,9 +153,9 @@ public class VisionDestroyFilterLogic
 		return ((phantomDataBase != null && phantomDataBase.GetIsDeprecated()) > false) ? 1 : 0;
 	}
 
-	// Token: 0x04005258 RID: 21080
+	// Token: 0x04005303 RID: 21251
 	private const int SUBATTRIBUTEID = 23;
 
-	// Token: 0x04005259 RID: 21081
+	// Token: 0x04005304 RID: 21252
 	private const int COSTATTRIBUTEID = 1000;
 }

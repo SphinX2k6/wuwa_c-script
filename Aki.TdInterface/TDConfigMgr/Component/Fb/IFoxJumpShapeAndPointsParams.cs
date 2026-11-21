@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CBE RID: 3262
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DA0 RID: 3488
 	public class IFoxJumpShapeAndPointsParams
 	{
-		// Token: 0x06004A97 RID: 19095 RVA: 0x000BAA02 File Offset: 0x000B8C02
+		// Token: 0x06004F45 RID: 20293 RVA: 0x000C5412 File Offset: 0x000C3612
 		public static IFoxJumpShapeAndPointsParams Create(IFoxJumpShapeAndPointsParams? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016D8 RID: 5848
-		// (get) Token: 0x06004A98 RID: 19096 RVA: 0x000BAA21 File Offset: 0x000B8C21
+		// Token: 0x17001800 RID: 6144
+		// (get) Token: 0x06004F46 RID: 20294 RVA: 0x000C5431 File Offset: 0x000C3631
 		public virtual IBoxTriggerShape BoxShape
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016D9 RID: 5849
-		// (get) Token: 0x06004A99 RID: 19097 RVA: 0x000BAA58 File Offset: 0x000B8C58
+		// Token: 0x17001801 RID: 6145
+		// (get) Token: 0x06004F47 RID: 20295 RVA: 0x000C5468 File Offset: 0x000C3668
 		public virtual List<VectorInfo> PointOffsets
 		{
 			get
@@ -62,20 +60,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A97 RID: 10903
+		// Token: 0x04002D11 RID: 11537
 		private IFoxJumpShapeAndPointsParams Instance;
 
-		// Token: 0x04002A98 RID: 10904
+		// Token: 0x04002D12 RID: 11538
 		[Nullable(2)]
 		private IBoxTriggerShape _BoxShapeCache;
 
-		// Token: 0x04002A99 RID: 10905
+		// Token: 0x04002D13 RID: 11539
 		private bool _BoxShapeInited;
 
-		// Token: 0x04002A9A RID: 10906
+		// Token: 0x04002D14 RID: 11540
 		private List<VectorInfo> _PointOffsetsCache;
 
-		// Token: 0x04002A9B RID: 10907
+		// Token: 0x04002D15 RID: 11541
 		private bool _PointOffsetsInited;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048B2 RID: 18610
+	// Token: 0x02003829 RID: 14377
 	public static class EObstructionCheckResultExtensions
 	{
-		// Token: 0x06030A48 RID: 199240 RVA: 0x00B4AC54 File Offset: 0x00B48E54
+		// Token: 0x06025574 RID: 152948 RVA: 0x00A85A5C File Offset: 0x00A83C5C
 		public static string ToEnumString(this EObstructionCheckResult value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A49 RID: 199241 RVA: 0x00B4ACB4 File Offset: 0x00B48EB4
+		// Token: 0x06025575 RID: 152949 RVA: 0x00A85ABC File Offset: 0x00A83CBC
 		public static EObstructionCheckResult FromString(string name)
 		{
 			EObstructionCheckResult result;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return result;
 		}
 
-		// Token: 0x06030A4A RID: 199242 RVA: 0x00B4ACE0 File Offset: 0x00B48EE0
+		// Token: 0x06025576 RID: 152950 RVA: 0x00A85AE8 File Offset: 0x00A83CE8
 		public static bool TryFromString(string name, out EObstructionCheckResult value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			return true;
 		}
 
-		// Token: 0x06030A4B RID: 199243 RVA: 0x00B4AD5A File Offset: 0x00B48F5A
+		// Token: 0x06025577 RID: 152951 RVA: 0x00A85B62 File Offset: 0x00A83D62
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			};
 		}
 
-		// Token: 0x06030A4C RID: 199244 RVA: 0x00B4AD8A File Offset: 0x00B48F8A
+		// Token: 0x06025578 RID: 152952 RVA: 0x00A85B92 File Offset: 0x00A83D92
 		public static EObstructionCheckResult[] GetValues()
 		{
 			return new EObstructionCheckResult[]
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.VehicleStream
 			};
 		}
 
-		// Token: 0x06030A4D RID: 199245 RVA: 0x00B4AD9D File Offset: 0x00B48F9D
+		// Token: 0x06025579 RID: 152953 RVA: 0x00A85BA5 File Offset: 0x00A83DA5
 		public static string[] GetNames()
 		{
 			return new string[]

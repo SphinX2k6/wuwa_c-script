@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004CF RID: 1231
+	// Token: 0x020004E5 RID: 1253
 	public class ConfigLevelPlayInfoMappingConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CE5 RID: 7397 RVA: 0x000FC77C File Offset: 0x000FA97C
+		// Token: 0x06001D69 RID: 7529 RVA: 0x00102ED0 File Offset: 0x001010D0
 		static ConfigLevelPlayInfoMappingConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelPlayInfoMappingConfigAll.CreateStaticDefaultValue), new Action(ConfigLevelPlayInfoMappingConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CE6 RID: 7398 RVA: 0x000FC79C File Offset: 0x000FA99C
+		// Token: 0x06001D6A RID: 7530 RVA: 0x00102EF0 File Offset: 0x001010F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelPlayInfoMappingConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CE7 RID: 7399 RVA: 0x000FC81B File Offset: 0x000FAA1B
+		// Token: 0x06001D6B RID: 7531 RVA: 0x00102F6F File Offset: 0x0010116F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelPlayInfoMappingConfigAll.LogPair = null;
 			ConfigLevelPlayInfoMappingConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06001CE8 RID: 7400 RVA: 0x000FC829 File Offset: 0x000FAA29
+		// Token: 0x06001D6C RID: 7532 RVA: 0x00102F7D File Offset: 0x0010117D
 		public static void Init()
 		{
 			ConfigLevelPlayInfoMappingConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigLevelPlayInfoMappingConfigAll.HandleId, "db_levelplayinfomappingconfig.db", "select BinData from `LevelPlayInfoMappingConfig`");
 		}
 
-		// Token: 0x06001CE9 RID: 7401 RVA: 0x000FC844 File Offset: 0x000FAA44
+		// Token: 0x06001D6D RID: 7533 RVA: 0x00102F98 File Offset: 0x00101198
 		[NullableContext(2)]
 		public static IReadOnlyList<LevelPlayInfoMappingConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400218D RID: 8589
+		// Token: 0x04002227 RID: 8743
 		private const string DB = "db_levelplayinfomappingconfig.db";
 
-		// Token: 0x0400218E RID: 8590
+		// Token: 0x04002228 RID: 8744
 		private const string FILE = "k.可视化编辑/c.Csv/w.玩法信息映射/*.csv*";
 
-		// Token: 0x0400218F RID: 8591
+		// Token: 0x04002229 RID: 8745
 		private const string TABLE = "LevelPlayInfoMappingConfig";
 
-		// Token: 0x04002190 RID: 8592
+		// Token: 0x0400222A RID: 8746
 		private const string COMMAND = "select BinData from `LevelPlayInfoMappingConfig`";
 
-		// Token: 0x04002191 RID: 8593
+		// Token: 0x0400222B RID: 8747
 		private const string KEY_PREFIX = "LevelPlayInfoMappingConfigAll";
 
-		// Token: 0x04002192 RID: 8594
+		// Token: 0x0400222C RID: 8748
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002193 RID: 8595
+		// Token: 0x0400222D RID: 8749
 		private static int HandleId;
 	}
 }

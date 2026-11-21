@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ABB RID: 6843
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001C5A RID: 7258
 	public class IFoxPushBox : ILeisureInteractType
 	{
-		// Token: 0x060092BC RID: 37564 RVA: 0x00154F6C File Offset: 0x0015316C
-		[NullableContext(1)]
+		// Token: 0x06009A54 RID: 39508 RVA: 0x0016538C File Offset: 0x0016358C
 		private IFoxPushBox_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060092BD RID: 37565 RVA: 0x00154FA4 File Offset: 0x001531A4
-		[NullableContext(1)]
+		// Token: 0x06009A55 RID: 39509 RVA: 0x001653C4 File Offset: 0x001635C4
 		public static IFoxPushBox Create([Nullable(2)] IFoxPushBox instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092BE RID: 37566 RVA: 0x00154FB7 File Offset: 0x001531B7
-		[NullableContext(1)]
+		// Token: 0x06009A56 RID: 39510 RVA: 0x001653D7 File Offset: 0x001635D7
 		public static IFoxPushBox CreateFromSetValue([Nullable(2)] IFoxPushBox_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060092BF RID: 37567 RVA: 0x00154FCC File Offset: 0x001531CC
-		[NullableContext(1)]
+		// Token: 0x06009A57 RID: 39511 RVA: 0x001653EC File Offset: 0x001635EC
 		public new IFoxPushBox_SetValue ToSetValue()
 		{
 			return new IFoxPushBox_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E9B RID: 11931
-		// (get) Token: 0x060092C0 RID: 37568 RVA: 0x0015501A File Offset: 0x0015321A
-		// (set) Token: 0x060092C1 RID: 37569 RVA: 0x00155045 File Offset: 0x00153245
+		// Token: 0x170030B0 RID: 12464
+		// (get) Token: 0x06009A58 RID: 39512 RVA: 0x0016543A File Offset: 0x0016363A
+		// (set) Token: 0x06009A59 RID: 39513 RVA: 0x00165465 File Offset: 0x00163665
 		public override ELeisureInteract Type
 		{
 			get
@@ -90,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E9C RID: 11932
-		// (get) Token: 0x060092C2 RID: 37570 RVA: 0x00155053 File Offset: 0x00153253
-		// (set) Token: 0x060092C3 RID: 37571 RVA: 0x0015507E File Offset: 0x0015327E
+		// Token: 0x170030B1 RID: 12465
+		// (get) Token: 0x06009A5A RID: 39514 RVA: 0x00165473 File Offset: 0x00163673
+		// (set) Token: 0x06009A5B RID: 39515 RVA: 0x0016549E File Offset: 0x0016369E
 		public virtual int EntityId
 		{
 			get
@@ -113,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E9D RID: 11933
-		// (get) Token: 0x060092C4 RID: 37572 RVA: 0x0015508C File Offset: 0x0015328C
-		// (set) Token: 0x060092C5 RID: 37573 RVA: 0x001550B7 File Offset: 0x001532B7
+		// Token: 0x170030B2 RID: 12466
+		// (get) Token: 0x06009A5C RID: 39516 RVA: 0x001654AC File Offset: 0x001636AC
+		// (set) Token: 0x06009A5D RID: 39517 RVA: 0x001654D7 File Offset: 0x001636D7
 		public virtual int CollisionRadius
 		{
 			get
@@ -136,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E9E RID: 11934
-		// (get) Token: 0x060092C6 RID: 37574 RVA: 0x001550C5 File Offset: 0x001532C5
-		// (set) Token: 0x060092C7 RID: 37575 RVA: 0x001550F0 File Offset: 0x001532F0
+		// Token: 0x170030B3 RID: 12467
+		// (get) Token: 0x06009A5E RID: 39518 RVA: 0x001654E5 File Offset: 0x001636E5
+		// (set) Token: 0x06009A5F RID: 39519 RVA: 0x00165510 File Offset: 0x00163710
 		public virtual int SplineEntityId
 		{
 			get
@@ -159,11 +153,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E9F RID: 11935
-		// (get) Token: 0x060092C8 RID: 37576 RVA: 0x001550FE File Offset: 0x001532FE
-		// (set) Token: 0x060092C9 RID: 37577 RVA: 0x00155125 File Offset: 0x00153325
+		// Token: 0x170030B4 RID: 12468
+		// (get) Token: 0x06009A60 RID: 39520 RVA: 0x0016551E File Offset: 0x0016371E
+		// (set) Token: 0x06009A61 RID: 39521 RVA: 0x00165545 File Offset: 0x00163745
+		[Nullable(2)]
 		public virtual string SendEntityEventOnSplineFinish
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -177,16 +173,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.SendEntityEventOnSplineFinish;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().SendEntityEventOnSplineFinish = value;
 			}
 		}
 
-		// Token: 0x04005A4E RID: 23118
+		// Token: 0x04005EC7 RID: 24263
+		[Nullable(2)]
 		protected new IFoxPushBox FbInstance;
 
-		// Token: 0x04005A4F RID: 23119
+		// Token: 0x04005EC8 RID: 24264
+		[Nullable(2)]
 		protected new IFoxPushBox_SetValue PocoInterface;
 	}
 }

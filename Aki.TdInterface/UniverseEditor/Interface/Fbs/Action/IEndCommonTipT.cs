@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066A0 RID: 26272
+	// Token: 0x02006D1A RID: 27930
 	public class IEndCommonTipT
 	{
-		// Token: 0x1700C33B RID: 49979
-		// (get) Token: 0x0602DAA1 RID: 187041 RVA: 0x0063FB31 File Offset: 0x0063DD31
-		// (set) Token: 0x0602DAA2 RID: 187042 RVA: 0x0063FB39 File Offset: 0x0063DD39
+		// Token: 0x1700CCEC RID: 52460
+		// (get) Token: 0x060302BE RID: 197310 RVA: 0x0068CDE5 File Offset: 0x0068AFE5
+		// (set) Token: 0x060302BF RID: 197311 RVA: 0x0068CDED File Offset: 0x0068AFED
 		public string Token { get; set; }
 
-		// Token: 0x0602DAA3 RID: 187043 RVA: 0x0063FB42 File Offset: 0x0063DD42
+		// Token: 0x060302C0 RID: 197312 RVA: 0x0068CDF6 File Offset: 0x0068AFF6
 		public IEndCommonTipT()
 		{
 			this.Token = null;

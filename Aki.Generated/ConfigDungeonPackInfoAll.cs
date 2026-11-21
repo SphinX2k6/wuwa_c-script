@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000244 RID: 580
+	// Token: 0x02000258 RID: 600
 	public class ConfigDungeonPackInfoAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D9C RID: 3484 RVA: 0x000A67A0 File Offset: 0x000A49A0
+		// Token: 0x06000E14 RID: 3604 RVA: 0x000ACA64 File Offset: 0x000AAC64
 		static ConfigDungeonPackInfoAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDungeonPackInfoAll.CreateStaticDefaultValue), new Action(ConfigDungeonPackInfoAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D9D RID: 3485 RVA: 0x000A67C0 File Offset: 0x000A49C0
+		// Token: 0x06000E15 RID: 3605 RVA: 0x000ACA84 File Offset: 0x000AAC84
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDungeonPackInfoAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D9E RID: 3486 RVA: 0x000A683F File Offset: 0x000A4A3F
+		// Token: 0x06000E16 RID: 3606 RVA: 0x000ACB03 File Offset: 0x000AAD03
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDungeonPackInfoAll.LogPair = null;
 			ConfigDungeonPackInfoAll.HandleId = 0;
 		}
 
-		// Token: 0x06000D9F RID: 3487 RVA: 0x000A684D File Offset: 0x000A4A4D
+		// Token: 0x06000E17 RID: 3607 RVA: 0x000ACB11 File Offset: 0x000AAD11
 		public static void Init()
 		{
 			ConfigDungeonPackInfoAll.HandleId = ConfigCommon.InitDataStatement(ConfigDungeonPackInfoAll.HandleId, "db_dungeonpackinfo.db", "select BinData from `DungeonPackInfo`");
 		}
 
-		// Token: 0x06000DA0 RID: 3488 RVA: 0x000A6868 File Offset: 0x000A4A68
+		// Token: 0x06000E18 RID: 3608 RVA: 0x000ACB2C File Offset: 0x000AAD2C
 		[NullableContext(2)]
 		public static IReadOnlyList<DungeonPackInfo> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000FC0 RID: 4032
+		// Token: 0x0400104C RID: 4172
 		private const string DB = "db_dungeonpackinfo.db";
 
-		// Token: 0x04000FC1 RID: 4033
+		// Token: 0x0400104D RID: 4173
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/DungeonPackInfo.csv";
 
-		// Token: 0x04000FC2 RID: 4034
+		// Token: 0x0400104E RID: 4174
 		private const string TABLE = "DungeonPackInfo";
 
-		// Token: 0x04000FC3 RID: 4035
+		// Token: 0x0400104F RID: 4175
 		private const string COMMAND = "select BinData from `DungeonPackInfo`";
 
-		// Token: 0x04000FC4 RID: 4036
+		// Token: 0x04001050 RID: 4176
 		private const string KEY_PREFIX = "DungeonPackInfoAll";
 
-		// Token: 0x04000FC5 RID: 4037
+		// Token: 0x04001051 RID: 4177
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FC6 RID: 4038
+		// Token: 0x04001052 RID: 4178
 		private static int HandleId;
 	}
 }

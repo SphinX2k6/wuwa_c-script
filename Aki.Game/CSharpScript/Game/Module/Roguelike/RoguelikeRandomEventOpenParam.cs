@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004D90 RID: 19856
+	// Token: 0x02003D59 RID: 15705
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeRandomEventOpenParam : IRoguelikeRandomEventOpenParam
 	{
-		// Token: 0x17007E8C RID: 32396
-		// (get) Token: 0x060334F2 RID: 210162 RVA: 0x00BFA054 File Offset: 0x00BF8254
-		// (set) Token: 0x060334F3 RID: 210163 RVA: 0x00BFA05C File Offset: 0x00BF825C
+		// Token: 0x1700523C RID: 21052
+		// (get) Token: 0x0602835F RID: 164703 RVA: 0x00B43650 File Offset: 0x00B41850
+		// (set) Token: 0x06028360 RID: 164704 RVA: 0x00B43658 File Offset: 0x00B41858
 		public int BindId { get; set; }
 
-		// Token: 0x17007E8D RID: 32397
-		// (get) Token: 0x060334F4 RID: 210164 RVA: 0x00BFA065 File Offset: 0x00BF8265
-		// (set) Token: 0x060334F5 RID: 210165 RVA: 0x00BFA06D File Offset: 0x00BF826D
+		// Token: 0x1700523D RID: 21053
+		// (get) Token: 0x06028361 RID: 164705 RVA: 0x00B43661 File Offset: 0x00B41861
+		// (set) Token: 0x06028362 RID: 164706 RVA: 0x00B43669 File Offset: 0x00B41869
 		public Action<int> SelectCallback { get; set; }
 	}
 }

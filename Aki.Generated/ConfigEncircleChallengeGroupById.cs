@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000270 RID: 624
+	// Token: 0x02000284 RID: 644
 	public class ConfigEncircleChallengeGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EA5 RID: 3749 RVA: 0x000AC2E5 File Offset: 0x000AA4E5
+		// Token: 0x06000F1D RID: 3869 RVA: 0x000B25A9 File Offset: 0x000B07A9
 		static ConfigEncircleChallengeGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEncircleChallengeGroupById.CreateStaticDefaultValue), new Action(ConfigEncircleChallengeGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000EA6 RID: 3750 RVA: 0x000AC304 File Offset: 0x000AA504
+		// Token: 0x06000F1E RID: 3870 RVA: 0x000B25C8 File Offset: 0x000B07C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEncircleChallengeGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000EA7 RID: 3751 RVA: 0x000AC383 File Offset: 0x000AA583
+		// Token: 0x06000F1F RID: 3871 RVA: 0x000B2647 File Offset: 0x000B0847
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEncircleChallengeGroupById.LogPair = null;
 			ConfigEncircleChallengeGroupById.HandleId = 0;
 		}
 
-		// Token: 0x06000EA8 RID: 3752 RVA: 0x000AC391 File Offset: 0x000AA591
+		// Token: 0x06000F20 RID: 3872 RVA: 0x000B2655 File Offset: 0x000B0855
 		public static void Init()
 		{
 			ConfigEncircleChallengeGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigEncircleChallengeGroupById.HandleId, "db_encircle.db", "select BinData from `EncircleChallengeGroup` where Id=?");
 		}
 
-		// Token: 0x06000EA9 RID: 3753 RVA: 0x000AC3AC File Offset: 0x000AA5AC
+		// Token: 0x06000F21 RID: 3873 RVA: 0x000B2670 File Offset: 0x000B0870
 		public static EncircleChallengeGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEncircleChallengeGroupById.HandleId, ConfigEncircleChallengeGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new EncircleChallengeGroup?(rootAsEncircleChallengeGroup);
 		}
 
-		// Token: 0x040010F4 RID: 4340
+		// Token: 0x04001180 RID: 4480
 		private const string DB = "db_encircle.db";
 
-		// Token: 0x040010F5 RID: 4341
+		// Token: 0x04001181 RID: 4481
 		private const string FILE = "j.界面围剿.xlsx";
 
-		// Token: 0x040010F6 RID: 4342
+		// Token: 0x04001182 RID: 4482
 		private const string TABLE = "EncircleChallengeGroup";
 
-		// Token: 0x040010F7 RID: 4343
+		// Token: 0x04001183 RID: 4483
 		private const string COMMAND = "select BinData from `EncircleChallengeGroup` where Id=?";
 
-		// Token: 0x040010F8 RID: 4344
+		// Token: 0x04001184 RID: 4484
 		private const string KEY_PREFIX = "EncircleChallengeGroupById";
 
-		// Token: 0x040010F9 RID: 4345
+		// Token: 0x04001185 RID: 4485
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040010FA RID: 4346
+		// Token: 0x04001186 RID: 4486
 		private static int HandleId;
 	}
 }

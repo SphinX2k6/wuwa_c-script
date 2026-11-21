@@ -6,11 +6,11 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200461B RID: 17947
+	// Token: 0x02003544 RID: 13636
 	public class ComponentAction
 	{
-		// Token: 0x170075C6 RID: 30150
-		// (get) Token: 0x0602E3DE RID: 189406 RVA: 0x00AB1683 File Offset: 0x00AAF883
+		// Token: 0x1700487E RID: 18558
+		// (get) Token: 0x06022AD3 RID: 142035 RVA: 0x009DDD77 File Offset: 0x009DBF77
 		private bool IsAsyncExecuting
 		{
 			get
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E3DF RID: 189407 RVA: 0x00AB1694 File Offset: 0x00AAF894
+		// Token: 0x06022AD4 RID: 142036 RVA: 0x009DDD88 File Offset: 0x009DBF88
 		public ComponentAction()
 		{
 			ComponentActionId instance = ComponentActionId.Instance;
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Ui
 			this.ComponentId = num;
 		}
 
-		// Token: 0x0602E3E0 RID: 189408 RVA: 0x00AB16F6 File Offset: 0x00AAF8F6
+		// Token: 0x06022AD5 RID: 142037 RVA: 0x009DDDEA File Offset: 0x009DBFEA
 		public static void SyncComponentId(int id)
 		{
 			ComponentActionId.Instance.SelfIncrementId = id;
 		}
 
-		// Token: 0x170075C7 RID: 30151
-		// (get) Token: 0x0602E3E1 RID: 189409 RVA: 0x00AB1703 File Offset: 0x00AAF903
+		// Token: 0x1700487F RID: 18559
+		// (get) Token: 0x06022AD6 RID: 142038 RVA: 0x009DDDF7 File Offset: 0x009DBFF7
 		public bool IsRegister
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075C8 RID: 30152
-		// (get) Token: 0x0602E3E2 RID: 189410 RVA: 0x00AB170E File Offset: 0x00AAF90E
+		// Token: 0x17004880 RID: 18560
+		// (get) Token: 0x06022AD7 RID: 142039 RVA: 0x009DDE02 File Offset: 0x009DC002
 		public bool IsCreating
 		{
 			get
@@ -54,8 +54,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075C9 RID: 30153
-		// (get) Token: 0x0602E3E3 RID: 189411 RVA: 0x00AB1719 File Offset: 0x00AAF919
+		// Token: 0x17004881 RID: 18561
+		// (get) Token: 0x06022AD8 RID: 142040 RVA: 0x009DDE0D File Offset: 0x009DC00D
 		public bool IsCreate
 		{
 			get
@@ -64,8 +64,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CA RID: 30154
-		// (get) Token: 0x0602E3E4 RID: 189412 RVA: 0x00AB1724 File Offset: 0x00AAF924
+		// Token: 0x17004882 RID: 18562
+		// (get) Token: 0x06022AD9 RID: 142041 RVA: 0x009DDE18 File Offset: 0x009DC018
 		public bool IsCreateOrCreating
 		{
 			get
@@ -74,8 +74,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CB RID: 30155
-		// (get) Token: 0x0602E3E5 RID: 189413 RVA: 0x00AB1736 File Offset: 0x00AAF936
+		// Token: 0x17004883 RID: 18563
+		// (get) Token: 0x06022ADA RID: 142042 RVA: 0x009DDE2A File Offset: 0x009DC02A
 		public bool IsStarting
 		{
 			get
@@ -84,8 +84,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CC RID: 30156
-		// (get) Token: 0x0602E3E6 RID: 189414 RVA: 0x00AB1741 File Offset: 0x00AAF941
+		// Token: 0x17004884 RID: 18564
+		// (get) Token: 0x06022ADB RID: 142043 RVA: 0x009DDE35 File Offset: 0x009DC035
 		public bool IsStart
 		{
 			get
@@ -94,8 +94,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CD RID: 30157
-		// (get) Token: 0x0602E3E7 RID: 189415 RVA: 0x00AB174C File Offset: 0x00AAF94C
+		// Token: 0x17004885 RID: 18565
+		// (get) Token: 0x06022ADC RID: 142044 RVA: 0x009DDE40 File Offset: 0x009DC040
 		public bool IsStartOrStarting
 		{
 			get
@@ -104,8 +104,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CE RID: 30158
-		// (get) Token: 0x0602E3E8 RID: 189416 RVA: 0x00AB175E File Offset: 0x00AAF95E
+		// Token: 0x17004886 RID: 18566
+		// (get) Token: 0x06022ADD RID: 142045 RVA: 0x009DDE52 File Offset: 0x009DC052
 		public bool IsShowing
 		{
 			get
@@ -114,8 +114,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075CF RID: 30159
-		// (get) Token: 0x0602E3E9 RID: 189417 RVA: 0x00AB1769 File Offset: 0x00AAF969
+		// Token: 0x17004887 RID: 18567
+		// (get) Token: 0x06022ADE RID: 142046 RVA: 0x009DDE5D File Offset: 0x009DC05D
 		public bool IsShow
 		{
 			get
@@ -124,8 +124,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D0 RID: 30160
-		// (get) Token: 0x0602E3EA RID: 189418 RVA: 0x00AB1774 File Offset: 0x00AAF974
+		// Token: 0x17004888 RID: 18568
+		// (get) Token: 0x06022ADF RID: 142047 RVA: 0x009DDE68 File Offset: 0x009DC068
 		public bool IsShowOrShowing
 		{
 			get
@@ -134,8 +134,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D1 RID: 30161
-		// (get) Token: 0x0602E3EB RID: 189419 RVA: 0x00AB1786 File Offset: 0x00AAF986
+		// Token: 0x17004889 RID: 18569
+		// (get) Token: 0x06022AE0 RID: 142048 RVA: 0x009DDE7A File Offset: 0x009DC07A
 		public bool IsHiding
 		{
 			get
@@ -144,8 +144,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D2 RID: 30162
-		// (get) Token: 0x0602E3EC RID: 189420 RVA: 0x00AB1791 File Offset: 0x00AAF991
+		// Token: 0x1700488A RID: 18570
+		// (get) Token: 0x06022AE1 RID: 142049 RVA: 0x009DDE85 File Offset: 0x009DC085
 		public bool IsHide
 		{
 			get
@@ -154,8 +154,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D3 RID: 30163
-		// (get) Token: 0x0602E3ED RID: 189421 RVA: 0x00AB179C File Offset: 0x00AAF99C
+		// Token: 0x1700488B RID: 18571
+		// (get) Token: 0x06022AE2 RID: 142050 RVA: 0x009DDE90 File Offset: 0x009DC090
 		public bool IsHideOrHiding
 		{
 			get
@@ -164,8 +164,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D4 RID: 30164
-		// (get) Token: 0x0602E3EE RID: 189422 RVA: 0x00AB17AE File Offset: 0x00AAF9AE
+		// Token: 0x1700488C RID: 18572
+		// (get) Token: 0x06022AE3 RID: 142051 RVA: 0x009DDEA2 File Offset: 0x009DC0A2
 		public bool IsDestroying
 		{
 			get
@@ -174,8 +174,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D5 RID: 30165
-		// (get) Token: 0x0602E3EF RID: 189423 RVA: 0x00AB17BA File Offset: 0x00AAF9BA
+		// Token: 0x1700488D RID: 18573
+		// (get) Token: 0x06022AE4 RID: 142052 RVA: 0x009DDEAE File Offset: 0x009DC0AE
 		public bool IsDestroy
 		{
 			get
@@ -184,8 +184,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D6 RID: 30166
-		// (get) Token: 0x0602E3F0 RID: 189424 RVA: 0x00AB17C6 File Offset: 0x00AAF9C6
+		// Token: 0x1700488E RID: 18574
+		// (get) Token: 0x06022AE5 RID: 142053 RVA: 0x009DDEBA File Offset: 0x009DC0BA
 		public bool IsDestroyOrDestroying
 		{
 			get
@@ -194,8 +194,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D7 RID: 30167
-		// (get) Token: 0x0602E3F1 RID: 189425 RVA: 0x00AB17D8 File Offset: 0x00AAF9D8
+		// Token: 0x1700488F RID: 18575
+		// (get) Token: 0x06022AE6 RID: 142054 RVA: 0x009DDECC File Offset: 0x009DC0CC
 		public bool IsBusy
 		{
 			get
@@ -204,8 +204,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x170075D8 RID: 30168
-		// (get) Token: 0x0602E3F2 RID: 189426 RVA: 0x00AB180C File Offset: 0x00AAFA0C
+		// Token: 0x17004890 RID: 18576
+		// (get) Token: 0x06022AE7 RID: 142055 RVA: 0x009DDF00 File Offset: 0x009DC100
 		public bool IsPendingDestroy
 		{
 			get
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E3F3 RID: 189427 RVA: 0x00AB1850 File Offset: 0x00AAFA50
+		// Token: 0x06022AE8 RID: 142056 RVA: 0x009DDF44 File Offset: 0x009DC144
 		public UniTask<bool> CreateAsync()
 		{
 			ComponentAction.<CreateAsync>d__47 <CreateAsync>d__;
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F4 RID: 189428 RVA: 0x00AB1894 File Offset: 0x00AAFA94
+		// Token: 0x06022AE9 RID: 142057 RVA: 0x009DDF88 File Offset: 0x009DC188
 		public UniTask<bool> StartAsync()
 		{
 			ComponentAction.<StartAsync>d__48 <StartAsync>d__;
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Ui
 			return <StartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F5 RID: 189429 RVA: 0x00AB18D8 File Offset: 0x00AAFAD8
+		// Token: 0x06022AEA RID: 142058 RVA: 0x009DDFCC File Offset: 0x009DC1CC
 		private UniTask<bool> StartAsyncImplement()
 		{
 			ComponentAction.<StartAsyncImplement>d__49 <StartAsyncImplement>d__;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Ui
 			return <StartAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F6 RID: 189430 RVA: 0x00AB191C File Offset: 0x00AAFB1C
+		// Token: 0x06022AEB RID: 142059 RVA: 0x009DE010 File Offset: 0x009DC210
 		public UniTask<bool> ShowAsync()
 		{
 			ComponentAction.<ShowAsync>d__50 <ShowAsync>d__;
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Ui
 			return <ShowAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F7 RID: 189431 RVA: 0x00AB1960 File Offset: 0x00AAFB60
+		// Token: 0x06022AEC RID: 142060 RVA: 0x009DE054 File Offset: 0x009DC254
 		private UniTask<bool> ShowAsyncImplement()
 		{
 			ComponentAction.<ShowAsyncImplement>d__51 <ShowAsyncImplement>d__;
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Ui
 			return <ShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F8 RID: 189432 RVA: 0x00AB19A4 File Offset: 0x00AAFBA4
+		// Token: 0x06022AED RID: 142061 RVA: 0x009DE098 File Offset: 0x009DC298
 		public UniTask<bool> HideAsync()
 		{
 			ComponentAction.<HideAsync>d__52 <HideAsync>d__;
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Ui
 			return <HideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3F9 RID: 189433 RVA: 0x00AB19E8 File Offset: 0x00AAFBE8
+		// Token: 0x06022AEE RID: 142062 RVA: 0x009DE0DC File Offset: 0x009DC2DC
 		private UniTask<bool> HideAsyncImplement()
 		{
 			ComponentAction.<HideAsyncImplement>d__53 <HideAsyncImplement>d__;
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Ui
 			return <HideAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3FA RID: 189434 RVA: 0x00AB1A2C File Offset: 0x00AAFC2C
+		// Token: 0x06022AEF RID: 142063 RVA: 0x009DE120 File Offset: 0x009DC320
 		public UniTask<bool> DestroyAsync()
 		{
 			ComponentAction.<DestroyAsync>d__54 <DestroyAsync>d__;
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Ui
 			return <DestroyAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3FB RID: 189435 RVA: 0x00AB1A70 File Offset: 0x00AAFC70
+		// Token: 0x06022AF0 RID: 142064 RVA: 0x009DE164 File Offset: 0x009DC364
 		public virtual UniTask<bool> CloseMeAsync()
 		{
 			ComponentAction.<CloseMeAsync>d__55 <CloseMeAsync>d__;
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Ui
 			return <CloseMeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3FC RID: 189436 RVA: 0x00AB1AB4 File Offset: 0x00AAFCB4
+		// Token: 0x06022AF1 RID: 142065 RVA: 0x009DE1A8 File Offset: 0x009DC3A8
 		private UniTask<bool> DestroyAsyncImplement()
 		{
 			ComponentAction.<DestroyAsyncImplement>d__56 <DestroyAsyncImplement>d__;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Ui
 			return <DestroyAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E3FD RID: 189437 RVA: 0x00AB1AF8 File Offset: 0x00AAFCF8
+		// Token: 0x06022AF2 RID: 142066 RVA: 0x009DE1EC File Offset: 0x009DC3EC
 		[NullableContext(2)]
 		public void Show(Action callback = null)
 		{
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E3FE RID: 189438 RVA: 0x00AB1B2C File Offset: 0x00AAFD2C
+		// Token: 0x06022AF3 RID: 142067 RVA: 0x009DE220 File Offset: 0x009DC420
 		[NullableContext(2)]
 		public void Hide(Action callback = null)
 		{
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E3FF RID: 189439 RVA: 0x00AB1B60 File Offset: 0x00AAFD60
+		// Token: 0x06022AF4 RID: 142068 RVA: 0x009DE254 File Offset: 0x009DC454
 		[NullableContext(2)]
 		public void Destroy(Action callback = null)
 		{
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E400 RID: 189440 RVA: 0x00AB1B94 File Offset: 0x00AAFD94
+		// Token: 0x06022AF5 RID: 142069 RVA: 0x009DE288 File Offset: 0x009DC488
 		protected virtual UniTask<bool> OnCreateAsyncImplement()
 		{
 			ComponentAction.<OnCreateAsyncImplement>d__60 <OnCreateAsyncImplement>d__;
@@ -386,36 +386,36 @@ namespace CSharpScript.Game.Ui
 			return <OnCreateAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E401 RID: 189441 RVA: 0x00AB1BCF File Offset: 0x00AAFDCF
+		// Token: 0x06022AF6 RID: 142070 RVA: 0x009DE2C3 File Offset: 0x009DC4C3
 		protected virtual UniTask OnStartAsyncImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E402 RID: 189442 RVA: 0x00AB1BD6 File Offset: 0x00AAFDD6
+		// Token: 0x06022AF7 RID: 142071 RVA: 0x009DE2CA File Offset: 0x009DC4CA
 		protected virtual UniTask OnShowAsyncImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E403 RID: 189443 RVA: 0x00AB1BDD File Offset: 0x00AAFDDD
+		// Token: 0x06022AF8 RID: 142072 RVA: 0x009DE2D1 File Offset: 0x009DC4D1
 		protected virtual void OnFinishShow()
 		{
 		}
 
-		// Token: 0x0602E404 RID: 189444 RVA: 0x00AB1BDF File Offset: 0x00AAFDDF
+		// Token: 0x06022AF9 RID: 142073 RVA: 0x009DE2D3 File Offset: 0x009DC4D3
 		protected virtual UniTask OnHideAsyncImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E405 RID: 189445 RVA: 0x00AB1BE6 File Offset: 0x00AAFDE6
+		// Token: 0x06022AFA RID: 142074 RVA: 0x009DE2DA File Offset: 0x009DC4DA
 		protected virtual UniTask OnDestroyAsyncImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E406 RID: 189446 RVA: 0x00AB1BF0 File Offset: 0x00AAFDF0
+		// Token: 0x06022AFB RID: 142075 RVA: 0x009DE2E4 File Offset: 0x009DC4E4
 		private static bool IsPair(EActionCommandType? actionTypeA, EActionCommandType? actionTypeB)
 		{
 			EActionCommandType? eactionCommandType = actionTypeA;
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Ui
 			return (eactionCommandType.GetValueOrDefault() == eactionCommandType2.GetValueOrDefault() & eactionCommandType != null == (eactionCommandType2 != null)) || (actionTypeA.GetValueOrDefault() == EActionCommandType.Show && actionTypeB.GetValueOrDefault() == EActionCommandType.Hide) || (actionTypeA.GetValueOrDefault() == EActionCommandType.Hide && actionTypeB.GetValueOrDefault() == EActionCommandType.Show);
 		}
 
-		// Token: 0x0602E407 RID: 189447 RVA: 0x00AB1C50 File Offset: 0x00AAFE50
+		// Token: 0x06022AFC RID: 142076 RVA: 0x009DE344 File Offset: 0x009DC544
 		private EActionCommandType GetCurrentActionType()
 		{
 			switch (this.ComponentState)
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E408 RID: 189448 RVA: 0x00AB1C97 File Offset: 0x00AAFE97
+		// Token: 0x06022AFD RID: 142077 RVA: 0x009DE38B File Offset: 0x009DC58B
 		private void HandleCacheActionFailIfIsPair(EActionCommandType actionTypeA, EActionCommandType actionTypeB)
 		{
 			if (actionTypeA == actionTypeB)
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E409 RID: 189449 RVA: 0x00AB1CA8 File Offset: 0x00AAFEA8
+		// Token: 0x06022AFE RID: 142078 RVA: 0x009DE39C File Offset: 0x009DC59C
 		private bool TryCacheAction(EActionCommandType actionType)
 		{
 			if (!ComponentAction.SwitchCheckSameTypeLogic && this.GetCurrentActionType() == actionType)
@@ -494,7 +494,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E40A RID: 189450 RVA: 0x00AB1D48 File Offset: 0x00AAFF48
+		// Token: 0x06022AFF RID: 142079 RVA: 0x009DE43C File Offset: 0x009DC63C
 		private UniTask ExecuteCachedActions()
 		{
 			ComponentAction.<ExecuteCachedActions>d__71 <ExecuteCachedActions>d__;
@@ -505,32 +505,32 @@ namespace CSharpScript.Game.Ui
 			return <ExecuteCachedActions>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E40B RID: 189451 RVA: 0x00AB1D8B File Offset: 0x00AAFF8B
+		// Token: 0x06022B00 RID: 142080 RVA: 0x009DE47F File Offset: 0x009DC67F
 		protected virtual void HandleCacheShowActionFailIfIsPair()
 		{
 		}
 
-		// Token: 0x0602E40C RID: 189452 RVA: 0x00AB1D8D File Offset: 0x00AAFF8D
+		// Token: 0x06022B01 RID: 142081 RVA: 0x009DE481 File Offset: 0x009DC681
 		protected virtual void OnStartImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E40D RID: 189453 RVA: 0x00AB1D8F File Offset: 0x00AAFF8F
+		// Token: 0x06022B02 RID: 142082 RVA: 0x009DE483 File Offset: 0x009DC683
 		protected virtual void OnShowImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E40E RID: 189454 RVA: 0x00AB1D91 File Offset: 0x00AAFF91
+		// Token: 0x06022B03 RID: 142083 RVA: 0x009DE485 File Offset: 0x009DC685
 		protected virtual void OnHideImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E40F RID: 189455 RVA: 0x00AB1D93 File Offset: 0x00AAFF93
+		// Token: 0x06022B04 RID: 142084 RVA: 0x009DE487 File Offset: 0x009DC687
 		protected virtual void OnDestroyImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E410 RID: 189456 RVA: 0x00AB1D95 File Offset: 0x00AAFF95
+		// Token: 0x06022B05 RID: 142085 RVA: 0x009DE489 File Offset: 0x009DC689
 		public void StartCompatible()
 		{
 			this.ComponentState = EComponentState.Starting;
@@ -538,7 +538,7 @@ namespace CSharpScript.Game.Ui
 			this.ComponentState = EComponentState.Start;
 		}
 
-		// Token: 0x0602E411 RID: 189457 RVA: 0x00AB1DAB File Offset: 0x00AAFFAB
+		// Token: 0x06022B06 RID: 142086 RVA: 0x009DE49F File Offset: 0x009DC69F
 		public void ShowCompatible()
 		{
 			this.ComponentState = EComponentState.Showing;
@@ -546,7 +546,7 @@ namespace CSharpScript.Game.Ui
 			this.ComponentState = EComponentState.Show;
 		}
 
-		// Token: 0x0602E412 RID: 189458 RVA: 0x00AB1DC1 File Offset: 0x00AAFFC1
+		// Token: 0x06022B07 RID: 142087 RVA: 0x009DE4B5 File Offset: 0x009DC6B5
 		public void HideCompatible()
 		{
 			this.ComponentState = EComponentState.Hiding;
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Ui
 			this.ComponentState = EComponentState.Hide;
 		}
 
-		// Token: 0x0602E413 RID: 189459 RVA: 0x00AB1DD7 File Offset: 0x00AAFFD7
+		// Token: 0x06022B08 RID: 142088 RVA: 0x009DE4CB File Offset: 0x009DC6CB
 		public void DestroyCompatible()
 		{
 			if (this.IsShowOrShowing)
@@ -567,32 +567,32 @@ namespace CSharpScript.Game.Ui
 			this.DeadPromise.SetResult();
 		}
 
-		// Token: 0x04018D37 RID: 101687
+		// Token: 0x04013376 RID: 78710
 		[StaticVariableRuleIgnore]
 		public static bool OpenLog = true;
 
-		// Token: 0x04018D38 RID: 101688
+		// Token: 0x04013377 RID: 78711
 		[StaticVariableRuleIgnore]
 		public static bool SwitchCheckSameTypeLogic = true;
 
-		// Token: 0x04018D39 RID: 101689
+		// Token: 0x04013378 RID: 78712
 		public int ComponentId;
 
-		// Token: 0x04018D3A RID: 101690
+		// Token: 0x04013379 RID: 78713
 		private EComponentState ComponentState;
 
-		// Token: 0x04018D3B RID: 101691
+		// Token: 0x0401337A RID: 78714
 		public bool WaitToDestroy;
 
-		// Token: 0x04018D3C RID: 101692
+		// Token: 0x0401337B RID: 78715
 		[Nullable(1)]
 		public CustomPromise DeadPromise = new CustomPromise();
 
-		// Token: 0x04018D3D RID: 101693
+		// Token: 0x0401337C RID: 78716
 		[Nullable(1)]
 		private HashSet<EComponentState> AsyncExecuteSet = new HashSet<EComponentState>();
 
-		// Token: 0x04018D3E RID: 101694
+		// Token: 0x0401337D RID: 78717
 		[Nullable(1)]
 		private readonly global::LinkedList<ActionCommandNode> ActionLinkedList = new global::LinkedList<ActionCommandNode>(new ActionCommandNode
 		{

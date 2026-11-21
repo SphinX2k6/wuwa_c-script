@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052D7 RID: 21207
+	// Token: 0x02005842 RID: 22594
 	public class IFreeAngleTurntableT
 	{
-		// Token: 0x17009B99 RID: 39833
-		// (get) Token: 0x060229B5 RID: 141749 RVA: 0x004CC06F File Offset: 0x004CA26F
-		// (set) Token: 0x060229B6 RID: 141750 RVA: 0x004CC077 File Offset: 0x004CA277
+		// Token: 0x1700A3A2 RID: 41890
+		// (get) Token: 0x06024979 RID: 149881 RVA: 0x0050716B File Offset: 0x0050536B
+		// (set) Token: 0x0602497A RID: 149882 RVA: 0x00507173 File Offset: 0x00505373
 		public EControllerType Type { get; set; }
 
-		// Token: 0x17009B9A RID: 39834
-		// (get) Token: 0x060229B7 RID: 141751 RVA: 0x004CC080 File Offset: 0x004CA280
-		// (set) Token: 0x060229B8 RID: 141752 RVA: 0x004CC088 File Offset: 0x004CA288
+		// Token: 0x1700A3A3 RID: 41891
+		// (get) Token: 0x0602497B RID: 149883 RVA: 0x0050717C File Offset: 0x0050537C
+		// (set) Token: 0x0602497C RID: 149884 RVA: 0x00507184 File Offset: 0x00505384
 		public int RotationSpeed { get; set; }
 
-		// Token: 0x17009B9B RID: 39835
-		// (get) Token: 0x060229B9 RID: 141753 RVA: 0x004CC091 File Offset: 0x004CA291
-		// (set) Token: 0x060229BA RID: 141754 RVA: 0x004CC099 File Offset: 0x004CA299
+		// Token: 0x1700A3A4 RID: 41892
+		// (get) Token: 0x0602497D RID: 149885 RVA: 0x0050718D File Offset: 0x0050538D
+		// (set) Token: 0x0602497E RID: 149886 RVA: 0x00507195 File Offset: 0x00505395
 		public List<IFreeAngleItemT> ItemConfig { get; set; }
 
-		// Token: 0x17009B9C RID: 39836
-		// (get) Token: 0x060229BB RID: 141755 RVA: 0x004CC0A2 File Offset: 0x004CA2A2
-		// (set) Token: 0x060229BC RID: 141756 RVA: 0x004CC0AA File Offset: 0x004CA2AA
+		// Token: 0x1700A3A5 RID: 41893
+		// (get) Token: 0x0602497F RID: 149887 RVA: 0x0050719E File Offset: 0x0050539E
+		// (set) Token: 0x06024980 RID: 149888 RVA: 0x005071A6 File Offset: 0x005053A6
 		public int IntervalAngle { get; set; }
 
-		// Token: 0x060229BD RID: 141757 RVA: 0x004CC0B3 File Offset: 0x004CA2B3
+		// Token: 0x06024981 RID: 149889 RVA: 0x005071AF File Offset: 0x005053AF
 		public IFreeAngleTurntableT()
 		{
 			this.Type = EControllerType.FreeAngle;

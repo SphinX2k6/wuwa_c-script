@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000CE RID: 206
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020000D6 RID: 214
 	public class ElementalEffectComponent : IComponentBase
 	{
-		// Token: 0x06000382 RID: 898 RVA: 0x0001BFD0 File Offset: 0x0001A1D0
+		// Token: 0x06000386 RID: 902 RVA: 0x0001C944 File Offset: 0x0001AB44
 		private ElementalEffectComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000383 RID: 899 RVA: 0x0001C008 File Offset: 0x0001A208
+		// Token: 0x06000387 RID: 903 RVA: 0x0001C97C File Offset: 0x0001AB7C
 		public static ElementalEffectComponent Create([Nullable(2)] ElementalEffectComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000384 RID: 900 RVA: 0x0001C01B File Offset: 0x0001A21B
+		// Token: 0x06000388 RID: 904 RVA: 0x0001C98F File Offset: 0x0001AB8F
 		public static ElementalEffectComponent CreateFromSetValue([Nullable(2)] ElementalEffectComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000385 RID: 901 RVA: 0x0001C030 File Offset: 0x0001A230
+		// Token: 0x06000389 RID: 905 RVA: 0x0001C9A4 File Offset: 0x0001ABA4
 		public new ElementalEffectComponent_SetValue ToSetValue()
 		{
 			return new ElementalEffectComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700012E RID: 302
-		// (get) Token: 0x06000386 RID: 902 RVA: 0x0001C08C File Offset: 0x0001A28C
-		// (set) Token: 0x06000387 RID: 903 RVA: 0x0001C0C6 File Offset: 0x0001A2C6
+		// Token: 0x17000130 RID: 304
+		// (get) Token: 0x0600038A RID: 906 RVA: 0x0001CA00 File Offset: 0x0001AC00
+		// (set) Token: 0x0600038B RID: 907 RVA: 0x0001CA3A File Offset: 0x0001AC3A
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700012F RID: 303
-		// (get) Token: 0x06000388 RID: 904 RVA: 0x0001C0D4 File Offset: 0x0001A2D4
-		// (set) Token: 0x06000389 RID: 905 RVA: 0x0001C0FE File Offset: 0x0001A2FE
+		// Token: 0x17000131 RID: 305
+		// (get) Token: 0x0600038C RID: 908 RVA: 0x0001CA48 File Offset: 0x0001AC48
+		// (set) Token: 0x0600038D RID: 909 RVA: 0x0001CA72 File Offset: 0x0001AC72
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000130 RID: 304
-		// (get) Token: 0x0600038A RID: 906 RVA: 0x0001C10C File Offset: 0x0001A30C
-		// (set) Token: 0x0600038B RID: 907 RVA: 0x0001C133 File Offset: 0x0001A333
+		// Token: 0x17000132 RID: 306
+		// (get) Token: 0x0600038E RID: 910 RVA: 0x0001CA80 File Offset: 0x0001AC80
+		// (set) Token: 0x0600038F RID: 911 RVA: 0x0001CAA7 File Offset: 0x0001ACA7
 		public virtual IElementalMatchBase MatchConfig
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000131 RID: 305
-		// (get) Token: 0x0600038C RID: 908 RVA: 0x0001C141 File Offset: 0x0001A341
-		// (set) Token: 0x0600038D RID: 909 RVA: 0x0001C168 File Offset: 0x0001A368
+		// Token: 0x17000133 RID: 307
+		// (get) Token: 0x06000390 RID: 912 RVA: 0x0001CAB5 File Offset: 0x0001ACB5
+		// (set) Token: 0x06000391 RID: 913 RVA: 0x0001CADC File Offset: 0x0001ACDC
 		public virtual IElementalRangeTypeBase Range
 		{
 			get
@@ -156,20 +154,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000132 RID: 306
-		// (get) Token: 0x0600038E RID: 910 RVA: 0x0001C178 File Offset: 0x0001A378
-		// (set) Token: 0x0600038F RID: 911 RVA: 0x0001C20B File Offset: 0x0001A40B
+		// Token: 0x17000134 RID: 308
+		// (get) Token: 0x06000392 RID: 914 RVA: 0x0001CAEC File Offset: 0x0001ACEC
+		// (set) Token: 0x06000393 RID: 915 RVA: 0x0001CB7F File Offset: 0x0001AD7F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IElementalMatchActions> OnActiveEffectActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -200,7 +198,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -209,20 +207,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000133 RID: 307
-		// (get) Token: 0x06000390 RID: 912 RVA: 0x0001C220 File Offset: 0x0001A420
-		// (set) Token: 0x06000391 RID: 913 RVA: 0x0001C2B3 File Offset: 0x0001A4B3
+		// Token: 0x17000135 RID: 309
+		// (get) Token: 0x06000394 RID: 916 RVA: 0x0001CB94 File Offset: 0x0001AD94
+		// (set) Token: 0x06000395 RID: 917 RVA: 0x0001CC27 File Offset: 0x0001AE27
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IElementalMatchActions> OnLoseEffectActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -253,7 +251,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -262,34 +260,34 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000486 RID: 1158
+		// Token: 0x040004AA RID: 1194
 		[Nullable(2)]
 		protected new ElementalEffectComponent FbInstance;
 
-		// Token: 0x04000487 RID: 1159
+		// Token: 0x040004AB RID: 1195
 		[Nullable(2)]
 		protected new ElementalEffectComponent_SetValue PocoInterface;
 
-		// Token: 0x04000488 RID: 1160
+		// Token: 0x040004AC RID: 1196
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IElementalMatchActions> _OnActiveEffectActionsCache;
 
-		// Token: 0x04000489 RID: 1161
+		// Token: 0x040004AD RID: 1197
 		private bool _OnActiveEffectActionsInited;
 
-		// Token: 0x0400048A RID: 1162
+		// Token: 0x040004AE RID: 1198
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IElementalMatchActions> _OnLoseEffectActionsCache;
 
-		// Token: 0x0400048B RID: 1163
+		// Token: 0x040004AF RID: 1199
 		private bool _OnLoseEffectActionsInited;
 	}
 }

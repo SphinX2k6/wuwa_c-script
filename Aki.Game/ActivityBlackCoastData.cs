@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020011A9 RID: 4521
+// Token: 0x0200065D RID: 1629
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityBlackCoastData : ActivityBaseData
 {
-	// Token: 0x060077C8 RID: 30664 RVA: 0x00190C24 File Offset: 0x0018EE24
+	// Token: 0x06004B5F RID: 19295 RVA: 0x00199800 File Offset: 0x00197A00
 	protected override void OnInit(ActivityData data)
 	{
 		this.InitProgressReward();
 		this.InitStages();
 	}
 
-	// Token: 0x060077C9 RID: 30665 RVA: 0x00190C34 File Offset: 0x0018EE34
+	// Token: 0x06004B60 RID: 19296 RVA: 0x00199810 File Offset: 0x00197A10
 	protected override void PhraseEx(ActivityData data)
 	{
 		BlackCoastThemeActivity blackCoastThemeActivityData = data.BlackCoastThemeActivityData;
@@ -26,7 +25,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		{
 			return;
 		}
-		this.StageUpdate(blackCoastThemeActivityData.Stages.ToArray<BlackCoastThemeStageInfo>());
+		this.StageUpdate(blackCoastThemeActivityData.Stages);
 		foreach (int num in blackCoastThemeActivityData.ActiveRewardedIds)
 		{
 			BlackCoastProgressRewardData progressRewardDataById = this.GetProgressRewardDataById(num);
@@ -46,38 +45,38 @@ public class ActivityBlackCoastData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060077CA RID: 30666 RVA: 0x00190CDC File Offset: 0x0018EEDC
+	// Token: 0x06004B61 RID: 19297 RVA: 0x001998B4 File Offset: 0x00197AB4
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x060077CB RID: 30667 RVA: 0x00190CDF File Offset: 0x0018EEDF
+	// Token: 0x06004B62 RID: 19298 RVA: 0x001998B7 File Offset: 0x00197AB7
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.RewardRedDotState();
 	}
 
-	// Token: 0x060077CC RID: 30668 RVA: 0x00190CE7 File Offset: 0x0018EEE7
+	// Token: 0x06004B63 RID: 19299 RVA: 0x001998BF File Offset: 0x00197ABF
 	public bool RewardRedDotState()
 	{
 		return this.HasProgressRewardRedDot() || this.HasStageRewardRedDot() || this.HasAnyNewStageRedDot();
 	}
 
-	// Token: 0x060077CD RID: 30669 RVA: 0x00190D01 File Offset: 0x0018EF01
+	// Token: 0x06004B64 RID: 19300 RVA: 0x001998D9 File Offset: 0x00197AD9
 	public int GetProgressItemCount()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(this.ProgressItemId, 0);
 	}
 
-	// Token: 0x060077CE RID: 30670 RVA: 0x00190D14 File Offset: 0x0018EF14
+	// Token: 0x06004B65 RID: 19301 RVA: 0x001998EC File Offset: 0x00197AEC
 	public int GetProgressItemTotal()
 	{
 		return this.ProgressItemTotal;
 	}
 
-	// Token: 0x17000A43 RID: 2627
-	// (get) Token: 0x060077CF RID: 30671 RVA: 0x00190D1C File Offset: 0x0018EF1C
+	// Token: 0x17000A63 RID: 2659
+	// (get) Token: 0x06004B66 RID: 19302 RVA: 0x001998F4 File Offset: 0x00197AF4
 	public int GetProgressItemId
 	{
 		get
@@ -86,7 +85,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060077D0 RID: 30672 RVA: 0x00190D24 File Offset: 0x0018EF24
+	// Token: 0x06004B67 RID: 19303 RVA: 0x001998FC File Offset: 0x00197AFC
 	public void InitProgressReward()
 	{
 		this.ProgressRewardMap.Clear();
@@ -108,13 +107,13 @@ public class ActivityBlackCoastData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060077D1 RID: 30673 RVA: 0x00190E20 File Offset: 0x0018F020
+	// Token: 0x06004B68 RID: 19304 RVA: 0x001999F8 File Offset: 0x00197BF8
 	private int SortRewardData(BlackCoastProgressRewardData a, BlackCoastProgressRewardData b)
 	{
 		return a.Goal - b.Goal;
 	}
 
-	// Token: 0x060077D2 RID: 30674 RVA: 0x00190E30 File Offset: 0x0018F030
+	// Token: 0x06004B69 RID: 19305 RVA: 0x00199A08 File Offset: 0x00197C08
 	public BlackCoastProgressRewardData GetProgressRewardDataById(int id)
 	{
 		BlackCoastProgressRewardData result;
@@ -122,15 +121,13 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060077D3 RID: 30675 RVA: 0x00190E4D File Offset: 0x0018F04D
+	// Token: 0x06004B6A RID: 19306 RVA: 0x00199A25 File Offset: 0x00197C25
 	public BlackCoastProgressRewardData[] GetAllProgressRewardData()
 	{
-		return (from x in this.ProgressRewardMap.Values
-		orderby x.Goal
-		select x).ToArray<BlackCoastProgressRewardData>();
+		return NoLinq.OrderByToArray<BlackCoastProgressRewardData, int>(this.ProgressRewardMap.Values, (BlackCoastProgressRewardData data) => data.Goal);
 	}
 
-	// Token: 0x060077D4 RID: 30676 RVA: 0x00190E84 File Offset: 0x0018F084
+	// Token: 0x06004B6B RID: 19307 RVA: 0x00199A58 File Offset: 0x00197C58
 	public int[] GetAllAvailableProgressRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -144,8 +141,8 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x060077D5 RID: 30677 RVA: 0x00190ECC File Offset: 0x0018F0CC
-	public void SetProgressRewardDataGot(int[] ids)
+	// Token: 0x06004B6C RID: 19308 RVA: 0x00199AA0 File Offset: 0x00197CA0
+	public void SetProgressRewardDataGot(IReadOnlyList<int> ids)
 	{
 		foreach (int id in ids)
 		{
@@ -158,7 +155,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060077D6 RID: 30678 RVA: 0x00190F18 File Offset: 0x0018F118
+	// Token: 0x06004B6D RID: 19309 RVA: 0x00199B0C File Offset: 0x00197D0C
 	public bool HasProgressRewardRedDot()
 	{
 		using (Dictionary<int, BlackCoastProgressRewardData>.ValueCollection.Enumerator enumerator = this.ProgressRewardMap.Values.GetEnumerator())
@@ -174,7 +171,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060077D7 RID: 30679 RVA: 0x00190F78 File Offset: 0x0018F178
+	// Token: 0x06004B6E RID: 19310 RVA: 0x00199B6C File Offset: 0x00197D6C
 	public void SetTaskRewardGot(int stageId, int taskId)
 	{
 		BlackCoastStageInfo blackCoastStageInfo;
@@ -183,7 +180,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060077D8 RID: 30680 RVA: 0x00190FB4 File Offset: 0x0018F1B4
+	// Token: 0x06004B6F RID: 19311 RVA: 0x00199BA8 File Offset: 0x00197DA8
 	private void InitStages()
 	{
 		this.Stages.Clear();
@@ -196,7 +193,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060077D9 RID: 30681 RVA: 0x00191018 File Offset: 0x0018F218
+	// Token: 0x06004B70 RID: 19312 RVA: 0x00199C0C File Offset: 0x00197E0C
 	public BlackCoastStageInfo GetStageById(int stageId)
 	{
 		BlackCoastStageInfo result;
@@ -204,24 +201,22 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x060077DA RID: 30682 RVA: 0x00191035 File Offset: 0x0018F235
+	// Token: 0x06004B71 RID: 19313 RVA: 0x00199C29 File Offset: 0x00197E29
 	public BlackCoastStageInfo[] GetAllStages()
 	{
-		return (from x in this.Stages.Values
-		orderby x.StageId
-		select x).ToArray<BlackCoastStageInfo>();
+		return NoLinq.OrderByToArray<BlackCoastStageInfo, int>(this.Stages.Values, (BlackCoastStageInfo stage) => stage.StageId);
 	}
 
-	// Token: 0x060077DB RID: 30683 RVA: 0x0019106B File Offset: 0x0018F26B
+	// Token: 0x06004B72 RID: 19314 RVA: 0x00199C5A File Offset: 0x00197E5A
 	public int[] GetAllStagesId()
 	{
-		return (from x in this.Stages.Keys
-		orderby x
-		select x).ToArray<int>();
+		int[] array = NoLinq.ToArray<int>(this.Stages.Keys);
+		Array.Sort<int>(array);
+		return array;
 	}
 
-	// Token: 0x060077DC RID: 30684 RVA: 0x001910A4 File Offset: 0x0018F2A4
-	public void StageUpdate(BlackCoastThemeStageInfo[] stageInfoList)
+	// Token: 0x06004B73 RID: 19315 RVA: 0x00199C74 File Offset: 0x00197E74
+	public void StageUpdate(IReadOnlyList<BlackCoastThemeStageInfo> stageInfoList)
 	{
 		foreach (BlackCoastThemeStageInfo blackCoastThemeStageInfo in stageInfoList)
 		{
@@ -244,7 +239,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060077DD RID: 30685 RVA: 0x00191134 File Offset: 0x0018F334
+	// Token: 0x06004B74 RID: 19316 RVA: 0x00199D20 File Offset: 0x00197F20
 	public bool HasStageRewardRedDot()
 	{
 		using (Dictionary<int, BlackCoastStageInfo>.ValueCollection.Enumerator enumerator = this.Stages.Values.GetEnumerator())
@@ -260,7 +255,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060077DE RID: 30686 RVA: 0x00191194 File Offset: 0x0018F394
+	// Token: 0x06004B75 RID: 19317 RVA: 0x00199D80 File Offset: 0x00197F80
 	public bool HasAnyNewStageRedDot()
 	{
 		foreach (BlackCoastStageInfo blackCoastStageInfo in this.Stages.Values)
@@ -273,7 +268,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060077DF RID: 30687 RVA: 0x00191210 File Offset: 0x0018F410
+	// Token: 0x06004B76 RID: 19318 RVA: 0x00199DFC File Offset: 0x00197FFC
 	public bool HasNewStageFlag(int stageId)
 	{
 		BlackCoastStageInfo blackCoastStageInfo;
@@ -281,14 +276,14 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return blackCoastStageInfo.StageState == EStageState.Active && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, stageId, 0, 0) == 0;
 	}
 
-	// Token: 0x060077E0 RID: 30688 RVA: 0x0019124E File Offset: 0x0018F44E
+	// Token: 0x06004B77 RID: 19319 RVA: 0x00199E3A File Offset: 0x0019803A
 	public void SaveNewStageFlag(int stageId)
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, stageId, 0, 0, 1);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060077E1 RID: 30689 RVA: 0x0019127C File Offset: 0x0018F47C
+	// Token: 0x06004B78 RID: 19320 RVA: 0x00199E68 File Offset: 0x00198068
 	public int? GetCurrentLockQuestId()
 	{
 		BlackCoastStageInfo[] allStages = this.GetAllStages();
@@ -313,7 +308,7 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x060077E2 RID: 30690 RVA: 0x001912F0 File Offset: 0x0018F4F0
+	// Token: 0x06004B79 RID: 19321 RVA: 0x00199EDC File Offset: 0x001980DC
 	public WeaponTrialData[] GetPreviewWeaponDataList()
 	{
 		List<WeaponTrialData> list = new List<WeaponTrialData>();
@@ -332,15 +327,15 @@ public class ActivityBlackCoastData : ActivityBaseData
 		return list.ToArray();
 	}
 
-	// Token: 0x04003721 RID: 14113
+	// Token: 0x040037BA RID: 14266
 	private Dictionary<int, BlackCoastProgressRewardData> ProgressRewardMap = new Dictionary<int, BlackCoastProgressRewardData>();
 
-	// Token: 0x04003722 RID: 14114
+	// Token: 0x040037BB RID: 14267
 	private Dictionary<int, BlackCoastStageInfo> Stages = new Dictionary<int, BlackCoastStageInfo>();
 
-	// Token: 0x04003723 RID: 14115
+	// Token: 0x040037BC RID: 14268
 	private int ProgressItemId;
 
-	// Token: 0x04003724 RID: 14116
+	// Token: 0x040037BD RID: 14269
 	private int ProgressItemTotal;
 }

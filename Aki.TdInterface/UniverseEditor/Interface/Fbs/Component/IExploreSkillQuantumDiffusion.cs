@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020051FE RID: 20990
+	// Token: 0x02005766 RID: 22374
 	public struct IExploreSkillQuantumDiffusion : IFlatbufferObject
 	{
-		// Token: 0x170099C2 RID: 39362
-		// (get) Token: 0x0602219E RID: 139678 RVA: 0x004BB967 File Offset: 0x004B9B67
+		// Token: 0x1700A1BE RID: 41406
+		// (get) Token: 0x06024134 RID: 147764 RVA: 0x004F642B File Offset: 0x004F462B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602219F RID: 139679 RVA: 0x004BB974 File Offset: 0x004B9B74
+		// Token: 0x06024135 RID: 147765 RVA: 0x004F6438 File Offset: 0x004F4638
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060221A0 RID: 139680 RVA: 0x004BB97C File Offset: 0x004B9B7C
+		// Token: 0x06024136 RID: 147766 RVA: 0x004F6440 File Offset: 0x004F4640
 		public static IExploreSkillQuantumDiffusion GetRootAsIExploreSkillQuantumDiffusion(ByteBuffer _bb)
 		{
 			return IExploreSkillQuantumDiffusion.GetRootAsIExploreSkillQuantumDiffusion(_bb, default(IExploreSkillQuantumDiffusion));
 		}
 
-		// Token: 0x060221A1 RID: 139681 RVA: 0x004BB998 File Offset: 0x004B9B98
+		// Token: 0x06024137 RID: 147767 RVA: 0x004F645C File Offset: 0x004F465C
 		public static IExploreSkillQuantumDiffusion GetRootAsIExploreSkillQuantumDiffusion(ByteBuffer _bb, IExploreSkillQuantumDiffusion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060221A2 RID: 139682 RVA: 0x004BB9B5 File Offset: 0x004B9BB5
+		// Token: 0x06024138 RID: 147768 RVA: 0x004F6479 File Offset: 0x004F4679
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060221A3 RID: 139683 RVA: 0x004BB9C4 File Offset: 0x004B9BC4
+		// Token: 0x06024139 RID: 147769 RVA: 0x004F6488 File Offset: 0x004F4688
 		public IExploreSkillQuantumDiffusion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170099C3 RID: 39363
-		// (get) Token: 0x060221A4 RID: 139684 RVA: 0x004BB9D4 File Offset: 0x004B9BD4
+		// Token: 0x1700A1BF RID: 41407
+		// (get) Token: 0x0602413A RID: 147770 RVA: 0x004F6498 File Offset: 0x004F4698
 		public EExploreSkillInteractType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170099C4 RID: 39364
-		// (get) Token: 0x060221A5 RID: 139685 RVA: 0x004BBA10 File Offset: 0x004B9C10
+		// Token: 0x1700A1C0 RID: 41408
+		// (get) Token: 0x0602413B RID: 147771 RVA: 0x004F64D4 File Offset: 0x004F46D4
 		public bool NeedFollowShooter
 		{
 			get
@@ -75,7 +75,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060221A6 RID: 139686 RVA: 0x004BBA50 File Offset: 0x004B9C50
+		// Token: 0x0602413C RID: 147772 RVA: 0x004F6514 File Offset: 0x004F4714
 		public IActionInfo? Actions(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -86,8 +86,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170099C5 RID: 39365
-		// (get) Token: 0x060221A7 RID: 139687 RVA: 0x004BBAB0 File Offset: 0x004B9CB0
+		// Token: 0x1700A1C1 RID: 41409
+		// (get) Token: 0x0602413D RID: 147773 RVA: 0x004F6574 File Offset: 0x004F4774
 		public int ActionsLength
 		{
 			get
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170099C6 RID: 39366
-		// (get) Token: 0x060221A8 RID: 139688 RVA: 0x004BBADC File Offset: 0x004B9CDC
+		// Token: 0x1700A1C2 RID: 41410
+		// (get) Token: 0x0602413E RID: 147774 RVA: 0x004F65A0 File Offset: 0x004F47A0
 		public byte NullMask
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060221A9 RID: 139689 RVA: 0x004BBB19 File Offset: 0x004B9D19
+		// Token: 0x0602413F RID: 147775 RVA: 0x004F65DD File Offset: 0x004F47DD
 		public static Offset<IExploreSkillQuantumDiffusion> CreateIExploreSkillQuantumDiffusion(FlatBufferBuilder builder, EExploreSkillInteractType Type = EExploreSkillInteractType.PullGiant, bool NeedFollowShooter = false, VectorOffset ActionsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -127,31 +127,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillQuantumDiffusion.EndIExploreSkillQuantumDiffusion(builder);
 		}
 
-		// Token: 0x060221AA RID: 139690 RVA: 0x004BBB45 File Offset: 0x004B9D45
+		// Token: 0x06024140 RID: 147776 RVA: 0x004F6609 File Offset: 0x004F4809
 		public static void StartIExploreSkillQuantumDiffusion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060221AB RID: 139691 RVA: 0x004BBB4E File Offset: 0x004B9D4E
+		// Token: 0x06024141 RID: 147777 RVA: 0x004F6612 File Offset: 0x004F4812
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060221AC RID: 139692 RVA: 0x004BBB59 File Offset: 0x004B9D59
+		// Token: 0x06024142 RID: 147778 RVA: 0x004F661D File Offset: 0x004F481D
 		public static void AddNeedFollowShooter(FlatBufferBuilder builder, bool needFollowShooter)
 		{
 			builder.AddBool(1, needFollowShooter, false);
 		}
 
-		// Token: 0x060221AD RID: 139693 RVA: 0x004BBB64 File Offset: 0x004B9D64
+		// Token: 0x06024143 RID: 147779 RVA: 0x004F6628 File Offset: 0x004F4828
 		public static void AddActions(FlatBufferBuilder builder, VectorOffset actionsOffset)
 		{
 			builder.AddOffset(2, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x060221AE RID: 139694 RVA: 0x004BBB74 File Offset: 0x004B9D74
+		// Token: 0x06024144 RID: 147780 RVA: 0x004F6638 File Offset: 0x004F4838
 		public static VectorOffset CreateActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060221AF RID: 139695 RVA: 0x004BBBB4 File Offset: 0x004B9DB4
+		// Token: 0x06024145 RID: 147781 RVA: 0x004F6678 File Offset: 0x004F4878
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060221B0 RID: 139696 RVA: 0x004BBBCE File Offset: 0x004B9DCE
+		// Token: 0x06024146 RID: 147782 RVA: 0x004F6692 File Offset: 0x004F4892
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060221B1 RID: 139697 RVA: 0x004BBBEC File Offset: 0x004B9DEC
+		// Token: 0x06024147 RID: 147783 RVA: 0x004F66B0 File Offset: 0x004F48B0
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -186,25 +186,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060221B2 RID: 139698 RVA: 0x004BBC05 File Offset: 0x004B9E05
+		// Token: 0x06024148 RID: 147784 RVA: 0x004F66C9 File Offset: 0x004F48C9
 		public static void StartActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060221B3 RID: 139699 RVA: 0x004BBC10 File Offset: 0x004B9E10
+		// Token: 0x06024149 RID: 147785 RVA: 0x004F66D4 File Offset: 0x004F48D4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060221B4 RID: 139700 RVA: 0x004BBC1B File Offset: 0x004B9E1B
+		// Token: 0x0602414A RID: 147786 RVA: 0x004F66DF File Offset: 0x004F48DF
 		public static Offset<IExploreSkillQuantumDiffusion> EndIExploreSkillQuantumDiffusion(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreSkillQuantumDiffusion>(builder.EndTable());
 		}
 
-		// Token: 0x060221B5 RID: 139701 RVA: 0x004BBC28 File Offset: 0x004B9E28
+		// Token: 0x0602414B RID: 147787 RVA: 0x004F66EC File Offset: 0x004F48EC
 		public IExploreSkillQuantumDiffusionT UnPack()
 		{
 			IExploreSkillQuantumDiffusionT exploreSkillQuantumDiffusionT = new IExploreSkillQuantumDiffusionT();
@@ -212,7 +212,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return exploreSkillQuantumDiffusionT;
 		}
 
-		// Token: 0x060221B6 RID: 139702 RVA: 0x004BBC44 File Offset: 0x004B9E44
+		// Token: 0x0602414C RID: 147788 RVA: 0x004F6708 File Offset: 0x004F4908
 		public void UnPackTo(IExploreSkillQuantumDiffusionT _o)
 		{
 			_o.Type = this.Type;
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060221B7 RID: 139703 RVA: 0x004BBCC8 File Offset: 0x004B9EC8
+		// Token: 0x0602414D RID: 147789 RVA: 0x004F678C File Offset: 0x004F498C
 		public static Offset<IExploreSkillQuantumDiffusion> Pack(FlatBufferBuilder builder, IExploreSkillQuantumDiffusionT _o)
 		{
 			if (_o == null)
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IExploreSkillQuantumDiffusion.CreateIExploreSkillQuantumDiffusion(builder, _o.Type, _o.NeedFollowShooter, actionsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E32F RID: 58159
+		// Token: 0x0400EF35 RID: 61237
 		private Table __p;
 	}
 }

@@ -4,7 +4,7 @@ using CSharpScript.Game.Module.Item;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D40 RID: 19776
+	// Token: 0x02003CFF RID: 15615
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 	})]
 	public class RoleDevelopProjectMaterialListItem : LoopScrollSmallItemGrid<RoleDevelopNeedItem>
 	{
-		// Token: 0x06033186 RID: 209286 RVA: 0x00BE805C File Offset: 0x00BE625C
+		// Token: 0x06027F9B RID: 163739 RVA: 0x00B2F208 File Offset: 0x00B2D408
 		protected override void OnRefresh(RoleDevelopNeedItem data, bool isSelected, int gridIndex)
 		{
 			if (RoleDevelopUtil.IsUnknownItem(data.ItemId))
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.SetToggleInteractive(true);
 		}
 
-		// Token: 0x06033187 RID: 209287 RVA: 0x00BE8148 File Offset: 0x00BE6348
+		// Token: 0x06027F9C RID: 163740 RVA: 0x00B2F2F4 File Offset: 0x00B2D4F4
 		protected override void OnExtendToggleClicked()
 		{
 			RoleDevelopNeedItem roleDevelopNeedItem = this.Data as RoleDevelopNeedItem;
@@ -48,10 +48,10 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			{
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(roleDevelopNeedItem.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(roleDevelopNeedItem.ItemId, true, null, false);
 		}
 
-		// Token: 0x06033188 RID: 209288 RVA: 0x00BE8177 File Offset: 0x00BE6377
+		// Token: 0x06027F9D RID: 163741 RVA: 0x00B2F324 File Offset: 0x00B2D524
 		protected override bool OnCanExecuteChange()
 		{
 			return false;

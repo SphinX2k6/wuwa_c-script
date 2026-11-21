@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200009B RID: 155
+	// Token: 0x020000A3 RID: 163
 	public class ConfigAnniversaryEntranceByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003A2 RID: 930 RVA: 0x0006E143 File Offset: 0x0006C343
+		// Token: 0x060003D2 RID: 978 RVA: 0x000729F7 File Offset: 0x00070BF7
 		static ConfigAnniversaryEntranceByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAnniversaryEntranceByActivityId.CreateStaticDefaultValue), new Action(ConfigAnniversaryEntranceByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003A3 RID: 931 RVA: 0x0006E164 File Offset: 0x0006C364
+		// Token: 0x060003D3 RID: 979 RVA: 0x00072A18 File Offset: 0x00070C18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAnniversaryEntranceByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003A4 RID: 932 RVA: 0x0006E1E3 File Offset: 0x0006C3E3
+		// Token: 0x060003D4 RID: 980 RVA: 0x00072A97 File Offset: 0x00070C97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAnniversaryEntranceByActivityId.LogPair = null;
 			ConfigAnniversaryEntranceByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x060003A5 RID: 933 RVA: 0x0006E1F1 File Offset: 0x0006C3F1
+		// Token: 0x060003D5 RID: 981 RVA: 0x00072AA5 File Offset: 0x00070CA5
 		public static void Init()
 		{
 			ConfigAnniversaryEntranceByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigAnniversaryEntranceByActivityId.HandleId, "db_anniversaryt.db", "select BinData from `AnniversaryEntrance` where ActivityId=?");
 		}
 
-		// Token: 0x060003A6 RID: 934 RVA: 0x0006E20C File Offset: 0x0006C40C
+		// Token: 0x060003D6 RID: 982 RVA: 0x00072AC0 File Offset: 0x00070CC0
 		public static AnniversaryEntrance? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAnniversaryEntranceByActivityId.HandleId, ConfigAnniversaryEntranceByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AnniversaryEntrance?(rootAsAnniversaryEntrance);
 		}
 
-		// Token: 0x04000421 RID: 1057
+		// Token: 0x04000459 RID: 1113
 		private const string DB = "db_anniversaryt.db";
 
-		// Token: 0x04000422 RID: 1058
+		// Token: 0x0400045A RID: 1114
 		private const string FILE = "z.周年庆主题活动.xlsx";
 
-		// Token: 0x04000423 RID: 1059
+		// Token: 0x0400045B RID: 1115
 		private const string TABLE = "AnniversaryEntrance";
 
-		// Token: 0x04000424 RID: 1060
+		// Token: 0x0400045C RID: 1116
 		private const string COMMAND = "select BinData from `AnniversaryEntrance` where ActivityId=?";
 
-		// Token: 0x04000425 RID: 1061
+		// Token: 0x0400045D RID: 1117
 		private const string KEY_PREFIX = "AnniversaryEntranceByActivityId";
 
-		// Token: 0x04000426 RID: 1062
+		// Token: 0x0400045E RID: 1118
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000427 RID: 1063
+		// Token: 0x0400045F RID: 1119
 		private static int HandleId;
 	}
 }

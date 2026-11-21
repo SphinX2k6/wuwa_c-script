@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006377 RID: 25463
+	// Token: 0x020052F5 RID: 21237
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleRoleInfoView : UiPanelBase
 	{
-		// Token: 0x1700934E RID: 37710
-		// (get) Token: 0x060400B9 RID: 262329 RVA: 0x00F7EA62 File Offset: 0x00F7CC62
-		// (set) Token: 0x060400BA RID: 262330 RVA: 0x00F7EA6A File Offset: 0x00F7CC6A
+		// Token: 0x170066B0 RID: 26288
+		// (get) Token: 0x06034D7A RID: 216442 RVA: 0x00EC59C2 File Offset: 0x00EC3BC2
+		// (set) Token: 0x06034D7B RID: 216443 RVA: 0x00EC59CA File Offset: 0x00EC3BCA
 		public new IPinballBattleRoleInfoViewParam OpenParam { get; set; }
 
-		// Token: 0x060400BB RID: 262331 RVA: 0x00F7EA74 File Offset: 0x00F7CC74
+		// Token: 0x06034D7C RID: 216444 RVA: 0x00EC59D4 File Offset: 0x00EC3BD4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060400BC RID: 262332 RVA: 0x00F7ED3C File Offset: 0x00F7CF3C
+		// Token: 0x06034D7D RID: 216445 RVA: 0x00EC5C9C File Offset: 0x00EC3E9C
 		protected override void OnStart()
 		{
 			this.InitRoleLayout();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.OriginalShieldBarWidth = ((sprite2 != null) ? sprite2.GetWidth() : 0f);
 		}
 
-		// Token: 0x060400BD RID: 262333 RVA: 0x00F7EDA4 File Offset: 0x00F7CFA4
+		// Token: 0x06034D7E RID: 216446 RVA: 0x00EC5D04 File Offset: 0x00EC3F04
 		protected override void OnBeforeShow()
 		{
 			List<PinballRoleHeadItemData> list = new List<PinballRoleHeadItemData>();
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.OnRoleHeadItemSelect(list[0]);
 		}
 
-		// Token: 0x060400BE RID: 262334 RVA: 0x00F7EE5B File Offset: 0x00F7D05B
+		// Token: 0x06034D7F RID: 216447 RVA: 0x00EC5DBB File Offset: 0x00EC3FBB
 		private void InitRoleLayout()
 		{
 			this.RoleLayout = new GenericLayout<PinballRoleHeadItem, IPinballRoleHeadItemData>(base.GetVerticalLayout(17), new Func<PinballRoleHeadItem>(this.CreateRoleHeadItem), null, false, true);
 		}
 
-		// Token: 0x060400BF RID: 262335 RVA: 0x00F7EE7F File Offset: 0x00F7D07F
+		// Token: 0x06034D80 RID: 216448 RVA: 0x00EC5DDF File Offset: 0x00EC3FDF
 		private PinballRoleHeadItem CreateRoleHeadItem()
 		{
 			return new PinballRoleHeadItem
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			};
 		}
 
-		// Token: 0x060400C0 RID: 262336 RVA: 0x00F7EE98 File Offset: 0x00F7D098
+		// Token: 0x06034D81 RID: 216449 RVA: 0x00EC5DF8 File Offset: 0x00EC3FF8
 		private void SelectRoleHeadData(PinballRoleHeadItemData data)
 		{
 			if (this.SelectedRoleHeadData != null)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			roleLayout2.RefreshGridProxyByKey<int>(data.RoleConfig.Id);
 		}
 
-		// Token: 0x060400C1 RID: 262337 RVA: 0x00F7EF0C File Offset: 0x00F7D10C
+		// Token: 0x06034D82 RID: 216450 RVA: 0x00EC5E6C File Offset: 0x00EC406C
 		private void OnRoleHeadItemSelect(PinballRoleHeadItemData data)
 		{
 			this.SelectRoleHeadData(data);
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.RefreshBuffScroll(uksc_SkillComp);
 		}
 
-		// Token: 0x060400C2 RID: 262338 RVA: 0x00F7F2D4 File Offset: 0x00F7D4D4
+		// Token: 0x06034D83 RID: 216451 RVA: 0x00EC6234 File Offset: 0x00EC4434
 		private void RefreshBuffScroll(UKSC_SkillComp skillComp)
 		{
 			TMap<UKSC_DA_Buff, int> tmap = new TMap<UKSC_DA_Buff, int>();
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}
 		}
 
-		// Token: 0x060400C3 RID: 262339 RVA: 0x00F7F42C File Offset: 0x00F7D62C
+		// Token: 0x06034D84 RID: 216452 RVA: 0x00EC6390 File Offset: 0x00EC4590
 		private List<PinballAttributeItemData> BuildAttrDataList(TMap<EKSC_AttrType, int> attrs)
 		{
 			List<PinballAttributeItemData> list = new List<PinballAttributeItemData>();
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			return list;
 		}
 
-		// Token: 0x060400C4 RID: 262340 RVA: 0x00F7F5AC File Offset: 0x00F7D7AC
+		// Token: 0x06034D85 RID: 216453 RVA: 0x00EC6510 File Offset: 0x00EC4710
 		private UniTask RefreshRole(PinballRoleConfig config)
 		{
 			PinballBattleRoleInfoView.<RefreshRole>d__22 <RefreshRole>d__;
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			return <RefreshRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060400C5 RID: 262341 RVA: 0x00F7F5F8 File Offset: 0x00F7D7F8
+		// Token: 0x06034D86 RID: 216454 RVA: 0x00EC655C File Offset: 0x00EC475C
 		private void InitDetailTabLayout()
 		{
 			this.DetailTabLayout = new GenericLayout<PinballBattleRoleDetailTabItem, EPinballBattleRoleDetailTabType>(base.GetHorizontalLayout(7), new Func<PinballBattleRoleDetailTabItem>(this.CreateDetailTabItem), null, false, true);
@@ -425,7 +425,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}, false);
 		}
 
-		// Token: 0x060400C6 RID: 262342 RVA: 0x00F7F65F File Offset: 0x00F7D85F
+		// Token: 0x06034D87 RID: 216455 RVA: 0x00EC65C3 File Offset: 0x00EC47C3
 		private PinballBattleRoleDetailTabItem CreateDetailTabItem()
 		{
 			return new PinballBattleRoleDetailTabItem
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			};
 		}
 
-		// Token: 0x060400C7 RID: 262343 RVA: 0x00F7F678 File Offset: 0x00F7D878
+		// Token: 0x06034D88 RID: 216456 RVA: 0x00EC65DC File Offset: 0x00EC47DC
 		private void OnDetailTabItemSelect(EPinballBattleRoleDetailTabType data)
 		{
 			switch (data)
@@ -504,43 +504,43 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}
 		}
 
-		// Token: 0x060400C8 RID: 262344 RVA: 0x00F7F7C0 File Offset: 0x00F7D9C0
+		// Token: 0x06034D89 RID: 216457 RVA: 0x00EC6724 File Offset: 0x00EC4924
 		private void InitSkillScroll()
 		{
 			this.SkillScroll = new GenericScrollViewNew<PinballBattleRoleDetailSkillItem, int>(base.GetScrollViewWithScrollbar(10), new Func<PinballBattleRoleDetailSkillItem>(this.CreateSkillItem), null, false, null);
 		}
 
-		// Token: 0x060400C9 RID: 262345 RVA: 0x00F7F7E4 File Offset: 0x00F7D9E4
+		// Token: 0x06034D8A RID: 216458 RVA: 0x00EC6748 File Offset: 0x00EC4948
 		private PinballBattleRoleDetailSkillItem CreateSkillItem()
 		{
 			return new PinballBattleRoleDetailSkillItem();
 		}
 
-		// Token: 0x060400CA RID: 262346 RVA: 0x00F7F7EB File Offset: 0x00F7D9EB
+		// Token: 0x06034D8B RID: 216459 RVA: 0x00EC674F File Offset: 0x00EC494F
 		private void InitAttrScroll()
 		{
 			this.AttrScroll = new GenericScrollViewNew<PinballAttributeItem, IPinballAttributeItemData>(base.GetScrollViewWithScrollbar(12), new Func<PinballAttributeItem>(this.CreateAttrItem), null, false, null);
 		}
 
-		// Token: 0x060400CB RID: 262347 RVA: 0x00F7F80F File Offset: 0x00F7DA0F
+		// Token: 0x06034D8C RID: 216460 RVA: 0x00EC6773 File Offset: 0x00EC4973
 		private PinballAttributeItem CreateAttrItem()
 		{
 			return new PinballAttributeItem();
 		}
 
-		// Token: 0x060400CC RID: 262348 RVA: 0x00F7F816 File Offset: 0x00F7DA16
+		// Token: 0x06034D8D RID: 216461 RVA: 0x00EC677A File Offset: 0x00EC497A
 		private void InitBuffScroll()
 		{
 			this.BuffScroll = new GenericScrollViewNew<PinballBattleRoleDetailBuffItem, BuffView>(base.GetScrollViewWithScrollbar(14), new Func<PinballBattleRoleDetailBuffItem>(this.CreateBuffItem), null, false, null);
 		}
 
-		// Token: 0x060400CD RID: 262349 RVA: 0x00F7F83A File Offset: 0x00F7DA3A
+		// Token: 0x06034D8E RID: 216462 RVA: 0x00EC679E File Offset: 0x00EC499E
 		private PinballBattleRoleDetailBuffItem CreateBuffItem()
 		{
 			return new PinballBattleRoleDetailBuffItem();
 		}
 
-		// Token: 0x0402160B RID: 136715
+		// Token: 0x0401BF3A RID: 114490
 		[Nullable(new byte[]
 		{
 			2,
@@ -549,7 +549,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericLayout<PinballRoleHeadItem, IPinballRoleHeadItemData> RoleLayout;
 
-		// Token: 0x0402160C RID: 136716
+		// Token: 0x0401BF3B RID: 114491
 		[Nullable(new byte[]
 		{
 			2,
@@ -557,7 +557,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericLayout<PinballBattleRoleDetailTabItem, EPinballBattleRoleDetailTabType> DetailTabLayout;
 
-		// Token: 0x0402160D RID: 136717
+		// Token: 0x0401BF3C RID: 114492
 		[Nullable(new byte[]
 		{
 			2,
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericScrollViewNew<PinballBattleRoleDetailSkillItem, int> SkillScroll;
 
-		// Token: 0x0402160E RID: 136718
+		// Token: 0x0401BF3D RID: 114493
 		[Nullable(new byte[]
 		{
 			2,
@@ -574,7 +574,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericScrollViewNew<PinballAttributeItem, IPinballAttributeItemData> AttrScroll;
 
-		// Token: 0x0402160F RID: 136719
+		// Token: 0x0401BF3E RID: 114494
 		[Nullable(new byte[]
 		{
 			2,
@@ -583,59 +583,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericScrollViewNew<PinballBattleRoleDetailBuffItem, BuffView> BuffScroll;
 
-		// Token: 0x04021610 RID: 136720
+		// Token: 0x0401BF3F RID: 114495
 		private float OriginalHpBarWidth;
 
-		// Token: 0x04021611 RID: 136721
+		// Token: 0x0401BF40 RID: 114496
 		private float OriginalShieldBarWidth;
 
-		// Token: 0x04021612 RID: 136722
+		// Token: 0x0401BF41 RID: 114497
 		[Nullable(2)]
 		private PinballRoleHeadItemData SelectedRoleHeadData;
 
-		// Token: 0x0200C590 RID: 50576
+		// Token: 0x0200AF77 RID: 44919
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403BA2F RID: 244271
+			// Token: 0x04036391 RID: 222097
 			TexRoleType,
-			// Token: 0x0403BA30 RID: 244272
+			// Token: 0x04036392 RID: 222098
 			TxtRoleName,
-			// Token: 0x0403BA31 RID: 244273
+			// Token: 0x04036393 RID: 222099
 			TxtRoleLevel,
-			// Token: 0x0403BA32 RID: 244274
+			// Token: 0x04036394 RID: 222100
 			TxtHpNum,
-			// Token: 0x0403BA33 RID: 244275
+			// Token: 0x04036395 RID: 222101
 			SpriteHpBar,
-			// Token: 0x0403BA34 RID: 244276
+			// Token: 0x04036396 RID: 222102
 			TxtShieldNum,
-			// Token: 0x0403BA35 RID: 244277
+			// Token: 0x04036397 RID: 222103
 			SpriteShieldBar,
-			// Token: 0x0403BA36 RID: 244278
+			// Token: 0x04036398 RID: 222104
 			DetailTabLayout,
-			// Token: 0x0403BA37 RID: 244279
+			// Token: 0x04036399 RID: 222105
 			DetailTabLayoutItem,
-			// Token: 0x0403BA38 RID: 244280
+			// Token: 0x0403639A RID: 222106
 			DetailEmpty,
-			// Token: 0x0403BA39 RID: 244281
+			// Token: 0x0403639B RID: 222107
 			ScrollSkill,
-			// Token: 0x0403BA3A RID: 244282
+			// Token: 0x0403639C RID: 222108
 			ScrollSkillItem,
-			// Token: 0x0403BA3B RID: 244283
+			// Token: 0x0403639D RID: 222109
 			ScrollAttr,
-			// Token: 0x0403BA3C RID: 244284
+			// Token: 0x0403639E RID: 222110
 			ScrollAttrItem,
-			// Token: 0x0403BA3D RID: 244285
+			// Token: 0x0403639F RID: 222111
 			ScrollBuff,
-			// Token: 0x0403BA3E RID: 244286
+			// Token: 0x040363A0 RID: 222112
 			BuffLayoutItem,
-			// Token: 0x0403BA3F RID: 244287
+			// Token: 0x040363A1 RID: 222113
 			SpineRole,
-			// Token: 0x0403BA40 RID: 244288
+			// Token: 0x040363A2 RID: 222114
 			RoleHeadLayout,
-			// Token: 0x0403BA41 RID: 244289
+			// Token: 0x040363A3 RID: 222115
 			RoleHeadLayoutItem,
-			// Token: 0x0403BA42 RID: 244290
+			// Token: 0x040363A4 RID: 222116
 			PnlShiledNum
 		}
 	}

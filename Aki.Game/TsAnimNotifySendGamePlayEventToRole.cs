@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001D4 RID: 468
+// Token: 0x020001D8 RID: 472
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySendGamePlayEventToRole.TsAnimNotifySendGamePlayEventToRole_C")]
 public class TsAnimNotifySendGamePlayEventToRole : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170004AE RID: 1198
-	// (get) Token: 0x06001D31 RID: 7473 RVA: 0x000939E7 File Offset: 0x00091BE7
-	// (set) Token: 0x06001D32 RID: 7474 RVA: 0x000939FB File Offset: 0x00091BFB
+	// Token: 0x170004D0 RID: 1232
+	// (get) Token: 0x06001DCE RID: 7630 RVA: 0x0009A7FF File Offset: 0x000989FF
+	// (set) Token: 0x06001DCF RID: 7631 RVA: 0x0009A813 File Offset: 0x00098A13
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag 事件Tag
 	{
@@ -27,32 +27,28 @@ public class TsAnimNotifySendGamePlayEventToRole : TsAnimNotifyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x06001D33 RID: 7475 RVA: 0x00093A10 File Offset: 0x00091C10
+	// Token: 0x06001DD0 RID: 7632 RVA: 0x0009A828 File Offset: 0x00098A28
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySendGamePlayEventToRole) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifySendGamePlayEventToRole.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001D34 RID: 7476 RVA: 0x00093AB0 File Offset: 0x00091CB0
+	// Token: 0x06001DD1 RID: 7633 RVA: 0x0009A8E0 File Offset: 0x00098AE0
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -81,37 +77,33 @@ public class TsAnimNotifySendGamePlayEventToRole : TsAnimNotifyBase, IUnrealUObj
 		return true;
 	}
 
-	// Token: 0x06001D35 RID: 7477 RVA: 0x00093B08 File Offset: 0x00091D08
+	// Token: 0x06001DD2 RID: 7634 RVA: 0x0009A938 File Offset: 0x00098B38
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifySendGamePlayEventToRole) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifySendGamePlayEventToRole.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001D36 RID: 7478 RVA: 0x00093B83 File Offset: 0x00091D83
+	// Token: 0x06001DD3 RID: 7635 RVA: 0x0009A9C8 File Offset: 0x00098BC8
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "发送动画通知广播给主控角色";
 	}
 
-	// Token: 0x06001D37 RID: 7479 RVA: 0x00093B8A File Offset: 0x00091D8A
+	// Token: 0x06001DD4 RID: 7636 RVA: 0x0009A9CF File Offset: 0x00098BCF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifySendGamePlayEventToRole._ClassPtr == IntPtr.Zero)
@@ -121,23 +113,23 @@ public class TsAnimNotifySendGamePlayEventToRole : TsAnimNotifyBase, IUnrealUObj
 		return TsAnimNotifySendGamePlayEventToRole._ClassPtr;
 	}
 
-	// Token: 0x06001D38 RID: 7480 RVA: 0x00093BB0 File Offset: 0x00091DB0
+	// Token: 0x06001DD5 RID: 7637 RVA: 0x0009A9F4 File Offset: 0x00098BF4
 	public TsAnimNotifySendGamePlayEventToRole() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySendGamePlayEventToRole.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001D39 RID: 7481 RVA: 0x00093BD8 File Offset: 0x00091DD8
+	// Token: 0x06001DD6 RID: 7638 RVA: 0x0009AA1C File Offset: 0x00098C1C
 	[NullableContext(1)]
 	public TsAnimNotifySendGamePlayEventToRole(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifySendGamePlayEventToRole.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001D3A RID: 7482 RVA: 0x00093C0B File Offset: 0x00091E0B
+	// Token: 0x06001DD7 RID: 7639 RVA: 0x0009AA4F File Offset: 0x00098C4F
 	protected TsAnimNotifySendGamePlayEventToRole(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001D3B RID: 7483 RVA: 0x00093C14 File Offset: 0x00091E14
+	// Token: 0x06001DD8 RID: 7640 RVA: 0x0009AA58 File Offset: 0x00098C58
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -145,22 +137,22 @@ public class TsAnimNotifySendGamePlayEventToRole : TsAnimNotifyBase, IUnrealUObj
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001D3C RID: 7484 RVA: 0x00093C47 File Offset: 0x00091E47
+	// Token: 0x06001DD9 RID: 7641 RVA: 0x0009AA8B File Offset: 0x00098C8B
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001236 RID: 4662
+	// Token: 0x04001279 RID: 4729
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifySendGamePlayEventToRole.TsAnimNotifySendGamePlayEventToRole_C";
 
-	// Token: 0x04001237 RID: 4663
+	// Token: 0x0400127A RID: 4730
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001238 RID: 4664
+	// Token: 0x0400127B RID: 4731
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001239 RID: 4665
+	// Token: 0x0400127C RID: 4732
 	private static int __PropertyOffset_事件Tag;
 }

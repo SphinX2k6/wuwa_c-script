@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019C4 RID: 6596
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B51 RID: 6993
 	public class IDreamlessWarning : ICommonTipType
 	{
-		// Token: 0x06008D4F RID: 36175 RVA: 0x0014B2E4 File Offset: 0x001494E4
+		// Token: 0x06009491 RID: 38033 RVA: 0x0015ADF0 File Offset: 0x00158FF0
 		private IDreamlessWarning_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008D50 RID: 36176 RVA: 0x0014B31C File Offset: 0x0014951C
+		// Token: 0x06009492 RID: 38034 RVA: 0x0015AE28 File Offset: 0x00159028
 		public static IDreamlessWarning Create([Nullable(2)] IDreamlessWarning instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D51 RID: 36177 RVA: 0x0014B32F File Offset: 0x0014952F
+		// Token: 0x06009493 RID: 38035 RVA: 0x0015AE3B File Offset: 0x0015903B
 		public static IDreamlessWarning CreateFromSetValue([Nullable(2)] IDreamlessWarning_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D52 RID: 36178 RVA: 0x0014B342 File Offset: 0x00149542
+		// Token: 0x06009494 RID: 38036 RVA: 0x0015AE4E File Offset: 0x0015904E
 		public new IDreamlessWarning_SetValue ToSetValue()
 		{
 			return new IDreamlessWarning_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D56 RID: 11606
-		// (get) Token: 0x06008D53 RID: 36179 RVA: 0x0014B361 File Offset: 0x00149561
-		// (set) Token: 0x06008D54 RID: 36180 RVA: 0x0014B38C File Offset: 0x0014958C
+		// Token: 0x17002F5B RID: 12123
+		// (get) Token: 0x06009495 RID: 38037 RVA: 0x0015AE6D File Offset: 0x0015906D
+		// (set) Token: 0x06009496 RID: 38038 RVA: 0x0015AE98 File Offset: 0x00159098
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D57 RID: 11607
-		// (get) Token: 0x06008D55 RID: 36181 RVA: 0x0014B39A File Offset: 0x0014959A
-		// (set) Token: 0x06008D56 RID: 36182 RVA: 0x0014B3C5 File Offset: 0x001495C5
+		// Token: 0x17002F5C RID: 12124
+		// (get) Token: 0x06009497 RID: 38039 RVA: 0x0015AEA6 File Offset: 0x001590A6
+		// (set) Token: 0x06009498 RID: 38040 RVA: 0x0015AED1 File Offset: 0x001590D1
 		public virtual string WarningText
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057CF RID: 22479
+		// Token: 0x04005C24 RID: 23588
 		[Nullable(2)]
 		protected new IDreamlessWarning FbInstance;
 
-		// Token: 0x040057D0 RID: 22480
+		// Token: 0x04005C25 RID: 23589
 		[Nullable(2)]
 		protected new IDreamlessWarning_SetValue PocoInterface;
 	}

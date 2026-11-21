@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D1F RID: 3359
+	// Token: 0x02000E19 RID: 3609
 	public class ISceneTextTypeBase
 	{
-		// Token: 0x06004CAA RID: 19626 RVA: 0x000BEF01 File Offset: 0x000BD101
-		[NullableContext(1)]
+		// Token: 0x060051C4 RID: 20932 RVA: 0x000CA5D5 File Offset: 0x000C87D5
 		public static ISceneTextTypeBase Create(ISceneTextTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001829 RID: 6185
-		// (get) Token: 0x06004CAB RID: 19627 RVA: 0x000BEF20 File Offset: 0x000BD120
+		// Token: 0x1700198D RID: 6541
+		// (get) Token: 0x060051C5 RID: 20933 RVA: 0x000CA5F4 File Offset: 0x000C87F4
 		public virtual ESceneTextType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BE4 RID: 11236
+		// Token: 0x04002EA4 RID: 11940
 		private ISceneTextTypeBase Instance;
 	}
 }

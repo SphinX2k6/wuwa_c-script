@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B72 RID: 7026
+// Token: 0x02001031 RID: 4145
 public struct FloroRanchRecommendTipViewParam
 {
-	// Token: 0x04005FE9 RID: 24553
+	// Token: 0x040060B8 RID: 24760
 	[Nullable(1)]
 	public List<FloroRanchUnlockDataBase> RefreshDataList;
 
-	// Token: 0x04005FEA RID: 24554
+	// Token: 0x040060B9 RID: 24761
 	public int DefaultIndex;
 
-	// Token: 0x04005FEB RID: 24555
+	// Token: 0x040060BA RID: 24762
 	public EFloroRanchActivityDataType ActivityDataType;
 }

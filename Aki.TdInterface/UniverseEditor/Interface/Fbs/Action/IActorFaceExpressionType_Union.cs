@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060A7 RID: 24743
+	// Token: 0x02006709 RID: 26377
 	public enum IActorFaceExpressionType_Union : byte
 	{
-		// Token: 0x04010440 RID: 66624
+		// Token: 0x04011244 RID: 70212
 		NONE,
-		// Token: 0x04010441 RID: 66625
+		// Token: 0x04011245 RID: 70213
 		IActorFaceExpressionType,
-		// Token: 0x04010442 RID: 66626
+		// Token: 0x04011246 RID: 70214
 		IActorFaceExpressionPlay,
-		// Token: 0x04010443 RID: 66627
+		// Token: 0x04011247 RID: 70215
 		IActorFaceExpressionStop
 	}
 }

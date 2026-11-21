@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020027FA RID: 10234
+// Token: 0x02001D75 RID: 7541
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 {
-	// Token: 0x06015019 RID: 86041 RVA: 0x00552170 File Offset: 0x00550370
+	// Token: 0x06012A19 RID: 76313 RVA: 0x0057CEE4 File Offset: 0x0057B0E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -39,7 +39,7 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601501A RID: 86042 RVA: 0x00552258 File Offset: 0x00550458
+	// Token: 0x06012A1A RID: 76314 RVA: 0x0057CFCC File Offset: 0x0057B1CC
 	public override void Refresh(IRoleDevRootTabData data, bool isSelected, int gridIndex)
 	{
 		this.TabIndexInternal = gridIndex;
@@ -62,8 +62,8 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		item2.SetUIActive(data.TabIsFinish);
 	}
 
-	// Token: 0x17001BAB RID: 7083
-	// (get) Token: 0x0601501B RID: 86043 RVA: 0x005522D4 File Offset: 0x005504D4
+	// Token: 0x17001C03 RID: 7171
+	// (get) Token: 0x06012A1B RID: 76315 RVA: 0x0057D048 File Offset: 0x0057B248
 	public int TabIndex
 	{
 		get
@@ -72,7 +72,7 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		}
 	}
 
-	// Token: 0x0601501C RID: 86044 RVA: 0x005522DC File Offset: 0x005504DC
+	// Token: 0x06012A1C RID: 76316 RVA: 0x0057D050 File Offset: 0x0057B250
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -83,7 +83,7 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 	}
 
-	// Token: 0x0601501D RID: 86045 RVA: 0x005522F4 File Offset: 0x005504F4
+	// Token: 0x06012A1D RID: 76317 RVA: 0x0057D068 File Offset: 0x0057B268
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -94,19 +94,19 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 	}
 
-	// Token: 0x0601501E RID: 86046 RVA: 0x0055230C File Offset: 0x0055050C
+	// Token: 0x06012A1E RID: 76318 RVA: 0x0057D080 File Offset: 0x0057B280
 	public override object GetKey(IRoleDevRootTabData data, int gridIndex)
 	{
 		return gridIndex;
 	}
 
-	// Token: 0x0601501F RID: 86047 RVA: 0x00552314 File Offset: 0x00550514
+	// Token: 0x06012A1F RID: 76319 RVA: 0x0057D088 File Offset: 0x0057B288
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x06015020 RID: 86048 RVA: 0x00552333 File Offset: 0x00550533
+	// Token: 0x06012A20 RID: 76320 RVA: 0x0057D0A7 File Offset: 0x0057B2A7
 	public void SetToggleState(EToggleState state, bool fireEvent = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -117,7 +117,7 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		extendToggle.SetToggleState(state, fireEvent, false, false);
 	}
 
-	// Token: 0x06015021 RID: 86049 RVA: 0x0055234B File Offset: 0x0055054B
+	// Token: 0x06012A21 RID: 76321 RVA: 0x0057D0BF File Offset: 0x0057B2BF
 	public EToggleState GetToggleState()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -128,7 +128,7 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		return extendToggle.GetToggleState();
 	}
 
-	// Token: 0x06015022 RID: 86050 RVA: 0x0055235F File Offset: 0x0055055F
+	// Token: 0x06012A22 RID: 76322 RVA: 0x0057D0D3 File Offset: 0x0057B2D3
 	protected void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -142,35 +142,35 @@ public class RoleDevRootTabItem : GridProxyAbstract<IRoleDevRootTabData>
 		}
 	}
 
-	// Token: 0x06015023 RID: 86051 RVA: 0x0055237B File Offset: 0x0055057B
+	// Token: 0x06012A23 RID: 76323 RVA: 0x0057D0EF File Offset: 0x0057B2EF
 	private bool OnCanExecuteChange()
 	{
 		Func<int, EToggleState, bool> canClickCallBack = this.CanClickCallBack;
 		return canClickCallBack == null || canClickCallBack(this.TabIndex, this.GetToggleState());
 	}
 
-	// Token: 0x04009DF9 RID: 40441
+	// Token: 0x0400A1E2 RID: 41442
 	private int TabIndexInternal;
 
-	// Token: 0x04009DFA RID: 40442
+	// Token: 0x0400A1E3 RID: 41443
 	[Nullable(2)]
 	public Action<int> OnClickToggleCallBack;
 
-	// Token: 0x04009DFB RID: 40443
+	// Token: 0x0400A1E4 RID: 41444
 	[Nullable(2)]
 	public Func<int, EToggleState, bool> CanClickCallBack;
 
-	// Token: 0x02008E47 RID: 36423
+	// Token: 0x02008090 RID: 32912
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E276 RID: 189046
+		// Token: 0x04029973 RID: 170355
 		Toggle,
-		// Token: 0x0402E277 RID: 189047
+		// Token: 0x04029974 RID: 170356
 		TabName,
-		// Token: 0x0402E278 RID: 189048
+		// Token: 0x04029975 RID: 170357
 		ItemUp,
-		// Token: 0x0402E279 RID: 189049
+		// Token: 0x04029976 RID: 170358
 		ItemFinish
 	}
 }

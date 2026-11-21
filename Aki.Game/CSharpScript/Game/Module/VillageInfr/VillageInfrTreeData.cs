@@ -3,22 +3,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200488F RID: 18575
+	// Token: 0x02003806 RID: 14342
 	public class VillageInfrTreeData : IVillageInfrTreeData
 	{
-		// Token: 0x17007933 RID: 31027
-		// (get) Token: 0x06030975 RID: 199029 RVA: 0x00B48FD1 File Offset: 0x00B471D1
-		// (set) Token: 0x06030976 RID: 199030 RVA: 0x00B48FD9 File Offset: 0x00B471D9
+		// Token: 0x17004C9B RID: 19611
+		// (get) Token: 0x060254A1 RID: 152737 RVA: 0x00A83DD9 File Offset: 0x00A81FD9
+		// (set) Token: 0x060254A2 RID: 152738 RVA: 0x00A83DE1 File Offset: 0x00A81FE1
 		public int Id { get; set; }
 
-		// Token: 0x17007934 RID: 31028
-		// (get) Token: 0x06030977 RID: 199031 RVA: 0x00B48FE2 File Offset: 0x00B471E2
-		// (set) Token: 0x06030978 RID: 199032 RVA: 0x00B48FEA File Offset: 0x00B471EA
+		// Token: 0x17004C9C RID: 19612
+		// (get) Token: 0x060254A3 RID: 152739 RVA: 0x00A83DEA File Offset: 0x00A81FEA
+		// (set) Token: 0x060254A4 RID: 152740 RVA: 0x00A83DF2 File Offset: 0x00A81FF2
 		public InfrV2StatusPb Status { get; set; }
 
-		// Token: 0x17007935 RID: 31029
-		// (get) Token: 0x06030979 RID: 199033 RVA: 0x00B48FF3 File Offset: 0x00B471F3
-		// (set) Token: 0x0603097A RID: 199034 RVA: 0x00B48FFB File Offset: 0x00B471FB
+		// Token: 0x17004C9D RID: 19613
+		// (get) Token: 0x060254A5 RID: 152741 RVA: 0x00A83DFB File Offset: 0x00A81FFB
+		// (set) Token: 0x060254A6 RID: 152742 RVA: 0x00A83E03 File Offset: 0x00A82003
 		public long CompleteTime { get; set; }
 	}
 }

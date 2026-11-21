@@ -9,12 +9,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Gamepad
 {
-	// Token: 0x020059F3 RID: 23027
+	// Token: 0x020049CF RID: 18895
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GamepadPsFeedbackListenTagModule
 	{
-		// Token: 0x0603A5DD RID: 239069 RVA: 0x00DE36EA File Offset: 0x00DE18EA
+		// Token: 0x0602F526 RID: 193830 RVA: 0x00D33C3C File Offset: 0x00D31E3C
 		public void Init()
 		{
 			this.AddEvents();
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5DE RID: 239070 RVA: 0x00DE3704 File Offset: 0x00DE1904
+		// Token: 0x0602F527 RID: 193831 RVA: 0x00D33C56 File Offset: 0x00D31E56
 		public void Clear()
 		{
 			this.RemoveEvents();
 			this.ClearListenTagData();
 		}
 
-		// Token: 0x0603A5DF RID: 239071 RVA: 0x00DE3714 File Offset: 0x00DE1914
+		// Token: 0x0602F528 RID: 193832 RVA: 0x00D33C64 File Offset: 0x00D31E64
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<global::EInputControllerType, global::EInputControllerType>(EEventName.InputControllerChange, new Action<global::EInputControllerType, global::EInputControllerType>(this.OnInputControllerChange));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			InputDistributeController.Instance.BindAction("组合主键", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputCombineButton));
 		}
 
-		// Token: 0x0603A5E0 RID: 239072 RVA: 0x00DE37AC File Offset: 0x00DE19AC
+		// Token: 0x0602F529 RID: 193833 RVA: 0x00D33CFC File Offset: 0x00D31EFC
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove<global::EInputControllerType, global::EInputControllerType>(EEventName.InputControllerChange, new Action<global::EInputControllerType, global::EInputControllerType>(this.OnInputControllerChange));
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			InputDistributeController.Instance.UnBindAction("组合主键", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputCombineButton));
 		}
 
-		// Token: 0x0603A5E1 RID: 239073 RVA: 0x00DE3844 File Offset: 0x00DE1A44
+		// Token: 0x0602F52A RID: 193834 RVA: 0x00D33D94 File Offset: 0x00D31F94
 		private void InitPsFeedbackTagSettings()
 		{
 			if (this.IsInitListenTags)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5E2 RID: 239074 RVA: 0x00DE38F0 File Offset: 0x00DE1AF0
+		// Token: 0x0602F52B RID: 193835 RVA: 0x00D33E40 File Offset: 0x00D32040
 		[NullableContext(2)]
 		private void InitEntityListenTags(Entity entity)
 		{
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5E3 RID: 239075 RVA: 0x00DE3A14 File Offset: 0x00DE1C14
+		// Token: 0x0602F52C RID: 193836 RVA: 0x00D33F64 File Offset: 0x00D32164
 		private bool AddFeedbackTagData(GamepadPsFeedbackListenTagModule.PsFeedbackTagData tagData, bool needSort = true)
 		{
 			List<GamepadPsFeedbackListenTagModule.PsFeedbackTagData> list = this.GamepadPsFeedbackTagDataQueue;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			return false;
 		}
 
-		// Token: 0x0603A5E4 RID: 239076 RVA: 0x00DE3AA4 File Offset: 0x00DE1CA4
+		// Token: 0x0602F52D RID: 193837 RVA: 0x00D33FF4 File Offset: 0x00D321F4
 		private bool RemoveFeedbackTagData(GamepadPsFeedbackListenTagModule.PsFeedbackTagData tagData, bool needSort = true)
 		{
 			List<GamepadPsFeedbackListenTagModule.PsFeedbackTagData> gamepadPsFeedbackTagDataQueue = this.GamepadPsFeedbackTagDataQueue;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			return false;
 		}
 
-		// Token: 0x0603A5E5 RID: 239077 RVA: 0x00DE3B04 File Offset: 0x00DE1D04
+		// Token: 0x0602F52E RID: 193838 RVA: 0x00D34054 File Offset: 0x00D32254
 		private void ApplyFeedbackTagData()
 		{
 			List<GamepadPsFeedbackListenTagModule.PsFeedbackTagData> gamepadPsFeedbackTagDataQueue = this.GamepadPsFeedbackTagDataQueue;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5E6 RID: 239078 RVA: 0x00DE3B64 File Offset: 0x00DE1D64
+		// Token: 0x0602F52F RID: 193839 RVA: 0x00D340B4 File Offset: 0x00D322B4
 		private void ClearListenTagData()
 		{
 			if (this.GamepadPsFeedbackListenTasks != null)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			this.CurrentTagDataFeedbackId = "";
 		}
 
-		// Token: 0x0603A5E7 RID: 239079 RVA: 0x00DE3BE8 File Offset: 0x00DE1DE8
+		// Token: 0x0602F530 RID: 193840 RVA: 0x00D34138 File Offset: 0x00D32338
 		private void OnPsFeedbackListenTagChanged(int tagId, bool tagExist)
 		{
 			GamepadPsFeedbackListenTagModule.PsFeedbackTagData tagData;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5E8 RID: 239080 RVA: 0x00DE3C2A File Offset: 0x00DE1E2A
+		// Token: 0x0602F531 RID: 193841 RVA: 0x00D3417A File Offset: 0x00D3237A
 		private void OnInputControllerChange(global::EInputControllerType last, global::EInputControllerType now)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			this.ClearListenTagData();
 		}
 
-		// Token: 0x0603A5E9 RID: 239081 RVA: 0x00DE3C68 File Offset: 0x00DE1E68
+		// Token: 0x0602F532 RID: 193842 RVA: 0x00D341B8 File Offset: 0x00D323B8
 		private void OnChangeRole(EntityHandle newEntity, EntityHandle oldEntity)
 		{
 			this.ClearListenTagData();
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			this.InitEntityListenTags(newEntity.Entity);
 		}
 
-		// Token: 0x0603A5EA RID: 239082 RVA: 0x00DE3C8F File Offset: 0x00DE1E8F
+		// Token: 0x0602F533 RID: 193843 RVA: 0x00D341DF File Offset: 0x00D323DF
 		private void OnInputDistributeTagChanged(IReadOnlyList<InputDistributeTag> tagList)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5EB RID: 239083 RVA: 0x00DE3CA4 File Offset: 0x00DE1EA4
+		// Token: 0x0602F534 RID: 193844 RVA: 0x00D341F4 File Offset: 0x00D323F4
 		private void OnCommonKeySettingKeyChange(KeySettingRowData keyData, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 		{
 			if (inputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Gamepad && !string.IsNullOrEmpty(this.CurrentFeedbackId))
@@ -267,14 +267,14 @@ namespace CSharpScript.Game.Module.Gamepad
 			}
 		}
 
-		// Token: 0x0603A5EC RID: 239084 RVA: 0x00DE3D01 File Offset: 0x00DE1F01
+		// Token: 0x0602F535 RID: 193845 RVA: 0x00D34251 File Offset: 0x00D32451
 		private void OnInputCombineButton(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification identification)
 		{
 			this.IsInCombinationKey = (actionType == InputDistributeDefine.EActionType.Press);
 			this.TryRefreshFeedback();
 		}
 
-		// Token: 0x0603A5ED RID: 239085 RVA: 0x00DE3D13 File Offset: 0x00DE1F13
+		// Token: 0x0602F536 RID: 193846 RVA: 0x00D34263 File Offset: 0x00D32463
 		private void TryRefreshFeedback()
 		{
 			if (!this.CheckFeedbackCondition())
@@ -285,19 +285,19 @@ namespace CSharpScript.Game.Module.Gamepad
 			this.RefreshFeedback();
 		}
 
-		// Token: 0x0603A5EE RID: 239086 RVA: 0x00DE3D2A File Offset: 0x00DE1F2A
+		// Token: 0x0602F537 RID: 193847 RVA: 0x00D3427A File Offset: 0x00D3247A
 		private bool CheckFeedbackCondition()
 		{
 			return this.CheckInputDistribute() && !this.IsInCombinationKey;
 		}
 
-		// Token: 0x0603A5EF RID: 239087 RVA: 0x00DE3D41 File Offset: 0x00DE1F41
+		// Token: 0x0602F538 RID: 193848 RVA: 0x00D34291 File Offset: 0x00D32491
 		private bool CheckInputDistribute()
 		{
 			return InputDistributeModel.Instance.IsTagMatchAnyCurrentInputTag("FightInputRoot", false);
 		}
 
-		// Token: 0x0603A5F0 RID: 239088 RVA: 0x00DE3D54 File Offset: 0x00DE1F54
+		// Token: 0x0602F539 RID: 193849 RVA: 0x00D342A4 File Offset: 0x00D324A4
 		private void RefreshFeedback()
 		{
 			string currentTagDataFeedbackId = this.CurrentTagDataFeedbackId;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			GamepadController.Instance.TryAddFeedbackReason(EGamepadPsFeedbackReason.ListenTag, currentTagDataFeedbackId);
 		}
 
-		// Token: 0x0603A5F1 RID: 239089 RVA: 0x00DE3D99 File Offset: 0x00DE1F99
+		// Token: 0x0602F53A RID: 193850 RVA: 0x00D342E9 File Offset: 0x00D324E9
 		private void StopFeedback()
 		{
 			if (string.IsNullOrEmpty(this.CurrentFeedbackId))
@@ -325,7 +325,7 @@ namespace CSharpScript.Game.Module.Gamepad
 			GamepadController.Instance.RemoveFeedbackReason(EGamepadPsFeedbackReason.ListenTag);
 		}
 
-		// Token: 0x0401E6D1 RID: 124625
+		// Token: 0x04019178 RID: 102776
 		[Nullable(new byte[]
 		{
 			2,
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Gamepad
 		})]
 		private Dictionary<int, GamepadPsFeedbackListenTagModule.PsFeedbackTagData> GamepadPsFeedbackListenTagsMap;
 
-		// Token: 0x0401E6D2 RID: 124626
+		// Token: 0x04019179 RID: 102777
 		[Nullable(new byte[]
 		{
 			2,
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Gamepad
 		})]
 		private List<GamepadPsFeedbackListenTagModule.PsFeedbackTagData> GamepadPsFeedbackTagDataQueue;
 
-		// Token: 0x0401E6D3 RID: 124627
+		// Token: 0x0401917A RID: 102778
 		[Nullable(new byte[]
 		{
 			2,
@@ -349,33 +349,33 @@ namespace CSharpScript.Game.Module.Gamepad
 		})]
 		private List<ITagTask> GamepadPsFeedbackListenTasks;
 
-		// Token: 0x0401E6D4 RID: 124628
+		// Token: 0x0401917B RID: 102779
 		private bool IsInitListenTags;
 
-		// Token: 0x0401E6D5 RID: 124629
+		// Token: 0x0401917C RID: 102780
 		private string CurrentTagDataFeedbackId = "";
 
-		// Token: 0x0401E6D6 RID: 124630
+		// Token: 0x0401917D RID: 102781
 		private string CurrentFeedbackId = "";
 
-		// Token: 0x0401E6D7 RID: 124631
+		// Token: 0x0401917E RID: 102782
 		private bool IsInCombinationKey;
 
-		// Token: 0x0200BC4A RID: 48202
+		// Token: 0x0200A654 RID: 42580
 		[Nullable(0)]
 		private class PsFeedbackTagData
 		{
-			// Token: 0x1700A259 RID: 41561
-			// (get) Token: 0x0604FCC0 RID: 326848 RVA: 0x0155C356 File Offset: 0x0155A556
-			// (set) Token: 0x0604FCC1 RID: 326849 RVA: 0x0155C35E File Offset: 0x0155A55E
+			// Token: 0x170079F6 RID: 31222
+			// (get) Token: 0x06046213 RID: 287251 RVA: 0x015157A2 File Offset: 0x015139A2
+			// (set) Token: 0x06046214 RID: 287252 RVA: 0x015157AA File Offset: 0x015139AA
 			public string FeedbackId { get; set; }
 
-			// Token: 0x1700A25A RID: 41562
-			// (get) Token: 0x0604FCC2 RID: 326850 RVA: 0x0155C367 File Offset: 0x0155A567
-			// (set) Token: 0x0604FCC3 RID: 326851 RVA: 0x0155C36F File Offset: 0x0155A56F
+			// Token: 0x170079F7 RID: 31223
+			// (get) Token: 0x06046215 RID: 287253 RVA: 0x015157B3 File Offset: 0x015139B3
+			// (set) Token: 0x06046216 RID: 287254 RVA: 0x015157BB File Offset: 0x015139BB
 			public int Priority { get; set; }
 
-			// Token: 0x0604FCC4 RID: 326852 RVA: 0x0155C378 File Offset: 0x0155A578
+			// Token: 0x06046217 RID: 287255 RVA: 0x015157C4 File Offset: 0x015139C4
 			public PsFeedbackTagData(string feedbackId, int priority)
 			{
 				this.FeedbackId = feedbackId;

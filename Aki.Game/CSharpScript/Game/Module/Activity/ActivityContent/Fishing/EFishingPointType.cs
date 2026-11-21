@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A1 RID: 26017
+	// Token: 0x0200551F RID: 21791
 	public enum EFishingPointType
 	{
-		// Token: 0x04021F5A RID: 139098
+		// Token: 0x0401C88B RID: 116875
 		Config,
-		// Token: 0x04021F5B RID: 139099
+		// Token: 0x0401C88C RID: 116876
 		Temp
 	}
 }

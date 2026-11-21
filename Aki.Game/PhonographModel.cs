@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
@@ -8,13 +7,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200254E RID: 9550
+// Token: 0x02001A39 RID: 6713
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class PhonographModel : ModelBase
 {
-	// Token: 0x060133CB RID: 78795 RVA: 0x004C8D7C File Offset: 0x004C6F7C
+	// Token: 0x060108AB RID: 67755 RVA: 0x004D78F8 File Offset: 0x004D5AF8
 	protected override bool OnInit()
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -30,9 +29,9 @@ public class PhonographModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x170018DA RID: 6362
-	// (get) Token: 0x060133CD RID: 78797 RVA: 0x004C8DFC File Offset: 0x004C6FFC
-	// (set) Token: 0x060133CC RID: 78796 RVA: 0x004C8DE8 File Offset: 0x004C6FE8
+	// Token: 0x17001913 RID: 6419
+	// (get) Token: 0x060108AD RID: 67757 RVA: 0x004D7978 File Offset: 0x004D5B78
+	// (set) Token: 0x060108AC RID: 67756 RVA: 0x004D7964 File Offset: 0x004D5B64
 	public int RecordMusicId
 	{
 		get
@@ -50,7 +49,7 @@ public class PhonographModel : ModelBase
 		}
 	}
 
-	// Token: 0x060133CE RID: 78798 RVA: 0x004C8E24 File Offset: 0x004C7024
+	// Token: 0x060108AE RID: 67758 RVA: 0x004D79A0 File Offset: 0x004D5BA0
 	public int GetRecordMusicId(int actorEntityId)
 	{
 		int result;
@@ -61,7 +60,7 @@ public class PhonographModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060133CF RID: 78799 RVA: 0x004C8E44 File Offset: 0x004C7044
+	// Token: 0x060108AF RID: 67759 RVA: 0x004D79C0 File Offset: 0x004D5BC0
 	public int GetPlayIdRecord(int actorEntityId)
 	{
 		int result;
@@ -72,19 +71,19 @@ public class PhonographModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060133D0 RID: 78800 RVA: 0x004C8E64 File Offset: 0x004C7064
+	// Token: 0x060108B0 RID: 67760 RVA: 0x004D79E0 File Offset: 0x004D5BE0
 	public void SetPlayIdRecord(int actorEntityId, int musicId)
 	{
 		this.PlayIdRecordMap[actorEntityId] = musicId;
 	}
 
-	// Token: 0x060133D1 RID: 78801 RVA: 0x004C8E73 File Offset: 0x004C7073
+	// Token: 0x060108B1 RID: 67761 RVA: 0x004D79EF File Offset: 0x004D5BEF
 	public void RemovePlayIdRecord(int actorEntityId)
 	{
 		this.PlayIdRecordMap.Remove(actorEntityId);
 	}
 
-	// Token: 0x060133D2 RID: 78802 RVA: 0x004C8E84 File Offset: 0x004C7084
+	// Token: 0x060108B2 RID: 67762 RVA: 0x004D7A00 File Offset: 0x004D5C00
 	public bool IsUnlockMusic(int musicId)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -92,13 +91,13 @@ public class PhonographModel : ModelBase
 		return (phonographMusic != null && phonographMusic.Value.Lock) || this.UnlockMusicIds.Contains(musicId);
 	}
 
-	// Token: 0x060133D3 RID: 78803 RVA: 0x004C8ED4 File Offset: 0x004C70D4
+	// Token: 0x060108B3 RID: 67763 RVA: 0x004D7A50 File Offset: 0x004D5C50
 	public bool IsNewMusic(int musicId)
 	{
 		return this.NewMusicIds.Contains(musicId);
 	}
 
-	// Token: 0x060133D4 RID: 78804 RVA: 0x004C8EE4 File Offset: 0x004C70E4
+	// Token: 0x060108B4 RID: 67764 RVA: 0x004D7A60 File Offset: 0x004D5C60
 	public void RemoveNewMusic(int musicId)
 	{
 		int num = this.NewMusicIds.IndexOf(musicId);
@@ -108,8 +107,8 @@ public class PhonographModel : ModelBase
 		}
 	}
 
-	// Token: 0x170018DB RID: 6363
-	// (get) Token: 0x060133D5 RID: 78805 RVA: 0x004C8F10 File Offset: 0x004C7110
+	// Token: 0x17001914 RID: 6420
+	// (get) Token: 0x060108B5 RID: 67765 RVA: 0x004D7A8C File Offset: 0x004D5C8C
 	[Nullable(2)]
 	public AActor EntityActor
 	{
@@ -132,8 +131,8 @@ public class PhonographModel : ModelBase
 		}
 	}
 
-	// Token: 0x170018DC RID: 6364
-	// (get) Token: 0x060133D6 RID: 78806 RVA: 0x004C8F58 File Offset: 0x004C7158
+	// Token: 0x17001915 RID: 6421
+	// (get) Token: 0x060108B6 RID: 67766 RVA: 0x004D7AD4 File Offset: 0x004D5CD4
 	public int? EntityId
 	{
 		get
@@ -153,7 +152,7 @@ public class PhonographModel : ModelBase
 		}
 	}
 
-	// Token: 0x060133D7 RID: 78807 RVA: 0x004C8FA8 File Offset: 0x004C71A8
+	// Token: 0x060108B7 RID: 67767 RVA: 0x004D7B24 File Offset: 0x004D5D24
 	public bool CheckAlbumHasNewMusic(int albumId)
 	{
 		PhonographConfig instance = PhonographConfig.Instance;
@@ -162,7 +161,7 @@ public class PhonographModel : ModelBase
 			if (this.IsNewMusic(phonographMusic.Id))
 			{
 				int[] albumArray = phonographMusic.GetAlbumArray();
-				if (albumArray != null && albumArray.Contains(albumId))
+				if (albumArray != null && Array.IndexOf<int>(albumArray, albumId) >= 0)
 				{
 					return true;
 				}
@@ -171,7 +170,7 @@ public class PhonographModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060133D8 RID: 78808 RVA: 0x004C902C File Offset: 0x004C722C
+	// Token: 0x060108B8 RID: 67768 RVA: 0x004D7BAC File Offset: 0x004D5DAC
 	public void ClearPlayInfo()
 	{
 		this.CurrentPlayMusicId = 0;
@@ -180,7 +179,7 @@ public class PhonographModel : ModelBase
 		this.CurrentPlayMusicTotalTime = 0;
 	}
 
-	// Token: 0x060133D9 RID: 78809 RVA: 0x004C904C File Offset: 0x004C724C
+	// Token: 0x060108B9 RID: 67769 RVA: 0x004D7BCC File Offset: 0x004D5DCC
 	[NullableContext(0)]
 	public UniTask<float> GetMusicDuration(int musicId)
 	{
@@ -192,7 +191,7 @@ public class PhonographModel : ModelBase
 		return <GetMusicDuration>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060133DA RID: 78810 RVA: 0x004C9090 File Offset: 0x004C7290
+	// Token: 0x060108BA RID: 67770 RVA: 0x004D7C10 File Offset: 0x004D5E10
 	public int GetCurrentPlayTimeFromAudio()
 	{
 		if (this.CurrentMusicHandleId == -1)
@@ -207,7 +206,7 @@ public class PhonographModel : ModelBase
 		return (int)Math.Floor((double)((float)sourcePlayPosition.Value * 0.001f));
 	}
 
-	// Token: 0x060133DB RID: 78811 RVA: 0x004C90DC File Offset: 0x004C72DC
+	// Token: 0x060108BB RID: 67771 RVA: 0x004D7C5C File Offset: 0x004D5E5C
 	public List<int> GetUnlockItemIds()
 	{
 		List<int> list = new List<int>();
@@ -227,8 +226,8 @@ public class PhonographModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x170018DD RID: 6365
-	// (get) Token: 0x060133DC RID: 78812 RVA: 0x004C9168 File Offset: 0x004C7368
+	// Token: 0x17001916 RID: 6422
+	// (get) Token: 0x060108BC RID: 67772 RVA: 0x004D7CE8 File Offset: 0x004D5EE8
 	public static PhonographModel Instance
 	{
 		get
@@ -237,7 +236,7 @@ public class PhonographModel : ModelBase
 		}
 	}
 
-	// Token: 0x060133DD RID: 78813 RVA: 0x004C916F File Offset: 0x004C736F
+	// Token: 0x060108BD RID: 67773 RVA: 0x004D7CEF File Offset: 0x004D5EEF
 	public static PhonographModel GetOrCreateInstance()
 	{
 		if (PhonographModel._Instance == null)
@@ -247,7 +246,7 @@ public class PhonographModel : ModelBase
 		return PhonographModel._Instance;
 	}
 
-	// Token: 0x060133DE RID: 78814 RVA: 0x004C9183 File Offset: 0x004C7383
+	// Token: 0x060108BE RID: 67774 RVA: 0x004D7D03 File Offset: 0x004D5F03
 	public static bool CreateInstance()
 	{
 		if (PhonographModel._Instance != null)
@@ -258,63 +257,63 @@ public class PhonographModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060133DF RID: 78815 RVA: 0x004C9199 File Offset: 0x004C7399
+	// Token: 0x060108BF RID: 67775 RVA: 0x004D7D19 File Offset: 0x004D5F19
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060133E0 RID: 78816 RVA: 0x004C919B File Offset: 0x004C739B
+	// Token: 0x060108C0 RID: 67776 RVA: 0x004D7D1B File Offset: 0x004D5F1B
 	public static void ResetStaticDefaultValue()
 	{
 		PhonographModel._Instance = null;
 	}
 
-	// Token: 0x060133E1 RID: 78817 RVA: 0x004C91A3 File Offset: 0x004C73A3
+	// Token: 0x060108C1 RID: 67777 RVA: 0x004D7D23 File Offset: 0x004D5F23
 	static PhonographModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhonographModel.CreateStaticDefaultValue), new Action(PhonographModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009138 RID: 37176
+	// Token: 0x04009291 RID: 37521
 	public int CurrentPlayMusicId;
 
-	// Token: 0x04009139 RID: 37177
+	// Token: 0x04009292 RID: 37522
 	public int CurrentSelectMusicId;
 
-	// Token: 0x0400913A RID: 37178
+	// Token: 0x04009293 RID: 37523
 	public int CurrentPlayActorEntityId;
 
-	// Token: 0x0400913B RID: 37179
+	// Token: 0x04009294 RID: 37524
 	public bool IsGlobal;
 
-	// Token: 0x0400913C RID: 37180
+	// Token: 0x04009295 RID: 37525
 	public int CurrentPlayMusicTime;
 
-	// Token: 0x0400913D RID: 37181
+	// Token: 0x04009296 RID: 37526
 	public int CurrentPlayMusicTotalTime;
 
-	// Token: 0x0400913E RID: 37182
+	// Token: 0x04009297 RID: 37527
 	public List<int> UnlockMusicIds = new List<int>();
 
-	// Token: 0x0400913F RID: 37183
+	// Token: 0x04009298 RID: 37528
 	public List<int> NewMusicIds = new List<int>();
 
-	// Token: 0x04009140 RID: 37184
+	// Token: 0x04009299 RID: 37529
 	public int GlobalMusicId;
 
-	// Token: 0x04009141 RID: 37185
+	// Token: 0x0400929A RID: 37530
 	public int CurrentMusicHandleId;
 
-	// Token: 0x04009142 RID: 37186
+	// Token: 0x0400929B RID: 37531
 	public readonly Dictionary<int, int> RecordMusicIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04009143 RID: 37187
+	// Token: 0x0400929C RID: 37532
 	private readonly Dictionary<int, int> PlayIdRecordMap = new Dictionary<int, int>();
 
-	// Token: 0x04009144 RID: 37188
+	// Token: 0x0400929D RID: 37533
 	private readonly HashSet<int> MusicItemIdSet = new HashSet<int>();
 
-	// Token: 0x04009145 RID: 37189
+	// Token: 0x0400929E RID: 37534
 	[Nullable(2)]
 	private static PhonographModel _Instance;
 }

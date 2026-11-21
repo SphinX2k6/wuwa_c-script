@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000982 RID: 2434
+	// Token: 0x02000A35 RID: 2613
 	public static class EItemFoundationExtensions
 	{
-		// Token: 0x0600367A RID: 13946 RVA: 0x0008DF14 File Offset: 0x0008C114
+		// Token: 0x06003A01 RID: 14849 RVA: 0x00095E80 File Offset: 0x00094080
 		public static string ToEnumString(this EItemFoundation value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600367B RID: 13947 RVA: 0x0008DF68 File Offset: 0x0008C168
+		// Token: 0x06003A02 RID: 14850 RVA: 0x00095ED4 File Offset: 0x000940D4
 		public static EItemFoundation FromString(string name)
 		{
 			EItemFoundation result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600367C RID: 13948 RVA: 0x0008DF94 File Offset: 0x0008C194
+		// Token: 0x06003A03 RID: 14851 RVA: 0x00095F00 File Offset: 0x00094100
 		public static bool TryFromString(string name, out EItemFoundation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600367D RID: 13949 RVA: 0x0008DFFC File Offset: 0x0008C1FC
+		// Token: 0x06003A04 RID: 14852 RVA: 0x00095F68 File Offset: 0x00094168
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600367E RID: 13950 RVA: 0x0008E024 File Offset: 0x0008C224
+		// Token: 0x06003A05 RID: 14853 RVA: 0x00095F90 File Offset: 0x00094190
 		public static EItemFoundation[] GetValues()
 		{
 			return new EItemFoundation[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600367F RID: 13951 RVA: 0x0008E037 File Offset: 0x0008C237
+		// Token: 0x06003A06 RID: 14854 RVA: 0x00095FA3 File Offset: 0x000941A3
 		public static string[] GetNames()
 		{
 			return new string[]

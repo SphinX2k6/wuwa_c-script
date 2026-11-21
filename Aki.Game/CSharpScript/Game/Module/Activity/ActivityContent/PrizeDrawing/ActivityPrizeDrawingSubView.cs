@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 {
-	// Token: 0x0200629F RID: 25247
+	// Token: 0x0200521D RID: 21021
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityPrizeDrawingSubView : ActivitySubViewBase
 	{
-		// Token: 0x1700926E RID: 37486
-		// (get) Token: 0x0603F843 RID: 260163 RVA: 0x00F5B9C3 File Offset: 0x00F59BC3
+		// Token: 0x170065D0 RID: 26064
+		// (get) Token: 0x06034504 RID: 214276 RVA: 0x00EA291F File Offset: 0x00EA0B1F
 		[Nullable(1)]
 		private ActivityPrizeDrawingData ActivityPrizeDrawingData
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F844 RID: 260164 RVA: 0x00F5B9D0 File Offset: 0x00F59BD0
+		// Token: 0x06034505 RID: 214277 RVA: 0x00EA292C File Offset: 0x00EA0B2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F845 RID: 260165 RVA: 0x00F5BBC4 File Offset: 0x00F59DC4
+		// Token: 0x06034506 RID: 214278 RVA: 0x00EA2B20 File Offset: 0x00EA0D20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityPrizeDrawingSubView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F846 RID: 260166 RVA: 0x00F5BC08 File Offset: 0x00F59E08
+		// Token: 0x06034507 RID: 214279 RVA: 0x00EA2B64 File Offset: 0x00EA0D64
 		protected override void OnStart()
 		{
 			ActivityPrizeDrawingData activityData = this.ActivityPrizeDrawingData;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.SkipBtn.SetFunction(new Action(this.OnClickSkipBtn));
 		}
 
-		// Token: 0x0603F847 RID: 260167 RVA: 0x00F5BCD9 File Offset: 0x00F59ED9
+		// Token: 0x06034508 RID: 214280 RVA: 0x00EA2C35 File Offset: 0x00EA0E35
 		protected override void OnRefreshView()
 		{
 			this.RefreshRewardComponent();
@@ -110,13 +110,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.RefreshQuest();
 		}
 
-		// Token: 0x0603F848 RID: 260168 RVA: 0x00F5BCF9 File Offset: 0x00F59EF9
+		// Token: 0x06034509 RID: 214281 RVA: 0x00EA2C55 File Offset: 0x00EA0E55
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x0603F849 RID: 260169 RVA: 0x00F5BD04 File Offset: 0x00F59F04
+		// Token: 0x0603450A RID: 214282 RVA: 0x00EA2C60 File Offset: 0x00EA0E60
 		protected override UniTask OnBeforeHideSelfAsync()
 		{
 			ActivityPrizeDrawingSubView.<OnBeforeHideSelfAsync>d__16 <OnBeforeHideSelfAsync>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F84A RID: 260170 RVA: 0x00F5BD47 File Offset: 0x00F59F47
+		// Token: 0x0603450B RID: 214283 RVA: 0x00EA2CA3 File Offset: 0x00EA0EA3
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -138,25 +138,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			levelSequencePlayer.Clear();
 		}
 
-		// Token: 0x0603F84B RID: 260171 RVA: 0x00F5BD59 File Offset: 0x00F59F59
+		// Token: 0x0603450C RID: 214284 RVA: 0x00EA2CB5 File Offset: 0x00EA0EB5
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnPrizeDrawingQuestUpdated, new Action(this.OnQuestUpdated));
 		}
 
-		// Token: 0x0603F84C RID: 260172 RVA: 0x00F5BD77 File Offset: 0x00F59F77
+		// Token: 0x0603450D RID: 214285 RVA: 0x00EA2CD3 File Offset: 0x00EA0ED3
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPrizeDrawingQuestUpdated, new Action(this.OnQuestUpdated));
 		}
 
-		// Token: 0x0603F84D RID: 260173 RVA: 0x00F5BD95 File Offset: 0x00F59F95
+		// Token: 0x0603450E RID: 214286 RVA: 0x00EA2CF1 File Offset: 0x00EA0EF1
 		private void OnQuestUpdated()
 		{
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603F84E RID: 260174 RVA: 0x00F5BDA0 File Offset: 0x00F59FA0
+		// Token: 0x0603450F RID: 214287 RVA: 0x00EA2CFC File Offset: 0x00EA0EFC
 		private void RefreshProgress()
 		{
 			ActivityPrizeDrawingData activityPrizeDrawingData = this.ActivityPrizeDrawingData;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			item.SetUIActive(currentProgress >= totalProgress);
 		}
 
-		// Token: 0x0603F84F RID: 260175 RVA: 0x00F5BE18 File Offset: 0x00F5A018
+		// Token: 0x06034510 RID: 214288 RVA: 0x00EA2D74 File Offset: 0x00EA0F74
 		private void RefreshQuest()
 		{
 			if (!this.ActivityPrizeDrawingData.GetPreGuideQuestFinishState())
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F850 RID: 260176 RVA: 0x00F5BEE0 File Offset: 0x00F5A0E0
+		// Token: 0x06034511 RID: 214289 RVA: 0x00EA2E3C File Offset: 0x00EA103C
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F851 RID: 260177 RVA: 0x00F5BF1C File Offset: 0x00F5A11C
+		// Token: 0x06034512 RID: 214290 RVA: 0x00EA2E78 File Offset: 0x00EA1078
 		private void RefreshRewardComponent()
 		{
 			List<TItem> previewReward = this.ActivityPrizeDrawingData.GetPreviewReward(null);
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.RewardListComponent.RefreshItemLayout(previewReward, null);
 		}
 
-		// Token: 0x0603F852 RID: 260178 RVA: 0x00F5BF68 File Offset: 0x00F5A168
+		// Token: 0x06034513 RID: 214291 RVA: 0x00EA2EC4 File Offset: 0x00EA10C4
 		private void RefreshPageState()
 		{
 			ActivityBaseData activityBaseData = this.ActivityBaseData;
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			this.RefreshByState(ActivityPrizeDrawingSubView.EState.Normal);
 		}
 
-		// Token: 0x0603F853 RID: 260179 RVA: 0x00F5BFE0 File Offset: 0x00F5A1E0
+		// Token: 0x06034514 RID: 214292 RVA: 0x00EA2F3C File Offset: 0x00EA113C
 		private void RefreshByState(ActivityPrizeDrawingSubView.EState state)
 		{
 			UUIItem item = base.GetItem(0);
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			}
 		}
 
-		// Token: 0x0603F854 RID: 260180 RVA: 0x00F5C12E File Offset: 0x00F5A32E
+		// Token: 0x06034515 RID: 214293 RVA: 0x00EA308A File Offset: 0x00EA128A
 		private void OnClickSkipBtn()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -372,13 +372,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 			});
 		}
 
-		// Token: 0x04021342 RID: 136002
+		// Token: 0x0401BC71 RID: 113777
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x04021343 RID: 136003
+		// Token: 0x0401BC72 RID: 113778
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x04021344 RID: 136004
+		// Token: 0x0401BC73 RID: 113779
 		[Nullable(new byte[]
 		{
 			2,
@@ -386,59 +386,59 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x04021345 RID: 136005
+		// Token: 0x0401BC74 RID: 113780
 		private FunctionalPanelConditionLock TipsLock;
 
-		// Token: 0x04021346 RID: 136006
+		// Token: 0x0401BC75 RID: 113781
 		private ActivityButtonItem SkipBtn;
 
-		// Token: 0x04021347 RID: 136007
+		// Token: 0x0401BC76 RID: 113782
 		private PrizeDrawingQuestItem QuestItem;
 
-		// Token: 0x04021348 RID: 136008
+		// Token: 0x0401BC77 RID: 113783
 		private bool IsGoToMainView;
 
-		// Token: 0x0200C477 RID: 50295
+		// Token: 0x0200AE5E RID: 44638
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403B469 RID: 242793
+			// Token: 0x04035DCB RID: 220619
 			PnlLock,
-			// Token: 0x0403B46A RID: 242794
+			// Token: 0x04035DCC RID: 220620
 			PnlUnlock,
-			// Token: 0x0403B46B RID: 242795
+			// Token: 0x04035DCD RID: 220621
 			TitleItem,
-			// Token: 0x0403B46C RID: 242796
+			// Token: 0x04035DCE RID: 220622
 			DescItem,
-			// Token: 0x0403B46D RID: 242797
+			// Token: 0x04035DCF RID: 220623
 			TxtProgress,
-			// Token: 0x0403B46E RID: 242798
+			// Token: 0x04035DD0 RID: 220624
 			PnlProgressGot,
-			// Token: 0x0403B46F RID: 242799
+			// Token: 0x04035DD1 RID: 220625
 			RewardPreviewComp,
-			// Token: 0x0403B470 RID: 242800
+			// Token: 0x04035DD2 RID: 220626
 			TipsLock,
-			// Token: 0x0403B471 RID: 242801
+			// Token: 0x04035DD3 RID: 220627
 			BtnFinish,
-			// Token: 0x0403B472 RID: 242802
+			// Token: 0x04035DD4 RID: 220628
 			SkipBtn,
-			// Token: 0x0403B473 RID: 242803
+			// Token: 0x04035DD5 RID: 220629
 			QuestItem,
-			// Token: 0x0403B474 RID: 242804
+			// Token: 0x04035DD6 RID: 220630
 			PnlProgress
 		}
 
-		// Token: 0x0200C478 RID: 50296
+		// Token: 0x0200AE5F RID: 44639
 		[NullableContext(0)]
 		private enum EState
 		{
-			// Token: 0x0403B476 RID: 242806
+			// Token: 0x04035DD8 RID: 220632
 			Lock,
-			// Token: 0x0403B477 RID: 242807
+			// Token: 0x04035DD9 RID: 220633
 			Guide,
-			// Token: 0x0403B478 RID: 242808
+			// Token: 0x04035DDA RID: 220634
 			Normal,
-			// Token: 0x0403B479 RID: 242809
+			// Token: 0x04035DDB RID: 220635
 			Finish
 		}
 	}

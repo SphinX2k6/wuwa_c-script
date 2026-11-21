@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 {
-	// Token: 0x02003E15 RID: 15893
+	// Token: 0x0200312D RID: 12589
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/MaterialController/PD_CharacterControllerData.PD_CharacterControllerData_C")]
 	[UnrealStructLayout(22168, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 22164)]
 	public class PD_CharacterControllerData_C : UKuroMaterialControllerDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027CDA RID: 163034 RVA: 0x0099B972 File Offset: 0x00999B72
+		// Token: 0x0601EEE9 RID: 126697 RVA: 0x0092159E File Offset: 0x0091F79E
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (PD_CharacterControllerData_C._ClassPtr == IntPtr.Zero)
@@ -25,55 +25,55 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			return PD_CharacterControllerData_C._ClassPtr;
 		}
 
-		// Token: 0x06027CDB RID: 163035 RVA: 0x0099B998 File Offset: 0x00999B98
+		// Token: 0x0601EEEA RID: 126698 RVA: 0x009215C4 File Offset: 0x0091F7C4
 		public PD_CharacterControllerData_C() : this(BuiltinUtils.AllocNativeUObject(PD_CharacterControllerData_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027CDC RID: 163036 RVA: 0x0099B9C0 File Offset: 0x00999BC0
+		// Token: 0x0601EEEB RID: 126699 RVA: 0x009215EC File Offset: 0x0091F7EC
 		public PD_CharacterControllerData_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(PD_CharacterControllerData_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005A23 RID: 23075
-		// (get) Token: 0x06027CDD RID: 163037 RVA: 0x0099B9F3 File Offset: 0x00999BF3
-		// (set) Token: 0x06027CDE RID: 163038 RVA: 0x0099BA07 File Offset: 0x00999C07
+		// Token: 0x1700366F RID: 13935
+		// (get) Token: 0x0601EEEC RID: 126700 RVA: 0x0092161F File Offset: 0x0091F81F
+		// (set) Token: 0x0601EEED RID: 126701 RVA: 0x00921633 File Offset: 0x0091F833
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterControllerType> DataType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DataType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DataType) = value;
 			}
 		}
 
-		// Token: 0x17005A24 RID: 23076
-		// (get) Token: 0x06027CDF RID: 163039 RVA: 0x0099BA1C File Offset: 0x00999C1C
-		// (set) Token: 0x06027CE0 RID: 163040 RVA: 0x0099BA30 File Offset: 0x00999C30
+		// Token: 0x17003670 RID: 13936
+		// (get) Token: 0x0601EEEE RID: 126702 RVA: 0x00921648 File Offset: 0x0091F848
+		// (set) Token: 0x0601EEEF RID: 126703 RVA: 0x0092165C File Offset: 0x0091F85C
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterBodySpecifiedType> SpecifiedBodyType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_SpecifiedBodyType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_SpecifiedBodyType) = value;
 			}
 		}
 
-		// Token: 0x17005A25 RID: 23077
-		// (get) Token: 0x06027CE1 RID: 163041 RVA: 0x0099BA48 File Offset: 0x00999C48
-		// (set) Token: 0x06027CE2 RID: 163042 RVA: 0x0099BA81 File Offset: 0x00999C81
+		// Token: 0x17003671 RID: 13937
+		// (get) Token: 0x0601EEF0 RID: 126704 RVA: 0x00921674 File Offset: 0x0091F874
+		// (set) Token: 0x0601EEF1 RID: 126705 RVA: 0x009216AD File Offset: 0x0091F8AD
 		[Nullable(new byte[]
 		{
 			1,
@@ -92,7 +92,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<TEnumAsByte<ECharacterMeshPart>> result;
 				if ((result = this._SpecifiedParts) == null)
 				{
-					result = (this._SpecifiedParts = new TArray<TEnumAsByte<ECharacterMeshPart>>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_2, this));
+					result = (this._SpecifiedParts = new TArray<TEnumAsByte<ECharacterMeshPart>>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_SpecifiedParts, this));
 				}
 				return result;
 			}
@@ -107,219 +107,219 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A26 RID: 23078
-		// (get) Token: 0x06027CE3 RID: 163043 RVA: 0x0099BA8F File Offset: 0x00999C8F
-		// (set) Token: 0x06027CE4 RID: 163044 RVA: 0x0099BAA3 File Offset: 0x00999CA3
+		// Token: 0x17003672 RID: 13938
+		// (get) Token: 0x0601EEF2 RID: 126706 RVA: 0x009216BB File Offset: 0x0091F8BB
+		// (set) Token: 0x0601EEF3 RID: 126707 RVA: 0x009216CF File Offset: 0x0091F8CF
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterSlotSpecifiedType> SpecifiedSlotType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_SpecifiedSlotType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_SpecifiedSlotType) = value;
 			}
 		}
 
-		// Token: 0x17005A27 RID: 23079
-		// (get) Token: 0x06027CE5 RID: 163045 RVA: 0x0099BAB8 File Offset: 0x00999CB8
-		// (set) Token: 0x06027CE6 RID: 163046 RVA: 0x0099BACC File Offset: 0x00999CCC
+		// Token: 0x17003673 RID: 13939
+		// (get) Token: 0x0601EEF4 RID: 126708 RVA: 0x009216E4 File Offset: 0x0091F8E4
+		// (set) Token: 0x0601EEF5 RID: 126709 RVA: 0x009216F8 File Offset: 0x0091F8F8
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterControllerApplyType> MaterialModifyType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MaterialModifyType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MaterialModifyType) = value;
 			}
 		}
 
-		// Token: 0x17005A28 RID: 23080
-		// (get) Token: 0x06027CE7 RID: 163047 RVA: 0x0099BAE1 File Offset: 0x00999CE1
-		// (set) Token: 0x06027CE8 RID: 163048 RVA: 0x0099BAF5 File Offset: 0x00999CF5
+		// Token: 0x17003674 RID: 13940
+		// (get) Token: 0x0601EEF6 RID: 126710 RVA: 0x0092170D File Offset: 0x0091F90D
+		// (set) Token: 0x0601EEF7 RID: 126711 RVA: 0x00921721 File Offset: 0x0091F921
 		[Nullable(2)]
 		public unsafe UMaterialInterface ReplaceMaterial
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_ReplaceMaterial);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_ReplaceMaterial, value);
 			}
 		}
 
-		// Token: 0x17005A29 RID: 23081
-		// (get) Token: 0x06027CE9 RID: 163049 RVA: 0x0099BB0A File Offset: 0x00999D0A
-		// (set) Token: 0x06027CEA RID: 163050 RVA: 0x0099BB1E File Offset: 0x00999D1E
+		// Token: 0x17003675 RID: 13941
+		// (get) Token: 0x0601EEF8 RID: 126712 RVA: 0x00921736 File Offset: 0x0091F936
+		// (set) Token: 0x0601EEF9 RID: 126713 RVA: 0x0092174A File Offset: 0x0091F94A
 		[Nullable(2)]
 		public unsafe UMaterialInterface ReplaceMaterialMobile
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInterface>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_ReplaceMaterialMobile);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_ReplaceMaterialMobile, value);
 			}
 		}
 
-		// Token: 0x17005A2A RID: 23082
-		// (get) Token: 0x06027CEB RID: 163051 RVA: 0x0099BB33 File Offset: 0x00999D33
-		// (set) Token: 0x06027CEC RID: 163052 RVA: 0x0099BB43 File Offset: 0x00999D43
+		// Token: 0x17003676 RID: 13942
+		// (get) Token: 0x0601EEFA RID: 126714 RVA: 0x0092175F File Offset: 0x0091F95F
+		// (set) Token: 0x0601EEFB RID: 126715 RVA: 0x0092176F File Offset: 0x0091F96F
 		public unsafe bool RevertMaterial_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RevertMaterial) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RevertMaterial) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A2B RID: 23083
-		// (get) Token: 0x06027CED RID: 163053 RVA: 0x0099BB54 File Offset: 0x00999D54
-		// (set) Token: 0x06027CEE RID: 163054 RVA: 0x0099BB64 File Offset: 0x00999D64
+		// Token: 0x17003677 RID: 13943
+		// (get) Token: 0x0601EEFC RID: 126716 RVA: 0x00921780 File Offset: 0x0091F980
+		// (set) Token: 0x0601EEFD RID: 126717 RVA: 0x00921790 File Offset: 0x0091F990
 		public unsafe bool UseRim
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseRim) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseRim) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A2C RID: 23084
-		// (get) Token: 0x06027CEF RID: 163055 RVA: 0x0099BB75 File Offset: 0x00999D75
-		// (set) Token: 0x06027CF0 RID: 163056 RVA: 0x0099BB85 File Offset: 0x00999D85
+		// Token: 0x17003678 RID: 13944
+		// (get) Token: 0x0601EEFE RID: 126718 RVA: 0x009217A1 File Offset: 0x0091F9A1
+		// (set) Token: 0x0601EEFF RID: 126719 RVA: 0x009217B1 File Offset: 0x0091F9B1
 		public unsafe bool UseOutline
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseOutline) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseOutline) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A2D RID: 23085
-		// (get) Token: 0x06027CF1 RID: 163057 RVA: 0x0099BB96 File Offset: 0x00999D96
-		// (set) Token: 0x06027CF2 RID: 163058 RVA: 0x0099BBA6 File Offset: 0x00999DA6
+		// Token: 0x17003679 RID: 13945
+		// (get) Token: 0x0601EF00 RID: 126720 RVA: 0x009217C2 File Offset: 0x0091F9C2
+		// (set) Token: 0x0601EF01 RID: 126721 RVA: 0x009217D2 File Offset: 0x0091F9D2
 		public unsafe bool OutlineRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_10) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_10) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A2E RID: 23086
-		// (get) Token: 0x06027CF3 RID: 163059 RVA: 0x0099BBB7 File Offset: 0x00999DB7
-		// (set) Token: 0x06027CF4 RID: 163060 RVA: 0x0099BBC7 File Offset: 0x00999DC7
+		// Token: 0x1700367A RID: 13946
+		// (get) Token: 0x0601EF02 RID: 126722 RVA: 0x009217E3 File Offset: 0x0091F9E3
+		// (set) Token: 0x0601EF03 RID: 126723 RVA: 0x009217F3 File Offset: 0x0091F9F3
 		public unsafe bool UseDissolve
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_11) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseDissolve) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_11) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseDissolve) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A2F RID: 23087
-		// (get) Token: 0x06027CF5 RID: 163061 RVA: 0x0099BBD8 File Offset: 0x00999DD8
-		// (set) Token: 0x06027CF6 RID: 163062 RVA: 0x0099BBEC File Offset: 0x00999DEC
+		// Token: 0x1700367B RID: 13947
+		// (get) Token: 0x0601EF04 RID: 126724 RVA: 0x00921804 File Offset: 0x0091FA04
+		// (set) Token: 0x0601EF05 RID: 126725 RVA: 0x00921818 File Offset: 0x0091FA18
 		public unsafe SMaterialControllerLoopTime LoopTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_LoopTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_LoopTime) = value;
 			}
 		}
 
-		// Token: 0x17005A30 RID: 23088
-		// (get) Token: 0x06027CF7 RID: 163063 RVA: 0x0099BC01 File Offset: 0x00999E01
-		// (set) Token: 0x06027CF8 RID: 163064 RVA: 0x0099BC11 File Offset: 0x00999E11
+		// Token: 0x1700367C RID: 13948
+		// (get) Token: 0x0601EF06 RID: 126726 RVA: 0x0092182D File Offset: 0x0091FA2D
+		// (set) Token: 0x0601EF07 RID: 126727 RVA: 0x0092183D File Offset: 0x0091FA3D
 		public unsafe bool RimRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A31 RID: 23089
-		// (get) Token: 0x06027CF9 RID: 163065 RVA: 0x0099BC22 File Offset: 0x00999E22
-		// (set) Token: 0x06027CFA RID: 163066 RVA: 0x0099BC32 File Offset: 0x00999E32
+		// Token: 0x1700367D RID: 13949
+		// (get) Token: 0x0601EF08 RID: 126728 RVA: 0x0092184E File Offset: 0x0091FA4E
+		// (set) Token: 0x0601EF09 RID: 126729 RVA: 0x0092185E File Offset: 0x0091FA5E
 		public unsafe bool RimUseTex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimUseTex) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimUseTex) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A32 RID: 23090
-		// (get) Token: 0x06027CFB RID: 163067 RVA: 0x0099BC43 File Offset: 0x00999E43
-		// (set) Token: 0x06027CFC RID: 163068 RVA: 0x0099BC57 File Offset: 0x00999E57
+		// Token: 0x1700367E RID: 13950
+		// (get) Token: 0x0601EF0A RID: 126730 RVA: 0x0092186F File Offset: 0x0091FA6F
+		// (set) Token: 0x0601EF0B RID: 126731 RVA: 0x00921883 File Offset: 0x0091FA83
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterControllerChannelSwitch> RimChannel
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimChannel);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimChannel) = value;
 			}
 		}
 
-		// Token: 0x17005A33 RID: 23091
-		// (get) Token: 0x06027CFD RID: 163069 RVA: 0x0099BC6C File Offset: 0x00999E6C
-		// (set) Token: 0x06027CFE RID: 163070 RVA: 0x0099BCA5 File Offset: 0x00999EA5
+		// Token: 0x1700367F RID: 13951
+		// (get) Token: 0x0601EF0C RID: 126732 RVA: 0x00921898 File Offset: 0x0091FA98
+		// (set) Token: 0x0601EF0D RID: 126733 RVA: 0x009218D1 File Offset: 0x0091FAD1
 		public SMaterialControllerFloatGroup RimRange
 		{
 			get
@@ -328,19 +328,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._RimRange) == null)
 				{
-					result = (this._RimRange = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_16, this));
+					result = (this._RimRange = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimRange, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_16, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimRange, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A34 RID: 23092
-		// (get) Token: 0x06027CFF RID: 163071 RVA: 0x0099BCC8 File Offset: 0x00999EC8
-		// (set) Token: 0x06027D00 RID: 163072 RVA: 0x0099BD01 File Offset: 0x00999F01
+		// Token: 0x17003680 RID: 13952
+		// (get) Token: 0x0601EF0E RID: 126734 RVA: 0x009218F4 File Offset: 0x0091FAF4
+		// (set) Token: 0x0601EF0F RID: 126735 RVA: 0x0092192D File Offset: 0x0091FB2D
 		public SMaterialControllerColorGroup RimColor
 		{
 			get
@@ -349,34 +349,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._RimColor) == null)
 				{
-					result = (this._RimColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_17, this));
+					result = (this._RimColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimColor, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_17, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimColor, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A35 RID: 23093
-		// (get) Token: 0x06027D01 RID: 163073 RVA: 0x0099BD22 File Offset: 0x00999F22
-		// (set) Token: 0x06027D02 RID: 163074 RVA: 0x0099BD32 File Offset: 0x00999F32
+		// Token: 0x17003681 RID: 13953
+		// (get) Token: 0x0601EF10 RID: 126736 RVA: 0x0092194E File Offset: 0x0091FB4E
+		// (set) Token: 0x0601EF11 RID: 126737 RVA: 0x0092195E File Offset: 0x0091FB5E
 		public unsafe bool OutlineUseTex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_18) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineUseTex) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_18) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineUseTex) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A36 RID: 23094
-		// (get) Token: 0x06027D03 RID: 163075 RVA: 0x0099BD44 File Offset: 0x00999F44
-		// (set) Token: 0x06027D04 RID: 163076 RVA: 0x0099BD7D File Offset: 0x00999F7D
+		// Token: 0x17003682 RID: 13954
+		// (get) Token: 0x0601EF12 RID: 126738 RVA: 0x00921970 File Offset: 0x0091FB70
+		// (set) Token: 0x0601EF13 RID: 126739 RVA: 0x009219A9 File Offset: 0x0091FBA9
 		public SMaterialControllerFloatGroup OutlineWidth
 		{
 			get
@@ -385,19 +385,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._OutlineWidth) == null)
 				{
-					result = (this._OutlineWidth = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_19, this));
+					result = (this._OutlineWidth = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineWidth, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_19, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineWidth, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A37 RID: 23095
-		// (get) Token: 0x06027D05 RID: 163077 RVA: 0x0099BDA0 File Offset: 0x00999FA0
-		// (set) Token: 0x06027D06 RID: 163078 RVA: 0x0099BDD9 File Offset: 0x00999FD9
+		// Token: 0x17003683 RID: 13955
+		// (get) Token: 0x0601EF14 RID: 126740 RVA: 0x009219CC File Offset: 0x0091FBCC
+		// (set) Token: 0x0601EF15 RID: 126741 RVA: 0x00921A05 File Offset: 0x0091FC05
 		public SMaterialControllerColorGroup OutlineColor
 		{
 			get
@@ -406,52 +406,52 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._OutlineColor) == null)
 				{
-					result = (this._OutlineColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_20, this));
+					result = (this._OutlineColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineColor, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_20, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineColor, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A38 RID: 23096
-		// (get) Token: 0x06027D07 RID: 163079 RVA: 0x0099BDFA File Offset: 0x00999FFA
-		// (set) Token: 0x06027D08 RID: 163080 RVA: 0x0099BE0A File Offset: 0x0099A00A
+		// Token: 0x17003684 RID: 13956
+		// (get) Token: 0x0601EF16 RID: 126742 RVA: 0x00921A26 File Offset: 0x0091FC26
+		// (set) Token: 0x0601EF17 RID: 126743 RVA: 0x00921A36 File Offset: 0x0091FC36
 		public unsafe bool DissolveRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_21) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_21) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A39 RID: 23097
-		// (get) Token: 0x06027D09 RID: 163081 RVA: 0x0099BE1B File Offset: 0x0099A01B
-		// (set) Token: 0x06027D0A RID: 163082 RVA: 0x0099BE2F File Offset: 0x0099A02F
+		// Token: 0x17003685 RID: 13957
+		// (get) Token: 0x0601EF18 RID: 126744 RVA: 0x00921A47 File Offset: 0x0091FC47
+		// (set) Token: 0x0601EF19 RID: 126745 RVA: 0x00921A5B File Offset: 0x0091FC5B
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterControllerChannelSwitch> DissolveChannel
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveChannel);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveChannel) = value;
 			}
 		}
 
-		// Token: 0x17005A3A RID: 23098
-		// (get) Token: 0x06027D0B RID: 163083 RVA: 0x0099BE44 File Offset: 0x0099A044
-		// (set) Token: 0x06027D0C RID: 163084 RVA: 0x0099BE7D File Offset: 0x0099A07D
+		// Token: 0x17003686 RID: 13958
+		// (get) Token: 0x0601EF1A RID: 126746 RVA: 0x00921A70 File Offset: 0x0091FC70
+		// (set) Token: 0x0601EF1B RID: 126747 RVA: 0x00921AA9 File Offset: 0x0091FCA9
 		public SMaterialControllerFloatGroup DissolveProgress
 		{
 			get
@@ -460,19 +460,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._DissolveProgress) == null)
 				{
-					result = (this._DissolveProgress = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_23, this));
+					result = (this._DissolveProgress = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveProgress, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_23, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveProgress, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A3B RID: 23099
-		// (get) Token: 0x06027D0D RID: 163085 RVA: 0x0099BEA0 File Offset: 0x0099A0A0
-		// (set) Token: 0x06027D0E RID: 163086 RVA: 0x0099BED9 File Offset: 0x0099A0D9
+		// Token: 0x17003687 RID: 13959
+		// (get) Token: 0x0601EF1C RID: 126748 RVA: 0x00921ACC File Offset: 0x0091FCCC
+		// (set) Token: 0x0601EF1D RID: 126749 RVA: 0x00921B05 File Offset: 0x0091FD05
 		public SMaterialControllerColorGroup DissolveColor
 		{
 			get
@@ -481,19 +481,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._DissolveColor) == null)
 				{
-					result = (this._DissolveColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_24, this));
+					result = (this._DissolveColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveColor, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_24, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveColor, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A3C RID: 23100
-		// (get) Token: 0x06027D0F RID: 163087 RVA: 0x0099BEFC File Offset: 0x0099A0FC
-		// (set) Token: 0x06027D10 RID: 163088 RVA: 0x0099BF35 File Offset: 0x0099A135
+		// Token: 0x17003688 RID: 13960
+		// (get) Token: 0x0601EF1E RID: 126750 RVA: 0x00921B28 File Offset: 0x0091FD28
+		// (set) Token: 0x0601EF1F RID: 126751 RVA: 0x00921B61 File Offset: 0x0091FD61
 		public SMaterialControllerFloatGroup DissolveColorIntensity
 		{
 			get
@@ -502,82 +502,82 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._DissolveColorIntensity) == null)
 				{
-					result = (this._DissolveColorIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_25, this));
+					result = (this._DissolveColorIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveColorIntensity, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_25, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveColorIntensity, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A3D RID: 23101
-		// (get) Token: 0x06027D11 RID: 163089 RVA: 0x0099BF56 File Offset: 0x0099A156
-		// (set) Token: 0x06027D12 RID: 163090 RVA: 0x0099BF66 File Offset: 0x0099A166
+		// Token: 0x17003689 RID: 13961
+		// (get) Token: 0x0601EF20 RID: 126752 RVA: 0x00921B82 File Offset: 0x0091FD82
+		// (set) Token: 0x0601EF21 RID: 126753 RVA: 0x00921B92 File Offset: 0x0091FD92
 		public unsafe bool UseTextureSample
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_26) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseTextureSample) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_26) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseTextureSample) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A3E RID: 23102
-		// (get) Token: 0x06027D13 RID: 163091 RVA: 0x0099BF77 File Offset: 0x0099A177
-		// (set) Token: 0x06027D14 RID: 163092 RVA: 0x0099BF87 File Offset: 0x0099A187
+		// Token: 0x1700368A RID: 13962
+		// (get) Token: 0x0601EF22 RID: 126754 RVA: 0x00921BA3 File Offset: 0x0091FDA3
+		// (set) Token: 0x0601EF23 RID: 126755 RVA: 0x00921BB3 File Offset: 0x0091FDB3
 		public unsafe bool TextureSampleRevertProperty
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_27) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureSampleRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_27) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureSampleRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A3F RID: 23103
-		// (get) Token: 0x06027D15 RID: 163093 RVA: 0x0099BF98 File Offset: 0x0099A198
-		// (set) Token: 0x06027D16 RID: 163094 RVA: 0x0099BFA8 File Offset: 0x0099A1A8
+		// Token: 0x1700368B RID: 13963
+		// (get) Token: 0x0601EF24 RID: 126756 RVA: 0x00921BC4 File Offset: 0x0091FDC4
+		// (set) Token: 0x0601EF25 RID: 126757 RVA: 0x00921BD4 File Offset: 0x0091FDD4
 		public unsafe bool UseAlphaToMask
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_28) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseAlphaToMask) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_28) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseAlphaToMask) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A40 RID: 23104
-		// (get) Token: 0x06027D17 RID: 163095 RVA: 0x0099BFB9 File Offset: 0x0099A1B9
-		// (set) Token: 0x06027D18 RID: 163096 RVA: 0x0099BFCD File Offset: 0x0099A1CD
+		// Token: 0x1700368C RID: 13964
+		// (get) Token: 0x0601EF26 RID: 126758 RVA: 0x00921BE5 File Offset: 0x0091FDE5
+		// (set) Token: 0x0601EF27 RID: 126759 RVA: 0x00921BF9 File Offset: 0x0091FDF9
 		[Nullable(2)]
 		public unsafe UTexture2D MaskTexture
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_29);
+				return BuiltinUtils.ObjectPropertyGetter<UTexture2D>(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_MaskTexture);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_29, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + PD_CharacterControllerData_C.__PropertyOffset_MaskTexture, value);
 			}
 		}
 
-		// Token: 0x17005A41 RID: 23105
-		// (get) Token: 0x06027D19 RID: 163097 RVA: 0x0099BFE4 File Offset: 0x0099A1E4
-		// (set) Token: 0x06027D1A RID: 163098 RVA: 0x0099C01D File Offset: 0x0099A21D
+		// Token: 0x1700368D RID: 13965
+		// (get) Token: 0x0601EF28 RID: 126760 RVA: 0x00921C10 File Offset: 0x0091FE10
+		// (set) Token: 0x0601EF29 RID: 126761 RVA: 0x00921C49 File Offset: 0x0091FE49
 		public SMaterialControllerFloatGroup Rotation
 		{
 			get
@@ -586,37 +586,37 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._Rotation) == null)
 				{
-					result = (this._Rotation = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_30, this));
+					result = (this._Rotation = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_Rotation, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_30, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_Rotation, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A42 RID: 23106
-		// (get) Token: 0x06027D1B RID: 163099 RVA: 0x0099C03E File Offset: 0x0099A23E
-		// (set) Token: 0x06027D1C RID: 163100 RVA: 0x0099C052 File Offset: 0x0099A252
+		// Token: 0x1700368E RID: 13966
+		// (get) Token: 0x0601EF2A RID: 126762 RVA: 0x00921C6A File Offset: 0x0091FE6A
+		// (set) Token: 0x0601EF2B RID: 126763 RVA: 0x00921C7E File Offset: 0x0091FE7E
 		[Nullable(0)]
 		public unsafe TEnumAsByte<ECharacterControllerUVSwitch> UVSelection
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UVSelection);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UVSelection) = value;
 			}
 		}
 
-		// Token: 0x17005A43 RID: 23107
-		// (get) Token: 0x06027D1D RID: 163101 RVA: 0x0099C068 File Offset: 0x0099A268
-		// (set) Token: 0x06027D1E RID: 163102 RVA: 0x0099C0A1 File Offset: 0x0099A2A1
+		// Token: 0x1700368F RID: 13967
+		// (get) Token: 0x0601EF2C RID: 126764 RVA: 0x00921C94 File Offset: 0x0091FE94
+		// (set) Token: 0x0601EF2D RID: 126765 RVA: 0x00921CCD File Offset: 0x0091FECD
 		public SMaterialControllerColorGroup TextureScaleAndOffset
 		{
 			get
@@ -625,19 +625,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._TextureScaleAndOffset) == null)
 				{
-					result = (this._TextureScaleAndOffset = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_32, this));
+					result = (this._TextureScaleAndOffset = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureScaleAndOffset, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_32, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureScaleAndOffset, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A44 RID: 23108
-		// (get) Token: 0x06027D1F RID: 163103 RVA: 0x0099C0C4 File Offset: 0x0099A2C4
-		// (set) Token: 0x06027D20 RID: 163104 RVA: 0x0099C0FD File Offset: 0x0099A2FD
+		// Token: 0x17003690 RID: 13968
+		// (get) Token: 0x0601EF2E RID: 126766 RVA: 0x00921CF0 File Offset: 0x0091FEF0
+		// (set) Token: 0x0601EF2F RID: 126767 RVA: 0x00921D29 File Offset: 0x0091FF29
 		public SMaterialControllerColorGroup TextureSpeed
 		{
 			get
@@ -646,19 +646,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._TextureSpeed) == null)
 				{
-					result = (this._TextureSpeed = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_33, this));
+					result = (this._TextureSpeed = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureSpeed, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_33, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureSpeed, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A45 RID: 23109
-		// (get) Token: 0x06027D21 RID: 163105 RVA: 0x0099C120 File Offset: 0x0099A320
-		// (set) Token: 0x06027D22 RID: 163106 RVA: 0x0099C159 File Offset: 0x0099A359
+		// Token: 0x17003691 RID: 13969
+		// (get) Token: 0x0601EF30 RID: 126768 RVA: 0x00921D4C File Offset: 0x0091FF4C
+		// (set) Token: 0x0601EF31 RID: 126769 RVA: 0x00921D85 File Offset: 0x0091FF85
 		public SMaterialControllerColorGroup TextureColorTint
 		{
 			get
@@ -667,19 +667,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._TextureColorTint) == null)
 				{
-					result = (this._TextureColorTint = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_34, this));
+					result = (this._TextureColorTint = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureColorTint, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_34, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureColorTint, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A46 RID: 23110
-		// (get) Token: 0x06027D23 RID: 163107 RVA: 0x0099C17C File Offset: 0x0099A37C
-		// (set) Token: 0x06027D24 RID: 163108 RVA: 0x0099C1B5 File Offset: 0x0099A3B5
+		// Token: 0x17003692 RID: 13970
+		// (get) Token: 0x0601EF32 RID: 126770 RVA: 0x00921DA8 File Offset: 0x0091FFA8
+		// (set) Token: 0x0601EF33 RID: 126771 RVA: 0x00921DE1 File Offset: 0x0091FFE1
 		public SMaterialControllerFloatGroup OutlineIntensity
 		{
 			get
@@ -688,49 +688,49 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._OutlineIntensity) == null)
 				{
-					result = (this._OutlineIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_35, this));
+					result = (this._OutlineIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineIntensity, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_35, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OutlineIntensity, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A47 RID: 23111
-		// (get) Token: 0x06027D25 RID: 163109 RVA: 0x0099C1D6 File Offset: 0x0099A3D6
-		// (set) Token: 0x06027D26 RID: 163110 RVA: 0x0099C1E6 File Offset: 0x0099A3E6
+		// Token: 0x17003693 RID: 13971
+		// (get) Token: 0x0601EF34 RID: 126772 RVA: 0x00921E02 File Offset: 0x00920002
+		// (set) Token: 0x0601EF35 RID: 126773 RVA: 0x00921E12 File Offset: 0x00920012
 		public unsafe bool UseOuterOutlineEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_36) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseOuterOutlineEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_36) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseOuterOutlineEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A48 RID: 23112
-		// (get) Token: 0x06027D27 RID: 163111 RVA: 0x0099C1F7 File Offset: 0x0099A3F7
-		// (set) Token: 0x06027D28 RID: 163112 RVA: 0x0099C207 File Offset: 0x0099A407
+		// Token: 0x17003694 RID: 13972
+		// (get) Token: 0x0601EF36 RID: 126774 RVA: 0x00921E23 File Offset: 0x00920023
+		// (set) Token: 0x0601EF37 RID: 126775 RVA: 0x00921E33 File Offset: 0x00920033
 		public unsafe bool UseParameterModify
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_37) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseParameterModify) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_37) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseParameterModify) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A49 RID: 23113
-		// (get) Token: 0x06027D29 RID: 163113 RVA: 0x0099C218 File Offset: 0x0099A418
-		// (set) Token: 0x06027D2A RID: 163114 RVA: 0x0099C251 File Offset: 0x0099A451
+		// Token: 0x17003695 RID: 13973
+		// (get) Token: 0x0601EF38 RID: 126776 RVA: 0x00921E44 File Offset: 0x00920044
+		// (set) Token: 0x0601EF39 RID: 126777 RVA: 0x00921E7D File Offset: 0x0092007D
 		public TArray<SMaterialControllerFloatParameter> FloatParameters
 		{
 			get
@@ -739,7 +739,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<SMaterialControllerFloatParameter> result;
 				if ((result = this._FloatParameters) == null)
 				{
-					result = (this._FloatParameters = new TArray<SMaterialControllerFloatParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_38, this));
+					result = (this._FloatParameters = new TArray<SMaterialControllerFloatParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_FloatParameters, this));
 				}
 				return result;
 			}
@@ -749,54 +749,54 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A4A RID: 23114
-		// (get) Token: 0x06027D2B RID: 163115 RVA: 0x0099C25F File Offset: 0x0099A45F
-		// (set) Token: 0x06027D2C RID: 163116 RVA: 0x0099C26F File Offset: 0x0099A46F
+		// Token: 0x17003696 RID: 13974
+		// (get) Token: 0x0601EF3A RID: 126778 RVA: 0x00921E8B File Offset: 0x0092008B
+		// (set) Token: 0x0601EF3B RID: 126779 RVA: 0x00921E9B File Offset: 0x0092009B
 		public unsafe bool UseColor
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_39) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseColor) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_39) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseColor) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A4B RID: 23115
-		// (get) Token: 0x06027D2D RID: 163117 RVA: 0x0099C280 File Offset: 0x0099A480
-		// (set) Token: 0x06027D2E RID: 163118 RVA: 0x0099C290 File Offset: 0x0099A490
+		// Token: 0x17003697 RID: 13975
+		// (get) Token: 0x0601EF3C RID: 126780 RVA: 0x00921EAC File Offset: 0x009200AC
+		// (set) Token: 0x0601EF3D RID: 126781 RVA: 0x00921EBC File Offset: 0x009200BC
 		public unsafe bool ColorRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_40) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_ColorRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_40) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_ColorRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A4C RID: 23116
-		// (get) Token: 0x06027D2F RID: 163119 RVA: 0x0099C2A1 File Offset: 0x0099A4A1
-		// (set) Token: 0x06027D30 RID: 163120 RVA: 0x0099C2B1 File Offset: 0x0099A4B1
+		// Token: 0x17003698 RID: 13976
+		// (get) Token: 0x0601EF3E RID: 126782 RVA: 0x00921ECD File Offset: 0x009200CD
+		// (set) Token: 0x0601EF3F RID: 126783 RVA: 0x00921EDD File Offset: 0x009200DD
 		public unsafe bool BaseUseTex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_41) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseUseTex) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_41) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseUseTex) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A4D RID: 23117
-		// (get) Token: 0x06027D31 RID: 163121 RVA: 0x0099C2C4 File Offset: 0x0099A4C4
-		// (set) Token: 0x06027D32 RID: 163122 RVA: 0x0099C2FD File Offset: 0x0099A4FD
+		// Token: 0x17003699 RID: 13977
+		// (get) Token: 0x0601EF40 RID: 126784 RVA: 0x00921EF0 File Offset: 0x009200F0
+		// (set) Token: 0x0601EF41 RID: 126785 RVA: 0x00921F29 File Offset: 0x00920129
 		public SMaterialControllerColorGroup BaseColor
 		{
 			get
@@ -805,19 +805,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._BaseColor) == null)
 				{
-					result = (this._BaseColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_42, this));
+					result = (this._BaseColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseColor, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_42, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseColor, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A4E RID: 23118
-		// (get) Token: 0x06027D33 RID: 163123 RVA: 0x0099C320 File Offset: 0x0099A520
-		// (set) Token: 0x06027D34 RID: 163124 RVA: 0x0099C359 File Offset: 0x0099A559
+		// Token: 0x1700369A RID: 13978
+		// (get) Token: 0x0601EF42 RID: 126786 RVA: 0x00921F4C File Offset: 0x0092014C
+		// (set) Token: 0x0601EF43 RID: 126787 RVA: 0x00921F85 File Offset: 0x00920185
 		public SMaterialControllerFloatGroup BaseColorIntensity
 		{
 			get
@@ -826,34 +826,34 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._BaseColorIntensity) == null)
 				{
-					result = (this._BaseColorIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_43, this));
+					result = (this._BaseColorIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseColorIntensity, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_43, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_BaseColorIntensity, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A4F RID: 23119
-		// (get) Token: 0x06027D35 RID: 163125 RVA: 0x0099C37A File Offset: 0x0099A57A
-		// (set) Token: 0x06027D36 RID: 163126 RVA: 0x0099C38A File Offset: 0x0099A58A
+		// Token: 0x1700369B RID: 13979
+		// (get) Token: 0x0601EF44 RID: 126788 RVA: 0x00921FA6 File Offset: 0x009201A6
+		// (set) Token: 0x0601EF45 RID: 126789 RVA: 0x00921FB6 File Offset: 0x009201B6
 		public unsafe bool EmissionUseTex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_44) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionUseTex) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_44) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionUseTex) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A50 RID: 23120
-		// (get) Token: 0x06027D37 RID: 163127 RVA: 0x0099C39C File Offset: 0x0099A59C
-		// (set) Token: 0x06027D38 RID: 163128 RVA: 0x0099C3D5 File Offset: 0x0099A5D5
+		// Token: 0x1700369C RID: 13980
+		// (get) Token: 0x0601EF46 RID: 126790 RVA: 0x00921FC8 File Offset: 0x009201C8
+		// (set) Token: 0x0601EF47 RID: 126791 RVA: 0x00922001 File Offset: 0x00920201
 		public SMaterialControllerColorGroup EmissionColor
 		{
 			get
@@ -862,19 +862,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerColorGroup result;
 				if ((result = this._EmissionColor) == null)
 				{
-					result = (this._EmissionColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_45, this));
+					result = (this._EmissionColor = new SMaterialControllerColorGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionColor, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_45, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerColorGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionColor, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A51 RID: 23121
-		// (get) Token: 0x06027D39 RID: 163129 RVA: 0x0099C3F8 File Offset: 0x0099A5F8
-		// (set) Token: 0x06027D3A RID: 163130 RVA: 0x0099C431 File Offset: 0x0099A631
+		// Token: 0x1700369D RID: 13981
+		// (get) Token: 0x0601EF48 RID: 126792 RVA: 0x00922024 File Offset: 0x00920224
+		// (set) Token: 0x0601EF49 RID: 126793 RVA: 0x0092205D File Offset: 0x0092025D
 		public SMaterialControllerFloatGroup EmissionIntensity
 		{
 			get
@@ -883,19 +883,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._EmissionIntensity) == null)
 				{
-					result = (this._EmissionIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_46, this));
+					result = (this._EmissionIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionIntensity, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_46, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_EmissionIntensity, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A52 RID: 23122
-		// (get) Token: 0x06027D3B RID: 163131 RVA: 0x0099C454 File Offset: 0x0099A654
-		// (set) Token: 0x06027D3C RID: 163132 RVA: 0x0099C48D File Offset: 0x0099A68D
+		// Token: 0x1700369E RID: 13982
+		// (get) Token: 0x0601EF4A RID: 126794 RVA: 0x00922080 File Offset: 0x00920280
+		// (set) Token: 0x0601EF4B RID: 126795 RVA: 0x009220B9 File Offset: 0x009202B9
 		public TArray<SMaterialControllerColorParameter> ColorParameters
 		{
 			get
@@ -904,7 +904,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<SMaterialControllerColorParameter> result;
 				if ((result = this._ColorParameters) == null)
 				{
-					result = (this._ColorParameters = new TArray<SMaterialControllerColorParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_47, this));
+					result = (this._ColorParameters = new TArray<SMaterialControllerColorParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_ColorParameters, this));
 				}
 				return result;
 			}
@@ -914,39 +914,39 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A53 RID: 23123
-		// (get) Token: 0x06027D3D RID: 163133 RVA: 0x0099C49B File Offset: 0x0099A69B
-		// (set) Token: 0x06027D3E RID: 163134 RVA: 0x0099C4AB File Offset: 0x0099A6AB
+		// Token: 0x1700369F RID: 13983
+		// (get) Token: 0x0601EF4C RID: 126796 RVA: 0x009220C7 File Offset: 0x009202C7
+		// (set) Token: 0x0601EF4D RID: 126797 RVA: 0x009220D7 File Offset: 0x009202D7
 		public unsafe bool UseCustomMaterialEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_48) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseCustomMaterialEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_48) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseCustomMaterialEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A54 RID: 23124
-		// (get) Token: 0x06027D3F RID: 163135 RVA: 0x0099C4BC File Offset: 0x0099A6BC
-		// (set) Token: 0x06027D40 RID: 163136 RVA: 0x0099C4CC File Offset: 0x0099A6CC
+		// Token: 0x170036A0 RID: 13984
+		// (get) Token: 0x0601EF4E RID: 126798 RVA: 0x009220E8 File Offset: 0x009202E8
+		// (set) Token: 0x0601EF4F RID: 126799 RVA: 0x009220F8 File Offset: 0x009202F8
 		public unsafe bool CustomRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_49) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_49) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A55 RID: 23125
-		// (get) Token: 0x06027D41 RID: 163137 RVA: 0x0099C4E0 File Offset: 0x0099A6E0
-		// (set) Token: 0x06027D42 RID: 163138 RVA: 0x0099C519 File Offset: 0x0099A719
+		// Token: 0x170036A1 RID: 13985
+		// (get) Token: 0x0601EF50 RID: 126800 RVA: 0x0092210C File Offset: 0x0092030C
+		// (set) Token: 0x0601EF51 RID: 126801 RVA: 0x00922145 File Offset: 0x00920345
 		public TArray<SMaterialControllerFloatParameter> CustomFloatParameters
 		{
 			get
@@ -955,7 +955,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<SMaterialControllerFloatParameter> result;
 				if ((result = this._CustomFloatParameters) == null)
 				{
-					result = (this._CustomFloatParameters = new TArray<SMaterialControllerFloatParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_50, this));
+					result = (this._CustomFloatParameters = new TArray<SMaterialControllerFloatParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomFloatParameters, this));
 				}
 				return result;
 			}
@@ -965,9 +965,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A56 RID: 23126
-		// (get) Token: 0x06027D43 RID: 163139 RVA: 0x0099C528 File Offset: 0x0099A728
-		// (set) Token: 0x06027D44 RID: 163140 RVA: 0x0099C561 File Offset: 0x0099A761
+		// Token: 0x170036A2 RID: 13986
+		// (get) Token: 0x0601EF52 RID: 126802 RVA: 0x00922154 File Offset: 0x00920354
+		// (set) Token: 0x0601EF53 RID: 126803 RVA: 0x0092218D File Offset: 0x0092038D
 		public TArray<SMaterialControllerColorParameter> CustomColorParameters
 		{
 			get
@@ -976,7 +976,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<SMaterialControllerColorParameter> result;
 				if ((result = this._CustomColorParameters) == null)
 				{
-					result = (this._CustomColorParameters = new TArray<SMaterialControllerColorParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_51, this));
+					result = (this._CustomColorParameters = new TArray<SMaterialControllerColorParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomColorParameters, this));
 				}
 				return result;
 			}
@@ -986,9 +986,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A57 RID: 23127
-		// (get) Token: 0x06027D45 RID: 163141 RVA: 0x0099C570 File Offset: 0x0099A770
-		// (set) Token: 0x06027D46 RID: 163142 RVA: 0x0099C5A9 File Offset: 0x0099A7A9
+		// Token: 0x170036A3 RID: 13987
+		// (get) Token: 0x0601EF54 RID: 126804 RVA: 0x0092219C File Offset: 0x0092039C
+		// (set) Token: 0x0601EF55 RID: 126805 RVA: 0x009221D5 File Offset: 0x009203D5
 		public TArray<SMaterialControllerTextureParameter> CustomTextureParameters
 		{
 			get
@@ -997,7 +997,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<SMaterialControllerTextureParameter> result;
 				if ((result = this._CustomTextureParameters) == null)
 				{
-					result = (this._CustomTextureParameters = new TArray<SMaterialControllerTextureParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_52, this));
+					result = (this._CustomTextureParameters = new TArray<SMaterialControllerTextureParameter>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomTextureParameters, this));
 				}
 				return result;
 			}
@@ -1007,69 +1007,69 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A58 RID: 23128
-		// (get) Token: 0x06027D47 RID: 163143 RVA: 0x0099C5B7 File Offset: 0x0099A7B7
-		// (set) Token: 0x06027D48 RID: 163144 RVA: 0x0099C5C7 File Offset: 0x0099A7C7
+		// Token: 0x170036A4 RID: 13988
+		// (get) Token: 0x0601EF56 RID: 126806 RVA: 0x009221E3 File Offset: 0x009203E3
+		// (set) Token: 0x0601EF57 RID: 126807 RVA: 0x009221F3 File Offset: 0x009203F3
 		public unsafe bool UseMotionOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_53) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseMotionOffset) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_53) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseMotionOffset) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A59 RID: 23129
-		// (get) Token: 0x06027D49 RID: 163145 RVA: 0x0099C5D8 File Offset: 0x0099A7D8
-		// (set) Token: 0x06027D4A RID: 163146 RVA: 0x0099C5E8 File Offset: 0x0099A7E8
+		// Token: 0x170036A5 RID: 13989
+		// (get) Token: 0x0601EF58 RID: 126808 RVA: 0x00922204 File Offset: 0x00920404
+		// (set) Token: 0x0601EF59 RID: 126809 RVA: 0x00922214 File Offset: 0x00920414
 		public unsafe bool MotionOffsetRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_54) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionOffsetRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_54) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionOffsetRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A5A RID: 23130
-		// (get) Token: 0x06027D4B RID: 163147 RVA: 0x0099C5F9 File Offset: 0x0099A7F9
-		// (set) Token: 0x06027D4C RID: 163148 RVA: 0x0099C609 File Offset: 0x0099A809
+		// Token: 0x170036A6 RID: 13990
+		// (get) Token: 0x0601EF5A RID: 126810 RVA: 0x00922225 File Offset: 0x00920425
+		// (set) Token: 0x0601EF5B RID: 126811 RVA: 0x00922235 File Offset: 0x00920435
 		public unsafe float MotionOffsetLength
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_55);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionOffsetLength);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_55) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionOffsetLength) = value;
 			}
 		}
 
-		// Token: 0x17005A5B RID: 23131
-		// (get) Token: 0x06027D4D RID: 163149 RVA: 0x0099C61A File Offset: 0x0099A81A
-		// (set) Token: 0x06027D4E RID: 163150 RVA: 0x0099C62A File Offset: 0x0099A82A
+		// Token: 0x170036A7 RID: 13991
+		// (get) Token: 0x0601EF5C RID: 126812 RVA: 0x00922246 File Offset: 0x00920446
+		// (set) Token: 0x0601EF5D RID: 126813 RVA: 0x00922256 File Offset: 0x00920456
 		public unsafe float MotionAffectVertexRange
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_56);
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionAffectVertexRange);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_56) = value;
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionAffectVertexRange) = value;
 			}
 		}
 
-		// Token: 0x17005A5C RID: 23132
-		// (get) Token: 0x06027D4F RID: 163151 RVA: 0x0099C63C File Offset: 0x0099A83C
-		// (set) Token: 0x06027D50 RID: 163152 RVA: 0x0099C675 File Offset: 0x0099A875
+		// Token: 0x170036A8 RID: 13992
+		// (get) Token: 0x0601EF5E RID: 126814 RVA: 0x00922268 File Offset: 0x00920468
+		// (set) Token: 0x0601EF5F RID: 126815 RVA: 0x009222A1 File Offset: 0x009204A1
 		public TArray<string> WeaponCases
 		{
 			get
@@ -1078,7 +1078,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<string> result;
 				if ((result = this._WeaponCases) == null)
 				{
-					result = (this._WeaponCases = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_57, this));
+					result = (this._WeaponCases = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_WeaponCases, this));
 				}
 				return result;
 			}
@@ -1088,39 +1088,39 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A5D RID: 23133
-		// (get) Token: 0x06027D51 RID: 163153 RVA: 0x0099C683 File Offset: 0x0099A883
-		// (set) Token: 0x06027D52 RID: 163154 RVA: 0x0099C693 File Offset: 0x0099A893
+		// Token: 0x170036A9 RID: 13993
+		// (get) Token: 0x0601EF60 RID: 126816 RVA: 0x009222AF File Offset: 0x009204AF
+		// (set) Token: 0x0601EF61 RID: 126817 RVA: 0x009222BF File Offset: 0x009204BF
 		public unsafe bool IgnoreTimeDilation
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_58) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_IgnoreTimeDilation) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_58) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_IgnoreTimeDilation) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A5E RID: 23134
-		// (get) Token: 0x06027D53 RID: 163155 RVA: 0x0099C6A4 File Offset: 0x0099A8A4
-		// (set) Token: 0x06027D54 RID: 163156 RVA: 0x0099C6B4 File Offset: 0x0099A8B4
+		// Token: 0x170036AA RID: 13994
+		// (get) Token: 0x0601EF62 RID: 126818 RVA: 0x009222D0 File Offset: 0x009204D0
+		// (set) Token: 0x0601EF63 RID: 126819 RVA: 0x009222E0 File Offset: 0x009204E0
 		public unsafe bool HiddenAfterEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_59) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_HiddenAfterEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_59) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_HiddenAfterEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A5F RID: 23135
-		// (get) Token: 0x06027D55 RID: 163157 RVA: 0x0099C6C8 File Offset: 0x0099A8C8
-		// (set) Token: 0x06027D56 RID: 163158 RVA: 0x0099C701 File Offset: 0x0099A901
+		// Token: 0x170036AB RID: 13995
+		// (get) Token: 0x0601EF64 RID: 126820 RVA: 0x009222F4 File Offset: 0x009204F4
+		// (set) Token: 0x0601EF65 RID: 126821 RVA: 0x0092232D File Offset: 0x0092052D
 		public SMaterialControllerFloatGroup DissolveSmooth
 		{
 			get
@@ -1129,19 +1129,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._DissolveSmooth) == null)
 				{
-					result = (this._DissolveSmooth = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_60, this));
+					result = (this._DissolveSmooth = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveSmooth, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_60, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DissolveSmooth, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A60 RID: 23136
-		// (get) Token: 0x06027D57 RID: 163159 RVA: 0x0099C724 File Offset: 0x0099A924
-		// (set) Token: 0x06027D58 RID: 163160 RVA: 0x0099C75D File Offset: 0x0099A95D
+		// Token: 0x170036AC RID: 13996
+		// (get) Token: 0x0601EF66 RID: 126822 RVA: 0x00922350 File Offset: 0x00920550
+		// (set) Token: 0x0601EF67 RID: 126823 RVA: 0x00922389 File Offset: 0x00920589
 		public SMaterialControllerFloatGroup MotionNoiseSpeed
 		{
 			get
@@ -1150,49 +1150,49 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._MotionNoiseSpeed) == null)
 				{
-					result = (this._MotionNoiseSpeed = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_61, this));
+					result = (this._MotionNoiseSpeed = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionNoiseSpeed, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_61, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MotionNoiseSpeed, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A61 RID: 23137
-		// (get) Token: 0x06027D59 RID: 163161 RVA: 0x0099C77E File Offset: 0x0099A97E
-		// (set) Token: 0x06027D5A RID: 163162 RVA: 0x0099C78E File Offset: 0x0099A98E
+		// Token: 0x170036AD RID: 13997
+		// (get) Token: 0x0601EF68 RID: 126824 RVA: 0x009223AA File Offset: 0x009205AA
+		// (set) Token: 0x0601EF69 RID: 126825 RVA: 0x009223BA File Offset: 0x009205BA
 		public unsafe bool UseDitherEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_62) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseDitherEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_62) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UseDitherEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A62 RID: 23138
-		// (get) Token: 0x06027D5B RID: 163163 RVA: 0x0099C79F File Offset: 0x0099A99F
-		// (set) Token: 0x06027D5C RID: 163164 RVA: 0x0099C7AF File Offset: 0x0099A9AF
+		// Token: 0x170036AE RID: 13998
+		// (get) Token: 0x0601EF6A RID: 126826 RVA: 0x009223CB File Offset: 0x009205CB
+		// (set) Token: 0x0601EF6B RID: 126827 RVA: 0x009223DB File Offset: 0x009205DB
 		public unsafe bool DitherRevertProperty_DEPRECATED
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_63) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DitherRevertProperty) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_63) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DitherRevertProperty) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A63 RID: 23139
-		// (get) Token: 0x06027D5D RID: 163165 RVA: 0x0099C7C0 File Offset: 0x0099A9C0
-		// (set) Token: 0x06027D5E RID: 163166 RVA: 0x0099C7F9 File Offset: 0x0099A9F9
+		// Token: 0x170036AF RID: 13999
+		// (get) Token: 0x0601EF6C RID: 126828 RVA: 0x009223EC File Offset: 0x009205EC
+		// (set) Token: 0x0601EF6D RID: 126829 RVA: 0x00922425 File Offset: 0x00920625
 		public SMaterialControllerFloatGroup DitherValue
 		{
 			get
@@ -1201,19 +1201,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._DitherValue) == null)
 				{
-					result = (this._DitherValue = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_64, this));
+					result = (this._DitherValue = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DitherValue, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_64, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_DitherValue, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A64 RID: 23140
-		// (get) Token: 0x06027D5F RID: 163167 RVA: 0x0099C81C File Offset: 0x0099AA1C
-		// (set) Token: 0x06027D60 RID: 163168 RVA: 0x0099C855 File Offset: 0x0099AA55
+		// Token: 0x170036B0 RID: 14000
+		// (get) Token: 0x0601EF6E RID: 126830 RVA: 0x00922448 File Offset: 0x00920648
+		// (set) Token: 0x0601EF6F RID: 126831 RVA: 0x00922481 File Offset: 0x00920681
 		public TArray<string> OtherCases
 		{
 			get
@@ -1222,7 +1222,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<string> result;
 				if ((result = this._OtherCases) == null)
 				{
-					result = (this._OtherCases = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_65, this));
+					result = (this._OtherCases = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OtherCases, this));
 				}
 				return result;
 			}
@@ -1232,9 +1232,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A65 RID: 23141
-		// (get) Token: 0x06027D61 RID: 163169 RVA: 0x0099C864 File Offset: 0x0099AA64
-		// (set) Token: 0x06027D62 RID: 163170 RVA: 0x0099C89D File Offset: 0x0099AA9D
+		// Token: 0x170036B1 RID: 14001
+		// (get) Token: 0x0601EF70 RID: 126832 RVA: 0x00922490 File Offset: 0x00920690
+		// (set) Token: 0x0601EF71 RID: 126833 RVA: 0x009224C9 File Offset: 0x009206C9
 		public SMaterialControllerFloatGroup RimIntensity
 		{
 			get
@@ -1243,19 +1243,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._RimIntensity) == null)
 				{
-					result = (this._RimIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_66, this));
+					result = (this._RimIntensity = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimIntensity, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_66, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_RimIntensity, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A66 RID: 23142
-		// (get) Token: 0x06027D63 RID: 163171 RVA: 0x0099C8C0 File Offset: 0x0099AAC0
-		// (set) Token: 0x06027D64 RID: 163172 RVA: 0x0099C8F9 File Offset: 0x0099AAF9
+		// Token: 0x170036B2 RID: 14002
+		// (get) Token: 0x0601EF72 RID: 126834 RVA: 0x009224EC File Offset: 0x009206EC
+		// (set) Token: 0x0601EF73 RID: 126835 RVA: 0x00922525 File Offset: 0x00920725
 		public TArray<string> CustomPartNames
 		{
 			get
@@ -1264,7 +1264,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<string> result;
 				if ((result = this._CustomPartNames) == null)
 				{
-					result = (this._CustomPartNames = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_67, this));
+					result = (this._CustomPartNames = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomPartNames, this));
 				}
 				return result;
 			}
@@ -1274,9 +1274,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A67 RID: 23143
-		// (get) Token: 0x06027D65 RID: 163173 RVA: 0x0099C908 File Offset: 0x0099AB08
-		// (set) Token: 0x06027D66 RID: 163174 RVA: 0x0099C941 File Offset: 0x0099AB41
+		// Token: 0x170036B3 RID: 14003
+		// (get) Token: 0x0601EF74 RID: 126836 RVA: 0x00922534 File Offset: 0x00920734
+		// (set) Token: 0x0601EF75 RID: 126837 RVA: 0x0092256D File Offset: 0x0092076D
 		public SMaterialControllerFloatGroup TextureMaskRange
 		{
 			get
@@ -1285,49 +1285,49 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				SMaterialControllerFloatGroup result;
 				if ((result = this._TextureMaskRange) == null)
 				{
-					result = (this._TextureMaskRange = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_68, this));
+					result = (this._TextureMaskRange = new SMaterialControllerFloatGroup(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureMaskRange, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_68, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMaterialControllerFloatGroup.StaticStruct(), base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_TextureMaskRange, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005A68 RID: 23144
-		// (get) Token: 0x06027D67 RID: 163175 RVA: 0x0099C962 File Offset: 0x0099AB62
-		// (set) Token: 0x06027D68 RID: 163176 RVA: 0x0099C972 File Offset: 0x0099AB72
+		// Token: 0x170036B4 RID: 14004
+		// (get) Token: 0x0601EF76 RID: 126838 RVA: 0x0092258E File Offset: 0x0092078E
+		// (set) Token: 0x0601EF77 RID: 126839 RVA: 0x0092259E File Offset: 0x0092079E
 		public unsafe bool MaskOriginEffect
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_69) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MaskOriginEffect) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_69) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MaskOriginEffect) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A69 RID: 23145
-		// (get) Token: 0x06027D69 RID: 163177 RVA: 0x0099C983 File Offset: 0x0099AB83
-		// (set) Token: 0x06027D6A RID: 163178 RVA: 0x0099C993 File Offset: 0x0099AB93
+		// Token: 0x170036B5 RID: 14005
+		// (get) Token: 0x0601EF78 RID: 126840 RVA: 0x009225AF File Offset: 0x009207AF
+		// (set) Token: 0x0601EF79 RID: 126841 RVA: 0x009225BF File Offset: 0x009207BF
 		public unsafe bool UpdateAtLeastOneFrame
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_70) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UpdateAtLeastOneFrame) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_70) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_UpdateAtLeastOneFrame) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A6A RID: 23146
-		// (get) Token: 0x06027D6B RID: 163179 RVA: 0x0099C9A4 File Offset: 0x0099ABA4
-		// (set) Token: 0x06027D6C RID: 163180 RVA: 0x0099C9DD File Offset: 0x0099ABDD
+		// Token: 0x170036B6 RID: 14006
+		// (get) Token: 0x0601EF7A RID: 126842 RVA: 0x009225D0 File Offset: 0x009207D0
+		// (set) Token: 0x0601EF7B RID: 126843 RVA: 0x00922609 File Offset: 0x00920809
 		public TArray<string> CustomExcludePartNames
 		{
 			get
@@ -1336,7 +1336,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 				TArray<string> result;
 				if ((result = this._CustomExcludePartNames) == null)
 				{
-					result = (this._CustomExcludePartNames = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_71, this));
+					result = (this._CustomExcludePartNames = new TArray<string>(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_CustomExcludePartNames, this));
 				}
 				return result;
 			}
@@ -1346,98 +1346,97 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 			}
 		}
 
-		// Token: 0x17005A6B RID: 23147
-		// (get) Token: 0x06027D6D RID: 163181 RVA: 0x0099C9EB File Offset: 0x0099ABEB
-		// (set) Token: 0x06027D6E RID: 163182 RVA: 0x0099C9FB File Offset: 0x0099ABFB
+		// Token: 0x170036B7 RID: 14007
+		// (get) Token: 0x0601EF7C RID: 126844 RVA: 0x00922617 File Offset: 0x00920817
+		// (set) Token: 0x0601EF7D RID: 126845 RVA: 0x00922627 File Offset: 0x00920827
 		public unsafe bool ForceUpdateOnAdd
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_72) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_ForceUpdateOnAdd) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_72) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_ForceUpdateOnAdd) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A6C RID: 23148
-		// (get) Token: 0x06027D6F RID: 163183 RVA: 0x0099CA0C File Offset: 0x0099AC0C
-		// (set) Token: 0x06027D70 RID: 163184 RVA: 0x0099CA1C File Offset: 0x0099AC1C
+		// Token: 0x170036B8 RID: 14008
+		// (get) Token: 0x0601EF7E RID: 126846 RVA: 0x00922638 File Offset: 0x00920838
+		// (set) Token: 0x0601EF7F RID: 126847 RVA: 0x00922648 File Offset: 0x00920848
 		public unsafe bool MobileUseDifferentMaterial
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_73) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MobileUseDifferentMaterial) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_73) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_MobileUseDifferentMaterial) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A6D RID: 23149
-		// (get) Token: 0x06027D71 RID: 163185 RVA: 0x0099CA2D File Offset: 0x0099AC2D
-		// (set) Token: 0x06027D72 RID: 163186 RVA: 0x0099CA3D File Offset: 0x0099AC3D
+		// Token: 0x170036B9 RID: 14009
+		// (get) Token: 0x0601EF80 RID: 126848 RVA: 0x00922659 File Offset: 0x00920859
+		// (set) Token: 0x0601EF81 RID: 126849 RVA: 0x00922669 File Offset: 0x00920869
 		public unsafe bool OnlyApplyOnLocalPlayer
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_74) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OnlyApplyOnLocalPlayer) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_74) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_OnlyApplyOnLocalPlayer) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005A6E RID: 23150
-		// (get) Token: 0x06027D73 RID: 163187 RVA: 0x0099CA4E File Offset: 0x0099AC4E
-		// (set) Token: 0x06027D74 RID: 163188 RVA: 0x0099CA5E File Offset: 0x0099AC5E
+		// Token: 0x170036BA RID: 14010
+		// (get) Token: 0x0601EF82 RID: 126850 RVA: 0x0092267A File Offset: 0x0092087A
+		// (set) Token: 0x0601EF83 RID: 126851 RVA: 0x0092268A File Offset: 0x0092088A
 		public unsafe bool NeverApplyOnLocalPlayer
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_75) != 0;
+				return *(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_NeverApplyOnLocalPlayer) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_75) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)PD_CharacterControllerData_C.__PropertyOffset_NeverApplyOnLocalPlayer) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06027D75 RID: 163189 RVA: 0x0099CA6F File Offset: 0x0099AC6F
+		// Token: 0x0601EF84 RID: 126852 RVA: 0x0092269B File Offset: 0x0092089B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void InitCache()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, PD_CharacterControllerData_C.__InitCache_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027D76 RID: 163190 RVA: 0x0099CA83 File Offset: 0x0099AC83
+		// Token: 0x0601EF85 RID: 126853 RVA: 0x009226AF File Offset: 0x009208AF
 		protected PD_CharacterControllerData_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040142B7 RID: 82615
+		// Token: 0x04010762 RID: 67426
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Character/MaterialController/PD_CharacterControllerData.PD_CharacterControllerData_C";
 
-		// Token: 0x040142B8 RID: 82616
+		// Token: 0x04010763 RID: 67427
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040142B9 RID: 82617
+		// Token: 0x04010764 RID: 67428
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040142BA RID: 82618
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010765 RID: 67429
+		internal static int __PropertyOffset_DataType;
 
-		// Token: 0x040142BB RID: 82619
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010766 RID: 67430
+		internal static int __PropertyOffset_SpecifiedBodyType;
 
-		// Token: 0x040142BC RID: 82620
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010767 RID: 67431
+		internal static int __PropertyOffset_SpecifiedParts;
 
-		// Token: 0x040142BD RID: 82621
+		// Token: 0x04010768 RID: 67432
 		[Nullable(new byte[]
 		{
 			2,
@@ -1445,163 +1444,163 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<TEnumAsByte<ECharacterMeshPart>> _SpecifiedParts;
 
-		// Token: 0x040142BE RID: 82622
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010769 RID: 67433
+		internal static int __PropertyOffset_SpecifiedSlotType;
 
-		// Token: 0x040142BF RID: 82623
-		internal static int __PropertyOffset_4;
+		// Token: 0x0401076A RID: 67434
+		internal static int __PropertyOffset_MaterialModifyType;
 
-		// Token: 0x040142C0 RID: 82624
-		internal static int __PropertyOffset_5;
+		// Token: 0x0401076B RID: 67435
+		internal static int __PropertyOffset_ReplaceMaterial;
 
-		// Token: 0x040142C1 RID: 82625
-		internal static int __PropertyOffset_6;
+		// Token: 0x0401076C RID: 67436
+		internal static int __PropertyOffset_ReplaceMaterialMobile;
 
-		// Token: 0x040142C2 RID: 82626
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401076D RID: 67437
+		internal static int __PropertyOffset_RevertMaterial;
 
-		// Token: 0x040142C3 RID: 82627
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401076E RID: 67438
+		internal static int __PropertyOffset_UseRim;
 
-		// Token: 0x040142C4 RID: 82628
-		internal static int __PropertyOffset_9;
+		// Token: 0x0401076F RID: 67439
+		internal static int __PropertyOffset_UseOutline;
 
-		// Token: 0x040142C5 RID: 82629
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010770 RID: 67440
+		internal static int __PropertyOffset_OutlineRevertProperty;
 
-		// Token: 0x040142C6 RID: 82630
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010771 RID: 67441
+		internal static int __PropertyOffset_UseDissolve;
 
-		// Token: 0x040142C7 RID: 82631
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010772 RID: 67442
+		internal static int __PropertyOffset_LoopTime;
 
-		// Token: 0x040142C8 RID: 82632
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010773 RID: 67443
+		internal static int __PropertyOffset_RimRevertProperty;
 
-		// Token: 0x040142C9 RID: 82633
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010774 RID: 67444
+		internal static int __PropertyOffset_RimUseTex;
 
-		// Token: 0x040142CA RID: 82634
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010775 RID: 67445
+		internal static int __PropertyOffset_RimChannel;
 
-		// Token: 0x040142CB RID: 82635
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010776 RID: 67446
+		internal static int __PropertyOffset_RimRange;
 
-		// Token: 0x040142CC RID: 82636
+		// Token: 0x04010777 RID: 67447
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _RimRange;
 
-		// Token: 0x040142CD RID: 82637
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010778 RID: 67448
+		internal static int __PropertyOffset_RimColor;
 
-		// Token: 0x040142CE RID: 82638
+		// Token: 0x04010779 RID: 67449
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _RimColor;
 
-		// Token: 0x040142CF RID: 82639
-		internal static int __PropertyOffset_18;
+		// Token: 0x0401077A RID: 67450
+		internal static int __PropertyOffset_OutlineUseTex;
 
-		// Token: 0x040142D0 RID: 82640
-		internal static int __PropertyOffset_19;
+		// Token: 0x0401077B RID: 67451
+		internal static int __PropertyOffset_OutlineWidth;
 
-		// Token: 0x040142D1 RID: 82641
+		// Token: 0x0401077C RID: 67452
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _OutlineWidth;
 
-		// Token: 0x040142D2 RID: 82642
-		internal static int __PropertyOffset_20;
+		// Token: 0x0401077D RID: 67453
+		internal static int __PropertyOffset_OutlineColor;
 
-		// Token: 0x040142D3 RID: 82643
+		// Token: 0x0401077E RID: 67454
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _OutlineColor;
 
-		// Token: 0x040142D4 RID: 82644
-		internal static int __PropertyOffset_21;
+		// Token: 0x0401077F RID: 67455
+		internal static int __PropertyOffset_DissolveRevertProperty;
 
-		// Token: 0x040142D5 RID: 82645
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010780 RID: 67456
+		internal static int __PropertyOffset_DissolveChannel;
 
-		// Token: 0x040142D6 RID: 82646
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010781 RID: 67457
+		internal static int __PropertyOffset_DissolveProgress;
 
-		// Token: 0x040142D7 RID: 82647
+		// Token: 0x04010782 RID: 67458
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _DissolveProgress;
 
-		// Token: 0x040142D8 RID: 82648
-		internal static int __PropertyOffset_24;
+		// Token: 0x04010783 RID: 67459
+		internal static int __PropertyOffset_DissolveColor;
 
-		// Token: 0x040142D9 RID: 82649
+		// Token: 0x04010784 RID: 67460
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _DissolveColor;
 
-		// Token: 0x040142DA RID: 82650
-		internal static int __PropertyOffset_25;
+		// Token: 0x04010785 RID: 67461
+		internal static int __PropertyOffset_DissolveColorIntensity;
 
-		// Token: 0x040142DB RID: 82651
+		// Token: 0x04010786 RID: 67462
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _DissolveColorIntensity;
 
-		// Token: 0x040142DC RID: 82652
-		internal static int __PropertyOffset_26;
+		// Token: 0x04010787 RID: 67463
+		internal static int __PropertyOffset_UseTextureSample;
 
-		// Token: 0x040142DD RID: 82653
-		internal static int __PropertyOffset_27;
+		// Token: 0x04010788 RID: 67464
+		internal static int __PropertyOffset_TextureSampleRevertProperty;
 
-		// Token: 0x040142DE RID: 82654
-		internal static int __PropertyOffset_28;
+		// Token: 0x04010789 RID: 67465
+		internal static int __PropertyOffset_UseAlphaToMask;
 
-		// Token: 0x040142DF RID: 82655
-		internal static int __PropertyOffset_29;
+		// Token: 0x0401078A RID: 67466
+		internal static int __PropertyOffset_MaskTexture;
 
-		// Token: 0x040142E0 RID: 82656
-		internal static int __PropertyOffset_30;
+		// Token: 0x0401078B RID: 67467
+		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x040142E1 RID: 82657
+		// Token: 0x0401078C RID: 67468
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _Rotation;
 
-		// Token: 0x040142E2 RID: 82658
-		internal static int __PropertyOffset_31;
+		// Token: 0x0401078D RID: 67469
+		internal static int __PropertyOffset_UVSelection;
 
-		// Token: 0x040142E3 RID: 82659
-		internal static int __PropertyOffset_32;
+		// Token: 0x0401078E RID: 67470
+		internal static int __PropertyOffset_TextureScaleAndOffset;
 
-		// Token: 0x040142E4 RID: 82660
+		// Token: 0x0401078F RID: 67471
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _TextureScaleAndOffset;
 
-		// Token: 0x040142E5 RID: 82661
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010790 RID: 67472
+		internal static int __PropertyOffset_TextureSpeed;
 
-		// Token: 0x040142E6 RID: 82662
+		// Token: 0x04010791 RID: 67473
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _TextureSpeed;
 
-		// Token: 0x040142E7 RID: 82663
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010792 RID: 67474
+		internal static int __PropertyOffset_TextureColorTint;
 
-		// Token: 0x040142E8 RID: 82664
+		// Token: 0x04010793 RID: 67475
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _TextureColorTint;
 
-		// Token: 0x040142E9 RID: 82665
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010794 RID: 67476
+		internal static int __PropertyOffset_OutlineIntensity;
 
-		// Token: 0x040142EA RID: 82666
+		// Token: 0x04010795 RID: 67477
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _OutlineIntensity;
 
-		// Token: 0x040142EB RID: 82667
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010796 RID: 67478
+		internal static int __PropertyOffset_UseOuterOutlineEffect;
 
-		// Token: 0x040142EC RID: 82668
-		internal static int __PropertyOffset_37;
+		// Token: 0x04010797 RID: 67479
+		internal static int __PropertyOffset_UseParameterModify;
 
-		// Token: 0x040142ED RID: 82669
-		internal static int __PropertyOffset_38;
+		// Token: 0x04010798 RID: 67480
+		internal static int __PropertyOffset_FloatParameters;
 
-		// Token: 0x040142EE RID: 82670
+		// Token: 0x04010799 RID: 67481
 		[Nullable(new byte[]
 		{
 			2,
@@ -1609,50 +1608,50 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<SMaterialControllerFloatParameter> _FloatParameters;
 
-		// Token: 0x040142EF RID: 82671
-		internal static int __PropertyOffset_39;
+		// Token: 0x0401079A RID: 67482
+		internal static int __PropertyOffset_UseColor;
 
-		// Token: 0x040142F0 RID: 82672
-		internal static int __PropertyOffset_40;
+		// Token: 0x0401079B RID: 67483
+		internal static int __PropertyOffset_ColorRevertProperty;
 
-		// Token: 0x040142F1 RID: 82673
-		internal static int __PropertyOffset_41;
+		// Token: 0x0401079C RID: 67484
+		internal static int __PropertyOffset_BaseUseTex;
 
-		// Token: 0x040142F2 RID: 82674
-		internal static int __PropertyOffset_42;
+		// Token: 0x0401079D RID: 67485
+		internal static int __PropertyOffset_BaseColor;
 
-		// Token: 0x040142F3 RID: 82675
+		// Token: 0x0401079E RID: 67486
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _BaseColor;
 
-		// Token: 0x040142F4 RID: 82676
-		internal static int __PropertyOffset_43;
+		// Token: 0x0401079F RID: 67487
+		internal static int __PropertyOffset_BaseColorIntensity;
 
-		// Token: 0x040142F5 RID: 82677
+		// Token: 0x040107A0 RID: 67488
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _BaseColorIntensity;
 
-		// Token: 0x040142F6 RID: 82678
-		internal static int __PropertyOffset_44;
+		// Token: 0x040107A1 RID: 67489
+		internal static int __PropertyOffset_EmissionUseTex;
 
-		// Token: 0x040142F7 RID: 82679
-		internal static int __PropertyOffset_45;
+		// Token: 0x040107A2 RID: 67490
+		internal static int __PropertyOffset_EmissionColor;
 
-		// Token: 0x040142F8 RID: 82680
+		// Token: 0x040107A3 RID: 67491
 		[Nullable(2)]
 		private SMaterialControllerColorGroup _EmissionColor;
 
-		// Token: 0x040142F9 RID: 82681
-		internal static int __PropertyOffset_46;
+		// Token: 0x040107A4 RID: 67492
+		internal static int __PropertyOffset_EmissionIntensity;
 
-		// Token: 0x040142FA RID: 82682
+		// Token: 0x040107A5 RID: 67493
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _EmissionIntensity;
 
-		// Token: 0x040142FB RID: 82683
-		internal static int __PropertyOffset_47;
+		// Token: 0x040107A6 RID: 67494
+		internal static int __PropertyOffset_ColorParameters;
 
-		// Token: 0x040142FC RID: 82684
+		// Token: 0x040107A7 RID: 67495
 		[Nullable(new byte[]
 		{
 			2,
@@ -1660,16 +1659,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<SMaterialControllerColorParameter> _ColorParameters;
 
-		// Token: 0x040142FD RID: 82685
-		internal static int __PropertyOffset_48;
+		// Token: 0x040107A8 RID: 67496
+		internal static int __PropertyOffset_UseCustomMaterialEffect;
 
-		// Token: 0x040142FE RID: 82686
-		internal static int __PropertyOffset_49;
+		// Token: 0x040107A9 RID: 67497
+		internal static int __PropertyOffset_CustomRevertProperty;
 
-		// Token: 0x040142FF RID: 82687
-		internal static int __PropertyOffset_50;
+		// Token: 0x040107AA RID: 67498
+		internal static int __PropertyOffset_CustomFloatParameters;
 
-		// Token: 0x04014300 RID: 82688
+		// Token: 0x040107AB RID: 67499
 		[Nullable(new byte[]
 		{
 			2,
@@ -1677,10 +1676,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<SMaterialControllerFloatParameter> _CustomFloatParameters;
 
-		// Token: 0x04014301 RID: 82689
-		internal static int __PropertyOffset_51;
+		// Token: 0x040107AC RID: 67500
+		internal static int __PropertyOffset_CustomColorParameters;
 
-		// Token: 0x04014302 RID: 82690
+		// Token: 0x040107AD RID: 67501
 		[Nullable(new byte[]
 		{
 			2,
@@ -1688,10 +1687,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<SMaterialControllerColorParameter> _CustomColorParameters;
 
-		// Token: 0x04014303 RID: 82691
-		internal static int __PropertyOffset_52;
+		// Token: 0x040107AE RID: 67502
+		internal static int __PropertyOffset_CustomTextureParameters;
 
-		// Token: 0x04014304 RID: 82692
+		// Token: 0x040107AF RID: 67503
 		[Nullable(new byte[]
 		{
 			2,
@@ -1699,22 +1698,22 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<SMaterialControllerTextureParameter> _CustomTextureParameters;
 
-		// Token: 0x04014305 RID: 82693
-		internal static int __PropertyOffset_53;
+		// Token: 0x040107B0 RID: 67504
+		internal static int __PropertyOffset_UseMotionOffset;
 
-		// Token: 0x04014306 RID: 82694
-		internal static int __PropertyOffset_54;
+		// Token: 0x040107B1 RID: 67505
+		internal static int __PropertyOffset_MotionOffsetRevertProperty;
 
-		// Token: 0x04014307 RID: 82695
-		internal static int __PropertyOffset_55;
+		// Token: 0x040107B2 RID: 67506
+		internal static int __PropertyOffset_MotionOffsetLength;
 
-		// Token: 0x04014308 RID: 82696
-		internal static int __PropertyOffset_56;
+		// Token: 0x040107B3 RID: 67507
+		internal static int __PropertyOffset_MotionAffectVertexRange;
 
-		// Token: 0x04014309 RID: 82697
-		internal static int __PropertyOffset_57;
+		// Token: 0x040107B4 RID: 67508
+		internal static int __PropertyOffset_WeaponCases;
 
-		// Token: 0x0401430A RID: 82698
+		// Token: 0x040107B5 RID: 67509
 		[Nullable(new byte[]
 		{
 			2,
@@ -1722,43 +1721,43 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<string> _WeaponCases;
 
-		// Token: 0x0401430B RID: 82699
-		internal static int __PropertyOffset_58;
+		// Token: 0x040107B6 RID: 67510
+		internal static int __PropertyOffset_IgnoreTimeDilation;
 
-		// Token: 0x0401430C RID: 82700
-		internal static int __PropertyOffset_59;
+		// Token: 0x040107B7 RID: 67511
+		internal static int __PropertyOffset_HiddenAfterEffect;
 
-		// Token: 0x0401430D RID: 82701
-		internal static int __PropertyOffset_60;
+		// Token: 0x040107B8 RID: 67512
+		internal static int __PropertyOffset_DissolveSmooth;
 
-		// Token: 0x0401430E RID: 82702
+		// Token: 0x040107B9 RID: 67513
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _DissolveSmooth;
 
-		// Token: 0x0401430F RID: 82703
-		internal static int __PropertyOffset_61;
+		// Token: 0x040107BA RID: 67514
+		internal static int __PropertyOffset_MotionNoiseSpeed;
 
-		// Token: 0x04014310 RID: 82704
+		// Token: 0x040107BB RID: 67515
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _MotionNoiseSpeed;
 
-		// Token: 0x04014311 RID: 82705
-		internal static int __PropertyOffset_62;
+		// Token: 0x040107BC RID: 67516
+		internal static int __PropertyOffset_UseDitherEffect;
 
-		// Token: 0x04014312 RID: 82706
-		internal static int __PropertyOffset_63;
+		// Token: 0x040107BD RID: 67517
+		internal static int __PropertyOffset_DitherRevertProperty;
 
-		// Token: 0x04014313 RID: 82707
-		internal static int __PropertyOffset_64;
+		// Token: 0x040107BE RID: 67518
+		internal static int __PropertyOffset_DitherValue;
 
-		// Token: 0x04014314 RID: 82708
+		// Token: 0x040107BF RID: 67519
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _DitherValue;
 
-		// Token: 0x04014315 RID: 82709
-		internal static int __PropertyOffset_65;
+		// Token: 0x040107C0 RID: 67520
+		internal static int __PropertyOffset_OtherCases;
 
-		// Token: 0x04014316 RID: 82710
+		// Token: 0x040107C1 RID: 67521
 		[Nullable(new byte[]
 		{
 			2,
@@ -1766,17 +1765,17 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<string> _OtherCases;
 
-		// Token: 0x04014317 RID: 82711
-		internal static int __PropertyOffset_66;
+		// Token: 0x040107C2 RID: 67522
+		internal static int __PropertyOffset_RimIntensity;
 
-		// Token: 0x04014318 RID: 82712
+		// Token: 0x040107C3 RID: 67523
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _RimIntensity;
 
-		// Token: 0x04014319 RID: 82713
-		internal static int __PropertyOffset_67;
+		// Token: 0x040107C4 RID: 67524
+		internal static int __PropertyOffset_CustomPartNames;
 
-		// Token: 0x0401431A RID: 82714
+		// Token: 0x040107C5 RID: 67525
 		[Nullable(new byte[]
 		{
 			2,
@@ -1784,23 +1783,23 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<string> _CustomPartNames;
 
-		// Token: 0x0401431B RID: 82715
-		internal static int __PropertyOffset_68;
+		// Token: 0x040107C6 RID: 67526
+		internal static int __PropertyOffset_TextureMaskRange;
 
-		// Token: 0x0401431C RID: 82716
+		// Token: 0x040107C7 RID: 67527
 		[Nullable(2)]
 		private SMaterialControllerFloatGroup _TextureMaskRange;
 
-		// Token: 0x0401431D RID: 82717
-		internal static int __PropertyOffset_69;
+		// Token: 0x040107C8 RID: 67528
+		internal static int __PropertyOffset_MaskOriginEffect;
 
-		// Token: 0x0401431E RID: 82718
-		internal static int __PropertyOffset_70;
+		// Token: 0x040107C9 RID: 67529
+		internal static int __PropertyOffset_UpdateAtLeastOneFrame;
 
-		// Token: 0x0401431F RID: 82719
-		internal static int __PropertyOffset_71;
+		// Token: 0x040107CA RID: 67530
+		internal static int __PropertyOffset_CustomExcludePartNames;
 
-		// Token: 0x04014320 RID: 82720
+		// Token: 0x040107CB RID: 67531
 		[Nullable(new byte[]
 		{
 			2,
@@ -1808,19 +1807,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController
 		})]
 		private TArray<string> _CustomExcludePartNames;
 
-		// Token: 0x04014321 RID: 82721
-		internal static int __PropertyOffset_72;
+		// Token: 0x040107CC RID: 67532
+		internal static int __PropertyOffset_ForceUpdateOnAdd;
 
-		// Token: 0x04014322 RID: 82722
-		internal static int __PropertyOffset_73;
+		// Token: 0x040107CD RID: 67533
+		internal static int __PropertyOffset_MobileUseDifferentMaterial;
 
-		// Token: 0x04014323 RID: 82723
-		internal static int __PropertyOffset_74;
+		// Token: 0x040107CE RID: 67534
+		internal static int __PropertyOffset_OnlyApplyOnLocalPlayer;
 
-		// Token: 0x04014324 RID: 82724
-		internal static int __PropertyOffset_75;
+		// Token: 0x040107CF RID: 67535
+		internal static int __PropertyOffset_NeverApplyOnLocalPlayer;
 
-		// Token: 0x04014325 RID: 82725
+		// Token: 0x040107D0 RID: 67536
 		private static IntPtr __InitCache_NativeFunctionPtr;
 	}
 }

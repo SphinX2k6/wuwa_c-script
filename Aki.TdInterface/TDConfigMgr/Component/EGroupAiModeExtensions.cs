@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200095C RID: 2396
+	// Token: 0x02000A0F RID: 2575
 	public static class EGroupAiModeExtensions
 	{
-		// Token: 0x060035CF RID: 13775 RVA: 0x0008C2D4 File Offset: 0x0008A4D4
+		// Token: 0x06003956 RID: 14678 RVA: 0x00094228 File Offset: 0x00092428
 		public static string ToEnumString(this EGroupAiMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035D0 RID: 13776 RVA: 0x0008C31C File Offset: 0x0008A51C
+		// Token: 0x06003957 RID: 14679 RVA: 0x00094270 File Offset: 0x00092470
 		public static EGroupAiMode FromString(string name)
 		{
 			EGroupAiMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035D1 RID: 13777 RVA: 0x0008C348 File Offset: 0x0008A548
+		// Token: 0x06003958 RID: 14680 RVA: 0x0009429C File Offset: 0x0009249C
 		public static bool TryFromString(string name, out EGroupAiMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060035D2 RID: 13778 RVA: 0x0008C39E File Offset: 0x0008A59E
+		// Token: 0x06003959 RID: 14681 RVA: 0x000942F2 File Offset: 0x000924F2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035D3 RID: 13779 RVA: 0x0008C3BE File Offset: 0x0008A5BE
+		// Token: 0x0600395A RID: 14682 RVA: 0x00094312 File Offset: 0x00092512
 		public static EGroupAiMode[] GetValues()
 		{
 			return new EGroupAiMode[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035D4 RID: 13780 RVA: 0x0008C3CE File Offset: 0x0008A5CE
+		// Token: 0x0600395B RID: 14683 RVA: 0x00094322 File Offset: 0x00092522
 		public static string[] GetNames()
 		{
 			return new string[]

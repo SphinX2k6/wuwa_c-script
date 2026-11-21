@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200290D RID: 10509
+	// Token: 0x02002BE9 RID: 11241
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlayLevelSequence : ActionParams
 	{
-		// Token: 0x0600E943 RID: 59715 RVA: 0x002233E0 File Offset: 0x002215E0
-		[NullableContext(1)]
+		// Token: 0x0600F794 RID: 63380 RVA: 0x00240700 File Offset: 0x0023E900
+		[NullableContext(0)]
 		public static PlayLevelSequence Create(IPlayLevelSequence? instance)
 		{
 			if (instance == null)
@@ -23,20 +23,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048EB RID: 18667
-		// (get) Token: 0x0600E944 RID: 59716 RVA: 0x002233FF File Offset: 0x002215FF
-		[Nullable(1)]
+		// Token: 0x17004C70 RID: 19568
+		// (get) Token: 0x0600F795 RID: 63381 RVA: 0x0024071F File Offset: 0x0023E91F
+		[Nullable(0)]
 		public virtual string LevelSequencePath
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.LevelSequencePath;
 			}
 		}
 
-		// Token: 0x170048EC RID: 18668
-		// (get) Token: 0x0600E945 RID: 59717 RVA: 0x0022340C File Offset: 0x0022160C
+		// Token: 0x17004C71 RID: 19569
+		// (get) Token: 0x0600F796 RID: 63382 RVA: 0x0024072C File Offset: 0x0023E92C
 		public virtual bool? IsEnableCenterOffset
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048ED RID: 18669
-		// (get) Token: 0x0600E946 RID: 59718 RVA: 0x00223444 File Offset: 0x00221644
+		// Token: 0x17004C72 RID: 19570
+		// (get) Token: 0x0600F797 RID: 63383 RVA: 0x00240764 File Offset: 0x0023E964
 		public virtual bool? KeepUI
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048EE RID: 18670
-		// (get) Token: 0x0600E947 RID: 59719 RVA: 0x0022347A File Offset: 0x0022167A
+		// Token: 0x17004C73 RID: 19571
+		// (get) Token: 0x0600F798 RID: 63384 RVA: 0x0024079A File Offset: 0x0023E99A
 		public virtual string Mark
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048EF RID: 18671
-		// (get) Token: 0x0600E948 RID: 59720 RVA: 0x00223488 File Offset: 0x00221688
+		// Token: 0x17004C74 RID: 19572
+		// (get) Token: 0x0600F799 RID: 63385 RVA: 0x002407A8 File Offset: 0x0023E9A8
 		public virtual TPlayMode? PlayMode
 		{
 			get
@@ -87,8 +87,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F0 RID: 18672
-		// (get) Token: 0x0600E949 RID: 59721 RVA: 0x002234BE File Offset: 0x002216BE
+		// Token: 0x17004C75 RID: 19573
+		// (get) Token: 0x0600F79A RID: 63386 RVA: 0x002407DE File Offset: 0x0023E9DE
 		public virtual ILoopRange LoopRange
 		{
 			get
@@ -103,12 +103,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F1 RID: 18673
-		// (get) Token: 0x0600E94A RID: 59722 RVA: 0x002234F2 File Offset: 0x002216F2
-		[Nullable(1)]
+		// Token: 0x17004C76 RID: 19574
+		// (get) Token: 0x0600F79B RID: 63387 RVA: 0x00240812 File Offset: 0x0023EA12
+		[Nullable(0)]
 		public virtual ILevelSequenceTransitionType Intro
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._IntroInited)
@@ -121,12 +121,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F2 RID: 18674
-		// (get) Token: 0x0600E94B RID: 59723 RVA: 0x00223521 File Offset: 0x00221721
-		[Nullable(1)]
+		// Token: 0x17004C77 RID: 19575
+		// (get) Token: 0x0600F79C RID: 63388 RVA: 0x00240841 File Offset: 0x0023EA41
+		[Nullable(0)]
 		public virtual ILevelSequenceTransitionType Outro
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._OutroInited)
@@ -139,8 +139,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F3 RID: 18675
-		// (get) Token: 0x0600E94C RID: 59724 RVA: 0x00223550 File Offset: 0x00221750
+		// Token: 0x17004C78 RID: 19576
+		// (get) Token: 0x0600F79D RID: 63389 RVA: 0x00240870 File Offset: 0x0023EA70
 		public virtual float? Rate
 		{
 			get
@@ -153,8 +153,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F4 RID: 18676
-		// (get) Token: 0x0600E94D RID: 59725 RVA: 0x00223586 File Offset: 0x00221786
+		// Token: 0x17004C79 RID: 19577
+		// (get) Token: 0x0600F79E RID: 63390 RVA: 0x002408A6 File Offset: 0x0023EAA6
 		public virtual IEaseData RateEase
 		{
 			get
@@ -169,8 +169,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F5 RID: 18677
-		// (get) Token: 0x0600E94E RID: 59726 RVA: 0x002235BC File Offset: 0x002217BC
+		// Token: 0x17004C7A RID: 19578
+		// (get) Token: 0x0600F79F RID: 63391 RVA: 0x002408DC File Offset: 0x0023EADC
 		public virtual bool? IsPlayOnTeleport
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F6 RID: 18678
-		// (get) Token: 0x0600E94F RID: 59727 RVA: 0x002235F4 File Offset: 0x002217F4
+		// Token: 0x17004C7B RID: 19579
+		// (get) Token: 0x0600F7A0 RID: 63392 RVA: 0x00240914 File Offset: 0x0023EB14
 		public virtual bool? IsCarryCharacter
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048F7 RID: 18679
-		// (get) Token: 0x0600E950 RID: 59728 RVA: 0x0022362B File Offset: 0x0022182B
+		// Token: 0x17004C7C RID: 19580
+		// (get) Token: 0x0600F7A1 RID: 63393 RVA: 0x0024094B File Offset: 0x0023EB4B
 		public virtual IFloatingSubtitleLanguageDiff PreprocessOperation
 		{
 			get
@@ -213,39 +213,39 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080C3 RID: 32963
+		// Token: 0x04008791 RID: 34705
 		private IPlayLevelSequence Instance;
 
-		// Token: 0x040080C4 RID: 32964
+		// Token: 0x04008792 RID: 34706
 		private ILoopRange _LoopRangeCache;
 
-		// Token: 0x040080C5 RID: 32965
+		// Token: 0x04008793 RID: 34707
 		private bool _LoopRangeInited;
 
-		// Token: 0x040080C6 RID: 32966
-		[Nullable(1)]
+		// Token: 0x04008794 RID: 34708
+		[Nullable(0)]
 		private ILevelSequenceTransitionType _IntroCache;
 
-		// Token: 0x040080C7 RID: 32967
+		// Token: 0x04008795 RID: 34709
 		private bool _IntroInited;
 
-		// Token: 0x040080C8 RID: 32968
-		[Nullable(1)]
+		// Token: 0x04008796 RID: 34710
+		[Nullable(0)]
 		private ILevelSequenceTransitionType _OutroCache;
 
-		// Token: 0x040080C9 RID: 32969
+		// Token: 0x04008797 RID: 34711
 		private bool _OutroInited;
 
-		// Token: 0x040080CA RID: 32970
+		// Token: 0x04008798 RID: 34712
 		private IEaseData _RateEaseCache;
 
-		// Token: 0x040080CB RID: 32971
+		// Token: 0x04008799 RID: 34713
 		private bool _RateEaseInited;
 
-		// Token: 0x040080CC RID: 32972
+		// Token: 0x0400879A RID: 34714
 		private IFloatingSubtitleLanguageDiff _PreprocessOperationCache;
 
-		// Token: 0x040080CD RID: 32973
+		// Token: 0x0400879B RID: 34715
 		private bool _PreprocessOperationInited;
 	}
 }

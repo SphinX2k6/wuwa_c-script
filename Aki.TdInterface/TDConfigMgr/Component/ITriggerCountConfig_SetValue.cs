@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007A3 RID: 1955
+	// Token: 0x02000844 RID: 2116
 	public class ITriggerCountConfig_SetValue
 	{
-		// Token: 0x04001C49 RID: 7241
+		// Token: 0x04001E52 RID: 7762
 		public int TriggerCount;
 
-		// Token: 0x04001C4A RID: 7242
+		// Token: 0x04001E53 RID: 7763
 		public float TriggerInterval;
 	}
 }

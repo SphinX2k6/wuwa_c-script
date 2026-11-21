@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058D1 RID: 22737
+	// Token: 0x020048A9 RID: 18601
 	public interface IInstanceDungeonExitConfirmBoxData
 	{
-		// Token: 0x17008AB9 RID: 35513
-		// (get) Token: 0x06039C82 RID: 236674
-		// (set) Token: 0x06039C83 RID: 236675
+		// Token: 0x17005E85 RID: 24197
+		// (get) Token: 0x0602EBA5 RID: 191397
+		// (set) Token: 0x0602EBA6 RID: 191398
 		EInstanceDungeonExitConfirmBoxParseRule ParseRuleType { get; set; }
 
-		// Token: 0x17008ABA RID: 35514
-		// (get) Token: 0x06039C84 RID: 236676
-		// (set) Token: 0x06039C85 RID: 236677
+		// Token: 0x17005E86 RID: 24198
+		// (get) Token: 0x0602EBA7 RID: 191399
+		// (set) Token: 0x0602EBA8 RID: 191400
 		int? UnfinishedBoxId { get; set; }
 
-		// Token: 0x17008ABB RID: 35515
-		// (get) Token: 0x06039C86 RID: 236678
-		// (set) Token: 0x06039C87 RID: 236679
+		// Token: 0x17005E87 RID: 24199
+		// (get) Token: 0x0602EBA9 RID: 191401
+		// (set) Token: 0x0602EBAA RID: 191402
 		int? FinishBoxId { get; set; }
 
-		// Token: 0x17008ABC RID: 35516
-		// (get) Token: 0x06039C88 RID: 236680
-		// (set) Token: 0x06039C89 RID: 236681
+		// Token: 0x17005E88 RID: 24200
+		// (get) Token: 0x0602EBAB RID: 191403
+		// (set) Token: 0x0602EBAC RID: 191404
 		int? UnfinishedTelBoxId { get; set; }
 
-		// Token: 0x17008ABD RID: 35517
-		// (get) Token: 0x06039C8A RID: 236682
-		// (set) Token: 0x06039C8B RID: 236683
+		// Token: 0x17005E89 RID: 24201
+		// (get) Token: 0x0602EBAD RID: 191405
+		// (set) Token: 0x0602EBAE RID: 191406
 		int? FinishTelBoxId { get; set; }
 	}
 }

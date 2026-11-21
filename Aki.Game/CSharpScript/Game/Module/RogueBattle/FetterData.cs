@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E57 RID: 20055
+	// Token: 0x02003E20 RID: 15904
 	public struct FetterData : IFetterData
 	{
-		// Token: 0x17007ED9 RID: 32473
-		// (get) Token: 0x06033ACB RID: 211659 RVA: 0x00C195DE File Offset: 0x00C177DE
-		// (set) Token: 0x06033ACC RID: 211660 RVA: 0x00C195E6 File Offset: 0x00C177E6
+		// Token: 0x17005289 RID: 21129
+		// (get) Token: 0x06028936 RID: 166198 RVA: 0x00B62B06 File Offset: 0x00B60D06
+		// (set) Token: 0x06028937 RID: 166199 RVA: 0x00B62B0E File Offset: 0x00B60D0E
 		public int Id { readonly get; set; }
 
-		// Token: 0x17007EDA RID: 32474
-		// (get) Token: 0x06033ACD RID: 211661 RVA: 0x00C195EF File Offset: 0x00C177EF
-		// (set) Token: 0x06033ACE RID: 211662 RVA: 0x00C195F7 File Offset: 0x00C177F7
+		// Token: 0x1700528A RID: 21130
+		// (get) Token: 0x06028938 RID: 166200 RVA: 0x00B62B17 File Offset: 0x00B60D17
+		// (set) Token: 0x06028939 RID: 166201 RVA: 0x00B62B1F File Offset: 0x00B60D1F
 		public int Lv { readonly get; set; }
 
-		// Token: 0x17007EDB RID: 32475
-		// (get) Token: 0x06033ACF RID: 211663 RVA: 0x00C19600 File Offset: 0x00C17800
-		// (set) Token: 0x06033AD0 RID: 211664 RVA: 0x00C19608 File Offset: 0x00C17808
+		// Token: 0x1700528B RID: 21131
+		// (get) Token: 0x0602893A RID: 166202 RVA: 0x00B62B28 File Offset: 0x00B60D28
+		// (set) Token: 0x0602893B RID: 166203 RVA: 0x00B62B30 File Offset: 0x00B60D30
 		public int Star { readonly get; set; }
 
-		// Token: 0x17007EDC RID: 32476
-		// (get) Token: 0x06033AD1 RID: 211665 RVA: 0x00C19611 File Offset: 0x00C17811
-		// (set) Token: 0x06033AD2 RID: 211666 RVA: 0x00C19619 File Offset: 0x00C17819
+		// Token: 0x1700528C RID: 21132
+		// (get) Token: 0x0602893C RID: 166204 RVA: 0x00B62B39 File Offset: 0x00B60D39
+		// (set) Token: 0x0602893D RID: 166205 RVA: 0x00B62B41 File Offset: 0x00B60D41
 		public bool IsLevelUp { readonly get; set; }
 	}
 }

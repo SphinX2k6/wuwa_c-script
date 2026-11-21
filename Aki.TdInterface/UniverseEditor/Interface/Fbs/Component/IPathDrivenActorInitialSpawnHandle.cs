@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056EC RID: 22252
+	// Token: 0x02005CDB RID: 23771
 	public struct IPathDrivenActorInitialSpawnHandle : IFlatbufferObject
 	{
-		// Token: 0x1700A5A8 RID: 42408
-		// (get) Token: 0x06025302 RID: 152322 RVA: 0x00522013 File Offset: 0x00520213
+		// Token: 0x1700AEAB RID: 44715
+		// (get) Token: 0x06027769 RID: 161641 RVA: 0x00566A5F File Offset: 0x00564C5F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025303 RID: 152323 RVA: 0x00522020 File Offset: 0x00520220
+		// Token: 0x0602776A RID: 161642 RVA: 0x00566A6C File Offset: 0x00564C6C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025304 RID: 152324 RVA: 0x00522028 File Offset: 0x00520228
+		// Token: 0x0602776B RID: 161643 RVA: 0x00566A74 File Offset: 0x00564C74
 		public static IPathDrivenActorInitialSpawnHandle GetRootAsIPathDrivenActorInitialSpawnHandle(ByteBuffer _bb)
 		{
 			return IPathDrivenActorInitialSpawnHandle.GetRootAsIPathDrivenActorInitialSpawnHandle(_bb, default(IPathDrivenActorInitialSpawnHandle));
 		}
 
-		// Token: 0x06025305 RID: 152325 RVA: 0x00522044 File Offset: 0x00520244
+		// Token: 0x0602776C RID: 161644 RVA: 0x00566A90 File Offset: 0x00564C90
 		public static IPathDrivenActorInitialSpawnHandle GetRootAsIPathDrivenActorInitialSpawnHandle(ByteBuffer _bb, IPathDrivenActorInitialSpawnHandle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025306 RID: 152326 RVA: 0x00522061 File Offset: 0x00520261
+		// Token: 0x0602776D RID: 161645 RVA: 0x00566AAD File Offset: 0x00564CAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025307 RID: 152327 RVA: 0x00522070 File Offset: 0x00520270
+		// Token: 0x0602776E RID: 161646 RVA: 0x00566ABC File Offset: 0x00564CBC
 		public IPathDrivenActorInitialSpawnHandle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A5A9 RID: 42409
-		// (get) Token: 0x06025308 RID: 152328 RVA: 0x00522080 File Offset: 0x00520280
+		// Token: 0x1700AEAC RID: 44716
+		// (get) Token: 0x0602776F RID: 161647 RVA: 0x00566ACC File Offset: 0x00564CCC
 		public int Index
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A5AA RID: 42410
-		// (get) Token: 0x06025309 RID: 152329 RVA: 0x005220BC File Offset: 0x005202BC
+		// Token: 0x1700AEAD RID: 44717
+		// (get) Token: 0x06027770 RID: 161648 RVA: 0x00566B08 File Offset: 0x00564D08
 		public EPathDrivenActorInitialSpawnHandleType HandleType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602530A RID: 152330 RVA: 0x005220F8 File Offset: 0x005202F8
+		// Token: 0x06027771 RID: 161649 RVA: 0x00566B44 File Offset: 0x00564D44
 		public static Offset<IPathDrivenActorInitialSpawnHandle> CreateIPathDrivenActorInitialSpawnHandle(FlatBufferBuilder builder, int Index = 0, EPathDrivenActorInitialSpawnHandleType HandleType = EPathDrivenActorInitialSpawnHandleType.WaterBoxStagnation)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorInitialSpawnHandle.EndIPathDrivenActorInitialSpawnHandle(builder);
 		}
 
-		// Token: 0x0602530B RID: 152331 RVA: 0x00522115 File Offset: 0x00520315
+		// Token: 0x06027772 RID: 161650 RVA: 0x00566B61 File Offset: 0x00564D61
 		public static void StartIPathDrivenActorInitialSpawnHandle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602530C RID: 152332 RVA: 0x0052211E File Offset: 0x0052031E
+		// Token: 0x06027773 RID: 161651 RVA: 0x00566B6A File Offset: 0x00564D6A
 		public static void AddIndex(FlatBufferBuilder builder, int index)
 		{
 			builder.AddInt(0, index, 0);
 		}
 
-		// Token: 0x0602530D RID: 152333 RVA: 0x00522129 File Offset: 0x00520329
+		// Token: 0x06027774 RID: 161652 RVA: 0x00566B75 File Offset: 0x00564D75
 		public static void AddHandleType(FlatBufferBuilder builder, EPathDrivenActorInitialSpawnHandleType handleType)
 		{
 			builder.AddByte(1, (byte)handleType, 0);
 		}
 
-		// Token: 0x0602530E RID: 152334 RVA: 0x00522134 File Offset: 0x00520334
+		// Token: 0x06027775 RID: 161653 RVA: 0x00566B80 File Offset: 0x00564D80
 		public static Offset<IPathDrivenActorInitialSpawnHandle> EndIPathDrivenActorInitialSpawnHandle(FlatBufferBuilder builder)
 		{
 			return new Offset<IPathDrivenActorInitialSpawnHandle>(builder.EndTable());
 		}
 
-		// Token: 0x0602530F RID: 152335 RVA: 0x00522144 File Offset: 0x00520344
+		// Token: 0x06027776 RID: 161654 RVA: 0x00566B90 File Offset: 0x00564D90
 		public IPathDrivenActorInitialSpawnHandleT UnPack()
 		{
 			IPathDrivenActorInitialSpawnHandleT pathDrivenActorInitialSpawnHandleT = new IPathDrivenActorInitialSpawnHandleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pathDrivenActorInitialSpawnHandleT;
 		}
 
-		// Token: 0x06025310 RID: 152336 RVA: 0x0052215F File Offset: 0x0052035F
+		// Token: 0x06027777 RID: 161655 RVA: 0x00566BAB File Offset: 0x00564DAB
 		public void UnPackTo(IPathDrivenActorInitialSpawnHandleT _o)
 		{
 			_o.Index = this.Index;
 			_o.HandleType = this.HandleType;
 		}
 
-		// Token: 0x06025311 RID: 152337 RVA: 0x0052217C File Offset: 0x0052037C
+		// Token: 0x06027778 RID: 161656 RVA: 0x00566BC8 File Offset: 0x00564DC8
 		public static Offset<IPathDrivenActorInitialSpawnHandle> Pack(FlatBufferBuilder builder, IPathDrivenActorInitialSpawnHandleT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPathDrivenActorInitialSpawnHandle.CreateIPathDrivenActorInitialSpawnHandle(builder, _o.Index, _o.HandleType);
 		}
 
-		// Token: 0x0400EB3D RID: 60221
+		// Token: 0x0400F80A RID: 63498
 		private Table __p;
 	}
 }

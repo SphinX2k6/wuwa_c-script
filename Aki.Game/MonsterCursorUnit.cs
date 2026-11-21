@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001F51 RID: 8017
+// Token: 0x02001413 RID: 5139
 public class MonsterCursorUnit : HudUnitBase
 {
-	// Token: 0x0600F825 RID: 63525 RVA: 0x003C07D8 File Offset: 0x003BE9D8
+	// Token: 0x0600CC44 RID: 52292 RVA: 0x003CC2C4 File Offset: 0x003CA4C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -29,7 +29,7 @@ public class MonsterCursorUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F826 RID: 63526 RVA: 0x003C08C5 File Offset: 0x003BEAC5
+	// Token: 0x0600CC45 RID: 52293 RVA: 0x003CC3B1 File Offset: 0x003CA5B1
 	[NullableContext(1)]
 	public void Activate(HudEntityData hudEntity)
 	{
@@ -42,7 +42,7 @@ public class MonsterCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F827 RID: 63527 RVA: 0x003C08E9 File Offset: 0x003BEAE9
+	// Token: 0x0600CC46 RID: 52294 RVA: 0x003CC3D5 File Offset: 0x003CA5D5
 	public void Deactivate()
 	{
 		if (this.HudEntity == null)
@@ -53,7 +53,7 @@ public class MonsterCursorUnit : HudUnitBase
 		this.HudEntity = null;
 	}
 
-	// Token: 0x0600F828 RID: 63528 RVA: 0x003C0908 File Offset: 0x003BEB08
+	// Token: 0x0600CC47 RID: 52295 RVA: 0x003CC3F4 File Offset: 0x003CA5F4
 	protected virtual void AddEntityEvents()
 	{
 		this.HudEntity.ListenForTagAddOrRemove(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中.全身动作"], new BaseTagComponent.TTagSwitchedCallback(this.OnTagRefresh));
@@ -61,13 +61,13 @@ public class MonsterCursorUnit : HudUnitBase
 		this.HudEntity.ListenForTagAddOrRemove(GameplayTagDefine.EGameplayTagId["怪物.common.状态标识.瘫痪中"], new BaseTagComponent.TTagSwitchedCallback(this.OnTagRefresh));
 	}
 
-	// Token: 0x0600F829 RID: 63529 RVA: 0x003C0987 File Offset: 0x003BEB87
+	// Token: 0x0600CC48 RID: 52296 RVA: 0x003CC473 File Offset: 0x003CA673
 	private void OnTagRefresh(int tagId, bool tagExist)
 	{
 		this.RefreshState();
 	}
 
-	// Token: 0x0600F82A RID: 63530 RVA: 0x003C0990 File Offset: 0x003BEB90
+	// Token: 0x0600CC49 RID: 52297 RVA: 0x003CC47C File Offset: 0x003CA67C
 	public int? GetEntityId()
 	{
 		HudEntityData hudEntity = this.HudEntity;
@@ -78,20 +78,20 @@ public class MonsterCursorUnit : HudUnitBase
 		return new int?(hudEntity.GetId());
 	}
 
-	// Token: 0x0600F82B RID: 63531 RVA: 0x003C09BB File Offset: 0x003BEBBB
+	// Token: 0x0600CC4A RID: 52298 RVA: 0x003CC4A7 File Offset: 0x003CA6A7
 	public bool IsValid()
 	{
 		return this.HudEntity != null;
 	}
 
-	// Token: 0x0600F82C RID: 63532 RVA: 0x003C09C6 File Offset: 0x003BEBC6
+	// Token: 0x0600CC4B RID: 52299 RVA: 0x003CC4B2 File Offset: 0x003CA6B2
 	[NullableContext(2)]
 	public HudEntityData GetHudEntityData()
 	{
 		return this.HudEntity;
 	}
 
-	// Token: 0x0600F82D RID: 63533 RVA: 0x003C09D0 File Offset: 0x003BEBD0
+	// Token: 0x0600CC4C RID: 52300 RVA: 0x003CC4BC File Offset: 0x003CA6BC
 	public void Refresh(float scale, FVector2D position)
 	{
 		if (scale != this.CurScale)
@@ -106,7 +106,7 @@ public class MonsterCursorUnit : HudUnitBase
 		this.RootItem.SetAnchorOffset(position);
 	}
 
-	// Token: 0x0600F82E RID: 63534 RVA: 0x003C0A50 File Offset: 0x003BEC50
+	// Token: 0x0600CC4D RID: 52301 RVA: 0x003CC53C File Offset: 0x003CA73C
 	private void RefreshState()
 	{
 		int num;
@@ -134,47 +134,47 @@ public class MonsterCursorUnit : HudUnitBase
 		base.GetUiNiagara(3 + num).SetNiagaraVarFloat("Scale", this.CurScale);
 	}
 
-	// Token: 0x04007322 RID: 29474
+	// Token: 0x04007403 RID: 29699
 	private const float RAD_2_DEG = 57.295776f;
 
-	// Token: 0x04007323 RID: 29475
+	// Token: 0x04007404 RID: 29700
 	private const int CURSOR_NUM = 3;
 
-	// Token: 0x04007324 RID: 29476
+	// Token: 0x04007405 RID: 29701
 	[Nullable(2)]
 	private HudEntityData HudEntity;
 
-	// Token: 0x04007325 RID: 29477
+	// Token: 0x04007406 RID: 29702
 	private MonsterCursorUnit.EState CurState;
 
-	// Token: 0x04007326 RID: 29478
+	// Token: 0x04007407 RID: 29703
 	private float CurScale = 1f;
 
-	// Token: 0x0200854F RID: 34127
+	// Token: 0x020076D4 RID: 30420
 	private enum EState
 	{
-		// Token: 0x0402B66B RID: 177771
+		// Token: 0x0402698F RID: 158095
 		Normal,
-		// Token: 0x0402B66C RID: 177772
+		// Token: 0x04026990 RID: 158096
 		Skill,
-		// Token: 0x0402B66D RID: 177773
+		// Token: 0x04026991 RID: 158097
 		FallDown
 	}
 
-	// Token: 0x02008550 RID: 34128
+	// Token: 0x020076D5 RID: 30421
 	private enum EChildType
 	{
-		// Token: 0x0402B66F RID: 177775
+		// Token: 0x04026993 RID: 158099
 		CommonCursorItem,
-		// Token: 0x0402B670 RID: 177776
+		// Token: 0x04026994 RID: 158100
 		FoundCursorItem,
-		// Token: 0x0402B671 RID: 177777
+		// Token: 0x04026995 RID: 158101
 		FallDownCursorItem,
-		// Token: 0x0402B672 RID: 177778
+		// Token: 0x04026996 RID: 158102
 		CommonNiagara,
-		// Token: 0x0402B673 RID: 177779
+		// Token: 0x04026997 RID: 158103
 		FoundNiagara,
-		// Token: 0x0402B674 RID: 177780
+		// Token: 0x04026998 RID: 158104
 		FallDownNiagara
 	}
 }

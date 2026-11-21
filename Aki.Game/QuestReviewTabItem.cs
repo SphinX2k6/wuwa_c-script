@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200267E RID: 9854
+// Token: 0x02001B69 RID: 7017
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 {
-	// Token: 0x0601431A RID: 82714 RVA: 0x00519610 File Offset: 0x00517810
+	// Token: 0x060117FC RID: 71676 RVA: 0x00528348 File Offset: 0x00526548
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601431B RID: 82715 RVA: 0x0051971C File Offset: 0x0051791C
+	// Token: 0x060117FD RID: 71677 RVA: 0x00528454 File Offset: 0x00526654
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -51,14 +51,14 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		EventSystem.Instance.Add<int>(EEventName.OnOpenQuestReviewDetail, new Action<int>(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601431C RID: 82716 RVA: 0x0051978A File Offset: 0x0051798A
+	// Token: 0x060117FE RID: 71678 RVA: 0x005284C2 File Offset: 0x005266C2
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		EventSystem.Instance.Remove(EEventName.OnOpenQuestReviewDetail, new <>f__AnonymousDelegate2<int>(this.RefreshRedDot));
 	}
 
-	// Token: 0x0601431D RID: 82717 RVA: 0x005197C4 File Offset: 0x005179C4
+	// Token: 0x060117FF RID: 71679 RVA: 0x005284FC File Offset: 0x005266FC
 	public override void Refresh(QuestReviewTabData data, bool isSelected, int gridIndex)
 	{
 		this.Clear();
@@ -84,7 +84,7 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		base.GetSprite(3).SetUIActive(gridIndex < 2);
 	}
 
-	// Token: 0x0601431E RID: 82718 RVA: 0x005198C4 File Offset: 0x00517AC4
+	// Token: 0x06011800 RID: 71680 RVA: 0x005285FC File Offset: 0x005267FC
 	public override void Clear()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -98,13 +98,13 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		(extendToggle.GetOwner() as AUIBaseActor).SequenceJumpToEnd(levelSequence);
 	}
 
-	// Token: 0x0601431F RID: 82719 RVA: 0x00519918 File Offset: 0x00517B18
+	// Token: 0x06011801 RID: 71681 RVA: 0x00528650 File Offset: 0x00526850
 	private void OnTabClick(EToggleState toggleState)
 	{
 		QuestReviewController.Instance.TriggerViewRefresh(this.Data.Id);
 	}
 
-	// Token: 0x06014320 RID: 82720 RVA: 0x0051992F File Offset: 0x00517B2F
+	// Token: 0x06011802 RID: 71682 RVA: 0x00528667 File Offset: 0x00526867
 	private void OnSeqEnd(string name)
 	{
 		if (name == "Unlock")
@@ -117,7 +117,7 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		}
 	}
 
-	// Token: 0x06014321 RID: 82721 RVA: 0x00519962 File Offset: 0x00517B62
+	// Token: 0x06011803 RID: 71683 RVA: 0x0052869A File Offset: 0x0052689A
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "idle")
@@ -131,7 +131,7 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		}
 	}
 
-	// Token: 0x06014322 RID: 82722 RVA: 0x00519988 File Offset: 0x00517B88
+	// Token: 0x06011804 RID: 71684 RVA: 0x005286C0 File Offset: 0x005268C0
 	private void RefreshRedDot(int i = 0)
 	{
 		QuestReviewModel instance = QuestReviewModel.Instance;
@@ -140,34 +140,34 @@ public class QuestReviewTabItem : GridProxyAbstract<QuestReviewTabData>
 		base.GetItem(4).SetUIActive(uiactive);
 	}
 
-	// Token: 0x04009802 RID: 38914
+	// Token: 0x0400995A RID: 39258
 	[Nullable(2)]
 	private QuestReviewTabData Data;
 
-	// Token: 0x04009803 RID: 38915
+	// Token: 0x0400995B RID: 39259
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04009804 RID: 38916
+	// Token: 0x0400995C RID: 39260
 	private bool HasStartSeqPlayed;
 
-	// Token: 0x02008CCA RID: 36042
+	// Token: 0x02007E53 RID: 32339
 	[NullableContext(0)]
 	private class ETabComponentDefine
 	{
-		// Token: 0x0402DB00 RID: 187136
+		// Token: 0x04028E17 RID: 167447
 		public const int ToggleSelf = 0;
 
-		// Token: 0x0402DB01 RID: 187137
+		// Token: 0x04028E18 RID: 167448
 		public const int TextDesc = 1;
 
-		// Token: 0x0402DB02 RID: 187138
+		// Token: 0x04028E19 RID: 167449
 		public const int Spine = 2;
 
-		// Token: 0x0402DB03 RID: 187139
+		// Token: 0x04028E1A RID: 167450
 		public const int SpriteLine = 3;
 
-		// Token: 0x0402DB04 RID: 187140
+		// Token: 0x04028E1B RID: 167451
 		public const int ItemRedDot = 4;
 	}
 }

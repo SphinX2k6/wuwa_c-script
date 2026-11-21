@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000155 RID: 341
+	// Token: 0x02000168 RID: 360
 	[EnumExtensions]
 	public enum ETimeScheduleNpcSourceType
 	{
-		// Token: 0x04000687 RID: 1671
+		// Token: 0x040006CC RID: 1740
 		EntityTemplate
 	}
 }

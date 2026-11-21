@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C65 RID: 7269
+	// Token: 0x02001E5E RID: 7774
 	public class INotifyMonsterPlayStandbyTags_SetValue
 	{
-		// Token: 0x04005E9E RID: 24222
+		// Token: 0x040063D8 RID: 25560
 		public ESetBattleStateType Type;
 
-		// Token: 0x04005E9F RID: 24223
+		// Token: 0x040063D9 RID: 25561
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IMonsterStandByConfig> StandbyConfigs;
 	}

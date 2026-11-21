@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018B6 RID: 6326
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A41 RID: 6721
 	public class IClientEventUiPlayPiano : IClientEventUi
 	{
-		// Token: 0x060087C1 RID: 34753 RVA: 0x001419CC File Offset: 0x0013FBCC
+		// Token: 0x06008EE9 RID: 36585 RVA: 0x00151200 File Offset: 0x0014F400
 		private IClientEventUiPlayPiano_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060087C2 RID: 34754 RVA: 0x00141A04 File Offset: 0x0013FC04
+		// Token: 0x06008EEA RID: 36586 RVA: 0x00151238 File Offset: 0x0014F438
 		public static IClientEventUiPlayPiano Create([Nullable(2)] IClientEventUiPlayPiano instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087C3 RID: 34755 RVA: 0x00141A17 File Offset: 0x0013FC17
+		// Token: 0x06008EEB RID: 36587 RVA: 0x0015124B File Offset: 0x0014F44B
 		public static IClientEventUiPlayPiano CreateFromSetValue([Nullable(2)] IClientEventUiPlayPiano_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060087C4 RID: 34756 RVA: 0x00141A2A File Offset: 0x0013FC2A
+		// Token: 0x06008EEC RID: 36588 RVA: 0x0015125E File Offset: 0x0014F45E
 		public new IClientEventUiPlayPiano_SetValue ToSetValue()
 		{
 			return new IClientEventUiPlayPiano_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C24 RID: 11300
-		// (get) Token: 0x060087C5 RID: 34757 RVA: 0x00141A49 File Offset: 0x0013FC49
-		// (set) Token: 0x060087C6 RID: 34758 RVA: 0x00141A74 File Offset: 0x0013FC74
+		// Token: 0x17002E1F RID: 11807
+		// (get) Token: 0x06008EED RID: 36589 RVA: 0x0015127D File Offset: 0x0014F47D
+		// (set) Token: 0x06008EEE RID: 36590 RVA: 0x001512A8 File Offset: 0x0014F4A8
 		public override EClientEventUiType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C25 RID: 11301
-		// (get) Token: 0x060087C7 RID: 34759 RVA: 0x00141A82 File Offset: 0x0013FC82
-		// (set) Token: 0x060087C8 RID: 34760 RVA: 0x00141AA9 File Offset: 0x0013FCA9
+		// Token: 0x17002E20 RID: 11808
+		// (get) Token: 0x06008EEF RID: 36591 RVA: 0x001512B6 File Offset: 0x0014F4B6
+		// (set) Token: 0x06008EF0 RID: 36592 RVA: 0x001512DD File Offset: 0x0014F4DD
 		public virtual IClientEventPianoEvent EventType
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005563 RID: 21859
+		// Token: 0x040059B0 RID: 22960
 		[Nullable(2)]
 		protected new IClientEventUiPlayPiano FbInstance;
 
-		// Token: 0x04005564 RID: 21860
+		// Token: 0x040059B1 RID: 22961
 		[Nullable(2)]
 		protected new IClientEventUiPlayPiano_SetValue PocoInterface;
 	}

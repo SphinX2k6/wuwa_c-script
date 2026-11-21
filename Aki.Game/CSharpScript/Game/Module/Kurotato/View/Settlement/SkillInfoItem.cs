@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005724 RID: 22308
+	// Token: 0x020046FB RID: 18171
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 	})]
 	internal class SkillInfoItem : GridProxyAbstract<string>
 	{
-		// Token: 0x06038B87 RID: 232327 RVA: 0x00D75C0C File Offset: 0x00D73E0C
+		// Token: 0x0602DA96 RID: 187030 RVA: 0x00CC4240 File Offset: 0x00CC2440
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038B88 RID: 232328 RVA: 0x00D75C54 File Offset: 0x00D73E54
+		// Token: 0x0602DA97 RID: 187031 RVA: 0x00CC4288 File Offset: 0x00CC2488
 		protected override void OnStart()
 		{
 			TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -39,17 +39,17 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x06038B89 RID: 232329 RVA: 0x00D75C8F File Offset: 0x00D73E8F
+		// Token: 0x0602DA98 RID: 187032 RVA: 0x00CC42C3 File Offset: 0x00CC24C3
 		[NullableContext(1)]
 		public override void Refresh(string text, bool isSelected, int gridIndex)
 		{
 			base.GetText(0).SetText(text, true);
 		}
 
-		// Token: 0x0200B8E0 RID: 47328
+		// Token: 0x0200A302 RID: 41730
 		private class ESkillInfoComp
 		{
-			// Token: 0x04037ECA RID: 229066
+			// Token: 0x040328DC RID: 207068
 			public const int TextSkillInfo = 0;
 		}
 	}

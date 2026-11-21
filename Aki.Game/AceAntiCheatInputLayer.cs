@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Game.Input;
 
-// Token: 0x020030C2 RID: 12482
+// Token: 0x0200261A RID: 9754
 public class AceAntiCheatInputLayer : InputLayer
 {
-	// Token: 0x0601ABA3 RID: 109475 RVA: 0x00733E0B File Offset: 0x0073200B
+	// Token: 0x060185B2 RID: 99762 RVA: 0x00759773 File Offset: 0x00757973
 	public override EInputLayer GetLayerType()
 	{
 		return EInputLayer.AceAntiCheat;
 	}
 
-	// Token: 0x0601ABA4 RID: 109476 RVA: 0x00733E0F File Offset: 0x0073200F
+	// Token: 0x060185B3 RID: 99763 RVA: 0x00759777 File Offset: 0x00757977
 	[NullableContext(2)]
 	public override SInputCommand HandlePress(EInputAction action, float time)
 	{

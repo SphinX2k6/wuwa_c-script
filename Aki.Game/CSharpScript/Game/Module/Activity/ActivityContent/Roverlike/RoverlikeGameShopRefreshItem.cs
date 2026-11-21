@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200615A RID: 24922
+	// Token: 0x020050D8 RID: 20696
 	public class RoverlikeGameShopRefreshItem : UiPanelBase
 	{
-		// Token: 0x0603EFE1 RID: 258017 RVA: 0x00F37922 File Offset: 0x00F35B22
+		// Token: 0x06033CA1 RID: 212129 RVA: 0x00E7E7F6 File Offset: 0x00E7C9F6
 		[NullableContext(1)]
 		public void BindOnRefresh(Action cb)
 		{
 			this.OnRefresh = cb;
 		}
 
-		// Token: 0x0603EFE2 RID: 258018 RVA: 0x00F3792C File Offset: 0x00F35B2C
+		// Token: 0x06033CA2 RID: 212130 RVA: 0x00E7E800 File Offset: 0x00E7CA00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EFE3 RID: 258019 RVA: 0x00F37A14 File Offset: 0x00F35C14
+		// Token: 0x06033CA3 RID: 212131 RVA: 0x00E7E8E8 File Offset: 0x00E7CAE8
 		private void OnClickBtnRefresh()
 		{
 			Action onRefresh = this.OnRefresh;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			onRefresh();
 		}
 
-		// Token: 0x0603EFE4 RID: 258020 RVA: 0x00F37A28 File Offset: 0x00F35C28
+		// Token: 0x06033CA4 RID: 212132 RVA: 0x00E7E8FC File Offset: 0x00E7CAFC
 		public void Refresh(int nextRefreshCost, int refreshCount, int maxRefreshCount, int insideCurrencyItemId, int currencyCount)
 		{
 			UUIText text = base.GetText(1);
@@ -74,23 +74,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetButton(0).SetSelfInteractive(refreshCount < maxRefreshCount);
 		}
 
-		// Token: 0x04020DE7 RID: 134631
+		// Token: 0x0401B714 RID: 112404
 		[Nullable(2)]
 		private Action OnRefresh;
 
-		// Token: 0x0200C3B9 RID: 50105
+		// Token: 0x0200ADA0 RID: 44448
 		private class EComponents
 		{
-			// Token: 0x0403B0F8 RID: 241912
+			// Token: 0x04035A59 RID: 219737
 			public const int BtnRefresh = 0;
 
-			// Token: 0x0403B0F9 RID: 241913
+			// Token: 0x04035A5A RID: 219738
 			public const int TxtRefresh = 1;
 
-			// Token: 0x0403B0FA RID: 241914
+			// Token: 0x04035A5B RID: 219739
 			public const int TxtRefreshCount = 2;
 
-			// Token: 0x0403B0FB RID: 241915
+			// Token: 0x04035A5C RID: 219740
 			public const int TextureIcon = 3;
 		}
 	}

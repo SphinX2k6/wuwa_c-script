@@ -1,52 +1,52 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001405 RID: 5125
+// Token: 0x020008B9 RID: 2233
 [NullableContext(2)]
 public interface IPinballItemDataRole
 {
-	// Token: 0x17000C43 RID: 3139
-	// (get) Token: 0x060090C6 RID: 37062
-	// (set) Token: 0x060090C7 RID: 37063
+	// Token: 0x17000C63 RID: 3171
+	// (get) Token: 0x0600645B RID: 25691
+	// (set) Token: 0x0600645C RID: 25692
 	EPinballItemType Type { get; set; }
 
-	// Token: 0x17000C44 RID: 3140
-	// (get) Token: 0x060090C8 RID: 37064
-	// (set) Token: 0x060090C9 RID: 37065
+	// Token: 0x17000C64 RID: 3172
+	// (get) Token: 0x0600645D RID: 25693
+	// (set) Token: 0x0600645E RID: 25694
 	int Id { get; set; }
 
-	// Token: 0x17000C45 RID: 3141
-	// (get) Token: 0x060090CA RID: 37066
-	// (set) Token: 0x060090CB RID: 37067
+	// Token: 0x17000C65 RID: 3173
+	// (get) Token: 0x0600645F RID: 25695
+	// (set) Token: 0x06006460 RID: 25696
 	bool? IsRecommend { get; set; }
 
-	// Token: 0x17000C46 RID: 3142
-	// (get) Token: 0x060090CC RID: 37068
-	// (set) Token: 0x060090CD RID: 37069
+	// Token: 0x17000C66 RID: 3174
+	// (get) Token: 0x06006461 RID: 25697
+	// (set) Token: 0x06006462 RID: 25698
 	int? BdId { get; set; }
 
-	// Token: 0x17000C47 RID: 3143
-	// (get) Token: 0x060090CE RID: 37070
-	// (set) Token: 0x060090CF RID: 37071
+	// Token: 0x17000C67 RID: 3175
+	// (get) Token: 0x06006463 RID: 25699
+	// (set) Token: 0x06006464 RID: 25700
 	bool? IsLocked { get; set; }
 
-	// Token: 0x17000C48 RID: 3144
-	// (get) Token: 0x060090D0 RID: 37072
-	// (set) Token: 0x060090D1 RID: 37073
+	// Token: 0x17000C68 RID: 3176
+	// (get) Token: 0x06006465 RID: 25701
+	// (set) Token: 0x06006466 RID: 25702
 	bool? IsUnavailable { get; set; }
 
-	// Token: 0x17000C49 RID: 3145
-	// (get) Token: 0x060090D2 RID: 37074
-	// (set) Token: 0x060090D3 RID: 37075
+	// Token: 0x17000C69 RID: 3177
+	// (get) Token: 0x06006467 RID: 25703
+	// (set) Token: 0x06006468 RID: 25704
 	TableTextArgNew BottomText { get; set; }
 
-	// Token: 0x17000C4A RID: 3146
-	// (get) Token: 0x060090D4 RID: 37076
-	// (set) Token: 0x060090D5 RID: 37077
+	// Token: 0x17000C6A RID: 3178
+	// (get) Token: 0x06006469 RID: 25705
+	// (set) Token: 0x0600646A RID: 25706
 	string BottomPlainText { get; set; }
 
-	// Token: 0x17000C4B RID: 3147
-	// (get) Token: 0x060090D6 RID: 37078
-	// (set) Token: 0x060090D7 RID: 37079
+	// Token: 0x17000C6B RID: 3179
+	// (get) Token: 0x0600646B RID: 25707
+	// (set) Token: 0x0600646C RID: 25708
 	int? ClassId { get; set; }
 }

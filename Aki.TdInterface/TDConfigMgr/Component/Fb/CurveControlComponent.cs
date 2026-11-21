@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D9E RID: 3486
+	// Token: 0x02000E9A RID: 3738
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CurveControlComponent : IComponentBase
 	{
-		// Token: 0x06004F3E RID: 20286 RVA: 0x000C46C0 File Offset: 0x000C28C0
-		[NullableContext(1)]
+		// Token: 0x06005463 RID: 21603 RVA: 0x000CFF10 File Offset: 0x000CE110
+		[NullableContext(0)]
 		public static CurveControlComponent Create(ICurveControlComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019BF RID: 6591
-		// (get) Token: 0x06004F3F RID: 20287 RVA: 0x000C46E0 File Offset: 0x000C28E0
+		// Token: 0x17001B2A RID: 6954
+		// (get) Token: 0x06005464 RID: 21604 RVA: 0x000CFF30 File Offset: 0x000CE130
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019C0 RID: 6592
-		// (get) Token: 0x06004F40 RID: 20288 RVA: 0x000C4718 File Offset: 0x000C2918
+		// Token: 0x17001B2B RID: 6955
+		// (get) Token: 0x06005465 RID: 21605 RVA: 0x000CFF68 File Offset: 0x000CE168
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019C1 RID: 6593
-		// (get) Token: 0x06004F41 RID: 20289 RVA: 0x000C472E File Offset: 0x000C292E
+		// Token: 0x17001B2C RID: 6956
+		// (get) Token: 0x06005466 RID: 21606 RVA: 0x000CFF7E File Offset: 0x000CE17E
 		public virtual IChargeSlashControl CurveControlConfig
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D7F RID: 11647
+		// Token: 0x04003045 RID: 12357
 		private ICurveControlComponent Instance;
 
-		// Token: 0x04002D80 RID: 11648
+		// Token: 0x04003046 RID: 12358
 		private IChargeSlashControl _CurveControlConfigCache;
 
-		// Token: 0x04002D81 RID: 11649
+		// Token: 0x04003047 RID: 12359
 		private bool _CurveControlConfigInited;
 	}
 }

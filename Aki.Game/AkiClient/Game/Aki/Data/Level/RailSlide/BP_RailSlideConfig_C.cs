@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.RailSlide
 {
-	// Token: 0x02003F08 RID: 16136
+	// Token: 0x020031C4 RID: 12740
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Level/RailSlide/BP_RailSlideConfig.BP_RailSlideConfig_C")]
 	[UnrealStructLayout(336, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 335)]
 	public class BP_RailSlideConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028E9B RID: 167579 RVA: 0x009B76BB File Offset: 0x009B58BB
+		// Token: 0x0601F82E RID: 129070 RVA: 0x0092F68F File Offset: 0x0092D88F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_RailSlideConfig_C._ClassPtr == IntPtr.Zero)
@@ -25,349 +25,349 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 			return BP_RailSlideConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028E9C RID: 167580 RVA: 0x009B76E0 File Offset: 0x009B58E0
+		// Token: 0x0601F82F RID: 129071 RVA: 0x0092F6B4 File Offset: 0x0092D8B4
 		public BP_RailSlideConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_RailSlideConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028E9D RID: 167581 RVA: 0x009B7708 File Offset: 0x009B5908
+		// Token: 0x0601F830 RID: 129072 RVA: 0x0092F6DC File Offset: 0x0092D8DC
 		public BP_RailSlideConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_RailSlideConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700604F RID: 24655
-		// (get) Token: 0x06028E9E RID: 167582 RVA: 0x009B773B File Offset: 0x009B593B
-		// (set) Token: 0x06028E9F RID: 167583 RVA: 0x009B774B File Offset: 0x009B594B
+		// Token: 0x170039BA RID: 14778
+		// (get) Token: 0x0601F831 RID: 129073 RVA: 0x0092F70F File Offset: 0x0092D90F
+		// (set) Token: 0x0601F832 RID: 129074 RVA: 0x0092F71F File Offset: 0x0092D91F
 		public unsafe int 初始速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_初始速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_初始速度) = value;
 			}
 		}
 
-		// Token: 0x17006050 RID: 24656
-		// (get) Token: 0x06028EA0 RID: 167584 RVA: 0x009B775C File Offset: 0x009B595C
-		// (set) Token: 0x06028EA1 RID: 167585 RVA: 0x009B776C File Offset: 0x009B596C
+		// Token: 0x170039BB RID: 14779
+		// (get) Token: 0x0601F833 RID: 129075 RVA: 0x0092F730 File Offset: 0x0092D930
+		// (set) Token: 0x0601F834 RID: 129076 RVA: 0x0092F740 File Offset: 0x0092D940
 		public unsafe int 基础目标速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础目标速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础目标速度) = value;
 			}
 		}
 
-		// Token: 0x17006051 RID: 24657
-		// (get) Token: 0x06028EA2 RID: 167586 RVA: 0x009B777D File Offset: 0x009B597D
-		// (set) Token: 0x06028EA3 RID: 167587 RVA: 0x009B778D File Offset: 0x009B598D
+		// Token: 0x170039BC RID: 14780
+		// (get) Token: 0x0601F835 RID: 129077 RVA: 0x0092F751 File Offset: 0x0092D951
+		// (set) Token: 0x0601F836 RID: 129078 RVA: 0x0092F761 File Offset: 0x0092D961
 		public unsafe int 基础加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础加速度) = value;
 			}
 		}
 
-		// Token: 0x17006052 RID: 24658
-		// (get) Token: 0x06028EA4 RID: 167588 RVA: 0x009B779E File Offset: 0x009B599E
-		// (set) Token: 0x06028EA5 RID: 167589 RVA: 0x009B77AE File Offset: 0x009B59AE
+		// Token: 0x170039BD RID: 14781
+		// (get) Token: 0x0601F837 RID: 129079 RVA: 0x0092F772 File Offset: 0x0092D972
+		// (set) Token: 0x0601F838 RID: 129080 RVA: 0x0092F782 File Offset: 0x0092D982
 		public unsafe int 上坡目标速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_上坡目标速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_上坡目标速度) = value;
 			}
 		}
 
-		// Token: 0x17006053 RID: 24659
-		// (get) Token: 0x06028EA6 RID: 167590 RVA: 0x009B77BF File Offset: 0x009B59BF
-		// (set) Token: 0x06028EA7 RID: 167591 RVA: 0x009B77CF File Offset: 0x009B59CF
+		// Token: 0x170039BE RID: 14782
+		// (get) Token: 0x0601F839 RID: 129081 RVA: 0x0092F793 File Offset: 0x0092D993
+		// (set) Token: 0x0601F83A RID: 129082 RVA: 0x0092F7A3 File Offset: 0x0092D9A3
 		public unsafe int 上坡加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_上坡加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_上坡加速度) = value;
 			}
 		}
 
-		// Token: 0x17006054 RID: 24660
-		// (get) Token: 0x06028EA8 RID: 167592 RVA: 0x009B77E0 File Offset: 0x009B59E0
-		// (set) Token: 0x06028EA9 RID: 167593 RVA: 0x009B77F0 File Offset: 0x009B59F0
+		// Token: 0x170039BF RID: 14783
+		// (get) Token: 0x0601F83B RID: 129083 RVA: 0x0092F7B4 File Offset: 0x0092D9B4
+		// (set) Token: 0x0601F83C RID: 129084 RVA: 0x0092F7C4 File Offset: 0x0092D9C4
 		public unsafe int 下坡目标速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_下坡目标速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_下坡目标速度) = value;
 			}
 		}
 
-		// Token: 0x17006055 RID: 24661
-		// (get) Token: 0x06028EAA RID: 167594 RVA: 0x009B7801 File Offset: 0x009B5A01
-		// (set) Token: 0x06028EAB RID: 167595 RVA: 0x009B7811 File Offset: 0x009B5A11
+		// Token: 0x170039C0 RID: 14784
+		// (get) Token: 0x0601F83D RID: 129085 RVA: 0x0092F7D5 File Offset: 0x0092D9D5
+		// (set) Token: 0x0601F83E RID: 129086 RVA: 0x0092F7E5 File Offset: 0x0092D9E5
 		public unsafe int 下坡加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_下坡加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_下坡加速度) = value;
 			}
 		}
 
-		// Token: 0x17006056 RID: 24662
-		// (get) Token: 0x06028EAC RID: 167596 RVA: 0x009B7822 File Offset: 0x009B5A22
-		// (set) Token: 0x06028EAD RID: 167597 RVA: 0x009B7832 File Offset: 0x009B5A32
+		// Token: 0x170039C1 RID: 14785
+		// (get) Token: 0x0601F83F RID: 129087 RVA: 0x0092F7F6 File Offset: 0x0092D9F6
+		// (set) Token: 0x0601F840 RID: 129088 RVA: 0x0092F806 File Offset: 0x0092DA06
 		public unsafe int 基础跳跃高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础跳跃高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础跳跃高度) = value;
 			}
 		}
 
-		// Token: 0x17006057 RID: 24663
-		// (get) Token: 0x06028EAE RID: 167598 RVA: 0x009B7843 File Offset: 0x009B5A43
-		// (set) Token: 0x06028EAF RID: 167599 RVA: 0x009B7853 File Offset: 0x009B5A53
+		// Token: 0x170039C2 RID: 14786
+		// (get) Token: 0x0601F841 RID: 129089 RVA: 0x0092F817 File Offset: 0x0092DA17
+		// (set) Token: 0x0601F842 RID: 129090 RVA: 0x0092F827 File Offset: 0x0092DA27
 		public unsafe float 基础跳远倍率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础跳远倍率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_基础跳远倍率) = value;
 			}
 		}
 
-		// Token: 0x17006058 RID: 24664
-		// (get) Token: 0x06028EB0 RID: 167600 RVA: 0x009B7864 File Offset: 0x009B5A64
-		// (set) Token: 0x06028EB1 RID: 167601 RVA: 0x009B7874 File Offset: 0x009B5A74
+		// Token: 0x170039C3 RID: 14787
+		// (get) Token: 0x0601F843 RID: 129091 RVA: 0x0092F838 File Offset: 0x0092DA38
+		// (set) Token: 0x0601F844 RID: 129092 RVA: 0x0092F848 File Offset: 0x0092DA48
 		public unsafe int 最大跳跃距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大跳跃距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大跳跃距离) = value;
 			}
 		}
 
-		// Token: 0x17006059 RID: 24665
-		// (get) Token: 0x06028EB2 RID: 167602 RVA: 0x009B7885 File Offset: 0x009B5A85
-		// (set) Token: 0x06028EB3 RID: 167603 RVA: 0x009B7895 File Offset: 0x009B5A95
+		// Token: 0x170039C4 RID: 14788
+		// (get) Token: 0x0601F845 RID: 129093 RVA: 0x0092F859 File Offset: 0x0092DA59
+		// (set) Token: 0x0601F846 RID: 129094 RVA: 0x0092F869 File Offset: 0x0092DA69
 		public unsafe int 最大跳跃高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大跳跃高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大跳跃高度) = value;
 			}
 		}
 
-		// Token: 0x1700605A RID: 24666
-		// (get) Token: 0x06028EB4 RID: 167604 RVA: 0x009B78A6 File Offset: 0x009B5AA6
-		// (set) Token: 0x06028EB5 RID: 167605 RVA: 0x009B78B6 File Offset: 0x009B5AB6
+		// Token: 0x170039C5 RID: 14789
+		// (get) Token: 0x0601F847 RID: 129095 RVA: 0x0092F87A File Offset: 0x0092DA7A
+		// (set) Token: 0x0601F848 RID: 129096 RVA: 0x0092F88A File Offset: 0x0092DA8A
 		public unsafe int 起跳加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳加速度) = value;
 			}
 		}
 
-		// Token: 0x1700605B RID: 24667
-		// (get) Token: 0x06028EB6 RID: 167606 RVA: 0x009B78C7 File Offset: 0x009B5AC7
-		// (set) Token: 0x06028EB7 RID: 167607 RVA: 0x009B78D7 File Offset: 0x009B5AD7
+		// Token: 0x170039C6 RID: 14790
+		// (get) Token: 0x0601F849 RID: 129097 RVA: 0x0092F89B File Offset: 0x0092DA9B
+		// (set) Token: 0x0601F84A RID: 129098 RVA: 0x0092F8AB File Offset: 0x0092DAAB
 		public unsafe int 起跳加速度_卡提西亚
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳加速度_卡提西亚);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳加速度_卡提西亚) = value;
 			}
 		}
 
-		// Token: 0x1700605C RID: 24668
-		// (get) Token: 0x06028EB8 RID: 167608 RVA: 0x009B78E8 File Offset: 0x009B5AE8
-		// (set) Token: 0x06028EB9 RID: 167609 RVA: 0x009B78F8 File Offset: 0x009B5AF8
+		// Token: 0x170039C7 RID: 14791
+		// (get) Token: 0x0601F84B RID: 129099 RVA: 0x0092F8BC File Offset: 0x0092DABC
+		// (set) Token: 0x0601F84C RID: 129100 RVA: 0x0092F8CC File Offset: 0x0092DACC
 		public unsafe float 倾斜输入插值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_倾斜输入插值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_倾斜输入插值) = value;
 			}
 		}
 
-		// Token: 0x1700605D RID: 24669
-		// (get) Token: 0x06028EBA RID: 167610 RVA: 0x009B7909 File Offset: 0x009B5B09
-		// (set) Token: 0x06028EBB RID: 167611 RVA: 0x009B7919 File Offset: 0x009B5B19
+		// Token: 0x170039C8 RID: 14792
+		// (get) Token: 0x0601F84D RID: 129101 RVA: 0x0092F8DD File Offset: 0x0092DADD
+		// (set) Token: 0x0601F84E RID: 129102 RVA: 0x0092F8ED File Offset: 0x0092DAED
 		public unsafe int 最大倾斜角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大倾斜角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大倾斜角度) = value;
 			}
 		}
 
-		// Token: 0x1700605E RID: 24670
-		// (get) Token: 0x06028EBC RID: 167612 RVA: 0x009B792A File Offset: 0x009B5B2A
-		// (set) Token: 0x06028EBD RID: 167613 RVA: 0x009B793A File Offset: 0x009B5B3A
+		// Token: 0x170039C9 RID: 14793
+		// (get) Token: 0x0601F84F RID: 129103 RVA: 0x0092F8FE File Offset: 0x0092DAFE
+		// (set) Token: 0x0601F850 RID: 129104 RVA: 0x0092F90E File Offset: 0x0092DB0E
 		public unsafe int 初始进入轨道速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_初始进入轨道速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_初始进入轨道速度) = value;
 			}
 		}
 
-		// Token: 0x1700605F RID: 24671
-		// (get) Token: 0x06028EBE RID: 167614 RVA: 0x009B794B File Offset: 0x009B5B4B
-		// (set) Token: 0x06028EBF RID: 167615 RVA: 0x009B795B File Offset: 0x009B5B5B
+		// Token: 0x170039CA RID: 14794
+		// (get) Token: 0x0601F851 RID: 129105 RVA: 0x0092F91F File Offset: 0x0092DB1F
+		// (set) Token: 0x0601F852 RID: 129106 RVA: 0x0092F92F File Offset: 0x0092DB2F
 		public unsafe int 切换轨道CD
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道CD);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道CD) = value;
 			}
 		}
 
-		// Token: 0x17006060 RID: 24672
-		// (get) Token: 0x06028EC0 RID: 167616 RVA: 0x009B796C File Offset: 0x009B5B6C
-		// (set) Token: 0x06028EC1 RID: 167617 RVA: 0x009B797C File Offset: 0x009B5B7C
+		// Token: 0x170039CB RID: 14795
+		// (get) Token: 0x0601F853 RID: 129107 RVA: 0x0092F940 File Offset: 0x0092DB40
+		// (set) Token: 0x0601F854 RID: 129108 RVA: 0x0092F950 File Offset: 0x0092DB50
 		public unsafe int 切换轨道水平距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道水平距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道水平距离) = value;
 			}
 		}
 
-		// Token: 0x17006061 RID: 24673
-		// (get) Token: 0x06028EC2 RID: 167618 RVA: 0x009B798D File Offset: 0x009B5B8D
-		// (set) Token: 0x06028EC3 RID: 167619 RVA: 0x009B799D File Offset: 0x009B5B9D
+		// Token: 0x170039CC RID: 14796
+		// (get) Token: 0x0601F855 RID: 129109 RVA: 0x0092F961 File Offset: 0x0092DB61
+		// (set) Token: 0x0601F856 RID: 129110 RVA: 0x0092F971 File Offset: 0x0092DB71
 		public unsafe int 切换轨道垂直距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道垂直距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道垂直距离) = value;
 			}
 		}
 
-		// Token: 0x17006062 RID: 24674
-		// (get) Token: 0x06028EC4 RID: 167620 RVA: 0x009B79AE File Offset: 0x009B5BAE
-		// (set) Token: 0x06028EC5 RID: 167621 RVA: 0x009B79BE File Offset: 0x009B5BBE
+		// Token: 0x170039CD RID: 14797
+		// (get) Token: 0x0601F857 RID: 129111 RVA: 0x0092F982 File Offset: 0x0092DB82
+		// (set) Token: 0x0601F858 RID: 129112 RVA: 0x0092F992 File Offset: 0x0092DB92
 		public unsafe int 最大加速度角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大加速度角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_最大加速度角度) = value;
 			}
 		}
 
-		// Token: 0x17006063 RID: 24675
-		// (get) Token: 0x06028EC6 RID: 167622 RVA: 0x009B79CF File Offset: 0x009B5BCF
-		// (set) Token: 0x06028EC7 RID: 167623 RVA: 0x009B79DF File Offset: 0x009B5BDF
+		// Token: 0x170039CE RID: 14798
+		// (get) Token: 0x0601F859 RID: 129113 RVA: 0x0092F9A3 File Offset: 0x0092DBA3
+		// (set) Token: 0x0601F85A RID: 129114 RVA: 0x0092F9B3 File Offset: 0x0092DBB3
 		public unsafe int 起跳目标速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳目标速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳目标速度) = value;
 			}
 		}
 
-		// Token: 0x17006064 RID: 24676
-		// (get) Token: 0x06028EC8 RID: 167624 RVA: 0x009B79F0 File Offset: 0x009B5BF0
-		// (set) Token: 0x06028EC9 RID: 167625 RVA: 0x009B7A00 File Offset: 0x009B5C00
+		// Token: 0x170039CF RID: 14799
+		// (get) Token: 0x0601F85B RID: 129115 RVA: 0x0092F9C4 File Offset: 0x0092DBC4
+		// (set) Token: 0x0601F85C RID: 129116 RVA: 0x0092F9D4 File Offset: 0x0092DBD4
 		public unsafe int 切换轨道基速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道基速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_切换轨道基速度) = value;
 			}
 		}
 
-		// Token: 0x17006065 RID: 24677
-		// (get) Token: 0x06028ECA RID: 167626 RVA: 0x009B7A14 File Offset: 0x009B5C14
-		// (set) Token: 0x06028ECB RID: 167627 RVA: 0x009B7A4D File Offset: 0x009B5C4D
+		// Token: 0x170039D0 RID: 14800
+		// (get) Token: 0x0601F85D RID: 129117 RVA: 0x0092F9E8 File Offset: 0x0092DBE8
+		// (set) Token: 0x0601F85E RID: 129118 RVA: 0x0092FA21 File Offset: 0x0092DC21
 		public SFloatCurve 位移曲线
 		{
 			get
@@ -376,19 +376,19 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 				SFloatCurve result;
 				if ((result = this._位移曲线) == null)
 				{
-					result = (this._位移曲线 = new SFloatCurve(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_22, this));
+					result = (this._位移曲线 = new SFloatCurve(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_位移曲线, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatCurve.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_22, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatCurve.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_位移曲线, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006066 RID: 24678
-		// (get) Token: 0x06028ECC RID: 167628 RVA: 0x009B7A70 File Offset: 0x009B5C70
-		// (set) Token: 0x06028ECD RID: 167629 RVA: 0x009B7AA9 File Offset: 0x009B5CA9
+		// Token: 0x170039D1 RID: 14801
+		// (get) Token: 0x0601F85F RID: 129119 RVA: 0x0092FA44 File Offset: 0x0092DC44
+		// (set) Token: 0x0601F860 RID: 129120 RVA: 0x0092FA7D File Offset: 0x0092DC7D
 		public SFloatCurve 位移曲线_卡提西亚
 		{
 			get
@@ -397,34 +397,34 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 				SFloatCurve result;
 				if ((result = this._位移曲线_卡提西亚) == null)
 				{
-					result = (this._位移曲线_卡提西亚 = new SFloatCurve(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_23, this));
+					result = (this._位移曲线_卡提西亚 = new SFloatCurve(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_位移曲线_卡提西亚, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SFloatCurve.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_23, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SFloatCurve.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_位移曲线_卡提西亚, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006067 RID: 24679
-		// (get) Token: 0x06028ECE RID: 167630 RVA: 0x009B7ACA File Offset: 0x009B5CCA
-		// (set) Token: 0x06028ECF RID: 167631 RVA: 0x009B7ADA File Offset: 0x009B5CDA
+		// Token: 0x170039D2 RID: 14802
+		// (get) Token: 0x0601F861 RID: 129121 RVA: 0x0092FA9E File Offset: 0x0092DC9E
+		// (set) Token: 0x0601F862 RID: 129122 RVA: 0x0092FAAE File Offset: 0x0092DCAE
 		public unsafe int 限制输入角度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_限制输入角度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_限制输入角度) = value;
 			}
 		}
 
-		// Token: 0x17006068 RID: 24680
-		// (get) Token: 0x06028ED0 RID: 167632 RVA: 0x009B7AEC File Offset: 0x009B5CEC
-		// (set) Token: 0x06028ED1 RID: 167633 RVA: 0x009B7B25 File Offset: 0x009B5D25
+		// Token: 0x170039D3 RID: 14803
+		// (get) Token: 0x0601F863 RID: 129123 RVA: 0x0092FAC0 File Offset: 0x0092DCC0
+		// (set) Token: 0x0601F864 RID: 129124 RVA: 0x0092FAF9 File Offset: 0x0092DCF9
 		public FGameplayTagContainer 期间Tag
 		{
 			get
@@ -433,49 +433,49 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 				FGameplayTagContainer result;
 				if ((result = this._期间Tag) == null)
 				{
-					result = (this._期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_25, this));
+					result = (this._期间Tag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_期间Tag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_25, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_期间Tag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006069 RID: 24681
-		// (get) Token: 0x06028ED2 RID: 167634 RVA: 0x009B7B46 File Offset: 0x009B5D46
-		// (set) Token: 0x06028ED3 RID: 167635 RVA: 0x009B7B56 File Offset: 0x009B5D56
+		// Token: 0x170039D4 RID: 14804
+		// (get) Token: 0x0601F865 RID: 129125 RVA: 0x0092FB1A File Offset: 0x0092DD1A
+		// (set) Token: 0x0601F866 RID: 129126 RVA: 0x0092FB2A File Offset: 0x0092DD2A
 		public unsafe int 落地最大速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地最大速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地最大速度) = value;
 			}
 		}
 
-		// Token: 0x1700606A RID: 24682
-		// (get) Token: 0x06028ED4 RID: 167636 RVA: 0x009B7B67 File Offset: 0x009B5D67
-		// (set) Token: 0x06028ED5 RID: 167637 RVA: 0x009B7B77 File Offset: 0x009B5D77
+		// Token: 0x170039D5 RID: 14805
+		// (get) Token: 0x0601F867 RID: 129127 RVA: 0x0092FB3B File Offset: 0x0092DD3B
+		// (set) Token: 0x0601F868 RID: 129128 RVA: 0x0092FB4B File Offset: 0x0092DD4B
 		public unsafe int 落地最小速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地最小速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地最小速度) = value;
 			}
 		}
 
-		// Token: 0x1700606B RID: 24683
-		// (get) Token: 0x06028ED6 RID: 167638 RVA: 0x009B7B88 File Offset: 0x009B5D88
-		// (set) Token: 0x06028ED7 RID: 167639 RVA: 0x009B7BC1 File Offset: 0x009B5DC1
+		// Token: 0x170039D6 RID: 14806
+		// (get) Token: 0x0601F869 RID: 129129 RVA: 0x0092FB5C File Offset: 0x0092DD5C
+		// (set) Token: 0x0601F86A RID: 129130 RVA: 0x0092FB95 File Offset: 0x0092DD95
 		public TArray<int> 打断技能列表
 		{
 			get
@@ -484,7 +484,7 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 				TArray<int> result;
 				if ((result = this._打断技能列表) == null)
 				{
-					result = (this._打断技能列表 = new TArray<int>(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_28, this));
+					result = (this._打断技能列表 = new TArray<int>(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_打断技能列表, this));
 				}
 				return result;
 			}
@@ -494,517 +494,517 @@ namespace AkiClient.Game.Aki.Data.Level.RailSlide
 			}
 		}
 
-		// Token: 0x1700606C RID: 24684
-		// (get) Token: 0x06028ED8 RID: 167640 RVA: 0x009B7BCF File Offset: 0x009B5DCF
-		// (set) Token: 0x06028ED9 RID: 167641 RVA: 0x009B7BDF File Offset: 0x009B5DDF
+		// Token: 0x170039D7 RID: 14807
+		// (get) Token: 0x0601F86B RID: 129131 RVA: 0x0092FBA3 File Offset: 0x0092DDA3
+		// (set) Token: 0x0601F86C RID: 129132 RVA: 0x0092FBB3 File Offset: 0x0092DDB3
 		public unsafe int 起跳时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳时长) = value;
 			}
 		}
 
-		// Token: 0x1700606D RID: 24685
-		// (get) Token: 0x06028EDA RID: 167642 RVA: 0x009B7BF0 File Offset: 0x009B5DF0
-		// (set) Token: 0x06028EDB RID: 167643 RVA: 0x009B7C00 File Offset: 0x009B5E00
+		// Token: 0x170039D8 RID: 14808
+		// (get) Token: 0x0601F86D RID: 129133 RVA: 0x0092FBC4 File Offset: 0x0092DDC4
+		// (set) Token: 0x0601F86E RID: 129134 RVA: 0x0092FBD4 File Offset: 0x0092DDD4
 		public unsafe int 起跳时长_卡提西亚
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳时长_卡提西亚);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_起跳时长_卡提西亚) = value;
 			}
 		}
 
-		// Token: 0x1700606E RID: 24686
-		// (get) Token: 0x06028EDC RID: 167644 RVA: 0x009B7C11 File Offset: 0x009B5E11
-		// (set) Token: 0x06028EDD RID: 167645 RVA: 0x009B7C21 File Offset: 0x009B5E21
+		// Token: 0x170039D9 RID: 14809
+		// (get) Token: 0x0601F86F RID: 129135 RVA: 0x0092FBE5 File Offset: 0x0092DDE5
+		// (set) Token: 0x0601F870 RID: 129136 RVA: 0x0092FBF5 File Offset: 0x0092DDF5
 		public unsafe int 落地时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地时长) = value;
 			}
 		}
 
-		// Token: 0x1700606F RID: 24687
-		// (get) Token: 0x06028EDE RID: 167646 RVA: 0x009B7C32 File Offset: 0x009B5E32
-		// (set) Token: 0x06028EDF RID: 167647 RVA: 0x009B7C42 File Offset: 0x009B5E42
+		// Token: 0x170039DA RID: 14810
+		// (get) Token: 0x0601F871 RID: 129137 RVA: 0x0092FC06 File Offset: 0x0092DE06
+		// (set) Token: 0x0601F872 RID: 129138 RVA: 0x0092FC16 File Offset: 0x0092DE16
 		public unsafe int 落地时长_卡提西亚
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地时长_卡提西亚);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_落地时长_卡提西亚) = value;
 			}
 		}
 
-		// Token: 0x17006070 RID: 24688
-		// (get) Token: 0x06028EE0 RID: 167648 RVA: 0x009B7C53 File Offset: 0x009B5E53
-		// (set) Token: 0x06028EE1 RID: 167649 RVA: 0x009B7C63 File Offset: 0x009B5E63
+		// Token: 0x170039DB RID: 14811
+		// (get) Token: 0x0601F873 RID: 129139 RVA: 0x0092FC27 File Offset: 0x0092DE27
+		// (set) Token: 0x0601F874 RID: 129140 RVA: 0x0092FC37 File Offset: 0x0092DE37
 		public unsafe int 跳跃空中总时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_跳跃空中总时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_跳跃空中总时长) = value;
 			}
 		}
 
-		// Token: 0x17006071 RID: 24689
-		// (get) Token: 0x06028EE2 RID: 167650 RVA: 0x009B7C74 File Offset: 0x009B5E74
-		// (set) Token: 0x06028EE3 RID: 167651 RVA: 0x009B7C84 File Offset: 0x009B5E84
+		// Token: 0x170039DC RID: 14812
+		// (get) Token: 0x0601F875 RID: 129141 RVA: 0x0092FC48 File Offset: 0x0092DE48
+		// (set) Token: 0x0601F876 RID: 129142 RVA: 0x0092FC58 File Offset: 0x0092DE58
 		public unsafe bool DebugDraw
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_34) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_DebugDraw) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_34) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_DebugDraw) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006072 RID: 24690
-		// (get) Token: 0x06028EE4 RID: 167652 RVA: 0x009B7C95 File Offset: 0x009B5E95
-		// (set) Token: 0x06028EE5 RID: 167653 RVA: 0x009B7CA5 File Offset: 0x009B5EA5
+		// Token: 0x170039DD RID: 14813
+		// (get) Token: 0x0601F877 RID: 129143 RVA: 0x0092FC69 File Offset: 0x0092DE69
+		// (set) Token: 0x0601F878 RID: 129144 RVA: 0x0092FC79 File Offset: 0x0092DE79
 		public unsafe int 前向基础跳跃高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向基础跳跃高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向基础跳跃高度) = value;
 			}
 		}
 
-		// Token: 0x17006073 RID: 24691
-		// (get) Token: 0x06028EE6 RID: 167654 RVA: 0x009B7CB6 File Offset: 0x009B5EB6
-		// (set) Token: 0x06028EE7 RID: 167655 RVA: 0x009B7CC6 File Offset: 0x009B5EC6
+		// Token: 0x170039DE RID: 14814
+		// (get) Token: 0x0601F879 RID: 129145 RVA: 0x0092FC8A File Offset: 0x0092DE8A
+		// (set) Token: 0x0601F87A RID: 129146 RVA: 0x0092FC9A File Offset: 0x0092DE9A
 		public unsafe float 前向基础跳远倍率
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_36);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向基础跳远倍率);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_36) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向基础跳远倍率) = value;
 			}
 		}
 
-		// Token: 0x17006074 RID: 24692
-		// (get) Token: 0x06028EE8 RID: 167656 RVA: 0x009B7CD7 File Offset: 0x009B5ED7
-		// (set) Token: 0x06028EE9 RID: 167657 RVA: 0x009B7CE7 File Offset: 0x009B5EE7
+		// Token: 0x170039DF RID: 14815
+		// (get) Token: 0x0601F87B RID: 129147 RVA: 0x0092FCAB File Offset: 0x0092DEAB
+		// (set) Token: 0x0601F87C RID: 129148 RVA: 0x0092FCBB File Offset: 0x0092DEBB
 		public unsafe int 前向最大跳跃距离
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_37);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向最大跳跃距离);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_37) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向最大跳跃距离) = value;
 			}
 		}
 
-		// Token: 0x17006075 RID: 24693
-		// (get) Token: 0x06028EEA RID: 167658 RVA: 0x009B7CF8 File Offset: 0x009B5EF8
-		// (set) Token: 0x06028EEB RID: 167659 RVA: 0x009B7D08 File Offset: 0x009B5F08
+		// Token: 0x170039E0 RID: 14816
+		// (get) Token: 0x0601F87D RID: 129149 RVA: 0x0092FCCC File Offset: 0x0092DECC
+		// (set) Token: 0x0601F87E RID: 129150 RVA: 0x0092FCDC File Offset: 0x0092DEDC
 		public unsafe int 前向最大跳跃高度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_38);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向最大跳跃高度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_38) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向最大跳跃高度) = value;
 			}
 		}
 
-		// Token: 0x17006076 RID: 24694
-		// (get) Token: 0x06028EEC RID: 167660 RVA: 0x009B7D19 File Offset: 0x009B5F19
-		// (set) Token: 0x06028EED RID: 167661 RVA: 0x009B7D29 File Offset: 0x009B5F29
+		// Token: 0x170039E1 RID: 14817
+		// (get) Token: 0x0601F87F RID: 129151 RVA: 0x0092FCED File Offset: 0x0092DEED
+		// (set) Token: 0x0601F880 RID: 129152 RVA: 0x0092FCFD File Offset: 0x0092DEFD
 		public unsafe int 前向起跳加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_39);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_39) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳加速度) = value;
 			}
 		}
 
-		// Token: 0x17006077 RID: 24695
-		// (get) Token: 0x06028EEE RID: 167662 RVA: 0x009B7D3A File Offset: 0x009B5F3A
-		// (set) Token: 0x06028EEF RID: 167663 RVA: 0x009B7D4A File Offset: 0x009B5F4A
+		// Token: 0x170039E2 RID: 14818
+		// (get) Token: 0x0601F881 RID: 129153 RVA: 0x0092FD0E File Offset: 0x0092DF0E
+		// (set) Token: 0x0601F882 RID: 129154 RVA: 0x0092FD1E File Offset: 0x0092DF1E
 		public unsafe int 前向起跳目标速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_40);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳目标速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_40) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳目标速度) = value;
 			}
 		}
 
-		// Token: 0x17006078 RID: 24696
-		// (get) Token: 0x06028EF0 RID: 167664 RVA: 0x009B7D5B File Offset: 0x009B5F5B
-		// (set) Token: 0x06028EF1 RID: 167665 RVA: 0x009B7D6B File Offset: 0x009B5F6B
+		// Token: 0x170039E3 RID: 14819
+		// (get) Token: 0x0601F883 RID: 129155 RVA: 0x0092FD2F File Offset: 0x0092DF2F
+		// (set) Token: 0x0601F884 RID: 129156 RVA: 0x0092FD3F File Offset: 0x0092DF3F
 		public unsafe int 前向跳跃空中总时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_41);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向跳跃空中总时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_41) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向跳跃空中总时长) = value;
 			}
 		}
 
-		// Token: 0x17006079 RID: 24697
-		// (get) Token: 0x06028EF2 RID: 167666 RVA: 0x009B7D7C File Offset: 0x009B5F7C
-		// (set) Token: 0x06028EF3 RID: 167667 RVA: 0x009B7D8C File Offset: 0x009B5F8C
+		// Token: 0x170039E4 RID: 14820
+		// (get) Token: 0x0601F885 RID: 129157 RVA: 0x0092FD50 File Offset: 0x0092DF50
+		// (set) Token: 0x0601F886 RID: 129158 RVA: 0x0092FD60 File Offset: 0x0092DF60
 		public unsafe int 前向起跳时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_42);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_42) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向起跳时长) = value;
 			}
 		}
 
-		// Token: 0x1700607A RID: 24698
-		// (get) Token: 0x06028EF4 RID: 167668 RVA: 0x009B7D9D File Offset: 0x009B5F9D
-		// (set) Token: 0x06028EF5 RID: 167669 RVA: 0x009B7DAD File Offset: 0x009B5FAD
+		// Token: 0x170039E5 RID: 14821
+		// (get) Token: 0x0601F887 RID: 129159 RVA: 0x0092FD71 File Offset: 0x0092DF71
+		// (set) Token: 0x0601F888 RID: 129160 RVA: 0x0092FD81 File Offset: 0x0092DF81
 		public unsafe int 前向落地时长
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_43);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向落地时长);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_43) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_前向落地时长) = value;
 			}
 		}
 
-		// Token: 0x1700607B RID: 24699
-		// (get) Token: 0x06028EF6 RID: 167670 RVA: 0x009B7DBE File Offset: 0x009B5FBE
-		// (set) Token: 0x06028EF7 RID: 167671 RVA: 0x009B7DCE File Offset: 0x009B5FCE
+		// Token: 0x170039E6 RID: 14822
+		// (get) Token: 0x0601F889 RID: 129161 RVA: 0x0092FD92 File Offset: 0x0092DF92
+		// (set) Token: 0x0601F88A RID: 129162 RVA: 0x0092FDA2 File Offset: 0x0092DFA2
 		public unsafe bool 是否有落地动画
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_44) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_是否有落地动画) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_44) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_是否有落地动画) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700607C RID: 24700
-		// (get) Token: 0x06028EF8 RID: 167672 RVA: 0x009B7DDF File Offset: 0x009B5FDF
-		// (set) Token: 0x06028EF9 RID: 167673 RVA: 0x009B7DEF File Offset: 0x009B5FEF
+		// Token: 0x170039E7 RID: 14823
+		// (get) Token: 0x0601F88B RID: 129163 RVA: 0x0092FDB3 File Offset: 0x0092DFB3
+		// (set) Token: 0x0601F88C RID: 129164 RVA: 0x0092FDC3 File Offset: 0x0092DFC3
 		public unsafe bool 是否启用定制动作
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_45) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_是否启用定制动作) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_45) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_是否启用定制动作) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700607D RID: 24701
-		// (get) Token: 0x06028EFA RID: 167674 RVA: 0x009B7E00 File Offset: 0x009B6000
-		// (set) Token: 0x06028EFB RID: 167675 RVA: 0x009B7E10 File Offset: 0x009B6010
+		// Token: 0x170039E8 RID: 14824
+		// (get) Token: 0x0601F88D RID: 129165 RVA: 0x0092FDD4 File Offset: 0x0092DFD4
+		// (set) Token: 0x0601F88E RID: 129166 RVA: 0x0092FDE4 File Offset: 0x0092DFE4
 		public unsafe bool DebugDraw_Control
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_46) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_DebugDraw_Control) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_46) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_DebugDraw_Control) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700607E RID: 24702
-		// (get) Token: 0x06028EFC RID: 167676 RVA: 0x009B7E21 File Offset: 0x009B6021
-		// (set) Token: 0x06028EFD RID: 167677 RVA: 0x009B7E35 File Offset: 0x009B6035
+		// Token: 0x170039E9 RID: 14825
+		// (get) Token: 0x0601F88F RID: 129167 RVA: 0x0092FDF5 File Offset: 0x0092DFF5
+		// (set) Token: 0x0601F890 RID: 129168 RVA: 0x0092FE09 File Offset: 0x0092E009
 		public unsafe SRailSlideControlConfig 横向控制参数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_横向控制参数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_横向控制参数) = value;
 			}
 		}
 
-		// Token: 0x1700607F RID: 24703
-		// (get) Token: 0x06028EFE RID: 167678 RVA: 0x009B7E4A File Offset: 0x009B604A
-		// (set) Token: 0x06028EFF RID: 167679 RVA: 0x009B7E5A File Offset: 0x009B605A
+		// Token: 0x170039EA RID: 14826
+		// (get) Token: 0x0601F891 RID: 129169 RVA: 0x0092FE1E File Offset: 0x0092E01E
+		// (set) Token: 0x0601F892 RID: 129170 RVA: 0x0092FE2E File Offset: 0x0092E02E
 		public unsafe ERailSlideAnimType 滑轨动画类型
 		{
 			get
 			{
-				return (ERailSlideAnimType)(*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_48));
+				return (ERailSlideAnimType)(*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_滑轨动画类型));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_48) = (byte)value;
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_滑轨动画类型) = (byte)value;
 			}
 		}
 
-		// Token: 0x17006080 RID: 24704
-		// (get) Token: 0x06028F00 RID: 167680 RVA: 0x009B7E6B File Offset: 0x009B606B
-		// (set) Token: 0x06028F01 RID: 167681 RVA: 0x009B7E7B File Offset: 0x009B607B
+		// Token: 0x170039EB RID: 14827
+		// (get) Token: 0x0601F893 RID: 129171 RVA: 0x0092FE3F File Offset: 0x0092E03F
+		// (set) Token: 0x0601F894 RID: 129172 RVA: 0x0092FE4F File Offset: 0x0092E04F
 		public unsafe bool 禁止重力方向倾斜
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_49) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_禁止重力方向倾斜) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_49) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_禁止重力方向倾斜) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006081 RID: 24705
-		// (get) Token: 0x06028F02 RID: 167682 RVA: 0x009B7E8C File Offset: 0x009B608C
-		// (set) Token: 0x06028F03 RID: 167683 RVA: 0x009B7E9C File Offset: 0x009B609C
+		// Token: 0x170039EC RID: 14828
+		// (get) Token: 0x0601F895 RID: 129173 RVA: 0x0092FE60 File Offset: 0x0092E060
+		// (set) Token: 0x0601F896 RID: 129174 RVA: 0x0092FE70 File Offset: 0x0092E070
 		public unsafe bool 禁止前后俯仰倾斜
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_50) != 0;
+				return *(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_禁止前后俯仰倾斜) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_50) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_RailSlideConfig_C.__PropertyOffset_禁止前后俯仰倾斜) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06028F04 RID: 167684 RVA: 0x009B7EAD File Offset: 0x009B60AD
+		// Token: 0x0601F897 RID: 129175 RVA: 0x0092FE81 File Offset: 0x0092E081
 		protected BP_RailSlideConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014ECE RID: 85710
+		// Token: 0x04010E6E RID: 69230
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/RailSlide/BP_RailSlideConfig.BP_RailSlideConfig_C";
 
-		// Token: 0x04014ECF RID: 85711
+		// Token: 0x04010E6F RID: 69231
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014ED0 RID: 85712
+		// Token: 0x04010E70 RID: 69232
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014ED1 RID: 85713
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010E71 RID: 69233
+		internal static int __PropertyOffset_初始速度;
 
-		// Token: 0x04014ED2 RID: 85714
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010E72 RID: 69234
+		internal static int __PropertyOffset_基础目标速度;
 
-		// Token: 0x04014ED3 RID: 85715
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010E73 RID: 69235
+		internal static int __PropertyOffset_基础加速度;
 
-		// Token: 0x04014ED4 RID: 85716
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010E74 RID: 69236
+		internal static int __PropertyOffset_上坡目标速度;
 
-		// Token: 0x04014ED5 RID: 85717
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010E75 RID: 69237
+		internal static int __PropertyOffset_上坡加速度;
 
-		// Token: 0x04014ED6 RID: 85718
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010E76 RID: 69238
+		internal static int __PropertyOffset_下坡目标速度;
 
-		// Token: 0x04014ED7 RID: 85719
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010E77 RID: 69239
+		internal static int __PropertyOffset_下坡加速度;
 
-		// Token: 0x04014ED8 RID: 85720
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010E78 RID: 69240
+		internal static int __PropertyOffset_基础跳跃高度;
 
-		// Token: 0x04014ED9 RID: 85721
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010E79 RID: 69241
+		internal static int __PropertyOffset_基础跳远倍率;
 
-		// Token: 0x04014EDA RID: 85722
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010E7A RID: 69242
+		internal static int __PropertyOffset_最大跳跃距离;
 
-		// Token: 0x04014EDB RID: 85723
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010E7B RID: 69243
+		internal static int __PropertyOffset_最大跳跃高度;
 
-		// Token: 0x04014EDC RID: 85724
-		internal static int __PropertyOffset_11;
+		// Token: 0x04010E7C RID: 69244
+		internal static int __PropertyOffset_起跳加速度;
 
-		// Token: 0x04014EDD RID: 85725
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010E7D RID: 69245
+		internal static int __PropertyOffset_起跳加速度_卡提西亚;
 
-		// Token: 0x04014EDE RID: 85726
-		internal static int __PropertyOffset_13;
+		// Token: 0x04010E7E RID: 69246
+		internal static int __PropertyOffset_倾斜输入插值;
 
-		// Token: 0x04014EDF RID: 85727
-		internal static int __PropertyOffset_14;
+		// Token: 0x04010E7F RID: 69247
+		internal static int __PropertyOffset_最大倾斜角度;
 
-		// Token: 0x04014EE0 RID: 85728
-		internal static int __PropertyOffset_15;
+		// Token: 0x04010E80 RID: 69248
+		internal static int __PropertyOffset_初始进入轨道速度;
 
-		// Token: 0x04014EE1 RID: 85729
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010E81 RID: 69249
+		internal static int __PropertyOffset_切换轨道CD;
 
-		// Token: 0x04014EE2 RID: 85730
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010E82 RID: 69250
+		internal static int __PropertyOffset_切换轨道水平距离;
 
-		// Token: 0x04014EE3 RID: 85731
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010E83 RID: 69251
+		internal static int __PropertyOffset_切换轨道垂直距离;
 
-		// Token: 0x04014EE4 RID: 85732
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010E84 RID: 69252
+		internal static int __PropertyOffset_最大加速度角度;
 
-		// Token: 0x04014EE5 RID: 85733
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010E85 RID: 69253
+		internal static int __PropertyOffset_起跳目标速度;
 
-		// Token: 0x04014EE6 RID: 85734
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010E86 RID: 69254
+		internal static int __PropertyOffset_切换轨道基速度;
 
-		// Token: 0x04014EE7 RID: 85735
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010E87 RID: 69255
+		internal static int __PropertyOffset_位移曲线;
 
-		// Token: 0x04014EE8 RID: 85736
+		// Token: 0x04010E88 RID: 69256
 		[Nullable(2)]
 		private SFloatCurve _位移曲线;
 
-		// Token: 0x04014EE9 RID: 85737
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010E89 RID: 69257
+		internal static int __PropertyOffset_位移曲线_卡提西亚;
 
-		// Token: 0x04014EEA RID: 85738
+		// Token: 0x04010E8A RID: 69258
 		[Nullable(2)]
 		private SFloatCurve _位移曲线_卡提西亚;
 
-		// Token: 0x04014EEB RID: 85739
-		internal static int __PropertyOffset_24;
+		// Token: 0x04010E8B RID: 69259
+		internal static int __PropertyOffset_限制输入角度;
 
-		// Token: 0x04014EEC RID: 85740
-		internal static int __PropertyOffset_25;
+		// Token: 0x04010E8C RID: 69260
+		internal static int __PropertyOffset_期间Tag;
 
-		// Token: 0x04014EED RID: 85741
+		// Token: 0x04010E8D RID: 69261
 		[Nullable(2)]
 		private FGameplayTagContainer _期间Tag;
 
-		// Token: 0x04014EEE RID: 85742
-		internal static int __PropertyOffset_26;
+		// Token: 0x04010E8E RID: 69262
+		internal static int __PropertyOffset_落地最大速度;
 
-		// Token: 0x04014EEF RID: 85743
-		internal static int __PropertyOffset_27;
+		// Token: 0x04010E8F RID: 69263
+		internal static int __PropertyOffset_落地最小速度;
 
-		// Token: 0x04014EF0 RID: 85744
-		internal static int __PropertyOffset_28;
+		// Token: 0x04010E90 RID: 69264
+		internal static int __PropertyOffset_打断技能列表;
 
-		// Token: 0x04014EF1 RID: 85745
+		// Token: 0x04010E91 RID: 69265
 		[Nullable(2)]
 		private TArray<int> _打断技能列表;
 
-		// Token: 0x04014EF2 RID: 85746
-		internal static int __PropertyOffset_29;
+		// Token: 0x04010E92 RID: 69266
+		internal static int __PropertyOffset_起跳时长;
 
-		// Token: 0x04014EF3 RID: 85747
-		internal static int __PropertyOffset_30;
+		// Token: 0x04010E93 RID: 69267
+		internal static int __PropertyOffset_起跳时长_卡提西亚;
 
-		// Token: 0x04014EF4 RID: 85748
-		internal static int __PropertyOffset_31;
+		// Token: 0x04010E94 RID: 69268
+		internal static int __PropertyOffset_落地时长;
 
-		// Token: 0x04014EF5 RID: 85749
-		internal static int __PropertyOffset_32;
+		// Token: 0x04010E95 RID: 69269
+		internal static int __PropertyOffset_落地时长_卡提西亚;
 
-		// Token: 0x04014EF6 RID: 85750
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010E96 RID: 69270
+		internal static int __PropertyOffset_跳跃空中总时长;
 
-		// Token: 0x04014EF7 RID: 85751
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010E97 RID: 69271
+		internal static int __PropertyOffset_DebugDraw;
 
-		// Token: 0x04014EF8 RID: 85752
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010E98 RID: 69272
+		internal static int __PropertyOffset_前向基础跳跃高度;
 
-		// Token: 0x04014EF9 RID: 85753
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010E99 RID: 69273
+		internal static int __PropertyOffset_前向基础跳远倍率;
 
-		// Token: 0x04014EFA RID: 85754
-		internal static int __PropertyOffset_37;
+		// Token: 0x04010E9A RID: 69274
+		internal static int __PropertyOffset_前向最大跳跃距离;
 
-		// Token: 0x04014EFB RID: 85755
-		internal static int __PropertyOffset_38;
+		// Token: 0x04010E9B RID: 69275
+		internal static int __PropertyOffset_前向最大跳跃高度;
 
-		// Token: 0x04014EFC RID: 85756
-		internal static int __PropertyOffset_39;
+		// Token: 0x04010E9C RID: 69276
+		internal static int __PropertyOffset_前向起跳加速度;
 
-		// Token: 0x04014EFD RID: 85757
-		internal static int __PropertyOffset_40;
+		// Token: 0x04010E9D RID: 69277
+		internal static int __PropertyOffset_前向起跳目标速度;
 
-		// Token: 0x04014EFE RID: 85758
-		internal static int __PropertyOffset_41;
+		// Token: 0x04010E9E RID: 69278
+		internal static int __PropertyOffset_前向跳跃空中总时长;
 
-		// Token: 0x04014EFF RID: 85759
-		internal static int __PropertyOffset_42;
+		// Token: 0x04010E9F RID: 69279
+		internal static int __PropertyOffset_前向起跳时长;
 
-		// Token: 0x04014F00 RID: 85760
-		internal static int __PropertyOffset_43;
+		// Token: 0x04010EA0 RID: 69280
+		internal static int __PropertyOffset_前向落地时长;
 
-		// Token: 0x04014F01 RID: 85761
-		internal static int __PropertyOffset_44;
+		// Token: 0x04010EA1 RID: 69281
+		internal static int __PropertyOffset_是否有落地动画;
 
-		// Token: 0x04014F02 RID: 85762
-		internal static int __PropertyOffset_45;
+		// Token: 0x04010EA2 RID: 69282
+		internal static int __PropertyOffset_是否启用定制动作;
 
-		// Token: 0x04014F03 RID: 85763
-		internal static int __PropertyOffset_46;
+		// Token: 0x04010EA3 RID: 69283
+		internal static int __PropertyOffset_DebugDraw_Control;
 
-		// Token: 0x04014F04 RID: 85764
-		internal static int __PropertyOffset_47;
+		// Token: 0x04010EA4 RID: 69284
+		internal static int __PropertyOffset_横向控制参数;
 
-		// Token: 0x04014F05 RID: 85765
-		internal static int __PropertyOffset_48;
+		// Token: 0x04010EA5 RID: 69285
+		internal static int __PropertyOffset_滑轨动画类型;
 
-		// Token: 0x04014F06 RID: 85766
-		internal static int __PropertyOffset_49;
+		// Token: 0x04010EA6 RID: 69286
+		internal static int __PropertyOffset_禁止重力方向倾斜;
 
-		// Token: 0x04014F07 RID: 85767
-		internal static int __PropertyOffset_50;
+		// Token: 0x04010EA7 RID: 69287
+		internal static int __PropertyOffset_禁止前后俯仰倾斜;
 	}
 }

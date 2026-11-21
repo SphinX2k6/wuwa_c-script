@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006047 RID: 24647
+	// Token: 0x02004FC5 RID: 20421
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringManorDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603E5C7 RID: 255431 RVA: 0x00F0FD6A File Offset: 0x00F0DF6A
+		// Token: 0x0603328B RID: 209547 RVA: 0x00E56B2E File Offset: 0x00E54D2E
 		static SpringManorDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpringManorDefine.CreateStaticDefaultValue), new Action(SpringManorDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603E5C8 RID: 255432 RVA: 0x00F0FD8C File Offset: 0x00F0DF8C
+		// Token: 0x0603328C RID: 209548 RVA: 0x00E56B50 File Offset: 0x00E54D50
 		public static void CreateStaticDefaultValue()
 		{
 			SpringManorDefine.gameTypeList = new List<ESpringFunctionType>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E5C9 RID: 255433 RVA: 0x00F0FE1D File Offset: 0x00F0E01D
+		// Token: 0x0603328D RID: 209549 RVA: 0x00E56BE1 File Offset: 0x00E54DE1
 		public static void ResetStaticDefaultValue()
 		{
 			SpringManorDefine.gameTypeList = null;
@@ -53,35 +53,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			SpringManorDefine.atmosphereLevelUpSeqName = null;
 		}
 
-		// Token: 0x0402095A RID: 133466
+		// Token: 0x0401B287 RID: 111239
 		[Nullable(1)]
 		public const string TEXT_ID_ATMOSPHERER_MAX = "Spring26_Atmosphere_Max";
 
-		// Token: 0x0402095B RID: 133467
+		// Token: 0x0401B288 RID: 111240
 		public const int WEAPON_EXHIBIT_HELP_ID = 496;
 
-		// Token: 0x0402095C RID: 133468
+		// Token: 0x0401B289 RID: 111241
 		public const int PHANTOM_EXHIBIT_HELP_ID = 497;
 
-		// Token: 0x0402095D RID: 133469
+		// Token: 0x0401B28A RID: 111242
 		public const int ATMOSPHERE_HELP_ID = 495;
 
-		// Token: 0x0402095E RID: 133470
+		// Token: 0x0401B28B RID: 111243
 		public const int LIMIT_TIME_REWARD_HELP_ID = 502;
 
-		// Token: 0x0402095F RID: 133471
+		// Token: 0x0401B28C RID: 111244
 		public const int SPRING_QUEST_HELP_ID = 515;
 
-		// Token: 0x04020960 RID: 133472
+		// Token: 0x0401B28D RID: 111245
 		public static List<ESpringFunctionType> gameTypeList;
 
-		// Token: 0x04020961 RID: 133473
+		// Token: 0x0401B28E RID: 111246
 		public static List<ESpringFunctionType> furnitureFunctionTypeList;
 
-		// Token: 0x04020962 RID: 133474
+		// Token: 0x0401B28F RID: 111247
 		public static List<int> atmosphereLevelList;
 
-		// Token: 0x04020963 RID: 133475
+		// Token: 0x0401B290 RID: 111248
 		[Nullable(new byte[]
 		{
 			2,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		public static List<string> atmosphereLevelUpSeqName;
 
-		// Token: 0x04020964 RID: 133476
+		// Token: 0x0401B291 RID: 111249
 		public const int AUTO_END_TRACK_DISTANCE = 3;
 	}
 }

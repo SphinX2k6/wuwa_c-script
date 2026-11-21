@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A24 RID: 2596
+	// Token: 0x02000AF9 RID: 2809
 	public class ConfigTrapDefenseBdGroupAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003CEC RID: 15596 RVA: 0x001B2554 File Offset: 0x001B0754
+		// Token: 0x060041EA RID: 16874 RVA: 0x001D18E8 File Offset: 0x001CFAE8
 		static ConfigTrapDefenseBdGroupAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrapDefenseBdGroupAll.CreateStaticDefaultValue), new Action(ConfigTrapDefenseBdGroupAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003CED RID: 15597 RVA: 0x001B2574 File Offset: 0x001B0774
+		// Token: 0x060041EB RID: 16875 RVA: 0x001D1908 File Offset: 0x001CFB08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrapDefenseBdGroupAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003CEE RID: 15598 RVA: 0x001B25F3 File Offset: 0x001B07F3
+		// Token: 0x060041EC RID: 16876 RVA: 0x001D1987 File Offset: 0x001CFB87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrapDefenseBdGroupAll.LogPair = null;
 			ConfigTrapDefenseBdGroupAll.HandleId = 0;
 		}
 
-		// Token: 0x06003CEF RID: 15599 RVA: 0x001B2601 File Offset: 0x001B0801
+		// Token: 0x060041ED RID: 16877 RVA: 0x001D1995 File Offset: 0x001CFB95
 		public static void Init()
 		{
 			ConfigTrapDefenseBdGroupAll.HandleId = ConfigCommon.InitDataStatement(ConfigTrapDefenseBdGroupAll.HandleId, "db_trapdefense.db", "select BinData from `TrapDefenseBdGroup`");
 		}
 
-		// Token: 0x06003CF0 RID: 15600 RVA: 0x001B261C File Offset: 0x001B081C
+		// Token: 0x060041EE RID: 16878 RVA: 0x001D19B0 File Offset: 0x001CFBB0
 		[NullableContext(2)]
 		public static IReadOnlyList<TrapDefenseBdGroup> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040046E2 RID: 18146
+		// Token: 0x04004CB5 RID: 19637
 		private const string DB = "db_trapdefense.db";
 
-		// Token: 0x040046E3 RID: 18147
+		// Token: 0x04004CB6 RID: 19638
 		private const string FILE = "x.陷阱塔防活动_增益.xlsx";
 
-		// Token: 0x040046E4 RID: 18148
+		// Token: 0x04004CB7 RID: 19639
 		private const string TABLE = "TrapDefenseBdGroup";
 
-		// Token: 0x040046E5 RID: 18149
+		// Token: 0x04004CB8 RID: 19640
 		private const string COMMAND = "select BinData from `TrapDefenseBdGroup`";
 
-		// Token: 0x040046E6 RID: 18150
+		// Token: 0x04004CB9 RID: 19641
 		private const string KEY_PREFIX = "TrapDefenseBdGroupAll";
 
-		// Token: 0x040046E7 RID: 18151
+		// Token: 0x04004CBA RID: 19642
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040046E8 RID: 18152
+		// Token: 0x04004CBB RID: 19643
 		private static int HandleId;
 	}
 }

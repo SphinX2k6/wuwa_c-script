@@ -15,19 +15,20 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.PackageUpdate;
 using CSharpScript.Launcher.Ui.HotFix;
+using CSharpScript.Launcher.Update.ResourceDiffUpdate;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053E2 RID: 21474
+	// Token: 0x020043C5 RID: 17349
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MenuController : UiControllerBase
 	{
-		// Token: 0x170083CC RID: 33740
-		// (get) Token: 0x06036E71 RID: 224881 RVA: 0x00D02244 File Offset: 0x00D00444
+		// Token: 0x17005798 RID: 22424
+		// (get) Token: 0x0602BDB8 RID: 179640 RVA: 0x00C51328 File Offset: 0x00C4F528
 		private HashSet<EFunction> MakeImageQualityCustomSet
 		{
 			get
@@ -36,7 +37,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E72 RID: 224882 RVA: 0x00D0224B File Offset: 0x00D0044B
+		// Token: 0x0602BDB9 RID: 179641 RVA: 0x00C5132F File Offset: 0x00C4F52F
 		protected override bool OnInit()
 		{
 			this.RegisterOpenViewFunc();
@@ -44,13 +45,13 @@ namespace CSharpScript.Game.Module.Menu
 			return true;
 		}
 
-		// Token: 0x06036E73 RID: 224883 RVA: 0x00D0225A File Offset: 0x00D0045A
+		// Token: 0x0602BDBA RID: 179642 RVA: 0x00C5133E File Offset: 0x00C4F53E
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x06036E74 RID: 224884 RVA: 0x00D02260 File Offset: 0x00D00460
+		// Token: 0x0602BDBB RID: 179643 RVA: 0x00C51344 File Offset: 0x00C4F544
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<bool, int, int>(EEventName.ControllerConnectChange, new Action<bool, int, int>(this.ControllerConnectChange));
@@ -59,7 +60,7 @@ namespace CSharpScript.Game.Module.Menu
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.HandleWorldDone));
 		}
 
-		// Token: 0x06036E75 RID: 224885 RVA: 0x00D022E0 File Offset: 0x00D004E0
+		// Token: 0x0602BDBC RID: 179644 RVA: 0x00C513C4 File Offset: 0x00C4F5C4
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.ControllerConnectChange, new Action<bool, int, int>(this.ControllerConnectChange));
@@ -68,7 +69,7 @@ namespace CSharpScript.Game.Module.Menu
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.HandleWorldDone));
 		}
 
-		// Token: 0x06036E76 RID: 224886 RVA: 0x00D02360 File Offset: 0x00D00560
+		// Token: 0x0602BDBD RID: 179645 RVA: 0x00C51444 File Offset: 0x00C4F644
 		private unsafe void ControllerConnectChange(bool bIsConnected, int platformUserId, int controllerId)
 		{
 			Log instance = Log.Instance;
@@ -83,7 +84,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.RefreshGamepadConnect();
 		}
 
-		// Token: 0x06036E77 RID: 224887 RVA: 0x00D023F0 File Offset: 0x00D005F0
+		// Token: 0x0602BDBE RID: 179646 RVA: 0x00C514D4 File Offset: 0x00C4F6D4
 		private void HandleInputControllerChange(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -92,7 +93,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E78 RID: 224888 RVA: 0x00D02413 File Offset: 0x00D00613
+		// Token: 0x0602BDBF RID: 179647 RVA: 0x00C514F7 File Offset: 0x00C4F6F7
 		private void TrySwitchTouchInputByDisconnectGamepad(bool sdkGetFocusState)
 		{
 			if (sdkGetFocusState)
@@ -102,7 +103,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.RefreshGamepadConnect();
 		}
 
-		// Token: 0x06036E79 RID: 224889 RVA: 0x00D0241F File Offset: 0x00D0061F
+		// Token: 0x0602BDC0 RID: 179648 RVA: 0x00C51503 File Offset: 0x00C4F703
 		private void HandleWorldDone()
 		{
 			EyeProtectController.Instance.ApplyEyeProtectSetting();
@@ -110,7 +111,7 @@ namespace CSharpScript.Game.Module.Menu
 			GameSettingsUtils.ApplyImageDisplayMode(GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.ImageDisplayMode, 0, true));
 		}
 
-		// Token: 0x06036E7A RID: 224890 RVA: 0x00D0244C File Offset: 0x00D0064C
+		// Token: 0x0602BDC1 RID: 179649 RVA: 0x00C51530 File Offset: 0x00C4F730
 		public void CloseAllFilter()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.Kuro.KuroEnableScreenFilter 0", null);
@@ -118,13 +119,13 @@ namespace CSharpScript.Game.Module.Menu
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.BlueLightFilter.Disable 1", null);
 		}
 
-		// Token: 0x06036E7B RID: 224891 RVA: 0x00D0247E File Offset: 0x00D0067E
+		// Token: 0x0602BDC2 RID: 179650 RVA: 0x00C51562 File Offset: 0x00C4F762
 		public void OpenAllFilter()
 		{
 			GameSettingsUtils.ApplyImageDisplayMode(GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.ImageDisplayMode, 0, true));
 		}
 
-		// Token: 0x06036E7C RID: 224892 RVA: 0x00D02498 File Offset: 0x00D00698
+		// Token: 0x0602BDC3 RID: 179651 RVA: 0x00C5157C File Offset: 0x00C4F77C
 		public void HandleFireSaveMenuChange(MenuData menuData, float value)
 		{
 			EFunction functionId = menuData.FunctionId;
@@ -163,7 +164,7 @@ namespace CSharpScript.Game.Module.Menu
 			MenuModel.Instance.IsEdited = true;
 		}
 
-		// Token: 0x06036E7D RID: 224893 RVA: 0x00D02578 File Offset: 0x00D00778
+		// Token: 0x0602BDC4 RID: 179652 RVA: 0x00C5165C File Offset: 0x00C4F85C
 		private void HandleRaytracingMenuData(int rayTracingCurrentValue)
 		{
 			if (GameSettingsManager.Instance.IsValid(EFunction.RayTracedGI, true))
@@ -190,7 +191,7 @@ namespace CSharpScript.Game.Module.Menu
 			GameSettingsManager.Instance.ForceSaveValue(EFunction.RayTracedShadow, (rayTracingCurrentValue > 0) ? 1 : 0);
 		}
 
-		// Token: 0x06036E7E RID: 224894 RVA: 0x00D02638 File Offset: 0x00D00838
+		// Token: 0x0602BDC5 RID: 179653 RVA: 0x00C5171C File Offset: 0x00C4F91C
 		private void HandleAffectedMenuData(MenuData menuData)
 		{
 			MenuModel instance = MenuModel.Instance;
@@ -235,6 +236,23 @@ namespace CSharpScript.Game.Module.Menu
 							}
 						}
 					}
+					foreach (KeyValuePair<EFunction, float> keyValuePair2 in GameSettingsDeviceRender.Instance.GetOtherChangedFloatValue(deviceRenderFeature.Value))
+					{
+						EFunction efunction3;
+						float num2;
+						keyValuePair2.Deconstruct(out efunction3, out num2);
+						EFunction efunction4 = efunction3;
+						float value2 = num2;
+						if (GameSettingsManager.Instance.ValidApplyConfigMap.ContainsKey(efunction4))
+						{
+							instance.AddDataToTempCache(efunction4, value2);
+							MenuData menuDataByFunctionId3 = instance.GetMenuDataByFunctionId((int)efunction4);
+							if (menuDataByFunctionId3 != null)
+							{
+								this.RefreshAffectedMenuDataEnable(menuDataByFunctionId3);
+							}
+						}
+					}
 				}
 			}
 			if (this.MakeImageQualityCustomSet.Contains(functionId))
@@ -275,18 +293,18 @@ namespace CSharpScript.Game.Module.Menu
 			{
 				return;
 			}
-			foreach (KeyValuePair<int, int> keyValuePair2 in menuData.AffectedFunction)
+			foreach (KeyValuePair<int, int> keyValuePair3 in menuData.AffectedFunction)
 			{
-				int key2 = keyValuePair2.Key;
-				int value2 = keyValuePair2.Value;
+				int key2 = keyValuePair3.Key;
+				int value3 = keyValuePair3.Value;
 				if (GameSettingsManager.Instance.ValidApplyConfigMap.ContainsKey((EFunction)key2))
 				{
-					MenuModel.Instance.AddDataToTempCache((EFunction)key2, (float)value2);
+					MenuModel.Instance.AddDataToTempCache((EFunction)key2, (float)value3);
 				}
 			}
 		}
 
-		// Token: 0x06036E7F RID: 224895 RVA: 0x00D02958 File Offset: 0x00D00B58
+		// Token: 0x0602BDC6 RID: 179654 RVA: 0x00C51AD8 File Offset: 0x00C4FCD8
 		private void RefreshAffectedMenuDataEnable(MenuData menuData)
 		{
 			if (menuData.FunctionId == EFunction.ImageDisplayMode)
@@ -304,7 +322,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E80 RID: 224896 RVA: 0x00D029D0 File Offset: 0x00D00BD0
+		// Token: 0x0602BDC7 RID: 179655 RVA: 0x00C51B50 File Offset: 0x00C4FD50
 		private void ShowMenuTips(MenuData menuData, float value)
 		{
 			EFunction functionId = menuData.FunctionId;
@@ -351,7 +369,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E81 RID: 224897 RVA: 0x00D02AF4 File Offset: 0x00D00CF4
+		// Token: 0x0602BDC8 RID: 179656 RVA: 0x00C51C74 File Offset: 0x00C4FE74
 		private unsafe void InitGamepadConnect()
 		{
 			if (Info.Instance.IsMobileInputModel())
@@ -376,7 +394,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E82 RID: 224898 RVA: 0x00D02BE0 File Offset: 0x00D00DE0
+		// Token: 0x0602BDC9 RID: 179657 RVA: 0x00C51D60 File Offset: 0x00C4FF60
 		public unsafe void RefreshGamepadConnect()
 		{
 			if (Info.Instance.IsMobileInputModel())
@@ -409,7 +427,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E83 RID: 224899 RVA: 0x00D02D00 File Offset: 0x00D00F00
+		// Token: 0x0602BDCA RID: 179658 RVA: 0x00C51E80 File Offset: 0x00C50080
 		public List<int> GetMainTypeList([Nullable(2)] TMenuItemFilter filter = null)
 		{
 			int[] mainTypeList = MenuModel.Instance.GetMainTypeList(filter);
@@ -421,19 +439,19 @@ namespace CSharpScript.Game.Module.Menu
 			return list;
 		}
 
-		// Token: 0x06036E84 RID: 224900 RVA: 0x00D02D38 File Offset: 0x00D00F38
+		// Token: 0x0602BDCB RID: 179659 RVA: 0x00C51EB8 File Offset: 0x00C500B8
 		public MainType GetTargetMainInfo(int typeId)
 		{
 			return MenuModel.Instance.GetTargetMainInfo(typeId).Value;
 		}
 
-		// Token: 0x06036E85 RID: 224901 RVA: 0x00D02D58 File Offset: 0x00D00F58
+		// Token: 0x0602BDCC RID: 179660 RVA: 0x00C51ED8 File Offset: 0x00C500D8
 		public List<MenuData> GetTargetBaseConfigData(int mainType, [Nullable(2)] TMenuItemFilter filter = null)
 		{
 			return MenuModel.Instance.GetTargetConfigData(mainType, filter) ?? new List<MenuData>();
 		}
 
-		// Token: 0x06036E86 RID: 224902 RVA: 0x00D02D70 File Offset: 0x00D00F70
+		// Token: 0x0602BDCD RID: 179661 RVA: 0x00C51EF0 File Offset: 0x00C500F0
 		public unsafe int GetTargetConfig(EFunction functionId)
 		{
 			int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(functionId);
@@ -458,7 +476,7 @@ namespace CSharpScript.Game.Module.Menu
 			return dataCacheOrCurValue.Value;
 		}
 
-		// Token: 0x06036E87 RID: 224903 RVA: 0x00D02E24 File Offset: 0x00D01024
+		// Token: 0x0602BDCE RID: 179662 RVA: 0x00C51FA4 File Offset: 0x00C501A4
 		public unsafe float GetTargetConfigFloat(EFunction functionId)
 		{
 			float? dataCacheOrCurValueFloat = MenuModel.Instance.GetDataCacheOrCurValueFloat(functionId);
@@ -483,7 +501,7 @@ namespace CSharpScript.Game.Module.Menu
 			return dataCacheOrCurValueFloat.Value;
 		}
 
-		// Token: 0x06036E88 RID: 224904 RVA: 0x00D02EDC File Offset: 0x00D010DC
+		// Token: 0x0602BDCF RID: 179663 RVA: 0x00C5205C File Offset: 0x00C5025C
 		private string GetCurrentResolutionString()
 		{
 			if (Info.Instance.IsMobilePlatform())
@@ -494,7 +512,7 @@ namespace CSharpScript.Game.Module.Menu
 			return GameSettingsDeviceRender.Instance.GetResolutionByList(targetConfig).ToString();
 		}
 
-		// Token: 0x06036E89 RID: 224905 RVA: 0x00D02F28 File Offset: 0x00D01128
+		// Token: 0x0602BDD0 RID: 179664 RVA: 0x00C520A8 File Offset: 0x00C502A8
 		[NullableContext(2)]
 		private float GetFilterSettingLogValue(float[] values, EFilterSettingValueIndex valueIndex)
 		{
@@ -509,7 +527,7 @@ namespace CSharpScript.Game.Module.Menu
 			return values[(int)valueIndex];
 		}
 
-		// Token: 0x06036E8A RID: 224906 RVA: 0x00D02F50 File Offset: 0x00D01150
+		// Token: 0x0602BDD1 RID: 179665 RVA: 0x00C520D0 File Offset: 0x00C502D0
 		public void ReportSettingMenuLogEvent()
 		{
 			Log.Instance.Info(ELogModule.Menu, ELogAuthor.WZ, "上报设置系统埋点数据[Start]", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -615,79 +633,79 @@ namespace CSharpScript.Game.Module.Menu
 			settingMenuLogEvent.i_recommend_config = ((MenuModel.Instance != null && MenuModel.Instance.HasApplyRecommendData) ? 1 : 0);
 			int currentValueSafely = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.AnisoLevel, 99999, true);
 			settingMenuLogEvent.anisotropic_sampling = currentValueSafely;
-			int currentValueSafely2 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.LOADINGRANGESCALELEVEL, 99999, true);
-			settingMenuLogEvent.render_distance = currentValueSafely2;
+			settingMenuLogEvent.render_distance = 99999;
+			settingMenuLogEvent.f_wp_loadingRangeScale = this.GetTargetConfigFloat(EFunction.LOADINGRANGESCALELEVEL);
 			if (GameSettingsDeviceRender.Instance.IsDlssGpuDevice())
 			{
-				int currentValueSafely3 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSS, 99999, true);
-				settingMenuLogEvent.dlss = currentValueSafely3;
+				int currentValueSafely2 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSS, 99999, true);
+				settingMenuLogEvent.dlss = currentValueSafely2;
 			}
 			if (GameSettingsDeviceRender.Instance.IsFsrDevice())
 			{
-				int currentValueSafely4 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3, 99999, true);
-				settingMenuLogEvent.fsr = currentValueSafely4;
+				int currentValueSafely3 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3, 99999, true);
+				settingMenuLogEvent.fsr = currentValueSafely3;
 			}
 			if (GameSettingsDeviceRender.Instance.IsXess2Supported())
 			{
-				int currentValueSafely5 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2, 99999, true);
-				settingMenuLogEvent.xess = currentValueSafely5;
+				int currentValueSafely4 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2, 99999, true);
+				settingMenuLogEvent.xess = currentValueSafely4;
 			}
 			if (GameSettingsDeviceRender.Instance.IsDlssGpuDevice())
 			{
-				int currentValueSafely6 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSSQUALITY, 99999, true);
-				settingMenuLogEvent.super_resolution = currentValueSafely6;
+				int currentValueSafely5 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSSQUALITY, 99999, true);
+				settingMenuLogEvent.super_resolution = currentValueSafely5;
 			}
 			else if (GameSettingsDeviceRender.Instance.IsFsrDevice())
 			{
-				int currentValueSafely7 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3_QUALITY, 99999, true);
-				settingMenuLogEvent.super_resolution = currentValueSafely7;
+				int currentValueSafely6 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3_QUALITY, 99999, true);
+				settingMenuLogEvent.super_resolution = currentValueSafely6;
 			}
 			else if (GameSettingsDeviceRender.Instance.IsXess2Supported())
 			{
-				int currentValueSafely8 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2_QUALITY, 99999, true);
-				settingMenuLogEvent.super_resolution = currentValueSafely8;
+				int currentValueSafely7 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2_QUALITY, 99999, true);
+				settingMenuLogEvent.super_resolution = currentValueSafely7;
 			}
 			if (UKuroRenderingRuntimeBPPluginBPLibrary.GetRayTracingSupportedType() == URayTracingSupport.Supported)
 			{
-				int currentValueSafely9 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracing, 99999, true);
-				int currentValueSafely10 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedReflection, 99999, true);
-				int currentValueSafely11 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedGI, 99999, true);
-				int currentValueSafely12 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedShadow, 99999, true);
-				settingMenuLogEvent.ray_tracing = currentValueSafely9;
-				settingMenuLogEvent.rt_reflection = currentValueSafely10;
-				settingMenuLogEvent.rt_global_illumination = currentValueSafely11;
-				settingMenuLogEvent.rt_shadow = currentValueSafely12;
+				int currentValueSafely8 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracing, 99999, true);
+				int currentValueSafely9 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedReflection, 99999, true);
+				int currentValueSafely10 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedGI, 99999, true);
+				int currentValueSafely11 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.RayTracedShadow, 99999, true);
+				settingMenuLogEvent.ray_tracing = currentValueSafely8;
+				settingMenuLogEvent.rt_reflection = currentValueSafely9;
+				settingMenuLogEvent.rt_global_illumination = currentValueSafely10;
+				settingMenuLogEvent.rt_shadow = currentValueSafely11;
 			}
 			if (Info.Instance.IsPcPlatform())
 			{
-				int currentValueSafely13 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.Vulkan, 99999, true);
-				settingMenuLogEvent.vulkan = currentValueSafely13;
+				int currentValueSafely12 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.Vulkan, 99999, true);
+				settingMenuLogEvent.vulkan = currentValueSafely12;
 			}
 			if (Info.Instance.IsPcPlatform())
 			{
 				if (GameSettingsDeviceRender.Instance.IsDlss3GpuDevice())
 				{
-					int currentValueSafely14 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSSFG, 99999, true);
-					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely14;
+					int currentValueSafely13 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.NVIDIADLSSFG, 99999, true);
+					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely13;
 				}
 				else if (GameSettingsDeviceRender.Instance.IsFsrDevice())
 				{
-					int currentValueSafely15 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3_FG, 99999, true);
-					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely15;
+					int currentValueSafely14 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.FSR3_FG, 99999, true);
+					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely14;
 				}
 				else if (GameSettingsDeviceRender.Instance.IsXeFGSupported())
 				{
-					int currentValueSafely16 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2_FG, 99999, true);
-					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely16;
+					int currentValueSafely15 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.XESS2_FG, 99999, true);
+					settingMenuLogEvent.pc_frame_interpolation = currentValueSafely15;
 				}
 			}
 			if (Info.Instance.IsMobilePlatform())
 			{
-				int currentValueSafely17 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.AdrenoFME, 99999, true);
-				settingMenuLogEvent.mob_frame_interpolation = currentValueSafely17;
+				int currentValueSafely16 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.AdrenoFME, 99999, true);
+				settingMenuLogEvent.mob_frame_interpolation = currentValueSafely16;
 			}
-			int currentValueSafely18 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.IRX, 99999, true);
-			settingMenuLogEvent.self_dev_interpolation = currentValueSafely18;
+			int currentValueSafely17 = GameSettingsManager.Instance.GetCurrentValueSafely(EFunction.IRX, 99999, true);
+			settingMenuLogEvent.self_dev_interpolation = currentValueSafely17;
 			settingMenuLogEvent.game_language = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.TextLanguage, null).GetValueOrDefault(99999);
 			settingMenuLogEvent.game_voice = LocalStorage.GetGlobal<int?>(ELocalStorageGlobalKey.VoiceLanguage, null).GetValueOrDefault(99999);
 			settingMenuLogEvent.i_asset_grade = (int)HotFixManager.GetLocalResourceQualityTier();
@@ -695,14 +713,14 @@ namespace CSharpScript.Game.Module.Menu
 			LogReportController.Instance.LogReport(settingMenuLogEvent);
 		}
 
-		// Token: 0x06036E8B RID: 224907 RVA: 0x00D03880 File Offset: 0x00D01A80
+		// Token: 0x0602BDD2 RID: 179666 RVA: 0x00C529FD File Offset: 0x00C50BFD
 		public void BeforeViewClose()
 		{
 			GameSettingsManager.Instance.ReApply(EFunction.NVIDIADLSSQUALITY, EGameSettingsApplyReason.WhenUi, true);
 			GameSettingsManager.SetIsUsingQualityPreset(!MenuModel.Instance.IsImageQualityCustom);
 		}
 
-		// Token: 0x06036E8C RID: 224908 RVA: 0x00D038A8 File Offset: 0x00D01AA8
+		// Token: 0x0602BDD3 RID: 179667 RVA: 0x00C52A24 File Offset: 0x00C50C24
 		private void RegisterOpenViewFunc()
 		{
 			this.OpenViewFuncMap[EUiViewName.LogUploadView] = new Action(this.OpenLogUploadView);
@@ -715,7 +733,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.OpenViewFuncMap[EUiViewName.VersionCheckView] = new Action(this.OpenVersionCheckView);
 		}
 
-		// Token: 0x06036E8D RID: 224909 RVA: 0x00D03998 File Offset: 0x00D01B98
+		// Token: 0x0602BDD4 RID: 179668 RVA: 0x00C52B14 File Offset: 0x00C50D14
 		private void OpenLogUploadView()
 		{
 			LogUploadOpenParam param = new LogUploadOpenParam
@@ -726,25 +744,25 @@ namespace CSharpScript.Game.Module.Menu
 			UiManager.Instance.OpenView(EUiViewName.LogUploadView, param, null);
 		}
 
-		// Token: 0x06036E8E RID: 224910 RVA: 0x00D039D4 File Offset: 0x00D01BD4
+		// Token: 0x0602BDD5 RID: 179669 RVA: 0x00C52B50 File Offset: 0x00C50D50
 		private void OpenCdKeyInputView()
 		{
 			CommonInputViewController.Instance.OpenCdKeyInputView();
 		}
 
-		// Token: 0x06036E8F RID: 224911 RVA: 0x00D039E0 File Offset: 0x00D01BE0
+		// Token: 0x0602BDD6 RID: 179670 RVA: 0x00C52B5C File Offset: 0x00C50D5C
 		private void OpenVersionCheckView()
 		{
 			PackageUpdateController.Instance.TryOpenParallelPackageUpdateUrl();
 		}
 
-		// Token: 0x06036E90 RID: 224912 RVA: 0x00D039EC File Offset: 0x00D01BEC
+		// Token: 0x0602BDD7 RID: 179671 RVA: 0x00C52B68 File Offset: 0x00C50D68
 		private void OpenMobileSwitchInputView()
 		{
 			MobileSwitchInputController.Instance.SwitchToGamepadByMenuSetting();
 		}
 
-		// Token: 0x06036E91 RID: 224913 RVA: 0x00D039F8 File Offset: 0x00D01BF8
+		// Token: 0x0602BDD8 RID: 179672 RVA: 0x00C52B74 File Offset: 0x00C50D74
 		private void OpenResDownLoadView()
 		{
 			if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -755,7 +773,7 @@ namespace CSharpScript.Game.Module.Menu
 			UiManager.Instance.OpenView(EUiViewName.SubPackageDownLoadView, null, null);
 		}
 
-		// Token: 0x06036E92 RID: 224914 RVA: 0x00D03A2C File Offset: 0x00D01C2C
+		// Token: 0x0602BDD9 RID: 179673 RVA: 0x00C52BA8 File Offset: 0x00C50DA8
 		private void OpenSubPackageDownLoadClearTipsView()
 		{
 			if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -763,20 +781,20 @@ namespace CSharpScript.Game.Module.Menu
 				ScrollingTipsController.Instance.ShowTipsByTextId("Download_BanCleanSystem", Array.Empty<object>());
 				return;
 			}
-			if (!Info.Instance.IsMobilePlatform())
-			{
-				UiManager.Instance.OpenView(EUiViewName.SubPackageDownLoadClearTipsView, null, null);
-				return;
-			}
 			if (GameModeModel.Instance.IsMulti)
 			{
-				ScrollingTipsController.Instance.ShowTipsByTextId("ConnectBanCleanResource", Array.Empty<object>());
+				SubPackageDownLoadModel.Instance.OpenMultiBanCleanConfirm();
 				return;
 			}
-			UiManager.Instance.OpenView(EUiViewName.SubPackageDownLoadMobileClearPopView, null, null);
+			if (ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
+			{
+				UiManager.Instance.OpenView(EUiViewName.SubPackageDownLoadMobileClearPopView, null, null);
+				return;
+			}
+			UiManager.Instance.OpenView(EUiViewName.SubPackageDownLoadClearTipsView, null, null);
 		}
 
-		// Token: 0x06036E93 RID: 224915 RVA: 0x00D03AAA File Offset: 0x00D01CAA
+		// Token: 0x0602BDDA RID: 179674 RVA: 0x00C52C1C File Offset: 0x00C50E1C
 		public bool IsInputControllerTypeIncludeKey(EInputControllerType inputControllerType, string keyName)
 		{
 			switch (inputControllerType)
@@ -789,7 +807,7 @@ namespace CSharpScript.Game.Module.Menu
 			return false;
 		}
 
-		// Token: 0x06036E94 RID: 224916 RVA: 0x00D03AE8 File Offset: 0x00D01CE8
+		// Token: 0x0602BDDB RID: 179675 RVA: 0x00C52C5C File Offset: 0x00C50E5C
 		public void OpenChangeLockView()
 		{
 			InputActionBinding actionBinding = InputSettingsManager.Instance.GetActionBinding("锁定目标");
@@ -900,7 +918,7 @@ namespace CSharpScript.Game.Module.Menu
 			UiManager.Instance.OpenView(EUiViewName.ChangeModeTipsView, param, null);
 		}
 
-		// Token: 0x06036E95 RID: 224917 RVA: 0x00D03E04 File Offset: 0x00D02004
+		// Token: 0x0602BDDC RID: 179676 RVA: 0x00C52F78 File Offset: 0x00C51178
 		private void OnChangeLockEnemyMode(Dictionary<int, int> editRowIndexMap)
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in editRowIndexMap)
@@ -918,7 +936,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E96 RID: 224918 RVA: 0x00D03E88 File Offset: 0x00D02088
+		// Token: 0x0602BDDD RID: 179677 RVA: 0x00C52FFC File Offset: 0x00C511FC
 		public void OpenImageOverloadConfirmBox()
 		{
 			int? dataCacheOrCurValue = MenuModel.Instance.GetDataCacheOrCurValue(EFunction.AutoAdjustImageQuality);
@@ -934,7 +952,7 @@ namespace CSharpScript.Game.Module.Menu
 			this.OpenImageQualityAdjustConfirmBox();
 		}
 
-		// Token: 0x06036E97 RID: 224919 RVA: 0x00D03EC8 File Offset: 0x00D020C8
+		// Token: 0x0602BDDE RID: 179678 RVA: 0x00C5303C File Offset: 0x00C5123C
 		private void OpenImageQualityAdjustConfirmBox()
 		{
 			bool imageQualityAdjustEnable = false;
@@ -955,26 +973,26 @@ namespace CSharpScript.Game.Module.Menu
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06036E98 RID: 224920 RVA: 0x00D03F50 File Offset: 0x00D02150
+		// Token: 0x0602BDDF RID: 179679 RVA: 0x00C530C4 File Offset: 0x00C512C4
 		public void OpenImageQualityOverloadConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PictureConfigOverload);
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06036E99 RID: 224921 RVA: 0x00D03F74 File Offset: 0x00D02174
+		// Token: 0x0602BDE0 RID: 179680 RVA: 0x00C530E8 File Offset: 0x00C512E8
 		public void OpenFilterSettingView()
 		{
 			FilterSettingController.Instance.TryOpenExternalPreparedAsync().Forget<bool>();
 		}
 
-		// Token: 0x06036E9A RID: 224922 RVA: 0x00D03F85 File Offset: 0x00D02185
+		// Token: 0x0602BDE1 RID: 179681 RVA: 0x00C530F9 File Offset: 0x00C512F9
 		public void OpenEyeProtectView()
 		{
 			EyeProtectController.Instance.OpenEyeProtectView().Forget<bool>();
 		}
 
-		// Token: 0x06036E9B RID: 224923 RVA: 0x00D03F98 File Offset: 0x00D02198
+		// Token: 0x0602BDE2 RID: 179682 RVA: 0x00C5310C File Offset: 0x00C5130C
 		public bool NeedRedMagicFpsConfirmBox(int targetValue)
 		{
 			if (GameSettingsDeviceRender.Instance.IsRedMagic() && targetValue == 2)
@@ -986,8 +1004,8 @@ namespace CSharpScript.Game.Module.Menu
 			return false;
 		}
 
-		// Token: 0x170083CD RID: 33741
-		// (get) Token: 0x06036E9C RID: 224924 RVA: 0x00D03FDB File Offset: 0x00D021DB
+		// Token: 0x17005799 RID: 22425
+		// (get) Token: 0x0602BDE3 RID: 179683 RVA: 0x00C5314F File Offset: 0x00C5134F
 		public static MenuController Instance
 		{
 			get
@@ -996,7 +1014,7 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x06036E9D RID: 224925 RVA: 0x00D03FE2 File Offset: 0x00D021E2
+		// Token: 0x0602BDE4 RID: 179684 RVA: 0x00C53156 File Offset: 0x00C51356
 		public static MenuController GetOrCreateInstance()
 		{
 			if (MenuController._Instance == null)
@@ -1006,7 +1024,7 @@ namespace CSharpScript.Game.Module.Menu
 			return MenuController._Instance;
 		}
 
-		// Token: 0x06036E9E RID: 224926 RVA: 0x00D03FF6 File Offset: 0x00D021F6
+		// Token: 0x0602BDE5 RID: 179685 RVA: 0x00C5316A File Offset: 0x00C5136A
 		public static bool CreateInstance()
 		{
 			if (MenuController._Instance != null)
@@ -1017,33 +1035,33 @@ namespace CSharpScript.Game.Module.Menu
 			return true;
 		}
 
-		// Token: 0x06036E9F RID: 224927 RVA: 0x00D0400C File Offset: 0x00D0220C
+		// Token: 0x0602BDE6 RID: 179686 RVA: 0x00C53180 File Offset: 0x00C51380
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036EA0 RID: 224928 RVA: 0x00D0400E File Offset: 0x00D0220E
+		// Token: 0x0602BDE7 RID: 179687 RVA: 0x00C53182 File Offset: 0x00C51382
 		public static void ResetStaticDefaultValue()
 		{
 			MenuController._Instance = null;
 		}
 
-		// Token: 0x06036EA1 RID: 224929 RVA: 0x00D04016 File Offset: 0x00D02216
+		// Token: 0x0602BDE8 RID: 179688 RVA: 0x00C5318A File Offset: 0x00C5138A
 		static MenuController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MenuController.CreateStaticDefaultValue), new Action(MenuController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CF6F RID: 118639
+		// Token: 0x04017A07 RID: 96775
 		private const int SettingLogDefaultValue = 99999;
 
-		// Token: 0x0401CF70 RID: 118640
+		// Token: 0x04017A08 RID: 96776
 		private const int REPORT_IMAGE_QUALITY_VALUE_FOR_CUSTOM = 99;
 
-		// Token: 0x0401CF71 RID: 118641
+		// Token: 0x04017A09 RID: 96777
 		public readonly Dictionary<EUiViewName, Action> OpenViewFuncMap = new Dictionary<EUiViewName, Action>();
 
-		// Token: 0x0401CF72 RID: 118642
+		// Token: 0x04017A0A RID: 96778
 		[Nullable(2)]
 		private static MenuController _Instance;
 	}

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006730 RID: 26416
+	// Token: 0x02006DB0 RID: 28080
 	public class IExitVehicleSeatStandUpT
 	{
-		// Token: 0x1700C42E RID: 50222
-		// (get) Token: 0x0602DF3B RID: 188219 RVA: 0x0064810E File Offset: 0x0064630E
-		// (set) Token: 0x0602DF3C RID: 188220 RVA: 0x00648116 File Offset: 0x00646316
+		// Token: 0x1700CDE4 RID: 52708
+		// (get) Token: 0x06030781 RID: 198529 RVA: 0x00695852 File Offset: 0x00693A52
+		// (set) Token: 0x06030782 RID: 198530 RVA: 0x0069585A File Offset: 0x00693A5A
 		public EExitVehicleType Type { get; set; }
 
-		// Token: 0x0602DF3D RID: 188221 RVA: 0x0064811F File Offset: 0x0064631F
+		// Token: 0x06030783 RID: 198531 RVA: 0x00695863 File Offset: 0x00693A63
 		public IExitVehicleSeatStandUpT()
 		{
 			this.Type = EExitVehicleType.Launch;

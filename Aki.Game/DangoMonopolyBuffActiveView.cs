@@ -7,13 +7,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001226 RID: 4646
+// Token: 0x020006DA RID: 1754
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 {
-	// Token: 0x17000A97 RID: 2711
-	// (get) Token: 0x06007DBA RID: 32186 RVA: 0x001AA87C File Offset: 0x001A8A7C
+	// Token: 0x17000AB7 RID: 2743
+	// (get) Token: 0x06005151 RID: 20817 RVA: 0x001B353C File Offset: 0x001B173C
 	public new DangoMonopolyBuffActiveViewParam OpenParam
 	{
 		get
@@ -22,13 +22,13 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007DBB RID: 32187 RVA: 0x001AA889 File Offset: 0x001A8A89
+	// Token: 0x06005152 RID: 20818 RVA: 0x001B3549 File Offset: 0x001B1749
 	[NullableContext(1)]
 	public DangoMonopolyBuffActiveView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007DBC RID: 32188 RVA: 0x001AA8A0 File Offset: 0x001A8AA0
+	// Token: 0x06005153 RID: 20819 RVA: 0x001B3560 File Offset: 0x001B1760
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,12 +44,12 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		};
 	}
 
-	// Token: 0x06007DBD RID: 32189 RVA: 0x001AA933 File Offset: 0x001A8B33
+	// Token: 0x06005154 RID: 20820 RVA: 0x001B35F3 File Offset: 0x001B17F3
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x06007DBE RID: 32190 RVA: 0x001AA938 File Offset: 0x001A8B38
+	// Token: 0x06005155 RID: 20821 RVA: 0x001B35F8 File Offset: 0x001B17F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyBuffActiveView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DBF RID: 32191 RVA: 0x001AA97C File Offset: 0x001A8B7C
+	// Token: 0x06005156 RID: 20822 RVA: 0x001B363C File Offset: 0x001B183C
 	public UniTask InitDangoActorList()
 	{
 		DangoMonopolyBuffActiveView.<InitDangoActorList>d__10 <InitDangoActorList>d__;
@@ -71,7 +71,7 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		return <InitDangoActorList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DC0 RID: 32192 RVA: 0x001AA9C0 File Offset: 0x001A8BC0
+	// Token: 0x06005157 RID: 20823 RVA: 0x001B3680 File Offset: 0x001B1880
 	public void PlayDangoAni()
 	{
 		if (this.DangoActorList.Count == 0)
@@ -93,7 +93,7 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007DC1 RID: 32193 RVA: 0x001AAA42 File Offset: 0x001A8C42
+	// Token: 0x06005158 RID: 20824 RVA: 0x001B3702 File Offset: 0x001B1902
 	private int GetShowDangoId()
 	{
 		DangoData dangoData = this.OpenParam.GridData.GetDangoData();
@@ -104,7 +104,7 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		return dangoData.Id;
 	}
 
-	// Token: 0x06007DC2 RID: 32194 RVA: 0x001AAA60 File Offset: 0x001A8C60
+	// Token: 0x06005159 RID: 20825 RVA: 0x001B3720 File Offset: 0x001B1920
 	private void DestroyDangoActor()
 	{
 		foreach (TsUiSceneDangoActor dango in this.DangoActorList)
@@ -114,19 +114,19 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		this.DangoActorList.Clear();
 	}
 
-	// Token: 0x06007DC3 RID: 32195 RVA: 0x001AAAC4 File Offset: 0x001A8CC4
+	// Token: 0x0600515A RID: 20826 RVA: 0x001B3784 File Offset: 0x001B1984
 	protected override void OnStart()
 	{
 		this.ActivityData.UpdateBoardGridUiInfoShow(false).Forget();
 	}
 
-	// Token: 0x06007DC4 RID: 32196 RVA: 0x001AAAD7 File Offset: 0x001A8CD7
+	// Token: 0x0600515B RID: 20827 RVA: 0x001B3797 File Offset: 0x001B1997
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData().Forget();
 	}
 
-	// Token: 0x06007DC5 RID: 32197 RVA: 0x001AAAE4 File Offset: 0x001A8CE4
+	// Token: 0x0600515C RID: 20828 RVA: 0x001B37A4 File Offset: 0x001B19A4
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyDangoActor();
@@ -142,12 +142,12 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		this.ActivityData.UpdateBoardGridUiInfoShow(true).Forget();
 	}
 
-	// Token: 0x06007DC6 RID: 32198 RVA: 0x001AAB19 File Offset: 0x001A8D19
+	// Token: 0x0600515D RID: 20829 RVA: 0x001B37D9 File Offset: 0x001B19D9
 	protected override void OnAfterDestroy()
 	{
 	}
 
-	// Token: 0x06007DC7 RID: 32199 RVA: 0x001AAB1C File Offset: 0x001A8D1C
+	// Token: 0x0600515E RID: 20830 RVA: 0x001B37DC File Offset: 0x001B19DC
 	public UniTask UpdateData()
 	{
 		DangoMonopolyBuffActiveView.<UpdateData>d__18 <UpdateData>d__;
@@ -158,14 +158,14 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		return <UpdateData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007DC8 RID: 32200 RVA: 0x001AAB5F File Offset: 0x001A8D5F
+	// Token: 0x0600515F RID: 20831 RVA: 0x001B381F File Offset: 0x001B1A1F
 	private void ShowDango()
 	{
 		this.SetBtnEmptyActive(true);
 		this.PlayDangoAni();
 	}
 
-	// Token: 0x06007DC9 RID: 32201 RVA: 0x001AAB6E File Offset: 0x001A8D6E
+	// Token: 0x06005160 RID: 20832 RVA: 0x001B382E File Offset: 0x001B1A2E
 	public void OnClickClose()
 	{
 		DangoMonopolyBuffActiveGetPanel getPanel = this.GetPanel;
@@ -175,18 +175,18 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		}
 	}
 
-	// Token: 0x06007DCA RID: 32202 RVA: 0x001AAB8B File Offset: 0x001A8D8B
+	// Token: 0x06005161 RID: 20833 RVA: 0x001B384B File Offset: 0x001B1A4B
 	protected override void OnHandleLoadScene()
 	{
 	}
 
-	// Token: 0x06007DCB RID: 32203 RVA: 0x001AAB8D File Offset: 0x001A8D8D
+	// Token: 0x06005162 RID: 20834 RVA: 0x001B384D File Offset: 0x001B1A4D
 	private void OnClickBtnEmpty()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007DCC RID: 32204 RVA: 0x001AAB98 File Offset: 0x001A8D98
+	// Token: 0x06005163 RID: 20835 RVA: 0x001B3858 File Offset: 0x001B1A58
 	public void SetBtnEmptyActive(bool active)
 	{
 		UUIButtonComponent button = base.GetButton(3);
@@ -197,27 +197,27 @@ public class DangoMonopolyBuffActiveView : DangoMonopolyViewBase
 		button.RootUIComp.Get().SetUIActive(active);
 	}
 
-	// Token: 0x0400392A RID: 14634
+	// Token: 0x040039C2 RID: 14786
 	public DangoMonopolyBuffActiveShowPanel ShowPanel;
 
-	// Token: 0x0400392B RID: 14635
+	// Token: 0x040039C3 RID: 14787
 	public DangoMonopolyBuffActiveGetPanel GetPanel;
 
-	// Token: 0x0400392C RID: 14636
+	// Token: 0x040039C4 RID: 14788
 	[Nullable(1)]
 	public List<TsUiSceneDangoActor> DangoActorList = new List<TsUiSceneDangoActor>();
 
-	// Token: 0x0200781A RID: 30746
+	// Token: 0x020069A5 RID: 27045
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027952 RID: 162130
+		// Token: 0x04022C83 RID: 142467
 		ItemShow,
-		// Token: 0x04027953 RID: 162131
+		// Token: 0x04022C84 RID: 142468
 		ItemGet,
-		// Token: 0x04027954 RID: 162132
+		// Token: 0x04022C85 RID: 142469
 		ItemShowLayer,
-		// Token: 0x04027955 RID: 162133
+		// Token: 0x04022C86 RID: 142470
 		BtnEmpty
 	}
 }

@@ -4,7 +4,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C1 RID: 18625
-	// (Invoke) Token: 0x06030AE8 RID: 199400
+	// Token: 0x02003838 RID: 14392
+	// (Invoke) Token: 0x06025614 RID: 153108
 	public delegate ILayoutItem<TItem> TLayoutRefresh<[Nullable(2)] TItem>(object data, UUIItem uiItem, int index, int originalItemIndex);
 }

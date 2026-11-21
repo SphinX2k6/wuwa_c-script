@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001716 RID: 5910
+	// Token: 0x02001893 RID: 6291
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExitMovieMode : ActionParams
 	{
-		// Token: 0x06007D31 RID: 32049 RVA: 0x0012C798 File Offset: 0x0012A998
-		[NullableContext(1)]
+		// Token: 0x0600840F RID: 33807 RVA: 0x0013B844 File Offset: 0x00139A44
+		[NullableContext(0)]
 		private ExitMovieMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007D32 RID: 32050 RVA: 0x0012C7D0 File Offset: 0x0012A9D0
-		[NullableContext(1)]
+		// Token: 0x06008410 RID: 33808 RVA: 0x0013B87C File Offset: 0x00139A7C
+		[NullableContext(0)]
 		public static ExitMovieMode Create([Nullable(2)] ExitMovieMode instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D33 RID: 32051 RVA: 0x0012C7E3 File Offset: 0x0012A9E3
-		[NullableContext(1)]
+		// Token: 0x06008411 RID: 33809 RVA: 0x0013B88F File Offset: 0x00139A8F
+		[NullableContext(0)]
 		public static ExitMovieMode CreateFromSetValue([Nullable(2)] ExitMovieMode_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007D34 RID: 32052 RVA: 0x0012C7F6 File Offset: 0x0012A9F6
-		[NullableContext(1)]
+		// Token: 0x06008412 RID: 33810 RVA: 0x0013B8A2 File Offset: 0x00139AA2
+		[NullableContext(0)]
 		public ExitMovieMode_SetValue ToSetValue()
 		{
 			return new ExitMovieMode_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002947 RID: 10567
-		// (get) Token: 0x06007D35 RID: 32053 RVA: 0x0012C824 File Offset: 0x0012AA24
-		// (set) Token: 0x06007D36 RID: 32054 RVA: 0x0012C85E File Offset: 0x0012AA5E
+		// Token: 0x17002B32 RID: 11058
+		// (get) Token: 0x06008413 RID: 33811 RVA: 0x0013B8D0 File Offset: 0x00139AD0
+		// (set) Token: 0x06008414 RID: 33812 RVA: 0x0013B90A File Offset: 0x00139B0A
 		public virtual float? BorderAnimDuration
 		{
 			get
@@ -89,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002948 RID: 10568
-		// (get) Token: 0x06007D37 RID: 32055 RVA: 0x0012C86C File Offset: 0x0012AA6C
-		// (set) Token: 0x06007D38 RID: 32056 RVA: 0x0012C893 File Offset: 0x0012AA93
+		// Token: 0x17002B33 RID: 11059
+		// (get) Token: 0x06008415 RID: 33813 RVA: 0x0013B918 File Offset: 0x00139B18
+		// (set) Token: 0x06008416 RID: 33814 RVA: 0x0013B93F File Offset: 0x00139B3F
 		public virtual IEnterMovieModeDurationType DurationType
 		{
 			get
@@ -113,9 +113,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002949 RID: 10569
-		// (get) Token: 0x06007D39 RID: 32057 RVA: 0x0012C8A4 File Offset: 0x0012AAA4
-		// (set) Token: 0x06007D3A RID: 32058 RVA: 0x0012C905 File Offset: 0x0012AB05
+		// Token: 0x17002B34 RID: 11060
+		// (get) Token: 0x06008417 RID: 33815 RVA: 0x0013B950 File Offset: 0x00139B50
+		// (set) Token: 0x06008418 RID: 33816 RVA: 0x0013B9B1 File Offset: 0x00139BB1
 		public virtual IMovieModeFadeOutMaskConfig FadeOutMaskConfig
 		{
 			get
@@ -143,17 +143,17 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004FEC RID: 20460
+		// Token: 0x0400541B RID: 21531
 		protected new ExitMovieMode FbInstance;
 
-		// Token: 0x04004FED RID: 20461
+		// Token: 0x0400541C RID: 21532
 		protected ExitMovieMode_SetValue PocoInterface;
 
-		// Token: 0x04004FEE RID: 20462
-		[Nullable(1)]
+		// Token: 0x0400541D RID: 21533
+		[Nullable(0)]
 		private IMovieModeFadeOutMaskConfig _FadeOutMaskConfigCache;
 
-		// Token: 0x04004FEF RID: 20463
+		// Token: 0x0400541E RID: 21534
 		private bool _FadeOutMaskConfigInited;
 	}
 }

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006270 RID: 25200
+	// Token: 0x020051EE RID: 20974
 	public class RealmBetweenExpComponent : UiPanelBase
 	{
-		// Token: 0x0603F736 RID: 259894 RVA: 0x00F56A58 File Offset: 0x00F54C58
+		// Token: 0x060343F7 RID: 214007 RVA: 0x00E9D9B4 File Offset: 0x00E9BBB4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F737 RID: 259895 RVA: 0x00F56AC8 File Offset: 0x00F54CC8
+		// Token: 0x060343F8 RID: 214008 RVA: 0x00E9DA24 File Offset: 0x00E9BC24
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(3);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			text.ShowTextNew("RealmBetweenCurrentLevelExp_Text");
 		}
 
-		// Token: 0x0603F738 RID: 259896 RVA: 0x00F56AE0 File Offset: 0x00F54CE0
+		// Token: 0x060343F9 RID: 214009 RVA: 0x00E9DA3C File Offset: 0x00E9BC3C
 		public void SetProgress(int current, int target, bool isMax)
 		{
 			if (isMax)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}));
 		}
 
-		// Token: 0x0603F739 RID: 259897 RVA: 0x00F56B75 File Offset: 0x00F54D75
+		// Token: 0x060343FA RID: 214010 RVA: 0x00E9DAD1 File Offset: 0x00E9BCD1
 		public void SetLevel(int level)
 		{
 			base.GetArtText(0).SetText(level.ToString());

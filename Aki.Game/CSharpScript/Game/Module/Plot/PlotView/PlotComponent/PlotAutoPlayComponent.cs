@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x02005077 RID: 20599
+	// Token: 0x02004047 RID: 16455
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class PlotAutoPlayComponent
 	{
-		// Token: 0x06034C50 RID: 216144 RVA: 0x00C7C8F8 File Offset: 0x00C7AAF8
+		// Token: 0x06029B45 RID: 170821 RVA: 0x00BC9CD0 File Offset: 0x00BC7ED0
 		[NullableContext(1)]
 		public void Init(IPlotAutoPlayComponentContext context)
 		{
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.UpdateAutoPlayToggle();
 		}
 
-		// Token: 0x06034C51 RID: 216145 RVA: 0x00C7C957 File Offset: 0x00C7AB57
+		// Token: 0x06029B46 RID: 170822 RVA: 0x00BC9D2F File Offset: 0x00BC7F2F
 		private void OnToggleStateChange(EToggleState state)
 		{
 			this.ChangeAutoPlay(state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06034C52 RID: 216146 RVA: 0x00C7C964 File Offset: 0x00C7AB64
+		// Token: 0x06029B47 RID: 170823 RVA: 0x00BC9D3C File Offset: 0x00BC7F3C
 		public void ChangeAutoPlay(bool isAutoPlay)
 		{
 			PlotConfig plotConfig = PlotModel.Instance.PlotConfig;
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034C53 RID: 216147 RVA: 0x00C7C9CC File Offset: 0x00C7ABCC
+		// Token: 0x06029B48 RID: 170824 RVA: 0x00BC9DA4 File Offset: 0x00BC7FA4
 		public void UpdateAutoPlayToggle()
 		{
 			EToggleState state = (PlotModel.Instance.PlotConfig.AutoPlayState > EAutoPlayState.Manual) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			this.Toggle.SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x06034C54 RID: 216148 RVA: 0x00C7CA04 File Offset: 0x00C7AC04
+		// Token: 0x06029B49 RID: 170825 RVA: 0x00BC9DDC File Offset: 0x00BC7FDC
 		public void MuteAutoPlay(bool isMute)
 		{
 			if (isMute)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034C55 RID: 216149 RVA: 0x00C7CA6C File Offset: 0x00C7AC6C
+		// Token: 0x06029B4A RID: 170826 RVA: 0x00BC9E44 File Offset: 0x00BC8044
 		public bool TryDelayPlayNextTalk()
 		{
 			if (!this.GetIsAutoPlay())
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			return true;
 		}
 
-		// Token: 0x06034C56 RID: 216150 RVA: 0x00C7CA89 File Offset: 0x00C7AC89
+		// Token: 0x06029B4B RID: 170827 RVA: 0x00BC9E61 File Offset: 0x00BC8061
 		private void DelayPlayNextTalk()
 		{
 			this.RemoveDelayTimer();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}, this.WaitTime, null, null, true, 1f);
 		}
 
-		// Token: 0x06034C57 RID: 216151 RVA: 0x00C7CABB File Offset: 0x00C7ACBB
+		// Token: 0x06029B4C RID: 170828 RVA: 0x00BC9E93 File Offset: 0x00BC8093
 		private void RemoveDelayTimer()
 		{
 			if (this.DelayTimer != null)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			}
 		}
 
-		// Token: 0x06034C58 RID: 216152 RVA: 0x00C7CADD File Offset: 0x00C7ACDD
+		// Token: 0x06029B4D RID: 170829 RVA: 0x00BC9EB5 File Offset: 0x00BC80B5
 		public void Clear()
 		{
 			this.RemoveDelayTimer();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			this.ContinueToNextTalkDelegate = null;
 		}
 
-		// Token: 0x06034C59 RID: 216153 RVA: 0x00C7CAF4 File Offset: 0x00C7ACF4
+		// Token: 0x06029B4E RID: 170830 RVA: 0x00BC9ECC File Offset: 0x00BC80CC
 		public void SetToggleActive(bool active)
 		{
 			UUIExtendToggle toggle = this.Toggle;
@@ -154,31 +154,31 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 			uuiitem.SetUIActive(active);
 		}
 
-		// Token: 0x06034C5A RID: 216154 RVA: 0x00C7CB24 File Offset: 0x00C7AD24
+		// Token: 0x06029B4F RID: 170831 RVA: 0x00BC9EFC File Offset: 0x00BC80FC
 		public bool IsTalkFinished()
 		{
 			return this.CheckTalkFinishedDelegate != null && this.CheckTalkFinishedDelegate();
 		}
 
-		// Token: 0x06034C5B RID: 216155 RVA: 0x00C7CB3B File Offset: 0x00C7AD3B
+		// Token: 0x06029B50 RID: 170832 RVA: 0x00BC9F13 File Offset: 0x00BC8113
 		public bool GetIsAutoPlay()
 		{
 			return PlotModel.Instance.PlotConfig.AutoPlayState > EAutoPlayState.Manual;
 		}
 
-		// Token: 0x0401C1EA RID: 115178
+		// Token: 0x04016C15 RID: 93205
 		private UUIExtendToggle Toggle;
 
-		// Token: 0x0401C1EB RID: 115179
+		// Token: 0x04016C16 RID: 93206
 		private TimerHandle DelayTimer;
 
-		// Token: 0x0401C1EC RID: 115180
+		// Token: 0x04016C17 RID: 93207
 		private float WaitTime;
 
-		// Token: 0x0401C1ED RID: 115181
+		// Token: 0x04016C18 RID: 93208
 		private Func<bool> CheckTalkFinishedDelegate;
 
-		// Token: 0x0401C1EE RID: 115182
+		// Token: 0x04016C19 RID: 93209
 		private Action ContinueToNextTalkDelegate;
 	}
 }

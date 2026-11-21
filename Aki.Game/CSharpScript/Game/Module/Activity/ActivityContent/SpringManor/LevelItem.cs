@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200607F RID: 24703
+	// Token: 0x02004FFD RID: 20477
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class LevelItem : AutoAttachItem<SpringLevelData>
 	{
-		// Token: 0x0603E76A RID: 255850 RVA: 0x00F183D4 File Offset: 0x00F165D4
+		// Token: 0x0603342E RID: 209966 RVA: 0x00E5F198 File Offset: 0x00E5D398
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E76B RID: 255851 RVA: 0x00F18531 File Offset: 0x00F16731
+		// Token: 0x0603342F RID: 209967 RVA: 0x00E5F2F5 File Offset: 0x00E5D4F5
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603E76C RID: 255852 RVA: 0x00F18544 File Offset: 0x00F16744
+		// Token: 0x06033430 RID: 209968 RVA: 0x00E5F308 File Offset: 0x00E5D508
 		protected override void OnRefreshItem(SpringLevelData data)
 		{
 			if (data == null)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshPerformance();
 		}
 
-		// Token: 0x0603E76D RID: 255853 RVA: 0x00F18558 File Offset: 0x00F16758
+		// Token: 0x06033431 RID: 209969 RVA: 0x00E5F31C File Offset: 0x00E5D51C
 		public void RefreshPerformance()
 		{
 			SpringLevelData data = this.Data;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			seqPlayer2.StopCurrentSequence(false, true);
 		}
 
-		// Token: 0x0603E76E RID: 255854 RVA: 0x00F186D8 File Offset: 0x00F168D8
+		// Token: 0x06033432 RID: 209970 RVA: 0x00E5F49C File Offset: 0x00E5D69C
 		[NullableContext(1)]
 		public void PlaySequence(string seqName)
 		{
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			seqPlayer2.PlayOrReplaySequenceByName(seqName, false, null);
 		}
 
-		// Token: 0x0603E76F RID: 255855 RVA: 0x00F18713 File Offset: 0x00F16913
+		// Token: 0x06033433 RID: 209971 RVA: 0x00E5F4D7 File Offset: 0x00E5D6D7
 		public override void OnSelect()
 		{
 			if (this.SelectCallback != null && this.Data != null)
@@ -139,17 +139,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E770 RID: 255856 RVA: 0x00F1873C File Offset: 0x00F1693C
+		// Token: 0x06033434 RID: 209972 RVA: 0x00E5F500 File Offset: 0x00E5D700
 		protected override void OnUnSelect()
 		{
 		}
 
-		// Token: 0x0603E771 RID: 255857 RVA: 0x00F1873E File Offset: 0x00F1693E
+		// Token: 0x06033435 RID: 209973 RVA: 0x00E5F502 File Offset: 0x00E5D702
 		protected override void OnMoveItem()
 		{
 		}
 
-		// Token: 0x0603E772 RID: 255858 RVA: 0x00F18740 File Offset: 0x00F16940
+		// Token: 0x06033436 RID: 209974 RVA: 0x00E5F504 File Offset: 0x00E5D704
 		private void SetIsLock(bool isLock)
 		{
 			this.IsLock = isLock;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			base.GetItem(5).SetUIActive(isLock);
 		}
 
-		// Token: 0x0603E773 RID: 255859 RVA: 0x00F187AB File Offset: 0x00F169AB
+		// Token: 0x06033437 RID: 209975 RVA: 0x00E5F56F File Offset: 0x00E5D76F
 		[NullableContext(1)]
 		private UUIText GetSelectText()
 		{
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return base.GetText(7);
 		}
 
-		// Token: 0x0603E774 RID: 255860 RVA: 0x00F187C4 File Offset: 0x00F169C4
+		// Token: 0x06033438 RID: 209976 RVA: 0x00E5F588 File Offset: 0x00E5D788
 		private void OnButtonClick()
 		{
 			if (this.ClickCallback != null && this.Data != null)
@@ -181,18 +181,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E775 RID: 255861 RVA: 0x00F187EC File Offset: 0x00F169EC
+		// Token: 0x06033439 RID: 209977 RVA: 0x00E5F5B0 File Offset: 0x00E5D7B0
 		public LevelItem() : base(null)
 		{
 		}
 
-		// Token: 0x04020ACC RID: 133836
+		// Token: 0x0401B3F9 RID: 111609
 		private SpringLevelData Data;
 
-		// Token: 0x04020ACD RID: 133837
+		// Token: 0x0401B3FA RID: 111610
 		public Action<int> ClickCallback;
 
-		// Token: 0x04020ACE RID: 133838
+		// Token: 0x0401B3FB RID: 111611
 		[Nullable(new byte[]
 		{
 			2,
@@ -200,13 +200,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		public Action<int, LevelItem> SelectCallback;
 
-		// Token: 0x04020ACF RID: 133839
+		// Token: 0x0401B3FC RID: 111612
 		public Func<int, bool> GetIsSelectLevel;
 
-		// Token: 0x04020AD0 RID: 133840
+		// Token: 0x0401B3FD RID: 111613
 		private bool IsLock = true;
 
-		// Token: 0x04020AD1 RID: 133841
+		// Token: 0x0401B3FE RID: 111614
 		private LevelSequencePlayer SeqPlayer;
 	}
 }

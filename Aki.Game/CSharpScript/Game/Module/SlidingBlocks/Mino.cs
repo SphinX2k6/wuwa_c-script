@@ -7,32 +7,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B77 RID: 19319
+	// Token: 0x02003B21 RID: 15137
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Mino : IStaticVariableResetter
 	{
-		// Token: 0x060320E1 RID: 205025 RVA: 0x00B9F105 File Offset: 0x00B9D305
+		// Token: 0x06026E72 RID: 159346 RVA: 0x00AE32B5 File Offset: 0x00AE14B5
 		static Mino()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(Mino.CreateStaticDefaultValue), new Action(Mino.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17007C2E RID: 31790
-		// (get) Token: 0x060320E2 RID: 205026 RVA: 0x00B9F124 File Offset: 0x00B9D324
+		// Token: 0x17004FD8 RID: 20440
+		// (get) Token: 0x06026E73 RID: 159347 RVA: 0x00AE32D4 File Offset: 0x00AE14D4
 		public string StyleName { get; }
 
-		// Token: 0x17007C2F RID: 31791
-		// (get) Token: 0x060320E3 RID: 205027 RVA: 0x00B9F12C File Offset: 0x00B9D32C
-		// (set) Token: 0x060320E4 RID: 205028 RVA: 0x00B9F134 File Offset: 0x00B9D334
+		// Token: 0x17004FD9 RID: 20441
+		// (get) Token: 0x06026E74 RID: 159348 RVA: 0x00AE32DC File Offset: 0x00AE14DC
+		// (set) Token: 0x06026E75 RID: 159349 RVA: 0x00AE32E4 File Offset: 0x00AE14E4
 		public Vector2D Coord { get; set; }
 
-		// Token: 0x17007C30 RID: 31792
-		// (get) Token: 0x060320E5 RID: 205029 RVA: 0x00B9F13D File Offset: 0x00B9D33D
-		// (set) Token: 0x060320E6 RID: 205030 RVA: 0x00B9F145 File Offset: 0x00B9D345
+		// Token: 0x17004FDA RID: 20442
+		// (get) Token: 0x06026E76 RID: 159350 RVA: 0x00AE32ED File Offset: 0x00AE14ED
+		// (set) Token: 0x06026E77 RID: 159351 RVA: 0x00AE32F5 File Offset: 0x00AE14F5
 		public AActor CubeActor { get; set; }
 
-		// Token: 0x060320E7 RID: 205031 RVA: 0x00B9F150 File Offset: 0x00B9D350
+		// Token: 0x06026E78 RID: 159352 RVA: 0x00AE3300 File Offset: 0x00AE1500
 		public Mino(string styleName, Vector2D coord, AActor cubeActor, SlidingBlocksDefine.EMinoParent parent)
 		{
 			this.StyleName = styleName;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			Mino._minoIndex++;
 		}
 
-		// Token: 0x060320E8 RID: 205032 RVA: 0x00B9F1A8 File Offset: 0x00B9D3A8
+		// Token: 0x06026E79 RID: 159353 RVA: 0x00AE3358 File Offset: 0x00AE1558
 		[NullableContext(0)]
 		public UniTask<bool> TryFall(double targetY)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <TryFall>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060320E9 RID: 205033 RVA: 0x00B9F1F4 File Offset: 0x00B9D3F4
+		// Token: 0x06026E7A RID: 159354 RVA: 0x00AE33A4 File Offset: 0x00AE15A4
 		private void ResetMoveData()
 		{
 			this.StartFallingAnchorCoord.Set(this.Coord.X, this.Coord.Y);
@@ -63,19 +63,19 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.CurFallingTime = MathCommon.Clamp(this.CurFallingTime - num, 0f, num);
 		}
 
-		// Token: 0x060320EA RID: 205034 RVA: 0x00B9F24B File Offset: 0x00B9D44B
+		// Token: 0x06026E7B RID: 159355 RVA: 0x00AE33FB File Offset: 0x00AE15FB
 		private void RegisterTick()
 		{
 			SlidingBlocksModel.Instance.RegisterMinoTick(this);
 		}
 
-		// Token: 0x060320EB RID: 205035 RVA: 0x00B9F258 File Offset: 0x00B9D458
+		// Token: 0x06026E7C RID: 159356 RVA: 0x00AE3408 File Offset: 0x00AE1608
 		private void UnRegisterTick()
 		{
 			SlidingBlocksModel.Instance.UnRegisterMinoTick(this);
 		}
 
-		// Token: 0x060320EC RID: 205036 RVA: 0x00B9F268 File Offset: 0x00B9D468
+		// Token: 0x06026E7D RID: 159357 RVA: 0x00AE3418 File Offset: 0x00AE1618
 		public void OnTick(float delta)
 		{
 			if (this.State != Mino.EMinoState.Moving)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x060320ED RID: 205037 RVA: 0x00B9F33C File Offset: 0x00B9D53C
+		// Token: 0x06026E7E RID: 159358 RVA: 0x00AE34EC File Offset: 0x00AE16EC
 		private bool CheckCanMove(int x, int y)
 		{
 			if (x == 0 && y == 0)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return !SlidingBlocksModel.Instance.CheckBeyondGrid(x2, y2);
 		}
 
-		// Token: 0x060320EE RID: 205038 RVA: 0x00B9F39A File Offset: 0x00B9D59A
+		// Token: 0x06026E7F RID: 159359 RVA: 0x00AE354A File Offset: 0x00AE174A
 		private void OnMoveFinished()
 		{
 			this.State = Mino.EMinoState.Static;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			fallPromise.SetResult(true);
 		}
 
-		// Token: 0x060320EF RID: 205039 RVA: 0x00B9F3C8 File Offset: 0x00B9D5C8
+		// Token: 0x06026E80 RID: 159360 RVA: 0x00AE3578 File Offset: 0x00AE1778
 		private bool CheckSqueezePlayer(double minoNextCoordX, double minoNextCoordY)
 		{
 			SlidingBlocksModel instance = SlidingBlocksModel.Instance;
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return playerCoord.X.Equals(minoNextCoordX) && playerCoord.Y.Equals(minoNextCoordY);
 		}
 
-		// Token: 0x060320F0 RID: 205040 RVA: 0x00B9F410 File Offset: 0x00B9D610
+		// Token: 0x06026E81 RID: 159361 RVA: 0x00AE35C0 File Offset: 0x00AE17C0
 		private void UpdateMinoWorldLocation()
 		{
 			AActor cubeActor = this.CubeActor;
@@ -168,50 +168,50 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			this.CubeActor.D_K2_SetActorLocation(this.CacheVector.ToUeVector(false), true, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x060320F1 RID: 205041 RVA: 0x00B9F4F0 File Offset: 0x00B9D6F0
+		// Token: 0x06026E82 RID: 159362 RVA: 0x00AE36A0 File Offset: 0x00AE18A0
 		public static void CreateStaticDefaultValue()
 		{
 			Mino._minoIndex = 0;
 		}
 
-		// Token: 0x060320F2 RID: 205042 RVA: 0x00B9F4F8 File Offset: 0x00B9D6F8
+		// Token: 0x06026E83 RID: 159363 RVA: 0x00AE36A8 File Offset: 0x00AE18A8
 		public static void ResetStaticDefaultValue()
 		{
 			Mino._minoIndex = 0;
 		}
 
-		// Token: 0x0401AAC3 RID: 109251
+		// Token: 0x04015417 RID: 87063
 		private static int _minoIndex;
 
-		// Token: 0x0401AAC4 RID: 109252
+		// Token: 0x04015418 RID: 87064
 		public readonly int Id;
 
-		// Token: 0x0401AAC5 RID: 109253
+		// Token: 0x04015419 RID: 87065
 		public Mino.EMinoState State;
 
-		// Token: 0x0401AAC6 RID: 109254
+		// Token: 0x0401541A RID: 87066
 		private readonly Vector2D StartFallingAnchorCoord = Vector2D.Create();
 
-		// Token: 0x0401AAC7 RID: 109255
+		// Token: 0x0401541B RID: 87067
 		private float CurFallingTime;
 
-		// Token: 0x0401AAC8 RID: 109256
+		// Token: 0x0401541C RID: 87068
 		private double MoveTargetY;
 
-		// Token: 0x0401AAC9 RID: 109257
+		// Token: 0x0401541D RID: 87069
 		[Nullable(2)]
 		private CustomPromise<bool> FallPromise;
 
-		// Token: 0x0401AACA RID: 109258
+		// Token: 0x0401541E RID: 87070
 		private readonly Vector CacheVector = Vector.Create();
 
-		// Token: 0x0200AD51 RID: 44369
+		// Token: 0x02009772 RID: 38770
 		[NullableContext(0)]
 		public enum EMinoState
 		{
-			// Token: 0x04034A61 RID: 215649
+			// Token: 0x0402F40D RID: 193549
 			Static,
-			// Token: 0x04034A62 RID: 215650
+			// Token: 0x0402F40E RID: 193550
 			Moving
 		}
 	}

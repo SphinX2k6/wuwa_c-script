@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x020044BB RID: 17595
+	// Token: 0x02002F8D RID: 12173
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChairMonitor
 	{
-		// Token: 0x0602D596 RID: 185750 RVA: 0x00A3A084 File Offset: 0x00A38284
+		// Token: 0x0601CDBC RID: 118204 RVA: 0x008D07A8 File Offset: 0x008CE9A8
 		public ChairMonitor(Entity chairEntity, ChairFollowerConfig chairConfig, IPlayerFollowerChairHandler chairHandler, int transactionVersion)
 		{
 			this.ChairEntity = chairEntity;
@@ -32,7 +31,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.StartPlayerMoveCheck(chairConfig);
 		}
 
-		// Token: 0x0602D597 RID: 185751 RVA: 0x00A3A0FC File Offset: 0x00A382FC
+		// Token: 0x0601CDBD RID: 118205 RVA: 0x008D0820 File Offset: 0x008CEA20
 		public void Dispose()
 		{
 			this.StopTickGroundCheck();
@@ -50,7 +49,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.GroundEvaluator.Dispose();
 		}
 
-		// Token: 0x0602D598 RID: 185752 RVA: 0x00A3A190 File Offset: 0x00A38390
+		// Token: 0x0601CDBE RID: 118206 RVA: 0x008D08B4 File Offset: 0x008CEAB4
 		private void CreateOverlapBox(ChairFollowerConfig chairConfig)
 		{
 			BaseActorComponent component = this.ChairEntity.GetComponent<BaseActorComponent>();
@@ -103,7 +102,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, null, null);
 		}
 
-		// Token: 0x0602D599 RID: 185753 RVA: 0x00A3A330 File Offset: 0x00A38530
+		// Token: 0x0601CDBF RID: 118207 RVA: 0x008D0A54 File Offset: 0x008CEC54
 		[NullableContext(2)]
 		private void OnComponentBeginOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex, bool bFromSweep, [Nullable(1)] FHitResult sweepResult)
 		{
@@ -116,7 +115,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OnOccupantBegin(otherActor);
 		}
 
-		// Token: 0x0602D59A RID: 185754 RVA: 0x00A3A361 File Offset: 0x00A38561
+		// Token: 0x0601CDC0 RID: 118208 RVA: 0x008D0A85 File Offset: 0x008CEC85
 		[NullableContext(2)]
 		private void OnComponentEndOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 		{
@@ -128,7 +127,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OnOccupantEnd(otherActor);
 		}
 
-		// Token: 0x0602D59B RID: 185755 RVA: 0x00A3A390 File Offset: 0x00A38590
+		// Token: 0x0601CDC1 RID: 118209 RVA: 0x008D0AB4 File Offset: 0x008CECB4
 		private unsafe void OnOccupantBegin(AActor actor)
 		{
 			if (this.OverlapOccupants.ContainsKey(actor))
@@ -187,7 +186,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OverlapOccupants[actor] = timerHandle;
 		}
 
-		// Token: 0x0602D59C RID: 185756 RVA: 0x00A3A548 File Offset: 0x00A38748
+		// Token: 0x0601CDC2 RID: 118210 RVA: 0x008D0C6C File Offset: 0x008CEE6C
 		private void OnOccupantEnd(AActor actor)
 		{
 			if (!this.OverlapOccupants.ContainsKey(actor))
@@ -202,7 +201,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairHandler.SetChairSpaceOccupied(this.ChairEntity, this.HasConfirmedOccupant(), actor, this.GetConfirmedOccupant());
 		}
 
-		// Token: 0x0602D59D RID: 185757 RVA: 0x00A3A588 File Offset: 0x00A38788
+		// Token: 0x0601CDC3 RID: 118211 RVA: 0x008D0CAC File Offset: 0x008CEEAC
 		private void RemoveOccupant(AActor actor)
 		{
 			TimerHandle timerHandle;
@@ -217,28 +216,34 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OverlapOccupants.Remove(actor);
 		}
 
-		// Token: 0x0602D59E RID: 185758 RVA: 0x00A3A5C2 File Offset: 0x00A387C2
+		// Token: 0x0601CDC4 RID: 118212 RVA: 0x008D0CE8 File Offset: 0x008CEEE8
 		private bool HasConfirmedOccupant()
 		{
-			return this.OverlapOccupants.Any((KeyValuePair<AActor, TimerHandle> occupant) => occupant.Value == null);
+			foreach (KeyValuePair<AActor, TimerHandle> keyValuePair in this.OverlapOccupants)
+			{
+				if (keyValuePair.Value == null)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x0602D59F RID: 185759 RVA: 0x00A3A5F0 File Offset: 0x00A387F0
+		// Token: 0x0601CDC5 RID: 118213 RVA: 0x008D0D44 File Offset: 0x008CEF44
 		[NullableContext(2)]
 		private AActor GetConfirmedOccupant()
 		{
-			return this.OverlapOccupants.Where(delegate(KeyValuePair<AActor, TimerHandle> occupant)
+			foreach (KeyValuePair<AActor, TimerHandle> keyValuePair in this.OverlapOccupants)
 			{
-				KeyValuePair<AActor, TimerHandle> keyValuePair = occupant;
-				return keyValuePair.Value == null;
-			}).Select(delegate(KeyValuePair<AActor, TimerHandle> occupant)
-			{
-				KeyValuePair<AActor, TimerHandle> keyValuePair = occupant;
-				return keyValuePair.Key;
-			}).FirstOrDefault<AActor>();
+				if (keyValuePair.Value == null)
+				{
+					return keyValuePair.Key;
+				}
+			}
+			return null;
 		}
 
-		// Token: 0x0602D5A0 RID: 185760 RVA: 0x00A3A650 File Offset: 0x00A38850
+		// Token: 0x0601CDC6 RID: 118214 RVA: 0x008D0DA8 File Offset: 0x008CEFA8
 		private void ClearOverlapOccupants()
 		{
 			foreach (KeyValuePair<AActor, TimerHandle> keyValuePair in this.OverlapOccupants)
@@ -251,7 +256,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OverlapOccupants.Clear();
 		}
 
-		// Token: 0x0602D5A1 RID: 185761 RVA: 0x00A3A6C4 File Offset: 0x00A388C4
+		// Token: 0x0601CDC7 RID: 118215 RVA: 0x008D0E1C File Offset: 0x008CF01C
 		[NullableContext(2)]
 		private bool IsOccupantOverlap(AActor otherActor)
 		{
@@ -276,7 +281,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return component == null || (!component.IsRole() && !component.IsPlayer());
 		}
 
-		// Token: 0x0602D5A2 RID: 185762 RVA: 0x00A3A72C File Offset: 0x00A3892C
+		// Token: 0x0601CDC8 RID: 118216 RVA: 0x008D0E84 File Offset: 0x008CF084
 		[NullableContext(2)]
 		private unsafe void LogOccupantOverlapInfo([Nullable(1)] string phase, AActor otherActor, UPrimitiveComponent otherComp, bool isOccupant)
 		{
@@ -322,7 +327,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray24<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 24));
 		}
 
-		// Token: 0x0602D5A3 RID: 185763 RVA: 0x00A3AB04 File Offset: 0x00A38D04
+		// Token: 0x0601CDC9 RID: 118217 RVA: 0x008D125C File Offset: 0x008CF45C
 		[NullableContext(2)]
 		[return: TupleElementNames(new string[]
 		{
@@ -369,7 +374,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return new ValueTuple<List<string>, List<string>, List<string>>(list, list2, list3);
 		}
 
-		// Token: 0x0602D5A4 RID: 185764 RVA: 0x00A3AB9C File Offset: 0x00A38D9C
+		// Token: 0x0601CDCA RID: 118218 RVA: 0x008D12F4 File Offset: 0x008CF4F4
 		private static string DescribeCollisionShape([Nullable(2)] UPrimitiveComponent comp)
 		{
 			UCapsuleComponent ucapsuleComponent = comp as UCapsuleComponent;
@@ -405,7 +410,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0602D5A5 RID: 185765 RVA: 0x00A3AC94 File Offset: 0x00A38E94
+		// Token: 0x0601CDCB RID: 118219 RVA: 0x008D13EC File Offset: 0x008CF5EC
 		private bool IsActorStillOverlapping(AActor actor)
 		{
 			UBoxComponent overlapBox = this.OverlapBox;
@@ -429,7 +434,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return false;
 		}
 
-		// Token: 0x0602D5A6 RID: 185766 RVA: 0x00A3ACF0 File Offset: 0x00A38EF0
+		// Token: 0x0601CDCC RID: 118220 RVA: 0x008D1448 File Offset: 0x008CF648
 		[return: Nullable(2)]
 		private static Entity ExtractEntity(AActor actor)
 		{
@@ -459,7 +464,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D5A7 RID: 185767 RVA: 0x00A3AD5C File Offset: 0x00A38F5C
+		// Token: 0x0601CDCD RID: 118221 RVA: 0x008D14B4 File Offset: 0x008CF6B4
 		private bool IsChairOwnActor(AActor actor)
 		{
 			BaseActorComponent component = this.ChairEntity.GetComponent<BaseActorComponent>();
@@ -495,7 +500,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return false;
 		}
 
-		// Token: 0x0602D5A8 RID: 185768 RVA: 0x00A3ADF0 File Offset: 0x00A38FF0
+		// Token: 0x0601CDCE RID: 118222 RVA: 0x008D1548 File Offset: 0x008CF748
 		private void StartTickGroundCheck(ChairFollowerConfig chairConfig)
 		{
 			if (chairConfig.TickGroundCheckIntervalMs <= 0f)
@@ -533,7 +538,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D5A9 RID: 185769 RVA: 0x00A3AE91 File Offset: 0x00A39091
+		// Token: 0x0601CDCF RID: 118223 RVA: 0x008D15E9 File Offset: 0x008CF7E9
 		private void StopTickGroundCheck()
 		{
 			if (this.TickGroundCheckTimer != null)
@@ -544,7 +549,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.TickGroundCheckFailed = false;
 		}
 
-		// Token: 0x0602D5AA RID: 185770 RVA: 0x00A3AEBC File Offset: 0x00A390BC
+		// Token: 0x0601CDD0 RID: 118224 RVA: 0x008D1614 File Offset: 0x008CF814
 		private void StartDistanceCheck(ChairFollowerConfig chairConfig)
 		{
 			this.DistanceTimer = TimerSystem.Instance.Forever(delegate(float _)
@@ -557,7 +562,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, 500f, 1f, null, null, true);
 		}
 
-		// Token: 0x0602D5AB RID: 185771 RVA: 0x00A3AF06 File Offset: 0x00A39106
+		// Token: 0x0601CDD1 RID: 118225 RVA: 0x008D165E File Offset: 0x008CF85E
 		private void StopDistanceCheck()
 		{
 			this.ClearHideDelayTimer();
@@ -569,7 +574,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.DistanceTimer = null;
 		}
 
-		// Token: 0x0602D5AC RID: 185772 RVA: 0x00A3AF30 File Offset: 0x00A39130
+		// Token: 0x0601CDD2 RID: 118226 RVA: 0x008D1688 File Offset: 0x008CF888
 		private void CheckDistance(ChairFollowerConfig chairConfig)
 		{
 			BaseActorComponent component = this.ChairEntity.GetComponent<BaseActorComponent>();
@@ -626,7 +631,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}, chairConfig.HideDelayMs, null, null, true, 1f);
 		}
 
-		// Token: 0x0602D5AD RID: 185773 RVA: 0x00A3B056 File Offset: 0x00A39256
+		// Token: 0x0601CDD3 RID: 118227 RVA: 0x008D17AE File Offset: 0x008CF9AE
 		private void ClearHideDelayTimer()
 		{
 			if (this.HideDelayTimer == null)
@@ -637,7 +642,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.HideDelayTimer = null;
 		}
 
-		// Token: 0x0602D5AE RID: 185774 RVA: 0x00A3B07C File Offset: 0x00A3927C
+		// Token: 0x0601CDD4 RID: 118228 RVA: 0x008D17D4 File Offset: 0x008CF9D4
 		private void StartPlayerMoveCheck(ChairFollowerConfig chairConfig)
 		{
 			if (!chairConfig.EnableTickCheckPlayerMovement)
@@ -667,7 +672,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x0602D5AF RID: 185775 RVA: 0x00A3B12B File Offset: 0x00A3932B
+		// Token: 0x0601CDD5 RID: 118229 RVA: 0x008D1883 File Offset: 0x008CFA83
 		private void StopPlayerMoveCheck()
 		{
 			this.SitBaselineLocation = null;
@@ -679,7 +684,7 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.PlayerMoveCheckTimer = null;
 		}
 
-		// Token: 0x0602D5B0 RID: 185776 RVA: 0x00A3B158 File Offset: 0x00A39358
+		// Token: 0x0601CDD6 RID: 118230 RVA: 0x008D18B0 File Offset: 0x008CFAB0
 		private void CheckPlayerMovement(ChairFollowerConfig chairConfig)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -726,25 +731,25 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ChairHandler.ExitSitDownDueToPlayerMove();
 		}
 
-		// Token: 0x040183DC RID: 99292
+		// Token: 0x0400F366 RID: 62310
 		private const int DISTANCE_CHECK_INTERVAL_MS = 500;
 
-		// Token: 0x040183DD RID: 99293
+		// Token: 0x0400F367 RID: 62311
 		private const int MAX_OVERLAP_OCCUPANT_COUNT = 10;
 
-		// Token: 0x040183DE RID: 99294
+		// Token: 0x0400F368 RID: 62312
 		private readonly Entity ChairEntity;
 
-		// Token: 0x040183DF RID: 99295
+		// Token: 0x0400F369 RID: 62313
 		private readonly IPlayerFollowerChairHandler ChairHandler;
 
-		// Token: 0x040183E0 RID: 99296
+		// Token: 0x0400F36A RID: 62314
 		private readonly ChairSummonEvaluator GroundEvaluator = new ChairSummonEvaluator();
 
-		// Token: 0x040183E1 RID: 99297
+		// Token: 0x0400F36B RID: 62315
 		private readonly float OverlapDuration;
 
-		// Token: 0x040183E2 RID: 99298
+		// Token: 0x0400F36C RID: 62316
 		[Nullable(new byte[]
 		{
 			1,
@@ -753,33 +758,33 @@ namespace Aki.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private readonly Dictionary<AActor, TimerHandle> OverlapOccupants = new Dictionary<AActor, TimerHandle>();
 
-		// Token: 0x040183E3 RID: 99299
+		// Token: 0x0400F36D RID: 62317
 		private readonly int TransactionVersion;
 
-		// Token: 0x040183E4 RID: 99300
+		// Token: 0x0400F36E RID: 62318
 		[Nullable(2)]
 		private TimerHandle DistanceTimer;
 
-		// Token: 0x040183E5 RID: 99301
+		// Token: 0x0400F36F RID: 62319
 		[Nullable(2)]
 		private TimerHandle HideDelayTimer;
 
-		// Token: 0x040183E6 RID: 99302
+		// Token: 0x0400F370 RID: 62320
 		[Nullable(2)]
 		private UBoxComponent OverlapBox;
 
-		// Token: 0x040183E7 RID: 99303
+		// Token: 0x0400F371 RID: 62321
 		[Nullable(2)]
 		private TimerHandle PlayerMoveCheckTimer;
 
-		// Token: 0x040183E8 RID: 99304
+		// Token: 0x0400F372 RID: 62322
 		[Nullable(2)]
 		private Vector SitBaselineLocation;
 
-		// Token: 0x040183E9 RID: 99305
+		// Token: 0x0400F373 RID: 62323
 		private bool TickGroundCheckFailed;
 
-		// Token: 0x040183EA RID: 99306
+		// Token: 0x0400F374 RID: 62324
 		[Nullable(2)]
 		private TimerHandle TickGroundCheckTimer;
 	}

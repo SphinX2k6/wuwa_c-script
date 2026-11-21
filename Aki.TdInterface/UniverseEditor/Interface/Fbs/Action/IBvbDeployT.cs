@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006240 RID: 25152
+	// Token: 0x020068B1 RID: 26801
 	public class IBvbDeployT
 	{
-		// Token: 0x1700BB72 RID: 47986
-		// (get) Token: 0x0602B5E4 RID: 177636 RVA: 0x005F8791 File Offset: 0x005F6991
-		// (set) Token: 0x0602B5E5 RID: 177637 RVA: 0x005F8799 File Offset: 0x005F6999
+		// Token: 0x1700C4FA RID: 50426
+		// (get) Token: 0x0602DD45 RID: 187717 RVA: 0x00643599 File Offset: 0x00641799
+		// (set) Token: 0x0602DD46 RID: 187718 RVA: 0x006435A1 File Offset: 0x006417A1
 		public EBvbPlayerOperationType Type { get; set; }
 
-		// Token: 0x1700BB73 RID: 47987
-		// (get) Token: 0x0602B5E6 RID: 177638 RVA: 0x005F87A2 File Offset: 0x005F69A2
-		// (set) Token: 0x0602B5E7 RID: 177639 RVA: 0x005F87AA File Offset: 0x005F69AA
+		// Token: 0x1700C4FB RID: 50427
+		// (get) Token: 0x0602DD47 RID: 187719 RVA: 0x006435AA File Offset: 0x006417AA
+		// (set) Token: 0x0602DD48 RID: 187720 RVA: 0x006435B2 File Offset: 0x006417B2
 		public int HandCardIndex { get; set; }
 
-		// Token: 0x1700BB74 RID: 47988
-		// (get) Token: 0x0602B5E8 RID: 177640 RVA: 0x005F87B3 File Offset: 0x005F69B3
-		// (set) Token: 0x0602B5E9 RID: 177641 RVA: 0x005F87BB File Offset: 0x005F69BB
+		// Token: 0x1700C4FC RID: 50428
+		// (get) Token: 0x0602DD49 RID: 187721 RVA: 0x006435BB File Offset: 0x006417BB
+		// (set) Token: 0x0602DD4A RID: 187722 RVA: 0x006435C3 File Offset: 0x006417C3
 		public int BoardPosIndex { get; set; }
 
-		// Token: 0x1700BB75 RID: 47989
-		// (get) Token: 0x0602B5EA RID: 177642 RVA: 0x005F87C4 File Offset: 0x005F69C4
-		// (set) Token: 0x0602B5EB RID: 177643 RVA: 0x005F87CC File Offset: 0x005F69CC
+		// Token: 0x1700C4FD RID: 50429
+		// (get) Token: 0x0602DD4B RID: 187723 RVA: 0x006435CC File Offset: 0x006417CC
+		// (set) Token: 0x0602DD4C RID: 187724 RVA: 0x006435D4 File Offset: 0x006417D4
 		public List<int> BoardPosIndexList { get; set; }
 
-		// Token: 0x1700BB76 RID: 47990
-		// (get) Token: 0x0602B5EC RID: 177644 RVA: 0x005F87D5 File Offset: 0x005F69D5
-		// (set) Token: 0x0602B5ED RID: 177645 RVA: 0x005F87DD File Offset: 0x005F69DD
+		// Token: 0x1700C4FE RID: 50430
+		// (get) Token: 0x0602DD4D RID: 187725 RVA: 0x006435DD File Offset: 0x006417DD
+		// (set) Token: 0x0602DD4E RID: 187726 RVA: 0x006435E5 File Offset: 0x006417E5
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B5EE RID: 177646 RVA: 0x005F87E6 File Offset: 0x005F69E6
+		// Token: 0x0602DD4F RID: 187727 RVA: 0x006435EE File Offset: 0x006417EE
 		public IBvbDeployT()
 		{
 			this.Type = EBvbPlayerOperationType.BvbDeploy;

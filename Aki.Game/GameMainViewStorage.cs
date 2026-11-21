@@ -5,18 +5,18 @@ using CSharpScript.Core.Extension;
 using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001CB2 RID: 7346
+// Token: 0x02001174 RID: 4468
 [NullableContext(1)]
 [Nullable(0)]
 public class GameMainViewStorage : IStaticVariableResetter
 {
-	// Token: 0x0600DDFB RID: 56827 RVA: 0x0033E30F File Offset: 0x0033C50F
+	// Token: 0x0600B218 RID: 45592 RVA: 0x00349D4B File Offset: 0x00347F4B
 	static GameMainViewStorage()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameMainViewStorage.CreateStaticDefaultValue), new Action(GameMainViewStorage.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600DDFC RID: 56828 RVA: 0x0033E32E File Offset: 0x0033C52E
+	// Token: 0x0600B219 RID: 45593 RVA: 0x00349D6A File Offset: 0x00347F6A
 	public static void CreateStaticDefaultValue()
 	{
 		GameMainViewStorage.MainViewInfoMap = new Dictionary<EDungeonSubType, Type>();
@@ -24,7 +24,7 @@ public class GameMainViewStorage : IStaticVariableResetter
 		GameMainViewStorage.OtherMainViewInfoMap = new Dictionary<EDungeonSubType, EUiViewName>();
 	}
 
-	// Token: 0x0600DDFD RID: 56829 RVA: 0x0033E34E File Offset: 0x0033C54E
+	// Token: 0x0600B21A RID: 45594 RVA: 0x00349D8A File Offset: 0x00347F8A
 	public static void ResetStaticDefaultValue()
 	{
 		GameMainViewStorage.MainViewInfoMap = null;
@@ -32,25 +32,25 @@ public class GameMainViewStorage : IStaticVariableResetter
 		GameMainViewStorage.OtherMainViewInfoMap = null;
 	}
 
-	// Token: 0x0600DDFE RID: 56830 RVA: 0x0033E362 File Offset: 0x0033C562
+	// Token: 0x0600B21B RID: 45595 RVA: 0x00349D9E File Offset: 0x00347F9E
 	public static void RegisterMainViewInfo(EDungeonSubType dungeonSubType, Type viewProxy)
 	{
 		GameMainViewStorage.MainViewInfoMap[dungeonSubType] = viewProxy;
 	}
 
-	// Token: 0x0600DDFF RID: 56831 RVA: 0x0033E370 File Offset: 0x0033C570
+	// Token: 0x0600B21C RID: 45596 RVA: 0x00349DAC File Offset: 0x00347FAC
 	public static void RegisterMainViewInfoWorldInstance(EWorldDungeonSubType worldDungeonType, Type viewProxy)
 	{
 		GameMainViewStorage.MainViewInfoMapWorldInstance[worldDungeonType] = viewProxy;
 	}
 
-	// Token: 0x0600DE00 RID: 56832 RVA: 0x0033E37E File Offset: 0x0033C57E
+	// Token: 0x0600B21D RID: 45597 RVA: 0x00349DBA File Offset: 0x00347FBA
 	public static void RegisterOtherMainViewInfo(EDungeonSubType dungeonSubType, EUiViewName viewName)
 	{
 		GameMainViewStorage.OtherMainViewInfoMap[dungeonSubType] = viewName;
 	}
 
-	// Token: 0x0600DE01 RID: 56833 RVA: 0x0033E38C File Offset: 0x0033C58C
+	// Token: 0x0600B21E RID: 45598 RVA: 0x00349DC8 File Offset: 0x00347FC8
 	[NullableContext(2)]
 	public static Type GetMainViewInfo(EDungeonSubType dungeonSubType, EWorldDungeonSubType worldDungeonType)
 	{
@@ -74,7 +74,7 @@ public class GameMainViewStorage : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600DE02 RID: 56834 RVA: 0x0033E3C4 File Offset: 0x0033C5C4
+	// Token: 0x0600B21F RID: 45599 RVA: 0x00349E00 File Offset: 0x00348000
 	public static EUiViewName GetMainViewName(EDungeonSubType dungeonSubType, EWorldDungeonSubType worldDungeonType)
 	{
 		if (dungeonSubType == EDungeonSubType.WorldInstance && GameMainViewStorage.MainViewInfoMapWorldInstance.ContainsKey(worldDungeonType))
@@ -93,12 +93,12 @@ public class GameMainViewStorage : IStaticVariableResetter
 		return EUiViewName.BattleView;
 	}
 
-	// Token: 0x040065CC RID: 26060
+	// Token: 0x040066AB RID: 26283
 	private static Dictionary<EDungeonSubType, Type> MainViewInfoMap;
 
-	// Token: 0x040065CD RID: 26061
+	// Token: 0x040066AC RID: 26284
 	private static Dictionary<EWorldDungeonSubType, Type> MainViewInfoMapWorldInstance;
 
-	// Token: 0x040065CE RID: 26062
+	// Token: 0x040066AD RID: 26285
 	private static Dictionary<EDungeonSubType, EUiViewName> OtherMainViewInfoMap;
 }

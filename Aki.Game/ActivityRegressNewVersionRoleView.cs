@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001443 RID: 5187
+// Token: 0x020008F7 RID: 2295
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x06009284 RID: 37508 RVA: 0x001F63B8 File Offset: 0x001F45B8
+	// Token: 0x06006619 RID: 26137 RVA: 0x001FEEF4 File Offset: 0x001FD0F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009285 RID: 37509 RVA: 0x001F6530 File Offset: 0x001F4730
+	// Token: 0x0600661A RID: 26138 RVA: 0x001FF06C File Offset: 0x001FD26C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressNewVersionRoleView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009286 RID: 37510 RVA: 0x001F6574 File Offset: 0x001F4774
+	// Token: 0x0600661B RID: 26139 RVA: 0x001FF0B0 File Offset: 0x001FD2B0
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -84,7 +84,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x06009287 RID: 37511 RVA: 0x001F665B File Offset: 0x001F485B
+	// Token: 0x0600661C RID: 26140 RVA: 0x001FF197 File Offset: 0x001FD397
 	private PoolScrollItem OnInitItem()
 	{
 		return new PoolScrollItem
@@ -93,7 +93,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009288 RID: 37512 RVA: 0x001F6674 File Offset: 0x001F4874
+	// Token: 0x0600661D RID: 26141 RVA: 0x001FF1B0 File Offset: 0x001FD3B0
 	private void OnClickPoolItemToggle([Nullable(2)] ProtoGachaPoolInfo poolInfo, UUIExtendToggle toggle)
 	{
 		if (poolInfo == null || this.CurrentSelectPoolInfo == poolInfo)
@@ -110,7 +110,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06009289 RID: 37513 RVA: 0x001F66B0 File Offset: 0x001F48B0
+	// Token: 0x0600661E RID: 26142 RVA: 0x001FF1EC File Offset: 0x001FD3EC
 	private void RefreshView()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -165,7 +165,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		this.RefreshRoleItemAsync(value.SpinePrefabResource, (value.TrialRoleId > 0) ? value.TrialRoleId : value.Id);
 	}
 
-	// Token: 0x0600928A RID: 37514 RVA: 0x001F6868 File Offset: 0x001F4A68
+	// Token: 0x0600661F RID: 26143 RVA: 0x001FF3A4 File Offset: 0x001FD5A4
 	private UniTask RefreshRoleItemAsync(string resourceId, int roleId)
 	{
 		ActivityRegressNewVersionRoleView.<RefreshRoleItemAsync>d__16 <RefreshRoleItemAsync>d__;
@@ -178,7 +178,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		return <RefreshRoleItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600928B RID: 37515 RVA: 0x001F68BC File Offset: 0x001F4ABC
+	// Token: 0x06006620 RID: 26144 RVA: 0x001FF3F8 File Offset: 0x001FD5F8
 	private UniTask InitRoleSpineItem(string resourceId, int roleId)
 	{
 		ActivityRegressNewVersionRoleView.<InitRoleSpineItem>d__17 <InitRoleSpineItem>d__;
@@ -191,7 +191,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		return <InitRoleSpineItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600928C RID: 37516 RVA: 0x001F6910 File Offset: 0x001F4B10
+	// Token: 0x06006621 RID: 26145 RVA: 0x001FF44C File Offset: 0x001FD64C
 	private UniTask InitRoleCommonItem()
 	{
 		ActivityRegressNewVersionRoleView.<InitRoleCommonItem>d__18 <InitRoleCommonItem>d__;
@@ -202,7 +202,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		return <InitRoleCommonItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600928D RID: 37517 RVA: 0x001F6954 File Offset: 0x001F4B54
+	// Token: 0x06006622 RID: 26146 RVA: 0x001FF490 File Offset: 0x001FD690
 	private void RefreshButtonUiActivity()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -226,7 +226,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		base.GetButton(4).RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0600928E RID: 37518 RVA: 0x001F69F9 File Offset: 0x001F4BF9
+	// Token: 0x06006623 RID: 26147 RVA: 0x001FF535 File Offset: 0x001FD735
 	private void OnClickUrlBtn()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -236,7 +236,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		ActivityRegressController.OpenGameIntroductionByRoleId(this.CurrentSelectPoolInfo.PreviewIdList[0]);
 	}
 
-	// Token: 0x0600928F RID: 37519 RVA: 0x001F6A18 File Offset: 0x001F4C18
+	// Token: 0x06006624 RID: 26148 RVA: 0x001FF554 File Offset: 0x001FD754
 	private void OnClickJumpBtn()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -260,7 +260,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		UiManager.Instance.CloseView(EUiViewName.CommonActivityView, null);
 	}
 
-	// Token: 0x06009290 RID: 37520 RVA: 0x001F6AC8 File Offset: 0x001F4CC8
+	// Token: 0x06006625 RID: 26149 RVA: 0x001FF604 File Offset: 0x001FD804
 	private void CloseView()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.ActivityRegressMainView))
@@ -273,7 +273,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x06009291 RID: 37521 RVA: 0x001F6B18 File Offset: 0x001F4D18
+	// Token: 0x06006626 RID: 26150 RVA: 0x001FF654 File Offset: 0x001FD854
 	private void OnClickLeftBtn()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -295,7 +295,7 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		poolScrollItem.SelectedToggle();
 	}
 
-	// Token: 0x06009292 RID: 37522 RVA: 0x001F6B68 File Offset: 0x001F4D68
+	// Token: 0x06006627 RID: 26151 RVA: 0x001FF6A4 File Offset: 0x001FD8A4
 	private void OnClickRightBtn()
 	{
 		if (this.CurrentSelectPoolInfo == null)
@@ -317,10 +317,10 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 		poolScrollItem.SelectedToggle();
 	}
 
-	// Token: 0x040040E9 RID: 16617
+	// Token: 0x04004181 RID: 16769
 	private const int POOL_ITEM_PADDING = 15;
 
-	// Token: 0x040040EA RID: 16618
+	// Token: 0x04004182 RID: 16770
 	[Nullable(new byte[]
 	{
 		2,
@@ -329,67 +329,67 @@ public class ActivityRegressNewVersionRoleView : ActivityRegressMainSubViewBase
 	})]
 	private GenericScrollViewNew<PoolScrollItem, ProtoGachaPoolInfo> PoolScrollView;
 
-	// Token: 0x040040EB RID: 16619
+	// Token: 0x04004183 RID: 16771
 	[Nullable(2)]
 	private RoleDescribeComponent RoleDescribeComponent;
 
-	// Token: 0x040040EC RID: 16620
+	// Token: 0x04004184 RID: 16772
 	[Nullable(2)]
 	private ProtoGachaPoolInfo CurrentSelectPoolInfo;
 
-	// Token: 0x040040ED RID: 16621
+	// Token: 0x04004185 RID: 16773
 	private List<ProtoGachaPoolInfo> PoolInfoList = new List<ProtoGachaPoolInfo>();
 
-	// Token: 0x040040EE RID: 16622
+	// Token: 0x04004186 RID: 16774
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x040040EF RID: 16623
+	// Token: 0x04004187 RID: 16775
 	private readonly Dictionary<int, NewPlayerSupportRoleSpineItem> RoleSpineItemMap = new Dictionary<int, NewPlayerSupportRoleSpineItem>();
 
-	// Token: 0x040040F0 RID: 16624
+	// Token: 0x04004188 RID: 16776
 	[Nullable(2)]
 	private NewPlayerSupportRoleBaseItem CurRoleItem;
 
-	// Token: 0x040040F1 RID: 16625
+	// Token: 0x04004189 RID: 16777
 	[Nullable(2)]
 	private NewPlayerSupportRoleCommonItem RoleCommonItem;
 
-	// Token: 0x02007A7A RID: 31354
+	// Token: 0x02006BFE RID: 27646
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040284C6 RID: 165062
+		// Token: 0x040237E0 RID: 145376
 		public const int LeftTimeText = 0;
 
-		// Token: 0x040284C7 RID: 165063
+		// Token: 0x040237E1 RID: 145377
 		public const int RoleInfoItem = 1;
 
-		// Token: 0x040284C8 RID: 165064
+		// Token: 0x040237E2 RID: 145378
 		public const int PoolListScrollView = 2;
 
-		// Token: 0x040284C9 RID: 165065
+		// Token: 0x040237E3 RID: 145379
 		public const int LeftBtn = 3;
 
-		// Token: 0x040284CA RID: 165066
+		// Token: 0x040237E4 RID: 145380
 		public const int RightBtn = 4;
 
-		// Token: 0x040284CB RID: 165067
+		// Token: 0x040237E5 RID: 145381
 		public const int UrlBtn = 5;
 
-		// Token: 0x040284CC RID: 165068
+		// Token: 0x040237E6 RID: 145382
 		public const int JumpToBtn = 6;
 
-		// Token: 0x040284CD RID: 165069
+		// Token: 0x040237E7 RID: 145383
 		public const int BgTexture = 7;
 
-		// Token: 0x040284CE RID: 165070
+		// Token: 0x040237E8 RID: 145384
 		public const int RoleSpineItem = 8;
 
-		// Token: 0x040284CF RID: 165071
+		// Token: 0x040237E9 RID: 145385
 		public const int TitleText = 9;
 
-		// Token: 0x040284D0 RID: 165072
+		// Token: 0x040237EA RID: 145386
 		public const int SubTitleText = 10;
 	}
 }

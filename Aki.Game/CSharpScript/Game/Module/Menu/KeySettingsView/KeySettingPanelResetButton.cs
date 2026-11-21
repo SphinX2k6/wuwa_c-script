@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005464 RID: 21604
+	// Token: 0x02004447 RID: 17479
 	public class KeySettingPanelResetButton : UiPanelBase
 	{
-		// Token: 0x06037241 RID: 225857 RVA: 0x00D11ED4 File Offset: 0x00D100D4
+		// Token: 0x0602C18A RID: 180618 RVA: 0x00C612EC File Offset: 0x00C5F4EC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,23 +20,23 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x06037242 RID: 225858 RVA: 0x00D11F2E File Offset: 0x00D1012E
+		// Token: 0x0602C18B RID: 180619 RVA: 0x00C61346 File Offset: 0x00C5F546
 		[NullableContext(1)]
 		public void SetConfirmText(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200B6DA RID: 46810
+		// Token: 0x0200A112 RID: 41234
 		public class EComponent
 		{
-			// Token: 0x0403764E RID: 226894
+			// Token: 0x040320A3 RID: 204963
 			public const int Button = 0;
 
-			// Token: 0x0403764F RID: 226895
+			// Token: 0x040320A4 RID: 204964
 			public const int TxtConfirm = 1;
 
-			// Token: 0x04037650 RID: 226896
+			// Token: 0x040320A5 RID: 204965
 			public const int RedDot = 2;
 		}
 	}

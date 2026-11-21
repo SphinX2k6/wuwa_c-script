@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005984 RID: 22916
+	// Token: 0x02005F91 RID: 24465
 	public class ISplineMoveT
 	{
-		// Token: 0x1700ABFA RID: 44026
-		// (get) Token: 0x06026CDC RID: 158940 RVA: 0x00557843 File Offset: 0x00555A43
-		// (set) Token: 0x06026CDD RID: 158941 RVA: 0x0055784B File Offset: 0x00555A4B
+		// Token: 0x1700B52E RID: 46382
+		// (get) Token: 0x06029246 RID: 168518 RVA: 0x0059E4AF File Offset: 0x0059C6AF
+		// (set) Token: 0x06029247 RID: 168519 RVA: 0x0059E4B7 File Offset: 0x0059C6B7
 		public List<IEntityStateConditionT> StateConditions { get; set; }
 
-		// Token: 0x1700ABFB RID: 44027
-		// (get) Token: 0x06026CDE RID: 158942 RVA: 0x00557854 File Offset: 0x00555A54
-		// (set) Token: 0x06026CDF RID: 158943 RVA: 0x0055785C File Offset: 0x00555A5C
+		// Token: 0x1700B52F RID: 46383
+		// (get) Token: 0x06029248 RID: 168520 RVA: 0x0059E4C0 File Offset: 0x0059C6C0
+		// (set) Token: 0x06029249 RID: 168521 RVA: 0x0059E4C8 File Offset: 0x0059C6C8
 		public int Speed { get; set; }
 
-		// Token: 0x1700ABFC RID: 44028
-		// (get) Token: 0x06026CE0 RID: 158944 RVA: 0x00557865 File Offset: 0x00555A65
-		// (set) Token: 0x06026CE1 RID: 158945 RVA: 0x0055786D File Offset: 0x00555A6D
+		// Token: 0x1700B530 RID: 46384
+		// (get) Token: 0x0602924A RID: 168522 RVA: 0x0059E4D1 File Offset: 0x0059C6D1
+		// (set) Token: 0x0602924B RID: 168523 RVA: 0x0059E4D9 File Offset: 0x0059C6D9
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700ABFD RID: 44029
-		// (get) Token: 0x06026CE2 RID: 158946 RVA: 0x00557876 File Offset: 0x00555A76
-		// (set) Token: 0x06026CE3 RID: 158947 RVA: 0x0055787E File Offset: 0x00555A7E
+		// Token: 0x1700B531 RID: 46385
+		// (get) Token: 0x0602924C RID: 168524 RVA: 0x0059E4E2 File Offset: 0x0059C6E2
+		// (set) Token: 0x0602924D RID: 168525 RVA: 0x0059E4EA File Offset: 0x0059C6EA
 		public bool IsCircle { get; set; }
 
-		// Token: 0x1700ABFE RID: 44030
-		// (get) Token: 0x06026CE4 RID: 158948 RVA: 0x00557887 File Offset: 0x00555A87
-		// (set) Token: 0x06026CE5 RID: 158949 RVA: 0x0055788F File Offset: 0x00555A8F
+		// Token: 0x1700B532 RID: 46386
+		// (get) Token: 0x0602924E RID: 168526 RVA: 0x0059E4F3 File Offset: 0x0059C6F3
+		// (set) Token: 0x0602924F RID: 168527 RVA: 0x0059E4FB File Offset: 0x0059C6FB
 		public bool IsLookDir { get; set; }
 
-		// Token: 0x1700ABFF RID: 44031
-		// (get) Token: 0x06026CE6 RID: 158950 RVA: 0x00557898 File Offset: 0x00555A98
-		// (set) Token: 0x06026CE7 RID: 158951 RVA: 0x005578A0 File Offset: 0x00555AA0
+		// Token: 0x1700B533 RID: 46387
+		// (get) Token: 0x06029250 RID: 168528 RVA: 0x0059E504 File Offset: 0x0059C704
+		// (set) Token: 0x06029251 RID: 168529 RVA: 0x0059E50C File Offset: 0x0059C70C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026CE8 RID: 158952 RVA: 0x005578A9 File Offset: 0x00555AA9
+		// Token: 0x06029252 RID: 168530 RVA: 0x0059E515 File Offset: 0x0059C715
 		public ISplineMoveT()
 		{
 			this.StateConditions = null;

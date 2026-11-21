@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001026 RID: 4134
+// Token: 0x020004DA RID: 1242
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerShowCardsAction : GuessJokerActionBase
 {
-	// Token: 0x06006A2D RID: 27181 RVA: 0x00154D2C File Offset: 0x00152F2C
+	// Token: 0x06003DC2 RID: 15810 RVA: 0x0015D654 File Offset: 0x0015B854
 	public GuessJokerShowCardsAction(int[] cardIdList, bool isShow, float duration = 0f)
 	{
 		this.CardIdList.AddRange(cardIdList);
@@ -22,7 +22,7 @@ public class GuessJokerShowCardsAction : GuessJokerActionBase
 		this.IsShow = isShow;
 	}
 
-	// Token: 0x06006A2E RID: 27182 RVA: 0x00154D7C File Offset: 0x00152F7C
+	// Token: 0x06003DC3 RID: 15811 RVA: 0x0015D6A4 File Offset: 0x0015B8A4
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -34,9 +34,9 @@ public class GuessJokerShowCardsAction : GuessJokerActionBase
 		gamePlayView.ShowCards(this.CardIdList.ToArray(), this.IsShow);
 	}
 
-	// Token: 0x040030ED RID: 12525
+	// Token: 0x04003186 RID: 12678
 	private readonly List<int> CardIdList = new List<int>();
 
-	// Token: 0x040030EE RID: 12526
+	// Token: 0x04003187 RID: 12679
 	private readonly bool IsShow;
 }

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A72 RID: 23154
+	// Token: 0x02004A4E RID: 19022
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,19 +18,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeRoleMediumGridItem : GridProxyAbstract<RoleDataBase>
 	{
-		// Token: 0x0603AAB0 RID: 240304 RVA: 0x00DF8689 File Offset: 0x00DF6889
+		// Token: 0x0602F9F9 RID: 195065 RVA: 0x00D48C0D File Offset: 0x00D46E0D
 		public void SetCanSelectRole(Func<int, EToggleState, bool> callback)
 		{
 			this.CanSelectRole = callback;
 		}
 
-		// Token: 0x0603AAB1 RID: 240305 RVA: 0x00DF8692 File Offset: 0x00DF6892
+		// Token: 0x0602F9FA RID: 195066 RVA: 0x00D48C16 File Offset: 0x00D46E16
 		public void SetOnSelectRole(Action<int, EToggleState> callback)
 		{
 			this.OnSelectRole = callback;
 		}
 
-		// Token: 0x0603AAB2 RID: 240306 RVA: 0x00DF869C File Offset: 0x00DF689C
+		// Token: 0x0602F9FB RID: 195067 RVA: 0x00D48C20 File Offset: 0x00D46E20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FlagChallengeRoleMediumGridItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AAB3 RID: 240307 RVA: 0x00DF86DF File Offset: 0x00DF68DF
+		// Token: 0x0602F9FC RID: 195068 RVA: 0x00D48C63 File Offset: 0x00D46E63
 		public override void Refresh(RoleDataBase data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
 			this.RefreshView(data);
 		}
 
-		// Token: 0x0603AAB4 RID: 240308 RVA: 0x00DF86F0 File Offset: 0x00DF68F0
+		// Token: 0x0602F9FD RID: 195069 RVA: 0x00D48C74 File Offset: 0x00D46E74
 		private void RefreshView(RoleDataBase data)
 		{
 			int dataId = data.GetDataId();
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.MediumItemGrid.SetSelected(bSelected, true);
 		}
 
-		// Token: 0x0603AAB5 RID: 240309 RVA: 0x00DF87D8 File Offset: 0x00DF69D8
+		// Token: 0x0602F9FE RID: 195070 RVA: 0x00D48D5C File Offset: 0x00D46F5C
 		[NullableContext(2)]
 		private bool OnCanExecuteChangeEvent(object data, bool isForceSelected, EToggleState state)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return canSelectRole == null || canSelectRole((data as RoleDataBase).GetDataId(), state);
 		}
 
-		// Token: 0x0603AAB6 RID: 240310 RVA: 0x00DF87F7 File Offset: 0x00DF69F7
+		// Token: 0x0602F9FF RID: 195071 RVA: 0x00D48D7B File Offset: 0x00D46F7B
 		private void OnClickEvent(MediumItemGridExtendCallback callback)
 		{
 			Action<int, EToggleState> onSelectRole = this.OnSelectRole;
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			onSelectRole(this.Data.GetDataId(), callback.State);
 		}
 
-		// Token: 0x0401E9C4 RID: 125380
+		// Token: 0x0401946B RID: 103531
 		[Nullable(2)]
 		private RoleDataBase Data;
 
-		// Token: 0x0401E9C5 RID: 125381
+		// Token: 0x0401946C RID: 103532
 		[Nullable(2)]
 		private MediumItemGrid MediumItemGrid;
 
-		// Token: 0x0401E9C6 RID: 125382
+		// Token: 0x0401946D RID: 103533
 		[Nullable(2)]
 		private Func<int, EToggleState, bool> CanSelectRole;
 
-		// Token: 0x0401E9C7 RID: 125383
+		// Token: 0x0401946E RID: 103534
 		[Nullable(2)]
 		private Action<int, EToggleState> OnSelectRole;
 	}

@@ -5,26 +5,26 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Personal
 {
-	// Token: 0x020052EA RID: 21226
+	// Token: 0x020042BA RID: 17082
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class PersonalConfig : ConfigBase
 	{
-		// Token: 0x060364AE RID: 222382 RVA: 0x00CD7AD7 File Offset: 0x00CD5CD7
+		// Token: 0x0602B3A9 RID: 177065 RVA: 0x00C251FB File Offset: 0x00C233FB
 		public PlayerHeadRe? GetPlayerHeadConfig(int id)
 		{
 			return ConfigPlayerHeadReById.GetConfig(id, true);
 		}
 
-		// Token: 0x060364AF RID: 222383 RVA: 0x00CD7AE0 File Offset: 0x00CD5CE0
+		// Token: 0x0602B3AA RID: 177066 RVA: 0x00C25204 File Offset: 0x00C23404
 		[NullableContext(2)]
 		public IReadOnlyList<PlayerHeadRe> GetAllPlayerHeadConfig()
 		{
 			return ConfigPlayerHeadReAll.GetConfigList(true);
 		}
 
-		// Token: 0x060364B0 RID: 222384 RVA: 0x00CD7AE8 File Offset: 0x00CD5CE8
+		// Token: 0x0602B3AB RID: 177067 RVA: 0x00C2520C File Offset: 0x00C2340C
 		public string GetBirthLocalText(int date, EBirthDateType dateType)
 		{
 			BirthDayText? config = ConfigBirthDayTextByDateAndType.GetConfig(date, (int)dateType, true);
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.Module.Personal
 			return text;
 		}
 
-		// Token: 0x1700830C RID: 33548
-		// (get) Token: 0x060364B1 RID: 222385 RVA: 0x00CD7B42 File Offset: 0x00CD5D42
+		// Token: 0x170056CC RID: 22220
+		// (get) Token: 0x0602B3AC RID: 177068 RVA: 0x00C25266 File Offset: 0x00C23466
 		public static PersonalConfig Instance
 		{
 			get
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Personal
 			}
 		}
 
-		// Token: 0x060364B2 RID: 222386 RVA: 0x00CD7B49 File Offset: 0x00CD5D49
+		// Token: 0x0602B3AD RID: 177069 RVA: 0x00C2526D File Offset: 0x00C2346D
 		public static PersonalConfig GetOrCreateInstance()
 		{
 			if (PersonalConfig._Instance == null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Personal
 			return PersonalConfig._Instance;
 		}
 
-		// Token: 0x060364B3 RID: 222387 RVA: 0x00CD7B5D File Offset: 0x00CD5D5D
+		// Token: 0x0602B3AE RID: 177070 RVA: 0x00C25281 File Offset: 0x00C23481
 		public static bool CreateInstance()
 		{
 			if (PersonalConfig._Instance != null)
@@ -71,24 +71,24 @@ namespace CSharpScript.Game.Module.Personal
 			return true;
 		}
 
-		// Token: 0x060364B4 RID: 222388 RVA: 0x00CD7B73 File Offset: 0x00CD5D73
+		// Token: 0x0602B3AF RID: 177071 RVA: 0x00C25297 File Offset: 0x00C23497
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060364B5 RID: 222389 RVA: 0x00CD7B75 File Offset: 0x00CD5D75
+		// Token: 0x0602B3B0 RID: 177072 RVA: 0x00C25299 File Offset: 0x00C23499
 		public static void ResetStaticDefaultValue()
 		{
 			PersonalConfig._Instance = null;
 		}
 
-		// Token: 0x060364B6 RID: 222390 RVA: 0x00CD7B7D File Offset: 0x00CD5D7D
+		// Token: 0x0602B3B1 RID: 177073 RVA: 0x00C252A1 File Offset: 0x00C234A1
 		static PersonalConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PersonalConfig.CreateStaticDefaultValue), new Action(PersonalConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CB19 RID: 117529
+		// Token: 0x0401754E RID: 95566
 		[Nullable(2)]
 		private static PersonalConfig _Instance;
 	}

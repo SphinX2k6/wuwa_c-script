@@ -5,24 +5,24 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BAA RID: 23466
+	// Token: 0x02004B8A RID: 19338
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CombatExactRequestDataPack
 	{
-		// Token: 0x0603B591 RID: 243089 RVA: 0x00E25B85 File Offset: 0x00E23D85
+		// Token: 0x060304DE RID: 197854 RVA: 0x00D75EFD File Offset: 0x00D740FD
 		public CombatExactRequestDataPack(IMessage message, CombatRequestData.MessageOneofCase messageCase)
 		{
 		}
 
-		// Token: 0x17008CF1 RID: 36081
-		// (get) Token: 0x0603B592 RID: 243090 RVA: 0x00E25B9B File Offset: 0x00E23D9B
-		// (set) Token: 0x0603B593 RID: 243091 RVA: 0x00E25BA3 File Offset: 0x00E23DA3
+		// Token: 0x170060C3 RID: 24771
+		// (get) Token: 0x060304DF RID: 197855 RVA: 0x00D75F13 File Offset: 0x00D74113
+		// (set) Token: 0x060304E0 RID: 197856 RVA: 0x00D75F1B File Offset: 0x00D7411B
 		public IMessage Message { get; private set; } = message;
 
-		// Token: 0x17008CF2 RID: 36082
-		// (get) Token: 0x0603B594 RID: 243092 RVA: 0x00E25BAC File Offset: 0x00E23DAC
-		// (set) Token: 0x0603B595 RID: 243093 RVA: 0x00E25BB4 File Offset: 0x00E23DB4
+		// Token: 0x170060C4 RID: 24772
+		// (get) Token: 0x060304E1 RID: 197857 RVA: 0x00D75F24 File Offset: 0x00D74124
+		// (set) Token: 0x060304E2 RID: 197858 RVA: 0x00D75F2C File Offset: 0x00D7412C
 		public CombatRequestData.MessageOneofCase MessageCase { get; private set; } = messageCase;
 	}
 }

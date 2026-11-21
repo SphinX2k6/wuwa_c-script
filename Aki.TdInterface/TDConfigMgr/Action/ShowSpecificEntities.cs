@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002206 RID: 8710
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002471 RID: 9329
 	public class ShowSpecificEntities : ActionParams
 	{
-		// Token: 0x0600BF43 RID: 48963 RVA: 0x001B7D00 File Offset: 0x001B5F00
+		// Token: 0x0600CAFF RID: 51967 RVA: 0x001CF38C File Offset: 0x001CD58C
 		private ShowSpecificEntities_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF44 RID: 48964 RVA: 0x001B7D38 File Offset: 0x001B5F38
+		// Token: 0x0600CB00 RID: 51968 RVA: 0x001CF3C4 File Offset: 0x001CD5C4
 		public static ShowSpecificEntities Create([Nullable(2)] ShowSpecificEntities instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF45 RID: 48965 RVA: 0x001B7D4B File Offset: 0x001B5F4B
+		// Token: 0x0600CB01 RID: 51969 RVA: 0x001CF3D7 File Offset: 0x001CD5D7
 		public static ShowSpecificEntities CreateFromSetValue([Nullable(2)] ShowSpecificEntities_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF46 RID: 48966 RVA: 0x001B7D5E File Offset: 0x001B5F5E
+		// Token: 0x0600CB02 RID: 51970 RVA: 0x001CF3EA File Offset: 0x001CD5EA
 		public ShowSpecificEntities_SetValue ToSetValue()
 		{
 			return new ShowSpecificEntities_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039FB RID: 14843
-		// (get) Token: 0x0600BF47 RID: 48967 RVA: 0x001B7D7D File Offset: 0x001B5F7D
-		// (set) Token: 0x0600BF48 RID: 48968 RVA: 0x001B7DA4 File Offset: 0x001B5FA4
+		// Token: 0x17003CF0 RID: 15600
+		// (get) Token: 0x0600CB03 RID: 51971 RVA: 0x001CF409 File Offset: 0x001CD609
+		// (set) Token: 0x0600CB04 RID: 51972 RVA: 0x001CF430 File Offset: 0x001CD630
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039FC RID: 14844
-		// (get) Token: 0x0600BF49 RID: 48969 RVA: 0x001B7DB2 File Offset: 0x001B5FB2
-		// (set) Token: 0x0600BF4A RID: 48970 RVA: 0x001B7DDD File Offset: 0x001B5FDD
+		// Token: 0x17003CF1 RID: 15601
+		// (get) Token: 0x0600CB05 RID: 51973 RVA: 0x001CF43E File Offset: 0x001CD63E
+		// (set) Token: 0x0600CB06 RID: 51974 RVA: 0x001CF469 File Offset: 0x001CD669
 		public virtual bool DelayShow
 		{
 			get
@@ -104,11 +102,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007201 RID: 29185
+		// Token: 0x0400784A RID: 30794
 		[Nullable(2)]
 		protected new ShowSpecificEntities FbInstance;
 
-		// Token: 0x04007202 RID: 29186
+		// Token: 0x0400784B RID: 30795
 		[Nullable(2)]
 		protected ShowSpecificEntities_SetValue PocoInterface;
 	}

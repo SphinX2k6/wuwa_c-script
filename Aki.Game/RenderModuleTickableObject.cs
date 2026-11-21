@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003484 RID: 13444
+// Token: 0x020029F8 RID: 10744
 public class RenderModuleTickableObject : IRenderModuleTickableObject
 {
-	// Token: 0x0601D251 RID: 119377 RVA: 0x0081F222 File Offset: 0x0081D422
+	// Token: 0x0601AF59 RID: 110425 RVA: 0x00846552 File Offset: 0x00844752
 	public void Tick(float deltaSecond)
 	{
 	}

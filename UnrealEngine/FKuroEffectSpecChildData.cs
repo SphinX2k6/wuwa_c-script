@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018CF RID: 6351
+	// Token: 0x020003E9 RID: 1001
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroEffectSpecChildData")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FKuroEffectSpecChildData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060177F5 RID: 96245 RVA: 0x0022674C File Offset: 0x0022494C
+		// Token: 0x060061FC RID: 25084 RVA: 0x0008C1EF File Offset: 0x0008A3EF
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroEffectSpecChildData._ScriptStructPtr != 0) ? FKuroEffectSpecChildData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroGameplay.KuroEffectSpecChildData", ref FKuroEffectSpecChildData._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EE5 RID: 24293
-		// (get) Token: 0x060177F6 RID: 96246 RVA: 0x00226770 File Offset: 0x00224970
-		// (set) Token: 0x060177F7 RID: 96247 RVA: 0x00226780 File Offset: 0x00224980
+		// Token: 0x170013EA RID: 5098
+		// (get) Token: 0x060061FD RID: 25085 RVA: 0x0008C213 File Offset: 0x0008A413
+		// (set) Token: 0x060061FE RID: 25086 RVA: 0x0008C223 File Offset: 0x0008A423
 		public unsafe int Id
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005EE6 RID: 24294
-		// (get) Token: 0x060177F8 RID: 96248 RVA: 0x00226794 File Offset: 0x00224994
-		// (set) Token: 0x060177F9 RID: 96249 RVA: 0x002267D7 File Offset: 0x002249D7
+		// Token: 0x170013EB RID: 5099
+		// (get) Token: 0x060061FF RID: 25087 RVA: 0x0008C234 File Offset: 0x0008A434
+		// (set) Token: 0x06006200 RID: 25088 RVA: 0x0008C277 File Offset: 0x0008A477
 		public TArray<int> Children
 		{
 			get
@@ -54,60 +54,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060177FA RID: 96250 RVA: 0x002267E5 File Offset: 0x002249E5
+		// Token: 0x06006201 RID: 25089 RVA: 0x0008C285 File Offset: 0x0008A485
 		public FKuroEffectSpecChildData()
 		{
 		}
 
-		// Token: 0x060177FB RID: 96251 RVA: 0x002267ED File Offset: 0x002249ED
-		public FKuroEffectSpecChildData(int Id, TArray<int> Children)
-		{
-			this.Id = Id;
-			this.Children = Children;
-		}
-
-		// Token: 0x060177FC RID: 96252 RVA: 0x00226803 File Offset: 0x00224A03
+		// Token: 0x06006202 RID: 25090 RVA: 0x0008C28D File Offset: 0x0008A48D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroEffectSpecChildData.StaticStruct();
 		}
 
-		// Token: 0x060177FD RID: 96253 RVA: 0x0022680F File Offset: 0x00224A0F
+		// Token: 0x06006203 RID: 25091 RVA: 0x0008C299 File Offset: 0x0008A499
 		[NullableContext(2)]
 		public FKuroEffectSpecChildData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060177FE RID: 96254 RVA: 0x00226819 File Offset: 0x00224A19
+		// Token: 0x06006204 RID: 25092 RVA: 0x0008C2A3 File Offset: 0x0008A4A3
 		public FKuroEffectSpecChildData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060177FF RID: 96255 RVA: 0x00226824 File Offset: 0x00224A24
+		// Token: 0x06006205 RID: 25093 RVA: 0x0008C2AE File Offset: 0x0008A4AE
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroEffectSpecChildData(Pointer, false, true);
 		}
 
-		// Token: 0x06017800 RID: 96256 RVA: 0x0022682E File Offset: 0x00224A2E
+		// Token: 0x06006206 RID: 25094 RVA: 0x0008C2B8 File Offset: 0x0008A4B8
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroEffectSpecChildData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400CC81 RID: 52353
+		// Token: 0x040029BA RID: 10682
 		public const string __ObjectPath = "/Script/KuroGameplay.KuroEffectSpecChildData";
 
-		// Token: 0x0400CC82 RID: 52354
+		// Token: 0x040029BB RID: 10683
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400CC83 RID: 52355
+		// Token: 0x040029BC RID: 10684
 		internal static int __PropertyOffset_Id;
 
-		// Token: 0x0400CC84 RID: 52356
+		// Token: 0x040029BD RID: 10685
 		internal static int __PropertyOffset_Children;
 
-		// Token: 0x0400CC85 RID: 52357
+		// Token: 0x040029BE RID: 10686
 		[Nullable(2)]
 		private TArray<int> _Children;
 	}

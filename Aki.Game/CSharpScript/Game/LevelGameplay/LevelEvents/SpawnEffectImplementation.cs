@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B93 RID: 27539
+	// Token: 0x02005D0B RID: 23819
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SpawnEffectImplementation : Singleton
 	{
-		// Token: 0x060442AF RID: 279215 RVA: 0x010CB644 File Offset: 0x010C9844
+		// Token: 0x0603A401 RID: 238593 RVA: 0x010752DC File Offset: 0x010734DC
 		private void OnEntityRemoveStopEffects(ERemoveEntityType removeType, EntityHandle entityHandle)
 		{
 			List<int> list;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442B0 RID: 279216 RVA: 0x010CB6F8 File Offset: 0x010C98F8
+		// Token: 0x0603A402 RID: 238594 RVA: 0x01075390 File Offset: 0x01073590
 		private void StopEffectOnEntityRemoved(EntityHandle entityHandle, int effectId)
 		{
 			List<int> list;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.OnceWithTarget<ERemoveEntityType, EntityHandle>(entityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnEntityRemoveStopEffects));
 		}
 
-		// Token: 0x060442B1 RID: 279217 RVA: 0x010CB758 File Offset: 0x010C9958
+		// Token: 0x0603A403 RID: 238595 RVA: 0x010753F0 File Offset: 0x010735F0
 		public void RegisterEffectHandler(Aki.TDConfigMgr.Action.EEffectType effectType, TEffectTypeHandler handler)
 		{
 			if (handler == null)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.EffectHandlerRegistry[effectType] = handler;
 		}
 
-		// Token: 0x060442B2 RID: 279218 RVA: 0x010CB7E0 File Offset: 0x010C99E0
+		// Token: 0x0603A404 RID: 238596 RVA: 0x01075478 File Offset: 0x01073678
 		public void RegisterCommonEffectContextGenerator(EPos2 posType, TCommonEffectContextGenerator generator)
 		{
 			if (generator == null)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.CommonEffectContextGeneratorRegistry[posType] = generator;
 		}
 
-		// Token: 0x060442B3 RID: 279219 RVA: 0x010CB868 File Offset: 0x010C9A68
+		// Token: 0x0603A405 RID: 238597 RVA: 0x01075500 File Offset: 0x01073700
 		public void RegisterSwitchEffectStateHandler(ESwitchEffectStateEffectType effectType, TSwitchEffectStateHandler handler)
 		{
 			if (handler == null)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.SwitchEffectStateHandlerRegistry[effectType] = handler;
 		}
 
-		// Token: 0x060442B4 RID: 279220 RVA: 0x010CB8F0 File Offset: 0x010C9AF0
+		// Token: 0x0603A406 RID: 238598 RVA: 0x01075588 File Offset: 0x01073788
 		[return: Nullable(2)]
 		private IEffectContext ScreenEffectHandler(PlayEffect2 param, GeneralContext context)
 		{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return result;
 		}
 
-		// Token: 0x060442B5 RID: 279221 RVA: 0x010CBA28 File Offset: 0x010C9C28
+		// Token: 0x0603A407 RID: 238599 RVA: 0x010756C0 File Offset: 0x010738C0
 		[return: Nullable(2)]
 		private IEffectContext CommonEffectHandler(PlayEffect2 param, GeneralContext context)
 		{
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return tsAttachEffectContext;
 		}
 
-		// Token: 0x060442B6 RID: 279222 RVA: 0x010CBC70 File Offset: 0x010C9E70
+		// Token: 0x0603A408 RID: 238600 RVA: 0x01075908 File Offset: 0x01073B08
 		[return: Nullable(2)]
 		private IEffectContext DissolveEffectHandler(PlayEffect2 param, GeneralContext context)
 		{
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return result;
 		}
 
-		// Token: 0x060442B7 RID: 279223 RVA: 0x010CBCE0 File Offset: 0x010C9EE0
+		// Token: 0x0603A409 RID: 238601 RVA: 0x01075978 File Offset: 0x01073B78
 		[return: Nullable(2)]
 		private unsafe IEffectContext MpcEffectHandler(PlayEffect2 param, GeneralContext context)
 		{
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TsMpcEffectContext(CS$<>8__locals1.inParams.Path);
 		}
 
-		// Token: 0x060442B8 RID: 279224 RVA: 0x010CBF20 File Offset: 0x010CA120
+		// Token: 0x0603A40A RID: 238602 RVA: 0x01075BB8 File Offset: 0x01073DB8
 		[return: Nullable(2)]
 		private static global::Transform ResolveMpcEffectSpawnTransform(IBasePos2 pos2)
 		{
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return SpawnEffectImplementationHelper.ApplyOffsetThenGetTransform(vector, offsetInfo);
 		}
 
-		// Token: 0x060442B9 RID: 279225 RVA: 0x010CC09C File Offset: 0x010CA29C
+		// Token: 0x0603A40B RID: 238603 RVA: 0x01075D34 File Offset: 0x01073F34
 		[return: TupleElementNames(new string[]
 		{
 			"Key",
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new ValueTuple<string, FName>?(new ValueTuple<string, FName>(text, dynamicFName.Value));
 		}
 
-		// Token: 0x060442BA RID: 279226 RVA: 0x010CC1B4 File Offset: 0x010CA3B4
+		// Token: 0x0603A40C RID: 238604 RVA: 0x01075E4C File Offset: 0x0107404C
 		[return: Nullable(2)]
 		private IEffectContext SwitchEffectStateHandler(PlayEffect2 param, GeneralContext context)
 		{
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return tswitchEffectStateHandler(switchEffectState, context);
 		}
 
-		// Token: 0x060442BB RID: 279227 RVA: 0x010CC224 File Offset: 0x010CA424
+		// Token: 0x0603A40D RID: 238605 RVA: 0x01075EBC File Offset: 0x010740BC
 		[return: Nullable(2)]
 		private IEffectContext SwitchScreenEffectStateHandler(ISwitchEffectState inParams, GeneralContext context)
 		{
@@ -526,7 +526,43 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TsSwitchEffectStateContext(switchScreenEffectState.Path);
 		}
 
-		// Token: 0x060442BC RID: 279228 RVA: 0x010CC2A4 File Offset: 0x010CA4A4
+		// Token: 0x0603A40E RID: 238606 RVA: 0x01075F3C File Offset: 0x0107413C
+		[return: Nullable(2)]
+		private IEffectContext SwitchTrailChainEffectStateHandler(ISwitchEffectState inParams, GeneralContext context)
+		{
+			ISwitchTrailChainEffectState switchTrailChainEffectState = inParams.EffectType as ISwitchTrailChainEffectState;
+			EntityHandle entityById = CreatureModel.Instance.GetEntityById(Global.BaseCharacter.EntityId);
+			if (entityById == null || entityById.Entity == null)
+			{
+				return null;
+			}
+			BaseGameplayCueComponent component = entityById.Entity.GetComponent<BaseGameplayCueComponent>();
+			if (component == null)
+			{
+				return null;
+			}
+			if (component != null)
+			{
+				foreach (GameplayCueBase gameplayCueBase in component.GetAllCurrentCueRef())
+				{
+					if (gameplayCueBase.CueConfig.CueType == 42)
+					{
+						GameplayCueTrailChain gameplayCueTrailChain = gameplayCueBase as GameplayCueTrailChain;
+						global::Transform transform = SpawnEffectImplementation.ResolveMpcEffectSpawnTransform(switchTrailChainEffectState.Pos);
+						if (gameplayCueTrailChain != null && transform != null)
+						{
+							GameplayCueTrailChain gameplayCueTrailChain2 = gameplayCueTrailChain;
+							FVectorDouble fvectorDouble = transform.GetLocation().ToUeVector(false);
+							FVector fvector = fvectorDouble;
+							gameplayCueTrailChain2.SpawnFlowerAtLocation(fvector, switchTrailChainEffectState.Count);
+						}
+					}
+				}
+			}
+			return null;
+		}
+
+		// Token: 0x0603A40F RID: 238607 RVA: 0x0107601C File Offset: 0x0107421C
 		private TsAttachEffectContext EffectEntityPos2Context(IPlayCommonEffect inParams, GeneralContext context)
 		{
 			IEntityPos2 entityPos = inParams.Pos2 as IEntityPos2;
@@ -584,7 +620,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TsAttachEffectContext(path, transform, entityHandle, shouldAttachToEntity, attachSocket, global::Vector.Create(x, y, (double)((offset3 != null) ? offset3.Z : null).GetValueOrDefault()));
 		}
 
-		// Token: 0x060442BD RID: 279229 RVA: 0x010CC3CC File Offset: 0x010CA5CC
+		// Token: 0x0603A410 RID: 238608 RVA: 0x01076144 File Offset: 0x01074344
 		private static TsAttachEffectContext EffectPlayerPos2Context(IPlayCommonEffect inParams, GeneralContext context)
 		{
 			IPlayerPos2 playerPos = inParams.Pos2 as IPlayerPos2;
@@ -671,7 +707,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TsAttachEffectContext(path, transform, getCurrentEntity2, shouldAttachToEntity, attachSocket, global::Vector.Create(x, y, (double)num2.GetValueOrDefault()));
 		}
 
-		// Token: 0x060442BE RID: 279230 RVA: 0x010CC528 File Offset: 0x010CA728
+		// Token: 0x0603A411 RID: 238609 RVA: 0x010762A0 File Offset: 0x010744A0
 		private static TsAttachEffectContext AbsolutePos2Context(IPlayCommonEffect inParams, GeneralContext context)
 		{
 			EntityHandle entityHandle = null;
@@ -709,7 +745,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return new TsAttachEffectContext(path, SpawnEffectImplementationHelper.ApplyOffsetThenGetTransform(global::Vector.Create(x, y, (double)((pos3 != null) ? pos3.Z : null).GetValueOrDefault()), null), entityHandle, new bool?(false), null, null);
 		}
 
-		// Token: 0x060442BF RID: 279231 RVA: 0x010CC658 File Offset: 0x010CA858
+		// Token: 0x0603A412 RID: 238610 RVA: 0x010763D0 File Offset: 0x010745D0
 		[return: Nullable(2)]
 		public IEffectContext SpawnEffect(PlayEffect2 inParams, GeneralContext context)
 		{
@@ -721,7 +757,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return teffectTypeHandler(inParams, context);
 		}
 
-		// Token: 0x060442C0 RID: 279232 RVA: 0x010CC684 File Offset: 0x010CA884
+		// Token: 0x0603A413 RID: 238611 RVA: 0x010763FC File Offset: 0x010745FC
 		protected override bool OnInit()
 		{
 			this.RegisterEffectHandler(Aki.TDConfigMgr.Action.EEffectType.ScreenEffect, new TEffectTypeHandler(this.ScreenEffectHandler));
@@ -730,6 +766,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.RegisterEffectHandler(Aki.TDConfigMgr.Action.EEffectType.MpcEffect, new TEffectTypeHandler(this.MpcEffectHandler));
 			this.RegisterEffectHandler(Aki.TDConfigMgr.Action.EEffectType.SwitchEffectState, new TEffectTypeHandler(this.SwitchEffectStateHandler));
 			this.RegisterSwitchEffectStateHandler(ESwitchEffectStateEffectType.ScreenEffect, new TSwitchEffectStateHandler(this.SwitchScreenEffectStateHandler));
+			this.RegisterSwitchEffectStateHandler(ESwitchEffectStateEffectType.TrailChain, new TSwitchEffectStateHandler(this.SwitchTrailChainEffectStateHandler));
 			this.RegisterCommonEffectContextGenerator(EPos2.Entity, new TCommonEffectContextGenerator(this.EffectEntityPos2Context));
 			EPos2 posType = EPos2.Player;
 			TCommonEffectContextGenerator generator;
@@ -748,8 +785,8 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return true;
 		}
 
-		// Token: 0x1700999B RID: 39323
-		// (get) Token: 0x060442C1 RID: 279233 RVA: 0x010CC75B File Offset: 0x010CA95B
+		// Token: 0x17006E9E RID: 28318
+		// (get) Token: 0x0603A414 RID: 238612 RVA: 0x010764E6 File Offset: 0x010746E6
 		public static SpawnEffectImplementation Instance
 		{
 			get
@@ -763,12 +800,12 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060442C2 RID: 279234 RVA: 0x010CC77E File Offset: 0x010CA97E
+		// Token: 0x0603A415 RID: 238613 RVA: 0x01076509 File Offset: 0x01074709
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060442C3 RID: 279235 RVA: 0x010CC780 File Offset: 0x010CA980
+		// Token: 0x0603A416 RID: 238614 RVA: 0x0107650B File Offset: 0x0107470B
 		public static void ResetStaticDefaultValue()
 		{
 			SpawnEffectImplementation instance = SpawnEffectImplementation._instance;
@@ -779,37 +816,37 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			SpawnEffectImplementation._instance = null;
 		}
 
-		// Token: 0x060442C4 RID: 279236 RVA: 0x010CC799 File Offset: 0x010CA999
+		// Token: 0x0603A417 RID: 238615 RVA: 0x01076524 File Offset: 0x01074724
 		static SpawnEffectImplementation()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpawnEffectImplementation.CreateStaticDefaultValue), new Action(SpawnEffectImplementation.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402396A RID: 145770
+		// Token: 0x0401EC0C RID: 125964
 		private readonly Dictionary<Aki.TDConfigMgr.Action.EEffectType, TEffectTypeHandler> EffectHandlerRegistry = new Dictionary<Aki.TDConfigMgr.Action.EEffectType, TEffectTypeHandler>();
 
-		// Token: 0x0402396B RID: 145771
+		// Token: 0x0401EC0D RID: 125965
 		private readonly Dictionary<EPos2, TCommonEffectContextGenerator> CommonEffectContextGeneratorRegistry = new Dictionary<EPos2, TCommonEffectContextGenerator>();
 
-		// Token: 0x0402396C RID: 145772
+		// Token: 0x0401EC0E RID: 125966
 		private readonly Dictionary<ESwitchEffectStateEffectType, TSwitchEffectStateHandler> SwitchEffectStateHandlerRegistry = new Dictionary<ESwitchEffectStateEffectType, TSwitchEffectStateHandler>();
 
-		// Token: 0x0402396D RID: 145773
+		// Token: 0x0401EC0F RID: 125967
 		private readonly WeakMap<EntityHandle, List<int>> EntityRemoveEffectIds = new WeakMap<EntityHandle, List<int>>();
 
-		// Token: 0x0402396E RID: 145774
+		// Token: 0x0401EC10 RID: 125968
 		[Nullable(2)]
 		private static SpawnEffectImplementation _instance;
 
-		// Token: 0x0200CC19 RID: 52249
+		// Token: 0x0200B809 RID: 47113
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403D9AC RID: 252332
+			// Token: 0x04038DCE RID: 232910
 			[Nullable(0)]
 			public static TCommonEffectContextGenerator <0>__EffectPlayerPos2Context;
 
-			// Token: 0x0403D9AD RID: 252333
+			// Token: 0x04038DCF RID: 232911
 			[Nullable(0)]
 			public static TCommonEffectContextGenerator <1>__AbsolutePos2Context;
 		}

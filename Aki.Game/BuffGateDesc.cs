@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E9A RID: 3738
+// Token: 0x0200034F RID: 847
 public class BuffGateDesc : IBuffGateDesc
 {
-	// Token: 0x170006BF RID: 1727
-	// (get) Token: 0x06005BB4 RID: 23476 RVA: 0x0010B945 File Offset: 0x00109B45
-	// (set) Token: 0x06005BB5 RID: 23477 RVA: 0x0010B94D File Offset: 0x00109B4D
+	// Token: 0x170006E3 RID: 1763
+	// (get) Token: 0x06002F4B RID: 12107 RVA: 0x001135DD File Offset: 0x001117DD
+	// (set) Token: 0x06002F4C RID: 12108 RVA: 0x001135E5 File Offset: 0x001117E5
 	[Nullable(new byte[]
 	{
 		0,
@@ -29,13 +29,13 @@ public class BuffGateDesc : IBuffGateDesc
 		1
 	})] set; }
 
-	// Token: 0x170006C0 RID: 1728
-	// (get) Token: 0x06005BB6 RID: 23478 RVA: 0x0010B956 File Offset: 0x00109B56
-	// (set) Token: 0x06005BB7 RID: 23479 RVA: 0x0010B95E File Offset: 0x00109B5E
+	// Token: 0x170006E4 RID: 1764
+	// (get) Token: 0x06002F4D RID: 12109 RVA: 0x001135EE File Offset: 0x001117EE
+	// (set) Token: 0x06002F4E RID: 12110 RVA: 0x001135F6 File Offset: 0x001117F6
 	public int BuffGateId { get; set; }
 
-	// Token: 0x170006C1 RID: 1729
-	// (get) Token: 0x06005BB8 RID: 23480 RVA: 0x0010B967 File Offset: 0x00109B67
-	// (set) Token: 0x06005BB9 RID: 23481 RVA: 0x0010B96F File Offset: 0x00109B6F
+	// Token: 0x170006E5 RID: 1765
+	// (get) Token: 0x06002F4F RID: 12111 RVA: 0x001135FF File Offset: 0x001117FF
+	// (set) Token: 0x06002F50 RID: 12112 RVA: 0x00113607 File Offset: 0x00111807
 	public bool IsDropBuffGate { get; set; }
 }

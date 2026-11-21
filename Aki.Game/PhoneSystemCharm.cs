@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.PhoneMessage;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200252F RID: 9519
+// Token: 0x02001A16 RID: 6678
 public class PhoneSystemCharm : UiPanelBase
 {
-	// Token: 0x0601323C RID: 78396 RVA: 0x004C035C File Offset: 0x004BE55C
+	// Token: 0x060106FC RID: 67324 RVA: 0x004CE068 File Offset: 0x004CC268
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class PhoneSystemCharm : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601323D RID: 78397 RVA: 0x004C03C4 File Offset: 0x004BE5C4
+	// Token: 0x060106FD RID: 67325 RVA: 0x004CE0D0 File Offset: 0x004CC2D0
 	public void Play(int charmId)
 	{
 		this.CurCharmId = charmId;
@@ -37,7 +37,7 @@ public class PhoneSystemCharm : UiPanelBase
 		this.PlayIdle();
 	}
 
-	// Token: 0x0601323E RID: 78398 RVA: 0x004C0414 File Offset: 0x004BE614
+	// Token: 0x060106FE RID: 67326 RVA: 0x004CE120 File Offset: 0x004CC320
 	private void PlayIdle()
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(this.CurCharmId);
@@ -59,7 +59,7 @@ public class PhoneSystemCharm : UiPanelBase
 		spine.SetAnimation(0, spineAnimIdle, false);
 	}
 
-	// Token: 0x0601323F RID: 78399 RVA: 0x004C0480 File Offset: 0x004BE680
+	// Token: 0x060106FF RID: 67327 RVA: 0x004CE18C File Offset: 0x004CC38C
 	private void PlayStandby()
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(this.CurCharmId);
@@ -88,13 +88,13 @@ public class PhoneSystemCharm : UiPanelBase
 		spine.SetAnimation(0, text, false);
 	}
 
-	// Token: 0x06013240 RID: 78400 RVA: 0x004C0533 File Offset: 0x004BE733
+	// Token: 0x06010700 RID: 67328 RVA: 0x004CE23F File Offset: 0x004CC43F
 	public void TriggerInteract()
 	{
 		this.OnClickedBtn();
 	}
 
-	// Token: 0x06013241 RID: 78401 RVA: 0x004C053C File Offset: 0x004BE73C
+	// Token: 0x06010701 RID: 67329 RVA: 0x004CE248 File Offset: 0x004CC448
 	private void OnClickedBtn()
 	{
 		ChatCharm? chatCharmConfig = PhoneMsgConfig.Instance.GetChatCharmConfig(this.CurCharmId);
@@ -121,7 +121,7 @@ public class PhoneSystemCharm : UiPanelBase
 		spine.SetAnimation(0, text, false);
 	}
 
-	// Token: 0x06013242 RID: 78402 RVA: 0x004C05E4 File Offset: 0x004BE7E4
+	// Token: 0x06010702 RID: 67330 RVA: 0x004CE2F0 File Offset: 0x004CC4F0
 	[NullableContext(2)]
 	private void OnSpineAnimComplete(UTrackEntry entry)
 	{
@@ -143,7 +143,7 @@ public class PhoneSystemCharm : UiPanelBase
 		this.PlayIdle();
 	}
 
-	// Token: 0x06013243 RID: 78403 RVA: 0x004C0656 File Offset: 0x004BE856
+	// Token: 0x06010703 RID: 67331 RVA: 0x004CE362 File Offset: 0x004CC562
 	protected override void OnBeforeDestroy()
 	{
 		USpineSkeletonAnimationComponent spine = base.GetSpine(0);
@@ -154,29 +154,29 @@ public class PhoneSystemCharm : UiPanelBase
 		spine.AnimationComplete.Clear();
 	}
 
-	// Token: 0x04009089 RID: 37001
+	// Token: 0x040091DE RID: 37342
 	private int CurCharmId;
 
-	// Token: 0x0400908A RID: 37002
+	// Token: 0x040091DF RID: 37343
 	private PhoneSystemCharm.EAnimState CurState;
 
-	// Token: 0x02008AB8 RID: 35512
+	// Token: 0x02007C3F RID: 31807
 	private enum EComponent
 	{
-		// Token: 0x0402D0CA RID: 184522
+		// Token: 0x040283DE RID: 164830
 		SkinSpine,
-		// Token: 0x0402D0CB RID: 184523
+		// Token: 0x040283DF RID: 164831
 		BtnSpineClick
 	}
 
-	// Token: 0x02008AB9 RID: 35513
+	// Token: 0x02007C40 RID: 31808
 	private enum EAnimState
 	{
-		// Token: 0x0402D0CD RID: 184525
+		// Token: 0x040283E1 RID: 164833
 		Idle,
-		// Token: 0x0402D0CE RID: 184526
+		// Token: 0x040283E2 RID: 164834
 		Standby,
-		// Token: 0x0402D0CF RID: 184527
+		// Token: 0x040283E3 RID: 164835
 		Touch
 	}
 }

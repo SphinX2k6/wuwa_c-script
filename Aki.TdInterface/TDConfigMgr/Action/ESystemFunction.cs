@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016C0 RID: 5824
+	// Token: 0x0200183A RID: 6202
 	[EnumExtensions]
 	public enum ESystemFunction
 	{
-		// Token: 0x04004E26 RID: 20006
+		// Token: 0x04005245 RID: 21061
 		BuyGoods
 	}
 }

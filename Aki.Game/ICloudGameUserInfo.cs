@@ -1,52 +1,52 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000247 RID: 583
+// Token: 0x0200024B RID: 587
 [NullableContext(1)]
 public interface ICloudGameUserInfo
 {
-	// Token: 0x1700056E RID: 1390
-	// (get) Token: 0x0600238F RID: 9103
-	// (set) Token: 0x06002390 RID: 9104
+	// Token: 0x17000595 RID: 1429
+	// (get) Token: 0x06002447 RID: 9287
+	// (set) Token: 0x06002448 RID: 9288
 	LoginInfo LoginInfo { get; set; }
 
-	// Token: 0x1700056F RID: 1391
-	// (get) Token: 0x06002391 RID: 9105
-	// (set) Token: 0x06002392 RID: 9106
+	// Token: 0x17000596 RID: 1430
+	// (get) Token: 0x06002449 RID: 9289
+	// (set) Token: 0x0600244A RID: 9290
 	string TraceId { get; set; }
 
-	// Token: 0x17000570 RID: 1392
-	// (get) Token: 0x06002393 RID: 9107
-	// (set) Token: 0x06002394 RID: 9108
+	// Token: 0x17000597 RID: 1431
+	// (get) Token: 0x0600244B RID: 9291
+	// (set) Token: 0x0600244C RID: 9292
 	string Platform { get; set; }
 
-	// Token: 0x17000571 RID: 1393
-	// (get) Token: 0x06002395 RID: 9109
-	// (set) Token: 0x06002396 RID: 9110
+	// Token: 0x17000598 RID: 1432
+	// (get) Token: 0x0600244D RID: 9293
+	// (set) Token: 0x0600244E RID: 9294
 	float Fps { get; set; }
 
-	// Token: 0x17000572 RID: 1394
-	// (get) Token: 0x06002397 RID: 9111
-	// (set) Token: 0x06002398 RID: 9112
+	// Token: 0x17000599 RID: 1433
+	// (get) Token: 0x0600244F RID: 9295
+	// (set) Token: 0x06002450 RID: 9296
 	float Dpi { get; set; }
 
-	// Token: 0x17000573 RID: 1395
-	// (get) Token: 0x06002399 RID: 9113
-	// (set) Token: 0x0600239A RID: 9114
+	// Token: 0x1700059A RID: 1434
+	// (get) Token: 0x06002451 RID: 9297
+	// (set) Token: 0x06002452 RID: 9298
 	ResolutionInfo DeviceResolution { get; set; }
 
-	// Token: 0x17000574 RID: 1396
-	// (get) Token: 0x0600239B RID: 9115
-	// (set) Token: 0x0600239C RID: 9116
+	// Token: 0x1700059B RID: 1435
+	// (get) Token: 0x06002453 RID: 9299
+	// (set) Token: 0x06002454 RID: 9300
 	ResolutionInfo ScreenResolution { get; set; }
 
-	// Token: 0x17000575 RID: 1397
-	// (get) Token: 0x0600239D RID: 9117
-	// (set) Token: 0x0600239E RID: 9118
+	// Token: 0x1700059C RID: 1436
+	// (get) Token: 0x06002455 RID: 9301
+	// (set) Token: 0x06002456 RID: 9302
 	string ServerTag { get; set; }
 
-	// Token: 0x17000576 RID: 1398
-	// (get) Token: 0x0600239F RID: 9119
-	// (set) Token: 0x060023A0 RID: 9120
+	// Token: 0x1700059D RID: 1437
+	// (get) Token: 0x06002457 RID: 9303
+	// (set) Token: 0x06002458 RID: 9304
 	string Device { get; set; }
 }

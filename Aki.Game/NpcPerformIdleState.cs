@@ -10,12 +10,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using UnrealEngine;
 
-// Token: 0x02003224 RID: 12836
+// Token: 0x02002793 RID: 10131
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcPerformIdleState : NpcPerformBaseState
 {
-	// Token: 0x0601BAC9 RID: 113353 RVA: 0x0079B4AC File Offset: 0x007996AC
+	// Token: 0x0601964E RID: 104014 RVA: 0x007C3C48 File Offset: 0x007C1E48
 	[NullableContext(1)]
 	public NpcPerformIdleState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
@@ -25,9 +25,9 @@ public class NpcPerformIdleState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x1700263E RID: 9790
-	// (get) Token: 0x0601BACA RID: 113354 RVA: 0x0079B4FE File Offset: 0x007996FE
-	// (set) Token: 0x0601BACB RID: 113355 RVA: 0x0079B506 File Offset: 0x00799706
+	// Token: 0x1700287F RID: 10367
+	// (get) Token: 0x0601964F RID: 104015 RVA: 0x007C3C9A File Offset: 0x007C1E9A
+	// (set) Token: 0x06019650 RID: 104016 RVA: 0x007C3CA2 File Offset: 0x007C1EA2
 	public BaseMoveComponent NpcMoveComp
 	{
 		get
@@ -40,13 +40,13 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BACC RID: 113356 RVA: 0x0079B50F File Offset: 0x0079970F
+	// Token: 0x06019651 RID: 104017 RVA: 0x007C3CAB File Offset: 0x007C1EAB
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		return fromState != ENpcPerformState.Destroy;
 	}
 
-	// Token: 0x0601BACD RID: 113357 RVA: 0x0079B51C File Offset: 0x0079971C
+	// Token: 0x06019652 RID: 104018 RVA: 0x007C3CB8 File Offset: 0x007C1EB8
 	protected override void OnCreate(IEntityArgs args)
 	{
 		base.OnCreate(args);
@@ -101,7 +101,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BACE RID: 113358 RVA: 0x0079B6D8 File Offset: 0x007998D8
+	// Token: 0x06019653 RID: 104019 RVA: 0x007C3E74 File Offset: 0x007C2074
 	protected void StartFromBornState()
 	{
 		this.InitAiConfig();
@@ -138,7 +138,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.InitializationTimeStamp = Time.Instance.WorldTimeSeconds;
 	}
 
-	// Token: 0x0601BACF RID: 113359 RVA: 0x0079B7A0 File Offset: 0x007999A0
+	// Token: 0x06019654 RID: 104020 RVA: 0x007C3F3C File Offset: 0x007C213C
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		ENpcPerformState? enpcPerformState = lastState;
@@ -180,13 +180,13 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BAD0 RID: 113360 RVA: 0x0079B84F File Offset: 0x00799A4F
+	// Token: 0x06019655 RID: 104021 RVA: 0x007C3FEB File Offset: 0x007C21EB
 	private bool CheckIdleCd()
 	{
 		return Time.Instance.WorldTimeSeconds > this.IdleMontageCd + this.IdleMontageTimeStamp;
 	}
 
-	// Token: 0x0601BAD1 RID: 113361 RVA: 0x0079B86C File Offset: 0x00799A6C
+	// Token: 0x06019656 RID: 104022 RVA: 0x007C4008 File Offset: 0x007C2208
 	protected override void OnUpdate(float delta)
 	{
 		if (this.NoIdleConfig)
@@ -237,7 +237,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.StopPlayingMontage(false);
 	}
 
-	// Token: 0x0601BAD2 RID: 113362 RVA: 0x0079B974 File Offset: 0x00799B74
+	// Token: 0x06019657 RID: 104023 RVA: 0x007C4110 File Offset: 0x007C2310
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		if (nextState != ENpcPerformState.Destroy)
@@ -269,7 +269,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		component.PauseAi("NpcPerformIdleState");
 	}
 
-	// Token: 0x0601BAD3 RID: 113363 RVA: 0x0079B9EB File Offset: 0x00799BEB
+	// Token: 0x06019658 RID: 104024 RVA: 0x007C4187 File Offset: 0x007C2387
 	protected override void OnDestroy()
 	{
 		this.HandleLeisureInteractEnd();
@@ -283,7 +283,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.RemoveEvents();
 	}
 
-	// Token: 0x0601BAD4 RID: 113364 RVA: 0x0079BA18 File Offset: 0x00799C18
+	// Token: 0x06019659 RID: 104025 RVA: 0x007C41B4 File Offset: 0x007C23B4
 	private void HandleLeisureInteractBegin()
 	{
 		if (this.InteractEntityId == null || this.HasFixInteractPos)
@@ -325,7 +325,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		turnActionController.UpdateDefaultDirect(forwardDirection);
 	}
 
-	// Token: 0x0601BAD5 RID: 113365 RVA: 0x0079BB28 File Offset: 0x00799D28
+	// Token: 0x0601965A RID: 104026 RVA: 0x007C42C4 File Offset: 0x007C24C4
 	private void HandleLeisureInteractEnd()
 	{
 		if (this.InteractEntityId == null)
@@ -347,7 +347,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		pawnChairController.ResetCollision();
 	}
 
-	// Token: 0x0601BAD6 RID: 113366 RVA: 0x0079BBB0 File Offset: 0x00799DB0
+	// Token: 0x0601965B RID: 104027 RVA: 0x007C434C File Offset: 0x007C254C
 	private void PlayIdleMontage(bool fromLoop = false)
 	{
 		if (this.AnyIdleMontageStart || this.AnyIdleMontagePlaying)
@@ -408,7 +408,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601BAD7 RID: 113367 RVA: 0x0079BCA0 File Offset: 0x00799EA0
+	// Token: 0x0601965C RID: 104028 RVA: 0x007C443C File Offset: 0x007C263C
 	private void StopPlayingMontage(bool immediately = false)
 	{
 		if (!this.AnyIdleMontageStart && !this.AnyIdleMontagePlaying)
@@ -427,7 +427,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BAD8 RID: 113368 RVA: 0x0079BCF8 File Offset: 0x00799EF8
+	// Token: 0x0601965D RID: 104029 RVA: 0x007C4494 File Offset: 0x007C2694
 	private void ForceStop()
 	{
 		if (!this.AnyIdleMontageStart && !this.AnyIdleMontagePlaying)
@@ -443,7 +443,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BAD9 RID: 113369 RVA: 0x0079BD50 File Offset: 0x00799F50
+	// Token: 0x0601965E RID: 104030 RVA: 0x007C44EC File Offset: 0x007C26EC
 	private void ForceStopWithBlendOut()
 	{
 		this.StoppingIdleMontage = true;
@@ -455,7 +455,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BADA RID: 113370 RVA: 0x0079BD8C File Offset: 0x00799F8C
+	// Token: 0x0601965F RID: 104031 RVA: 0x007C4528 File Offset: 0x007C2728
 	private void OnIdleMontageEnded(UAnimMontage montage, bool bInterrupted)
 	{
 		this.InitialMontageEnd = true;
@@ -468,14 +468,14 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.Owner.Entity.GetComponent<CommonNpcPerformComponent>().AnyIdleLoopMontagePlaying = false;
 	}
 
-	// Token: 0x0601BADB RID: 113371 RVA: 0x0079BDDF File Offset: 0x00799FDF
+	// Token: 0x06019660 RID: 104032 RVA: 0x007C457B File Offset: 0x007C277B
 	private void ResetIdleMontageCd()
 	{
 		this.IdleMontageCd = MathUtils.Instance.GetRandomRange(2.0, 4.0);
 		this.IdleMontageTimeStamp = Time.Instance.WorldTimeSeconds;
 	}
 
-	// Token: 0x0601BADC RID: 113372 RVA: 0x0079BE14 File Offset: 0x0079A014
+	// Token: 0x06019661 RID: 104033 RVA: 0x007C45B0 File Offset: 0x007C27B0
 	private NpcStandbyShowInfo GetMontageToPlay()
 	{
 		if (this.MontageQueue == null || this.MontageQueue.Count == 0)
@@ -501,7 +501,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		return this.MontageQueue[this.PlayIndex];
 	}
 
-	// Token: 0x0601BADD RID: 113373 RVA: 0x0079BEC8 File Offset: 0x0079A0C8
+	// Token: 0x06019662 RID: 104034 RVA: 0x007C4664 File Offset: 0x007C2864
 	private void InitAiConfig()
 	{
 		CharacterAiComponent component = this.Owner.Entity.GetComponent<CharacterAiComponent>();
@@ -558,7 +558,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BADE RID: 113374 RVA: 0x0079C010 File Offset: 0x0079A210
+	// Token: 0x06019663 RID: 104035 RVA: 0x007C47AC File Offset: 0x007C29AC
 	private void AddEvents()
 	{
 		this.EventEntity = this.Owner.Entity;
@@ -582,7 +582,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BADF RID: 113375 RVA: 0x0079C188 File Offset: 0x0079A388
+	// Token: 0x06019664 RID: 104036 RVA: 0x007C4924 File Offset: 0x007C2B24
 	private void RemoveEvents()
 	{
 		if (this.EventEntity != null)
@@ -604,7 +604,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		}
 	}
 
-	// Token: 0x0601BAE0 RID: 113376 RVA: 0x0079C2B0 File Offset: 0x0079A4B0
+	// Token: 0x06019665 RID: 104037 RVA: 0x007C4A4C File Offset: 0x007C2C4C
 	public override void OnPlayerInteractTurnActionStart()
 	{
 		CommonNpcPerformComponent component = this.Owner.Entity.GetComponent<CommonNpcPerformComponent>();
@@ -622,7 +622,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		base.TurnActionController.TurnToInteractTarget();
 	}
 
-	// Token: 0x0601BAE1 RID: 113377 RVA: 0x0079C324 File Offset: 0x0079A524
+	// Token: 0x06019666 RID: 104038 RVA: 0x007C4AC0 File Offset: 0x007C2CC0
 	public unsafe override void OnPlayerInteractTurnActionEnd()
 	{
 		BaseAnimationComponent component = this.Owner.Entity.GetComponent<BaseAnimationComponent>();
@@ -661,7 +661,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.ResetIdleMontageCd();
 	}
 
-	// Token: 0x0601BAE2 RID: 113378 RVA: 0x0079C42A File Offset: 0x0079A62A
+	// Token: 0x06019667 RID: 104039 RVA: 0x007C4BC6 File Offset: 0x007C2DC6
 	public void OnPlayerAttack()
 	{
 		if (this.AiRequestWaiting)
@@ -672,7 +672,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.StateMachine.Switch(ENpcPerformState.UnderAttack);
 	}
 
-	// Token: 0x0601BAE3 RID: 113379 RVA: 0x0079C448 File Offset: 0x0079A648
+	// Token: 0x06019668 RID: 104040 RVA: 0x007C4BE4 File Offset: 0x007C2DE4
 	public bool OnMonsterNearby()
 	{
 		if (this.AiRequestWaiting)
@@ -684,7 +684,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		return true;
 	}
 
-	// Token: 0x0601BAE4 RID: 113380 RVA: 0x0079C468 File Offset: 0x0079A668
+	// Token: 0x06019669 RID: 104041 RVA: 0x007C4C04 File Offset: 0x007C2E04
 	public void OnPlayerImpact()
 	{
 		if (this.AiRequestWaiting)
@@ -695,13 +695,13 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.StateMachine.Switch(ENpcPerformState.Impacted);
 	}
 
-	// Token: 0x0601BAE5 RID: 113381 RVA: 0x0079C486 File Offset: 0x0079A686
+	// Token: 0x0601966A RID: 104042 RVA: 0x007C4C22 File Offset: 0x007C2E22
 	private void OnInteractPlotStart()
 	{
 		this.StateMachine.Switch(ENpcPerformState.Interact);
 	}
 
-	// Token: 0x0601BAE6 RID: 113382 RVA: 0x0079C498 File Offset: 0x0079A698
+	// Token: 0x0601966B RID: 104043 RVA: 0x007C4C34 File Offset: 0x007C2E34
 	private void OnStalkAlert()
 	{
 		this.StopPlayingMontage(false);
@@ -719,7 +719,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		AiControllerLibrary.TurnToTarget(this.Owner.Entity.GetComponent<CharacterActorComponent>(), characterActorComponent.ActorLocationProxy, 20000f, false, 0f);
 	}
 
-	// Token: 0x0601BAE7 RID: 113383 RVA: 0x0079C50C File Offset: 0x0079A70C
+	// Token: 0x0601966C RID: 104044 RVA: 0x007C4CA8 File Offset: 0x007C2EA8
 	private void OnStalkAlertLifted()
 	{
 		this.StopPlayingMontage(false);
@@ -731,7 +731,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.AiRequestWaiting = false;
 	}
 
-	// Token: 0x0601BAE8 RID: 113384 RVA: 0x0079C53C File Offset: 0x0079A73C
+	// Token: 0x0601966D RID: 104045 RVA: 0x007C4CD8 File Offset: 0x007C2ED8
 	private void EnterLogicRange()
 	{
 		this.StopPlayingMontage(false);
@@ -744,7 +744,7 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.AiRequestWaiting = false;
 	}
 
-	// Token: 0x0601BAE9 RID: 113385 RVA: 0x0079C573 File Offset: 0x0079A773
+	// Token: 0x0601966E RID: 104046 RVA: 0x007C4D0F File Offset: 0x007C2F0F
 	private void LeaveLogicRange()
 	{
 		WorldEntity entity = this.Owner.Entity;
@@ -756,71 +756,71 @@ public class NpcPerformIdleState : NpcPerformBaseState
 		this.AiRequestWaiting = true;
 	}
 
-	// Token: 0x0601BAEA RID: 113386 RVA: 0x0079C5A3 File Offset: 0x0079A7A3
+	// Token: 0x0601966F RID: 104047 RVA: 0x007C4D3F File Offset: 0x007C2F3F
 	private void OnSwitchTimetable()
 	{
 		this.AiRequestWaiting = true;
 		this.StopPlayingMontage(true);
 	}
 
-	// Token: 0x0601BAEB RID: 113387 RVA: 0x0079C5B3 File Offset: 0x0079A7B3
+	// Token: 0x06019670 RID: 104048 RVA: 0x007C4D4F File Offset: 0x007C2F4F
 	private void OnStopTimetable()
 	{
 		this.AiRequestWaiting = false;
 	}
 
-	// Token: 0x0400D9D6 RID: 55766
+	// Token: 0x0400DE75 RID: 56949
 	private const int IDLE_MONTAGE_CD_MIN = 2;
 
-	// Token: 0x0400D9D7 RID: 55767
+	// Token: 0x0400DE76 RID: 56950
 	private const int IDLE_MONTAGE_CD_MAX = 4;
 
-	// Token: 0x0400D9D8 RID: 55768
+	// Token: 0x0400DE77 RID: 56951
 	private const int INITIAL_IDLE_MONTAGE_CD_MIN = 0;
 
-	// Token: 0x0400D9D9 RID: 55769
+	// Token: 0x0400DE78 RID: 56952
 	private const int INITIAL_IDLE_MONTAGE_CD_MAX = 10;
 
-	// Token: 0x0400D9DA RID: 55770
+	// Token: 0x0400DE79 RID: 56953
 	private const float IMMEDIATE_PLAY_PROBABILITY = 0.1f;
 
-	// Token: 0x0400D9DB RID: 55771
+	// Token: 0x0400DE7A RID: 56954
 	private const float ALERT_TURN_SPEED = 20000f;
 
-	// Token: 0x0400D9DC RID: 55772
+	// Token: 0x0400DE7B RID: 56955
 	private bool InitialMontageEnd;
 
-	// Token: 0x0400D9DD RID: 55773
+	// Token: 0x0400DE7C RID: 56956
 	private double InitializationCd = --0.0;
 
-	// Token: 0x0400D9DE RID: 55774
+	// Token: 0x0400DE7D RID: 56957
 	private double InitializationTimeStamp = --0.0;
 
-	// Token: 0x0400D9DF RID: 55775
+	// Token: 0x0400DE7E RID: 56958
 	private double IdleMontageCd = --0.0;
 
-	// Token: 0x0400D9E0 RID: 55776
+	// Token: 0x0400DE7F RID: 56959
 	private double IdleMontageTimeStamp = --0.0;
 
-	// Token: 0x0400D9E1 RID: 55777
+	// Token: 0x0400DE80 RID: 56960
 	private bool AnyIdleMontageStart;
 
-	// Token: 0x0400D9E2 RID: 55778
+	// Token: 0x0400DE81 RID: 56961
 	private bool AnyIdleMontagePlaying;
 
-	// Token: 0x0400D9E3 RID: 55779
+	// Token: 0x0400DE82 RID: 56962
 	private bool LoopForever;
 
-	// Token: 0x0400D9E4 RID: 55780
+	// Token: 0x0400DE83 RID: 56963
 	private NpcStandbyShowInfo LoopMontageInfo;
 
-	// Token: 0x0400D9E5 RID: 55781
+	// Token: 0x0400DE84 RID: 56964
 	private UAnimMontage MontagePlaying;
 
-	// Token: 0x0400D9E6 RID: 55782
+	// Token: 0x0400DE85 RID: 56965
 	private string MontagePlayingPath;
 
-	// Token: 0x0400D9E7 RID: 55783
+	// Token: 0x0400DE86 RID: 56966
 	[Nullable(new byte[]
 	{
 		2,
@@ -828,45 +828,45 @@ public class NpcPerformIdleState : NpcPerformBaseState
 	})]
 	private List<NpcStandbyShowInfo> MontageQueue;
 
-	// Token: 0x0400D9E8 RID: 55784
+	// Token: 0x0400DE87 RID: 56967
 	private ENpcStandbyShowFinitelyPlayMode PlayQueueMode;
 
-	// Token: 0x0400D9E9 RID: 55785
+	// Token: 0x0400DE88 RID: 56968
 	private int PlayIndex;
 
-	// Token: 0x0400D9EA RID: 55786
+	// Token: 0x0400DE89 RID: 56969
 	private bool StoppingIdleMontage;
 
-	// Token: 0x0400D9EB RID: 55787
+	// Token: 0x0400DE8A RID: 56970
 	private bool ImmediatePlay;
 
-	// Token: 0x0400D9EC RID: 55788
+	// Token: 0x0400DE8B RID: 56971
 	private bool NoIdleConfig;
 
-	// Token: 0x0400D9ED RID: 55789
+	// Token: 0x0400DE8C RID: 56972
 	private int? InteractEntityId;
 
-	// Token: 0x0400D9EE RID: 55790
+	// Token: 0x0400DE8D RID: 56973
 	private EntityHandle InteractEntity;
 
-	// Token: 0x0400D9EF RID: 55791
+	// Token: 0x0400DE8E RID: 56974
 	private bool HasFixInteractPos;
 
-	// Token: 0x0400D9F0 RID: 55792
+	// Token: 0x0400DE8F RID: 56975
 	private NpcWaitEntityTaskController WaitEntityTaskController;
 
-	// Token: 0x0400D9F1 RID: 55793
+	// Token: 0x0400DE90 RID: 56976
 	private BaseMoveComponent MoveCompInternal;
 
-	// Token: 0x0400D9F2 RID: 55794
+	// Token: 0x0400DE91 RID: 56977
 	private bool CanSense;
 
-	// Token: 0x0400D9F3 RID: 55795
+	// Token: 0x0400DE92 RID: 56978
 	private bool CanAlert;
 
-	// Token: 0x0400D9F4 RID: 55796
+	// Token: 0x0400DE93 RID: 56979
 	private bool AiRequestWaiting;
 
-	// Token: 0x0400D9F5 RID: 55797
+	// Token: 0x0400DE94 RID: 56980
 	private Entity EventEntity;
 }

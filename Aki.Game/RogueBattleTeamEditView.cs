@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002774 RID: 10100
+// Token: 0x02001C5F RID: 7263
 [NullableContext(1)]
 [Nullable(0)]
 public class RogueBattleTeamEditView : UiTickViewBase
 {
-	// Token: 0x06014B45 RID: 84805 RVA: 0x0053D5AC File Offset: 0x0053B7AC
+	// Token: 0x06012028 RID: 73768 RVA: 0x0054C3BC File Offset: 0x0054A5BC
 	public RogueBattleTeamEditView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014B46 RID: 84806 RVA: 0x0053D5C0 File Offset: 0x0053B7C0
+	// Token: 0x06012029 RID: 73769 RVA: 0x0054C3D0 File Offset: 0x0054A5D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,7 +47,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06014B47 RID: 84807 RVA: 0x0053D738 File Offset: 0x0053B938
+	// Token: 0x0601202A RID: 73770 RVA: 0x0054C548 File Offset: 0x0054A748
 	private void OnClickBtnBuffDetail()
 	{
 		MapRogueOp opData = MapRogueModel.Instance.GetOpData((int)this.OpenParam);
@@ -61,7 +61,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		instance.OpenView(rogueBattleEnvironmentBuffView, (rogueGotoLevelPlayOp != null) ? new int?(rogueGotoLevelPlayOp.RoomId) : null, null);
 	}
 
-	// Token: 0x06014B48 RID: 84808 RVA: 0x0053D798 File Offset: 0x0053B998
+	// Token: 0x0601202B RID: 73771 RVA: 0x0054C5A8 File Offset: 0x0054A7A8
 	private void OnClickBtnLink()
 	{
 		if (this.WaitClose)
@@ -72,7 +72,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.RogueBattleTeamRoleSelectView, param, null);
 	}
 
-	// Token: 0x06014B49 RID: 84809 RVA: 0x0053D7DC File Offset: 0x0053B9DC
+	// Token: 0x0601202C RID: 73772 RVA: 0x0054C5EC File Offset: 0x0054A7EC
 	private void OnClickSlot(int position)
 	{
 		if (this.WaitClose)
@@ -83,7 +83,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.RogueBattleTeamRoleSelectView, param, null);
 	}
 
-	// Token: 0x06014B4A RID: 84810 RVA: 0x0053D820 File Offset: 0x0053BA20
+	// Token: 0x0601202D RID: 73773 RVA: 0x0054C630 File Offset: 0x0054A830
 	private void OnClickBtnConfirm()
 	{
 		RogueBattleTeamEditView.<>c__DisplayClass11_0 CS$<>8__locals1 = new RogueBattleTeamEditView.<>c__DisplayClass11_0();
@@ -107,13 +107,13 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		CS$<>8__locals1.<OnClickBtnConfirm>g__Confirm|0();
 	}
 
-	// Token: 0x06014B4B RID: 84811 RVA: 0x0053D8F6 File Offset: 0x0053BAF6
+	// Token: 0x0601202E RID: 73774 RVA: 0x0054C706 File Offset: 0x0054A906
 	private bool CheckCanOpenFetter()
 	{
 		return !this.WaitClose;
 	}
 
-	// Token: 0x06014B4C RID: 84812 RVA: 0x0053D904 File Offset: 0x0053BB04
+	// Token: 0x0601202F RID: 73775 RVA: 0x0054C714 File Offset: 0x0054A914
 	private CommonTabData GetCommonData(int index)
 	{
 		string resourceId = FormationDefine.FormationIndexSprites[index];
@@ -122,7 +122,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		return commonTabData;
 	}
 
-	// Token: 0x06014B4D RID: 84813 RVA: 0x0053D950 File Offset: 0x0053BB50
+	// Token: 0x06012030 RID: 73776 RVA: 0x0054C760 File Offset: 0x0054A960
 	private void OnClickTab(int index)
 	{
 		RogueResFormation formationDataByIndex = RogueBattleModel.Instance.GetFormationDataByIndex(index);
@@ -143,7 +143,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06014B4E RID: 84814 RVA: 0x0053D9CC File Offset: 0x0053BBCC
+	// Token: 0x06012031 RID: 73777 RVA: 0x0054C7DC File Offset: 0x0054A9DC
 	private UniTask OnTeamEditConfirm(List<int> roleIdList)
 	{
 		RogueBattleTeamEditView.<OnTeamEditConfirm>d__15 <OnTeamEditConfirm>d__;
@@ -155,7 +155,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		return <OnTeamEditConfirm>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014B4F RID: 84815 RVA: 0x0053DA18 File Offset: 0x0053BC18
+	// Token: 0x06012032 RID: 73778 RVA: 0x0054C828 File Offset: 0x0054AA28
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RogueBattleTeamEditView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -166,7 +166,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014B50 RID: 84816 RVA: 0x0053DA5B File Offset: 0x0053BC5B
+	// Token: 0x06012033 RID: 73779 RVA: 0x0054C86B File Offset: 0x0054AA6B
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer progressLevelSequencePlayer = this.ProgressLevelSequencePlayer;
@@ -183,7 +183,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		FormationViewDragController.ClearDragData(null);
 	}
 
-	// Token: 0x06014B51 RID: 84817 RVA: 0x0053DA90 File Offset: 0x0053BC90
+	// Token: 0x06012034 RID: 73780 RVA: 0x0054C8A0 File Offset: 0x0054AAA0
 	protected override void OnTick(float delta)
 	{
 		foreach (RogueBattleTeamEditSlot rogueBattleTeamEditSlot in this.RoleSlotList)
@@ -195,7 +195,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014B52 RID: 84818 RVA: 0x0053DAE8 File Offset: 0x0053BCE8
+	// Token: 0x06012035 RID: 73781 RVA: 0x0054C8F8 File Offset: 0x0054AAF8
 	private void RefreshView()
 	{
 		this.RefreshLinkItem();
@@ -203,7 +203,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		this.RefreshBuffDetailButton();
 	}
 
-	// Token: 0x06014B53 RID: 84819 RVA: 0x0053DAFC File Offset: 0x0053BCFC
+	// Token: 0x06012036 RID: 73782 RVA: 0x0054C90C File Offset: 0x0054AB0C
 	private void RefreshLinkItem()
 	{
 		RogueBattleLinkItem linkItem = this.LinkItem;
@@ -214,7 +214,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		linkItem.RefreshLinkInfo(this.TabComponent.GetSelectedIndex());
 	}
 
-	// Token: 0x06014B54 RID: 84820 RVA: 0x0053DB1C File Offset: 0x0053BD1C
+	// Token: 0x06012037 RID: 73783 RVA: 0x0054C92C File Offset: 0x0054AB2C
 	private void RefreshBuffDetailButton()
 	{
 		MapRogueOp opData = MapRogueModel.Instance.GetOpData((int)this.OpenParam);
@@ -227,7 +227,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		base.GetButton(6).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014B55 RID: 84821 RVA: 0x0053DBBC File Offset: 0x0053BDBC
+	// Token: 0x06012038 RID: 73784 RVA: 0x0054C9CC File Offset: 0x0054ABCC
 	private void RefreshConfirmButton()
 	{
 		RogueResFormation formationDataByIndex = RogueBattleModel.Instance.GetFormationDataByIndex(this.TabComponent.GetSelectedIndex());
@@ -249,7 +249,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		base.GetButton(3).SetSelfInteractive(!flag);
 	}
 
-	// Token: 0x06014B56 RID: 84822 RVA: 0x0053DC34 File Offset: 0x0053BE34
+	// Token: 0x06012039 RID: 73785 RVA: 0x0054CA44 File Offset: 0x0054AC44
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -273,7 +273,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		return panelFetter.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x06014B57 RID: 84823 RVA: 0x0053DC60 File Offset: 0x0053BE60
+	// Token: 0x0601203A RID: 73786 RVA: 0x0054CA70 File Offset: 0x0054AC70
 	private void ExchangeRoleCallBack(int position1, int position2, int roleId1, int roleId2)
 	{
 		int selectedIndex = this.TabComponent.GetSelectedIndex();
@@ -298,18 +298,18 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		this.RoleSlotList[position2 - 1].UpdateRoleInfo(roleId2, selectedIndex);
 	}
 
-	// Token: 0x04009BBE RID: 39870
+	// Token: 0x04009D16 RID: 40214
 	[Nullable(2)]
 	private RogueBattleLinkItem LinkItem;
 
-	// Token: 0x04009BBF RID: 39871
+	// Token: 0x04009D17 RID: 40215
 	[Nullable(2)]
 	private MapRoguePanelFetter PanelFetter;
 
-	// Token: 0x04009BC0 RID: 39872
+	// Token: 0x04009D18 RID: 40216
 	private List<RogueBattleTeamEditSlot> RoleSlotList = new List<RogueBattleTeamEditSlot>();
 
-	// Token: 0x04009BC1 RID: 39873
+	// Token: 0x04009D19 RID: 40217
 	[Nullable(new byte[]
 	{
 		2,
@@ -317,18 +317,18 @@ public class RogueBattleTeamEditView : UiTickViewBase
 	})]
 	private TabComponentWithCaptionItem<RogueBattleTeamEditTab> TabComponent;
 
-	// Token: 0x04009BC2 RID: 39874
+	// Token: 0x04009D1A RID: 40218
 	private bool WaitClose;
 
-	// Token: 0x04009BC3 RID: 39875
+	// Token: 0x04009D1B RID: 40219
 	[Nullable(2)]
 	private LevelSequencePlayer ProgressLevelSequencePlayer;
 
-	// Token: 0x02008DD7 RID: 36311
+	// Token: 0x02007F5E RID: 32606
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402E06D RID: 188525
+		// Token: 0x04029381 RID: 168833
 		[Nullable(new byte[]
 		{
 			0,
@@ -336,11 +336,11 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		})]
 		public static Action<ULGUIPointerEventData, int, int, int> <0>__OnFormationRoleViewPointDown;
 
-		// Token: 0x0402E06E RID: 188526
+		// Token: 0x04029382 RID: 168834
 		[Nullable(0)]
 		public static Action <1>__OnFormationRoleViewStartDrag;
 
-		// Token: 0x0402E06F RID: 188527
+		// Token: 0x04029383 RID: 168835
 		[Nullable(new byte[]
 		{
 			0,
@@ -348,7 +348,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		})]
 		public static Action<UUIItem, int, int, int> <2>__OnFormationRoleViewGamePadDown;
 
-		// Token: 0x0402E070 RID: 188528
+		// Token: 0x04029384 RID: 168836
 		[Nullable(new byte[]
 		{
 			0,
@@ -356,7 +356,7 @@ public class RogueBattleTeamEditView : UiTickViewBase
 		})]
 		public static Action<ULGUIPointerEventData> <3>__OnFormationRoleViewMoveDrag;
 
-		// Token: 0x0402E071 RID: 188529
+		// Token: 0x04029385 RID: 168837
 		[Nullable(0)]
 		public static Action<bool> <4>__OnFormationRoleViewEndDrag;
 	}

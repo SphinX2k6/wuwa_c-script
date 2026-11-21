@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhoneMessage.View
 {
-	// Token: 0x020050FA RID: 20730
+	// Token: 0x020040CA RID: 16586
 	public interface IPhoneMessageButtonImplement
 	{
-		// Token: 0x06034FE7 RID: 217063
+		// Token: 0x06029EE0 RID: 171744
 		void CheckAndPlayPhoneSequence();
 
-		// Token: 0x06034FE8 RID: 217064
+		// Token: 0x06029EE1 RID: 171745
 		void PopShowHeadIcon();
 
-		// Token: 0x06034FE9 RID: 217065
+		// Token: 0x06029EE2 RID: 171746
 		void HideHeadIcon();
 	}
 }

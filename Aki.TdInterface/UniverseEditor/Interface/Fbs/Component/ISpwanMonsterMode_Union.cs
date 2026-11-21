@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005995 RID: 22933
+	// Token: 0x02005FA2 RID: 24482
 	public enum ISpwanMonsterMode_Union : byte
 	{
-		// Token: 0x0400EF9D RID: 61341
+		// Token: 0x0400FC92 RID: 64658
 		NONE,
-		// Token: 0x0400EF9E RID: 61342
+		// Token: 0x0400FC93 RID: 64659
 		ISpwanMonsterMode,
-		// Token: 0x0400EF9F RID: 61343
+		// Token: 0x0400FC94 RID: 64660
 		ISpawnMonsterConstraintAnnularSector
 	}
 }

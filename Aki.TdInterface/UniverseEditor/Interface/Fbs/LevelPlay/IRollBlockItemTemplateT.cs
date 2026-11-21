@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045A0 RID: 17824
+	// Token: 0x02004A08 RID: 18952
 	public class IRollBlockItemTemplateT
 	{
-		// Token: 0x17007EA4 RID: 32420
-		// (get) Token: 0x0601AEEF RID: 110319 RVA: 0x003D778B File Offset: 0x003D598B
-		// (set) Token: 0x0601AEF0 RID: 110320 RVA: 0x003D7793 File Offset: 0x003D5993
+		// Token: 0x170084E5 RID: 34021
+		// (get) Token: 0x0601C6C4 RID: 116420 RVA: 0x00403A27 File Offset: 0x00401C27
+		// (set) Token: 0x0601C6C5 RID: 116421 RVA: 0x00403A2F File Offset: 0x00401C2F
 		public ERollBlockItemType ItemType { get; set; }
 
-		// Token: 0x17007EA5 RID: 32421
-		// (get) Token: 0x0601AEF1 RID: 110321 RVA: 0x003D779C File Offset: 0x003D599C
-		// (set) Token: 0x0601AEF2 RID: 110322 RVA: 0x003D77A4 File Offset: 0x003D59A4
+		// Token: 0x170084E6 RID: 34022
+		// (get) Token: 0x0601C6C6 RID: 116422 RVA: 0x00403A38 File Offset: 0x00401C38
+		// (set) Token: 0x0601C6C7 RID: 116423 RVA: 0x00403A40 File Offset: 0x00401C40
 		public string TemplateId { get; set; }
 
-		// Token: 0x0601AEF3 RID: 110323 RVA: 0x003D77AD File Offset: 0x003D59AD
+		// Token: 0x0601C6C8 RID: 116424 RVA: 0x00403A49 File Offset: 0x00401C49
 		public IRollBlockItemTemplateT()
 		{
 			this.ItemType = ERollBlockItemType.BreakableObstacle;

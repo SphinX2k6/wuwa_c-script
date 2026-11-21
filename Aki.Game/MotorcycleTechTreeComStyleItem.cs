@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200223D RID: 8765
+// Token: 0x02001721 RID: 5921
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleTechTreeComStyleItem : UiPanelBase
 {
-	// Token: 0x060111A1 RID: 70049 RVA: 0x0042C2DC File Offset: 0x0042A4DC
+	// Token: 0x0600E637 RID: 58935 RVA: 0x00438E80 File Offset: 0x00437080
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060111A2 RID: 70050 RVA: 0x0042C338 File Offset: 0x0042A538
+	// Token: 0x0600E638 RID: 58936 RVA: 0x00438EDC File Offset: 0x004370DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleTechTreeComStyleItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060111A3 RID: 70051 RVA: 0x0042C37B File Offset: 0x0042A57B
+	// Token: 0x0600E639 RID: 58937 RVA: 0x00438F1F File Offset: 0x0043711F
 	[NullableContext(1)]
 	public void SetNodeClick(Action<MotorTechTreeNode, UUIExtendToggle> nodeClick)
 	{
@@ -42,7 +42,7 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		this.CommonNodeItemThird.OnClickToggleBack = nodeClick;
 	}
 
-	// Token: 0x060111A4 RID: 70052 RVA: 0x0042C3A4 File Offset: 0x0042A5A4
+	// Token: 0x0600E63A RID: 58938 RVA: 0x00438F48 File Offset: 0x00437148
 	[NullableContext(1)]
 	private UniTask RefreshOneNodeItemAsync(MotorcycleTechTreeComNodeItem item, int nodeId)
 	{
@@ -55,7 +55,7 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		return <RefreshOneNodeItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060111A5 RID: 70053 RVA: 0x0042C3F0 File Offset: 0x0042A5F0
+	// Token: 0x0600E63B RID: 58939 RVA: 0x00438F94 File Offset: 0x00437194
 	[NullableContext(1)]
 	public UniTask RefreshCommonNodeItemAsync(int[] nodeIds)
 	{
@@ -68,7 +68,7 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		return <RefreshCommonNodeItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060111A6 RID: 70054 RVA: 0x0042C43B File Offset: 0x0042A63B
+	// Token: 0x0600E63C RID: 58940 RVA: 0x00438FDF File Offset: 0x004371DF
 	public MotorcycleTechTreeComNodeItem GetGuideNodeItem(int index)
 	{
 		switch (index)
@@ -84,26 +84,26 @@ public class MotorcycleTechTreeComStyleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400823E RID: 33342
+	// Token: 0x0400837C RID: 33660
 	private MotorcycleTechTreeComNodeItem CommonNodeItemFirst;
 
-	// Token: 0x0400823F RID: 33343
+	// Token: 0x0400837D RID: 33661
 	private MotorcycleTechTreeComNodeItem CommonNodeItemSecond;
 
-	// Token: 0x04008240 RID: 33344
+	// Token: 0x0400837E RID: 33662
 	private MotorcycleTechTreeComNodeItem CommonNodeItemThird;
 
-	// Token: 0x02008773 RID: 34675
+	// Token: 0x020078FC RID: 30972
 	[NullableContext(0)]
 	private static class EMotorTreeComStyleItemComponent
 	{
-		// Token: 0x0402C076 RID: 180342
+		// Token: 0x0402738E RID: 160654
 		public const int CommonNodeItem1 = 0;
 
-		// Token: 0x0402C077 RID: 180343
+		// Token: 0x0402738F RID: 160655
 		public const int CommonNodeItem2 = 1;
 
-		// Token: 0x0402C078 RID: 180344
+		// Token: 0x04027390 RID: 160656
 		public const int CommonNodeItem3 = 2;
 	}
 }

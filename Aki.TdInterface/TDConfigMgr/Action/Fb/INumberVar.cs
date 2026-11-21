@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025FE RID: 9726
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028BE RID: 10430
 	public class INumberVar
 	{
-		// Token: 0x0600DA7E RID: 55934 RVA: 0x00208ED3 File Offset: 0x002070D3
+		// Token: 0x0600E84B RID: 59467 RVA: 0x00225627 File Offset: 0x00223827
 		public static INumberVar Create(INumberVar? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004044 RID: 16452
-		// (get) Token: 0x0600DA7F RID: 55935 RVA: 0x00208EF2 File Offset: 0x002070F2
+		// Token: 0x1700437D RID: 17277
+		// (get) Token: 0x0600E84C RID: 59468 RVA: 0x00225646 File Offset: 0x00223846
 		public virtual string Name
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004045 RID: 16453
-		// (get) Token: 0x0600DA80 RID: 55936 RVA: 0x00208EFF File Offset: 0x002070FF
+		// Token: 0x1700437E RID: 17278
+		// (get) Token: 0x0600E84D RID: 59469 RVA: 0x00225653 File Offset: 0x00223853
 		public virtual float Value
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007956 RID: 31062
+		// Token: 0x04007FF0 RID: 32752
 		private INumberVar Instance;
 	}
 }

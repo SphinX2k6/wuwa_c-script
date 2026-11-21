@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EB8 RID: 20152
+	// Token: 0x02003E81 RID: 16001
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,8 +16,8 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleTokenGrid : LoopScrollMediumItemGrid<RogueResGainData>
 	{
-		// Token: 0x17007EDE RID: 32478
-		// (get) Token: 0x06033C00 RID: 211968 RVA: 0x00C1FEAE File Offset: 0x00C1E0AE
+		// Token: 0x1700528E RID: 21134
+		// (get) Token: 0x06028A6B RID: 166507 RVA: 0x00B693C6 File Offset: 0x00B675C6
 		public new RogueResGainData Data
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C01 RID: 211969 RVA: 0x00C1FEBC File Offset: 0x00C1E0BC
+		// Token: 0x06028A6C RID: 166508 RVA: 0x00B693D4 File Offset: 0x00B675D4
 		[NullableContext(1)]
 		protected override void OnRefresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06033C02 RID: 211970 RVA: 0x00C1FF5A File Offset: 0x00C1E15A
+		// Token: 0x06028A6D RID: 166509 RVA: 0x00B69472 File Offset: 0x00B67672
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C03 RID: 211971 RVA: 0x00C1FF67 File Offset: 0x00C1E167
+		// Token: 0x06028A6E RID: 166510 RVA: 0x00B6947F File Offset: 0x00B6767F
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C04 RID: 211972 RVA: 0x00C1FF98 File Offset: 0x00C1E198
+		// Token: 0x06028A6F RID: 166511 RVA: 0x00B694B0 File Offset: 0x00B676B0
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x0401B7F9 RID: 112633
+		// Token: 0x040161CC RID: 90572
 		[Nullable(new byte[]
 		{
 			2,

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004358 RID: 17240
+	// Token: 0x020047BA RID: 18362
 	public class IPerformerAiAlwaysTrueDecoratorT
 	{
-		// Token: 0x170079AA RID: 31146
-		// (get) Token: 0x060198FE RID: 104702 RVA: 0x003A8D32 File Offset: 0x003A6F32
-		// (set) Token: 0x060198FF RID: 104703 RVA: 0x003A8D3A File Offset: 0x003A6F3A
+		// Token: 0x17007FDF RID: 32735
+		// (get) Token: 0x0601B08C RID: 110732 RVA: 0x003D475A File Offset: 0x003D295A
+		// (set) Token: 0x0601B08D RID: 110733 RVA: 0x003D4762 File Offset: 0x003D2962
 		public EPerformerAiDecoratorType Type { get; set; }
 
-		// Token: 0x06019900 RID: 104704 RVA: 0x003A8D43 File Offset: 0x003A6F43
+		// Token: 0x0601B08E RID: 110734 RVA: 0x003D476B File Offset: 0x003D296B
 		public IPerformerAiAlwaysTrueDecoratorT()
 		{
 			this.Type = EPerformerAiDecoratorType.Condition;

@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002D6E RID: 11630
+// Token: 0x020022C8 RID: 8904
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class WorldLevelConfig : ConfigBase
 {
-	// Token: 0x0601874C RID: 100172 RVA: 0x00639C40 File Offset: 0x00637E40
+	// Token: 0x06015FEE RID: 90094 RVA: 0x0065FC58 File Offset: 0x0065DE58
 	public WorldLevel? GetWorldLevelConfig(int worldLevel)
 	{
 		WorldLevel? config = ConfigWorldLevelById.GetConfig(worldLevel, true);
@@ -25,14 +25,14 @@ public class WorldLevelConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x0601874D RID: 100173 RVA: 0x00639C95 File Offset: 0x00637E95
+	// Token: 0x06015FEF RID: 90095 RVA: 0x0065FCAD File Offset: 0x0065DEAD
 	public int? GetCommonValue(string keyName)
 	{
 		return ConfigCommonParamById.GetIntConfig(keyName);
 	}
 
-	// Token: 0x17002109 RID: 8457
-	// (get) Token: 0x0601874E RID: 100174 RVA: 0x00639C9D File Offset: 0x00637E9D
+	// Token: 0x17002164 RID: 8548
+	// (get) Token: 0x06015FF0 RID: 90096 RVA: 0x0065FCB5 File Offset: 0x0065DEB5
 	public static WorldLevelConfig Instance
 	{
 		get
@@ -41,7 +41,7 @@ public class WorldLevelConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601874F RID: 100175 RVA: 0x00639CA4 File Offset: 0x00637EA4
+	// Token: 0x06015FF1 RID: 90097 RVA: 0x0065FCBC File Offset: 0x0065DEBC
 	public static WorldLevelConfig GetOrCreateInstance()
 	{
 		if (WorldLevelConfig._Instance == null)
@@ -51,7 +51,7 @@ public class WorldLevelConfig : ConfigBase
 		return WorldLevelConfig._Instance;
 	}
 
-	// Token: 0x06018750 RID: 100176 RVA: 0x00639CB8 File Offset: 0x00637EB8
+	// Token: 0x06015FF2 RID: 90098 RVA: 0x0065FCD0 File Offset: 0x0065DED0
 	public static bool CreateInstance()
 	{
 		if (WorldLevelConfig._Instance != null)
@@ -62,24 +62,24 @@ public class WorldLevelConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06018751 RID: 100177 RVA: 0x00639CCE File Offset: 0x00637ECE
+	// Token: 0x06015FF3 RID: 90099 RVA: 0x0065FCE6 File Offset: 0x0065DEE6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018752 RID: 100178 RVA: 0x00639CD0 File Offset: 0x00637ED0
+	// Token: 0x06015FF4 RID: 90100 RVA: 0x0065FCE8 File Offset: 0x0065DEE8
 	public static void ResetStaticDefaultValue()
 	{
 		WorldLevelConfig._Instance = null;
 	}
 
-	// Token: 0x06018753 RID: 100179 RVA: 0x00639CD8 File Offset: 0x00637ED8
+	// Token: 0x06015FF5 RID: 90101 RVA: 0x0065FCF0 File Offset: 0x0065DEF0
 	static WorldLevelConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WorldLevelConfig.CreateStaticDefaultValue), new Action(WorldLevelConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B555 RID: 46421
+	// Token: 0x0400B8CA RID: 47306
 	[Nullable(2)]
 	private static WorldLevelConfig _Instance;
 }

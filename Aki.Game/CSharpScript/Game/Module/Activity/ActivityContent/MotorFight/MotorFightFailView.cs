@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006425 RID: 25637
+	// Token: 0x020053A3 RID: 21411
 	public class MotorFightFailView : UiViewBase
 	{
-		// Token: 0x06040768 RID: 264040 RVA: 0x00F99581 File Offset: 0x00F97781
+		// Token: 0x06035429 RID: 218153 RVA: 0x00EE0521 File Offset: 0x00EDE721
 		[NullableContext(1)]
 		public MotorFightFailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040769 RID: 264041 RVA: 0x00F9958C File Offset: 0x00F9778C
+		// Token: 0x0603542A RID: 218154 RVA: 0x00EE052C File Offset: 0x00EDE72C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604076A RID: 264042 RVA: 0x00F9965C File Offset: 0x00F9785C
+		// Token: 0x0603542B RID: 218155 RVA: 0x00EE05FC File Offset: 0x00EDE7FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightFailView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604076B RID: 264043 RVA: 0x00F996A0 File Offset: 0x00F978A0
+		// Token: 0x0603542C RID: 218156 RVA: 0x00EE0640 File Offset: 0x00EDE840
 		protected override void OnBeforeShow()
 		{
 			UUIText text = base.GetText(1);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			text2.SetUIActive(true);
 		}
 
-		// Token: 0x0604076C RID: 264044 RVA: 0x00F99750 File Offset: 0x00F97950
+		// Token: 0x0603542D RID: 218157 RVA: 0x00EE06F0 File Offset: 0x00EDE8F0
 		private UniTask InitButtonAsync()
 		{
 			MotorFightFailView.<InitButtonAsync>d__7 <InitButtonAsync>d__;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <InitButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604076D RID: 264045 RVA: 0x00F99794 File Offset: 0x00F97994
+		// Token: 0x0603542E RID: 218158 RVA: 0x00EE0734 File Offset: 0x00EDE934
 		[NullableContext(1)]
 		private UniTask CreateButton(UUIItem uiItem, int buttonIndex, Action clickFunction)
 		{
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604076E RID: 264046 RVA: 0x00F997E7 File Offset: 0x00F979E7
+		// Token: 0x0603542F RID: 218159 RVA: 0x00EE0787 File Offset: 0x00EDE987
 		private void OnReChallengeBtnClick()
 		{
 			MotorFightController.Instance.ReChallengeMotorFightDungeon();
 		}
 
-		// Token: 0x0604076F RID: 264047 RVA: 0x00F997F3 File Offset: 0x00F979F3
+		// Token: 0x06035430 RID: 218160 RVA: 0x00EE0793 File Offset: 0x00EDE993
 		private void OnExitBtnClick()
 		{
 			MotorFightController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x04021837 RID: 137271
+		// Token: 0x0401C166 RID: 115046
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,32 +113,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		protected Dictionary<int, ActivityCorniceMeetingButton> ButtonMap;
 
-		// Token: 0x0200C655 RID: 50773
+		// Token: 0x0200B03C RID: 45116
 		private class EComponents
 		{
-			// Token: 0x0403BDFB RID: 245243
+			// Token: 0x04036758 RID: 223064
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403BDFC RID: 245244
+			// Token: 0x04036759 RID: 223065
 			public const int TextureIcon = 2;
 
-			// Token: 0x0403BDFD RID: 245245
+			// Token: 0x0403675A RID: 223066
 			public const int ButtonHorizontalItem = 4;
 
-			// Token: 0x0403BDFE RID: 245246
+			// Token: 0x0403675B RID: 223067
 			public const int ButtonItem = 5;
 
-			// Token: 0x0403BDFF RID: 245247
+			// Token: 0x0403675C RID: 223068
 			public const int TextFailTip = 14;
 		}
 
-		// Token: 0x0200C656 RID: 50774
+		// Token: 0x0200B03D RID: 45117
 		private class EButtons
 		{
-			// Token: 0x0403BE00 RID: 245248
+			// Token: 0x0403675D RID: 223069
 			public const int LeftButton = 0;
 
-			// Token: 0x0403BE01 RID: 245249
+			// Token: 0x0403675E RID: 223070
 			public const int RightButton = 1;
 		}
 	}

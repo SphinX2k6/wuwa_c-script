@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002786 RID: 10118
+	// Token: 0x02002A58 RID: 10840
 	public class IFlowTemplateBlurTransitionEffect : IFlowTemplateTransitionEffect
 	{
-		// Token: 0x0600E141 RID: 57665 RVA: 0x00214892 File Offset: 0x00212A92
-		[NullableContext(1)]
+		// Token: 0x0600EF5F RID: 61279 RVA: 0x00231626 File Offset: 0x0022F826
 		public static IFlowTemplateBlurTransitionEffect Create(IFlowTemplateBlurTransitionEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043F7 RID: 17399
-		// (get) Token: 0x0600E142 RID: 57666 RVA: 0x002148B1 File Offset: 0x00212AB1
+		// Token: 0x1700475D RID: 18269
+		// (get) Token: 0x0600EF60 RID: 61280 RVA: 0x00231645 File Offset: 0x0022F845
 		public override EFlowTemplateTransitionEffectType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043F8 RID: 17400
-		// (get) Token: 0x0600E143 RID: 57667 RVA: 0x002148BE File Offset: 0x00212ABE
+		// Token: 0x1700475E RID: 18270
+		// (get) Token: 0x0600EF61 RID: 61281 RVA: 0x00231652 File Offset: 0x0022F852
 		public virtual float Aperture
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043F9 RID: 17401
-		// (get) Token: 0x0600E144 RID: 57668 RVA: 0x002148CB File Offset: 0x00212ACB
+		// Token: 0x1700475F RID: 18271
+		// (get) Token: 0x0600EF62 RID: 61282 RVA: 0x0023165F File Offset: 0x0022F85F
 		public virtual float FadeInTime
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043FA RID: 17402
-		// (get) Token: 0x0600E145 RID: 57669 RVA: 0x002148D8 File Offset: 0x00212AD8
+		// Token: 0x17004760 RID: 18272
+		// (get) Token: 0x0600EF63 RID: 61283 RVA: 0x0023166C File Offset: 0x0022F86C
 		public virtual float FadeOutTime
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CD0 RID: 31952
+		// Token: 0x04008386 RID: 33670
 		private IFlowTemplateBlurTransitionEffect Instance;
 	}
 }

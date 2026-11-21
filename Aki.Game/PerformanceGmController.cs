@@ -8,24 +8,24 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023B1 RID: 9137
+// Token: 0x02001896 RID: 6294
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformanceGmController : Singleton
 {
-	// Token: 0x0601246D RID: 74861 RVA: 0x0048038D File Offset: 0x0047E58D
+	// Token: 0x0600F91F RID: 63775 RVA: 0x0048D861 File Offset: 0x0048BA61
 	public void NewEntityPerformanceTestPromise()
 	{
 		this.EntityPerformanceTestPromise = new CustomPromise<bool>();
 	}
 
-	// Token: 0x0601246E RID: 74862 RVA: 0x0048039A File Offset: 0x0047E59A
+	// Token: 0x0600F920 RID: 63776 RVA: 0x0048D86E File Offset: 0x0048BA6E
 	public void ClearEntityPerformanceTestPromise()
 	{
 		this.EntityPerformanceTestPromise = null;
 	}
 
-	// Token: 0x0601246F RID: 74863 RVA: 0x004803A4 File Offset: 0x0047E5A4
+	// Token: 0x0600F921 RID: 63777 RVA: 0x0048D878 File Offset: 0x0048BA78
 	private double GetTickTimeAndClearEntityButRole()
 	{
 		double num = 0.0;
@@ -69,7 +69,7 @@ public class PerformanceGmController : Singleton
 		return num / (double)num2;
 	}
 
-	// Token: 0x06012470 RID: 74864 RVA: 0x0048049C File Offset: 0x0047E69C
+	// Token: 0x0600F922 RID: 63778 RVA: 0x0048D970 File Offset: 0x0048BB70
 	public bool ClearEntityButRole()
 	{
 		IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -117,7 +117,7 @@ public class PerformanceGmController : Singleton
 		return true;
 	}
 
-	// Token: 0x06012471 RID: 74865 RVA: 0x00480594 File Offset: 0x0047E794
+	// Token: 0x0600F923 RID: 63779 RVA: 0x0048DA68 File Offset: 0x0048BC68
 	private static EEntityLogic? ChooseEntityType(int testMode)
 	{
 		switch (testMode)
@@ -137,7 +137,7 @@ public class PerformanceGmController : Singleton
 		}
 	}
 
-	// Token: 0x06012472 RID: 74866 RVA: 0x004805EC File Offset: 0x0047E7EC
+	// Token: 0x0600F924 RID: 63780 RVA: 0x0048DAC0 File Offset: 0x0048BCC0
 	public bool IgnoreBattle()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -160,7 +160,7 @@ public class PerformanceGmController : Singleton
 		return true;
 	}
 
-	// Token: 0x06012473 RID: 74867 RVA: 0x00480654 File Offset: 0x0047E854
+	// Token: 0x0600F925 RID: 63781 RVA: 0x0048DB28 File Offset: 0x0048BD28
 	public bool KillAllEntityButRole()
 	{
 		this.ClearEntityButRole();
@@ -173,14 +173,14 @@ public class PerformanceGmController : Singleton
 		return true;
 	}
 
-	// Token: 0x06012474 RID: 74868 RVA: 0x004806A4 File Offset: 0x0047E8A4
+	// Token: 0x0600F926 RID: 63782 RVA: 0x0048DB78 File Offset: 0x0048BD78
 	public void OpenWorldEntityCatchMode(IReadOnlyList<string> args)
 	{
 		PerformanceController.Instance.IsOpenCatchWorldEntity = (args.Count <= 0 || args[0] != "0");
 		Log.Instance.Info(ELogModule.Performance, ELogAuthor.ZFJ, "捕捉WorldEntityName " + PerformanceController.Instance.IsOpenCatchWorldEntity.ToString(), default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06012475 RID: 74869 RVA: 0x0048070C File Offset: 0x0047E90C
+	// Token: 0x0600F927 RID: 63783 RVA: 0x0048DBE0 File Offset: 0x0048BDE0
 	public unsafe bool EntityPerformanceTestSingle(IReadOnlyList<string> args)
 	{
 		if (!this.IgnoreBattle())
@@ -220,14 +220,14 @@ public class PerformanceGmController : Singleton
 		return true;
 	}
 
-	// Token: 0x06012476 RID: 74870 RVA: 0x00480800 File Offset: 0x0047EA00
+	// Token: 0x0600F928 RID: 63784 RVA: 0x0048DCD4 File Offset: 0x0048BED4
 	[NullableContext(2)]
 	private static bool CheckFilterName(object entity)
 	{
 		return !string.Equals((entity != null) ? entity.ToString() : null, "SimpleNpc", StringComparison.Ordinal);
 	}
 
-	// Token: 0x06012477 RID: 74871 RVA: 0x00480820 File Offset: 0x0047EA20
+	// Token: 0x0600F929 RID: 63785 RVA: 0x0048DCF4 File Offset: 0x0048BEF4
 	[NullableContext(0)]
 	public UniTask<bool> EntityPerformanceTestAll([Nullable(1)] IReadOnlyList<string> args)
 	{
@@ -240,13 +240,13 @@ public class PerformanceGmController : Singleton
 		return <EntityPerformanceTestAll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012478 RID: 74872 RVA: 0x0048086B File Offset: 0x0047EA6B
+	// Token: 0x0600F92A RID: 63786 RVA: 0x0048DD3F File Offset: 0x0048BF3F
 	public void SetPlayerPerformanceTestMode(bool isOpen)
 	{
 		PerformanceController.Instance.SetPlayerTickPerformanceTest(isOpen);
 	}
 
-	// Token: 0x06012479 RID: 74873 RVA: 0x00480878 File Offset: 0x0047EA78
+	// Token: 0x0600F92B RID: 63787 RVA: 0x0048DD4C File Offset: 0x0048BF4C
 	public bool EntityPerformanceTestMode(bool isOpen)
 	{
 		PerformanceController.Instance.SetEntityTickPerformanceTest(isOpen);
@@ -287,8 +287,8 @@ public class PerformanceGmController : Singleton
 		return true;
 	}
 
-	// Token: 0x170017BD RID: 6077
-	// (get) Token: 0x0601247A RID: 74874 RVA: 0x00480997 File Offset: 0x0047EB97
+	// Token: 0x170017F7 RID: 6135
+	// (get) Token: 0x0600F92C RID: 63788 RVA: 0x0048DE6B File Offset: 0x0048C06B
 	public static PerformanceGmController Instance
 	{
 		get
@@ -302,12 +302,12 @@ public class PerformanceGmController : Singleton
 		}
 	}
 
-	// Token: 0x0601247B RID: 74875 RVA: 0x004809BA File Offset: 0x0047EBBA
+	// Token: 0x0600F92D RID: 63789 RVA: 0x0048DE8E File Offset: 0x0048C08E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601247C RID: 74876 RVA: 0x004809BC File Offset: 0x0047EBBC
+	// Token: 0x0600F92E RID: 63790 RVA: 0x0048DE90 File Offset: 0x0048C090
 	public static void ResetStaticDefaultValue()
 	{
 		PerformanceGmController instance = PerformanceGmController._instance;
@@ -318,20 +318,20 @@ public class PerformanceGmController : Singleton
 		PerformanceGmController._instance = null;
 	}
 
-	// Token: 0x0601247D RID: 74877 RVA: 0x004809D5 File Offset: 0x0047EBD5
+	// Token: 0x0600F92F RID: 63791 RVA: 0x0048DEA9 File Offset: 0x0048C0A9
 	static PerformanceGmController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerformanceGmController.CreateStaticDefaultValue), new Action(PerformanceGmController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040089F3 RID: 35315
+	// Token: 0x04008B3A RID: 35642
 	private const int ENTITY_PERFORMANCE_TEST_NUM = 5;
 
-	// Token: 0x040089F4 RID: 35316
+	// Token: 0x04008B3B RID: 35643
 	[Nullable(2)]
 	public CustomPromise<bool> EntityPerformanceTestPromise;
 
-	// Token: 0x040089F5 RID: 35317
+	// Token: 0x04008B3C RID: 35644
 	[Nullable(2)]
 	private static PerformanceGmController _instance;
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002BF8 RID: 11256
+// Token: 0x02002173 RID: 8563
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerFormationTeamPanel : UiPanelBase
 {
-	// Token: 0x06017610 RID: 95760 RVA: 0x005F2FB8 File Offset: 0x005F11B8
+	// Token: 0x06015041 RID: 86081 RVA: 0x0061FAF4 File Offset: 0x0061DCF4
 	public UniTask Init(UUIItem item)
 	{
 		TowerFormationTeamPanel.<Init>d__9 <Init>d__;
@@ -25,7 +25,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017611 RID: 95761 RVA: 0x005F3004 File Offset: 0x005F1204
+	// Token: 0x06015042 RID: 86082 RVA: 0x0061FB40 File Offset: 0x0061DD40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -43,7 +43,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017612 RID: 95762 RVA: 0x005F30B0 File Offset: 0x005F12B0
+	// Token: 0x06015043 RID: 86083 RVA: 0x0061FBEC File Offset: 0x0061DDEC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TowerFormationTeamPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017613 RID: 95763 RVA: 0x005F30F3 File Offset: 0x005F12F3
+	// Token: 0x06015044 RID: 86084 RVA: 0x0061FC2F File Offset: 0x0061DE2F
 	private TowerFormationTeamTabItem OnTabProxyCreate()
 	{
 		return new TowerFormationTeamTabItem
@@ -63,7 +63,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06017614 RID: 95764 RVA: 0x005F310C File Offset: 0x005F130C
+	// Token: 0x06015045 RID: 86085 RVA: 0x0061FC48 File Offset: 0x0061DE48
 	private void OnTabSelect(int index)
 	{
 		bool flag = index == 0;
@@ -104,7 +104,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06017615 RID: 95765 RVA: 0x005F3186 File Offset: 0x005F1386
+	// Token: 0x06015046 RID: 86086 RVA: 0x0061FCC2 File Offset: 0x0061DEC2
 	public void RefreshRole(int roleId)
 	{
 		TowerFormationRoleScrollItem roleScrollItem = this.RoleScrollItem;
@@ -115,7 +115,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		roleScrollItem.RefreshRole(roleId);
 	}
 
-	// Token: 0x06017616 RID: 95766 RVA: 0x005F3199 File Offset: 0x005F1399
+	// Token: 0x06015047 RID: 86087 RVA: 0x0061FCD5 File Offset: 0x0061DED5
 	public void RefreshRoleList()
 	{
 		TowerFormationRoleScrollItem roleScrollItem = this.RoleScrollItem;
@@ -126,7 +126,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		roleScrollItem.UpdateRoleListFilter();
 	}
 
-	// Token: 0x06017617 RID: 95767 RVA: 0x005F31AB File Offset: 0x005F13AB
+	// Token: 0x06015048 RID: 86088 RVA: 0x0061FCE7 File Offset: 0x0061DEE7
 	public void RebuildRoleList()
 	{
 		TowerFormationRoleScrollItem roleScrollItem = this.RoleScrollItem;
@@ -137,14 +137,14 @@ public class TowerFormationTeamPanel : UiPanelBase
 		roleScrollItem.RebuildRoleList();
 	}
 
-	// Token: 0x06017618 RID: 95768 RVA: 0x005F31BD File Offset: 0x005F13BD
+	// Token: 0x06015049 RID: 86089 RVA: 0x0061FCF9 File Offset: 0x0061DEF9
 	public bool IsRoleListStale()
 	{
 		TowerFormationRoleScrollItem roleScrollItem = this.RoleScrollItem;
 		return roleScrollItem != null && roleScrollItem.IsRoleListStale();
 	}
 
-	// Token: 0x06017619 RID: 95769 RVA: 0x005F31D0 File Offset: 0x005F13D0
+	// Token: 0x0601504A RID: 86090 RVA: 0x0061FD0C File Offset: 0x0061DF0C
 	public void RefreshPresetRoleState()
 	{
 		TowerFormationPresetsTeamItem presetsTeamItem = this.PresetsTeamItem;
@@ -155,14 +155,14 @@ public class TowerFormationTeamPanel : UiPanelBase
 		presetsTeamItem.RefreshRoleSelectState();
 	}
 
-	// Token: 0x0601761A RID: 95770 RVA: 0x005F31E2 File Offset: 0x005F13E2
+	// Token: 0x0601504B RID: 86091 RVA: 0x0061FD1E File Offset: 0x0061DF1E
 	public List<int> GetRoleIdList()
 	{
 		TowerFormationRoleScrollItem roleScrollItem = this.RoleScrollItem;
 		return ((roleScrollItem != null) ? roleScrollItem.GetRoleIdList() : null) ?? new List<int>();
 	}
 
-	// Token: 0x0601761B RID: 95771 RVA: 0x005F31FF File Offset: 0x005F13FF
+	// Token: 0x0601504C RID: 86092 RVA: 0x0061FD3B File Offset: 0x0061DF3B
 	protected override void OnBeforeDestroy()
 	{
 		this.TabLayout = null;
@@ -170,7 +170,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 		this.PresetsTeamItem = null;
 	}
 
-	// Token: 0x0400AEEE RID: 44782
+	// Token: 0x0400B2F3 RID: 45811
 	[Nullable(new byte[]
 	{
 		2,
@@ -179,25 +179,25 @@ public class TowerFormationTeamPanel : UiPanelBase
 	})]
 	private GenericLayout<TowerFormationTeamTabItem, string> TabLayout;
 
-	// Token: 0x0400AEEF RID: 44783
+	// Token: 0x0400B2F4 RID: 45812
 	[Nullable(2)]
 	private TowerFormationRoleScrollItem RoleScrollItem;
 
-	// Token: 0x0400AEF0 RID: 44784
+	// Token: 0x0400B2F5 RID: 45813
 	[Nullable(2)]
 	private TowerFormationPresetsTeamItem PresetsTeamItem;
 
-	// Token: 0x0400AEF1 RID: 44785
+	// Token: 0x0400B2F6 RID: 45814
 	private readonly List<string> TabTitleList = new List<string>
 	{
 		"GhostShipRoleList_Text",
 		"GhostShipPreTeam_Text"
 	};
 
-	// Token: 0x0400AEF2 RID: 44786
+	// Token: 0x0400B2F7 RID: 45815
 	private bool IsTabInited;
 
-	// Token: 0x0400AEF3 RID: 44787
+	// Token: 0x0400B2F8 RID: 45816
 	[Nullable(new byte[]
 	{
 		2,
@@ -205,7 +205,7 @@ public class TowerFormationTeamPanel : UiPanelBase
 	})]
 	public Action<RoleDataBase> RoleSelectCallBack;
 
-	// Token: 0x0400AEF4 RID: 44788
+	// Token: 0x0400B2F9 RID: 45817
 	[Nullable(new byte[]
 	{
 		2,
@@ -213,21 +213,21 @@ public class TowerFormationTeamPanel : UiPanelBase
 	})]
 	public Action<FormationData> TeamSelectCallBack;
 
-	// Token: 0x0400AEF5 RID: 44789
+	// Token: 0x0400B2FA RID: 45818
 	[Nullable(2)]
 	public Action TabSwitchCallBack;
 
-	// Token: 0x020091BA RID: 37306
+	// Token: 0x020083FD RID: 33789
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402F25C RID: 193116
+		// Token: 0x0402A95D RID: 174429
 		TabScroll,
-		// Token: 0x0402F25D RID: 193117
+		// Token: 0x0402A95E RID: 174430
 		TabItem,
-		// Token: 0x0402F25E RID: 193118
+		// Token: 0x0402A95F RID: 174431
 		RoleScrollItem,
-		// Token: 0x0402F25F RID: 193119
+		// Token: 0x0402A960 RID: 174432
 		PresetsTeamItem
 	}
 }

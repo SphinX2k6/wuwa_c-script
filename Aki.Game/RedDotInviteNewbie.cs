@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033B8 RID: 13240
+// Token: 0x0200292A RID: 10538
 public class RedDotInviteNewbie : RedDotBase
 {
-	// Token: 0x0601CB91 RID: 117649 RVA: 0x00808844 File Offset: 0x00806A44
+	// Token: 0x0601A889 RID: 108681 RVA: 0x0082EE08 File Offset: 0x0082D008
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.InviteNewbieEntered, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB92 RID: 117650 RVA: 0x00808862 File Offset: 0x00806A62
+	// Token: 0x0601A88A RID: 108682 RVA: 0x0082EE26 File Offset: 0x0082D026
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.InviteNewbieEntered, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CB93 RID: 117651 RVA: 0x00808880 File Offset: 0x00806A80
+	// Token: 0x0601A88B RID: 108683 RVA: 0x0082EE44 File Offset: 0x0082D044
 	protected override bool OnCheck(int uId = 0)
 	{
 		return InviteNewbieModel.Instance.HasRedDot;

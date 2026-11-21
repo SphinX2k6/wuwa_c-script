@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EEE RID: 7918
+// Token: 0x020013B0 RID: 5040
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStorySellConfirmBoxView : UiViewBase
 {
-	// Token: 0x0600F3B4 RID: 62388 RVA: 0x003ABFBC File Offset: 0x003AA1BC
+	// Token: 0x0600C7D3 RID: 51155 RVA: 0x003B7AB8 File Offset: 0x003B5CB8
 	public HonamiStorySellConfirmBoxView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3B5 RID: 62389 RVA: 0x003ABFF8 File Offset: 0x003AA1F8
+	// Token: 0x0600C7D4 RID: 51156 RVA: 0x003B7AF4 File Offset: 0x003B5CF4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -41,7 +41,7 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F3B6 RID: 62390 RVA: 0x003AC0E8 File Offset: 0x003AA2E8
+	// Token: 0x0600C7D5 RID: 51157 RVA: 0x003B7BE4 File Offset: 0x003B5DE4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStorySellConfirmBoxView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F3B7 RID: 62391 RVA: 0x003AC12C File Offset: 0x003AA32C
+	// Token: 0x0600C7D6 RID: 51158 RVA: 0x003B7C28 File Offset: 0x003B5E28
 	protected override void OnStart()
 	{
 		IHonamiStorySellConfirmBoxOpenParam honamiStorySellConfirmBoxOpenParam = (IHonamiStorySellConfirmBoxOpenParam)this.OpenParam;
@@ -60,13 +60,13 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 		this.SellCallback = honamiStorySellConfirmBoxOpenParam.SellCallback;
 	}
 
-	// Token: 0x0600F3B8 RID: 62392 RVA: 0x003AC15D File Offset: 0x003AA35D
+	// Token: 0x0600C7D7 RID: 51159 RVA: 0x003B7C59 File Offset: 0x003B5E59
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600F3B9 RID: 62393 RVA: 0x003AC168 File Offset: 0x003AA368
+	// Token: 0x0600C7D8 RID: 51160 RVA: 0x003B7C64 File Offset: 0x003B5E64
 	private void RefreshView()
 	{
 		List<IHonamiStoryItemSellItemInfo> list = new List<IHonamiStoryItemSellItemInfo>();
@@ -100,7 +100,7 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 		this.LoopScrollView.RefreshByData(list, false, null, false);
 	}
 
-	// Token: 0x0600F3BA RID: 62394 RVA: 0x003AC290 File Offset: 0x003AA490
+	// Token: 0x0600C7D9 RID: 51161 RVA: 0x003B7D8C File Offset: 0x003B5F8C
 	private void OnClickConfirmButton(int _)
 	{
 		HonamiStoryController.Instance.RequestHonamiStorySellItem(this.SellItemList).ContinueWith(delegate(bool _)
@@ -110,35 +110,35 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600F3BB RID: 62395 RVA: 0x003AC2B4 File Offset: 0x003AA4B4
+	// Token: 0x0600C7DA RID: 51162 RVA: 0x003B7DB0 File Offset: 0x003B5FB0
 	private void OnClickCancelButton(int _)
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F3BC RID: 62396 RVA: 0x003AC2BD File Offset: 0x003AA4BD
+	// Token: 0x0600C7DB RID: 51163 RVA: 0x003B7DB9 File Offset: 0x003B5FB9
 	private HonamiStorySellConfirmBoxItem OnGridProxyCreate()
 	{
 		return new HonamiStorySellConfirmBoxItem();
 	}
 
-	// Token: 0x040070D3 RID: 28883
+	// Token: 0x040071B4 RID: 29108
 	private List<IHonamiStoryItemSellInfo> SellItemList = new List<IHonamiStoryItemSellInfo>();
 
-	// Token: 0x040070D4 RID: 28884
+	// Token: 0x040071B5 RID: 29109
 	private Action SellCallback = delegate()
 	{
 	};
 
-	// Token: 0x040070D5 RID: 28885
+	// Token: 0x040071B6 RID: 29110
 	[Nullable(2)]
 	private ButtonItem ConfirmButton;
 
-	// Token: 0x040070D6 RID: 28886
+	// Token: 0x040071B7 RID: 29111
 	[Nullable(2)]
 	private ButtonItem CancelButton;
 
-	// Token: 0x040070D7 RID: 28887
+	// Token: 0x040071B8 RID: 29112
 	[Nullable(new byte[]
 	{
 		2,
@@ -147,21 +147,21 @@ public class HonamiStorySellConfirmBoxView : UiViewBase
 	})]
 	private LoopScrollView<HonamiStorySellConfirmBoxItem, IHonamiStoryItemSellItemInfo> LoopScrollView;
 
-	// Token: 0x020084E4 RID: 34020
+	// Token: 0x02007669 RID: 30313
 	[NullableContext(0)]
 	private enum EHonamiSellConfirmComponents
 	{
-		// Token: 0x0402B3F0 RID: 177136
+		// Token: 0x04026714 RID: 157460
 		TextTitle,
-		// Token: 0x0402B3F1 RID: 177137
+		// Token: 0x04026715 RID: 157461
 		ConfirmButton,
-		// Token: 0x0402B3F2 RID: 177138
+		// Token: 0x04026716 RID: 157462
 		LoopScrollView,
-		// Token: 0x0402B3F3 RID: 177139
+		// Token: 0x04026717 RID: 157463
 		ScrollItem,
-		// Token: 0x0402B3F4 RID: 177140
+		// Token: 0x04026718 RID: 157464
 		ConfirmText,
-		// Token: 0x0402B3F5 RID: 177141
+		// Token: 0x04026719 RID: 157465
 		CancelButton
 	}
 }

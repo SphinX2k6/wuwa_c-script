@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A48 RID: 6728
+	// Token: 0x02001BDD RID: 7133
 	public class IFadeBackgroundFadeOutEffect_SetValue
 	{
-		// Token: 0x040058FD RID: 22781
-		[Nullable(1)]
+		// Token: 0x04005D62 RID: 23906
 		public IFadeBackgroundFadeOutEffectTypeBase FadeOutEffect;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B06 RID: 19206
+	// Token: 0x02003AAE RID: 15022
 	public class CombatExtraInfoBase
 	{
 	}

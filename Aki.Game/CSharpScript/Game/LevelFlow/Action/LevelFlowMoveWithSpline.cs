@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8F RID: 28559
+	// Token: 0x02006110 RID: 24848
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowMoveWithSpline : LevelFlowActionBase
 	{
-		// Token: 0x06045725 RID: 284453 RVA: 0x01138F13 File Offset: 0x01137113
+		// Token: 0x0603B8D3 RID: 243923 RVA: 0x010E2D17 File Offset: 0x010E0F17
 		public LevelFlowMoveWithSpline Init(MoveWithSpline params_, bool isAsync)
 		{
 			this.Params = params_;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045726 RID: 284454 RVA: 0x01138F24 File Offset: 0x01137124
+		// Token: 0x0603B8D4 RID: 243924 RVA: 0x010E2D28 File Offset: 0x010E0F28
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(false);
 		}
 
-		// Token: 0x06045727 RID: 284455 RVA: 0x01138FE8 File Offset: 0x011371E8
+		// Token: 0x0603B8D5 RID: 243925 RVA: 0x010E2DEC File Offset: 0x010E0FEC
 		protected unsafe override void ExecuteWhenEntitiesReady()
 		{
 			if (this.IsPlayer)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.SetMoveAction(spline, component3.Option);
 		}
 
-		// Token: 0x06045728 RID: 284456 RVA: 0x01139380 File Offset: 0x01137580
+		// Token: 0x0603B8D6 RID: 243926 RVA: 0x010E3184 File Offset: 0x010E1384
 		private void SetMoveAction(USplineComponent spline, ISplineType splineData)
 		{
 			int numberOfSplinePoints = spline.GetNumberOfSplinePoints();
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.MoveAlongPath(spline, splineData);
 		}
 
-		// Token: 0x06045729 RID: 284457 RVA: 0x011394E4 File Offset: 0x011376E4
+		// Token: 0x0603B8D7 RID: 243927 RVA: 0x010E32E8 File Offset: 0x010E14E8
 		private void MoveAlongPath(USplineComponent spline, ISplineType splineData)
 		{
 			CreatureDataComponent component = this.EntityHandle.Entity.GetComponent<CreatureDataComponent>();
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.CharacterMoveAlongPath(spline, splineData);
 		}
 
-		// Token: 0x0604572A RID: 284458 RVA: 0x01139554 File Offset: 0x01137754
+		// Token: 0x0603B8D8 RID: 243928 RVA: 0x010E3358 File Offset: 0x010E1558
 		protected void SceneItemMoveAlongPath(USplineComponent spline, ISplineType splineData)
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604572B RID: 284459 RVA: 0x011396E0 File Offset: 0x011378E0
+		// Token: 0x0603B8D9 RID: 243929 RVA: 0x010E34E4 File Offset: 0x010E16E4
 		protected void CharacterMoveAlongPath(USplineComponent spline, ISplineType splineData)
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -321,7 +321,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604572C RID: 284460 RVA: 0x01139830 File Offset: 0x01137A30
+		// Token: 0x0603B8DA RID: 243930 RVA: 0x010E3634 File Offset: 0x010E1834
 		protected void VehicleMoveAlongPath(USplineComponent spline, ISplineType splineData)
 		{
 			MoveWithSpline @params = this.Params;
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x0604572D RID: 284461 RVA: 0x01139950 File Offset: 0x01137B50
+		// Token: 0x0603B8DB RID: 243931 RVA: 0x010E3754 File Offset: 0x010E1954
 		protected override void OnComplete(bool isSuccess)
 		{
 			if (this.EntityHandle != null && EventSystem.Instance.HasWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity)))
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}, 0);
 		}
 
-		// Token: 0x0604572E RID: 284462 RVA: 0x01139A10 File Offset: 0x01137C10
+		// Token: 0x0603B8DC RID: 243932 RVA: 0x010E3814 File Offset: 0x010E1A14
 		private void HandleCharacterSyncMoveEnd(bool result)
 		{
 			if (this.IsAsync)
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604572F RID: 284463 RVA: 0x01139A22 File Offset: 0x01137C22
+		// Token: 0x0603B8DD RID: 243933 RVA: 0x010E3826 File Offset: 0x010E1A26
 		private void HandleSceneItemSyncMoveEnd(bool success)
 		{
 			if (this.IsAsync)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(success);
 		}
 
-		// Token: 0x06045730 RID: 284464 RVA: 0x01139A34 File Offset: 0x01137C34
+		// Token: 0x0603B8DE RID: 243934 RVA: 0x010E3838 File Offset: 0x010E1A38
 		private void HandleVehicleSyncMoveEnd(bool result)
 		{
 			if (this.IsAsync)
@@ -411,14 +411,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(result);
 		}
 
-		// Token: 0x06045731 RID: 284465 RVA: 0x01139A48 File Offset: 0x01137C48
+		// Token: 0x0603B8DF RID: 243935 RVA: 0x010E384C File Offset: 0x010E1A4C
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			global::Log.Instance.Warn(ELogModule.LevelEvent, ELogAuthor.CWZ, "[LevelEventMoveWithSpline]检测到移动实体被销毁，直接设置节点执行成功", default(ReadOnlySpan<ValueTuple<string, object>>));
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045732 RID: 284466 RVA: 0x01139A78 File Offset: 0x01137C78
+		// Token: 0x0603B8E0 RID: 243936 RVA: 0x010E387C File Offset: 0x010E1A7C
 		protected unsafe override void LogExecuteInfo()
 		{
 			global::Log instance = global::Log.Instance;
@@ -436,24 +436,24 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243C6 RID: 148422
+		// Token: 0x0401F67B RID: 128635
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x040243C7 RID: 148423
+		// Token: 0x0401F67C RID: 128636
 		[Nullable(2)]
 		private MoveWithSpline Params;
 
-		// Token: 0x040243C8 RID: 148424
+		// Token: 0x0401F67D RID: 128637
 		private bool IsAsync;
 
-		// Token: 0x040243C9 RID: 148425
+		// Token: 0x0401F67E RID: 128638
 		private int EntityId;
 
-		// Token: 0x040243CA RID: 148426
+		// Token: 0x0401F67F RID: 128639
 		private bool IsPlayer;
 
-		// Token: 0x040243CB RID: 148427
+		// Token: 0x0401F680 RID: 128640
 		private int PbDataId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000376 RID: 886
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003BF RID: 959
 	public class IFanInteractByHit : IFanInteractType
 	{
-		// Token: 0x0600119B RID: 4507 RVA: 0x0003B3B8 File Offset: 0x000395B8
+		// Token: 0x060012DF RID: 4831 RVA: 0x0003E69C File Offset: 0x0003C89C
 		private IFanInteractByHit_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600119C RID: 4508 RVA: 0x0003B3F0 File Offset: 0x000395F0
+		// Token: 0x060012E0 RID: 4832 RVA: 0x0003E6D4 File Offset: 0x0003C8D4
 		public static IFanInteractByHit Create([Nullable(2)] IFanInteractByHit instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600119D RID: 4509 RVA: 0x0003B403 File Offset: 0x00039603
+		// Token: 0x060012E1 RID: 4833 RVA: 0x0003E6E7 File Offset: 0x0003C8E7
 		public static IFanInteractByHit CreateFromSetValue([Nullable(2)] IFanInteractByHit_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600119E RID: 4510 RVA: 0x0003B416 File Offset: 0x00039616
+		// Token: 0x060012E2 RID: 4834 RVA: 0x0003E6FA File Offset: 0x0003C8FA
 		public new IFanInteractByHit_SetValue ToSetValue()
 		{
 			return new IFanInteractByHit_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004FA RID: 1274
-		// (get) Token: 0x0600119F RID: 4511 RVA: 0x0003B429 File Offset: 0x00039629
-		// (set) Token: 0x060011A0 RID: 4512 RVA: 0x0003B454 File Offset: 0x00039654
+		// Token: 0x1700054E RID: 1358
+		// (get) Token: 0x060012E3 RID: 4835 RVA: 0x0003E70D File Offset: 0x0003C90D
+		// (set) Token: 0x060012E4 RID: 4836 RVA: 0x0003E738 File Offset: 0x0003C938
 		public override EFanInteractType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E69 RID: 3689
+		// Token: 0x04000F60 RID: 3936
 		[Nullable(2)]
 		protected new IFanInteractByHit FbInstance;
 
-		// Token: 0x04000E6A RID: 3690
+		// Token: 0x04000F61 RID: 3937
 		[Nullable(2)]
 		protected new IFanInteractByHit_SetValue PocoInterface;
 	}

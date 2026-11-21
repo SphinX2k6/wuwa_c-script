@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AFA RID: 27386
+	// Token: 0x02007231 RID: 29233
 	public struct IMontageDataRender : IFlatbufferObject
 	{
-		// Token: 0x1700CB3B RID: 52027
-		// (get) Token: 0x0603003C RID: 196668 RVA: 0x00687240 File Offset: 0x00685440
+		// Token: 0x1700D60A RID: 54794
+		// (get) Token: 0x06032E10 RID: 208400 RVA: 0x006DE8F8 File Offset: 0x006DCAF8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603003D RID: 196669 RVA: 0x0068724D File Offset: 0x0068544D
+		// Token: 0x06032E11 RID: 208401 RVA: 0x006DE905 File Offset: 0x006DCB05
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603003E RID: 196670 RVA: 0x00687254 File Offset: 0x00685454
+		// Token: 0x06032E12 RID: 208402 RVA: 0x006DE90C File Offset: 0x006DCB0C
 		public static IMontageDataRender GetRootAsIMontageDataRender(ByteBuffer _bb)
 		{
 			return IMontageDataRender.GetRootAsIMontageDataRender(_bb, default(IMontageDataRender));
 		}
 
-		// Token: 0x0603003F RID: 196671 RVA: 0x00687270 File Offset: 0x00685470
+		// Token: 0x06032E13 RID: 208403 RVA: 0x006DE928 File Offset: 0x006DCB28
 		public static IMontageDataRender GetRootAsIMontageDataRender(ByteBuffer _bb, IMontageDataRender obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030040 RID: 196672 RVA: 0x0068728D File Offset: 0x0068548D
+		// Token: 0x06032E14 RID: 208404 RVA: 0x006DE945 File Offset: 0x006DCB45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030041 RID: 196673 RVA: 0x0068729C File Offset: 0x0068549C
+		// Token: 0x06032E15 RID: 208405 RVA: 0x006DE954 File Offset: 0x006DCB54
 		public IMontageDataRender __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CB3C RID: 52028
-		// (get) Token: 0x06030042 RID: 196674 RVA: 0x006872AC File Offset: 0x006854AC
+		// Token: 0x1700D60B RID: 54795
+		// (get) Token: 0x06032E16 RID: 208406 RVA: 0x006DE964 File Offset: 0x006DCB64
 		public int ActorIndex
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB3D RID: 52029
-		// (get) Token: 0x06030043 RID: 196675 RVA: 0x006872E8 File Offset: 0x006854E8
+		// Token: 0x1700D60C RID: 54796
+		// (get) Token: 0x06032E17 RID: 208407 RVA: 0x006DE9A0 File Offset: 0x006DCBA0
 		public IMontageParam? BaseMontage
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB3E RID: 52030
-		// (get) Token: 0x06030044 RID: 196676 RVA: 0x00687348 File Offset: 0x00685548
+		// Token: 0x1700D60D RID: 54797
+		// (get) Token: 0x06032E18 RID: 208408 RVA: 0x006DEA00 File Offset: 0x006DCC00
 		public bool EndLoopingMontage
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB3F RID: 52031
-		// (get) Token: 0x06030045 RID: 196677 RVA: 0x00687388 File Offset: 0x00685588
+		// Token: 0x1700D60E RID: 54798
+		// (get) Token: 0x06032E19 RID: 208409 RVA: 0x006DEA40 File Offset: 0x006DCC40
 		public bool EndMontageDirectly
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB40 RID: 52032
-		// (get) Token: 0x06030046 RID: 196678 RVA: 0x006873C8 File Offset: 0x006855C8
+		// Token: 0x1700D60F RID: 54799
+		// (get) Token: 0x06032E1A RID: 208410 RVA: 0x006DEA80 File Offset: 0x006DCC80
 		public bool StartFromLoop
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB41 RID: 52033
-		// (get) Token: 0x06030047 RID: 196679 RVA: 0x00687408 File Offset: 0x00685608
+		// Token: 0x1700D610 RID: 54800
+		// (get) Token: 0x06032E1B RID: 208411 RVA: 0x006DEAC0 File Offset: 0x006DCCC0
 		public IMontageParam? OverlayMontage
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB42 RID: 52034
-		// (get) Token: 0x06030048 RID: 196680 RVA: 0x00687468 File Offset: 0x00685668
+		// Token: 0x1700D611 RID: 54801
+		// (get) Token: 0x06032E1C RID: 208412 RVA: 0x006DEB20 File Offset: 0x006DCD20
 		public int FaceExpressionId
 		{
 			get
@@ -141,8 +141,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB43 RID: 52035
-		// (get) Token: 0x06030049 RID: 196681 RVA: 0x006874A8 File Offset: 0x006856A8
+		// Token: 0x1700D612 RID: 54802
+		// (get) Token: 0x06032E1D RID: 208413 RVA: 0x006DEB60 File Offset: 0x006DCD60
 		public bool KeepFaceExpression
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB44 RID: 52036
-		// (get) Token: 0x0603004A RID: 196682 RVA: 0x006874E8 File Offset: 0x006856E8
+		// Token: 0x1700D613 RID: 54803
+		// (get) Token: 0x06032E1E RID: 208414 RVA: 0x006DEBA0 File Offset: 0x006DCDA0
 		public float DelayTime
 		{
 			get
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603004B RID: 196683 RVA: 0x0068752C File Offset: 0x0068572C
+		// Token: 0x06032E1F RID: 208415 RVA: 0x006DEBE4 File Offset: 0x006DCDE4
 		public IActorFxEmotePlay? FxEmote(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -178,8 +178,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new IActorFxEmotePlay?(default(IActorFxEmotePlay).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700CB45 RID: 52037
-		// (get) Token: 0x0603004C RID: 196684 RVA: 0x00687590 File Offset: 0x00685790
+		// Token: 0x1700D614 RID: 54804
+		// (get) Token: 0x06032E20 RID: 208416 RVA: 0x006DEC48 File Offset: 0x006DCE48
 		public int FxEmoteLength
 		{
 			get
@@ -193,8 +193,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB46 RID: 52038
-		// (get) Token: 0x0603004D RID: 196685 RVA: 0x006875BC File Offset: 0x006857BC
+		// Token: 0x1700D615 RID: 54805
+		// (get) Token: 0x06032E21 RID: 208417 RVA: 0x006DEC74 File Offset: 0x006DCE74
 		public byte NullMask
 		{
 			get
@@ -208,7 +208,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603004E RID: 196686 RVA: 0x006875FC File Offset: 0x006857FC
+		// Token: 0x06032E22 RID: 208418 RVA: 0x006DECB4 File Offset: 0x006DCEB4
 		public static Offset<IMontageDataRender> CreateIMontageDataRender(FlatBufferBuilder builder, int ActorIndex = 0, Offset<IMontageParam> BaseMontageOffset = default(Offset<IMontageParam>), bool EndLoopingMontage = false, bool EndMontageDirectly = false, bool StartFromLoop = false, Offset<IMontageParam> OverlayMontageOffset = default(Offset<IMontageParam>), int FaceExpressionId = 0, bool KeepFaceExpression = false, float DelayTime = 0f, VectorOffset FxEmoteOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(11);
@@ -226,73 +226,73 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMontageDataRender.EndIMontageDataRender(builder);
 		}
 
-		// Token: 0x0603004F RID: 196687 RVA: 0x0068766C File Offset: 0x0068586C
+		// Token: 0x06032E23 RID: 208419 RVA: 0x006DED24 File Offset: 0x006DCF24
 		public static void StartIMontageDataRender(FlatBufferBuilder builder)
 		{
 			builder.StartTable(11);
 		}
 
-		// Token: 0x06030050 RID: 196688 RVA: 0x00687676 File Offset: 0x00685876
+		// Token: 0x06032E24 RID: 208420 RVA: 0x006DED2E File Offset: 0x006DCF2E
 		public static void AddActorIndex(FlatBufferBuilder builder, int actorIndex)
 		{
 			builder.AddInt(0, actorIndex, 0);
 		}
 
-		// Token: 0x06030051 RID: 196689 RVA: 0x00687681 File Offset: 0x00685881
+		// Token: 0x06032E25 RID: 208421 RVA: 0x006DED39 File Offset: 0x006DCF39
 		public static void AddBaseMontage(FlatBufferBuilder builder, Offset<IMontageParam> baseMontageOffset)
 		{
 			builder.AddOffset(1, baseMontageOffset.Value, 0);
 		}
 
-		// Token: 0x06030052 RID: 196690 RVA: 0x00687691 File Offset: 0x00685891
+		// Token: 0x06032E26 RID: 208422 RVA: 0x006DED49 File Offset: 0x006DCF49
 		public static void AddEndLoopingMontage(FlatBufferBuilder builder, bool endLoopingMontage)
 		{
 			builder.AddBool(2, endLoopingMontage, false);
 		}
 
-		// Token: 0x06030053 RID: 196691 RVA: 0x0068769C File Offset: 0x0068589C
+		// Token: 0x06032E27 RID: 208423 RVA: 0x006DED54 File Offset: 0x006DCF54
 		public static void AddEndMontageDirectly(FlatBufferBuilder builder, bool endMontageDirectly)
 		{
 			builder.AddBool(3, endMontageDirectly, false);
 		}
 
-		// Token: 0x06030054 RID: 196692 RVA: 0x006876A7 File Offset: 0x006858A7
+		// Token: 0x06032E28 RID: 208424 RVA: 0x006DED5F File Offset: 0x006DCF5F
 		public static void AddStartFromLoop(FlatBufferBuilder builder, bool startFromLoop)
 		{
 			builder.AddBool(4, startFromLoop, false);
 		}
 
-		// Token: 0x06030055 RID: 196693 RVA: 0x006876B2 File Offset: 0x006858B2
+		// Token: 0x06032E29 RID: 208425 RVA: 0x006DED6A File Offset: 0x006DCF6A
 		public static void AddOverlayMontage(FlatBufferBuilder builder, Offset<IMontageParam> overlayMontageOffset)
 		{
 			builder.AddOffset(5, overlayMontageOffset.Value, 0);
 		}
 
-		// Token: 0x06030056 RID: 196694 RVA: 0x006876C2 File Offset: 0x006858C2
+		// Token: 0x06032E2A RID: 208426 RVA: 0x006DED7A File Offset: 0x006DCF7A
 		public static void AddFaceExpressionId(FlatBufferBuilder builder, int faceExpressionId)
 		{
 			builder.AddInt(6, faceExpressionId, 0);
 		}
 
-		// Token: 0x06030057 RID: 196695 RVA: 0x006876CD File Offset: 0x006858CD
+		// Token: 0x06032E2B RID: 208427 RVA: 0x006DED85 File Offset: 0x006DCF85
 		public static void AddKeepFaceExpression(FlatBufferBuilder builder, bool keepFaceExpression)
 		{
 			builder.AddBool(7, keepFaceExpression, false);
 		}
 
-		// Token: 0x06030058 RID: 196696 RVA: 0x006876D8 File Offset: 0x006858D8
+		// Token: 0x06032E2C RID: 208428 RVA: 0x006DED90 File Offset: 0x006DCF90
 		public static void AddDelayTime(FlatBufferBuilder builder, float delayTime)
 		{
 			builder.AddFloat(8, delayTime, 0.0);
 		}
 
-		// Token: 0x06030059 RID: 196697 RVA: 0x006876EB File Offset: 0x006858EB
+		// Token: 0x06032E2D RID: 208429 RVA: 0x006DEDA3 File Offset: 0x006DCFA3
 		public static void AddFxEmote(FlatBufferBuilder builder, VectorOffset fxEmoteOffset)
 		{
 			builder.AddOffset(9, fxEmoteOffset.Value, 0);
 		}
 
-		// Token: 0x0603005A RID: 196698 RVA: 0x006876FC File Offset: 0x006858FC
+		// Token: 0x06032E2E RID: 208430 RVA: 0x006DEDB4 File Offset: 0x006DCFB4
 		public static VectorOffset CreateFxEmoteVector(FlatBufferBuilder builder, Offset<IActorFxEmotePlay>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -303,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603005B RID: 196699 RVA: 0x0068773C File Offset: 0x0068593C
+		// Token: 0x06032E2F RID: 208431 RVA: 0x006DEDF4 File Offset: 0x006DCFF4
 		public static VectorOffset CreateFxEmoteVectorBlock(FlatBufferBuilder builder, Offset<IActorFxEmotePlay>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -311,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603005C RID: 196700 RVA: 0x00687756 File Offset: 0x00685956
+		// Token: 0x06032E30 RID: 208432 RVA: 0x006DEE0E File Offset: 0x006DD00E
 		public static VectorOffset CreateFxEmoteVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActorFxEmotePlay>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -319,7 +319,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603005D RID: 196701 RVA: 0x00687774 File Offset: 0x00685974
+		// Token: 0x06032E31 RID: 208433 RVA: 0x006DEE2C File Offset: 0x006DD02C
 		public static VectorOffset CreateFxEmoteVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -327,25 +327,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603005E RID: 196702 RVA: 0x0068778D File Offset: 0x0068598D
+		// Token: 0x06032E32 RID: 208434 RVA: 0x006DEE45 File Offset: 0x006DD045
 		public static void StartFxEmoteVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0603005F RID: 196703 RVA: 0x00687798 File Offset: 0x00685998
+		// Token: 0x06032E33 RID: 208435 RVA: 0x006DEE50 File Offset: 0x006DD050
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(10, nullMask, 0);
 		}
 
-		// Token: 0x06030060 RID: 196704 RVA: 0x006877A4 File Offset: 0x006859A4
+		// Token: 0x06032E34 RID: 208436 RVA: 0x006DEE5C File Offset: 0x006DD05C
 		public static Offset<IMontageDataRender> EndIMontageDataRender(FlatBufferBuilder builder)
 		{
 			return new Offset<IMontageDataRender>(builder.EndTable());
 		}
 
-		// Token: 0x06030061 RID: 196705 RVA: 0x006877B4 File Offset: 0x006859B4
+		// Token: 0x06032E35 RID: 208437 RVA: 0x006DEE6C File Offset: 0x006DD06C
 		public IMontageDataRenderT UnPack()
 		{
 			IMontageDataRenderT montageDataRenderT = new IMontageDataRenderT();
@@ -353,7 +353,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return montageDataRenderT;
 		}
 
-		// Token: 0x06030062 RID: 196706 RVA: 0x006877D0 File Offset: 0x006859D0
+		// Token: 0x06032E36 RID: 208438 RVA: 0x006DEE88 File Offset: 0x006DD088
 		public void UnPackTo(IMontageDataRenderT _o)
 		{
 			_o.ActorIndex = this.ActorIndex;
@@ -373,7 +373,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030063 RID: 196707 RVA: 0x006878F0 File Offset: 0x00685AF0
+		// Token: 0x06032E37 RID: 208439 RVA: 0x006DEFA8 File Offset: 0x006DD1A8
 		public static Offset<IMontageDataRender> Pack(FlatBufferBuilder builder, IMontageDataRenderT _o)
 		{
 			if (_o == null)
@@ -395,7 +395,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMontageDataRender.CreateIMontageDataRender(builder, _o.ActorIndex, baseMontageOffset, _o.EndLoopingMontage, _o.EndMontageDirectly, _o.StartFromLoop, overlayMontageOffset, _o.FaceExpressionId, _o.KeepFaceExpression, _o.DelayTime, fxEmoteOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401135E RID: 70494
+		// Token: 0x04012271 RID: 74353
 		private Table __p;
 	}
 }

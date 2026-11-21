@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200042D RID: 1069
+	// Token: 0x02000486 RID: 1158
 	public class IHitLogicType_SetValue
 	{
-		// Token: 0x040010A2 RID: 4258
+		// Token: 0x040011C4 RID: 4548
 		public EHitLogicType Type;
 	}
 }

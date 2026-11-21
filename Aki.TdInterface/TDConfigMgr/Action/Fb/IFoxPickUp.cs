@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002805 RID: 10245
+	// Token: 0x02002AD8 RID: 10968
 	public class IFoxPickUp : ILeisureInteractType
 	{
-		// Token: 0x0600E35B RID: 58203 RVA: 0x0021846C File Offset: 0x0021666C
-		[NullableContext(1)]
+		// Token: 0x0600F180 RID: 61824 RVA: 0x002352D0 File Offset: 0x002334D0
 		public static IFoxPickUp Create(IFoxPickUp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004513 RID: 17683
-		// (get) Token: 0x0600E35C RID: 58204 RVA: 0x0021848B File Offset: 0x0021668B
+		// Token: 0x1700487E RID: 18558
+		// (get) Token: 0x0600F181 RID: 61825 RVA: 0x002352EF File Offset: 0x002334EF
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004514 RID: 17684
-		// (get) Token: 0x0600E35D RID: 58205 RVA: 0x00218498 File Offset: 0x00216698
+		// Token: 0x1700487F RID: 18559
+		// (get) Token: 0x0600F182 RID: 61826 RVA: 0x002352FC File Offset: 0x002334FC
 		public virtual int DataTableIndex
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004515 RID: 17685
-		// (get) Token: 0x0600E35E RID: 58206 RVA: 0x002184A8 File Offset: 0x002166A8
+		// Token: 0x17004880 RID: 18560
+		// (get) Token: 0x0600F183 RID: 61827 RVA: 0x0023530C File Offset: 0x0023350C
 		public virtual bool? MouthOpen
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DE9 RID: 32233
+		// Token: 0x040084A6 RID: 33958
 		private IFoxPickUp Instance;
 	}
 }

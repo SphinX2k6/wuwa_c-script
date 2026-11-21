@@ -5,53 +5,53 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200052F RID: 1327
+	// Token: 0x02000596 RID: 1430
 	public class IMotorPullInteract_SetValue
 	{
-		// Token: 0x0400137A RID: 4986
+		// Token: 0x040014E4 RID: 5348
 		public EHookInteractType Type;
 
-		// Token: 0x0400137B RID: 4987
+		// Token: 0x040014E5 RID: 5349
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x0400137C RID: 4988
+		// Token: 0x040014E6 RID: 5350
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x0400137D RID: 4989
+		// Token: 0x040014E7 RID: 5351
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x0400137E RID: 4990
+		// Token: 0x040014E8 RID: 5352
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 
-		// Token: 0x0400137F RID: 4991
+		// Token: 0x040014E9 RID: 5353
 		public bool? IsPlayPullProgress;
 
-		// Token: 0x04001380 RID: 4992
+		// Token: 0x040014EA RID: 5354
 		public float? PullMoveSpeed;
 
-		// Token: 0x04001381 RID: 4993
+		// Token: 0x040014EB RID: 5355
 		public bool? IsFixedWhenNotRide;
 
-		// Token: 0x04001382 RID: 4994
+		// Token: 0x040014EC RID: 5356
 		public bool? DisableAreaEffect;
 
-		// Token: 0x04001383 RID: 4995
+		// Token: 0x040014ED RID: 5357
 		public bool? DisableCollectEffect;
 	}
 }

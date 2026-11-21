@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003DF RID: 991
+	// Token: 0x02000438 RID: 1080
 	public class IGraph3dEdgeNormal_SetValue
 	{
-		// Token: 0x04000FC5 RID: 4037
+		// Token: 0x040010E7 RID: 4327
 		public int Id;
 
-		// Token: 0x04000FC6 RID: 4038
+		// Token: 0x040010E8 RID: 4328
 		public int From;
 
-		// Token: 0x04000FC7 RID: 4039
+		// Token: 0x040010E9 RID: 4329
 		public int To;
 	}
 }

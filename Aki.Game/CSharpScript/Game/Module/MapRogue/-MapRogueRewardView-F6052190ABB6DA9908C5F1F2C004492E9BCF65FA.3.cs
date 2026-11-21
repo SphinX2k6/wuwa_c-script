@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200560C RID: 22028
+	// Token: 0x020045E2 RID: 17890
 	internal enum <MapRogueRewardView>F6052190ABB6DA9908C5F1F2C004492E9BCF65FA860F7AB1CF04DCB46982DF68C__EItemComponents
 	{
-		// Token: 0x0401D77A RID: 120698
+		// Token: 0x04018205 RID: 98821
 		Toggle,
-		// Token: 0x0401D77B RID: 120699
+		// Token: 0x04018206 RID: 98822
 		TexIcon,
-		// Token: 0x0401D77C RID: 120700
+		// Token: 0x04018207 RID: 98823
 		TxtTitle,
-		// Token: 0x0401D77D RID: 120701
+		// Token: 0x04018208 RID: 98824
 		PanelDone,
-		// Token: 0x0401D77E RID: 120702
+		// Token: 0x04018209 RID: 98825
 		TexBg,
-		// Token: 0x0401D77F RID: 120703
+		// Token: 0x0401820A RID: 98826
 		TxtDesc,
-		// Token: 0x0401D780 RID: 120704
+		// Token: 0x0401820B RID: 98827
 		TxtNum,
-		// Token: 0x0401D781 RID: 120705
+		// Token: 0x0401820C RID: 98828
 		TexRole
 	}
 }

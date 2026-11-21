@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A6D RID: 19053
+	// Token: 0x02003A15 RID: 14869
 	public enum ETrapDefenseRewardType
 	{
-		// Token: 0x0401A68A RID: 108170
+		// Token: 0x04014FDC RID: 85980
 		Default,
-		// Token: 0x0401A68B RID: 108171
+		// Token: 0x04014FDD RID: 85981
 		Main,
-		// Token: 0x0401A68C RID: 108172
+		// Token: 0x04014FDE RID: 85982
 		Level,
-		// Token: 0x0401A68D RID: 108173
+		// Token: 0x04014FDF RID: 85983
 		Endless,
-		// Token: 0x0401A68E RID: 108174
+		// Token: 0x04014FE0 RID: 85984
 		Other,
-		// Token: 0x0401A68F RID: 108175
+		// Token: 0x04014FE1 RID: 85985
 		Length
 	}
 }

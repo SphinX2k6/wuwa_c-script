@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F00 RID: 7936
+	// Token: 0x0200060D RID: 1549
 	public sealed class FPlayStationGetDialogStatusCallBack : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E214 RID: 123412 RVA: 0x002CC8A4 File Offset: 0x002CAAA4
+		// Token: 0x06008854 RID: 34900 RVA: 0x000CD82C File Offset: 0x000CBA2C
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPlayStationGetDialogStatusCallBack.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E215 RID: 123413 RVA: 0x002CC8B0 File Offset: 0x002CAAB0
+		// Token: 0x06008855 RID: 34901 RVA: 0x000CD838 File Offset: 0x000CBA38
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPlayStationGetDialogStatusCallBack._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FPlayStationGetDialogStatusCallBack._FunctionPtr;
 		}
 
-		// Token: 0x0601E216 RID: 123414 RVA: 0x002CC8D3 File Offset: 0x002CAAD3
+		// Token: 0x06008856 RID: 34902 RVA: 0x000CD85B File Offset: 0x000CBA5B
 		public FPlayStationGetDialogStatusCallBack()
 		{
 		}
 
-		// Token: 0x0601E217 RID: 123415 RVA: 0x002CC8DB File Offset: 0x002CAADB
+		// Token: 0x06008857 RID: 34903 RVA: 0x000CD863 File Offset: 0x000CBA63
 		[NullableContext(2)]
 		public FPlayStationGetDialogStatusCallBack(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E218 RID: 123416 RVA: 0x002CC8E5 File Offset: 0x002CAAE5
+		// Token: 0x06008858 RID: 34904 RVA: 0x000CD86D File Offset: 0x000CBA6D
 		public FPlayStationGetDialogStatusCallBack(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E219 RID: 123417 RVA: 0x002CC8F0 File Offset: 0x002CAAF0
+		// Token: 0x06008859 RID: 34905 RVA: 0x000CD878 File Offset: 0x000CBA78
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E21A RID: 123418 RVA: 0x002CC922 File Offset: 0x002CAB22
+		// Token: 0x0600885A RID: 34906 RVA: 0x000CD8AA File Offset: 0x000CBAAA
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<int> Callback)
 		{
 			if (FPlayStationGetDialogStatusCallBack.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FPlayStationGetDialogStatusCallBack.RegisterId);
 		}
 
-		// Token: 0x0601E21B RID: 123419 RVA: 0x002CC95C File Offset: 0x002CAB5C
+		// Token: 0x0600885B RID: 34907 RVA: 0x000CD8E4 File Offset: 0x000CBAE4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(int ret)
 		{
 			FPlayStationGetDialogStatusCallBack.__FPlayStationGetDialogStatusCallBack_DelegateParams* ptr = stackalloc FPlayStationGetDialogStatusCallBack.__FPlayStationGetDialogStatusCallBack_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FPlayStationGetDialogStatusCallBack.__FPlayStationGetDialogStatusCallBack_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E21C RID: 123420 RVA: 0x002CC99C File Offset: 0x002CAB9C
+		// Token: 0x0600885C RID: 34908 RVA: 0x000CD924 File Offset: 0x000CBB24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FPlayStationGetDialogStatusCallBack.__FPlayStationGetDialogStatusCallBack_DelegateParams*)__Parameters)->ret);
 		}
 
-		// Token: 0x04010460 RID: 66656
+		// Token: 0x04003B32 RID: 15154
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010461 RID: 66657
+		// Token: 0x04003B33 RID: 15155
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.PlayStationGetDialogStatusCallBack__DelegateSignature";
 
-		// Token: 0x04010462 RID: 66658
+		// Token: 0x04003B34 RID: 15156
 		private static int RegisterId;
 
-		// Token: 0x020033EB RID: 13291
+		// Token: 0x02000E3A RID: 3642
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FPlayStationGetDialogStatusCallBack_DelegateParams
+		private ref struct __FPlayStationGetDialogStatusCallBack_DelegateParams
 		{
-			// Token: 0x040173A5 RID: 95141
+			// Token: 0x040061D4 RID: 25044
 			[FieldOffset(0)]
 			public int ret;
 		}
 
-		// Token: 0x020033EC RID: 13292
+		// Token: 0x02000E3B RID: 3643
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040173A6 RID: 95142
+			// Token: 0x040061D5 RID: 25045
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

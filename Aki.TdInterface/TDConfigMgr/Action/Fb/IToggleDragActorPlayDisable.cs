@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027AA RID: 10154
+	// Token: 0x02002A7C RID: 10876
 	public class IToggleDragActorPlayDisable : IToggleDragActorPlayType
 	{
-		// Token: 0x0600E1EF RID: 57839 RVA: 0x00215F8B File Offset: 0x0021418B
-		[NullableContext(1)]
+		// Token: 0x0600F00D RID: 61453 RVA: 0x00232D1F File Offset: 0x00230F1F
 		public static IToggleDragActorPlayDisable Create(IToggleDragActorPlayDisable? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700445D RID: 17501
-		// (get) Token: 0x0600E1F0 RID: 57840 RVA: 0x00215FAA File Offset: 0x002141AA
+		// Token: 0x170047C3 RID: 18371
+		// (get) Token: 0x0600F00E RID: 61454 RVA: 0x00232D3E File Offset: 0x00230F3E
 		public override EToggleDragActorPlayType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D48 RID: 32072
+		// Token: 0x040083FE RID: 33790
 		private IToggleDragActorPlayDisable Instance;
 	}
 }

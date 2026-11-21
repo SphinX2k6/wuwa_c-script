@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D09 RID: 7433
+// Token: 0x020011CB RID: 4555
 internal class PinballBattleRoleSkillTipsItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600E0BC RID: 57532 RVA: 0x0034B43C File Offset: 0x0034963C
+	// Token: 0x0600B4D9 RID: 46297 RVA: 0x00356E6C File Offset: 0x0035506C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,14 +25,14 @@ internal class PinballBattleRoleSkillTipsItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0BD RID: 57533 RVA: 0x0034B4A8 File Offset: 0x003496A8
+	// Token: 0x0600B4DA RID: 46298 RVA: 0x00356ED8 File Offset: 0x003550D8
 	protected override void OnStart()
 	{
 		this.SeqPlayer = new LevelSequencePlayer(this.RootItem);
 		this.SeqPlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0600E0BE RID: 57534 RVA: 0x0034B4E1 File Offset: 0x003496E1
+	// Token: 0x0600B4DB RID: 46299 RVA: 0x00356F11 File Offset: 0x00355111
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -43,7 +43,7 @@ internal class PinballBattleRoleSkillTipsItem : GridProxyAbstract<int>
 		seqPlayer.Clear();
 	}
 
-	// Token: 0x0600E0BF RID: 57535 RVA: 0x0034B4F4 File Offset: 0x003496F4
+	// Token: 0x0600B4DC RID: 46300 RVA: 0x00356F24 File Offset: 0x00355124
 	public UniTask PlayCloseSequence()
 	{
 		PinballBattleRoleSkillTipsItem.<PlayCloseSequence>d__4 <PlayCloseSequence>d__;
@@ -54,7 +54,7 @@ internal class PinballBattleRoleSkillTipsItem : GridProxyAbstract<int>
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E0C0 RID: 57536 RVA: 0x0034B538 File Offset: 0x00349738
+	// Token: 0x0600B4DD RID: 46301 RVA: 0x00356F68 File Offset: 0x00355168
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		PinballRoleConfig value = PinballConfig.Instance.GetPinballRoleConfigById(data).Value;
@@ -67,7 +67,7 @@ internal class PinballBattleRoleSkillTipsItem : GridProxyAbstract<int>
 		text.ShowTextNew(value.RoleSkillReleaseDesc);
 	}
 
-	// Token: 0x040067C5 RID: 26565
+	// Token: 0x040068A4 RID: 26788
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 }

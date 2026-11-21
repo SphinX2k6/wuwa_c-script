@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x0200180C RID: 6156
-// (Invoke) Token: 0x0600B480 RID: 46208
+// Token: 0x02000CC5 RID: 3269
+// (Invoke) Token: 0x0600886B RID: 34923
 public delegate void TCommonConditionFilterFunction(int qualityId);

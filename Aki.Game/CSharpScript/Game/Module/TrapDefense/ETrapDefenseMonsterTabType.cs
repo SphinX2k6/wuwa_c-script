@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A44 RID: 19012
+	// Token: 0x020039EC RID: 14828
 	public enum ETrapDefenseMonsterTabType
 	{
-		// Token: 0x0401A621 RID: 108065
+		// Token: 0x04014F73 RID: 85875
 		MonsterType,
-		// Token: 0x0401A622 RID: 108066
+		// Token: 0x04014F74 RID: 85876
 		MonsterWave
 	}
 }

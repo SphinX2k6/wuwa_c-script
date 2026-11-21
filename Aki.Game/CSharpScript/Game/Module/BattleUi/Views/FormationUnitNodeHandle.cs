@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2D RID: 23853
+	// Token: 0x02004D0F RID: 19727
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FormationUnitNodeHandle
 	{
-		// Token: 0x0603C7D8 RID: 247768 RVA: 0x00E831B0 File Offset: 0x00E813B0
+		// Token: 0x06031731 RID: 202545 RVA: 0x00DD3950 File Offset: 0x00DD1B50
 		[NullableContext(1)]
 		public UniTask InitializeAsync(UUIItem parentItem)
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7D9 RID: 247769 RVA: 0x00E831FB File Offset: 0x00E813FB
+		// Token: 0x06031732 RID: 202546 RVA: 0x00DD399B File Offset: 0x00DD1B9B
 		public void Init(FormationPanel formationPanel, FormationPanel gamepadFormationPanel)
 		{
 			this.RefreshFormationUnitNodeParent(formationPanel, gamepadFormationPanel);
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitializeBattleTimeDilationButton();
 		}
 
-		// Token: 0x0603C7DA RID: 247770 RVA: 0x00E83217 File Offset: 0x00E81417
+		// Token: 0x06031733 RID: 202547 RVA: 0x00DD39B7 File Offset: 0x00DD1BB7
 		public void Destroy()
 		{
 			if (this.CurFormationExtraButton == null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.WeeklyRogueButton = null;
 		}
 
-		// Token: 0x0603C7DB RID: 247771 RVA: 0x00E83243 File Offset: 0x00E81443
+		// Token: 0x06031734 RID: 202548 RVA: 0x00DD39E3 File Offset: 0x00DD1BE3
 		public void Tick(float delta)
 		{
 			FormationExtraButton curFormationExtraButton = this.CurFormationExtraButton;
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			curFormationExtraButton.Tick(delta);
 		}
 
-		// Token: 0x0603C7DC RID: 247772 RVA: 0x00E83256 File Offset: 0x00E81456
+		// Token: 0x06031735 RID: 202549 RVA: 0x00DD39F6 File Offset: 0x00DD1BF6
 		public void OnInputControllerChange(FormationPanel formationPanel, FormationPanel gamepadFormationPanel)
 		{
 			this.RefreshFormationUnitNodeParent(formationPanel, gamepadFormationPanel);
 		}
 
-		// Token: 0x0603C7DD RID: 247773 RVA: 0x00E83260 File Offset: 0x00E81460
+		// Token: 0x06031736 RID: 202550 RVA: 0x00DD3A00 File Offset: 0x00DD1C00
 		[NullableContext(1)]
 		private UniTask NewFormationUnitNode(UUIItem parentItem)
 		{
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewFormationUnitNode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7DE RID: 247774 RVA: 0x00E832AB File Offset: 0x00E814AB
+		// Token: 0x06031737 RID: 202551 RVA: 0x00DD3A4B File Offset: 0x00DD1C4B
 		public UUIItem GetRootItem()
 		{
 			return this.FormationUnitNode;
 		}
 
-		// Token: 0x0603C7DF RID: 247775 RVA: 0x00E832B3 File Offset: 0x00E814B3
+		// Token: 0x06031738 RID: 202552 RVA: 0x00DD3A53 File Offset: 0x00DD1C53
 		public void SetNodeVisible(bool visible)
 		{
 			UUIItem formationUnitNode = this.FormationUnitNode;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			formationUnitNode.SetUIActive(visible);
 		}
 
-		// Token: 0x0603C7E0 RID: 247776 RVA: 0x00E832C6 File Offset: 0x00E814C6
+		// Token: 0x06031739 RID: 202553 RVA: 0x00DD3A66 File Offset: 0x00DD1C66
 		private void RefreshFormationUnitNodeParent(FormationPanel formationPanel, FormationPanel gamepadFormationPanel)
 		{
 			if (this.FormationUnitNode == null)
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7E1 RID: 247777 RVA: 0x00E832FC File Offset: 0x00E814FC
+		// Token: 0x0603173A RID: 202554 RVA: 0x00DD3A9C File Offset: 0x00DD1C9C
 		public BattleLinkEnergyButton GetLinkEnergyButton()
 		{
 			return this.LinkEnergyButton;
 		}
 
-		// Token: 0x0603C7E2 RID: 247778 RVA: 0x00E83304 File Offset: 0x00E81504
+		// Token: 0x0603173B RID: 202555 RVA: 0x00DD3AA4 File Offset: 0x00DD1CA4
 		private void InitializeLinkEnergyButton()
 		{
 			if (this.LinkEnergyButton != null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurFormationExtraButton = this.LinkEnergyButton;
 		}
 
-		// Token: 0x0603C7E3 RID: 247779 RVA: 0x00E83380 File Offset: 0x00E81580
+		// Token: 0x0603173C RID: 202556 RVA: 0x00DD3B20 File Offset: 0x00DD1D20
 		public void ShowLinkButton(bool isShow)
 		{
 			if (isShow)
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C7E4 RID: 247780 RVA: 0x00E8341A File Offset: 0x00E8161A
+		// Token: 0x0603173D RID: 202557 RVA: 0x00DD3BBA File Offset: 0x00DD1DBA
 		public BattleWeeklyRogueButton GetWeeklyRogueButton()
 		{
 			return this.WeeklyRogueButton;
 		}
 
-		// Token: 0x0603C7E5 RID: 247781 RVA: 0x00E83424 File Offset: 0x00E81624
+		// Token: 0x0603173E RID: 202558 RVA: 0x00DD3BC4 File Offset: 0x00DD1DC4
 		private void InitializeWeeklyRogueButton()
 		{
 			if (this.WeeklyRogueButton != null)
@@ -219,13 +219,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.WeeklyRogueButton.SetVisible(true);
 		}
 
-		// Token: 0x0603C7E6 RID: 247782 RVA: 0x00E83492 File Offset: 0x00E81692
+		// Token: 0x0603173F RID: 202559 RVA: 0x00DD3C32 File Offset: 0x00DD1E32
 		public BattleTimeDilationButton GetBattleTimeDilationButton()
 		{
 			return this.BattleTimeDilationButton;
 		}
 
-		// Token: 0x0603C7E7 RID: 247783 RVA: 0x00E8349C File Offset: 0x00E8169C
+		// Token: 0x06031740 RID: 202560 RVA: 0x00DD3C3C File Offset: 0x00DD1E3C
 		private void InitializeBattleTimeDilationButton()
 		{
 			if (this.BattleTimeDilationButton != null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BattleTimeDilationButton.SetVisible(true);
 		}
 
-		// Token: 0x0603C7E8 RID: 247784 RVA: 0x00E8350C File Offset: 0x00E8170C
+		// Token: 0x06031741 RID: 202561 RVA: 0x00DD3CAC File Offset: 0x00DD1EAC
 		public void UpdateTimeDilationButton()
 		{
 			if (BattleUiModel.Instance.IsTimeDilationSkillButtonEnable())
@@ -284,19 +284,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F855 RID: 129109
+		// Token: 0x0401A30E RID: 107278
 		private UUIItem FormationUnitNode;
 
-		// Token: 0x0401F856 RID: 129110
+		// Token: 0x0401A30F RID: 107279
 		private FormationExtraButton CurFormationExtraButton;
 
-		// Token: 0x0401F857 RID: 129111
+		// Token: 0x0401A310 RID: 107280
 		private BattleLinkEnergyButton LinkEnergyButton;
 
-		// Token: 0x0401F858 RID: 129112
+		// Token: 0x0401A311 RID: 107281
 		private BattleWeeklyRogueButton WeeklyRogueButton;
 
-		// Token: 0x0401F859 RID: 129113
+		// Token: 0x0401A312 RID: 107282
 		private BattleTimeDilationButton BattleTimeDilationButton;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000429 RID: 1065
+	// Token: 0x0200043F RID: 1087
 	public class ConfigInfrAutoPilotCircleByMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018FF RID: 6399 RVA: 0x000E6F60 File Offset: 0x000E5160
+		// Token: 0x06001983 RID: 6531 RVA: 0x000ED6B4 File Offset: 0x000EB8B4
 		static ConfigInfrAutoPilotCircleByMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrAutoPilotCircleByMapId.CreateStaticDefaultValue), new Action(ConfigInfrAutoPilotCircleByMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001900 RID: 6400 RVA: 0x000E6F80 File Offset: 0x000E5180
+		// Token: 0x06001984 RID: 6532 RVA: 0x000ED6D4 File Offset: 0x000EB8D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrAutoPilotCircleByMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001901 RID: 6401 RVA: 0x000E6FFF File Offset: 0x000E51FF
+		// Token: 0x06001985 RID: 6533 RVA: 0x000ED753 File Offset: 0x000EB953
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrAutoPilotCircleByMapId.LogPair = null;
 			ConfigInfrAutoPilotCircleByMapId.HandleId = 0;
 		}
 
-		// Token: 0x06001902 RID: 6402 RVA: 0x000E700D File Offset: 0x000E520D
+		// Token: 0x06001986 RID: 6534 RVA: 0x000ED761 File Offset: 0x000EB961
 		public static void Init()
 		{
 			ConfigInfrAutoPilotCircleByMapId.HandleId = ConfigCommon.InitDataStatement(ConfigInfrAutoPilotCircleByMapId.HandleId, "db_infrastructure.db", "select BinData from `InfrAutoPilotCircle` where MapId=?");
 		}
 
-		// Token: 0x06001903 RID: 6403 RVA: 0x000E7028 File Offset: 0x000E5228
+		// Token: 0x06001987 RID: 6535 RVA: 0x000ED77C File Offset: 0x000EB97C
 		[NullableContext(2)]
 		public static IReadOnlyList<InfrAutoPilotCircle> GetConfigList(int p0MapId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001D03 RID: 7427
+		// Token: 0x04001D9D RID: 7581
 		private const string DB = "db_infrastructure.db";
 
-		// Token: 0x04001D04 RID: 7428
+		// Token: 0x04001D9E RID: 7582
 		private const string FILE = "j.基建.xlsx";
 
-		// Token: 0x04001D05 RID: 7429
+		// Token: 0x04001D9F RID: 7583
 		private const string TABLE = "InfrAutoPilotCircle";
 
-		// Token: 0x04001D06 RID: 7430
+		// Token: 0x04001DA0 RID: 7584
 		private const string COMMAND = "select BinData from `InfrAutoPilotCircle` where MapId=?";
 
-		// Token: 0x04001D07 RID: 7431
+		// Token: 0x04001DA1 RID: 7585
 		private const string KEY_PREFIX = "InfrAutoPilotCircleByMapId";
 
-		// Token: 0x04001D08 RID: 7432
+		// Token: 0x04001DA2 RID: 7586
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D09 RID: 7433
+		// Token: 0x04001DA3 RID: 7587
 		private static int HandleId;
 	}
 }

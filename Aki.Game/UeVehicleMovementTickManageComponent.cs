@@ -5,15 +5,15 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020032C2 RID: 12994
+// Token: 0x02002833 RID: 10291
 [NullableContext(2)]
 [Nullable(0)]
-public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovementComp, IComponentDependency
+public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovementComp
 {
-	// Token: 0x17002720 RID: 10016
-	// (get) Token: 0x0601C34A RID: 115530 RVA: 0x007DA519 File Offset: 0x007D8719
+	// Token: 0x17002A12 RID: 10770
+	// (get) Token: 0x06019F93 RID: 106387 RVA: 0x00801545 File Offset: 0x007FF745
 	[Nullable(1)]
-	public static Type[] Dependencies
+	public override Type[] Dependencies
 	{
 		[NullableContext(1)]
 		get
@@ -25,14 +25,14 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		}
 	}
 
-	// Token: 0x17002721 RID: 10017
-	// (get) Token: 0x0601C34B RID: 115531 RVA: 0x007DA52E File Offset: 0x007D872E
-	// (set) Token: 0x0601C34C RID: 115532 RVA: 0x007DA536 File Offset: 0x007D8736
+	// Token: 0x17002A13 RID: 10771
+	// (get) Token: 0x06019F94 RID: 106388 RVA: 0x0080155A File Offset: 0x007FF75A
+	// (set) Token: 0x06019F95 RID: 106389 RVA: 0x00801562 File Offset: 0x007FF762
 	public UeSkeletalTickManageComponent SkelTickMgr { get; set; }
 
-	// Token: 0x17002722 RID: 10018
-	// (get) Token: 0x0601C34D RID: 115533 RVA: 0x007DA53F File Offset: 0x007D873F
-	// (set) Token: 0x0601C34E RID: 115534 RVA: 0x007DA547 File Offset: 0x007D8747
+	// Token: 0x17002A14 RID: 10772
+	// (get) Token: 0x06019F96 RID: 106390 RVA: 0x0080156B File Offset: 0x007FF76B
+	// (set) Token: 0x06019F97 RID: 106391 RVA: 0x00801573 File Offset: 0x007FF773
 	protected bool ForbiddenTickPose
 	{
 		get
@@ -50,7 +50,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		}
 	}
 
-	// Token: 0x0601C34F RID: 115535 RVA: 0x007DA568 File Offset: 0x007D8768
+	// Token: 0x06019F98 RID: 106392 RVA: 0x00801594 File Offset: 0x007FF794
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<VehicleActorComponent>();
@@ -79,7 +79,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		return true;
 	}
 
-	// Token: 0x0601C350 RID: 115536 RVA: 0x007DA693 File Offset: 0x007D8893
+	// Token: 0x06019F99 RID: 106393 RVA: 0x008016BF File Offset: 0x007FF8BF
 	protected override bool OnEnd()
 	{
 		this.SkipNextTraceRevertCheck = false;
@@ -88,7 +88,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		return true;
 	}
 
-	// Token: 0x0601C351 RID: 115537 RVA: 0x007DA6C8 File Offset: 0x007D88C8
+	// Token: 0x06019F9A RID: 106394 RVA: 0x008016F4 File Offset: 0x007FF8F4
 	[NullableContext(1)]
 	protected override void OnDisable(string reason)
 	{
@@ -112,7 +112,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601C352 RID: 115538 RVA: 0x007DA718 File Offset: 0x007D8918
+	// Token: 0x06019F9B RID: 106395 RVA: 0x00801744 File Offset: 0x007FF944
 	protected override void OnEnable()
 	{
 		Log instance = Log.Instance;
@@ -141,24 +141,24 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		animComp.ConsumeRootMotion();
 	}
 
-	// Token: 0x0601C353 RID: 115539 RVA: 0x007DA778 File Offset: 0x007D8978
+	// Token: 0x06019F9C RID: 106396 RVA: 0x008017A4 File Offset: 0x007FF9A4
 	public void PreProxyTick(float delta)
 	{
 		this.TickMovement(delta);
 	}
 
-	// Token: 0x0601C354 RID: 115540 RVA: 0x007DA781 File Offset: 0x007D8981
+	// Token: 0x06019F9D RID: 106397 RVA: 0x008017AD File Offset: 0x007FF9AD
 	public void ProxyTick()
 	{
 	}
 
-	// Token: 0x0601C355 RID: 115541 RVA: 0x007DA783 File Offset: 0x007D8983
+	// Token: 0x06019F9E RID: 106398 RVA: 0x008017AF File Offset: 0x007FF9AF
 	public bool CanTickDefault()
 	{
 		return base.Active;
 	}
 
-	// Token: 0x0601C356 RID: 115542 RVA: 0x007DA78B File Offset: 0x007D898B
+	// Token: 0x06019F9F RID: 106399 RVA: 0x008017B7 File Offset: 0x007FF9B7
 	public bool CanTickWithDistance()
 	{
 		if (this.VehicleMoveComp != null)
@@ -168,7 +168,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		return base.Active;
 	}
 
-	// Token: 0x0601C357 RID: 115543 RVA: 0x007DA7B4 File Offset: 0x007D89B4
+	// Token: 0x06019FA0 RID: 106400 RVA: 0x008017E0 File Offset: 0x007FF9E0
 	protected void TickMovement(float delta)
 	{
 		if (this.VehicleMovement == null)
@@ -262,12 +262,12 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		}
 	}
 
-	// Token: 0x0601C358 RID: 115544 RVA: 0x007DAB54 File Offset: 0x007D8D54
+	// Token: 0x06019FA1 RID: 106401 RVA: 0x00801B80 File Offset: 0x007FFD80
 	public override void OnEntityBudgetTickEnableChange(bool isEnable)
 	{
 	}
 
-	// Token: 0x0601C359 RID: 115545 RVA: 0x007DAB56 File Offset: 0x007D8D56
+	// Token: 0x06019FA2 RID: 106402 RVA: 0x00801B82 File Offset: 0x007FFD82
 	protected void OnTeleportChangeLocation()
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -278,7 +278,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		this.SkipNextTraceRevertCheck = true;
 	}
 
-	// Token: 0x0601C35A RID: 115546 RVA: 0x007DAB78 File Offset: 0x007D8D78
+	// Token: 0x06019FA3 RID: 106403 RVA: 0x00801BA4 File Offset: 0x007FFDA4
 	protected unsafe bool TraceRevertCheck()
 	{
 		if (this.SkipNextTraceRevertCheck)
@@ -367,7 +367,7 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 		return true;
 	}
 
-	// Token: 0x0601C35B RID: 115547 RVA: 0x007DAE28 File Offset: 0x007D9028
+	// Token: 0x06019FA4 RID: 106404 RVA: 0x00801E54 File Offset: 0x00800054
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -376,145 +376,165 @@ public class UeVehicleMovementTickManageComponent : EntityComponent, IUeMovement
 			return false;
 		}
 		UeVehicleMovementTickManageComponent ueVehicleMovementTickManageComponent = (UeVehicleMovementTickManageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (ueVehicleMovementTickManageComponent.ActorComp == null)
 		{
-			if (ueVehicleMovementTickManageComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("VehicleMovement"))
-		{
-			if (ueVehicleMovementTickManageComponent.VehicleMovement == null)
-			{
-				this.VehicleMovement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroVehicleMovementComponent>(this.VehicleMovement), "VehicleMovement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (ueVehicleMovementTickManageComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehiclePerformComp"))
-		{
-			if (ueVehicleMovementTickManageComponent.VehiclePerformComp == null)
-			{
-				this.VehiclePerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.VehiclePerformComp), "VehiclePerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("VehicleMoveComp"))
-		{
-			if (ueVehicleMovementTickManageComponent.VehicleMoveComp == null)
-			{
-				this.VehicleMoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.VehicleMoveComp), "VehicleMoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugComp"))
-		{
-			if (ueVehicleMovementTickManageComponent.DebugComp == null)
-			{
-				this.DebugComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ActorDebugMovementComponent>(this.DebugComp), "DebugComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("<SkelTickMgr>k__BackingField"))
-		{
-			if (ueVehicleMovementTickManageComponent.SkelTickMgr == null)
-			{
-				this.SkelTickMgr = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UeSkeletalTickManageComponent>(this.SkelTickMgr), "<SkelTickMgr>k__BackingField"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CacheActorLocation") && ueVehicleMovementTickManageComponent.CacheActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CacheActorLocation), "CacheActorLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CacheActorRotator") && ueVehicleMovementTickManageComponent.CacheActorRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CacheActorRotator), "CacheActorRotator"))
+		if (ueVehicleMovementTickManageComponent.VehicleMovement == null)
+		{
+			this.VehicleMovement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMovement), "VehicleMovement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SkipNextTraceRevertCheck"))
+		if (ueVehicleMovementTickManageComponent.AnimComp == null)
 		{
-			this.SkipNextTraceRevertCheck = ueVehicleMovementTickManageComponent.SkipNextTraceRevertCheck;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("ForbiddenTickPoseInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.ForbiddenTickPoseInternal = ueVehicleMovementTickManageComponent.ForbiddenTickPoseInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("Frozen"))
+		if (ueVehicleMovementTickManageComponent.VehiclePerformComp == null)
 		{
-			this.Frozen = ueVehicleMovementTickManageComponent.Frozen;
+			this.VehiclePerformComp = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComp), "VehiclePerformComp"))
+		{
+			return false;
+		}
+		if (ueVehicleMovementTickManageComponent.VehicleMoveComp == null)
+		{
+			this.VehicleMoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMoveComp), "VehicleMoveComp"))
+		{
+			return false;
+		}
+		if (ueVehicleMovementTickManageComponent.DebugComp == null)
+		{
+			this.DebugComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugComp), "DebugComp"))
+		{
+			return false;
+		}
+		if (ueVehicleMovementTickManageComponent.SkelTickMgr == null)
+		{
+			this.SkelTickMgr = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkelTickMgr), "SkelTickMgr"))
+		{
+			return false;
+		}
+		if (ueVehicleMovementTickManageComponent.CacheActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheActorLocation), "CacheActorLocation"))
+		{
+			return false;
+		}
+		if (ueVehicleMovementTickManageComponent.CacheActorRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheActorRotator), "CacheActorRotator"))
+		{
+			return false;
+		}
+		this.SkipNextTraceRevertCheck = ueVehicleMovementTickManageComponent.SkipNextTraceRevertCheck;
+		this.ForbiddenTickPoseInternal = ueVehicleMovementTickManageComponent.ForbiddenTickPoseInternal;
+		this.Frozen = ueVehicleMovementTickManageComponent.Frozen;
 		return true;
 	}
 
-	// Token: 0x0400DF27 RID: 57127
+	// Token: 0x17002A15 RID: 10773
+	// (get) Token: 0x06019FA5 RID: 106405 RVA: 0x00802009 File Offset: 0x00800209
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A16 RID: 10774
+	// (get) Token: 0x06019FA6 RID: 106406 RVA: 0x0080200C File Offset: 0x0080020C
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A17 RID: 10775
+	// (get) Token: 0x06019FA7 RID: 106407 RVA: 0x0080200F File Offset: 0x0080020F
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A18 RID: 10776
+	// (get) Token: 0x06019FA8 RID: 106408 RVA: 0x00802012 File Offset: 0x00800212
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A19 RID: 10777
+	// (get) Token: 0x06019FA9 RID: 106409 RVA: 0x00802015 File Offset: 0x00800215
+	public override bool NeedEntityBudgetTickEnableChangeInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E3C9 RID: 58313
 	private const float MIN_MODEL_BUFFER_TIME = 60f;
 
-	// Token: 0x0400DF28 RID: 57128
+	// Token: 0x0400E3CA RID: 58314
 	[Nullable(1)]
 	private const string PROFILE_KEY = "UeMovementTickManager.RevertCheck";
 
-	// Token: 0x0400DF29 RID: 57129
+	// Token: 0x0400E3CB RID: 58315
 	protected VehicleActorComponent ActorComp;
 
-	// Token: 0x0400DF2A RID: 57130
+	// Token: 0x0400E3CC RID: 58316
 	protected UKuroVehicleMovementComponent VehicleMovement;
 
-	// Token: 0x0400DF2B RID: 57131
+	// Token: 0x0400E3CD RID: 58317
 	protected VehicleAnimationComponent AnimComp;
 
-	// Token: 0x0400DF2C RID: 57132
+	// Token: 0x0400E3CE RID: 58318
 	protected BaseVehiclePerformComponent VehiclePerformComp;
 
-	// Token: 0x0400DF2D RID: 57133
+	// Token: 0x0400E3CF RID: 58319
 	protected VehicleMoveComponent VehicleMoveComp;
 
-	// Token: 0x0400DF2E RID: 57134
+	// Token: 0x0400E3D0 RID: 58320
 	protected ActorDebugMovementComponent DebugComp;
 
-	// Token: 0x0400DF30 RID: 57136
+	// Token: 0x0400E3D2 RID: 58322
 	[Nullable(1)]
 	protected readonly Vector CacheActorLocation = Vector.Create();
 
-	// Token: 0x0400DF31 RID: 57137
+	// Token: 0x0400E3D3 RID: 58323
 	[Nullable(1)]
 	protected readonly Rotator CacheActorRotator = Rotator.Create();
 
-	// Token: 0x0400DF32 RID: 57138
+	// Token: 0x0400E3D4 RID: 58324
 	protected bool SkipNextTraceRevertCheck;
 
-	// Token: 0x0400DF33 RID: 57139
+	// Token: 0x0400E3D5 RID: 58325
 	protected bool ForbiddenTickPoseInternal;
 
-	// Token: 0x0400DF34 RID: 57140
+	// Token: 0x0400E3D6 RID: 58326
 	public bool Frozen;
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003468 RID: 13416
+// Token: 0x020029DC RID: 10716
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/AnimNotifyStopEffectFromEntity.AnimNotifyStopEffectFromEntity_C")]
 public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002812 RID: 10258
-	// (get) Token: 0x0601D190 RID: 119184 RVA: 0x0081C984 File Offset: 0x0081AB84
-	// (set) Token: 0x0601D191 RID: 119185 RVA: 0x0081C9BD File Offset: 0x0081ABBD
+	// Token: 0x17002BB1 RID: 11185
+	// (get) Token: 0x0601AE98 RID: 110232 RVA: 0x00843C6C File Offset: 0x00841E6C
+	// (set) Token: 0x0601AE99 RID: 110233 RVA: 0x00843CA5 File Offset: 0x00841EA5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> EffectDataAssetRef
 	{
@@ -35,9 +35,9 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 		}
 	}
 
-	// Token: 0x17002813 RID: 10259
-	// (get) Token: 0x0601D192 RID: 119186 RVA: 0x0081C9E2 File Offset: 0x0081ABE2
-	// (set) Token: 0x0601D193 RID: 119187 RVA: 0x0081C9F2 File Offset: 0x0081ABF2
+	// Token: 0x17002BB2 RID: 11186
+	// (get) Token: 0x0601AE9A RID: 110234 RVA: 0x00843CCA File Offset: 0x00841ECA
+	// (set) Token: 0x0601AE9B RID: 110235 RVA: 0x00843CDA File Offset: 0x00841EDA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool Immediately
 	{
@@ -51,32 +51,28 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 		}
 	}
 
-	// Token: 0x0601D194 RID: 119188 RVA: 0x0081CA04 File Offset: 0x0081AC04
+	// Token: 0x0601AE9C RID: 110236 RVA: 0x00843CEC File Offset: 0x00841EEC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(AnimNotifyStopEffectFromEntity) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), AnimNotifyStopEffectFromEntity.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D195 RID: 119189 RVA: 0x0081CAA4 File Offset: 0x0081ACA4
+	// Token: 0x0601AE9D RID: 110237 RVA: 0x00843DA4 File Offset: 0x00841FA4
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -112,7 +108,7 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x0601D196 RID: 119190 RVA: 0x0081CB2F File Offset: 0x0081AD2F
+	// Token: 0x0601AE9E RID: 110238 RVA: 0x00843E2F File Offset: 0x0084202F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (AnimNotifyStopEffectFromEntity._ClassPtr == IntPtr.Zero)
@@ -122,22 +118,22 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 		return AnimNotifyStopEffectFromEntity._ClassPtr;
 	}
 
-	// Token: 0x0601D197 RID: 119191 RVA: 0x0081CB54 File Offset: 0x0081AD54
+	// Token: 0x0601AE9F RID: 110239 RVA: 0x00843E54 File Offset: 0x00842054
 	public AnimNotifyStopEffectFromEntity() : this(BuiltinUtils.AllocNativeUObject(AnimNotifyStopEffectFromEntity.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D198 RID: 119192 RVA: 0x0081CB7C File Offset: 0x0081AD7C
+	// Token: 0x0601AEA0 RID: 110240 RVA: 0x00843E7C File Offset: 0x0084207C
 	public AnimNotifyStopEffectFromEntity(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AnimNotifyStopEffectFromEntity.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D199 RID: 119193 RVA: 0x0081CBAF File Offset: 0x0081ADAF
+	// Token: 0x0601AEA1 RID: 110241 RVA: 0x00843EAF File Offset: 0x008420AF
 	protected AnimNotifyStopEffectFromEntity(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D19A RID: 119194 RVA: 0x0081CBB8 File Offset: 0x0081ADB8
+	// Token: 0x0601AEA2 RID: 110242 RVA: 0x00843EB8 File Offset: 0x008420B8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -146,23 +142,23 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400E510 RID: 58640
+	// Token: 0x0400E9C8 RID: 59848
 	[StaticVariableRuleIgnore]
 	private static readonly Stat NotifyStat = Stat.Create("AnimNotifyStopEffectFromEntity_K2_Notify", "", "");
 
-	// Token: 0x0400E511 RID: 58641
+	// Token: 0x0400E9C9 RID: 59849
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/AnimNotify/AnimNotifyStopEffectFromEntity.AnimNotifyStopEffectFromEntity_C";
 
-	// Token: 0x0400E512 RID: 58642
+	// Token: 0x0400E9CA RID: 59850
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E513 RID: 58643
+	// Token: 0x0400E9CB RID: 59851
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E514 RID: 58644
+	// Token: 0x0400E9CC RID: 59852
 	private static int __PropertyOffset_EffectDataAssetRef;
 
-	// Token: 0x0400E515 RID: 58645
+	// Token: 0x0400E9CD RID: 59853
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,6 +166,6 @@ public class AnimNotifyStopEffectFromEntity : UKuroEffectMakerAN, IUnrealUObject
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _EffectDataAssetRef;
 
-	// Token: 0x0400E516 RID: 58646
+	// Token: 0x0400E9CE RID: 59854
 	private static int __PropertyOffset_Immediately;
 }

@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200529B RID: 21147
+	// Token: 0x02005803 RID: 22531
 	public class IFollowShooterComponentT
 	{
-		// Token: 0x17009B15 RID: 39701
-		// (get) Token: 0x06022794 RID: 141204 RVA: 0x004C7A37 File Offset: 0x004C5C37
-		// (set) Token: 0x06022795 RID: 141205 RVA: 0x004C7A3F File Offset: 0x004C5C3F
+		// Token: 0x1700A313 RID: 41747
+		// (get) Token: 0x0602472E RID: 149294 RVA: 0x005025A7 File Offset: 0x005007A7
+		// (set) Token: 0x0602472F RID: 149295 RVA: 0x005025AF File Offset: 0x005007AF
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009B16 RID: 39702
-		// (get) Token: 0x06022796 RID: 141206 RVA: 0x004C7A48 File Offset: 0x004C5C48
-		// (set) Token: 0x06022797 RID: 141207 RVA: 0x004C7A50 File Offset: 0x004C5C50
+		// Token: 0x1700A314 RID: 41748
+		// (get) Token: 0x06024730 RID: 149296 RVA: 0x005025B8 File Offset: 0x005007B8
+		// (set) Token: 0x06024731 RID: 149297 RVA: 0x005025C0 File Offset: 0x005007C0
 		public string Config { get; set; }
 
-		// Token: 0x17009B17 RID: 39703
-		// (get) Token: 0x06022798 RID: 141208 RVA: 0x004C7A59 File Offset: 0x004C5C59
-		// (set) Token: 0x06022799 RID: 141209 RVA: 0x004C7A61 File Offset: 0x004C5C61
+		// Token: 0x1700A315 RID: 41749
+		// (get) Token: 0x06024732 RID: 149298 RVA: 0x005025C9 File Offset: 0x005007C9
+		// (set) Token: 0x06024733 RID: 149299 RVA: 0x005025D1 File Offset: 0x005007D1
 		public IFollowShooterJellyFishConfigT TypeConfig { get; set; }
 
-		// Token: 0x17009B18 RID: 39704
-		// (get) Token: 0x0602279A RID: 141210 RVA: 0x004C7A6A File Offset: 0x004C5C6A
-		// (set) Token: 0x0602279B RID: 141211 RVA: 0x004C7A72 File Offset: 0x004C5C72
+		// Token: 0x1700A316 RID: 41750
+		// (get) Token: 0x06024734 RID: 149300 RVA: 0x005025DA File Offset: 0x005007DA
+		// (set) Token: 0x06024735 RID: 149301 RVA: 0x005025E2 File Offset: 0x005007E2
 		public List<IEntityCategoryT> LockableCategories { get; set; }
 
-		// Token: 0x17009B19 RID: 39705
-		// (get) Token: 0x0602279C RID: 141212 RVA: 0x004C7A7B File Offset: 0x004C5C7B
-		// (set) Token: 0x0602279D RID: 141213 RVA: 0x004C7A83 File Offset: 0x004C5C83
+		// Token: 0x1700A317 RID: 41751
+		// (get) Token: 0x06024736 RID: 149302 RVA: 0x005025EB File Offset: 0x005007EB
+		// (set) Token: 0x06024737 RID: 149303 RVA: 0x005025F3 File Offset: 0x005007F3
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602279E RID: 141214 RVA: 0x004C7A8C File Offset: 0x004C5C8C
+		// Token: 0x06024738 RID: 149304 RVA: 0x005025FC File Offset: 0x005007FC
 		public IFollowShooterComponentT()
 		{
 			this.Disabled = false;

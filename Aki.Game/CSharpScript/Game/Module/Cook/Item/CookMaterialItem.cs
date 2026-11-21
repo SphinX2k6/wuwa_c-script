@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.Item
 {
-	// Token: 0x02005B2F RID: 23343
+	// Token: 0x02004B10 RID: 19216
 	public class CookMaterialItem : UiPanelBase
 	{
-		// Token: 0x0603B1B0 RID: 242096 RVA: 0x00E187EE File Offset: 0x00E169EE
+		// Token: 0x06030122 RID: 196898 RVA: 0x00D69506 File Offset: 0x00D67706
 		[NullableContext(1)]
 		public void BindOnClickedCallback(Action<ISingleItemInfo, int> onClicked)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.OnClickedCallback = onClicked;
 		}
 
-		// Token: 0x0603B1B1 RID: 242097 RVA: 0x00E18800 File Offset: 0x00E16A00
+		// Token: 0x06030123 RID: 196899 RVA: 0x00D69518 File Offset: 0x00D67718
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B1B2 RID: 242098 RVA: 0x00E18848 File Offset: 0x00E16A48
+		// Token: 0x06030124 RID: 196900 RVA: 0x00D69560 File Offset: 0x00D67760
 		protected override void OnStart()
 		{
 			this.ContentItem = new CookMaterialItemContent();
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.ContentItem.ClickDelegate = new Action(this.OnClick);
 		}
 
-		// Token: 0x0603B1B3 RID: 242099 RVA: 0x00E1889B File Offset: 0x00E16A9B
+		// Token: 0x06030125 RID: 196901 RVA: 0x00D695B3 File Offset: 0x00D677B3
 		[NullableContext(1)]
 		public void Update(ISingleItemInfo data, int index)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.Index = index;
 		}
 
-		// Token: 0x0603B1B4 RID: 242100 RVA: 0x00E188B7 File Offset: 0x00E16AB7
+		// Token: 0x06030126 RID: 196902 RVA: 0x00D695CF File Offset: 0x00D677CF
 		private void OnClick()
 		{
 			Action<ISingleItemInfo, int> onClickedCallback = this.OnClickedCallback;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Cook.Item
 			onClickedCallback(this.CookItemData, this.Index);
 		}
 
-		// Token: 0x0603B1B5 RID: 242101 RVA: 0x00E188D5 File Offset: 0x00E16AD5
+		// Token: 0x06030127 RID: 196903 RVA: 0x00D695ED File Offset: 0x00D677ED
 		public void UpdateSelectedState(int index)
 		{
 			if (index == this.Index)
@@ -71,26 +71,26 @@ namespace CSharpScript.Game.Module.Cook.Item
 			this.ContentItem.SetDelect();
 		}
 
-		// Token: 0x0603B1B6 RID: 242102 RVA: 0x00E188F7 File Offset: 0x00E16AF7
+		// Token: 0x06030128 RID: 196904 RVA: 0x00D6960F File Offset: 0x00D6780F
 		public void RefreshNeed(int num = 1)
 		{
 			this.ContentItem.RefreshNeed(num);
 		}
 
-		// Token: 0x0603B1B7 RID: 242103 RVA: 0x00E18905 File Offset: 0x00E16B05
+		// Token: 0x06030129 RID: 196905 RVA: 0x00D6961D File Offset: 0x00D6781D
 		protected override void OnBeforeDestroy()
 		{
 			this.ContentItem.Destroy(null);
 		}
 
-		// Token: 0x0401ED09 RID: 126217
+		// Token: 0x040197C5 RID: 104389
 		[Nullable(2)]
 		private CookMaterialItemContent ContentItem;
 
-		// Token: 0x0401ED0A RID: 126218
+		// Token: 0x040197C6 RID: 104390
 		private int Index;
 
-		// Token: 0x0401ED0B RID: 126219
+		// Token: 0x040197C7 RID: 104391
 		[Nullable(new byte[]
 		{
 			2,
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.Cook.Item
 		})]
 		private Action<ISingleItemInfo, int> OnClickedCallback;
 
-		// Token: 0x0401ED0C RID: 126220
+		// Token: 0x040197C8 RID: 104392
 		[Nullable(2)]
 		private ISingleItemInfo CookItemData;
 
-		// Token: 0x0200BD6A RID: 48490
+		// Token: 0x0200A773 RID: 42867
 		private enum ECookMaterialItemWrapComponents
 		{
-			// Token: 0x0403922F RID: 234031
+			// Token: 0x04033BFB RID: 211963
 			ContentItem
 		}
 	}

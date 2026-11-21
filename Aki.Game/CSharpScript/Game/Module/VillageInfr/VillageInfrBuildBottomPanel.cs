@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200486D RID: 18541
+	// Token: 0x020037E4 RID: 14308
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VillageInfrBuildBottomPanel : UiPanelBase
 	{
-		// Token: 0x06030875 RID: 198773 RVA: 0x00B44B1C File Offset: 0x00B42D1C
+		// Token: 0x060253A1 RID: 152481 RVA: 0x00A7F8B8 File Offset: 0x00A7DAB8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,19 +33,19 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x06030876 RID: 198774 RVA: 0x00B44BFC File Offset: 0x00B42DFC
+		// Token: 0x060253A2 RID: 152482 RVA: 0x00A7F998 File Offset: 0x00A7DB98
 		private InfrV2TreeBuild GetTreeConfig()
 		{
 			return VillageInfrConfig.Instance.GetInfrTreeBuild(this.SelectId).Value;
 		}
 
-		// Token: 0x06030877 RID: 198775 RVA: 0x00B44C24 File Offset: 0x00B42E24
+		// Token: 0x060253A3 RID: 152483 RVA: 0x00A7F9C0 File Offset: 0x00A7DBC0
 		private InfrV2Level GetVillageConfig()
 		{
 			return VillageInfrConfig.Instance.GetInfrLevel(this.SelectId).Value;
 		}
 
-		// Token: 0x06030878 RID: 198776 RVA: 0x00B44C4C File Offset: 0x00B42E4C
+		// Token: 0x060253A4 RID: 152484 RVA: 0x00A7F9E8 File Offset: 0x00A7DBE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			VillageInfrBuildBottomPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030879 RID: 198777 RVA: 0x00B44C90 File Offset: 0x00B42E90
+		// Token: 0x060253A5 RID: 152485 RVA: 0x00A7FA2C File Offset: 0x00A7DC2C
 		private void SetOpenParam()
 		{
 			IVillageInfrBuildInfoParam villageInfrBuildInfoParam = this.OpenParam as IVillageInfrBuildInfoParam;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.IsDelivery = villageInfrBuildInfoParam.IsDelivery;
 		}
 
-		// Token: 0x0603087A RID: 198778 RVA: 0x00B44CD0 File Offset: 0x00B42ED0
+		// Token: 0x060253A6 RID: 152486 RVA: 0x00A7FA6C File Offset: 0x00A7DC6C
 		private UniTask CreateButton()
 		{
 			VillageInfrBuildBottomPanel.<CreateButton>d__9 <CreateButton>d__;
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.VillageInfr
 			return <CreateButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603087B RID: 198779 RVA: 0x00B44D13 File Offset: 0x00B42F13
+		// Token: 0x060253A7 RID: 152487 RVA: 0x00A7FAAF File Offset: 0x00A7DCAF
 		protected override void OnStart()
 		{
 			this.Refresh(null);
 		}
 
-		// Token: 0x0603087C RID: 198780 RVA: 0x00B44D1C File Offset: 0x00B42F1C
+		// Token: 0x060253A8 RID: 152488 RVA: 0x00A7FAB8 File Offset: 0x00A7DCB8
 		[NullableContext(2)]
 		public void Refresh(IVillageInfrBuildInfoParam param = null)
 		{
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshButton();
 		}
 
-		// Token: 0x0603087D RID: 198781 RVA: 0x00B44D4C File Offset: 0x00B42F4C
+		// Token: 0x060253A9 RID: 152489 RVA: 0x00A7FAE8 File Offset: 0x00A7DCE8
 		private void RefreshLevel()
 		{
 			if (this.SelectType != EVillageInfrSelectType.Village)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetText(1).ShowTextNew(this.GetVillageConfig().Name);
 		}
 
-		// Token: 0x0603087E RID: 198782 RVA: 0x00B44D98 File Offset: 0x00B42F98
+		// Token: 0x060253AA RID: 152490 RVA: 0x00A7FB34 File Offset: 0x00A7DD34
 		private void RefreshProgress()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x0603087F RID: 198783 RVA: 0x00B44F7E File Offset: 0x00B4317E
+		// Token: 0x060253AB RID: 152491 RVA: 0x00A7FD1A File Offset: 0x00A7DF1A
 		private void RefreshMaxLevel()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x06030880 RID: 198784 RVA: 0x00B44FB8 File Offset: 0x00B431B8
+		// Token: 0x060253AC RID: 152492 RVA: 0x00A7FD54 File Offset: 0x00A7DF54
 		private void RefreshFinishState()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			base.GetItem(7).SetUIActive(treeData != null && treeData.Status == InfrV2StatusPb.InfrV2StatusComplete);
 		}
 
-		// Token: 0x06030881 RID: 198785 RVA: 0x00B45008 File Offset: 0x00B43208
+		// Token: 0x060253AD RID: 152493 RVA: 0x00A7FDA4 File Offset: 0x00A7DFA4
 		private void RefreshButton()
 		{
 			if (this.SelectType == EVillageInfrSelectType.Village)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.RefreshTreeButton();
 		}
 
-		// Token: 0x06030882 RID: 198786 RVA: 0x00B45020 File Offset: 0x00B43220
+		// Token: 0x060253AE RID: 152494 RVA: 0x00A7FDBC File Offset: 0x00A7DFBC
 		private void RefreshVillageButton()
 		{
 			bool canVillageLevelUp = VillageInfrModel.Instance.GetCanVillageLevelUp();
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			this.Button.SetEnableClick(false);
 		}
 
-		// Token: 0x06030883 RID: 198787 RVA: 0x00B4509C File Offset: 0x00B4329C
+		// Token: 0x060253AF RID: 152495 RVA: 0x00A7FE38 File Offset: 0x00A7E038
 		private void RefreshTreeButton()
 		{
 			VillageInfrModel instance = VillageInfrModel.Instance;
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			}
 		}
 
-		// Token: 0x06030884 RID: 198788 RVA: 0x00B45188 File Offset: 0x00B43388
+		// Token: 0x060253B0 RID: 152496 RVA: 0x00A7FF24 File Offset: 0x00A7E124
 		public void SetBottomBtnClickCb(Action cb)
 		{
 			this.Button.SetFunction(delegate(int _)
@@ -261,16 +261,16 @@ namespace CSharpScript.Game.Module.VillageInfr
 			});
 		}
 
-		// Token: 0x0401A109 RID: 106761
+		// Token: 0x0401497C RID: 84348
 		private int SelectId;
 
-		// Token: 0x0401A10A RID: 106762
+		// Token: 0x0401497D RID: 84349
 		private EVillageInfrSelectType SelectType;
 
-		// Token: 0x0401A10B RID: 106763
+		// Token: 0x0401497E RID: 84350
 		private bool IsDelivery;
 
-		// Token: 0x0401A10C RID: 106764
+		// Token: 0x0401497F RID: 84351
 		private readonly ButtonItem Button = new ButtonItem(null);
 	}
 }

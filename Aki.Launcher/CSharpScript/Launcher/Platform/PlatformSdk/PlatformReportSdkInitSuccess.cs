@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200014D RID: 333
+	// Token: 0x02000151 RID: 337
 	public class PlatformReportSdkInitSuccess : PlatformSdkReportBaseData
 	{
-		// Token: 0x06000A4F RID: 2639 RVA: 0x00044AEC File Offset: 0x00042CEC
+		// Token: 0x06000A83 RID: 2691 RVA: 0x00046F00 File Offset: 0x00045100
 		public PlatformReportSdkInitSuccess()
 		{
 			this.event_id = 60109;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006B1 RID: 1713
+	// Token: 0x020006C9 RID: 1737
 	public class ConfigPhantomRarityByRare : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002836 RID: 10294 RVA: 0x0013CF33 File Offset: 0x0013B133
+		// Token: 0x060028C6 RID: 10438 RVA: 0x001439AF File Offset: 0x00141BAF
 		static ConfigPhantomRarityByRare()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomRarityByRare.CreateStaticDefaultValue), new Action(ConfigPhantomRarityByRare.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002837 RID: 10295 RVA: 0x0013CF54 File Offset: 0x0013B154
+		// Token: 0x060028C7 RID: 10439 RVA: 0x001439D0 File Offset: 0x00141BD0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomRarityByRare.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002838 RID: 10296 RVA: 0x0013CFD3 File Offset: 0x0013B1D3
+		// Token: 0x060028C8 RID: 10440 RVA: 0x00143A4F File Offset: 0x00141C4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomRarityByRare.LogPair = null;
 			ConfigPhantomRarityByRare.HandleId = 0;
 		}
 
-		// Token: 0x06002839 RID: 10297 RVA: 0x0013CFE1 File Offset: 0x0013B1E1
+		// Token: 0x060028C9 RID: 10441 RVA: 0x00143A5D File Offset: 0x00141C5D
 		public static void Init()
 		{
 			ConfigPhantomRarityByRare.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomRarityByRare.HandleId, "db_phantom.db", "select BinData from `PhantomRarity` where Rare=?");
 		}
 
-		// Token: 0x0600283A RID: 10298 RVA: 0x0013CFFC File Offset: 0x0013B1FC
+		// Token: 0x060028CA RID: 10442 RVA: 0x00143A78 File Offset: 0x00141C78
 		public static PhantomRarity? GetConfig(int p0Rare, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomRarityByRare.HandleId, ConfigPhantomRarityByRare.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomRarity?(rootAsPhantomRarity);
 		}
 
-		// Token: 0x04002EBD RID: 11965
+		// Token: 0x04002F65 RID: 12133
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002EBE RID: 11966
+		// Token: 0x04002F66 RID: 12134
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002EBF RID: 11967
+		// Token: 0x04002F67 RID: 12135
 		private const string TABLE = "PhantomRarity";
 
-		// Token: 0x04002EC0 RID: 11968
+		// Token: 0x04002F68 RID: 12136
 		private const string COMMAND = "select BinData from `PhantomRarity` where Rare=?";
 
-		// Token: 0x04002EC1 RID: 11969
+		// Token: 0x04002F69 RID: 12137
 		private const string KEY_PREFIX = "PhantomRarityByRare";
 
-		// Token: 0x04002EC2 RID: 11970
+		// Token: 0x04002F6A RID: 12138
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002EC3 RID: 11971
+		// Token: 0x04002F6B RID: 12139
 		private static int HandleId;
 	}
 }

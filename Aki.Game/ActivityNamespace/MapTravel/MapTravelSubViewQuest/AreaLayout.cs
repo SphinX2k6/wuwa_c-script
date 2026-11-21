@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,7 +10,7 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 {
-	// Token: 0x020044DD RID: 17629
+	// Token: 0x02002F6A RID: 12138
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,13 +19,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 	})]
 	internal class AreaLayout : GridProxyAbstract<MapTravelAreaData>
 	{
-		// Token: 0x0602D6B8 RID: 186040 RVA: 0x00A404EC File Offset: 0x00A3E6EC
+		// Token: 0x0601CBF6 RID: 117750 RVA: 0x008C6154 File Offset: 0x008C4354
 		public AreaLayout(ActivityMapTravelData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0602D6B9 RID: 186041 RVA: 0x00A404FC File Offset: 0x00A3E6FC
+		// Token: 0x0601CBF7 RID: 117751 RVA: 0x008C6164 File Offset: 0x008C4364
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -44,33 +43,33 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D6BA RID: 186042 RVA: 0x00A405A7 File Offset: 0x00A3E7A7
+		// Token: 0x0601CBF8 RID: 117752 RVA: 0x008C620F File Offset: 0x008C440F
 		protected override void OnStart()
 		{
 			this.QuestLayout = new GenericLayout<QuestCardItem, int>(base.GetMultiTemplateLayout(1), new Func<QuestCardItem>(this.InitItem), null, false, true);
 		}
 
-		// Token: 0x0602D6BB RID: 186043 RVA: 0x00A405CA File Offset: 0x00A3E7CA
+		// Token: 0x0601CBF9 RID: 117753 RVA: 0x008C6232 File Offset: 0x008C4432
 		private QuestCardItem InitItem()
 		{
 			return new QuestCardItem(this.ActivityBaseData);
 		}
 
-		// Token: 0x0602D6BC RID: 186044 RVA: 0x00A405D7 File Offset: 0x00A3E7D7
+		// Token: 0x0601CBFA RID: 117754 RVA: 0x008C623F File Offset: 0x008C443F
 		[NullableContext(2)]
 		public UUIItem GetTitleItem()
 		{
 			return base.GetText(0);
 		}
 
-		// Token: 0x0602D6BD RID: 186045 RVA: 0x00A405E0 File Offset: 0x00A3E7E0
+		// Token: 0x0601CBFB RID: 117755 RVA: 0x008C6248 File Offset: 0x008C4448
 		public override void Refresh(MapTravelAreaData data, bool isSelected, int gridIndex)
 		{
 			Area? areaInfo = AreaConfig.Instance.GetAreaInfo(data.AreaId);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), areaInfo.Value.Title, Array.Empty<object>());
 			int num = 0;
 			int num2 = 0;
-			List<int> list = data.PhantomTaskIdSet.ToList<int>();
+			List<int> list = new List<int>(data.PhantomTaskIdSet);
 			list.Sort(this.ActivityBaseData.SortPhantomQuestItem);
 			foreach (int id in list)
 			{
@@ -83,7 +82,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 				}
 				num2 += count;
 			}
-			this.QuestLayout.RefreshByData(list.ToList<int>(), null, true);
+			this.QuestLayout.RefreshByData(list, null, true);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "TravelPhantomQuest_Progress", new <>z__ReadOnlyArray<object>(new object[]
 			{
 				num,
@@ -91,12 +90,12 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			}));
 		}
 
-		// Token: 0x170073A8 RID: 29608
-		// (get) Token: 0x0602D6BE RID: 186046 RVA: 0x00A40724 File Offset: 0x00A3E924
-		// (set) Token: 0x0602D6BF RID: 186047 RVA: 0x00A4072C File Offset: 0x00A3E92C
+		// Token: 0x17002D7A RID: 11642
+		// (get) Token: 0x0601CBFC RID: 117756 RVA: 0x008C6388 File Offset: 0x008C4588
+		// (set) Token: 0x0601CBFD RID: 117757 RVA: 0x008C6390 File Offset: 0x008C4590
 		protected ActivityMapTravelData ActivityBaseData { get; set; }
 
-		// Token: 0x0401849D RID: 99485
+		// Token: 0x0400F245 RID: 62021
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,20 +103,20 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 		})]
 		protected GenericLayout<QuestCardItem, int> QuestLayout;
 
-		// Token: 0x0200A733 RID: 42803
+		// Token: 0x02008C07 RID: 35847
 		[NullableContext(0)]
 		private class ELayoutDefine
 		{
-			// Token: 0x040327E2 RID: 206818
+			// Token: 0x0402C5AB RID: 181675
 			public const int Title = 0;
 
-			// Token: 0x040327E3 RID: 206819
+			// Token: 0x0402C5AC RID: 181676
 			public const int Layout = 1;
 
-			// Token: 0x040327E4 RID: 206820
+			// Token: 0x0402C5AD RID: 181677
 			public const int CardItem = 2;
 
-			// Token: 0x040327E5 RID: 206821
+			// Token: 0x0402C5AE RID: 181678
 			public const int TxtCount = 3;
 		}
 	}

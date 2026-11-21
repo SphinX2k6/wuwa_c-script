@@ -5,17 +5,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016DA RID: 5850
+// Token: 0x02000B92 RID: 2962
 public class AdviceSentenceSelectItem : UiPanelBase
 {
-	// Token: 0x0600A78B RID: 42891 RVA: 0x00259936 File Offset: 0x00257B36
+	// Token: 0x06007B6B RID: 31595 RVA: 0x00263D3E File Offset: 0x00261F3E
 	[NullableContext(1)]
 	public AdviceSentenceSelectItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A78C RID: 42892 RVA: 0x0025994C File Offset: 0x00257B4C
+	// Token: 0x06007B6C RID: 31596 RVA: 0x00263D54 File Offset: 0x00261F54
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A78D RID: 42893 RVA: 0x002599E8 File Offset: 0x00257BE8
+	// Token: 0x06007B6D RID: 31597 RVA: 0x00263DF0 File Offset: 0x00261FF0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -40,7 +40,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A78E RID: 42894 RVA: 0x00259A24 File Offset: 0x00257C24
+	// Token: 0x06007B6E RID: 31598 RVA: 0x00263E2C File Offset: 0x0026202C
 	private bool CanExecuteChange()
 	{
 		int currentSentenceSelectIndex = AdviceModel.Instance.CurrentSentenceSelectIndex;
@@ -48,7 +48,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		return !(currentSentenceSelectIndex == sortType.GetValueOrDefault() & sortType != null);
 	}
 
-	// Token: 0x0600A78F RID: 42895 RVA: 0x00259A58 File Offset: 0x00257C58
+	// Token: 0x06007B6F RID: 31599 RVA: 0x00263E60 File Offset: 0x00262060
 	public void UpdateItem(int id)
 	{
 		base.GetExtendToggle(0).OnStateChange.Clear();
@@ -58,7 +58,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		this.RefreshShowInfo();
 	}
 
-	// Token: 0x0600A790 RID: 42896 RVA: 0x00259AAC File Offset: 0x00257CAC
+	// Token: 0x06007B70 RID: 31600 RVA: 0x00263EB4 File Offset: 0x002620B4
 	private void RefreshView()
 	{
 		EToggleState toggleState = base.GetExtendToggle(0).ToggleState;
@@ -71,7 +71,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A791 RID: 42897 RVA: 0x00259B04 File Offset: 0x00257D04
+	// Token: 0x06007B71 RID: 31601 RVA: 0x00263F0C File Offset: 0x0026210C
 	private void RefreshShowInfo()
 	{
 		int? sortType = this.SortType;
@@ -80,7 +80,7 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		LguiUtil.Instance.SetLocalText(base.GetText(4), textTableId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600A792 RID: 42898 RVA: 0x00259B54 File Offset: 0x00257D54
+	// Token: 0x06007B72 RID: 31602 RVA: 0x00263F5C File Offset: 0x0026215C
 	private void ButtonClick(EToggleState state)
 	{
 		int currentSentenceSelectIndex = AdviceModel.Instance.CurrentSentenceSelectIndex;
@@ -92,28 +92,28 @@ public class AdviceSentenceSelectItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004B8F RID: 19343
+	// Token: 0x04004C36 RID: 19510
 	private int? SortType;
 
-	// Token: 0x02007CAE RID: 31918
+	// Token: 0x02006E33 RID: 28211
 	private static class EAdviceWordTypeItemComponents
 	{
-		// Token: 0x04028E5A RID: 167514
+		// Token: 0x04024183 RID: 147843
 		public const int Toggle = 0;
 
-		// Token: 0x04028E5B RID: 167515
+		// Token: 0x04024184 RID: 147844
 		public const int Texture = 1;
 
-		// Token: 0x04028E5C RID: 167516
+		// Token: 0x04024185 RID: 147845
 		public const int NotFoundActor = 2;
 
-		// Token: 0x04028E5D RID: 167517
+		// Token: 0x04024186 RID: 147846
 		public const int TextLv = 3;
 
-		// Token: 0x04028E5E RID: 167518
+		// Token: 0x04024187 RID: 147847
 		public const int TextName = 4;
 
-		// Token: 0x04028E5F RID: 167519
+		// Token: 0x04024188 RID: 147848
 		public const int CopyType = 5;
 	}
 }

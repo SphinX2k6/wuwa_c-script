@@ -9,7 +9,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000024 RID: 36
+	// Token: 0x02000009 RID: 9
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(28, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 28)]
@@ -17,7 +17,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 28)]
 	public struct FBoxSphereBounds : IEquatable<FBoxSphereBounds>, IEqualityOperators<FBoxSphereBounds, FBoxSphereBounds, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x0600010B RID: 267 RVA: 0x00006726 File Offset: 0x00004926
+		// Token: 0x06000090 RID: 144 RVA: 0x00002F92 File Offset: 0x00001192
 		public FBoxSphereBounds()
 		{
 			this.Origin = default(FVector);
@@ -25,14 +25,14 @@ namespace UnrealEngine
 			this.SphereRadius = 0f;
 		}
 
-		// Token: 0x0600010C RID: 268 RVA: 0x0000674B File Offset: 0x0000494B
+		// Token: 0x06000091 RID: 145 RVA: 0x00002FB7 File Offset: 0x000011B7
 		[NullableContext(1)]
 		public FBoxSphereBounds(FVector[] points)
 		{
 			this = new FBoxSphereBounds(points.AsSpan<FVector>());
 		}
 
-		// Token: 0x0600010D RID: 269 RVA: 0x0000675C File Offset: 0x0000495C
+		// Token: 0x06000092 RID: 146 RVA: 0x00002FC8 File Offset: 0x000011C8
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -44,19 +44,19 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600010E RID: 270 RVA: 0x00006786 File Offset: 0x00004986
+		// Token: 0x06000093 RID: 147 RVA: 0x00002FF2 File Offset: 0x000011F2
 		public readonly bool Equals(FBoxSphereBounds other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x0600010F RID: 271 RVA: 0x00006794 File Offset: 0x00004994
+		// Token: 0x06000094 RID: 148 RVA: 0x00003000 File Offset: 0x00001200
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<FVector, FVector, float>(this.Origin, this.BoxExtent, this.SphereRadius);
 		}
 
-		// Token: 0x06000110 RID: 272 RVA: 0x000067B0 File Offset: 0x000049B0
+		// Token: 0x06000095 RID: 149 RVA: 0x0000301C File Offset: 0x0000121C
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -70,7 +70,7 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000111 RID: 273 RVA: 0x0000681C File Offset: 0x00004A1C
+		// Token: 0x06000096 RID: 150 RVA: 0x00003088 File Offset: 0x00001288
 		[Conditional("ENABLE_NAN_DIAGNOSTIC")]
 		public void DiagnosticCheckNaN()
 		{
@@ -97,87 +97,87 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000112 RID: 274
+		// Token: 0x06000097 RID: 151
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Ctor_FBox(in FBox box);
 
-		// Token: 0x06000113 RID: 275
+		// Token: 0x06000098 RID: 152
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Ctor_FSphere(in FSphere s);
 
-		// Token: 0x06000114 RID: 276
+		// Token: 0x06000099 RID: 153
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Ctor_FBox_FSphere(in FBox box, in FSphere s);
 
-		// Token: 0x06000115 RID: 277
+		// Token: 0x0600009A RID: 154
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Ctor_FVector_FVector_float(in FVector origin, in FVector extent, float radius);
 
-		// Token: 0x06000116 RID: 278
+		// Token: 0x0600009B RID: 155
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FBoxSphereBounds Internal_Ctor_FVectorArr(FVector* data, int num);
 
-		// Token: 0x06000117 RID: 279
+		// Token: 0x0600009C RID: 156
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Eq(in FBoxSphereBounds a, in FBoxSphereBounds b);
 
-		// Token: 0x06000118 RID: 280
+		// Token: 0x0600009D RID: 157
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_NotEq(in FBoxSphereBounds a, in FBoxSphereBounds b);
 
-		// Token: 0x06000119 RID: 281
+		// Token: 0x0600009E RID: 158
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FBoxSphereBounds a);
 
-		// Token: 0x0600011A RID: 282
+		// Token: 0x0600009F RID: 159
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Add_FBoxSphereBounds(in FBoxSphereBounds a, in FBoxSphereBounds b);
 
-		// Token: 0x0600011B RID: 283
+		// Token: 0x060000A0 RID: 160
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Mul_float(in FBoxSphereBounds a, float f);
 
-		// Token: 0x0600011C RID: 284
+		// Token: 0x060000A1 RID: 161
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_ComputeSquaredDistanceFromBoxToPoint(in FBoxSphereBounds a, in FVector v);
 
-		// Token: 0x0600011D RID: 285
+		// Token: 0x060000A2 RID: 162
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_SpheresIntersect(in FBoxSphereBounds a, in FBoxSphereBounds b, float tolerance);
 
-		// Token: 0x0600011E RID: 286
+		// Token: 0x060000A3 RID: 163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_BoxesIntersect(in FBoxSphereBounds a, in FBoxSphereBounds b);
 
-		// Token: 0x0600011F RID: 287
+		// Token: 0x060000A4 RID: 164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBox Internal_GetBox(in FBoxSphereBounds a);
 
-		// Token: 0x06000120 RID: 288
+		// Token: 0x060000A5 RID: 165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetBoxExtrema(in FBoxSphereBounds a, uint u);
 
-		// Token: 0x06000121 RID: 289
+		// Token: 0x060000A6 RID: 166
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FSphere Internal_GetSphere(in FBoxSphereBounds a);
 
-		// Token: 0x06000122 RID: 290
+		// Token: 0x060000A7 RID: 167
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_ExpandBy(in FBoxSphereBounds a, float fAbs);
 
-		// Token: 0x06000123 RID: 291
+		// Token: 0x060000A8 RID: 168
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_TransformBy_FMatrix(in FBoxSphereBounds a, in FMatrix m);
 
-		// Token: 0x06000124 RID: 292
+		// Token: 0x060000A9 RID: 169
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_TransformBy_FTransform(in FBoxSphereBounds a, in FTransform tf);
 
-		// Token: 0x06000125 RID: 293
+		// Token: 0x060000AA RID: 170
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FBoxSphereBounds Internal_Union(in FBoxSphereBounds a, in FBoxSphereBounds b);
 
-		// Token: 0x06000126 RID: 294 RVA: 0x000068E4 File Offset: 0x00004AE4
+		// Token: 0x060000AB RID: 171 RVA: 0x00003150 File Offset: 0x00001350
 		public unsafe FBoxSphereBounds(in FBox box)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -189,7 +189,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000127 RID: 295 RVA: 0x0000690C File Offset: 0x00004B0C
+		// Token: 0x060000AC RID: 172 RVA: 0x00003178 File Offset: 0x00001378
 		public unsafe FBoxSphereBounds(in FSphere sphere)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -201,7 +201,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000128 RID: 296 RVA: 0x00006934 File Offset: 0x00004B34
+		// Token: 0x060000AD RID: 173 RVA: 0x000031A0 File Offset: 0x000013A0
 		public unsafe FBoxSphereBounds(in FBox box, in FSphere sphere)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -216,7 +216,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000129 RID: 297 RVA: 0x00006963 File Offset: 0x00004B63
+		// Token: 0x060000AE RID: 174 RVA: 0x000031CF File Offset: 0x000013CF
 		public FBoxSphereBounds(in FVector inOrigin, in FVector inBoxExtent, float inSphereRadius)
 		{
 			this.Origin = inOrigin;
@@ -224,7 +224,7 @@ namespace UnrealEngine
 			this.SphereRadius = inSphereRadius;
 		}
 
-		// Token: 0x0600012A RID: 298 RVA: 0x00006984 File Offset: 0x00004B84
+		// Token: 0x060000AF RID: 175 RVA: 0x000031F0 File Offset: 0x000013F0
 		public unsafe FBoxSphereBounds(Span<FVector> points)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -237,19 +237,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600012B RID: 299 RVA: 0x000069B9 File Offset: 0x00004BB9
+		// Token: 0x060000B0 RID: 176 RVA: 0x00003225 File Offset: 0x00001425
 		public static bool operator ==(FBoxSphereBounds left, FBoxSphereBounds right)
 		{
 			return FBoxSphereBounds.Internal_Eq(left, right);
 		}
 
-		// Token: 0x0600012C RID: 300 RVA: 0x000069C4 File Offset: 0x00004BC4
+		// Token: 0x060000B1 RID: 177 RVA: 0x00003230 File Offset: 0x00001430
 		public static bool operator !=(FBoxSphereBounds left, FBoxSphereBounds right)
 		{
 			return FBoxSphereBounds.Internal_NotEq(left, right);
 		}
 
-		// Token: 0x0600012D RID: 301 RVA: 0x000069D0 File Offset: 0x00004BD0
+		// Token: 0x060000B2 RID: 178 RVA: 0x0000323C File Offset: 0x0000143C
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -258,7 +258,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600012E RID: 302 RVA: 0x000069E8 File Offset: 0x00004BE8
+		// Token: 0x060000B3 RID: 179 RVA: 0x00003254 File Offset: 0x00001454
 		public unsafe static FBoxSphereBounds operator +(in FBoxSphereBounds a, in FBoxSphereBounds b)
 		{
 			fixed (FBoxSphereBounds* ptr = &a)
@@ -270,7 +270,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600012F RID: 303 RVA: 0x00006A04 File Offset: 0x00004C04
+		// Token: 0x060000B4 RID: 180 RVA: 0x00003270 File Offset: 0x00001470
 		public unsafe static FBoxSphereBounds operator *(in FBoxSphereBounds a, float scale)
 		{
 			fixed (FBoxSphereBounds* ptr = &a)
@@ -279,7 +279,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000130 RID: 304 RVA: 0x00006A1C File Offset: 0x00004C1C
+		// Token: 0x060000B5 RID: 181 RVA: 0x00003288 File Offset: 0x00001488
 		public unsafe readonly float ComputeSquaredDistanceFromBoxToPoint(in FVector point)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -291,7 +291,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000131 RID: 305 RVA: 0x00006A38 File Offset: 0x00004C38
+		// Token: 0x060000B6 RID: 182 RVA: 0x000032A4 File Offset: 0x000014A4
 		public unsafe static bool SpheresIntersect(in FBoxSphereBounds a, in FBoxSphereBounds b, float tolerance = 0.0001f)
 		{
 			fixed (FBoxSphereBounds* ptr = &a)
@@ -303,7 +303,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000132 RID: 306 RVA: 0x00006A58 File Offset: 0x00004C58
+		// Token: 0x060000B7 RID: 183 RVA: 0x000032C4 File Offset: 0x000014C4
 		public unsafe static bool BoxesIntersect(in FBoxSphereBounds a, in FBoxSphereBounds b)
 		{
 			fixed (FBoxSphereBounds* ptr = &a)
@@ -315,7 +315,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000133 RID: 307 RVA: 0x00006A74 File Offset: 0x00004C74
+		// Token: 0x060000B8 RID: 184 RVA: 0x000032E0 File Offset: 0x000014E0
 		public unsafe readonly FBox GetBox()
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -324,7 +324,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000134 RID: 308 RVA: 0x00006A8C File Offset: 0x00004C8C
+		// Token: 0x060000B9 RID: 185 RVA: 0x000032F8 File Offset: 0x000014F8
 		public unsafe readonly FVector GetBoxExtrema(uint extrema)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -333,7 +333,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000135 RID: 309 RVA: 0x00006AA4 File Offset: 0x00004CA4
+		// Token: 0x060000BA RID: 186 RVA: 0x00003310 File Offset: 0x00001510
 		public unsafe readonly FSphere GetSphere()
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -342,7 +342,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000136 RID: 310 RVA: 0x00006ABC File Offset: 0x00004CBC
+		// Token: 0x060000BB RID: 187 RVA: 0x00003328 File Offset: 0x00001528
 		public unsafe readonly FBoxSphereBounds ExpandBy(float amount)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -351,7 +351,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000137 RID: 311 RVA: 0x00006AD4 File Offset: 0x00004CD4
+		// Token: 0x060000BC RID: 188 RVA: 0x00003340 File Offset: 0x00001540
 		public unsafe readonly FBoxSphereBounds TransformBy(in FMatrix matrix)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -363,7 +363,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000138 RID: 312 RVA: 0x00006AF0 File Offset: 0x00004CF0
+		// Token: 0x060000BD RID: 189 RVA: 0x0000335C File Offset: 0x0000155C
 		public unsafe readonly FBoxSphereBounds TransformBy(in FTransform transform)
 		{
 			fixed (FBoxSphereBounds* ptr = &this)
@@ -375,7 +375,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000139 RID: 313 RVA: 0x00006B0C File Offset: 0x00004D0C
+		// Token: 0x060000BE RID: 190 RVA: 0x00003378 File Offset: 0x00001578
 		public unsafe static FBoxSphereBounds Union(in FBoxSphereBounds a, in FBoxSphereBounds b)
 		{
 			fixed (FBoxSphereBounds* ptr = &a)
@@ -387,31 +387,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600013A RID: 314 RVA: 0x00006B28 File Offset: 0x00004D28
+		// Token: 0x060000BF RID: 191 RVA: 0x00003394 File Offset: 0x00001594
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBoxSphereBounds._ScriptStructPtr != 0) ? FBoxSphereBounds._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.BoxSphereBounds", ref FBoxSphereBounds._ScriptStructPtr);
 		}
 
-		// Token: 0x04000067 RID: 103
+		// Token: 0x04000020 RID: 32
 		public static readonly FBoxSphereBounds Empty = new FBoxSphereBounds();
 
-		// Token: 0x04000068 RID: 104
+		// Token: 0x04000021 RID: 33
 		[FieldOffset(0)]
 		public FVector Origin;
 
-		// Token: 0x04000069 RID: 105
+		// Token: 0x04000022 RID: 34
 		[FieldOffset(12)]
 		public FVector BoxExtent;
 
-		// Token: 0x0400006A RID: 106
+		// Token: 0x04000023 RID: 35
 		[FieldOffset(24)]
 		public float SphereRadius;
 
-		// Token: 0x0400006B RID: 107
+		// Token: 0x04000024 RID: 36
 		public const string __ObjectPath = "/Script/CoreUObject.BoxSphereBounds";
 
-		// Token: 0x0400006C RID: 108
+		// Token: 0x04000025 RID: 37
 		private static IntPtr _ScriptStructPtr;
 	}
 }

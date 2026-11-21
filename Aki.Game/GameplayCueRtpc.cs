@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002FD2 RID: 12242
+// Token: 0x02002526 RID: 9510
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueRtpc : GameplayCueMagnitude
 {
-	// Token: 0x06019F43 RID: 106307 RVA: 0x006CA888 File Offset: 0x006C8A88
+	// Token: 0x06017855 RID: 96341 RVA: 0x006F117C File Offset: 0x006EF37C
 	protected override void OnInit()
 	{
 		base.OnInit();
@@ -25,13 +25,13 @@ public class GameplayCueRtpc : GameplayCueMagnitude
 		this.ActorComp = ((entity2 != null) ? entity2.GetComponent<BaseActorComponent>() : null);
 	}
 
-	// Token: 0x06019F44 RID: 106308 RVA: 0x006CA96B File Offset: 0x006C8B6B
+	// Token: 0x06017856 RID: 96342 RVA: 0x006F125F File Offset: 0x006EF45F
 	protected override bool UseMagnitude()
 	{
 		return !this.DisableByTeammate && base.UseMagnitude();
 	}
 
-	// Token: 0x06019F45 RID: 106309 RVA: 0x006CA97D File Offset: 0x006C8B7D
+	// Token: 0x06017857 RID: 96343 RVA: 0x006F1271 File Offset: 0x006EF471
 	protected override void OnDestroy()
 	{
 		if (this.SendZeroOnDestroy)
@@ -42,19 +42,19 @@ public class GameplayCueRtpc : GameplayCueMagnitude
 		base.OnDestroy();
 	}
 
-	// Token: 0x06019F46 RID: 106310 RVA: 0x006CA99F File Offset: 0x006C8B9F
+	// Token: 0x06017858 RID: 96344 RVA: 0x006F1293 File Offset: 0x006EF493
 	protected override void OnSetMagnitude(float normalizedValue)
 	{
 		this.SetRtpcValue(normalizedValue);
 	}
 
-	// Token: 0x06019F47 RID: 106311 RVA: 0x006CA9A8 File Offset: 0x006C8BA8
+	// Token: 0x06017859 RID: 96345 RVA: 0x006F129C File Offset: 0x006EF49C
 	protected override float Normalize()
 	{
 		return this.Value;
 	}
 
-	// Token: 0x06019F48 RID: 106312 RVA: 0x006CA9B0 File Offset: 0x006C8BB0
+	// Token: 0x0601785A RID: 96346 RVA: 0x006F12A4 File Offset: 0x006EF4A4
 	private void SetRtpcValue(float value)
 	{
 		if (this.ActorComp == null)
@@ -67,15 +67,15 @@ public class GameplayCueRtpc : GameplayCueMagnitude
 		}));
 	}
 
-	// Token: 0x0400C477 RID: 50295
+	// Token: 0x0400C820 RID: 51232
 	private bool DisableByTeammate;
 
-	// Token: 0x0400C478 RID: 50296
+	// Token: 0x0400C821 RID: 51233
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x0400C479 RID: 50297
+	// Token: 0x0400C822 RID: 51234
 	private string RtpcKey;
 
-	// Token: 0x0400C47A RID: 50298
+	// Token: 0x0400C823 RID: 51235
 	private bool SendZeroOnDestroy;
 }

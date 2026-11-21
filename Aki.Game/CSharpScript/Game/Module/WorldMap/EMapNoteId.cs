@@ -2,48 +2,48 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004785 RID: 18309
+	// Token: 0x020036B6 RID: 14006
 	public enum EMapNoteId
 	{
-		// Token: 0x04019D2D RID: 105773
+		// Token: 0x040143DD RID: 82909
 		Daily = 1,
-		// Token: 0x04019D2E RID: 105774
+		// Token: 0x040143DE RID: 82910
 		MingSu,
-		// Token: 0x04019D2F RID: 105775
+		// Token: 0x040143DF RID: 82911
 		TowerReward,
-		// Token: 0x04019D30 RID: 105776
+		// Token: 0x040143E0 RID: 82912
 		WorldLevel,
-		// Token: 0x04019D31 RID: 105777
+		// Token: 0x040143E1 RID: 82913
 		HuangLongExploreLevel,
-		// Token: 0x04019D32 RID: 105778
+		// Token: 0x040143E2 RID: 82914
 		LordGym = 8,
-		// Token: 0x04019D33 RID: 105779
+		// Token: 0x040143E3 RID: 82915
 		Rogue,
-		// Token: 0x04019D34 RID: 105780
+		// Token: 0x040143E4 RID: 82916
 		DarkCoastDelivery,
-		// Token: 0x04019D35 RID: 105781
+		// Token: 0x040143E5 RID: 82917
 		NewLordGym,
-		// Token: 0x04019D36 RID: 105782
+		// Token: 0x040143E6 RID: 82918
 		PupuVillage,
-		// Token: 0x04019D37 RID: 105783
+		// Token: 0x040143E7 RID: 82919
 		RogueRes,
-		// Token: 0x04019D38 RID: 105784
+		// Token: 0x040143E8 RID: 82920
 		WeeklyRogue,
-		// Token: 0x04019D39 RID: 105785
+		// Token: 0x040143E9 RID: 82921
 		PupuVillageQiQiu,
-		// Token: 0x04019D3A RID: 105786
+		// Token: 0x040143EA RID: 82922
 		LahailuoShengXia,
-		// Token: 0x04019D3B RID: 105787
+		// Token: 0x040143EB RID: 82923
 		RiLing,
-		// Token: 0x04019D3C RID: 105788
+		// Token: 0x040143EC RID: 82924
 		VillageInfrTree,
-		// Token: 0x04019D3D RID: 105789
+		// Token: 0x040143ED RID: 82925
 		VillageInfr,
-		// Token: 0x04019D3E RID: 105790
+		// Token: 0x040143EE RID: 82926
 		Sheriff,
-		// Token: 0x04019D3F RID: 105791
+		// Token: 0x040143EF RID: 82927
 		DollGrabMachine,
-		// Token: 0x04019D40 RID: 105792
+		// Token: 0x040143F0 RID: 82928
 		MengZhou
 	}
 }

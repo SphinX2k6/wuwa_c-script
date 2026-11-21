@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000AE RID: 174
+	// Token: 0x020000B6 RID: 182
 	public class ConfigAreaTerminalByCountry : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000415 RID: 1045 RVA: 0x00070C03 File Offset: 0x0006EE03
+		// Token: 0x06000445 RID: 1093 RVA: 0x000754B7 File Offset: 0x000736B7
 		static ConfigAreaTerminalByCountry()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaTerminalByCountry.CreateStaticDefaultValue), new Action(ConfigAreaTerminalByCountry.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000416 RID: 1046 RVA: 0x00070C24 File Offset: 0x0006EE24
+		// Token: 0x06000446 RID: 1094 RVA: 0x000754D8 File Offset: 0x000736D8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaTerminalByCountry.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000417 RID: 1047 RVA: 0x00070CA3 File Offset: 0x0006EEA3
+		// Token: 0x06000447 RID: 1095 RVA: 0x00075557 File Offset: 0x00073757
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaTerminalByCountry.LogPair = null;
 			ConfigAreaTerminalByCountry.HandleId = 0;
 		}
 
-		// Token: 0x06000418 RID: 1048 RVA: 0x00070CB1 File Offset: 0x0006EEB1
+		// Token: 0x06000448 RID: 1096 RVA: 0x00075565 File Offset: 0x00073765
 		public static void Init()
 		{
 			ConfigAreaTerminalByCountry.HandleId = ConfigCommon.InitDataStatement(ConfigAreaTerminalByCountry.HandleId, "db_areaterminal.db", "select BinData from `AreaTerminal` where Country=?");
 		}
 
-		// Token: 0x06000419 RID: 1049 RVA: 0x00070CCC File Offset: 0x0006EECC
+		// Token: 0x06000449 RID: 1097 RVA: 0x00075580 File Offset: 0x00073780
 		[NullableContext(2)]
 		public static IReadOnlyList<AreaTerminal> GetConfigList(int p0Country, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040004A6 RID: 1190
+		// Token: 0x040004DE RID: 1246
 		private const string DB = "db_areaterminal.db";
 
-		// Token: 0x040004A7 RID: 1191
+		// Token: 0x040004DF RID: 1247
 		private const string FILE = "q.区域终端.xlsx";
 
-		// Token: 0x040004A8 RID: 1192
+		// Token: 0x040004E0 RID: 1248
 		private const string TABLE = "AreaTerminal";
 
-		// Token: 0x040004A9 RID: 1193
+		// Token: 0x040004E1 RID: 1249
 		private const string COMMAND = "select BinData from `AreaTerminal` where Country=?";
 
-		// Token: 0x040004AA RID: 1194
+		// Token: 0x040004E2 RID: 1250
 		private const string KEY_PREFIX = "AreaTerminalByCountry";
 
-		// Token: 0x040004AB RID: 1195
+		// Token: 0x040004E3 RID: 1251
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040004AC RID: 1196
+		// Token: 0x040004E4 RID: 1252
 		private static int HandleId;
 	}
 }

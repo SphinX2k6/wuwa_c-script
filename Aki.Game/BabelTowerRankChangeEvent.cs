@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002170 RID: 8560
+// Token: 0x02001648 RID: 5704
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerRankChangeEvent : PlayerCommonLogData
 {
-	// Token: 0x17001512 RID: 5394
-	// (get) Token: 0x06010A84 RID: 68228 RVA: 0x0040C4B0 File Offset: 0x0040A6B0
-	// (set) Token: 0x06010A85 RID: 68229 RVA: 0x0040C4B8 File Offset: 0x0040A6B8
+	// Token: 0x17001540 RID: 5440
+	// (get) Token: 0x0600DEF7 RID: 57079 RVA: 0x00418BF8 File Offset: 0x00416DF8
+	// (set) Token: 0x0600DEF8 RID: 57080 RVA: 0x00418C00 File Offset: 0x00416E00
 	public override string event_id { get; set; } = "1931";
 
-	// Token: 0x04007E67 RID: 32359
+	// Token: 0x04007F77 RID: 32631
 	public int i_best_star;
 
-	// Token: 0x04007E68 RID: 32360
+	// Token: 0x04007F78 RID: 32632
 	public int i_current_star;
 
-	// Token: 0x04007E69 RID: 32361
+	// Token: 0x04007F79 RID: 32633
 	public int i_target_star;
 
-	// Token: 0x04007E6A RID: 32362
+	// Token: 0x04007F7A RID: 32634
 	public int i_dungeon_id;
 
-	// Token: 0x04007E6B RID: 32363
+	// Token: 0x04007F7B RID: 32635
 	public string s_trace_id = "";
 
-	// Token: 0x04007E6C RID: 32364
+	// Token: 0x04007F7C RID: 32636
 	public string s_battle_id = "";
 
-	// Token: 0x04007E6D RID: 32365
+	// Token: 0x04007F7D RID: 32637
 	public int i_old_exp;
 
-	// Token: 0x04007E6E RID: 32366
+	// Token: 0x04007F7E RID: 32638
 	public int i_new_exp;
 
-	// Token: 0x04007E6F RID: 32367
+	// Token: 0x04007F7F RID: 32639
 	public int i_old_level;
 
-	// Token: 0x04007E70 RID: 32368
+	// Token: 0x04007F80 RID: 32640
 	public int i_new_level;
 }

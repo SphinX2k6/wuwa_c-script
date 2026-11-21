@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D59 RID: 11609
+// Token: 0x020022B3 RID: 8883
 [NullableContext(1)]
 [Nullable(0)]
 public class WeeklyRogueShopView : UiViewBase
 {
-	// Token: 0x0601865A RID: 99930 RVA: 0x0063656B File Offset: 0x0063476B
+	// Token: 0x06015EFC RID: 89852 RVA: 0x0065C57B File Offset: 0x0065A77B
 	public WeeklyRogueShopView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0601865B RID: 99931 RVA: 0x00636574 File Offset: 0x00634774
+	// Token: 0x06015EFD RID: 89853 RVA: 0x0065C584 File Offset: 0x0065A784
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class WeeklyRogueShopView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601865C RID: 99932 RVA: 0x00636690 File Offset: 0x00634890
+	// Token: 0x06015EFE RID: 89854 RVA: 0x0065C6A0 File Offset: 0x0065A8A0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WeeklyRogueShopSelect, new Action<int, RogueWeeklyEntry>(this.OnSelectItem));
@@ -53,7 +53,7 @@ public class WeeklyRogueShopView : UiViewBase
 		EventSystem.Instance.Add<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 	}
 
-	// Token: 0x0601865D RID: 99933 RVA: 0x00636764 File Offset: 0x00634964
+	// Token: 0x06015EFF RID: 89855 RVA: 0x0065C774 File Offset: 0x0065A974
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WeeklyRogueShopSelect, new Action<int, RogueWeeklyEntry>(this.OnSelectItem));
@@ -65,7 +65,7 @@ public class WeeklyRogueShopView : UiViewBase
 		EventSystem.Instance.Remove<IProto_NormalItem, int, int>(EEventName.OnCommonItemCountRefresh, new Action<IProto_NormalItem, int, int>(this.OnCommonItemCountRefresh));
 	}
 
-	// Token: 0x0601865E RID: 99934 RVA: 0x00636838 File Offset: 0x00634A38
+	// Token: 0x06015F00 RID: 89856 RVA: 0x0065C848 File Offset: 0x0065AA48
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueShopView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -76,13 +76,13 @@ public class WeeklyRogueShopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601865F RID: 99935 RVA: 0x0063687C File Offset: 0x00634A7C
+	// Token: 0x06015F01 RID: 89857 RVA: 0x0065C88C File Offset: 0x0065AA8C
 	protected override void OnAfterShow()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Show", false, null, false);
 	}
 
-	// Token: 0x06018660 RID: 99936 RVA: 0x006368A4 File Offset: 0x00634AA4
+	// Token: 0x06015F02 RID: 89858 RVA: 0x0065C8B4 File Offset: 0x0065AAB4
 	private void RefreshCanBuyText()
 	{
 		LoopScrollView<WeeklyRogueTokenGrid, RogueWeeklyEntry> goodsLayout = this.GoodsLayout;
@@ -93,7 +93,7 @@ public class WeeklyRogueShopView : UiViewBase
 		goodsLayout.RefreshAllGridProxies();
 	}
 
-	// Token: 0x06018661 RID: 99937 RVA: 0x006368B6 File Offset: 0x00634AB6
+	// Token: 0x06015F03 RID: 89859 RVA: 0x0065C8C6 File Offset: 0x0065AAC6
 	private void OnSelectItem(int gridIndex, RogueWeeklyEntry data)
 	{
 		this.DetailPanel.Refresh(data);
@@ -105,7 +105,7 @@ public class WeeklyRogueShopView : UiViewBase
 		goodsLayout.SelectGridProxy(gridIndex, false);
 	}
 
-	// Token: 0x06018662 RID: 99938 RVA: 0x006368D8 File Offset: 0x00634AD8
+	// Token: 0x06015F04 RID: 89860 RVA: 0x0065C8E8 File Offset: 0x0065AAE8
 	private void OnBuyItem()
 	{
 		UiAsyncTask task = new UiAsyncTask("RefreshWeeklyRogueShop", delegate()
@@ -120,49 +120,49 @@ public class WeeklyRogueShopView : UiViewBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06018663 RID: 99939 RVA: 0x00636905 File Offset: 0x00634B05
+	// Token: 0x06015F05 RID: 89861 RVA: 0x0065C915 File Offset: 0x0065AB15
 	private void OnPlayerCurrencyChange(int _)
 	{
 		this.OnCurrencyUpdate();
 	}
 
-	// Token: 0x06018664 RID: 99940 RVA: 0x0063690D File Offset: 0x00634B0D
+	// Token: 0x06015F06 RID: 89862 RVA: 0x0065C91D File Offset: 0x0065AB1D
 	private void OnAddCommonItemList(IReadOnlyList<IProto_NormalItem> protoNormalItems)
 	{
 		this.OnCurrencyUpdate();
 	}
 
-	// Token: 0x06018665 RID: 99941 RVA: 0x00636915 File Offset: 0x00634B15
+	// Token: 0x06015F07 RID: 89863 RVA: 0x0065C925 File Offset: 0x0065AB25
 	private void OnRemoveCommonItem(IReadOnlyList<int> readOnlyList)
 	{
 		this.OnCurrencyUpdate();
 	}
 
-	// Token: 0x06018666 RID: 99942 RVA: 0x0063691D File Offset: 0x00634B1D
+	// Token: 0x06015F08 RID: 89864 RVA: 0x0065C92D File Offset: 0x0065AB2D
 	private void OnCommonItemCountRefresh(IProto_NormalItem protoNormalItem, int i, int arg3)
 	{
 		this.OnCurrencyUpdate();
 	}
 
-	// Token: 0x06018667 RID: 99943 RVA: 0x00636925 File Offset: 0x00634B25
+	// Token: 0x06015F09 RID: 89865 RVA: 0x0065C935 File Offset: 0x0065AB35
 	private void OnCurrencyUpdate()
 	{
 		this.RefreshCanBuyText();
 	}
 
-	// Token: 0x06018668 RID: 99944 RVA: 0x0063692D File Offset: 0x00634B2D
+	// Token: 0x06015F0A RID: 89866 RVA: 0x0065C93D File Offset: 0x0065AB3D
 	private void OnBtnInfo()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueInfo, null, null);
 	}
 
-	// Token: 0x06018669 RID: 99945 RVA: 0x00636940 File Offset: 0x00634B40
+	// Token: 0x06015F0B RID: 89867 RVA: 0x0065C950 File Offset: 0x0065AB50
 	private WeeklyRogueTokenGrid CreateGoodsItem()
 	{
 		return new WeeklyRogueTokenGrid();
 	}
 
-	// Token: 0x0601866A RID: 99946 RVA: 0x00636948 File Offset: 0x00634B48
+	// Token: 0x06015F0C RID: 89868 RVA: 0x0065C958 File Offset: 0x0065AB58
 	public UniTask RefreshItemList()
 	{
 		WeeklyRogueShopView.<RefreshItemList>d__21 <RefreshItemList>d__;
@@ -173,19 +173,19 @@ public class WeeklyRogueShopView : UiViewBase
 		return <RefreshItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400B4FD RID: 46333
+	// Token: 0x0400B872 RID: 47218
 	[Nullable(2)]
 	public LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400B4FE RID: 46334
+	// Token: 0x0400B873 RID: 47219
 	[Nullable(2)]
 	public PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400B4FF RID: 46335
+	// Token: 0x0400B874 RID: 47220
 	[Nullable(2)]
 	public WeeklyRogueShopDetail DetailPanel;
 
-	// Token: 0x0400B500 RID: 46336
+	// Token: 0x0400B875 RID: 47221
 	[Nullable(new byte[]
 	{
 		2,
@@ -194,29 +194,29 @@ public class WeeklyRogueShopView : UiViewBase
 	})]
 	public LoopScrollView<WeeklyRogueTokenGrid, RogueWeeklyEntry> GoodsLayout;
 
-	// Token: 0x020092FB RID: 37627
+	// Token: 0x02008522 RID: 34082
 	[NullableContext(0)]
 	private enum EWeeklyRogueShopDefine
 	{
-		// Token: 0x0402F812 RID: 194578
+		// Token: 0x0402AE9A RID: 175770
 		CaptionItem,
-		// Token: 0x0402F813 RID: 194579
+		// Token: 0x0402AE9B RID: 175771
 		PanelInfo,
-		// Token: 0x0402F814 RID: 194580
+		// Token: 0x0402AE9C RID: 175772
 		ElementPanel,
-		// Token: 0x0402F815 RID: 194581
+		// Token: 0x0402AE9D RID: 175773
 		BtnRefresh,
-		// Token: 0x0402F816 RID: 194582
+		// Token: 0x0402AE9E RID: 175774
 		TxtRefresh,
-		// Token: 0x0402F817 RID: 194583
+		// Token: 0x0402AE9F RID: 175775
 		LoopView,
-		// Token: 0x0402F818 RID: 194584
+		// Token: 0x0402AEA0 RID: 175776
 		LoopViewItem,
-		// Token: 0x0402F819 RID: 194585
+		// Token: 0x0402AEA1 RID: 175777
 		RefreshItemIcon,
-		// Token: 0x0402F81A RID: 194586
+		// Token: 0x0402AEA2 RID: 175778
 		RefreshText,
-		// Token: 0x0402F81B RID: 194587
+		// Token: 0x0402AEA3 RID: 175779
 		BtnInfo
 	}
 }

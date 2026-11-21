@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F38 RID: 24376
+	// Token: 0x0200657C RID: 25980
 	public enum EClientEventFlyingFlowerEventType : byte
 	{
-		// Token: 0x0400FC8C RID: 64652
+		// Token: 0x04010A02 RID: 68098
 		UpdateSubtitle
 	}
 }

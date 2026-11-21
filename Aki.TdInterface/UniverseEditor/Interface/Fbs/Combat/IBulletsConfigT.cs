@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Combat
 {
-	// Token: 0x02005EEE RID: 24302
+	// Token: 0x02006531 RID: 25905
 	public class IBulletsConfigT
 	{
-		// Token: 0x1700B5B3 RID: 46515
-		// (get) Token: 0x06029BCE RID: 170958 RVA: 0x005BA531 File Offset: 0x005B8731
-		// (set) Token: 0x06029BCF RID: 170959 RVA: 0x005BA539 File Offset: 0x005B8739
+		// Token: 0x1700BF1E RID: 48926
+		// (get) Token: 0x0602C282 RID: 180866 RVA: 0x00603A15 File Offset: 0x00601C15
+		// (set) Token: 0x0602C283 RID: 180867 RVA: 0x00603A1D File Offset: 0x00601C1D
 		public List<IBulletConfigT> Bullets { get; set; }
 
-		// Token: 0x06029BD0 RID: 170960 RVA: 0x005BA542 File Offset: 0x005B8742
+		// Token: 0x0602C284 RID: 180868 RVA: 0x00603A26 File Offset: 0x00601C26
 		public IBulletsConfigT()
 		{
 			this.Bullets = null;

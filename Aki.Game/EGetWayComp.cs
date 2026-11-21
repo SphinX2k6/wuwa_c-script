@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200246C RID: 9324
+// Token: 0x02001951 RID: 6481
 internal enum EGetWayComp
 {
-	// Token: 0x04008D02 RID: 36098
+	// Token: 0x04008E49 RID: 36425
 	BtnLink,
-	// Token: 0x04008D03 RID: 36099
+	// Token: 0x04008E4A RID: 36426
 	SpriteTrack,
-	// Token: 0x04008D04 RID: 36100
+	// Token: 0x04008E4B RID: 36427
 	TxtLink
 }

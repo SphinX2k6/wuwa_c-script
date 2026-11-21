@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D26 RID: 3366
+	// Token: 0x02000E20 RID: 3616
 	public class INavMeshSourceTypeBase
 	{
-		// Token: 0x06004CD3 RID: 19667 RVA: 0x000BF366 File Offset: 0x000BD566
-		[NullableContext(1)]
+		// Token: 0x060051EF RID: 20975 RVA: 0x000CAAAA File Offset: 0x000C8CAA
 		public static INavMeshSourceTypeBase Create(INavMeshSourceTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001844 RID: 6212
-		// (get) Token: 0x06004CD4 RID: 19668 RVA: 0x000BF385 File Offset: 0x000BD585
+		// Token: 0x170019AA RID: 6570
+		// (get) Token: 0x060051F0 RID: 20976 RVA: 0x000CAAC9 File Offset: 0x000C8CC9
 		public virtual ENavMeshSourceType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BF9 RID: 11257
+		// Token: 0x04002EB9 RID: 11961
 		private INavMeshSourceTypeBase Instance;
 	}
 }

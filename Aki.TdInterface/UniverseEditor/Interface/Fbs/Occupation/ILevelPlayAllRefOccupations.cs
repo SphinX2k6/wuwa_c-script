@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x0200439E RID: 17310
+	// Token: 0x02004800 RID: 18432
 	public struct ILevelPlayAllRefOccupations : IFlatbufferObject
 	{
-		// Token: 0x17007A58 RID: 31320
-		// (get) Token: 0x06019C2B RID: 105515 RVA: 0x003B0263 File Offset: 0x003AE463
+		// Token: 0x1700808D RID: 32909
+		// (get) Token: 0x0601B3B9 RID: 111545 RVA: 0x003DBC8B File Offset: 0x003D9E8B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C2C RID: 105516 RVA: 0x003B0270 File Offset: 0x003AE470
+		// Token: 0x0601B3BA RID: 111546 RVA: 0x003DBC98 File Offset: 0x003D9E98
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019C2D RID: 105517 RVA: 0x003B0278 File Offset: 0x003AE478
+		// Token: 0x0601B3BB RID: 111547 RVA: 0x003DBCA0 File Offset: 0x003D9EA0
 		public static ILevelPlayAllRefOccupations GetRootAsILevelPlayAllRefOccupations(ByteBuffer _bb)
 		{
 			return ILevelPlayAllRefOccupations.GetRootAsILevelPlayAllRefOccupations(_bb, default(ILevelPlayAllRefOccupations));
 		}
 
-		// Token: 0x06019C2E RID: 105518 RVA: 0x003B0294 File Offset: 0x003AE494
+		// Token: 0x0601B3BC RID: 111548 RVA: 0x003DBCBC File Offset: 0x003D9EBC
 		public static ILevelPlayAllRefOccupations GetRootAsILevelPlayAllRefOccupations(ByteBuffer _bb, ILevelPlayAllRefOccupations obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019C2F RID: 105519 RVA: 0x003B02B1 File Offset: 0x003AE4B1
+		// Token: 0x0601B3BD RID: 111549 RVA: 0x003DBCD9 File Offset: 0x003D9ED9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019C30 RID: 105520 RVA: 0x003B02C0 File Offset: 0x003AE4C0
+		// Token: 0x0601B3BE RID: 111550 RVA: 0x003DBCE8 File Offset: 0x003D9EE8
 		public ILevelPlayAllRefOccupations __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007A59 RID: 31321
-		// (get) Token: 0x06019C31 RID: 105521 RVA: 0x003B02D0 File Offset: 0x003AE4D0
+		// Token: 0x1700808E RID: 32910
+		// (get) Token: 0x0601B3BF RID: 111551 RVA: 0x003DBCF8 File Offset: 0x003D9EF8
 		public int LevelPlayId
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C32 RID: 105522 RVA: 0x003B030C File Offset: 0x003AE50C
+		// Token: 0x0601B3C0 RID: 111552 RVA: 0x003DBD34 File Offset: 0x003D9F34
 		public INodeRefOccupationData? LevelPlayOpenOccupations(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return new INodeRefOccupationData?(default(INodeRefOccupationData).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007A5A RID: 31322
-		// (get) Token: 0x06019C33 RID: 105523 RVA: 0x003B036C File Offset: 0x003AE56C
+		// Token: 0x1700808F RID: 32911
+		// (get) Token: 0x0601B3C1 RID: 111553 RVA: 0x003DBD94 File Offset: 0x003D9F94
 		public int LevelPlayOpenOccupationsLength
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C34 RID: 105524 RVA: 0x003B0398 File Offset: 0x003AE598
+		// Token: 0x0601B3C2 RID: 111554 RVA: 0x003DBDC0 File Offset: 0x003D9FC0
 		public INodeRefOccupations? NodeOccupations(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return new INodeRefOccupations?(default(INodeRefOccupations).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007A5B RID: 31323
-		// (get) Token: 0x06019C35 RID: 105525 RVA: 0x003B03F8 File Offset: 0x003AE5F8
+		// Token: 0x17008090 RID: 32912
+		// (get) Token: 0x0601B3C3 RID: 111555 RVA: 0x003DBE20 File Offset: 0x003DA020
 		public int NodeOccupationsLength
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C36 RID: 105526 RVA: 0x003B0423 File Offset: 0x003AE623
+		// Token: 0x0601B3C4 RID: 111556 RVA: 0x003DBE4B File Offset: 0x003DA04B
 		public static Offset<ILevelPlayAllRefOccupations> CreateILevelPlayAllRefOccupations(FlatBufferBuilder builder, int LevelPlayId = 0, VectorOffset LevelPlayOpenOccupationsOffset = default(VectorOffset), VectorOffset NodeOccupationsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -125,25 +125,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return ILevelPlayAllRefOccupations.EndILevelPlayAllRefOccupations(builder);
 		}
 
-		// Token: 0x06019C37 RID: 105527 RVA: 0x003B0447 File Offset: 0x003AE647
+		// Token: 0x0601B3C5 RID: 111557 RVA: 0x003DBE6F File Offset: 0x003DA06F
 		public static void StartILevelPlayAllRefOccupations(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06019C38 RID: 105528 RVA: 0x003B0450 File Offset: 0x003AE650
+		// Token: 0x0601B3C6 RID: 111558 RVA: 0x003DBE78 File Offset: 0x003DA078
 		public static void AddLevelPlayId(FlatBufferBuilder builder, int levelPlayId)
 		{
 			builder.AddInt(0, levelPlayId, 0);
 		}
 
-		// Token: 0x06019C39 RID: 105529 RVA: 0x003B045B File Offset: 0x003AE65B
+		// Token: 0x0601B3C7 RID: 111559 RVA: 0x003DBE83 File Offset: 0x003DA083
 		public static void AddLevelPlayOpenOccupations(FlatBufferBuilder builder, VectorOffset levelPlayOpenOccupationsOffset)
 		{
 			builder.AddOffset(1, levelPlayOpenOccupationsOffset.Value, 0);
 		}
 
-		// Token: 0x06019C3A RID: 105530 RVA: 0x003B046C File Offset: 0x003AE66C
+		// Token: 0x0601B3C8 RID: 111560 RVA: 0x003DBE94 File Offset: 0x003DA094
 		public static VectorOffset CreateLevelPlayOpenOccupationsVector(FlatBufferBuilder builder, Offset<INodeRefOccupationData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C3B RID: 105531 RVA: 0x003B04AC File Offset: 0x003AE6AC
+		// Token: 0x0601B3C9 RID: 111561 RVA: 0x003DBED4 File Offset: 0x003DA0D4
 		public static VectorOffset CreateLevelPlayOpenOccupationsVectorBlock(FlatBufferBuilder builder, Offset<INodeRefOccupationData>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C3C RID: 105532 RVA: 0x003B04C6 File Offset: 0x003AE6C6
+		// Token: 0x0601B3CA RID: 111562 RVA: 0x003DBEEE File Offset: 0x003DA0EE
 		public static VectorOffset CreateLevelPlayOpenOccupationsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<INodeRefOccupationData>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C3D RID: 105533 RVA: 0x003B04E4 File Offset: 0x003AE6E4
+		// Token: 0x0601B3CB RID: 111563 RVA: 0x003DBF0C File Offset: 0x003DA10C
 		public static VectorOffset CreateLevelPlayOpenOccupationsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -178,19 +178,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C3E RID: 105534 RVA: 0x003B04FD File Offset: 0x003AE6FD
+		// Token: 0x0601B3CC RID: 111564 RVA: 0x003DBF25 File Offset: 0x003DA125
 		public static void StartLevelPlayOpenOccupationsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06019C3F RID: 105535 RVA: 0x003B0508 File Offset: 0x003AE708
+		// Token: 0x0601B3CD RID: 111565 RVA: 0x003DBF30 File Offset: 0x003DA130
 		public static void AddNodeOccupations(FlatBufferBuilder builder, VectorOffset nodeOccupationsOffset)
 		{
 			builder.AddOffset(2, nodeOccupationsOffset.Value, 0);
 		}
 
-		// Token: 0x06019C40 RID: 105536 RVA: 0x003B0518 File Offset: 0x003AE718
+		// Token: 0x0601B3CE RID: 111566 RVA: 0x003DBF40 File Offset: 0x003DA140
 		public static VectorOffset CreateNodeOccupationsVector(FlatBufferBuilder builder, Offset<INodeRefOccupations>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C41 RID: 105537 RVA: 0x003B0558 File Offset: 0x003AE758
+		// Token: 0x0601B3CF RID: 111567 RVA: 0x003DBF80 File Offset: 0x003DA180
 		public static VectorOffset CreateNodeOccupationsVectorBlock(FlatBufferBuilder builder, Offset<INodeRefOccupations>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -209,7 +209,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C42 RID: 105538 RVA: 0x003B0572 File Offset: 0x003AE772
+		// Token: 0x0601B3D0 RID: 111568 RVA: 0x003DBF9A File Offset: 0x003DA19A
 		public static VectorOffset CreateNodeOccupationsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<INodeRefOccupations>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C43 RID: 105539 RVA: 0x003B0590 File Offset: 0x003AE790
+		// Token: 0x0601B3D1 RID: 111569 RVA: 0x003DBFB8 File Offset: 0x003DA1B8
 		public static VectorOffset CreateNodeOccupationsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -225,19 +225,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return builder.EndVector();
 		}
 
-		// Token: 0x06019C44 RID: 105540 RVA: 0x003B05A9 File Offset: 0x003AE7A9
+		// Token: 0x0601B3D2 RID: 111570 RVA: 0x003DBFD1 File Offset: 0x003DA1D1
 		public static void StartNodeOccupationsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06019C45 RID: 105541 RVA: 0x003B05B4 File Offset: 0x003AE7B4
+		// Token: 0x0601B3D3 RID: 111571 RVA: 0x003DBFDC File Offset: 0x003DA1DC
 		public static Offset<ILevelPlayAllRefOccupations> EndILevelPlayAllRefOccupations(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPlayAllRefOccupations>(builder.EndTable());
 		}
 
-		// Token: 0x06019C46 RID: 105542 RVA: 0x003B05C4 File Offset: 0x003AE7C4
+		// Token: 0x0601B3D4 RID: 111572 RVA: 0x003DBFEC File Offset: 0x003DA1EC
 		public ILevelPlayAllRefOccupationsT UnPack()
 		{
 			ILevelPlayAllRefOccupationsT levelPlayAllRefOccupationsT = new ILevelPlayAllRefOccupationsT();
@@ -245,7 +245,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return levelPlayAllRefOccupationsT;
 		}
 
-		// Token: 0x06019C47 RID: 105543 RVA: 0x003B05E0 File Offset: 0x003AE7E0
+		// Token: 0x0601B3D5 RID: 111573 RVA: 0x003DC008 File Offset: 0x003DA208
 		public void UnPackTo(ILevelPlayAllRefOccupationsT _o)
 		{
 			_o.LevelPlayId = this.LevelPlayId;
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			}
 		}
 
-		// Token: 0x06019C48 RID: 105544 RVA: 0x003B06A0 File Offset: 0x003AE8A0
+		// Token: 0x0601B3D6 RID: 111574 RVA: 0x003DC0C8 File Offset: 0x003DA2C8
 		public static Offset<ILevelPlayAllRefOccupations> Pack(FlatBufferBuilder builder, ILevelPlayAllRefOccupationsT _o)
 		{
 			if (_o == null)
@@ -291,7 +291,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 			return ILevelPlayAllRefOccupations.CreateILevelPlayAllRefOccupations(builder, _o.LevelPlayId, levelPlayOpenOccupationsOffset, nodeOccupationsOffset);
 		}
 
-		// Token: 0x0400C1D1 RID: 49617
+		// Token: 0x0400CBF0 RID: 52208
 		private Table __p;
 	}
 }

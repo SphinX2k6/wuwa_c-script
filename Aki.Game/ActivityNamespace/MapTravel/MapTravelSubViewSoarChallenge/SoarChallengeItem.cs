@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewSoarChallenge
 {
-	// Token: 0x020044DB RID: 17627
+	// Token: 0x02002F68 RID: 12136
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewSoarChallenge
 	})]
 	internal class SoarChallengeItem : TaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0602D6A8 RID: 186024 RVA: 0x00A401A7 File Offset: 0x00A3E3A7
+		// Token: 0x0601CBE6 RID: 117734 RVA: 0x008C5E0F File Offset: 0x008C400F
 		public SoarChallengeItem(ActivityMapTravelData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0602D6A9 RID: 186025 RVA: 0x00A401B0 File Offset: 0x00A3E3B0
+		// Token: 0x0601CBE7 RID: 117735 RVA: 0x008C5E18 File Offset: 0x008C4018
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -40,13 +40,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewSoarChallenge
 			base.GetItem(5).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0602D6AA RID: 186026 RVA: 0x00A4028F File Offset: 0x00A3E48F
+		// Token: 0x0601CBE8 RID: 117736 RVA: 0x008C5EF7 File Offset: 0x008C40F7
 		public void SetClickRewardCb(Action clickRewardCb)
 		{
 			this.OnClickRewardCb = clickRewardCb;
 		}
 
-		// Token: 0x0602D6AB RID: 186027 RVA: 0x00A40298 File Offset: 0x00A3E498
+		// Token: 0x0601CBE9 RID: 117737 RVA: 0x008C5F00 File Offset: 0x008C4100
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -62,7 +62,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewSoarChallenge
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0602D6AC RID: 186028 RVA: 0x00A40328 File Offset: 0x00A3E528
+		// Token: 0x0601CBEA RID: 117738 RVA: 0x008C5F90 File Offset: 0x008C4190
 		protected override void OnClickedRewardButton()
 		{
 			Action onClickRewardCb = this.OnClickRewardCb;
@@ -73,7 +73,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewSoarChallenge
 			onClickRewardCb();
 		}
 
-		// Token: 0x04018498 RID: 99480
+		// Token: 0x0400F240 RID: 62016
 		[Nullable(2)]
 		private Action OnClickRewardCb;
 	}

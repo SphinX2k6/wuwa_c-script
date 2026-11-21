@@ -5,25 +5,24 @@ using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002A28 RID: 10792
+// Token: 0x02001FA3 RID: 8099
 [NullableContext(2)]
 [Nullable(0)]
 public class FlySkinShowView : UiTickViewBase
 {
-	// Token: 0x06016702 RID: 91906 RVA: 0x005AD840 File Offset: 0x005ABA40
+	// Token: 0x06014108 RID: 82184 RVA: 0x005D8881 File Offset: 0x005D6A81
 	[NullableContext(1)]
 	public FlySkinShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016703 RID: 91907 RVA: 0x005AD85C File Offset: 0x005ABA5C
+	// Token: 0x06014109 RID: 82185 RVA: 0x005D889C File Offset: 0x005D6A9C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -76,19 +75,19 @@ public class FlySkinShowView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016704 RID: 91908 RVA: 0x005ADC3D File Offset: 0x005ABE3D
+	// Token: 0x0601410A RID: 82186 RVA: 0x005D8C7D File Offset: 0x005D6E7D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x06016705 RID: 91909 RVA: 0x005ADC5B File Offset: 0x005ABE5B
+	// Token: 0x0601410B RID: 82187 RVA: 0x005D8C9B File Offset: 0x005D6E9B
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x06016706 RID: 91910 RVA: 0x005ADC7C File Offset: 0x005ABE7C
+	// Token: 0x0601410C RID: 82188 RVA: 0x005D8CBC File Offset: 0x005D6EBC
 	protected override void OnStart()
 	{
 		int itemId = (int)(this.OpenParam ?? 0);
@@ -135,14 +134,14 @@ public class FlySkinShowView : UiTickViewBase
 		base.GetItem(9).SetUIActive(false);
 	}
 
-	// Token: 0x06016707 RID: 91911 RVA: 0x005ADE0B File Offset: 0x005AC00B
+	// Token: 0x0601410D RID: 82189 RVA: 0x005D8E4B File Offset: 0x005D704B
 	protected override void OnHandleLoadScene()
 	{
 		this.InitGliderObserver();
 		this.InitCameraInputData();
 	}
 
-	// Token: 0x06016708 RID: 91912 RVA: 0x005ADE1C File Offset: 0x005AC01C
+	// Token: 0x0601410E RID: 82190 RVA: 0x005D8E5C File Offset: 0x005D705C
 	private void InitGliderObserver()
 	{
 		UiSceneManager.Instance.InitGliderSkeletalHandle();
@@ -160,7 +159,7 @@ public class FlySkinShowView : UiTickViewBase
 		this.GliderObserver = gliderSkeletalHandle;
 	}
 
-	// Token: 0x06016709 RID: 91913 RVA: 0x005ADE6C File Offset: 0x005AC06C
+	// Token: 0x0601410F RID: 82191 RVA: 0x005D8EAC File Offset: 0x005D70AC
 	public void InitCameraInputData()
 	{
 		string rowName = "翱翔滑翔皮肤旋转查看";
@@ -180,27 +179,24 @@ public class FlySkinShowView : UiTickViewBase
 			return;
 		}
 		FVectorDouble fvectorDouble = actorWithTag.D_K2_GetActorLocation();
-		UiCameraInputComponentData data = new UiCameraInputComponentData
+		UiCameraInputBindingData data = new UiCameraInputBindingData
 		{
 			DragComponent = base.GetDraggable(29),
 			CameraSettingConfig = roleCameraConfig.Value,
 			SourceLocation = fvectorDouble
 		};
-		this.CameraInputComponent.InitData(data);
-		this.CameraInputComponent.CanCameraInput = false;
+		this.CameraInputBinding.Configure(data);
 	}
 
-	// Token: 0x0601670A RID: 91914 RVA: 0x005ADF22 File Offset: 0x005AC122
+	// Token: 0x06014110 RID: 82192 RVA: 0x005D8F56 File Offset: 0x005D7156
 	protected override void OnBeforeShow()
 	{
 		this.TryPushCamera();
 		this.TryLoadModel();
 		this.RefreshView();
-		this.CameraInputComponent.Start();
-		this.CameraInputComponent.TryActivate();
 	}
 
-	// Token: 0x0601670B RID: 91915 RVA: 0x005ADF50 File Offset: 0x005AC150
+	// Token: 0x06014111 RID: 82193 RVA: 0x005D8F6C File Offset: 0x005D716C
 	private void RefreshView()
 	{
 		if (this.SkinData == null)
@@ -219,15 +215,15 @@ public class FlySkinShowView : UiTickViewBase
 		base.GetItem(20).SetUIActive(false);
 	}
 
-	// Token: 0x0601670C RID: 91916 RVA: 0x005AE058 File Offset: 0x005AC258
+	// Token: 0x06014112 RID: 82194 RVA: 0x005D9074 File Offset: 0x005D7274
 	private void TryPushCamera()
 	{
 		string flySkinModelCameraId = SkinConfig.Instance.GetFlySkinModelCameraId(this.CurrentFlySkinType);
 		this.WaitCameraId = flySkinModelCameraId;
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(flySkinModelCameraId, true, true, "10010", false, null, null);
+		UiCameraModel.Instance.PushCameraHandleByHandleName(flySkinModelCameraId, true, true, "10010", false, null);
 	}
 
-	// Token: 0x0601670D RID: 91917 RVA: 0x005AE09C File Offset: 0x005AC29C
+	// Token: 0x06014113 RID: 82195 RVA: 0x005D90B0 File Offset: 0x005D72B0
 	public void TryLoadModel()
 	{
 		SkeletalObserverHandle gliderObserver = this.GliderObserver;
@@ -307,38 +303,37 @@ public class FlySkinShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601670E RID: 91918 RVA: 0x005AE1C5 File Offset: 0x005AC3C5
+	// Token: 0x06014114 RID: 82196 RVA: 0x005D91D9 File Offset: 0x005D73D9
 	protected override void OnBeforeHide()
 	{
-		UiCameraInputComponent cameraInputComponent = this.CameraInputComponent;
-		if (cameraInputComponent == null)
+		UiCameraInputBinding cameraInputBinding = this.CameraInputBinding;
+		if (cameraInputBinding == null)
 		{
 			return;
 		}
-		cameraInputComponent.End();
+		cameraInputBinding.Unbind();
 	}
 
-	// Token: 0x0601670F RID: 91919 RVA: 0x005AE1D7 File Offset: 0x005AC3D7
+	// Token: 0x06014115 RID: 82197 RVA: 0x005D91EB File Offset: 0x005D73EB
 	protected override void OnBeforeDestroy()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
 		this.DestroyGliderObserver();
 	}
 
-	// Token: 0x06016710 RID: 91920 RVA: 0x005AE1F3 File Offset: 0x005AC3F3
+	// Token: 0x06014116 RID: 82198 RVA: 0x005D91F3 File Offset: 0x005D73F3
 	private void DestroyGliderObserver()
 	{
 		UiSceneManager.Instance.DestroyGliderSkeletalHandle();
 		this.GliderObserver = null;
 	}
 
-	// Token: 0x06016711 RID: 91921 RVA: 0x005AE206 File Offset: 0x005AC406
+	// Token: 0x06014117 RID: 82199 RVA: 0x005D9206 File Offset: 0x005D7406
 	private void OnCloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016712 RID: 91922 RVA: 0x005AE210 File Offset: 0x005AC410
+	// Token: 0x06014118 RID: 82200 RVA: 0x005D9210 File Offset: 0x005D7410
 	private void OnClickOnlyUiToggle(EToggleState toggleState)
 	{
 		bool state = base.GetItem(28).bIsUIActive;
@@ -365,15 +360,22 @@ public class FlySkinShowView : UiTickViewBase
 		{
 			item.SetUIActive(state);
 		}
-		this.CameraInputComponent.CanCameraInput = state;
+		if (state)
+		{
+			this.CameraInputBinding.Bind();
+		}
+		else
+		{
+			this.CameraInputBinding.Unbind();
+		}
 		this.TryPushCamera();
 	}
 
-	// Token: 0x06016713 RID: 91923 RVA: 0x005AE2D0 File Offset: 0x005AC4D0
+	// Token: 0x06014119 RID: 82201 RVA: 0x005D92DF File Offset: 0x005D74DF
 	[NullableContext(1)]
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
-		if (handleData.HandleName == this.WaitCameraId)
+		if (handleData.GetHandleName() == this.WaitCameraId)
 		{
 			this.WaitCameraId = null;
 			if (!this.CanLoadModel)
@@ -384,127 +386,127 @@ public class FlySkinShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016714 RID: 91924 RVA: 0x005AE301 File Offset: 0x005AC501
+	// Token: 0x0601411A RID: 82202 RVA: 0x005D9310 File Offset: 0x005D7510
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(318);
 	}
 
-	// Token: 0x0400A6C1 RID: 42689
+	// Token: 0x0400AAAB RID: 43691
 	private FlySkinData SkinData;
 
-	// Token: 0x0400A6C2 RID: 42690
+	// Token: 0x0400AAAC RID: 43692
 	private EFlySkinType CurrentFlySkinType = EFlySkinType.Paragliding;
 
-	// Token: 0x0400A6C3 RID: 42691
+	// Token: 0x0400AAAD RID: 43693
 	private SkeletalObserverHandle GliderObserver;
 
-	// Token: 0x0400A6C4 RID: 42692
+	// Token: 0x0400AAAE RID: 43694
 	[Nullable(1)]
-	public UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	public UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x0400A6C5 RID: 42693
+	// Token: 0x0400AAAF RID: 43695
 	private string WaitCameraId;
 
-	// Token: 0x0400A6C6 RID: 42694
+	// Token: 0x0400AAB0 RID: 43696
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A6C7 RID: 42695
+	// Token: 0x0400AAB1 RID: 43697
 	private bool CanLoadModel;
 
-	// Token: 0x0200905F RID: 36959
+	// Token: 0x020082A6 RID: 33446
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402EC42 RID: 191554
+		// Token: 0x0402A33A RID: 172858
 		CaptionItem,
-		// Token: 0x0402EC43 RID: 191555
+		// Token: 0x0402A33B RID: 172859
 		OnlyUiToggle,
-		// Token: 0x0402EC44 RID: 191556
+		// Token: 0x0402A33C RID: 172860
 		DetailIconButton,
-		// Token: 0x0402EC45 RID: 191557
+		// Token: 0x0402A33D RID: 172861
 		ButtonLeft,
-		// Token: 0x0402EC46 RID: 191558
+		// Token: 0x0402A33E RID: 172862
 		ButtonRight,
-		// Token: 0x0402EC47 RID: 191559
+		// Token: 0x0402A33F RID: 172863
 		TitleText,
-		// Token: 0x0402EC48 RID: 191560
+		// Token: 0x0402A340 RID: 172864
 		SubTitleText,
-		// Token: 0x0402EC49 RID: 191561
+		// Token: 0x0402A341 RID: 172865
 		SwitchItem,
-		// Token: 0x0402EC4A RID: 191562
+		// Token: 0x0402A342 RID: 172866
 		ToggleLeft,
-		// Token: 0x0402EC4B RID: 191563
+		// Token: 0x0402A343 RID: 172867
 		ExtraRewardItem,
-		// Token: 0x0402EC4C RID: 191564
+		// Token: 0x0402A344 RID: 172868
 		ExtraRewardContentHorizontalLayout,
-		// Token: 0x0402EC4D RID: 191565
+		// Token: 0x0402A345 RID: 172869
 		RewardItem,
-		// Token: 0x0402EC4E RID: 191566
+		// Token: 0x0402A346 RID: 172870
 		DescText,
-		// Token: 0x0402EC4F RID: 191567
+		// Token: 0x0402A347 RID: 172871
 		NotHaveRoleItem,
-		// Token: 0x0402EC50 RID: 191568
+		// Token: 0x0402A348 RID: 172872
 		BuyItemIcon,
-		// Token: 0x0402EC51 RID: 191569
+		// Token: 0x0402A349 RID: 172873
 		NowPrice,
-		// Token: 0x0402EC52 RID: 191570
+		// Token: 0x0402A34A RID: 172874
 		BeforePrice,
-		// Token: 0x0402EC53 RID: 191571
+		// Token: 0x0402A34B RID: 172875
 		BuyButton,
-		// Token: 0x0402EC54 RID: 191572
+		// Token: 0x0402A34C RID: 172876
 		DiscountItem,
-		// Token: 0x0402EC55 RID: 191573
+		// Token: 0x0402A34D RID: 172877
 		DiscountText,
-		// Token: 0x0402EC56 RID: 191574
+		// Token: 0x0402A34E RID: 172878
 		LeftTimeItem,
-		// Token: 0x0402EC57 RID: 191575
+		// Token: 0x0402A34F RID: 172879
 		LeftTimeText,
-		// Token: 0x0402EC58 RID: 191576
+		// Token: 0x0402A350 RID: 172880
 		QualityTexture,
-		// Token: 0x0402EC59 RID: 191577
+		// Token: 0x0402A351 RID: 172881
 		ItemTexture,
-		// Token: 0x0402EC5A RID: 191578
+		// Token: 0x0402A352 RID: 172882
 		FrameTexture,
-		// Token: 0x0402EC5B RID: 191579
+		// Token: 0x0402A353 RID: 172883
 		WeaponRootItem,
-		// Token: 0x0402EC5C RID: 191580
+		// Token: 0x0402A354 RID: 172884
 		WeaponTexture,
-		// Token: 0x0402EC5D RID: 191581
+		// Token: 0x0402A355 RID: 172885
 		HaveItem,
-		// Token: 0x0402EC5E RID: 191582
+		// Token: 0x0402A356 RID: 172886
 		HideUiParentItem,
-		// Token: 0x0402EC5F RID: 191583
+		// Token: 0x0402A357 RID: 172887
 		DragComponent,
-		// Token: 0x0402EC60 RID: 191584
+		// Token: 0x0402A358 RID: 172888
 		WeaponQualityTexture,
-		// Token: 0x0402EC61 RID: 191585
+		// Token: 0x0402A359 RID: 172889
 		ToggleRight,
-		// Token: 0x0402EC62 RID: 191586
+		// Token: 0x0402A35A RID: 172890
 		EffectItemB,
-		// Token: 0x0402EC63 RID: 191587
+		// Token: 0x0402A35B RID: 172891
 		EffectItemA,
-		// Token: 0x0402EC64 RID: 191588
+		// Token: 0x0402A35C RID: 172892
 		TextureToggleLeft,
-		// Token: 0x0402EC65 RID: 191589
+		// Token: 0x0402A35D RID: 172893
 		TextToggleLeft,
-		// Token: 0x0402EC66 RID: 191590
+		// Token: 0x0402A35E RID: 172894
 		TextureToggleRight,
-		// Token: 0x0402EC67 RID: 191591
+		// Token: 0x0402A35F RID: 172895
 		TextToggleRight,
-		// Token: 0x0402EC68 RID: 191592
+		// Token: 0x0402A360 RID: 172896
 		ItemGamePadKeyTipA = 45,
-		// Token: 0x0402EC69 RID: 191593
+		// Token: 0x0402A361 RID: 172897
 		ItemGamePadKeyTipB,
-		// Token: 0x0402EC6A RID: 191594
+		// Token: 0x0402A362 RID: 172898
 		ToggleLayout,
-		// Token: 0x0402EC6B RID: 191595
+		// Token: 0x0402A363 RID: 172899
 		ToggleMale,
-		// Token: 0x0402EC6C RID: 191596
+		// Token: 0x0402A364 RID: 172900
 		ToggleFemale,
-		// Token: 0x0402EC6D RID: 191597
+		// Token: 0x0402A365 RID: 172901
 		ExtraRewardText,
-		// Token: 0x0402EC6E RID: 191598
+		// Token: 0x0402A366 RID: 172902
 		ItemBuyPanel
 	}
 }

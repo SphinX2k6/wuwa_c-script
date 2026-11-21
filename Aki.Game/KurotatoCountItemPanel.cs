@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CB9 RID: 7353
+// Token: 0x0200117B RID: 4475
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoCountItemPanel : UiPanelBase
 {
-	// Token: 0x0600DE2F RID: 56879 RVA: 0x0033F2DB File Offset: 0x0033D4DB
+	// Token: 0x0600B24C RID: 45644 RVA: 0x0034AD17 File Offset: 0x00348F17
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class KurotatoCountItemPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DE30 RID: 56880 RVA: 0x0033F314 File Offset: 0x0033D514
+	// Token: 0x0600B24D RID: 45645 RVA: 0x0034AD50 File Offset: 0x00348F50
 	protected override void OnStart()
 	{
 		this.TextNum = base.GetText(0);
@@ -28,35 +28,35 @@ public class KurotatoCountItemPanel : UiPanelBase
 		this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x0600DE31 RID: 56881 RVA: 0x0033F34D File Offset: 0x0033D54D
+	// Token: 0x0600B24E RID: 45646 RVA: 0x0034AD89 File Offset: 0x00348F89
 	public void Refresh(int num)
 	{
 		this.TextNum.SetText(num.ToString(), true);
 	}
 
-	// Token: 0x0600DE32 RID: 56882 RVA: 0x0033F364 File Offset: 0x0033D564
+	// Token: 0x0600B24F RID: 45647 RVA: 0x0034ADA0 File Offset: 0x00348FA0
 	public void PlayAcquireAnim()
 	{
 		this.SeqPlayer.PlayOrReplaySequenceByName("Acqu", false, null);
 	}
 
-	// Token: 0x040065FA RID: 26106
+	// Token: 0x040066D9 RID: 26329
 	private UUIText TextNum;
 
-	// Token: 0x040065FB RID: 26107
+	// Token: 0x040066DA RID: 26330
 	private UUISprite SpriteArrow;
 
-	// Token: 0x040065FC RID: 26108
+	// Token: 0x040066DB RID: 26331
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x020082A2 RID: 33442
+	// Token: 0x0200742C RID: 29740
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402A9CC RID: 174540
+		// Token: 0x04025CF7 RID: 154871
 		public const int TextNum = 0;
 
-		// Token: 0x0402A9CD RID: 174541
+		// Token: 0x04025CF8 RID: 154872
 		public const int SpriteArrow = 1;
 	}
 }

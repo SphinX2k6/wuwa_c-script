@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DAD RID: 23981
+	// Token: 0x020063EA RID: 25578
 	public class IFollowShooterAbilityTypeT
 	{
-		// Token: 0x1700B399 RID: 45977
-		// (get) Token: 0x060290C4 RID: 168132 RVA: 0x005A2E36 File Offset: 0x005A1036
-		// (set) Token: 0x060290C5 RID: 168133 RVA: 0x005A2E3E File Offset: 0x005A103E
+		// Token: 0x1700BCFF RID: 48383
+		// (get) Token: 0x0602B74E RID: 177998 RVA: 0x005EBB66 File Offset: 0x005E9D66
+		// (set) Token: 0x0602B74F RID: 177999 RVA: 0x005EBB6E File Offset: 0x005E9D6E
 		public EFollowShooterType Type { get; set; }
 
-		// Token: 0x060290C6 RID: 168134 RVA: 0x005A2E47 File Offset: 0x005A1047
+		// Token: 0x0602B750 RID: 178000 RVA: 0x005EBB77 File Offset: 0x005E9D77
 		public IFollowShooterAbilityTypeT()
 		{
 			this.Type = EFollowShooterType.JellyFish;

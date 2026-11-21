@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020027D6 RID: 10198
+// Token: 0x02001D51 RID: 7505
 public enum ERoleListType
 {
-	// Token: 0x04009DA0 RID: 40352
+	// Token: 0x0400A189 RID: 41353
 	OwnList,
-	// Token: 0x04009DA1 RID: 40353
+	// Token: 0x0400A18A RID: 41354
 	NewList
 }

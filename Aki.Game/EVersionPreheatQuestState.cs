@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200155C RID: 5468
+// Token: 0x02000A14 RID: 2580
 public enum EVersionPreheatQuestState
 {
-	// Token: 0x04004493 RID: 17555
+	// Token: 0x04004539 RID: 17721
 	Lock,
-	// Token: 0x04004494 RID: 17556
+	// Token: 0x0400453A RID: 17722
 	BeforeVote,
-	// Token: 0x04004495 RID: 17557
+	// Token: 0x0400453B RID: 17723
 	AfterVote,
-	// Token: 0x04004496 RID: 17558
+	// Token: 0x0400453C RID: 17724
 	QuestCompleted
 }

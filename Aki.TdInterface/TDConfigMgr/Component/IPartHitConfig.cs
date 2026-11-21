@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005BE RID: 1470
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000629 RID: 1577
 	public class IPartHitConfig
 	{
-		// Token: 0x06001F20 RID: 7968 RVA: 0x00057A20 File Offset: 0x00055C20
+		// Token: 0x06002130 RID: 8496 RVA: 0x0005CA4C File Offset: 0x0005AC4C
 		private IPartHitConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F21 RID: 7969 RVA: 0x00057A58 File Offset: 0x00055C58
+		// Token: 0x06002131 RID: 8497 RVA: 0x0005CA84 File Offset: 0x0005AC84
 		public static IPartHitConfig Create([Nullable(2)] IPartHitConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F22 RID: 7970 RVA: 0x00057A6B File Offset: 0x00055C6B
+		// Token: 0x06002132 RID: 8498 RVA: 0x0005CA97 File Offset: 0x0005AC97
 		public static IPartHitConfig CreateFromSetValue([Nullable(2)] IPartHitConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F23 RID: 7971 RVA: 0x00057A7E File Offset: 0x00055C7E
+		// Token: 0x06002133 RID: 8499 RVA: 0x0005CAAA File Offset: 0x0005ACAA
 		public IPartHitConfig_SetValue ToSetValue()
 		{
 			return new IPartHitConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000852 RID: 2130
-		// (get) Token: 0x06001F24 RID: 7972 RVA: 0x00057AA9 File Offset: 0x00055CA9
-		// (set) Token: 0x06001F25 RID: 7973 RVA: 0x00057AD4 File Offset: 0x00055CD4
+		// Token: 0x170008D9 RID: 2265
+		// (get) Token: 0x06002134 RID: 8500 RVA: 0x0005CAD5 File Offset: 0x0005ACD5
+		// (set) Token: 0x06002135 RID: 8501 RVA: 0x0005CB00 File Offset: 0x0005AD00
 		public virtual string PartName
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000853 RID: 2131
-		// (get) Token: 0x06001F26 RID: 7974 RVA: 0x00057AE2 File Offset: 0x00055CE2
-		// (set) Token: 0x06001F27 RID: 7975 RVA: 0x00057B09 File Offset: 0x00055D09
+		// Token: 0x170008DA RID: 2266
+		// (get) Token: 0x06002136 RID: 8502 RVA: 0x0005CB0E File Offset: 0x0005AD0E
+		// (set) Token: 0x06002137 RID: 8503 RVA: 0x0005CB35 File Offset: 0x0005AD35
 		[Nullable(2)]
 		public virtual IHitBulletType HitBullets
 		{
@@ -114,20 +112,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000854 RID: 2132
-		// (get) Token: 0x06001F28 RID: 7976 RVA: 0x00057B18 File Offset: 0x00055D18
-		// (set) Token: 0x06001F29 RID: 7977 RVA: 0x00057BAB File Offset: 0x00055DAB
+		// Token: 0x170008DB RID: 2267
+		// (get) Token: 0x06002138 RID: 8504 RVA: 0x0005CB44 File Offset: 0x0005AD44
+		// (set) Token: 0x06002139 RID: 8505 RVA: 0x0005CBD7 File Offset: 0x0005ADD7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -158,7 +156,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -167,23 +165,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001612 RID: 5650
+		// Token: 0x04001786 RID: 6022
 		[Nullable(2)]
 		protected IPartHitConfig FbInstance;
 
-		// Token: 0x04001613 RID: 5651
+		// Token: 0x04001787 RID: 6023
 		[Nullable(2)]
 		protected IPartHitConfig_SetValue PocoInterface;
 
-		// Token: 0x04001614 RID: 5652
+		// Token: 0x04001788 RID: 6024
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x04001615 RID: 5653
+		// Token: 0x04001789 RID: 6025
 		private bool _ActionsInited;
 	}
 }

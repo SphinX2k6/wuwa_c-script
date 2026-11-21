@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001605 RID: 5637
+	// Token: 0x02001678 RID: 5752
 	public enum EMsgFunction
 	{
-		// Token: 0x0400BF73 RID: 49011
+		// Token: 0x0400C46D RID: 50285
 		[OriginalName("FunctionNone")]
 		FunctionNone,
-		// Token: 0x0400BF74 RID: 49012
+		// Token: 0x0400C46E RID: 50286
 		[OriginalName("BattleInfo")]
 		BattleInfo
 	}

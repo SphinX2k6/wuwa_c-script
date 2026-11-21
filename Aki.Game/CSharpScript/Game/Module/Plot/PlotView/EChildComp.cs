@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200503B RID: 20539
+	// Token: 0x0200400A RID: 16394
 	internal enum EChildComp
 	{
-		// Token: 0x0401C039 RID: 114745
+		// Token: 0x04016A5C RID: 92764
 		TxtName,
-		// Token: 0x0401C03A RID: 114746
+		// Token: 0x04016A5D RID: 92765
 		PnlLayout,
-		// Token: 0x0401C03B RID: 114747
+		// Token: 0x04016A5E RID: 92766
 		PnlNameA,
-		// Token: 0x0401C03C RID: 114748
+		// Token: 0x04016A5F RID: 92767
 		PnlNameB
 	}
 }

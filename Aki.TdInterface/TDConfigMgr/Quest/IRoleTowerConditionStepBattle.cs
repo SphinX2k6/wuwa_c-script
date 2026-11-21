@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200110A RID: 4362
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001238 RID: 4664
 	public class IRoleTowerConditionStepBattle : IRoleTowerConditionStepBase
 	{
-		// Token: 0x06006292 RID: 25234 RVA: 0x000ED49C File Offset: 0x000EB69C
+		// Token: 0x0600688D RID: 26765 RVA: 0x000FA610 File Offset: 0x000F8810
 		private IRoleTowerConditionStepBattle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006293 RID: 25235 RVA: 0x000ED4D4 File Offset: 0x000EB6D4
+		// Token: 0x0600688E RID: 26766 RVA: 0x000FA648 File Offset: 0x000F8848
 		public static IRoleTowerConditionStepBattle Create([Nullable(2)] IRoleTowerConditionStepBattle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006294 RID: 25236 RVA: 0x000ED4E7 File Offset: 0x000EB6E7
+		// Token: 0x0600688F RID: 26767 RVA: 0x000FA65B File Offset: 0x000F885B
 		public static IRoleTowerConditionStepBattle CreateFromSetValue([Nullable(2)] IRoleTowerConditionStepBattle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006295 RID: 25237 RVA: 0x000ED4FA File Offset: 0x000EB6FA
+		// Token: 0x06006890 RID: 26768 RVA: 0x000FA66E File Offset: 0x000F886E
 		public new IRoleTowerConditionStepBattle_SetValue ToSetValue()
 		{
 			return new IRoleTowerConditionStepBattle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700203E RID: 8254
-		// (get) Token: 0x06006296 RID: 25238 RVA: 0x000ED50D File Offset: 0x000EB70D
-		// (set) Token: 0x06006297 RID: 25239 RVA: 0x000ED538 File Offset: 0x000EB738
+		// Token: 0x170021F1 RID: 8689
+		// (get) Token: 0x06006891 RID: 26769 RVA: 0x000FA681 File Offset: 0x000F8881
+		// (set) Token: 0x06006892 RID: 26770 RVA: 0x000FA6AC File Offset: 0x000F88AC
 		public override ERoleTowerConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B2B RID: 15147
+		// Token: 0x04003E79 RID: 15993
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepBattle FbInstance;
 
-		// Token: 0x04003B2C RID: 15148
+		// Token: 0x04003E7A RID: 15994
 		[Nullable(2)]
 		protected new IRoleTowerConditionStepBattle_SetValue PocoInterface;
 	}

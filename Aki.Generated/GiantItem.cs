@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CFB RID: 3323
+	// Token: 0x02000DE0 RID: 3552
 	public struct GiantItem : IFlatbufferObject
 	{
-		// Token: 0x1700158C RID: 5516
-		// (get) Token: 0x06007A66 RID: 31334 RVA: 0x0024AFA8 File Offset: 0x002491A8
+		// Token: 0x170015ED RID: 5613
+		// (get) Token: 0x0600807E RID: 32894 RVA: 0x00269B18 File Offset: 0x00267D18
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007A67 RID: 31335 RVA: 0x0024AFB5 File Offset: 0x002491B5
+		// Token: 0x0600807F RID: 32895 RVA: 0x00269B25 File Offset: 0x00267D25
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007A68 RID: 31336 RVA: 0x0024AFBC File Offset: 0x002491BC
+		// Token: 0x06008080 RID: 32896 RVA: 0x00269B2C File Offset: 0x00267D2C
 		public static GiantItem GetRootAsGiantItem(ByteBuffer _bb)
 		{
 			return GiantItem.GetRootAsGiantItem(_bb, default(GiantItem));
 		}
 
-		// Token: 0x06007A69 RID: 31337 RVA: 0x0024AFD8 File Offset: 0x002491D8
+		// Token: 0x06008081 RID: 32897 RVA: 0x00269B48 File Offset: 0x00267D48
 		public static GiantItem GetRootAsGiantItem(ByteBuffer _bb, GiantItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007A6A RID: 31338 RVA: 0x0024AFF5 File Offset: 0x002491F5
+		// Token: 0x06008082 RID: 32898 RVA: 0x00269B65 File Offset: 0x00267D65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007A6B RID: 31339 RVA: 0x0024B004 File Offset: 0x00249204
+		// Token: 0x06008083 RID: 32899 RVA: 0x00269B74 File Offset: 0x00267D74
 		public GiantItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700158D RID: 5517
-		// (get) Token: 0x06007A6C RID: 31340 RVA: 0x0024B014 File Offset: 0x00249214
+		// Token: 0x170015EE RID: 5614
+		// (get) Token: 0x06008084 RID: 32900 RVA: 0x00269B84 File Offset: 0x00267D84
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700158E RID: 5518
-		// (get) Token: 0x06007A6D RID: 31341 RVA: 0x0024B050 File Offset: 0x00249250
+		// Token: 0x170015EF RID: 5615
+		// (get) Token: 0x06008085 RID: 32901 RVA: 0x00269BC0 File Offset: 0x00267DC0
 		public int AddStableValue
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700158F RID: 5519
-		// (get) Token: 0x06007A6E RID: 31342 RVA: 0x0024B08C File Offset: 0x0024928C
+		// Token: 0x170015F0 RID: 5616
+		// (get) Token: 0x06008086 RID: 32902 RVA: 0x00269BFC File Offset: 0x00267DFC
 		public int Quality
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001590 RID: 5520
-		// (get) Token: 0x06007A6F RID: 31343 RVA: 0x0024B0C8 File Offset: 0x002492C8
+		// Token: 0x170015F1 RID: 5617
+		// (get) Token: 0x06008087 RID: 32903 RVA: 0x00269C38 File Offset: 0x00267E38
 		public int UnlockCondition
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001591 RID: 5521
-		// (get) Token: 0x06007A70 RID: 31344 RVA: 0x0024B108 File Offset: 0x00249308
+		// Token: 0x170015F2 RID: 5618
+		// (get) Token: 0x06008088 RID: 32904 RVA: 0x00269C78 File Offset: 0x00267E78
 		public int GiantEcoType
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D6E RID: 19822
+		// Token: 0x04005353 RID: 21331
 		private Table __p;
 	}
 }

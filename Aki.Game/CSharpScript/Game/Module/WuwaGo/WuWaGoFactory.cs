@@ -8,30 +8,30 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x02004718 RID: 18200
+	// Token: 0x02003648 RID: 13896
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoFactory : IStaticVariableResetter
 	{
-		// Token: 0x0602F8DA RID: 194778 RVA: 0x00B039BA File Offset: 0x00B01BBA
+		// Token: 0x060240A0 RID: 147616 RVA: 0x00A3368A File Offset: 0x00A3188A
 		static WuWaGoFactory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoFactory.CreateStaticDefaultValue), new Action(WuWaGoFactory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F8DB RID: 194779 RVA: 0x00B039D9 File Offset: 0x00B01BD9
+		// Token: 0x060240A1 RID: 147617 RVA: 0x00A336A9 File Offset: 0x00A318A9
 		public static void CreateStaticDefaultValue()
 		{
 			WuWaGoFactory._attackHitListeners = new Dictionary<AActor, Action>();
 		}
 
-		// Token: 0x0602F8DC RID: 194780 RVA: 0x00B039E5 File Offset: 0x00B01BE5
+		// Token: 0x060240A2 RID: 147618 RVA: 0x00A336B5 File Offset: 0x00A318B5
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoFactory._attackHitListeners = null;
 		}
 
-		// Token: 0x0602F8DD RID: 194781 RVA: 0x00B039ED File Offset: 0x00B01BED
+		// Token: 0x060240A3 RID: 147619 RVA: 0x00A336BD File Offset: 0x00A318BD
 		public static void RegisterAttackHitListener([Nullable(2)] AActor actor, Action listener)
 		{
 			if (actor == null || !actor.IsValid())
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoFactory._attackHitListeners[actor] = listener;
 		}
 
-		// Token: 0x0602F8DE RID: 194782 RVA: 0x00B03A0D File Offset: 0x00B01C0D
+		// Token: 0x060240A4 RID: 147620 RVA: 0x00A336DD File Offset: 0x00A318DD
 		[NullableContext(2)]
 		public static void UnregisterAttackHitListener(AActor actor)
 		{
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			attackHitListeners.Remove(actor);
 		}
 
-		// Token: 0x0602F8DF RID: 194783 RVA: 0x00B03A34 File Offset: 0x00B01C34
+		// Token: 0x060240A5 RID: 147621 RVA: 0x00A33704 File Offset: 0x00A31904
 		[NullableContext(2)]
 		public static void DispatchAttackHit(AActor actor)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F8E0 RID: 194784 RVA: 0x00B03A70 File Offset: 0x00B01C70
+		// Token: 0x060240A6 RID: 147622 RVA: 0x00A33740 File Offset: 0x00A31940
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <CreateRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8E1 RID: 194785 RVA: 0x00B03AC3 File Offset: 0x00B01CC3
+		// Token: 0x060240A7 RID: 147623 RVA: 0x00A33793 File Offset: 0x00A31993
 		public static bool DestroyRole(AActor actor)
 		{
 			CharRenderingComponent charRenderingComponent = ((TsBaseCharacter)actor).CharRenderingComponent;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return true;
 		}
 
-		// Token: 0x0602F8E2 RID: 194786 RVA: 0x00B03AE4 File Offset: 0x00B01CE4
+		// Token: 0x060240A8 RID: 147624 RVA: 0x00A337B4 File Offset: 0x00A319B4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <CreateGridLinkApplique>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8E3 RID: 194787 RVA: 0x00B03B40 File Offset: 0x00B01D40
+		// Token: 0x060240A9 RID: 147625 RVA: 0x00A33810 File Offset: 0x00A31A10
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <CreateCanMoveTipsApplique>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8E4 RID: 194788 RVA: 0x00B03B94 File Offset: 0x00B01D94
+		// Token: 0x060240AA RID: 147626 RVA: 0x00A33864 File Offset: 0x00A31A64
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <CreateApplique>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F8E5 RID: 194789 RVA: 0x00B03BEF File Offset: 0x00B01DEF
+		// Token: 0x060240AB RID: 147627 RVA: 0x00A338BF File Offset: 0x00A31ABF
 		public static bool DestroyApplique(AActor actor)
 		{
 			return ActorSystem.Instance.Put("WuWaGoFactory.DestroyApplique", actor, null);
 		}
 
-		// Token: 0x04019B00 RID: 105216
+		// Token: 0x040141AF RID: 82351
 		[Nullable(new byte[]
 		{
 			2,

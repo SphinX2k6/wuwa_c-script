@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006920 RID: 26912
+	// Token: 0x02005870 RID: 22640
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AnniversarySubActivityPinball : AnniversarySubActivityDataBase
 	{
-		// Token: 0x060431A3 RID: 274851 RVA: 0x0105A427 File Offset: 0x01058627
+		// Token: 0x06037CFB RID: 228603 RVA: 0x00F9BA53 File Offset: 0x00F99C53
 		public AnniversarySubActivityPinball(int id) : base(id)
 		{
 		}
 
-		// Token: 0x170097EC RID: 38892
-		// (get) Token: 0x060431A4 RID: 274852 RVA: 0x0105A430 File Offset: 0x01058630
+		// Token: 0x17006B2C RID: 27436
+		// (get) Token: 0x06037CFC RID: 228604 RVA: 0x00F9BA5C File Offset: 0x00F99C5C
 		public ActivityBaseData ActivityData
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431A5 RID: 274853 RVA: 0x0105A44C File Offset: 0x0105864C
+		// Token: 0x06037CFD RID: 228605 RVA: 0x00F9BA78 File Offset: 0x00F99C78
 		public void ClickOpenView()
 		{
 			if (this.ActivityData != null && this.ActivityData.IsUnLock())
@@ -40,21 +40,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431A6 RID: 274854 RVA: 0x0105A473 File Offset: 0x01058673
+		// Token: 0x06037CFE RID: 228606 RVA: 0x00F9BA9F File Offset: 0x00F99C9F
 		public bool GetNewChapter()
 		{
 			ActivityBaseData activityData = this.ActivityData;
 			return false;
 		}
 
-		// Token: 0x060431A7 RID: 274855 RVA: 0x0105A47D File Offset: 0x0105867D
+		// Token: 0x06037CFF RID: 228607 RVA: 0x00F9BAA9 File Offset: 0x00F99CA9
 		public long GetNextLockedChapterTime()
 		{
 			ActivityBaseData activityData = this.ActivityData;
 			return 0L;
 		}
 
-		// Token: 0x060431A8 RID: 274856 RVA: 0x0105A488 File Offset: 0x01058688
+		// Token: 0x06037D00 RID: 228608 RVA: 0x00F9BAB4 File Offset: 0x00F99CB4
 		[NullableContext(0)]
 		public override ValueTuple<int, int> GetCurrentProgress()
 		{
@@ -86,10 +86,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return new ValueTuple<int, int>(item, this.TotalCount);
 		}
 
-		// Token: 0x04022EF1 RID: 143089
+		// Token: 0x0401D74D RID: 120653
 		private ActivityBaseData ActivityDataCache;
 
-		// Token: 0x04022EF2 RID: 143090
+		// Token: 0x0401D74E RID: 120654
 		private int TotalCount;
 	}
 }

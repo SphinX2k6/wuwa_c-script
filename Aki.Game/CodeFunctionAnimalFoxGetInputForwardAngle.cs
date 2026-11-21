@@ -4,7 +4,7 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200316C RID: 12652
+// Token: 0x020026D9 RID: 9945
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,12 +13,12 @@ using UnrealEngine;
 })]
 public class CodeFunctionAnimalFoxGetInputForwardAngle : CodeFunctionBase<SpecialSkillBase>
 {
-	// Token: 0x0601B36C RID: 111468 RVA: 0x0076ADEC File Offset: 0x00768FEC
+	// Token: 0x06018E71 RID: 102001 RVA: 0x00792750 File Offset: 0x00790950
 	public CodeFunctionAnimalFoxGetInputForwardAngle(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B36D RID: 111469 RVA: 0x0076AEA4 File Offset: 0x007690A4
+	// Token: 0x06018E72 RID: 102002 RVA: 0x00792808 File Offset: 0x00790A08
 	public override FKuroCodeFunctionResult Execute(FKuroCodeFunctionPayload payload)
 	{
 		Entity ownerEntity = this.SpecialSkill.GetOwnerEntity();
@@ -105,7 +105,7 @@ public class CodeFunctionAnimalFoxGetInputForwardAngle : CodeFunctionBase<Specia
 		return cachedResult;
 	}
 
-	// Token: 0x0601B36E RID: 111470 RVA: 0x0076B258 File Offset: 0x00769458
+	// Token: 0x06018E73 RID: 102003 RVA: 0x00792BBC File Offset: 0x00790DBC
 	private void DrawDebug(Vector currentPos, Vector forward, Vector rawInputDirect)
 	{
 		double z = currentPos.Z + 30.0;
@@ -130,66 +130,66 @@ public class CodeFunctionAnimalFoxGetInputForwardAngle : CodeFunctionBase<Specia
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, this.DebugJointPt, 8f, 6, new FLinearColor?(ColorUtils.LinearWhite), 3f, 0f);
 	}
 
-	// Token: 0x0400D416 RID: 54294
+	// Token: 0x0400D879 RID: 55417
 	public static readonly string FunctionName = "AnimalFox.GetInputForwardAngle";
 
-	// Token: 0x0400D417 RID: 54295
+	// Token: 0x0400D87A RID: 55418
 	private const string ANGLE_RESULT = "Angle";
 
-	// Token: 0x0400D418 RID: 54296
+	// Token: 0x0400D87B RID: 55419
 	private const string INPUT_ANGLE_RESULT = "InputAngle";
 
-	// Token: 0x0400D419 RID: 54297
+	// Token: 0x0400D87C RID: 55420
 	private const string RAW_ANGLE_RESULT = "RawAngle";
 
-	// Token: 0x0400D41A RID: 54298
+	// Token: 0x0400D87D RID: 55421
 	private const float INTERP_SPEED_DECREASE = 8f;
 
-	// Token: 0x0400D41B RID: 54299
+	// Token: 0x0400D87E RID: 55422
 	private const float SMOOTHED_ANGLE_DEAD_ZONE = 0.01f;
 
-	// Token: 0x0400D41C RID: 54300
+	// Token: 0x0400D87F RID: 55423
 	private const float MIN_SPEED_FOR_TURN = 10f;
 
-	// Token: 0x0400D41D RID: 54301
+	// Token: 0x0400D880 RID: 55424
 	private const float FRONT_ANGULAR_SPEED = 90f;
 
-	// Token: 0x0400D41E RID: 54302
+	// Token: 0x0400D881 RID: 55425
 	private const float FRONT_ANGULAR_SPEED_DECREASE = 240f;
 
-	// Token: 0x0400D41F RID: 54303
+	// Token: 0x0400D882 RID: 55426
 	private const float FRONT_ANGLE_SCALE = 0.3f;
 
-	// Token: 0x0400D420 RID: 54304
+	// Token: 0x0400D883 RID: 55427
 	private const float SATURATION_ANGLE_DEG = 45f;
 
-	// Token: 0x0400D421 RID: 54305
+	// Token: 0x0400D884 RID: 55428
 	private const float MAX_FRAME_TIME = 0.08f;
 
-	// Token: 0x0400D422 RID: 54306
+	// Token: 0x0400D885 RID: 55429
 	private const float PATH_LINE_MIN_INPUT_COS = 0.707f;
 
-	// Token: 0x0400D423 RID: 54307
+	// Token: 0x0400D886 RID: 55430
 	private const bool DEBUG_DRAW = false;
 
-	// Token: 0x0400D424 RID: 54308
+	// Token: 0x0400D887 RID: 55431
 	private float SmoothedAngle;
 
-	// Token: 0x0400D425 RID: 54309
+	// Token: 0x0400D888 RID: 55432
 	private float TurnAngle;
 
-	// Token: 0x0400D426 RID: 54310
+	// Token: 0x0400D889 RID: 55433
 	private readonly Vector PathLineInputDirection = Vector.Create();
 
-	// Token: 0x0400D427 RID: 54311
+	// Token: 0x0400D88A RID: 55434
 	private FVectorDouble DebugJointPt = new FVectorDouble(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D428 RID: 54312
+	// Token: 0x0400D88B RID: 55435
 	private FVectorDouble DebugForwardEndPt = new FVectorDouble(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D429 RID: 54313
+	// Token: 0x0400D88C RID: 55436
 	private FVectorDouble DebugInputEndPt = new FVectorDouble(0.0, 0.0, 0.0);
 
-	// Token: 0x0400D42A RID: 54314
+	// Token: 0x0400D88D RID: 55437
 	private FVectorDouble DebugFrontHalfEndPt = new FVectorDouble(0.0, 0.0, 0.0);
 }

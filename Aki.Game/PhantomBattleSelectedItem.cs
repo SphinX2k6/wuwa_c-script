@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200243E RID: 9278
+// Token: 0x02001923 RID: 6435
 public class PhantomBattleSelectedItem : UiPanelBase
 {
-	// Token: 0x060129A4 RID: 76196 RVA: 0x00496D05 File Offset: 0x00494F05
+	// Token: 0x0600FE5A RID: 65114 RVA: 0x004A42D1 File Offset: 0x004A24D1
 	[NullableContext(1)]
 	public PhantomBattleSelectedItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060129A5 RID: 76197 RVA: 0x00496D1C File Offset: 0x00494F1C
+	// Token: 0x0600FE5B RID: 65115 RVA: 0x004A42E8 File Offset: 0x004A24E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,14 +27,14 @@ public class PhantomBattleSelectedItem : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x060129A6 RID: 76198 RVA: 0x00496D97 File Offset: 0x00494F97
+	// Token: 0x0600FE5C RID: 65116 RVA: 0x004A4363 File Offset: 0x004A2563
 	protected override void OnStart()
 	{
 		base.GetItem(0).SetUIActive(true);
 		base.GetItem(2).SetUIActive(false);
 	}
 
-	// Token: 0x060129A7 RID: 76199 RVA: 0x00496DB4 File Offset: 0x00494FB4
+	// Token: 0x0600FE5D RID: 65117 RVA: 0x004A4380 File Offset: 0x004A2580
 	public void UpdateSelectedItem(int current, int sum)
 	{
 		string newText;
@@ -61,16 +61,16 @@ public class PhantomBattleSelectedItem : UiPanelBase
 		base.GetText(1).SetText(newText, true);
 	}
 
-	// Token: 0x020089C4 RID: 35268
+	// Token: 0x02007B4B RID: 31563
 	private enum ESelectedItemComponent
 	{
-		// Token: 0x0402CC21 RID: 183329
+		// Token: 0x04027F37 RID: 163639
 		SelectedItem,
-		// Token: 0x0402CC22 RID: 183330
+		// Token: 0x04027F38 RID: 163640
 		SelectedNumText,
-		// Token: 0x0402CC23 RID: 183331
+		// Token: 0x04027F39 RID: 163641
 		DecomposeItem,
-		// Token: 0x0402CC24 RID: 183332
+		// Token: 0x04027F3A RID: 163642
 		DecomposeButton
 	}
 }

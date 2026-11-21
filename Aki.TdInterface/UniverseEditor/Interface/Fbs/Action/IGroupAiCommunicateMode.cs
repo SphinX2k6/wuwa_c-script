@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068A6 RID: 26790
+	// Token: 0x02006F47 RID: 28487
 	public struct IGroupAiCommunicateMode : IFlatbufferObject
 	{
-		// Token: 0x1700C6E4 RID: 50916
-		// (get) Token: 0x0602EBA6 RID: 191398 RVA: 0x0065EB7D File Offset: 0x0065CD7D
+		// Token: 0x1700D0CA RID: 53450
+		// (get) Token: 0x060314E0 RID: 201952 RVA: 0x006ADBFD File Offset: 0x006ABDFD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EBA7 RID: 191399 RVA: 0x0065EB8A File Offset: 0x0065CD8A
+		// Token: 0x060314E1 RID: 201953 RVA: 0x006ADC0A File Offset: 0x006ABE0A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EBA8 RID: 191400 RVA: 0x0065EB94 File Offset: 0x0065CD94
+		// Token: 0x060314E2 RID: 201954 RVA: 0x006ADC14 File Offset: 0x006ABE14
 		public static IGroupAiCommunicateMode GetRootAsIGroupAiCommunicateMode(ByteBuffer _bb)
 		{
 			return IGroupAiCommunicateMode.GetRootAsIGroupAiCommunicateMode(_bb, default(IGroupAiCommunicateMode));
 		}
 
-		// Token: 0x0602EBA9 RID: 191401 RVA: 0x0065EBB0 File Offset: 0x0065CDB0
+		// Token: 0x060314E3 RID: 201955 RVA: 0x006ADC30 File Offset: 0x006ABE30
 		public static IGroupAiCommunicateMode GetRootAsIGroupAiCommunicateMode(ByteBuffer _bb, IGroupAiCommunicateMode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EBAA RID: 191402 RVA: 0x0065EBCD File Offset: 0x0065CDCD
+		// Token: 0x060314E4 RID: 201956 RVA: 0x006ADC4D File Offset: 0x006ABE4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EBAB RID: 191403 RVA: 0x0065EBDC File Offset: 0x0065CDDC
+		// Token: 0x060314E5 RID: 201957 RVA: 0x006ADC5C File Offset: 0x006ABE5C
 		public IGroupAiCommunicateMode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C6E5 RID: 50917
-		// (get) Token: 0x0602EBAC RID: 191404 RVA: 0x0065EBEC File Offset: 0x0065CDEC
+		// Token: 0x1700D0CB RID: 53451
+		// (get) Token: 0x060314E6 RID: 201958 RVA: 0x006ADC6C File Offset: 0x006ABE6C
 		public EGroupAiCommunicateType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EBAD RID: 191405 RVA: 0x0065EC28 File Offset: 0x0065CE28
+		// Token: 0x060314E7 RID: 201959 RVA: 0x006ADCA8 File Offset: 0x006ABEA8
 		public static Offset<IGroupAiCommunicateMode> CreateIGroupAiCommunicateMode(FlatBufferBuilder builder, EGroupAiCommunicateType Type = EGroupAiCommunicateType.AddTag)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGroupAiCommunicateMode.EndIGroupAiCommunicateMode(builder);
 		}
 
-		// Token: 0x0602EBAE RID: 191406 RVA: 0x0065EC3E File Offset: 0x0065CE3E
+		// Token: 0x060314E8 RID: 201960 RVA: 0x006ADCBE File Offset: 0x006ABEBE
 		public static void StartIGroupAiCommunicateMode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602EBAF RID: 191407 RVA: 0x0065EC47 File Offset: 0x0065CE47
+		// Token: 0x060314E9 RID: 201961 RVA: 0x006ADCC7 File Offset: 0x006ABEC7
 		public static void AddType(FlatBufferBuilder builder, EGroupAiCommunicateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602EBB0 RID: 191408 RVA: 0x0065EC52 File Offset: 0x0065CE52
+		// Token: 0x060314EA RID: 201962 RVA: 0x006ADCD2 File Offset: 0x006ABED2
 		public static Offset<IGroupAiCommunicateMode> EndIGroupAiCommunicateMode(FlatBufferBuilder builder)
 		{
 			return new Offset<IGroupAiCommunicateMode>(builder.EndTable());
 		}
 
-		// Token: 0x0602EBB1 RID: 191409 RVA: 0x0065EC60 File Offset: 0x0065CE60
+		// Token: 0x060314EB RID: 201963 RVA: 0x006ADCE0 File Offset: 0x006ABEE0
 		public IGroupAiCommunicateModeT UnPack()
 		{
 			IGroupAiCommunicateModeT groupAiCommunicateModeT = new IGroupAiCommunicateModeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return groupAiCommunicateModeT;
 		}
 
-		// Token: 0x0602EBB2 RID: 191410 RVA: 0x0065EC7B File Offset: 0x0065CE7B
+		// Token: 0x060314EC RID: 201964 RVA: 0x006ADCFB File Offset: 0x006ABEFB
 		public void UnPackTo(IGroupAiCommunicateModeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602EBB3 RID: 191411 RVA: 0x0065EC8C File Offset: 0x0065CE8C
+		// Token: 0x060314ED RID: 201965 RVA: 0x006ADD0C File Offset: 0x006ABF0C
 		public static Offset<IGroupAiCommunicateMode> Pack(FlatBufferBuilder builder, IGroupAiCommunicateModeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGroupAiCommunicateMode.CreateIGroupAiCommunicateMode(builder, _o.Type);
 		}
 
-		// Token: 0x04010FF7 RID: 69623
+		// Token: 0x04011E4C RID: 73292
 		private Table __p;
 	}
 }

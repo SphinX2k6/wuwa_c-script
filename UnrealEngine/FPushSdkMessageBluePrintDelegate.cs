@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A41 RID: 6721
+	// Token: 0x020004A1 RID: 1185
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FPushSdkMessageBluePrintDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018E19 RID: 101913 RVA: 0x0024C961 File Offset: 0x0024AB61
+		// Token: 0x06006E5E RID: 28254 RVA: 0x000A2DD3 File Offset: 0x000A0FD3
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FPushSdkMessageBluePrintDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018E1A RID: 101914 RVA: 0x0024C96D File Offset: 0x0024AB6D
+		// Token: 0x06006E5F RID: 28255 RVA: 0x000A2DDF File Offset: 0x000A0FDF
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FPushSdkMessageBluePrintDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FPushSdkMessageBluePrintDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06018E1B RID: 101915 RVA: 0x0024C990 File Offset: 0x0024AB90
+		// Token: 0x06006E60 RID: 28256 RVA: 0x000A2E02 File Offset: 0x000A1002
 		public FPushSdkMessageBluePrintDelegate()
 		{
 		}
 
-		// Token: 0x06018E1C RID: 101916 RVA: 0x0024C998 File Offset: 0x0024AB98
+		// Token: 0x06006E61 RID: 28257 RVA: 0x000A2E0A File Offset: 0x000A100A
 		[NullableContext(2)]
 		public FPushSdkMessageBluePrintDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018E1D RID: 101917 RVA: 0x0024C9A2 File Offset: 0x0024ABA2
+		// Token: 0x06006E62 RID: 28258 RVA: 0x000A2E14 File Offset: 0x000A1014
 		public FPushSdkMessageBluePrintDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018E1E RID: 101918 RVA: 0x0024C9AD File Offset: 0x0024ABAD
+		// Token: 0x06006E63 RID: 28259 RVA: 0x000A2E1F File Offset: 0x000A101F
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<string, string>) ?? ((Action<string, string>)Delegate.CreateDelegate(typeof(Action<string, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018E1F RID: 101919 RVA: 0x0024C9DF File Offset: 0x0024ABDF
+		// Token: 0x06006E64 RID: 28260 RVA: 0x000A2E51 File Offset: 0x000A1051
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<string, string> Callback)
 		{
 			if (FPushSdkMessageBluePrintDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FPushSdkMessageBluePrintDelegate.RegisterId);
 		}
 
-		// Token: 0x06018E20 RID: 101920 RVA: 0x0024CA19 File Offset: 0x0024AC19
+		// Token: 0x06006E65 RID: 28261 RVA: 0x000A2E8B File Offset: 0x000A108B
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<string, string> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06018E21 RID: 101921 RVA: 0x0024CA24 File Offset: 0x0024AC24
+		// Token: 0x06006E66 RID: 28262 RVA: 0x000A2E94 File Offset: 0x000A1094
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(string source, string result)
 		{
 			FPushSdkMessageBluePrintDelegate.__FPushSdkMessageBluePrintDelegate_DelegateParams* ptr = stackalloc FPushSdkMessageBluePrintDelegate.__FPushSdkMessageBluePrintDelegate_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FPushSdkMessageBluePrintDelegate.__FPushSdkMessageBluePrintDelegate_DelegateParams) & -16L;
@@ -89,10 +86,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FPushSdkMessageBluePrintDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06018E22 RID: 101922 RVA: 0x0024CA84 File Offset: 0x0024AC84
+		// Token: 0x06006E67 RID: 28263 RVA: 0x000A2EF4 File Offset: 0x000A10F4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, string> action = target as Action<string, string>;
@@ -105,35 +101,35 @@ namespace UnrealEngine
 			action(arg, arg2);
 		}
 
-		// Token: 0x0400D71C RID: 55068
+		// Token: 0x04002F5C RID: 12124
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D71D RID: 55069
+		// Token: 0x04002F5D RID: 12125
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroPushSdk.PushSdkMessageBluePrintDelegate__DelegateSignature";
 
-		// Token: 0x0400D71E RID: 55070
+		// Token: 0x04002F5E RID: 12126
 		private static int RegisterId;
 
-		// Token: 0x02003117 RID: 12567
+		// Token: 0x02000BEC RID: 3052
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FPushSdkMessageBluePrintDelegate_DelegateParams
+		private ref struct __FPushSdkMessageBluePrintDelegate_DelegateParams
 		{
-			// Token: 0x04016EAC RID: 93868
+			// Token: 0x04005DA6 RID: 23974
 			[FieldOffset(0)]
 			public FString source;
 
-			// Token: 0x04016EAD RID: 93869
+			// Token: 0x04005DA7 RID: 23975
 			[FieldOffset(16)]
 			public FString result;
 		}
 
-		// Token: 0x02003118 RID: 12568
+		// Token: 0x02000BED RID: 3053
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016EAE RID: 93870
+			// Token: 0x04005DA8 RID: 23976
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

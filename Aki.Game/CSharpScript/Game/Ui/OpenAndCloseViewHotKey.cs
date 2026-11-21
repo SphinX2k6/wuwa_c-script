@@ -3,95 +3,95 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046AA RID: 18090
+	// Token: 0x020035DB RID: 13787
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenAndCloseViewHotKey : IOpenAndCloseViewHotKey
 	{
-		// Token: 0x1700764C RID: 30284
-		// (get) Token: 0x0602EA4B RID: 191051 RVA: 0x00ACBF15 File Offset: 0x00ACA115
-		// (set) Token: 0x0602EA4C RID: 191052 RVA: 0x00ACBF1D File Offset: 0x00ACA11D
+		// Token: 0x17004908 RID: 18696
+		// (get) Token: 0x06023197 RID: 143767 RVA: 0x009FA7E9 File Offset: 0x009F89E9
+		// (set) Token: 0x06023198 RID: 143768 RVA: 0x009FA7F1 File Offset: 0x009F89F1
 		public int ConfigId { get; set; }
 
-		// Token: 0x1700764D RID: 30285
-		// (get) Token: 0x0602EA4D RID: 191053 RVA: 0x00ACBF26 File Offset: 0x00ACA126
-		// (set) Token: 0x0602EA4E RID: 191054 RVA: 0x00ACBF2E File Offset: 0x00ACA12E
+		// Token: 0x17004909 RID: 18697
+		// (get) Token: 0x06023199 RID: 143769 RVA: 0x009FA7FA File Offset: 0x009F89FA
+		// (set) Token: 0x0602319A RID: 143770 RVA: 0x009FA802 File Offset: 0x009F8A02
 		public string ActionName { get; set; }
 
-		// Token: 0x1700764E RID: 30286
-		// (get) Token: 0x0602EA4F RID: 191055 RVA: 0x00ACBF37 File Offset: 0x00ACA137
-		// (set) Token: 0x0602EA50 RID: 191056 RVA: 0x00ACBF3F File Offset: 0x00ACA13F
+		// Token: 0x1700490A RID: 18698
+		// (get) Token: 0x0602319B RID: 143771 RVA: 0x009FA80B File Offset: 0x009F8A0B
+		// (set) Token: 0x0602319C RID: 143772 RVA: 0x009FA813 File Offset: 0x009F8A13
 		public EOpenAndCloseViewInputControllerType InputControllerType { get; set; }
 
-		// Token: 0x1700764F RID: 30287
-		// (get) Token: 0x0602EA51 RID: 191057 RVA: 0x00ACBF48 File Offset: 0x00ACA148
-		// (set) Token: 0x0602EA52 RID: 191058 RVA: 0x00ACBF50 File Offset: 0x00ACA150
+		// Token: 0x1700490B RID: 18699
+		// (get) Token: 0x0602319D RID: 143773 RVA: 0x009FA81C File Offset: 0x009F8A1C
+		// (set) Token: 0x0602319E RID: 143774 RVA: 0x009FA824 File Offset: 0x009F8A24
 		public EUiViewName ViewName { get; set; }
 
-		// Token: 0x17007650 RID: 30288
-		// (get) Token: 0x0602EA53 RID: 191059 RVA: 0x00ACBF59 File Offset: 0x00ACA159
-		// (set) Token: 0x0602EA54 RID: 191060 RVA: 0x00ACBF61 File Offset: 0x00ACA161
+		// Token: 0x1700490C RID: 18700
+		// (get) Token: 0x0602319F RID: 143775 RVA: 0x009FA82D File Offset: 0x009F8A2D
+		// (set) Token: 0x060231A0 RID: 143776 RVA: 0x009FA835 File Offset: 0x009F8A35
 		public string[] ViewParam { get; set; }
 
-		// Token: 0x17007651 RID: 30289
-		// (get) Token: 0x0602EA55 RID: 191061 RVA: 0x00ACBF6A File Offset: 0x00ACA16A
-		// (set) Token: 0x0602EA56 RID: 191062 RVA: 0x00ACBF72 File Offset: 0x00ACA172
+		// Token: 0x1700490D RID: 18701
+		// (get) Token: 0x060231A1 RID: 143777 RVA: 0x009FA83E File Offset: 0x009F8A3E
+		// (set) Token: 0x060231A2 RID: 143778 RVA: 0x009FA846 File Offset: 0x009F8A46
 		public bool IsPressTrigger { get; set; }
 
-		// Token: 0x17007652 RID: 30290
-		// (get) Token: 0x0602EA57 RID: 191063 RVA: 0x00ACBF7B File Offset: 0x00ACA17B
-		// (set) Token: 0x0602EA58 RID: 191064 RVA: 0x00ACBF83 File Offset: 0x00ACA183
+		// Token: 0x1700490E RID: 18702
+		// (get) Token: 0x060231A3 RID: 143779 RVA: 0x009FA84F File Offset: 0x009F8A4F
+		// (set) Token: 0x060231A4 RID: 143780 RVA: 0x009FA857 File Offset: 0x009F8A57
 		public int PressStartTime { get; set; }
 
-		// Token: 0x17007653 RID: 30291
-		// (get) Token: 0x0602EA59 RID: 191065 RVA: 0x00ACBF8C File Offset: 0x00ACA18C
-		// (set) Token: 0x0602EA5A RID: 191066 RVA: 0x00ACBF94 File Offset: 0x00ACA194
+		// Token: 0x1700490F RID: 18703
+		// (get) Token: 0x060231A5 RID: 143781 RVA: 0x009FA860 File Offset: 0x009F8A60
+		// (set) Token: 0x060231A6 RID: 143782 RVA: 0x009FA868 File Offset: 0x009F8A68
 		public int PressTriggerTime { get; set; }
 
-		// Token: 0x17007654 RID: 30292
-		// (get) Token: 0x0602EA5B RID: 191067 RVA: 0x00ACBF9D File Offset: 0x00ACA19D
-		// (set) Token: 0x0602EA5C RID: 191068 RVA: 0x00ACBFA5 File Offset: 0x00ACA1A5
+		// Token: 0x17004910 RID: 18704
+		// (get) Token: 0x060231A7 RID: 143783 RVA: 0x009FA871 File Offset: 0x009F8A71
+		// (set) Token: 0x060231A8 RID: 143784 RVA: 0x009FA879 File Offset: 0x009F8A79
 		public bool IsReleaseTrigger { get; set; }
 
-		// Token: 0x17007655 RID: 30293
-		// (get) Token: 0x0602EA5D RID: 191069 RVA: 0x00ACBFAE File Offset: 0x00ACA1AE
-		// (set) Token: 0x0602EA5E RID: 191070 RVA: 0x00ACBFB6 File Offset: 0x00ACA1B6
+		// Token: 0x17004911 RID: 18705
+		// (get) Token: 0x060231A9 RID: 143785 RVA: 0x009FA882 File Offset: 0x009F8A82
+		// (set) Token: 0x060231AA RID: 143786 RVA: 0x009FA88A File Offset: 0x009F8A8A
 		public int ReleaseInvalidTime { get; set; }
 
-		// Token: 0x17007656 RID: 30294
-		// (get) Token: 0x0602EA5F RID: 191071 RVA: 0x00ACBFBF File Offset: 0x00ACA1BF
-		// (set) Token: 0x0602EA60 RID: 191072 RVA: 0x00ACBFC7 File Offset: 0x00ACA1C7
+		// Token: 0x17004912 RID: 18706
+		// (get) Token: 0x060231AB RID: 143787 RVA: 0x009FA893 File Offset: 0x009F8A93
+		// (set) Token: 0x060231AC RID: 143788 RVA: 0x009FA89B File Offset: 0x009F8A9B
 		public bool IsPressClose { get; set; }
 
-		// Token: 0x17007657 RID: 30295
-		// (get) Token: 0x0602EA61 RID: 191073 RVA: 0x00ACBFD0 File Offset: 0x00ACA1D0
-		// (set) Token: 0x0602EA62 RID: 191074 RVA: 0x00ACBFD8 File Offset: 0x00ACA1D8
+		// Token: 0x17004913 RID: 18707
+		// (get) Token: 0x060231AD RID: 143789 RVA: 0x009FA8A4 File Offset: 0x009F8AA4
+		// (set) Token: 0x060231AE RID: 143790 RVA: 0x009FA8AC File Offset: 0x009F8AAC
 		public bool IsReleaseClose { get; set; }
 
-		// Token: 0x17007658 RID: 30296
-		// (get) Token: 0x0602EA63 RID: 191075 RVA: 0x00ACBFE1 File Offset: 0x00ACA1E1
-		// (set) Token: 0x0602EA64 RID: 191076 RVA: 0x00ACBFE9 File Offset: 0x00ACA1E9
+		// Token: 0x17004914 RID: 18708
+		// (get) Token: 0x060231AF RID: 143791 RVA: 0x009FA8B5 File Offset: 0x009F8AB5
+		// (set) Token: 0x060231B0 RID: 143792 RVA: 0x009FA8BD File Offset: 0x009F8ABD
 		public Func<bool> IsAllowOpenViewByShortcutKey { get; set; }
 
-		// Token: 0x17007659 RID: 30297
-		// (get) Token: 0x0602EA65 RID: 191077 RVA: 0x00ACBFF2 File Offset: 0x00ACA1F2
-		// (set) Token: 0x0602EA66 RID: 191078 RVA: 0x00ACBFFA File Offset: 0x00ACA1FA
+		// Token: 0x17004915 RID: 18709
+		// (get) Token: 0x060231B1 RID: 143793 RVA: 0x009FA8C6 File Offset: 0x009F8AC6
+		// (set) Token: 0x060231B2 RID: 143794 RVA: 0x009FA8CE File Offset: 0x009F8ACE
 		public Func<bool> IsAllowCloseViewByShortcutKey { get; set; }
 
-		// Token: 0x1700765A RID: 30298
-		// (get) Token: 0x0602EA67 RID: 191079 RVA: 0x00ACC003 File Offset: 0x00ACA203
-		// (set) Token: 0x0602EA68 RID: 191080 RVA: 0x00ACC00B File Offset: 0x00ACA20B
+		// Token: 0x17004916 RID: 18710
+		// (get) Token: 0x060231B3 RID: 143795 RVA: 0x009FA8D7 File Offset: 0x009F8AD7
+		// (set) Token: 0x060231B4 RID: 143796 RVA: 0x009FA8DF File Offset: 0x009F8ADF
 		public Func<string, InputDistributeDefine.EActionType, bool> IsLockShortcutKey { get; set; }
 
-		// Token: 0x1700765B RID: 30299
-		// (get) Token: 0x0602EA69 RID: 191081 RVA: 0x00ACC014 File Offset: 0x00ACA214
-		// (set) Token: 0x0602EA6A RID: 191082 RVA: 0x00ACC01C File Offset: 0x00ACA21C
+		// Token: 0x17004917 RID: 18711
+		// (get) Token: 0x060231B5 RID: 143797 RVA: 0x009FA8E8 File Offset: 0x009F8AE8
+		// (set) Token: 0x060231B6 RID: 143798 RVA: 0x009FA8F0 File Offset: 0x009F8AF0
 		[Nullable(2)]
 		public Action OpenViewCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x1700765C RID: 30300
-		// (get) Token: 0x0602EA6B RID: 191083 RVA: 0x00ACC025 File Offset: 0x00ACA225
-		// (set) Token: 0x0602EA6C RID: 191084 RVA: 0x00ACC02D File Offset: 0x00ACA22D
+		// Token: 0x17004918 RID: 18712
+		// (get) Token: 0x060231B7 RID: 143799 RVA: 0x009FA8F9 File Offset: 0x009F8AF9
+		// (set) Token: 0x060231B8 RID: 143800 RVA: 0x009FA901 File Offset: 0x009F8B01
 		[Nullable(2)]
 		public Action CloseViewCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

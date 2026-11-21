@@ -2,42 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200605D RID: 24669
+	// Token: 0x020066BE RID: 26302
 	public enum EVisualNovelPerformanceType : byte
 	{
-		// Token: 0x040101FD RID: 66045
+		// Token: 0x04010FF1 RID: 69617
 		Enter,
-		// Token: 0x040101FE RID: 66046
+		// Token: 0x04010FF2 RID: 69618
 		Exit,
-		// Token: 0x040101FF RID: 66047
+		// Token: 0x04010FF3 RID: 69619
 		Move,
-		// Token: 0x04010200 RID: 66048
+		// Token: 0x04010FF4 RID: 69620
 		ModifyRole,
-		// Token: 0x04010201 RID: 66049
+		// Token: 0x04010FF5 RID: 69621
 		PortraitEffect,
-		// Token: 0x04010202 RID: 66050
-		UiShake,
-		// Token: 0x04010203 RID: 66051
+		// Token: 0x04010FF6 RID: 69622
 		BackgroundMove,
-		// Token: 0x04010204 RID: 66052
+		// Token: 0x04010FF7 RID: 69623
 		CgMove,
-		// Token: 0x04010205 RID: 66053
+		// Token: 0x04010FF8 RID: 69624
 		EnterBlackScreen,
-		// Token: 0x04010206 RID: 66054
+		// Token: 0x04010FF9 RID: 69625
 		LeaveBlackScreen,
-		// Token: 0x04010207 RID: 66055
+		// Token: 0x04010FFA RID: 69626
 		PlayScreenEffect,
-		// Token: 0x04010208 RID: 66056
+		// Token: 0x04010FFB RID: 69627
 		StopScreenEffect,
-		// Token: 0x04010209 RID: 66057
+		// Token: 0x04010FFC RID: 69628
 		SendAudioEvent,
-		// Token: 0x0401020A RID: 66058
+		// Token: 0x04010FFD RID: 69629
 		SwitchAudioState,
-		// Token: 0x0401020B RID: 66059
+		// Token: 0x04010FFE RID: 69630
 		Transition,
-		// Token: 0x0401020C RID: 66060
+		// Token: 0x04010FFF RID: 69631
 		RoleIntroduction,
-		// Token: 0x0401020D RID: 66061
+		// Token: 0x04011000 RID: 69632
 		ActivityAction
 	}
 }

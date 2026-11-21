@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE7 RID: 6887
+// Token: 0x02000FA6 RID: 4006
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchResourceChangeActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC27 RID: 52263 RVA: 0x002E96DF File Offset: 0x002E78DF
+	// Token: 0x0600A038 RID: 41016 RVA: 0x002F4873 File Offset: 0x002F2A73
 	public FloroRanchResourceChangeActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.ChangeData = actionData.ResourcesChange;
 	}
 
-	// Token: 0x0600CC28 RID: 52264 RVA: 0x002E96F4 File Offset: 0x002E78F4
+	// Token: 0x0600A039 RID: 41017 RVA: 0x002F4888 File Offset: 0x002F2A88
 	public override UniTask OnExecute()
 	{
 		FloroRanchResourceChangeActionData.<OnExecute>d__2 <OnExecute>d__;
@@ -26,6 +26,6 @@ public class FloroRanchResourceChangeActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DD7 RID: 24023
+	// Token: 0x04005EA6 RID: 24230
 	private readonly FRUnitResourcesChangeAction ChangeData;
 }

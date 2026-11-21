@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x0200326A RID: 12906
+// Token: 0x020027D9 RID: 10201
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterBasePlatform : BasePlatform
 {
-	// Token: 0x0601BE5D RID: 114269 RVA: 0x007BBFEC File Offset: 0x007BA1EC
+	// Token: 0x06019A38 RID: 105016 RVA: 0x007E38C4 File Offset: 0x007E1AC4
 	public CharacterBasePlatform(EntityHandle entityHandle) : base(entityHandle)
 	{
 		this.IsDeltaBaseSpeedNeedZ = false;
@@ -20,7 +20,7 @@ public class CharacterBasePlatform : BasePlatform
 		}
 	}
 
-	// Token: 0x0601BE5E RID: 114270 RVA: 0x007BC060 File Offset: 0x007BA260
+	// Token: 0x06019A39 RID: 105017 RVA: 0x007E3938 File Offset: 0x007E1B38
 	public override FTransformDouble? GetTransform()
 	{
 		if (!this.EntityHandle.Valid)
@@ -36,7 +36,7 @@ public class CharacterBasePlatform : BasePlatform
 		return new FTransformDouble?(component.Actor.Mesh.D_GetSocketTransform(basePlatform.RootComponent.AttachSocketName, ERelativeTransformSpace.RTS_World));
 	}
 
-	// Token: 0x0601BE5F RID: 114271 RVA: 0x007BC0E0 File Offset: 0x007BA2E0
+	// Token: 0x06019A3A RID: 105018 RVA: 0x007E39B8 File Offset: 0x007E1BB8
 	public override bool CheckLeave(Entity entity, Vector location)
 	{
 		EntityHandle entityHandle = this.EntityHandle;
@@ -50,12 +50,12 @@ public class CharacterBasePlatform : BasePlatform
 		return Vector.DistSquared(location, this.CacheLocation) > this.LeaveSphereRadiusSq;
 	}
 
-	// Token: 0x0400DC29 RID: 56361
+	// Token: 0x0400E0C8 RID: 57544
 	public FVectorDouble? LeaveSphereCenter;
 
-	// Token: 0x0400DC2A RID: 56362
+	// Token: 0x0400E0C9 RID: 57545
 	public double LeaveSphereRadiusSq;
 
-	// Token: 0x0400DC2B RID: 56363
+	// Token: 0x0400E0CA RID: 57546
 	protected readonly Vector CacheLocation = Vector.Create();
 }

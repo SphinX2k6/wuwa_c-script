@@ -8,32 +8,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C59 RID: 27737
+	// Token: 0x02005DD3 RID: 24019
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckCharacterMotionState : LevelConditionBase, IStaticVariableResetter
 	{
-		// Token: 0x06044522 RID: 279842 RVA: 0x010D715C File Offset: 0x010D535C
+		// Token: 0x0603A67C RID: 239228 RVA: 0x010810F4 File Offset: 0x0107F2F4
 		static LevelConditionCheckCharacterMotionState()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelConditionCheckCharacterMotionState.CreateStaticDefaultValue), new Action(LevelConditionCheckCharacterMotionState.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044523 RID: 279843 RVA: 0x010D717B File Offset: 0x010D537B
+		// Token: 0x0603A67D RID: 239229 RVA: 0x01081113 File Offset: 0x0107F313
 		public static void CreateStaticDefaultValue()
 		{
 			LevelConditionCheckCharacterMotionState.RegisteredCallbacks = new Dictionary<TMotionStateCallback, LevelConditionCheckCharacterMotionState.CallbackAdapters>();
 			LevelConditionCheckCharacterMotionState.SubscribedEntity = null;
 		}
 
-		// Token: 0x06044524 RID: 279844 RVA: 0x010D718D File Offset: 0x010D538D
+		// Token: 0x0603A67E RID: 239230 RVA: 0x01081125 File Offset: 0x0107F325
 		public static void ResetStaticDefaultValue()
 		{
 			LevelConditionCheckCharacterMotionState.RegisteredCallbacks = null;
 			LevelConditionCheckCharacterMotionState.SubscribedEntity = null;
 		}
 
-		// Token: 0x06044525 RID: 279845 RVA: 0x010D719B File Offset: 0x010D539B
+		// Token: 0x0603A67F RID: 239231 RVA: 0x01081133 File Offset: 0x0107F333
 		private List<string> ParseModes([Nullable(2)] string raw)
 		{
 			if (string.IsNullOrEmpty(raw))
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return raw.TrimStart('[').TrimEnd(']').Split(',', StringSplitOptions.None).ToList<string>();
 		}
 
-		// Token: 0x06044526 RID: 279846 RVA: 0x010D71C8 File Offset: 0x010D53C8
+		// Token: 0x0603A680 RID: 239232 RVA: 0x01081160 File Offset: 0x0107F360
 		private List<string> GetModes(Condition inConditionInfo)
 		{
 			List<string> list;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return list;
 		}
 
-		// Token: 0x06044527 RID: 279847 RVA: 0x010D7214 File Offset: 0x010D5414
+		// Token: 0x0603A681 RID: 239233 RVA: 0x010811AC File Offset: 0x0107F3AC
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return result;
 		}
 
-		// Token: 0x06044528 RID: 279848 RVA: 0x010D7660 File Offset: 0x010D5860
+		// Token: 0x0603A682 RID: 239234 RVA: 0x010815F8 File Offset: 0x0107F7F8
 		public static void RegisterEvents(TMotionStateCallback callback)
 		{
 			if (LevelConditionCheckCharacterMotionState.RegisteredCallbacks.ContainsKey(callback))
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			LevelConditionCheckCharacterMotionState.SubscribeCallback(callbackAdapters);
 		}
 
-		// Token: 0x06044529 RID: 279849 RVA: 0x010D773C File Offset: 0x010D593C
+		// Token: 0x0603A683 RID: 239235 RVA: 0x010816D4 File Offset: 0x0107F8D4
 		public static void UnRegisterEvents(TMotionStateCallback callback)
 		{
 			LevelConditionCheckCharacterMotionState.CallbackAdapters adapters;
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604452A RID: 279850 RVA: 0x010D77A8 File Offset: 0x010D59A8
+		// Token: 0x0603A684 RID: 239236 RVA: 0x01081740 File Offset: 0x0107F940
 		private static void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			foreach (LevelConditionCheckCharacterMotionState.CallbackAdapters adapters in LevelConditionCheckCharacterMotionState.RegisteredCallbacks.Values)
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604452B RID: 279851 RVA: 0x010D7850 File Offset: 0x010D5A50
+		// Token: 0x0603A685 RID: 239237 RVA: 0x010817E8 File Offset: 0x0107F9E8
 		private static void SubscribeCallback(LevelConditionCheckCharacterMotionState.CallbackAdapters adapters)
 		{
 			WorldEntity subscribedEntity = LevelConditionCheckCharacterMotionState.SubscribedEntity;
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			EventSystem.Instance.AddWithTarget<ECharPositionSubState, ECharPositionSubState>(subscribedEntity, EEventName.CharOnPositionSubStateChanged, adapters.PositionSubState);
 		}
 
-		// Token: 0x0604452C RID: 279852 RVA: 0x010D78AC File Offset: 0x010D5AAC
+		// Token: 0x0603A686 RID: 239238 RVA: 0x01081844 File Offset: 0x0107FA44
 		private static void UnsubscribeCallback(LevelConditionCheckCharacterMotionState.CallbackAdapters adapters)
 		{
 			WorldEntity subscribedEntity = LevelConditionCheckCharacterMotionState.SubscribedEntity;
@@ -380,46 +380,46 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			EventSystem.Instance.RemoveWithTarget<ECharPositionSubState, ECharPositionSubState>(subscribedEntity, EEventName.CharOnPositionSubStateChanged, adapters.PositionSubState);
 		}
 
-		// Token: 0x040239AA RID: 145834
+		// Token: 0x0401EC4C RID: 126028
 		private readonly Dictionary<int, List<string>> ModeCache = new Dictionary<int, List<string>>();
 
-		// Token: 0x040239AB RID: 145835
+		// Token: 0x0401EC4D RID: 126029
 		private static Dictionary<TMotionStateCallback, LevelConditionCheckCharacterMotionState.CallbackAdapters> RegisteredCallbacks;
 
-		// Token: 0x040239AC RID: 145836
+		// Token: 0x0401EC4E RID: 126030
 		[Nullable(2)]
 		private static WorldEntity SubscribedEntity;
 
-		// Token: 0x0200CC9A RID: 52378
+		// Token: 0x0200B88A RID: 47242
 		[Nullable(0)]
 		[RequiredMember]
 		private sealed class CallbackAdapters
 		{
-			// Token: 0x06051A3B RID: 334395 RVA: 0x01629213 File Offset: 0x01627413
+			// Token: 0x060482A5 RID: 295589 RVA: 0x015FE4E7 File Offset: 0x015FC6E7
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public CallbackAdapters()
 			{
 			}
 
-			// Token: 0x0403DB73 RID: 252787
+			// Token: 0x04038F95 RID: 233365
 			[RequiredMember]
 			public Action<ECharMoveState, ECharMoveState> MoveState;
 
-			// Token: 0x0403DB74 RID: 252788
+			// Token: 0x04038F96 RID: 233366
 			[RequiredMember]
 			public Action<ECharPositionState, ECharPositionState> PositionState;
 
-			// Token: 0x0403DB75 RID: 252789
+			// Token: 0x04038F97 RID: 233367
 			[RequiredMember]
 			public Action<ECharPositionSubState, ECharPositionSubState> PositionSubState;
 		}
 
-		// Token: 0x0200CC9B RID: 52379
+		// Token: 0x0200B88B RID: 47243
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403DB76 RID: 252790
+			// Token: 0x04038F98 RID: 233368
 			[Nullable(new byte[]
 			{
 				0,

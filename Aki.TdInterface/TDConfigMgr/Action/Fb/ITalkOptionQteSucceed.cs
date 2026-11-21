@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002512 RID: 9490
+	// Token: 0x020027B8 RID: 10168
 	public class ITalkOptionQteSucceed : ITalkOptionParamType
 	{
-		// Token: 0x0600D3B0 RID: 54192 RVA: 0x001F5D78 File Offset: 0x001F3F78
-		[NullableContext(1)]
+		// Token: 0x0600E10C RID: 57612 RVA: 0x00211770 File Offset: 0x0020F970
 		public static ITalkOptionQteSucceed Create(ITalkOptionQteSucceed? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B4E RID: 15182
-		// (get) Token: 0x0600D3B1 RID: 54193 RVA: 0x001F5D97 File Offset: 0x001F3F97
+		// Token: 0x17003E4A RID: 15946
+		// (get) Token: 0x0600E10D RID: 57613 RVA: 0x0021178F File Offset: 0x0020F98F
 		public override ETalkOptionParamType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007404 RID: 29700
+		// Token: 0x04007A56 RID: 31318
 		private ITalkOptionQteSucceed Instance;
 	}
 }

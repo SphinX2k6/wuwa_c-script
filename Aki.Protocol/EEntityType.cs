@@ -3,40 +3,40 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200157C RID: 5500
+	// Token: 0x020015F2 RID: 5618
 	public enum EEntityType
 	{
-		// Token: 0x0400A6B9 RID: 42681
+		// Token: 0x0400AB46 RID: 43846
 		[OriginalName("Player")]
 		Player,
-		// Token: 0x0400A6BA RID: 42682
+		// Token: 0x0400AB47 RID: 43847
 		[OriginalName("Npc")]
 		Npc,
-		// Token: 0x0400A6BB RID: 42683
+		// Token: 0x0400AB48 RID: 43848
 		[OriginalName("Monster")]
 		Monster,
-		// Token: 0x0400A6BC RID: 42684
+		// Token: 0x0400AB49 RID: 43849
 		[OriginalName("SceneItem")]
 		SceneItem = 5,
-		// Token: 0x0400A6BD RID: 42685
+		// Token: 0x0400AB4A RID: 43850
 		[OriginalName("Custom")]
 		Custom,
-		// Token: 0x0400A6BE RID: 42686
+		// Token: 0x0400AB4B RID: 43851
 		[OriginalName("Vision")]
 		Vision,
-		// Token: 0x0400A6BF RID: 42687
+		// Token: 0x0400AB4C RID: 43852
 		[OriginalName("Animal")]
 		Animal,
-		// Token: 0x0400A6C0 RID: 42688
+		// Token: 0x0400AB4D RID: 43853
 		[OriginalName("ClientOnly")]
 		ClientOnly,
-		// Token: 0x0400A6C1 RID: 42689
+		// Token: 0x0400AB4E RID: 43854
 		[OriginalName("Vehicle")]
 		Vehicle,
-		// Token: 0x0400A6C2 RID: 42690
+		// Token: 0x0400AB4F RID: 43855
 		[OriginalName("PlayerEntity")]
 		PlayerEntity,
-		// Token: 0x0400A6C3 RID: 42691
+		// Token: 0x0400AB50 RID: 43856
 		[OriginalName("SceneEntity")]
 		SceneEntity
 	}

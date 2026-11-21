@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000044 RID: 68
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CombatComponent : IComponentBase
 	{
-		// Token: 0x0600024A RID: 586 RVA: 0x000192CC File Offset: 0x000174CC
+		// Token: 0x0600024E RID: 590 RVA: 0x00019C40 File Offset: 0x00017E40
 		private CombatComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600024B RID: 587 RVA: 0x00019304 File Offset: 0x00017504
+		// Token: 0x0600024F RID: 591 RVA: 0x00019C78 File Offset: 0x00017E78
 		public static CombatComponent Create([Nullable(2)] CombatComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600024C RID: 588 RVA: 0x00019317 File Offset: 0x00017517
+		// Token: 0x06000250 RID: 592 RVA: 0x00019C8B File Offset: 0x00017E8B
 		public static CombatComponent CreateFromSetValue([Nullable(2)] CombatComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600024D RID: 589 RVA: 0x0001932A File Offset: 0x0001752A
+		// Token: 0x06000251 RID: 593 RVA: 0x00019C9E File Offset: 0x00017E9E
 		public new CombatComponent_SetValue ToSetValue()
 		{
 			return new CombatComponent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000D1 RID: 209
-		// (get) Token: 0x0600024E RID: 590 RVA: 0x0001934C File Offset: 0x0001754C
-		// (set) Token: 0x0600024F RID: 591 RVA: 0x00019386 File Offset: 0x00017586
+		// Token: 0x170000D3 RID: 211
+		// (get) Token: 0x06000252 RID: 594 RVA: 0x00019CC0 File Offset: 0x00017EC0
+		// (set) Token: 0x06000253 RID: 595 RVA: 0x00019CFA File Offset: 0x00017EFA
 		public override bool? Disabled
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D2 RID: 210
-		// (get) Token: 0x06000250 RID: 592 RVA: 0x00019394 File Offset: 0x00017594
-		// (set) Token: 0x06000251 RID: 593 RVA: 0x000193BE File Offset: 0x000175BE
+		// Token: 0x170000D4 RID: 212
+		// (get) Token: 0x06000254 RID: 596 RVA: 0x00019D08 File Offset: 0x00017F08
+		// (set) Token: 0x06000255 RID: 597 RVA: 0x00019D32 File Offset: 0x00017F32
 		public override bool? EdIsLocked
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000176 RID: 374
+		// Token: 0x0400017B RID: 379
 		[Nullable(2)]
 		protected new CombatComponent FbInstance;
 
-		// Token: 0x04000177 RID: 375
+		// Token: 0x0400017C RID: 380
 		[Nullable(2)]
 		protected new CombatComponent_SetValue PocoInterface;
 	}

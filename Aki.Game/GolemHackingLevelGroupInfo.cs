@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FFD RID: 4093
+// Token: 0x020004B1 RID: 1201
 public class GolemHackingLevelGroupInfo
 {
-	// Token: 0x0400302E RID: 12334
+	// Token: 0x040030C5 RID: 12485
 	public int Group;
 
-	// Token: 0x0400302F RID: 12335
+	// Token: 0x040030C6 RID: 12486
 	[Nullable(1)]
 	public List<int> LevelGroup;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005CA RID: 1482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000657 RID: 1623
 	public class IPasserbyNpcSource
 	{
-		// Token: 0x06001F60 RID: 8032 RVA: 0x000581DC File Offset: 0x000563DC
+		// Token: 0x0600221A RID: 8730 RVA: 0x0005E66C File Offset: 0x0005C86C
 		private IPasserbyNpcSource_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F61 RID: 8033 RVA: 0x00058214 File Offset: 0x00056414
+		// Token: 0x0600221B RID: 8731 RVA: 0x0005E6A4 File Offset: 0x0005C8A4
 		public static IPasserbyNpcSource Create([Nullable(2)] IPasserbyNpcSource instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F62 RID: 8034 RVA: 0x00058227 File Offset: 0x00056427
+		// Token: 0x0600221C RID: 8732 RVA: 0x0005E6B7 File Offset: 0x0005C8B7
 		public static IPasserbyNpcSource CreateFromSetValue([Nullable(2)] IPasserbyNpcSource_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F63 RID: 8035 RVA: 0x0005823A File Offset: 0x0005643A
+		// Token: 0x0600221D RID: 8733 RVA: 0x0005E6CA File Offset: 0x0005C8CA
 		public IPasserbyNpcSource_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcSource_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000860 RID: 2144
-		// (get) Token: 0x06001F64 RID: 8036 RVA: 0x0005824D File Offset: 0x0005644D
-		// (set) Token: 0x06001F65 RID: 8037 RVA: 0x00058278 File Offset: 0x00056478
+		// Token: 0x17000909 RID: 2313
+		// (get) Token: 0x0600221E RID: 8734 RVA: 0x0005E6DD File Offset: 0x0005C8DD
+		// (set) Token: 0x0600221F RID: 8735 RVA: 0x0005E708 File Offset: 0x0005C908
 		public virtual EPasserbyNpcSource Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001632 RID: 5682
+		// Token: 0x04001800 RID: 6144
 		[Nullable(2)]
 		protected IPasserbyNpcSource FbInstance;
 
-		// Token: 0x04001633 RID: 5683
+		// Token: 0x04001801 RID: 6145
 		[Nullable(2)]
 		protected IPasserbyNpcSource_SetValue PocoInterface;
 	}

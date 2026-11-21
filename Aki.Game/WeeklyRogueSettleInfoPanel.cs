@@ -7,10 +7,10 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D40 RID: 11584
+// Token: 0x0200229A RID: 8858
 public class WeeklyRogueSettleInfoPanel : UiPanelBase
 {
-	// Token: 0x06018588 RID: 99720 RVA: 0x00632680 File Offset: 0x00630880
+	// Token: 0x06015E2A RID: 89642 RVA: 0x00658690 File Offset: 0x00656890
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,13 +19,13 @@ public class WeeklyRogueSettleInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06018589 RID: 99721 RVA: 0x006326A3 File Offset: 0x006308A3
+	// Token: 0x06015E2B RID: 89643 RVA: 0x006586B3 File Offset: 0x006568B3
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<WeeklyRogueSettleInfoPanelItem, WeeklyRogueSettleInfoItemData>(base.GetVerticalLayout(0), () => new WeeklyRogueSettleInfoPanelItem(), null, false, true);
 	}
 
-	// Token: 0x0601858A RID: 99722 RVA: 0x006326DC File Offset: 0x006308DC
+	// Token: 0x06015E2C RID: 89644 RVA: 0x006586EC File Offset: 0x006568EC
 	[NullableContext(1)]
 	public void UpdateData(RogueWeeklyResultNotify data)
 	{
@@ -71,7 +71,7 @@ public class WeeklyRogueSettleInfoPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0400B4C0 RID: 46272
+	// Token: 0x0400B835 RID: 47157
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,10 +79,10 @@ public class WeeklyRogueSettleInfoPanel : UiPanelBase
 	})]
 	private GenericLayout<WeeklyRogueSettleInfoPanelItem, WeeklyRogueSettleInfoItemData> Layout;
 
-	// Token: 0x020092CC RID: 37580
+	// Token: 0x020084F3 RID: 34035
 	private enum EWeeklyRogueSettleInfoPanelDefine
 	{
-		// Token: 0x0402F72C RID: 194348
+		// Token: 0x0402ADB4 RID: 175540
 		Layout
 	}
 }

@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001955 RID: 6485
+// Token: 0x02000E12 RID: 3602
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayerTitleInfoTip : UiViewBase
 {
-	// Token: 0x0600BD57 RID: 48471 RVA: 0x002AD5DB File Offset: 0x002AB7DB
+	// Token: 0x0600915A RID: 37210 RVA: 0x002B841F File Offset: 0x002B661F
 	public PlayerTitleInfoTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600BD58 RID: 48472 RVA: 0x002AD5F0 File Offset: 0x002AB7F0
+	// Token: 0x0600915B RID: 37211 RVA: 0x002B8434 File Offset: 0x002B6634
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +43,7 @@ public class PlayerTitleInfoTip : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600BD59 RID: 48473 RVA: 0x002AD6FC File Offset: 0x002AB8FC
+	// Token: 0x0600915C RID: 37212 RVA: 0x002B8540 File Offset: 0x002B6740
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.UpdateNavigationListener, new Action(this.CloseTitleInfo));
@@ -52,7 +52,7 @@ public class PlayerTitleInfoTip : UiViewBase
 		EventSystem.Instance.Add<ChatRoom, ChatContentData>(EEventName.OnAddChatContent, new Action<ChatRoom, ChatContentData>(this.OnAddChatContent));
 	}
 
-	// Token: 0x0600BD5A RID: 48474 RVA: 0x002AD77C File Offset: 0x002AB97C
+	// Token: 0x0600915D RID: 37213 RVA: 0x002B85C0 File Offset: 0x002B67C0
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateNavigationListener, new Action(this.CloseTitleInfo));
@@ -61,7 +61,7 @@ public class PlayerTitleInfoTip : UiViewBase
 		EventSystem.Instance.Remove(EEventName.OnAddChatContent, new Action<ChatRoom, ChatContentData>(this.OnAddChatContent));
 	}
 
-	// Token: 0x0600BD5B RID: 48475 RVA: 0x002AD7F9 File Offset: 0x002AB9F9
+	// Token: 0x0600915E RID: 37214 RVA: 0x002B863D File Offset: 0x002B683D
 	private void OnAddChatContent(ChatRoom chatRoom, ChatContentData chatContent)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.ChatView))
@@ -70,13 +70,13 @@ public class PlayerTitleInfoTip : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BD5C RID: 48476 RVA: 0x002AD812 File Offset: 0x002ABA12
+	// Token: 0x0600915F RID: 37215 RVA: 0x002B8656 File Offset: 0x002B6856
 	private void CloseTitleInfo()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600BD5D RID: 48477 RVA: 0x002AD81C File Offset: 0x002ABA1C
+	// Token: 0x06009160 RID: 37216 RVA: 0x002B8660 File Offset: 0x002B6860
 	protected override void OnBeforeShow()
 	{
 		PlayerTitleInfoTipParams playerTitleInfoTipParams = this.OpenParam as PlayerTitleInfoTipParams;
@@ -96,7 +96,7 @@ public class PlayerTitleInfoTip : UiViewBase
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x0600BD5E RID: 48478 RVA: 0x002AD8AF File Offset: 0x002ABAAF
+	// Token: 0x06009161 RID: 37217 RVA: 0x002B86F3 File Offset: 0x002B68F3
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CloseCallback != null)
@@ -105,13 +105,13 @@ public class PlayerTitleInfoTip : UiViewBase
 		}
 	}
 
-	// Token: 0x0600BD5F RID: 48479 RVA: 0x002AD8C4 File Offset: 0x002ABAC4
+	// Token: 0x06009162 RID: 37218 RVA: 0x002B8708 File Offset: 0x002B6908
 	private void OnBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600BD60 RID: 48480 RVA: 0x002AD8CD File Offset: 0x002ABACD
+	// Token: 0x06009163 RID: 37219 RVA: 0x002B8711 File Offset: 0x002B6911
 	public void UpdateText()
 	{
 		UUIText text = base.GetText(2);
@@ -122,40 +122,40 @@ public class PlayerTitleInfoTip : UiViewBase
 		text.SetText(this.PlayerTitleInfoString, true);
 	}
 
-	// Token: 0x0600BD61 RID: 48481 RVA: 0x002AD8E7 File Offset: 0x002ABAE7
+	// Token: 0x06009164 RID: 37220 RVA: 0x002B872B File Offset: 0x002B692B
 	public void BindCloseCallback(Action closeCallback)
 	{
 		this.CloseCallback = closeCallback;
 	}
 
-	// Token: 0x0400556D RID: 21869
+	// Token: 0x0400561A RID: 22042
 	[Nullable(2)]
 	private UUIItem ItemForLocation;
 
-	// Token: 0x0400556E RID: 21870
+	// Token: 0x0400561B RID: 22043
 	private string PlayerTitleInfoString = "";
 
-	// Token: 0x0400556F RID: 21871
+	// Token: 0x0400561C RID: 22044
 	[Nullable(2)]
 	private Action CloseCallback;
 
-	// Token: 0x02007EB2 RID: 32434
+	// Token: 0x02007041 RID: 28737
 	[NullableContext(0)]
 	private class EPlayerTitleInfoTipDefine
 	{
-		// Token: 0x040296BC RID: 169660
+		// Token: 0x040249F9 RID: 150009
 		public const int ItemRoot = 0;
 
-		// Token: 0x040296BD RID: 169661
+		// Token: 0x040249FA RID: 150010
 		public const int PanelInfoTip = 1;
 
-		// Token: 0x040296BE RID: 169662
+		// Token: 0x040249FB RID: 150011
 		public const int TxtInfoTip = 2;
 
-		// Token: 0x040296BF RID: 169663
+		// Token: 0x040249FC RID: 150012
 		public const int BtnMask = 3;
 
-		// Token: 0x040296C0 RID: 169664
+		// Token: 0x040249FD RID: 150013
 		public const int TextureIcon = 4;
 	}
 }

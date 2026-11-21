@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DD3 RID: 3539
+	// Token: 0x02000EB8 RID: 3768
 	public struct Liveness : IFlatbufferObject
 	{
-		// Token: 0x17001D27 RID: 7463
-		// (get) Token: 0x06008EEE RID: 36590 RVA: 0x00279A05 File Offset: 0x00277C05
+		// Token: 0x17001D8B RID: 7563
+		// (get) Token: 0x0600950A RID: 38154 RVA: 0x00297DDD File Offset: 0x00295FDD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008EEF RID: 36591 RVA: 0x00279A12 File Offset: 0x00277C12
+		// Token: 0x0600950B RID: 38155 RVA: 0x00297DEA File Offset: 0x00295FEA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008EF0 RID: 36592 RVA: 0x00279A1C File Offset: 0x00277C1C
+		// Token: 0x0600950C RID: 38156 RVA: 0x00297DF4 File Offset: 0x00295FF4
 		public static Liveness GetRootAsLiveness(ByteBuffer _bb)
 		{
 			return Liveness.GetRootAsLiveness(_bb, default(Liveness));
 		}
 
-		// Token: 0x06008EF1 RID: 36593 RVA: 0x00279A38 File Offset: 0x00277C38
+		// Token: 0x0600950D RID: 38157 RVA: 0x00297E10 File Offset: 0x00296010
 		public static Liveness GetRootAsLiveness(ByteBuffer _bb, Liveness obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008EF2 RID: 36594 RVA: 0x00279A55 File Offset: 0x00277C55
+		// Token: 0x0600950E RID: 38158 RVA: 0x00297E2D File Offset: 0x0029602D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008EF3 RID: 36595 RVA: 0x00279A64 File Offset: 0x00277C64
+		// Token: 0x0600950F RID: 38159 RVA: 0x00297E3C File Offset: 0x0029603C
 		public Liveness __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001D28 RID: 7464
-		// (get) Token: 0x06008EF4 RID: 36596 RVA: 0x00279A74 File Offset: 0x00277C74
+		// Token: 0x17001D8C RID: 7564
+		// (get) Token: 0x06009510 RID: 38160 RVA: 0x00297E4C File Offset: 0x0029604C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D29 RID: 7465
-		// (get) Token: 0x06008EF5 RID: 36597 RVA: 0x00279AB0 File Offset: 0x00277CB0
+		// Token: 0x17001D8D RID: 7565
+		// (get) Token: 0x06009511 RID: 38161 RVA: 0x00297E88 File Offset: 0x00296088
 		public int Goal
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D2A RID: 7466
-		// (get) Token: 0x06008EF6 RID: 36598 RVA: 0x00279AEC File Offset: 0x00277CEC
+		// Token: 0x17001D8E RID: 7566
+		// (get) Token: 0x06009512 RID: 38162 RVA: 0x00297EC4 File Offset: 0x002960C4
 		public int DropId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E6D RID: 20077
+		// Token: 0x04005452 RID: 21586
 		private Table __p;
 	}
 }

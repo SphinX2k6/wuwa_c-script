@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023C1 RID: 9153
+	// Token: 0x02002656 RID: 9814
 	public static class EPhoneBoardTypeExtensions
 	{
-		// Token: 0x0600C763 RID: 51043 RVA: 0x001D3080 File Offset: 0x001D1280
+		// Token: 0x0600D3DD RID: 54237 RVA: 0x001EC718 File Offset: 0x001EA918
 		public static string ToEnumString(this EPhoneBoardType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C764 RID: 51044 RVA: 0x001D30A8 File Offset: 0x001D12A8
+		// Token: 0x0600D3DE RID: 54238 RVA: 0x001EC740 File Offset: 0x001EA940
 		public static EPhoneBoardType FromString(string name)
 		{
 			EPhoneBoardType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C765 RID: 51045 RVA: 0x001D30D1 File Offset: 0x001D12D1
+		// Token: 0x0600D3DF RID: 54239 RVA: 0x001EC769 File Offset: 0x001EA969
 		public static bool TryFromString(string name, out EPhoneBoardType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C766 RID: 51046 RVA: 0x001D30F6 File Offset: 0x001D12F6
+		// Token: 0x0600D3E0 RID: 54240 RVA: 0x001EC78E File Offset: 0x001EA98E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C767 RID: 51047 RVA: 0x001D3106 File Offset: 0x001D1306
+		// Token: 0x0600D3E1 RID: 54241 RVA: 0x001EC79E File Offset: 0x001EA99E
 		public static EPhoneBoardType[] GetValues()
 		{
 			return new EPhoneBoardType[1];
 		}
 
-		// Token: 0x0600C768 RID: 51048 RVA: 0x001D310E File Offset: 0x001D130E
+		// Token: 0x0600D3E2 RID: 54242 RVA: 0x001EC7A6 File Offset: 0x001EA9A6
 		public static string[] GetNames()
 		{
 			return new string[]

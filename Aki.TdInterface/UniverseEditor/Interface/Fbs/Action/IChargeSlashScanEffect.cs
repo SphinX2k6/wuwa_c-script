@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006355 RID: 25429
+	// Token: 0x020069C6 RID: 27078
 	public struct IChargeSlashScanEffect : IFlatbufferObject
 	{
-		// Token: 0x1700BDB7 RID: 48567
-		// (get) Token: 0x0602BFC9 RID: 180169 RVA: 0x0060B787 File Offset: 0x00609987
+		// Token: 0x1700C73F RID: 51007
+		// (get) Token: 0x0602E733 RID: 190259 RVA: 0x006568DB File Offset: 0x00654ADB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BFCA RID: 180170 RVA: 0x0060B794 File Offset: 0x00609994
+		// Token: 0x0602E734 RID: 190260 RVA: 0x006568E8 File Offset: 0x00654AE8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BFCB RID: 180171 RVA: 0x0060B79C File Offset: 0x0060999C
+		// Token: 0x0602E735 RID: 190261 RVA: 0x006568F0 File Offset: 0x00654AF0
 		public static IChargeSlashScanEffect GetRootAsIChargeSlashScanEffect(ByteBuffer _bb)
 		{
 			return IChargeSlashScanEffect.GetRootAsIChargeSlashScanEffect(_bb, default(IChargeSlashScanEffect));
 		}
 
-		// Token: 0x0602BFCC RID: 180172 RVA: 0x0060B7B8 File Offset: 0x006099B8
+		// Token: 0x0602E736 RID: 190262 RVA: 0x0065690C File Offset: 0x00654B0C
 		public static IChargeSlashScanEffect GetRootAsIChargeSlashScanEffect(ByteBuffer _bb, IChargeSlashScanEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BFCD RID: 180173 RVA: 0x0060B7D5 File Offset: 0x006099D5
+		// Token: 0x0602E737 RID: 190263 RVA: 0x00656929 File Offset: 0x00654B29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BFCE RID: 180174 RVA: 0x0060B7E4 File Offset: 0x006099E4
+		// Token: 0x0602E738 RID: 190264 RVA: 0x00656938 File Offset: 0x00654B38
 		public IChargeSlashScanEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BDB8 RID: 48568
-		// (get) Token: 0x0602BFCF RID: 180175 RVA: 0x0060B7F4 File Offset: 0x006099F4
+		// Token: 0x1700C740 RID: 51008
+		// (get) Token: 0x0602E739 RID: 190265 RVA: 0x00656948 File Offset: 0x00654B48
 		public ESpecificScanType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BDB9 RID: 48569
-		// (get) Token: 0x0602BFD0 RID: 180176 RVA: 0x0060B830 File Offset: 0x00609A30
+		// Token: 0x1700C741 RID: 51009
+		// (get) Token: 0x0602E73A RID: 190266 RVA: 0x00656984 File Offset: 0x00654B84
 		public int TriggerPosEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BFD1 RID: 180177 RVA: 0x0060B86C File Offset: 0x00609A6C
+		// Token: 0x0602E73B RID: 190267 RVA: 0x006569C0 File Offset: 0x00654BC0
 		public static Offset<IChargeSlashScanEffect> CreateIChargeSlashScanEffect(FlatBufferBuilder builder, ESpecificScanType Type = ESpecificScanType.None, int TriggerPosEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChargeSlashScanEffect.EndIChargeSlashScanEffect(builder);
 		}
 
-		// Token: 0x0602BFD2 RID: 180178 RVA: 0x0060B889 File Offset: 0x00609A89
+		// Token: 0x0602E73C RID: 190268 RVA: 0x006569DD File Offset: 0x00654BDD
 		public static void StartIChargeSlashScanEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602BFD3 RID: 180179 RVA: 0x0060B892 File Offset: 0x00609A92
+		// Token: 0x0602E73D RID: 190269 RVA: 0x006569E6 File Offset: 0x00654BE6
 		public static void AddType(FlatBufferBuilder builder, ESpecificScanType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BFD4 RID: 180180 RVA: 0x0060B89D File Offset: 0x00609A9D
+		// Token: 0x0602E73E RID: 190270 RVA: 0x006569F1 File Offset: 0x00654BF1
 		public static void AddTriggerPosEntityId(FlatBufferBuilder builder, int triggerPosEntityId)
 		{
 			builder.AddInt(1, triggerPosEntityId, 0);
 		}
 
-		// Token: 0x0602BFD5 RID: 180181 RVA: 0x0060B8A8 File Offset: 0x00609AA8
+		// Token: 0x0602E73F RID: 190271 RVA: 0x006569FC File Offset: 0x00654BFC
 		public static Offset<IChargeSlashScanEffect> EndIChargeSlashScanEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IChargeSlashScanEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602BFD6 RID: 180182 RVA: 0x0060B8B8 File Offset: 0x00609AB8
+		// Token: 0x0602E740 RID: 190272 RVA: 0x00656A0C File Offset: 0x00654C0C
 		public IChargeSlashScanEffectT UnPack()
 		{
 			IChargeSlashScanEffectT chargeSlashScanEffectT = new IChargeSlashScanEffectT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return chargeSlashScanEffectT;
 		}
 
-		// Token: 0x0602BFD7 RID: 180183 RVA: 0x0060B8D3 File Offset: 0x00609AD3
+		// Token: 0x0602E741 RID: 190273 RVA: 0x00656A27 File Offset: 0x00654C27
 		public void UnPackTo(IChargeSlashScanEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.TriggerPosEntityId = this.TriggerPosEntityId;
 		}
 
-		// Token: 0x0602BFD8 RID: 180184 RVA: 0x0060B8F0 File Offset: 0x00609AF0
+		// Token: 0x0602E742 RID: 190274 RVA: 0x00656A44 File Offset: 0x00654C44
 		public static Offset<IChargeSlashScanEffect> Pack(FlatBufferBuilder builder, IChargeSlashScanEffectT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChargeSlashScanEffect.CreateIChargeSlashScanEffect(builder, _o.Type, _o.TriggerPosEntityId);
 		}
 
-		// Token: 0x04010920 RID: 67872
+		// Token: 0x04011735 RID: 71477
 		private Table __p;
 	}
 }

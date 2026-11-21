@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common
 {
-	// Token: 0x02005B45 RID: 23365
+	// Token: 0x02004B26 RID: 19238
 	public class RoleAttributeDetailView : UiViewBase
 	{
-		// Token: 0x0603B283 RID: 242307 RVA: 0x00E1B142 File Offset: 0x00E19342
+		// Token: 0x060301F5 RID: 197109 RVA: 0x00D6BDE2 File Offset: 0x00D69FE2
 		[NullableContext(1)]
 		public RoleAttributeDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603B284 RID: 242308 RVA: 0x00E1B14C File Offset: 0x00E1934C
+		// Token: 0x060301F6 RID: 197110 RVA: 0x00D6BDEC File Offset: 0x00D69FEC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Common
 			};
 		}
 
-		// Token: 0x0603B285 RID: 242309 RVA: 0x00E1B1A8 File Offset: 0x00E193A8
+		// Token: 0x060301F7 RID: 197111 RVA: 0x00D6BE48 File Offset: 0x00D6A048
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Common
 			EventSystem.Instance.Emit<bool>(EEventName.AttributeComponentEvent, true);
 		}
 
-		// Token: 0x0603B286 RID: 242310 RVA: 0x00E1B23F File Offset: 0x00E1943F
+		// Token: 0x060301F8 RID: 197112 RVA: 0x00D6BEDF File Offset: 0x00D6A0DF
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem.Destroy(null);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.Common
 			}
 		}
 
-		// Token: 0x0603B287 RID: 242311 RVA: 0x00E1B268 File Offset: 0x00E19468
+		// Token: 0x060301F9 RID: 197113 RVA: 0x00D6BF08 File Offset: 0x00D6A108
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -71,17 +71,17 @@ namespace CSharpScript.Game.Module.Common
 			};
 		}
 
-		// Token: 0x0603B288 RID: 242312 RVA: 0x00E1B2A9 File Offset: 0x00E194A9
+		// Token: 0x060301FA RID: 197114 RVA: 0x00D6BF49 File Offset: 0x00D6A149
 		private void OnBackButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401ED55 RID: 126293
+		// Token: 0x04019811 RID: 104465
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401ED56 RID: 126294
+		// Token: 0x04019812 RID: 104466
 		[Nullable(new byte[]
 		{
 			2,
@@ -89,16 +89,16 @@ namespace CSharpScript.Game.Module.Common
 		})]
 		private GenericScrollView<RoleAttrListScrollItem> AttrScrollList;
 
-		// Token: 0x0200BD75 RID: 48501
+		// Token: 0x0200A77E RID: 42878
 		private class EAttributeView
 		{
-			// Token: 0x04039266 RID: 234086
+			// Token: 0x04033C32 RID: 212018
 			public const int ItemCaption = 0;
 
-			// Token: 0x04039267 RID: 234087
+			// Token: 0x04033C33 RID: 212019
 			public const int AttributeContent = 1;
 
-			// Token: 0x04039268 RID: 234088
+			// Token: 0x04033C34 RID: 212020
 			public const int ItemAttribute = 2;
 		}
 	}

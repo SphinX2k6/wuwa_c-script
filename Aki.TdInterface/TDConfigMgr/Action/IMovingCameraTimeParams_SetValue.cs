@@ -2,19 +2,19 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C45 RID: 7237
+	// Token: 0x02001E3C RID: 7740
 	public class IMovingCameraTimeParams_SetValue
 	{
-		// Token: 0x04005E50 RID: 24144
+		// Token: 0x04006387 RID: 25479
 		public float FadeInTime;
 
-		// Token: 0x04005E51 RID: 24145
+		// Token: 0x04006388 RID: 25480
 		public float AfterFadeInStayTime;
 
-		// Token: 0x04005E52 RID: 24146
+		// Token: 0x04006389 RID: 25481
 		public float FadeOutTime;
 
-		// Token: 0x04005E53 RID: 24147
+		// Token: 0x0400638A RID: 25482
 		public float BeforeFadeOutStayTime;
 	}
 }

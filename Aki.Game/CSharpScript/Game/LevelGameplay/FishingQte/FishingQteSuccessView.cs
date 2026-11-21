@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E35 RID: 28213
+	// Token: 0x02005FB6 RID: 24502
 	public class FishingQteSuccessView : UiViewBase
 	{
-		// Token: 0x06044C6F RID: 281711 RVA: 0x010F8798 File Offset: 0x010F6998
+		// Token: 0x0603ADFC RID: 241148 RVA: 0x010A2D08 File Offset: 0x010A0F08
 		[NullableContext(1)]
 		public FishingQteSuccessView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06044C70 RID: 281712 RVA: 0x010F87A4 File Offset: 0x010F69A4
+		// Token: 0x0603ADFD RID: 241149 RVA: 0x010A2D14 File Offset: 0x010A0F14
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,20 +45,20 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044C71 RID: 281713 RVA: 0x010F88AF File Offset: 0x010F6AAF
+		// Token: 0x0603ADFE RID: 241150 RVA: 0x010A2E1F File Offset: 0x010A101F
 		protected override void OnStart()
 		{
 			this.GenericScrollView = new GenericScrollViewNew<DockyardItemListItem, DockyardItemBlockOriginalData>(base.GetScrollViewWithScrollbar(2), new Func<DockyardItemListItem>(this.InitGridItem), null, false, null);
 		}
 
-		// Token: 0x06044C72 RID: 281714 RVA: 0x010F88D4 File Offset: 0x010F6AD4
+		// Token: 0x0603ADFF RID: 241151 RVA: 0x010A2E44 File Offset: 0x010A1044
 		protected override void OnBeforeShow()
 		{
 			List<DockyardItemBlockOriginalData> data = this.OpenParam as List<DockyardItemBlockOriginalData>;
 			this.GenericScrollView.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x06044C73 RID: 281715 RVA: 0x010F88FB File Offset: 0x010F6AFB
+		// Token: 0x0603AE00 RID: 241152 RVA: 0x010A2E6B File Offset: 0x010A106B
 		[NullableContext(1)]
 		private DockyardItemListItem InitGridItem()
 		{
@@ -68,14 +68,14 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			};
 		}
 
-		// Token: 0x06044C74 RID: 281716 RVA: 0x010F8909 File Offset: 0x010F6B09
+		// Token: 0x0603AE01 RID: 241153 RVA: 0x010A2E79 File Offset: 0x010A1079
 		private void OnButtonClicked()
 		{
 			FishingController.Instance.OpenDockyardWareHouseView(false);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04023C78 RID: 146552
+		// Token: 0x0401EF2D RID: 126765
 		[Nullable(new byte[]
 		{
 			2,
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 		})]
 		private GenericScrollViewNew<DockyardItemListItem, DockyardItemBlockOriginalData> GenericScrollView;
 
-		// Token: 0x0200CCE0 RID: 52448
+		// Token: 0x0200B8D0 RID: 47312
 		private class EComponents
 		{
-			// Token: 0x0403DC8E RID: 253070
+			// Token: 0x040390B0 RID: 233648
 			public const int ButtonMask = 0;
 
-			// Token: 0x0403DC8F RID: 253071
+			// Token: 0x040390B1 RID: 233649
 			public const int ButtonBack = 1;
 
-			// Token: 0x0403DC90 RID: 253072
+			// Token: 0x040390B2 RID: 233650
 			public const int ScrollView = 2;
 
-			// Token: 0x0403DC91 RID: 253073
+			// Token: 0x040390B3 RID: 233651
 			public const int GridItem = 3;
 		}
 	}

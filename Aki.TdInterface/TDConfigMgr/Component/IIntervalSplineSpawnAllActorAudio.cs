@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000499 RID: 1177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004F2 RID: 1266
 	public class IIntervalSplineSpawnAllActorAudio : IIntervalSplineSpawnAudioConfigBase
 	{
-		// Token: 0x060017BC RID: 6076 RVA: 0x0004799C File Offset: 0x00045B9C
+		// Token: 0x06001956 RID: 6486 RVA: 0x0004B6E4 File Offset: 0x000498E4
 		private IIntervalSplineSpawnAllActorAudio_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060017BD RID: 6077 RVA: 0x000479D4 File Offset: 0x00045BD4
+		// Token: 0x06001957 RID: 6487 RVA: 0x0004B71C File Offset: 0x0004991C
 		public static IIntervalSplineSpawnAllActorAudio Create([Nullable(2)] IIntervalSplineSpawnAllActorAudio instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017BE RID: 6078 RVA: 0x000479E7 File Offset: 0x00045BE7
+		// Token: 0x06001958 RID: 6488 RVA: 0x0004B72F File Offset: 0x0004992F
 		public static IIntervalSplineSpawnAllActorAudio CreateFromSetValue([Nullable(2)] IIntervalSplineSpawnAllActorAudio_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017BF RID: 6079 RVA: 0x000479FA File Offset: 0x00045BFA
+		// Token: 0x06001959 RID: 6489 RVA: 0x0004B742 File Offset: 0x00049942
 		public new IIntervalSplineSpawnAllActorAudio_SetValue ToSetValue()
 		{
 			return new IIntervalSplineSpawnAllActorAudio_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000657 RID: 1623
-		// (get) Token: 0x060017C0 RID: 6080 RVA: 0x00047A25 File Offset: 0x00045C25
-		// (set) Token: 0x060017C1 RID: 6081 RVA: 0x00047A50 File Offset: 0x00045C50
+		// Token: 0x170006BE RID: 1726
+		// (get) Token: 0x0600195A RID: 6490 RVA: 0x0004B76D File Offset: 0x0004996D
+		// (set) Token: 0x0600195B RID: 6491 RVA: 0x0004B798 File Offset: 0x00049998
 		public override EIntervalSplineSpawnAudioConfigType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000658 RID: 1624
-		// (get) Token: 0x060017C2 RID: 6082 RVA: 0x00047A5E File Offset: 0x00045C5E
-		// (set) Token: 0x060017C3 RID: 6083 RVA: 0x00047A89 File Offset: 0x00045C89
+		// Token: 0x170006BF RID: 1727
+		// (get) Token: 0x0600195C RID: 6492 RVA: 0x0004B7A6 File Offset: 0x000499A6
+		// (set) Token: 0x0600195D RID: 6493 RVA: 0x0004B7D1 File Offset: 0x000499D1
 		public virtual string AkEvent
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000659 RID: 1625
-		// (get) Token: 0x060017C4 RID: 6084 RVA: 0x00047A98 File Offset: 0x00045C98
-		// (set) Token: 0x060017C5 RID: 6085 RVA: 0x00047AF9 File Offset: 0x00045CF9
+		// Token: 0x170006C0 RID: 1728
+		// (get) Token: 0x0600195E RID: 6494 RVA: 0x0004B7E0 File Offset: 0x000499E0
+		// (set) Token: 0x0600195F RID: 6495 RVA: 0x0004B841 File Offset: 0x00049A41
 		[Nullable(2)]
 		public virtual VectorInfo Offset
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011B8 RID: 4536
+		// Token: 0x040012DA RID: 4826
 		[Nullable(2)]
 		protected new IIntervalSplineSpawnAllActorAudio FbInstance;
 
-		// Token: 0x040011B9 RID: 4537
+		// Token: 0x040012DB RID: 4827
 		[Nullable(2)]
 		protected new IIntervalSplineSpawnAllActorAudio_SetValue PocoInterface;
 
-		// Token: 0x040011BA RID: 4538
+		// Token: 0x040012DC RID: 4828
 		private VectorInfo _OffsetCache;
 
-		// Token: 0x040011BB RID: 4539
+		// Token: 0x040012DD RID: 4829
 		private bool _OffsetInited;
 	}
 }

@@ -10,12 +10,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Model;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001F27 RID: 7975
+// Token: 0x020013E9 RID: 5097
 [NullableContext(1)]
 [Nullable(0)]
 public class AimHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F58C RID: 62860 RVA: 0x003B3947 File Offset: 0x003B1B47
+	// Token: 0x0600C9AB RID: 51627 RVA: 0x003BF433 File Offset: 0x003BD633
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
@@ -23,7 +23,7 @@ public class AimHandle : HudUnitHandleBase
 		this.AimTraceDelegate = DelegateUtils.ToManualReleaseDelegate<FAsyncTraceDelegate>(new Action<bool, UTraceBaseElement, double, double>(this.AimTraceHitResultHandle));
 	}
 
-	// Token: 0x0600F58D RID: 62861 RVA: 0x003B396C File Offset: 0x003B1B6C
+	// Token: 0x0600C9AC RID: 51628 RVA: 0x003BF458 File Offset: 0x003BD658
 	protected override void OnDestroyed()
 	{
 		base.OnDestroyed();
@@ -36,7 +36,7 @@ public class AimHandle : HudUnitHandleBase
 		this.AimedLineTraceElement = null;
 	}
 
-	// Token: 0x0600F58E RID: 62862 RVA: 0x003B39A0 File Offset: 0x003B1BA0
+	// Token: 0x0600C9AD RID: 51629 RVA: 0x003BF48C File Offset: 0x003BD68C
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -44,7 +44,7 @@ public class AimHandle : HudUnitHandleBase
 		EventSystem.Instance.Add<bool, bool>(EEventName.BattleUiFollowerAimStateChanged, new Action<bool, bool>(this.OnFollowerAimStateChanged));
 	}
 
-	// Token: 0x0600F58F RID: 62863 RVA: 0x003B3A04 File Offset: 0x003B1C04
+	// Token: 0x0600C9AE RID: 51630 RVA: 0x003BF4F0 File Offset: 0x003BD6F0
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRoleCompleted));
@@ -52,13 +52,13 @@ public class AimHandle : HudUnitHandleBase
 		EventSystem.Instance.Remove<bool, bool>(EEventName.BattleUiFollowerAimStateChanged, new Action<bool, bool>(this.OnFollowerAimStateChanged));
 	}
 
-	// Token: 0x0600F590 RID: 62864 RVA: 0x003B3A65 File Offset: 0x003B1C65
+	// Token: 0x0600C9AF RID: 51631 RVA: 0x003BF551 File Offset: 0x003BD751
 	protected override void OnTick(float delta)
 	{
 		this.RefreshAimStatus();
 	}
 
-	// Token: 0x0600F591 RID: 62865 RVA: 0x003B3A6D File Offset: 0x003B1C6D
+	// Token: 0x0600C9B0 RID: 51632 RVA: 0x003BF559 File Offset: 0x003BD759
 	public override void OnShowHud()
 	{
 		base.OnShowHud();
@@ -66,27 +66,27 @@ public class AimHandle : HudUnitHandleBase
 		this.RefreshAimStatus();
 	}
 
-	// Token: 0x0600F592 RID: 62866 RVA: 0x003B3A81 File Offset: 0x003B1C81
+	// Token: 0x0600C9B1 RID: 51633 RVA: 0x003BF56D File Offset: 0x003BD76D
 	private void OnChangeRoleCompleted(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		this.TryActivate();
 	}
 
-	// Token: 0x0600F593 RID: 62867 RVA: 0x003B3A89 File Offset: 0x003B1C89
+	// Token: 0x0600C9B2 RID: 51634 RVA: 0x003BF575 File Offset: 0x003BD775
 	private void OnAimStateChanged()
 	{
 		this.RefreshAimVisible();
 		this.RefreshAimStatus();
 	}
 
-	// Token: 0x0600F594 RID: 62868 RVA: 0x003B3A97 File Offset: 0x003B1C97
+	// Token: 0x0600C9B3 RID: 51635 RVA: 0x003BF583 File Offset: 0x003BD783
 	private void OnFollowerAimStateChanged(bool isAiming, bool defaultAim)
 	{
 		this.IsFollowerAiming = (isAiming && defaultAim);
 		this.TryActivate();
 	}
 
-	// Token: 0x0600F595 RID: 62869 RVA: 0x003B3AA8 File Offset: 0x003B1CA8
+	// Token: 0x0600C9B4 RID: 51636 RVA: 0x003BF594 File Offset: 0x003BD794
 	private void RefreshAimVisible()
 	{
 		if (this.AimUnit == null || !this.IsAimRole)
@@ -123,7 +123,7 @@ public class AimHandle : HudUnitHandleBase
 		this.AimUnit.SetTargetVisible(flag, false);
 	}
 
-	// Token: 0x0600F596 RID: 62870 RVA: 0x003B3B64 File Offset: 0x003B1D64
+	// Token: 0x0600C9B5 RID: 51637 RVA: 0x003BF650 File Offset: 0x003BD850
 	private void RefreshAimStatus()
 	{
 		if (this.AimUnit == null)
@@ -137,7 +137,7 @@ public class AimHandle : HudUnitHandleBase
 		this.AimTrace();
 	}
 
-	// Token: 0x0600F597 RID: 62871 RVA: 0x003B3B90 File Offset: 0x003B1D90
+	// Token: 0x0600C9B6 RID: 51638 RVA: 0x003BF67C File Offset: 0x003BD87C
 	[NullableContext(2)]
 	private void AimTraceHitResultHandle(bool result, UTraceBaseElement element, double frame, double index)
 	{
@@ -277,7 +277,7 @@ public class AimHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F598 RID: 62872 RVA: 0x003B3EE8 File Offset: 0x003B20E8
+	// Token: 0x0600C9B7 RID: 51639 RVA: 0x003BF9D4 File Offset: 0x003BDBD4
 	private void TryActivate()
 	{
 		this.IsAimRole = false;
@@ -304,7 +304,7 @@ public class AimHandle : HudUnitHandleBase
 		this.Activate();
 	}
 
-	// Token: 0x0600F599 RID: 62873 RVA: 0x003B3F8C File Offset: 0x003B218C
+	// Token: 0x0600C9B8 RID: 51640 RVA: 0x003BFA78 File Offset: 0x003BDC78
 	private void Activate()
 	{
 		if (this.AimUnit != null)
@@ -334,7 +334,7 @@ public class AimHandle : HudUnitHandleBase
 		}, true);
 	}
 
-	// Token: 0x0600F59A RID: 62874 RVA: 0x003B3FF8 File Offset: 0x003B21F8
+	// Token: 0x0600C9B9 RID: 51641 RVA: 0x003BFAE4 File Offset: 0x003BDCE4
 	private void Deactivate()
 	{
 		if (this.AimUnit == null)
@@ -344,7 +344,7 @@ public class AimHandle : HudUnitHandleBase
 		this.AimUnit.SetTargetVisible(false, true);
 	}
 
-	// Token: 0x0600F59B RID: 62875 RVA: 0x003B4010 File Offset: 0x003B2210
+	// Token: 0x0600C9BA RID: 51642 RVA: 0x003BFAFC File Offset: 0x003BDCFC
 	private void AimTrace()
 	{
 		APlayerCameraManager characterCameraManager = Global.CharacterCameraManager;
@@ -366,57 +366,57 @@ public class AimHandle : HudUnitHandleBase
 		this.AimTraceIndex = traceHandle.Index;
 	}
 
-	// Token: 0x0400719F RID: 29087
+	// Token: 0x04007280 RID: 29312
 	private const int MAX_AIM_DISTANCE = 5000;
 
-	// Token: 0x040071A0 RID: 29088
+	// Token: 0x04007281 RID: 29313
 	[StaticVariableRuleIgnore]
 	private static int aimTagId = GameplayTagDefine.EGameplayTagId["功能.功能制作.瞄准模式.显示准星"];
 
-	// Token: 0x040071A1 RID: 29089
+	// Token: 0x04007282 RID: 29314
 	[StaticVariableRuleIgnore]
 	private static int jmxjTagId = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.寂寞小姐"];
 
-	// Token: 0x040071A2 RID: 29090
+	// Token: 0x04007283 RID: 29315
 	private const string PROFILE_AIM_TRACE = "ProfileAimTrace";
 
-	// Token: 0x040071A3 RID: 29091
+	// Token: 0x04007284 RID: 29316
 	[StaticVariableRuleIgnore]
 	private static readonly Stat TickStatsObject = Stat.Create("[BattleView]AimHandleTick", "", "");
 
-	// Token: 0x040071A4 RID: 29092
+	// Token: 0x04007285 RID: 29317
 	private bool IsLoadingAimUnit;
 
-	// Token: 0x040071A5 RID: 29093
+	// Token: 0x04007286 RID: 29318
 	[Nullable(2)]
 	private AimUnit AimUnit;
 
-	// Token: 0x040071A6 RID: 29094
+	// Token: 0x04007287 RID: 29319
 	private readonly global::Vector AimedTraceLineStart = global::Vector.Create();
 
-	// Token: 0x040071A7 RID: 29095
+	// Token: 0x04007288 RID: 29320
 	private readonly global::Vector AimedTraceLineEnd = global::Vector.Create();
 
-	// Token: 0x040071A8 RID: 29096
+	// Token: 0x04007289 RID: 29321
 	[Nullable(2)]
 	private UTraceLineElement AimedLineTraceElement;
 
-	// Token: 0x040071A9 RID: 29097
+	// Token: 0x0400728A RID: 29322
 	private bool IsAimRole;
 
-	// Token: 0x040071AA RID: 29098
+	// Token: 0x0400728B RID: 29323
 	private bool IsPhantomRole;
 
-	// Token: 0x040071AB RID: 29099
+	// Token: 0x0400728C RID: 29324
 	private bool IsFollowerAiming;
 
-	// Token: 0x040071AC RID: 29100
+	// Token: 0x0400728D RID: 29325
 	private int AimTraceFrame;
 
-	// Token: 0x040071AD RID: 29101
+	// Token: 0x0400728E RID: 29326
 	private int AimTraceIndex;
 
-	// Token: 0x040071AE RID: 29102
+	// Token: 0x0400728F RID: 29327
 	[Nullable(2)]
 	private FAsyncTraceDelegate AimTraceDelegate;
 }

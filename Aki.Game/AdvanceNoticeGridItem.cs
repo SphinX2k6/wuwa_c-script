@@ -5,16 +5,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020010CE RID: 4302
+// Token: 0x02000582 RID: 1410
 public class AdvanceNoticeGridItem : UiPanelBase
 {
-	// Token: 0x0600700E RID: 28686 RVA: 0x0016CEEA File Offset: 0x0016B0EA
+	// Token: 0x060043A4 RID: 17316 RVA: 0x001758A6 File Offset: 0x00173AA6
 	public AdvanceNoticeGridItem(int advertisingPageInfoId)
 	{
 		this.AdvertisingPageInfoId = advertisingPageInfoId;
 	}
 
-	// Token: 0x0600700F RID: 28687 RVA: 0x0016CEFC File Offset: 0x0016B0FC
+	// Token: 0x060043A5 RID: 17317 RVA: 0x001758B8 File Offset: 0x00173AB8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,20 +30,20 @@ public class AdvanceNoticeGridItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007010 RID: 28688 RVA: 0x0016CF8F File Offset: 0x0016B18F
+	// Token: 0x060043A6 RID: 17318 RVA: 0x0017594B File Offset: 0x00173B4B
 	protected override void OnStart()
 	{
 		this.TextureTransitionComp = (base.GetTexture(1).GetOwner().GetComponentByClass(UUITextureTransitionComponent.StaticClass()) as UUITextureTransitionComponent);
 	}
 
-	// Token: 0x06007011 RID: 28689 RVA: 0x0016CFB7 File Offset: 0x0016B1B7
+	// Token: 0x060043A7 RID: 17319 RVA: 0x00175973 File Offset: 0x00173B73
 	public void RefreshByTabId(int tabId)
 	{
 		this.TabId = tabId;
 		this.Refresh();
 	}
 
-	// Token: 0x06007012 RID: 28690 RVA: 0x0016CFC8 File Offset: 0x0016B1C8
+	// Token: 0x060043A8 RID: 17320 RVA: 0x00175984 File Offset: 0x00173B84
 	public void Refresh()
 	{
 		AdvertisingTabInfo advertisingTabInfoById = AdvanceNoticeConfig.Instance.GetAdvertisingTabInfoById(this.TabId);
@@ -55,7 +55,7 @@ public class AdvanceNoticeGridItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), advertisingTabInfoById.EntryButtonText, Array.Empty<object>());
 	}
 
-	// Token: 0x06007013 RID: 28691 RVA: 0x0016D04B File Offset: 0x0016B24B
+	// Token: 0x060043A9 RID: 17321 RVA: 0x00175A07 File Offset: 0x00173C07
 	private void OnItemButtonClick()
 	{
 		AdvanceNoticeController instance = AdvanceNoticeController.Instance;
@@ -66,29 +66,29 @@ public class AdvanceNoticeGridItem : UiPanelBase
 		instance.OpenAdvanceNoticeView(this.AdvertisingPageInfoId, this.TabId);
 	}
 
-	// Token: 0x04003409 RID: 13321
+	// Token: 0x040034A2 RID: 13474
 	private int TabId;
 
-	// Token: 0x0400340A RID: 13322
+	// Token: 0x040034A3 RID: 13475
 	[Nullable(2)]
 	private UUITextureTransitionComponent TextureTransitionComp;
 
-	// Token: 0x0400340B RID: 13323
+	// Token: 0x040034A4 RID: 13476
 	public readonly int AdvertisingPageInfoId;
 
-	// Token: 0x02007694 RID: 30356
+	// Token: 0x02006828 RID: 26664
 	private class EComponentDefine
 	{
-		// Token: 0x04027210 RID: 160272
+		// Token: 0x04022559 RID: 140633
 		public const int ItemButton = 0;
 
-		// Token: 0x04027211 RID: 160273
+		// Token: 0x0402255A RID: 140634
 		public const int BgTexture = 1;
 
-		// Token: 0x04027212 RID: 160274
+		// Token: 0x0402255B RID: 140635
 		public const int TypeIconSprite = 2;
 
-		// Token: 0x04027213 RID: 160275
+		// Token: 0x0402255C RID: 140636
 		public const int TitleDescText = 3;
 	}
 }

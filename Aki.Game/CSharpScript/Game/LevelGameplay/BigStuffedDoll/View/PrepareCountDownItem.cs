@@ -6,22 +6,22 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F5F RID: 28511
+	// Token: 0x020060E0 RID: 24800
 	public class PrepareCountDownItem : UiPanelBase
 	{
-		// Token: 0x060455AD RID: 284077 RVA: 0x0112AAF0 File Offset: 0x01128CF0
+		// Token: 0x0603B75B RID: 243547 RVA: 0x010D48D0 File Offset: 0x010D2AD0
 		protected override void OnRegisterComponent()
 		{
 		}
 
-		// Token: 0x060455AE RID: 284078 RVA: 0x0112AAF2 File Offset: 0x01128CF2
+		// Token: 0x0603B75C RID: 243548 RVA: 0x010D48D2 File Offset: 0x010D2AD2
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x060455AF RID: 284079 RVA: 0x0112AB1D File Offset: 0x01128D1D
+		// Token: 0x0603B75D RID: 243549 RVA: 0x010D48FD File Offset: 0x010D2AFD
 		[NullableContext(1)]
 		private void OnSequenceClose(string sequenceName)
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x060455B0 RID: 284080 RVA: 0x0112AB40 File Offset: 0x01128D40
+		// Token: 0x0603B75E RID: 243550 RVA: 0x010D4920 File Offset: 0x010D2B20
 		public UniTask StartCountDown()
 		{
 			PrepareCountDownItem.<StartCountDown>d__5 <StartCountDown>d__;
@@ -43,10 +43,10 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			return <StartCountDown>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040242E9 RID: 148201
+		// Token: 0x0401F59E RID: 128414
 		protected float RemainTime;
 
-		// Token: 0x040242EA RID: 148202
+		// Token: 0x0401F59F RID: 128415
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 	}

@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070CB RID: 28875
+	// Token: 0x0200632F RID: 25391
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MeshDitherDetectConfig
 	{
-		// Token: 0x06046757 RID: 288599 RVA: 0x011B06BC File Offset: 0x011AE8BC
+		// Token: 0x0603D84B RID: 251979 RVA: 0x011CFA38 File Offset: 0x011CDC38
 		public MeshDitherDetectConfig(SMeshDitherDetectConfig meshDitherDetectConfig, int id)
 		{
 			this.Id = id;
@@ -34,49 +34,49 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			this.StartDitherValue = meshDitherDetectConfig.DitherConfig.StartDitherValue;
 		}
 
-		// Token: 0x04024EBE RID: 151230
+		// Token: 0x040209FD RID: 133629
 		public int Id;
 
-		// Token: 0x04024EBF RID: 151231
+		// Token: 0x040209FE RID: 133630
 		public bool MarkDelete;
 
-		// Token: 0x04024EC0 RID: 151232
+		// Token: 0x040209FF RID: 133631
 		public int Priority;
 
-		// Token: 0x04024EC1 RID: 151233
+		// Token: 0x04020A00 RID: 133632
 		public FName BaseBoneName = CharacterNameDefines.Instance.BIP_001_SPINE;
 
-		// Token: 0x04024EC2 RID: 151234
+		// Token: 0x04020A01 RID: 133633
 		public FName TargetBoneName = CharacterNameDefines.Instance.BIP_001_NECK;
 
-		// Token: 0x04024EC3 RID: 151235
+		// Token: 0x04020A02 RID: 133634
 		public FName BasisBoneName = CharacterNameDefines.Instance.BIP_001_SPINE;
 
-		// Token: 0x04024EC4 RID: 151236
+		// Token: 0x04020A03 RID: 133635
 		public float CapsuleAdditionRadius;
 
-		// Token: 0x04024EC5 RID: 151237
+		// Token: 0x04020A04 RID: 133636
 		public float CapsuleAdditionHeight;
 
-		// Token: 0x04024EC6 RID: 151238
+		// Token: 0x04020A05 RID: 133637
 		public Vector CapsuleAdditionOffset = Vector.Create();
 
-		// Token: 0x04024EC7 RID: 151239
+		// Token: 0x04020A06 RID: 133638
 		public Rotator CapsuleAdditionRotator = Rotator.Create();
 
-		// Token: 0x04024EC8 RID: 151240
+		// Token: 0x04020A07 RID: 133639
 		public bool EnableDebug;
 
-		// Token: 0x04024EC9 RID: 151241
+		// Token: 0x04020A08 RID: 133640
 		public bool OverrideDitherConfig;
 
-		// Token: 0x04024ECA RID: 151242
+		// Token: 0x04020A09 RID: 133641
 		public float StartHideDistance;
 
-		// Token: 0x04024ECB RID: 151243
+		// Token: 0x04020A0A RID: 133642
 		public float CompleteHideDistance;
 
-		// Token: 0x04024ECC RID: 151244
+		// Token: 0x04020A0B RID: 133643
 		public float StartDitherValue;
 	}
 }

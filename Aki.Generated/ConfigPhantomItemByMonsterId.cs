@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006A0 RID: 1696
+	// Token: 0x020006B8 RID: 1720
 	public class ConfigPhantomItemByMonsterId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060027D0 RID: 10192 RVA: 0x0013AB48 File Offset: 0x00138D48
+		// Token: 0x06002860 RID: 10336 RVA: 0x001415C4 File Offset: 0x0013F7C4
 		static ConfigPhantomItemByMonsterId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomItemByMonsterId.CreateStaticDefaultValue), new Action(ConfigPhantomItemByMonsterId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060027D1 RID: 10193 RVA: 0x0013AB68 File Offset: 0x00138D68
+		// Token: 0x06002861 RID: 10337 RVA: 0x001415E4 File Offset: 0x0013F7E4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomItemByMonsterId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060027D2 RID: 10194 RVA: 0x0013ABE7 File Offset: 0x00138DE7
+		// Token: 0x06002862 RID: 10338 RVA: 0x00141663 File Offset: 0x0013F863
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomItemByMonsterId.LogPair = null;
 			ConfigPhantomItemByMonsterId.HandleId = 0;
 		}
 
-		// Token: 0x060027D3 RID: 10195 RVA: 0x0013ABF5 File Offset: 0x00138DF5
+		// Token: 0x06002863 RID: 10339 RVA: 0x00141671 File Offset: 0x0013F871
 		public static void Init()
 		{
 			ConfigPhantomItemByMonsterId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomItemByMonsterId.HandleId, "db_phantom.db", "select BinData from `PhantomItem` where MonsterId=?");
 		}
 
-		// Token: 0x060027D4 RID: 10196 RVA: 0x0013AC10 File Offset: 0x00138E10
+		// Token: 0x06002864 RID: 10340 RVA: 0x0014168C File Offset: 0x0013F88C
 		[NullableContext(2)]
 		public static IReadOnlyList<PhantomItem> GetConfigList(int p0MonsterId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002E46 RID: 11846
+		// Token: 0x04002EEE RID: 12014
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002E47 RID: 11847
+		// Token: 0x04002EEF RID: 12015
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002E48 RID: 11848
+		// Token: 0x04002EF0 RID: 12016
 		private const string TABLE = "PhantomItem";
 
-		// Token: 0x04002E49 RID: 11849
+		// Token: 0x04002EF1 RID: 12017
 		private const string COMMAND = "select BinData from `PhantomItem` where MonsterId=?";
 
-		// Token: 0x04002E4A RID: 11850
+		// Token: 0x04002EF2 RID: 12018
 		private const string KEY_PREFIX = "PhantomItemByMonsterId";
 
-		// Token: 0x04002E4B RID: 11851
+		// Token: 0x04002EF3 RID: 12019
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002E4C RID: 11852
+		// Token: 0x04002EF4 RID: 12020
 		private static int HandleId;
 	}
 }

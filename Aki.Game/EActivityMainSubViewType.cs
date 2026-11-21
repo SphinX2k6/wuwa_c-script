@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001454 RID: 5204
+// Token: 0x02000908 RID: 2312
 public enum EActivityMainSubViewType
 {
-	// Token: 0x0400412C RID: 16684
+	// Token: 0x040041C4 RID: 16836
 	MainLine,
-	// Token: 0x0400412D RID: 16685
+	// Token: 0x040041C5 RID: 16837
 	Area,
-	// Token: 0x0400412E RID: 16686
+	// Token: 0x040041C6 RID: 16838
 	Role1,
-	// Token: 0x0400412F RID: 16687
+	// Token: 0x040041C7 RID: 16839
 	Role2,
-	// Token: 0x04004130 RID: 16688
+	// Token: 0x040041C8 RID: 16840
 	Sign
 }

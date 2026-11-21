@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 {
-	// Token: 0x0200475A RID: 18266
+	// Token: 0x0200368B RID: 13963
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,12 +18,12 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.Role
 	[Controller(0)]
 	public class StaticMonsterController : WuWaGoMonsterControllerBase<WuWaGoStaticMonster>
 	{
-		// Token: 0x0602FC0E RID: 195598 RVA: 0x00B10465 File Offset: 0x00B0E665
+		// Token: 0x060243D8 RID: 148440 RVA: 0x00A40425 File Offset: 0x00A3E625
 		public StaticMonsterController(WuWaGoStaticMonster role, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(role, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x0602FC0F RID: 195599 RVA: 0x00B10470 File Offset: 0x00B0E670
+		// Token: 0x060243D9 RID: 148441 RVA: 0x00A40430 File Offset: 0x00A3E630
 		protected override UniTask OnExecuteAction()
 		{
 			StaticMonsterController.<OnExecuteAction>d__1 <OnExecuteAction>d__;

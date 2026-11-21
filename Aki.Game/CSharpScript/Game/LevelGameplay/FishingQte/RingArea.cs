@@ -2,25 +2,25 @@
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E31 RID: 28209
+	// Token: 0x02005FB2 RID: 24498
 	public class RingArea
 	{
-		// Token: 0x17009A26 RID: 39462
-		// (get) Token: 0x06044C3E RID: 281662 RVA: 0x010F7C3C File Offset: 0x010F5E3C
-		// (set) Token: 0x06044C3F RID: 281663 RVA: 0x010F7C44 File Offset: 0x010F5E44
+		// Token: 0x17006F3B RID: 28475
+		// (get) Token: 0x0603ADCC RID: 241100 RVA: 0x010A2310 File Offset: 0x010A0510
+		// (set) Token: 0x0603ADCD RID: 241101 RVA: 0x010A2318 File Offset: 0x010A0518
 		public int StartCellIndex { get; set; }
 
-		// Token: 0x17009A27 RID: 39463
-		// (get) Token: 0x06044C40 RID: 281664 RVA: 0x010F7C4D File Offset: 0x010F5E4D
-		// (set) Token: 0x06044C41 RID: 281665 RVA: 0x010F7C55 File Offset: 0x010F5E55
+		// Token: 0x17006F3C RID: 28476
+		// (get) Token: 0x0603ADCE RID: 241102 RVA: 0x010A2321 File Offset: 0x010A0521
+		// (set) Token: 0x0603ADCF RID: 241103 RVA: 0x010A2329 File Offset: 0x010A0529
 		public int EndCellIndex { get; set; }
 
-		// Token: 0x17009A28 RID: 39464
-		// (get) Token: 0x06044C42 RID: 281666 RVA: 0x010F7C5E File Offset: 0x010F5E5E
-		// (set) Token: 0x06044C43 RID: 281667 RVA: 0x010F7C66 File Offset: 0x010F5E66
+		// Token: 0x17006F3D RID: 28477
+		// (get) Token: 0x0603ADD0 RID: 241104 RVA: 0x010A2332 File Offset: 0x010A0532
+		// (set) Token: 0x0603ADD1 RID: 241105 RVA: 0x010A233A File Offset: 0x010A053A
 		public EArrowDirection ArrowDirection { get; set; }
 
-		// Token: 0x06044C44 RID: 281668 RVA: 0x010F7C6F File Offset: 0x010F5E6F
+		// Token: 0x0603ADD2 RID: 241106 RVA: 0x010A2343 File Offset: 0x010A0543
 		public RingArea(int startCellIndex, int endCellIndex, EArrowDirection arrowDirection)
 		{
 			this.StartCellIndex = startCellIndex;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ArrowDirection = arrowDirection;
 		}
 
-		// Token: 0x06044C45 RID: 281669 RVA: 0x010F7C8C File Offset: 0x010F5E8C
+		// Token: 0x0603ADD3 RID: 241107 RVA: 0x010A2360 File Offset: 0x010A0560
 		public void OnArrowDirectionReverse()
 		{
 			EArrowDirection arrowDirection = this.ArrowDirection;

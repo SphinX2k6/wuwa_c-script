@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067D5 RID: 26581
+	// Token: 0x02006E55 RID: 28245
 	public class IFixFoundationRelationT
 	{
 	}

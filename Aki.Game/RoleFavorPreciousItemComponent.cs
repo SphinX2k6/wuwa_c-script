@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002873 RID: 10355
+// Token: 0x02001DEE RID: 7662
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 {
-	// Token: 0x060154ED RID: 87277 RVA: 0x00561CE4 File Offset: 0x0055FEE4
+	// Token: 0x06012EEB RID: 77547 RVA: 0x0058CA40 File Offset: 0x0058AC40
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 		};
 	}
 
-	// Token: 0x060154EE RID: 87278 RVA: 0x00561D6A File Offset: 0x0055FF6A
+	// Token: 0x06012EEC RID: 77548 RVA: 0x0058CAC6 File Offset: 0x0058ACC6
 	protected override void OnBeforeDestroy()
 	{
 		this.FavorGoods = null;
@@ -32,7 +32,7 @@ public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 		this.ActiveBgItem = null;
 	}
 
-	// Token: 0x060154EF RID: 87279 RVA: 0x00561D94 File Offset: 0x0055FF94
+	// Token: 0x06012EED RID: 77549 RVA: 0x0058CAF0 File Offset: 0x0058ACF0
 	[NullableContext(1)]
 	protected override void OnSetData(RoleFavorContentDataBase contentData)
 	{
@@ -49,7 +49,7 @@ public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 		this.FavorGoods = new FavorGoods?(((RoleFavorPreciousItemContentData)contentData).ConfigData);
 	}
 
-	// Token: 0x060154F0 RID: 87280 RVA: 0x00561DF4 File Offset: 0x0055FFF4
+	// Token: 0x06012EEE RID: 77550 RVA: 0x0058CB50 File Offset: 0x0058AD50
 	protected override void OnRefreshView()
 	{
 		if (this.FavorGoods == null)
@@ -63,7 +63,7 @@ public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 		base.SetTextureByPath(this.FavorGoods.Value.Pic, this.Icon, null, null);
 	}
 
-	// Token: 0x060154F1 RID: 87281 RVA: 0x00561E6C File Offset: 0x0056006C
+	// Token: 0x06012EEF RID: 77551 RVA: 0x0058CBC8 File Offset: 0x0058ADC8
 	public void SetLockState(bool isLock)
 	{
 		if (this.Icon == null)
@@ -97,18 +97,18 @@ public class RoleFavorPreciousItemComponent : RoleFavorViewComponentBase
 		activeBgItem.SetUIActive(false);
 	}
 
-	// Token: 0x04009F45 RID: 40773
+	// Token: 0x0400A32E RID: 41774
 	private FavorGoods? FavorGoods;
 
-	// Token: 0x04009F46 RID: 40774
+	// Token: 0x0400A32F RID: 41775
 	private UUITexture Icon;
 
-	// Token: 0x04009F47 RID: 40775
+	// Token: 0x0400A330 RID: 41776
 	private UUIItem LockItem;
 
-	// Token: 0x04009F48 RID: 40776
+	// Token: 0x0400A331 RID: 41777
 	private UUIItem InActiveBgItem;
 
-	// Token: 0x04009F49 RID: 40777
+	// Token: 0x0400A332 RID: 41778
 	private UUIItem ActiveBgItem;
 }

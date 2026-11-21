@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070CB RID: 28875
+	// Token: 0x02007897 RID: 30871
 	public class ISheriffUnlockClueT
 	{
-		// Token: 0x1700D67F RID: 54911
-		// (get) Token: 0x0603324E RID: 209486 RVA: 0x006E5622 File Offset: 0x006E3822
-		// (set) Token: 0x0603324F RID: 209487 RVA: 0x006E562A File Offset: 0x006E382A
+		// Token: 0x1700E262 RID: 57954
+		// (get) Token: 0x060364F0 RID: 222448 RVA: 0x00745C2E File Offset: 0x00743E2E
+		// (set) Token: 0x060364F1 RID: 222449 RVA: 0x00745C36 File Offset: 0x00743E36
 		public int ClueId { get; set; }
 
-		// Token: 0x06033250 RID: 209488 RVA: 0x006E5633 File Offset: 0x006E3833
+		// Token: 0x060364F2 RID: 222450 RVA: 0x00745C3F File Offset: 0x00743E3F
 		public ISheriffUnlockClueT()
 		{
 			this.ClueId = 0;

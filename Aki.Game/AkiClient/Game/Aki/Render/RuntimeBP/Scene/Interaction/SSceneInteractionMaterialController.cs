@@ -7,160 +7,149 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B4B RID: 15179
-	[NullableContext(1)]
+	// Token: 0x020030C4 RID: 12484
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionMaterialController.SSceneInteractionMaterialController")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 41)]
 	public class SSceneInteractionMaterialController : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060219C3 RID: 137667 RVA: 0x008F0E13 File Offset: 0x008EF013
+		// Token: 0x0601E05E RID: 122974 RVA: 0x00908B9E File Offset: 0x00906D9E
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSceneInteractionMaterialController._ScriptStructPtr != 0) ? SSceneInteractionMaterialController._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionMaterialController.SSceneInteractionMaterialController", ref SSceneInteractionMaterialController._ScriptStructPtr);
 		}
 
-		// Token: 0x17003772 RID: 14194
-		// (get) Token: 0x060219C4 RID: 137668 RVA: 0x008F0E38 File Offset: 0x008EF038
-		// (set) Token: 0x060219C5 RID: 137669 RVA: 0x008F0E7B File Offset: 0x008EF07B
+		// Token: 0x1700319F RID: 12703
+		// (get) Token: 0x0601E05F RID: 122975 RVA: 0x00908BC4 File Offset: 0x00906DC4
+		// (set) Token: 0x0601E060 RID: 122976 RVA: 0x00908C07 File Offset: 0x00906E07
+		[Nullable(1)]
 		public TArray<AActor> Actors
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
 				TArray<AActor> result;
 				if ((result = this._Actors) == null)
 				{
-					result = (this._Actors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._Actors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_Actors, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.Actors.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17003773 RID: 14195
-		// (get) Token: 0x060219C6 RID: 137670 RVA: 0x008F0E89 File Offset: 0x008EF089
-		// (set) Token: 0x060219C7 RID: 137671 RVA: 0x008F0E9D File Offset: 0x008EF09D
-		[Nullable(2)]
+		// Token: 0x170031A0 RID: 12704
+		// (get) Token: 0x0601E061 RID: 122977 RVA: 0x00908C15 File Offset: 0x00906E15
+		// (set) Token: 0x0601E062 RID: 122978 RVA: 0x00908C29 File Offset: 0x00906E29
 		public unsafe ItemMaterialControllerActorData Data
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ItemMaterialControllerActorData>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<ItemMaterialControllerActorData>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_Data);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_Data, value);
 			}
 		}
 
-		// Token: 0x17003774 RID: 14196
-		// (get) Token: 0x060219C8 RID: 137672 RVA: 0x008F0EB2 File Offset: 0x008EF0B2
-		// (set) Token: 0x060219C9 RID: 137673 RVA: 0x008F0EC2 File Offset: 0x008EF0C2
+		// Token: 0x170031A1 RID: 12705
+		// (get) Token: 0x0601E063 RID: 122979 RVA: 0x00908C3E File Offset: 0x00906E3E
+		// (set) Token: 0x0601E064 RID: 122980 RVA: 0x00908C4E File Offset: 0x00906E4E
 		public unsafe float TailIndex
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_TailIndex);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_TailIndex) = value;
 			}
 		}
 
-		// Token: 0x17003775 RID: 14197
-		// (get) Token: 0x060219CA RID: 137674 RVA: 0x008F0ED3 File Offset: 0x008EF0D3
-		// (set) Token: 0x060219CB RID: 137675 RVA: 0x008F0EE7 File Offset: 0x008EF0E7
-		[Nullable(2)]
+		// Token: 0x170031A2 RID: 12706
+		// (get) Token: 0x0601E065 RID: 122981 RVA: 0x00908C5F File Offset: 0x00906E5F
+		// (set) Token: 0x0601E066 RID: 122982 RVA: 0x00908C73 File Offset: 0x00906E73
 		public unsafe UMaterialInstance Materials
 		{
-			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UMaterialInstance>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_Materials);
 			}
-			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionMaterialController.__PropertyOffset_Materials, value);
 			}
 		}
 
-		// Token: 0x17003776 RID: 14198
-		// (get) Token: 0x060219CC RID: 137676 RVA: 0x008F0EFC File Offset: 0x008EF0FC
-		// (set) Token: 0x060219CD RID: 137677 RVA: 0x008F0F0C File Offset: 0x008EF10C
+		// Token: 0x170031A3 RID: 12707
+		// (get) Token: 0x0601E067 RID: 122983 RVA: 0x00908C88 File Offset: 0x00906E88
+		// (set) Token: 0x0601E068 RID: 122984 RVA: 0x00908C98 File Offset: 0x00906E98
 		public unsafe bool IsRevertMaterial
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_4) != 0;
+				return *(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_IsRevertMaterial) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_4) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSceneInteractionMaterialController.__PropertyOffset_IsRevertMaterial) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x060219CE RID: 137678 RVA: 0x008F0F1D File Offset: 0x008EF11D
+		// Token: 0x0601E069 RID: 122985 RVA: 0x00908CA9 File Offset: 0x00906EA9
 		public SSceneInteractionMaterialController()
 		{
 		}
 
-		// Token: 0x060219CF RID: 137679 RVA: 0x008F0F25 File Offset: 0x008EF125
-		public SSceneInteractionMaterialController(TArray<AActor> Actors, ItemMaterialControllerActorData Data, float TailIndex, UMaterialInstance Materials, bool IsRevertMaterial)
-		{
-			this.Actors = Actors;
-			this.Data = Data;
-			this.TailIndex = TailIndex;
-			this.Materials = Materials;
-			this.IsRevertMaterial = IsRevertMaterial;
-		}
-
-		// Token: 0x060219D0 RID: 137680 RVA: 0x008F0F52 File Offset: 0x008EF152
+		// Token: 0x0601E06A RID: 122986 RVA: 0x00908CB1 File Offset: 0x00906EB1
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSceneInteractionMaterialController.StaticStruct();
 		}
 
-		// Token: 0x060219D1 RID: 137681 RVA: 0x008F0F5E File Offset: 0x008EF15E
-		[NullableContext(2)]
+		// Token: 0x0601E06B RID: 122987 RVA: 0x00908CBD File Offset: 0x00906EBD
 		public SSceneInteractionMaterialController(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060219D2 RID: 137682 RVA: 0x008F0F68 File Offset: 0x008EF168
+		// Token: 0x0601E06C RID: 122988 RVA: 0x00908CC7 File Offset: 0x00906EC7
 		public SSceneInteractionMaterialController(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060219D3 RID: 137683 RVA: 0x008F0F73 File Offset: 0x008EF173
+		// Token: 0x0601E06D RID: 122989 RVA: 0x00908CD2 File Offset: 0x00906ED2
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSceneInteractionMaterialController(Pointer, false, true);
 		}
 
-		// Token: 0x060219D4 RID: 137684 RVA: 0x008F0F7D File Offset: 0x008EF17D
+		// Token: 0x0601E06E RID: 122990 RVA: 0x00908CDC File Offset: 0x00906EDC
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSceneInteractionMaterialController(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010635 RID: 67125
+		// Token: 0x0400FDDE RID: 64990
+		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionMaterialController.SSceneInteractionMaterialController";
 
-		// Token: 0x04010636 RID: 67126
+		// Token: 0x0400FDDF RID: 64991
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010637 RID: 67127
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400FDE0 RID: 64992
+		internal static int __PropertyOffset_Actors;
 
-		// Token: 0x04010638 RID: 67128
+		// Token: 0x0400FDE1 RID: 64993
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,16 +157,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AActor> _Actors;
 
-		// Token: 0x04010639 RID: 67129
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FDE2 RID: 64994
+		internal static int __PropertyOffset_Data;
 
-		// Token: 0x0401063A RID: 67130
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FDE3 RID: 64995
+		internal static int __PropertyOffset_TailIndex;
 
-		// Token: 0x0401063B RID: 67131
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FDE4 RID: 64996
+		internal static int __PropertyOffset_Materials;
 
-		// Token: 0x0401063C RID: 67132
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FDE5 RID: 64997
+		internal static int __PropertyOffset_IsRevertMaterial;
 	}
 }

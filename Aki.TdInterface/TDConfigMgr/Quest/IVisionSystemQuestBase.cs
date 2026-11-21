@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011FA RID: 4602
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001336 RID: 4918
 	public class IVisionSystemQuestBase
 	{
-		// Token: 0x06006876 RID: 26742 RVA: 0x000F96F4 File Offset: 0x000F78F4
+		// Token: 0x06006EB7 RID: 28343 RVA: 0x00107000 File Offset: 0x00105200
 		private IVisionSystemQuestBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006877 RID: 26743 RVA: 0x000F972C File Offset: 0x000F792C
+		// Token: 0x06006EB8 RID: 28344 RVA: 0x00107038 File Offset: 0x00105238
 		public static IVisionSystemQuestBase Create([Nullable(2)] IVisionSystemQuestBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006878 RID: 26744 RVA: 0x000F973F File Offset: 0x000F793F
+		// Token: 0x06006EB9 RID: 28345 RVA: 0x0010704B File Offset: 0x0010524B
 		public static IVisionSystemQuestBase CreateFromSetValue([Nullable(2)] IVisionSystemQuestBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006879 RID: 26745 RVA: 0x000F9752 File Offset: 0x000F7952
+		// Token: 0x06006EBA RID: 28346 RVA: 0x0010705E File Offset: 0x0010525E
 		public IVisionSystemQuestBase_SetValue ToSetValue()
 		{
 			return new IVisionSystemQuestBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021C9 RID: 8649
-		// (get) Token: 0x0600687A RID: 26746 RVA: 0x000F9765 File Offset: 0x000F7965
-		// (set) Token: 0x0600687B RID: 26747 RVA: 0x000F9790 File Offset: 0x000F7990
+		// Token: 0x1700238A RID: 9098
+		// (get) Token: 0x06006EBB RID: 28347 RVA: 0x00107071 File Offset: 0x00105271
+		// (set) Token: 0x06006EBC RID: 28348 RVA: 0x0010709C File Offset: 0x0010529C
 		public virtual EVisionSystemQuestType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E8C RID: 16012
+		// Token: 0x040041FA RID: 16890
 		[Nullable(2)]
 		protected IVisionSystemQuestBase FbInstance;
 
-		// Token: 0x04003E8D RID: 16013
+		// Token: 0x040041FB RID: 16891
 		[Nullable(2)]
 		protected IVisionSystemQuestBase_SetValue PocoInterface;
 	}

@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200105B RID: 4187
+// Token: 0x0200050F RID: 1295
 public interface ICardLayoutInfo
 {
-	// Token: 0x170008AD RID: 2221
-	// (get) Token: 0x06006B3B RID: 27451
-	// (set) Token: 0x06006B3C RID: 27452
+	// Token: 0x170008CD RID: 2253
+	// (get) Token: 0x06003ED0 RID: 16080
+	// (set) Token: 0x06003ED1 RID: 16081
 	float X { get; set; }
 
-	// Token: 0x170008AE RID: 2222
-	// (get) Token: 0x06006B3D RID: 27453
-	// (set) Token: 0x06006B3E RID: 27454
+	// Token: 0x170008CE RID: 2254
+	// (get) Token: 0x06003ED2 RID: 16082
+	// (set) Token: 0x06003ED3 RID: 16083
 	float Y { get; set; }
 
-	// Token: 0x170008AF RID: 2223
-	// (get) Token: 0x06006B3F RID: 27455
-	// (set) Token: 0x06006B40 RID: 27456
+	// Token: 0x170008CF RID: 2255
+	// (get) Token: 0x06003ED4 RID: 16084
+	// (set) Token: 0x06003ED5 RID: 16085
 	float Scale { get; set; }
 
-	// Token: 0x170008B0 RID: 2224
-	// (get) Token: 0x06006B41 RID: 27457
-	// (set) Token: 0x06006B42 RID: 27458
+	// Token: 0x170008D0 RID: 2256
+	// (get) Token: 0x06003ED6 RID: 16086
+	// (set) Token: 0x06003ED7 RID: 16087
 	float Rotation { get; set; }
 
-	// Token: 0x170008B1 RID: 2225
-	// (get) Token: 0x06006B43 RID: 27459
-	// (set) Token: 0x06006B44 RID: 27460
+	// Token: 0x170008D1 RID: 2257
+	// (get) Token: 0x06003ED8 RID: 16088
+	// (set) Token: 0x06003ED9 RID: 16089
 	float Alpha { get; set; }
 }

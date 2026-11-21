@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006043 RID: 24643
+	// Token: 0x02004FC1 RID: 20417
 	public class SpringManorAlbumViewOpenParam
 	{
-		// Token: 0x04020953 RID: 133459
+		// Token: 0x0401B280 RID: 111232
 		public EBrochureType OpenTab;
 	}
 }

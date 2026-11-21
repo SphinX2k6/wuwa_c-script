@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ADF RID: 10975
+	// Token: 0x02002DD3 RID: 11731
 	public class IBpActorFuncTypeBase
 	{
-		// Token: 0x0600F09C RID: 61596 RVA: 0x0022EE64 File Offset: 0x0022D064
-		[NullableContext(1)]
+		// Token: 0x0600FF52 RID: 65362 RVA: 0x0024CB70 File Offset: 0x0024AD70
 		public static IBpActorFuncTypeBase Create(IBpActorFuncTypeBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CA0 RID: 19616
-		// (get) Token: 0x0600F09D RID: 61597 RVA: 0x0022EE83 File Offset: 0x0022D083
+		// Token: 0x1700505A RID: 20570
+		// (get) Token: 0x0600FF53 RID: 65363 RVA: 0x0024CB8F File Offset: 0x0024AD8F
 		public virtual EBpActorFuncType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400845F RID: 33887
+		// Token: 0x04008B63 RID: 35683
 		private IBpActorFuncTypeBase Instance;
 	}
 }

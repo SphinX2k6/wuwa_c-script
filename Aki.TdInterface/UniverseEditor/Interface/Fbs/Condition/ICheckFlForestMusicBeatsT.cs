@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A2B RID: 18987
+	// Token: 0x02004EEE RID: 20206
 	public class ICheckFlForestMusicBeatsT
 	{
-		// Token: 0x17008972 RID: 35186
-		// (get) Token: 0x0601DB6D RID: 121709 RVA: 0x0042DE5F File Offset: 0x0042C05F
-		// (set) Token: 0x0601DB6E RID: 121710 RVA: 0x0042DE67 File Offset: 0x0042C067
+		// Token: 0x17009047 RID: 36935
+		// (get) Token: 0x0601F5F6 RID: 128502 RVA: 0x0045ED57 File Offset: 0x0045CF57
+		// (set) Token: 0x0601F5F7 RID: 128503 RVA: 0x0045ED5F File Offset: 0x0045CF5F
 		public EMusicEventType Type { get; set; }
 
-		// Token: 0x17008973 RID: 35187
-		// (get) Token: 0x0601DB6F RID: 121711 RVA: 0x0042DE70 File Offset: 0x0042C070
-		// (set) Token: 0x0601DB70 RID: 121712 RVA: 0x0042DE78 File Offset: 0x0042C078
+		// Token: 0x17009048 RID: 36936
+		// (get) Token: 0x0601F5F8 RID: 128504 RVA: 0x0045ED68 File Offset: 0x0045CF68
+		// (set) Token: 0x0601F5F9 RID: 128505 RVA: 0x0045ED70 File Offset: 0x0045CF70
 		public string BeatType { get; set; }
 
-		// Token: 0x0601DB71 RID: 121713 RVA: 0x0042DE81 File Offset: 0x0042C081
+		// Token: 0x0601F5FA RID: 128506 RVA: 0x0045ED79 File Offset: 0x0045CF79
 		public ICheckFlForestMusicBeatsT()
 		{
 			this.Type = EMusicEventType.HcMusicBattle;

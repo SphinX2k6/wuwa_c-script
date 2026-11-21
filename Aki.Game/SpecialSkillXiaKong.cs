@@ -10,18 +10,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x0200319D RID: 12701
+// Token: 0x0200270B RID: 9995
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillXiaKong : SpecialSkillBase
 {
-	// Token: 0x0601B59E RID: 112030 RVA: 0x00778BB4 File Offset: 0x00776DB4
+	// Token: 0x060190BE RID: 102590 RVA: 0x007A0E40 File Offset: 0x0079F040
 	[NullableContext(1)]
 	public SpecialSkillXiaKong(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B59F RID: 112031 RVA: 0x00778C14 File Offset: 0x00776E14
+	// Token: 0x060190BF RID: 102591 RVA: 0x007A0EA0 File Offset: 0x0079F0A0
 	public override void OnStart()
 	{
 		this.Entity = this.SpecialSkillComponent.Entity;
@@ -47,7 +47,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.InitSimulateEntity();
 	}
 
-	// Token: 0x0601B5A0 RID: 112032 RVA: 0x00778D80 File Offset: 0x00776F80
+	// Token: 0x060190C0 RID: 102592 RVA: 0x007A100C File Offset: 0x0079F20C
 	private void InitSummonedEntity()
 	{
 		if (!this.IsAutonomous)
@@ -81,7 +81,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0601B5A1 RID: 112033 RVA: 0x00778E68 File Offset: 0x00777068
+	// Token: 0x060190C1 RID: 102593 RVA: 0x007A10F4 File Offset: 0x0079F2F4
 	public override void OnActivate()
 	{
 		if (!this.IsAutonomous)
@@ -123,7 +123,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5A2 RID: 112034 RVA: 0x00778F78 File Offset: 0x00777178
+	// Token: 0x060190C2 RID: 102594 RVA: 0x007A1204 File Offset: 0x0079F404
 	private void InitSimulateEntity()
 	{
 		if (this.IsAutonomous)
@@ -153,7 +153,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5A3 RID: 112035 RVA: 0x00779074 File Offset: 0x00777274
+	// Token: 0x060190C3 RID: 102595 RVA: 0x007A1300 File Offset: 0x0079F500
 	[NullableContext(1)]
 	private void OnCreateEntity(CreatureDataComponent creatureData, EntityHandle entityHandle)
 	{
@@ -172,7 +172,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5A4 RID: 112036 RVA: 0x00779100 File Offset: 0x00777300
+	// Token: 0x060190C4 RID: 102596 RVA: 0x007A138C File Offset: 0x0079F58C
 	public override void OnTick(float delta)
 	{
 		if (this.IsUltraSkillState && this.StartFrame != Time.Instance.Frame)
@@ -191,7 +191,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5A5 RID: 112037 RVA: 0x00779174 File Offset: 0x00777374
+	// Token: 0x060190C5 RID: 102597 RVA: 0x007A1400 File Offset: 0x0079F600
 	private CharacterTimeScaleComponent UpdateSummonedTimeScale()
 	{
 		if (this.TimeScaleCompList == null)
@@ -231,7 +231,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		return null;
 	}
 
-	// Token: 0x0601B5A6 RID: 112038 RVA: 0x0077923C File Offset: 0x0077743C
+	// Token: 0x060190C6 RID: 102598 RVA: 0x007A14C8 File Offset: 0x0079F6C8
 	private void CheckSummonedDistance()
 	{
 		if (!this.IsAutonomous)
@@ -272,7 +272,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5A7 RID: 112039 RVA: 0x00779320 File Offset: 0x00777520
+	// Token: 0x060190C7 RID: 102599 RVA: 0x007A15AC File Offset: 0x0079F7AC
 	public override void OnEnd()
 	{
 		if (this.Timer != null)
@@ -329,7 +329,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.TimeScaleCompList = null;
 	}
 
-	// Token: 0x0601B5A8 RID: 112040 RVA: 0x00779580 File Offset: 0x00777780
+	// Token: 0x060190C8 RID: 102600 RVA: 0x007A180C File Offset: 0x0079FA0C
 	private void OnCharUseSkill(int entityId, int skillId, bool isAutonomousProxy)
 	{
 		if (skillId != 1407200)
@@ -369,7 +369,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.OnUltraSkillBegin();
 	}
 
-	// Token: 0x0601B5A9 RID: 112041 RVA: 0x00779635 File Offset: 0x00777835
+	// Token: 0x060190C9 RID: 102601 RVA: 0x007A18C1 File Offset: 0x0079FAC1
 	private void OnSkillEnd(int entityId, int skillId)
 	{
 		if (skillId != 1407200)
@@ -380,7 +380,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.OnUltraSkillEnd();
 	}
 
-	// Token: 0x0601B5AA RID: 112042 RVA: 0x00779650 File Offset: 0x00777850
+	// Token: 0x060190CA RID: 102602 RVA: 0x007A18DC File Offset: 0x0079FADC
 	private void OnSkillSimulateMontage(int entityId, int skillId, int montageIndex, float startTimeSeconds)
 	{
 		foreach (EntityHandle entityHandle in this.SummonedEntityList)
@@ -413,7 +413,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5AB RID: 112043 RVA: 0x00779744 File Offset: 0x00777944
+	// Token: 0x060190CB RID: 102603 RVA: 0x007A19D0 File Offset: 0x0079FBD0
 	[NullableContext(1)]
 	private void OnBeforeChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
@@ -424,7 +424,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.StopUltraSkillBeforeChangeRole(newEntity);
 	}
 
-	// Token: 0x0601B5AC RID: 112044 RVA: 0x00779752 File Offset: 0x00777952
+	// Token: 0x060190CC RID: 102604 RVA: 0x007A19DE File Offset: 0x0079FBDE
 	private void OnBeforeUpdateSceneTeam(EntityHandle newEntity, EntityHandle oldEntity)
 	{
 		if (newEntity == oldEntity)
@@ -434,7 +434,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.StopUltraSkillBeforeChangeRole(newEntity);
 	}
 
-	// Token: 0x0601B5AD RID: 112045 RVA: 0x00779760 File Offset: 0x00777960
+	// Token: 0x060190CD RID: 102605 RVA: 0x007A19EC File Offset: 0x0079FBEC
 	private void StopUltraSkillBeforeChangeRole(EntityHandle newEntity)
 	{
 		if (!this.IsUltraSkillState)
@@ -462,7 +462,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5AE RID: 112046 RVA: 0x007797C4 File Offset: 0x007779C4
+	// Token: 0x060190CE RID: 102606 RVA: 0x007A1A50 File Offset: 0x0079FC50
 	[NullableContext(1)]
 	private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
@@ -493,7 +493,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5AF RID: 112047 RVA: 0x0077983F File Offset: 0x00777A3F
+	// Token: 0x060190CF RID: 102607 RVA: 0x007A1ACB File Offset: 0x0079FCCB
 	private float GetTimeScale()
 	{
 		if (this.Entity == null || this.CharacterTimeScaleComponent == null)
@@ -503,7 +503,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		return this.Entity.TimeDilation * this.CharacterTimeScaleComponent.CurrentTimeScale;
 	}
 
-	// Token: 0x0601B5B0 RID: 112048 RVA: 0x00779870 File Offset: 0x00777A70
+	// Token: 0x060190D0 RID: 102608 RVA: 0x007A1AFC File Offset: 0x0079FCFC
 	private void OnUltraSkillBegin()
 	{
 		this.NextGenCircleIndex = 0;
@@ -526,7 +526,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiSpecialSkillEnableChanged, this.Entity.Id, 1407, true);
 	}
 
-	// Token: 0x0601B5B1 RID: 112049 RVA: 0x00779950 File Offset: 0x00777B50
+	// Token: 0x060190D1 RID: 102609 RVA: 0x007A1BDC File Offset: 0x0079FDDC
 	private void OnUltraSkillTick(float delta)
 	{
 		if (!this.IsStopGenCircle)
@@ -549,7 +549,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.CheckCircleGen(delta);
 	}
 
-	// Token: 0x0601B5B2 RID: 112050 RVA: 0x007799D0 File Offset: 0x00777BD0
+	// Token: 0x060190D2 RID: 102610 RVA: 0x007A1C5C File Offset: 0x0079FE5C
 	private void OnUltraSkillEnd()
 	{
 		for (int i = this.NextEndCircleIndex; i < this.NextGenCircleIndex; i++)
@@ -570,7 +570,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiSpecialSkillEnableChanged, this.Entity.Id, 1407, false);
 	}
 
-	// Token: 0x0601B5B3 RID: 112051 RVA: 0x00779A8C File Offset: 0x00777C8C
+	// Token: 0x060190D3 RID: 102611 RVA: 0x007A1D18 File Offset: 0x0079FF18
 	private void CheckInput()
 	{
 		if (this.NextEndCircleIndex >= this.NextGenCircleIndex)
@@ -602,7 +602,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5B4 RID: 112052 RVA: 0x00779B0C File Offset: 0x00777D0C
+	// Token: 0x060190D4 RID: 102612 RVA: 0x007A1D98 File Offset: 0x0079FF98
 	private void CheckCircleGen(float delta)
 	{
 		if (this.IsStopGenCircle)
@@ -620,19 +620,19 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B5B5 RID: 112053 RVA: 0x00779B6F File Offset: 0x00777D6F
+	// Token: 0x060190D5 RID: 102613 RVA: 0x007A1DFB File Offset: 0x0079FFFB
 	private int GetAttrIndex(int circleIndex)
 	{
 		return circleIndex % 2;
 	}
 
-	// Token: 0x0601B5B6 RID: 112054 RVA: 0x00779B74 File Offset: 0x00777D74
+	// Token: 0x060190D6 RID: 102614 RVA: 0x007A1E00 File Offset: 0x007A0000
 	private EAttributeType GetAttrId(int attrIndex)
 	{
 		return EAttributeType.SpecialEnergy1 + attrIndex * 2;
 	}
 
-	// Token: 0x0601B5B7 RID: 112055 RVA: 0x00779B7C File Offset: 0x00777D7C
+	// Token: 0x060190D7 RID: 102615 RVA: 0x007A1E08 File Offset: 0x007A0008
 	private long GetBuffId(int attrIndex)
 	{
 		List<long> buffList = this.BuffList;
@@ -649,7 +649,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		return buffList[attrIndex];
 	}
 
-	// Token: 0x0601B5B8 RID: 112056 RVA: 0x00779BDC File Offset: 0x00777DDC
+	// Token: 0x060190D8 RID: 102616 RVA: 0x007A1E68 File Offset: 0x007A0068
 	private bool CreateNewCircle()
 	{
 		if (this.NextGenCircleIndex - this.NextEndCircleIndex >= 2)
@@ -680,7 +680,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		return true;
 	}
 
-	// Token: 0x0601B5B9 RID: 112057 RVA: 0x00779C8C File Offset: 0x00777E8C
+	// Token: 0x060190D9 RID: 102617 RVA: 0x007A1F18 File Offset: 0x007A0118
 	private void DestroyNextEndCircle()
 	{
 		int nextEndCircleIndex = this.NextEndCircleIndex;
@@ -694,7 +694,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.NextEndCircleIndex++;
 	}
 
-	// Token: 0x0601B5BA RID: 112058 RVA: 0x00779CFC File Offset: 0x00777EFC
+	// Token: 0x060190DA RID: 102618 RVA: 0x007A1F88 File Offset: 0x007A0188
 	public float GetNextEndCircleAttrValue(int nextIndex = 0)
 	{
 		int attrIndex = this.GetAttrIndex(this.NextEndCircleIndex + nextIndex);
@@ -707,7 +707,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		return attrComponent.GetCurrentValue(attrId);
 	}
 
-	// Token: 0x0601B5BB RID: 112059 RVA: 0x00779D36 File Offset: 0x00777F36
+	// Token: 0x060190DB RID: 102619 RVA: 0x007A1FC2 File Offset: 0x007A01C2
 	private void OnResult(bool isSucceed, bool isAuto = false)
 	{
 		this.DestroyNextEndCircle();
@@ -720,7 +720,7 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		ga_Xiakong_Burst_C.判定结果(isSucceed, isAuto, this.ColorType);
 	}
 
-	// Token: 0x0601B5BC RID: 112060 RVA: 0x00779D68 File Offset: 0x00777F68
+	// Token: 0x060190DC RID: 102620 RVA: 0x007A1FF4 File Offset: 0x007A01F4
 	private void AddAttrValue(EAttributeType attrId, float addValue)
 	{
 		if (this.AttrComponent == null)
@@ -731,19 +731,19 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.AttrComponent.SetBaseValue(attrId, value);
 	}
 
-	// Token: 0x0601B5BD RID: 112061 RVA: 0x00779D9A File Offset: 0x00777F9A
+	// Token: 0x060190DD RID: 102621 RVA: 0x007A2026 File Offset: 0x007A0226
 	private void ClearInputType()
 	{
 		this.InputType = 0;
 	}
 
-	// Token: 0x0601B5BE RID: 112062 RVA: 0x00779DA3 File Offset: 0x00777FA3
+	// Token: 0x060190DE RID: 102622 RVA: 0x007A202F File Offset: 0x007A022F
 	private int GetInputType()
 	{
 		return this.InputType;
 	}
 
-	// Token: 0x0601B5BF RID: 112063 RVA: 0x00779DAC File Offset: 0x00777FAC
+	// Token: 0x060190DF RID: 102623 RVA: 0x007A2038 File Offset: 0x007A0238
 	public void SetInputType(int inputType)
 	{
 		if (!this.IsUltraSkillState || this.InputStartCountDown > 0f)
@@ -780,128 +780,128 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 		this.InputType = inputType;
 	}
 
-	// Token: 0x0601B5C0 RID: 112064 RVA: 0x00779E50 File Offset: 0x00778050
+	// Token: 0x060190E0 RID: 102624 RVA: 0x007A20DC File Offset: 0x007A02DC
 	public float GetMinAttrValue()
 	{
 		return 22857f;
 	}
 
-	// Token: 0x0601B5C1 RID: 112065 RVA: 0x00779E57 File Offset: 0x00778057
+	// Token: 0x060190E1 RID: 102625 RVA: 0x007A20E3 File Offset: 0x007A02E3
 	public int GetNextGenCircleIndex()
 	{
 		return this.NextGenCircleIndex;
 	}
 
-	// Token: 0x0601B5C2 RID: 112066 RVA: 0x00779E5F File Offset: 0x0077805F
+	// Token: 0x060190E2 RID: 102626 RVA: 0x007A20EB File Offset: 0x007A02EB
 	public int GetNextEndCircleIndex()
 	{
 		return this.NextEndCircleIndex;
 	}
 
-	// Token: 0x0601B5C3 RID: 112067 RVA: 0x00779E67 File Offset: 0x00778067
+	// Token: 0x060190E3 RID: 102627 RVA: 0x007A20F3 File Offset: 0x007A02F3
 	public bool GetIsUltraSkillState()
 	{
 		return this.IsUltraSkillState;
 	}
 
-	// Token: 0x0400D604 RID: 54788
+	// Token: 0x0400DA87 RID: 55943
 	private const float CHECK_DISTANCE_INTERVAL = 1000f;
 
-	// Token: 0x0400D605 RID: 54789
+	// Token: 0x0400DA88 RID: 55944
 	private const float MAX_DISTANCE_SQUARED = 900000000f;
 
-	// Token: 0x0400D606 RID: 54790
+	// Token: 0x0400DA89 RID: 55945
 	private const int ULTRA_SKILL_ID = 1407200;
 
-	// Token: 0x0400D607 RID: 54791
+	// Token: 0x0400DA8A RID: 55946
 	private const int ULTRA_SECOND_SKILL_ID = 1407201;
 
-	// Token: 0x0400D608 RID: 54792
+	// Token: 0x0400DA8B RID: 55947
 	private const int LOOP_SKILL_ID = 1407004;
 
-	// Token: 0x0400D609 RID: 54793
+	// Token: 0x0400DA8C RID: 55948
 	private const float LOOP_START_TIME = 4f;
 
-	// Token: 0x0400D60A RID: 54794
+	// Token: 0x0400DA8D RID: 55949
 	private const float LOOP_END_TIME = 22.333334f;
 
-	// Token: 0x0400D60B RID: 54795
+	// Token: 0x0400DA8E RID: 55950
 	private const int CIRCLE_NUM = 2;
 
-	// Token: 0x0400D60C RID: 54796
+	// Token: 0x0400DA8F RID: 55951
 	private const float MAX_ATRR_VALUE = 30000f;
 
-	// Token: 0x0400D60D RID: 54797
+	// Token: 0x0400DA90 RID: 55952
 	private const float SUCC_MAX_ATTR_VALUE = 30000f;
 
-	// Token: 0x0400D60E RID: 54798
+	// Token: 0x0400DA91 RID: 55953
 	private const float SUCC_MIN_ATTR_VALUE = 22857f;
 
-	// Token: 0x0400D60F RID: 54799
+	// Token: 0x0400DA92 RID: 55954
 	private const float SUCC_BACKSTAGE_ATRR_VALUE = 25000f;
 
-	// Token: 0x0400D610 RID: 54800
+	// Token: 0x0400DA93 RID: 55955
 	private const float CIRCLE_SPEED_INIT = 14.285714f;
 
-	// Token: 0x0400D611 RID: 54801
+	// Token: 0x0400DA94 RID: 55956
 	private const float FRIST_CIRCLE_TIME = 2332f;
 
-	// Token: 0x0400D612 RID: 54802
+	// Token: 0x0400DA95 RID: 55957
 	private const float SECOND_CIRCLE_TIME = 1332f;
 
-	// Token: 0x0400D613 RID: 54803
+	// Token: 0x0400DA96 RID: 55958
 	private const float CIRCLE_INTERVAL = 23285.7f;
 
-	// Token: 0x0400D614 RID: 54804
+	// Token: 0x0400DA97 RID: 55959
 	private const float ULTRA_SKILL_TOTAL_TIME = 34000f;
 
-	// Token: 0x0400D615 RID: 54805
+	// Token: 0x0400DA98 RID: 55960
 	private const float INPUT_START_TIME = 3664f;
 
-	// Token: 0x0400D616 RID: 54806
+	// Token: 0x0400DA99 RID: 55961
 	[Nullable(1)]
 	private const string FORCE_TIME_SCALE_LOCK_KEY = "SpecialSkillXiaKong.SummonedSync";
 
-	// Token: 0x0400D617 RID: 54807
+	// Token: 0x0400DA9A RID: 55962
 	private Entity Entity;
 
-	// Token: 0x0400D618 RID: 54808
+	// Token: 0x0400DA9B RID: 55963
 	private int EntityId;
 
-	// Token: 0x0400D619 RID: 54809
+	// Token: 0x0400DA9C RID: 55964
 	private long CreatureDataId;
 
-	// Token: 0x0400D61A RID: 54810
+	// Token: 0x0400DA9D RID: 55965
 	private CharacterSkillComponent CharacterSkillComponent;
 
-	// Token: 0x0400D61B RID: 54811
+	// Token: 0x0400DA9E RID: 55966
 	private CharacterTimeScaleComponent CharacterTimeScaleComponent;
 
-	// Token: 0x0400D61C RID: 54812
+	// Token: 0x0400DA9F RID: 55967
 	private RoleTagComponent TagComponent;
 
-	// Token: 0x0400D61D RID: 54813
+	// Token: 0x0400DAA0 RID: 55968
 	private BaseAttributeComponent AttrComponent;
 
-	// Token: 0x0400D61E RID: 54814
+	// Token: 0x0400DAA1 RID: 55969
 	private RoleBuffComponent BuffComponent;
 
-	// Token: 0x0400D61F RID: 54815
+	// Token: 0x0400DAA2 RID: 55970
 	private Skill UltraSkill;
 
-	// Token: 0x0400D620 RID: 54816
+	// Token: 0x0400DAA3 RID: 55971
 	private bool IsUltraSkillState;
 
-	// Token: 0x0400D621 RID: 54817
+	// Token: 0x0400DAA4 RID: 55972
 	private int StartFrame;
 
-	// Token: 0x0400D622 RID: 54818
+	// Token: 0x0400DAA5 RID: 55973
 	private CharacterTimeScaleComponent LastTimeScaleComp;
 
-	// Token: 0x0400D623 RID: 54819
+	// Token: 0x0400DAA6 RID: 55974
 	private CharacterTimeScaleComponent[] TimeScaleCompList;
 
-	// Token: 0x0400D624 RID: 54820
+	// Token: 0x0400DAA7 RID: 55975
 	[Nullable(new byte[]
 	{
 		1,
@@ -909,59 +909,59 @@ public class SpecialSkillXiaKong : SpecialSkillBase
 	})]
 	private readonly List<EntityHandle> SummonedEntityList = new List<EntityHandle>();
 
-	// Token: 0x0400D625 RID: 54821
+	// Token: 0x0400DAA8 RID: 55976
 	[Nullable(1)]
 	private readonly List<int> SummonedEntityHandleIdList = new List<int>();
 
-	// Token: 0x0400D626 RID: 54822
+	// Token: 0x0400DAA9 RID: 55977
 	[Nullable(1)]
 	private readonly List<SpecialSkillXiaKongSummoned> SummonedList = new List<SpecialSkillXiaKongSummoned>();
 
-	// Token: 0x0400D627 RID: 54823
+	// Token: 0x0400DAAA RID: 55978
 	private TimerHandle Timer;
 
-	// Token: 0x0400D628 RID: 54824
+	// Token: 0x0400DAAB RID: 55979
 	private bool IsAutonomous;
 
-	// Token: 0x0400D629 RID: 54825
+	// Token: 0x0400DAAC RID: 55980
 	[Nullable(1)]
 	private readonly List<long> BuffList = new List<long>();
 
-	// Token: 0x0400D62A RID: 54826
+	// Token: 0x0400DAAD RID: 55981
 	private int NextGenCircleIndex;
 
-	// Token: 0x0400D62B RID: 54827
+	// Token: 0x0400DAAE RID: 55982
 	private int NextEndCircleIndex;
 
-	// Token: 0x0400D62C RID: 54828
+	// Token: 0x0400DAAF RID: 55983
 	[Nullable(1)]
 	private readonly List<long> GenBuffList = new List<long>();
 
-	// Token: 0x0400D62D RID: 54829
+	// Token: 0x0400DAB0 RID: 55984
 	private float CircleSpeed;
 
-	// Token: 0x0400D62E RID: 54830
+	// Token: 0x0400DAB1 RID: 55985
 	private bool IsForeground;
 
-	// Token: 0x0400D62F RID: 54831
+	// Token: 0x0400DAB2 RID: 55986
 	private float CircleGenCountDown;
 
-	// Token: 0x0400D630 RID: 54832
+	// Token: 0x0400DAB3 RID: 55987
 	private float TotalTime;
 
-	// Token: 0x0400D631 RID: 54833
+	// Token: 0x0400DAB4 RID: 55988
 	private int InputType;
 
-	// Token: 0x0400D632 RID: 54834
+	// Token: 0x0400DAB5 RID: 55989
 	private bool IsStopGenCircle;
 
-	// Token: 0x0400D633 RID: 54835
+	// Token: 0x0400DAB6 RID: 55990
 	private float InputStartCountDown;
 
-	// Token: 0x0400D634 RID: 54836
+	// Token: 0x0400DAB7 RID: 55991
 	private int ColorType = 1;
 
-	// Token: 0x0400D635 RID: 54837
+	// Token: 0x0400DAB8 RID: 55992
 	[Nullable(1)]
 	private readonly Dictionary<long, int> WaitSummonedEntityMap = new Dictionary<long, int>();
 }

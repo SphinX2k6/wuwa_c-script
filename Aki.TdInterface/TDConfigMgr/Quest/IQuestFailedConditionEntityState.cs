@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001079 RID: 4217
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011A7 RID: 4519
 	public class IQuestFailedConditionEntityState
 	{
-		// Token: 0x06005F0A RID: 24330 RVA: 0x000E64C4 File Offset: 0x000E46C4
+		// Token: 0x06006503 RID: 25859 RVA: 0x000F35E4 File Offset: 0x000F17E4
 		private IQuestFailedConditionEntityState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F0B RID: 24331 RVA: 0x000E64FC File Offset: 0x000E46FC
+		// Token: 0x06006504 RID: 25860 RVA: 0x000F361C File Offset: 0x000F181C
 		public static IQuestFailedConditionEntityState Create([Nullable(2)] IQuestFailedConditionEntityState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F0C RID: 24332 RVA: 0x000E650F File Offset: 0x000E470F
+		// Token: 0x06006505 RID: 25861 RVA: 0x000F362F File Offset: 0x000F182F
 		public static IQuestFailedConditionEntityState CreateFromSetValue([Nullable(2)] IQuestFailedConditionEntityState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F0D RID: 24333 RVA: 0x000E6522 File Offset: 0x000E4722
+		// Token: 0x06006506 RID: 25862 RVA: 0x000F3642 File Offset: 0x000F1842
 		public IQuestFailedConditionEntityState_SetValue ToSetValue()
 		{
 			return new IQuestFailedConditionEntityState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F53 RID: 8019
-		// (get) Token: 0x06005F0E RID: 24334 RVA: 0x000E6538 File Offset: 0x000E4738
-		// (set) Token: 0x06005F0F RID: 24335 RVA: 0x000E65CB File Offset: 0x000E47CB
+		// Token: 0x17002105 RID: 8453
+		// (get) Token: 0x06006507 RID: 25863 RVA: 0x000F3658 File Offset: 0x000F1858
+		// (set) Token: 0x06006508 RID: 25864 RVA: 0x000F36EB File Offset: 0x000F18EB
 		public virtual List<IEntityStateCondition> Conditions
 		{
 			get
@@ -98,18 +96,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400395E RID: 14686
+		// Token: 0x04003CAB RID: 15531
 		[Nullable(2)]
 		protected IQuestFailedConditionEntityState FbInstance;
 
-		// Token: 0x0400395F RID: 14687
+		// Token: 0x04003CAC RID: 15532
 		[Nullable(2)]
 		protected IQuestFailedConditionEntityState_SetValue PocoInterface;
 
-		// Token: 0x04003960 RID: 14688
+		// Token: 0x04003CAD RID: 15533
 		private List<IEntityStateCondition> _ConditionsCache;
 
-		// Token: 0x04003961 RID: 14689
+		// Token: 0x04003CAE RID: 15534
 		private bool _ConditionsInited;
 	}
 }

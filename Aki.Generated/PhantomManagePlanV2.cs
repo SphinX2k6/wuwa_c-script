@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EF2 RID: 3826
+	// Token: 0x02000FD7 RID: 4055
 	public struct PhantomManagePlanV2 : IFlatbufferObject
 	{
-		// Token: 0x1700272A RID: 10026
-		// (get) Token: 0x0600A9AC RID: 43436 RVA: 0x002B59C8 File Offset: 0x002B3BC8
+		// Token: 0x17002790 RID: 10128
+		// (get) Token: 0x0600AFCD RID: 45005 RVA: 0x002D289C File Offset: 0x002D0A9C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9AD RID: 43437 RVA: 0x002B59D5 File Offset: 0x002B3BD5
+		// Token: 0x0600AFCE RID: 45006 RVA: 0x002D28A9 File Offset: 0x002D0AA9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A9AE RID: 43438 RVA: 0x002B59DC File Offset: 0x002B3BDC
+		// Token: 0x0600AFCF RID: 45007 RVA: 0x002D28B0 File Offset: 0x002D0AB0
 		public static PhantomManagePlanV2 GetRootAsPhantomManagePlanV2(ByteBuffer _bb)
 		{
 			return PhantomManagePlanV2.GetRootAsPhantomManagePlanV2(_bb, default(PhantomManagePlanV2));
 		}
 
-		// Token: 0x0600A9AF RID: 43439 RVA: 0x002B59F8 File Offset: 0x002B3BF8
+		// Token: 0x0600AFD0 RID: 45008 RVA: 0x002D28CC File Offset: 0x002D0ACC
 		public static PhantomManagePlanV2 GetRootAsPhantomManagePlanV2(ByteBuffer _bb, PhantomManagePlanV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A9B0 RID: 43440 RVA: 0x002B5A15 File Offset: 0x002B3C15
+		// Token: 0x0600AFD1 RID: 45009 RVA: 0x002D28E9 File Offset: 0x002D0AE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A9B1 RID: 43441 RVA: 0x002B5A24 File Offset: 0x002B3C24
+		// Token: 0x0600AFD2 RID: 45010 RVA: 0x002D28F8 File Offset: 0x002D0AF8
 		public PhantomManagePlanV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700272B RID: 10027
-		// (get) Token: 0x0600A9B2 RID: 43442 RVA: 0x002B5A34 File Offset: 0x002B3C34
+		// Token: 0x17002791 RID: 10129
+		// (get) Token: 0x0600AFD3 RID: 45011 RVA: 0x002D2908 File Offset: 0x002D0B08
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700272C RID: 10028
-		// (get) Token: 0x0600A9B3 RID: 43443 RVA: 0x002B5A70 File Offset: 0x002B3C70
+		// Token: 0x17002792 RID: 10130
+		// (get) Token: 0x0600AFD4 RID: 45012 RVA: 0x002D2944 File Offset: 0x002D0B44
 		public int FetterId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700272D RID: 10029
-		// (get) Token: 0x0600A9B4 RID: 43444 RVA: 0x002B5AAC File Offset: 0x002B3CAC
+		// Token: 0x17002793 RID: 10131
+		// (get) Token: 0x0600AFD5 RID: 45013 RVA: 0x002D2980 File Offset: 0x002D0B80
 		public int Cost
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9B5 RID: 43445 RVA: 0x002B5AE8 File Offset: 0x002B3CE8
+		// Token: 0x0600AFD6 RID: 45014 RVA: 0x002D29BC File Offset: 0x002D0BBC
 		public int LockGroup(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700272E RID: 10030
-		// (get) Token: 0x0600A9B6 RID: 43446 RVA: 0x002B5B28 File Offset: 0x002B3D28
+		// Token: 0x17002794 RID: 10132
+		// (get) Token: 0x0600AFD7 RID: 45015 RVA: 0x002D29FC File Offset: 0x002D0BFC
 		public int LockGroupLength
 		{
 			get
@@ -120,19 +120,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9B7 RID: 43447 RVA: 0x002B5B54 File Offset: 0x002B3D54
+		// Token: 0x0600AFD8 RID: 45016 RVA: 0x002D2A28 File Offset: 0x002D0C28
 		public Span<int> GetLockGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600A9B8 RID: 43448 RVA: 0x002B5B64 File Offset: 0x002B3D64
+		// Token: 0x0600AFD9 RID: 45017 RVA: 0x002D2A38 File Offset: 0x002D0C38
 		public int[] GetLockGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A9B9 RID: 43449 RVA: 0x002B5B7C File Offset: 0x002B3D7C
+		// Token: 0x0600AFDA RID: 45018 RVA: 0x002D2A50 File Offset: 0x002D0C50
 		public int DiscardGroup(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -143,8 +143,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700272F RID: 10031
-		// (get) Token: 0x0600A9BA RID: 43450 RVA: 0x002B5BBC File Offset: 0x002B3DBC
+		// Token: 0x17002795 RID: 10133
+		// (get) Token: 0x0600AFDB RID: 45019 RVA: 0x002D2A90 File Offset: 0x002D0C90
 		public int DiscardGroupLength
 		{
 			get
@@ -158,55 +158,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9BB RID: 43451 RVA: 0x002B5BE8 File Offset: 0x002B3DE8
+		// Token: 0x0600AFDC RID: 45020 RVA: 0x002D2ABC File Offset: 0x002D0CBC
 		public Span<int> GetDiscardGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600A9BC RID: 43452 RVA: 0x002B5BF8 File Offset: 0x002B3DF8
+		// Token: 0x0600AFDD RID: 45021 RVA: 0x002D2ACC File Offset: 0x002D0CCC
 		public int[] GetDiscardGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A9BD RID: 43453 RVA: 0x002B5C10 File Offset: 0x002B3E10
+		// Token: 0x0600AFDE RID: 45022 RVA: 0x002D2AE4 File Offset: 0x002D0CE4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DiscardGroupIter()或GetDiscardGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DiscardGroup()
+		public int[] DiscardGroup()
 		{
-			PhantomManagePlanV2 phantomManagePlanV = this;
-			return phantomManagePlanV.GetDiscardGroupArray() ?? Array.Empty<int>();
+			return this.GetDiscardGroupArray();
 		}
 
-		// Token: 0x0600A9BE RID: 43454 RVA: 0x002B5C34 File Offset: 0x002B3E34
+		// Token: 0x0600AFDF RID: 45023 RVA: 0x002D2AEC File Offset: 0x002D0CEC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DiscardGroupIter()
+		public IEnumerable<int> DiscardGroupIter()
 		{
 			PhantomManagePlanV2.<DiscardGroupIter>d__25 <DiscardGroupIter>d__ = new PhantomManagePlanV2.<DiscardGroupIter>d__25(-2);
 			<DiscardGroupIter>d__.<>3__<>4__this = this;
 			return <DiscardGroupIter>d__;
 		}
 
-		// Token: 0x0600A9BF RID: 43455 RVA: 0x002B5C4C File Offset: 0x002B3E4C
+		// Token: 0x0600AFE0 RID: 45024 RVA: 0x002D2B01 File Offset: 0x002D0D01
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LockGroupIter()或GetLockGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LockGroup()
+		public int[] LockGroup()
 		{
-			PhantomManagePlanV2 phantomManagePlanV = this;
-			return phantomManagePlanV.GetLockGroupArray() ?? Array.Empty<int>();
+			return this.GetLockGroupArray();
 		}
 
-		// Token: 0x0600A9C0 RID: 43456 RVA: 0x002B5C70 File Offset: 0x002B3E70
+		// Token: 0x0600AFE1 RID: 45025 RVA: 0x002D2B09 File Offset: 0x002D0D09
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LockGroupIter()
+		public IEnumerable<int> LockGroupIter()
 		{
 			PhantomManagePlanV2.<LockGroupIter>d__27 <LockGroupIter>d__ = new PhantomManagePlanV2.<LockGroupIter>d__27(-2);
 			<LockGroupIter>d__.<>3__<>4__this = this;
 			return <LockGroupIter>d__;
 		}
 
-		// Token: 0x04004FB5 RID: 20405
+		// Token: 0x0400559A RID: 21914
 		private Table __p;
 	}
 }

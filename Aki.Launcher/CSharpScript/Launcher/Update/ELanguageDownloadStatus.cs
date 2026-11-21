@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200008A RID: 138
+	// Token: 0x0200008D RID: 141
 	public enum ELanguageDownloadStatus
 	{
-		// Token: 0x040002E2 RID: 738
+		// Token: 0x04000310 RID: 784
 		None,
-		// Token: 0x040002E3 RID: 739
+		// Token: 0x04000311 RID: 785
 		Half,
-		// Token: 0x040002E4 RID: 740
+		// Token: 0x04000312 RID: 786
 		Done
 	}
 }

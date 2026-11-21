@@ -6,45 +6,45 @@ using Aki.Protocol.CombatMessage;
 
 namespace CSharpScript.Game.Module.CombatMessage
 {
-	// Token: 0x02005BAF RID: 23471
+	// Token: 0x02004B8F RID: 19343
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class CombatMessageModel : ModelBase
 	{
-		// Token: 0x0603B5AC RID: 243116 RVA: 0x00E2820C File Offset: 0x00E2640C
+		// Token: 0x060304F9 RID: 197881 RVA: 0x00D78570 File Offset: 0x00D76770
 		protected override bool OnLeaveLevel()
 		{
 			this.AnyEntityInFight = false;
 			return true;
 		}
 
-		// Token: 0x0603B5AD RID: 243117 RVA: 0x00E28216 File Offset: 0x00E26416
+		// Token: 0x060304FA RID: 197882 RVA: 0x00D7857A File Offset: 0x00D7677A
 		protected override bool OnChangeMode()
 		{
 			this.AnyEntityInFight = false;
 			return true;
 		}
 
-		// Token: 0x0603B5AE RID: 243118 RVA: 0x00E28220 File Offset: 0x00E26420
+		// Token: 0x060304FB RID: 197883 RVA: 0x00D78584 File Offset: 0x00D76784
 		public bool AddMoveSync(IMoveSync moveSync)
 		{
 			return this.MoveSyncSet.Add(moveSync);
 		}
 
-		// Token: 0x0603B5AF RID: 243119 RVA: 0x00E28233 File Offset: 0x00E26433
+		// Token: 0x060304FC RID: 197884 RVA: 0x00D78597 File Offset: 0x00D76797
 		public bool DeleteMoveSync(IMoveSync moveSync)
 		{
 			return this.MoveSyncSet.Remove(moveSync);
 		}
 
-		// Token: 0x0603B5B0 RID: 243120 RVA: 0x00E28246 File Offset: 0x00E26446
+		// Token: 0x060304FD RID: 197885 RVA: 0x00D785AA File Offset: 0x00D767AA
 		public void SetCombatMessageSwitch(bool isOpen)
 		{
 			this.CombatMessageSwitch = isOpen;
 		}
 
-		// Token: 0x0603B5B1 RID: 243121 RVA: 0x00E28250 File Offset: 0x00E26450
+		// Token: 0x060304FE RID: 197886 RVA: 0x00D785B4 File Offset: 0x00D767B4
 		public long GenMessageId()
 		{
 			long num = this.LastMessageId + 1L;
@@ -62,19 +62,19 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return num2;
 		}
 
-		// Token: 0x0603B5B2 RID: 243122 RVA: 0x00E282B2 File Offset: 0x00E264B2
+		// Token: 0x060304FF RID: 197887 RVA: 0x00D78616 File Offset: 0x00D76816
 		public void SetLastPrefix(int prefix)
 		{
 			this.Prefix = (long)prefix;
 		}
 
-		// Token: 0x0603B5B3 RID: 243123 RVA: 0x00E282BC File Offset: 0x00E264BC
+		// Token: 0x06030500 RID: 197888 RVA: 0x00D78620 File Offset: 0x00D76820
 		public void SetLastMessageId(long value)
 		{
 			this.LastMessageId = value;
 		}
 
-		// Token: 0x0603B5B4 RID: 243124 RVA: 0x00E282C8 File Offset: 0x00E264C8
+		// Token: 0x06030501 RID: 197889 RVA: 0x00D7862C File Offset: 0x00D7682C
 		[NullableContext(2)]
 		public CombatMessageBuffer GetMessageBuffer(long creatureDataId)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return combatMessageBuffer;
 		}
 
-		// Token: 0x0603B5B5 RID: 243125 RVA: 0x00E28300 File Offset: 0x00E26500
+		// Token: 0x06030502 RID: 197890 RVA: 0x00D78664 File Offset: 0x00D76864
 		[NullableContext(2)]
 		public CombatMessageBuffer GetMessageBufferByEntityId(int entityId)
 		{
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return result;
 		}
 
-		// Token: 0x0603B5B6 RID: 243126 RVA: 0x00E28320 File Offset: 0x00E26520
+		// Token: 0x06030503 RID: 197891 RVA: 0x00D78684 File Offset: 0x00D76884
 		public void SetEntityMap(int entityId, long creatureDataId)
 		{
 			CombatMessageBuffer value;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5B7 RID: 243127 RVA: 0x00E2834C File Offset: 0x00E2654C
+		// Token: 0x06030504 RID: 197892 RVA: 0x00D786B0 File Offset: 0x00D768B0
 		public void TryClearSkillCount(long skillContextId)
 		{
 			int num;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5B8 RID: 243128 RVA: 0x00E283AC File Offset: 0x00E265AC
+		// Token: 0x06030505 RID: 197893 RVA: 0x00D78710 File Offset: 0x00D76910
 		public void AddSkillRefCount(long? skillContextId)
 		{
 			if (skillContextId != null && skillContextId.Value > 0L)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5B9 RID: 243129 RVA: 0x00E28454 File Offset: 0x00E26654
+		// Token: 0x06030506 RID: 197894 RVA: 0x00D787B8 File Offset: 0x00D769B8
 		public void RemoveSkillRefCount(long? skillContextId)
 		{
 			if (skillContextId != null && skillContextId.Value > 0L)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5BA RID: 243130 RVA: 0x00E284BA File Offset: 0x00E266BA
+		// Token: 0x06030507 RID: 197895 RVA: 0x00D7881E File Offset: 0x00D76A1E
 		public void OnBulletAdded(long? skillContextId, long? bulletContextId, string bulletRowName)
 		{
 			this.AddSkillRefCount(skillContextId);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5BB RID: 243131 RVA: 0x00E284EC File Offset: 0x00E266EC
+		// Token: 0x06030508 RID: 197896 RVA: 0x00D78850 File Offset: 0x00D76A50
 		public void OnBulletRemoved(long? skillContextId, long? bulletContextId)
 		{
 			this.RemoveSkillRefCount(skillContextId);
@@ -185,31 +185,31 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5BC RID: 243132 RVA: 0x00E28554 File Offset: 0x00E26754
+		// Token: 0x06030509 RID: 197897 RVA: 0x00D788B8 File Offset: 0x00D76AB8
 		[Conditional("DEBUG")]
 		public void RecordDebugSkillContextInfo(long? skillContextId, int skillId)
 		{
 		}
 
-		// Token: 0x0603B5BD RID: 243133 RVA: 0x00E28556 File Offset: 0x00E26756
+		// Token: 0x0603050A RID: 197898 RVA: 0x00D788BA File Offset: 0x00D76ABA
 		[Conditional("DEBUG")]
 		public void ClearDebugSkillContextInfo(long? skillContextId)
 		{
 		}
 
-		// Token: 0x0603B5BE RID: 243134 RVA: 0x00E28558 File Offset: 0x00E26758
+		// Token: 0x0603050B RID: 197899 RVA: 0x00D788BC File Offset: 0x00D76ABC
 		[Conditional("DEBUG")]
 		public void RecordDebugBulletContextInfo(long? bulletContextId, string bulletRowName)
 		{
 		}
 
-		// Token: 0x0603B5BF RID: 243135 RVA: 0x00E2855A File Offset: 0x00E2675A
+		// Token: 0x0603050C RID: 197900 RVA: 0x00D788BE File Offset: 0x00D76ABE
 		[Conditional("DEBUG")]
 		public void ClearDebugBulletContextInfo(long bulletContextId)
 		{
 		}
 
-		// Token: 0x0603B5C0 RID: 243136 RVA: 0x00E2855C File Offset: 0x00E2675C
+		// Token: 0x0603050D RID: 197901 RVA: 0x00D788C0 File Offset: 0x00D76AC0
 		public int? AddSkillHitCount(long? skillContextId)
 		{
 			if (skillContextId == null || skillContextId.Value <= 0L)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return new int?(num + 1);
 		}
 
-		// Token: 0x0603B5C1 RID: 243137 RVA: 0x00E285F0 File Offset: 0x00E267F0
+		// Token: 0x0603050E RID: 197902 RVA: 0x00D78954 File Offset: 0x00D76B54
 		public int? AddSkillHitCountByVictim(long? skillContextId, int victimEntityId)
 		{
 			if (skillContextId == null || skillContextId.Value <= 0L)
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return new int?(valueOrDefault + 1);
 		}
 
-		// Token: 0x0603B5C2 RID: 243138 RVA: 0x00E28684 File Offset: 0x00E26884
+		// Token: 0x0603050F RID: 197903 RVA: 0x00D789E8 File Offset: 0x00D76BE8
 		public int? AddSkillDamageCount(long? skillContextId)
 		{
 			if (skillContextId == null || skillContextId.Value <= 0L)
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return new int?(num + 1);
 		}
 
-		// Token: 0x0603B5C3 RID: 243139 RVA: 0x00E28718 File Offset: 0x00E26918
+		// Token: 0x06030510 RID: 197904 RVA: 0x00D78A7C File Offset: 0x00D76C7C
 		public int? AddSkillDamageCountByVictim(long? skillContextId, int victimEntityId)
 		{
 			if (skillContextId == null || skillContextId.Value <= 0L)
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return new int?(valueOrDefault + 1);
 		}
 
-		// Token: 0x0603B5C4 RID: 243140 RVA: 0x00E287AC File Offset: 0x00E269AC
+		// Token: 0x06030511 RID: 197905 RVA: 0x00D78B10 File Offset: 0x00D76D10
 		public int? AddBulletDamageCount(long? bulletContextId)
 		{
 			if (bulletContextId == null || bulletContextId.Value <= 0L)
@@ -321,8 +321,8 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return new int?(num + 1);
 		}
 
-		// Token: 0x17008CF9 RID: 36089
-		// (get) Token: 0x0603B5C5 RID: 243141 RVA: 0x00E2883F File Offset: 0x00E26A3F
+		// Token: 0x170060CB RID: 24779
+		// (get) Token: 0x06030512 RID: 197906 RVA: 0x00D78BA3 File Offset: 0x00D76DA3
 		public static CombatMessageModel Instance
 		{
 			get
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			}
 		}
 
-		// Token: 0x0603B5C6 RID: 243142 RVA: 0x00E28846 File Offset: 0x00E26A46
+		// Token: 0x06030513 RID: 197907 RVA: 0x00D78BAA File Offset: 0x00D76DAA
 		public static CombatMessageModel GetOrCreateInstance()
 		{
 			if (CombatMessageModel._Instance == null)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return CombatMessageModel._Instance;
 		}
 
-		// Token: 0x0603B5C7 RID: 243143 RVA: 0x00E2885A File Offset: 0x00E26A5A
+		// Token: 0x06030514 RID: 197908 RVA: 0x00D78BBE File Offset: 0x00D76DBE
 		public static bool CreateInstance()
 		{
 			if (CombatMessageModel._Instance != null)
@@ -352,132 +352,132 @@ namespace CSharpScript.Game.Module.CombatMessage
 			return true;
 		}
 
-		// Token: 0x0603B5C8 RID: 243144 RVA: 0x00E28870 File Offset: 0x00E26A70
+		// Token: 0x06030515 RID: 197909 RVA: 0x00D78BD4 File Offset: 0x00D76DD4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B5C9 RID: 243145 RVA: 0x00E28872 File Offset: 0x00E26A72
+		// Token: 0x06030516 RID: 197910 RVA: 0x00D78BD6 File Offset: 0x00D76DD6
 		public static void ResetStaticDefaultValue()
 		{
 			CombatMessageModel._Instance = null;
 		}
 
-		// Token: 0x0603B5CA RID: 243146 RVA: 0x00E2887A File Offset: 0x00E26A7A
+		// Token: 0x06030517 RID: 197911 RVA: 0x00D78BDE File Offset: 0x00D76DDE
 		static CombatMessageModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CombatMessageModel.CreateStaticDefaultValue), new Action(CombatMessageModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EED9 RID: 126681
+		// Token: 0x0401998A RID: 104842
 		public const int COUNT_CONTEXT_REMOVE_DELAY = 500;
 
-		// Token: 0x0401EEDA RID: 126682
+		// Token: 0x0401998B RID: 104843
 		public const float BUFFER_TIME_RATE = 1.05f;
 
-		// Token: 0x0401EEDB RID: 126683
+		// Token: 0x0401998C RID: 104844
 		public const int TIME_BUFFER_SIZE = 20;
 
-		// Token: 0x0401EEDC RID: 126684
+		// Token: 0x0401998D RID: 104845
 		public const float TIME_OFFSET_LERP_RATE = 0.1f;
 
-		// Token: 0x0401EEDD RID: 126685
+		// Token: 0x0401998E RID: 104846
 		public const float FIX_BUFFER_TIME = 0.08f;
 
-		// Token: 0x0401EEDE RID: 126686
+		// Token: 0x0401998F RID: 104847
 		public const int TIME_BUFFER_CHECK_COUNT_MIN = 5;
 
-		// Token: 0x0401EEDF RID: 126687
+		// Token: 0x04019990 RID: 104848
 		public const float TIME_BUFFER_CHECK_TIME_MAX = 3f;
 
-		// Token: 0x0401EEE0 RID: 126688
+		// Token: 0x04019991 RID: 104849
 		public const float MAX_FLUCTUATE = 0.5f;
 
-		// Token: 0x0401EEE1 RID: 126689
+		// Token: 0x04019992 RID: 104850
 		public const float RECORD_UDP_MESSAGE_INTERNAL = 0.2f;
 
-		// Token: 0x0401EEE2 RID: 126690
+		// Token: 0x04019993 RID: 104851
 		public const int MESSAGE_ID_MASK = 60;
 
-		// Token: 0x0401EEE3 RID: 126691
+		// Token: 0x04019994 RID: 104852
 		public bool MoveSyncUdpMode = true;
 
-		// Token: 0x0401EEE4 RID: 126692
+		// Token: 0x04019995 RID: 104853
 		public float MoveSyncUdpSendInterval = 0.03f;
 
-		// Token: 0x0401EEE5 RID: 126693
+		// Token: 0x04019996 RID: 104854
 		public bool MoveSyncUdpFullSampling;
 
-		// Token: 0x0401EEE6 RID: 126694
+		// Token: 0x04019997 RID: 104855
 		public bool CombatMessageSendPackMode = true;
 
-		// Token: 0x0401EEE7 RID: 126695
+		// Token: 0x04019998 RID: 104856
 		public float CombatMessageSendInterval = 0.04f;
 
-		// Token: 0x0401EEE8 RID: 126696
+		// Token: 0x04019999 RID: 104857
 		public float CombatMessageSendIntervalMulti = 0.03f;
 
-		// Token: 0x0401EEE9 RID: 126697
+		// Token: 0x0401999A RID: 104858
 		public double CombatMessageSendLastTime;
 
-		// Token: 0x0401EEEA RID: 126698
+		// Token: 0x0401999B RID: 104859
 		private long Prefix = 1L;
 
-		// Token: 0x0401EEEB RID: 126699
+		// Token: 0x0401999C RID: 104860
 		private long LastMessageId;
 
-		// Token: 0x0401EEEC RID: 126700
+		// Token: 0x0401999D RID: 104861
 		public readonly Dictionary<long, CombatMessageBuffer> CombatMessageBufferMap = new Dictionary<long, CombatMessageBuffer>();
 
-		// Token: 0x0401EEED RID: 126701
+		// Token: 0x0401999E RID: 104862
 		public readonly Dictionary<long, CombatMessageBuffer> CombatMessageBufferMapByEntity = new Dictionary<long, CombatMessageBuffer>();
 
-		// Token: 0x0401EEEE RID: 126702
+		// Token: 0x0401999F RID: 104863
 		public bool NeedPushMove;
 
-		// Token: 0x0401EEEF RID: 126703
+		// Token: 0x040199A0 RID: 104864
 		public readonly HashSet<IMoveSync> MoveSyncSet = new HashSet<IMoveSync>();
 
-		// Token: 0x0401EEF0 RID: 126704
+		// Token: 0x040199A1 RID: 104865
 		public bool AnyEntityInFight;
 
-		// Token: 0x0401EEF1 RID: 126705
+		// Token: 0x040199A2 RID: 104866
 		public bool AnyHateChange;
 
-		// Token: 0x0401EEF2 RID: 126706
+		// Token: 0x040199A3 RID: 104867
 		public CombatSendPackRequest MessagePack = CombatSendPackRequest.Create();
 
-		// Token: 0x0401EEF3 RID: 126707
+		// Token: 0x040199A4 RID: 104868
 		private bool CombatMessageSwitch;
 
-		// Token: 0x0401EEF4 RID: 126708
+		// Token: 0x040199A5 RID: 104869
 		private readonly Dictionary<long, int> SkillContextMap = new Dictionary<long, int>();
 
-		// Token: 0x0401EEF5 RID: 126709
+		// Token: 0x040199A6 RID: 104870
 		private readonly Dictionary<long, int> SkillHitCountMap = new Dictionary<long, int>();
 
-		// Token: 0x0401EEF6 RID: 126710
+		// Token: 0x040199A7 RID: 104871
 		private readonly Dictionary<long, Dictionary<int, int>> SkillHitCountByVictimMap = new Dictionary<long, Dictionary<int, int>>();
 
-		// Token: 0x0401EEF7 RID: 126711
+		// Token: 0x040199A8 RID: 104872
 		private readonly Dictionary<long, int> SkillDamageCountMap = new Dictionary<long, int>();
 
-		// Token: 0x0401EEF8 RID: 126712
+		// Token: 0x040199A9 RID: 104873
 		private readonly Dictionary<long, Dictionary<int, int>> SkillDamageCountByVictimMap = new Dictionary<long, Dictionary<int, int>>();
 
-		// Token: 0x0401EEF9 RID: 126713
+		// Token: 0x040199AA RID: 104874
 		private readonly Dictionary<long, int> BulletDamageCountMap = new Dictionary<long, int>();
 
-		// Token: 0x0401EEFA RID: 126714
+		// Token: 0x040199AB RID: 104875
 		public readonly HashSet<long> SkillDirtySet = new HashSet<long>();
 
-		// Token: 0x0401EEFB RID: 126715
+		// Token: 0x040199AC RID: 104876
 		private readonly Dictionary<long, long> DebugSkillContextMap = new Dictionary<long, long>();
 
-		// Token: 0x0401EEFC RID: 126716
+		// Token: 0x040199AD RID: 104877
 		private readonly Dictionary<long, string> DebugBulletContextMap = new Dictionary<long, string>();
 
-		// Token: 0x0401EEFD RID: 126717
+		// Token: 0x040199AE RID: 104878
 		[Nullable(2)]
 		private static CombatMessageModel _Instance;
 	}

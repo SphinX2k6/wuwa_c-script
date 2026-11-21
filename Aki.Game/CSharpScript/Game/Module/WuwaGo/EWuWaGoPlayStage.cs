@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x020046F9 RID: 18169
+	// Token: 0x02003629 RID: 13865
 	public enum EWuWaGoPlayStage
 	{
-		// Token: 0x04019AAF RID: 105135
+		// Token: 0x0401415E RID: 82270
 		None,
-		// Token: 0x04019AB0 RID: 105136
+		// Token: 0x0401415F RID: 82271
 		Init,
-		// Token: 0x04019AB1 RID: 105137
+		// Token: 0x04014160 RID: 82272
 		Intro,
-		// Token: 0x04019AB2 RID: 105138
+		// Token: 0x04014161 RID: 82273
 		Running,
-		// Token: 0x04019AB3 RID: 105139
+		// Token: 0x04014162 RID: 82274
 		Settlement,
-		// Token: 0x04019AB4 RID: 105140
+		// Token: 0x04014163 RID: 82275
 		GameOver
 	}
 }

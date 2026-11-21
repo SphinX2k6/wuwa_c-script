@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000273 RID: 627
+	// Token: 0x02000287 RID: 647
 	public class ConfigEnrichmentAreaConfigByEnrichmentId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EB7 RID: 3767 RVA: 0x000AC9AC File Offset: 0x000AABAC
+		// Token: 0x06000F2F RID: 3887 RVA: 0x000B2C70 File Offset: 0x000B0E70
 		static ConfigEnrichmentAreaConfigByEnrichmentId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEnrichmentAreaConfigByEnrichmentId.CreateStaticDefaultValue), new Action(ConfigEnrichmentAreaConfigByEnrichmentId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000EB8 RID: 3768 RVA: 0x000AC9CC File Offset: 0x000AABCC
+		// Token: 0x06000F30 RID: 3888 RVA: 0x000B2C90 File Offset: 0x000B0E90
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEnrichmentAreaConfigByEnrichmentId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000EB9 RID: 3769 RVA: 0x000ACA4B File Offset: 0x000AAC4B
+		// Token: 0x06000F31 RID: 3889 RVA: 0x000B2D0F File Offset: 0x000B0F0F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEnrichmentAreaConfigByEnrichmentId.LogPair = null;
 			ConfigEnrichmentAreaConfigByEnrichmentId.HandleId = 0;
 		}
 
-		// Token: 0x06000EBA RID: 3770 RVA: 0x000ACA59 File Offset: 0x000AAC59
+		// Token: 0x06000F32 RID: 3890 RVA: 0x000B2D1D File Offset: 0x000B0F1D
 		public static void Init()
 		{
 			ConfigEnrichmentAreaConfigByEnrichmentId.HandleId = ConfigCommon.InitDataStatement(ConfigEnrichmentAreaConfigByEnrichmentId.HandleId, "db_enrichment.db", "select BinData from `EnrichmentAreaConfig` where EnrichmentId=?");
 		}
 
-		// Token: 0x06000EBB RID: 3771 RVA: 0x000ACA74 File Offset: 0x000AAC74
+		// Token: 0x06000F33 RID: 3891 RVA: 0x000B2D38 File Offset: 0x000B0F38
 		[NullableContext(2)]
 		public static IReadOnlyList<EnrichmentAreaConfig> GetConfigList(int p0EnrichmentId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001109 RID: 4361
+		// Token: 0x04001195 RID: 4501
 		private const string DB = "db_enrichment.db";
 
-		// Token: 0x0400110A RID: 4362
+		// Token: 0x04001196 RID: 4502
 		private const string FILE = "UniverseEditor/Enrichment/富集区_Json_EnrichmentArea.csv";
 
-		// Token: 0x0400110B RID: 4363
+		// Token: 0x04001197 RID: 4503
 		private const string TABLE = "EnrichmentAreaConfig";
 
-		// Token: 0x0400110C RID: 4364
+		// Token: 0x04001198 RID: 4504
 		private const string COMMAND = "select BinData from `EnrichmentAreaConfig` where EnrichmentId=?";
 
-		// Token: 0x0400110D RID: 4365
+		// Token: 0x04001199 RID: 4505
 		private const string KEY_PREFIX = "EnrichmentAreaConfigByEnrichmentId";
 
-		// Token: 0x0400110E RID: 4366
+		// Token: 0x0400119A RID: 4506
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400110F RID: 4367
+		// Token: 0x0400119B RID: 4507
 		private static int HandleId;
 	}
 }

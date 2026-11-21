@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200514A RID: 20810
+	// Token: 0x020056AF RID: 22191
 	public struct IEnterScreenWeight : IFlatbufferObject
 	{
-		// Token: 0x170097C7 RID: 38855
-		// (get) Token: 0x06021962 RID: 137570 RVA: 0x004A97C4 File Offset: 0x004A79C4
+		// Token: 0x17009FB4 RID: 40884
+		// (get) Token: 0x060238B6 RID: 145590 RVA: 0x004E3750 File Offset: 0x004E1950
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021963 RID: 137571 RVA: 0x004A97D1 File Offset: 0x004A79D1
+		// Token: 0x060238B7 RID: 145591 RVA: 0x004E375D File Offset: 0x004E195D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021964 RID: 137572 RVA: 0x004A97D8 File Offset: 0x004A79D8
+		// Token: 0x060238B8 RID: 145592 RVA: 0x004E3764 File Offset: 0x004E1964
 		public static IEnterScreenWeight GetRootAsIEnterScreenWeight(ByteBuffer _bb)
 		{
 			return IEnterScreenWeight.GetRootAsIEnterScreenWeight(_bb, default(IEnterScreenWeight));
 		}
 
-		// Token: 0x06021965 RID: 137573 RVA: 0x004A97F4 File Offset: 0x004A79F4
+		// Token: 0x060238B9 RID: 145593 RVA: 0x004E3780 File Offset: 0x004E1980
 		public static IEnterScreenWeight GetRootAsIEnterScreenWeight(ByteBuffer _bb, IEnterScreenWeight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021966 RID: 137574 RVA: 0x004A9811 File Offset: 0x004A7A11
+		// Token: 0x060238BA RID: 145594 RVA: 0x004E379D File Offset: 0x004E199D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021967 RID: 137575 RVA: 0x004A9820 File Offset: 0x004A7A20
+		// Token: 0x060238BB RID: 145595 RVA: 0x004E37AC File Offset: 0x004E19AC
 		public IEnterScreenWeight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170097C8 RID: 38856
-		// (get) Token: 0x06021968 RID: 137576 RVA: 0x004A9830 File Offset: 0x004A7A30
+		// Token: 0x17009FB5 RID: 40885
+		// (get) Token: 0x060238BC RID: 145596 RVA: 0x004E37BC File Offset: 0x004E19BC
 		public EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170097C9 RID: 38857
-		// (get) Token: 0x06021969 RID: 137577 RVA: 0x004A986C File Offset: 0x004A7A6C
+		// Token: 0x17009FB6 RID: 40886
+		// (get) Token: 0x060238BD RID: 145597 RVA: 0x004E37F8 File Offset: 0x004E19F8
 		public int Weight
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602196A RID: 137578 RVA: 0x004A98A8 File Offset: 0x004A7AA8
+		// Token: 0x060238BE RID: 145598 RVA: 0x004E3834 File Offset: 0x004E1A34
 		public static Offset<IEnterScreenWeight> CreateIEnterScreenWeight(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg Type = EExploreSkillSearchTargetCfg.AngleWeight, int Weight = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEnterScreenWeight.EndIEnterScreenWeight(builder);
 		}
 
-		// Token: 0x0602196B RID: 137579 RVA: 0x004A98C5 File Offset: 0x004A7AC5
+		// Token: 0x060238BF RID: 145599 RVA: 0x004E3851 File Offset: 0x004E1A51
 		public static void StartIEnterScreenWeight(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602196C RID: 137580 RVA: 0x004A98CE File Offset: 0x004A7ACE
+		// Token: 0x060238C0 RID: 145600 RVA: 0x004E385A File Offset: 0x004E1A5A
 		public static void AddType(FlatBufferBuilder builder, EExploreSkillSearchTargetCfg type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602196D RID: 137581 RVA: 0x004A98D9 File Offset: 0x004A7AD9
+		// Token: 0x060238C1 RID: 145601 RVA: 0x004E3865 File Offset: 0x004E1A65
 		public static void AddWeight(FlatBufferBuilder builder, int weight)
 		{
 			builder.AddInt(1, weight, 0);
 		}
 
-		// Token: 0x0602196E RID: 137582 RVA: 0x004A98E4 File Offset: 0x004A7AE4
+		// Token: 0x060238C2 RID: 145602 RVA: 0x004E3870 File Offset: 0x004E1A70
 		public static Offset<IEnterScreenWeight> EndIEnterScreenWeight(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnterScreenWeight>(builder.EndTable());
 		}
 
-		// Token: 0x0602196F RID: 137583 RVA: 0x004A98F4 File Offset: 0x004A7AF4
+		// Token: 0x060238C3 RID: 145603 RVA: 0x004E3880 File Offset: 0x004E1A80
 		public IEnterScreenWeightT UnPack()
 		{
 			IEnterScreenWeightT enterScreenWeightT = new IEnterScreenWeightT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return enterScreenWeightT;
 		}
 
-		// Token: 0x06021970 RID: 137584 RVA: 0x004A990F File Offset: 0x004A7B0F
+		// Token: 0x060238C4 RID: 145604 RVA: 0x004E389B File Offset: 0x004E1A9B
 		public void UnPackTo(IEnterScreenWeightT _o)
 		{
 			_o.Type = this.Type;
 			_o.Weight = this.Weight;
 		}
 
-		// Token: 0x06021971 RID: 137585 RVA: 0x004A992C File Offset: 0x004A7B2C
+		// Token: 0x060238C5 RID: 145605 RVA: 0x004E38B8 File Offset: 0x004E1AB8
 		public static Offset<IEnterScreenWeight> Pack(FlatBufferBuilder builder, IEnterScreenWeightT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IEnterScreenWeight.CreateIEnterScreenWeight(builder, _o.Type, _o.Weight);
 		}
 
-		// Token: 0x0400E1E6 RID: 57830
+		// Token: 0x0400EDE3 RID: 60899
 		private Table __p;
 	}
 }

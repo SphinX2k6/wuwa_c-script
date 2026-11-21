@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D61 RID: 15713
+	// Token: 0x02004178 RID: 16760
 	public struct ICheckPlayerPressButton : IFlatbufferObject
 	{
-		// Token: 0x17006BD5 RID: 27605
-		// (get) Token: 0x06015BD1 RID: 89041 RVA: 0x00322AD6 File Offset: 0x00320CD6
+		// Token: 0x1700718F RID: 29071
+		// (get) Token: 0x06017109 RID: 94473 RVA: 0x00349D4E File Offset: 0x00347F4E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015BD2 RID: 89042 RVA: 0x00322AE3 File Offset: 0x00320CE3
+		// Token: 0x0601710A RID: 94474 RVA: 0x00349D5B File Offset: 0x00347F5B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015BD3 RID: 89043 RVA: 0x00322AEC File Offset: 0x00320CEC
+		// Token: 0x0601710B RID: 94475 RVA: 0x00349D64 File Offset: 0x00347F64
 		public static ICheckPlayerPressButton GetRootAsICheckPlayerPressButton(ByteBuffer _bb)
 		{
 			return ICheckPlayerPressButton.GetRootAsICheckPlayerPressButton(_bb, default(ICheckPlayerPressButton));
 		}
 
-		// Token: 0x06015BD4 RID: 89044 RVA: 0x00322B08 File Offset: 0x00320D08
+		// Token: 0x0601710C RID: 94476 RVA: 0x00349D80 File Offset: 0x00347F80
 		public static ICheckPlayerPressButton GetRootAsICheckPlayerPressButton(ByteBuffer _bb, ICheckPlayerPressButton obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015BD5 RID: 89045 RVA: 0x00322B25 File Offset: 0x00320D25
+		// Token: 0x0601710D RID: 94477 RVA: 0x00349D9D File Offset: 0x00347F9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015BD6 RID: 89046 RVA: 0x00322B34 File Offset: 0x00320D34
+		// Token: 0x0601710E RID: 94478 RVA: 0x00349DAC File Offset: 0x00347FAC
 		public ICheckPlayerPressButton __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006BD6 RID: 27606
-		// (get) Token: 0x06015BD7 RID: 89047 RVA: 0x00322B44 File Offset: 0x00320D44
+		// Token: 0x17007190 RID: 29072
+		// (get) Token: 0x0601710F RID: 94479 RVA: 0x00349DBC File Offset: 0x00347FBC
 		public ECheckPlayerInputType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006BD7 RID: 27607
-		// (get) Token: 0x06015BD8 RID: 89048 RVA: 0x00322B80 File Offset: 0x00320D80
+		// Token: 0x17007191 RID: 29073
+		// (get) Token: 0x06017110 RID: 94480 RVA: 0x00349DF8 File Offset: 0x00347FF8
 		public EPlayerButtonType ButtonType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015BD9 RID: 89049 RVA: 0x00322BBC File Offset: 0x00320DBC
+		// Token: 0x06017111 RID: 94481 RVA: 0x00349E34 File Offset: 0x00348034
 		public static Offset<ICheckPlayerPressButton> CreateICheckPlayerPressButton(FlatBufferBuilder builder, ECheckPlayerInputType Type = ECheckPlayerInputType.PressButton, EPlayerButtonType ButtonType = EPlayerButtonType.ChallengeAgain)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckPlayerPressButton.EndICheckPlayerPressButton(builder);
 		}
 
-		// Token: 0x06015BDA RID: 89050 RVA: 0x00322BD9 File Offset: 0x00320DD9
+		// Token: 0x06017112 RID: 94482 RVA: 0x00349E51 File Offset: 0x00348051
 		public static void StartICheckPlayerPressButton(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06015BDB RID: 89051 RVA: 0x00322BE2 File Offset: 0x00320DE2
+		// Token: 0x06017113 RID: 94483 RVA: 0x00349E5A File Offset: 0x0034805A
 		public static void AddType(FlatBufferBuilder builder, ECheckPlayerInputType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015BDC RID: 89052 RVA: 0x00322BED File Offset: 0x00320DED
+		// Token: 0x06017114 RID: 94484 RVA: 0x00349E65 File Offset: 0x00348065
 		public static void AddButtonType(FlatBufferBuilder builder, EPlayerButtonType buttonType)
 		{
 			builder.AddByte(1, (byte)buttonType, 0);
 		}
 
-		// Token: 0x06015BDD RID: 89053 RVA: 0x00322BF8 File Offset: 0x00320DF8
+		// Token: 0x06017115 RID: 94485 RVA: 0x00349E70 File Offset: 0x00348070
 		public static Offset<ICheckPlayerPressButton> EndICheckPlayerPressButton(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckPlayerPressButton>(builder.EndTable());
 		}
 
-		// Token: 0x06015BDE RID: 89054 RVA: 0x00322C08 File Offset: 0x00320E08
+		// Token: 0x06017116 RID: 94486 RVA: 0x00349E80 File Offset: 0x00348080
 		public ICheckPlayerPressButtonT UnPack()
 		{
 			ICheckPlayerPressButtonT checkPlayerPressButtonT = new ICheckPlayerPressButtonT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return checkPlayerPressButtonT;
 		}
 
-		// Token: 0x06015BDF RID: 89055 RVA: 0x00322C23 File Offset: 0x00320E23
+		// Token: 0x06017117 RID: 94487 RVA: 0x00349E9B File Offset: 0x0034809B
 		public void UnPackTo(ICheckPlayerPressButtonT _o)
 		{
 			_o.Type = this.Type;
 			_o.ButtonType = this.ButtonType;
 		}
 
-		// Token: 0x06015BE0 RID: 89056 RVA: 0x00322C40 File Offset: 0x00320E40
+		// Token: 0x06017118 RID: 94488 RVA: 0x00349EB8 File Offset: 0x003480B8
 		public static Offset<ICheckPlayerPressButton> Pack(FlatBufferBuilder builder, ICheckPlayerPressButtonT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ICheckPlayerPressButton.CreateICheckPlayerPressButton(builder, _o.Type, _o.ButtonType);
 		}
 
-		// Token: 0x0400B642 RID: 46658
+		// Token: 0x0400BFEF RID: 49135
 		private Table __p;
 	}
 }

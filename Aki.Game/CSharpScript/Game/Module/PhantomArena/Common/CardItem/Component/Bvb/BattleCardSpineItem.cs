@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x020051FF RID: 20991
+	// Token: 0x020041CF RID: 16847
 	public class BattleCardSpineItem : UiPanelBase
 	{
-		// Token: 0x06035B31 RID: 219953 RVA: 0x00CB73A4 File Offset: 0x00CB55A4
+		// Token: 0x0602AA2C RID: 174636 RVA: 0x00C049E0 File Offset: 0x00C02BE0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			};
 		}
 
-		// Token: 0x06035B32 RID: 219954 RVA: 0x00CB73C8 File Offset: 0x00CB55C8
+		// Token: 0x0602AA2D RID: 174637 RVA: 0x00C04A04 File Offset: 0x00C02C04
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleCardSpineItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B33 RID: 219955 RVA: 0x00CB740C File Offset: 0x00CB560C
+		// Token: 0x0602AA2E RID: 174638 RVA: 0x00C04A48 File Offset: 0x00C02C48
 		private UniTask RefreshSpine(int configId)
 		{
 			BattleCardSpineItem.<RefreshSpine>d__4 <RefreshSpine>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B34 RID: 219956 RVA: 0x00CB7458 File Offset: 0x00CB5658
+		// Token: 0x0602AA2F RID: 174639 RVA: 0x00C04A94 File Offset: 0x00C02C94
 		public UniTask RefreshSpineById(int configId)
 		{
 			BattleCardSpineItem.<RefreshSpineById>d__5 <RefreshSpineById>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshSpineById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B35 RID: 219957 RVA: 0x00CB74A4 File Offset: 0x00CB56A4
+		// Token: 0x0602AA30 RID: 174640 RVA: 0x00C04AE0 File Offset: 0x00C02CE0
 		[NullableContext(1)]
 		public void PlaySpineAnim(string animName, bool isLoop)
 		{
@@ -73,19 +73,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			}
 		}
 
-		// Token: 0x06035B36 RID: 219958 RVA: 0x00CB7500 File Offset: 0x00CB5700
+		// Token: 0x0602AA31 RID: 174641 RVA: 0x00C04B3C File Offset: 0x00C02D3C
 		public void SetCardConfigId(int cardConfigId)
 		{
 			this.CardConfigId = cardConfigId;
 		}
 
-		// Token: 0x0401C79B RID: 116635
+		// Token: 0x040171D0 RID: 94672
 		protected int CardConfigId;
 
-		// Token: 0x0200B39A RID: 45978
+		// Token: 0x02009DD2 RID: 40402
 		private static class EBattleCardSpineItem
 		{
-			// Token: 0x040366F5 RID: 222965
+			// Token: 0x04031148 RID: 201032
 			public const int CardSpine = 0;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002212 RID: 8722
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200247D RID: 9341
 	public class SlideRailStart : ActionParams
 	{
-		// Token: 0x0600BF78 RID: 49016 RVA: 0x001B829C File Offset: 0x001B649C
+		// Token: 0x0600CB36 RID: 52022 RVA: 0x001CF968 File Offset: 0x001CDB68
 		private SlideRailStart_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF79 RID: 49017 RVA: 0x001B82D4 File Offset: 0x001B64D4
+		// Token: 0x0600CB37 RID: 52023 RVA: 0x001CF9A0 File Offset: 0x001CDBA0
 		public static SlideRailStart Create([Nullable(2)] SlideRailStart instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF7A RID: 49018 RVA: 0x001B82E7 File Offset: 0x001B64E7
+		// Token: 0x0600CB38 RID: 52024 RVA: 0x001CF9B3 File Offset: 0x001CDBB3
 		public static SlideRailStart CreateFromSetValue([Nullable(2)] SlideRailStart_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF7B RID: 49019 RVA: 0x001B82FA File Offset: 0x001B64FA
+		// Token: 0x0600CB39 RID: 52025 RVA: 0x001CF9C6 File Offset: 0x001CDBC6
 		public SlideRailStart_SetValue ToSetValue()
 		{
 			return new SlideRailStart_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A05 RID: 14853
-		// (get) Token: 0x0600BF7C RID: 49020 RVA: 0x001B8331 File Offset: 0x001B6531
-		// (set) Token: 0x0600BF7D RID: 49021 RVA: 0x001B835C File Offset: 0x001B655C
+		// Token: 0x17003CFB RID: 15611
+		// (get) Token: 0x0600CB3A RID: 52026 RVA: 0x001CF9FD File Offset: 0x001CDBFD
+		// (set) Token: 0x0600CB3B RID: 52027 RVA: 0x001CFA28 File Offset: 0x001CDC28
 		public virtual int RailEntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A06 RID: 14854
-		// (get) Token: 0x0600BF7E RID: 49022 RVA: 0x001B836A File Offset: 0x001B656A
-		// (set) Token: 0x0600BF7F RID: 49023 RVA: 0x001B8395 File Offset: 0x001B6595
+		// Token: 0x17003CFC RID: 15612
+		// (get) Token: 0x0600CB3C RID: 52028 RVA: 0x001CFA36 File Offset: 0x001CDC36
+		// (set) Token: 0x0600CB3D RID: 52029 RVA: 0x001CFA61 File Offset: 0x001CDC61
 		public virtual string SlidePerformDaPath
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A07 RID: 14855
-		// (get) Token: 0x0600BF80 RID: 49024 RVA: 0x001B83A4 File Offset: 0x001B65A4
-		// (set) Token: 0x0600BF81 RID: 49025 RVA: 0x001B8405 File Offset: 0x001B6605
+		// Token: 0x17003CFD RID: 15613
+		// (get) Token: 0x0600CB3E RID: 52030 RVA: 0x001CFA70 File Offset: 0x001CDC70
+		// (set) Token: 0x0600CB3F RID: 52031 RVA: 0x001CFAD1 File Offset: 0x001CDCD1
 		[Nullable(2)]
 		public virtual ISlideRailFollowConfig SlideRailFollowConfig
 		{
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A08 RID: 14856
-		// (get) Token: 0x0600BF82 RID: 49026 RVA: 0x001B841C File Offset: 0x001B661C
-		// (set) Token: 0x0600BF83 RID: 49027 RVA: 0x001B847D File Offset: 0x001B667D
+		// Token: 0x17003CFE RID: 15614
+		// (get) Token: 0x0600CB40 RID: 52032 RVA: 0x001CFAE8 File Offset: 0x001CDCE8
+		// (set) Token: 0x0600CB41 RID: 52033 RVA: 0x001CFB49 File Offset: 0x001CDD49
 		[Nullable(2)]
 		public virtual ISlideRailRTPCParams RTPCParams
 		{
@@ -174,24 +172,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007227 RID: 29223
+		// Token: 0x04007871 RID: 30833
 		[Nullable(2)]
 		protected new SlideRailStart FbInstance;
 
-		// Token: 0x04007228 RID: 29224
+		// Token: 0x04007872 RID: 30834
 		[Nullable(2)]
 		protected SlideRailStart_SetValue PocoInterface;
 
-		// Token: 0x04007229 RID: 29225
+		// Token: 0x04007873 RID: 30835
 		private ISlideRailFollowConfig _SlideRailFollowConfigCache;
 
-		// Token: 0x0400722A RID: 29226
+		// Token: 0x04007874 RID: 30836
 		private bool _SlideRailFollowConfigInited;
 
-		// Token: 0x0400722B RID: 29227
+		// Token: 0x04007875 RID: 30837
 		private ISlideRailRTPCParams _RTPCParamsCache;
 
-		// Token: 0x0400722C RID: 29228
+		// Token: 0x04007876 RID: 30838
 		private bool _RTPCParamsInited;
 	}
 }

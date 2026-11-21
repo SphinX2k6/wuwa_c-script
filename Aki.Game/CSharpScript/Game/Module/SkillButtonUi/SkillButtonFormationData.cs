@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C08 RID: 19464
+	// Token: 0x02003BB9 RID: 15289
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonFormationData
 	{
-		// Token: 0x06032603 RID: 206339 RVA: 0x00BB9AF5 File Offset: 0x00BB7CF5
+		// Token: 0x060273B3 RID: 160691 RVA: 0x00AFE679 File Offset: 0x00AFC879
 		public void Init()
 		{
 		}
 
-		// Token: 0x06032604 RID: 206340 RVA: 0x00BB9AF8 File Offset: 0x00BB7CF8
+		// Token: 0x060273B4 RID: 160692 RVA: 0x00AFE67C File Offset: 0x00AFC87C
 		public void Clear()
 		{
 			foreach (SkillButtonTypeFormationData skillButtonTypeFormationData in this.SkillButtonTypeDataMap.Values)
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x06032605 RID: 206341 RVA: 0x00BB9B50 File Offset: 0x00BB7D50
+		// Token: 0x060273B5 RID: 160693 RVA: 0x00AFE6D4 File Offset: 0x00AFC8D4
 		public SkillButtonTypeFormationData GetSkillButtonTypeFormationData(ESkillButtonType skillButtonType)
 		{
 			SkillButtonTypeFormationData skillButtonTypeFormationData;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return skillButtonTypeFormationData;
 		}
 
-		// Token: 0x06032606 RID: 206342 RVA: 0x00BB9B84 File Offset: 0x00BB7D84
+		// Token: 0x060273B6 RID: 160694 RVA: 0x00AFE708 File Offset: 0x00AFC908
 		public void RefreshOnFollowerAimStateChange(bool isAiming)
 		{
 			if (isAiming == this.IsFollowerAiming)
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			curSkillButtonFollowerEntityData.SetEnable(isAiming);
 		}
 
-		// Token: 0x06032607 RID: 206343 RVA: 0x00BB9C38 File Offset: 0x00BB7E38
+		// Token: 0x060273B7 RID: 160695 RVA: 0x00AFE7BC File Offset: 0x00AFC9BC
 		[NullableContext(2)]
 		private void SetSkillIconPath(ESkillButtonType skillButtonType, string path, int skillId = 0)
 		{
@@ -108,22 +108,22 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			skillButtonEntityData.RefreshSkillTexturePath(skillButtonType);
 		}
 
-		// Token: 0x06032608 RID: 206344 RVA: 0x00BB9C90 File Offset: 0x00BB7E90
+		// Token: 0x060273B8 RID: 160696 RVA: 0x00AFE814 File Offset: 0x00AFCA14
 		private string GetIconPathByName(string iconName)
 		{
 			return UiResourceConfig.Instance.GetResourcePath(iconName);
 		}
 
-		// Token: 0x0401ACDF RID: 109791
+		// Token: 0x0401563B RID: 87611
 		private const int FOLLOWER_ID = 658700001;
 
-		// Token: 0x0401ACE0 RID: 109792
+		// Token: 0x0401563C RID: 87612
 		private readonly Dictionary<ESkillButtonType, SkillButtonTypeFormationData> SkillButtonTypeDataMap = new Dictionary<ESkillButtonType, SkillButtonTypeFormationData>();
 
-		// Token: 0x0401ACE1 RID: 109793
+		// Token: 0x0401563D RID: 87613
 		private bool IsFollowerAiming;
 
-		// Token: 0x0401ACE2 RID: 109794
+		// Token: 0x0401563E RID: 87614
 		[Nullable(2)]
 		private string FollowerAimIconPath;
 	}

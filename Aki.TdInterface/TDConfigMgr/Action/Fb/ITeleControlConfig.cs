@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F7 RID: 10487
+	// Token: 0x02002BD0 RID: 11216
 	public class ITeleControlConfig : IExploreConfig
 	{
-		// Token: 0x0600E8EC RID: 59628 RVA: 0x00222B31 File Offset: 0x00220D31
-		[NullableContext(1)]
+		// Token: 0x0600F730 RID: 63280 RVA: 0x0023FD1D File Offset: 0x0023DF1D
 		public static ITeleControlConfig Create(ITeleControlConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048C0 RID: 18624
-		// (get) Token: 0x0600E8ED RID: 59629 RVA: 0x00222B50 File Offset: 0x00220D50
+		// Token: 0x17004C3E RID: 19518
+		// (get) Token: 0x0600F731 RID: 63281 RVA: 0x0023FD3C File Offset: 0x0023DF3C
 		public override EExploreStateType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048C1 RID: 18625
-		// (get) Token: 0x0600E8EE RID: 59630 RVA: 0x00222B5D File Offset: 0x00220D5D
+		// Token: 0x17004C3F RID: 19519
+		// (get) Token: 0x0600F732 RID: 63282 RVA: 0x0023FD49 File Offset: 0x0023DF49
 		public virtual ETeleControlType TeleControlType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008095 RID: 32917
+		// Token: 0x0400875A RID: 34650
 		private ITeleControlConfig Instance;
 	}
 }

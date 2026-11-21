@@ -2,23 +2,23 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200756F RID: 30063
+	// Token: 0x02007D65 RID: 32101
 	public class IVisualNovelCgLoadImageT
 	{
-		// Token: 0x1700E3FE RID: 58366
-		// (get) Token: 0x06036B06 RID: 224006 RVA: 0x0076D25C File Offset: 0x0076B45C
-		// (set) Token: 0x06036B07 RID: 224007 RVA: 0x0076D264 File Offset: 0x0076B464
+		// Token: 0x1700F028 RID: 61480
+		// (get) Token: 0x06039F1C RID: 237340 RVA: 0x007D0504 File Offset: 0x007CE704
+		// (set) Token: 0x06039F1D RID: 237341 RVA: 0x007D050C File Offset: 0x007CE70C
 		public EVisualNovelCgType Type { get; set; }
 
-		// Token: 0x1700E3FF RID: 58367
-		// (get) Token: 0x06036B08 RID: 224008 RVA: 0x0076D26D File Offset: 0x0076B46D
-		// (set) Token: 0x06036B09 RID: 224009 RVA: 0x0076D275 File Offset: 0x0076B475
+		// Token: 0x1700F029 RID: 61481
+		// (get) Token: 0x06039F1E RID: 237342 RVA: 0x007D0515 File Offset: 0x007CE715
+		// (set) Token: 0x06039F1F RID: 237343 RVA: 0x007D051D File Offset: 0x007CE71D
 		public int ImageId { get; set; }
 
-		// Token: 0x06036B0A RID: 224010 RVA: 0x0076D27E File Offset: 0x0076B47E
+		// Token: 0x06039F20 RID: 237344 RVA: 0x007D0526 File Offset: 0x007CE726
 		public IVisualNovelCgLoadImageT()
 		{
-			this.Type = EVisualNovelCgType.LoadSpine;
+			this.Type = EVisualNovelCgType.LoadPrefab;
 			this.ImageId = 0;
 		}
 	}

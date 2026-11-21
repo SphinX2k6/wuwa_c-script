@@ -22,13 +22,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200718F RID: 29071
+	// Token: 0x02006243 RID: 25155
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class SceneItemReferenceComponent : EntityComponent, IComponentDependency
+	public class SceneItemReferenceComponent : EntityComponent
 	{
-		// Token: 0x17009D98 RID: 40344
-		// (get) Token: 0x060471B1 RID: 291249 RVA: 0x0120B245 File Offset: 0x01209445
+		// Token: 0x170072B6 RID: 29366
+		// (get) Token: 0x0603CA6E RID: 248430 RVA: 0x01164FCD File Offset: 0x011631CD
 		public bool AllActorReady
 		{
 			get
@@ -37,20 +37,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D99 RID: 40345
-		// (get) Token: 0x060471B2 RID: 291250 RVA: 0x0120B255 File Offset: 0x01209455
-		[Nullable(new byte[]
+		// Token: 0x170072B7 RID: 29367
+		// (get) Token: 0x0603CA6F RID: 248431 RVA: 0x01164FDD File Offset: 0x011631DD
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -61,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471B3 RID: 291251 RVA: 0x0120B278 File Offset: 0x01209478
+		// Token: 0x0603CA70 RID: 248432 RVA: 0x01165000 File Offset: 0x01163200
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -74,7 +64,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471B4 RID: 291252 RVA: 0x0120B2DC File Offset: 0x012094DC
+		// Token: 0x0603CA71 RID: 248433 RVA: 0x01165064 File Offset: 0x01163264
 		protected override bool OnStart()
 		{
 			this.ActorSubsystem = (UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroActorSubsystem.StaticClass()) as UKuroActorSubsystem);
@@ -103,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471B5 RID: 291253 RVA: 0x0120B460 File Offset: 0x01209660
+		// Token: 0x0603CA72 RID: 248434 RVA: 0x011651E8 File Offset: 0x011633E8
 		protected override bool OnEnd()
 		{
 			foreach (KeyValuePair<RefCompDefine.ERefCompControllerType, RefCompControllerBase> keyValuePair in this.Controllers)
@@ -118,19 +108,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471B6 RID: 291254 RVA: 0x0120B4D4 File Offset: 0x012096D4
+		// Token: 0x0603CA73 RID: 248435 RVA: 0x0116525C File Offset: 0x0116345C
 		protected override void OnEnable()
 		{
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).OnHostEnable();
 		}
 
-		// Token: 0x060471B7 RID: 291255 RVA: 0x0120B4E2 File Offset: 0x012096E2
+		// Token: 0x0603CA74 RID: 248436 RVA: 0x0116526A File Offset: 0x0116346A
 		protected override void OnDisable(string reason)
 		{
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).OnHostDisable();
 		}
 
-		// Token: 0x060471B8 RID: 291256 RVA: 0x0120B4F0 File Offset: 0x012096F0
+		// Token: 0x0603CA75 RID: 248437 RVA: 0x01165278 File Offset: 0x01163478
 		protected override bool OnClear()
 		{
 			if (EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnEntityStateChange)))
@@ -161,7 +151,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x060471B9 RID: 291257 RVA: 0x0120B648 File Offset: 0x01209848
+		// Token: 0x0603CA76 RID: 248438 RVA: 0x011653D0 File Offset: 0x011635D0
 		protected override void OnTick(float delta)
 		{
 			foreach (RefCompControllerBase refCompControllerBase in this.Controllers.Values)
@@ -170,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BA RID: 291258 RVA: 0x0120B6A0 File Offset: 0x012098A0
+		// Token: 0x0603CA77 RID: 248439 RVA: 0x01165428 File Offset: 0x01163628
 		private void RegisterControllers()
 		{
 			this.Controllers.Clear();
@@ -191,7 +181,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BB RID: 291259 RVA: 0x0120B774 File Offset: 0x01209974
+		// Token: 0x0603CA78 RID: 248440 RVA: 0x011654FC File Offset: 0x011636FC
 		private void GetActorRefConfig()
 		{
 			this.RefActorList.Clear();
@@ -227,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BC RID: 291260 RVA: 0x0120B8C0 File Offset: 0x01209AC0
+		// Token: 0x0603CA79 RID: 248441 RVA: 0x01165648 File Offset: 0x01163848
 		private void InitRefActor()
 		{
 			this.CurStreamingOutActorList.Clear();
@@ -261,7 +251,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BD RID: 291261 RVA: 0x0120B990 File Offset: 0x01209B90
+		// Token: 0x0603CA7A RID: 248442 RVA: 0x01165718 File Offset: 0x01163918
 		private unsafe void InitInfluenceMaterialControllers()
 		{
 			this.InfluenceMaterialControllers.Clear();
@@ -348,7 +338,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BE RID: 291262 RVA: 0x0120BD70 File Offset: 0x01209F70
+		// Token: 0x0603CA7B RID: 248443 RVA: 0x01165AF8 File Offset: 0x01163CF8
 		private unsafe void RegisterPlayerElementalFieldBlock()
 		{
 			if (this.HasRegisteredFieldBlockHolder)
@@ -376,7 +366,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471BF RID: 291263 RVA: 0x0120BDE4 File Offset: 0x01209FE4
+		// Token: 0x0603CA7C RID: 248444 RVA: 0x01165B6C File Offset: 0x01163D6C
 		private unsafe void UnregisterPlayerElementalFieldBlock()
 		{
 			if (!this.HasRegisteredFieldBlockHolder)
@@ -407,7 +397,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471C0 RID: 291264 RVA: 0x0120BE58 File Offset: 0x0120A058
+		// Token: 0x0603CA7D RID: 248445 RVA: 0x01165BE0 File Offset: 0x01163DE0
 		[return: Nullable(2)]
 		private string GetActorKeyFromRef(IActorRef actorRef)
 		{
@@ -427,13 +417,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return null;
 		}
 
-		// Token: 0x060471C1 RID: 291265 RVA: 0x0120BEC8 File Offset: 0x0120A0C8
+		// Token: 0x0603CA7E RID: 248446 RVA: 0x01165C50 File Offset: 0x01163E50
 		private T GetController<[Nullable(0)] T>(RefCompDefine.ERefCompControllerType type) where T : RefCompControllerBase
 		{
 			return this.Controllers[type] as T;
 		}
 
-		// Token: 0x060471C2 RID: 291266 RVA: 0x0120BEE0 File Offset: 0x0120A0E0
+		// Token: 0x0603CA7F RID: 248447 RVA: 0x01165C68 File Offset: 0x01163E68
 		public void ResetToInitState(string initState, Action<ELevelEventState> callback)
 		{
 			if (GameplayTagUtils.GetTagIdByName(initState) == 0)
@@ -455,7 +445,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGeneralController.Instance.ExecuteActionsNew(sceneActorRefGroup.Actions, context, callback);
 		}
 
-		// Token: 0x060471C3 RID: 291267 RVA: 0x0120BF77 File Offset: 0x0120A177
+		// Token: 0x0603CA80 RID: 248448 RVA: 0x01165CFF File Offset: 0x01163EFF
 		public void TryReInitRefActor()
 		{
 			if (this.AllActorReady)
@@ -465,7 +455,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InitRefActor();
 		}
 
-		// Token: 0x060471C4 RID: 291268 RVA: 0x0120BF88 File Offset: 0x0120A188
+		// Token: 0x0603CA81 RID: 248449 RVA: 0x01165D10 File Offset: 0x01163F10
 		private unsafe void HandleActionsByState(SceneItemReferenceComponent.ECallSource callSource, bool bPreChange = false)
 		{
 			if (this.InitStateActionsDone)
@@ -564,7 +554,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGeneralController.Instance.ExecuteActionsNew(sceneActorRefGroup2.Actions, context2, new Action<ELevelEventState>(this.OnInitStateActionEnd));
 		}
 
-		// Token: 0x060471C5 RID: 291269 RVA: 0x0120C2B4 File Offset: 0x0120A4B4
+		// Token: 0x0603CA82 RID: 248450 RVA: 0x0116603C File Offset: 0x0116423C
 		private void OnInitStateActionEnd(ELevelEventState result)
 		{
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).NextSequenceJumpToEnd = false;
@@ -574,7 +564,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.HandleActionsByState(SceneItemReferenceComponent.ECallSource.InitStateActionEnd, false);
 		}
 
-		// Token: 0x060471C6 RID: 291270 RVA: 0x0120C2E5 File Offset: 0x0120A4E5
+		// Token: 0x0603CA83 RID: 248451 RVA: 0x0116606D File Offset: 0x0116426D
 		private void OnActionEnd(ELevelEventState result)
 		{
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).NextSequenceJumpToEnd = false;
@@ -582,13 +572,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.CheckPendingActions();
 		}
 
-		// Token: 0x060471C7 RID: 291271 RVA: 0x0120C306 File Offset: 0x0120A506
+		// Token: 0x0603CA84 RID: 248452 RVA: 0x0116608E File Offset: 0x0116428E
 		private void CheckPendingActions(ELevelEventState _)
 		{
 			this.CheckPendingActions();
 		}
 
-		// Token: 0x060471C8 RID: 291272 RVA: 0x0120C310 File Offset: 0x0120A510
+		// Token: 0x0603CA85 RID: 248453 RVA: 0x01166098 File Offset: 0x01164298
 		private void CheckPendingActions()
 		{
 			if (this.PendingActions == null)
@@ -614,7 +604,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			LevelGeneralController.Instance.ExecuteActionsNew(pendingActions, context, new Action<ELevelEventState>(this.CheckPendingActions));
 		}
 
-		// Token: 0x060471C9 RID: 291273 RVA: 0x0120C3E0 File Offset: 0x0120A5E0
+		// Token: 0x0603CA86 RID: 248454 RVA: 0x01166168 File Offset: 0x01164368
 		private unsafe void OnEntityStateChange(int stateId, bool isReady)
 		{
 			if (this.AllActorReady)
@@ -653,7 +643,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471CA RID: 291274 RVA: 0x0120C4D4 File Offset: 0x0120A6D4
+		// Token: 0x0603CA87 RID: 248455 RVA: 0x0116625C File Offset: 0x0116445C
 		private unsafe void OnEntityStatePreChangeInSequence(int stateId)
 		{
 			if (this.AllActorReady)
@@ -704,7 +694,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471CB RID: 291275 RVA: 0x0120C650 File Offset: 0x0120A850
+		// Token: 0x0603CA88 RID: 248456 RVA: 0x011663D8 File Offset: 0x011645D8
 		private unsafe void OnActorAdd(FName actorKey)
 		{
 			int num = this.CurStreamingOutActorList.IndexOf(actorKey.ToString());
@@ -769,7 +759,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x060471CC RID: 291276 RVA: 0x0120C83C File Offset: 0x0120AA3C
+		// Token: 0x0603CA89 RID: 248457 RVA: 0x011665C4 File Offset: 0x011647C4
 		private void OnActorRemove(FName actorKey)
 		{
 			if (!this.RefActorList.Contains(actorKey.ToString()))
@@ -786,43 +776,43 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			volumeLogic.RemoveVolume(actorKey.ToString());
 		}
 
-		// Token: 0x060471CD RID: 291277 RVA: 0x0120C8A5 File Offset: 0x0120AAA5
+		// Token: 0x0603CA8A RID: 248458 RVA: 0x0116662D File Offset: 0x0116482D
 		public void HandleSequence(PlayLevelSequence inSequenceConfig)
 		{
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).HandleSequence(inSequenceConfig);
 		}
 
-		// Token: 0x060471CE RID: 291278 RVA: 0x0120C8B4 File Offset: 0x0120AAB4
+		// Token: 0x0603CA8B RID: 248459 RVA: 0x0116663C File Offset: 0x0116483C
 		public bool ForceEnterSeqCamera()
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).ForceSwitchSceneCamera(true);
 		}
 
-		// Token: 0x060471CF RID: 291279 RVA: 0x0120C8C3 File Offset: 0x0120AAC3
+		// Token: 0x0603CA8C RID: 248460 RVA: 0x0116664B File Offset: 0x0116484B
 		public bool ForceExitSeqCamera()
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).ForceSwitchSceneCamera(false);
 		}
 
-		// Token: 0x060471D0 RID: 291280 RVA: 0x0120C8D2 File Offset: 0x0120AAD2
+		// Token: 0x0603CA8D RID: 248461 RVA: 0x0116665A File Offset: 0x0116485A
 		public bool IsPlaying()
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).IsPlaying();
 		}
 
-		// Token: 0x060471D1 RID: 291281 RVA: 0x0120C8E0 File Offset: 0x0120AAE0
+		// Token: 0x0603CA8E RID: 248462 RVA: 0x01166668 File Offset: 0x01164868
 		public bool IsPlayToMarkFinished(string mark)
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).IsPlayToMarkFinished(mark);
 		}
 
-		// Token: 0x060471D2 RID: 291282 RVA: 0x0120C8EF File Offset: 0x0120AAEF
+		// Token: 0x0603CA8F RID: 248463 RVA: 0x01166677 File Offset: 0x01164877
 		public bool IsSequencePlayBetweenMarks(string startMark, string endMark)
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).IsPlayBetweenMarks(startMark, endMark);
 		}
 
-		// Token: 0x060471D3 RID: 291283 RVA: 0x0120C8FF File Offset: 0x0120AAFF
+		// Token: 0x0603CA90 RID: 248464 RVA: 0x01166687 File Offset: 0x01164887
 		[NullableContext(2)]
 		public ILiftFloorSeqMarkConfig GetLiftFloorSeqMarkConfig()
 		{
@@ -834,37 +824,37 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return config.LiftFloorSeqMarks;
 		}
 
-		// Token: 0x060471D4 RID: 291284 RVA: 0x0120C912 File Offset: 0x0120AB12
+		// Token: 0x0603CA91 RID: 248465 RVA: 0x0116669A File Offset: 0x0116489A
 		public void HandleAirWall(ToggleAirWall config, GeneralContext context)
 		{
 			this.GetController<RefCompAirWallController>(RefCompDefine.ERefCompControllerType.AirWall).HandleAirWall(config, context);
 		}
 
-		// Token: 0x060471D5 RID: 291285 RVA: 0x0120C922 File Offset: 0x0120AB22
+		// Token: 0x0603CA92 RID: 248466 RVA: 0x011666AA File Offset: 0x011648AA
 		public List<AActor> GetAirWallActors()
 		{
 			return this.GetController<RefCompAirWallController>(RefCompDefine.ERefCompControllerType.AirWall).GetAirWallActors();
 		}
 
-		// Token: 0x060471D6 RID: 291286 RVA: 0x0120C930 File Offset: 0x0120AB30
+		// Token: 0x0603CA93 RID: 248467 RVA: 0x011666B8 File Offset: 0x011648B8
 		public void HandleActorMaterial(ModifyActorMaterial inConfig)
 		{
 			this.GetController<RefCompModifyActorMaterial>(RefCompDefine.ERefCompControllerType.ModifyActorMaterial).HandleActorMaterial(inConfig);
 		}
 
-		// Token: 0x060471D7 RID: 291287 RVA: 0x0120C93F File Offset: 0x0120AB3F
+		// Token: 0x0603CA94 RID: 248468 RVA: 0x011666C7 File Offset: 0x011648C7
 		public void HandleModifyActorMaterialParamBySplineProgress(ModifyActorMaterialParamBySplineProgress inConfig)
 		{
 			this.GetController<RefCompModifyActorMaterial>(RefCompDefine.ERefCompControllerType.ModifyActorMaterial).HandleModifyActorMaterialParamBySplineProgress(inConfig);
 		}
 
-		// Token: 0x060471D8 RID: 291288 RVA: 0x0120C94F File Offset: 0x0120AB4F
+		// Token: 0x0603CA95 RID: 248469 RVA: 0x011666D7 File Offset: 0x011648D7
 		public void HandleActorMedia(ModifyActorMedia inConfig)
 		{
 			this.GetController<RefCompModifyActorMedia>(RefCompDefine.ERefCompControllerType.ModifyActorMedia).HandleActorMedia(inConfig);
 		}
 
-		// Token: 0x060471D9 RID: 291289 RVA: 0x0120C95E File Offset: 0x0120AB5E
+		// Token: 0x0603CA96 RID: 248470 RVA: 0x011666E6 File Offset: 0x011648E6
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -880,7 +870,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return volumeLogic.GetVolumes();
 		}
 
-		// Token: 0x060471DA RID: 291290 RVA: 0x0120C971 File Offset: 0x0120AB71
+		// Token: 0x0603CA97 RID: 248471 RVA: 0x011666F9 File Offset: 0x011648F9
 		public void AddOnPlayerOverlapCallback(Action<bool> callback, bool callbackIfAlreadyOverlapped = false)
 		{
 			ReferenceTriggerVolumeLogic volumeLogic = this.VolumeLogic;
@@ -891,7 +881,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			volumeLogic.AddOnPlayerOverlapCallback(callback, callbackIfAlreadyOverlapped);
 		}
 
-		// Token: 0x060471DB RID: 291291 RVA: 0x0120C985 File Offset: 0x0120AB85
+		// Token: 0x0603CA98 RID: 248472 RVA: 0x0116670D File Offset: 0x0116490D
 		public void RemoveOnPlayerOverlapCallback(Action<bool> callback)
 		{
 			ReferenceTriggerVolumeLogic volumeLogic = this.VolumeLogic;
@@ -902,14 +892,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			volumeLogic.RemoveOnPlayerOverlapCallback(callback);
 		}
 
-		// Token: 0x060471DC RID: 291292 RVA: 0x0120C998 File Offset: 0x0120AB98
+		// Token: 0x0603CA99 RID: 248473 RVA: 0x01166720 File Offset: 0x01164920
 		public bool IsPlayerOverlappedRefVolume()
 		{
 			ReferenceTriggerVolumeLogic volumeLogic = this.VolumeLogic;
 			return volumeLogic != null && volumeLogic.IsPlayerOverlapped();
 		}
 
-		// Token: 0x060471DD RID: 291293 RVA: 0x0120C9AC File Offset: 0x0120ABAC
+		// Token: 0x0603CA9A RID: 248474 RVA: 0x01166734 File Offset: 0x01164934
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			PawnTimeScaleComponent component = base.Entity.GetComponent<PawnTimeScaleComponent>();
@@ -918,19 +908,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).OnChangeTimeDilation(timeDilation2);
 		}
 
-		// Token: 0x060471DE RID: 291294 RVA: 0x0120C9E6 File Offset: 0x0120ABE6
+		// Token: 0x0603CA9B RID: 248475 RVA: 0x0116676E File Offset: 0x0116496E
 		public bool IsValidPlatFormPath(string @ref)
 		{
 			return this.RefActorList.Contains(@ref);
 		}
 
-		// Token: 0x060471DF RID: 291295 RVA: 0x0120C9F4 File Offset: 0x0120ABF4
+		// Token: 0x0603CA9C RID: 248476 RVA: 0x0116677C File Offset: 0x0116497C
 		public void RegisterCustomRefActor(IActorRef @ref)
 		{
 			this.CustomRefActors.Add(@ref);
 		}
 
-		// Token: 0x060471E0 RID: 291296 RVA: 0x0120CA04 File Offset: 0x0120AC04
+		// Token: 0x0603CA9D RID: 248477 RVA: 0x0116678C File Offset: 0x0116498C
 		public List<AActor> GetAllRefActors()
 		{
 			List<AActor> list = new List<AActor>();
@@ -949,26 +939,26 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return list;
 		}
 
-		// Token: 0x060471E1 RID: 291297 RVA: 0x0120CA80 File Offset: 0x0120AC80
+		// Token: 0x0603CA9E RID: 248478 RVA: 0x01166808 File Offset: 0x01164A08
 		public void AddOnRefActorReadyCallback(Action<string, AActor> callback)
 		{
 			this.OnRefActorReadyCallbacks.Add(callback);
 		}
 
-		// Token: 0x060471E2 RID: 291298 RVA: 0x0120CA8F File Offset: 0x0120AC8F
+		// Token: 0x0603CA9F RID: 248479 RVA: 0x01166817 File Offset: 0x01164A17
 		public bool RemoveOnRefActorReadyCallback(Action<string, AActor> callback)
 		{
 			return this.OnRefActorReadyCallbacks.Remove(callback);
 		}
 
-		// Token: 0x060471E3 RID: 291299 RVA: 0x0120CA9D File Offset: 0x0120AC9D
+		// Token: 0x0603CAA0 RID: 248480 RVA: 0x01166825 File Offset: 0x01164A25
 		[return: Nullable(2)]
 		public ISequenceProgressController CreateSequenceProgressController(string sequencePath)
 		{
 			return this.GetController<RefCompLevelSequenceController>(RefCompDefine.ERefCompControllerType.LevelSequence).CreateSequenceProgressController(sequencePath);
 		}
 
-		// Token: 0x060471E4 RID: 291300 RVA: 0x0120CAAC File Offset: 0x0120ACAC
+		// Token: 0x0603CAA1 RID: 248481 RVA: 0x01166834 File Offset: 0x01164A34
 		[NullableContext(2)]
 		public ALevelSequenceActor GetPlayingSequenceActor()
 		{
@@ -985,7 +975,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return component.GetPlayingSequenceActor();
 		}
 
-		// Token: 0x060471E5 RID: 291301 RVA: 0x0120CAE8 File Offset: 0x0120ACE8
+		// Token: 0x0603CAA2 RID: 248482 RVA: 0x01166870 File Offset: 0x01164A70
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -993,217 +983,245 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemReferenceComponent sceneItemReferenceComponent = (SceneItemReferenceComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemReferenceComponent.CreatureDataComp == null)
 			{
-				if (sceneItemReferenceComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemReferenceComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemReferenceComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComponent"))
-			{
-				if (sceneItemReferenceComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (sceneItemReferenceComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneActorRefComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CustomRefActors") && sceneItemReferenceComponent.CustomRefActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<IActorRef>>(this.CustomRefActors), "CustomRefActors"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ActorSubsystem"))
+			if (sceneItemReferenceComponent.ActorComp == null)
 			{
-				if (sceneItemReferenceComponent.ActorSubsystem == null)
-				{
-					this.ActorSubsystem = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroActorSubsystem>(this.ActorSubsystem), "ActorSubsystem"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("Controllers") && sceneItemReferenceComponent.Controllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<RefCompDefine.ERefCompControllerType, RefCompControllerBase>>(this.Controllers), "Controllers"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("VolumeLogic"))
+			if (sceneItemReferenceComponent.StateComp == null)
 			{
-				if (sceneItemReferenceComponent.VolumeLogic == null)
-				{
-					this.VolumeLogic = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ReferenceTriggerVolumeLogic>(this.VolumeLogic), "VolumeLogic"))
-				{
-					return false;
-				}
+				this.StateComp = null;
 			}
-			if (base.CanResetComponentProperty("InfluenceMaterialControllers") && sceneItemReferenceComponent.InfluenceMaterialControllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, SceneItemElementalFieldActorController>>(this.InfluenceMaterialControllers), "InfluenceMaterialControllers"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HasRegisteredFieldBlockHolder"))
+			if (sceneItemReferenceComponent.TagComponent == null)
 			{
-				this.HasRegisteredFieldBlockHolder = sceneItemReferenceComponent.HasRegisteredFieldBlockHolder;
+				this.TagComponent = null;
 			}
-			if (base.CanResetComponentProperty("OnRefActorReadyCallbacks") && sceneItemReferenceComponent.OnRefActorReadyCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Action<string, AActor>>(this.OnRefActorReadyCallbacks), "OnRefActorReadyCallbacks"))
-			{
-				return false;
-			}
-			if (base.CanResetComponentProperty("RefActorList") && sceneItemReferenceComponent.RefActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.RefActorList), "RefActorList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurStreamingOutActorList") && sceneItemReferenceComponent.CurStreamingOutActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<string>>(this.CurStreamingOutActorList), "CurStreamingOutActorList"))
+			if (sceneItemReferenceComponent.Config == null)
+			{
+				this.Config = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InitStateActionsDone"))
-			{
-				this.InitStateActionsDone = sceneItemReferenceComponent.InitStateActionsDone;
-			}
-			if (base.CanResetComponentProperty("InitStateTagId"))
-			{
-				this.InitStateTagId = sceneItemReferenceComponent.InitStateTagId;
-			}
-			if (base.CanResetComponentProperty("PreChangeTagQueue") && sceneItemReferenceComponent.PreChangeTagQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Queue<int>>(this.PreChangeTagQueue), "PreChangeTagQueue"))
+			if (sceneItemReferenceComponent.CustomRefActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomRefActors), "CustomRefActors"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ExecutingActions"))
+			if (sceneItemReferenceComponent.ActorSubsystem == null)
 			{
-				this.ExecutingActions = sceneItemReferenceComponent.ExecutingActions;
+				this.ActorSubsystem = null;
 			}
-			if (base.CanResetComponentProperty("TagForExecutingActions"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorSubsystem), "ActorSubsystem"))
 			{
-				this.TagForExecutingActions = sceneItemReferenceComponent.TagForExecutingActions;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingActions"))
+			if (sceneItemReferenceComponent.Controllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Controllers), "Controllers"))
 			{
-				if (sceneItemReferenceComponent.PendingActions == null)
-				{
-					this.PendingActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ActionInfo>>(this.PendingActions), "PendingActions"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PendingActionsState"))
+			if (sceneItemReferenceComponent.VolumeLogic == null)
 			{
-				this.PendingActionsState = sceneItemReferenceComponent.PendingActionsState;
+				this.VolumeLogic = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VolumeLogic), "VolumeLogic"))
+			{
+				return false;
+			}
+			if (sceneItemReferenceComponent.InfluenceMaterialControllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InfluenceMaterialControllers), "InfluenceMaterialControllers"))
+			{
+				return false;
+			}
+			this.HasRegisteredFieldBlockHolder = sceneItemReferenceComponent.HasRegisteredFieldBlockHolder;
+			if (sceneItemReferenceComponent.OnRefActorReadyCallbacks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Action<string, AActor>>(this.OnRefActorReadyCallbacks), "OnRefActorReadyCallbacks"))
+			{
+				return false;
+			}
+			if (sceneItemReferenceComponent.RefActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<string>(this.RefActorList), "RefActorList"))
+			{
+				return false;
+			}
+			if (sceneItemReferenceComponent.CurStreamingOutActorList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurStreamingOutActorList), "CurStreamingOutActorList"))
+			{
+				return false;
+			}
+			this.InitStateActionsDone = sceneItemReferenceComponent.InitStateActionsDone;
+			this.InitStateTagId = sceneItemReferenceComponent.InitStateTagId;
+			if (sceneItemReferenceComponent.PreChangeTagQueue != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.PreChangeTagQueue), "PreChangeTagQueue"))
+			{
+				return false;
+			}
+			this.ExecutingActions = sceneItemReferenceComponent.ExecutingActions;
+			this.TagForExecutingActions = sceneItemReferenceComponent.TagForExecutingActions;
+			if (sceneItemReferenceComponent.PendingActions == null)
+			{
+				this.PendingActions = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PendingActions), "PendingActions"))
+			{
+				return false;
+			}
+			this.PendingActionsState = sceneItemReferenceComponent.PendingActionsState;
 			return true;
 		}
 
-		// Token: 0x0402561F RID: 153119
+		// Token: 0x170072B8 RID: 29368
+		// (get) Token: 0x0603CAA3 RID: 248483 RVA: 0x01166B1E File Offset: 0x01164D1E
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072B9 RID: 29369
+		// (get) Token: 0x0603CAA4 RID: 248484 RVA: 0x01166B21 File Offset: 0x01164D21
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072BA RID: 29370
+		// (get) Token: 0x0603CAA5 RID: 248485 RVA: 0x01166B24 File Offset: 0x01164D24
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072BB RID: 29371
+		// (get) Token: 0x0603CAA6 RID: 248486 RVA: 0x01166B27 File Offset: 0x01164D27
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072BC RID: 29372
+		// (get) Token: 0x0603CAA7 RID: 248487 RVA: 0x01166B2A File Offset: 0x01164D2A
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072BD RID: 29373
+		// (get) Token: 0x0603CAA8 RID: 248488 RVA: 0x01166B2D File Offset: 0x01164D2D
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072BE RID: 29374
+		// (get) Token: 0x0603CAA9 RID: 248489 RVA: 0x01166B30 File Offset: 0x01164D30
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020286 RID: 131718
 		private const string DEBUG_DETAIL_KEY_PREFIX = "SceneItemReferenceComponent";
 
-		// Token: 0x04025620 RID: 153120
+		// Token: 0x04020287 RID: 131719
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025621 RID: 153121
+		// Token: 0x04020288 RID: 131720
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025622 RID: 153122
+		// Token: 0x04020289 RID: 131721
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025623 RID: 153123
+		// Token: 0x0402028A RID: 131722
 		[Nullable(2)]
 		private LevelTagComponent TagComponent;
 
-		// Token: 0x04025624 RID: 153124
+		// Token: 0x0402028B RID: 131723
 		[Nullable(2)]
 		private SceneActorRefComponent Config;
 
-		// Token: 0x04025625 RID: 153125
+		// Token: 0x0402028C RID: 131724
 		private readonly List<IActorRef> CustomRefActors = new List<IActorRef>();
 
-		// Token: 0x04025626 RID: 153126
+		// Token: 0x0402028D RID: 131725
 		[Nullable(2)]
 		private UKuroActorSubsystem ActorSubsystem;
 
-		// Token: 0x04025627 RID: 153127
+		// Token: 0x0402028E RID: 131726
 		private readonly Dictionary<RefCompDefine.ERefCompControllerType, RefCompControllerBase> Controllers = new Dictionary<RefCompDefine.ERefCompControllerType, RefCompControllerBase>();
 
-		// Token: 0x04025628 RID: 153128
+		// Token: 0x0402028F RID: 131727
 		[Nullable(2)]
 		private ReferenceTriggerVolumeLogic VolumeLogic;
 
-		// Token: 0x04025629 RID: 153129
+		// Token: 0x04020290 RID: 131728
 		private readonly Dictionary<string, SceneItemElementalFieldActorController> InfluenceMaterialControllers = new Dictionary<string, SceneItemElementalFieldActorController>();
 
-		// Token: 0x0402562A RID: 153130
+		// Token: 0x04020291 RID: 131729
 		private bool HasRegisteredFieldBlockHolder;
 
-		// Token: 0x0402562B RID: 153131
+		// Token: 0x04020292 RID: 131730
 		private readonly HashSet<Action<string, AActor>> OnRefActorReadyCallbacks = new HashSet<Action<string, AActor>>();
 
-		// Token: 0x0402562C RID: 153132
+		// Token: 0x04020293 RID: 131731
 		private readonly HashSet<string> RefActorList = new HashSet<string>();
 
-		// Token: 0x0402562D RID: 153133
+		// Token: 0x04020294 RID: 131732
 		private readonly List<string> CurStreamingOutActorList = new List<string>();
 
-		// Token: 0x0402562E RID: 153134
+		// Token: 0x04020295 RID: 131733
 		private bool InitStateActionsDone;
 
-		// Token: 0x0402562F RID: 153135
+		// Token: 0x04020296 RID: 131734
 		private int? InitStateTagId;
 
-		// Token: 0x04025630 RID: 153136
+		// Token: 0x04020297 RID: 131735
 		private readonly Queue<int> PreChangeTagQueue = new Queue<int>(4);
 
-		// Token: 0x04025631 RID: 153137
+		// Token: 0x04020298 RID: 131736
 		private bool ExecutingActions;
 
-		// Token: 0x04025632 RID: 153138
+		// Token: 0x04020299 RID: 131737
 		private int? TagForExecutingActions;
 
-		// Token: 0x04025633 RID: 153139
+		// Token: 0x0402029A RID: 131738
 		[Nullable(new byte[]
 		{
 			2,
@@ -1211,22 +1229,22 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private List<ActionInfo> PendingActions;
 
-		// Token: 0x04025634 RID: 153140
+		// Token: 0x0402029B RID: 131739
 		private int? PendingActionsState;
 
-		// Token: 0x0200CEE1 RID: 52961
+		// Token: 0x0200BA77 RID: 47735
 		[NullableContext(0)]
 		private enum ECallSource
 		{
-			// Token: 0x0403E3CB RID: 254923
+			// Token: 0x040396F1 RID: 235249
 			InitRefActor,
-			// Token: 0x0403E3CC RID: 254924
+			// Token: 0x040396F2 RID: 235250
 			InitStateActionEnd,
-			// Token: 0x0403E3CD RID: 254925
+			// Token: 0x040396F3 RID: 235251
 			OnEntityStateChange,
-			// Token: 0x0403E3CE RID: 254926
+			// Token: 0x040396F4 RID: 235252
 			PreChangeEvent,
-			// Token: 0x0403E3CF RID: 254927
+			// Token: 0x040396F5 RID: 235253
 			OnActorAdd
 		}
 	}

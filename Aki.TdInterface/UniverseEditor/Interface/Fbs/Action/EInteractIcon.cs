@@ -2,118 +2,118 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F8B RID: 24459
+	// Token: 0x020065D2 RID: 26066
 	public enum EInteractIcon : byte
 	{
-		// Token: 0x0400FDDA RID: 64986
+		// Token: 0x04010B64 RID: 68452
 		Dialog,
-		// Token: 0x0400FDDB RID: 64987
+		// Token: 0x04010B65 RID: 68453
 		Shop,
-		// Token: 0x0400FDDC RID: 64988
+		// Token: 0x04010B66 RID: 68454
 		OS,
-		// Token: 0x0400FDDD RID: 64989
+		// Token: 0x04010B67 RID: 68455
 		Other,
-		// Token: 0x0400FDDE RID: 64990
+		// Token: 0x04010B68 RID: 68456
 		Weapon,
-		// Token: 0x0400FDDF RID: 64991
+		// Token: 0x04010B69 RID: 68457
 		Cook,
-		// Token: 0x0400FDE0 RID: 64992
+		// Token: 0x04010B6A RID: 68458
 		Souvenir,
-		// Token: 0x0400FDE1 RID: 64993
+		// Token: 0x04010B6B RID: 68459
 		Hospital,
-		// Token: 0x0400FDE2 RID: 64994
+		// Token: 0x04010B6C RID: 68460
 		Institute,
-		// Token: 0x0400FDE3 RID: 64995
+		// Token: 0x04010B6D RID: 68461
 		Grocery,
-		// Token: 0x0400FDE4 RID: 64996
+		// Token: 0x04010B6E RID: 68462
 		SearchingLegacy,
-		// Token: 0x0400FDE5 RID: 64997
+		// Token: 0x04010B6F RID: 68463
 		AntecedentConvention,
-		// Token: 0x0400FDE6 RID: 64998
+		// Token: 0x04010B70 RID: 68464
 		AnechoicRegion,
-		// Token: 0x0400FDE7 RID: 64999
+		// Token: 0x04010B71 RID: 68465
 		Leave,
-		// Token: 0x0400FDE8 RID: 65000
+		// Token: 0x04010B72 RID: 68466
 		Collect,
-		// Token: 0x0400FDE9 RID: 65001
+		// Token: 0x04010B73 RID: 68467
 		Dungeon,
-		// Token: 0x0400FDEA RID: 65002
+		// Token: 0x04010B74 RID: 68468
 		ChengXiaoShanShop,
-		// Token: 0x0400FDEB RID: 65003
+		// Token: 0x04010B75 RID: 68469
 		GroceryKuroRobot,
-		// Token: 0x0400FDEC RID: 65004
+		// Token: 0x04010B76 RID: 68470
 		Phonograph,
-		// Token: 0x0400FDED RID: 65005
+		// Token: 0x04010B77 RID: 68471
 		LifePointShop,
-		// Token: 0x0400FDEE RID: 65006
+		// Token: 0x04010B78 RID: 68472
 		PlushVillage,
-		// Token: 0x0400FDEF RID: 65007
+		// Token: 0x04010B79 RID: 68473
 		FishingDock,
-		// Token: 0x0400FDF0 RID: 65008
+		// Token: 0x04010B7A RID: 68474
 		CartethyiaCall,
-		// Token: 0x0400FDF1 RID: 65009
+		// Token: 0x04010B7B RID: 68475
 		ChurchShop,
-		// Token: 0x0400FDF2 RID: 65010
+		// Token: 0x04010B7C RID: 68476
 		BvbEntrance,
-		// Token: 0x0400FDF3 RID: 65011
+		// Token: 0x04010B7D RID: 68477
 		TuningStand,
-		// Token: 0x0400FDF4 RID: 65012
+		// Token: 0x04010B7E RID: 68478
 		Switch,
-		// Token: 0x0400FDF5 RID: 65013
+		// Token: 0x04010B7F RID: 68479
 		HandInHand,
-		// Token: 0x0400FDF6 RID: 65014
+		// Token: 0x04010B80 RID: 68480
 		Silhouette,
-		// Token: 0x0400FDF7 RID: 65015
+		// Token: 0x04010B81 RID: 68481
 		BlackBlade,
-		// Token: 0x0400FDF8 RID: 65016
+		// Token: 0x04010B82 RID: 68482
 		Exchange,
-		// Token: 0x0400FDF9 RID: 65017
+		// Token: 0x04010B83 RID: 68483
 		Sunstone,
-		// Token: 0x0400FDFA RID: 65018
+		// Token: 0x04010B84 RID: 68484
 		Arseni,
-		// Token: 0x0400FDFB RID: 65019
+		// Token: 0x04010B85 RID: 68485
 		RollBlock,
-		// Token: 0x0400FDFC RID: 65020
+		// Token: 0x04010B86 RID: 68486
 		BvbInteract,
-		// Token: 0x0400FDFD RID: 65021
+		// Token: 0x04010B87 RID: 68487
 		GuessCard,
-		// Token: 0x0400FDFE RID: 65022
+		// Token: 0x04010B88 RID: 68488
 		MixDrinks,
-		// Token: 0x0400FDFF RID: 65023
+		// Token: 0x04010B89 RID: 68489
 		CyberpunkShareMoon,
-		// Token: 0x0400FE00 RID: 65024
+		// Token: 0x04010B8A RID: 68490
 		SoundBox35,
-		// Token: 0x0400FE01 RID: 65025
+		// Token: 0x04010B8B RID: 68491
 		FakeShop,
-		// Token: 0x0400FE02 RID: 65026
+		// Token: 0x04010B8C RID: 68492
 		SuisuiDance1,
-		// Token: 0x0400FE03 RID: 65027
+		// Token: 0x04010B8D RID: 68493
 		SuisuiDance2,
-		// Token: 0x0400FE04 RID: 65028
+		// Token: 0x04010B8E RID: 68494
 		SuisuiDance3,
-		// Token: 0x0400FE05 RID: 65029
+		// Token: 0x04010B8F RID: 68495
 		WriteLetter,
-		// Token: 0x0400FE06 RID: 65030
+		// Token: 0x04010B90 RID: 68496
 		QingxiaoInstance,
-		// Token: 0x0400FE07 RID: 65031
+		// Token: 0x04010B91 RID: 68497
 		JianYI,
-		// Token: 0x0400FE08 RID: 65032
+		// Token: 0x04010B92 RID: 68498
 		GiantDeliveryWood,
-		// Token: 0x0400FE09 RID: 65033
+		// Token: 0x04010B93 RID: 68499
 		GiantDeliveryWater,
-		// Token: 0x0400FE0A RID: 65034
+		// Token: 0x04010B94 RID: 68500
 		GiantDeliveryFire,
-		// Token: 0x0400FE0B RID: 65035
+		// Token: 0x04010B95 RID: 68501
 		GiantBell,
-		// Token: 0x0400FE0C RID: 65036
+		// Token: 0x04010B96 RID: 68502
 		GiantGift,
-		// Token: 0x0400FE0D RID: 65037
+		// Token: 0x04010B97 RID: 68503
 		ElementalWell,
-		// Token: 0x0400FE0E RID: 65038
+		// Token: 0x04010B98 RID: 68504
 		FoxPush,
-		// Token: 0x0400FE0F RID: 65039
+		// Token: 0x04010B99 RID: 68505
 		FoxPickUp,
-		// Token: 0x0400FE10 RID: 65040
+		// Token: 0x04010B9A RID: 68506
 		FoxTalk
 	}
 }

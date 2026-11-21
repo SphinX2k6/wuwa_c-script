@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Launcher.Platform
 {
-	// Token: 0x02000126 RID: 294
+	// Token: 0x0200012A RID: 298
 	public enum EPlatformType
 	{
-		// Token: 0x04000578 RID: 1400
+		// Token: 0x040005B3 RID: 1459
 		None,
-		// Token: 0x04000579 RID: 1401
+		// Token: 0x040005B4 RID: 1460
 		Android,
-		// Token: 0x0400057A RID: 1402
+		// Token: 0x040005B5 RID: 1461
 		IOS,
-		// Token: 0x0400057B RID: 1403
+		// Token: 0x040005B6 RID: 1462
 		Linux,
-		// Token: 0x0400057C RID: 1404
+		// Token: 0x040005B7 RID: 1463
 		LinuxArm64,
-		// Token: 0x0400057D RID: 1405
+		// Token: 0x040005B8 RID: 1464
 		Mac,
-		// Token: 0x0400057E RID: 1406
+		// Token: 0x040005B9 RID: 1465
 		PS4,
-		// Token: 0x0400057F RID: 1407
+		// Token: 0x040005BA RID: 1466
 		PS5,
-		// Token: 0x04000580 RID: 1408
+		// Token: 0x040005BB RID: 1467
 		Windows,
-		// Token: 0x04000581 RID: 1409
+		// Token: 0x040005BC RID: 1468
 		XboxOne,
-		// Token: 0x04000582 RID: 1410
+		// Token: 0x040005BD RID: 1469
 		XSX,
-		// Token: 0x04000583 RID: 1411
+		// Token: 0x040005BE RID: 1470
 		WinGDK,
-		// Token: 0x04000584 RID: 1412
+		// Token: 0x040005BF RID: 1471
 		OpenHarmony
 	}
 }

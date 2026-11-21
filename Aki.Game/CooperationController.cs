@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Module.DeadRevive;
 
-// Token: 0x020016FD RID: 5885
+// Token: 0x02000BB5 RID: 2997
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class CooperationController : ControllerBase
 {
-	// Token: 0x0600A8CB RID: 43211 RVA: 0x0025FB94 File Offset: 0x0025DD94
+	// Token: 0x06007CAB RID: 31915 RVA: 0x00269FB0 File Offset: 0x002681B0
 	public void FormationInputHandler(string actionName)
 	{
 		int num = -1;
@@ -58,7 +58,7 @@ public class CooperationController : ControllerBase
 		this.TryCooperate(valueOrDefault);
 	}
 
-	// Token: 0x0600A8CC RID: 43212 RVA: 0x0025FC34 File Offset: 0x0025DE34
+	// Token: 0x06007CAC RID: 31916 RVA: 0x0026A050 File Offset: 0x00268250
 	public unsafe void TryCooperate(long creatureDataId)
 	{
 		if (SceneTeamModel.Instance.ChangingRole)
@@ -179,7 +179,7 @@ public class CooperationController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A8CD RID: 43213 RVA: 0x0025FF5C File Offset: 0x0025E15C
+	// Token: 0x06007CAD RID: 31917 RVA: 0x0026A378 File Offset: 0x00268578
 	private void CooperateAction(SceneTeamItem goDownRole, SceneTeamItem goBattleRole)
 	{
 		ICooperationHandler[] handlers = CooperationModel.Instance.GetHandlers();
@@ -190,8 +190,8 @@ public class CooperationController : ControllerBase
 		}
 	}
 
-	// Token: 0x17000DFB RID: 3579
-	// (get) Token: 0x0600A8CE RID: 43214 RVA: 0x0025FF8E File Offset: 0x0025E18E
+	// Token: 0x17000E1C RID: 3612
+	// (get) Token: 0x06007CAE RID: 31918 RVA: 0x0026A3AA File Offset: 0x002685AA
 	public static CooperationController Instance
 	{
 		get
@@ -200,7 +200,7 @@ public class CooperationController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A8CF RID: 43215 RVA: 0x0025FF95 File Offset: 0x0025E195
+	// Token: 0x06007CAF RID: 31919 RVA: 0x0026A3B1 File Offset: 0x002685B1
 	public static CooperationController GetOrCreateInstance()
 	{
 		if (CooperationController._Instance == null)
@@ -210,7 +210,7 @@ public class CooperationController : ControllerBase
 		return CooperationController._Instance;
 	}
 
-	// Token: 0x0600A8D0 RID: 43216 RVA: 0x0025FFA9 File Offset: 0x0025E1A9
+	// Token: 0x06007CB0 RID: 31920 RVA: 0x0026A3C5 File Offset: 0x002685C5
 	public static bool CreateInstance()
 	{
 		if (CooperationController._Instance != null)
@@ -221,24 +221,24 @@ public class CooperationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A8D1 RID: 43217 RVA: 0x0025FFBF File Offset: 0x0025E1BF
+	// Token: 0x06007CB1 RID: 31921 RVA: 0x0026A3DB File Offset: 0x002685DB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A8D2 RID: 43218 RVA: 0x0025FFC1 File Offset: 0x0025E1C1
+	// Token: 0x06007CB2 RID: 31922 RVA: 0x0026A3DD File Offset: 0x002685DD
 	public static void ResetStaticDefaultValue()
 	{
 		CooperationController._Instance = null;
 	}
 
-	// Token: 0x0600A8D3 RID: 43219 RVA: 0x0025FFC9 File Offset: 0x0025E1C9
+	// Token: 0x06007CB3 RID: 31923 RVA: 0x0026A3E5 File Offset: 0x002685E5
 	static CooperationController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CooperationController.CreateStaticDefaultValue), new Action(CooperationController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D09 RID: 19721
+	// Token: 0x04004DB0 RID: 19888
 	[Nullable(2)]
 	private static CooperationController _Instance;
 }

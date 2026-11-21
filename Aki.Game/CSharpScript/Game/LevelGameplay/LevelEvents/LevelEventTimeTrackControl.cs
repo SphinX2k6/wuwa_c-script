@@ -7,15 +7,15 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BA6 RID: 27558
+	// Token: 0x02005D1E RID: 23838
 	public class LevelEventTimeTrackControl : LevelEventBase
 	{
-		// Token: 0x06044301 RID: 279297 RVA: 0x010CE3F7 File Offset: 0x010CC5F7
+		// Token: 0x0603A457 RID: 238679 RVA: 0x01078283 File Offset: 0x01076483
 		public LevelEventTimeTrackControl(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044302 RID: 279298 RVA: 0x010CE400 File Offset: 0x010CC600
+		// Token: 0x0603A458 RID: 238680 RVA: 0x0107828C File Offset: 0x0107648C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			TimeTrackController.Instance.OpenTimeTrackControlView(entityId, actionTimeTrackControl.ConfigIndex, new Action<bool>(this.OnResponse));
 		}
 
-		// Token: 0x06044303 RID: 279299 RVA: 0x010CE4AD File Offset: 0x010CC6AD
+		// Token: 0x0603A459 RID: 238681 RVA: 0x01078339 File Offset: 0x01076539
 		private void OnResponse(bool isSuccess)
 		{
 			base.FinishExecute(isSuccess, false, true);

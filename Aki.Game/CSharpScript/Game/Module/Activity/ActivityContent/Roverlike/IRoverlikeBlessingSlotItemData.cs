@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006182 RID: 24962
+	// Token: 0x02005100 RID: 20736
 	public interface IRoverlikeBlessingSlotItemData
 	{
-		// Token: 0x170091BE RID: 37310
-		// (get) Token: 0x0603F15F RID: 258399
-		// (set) Token: 0x0603F160 RID: 258400
+		// Token: 0x17006520 RID: 25888
+		// (get) Token: 0x06033E1F RID: 212511
+		// (set) Token: 0x06033E20 RID: 212512
 		int Id { get; set; }
 
-		// Token: 0x170091BF RID: 37311
-		// (get) Token: 0x0603F161 RID: 258401
-		// (set) Token: 0x0603F162 RID: 258402
+		// Token: 0x17006521 RID: 25889
+		// (get) Token: 0x06033E21 RID: 212513
+		// (set) Token: 0x06033E22 RID: 212514
 		int SlotId { get; set; }
 	}
 }

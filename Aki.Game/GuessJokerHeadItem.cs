@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001071 RID: 4209
+// Token: 0x02000525 RID: 1317
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerHeadItem : UiPanelBase
 {
-	// Token: 0x06006CB5 RID: 27829 RVA: 0x0015FBE0 File Offset: 0x0015DDE0
+	// Token: 0x0600404A RID: 16458 RVA: 0x00168514 File Offset: 0x00166714
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006CB6 RID: 27830 RVA: 0x0015FD58 File Offset: 0x0015DF58
+	// Token: 0x0600404B RID: 16459 RVA: 0x0016868C File Offset: 0x0016688C
 	protected override void OnStart()
 	{
 		this.HpLayout = new GenericLayout<GuessJokerHpItem, bool>(base.GetHorizontalLayout(2), new Func<GuessJokerHpItem>(this.CreateHpItem), (AUIBaseActor)base.GetItem(3).GetOwner(), false, true);
@@ -60,7 +60,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		skillButtonSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceFinish), false);
 	}
 
-	// Token: 0x06006CB7 RID: 27831 RVA: 0x0015FE28 File Offset: 0x0015E028
+	// Token: 0x0600404C RID: 16460 RVA: 0x0016875C File Offset: 0x0016695C
 	private void OnSequenceFinish(string sequenceName)
 	{
 		Action action;
@@ -74,15 +74,15 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CB8 RID: 27832 RVA: 0x0015FE5B File Offset: 0x0015E05B
+	// Token: 0x0600404D RID: 16461 RVA: 0x0016878F File Offset: 0x0016698F
 	public void SetRoleData(GuessJokerRoleData roleData)
 	{
 		this.RoleData = roleData;
 		this.InitView();
 	}
 
-	// Token: 0x170008C9 RID: 2249
-	// (get) Token: 0x06006CB9 RID: 27833 RVA: 0x0015FE6A File Offset: 0x0015E06A
+	// Token: 0x170008E9 RID: 2281
+	// (get) Token: 0x0600404E RID: 16462 RVA: 0x0016879E File Offset: 0x0016699E
 	public int Hp
 	{
 		get
@@ -96,7 +96,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CBA RID: 27834 RVA: 0x0015FE80 File Offset: 0x0015E080
+	// Token: 0x0600404F RID: 16463 RVA: 0x001687B4 File Offset: 0x001669B4
 	public void InitView()
 	{
 		if (this.RoleData == null)
@@ -136,7 +136,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		base.GetItem(5).SetUIActive(false);
 	}
 
-	// Token: 0x06006CBB RID: 27835 RVA: 0x0015FF94 File Offset: 0x0015E194
+	// Token: 0x06004050 RID: 16464 RVA: 0x001688C8 File Offset: 0x00166AC8
 	[NullableContext(2)]
 	public void UpdateHp(Action completeCallback = null)
 	{
@@ -175,7 +175,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06006CBC RID: 27836 RVA: 0x0015FFDC File Offset: 0x0015E1DC
+	// Token: 0x06004051 RID: 16465 RVA: 0x00168910 File Offset: 0x00166B10
 	public void SetSkillUnlock(bool isUnlock)
 	{
 		this.IsUnlock = isUnlock;
@@ -192,7 +192,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CBD RID: 27837 RVA: 0x00160030 File Offset: 0x0015E230
+	// Token: 0x06004052 RID: 16466 RVA: 0x00168964 File Offset: 0x00166B64
 	private void UpdateSkill()
 	{
 		if (this.RoleData == null)
@@ -220,7 +220,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CBE RID: 27838 RVA: 0x001600EC File Offset: 0x0015E2EC
+	// Token: 0x06004053 RID: 16467 RVA: 0x00168A20 File Offset: 0x00166C20
 	public void PlayHeadSequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -234,7 +234,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CBF RID: 27839 RVA: 0x00160128 File Offset: 0x0015E328
+	// Token: 0x06004054 RID: 16468 RVA: 0x00168A5C File Offset: 0x00166C5C
 	public void SetSelfRound(bool isSelfRound)
 	{
 		if (isSelfRound)
@@ -249,7 +249,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06006CC0 RID: 27840 RVA: 0x00160160 File Offset: 0x0015E360
+	// Token: 0x06004055 RID: 16469 RVA: 0x00168A94 File Offset: 0x00166C94
 	private void PlaySkillButtonSequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 	{
 		LevelSequencePlayer skillButtonSequencePlayer = this.SkillButtonSequencePlayer;
@@ -263,13 +263,13 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CC1 RID: 27841 RVA: 0x0016019C File Offset: 0x0015E39C
+	// Token: 0x06004056 RID: 16470 RVA: 0x00168AD0 File Offset: 0x00166CD0
 	private GuessJokerHpItem CreateHpItem()
 	{
 		return new GuessJokerHpItem();
 	}
 
-	// Token: 0x06006CC2 RID: 27842 RVA: 0x001601A3 File Offset: 0x0015E3A3
+	// Token: 0x06004057 RID: 16471 RVA: 0x00168AD7 File Offset: 0x00166CD7
 	public void SetDialogueText(string textKey)
 	{
 		if (!this.IsPlayer)
@@ -279,7 +279,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), textKey, Array.Empty<object>());
 	}
 
-	// Token: 0x06006CC3 RID: 27843 RVA: 0x001601C8 File Offset: 0x0015E3C8
+	// Token: 0x06004058 RID: 16472 RVA: 0x00168AFC File Offset: 0x00166CFC
 	[NullableContext(2)]
 	public void SetDialogueItemActive(bool active, Action onComplete = null)
 	{
@@ -305,7 +305,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06006CC4 RID: 27844 RVA: 0x0016022C File Offset: 0x0015E42C
+	// Token: 0x06004059 RID: 16473 RVA: 0x00168B60 File Offset: 0x00166D60
 	public void ShowLockSkillTips(bool active)
 	{
 		if (this.IsLockSkillTipsClicked)
@@ -327,8 +327,8 @@ public class GuessJokerHeadItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x170008CA RID: 2250
-	// (get) Token: 0x06006CC5 RID: 27845 RVA: 0x0016028C File Offset: 0x0015E48C
+	// Token: 0x170008EA RID: 2282
+	// (get) Token: 0x0600405A RID: 16474 RVA: 0x00168BC0 File Offset: 0x00166DC0
 	private bool IsPlayer
 	{
 		get
@@ -338,7 +338,7 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006CC6 RID: 27846 RVA: 0x001602A4 File Offset: 0x0015E4A4
+	// Token: 0x0600405B RID: 16475 RVA: 0x00168BD8 File Offset: 0x00166DD8
 	private void OnClickSkillButton()
 	{
 		if (!this.IsUnlock && !this.IsPlayer)
@@ -361,11 +361,11 @@ public class GuessJokerHeadItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003255 RID: 12885
+	// Token: 0x040032EE RID: 13038
 	[Nullable(2)]
 	public GuessJokerRoleData RoleData;
 
-	// Token: 0x04003256 RID: 12886
+	// Token: 0x040032EF RID: 13039
 	[Nullable(new byte[]
 	{
 		2,
@@ -373,24 +373,24 @@ public class GuessJokerHeadItem : UiPanelBase
 	})]
 	private GenericLayout<GuessJokerHpItem, bool> HpLayout;
 
-	// Token: 0x04003257 RID: 12887
+	// Token: 0x040032F0 RID: 13040
 	private bool IsUnlock;
 
-	// Token: 0x04003258 RID: 12888
+	// Token: 0x040032F1 RID: 13041
 	private int SkillId = -1;
 
-	// Token: 0x04003259 RID: 12889
+	// Token: 0x040032F2 RID: 13042
 	private bool IsLockSkillTipsClicked;
 
-	// Token: 0x0400325A RID: 12890
+	// Token: 0x040032F3 RID: 13043
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0400325B RID: 12891
+	// Token: 0x040032F4 RID: 13044
 	[Nullable(2)]
 	private LevelSequencePlayer SkillButtonSequencePlayer;
 
-	// Token: 0x0400325C RID: 12892
+	// Token: 0x040032F5 RID: 13045
 	[Nullable(new byte[]
 	{
 		1,
@@ -399,50 +399,50 @@ public class GuessJokerHeadItem : UiPanelBase
 	})]
 	private readonly Dictionary<string, Action> SequenceFinishCallbackMap = new Dictionary<string, Action>();
 
-	// Token: 0x02007666 RID: 30310
+	// Token: 0x020067FA RID: 26618
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402714F RID: 160079
+		// Token: 0x0402249A RID: 140442
 		public const int Button = 0;
 
-		// Token: 0x04027150 RID: 160080
+		// Token: 0x0402249B RID: 140443
 		public const int RoleTexture = 1;
 
-		// Token: 0x04027151 RID: 160081
+		// Token: 0x0402249C RID: 140444
 		public const int HpHorizontalLayout = 2;
 
-		// Token: 0x04027152 RID: 160082
+		// Token: 0x0402249D RID: 140445
 		public const int HpItem = 3;
 
-		// Token: 0x04027153 RID: 160083
+		// Token: 0x0402249E RID: 140446
 		public const int HeadBgItem = 4;
 
-		// Token: 0x04027154 RID: 160084
+		// Token: 0x0402249F RID: 140447
 		public const int SelectItem = 5;
 
-		// Token: 0x04027155 RID: 160085
+		// Token: 0x040224A0 RID: 140448
 		public const int TimePanel = 6;
 
-		// Token: 0x04027156 RID: 160086
+		// Token: 0x040224A1 RID: 140449
 		public const int TimeProgressSprite = 7;
 
-		// Token: 0x04027157 RID: 160087
+		// Token: 0x040224A2 RID: 140450
 		public const int DialoguePanel = 8;
 
-		// Token: 0x04027158 RID: 160088
+		// Token: 0x040224A3 RID: 140451
 		public const int DialogueText = 9;
 
-		// Token: 0x04027159 RID: 160089
+		// Token: 0x040224A4 RID: 140452
 		public const int SkillButton = 10;
 
-		// Token: 0x0402715A RID: 160090
+		// Token: 0x040224A5 RID: 140453
 		public const int LockSprite = 11;
 
-		// Token: 0x0402715B RID: 160091
+		// Token: 0x040224A6 RID: 140454
 		public const int SkillTexture = 12;
 
-		// Token: 0x0402715C RID: 160092
+		// Token: 0x040224A7 RID: 140455
 		public const int LockSkillTipsItem = 13;
 	}
 }

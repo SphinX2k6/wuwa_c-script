@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005414 RID: 21524
+	// Token: 0x020043F7 RID: 17399
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BrightnessView : UiViewBase
 	{
-		// Token: 0x06037039 RID: 225337 RVA: 0x00D090D8 File Offset: 0x00D072D8
+		// Token: 0x0602BF82 RID: 180098 RVA: 0x00C58500 File Offset: 0x00C56700
 		[NullableContext(1)]
 		public BrightnessView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603703A RID: 225338 RVA: 0x00D090E4 File Offset: 0x00D072E4
+		// Token: 0x0602BF83 RID: 180099 RVA: 0x00C5850C File Offset: 0x00C5670C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,21 +41,21 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x0603703B RID: 225339 RVA: 0x00D09200 File Offset: 0x00D07400
+		// Token: 0x0602BF84 RID: 180100 RVA: 0x00C58628 File Offset: 0x00C56828
 		private void OnSub(bool _)
 		{
 			float newVal = base.GetSlider(2).GetValue() - 5f;
 			this.ChangeSlider(newVal, true);
 		}
 
-		// Token: 0x0603703C RID: 225340 RVA: 0x00D09228 File Offset: 0x00D07428
+		// Token: 0x0602BF85 RID: 180101 RVA: 0x00C58650 File Offset: 0x00C56850
 		private void OnAdd(bool _)
 		{
 			float newVal = base.GetSlider(2).GetValue() + 5f;
 			this.ChangeSlider(newVal, true);
 		}
 
-		// Token: 0x0603703D RID: 225341 RVA: 0x00D09250 File Offset: 0x00D07450
+		// Token: 0x0602BF86 RID: 180102 RVA: 0x00C58678 File Offset: 0x00C56878
 		private void ChangeSlider(float newVal, bool isFire = true)
 		{
 			if (newVal >= 100f)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.GetSlider(2).SetValue(MathUtils.Instance.Clamp(newVal, 0f, 100f), isFire);
 		}
 
-		// Token: 0x0603703E RID: 225342 RVA: 0x00D092C8 File Offset: 0x00D074C8
+		// Token: 0x0602BF87 RID: 180103 RVA: 0x00C586F0 File Offset: 0x00C568F0
 		protected override void OnStart()
 		{
 			IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -102,13 +102,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RemoveLongPress = new LongPressButtonItem(new OneOf<UUIButtonComponent, UUIExtendToggle>?(base.GetButton(6)), new LongPressButtonItem.ELongPressConfigId?(LongPressButtonItem.ELongPressConfigId.LongPressOne), new Action<bool>(this.OnSub));
 		}
 
-		// Token: 0x0603703F RID: 225343 RVA: 0x00D0947E File Offset: 0x00D0767E
+		// Token: 0x0602BF88 RID: 180104 RVA: 0x00C588A6 File Offset: 0x00C56AA6
 		private void OnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06037040 RID: 225344 RVA: 0x00D09488 File Offset: 0x00D07688
+		// Token: 0x0602BF89 RID: 180105 RVA: 0x00C588B0 File Offset: 0x00C56AB0
 		protected override void OnBeforeDestroy()
 		{
 			float outRangeA = this.MenuDataIns.SliderRange[0];
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RemoveLongPress = null;
 		}
 
-		// Token: 0x06037041 RID: 225345 RVA: 0x00D09561 File Offset: 0x00D07761
+		// Token: 0x0602BF8A RID: 180106 RVA: 0x00C58989 File Offset: 0x00C56B89
 		private void OnYes()
 		{
 			GenericPromptController.Instance.ShowPromptByCode("AdjustBrighness", Array.Empty<object>());
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.OnClose();
 		}
 
-		// Token: 0x06037042 RID: 225346 RVA: 0x00D09584 File Offset: 0x00D07784
+		// Token: 0x0602BF8B RID: 180107 RVA: 0x00C589AC File Offset: 0x00C56BAC
 		private void OnSlide(float value)
 		{
 			float num = this.Scalar / 2f;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ChangeSlider(value, false);
 		}
 
-		// Token: 0x06037043 RID: 225347 RVA: 0x00D09600 File Offset: 0x00D07800
+		// Token: 0x0602BF8C RID: 180108 RVA: 0x00C58A28 File Offset: 0x00C56C28
 		private void OnReset()
 		{
 			float sliderDefault = this.MenuDataIns.SliderDefault;
@@ -171,37 +171,37 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.GetSlider(2).SetValue(sliderPosition, true);
 		}
 
-		// Token: 0x0401D04C RID: 118860
+		// Token: 0x04017AE5 RID: 96997
 		private const int STEP = 5;
 
-		// Token: 0x0401D04D RID: 118861
+		// Token: 0x04017AE6 RID: 96998
 		private const float SLIDER_MIN_VALUE = 0f;
 
-		// Token: 0x0401D04E RID: 118862
+		// Token: 0x04017AE7 RID: 96999
 		private const float SLIDER_MAX_VALUE = 100f;
 
-		// Token: 0x0401D04F RID: 118863
+		// Token: 0x04017AE8 RID: 97000
 		protected MenuData MenuDataIns;
 
-		// Token: 0x0401D050 RID: 118864
+		// Token: 0x04017AE9 RID: 97001
 		protected bool IsConfirm;
 
-		// Token: 0x0401D051 RID: 118865
+		// Token: 0x04017AEA RID: 97002
 		private float Scalar;
 
-		// Token: 0x0401D052 RID: 118866
+		// Token: 0x04017AEB RID: 97003
 		private float LastData;
 
-		// Token: 0x0401D053 RID: 118867
+		// Token: 0x04017AEC RID: 97004
 		private IReadOnlyList<object> MenuSettingParam;
 
-		// Token: 0x0401D054 RID: 118868
+		// Token: 0x04017AED RID: 97005
 		private Action<int, float> MenuSettingCallback;
 
-		// Token: 0x0401D055 RID: 118869
+		// Token: 0x04017AEE RID: 97006
 		private LongPressButtonItem AddLongPress;
 
-		// Token: 0x0401D056 RID: 118870
+		// Token: 0x04017AEF RID: 97007
 		private LongPressButtonItem RemoveLongPress;
 	}
 }

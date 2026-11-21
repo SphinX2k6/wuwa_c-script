@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009BF RID: 2495
+	// Token: 0x02000A94 RID: 2708
 	public class ConfigTalkOptionIconById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A8E RID: 14990 RVA: 0x001A4F08 File Offset: 0x001A3108
+		// Token: 0x06003F8C RID: 16268 RVA: 0x001C429C File Offset: 0x001C249C
 		static ConfigTalkOptionIconById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTalkOptionIconById.CreateStaticDefaultValue), new Action(ConfigTalkOptionIconById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A8F RID: 14991 RVA: 0x001A4F28 File Offset: 0x001A3128
+		// Token: 0x06003F8D RID: 16269 RVA: 0x001C42BC File Offset: 0x001C24BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTalkOptionIconById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A90 RID: 14992 RVA: 0x001A4FA7 File Offset: 0x001A31A7
+		// Token: 0x06003F8E RID: 16270 RVA: 0x001C433B File Offset: 0x001C253B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTalkOptionIconById.LogPair = null;
 			ConfigTalkOptionIconById.HandleId = 0;
 		}
 
-		// Token: 0x06003A91 RID: 14993 RVA: 0x001A4FB5 File Offset: 0x001A31B5
+		// Token: 0x06003F8F RID: 16271 RVA: 0x001C4349 File Offset: 0x001C2549
 		public static void Init()
 		{
 			ConfigTalkOptionIconById.HandleId = ConfigCommon.InitDataStatement(ConfigTalkOptionIconById.HandleId, "db_talkoptionicon.db", "select BinData from `TalkOptionIcon` where Id=?");
 		}
 
-		// Token: 0x06003A92 RID: 14994 RVA: 0x001A4FD0 File Offset: 0x001A31D0
+		// Token: 0x06003F90 RID: 16272 RVA: 0x001C4364 File Offset: 0x001C2564
 		public static TalkOptionIcon? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTalkOptionIconById.HandleId, ConfigTalkOptionIconById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TalkOptionIcon?(rootAsTalkOptionIcon);
 		}
 
-		// Token: 0x0400441F RID: 17439
+		// Token: 0x040049F2 RID: 18930
 		private const string DB = "db_talkoptionicon.db";
 
-		// Token: 0x04004420 RID: 17440
+		// Token: 0x040049F3 RID: 18931
 		private const string FILE = "k.可视化编辑/c.Csv/d.对话选项图标/*.csv*";
 
-		// Token: 0x04004421 RID: 17441
+		// Token: 0x040049F4 RID: 18932
 		private const string TABLE = "TalkOptionIcon";
 
-		// Token: 0x04004422 RID: 17442
+		// Token: 0x040049F5 RID: 18933
 		private const string COMMAND = "select BinData from `TalkOptionIcon` where Id=?";
 
-		// Token: 0x04004423 RID: 17443
+		// Token: 0x040049F6 RID: 18934
 		private const string KEY_PREFIX = "TalkOptionIconById";
 
-		// Token: 0x04004424 RID: 17444
+		// Token: 0x040049F7 RID: 18935
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004425 RID: 17445
+		// Token: 0x040049F8 RID: 18936
 		private static int HandleId;
 	}
 }

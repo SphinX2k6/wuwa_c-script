@@ -9,166 +9,166 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004632 RID: 17970
-	[NullableContext(2)]
+	// Token: 0x0200355C RID: 13660
+	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiPanelBase : ComponentAction
 	{
-		// Token: 0x170075E4 RID: 30180
-		// (get) Token: 0x0602E48B RID: 189579 RVA: 0x00AB3075 File Offset: 0x00AB1275
-		// (set) Token: 0x0602E48C RID: 189580 RVA: 0x00AB307D File Offset: 0x00AB127D
+		// Token: 0x1700489E RID: 18590
+		// (get) Token: 0x06022B9E RID: 142238 RVA: 0x009DFE05 File Offset: 0x009DE005
+		// (set) Token: 0x06022B9F RID: 142239 RVA: 0x009DFE0D File Offset: 0x009DE00D
 		public bool SkipDestroyActor { get; set; }
 
-		// Token: 0x0602E48D RID: 189581 RVA: 0x00AB3088 File Offset: 0x00AB1288
+		// Token: 0x06022BA0 RID: 142240 RVA: 0x009DFE18 File Offset: 0x009DE018
 		public UiPanelBase()
 		{
 			this.MemoryTag = base.GetType().Name;
 		}
 
-		// Token: 0x0602E48E RID: 189582 RVA: 0x00AB3125 File Offset: 0x00AB1325
+		// Token: 0x06022BA1 RID: 142241 RVA: 0x009DFEB5 File Offset: 0x009DE0B5
 		protected virtual void OnRegisterComponent()
 		{
 		}
 
-		// Token: 0x0602E48F RID: 189583 RVA: 0x00AB3127 File Offset: 0x00AB1327
+		// Token: 0x06022BA2 RID: 142242 RVA: 0x009DFEB7 File Offset: 0x009DE0B7
 		protected virtual void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x0602E490 RID: 189584 RVA: 0x00AB3129 File Offset: 0x00AB1329
+		// Token: 0x06022BA3 RID: 142243 RVA: 0x009DFEB9 File Offset: 0x009DE0B9
 		protected virtual UniTask OnCreateAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E491 RID: 189585 RVA: 0x00AB3130 File Offset: 0x00AB1330
+		// Token: 0x06022BA4 RID: 142244 RVA: 0x009DFEC0 File Offset: 0x009DE0C0
 		protected virtual UniTask OnBeforeStartAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E492 RID: 189586 RVA: 0x00AB3137 File Offset: 0x00AB1337
+		// Token: 0x06022BA5 RID: 142245 RVA: 0x009DFEC7 File Offset: 0x009DE0C7
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x0602E493 RID: 189587 RVA: 0x00AB3139 File Offset: 0x00AB1339
+		// Token: 0x06022BA6 RID: 142246 RVA: 0x009DFEC9 File Offset: 0x009DE0C9
 		protected virtual void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x0602E494 RID: 189588 RVA: 0x00AB313B File Offset: 0x00AB133B
+		// Token: 0x06022BA7 RID: 142247 RVA: 0x009DFECB File Offset: 0x009DE0CB
 		protected virtual void OnAfterShow()
 		{
 		}
 
-		// Token: 0x0602E495 RID: 189589 RVA: 0x00AB313D File Offset: 0x00AB133D
+		// Token: 0x06022BA8 RID: 142248 RVA: 0x009DFECD File Offset: 0x009DE0CD
 		protected virtual UniTask OnBeforeHideAsync()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E496 RID: 189590 RVA: 0x00AB3144 File Offset: 0x00AB1344
+		// Token: 0x06022BA9 RID: 142249 RVA: 0x009DFED4 File Offset: 0x009DE0D4
 		protected virtual void OnBeforeHide()
 		{
 		}
 
-		// Token: 0x0602E497 RID: 189591 RVA: 0x00AB3146 File Offset: 0x00AB1346
+		// Token: 0x06022BAA RID: 142250 RVA: 0x009DFED6 File Offset: 0x009DE0D6
 		protected virtual void OnAfterHide()
 		{
 		}
 
-		// Token: 0x0602E498 RID: 189592 RVA: 0x00AB3148 File Offset: 0x00AB1348
+		// Token: 0x06022BAB RID: 142251 RVA: 0x009DFED8 File Offset: 0x009DE0D8
 		protected virtual void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0602E499 RID: 189593 RVA: 0x00AB314A File Offset: 0x00AB134A
+		// Token: 0x06022BAC RID: 142252 RVA: 0x009DFEDA File Offset: 0x009DE0DA
 		protected virtual void OnAfterDestroy()
 		{
 		}
 
-		// Token: 0x0602E49A RID: 189594 RVA: 0x00AB314C File Offset: 0x00AB134C
+		// Token: 0x06022BAD RID: 142253 RVA: 0x009DFEDC File Offset: 0x009DE0DC
 		protected virtual void OnAutoDestroy()
 		{
 		}
 
-		// Token: 0x0602E49B RID: 189595 RVA: 0x00AB314E File Offset: 0x00AB134E
+		// Token: 0x06022BAE RID: 142254 RVA: 0x009DFEDE File Offset: 0x009DE0DE
 		protected virtual void OnBeforeCreateImplement()
 		{
 		}
 
-		// Token: 0x0602E49C RID: 189596 RVA: 0x00AB3150 File Offset: 0x00AB1350
+		// Token: 0x06022BAF RID: 142255 RVA: 0x009DFEE0 File Offset: 0x009DE0E0
 		protected virtual UniTask OnCreateAsyncImplementImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E49D RID: 189597 RVA: 0x00AB3157 File Offset: 0x00AB1357
+		// Token: 0x06022BB0 RID: 142256 RVA: 0x009DFEE7 File Offset: 0x009DE0E7
 		protected virtual void OnAfterCreateImplement()
 		{
 		}
 
-		// Token: 0x0602E49E RID: 189598 RVA: 0x00AB3159 File Offset: 0x00AB1359
+		// Token: 0x06022BB1 RID: 142257 RVA: 0x009DFEE9 File Offset: 0x009DE0E9
 		protected virtual void OnStartImplement()
 		{
 		}
 
-		// Token: 0x0602E49F RID: 189599 RVA: 0x00AB315B File Offset: 0x00AB135B
+		// Token: 0x06022BB2 RID: 142258 RVA: 0x009DFEEB File Offset: 0x009DE0EB
 		protected virtual UniTask OnBeforeShowAsyncImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E4A0 RID: 189600 RVA: 0x00AB3162 File Offset: 0x00AB1362
+		// Token: 0x06022BB3 RID: 142259 RVA: 0x009DFEF2 File Offset: 0x009DE0F2
 		protected virtual void OnBeforeShowImplement()
 		{
 		}
 
-		// Token: 0x0602E4A1 RID: 189601 RVA: 0x00AB3164 File Offset: 0x00AB1364
+		// Token: 0x06022BB4 RID: 142260 RVA: 0x009DFEF4 File Offset: 0x009DE0F4
 		protected virtual void OnAfterShowImplement()
 		{
 		}
 
-		// Token: 0x0602E4A2 RID: 189602 RVA: 0x00AB3166 File Offset: 0x00AB1366
+		// Token: 0x06022BB5 RID: 142261 RVA: 0x009DFEF6 File Offset: 0x009DE0F6
 		protected virtual UniTask OnShowAsyncImplementImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E4A3 RID: 189603 RVA: 0x00AB316D File Offset: 0x00AB136D
+		// Token: 0x06022BB6 RID: 142262 RVA: 0x009DFEFD File Offset: 0x009DE0FD
 		protected virtual UniTask OnHideAsyncImplementImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E4A4 RID: 189604 RVA: 0x00AB3174 File Offset: 0x00AB1374
+		// Token: 0x06022BB7 RID: 142263 RVA: 0x009DFF04 File Offset: 0x009DE104
 		protected virtual UniTask OnDestroyAsyncImplementImplement()
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x0602E4A5 RID: 189605 RVA: 0x00AB317B File Offset: 0x00AB137B
+		// Token: 0x06022BB8 RID: 142264 RVA: 0x009DFF0B File Offset: 0x009DE10B
 		protected virtual void OnBeforeHideImplement()
 		{
 		}
 
-		// Token: 0x0602E4A6 RID: 189606 RVA: 0x00AB317D File Offset: 0x00AB137D
+		// Token: 0x06022BB9 RID: 142265 RVA: 0x009DFF0D File Offset: 0x009DE10D
 		protected virtual void OnAfterHideImplement()
 		{
 		}
 
-		// Token: 0x0602E4A7 RID: 189607 RVA: 0x00AB317F File Offset: 0x00AB137F
+		// Token: 0x06022BBA RID: 142266 RVA: 0x009DFF0F File Offset: 0x009DE10F
 		protected virtual void OnBeforeDestroyImplement()
 		{
 		}
 
-		// Token: 0x0602E4A8 RID: 189608 RVA: 0x00AB3181 File Offset: 0x00AB1381
+		// Token: 0x06022BBB RID: 142267 RVA: 0x009DFF11 File Offset: 0x009DE111
 		protected virtual void OnAfterDestroyImplement()
 		{
 		}
 
-		// Token: 0x0602E4A9 RID: 189609 RVA: 0x00AB3184 File Offset: 0x00AB1384
+		// Token: 0x06022BBC RID: 142268 RVA: 0x009DFF14 File Offset: 0x009DE114
 		[NullableContext(0)]
 		protected override UniTask<bool> OnCreateAsyncImplement()
 		{
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Ui
 			return <OnCreateAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4AA RID: 189610 RVA: 0x00AB31C8 File Offset: 0x00AB13C8
+		// Token: 0x06022BBD RID: 142269 RVA: 0x009DFF58 File Offset: 0x009DE158
 		protected override UniTask OnStartAsyncImplement()
 		{
 			UiPanelBase.<OnStartAsyncImplement>d__52 <OnStartAsyncImplement>d__;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Ui
 			return <OnStartAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4AB RID: 189611 RVA: 0x00AB320C File Offset: 0x00AB140C
+		// Token: 0x06022BBE RID: 142270 RVA: 0x009DFF9C File Offset: 0x009DE19C
 		protected override void OnStartImplementCompatible()
 		{
 			this.OnStartImplement();
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4AC RID: 189612 RVA: 0x00AB32A8 File Offset: 0x00AB14A8
+		// Token: 0x06022BBF RID: 142271 RVA: 0x009E0038 File Offset: 0x009DE238
 		protected override UniTask OnShowAsyncImplement()
 		{
 			UiPanelBase.<OnShowAsyncImplement>d__54 <OnShowAsyncImplement>d__;
@@ -217,12 +217,12 @@ namespace CSharpScript.Game.Ui
 			return <OnShowAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4AD RID: 189613 RVA: 0x00AB32EB File Offset: 0x00AB14EB
+		// Token: 0x06022BC0 RID: 142272 RVA: 0x009E007B File Offset: 0x009DE27B
 		protected virtual void OnShowAsyncImplementImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E4AE RID: 189614 RVA: 0x00AB32F0 File Offset: 0x00AB14F0
+		// Token: 0x06022BC1 RID: 142273 RVA: 0x009E0080 File Offset: 0x009DE280
 		protected override void OnShowImplementCompatible()
 		{
 			this.OnBeforeShowImplement();
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Ui
 			this.OnAfterShow();
 		}
 
-		// Token: 0x0602E4AF RID: 189615 RVA: 0x00AB33A4 File Offset: 0x00AB15A4
+		// Token: 0x06022BC2 RID: 142274 RVA: 0x009E0134 File Offset: 0x009DE334
 		protected override UniTask OnHideAsyncImplement()
 		{
 			UiPanelBase.<OnHideAsyncImplement>d__57 <OnHideAsyncImplement>d__;
@@ -252,12 +252,12 @@ namespace CSharpScript.Game.Ui
 			return <OnHideAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4B0 RID: 189616 RVA: 0x00AB33E7 File Offset: 0x00AB15E7
+		// Token: 0x06022BC3 RID: 142275 RVA: 0x009E0177 File Offset: 0x009DE377
 		protected virtual void OnHideAsyncImplementImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E4B1 RID: 189617 RVA: 0x00AB33EC File Offset: 0x00AB15EC
+		// Token: 0x06022BC4 RID: 142276 RVA: 0x009E017C File Offset: 0x009DE37C
 		protected override void OnHideImplementCompatible()
 		{
 			this.OnBeforeHide();
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Ui
 			this.OnAfterHideImplement();
 		}
 
-		// Token: 0x0602E4B2 RID: 189618 RVA: 0x00AB34A0 File Offset: 0x00AB16A0
+		// Token: 0x06022BC5 RID: 142277 RVA: 0x009E0230 File Offset: 0x009DE430
 		protected override UniTask OnDestroyAsyncImplement()
 		{
 			UiPanelBase.<OnDestroyAsyncImplement>d__60 <OnDestroyAsyncImplement>d__;
@@ -287,14 +287,15 @@ namespace CSharpScript.Game.Ui
 			return <OnDestroyAsyncImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4B3 RID: 189619 RVA: 0x00AB34E3 File Offset: 0x00AB16E3
+		// Token: 0x06022BC6 RID: 142278 RVA: 0x009E0273 File Offset: 0x009DE473
 		protected virtual void OnDestroyAsyncImplementImplementCompatible()
 		{
 		}
 
-		// Token: 0x0602E4B4 RID: 189620 RVA: 0x00AB34E8 File Offset: 0x00AB16E8
+		// Token: 0x06022BC7 RID: 142279 RVA: 0x009E0278 File Offset: 0x009DE478
 		protected override void OnDestroyImplementCompatible()
 		{
+			this.RestoreAllSwitchers();
 			this.CancelAllAsyncTask();
 			this.OnBeforeDestroy();
 			this.OnBeforeDestroyImplement();
@@ -312,8 +313,7 @@ namespace CSharpScript.Game.Ui
 			this.OnAfterDestroyImplement();
 		}
 
-		// Token: 0x0602E4B5 RID: 189621 RVA: 0x00AB35A8 File Offset: 0x00AB17A8
-		[NullableContext(1)]
+		// Token: 0x06022BC8 RID: 142280 RVA: 0x009E033C File Offset: 0x009DE53C
 		public void SetRootActorLoadInfoByPath(string actorPath, [Nullable(2)] UUIItem parentItem = null, bool usePool = false, bool isPermanent = false)
 		{
 			this._actorPath = actorPath;
@@ -322,8 +322,7 @@ namespace CSharpScript.Game.Ui
 			this._isPermanent = isPermanent;
 		}
 
-		// Token: 0x0602E4B6 RID: 189622 RVA: 0x00AB35C7 File Offset: 0x00AB17C7
-		[NullableContext(1)]
+		// Token: 0x06022BC9 RID: 142281 RVA: 0x009E035B File Offset: 0x009DE55B
 		public void SetRootActorLoadInfo(string resourceId, [Nullable(2)] UUIItem parentItem = null, bool usePool = false, bool isPermanent = false)
 		{
 			this._actorPath = UiResourceConfig.Instance.GetResourcePath(resourceId);
@@ -332,8 +331,7 @@ namespace CSharpScript.Game.Ui
 			this._isPermanent = isPermanent;
 		}
 
-		// Token: 0x0602E4B7 RID: 189623 RVA: 0x00AB35F0 File Offset: 0x00AB17F0
-		[NullableContext(1)]
+		// Token: 0x06022BCA RID: 142282 RVA: 0x009E0384 File Offset: 0x009DE584
 		public UniTask CreateThenShowByResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateThenShowByResourceIdAsync>d__65 <CreateThenShowByResourceIdAsync>d__;
@@ -347,8 +345,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateThenShowByResourceIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4B8 RID: 189624 RVA: 0x00AB364C File Offset: 0x00AB184C
-		[NullableContext(1)]
+		// Token: 0x06022BCB RID: 142283 RVA: 0x009E03E0 File Offset: 0x009DE5E0
 		public UniTask CreateByResourceIdAsync(string resourceId, [Nullable(2)] UUIItem parentItem = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateByResourceIdAsync>d__66 <CreateByResourceIdAsync>d__;
@@ -362,8 +359,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateByResourceIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4B9 RID: 189625 RVA: 0x00AB36A8 File Offset: 0x00AB18A8
-		[NullableContext(1)]
+		// Token: 0x06022BCC RID: 142284 RVA: 0x009E043C File Offset: 0x009DE63C
 		public UniTask CreateByPathAsync(string path, [Nullable(2)] UUIItem parentItem = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateByPathAsync>d__67 <CreateByPathAsync>d__;
@@ -377,8 +373,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateByPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BA RID: 189626 RVA: 0x00AB3704 File Offset: 0x00AB1904
-		[NullableContext(1)]
+		// Token: 0x06022BCD RID: 142285 RVA: 0x009E0498 File Offset: 0x009DE698
 		public UniTask OnlyCreateByPathAsync(string path, [Nullable(2)] UUIItem parentItem = null, bool usePool = false)
 		{
 			UiPanelBase.<OnlyCreateByPathAsync>d__68 <OnlyCreateByPathAsync>d__;
@@ -392,8 +387,7 @@ namespace CSharpScript.Game.Ui
 			return <OnlyCreateByPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BB RID: 189627 RVA: 0x00AB3760 File Offset: 0x00AB1960
-		[NullableContext(1)]
+		// Token: 0x06022BCE RID: 142286 RVA: 0x009E04F4 File Offset: 0x009DE6F4
 		public UniTask CreateThenShowByPathAsync(string path, [Nullable(2)] UUIItem parentItem = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateThenShowByPathAsync>d__69 <CreateThenShowByPathAsync>d__;
@@ -407,8 +401,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateThenShowByPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BC RID: 189628 RVA: 0x00AB37BC File Offset: 0x00AB19BC
-		[NullableContext(1)]
+		// Token: 0x06022BCF RID: 142287 RVA: 0x009E0550 File Offset: 0x009DE750
 		public UniTask CreateThenShowByActorAsync(AActor actor, [Nullable(2)] object parameters = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateThenShowByActorAsync>d__70 <CreateThenShowByActorAsync>d__;
@@ -422,8 +415,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateThenShowByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BD RID: 189629 RVA: 0x00AB3818 File Offset: 0x00AB1A18
-		[NullableContext(1)]
+		// Token: 0x06022BD0 RID: 142288 RVA: 0x009E05AC File Offset: 0x009DE7AC
 		public UniTask CreateByActorAsync(AActor actor, [Nullable(2)] object parameters = null, bool usePool = false)
 		{
 			UiPanelBase.<CreateByActorAsync>d__71 <CreateByActorAsync>d__;
@@ -437,8 +429,7 @@ namespace CSharpScript.Game.Ui
 			return <CreateByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BE RID: 189630 RVA: 0x00AB3874 File Offset: 0x00AB1A74
-		[NullableContext(1)]
+		// Token: 0x06022BD1 RID: 142289 RVA: 0x009E0608 File Offset: 0x009DE808
 		public UniTask OnlyCreateByActorAsync(AActor actor, [Nullable(2)] object parameters = null, bool usePool = false)
 		{
 			UiPanelBase.<OnlyCreateByActorAsync>d__72 <OnlyCreateByActorAsync>d__;
@@ -452,7 +443,7 @@ namespace CSharpScript.Game.Ui
 			return <OnlyCreateByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4BF RID: 189631 RVA: 0x00AB38CF File Offset: 0x00AB1ACF
+		// Token: 0x06022BD2 RID: 142290 RVA: 0x009E0663 File Offset: 0x009DE863
 		public virtual void SetActive(bool visibility)
 		{
 			if (visibility)
@@ -463,19 +454,19 @@ namespace CSharpScript.Game.Ui
 			base.Hide(null);
 		}
 
-		// Token: 0x0602E4C0 RID: 189632 RVA: 0x00AB38E3 File Offset: 0x00AB1AE3
+		// Token: 0x06022BD3 RID: 142291 RVA: 0x009E0677 File Offset: 0x009DE877
 		public bool GetActive()
 		{
 			return this.RootItem != null && this.RootItem.IsValid() && this.RootItem.IsUIActiveSelf();
 		}
 
-		// Token: 0x0602E4C1 RID: 189633 RVA: 0x00AB3907 File Offset: 0x00AB1B07
+		// Token: 0x06022BD4 RID: 142292 RVA: 0x009E069B File Offset: 0x009DE89B
 		public bool IsUiActiveInHierarchy()
 		{
 			return this.RootItem != null && this.RootItem.IsValid() && this.RootItem.IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x0602E4C2 RID: 189634 RVA: 0x00AB392B File Offset: 0x00AB1B2B
+		// Token: 0x06022BD5 RID: 142293 RVA: 0x009E06BF File Offset: 0x009DE8BF
 		public void SetUiActive(bool visibility)
 		{
 			if (this.RootItem == null || !this.RootItem.IsValid())
@@ -485,13 +476,13 @@ namespace CSharpScript.Game.Ui
 			this.RootItem.SetUIActive(visibility);
 		}
 
-		// Token: 0x0602E4C3 RID: 189635 RVA: 0x00AB394F File Offset: 0x00AB1B4F
+		// Token: 0x06022BD6 RID: 142294 RVA: 0x009E06E3 File Offset: 0x009DE8E3
 		public bool InAsyncLoading()
 		{
 			return base.IsCreating;
 		}
 
-		// Token: 0x0602E4C4 RID: 189636 RVA: 0x00AB3958 File Offset: 0x00AB1B58
+		// Token: 0x06022BD7 RID: 142295 RVA: 0x009E06EC File Offset: 0x009DE8EC
 		private UniTask LoadRootActorAsync()
 		{
 			UiPanelBase.<LoadRootActorAsync>d__78 <LoadRootActorAsync>d__;
@@ -502,8 +493,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadRootActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E4C5 RID: 189637 RVA: 0x00AB399C File Offset: 0x00AB1B9C
-		[NullableContext(1)]
+		// Token: 0x06022BD8 RID: 142296 RVA: 0x009E0730 File Offset: 0x009DE930
 		private unsafe bool SetActor(AActor actor)
 		{
 			AUIBaseActor auibaseActor = actor as AUIBaseActor;
@@ -537,7 +527,7 @@ namespace CSharpScript.Game.Ui
 			return true;
 		}
 
-		// Token: 0x0602E4C6 RID: 189638 RVA: 0x00AB3AB2 File Offset: 0x00AB1CB2
+		// Token: 0x06022BD9 RID: 142297 RVA: 0x009E0846 File Offset: 0x009DEA46
 		private void RefreshMemoryTag()
 		{
 			if (this._originalItem != null && this._originalItem.IsValid())
@@ -546,7 +536,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4C7 RID: 189639 RVA: 0x00AB3AE0 File Offset: 0x00AB1CE0
+		// Token: 0x06022BDA RID: 142298 RVA: 0x009E0874 File Offset: 0x009DEA74
 		private void InitRootActorAndComponentRegistry()
 		{
 			this.OnRegisterComponent();
@@ -555,7 +545,8 @@ namespace CSharpScript.Game.Ui
 			this.RootItem = (((rootActor != null) ? rootActor.GetComponentByClass(UUIItem.StaticClass()) : null) as UUIItem);
 		}
 
-		// Token: 0x0602E4C8 RID: 189640 RVA: 0x00AB3B30 File Offset: 0x00AB1D30
+		// Token: 0x06022BDB RID: 142299 RVA: 0x009E08C4 File Offset: 0x009DEAC4
+		[NullableContext(2)]
 		private unsafe AUIBaseActor FindInitedComponentRegistryActor()
 		{
 			AUIBaseActor originalActor = this._originalActor;
@@ -631,13 +622,13 @@ namespace CSharpScript.Game.Ui
 			return auibaseActor;
 		}
 
-		// Token: 0x0602E4C9 RID: 189641 RVA: 0x00AB3DC8 File Offset: 0x00AB1FC8
+		// Token: 0x06022BDC RID: 142300 RVA: 0x009E0B5C File Offset: 0x009DED5C
 		protected virtual bool DestroyOverride()
 		{
 			return false;
 		}
 
-		// Token: 0x0602E4CA RID: 189642 RVA: 0x00AB3DCC File Offset: 0x00AB1FCC
+		// Token: 0x06022BDD RID: 142301 RVA: 0x009E0B60 File Offset: 0x009DED60
 		private void DestroyPrivate()
 		{
 			this.UnBindOnClickEvents();
@@ -653,7 +644,7 @@ namespace CSharpScript.Game.Ui
 			this.DestroyActor();
 		}
 
-		// Token: 0x0602E4CB RID: 189643 RVA: 0x00AB3E30 File Offset: 0x00AB2030
+		// Token: 0x06022BDE RID: 142302 RVA: 0x009E0BC4 File Offset: 0x009DEDC4
 		private void DestroyActor()
 		{
 			if (this.SkipDestroyActor)
@@ -686,7 +677,8 @@ namespace CSharpScript.Game.Ui
 			this.RootItem = null;
 		}
 
-		// Token: 0x0602E4CC RID: 189644 RVA: 0x00AB3EF4 File Offset: 0x00AB20F4
+		// Token: 0x06022BDF RID: 142303 RVA: 0x009E0C88 File Offset: 0x009DEE88
+		[NullableContext(2)]
 		private void AutoDestroy(AActor aActor)
 		{
 			if (base.IsDestroyOrDestroying)
@@ -697,7 +689,8 @@ namespace CSharpScript.Game.Ui
 			base.Destroy(null);
 		}
 
-		// Token: 0x0602E4CD RID: 189645 RVA: 0x00AB3F0C File Offset: 0x00AB210C
+		// Token: 0x06022BE0 RID: 142304 RVA: 0x009E0CA0 File Offset: 0x009DEEA0
+		[NullableContext(2)]
 		private void DestroyCheck(AActor aActor)
 		{
 			if (base.IsDestroyOrDestroying || this.WaitToDestroy)
@@ -712,45 +705,49 @@ namespace CSharpScript.Game.Ui
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E4CE RID: 189646 RVA: 0x00AB3F5B File Offset: 0x00AB215B
+		// Token: 0x06022BE1 RID: 142305 RVA: 0x009E0CEF File Offset: 0x009DEEEF
+		[NullableContext(2)]
 		public UUIItem GetRootItem()
 		{
 			return this.RootItem;
 		}
 
-		// Token: 0x0602E4CF RID: 189647 RVA: 0x00AB3F63 File Offset: 0x00AB2163
+		// Token: 0x06022BE2 RID: 142306 RVA: 0x009E0CF7 File Offset: 0x009DEEF7
+		[NullableContext(2)]
 		public AActor GetRootActor()
 		{
 			return this.RootActor;
 		}
 
-		// Token: 0x0602E4D0 RID: 189648 RVA: 0x00AB3F6B File Offset: 0x00AB216B
+		// Token: 0x06022BE3 RID: 142307 RVA: 0x009E0CFF File Offset: 0x009DEEFF
+		[NullableContext(2)]
 		public AActor GetOriginalActor()
 		{
 			return this._originalActor;
 		}
 
-		// Token: 0x0602E4D1 RID: 189649 RVA: 0x00AB3F73 File Offset: 0x00AB2173
+		// Token: 0x06022BE4 RID: 142308 RVA: 0x009E0D07 File Offset: 0x009DEF07
+		[NullableContext(2)]
 		public virtual UUIItem GetOriginalItem()
 		{
 			return this._originalItem;
 		}
 
-		// Token: 0x0602E4D2 RID: 189650 RVA: 0x00AB3F7B File Offset: 0x00AB217B
+		// Token: 0x06022BE5 RID: 142309 RVA: 0x009E0D0F File Offset: 0x009DEF0F
+		[NullableContext(2)]
 		public virtual CustomPromise GetClosePromiseImplement()
 		{
 			return null;
 		}
 
-		// Token: 0x0602E4D3 RID: 189651 RVA: 0x00AB3F7E File Offset: 0x00AB217E
+		// Token: 0x06022BE6 RID: 142310 RVA: 0x009E0D12 File Offset: 0x009DEF12
 		private void RecycleAsyncLoad()
 		{
 			UiActorPool.Instance.RecycleAsync(this.UiPoolActorNew, this._actorPath);
 			this.UiPoolActorNew = null;
 		}
 
-		// Token: 0x0602E4D4 RID: 189652 RVA: 0x00AB3FA0 File Offset: 0x00AB21A0
-		[NullableContext(1)]
+		// Token: 0x06022BE7 RID: 142311 RVA: 0x009E0D34 File Offset: 0x009DEF34
 		private void BindAudioEvents(Type type, UActorComponent component)
 		{
 			if (!(type == typeof(UUIButtonComponent)))
@@ -788,7 +785,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E4D5 RID: 189653 RVA: 0x00AB4050 File Offset: 0x00AB2250
+		// Token: 0x06022BE8 RID: 142312 RVA: 0x009E0DE4 File Offset: 0x009DEFE4
 		private void UnBindAllAudioEvents()
 		{
 			foreach (KeyValuePair<int, Tuple<Type, UActorComponent>> keyValuePair in this.BaseComponentMap)
@@ -822,7 +819,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4D6 RID: 189654 RVA: 0x00AB4130 File Offset: 0x00AB2330
+		// Token: 0x06022BE9 RID: 142313 RVA: 0x009E0EC4 File Offset: 0x009DF0C4
 		protected unsafe void BindOnClickEvents()
 		{
 			foreach (ValueTuple<int, Delegate> valueTuple in this.BtnBindInfo)
@@ -845,8 +842,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4D7 RID: 189655 RVA: 0x00AB4210 File Offset: 0x00AB2410
-		[NullableContext(1)]
+		// Token: 0x06022BEA RID: 142314 RVA: 0x009E0FA4 File Offset: 0x009DF1A4
 		protected void BindOnClickEvent(int name, Delegate fn)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -893,7 +889,7 @@ namespace CSharpScript.Game.Ui
 			UiComponentActionBinder.BindClickEvent(name, uuitextInputComponent, fn);
 		}
 
-		// Token: 0x0602E4D8 RID: 189656 RVA: 0x00AB42F8 File Offset: 0x00AB24F8
+		// Token: 0x06022BEB RID: 142315 RVA: 0x009E108C File Offset: 0x009DF28C
 		protected void UnBindOnClickEvents()
 		{
 			foreach (ValueTuple<int, Delegate> valueTuple in this.BtnBindInfo)
@@ -902,7 +898,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4D9 RID: 189657 RVA: 0x00AB4350 File Offset: 0x00AB2550
+		// Token: 0x06022BEC RID: 142316 RVA: 0x009E10E4 File Offset: 0x009DF2E4
 		protected void UnBindOnClickEvent(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -950,8 +946,7 @@ namespace CSharpScript.Game.Ui
 			uuitextInputComponent.OnInputActivateDelegate.Unbind();
 		}
 
-		// Token: 0x0602E4DA RID: 189658 RVA: 0x00AB4450 File Offset: 0x00AB2650
-		[NullableContext(1)]
+		// Token: 0x06022BED RID: 142317 RVA: 0x009E11E4 File Offset: 0x009DF3E4
 		protected void PostClickAudioEvent(string eventPath)
 		{
 			string text = AudioSystem.Instance.parseAudioEventPath(eventPath);
@@ -961,7 +956,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E4DB RID: 189659 RVA: 0x00AB4478 File Offset: 0x00AB2678
+		// Token: 0x06022BEE RID: 142318 RVA: 0x009E120C File Offset: 0x009DF40C
+		[NullableContext(2)]
 		protected UUIButtonComponent GetButton(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -972,7 +968,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIButtonComponent;
 		}
 
-		// Token: 0x0602E4DC RID: 189660 RVA: 0x00AB44A4 File Offset: 0x00AB26A4
+		// Token: 0x06022BEF RID: 142319 RVA: 0x009E1238 File Offset: 0x009DF438
+		[NullableContext(2)]
 		protected UUIItem GetItem(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -983,7 +980,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIItem;
 		}
 
-		// Token: 0x0602E4DD RID: 189661 RVA: 0x00AB44D0 File Offset: 0x00AB26D0
+		// Token: 0x06022BF0 RID: 142320 RVA: 0x009E1264 File Offset: 0x009DF464
+		[NullableContext(2)]
 		protected USpineSkeletonAnimationComponent GetSpine(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -994,7 +992,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as USpineSkeletonAnimationComponent;
 		}
 
-		// Token: 0x0602E4DE RID: 189662 RVA: 0x00AB44FC File Offset: 0x00AB26FC
+		// Token: 0x06022BF1 RID: 142321 RVA: 0x009E1290 File Offset: 0x009DF490
+		[NullableContext(2)]
 		protected UUIInteractionGroup GetInteractionGroup(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1005,7 +1004,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIInteractionGroup;
 		}
 
-		// Token: 0x0602E4DF RID: 189663 RVA: 0x00AB4528 File Offset: 0x00AB2728
+		// Token: 0x06022BF2 RID: 142322 RVA: 0x009E12BC File Offset: 0x009DF4BC
+		[NullableContext(2)]
 		protected UUIText GetText(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1016,7 +1016,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIText;
 		}
 
-		// Token: 0x0602E4E0 RID: 189664 RVA: 0x00AB4554 File Offset: 0x00AB2754
+		// Token: 0x06022BF3 RID: 142323 RVA: 0x009E12E8 File Offset: 0x009DF4E8
+		[NullableContext(2)]
 		protected UUIArtText GetArtText(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1027,7 +1028,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIArtText;
 		}
 
-		// Token: 0x0602E4E1 RID: 189665 RVA: 0x00AB4580 File Offset: 0x00AB2780
+		// Token: 0x06022BF4 RID: 142324 RVA: 0x009E1314 File Offset: 0x009DF514
+		[NullableContext(2)]
 		protected UUISprite GetSprite(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1038,7 +1040,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUISprite;
 		}
 
-		// Token: 0x0602E4E2 RID: 189666 RVA: 0x00AB45AC File Offset: 0x00AB27AC
+		// Token: 0x06022BF5 RID: 142325 RVA: 0x009E1340 File Offset: 0x009DF540
+		[NullableContext(2)]
 		protected UUITexture GetTexture(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1049,7 +1052,20 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUITexture;
 		}
 
-		// Token: 0x0602E4E3 RID: 189667 RVA: 0x00AB45D8 File Offset: 0x00AB27D8
+		// Token: 0x06022BF6 RID: 142326 RVA: 0x009E136C File Offset: 0x009DF56C
+		[NullableContext(2)]
+		protected UUIRenderableMask GetRenderableMask(int name)
+		{
+			Tuple<Type, UActorComponent> tuple;
+			if (!this.BaseComponentMap.TryGetValue(name, out tuple))
+			{
+				return null;
+			}
+			return tuple.Item2 as UUIRenderableMask;
+		}
+
+		// Token: 0x06022BF7 RID: 142327 RVA: 0x009E1398 File Offset: 0x009DF598
+		[NullableContext(2)]
 		protected UUILangTexture GetLangTexture(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1060,7 +1076,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUILangTexture;
 		}
 
-		// Token: 0x0602E4E4 RID: 189668 RVA: 0x00AB4604 File Offset: 0x00AB2804
+		// Token: 0x06022BF8 RID: 142328 RVA: 0x009E13C4 File Offset: 0x009DF5C4
+		[NullableContext(2)]
 		protected UUISliderComponent GetSlider(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1071,7 +1088,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUISliderComponent;
 		}
 
-		// Token: 0x0602E4E5 RID: 189669 RVA: 0x00AB4630 File Offset: 0x00AB2830
+		// Token: 0x06022BF9 RID: 142329 RVA: 0x009E13F0 File Offset: 0x009DF5F0
+		[NullableContext(2)]
 		protected UUIToggleComponent GetToggle(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1082,7 +1100,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIToggleComponent;
 		}
 
-		// Token: 0x0602E4E6 RID: 189670 RVA: 0x00AB465C File Offset: 0x00AB285C
+		// Token: 0x06022BFA RID: 142330 RVA: 0x009E141C File Offset: 0x009DF61C
+		[NullableContext(2)]
 		protected UUIExtendToggle GetExtendToggle(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1093,7 +1112,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIExtendToggle;
 		}
 
-		// Token: 0x0602E4E7 RID: 189671 RVA: 0x00AB4688 File Offset: 0x00AB2888
+		// Token: 0x06022BFB RID: 142331 RVA: 0x009E1448 File Offset: 0x009DF648
+		[NullableContext(2)]
 		protected UUIExtendToggleGroup GetExtendToggleGroup(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1104,7 +1124,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIExtendToggleGroup;
 		}
 
-		// Token: 0x0602E4E8 RID: 189672 RVA: 0x00AB46B4 File Offset: 0x00AB28B4
+		// Token: 0x06022BFC RID: 142332 RVA: 0x009E1474 File Offset: 0x009DF674
+		[NullableContext(2)]
 		protected UUIScrollViewWithScrollbarComponent GetScrollViewWithScrollbar(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1115,7 +1136,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIScrollViewWithScrollbarComponent;
 		}
 
-		// Token: 0x0602E4E9 RID: 189673 RVA: 0x00AB46E0 File Offset: 0x00AB28E0
+		// Token: 0x06022BFD RID: 142333 RVA: 0x009E14A0 File Offset: 0x009DF6A0
+		[NullableContext(2)]
 		protected UUIDynScrollViewComponent GetUIDynScrollViewComponent(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1126,7 +1148,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIDynScrollViewComponent;
 		}
 
-		// Token: 0x0602E4EA RID: 189674 RVA: 0x00AB470C File Offset: 0x00AB290C
+		// Token: 0x06022BFE RID: 142334 RVA: 0x009E14CC File Offset: 0x009DF6CC
+		[NullableContext(2)]
 		protected UUIScrollbarComponent GetScrollScrollbar(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1137,7 +1160,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIScrollbarComponent;
 		}
 
-		// Token: 0x0602E4EB RID: 189675 RVA: 0x00AB4738 File Offset: 0x00AB2938
+		// Token: 0x06022BFF RID: 142335 RVA: 0x009E14F8 File Offset: 0x009DF6F8
+		[NullableContext(2)]
 		protected UUIScrollViewComponent GetScrollView(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1148,7 +1172,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIScrollViewComponent;
 		}
 
-		// Token: 0x0602E4EC RID: 189676 RVA: 0x00AB4764 File Offset: 0x00AB2964
+		// Token: 0x06022C00 RID: 142336 RVA: 0x009E1524 File Offset: 0x009DF724
+		[NullableContext(2)]
 		protected UUILoopScrollViewComponent GetLoopScrollViewComponent(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1159,7 +1184,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUILoopScrollViewComponent;
 		}
 
-		// Token: 0x0602E4ED RID: 189677 RVA: 0x00AB4790 File Offset: 0x00AB2990
+		// Token: 0x06022C01 RID: 142337 RVA: 0x009E1550 File Offset: 0x009DF750
+		[NullableContext(2)]
 		protected UUIMultiTemplateScrollViewComponent GetMultiTemplateScrollViewComponent(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1170,7 +1196,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIMultiTemplateScrollViewComponent;
 		}
 
-		// Token: 0x0602E4EE RID: 189678 RVA: 0x00AB47BC File Offset: 0x00AB29BC
+		// Token: 0x06022C02 RID: 142338 RVA: 0x009E157C File Offset: 0x009DF77C
+		[NullableContext(2)]
 		protected UUIDropdownComponent GetDropdown(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1181,7 +1208,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIDropdownComponent;
 		}
 
-		// Token: 0x0602E4EF RID: 189679 RVA: 0x00AB47E8 File Offset: 0x00AB29E8
+		// Token: 0x06022C03 RID: 142339 RVA: 0x009E15A8 File Offset: 0x009DF7A8
+		[NullableContext(2)]
 		protected UUITextInputComponent GetInputText(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1192,7 +1220,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUITextInputComponent;
 		}
 
-		// Token: 0x0602E4F0 RID: 189680 RVA: 0x00AB4814 File Offset: 0x00AB2A14
+		// Token: 0x06022C04 RID: 142340 RVA: 0x009E15D4 File Offset: 0x009DF7D4
+		[NullableContext(2)]
 		protected UUIDraggableComponent GetDraggable(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1203,7 +1232,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIDraggableComponent;
 		}
 
-		// Token: 0x0602E4F1 RID: 189681 RVA: 0x00AB4840 File Offset: 0x00AB2A40
+		// Token: 0x06022C05 RID: 142341 RVA: 0x009E1600 File Offset: 0x009DF800
+		[NullableContext(2)]
 		protected UUINiagara GetUiNiagara(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1214,7 +1244,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUINiagara;
 		}
 
-		// Token: 0x0602E4F2 RID: 189682 RVA: 0x00AB486C File Offset: 0x00AB2A6C
+		// Token: 0x06022C06 RID: 142342 RVA: 0x009E162C File Offset: 0x009DF82C
+		[NullableContext(2)]
 		protected UUIVerticalLayout GetVerticalLayout(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1225,7 +1256,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIVerticalLayout;
 		}
 
-		// Token: 0x0602E4F3 RID: 189683 RVA: 0x00AB4898 File Offset: 0x00AB2A98
+		// Token: 0x06022C07 RID: 142343 RVA: 0x009E1658 File Offset: 0x009DF858
+		[NullableContext(2)]
 		protected UUIHorizontalLayout GetHorizontalLayout(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1236,7 +1268,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIHorizontalLayout;
 		}
 
-		// Token: 0x0602E4F4 RID: 189684 RVA: 0x00AB48C4 File Offset: 0x00AB2AC4
+		// Token: 0x06022C08 RID: 142344 RVA: 0x009E1684 File Offset: 0x009DF884
+		[NullableContext(2)]
 		protected UUIMultiTemplateLayout GetMultiTemplateLayout(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1247,7 +1280,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIMultiTemplateLayout;
 		}
 
-		// Token: 0x0602E4F5 RID: 189685 RVA: 0x00AB48F0 File Offset: 0x00AB2AF0
+		// Token: 0x06022C09 RID: 142345 RVA: 0x009E16B0 File Offset: 0x009DF8B0
+		[NullableContext(2)]
 		protected UUIGridLayout GetGridLayout(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1258,7 +1292,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIGridLayout;
 		}
 
-		// Token: 0x0602E4F6 RID: 189686 RVA: 0x00AB491C File Offset: 0x00AB2B1C
+		// Token: 0x06022C0A RID: 142346 RVA: 0x009E16DC File Offset: 0x009DF8DC
+		[NullableContext(2)]
 		protected UUILayoutBase GetLayoutBase(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1269,7 +1304,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUILayoutBase;
 		}
 
-		// Token: 0x0602E4F7 RID: 189687 RVA: 0x00AB4948 File Offset: 0x00AB2B48
+		// Token: 0x06022C0B RID: 142347 RVA: 0x009E1708 File Offset: 0x009DF908
+		[NullableContext(2)]
 		protected UUITextTransition GetUITextTransition(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1280,7 +1316,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUITextTransition;
 		}
 
-		// Token: 0x0602E4F8 RID: 189688 RVA: 0x00AB4974 File Offset: 0x00AB2B74
+		// Token: 0x06022C0C RID: 142348 RVA: 0x009E1734 File Offset: 0x009DF934
+		[NullableContext(2)]
 		protected UUITextureTransitionComponent GetUiTextureTransitionComponent(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1291,7 +1328,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUITextureTransitionComponent;
 		}
 
-		// Token: 0x0602E4F9 RID: 189689 RVA: 0x00AB49A0 File Offset: 0x00AB2BA0
+		// Token: 0x06022C0D RID: 142349 RVA: 0x009E1760 File Offset: 0x009DF960
+		[NullableContext(2)]
 		protected UUISpriteTransition GetUiSpriteTransition(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1302,7 +1340,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUISpriteTransition;
 		}
 
-		// Token: 0x0602E4FA RID: 189690 RVA: 0x00AB49CC File Offset: 0x00AB2BCC
+		// Token: 0x06022C0E RID: 142350 RVA: 0x009E178C File Offset: 0x009DF98C
+		[NullableContext(2)]
 		protected UUIExtendToggleSpriteTransition GetUiExtendToggleSpriteTransition(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1313,7 +1352,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIExtendToggleSpriteTransition;
 		}
 
-		// Token: 0x0602E4FB RID: 189691 RVA: 0x00AB49F8 File Offset: 0x00AB2BF8
+		// Token: 0x06022C0F RID: 142351 RVA: 0x009E17B8 File Offset: 0x009DF9B8
+		[NullableContext(2)]
 		protected UUIExtendToggleTextureTransition GetUiExtendToggleTextureTransition(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1324,7 +1364,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIExtendToggleTextureTransition;
 		}
 
-		// Token: 0x0602E4FC RID: 189692 RVA: 0x00AB4A24 File Offset: 0x00AB2C24
+		// Token: 0x06022C10 RID: 142352 RVA: 0x009E17E4 File Offset: 0x009DF9E4
+		[NullableContext(2)]
 		protected UUIExtendToggleTextTransition GetUiExtendToggleTextTransition(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1335,7 +1376,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIExtendToggleTextTransition;
 		}
 
-		// Token: 0x0602E4FD RID: 189693 RVA: 0x00AB4A50 File Offset: 0x00AB2C50
+		// Token: 0x06022C11 RID: 142353 RVA: 0x009E1810 File Offset: 0x009DFA10
+		[NullableContext(2)]
 		protected UUISizeControlByOther GetUiSizeControlByOther(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1346,7 +1388,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUISizeControlByOther;
 		}
 
-		// Token: 0x0602E4FE RID: 189694 RVA: 0x00AB4A7C File Offset: 0x00AB2C7C
+		// Token: 0x06022C12 RID: 142354 RVA: 0x009E183C File Offset: 0x009DFA3C
+		[NullableContext(2)]
 		protected UUIDynamicBatchMesh GetDynamicBatchMesh(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1357,7 +1400,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIDynamicBatchMesh;
 		}
 
-		// Token: 0x0602E4FF RID: 189695 RVA: 0x00AB4AA8 File Offset: 0x00AB2CA8
+		// Token: 0x06022C13 RID: 142355 RVA: 0x009E1868 File Offset: 0x009DFA68
+		[NullableContext(2)]
 		protected UUIInturnAnimController GetUiInturnAnimController(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1368,7 +1412,8 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUIInturnAnimController;
 		}
 
-		// Token: 0x0602E500 RID: 189696 RVA: 0x00AB4AD4 File Offset: 0x00AB2CD4
+		// Token: 0x06022C14 RID: 142356 RVA: 0x009E1894 File Offset: 0x009DFA94
+		[NullableContext(2)]
 		protected UUI2DLineRaw GetUiLineRaw(int name)
 		{
 			Tuple<Type, UActorComponent> tuple;
@@ -1379,15 +1424,38 @@ namespace CSharpScript.Game.Ui
 			return tuple.Item2 as UUI2DLineRaw;
 		}
 
-		// Token: 0x0602E501 RID: 189697 RVA: 0x00AB4AFE File Offset: 0x00AB2CFE
+		// Token: 0x06022C15 RID: 142357 RVA: 0x009E18C0 File Offset: 0x009DFAC0
+		[NullableContext(2)]
+		protected UUIEffectTextAnimation GetUIEffectTextAnimation(int name)
+		{
+			Tuple<Type, UActorComponent> tuple;
+			if (!this.BaseComponentMap.TryGetValue(name, out tuple))
+			{
+				return null;
+			}
+			return tuple.Item2 as UUIEffectTextAnimation;
+		}
+
+		// Token: 0x06022C16 RID: 142358 RVA: 0x009E18EC File Offset: 0x009DFAEC
+		[NullableContext(2)]
+		protected ULGUIPlayTweenComponent GetTween(int name)
+		{
+			Tuple<Type, UActorComponent> tuple;
+			if (!this.BaseComponentMap.TryGetValue(name, out tuple))
+			{
+				return null;
+			}
+			return tuple.Item2 as ULGUIPlayTweenComponent;
+		}
+
+		// Token: 0x06022C17 RID: 142359 RVA: 0x009E1916 File Offset: 0x009DFB16
 		private void InitGuideRegistry()
 		{
 			AActor rootActor = this.GetRootActor();
 			this._guideRegistry = (((rootActor != null) ? rootActor.GetComponentByClass(UGuideHookRegistry.StaticClass()) : null) as UGuideHookRegistry);
 		}
 
-		// Token: 0x0602E502 RID: 189698 RVA: 0x00AB4B28 File Offset: 0x00AB2D28
-		[NullableContext(1)]
+		// Token: 0x06022C18 RID: 142360 RVA: 0x009E1940 File Offset: 0x009DFB40
 		[return: Nullable(2)]
 		public UUIItem GetGuideUiItem(string name)
 		{
@@ -1408,8 +1476,7 @@ namespace CSharpScript.Game.Ui
 			return auibaseActor.GetUIItem();
 		}
 
-		// Token: 0x0602E503 RID: 189699 RVA: 0x00AB4B7C File Offset: 0x00AB2D7C
-		[NullableContext(1)]
+		// Token: 0x06022C19 RID: 142361 RVA: 0x009E1994 File Offset: 0x009DFB94
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1421,13 +1488,14 @@ namespace CSharpScript.Game.Ui
 			return null;
 		}
 
-		// Token: 0x0602E504 RID: 189700 RVA: 0x00AB4BA6 File Offset: 0x00AB2DA6
+		// Token: 0x06022C1A RID: 142362 RVA: 0x009E19BE File Offset: 0x009DFBBE
+		[NullableContext(2)]
 		public virtual UUIScrollViewComponent GetGuideScrollViewToLock()
 		{
 			return null;
 		}
 
-		// Token: 0x0602E505 RID: 189701 RVA: 0x00AB4BAC File Offset: 0x00AB2DAC
+		// Token: 0x06022C1B RID: 142363 RVA: 0x009E19C4 File Offset: 0x009DFBC4
 		protected void SetButtonUiActive(int name, bool value)
 		{
 			UUIButtonComponent button = this.GetButton(name);
@@ -1444,8 +1512,7 @@ namespace CSharpScript.Game.Ui
 			rootComponent.SetUIActive(value);
 		}
 
-		// Token: 0x0602E506 RID: 189702 RVA: 0x00AB4BF4 File Offset: 0x00AB2DF4
-		[NullableContext(1)]
+		// Token: 0x06022C1C RID: 142364 RVA: 0x009E1A0C File Offset: 0x009DFC0C
 		protected virtual void SetSpriteByPath(string path, UUISprite uiSprite, bool setSize, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> callback = null)
 		{
 			EUiViewName? euiViewName = syncLoadViewName;
@@ -1457,7 +1524,14 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetSpriteByPathAsync(path, uiSprite, setSize, callback);
 		}
 
-		// Token: 0x0602E507 RID: 189703 RVA: 0x00AB4C4B File Offset: 0x00AB2E4B
+		// Token: 0x06022C1D RID: 142365 RVA: 0x009E1A63 File Offset: 0x009DFC63
+		protected bool CancelSpriteLoad(UUISprite uiSprite)
+		{
+			return this._uiImageSettingModule.CancelSpriteLoad(uiSprite);
+		}
+
+		// Token: 0x06022C1E RID: 142366 RVA: 0x009E1A71 File Offset: 0x009DFC71
+		[NullableContext(2)]
 		protected void TrySetSpriteByPath(string path, UUISprite uiSprite, bool setSize, EUiViewName? syncLoadViewName = null, Action<bool> callback = null)
 		{
 			if (path == null || uiSprite == null)
@@ -1475,22 +1549,22 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E508 RID: 189704 RVA: 0x00AB4C74 File Offset: 0x00AB2E74
-		[NullableContext(1)]
+		// Token: 0x06022C1F RID: 142367 RVA: 0x009E1A98 File Offset: 0x009DFC98
 		protected UniTask SetSpriteTransitionByPath(string path, UUISpriteTransition uiSpriteTransition, EUISelectableSelectionState state = EUISelectableSelectionState.EUISelectableSelectionState_MAX)
 		{
-			UiPanelBase.<SetSpriteTransitionByPath>d__149 <SetSpriteTransitionByPath>d__;
+			UiPanelBase.<SetSpriteTransitionByPath>d__153 <SetSpriteTransitionByPath>d__;
 			<SetSpriteTransitionByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetSpriteTransitionByPath>d__.<>4__this = this;
 			<SetSpriteTransitionByPath>d__.path = path;
 			<SetSpriteTransitionByPath>d__.uiSpriteTransition = uiSpriteTransition;
 			<SetSpriteTransitionByPath>d__.state = state;
 			<SetSpriteTransitionByPath>d__.<>1__state = -1;
-			<SetSpriteTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetSpriteTransitionByPath>d__149>(ref <SetSpriteTransitionByPath>d__);
+			<SetSpriteTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetSpriteTransitionByPath>d__153>(ref <SetSpriteTransitionByPath>d__);
 			return <SetSpriteTransitionByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E509 RID: 189705 RVA: 0x00AB4CCF File Offset: 0x00AB2ECF
+		// Token: 0x06022C20 RID: 142368 RVA: 0x009E1AF3 File Offset: 0x009DFCF3
+		[NullableContext(2)]
 		protected void SetTextureByPath([Nullable(1)] string path, UUITexture uiTexture, EUiViewName? syncLoadViewName = null, Action<bool> callback = null)
 		{
 			if (syncLoadViewName != null)
@@ -1501,7 +1575,15 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetTextureByPathAsync(path, uiTexture, callback);
 		}
 
-		// Token: 0x0602E50A RID: 189706 RVA: 0x00AB4D00 File Offset: 0x00AB2F00
+		// Token: 0x06022C21 RID: 142369 RVA: 0x009E1B24 File Offset: 0x009DFD24
+		[NullableContext(2)]
+		protected void SetRenderableMaskTextureByPath([Nullable(1)] string path, UUIRenderableMask renderableMask, Action<bool> callback = null)
+		{
+			this._uiImageSettingModule.SetRenderableMaskTextureByPathAsync(path, renderableMask, callback);
+		}
+
+		// Token: 0x06022C22 RID: 142370 RVA: 0x009E1B34 File Offset: 0x009DFD34
+		[NullableContext(2)]
 		protected void TrySetTextureByPath(string path, UUITexture uiTexture, EUiViewName? syncLoadViewName = null, Action<bool> callback = null)
 		{
 			if (path == null)
@@ -1522,125 +1604,118 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E50B RID: 189707 RVA: 0x00AB4D28 File Offset: 0x00AB2F28
-		[NullableContext(1)]
+		// Token: 0x06022C23 RID: 142371 RVA: 0x009E1B5C File Offset: 0x009DFD5C
 		protected UniTask SetTextureTransitionByPath(string path, UUITextureTransitionComponent uiTextureTransition, EUISelectableSelectionState state = EUISelectableSelectionState.EUISelectableSelectionState_MAX)
 		{
-			UiPanelBase.<SetTextureTransitionByPath>d__152 <SetTextureTransitionByPath>d__;
+			UiPanelBase.<SetTextureTransitionByPath>d__157 <SetTextureTransitionByPath>d__;
 			<SetTextureTransitionByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetTextureTransitionByPath>d__.<>4__this = this;
 			<SetTextureTransitionByPath>d__.path = path;
 			<SetTextureTransitionByPath>d__.uiTextureTransition = uiTextureTransition;
 			<SetTextureTransitionByPath>d__.state = state;
 			<SetTextureTransitionByPath>d__.<>1__state = -1;
-			<SetTextureTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetTextureTransitionByPath>d__152>(ref <SetTextureTransitionByPath>d__);
+			<SetTextureTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetTextureTransitionByPath>d__157>(ref <SetTextureTransitionByPath>d__);
 			return <SetTextureTransitionByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E50C RID: 189708 RVA: 0x00AB4D84 File Offset: 0x00AB2F84
-		[NullableContext(1)]
+		// Token: 0x06022C24 RID: 142372 RVA: 0x009E1BB8 File Offset: 0x009DFDB8
 		protected UniTask SetExtendToggleTextureTransitionByPath(string path, UUIExtendToggleTextureTransition uiExtendToggleTextureTransition, EToggleTransitionState state = EToggleTransitionState.ETT_MAX)
 		{
-			UiPanelBase.<SetExtendToggleTextureTransitionByPath>d__153 <SetExtendToggleTextureTransitionByPath>d__;
+			UiPanelBase.<SetExtendToggleTextureTransitionByPath>d__158 <SetExtendToggleTextureTransitionByPath>d__;
 			<SetExtendToggleTextureTransitionByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetExtendToggleTextureTransitionByPath>d__.<>4__this = this;
 			<SetExtendToggleTextureTransitionByPath>d__.path = path;
 			<SetExtendToggleTextureTransitionByPath>d__.uiExtendToggleTextureTransition = uiExtendToggleTextureTransition;
 			<SetExtendToggleTextureTransitionByPath>d__.state = state;
 			<SetExtendToggleTextureTransitionByPath>d__.<>1__state = -1;
-			<SetExtendToggleTextureTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleTextureTransitionByPath>d__153>(ref <SetExtendToggleTextureTransitionByPath>d__);
+			<SetExtendToggleTextureTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleTextureTransitionByPath>d__158>(ref <SetExtendToggleTextureTransitionByPath>d__);
 			return <SetExtendToggleTextureTransitionByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E50D RID: 189709 RVA: 0x00AB4DE0 File Offset: 0x00AB2FE0
-		[NullableContext(1)]
+		// Token: 0x06022C25 RID: 142373 RVA: 0x009E1C14 File Offset: 0x009DFE14
 		protected UniTask SetExtendToggleTextureTransitionGroupByPath(string path, UUIExtendToggleTextureTransition uiExtendToggleTextureTransition, EToggleTransitionState[] states)
 		{
-			UiPanelBase.<SetExtendToggleTextureTransitionGroupByPath>d__154 <SetExtendToggleTextureTransitionGroupByPath>d__;
+			UiPanelBase.<SetExtendToggleTextureTransitionGroupByPath>d__159 <SetExtendToggleTextureTransitionGroupByPath>d__;
 			<SetExtendToggleTextureTransitionGroupByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetExtendToggleTextureTransitionGroupByPath>d__.<>4__this = this;
 			<SetExtendToggleTextureTransitionGroupByPath>d__.path = path;
 			<SetExtendToggleTextureTransitionGroupByPath>d__.uiExtendToggleTextureTransition = uiExtendToggleTextureTransition;
 			<SetExtendToggleTextureTransitionGroupByPath>d__.states = states;
 			<SetExtendToggleTextureTransitionGroupByPath>d__.<>1__state = -1;
-			<SetExtendToggleTextureTransitionGroupByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleTextureTransitionGroupByPath>d__154>(ref <SetExtendToggleTextureTransitionGroupByPath>d__);
+			<SetExtendToggleTextureTransitionGroupByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleTextureTransitionGroupByPath>d__159>(ref <SetExtendToggleTextureTransitionGroupByPath>d__);
 			return <SetExtendToggleTextureTransitionGroupByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E50E RID: 189710 RVA: 0x00AB4E3C File Offset: 0x00AB303C
-		[NullableContext(1)]
+		// Token: 0x06022C26 RID: 142374 RVA: 0x009E1C70 File Offset: 0x009DFE70
 		protected UniTask SetTextureCustomMaterialAsync(string materialPath, [Nullable(2)] UUITexture uiTexture)
 		{
-			UiPanelBase.<SetTextureCustomMaterialAsync>d__155 <SetTextureCustomMaterialAsync>d__;
+			UiPanelBase.<SetTextureCustomMaterialAsync>d__160 <SetTextureCustomMaterialAsync>d__;
 			<SetTextureCustomMaterialAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetTextureCustomMaterialAsync>d__.<>4__this = this;
 			<SetTextureCustomMaterialAsync>d__.materialPath = materialPath;
 			<SetTextureCustomMaterialAsync>d__.uiTexture = uiTexture;
 			<SetTextureCustomMaterialAsync>d__.<>1__state = -1;
-			<SetTextureCustomMaterialAsync>d__.<>t__builder.Start<UiPanelBase.<SetTextureCustomMaterialAsync>d__155>(ref <SetTextureCustomMaterialAsync>d__);
+			<SetTextureCustomMaterialAsync>d__.<>t__builder.Start<UiPanelBase.<SetTextureCustomMaterialAsync>d__160>(ref <SetTextureCustomMaterialAsync>d__);
 			return <SetTextureCustomMaterialAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E50F RID: 189711 RVA: 0x00AB4E90 File Offset: 0x00AB3090
-		[NullableContext(1)]
+		// Token: 0x06022C27 RID: 142375 RVA: 0x009E1CC4 File Offset: 0x009DFEC4
 		protected UniTask SetExtendToggleSpriteTransitionByPath(string path, UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition, EToggleTransitionState? state = null)
 		{
-			UiPanelBase.<SetExtendToggleSpriteTransitionByPath>d__156 <SetExtendToggleSpriteTransitionByPath>d__;
+			UiPanelBase.<SetExtendToggleSpriteTransitionByPath>d__161 <SetExtendToggleSpriteTransitionByPath>d__;
 			<SetExtendToggleSpriteTransitionByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetExtendToggleSpriteTransitionByPath>d__.<>4__this = this;
 			<SetExtendToggleSpriteTransitionByPath>d__.path = path;
 			<SetExtendToggleSpriteTransitionByPath>d__.uiExtendToggleSpriteTransition = uiExtendToggleSpriteTransition;
 			<SetExtendToggleSpriteTransitionByPath>d__.state = state;
 			<SetExtendToggleSpriteTransitionByPath>d__.<>1__state = -1;
-			<SetExtendToggleSpriteTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleSpriteTransitionByPath>d__156>(ref <SetExtendToggleSpriteTransitionByPath>d__);
+			<SetExtendToggleSpriteTransitionByPath>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleSpriteTransitionByPath>d__161>(ref <SetExtendToggleSpriteTransitionByPath>d__);
 			return <SetExtendToggleSpriteTransitionByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E510 RID: 189712 RVA: 0x00AB4EEC File Offset: 0x00AB30EC
-		[NullableContext(1)]
+		// Token: 0x06022C28 RID: 142376 RVA: 0x009E1D20 File Offset: 0x009DFF20
 		protected UniTask SetExtendToggleSpriteTransitionByStateList(string path, UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition, EToggleTransitionState[] states)
 		{
-			UiPanelBase.<SetExtendToggleSpriteTransitionByStateList>d__157 <SetExtendToggleSpriteTransitionByStateList>d__;
+			UiPanelBase.<SetExtendToggleSpriteTransitionByStateList>d__162 <SetExtendToggleSpriteTransitionByStateList>d__;
 			<SetExtendToggleSpriteTransitionByStateList>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetExtendToggleSpriteTransitionByStateList>d__.<>4__this = this;
 			<SetExtendToggleSpriteTransitionByStateList>d__.path = path;
 			<SetExtendToggleSpriteTransitionByStateList>d__.uiExtendToggleSpriteTransition = uiExtendToggleSpriteTransition;
 			<SetExtendToggleSpriteTransitionByStateList>d__.states = states;
 			<SetExtendToggleSpriteTransitionByStateList>d__.<>1__state = -1;
-			<SetExtendToggleSpriteTransitionByStateList>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleSpriteTransitionByStateList>d__157>(ref <SetExtendToggleSpriteTransitionByStateList>d__);
+			<SetExtendToggleSpriteTransitionByStateList>d__.<>t__builder.Start<UiPanelBase.<SetExtendToggleSpriteTransitionByStateList>d__162>(ref <SetExtendToggleSpriteTransitionByStateList>d__);
 			return <SetExtendToggleSpriteTransitionByStateList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E511 RID: 189713 RVA: 0x00AB4F48 File Offset: 0x00AB3148
-		[NullableContext(1)]
+		// Token: 0x06022C29 RID: 142377 RVA: 0x009E1D7C File Offset: 0x009DFF7C
 		protected UniTask SetTextureAsync(string path, UUITexture uiTexture)
 		{
-			UiPanelBase.<SetTextureAsync>d__158 <SetTextureAsync>d__;
+			UiPanelBase.<SetTextureAsync>d__163 <SetTextureAsync>d__;
 			<SetTextureAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetTextureAsync>d__.<>4__this = this;
 			<SetTextureAsync>d__.path = path;
 			<SetTextureAsync>d__.uiTexture = uiTexture;
 			<SetTextureAsync>d__.<>1__state = -1;
-			<SetTextureAsync>d__.<>t__builder.Start<UiPanelBase.<SetTextureAsync>d__158>(ref <SetTextureAsync>d__);
+			<SetTextureAsync>d__.<>t__builder.Start<UiPanelBase.<SetTextureAsync>d__163>(ref <SetTextureAsync>d__);
 			return <SetTextureAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E512 RID: 189714 RVA: 0x00AB4F9C File Offset: 0x00AB319C
-		[NullableContext(1)]
+		// Token: 0x06022C2A RID: 142378 RVA: 0x009E1DD0 File Offset: 0x009DFFD0
 		protected UniTask SetSpriteAsync(string path, UUISprite uiSprite, bool setSize)
 		{
-			UiPanelBase.<SetSpriteAsync>d__159 <SetSpriteAsync>d__;
+			UiPanelBase.<SetSpriteAsync>d__164 <SetSpriteAsync>d__;
 			<SetSpriteAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetSpriteAsync>d__.<>4__this = this;
 			<SetSpriteAsync>d__.path = path;
 			<SetSpriteAsync>d__.uiSprite = uiSprite;
 			<SetSpriteAsync>d__.setSize = setSize;
 			<SetSpriteAsync>d__.<>1__state = -1;
-			<SetSpriteAsync>d__.<>t__builder.Start<UiPanelBase.<SetSpriteAsync>d__159>(ref <SetSpriteAsync>d__);
+			<SetSpriteAsync>d__.<>t__builder.Start<UiPanelBase.<SetSpriteAsync>d__164>(ref <SetSpriteAsync>d__);
 			return <SetSpriteAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E513 RID: 189715 RVA: 0x00AB4FF8 File Offset: 0x00AB31F8
+		// Token: 0x06022C2B RID: 142379 RVA: 0x009E1E2C File Offset: 0x009E002C
+		[NullableContext(2)]
 		protected void SetTextureShowUntilLoaded([Nullable(1)] string path, UUITexture uiTexture, Action<bool> callback = null)
 		{
 			if (uiTexture == null)
@@ -1658,8 +1733,7 @@ namespace CSharpScript.Game.Ui
 			});
 		}
 
-		// Token: 0x0602E514 RID: 189716 RVA: 0x00AB504C File Offset: 0x00AB324C
-		[NullableContext(1)]
+		// Token: 0x06022C2C RID: 142380 RVA: 0x009E1E80 File Offset: 0x009E0080
 		protected void SetItemIcon(UUITexture texture, int itemId, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> action = null)
 		{
 			if (syncLoadViewName != null)
@@ -1670,22 +1744,20 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetItemIconAsync(texture, itemId, action);
 		}
 
-		// Token: 0x0602E515 RID: 189717 RVA: 0x00AB5080 File Offset: 0x00AB3280
-		[NullableContext(1)]
+		// Token: 0x06022C2D RID: 142381 RVA: 0x009E1EB4 File Offset: 0x009E00B4
 		protected UniTask SetItemIconAsync(UUITexture texture, int itemId)
 		{
-			UiPanelBase.<SetItemIconAsync>d__162 <SetItemIconAsync>d__;
+			UiPanelBase.<SetItemIconAsync>d__167 <SetItemIconAsync>d__;
 			<SetItemIconAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetItemIconAsync>d__.<>4__this = this;
 			<SetItemIconAsync>d__.texture = texture;
 			<SetItemIconAsync>d__.itemId = itemId;
 			<SetItemIconAsync>d__.<>1__state = -1;
-			<SetItemIconAsync>d__.<>t__builder.Start<UiPanelBase.<SetItemIconAsync>d__162>(ref <SetItemIconAsync>d__);
+			<SetItemIconAsync>d__.<>t__builder.Start<UiPanelBase.<SetItemIconAsync>d__167>(ref <SetItemIconAsync>d__);
 			return <SetItemIconAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E516 RID: 189718 RVA: 0x00AB50D4 File Offset: 0x00AB32D4
-		[NullableContext(1)]
+		// Token: 0x06022C2E RID: 142382 RVA: 0x009E1F08 File Offset: 0x009E0108
 		protected void SetQualityIconById(UUISprite sprite, int qualityId, EUiViewName? syncLoadViewName = null, CommonDefine.EQualityIconType? type = null, [Nullable(2)] Action<bool> action = null)
 		{
 			CommonDefine.EQualityIconType valueOrDefault = type.GetValueOrDefault();
@@ -1697,8 +1769,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetQualityIconByIdAsync(sprite, qualityId, valueOrDefault, action);
 		}
 
-		// Token: 0x0602E517 RID: 189719 RVA: 0x00AB511A File Offset: 0x00AB331A
-		[NullableContext(1)]
+		// Token: 0x06022C2F RID: 142383 RVA: 0x009E1F4E File Offset: 0x009E014E
 		protected void SetItemQualityIcon(UUISprite sprite, int itemId, EUiViewName? syncLoadViewName = null, CommonDefine.EQualityIconType type = CommonDefine.EQualityIconType.BackgroundSprite, [Nullable(2)] Action<bool> action = null)
 		{
 			if (syncLoadViewName != null)
@@ -1709,8 +1780,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetItemQualityIconAsync(sprite, itemId, type, action);
 		}
 
-		// Token: 0x0602E518 RID: 189720 RVA: 0x00AB514F File Offset: 0x00AB334F
-		[NullableContext(1)]
+		// Token: 0x06022C30 RID: 142384 RVA: 0x009E1F83 File Offset: 0x009E0183
 		protected void SetRoleIcon(string path, UUITexture texture, int roleId, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> callback = null)
 		{
 			if (syncLoadViewName != null)
@@ -1721,8 +1791,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetRoleIconAsync(path, texture, roleId, callback);
 		}
 
-		// Token: 0x0602E519 RID: 189721 RVA: 0x00AB5182 File Offset: 0x00AB3382
-		[NullableContext(1)]
+		// Token: 0x06022C31 RID: 142385 RVA: 0x009E1FB6 File Offset: 0x009E01B6
 		protected void SetRoleSkinIcon(string path, UUITexture texture, int skinId, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> callback = null)
 		{
 			if (syncLoadViewName != null)
@@ -1733,8 +1802,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetRoleSkinIconAsync(path, texture, skinId, callback);
 		}
 
-		// Token: 0x0602E51A RID: 189722 RVA: 0x00AB51B8 File Offset: 0x00AB33B8
-		[NullableContext(1)]
+		// Token: 0x06022C32 RID: 142386 RVA: 0x009E1FEC File Offset: 0x009E01EC
 		protected void SetRoleIconByRoleIdOrSkinId(string path, UUITexture texture, int roleId, int? skinId = null, [Nullable(2)] Action<bool> callback = null, EUiViewName? syncLoadViewName = null)
 		{
 			if (skinId != null)
@@ -1750,8 +1818,7 @@ namespace CSharpScript.Game.Ui
 			this.SetRoleIcon(path, texture, roleId, syncLoadViewName, callback);
 		}
 
-		// Token: 0x0602E51B RID: 189723 RVA: 0x00AB520B File Offset: 0x00AB340B
-		[NullableContext(1)]
+		// Token: 0x06022C33 RID: 142387 RVA: 0x009E203F File Offset: 0x009E023F
 		protected void SetElementIcon(string path, UUITexture texture, int elementId, EUiViewName? syncLoadViewName = null)
 		{
 			if (syncLoadViewName != null)
@@ -1762,8 +1829,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetElementIcon(path, texture, elementId);
 		}
 
-		// Token: 0x0602E51C RID: 189724 RVA: 0x00AB523A File Offset: 0x00AB343A
-		[NullableContext(1)]
+		// Token: 0x06022C34 RID: 142388 RVA: 0x009E206E File Offset: 0x009E026E
 		protected void SetMonsterIcon(string path, UUITexture texture, int monsterInfoId, EUiViewName? syncLoadViewName = null)
 		{
 			if (syncLoadViewName != null)
@@ -1774,8 +1840,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetMonsterIconAsync(path, texture, monsterInfoId);
 		}
 
-		// Token: 0x0602E51D RID: 189725 RVA: 0x00AB5269 File Offset: 0x00AB3469
-		[NullableContext(1)]
+		// Token: 0x06022C35 RID: 142389 RVA: 0x009E209D File Offset: 0x009E029D
 		protected void SetDungeonEntranceIconSync(string path, UUITexture texture, int entranceId, EUiViewName? syncLoadViewName = null)
 		{
 			if (syncLoadViewName != null)
@@ -1786,8 +1851,7 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetDungeonEntranceIconAsync(path, texture, entranceId);
 		}
 
-		// Token: 0x0602E51E RID: 189726 RVA: 0x00AB5298 File Offset: 0x00AB3498
-		[NullableContext(1)]
+		// Token: 0x06022C36 RID: 142390 RVA: 0x009E20CC File Offset: 0x009E02CC
 		protected void SetNiagaraTextureByPath(string iconPath, UUINiagara niagara, string emitterName, string variableName, EUiViewName? syncLoadViewName = null, [Nullable(2)] Action<bool> callback = null)
 		{
 			if (syncLoadViewName != null)
@@ -1798,43 +1862,40 @@ namespace CSharpScript.Game.Ui
 			this._uiImageSettingModule.SetNiagaraTextureAsync(iconPath, niagara, emitterName, variableName, callback);
 		}
 
-		// Token: 0x0602E51F RID: 189727 RVA: 0x00AB52CF File Offset: 0x00AB34CF
-		[NullableContext(1)]
+		// Token: 0x06022C37 RID: 142391 RVA: 0x009E2103 File Offset: 0x009E0303
 		protected void SetNiagaraSystemByPath(string niagaraPath, UUINiagara niagara, [Nullable(2)] Action<bool> callback = null)
 		{
 			this._uiNiagaraSettingModule.SetNiagaraByPath(niagaraPath, niagara, callback);
 		}
 
-		// Token: 0x0602E520 RID: 189728 RVA: 0x00AB52E0 File Offset: 0x00AB34E0
-		[NullableContext(1)]
+		// Token: 0x06022C38 RID: 142392 RVA: 0x009E2114 File Offset: 0x009E0314
 		protected UniTask SetNiagaraSystemByPathAsync(string niagaraPath, UUINiagara niagara)
 		{
-			UiPanelBase.<SetNiagaraSystemByPathAsync>d__173 <SetNiagaraSystemByPathAsync>d__;
+			UiPanelBase.<SetNiagaraSystemByPathAsync>d__178 <SetNiagaraSystemByPathAsync>d__;
 			<SetNiagaraSystemByPathAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetNiagaraSystemByPathAsync>d__.<>4__this = this;
 			<SetNiagaraSystemByPathAsync>d__.niagaraPath = niagaraPath;
 			<SetNiagaraSystemByPathAsync>d__.niagara = niagara;
 			<SetNiagaraSystemByPathAsync>d__.<>1__state = -1;
-			<SetNiagaraSystemByPathAsync>d__.<>t__builder.Start<UiPanelBase.<SetNiagaraSystemByPathAsync>d__173>(ref <SetNiagaraSystemByPathAsync>d__);
+			<SetNiagaraSystemByPathAsync>d__.<>t__builder.Start<UiPanelBase.<SetNiagaraSystemByPathAsync>d__178>(ref <SetNiagaraSystemByPathAsync>d__);
 			return <SetNiagaraSystemByPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E521 RID: 189729 RVA: 0x00AB5334 File Offset: 0x00AB3534
-		[NullableContext(1)]
+		// Token: 0x06022C39 RID: 142393 RVA: 0x009E2168 File Offset: 0x009E0368
 		protected UniTask SetSpineAssetByPath(string atlasPath, string skeletonPath, USpineSkeletonAnimationComponent spine)
 		{
-			UiPanelBase.<SetSpineAssetByPath>d__174 <SetSpineAssetByPath>d__;
+			UiPanelBase.<SetSpineAssetByPath>d__179 <SetSpineAssetByPath>d__;
 			<SetSpineAssetByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetSpineAssetByPath>d__.<>4__this = this;
 			<SetSpineAssetByPath>d__.atlasPath = atlasPath;
 			<SetSpineAssetByPath>d__.skeletonPath = skeletonPath;
 			<SetSpineAssetByPath>d__.spine = spine;
 			<SetSpineAssetByPath>d__.<>1__state = -1;
-			<SetSpineAssetByPath>d__.<>t__builder.Start<UiPanelBase.<SetSpineAssetByPath>d__174>(ref <SetSpineAssetByPath>d__);
+			<SetSpineAssetByPath>d__.<>t__builder.Start<UiPanelBase.<SetSpineAssetByPath>d__179>(ref <SetSpineAssetByPath>d__);
 			return <SetSpineAssetByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E522 RID: 189730 RVA: 0x00AB538F File Offset: 0x00AB358F
+		// Token: 0x06022C3A RID: 142394 RVA: 0x009E21C3 File Offset: 0x009E03C3
 		private void ClearUiResourceLoadModule()
 		{
 			this._uiImageSettingModule.Clear();
@@ -1842,8 +1903,7 @@ namespace CSharpScript.Game.Ui
 			this._uiSpineLoadModule.Clear();
 		}
 
-		// Token: 0x0602E523 RID: 189731 RVA: 0x00AB53B4 File Offset: 0x00AB35B4
-		[NullableContext(1)]
+		// Token: 0x06022C3B RID: 142395 RVA: 0x009E21E8 File Offset: 0x009E03E8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1851,36 +1911,35 @@ namespace CSharpScript.Game.Ui
 		})]
 		public UniTask<AActor> LoadPrefabAsync(string path, [Nullable(2)] UUIItem parent = null)
 		{
-			UiPanelBase.<LoadPrefabAsync>d__177 <LoadPrefabAsync>d__;
+			UiPanelBase.<LoadPrefabAsync>d__182 <LoadPrefabAsync>d__;
 			<LoadPrefabAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<AActor>.Create();
 			<LoadPrefabAsync>d__.<>4__this = this;
 			<LoadPrefabAsync>d__.path = path;
 			<LoadPrefabAsync>d__.parent = parent;
 			<LoadPrefabAsync>d__.<>1__state = -1;
-			<LoadPrefabAsync>d__.<>t__builder.Start<UiPanelBase.<LoadPrefabAsync>d__177>(ref <LoadPrefabAsync>d__);
+			<LoadPrefabAsync>d__.<>t__builder.Start<UiPanelBase.<LoadPrefabAsync>d__182>(ref <LoadPrefabAsync>d__);
 			return <LoadPrefabAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E524 RID: 189732 RVA: 0x00AB5407 File Offset: 0x00AB3607
+		// Token: 0x06022C3C RID: 142396 RVA: 0x009E223B File Offset: 0x009E043B
 		protected void ClearUiPrefabLoadModule()
 		{
 			this._uiPrefabLoadModule.Clear();
 		}
 
-		// Token: 0x0602E525 RID: 189733 RVA: 0x00AB5414 File Offset: 0x00AB3614
-		[NullableContext(1)]
+		// Token: 0x06022C3D RID: 142397 RVA: 0x009E2248 File Offset: 0x009E0448
 		protected UniTask RunAsyncTask(UiAsyncTask task)
 		{
-			UiPanelBase.<RunAsyncTask>d__180 <RunAsyncTask>d__;
+			UiPanelBase.<RunAsyncTask>d__185 <RunAsyncTask>d__;
 			<RunAsyncTask>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<RunAsyncTask>d__.<>4__this = this;
 			<RunAsyncTask>d__.task = task;
 			<RunAsyncTask>d__.<>1__state = -1;
-			<RunAsyncTask>d__.<>t__builder.Start<UiPanelBase.<RunAsyncTask>d__180>(ref <RunAsyncTask>d__);
+			<RunAsyncTask>d__.<>t__builder.Start<UiPanelBase.<RunAsyncTask>d__185>(ref <RunAsyncTask>d__);
 			return <RunAsyncTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602E526 RID: 189734 RVA: 0x00AB545F File Offset: 0x00AB365F
+		// Token: 0x06022C3E RID: 142398 RVA: 0x009E2293 File Offset: 0x009E0493
 		protected void CancelAllAsyncTask()
 		{
 			UiAsyncTaskManager taskManager = this.TaskManager;
@@ -1891,29 +1950,193 @@ namespace CSharpScript.Game.Ui
 			taskManager.CancelAllTask();
 		}
 
-		// Token: 0x0602E527 RID: 189735 RVA: 0x00AB5471 File Offset: 0x00AB3671
-		[NullableContext(1)]
+		// Token: 0x06022C3F RID: 142399 RVA: 0x009E22A5 File Offset: 0x009E04A5
+		protected bool ApplyCommandSwitcher(string commandName, int value, int? restoreValue = null, [Nullable(new byte[]
+		{
+			2,
+			1
+		})] Action<string> executeCommand = null)
+		{
+			return this.ApplyCommandSwitcher(new UiIntCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C40 RID: 142400 RVA: 0x009E22B7 File Offset: 0x009E04B7
+		protected bool ApplyCommandSwitcher(string commandName, float value, float? restoreValue = null, [Nullable(new byte[]
+		{
+			2,
+			1
+		})] Action<string> executeCommand = null)
+		{
+			return this.ApplyCommandSwitcher(new UiFloatCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C41 RID: 142401 RVA: 0x009E22C9 File Offset: 0x009E04C9
+		protected bool ApplyCommandSwitcher(string commandName, bool value, bool? restoreValue = null, [Nullable(new byte[]
+		{
+			2,
+			1
+		})] Action<string> executeCommand = null)
+		{
+			return this.ApplyCommandSwitcher(new UiBoolCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C42 RID: 142402 RVA: 0x009E22DB File Offset: 0x009E04DB
+		protected bool ApplySeqCommandSwitcher(string commandName, int value, int? restoreValue = null)
+		{
+			Action<string> executeCommand;
+			if ((executeCommand = UiPanelBase.<>O.<0>__SimpleExecuteCommand) == null)
+			{
+				executeCommand = (UiPanelBase.<>O.<0>__SimpleExecuteCommand = new Action<string>(UKuroSequencePerformanceManager.SimpleExecuteCommand));
+			}
+			return this.ApplySeqCommandSwitcher(new UiIntCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C43 RID: 142403 RVA: 0x009E2306 File Offset: 0x009E0506
+		protected bool ApplySeqCommandSwitcher(string commandName, float value, float? restoreValue = null)
+		{
+			Action<string> executeCommand;
+			if ((executeCommand = UiPanelBase.<>O.<0>__SimpleExecuteCommand) == null)
+			{
+				executeCommand = (UiPanelBase.<>O.<0>__SimpleExecuteCommand = new Action<string>(UKuroSequencePerformanceManager.SimpleExecuteCommand));
+			}
+			return this.ApplySeqCommandSwitcher(new UiFloatCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C44 RID: 142404 RVA: 0x009E2331 File Offset: 0x009E0531
+		protected bool ApplySeqCommandSwitcher(string commandName, bool value, bool? restoreValue = null)
+		{
+			Action<string> executeCommand;
+			if ((executeCommand = UiPanelBase.<>O.<0>__SimpleExecuteCommand) == null)
+			{
+				executeCommand = (UiPanelBase.<>O.<0>__SimpleExecuteCommand = new Action<string>(UKuroSequencePerformanceManager.SimpleExecuteCommand));
+			}
+			return this.ApplySeqCommandSwitcher(new UiBoolCommandSwitcher(commandName, value, restoreValue, executeCommand));
+		}
+
+		// Token: 0x06022C45 RID: 142405 RVA: 0x009E235C File Offset: 0x009E055C
+		private bool ApplySeqCommandSwitcher(UiCommandSwitcher switcher)
+		{
+			return UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.AllowSequencePerformance") == 1 && this.ApplyCommandSwitcher(switcher);
+		}
+
+		// Token: 0x06022C46 RID: 142406 RVA: 0x009E2374 File Offset: 0x009E0574
+		private bool ApplyCommandSwitcher(UiCommandSwitcher switcher)
+		{
+			if (this.WaitToDestroy || base.IsDestroyOrDestroying)
+			{
+				return false;
+			}
+			UiCommandSwitcher uiCommandSwitcher;
+			if (this.CommandSwitchers == null || !this.CommandSwitchers.TryGetValue(switcher.CommandName, out uiCommandSwitcher))
+			{
+				if (this.CommandSwitchers == null)
+				{
+					this.CommandSwitchers = new Dictionary<string, UiCommandSwitcher>(StringComparer.OrdinalIgnoreCase);
+				}
+				this.CommandSwitchers.Add(switcher.CommandName, switcher);
+				return this.ApplySwitcher(switcher);
+			}
+			if (!uiCommandSwitcher.IsSameRequest(switcher))
+			{
+				throw new InvalidOperationException("Command " + switcher.CommandName + " is already applied with a different configuration. Restore it before applying a new configuration.");
+			}
+			uiCommandSwitcher.Reapply();
+			return true;
+		}
+
+		// Token: 0x06022C47 RID: 142407 RVA: 0x009E2410 File Offset: 0x009E0610
+		protected bool RestoreCommandSwitcher(string commandName)
+		{
+			UiCommandSwitcher switcher;
+			return this.CommandSwitchers != null && this.CommandSwitchers.TryGetValue(commandName, out switcher) && this.RestoreSwitcher(switcher);
+		}
+
+		// Token: 0x06022C48 RID: 142408 RVA: 0x009E2440 File Offset: 0x009E0640
+		protected bool ApplySwitcher(UiSwitcherBase switcher)
+		{
+			if (this.WaitToDestroy || base.IsDestroyOrDestroying || switcher.IsApplied)
+			{
+				return false;
+			}
+			if (this.Switchers == null)
+			{
+				this.Switchers = new List<UiSwitcherBase>();
+			}
+			this.Switchers.Add(switcher);
+			return switcher.Apply(this);
+		}
+
+		// Token: 0x06022C49 RID: 142409 RVA: 0x009E2490 File Offset: 0x009E0690
+		protected bool RestoreSwitcher(UiSwitcherBase switcher)
+		{
+			if (this.Switchers == null || !this.Switchers.Contains(switcher))
+			{
+				return false;
+			}
+			if (!switcher.Restore(this))
+			{
+				return false;
+			}
+			this.Switchers.Remove(switcher);
+			UiCommandSwitcher uiCommandSwitcher = switcher as UiCommandSwitcher;
+			UiCommandSwitcher uiCommandSwitcher2;
+			if (uiCommandSwitcher != null && this.CommandSwitchers != null && this.CommandSwitchers.TryGetValue(uiCommandSwitcher.CommandName, out uiCommandSwitcher2) && uiCommandSwitcher2 == switcher)
+			{
+				this.CommandSwitchers.Remove(uiCommandSwitcher.CommandName);
+			}
+			return true;
+		}
+
+		// Token: 0x06022C4A RID: 142410 RVA: 0x009E250C File Offset: 0x009E070C
+		protected unsafe void RestoreAllSwitchers()
+		{
+			if (this.Switchers == null || this.Switchers.Count == 0)
+			{
+				return;
+			}
+			UiSwitcherBase[] array = this.Switchers.ToArray();
+			for (int i = array.Length - 1; i >= 0; i--)
+			{
+				UiSwitcherBase uiSwitcherBase = array[i];
+				try
+				{
+					this.RestoreSwitcher(uiSwitcherBase);
+				}
+				catch (Exception ex)
+				{
+					Log instance = Log.Instance;
+					ELogModule module = ELogModule.UiCore;
+					ELogAuthor author = ELogAuthor.LZK;
+					string message = "[UiSwitcher] 恢复失败";
+					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("PanelName", base.GetType().Name);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("SwitcherName", uiSwitcherBase.Name);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("error", ex.ToString());
+					instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+				}
+			}
+		}
+
+		// Token: 0x06022C4B RID: 142411 RVA: 0x009E25F8 File Offset: 0x009E07F8
 		public void AddUiBehavior(IUiBehavior behavior)
 		{
 			this.AddUiBehaviorProxy(new UiBehaviorBaseProxy(behavior));
 		}
 
-		// Token: 0x0602E528 RID: 189736 RVA: 0x00AB547F File Offset: 0x00AB367F
-		[NullableContext(1)]
+		// Token: 0x06022C4C RID: 142412 RVA: 0x009E2606 File Offset: 0x009E0806
 		public void AddUiBehaviorProxy(UiBehaviorBaseProxy proxy)
 		{
 			this.UiBehaviorProxies.Add(proxy);
 		}
 
-		// Token: 0x0602E529 RID: 189737 RVA: 0x00AB548D File Offset: 0x00AB368D
-		[NullableContext(1)]
+		// Token: 0x06022C4D RID: 142413 RVA: 0x009E2614 File Offset: 0x009E0814
 		public void AddChild(UiPanelBase child)
 		{
 			this.Children.Add(child);
 			child.Parent = this;
 		}
 
-		// Token: 0x0602E52A RID: 189738 RVA: 0x00AB54A4 File Offset: 0x00AB36A4
+		// Token: 0x06022C4E RID: 142414 RVA: 0x009E262C File Offset: 0x009E082C
 		private void RemoveFromParent()
 		{
 			if (this.Parent == null)
@@ -1929,7 +2152,8 @@ namespace CSharpScript.Game.Ui
 			this.Parent = null;
 		}
 
-		// Token: 0x0602E52B RID: 189739 RVA: 0x00AB54EC File Offset: 0x00AB36EC
+		// Token: 0x06022C4F RID: 142415 RVA: 0x009E2674 File Offset: 0x009E0874
+		[NullableContext(2)]
 		public UiPanelBase GetLastChild()
 		{
 			int count = this.Children.Count;
@@ -1940,160 +2164,159 @@ namespace CSharpScript.Game.Ui
 			return this.Children[count - 1];
 		}
 
-		// Token: 0x0602E52C RID: 189740 RVA: 0x00AB5518 File Offset: 0x00AB3718
+		// Token: 0x06022C50 RID: 142416 RVA: 0x009E26A0 File Offset: 0x009E08A0
 		public void Register()
 		{
 		}
 
-		// Token: 0x0602E52D RID: 189741 RVA: 0x00AB551A File Offset: 0x00AB371A
+		// Token: 0x06022C51 RID: 142417 RVA: 0x009E26A2 File Offset: 0x009E08A2
 		protected void Begin()
 		{
 		}
 
-		// Token: 0x0602E52E RID: 189742 RVA: 0x00AB551C File Offset: 0x00AB371C
+		// Token: 0x06022C52 RID: 142418 RVA: 0x009E26A4 File Offset: 0x009E08A4
+		[NullableContext(2)]
 		protected virtual void OnBegin(object parameters = null)
 		{
 		}
 
-		// Token: 0x0602E52F RID: 189743 RVA: 0x00AB551E File Offset: 0x00AB371E
+		// Token: 0x06022C53 RID: 142419 RVA: 0x009E26A6 File Offset: 0x009E08A6
 		protected virtual void OnChangeComponentActiveState(bool visibility)
 		{
 		}
 
-		// Token: 0x0602E530 RID: 189744 RVA: 0x00AB5520 File Offset: 0x00AB3720
+		// Token: 0x06022C54 RID: 142420 RVA: 0x009E26A8 File Offset: 0x009E08A8
 		protected virtual void OnRegister()
 		{
 		}
 
-		// Token: 0x0602E531 RID: 189745 RVA: 0x00AB5522 File Offset: 0x00AB3722
+		// Token: 0x06022C55 RID: 142421 RVA: 0x009E26AA File Offset: 0x009E08AA
 		protected virtual void OnCreate()
 		{
 		}
 
-		// Token: 0x0602E532 RID: 189746 RVA: 0x00AB5524 File Offset: 0x00AB3724
+		// Token: 0x06022C56 RID: 142422 RVA: 0x009E26AC File Offset: 0x009E08AC
 		protected virtual void OnShow()
 		{
 		}
 
-		// Token: 0x0602E533 RID: 189747 RVA: 0x00AB5526 File Offset: 0x00AB3726
+		// Token: 0x06022C57 RID: 142423 RVA: 0x009E26AE File Offset: 0x009E08AE
 		protected virtual void OnHide()
 		{
 		}
 
-		// Token: 0x0602E534 RID: 189748 RVA: 0x00AB5528 File Offset: 0x00AB3728
+		// Token: 0x06022C58 RID: 142424 RVA: 0x009E26B0 File Offset: 0x009E08B0
 		protected virtual void OnPrepareHide(bool inClose = false)
 		{
 		}
 
-		// Token: 0x0602E535 RID: 189749 RVA: 0x00AB552A File Offset: 0x00AB372A
+		// Token: 0x06022C59 RID: 142425 RVA: 0x009E26B2 File Offset: 0x009E08B2
 		protected virtual void OnEnd()
 		{
 		}
 
-		// Token: 0x0602E536 RID: 189750 RVA: 0x00AB552C File Offset: 0x00AB372C
+		// Token: 0x06022C5A RID: 142426 RVA: 0x009E26B4 File Offset: 0x009E08B4
 		protected virtual void OnDestroy()
 		{
 		}
 
-		// Token: 0x0602E537 RID: 189751 RVA: 0x00AB552E File Offset: 0x00AB372E
+		// Token: 0x06022C5B RID: 142427 RVA: 0x009E26B6 File Offset: 0x009E08B6
 		protected virtual void OnStartSequenceFinish()
 		{
 		}
 
-		// Token: 0x0602E538 RID: 189752 RVA: 0x00AB5530 File Offset: 0x00AB3730
-		[NullableContext(1)]
+		// Token: 0x06022C5C RID: 142428 RVA: 0x009E26B8 File Offset: 0x009E08B8
 		protected virtual void OnSequenceEvent(string sequenceName, string eventName)
 		{
 		}
 
-		// Token: 0x0602E539 RID: 189753 RVA: 0x00AB5532 File Offset: 0x00AB3732
+		// Token: 0x06022C5D RID: 142429 RVA: 0x009E26BA File Offset: 0x009E08BA
 		protected virtual bool OnPlayCloseSequence()
 		{
 			return false;
 		}
 
-		// Token: 0x0602E53A RID: 189754 RVA: 0x00AB5535 File Offset: 0x00AB3735
+		// Token: 0x06022C5E RID: 142430 RVA: 0x009E26BD File Offset: 0x009E08BD
 		protected virtual void OnStackShow()
 		{
 		}
 
-		// Token: 0x0602E53B RID: 189755 RVA: 0x00AB5537 File Offset: 0x00AB3737
+		// Token: 0x06022C5F RID: 142431 RVA: 0x009E26BF File Offset: 0x009E08BF
 		protected virtual void OnShowSequenceFinish()
 		{
 		}
 
-		// Token: 0x0602E53C RID: 189756 RVA: 0x00AB5539 File Offset: 0x00AB3739
+		// Token: 0x06022C60 RID: 142432 RVA: 0x009E26C1 File Offset: 0x009E08C1
 		protected virtual void OnActiveSequenceFinish()
 		{
 		}
 
-		// Token: 0x0602E53D RID: 189757 RVA: 0x00AB553B File Offset: 0x00AB373B
+		// Token: 0x06022C61 RID: 142433 RVA: 0x009E26C3 File Offset: 0x009E08C3
 		protected virtual bool OnCheckLoadSceneCondition()
 		{
 			return true;
 		}
 
-		// Token: 0x0602E53E RID: 189758 RVA: 0x00AB553E File Offset: 0x00AB373E
+		// Token: 0x06022C62 RID: 142434 RVA: 0x009E26C6 File Offset: 0x009E08C6
 		protected virtual bool OnCheckReleaseSceneCondition()
 		{
 			return true;
 		}
 
-		// Token: 0x0602E53F RID: 189759 RVA: 0x00AB5541 File Offset: 0x00AB3741
+		// Token: 0x06022C63 RID: 142435 RVA: 0x009E26C9 File Offset: 0x009E08C9
 		public void Start()
 		{
 		}
 
-		// Token: 0x0602E540 RID: 189760 RVA: 0x00AB5543 File Offset: 0x00AB3743
+		// Token: 0x06022C64 RID: 142436 RVA: 0x009E26CB File Offset: 0x009E08CB
 		public void End()
 		{
 		}
 
-		// Token: 0x0602E541 RID: 189761 RVA: 0x00AB5545 File Offset: 0x00AB3745
+		// Token: 0x06022C65 RID: 142437 RVA: 0x009E26CD File Offset: 0x009E08CD
 		protected void InitParam()
 		{
 		}
 
-		// Token: 0x0602E542 RID: 189762 RVA: 0x00AB5547 File Offset: 0x00AB3747
+		// Token: 0x06022C66 RID: 142438 RVA: 0x009E26CF File Offset: 0x009E08CF
 		protected void InitComponentsData()
 		{
 		}
 
-		// Token: 0x0602E543 RID: 189763 RVA: 0x00AB5549 File Offset: 0x00AB3749
+		// Token: 0x06022C67 RID: 142439 RVA: 0x009E26D1 File Offset: 0x009E08D1
 		protected void OnClearComponentsData()
 		{
 		}
 
-		// Token: 0x0602E544 RID: 189764 RVA: 0x00AB554B File Offset: 0x00AB374B
+		// Token: 0x06022C68 RID: 142440 RVA: 0x009E26D3 File Offset: 0x009E08D3
 		public void Create()
 		{
 		}
 
-		// Token: 0x0602E545 RID: 189765 RVA: 0x00AB554D File Offset: 0x00AB374D
+		// Token: 0x06022C69 RID: 142441 RVA: 0x009E26D5 File Offset: 0x009E08D5
 		public bool ClearComponentsData()
 		{
 			base.Destroy(null);
 			return true;
 		}
 
-		// Token: 0x0602E546 RID: 189766 RVA: 0x00AB5558 File Offset: 0x00AB3758
-		[NullableContext(1)]
+		// Token: 0x06022C6A RID: 142442 RVA: 0x009E26E0 File Offset: 0x009E08E0
 		public UniTask ConstructorAsync(string resourceId, UUIItem parentItem, bool usePool = false)
 		{
-			UiPanelBase.<ConstructorAsync>d__213 <ConstructorAsync>d__;
+			UiPanelBase.<ConstructorAsync>d__232 <ConstructorAsync>d__;
 			<ConstructorAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ConstructorAsync>d__.<>4__this = this;
 			<ConstructorAsync>d__.resourceId = resourceId;
 			<ConstructorAsync>d__.parentItem = parentItem;
 			<ConstructorAsync>d__.usePool = usePool;
 			<ConstructorAsync>d__.<>1__state = -1;
-			<ConstructorAsync>d__.<>t__builder.Start<UiPanelBase.<ConstructorAsync>d__213>(ref <ConstructorAsync>d__);
+			<ConstructorAsync>d__.<>t__builder.Start<UiPanelBase.<ConstructorAsync>d__232>(ref <ConstructorAsync>d__);
 			return <ConstructorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x170075E5 RID: 30181
-		// (get) Token: 0x0602E547 RID: 189767 RVA: 0x00AB55B3 File Offset: 0x00AB37B3
-		// (set) Token: 0x0602E548 RID: 189768 RVA: 0x00AB55BB File Offset: 0x00AB37BB
+		// Token: 0x1700489F RID: 18591
+		// (get) Token: 0x06022C6B RID: 142443 RVA: 0x009E273B File Offset: 0x009E093B
+		// (set) Token: 0x06022C6C RID: 142444 RVA: 0x009E2743 File Offset: 0x009E0943
 		[Nullable(new byte[]
 		{
 			1,
@@ -2124,8 +2347,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E549 RID: 189769 RVA: 0x00AB55C4 File Offset: 0x00AB37C4
-		[NullableContext(1)]
+		// Token: 0x06022C6D RID: 142445 RVA: 0x009E274C File Offset: 0x009E094C
 		public void SetRootActor(AActor actor, bool isBegin = true)
 		{
 			if (isBegin)
@@ -2136,8 +2358,7 @@ namespace CSharpScript.Game.Ui
 			this.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0602E54A RID: 189770 RVA: 0x00AB55DA File Offset: 0x00AB37DA
-		[NullableContext(1)]
+		// Token: 0x06022C6E RID: 142446 RVA: 0x009E2762 File Offset: 0x009E0962
 		public void CreateThenShowByActor(AActor actor, [Nullable(2)] object parameters = null)
 		{
 			if (parameters != null)
@@ -2149,8 +2370,7 @@ namespace CSharpScript.Game.Ui
 			base.ShowCompatible();
 		}
 
-		// Token: 0x0602E54B RID: 189771 RVA: 0x00AB55FA File Offset: 0x00AB37FA
-		[NullableContext(1)]
+		// Token: 0x06022C6F RID: 142447 RVA: 0x009E2782 File Offset: 0x009E0982
 		public void CreateByActor(AActor actor, [Nullable(2)] object parameters = null)
 		{
 			if (parameters != null)
@@ -2161,55 +2381,56 @@ namespace CSharpScript.Game.Ui
 			base.StartCompatible();
 		}
 
-		// Token: 0x04018D6E RID: 101742
+		// Token: 0x040133BB RID: 78779
+		[Nullable(2)]
 		protected UUIItem RootItem;
 
-		// Token: 0x04018D6F RID: 101743
+		// Token: 0x040133BC RID: 78780
+		[Nullable(2)]
 		protected AUIBaseActor RootActor;
 
-		// Token: 0x04018D70 RID: 101744
+		// Token: 0x040133BD RID: 78781
+		[Nullable(2)]
 		private AUIBaseActor _originalActor;
 
-		// Token: 0x04018D71 RID: 101745
+		// Token: 0x040133BE RID: 78782
+		[Nullable(2)]
 		private UUIItem _originalItem;
 
-		// Token: 0x04018D72 RID: 101746
+		// Token: 0x040133BF RID: 78783
+		[Nullable(2)]
 		protected UUIItem ParentUiItem;
 
-		// Token: 0x04018D73 RID: 101747
+		// Token: 0x040133C0 RID: 78784
 		protected bool UsePool;
 
-		// Token: 0x04018D74 RID: 101748
-		[Nullable(1)]
+		// Token: 0x040133C1 RID: 78785
 		protected string MemoryTag = "js_undefined";
 
-		// Token: 0x04018D76 RID: 101750
+		// Token: 0x040133C3 RID: 78787
 		private bool _isPermanent;
 
-		// Token: 0x04018D77 RID: 101751
+		// Token: 0x040133C4 RID: 78788
+		[Nullable(2)]
 		public object OpenParam;
 
-		// Token: 0x04018D78 RID: 101752
-		[Nullable(1)]
+		// Token: 0x040133C5 RID: 78789
 		private string _actorPath = "";
 
-		// Token: 0x04018D79 RID: 101753
-		[Nullable(1)]
+		// Token: 0x040133C6 RID: 78790
 		private readonly List<UiBehaviorBaseProxy> UiBehaviorProxies = new List<UiBehaviorBaseProxy>();
 
-		// Token: 0x04018D7A RID: 101754
-		[Nullable(1)]
+		// Token: 0x040133C7 RID: 78791
 		private readonly List<UiPanelBase> Children = new List<UiPanelBase>();
 
-		// Token: 0x04018D7B RID: 101755
+		// Token: 0x040133C8 RID: 78792
+		[Nullable(2)]
 		public UiPanelBase Parent;
 
-		// Token: 0x04018D7C RID: 101756
-		[Nullable(1)]
+		// Token: 0x040133C9 RID: 78793
 		private readonly Dictionary<int, Tuple<Type, UActorComponent>> BaseComponentMap = new Dictionary<int, Tuple<Type, UActorComponent>>();
 
-		// Token: 0x04018D7D RID: 101757
-		[Nullable(1)]
+		// Token: 0x040133CA RID: 78794
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<Type, Func<UClassStackOnlyPtr>> StaticClassGetters = new Dictionary<Type, Func<UClassStackOnlyPtr>>
 		{
@@ -2314,6 +2535,10 @@ namespace CSharpScript.Game.Ui
 				new Func<UClassStackOnlyPtr>(UUITexture.StaticClass)
 			},
 			{
+				typeof(UUIRenderableMask),
+				new Func<UClassStackOnlyPtr>(UUIRenderableMask.StaticClass)
+			},
+			{
 				typeof(UUIExtendToggleSpriteTransition),
 				new Func<UClassStackOnlyPtr>(UUIExtendToggleSpriteTransition.StaticClass)
 			},
@@ -2368,10 +2593,18 @@ namespace CSharpScript.Game.Ui
 			{
 				typeof(UUILangTexture),
 				new Func<UClassStackOnlyPtr>(UUILangTexture.StaticClass)
+			},
+			{
+				typeof(UUIEffectTextAnimation),
+				new Func<UClassStackOnlyPtr>(UUIEffectTextAnimation.StaticClass)
+			},
+			{
+				typeof(ULGUIPlayTweenComponent),
+				new Func<UClassStackOnlyPtr>(ULGUIPlayTweenComponent.StaticClass)
 			}
 		};
 
-		// Token: 0x04018D7E RID: 101758
+		// Token: 0x040133CB RID: 78795
 		[Nullable(new byte[]
 		{
 			1,
@@ -2380,7 +2613,7 @@ namespace CSharpScript.Game.Ui
 		})]
 		protected List<ValueTuple<int, Type>> ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
 
-		// Token: 0x04018D7F RID: 101759
+		// Token: 0x040133CC RID: 78796
 		[Nullable(new byte[]
 		{
 			1,
@@ -2389,29 +2622,58 @@ namespace CSharpScript.Game.Ui
 		})]
 		protected List<ValueTuple<int, Delegate>> BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 
-		// Token: 0x04018D80 RID: 101760
+		// Token: 0x040133CD RID: 78797
+		[Nullable(2)]
 		private UGuideHookRegistry _guideRegistry;
 
-		// Token: 0x04018D81 RID: 101761
+		// Token: 0x040133CE RID: 78798
+		[Nullable(2)]
 		protected UiPoolActor UiPoolActorNew;
 
-		// Token: 0x04018D82 RID: 101762
-		[Nullable(1)]
+		// Token: 0x040133CF RID: 78799
 		private readonly UiImageSettingModule _uiImageSettingModule = new UiImageSettingModule();
 
-		// Token: 0x04018D83 RID: 101763
-		[Nullable(1)]
+		// Token: 0x040133D0 RID: 78800
 		private readonly UiNiagaraSettingModule _uiNiagaraSettingModule = new UiNiagaraSettingModule();
 
-		// Token: 0x04018D84 RID: 101764
-		[Nullable(1)]
+		// Token: 0x040133D1 RID: 78801
 		private readonly UiSpineLoadModule _uiSpineLoadModule = new UiSpineLoadModule();
 
-		// Token: 0x04018D85 RID: 101765
-		[Nullable(1)]
+		// Token: 0x040133D2 RID: 78802
 		private readonly UiPrefabLoadModule _uiPrefabLoadModule = new UiPrefabLoadModule();
 
-		// Token: 0x04018D86 RID: 101766
+		// Token: 0x040133D3 RID: 78803
+		[Nullable(2)]
 		protected UiAsyncTaskManager TaskManager;
+
+		// Token: 0x040133D4 RID: 78804
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		private List<UiSwitcherBase> Switchers;
+
+		// Token: 0x040133D5 RID: 78805
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		private Dictionary<string, UiCommandSwitcher> CommandSwitchers;
+
+		// Token: 0x0200921F RID: 37407
+		[CompilerGenerated]
+		private static class <>O
+		{
+			// Token: 0x0402DBAF RID: 187311
+			[Nullable(new byte[]
+			{
+				0,
+				1
+			})]
+			public static Action<string> <0>__SimpleExecuteCommand;
+		}
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200650D RID: 25869
+	// Token: 0x02006B7B RID: 27515
 	public struct ICustomScreenTextSetting : IFlatbufferObject
 	{
-		// Token: 0x1700C05C RID: 49244
-		// (get) Token: 0x0602CDF7 RID: 183799 RVA: 0x00629D7A File Offset: 0x00627F7A
+		// Token: 0x1700C9EC RID: 51692
+		// (get) Token: 0x0602F58D RID: 193933 RVA: 0x0067601A File Offset: 0x0067421A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CDF8 RID: 183800 RVA: 0x00629D87 File Offset: 0x00627F87
+		// Token: 0x0602F58E RID: 193934 RVA: 0x00676027 File Offset: 0x00674227
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CDF9 RID: 183801 RVA: 0x00629D90 File Offset: 0x00627F90
+		// Token: 0x0602F58F RID: 193935 RVA: 0x00676030 File Offset: 0x00674230
 		public static ICustomScreenTextSetting GetRootAsICustomScreenTextSetting(ByteBuffer _bb)
 		{
 			return ICustomScreenTextSetting.GetRootAsICustomScreenTextSetting(_bb, default(ICustomScreenTextSetting));
 		}
 
-		// Token: 0x0602CDFA RID: 183802 RVA: 0x00629DAC File Offset: 0x00627FAC
+		// Token: 0x0602F590 RID: 193936 RVA: 0x0067604C File Offset: 0x0067424C
 		public static ICustomScreenTextSetting GetRootAsICustomScreenTextSetting(ByteBuffer _bb, ICustomScreenTextSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CDFB RID: 183803 RVA: 0x00629DC9 File Offset: 0x00627FC9
+		// Token: 0x0602F591 RID: 193937 RVA: 0x00676069 File Offset: 0x00674269
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CDFC RID: 183804 RVA: 0x00629DD8 File Offset: 0x00627FD8
+		// Token: 0x0602F592 RID: 193938 RVA: 0x00676078 File Offset: 0x00674278
 		public ICustomScreenTextSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C05D RID: 49245
-		// (get) Token: 0x0602CDFD RID: 183805 RVA: 0x00629DE8 File Offset: 0x00627FE8
+		// Token: 0x1700C9ED RID: 51693
+		// (get) Token: 0x0602F593 RID: 193939 RVA: 0x00676088 File Offset: 0x00674288
 		public bool IsShowTextInfo
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C05E RID: 49246
-		// (get) Token: 0x0602CDFE RID: 183806 RVA: 0x00629E28 File Offset: 0x00628028
+		// Token: 0x1700C9EE RID: 51694
+		// (get) Token: 0x0602F594 RID: 193940 RVA: 0x006760C8 File Offset: 0x006742C8
 		public string TidTextContent
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CDFF RID: 183807 RVA: 0x00629E5F File Offset: 0x0062805F
+		// Token: 0x0602F595 RID: 193941 RVA: 0x006760FF File Offset: 0x006742FF
 		public Span<byte> GetTidTextContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602CE00 RID: 183808 RVA: 0x00629E6E File Offset: 0x0062806E
+		// Token: 0x0602F596 RID: 193942 RVA: 0x0067610E File Offset: 0x0067430E
 		public byte[] GetTidTextContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C05F RID: 49247
-		// (get) Token: 0x0602CE01 RID: 183809 RVA: 0x00629E7C File Offset: 0x0062807C
+		// Token: 0x1700C9EF RID: 51695
+		// (get) Token: 0x0602F597 RID: 193943 RVA: 0x0067611C File Offset: 0x0067431C
 		public byte NullMask
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CE02 RID: 183810 RVA: 0x00629EB8 File Offset: 0x006280B8
+		// Token: 0x0602F598 RID: 193944 RVA: 0x00676158 File Offset: 0x00674358
 		public static Offset<ICustomScreenTextSetting> CreateICustomScreenTextSetting(FlatBufferBuilder builder, bool IsShowTextInfo = false, StringOffset TidTextContentOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenTextSetting.EndICustomScreenTextSetting(builder);
 		}
 
-		// Token: 0x0602CE03 RID: 183811 RVA: 0x00629EDC File Offset: 0x006280DC
+		// Token: 0x0602F599 RID: 193945 RVA: 0x0067617C File Offset: 0x0067437C
 		public static void StartICustomScreenTextSetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602CE04 RID: 183812 RVA: 0x00629EE5 File Offset: 0x006280E5
+		// Token: 0x0602F59A RID: 193946 RVA: 0x00676185 File Offset: 0x00674385
 		public static void AddIsShowTextInfo(FlatBufferBuilder builder, bool isShowTextInfo)
 		{
 			builder.AddBool(0, isShowTextInfo, false);
 		}
 
-		// Token: 0x0602CE05 RID: 183813 RVA: 0x00629EF0 File Offset: 0x006280F0
+		// Token: 0x0602F59B RID: 193947 RVA: 0x00676190 File Offset: 0x00674390
 		public static void AddTidTextContent(FlatBufferBuilder builder, StringOffset tidTextContentOffset)
 		{
 			builder.AddOffset(1, tidTextContentOffset.Value, 0);
 		}
 
-		// Token: 0x0602CE06 RID: 183814 RVA: 0x00629F00 File Offset: 0x00628100
+		// Token: 0x0602F59C RID: 193948 RVA: 0x006761A0 File Offset: 0x006743A0
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602CE07 RID: 183815 RVA: 0x00629F0B File Offset: 0x0062810B
+		// Token: 0x0602F59D RID: 193949 RVA: 0x006761AB File Offset: 0x006743AB
 		public static Offset<ICustomScreenTextSetting> EndICustomScreenTextSetting(FlatBufferBuilder builder)
 		{
 			return new Offset<ICustomScreenTextSetting>(builder.EndTable());
 		}
 
-		// Token: 0x0602CE08 RID: 183816 RVA: 0x00629F18 File Offset: 0x00628118
+		// Token: 0x0602F59E RID: 193950 RVA: 0x006761B8 File Offset: 0x006743B8
 		public ICustomScreenTextSettingT UnPack()
 		{
 			ICustomScreenTextSettingT customScreenTextSettingT = new ICustomScreenTextSettingT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return customScreenTextSettingT;
 		}
 
-		// Token: 0x0602CE09 RID: 183817 RVA: 0x00629F33 File Offset: 0x00628133
+		// Token: 0x0602F59F RID: 193951 RVA: 0x006761D3 File Offset: 0x006743D3
 		public void UnPackTo(ICustomScreenTextSettingT _o)
 		{
 			_o.IsShowTextInfo = this.IsShowTextInfo;
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602CE0A RID: 183818 RVA: 0x00629F5C File Offset: 0x0062815C
+		// Token: 0x0602F5A0 RID: 193952 RVA: 0x006761FC File Offset: 0x006743FC
 		public static Offset<ICustomScreenTextSetting> Pack(FlatBufferBuilder builder, ICustomScreenTextSettingT _o)
 		{
 			if (_o == null)
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICustomScreenTextSetting.CreateICustomScreenTextSetting(builder, _o.IsShowTextInfo, tidTextContentOffset, _o.NullMask);
 		}
 
-		// Token: 0x04010B51 RID: 68433
+		// Token: 0x04011969 RID: 72041
 		private Table __p;
 	}
 }

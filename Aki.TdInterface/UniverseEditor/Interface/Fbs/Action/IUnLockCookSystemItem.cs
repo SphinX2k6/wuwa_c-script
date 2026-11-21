@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074C9 RID: 29897
+	// Token: 0x02007CBF RID: 31935
 	public struct IUnLockCookSystemItem : IFlatbufferObject
 	{
-		// Token: 0x1700E2E9 RID: 58089
-		// (get) Token: 0x060365AB RID: 222635 RVA: 0x00762DA6 File Offset: 0x00760FA6
+		// Token: 0x1700EF13 RID: 61203
+		// (get) Token: 0x060399C0 RID: 235968 RVA: 0x007C5FF6 File Offset: 0x007C41F6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060365AC RID: 222636 RVA: 0x00762DB3 File Offset: 0x00760FB3
+		// Token: 0x060399C1 RID: 235969 RVA: 0x007C6003 File Offset: 0x007C4203
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060365AD RID: 222637 RVA: 0x00762DBC File Offset: 0x00760FBC
+		// Token: 0x060399C2 RID: 235970 RVA: 0x007C600C File Offset: 0x007C420C
 		public static IUnLockCookSystemItem GetRootAsIUnLockCookSystemItem(ByteBuffer _bb)
 		{
 			return IUnLockCookSystemItem.GetRootAsIUnLockCookSystemItem(_bb, default(IUnLockCookSystemItem));
 		}
 
-		// Token: 0x060365AE RID: 222638 RVA: 0x00762DD8 File Offset: 0x00760FD8
+		// Token: 0x060399C3 RID: 235971 RVA: 0x007C6028 File Offset: 0x007C4228
 		public static IUnLockCookSystemItem GetRootAsIUnLockCookSystemItem(ByteBuffer _bb, IUnLockCookSystemItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060365AF RID: 222639 RVA: 0x00762DF5 File Offset: 0x00760FF5
+		// Token: 0x060399C4 RID: 235972 RVA: 0x007C6045 File Offset: 0x007C4245
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060365B0 RID: 222640 RVA: 0x00762E04 File Offset: 0x00761004
+		// Token: 0x060399C5 RID: 235973 RVA: 0x007C6054 File Offset: 0x007C4254
 		public IUnLockCookSystemItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E2EA RID: 58090
-		// (get) Token: 0x060365B1 RID: 222641 RVA: 0x00762E14 File Offset: 0x00761014
+		// Token: 0x1700EF14 RID: 61204
+		// (get) Token: 0x060399C6 RID: 235974 RVA: 0x007C6064 File Offset: 0x007C4264
 		public EUnlockSystemItemType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E2EB RID: 58091
-		// (get) Token: 0x060365B2 RID: 222642 RVA: 0x00762E50 File Offset: 0x00761050
+		// Token: 0x1700EF15 RID: 61205
+		// (get) Token: 0x060399C7 RID: 235975 RVA: 0x007C60A0 File Offset: 0x007C42A0
 		public IUnlockCookSystemCookBook? UnlockOption
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060365B3 RID: 222643 RVA: 0x00762EAD File Offset: 0x007610AD
+		// Token: 0x060399C8 RID: 235976 RVA: 0x007C60FD File Offset: 0x007C42FD
 		public static Offset<IUnLockCookSystemItem> CreateIUnLockCookSystemItem(FlatBufferBuilder builder, EUnlockSystemItemType Type = EUnlockSystemItemType.CookSystem, Offset<IUnlockCookSystemCookBook> UnlockOptionOffset = default(Offset<IUnlockCookSystemCookBook>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnLockCookSystemItem.EndIUnLockCookSystemItem(builder);
 		}
 
-		// Token: 0x060365B4 RID: 222644 RVA: 0x00762ECA File Offset: 0x007610CA
+		// Token: 0x060399C9 RID: 235977 RVA: 0x007C611A File Offset: 0x007C431A
 		public static void StartIUnLockCookSystemItem(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060365B5 RID: 222645 RVA: 0x00762ED3 File Offset: 0x007610D3
+		// Token: 0x060399CA RID: 235978 RVA: 0x007C6123 File Offset: 0x007C4323
 		public static void AddType(FlatBufferBuilder builder, EUnlockSystemItemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060365B6 RID: 222646 RVA: 0x00762EDE File Offset: 0x007610DE
+		// Token: 0x060399CB RID: 235979 RVA: 0x007C612E File Offset: 0x007C432E
 		public static void AddUnlockOption(FlatBufferBuilder builder, Offset<IUnlockCookSystemCookBook> unlockOptionOffset)
 		{
 			builder.AddOffset(1, unlockOptionOffset.Value, 0);
 		}
 
-		// Token: 0x060365B7 RID: 222647 RVA: 0x00762EEE File Offset: 0x007610EE
+		// Token: 0x060399CC RID: 235980 RVA: 0x007C613E File Offset: 0x007C433E
 		public static Offset<IUnLockCookSystemItem> EndIUnLockCookSystemItem(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnLockCookSystemItem>(builder.EndTable());
 		}
 
-		// Token: 0x060365B8 RID: 222648 RVA: 0x00762EFC File Offset: 0x007610FC
+		// Token: 0x060399CD RID: 235981 RVA: 0x007C614C File Offset: 0x007C434C
 		public IUnLockCookSystemItemT UnPack()
 		{
 			IUnLockCookSystemItemT unLockCookSystemItemT = new IUnLockCookSystemItemT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return unLockCookSystemItemT;
 		}
 
-		// Token: 0x060365B9 RID: 222649 RVA: 0x00762F18 File Offset: 0x00761118
+		// Token: 0x060399CE RID: 235982 RVA: 0x007C6168 File Offset: 0x007C4368
 		public void UnPackTo(IUnLockCookSystemItemT _o)
 		{
 			_o.Type = this.Type;
 			_o.UnlockOption = ((this.UnlockOption != null) ? this.UnlockOption.Value.UnPack() : null);
 		}
 
-		// Token: 0x060365BA RID: 222650 RVA: 0x00762F60 File Offset: 0x00761160
+		// Token: 0x060399CF RID: 235983 RVA: 0x007C61B0 File Offset: 0x007C43B0
 		public static Offset<IUnLockCookSystemItem> Pack(FlatBufferBuilder builder, IUnLockCookSystemItemT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IUnLockCookSystemItem.CreateIUnLockCookSystemItem(builder, _o.Type, unlockOptionOffset);
 		}
 
-		// Token: 0x04012391 RID: 74641
+		// Token: 0x040133C2 RID: 78786
 		private Table __p;
 	}
 }

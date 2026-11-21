@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001475 RID: 5237
+	// Token: 0x020015CE RID: 5582
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFinishKuroSimpleCombatKillMonster : IQuestCondition
 	{
-		// Token: 0x0600771F RID: 30495 RVA: 0x0011CA8C File Offset: 0x0011AC8C
-		[NullableContext(1)]
+		// Token: 0x06007DED RID: 32237 RVA: 0x0012B6A4 File Offset: 0x001298A4
+		[NullableContext(0)]
 		public static IFinishKuroSimpleCombatKillMonster Create(IFinishKuroSimpleCombatKillMonster? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002808 RID: 10248
-		// (get) Token: 0x06007720 RID: 30496 RVA: 0x0011CAAB File Offset: 0x0011ACAB
+		// Token: 0x170029F3 RID: 10739
+		// (get) Token: 0x06007DEE RID: 32238 RVA: 0x0012B6C3 File Offset: 0x001298C3
 		public override EChildQuest Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002809 RID: 10249
-		// (get) Token: 0x06007721 RID: 30497 RVA: 0x0011CAB8 File Offset: 0x0011ACB8
+		// Token: 0x170029F4 RID: 10740
+		// (get) Token: 0x06007DEF RID: 32239 RVA: 0x0012B6D0 File Offset: 0x001298D0
 		public override IConditionGroup PreConditions
 		{
 			get
@@ -50,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700280A RID: 10250
-		// (get) Token: 0x06007722 RID: 30498 RVA: 0x0011CAEC File Offset: 0x0011ACEC
+		// Token: 0x170029F5 RID: 10741
+		// (get) Token: 0x06007DF0 RID: 32240 RVA: 0x0012B704 File Offset: 0x00129904
 		public virtual int? KuroSimpleCombatSpawnMonsterConfigId
 		{
 			get
@@ -64,13 +64,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004547 RID: 17735
+		// Token: 0x040048E2 RID: 18658
 		private IFinishKuroSimpleCombatKillMonster Instance;
 
-		// Token: 0x04004548 RID: 17736
+		// Token: 0x040048E3 RID: 18659
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004549 RID: 17737
+		// Token: 0x040048E4 RID: 18660
 		private bool _PreConditionsInited;
 	}
 }

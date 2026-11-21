@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EF6 RID: 16118
+	// Token: 0x02004334 RID: 17204
 	public struct ILeaveDungeonCondition : IFlatbufferObject
 	{
-		// Token: 0x17006FCE RID: 28622
-		// (get) Token: 0x06016CE4 RID: 93412 RVA: 0x0034A254 File Offset: 0x00348454
+		// Token: 0x170075BD RID: 30141
+		// (get) Token: 0x0601833B RID: 99131 RVA: 0x00373420 File Offset: 0x00371620
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CE5 RID: 93413 RVA: 0x0034A261 File Offset: 0x00348461
+		// Token: 0x0601833C RID: 99132 RVA: 0x0037342D File Offset: 0x0037162D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016CE6 RID: 93414 RVA: 0x0034A268 File Offset: 0x00348468
+		// Token: 0x0601833D RID: 99133 RVA: 0x00373434 File Offset: 0x00371634
 		public static ILeaveDungeonCondition GetRootAsILeaveDungeonCondition(ByteBuffer _bb)
 		{
 			return ILeaveDungeonCondition.GetRootAsILeaveDungeonCondition(_bb, default(ILeaveDungeonCondition));
 		}
 
-		// Token: 0x06016CE7 RID: 93415 RVA: 0x0034A284 File Offset: 0x00348484
+		// Token: 0x0601833E RID: 99134 RVA: 0x00373450 File Offset: 0x00371650
 		public static ILeaveDungeonCondition GetRootAsILeaveDungeonCondition(ByteBuffer _bb, ILeaveDungeonCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016CE8 RID: 93416 RVA: 0x0034A2A1 File Offset: 0x003484A1
+		// Token: 0x0601833F RID: 99135 RVA: 0x0037346D File Offset: 0x0037166D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016CE9 RID: 93417 RVA: 0x0034A2B0 File Offset: 0x003484B0
+		// Token: 0x06018340 RID: 99136 RVA: 0x0037347C File Offset: 0x0037167C
 		public ILeaveDungeonCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FCF RID: 28623
-		// (get) Token: 0x06016CEA RID: 93418 RVA: 0x0034A2C0 File Offset: 0x003484C0
+		// Token: 0x170075BE RID: 30142
+		// (get) Token: 0x06018341 RID: 99137 RVA: 0x0037348C File Offset: 0x0037168C
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006FD0 RID: 28624
-		// (get) Token: 0x06016CEB RID: 93419 RVA: 0x0034A2FC File Offset: 0x003484FC
+		// Token: 0x170075BF RID: 30143
+		// (get) Token: 0x06018342 RID: 99138 RVA: 0x003734C8 File Offset: 0x003716C8
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016CEC RID: 93420 RVA: 0x0034A359 File Offset: 0x00348559
+		// Token: 0x06018343 RID: 99139 RVA: 0x00373525 File Offset: 0x00371725
 		public static Offset<ILeaveDungeonCondition> CreateILeaveDungeonCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILeaveDungeonCondition.EndILeaveDungeonCondition(builder);
 		}
 
-		// Token: 0x06016CED RID: 93421 RVA: 0x0034A376 File Offset: 0x00348576
+		// Token: 0x06018344 RID: 99140 RVA: 0x00373542 File Offset: 0x00371742
 		public static void StartILeaveDungeonCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06016CEE RID: 93422 RVA: 0x0034A37F File Offset: 0x0034857F
+		// Token: 0x06018345 RID: 99141 RVA: 0x0037354B File Offset: 0x0037174B
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016CEF RID: 93423 RVA: 0x0034A38A File Offset: 0x0034858A
+		// Token: 0x06018346 RID: 99142 RVA: 0x00373556 File Offset: 0x00371756
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06016CF0 RID: 93424 RVA: 0x0034A39A File Offset: 0x0034859A
+		// Token: 0x06018347 RID: 99143 RVA: 0x00373566 File Offset: 0x00371766
 		public static Offset<ILeaveDungeonCondition> EndILeaveDungeonCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ILeaveDungeonCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06016CF1 RID: 93425 RVA: 0x0034A3A8 File Offset: 0x003485A8
+		// Token: 0x06018348 RID: 99144 RVA: 0x00373574 File Offset: 0x00371774
 		public ILeaveDungeonConditionT UnPack()
 		{
 			ILeaveDungeonConditionT leaveDungeonConditionT = new ILeaveDungeonConditionT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return leaveDungeonConditionT;
 		}
 
-		// Token: 0x06016CF2 RID: 93426 RVA: 0x0034A3C4 File Offset: 0x003485C4
+		// Token: 0x06018349 RID: 99145 RVA: 0x00373590 File Offset: 0x00371790
 		public void UnPackTo(ILeaveDungeonConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.PreConditions = ((this.PreConditions != null) ? this.PreConditions.Value.UnPack() : null);
 		}
 
-		// Token: 0x06016CF3 RID: 93427 RVA: 0x0034A40C File Offset: 0x0034860C
+		// Token: 0x0601834A RID: 99146 RVA: 0x003735D8 File Offset: 0x003717D8
 		public static Offset<ILeaveDungeonCondition> Pack(FlatBufferBuilder builder, ILeaveDungeonConditionT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ILeaveDungeonCondition.CreateILeaveDungeonCondition(builder, _o.Type, preConditionsOffset);
 		}
 
-		// Token: 0x0400B8D3 RID: 47315
+		// Token: 0x0400C2B0 RID: 49840
 		private Table __p;
 	}
 }

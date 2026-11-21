@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200027E RID: 638
+	// Token: 0x02000292 RID: 658
 	public class ConfigEntitySkillPreloadByActorBlueprintAndSkillId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000EF9 RID: 3833 RVA: 0x000AE129 File Offset: 0x000AC329
+		// Token: 0x06000F71 RID: 3953 RVA: 0x000B43ED File Offset: 0x000B25ED
 		static ConfigEntitySkillPreloadByActorBlueprintAndSkillId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigEntitySkillPreloadByActorBlueprintAndSkillId.CreateStaticDefaultValue), new Action(ConfigEntitySkillPreloadByActorBlueprintAndSkillId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000EFA RID: 3834 RVA: 0x000AE148 File Offset: 0x000AC348
+		// Token: 0x06000F72 RID: 3954 RVA: 0x000B440C File Offset: 0x000B260C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigEntitySkillPreloadByActorBlueprintAndSkillId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000EFB RID: 3835 RVA: 0x000AE1C7 File Offset: 0x000AC3C7
+		// Token: 0x06000F73 RID: 3955 RVA: 0x000B448B File Offset: 0x000B268B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigEntitySkillPreloadByActorBlueprintAndSkillId.LogPair = null;
 			ConfigEntitySkillPreloadByActorBlueprintAndSkillId.HandleId = 0;
 		}
 
-		// Token: 0x06000EFC RID: 3836 RVA: 0x000AE1D5 File Offset: 0x000AC3D5
+		// Token: 0x06000F74 RID: 3956 RVA: 0x000B4499 File Offset: 0x000B2699
 		public static void Init()
 		{
 			ConfigEntitySkillPreloadByActorBlueprintAndSkillId.HandleId = ConfigCommon.InitDataStatement(ConfigEntitySkillPreloadByActorBlueprintAndSkillId.HandleId, "db_entity_skill_preload.db", "select BinData from `EntitySkillPreload` where ActorBlueprint=? AND SkillId=?");
 		}
 
-		// Token: 0x06000EFD RID: 3837 RVA: 0x000AE1F0 File Offset: 0x000AC3F0
+		// Token: 0x06000F75 RID: 3957 RVA: 0x000B44B4 File Offset: 0x000B26B4
 		public static EntitySkillPreload? GetConfig(string p0ActorBlueprint, int p1SkillId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigEntitySkillPreloadByActorBlueprintAndSkillId.HandleId, ConfigEntitySkillPreloadByActorBlueprintAndSkillId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new EntitySkillPreload?(rootAsEntitySkillPreload);
 		}
 
-		// Token: 0x04001156 RID: 4438
+		// Token: 0x040011E2 RID: 4578
 		private const string DB = "db_entity_skill_preload.db";
 
-		// Token: 0x04001157 RID: 4439
+		// Token: 0x040011E3 RID: 4579
 		private const string FILE = "Preload/EntitySkillPreload.csv";
 
-		// Token: 0x04001158 RID: 4440
+		// Token: 0x040011E4 RID: 4580
 		private const string TABLE = "EntitySkillPreload";
 
-		// Token: 0x04001159 RID: 4441
+		// Token: 0x040011E5 RID: 4581
 		private const string COMMAND = "select BinData from `EntitySkillPreload` where ActorBlueprint=? AND SkillId=?";
 
-		// Token: 0x0400115A RID: 4442
+		// Token: 0x040011E6 RID: 4582
 		private const string KEY_PREFIX = "EntitySkillPreloadByActorBlueprintAndSkillId";
 
-		// Token: 0x0400115B RID: 4443
+		// Token: 0x040011E7 RID: 4583
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400115C RID: 4444
+		// Token: 0x040011E8 RID: 4584
 		private static int HandleId;
 	}
 }

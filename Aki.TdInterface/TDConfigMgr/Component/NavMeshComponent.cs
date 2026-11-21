@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000841 RID: 2113
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008E4 RID: 2276
 	public class NavMeshComponent : IComponentBase
 	{
-		// Token: 0x06002E55 RID: 11861 RVA: 0x00077C9C File Offset: 0x00075E9C
+		// Token: 0x0600318B RID: 12683 RVA: 0x0007F0C0 File Offset: 0x0007D2C0
 		private NavMeshComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002E56 RID: 11862 RVA: 0x00077CD4 File Offset: 0x00075ED4
+		// Token: 0x0600318C RID: 12684 RVA: 0x0007F0F8 File Offset: 0x0007D2F8
 		public static NavMeshComponent Create([Nullable(2)] NavMeshComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E57 RID: 11863 RVA: 0x00077CE7 File Offset: 0x00075EE7
+		// Token: 0x0600318D RID: 12685 RVA: 0x0007F10B File Offset: 0x0007D30B
 		public static NavMeshComponent CreateFromSetValue([Nullable(2)] NavMeshComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E58 RID: 11864 RVA: 0x00077CFA File Offset: 0x00075EFA
+		// Token: 0x0600318E RID: 12686 RVA: 0x0007F11E File Offset: 0x0007D31E
 		public new NavMeshComponent_SetValue ToSetValue()
 		{
 			return new NavMeshComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C2C RID: 3116
-		// (get) Token: 0x06002E59 RID: 11865 RVA: 0x00077D28 File Offset: 0x00075F28
-		// (set) Token: 0x06002E5A RID: 11866 RVA: 0x00077D62 File Offset: 0x00075F62
+		// Token: 0x17000CF2 RID: 3314
+		// (get) Token: 0x0600318F RID: 12687 RVA: 0x0007F14C File Offset: 0x0007D34C
+		// (set) Token: 0x06003190 RID: 12688 RVA: 0x0007F186 File Offset: 0x0007D386
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C2D RID: 3117
-		// (get) Token: 0x06002E5B RID: 11867 RVA: 0x00077D70 File Offset: 0x00075F70
-		// (set) Token: 0x06002E5C RID: 11868 RVA: 0x00077D9A File Offset: 0x00075F9A
+		// Token: 0x17000CF3 RID: 3315
+		// (get) Token: 0x06003191 RID: 12689 RVA: 0x0007F194 File Offset: 0x0007D394
+		// (set) Token: 0x06003192 RID: 12690 RVA: 0x0007F1BE File Offset: 0x0007D3BE
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C2E RID: 3118
-		// (get) Token: 0x06002E5D RID: 11869 RVA: 0x00077DA8 File Offset: 0x00075FA8
-		// (set) Token: 0x06002E5E RID: 11870 RVA: 0x00077E09 File Offset: 0x00076009
+		// Token: 0x17000CF4 RID: 3316
+		// (get) Token: 0x06003193 RID: 12691 RVA: 0x0007F1CC File Offset: 0x0007D3CC
+		// (set) Token: 0x06003194 RID: 12692 RVA: 0x0007F22D File Offset: 0x0007D42D
 		public virtual INavMeshAkiEntitySource Source
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E98 RID: 7832
+		// Token: 0x040020A7 RID: 8359
 		[Nullable(2)]
 		protected new NavMeshComponent FbInstance;
 
-		// Token: 0x04001E99 RID: 7833
+		// Token: 0x040020A8 RID: 8360
 		[Nullable(2)]
 		protected new NavMeshComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E9A RID: 7834
+		// Token: 0x040020A9 RID: 8361
 		private INavMeshAkiEntitySource _SourceCache;
 
-		// Token: 0x04001E9B RID: 7835
+		// Token: 0x040020AA RID: 8362
 		private bool _SourceInited;
 	}
 }

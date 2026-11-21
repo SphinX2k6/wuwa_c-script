@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CBD RID: 3261
+	// Token: 0x02000DA1 RID: 3489
 	public struct FloroRanchToyWeight : IFlatbufferObject
 	{
-		// Token: 0x1700137D RID: 4989
-		// (get) Token: 0x06007517 RID: 29975 RVA: 0x0023F469 File Offset: 0x0023D669
+		// Token: 0x170013DA RID: 5082
+		// (get) Token: 0x06007B22 RID: 31522 RVA: 0x0025E196 File Offset: 0x0025C396
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007518 RID: 29976 RVA: 0x0023F476 File Offset: 0x0023D676
+		// Token: 0x06007B23 RID: 31523 RVA: 0x0025E1A3 File Offset: 0x0025C3A3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007519 RID: 29977 RVA: 0x0023F480 File Offset: 0x0023D680
+		// Token: 0x06007B24 RID: 31524 RVA: 0x0025E1AC File Offset: 0x0025C3AC
 		public static FloroRanchToyWeight GetRootAsFloroRanchToyWeight(ByteBuffer _bb)
 		{
 			return FloroRanchToyWeight.GetRootAsFloroRanchToyWeight(_bb, default(FloroRanchToyWeight));
 		}
 
-		// Token: 0x0600751A RID: 29978 RVA: 0x0023F49C File Offset: 0x0023D69C
+		// Token: 0x06007B25 RID: 31525 RVA: 0x0025E1C8 File Offset: 0x0025C3C8
 		public static FloroRanchToyWeight GetRootAsFloroRanchToyWeight(ByteBuffer _bb, FloroRanchToyWeight obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600751B RID: 29979 RVA: 0x0023F4B9 File Offset: 0x0023D6B9
+		// Token: 0x06007B26 RID: 31526 RVA: 0x0025E1E5 File Offset: 0x0025C3E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600751C RID: 29980 RVA: 0x0023F4C8 File Offset: 0x0023D6C8
+		// Token: 0x06007B27 RID: 31527 RVA: 0x0025E1F4 File Offset: 0x0025C3F4
 		public FloroRanchToyWeight __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700137E RID: 4990
-		// (get) Token: 0x0600751D RID: 29981 RVA: 0x0023F4D8 File Offset: 0x0023D6D8
+		// Token: 0x170013DB RID: 5083
+		// (get) Token: 0x06007B28 RID: 31528 RVA: 0x0025E204 File Offset: 0x0025C404
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700137F RID: 4991
-		// (get) Token: 0x0600751E RID: 29982 RVA: 0x0023F514 File Offset: 0x0023D714
+		// Token: 0x170013DC RID: 5084
+		// (get) Token: 0x06007B29 RID: 31529 RVA: 0x0025E240 File Offset: 0x0025C440
 		public int Group
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001380 RID: 4992
-		// (get) Token: 0x0600751F RID: 29983 RVA: 0x0023F550 File Offset: 0x0023D750
+		// Token: 0x170013DD RID: 5085
+		// (get) Token: 0x06007B2A RID: 31530 RVA: 0x0025E27C File Offset: 0x0025C47C
 		public int Stage
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D2D RID: 19757
+		// Token: 0x04005311 RID: 21265
 		private Table __p;
 	}
 }

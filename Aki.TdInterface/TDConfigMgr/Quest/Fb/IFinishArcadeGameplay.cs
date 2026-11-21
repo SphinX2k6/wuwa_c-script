@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001474 RID: 5236
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015CD RID: 5581
 	public class IFinishArcadeGameplay : IQuestCondition
 	{
-		// Token: 0x0600771A RID: 30490 RVA: 0x0011C9F5 File Offset: 0x0011ABF5
+		// Token: 0x06007DE8 RID: 32232 RVA: 0x0012B60D File Offset: 0x0012980D
 		public static IFinishArcadeGameplay Create(IFinishArcadeGameplay? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002805 RID: 10245
-		// (get) Token: 0x0600771B RID: 30491 RVA: 0x0011CA14 File Offset: 0x0011AC14
+		// Token: 0x170029F0 RID: 10736
+		// (get) Token: 0x06007DE9 RID: 32233 RVA: 0x0012B62C File Offset: 0x0012982C
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002806 RID: 10246
-		// (get) Token: 0x0600771C RID: 30492 RVA: 0x0011CA21 File Offset: 0x0011AC21
+		// Token: 0x170029F1 RID: 10737
+		// (get) Token: 0x06007DEA RID: 32234 RVA: 0x0012B639 File Offset: 0x00129839
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002807 RID: 10247
-		// (get) Token: 0x0600771D RID: 30493 RVA: 0x0011CA55 File Offset: 0x0011AC55
+		// Token: 0x170029F2 RID: 10738
+		// (get) Token: 0x06007DEB RID: 32235 RVA: 0x0012B66D File Offset: 0x0012986D
 		public virtual IArcadeGameplayBase ArcadeGameplay
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004542 RID: 17730
+		// Token: 0x040048DD RID: 18653
 		private IFinishArcadeGameplay Instance;
 
-		// Token: 0x04004543 RID: 17731
+		// Token: 0x040048DE RID: 18654
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004544 RID: 17732
+		// Token: 0x040048DF RID: 18655
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004545 RID: 17733
+		// Token: 0x040048E0 RID: 18656
 		private IArcadeGameplayBase _ArcadeGameplayCache;
 
-		// Token: 0x04004546 RID: 17734
+		// Token: 0x040048E1 RID: 18657
 		private bool _ArcadeGameplayInited;
 	}
 }

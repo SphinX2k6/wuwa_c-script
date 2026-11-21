@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012B0 RID: 4784
+	// Token: 0x020013F6 RID: 5110
 	public static class ETrapDefenseConditionStepExtensions
 	{
-		// Token: 0x06006BBF RID: 27583 RVA: 0x00103388 File Offset: 0x00101588
+		// Token: 0x0600722D RID: 29229 RVA: 0x00111350 File Offset: 0x0010F550
 		public static string ToEnumString(this ETrapDefenseConditionStep value)
 		{
 			string result;
@@ -33,7 +33,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BC0 RID: 27584 RVA: 0x001033E8 File Offset: 0x001015E8
+		// Token: 0x0600722E RID: 29230 RVA: 0x001113B0 File Offset: 0x0010F5B0
 		public static ETrapDefenseConditionStep FromString(string name)
 		{
 			ETrapDefenseConditionStep result;
@@ -44,7 +44,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BC1 RID: 27585 RVA: 0x00103414 File Offset: 0x00101614
+		// Token: 0x0600722F RID: 29231 RVA: 0x001113DC File Offset: 0x0010F5DC
 		public static bool TryFromString(string name, out ETrapDefenseConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -81,7 +81,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006BC2 RID: 27586 RVA: 0x0010348E File Offset: 0x0010168E
+		// Token: 0x06007230 RID: 29232 RVA: 0x00111456 File Offset: 0x0010F656
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -94,7 +94,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BC3 RID: 27587 RVA: 0x001034BE File Offset: 0x001016BE
+		// Token: 0x06007231 RID: 29233 RVA: 0x00111486 File Offset: 0x0010F686
 		public static ETrapDefenseConditionStep[] GetValues()
 		{
 			return new ETrapDefenseConditionStep[]
@@ -107,7 +107,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006BC4 RID: 27588 RVA: 0x001034D1 File Offset: 0x001016D1
+		// Token: 0x06007232 RID: 29234 RVA: 0x00111499 File Offset: 0x0010F699
 		public static string[] GetNames()
 		{
 			return new string[]

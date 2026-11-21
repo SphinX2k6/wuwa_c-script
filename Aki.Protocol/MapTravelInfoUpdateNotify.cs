@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020009A0 RID: 2464
+	// Token: 0x0200098F RID: 2447
 	[NetMessage(EMessageId.MapTravelInfoUpdateNotify)]
 	public sealed class MapTravelInfoUpdateNotify : IMessage<MapTravelInfoUpdateNotify>, IMessage, IEquatable<MapTravelInfoUpdateNotify>, IDeepCloneable<MapTravelInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0600D861 RID: 55393 RVA: 0x001FCC25 File Offset: 0x001FAE25
+		// Token: 0x0600D747 RID: 55111 RVA: 0x001FAA35 File Offset: 0x001F8C35
 		[NullableContext(1)]
 		public static MapTravelInfoUpdateNotify Create()
 		{
 			return new MapTravelInfoUpdateNotify();
 		}
 
-		// Token: 0x17002BCF RID: 11215
-		// (get) Token: 0x0600D862 RID: 55394 RVA: 0x001FCC2C File Offset: 0x001FAE2C
+		// Token: 0x17002B91 RID: 11153
+		// (get) Token: 0x0600D748 RID: 55112 RVA: 0x001FAA3C File Offset: 0x001F8C3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD0 RID: 11216
-		// (get) Token: 0x0600D863 RID: 55395 RVA: 0x001FCC2F File Offset: 0x001FAE2F
+		// Token: 0x17002B92 RID: 11154
+		// (get) Token: 0x0600D749 RID: 55113 RVA: 0x001FAA3F File Offset: 0x001F8C3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,42 +42,42 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D864 RID: 55396 RVA: 0x001FCC36 File Offset: 0x001FAE36
+		// Token: 0x0600D74A RID: 55114 RVA: 0x001FAA46 File Offset: 0x001F8C46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapTravelInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600D865 RID: 55397 RVA: 0x001FCC40 File Offset: 0x001FAE40
+		// Token: 0x0600D74B RID: 55115 RVA: 0x001FAA50 File Offset: 0x001F8C50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapTravelInfoUpdateNotify(MapTravelInfoUpdateNotify other) : this()
 		{
 			MapTravelInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase != MapTravelInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
+			if (dataCase != MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel)
 			{
 				switch (dataCase)
 				{
+				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockArea:
+					this.UnLockArea = other.UnLockArea;
+					break;
 				case MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask:
 					this.ActivityTask = other.ActivityTask.Clone();
 					break;
-				case MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel:
-					this.SoarLevel = other.SoarLevel.Clone();
-					break;
-				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockArea:
-					this.UnLockArea = other.UnLockArea;
+				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockMonsterId:
+					this.UnLockMonsterId = other.UnLockMonsterId;
 					break;
 				}
 			}
 			else
 			{
-				this.UnLockMonsterId = other.UnLockMonsterId;
+				this.SoarLevel = other.SoarLevel.Clone();
 			}
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D866 RID: 55398 RVA: 0x001FCCCD File Offset: 0x001FAECD
+		// Token: 0x0600D74C RID: 55116 RVA: 0x001FAADA File Offset: 0x001F8CDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapTravelInfoUpdateNotify Clone()
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			return new MapTravelInfoUpdateNotify(this);
 		}
 
-		// Token: 0x17002BD1 RID: 11217
-		// (get) Token: 0x0600D867 RID: 55399 RVA: 0x001FCCD5 File Offset: 0x001FAED5
-		// (set) Token: 0x0600D868 RID: 55400 RVA: 0x001FCCED File Offset: 0x001FAEED
+		// Token: 0x17002B93 RID: 11155
+		// (get) Token: 0x0600D74D RID: 55117 RVA: 0x001FAAE2 File Offset: 0x001F8CE2
+		// (set) Token: 0x0600D74E RID: 55118 RVA: 0x001FAAFB File Offset: 0x001F8CFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityTask ActivityTask
@@ -107,9 +107,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD2 RID: 11218
-		// (get) Token: 0x0600D869 RID: 55401 RVA: 0x001FCD03 File Offset: 0x001FAF03
-		// (set) Token: 0x0600D86A RID: 55402 RVA: 0x001FCD1A File Offset: 0x001FAF1A
+		// Token: 0x17002B94 RID: 11156
+		// (get) Token: 0x0600D74F RID: 55119 RVA: 0x001FAB12 File Offset: 0x001F8D12
+		// (set) Token: 0x0600D750 RID: 55120 RVA: 0x001FAB29 File Offset: 0x001F8D29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockMonsterId
@@ -129,8 +129,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD3 RID: 11219
-		// (get) Token: 0x0600D86B RID: 55403 RVA: 0x001FCD2F File Offset: 0x001FAF2F
+		// Token: 0x17002B95 RID: 11157
+		// (get) Token: 0x0600D751 RID: 55121 RVA: 0x001FAB3F File Offset: 0x001F8D3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasUnLockMonsterId
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D86C RID: 55404 RVA: 0x001FCD3A File Offset: 0x001FAF3A
+		// Token: 0x0600D752 RID: 55122 RVA: 0x001FAB4B File Offset: 0x001F8D4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearUnLockMonsterId()
@@ -152,9 +152,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD4 RID: 11220
-		// (get) Token: 0x0600D86D RID: 55405 RVA: 0x001FCD4A File Offset: 0x001FAF4A
-		// (set) Token: 0x0600D86E RID: 55406 RVA: 0x001FCD61 File Offset: 0x001FAF61
+		// Token: 0x17002B96 RID: 11158
+		// (get) Token: 0x0600D753 RID: 55123 RVA: 0x001FAB5B File Offset: 0x001F8D5B
+		// (set) Token: 0x0600D754 RID: 55124 RVA: 0x001FAB72 File Offset: 0x001F8D72
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int UnLockArea
@@ -174,8 +174,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD5 RID: 11221
-		// (get) Token: 0x0600D86F RID: 55407 RVA: 0x001FCD77 File Offset: 0x001FAF77
+		// Token: 0x17002B97 RID: 11159
+		// (get) Token: 0x0600D755 RID: 55125 RVA: 0x001FAB88 File Offset: 0x001F8D88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasUnLockArea
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D870 RID: 55408 RVA: 0x001FCD83 File Offset: 0x001FAF83
+		// Token: 0x0600D756 RID: 55126 RVA: 0x001FAB94 File Offset: 0x001F8D94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearUnLockArea()
@@ -197,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD6 RID: 11222
-		// (get) Token: 0x0600D871 RID: 55409 RVA: 0x001FCD93 File Offset: 0x001FAF93
-		// (set) Token: 0x0600D872 RID: 55410 RVA: 0x001FCDAC File Offset: 0x001FAFAC
+		// Token: 0x17002B98 RID: 11160
+		// (get) Token: 0x0600D757 RID: 55127 RVA: 0x001FABA4 File Offset: 0x001F8DA4
+		// (set) Token: 0x0600D758 RID: 55128 RVA: 0x001FABBC File Offset: 0x001F8DBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SoarLevelPlayInfo SoarLevel
@@ -219,8 +219,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002BD7 RID: 11223
-		// (get) Token: 0x0600D873 RID: 55411 RVA: 0x001FCDC3 File Offset: 0x001FAFC3
+		// Token: 0x17002B99 RID: 11161
+		// (get) Token: 0x0600D759 RID: 55129 RVA: 0x001FABD2 File Offset: 0x001F8DD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MapTravelInfoUpdateNotify.DataOneofCase DataCase
@@ -231,7 +231,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D874 RID: 55412 RVA: 0x001FCDCB File Offset: 0x001FAFCB
+		// Token: 0x0600D75A RID: 55130 RVA: 0x001FABDA File Offset: 0x001F8DDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -240,7 +240,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x0600D875 RID: 55413 RVA: 0x001FCDDB File Offset: 0x001FAFDB
+		// Token: 0x0600D75B RID: 55131 RVA: 0x001FABEA File Offset: 0x001F8DEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -248,7 +248,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MapTravelInfoUpdateNotify);
 		}
 
-		// Token: 0x0600D876 RID: 55414 RVA: 0x001FCDEC File Offset: 0x001FAFEC
+		// Token: 0x0600D75C RID: 55132 RVA: 0x001FABF8 File Offset: 0x001F8DF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MapTravelInfoUpdateNotify other)
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.ActivityTask, other.ActivityTask) && this.UnLockMonsterId == other.UnLockMonsterId && this.UnLockArea == other.UnLockArea && object.Equals(this.SoarLevel, other.SoarLevel) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D877 RID: 55415 RVA: 0x001FCE70 File Offset: 0x001FB070
+		// Token: 0x0600D75D RID: 55133 RVA: 0x001FAC7C File Offset: 0x001F8E7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D878 RID: 55416 RVA: 0x001FCF00 File Offset: 0x001FB100
+		// Token: 0x0600D75E RID: 55134 RVA: 0x001FAD0C File Offset: 0x001F8F0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D879 RID: 55417 RVA: 0x001FCF0D File Offset: 0x001FB10D
+		// Token: 0x0600D75F RID: 55135 RVA: 0x001FAD19 File Offset: 0x001F8F19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -302,30 +302,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D87A RID: 55418 RVA: 0x001FCF18 File Offset: 0x001FB118
+		// Token: 0x0600D760 RID: 55136 RVA: 0x001FAD24 File Offset: 0x001F8F24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.HasUnLockMonsterId)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.UnLockMonsterId);
-			}
-			if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask)
-			{
-				output.WriteRawTag(66);
-				output.WriteMessage(this.ActivityTask);
-			}
 			if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(26);
 				output.WriteMessage(this.SoarLevel);
 			}
 			if (this.HasUnLockArea)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(88);
 				output.WriteInt32(this.UnLockArea);
+			}
+			if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask)
+			{
+				output.WriteRawTag(98);
+				output.WriteMessage(this.ActivityTask);
+			}
+			if (this.HasUnLockMonsterId)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.UnLockMonsterId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -333,7 +333,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D87B RID: 55419 RVA: 0x001FCFAC File Offset: 0x001FB1AC
+		// Token: 0x0600D761 RID: 55137 RVA: 0x001FADB8 File Offset: 0x001F8FB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -362,7 +362,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D87C RID: 55420 RVA: 0x001FD038 File Offset: 0x001FB238
+		// Token: 0x0600D762 RID: 55138 RVA: 0x001FAE44 File Offset: 0x001F9044
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MapTravelInfoUpdateNotify other)
@@ -372,10 +372,13 @@ namespace Aki.Protocol
 				return;
 			}
 			MapTravelInfoUpdateNotify.DataOneofCase dataCase = other.DataCase;
-			if (dataCase != MapTravelInfoUpdateNotify.DataOneofCase.UnLockMonsterId)
+			if (dataCase != MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel)
 			{
 				switch (dataCase)
 				{
+				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockArea:
+					this.UnLockArea = other.UnLockArea;
+					break;
 				case MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask:
 					if (this.ActivityTask == null)
 					{
@@ -383,26 +386,23 @@ namespace Aki.Protocol
 					}
 					this.ActivityTask.MergeFrom(other.ActivityTask);
 					break;
-				case MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel:
-					if (this.SoarLevel == null)
-					{
-						this.SoarLevel = new SoarLevelPlayInfo();
-					}
-					this.SoarLevel.MergeFrom(other.SoarLevel);
-					break;
-				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockArea:
-					this.UnLockArea = other.UnLockArea;
+				case MapTravelInfoUpdateNotify.DataOneofCase.UnLockMonsterId:
+					this.UnLockMonsterId = other.UnLockMonsterId;
 					break;
 				}
 			}
 			else
 			{
-				this.UnLockMonsterId = other.UnLockMonsterId;
+				if (this.SoarLevel == null)
+				{
+					this.SoarLevel = new SoarLevelPlayInfo();
+				}
+				this.SoarLevel.MergeFrom(other.SoarLevel);
 			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D87D RID: 55421 RVA: 0x001FD0EF File Offset: 0x001FB2EF
+		// Token: 0x0600D763 RID: 55139 RVA: 0x001FAEF8 File Offset: 0x001F90F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -410,7 +410,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D87E RID: 55422 RVA: 0x001FD0F8 File Offset: 0x001FB2F8
+		// Token: 0x0600D764 RID: 55140 RVA: 0x001FAF04 File Offset: 0x001F9104
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -422,28 +422,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 66U)
+				if (num <= 88U)
 				{
-					if (num == 40U)
-					{
-						this.UnLockMonsterId = input.ReadInt32();
-						continue;
-					}
-					if (num == 66U)
-					{
-						ActivityTask activityTask = new ActivityTask();
-						if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask)
-						{
-							activityTask.MergeFrom(this.ActivityTask);
-						}
-						input.ReadMessage(activityTask);
-						this.ActivityTask = activityTask;
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 82U)
+					if (num == 26U)
 					{
 						SoarLevelPlayInfo soarLevelPlayInfo = new SoarLevelPlayInfo();
 						if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.SoarLevel)
@@ -454,9 +435,28 @@ namespace Aki.Protocol
 						this.SoarLevel = soarLevelPlayInfo;
 						continue;
 					}
-					if (num == 96U)
+					if (num == 88U)
 					{
 						this.UnLockArea = input.ReadInt32();
+						continue;
+					}
+				}
+				else
+				{
+					if (num == 98U)
+					{
+						ActivityTask activityTask = new ActivityTask();
+						if (this.dataCase_ == MapTravelInfoUpdateNotify.DataOneofCase.ActivityTask)
+						{
+							activityTask.MergeFrom(this.ActivityTask);
+						}
+						input.ReadMessage(activityTask);
+						this.ActivityTask = activityTask;
+						continue;
+					}
+					if (num == 112U)
+					{
+						this.UnLockMonsterId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -464,40 +464,40 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005A2D RID: 23085
+		// Token: 0x04005A36 RID: 23094
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005A2E RID: 23086
-		public const int ActivityTaskFieldNumber = 8;
+		// Token: 0x04005A37 RID: 23095
+		public const int ActivityTaskFieldNumber = 12;
 
-		// Token: 0x04005A2F RID: 23087
-		public const int UnLockMonsterIdFieldNumber = 5;
+		// Token: 0x04005A38 RID: 23096
+		public const int UnLockMonsterIdFieldNumber = 14;
 
-		// Token: 0x04005A30 RID: 23088
-		public const int UnLockAreaFieldNumber = 12;
+		// Token: 0x04005A39 RID: 23097
+		public const int UnLockAreaFieldNumber = 11;
 
-		// Token: 0x04005A31 RID: 23089
-		public const int SoarLevelFieldNumber = 10;
+		// Token: 0x04005A3A RID: 23098
+		public const int SoarLevelFieldNumber = 3;
 
-		// Token: 0x04005A32 RID: 23090
+		// Token: 0x04005A3B RID: 23099
 		private object data_;
 
-		// Token: 0x04005A33 RID: 23091
+		// Token: 0x04005A3C RID: 23100
 		private MapTravelInfoUpdateNotify.DataOneofCase dataCase_;
 
-		// Token: 0x0200182B RID: 6187
+		// Token: 0x020018A3 RID: 6307
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C7F3 RID: 51187
+			// Token: 0x0400CD1E RID: 52510
 			None,
-			// Token: 0x0400C7F4 RID: 51188
-			ActivityTask = 8,
-			// Token: 0x0400C7F5 RID: 51189
-			UnLockMonsterId = 5,
-			// Token: 0x0400C7F6 RID: 51190
-			UnLockArea = 12,
-			// Token: 0x0400C7F7 RID: 51191
-			SoarLevel = 10
+			// Token: 0x0400CD1F RID: 52511
+			ActivityTask = 12,
+			// Token: 0x0400CD20 RID: 52512
+			UnLockMonsterId = 14,
+			// Token: 0x0400CD21 RID: 52513
+			UnLockArea = 11,
+			// Token: 0x0400CD22 RID: 52514
+			SoarLevel = 3
 		}
 	}
 }

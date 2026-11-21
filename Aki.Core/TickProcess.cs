@@ -2,34 +2,34 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020000CD RID: 205
+// Token: 0x020000CF RID: 207
 public class TickProcess : IStaticVariableResetter
 {
-	// Token: 0x06000656 RID: 1622 RVA: 0x00021FA9 File Offset: 0x000201A9
+	// Token: 0x06000697 RID: 1687 RVA: 0x00022481 File Offset: 0x00020681
 	static TickProcess()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TickProcess.CreateStaticDefaultValue), new Action(TickProcess.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000657 RID: 1623 RVA: 0x00021FC8 File Offset: 0x000201C8
+	// Token: 0x06000698 RID: 1688 RVA: 0x000224A0 File Offset: 0x000206A0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000658 RID: 1624 RVA: 0x00021FCA File Offset: 0x000201CA
+	// Token: 0x06000699 RID: 1689 RVA: 0x000224A2 File Offset: 0x000206A2
 	public static void ResetStaticDefaultValue()
 	{
 		TickProcess.Increment = 0;
 	}
 
-	// Token: 0x06000659 RID: 1625 RVA: 0x00021FD2 File Offset: 0x000201D2
+	// Token: 0x0600069A RID: 1690 RVA: 0x000224AA File Offset: 0x000206AA
 	public TickProcess()
 	{
 		this.Id = ++TickProcess.Increment;
 	}
 
-	// Token: 0x170000D4 RID: 212
-	// (get) Token: 0x0600065A RID: 1626 RVA: 0x00021FF4 File Offset: 0x000201F4
+	// Token: 0x170000E6 RID: 230
+	// (get) Token: 0x0600069B RID: 1691 RVA: 0x000224CC File Offset: 0x000206CC
 	public ETickingGroup Group
 	{
 		get
@@ -38,7 +38,7 @@ public class TickProcess : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600065B RID: 1627 RVA: 0x00021FFC File Offset: 0x000201FC
+	// Token: 0x0600069C RID: 1692 RVA: 0x000224D4 File Offset: 0x000206D4
 	[NullableContext(1)]
 	public void Init(Action<float> callback, ETickingGroup group, ETickProcessLifeType lifeType, float lifeTime = 0f, [Nullable(2)] string createReason = null)
 	{
@@ -50,7 +50,7 @@ public class TickProcess : IStaticVariableResetter
 		this.CreateReason = createReason;
 	}
 
-	// Token: 0x0600065C RID: 1628 RVA: 0x00022030 File Offset: 0x00020230
+	// Token: 0x0600069D RID: 1693 RVA: 0x00022508 File Offset: 0x00020708
 	public bool Tick(float deltaTime)
 	{
 		if (this.TickCallback == null)
@@ -82,29 +82,29 @@ public class TickProcess : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x04000520 RID: 1312
+	// Token: 0x0400052E RID: 1326
 	public readonly int Id;
 
-	// Token: 0x04000521 RID: 1313
+	// Token: 0x0400052F RID: 1327
 	private static int Increment;
 
-	// Token: 0x04000522 RID: 1314
+	// Token: 0x04000530 RID: 1328
 	[Nullable(2)]
 	private Action<float> TickCallback;
 
-	// Token: 0x04000523 RID: 1315
+	// Token: 0x04000531 RID: 1329
 	private ETickProcessLifeType LifeType;
 
-	// Token: 0x04000524 RID: 1316
+	// Token: 0x04000532 RID: 1330
 	private float LifeTime;
 
-	// Token: 0x04000525 RID: 1317
+	// Token: 0x04000533 RID: 1331
 	private float PassTime;
 
-	// Token: 0x04000526 RID: 1318
+	// Token: 0x04000534 RID: 1332
 	private ETickingGroup GroupInternal = ETickingGroup.TG_MAX;
 
-	// Token: 0x04000527 RID: 1319
+	// Token: 0x04000535 RID: 1333
 	[Nullable(2)]
 	private string CreateReason;
 }

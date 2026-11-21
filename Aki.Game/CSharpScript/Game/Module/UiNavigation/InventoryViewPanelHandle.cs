@@ -4,17 +4,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048FD RID: 18685
+	// Token: 0x02003874 RID: 14452
 	public class InventoryViewPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DA9 RID: 200105 RVA: 0x00B58789 File Offset: 0x00B56989
+		// Token: 0x060258D6 RID: 153814 RVA: 0x00A935F9 File Offset: 0x00A917F9
 		[NullableContext(1)]
 		public InventoryViewPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x170079BF RID: 31167
-		// (get) Token: 0x06030DAA RID: 200106 RVA: 0x00B58792 File Offset: 0x00B56992
+		// Token: 0x17004D27 RID: 19751
+		// (get) Token: 0x060258D7 RID: 153815 RVA: 0x00A93602 File Offset: 0x00A91802
 		public bool IsInDestroyMode
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DAB RID: 200107 RVA: 0x00B5879C File Offset: 0x00B5699C
+		// Token: 0x060258D8 RID: 153816 RVA: 0x00A9360C File Offset: 0x00A9180C
 		[NullableContext(2)]
 		private NavigationGroup FindItemGridGroupConfig()
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return base.GetNavigationGroup(groupName);
 		}
 
-		// Token: 0x06030DAC RID: 200108 RVA: 0x00B58810 File Offset: 0x00B56A10
+		// Token: 0x060258D9 RID: 153817 RVA: 0x00A93680 File Offset: 0x00A91880
 		public void SetItemGridDestroyMode(bool isInDestroyMode)
 		{
 			this.IsInDestroyModeInternal = isInDestroyMode;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3B8 RID: 107448
+		// Token: 0x04014C2B RID: 85035
 		private bool IsInDestroyModeInternal;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001422 RID: 5154
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200157A RID: 5498
 	public class IListenToEvent : IQuestCondition
 	{
-		// Token: 0x06007513 RID: 29971 RVA: 0x00117B51 File Offset: 0x00115D51
+		// Token: 0x06007BD8 RID: 31704 RVA: 0x0012659D File Offset: 0x0012479D
 		public static IListenToEvent Create(IListenToEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170026A2 RID: 9890
-		// (get) Token: 0x06007514 RID: 29972 RVA: 0x00117B70 File Offset: 0x00115D70
+		// Token: 0x17002886 RID: 10374
+		// (get) Token: 0x06007BD9 RID: 31705 RVA: 0x001265BC File Offset: 0x001247BC
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026A3 RID: 9891
-		// (get) Token: 0x06007515 RID: 29973 RVA: 0x00117B7D File Offset: 0x00115D7D
+		// Token: 0x17002887 RID: 10375
+		// (get) Token: 0x06007BDA RID: 31706 RVA: 0x001265C9 File Offset: 0x001247C9
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170026A4 RID: 9892
-		// (get) Token: 0x06007516 RID: 29974 RVA: 0x00117BB1 File Offset: 0x00115DB1
+		// Token: 0x17002888 RID: 10376
+		// (get) Token: 0x06007BDB RID: 31707 RVA: 0x001265FD File Offset: 0x001247FD
 		public virtual IEventTypeConfig EventType
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043D4 RID: 17364
+		// Token: 0x04004768 RID: 18280
 		private IListenToEvent Instance;
 
-		// Token: 0x040043D5 RID: 17365
+		// Token: 0x04004769 RID: 18281
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040043D6 RID: 17366
+		// Token: 0x0400476A RID: 18282
 		private bool _PreConditionsInited;
 
-		// Token: 0x040043D7 RID: 17367
+		// Token: 0x0400476B RID: 18283
 		private IEventTypeConfig _EventTypeCache;
 
-		// Token: 0x040043D8 RID: 17368
+		// Token: 0x0400476C RID: 18284
 		private bool _EventTypeInited;
 	}
 }

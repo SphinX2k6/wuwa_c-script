@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002539 RID: 9529
+// Token: 0x02001A22 RID: 6690
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 {
-	// Token: 0x0601326D RID: 78445 RVA: 0x004C1148 File Offset: 0x004BF348
+	// Token: 0x06010740 RID: 67392 RVA: 0x004CF70C File Offset: 0x004CD90C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,20 +35,20 @@ public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		};
 	}
 
-	// Token: 0x0601326E RID: 78446 RVA: 0x004C11F1 File Offset: 0x004BF3F1
+	// Token: 0x06010741 RID: 67393 RVA: 0x004CF7B5 File Offset: 0x004CD9B5
 	protected override void OnStart()
 	{
 		this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, null);
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0601326F RID: 78447 RVA: 0x004C1225 File Offset: 0x004BF425
+	// Token: 0x06010742 RID: 67394 RVA: 0x004CF7E9 File Offset: 0x004CD9E9
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x06013270 RID: 78448 RVA: 0x004C122C File Offset: 0x004BF42C
+	// Token: 0x06010743 RID: 67395 RVA: 0x004CF7F0 File Offset: 0x004CD9F0
 	public override void Refresh(PhoneMsgChatData data)
 	{
 		DropPackage? dropPackage = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackage(data.DropId);
@@ -69,7 +69,7 @@ public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		base.GetSprite(1).SetUIActive(data.IsFinish);
 	}
 
-	// Token: 0x06013271 RID: 78449 RVA: 0x004C1314 File Offset: 0x004BF514
+	// Token: 0x06010744 RID: 67396 RVA: 0x004CF8D8 File Offset: 0x004CDAD8
 	private void OnGetRewardClick()
 	{
 		Action onRewardClick = this.OnRewardClick;
@@ -80,7 +80,7 @@ public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		onRewardClick();
 	}
 
-	// Token: 0x06013272 RID: 78450 RVA: 0x004C1328 File Offset: 0x004BF528
+	// Token: 0x06010745 RID: 67397 RVA: 0x004CF8EC File Offset: 0x004CDAEC
 	public UniTask PlayRewardAnimationAsync()
 	{
 		RewardChatItem.<PlayRewardAnimationAsync>d__9 <PlayRewardAnimationAsync>d__;
@@ -91,17 +91,17 @@ public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		return <PlayRewardAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013273 RID: 78451 RVA: 0x004C136B File Offset: 0x004BF56B
+	// Token: 0x06010746 RID: 67398 RVA: 0x004CF92F File Offset: 0x004CDB2F
 	public void StopRewardAnimation()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("In", false, true);
 	}
 
-	// Token: 0x0400909A RID: 37018
+	// Token: 0x040091F4 RID: 37364
 	[Nullable(2)]
 	public Action OnRewardClick;
 
-	// Token: 0x0400909B RID: 37019
+	// Token: 0x040091F5 RID: 37365
 	[Nullable(new byte[]
 	{
 		2,
@@ -109,23 +109,23 @@ public class RewardChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-	// Token: 0x0400909C RID: 37020
+	// Token: 0x040091F6 RID: 37366
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008AC6 RID: 35526
+	// Token: 0x02007C4F RID: 31823
 	[NullableContext(0)]
 	private enum EItemRewardComponent
 	{
-		// Token: 0x0402D107 RID: 184583
+		// Token: 0x04028427 RID: 164903
 		BtnGet,
-		// Token: 0x0402D108 RID: 184584
+		// Token: 0x04028428 RID: 164904
 		SpriteFinish,
-		// Token: 0x0402D109 RID: 184585
+		// Token: 0x04028429 RID: 164905
 		RewardScroll,
-		// Token: 0x0402D10A RID: 184586
+		// Token: 0x0402842A RID: 164906
 		Content,
-		// Token: 0x0402D10B RID: 184587
+		// Token: 0x0402842B RID: 164907
 		RewardItemBox
 	}
 }

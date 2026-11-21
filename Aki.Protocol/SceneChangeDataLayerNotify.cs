@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200114B RID: 4427
+	// Token: 0x02001185 RID: 4485
 	[NetMessage(EMessageId.SceneChangeDataLayerNotify)]
 	public sealed class SceneChangeDataLayerNotify : IMessage<SceneChangeDataLayerNotify>, IMessage, IEquatable<SceneChangeDataLayerNotify>, IDeepCloneable<SceneChangeDataLayerNotify>, IBufferMessage
 	{
-		// Token: 0x0601799A RID: 96666 RVA: 0x0036D031 File Offset: 0x0036B231
+		// Token: 0x06017F3B RID: 98107 RVA: 0x0037C37D File Offset: 0x0037A57D
 		[NullableContext(1)]
 		public static SceneChangeDataLayerNotify Create()
 		{
 			return new SceneChangeDataLayerNotify();
 		}
 
-		// Token: 0x17004F31 RID: 20273
-		// (get) Token: 0x0601799B RID: 96667 RVA: 0x0036D038 File Offset: 0x0036B238
+		// Token: 0x1700509D RID: 20637
+		// (get) Token: 0x06017F3C RID: 98108 RVA: 0x0037C384 File Offset: 0x0037A584
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F32 RID: 20274
-		// (get) Token: 0x0601799C RID: 96668 RVA: 0x0036D03B File Offset: 0x0036B23B
+		// Token: 0x1700509E RID: 20638
+		// (get) Token: 0x06017F3D RID: 98109 RVA: 0x0037C387 File Offset: 0x0037A587
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601799D RID: 96669 RVA: 0x0036D044 File Offset: 0x0036B244
+		// Token: 0x06017F3E RID: 98110 RVA: 0x0037C390 File Offset: 0x0037A590
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneChangeDataLayerNotify()
 		{
 		}
 
-		// Token: 0x0601799E RID: 96670 RVA: 0x0036D09C File Offset: 0x0036B29C
+		// Token: 0x06017F3F RID: 98111 RVA: 0x0037C3E8 File Offset: 0x0037A5E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneChangeDataLayerNotify(SceneChangeDataLayerNotify other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601799F RID: 96671 RVA: 0x0036D11E File Offset: 0x0036B31E
+		// Token: 0x06017F40 RID: 98112 RVA: 0x0037C46A File Offset: 0x0037A66A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneChangeDataLayerNotify Clone()
@@ -73,8 +73,8 @@ namespace Aki.Protocol
 			return new SceneChangeDataLayerNotify(this);
 		}
 
-		// Token: 0x17004F33 RID: 20275
-		// (get) Token: 0x060179A0 RID: 96672 RVA: 0x0036D126 File Offset: 0x0036B326
+		// Token: 0x1700509F RID: 20639
+		// (get) Token: 0x06017F41 RID: 98113 RVA: 0x0037C472 File Offset: 0x0037A672
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> LoadDataLayers
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F34 RID: 20276
-		// (get) Token: 0x060179A1 RID: 96673 RVA: 0x0036D12E File Offset: 0x0036B32E
+		// Token: 0x170050A0 RID: 20640
+		// (get) Token: 0x06017F42 RID: 98114 RVA: 0x0037C47A File Offset: 0x0037A67A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> UnloadDataLayers
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F35 RID: 20277
-		// (get) Token: 0x060179A2 RID: 96674 RVA: 0x0036D136 File Offset: 0x0036B336
-		// (set) Token: 0x060179A3 RID: 96675 RVA: 0x0036D13E File Offset: 0x0036B33E
+		// Token: 0x170050A1 RID: 20641
+		// (get) Token: 0x06017F43 RID: 98115 RVA: 0x0037C482 File Offset: 0x0037A682
+		// (set) Token: 0x06017F44 RID: 98116 RVA: 0x0037C48A File Offset: 0x0037A68A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SequencePath
@@ -114,9 +114,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F36 RID: 20278
-		// (get) Token: 0x060179A4 RID: 96676 RVA: 0x0036D151 File Offset: 0x0036B351
-		// (set) Token: 0x060179A5 RID: 96677 RVA: 0x0036D159 File Offset: 0x0036B359
+		// Token: 0x170050A2 RID: 20642
+		// (get) Token: 0x06017F45 RID: 98117 RVA: 0x0037C49D File Offset: 0x0037A69D
+		// (set) Token: 0x06017F46 RID: 98118 RVA: 0x0037C4A5 File Offset: 0x0037A6A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string MaterialDataForLoadedLayers
@@ -131,9 +131,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F37 RID: 20279
-		// (get) Token: 0x060179A6 RID: 96678 RVA: 0x0036D16C File Offset: 0x0036B36C
-		// (set) Token: 0x060179A7 RID: 96679 RVA: 0x0036D174 File Offset: 0x0036B374
+		// Token: 0x170050A3 RID: 20643
+		// (get) Token: 0x06017F47 RID: 98119 RVA: 0x0037C4B8 File Offset: 0x0037A6B8
+		// (set) Token: 0x06017F48 RID: 98120 RVA: 0x0037C4C0 File Offset: 0x0037A6C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string MaterialDataForUnloadLayers
@@ -148,9 +148,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F38 RID: 20280
-		// (get) Token: 0x060179A8 RID: 96680 RVA: 0x0036D187 File Offset: 0x0036B387
-		// (set) Token: 0x060179A9 RID: 96681 RVA: 0x0036D18F File Offset: 0x0036B38F
+		// Token: 0x170050A4 RID: 20644
+		// (get) Token: 0x06017F49 RID: 98121 RVA: 0x0037C4D3 File Offset: 0x0037A6D3
+		// (set) Token: 0x06017F4A RID: 98122 RVA: 0x0037C4DB File Offset: 0x0037A6DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EntityId
@@ -165,9 +165,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F39 RID: 20281
-		// (get) Token: 0x060179AA RID: 96682 RVA: 0x0036D198 File Offset: 0x0036B398
-		// (set) Token: 0x060179AB RID: 96683 RVA: 0x0036D1A0 File Offset: 0x0036B3A0
+		// Token: 0x170050A5 RID: 20645
+		// (get) Token: 0x06017F4B RID: 98123 RVA: 0x0037C4E4 File Offset: 0x0037A6E4
+		// (set) Token: 0x06017F4C RID: 98124 RVA: 0x0037C4EC File Offset: 0x0037A6EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SeqMarkBeforeModifyMat
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179AC RID: 96684 RVA: 0x0036D1B3 File Offset: 0x0036B3B3
+		// Token: 0x06017F4D RID: 98125 RVA: 0x0037C4FF File Offset: 0x0037A6FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneChangeDataLayerNotify);
 		}
 
-		// Token: 0x060179AD RID: 96685 RVA: 0x0036D1C4 File Offset: 0x0036B3C4
+		// Token: 0x06017F4E RID: 98126 RVA: 0x0037C510 File Offset: 0x0037A710
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneChangeDataLayerNotify other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.loadDataLayers_.Equals(other.loadDataLayers_) && this.unloadDataLayers_.Equals(other.unloadDataLayers_) && !(this.SequencePath != other.SequencePath) && !(this.MaterialDataForLoadedLayers != other.MaterialDataForLoadedLayers) && !(this.MaterialDataForUnloadLayers != other.MaterialDataForUnloadLayers) && this.EntityId == other.EntityId && !(this.SeqMarkBeforeModifyMat != other.SeqMarkBeforeModifyMat) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060179AE RID: 96686 RVA: 0x0036D27C File Offset: 0x0036B47C
+		// Token: 0x06017F4F RID: 98127 RVA: 0x0037C5C8 File Offset: 0x0037A7C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060179AF RID: 96687 RVA: 0x0036D343 File Offset: 0x0036B543
+		// Token: 0x06017F50 RID: 98128 RVA: 0x0037C68F File Offset: 0x0037A88F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060179B0 RID: 96688 RVA: 0x0036D350 File Offset: 0x0036B550
+		// Token: 0x06017F51 RID: 98129 RVA: 0x0037C69C File Offset: 0x0037A89C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -249,37 +249,37 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060179B1 RID: 96689 RVA: 0x0036D35C File Offset: 0x0036B55C
+		// Token: 0x06017F52 RID: 98130 RVA: 0x0037C6A8 File Offset: 0x0037A8A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.SeqMarkBeforeModifyMat.Length != 0)
-			{
-				output.WriteRawTag(26);
-				output.WriteString(this.SeqMarkBeforeModifyMat);
-			}
-			if (this.EntityId != 0)
-			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.EntityId);
-			}
-			if (this.MaterialDataForLoadedLayers.Length != 0)
-			{
-				output.WriteRawTag(50);
-				output.WriteString(this.MaterialDataForLoadedLayers);
-			}
 			if (this.SequencePath.Length != 0)
 			{
-				output.WriteRawTag(58);
+				output.WriteRawTag(10);
 				output.WriteString(this.SequencePath);
 			}
 			if (this.MaterialDataForUnloadLayers.Length != 0)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(18);
 				output.WriteString(this.MaterialDataForUnloadLayers);
 			}
 			this.unloadDataLayers_.WriteTo(ref output, SceneChangeDataLayerNotify._repeated_unloadDataLayers_codec);
+			if (this.MaterialDataForLoadedLayers.Length != 0)
+			{
+				output.WriteRawTag(58);
+				output.WriteString(this.MaterialDataForLoadedLayers);
+			}
+			if (this.EntityId != 0)
+			{
+				output.WriteRawTag(64);
+				output.WriteInt32(this.EntityId);
+			}
+			if (this.SeqMarkBeforeModifyMat.Length != 0)
+			{
+				output.WriteRawTag(82);
+				output.WriteString(this.SeqMarkBeforeModifyMat);
+			}
 			this.loadDataLayers_.WriteTo(ref output, SceneChangeDataLayerNotify._repeated_loadDataLayers_codec);
 			if (this._unknownFields != null)
 			{
@@ -287,7 +287,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179B2 RID: 96690 RVA: 0x0036D440 File Offset: 0x0036B640
+		// Token: 0x06017F53 RID: 98131 RVA: 0x0037C78C File Offset: 0x0037A98C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -322,7 +322,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060179B3 RID: 96691 RVA: 0x0036D518 File Offset: 0x0036B718
+		// Token: 0x06017F54 RID: 98132 RVA: 0x0037C864 File Offset: 0x0037AA64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneChangeDataLayerNotify other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060179B4 RID: 96692 RVA: 0x0036D5DA File Offset: 0x0036B7DA
+		// Token: 0x06017F55 RID: 98133 RVA: 0x0037C926 File Offset: 0x0037AB26
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060179B5 RID: 96693 RVA: 0x0036D5E4 File Offset: 0x0036B7E4
+		// Token: 0x06017F56 RID: 98134 RVA: 0x0037C930 File Offset: 0x0037AB30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,40 +376,35 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num > 58U)
+				if (num <= 42U)
 				{
-					if (num <= 88U)
+					if (num <= 18U)
 					{
-						if (num == 82U)
+						if (num == 10U)
+						{
+							this.SequencePath = input.ReadString();
+							continue;
+						}
+						if (num == 18U)
 						{
 							this.MaterialDataForUnloadLayers = input.ReadString();
 							continue;
 						}
-						if (num != 88U)
-						{
-							goto IL_4E;
-						}
 					}
-					else if (num != 90U)
+					else if (num == 40U || num == 42U)
 					{
-						if (num != 112U && num != 114U)
-						{
-							goto IL_4E;
-						}
-						this.loadDataLayers_.AddEntriesFrom(ref input, SceneChangeDataLayerNotify._repeated_loadDataLayers_codec);
+						this.unloadDataLayers_.AddEntriesFrom(ref input, SceneChangeDataLayerNotify._repeated_unloadDataLayers_codec);
 						continue;
 					}
-					this.unloadDataLayers_.AddEntriesFrom(ref input, SceneChangeDataLayerNotify._repeated_unloadDataLayers_codec);
-					continue;
 				}
-				if (num <= 40U)
+				else if (num <= 64U)
 				{
-					if (num == 26U)
+					if (num == 58U)
 					{
-						this.SeqMarkBeforeModifyMat = input.ReadString();
+						this.MaterialDataForLoadedLayers = input.ReadString();
 						continue;
 					}
-					if (num == 40U)
+					if (num == 64U)
 					{
 						this.EntityId = input.ReadInt32();
 						continue;
@@ -417,71 +412,70 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 50U)
+					if (num == 82U)
 					{
-						this.MaterialDataForLoadedLayers = input.ReadString();
+						this.SeqMarkBeforeModifyMat = input.ReadString();
 						continue;
 					}
-					if (num == 58U)
+					if (num == 120U || num == 122U)
 					{
-						this.SequencePath = input.ReadString();
+						this.loadDataLayers_.AddEntriesFrom(ref input, SceneChangeDataLayerNotify._repeated_loadDataLayers_codec);
 						continue;
 					}
 				}
-				IL_4E:
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 			}
 		}
 
-		// Token: 0x04008C18 RID: 35864
+		// Token: 0x04008EAB RID: 36523
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008C19 RID: 35865
-		public const int LoadDataLayersFieldNumber = 14;
+		// Token: 0x04008EAC RID: 36524
+		public const int LoadDataLayersFieldNumber = 15;
 
-		// Token: 0x04008C1A RID: 35866
-		private static readonly FieldCodec<int> _repeated_loadDataLayers_codec = FieldCodec.ForInt32(114U);
+		// Token: 0x04008EAD RID: 36525
+		private static readonly FieldCodec<int> _repeated_loadDataLayers_codec = FieldCodec.ForInt32(122U);
 
-		// Token: 0x04008C1B RID: 35867
+		// Token: 0x04008EAE RID: 36526
 		private readonly RepeatedField<int> loadDataLayers_ = new RepeatedField<int>();
 
-		// Token: 0x04008C1C RID: 35868
-		public const int UnloadDataLayersFieldNumber = 11;
+		// Token: 0x04008EAF RID: 36527
+		public const int UnloadDataLayersFieldNumber = 5;
 
-		// Token: 0x04008C1D RID: 35869
-		private static readonly FieldCodec<int> _repeated_unloadDataLayers_codec = FieldCodec.ForInt32(90U);
+		// Token: 0x04008EB0 RID: 36528
+		private static readonly FieldCodec<int> _repeated_unloadDataLayers_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x04008C1E RID: 35870
+		// Token: 0x04008EB1 RID: 36529
 		private readonly RepeatedField<int> unloadDataLayers_ = new RepeatedField<int>();
 
-		// Token: 0x04008C1F RID: 35871
-		public const int SequencePathFieldNumber = 7;
+		// Token: 0x04008EB2 RID: 36530
+		public const int SequencePathFieldNumber = 1;
 
-		// Token: 0x04008C20 RID: 35872
+		// Token: 0x04008EB3 RID: 36531
 		private string sequencePath_ = "";
 
-		// Token: 0x04008C21 RID: 35873
-		public const int MaterialDataForLoadedLayersFieldNumber = 6;
+		// Token: 0x04008EB4 RID: 36532
+		public const int MaterialDataForLoadedLayersFieldNumber = 7;
 
-		// Token: 0x04008C22 RID: 35874
+		// Token: 0x04008EB5 RID: 36533
 		private string materialDataForLoadedLayers_ = "";
 
-		// Token: 0x04008C23 RID: 35875
-		public const int MaterialDataForUnloadLayersFieldNumber = 10;
+		// Token: 0x04008EB6 RID: 36534
+		public const int MaterialDataForUnloadLayersFieldNumber = 2;
 
-		// Token: 0x04008C24 RID: 35876
+		// Token: 0x04008EB7 RID: 36535
 		private string materialDataForUnloadLayers_ = "";
 
-		// Token: 0x04008C25 RID: 35877
-		public const int EntityIdFieldNumber = 5;
+		// Token: 0x04008EB8 RID: 36536
+		public const int EntityIdFieldNumber = 8;
 
-		// Token: 0x04008C26 RID: 35878
+		// Token: 0x04008EB9 RID: 36537
 		private int entityId_;
 
-		// Token: 0x04008C27 RID: 35879
-		public const int SeqMarkBeforeModifyMatFieldNumber = 3;
+		// Token: 0x04008EBA RID: 36538
+		public const int SeqMarkBeforeModifyMatFieldNumber = 10;
 
-		// Token: 0x04008C28 RID: 35880
+		// Token: 0x04008EBB RID: 36539
 		private string seqMarkBeforeModifyMat_ = "";
 	}
 }

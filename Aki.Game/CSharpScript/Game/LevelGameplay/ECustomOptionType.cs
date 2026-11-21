@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200695B RID: 26971
+	// Token: 0x02005AB6 RID: 23222
 	public enum ECustomOptionType
 	{
-		// Token: 0x04022FC9 RID: 143305
+		// Token: 0x0401E1B3 RID: 123315
 		None,
-		// Token: 0x04022FCA RID: 143306
+		// Token: 0x0401E1B4 RID: 123316
 		Execution,
-		// Token: 0x04022FCB RID: 143307
+		// Token: 0x0401E1B5 RID: 123317
 		FanInteract,
-		// Token: 0x04022FCC RID: 143308
+		// Token: 0x0401E1B6 RID: 123318
 		BreakWeakness
 	}
 }

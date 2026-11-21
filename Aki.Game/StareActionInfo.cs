@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003215 RID: 12821
+// Token: 0x02002784 RID: 10116
 [NullableContext(2)]
 [Nullable(0)]
 public class StareActionInfo
 {
-	// Token: 0x0601BA70 RID: 113264 RVA: 0x00799436 File Offset: 0x00797636
+	// Token: 0x060195F5 RID: 103925 RVA: 0x007C1BD2 File Offset: 0x007BFDD2
 	public void ClearInfo()
 	{
 		this.TargetLocation.Reset();
@@ -15,7 +15,7 @@ public class StareActionInfo
 		this.TargetActor = null;
 	}
 
-	// Token: 0x0601BA71 RID: 113265 RVA: 0x00799454 File Offset: 0x00797654
+	// Token: 0x060195F6 RID: 103926 RVA: 0x007C1BF0 File Offset: 0x007BFDF0
 	public bool IsValid()
 	{
 		if (!this.TargetLocation.Equals(Vector.ZeroVectorProxy, 9.999999747378752E-05))
@@ -29,16 +29,16 @@ public class StareActionInfo
 		return this.TargetActor != null && this.TargetActor.IsValid();
 	}
 
-	// Token: 0x0400D97E RID: 55678
+	// Token: 0x0400DE1D RID: 56861
 	public bool IsDirty;
 
-	// Token: 0x0400D97F RID: 55679
+	// Token: 0x0400DE1E RID: 56862
 	[Nullable(1)]
 	public Vector TargetLocation = Vector.Create();
 
-	// Token: 0x0400D980 RID: 55680
+	// Token: 0x0400DE1F RID: 56863
 	public BaseActorComponent TargetItem;
 
-	// Token: 0x0400D981 RID: 55681
+	// Token: 0x0400DE20 RID: 56864
 	public AActor TargetActor;
 }

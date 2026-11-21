@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A8E RID: 2702
+	// Token: 0x02000B58 RID: 2904
 	public class IInitStateBarrierLock : IInitState
 	{
-		// Token: 0x06003E31 RID: 15921 RVA: 0x0009F526 File Offset: 0x0009D726
-		[NullableContext(1)]
+		// Token: 0x0600425A RID: 16986 RVA: 0x000A8ADE File Offset: 0x000A6CDE
 		public static IInitStateBarrierLock Create(IInitStateBarrierLock? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000ED2 RID: 3794
-		// (get) Token: 0x06003E32 RID: 15922 RVA: 0x0009F545 File Offset: 0x0009D745
+		// Token: 0x17000FA5 RID: 4005
+		// (get) Token: 0x0600425B RID: 16987 RVA: 0x000A8AFD File Offset: 0x000A6CFD
 		public override EInitStateType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022A7 RID: 8871
+		// Token: 0x040024C3 RID: 9411
 		private IInitStateBarrierLock Instance;
 	}
 }

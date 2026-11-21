@@ -6,7 +6,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200254A RID: 9546
+// Token: 0x02001A35 RID: 6709
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemData>
 {
-	// Token: 0x06013394 RID: 78740 RVA: 0x004C7D34 File Offset: 0x004C5F34
+	// Token: 0x06010874 RID: 67700 RVA: 0x004D68B0 File Offset: 0x004D4AB0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,13 +35,13 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		};
 	}
 
-	// Token: 0x06013395 RID: 78741 RVA: 0x004C7E1F File Offset: 0x004C601F
+	// Token: 0x06010875 RID: 67701 RVA: 0x004D699B File Offset: 0x004D4B9B
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06013396 RID: 78742 RVA: 0x004C7E34 File Offset: 0x004C6034
+	// Token: 0x06010876 RID: 67702 RVA: 0x004D69B0 File Offset: 0x004D4BB0
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnPhonographPlayStop, new Action(this.OnPlayStop));
@@ -51,7 +51,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		EventSystem.Instance.Add(EEventName.OnPhonographSetBgm, new Action<int>(this.OnSetBgm));
 	}
 
-	// Token: 0x06013397 RID: 78743 RVA: 0x004C7EBF File Offset: 0x004C60BF
+	// Token: 0x06010877 RID: 67703 RVA: 0x004D6A3B File Offset: 0x004D4C3B
 	public void OnTick()
 	{
 		if (this.MusicId != PhonographModel.Instance.CurrentPlayMusicId)
@@ -61,7 +61,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		this.RefreshTime();
 	}
 
-	// Token: 0x06013398 RID: 78744 RVA: 0x004C7EDC File Offset: 0x004C60DC
+	// Token: 0x06010878 RID: 67704 RVA: 0x004D6A58 File Offset: 0x004D4C58
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPhonographPlayStop, new Action(this.OnPlayStop));
@@ -69,13 +69,13 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		EventSystem.Instance.Remove(EEventName.OnPhonographSetBgm, new Action<int>(this.OnSetBgm));
 	}
 
-	// Token: 0x06013399 RID: 78745 RVA: 0x004C7F3D File Offset: 0x004C613D
+	// Token: 0x06010879 RID: 67705 RVA: 0x004D6AB9 File Offset: 0x004D4CB9
 	private void OnSetBgm(int musicId)
 	{
 		base.GetItem(7).SetUIActive(musicId == this.MusicId);
 	}
 
-	// Token: 0x0601339A RID: 78746 RVA: 0x004C7F54 File Offset: 0x004C6154
+	// Token: 0x0601087A RID: 67706 RVA: 0x004D6AD0 File Offset: 0x004D4CD0
 	private void OnSelectDisable(int musicId)
 	{
 		if (this.MusicId == musicId)
@@ -85,7 +85,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		base.GetSprite(6).SetAlpha(0f);
 	}
 
-	// Token: 0x0601339B RID: 78747 RVA: 0x004C7F74 File Offset: 0x004C6174
+	// Token: 0x0601087B RID: 67707 RVA: 0x004D6AF0 File Offset: 0x004D4CF0
 	private void OnClickUndetermined()
 	{
 		Action<int, int> onClickMusicItem = this.OnClickMusicItem;
@@ -97,7 +97,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		EventSystem.Instance.Emit<int>(EEventName.OnPhonographSelectDisable, this.MusicId);
 	}
 
-	// Token: 0x0601339C RID: 78748 RVA: 0x004C7FC8 File Offset: 0x004C61C8
+	// Token: 0x0601087C RID: 67708 RVA: 0x004D6B44 File Offset: 0x004D4D44
 	private void OnClick(EToggleState state)
 	{
 		PhonographModel instance = PhonographModel.Instance;
@@ -121,7 +121,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		this.LevelSequencePlayer.PlaySequencePurely("Play", false, false, null, null, false);
 	}
 
-	// Token: 0x0601339D RID: 78749 RVA: 0x004C8080 File Offset: 0x004C6280
+	// Token: 0x0601087D RID: 67709 RVA: 0x004D6BFC File Offset: 0x004D4DFC
 	public void OnPlayStop()
 	{
 		if (this.MusicId != PhonographModel.Instance.CurrentPlayMusicId)
@@ -139,7 +139,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		levelSequencePlayer.PlaySequencePurely("Stop", false, false, null, null, false);
 	}
 
-	// Token: 0x0601339E RID: 78750 RVA: 0x004C8104 File Offset: 0x004C6304
+	// Token: 0x0601087E RID: 67710 RVA: 0x004D6C80 File Offset: 0x004D4E80
 	public void RefreshTime()
 	{
 		int currentPlayTimeFromAudio = PhonographModel.Instance.GetCurrentPlayTimeFromAudio();
@@ -147,7 +147,7 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		base.GetSprite(2).SetFillAmount((float)currentPlayTimeFromAudio / (float)this.TotalTime);
 	}
 
-	// Token: 0x0601339F RID: 78751 RVA: 0x004C8168 File Offset: 0x004C6368
+	// Token: 0x0601087F RID: 67711 RVA: 0x004D6CE4 File Offset: 0x004D4EE4
 	[NullableContext(1)]
 	public override void Refresh(IPhonographMusicItemData data, bool isSelected, int gridIndex)
 	{
@@ -225,19 +225,19 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		base.GetItem(4).SetUIActive(PhonographModel.Instance.IsNewMusic(data.Id));
 	}
 
-	// Token: 0x060133A0 RID: 78752 RVA: 0x004C834E File Offset: 0x004C654E
+	// Token: 0x06010880 RID: 67712 RVA: 0x004D6ECA File Offset: 0x004D50CA
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060133A1 RID: 78753 RVA: 0x004C8361 File Offset: 0x004C6561
+	// Token: 0x06010881 RID: 67713 RVA: 0x004D6EDD File Offset: 0x004D50DD
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060133A2 RID: 78754 RVA: 0x004C8374 File Offset: 0x004C6574
+	// Token: 0x06010882 RID: 67714 RVA: 0x004D6EF0 File Offset: 0x004D50F0
 	protected override void OnBeforeDestroy()
 	{
 		if (this.UpdateTimeHandle != null)
@@ -247,50 +247,50 @@ public class PhonographMusicPlayItem : GridProxyAbstract<IPhonographMusicItemDat
 		}
 	}
 
-	// Token: 0x04009130 RID: 37168
+	// Token: 0x04009289 RID: 37513
 	public Action<int, int> OnClickMusicItem;
 
-	// Token: 0x04009131 RID: 37169
+	// Token: 0x0400928A RID: 37514
 	protected int MusicId;
 
-	// Token: 0x04009132 RID: 37170
+	// Token: 0x0400928B RID: 37515
 	protected int TotalTime;
 
-	// Token: 0x04009133 RID: 37171
+	// Token: 0x0400928C RID: 37516
 	protected int CurrentTime;
 
-	// Token: 0x04009134 RID: 37172
+	// Token: 0x0400928D RID: 37517
 	protected TimerHandle UpdateTimeHandle;
 
-	// Token: 0x04009135 RID: 37173
+	// Token: 0x0400928E RID: 37518
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02008B06 RID: 35590
+	// Token: 0x02007C8C RID: 31884
 	[NullableContext(0)]
 	private static class EPhonographMusicPlayItemDefine
 	{
-		// Token: 0x0402D245 RID: 184901
+		// Token: 0x04028554 RID: 165204
 		public const int ExtendToggle = 0;
 
-		// Token: 0x0402D246 RID: 184902
+		// Token: 0x04028555 RID: 165205
 		public const int TxtName = 1;
 
-		// Token: 0x0402D247 RID: 184903
+		// Token: 0x04028556 RID: 165206
 		public const int SpriteProgress = 2;
 
-		// Token: 0x0402D248 RID: 184904
+		// Token: 0x04028557 RID: 165207
 		public const int TxtTime = 3;
 
-		// Token: 0x0402D249 RID: 184905
+		// Token: 0x04028558 RID: 165208
 		public const int NewItem = 4;
 
-		// Token: 0x0402D24A RID: 184906
+		// Token: 0x04028559 RID: 165209
 		public const int LockItem = 5;
 
-		// Token: 0x0402D24B RID: 184907
+		// Token: 0x0402855A RID: 165210
 		public const int SelectItem = 6;
 
-		// Token: 0x0402D24C RID: 184908
+		// Token: 0x0402855B RID: 165211
 		public const int BgmTagItem = 7;
 	}
 }

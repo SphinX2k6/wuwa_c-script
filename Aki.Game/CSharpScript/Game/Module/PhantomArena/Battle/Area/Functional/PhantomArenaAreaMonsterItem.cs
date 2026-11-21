@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 {
-	// Token: 0x020052D0 RID: 21200
+	// Token: 0x020042A0 RID: 17056
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAreaMonsterItem : PhantomArenaAreaItemBase
 	{
-		// Token: 0x060363EC RID: 222188 RVA: 0x00CD5510 File Offset: 0x00CD3710
+		// Token: 0x0602B2E7 RID: 176871 RVA: 0x00C22C38 File Offset: 0x00C20E38
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,30 +25,30 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			};
 		}
 
-		// Token: 0x060363ED RID: 222189 RVA: 0x00CD5580 File Offset: 0x00CD3780
+		// Token: 0x0602B2E8 RID: 176872 RVA: 0x00C22CA8 File Offset: 0x00C20EA8
 		public override void Refresh(PhantomArenaCard card)
 		{
 		}
 
-		// Token: 0x060363EE RID: 222190 RVA: 0x00CD5582 File Offset: 0x00CD3782
+		// Token: 0x0602B2E9 RID: 176873 RVA: 0x00C22CAA File Offset: 0x00C20EAA
 		public override void SetHoverStateActive(bool value)
 		{
 			base.GetItem(2).SetUIActive(value);
 		}
 
-		// Token: 0x060363EF RID: 222191 RVA: 0x00CD5591 File Offset: 0x00CD3791
+		// Token: 0x0602B2EA RID: 176874 RVA: 0x00C22CB9 File Offset: 0x00C20EB9
 		public override void SetCanUseStateActive(bool value)
 		{
 			base.GetItem(0).SetUIActive(value);
 		}
 
-		// Token: 0x060363F0 RID: 222192 RVA: 0x00CD55A0 File Offset: 0x00CD37A0
+		// Token: 0x0602B2EB RID: 176875 RVA: 0x00C22CC8 File Offset: 0x00C20EC8
 		public UUIItem GetCardRootItem()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x060363F1 RID: 222193 RVA: 0x00CD55AC File Offset: 0x00CD37AC
+		// Token: 0x0602B2EC RID: 176876 RVA: 0x00C22CD4 File Offset: 0x00C20ED4
 		public UniTask SetBuffUpActive(bool isActive)
 		{
 			PhantomArenaAreaMonsterItem.<SetBuffUpActive>d__10 <SetBuffUpActive>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <SetBuffUpActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363F2 RID: 222194 RVA: 0x00CD55F8 File Offset: 0x00CD37F8
+		// Token: 0x0602B2ED RID: 176877 RVA: 0x00C22D20 File Offset: 0x00C20F20
 		public UniTask SetBuffDownActive(bool isActive)
 		{
 			PhantomArenaAreaMonsterItem.<SetBuffDownActive>d__11 <SetBuffDownActive>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <SetBuffDownActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363F3 RID: 222195 RVA: 0x00CD5644 File Offset: 0x00CD3844
+		// Token: 0x0602B2EE RID: 176878 RVA: 0x00C22D6C File Offset: 0x00C20F6C
 		public UniTask SetEvolveActive(bool isActive)
 		{
 			PhantomArenaAreaMonsterItem.<SetEvolveActive>d__12 <SetEvolveActive>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <SetEvolveActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363F4 RID: 222196 RVA: 0x00CD5690 File Offset: 0x00CD3890
+		// Token: 0x0602B2EF RID: 176879 RVA: 0x00C22DB8 File Offset: 0x00C20FB8
 		public UniTask SetIncreaseActive(bool isActive)
 		{
 			PhantomArenaAreaMonsterItem.<SetIncreaseActive>d__13 <SetIncreaseActive>d__;
@@ -96,32 +96,32 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <SetIncreaseActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401CADB RID: 117467
+		// Token: 0x04017510 RID: 95504
 		private PhantomArenaCardComponentLogic UseSkill;
 
-		// Token: 0x0401CADC RID: 117468
+		// Token: 0x04017511 RID: 95505
 		private PhantomArenaCardComponentLogic BuffUp;
 
-		// Token: 0x0401CADD RID: 117469
+		// Token: 0x04017512 RID: 95506
 		private PhantomArenaCardComponentLogic BuffDown;
 
-		// Token: 0x0401CADE RID: 117470
+		// Token: 0x04017513 RID: 95507
 		private PhantomArenaCardComponentLogic Evolve;
 
-		// Token: 0x0200B556 RID: 46422
+		// Token: 0x02009F8E RID: 40846
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04036F1B RID: 225051
+			// Token: 0x0403196E RID: 203118
 			public const int UseItem = 0;
 
-			// Token: 0x04036F1C RID: 225052
+			// Token: 0x0403196F RID: 203119
 			public const int CardRootItem = 1;
 
-			// Token: 0x04036F1D RID: 225053
+			// Token: 0x04031970 RID: 203120
 			public const int BgTexture = 2;
 
-			// Token: 0x04036F1E RID: 225054
+			// Token: 0x04031971 RID: 203121
 			public const int ContentItem = 3;
 		}
 	}

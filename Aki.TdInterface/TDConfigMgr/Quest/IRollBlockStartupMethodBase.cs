@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200111E RID: 4382
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200124C RID: 4684
 	public class IRollBlockStartupMethodBase
 	{
-		// Token: 0x060062EA RID: 25322 RVA: 0x000EDD70 File Offset: 0x000EBF70
+		// Token: 0x060068E5 RID: 26853 RVA: 0x000FAEE4 File Offset: 0x000F90E4
 		private IRollBlockStartupMethodBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060062EB RID: 25323 RVA: 0x000EDDA8 File Offset: 0x000EBFA8
+		// Token: 0x060068E6 RID: 26854 RVA: 0x000FAF1C File Offset: 0x000F911C
 		public static IRollBlockStartupMethodBase Create([Nullable(2)] IRollBlockStartupMethodBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062EC RID: 25324 RVA: 0x000EDDBB File Offset: 0x000EBFBB
+		// Token: 0x060068E7 RID: 26855 RVA: 0x000FAF2F File Offset: 0x000F912F
 		public static IRollBlockStartupMethodBase CreateFromSetValue([Nullable(2)] IRollBlockStartupMethodBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060062ED RID: 25325 RVA: 0x000EDDCE File Offset: 0x000EBFCE
+		// Token: 0x060068E8 RID: 26856 RVA: 0x000FAF42 File Offset: 0x000F9142
 		public IRollBlockStartupMethodBase_SetValue ToSetValue()
 		{
 			return new IRollBlockStartupMethodBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700204C RID: 8268
-		// (get) Token: 0x060062EE RID: 25326 RVA: 0x000EDDE1 File Offset: 0x000EBFE1
-		// (set) Token: 0x060062EF RID: 25327 RVA: 0x000EDE0C File Offset: 0x000EC00C
+		// Token: 0x170021FF RID: 8703
+		// (get) Token: 0x060068E9 RID: 26857 RVA: 0x000FAF55 File Offset: 0x000F9155
+		// (set) Token: 0x060068EA RID: 26858 RVA: 0x000FAF80 File Offset: 0x000F9180
 		public virtual ERollBlockLaunchMethod Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B4F RID: 15183
+		// Token: 0x04003E9D RID: 16029
 		[Nullable(2)]
 		protected IRollBlockStartupMethodBase FbInstance;
 
-		// Token: 0x04003B50 RID: 15184
+		// Token: 0x04003E9E RID: 16030
 		[Nullable(2)]
 		protected IRollBlockStartupMethodBase_SetValue PocoInterface;
 	}

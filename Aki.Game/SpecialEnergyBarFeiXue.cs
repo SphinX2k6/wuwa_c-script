@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020016FA RID: 5882
+// Token: 0x02000BB2 RID: 2994
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 {
-	// Token: 0x0600A8A9 RID: 43177 RVA: 0x0025EE08 File Offset: 0x0025D008
+	// Token: 0x06007C89 RID: 31881 RVA: 0x00269224 File Offset: 0x00267424
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,14 +49,14 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		};
 	}
 
-	// Token: 0x0600A8AA RID: 43178 RVA: 0x0025F0B2 File Offset: 0x0025D2B2
+	// Token: 0x06007C8A RID: 31882 RVA: 0x002694CE File Offset: 0x002676CE
 	protected override void OnInitData()
 	{
 		this.NormalConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(110802);
 		this.MorphConfig = BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(110803);
 	}
 
-	// Token: 0x0600A8AB RID: 43179 RVA: 0x0025F0E8 File Offset: 0x0025D2E8
+	// Token: 0x06007C8B RID: 31883 RVA: 0x00269504 File Offset: 0x00267704
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpecialEnergyBarFeiXue.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A8AC RID: 43180 RVA: 0x0025F12C File Offset: 0x0025D32C
+	// Token: 0x06007C8C RID: 31884 RVA: 0x00269548 File Offset: 0x00267748
 	protected UniTask InitBarItem()
 	{
 		SpecialEnergyBarFeiXue.<InitBarItem>d__24 <InitBarItem>d__;
@@ -78,7 +78,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		return <InitBarItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A8AD RID: 43181 RVA: 0x0025F170 File Offset: 0x0025D370
+	// Token: 0x06007C8D RID: 31885 RVA: 0x0026958C File Offset: 0x0026778C
 	protected UniTask InitKeyItemExtra(UUIItem keyItemContainer)
 	{
 		SpecialEnergyBarFeiXue.<InitKeyItemExtra>d__25 <InitKeyItemExtra>d__;
@@ -90,7 +90,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		return <InitKeyItemExtra>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A8AE RID: 43182 RVA: 0x0025F1BC File Offset: 0x0025D3BC
+	// Token: 0x06007C8E RID: 31886 RVA: 0x002695D8 File Offset: 0x002677D8
 	protected override void OnStart()
 	{
 		base.InitTweenAnim(21);
@@ -126,7 +126,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.RefreshBarPercent(true);
 	}
 
-	// Token: 0x0600A8AF RID: 43183 RVA: 0x0025F2A4 File Offset: 0x0025D4A4
+	// Token: 0x06007C8F RID: 31887 RVA: 0x002696C0 File Offset: 0x002678C0
 	protected override void AddEvents()
 	{
 		base.AddEvents();
@@ -138,7 +138,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		base.ListenForTagCountChanged(SpecialEnergyBarFeiXue.StampTagId, new BaseTagComponent.TTagChangedCallback(this.OnStampTagCountChange));
 	}
 
-	// Token: 0x0600A8B0 RID: 43184 RVA: 0x0025F310 File Offset: 0x0025D510
+	// Token: 0x06007C90 RID: 31888 RVA: 0x0026972C File Offset: 0x0026792C
 	private void OnNormalFullStateChanged(bool isFull)
 	{
 		if (isFull)
@@ -151,7 +151,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		base.PlayTweenAnim(22);
 	}
 
-	// Token: 0x0600A8B1 RID: 43185 RVA: 0x0025F336 File Offset: 0x0025D536
+	// Token: 0x06007C91 RID: 31889 RVA: 0x00269752 File Offset: 0x00267952
 	private void OnMorphTagChange(int tagId, bool tagExist)
 	{
 		if (this.IsMorph == tagExist)
@@ -162,7 +162,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.RefreshMorphState(false);
 	}
 
-	// Token: 0x0600A8B2 RID: 43186 RVA: 0x0025F350 File Offset: 0x0025D550
+	// Token: 0x06007C92 RID: 31890 RVA: 0x0026976C File Offset: 0x0026796C
 	private void OnSwordTagChange(int tagId, bool tagExist)
 	{
 		int num = 0;
@@ -183,7 +183,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.RefreshSwordState(swordTagLevel, false);
 	}
 
-	// Token: 0x0600A8B3 RID: 43187 RVA: 0x0025F3AD File Offset: 0x0025D5AD
+	// Token: 0x06007C93 RID: 31891 RVA: 0x002697C9 File Offset: 0x002679C9
 	private void OnStampTagCountChange(int count, int tagId, int exactTagId, int oldCount)
 	{
 		if (this.NormalStampTagCount == count)
@@ -194,13 +194,13 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.StampStateDirty = true;
 	}
 
-	// Token: 0x0600A8B4 RID: 43188 RVA: 0x0025F3C7 File Offset: 0x0025D5C7
+	// Token: 0x06007C94 RID: 31892 RVA: 0x002697E3 File Offset: 0x002679E3
 	protected override void OnBarPercentChanged()
 	{
 		this.RefreshBarPercent(false);
 	}
 
-	// Token: 0x0600A8B5 RID: 43189 RVA: 0x0025F3D0 File Offset: 0x0025D5D0
+	// Token: 0x06007C95 RID: 31893 RVA: 0x002697EC File Offset: 0x002679EC
 	private void RefreshBarPercent(bool isStart = false)
 	{
 		float curPercent = this.PercentMachine.GetCurPercent();
@@ -219,13 +219,13 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.RefreshKeyEnable(isStart);
 	}
 
-	// Token: 0x0600A8B6 RID: 43190 RVA: 0x0025F472 File Offset: 0x0025D672
+	// Token: 0x06007C96 RID: 31894 RVA: 0x0026988E File Offset: 0x00267A8E
 	protected override void OnKeyEnableChanged()
 	{
 		this.RefreshKeyEnable(false);
 	}
 
-	// Token: 0x0600A8B7 RID: 43191 RVA: 0x0025F47C File Offset: 0x0025D67C
+	// Token: 0x06007C97 RID: 31895 RVA: 0x00269898 File Offset: 0x00267A98
 	private void RefreshKeyEnable(bool isStart = false)
 	{
 		bool keyEnable = this.GetKeyEnable();
@@ -237,14 +237,14 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		keyItem.RefreshKeyEnable(keyEnable, isStart);
 	}
 
-	// Token: 0x0600A8B8 RID: 43192 RVA: 0x0025F4A2 File Offset: 0x0025D6A2
+	// Token: 0x06007C98 RID: 31896 RVA: 0x002698BE File Offset: 0x00267ABE
 	private void RefreshMorphState(bool isStart = false)
 	{
 		base.GetItem(0).SetUIActive(!this.IsMorph);
 		base.GetItem(4).SetUIActive(this.IsMorph);
 	}
 
-	// Token: 0x0600A8B9 RID: 43193 RVA: 0x0025F4CC File Offset: 0x0025D6CC
+	// Token: 0x06007C99 RID: 31897 RVA: 0x002698E8 File Offset: 0x00267AE8
 	private void RefreshSwordState(int lastSwordTagLevel, bool isStart = false)
 	{
 		bool flag = this.SwordTagLevel >= 3;
@@ -296,7 +296,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		}
 	}
 
-	// Token: 0x0600A8BA RID: 43194 RVA: 0x0025F6B4 File Offset: 0x0025D8B4
+	// Token: 0x06007C9A RID: 31898 RVA: 0x00269AD0 File Offset: 0x00267CD0
 	private void RefreshStampState()
 	{
 		int num = Math.Max(0, this.TotalStampTagCount - this.NormalStampTagCount);
@@ -316,7 +316,7 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		this.LastNormalStampCount = num2;
 	}
 
-	// Token: 0x0600A8BB RID: 43195 RVA: 0x0025F763 File Offset: 0x0025D963
+	// Token: 0x06007C9B RID: 31899 RVA: 0x00269B7F File Offset: 0x00267D7F
 	public override void Tick(float delta)
 	{
 		base.Tick(delta);
@@ -332,16 +332,16 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		}
 	}
 
-	// Token: 0x04004CF1 RID: 19697
+	// Token: 0x04004D98 RID: 19864
 	private const int NormalConfigId = 110802;
 
-	// Token: 0x04004CF2 RID: 19698
+	// Token: 0x04004D99 RID: 19865
 	private const int MorphConfigId = 110803;
 
-	// Token: 0x04004CF3 RID: 19699
+	// Token: 0x04004D9A RID: 19866
 	private static readonly int MorphTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.状态标识.神刀解放"];
 
-	// Token: 0x04004CF4 RID: 19700
+	// Token: 0x04004D9B RID: 19867
 	[StaticVariableRuleIgnore]
 	private static readonly int[] SwordTagIds = new int[]
 	{
@@ -350,10 +350,10 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.特殊机制.3层印记"]
 	};
 
-	// Token: 0x04004CF5 RID: 19701
+	// Token: 0x04004D9C RID: 19868
 	private static readonly int StampTagId = GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.特殊机制.居合叠层"];
 
-	// Token: 0x04004CF6 RID: 19702
+	// Token: 0x04004D9D RID: 19869
 	[StaticVariableRuleIgnore]
 	private static readonly SpecialEnergyBarFeiXue.EChildType[] SwordAnimList = new SpecialEnergyBarFeiXue.EChildType[]
 	{
@@ -363,113 +363,113 @@ public class SpecialEnergyBarFeiXue : SpecialEnergyBarBase
 		SpecialEnergyBarFeiXue.EChildType.AnimSwordC
 	};
 
-	// Token: 0x04004CF7 RID: 19703
+	// Token: 0x04004D9E RID: 19870
 	[Nullable(2)]
 	private SpecialEnergyBarInfo NormalConfig;
 
-	// Token: 0x04004CF8 RID: 19704
+	// Token: 0x04004D9F RID: 19871
 	[Nullable(2)]
 	private SpecialEnergyBarInfo MorphConfig;
 
-	// Token: 0x04004CF9 RID: 19705
+	// Token: 0x04004DA0 RID: 19872
 	[Nullable(2)]
 	private SpecialEnergyBarFeiXueSlot BarItemNormal;
 
-	// Token: 0x04004CFA RID: 19706
+	// Token: 0x04004DA1 RID: 19873
 	[Nullable(2)]
 	private SpecialEnergyBarKeyItem ExtraKeyItem;
 
-	// Token: 0x04004CFB RID: 19707
+	// Token: 0x04004DA2 RID: 19874
 	private bool IsMorph;
 
-	// Token: 0x04004CFC RID: 19708
+	// Token: 0x04004DA3 RID: 19875
 	private int SwordTagLevel;
 
-	// Token: 0x04004CFD RID: 19709
+	// Token: 0x04004DA4 RID: 19876
 	private bool IsMaxSwordTagLevel;
 
-	// Token: 0x04004CFE RID: 19710
+	// Token: 0x04004DA5 RID: 19877
 	private int LastSwordTagAnim = -1;
 
-	// Token: 0x04004CFF RID: 19711
+	// Token: 0x04004DA6 RID: 19878
 	private int NormalStampTagCount;
 
-	// Token: 0x04004D00 RID: 19712
+	// Token: 0x04004DA7 RID: 19879
 	private int LastNormalStampCount;
 
-	// Token: 0x04004D01 RID: 19713
+	// Token: 0x04004DA8 RID: 19880
 	private int TotalStampTagCount;
 
-	// Token: 0x04004D02 RID: 19714
+	// Token: 0x04004DA9 RID: 19881
 	private readonly List<SpecialEnergyBarFeiXueStampItem> StampItemList = new List<SpecialEnergyBarFeiXueStampItem>();
 
-	// Token: 0x04004D03 RID: 19715
+	// Token: 0x04004DAA RID: 19882
 	private readonly FName NameFlntensity = FNameUtil.GetDynamicFName("Flntensity").Value;
 
-	// Token: 0x04004D04 RID: 19716
+	// Token: 0x04004DAB RID: 19883
 	private bool StampStateDirty;
 
-	// Token: 0x02007CB9 RID: 31929
+	// Token: 0x02006E3E RID: 28222
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04028E88 RID: 167560
+		// Token: 0x040241B1 RID: 147889
 		NormalItem,
-		// Token: 0x04028E89 RID: 167561
+		// Token: 0x040241B2 RID: 147890
 		NormalBgItem,
-		// Token: 0x04028E8A RID: 167562
+		// Token: 0x040241B3 RID: 147891
 		NormalFullBgItem,
-		// Token: 0x04028E8B RID: 167563
+		// Token: 0x040241B4 RID: 147892
 		NormalSlotBarItem,
-		// Token: 0x04028E8C RID: 167564
+		// Token: 0x040241B5 RID: 147893
 		MorphItem,
-		// Token: 0x04028E8D RID: 167565
+		// Token: 0x040241B6 RID: 147894
 		MorphDotItem,
-		// Token: 0x04028E8E RID: 167566
+		// Token: 0x040241B7 RID: 147895
 		MorphBgItemEmpty,
-		// Token: 0x04028E8F RID: 167567
+		// Token: 0x040241B8 RID: 147896
 		MorphBgItemStack1,
-		// Token: 0x04028E90 RID: 167568
+		// Token: 0x040241B9 RID: 147897
 		MorphBgItemStack2,
-		// Token: 0x04028E91 RID: 167569
+		// Token: 0x040241BA RID: 147898
 		MorphBgItemStack3,
-		// Token: 0x04028E92 RID: 167570
+		// Token: 0x040241BB RID: 147899
 		MorphBarSprite,
-		// Token: 0x04028E93 RID: 167571
+		// Token: 0x040241BC RID: 147900
 		MorphPetalItem,
-		// Token: 0x04028E94 RID: 167572
+		// Token: 0x040241BD RID: 147901
 		MorphStampItemContainer,
-		// Token: 0x04028E95 RID: 167573
+		// Token: 0x040241BE RID: 147902
 		MorphStampItem1,
-		// Token: 0x04028E96 RID: 167574
+		// Token: 0x040241BF RID: 147903
 		MorphStampItem2,
-		// Token: 0x04028E97 RID: 167575
+		// Token: 0x040241C0 RID: 147904
 		MorphStampItem3,
-		// Token: 0x04028E98 RID: 167576
+		// Token: 0x040241C1 RID: 147905
 		MorphPingItem,
-		// Token: 0x04028E99 RID: 167577
+		// Token: 0x040241C2 RID: 147906
 		MorphRotaItem,
-		// Token: 0x04028E9A RID: 167578
+		// Token: 0x040241C3 RID: 147907
 		KeyItem,
-		// Token: 0x04028E9B RID: 167579
+		// Token: 0x040241C4 RID: 147908
 		KeyItemExtra,
-		// Token: 0x04028E9C RID: 167580
+		// Token: 0x040241C5 RID: 147909
 		TexPattern,
-		// Token: 0x04028E9D RID: 167581
+		// Token: 0x040241C6 RID: 147910
 		AnimArrowGlow,
-		// Token: 0x04028E9E RID: 167582
+		// Token: 0x040241C7 RID: 147911
 		AnimArrowRes,
-		// Token: 0x04028E9F RID: 167583
+		// Token: 0x040241C8 RID: 147912
 		AnimSwordA,
-		// Token: 0x04028EA0 RID: 167584
+		// Token: 0x040241C9 RID: 147913
 		AnimSwordB,
-		// Token: 0x04028EA1 RID: 167585
+		// Token: 0x040241CA RID: 147914
 		AnimSwordC,
-		// Token: 0x04028EA2 RID: 167586
+		// Token: 0x040241CB RID: 147915
 		AnimSwordN,
-		// Token: 0x04028EA3 RID: 167587
+		// Token: 0x040241CC RID: 147916
 		AnimPdGlow,
-		// Token: 0x04028EA4 RID: 167588
+		// Token: 0x040241CD RID: 147917
 		AnimPdNum
 	}
 }

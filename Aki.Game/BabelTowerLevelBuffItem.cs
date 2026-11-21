@@ -6,10 +6,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001173 RID: 4467
+// Token: 0x02000627 RID: 1575
 public class BabelTowerLevelBuffItem : UiPanelBase
 {
-	// Token: 0x060075EC RID: 30188 RVA: 0x00186768 File Offset: 0x00184968
+	// Token: 0x06004983 RID: 18819 RVA: 0x0018F310 File Offset: 0x0018D510
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -44,13 +44,13 @@ public class BabelTowerLevelBuffItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060075ED RID: 30189 RVA: 0x001868F6 File Offset: 0x00184AF6
+	// Token: 0x06004984 RID: 18820 RVA: 0x0018F49E File Offset: 0x0018D69E
 	protected override void OnStart()
 	{
 		base.GetItem(8).SetUIActive(false);
 	}
 
-	// Token: 0x060075EE RID: 30190 RVA: 0x00186905 File Offset: 0x00184B05
+	// Token: 0x06004985 RID: 18821 RVA: 0x0018F4AD File Offset: 0x0018D6AD
 	private void OnClickButton()
 	{
 		Action<int> onClickBtnCallBack = this.OnClickBtnCallBack;
@@ -61,7 +61,7 @@ public class BabelTowerLevelBuffItem : UiPanelBase
 		onClickBtnCallBack(this.BuffId);
 	}
 
-	// Token: 0x060075EF RID: 30191 RVA: 0x00186920 File Offset: 0x00184B20
+	// Token: 0x06004986 RID: 18822 RVA: 0x0018F4C8 File Offset: 0x0018D6C8
 	public void RefreshItem(bool isInactive, int buffId)
 	{
 		this.BuffId = buffId;
@@ -84,41 +84,41 @@ public class BabelTowerLevelBuffItem : UiPanelBase
 		base.SetTextureByPath(babelTowerBuff.Texture, base.GetTexture(4), null, null);
 	}
 
-	// Token: 0x0400361C RID: 13852
+	// Token: 0x040036B5 RID: 14005
 	private int BuffId;
 
-	// Token: 0x0400361D RID: 13853
+	// Token: 0x040036B6 RID: 14006
 	[Nullable(2)]
 	public Action<int> OnClickBtnCallBack;
 
-	// Token: 0x02007744 RID: 30532
+	// Token: 0x020068D1 RID: 26833
 	private class EComponentDefine
 	{
-		// Token: 0x04027573 RID: 161139
+		// Token: 0x040228AC RID: 141484
 		public const int EntryButton = 0;
 
-		// Token: 0x04027574 RID: 161140
+		// Token: 0x040228AD RID: 141485
 		public const int NoneItem = 1;
 
-		// Token: 0x04027575 RID: 161141
+		// Token: 0x040228AE RID: 141486
 		public const int NotNoneItem = 2;
 
-		// Token: 0x04027576 RID: 161142
+		// Token: 0x040228AF RID: 141487
 		public const int SelectBuffTipsText = 3;
 
-		// Token: 0x04027577 RID: 161143
+		// Token: 0x040228B0 RID: 141488
 		public const int BuffTexture = 4;
 
-		// Token: 0x04027578 RID: 161144
+		// Token: 0x040228B1 RID: 141489
 		public const int BuffName = 5;
 
-		// Token: 0x04027579 RID: 161145
+		// Token: 0x040228B2 RID: 141490
 		public const int BuffDesc = 6;
 
-		// Token: 0x0402757A RID: 161146
+		// Token: 0x040228B3 RID: 141491
 		public const int SwitchButton = 7;
 
-		// Token: 0x0402757B RID: 161147
+		// Token: 0x040228B4 RID: 141492
 		public const int LockItem = 8;
 	}
 }

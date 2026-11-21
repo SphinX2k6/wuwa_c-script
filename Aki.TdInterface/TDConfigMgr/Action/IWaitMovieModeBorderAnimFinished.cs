@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020B1 RID: 8369
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002306 RID: 8966
 	public class IWaitMovieModeBorderAnimFinished : IEnterMovieModeDurationType
 	{
-		// Token: 0x0600B810 RID: 47120 RVA: 0x001AA354 File Offset: 0x001A8554
+		// Token: 0x0600C368 RID: 50024 RVA: 0x001C0F9C File Offset: 0x001BF19C
 		private IWaitMovieModeBorderAnimFinished_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B811 RID: 47121 RVA: 0x001AA38C File Offset: 0x001A858C
+		// Token: 0x0600C369 RID: 50025 RVA: 0x001C0FD4 File Offset: 0x001BF1D4
 		public static IWaitMovieModeBorderAnimFinished Create([Nullable(2)] IWaitMovieModeBorderAnimFinished instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B812 RID: 47122 RVA: 0x001AA39F File Offset: 0x001A859F
+		// Token: 0x0600C36A RID: 50026 RVA: 0x001C0FE7 File Offset: 0x001BF1E7
 		public static IWaitMovieModeBorderAnimFinished CreateFromSetValue([Nullable(2)] IWaitMovieModeBorderAnimFinished_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B813 RID: 47123 RVA: 0x001AA3B2 File Offset: 0x001A85B2
+		// Token: 0x0600C36B RID: 50027 RVA: 0x001C0FFA File Offset: 0x001BF1FA
 		public new IWaitMovieModeBorderAnimFinished_SetValue ToSetValue()
 		{
 			return new IWaitMovieModeBorderAnimFinished_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003857 RID: 14423
-		// (get) Token: 0x0600B814 RID: 47124 RVA: 0x001AA3C5 File Offset: 0x001A85C5
-		// (set) Token: 0x0600B815 RID: 47125 RVA: 0x001AA3F0 File Offset: 0x001A85F0
+		// Token: 0x17003B3B RID: 15163
+		// (get) Token: 0x0600C36C RID: 50028 RVA: 0x001C100D File Offset: 0x001BF20D
+		// (set) Token: 0x0600C36D RID: 50029 RVA: 0x001C1038 File Offset: 0x001BF238
 		public override EEnterMovieModeDurationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E66 RID: 28262
+		// Token: 0x04007484 RID: 29828
 		[Nullable(2)]
 		protected new IWaitMovieModeBorderAnimFinished FbInstance;
 
-		// Token: 0x04006E67 RID: 28263
+		// Token: 0x04007485 RID: 29829
 		[Nullable(2)]
 		protected new IWaitMovieModeBorderAnimFinished_SetValue PocoInterface;
 	}

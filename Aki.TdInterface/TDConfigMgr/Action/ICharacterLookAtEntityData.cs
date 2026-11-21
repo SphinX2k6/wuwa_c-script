@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001884 RID: 6276
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A0F RID: 6671
 	public class ICharacterLookAtEntityData : ICharacterLookAtData
 	{
-		// Token: 0x060086D1 RID: 34513 RVA: 0x0013FFD8 File Offset: 0x0013E1D8
+		// Token: 0x06008DF9 RID: 36345 RVA: 0x0014F80C File Offset: 0x0014DA0C
 		private ICharacterLookAtEntityData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060086D2 RID: 34514 RVA: 0x00140010 File Offset: 0x0013E210
+		// Token: 0x06008DFA RID: 36346 RVA: 0x0014F844 File Offset: 0x0014DA44
 		public static ICharacterLookAtEntityData Create([Nullable(2)] ICharacterLookAtEntityData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086D3 RID: 34515 RVA: 0x00140023 File Offset: 0x0013E223
+		// Token: 0x06008DFB RID: 36347 RVA: 0x0014F857 File Offset: 0x0014DA57
 		public static ICharacterLookAtEntityData CreateFromSetValue([Nullable(2)] ICharacterLookAtEntityData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086D4 RID: 34516 RVA: 0x00140036 File Offset: 0x0013E236
+		// Token: 0x06008DFC RID: 36348 RVA: 0x0014F86A File Offset: 0x0014DA6A
 		public new ICharacterLookAtEntityData_SetValue ToSetValue()
 		{
 			return new ICharacterLookAtEntityData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BF7 RID: 11255
-		// (get) Token: 0x060086D5 RID: 34517 RVA: 0x00140055 File Offset: 0x0013E255
-		// (set) Token: 0x060086D6 RID: 34518 RVA: 0x00140080 File Offset: 0x0013E280
+		// Token: 0x17002DF2 RID: 11762
+		// (get) Token: 0x06008DFD RID: 36349 RVA: 0x0014F889 File Offset: 0x0014DA89
+		// (set) Token: 0x06008DFE RID: 36350 RVA: 0x0014F8B4 File Offset: 0x0014DAB4
 		public override ECharacterLookAt Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BF8 RID: 11256
-		// (get) Token: 0x060086D7 RID: 34519 RVA: 0x0014008E File Offset: 0x0013E28E
-		// (set) Token: 0x060086D8 RID: 34520 RVA: 0x001400B9 File Offset: 0x0013E2B9
+		// Token: 0x17002DF3 RID: 11763
+		// (get) Token: 0x06008DFF RID: 36351 RVA: 0x0014F8C2 File Offset: 0x0014DAC2
+		// (set) Token: 0x06008E00 RID: 36352 RVA: 0x0014F8ED File Offset: 0x0014DAED
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054F4 RID: 21748
+		// Token: 0x04005941 RID: 22849
 		[Nullable(2)]
 		protected new ICharacterLookAtEntityData FbInstance;
 
-		// Token: 0x040054F5 RID: 21749
+		// Token: 0x04005942 RID: 22850
 		[Nullable(2)]
 		protected new ICharacterLookAtEntityData_SetValue PocoInterface;
 	}

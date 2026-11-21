@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200082E RID: 2094
+	// Token: 0x0200084A RID: 2122
 	public class ConfigRoguePopularEntrieArgBySeasonIdAndInstId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003126 RID: 12582 RVA: 0x0016F40C File Offset: 0x0016D60C
+		// Token: 0x060031CE RID: 12750 RVA: 0x001766F4 File Offset: 0x001748F4
 		static ConfigRoguePopularEntrieArgBySeasonIdAndInstId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoguePopularEntrieArgBySeasonIdAndInstId.CreateStaticDefaultValue), new Action(ConfigRoguePopularEntrieArgBySeasonIdAndInstId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003127 RID: 12583 RVA: 0x0016F42C File Offset: 0x0016D62C
+		// Token: 0x060031CF RID: 12751 RVA: 0x00176714 File Offset: 0x00174914
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoguePopularEntrieArgBySeasonIdAndInstId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003128 RID: 12584 RVA: 0x0016F4AB File Offset: 0x0016D6AB
+		// Token: 0x060031D0 RID: 12752 RVA: 0x00176793 File Offset: 0x00174993
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoguePopularEntrieArgBySeasonIdAndInstId.LogPair = null;
 			ConfigRoguePopularEntrieArgBySeasonIdAndInstId.HandleId = 0;
 		}
 
-		// Token: 0x06003129 RID: 12585 RVA: 0x0016F4B9 File Offset: 0x0016D6B9
+		// Token: 0x060031D1 RID: 12753 RVA: 0x001767A1 File Offset: 0x001749A1
 		public static void Init()
 		{
 			ConfigRoguePopularEntrieArgBySeasonIdAndInstId.HandleId = ConfigCommon.InitDataStatement(ConfigRoguePopularEntrieArgBySeasonIdAndInstId.HandleId, "db_rogue.db", "select BinData from `RoguePopularEntrieArg` where SeasonId=? AND InstId=?");
 		}
 
-		// Token: 0x0600312A RID: 12586 RVA: 0x0016F4D4 File Offset: 0x0016D6D4
+		// Token: 0x060031D2 RID: 12754 RVA: 0x001767BC File Offset: 0x001749BC
 		public static RoguePopularEntrieArg? GetConfig(int p0SeasonId, int p1InstId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoguePopularEntrieArgBySeasonIdAndInstId.HandleId, ConfigRoguePopularEntrieArgBySeasonIdAndInstId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RoguePopularEntrieArg?(rootAsRoguePopularEntrieArg);
 		}
 
-		// Token: 0x04003928 RID: 14632
+		// Token: 0x040039EC RID: 14828
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003929 RID: 14633
+		// Token: 0x040039ED RID: 14829
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x0400392A RID: 14634
+		// Token: 0x040039EE RID: 14830
 		private const string TABLE = "RoguePopularEntrieArg";
 
-		// Token: 0x0400392B RID: 14635
+		// Token: 0x040039EF RID: 14831
 		private const string COMMAND = "select BinData from `RoguePopularEntrieArg` where SeasonId=? AND InstId=?";
 
-		// Token: 0x0400392C RID: 14636
+		// Token: 0x040039F0 RID: 14832
 		private const string KEY_PREFIX = "RoguePopularEntrieArgBySeasonIdAndInstId";
 
-		// Token: 0x0400392D RID: 14637
+		// Token: 0x040039F1 RID: 14833
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400392E RID: 14638
+		// Token: 0x040039F2 RID: 14834
 		private static int HandleId;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E0 RID: 10208
+	// Token: 0x02002AB3 RID: 10931
 	public class IStandControl2 : ILeisureInteractType
 	{
-		// Token: 0x0600E2E3 RID: 58083 RVA: 0x00217C21 File Offset: 0x00215E21
-		[NullableContext(1)]
+		// Token: 0x0600F108 RID: 61704 RVA: 0x00234A84 File Offset: 0x00232C84
 		public static IStandControl2 Create(IStandControl2? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044E5 RID: 17637
-		// (get) Token: 0x0600E2E4 RID: 58084 RVA: 0x00217C40 File Offset: 0x00215E40
+		// Token: 0x17004850 RID: 18512
+		// (get) Token: 0x0600F109 RID: 61705 RVA: 0x00234AA3 File Offset: 0x00232CA3
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC2 RID: 32194
+		// Token: 0x0400847F RID: 33919
 		private IStandControl2 Instance;
 	}
 }

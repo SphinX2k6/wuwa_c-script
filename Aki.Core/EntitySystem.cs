@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000088 RID: 136
+// Token: 0x0200008A RID: 138
 [NullableContext(1)]
 [Nullable(0)]
 public class EntitySystem : Singleton
 {
-	// Token: 0x06000415 RID: 1045 RVA: 0x00018531 File Offset: 0x00016731
+	// Token: 0x06000455 RID: 1109 RVA: 0x00018E19 File Offset: 0x00017019
 	public bool Initialize()
 	{
 		this.TickEntityManger.Clear();
@@ -15,38 +15,45 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000416 RID: 1046 RVA: 0x0001854A File Offset: 0x0001674A
+	// Token: 0x06000456 RID: 1110 RVA: 0x00018E32 File Offset: 0x00017032
 	[NullableContext(2)]
 	public void SetEntityDestroyHandle(TEntityDestroyHandle handle)
 	{
-		EntitySystem.Instance.DestroyHandle = handle;
+		this.DestroyHandle = handle;
 	}
 
-	// Token: 0x06000417 RID: 1047 RVA: 0x00018558 File Offset: 0x00016758
+	// Token: 0x06000457 RID: 1111 RVA: 0x00018E3C File Offset: 0x0001703C
+	[NullableContext(2)]
+	public Entity Create([Nullable(1)] Type typeOfEntity, int priority = 0, IEntityArgs args = null)
+	{
+		Entity entity = (Entity)ObjectSystem.Instance.Create(typeOfEntity);
+		if (!entity.Create(args))
+		{
+			ObjectSystem.Instance.Destroy(entity);
+			return null;
+		}
+		if (entity.TickComponentManager.NeedTick)
+		{
+			this.TickEntityManger.Add(entity, priority);
+		}
+		if (entity.TickComponentManager.NeedAfterTick)
+		{
+			this.AfterTickEntityManger.Add(entity, priority);
+		}
+		return entity;
+	}
+
+	// Token: 0x06000458 RID: 1112 RVA: 0x00018EA6 File Offset: 0x000170A6
 	[NullableContext(2)]
 	public T Create<[Nullable(0)] T>(int priority = 0, IEntityArgs args = null) where T : Entity
 	{
-		T t = ObjectSystem.Instance.Create<T>();
-		if (!t.Create(args))
-		{
-			ObjectSystem.Instance.Destroy(t);
-			return default(T);
-		}
-		if (t.TickComponentManager.NeedTick)
-		{
-			this.TickEntityManger.Add(t, priority);
-		}
-		if (t.TickComponentManager.NeedAfterTick)
-		{
-			this.AfterTickEntityManger.Add(t, priority);
-		}
-		return t;
+		return this.Create(typeof(T), priority, args) as T;
 	}
 
-	// Token: 0x06000418 RID: 1048 RVA: 0x000185E4 File Offset: 0x000167E4
-	public bool CreateExternal<[Nullable(0)] T>(T entity, int priority = 0, [Nullable(2)] IEntityArgs args = null) where T : Entity
+	// Token: 0x06000459 RID: 1113 RVA: 0x00018EC4 File Offset: 0x000170C4
+	public bool CreateExternal(Entity entity, int priority = 0, [Nullable(2)] IEntityArgs args = null)
 	{
-		if (!ObjectSystem.Instance.CreateExternal<T>(entity))
+		if (!ObjectSystem.Instance.CreateExternal(entity))
 		{
 			return false;
 		}
@@ -66,10 +73,10 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000419 RID: 1049 RVA: 0x0001866C File Offset: 0x0001686C
-	public bool Respawn<[Nullable(0)] T>(T entity, bool createExternal = false, int priority = 0, [Nullable(2)] IEntityArgs args = null) where T : Entity
+	// Token: 0x0600045A RID: 1114 RVA: 0x00018F2C File Offset: 0x0001712C
+	public bool Respawn(Entity entity, bool createExternal = false, int priority = 0, [Nullable(2)] IEntityArgs args = null)
 	{
-		if (!createExternal && !ObjectSystem.Instance.CreateExternal<T>(entity))
+		if (!createExternal && !ObjectSystem.Instance.CreateExternal(entity))
 		{
 			return false;
 		}
@@ -88,13 +95,13 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600041A RID: 1050 RVA: 0x000186E5 File Offset: 0x000168E5
-	public bool InitData<[Nullable(0)] T>(T entity, [Nullable(2)] IEntityArgs args = null) where T : Entity
+	// Token: 0x0600045B RID: 1115 RVA: 0x00018F8C File Offset: 0x0001718C
+	public bool InitData(Entity entity, [Nullable(2)] IEntityArgs args = null)
 	{
 		return entity.InitData(args);
 	}
 
-	// Token: 0x0600041B RID: 1051 RVA: 0x000186F3 File Offset: 0x000168F3
+	// Token: 0x0600045C RID: 1116 RVA: 0x00018F95 File Offset: 0x00017195
 	public bool Init(Entity entity)
 	{
 		if (!entity.Init())
@@ -105,7 +112,7 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600041C RID: 1052 RVA: 0x0001870C File Offset: 0x0001690C
+	// Token: 0x0600045D RID: 1117 RVA: 0x00018FAE File Offset: 0x000171AE
 	public bool Start(Entity entity)
 	{
 		if (!entity.Start())
@@ -116,20 +123,20 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x0600041D RID: 1053 RVA: 0x00018725 File Offset: 0x00016925
+	// Token: 0x0600045E RID: 1118 RVA: 0x00018FC7 File Offset: 0x000171C7
 	public void Activate(Entity entity)
 	{
 		entity.Activate();
 	}
 
-	// Token: 0x0600041E RID: 1054 RVA: 0x0001872D File Offset: 0x0001692D
+	// Token: 0x0600045F RID: 1119 RVA: 0x00018FCF File Offset: 0x000171CF
 	public void PostActive(Entity entity)
 	{
 		entity.PostActivate();
 	}
 
-	// Token: 0x0600041F RID: 1055 RVA: 0x00018738 File Offset: 0x00016938
-	public bool Destroy<[Nullable(0)] T>(T entity) where T : Entity
+	// Token: 0x06000460 RID: 1120 RVA: 0x00018FD8 File Offset: 0x000171D8
+	public bool Destroy(Entity entity)
 	{
 		if (!ObjectSystem.Instance.Destroy(entity))
 		{
@@ -159,8 +166,8 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000420 RID: 1056 RVA: 0x000187F0 File Offset: 0x000169F0
-	public bool DeSpawn<[Nullable(0)] T>(T entity) where T : Entity
+	// Token: 0x06000461 RID: 1121 RVA: 0x00019064 File Offset: 0x00017264
+	public bool DeSpawn(Entity entity)
 	{
 		if (!ObjectSystem.Instance.Destroy(entity))
 		{
@@ -190,7 +197,7 @@ public class EntitySystem : Singleton
 		return true;
 	}
 
-	// Token: 0x06000421 RID: 1057 RVA: 0x000188A8 File Offset: 0x00016AA8
+	// Token: 0x06000462 RID: 1122 RVA: 0x000190F0 File Offset: 0x000172F0
 	[NullableContext(2)]
 	public Entity Get(int id)
 	{
@@ -208,31 +215,20 @@ public class EntitySystem : Singleton
 		return entity;
 	}
 
-	// Token: 0x06000422 RID: 1058 RVA: 0x000188F0 File Offset: 0x00016AF0
+	// Token: 0x06000463 RID: 1123 RVA: 0x00019137 File Offset: 0x00017337
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T Get<T>(int id) where T : Entity
 	{
-		List<ObjectBase> objects = ObjectSystem.Instance.Objects;
-		int num = (int)((uint)id >> 16);
-		Entity entity = (num >= objects.Count) ? null : (objects[num] as Entity);
-		if (entity == null)
-		{
-			return default(T);
-		}
-		if (entity.Id != id)
-		{
-			return default(T);
-		}
-		return entity as T;
+		return this.Get(id) as T;
 	}
 
-	// Token: 0x06000423 RID: 1059 RVA: 0x00018954 File Offset: 0x00016B54
+	// Token: 0x06000464 RID: 1124 RVA: 0x0001914C File Offset: 0x0001734C
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T GetComponent<T>(int id) where T : EntityComponent
 	{
-		Entity entity = this.Get<Entity>(id);
+		Entity entity = this.Get(id);
 		if (entity == null)
 		{
 			return default(T);
@@ -240,32 +236,32 @@ public class EntitySystem : Singleton
 		return entity.GetComponent<T>();
 	}
 
-	// Token: 0x06000424 RID: 1060 RVA: 0x0001897B File Offset: 0x00016B7B
+	// Token: 0x06000465 RID: 1125 RVA: 0x00019173 File Offset: 0x00017373
 	public void ForceTick(float delta)
 	{
 		this.TickEntityManger.ForceTick(delta);
 	}
 
-	// Token: 0x06000425 RID: 1061 RVA: 0x00018989 File Offset: 0x00016B89
+	// Token: 0x06000466 RID: 1126 RVA: 0x00019181 File Offset: 0x00017381
 	public void Tick(float delta)
 	{
 		this.TickEntityManger.Tick(delta);
 	}
 
-	// Token: 0x06000426 RID: 1062 RVA: 0x00018997 File Offset: 0x00016B97
+	// Token: 0x06000467 RID: 1127 RVA: 0x0001918F File Offset: 0x0001738F
 	public void ForceAfterTick(float delta)
 	{
 		this.TickEntityManger.ForceAfterTick(delta);
 	}
 
-	// Token: 0x06000427 RID: 1063 RVA: 0x000189A5 File Offset: 0x00016BA5
+	// Token: 0x06000468 RID: 1128 RVA: 0x0001919D File Offset: 0x0001739D
 	public void AfterTick(float delta)
 	{
 		this.AfterTickEntityManger.AfterTick(delta);
 	}
 
-	// Token: 0x17000094 RID: 148
-	// (get) Token: 0x06000428 RID: 1064 RVA: 0x000189B3 File Offset: 0x00016BB3
+	// Token: 0x170000A6 RID: 166
+	// (get) Token: 0x06000469 RID: 1129 RVA: 0x000191AB File Offset: 0x000173AB
 	public static EntitySystem Instance
 	{
 		get
@@ -279,12 +275,12 @@ public class EntitySystem : Singleton
 		}
 	}
 
-	// Token: 0x06000429 RID: 1065 RVA: 0x000189D6 File Offset: 0x00016BD6
+	// Token: 0x0600046A RID: 1130 RVA: 0x000191CE File Offset: 0x000173CE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600042A RID: 1066 RVA: 0x000189D8 File Offset: 0x00016BD8
+	// Token: 0x0600046B RID: 1131 RVA: 0x000191D0 File Offset: 0x000173D0
 	public static void ResetStaticDefaultValue()
 	{
 		EntitySystem instance = EntitySystem._instance;
@@ -295,23 +291,23 @@ public class EntitySystem : Singleton
 		EntitySystem._instance = null;
 	}
 
-	// Token: 0x0600042B RID: 1067 RVA: 0x000189F1 File Offset: 0x00016BF1
+	// Token: 0x0600046C RID: 1132 RVA: 0x000191E9 File Offset: 0x000173E9
 	static EntitySystem()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(EntitySystem.CreateStaticDefaultValue), new Action(EntitySystem.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040003E0 RID: 992
+	// Token: 0x040003EE RID: 1006
 	private readonly TickEntityManager TickEntityManger = new TickEntityManager();
 
-	// Token: 0x040003E1 RID: 993
+	// Token: 0x040003EF RID: 1007
 	private readonly TickEntityManager AfterTickEntityManger = new TickEntityManager();
 
-	// Token: 0x040003E2 RID: 994
+	// Token: 0x040003F0 RID: 1008
 	[Nullable(2)]
 	private TEntityDestroyHandle DestroyHandle;
 
-	// Token: 0x040003E3 RID: 995
+	// Token: 0x040003F1 RID: 1009
 	[Nullable(2)]
 	private static EntitySystem _instance;
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002B03 RID: 11011
+// Token: 0x0200207F RID: 8319
 internal enum <SurvivorsTabMainTabItem>F57A596456AC795D5C37E8111EBF4F9D638BE62F55AE0A6C98D557F26D431ECB0__EComponent
 {
-	// Token: 0x0400AA08 RID: 43528
+	// Token: 0x0400AE0E RID: 44558
 	PnlNone,
-	// Token: 0x0400AA09 RID: 43529
+	// Token: 0x0400AE0F RID: 44559
 	TogCommon,
-	// Token: 0x0400AA0A RID: 43530
+	// Token: 0x0400AE10 RID: 44560
 	TexIcon,
-	// Token: 0x0400AA0B RID: 43531
+	// Token: 0x0400AE11 RID: 44561
 	TxtName,
-	// Token: 0x0400AA0C RID: 43532
+	// Token: 0x0400AE12 RID: 44562
 	PnlLock,
-	// Token: 0x0400AA0D RID: 43533
+	// Token: 0x0400AE13 RID: 44563
 	TxtWave,
-	// Token: 0x0400AA0E RID: 43534
+	// Token: 0x0400AE14 RID: 44564
 	PnlCommon
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002C5 RID: 709
+	// Token: 0x020002DA RID: 730
 	public class ConfigFightPhotoTabById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060010A3 RID: 4259 RVA: 0x000B7793 File Offset: 0x000B5993
+		// Token: 0x06001121 RID: 4385 RVA: 0x000BDC9F File Offset: 0x000BBE9F
 		static ConfigFightPhotoTabById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFightPhotoTabById.CreateStaticDefaultValue), new Action(ConfigFightPhotoTabById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060010A4 RID: 4260 RVA: 0x000B77B4 File Offset: 0x000B59B4
+		// Token: 0x06001122 RID: 4386 RVA: 0x000BDCC0 File Offset: 0x000BBEC0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFightPhotoTabById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060010A5 RID: 4261 RVA: 0x000B7833 File Offset: 0x000B5A33
+		// Token: 0x06001123 RID: 4387 RVA: 0x000BDD3F File Offset: 0x000BBF3F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFightPhotoTabById.LogPair = null;
 			ConfigFightPhotoTabById.HandleId = 0;
 		}
 
-		// Token: 0x060010A6 RID: 4262 RVA: 0x000B7841 File Offset: 0x000B5A41
+		// Token: 0x06001124 RID: 4388 RVA: 0x000BDD4D File Offset: 0x000BBF4D
 		public static void Init()
 		{
 			ConfigFightPhotoTabById.HandleId = ConfigCommon.InitDataStatement(ConfigFightPhotoTabById.HandleId, "db_fightphotooption.db", "select BinData from `FightPhotoTab` where Id=?");
 		}
 
-		// Token: 0x060010A7 RID: 4263 RVA: 0x000B785C File Offset: 0x000B5A5C
+		// Token: 0x06001125 RID: 4389 RVA: 0x000BDD68 File Offset: 0x000BBF68
 		public static FightPhotoTab? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFightPhotoTabById.HandleId, ConfigFightPhotoTabById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FightPhotoTab?(rootAsFightPhotoTab);
 		}
 
-		// Token: 0x04001347 RID: 4935
+		// Token: 0x040013DA RID: 5082
 		private const string DB = "db_fightphotooption.db";
 
-		// Token: 0x04001348 RID: 4936
+		// Token: 0x040013DB RID: 5083
 		private const string FILE = "z.战斗拍照模板.xlsx";
 
-		// Token: 0x04001349 RID: 4937
+		// Token: 0x040013DC RID: 5084
 		private const string TABLE = "FightPhotoTab";
 
-		// Token: 0x0400134A RID: 4938
+		// Token: 0x040013DD RID: 5085
 		private const string COMMAND = "select BinData from `FightPhotoTab` where Id=?";
 
-		// Token: 0x0400134B RID: 4939
+		// Token: 0x040013DE RID: 5086
 		private const string KEY_PREFIX = "FightPhotoTabById";
 
-		// Token: 0x0400134C RID: 4940
+		// Token: 0x040013DF RID: 5087
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400134D RID: 4941
+		// Token: 0x040013E0 RID: 5088
 		private static int HandleId;
 	}
 }

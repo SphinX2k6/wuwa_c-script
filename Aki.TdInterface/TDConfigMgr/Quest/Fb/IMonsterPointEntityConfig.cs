@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001345 RID: 4933
+	// Token: 0x02001495 RID: 5269
 	public class IMonsterPointEntityConfig
 	{
-		// Token: 0x0600710B RID: 28939 RVA: 0x0011093F File Offset: 0x0010EB3F
-		[NullableContext(1)]
+		// Token: 0x060077AB RID: 30635 RVA: 0x0011EEAB File Offset: 0x0011D0AB
 		public static IMonsterPointEntityConfig Create(IMonsterPointEntityConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002454 RID: 9300
-		// (get) Token: 0x0600710C RID: 28940 RVA: 0x0011095E File Offset: 0x0010EB5E
+		// Token: 0x17002623 RID: 9763
+		// (get) Token: 0x060077AC RID: 30636 RVA: 0x0011EECA File Offset: 0x0011D0CA
 		public virtual int EntityId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002455 RID: 9301
-		// (get) Token: 0x0600710D RID: 28941 RVA: 0x0011096B File Offset: 0x0010EB6B
+		// Token: 0x17002624 RID: 9764
+		// (get) Token: 0x060077AD RID: 30637 RVA: 0x0011EED7 File Offset: 0x0011D0D7
 		public virtual int Point
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004143 RID: 16707
+		// Token: 0x040044BF RID: 17599
 		private IMonsterPointEntityConfig Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000580 RID: 1408
+	// Token: 0x02000597 RID: 1431
 	public class ConfigMotorDevelopTaskByTaskId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600210D RID: 8461 RVA: 0x00114544 File Offset: 0x00112744
+		// Token: 0x06002197 RID: 8599 RVA: 0x0011AE2C File Offset: 0x0011902C
 		static ConfigMotorDevelopTaskByTaskId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorDevelopTaskByTaskId.CreateStaticDefaultValue), new Action(ConfigMotorDevelopTaskByTaskId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600210E RID: 8462 RVA: 0x00114564 File Offset: 0x00112764
+		// Token: 0x06002198 RID: 8600 RVA: 0x0011AE4C File Offset: 0x0011904C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorDevelopTaskByTaskId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600210F RID: 8463 RVA: 0x001145E3 File Offset: 0x001127E3
+		// Token: 0x06002199 RID: 8601 RVA: 0x0011AECB File Offset: 0x001190CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorDevelopTaskByTaskId.LogPair = null;
 			ConfigMotorDevelopTaskByTaskId.HandleId = 0;
 		}
 
-		// Token: 0x06002110 RID: 8464 RVA: 0x001145F1 File Offset: 0x001127F1
+		// Token: 0x0600219A RID: 8602 RVA: 0x0011AED9 File Offset: 0x001190D9
 		public static void Init()
 		{
 			ConfigMotorDevelopTaskByTaskId.HandleId = ConfigCommon.InitDataStatement(ConfigMotorDevelopTaskByTaskId.HandleId, "db_motordeveloptask.db", "select BinData from `MotorDevelopTask` where TaskId=?");
 		}
 
-		// Token: 0x06002111 RID: 8465 RVA: 0x0011460C File Offset: 0x0011280C
+		// Token: 0x0600219B RID: 8603 RVA: 0x0011AEF4 File Offset: 0x001190F4
 		public static MotorDevelopTask? GetConfig(int p0TaskId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMotorDevelopTaskByTaskId.HandleId, ConfigMotorDevelopTaskByTaskId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MotorDevelopTask?(rootAsMotorDevelopTask);
 		}
 
-		// Token: 0x04002664 RID: 9828
+		// Token: 0x04002705 RID: 9989
 		private const string DB = "db_motordeveloptask.db";
 
-		// Token: 0x04002665 RID: 9829
+		// Token: 0x04002706 RID: 9990
 		private const string FILE = "m.摩托养成活动.xlsx";
 
-		// Token: 0x04002666 RID: 9830
+		// Token: 0x04002707 RID: 9991
 		private const string TABLE = "MotorDevelopTask";
 
-		// Token: 0x04002667 RID: 9831
+		// Token: 0x04002708 RID: 9992
 		private const string COMMAND = "select BinData from `MotorDevelopTask` where TaskId=?";
 
-		// Token: 0x04002668 RID: 9832
+		// Token: 0x04002709 RID: 9993
 		private const string KEY_PREFIX = "MotorDevelopTaskByTaskId";
 
-		// Token: 0x04002669 RID: 9833
+		// Token: 0x0400270A RID: 9994
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400266A RID: 9834
+		// Token: 0x0400270B RID: 9995
 		private static int HandleId;
 	}
 }

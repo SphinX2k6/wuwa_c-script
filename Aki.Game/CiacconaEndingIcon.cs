@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.CiacconaGal;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020011E1 RID: 4577
+// Token: 0x02000695 RID: 1685
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class CiacconaEndingIcon : GridProxyAbstract<CiacconaGalEndingData>
 {
-	// Token: 0x06007A0C RID: 31244 RVA: 0x0019B2FC File Offset: 0x001994FC
+	// Token: 0x06004DA3 RID: 19875 RVA: 0x001A3FA8 File Offset: 0x001A21A8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class CiacconaEndingIcon : GridProxyAbstract<CiacconaGalEndingData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007A0D RID: 31245 RVA: 0x0019B344 File Offset: 0x00199544
+	// Token: 0x06004DA4 RID: 19876 RVA: 0x001A3FF0 File Offset: 0x001A21F0
 	[NullableContext(1)]
 	public override void Refresh(CiacconaGalEndingData data, bool isSelected, int gridIndex)
 	{
@@ -39,10 +39,10 @@ public class CiacconaEndingIcon : GridProxyAbstract<CiacconaGalEndingData>
 		this.SetSpriteByPath(resourcePath, base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x020077CD RID: 30669
+	// Token: 0x02006958 RID: 26968
 	private class EEndingIconComponentDefine
 	{
-		// Token: 0x040277FB RID: 161787
+		// Token: 0x04022B2D RID: 142125
 		public const int SpriteIcon = 0;
 	}
 }

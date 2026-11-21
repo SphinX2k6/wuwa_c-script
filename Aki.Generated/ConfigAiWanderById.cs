@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000090 RID: 144
+	// Token: 0x02000098 RID: 152
 	public class ConfigAiWanderById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000360 RID: 864 RVA: 0x0006CAAC File Offset: 0x0006ACAC
+		// Token: 0x06000390 RID: 912 RVA: 0x00071360 File Offset: 0x0006F560
 		static ConfigAiWanderById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiWanderById.CreateStaticDefaultValue), new Action(ConfigAiWanderById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000361 RID: 865 RVA: 0x0006CACC File Offset: 0x0006ACCC
+		// Token: 0x06000391 RID: 913 RVA: 0x00071380 File Offset: 0x0006F580
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiWanderById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000362 RID: 866 RVA: 0x0006CB4B File Offset: 0x0006AD4B
+		// Token: 0x06000392 RID: 914 RVA: 0x000713FF File Offset: 0x0006F5FF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiWanderById.LogPair = null;
 			ConfigAiWanderById.HandleId = 0;
 		}
 
-		// Token: 0x06000363 RID: 867 RVA: 0x0006CB59 File Offset: 0x0006AD59
+		// Token: 0x06000393 RID: 915 RVA: 0x0007140D File Offset: 0x0006F60D
 		public static void Init()
 		{
 			ConfigAiWanderById.HandleId = ConfigCommon.InitDataStatement(ConfigAiWanderById.HandleId, "db_ai.db", "select BinData from `AiWander` where Id=?");
 		}
 
-		// Token: 0x06000364 RID: 868 RVA: 0x0006CB74 File Offset: 0x0006AD74
+		// Token: 0x06000394 RID: 916 RVA: 0x00071428 File Offset: 0x0006F628
 		public static AiWander? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiWanderById.HandleId, ConfigAiWanderById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiWander?(rootAsAiWander);
 		}
 
-		// Token: 0x040003D4 RID: 980
+		// Token: 0x0400040C RID: 1036
 		private const string DB = "db_ai.db";
 
-		// Token: 0x040003D5 RID: 981
+		// Token: 0x0400040D RID: 1037
 		private const string FILE = "a.AI脱战游荡.xlsx";
 
-		// Token: 0x040003D6 RID: 982
+		// Token: 0x0400040E RID: 1038
 		private const string TABLE = "AiWander";
 
-		// Token: 0x040003D7 RID: 983
+		// Token: 0x0400040F RID: 1039
 		private const string COMMAND = "select BinData from `AiWander` where Id=?";
 
-		// Token: 0x040003D8 RID: 984
+		// Token: 0x04000410 RID: 1040
 		private const string KEY_PREFIX = "AiWanderById";
 
-		// Token: 0x040003D9 RID: 985
+		// Token: 0x04000411 RID: 1041
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003DA RID: 986
+		// Token: 0x04000412 RID: 1042
 		private static int HandleId;
 	}
 }

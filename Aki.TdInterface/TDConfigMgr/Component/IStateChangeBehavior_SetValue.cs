@@ -5,33 +5,32 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200070A RID: 1802
+	// Token: 0x020007AB RID: 1963
 	public class IStateChangeBehavior_SetValue
 	{
-		// Token: 0x04001A3F RID: 6719
-		[Nullable(1)]
+		// Token: 0x04001C3E RID: 7230
 		public string State;
 
-		// Token: 0x04001A40 RID: 6720
+		// Token: 0x04001C3F RID: 7231
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> Action;
 
-		// Token: 0x04001A41 RID: 6721
+		// Token: 0x04001C40 RID: 7232
 		[Nullable(2)]
 		public IDelayChangeState DelayChangeState;
 
-		// Token: 0x04001A42 RID: 6722
+		// Token: 0x04001C41 RID: 7233
 		public bool? PendingConditionAvailable;
 
-		// Token: 0x04001A43 RID: 6723
+		// Token: 0x04001C42 RID: 7234
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IConditionAction> ConditionAction;
 	}

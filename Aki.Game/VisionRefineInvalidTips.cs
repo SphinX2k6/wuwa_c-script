@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200176B RID: 5995
+// Token: 0x02000C24 RID: 3108
 public class VisionRefineInvalidTips : UiPanelBase
 {
-	// Token: 0x0600ADE1 RID: 44513 RVA: 0x00272DEC File Offset: 0x00270FEC
+	// Token: 0x060081C8 RID: 33224 RVA: 0x0027D2B0 File Offset: 0x0027B4B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -24,7 +24,7 @@ public class VisionRefineInvalidTips : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600ADE2 RID: 44514 RVA: 0x00272E78 File Offset: 0x00271078
+	// Token: 0x060081C9 RID: 33225 RVA: 0x0027D33C File Offset: 0x0027B53C
 	[NullableContext(1)]
 	public void RefreshExternalByData(VisionRefineInvalidTipsData data)
 	{
@@ -44,14 +44,14 @@ public class VisionRefineInvalidTips : UiPanelBase
 		}
 	}
 
-	// Token: 0x02007D62 RID: 32098
+	// Token: 0x02006EE8 RID: 28392
 	private enum EComponent
 	{
-		// Token: 0x040290EC RID: 168172
+		// Token: 0x04024417 RID: 148503
 		LockSprite,
-		// Token: 0x040290ED RID: 168173
+		// Token: 0x04024418 RID: 148504
 		LockDescriptionText,
-		// Token: 0x040290EE RID: 168174
+		// Token: 0x04024419 RID: 148505
 		FunctionButton
 	}
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D29 RID: 23849
+	// Token: 0x02006360 RID: 25440
 	public class IBvbAiDiscardForEnergyAndActDataT
 	{
-		// Token: 0x1700B2C1 RID: 45761
-		// (get) Token: 0x06028C3D RID: 166973 RVA: 0x005996E9 File Offset: 0x005978E9
-		// (set) Token: 0x06028C3E RID: 166974 RVA: 0x005996F1 File Offset: 0x005978F1
+		// Token: 0x1700BC22 RID: 48162
+		// (get) Token: 0x0602B2A7 RID: 176807 RVA: 0x005E2159 File Offset: 0x005E0359
+		// (set) Token: 0x0602B2A8 RID: 176808 RVA: 0x005E2161 File Offset: 0x005E0361
 		public EBvbEventName Type { get; set; }
 
-		// Token: 0x1700B2C2 RID: 45762
-		// (get) Token: 0x06028C3F RID: 166975 RVA: 0x005996FA File Offset: 0x005978FA
-		// (set) Token: 0x06028C40 RID: 166976 RVA: 0x00599702 File Offset: 0x00597902
+		// Token: 0x1700BC23 RID: 48163
+		// (get) Token: 0x0602B2A9 RID: 176809 RVA: 0x005E216A File Offset: 0x005E036A
+		// (set) Token: 0x0602B2AA RID: 176810 RVA: 0x005E2172 File Offset: 0x005E0372
 		public TGoalActDataUnion GoalAct { get; set; }
 
-		// Token: 0x1700B2C3 RID: 45763
-		// (get) Token: 0x06028C41 RID: 166977 RVA: 0x0059970B File Offset: 0x0059790B
-		// (set) Token: 0x06028C42 RID: 166978 RVA: 0x00599713 File Offset: 0x00597913
+		// Token: 0x1700BC24 RID: 48164
+		// (get) Token: 0x0602B2AB RID: 176811 RVA: 0x005E217B File Offset: 0x005E037B
+		// (set) Token: 0x0602B2AC RID: 176812 RVA: 0x005E2183 File Offset: 0x005E0383
 		public EDiscardForEnergyAndActStrategy Strategy { get; set; }
 
-		// Token: 0x06028C43 RID: 166979 RVA: 0x0059971C File Offset: 0x0059791C
+		// Token: 0x0602B2AD RID: 176813 RVA: 0x005E218C File Offset: 0x005E038C
 		public IBvbAiDiscardForEnergyAndActDataT()
 		{
 			this.Type = EBvbEventName.AIEvolution;

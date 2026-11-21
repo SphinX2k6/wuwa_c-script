@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
@@ -10,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FDC RID: 4060
+// Token: 0x02000491 RID: 1169
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureHandBookView : UiViewBase
 {
-	// Token: 0x06006841 RID: 26689 RVA: 0x0014B289 File Offset: 0x00149489
+	// Token: 0x06003BD9 RID: 15321 RVA: 0x00153B4D File Offset: 0x00151D4D
 	public FurnitureHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006842 RID: 26690 RVA: 0x0014B2B4 File Offset: 0x001494B4
+	// Token: 0x06003BDA RID: 15322 RVA: 0x00153B78 File Offset: 0x00151D78
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +34,7 @@ public class FurnitureHandBookView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006843 RID: 26691 RVA: 0x0014B368 File Offset: 0x00149568
+	// Token: 0x06003BDB RID: 15323 RVA: 0x00153C2C File Offset: 0x00151E2C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurnitureHandBookView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -46,7 +45,7 @@ public class FurnitureHandBookView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006844 RID: 26692 RVA: 0x0014B3AC File Offset: 0x001495AC
+	// Token: 0x06003BDC RID: 15324 RVA: 0x00153C70 File Offset: 0x00151E70
 	protected override UniTask OnBeforeShowAsyncImplementImplement()
 	{
 		FurnitureHandBookView.<OnBeforeShowAsyncImplementImplement>d__12 <OnBeforeShowAsyncImplementImplement>d__;
@@ -57,13 +56,13 @@ public class FurnitureHandBookView : UiViewBase
 		return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006845 RID: 26693 RVA: 0x0014B3EF File Offset: 0x001495EF
+	// Token: 0x06003BDD RID: 15325 RVA: 0x00153CB3 File Offset: 0x00151EB3
 	protected override void OnBeforeHide()
 	{
 		FurnitureController.Instance.SetAllFurnitureHandBookItemRedDotAsRead();
 	}
 
-	// Token: 0x06006846 RID: 26694 RVA: 0x0014B3FC File Offset: 0x001495FC
+	// Token: 0x06003BDE RID: 15326 RVA: 0x00153CC0 File Offset: 0x00151EC0
 	protected virtual void UpdateAllDataList()
 	{
 		int handleId = FurnitureModel.Instance.HandleId;
@@ -82,7 +81,7 @@ public class FurnitureHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006847 RID: 26695 RVA: 0x0014B4AC File Offset: 0x001496AC
+	// Token: 0x06003BDF RID: 15327 RVA: 0x00153D70 File Offset: 0x00151F70
 	private void UpdateCurShowDataList()
 	{
 		int[] tagList = (this.CurrentFilterConfig != null) ? this.CurrentFilterConfig.GetValueOrDefault().TagList() : null;
@@ -92,12 +91,12 @@ public class FurnitureHandBookView : UiViewBase
 		}
 		else
 		{
-			this.CurShowDataList = this.AllDataList.FindAll((IFurnitureHandBookItemData data) => tagList.Contains(data.FurnitureConfig.TagId));
+			this.CurShowDataList = this.AllDataList.FindAll((IFurnitureHandBookItemData data) => Array.IndexOf<int>(tagList, data.FurnitureConfig.TagId) >= 0);
 		}
 		this.SortCurShowDataList();
 	}
 
-	// Token: 0x06006848 RID: 26696 RVA: 0x0014B51D File Offset: 0x0014971D
+	// Token: 0x06003BE0 RID: 15328 RVA: 0x00153DE1 File Offset: 0x00151FE1
 	private void SortCurShowDataList()
 	{
 		this.CurShowDataList.Sort(delegate(IFurnitureHandBookItemData a, IFurnitureHandBookItemData b)
@@ -125,13 +124,13 @@ public class FurnitureHandBookView : UiViewBase
 		});
 	}
 
-	// Token: 0x06006849 RID: 26697 RVA: 0x0014B549 File Offset: 0x00149749
+	// Token: 0x06003BE1 RID: 15329 RVA: 0x00153E0D File Offset: 0x0015200D
 	public void RefreshGrid()
 	{
 		this.ItemLoopScrollView.RefreshByData(this.CurShowDataList, false, null, false);
 	}
 
-	// Token: 0x0600684A RID: 26698 RVA: 0x0014B560 File Offset: 0x00149760
+	// Token: 0x06003BE2 RID: 15330 RVA: 0x00153E24 File Offset: 0x00152024
 	public void RefreshDetail()
 	{
 		if (this.CurSelectedFurnitureData == null)
@@ -141,7 +140,7 @@ public class FurnitureHandBookView : UiViewBase
 		this.DetailItem.RefreshByFurnitureId(this.CurSelectedFurnitureData.FurnitureConfig.Id, true);
 	}
 
-	// Token: 0x0600684B RID: 26699 RVA: 0x0014B598 File Offset: 0x00149798
+	// Token: 0x06003BE3 RID: 15331 RVA: 0x00153E5C File Offset: 0x0015205C
 	public void RefreshNumText()
 	{
 		int num = 0;
@@ -163,13 +162,13 @@ public class FurnitureHandBookView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600684C RID: 26700 RVA: 0x0014B630 File Offset: 0x00149830
+	// Token: 0x06003BE4 RID: 15332 RVA: 0x00153EF4 File Offset: 0x001520F4
 	private void OnClickBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600684D RID: 26701 RVA: 0x0014B639 File Offset: 0x00149839
+	// Token: 0x06003BE5 RID: 15333 RVA: 0x00153EFD File Offset: 0x001520FD
 	private void OnDropDownSelect(int index, FurnitureFilterConfig data)
 	{
 		this.CurrentFilterConfig = new FurnitureFilterConfig?(this.FilterConfigList[index]);
@@ -178,7 +177,7 @@ public class FurnitureHandBookView : UiViewBase
 		this.SelectProxy();
 	}
 
-	// Token: 0x0600684E RID: 26702 RVA: 0x0014B664 File Offset: 0x00149864
+	// Token: 0x06003BE6 RID: 15334 RVA: 0x00153F28 File Offset: 0x00152128
 	private FurnitureHandBookItem CreateItemProxy()
 	{
 		FurnitureHandBookItem furnitureHandBookItem = new FurnitureHandBookItem();
@@ -192,7 +191,7 @@ public class FurnitureHandBookView : UiViewBase
 		return furnitureHandBookItem;
 	}
 
-	// Token: 0x0600684F RID: 26703 RVA: 0x0014B68F File Offset: 0x0014988F
+	// Token: 0x06003BE7 RID: 15335 RVA: 0x00153F53 File Offset: 0x00152153
 	private void OnFurnitureItemToggleChanged(EToggleState state, IFurnitureHandBookItemData data)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -201,7 +200,7 @@ public class FurnitureHandBookView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006850 RID: 26704 RVA: 0x0014B69C File Offset: 0x0014989C
+	// Token: 0x06003BE8 RID: 15336 RVA: 0x00153F60 File Offset: 0x00152160
 	private bool CanExecuteChangeFunctionForFurniture(object data, bool isForceSelected, EToggleState state)
 	{
 		int id = (data as IFurnitureHandBookItemData).FurnitureConfig.Id;
@@ -213,7 +212,7 @@ public class FurnitureHandBookView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06006851 RID: 26705 RVA: 0x0014B6E3 File Offset: 0x001498E3
+	// Token: 0x06003BE9 RID: 15337 RVA: 0x00153FA7 File Offset: 0x001521A7
 	public void SelectFurniture(IFurnitureHandBookItemData data)
 	{
 		this.CurSelectedFurnitureData = data;
@@ -221,7 +220,7 @@ public class FurnitureHandBookView : UiViewBase
 		this.RefreshDetail();
 	}
 
-	// Token: 0x06006852 RID: 26706 RVA: 0x0014B6F8 File Offset: 0x001498F8
+	// Token: 0x06003BEA RID: 15338 RVA: 0x00153FBC File Offset: 0x001521BC
 	public void SelectProxy()
 	{
 		FurnitureHandBookView.<>c__DisplayClass26_0 CS$<>8__locals1 = new FurnitureHandBookView.<>c__DisplayClass26_0();
@@ -250,27 +249,27 @@ public class FurnitureHandBookView : UiViewBase
 		itemLoopScrollView.SelectGridProxy(num, false);
 	}
 
-	// Token: 0x04002F94 RID: 12180
+	// Token: 0x0400302D RID: 12333
 	[Nullable(2)]
 	protected IFurnitureHandBookItemData CurSelectedFurnitureData;
 
-	// Token: 0x04002F95 RID: 12181
+	// Token: 0x0400302E RID: 12334
 	private readonly List<IFurnitureHandBookItemData> AllDataList = new List<IFurnitureHandBookItemData>();
 
-	// Token: 0x04002F96 RID: 12182
+	// Token: 0x0400302F RID: 12335
 	protected List<IFurnitureHandBookItemData> CurShowDataList = new List<IFurnitureHandBookItemData>();
 
-	// Token: 0x04002F97 RID: 12183
+	// Token: 0x04003030 RID: 12336
 	private FurnitureFilterConfig? CurrentFilterConfig;
 
-	// Token: 0x04002F98 RID: 12184
+	// Token: 0x04003031 RID: 12337
 	private IReadOnlyList<FurnitureFilterConfig> FilterConfigList = new List<FurnitureFilterConfig>();
 
-	// Token: 0x04002F99 RID: 12185
+	// Token: 0x04003032 RID: 12338
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaption;
 
-	// Token: 0x04002F9A RID: 12186
+	// Token: 0x04003033 RID: 12339
 	[Nullable(new byte[]
 	{
 		2,
@@ -278,7 +277,7 @@ public class FurnitureHandBookView : UiViewBase
 	})]
 	private CommonDropDown<TableTextArgNew, FurnitureFilterConfig> FilterDropDownList;
 
-	// Token: 0x04002F9B RID: 12187
+	// Token: 0x04003034 RID: 12340
 	[Nullable(new byte[]
 	{
 		2,
@@ -287,7 +286,7 @@ public class FurnitureHandBookView : UiViewBase
 	})]
 	private LoopScrollView<FurnitureHandBookItem, IFurnitureHandBookItemData> ItemLoopScrollView;
 
-	// Token: 0x04002F9C RID: 12188
+	// Token: 0x04003035 RID: 12341
 	[Nullable(2)]
 	private FurnitureDetailTipItem DetailItem;
 }

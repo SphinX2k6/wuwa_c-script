@@ -7,23 +7,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x0200599F RID: 22943
+	// Token: 0x02004978 RID: 18808
 	public class ChapterBattleDeclarationTips : GenericPromptFloatTipsBase
 	{
-		// Token: 0x0603A35E RID: 238430 RVA: 0x00DD5708 File Offset: 0x00DD3908
+		// Token: 0x0602F284 RID: 193156 RVA: 0x00D24B98 File Offset: 0x00D22D98
 		[NullableContext(1)]
 		public ChapterBattleDeclarationTips(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A35F RID: 238431 RVA: 0x00DD5711 File Offset: 0x00DD3911
+		// Token: 0x0602F285 RID: 193157 RVA: 0x00D24BA1 File Offset: 0x00D22DA1
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(2, typeof(UUITexture)));
 		}
 
-		// Token: 0x0603A360 RID: 238432 RVA: 0x00DD5734 File Offset: 0x00DD3934
+		// Token: 0x0602F286 RID: 193158 RVA: 0x00D24BC4 File Offset: 0x00D22DC4
 		private void FetchCurrentChapterConf(int chapterId)
 		{
 			this.CurrentChapterConf = ConfigQuestChapterById.GetConfig(chapterId, true);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A361 RID: 238433 RVA: 0x00DD5788 File Offset: 0x00DD3988
+		// Token: 0x0602F287 RID: 193159 RVA: 0x00D24C18 File Offset: 0x00D22E18
 		protected override void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0401E5DE RID: 124382
+		// Token: 0x0401907C RID: 102524
 		private QuestChapter? CurrentChapterConf;
 
-		// Token: 0x0200BC16 RID: 48150
+		// Token: 0x0200A621 RID: 42529
 		private class EChapterBattleDeclarationTips
 		{
-			// Token: 0x04038C54 RID: 232532
+			// Token: 0x04033623 RID: 210467
 			public const int ChapterIcon = 2;
 		}
 	}

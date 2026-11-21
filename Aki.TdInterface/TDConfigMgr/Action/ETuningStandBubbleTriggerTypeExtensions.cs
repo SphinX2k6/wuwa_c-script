@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002489 RID: 9353
+	// Token: 0x0200272C RID: 10028
 	public static class ETuningStandBubbleTriggerTypeExtensions
 	{
-		// Token: 0x0600CAE7 RID: 51943 RVA: 0x001DDCE0 File Offset: 0x001DBEE0
+		// Token: 0x0600D7A0 RID: 55200 RVA: 0x001F7EA8 File Offset: 0x001F60A8
 		public static string ToEnumString(this ETuningStandBubbleTriggerType value)
 		{
 			string result;
@@ -42,7 +42,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAE8 RID: 51944 RVA: 0x001DDD64 File Offset: 0x001DBF64
+		// Token: 0x0600D7A1 RID: 55201 RVA: 0x001F7F2C File Offset: 0x001F612C
 		public static ETuningStandBubbleTriggerType FromString(string name)
 		{
 			ETuningStandBubbleTriggerType result;
@@ -53,7 +53,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAE9 RID: 51945 RVA: 0x001DDD90 File Offset: 0x001DBF90
+		// Token: 0x0600D7A2 RID: 55202 RVA: 0x001F7F58 File Offset: 0x001F6158
 		public static bool TryFromString(string name, out ETuningStandBubbleTriggerType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -134,7 +134,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600CAEA RID: 51946 RVA: 0x001DDEA8 File Offset: 0x001DC0A8
+		// Token: 0x0600D7A3 RID: 55203 RVA: 0x001F8070 File Offset: 0x001F6270
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -150,7 +150,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAEB RID: 51947 RVA: 0x001DDEFB File Offset: 0x001DC0FB
+		// Token: 0x0600D7A4 RID: 55204 RVA: 0x001F80C3 File Offset: 0x001F62C3
 		public static ETuningStandBubbleTriggerType[] GetValues()
 		{
 			return new ETuningStandBubbleTriggerType[]
@@ -166,7 +166,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAEC RID: 51948 RVA: 0x001DDF10 File Offset: 0x001DC110
+		// Token: 0x0600D7A5 RID: 55205 RVA: 0x001F80D8 File Offset: 0x001F62D8
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020011CD RID: 4557
+	// Token: 0x02000299 RID: 665
 	[UnrealObjectPath("/Script/Engine.Texture2D")]
-	[UnrealStructLayout(4032, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4032)]
+	[UnrealStructLayout(4240, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 4240)]
 	public class UTexture2D : UTexture, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06010CDC RID: 68828 RVA: 0x0018AD5D File Offset: 0x00188F5D
+		// Token: 0x06004964 RID: 18788 RVA: 0x00066E45 File Offset: 0x00065045
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UTexture2D._ClassPtr;
 		}
 
-		// Token: 0x06010CDD RID: 68829 RVA: 0x0018AD6C File Offset: 0x00188F6C
+		// Token: 0x06004965 RID: 18789 RVA: 0x00066E54 File Offset: 0x00065054
 		public UTexture2D() : this(BuiltinUtils.AllocNativeUObject(UTexture2D.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06010CDE RID: 68830 RVA: 0x0018AD94 File Offset: 0x00188F94
+		// Token: 0x06004966 RID: 18790 RVA: 0x00066E7C File Offset: 0x0006507C
 		[NullableContext(1)]
 		public UTexture2D(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UTexture2D.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170041A0 RID: 16800
-		// (get) Token: 0x06010CDF RID: 68831 RVA: 0x0018ADC7 File Offset: 0x00188FC7
-		// (set) Token: 0x06010CE0 RID: 68832 RVA: 0x0018ADD7 File Offset: 0x00188FD7
+		// Token: 0x17000DC3 RID: 3523
+		// (get) Token: 0x06004967 RID: 18791 RVA: 0x00066EAF File Offset: 0x000650AF
+		// (set) Token: 0x06004968 RID: 18792 RVA: 0x00066EBF File Offset: 0x000650BF
 		public unsafe int LevelIndex
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170041A1 RID: 16801
-		// (get) Token: 0x06010CE1 RID: 68833 RVA: 0x0018ADE8 File Offset: 0x00188FE8
-		// (set) Token: 0x06010CE2 RID: 68834 RVA: 0x0018ADF8 File Offset: 0x00188FF8
+		// Token: 0x17000DC4 RID: 3524
+		// (get) Token: 0x06004969 RID: 18793 RVA: 0x00066ED0 File Offset: 0x000650D0
+		// (set) Token: 0x0600496A RID: 18794 RVA: 0x00066EE0 File Offset: 0x000650E0
 		public unsafe int FirstResourceMemMip
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170041A2 RID: 16802
-		// (get) Token: 0x06010CE3 RID: 68835 RVA: 0x0018AE09 File Offset: 0x00189009
-		// (set) Token: 0x06010CE4 RID: 68836 RVA: 0x0018AE22 File Offset: 0x00189022
+		// Token: 0x17000DC5 RID: 3525
+		// (get) Token: 0x0600496B RID: 18795 RVA: 0x00066EF1 File Offset: 0x000650F1
+		// (set) Token: 0x0600496C RID: 18796 RVA: 0x00066F0A File Offset: 0x0006510A
 		public unsafe bool bTemporarilyDisableStreaming
 		{
 			get
@@ -74,39 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170041A3 RID: 16803
-		// (get) Token: 0x06010CE5 RID: 68837 RVA: 0x0018AE52 File Offset: 0x00189052
-		// (set) Token: 0x06010CE6 RID: 68838 RVA: 0x0018AE66 File Offset: 0x00189066
-		public unsafe TEnumAsByte<TextureAddress> AddressX
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UTexture2D.__PropertyOffset_AddressX);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UTexture2D.__PropertyOffset_AddressX) = value;
-			}
-		}
-
-		// Token: 0x170041A4 RID: 16804
-		// (get) Token: 0x06010CE7 RID: 68839 RVA: 0x0018AE7B File Offset: 0x0018907B
-		// (set) Token: 0x06010CE8 RID: 68840 RVA: 0x0018AE8F File Offset: 0x0018908F
-		public unsafe TEnumAsByte<TextureAddress> AddressY
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UTexture2D.__PropertyOffset_AddressY);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UTexture2D.__PropertyOffset_AddressY) = value;
-			}
-		}
-
-		// Token: 0x170041A5 RID: 16805
-		// (get) Token: 0x06010CE9 RID: 68841 RVA: 0x0018AEA4 File Offset: 0x001890A4
-		// (set) Token: 0x06010CEA RID: 68842 RVA: 0x0018AEB8 File Offset: 0x001890B8
+		// Token: 0x17000DC6 RID: 3526
+		// (get) Token: 0x0600496D RID: 18797 RVA: 0x00066F3A File Offset: 0x0006513A
+		// (set) Token: 0x0600496E RID: 18798 RVA: 0x00066F4E File Offset: 0x0006514E
 		public unsafe FIntPoint ImportedSize
 		{
 			get
@@ -119,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170041A6 RID: 16806
-		// (get) Token: 0x06010CEB RID: 68843 RVA: 0x0018AECD File Offset: 0x001890CD
-		// (set) Token: 0x06010CEC RID: 68844 RVA: 0x0018AEDD File Offset: 0x001890DD
+		// Token: 0x17000DC7 RID: 3527
+		// (get) Token: 0x0600496F RID: 18799 RVA: 0x00066F63 File Offset: 0x00065163
+		// (set) Token: 0x06004970 RID: 18800 RVA: 0x00066F73 File Offset: 0x00065173
 		public unsafe byte LandscapeTextureEditorMipsAndMeshRequiredMips
 		{
 			get
@@ -134,95 +104,87 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06010CED RID: 68845 RVA: 0x0018AEF0 File Offset: 0x001890F0
+		// Token: 0x06004971 RID: 18801 RVA: 0x00066F84 File Offset: 0x00065184
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int Blueprint_GetSizeY()
 		{
 			UTexture2D.__Blueprint_GetSizeY_FunctionParams* ptr = stackalloc UTexture2D.__Blueprint_GetSizeY_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UTexture2D.__Blueprint_GetSizeY_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTexture2D.__Blueprint_GetSizeY_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTexture2D.__Blueprint_GetSizeY_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTexture2D.__Blueprint_GetSizeY_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010CEE RID: 68846 RVA: 0x0018AF38 File Offset: 0x00189138
+		// Token: 0x06004972 RID: 18802 RVA: 0x00066FCC File Offset: 0x000651CC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int Blueprint_GetSizeX()
 		{
 			UTexture2D.__Blueprint_GetSizeX_FunctionParams* ptr = stackalloc UTexture2D.__Blueprint_GetSizeX_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UTexture2D.__Blueprint_GetSizeX_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UTexture2D.__Blueprint_GetSizeX_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTexture2D.__Blueprint_GetSizeX_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UTexture2D.__Blueprint_GetSizeX_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06010CEF RID: 68847 RVA: 0x0018AF7E File Offset: 0x0018917E
+		// Token: 0x06004973 RID: 18803 RVA: 0x00067011 File Offset: 0x00065211
 		static UTexture2D()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Texture2D");
 		}
 
-		// Token: 0x06010CF0 RID: 68848 RVA: 0x0018AF8C File Offset: 0x0018918C
+		// Token: 0x06004974 RID: 18804 RVA: 0x0006701F File Offset: 0x0006521F
 		protected UTexture2D(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04008FAC RID: 36780
+		// Token: 0x04001C8E RID: 7310
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Texture2D";
 
-		// Token: 0x04008FAD RID: 36781
+		// Token: 0x04001C8F RID: 7311
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04008FAE RID: 36782
+		// Token: 0x04001C90 RID: 7312
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04008FAF RID: 36783
+		// Token: 0x04001C91 RID: 7313
 		internal static int __PropertyOffset_LevelIndex;
 
-		// Token: 0x04008FB0 RID: 36784
+		// Token: 0x04001C92 RID: 7314
 		internal static int __PropertyOffset_FirstResourceMemMip;
 
-		// Token: 0x04008FB1 RID: 36785
+		// Token: 0x04001C93 RID: 7315
 		internal static int __PropertyOffset_bTemporarilyDisableStreaming;
 
-		// Token: 0x04008FB2 RID: 36786
+		// Token: 0x04001C94 RID: 7316
 		internal static byte __PropertyMask_bTemporarilyDisableStreaming;
 
-		// Token: 0x04008FB3 RID: 36787
-		internal static int __PropertyOffset_AddressX;
-
-		// Token: 0x04008FB4 RID: 36788
-		internal static int __PropertyOffset_AddressY;
-
-		// Token: 0x04008FB5 RID: 36789
+		// Token: 0x04001C95 RID: 7317
 		internal static int __PropertyOffset_ImportedSize;
 
-		// Token: 0x04008FB6 RID: 36790
+		// Token: 0x04001C96 RID: 7318
 		internal static int __PropertyOffset_LandscapeTextureEditorMipsAndMeshRequiredMips;
 
-		// Token: 0x04008FB7 RID: 36791
+		// Token: 0x04001C97 RID: 7319
 		private static IntPtr __Blueprint_GetSizeY_NativeFunctionPtr;
 
-		// Token: 0x04008FB8 RID: 36792
+		// Token: 0x04001C98 RID: 7320
 		private static IntPtr __Blueprint_GetSizeX_NativeFunctionPtr;
 
-		// Token: 0x02002DF9 RID: 11769
+		// Token: 0x020009F3 RID: 2547
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Blueprint_GetSizeY_FunctionParams
 		{
-			// Token: 0x0401685A RID: 92250
+			// Token: 0x04005998 RID: 22936
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02002DFA RID: 11770
+		// Token: 0x020009F4 RID: 2548
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Blueprint_GetSizeX_FunctionParams
 		{
-			// Token: 0x0401685B RID: 92251
+			// Token: 0x04005999 RID: 22937
 			[FieldOffset(0)]
 			public int __Result;
 		}

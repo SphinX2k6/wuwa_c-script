@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using FilterDefine;
 
-// Token: 0x02001849 RID: 6217
+// Token: 0x02000D02 RID: 3330
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionDestroyFilter : CommonFilter
 {
-	// Token: 0x0600B61B RID: 46619 RVA: 0x00292C74 File Offset: 0x00290E74
+	// Token: 0x06008A06 RID: 35334 RVA: 0x0029D3AC File Offset: 0x0029B5AC
 	protected object GetPhantomItemId(object data, Dictionary<int, string> currentSelectMap)
 	{
 		ItemViewData itemViewData = (ItemViewData)data;
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(itemViewData.GetConfigId()).PhantomItem.Value.MonsterId;
 	}
 
-	// Token: 0x0600B61C RID: 46620 RVA: 0x00292CB4 File Offset: 0x00290EB4
+	// Token: 0x06008A07 RID: 35335 RVA: 0x0029D3EC File Offset: 0x0029B5EC
 	private object GetPhantomFirstMainProp(object data, Dictionary<int, string> currentSelectMap)
 	{
 		PhantomItemData phantomItemData = (PhantomItemData)data;
@@ -27,7 +27,7 @@ public class VisionDestroyFilter : CommonFilter
 		return PhantomBattleModel.Instance.GetSortRuleIdByPropIndex(propId, addType);
 	}
 
-	// Token: 0x0600B61D RID: 46621 RVA: 0x00292D14 File Offset: 0x00290F14
+	// Token: 0x06008A08 RID: 35336 RVA: 0x0029D44C File Offset: 0x0029B64C
 	private object GetPhantomCost(object data, Dictionary<int, string> currentSelectMap)
 	{
 		PhantomItemData phantomItemData = (PhantomItemData)data;
@@ -35,7 +35,7 @@ public class VisionDestroyFilter : CommonFilter
 		return (phantomDataBase != null) ? phantomDataBase.GetCost() : 0;
 	}
 
-	// Token: 0x0600B61E RID: 46622 RVA: 0x00292D4C File Offset: 0x00290F4C
+	// Token: 0x06008A09 RID: 35337 RVA: 0x0029D484 File Offset: 0x0029B684
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.Phantom, new TFilterConfig(this.GetPhantomItemId));
@@ -95,48 +95,31 @@ public class VisionDestroyFilter : CommonFilter
 		this.FilterMap.Add(FilterDefine.EFilterType.PhantomManageCost, new TFilterConfig(this.GetPhantomCost));
 	}
 
-	// Token: 0x0600B61F RID: 46623 RVA: 0x00292EF8 File Offset: 0x002910F8
-	private bool GetSelectOnState(object data)
-	{
-		PhantomItemData phantomItemData = (PhantomItemData)data;
-		HashSet<int> phantomManageSelectSet = InventoryModel.Instance.GetPhantomManageSelectSet();
-		return phantomManageSelectSet != null && phantomManageSelectSet.Contains(phantomItemData.GetUniqueId());
-	}
-
-	// Token: 0x0600B620 RID: 46624 RVA: 0x00292F27 File Offset: 0x00291127
-	public override TDefaultFilter[] DefaultFilterList()
-	{
-		return new TDefaultFilter[]
-		{
-			new TDefaultFilter(this.GetSelectOnState)
-		};
-	}
-
-	// Token: 0x02007E16 RID: 32278
+	// Token: 0x02006F9C RID: 28572
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04029451 RID: 169041
+		// Token: 0x0402477C RID: 149372
 		[Nullable(0)]
 		public static TFilterConfig <0>__GetPhantomRarity;
 
-		// Token: 0x04029452 RID: 169042
+		// Token: 0x0402477D RID: 149373
 		[Nullable(0)]
 		public static TFilterConfig <1>__GetPhantomCost;
 
-		// Token: 0x04029453 RID: 169043
+		// Token: 0x0402477E RID: 149374
 		[Nullable(0)]
 		public static TFilterConfig <2>__GetPhantomQuality;
 
-		// Token: 0x04029454 RID: 169044
+		// Token: 0x0402477F RID: 149375
 		[Nullable(0)]
 		public static TFilterConfig <3>__GetVisionDestroyFetterGroup;
 
-		// Token: 0x04029455 RID: 169045
+		// Token: 0x04024780 RID: 149376
 		[Nullable(0)]
 		public static TFilterConfig <4>__GetVisionDestroyAttribute;
 
-		// Token: 0x04029456 RID: 169046
+		// Token: 0x04024781 RID: 149377
 		[Nullable(0)]
 		public static TFilterConfig <5>__GetPhantomDeprecate;
 	}

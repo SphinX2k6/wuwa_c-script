@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x0200225F RID: 8799
+// Token: 0x02001743 RID: 5955
 public class MotorTechOverviewData : IMotorTechOverviewData
 {
-	// Token: 0x170015E7 RID: 5607
-	// (get) Token: 0x0601128A RID: 70282 RVA: 0x0042E3E7 File Offset: 0x0042C5E7
-	// (set) Token: 0x0601128B RID: 70283 RVA: 0x0042E3EF File Offset: 0x0042C5EF
+	// Token: 0x1700161E RID: 5662
+	// (get) Token: 0x0600E720 RID: 59168 RVA: 0x0043AF87 File Offset: 0x00439187
+	// (set) Token: 0x0600E721 RID: 59169 RVA: 0x0043AF8F File Offset: 0x0043918F
 	public int TechId { get; set; }
 
-	// Token: 0x170015E8 RID: 5608
-	// (get) Token: 0x0601128C RID: 70284 RVA: 0x0042E3F8 File Offset: 0x0042C5F8
-	// (set) Token: 0x0601128D RID: 70285 RVA: 0x0042E400 File Offset: 0x0042C600
+	// Token: 0x1700161F RID: 5663
+	// (get) Token: 0x0600E722 RID: 59170 RVA: 0x0043AF98 File Offset: 0x00439198
+	// (set) Token: 0x0600E723 RID: 59171 RVA: 0x0043AFA0 File Offset: 0x004391A0
 	public int Level { get; set; }
 }

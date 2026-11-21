@@ -4,32 +4,32 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200027A RID: 634
+	// Token: 0x020000D2 RID: 210
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/AkAudio.EAkMidiEventType")]
 	public enum EAkMidiEventType : byte
 	{
-		// Token: 0x04000D73 RID: 3443
+		// Token: 0x04000339 RID: 825
 		AkMidiEventTypeInvalid,
-		// Token: 0x04000D74 RID: 3444
+		// Token: 0x0400033A RID: 826
 		AkMidiEventTypeNoteOff = 128,
-		// Token: 0x04000D75 RID: 3445
+		// Token: 0x0400033B RID: 827
 		AkMidiEventTypeNoteOn = 144,
-		// Token: 0x04000D76 RID: 3446
+		// Token: 0x0400033C RID: 828
 		AkMidiEventTypeNoteAftertouch = 160,
-		// Token: 0x04000D77 RID: 3447
+		// Token: 0x0400033D RID: 829
 		AkMidiEventTypeController = 176,
-		// Token: 0x04000D78 RID: 3448
+		// Token: 0x0400033E RID: 830
 		AkMidiEventTypeProgramChange = 192,
-		// Token: 0x04000D79 RID: 3449
+		// Token: 0x0400033F RID: 831
 		AkMidiEventTypeChannelAftertouch = 208,
-		// Token: 0x04000D7A RID: 3450
+		// Token: 0x04000340 RID: 832
 		AkMidiEventTypePitchBend = 224,
-		// Token: 0x04000D7B RID: 3451
+		// Token: 0x04000341 RID: 833
 		AkMidiEventTypeSysex = 240,
-		// Token: 0x04000D7C RID: 3452
+		// Token: 0x04000342 RID: 834
 		AkMidiEventTypeEscape = 247,
-		// Token: 0x04000D7D RID: 3453
+		// Token: 0x04000343 RID: 835
 		AkMidiEventTypeMeta = 255
 	}
 }

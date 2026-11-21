@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200702F RID: 28719
+	// Token: 0x020077F8 RID: 30712
 	public class ISetNpcGroupPerformT
 	{
-		// Token: 0x1700D544 RID: 54596
-		// (get) Token: 0x06032CE6 RID: 208102 RVA: 0x006DA933 File Offset: 0x006D8B33
-		// (set) Token: 0x06032CE7 RID: 208103 RVA: 0x006DA93B File Offset: 0x006D8B3B
+		// Token: 0x1700E118 RID: 57624
+		// (get) Token: 0x06035F4D RID: 221005 RVA: 0x0073A5D3 File Offset: 0x007387D3
+		// (set) Token: 0x06035F4E RID: 221006 RVA: 0x0073A5DB File Offset: 0x007387DB
 		public string Key { get; set; }
 
-		// Token: 0x1700D545 RID: 54597
-		// (get) Token: 0x06032CE8 RID: 208104 RVA: 0x006DA944 File Offset: 0x006D8B44
-		// (set) Token: 0x06032CE9 RID: 208105 RVA: 0x006DA94C File Offset: 0x006D8B4C
+		// Token: 0x1700E119 RID: 57625
+		// (get) Token: 0x06035F4F RID: 221007 RVA: 0x0073A5E4 File Offset: 0x007387E4
+		// (set) Token: 0x06035F50 RID: 221008 RVA: 0x0073A5EC File Offset: 0x007387EC
 		public TSetNpcGroupPerformTypeUnion PerformType { get; set; }
 
-		// Token: 0x1700D546 RID: 54598
-		// (get) Token: 0x06032CEA RID: 208106 RVA: 0x006DA955 File Offset: 0x006D8B55
-		// (set) Token: 0x06032CEB RID: 208107 RVA: 0x006DA95D File Offset: 0x006D8B5D
+		// Token: 0x1700E11A RID: 57626
+		// (get) Token: 0x06035F51 RID: 221009 RVA: 0x0073A5F5 File Offset: 0x007387F5
+		// (set) Token: 0x06035F52 RID: 221010 RVA: 0x0073A5FD File Offset: 0x007387FD
 		public bool IsWaitActionFinish { get; set; }
 
-		// Token: 0x1700D547 RID: 54599
-		// (get) Token: 0x06032CEC RID: 208108 RVA: 0x006DA966 File Offset: 0x006D8B66
-		// (set) Token: 0x06032CED RID: 208109 RVA: 0x006DA96E File Offset: 0x006D8B6E
+		// Token: 0x1700E11B RID: 57627
+		// (get) Token: 0x06035F53 RID: 221011 RVA: 0x0073A606 File Offset: 0x00738806
+		// (set) Token: 0x06035F54 RID: 221012 RVA: 0x0073A60E File Offset: 0x0073880E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032CEE RID: 208110 RVA: 0x006DA977 File Offset: 0x006D8B77
+		// Token: 0x06035F55 RID: 221013 RVA: 0x0073A617 File Offset: 0x00738817
 		public ISetNpcGroupPerformT()
 		{
 			this.Key = null;

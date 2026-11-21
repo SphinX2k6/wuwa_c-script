@@ -10,25 +10,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 {
-	// Token: 0x02006AB5 RID: 27317
-	[NullableContext(2)]
+	// Token: 0x02005C12 RID: 23570
+	[NullableContext(1)]
 	[Nullable(0)]
-	public class ProjectorComponent : EntityComponent, IComponentDependency
+	public class ProjectorComponent : EntityComponent
 	{
-		// Token: 0x17009950 RID: 39248
-		// (get) Token: 0x06043DCD RID: 277965 RVA: 0x010A1A8B File Offset: 0x0109FC8B
-		[Nullable(new byte[]
+		// Token: 0x17006E3E RID: 28222
+		// (get) Token: 0x06039E24 RID: 237092 RVA: 0x010461AB File Offset: 0x010443AB
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -39,18 +29,20 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x17009951 RID: 39249
-		// (get) Token: 0x06043DCE RID: 277966 RVA: 0x010A1AAD File Offset: 0x0109FCAD
+		// Token: 0x17006E3F RID: 28223
+		// (get) Token: 0x06039E25 RID: 237093 RVA: 0x010461CD File Offset: 0x010443CD
+		[Nullable(2)]
 		public ProjectorComponent ProjectorConfig
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Config;
 			}
 		}
 
-		// Token: 0x17009952 RID: 39250
-		// (get) Token: 0x06043DCF RID: 277967 RVA: 0x010A1AB5 File Offset: 0x0109FCB5
+		// Token: 0x17006E40 RID: 28224
+		// (get) Token: 0x06039E26 RID: 237094 RVA: 0x010461D5 File Offset: 0x010443D5
 		public ProjectorPattern? Pattern
 		{
 			get
@@ -59,32 +51,28 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x17009953 RID: 39251
-		// (get) Token: 0x06043DD0 RID: 277968 RVA: 0x010A1ABD File Offset: 0x0109FCBD
-		[Nullable(1)]
+		// Token: 0x17006E41 RID: 28225
+		// (get) Token: 0x06039E27 RID: 237095 RVA: 0x010461DD File Offset: 0x010443DD
 		public string MeshPath
 		{
-			[NullableContext(1)]
 			get
 			{
 				return this.MeshPathInternal;
 			}
 		}
 
-		// Token: 0x17009954 RID: 39252
-		// (get) Token: 0x06043DD1 RID: 277969 RVA: 0x010A1AC5 File Offset: 0x0109FCC5
-		[Nullable(1)]
+		// Token: 0x17006E42 RID: 28226
+		// (get) Token: 0x06039E28 RID: 237096 RVA: 0x010461E5 File Offset: 0x010443E5
 		public string BackgroundDecalPath
 		{
-			[NullableContext(1)]
 			get
 			{
 				return this.BackgroundDecalPathInternal;
 			}
 		}
 
-		// Token: 0x17009955 RID: 39253
-		// (get) Token: 0x06043DD2 RID: 277970 RVA: 0x010A1ACD File Offset: 0x0109FCCD
+		// Token: 0x17006E43 RID: 28227
+		// (get) Token: 0x06039E29 RID: 237097 RVA: 0x010461ED File Offset: 0x010443ED
 		public int BackgroundEntityId
 		{
 			get
@@ -93,40 +81,42 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x17009956 RID: 39254
-		// (get) Token: 0x06043DD3 RID: 277971 RVA: 0x010A1AD5 File Offset: 0x0109FCD5
-		[Nullable(1)]
+		// Token: 0x17006E44 RID: 28228
+		// (get) Token: 0x06039E2A RID: 237098 RVA: 0x010461F5 File Offset: 0x010443F5
 		public Rotator[] TargetRotators
 		{
-			[NullableContext(1)]
 			get
 			{
 				return this.TargetRotatorsInternal;
 			}
 		}
 
-		// Token: 0x17009957 RID: 39255
-		// (get) Token: 0x06043DD4 RID: 277972 RVA: 0x010A1ADD File Offset: 0x0109FCDD
+		// Token: 0x17006E45 RID: 28229
+		// (get) Token: 0x06039E2B RID: 237099 RVA: 0x010461FD File Offset: 0x010443FD
+		[Nullable(2)]
 		public AActor AttachActor
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.AttachActorInternal;
 			}
 		}
 
-		// Token: 0x17009958 RID: 39256
-		// (get) Token: 0x06043DD5 RID: 277973 RVA: 0x010A1AE5 File Offset: 0x0109FCE5
+		// Token: 0x17006E46 RID: 28230
+		// (get) Token: 0x06039E2C RID: 237100 RVA: 0x01046205 File Offset: 0x01044405
+		[Nullable(2)]
 		public AStaticMeshActor ProjectedActor
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.ProjectedActorInternal;
 			}
 		}
 
-		// Token: 0x17009959 RID: 39257
-		// (get) Token: 0x06043DD6 RID: 277974 RVA: 0x010A1AED File Offset: 0x0109FCED
+		// Token: 0x17006E47 RID: 28231
+		// (get) Token: 0x06039E2D RID: 237101 RVA: 0x0104620D File Offset: 0x0104440D
 		public bool IsMeshReady
 		{
 			get
@@ -135,7 +125,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}
 		}
 
-		// Token: 0x06043DD7 RID: 277975 RVA: 0x010A1AF5 File Offset: 0x0109FCF5
+		// Token: 0x06039E2E RID: 237102 RVA: 0x01046215 File Offset: 0x01044415
 		[NullableContext(0)]
 		public UniTask<bool> WaitForMeshReady()
 		{
@@ -150,7 +140,8 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return this.MeshReadyPromise.Promise;
 		}
 
-		// Token: 0x06043DD8 RID: 277976 RVA: 0x010A1B24 File Offset: 0x0109FD24
+		// Token: 0x06039E2F RID: 237103 RVA: 0x01046244 File Offset: 0x01044444
+		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			object param = args.GetP1<CreateEntityData>().GetParam<ProjectorComponent>();
@@ -187,7 +178,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043DD9 RID: 277977 RVA: 0x010A1C70 File Offset: 0x0109FE70
+		// Token: 0x06039E30 RID: 237104 RVA: 0x01046390 File Offset: 0x01044590
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -224,7 +215,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043DDA RID: 277978 RVA: 0x010A1D58 File Offset: 0x0109FF58
+		// Token: 0x06039E31 RID: 237105 RVA: 0x01046478 File Offset: 0x01044678
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.HasWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnSceneInteractionLoadCompleted)))
@@ -236,7 +227,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043DDB RID: 277979 RVA: 0x010A1DC0 File Offset: 0x0109FFC0
+		// Token: 0x06039E32 RID: 237106 RVA: 0x010464E0 File Offset: 0x010446E0
 		protected override bool OnClear()
 		{
 			this.ReleaseProjectedActor("[ProjectorComponent] Clear");
@@ -255,7 +246,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			return true;
 		}
 
-		// Token: 0x06043DDC RID: 277980 RVA: 0x010A1E40 File Offset: 0x010A0040
+		// Token: 0x06039E33 RID: 237107 RVA: 0x01046560 File Offset: 0x01044760
 		private void BuildTargetRotators([Nullable(new byte[]
 		{
 			2,
@@ -277,7 +268,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.TargetRotatorsInternal = list.ToArray();
 		}
 
-		// Token: 0x06043DDD RID: 277981 RVA: 0x010A1EF4 File Offset: 0x010A00F4
+		// Token: 0x06039E34 RID: 237108 RVA: 0x01046614 File Offset: 0x01044814
 		private void OnSceneInteractionLoadCompleted()
 		{
 			ProjectorComponent.<>c__DisplayClass39_0 CS$<>8__locals1 = new ProjectorComponent.<>c__DisplayClass39_0();
@@ -368,8 +359,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06043DDE RID: 277982 RVA: 0x010A2099 File Offset: 0x010A0299
-		[NullableContext(1)]
+		// Token: 0x06039E35 RID: 237109 RVA: 0x010467B9 File Offset: 0x010449B9
 		private void ReleaseProjectedActor(string reason)
 		{
 			if (this.ProjectedActorInternal != null && this.ProjectedActorInternal.IsValid())
@@ -380,7 +370,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.MeshReady = false;
 		}
 
-		// Token: 0x06043DDF RID: 277983 RVA: 0x010A20D1 File Offset: 0x010A02D1
+		// Token: 0x06039E36 RID: 237110 RVA: 0x010467F1 File Offset: 0x010449F1
 		private void ResolveMeshReady(bool result)
 		{
 			if (this.MeshReadyPromise == null || this.MeshReadyPromise.IsFulfilled)
@@ -390,8 +380,7 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 			this.MeshReadyPromise.SetResult(result);
 		}
 
-		// Token: 0x06043DE0 RID: 277984 RVA: 0x010A20F8 File Offset: 0x010A02F8
-		[NullableContext(1)]
+		// Token: 0x06039E37 RID: 237111 RVA: 0x01046818 File Offset: 0x01044A18
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -399,147 +388,143 @@ namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 				return false;
 			}
 			ProjectorComponent projectorComponent = (ProjectorComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (projectorComponent.CreatureDataComp == null)
 			{
-				if (projectorComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (projectorComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (projectorComponent.ActorComp == null)
 			{
-				if (projectorComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ProjectorComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PatternConfig"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.PatternConfig = projectorComponent.PatternConfig;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MeshPathInternal"))
+			if (projectorComponent.Config == null)
 			{
-				this.MeshPathInternal = projectorComponent.MeshPathInternal;
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("BackgroundDecalPathInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.BackgroundDecalPathInternal = projectorComponent.BackgroundDecalPathInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("BackgroundEntityIdInternal"))
+			this.PatternConfig = projectorComponent.PatternConfig;
+			this.MeshPathInternal = projectorComponent.MeshPathInternal;
+			this.BackgroundDecalPathInternal = projectorComponent.BackgroundDecalPathInternal;
+			this.BackgroundEntityIdInternal = projectorComponent.BackgroundEntityIdInternal;
+			if (projectorComponent.TargetRotatorsInternal == null)
 			{
-				this.BackgroundEntityIdInternal = projectorComponent.BackgroundEntityIdInternal;
+				this.TargetRotatorsInternal = null;
 			}
-			if (base.CanResetComponentProperty("TargetRotatorsInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetRotatorsInternal), "TargetRotatorsInternal"))
 			{
-				if (projectorComponent.TargetRotatorsInternal == null)
-				{
-					this.TargetRotatorsInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator[]>(this.TargetRotatorsInternal), "TargetRotatorsInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AttachActorInternal"))
+			if (projectorComponent.AttachActorInternal == null)
 			{
-				if (projectorComponent.AttachActorInternal == null)
-				{
-					this.AttachActorInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.AttachActorInternal), "AttachActorInternal"))
-				{
-					return false;
-				}
+				this.AttachActorInternal = null;
 			}
-			if (base.CanResetComponentProperty("ProjectedActorInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttachActorInternal), "AttachActorInternal"))
 			{
-				if (projectorComponent.ProjectedActorInternal == null)
-				{
-					this.ProjectedActorInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AStaticMeshActor>(this.ProjectedActorInternal), "ProjectedActorInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MeshReadyPromise"))
+			if (projectorComponent.ProjectedActorInternal == null)
 			{
-				if (projectorComponent.MeshReadyPromise == null)
-				{
-					this.MeshReadyPromise = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise<bool>>(this.MeshReadyPromise), "MeshReadyPromise"))
-				{
-					return false;
-				}
+				this.ProjectedActorInternal = null;
 			}
-			if (base.CanResetComponentProperty("MeshReady"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProjectedActorInternal), "ProjectedActorInternal"))
 			{
-				this.MeshReady = projectorComponent.MeshReady;
+				return false;
 			}
+			if (projectorComponent.MeshReadyPromise == null)
+			{
+				this.MeshReadyPromise = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshReadyPromise), "MeshReadyPromise"))
+			{
+				return false;
+			}
+			this.MeshReady = projectorComponent.MeshReady;
 			return true;
 		}
 
-		// Token: 0x04023773 RID: 145267
-		[Nullable(1)]
+		// Token: 0x17006E48 RID: 28232
+		// (get) Token: 0x06039E38 RID: 237112 RVA: 0x010469A1 File Offset: 0x01044BA1
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E49 RID: 28233
+		// (get) Token: 0x06039E39 RID: 237113 RVA: 0x010469A4 File Offset: 0x01044BA4
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E4A RID: 28234
+		// (get) Token: 0x06039E3A RID: 237114 RVA: 0x010469A7 File Offset: 0x01044BA7
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E965 RID: 125285
 		private const string PROJECTED_OBJECT_KEY = "ProjectedObject";
 
-		// Token: 0x04023774 RID: 145268
+		// Token: 0x0401E966 RID: 125286
+		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04023775 RID: 145269
+		// Token: 0x0401E967 RID: 125287
+		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04023776 RID: 145270
+		// Token: 0x0401E968 RID: 125288
+		[Nullable(2)]
 		private ProjectorComponent Config;
 
-		// Token: 0x04023777 RID: 145271
+		// Token: 0x0401E969 RID: 125289
 		private ProjectorPattern? PatternConfig;
 
-		// Token: 0x04023778 RID: 145272
-		[Nullable(1)]
+		// Token: 0x0401E96A RID: 125290
 		private string MeshPathInternal = "";
 
-		// Token: 0x04023779 RID: 145273
-		[Nullable(1)]
+		// Token: 0x0401E96B RID: 125291
 		private string BackgroundDecalPathInternal = "";
 
-		// Token: 0x0402377A RID: 145274
+		// Token: 0x0401E96C RID: 125292
 		private int BackgroundEntityIdInternal;
 
-		// Token: 0x0402377B RID: 145275
-		[Nullable(1)]
+		// Token: 0x0401E96D RID: 125293
 		private Rotator[] TargetRotatorsInternal = Array.Empty<Rotator>();
 
-		// Token: 0x0402377C RID: 145276
+		// Token: 0x0401E96E RID: 125294
+		[Nullable(2)]
 		private AActor AttachActorInternal;
 
-		// Token: 0x0402377D RID: 145277
+		// Token: 0x0401E96F RID: 125295
+		[Nullable(2)]
 		private AStaticMeshActor ProjectedActorInternal;
 
-		// Token: 0x0402377E RID: 145278
+		// Token: 0x0401E970 RID: 125296
+		[Nullable(2)]
 		private CustomPromise<bool> MeshReadyPromise;
 
-		// Token: 0x0402377F RID: 145279
+		// Token: 0x0401E971 RID: 125297
 		private bool MeshReady;
 	}
 }

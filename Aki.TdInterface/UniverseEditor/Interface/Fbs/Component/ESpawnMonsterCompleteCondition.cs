@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E17 RID: 19991
+	// Token: 0x02005326 RID: 21286
 	public enum ESpawnMonsterCompleteCondition : byte
 	{
-		// Token: 0x0400DB35 RID: 56117
+		// Token: 0x0400E6A6 RID: 59046
 		AllKill,
-		// Token: 0x0400DB36 RID: 56118
+		// Token: 0x0400E6A7 RID: 59047
 		Duration,
-		// Token: 0x0400DB37 RID: 56119
+		// Token: 0x0400E6A8 RID: 59048
 		QuantityRefill
 	}
 }

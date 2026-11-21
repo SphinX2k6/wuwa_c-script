@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Context
 {
-	// Token: 0x02004F47 RID: 20295
+	// Token: 0x02003F10 RID: 16144
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QtaCzBgBar
 	{
-		// Token: 0x060340A4 RID: 213156 RVA: 0x00C345FC File Offset: 0x00C327FC
+		// Token: 0x06028F12 RID: 167698 RVA: 0x00B7DD9C File Offset: 0x00B7BF9C
 		public void InitByConfig(SQtaCustomizationParam_BgBar cfg)
 		{
 			this.CzProgress.InitByConfig(cfg.Progress, EQtaCustomization_ProgressResetType.停止);
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Context
 			this.Angle = cfg.Angle;
 		}
 
-		// Token: 0x0401BA3E RID: 113214
+		// Token: 0x04016413 RID: 91155
 		public QtaCzProgress CzProgress = new QtaCzProgress();
 
-		// Token: 0x0401BA3F RID: 113215
+		// Token: 0x04016414 RID: 91156
 		public FLinearColor? Anchor;
 
-		// Token: 0x0401BA40 RID: 113216
+		// Token: 0x04016415 RID: 91157
 		public float Angle;
 	}
 }

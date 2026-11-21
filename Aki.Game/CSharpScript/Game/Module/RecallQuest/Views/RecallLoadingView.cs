@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RecallQuest.Views
 {
-	// Token: 0x02004F1C RID: 20252
+	// Token: 0x02003EE5 RID: 16101
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RecallLoadingView : LoadingViewBase
 	{
-		// Token: 0x06033EDD RID: 212701 RVA: 0x00C2BEE5 File Offset: 0x00C2A0E5
+		// Token: 0x06028D48 RID: 167240 RVA: 0x00B75559 File Offset: 0x00B73759
 		public RecallLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033EDE RID: 212702 RVA: 0x00C2BEF0 File Offset: 0x00C2A0F0
+		// Token: 0x06028D49 RID: 167241 RVA: 0x00B75564 File Offset: 0x00B73764
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033EDF RID: 212703 RVA: 0x00C2C020 File Offset: 0x00C2A220
+		// Token: 0x06028D4A RID: 167242 RVA: 0x00B75694 File Offset: 0x00B73894
 		protected override void OnStart()
 		{
 			int loadingId = RecallQuestModel.Instance.GetLoadingId();
@@ -59,20 +59,20 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			rootItem.SetAlpha(1f);
 		}
 
-		// Token: 0x06033EE0 RID: 212704 RVA: 0x00C2C075 File Offset: 0x00C2A275
+		// Token: 0x06028D4B RID: 167243 RVA: 0x00B756E9 File Offset: 0x00B738E9
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
 		}
 
-		// Token: 0x06033EE1 RID: 212705 RVA: 0x00C2C07D File Offset: 0x00C2A27D
+		// Token: 0x06028D4C RID: 167244 RVA: 0x00B756F1 File Offset: 0x00B738F1
 		protected override void UpdateShowTipsUi(string title, string tips)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), tips, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), title, Array.Empty<object>());
 		}
 
-		// Token: 0x06033EE2 RID: 212706 RVA: 0x00C2C0B0 File Offset: 0x00C2A2B0
+		// Token: 0x06028D4D RID: 167245 RVA: 0x00B75724 File Offset: 0x00B73924
 		protected override void UpdateProgressRate(float rate)
 		{
 			base.SetTextureProgressRate(0, rate);
@@ -85,47 +85,47 @@ namespace CSharpScript.Game.Module.RecallQuest.Views
 			item.SetAnchorOffsetX(anchorOffsetX);
 		}
 
-		// Token: 0x06033EE3 RID: 212707 RVA: 0x00C2C0E0 File Offset: 0x00C2A2E0
+		// Token: 0x06028D4E RID: 167246 RVA: 0x00B75754 File Offset: 0x00B73954
 		protected override void UpdateProgressValue(float value)
 		{
 			this.SetTextProgressValue(4, value, "");
 		}
 
-		// Token: 0x06033EE4 RID: 212708 RVA: 0x00C2C0EF File Offset: 0x00C2A2EF
+		// Token: 0x06028D4F RID: 167247 RVA: 0x00B75763 File Offset: 0x00B73963
 		protected override void UpdateBgUi(string path)
 		{
 			base.SetTextureByPath(path, base.GetTexture(3), new EUiViewName?(this.ViewInfo.Name), null);
 		}
 
-		// Token: 0x0401B982 RID: 113026
+		// Token: 0x04016355 RID: 90965
 		private float FillWidth;
 
-		// Token: 0x0200B064 RID: 45156
+		// Token: 0x02009A94 RID: 39572
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04035887 RID: 219271
+			// Token: 0x040302B2 RID: 197298
 			public const int Progress = 0;
 
-			// Token: 0x04035888 RID: 219272
+			// Token: 0x040302B3 RID: 197299
 			public const int Tips = 1;
 
-			// Token: 0x04035889 RID: 219273
+			// Token: 0x040302B4 RID: 197300
 			public const int Title = 2;
 
-			// Token: 0x0403588A RID: 219274
+			// Token: 0x040302B5 RID: 197301
 			public const int BgTexture = 3;
 
-			// Token: 0x0403588B RID: 219275
+			// Token: 0x040302B6 RID: 197302
 			public const int ProgressText = 4;
 
-			// Token: 0x0403588C RID: 219276
+			// Token: 0x040302B7 RID: 197303
 			public const int MoveHandle = 5;
 
-			// Token: 0x0403588D RID: 219277
+			// Token: 0x040302B8 RID: 197304
 			public const int MoveHandleFollowTarget = 6;
 
-			// Token: 0x0403588E RID: 219278
+			// Token: 0x040302B9 RID: 197305
 			public const int ReviewDesc = 7;
 		}
 	}

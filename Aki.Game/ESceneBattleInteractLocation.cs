@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002942 RID: 10562
+// Token: 0x02001EBD RID: 7869
 public enum ESceneBattleInteractLocation
 {
-	// Token: 0x0400A265 RID: 41573
+	// Token: 0x0400A64F RID: 42575
 	Default,
-	// Token: 0x0400A266 RID: 41574
+	// Token: 0x0400A650 RID: 42576
 	Actor,
-	// Token: 0x0400A267 RID: 41575
+	// Token: 0x0400A651 RID: 42577
 	Socket
 }

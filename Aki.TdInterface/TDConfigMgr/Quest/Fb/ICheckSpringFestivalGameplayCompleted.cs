@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001415 RID: 5141
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200156C RID: 5484
 	public class ICheckSpringFestivalGameplayCompleted : IQuestCondition
 	{
-		// Token: 0x060074D8 RID: 29912 RVA: 0x00117446 File Offset: 0x00115646
+		// Token: 0x06007B99 RID: 31641 RVA: 0x00125E2A File Offset: 0x0012402A
 		public static ICheckSpringFestivalGameplayCompleted Create(ICheckSpringFestivalGameplayCompleted? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002681 RID: 9857
-		// (get) Token: 0x060074D9 RID: 29913 RVA: 0x00117465 File Offset: 0x00115665
+		// Token: 0x17002863 RID: 10339
+		// (get) Token: 0x06007B9A RID: 31642 RVA: 0x00125E49 File Offset: 0x00124049
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002682 RID: 9858
-		// (get) Token: 0x060074DA RID: 29914 RVA: 0x00117472 File Offset: 0x00115672
+		// Token: 0x17002864 RID: 10340
+		// (get) Token: 0x06007B9B RID: 31643 RVA: 0x00125E56 File Offset: 0x00124056
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002683 RID: 9859
-		// (get) Token: 0x060074DB RID: 29915 RVA: 0x001174A6 File Offset: 0x001156A6
+		// Token: 0x17002865 RID: 10341
+		// (get) Token: 0x06007B9C RID: 31644 RVA: 0x00125E8A File Offset: 0x0012408A
 		public virtual ICheckSpringFestivalGameplayType GameplayType
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043A3 RID: 17315
+		// Token: 0x04004734 RID: 18228
 		private ICheckSpringFestivalGameplayCompleted Instance;
 
-		// Token: 0x040043A4 RID: 17316
+		// Token: 0x04004735 RID: 18229
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040043A5 RID: 17317
+		// Token: 0x04004736 RID: 18230
 		private bool _PreConditionsInited;
 
-		// Token: 0x040043A6 RID: 17318
+		// Token: 0x04004737 RID: 18231
 		private ICheckSpringFestivalGameplayType _GameplayTypeCache;
 
-		// Token: 0x040043A7 RID: 17319
+		// Token: 0x04004738 RID: 18232
 		private bool _GameplayTypeInited;
 	}
 }

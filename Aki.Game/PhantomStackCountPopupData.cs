@@ -1,35 +1,35 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001FE4 RID: 8164
+// Token: 0x020014B7 RID: 5303
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomStackCountPopupData
 {
-	// Token: 0x0400765F RID: 30303
+	// Token: 0x04007748 RID: 30536
 	[Nullable(1)]
 	public string FrameTitleText = "";
 
-	// Token: 0x04007660 RID: 30304
+	// Token: 0x04007749 RID: 30537
 	[Nullable(1)]
 	public string TitleText = "";
 
-	// Token: 0x04007661 RID: 30305
+	// Token: 0x0400774A RID: 30538
 	public int IncId;
 
-	// Token: 0x04007662 RID: 30306
+	// Token: 0x0400774B RID: 30539
 	public int MaxCount = 1;
 
-	// Token: 0x04007663 RID: 30307
+	// Token: 0x0400774C RID: 30540
 	public int MinCount = 1;
 
-	// Token: 0x04007664 RID: 30308
+	// Token: 0x0400774D RID: 30541
 	public int InitCount = 1;
 
-	// Token: 0x04007665 RID: 30309
+	// Token: 0x0400774E RID: 30542
 	public string TipsText;
 
-	// Token: 0x04007666 RID: 30310
+	// Token: 0x0400774F RID: 30543
 	[Nullable(new byte[]
 	{
 		2,
@@ -37,15 +37,15 @@ public class PhantomStackCountPopupData
 	})]
 	public Func<int, TableTextArgNew> GetCountText;
 
-	// Token: 0x04007667 RID: 30311
+	// Token: 0x04007750 RID: 30544
 	public string ConfirmText;
 
-	// Token: 0x04007668 RID: 30312
+	// Token: 0x04007751 RID: 30545
 	public string CancelText;
 
-	// Token: 0x04007669 RID: 30313
+	// Token: 0x04007752 RID: 30546
 	public Action<int> OnConfirm;
 
-	// Token: 0x0400766A RID: 30314
+	// Token: 0x04007753 RID: 30547
 	public Action OnCancel;
 }

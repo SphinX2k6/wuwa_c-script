@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044B9 RID: 17593
+	// Token: 0x02004921 RID: 18721
 	public class IFindSunSpiritGridConfigT
 	{
-		// Token: 0x17007C27 RID: 31783
-		// (get) Token: 0x0601A48E RID: 107662 RVA: 0x003C11EB File Offset: 0x003BF3EB
-		// (set) Token: 0x0601A48F RID: 107663 RVA: 0x003C11F3 File Offset: 0x003BF3F3
+		// Token: 0x17008266 RID: 33382
+		// (get) Token: 0x0601BC5F RID: 113759 RVA: 0x003ED3F7 File Offset: 0x003EB5F7
+		// (set) Token: 0x0601BC60 RID: 113760 RVA: 0x003ED3FF File Offset: 0x003EB5FF
 		public List<TFindSunSpiritGridUnion> Grids { get; set; }
 
-		// Token: 0x17007C28 RID: 31784
-		// (get) Token: 0x0601A490 RID: 107664 RVA: 0x003C11FC File Offset: 0x003BF3FC
-		// (set) Token: 0x0601A491 RID: 107665 RVA: 0x003C1204 File Offset: 0x003BF404
+		// Token: 0x17008267 RID: 33383
+		// (get) Token: 0x0601BC61 RID: 113761 RVA: 0x003ED408 File Offset: 0x003EB608
+		// (set) Token: 0x0601BC62 RID: 113762 RVA: 0x003ED410 File Offset: 0x003EB610
 		public IVector2T BoardSize { get; set; }
 
-		// Token: 0x0601A492 RID: 107666 RVA: 0x003C120D File Offset: 0x003BF40D
+		// Token: 0x0601BC63 RID: 113763 RVA: 0x003ED419 File Offset: 0x003EB619
 		public IFindSunSpiritGridConfigT()
 		{
 			this.Grids = null;

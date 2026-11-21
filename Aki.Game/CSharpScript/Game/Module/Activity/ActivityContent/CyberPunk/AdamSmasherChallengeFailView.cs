@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x0200689B RID: 26779
+	// Token: 0x020057EB RID: 22507
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AdamSmasherChallengeFailView : UiViewBase
 	{
-		// Token: 0x06042D4D RID: 273741 RVA: 0x01044CCE File Offset: 0x01042ECE
+		// Token: 0x060378A5 RID: 227493 RVA: 0x00F86246 File Offset: 0x00F84446
 		[NullableContext(1)]
 		public AdamSmasherChallengeFailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042D4E RID: 273742 RVA: 0x01044CD8 File Offset: 0x01042ED8
+		// Token: 0x060378A6 RID: 227494 RVA: 0x00F86250 File Offset: 0x00F84450
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			};
 		}
 
-		// Token: 0x06042D4F RID: 273743 RVA: 0x01044E14 File Offset: 0x01043014
+		// Token: 0x060378A7 RID: 227495 RVA: 0x00F8638C File Offset: 0x00F8458C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AdamSmasherChallengeFailView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -53,75 +53,75 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042D50 RID: 273744 RVA: 0x01044E57 File Offset: 0x01043057
+		// Token: 0x060378A8 RID: 227496 RVA: 0x00F863CF File Offset: 0x00F845CF
 		protected override void OnStart()
 		{
 			this.TrainingViewInstance = new TrainingView();
 			this.TrainingViewInstance.Show(base.GetHorizontalLayout(7), null);
 		}
 
-		// Token: 0x06042D51 RID: 273745 RVA: 0x01044E77 File Offset: 0x01043077
+		// Token: 0x060378A9 RID: 227497 RVA: 0x00F863EF File Offset: 0x00F845EF
 		private void OnReturnToChallengeButtonClick(int a)
 		{
 			AdamSmasherController.Instance.OpenAdamSmasherSelectView().Forget<bool>();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042D52 RID: 273746 RVA: 0x01044E8F File Offset: 0x0104308F
+		// Token: 0x060378AA RID: 227498 RVA: 0x00F86407 File Offset: 0x00F84607
 		private void OnReChallengeButtonItemClick(int a)
 		{
 			AdamSmasherController.Instance.ReChallenge(this.StageId).Forget<bool>();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06042D53 RID: 273747 RVA: 0x01044EAD File Offset: 0x010430AD
+		// Token: 0x060378AB RID: 227499 RVA: 0x00F86425 File Offset: 0x00F84625
 		private void OnLeaveDungeonClick(int a)
 		{
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeon().Forget<bool>();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04022C6B RID: 142443
+		// Token: 0x0401D4C7 RID: 120007
 		private int StageId;
 
-		// Token: 0x04022C6C RID: 142444
+		// Token: 0x0401D4C8 RID: 120008
 		private TrainingView TrainingViewInstance;
 
-		// Token: 0x04022C6D RID: 142445
+		// Token: 0x0401D4C9 RID: 120009
 		private ButtonItem ReturnToChallenge;
 
-		// Token: 0x04022C6E RID: 142446
+		// Token: 0x0401D4CA RID: 120010
 		private ButtonItem ReChallengeButtonItem;
 
-		// Token: 0x0200CA65 RID: 51813
+		// Token: 0x0200B42F RID: 46127
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D2D9 RID: 250585
+			// Token: 0x04037BB8 RID: 228280
 			Revive,
-			// Token: 0x0403D2DA RID: 250586
+			// Token: 0x04037BB9 RID: 228281
 			Fail,
-			// Token: 0x0403D2DB RID: 250587
+			// Token: 0x04037BBA RID: 228282
 			ReturnToChallenge,
-			// Token: 0x0403D2DC RID: 250588
+			// Token: 0x04037BBB RID: 228283
 			ReChallengeButtonItem,
-			// Token: 0x0403D2DD RID: 250589
+			// Token: 0x04037BBC RID: 228284
 			WaitTime,
-			// Token: 0x0403D2DE RID: 250590
+			// Token: 0x04037BBD RID: 228285
 			ReviveTitle,
-			// Token: 0x0403D2DF RID: 250591
+			// Token: 0x04037BBE RID: 228286
 			ReviveContent,
-			// Token: 0x0403D2E0 RID: 250592
+			// Token: 0x04037BBF RID: 228287
 			RoleTrainingLayout,
-			// Token: 0x0403D2E1 RID: 250593
+			// Token: 0x04037BC0 RID: 228288
 			ReviveAtLocationBtn,
-			// Token: 0x0403D2E2 RID: 250594
+			// Token: 0x04037BC1 RID: 228289
 			AutoReviveCountDownText,
-			// Token: 0x0403D2E3 RID: 250595
+			// Token: 0x04037BC2 RID: 228290
 			ItemTexture,
-			// Token: 0x0403D2E4 RID: 250596
+			// Token: 0x04037BC3 RID: 228291
 			ItemText,
-			// Token: 0x0403D2E5 RID: 250597
+			// Token: 0x04037BC4 RID: 228292
 			GiveUpBtnText
 		}
 	}

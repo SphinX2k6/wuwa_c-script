@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E79 RID: 24185
+	// Token: 0x02004E5E RID: 20062
 	public static class AutoPilotDefine_EAutoPilotResourceIdExtensions
 	{
-		// Token: 0x0603D866 RID: 252006 RVA: 0x00ED924C File Offset: 0x00ED744C
+		// Token: 0x060327F6 RID: 206838 RVA: 0x00E2A7D8 File Offset: 0x00E289D8
 		public static string ToEnumString(this AutoPilotDefine.EAutoPilotResourceId value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return result;
 		}
 
-		// Token: 0x0603D867 RID: 252007 RVA: 0x00ED92B8 File Offset: 0x00ED74B8
+		// Token: 0x060327F7 RID: 206839 RVA: 0x00E2A844 File Offset: 0x00E28A44
 		public static AutoPilotDefine.EAutoPilotResourceId FromString(string name)
 		{
 			AutoPilotDefine.EAutoPilotResourceId result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return result;
 		}
 
-		// Token: 0x0603D868 RID: 252008 RVA: 0x00ED92E4 File Offset: 0x00ED74E4
+		// Token: 0x060327F8 RID: 206840 RVA: 0x00E2A870 File Offset: 0x00E28A70
 		public static bool TryFromString(string name, out AutoPilotDefine.EAutoPilotResourceId value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return true;
 		}
 
-		// Token: 0x0603D869 RID: 252009 RVA: 0x00ED9370 File Offset: 0x00ED7570
+		// Token: 0x060327F9 RID: 206841 RVA: 0x00E2A8FC File Offset: 0x00E28AFC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			};
 		}
 
-		// Token: 0x0603D86A RID: 252010 RVA: 0x00ED93A8 File Offset: 0x00ED75A8
+		// Token: 0x060327FA RID: 206842 RVA: 0x00E2A934 File Offset: 0x00E28B34
 		public static AutoPilotDefine.EAutoPilotResourceId[] GetValues()
 		{
 			return new AutoPilotDefine.EAutoPilotResourceId[]
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			};
 		}
 
-		// Token: 0x0603D86B RID: 252011 RVA: 0x00ED93BB File Offset: 0x00ED75BB
+		// Token: 0x060327FB RID: 206843 RVA: 0x00E2A947 File Offset: 0x00E28B47
 		public static string[] GetNames()
 		{
 			return new string[]

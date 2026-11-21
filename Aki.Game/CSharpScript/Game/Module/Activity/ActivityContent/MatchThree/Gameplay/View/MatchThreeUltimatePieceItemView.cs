@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E9 RID: 25833
+	// Token: 0x02005467 RID: 21607
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeUltimatePieceItemView : MatchThreePieceItemView
 	{
-		// Token: 0x06040D8F RID: 265615 RVA: 0x00FB5689 File Offset: 0x00FB3889
+		// Token: 0x06035A53 RID: 219731 RVA: 0x00EFC6B9 File Offset: 0x00EFA8B9
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			rootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnSequencePlayEvent));
 		}
 
-		// Token: 0x06040D90 RID: 265616 RVA: 0x00FB56B4 File Offset: 0x00FB38B4
+		// Token: 0x06035A54 RID: 219732 RVA: 0x00EFC6E4 File Offset: 0x00EFA8E4
 		public UniTask PlayFullAsync(Action onFullUp)
 		{
 			MatchThreeUltimatePieceItemView.<PlayFullAsync>d__3 <PlayFullAsync>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return <PlayFullAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040D91 RID: 265617 RVA: 0x00FB56FF File Offset: 0x00FB38FF
+		// Token: 0x06035A55 RID: 219733 RVA: 0x00EFC72F File Offset: 0x00EFA92F
 		private void OnSequencePlayEvent(string sequenceName, string eventName)
 		{
 			if (sequenceName != "Full" || eventName != "Up" || this.FullUpReceived)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.ReleaseFullUpCallback();
 		}
 
-		// Token: 0x06040D92 RID: 265618 RVA: 0x00FB5731 File Offset: 0x00FB3931
+		// Token: 0x06035A56 RID: 219734 RVA: 0x00EFC761 File Offset: 0x00EFA961
 		private void ReleaseFullUpCallback()
 		{
 			Action fullUpCallback = this.FullUpCallback;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			fullUpCallback();
 		}
 
-		// Token: 0x06040D93 RID: 265619 RVA: 0x00FB574A File Offset: 0x00FB394A
+		// Token: 0x06035A57 RID: 219735 RVA: 0x00EFC77A File Offset: 0x00EFA97A
 		protected override void OnBeforeDestroy()
 		{
 			this.ReleaseFullUpCallback();
@@ -70,11 +70,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x04021C90 RID: 138384
+		// Token: 0x0401C5C1 RID: 116161
 		[Nullable(2)]
 		private Action FullUpCallback;
 
-		// Token: 0x04021C91 RID: 138385
+		// Token: 0x0401C5C2 RID: 116162
 		private bool FullUpReceived;
 	}
 }

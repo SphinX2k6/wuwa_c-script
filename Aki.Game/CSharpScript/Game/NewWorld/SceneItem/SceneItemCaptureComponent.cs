@@ -22,12 +22,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007172 RID: 29042
+	// Token: 0x02006226 RID: 25126
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemCaptureComponent : EntityComponent
 	{
-		// Token: 0x06046E9D RID: 290461 RVA: 0x011E7824 File Offset: 0x011E5A24
+		// Token: 0x0603C704 RID: 247556 RVA: 0x01142CA8 File Offset: 0x01140EA8
 		protected override void OnActivate()
 		{
 			this.InteractComponent = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.InitMesh();
 		}
 
-		// Token: 0x06046E9E RID: 290462 RVA: 0x011E7886 File Offset: 0x011E5A86
+		// Token: 0x0603C705 RID: 247557 RVA: 0x01142D0A File Offset: 0x01140F0A
 		protected override void OnDisable(string reason)
 		{
 			if (this.HasCapture)
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EffectSystem.Instance.SetEffectHidden(this.EffectHandle, true, null, false);
 		}
 
-		// Token: 0x06046E9F RID: 290463 RVA: 0x011E78A4 File Offset: 0x011E5AA4
+		// Token: 0x0603C706 RID: 247558 RVA: 0x01142D28 File Offset: 0x01140F28
 		protected override bool OnClear()
 		{
 			if (this.DelayDisableRenderingTickHandle != null)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EA0 RID: 290464 RVA: 0x011E7912 File Offset: 0x011E5B12
+		// Token: 0x0603C707 RID: 247559 RVA: 0x01142D96 File Offset: 0x01140F96
 		protected override void OnEnable()
 		{
 			if (this.HasCapture)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EffectSystem.Instance.SetEffectHidden(this.EffectHandle, false, null, false);
 		}
 
-		// Token: 0x06046EA1 RID: 290465 RVA: 0x011E7930 File Offset: 0x011E5B30
+		// Token: 0x0603C708 RID: 247560 RVA: 0x01142DB4 File Offset: 0x01140FB4
 		protected override void OnTick(float delta)
 		{
 			PawnInteractNewComponent interactComponent = this.InteractComponent;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			interactComponent.ForceUpdate();
 		}
 
-		// Token: 0x06046EA2 RID: 290466 RVA: 0x011E7944 File Offset: 0x011E5B44
+		// Token: 0x0603C709 RID: 247561 RVA: 0x01142DC8 File Offset: 0x01140FC8
 		private void InitTraceInfo()
 		{
 			this.GroundTrace = new UTraceSphereElement();
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.WaterTrace.SetTraceTypeQuery(KuroTraceTypeQuery.Water);
 		}
 
-		// Token: 0x06046EA3 RID: 290467 RVA: 0x011E79D8 File Offset: 0x011E5BD8
+		// Token: 0x0603C70A RID: 247562 RVA: 0x01142E5C File Offset: 0x0114105C
 		private void InitMesh()
 		{
 			int modelId = 0;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06046EA4 RID: 290468 RVA: 0x011E7E18 File Offset: 0x011E6018
+		// Token: 0x0603C70B RID: 247563 RVA: 0x0114329C File Offset: 0x0114149C
 		private void DelayDisableRenderingTick(float _)
 		{
 			this.DelayDisableRenderingTickHandle = null;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EA5 RID: 290469 RVA: 0x011E7E68 File Offset: 0x011E6068
+		// Token: 0x0603C70C RID: 247564 RVA: 0x011432EC File Offset: 0x011414EC
 		private void FixBornLocation()
 		{
 			if (this.WaterTrace == null || this.GroundTrace == null)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EA6 RID: 290470 RVA: 0x011E8064 File Offset: 0x011E6264
+		// Token: 0x0603C70D RID: 247565 RVA: 0x011434E8 File Offset: 0x011416E8
 		[NullableContext(2)]
 		private void OnLoadMeshFinish(USkeletalMesh mesh, [Nullable(1)] SceneItemActorComponent actorComponent, int modelId, SModelConfig modelConfig)
 		{
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06046EA7 RID: 290471 RVA: 0x011E8230 File Offset: 0x011E6430
+		// Token: 0x0603C70E RID: 247566 RVA: 0x011436B4 File Offset: 0x011418B4
 		[NullableContext(2)]
 		private void OnLoadMaterialEffectFinish(PD_CharacterControllerDataGroup_C absorbedEffect)
 		{
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06046EA8 RID: 290472 RVA: 0x011E8340 File Offset: 0x011E6540
+		// Token: 0x0603C70F RID: 247567 RVA: 0x011437C4 File Offset: 0x011419C4
 		[NullableContext(2)]
 		private void OnLoadAnimFinish(UAnimationAsset animObject)
 		{
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.Emit<int, int>(EEventName.OnSceneItemVisionCaptureAddFinish, this.DropEntityConfigId, base.Entity.Id);
 		}
 
-		// Token: 0x06046EA9 RID: 290473 RVA: 0x011E841C File Offset: 0x011E661C
+		// Token: 0x0603C710 RID: 247568 RVA: 0x011438A0 File Offset: 0x01141AA0
 		public void ExecuteCapture(string successEventGroup, [Nullable(2)] global::Vector huluTarget = null)
 		{
 			global::Vector vector = huluTarget;
@@ -463,13 +463,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.AfterCapture(false);
 		}
 
-		// Token: 0x06046EAA RID: 290474 RVA: 0x011E858E File Offset: 0x011E678E
+		// Token: 0x0603C711 RID: 247569 RVA: 0x01143A12 File Offset: 0x01141C12
 		public int GetEffectHandle()
 		{
 			return this.EffectHandle;
 		}
 
-		// Token: 0x06046EAB RID: 290475 RVA: 0x011E8598 File Offset: 0x011E6798
+		// Token: 0x0603C712 RID: 247570 RVA: 0x01143A1C File Offset: 0x01141C1C
 		public void AfterCapture(bool removeImmediately = false)
 		{
 			this.HasCapture = true;
@@ -498,14 +498,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			RenderModuleController.Instance.AddCharRenderShell(this.CharRenderingComponent);
 		}
 
-		// Token: 0x06046EAC RID: 290476 RVA: 0x011E86D1 File Offset: 0x011E68D1
+		// Token: 0x0603C713 RID: 247571 RVA: 0x01143B55 File Offset: 0x01141D55
 		private void OnStartEffect(float _)
 		{
 			this.DelayStartEffectHandle = null;
 			this.CharRenderingComponent.RemoveMaterialControllerDataGroupWithEnding(this.MaterialEffectHandle);
 		}
 
-		// Token: 0x06046EAD RID: 290477 RVA: 0x011E86EB File Offset: 0x011E68EB
+		// Token: 0x0603C714 RID: 247572 RVA: 0x01143B6F File Offset: 0x01141D6F
 		private void OnCaptureFinished(float _)
 		{
 			this.DelayCaptrueFinishedHandle = null;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			CreatureController.Instance.DelayRemoveEntityFinished(base.Entity);
 		}
 
-		// Token: 0x06046EAE RID: 290478 RVA: 0x011E8718 File Offset: 0x011E6918
+		// Token: 0x0603C715 RID: 247573 RVA: 0x01143B9C File Offset: 0x01141D9C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -521,268 +521,270 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemCaptureComponent sceneItemCaptureComponent = (SceneItemCaptureComponent)componentTemplate;
-			if (base.CanResetComponentProperty("EffectHandle"))
-			{
-				this.EffectHandle = sceneItemCaptureComponent.EffectHandle;
-			}
-			if (base.CanResetComponentProperty("TmpVector") && sceneItemCaptureComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
+			this.EffectHandle = sceneItemCaptureComponent.EffectHandle;
+			if (sceneItemCaptureComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpQuat") && sceneItemCaptureComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+			if (sceneItemCaptureComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpRotator") && sceneItemCaptureComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.TmpRotator), "TmpRotator"))
+			if (sceneItemCaptureComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CharRenderingComponent"))
+			if (sceneItemCaptureComponent.CharRenderingComponent == null)
 			{
-				if (sceneItemCaptureComponent.CharRenderingComponent == null)
-				{
-					this.CharRenderingComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharRenderingComponent>(this.CharRenderingComponent), "CharRenderingComponent"))
-				{
-					return false;
-				}
+				this.CharRenderingComponent = null;
 			}
-			if (base.CanResetComponentProperty("MaterialEffectHandle"))
-			{
-				this.MaterialEffectHandle = sceneItemCaptureComponent.MaterialEffectHandle;
-			}
-			if (base.CanResetComponentProperty("CurAnimPath"))
-			{
-				this.CurAnimPath = sceneItemCaptureComponent.CurAnimPath;
-			}
-			if (base.CanResetComponentProperty("DropEntityConfigId"))
-			{
-				this.DropEntityConfigId = sceneItemCaptureComponent.DropEntityConfigId;
-			}
-			if (base.CanResetComponentProperty("InteractController"))
-			{
-				if (sceneItemCaptureComponent.InteractController == null)
-				{
-					this.InteractController = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractController>(this.InteractController), "InteractController"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("WaterTrace"))
-			{
-				if (sceneItemCaptureComponent.WaterTrace == null)
-				{
-					this.WaterTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.WaterTrace), "WaterTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("GroundTrace"))
-			{
-				if (sceneItemCaptureComponent.GroundTrace == null)
-				{
-					this.GroundTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.GroundTrace), "GroundTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HitGroundLocation") && sceneItemCaptureComponent.HitGroundLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.HitGroundLocation), "HitGroundLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharRenderingComponent), "CharRenderingComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("HitWaterLocation") && sceneItemCaptureComponent.HitWaterLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.HitWaterLocation), "HitWaterLocation"))
+			this.MaterialEffectHandle = sceneItemCaptureComponent.MaterialEffectHandle;
+			this.CurAnimPath = sceneItemCaptureComponent.CurAnimPath;
+			this.DropEntityConfigId = sceneItemCaptureComponent.DropEntityConfigId;
+			if (sceneItemCaptureComponent.InteractController == null)
+			{
+				this.InteractController = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractController), "InteractController"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InteractComponent"))
+			if (sceneItemCaptureComponent.WaterTrace == null)
 			{
-				if (sceneItemCaptureComponent.InteractComponent == null)
-				{
-					this.InteractComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractNewComponent>(this.InteractComponent), "InteractComponent"))
-				{
-					return false;
-				}
+				this.WaterTrace = null;
 			}
-			if (base.CanResetComponentProperty("HasCapture"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaterTrace), "WaterTrace"))
 			{
-				this.HasCapture = sceneItemCaptureComponent.HasCapture;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ReplaceModel"))
+			if (sceneItemCaptureComponent.GroundTrace == null)
 			{
-				this.ReplaceModel = sceneItemCaptureComponent.ReplaceModel;
+				this.GroundTrace = null;
 			}
-			if (base.CanResetComponentProperty("MeshHalfHeight"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroundTrace), "GroundTrace"))
 			{
-				this.MeshHalfHeight = sceneItemCaptureComponent.MeshHalfHeight;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayDisableRenderingTickHandle"))
+			if (sceneItemCaptureComponent.HitGroundLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitGroundLocation), "HitGroundLocation"))
 			{
-				if (sceneItemCaptureComponent.DelayDisableRenderingTickHandle == null)
-				{
-					this.DelayDisableRenderingTickHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayDisableRenderingTickHandle), "DelayDisableRenderingTickHandle"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayTimeDisableRenderingTick"))
+			if (sceneItemCaptureComponent.HitWaterLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitWaterLocation), "HitWaterLocation"))
 			{
-				this.DelayTimeDisableRenderingTick = sceneItemCaptureComponent.DelayTimeDisableRenderingTick;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayStartEffectHandle"))
+			if (sceneItemCaptureComponent.InteractComponent == null)
 			{
-				if (sceneItemCaptureComponent.DelayStartEffectHandle == null)
-				{
-					this.DelayStartEffectHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayStartEffectHandle), "DelayStartEffectHandle"))
-				{
-					return false;
-				}
+				this.InteractComponent = null;
 			}
-			if (base.CanResetComponentProperty("DelayCaptrueFinishedHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractComponent), "InteractComponent"))
 			{
-				if (sceneItemCaptureComponent.DelayCaptrueFinishedHandle == null)
-				{
-					this.DelayCaptrueFinishedHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayCaptrueFinishedHandle), "DelayCaptrueFinishedHandle"))
-				{
-					return false;
-				}
+				return false;
+			}
+			this.HasCapture = sceneItemCaptureComponent.HasCapture;
+			this.ReplaceModel = sceneItemCaptureComponent.ReplaceModel;
+			this.MeshHalfHeight = sceneItemCaptureComponent.MeshHalfHeight;
+			if (sceneItemCaptureComponent.DelayDisableRenderingTickHandle == null)
+			{
+				this.DelayDisableRenderingTickHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayDisableRenderingTickHandle), "DelayDisableRenderingTickHandle"))
+			{
+				return false;
+			}
+			this.DelayTimeDisableRenderingTick = sceneItemCaptureComponent.DelayTimeDisableRenderingTick;
+			if (sceneItemCaptureComponent.DelayStartEffectHandle == null)
+			{
+				this.DelayStartEffectHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayStartEffectHandle), "DelayStartEffectHandle"))
+			{
+				return false;
+			}
+			if (sceneItemCaptureComponent.DelayCaptrueFinishedHandle == null)
+			{
+				this.DelayCaptrueFinishedHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayCaptrueFinishedHandle), "DelayCaptrueFinishedHandle"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040253B6 RID: 152502
+		// Token: 0x17007226 RID: 29222
+		// (get) Token: 0x0603C716 RID: 247574 RVA: 0x01143E1E File Offset: 0x0114201E
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007227 RID: 29223
+		// (get) Token: 0x0603C717 RID: 247575 RVA: 0x01143E21 File Offset: 0x01142021
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007228 RID: 29224
+		// (get) Token: 0x0603C718 RID: 247576 RVA: 0x01143E24 File Offset: 0x01142024
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007229 RID: 29225
+		// (get) Token: 0x0603C719 RID: 247577 RVA: 0x01143E27 File Offset: 0x01142027
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700722A RID: 29226
+		// (get) Token: 0x0603C71A RID: 247578 RVA: 0x01143E2A File Offset: 0x0114202A
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402001D RID: 131101
 		public static readonly int SPECIAL_CAPTURE_CHECK_TAG = GameplayTagDefine.EGameplayTagId["状态.声骸范围吸收"];
 
-		// Token: 0x040253B7 RID: 152503
+		// Token: 0x0402001E RID: 131102
 		public const bool VISION_CAPTURE_WITH_RANGE = true;
 
-		// Token: 0x040253B8 RID: 152504
+		// Token: 0x0402001F RID: 131103
 		private const int SpecialDropEntityConfigId = 310000000;
 
-		// Token: 0x040253B9 RID: 152505
+		// Token: 0x04020020 RID: 131104
 		[StaticVariableRuleIgnore]
 		private static readonly global::Rotator TempRotator = new global::Rotator(0f, -90f, 0f);
 
-		// Token: 0x040253BA RID: 152506
+		// Token: 0x04020021 RID: 131105
 		private const int CHECK_WATER_OFFSET_Z = 10000;
 
-		// Token: 0x040253BB RID: 152507
+		// Token: 0x04020022 RID: 131106
 		private const int CHECK_GROUND_OFFSET_Z = 10000;
 
-		// Token: 0x040253BC RID: 152508
+		// Token: 0x04020023 RID: 131107
 		private const string CHECK_WATER_PROFILE_KEY = "SceneItemCaptureComponent_CheckWaterHit";
 
-		// Token: 0x040253BD RID: 152509
+		// Token: 0x04020024 RID: 131108
 		private const string CHECK_GROUND_PROFILE_KEY = "SceneItemCaptureComponent_CheckGroundHit";
 
-		// Token: 0x040253BE RID: 152510
+		// Token: 0x04020025 RID: 131109
 		private const int MAX_LOD = 99;
 
-		// Token: 0x040253BF RID: 152511
+		// Token: 0x04020026 RID: 131110
 		private const string AbsorbedStateEffectPath = "/Game/Aki/Effect/MaterialController/Absorbed/DA_Fx_Group_Huanxiangshoufu.DA_Fx_Group_Huanxiangshoufu";
 
-		// Token: 0x040253C0 RID: 152512
+		// Token: 0x04020027 RID: 131111
 		private const string AbsorbedStartEffectPath = "/Game/Aki/Effect/EffectGroup/Common/Fight/DA_Fx_Group_Shoufu_Start.DA_Fx_Group_Shoufu_Start";
 
-		// Token: 0x040253C1 RID: 152513
+		// Token: 0x04020028 RID: 131112
 		public const string ABSORB_PAWN_NAME_KEY = "Absorb";
 
-		// Token: 0x040253C2 RID: 152514
+		// Token: 0x04020029 RID: 131113
 		private readonly int RemoveTime = 3000;
 
-		// Token: 0x040253C3 RID: 152515
+		// Token: 0x0402002A RID: 131114
 		private readonly int EffectDelayTime = 500;
 
-		// Token: 0x040253C4 RID: 152516
+		// Token: 0x0402002B RID: 131115
 		private int EffectHandle;
 
-		// Token: 0x040253C5 RID: 152517
+		// Token: 0x0402002C RID: 131116
 		private readonly global::Vector TmpVector = global::Vector.Create();
 
-		// Token: 0x040253C6 RID: 152518
+		// Token: 0x0402002D RID: 131117
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040253C7 RID: 152519
+		// Token: 0x0402002E RID: 131118
 		private readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-		// Token: 0x040253C8 RID: 152520
+		// Token: 0x0402002F RID: 131119
 		[Nullable(2)]
 		private CharRenderingComponent CharRenderingComponent;
 
-		// Token: 0x040253C9 RID: 152521
+		// Token: 0x04020030 RID: 131120
 		private int MaterialEffectHandle;
 
-		// Token: 0x040253CA RID: 152522
+		// Token: 0x04020031 RID: 131121
 		private string CurAnimPath = string.Empty;
 
-		// Token: 0x040253CB RID: 152523
+		// Token: 0x04020032 RID: 131122
 		private int DropEntityConfigId;
 
-		// Token: 0x040253CC RID: 152524
+		// Token: 0x04020033 RID: 131123
 		[Nullable(2)]
 		private PawnInteractController InteractController;
 
-		// Token: 0x040253CD RID: 152525
+		// Token: 0x04020034 RID: 131124
 		[Nullable(2)]
 		private UTraceSphereElement WaterTrace;
 
-		// Token: 0x040253CE RID: 152526
+		// Token: 0x04020035 RID: 131125
 		[Nullable(2)]
 		private UTraceSphereElement GroundTrace;
 
-		// Token: 0x040253CF RID: 152527
+		// Token: 0x04020036 RID: 131126
 		private readonly global::Vector HitGroundLocation = global::Vector.Create();
 
-		// Token: 0x040253D0 RID: 152528
+		// Token: 0x04020037 RID: 131127
 		private readonly global::Vector HitWaterLocation = global::Vector.Create();
 
-		// Token: 0x040253D1 RID: 152529
+		// Token: 0x04020038 RID: 131128
 		[Nullable(2)]
 		private PawnInteractNewComponent InteractComponent;
 
-		// Token: 0x040253D2 RID: 152530
+		// Token: 0x04020039 RID: 131129
 		private bool HasCapture;
 
-		// Token: 0x040253D3 RID: 152531
+		// Token: 0x0402003A RID: 131130
 		private bool ReplaceModel;
 
-		// Token: 0x040253D4 RID: 152532
+		// Token: 0x0402003B RID: 131131
 		public float MeshHalfHeight;
 
-		// Token: 0x040253D5 RID: 152533
+		// Token: 0x0402003C RID: 131132
 		[Nullable(2)]
 		private TimerHandle DelayDisableRenderingTickHandle;
 
-		// Token: 0x040253D6 RID: 152534
+		// Token: 0x0402003D RID: 131133
 		private float DelayTimeDisableRenderingTick;
 
-		// Token: 0x040253D7 RID: 152535
+		// Token: 0x0402003E RID: 131134
 		[Nullable(2)]
 		private TimerHandle DelayStartEffectHandle;
 
-		// Token: 0x040253D8 RID: 152536
+		// Token: 0x0402003F RID: 131135
 		[Nullable(2)]
 		private TimerHandle DelayCaptrueFinishedHandle;
 
-		// Token: 0x0200CEAB RID: 52907
+		// Token: 0x0200BA41 RID: 47681
 		[Nullable(0)]
 		public class SceneItemCaptureUtility : Singleton
 		{
-			// Token: 0x06051F13 RID: 335635 RVA: 0x01644564 File Offset: 0x01642764
+			// Token: 0x060486BD RID: 296637 RVA: 0x0161668C File Offset: 0x0161488C
 			private void Init()
 			{
 				if (this.IsInited)
@@ -803,8 +805,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				this.HuluOffsetOnHitInternal = (ConfigCommonParamById.GetIntConfig("VisionCaptureHuluOffsetOnHit") ?? this.HuluOffsetOnHitInternal);
 			}
 
-			// Token: 0x1700A2C9 RID: 41673
-			// (get) Token: 0x06051F14 RID: 335636 RVA: 0x01644744 File Offset: 0x01642944
+			// Token: 0x17007A63 RID: 31331
+			// (get) Token: 0x060486BE RID: 296638 RVA: 0x0161686C File Offset: 0x01614A6C
 			public int HuluDistanceMin
 			{
 				get
@@ -814,8 +816,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2CA RID: 41674
-			// (get) Token: 0x06051F15 RID: 335637 RVA: 0x01644752 File Offset: 0x01642952
+			// Token: 0x17007A64 RID: 31332
+			// (get) Token: 0x060486BF RID: 296639 RVA: 0x0161687A File Offset: 0x01614A7A
 			public int HuluDistanceMax
 			{
 				get
@@ -825,8 +827,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2CB RID: 41675
-			// (get) Token: 0x06051F16 RID: 335638 RVA: 0x01644760 File Offset: 0x01642960
+			// Token: 0x17007A65 RID: 31333
+			// (get) Token: 0x060486C0 RID: 296640 RVA: 0x01616888 File Offset: 0x01614A88
 			public int HuluAltitude
 			{
 				get
@@ -836,8 +838,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2CC RID: 41676
-			// (get) Token: 0x06051F17 RID: 335639 RVA: 0x0164476E File Offset: 0x0164296E
+			// Token: 0x17007A66 RID: 31334
+			// (get) Token: 0x060486C1 RID: 296641 RVA: 0x01616896 File Offset: 0x01614A96
 			public int HuluOffsetOnHit
 			{
 				get
@@ -847,7 +849,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051F18 RID: 335640 RVA: 0x0164477C File Offset: 0x0164297C
+			// Token: 0x060486C2 RID: 296642 RVA: 0x016168A4 File Offset: 0x01614AA4
 			public bool PlayerHasTagId(int tagId)
 			{
 				TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -859,20 +861,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return component != null && component.HasTag(tagId);
 			}
 
-			// Token: 0x06051F19 RID: 335641 RVA: 0x016447C2 File Offset: 0x016429C2
+			// Token: 0x060486C3 RID: 296643 RVA: 0x016168EA File Offset: 0x01614AEA
 			public bool IsUsageSpecialCapture()
 			{
 				return this.PlayerHasTagId(SceneItemCaptureComponent.SPECIAL_CAPTURE_CHECK_TAG);
 			}
 
-			// Token: 0x06051F1A RID: 335642 RVA: 0x016447CF File Offset: 0x016429CF
+			// Token: 0x060486C4 RID: 296644 RVA: 0x016168F7 File Offset: 0x01614AF7
 			public int GetCaptureInteractionRadius()
 			{
 				this.Init();
 				return this.CommonInteractoinRadius;
 			}
 
-			// Token: 0x06051F1B RID: 335643 RVA: 0x016447DD File Offset: 0x016429DD
+			// Token: 0x060486C5 RID: 296645 RVA: 0x01616905 File Offset: 0x01614B05
 			public int GetAbsorbRadius()
 			{
 				this.Init();
@@ -883,7 +885,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return this.SpecialAbsorbRadius;
 			}
 
-			// Token: 0x06051F1C RID: 335644 RVA: 0x016447FA File Offset: 0x016429FA
+			// Token: 0x060486C6 RID: 296646 RVA: 0x01616922 File Offset: 0x01614B22
 			public int GetAbsorbRadiusByBool(bool special)
 			{
 				this.Init();
@@ -894,7 +896,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return this.SpecialAbsorbRadius;
 			}
 
-			// Token: 0x06051F1D RID: 335645 RVA: 0x01644814 File Offset: 0x01642A14
+			// Token: 0x060486C7 RID: 296647 RVA: 0x0161693C File Offset: 0x01614B3C
 			public bool IsMotorDriving()
 			{
 				if (Global.BaseCharacter != null)
@@ -916,7 +918,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 
-			// Token: 0x06051F1E RID: 335646 RVA: 0x0164486E File Offset: 0x01642A6E
+			// Token: 0x060486C8 RID: 296648 RVA: 0x01616996 File Offset: 0x01614B96
 			public int GetActionId()
 			{
 				this.Init();
@@ -938,8 +940,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x1700A2CD RID: 41677
-			// (get) Token: 0x06051F1F RID: 335647 RVA: 0x016448A9 File Offset: 0x01642AA9
+			// Token: 0x17007A67 RID: 31335
+			// (get) Token: 0x060486C9 RID: 296649 RVA: 0x016169D1 File Offset: 0x01614BD1
 			public static SceneItemCaptureComponent.SceneItemCaptureUtility Instance
 			{
 				get
@@ -953,12 +955,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				}
 			}
 
-			// Token: 0x06051F20 RID: 335648 RVA: 0x016448CC File Offset: 0x01642ACC
+			// Token: 0x060486CA RID: 296650 RVA: 0x016169F4 File Offset: 0x01614BF4
 			public static void CreateStaticDefaultValue()
 			{
 			}
 
-			// Token: 0x06051F21 RID: 335649 RVA: 0x016448CE File Offset: 0x01642ACE
+			// Token: 0x060486CB RID: 296651 RVA: 0x016169F6 File Offset: 0x01614BF6
 			public static void ResetStaticDefaultValue()
 			{
 				SceneItemCaptureComponent.SceneItemCaptureUtility instance = SceneItemCaptureComponent.SceneItemCaptureUtility._instance;
@@ -969,7 +971,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				SceneItemCaptureComponent.SceneItemCaptureUtility._instance = null;
 			}
 
-			// Token: 0x06051F22 RID: 335650 RVA: 0x016448E8 File Offset: 0x01642AE8
+			// Token: 0x060486CC RID: 296652 RVA: 0x01616A10 File Offset: 0x01614C10
 			unsafe static SceneItemCaptureUtility()
 			{
 				int num = 2;
@@ -984,47 +986,47 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				StaticVariableRegister.RegisterAndExecute(new Action(SceneItemCaptureComponent.SceneItemCaptureUtility.CreateStaticDefaultValue), new Action(SceneItemCaptureComponent.SceneItemCaptureUtility.ResetStaticDefaultValue));
 			}
 
-			// Token: 0x0403E31B RID: 254747
+			// Token: 0x04039641 RID: 235073
 			private int CommonInteractoinRadius = 200;
 
-			// Token: 0x0403E31C RID: 254748
+			// Token: 0x04039642 RID: 235074
 			private int CommonActionId = 220004;
 
-			// Token: 0x0403E31D RID: 254749
+			// Token: 0x04039643 RID: 235075
 			private int CommonActionIdForMotor = 220006;
 
-			// Token: 0x0403E31E RID: 254750
+			// Token: 0x04039644 RID: 235076
 			private int CommonAbsorbRadius = 800;
 
-			// Token: 0x0403E31F RID: 254751
+			// Token: 0x04039645 RID: 235077
 			private int SpecialActionId = 220005;
 
-			// Token: 0x0403E320 RID: 254752
+			// Token: 0x04039646 RID: 235078
 			private int SpecialActionIdForMotor = 220007;
 
-			// Token: 0x0403E321 RID: 254753
+			// Token: 0x04039647 RID: 235079
 			private int SpecialAbsorbRadius = 5000;
 
-			// Token: 0x0403E322 RID: 254754
+			// Token: 0x04039648 RID: 235080
 			private int HuluDistanceMinInternal = 350;
 
-			// Token: 0x0403E323 RID: 254755
+			// Token: 0x04039649 RID: 235081
 			private int HuluDistanceMaxInternal = 750;
 
-			// Token: 0x0403E324 RID: 254756
+			// Token: 0x0403964A RID: 235082
 			private int HuluAltitudeInternal = 300;
 
-			// Token: 0x0403E325 RID: 254757
+			// Token: 0x0403964B RID: 235083
 			private int HuluOffsetOnHitInternal = 50;
 
-			// Token: 0x0403E326 RID: 254758
+			// Token: 0x0403964C RID: 235084
 			private bool IsInited;
 
-			// Token: 0x0403E327 RID: 254759
+			// Token: 0x0403964D RID: 235085
 			[StaticVariableRuleIgnore]
 			private static readonly List<int> MotorDrivingTagIds;
 
-			// Token: 0x0403E328 RID: 254760
+			// Token: 0x0403964E RID: 235086
 			[Nullable(2)]
 			private static SceneItemCaptureComponent.SceneItemCaptureUtility _instance;
 		}

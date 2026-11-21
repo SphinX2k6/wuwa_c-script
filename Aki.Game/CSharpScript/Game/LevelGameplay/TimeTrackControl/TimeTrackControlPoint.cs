@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 {
-	// Token: 0x020069E8 RID: 27112
+	// Token: 0x02005B44 RID: 23364
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TimeTrackControlPoint : UiPanelBase
 	{
-		// Token: 0x06043718 RID: 276248 RVA: 0x0107B48F File Offset: 0x0107968F
+		// Token: 0x06039754 RID: 235348 RVA: 0x0101F943 File Offset: 0x0101DB43
 		public TimeTrackControlPoint(UUIItem uiItem, int index, float angle)
 		{
 			this.Index = index;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.SequencePlayer = new LevelSequencePlayer(uiItem);
 		}
 
-		// Token: 0x06043719 RID: 276249 RVA: 0x0107B4D0 File Offset: 0x010796D0
+		// Token: 0x06039755 RID: 235349 RVA: 0x0101F984 File Offset: 0x0101DB84
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			};
 		}
 
-		// Token: 0x0604371A RID: 276250 RVA: 0x0107B540 File Offset: 0x01079740
+		// Token: 0x06039756 RID: 235350 RVA: 0x0101F9F4 File Offset: 0x0101DBF4
 		protected override void OnStart()
 		{
 			base.GetItem(2).SetUIActive(true);
@@ -49,12 +49,12 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.AddEvent();
 		}
 
-		// Token: 0x0604371B RID: 276251 RVA: 0x0107B595 File Offset: 0x01079795
+		// Token: 0x06039757 RID: 235351 RVA: 0x0101FA49 File Offset: 0x0101DC49
 		public void HandleDisplay(bool inShow)
 		{
 		}
 
-		// Token: 0x0604371C RID: 276252 RVA: 0x0107B597 File Offset: 0x01079797
+		// Token: 0x06039758 RID: 235352 RVA: 0x0101FA4B File Offset: 0x0101DC4B
 		protected override void OnBeforeDestroy()
 		{
 			this.Rotator = null;
@@ -68,17 +68,17 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			base.Destroy(null);
 		}
 
-		// Token: 0x0604371D RID: 276253 RVA: 0x0107B5C5 File Offset: 0x010797C5
+		// Token: 0x06039759 RID: 235353 RVA: 0x0101FA79 File Offset: 0x0101DC79
 		public void AddEvent()
 		{
 		}
 
-		// Token: 0x0604371E RID: 276254 RVA: 0x0107B5C7 File Offset: 0x010797C7
+		// Token: 0x0603975A RID: 235354 RVA: 0x0101FA7B File Offset: 0x0101DC7B
 		public void RemoveEvent()
 		{
 		}
 
-		// Token: 0x0604371F RID: 276255 RVA: 0x0107B5C9 File Offset: 0x010797C9
+		// Token: 0x0603975B RID: 235355 RVA: 0x0101FA7D File Offset: 0x0101DC7D
 		public void UpdateState(bool inEnable)
 		{
 			if (inEnable)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			base.GetItem(3).SetUIActive(true);
 		}
 
-		// Token: 0x06043720 RID: 276256 RVA: 0x0107B604 File Offset: 0x01079804
+		// Token: 0x0603975C RID: 235356 RVA: 0x0101FAB8 File Offset: 0x0101DCB8
 		public void ToggleSelected(bool isSelected)
 		{
 			if (this.SequencePlayer == null)
@@ -107,34 +107,34 @@ namespace CSharpScript.Game.LevelGamePlay.TimeTrackControl
 			this.SequencePlayer.PlaySequencePurely("Hide", false, false, null, null, false);
 		}
 
-		// Token: 0x04023316 RID: 144150
+		// Token: 0x0401E506 RID: 124166
 		public const string SHOW = "Show";
 
-		// Token: 0x04023317 RID: 144151
+		// Token: 0x0401E507 RID: 124167
 		public const string HIDE = "Hide";
 
-		// Token: 0x04023318 RID: 144152
+		// Token: 0x0401E508 RID: 124168
 		[Nullable(2)]
 		private Rotator Rotator;
 
-		// Token: 0x04023319 RID: 144153
+		// Token: 0x0401E509 RID: 124169
 		public int Index;
 
-		// Token: 0x0402331A RID: 144154
+		// Token: 0x0401E50A RID: 124170
 		[Nullable(2)]
 		public LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200CB4F RID: 52047
+		// Token: 0x0200B72E RID: 46894
 		[NullableContext(0)]
 		public enum ETimeTrackControlPoint
 		{
-			// Token: 0x0403D641 RID: 251457
+			// Token: 0x04038A23 RID: 231971
 			Point,
-			// Token: 0x0403D642 RID: 251458
+			// Token: 0x04038A24 RID: 231972
 			Panel,
-			// Token: 0x0403D643 RID: 251459
+			// Token: 0x04038A25 RID: 231973
 			Normal,
-			// Token: 0x0403D644 RID: 251460
+			// Token: 0x04038A26 RID: 231974
 			Disable
 		}
 	}

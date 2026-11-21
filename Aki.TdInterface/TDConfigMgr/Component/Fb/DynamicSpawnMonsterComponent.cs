@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DB6 RID: 3510
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EB2 RID: 3762
 	public class DynamicSpawnMonsterComponent : IComponentBase
 	{
-		// Token: 0x06004FB2 RID: 20402 RVA: 0x000C5425 File Offset: 0x000C3625
+		// Token: 0x060054D7 RID: 21719 RVA: 0x000D0C75 File Offset: 0x000CEE75
 		public static DynamicSpawnMonsterComponent Create(IDynamicSpawnMonsterComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A03 RID: 6659
-		// (get) Token: 0x06004FB3 RID: 20403 RVA: 0x000C5444 File Offset: 0x000C3644
+		// Token: 0x17001B6E RID: 7022
+		// (get) Token: 0x060054D8 RID: 21720 RVA: 0x000D0C94 File Offset: 0x000CEE94
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A04 RID: 6660
-		// (get) Token: 0x06004FB4 RID: 20404 RVA: 0x000C547C File Offset: 0x000C367C
+		// Token: 0x17001B6F RID: 7023
+		// (get) Token: 0x060054D9 RID: 21721 RVA: 0x000D0CCC File Offset: 0x000CEECC
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A05 RID: 6661
-		// (get) Token: 0x06004FB5 RID: 20405 RVA: 0x000C5494 File Offset: 0x000C3694
+		// Token: 0x17001B70 RID: 7024
+		// (get) Token: 0x060054DA RID: 21722 RVA: 0x000D0CE4 File Offset: 0x000CEEE4
 		public virtual List<IConditionSpawnMonster> Group
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DBD RID: 11709
+		// Token: 0x04003083 RID: 12419
 		private IDynamicSpawnMonsterComponent Instance;
 
-		// Token: 0x04002DBE RID: 11710
+		// Token: 0x04003084 RID: 12420
 		private List<IConditionSpawnMonster> _GroupCache;
 
-		// Token: 0x04002DBF RID: 11711
+		// Token: 0x04003085 RID: 12421
 		private bool _GroupInited;
 	}
 }

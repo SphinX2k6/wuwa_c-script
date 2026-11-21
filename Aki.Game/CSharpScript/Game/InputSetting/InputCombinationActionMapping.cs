@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200700A RID: 28682
+	// Token: 0x0200618B RID: 24971
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputCombinationActionMapping
 	{
-		// Token: 0x06045CB1 RID: 285873 RVA: 0x0115AFD4 File Offset: 0x011591D4
+		// Token: 0x0603BE67 RID: 245351 RVA: 0x011053E0 File Offset: 0x011035E0
 		public void Clear()
 		{
 			foreach (InputCombinationActionBinding inputCombinationActionBinding in this.CombinationActionBindingMap.Values)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Clear();
 		}
 
-		// Token: 0x06045CB2 RID: 285874 RVA: 0x0115B04C File Offset: 0x0115924C
+		// Token: 0x0603BE68 RID: 245352 RVA: 0x01105458 File Offset: 0x01103658
 		public InputCombinationActionBinding NewCombinationActionBinding(string actionName, int secondaryKeyValidTime, bool isOriginalCombinationAction)
 		{
 			InputCombinationActionBinding inputCombinationActionBinding = new InputCombinationActionBinding();
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputCombinationActionBinding;
 		}
 
-		// Token: 0x06045CB3 RID: 285875 RVA: 0x0115B078 File Offset: 0x01159278
+		// Token: 0x0603BE69 RID: 245353 RVA: 0x01105484 File Offset: 0x01103684
 		public void AddKey(InputCombinationActionBinding combinationActionBinding, string mainKeyName, string secondaryKeyName, EInputBindingType bindingType)
 		{
 			combinationActionBinding.AddKey(mainKeyName, secondaryKeyName, bindingType);
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Add(mainKeyName);
 		}
 
-		// Token: 0x06045CB4 RID: 285876 RVA: 0x0115B0E5 File Offset: 0x011592E5
+		// Token: 0x0603BE6A RID: 245354 RVA: 0x011054F1 File Offset: 0x011036F1
 		public void ClearKeyNameIndex()
 		{
 			this.CombinationActionBindingKeyMap.Clear();
 			this.MainKeySet.Clear();
 		}
 
-		// Token: 0x06045CB5 RID: 285877 RVA: 0x0115B100 File Offset: 0x01159300
+		// Token: 0x0603BE6B RID: 245355 RVA: 0x0110550C File Offset: 0x0110370C
 		public void AddKeyNameIndex(InputCombinationActionBinding combinationActionBinding, string mainKeyName, string secondaryKeyName)
 		{
 			Dictionary<string, Dictionary<string, InputCombinationActionBinding>> dictionary;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.InputSetting
 			this.MainKeySet.Add(mainKeyName);
 		}
 
-		// Token: 0x06045CB6 RID: 285878 RVA: 0x0115B164 File Offset: 0x01159364
+		// Token: 0x0603BE6C RID: 245356 RVA: 0x01105570 File Offset: 0x01103770
 		public void RemoveKey(InputCombinationActionBinding combinationActionBinding, string mainKeyName, string secondaryKeyName, EInputBindingType bindingType)
 		{
 			combinationActionBinding.RemoveKey(mainKeyName, bindingType);
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CB7 RID: 285879 RVA: 0x0115B208 File Offset: 0x01159408
+		// Token: 0x0603BE6D RID: 245357 RVA: 0x01105614 File Offset: 0x01103814
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CB8 RID: 285880 RVA: 0x0115B238 File Offset: 0x01159438
+		// Token: 0x0603BE6E RID: 245358 RVA: 0x01105644 File Offset: 0x01103844
 		[return: Nullable(2)]
 		public InputCombinationActionBinding GetCombinationActionBindingByActionName(string actionName)
 		{
@@ -146,19 +146,19 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045CB9 RID: 285881 RVA: 0x0115B258 File Offset: 0x01159458
+		// Token: 0x0603BE6F RID: 245359 RVA: 0x01105664 File Offset: 0x01103864
 		public IReadOnlyDictionary<string, InputCombinationActionBinding> GetCombinationActionBindingMap()
 		{
 			return this.CombinationActionBindingMap;
 		}
 
-		// Token: 0x06045CBA RID: 285882 RVA: 0x0115B260 File Offset: 0x01159460
+		// Token: 0x0603BE70 RID: 245360 RVA: 0x0110566C File Offset: 0x0110386C
 		public bool IsMainKey(string keyName)
 		{
 			return this.MainKeySet.Contains(keyName);
 		}
 
-		// Token: 0x06045CBB RID: 285883 RVA: 0x0115B270 File Offset: 0x01159470
+		// Token: 0x0603BE71 RID: 245361 RVA: 0x0110567C File Offset: 0x0110387C
 		public void SwitchKeysByBindingType(EInputBindingType bindingType)
 		{
 			foreach (InputCombinationActionBinding inputCombinationActionBinding in this.CombinationActionBindingMap.Values)
@@ -167,13 +167,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x040247FD RID: 149501
+		// Token: 0x0401FAB3 RID: 129715
 		private readonly Dictionary<string, InputCombinationActionBinding> CombinationActionBindingMap = new Dictionary<string, InputCombinationActionBinding>();
 
-		// Token: 0x040247FE RID: 149502
+		// Token: 0x0401FAB4 RID: 129716
 		private readonly Dictionary<string, Dictionary<string, Dictionary<string, InputCombinationActionBinding>>> CombinationActionBindingKeyMap = new Dictionary<string, Dictionary<string, Dictionary<string, InputCombinationActionBinding>>>();
 
-		// Token: 0x040247FF RID: 149503
+		// Token: 0x0401FAB5 RID: 129717
 		private readonly HashSet<string> MainKeySet = new HashSet<string>();
 	}
 }

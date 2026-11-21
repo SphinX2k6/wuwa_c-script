@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 {
-	// Token: 0x020000AC RID: 172
+	// Token: 0x020000AF RID: 175
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BlockResourceModule : BaseResourceModule
 	{
-		// Token: 0x060005E4 RID: 1508 RVA: 0x00033D38 File Offset: 0x00031F38
+		// Token: 0x060005FC RID: 1532 RVA: 0x00035408 File Offset: 0x00033608
 		[NullableContext(0)]
 		public override UniTask<bool> PrepareManifests()
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return <PrepareManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005E5 RID: 1509 RVA: 0x00033D7C File Offset: 0x00031F7C
+		// Token: 0x060005FD RID: 1533 RVA: 0x0003544C File Offset: 0x0003364C
 		public unsafe override PackClassification ClassifyPacks(ResourceSelectionContext context, ETier tier = ETier.None, bool forceMax = false)
 		{
 			List<ResPackageInfo> list = new List<ResPackageInfo>();
@@ -160,7 +160,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			};
 		}
 
-		// Token: 0x060005E6 RID: 1510 RVA: 0x00034348 File Offset: 0x00032548
+		// Token: 0x060005FE RID: 1534 RVA: 0x00035A18 File Offset: 0x00033C18
 		[NullableContext(0)]
 		private UniTask<bool> AnalysisBlockPackManifests([Nullable(1)] List<ResPackageInfo> resPackageInfos)
 		{
@@ -172,7 +172,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return <AnalysisBlockPackManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005E7 RID: 1511 RVA: 0x0003438C File Offset: 0x0003258C
+		// Token: 0x060005FF RID: 1535 RVA: 0x00035A5C File Offset: 0x00033C5C
 		public HashSet<int> GetCoreBlockIds(ResourceSelectionContext context)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -192,7 +192,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet;
 		}
 
-		// Token: 0x060005E8 RID: 1512 RVA: 0x0003449C File Offset: 0x0003269C
+		// Token: 0x06000600 RID: 1536 RVA: 0x00035B6C File Offset: 0x00033D6C
 		private HashSet<int> GetLoginBlockIds(ResourceSelectionContext context)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -293,7 +293,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet2;
 		}
 
-		// Token: 0x060005E9 RID: 1513 RVA: 0x00034A28 File Offset: 0x00032C28
+		// Token: 0x06000601 RID: 1537 RVA: 0x000360F8 File Offset: 0x000342F8
 		private HashSet<int> GetForceDownloadBlockIds()
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -311,11 +311,14 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return hashSet;
 		}
 
-		// Token: 0x060005EA RID: 1514 RVA: 0x00034AFC File Offset: 0x00032CFC
-		private HashSet<int> GetRecommendBlockIds(ResourceSelectionContext context)
+		// Token: 0x06000602 RID: 1538 RVA: 0x000361CC File Offset: 0x000343CC
+		private unsafe HashSet<int> GetRecommendBlockIds(ResourceSelectionContext context)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
-			foreach (int num in this.EvaluateRecommendSubPackageIds(context.FinishedQuests))
+			List<string> values;
+			List<int> list = this.EvaluateRecommendSubPackageIds(context.FinishedQuests, out values);
+			List<string> list2 = new List<string>();
+			foreach (int num in list)
 			{
 				DownLoadSubPackageRow byId = PackSelectionTables.DownLoadSubPackageTableInstance.GetById(num);
 				if (byId == null)
@@ -328,23 +331,32 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 				}
 				else
 				{
+					List<string> list3 = list2;
+					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 2);
+					defaultInterpolatedStringHandler.AppendFormatted<int>(num);
+					defaultInterpolatedStringHandler.AppendLiteral("->");
+					defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(byId.Area));
+					list3.Add(defaultInterpolatedStringHandler.ToStringAndClear());
 					foreach (int item in byId.Area)
 					{
 						hashSet.Add(item);
 					}
 				}
 			}
-			if (hashSet.Count > 0)
-			{
-				LauncherLog.Instance.Info("依据关键任务完成度进核心包地块: " + string.Join<int>(",", hashSet), default(ReadOnlySpan<ValueTuple<string, object>>));
-			}
+			LauncherLog instance2 = LauncherLog.Instance;
+			string message = "依据关键任务完成度进核心包地块: " + ResourceUpdateUtils.FormatLogList<int>(hashSet);
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("matchedConfigs", ResourceUpdateUtils.FormatLogList<string>(values));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("SourceToArea", ResourceUpdateUtils.FormatLogList<string>(list2));
+			instance2.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 			return hashSet;
 		}
 
-		// Token: 0x060005EB RID: 1515 RVA: 0x00034C20 File Offset: 0x00032E20
-		private List<int> EvaluateRecommendSubPackageIds(HashSet<int> finishedQuests)
+		// Token: 0x06000603 RID: 1539 RVA: 0x0003636C File Offset: 0x0003456C
+		private List<int> EvaluateRecommendSubPackageIds(HashSet<int> finishedQuests, out List<string> matchedConfigs)
 		{
 			List<int> list = new List<int>();
+			matchedConfigs = new List<string>();
 			foreach (RecommendPackRow recommendPackRow in PackSelectionTables.RecommendPackTableInstance.GetAll())
 			{
 				bool flag = true;
@@ -369,6 +381,22 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 					}
 					if (flag2)
 					{
+						if (recommendPackRow.Source.Count > 0)
+						{
+							List<string> list2 = matchedConfigs;
+							DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(41, 4);
+							defaultInterpolatedStringHandler.AppendLiteral("(Id=");
+							defaultInterpolatedStringHandler.AppendFormatted<int>(recommendPackRow.Id);
+							defaultInterpolatedStringHandler.AppendLiteral(",FinishQuest=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.FinishQuest));
+							defaultInterpolatedStringHandler.AppendLiteral(",");
+							defaultInterpolatedStringHandler.AppendLiteral("UnfinishQuest=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.UnfinishQuest));
+							defaultInterpolatedStringHandler.AppendLiteral(",Source=");
+							defaultInterpolatedStringHandler.AppendFormatted(ResourceUpdateUtils.FormatLogList<int>(recommendPackRow.Source));
+							defaultInterpolatedStringHandler.AppendLiteral(")");
+							list2.Add(defaultInterpolatedStringHandler.ToStringAndClear());
+						}
 						foreach (int item3 in recommendPackRow.Source)
 						{
 							list.Add(item3);
@@ -379,7 +407,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return list;
 		}
 
-		// Token: 0x060005EC RID: 1516 RVA: 0x00034D68 File Offset: 0x00032F68
+		// Token: 0x06000604 RID: 1540 RVA: 0x000365A4 File Offset: 0x000347A4
 		public int GetMapBlockFromPosition(int mapId, double x, double y)
 		{
 			List<MapBlockInfoRow> all = PackSelectionTables.MapBlockInfoTableInstance.GetAll();
@@ -438,10 +466,21 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return -1;
 		}
 
-		// Token: 0x060005ED RID: 1517 RVA: 0x00034F58 File Offset: 0x00033158
+		// Token: 0x06000605 RID: 1541 RVA: 0x00036794 File Offset: 0x00034994
 		public override void Delete(IReadOnlyList<string> pakNames)
 		{
-			base.DegradeToMinPack();
+			this.Delete(pakNames, RemoteInfo.Instance.ActiveTier);
+		}
+
+		// Token: 0x06000606 RID: 1542 RVA: 0x000367A8 File Offset: 0x000349A8
+		public void Delete(IReadOnlyList<string> pakNames, ETier tier)
+		{
+			if (tier == ETier.None)
+			{
+				LauncherLog.Instance.Error("Optional package 删除地块资源时无法确定目标档位", default(ReadOnlySpan<ValueTuple<string, object>>));
+				return;
+			}
+			base.DegradeToMinPack(tier);
 			foreach (string text in pakNames)
 			{
 				ResPackageInfo resPackageInfo2;
@@ -450,24 +489,34 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 				{
 					resPackageInfo.DeleteLocalFiles();
 					resPackageInfo.ClearRecord();
-					using (List<ResPackageInfo>.Enumerator enumerator2 = resPackageInfo.GetAllTierPackageInfos().GetEnumerator())
+					ResPackageInfo tierPackageInfo = resPackageInfo.GetTierPackageInfo(tier);
+					if (tierPackageInfo != null)
 					{
-						while (enumerator2.MoveNext())
-						{
-							ResPackageInfo resPackageInfo3 = enumerator2.Current;
-							resPackageInfo3.DeleteLocalFiles();
-							resPackageInfo3.ClearRecord();
-						}
-						continue;
+						tierPackageInfo.DeleteLocalFiles();
+						tierPackageInfo.ClearRecord();
 					}
 				}
-				LauncherLog.Instance.Warn("Optional package 卸载地块时未找到资源包信息: " + text, default(ReadOnlySpan<ValueTuple<string, object>>));
+				else
+				{
+					LauncherLog.Instance.Warn("Optional package 卸载地块时未找到资源包信息: " + text, default(ReadOnlySpan<ValueTuple<string, object>>));
+				}
 			}
 		}
 
-		// Token: 0x060005EE RID: 1518 RVA: 0x00035030 File Offset: 0x00033230
+		// Token: 0x06000607 RID: 1543 RVA: 0x0003686C File Offset: 0x00034A6C
 		public override long GetLocalSize(IReadOnlyList<string> pakNames)
 		{
+			return this.GetLocalSize(pakNames, RemoteInfo.Instance.ActiveTier);
+		}
+
+		// Token: 0x06000608 RID: 1544 RVA: 0x00036880 File Offset: 0x00034A80
+		public long GetLocalSize(IReadOnlyList<string> pakNames, ETier tier)
+		{
+			if (tier == ETier.None)
+			{
+				LauncherLog.Instance.Error("Optional package 获取地块资源大小时无法确定目标档位", default(ReadOnlySpan<ValueTuple<string, object>>));
+				return 0L;
+			}
 			long num = 0L;
 			foreach (string text in pakNames)
 			{
@@ -475,7 +524,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 				ResPackageInfo resPackageInfo = ResPackageInfo.OptionalDownLoadInfo.TryGetValue(text, out resPackageInfo2) ? resPackageInfo2 : null;
 				if (resPackageInfo != null)
 				{
-					long item = resPackageInfo.AnalyzeRequireFiles(false, RemoteInfo.Instance.ActiveTier).Rest.Item1;
+					long item = resPackageInfo.AnalyzeRequireFiles(false, tier).Rest.Item1;
 					num += item;
 				}
 				else
@@ -486,7 +535,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return num;
 		}
 
-		// Token: 0x060005EF RID: 1519 RVA: 0x000350D0 File Offset: 0x000332D0
+		// Token: 0x06000609 RID: 1545 RVA: 0x00036938 File Offset: 0x00034B38
 		[NullableContext(2)]
 		public string GetBlockPackName(int blockId)
 		{
@@ -503,7 +552,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return null;
 		}
 
-		// Token: 0x060005F0 RID: 1520 RVA: 0x0003512C File Offset: 0x0003332C
+		// Token: 0x0600060A RID: 1546 RVA: 0x00036994 File Offset: 0x00034B94
 		public bool IsAllBlockResourceDownloaded()
 		{
 			foreach (ResPackageInfo resPackageInfo in ResPackageInfo.OptionalDownLoadInfo.Values)
@@ -521,7 +570,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Module
 			return true;
 		}
 
-		// Token: 0x040003A7 RID: 935
+		// Token: 0x040003D5 RID: 981
 		private const long MB_SIZE = 1048576L;
 	}
 }

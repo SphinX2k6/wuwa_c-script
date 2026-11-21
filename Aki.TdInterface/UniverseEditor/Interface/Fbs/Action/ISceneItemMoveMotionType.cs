@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F39 RID: 28473
+	// Token: 0x020076C0 RID: 30400
 	public struct ISceneItemMoveMotionType : IFlatbufferObject
 	{
-		// Token: 0x1700D39C RID: 54172
-		// (get) Token: 0x060324DF RID: 206047 RVA: 0x006CB528 File Offset: 0x006C9728
+		// Token: 0x1700DEF8 RID: 57080
+		// (get) Token: 0x06035537 RID: 218423 RVA: 0x00727490 File Offset: 0x00725690
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324E0 RID: 206048 RVA: 0x006CB535 File Offset: 0x006C9735
+		// Token: 0x06035538 RID: 218424 RVA: 0x0072749D File Offset: 0x0072569D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060324E1 RID: 206049 RVA: 0x006CB53C File Offset: 0x006C973C
+		// Token: 0x06035539 RID: 218425 RVA: 0x007274A4 File Offset: 0x007256A4
 		public static ISceneItemMoveMotionType GetRootAsISceneItemMoveMotionType(ByteBuffer _bb)
 		{
 			return ISceneItemMoveMotionType.GetRootAsISceneItemMoveMotionType(_bb, default(ISceneItemMoveMotionType));
 		}
 
-		// Token: 0x060324E2 RID: 206050 RVA: 0x006CB558 File Offset: 0x006C9758
+		// Token: 0x0603553A RID: 218426 RVA: 0x007274C0 File Offset: 0x007256C0
 		public static ISceneItemMoveMotionType GetRootAsISceneItemMoveMotionType(ByteBuffer _bb, ISceneItemMoveMotionType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060324E3 RID: 206051 RVA: 0x006CB575 File Offset: 0x006C9775
+		// Token: 0x0603553B RID: 218427 RVA: 0x007274DD File Offset: 0x007256DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060324E4 RID: 206052 RVA: 0x006CB584 File Offset: 0x006C9784
+		// Token: 0x0603553C RID: 218428 RVA: 0x007274EC File Offset: 0x007256EC
 		public ISceneItemMoveMotionType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D39D RID: 54173
-		// (get) Token: 0x060324E5 RID: 206053 RVA: 0x006CB594 File Offset: 0x006C9794
+		// Token: 0x1700DEF9 RID: 57081
+		// (get) Token: 0x0603553D RID: 218429 RVA: 0x007274FC File Offset: 0x007256FC
 		public EMoveMotion Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060324E6 RID: 206054 RVA: 0x006CB5D0 File Offset: 0x006C97D0
+		// Token: 0x0603553E RID: 218430 RVA: 0x00727538 File Offset: 0x00725738
 		public static Offset<ISceneItemMoveMotionType> CreateISceneItemMoveMotionType(FlatBufferBuilder builder, EMoveMotion Type = EMoveMotion.UniformMotion)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneItemMoveMotionType.EndISceneItemMoveMotionType(builder);
 		}
 
-		// Token: 0x060324E7 RID: 206055 RVA: 0x006CB5E6 File Offset: 0x006C97E6
+		// Token: 0x0603553F RID: 218431 RVA: 0x0072754E File Offset: 0x0072574E
 		public static void StartISceneItemMoveMotionType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060324E8 RID: 206056 RVA: 0x006CB5EF File Offset: 0x006C97EF
+		// Token: 0x06035540 RID: 218432 RVA: 0x00727557 File Offset: 0x00725757
 		public static void AddType(FlatBufferBuilder builder, EMoveMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060324E9 RID: 206057 RVA: 0x006CB5FA File Offset: 0x006C97FA
+		// Token: 0x06035541 RID: 218433 RVA: 0x00727562 File Offset: 0x00725762
 		public static Offset<ISceneItemMoveMotionType> EndISceneItemMoveMotionType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISceneItemMoveMotionType>(builder.EndTable());
 		}
 
-		// Token: 0x060324EA RID: 206058 RVA: 0x006CB608 File Offset: 0x006C9808
+		// Token: 0x06035542 RID: 218434 RVA: 0x00727570 File Offset: 0x00725770
 		public ISceneItemMoveMotionTypeT UnPack()
 		{
 			ISceneItemMoveMotionTypeT sceneItemMoveMotionTypeT = new ISceneItemMoveMotionTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sceneItemMoveMotionTypeT;
 		}
 
-		// Token: 0x060324EB RID: 206059 RVA: 0x006CB623 File Offset: 0x006C9823
+		// Token: 0x06035543 RID: 218435 RVA: 0x0072758B File Offset: 0x0072578B
 		public void UnPackTo(ISceneItemMoveMotionTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060324EC RID: 206060 RVA: 0x006CB634 File Offset: 0x006C9834
+		// Token: 0x06035544 RID: 218436 RVA: 0x0072759C File Offset: 0x0072579C
 		public static Offset<ISceneItemMoveMotionType> Pack(FlatBufferBuilder builder, ISceneItemMoveMotionTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISceneItemMoveMotionType.CreateISceneItemMoveMotionType(builder, _o.Type);
 		}
 
-		// Token: 0x0401192B RID: 71979
+		// Token: 0x040128B3 RID: 75955
 		private Table __p;
 	}
 }

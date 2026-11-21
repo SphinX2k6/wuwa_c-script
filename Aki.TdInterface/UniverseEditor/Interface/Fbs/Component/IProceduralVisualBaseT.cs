@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005791 RID: 22417
+	// Token: 0x02005D98 RID: 23960
 	public class IProceduralVisualBaseT
 	{
-		// Token: 0x1700A731 RID: 42801
-		// (get) Token: 0x06025955 RID: 153941 RVA: 0x0052F0BF File Offset: 0x0052D2BF
-		// (set) Token: 0x06025956 RID: 153942 RVA: 0x0052F0C7 File Offset: 0x0052D2C7
+		// Token: 0x1700B055 RID: 45141
+		// (get) Token: 0x06027E75 RID: 163445 RVA: 0x0057524B File Offset: 0x0057344B
+		// (set) Token: 0x06027E76 RID: 163446 RVA: 0x00575253 File Offset: 0x00573453
 		public EProceduralVisualType Type { get; set; }
 
-		// Token: 0x1700A732 RID: 42802
-		// (get) Token: 0x06025957 RID: 153943 RVA: 0x0052F0D0 File Offset: 0x0052D2D0
-		// (set) Token: 0x06025958 RID: 153944 RVA: 0x0052F0D8 File Offset: 0x0052D2D8
+		// Token: 0x1700B056 RID: 45142
+		// (get) Token: 0x06027E77 RID: 163447 RVA: 0x0057525C File Offset: 0x0057345C
+		// (set) Token: 0x06027E78 RID: 163448 RVA: 0x00575264 File Offset: 0x00573464
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x06025959 RID: 153945 RVA: 0x0052F0E1 File Offset: 0x0052D2E1
+		// Token: 0x06027E79 RID: 163449 RVA: 0x0057526D File Offset: 0x0057346D
 		public IProceduralVisualBaseT()
 		{
 			this.Type = EProceduralVisualType.LookAt;

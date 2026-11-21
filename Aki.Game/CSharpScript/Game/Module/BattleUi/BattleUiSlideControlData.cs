@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005CA0 RID: 23712
+	// Token: 0x02004C82 RID: 19586
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiSlideControlData
 	{
-		// Token: 0x0603BEA1 RID: 245409 RVA: 0x00E50F20 File Offset: 0x00E4F120
+		// Token: 0x06030DF4 RID: 200180 RVA: 0x00DA15C0 File Offset: 0x00D9F7C0
 		public void OnPress(UUIItem item, float x, float y)
 		{
 			this.CurItem = item;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TouchMoveDir.Set(0.0, 0.0);
 		}
 
-		// Token: 0x0603BEA2 RID: 245410 RVA: 0x00E50F84 File Offset: 0x00E4F184
+		// Token: 0x06030DF5 RID: 200181 RVA: 0x00DA1624 File Offset: 0x00D9F824
 		public void OnRelease(UUIItem item)
 		{
 			if (this.CurItem != item)
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TouchMoveDir.Set(0.0, 0.0);
 		}
 
-		// Token: 0x0603BEA3 RID: 245411 RVA: 0x00E50FE4 File Offset: 0x00E4F1E4
+		// Token: 0x06030DF6 RID: 200182 RVA: 0x00DA1684 File Offset: 0x00D9F884
 		public void OnTouch(InputDistributeDefine.ITouchData touchData)
 		{
 			if (touchData.TouchType == InputDistributeDefine.ETouchType.TouchBegin)
@@ -50,48 +50,48 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEA4 RID: 245412 RVA: 0x00E51086 File Offset: 0x00E4F286
+		// Token: 0x06030DF7 RID: 200183 RVA: 0x00DA1726 File Offset: 0x00D9F926
 		public void Preload()
 		{
 		}
 
-		// Token: 0x0603BEA5 RID: 245413 RVA: 0x00E51088 File Offset: 0x00E4F288
+		// Token: 0x06030DF8 RID: 200184 RVA: 0x00DA1728 File Offset: 0x00D9F928
 		public void ForceStop()
 		{
 			this.SetVisible(false);
 			this.CurItem = null;
 		}
 
-		// Token: 0x0603BEA6 RID: 245414 RVA: 0x00E51098 File Offset: 0x00E4F298
+		// Token: 0x06030DF9 RID: 200185 RVA: 0x00DA1738 File Offset: 0x00D9F938
 		public bool GetVisible()
 		{
 			return this.Visible;
 		}
 
-		// Token: 0x0603BEA7 RID: 245415 RVA: 0x00E510A0 File Offset: 0x00E4F2A0
+		// Token: 0x06030DFA RID: 200186 RVA: 0x00DA1740 File Offset: 0x00D9F940
 		public void SetVisible(bool visible)
 		{
 			this.Visible = visible;
 			EventSystem.Instance.Emit<bool>(EEventName.BattleUiSlideControlVisibleChanged, visible);
 		}
 
-		// Token: 0x0401F41F RID: 128031
+		// Token: 0x04019ED8 RID: 106200
 		private bool Visible;
 
-		// Token: 0x0401F420 RID: 128032
+		// Token: 0x04019ED9 RID: 106201
 		public readonly Vector2D Position = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x0401F421 RID: 128033
+		// Token: 0x04019EDA RID: 106202
 		[Nullable(2)]
 		private UUIItem CurItem;
 
-		// Token: 0x0401F422 RID: 128034
+		// Token: 0x04019EDB RID: 106203
 		private readonly Vector2D TouchBeginPos = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x0401F423 RID: 128035
+		// Token: 0x04019EDC RID: 106204
 		public Vector2D TouchMoveDir = Vector2D.Create(0.0, 0.0);
 
-		// Token: 0x0401F424 RID: 128036
+		// Token: 0x04019EDD RID: 106205
 		public int TouchId = -1;
 	}
 }

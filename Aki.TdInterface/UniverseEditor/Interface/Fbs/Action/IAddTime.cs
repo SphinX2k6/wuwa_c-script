@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006137 RID: 24887
+	// Token: 0x0200679C RID: 26524
 	public struct IAddTime : IFlatbufferObject
 	{
-		// Token: 0x1700B77D RID: 46973
-		// (get) Token: 0x0602A8DD RID: 174301 RVA: 0x005DC03B File Offset: 0x005DA23B
+		// Token: 0x1700C0ED RID: 49389
+		// (get) Token: 0x0602CFD6 RID: 184278 RVA: 0x00626217 File Offset: 0x00624417
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A8DE RID: 174302 RVA: 0x005DC048 File Offset: 0x005DA248
+		// Token: 0x0602CFD7 RID: 184279 RVA: 0x00626224 File Offset: 0x00624424
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A8DF RID: 174303 RVA: 0x005DC050 File Offset: 0x005DA250
+		// Token: 0x0602CFD8 RID: 184280 RVA: 0x0062622C File Offset: 0x0062442C
 		public static IAddTime GetRootAsIAddTime(ByteBuffer _bb)
 		{
 			return IAddTime.GetRootAsIAddTime(_bb, default(IAddTime));
 		}
 
-		// Token: 0x0602A8E0 RID: 174304 RVA: 0x005DC06C File Offset: 0x005DA26C
+		// Token: 0x0602CFD9 RID: 184281 RVA: 0x00626248 File Offset: 0x00624448
 		public static IAddTime GetRootAsIAddTime(ByteBuffer _bb, IAddTime obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A8E1 RID: 174305 RVA: 0x005DC089 File Offset: 0x005DA289
+		// Token: 0x0602CFDA RID: 184282 RVA: 0x00626265 File Offset: 0x00624465
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A8E2 RID: 174306 RVA: 0x005DC098 File Offset: 0x005DA298
+		// Token: 0x0602CFDB RID: 184283 RVA: 0x00626274 File Offset: 0x00624474
 		public IAddTime __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B77E RID: 46974
-		// (get) Token: 0x0602A8E3 RID: 174307 RVA: 0x005DC0A8 File Offset: 0x005DA2A8
+		// Token: 0x1700C0EE RID: 49390
+		// (get) Token: 0x0602CFDC RID: 184284 RVA: 0x00626284 File Offset: 0x00624484
 		public EChangeTimerType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B77F RID: 46975
-		// (get) Token: 0x0602A8E4 RID: 174308 RVA: 0x005DC0E4 File Offset: 0x005DA2E4
+		// Token: 0x1700C0EF RID: 49391
+		// (get) Token: 0x0602CFDD RID: 184285 RVA: 0x006262C0 File Offset: 0x006244C0
 		public int Time
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B780 RID: 46976
-		// (get) Token: 0x0602A8E5 RID: 174309 RVA: 0x005DC120 File Offset: 0x005DA320
+		// Token: 0x1700C0F0 RID: 49392
+		// (get) Token: 0x0602CFDE RID: 184286 RVA: 0x006262FC File Offset: 0x006244FC
 		public TVarRef VarForTimeType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A8E6 RID: 174310 RVA: 0x005DC15C File Offset: 0x005DA35C
+		// Token: 0x0602CFDF RID: 184287 RVA: 0x00626338 File Offset: 0x00624538
 		public TTable? VarForTime<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,38 +104,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602A8E7 RID: 174311 RVA: 0x005DC1A4 File Offset: 0x005DA3A4
+		// Token: 0x0602CFE0 RID: 184288 RVA: 0x00626380 File Offset: 0x00624580
 		public IConstVarRef VarForTimeAsIConstVarRef()
 		{
 			return this.VarForTime<IConstVarRef>().Value;
 		}
 
-		// Token: 0x0602A8E8 RID: 174312 RVA: 0x005DC1C0 File Offset: 0x005DA3C0
+		// Token: 0x0602CFE1 RID: 184289 RVA: 0x0062639C File Offset: 0x0062459C
 		public IGlobalVarRef VarForTimeAsIGlobalVarRef()
 		{
 			return this.VarForTime<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x0602A8E9 RID: 174313 RVA: 0x005DC1DC File Offset: 0x005DA3DC
+		// Token: 0x0602CFE2 RID: 184290 RVA: 0x006263B8 File Offset: 0x006245B8
 		public IOtherVarRef VarForTimeAsIOtherVarRef()
 		{
 			return this.VarForTime<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x0602A8EA RID: 174314 RVA: 0x005DC1F8 File Offset: 0x005DA3F8
+		// Token: 0x0602CFE3 RID: 184291 RVA: 0x006263D4 File Offset: 0x006245D4
 		public ISelfVarRef VarForTimeAsISelfVarRef()
 		{
 			return this.VarForTime<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0602A8EB RID: 174315 RVA: 0x005DC214 File Offset: 0x005DA414
+		// Token: 0x0602CFE4 RID: 184292 RVA: 0x006263F0 File Offset: 0x006245F0
 		public ISystemVarRef VarForTimeAsISystemVarRef()
 		{
 			return this.VarForTime<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x1700B781 RID: 46977
-		// (get) Token: 0x0602A8EC RID: 174316 RVA: 0x005DC230 File Offset: 0x005DA430
+		// Token: 0x1700C0F1 RID: 49393
+		// (get) Token: 0x0602CFE5 RID: 184293 RVA: 0x0062640C File Offset: 0x0062460C
 		public IChangeTimerUiConfig? UiConfig
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B782 RID: 46978
-		// (get) Token: 0x0602A8ED RID: 174317 RVA: 0x005DC284 File Offset: 0x005DA484
+		// Token: 0x1700C0F2 RID: 49394
+		// (get) Token: 0x0602CFE6 RID: 184294 RVA: 0x00626460 File Offset: 0x00624660
 		public byte NullMask
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A8EE RID: 174318 RVA: 0x005DC2C4 File Offset: 0x005DA4C4
+		// Token: 0x0602CFE7 RID: 184295 RVA: 0x006264A0 File Offset: 0x006246A0
 		public static Offset<IAddTime> CreateIAddTime(FlatBufferBuilder builder, EChangeTimerType Type = EChangeTimerType.Add, int Time = 0, TVarRef VarForTime_type = TVarRef.NONE, int VarForTimeOffset = 0, IChangeTimerUiConfigT UiConfig = null, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -177,55 +177,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddTime.EndIAddTime(builder);
 		}
 
-		// Token: 0x0602A8EF RID: 174319 RVA: 0x005DC311 File Offset: 0x005DA511
+		// Token: 0x0602CFE8 RID: 184296 RVA: 0x006264ED File Offset: 0x006246ED
 		public static void StartIAddTime(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602A8F0 RID: 174320 RVA: 0x005DC31A File Offset: 0x005DA51A
+		// Token: 0x0602CFE9 RID: 184297 RVA: 0x006264F6 File Offset: 0x006246F6
 		public static void AddType(FlatBufferBuilder builder, EChangeTimerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A8F1 RID: 174321 RVA: 0x005DC325 File Offset: 0x005DA525
+		// Token: 0x0602CFEA RID: 184298 RVA: 0x00626501 File Offset: 0x00624701
 		public static void AddTime(FlatBufferBuilder builder, int time)
 		{
 			builder.AddInt(1, time, 0);
 		}
 
-		// Token: 0x0602A8F2 RID: 174322 RVA: 0x005DC330 File Offset: 0x005DA530
+		// Token: 0x0602CFEB RID: 184299 RVA: 0x0062650C File Offset: 0x0062470C
 		public static void AddVarForTimeType(FlatBufferBuilder builder, TVarRef varForTimeType)
 		{
 			builder.AddByte(2, (byte)varForTimeType, 0);
 		}
 
-		// Token: 0x0602A8F3 RID: 174323 RVA: 0x005DC33B File Offset: 0x005DA53B
+		// Token: 0x0602CFEC RID: 184300 RVA: 0x00626517 File Offset: 0x00624717
 		public static void AddVarForTime(FlatBufferBuilder builder, int varForTimeOffset)
 		{
 			builder.AddOffset(3, varForTimeOffset, 0);
 		}
 
-		// Token: 0x0602A8F4 RID: 174324 RVA: 0x005DC346 File Offset: 0x005DA546
+		// Token: 0x0602CFED RID: 184301 RVA: 0x00626522 File Offset: 0x00624722
 		public static void AddUiConfig(FlatBufferBuilder builder, Offset<IChangeTimerUiConfig> uiConfigOffset)
 		{
 			builder.AddStruct(4, uiConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602A8F5 RID: 174325 RVA: 0x005DC356 File Offset: 0x005DA556
+		// Token: 0x0602CFEE RID: 184302 RVA: 0x00626532 File Offset: 0x00624732
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602A8F6 RID: 174326 RVA: 0x005DC361 File Offset: 0x005DA561
+		// Token: 0x0602CFEF RID: 184303 RVA: 0x0062653D File Offset: 0x0062473D
 		public static Offset<IAddTime> EndIAddTime(FlatBufferBuilder builder)
 		{
 			return new Offset<IAddTime>(builder.EndTable());
 		}
 
-		// Token: 0x0602A8F7 RID: 174327 RVA: 0x005DC370 File Offset: 0x005DA570
+		// Token: 0x0602CFF0 RID: 184304 RVA: 0x0062654C File Offset: 0x0062474C
 		public IAddTimeT UnPack()
 		{
 			IAddTimeT addTimeT = new IAddTimeT();
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return addTimeT;
 		}
 
-		// Token: 0x0602A8F8 RID: 174328 RVA: 0x005DC38C File Offset: 0x005DA58C
+		// Token: 0x0602CFF1 RID: 184305 RVA: 0x00626568 File Offset: 0x00624768
 		public void UnPackTo(IAddTimeT _o)
 		{
 			_o.Type = this.Type;
@@ -262,7 +262,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602A8F9 RID: 174329 RVA: 0x005DC550 File Offset: 0x005DA750
+		// Token: 0x0602CFF2 RID: 184306 RVA: 0x0062672C File Offset: 0x0062492C
 		public static Offset<IAddTime> Pack(FlatBufferBuilder builder, IAddTimeT _o)
 		{
 			if (_o == null)
@@ -274,7 +274,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAddTime.CreateIAddTime(builder, _o.Type, _o.Time, varForTime_type, varForTimeOffset, _o.UiConfig, _o.NullMask);
 		}
 
-		// Token: 0x04010515 RID: 66837
+		// Token: 0x0401131C RID: 70428
 		private Table __p;
 	}
 }

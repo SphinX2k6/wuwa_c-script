@@ -4,26 +4,26 @@ using CSharpScript.Game.Utils.ResponsibilityChain;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007140 RID: 28992
+	// Token: 0x0200636E RID: 25454
 	public class EntityHandleParameterContext : IParameterContext
 	{
-		// Token: 0x06046C78 RID: 289912 RVA: 0x011D6103 File Offset: 0x011D4303
+		// Token: 0x0603DAC9 RID: 252617 RVA: 0x011DEB18 File Offset: 0x011DCD18
 		[NullableContext(1)]
 		public EntityHandleParameterContext(EntityHandle entityHandle)
 		{
 		}
 
-		// Token: 0x06046C79 RID: 289913 RVA: 0x011D6112 File Offset: 0x011D4312
+		// Token: 0x0603DACA RID: 252618 RVA: 0x011DEB27 File Offset: 0x011DCD27
 		public bool IsValid()
 		{
 			return this.EntityHandle.Valid;
 		}
 
-		// Token: 0x0402527D RID: 152189
+		// Token: 0x04020B5D RID: 133981
 		[Nullable(1)]
 		public EntityHandle EntityHandle = entityHandle;
 
-		// Token: 0x0402527E RID: 152190
+		// Token: 0x04020B5E RID: 133982
 		public EPlayerFollowerHandlerType? OutPlayerFollowerHandlerType;
 	}
 }

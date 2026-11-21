@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 {
-	// Token: 0x0200634F RID: 25423
+	// Token: 0x020052CD RID: 21197
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballItemView : UiPanelBase
 	{
-		// Token: 0x0603FF95 RID: 262037 RVA: 0x00F7A428 File Offset: 0x00F78628
+		// Token: 0x06034C56 RID: 216150 RVA: 0x00EC1388 File Offset: 0x00EBF588
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FF96 RID: 262038 RVA: 0x00F7A59C File Offset: 0x00F7879C
+		// Token: 0x06034C57 RID: 216151 RVA: 0x00EC14FC File Offset: 0x00EBF6FC
 		protected override void OnStart()
 		{
 			this.SpriteQualityList = new UUISprite[]
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FF97 RID: 262039 RVA: 0x00F7A658 File Offset: 0x00F78858
+		// Token: 0x06034C58 RID: 216152 RVA: 0x00EC15B8 File Offset: 0x00EBF7B8
 		protected override void OnBeforeDestroy()
 		{
 			PinballShopItemNewTagView shopNewTagView = this.ShopNewTagView;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.LongPressButton = null;
 		}
 
-		// Token: 0x0603FF98 RID: 262040 RVA: 0x00F7A698 File Offset: 0x00F78898
+		// Token: 0x06034C59 RID: 216153 RVA: 0x00EC15F8 File Offset: 0x00EBF7F8
 		public UniTask Apply(object data)
 		{
 			PinballItemView.<Apply>d__24 <Apply>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <Apply>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF99 RID: 262041 RVA: 0x00F7A6E4 File Offset: 0x00F788E4
+		// Token: 0x06034C5A RID: 216154 RVA: 0x00EC1644 File Offset: 0x00EBF844
 		public void RefreshByShopData(object data)
 		{
 			CommonGameplayShopItemProxy commonGameplayShopItemProxy = data as CommonGameplayShopItemProxy;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.SyncShopNewTagAsync(commonGameplayShopItemProxy).Forget();
 		}
 
-		// Token: 0x0603FF9A RID: 262042 RVA: 0x00F7A768 File Offset: 0x00F78968
+		// Token: 0x06034C5B RID: 216155 RVA: 0x00EC16C8 File Offset: 0x00EBF8C8
 		private void RefreshShopItemIcon(CommonGameplayShopItemProxy proxy)
 		{
 			UUITexture texture = base.GetTexture(6);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FF9B RID: 262043 RVA: 0x00F7A7D8 File Offset: 0x00F789D8
+		// Token: 0x06034C5C RID: 216156 RVA: 0x00EC1738 File Offset: 0x00EBF938
 		private void RefreshShopItemName(CommonGameplayShopItemProxy proxy)
 		{
 			UUIText text = base.GetText(7);
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FF9C RID: 262044 RVA: 0x00F7A7FC File Offset: 0x00F789FC
+		// Token: 0x06034C5D RID: 216157 RVA: 0x00EC175C File Offset: 0x00EBF95C
 		private void RefreshShopQualityColor(CommonGameplayShopItemProxy proxy)
 		{
 			PayShopGoods goodsData = proxy.GoodsData;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.RefreshColor(colorList);
 		}
 
-		// Token: 0x0603FF9D RID: 262045 RVA: 0x00F7A864 File Offset: 0x00F78A64
+		// Token: 0x06034C5E RID: 216158 RVA: 0x00EC17C4 File Offset: 0x00EBF9C4
 		private void RefreshShopContentText(CommonGameplayShopItemProxy proxy)
 		{
 			UUIItem item = base.GetItem(8);
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FF9E RID: 262046 RVA: 0x00F7A8B8 File Offset: 0x00F78AB8
+		// Token: 0x06034C5F RID: 216159 RVA: 0x00EC1818 File Offset: 0x00EBFA18
 		private UniTask ClearShopNewTagAsync()
 		{
 			PinballItemView.<ClearShopNewTagAsync>d__30 <ClearShopNewTagAsync>d__;
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <ClearShopNewTagAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FF9F RID: 262047 RVA: 0x00F7A8FC File Offset: 0x00F78AFC
+		// Token: 0x06034C60 RID: 216160 RVA: 0x00EC185C File Offset: 0x00EBFA5C
 		private UniTask SyncShopNewTagAsync(CommonGameplayShopItemProxy proxy)
 		{
 			PinballItemView.<SyncShopNewTagAsync>d__31 <SyncShopNewTagAsync>d__;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <SyncShopNewTagAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFA0 RID: 262048 RVA: 0x00F7A948 File Offset: 0x00F78B48
+		// Token: 0x06034C61 RID: 216161 RVA: 0x00EC18A8 File Offset: 0x00EBFAA8
 		protected void ApplyTypeItem(IPinballItemDataItem data)
 		{
 			this.ApplyBase();
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.RefreshRainbow(itemInfo.Value.QualityId == 5);
 		}
 
-		// Token: 0x0603FFA1 RID: 262049 RVA: 0x00F7AA50 File Offset: 0x00F78C50
+		// Token: 0x06034C62 RID: 216162 RVA: 0x00EC19B0 File Offset: 0x00EBFBB0
 		protected UniTask ApplyTypeRole(IPinballItemDataRole data)
 		{
 			PinballItemView.<ApplyTypeRole>d__33 <ApplyTypeRole>d__;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <ApplyTypeRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFA2 RID: 262050 RVA: 0x00F7AA9C File Offset: 0x00F78C9C
+		// Token: 0x06034C63 RID: 216163 RVA: 0x00EC19FC File Offset: 0x00EBFBFC
 		protected UniTask ApplyTypeWeapon(IPinballItemDataWeapon data)
 		{
 			PinballItemView.<ApplyTypeWeapon>d__34 <ApplyTypeWeapon>d__;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <ApplyTypeWeapon>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFA3 RID: 262051 RVA: 0x00F7AAE8 File Offset: 0x00F78CE8
+		// Token: 0x06034C64 RID: 216164 RVA: 0x00EC1A48 File Offset: 0x00EBFC48
 		protected void ApplyTypeMonster(IPinballItemDataMonster data)
 		{
 			this.ApplyBase();
@@ -312,14 +312,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			base.TrySetTextureByPath(pinballMonsterType.Value.Icon, base.GetTexture(6), null, null);
 		}
 
-		// Token: 0x0603FFA4 RID: 262052 RVA: 0x00F7ABEC File Offset: 0x00F78DEC
+		// Token: 0x06034C65 RID: 216165 RVA: 0x00EC1B4C File Offset: 0x00EBFD4C
 		protected void ApplyBase()
 		{
 			base.TrySetSpriteByPath("/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/ComItem/SP_ComItemBg3.SP_ComItemBg3", base.GetSprite(3), false, null, null);
 			this.RefreshRainbow(false);
 		}
 
-		// Token: 0x0603FFA5 RID: 262053 RVA: 0x00F7AC20 File Offset: 0x00F78E20
+		// Token: 0x06034C66 RID: 216166 RVA: 0x00EC1B80 File Offset: 0x00EBFD80
 		protected void RefreshColor(string[] colorList)
 		{
 			for (int i = 0; i < colorList.Length; i++)
@@ -328,7 +328,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFA6 RID: 262054 RVA: 0x00F7AC50 File Offset: 0x00F78E50
+		// Token: 0x06034C67 RID: 216167 RVA: 0x00EC1BB0 File Offset: 0x00EBFDB0
 		protected void RefreshRainbow(bool bShow)
 		{
 			UUISprite sprite = base.GetSprite(5);
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			sprite.SetUIActive(bShow);
 		}
 
-		// Token: 0x0603FFA7 RID: 262055 RVA: 0x00F7AC64 File Offset: 0x00F78E64
+		// Token: 0x06034C68 RID: 216168 RVA: 0x00EC1BC4 File Offset: 0x00EBFDC4
 		protected void RefreshTxt(string txt)
 		{
 			UUIText text = base.GetText(7);
@@ -350,19 +350,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			text.SetText(txt, true);
 		}
 
-		// Token: 0x0603FFA8 RID: 262056 RVA: 0x00F7AC79 File Offset: 0x00F78E79
+		// Token: 0x06034C69 RID: 216169 RVA: 0x00EC1BD9 File Offset: 0x00EBFDD9
 		protected void RefreshTxtByTextId(string textId)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(7), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603FFA9 RID: 262057 RVA: 0x00F7AC92 File Offset: 0x00F78E92
+		// Token: 0x06034C6A RID: 216170 RVA: 0x00EC1BF2 File Offset: 0x00EBFDF2
 		protected void RefreshTxtByTableTextArgNew(TableTextArgNew bottomText)
 		{
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(7), bottomText.TextKey, bottomText.Params);
 		}
 
-		// Token: 0x0603FFAA RID: 262058 RVA: 0x00F7ACB4 File Offset: 0x00F78EB4
+		// Token: 0x06034C6B RID: 216171 RVA: 0x00EC1C14 File Offset: 0x00EBFE14
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -382,7 +382,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <RefreshComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFAB RID: 262059 RVA: 0x00F7AD18 File Offset: 0x00F78F18
+		// Token: 0x06034C6C RID: 216172 RVA: 0x00EC1C78 File Offset: 0x00EBFE78
 		[return: Nullable(2)]
 		private PinballItemGridComponentBase GetComponentByType(Type ctor)
 		{
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return result;
 		}
 
-		// Token: 0x0603FFAC RID: 262060 RVA: 0x00F7AD38 File Offset: 0x00F78F38
+		// Token: 0x06034C6D RID: 216173 RVA: 0x00EC1C98 File Offset: 0x00EBFE98
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <CreateComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFAD RID: 262061 RVA: 0x00F7AD8B File Offset: 0x00F78F8B
+		// Token: 0x06034C6E RID: 216174 RVA: 0x00EC1CEB File Offset: 0x00EBFEEB
 		private UUIItem GetParentItem(EPinballItemComponentLayer layer)
 		{
 			if (layer == EPinballItemComponentLayer.Normal)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return base.GetItem(9);
 		}
 
-		// Token: 0x0603FFAE RID: 262062 RVA: 0x00F7ADAE File Offset: 0x00F78FAE
+		// Token: 0x06034C6F RID: 216175 RVA: 0x00EC1D0E File Offset: 0x00EBFF0E
 		private void OnComponentVisibleChanged(PinballItemGridComponentBase component, bool bVisible)
 		{
 			if (bVisible)
@@ -437,13 +437,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.VisibleComponents.Remove(component);
 		}
 
-		// Token: 0x0603FFAF RID: 262063 RVA: 0x00F7ADCE File Offset: 0x00F78FCE
+		// Token: 0x06034C70 RID: 216176 RVA: 0x00EC1D2E File Offset: 0x00EBFF2E
 		private void ClearVisibleComponent()
 		{
 			this.VisibleComponents.Clear();
 		}
 
-		// Token: 0x0603FFB0 RID: 262064 RVA: 0x00F7ADDC File Offset: 0x00F78FDC
+		// Token: 0x06034C71 RID: 216177 RVA: 0x00EC1D3C File Offset: 0x00EBFF3C
 		protected void RefreshComponentVisible()
 		{
 			foreach (PinballItemGridComponentBase pinballItemGridComponentBase in this.ComponentMap.Values)
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFB1 RID: 262065 RVA: 0x00F7AE44 File Offset: 0x00F79044
+		// Token: 0x06034C72 RID: 216178 RVA: 0x00EC1DA4 File Offset: 0x00EBFFA4
 		public UniTask RefreshReduceBtnComponent(bool isVisible)
 		{
 			PinballItemView.<RefreshReduceBtnComponent>d__51 <RefreshReduceBtnComponent>d__;
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <RefreshReduceBtnComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFB2 RID: 262066 RVA: 0x00F7AE90 File Offset: 0x00F79090
+		// Token: 0x06034C73 RID: 216179 RVA: 0x00EC1DF0 File Offset: 0x00EBFFF0
 		public UniTask RefreshFormationNumberComponent(bool isVisible, int formationId = 0)
 		{
 			PinballItemView.<RefreshFormationNumberComponent>d__52 <RefreshFormationNumberComponent>d__;
@@ -480,14 +480,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			return <RefreshFormationNumberComponent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FFB3 RID: 262067 RVA: 0x00F7AEE3 File Offset: 0x00F790E3
+		// Token: 0x06034C74 RID: 216180 RVA: 0x00EC1E43 File Offset: 0x00EC0043
 		[NullableContext(2)]
 		public UUIExtendToggle GetItemToggle()
 		{
 			return base.GetExtendToggle(0);
 		}
 
-		// Token: 0x0603FFB4 RID: 262068 RVA: 0x00F7AEEC File Offset: 0x00F790EC
+		// Token: 0x06034C75 RID: 216181 RVA: 0x00EC1E4C File Offset: 0x00EC004C
 		private void BindToggle()
 		{
 			UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -500,7 +500,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			itemToggle.FocusListenerDelegate.Bind(new Action(this.FocusListenerDelegateHandler));
 		}
 
-		// Token: 0x0603FFB5 RID: 262069 RVA: 0x00F7AF4C File Offset: 0x00F7914C
+		// Token: 0x06034C76 RID: 216182 RVA: 0x00EC1EAC File Offset: 0x00EC00AC
 		private void UnBindToggle()
 		{
 			UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			itemToggle.FocusListenerDelegate.Unbind();
 		}
 
-		// Token: 0x0603FFB6 RID: 262070 RVA: 0x00F7AF91 File Offset: 0x00F79191
+		// Token: 0x06034C77 RID: 216183 RVA: 0x00EC1EF1 File Offset: 0x00EC00F1
 		private void ExtendToggleStateChanged(EToggleState state)
 		{
 			this.OnExtendToggleStateChanged(state);
@@ -528,12 +528,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFB7 RID: 262071 RVA: 0x00F7AFCC File Offset: 0x00F791CC
+		// Token: 0x06034C78 RID: 216184 RVA: 0x00EC1F2C File Offset: 0x00EC012C
 		protected virtual void OnExtendToggleStateChanged(EToggleState state)
 		{
 		}
 
-		// Token: 0x0603FFB8 RID: 262072 RVA: 0x00F7AFCE File Offset: 0x00F791CE
+		// Token: 0x06034C79 RID: 216185 RVA: 0x00EC1F2E File Offset: 0x00EC012E
 		private bool CanExecuteChange()
 		{
 			return this.OnCanExecuteChangeCallback == null || this.OnCanExecuteChangeCallback(new PinballItemToggleCallbackData
@@ -544,37 +544,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			});
 		}
 
-		// Token: 0x0603FFB9 RID: 262073 RVA: 0x00F7B00E File Offset: 0x00F7920E
+		// Token: 0x06034C7A RID: 216186 RVA: 0x00EC1F6E File Offset: 0x00EC016E
 		public void BindOnStateChangeCallback(Action<IPinballItemToggleCallback> onStateChangeCallback)
 		{
 			this.OnStateChangedCallback = onStateChangeCallback;
 		}
 
-		// Token: 0x0603FFBA RID: 262074 RVA: 0x00F7B017 File Offset: 0x00F79217
+		// Token: 0x06034C7B RID: 216187 RVA: 0x00EC1F77 File Offset: 0x00EC0177
 		public void UnBindOnStateChangeCallback()
 		{
 			this.OnStateChangedCallback = null;
 		}
 
-		// Token: 0x0603FFBB RID: 262075 RVA: 0x00F7B020 File Offset: 0x00F79220
+		// Token: 0x06034C7C RID: 216188 RVA: 0x00EC1F80 File Offset: 0x00EC0180
 		public void BindOnCanExecuteChangeCallback(Func<IPinballItemToggleCallback, bool> onCanExecuteChangeCallback)
 		{
 			this.OnCanExecuteChangeCallback = onCanExecuteChangeCallback;
 		}
 
-		// Token: 0x0603FFBC RID: 262076 RVA: 0x00F7B029 File Offset: 0x00F79229
+		// Token: 0x06034C7D RID: 216189 RVA: 0x00EC1F89 File Offset: 0x00EC0189
 		public void BindReduceButtonCallback(Action<IPinballItemButtonCallback> onClickedReduceButton)
 		{
 			this.OnClickedReduceButtonCallback = onClickedReduceButton;
 		}
 
-		// Token: 0x0603FFBD RID: 262077 RVA: 0x00F7B032 File Offset: 0x00F79232
+		// Token: 0x06034C7E RID: 216190 RVA: 0x00EC1F92 File Offset: 0x00EC0192
 		public void UnBindReduceButtonCallback()
 		{
 			this.OnClickedReduceButtonCallback = null;
 		}
 
-		// Token: 0x0603FFBE RID: 262078 RVA: 0x00F7B03C File Offset: 0x00F7923C
+		// Token: 0x06034C7F RID: 216191 RVA: 0x00EC1F9C File Offset: 0x00EC019C
 		protected void OnClickedReduceButton()
 		{
 			if (this.OnClickedReduceButtonCallback != null)
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFBF RID: 262079 RVA: 0x00F7B076 File Offset: 0x00F79276
+		// Token: 0x06034C80 RID: 216192 RVA: 0x00EC1FD6 File Offset: 0x00EC01D6
 		public void BindLongPress(LongPressButtonItem.ELongPressConfigId longPressConfigId, [Nullable(new byte[]
 		{
 			1,
@@ -615,14 +615,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.CanItemLongPressCallback = canLongPressCallBack;
 		}
 
-		// Token: 0x0603FFC0 RID: 262080 RVA: 0x00F7B0A9 File Offset: 0x00F792A9
+		// Token: 0x06034C81 RID: 216193 RVA: 0x00EC2009 File Offset: 0x00EC0209
 		public void UnBindLongPress()
 		{
 			this.OnLongPressActiveCallback = null;
 			this.CanItemLongPressCallback = null;
 		}
 
-		// Token: 0x0603FFC1 RID: 262081 RVA: 0x00F7B0B9 File Offset: 0x00F792B9
+		// Token: 0x06034C82 RID: 216194 RVA: 0x00EC2019 File Offset: 0x00EC0219
 		protected void OnLongPressActivate(bool isShortPress)
 		{
 			if (this.OnLongPressActiveCallback != null)
@@ -631,13 +631,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFC2 RID: 262082 RVA: 0x00F7B0D6 File Offset: 0x00F792D6
+		// Token: 0x06034C83 RID: 216195 RVA: 0x00EC2036 File Offset: 0x00EC0236
 		protected bool CanItemLongPressClick()
 		{
 			return this.CanItemLongPressCallback == null || this.CanItemLongPressCallback(this, this.Data);
 		}
 
-		// Token: 0x0603FFC3 RID: 262083 RVA: 0x00F7B0F4 File Offset: 0x00F792F4
+		// Token: 0x06034C84 RID: 216196 RVA: 0x00EC2054 File Offset: 0x00EC0254
 		private void ExtendTogglePress()
 		{
 			if (this.OnExtendTogglePressCallback != null)
@@ -652,7 +652,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFC4 RID: 262084 RVA: 0x00F7B140 File Offset: 0x00F79340
+		// Token: 0x06034C85 RID: 216197 RVA: 0x00EC20A0 File Offset: 0x00EC02A0
 		private void ExtendToggleRelease()
 		{
 			if (this.OnExtendToggleReleaseCallback != null)
@@ -677,7 +677,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFC5 RID: 262085 RVA: 0x00F7B1C9 File Offset: 0x00F793C9
+		// Token: 0x06034C86 RID: 216198 RVA: 0x00EC2129 File Offset: 0x00EC0329
 		public void BindReduceLongPress([Nullable(new byte[]
 		{
 			1,
@@ -688,13 +688,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			this.OnReduceButtonLongActiveCallback = callback;
 		}
 
-		// Token: 0x0603FFC6 RID: 262086 RVA: 0x00F7B1D2 File Offset: 0x00F793D2
+		// Token: 0x06034C87 RID: 216199 RVA: 0x00EC2132 File Offset: 0x00EC0332
 		public void UnBindReduceLongPress()
 		{
 			this.OnReduceButtonLongActiveCallback = null;
 		}
 
-		// Token: 0x0603FFC7 RID: 262087 RVA: 0x00F7B1DB File Offset: 0x00F793DB
+		// Token: 0x06034C88 RID: 216200 RVA: 0x00EC213B File Offset: 0x00EC033B
 		private void OnReduceButtonLongPressActive(bool isShortPress)
 		{
 			if (this.OnReduceButtonLongActiveCallback != null)
@@ -703,25 +703,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		}
 
-		// Token: 0x0603FFC8 RID: 262088 RVA: 0x00F7B1F8 File Offset: 0x00F793F8
+		// Token: 0x06034C89 RID: 216201 RVA: 0x00EC2158 File Offset: 0x00EC0358
 		public void BindOnExtendToggleClicked(Action<IPinballItemToggleCallback> onExtendToggleClickedCallback)
 		{
 			this.OnExtendToggleClickedCallback = onExtendToggleClickedCallback;
 		}
 
-		// Token: 0x0603FFC9 RID: 262089 RVA: 0x00F7B201 File Offset: 0x00F79401
+		// Token: 0x06034C8A RID: 216202 RVA: 0x00EC2161 File Offset: 0x00EC0361
 		public void UnBindOnExtendToggleClicked()
 		{
 			this.OnExtendToggleClickedCallback = null;
 		}
 
-		// Token: 0x0603FFCA RID: 262090 RVA: 0x00F7B20A File Offset: 0x00F7940A
+		// Token: 0x06034C8B RID: 216203 RVA: 0x00EC216A File Offset: 0x00EC036A
 		public void BindFocusFocusListenerDelegate(Action<IPinballItemToggleCallback> onFocusListenerDelegate)
 		{
 			this.OnFocusListenerDelegate = onFocusListenerDelegate;
 		}
 
-		// Token: 0x0603FFCB RID: 262091 RVA: 0x00F7B213 File Offset: 0x00F79413
+		// Token: 0x06034C8C RID: 216204 RVA: 0x00EC2173 File Offset: 0x00EC0373
 		private void FocusListenerDelegateHandler()
 		{
 			Action<IPinballItemToggleCallback> onFocusListenerDelegate = this.OnFocusListenerDelegate;
@@ -737,7 +737,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			});
 		}
 
-		// Token: 0x040215B3 RID: 136627
+		// Token: 0x0401BEE2 RID: 114402
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, string[]> qualityColorListMap = new Dictionary<int, string[]>
 		{
@@ -793,7 +793,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			}
 		};
 
-		// Token: 0x040215B4 RID: 136628
+		// Token: 0x0401BEE3 RID: 114403
 		[StaticVariableRuleIgnore]
 		private static readonly string[] roleColorList = new string[]
 		{
@@ -803,34 +803,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 			"DCAF88FF"
 		};
 
-		// Token: 0x040215B5 RID: 136629
+		// Token: 0x0401BEE4 RID: 114404
 		private const string COMMON_SPRITE_QUALITY_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/ComItem/SP_ComItemBg3.SP_ComItemBg3";
 
-		// Token: 0x040215B6 RID: 136630
+		// Token: 0x0401BEE5 RID: 114405
 		private const string ROLE_SPRITE_QUALITY_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/ComItem/SP_ComItemBg3Role.SP_ComItemBg3Role";
 
-		// Token: 0x040215B7 RID: 136631
+		// Token: 0x0401BEE6 RID: 114406
 		private const int MAX_QUALITY_ID = 5;
 
-		// Token: 0x040215B8 RID: 136632
+		// Token: 0x0401BEE7 RID: 114407
 		[Nullable(2)]
 		protected object Data;
 
-		// Token: 0x040215B9 RID: 136633
+		// Token: 0x0401BEE8 RID: 114408
 		private UUISprite[] SpriteQualityList = Array.Empty<UUISprite>();
 
-		// Token: 0x040215BA RID: 136634
+		// Token: 0x0401BEE9 RID: 114409
 		[Nullable(2)]
 		private PinballShopItemNewTagView ShopNewTagView;
 
-		// Token: 0x040215BB RID: 136635
+		// Token: 0x0401BEEA RID: 114410
 		private int ShopNewTagSyncGeneration;
 
-		// Token: 0x040215BC RID: 136636
+		// Token: 0x0401BEEB RID: 114411
 		[Nullable(2)]
 		protected LongPressButtonItem LongPressButton;
 
-		// Token: 0x040215BD RID: 136637
+		// Token: 0x0401BEEC RID: 114412
 		[Nullable(new byte[]
 		{
 			2,
@@ -838,7 +838,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<IPinballItemButtonCallback> OnClickedReduceButtonCallback;
 
-		// Token: 0x040215BE RID: 136638
+		// Token: 0x0401BEED RID: 114413
 		[Nullable(new byte[]
 		{
 			2,
@@ -846,7 +846,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Func<IPinballItemToggleCallback, bool> OnCanExecuteChangeCallback;
 
-		// Token: 0x040215BF RID: 136639
+		// Token: 0x0401BEEE RID: 114414
 		[Nullable(new byte[]
 		{
 			2,
@@ -854,7 +854,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<IPinballItemToggleCallback> OnStateChangedCallback;
 
-		// Token: 0x040215C0 RID: 136640
+		// Token: 0x0401BEEF RID: 114415
 		[Nullable(new byte[]
 		{
 			2,
@@ -862,7 +862,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<IPinballItemToggleCallback> OnFocusListenerDelegate;
 
-		// Token: 0x040215C1 RID: 136641
+		// Token: 0x0401BEF0 RID: 114416
 		[Nullable(new byte[]
 		{
 			2,
@@ -870,7 +870,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private readonly Action<IPinballItemToggleCallback> OnExtendTogglePressCallback;
 
-		// Token: 0x040215C2 RID: 136642
+		// Token: 0x0401BEF1 RID: 114417
 		[Nullable(new byte[]
 		{
 			2,
@@ -878,7 +878,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private readonly Action<IPinballItemToggleCallback> OnExtendToggleReleaseCallback;
 
-		// Token: 0x040215C3 RID: 136643
+		// Token: 0x0401BEF2 RID: 114418
 		[Nullable(new byte[]
 		{
 			2,
@@ -886,7 +886,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<IPinballItemToggleCallback> OnExtendToggleClickedCallback;
 
-		// Token: 0x040215C4 RID: 136644
+		// Token: 0x0401BEF3 RID: 114419
 		[Nullable(new byte[]
 		{
 			2,
@@ -895,7 +895,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<bool, PinballItemView, object> OnLongPressActiveCallback;
 
-		// Token: 0x040215C5 RID: 136645
+		// Token: 0x0401BEF4 RID: 114420
 		[Nullable(new byte[]
 		{
 			2,
@@ -904,7 +904,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Func<PinballItemView, object, bool> CanItemLongPressCallback;
 
-		// Token: 0x040215C6 RID: 136646
+		// Token: 0x0401BEF5 RID: 114421
 		[Nullable(new byte[]
 		{
 			2,
@@ -913,44 +913,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item
 		})]
 		private Action<bool, PinballItemView, object> OnReduceButtonLongActiveCallback;
 
-		// Token: 0x040215C7 RID: 136647
+		// Token: 0x0401BEF6 RID: 114422
 		private readonly HashSet<PinballItemGridComponentBase> VisibleComponents = new HashSet<PinballItemGridComponentBase>();
 
-		// Token: 0x040215C8 RID: 136648
+		// Token: 0x0401BEF7 RID: 114423
 		private readonly Dictionary<Type, PinballItemGridComponentBase> ComponentMap = new Dictionary<Type, PinballItemGridComponentBase>();
 
-		// Token: 0x0200C56B RID: 50539
+		// Token: 0x0200AF52 RID: 44882
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403B95D RID: 244061
+			// Token: 0x040362BF RID: 221887
 			public const int ItemToggle = 0;
 
-			// Token: 0x0403B95E RID: 244062
+			// Token: 0x040362C0 RID: 221888
 			public const int SpriteQualityBgOne = 1;
 
-			// Token: 0x0403B95F RID: 244063
+			// Token: 0x040362C1 RID: 221889
 			public const int SpriteQualityBgTwo = 2;
 
-			// Token: 0x0403B960 RID: 244064
+			// Token: 0x040362C2 RID: 221890
 			public const int SpriteQualityBgThree = 3;
 
-			// Token: 0x0403B961 RID: 244065
+			// Token: 0x040362C3 RID: 221891
 			public const int SpriteQualityBgFour = 4;
 
-			// Token: 0x0403B962 RID: 244066
+			// Token: 0x040362C4 RID: 221892
 			public const int SpriteRainbow = 5;
 
-			// Token: 0x0403B963 RID: 244067
+			// Token: 0x040362C5 RID: 221893
 			public const int TexIcon = 6;
 
-			// Token: 0x0403B964 RID: 244068
+			// Token: 0x040362C6 RID: 221894
 			public const int TextName = 7;
 
-			// Token: 0x0403B965 RID: 244069
+			// Token: 0x040362C7 RID: 221895
 			public const int Content = 8;
 
-			// Token: 0x0403B966 RID: 244070
+			// Token: 0x040362C8 RID: 221896
 			public const int TopContent = 9;
 		}
 	}

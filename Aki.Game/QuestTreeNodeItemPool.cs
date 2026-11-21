@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026B2 RID: 9906
+// Token: 0x02001B9D RID: 7069
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeItemPool
 {
-	// Token: 0x060144BF RID: 83135 RVA: 0x00521330 File Offset: 0x0051F530
+	// Token: 0x060119A1 RID: 72097 RVA: 0x00530068 File Offset: 0x0052E268
 	public QuestTreeNodeItemPool(IQuestTreeNodeItemLoader loader, UUIItem parent)
 	{
 		this.Loader = loader;
@@ -23,7 +23,7 @@ public class QuestTreeNodeItemPool
 		}
 	}
 
-	// Token: 0x060144C0 RID: 83136 RVA: 0x005213A8 File Offset: 0x0051F5A8
+	// Token: 0x060119A2 RID: 72098 RVA: 0x005300E0 File Offset: 0x0052E2E0
 	[NullableContext(0)]
 	public UniTask<bool> RefreshByData([Nullable(1)] List<QuestTreeNodeData> dataList)
 	{
@@ -36,7 +36,7 @@ public class QuestTreeNodeItemPool
 		return <RefreshByData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144C1 RID: 83137 RVA: 0x005213F4 File Offset: 0x0051F5F4
+	// Token: 0x060119A3 RID: 72099 RVA: 0x0053012C File Offset: 0x0052E32C
 	private UniTask RefreshByDataInternal(List<QuestTreeNodeData> dataList)
 	{
 		QuestTreeNodeItemPool.<RefreshByDataInternal>d__11 <RefreshByDataInternal>d__;
@@ -48,7 +48,7 @@ public class QuestTreeNodeItemPool
 		return <RefreshByDataInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144C2 RID: 83138 RVA: 0x0052143F File Offset: 0x0051F63F
+	// Token: 0x060119A4 RID: 72100 RVA: 0x00530177 File Offset: 0x0052E377
 	public void ClearPool()
 	{
 		this.IsCleared = true;
@@ -56,7 +56,7 @@ public class QuestTreeNodeItemPool
 		this.InUseCountMap.Clear();
 	}
 
-	// Token: 0x060144C3 RID: 83139 RVA: 0x00521460 File Offset: 0x0051F660
+	// Token: 0x060119A5 RID: 72101 RVA: 0x00530198 File Offset: 0x0052E398
 	public IQuestTreeNodeItem GetItemByData(QuestTreeNodeData data)
 	{
 		IQuestTreeNodeItem result;
@@ -64,7 +64,7 @@ public class QuestTreeNodeItemPool
 		return result;
 	}
 
-	// Token: 0x060144C4 RID: 83140 RVA: 0x00521480 File Offset: 0x0051F680
+	// Token: 0x060119A6 RID: 72102 RVA: 0x005301B8 File Offset: 0x0052E3B8
 	private UniTask LoadItems([Nullable(new byte[]
 	{
 		1,
@@ -81,7 +81,7 @@ public class QuestTreeNodeItemPool
 		return <LoadItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144C5 RID: 83141 RVA: 0x005214CC File Offset: 0x0051F6CC
+	// Token: 0x060119A7 RID: 72103 RVA: 0x00530204 File Offset: 0x0052E404
 	private UniTask ProcessTask([Nullable(new byte[]
 	{
 		0,
@@ -97,7 +97,7 @@ public class QuestTreeNodeItemPool
 		return <ProcessTask>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144C6 RID: 83142 RVA: 0x00521518 File Offset: 0x0051F718
+	// Token: 0x060119A8 RID: 72104 RVA: 0x00530250 File Offset: 0x0052E450
 	private void ResetPool()
 	{
 		this.DataItemMap.Clear();
@@ -115,30 +115,30 @@ public class QuestTreeNodeItemPool
 		}
 	}
 
-	// Token: 0x040098AA RID: 39082
+	// Token: 0x04009A02 RID: 39426
 	private const int HIERARCHY_START_INDEX = 2;
 
-	// Token: 0x040098AB RID: 39083
+	// Token: 0x04009A03 RID: 39427
 	private readonly Dictionary<int, List<IQuestTreeNodeItem>> Pool = new Dictionary<int, List<IQuestTreeNodeItem>>();
 
-	// Token: 0x040098AC RID: 39084
+	// Token: 0x04009A04 RID: 39428
 	private readonly Dictionary<int, int> InUseCountMap = new Dictionary<int, int>();
 
-	// Token: 0x040098AD RID: 39085
+	// Token: 0x04009A05 RID: 39429
 	private readonly Dictionary<QuestTreeNodeData, IQuestTreeNodeItem> DataItemMap = new Dictionary<QuestTreeNodeData, IQuestTreeNodeItem>();
 
-	// Token: 0x040098AE RID: 39086
+	// Token: 0x04009A06 RID: 39430
 	private int RefreshVersion;
 
-	// Token: 0x040098AF RID: 39087
+	// Token: 0x04009A07 RID: 39431
 	private UniTask RefreshTail = UniTask.CompletedTask;
 
-	// Token: 0x040098B0 RID: 39088
+	// Token: 0x04009A08 RID: 39432
 	private bool IsCleared;
 
-	// Token: 0x040098B1 RID: 39089
+	// Token: 0x04009A09 RID: 39433
 	private readonly IQuestTreeNodeItemLoader Loader;
 
-	// Token: 0x040098B2 RID: 39090
+	// Token: 0x04009A0A RID: 39434
 	private readonly UUIItem Parent;
 }

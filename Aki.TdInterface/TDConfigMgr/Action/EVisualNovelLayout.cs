@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016FC RID: 5884
+	// Token: 0x02001878 RID: 6264
 	[EnumExtensions]
 	public enum EVisualNovelLayout
 	{
-		// Token: 0x04004FA7 RID: 20391
+		// Token: 0x040053D4 RID: 21460
 		Portrait,
-		// Token: 0x04004FA8 RID: 20392
+		// Token: 0x040053D5 RID: 21461
 		TextBox
 	}
 }

@@ -1,36 +1,36 @@
 ﻿using System;
 
-// Token: 0x02001C5D RID: 7261
+// Token: 0x0200111C RID: 4380
 internal enum EGachaAccumulateRewardItemComponent
 {
-	// Token: 0x04006430 RID: 25648
+	// Token: 0x04006502 RID: 25858
 	Button,
-	// Token: 0x04006431 RID: 25649
+	// Token: 0x04006503 RID: 25859
 	NormalCanFinishItem,
-	// Token: 0x04006432 RID: 25650
+	// Token: 0x04006504 RID: 25860
 	NormalNotFinishItem,
-	// Token: 0x04006433 RID: 25651
+	// Token: 0x04006505 RID: 25861
 	SpecialCanFinishItem,
-	// Token: 0x04006434 RID: 25652
+	// Token: 0x04006506 RID: 25862
 	SpecialNotFinishItem,
-	// Token: 0x04006435 RID: 25653
+	// Token: 0x04006507 RID: 25863
 	Item,
-	// Token: 0x04006436 RID: 25654
+	// Token: 0x04006508 RID: 25864
 	ProgressText,
-	// Token: 0x04006437 RID: 25655
+	// Token: 0x04006509 RID: 25865
 	UnFinishTextBackground,
-	// Token: 0x04006438 RID: 25656
+	// Token: 0x0400650A RID: 25866
 	FinishTextBackground,
-	// Token: 0x04006439 RID: 25657
+	// Token: 0x0400650B RID: 25867
 	SelectTag,
-	// Token: 0x0400643A RID: 25658
+	// Token: 0x0400650C RID: 25868
 	RedDot,
-	// Token: 0x0400643B RID: 25659
+	// Token: 0x0400650D RID: 25869
 	SpriteBar,
-	// Token: 0x0400643C RID: 25660
+	// Token: 0x0400650E RID: 25870
 	ItemSelf,
-	// Token: 0x0400643D RID: 25661
+	// Token: 0x0400650F RID: 25871
 	NormalFinishItem,
-	// Token: 0x0400643E RID: 25662
+	// Token: 0x04006510 RID: 25872
 	SpecialFinishItem
 }

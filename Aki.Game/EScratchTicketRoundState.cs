@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020014E0 RID: 5344
+// Token: 0x02000998 RID: 2456
 public enum EScratchTicketRoundState
 {
-	// Token: 0x040042EB RID: 17131
+	// Token: 0x04004390 RID: 17296
 	Lock,
-	// Token: 0x040042EC RID: 17132
+	// Token: 0x04004391 RID: 17297
 	InProgress,
-	// Token: 0x040042ED RID: 17133
+	// Token: 0x04004392 RID: 17298
 	Finish
 }

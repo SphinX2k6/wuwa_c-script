@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.LevelGamePlay.ProjectPuzzle
 {
-	// Token: 0x02006AB8 RID: 27320
+	// Token: 0x02005C15 RID: 23573
 	public enum EComponentType
 	{
-		// Token: 0x040237A4 RID: 145316
+		// Token: 0x0401E996 RID: 125334
 		CaptionItem,
-		// Token: 0x040237A5 RID: 145317
+		// Token: 0x0401E997 RID: 125335
 		DragArea,
-		// Token: 0x040237A6 RID: 145318
+		// Token: 0x0401E998 RID: 125336
 		ResetButton,
-		// Token: 0x040237A7 RID: 145319
+		// Token: 0x0401E999 RID: 125337
 		TxtTip,
-		// Token: 0x040237A8 RID: 145320
+		// Token: 0x0401E99A RID: 125338
 		RollUpButton,
-		// Token: 0x040237A9 RID: 145321
+		// Token: 0x0401E99B RID: 125339
 		RollDownButton
 	}
 }

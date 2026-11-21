@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D0A RID: 23818
+	// Token: 0x02004CEC RID: 19692
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonBossStateMultiLayerView : CommonBossStateView
 	{
-		// Token: 0x0603C578 RID: 247160 RVA: 0x00E746A6 File Offset: 0x00E728A6
+		// Token: 0x060314D1 RID: 201937 RVA: 0x00DC4D0E File Offset: 0x00DC2F0E
 		protected override string GetResourceId()
 		{
 			return "UiItem_BossStateMultiLayer_Prefab";
 		}
 
-		// Token: 0x0603C579 RID: 247161 RVA: 0x00E746B0 File Offset: 0x00E728B0
+		// Token: 0x060314D2 RID: 201938 RVA: 0x00DC4D18 File Offset: 0x00DC2F18
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}));
 		}
 
-		// Token: 0x0603C57A RID: 247162 RVA: 0x00E74754 File Offset: 0x00E72954
+		// Token: 0x060314D3 RID: 201939 RVA: 0x00DC4DBC File Offset: 0x00DC2FBC
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MaxFadeDuration = ConfigCommonParamById.GetFloatConfig("BossHpBarMultiLayer_MaxFadeDuration").Value;
 		}
 
-		// Token: 0x0603C57B RID: 247163 RVA: 0x00E747CC File Offset: 0x00E729CC
+		// Token: 0x060314D4 RID: 201940 RVA: 0x00DC4E34 File Offset: 0x00DC3034
 		private IReadOnlyList<string> GetHpBarColorConfig()
 		{
 			Entity entity = base.GetEntity();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return array;
 		}
 
-		// Token: 0x0603C57C RID: 247164 RVA: 0x00E748BC File Offset: 0x00E72ABC
+		// Token: 0x060314D5 RID: 201941 RVA: 0x00DC4F24 File Offset: 0x00DC3124
 		private void InitBarColor()
 		{
 			IReadOnlyList<string> hpBarColorConfig = this.GetHpBarColorConfig();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C57D RID: 247165 RVA: 0x00E74A06 File Offset: 0x00E72C06
+		// Token: 0x060314D6 RID: 201942 RVA: 0x00DC506E File Offset: 0x00DC326E
 		protected override void OnActivate()
 		{
 			base.OnActivate();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitState();
 		}
 
-		// Token: 0x0603C57E RID: 247166 RVA: 0x00E74A1A File Offset: 0x00E72C1A
+		// Token: 0x060314D7 RID: 201943 RVA: 0x00DC5082 File Offset: 0x00DC3282
 		protected override void OnDeactivate()
 		{
 			this.IsDeactivate = true;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnDeactivate();
 		}
 
-		// Token: 0x0603C57F RID: 247167 RVA: 0x00E74A3A File Offset: 0x00E72C3A
+		// Token: 0x060314D8 RID: 201944 RVA: 0x00DC50A2 File Offset: 0x00DC32A2
 		protected override void OnAfterHide()
 		{
 			if (this.IsDeactivate)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C580 RID: 247168 RVA: 0x00E74A4C File Offset: 0x00E72C4C
+		// Token: 0x060314D9 RID: 201945 RVA: 0x00DC50B4 File Offset: 0x00DC32B4
 		protected override void OnBeforeDestroy()
 		{
 			this.IsInvalid = true;
@@ -182,13 +182,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603C581 RID: 247169 RVA: 0x00E74AD8 File Offset: 0x00E72CD8
+		// Token: 0x060314DA RID: 201946 RVA: 0x00DC5140 File Offset: 0x00DC3340
 		protected override bool DestroyOverride()
 		{
 			return false;
 		}
 
-		// Token: 0x0603C582 RID: 247170 RVA: 0x00E74ADB File Offset: 0x00E72CDB
+		// Token: 0x060314DB RID: 201947 RVA: 0x00DC5143 File Offset: 0x00DC3343
 		protected override void InitAllTweenAnim()
 		{
 			base.InitAllTweenAnim();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.InitTweenAnim(44);
 		}
 
-		// Token: 0x0603C583 RID: 247171 RVA: 0x00E74AF4 File Offset: 0x00E72CF4
+		// Token: 0x060314DC RID: 201948 RVA: 0x00DC515C File Offset: 0x00DC335C
 		private unsafe void InitState()
 		{
 			Entity entity = base.GetEntity();
@@ -297,14 +297,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.RefreshHpAndShield(false);
 		}
 
-		// Token: 0x0603C584 RID: 247172 RVA: 0x00E75046 File Offset: 0x00E73246
+		// Token: 0x060314DD RID: 201949 RVA: 0x00DC56AE File Offset: 0x00DC38AE
 		protected override void OnBossHeathChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.CheckSegment((int)Math.Ceiling((double)newValue / this.HpPerSegment));
 			base.RefreshHpAndShield(true);
 		}
 
-		// Token: 0x0603C585 RID: 247173 RVA: 0x00E75064 File Offset: 0x00E73264
+		// Token: 0x060314DE RID: 201950 RVA: 0x00DC56CC File Offset: 0x00DC38CC
 		private double GetHpAttributeValue(EAttributeType attributeId)
 		{
 			float currentAttributeValueById = base.GetCurrentAttributeValueById(attributeId);
@@ -315,13 +315,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (double)currentAttributeValueById;
 		}
 
-		// Token: 0x0603C586 RID: 247174 RVA: 0x00E7509D File Offset: 0x00E7329D
+		// Token: 0x060314DF RID: 201951 RVA: 0x00DC5705 File Offset: 0x00DC3905
 		private float GetHpPercent()
 		{
 			return (float)(this.GetHpAttributeValue(EAttributeType.Life) % (this.HpPerSegment + 0.0010000000474974513) / this.HpPerSegment);
 		}
 
-		// Token: 0x0603C587 RID: 247175 RVA: 0x00E750C0 File Offset: 0x00E732C0
+		// Token: 0x060314E0 RID: 201952 RVA: 0x00DC5728 File Offset: 0x00DC3928
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<float, float>(hpPercent, item);
 		}
 
-		// Token: 0x0603C588 RID: 247176 RVA: 0x00E75114 File Offset: 0x00E73314
+		// Token: 0x060314E1 RID: 201953 RVA: 0x00DC577C File Offset: 0x00DC397C
 		protected override void PlayBarAnimation(float hpPercent)
 		{
 			if (this.SegmentState == CommonBossStateMultiLayerView.ESegmentState.Multi)
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.PlayBarAnimation(hpPercent);
 		}
 
-		// Token: 0x0603C589 RID: 247177 RVA: 0x00E75154 File Offset: 0x00E73354
+		// Token: 0x060314E2 RID: 201954 RVA: 0x00DC57BC File Offset: 0x00DC39BC
 		protected override void SetBarBufferPercent(float pctBuffer, float pctReal)
 		{
 			if (this.SegmentState == CommonBossStateMultiLayerView.ESegmentState.Multi)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetBarBufferPercent(pctBuffer, pctReal);
 		}
 
-		// Token: 0x0603C58A RID: 247178 RVA: 0x00E7519B File Offset: 0x00E7339B
+		// Token: 0x060314E3 RID: 201955 RVA: 0x00DC5803 File Offset: 0x00DC3A03
 		protected override void SetHpBarPercent(float percent)
 		{
 			if (this.SegmentState == CommonBossStateMultiLayerView.ESegmentState.Multi)
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetHpBarPercent(percent);
 		}
 
-		// Token: 0x0603C58B RID: 247179 RVA: 0x00E751CC File Offset: 0x00E733CC
+		// Token: 0x060314E4 RID: 201956 RVA: 0x00DC5834 File Offset: 0x00DC3A34
 		private void CheckSegment(int newTarget)
 		{
 			if (newTarget == this.TargetSegmentNum)
@@ -426,13 +426,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			CommonBossStateMultiLayerView.ESegmentState segmentState = this.SegmentState;
 		}
 
-		// Token: 0x0603C58C RID: 247180 RVA: 0x00E75323 File Offset: 0x00E73523
+		// Token: 0x060314E5 RID: 201957 RVA: 0x00DC598B File Offset: 0x00DC3B8B
 		private void ResetCurrentSegment()
 		{
 			this.UpdateBarColor(this.CurrentSegmentNum);
 		}
 
-		// Token: 0x0603C58D RID: 247181 RVA: 0x00E75334 File Offset: 0x00E73534
+		// Token: 0x060314E6 RID: 201958 RVA: 0x00DC599C File Offset: 0x00DC3B9C
 		private void UpdateBarColor(int num)
 		{
 			int num2 = (this.TargetSegmentNum < this.CurrentSegmentNum) ? -1 : 1;
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			LguiUtil.Instance.SetLocalTextNew(this.TextNum, "BossPilingActivity_BossHpVesselNum", new <>z__ReadOnlySingleElementList<object>(num));
 		}
 
-		// Token: 0x0603C58E RID: 247182 RVA: 0x00E754DC File Offset: 0x00E736DC
+		// Token: 0x060314E7 RID: 201959 RVA: 0x00DC5B44 File Offset: 0x00DC3D44
 		private void UpdateNumFx(int num, int dir)
 		{
 			if (this.NextNumFx != num && Time.Instance.Now - this.NextNumTime > 300.0)
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C58F RID: 247183 RVA: 0x00E75538 File Offset: 0x00E73738
+		// Token: 0x060314E8 RID: 201960 RVA: 0x00DC5BA0 File Offset: 0x00DC3DA0
 		private void NextSegment()
 		{
 			int num = 1;
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C590 RID: 247184 RVA: 0x00E755BC File Offset: 0x00E737BC
+		// Token: 0x060314E9 RID: 201961 RVA: 0x00DC5C24 File Offset: 0x00DC3E24
 		private void TickSegmentBar(float delta)
 		{
 			if (this.PercentSegment.Update(delta))
@@ -555,41 +555,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C591 RID: 247185 RVA: 0x00E756E8 File Offset: 0x00E738E8
+		// Token: 0x060314EA RID: 201962 RVA: 0x00DC5D50 File Offset: 0x00DC3F50
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
 			this.TickSegmentBar(delta);
 		}
 
-		// Token: 0x0401F6EE RID: 128750
+		// Token: 0x0401A1A7 RID: 106919
 		private CommonBossStateMultiLayerView.ESegmentState SegmentState;
 
-		// Token: 0x0401F6EF RID: 128751
+		// Token: 0x0401A1A8 RID: 106920
 		private double HpPerSegment = 1.0;
 
-		// Token: 0x0401F6F0 RID: 128752
+		// Token: 0x0401A1A9 RID: 106921
 		private float MaxFadeDuration = 500f;
 
-		// Token: 0x0401F6F1 RID: 128753
+		// Token: 0x0401A1AA RID: 106922
 		private float MinDurationPerSegment = 100f;
 
-		// Token: 0x0401F6F2 RID: 128754
+		// Token: 0x0401A1AB RID: 106923
 		private float SingleFadeDuration = 100f;
 
-		// Token: 0x0401F6F3 RID: 128755
+		// Token: 0x0401A1AC RID: 106924
 		private double HpLimit;
 
-		// Token: 0x0401F6F4 RID: 128756
+		// Token: 0x0401A1AD RID: 106925
 		private bool IsColorMode = true;
 
-		// Token: 0x0401F6F5 RID: 128757
+		// Token: 0x0401A1AE RID: 106926
 		private int NumColor;
 
-		// Token: 0x0401F6F6 RID: 128758
+		// Token: 0x0401A1AF RID: 106927
 		private readonly List<FColor> BarColors = new List<FColor>();
 
-		// Token: 0x0401F6F7 RID: 128759
+		// Token: 0x0401A1B0 RID: 106928
 		[Nullable(new byte[]
 		{
 			1,
@@ -597,79 +597,79 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private readonly List<ULGUISpriteData_BaseObject> BarSprites = new List<ULGUISpriteData_BaseObject>();
 
-		// Token: 0x0401F6F8 RID: 128760
+		// Token: 0x0401A1B1 RID: 106929
 		private readonly List<int> LoadHandles = new List<int>();
 
-		// Token: 0x0401F6F9 RID: 128761
+		// Token: 0x0401A1B2 RID: 106930
 		private int LoadWhiteBarHd;
 
-		// Token: 0x0401F6FA RID: 128762
+		// Token: 0x0401A1B3 RID: 106931
 		private int CurrentSegmentNum;
 
-		// Token: 0x0401F6FB RID: 128763
+		// Token: 0x0401A1B4 RID: 106932
 		private int TargetSegmentNum;
 
-		// Token: 0x0401F6FC RID: 128764
+		// Token: 0x0401A1B5 RID: 106933
 		private readonly ProgressPercentMachine PercentSegment = new ProgressPercentMachine();
 
-		// Token: 0x0401F6FD RID: 128765
+		// Token: 0x0401A1B6 RID: 106934
 		private int SegmentDelta = 1;
 
-		// Token: 0x0401F6FE RID: 128766
+		// Token: 0x0401A1B7 RID: 106935
 		private int ColorIndex = -1;
 
-		// Token: 0x0401F6FF RID: 128767
+		// Token: 0x0401A1B8 RID: 106936
 		private bool ColorInit;
 
-		// Token: 0x0401F700 RID: 128768
+		// Token: 0x0401A1B9 RID: 106937
 		[Nullable(2)]
 		private UUISprite BgBar;
 
-		// Token: 0x0401F701 RID: 128769
+		// Token: 0x0401A1BA RID: 106938
 		[Nullable(2)]
 		private UUIText TextNum;
 
-		// Token: 0x0401F702 RID: 128770
+		// Token: 0x0401A1BB RID: 106939
 		private bool IsDeactivate;
 
-		// Token: 0x0401F703 RID: 128771
+		// Token: 0x0401A1BC RID: 106940
 		private bool IsInvalid;
 
-		// Token: 0x0401F704 RID: 128772
+		// Token: 0x0401A1BD RID: 106941
 		private float MultiRemainingTime;
 
-		// Token: 0x0401F705 RID: 128773
+		// Token: 0x0401A1BE RID: 106942
 		private int LastDir;
 
-		// Token: 0x0401F706 RID: 128774
+		// Token: 0x0401A1BF RID: 106943
 		private int NextNumFx;
 
-		// Token: 0x0401F707 RID: 128775
+		// Token: 0x0401A1C0 RID: 106944
 		private double NextNumTime;
 
-		// Token: 0x0200BF81 RID: 49025
+		// Token: 0x0200A987 RID: 43399
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039BFB RID: 236539
+			// Token: 0x040345BD RID: 214461
 			BarHp = 40,
-			// Token: 0x04039BFC RID: 236540
+			// Token: 0x040345BE RID: 214462
 			PnlMultiNum,
-			// Token: 0x04039BFD RID: 236541
+			// Token: 0x040345BF RID: 214463
 			TextNum,
-			// Token: 0x04039BFE RID: 236542
+			// Token: 0x040345C0 RID: 214464
 			AniNumDown,
-			// Token: 0x04039BFF RID: 236543
+			// Token: 0x040345C1 RID: 214465
 			AniNumUp
 		}
 
-		// Token: 0x0200BF82 RID: 49026
+		// Token: 0x0200A988 RID: 43400
 		[NullableContext(0)]
 		private enum ESegmentState
 		{
-			// Token: 0x04039C01 RID: 236545
+			// Token: 0x040345C3 RID: 214467
 			Single,
-			// Token: 0x04039C02 RID: 236546
+			// Token: 0x040345C4 RID: 214468
 			Multi
 		}
 	}

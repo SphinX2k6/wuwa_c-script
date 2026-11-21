@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000054 RID: 84
+	// Token: 0x0200005C RID: 92
 	public class ConfigActivityTabAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001F8 RID: 504 RVA: 0x00064D7C File Offset: 0x00062F7C
+		// Token: 0x06000228 RID: 552 RVA: 0x00069630 File Offset: 0x00067830
 		static ConfigActivityTabAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityTabAll.CreateStaticDefaultValue), new Action(ConfigActivityTabAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001F9 RID: 505 RVA: 0x00064D9C File Offset: 0x00062F9C
+		// Token: 0x06000229 RID: 553 RVA: 0x00069650 File Offset: 0x00067850
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityTabAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001FA RID: 506 RVA: 0x00064E1B File Offset: 0x0006301B
+		// Token: 0x0600022A RID: 554 RVA: 0x000696CF File Offset: 0x000678CF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityTabAll.LogPair = null;
 			ConfigActivityTabAll.HandleId = 0;
 		}
 
-		// Token: 0x060001FB RID: 507 RVA: 0x00064E29 File Offset: 0x00063029
+		// Token: 0x0600022B RID: 555 RVA: 0x000696DD File Offset: 0x000678DD
 		public static void Init()
 		{
 			ConfigActivityTabAll.HandleId = ConfigCommon.InitDataStatement(ConfigActivityTabAll.HandleId, "db_weeklychallenge.db", "select BinData from `ActivityTab`");
 		}
 
-		// Token: 0x060001FC RID: 508 RVA: 0x00064E44 File Offset: 0x00063044
+		// Token: 0x0600022C RID: 556 RVA: 0x000696F8 File Offset: 0x000678F8
 		[NullableContext(2)]
 		public static IReadOnlyList<ActivityTab> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000230 RID: 560
+		// Token: 0x04000268 RID: 616
 		private const string DB = "db_weeklychallenge.db";
 
-		// Token: 0x04000231 RID: 561
+		// Token: 0x04000269 RID: 617
 		private const string FILE = "z.周常框架.xlsx";
 
-		// Token: 0x04000232 RID: 562
+		// Token: 0x0400026A RID: 618
 		private const string TABLE = "ActivityTab";
 
-		// Token: 0x04000233 RID: 563
+		// Token: 0x0400026B RID: 619
 		private const string COMMAND = "select BinData from `ActivityTab`";
 
-		// Token: 0x04000234 RID: 564
+		// Token: 0x0400026C RID: 620
 		private const string KEY_PREFIX = "ActivityTabAll";
 
-		// Token: 0x04000235 RID: 565
+		// Token: 0x0400026D RID: 621
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000236 RID: 566
+		// Token: 0x0400026E RID: 622
 		private static int HandleId;
 	}
 }

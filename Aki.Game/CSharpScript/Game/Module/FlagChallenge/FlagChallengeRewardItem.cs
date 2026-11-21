@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A6C RID: 23148
+	// Token: 0x02004A48 RID: 19016
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeRewardItem : GridProxyAbstract<FlagChallengeTaskData>
 	{
-		// Token: 0x0603AA91 RID: 240273 RVA: 0x00DF7EF0 File Offset: 0x00DF60F0
+		// Token: 0x0602F9DA RID: 195034 RVA: 0x00D48474 File Offset: 0x00D46674
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,19 +36,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA92 RID: 240274 RVA: 0x00DF7FF1 File Offset: 0x00DF61F1
+		// Token: 0x0602F9DB RID: 195035 RVA: 0x00D48575 File Offset: 0x00D46775
 		protected override void OnStart()
 		{
 			this.ItemListScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(5), () => new CommonItemSmallItemGrid(), null, false, null);
 		}
 
-		// Token: 0x0603AA93 RID: 240275 RVA: 0x00DF8027 File Offset: 0x00DF6227
+		// Token: 0x0602F9DC RID: 195036 RVA: 0x00D485AB File Offset: 0x00D467AB
 		protected override void OnBeforeDestroy()
 		{
 			this.ReceiveCallback = null;
 		}
 
-		// Token: 0x0603AA94 RID: 240276 RVA: 0x00DF8030 File Offset: 0x00DF6230
+		// Token: 0x0602F9DD RID: 195037 RVA: 0x00D485B4 File Offset: 0x00D467B4
 		public override void Refresh(FlagChallengeTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -67,13 +67,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.ItemListScrollView.RefreshByData(data.GetRewardList(), null, false);
 		}
 
-		// Token: 0x0603AA95 RID: 240277 RVA: 0x00DF8109 File Offset: 0x00DF6309
+		// Token: 0x0602F9DE RID: 195038 RVA: 0x00D4868D File Offset: 0x00D4688D
 		public void SetReceiveCallback(Action<FlagChallengeTaskData> callback)
 		{
 			this.ReceiveCallback = callback;
 		}
 
-		// Token: 0x0603AA96 RID: 240278 RVA: 0x00DF8112 File Offset: 0x00DF6312
+		// Token: 0x0602F9DF RID: 195039 RVA: 0x00D48696 File Offset: 0x00D46896
 		private void OnReceiveClick()
 		{
 			Action<FlagChallengeTaskData> receiveCallback = this.ReceiveCallback;
@@ -84,11 +84,11 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			receiveCallback(this.Data);
 		}
 
-		// Token: 0x0401E9AA RID: 125354
+		// Token: 0x04019451 RID: 103505
 		[Nullable(2)]
 		private FlagChallengeTaskData Data;
 
-		// Token: 0x0401E9AB RID: 125355
+		// Token: 0x04019452 RID: 103506
 		[Nullable(new byte[]
 		{
 			2,
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 		})]
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> ItemListScrollView;
 
-		// Token: 0x0401E9AC RID: 125356
+		// Token: 0x04019453 RID: 103507
 		[Nullable(new byte[]
 		{
 			2,

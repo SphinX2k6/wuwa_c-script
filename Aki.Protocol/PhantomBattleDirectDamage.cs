@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C7D RID: 3197
+	// Token: 0x02000C6D RID: 3181
 	public sealed class PhantomBattleDirectDamage : IMessage<PhantomBattleDirectDamage>, IMessage, IEquatable<PhantomBattleDirectDamage>, IDeepCloneable<PhantomBattleDirectDamage>, IBufferMessage
 	{
-		// Token: 0x0601153A RID: 70970 RVA: 0x00289607 File Offset: 0x00287807
+		// Token: 0x0601143A RID: 70714 RVA: 0x00287897 File Offset: 0x00285A97
 		[NullableContext(1)]
 		public static PhantomBattleDirectDamage Create()
 		{
 			return new PhantomBattleDirectDamage();
 		}
 
-		// Token: 0x17003955 RID: 14677
-		// (get) Token: 0x0601153B RID: 70971 RVA: 0x0028960E File Offset: 0x0028780E
+		// Token: 0x1700391E RID: 14622
+		// (get) Token: 0x0601143B RID: 70715 RVA: 0x0028789E File Offset: 0x00285A9E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003956 RID: 14678
-		// (get) Token: 0x0601153C RID: 70972 RVA: 0x00289611 File Offset: 0x00287811
+		// Token: 0x1700391F RID: 14623
+		// (get) Token: 0x0601143C RID: 70716 RVA: 0x002878A1 File Offset: 0x00285AA1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601153D RID: 70973 RVA: 0x00289618 File Offset: 0x00287818
+		// Token: 0x0601143D RID: 70717 RVA: 0x002878A8 File Offset: 0x00285AA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDirectDamage()
 		{
 		}
 
-		// Token: 0x0601153E RID: 70974 RVA: 0x00289620 File Offset: 0x00287820
+		// Token: 0x0601143E RID: 70718 RVA: 0x002878B0 File Offset: 0x00285AB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDirectDamage(PhantomBattleDirectDamage other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601153F RID: 70975 RVA: 0x00289674 File Offset: 0x00287874
+		// Token: 0x0601143F RID: 70719 RVA: 0x00287904 File Offset: 0x00285B04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleDirectDamage Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new PhantomBattleDirectDamage(this);
 		}
 
-		// Token: 0x17003957 RID: 14679
-		// (get) Token: 0x06011540 RID: 70976 RVA: 0x0028967C File Offset: 0x0028787C
-		// (set) Token: 0x06011541 RID: 70977 RVA: 0x00289684 File Offset: 0x00287884
+		// Token: 0x17003920 RID: 14624
+		// (get) Token: 0x06011440 RID: 70720 RVA: 0x0028790C File Offset: 0x00285B0C
+		// (set) Token: 0x06011441 RID: 70721 RVA: 0x00287914 File Offset: 0x00285B14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool TargetIsPlayer
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003958 RID: 14680
-		// (get) Token: 0x06011542 RID: 70978 RVA: 0x0028968D File Offset: 0x0028788D
-		// (set) Token: 0x06011543 RID: 70979 RVA: 0x00289695 File Offset: 0x00287895
+		// Token: 0x17003921 RID: 14625
+		// (get) Token: 0x06011442 RID: 70722 RVA: 0x0028791D File Offset: 0x00285B1D
+		// (set) Token: 0x06011443 RID: 70723 RVA: 0x00287925 File Offset: 0x00285B25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Damage
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003959 RID: 14681
-		// (get) Token: 0x06011544 RID: 70980 RVA: 0x0028969E File Offset: 0x0028789E
-		// (set) Token: 0x06011545 RID: 70981 RVA: 0x002896A6 File Offset: 0x002878A6
+		// Token: 0x17003922 RID: 14626
+		// (get) Token: 0x06011444 RID: 70724 RVA: 0x0028792E File Offset: 0x00285B2E
+		// (set) Token: 0x06011445 RID: 70725 RVA: 0x00287936 File Offset: 0x00285B36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CardFighterUid
@@ -119,9 +119,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700395A RID: 14682
-		// (get) Token: 0x06011546 RID: 70982 RVA: 0x002896AF File Offset: 0x002878AF
-		// (set) Token: 0x06011547 RID: 70983 RVA: 0x002896B7 File Offset: 0x002878B7
+		// Token: 0x17003923 RID: 14627
+		// (get) Token: 0x06011446 RID: 70726 RVA: 0x0028793F File Offset: 0x00285B3F
+		// (set) Token: 0x06011447 RID: 70727 RVA: 0x00287947 File Offset: 0x00285B47
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FinalHp
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011548 RID: 70984 RVA: 0x002896C0 File Offset: 0x002878C0
+		// Token: 0x06011448 RID: 70728 RVA: 0x00287950 File Offset: 0x00285B50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleDirectDamage);
 		}
 
-		// Token: 0x06011549 RID: 70985 RVA: 0x002896D0 File Offset: 0x002878D0
+		// Token: 0x06011449 RID: 70729 RVA: 0x00287960 File Offset: 0x00285B60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleDirectDamage other)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.TargetIsPlayer == other.TargetIsPlayer && this.Damage == other.Damage && this.CardFighterUid == other.CardFighterUid && this.FinalHp == other.FinalHp && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601154A RID: 70986 RVA: 0x0028973C File Offset: 0x0028793C
+		// Token: 0x0601144A RID: 70730 RVA: 0x002879CC File Offset: 0x00285BCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601154B RID: 70987 RVA: 0x002897C6 File Offset: 0x002879C6
+		// Token: 0x0601144B RID: 70731 RVA: 0x00287A56 File Offset: 0x00285C56
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601154C RID: 70988 RVA: 0x002897D3 File Offset: 0x002879D3
+		// Token: 0x0601144C RID: 70732 RVA: 0x00287A63 File Offset: 0x00285C63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601154D RID: 70989 RVA: 0x002897DC File Offset: 0x002879DC
+		// Token: 0x0601144D RID: 70733 RVA: 0x00287A6C File Offset: 0x00285C6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601154E RID: 70990 RVA: 0x0028986C File Offset: 0x00287A6C
+		// Token: 0x0601144E RID: 70734 RVA: 0x00287AFC File Offset: 0x00285CFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -257,7 +257,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601154F RID: 70991 RVA: 0x002898E8 File Offset: 0x00287AE8
+		// Token: 0x0601144F RID: 70735 RVA: 0x00287B78 File Offset: 0x00285D78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleDirectDamage other)
@@ -285,7 +285,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06011550 RID: 70992 RVA: 0x00289960 File Offset: 0x00287B60
+		// Token: 0x06011450 RID: 70736 RVA: 0x00287BF0 File Offset: 0x00285DF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -293,7 +293,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06011551 RID: 70993 RVA: 0x0028996C File Offset: 0x00287B6C
+		// Token: 0x06011451 RID: 70737 RVA: 0x00287BFC File Offset: 0x00285DFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -335,31 +335,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006D83 RID: 28035
+		// Token: 0x04006D97 RID: 28055
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006D84 RID: 28036
+		// Token: 0x04006D98 RID: 28056
 		public const int TargetIsPlayerFieldNumber = 1;
 
-		// Token: 0x04006D85 RID: 28037
+		// Token: 0x04006D99 RID: 28057
 		private bool targetIsPlayer_;
 
-		// Token: 0x04006D86 RID: 28038
+		// Token: 0x04006D9A RID: 28058
 		public const int DamageFieldNumber = 2;
 
-		// Token: 0x04006D87 RID: 28039
+		// Token: 0x04006D9B RID: 28059
 		private int damage_;
 
-		// Token: 0x04006D88 RID: 28040
+		// Token: 0x04006D9C RID: 28060
 		public const int CardFighterUidFieldNumber = 3;
 
-		// Token: 0x04006D89 RID: 28041
+		// Token: 0x04006D9D RID: 28061
 		private int cardFighterUid_;
 
-		// Token: 0x04006D8A RID: 28042
+		// Token: 0x04006D9E RID: 28062
 		public const int FinalHpFieldNumber = 4;
 
-		// Token: 0x04006D8B RID: 28043
+		// Token: 0x04006D9F RID: 28063
 		private int finalHp_;
 	}
 }

@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200273A RID: 10042
+// Token: 0x02001C25 RID: 7205
 public class RacingBetsTerrainTip : UiViewBase
 {
-	// Token: 0x060149AC RID: 84396 RVA: 0x00536F92 File Offset: 0x00535192
+	// Token: 0x06011E8E RID: 73358 RVA: 0x00545C9E File Offset: 0x00543E9E
 	[NullableContext(1)]
 	public RacingBetsTerrainTip(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060149AD RID: 84397 RVA: 0x00536F9B File Offset: 0x0053519B
+	// Token: 0x06011E8F RID: 73359 RVA: 0x00545CA7 File Offset: 0x00543EA7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class RacingBetsTerrainTip : UiViewBase
 		};
 	}
 
-	// Token: 0x060149AE RID: 84398 RVA: 0x00536FD4 File Offset: 0x005351D4
+	// Token: 0x06011E90 RID: 73360 RVA: 0x00545CE0 File Offset: 0x00543EE0
 	protected override void OnBeforeShow()
 	{
 		object[] array = this.OpenParam as object[];
@@ -56,7 +56,7 @@ public class RacingBetsTerrainTip : UiViewBase
 		base.GetText(1).SetText(multiText, true);
 	}
 
-	// Token: 0x060149AF RID: 84399 RVA: 0x005370AA File Offset: 0x005352AA
+	// Token: 0x06011E91 RID: 73361 RVA: 0x00545DB6 File Offset: 0x00543FB6
 	protected override void OnAfterPlayStartSequence()
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -76,13 +76,13 @@ public class RacingBetsTerrainTip : UiViewBase
 		}, null, null);
 	}
 
-	// Token: 0x02008DB0 RID: 36272
+	// Token: 0x02007F38 RID: 32568
 	private class EComponent
 	{
-		// Token: 0x0402DFE6 RID: 188390
+		// Token: 0x040292FC RID: 168700
 		public const int TerrainIcon = 0;
 
-		// Token: 0x0402DFE7 RID: 188391
+		// Token: 0x040292FD RID: 168701
 		public const int TerrainText = 1;
 	}
 }

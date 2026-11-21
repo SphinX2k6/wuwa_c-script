@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005586 RID: 21894
+	// Token: 0x0200455C RID: 17756
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMarkCreateInfo : DynamicMarkCreateInfo
 	{
-		// Token: 0x1700865B RID: 34395
-		// (get) Token: 0x06037CC8 RID: 228552 RVA: 0x00D39575 File Offset: 0x00D37775
+		// Token: 0x17005A22 RID: 23074
+		// (get) Token: 0x0602CBC6 RID: 183238 RVA: 0x00C8724D File Offset: 0x00C8544D
 		public long TreeId
 		{
 			get
@@ -18,8 +18,8 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			}
 		}
 
-		// Token: 0x1700865C RID: 34396
-		// (get) Token: 0x06037CC9 RID: 228553 RVA: 0x00D39587 File Offset: 0x00D37787
+		// Token: 0x17005A23 RID: 23075
+		// (get) Token: 0x0602CBC7 RID: 183239 RVA: 0x00C8725F File Offset: 0x00C8545F
 		public int NodeId
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			}
 		}
 
-		// Token: 0x1700865D RID: 34397
-		// (get) Token: 0x06037CCA RID: 228554 RVA: 0x00D39599 File Offset: 0x00D37799
+		// Token: 0x17005A24 RID: 23076
+		// (get) Token: 0x0602CBC8 RID: 183240 RVA: 0x00C87271 File Offset: 0x00C85471
 		public bool IsBoundToParentQuest
 		{
 			get
@@ -38,12 +38,12 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			}
 		}
 
-		// Token: 0x06037CCB RID: 228555 RVA: 0x00D395B0 File Offset: 0x00D377B0
+		// Token: 0x0602CBC9 RID: 183241 RVA: 0x00C87288 File Offset: 0x00C85488
 		public QuestMarkCreateInfo(QuestMarkCreateParams @params) : base(QuestMarkCreateInfo.PreprocessParams(@params))
 		{
 		}
 
-		// Token: 0x06037CCC RID: 228556 RVA: 0x00D395BE File Offset: 0x00D377BE
+		// Token: 0x0602CBCA RID: 183242 RVA: 0x00C87296 File Offset: 0x00C85496
 		private static QuestMarkCreateParams PreprocessParams(QuestMarkCreateParams @params)
 		{
 			if (@params.MapAndDungeonInfo != null)

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F93 RID: 28563
+	// Token: 0x02007759 RID: 30553
 	public struct ISetAlertUiVisible : IFlatbufferObject
 	{
-		// Token: 0x1700D424 RID: 54308
-		// (get) Token: 0x060327A5 RID: 206757 RVA: 0x006D05E3 File Offset: 0x006CE7E3
+		// Token: 0x1700DFF3 RID: 57331
+		// (get) Token: 0x060359F5 RID: 219637 RVA: 0x0072FF9B File Offset: 0x0072E19B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060327A6 RID: 206758 RVA: 0x006D05F0 File Offset: 0x006CE7F0
+		// Token: 0x060359F6 RID: 219638 RVA: 0x0072FFA8 File Offset: 0x0072E1A8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060327A7 RID: 206759 RVA: 0x006D05F8 File Offset: 0x006CE7F8
+		// Token: 0x060359F7 RID: 219639 RVA: 0x0072FFB0 File Offset: 0x0072E1B0
 		public static ISetAlertUiVisible GetRootAsISetAlertUiVisible(ByteBuffer _bb)
 		{
 			return ISetAlertUiVisible.GetRootAsISetAlertUiVisible(_bb, default(ISetAlertUiVisible));
 		}
 
-		// Token: 0x060327A8 RID: 206760 RVA: 0x006D0614 File Offset: 0x006CE814
+		// Token: 0x060359F8 RID: 219640 RVA: 0x0072FFCC File Offset: 0x0072E1CC
 		public static ISetAlertUiVisible GetRootAsISetAlertUiVisible(ByteBuffer _bb, ISetAlertUiVisible obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060327A9 RID: 206761 RVA: 0x006D0631 File Offset: 0x006CE831
+		// Token: 0x060359F9 RID: 219641 RVA: 0x0072FFE9 File Offset: 0x0072E1E9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060327AA RID: 206762 RVA: 0x006D0640 File Offset: 0x006CE840
+		// Token: 0x060359FA RID: 219642 RVA: 0x0072FFF8 File Offset: 0x0072E1F8
 		public ISetAlertUiVisible __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D425 RID: 54309
-		// (get) Token: 0x060327AB RID: 206763 RVA: 0x006D0650 File Offset: 0x006CE850
+		// Token: 0x1700DFF4 RID: 57332
+		// (get) Token: 0x060359FB RID: 219643 RVA: 0x00730008 File Offset: 0x0072E208
 		public EAlertSystemOption Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D426 RID: 54310
-		// (get) Token: 0x060327AC RID: 206764 RVA: 0x006D068C File Offset: 0x006CE88C
+		// Token: 0x1700DFF5 RID: 57333
+		// (get) Token: 0x060359FC RID: 219644 RVA: 0x00730044 File Offset: 0x0072E244
 		public int AreaId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D427 RID: 54311
-		// (get) Token: 0x060327AD RID: 206765 RVA: 0x006D06C8 File Offset: 0x006CE8C8
+		// Token: 0x1700DFF6 RID: 57334
+		// (get) Token: 0x060359FD RID: 219645 RVA: 0x00730080 File Offset: 0x0072E280
 		public bool IsVisible
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060327AE RID: 206766 RVA: 0x006D0707 File Offset: 0x006CE907
+		// Token: 0x060359FE RID: 219646 RVA: 0x007300BF File Offset: 0x0072E2BF
 		public static Offset<ISetAlertUiVisible> CreateISetAlertUiVisible(FlatBufferBuilder builder, EAlertSystemOption Type = EAlertSystemOption.EnableAlertArea, int AreaId = 0, bool IsVisible = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAlertUiVisible.EndISetAlertUiVisible(builder);
 		}
 
-		// Token: 0x060327AF RID: 206767 RVA: 0x006D072B File Offset: 0x006CE92B
+		// Token: 0x060359FF RID: 219647 RVA: 0x007300E3 File Offset: 0x0072E2E3
 		public static void StartISetAlertUiVisible(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060327B0 RID: 206768 RVA: 0x006D0734 File Offset: 0x006CE934
+		// Token: 0x06035A00 RID: 219648 RVA: 0x007300EC File Offset: 0x0072E2EC
 		public static void AddType(FlatBufferBuilder builder, EAlertSystemOption type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060327B1 RID: 206769 RVA: 0x006D073F File Offset: 0x006CE93F
+		// Token: 0x06035A01 RID: 219649 RVA: 0x007300F7 File Offset: 0x0072E2F7
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(1, areaId, 0);
 		}
 
-		// Token: 0x060327B2 RID: 206770 RVA: 0x006D074A File Offset: 0x006CE94A
+		// Token: 0x06035A02 RID: 219650 RVA: 0x00730102 File Offset: 0x0072E302
 		public static void AddIsVisible(FlatBufferBuilder builder, bool isVisible)
 		{
 			builder.AddBool(2, isVisible, false);
 		}
 
-		// Token: 0x060327B3 RID: 206771 RVA: 0x006D0755 File Offset: 0x006CE955
+		// Token: 0x06035A03 RID: 219651 RVA: 0x0073010D File Offset: 0x0072E30D
 		public static Offset<ISetAlertUiVisible> EndISetAlertUiVisible(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetAlertUiVisible>(builder.EndTable());
 		}
 
-		// Token: 0x060327B4 RID: 206772 RVA: 0x006D0764 File Offset: 0x006CE964
+		// Token: 0x06035A04 RID: 219652 RVA: 0x0073011C File Offset: 0x0072E31C
 		public ISetAlertUiVisibleT UnPack()
 		{
 			ISetAlertUiVisibleT setAlertUiVisibleT = new ISetAlertUiVisibleT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setAlertUiVisibleT;
 		}
 
-		// Token: 0x060327B5 RID: 206773 RVA: 0x006D077F File Offset: 0x006CE97F
+		// Token: 0x06035A05 RID: 219653 RVA: 0x00730137 File Offset: 0x0072E337
 		public void UnPackTo(ISetAlertUiVisibleT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.IsVisible = this.IsVisible;
 		}
 
-		// Token: 0x060327B6 RID: 206774 RVA: 0x006D07A8 File Offset: 0x006CE9A8
+		// Token: 0x06035A06 RID: 219654 RVA: 0x00730160 File Offset: 0x0072E360
 		public static Offset<ISetAlertUiVisible> Pack(FlatBufferBuilder builder, ISetAlertUiVisibleT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAlertUiVisible.CreateISetAlertUiVisible(builder, _o.Type, _o.AreaId, _o.IsVisible);
 		}
 
-		// Token: 0x0401198F RID: 72079
+		// Token: 0x04012971 RID: 76145
 		private Table __p;
 	}
 }

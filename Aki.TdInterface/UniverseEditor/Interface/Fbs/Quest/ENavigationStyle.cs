@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CAA RID: 15530
+	// Token: 0x020040BE RID: 16574
 	public enum ENavigationStyle : byte
 	{
-		// Token: 0x0400B409 RID: 46089
+		// Token: 0x0400BDAB RID: 48555
 		Default,
-		// Token: 0x0400B40A RID: 46090
+		// Token: 0x0400BDAC RID: 48556
 		AreaRinascita
 	}
 }

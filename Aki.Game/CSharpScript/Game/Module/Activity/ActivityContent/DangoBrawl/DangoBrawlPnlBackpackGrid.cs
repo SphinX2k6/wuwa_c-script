@@ -6,11 +6,11 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067F2 RID: 26610
+	// Token: 0x02005742 RID: 22338
 	public class DangoBrawlPnlBackpackGrid : UiPanelBase
 	{
-		// Token: 0x1700970A RID: 38666
-		// (get) Token: 0x06042524 RID: 271652 RVA: 0x0101A95C File Offset: 0x01018B5C
+		// Token: 0x17006A4B RID: 27211
+		// (get) Token: 0x06037079 RID: 225401 RVA: 0x00F5BEA0 File Offset: 0x00F5A0A0
 		public PanelPos MyPanelPos
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x1700970B RID: 38667
-		// (get) Token: 0x06042525 RID: 271653 RVA: 0x0101A964 File Offset: 0x01018B64
+		// Token: 0x17006A4C RID: 27212
+		// (get) Token: 0x0603707A RID: 225402 RVA: 0x00F5BEA8 File Offset: 0x00F5A0A8
 		public EDangoBrawlGridState MyState
 		{
 			get
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042526 RID: 271654 RVA: 0x0101A96C File Offset: 0x01018B6C
+		// Token: 0x0603707B RID: 225403 RVA: 0x00F5BEB0 File Offset: 0x00F5A0B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042527 RID: 271655 RVA: 0x0101A9D5 File Offset: 0x01018BD5
+		// Token: 0x0603707C RID: 225404 RVA: 0x00F5BF19 File Offset: 0x00F5A119
 		public void BindData(PanelPos panelPos)
 		{
 			this.PanelPos = panelPos;
 			this.SetGridState(EDangoBrawlGridState.Default);
 		}
 
-		// Token: 0x06042528 RID: 271656 RVA: 0x0101A9E5 File Offset: 0x01018BE5
+		// Token: 0x0603707D RID: 225405 RVA: 0x00F5BF29 File Offset: 0x00F5A129
 		public void SetGridState(EDangoBrawlGridState state)
 		{
 			this.State = state;
@@ -67,18 +67,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item2.SetUIActive(state == EDangoBrawlGridState.Fail);
 		}
 
-		// Token: 0x04022986 RID: 141702
+		// Token: 0x0401D1E3 RID: 119267
 		private PanelPos PanelPos = new PanelPos(0, 0);
 
-		// Token: 0x04022987 RID: 141703
+		// Token: 0x0401D1E4 RID: 119268
 		private EDangoBrawlGridState State;
 
-		// Token: 0x0200C947 RID: 51527
+		// Token: 0x0200B314 RID: 45844
 		private enum EComponents
 		{
-			// Token: 0x0403CC50 RID: 248912
+			// Token: 0x0403753D RID: 226621
 			SprGreen,
-			// Token: 0x0403CC51 RID: 248913
+			// Token: 0x0403753E RID: 226622
 			SprRed
 		}
 	}

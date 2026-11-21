@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C8C RID: 15500
+	// Token: 0x0200409E RID: 16542
 	public enum EArcadeGameplayType : byte
 	{
-		// Token: 0x0400B2FD RID: 45821
+		// Token: 0x0400BC94 RID: 48276
 		DropCatch,
-		// Token: 0x0400B2FE RID: 45822
+		// Token: 0x0400BC95 RID: 48277
 		TetrisBoardGame
 	}
 }

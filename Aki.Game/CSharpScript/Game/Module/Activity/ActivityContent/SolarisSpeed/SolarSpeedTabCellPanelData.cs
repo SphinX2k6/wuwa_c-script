@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060B5 RID: 24757
+	// Token: 0x02005033 RID: 20531
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SolarSpeedTabCellPanelData : ISolarSpeedTabCellPanelData
 	{
-		// Token: 0x170090CC RID: 37068
-		// (get) Token: 0x0603E978 RID: 256376 RVA: 0x00F20465 File Offset: 0x00F1E665
-		// (set) Token: 0x0603E979 RID: 256377 RVA: 0x00F2046D File Offset: 0x00F1E66D
+		// Token: 0x1700642E RID: 25646
+		// (get) Token: 0x0603363C RID: 210492 RVA: 0x00E67229 File Offset: 0x00E65429
+		// (set) Token: 0x0603363D RID: 210493 RVA: 0x00E67231 File Offset: 0x00E65431
 		public int LevelId { get; set; }
 
-		// Token: 0x170090CD RID: 37069
-		// (get) Token: 0x0603E97A RID: 256378 RVA: 0x00F20476 File Offset: 0x00F1E676
-		// (set) Token: 0x0603E97B RID: 256379 RVA: 0x00F2047E File Offset: 0x00F1E67E
+		// Token: 0x1700642F RID: 25647
+		// (get) Token: 0x0603363E RID: 210494 RVA: 0x00E6723A File Offset: 0x00E6543A
+		// (set) Token: 0x0603363F RID: 210495 RVA: 0x00E67242 File Offset: 0x00E65442
 		public string RomeNumberPath { get; set; }
 
-		// Token: 0x170090CE RID: 37070
-		// (get) Token: 0x0603E97C RID: 256380 RVA: 0x00F20487 File Offset: 0x00F1E687
-		// (set) Token: 0x0603E97D RID: 256381 RVA: 0x00F2048F File Offset: 0x00F1E68F
+		// Token: 0x17006430 RID: 25648
+		// (get) Token: 0x06033640 RID: 210496 RVA: 0x00E6724B File Offset: 0x00E6544B
+		// (set) Token: 0x06033641 RID: 210497 RVA: 0x00E67253 File Offset: 0x00E65453
 		public string TitleTextId { get; set; }
 
-		// Token: 0x170090CF RID: 37071
-		// (get) Token: 0x0603E97E RID: 256382 RVA: 0x00F20498 File Offset: 0x00F1E698
-		// (set) Token: 0x0603E97F RID: 256383 RVA: 0x00F204A0 File Offset: 0x00F1E6A0
+		// Token: 0x17006431 RID: 25649
+		// (get) Token: 0x06033642 RID: 210498 RVA: 0x00E6725C File Offset: 0x00E6545C
+		// (set) Token: 0x06033643 RID: 210499 RVA: 0x00E67264 File Offset: 0x00E65464
 		public bool IsChosen { get; set; }
 
-		// Token: 0x170090D0 RID: 37072
-		// (get) Token: 0x0603E980 RID: 256384 RVA: 0x00F204A9 File Offset: 0x00F1E6A9
-		// (set) Token: 0x0603E981 RID: 256385 RVA: 0x00F204B1 File Offset: 0x00F1E6B1
+		// Token: 0x17006432 RID: 25650
+		// (get) Token: 0x06033644 RID: 210500 RVA: 0x00E6726D File Offset: 0x00E6546D
+		// (set) Token: 0x06033645 RID: 210501 RVA: 0x00E67275 File Offset: 0x00E65475
 		public bool IsRedDot { get; set; }
 	}
 }

@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005B01 RID: 23297
+	// Token: 0x02004AE2 RID: 19170
 	[NullableContext(1)]
 	public interface IMachiningData : ICookItemData
 	{
-		// Token: 0x17008C60 RID: 35936
-		// (get) Token: 0x0603AFDF RID: 241631
-		// (set) Token: 0x0603AFE0 RID: 241632
+		// Token: 0x1700603A RID: 24634
+		// (get) Token: 0x0602FF51 RID: 196433
+		// (set) Token: 0x0602FF52 RID: 196434
 		List<int> InteractiveList { get; set; }
 
-		// Token: 0x17008C61 RID: 35937
-		// (get) Token: 0x0603AFE1 RID: 241633
-		// (set) Token: 0x0603AFE2 RID: 241634
+		// Token: 0x1700603B RID: 24635
+		// (get) Token: 0x0602FF53 RID: 196435
+		// (set) Token: 0x0602FF54 RID: 196436
 		List<int> UnlockList { get; set; }
 
-		// Token: 0x17008C62 RID: 35938
-		// (get) Token: 0x0603AFE3 RID: 241635
-		// (set) Token: 0x0603AFE4 RID: 241636
+		// Token: 0x1700603C RID: 24636
+		// (get) Token: 0x0602FF55 RID: 196437
+		// (set) Token: 0x0602FF56 RID: 196438
 		int IsMachining { get; set; }
 	}
 }

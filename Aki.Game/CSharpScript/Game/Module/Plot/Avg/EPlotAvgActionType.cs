@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Plot.Avg
 {
-	// Token: 0x020050E2 RID: 20706
+	// Token: 0x020040B2 RID: 16562
 	public enum EPlotAvgActionType
 	{
-		// Token: 0x0401C322 RID: 115490
+		// Token: 0x04016D53 RID: 93523
 		RoleEnter,
-		// Token: 0x0401C323 RID: 115491
+		// Token: 0x04016D54 RID: 93524
 		RoleExit,
-		// Token: 0x0401C324 RID: 115492
+		// Token: 0x04016D55 RID: 93525
 		RoleMove,
-		// Token: 0x0401C325 RID: 115493
+		// Token: 0x04016D56 RID: 93526
 		RoleFocus
 	}
 }

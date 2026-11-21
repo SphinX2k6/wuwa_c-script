@@ -10,13 +10,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C8 RID: 2248
+	// Token: 0x0200096B RID: 2411
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TrampleComponent : IComponentBase
 	{
-		// Token: 0x0600329F RID: 12959 RVA: 0x00081CAC File Offset: 0x0007FEAC
-		[NullableContext(1)]
+		// Token: 0x060035DB RID: 13787 RVA: 0x00089194 File Offset: 0x00087394
+		[NullableContext(0)]
 		private TrampleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -31,8 +31,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060032A0 RID: 12960 RVA: 0x00081CE4 File Offset: 0x0007FEE4
-		[NullableContext(1)]
+		// Token: 0x060035DC RID: 13788 RVA: 0x000891CC File Offset: 0x000873CC
+		[NullableContext(0)]
 		public static TrampleComponent Create([Nullable(2)] TrampleComponent instance)
 		{
 			if (instance == null)
@@ -45,8 +45,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060032A1 RID: 12961 RVA: 0x00081CF7 File Offset: 0x0007FEF7
-		[NullableContext(1)]
+		// Token: 0x060035DD RID: 13789 RVA: 0x000891DF File Offset: 0x000873DF
+		[NullableContext(0)]
 		public static TrampleComponent CreateFromSetValue([Nullable(2)] TrampleComponent_SetValue value)
 		{
 			if (value == null)
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060032A2 RID: 12962 RVA: 0x00081D0C File Offset: 0x0007FF0C
-		[NullableContext(1)]
+		// Token: 0x060035DE RID: 13790 RVA: 0x000891F4 File Offset: 0x000873F4
+		[NullableContext(0)]
 		public new TrampleComponent_SetValue ToSetValue()
 		{
 			return new TrampleComponent_SetValue
@@ -83,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D8B RID: 3467
-		// (get) Token: 0x060032A3 RID: 12963 RVA: 0x00081DD4 File Offset: 0x0007FFD4
-		// (set) Token: 0x060032A4 RID: 12964 RVA: 0x00081E0E File Offset: 0x0008000E
+		// Token: 0x17000E54 RID: 3668
+		// (get) Token: 0x060035DF RID: 13791 RVA: 0x000892BC File Offset: 0x000874BC
+		// (set) Token: 0x060035E0 RID: 13792 RVA: 0x000892F6 File Offset: 0x000874F6
 		public override bool? Disabled
 		{
 			get
@@ -107,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D8C RID: 3468
-		// (get) Token: 0x060032A5 RID: 12965 RVA: 0x00081E1C File Offset: 0x0008001C
-		// (set) Token: 0x060032A6 RID: 12966 RVA: 0x00081E46 File Offset: 0x00080046
+		// Token: 0x17000E55 RID: 3669
+		// (get) Token: 0x060035E1 RID: 13793 RVA: 0x00089304 File Offset: 0x00087504
+		// (set) Token: 0x060035E2 RID: 13794 RVA: 0x0008932E File Offset: 0x0008752E
 		public override bool? EdIsLocked
 		{
 			get
@@ -126,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D8D RID: 3469
-		// (get) Token: 0x060032A7 RID: 12967 RVA: 0x00081E54 File Offset: 0x00080054
-		// (set) Token: 0x060032A8 RID: 12968 RVA: 0x00081EB5 File Offset: 0x000800B5
+		// Token: 0x17000E56 RID: 3670
+		// (get) Token: 0x060035E3 RID: 13795 RVA: 0x0008933C File Offset: 0x0008753C
+		// (set) Token: 0x060035E4 RID: 13796 RVA: 0x0008939D File Offset: 0x0008759D
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -156,9 +156,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D8E RID: 3470
-		// (get) Token: 0x060032A9 RID: 12969 RVA: 0x00081ECC File Offset: 0x000800CC
-		// (set) Token: 0x060032AA RID: 12970 RVA: 0x00081F2D File Offset: 0x0008012D
+		// Token: 0x17000E57 RID: 3671
+		// (get) Token: 0x060035E5 RID: 13797 RVA: 0x000893B4 File Offset: 0x000875B4
+		// (set) Token: 0x060035E6 RID: 13798 RVA: 0x00089415 File Offset: 0x00087615
 		public virtual ITrampleRayDetection RayDetectionCondition
 		{
 			get
@@ -186,13 +186,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D8F RID: 3471
-		// (get) Token: 0x060032AB RID: 12971 RVA: 0x00081F44 File Offset: 0x00080144
-		// (set) Token: 0x060032AC RID: 12972 RVA: 0x00081FA5 File Offset: 0x000801A5
-		[Nullable(1)]
+		// Token: 0x17000E58 RID: 3672
+		// (get) Token: 0x060035E7 RID: 13799 RVA: 0x0008942C File Offset: 0x0008762C
+		// (set) Token: 0x060035E8 RID: 13800 RVA: 0x0008948D File Offset: 0x0008768D
+		[Nullable(0)]
 		public virtual IEntityMatch Match
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._MatchInited)
@@ -211,7 +211,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._MatchCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Match = value;
@@ -219,20 +219,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D90 RID: 3472
-		// (get) Token: 0x060032AD RID: 12973 RVA: 0x00081FBA File Offset: 0x000801BA
-		// (set) Token: 0x060032AE RID: 12974 RVA: 0x00081FE1 File Offset: 0x000801E1
+		// Token: 0x17000E59 RID: 3673
+		// (get) Token: 0x060035E9 RID: 13801 RVA: 0x000894A2 File Offset: 0x000876A2
+		// (set) Token: 0x060035EA RID: 13802 RVA: 0x000894C9 File Offset: 0x000876C9
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -250,7 +250,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -258,9 +258,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D91 RID: 3473
-		// (get) Token: 0x060032AF RID: 12975 RVA: 0x00081FEF File Offset: 0x000801EF
-		// (set) Token: 0x060032B0 RID: 12976 RVA: 0x0008201E File Offset: 0x0008021E
+		// Token: 0x17000E5A RID: 3674
+		// (get) Token: 0x060035EB RID: 13803 RVA: 0x000894D7 File Offset: 0x000876D7
+		// (set) Token: 0x060035EC RID: 13804 RVA: 0x00089506 File Offset: 0x00087706
 		public virtual float DownTime
 		{
 			get
@@ -281,9 +281,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D92 RID: 3474
-		// (get) Token: 0x060032B1 RID: 12977 RVA: 0x0008202C File Offset: 0x0008022C
-		// (set) Token: 0x060032B2 RID: 12978 RVA: 0x0008205B File Offset: 0x0008025B
+		// Token: 0x17000E5B RID: 3675
+		// (get) Token: 0x060035ED RID: 13805 RVA: 0x00089514 File Offset: 0x00087714
+		// (set) Token: 0x060035EE RID: 13806 RVA: 0x00089543 File Offset: 0x00087743
 		public virtual float StayTime
 		{
 			get
@@ -304,9 +304,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D93 RID: 3475
-		// (get) Token: 0x060032B3 RID: 12979 RVA: 0x0008206C File Offset: 0x0008026C
-		// (set) Token: 0x060032B4 RID: 12980 RVA: 0x000820A6 File Offset: 0x000802A6
+		// Token: 0x17000E5C RID: 3676
+		// (get) Token: 0x060035EF RID: 13807 RVA: 0x00089554 File Offset: 0x00087754
+		// (set) Token: 0x060035F0 RID: 13808 RVA: 0x0008958E File Offset: 0x0008778E
 		public virtual float? UpTime
 		{
 			get
@@ -328,9 +328,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D94 RID: 3476
-		// (get) Token: 0x060032B5 RID: 12981 RVA: 0x000820B4 File Offset: 0x000802B4
-		// (set) Token: 0x060032B6 RID: 12982 RVA: 0x000820DF File Offset: 0x000802DF
+		// Token: 0x17000E5D RID: 3677
+		// (get) Token: 0x060035F1 RID: 13809 RVA: 0x0008959C File Offset: 0x0008779C
+		// (set) Token: 0x060035F2 RID: 13810 RVA: 0x000895C7 File Offset: 0x000877C7
 		public virtual bool IsResetGear
 		{
 			get
@@ -347,9 +347,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D95 RID: 3477
-		// (get) Token: 0x060032B7 RID: 12983 RVA: 0x000820F0 File Offset: 0x000802F0
-		// (set) Token: 0x060032B8 RID: 12984 RVA: 0x00082151 File Offset: 0x00080351
+		// Token: 0x17000E5E RID: 3678
+		// (get) Token: 0x060035F3 RID: 13811 RVA: 0x000895D8 File Offset: 0x000877D8
+		// (set) Token: 0x060035F4 RID: 13812 RVA: 0x00089639 File Offset: 0x00087839
 		public virtual IEnterLeaveRadius ShowLandTipRadius
 		{
 			get
@@ -377,9 +377,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D96 RID: 3478
-		// (get) Token: 0x060032B9 RID: 12985 RVA: 0x00082168 File Offset: 0x00080368
-		// (set) Token: 0x060032BA RID: 12986 RVA: 0x000821A2 File Offset: 0x000803A2
+		// Token: 0x17000E5F RID: 3679
+		// (get) Token: 0x060035F5 RID: 13813 RVA: 0x00089650 File Offset: 0x00087850
+		// (set) Token: 0x060035F6 RID: 13814 RVA: 0x0008968A File Offset: 0x0008788A
 		public virtual bool? StopTeleControlMove
 		{
 			get
@@ -401,50 +401,44 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D97 RID: 3479
-		// (get) Token: 0x060032BB RID: 12987 RVA: 0x000821B0 File Offset: 0x000803B0
-		// (set) Token: 0x060032BC RID: 12988 RVA: 0x00082211 File Offset: 0x00080411
-		public virtual ICountDownTextTip TrampleTipOption
+		// Token: 0x17000E60 RID: 3680
+		// (get) Token: 0x060035F7 RID: 13815 RVA: 0x00089698 File Offset: 0x00087898
+		// (set) Token: 0x060035F8 RID: 13816 RVA: 0x000896BF File Offset: 0x000878BF
+		public virtual ITrampleTipType TrampleTipOption
 		{
 			get
 			{
-				if (this._TrampleTipOptionInited)
-				{
-					return this._TrampleTipOptionCache;
-				}
-				this._TrampleTipOptionInited = true;
 				if (this.FbInstance != null)
 				{
-					this._TrampleTipOptionCache = ICountDownTextTip.Create(this.FbInstance.TrampleTipOption);
+					return this.FbInstance.TrampleTipOption;
 				}
-				else
+				TrampleComponent_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
 				{
-					TrampleComponent_SetValue pocoInterface = this.PocoInterface;
-					this._TrampleTipOptionCache = ((pocoInterface != null) ? pocoInterface.TrampleTipOption : null);
+					return null;
 				}
-				return this._TrampleTipOptionCache;
+				return pocoInterface.TrampleTipOption;
 			}
 			set
 			{
 				this.GetOrCreatePoco().TrampleTipOption = value;
-				this._TrampleTipOptionInited = false;
 			}
 		}
 
-		// Token: 0x17000D98 RID: 3480
-		// (get) Token: 0x060032BD RID: 12989 RVA: 0x00082228 File Offset: 0x00080428
-		// (set) Token: 0x060032BE RID: 12990 RVA: 0x000822BB File Offset: 0x000804BB
+		// Token: 0x17000E61 RID: 3681
+		// (get) Token: 0x060035F9 RID: 13817 RVA: 0x000896D0 File Offset: 0x000878D0
+		// (set) Token: 0x060035FA RID: 13818 RVA: 0x00089763 File Offset: 0x00087963
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> EnterActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -475,7 +469,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -484,20 +478,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D99 RID: 3481
-		// (get) Token: 0x060032BF RID: 12991 RVA: 0x000822D0 File Offset: 0x000804D0
-		// (set) Token: 0x060032C0 RID: 12992 RVA: 0x00082363 File Offset: 0x00080563
+		// Token: 0x17000E62 RID: 3682
+		// (get) Token: 0x060035FB RID: 13819 RVA: 0x00089778 File Offset: 0x00087978
+		// (set) Token: 0x060035FC RID: 13820 RVA: 0x0008980B File Offset: 0x00087A0B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> ExitActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -528,7 +522,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -537,67 +531,60 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002136 RID: 8502
+		// Token: 0x04002348 RID: 9032
 		protected new TrampleComponent FbInstance;
 
-		// Token: 0x04002137 RID: 8503
+		// Token: 0x04002349 RID: 9033
 		protected new TrampleComponent_SetValue PocoInterface;
 
-		// Token: 0x04002138 RID: 8504
-		[Nullable(1)]
+		// Token: 0x0400234A RID: 9034
+		[Nullable(0)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002139 RID: 8505
+		// Token: 0x0400234B RID: 9035
 		private bool _ConditionInited;
 
-		// Token: 0x0400213A RID: 8506
-		[Nullable(1)]
+		// Token: 0x0400234C RID: 9036
+		[Nullable(0)]
 		private ITrampleRayDetection _RayDetectionConditionCache;
 
-		// Token: 0x0400213B RID: 8507
+		// Token: 0x0400234D RID: 9037
 		private bool _RayDetectionConditionInited;
 
-		// Token: 0x0400213C RID: 8508
-		[Nullable(1)]
+		// Token: 0x0400234E RID: 9038
+		[Nullable(0)]
 		private IEntityMatch _MatchCache;
 
-		// Token: 0x0400213D RID: 8509
+		// Token: 0x0400234F RID: 9039
 		private bool _MatchInited;
 
-		// Token: 0x0400213E RID: 8510
-		[Nullable(1)]
+		// Token: 0x04002350 RID: 9040
+		[Nullable(0)]
 		private IEnterLeaveRadius _ShowLandTipRadiusCache;
 
-		// Token: 0x0400213F RID: 8511
+		// Token: 0x04002351 RID: 9041
 		private bool _ShowLandTipRadiusInited;
 
-		// Token: 0x04002140 RID: 8512
-		[Nullable(1)]
-		private ICountDownTextTip _TrampleTipOptionCache;
-
-		// Token: 0x04002141 RID: 8513
-		private bool _TrampleTipOptionInited;
-
-		// Token: 0x04002142 RID: 8514
+		// Token: 0x04002352 RID: 9042
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _EnterActionsCache;
 
-		// Token: 0x04002143 RID: 8515
+		// Token: 0x04002353 RID: 9043
 		private bool _EnterActionsInited;
 
-		// Token: 0x04002144 RID: 8516
+		// Token: 0x04002354 RID: 9044
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ExitActionsCache;
 
-		// Token: 0x04002145 RID: 8517
+		// Token: 0x04002355 RID: 9045
 		private bool _ExitActionsInited;
 	}
 }

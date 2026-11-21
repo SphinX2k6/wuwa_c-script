@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x02001BF3 RID: 7155
+// Token: 0x020010B2 RID: 4274
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationData
 {
-	// Token: 0x0600D533 RID: 54579 RVA: 0x003116C9 File Offset: 0x0030F8C9
+	// Token: 0x0600A946 RID: 43334 RVA: 0x0031C90D File Offset: 0x0031AB0D
 	public FormationData(int formationId)
 	{
 		this.FormationId = formationId;
 	}
 
-	// Token: 0x0600D534 RID: 54580 RVA: 0x003116FC File Offset: 0x0030F8FC
+	// Token: 0x0600A947 RID: 43335 RVA: 0x0031C940 File Offset: 0x0031AB40
 	[NullableContext(2)]
 	public void AddRoleData(int roleId, int skinId, int level, int playerId, bool isCurrent = false, int multiSkillBranchIndex = 0, FormationRoleEquip equip = null)
 	{
@@ -27,7 +27,7 @@ public class FormationData
 		}
 	}
 
-	// Token: 0x0600D535 RID: 54581 RVA: 0x0031174C File Offset: 0x0030F94C
+	// Token: 0x0600A948 RID: 43336 RVA: 0x0031C990 File Offset: 0x0031AB90
 	public void SetCurrentRole(int roleId)
 	{
 		foreach (FormationRoleData formationRoleData in this.RoleDataMap.Values)
@@ -40,7 +40,7 @@ public class FormationData
 		}
 	}
 
-	// Token: 0x0600D536 RID: 54582 RVA: 0x003117B4 File Offset: 0x0030F9B4
+	// Token: 0x0600A949 RID: 43337 RVA: 0x0031C9F8 File Offset: 0x0031ABF8
 	public List<int> GetRoleIdListWithTrial(bool includeTrial)
 	{
 		if (includeTrial)
@@ -58,8 +58,8 @@ public class FormationData
 		return list;
 	}
 
-	// Token: 0x17001195 RID: 4501
-	// (get) Token: 0x0600D537 RID: 54583 RVA: 0x00311828 File Offset: 0x0030FA28
+	// Token: 0x170011BA RID: 4538
+	// (get) Token: 0x0600A94A RID: 43338 RVA: 0x0031CA6C File Offset: 0x0031AC6C
 	public List<int> RoleIdList
 	{
 		get
@@ -68,7 +68,7 @@ public class FormationData
 		}
 	}
 
-	// Token: 0x0600D538 RID: 54584 RVA: 0x00311830 File Offset: 0x0030FA30
+	// Token: 0x0600A94B RID: 43339 RVA: 0x0031CA74 File Offset: 0x0031AC74
 	[NullableContext(2)]
 	public FormationRoleData GetRoleDataById(int roleId)
 	{
@@ -82,7 +82,7 @@ public class FormationData
 		return null;
 	}
 
-	// Token: 0x0600D539 RID: 54585 RVA: 0x00311894 File Offset: 0x0030FA94
+	// Token: 0x0600A94C RID: 43340 RVA: 0x0031CAD8 File Offset: 0x0031ACD8
 	[NullableContext(2)]
 	public FormationRoleData GetRoleDataByPosition(int position)
 	{
@@ -94,13 +94,13 @@ public class FormationData
 		return null;
 	}
 
-	// Token: 0x0600D53A RID: 54586 RVA: 0x003118B4 File Offset: 0x0030FAB4
+	// Token: 0x0600A94D RID: 43341 RVA: 0x0031CAF8 File Offset: 0x0031ACF8
 	public Dictionary<int, FormationRoleData> GetRoleDataMap()
 	{
 		return this.RoleDataMap;
 	}
 
-	// Token: 0x0600D53B RID: 54587 RVA: 0x003118BC File Offset: 0x0030FABC
+	// Token: 0x0600A94E RID: 43342 RVA: 0x0031CB00 File Offset: 0x0031AD00
 	public Dictionary<int, FormationRoleData> GetRoleDataMapWithTrial(bool includeTrial)
 	{
 		if (includeTrial)
@@ -118,8 +118,8 @@ public class FormationData
 		return dictionary;
 	}
 
-	// Token: 0x17001196 RID: 4502
-	// (get) Token: 0x0600D53C RID: 54588 RVA: 0x00311940 File Offset: 0x0030FB40
+	// Token: 0x170011BB RID: 4539
+	// (get) Token: 0x0600A94F RID: 43343 RVA: 0x0031CB84 File Offset: 0x0031AD84
 	public int? CurrentRoleConfigId
 	{
 		get
@@ -132,8 +132,8 @@ public class FormationData
 		}
 	}
 
-	// Token: 0x17001197 RID: 4503
-	// (get) Token: 0x0600D53D RID: 54589 RVA: 0x00311978 File Offset: 0x0030FB78
+	// Token: 0x170011BC RID: 4540
+	// (get) Token: 0x0600A950 RID: 43344 RVA: 0x0031CBBC File Offset: 0x0031ADBC
 	public int CurrentRolePosition
 	{
 		get
@@ -142,18 +142,18 @@ public class FormationData
 		}
 	}
 
-	// Token: 0x040061AB RID: 25003
+	// Token: 0x0400627D RID: 25213
 	public int FormationId;
 
-	// Token: 0x040061AC RID: 25004
+	// Token: 0x0400627E RID: 25214
 	public string Name = string.Empty;
 
-	// Token: 0x040061AD RID: 25005
+	// Token: 0x0400627F RID: 25215
 	private readonly List<int> RoleIds = new List<int>();
 
-	// Token: 0x040061AE RID: 25006
+	// Token: 0x04006280 RID: 25216
 	private readonly Dictionary<int, FormationRoleData> RoleDataMap = new Dictionary<int, FormationRoleData>();
 
-	// Token: 0x040061AF RID: 25007
+	// Token: 0x04006281 RID: 25217
 	private int CurrentPosition;
 }

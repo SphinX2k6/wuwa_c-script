@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Core.Common;
@@ -15,23 +14,23 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002208 RID: 8712
+// Token: 0x020016EC RID: 5868
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MenuModel : ModelBase
 {
-	// Token: 0x1700158A RID: 5514
-	// (get) Token: 0x06010F6B RID: 69483 RVA: 0x004216E8 File Offset: 0x0041F8E8
-	// (set) Token: 0x06010F6C RID: 69484 RVA: 0x00421743 File Offset: 0x0041F943
+	// Token: 0x170015C1 RID: 5569
+	// (get) Token: 0x0600E3FE RID: 58366 RVA: 0x0042E08C File Offset: 0x0042C28C
+	// (set) Token: 0x0600E3FF RID: 58367 RVA: 0x0042E103 File Offset: 0x0042C303
 	public bool IsImageQualityCustom
 	{
 		get
 		{
 			if (this.IsImageQualityCustomInternal == null)
 			{
-				int valueOrDefault = this.GetDataCacheOrCurValue(EFunction.IMAGEQUALITY).GetValueOrDefault();
-				this.IsImageQualityCustomInternal = new bool?(!GameSettingsManager.Instance.CheckIsMatchQualityRecommend((EGameQualitySettingLevel)valueOrDefault, new Func<EFunction, int?>(this.GetDataCacheOrCurValue)));
+				EGameQualitySettingLevel valueOrDefault = (EGameQualitySettingLevel)this.GetDataCacheOrCurValue(EFunction.IMAGEQUALITY).GetValueOrDefault();
+				this.IsImageQualityCustomInternal = new bool?(!GameSettingsManager.Instance.CheckIsMatchQualityRecommend(valueOrDefault, new Func<EFunction, int?>(this.GetDataCacheOrCurValue)) || !GameSettingsManager.Instance.CheckIsMatchFloatRenderRecommend(valueOrDefault, new Func<EFunction, float?>(this.GetDataCacheOrCurValueFloat)));
 			}
 			return this.IsImageQualityCustomInternal.Value;
 		}
@@ -41,8 +40,8 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700158B RID: 5515
-	// (set) Token: 0x06010F6D RID: 69485 RVA: 0x00421751 File Offset: 0x0041F951
+	// Token: 0x170015C2 RID: 5570
+	// (set) Token: 0x0600E400 RID: 58368 RVA: 0x0042E111 File Offset: 0x0042C311
 	public bool? IsImageQualityCustomNullable
 	{
 		set
@@ -51,8 +50,8 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700158C RID: 5516
-	// (get) Token: 0x06010F6E RID: 69486 RVA: 0x0042175C File Offset: 0x0041F95C
+	// Token: 0x170015C3 RID: 5571
+	// (get) Token: 0x0600E401 RID: 58369 RVA: 0x0042E11C File Offset: 0x0042C31C
 	public Dictionary<int, float[]> FilterSettingValuesCache
 	{
 		get
@@ -88,9 +87,9 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x1700158D RID: 5517
-	// (get) Token: 0x06010F6F RID: 69487 RVA: 0x00421864 File Offset: 0x0041FA64
-	// (set) Token: 0x06010F70 RID: 69488 RVA: 0x00421894 File Offset: 0x0041FA94
+	// Token: 0x170015C4 RID: 5572
+	// (get) Token: 0x0600E402 RID: 58370 RVA: 0x0042E224 File Offset: 0x0042C424
+	// (set) Token: 0x0600E403 RID: 58371 RVA: 0x0042E254 File Offset: 0x0042C454
 	public int FilterSettingIdCache
 	{
 		get
@@ -107,14 +106,14 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010F71 RID: 69489 RVA: 0x004218A2 File Offset: 0x0041FAA2
+	// Token: 0x0600E404 RID: 58372 RVA: 0x0042E262 File Offset: 0x0042C462
 	protected override bool OnInit()
 	{
 		this.Initialize();
 		return true;
 	}
 
-	// Token: 0x06010F72 RID: 69490 RVA: 0x004218AB File Offset: 0x0041FAAB
+	// Token: 0x0600E405 RID: 58373 RVA: 0x0042E26B File Offset: 0x0042C46B
 	protected override bool OnClear()
 	{
 		this.MenuDataMainTypeMap.Clear();
@@ -126,7 +125,7 @@ public class MenuModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010F73 RID: 69491 RVA: 0x004218CC File Offset: 0x0041FACC
+	// Token: 0x0600E406 RID: 58374 RVA: 0x0042E28C File Offset: 0x0042C48C
 	public void Initialize()
 	{
 		this.InitCommonParameter();
@@ -137,7 +136,7 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010F74 RID: 69492 RVA: 0x00421925 File Offset: 0x0041FB25
+	// Token: 0x0600E407 RID: 58375 RVA: 0x0042E2E5 File Offset: 0x0042C4E5
 	public void ReInit()
 	{
 		this.MenuDataMainTypeMap.Clear();
@@ -149,16 +148,16 @@ public class MenuModel : ModelBase
 		this.Initialize();
 	}
 
-	// Token: 0x06010F75 RID: 69493 RVA: 0x0042194C File Offset: 0x0041FB4C
+	// Token: 0x0600E408 RID: 58376 RVA: 0x0042E30C File Offset: 0x0042C50C
 	private void InitCommonParameter()
 	{
 		this.LowShake = (float)ConfigCommonParamById.GetIntConfig("LowShake").Value / 100f;
 		this.MiddleShake = (float)ConfigCommonParamById.GetIntConfig("MiddleShake").Value / 100f;
 		this.HighShake = (float)ConfigCommonParamById.GetIntConfig("HighShake").Value / 100f;
-		this.AllowResolutionList = ConfigCommonParamById.GetIntArrayConfig("AllowResolutionList").ToList<int>();
+		this.AllowResolutionList = new List<int>(ConfigCommonParamById.GetIntArrayConfig("AllowResolutionList"));
 	}
 
-	// Token: 0x06010F76 RID: 69494 RVA: 0x004219CC File Offset: 0x0041FBCC
+	// Token: 0x0600E409 RID: 58377 RVA: 0x0042E38C File Offset: 0x0042C58C
 	public void CreateConfigByBaseConfig()
 	{
 		foreach (KeyValuePair<EFunction, MenuConfig> keyValuePair in GameSettingsManager.Instance.ValidApplyConfigMap)
@@ -212,7 +211,7 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010F77 RID: 69495 RVA: 0x00421BB8 File Offset: 0x0041FDB8
+	// Token: 0x0600E40A RID: 58378 RVA: 0x0042E578 File Offset: 0x0042C778
 	private MenuData BuildDataByType(MenuConfig config)
 	{
 		if (config.FunctionId == 51506)
@@ -222,14 +221,35 @@ public class MenuModel : ModelBase
 		return new MenuData(config);
 	}
 
-	// Token: 0x06010F78 RID: 69496 RVA: 0x00421BD8 File Offset: 0x0041FDD8
+	// Token: 0x0600E40B RID: 58379 RVA: 0x0042E598 File Offset: 0x0042C798
+	private bool CheckConsoleHide(MenuConfig config)
+	{
+		if (config.SpecifyHideConsolesLength <= 0)
+		{
+			return true;
+		}
+		string consoleModelName = UKuroStaticLibrary.GetConsoleModelName();
+		using (IEnumerator<string> enumerator = config.SpecifyHideConsolesIter().GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current == consoleModelName)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	// Token: 0x0600E40C RID: 58380 RVA: 0x0042E600 File Offset: 0x0042C800
 	private bool CheckActiveCondition(MenuConfig config)
 	{
-		if (Info.Instance.IsPs5Platform() && config.Ps5Hide == 1)
+		if (Info.Instance.IsPs5Platform() && config.Ps5Hide == 1 && this.CheckConsoleHide(config))
 		{
 			return false;
 		}
-		if (Info.Instance.IsXboxPlatform() && !Info.Instance.IsWinGDKPlatform() && config.XboxHide == 1)
+		if (Info.Instance.IsXboxPlatform() && !Info.Instance.IsWinGDKPlatform() && config.XboxHide == 1 && this.CheckConsoleHide(config))
 		{
 			return false;
 		}
@@ -261,20 +281,32 @@ public class MenuModel : ModelBase
 		return this.CheckActiveConditionImp(config);
 	}
 
-	// Token: 0x06010F79 RID: 69497 RVA: 0x00421CD8 File Offset: 0x0041FED8
+	// Token: 0x0600E40D RID: 58381 RVA: 0x0042E710 File Offset: 0x0042C910
 	private bool CheckActiveConditionImp(MenuConfig config)
 	{
 		return config.ConditionGroup == 0 || LevelGeneralController.Instance.CheckCondition(config.ConditionGroup.ToString(), null, true, Array.Empty<object>());
 	}
 
-	// Token: 0x06010F7A RID: 69498 RVA: 0x00421D10 File Offset: 0x0041FF10
+	// Token: 0x0600E40E RID: 58382 RVA: 0x0042E748 File Offset: 0x0042C948
 	private bool CheckIosReviewShield(int configId)
 	{
 		IReadOnlyList<int> iosReviewShieldMenuArray = CommonConfig.Instance.GetIosReviewShieldMenuArray();
-		return iosReviewShieldMenuArray != null && iosReviewShieldMenuArray.Contains(configId) && BaseConfigController.Instance.GetIosAuditFirstDownloadTip();
+		bool flag = false;
+		if (iosReviewShieldMenuArray != null)
+		{
+			for (int i = 0; i < iosReviewShieldMenuArray.Count; i++)
+			{
+				if (iosReviewShieldMenuArray[i] == configId)
+				{
+					flag = true;
+					break;
+				}
+			}
+		}
+		return flag && BaseConfigController.Instance.GetIosAuditFirstDownloadTip();
 	}
 
-	// Token: 0x06010F7B RID: 69499 RVA: 0x00421D3A File Offset: 0x0041FF3A
+	// Token: 0x0600E40F RID: 58383 RVA: 0x0042E796 File Offset: 0x0042C996
 	private bool CheckShowImageSettingInCloudGame(MenuConfig menuConfig)
 	{
 		if (menuConfig.MainType != 2)
@@ -284,13 +316,13 @@ public class MenuModel : ModelBase
 		return MenuDefine.cloudGameImageShowSettingsSet.Contains((EFunction)menuConfig.FunctionId);
 	}
 
-	// Token: 0x06010F7C RID: 69500 RVA: 0x00421D5F File Offset: 0x0041FF5F
+	// Token: 0x0600E410 RID: 58384 RVA: 0x0042E7BB File Offset: 0x0042C9BB
 	public void ClearMenuDataMap()
 	{
 		this.MenuDataMainTypeMap.Clear();
 	}
 
-	// Token: 0x06010F7D RID: 69501 RVA: 0x00421D6C File Offset: 0x0041FF6C
+	// Token: 0x0600E411 RID: 58385 RVA: 0x0042E7C8 File Offset: 0x0042C9C8
 	private void DataSort(int mainType)
 	{
 		List<MenuData> list;
@@ -309,7 +341,7 @@ public class MenuModel : ModelBase
 		this.MenuDataMainTypeMap[(EMainType)mainType] = list;
 	}
 
-	// Token: 0x06010F7E RID: 69502 RVA: 0x00421DC8 File Offset: 0x0041FFC8
+	// Token: 0x0600E412 RID: 58386 RVA: 0x0042E824 File Offset: 0x0042CA24
 	public unsafe int[] GetMainTypeList([Nullable(2)] TMenuItemFilter filter = null)
 	{
 		this.MainConfig = MenuBaseConfig.Instance.GetMainConfig();
@@ -374,7 +406,7 @@ public class MenuModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06010F7F RID: 69503 RVA: 0x00421F58 File Offset: 0x00420158
+	// Token: 0x0600E413 RID: 58387 RVA: 0x0042E9B4 File Offset: 0x0042CBB4
 	[NullableContext(2)]
 	[return: Nullable(new byte[]
 	{
@@ -403,7 +435,7 @@ public class MenuModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x06010F80 RID: 69504 RVA: 0x00421FD0 File Offset: 0x004201D0
+	// Token: 0x0600E414 RID: 58388 RVA: 0x0042EA2C File Offset: 0x0042CC2C
 	public MainType? GetTargetMainInfo(int mainType)
 	{
 		if (this.MainConfig == null)
@@ -418,7 +450,7 @@ public class MenuModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010F81 RID: 69505 RVA: 0x00422010 File Offset: 0x00420210
+	// Token: 0x0600E415 RID: 58389 RVA: 0x0042EA6C File Offset: 0x0042CC6C
 	[NullableContext(2)]
 	public MenuData GetMenuDataByFunctionId(int functionId)
 	{
@@ -430,13 +462,13 @@ public class MenuModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06010F82 RID: 69506 RVA: 0x00422030 File Offset: 0x00420230
+	// Token: 0x0600E416 RID: 58390 RVA: 0x0042EA8C File Offset: 0x0042CC8C
 	public bool IsInMenuDataByFunctionId(EFunction functionId)
 	{
 		return this.MenuDataFunctionMap.ContainsKey(functionId);
 	}
 
-	// Token: 0x06010F83 RID: 69507 RVA: 0x00422040 File Offset: 0x00420240
+	// Token: 0x0600E417 RID: 58391 RVA: 0x0042EA9C File Offset: 0x0042CC9C
 	private int GetSettingScoreDelta(int current, int recommended, int[] scoreTable)
 	{
 		int num = MathUtils.Instance.Clamp(current, 0, scoreTable.Length - 1);
@@ -444,7 +476,39 @@ public class MenuModel : ModelBase
 		return scoreTable[num] - scoreTable[num2];
 	}
 
-	// Token: 0x06010F84 RID: 69508 RVA: 0x00422078 File Offset: 0x00420278
+	// Token: 0x0600E418 RID: 58392 RVA: 0x0042EAD4 File Offset: 0x0042CCD4
+	private int GetRenderDistanceLoadScore(float value, bool isMobilePlatform)
+	{
+		double renderDistanceStepIndex = (double)GameSettingsDeviceRender.GetRenderDistanceStepIndex(value);
+		int[] array = isMobilePlatform ? MenuDefine.mobileLoadingRangeScores : MenuDefine.pcLoadingRangeScores;
+		int num = array[0];
+		int num2 = array[array.Length - 1];
+		double num3 = renderDistanceStepIndex / (double)GameSettingsDeviceRender.GetRenderDistanceMaxStepIndex();
+		return (int)Math.Round((double)num + (double)(num2 - num) * num3, MidpointRounding.AwayFromZero);
+	}
+
+	// Token: 0x0600E419 RID: 58393 RVA: 0x0042EB1C File Offset: 0x0042CD1C
+	private int GetRenderDistanceScoreDelta(bool isMobilePlatform)
+	{
+		if (!GameSettingsManager.Instance.IsValid(EFunction.LOADINGRANGESCALELEVEL, false))
+		{
+			this.ImageWeightMap.Remove(20611);
+			return 0;
+		}
+		int quality = this.GetDataCacheOrCurValue(EFunction.IMAGEQUALITY) ?? ((int)GameSettingsDeviceRender.Instance.GameQualitySettingLevel);
+		float? renderDistanceRecommendation = GameSettingsDeviceRender.Instance.GetRenderDistanceRecommendation(quality);
+		if (renderDistanceRecommendation == null)
+		{
+			this.ImageWeightMap.Remove(20611);
+			return 0;
+		}
+		float value = this.GetDataCacheOrCurValueFloat(EFunction.LOADINGRANGESCALELEVEL) ?? renderDistanceRecommendation.Value;
+		int num = this.GetRenderDistanceLoadScore(value, isMobilePlatform) - this.GetRenderDistanceLoadScore(renderDistanceRecommendation.Value, isMobilePlatform);
+		this.ImageWeightMap[20611] = num;
+		return num;
+	}
+
+	// Token: 0x0600E41A RID: 58394 RVA: 0x0042EBF0 File Offset: 0x0042CDF0
 	[return: TupleElementNames(new string[]
 	{
 		"recommended",
@@ -481,7 +545,6 @@ public class MenuModel : ModelBase
 		dictionary.Add("RayTracingGI", 0);
 		dictionary.Add("RayTracingReflection", 0);
 		dictionary.Add("RayTracedShadow", 0);
-		dictionary.Add("LoadingRangeScaleLevel", 0);
 		dictionary.Add("AnisoLevel", 0);
 		List<ValueTuple<EFunction, string, int[]>> list = new List<ValueTuple<EFunction, string, int[]>>
 		{
@@ -501,7 +564,6 @@ public class MenuModel : ModelBase
 			new ValueTuple<EFunction, string, int[]>(EFunction.RayTracedGI, "RayTracingGI", MenuDefine.rayTracingGIScores),
 			new ValueTuple<EFunction, string, int[]>(EFunction.RayTracedReflection, "RayTracingReflection", MenuDefine.rayTracingReflectionScores),
 			new ValueTuple<EFunction, string, int[]>(EFunction.RayTracedShadow, "RayTracedShadow", MenuDefine.rayTracedShadowScores),
-			new ValueTuple<EFunction, string, int[]>(EFunction.LOADINGRANGESCALELEVEL, "LoadingRangeScaleLevel", MenuDefine.pcLoadingRangeScores),
 			new ValueTuple<EFunction, string, int[]>(EFunction.AnisoLevel, "AnisoLevel", MenuDefine.anisotropyScores)
 		};
 		Dictionary<string, int> dictionary2 = new Dictionary<string, int>(dictionary);
@@ -523,7 +585,7 @@ public class MenuModel : ModelBase
 		return new ValueTuple<Dictionary<string, int>, List<ValueTuple<EFunction, string, int[]>>>(dictionary2, list);
 	}
 
-	// Token: 0x06010F85 RID: 69509 RVA: 0x004223A8 File Offset: 0x004205A8
+	// Token: 0x0600E41B RID: 58395 RVA: 0x0042EEF8 File Offset: 0x0042D0F8
 	private int GetQualitySettingDeltaScorePcPlatform()
 	{
 		EGameQualitySettingLevel? recommendQualityLv = GameSettingsDeviceRender.Instance.GetRecommendQualityLv();
@@ -540,7 +602,7 @@ public class MenuModel : ModelBase
 		ValueTuple<Dictionary<string, int>, List<ValueTuple<EFunction, string, int[]>>> renderRecommendedAndFieldMappings = this.GetRenderRecommendedAndFieldMappings(otherChangedValue);
 		Dictionary<string, int> item = renderRecommendedAndFieldMappings.Item1;
 		List<ValueTuple<EFunction, string, int[]>> item2 = renderRecommendedAndFieldMappings.Item2;
-		int num = 0;
+		int num = this.GetRenderDistanceScoreDelta(false);
 		foreach (ValueTuple<EFunction, string, int[]> valueTuple in item2)
 		{
 			EFunction item3 = valueTuple.Item1;
@@ -625,7 +687,7 @@ public class MenuModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06010F86 RID: 69510 RVA: 0x00422780 File Offset: 0x00420980
+	// Token: 0x0600E41C RID: 58396 RVA: 0x0042F2D4 File Offset: 0x0042D4D4
 	public int GetQualitySettingScoreMobilePlatform()
 	{
 		int? num = new int?(this.GetDataCacheOrCurValue(EFunction.MOBILERESOLUTION).GetValueOrDefault());
@@ -675,16 +737,14 @@ public class MenuModel : ModelBase
 		this.ImageWeightMap[79] = num31;
 		int value = MenuDefine.vegetationDensityScores[MathUtils.Instance.Clamp(num17.Value, 0, MenuDefine.vegetationDensityScores.Length - 1)];
 		this.ImageWeightMap[20035] = value;
-		int? num32 = new int?(this.GetDataCacheOrCurValue(EFunction.LOADINGRANGESCALELEVEL).GetValueOrDefault());
-		int num33 = MenuDefine.mobileLoadingRangeScores[MathUtils.Instance.Clamp(num32.Value, 0, MenuDefine.mobileLoadingRangeScores.Length - 1)];
-		this.ImageWeightMap[20611] = num33;
-		int? num34 = new int?(this.GetDataCacheOrCurValue(EFunction.AnisoLevel).GetValueOrDefault());
-		int num35 = MenuDefine.anisotropyScores[MathUtils.Instance.Clamp(num34.Value, 0, MenuDefine.anisotropyScores.Length - 1)];
-		this.ImageWeightMap[20004] = num35;
-		return (int)((num18 + (float)num19 + (float)num20 + (float)num21 + (float)num22 + (float)num23 + (float)num24 + (float)num25 + (float)num26 + (float)num27 + (float)num28 + (float)num29 + (float)num30 + (float)num31 + (float)num33 + (float)num35) * num2 * num4);
+		int? num32 = new int?(this.GetDataCacheOrCurValue(EFunction.AnisoLevel).GetValueOrDefault());
+		int num33 = MenuDefine.anisotropyScores[MathUtils.Instance.Clamp(num32.Value, 0, MenuDefine.anisotropyScores.Length - 1)];
+		this.ImageWeightMap[20004] = num33;
+		int renderDistanceScoreDelta = this.GetRenderDistanceScoreDelta(true);
+		return (int)((num18 + (float)num19 + (float)num20 + (float)num21 + (float)num22 + (float)num23 + (float)num24 + (float)num25 + (float)num26 + (float)num27 + (float)num28 + (float)num29 + (float)num30 + (float)num31 + (float)num33 + (float)renderDistanceScoreDelta) * num2 * num4);
 	}
 
-	// Token: 0x06010F87 RID: 69511 RVA: 0x00422CE0 File Offset: 0x00420EE0
+	// Token: 0x0600E41D RID: 58397 RVA: 0x0042F7EC File Offset: 0x0042D9EC
 	public unsafe float GetLoadPercentage()
 	{
 		if (Info.Instance.IsMobilePlatform())
@@ -719,7 +779,7 @@ public class MenuModel : ModelBase
 		return 0f;
 	}
 
-	// Token: 0x06010F88 RID: 69512 RVA: 0x00422E20 File Offset: 0x00421020
+	// Token: 0x0600E41E RID: 58398 RVA: 0x0042F92C File Offset: 0x0042DB2C
 	public unsafe GameQualityLoadInfo GetGameQualityLoadInfo()
 	{
 		float num = this.GetLoadPercentage();
@@ -758,13 +818,13 @@ public class MenuModel : ModelBase
 		};
 	}
 
-	// Token: 0x06010F89 RID: 69513 RVA: 0x00422F2B File Offset: 0x0042112B
+	// Token: 0x0600E41F RID: 58399 RVA: 0x0042FA37 File Offset: 0x0042DC37
 	public bool GetGamepadOperationPreferences()
 	{
 		return LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.GamepadOperationPreferences, false);
 	}
 
-	// Token: 0x06010F8A RID: 69514 RVA: 0x00422F35 File Offset: 0x00421135
+	// Token: 0x0600E420 RID: 58400 RVA: 0x0042FA41 File Offset: 0x0042DC41
 	public void CleanFilterCache()
 	{
 		this.FilterSettingValuesCacheInternal = null;
@@ -772,7 +832,7 @@ public class MenuModel : ModelBase
 		this.FilterChangedMap.Clear();
 	}
 
-	// Token: 0x06010F8B RID: 69515 RVA: 0x00422F58 File Offset: 0x00421158
+	// Token: 0x0600E421 RID: 58401 RVA: 0x0042FA64 File Offset: 0x0042DC64
 	public int GetFilterIndexByConfigId(int id)
 	{
 		IReadOnlyList<FilterSetting> configList = ConfigFilterSettingAll.GetConfigList(true);
@@ -790,7 +850,7 @@ public class MenuModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06010F8C RID: 69516 RVA: 0x00422F98 File Offset: 0x00421198
+	// Token: 0x0600E422 RID: 58402 RVA: 0x0042FAA4 File Offset: 0x0042DCA4
 	public int? GetDataCacheOrCurValue(EFunction id)
 	{
 		float num;
@@ -809,7 +869,7 @@ public class MenuModel : ModelBase
 		return GameSettingsManager.Instance.GetCurrentValue(id, true, true);
 	}
 
-	// Token: 0x06010F8D RID: 69517 RVA: 0x00423064 File Offset: 0x00421264
+	// Token: 0x0600E423 RID: 58403 RVA: 0x0042FB70 File Offset: 0x0042DD70
 	public float? GetDataCacheOrCurValueFloat(EFunction id)
 	{
 		float value;
@@ -837,19 +897,19 @@ public class MenuModel : ModelBase
 		return new float?((float)currentValue.GetValueOrDefault());
 	}
 
-	// Token: 0x06010F8E RID: 69518 RVA: 0x00423169 File Offset: 0x00421369
+	// Token: 0x0600E424 RID: 58404 RVA: 0x0042FC75 File Offset: 0x0042DE75
 	public bool IsDataCacheContains(EFunction id)
 	{
 		return this.TempDataCache.ContainsKey(id);
 	}
 
-	// Token: 0x06010F8F RID: 69519 RVA: 0x00423177 File Offset: 0x00421377
+	// Token: 0x0600E425 RID: 58405 RVA: 0x0042FC83 File Offset: 0x0042DE83
 	public bool HasDataCache()
 	{
 		return this.TempDataCache.Count > 0;
 	}
 
-	// Token: 0x06010F90 RID: 69520 RVA: 0x00423187 File Offset: 0x00421387
+	// Token: 0x0600E426 RID: 58406 RVA: 0x0042FC93 File Offset: 0x0042DE93
 	public void AddDataToTempCache(EFunction id, float value)
 	{
 		if (this.TempDataCache.ContainsKey(id))
@@ -863,7 +923,7 @@ public class MenuModel : ModelBase
 		EventSystem.Instance.Emit<EFunction>(EEventName.RefreshMenuSetting, id);
 	}
 
-	// Token: 0x06010F91 RID: 69521 RVA: 0x004231C4 File Offset: 0x004213C4
+	// Token: 0x0600E427 RID: 58407 RVA: 0x0042FCD0 File Offset: 0x0042DED0
 	public void AddDataToTempOrSetValue(EFunction id, int value)
 	{
 		MenuData menuDataByFunctionId = this.GetMenuDataByFunctionId((int)id);
@@ -875,25 +935,25 @@ public class MenuModel : ModelBase
 		GameSettingsManager.Instance.HandleValueChange(id, value, EGameSettingsApplyReason.WhenUi);
 	}
 
-	// Token: 0x06010F92 RID: 69522 RVA: 0x004231F2 File Offset: 0x004213F2
+	// Token: 0x0600E428 RID: 58408 RVA: 0x0042FCFE File Offset: 0x0042DEFE
 	public void InitDataCache()
 	{
 		this.TempDataCache.Clear();
 	}
 
-	// Token: 0x06010F93 RID: 69523 RVA: 0x00423200 File Offset: 0x00421400
+	// Token: 0x0600E429 RID: 58409 RVA: 0x0042FD0C File Offset: 0x0042DF0C
 	[NullableContext(0)]
 	public UniTask<int> ApplyDataCache()
 	{
-		MenuModel.<ApplyDataCache>d__70 <ApplyDataCache>d__;
+		MenuModel.<ApplyDataCache>d__73 <ApplyDataCache>d__;
 		<ApplyDataCache>d__.<>t__builder = AsyncUniTaskMethodBuilder<int>.Create();
 		<ApplyDataCache>d__.<>4__this = this;
 		<ApplyDataCache>d__.<>1__state = -1;
-		<ApplyDataCache>d__.<>t__builder.Start<MenuModel.<ApplyDataCache>d__70>(ref <ApplyDataCache>d__);
+		<ApplyDataCache>d__.<>t__builder.Start<MenuModel.<ApplyDataCache>d__73>(ref <ApplyDataCache>d__);
 		return <ApplyDataCache>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010F94 RID: 69524 RVA: 0x00423244 File Offset: 0x00421444
+	// Token: 0x0600E42A RID: 58410 RVA: 0x0042FD50 File Offset: 0x0042DF50
 	public int GetFilterConfigIdByIndex(int index)
 	{
 		IReadOnlyList<FilterSetting> configList = ConfigFilterSettingAll.GetConfigList(true);
@@ -908,28 +968,43 @@ public class MenuModel : ModelBase
 		return 1;
 	}
 
-	// Token: 0x06010F95 RID: 69525 RVA: 0x0042327C File Offset: 0x0042147C
+	// Token: 0x0600E42B RID: 58411 RVA: 0x0042FD88 File Offset: 0x0042DF88
 	public string[] GetTopLoadImpactSettings(int maxItems = 4)
 	{
 		if (this.ImageWeightMap == null || this.ImageWeightMap.Count == 0)
 		{
 			return new string[0];
 		}
-		return (from kvp in this.ImageWeightMap
-		orderby kvp.Value descending
-		select kvp).Take(maxItems).Select(delegate(KeyValuePair<int, int> kvp)
+		List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>(this.ImageWeightMap.Count);
+		foreach (KeyValuePair<int, int> item in this.ImageWeightMap)
 		{
-			MenuData menuData;
-			if (this.MenuDataFunctionMap.TryGetValue((EFunction)kvp.Key, out menuData) && menuData != null)
+			int num = list.Count;
+			while (num > 0 && list[num - 1].Value < item.Value)
 			{
-				return menuData.FunctionName;
+				num--;
 			}
-			return "";
-		}).ToArray<string>();
+			list.Insert(num, item);
+		}
+		int num2 = Math.Min(Math.Max(maxItems, 0), list.Count);
+		string[] array = new string[num2];
+		for (int i = 0; i < num2; i++)
+		{
+			KeyValuePair<int, int> keyValuePair = list[i];
+			MenuData menuData;
+			if (this.MenuDataFunctionMap.TryGetValue((EFunction)keyValuePair.Key, out menuData) && menuData != null)
+			{
+				array[i] = menuData.FunctionName;
+			}
+			else
+			{
+				array[i] = "";
+			}
+		}
+		return array;
 	}
 
-	// Token: 0x1700158E RID: 5518
-	// (get) Token: 0x06010F96 RID: 69526 RVA: 0x004232EB File Offset: 0x004214EB
+	// Token: 0x170015C5 RID: 5573
+	// (get) Token: 0x0600E42C RID: 58412 RVA: 0x0042FEA4 File Offset: 0x0042E0A4
 	public static MenuModel Instance
 	{
 		get
@@ -938,7 +1013,7 @@ public class MenuModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010F97 RID: 69527 RVA: 0x004232F2 File Offset: 0x004214F2
+	// Token: 0x0600E42D RID: 58413 RVA: 0x0042FEAB File Offset: 0x0042E0AB
 	public static MenuModel GetOrCreateInstance()
 	{
 		if (MenuModel._Instance == null)
@@ -948,7 +1023,7 @@ public class MenuModel : ModelBase
 		return MenuModel._Instance;
 	}
 
-	// Token: 0x06010F98 RID: 69528 RVA: 0x00423306 File Offset: 0x00421506
+	// Token: 0x0600E42E RID: 58414 RVA: 0x0042FEBF File Offset: 0x0042E0BF
 	public static bool CreateInstance()
 	{
 		if (MenuModel._Instance != null)
@@ -959,86 +1034,86 @@ public class MenuModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010F99 RID: 69529 RVA: 0x0042331C File Offset: 0x0042151C
+	// Token: 0x0600E42F RID: 58415 RVA: 0x0042FED5 File Offset: 0x0042E0D5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010F9A RID: 69530 RVA: 0x0042331E File Offset: 0x0042151E
+	// Token: 0x0600E430 RID: 58416 RVA: 0x0042FED7 File Offset: 0x0042E0D7
 	public static void ResetStaticDefaultValue()
 	{
 		MenuModel._Instance = null;
 	}
 
-	// Token: 0x06010F9B RID: 69531 RVA: 0x00423326 File Offset: 0x00421526
+	// Token: 0x0600E431 RID: 58417 RVA: 0x0042FEDF File Offset: 0x0042E0DF
 	static MenuModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MenuModel.CreateStaticDefaultValue), new Action(MenuModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040080F6 RID: 33014
+	// Token: 0x04008234 RID: 33332
 	private readonly Dictionary<EMainType, List<MenuData>> MenuDataMainTypeMap = new Dictionary<EMainType, List<MenuData>>();
 
-	// Token: 0x040080F7 RID: 33015
+	// Token: 0x04008235 RID: 33333
 	private readonly Dictionary<EFunction, MenuData> MenuDataFunctionMap = new Dictionary<EFunction, MenuData>();
 
-	// Token: 0x040080F8 RID: 33016
+	// Token: 0x04008236 RID: 33334
 	private readonly Dictionary<EFunction, float> TempDataCache = new Dictionary<EFunction, float>();
 
-	// Token: 0x040080F9 RID: 33017
+	// Token: 0x04008237 RID: 33335
 	[Nullable(2)]
 	private Dictionary<int, MainType> MainConfig;
 
-	// Token: 0x040080FA RID: 33018
+	// Token: 0x04008238 RID: 33336
 	private readonly Dictionary<int, int> ImageWeightMap = new Dictionary<int, int>();
 
-	// Token: 0x040080FB RID: 33019
+	// Token: 0x04008239 RID: 33337
 	public bool IsEdited;
 
-	// Token: 0x040080FC RID: 33020
+	// Token: 0x0400823A RID: 33338
 	private bool? IsImageQualityCustomInternal;
 
-	// Token: 0x040080FD RID: 33021
+	// Token: 0x0400823B RID: 33339
 	public CSharpScript.Game.Module.Menu.EInputControllerType KeySettingInputControllerType;
 
-	// Token: 0x040080FE RID: 33022
+	// Token: 0x0400823C RID: 33340
 	public bool IsWaitForKeyInput;
 
-	// Token: 0x040080FF RID: 33023
+	// Token: 0x0400823D RID: 33341
 	public float LowShake;
 
-	// Token: 0x04008100 RID: 33024
+	// Token: 0x0400823E RID: 33342
 	public float MiddleShake;
 
-	// Token: 0x04008101 RID: 33025
+	// Token: 0x0400823F RID: 33343
 	public float HighShake;
 
-	// Token: 0x04008102 RID: 33026
+	// Token: 0x04008240 RID: 33344
 	public int SimulatedPlatform = -1;
 
-	// Token: 0x04008103 RID: 33027
+	// Token: 0x04008241 RID: 33345
 	[Nullable(2)]
 	public List<int> AllowResolutionList;
 
-	// Token: 0x04008104 RID: 33028
+	// Token: 0x04008242 RID: 33346
 	public float QualityInfoPercentage;
 
-	// Token: 0x04008105 RID: 33029
+	// Token: 0x04008243 RID: 33347
 	public bool IsOpenedImageOverloadConfirmBox;
 
-	// Token: 0x04008106 RID: 33030
+	// Token: 0x04008244 RID: 33348
 	public bool IsRayTracingOpenChecked;
 
-	// Token: 0x04008107 RID: 33031
+	// Token: 0x04008245 RID: 33349
 	public bool NeedRayTracingSubChange;
 
-	// Token: 0x04008108 RID: 33032
+	// Token: 0x04008246 RID: 33350
 	public bool IsVulkanOpenChecked;
 
-	// Token: 0x04008109 RID: 33033
+	// Token: 0x04008247 RID: 33351
 	public bool IsAnisoLevelOpenChecked;
 
-	// Token: 0x0400810A RID: 33034
+	// Token: 0x04008248 RID: 33352
 	private readonly Dictionary<EFunction, FeatureRestrictionTemplate> Function2FeatureTemplateMap = new Dictionary<EFunction, FeatureRestrictionTemplate>
 	{
 		{
@@ -1047,14 +1122,14 @@ public class MenuModel : ModelBase
 		}
 	};
 
-	// Token: 0x0400810B RID: 33035
+	// Token: 0x04008249 RID: 33353
 	[Nullable(2)]
 	public FilterSettingViewModel FilterSettingViewModel;
 
-	// Token: 0x0400810C RID: 33036
+	// Token: 0x0400824A RID: 33354
 	public readonly Dictionary<int, bool> FilterChangedMap = new Dictionary<int, bool>();
 
-	// Token: 0x0400810D RID: 33037
+	// Token: 0x0400824B RID: 33355
 	[Nullable(new byte[]
 	{
 		2,
@@ -1062,13 +1137,13 @@ public class MenuModel : ModelBase
 	})]
 	private Dictionary<int, float[]> FilterSettingValuesCacheInternal;
 
-	// Token: 0x0400810E RID: 33038
+	// Token: 0x0400824C RID: 33356
 	private int? FilterSettingIdCacheInternal;
 
-	// Token: 0x0400810F RID: 33039
+	// Token: 0x0400824D RID: 33357
 	public bool HasApplyRecommendData;
 
-	// Token: 0x04008110 RID: 33040
+	// Token: 0x0400824E RID: 33358
 	[Nullable(2)]
 	private static MenuModel _Instance;
 }

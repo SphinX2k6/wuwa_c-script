@@ -2,37 +2,37 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001403 RID: 5123
+// Token: 0x020008B7 RID: 2231
 [NullableContext(1)]
 public interface IPinballSettleResultViewContext
 {
-	// Token: 0x060090BC RID: 37052
+	// Token: 0x06006451 RID: 25681
 	void ShowStarLayout(bool[] starInfo);
 
-	// Token: 0x060090BD RID: 37053
+	// Token: 0x06006452 RID: 25682
 	bool GetNeedAdjustFormation();
 
-	// Token: 0x060090BE RID: 37054
+	// Token: 0x06006453 RID: 25683
 	void ShowRewards(List<TItem> rewardList);
 
-	// Token: 0x060090BF RID: 37055
+	// Token: 0x06006454 RID: 25684
 	void ShowRewardsGot();
 
-	// Token: 0x060090C0 RID: 37056
+	// Token: 0x06006455 RID: 25685
 	void ShowProgressRewardList(int score, int[] scoreLevel, int[] scoreLevelDropId);
 
-	// Token: 0x060090C1 RID: 37057
+	// Token: 0x06006456 RID: 25686
 	void ShowSuccessTips(string successTitle);
 
-	// Token: 0x060090C2 RID: 37058
+	// Token: 0x06006457 RID: 25687
 	void BindRestartButton();
 
-	// Token: 0x060090C3 RID: 37059
+	// Token: 0x06006458 RID: 25688
 	void BindNextButton();
 
-	// Token: 0x060090C4 RID: 37060
+	// Token: 0x06006459 RID: 25689
 	void BindBackButton();
 
-	// Token: 0x060090C5 RID: 37061
+	// Token: 0x0600645A RID: 25690
 	IPinballSettleResultViewParam GetOpenParam();
 }

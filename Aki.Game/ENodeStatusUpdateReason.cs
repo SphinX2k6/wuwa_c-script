@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001D7F RID: 7551
+// Token: 0x02001241 RID: 4673
 public enum ENodeStatusUpdateReason
 {
-	// Token: 0x040069E7 RID: 27111
+	// Token: 0x04006AC7 RID: 27335
 	ServerUpdateNodeStatus,
-	// Token: 0x040069E8 RID: 27112
+	// Token: 0x04006AC8 RID: 27336
 	Recover,
-	// Token: 0x040069E9 RID: 27113
+	// Token: 0x04006AC9 RID: 27337
 	NodeDestroy
 }

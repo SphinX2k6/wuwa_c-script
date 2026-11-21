@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200596D RID: 22893
+	// Token: 0x02004946 RID: 18758
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantBarTween
 	{
-		// Token: 0x0603A17A RID: 237946 RVA: 0x00DCE2FC File Offset: 0x00DCC4FC
+		// Token: 0x0602F0A0 RID: 192672 RVA: 0x00D1D584 File Offset: 0x00D1B784
 		private void AccumTweenCall(float value)
 		{
 			UUISprite accum = this.Accum;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Giant
 			accum.SetFillAmount(value);
 		}
 
-		// Token: 0x0603A17B RID: 237947 RVA: 0x00DCE30F File Offset: 0x00DCC50F
+		// Token: 0x0602F0A1 RID: 192673 RVA: 0x00D1D597 File Offset: 0x00D1B797
 		private void PreviewTweenCall(float value)
 		{
 			UUISprite preview = this.Preview;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Giant
 			preview.SetFillAmount(value);
 		}
 
-		// Token: 0x0603A17C RID: 237948 RVA: 0x00DCE324 File Offset: 0x00DCC524
+		// Token: 0x0602F0A2 RID: 192674 RVA: 0x00D1D5AC File Offset: 0x00D1B7AC
 		public GiantBarTween(UUISprite accum, UUISprite preview)
 		{
 			this.AccumDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.AccumTweenCall));
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.Preview = preview;
 		}
 
-		// Token: 0x0603A17D RID: 237949 RVA: 0x00DCE374 File Offset: 0x00DCC574
+		// Token: 0x0602F0A3 RID: 192675 RVA: 0x00D1D5FC File Offset: 0x00D1B7FC
 		public void PlayAccumTo(double target, double time, Action onDone)
 		{
 			this.KillAccum();
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Module.Giant
 			accumTweener2.OnCompleteCallBack.Bind(new Action(this.OnAccumComplete));
 		}
 
-		// Token: 0x0603A17E RID: 237950 RVA: 0x00DCE438 File Offset: 0x00DCC638
+		// Token: 0x0602F0A4 RID: 192676 RVA: 0x00D1D6C0 File Offset: 0x00D1B8C0
 		private void OnAccumComplete()
 		{
 			this.KillAccum();
 			this.FinishAccum();
 		}
 
-		// Token: 0x0603A17F RID: 237951 RVA: 0x00DCE446 File Offset: 0x00DCC646
+		// Token: 0x0602F0A5 RID: 192677 RVA: 0x00D1D6CE File Offset: 0x00D1B8CE
 		private void FinishAccum()
 		{
 			UiLayer.Instance.SetShowMaskLayer(GiantBarTween.MaskTag, false);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Giant
 			onAccumDone();
 		}
 
-		// Token: 0x0603A180 RID: 237952 RVA: 0x00DCE46F File Offset: 0x00DCC66F
+		// Token: 0x0602F0A6 RID: 192678 RVA: 0x00D1D6F7 File Offset: 0x00D1B8F7
 		private void KillAccum()
 		{
 			ULTweener accumTweener = this.AccumTweener;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.AccumTweener = null;
 		}
 
-		// Token: 0x0603A181 RID: 237953 RVA: 0x00DCE48C File Offset: 0x00DCC68C
+		// Token: 0x0602F0A7 RID: 192679 RVA: 0x00D1D714 File Offset: 0x00D1B914
 		public void PlayPreview(UUISprite preview, double target, double time)
 		{
 			this.KillPreview();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Giant
 			previewTweener2.OnCompleteCallBack.Bind(new Action(this.KillPreview));
 		}
 
-		// Token: 0x0603A182 RID: 237954 RVA: 0x00DCE51F File Offset: 0x00DCC71F
+		// Token: 0x0602F0A8 RID: 192680 RVA: 0x00D1D7A7 File Offset: 0x00D1B9A7
 		public void KillPreview()
 		{
 			ULTweener previewTweener = this.PreviewTweener;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Giant
 			this.PreviewTweener = null;
 		}
 
-		// Token: 0x0603A183 RID: 237955 RVA: 0x00DCE53C File Offset: 0x00DCC73C
+		// Token: 0x0602F0A9 RID: 192681 RVA: 0x00D1D7C4 File Offset: 0x00D1B9C4
 		public void Destroy()
 		{
 			UiLayer.Instance.SetShowMaskLayer(GiantBarTween.MaskTag, false);
@@ -153,33 +153,33 @@ namespace CSharpScript.Game.Module.Giant
 			this.OnAccumDone = null;
 		}
 
-		// Token: 0x0401E4A9 RID: 124073
+		// Token: 0x04018F47 RID: 102215
 		public static readonly string MaskTag = "GiantSystemCollectView";
 
-		// Token: 0x0401E4AA RID: 124074
+		// Token: 0x04018F48 RID: 102216
 		[Nullable(2)]
 		private UUISprite Accum;
 
-		// Token: 0x0401E4AB RID: 124075
+		// Token: 0x04018F49 RID: 102217
 		[Nullable(2)]
 		private UUISprite Preview;
 
-		// Token: 0x0401E4AC RID: 124076
+		// Token: 0x04018F4A RID: 102218
 		[Nullable(2)]
 		private ULTweener AccumTweener;
 
-		// Token: 0x0401E4AD RID: 124077
+		// Token: 0x04018F4B RID: 102219
 		[Nullable(2)]
 		private ULTweener PreviewTweener;
 
-		// Token: 0x0401E4AE RID: 124078
+		// Token: 0x04018F4C RID: 102220
 		[Nullable(2)]
 		private Action OnAccumDone;
 
-		// Token: 0x0401E4AF RID: 124079
+		// Token: 0x04018F4D RID: 102221
 		private FLTweenFloatSetterDynamic AccumDelegate;
 
-		// Token: 0x0401E4B0 RID: 124080
+		// Token: 0x04018F4E RID: 102222
 		private FLTweenFloatSetterDynamic PreviewDelegate;
 	}
 }

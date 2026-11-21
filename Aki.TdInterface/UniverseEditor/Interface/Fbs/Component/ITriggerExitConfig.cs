@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005AE7 RID: 23271
+	// Token: 0x020060F4 RID: 24820
 	public struct ITriggerExitConfig : IFlatbufferObject
 	{
-		// Token: 0x1700AF7D RID: 44925
-		// (get) Token: 0x06027B60 RID: 162656 RVA: 0x005766F9 File Offset: 0x005748F9
+		// Token: 0x1700B8B9 RID: 47289
+		// (get) Token: 0x0602A0EC RID: 172268 RVA: 0x005BDBBD File Offset: 0x005BBDBD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027B61 RID: 162657 RVA: 0x00576706 File Offset: 0x00574906
+		// Token: 0x0602A0ED RID: 172269 RVA: 0x005BDBCA File Offset: 0x005BBDCA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027B62 RID: 162658 RVA: 0x00576710 File Offset: 0x00574910
+		// Token: 0x0602A0EE RID: 172270 RVA: 0x005BDBD4 File Offset: 0x005BBDD4
 		public static ITriggerExitConfig GetRootAsITriggerExitConfig(ByteBuffer _bb)
 		{
 			return ITriggerExitConfig.GetRootAsITriggerExitConfig(_bb, default(ITriggerExitConfig));
 		}
 
-		// Token: 0x06027B63 RID: 162659 RVA: 0x0057672C File Offset: 0x0057492C
+		// Token: 0x0602A0EF RID: 172271 RVA: 0x005BDBF0 File Offset: 0x005BBDF0
 		public static ITriggerExitConfig GetRootAsITriggerExitConfig(ByteBuffer _bb, ITriggerExitConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027B64 RID: 162660 RVA: 0x00576749 File Offset: 0x00574949
+		// Token: 0x0602A0F0 RID: 172272 RVA: 0x005BDC0D File Offset: 0x005BBE0D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027B65 RID: 162661 RVA: 0x00576758 File Offset: 0x00574958
+		// Token: 0x0602A0F1 RID: 172273 RVA: 0x005BDC1C File Offset: 0x005BBE1C
 		public ITriggerExitConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AF7E RID: 44926
-		// (get) Token: 0x06027B66 RID: 162662 RVA: 0x00576768 File Offset: 0x00574968
+		// Token: 0x1700B8BA RID: 47290
+		// (get) Token: 0x0602A0F2 RID: 172274 RVA: 0x005BDC2C File Offset: 0x005BBE2C
 		public int ExtraRange
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF7F RID: 44927
-		// (get) Token: 0x06027B67 RID: 162663 RVA: 0x005767A4 File Offset: 0x005749A4
+		// Token: 0x1700B8BB RID: 47291
+		// (get) Token: 0x0602A0F3 RID: 172275 RVA: 0x005BDC68 File Offset: 0x005BBE68
 		public int MaxTriggerTimes
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF80 RID: 44928
-		// (get) Token: 0x06027B68 RID: 162664 RVA: 0x005767E0 File Offset: 0x005749E0
+		// Token: 0x1700B8BC RID: 47292
+		// (get) Token: 0x0602A0F4 RID: 172276 RVA: 0x005BDCA4 File Offset: 0x005BBEA4
 		public IConditionGroup? Condition
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF81 RID: 44929
-		// (get) Token: 0x06027B69 RID: 162665 RVA: 0x00576840 File Offset: 0x00574A40
+		// Token: 0x1700B8BD RID: 47293
+		// (get) Token: 0x0602A0F5 RID: 172277 RVA: 0x005BDD04 File Offset: 0x005BBF04
 		public int MatchTypeCount
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF82 RID: 44930
-		// (get) Token: 0x06027B6A RID: 162666 RVA: 0x00576880 File Offset: 0x00574A80
+		// Token: 0x1700B8BE RID: 47294
+		// (get) Token: 0x0602A0F6 RID: 172278 RVA: 0x005BDD44 File Offset: 0x005BBF44
 		public bool ExitByNotEnterCondition
 		{
 			get
@@ -121,7 +121,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027B6B RID: 162667 RVA: 0x005768C0 File Offset: 0x00574AC0
+		// Token: 0x0602A0F7 RID: 172279 RVA: 0x005BDD84 File Offset: 0x005BBF84
 		public IActionInfo? Actions(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AF83 RID: 44931
-		// (get) Token: 0x06027B6C RID: 162668 RVA: 0x00576924 File Offset: 0x00574B24
+		// Token: 0x1700B8BF RID: 47295
+		// (get) Token: 0x0602A0F8 RID: 172280 RVA: 0x005BDDE8 File Offset: 0x005BBFE8
 		public int ActionsLength
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF84 RID: 44932
-		// (get) Token: 0x06027B6D RID: 162669 RVA: 0x00576950 File Offset: 0x00574B50
+		// Token: 0x1700B8C0 RID: 47296
+		// (get) Token: 0x0602A0F9 RID: 172281 RVA: 0x005BDE14 File Offset: 0x005BC014
 		public bool DisableExecuteActionsWhenDestroy
 		{
 			get
@@ -158,8 +158,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AF85 RID: 44933
-		// (get) Token: 0x06027B6E RID: 162670 RVA: 0x00576990 File Offset: 0x00574B90
+		// Token: 0x1700B8C1 RID: 47297
+		// (get) Token: 0x0602A0FA RID: 172282 RVA: 0x005BDE54 File Offset: 0x005BC054
 		public byte NullMask
 		{
 			get
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027B6F RID: 162671 RVA: 0x005769D0 File Offset: 0x00574BD0
+		// Token: 0x0602A0FB RID: 172283 RVA: 0x005BDE94 File Offset: 0x005BC094
 		public static Offset<ITriggerExitConfig> CreateITriggerExitConfig(FlatBufferBuilder builder, int ExtraRange = 0, int MaxTriggerTimes = 0, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), int MatchTypeCount = 0, bool ExitByNotEnterCondition = false, VectorOffset ActionsOffset = default(VectorOffset), bool DisableExecuteActionsWhenDestroy = false, byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -188,49 +188,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITriggerExitConfig.EndITriggerExitConfig(builder);
 		}
 
-		// Token: 0x06027B70 RID: 162672 RVA: 0x00576A27 File Offset: 0x00574C27
+		// Token: 0x0602A0FC RID: 172284 RVA: 0x005BDEEB File Offset: 0x005BC0EB
 		public static void StartITriggerExitConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x06027B71 RID: 162673 RVA: 0x00576A30 File Offset: 0x00574C30
+		// Token: 0x0602A0FD RID: 172285 RVA: 0x005BDEF4 File Offset: 0x005BC0F4
 		public static void AddExtraRange(FlatBufferBuilder builder, int extraRange)
 		{
 			builder.AddInt(0, extraRange, 0);
 		}
 
-		// Token: 0x06027B72 RID: 162674 RVA: 0x00576A3B File Offset: 0x00574C3B
+		// Token: 0x0602A0FE RID: 172286 RVA: 0x005BDEFF File Offset: 0x005BC0FF
 		public static void AddMaxTriggerTimes(FlatBufferBuilder builder, int maxTriggerTimes)
 		{
 			builder.AddInt(1, maxTriggerTimes, 0);
 		}
 
-		// Token: 0x06027B73 RID: 162675 RVA: 0x00576A46 File Offset: 0x00574C46
+		// Token: 0x0602A0FF RID: 172287 RVA: 0x005BDF0A File Offset: 0x005BC10A
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(2, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x06027B74 RID: 162676 RVA: 0x00576A56 File Offset: 0x00574C56
+		// Token: 0x0602A100 RID: 172288 RVA: 0x005BDF1A File Offset: 0x005BC11A
 		public static void AddMatchTypeCount(FlatBufferBuilder builder, int matchTypeCount)
 		{
 			builder.AddInt(3, matchTypeCount, 0);
 		}
 
-		// Token: 0x06027B75 RID: 162677 RVA: 0x00576A61 File Offset: 0x00574C61
+		// Token: 0x0602A101 RID: 172289 RVA: 0x005BDF25 File Offset: 0x005BC125
 		public static void AddExitByNotEnterCondition(FlatBufferBuilder builder, bool exitByNotEnterCondition)
 		{
 			builder.AddBool(4, exitByNotEnterCondition, false);
 		}
 
-		// Token: 0x06027B76 RID: 162678 RVA: 0x00576A6C File Offset: 0x00574C6C
+		// Token: 0x0602A102 RID: 172290 RVA: 0x005BDF30 File Offset: 0x005BC130
 		public static void AddActions(FlatBufferBuilder builder, VectorOffset actionsOffset)
 		{
 			builder.AddOffset(5, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x06027B77 RID: 162679 RVA: 0x00576A7C File Offset: 0x00574C7C
+		// Token: 0x0602A103 RID: 172291 RVA: 0x005BDF40 File Offset: 0x005BC140
 		public static VectorOffset CreateActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027B78 RID: 162680 RVA: 0x00576ABC File Offset: 0x00574CBC
+		// Token: 0x0602A104 RID: 172292 RVA: 0x005BDF80 File Offset: 0x005BC180
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027B79 RID: 162681 RVA: 0x00576AD6 File Offset: 0x00574CD6
+		// Token: 0x0602A105 RID: 172293 RVA: 0x005BDF9A File Offset: 0x005BC19A
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -257,7 +257,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027B7A RID: 162682 RVA: 0x00576AF4 File Offset: 0x00574CF4
+		// Token: 0x0602A106 RID: 172294 RVA: 0x005BDFB8 File Offset: 0x005BC1B8
 		public static VectorOffset CreateActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -265,31 +265,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027B7B RID: 162683 RVA: 0x00576B0D File Offset: 0x00574D0D
+		// Token: 0x0602A107 RID: 172295 RVA: 0x005BDFD1 File Offset: 0x005BC1D1
 		public static void StartActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06027B7C RID: 162684 RVA: 0x00576B18 File Offset: 0x00574D18
+		// Token: 0x0602A108 RID: 172296 RVA: 0x005BDFDC File Offset: 0x005BC1DC
 		public static void AddDisableExecuteActionsWhenDestroy(FlatBufferBuilder builder, bool disableExecuteActionsWhenDestroy)
 		{
 			builder.AddBool(6, disableExecuteActionsWhenDestroy, false);
 		}
 
-		// Token: 0x06027B7D RID: 162685 RVA: 0x00576B23 File Offset: 0x00574D23
+		// Token: 0x0602A109 RID: 172297 RVA: 0x005BDFE7 File Offset: 0x005BC1E7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06027B7E RID: 162686 RVA: 0x00576B2E File Offset: 0x00574D2E
+		// Token: 0x0602A10A RID: 172298 RVA: 0x005BDFF2 File Offset: 0x005BC1F2
 		public static Offset<ITriggerExitConfig> EndITriggerExitConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ITriggerExitConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06027B7F RID: 162687 RVA: 0x00576B3C File Offset: 0x00574D3C
+		// Token: 0x0602A10B RID: 172299 RVA: 0x005BE000 File Offset: 0x005BC200
 		public ITriggerExitConfigT UnPack()
 		{
 			ITriggerExitConfigT triggerExitConfigT = new ITriggerExitConfigT();
@@ -297,7 +297,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return triggerExitConfigT;
 		}
 
-		// Token: 0x06027B80 RID: 162688 RVA: 0x00576B58 File Offset: 0x00574D58
+		// Token: 0x0602A10C RID: 172300 RVA: 0x005BE01C File Offset: 0x005BC21C
 		public void UnPackTo(ITriggerExitConfigT _o)
 		{
 			_o.ExtraRange = this.ExtraRange;
@@ -314,7 +314,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027B81 RID: 162689 RVA: 0x00576C30 File Offset: 0x00574E30
+		// Token: 0x0602A10D RID: 172301 RVA: 0x005BE0F4 File Offset: 0x005BC2F4
 		public static Offset<ITriggerExitConfig> Pack(FlatBufferBuilder builder, ITriggerExitConfigT _o)
 		{
 			if (_o == null)
@@ -335,7 +335,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITriggerExitConfig.CreateITriggerExitConfig(builder, _o.ExtraRange, _o.MaxTriggerTimes, conditionOffset, _o.MatchTypeCount, _o.ExitByNotEnterCondition, actionsOffset, _o.DisableExecuteActionsWhenDestroy, _o.NullMask);
 		}
 
-		// Token: 0x0400F1D7 RID: 61911
+		// Token: 0x0400FED1 RID: 65233
 		private Table __p;
 	}
 }

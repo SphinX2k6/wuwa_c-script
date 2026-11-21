@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D1A RID: 19738
+	// Token: 0x02003CD1 RID: 15569
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopPhantomSuitData : IRoleDevelopPhantomSuitData
 	{
-		// Token: 0x17007E08 RID: 32264
-		// (get) Token: 0x06033015 RID: 208917 RVA: 0x00BE1BCD File Offset: 0x00BDFDCD
-		// (set) Token: 0x06033016 RID: 208918 RVA: 0x00BE1BD5 File Offset: 0x00BDFDD5
+		// Token: 0x170051B2 RID: 20914
+		// (get) Token: 0x06027DF3 RID: 163315 RVA: 0x00B27503 File Offset: 0x00B25703
+		// (set) Token: 0x06027DF4 RID: 163316 RVA: 0x00B2750B File Offset: 0x00B2570B
 		public int DevelopRoleId { get; set; }
 
-		// Token: 0x17007E09 RID: 32265
-		// (get) Token: 0x06033017 RID: 208919 RVA: 0x00BE1BDE File Offset: 0x00BDFDDE
-		// (set) Token: 0x06033018 RID: 208920 RVA: 0x00BE1BE6 File Offset: 0x00BDFDE6
+		// Token: 0x170051B3 RID: 20915
+		// (get) Token: 0x06027DF5 RID: 163317 RVA: 0x00B27514 File Offset: 0x00B25714
+		// (set) Token: 0x06027DF6 RID: 163318 RVA: 0x00B2751C File Offset: 0x00B2571C
 		public int FetterGroupId { get; set; }
 
-		// Token: 0x17007E0A RID: 32266
-		// (get) Token: 0x06033019 RID: 208921 RVA: 0x00BE1BEF File Offset: 0x00BDFDEF
-		// (set) Token: 0x0603301A RID: 208922 RVA: 0x00BE1BF7 File Offset: 0x00BDFDF7
+		// Token: 0x170051B4 RID: 20916
+		// (get) Token: 0x06027DF7 RID: 163319 RVA: 0x00B27525 File Offset: 0x00B25725
+		// (set) Token: 0x06027DF8 RID: 163320 RVA: 0x00B2752D File Offset: 0x00B2572D
 		public VisionFetterRecommendInfo VisionFetterRecommendInfo { get; set; }
 
-		// Token: 0x17007E0B RID: 32267
-		// (get) Token: 0x0603301B RID: 208923 RVA: 0x00BE1C00 File Offset: 0x00BDFE00
-		// (set) Token: 0x0603301C RID: 208924 RVA: 0x00BE1C08 File Offset: 0x00BDFE08
+		// Token: 0x170051B5 RID: 20917
+		// (get) Token: 0x06027DF9 RID: 163321 RVA: 0x00B27536 File Offset: 0x00B25736
+		// (set) Token: 0x06027DFA RID: 163322 RVA: 0x00B2753E File Offset: 0x00B2573E
 		public int? FirstVisionMonsterId { get; set; }
 
-		// Token: 0x17007E0C RID: 32268
-		// (get) Token: 0x0603301D RID: 208925 RVA: 0x00BE1C11 File Offset: 0x00BDFE11
-		// (set) Token: 0x0603301E RID: 208926 RVA: 0x00BE1C19 File Offset: 0x00BDFE19
+		// Token: 0x170051B6 RID: 20918
+		// (get) Token: 0x06027DFB RID: 163323 RVA: 0x00B27547 File Offset: 0x00B25747
+		// (set) Token: 0x06027DFC RID: 163324 RVA: 0x00B2754F File Offset: 0x00B2574F
 		public bool? IsNeedFetterButton { get; set; }
 	}
 }

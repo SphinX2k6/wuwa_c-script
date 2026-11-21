@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BB0 RID: 23472
+	// Token: 0x020061C6 RID: 25030
 	public struct IWuWaGoGridLinkData : IFlatbufferObject
 	{
-		// Token: 0x1700B15E RID: 45406
-		// (get) Token: 0x06028329 RID: 164649 RVA: 0x0058626F File Offset: 0x0058446F
+		// Token: 0x1700BAA6 RID: 47782
+		// (get) Token: 0x0602A8ED RID: 174317 RVA: 0x005CDCFF File Offset: 0x005CBEFF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,21 +16,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602832A RID: 164650 RVA: 0x0058627C File Offset: 0x0058447C
+		// Token: 0x0602A8EE RID: 174318 RVA: 0x005CDD0C File Offset: 0x005CBF0C
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Struct(_i, _bb);
 		}
 
-		// Token: 0x0602832B RID: 164651 RVA: 0x0058628B File Offset: 0x0058448B
+		// Token: 0x0602A8EF RID: 174319 RVA: 0x005CDD1B File Offset: 0x005CBF1B
 		public IWuWaGoGridLinkData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B15F RID: 45407
-		// (get) Token: 0x0602832C RID: 164652 RVA: 0x0058629B File Offset: 0x0058449B
+		// Token: 0x1700BAA7 RID: 47783
+		// (get) Token: 0x0602A8F0 RID: 174320 RVA: 0x005CDD2B File Offset: 0x005CBF2B
 		public EWuWaGoGridLinkType GridLinkType
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B160 RID: 45408
-		// (get) Token: 0x0602832D RID: 164653 RVA: 0x005862B8 File Offset: 0x005844B8
+		// Token: 0x1700BAA8 RID: 47784
+		// (get) Token: 0x0602A8F1 RID: 174321 RVA: 0x005CDD48 File Offset: 0x005CBF48
 		public EWuWaGoGridRotationType RotationType
 		{
 			get
@@ -49,7 +49,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602832E RID: 164654 RVA: 0x005862D7 File Offset: 0x005844D7
+		// Token: 0x0602A8F2 RID: 174322 RVA: 0x005CDD67 File Offset: 0x005CBF67
 		public static Offset<IWuWaGoGridLinkData> CreateIWuWaGoGridLinkData(FlatBufferBuilder builder, EWuWaGoGridLinkType GridLinkType, EWuWaGoGridRotationType RotationType)
 		{
 			builder.Prep(1, 2);
@@ -58,7 +58,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new Offset<IWuWaGoGridLinkData>(builder.Offset);
 		}
 
-		// Token: 0x0602832F RID: 164655 RVA: 0x005862FC File Offset: 0x005844FC
+		// Token: 0x0602A8F3 RID: 174323 RVA: 0x005CDD8C File Offset: 0x005CBF8C
 		public IWuWaGoGridLinkDataT UnPack()
 		{
 			IWuWaGoGridLinkDataT wuWaGoGridLinkDataT = new IWuWaGoGridLinkDataT();
@@ -66,14 +66,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoGridLinkDataT;
 		}
 
-		// Token: 0x06028330 RID: 164656 RVA: 0x00586317 File Offset: 0x00584517
+		// Token: 0x0602A8F4 RID: 174324 RVA: 0x005CDDA7 File Offset: 0x005CBFA7
 		public void UnPackTo(IWuWaGoGridLinkDataT _o)
 		{
 			_o.GridLinkType = this.GridLinkType;
 			_o.RotationType = this.RotationType;
 		}
 
-		// Token: 0x06028331 RID: 164657 RVA: 0x00586334 File Offset: 0x00584534
+		// Token: 0x0602A8F5 RID: 174325 RVA: 0x005CDDC4 File Offset: 0x005CBFC4
 		public static Offset<IWuWaGoGridLinkData> Pack(FlatBufferBuilder builder, IWuWaGoGridLinkDataT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoGridLinkData.CreateIWuWaGoGridLinkData(builder, _o.GridLinkType, _o.RotationType);
 		}
 
-		// Token: 0x0400F325 RID: 62245
+		// Token: 0x0401002B RID: 65579
 		private Struct __p;
 	}
 }

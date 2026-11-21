@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051DF RID: 20959
+	// Token: 0x020041AF RID: 16815
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 	})]
 	public class CardAllInDeckComponent : CardComponentBase<ICardAllInDeckComponentData>
 	{
-		// Token: 0x06035A19 RID: 219673 RVA: 0x00CB4AE6 File Offset: 0x00CB2CE6
+		// Token: 0x0602A914 RID: 174356 RVA: 0x00C02122 File Offset: 0x00C00322
 		public override void Refresh(ICardAllInDeckComponentData data)
 		{
 			this.SetActive(data.IsAllInDeck && data.ShowComponent);

@@ -9,18 +9,18 @@ using CSharpScript.Game.Module.Manufacture.Common;
 
 namespace CSharpScript.Game.Module.Manufacture.Forging
 {
-	// Token: 0x02005649 RID: 22089
+	// Token: 0x0200461F RID: 17951
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ForgingModel : ModelBase
 	{
-		// Token: 0x06038288 RID: 230024 RVA: 0x00D4D44E File Offset: 0x00D4B64E
+		// Token: 0x0602D186 RID: 184710 RVA: 0x00C9B19E File Offset: 0x00C9939E
 		public void SaveLimitRefreshTime(long refreshTime)
 		{
 			this.LimitRefreshTime = (double)refreshTime * TimeUtil.Instance.Millisecond;
 		}
 
-		// Token: 0x06038289 RID: 230025 RVA: 0x00D4D464 File Offset: 0x00D4B664
+		// Token: 0x0602D187 RID: 184711 RVA: 0x00C9B1B4 File Offset: 0x00C993B4
 		[NullableContext(2)]
 		public string GetRefreshLimitTime()
 		{
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return TimeUtil.Instance.GetRemainTimeDataFormat(this.LimitRefreshTime - serverTime).CountDownText;
 		}
 
-		// Token: 0x0603828A RID: 230026 RVA: 0x00D4D4A8 File Offset: 0x00D4B6A8
+		// Token: 0x0602D188 RID: 184712 RVA: 0x00C9B1F8 File Offset: 0x00C993F8
 		public double GetRefreshLimitTimeValue()
 		{
 			if (this.LimitRefreshTime <= 0.0)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return TimeUtil.Instance.GetRemainTimeDataFormat(this.LimitRefreshTime - serverTime).RemainingTime;
 		}
 
-		// Token: 0x0603828B RID: 230027 RVA: 0x00D4D4F4 File Offset: 0x00D4B6F4
+		// Token: 0x0602D189 RID: 184713 RVA: 0x00C9B244 File Offset: 0x00C99444
 		protected override bool OnInit()
 		{
 			this.ForgingEnterFlow = new PlayFlow
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x0603828C RID: 230028 RVA: 0x00D4D5E3 File Offset: 0x00D4B7E3
+		// Token: 0x0602D18A RID: 184714 RVA: 0x00C9B333 File Offset: 0x00C99533
 		protected override bool OnClear()
 		{
 			this.ForgingEnterFlow = null;
@@ -76,9 +76,9 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x1700873C RID: 34620
-		// (get) Token: 0x0603828D RID: 230029 RVA: 0x00D4D5FB File Offset: 0x00D4B7FB
-		// (set) Token: 0x0603828E RID: 230030 RVA: 0x00D4D603 File Offset: 0x00D4B803
+		// Token: 0x17005B03 RID: 23299
+		// (get) Token: 0x0602D18B RID: 184715 RVA: 0x00C9B34B File Offset: 0x00C9954B
+		// (set) Token: 0x0602D18C RID: 184716 RVA: 0x00C9B353 File Offset: 0x00C99553
 		public EForgingViewType CurrentForgingViewType
 		{
 			get
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x0603828F RID: 230031 RVA: 0x00D4D60C File Offset: 0x00D4B80C
+		// Token: 0x0602D18D RID: 184717 RVA: 0x00C9B35C File Offset: 0x00C9955C
 		public void CreateForgingDataList()
 		{
 			if (this.ForgingDataList == null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x06038290 RID: 230032 RVA: 0x00D4D7AC File Offset: 0x00D4B9AC
+		// Token: 0x0602D18E RID: 184718 RVA: 0x00C9B4FC File Offset: 0x00C996FC
 		private void RemoveForgingDataByItemId(int itemId)
 		{
 			int index = this.ForgingDataList.FindIndex((IWeaponForgingData v) => v.ItemId == itemId);
@@ -136,33 +136,33 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			this.ForgingDataMap.Remove(itemId);
 		}
 
-		// Token: 0x06038291 RID: 230033 RVA: 0x00D4D7FC File Offset: 0x00D4B9FC
+		// Token: 0x0602D18F RID: 184719 RVA: 0x00C9B54C File Offset: 0x00C9974C
 		public bool CheckCanForging(int id)
 		{
 			IWeaponForgingData forgingDataById = this.GetForgingDataById(id);
 			return this.CheckUnlock(forgingDataById) && this.CheckLimitCount(forgingDataById) && this.CheckCoinEnough(forgingDataById.ItemId) && this.CheckMaterialEnough(forgingDataById.ItemId);
 		}
 
-		// Token: 0x06038292 RID: 230034 RVA: 0x00D4D840 File Offset: 0x00D4BA40
+		// Token: 0x0602D190 RID: 184720 RVA: 0x00C9B590 File Offset: 0x00C99790
 		public bool CheckCoinEnough(int id)
 		{
 			ForgeFormula? forgeFormulaById = ForgingConfig.Instance.GetForgeFormulaById(id);
 			return InventoryModel.Instance.CheckIsCoinEnough(ForgingController.Instance.ForgingCostId, forgeFormulaById.Value.ConsumeItems());
 		}
 
-		// Token: 0x06038293 RID: 230035 RVA: 0x00D4D87C File Offset: 0x00D4BA7C
+		// Token: 0x0602D191 RID: 184721 RVA: 0x00C9B5CC File Offset: 0x00C997CC
 		public bool CheckLimitCount(IWeaponForgingData data)
 		{
 			return data.TotalMakeCountInLimitTime <= 0 || data.MadeCountInLimitTime < data.TotalMakeCountInLimitTime;
 		}
 
-		// Token: 0x06038294 RID: 230036 RVA: 0x00D4D897 File Offset: 0x00D4BA97
+		// Token: 0x0602D192 RID: 184722 RVA: 0x00C9B5E7 File Offset: 0x00C997E7
 		public bool CheckUnlock(IWeaponForgingData data)
 		{
 			return data.IsUnlock > 0;
 		}
 
-		// Token: 0x06038295 RID: 230037 RVA: 0x00D4D8A4 File Offset: 0x00D4BAA4
+		// Token: 0x0602D193 RID: 184723 RVA: 0x00C9B5F4 File Offset: 0x00C997F4
 		public bool CheckMaterialEnough(int id)
 		{
 			foreach (OneItemConfig oneItemConfig in ForgingConfig.Instance.GetForgeFormulaById(id).Value.ConsumeItems())
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x06038296 RID: 230038 RVA: 0x00D4D908 File Offset: 0x00D4BB08
+		// Token: 0x0602D194 RID: 184724 RVA: 0x00C9B658 File Offset: 0x00C99858
 		public void UpdateForgingDataList(IList<OneForgeInfo> forgingDataList)
 		{
 			foreach (OneForgeInfo oneForgeInfo in forgingDataList)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x06038297 RID: 230039 RVA: 0x00D4D9D8 File Offset: 0x00D4BBD8
+		// Token: 0x0602D195 RID: 184725 RVA: 0x00C9B728 File Offset: 0x00C99928
 		public void UpdateForgingByServerConfig(IList<OneForgeInfo> forgeConfigs)
 		{
 			foreach (OneForgeInfo oneForgeInfo in forgeConfigs)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x06038298 RID: 230040 RVA: 0x00D4DA94 File Offset: 0x00D4BC94
+		// Token: 0x0602D196 RID: 184726 RVA: 0x00C9B7E4 File Offset: 0x00C999E4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return this.ForgingDataList;
 		}
 
-		// Token: 0x06038299 RID: 230041 RVA: 0x00D4DA9C File Offset: 0x00D4BC9C
+		// Token: 0x0602D197 RID: 184727 RVA: 0x00C9B7EC File Offset: 0x00C999EC
 		[NullableContext(2)]
 		public IWeaponForgingData GetForgingDataById(int id)
 		{
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return result;
 		}
 
-		// Token: 0x0603829A RID: 230042 RVA: 0x00D4DABC File Offset: 0x00D4BCBC
+		// Token: 0x0602D198 RID: 184728 RVA: 0x00C9B80C File Offset: 0x00C99A0C
 		public int GetForgingRoleId(int itemId)
 		{
 			IWeaponForgingData forgingDataById = this.GetForgingDataById(itemId);
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return PlayerInfoModel.Instance.GetPlayerRoleId();
 		}
 
-		// Token: 0x0603829B RID: 230043 RVA: 0x00D4DAF0 File Offset: 0x00D4BCF0
+		// Token: 0x0602D199 RID: 184729 RVA: 0x00C9B840 File Offset: 0x00C99A40
 		public List<ISingleItemInfo> GetForgingMaterialList(int itemId)
 		{
 			List<ISingleItemInfo> list = new List<ISingleItemInfo>();
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return list;
 		}
 
-		// Token: 0x0603829C RID: 230044 RVA: 0x00D4DB64 File Offset: 0x00D4BD64
+		// Token: 0x0602D19A RID: 184730 RVA: 0x00C9B8B4 File Offset: 0x00C99AB4
 		public void UpdateForgingItemList(IList<SingleItemInfo> itemList)
 		{
 			if (this.ForgingItemList == null)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x0603829D RID: 230045 RVA: 0x00D4DBEC File Offset: 0x00D4BDEC
+		// Token: 0x0602D19B RID: 184731 RVA: 0x00C9B93C File Offset: 0x00C99B3C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -299,9 +299,9 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return this.ForgingItemList;
 		}
 
-		// Token: 0x1700873D RID: 34621
-		// (get) Token: 0x0603829E RID: 230046 RVA: 0x00D4DBF4 File Offset: 0x00D4BDF4
-		// (set) Token: 0x0603829F RID: 230047 RVA: 0x00D4DBFC File Offset: 0x00D4BDFC
+		// Token: 0x17005B04 RID: 23300
+		// (get) Token: 0x0602D19C RID: 184732 RVA: 0x00C9B944 File Offset: 0x00C99B44
+		// (set) Token: 0x0602D19D RID: 184733 RVA: 0x00C9B94C File Offset: 0x00C99B4C
 		public int CurrentForgingRoleId
 		{
 			get
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x060382A0 RID: 230048 RVA: 0x00D4DC08 File Offset: 0x00D4BE08
+		// Token: 0x0602D19E RID: 184734 RVA: 0x00C9B958 File Offset: 0x00C99B58
 		public void UpdateHelpRoleItemDataList()
 		{
 			if (this.ForgingRoleItemDataList == null)
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x060382A1 RID: 230049 RVA: 0x00D4DC9C File Offset: 0x00D4BE9C
+		// Token: 0x0602D19F RID: 184735 RVA: 0x00C9B9EC File Offset: 0x00C99BEC
 		public List<ICommonRoleItemData> GetHelpRoleItemDataList(int itemId)
 		{
 			if (this.ForgingRoleItemDataList == null)
@@ -351,7 +351,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return this.ForgingRoleItemDataList;
 		}
 
-		// Token: 0x060382A2 RID: 230050 RVA: 0x00D4DD34 File Offset: 0x00D4BF34
+		// Token: 0x0602D1A0 RID: 184736 RVA: 0x00C9BA84 File Offset: 0x00C99C84
 		private int SortHelpRoleItemDataList(ICommonRoleItemData dataA, ICommonRoleItemData dataB)
 		{
 			if (dataA.IsBuff == dataB.IsBuff)
@@ -365,8 +365,8 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return 1;
 		}
 
-		// Token: 0x1700873E RID: 34622
-		// (get) Token: 0x060382A3 RID: 230051 RVA: 0x00D4DD5D File Offset: 0x00D4BF5D
+		// Token: 0x17005B05 RID: 23301
+		// (get) Token: 0x0602D1A1 RID: 184737 RVA: 0x00C9BAAD File Offset: 0x00C99CAD
 		public static ForgingModel Instance
 		{
 			get
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			}
 		}
 
-		// Token: 0x060382A4 RID: 230052 RVA: 0x00D4DD64 File Offset: 0x00D4BF64
+		// Token: 0x0602D1A2 RID: 184738 RVA: 0x00C9BAB4 File Offset: 0x00C99CB4
 		public static ForgingModel GetOrCreateInstance()
 		{
 			if (ForgingModel._Instance == null)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return ForgingModel._Instance;
 		}
 
-		// Token: 0x060382A5 RID: 230053 RVA: 0x00D4DD78 File Offset: 0x00D4BF78
+		// Token: 0x0602D1A3 RID: 184739 RVA: 0x00C9BAC8 File Offset: 0x00C99CC8
 		public static bool CreateInstance()
 		{
 			if (ForgingModel._Instance != null)
@@ -396,45 +396,45 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 			return true;
 		}
 
-		// Token: 0x060382A6 RID: 230054 RVA: 0x00D4DD8E File Offset: 0x00D4BF8E
+		// Token: 0x0602D1A4 RID: 184740 RVA: 0x00C9BADE File Offset: 0x00C99CDE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060382A7 RID: 230055 RVA: 0x00D4DD90 File Offset: 0x00D4BF90
+		// Token: 0x0602D1A5 RID: 184741 RVA: 0x00C9BAE0 File Offset: 0x00C99CE0
 		public static void ResetStaticDefaultValue()
 		{
 			ForgingModel._Instance = null;
 		}
 
-		// Token: 0x060382A8 RID: 230056 RVA: 0x00D4DD98 File Offset: 0x00D4BF98
+		// Token: 0x0602D1A6 RID: 184742 RVA: 0x00C9BAE8 File Offset: 0x00C99CE8
 		static ForgingModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ForgingModel.CreateStaticDefaultValue), new Action(ForgingModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D8A2 RID: 120994
+		// Token: 0x0401832D RID: 99117
 		private double LimitRefreshTime = -1.0;
 
-		// Token: 0x0401D8A3 RID: 120995
+		// Token: 0x0401832E RID: 99118
 		public long? CurrentInteractCreatureDataLongId;
 
-		// Token: 0x0401D8A4 RID: 120996
+		// Token: 0x0401832F RID: 99119
 		private EForgingViewType ForgingViewType;
 
-		// Token: 0x0401D8A5 RID: 120997
+		// Token: 0x04018330 RID: 99120
 		[Nullable(2)]
 		public PlayFlow ForgingEnterFlow;
 
-		// Token: 0x0401D8A6 RID: 120998
+		// Token: 0x04018331 RID: 99121
 		[Nullable(2)]
 		public PlayFlow ForgingSuccessFlow;
 
-		// Token: 0x0401D8A7 RID: 120999
+		// Token: 0x04018332 RID: 99122
 		[Nullable(2)]
 		public PlayFlow ForgingFailFlow;
 
-		// Token: 0x0401D8A8 RID: 121000
+		// Token: 0x04018333 RID: 99123
 		[Nullable(new byte[]
 		{
 			2,
@@ -442,10 +442,10 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 		})]
 		private List<IWeaponForgingData> ForgingDataList;
 
-		// Token: 0x0401D8A9 RID: 121001
+		// Token: 0x04018334 RID: 99124
 		private readonly Dictionary<int, IWeaponForgingData> ForgingDataMap = new Dictionary<int, IWeaponForgingData>();
 
-		// Token: 0x0401D8AA RID: 121002
+		// Token: 0x04018335 RID: 99125
 		[Nullable(new byte[]
 		{
 			2,
@@ -453,10 +453,10 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 		})]
 		private List<ICommonPopItemData> ForgingItemList;
 
-		// Token: 0x0401D8AB RID: 121003
+		// Token: 0x04018336 RID: 99126
 		private int ForgingRoleId;
 
-		// Token: 0x0401D8AC RID: 121004
+		// Token: 0x04018337 RID: 99127
 		[Nullable(new byte[]
 		{
 			2,
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.Module.Manufacture.Forging
 		})]
 		private List<ICommonRoleItemData> ForgingRoleItemDataList;
 
-		// Token: 0x0401D8AD RID: 121005
+		// Token: 0x04018338 RID: 99128
 		[Nullable(2)]
 		private static ForgingModel _Instance;
 	}

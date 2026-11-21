@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002465 RID: 9317
+// Token: 0x0200194A RID: 6474
 public interface IPhantomInteractGridViewModel : IPhantomInteractGridData
 {
-	// Token: 0x1700185C RID: 6236
-	// (get) Token: 0x06012B1B RID: 76571
-	// (set) Token: 0x06012B1C RID: 76572
+	// Token: 0x17001896 RID: 6294
+	// (get) Token: 0x0600FFD3 RID: 65491
+	// (set) Token: 0x0600FFD4 RID: 65492
 	bool IsSelected { get; set; }
 
-	// Token: 0x1700185D RID: 6237
-	// (get) Token: 0x06012B1D RID: 76573
-	// (set) Token: 0x06012B1E RID: 76574
+	// Token: 0x17001897 RID: 6295
+	// (get) Token: 0x0600FFD5 RID: 65493
+	// (set) Token: 0x0600FFD6 RID: 65494
 	bool IsInArea { get; set; }
 }

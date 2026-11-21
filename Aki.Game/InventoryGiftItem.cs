@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001FC8 RID: 8136
+// Token: 0x0200149B RID: 5275
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 {
-	// Token: 0x0600FE75 RID: 65141 RVA: 0x003DC5EF File Offset: 0x003DA7EF
+	// Token: 0x0600D2DD RID: 53981 RVA: 0x003E8BCB File Offset: 0x003E6DCB
 	public void Initialize(UUIItem uiItem = null)
 	{
 		if (uiItem != null)
@@ -25,7 +25,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE76 RID: 65142 RVA: 0x003DC600 File Offset: 0x003DA800
+	// Token: 0x0600D2DE RID: 53982 RVA: 0x003E8BDC File Offset: 0x003E6DDC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -54,7 +54,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE77 RID: 65143 RVA: 0x003DC72C File Offset: 0x003DA92C
+	// Token: 0x0600D2DF RID: 53983 RVA: 0x003E8D08 File Offset: 0x003E6F08
 	private void OnClickReduce()
 	{
 		this.Toggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
@@ -65,7 +65,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE78 RID: 65144 RVA: 0x003DC77C File Offset: 0x003DA97C
+	// Token: 0x0600D2E0 RID: 53984 RVA: 0x003E8D58 File Offset: 0x003E6F58
 	private void OnToggleStateChange(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -79,13 +79,13 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE79 RID: 65145 RVA: 0x003DC7D5 File Offset: 0x003DA9D5
+	// Token: 0x0600D2E1 RID: 53985 RVA: 0x003E8DB1 File Offset: 0x003E6FB1
 	protected override void OnStart()
 	{
 		this.InitView();
 	}
 
-	// Token: 0x0600FE7A RID: 65146 RVA: 0x003DC7DD File Offset: 0x003DA9DD
+	// Token: 0x0600D2E2 RID: 53986 RVA: 0x003E8DB9 File Offset: 0x003E6FB9
 	protected override void OnBeforeDestroy()
 	{
 		this.ItemNameText = null;
@@ -98,7 +98,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		this.WeaponTypeIcon = null;
 	}
 
-	// Token: 0x0600FE7B RID: 65147 RVA: 0x003DC81C File Offset: 0x003DAA1C
+	// Token: 0x0600D2E3 RID: 53987 RVA: 0x003E8DF8 File Offset: 0x003E6FF8
 	private void InitView()
 	{
 		this.ItemNameText = base.GetText(1);
@@ -113,7 +113,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		this.WeaponTypeIcon.SetUIActive(false);
 	}
 
-	// Token: 0x0600FE7C RID: 65148 RVA: 0x003DC8CD File Offset: 0x003DAACD
+	// Token: 0x0600D2E4 RID: 53988 RVA: 0x003E8EA9 File Offset: 0x003E70A9
 	[NullableContext(1)]
 	public override void Refresh(GiftItemData data, bool isSelect, int gridIndex)
 	{
@@ -125,7 +125,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE7D RID: 65149 RVA: 0x003DC8F8 File Offset: 0x003DAAF8
+	// Token: 0x0600D2E5 RID: 53989 RVA: 0x003E8ED4 File Offset: 0x003E70D4
 	public override void OnSelected(bool fireEvent)
 	{
 		if (this.IsSelectOn != null && this.ItemData != null)
@@ -134,7 +134,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE7E RID: 65150 RVA: 0x003DC924 File Offset: 0x003DAB24
+	// Token: 0x0600D2E6 RID: 53990 RVA: 0x003E8F00 File Offset: 0x003E7100
 	[NullableContext(1)]
 	public void RefreshItem(GiftItemData data)
 	{
@@ -161,14 +161,14 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE7F RID: 65151 RVA: 0x003DCA60 File Offset: 0x003DAC60
+	// Token: 0x0600D2E7 RID: 53991 RVA: 0x003E903C File Offset: 0x003E723C
 	private void SetSelected(bool bSelectOn, bool bFireEvent = false)
 	{
 		this.Toggle.SetToggleState(bSelectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, bFireEvent, false, false);
 		this.ReduceButton.RootUIComp.Get().SetUIActive(bSelectOn);
 	}
 
-	// Token: 0x0600FE80 RID: 65152 RVA: 0x003DCA9C File Offset: 0x003DAC9C
+	// Token: 0x0600D2E8 RID: 53992 RVA: 0x003E9078 File Offset: 0x003E7278
 	public void RefreshSelectState()
 	{
 		if (this.IsSelectOn != null && this.ItemData != null)
@@ -177,49 +177,49 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 		}
 	}
 
-	// Token: 0x0600FE81 RID: 65153 RVA: 0x003DCAC6 File Offset: 0x003DACC6
+	// Token: 0x0600D2E9 RID: 53993 RVA: 0x003E90A2 File Offset: 0x003E72A2
 	[NullableContext(1)]
 	public void SetOnToggleStateChangeFunction(Action<UUIExtendToggle, UUIButtonComponent, bool, GiftItemData> onToggleStateChangeFunction)
 	{
 		this.OnToggleStateChangeFunction = onToggleStateChangeFunction;
 	}
 
-	// Token: 0x0600FE82 RID: 65154 RVA: 0x003DCACF File Offset: 0x003DACCF
+	// Token: 0x0600D2EA RID: 53994 RVA: 0x003E90AB File Offset: 0x003E72AB
 	[NullableContext(1)]
 	public void SetOnReduceFunction(Action<GiftItemData> onReduceFunction)
 	{
 		this.OnReduceFunction = onReduceFunction;
 	}
 
-	// Token: 0x0600FE83 RID: 65155 RVA: 0x003DCAD8 File Offset: 0x003DACD8
+	// Token: 0x0600D2EB RID: 53995 RVA: 0x003E90B4 File Offset: 0x003E72B4
 	[NullableContext(1)]
 	public void SetIsSelectOn(Func<GiftItemData, bool> isSelectOnFunction)
 	{
 		this.IsSelectOn = isSelectOnFunction;
 	}
 
-	// Token: 0x040075BB RID: 30139
+	// Token: 0x040076A4 RID: 30372
 	private UUIText ItemNameText;
 
-	// Token: 0x040075BC RID: 30140
+	// Token: 0x040076A5 RID: 30373
 	private UUIText ItemCountText;
 
-	// Token: 0x040075BD RID: 30141
+	// Token: 0x040076A6 RID: 30374
 	private UUIButtonComponent ReduceButton;
 
-	// Token: 0x040075BE RID: 30142
+	// Token: 0x040076A7 RID: 30375
 	private int? ItemConfigId;
 
-	// Token: 0x040075BF RID: 30143
+	// Token: 0x040076A8 RID: 30376
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x040075C0 RID: 30144
+	// Token: 0x040076A9 RID: 30377
 	private GiftItemData ItemData;
 
-	// Token: 0x040075C1 RID: 30145
+	// Token: 0x040076AA RID: 30378
 	private InventoryGiftCellItem ItemGrid;
 
-	// Token: 0x040075C2 RID: 30146
+	// Token: 0x040076AB RID: 30379
 	[Nullable(new byte[]
 	{
 		2,
@@ -229,7 +229,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 	})]
 	private Action<UUIExtendToggle, UUIButtonComponent, bool, GiftItemData> OnToggleStateChangeFunction;
 
-	// Token: 0x040075C3 RID: 30147
+	// Token: 0x040076AC RID: 30380
 	[Nullable(new byte[]
 	{
 		2,
@@ -237,7 +237,7 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 	})]
 	private Action<GiftItemData> OnReduceFunction;
 
-	// Token: 0x040075C4 RID: 30148
+	// Token: 0x040076AD RID: 30381
 	[Nullable(new byte[]
 	{
 		2,
@@ -245,24 +245,24 @@ public class InventoryGiftItem : GridProxyAbstract<GiftItemData>
 	})]
 	private Func<GiftItemData, bool> IsSelectOn;
 
-	// Token: 0x040075C5 RID: 30149
+	// Token: 0x040076AE RID: 30382
 	private UUISprite WeaponTypeIcon;
 
-	// Token: 0x020085D9 RID: 34265
+	// Token: 0x02007760 RID: 30560
 	[NullableContext(0)]
 	private enum EInventoryGiftItemType
 	{
-		// Token: 0x0402B91C RID: 178460
+		// Token: 0x04026C2B RID: 158763
 		ItemGridItem,
-		// Token: 0x0402B91D RID: 178461
+		// Token: 0x04026C2C RID: 158764
 		ItemNameText,
-		// Token: 0x0402B91E RID: 178462
+		// Token: 0x04026C2D RID: 158765
 		ItemCountText,
-		// Token: 0x0402B91F RID: 178463
+		// Token: 0x04026C2E RID: 158766
 		ReduceButton,
-		// Token: 0x0402B920 RID: 178464
+		// Token: 0x04026C2F RID: 158767
 		Toggle,
-		// Token: 0x0402B921 RID: 178465
+		// Token: 0x04026C30 RID: 158768
 		WeaponTypeIcon
 	}
 }

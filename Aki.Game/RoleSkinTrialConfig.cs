@@ -2,38 +2,38 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020014C6 RID: 5318
+// Token: 0x0200097A RID: 2426
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class RoleSkinTrialConfig : ConfigBase
 {
-	// Token: 0x060096D6 RID: 38614 RVA: 0x0020978D File Offset: 0x0020798D
+	// Token: 0x06006A6B RID: 27243 RVA: 0x002126F9 File Offset: 0x002108F9
 	public RoleSkinTrialInfo? GetRoleSkinTrialInfoByRoleId(int roleId)
 	{
 		return ConfigRoleSkinTrialInfoByRoleId.GetConfig(roleId, true);
 	}
 
-	// Token: 0x060096D7 RID: 38615 RVA: 0x00209796 File Offset: 0x00207996
+	// Token: 0x06006A6C RID: 27244 RVA: 0x00212702 File Offset: 0x00210902
 	public RoleSkinTrialInfo? GetRoleSkinTrialInfoById(int id)
 	{
 		return ConfigRoleSkinTrialInfoById.GetConfig(id, true);
 	}
 
-	// Token: 0x060096D8 RID: 38616 RVA: 0x0020979F File Offset: 0x0020799F
+	// Token: 0x06006A6D RID: 27245 RVA: 0x0021270B File Offset: 0x0021090B
 	public RoleSkinTrialActivity? GetRoleSkinTrialActivityByActivityId(int activityId)
 	{
 		return ConfigRoleSkinTrialActivityById.GetConfig(activityId, true);
 	}
 
-	// Token: 0x060096D9 RID: 38617 RVA: 0x002097A8 File Offset: 0x002079A8
+	// Token: 0x06006A6E RID: 27246 RVA: 0x00212714 File Offset: 0x00210914
 	public RoleSkinTrialUiConfig? GetRoleSkinTrialUiConfigById(int id)
 	{
 		return ConfigRoleSkinTrialUiConfigById.GetConfig(id, true);
 	}
 
-	// Token: 0x17000D0C RID: 3340
-	// (get) Token: 0x060096DA RID: 38618 RVA: 0x002097B1 File Offset: 0x002079B1
+	// Token: 0x17000D2C RID: 3372
+	// (get) Token: 0x06006A6F RID: 27247 RVA: 0x0021271D File Offset: 0x0021091D
 	public static RoleSkinTrialConfig Instance
 	{
 		get
@@ -42,7 +42,7 @@ public class RoleSkinTrialConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060096DB RID: 38619 RVA: 0x002097B8 File Offset: 0x002079B8
+	// Token: 0x06006A70 RID: 27248 RVA: 0x00212724 File Offset: 0x00210924
 	public static RoleSkinTrialConfig GetOrCreateInstance()
 	{
 		if (RoleSkinTrialConfig._Instance == null)
@@ -52,7 +52,7 @@ public class RoleSkinTrialConfig : ConfigBase
 		return RoleSkinTrialConfig._Instance;
 	}
 
-	// Token: 0x060096DC RID: 38620 RVA: 0x002097CC File Offset: 0x002079CC
+	// Token: 0x06006A71 RID: 27249 RVA: 0x00212738 File Offset: 0x00210938
 	public static bool CreateInstance()
 	{
 		if (RoleSkinTrialConfig._Instance != null)
@@ -63,24 +63,24 @@ public class RoleSkinTrialConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060096DD RID: 38621 RVA: 0x002097E2 File Offset: 0x002079E2
+	// Token: 0x06006A72 RID: 27250 RVA: 0x0021274E File Offset: 0x0021094E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060096DE RID: 38622 RVA: 0x002097E4 File Offset: 0x002079E4
+	// Token: 0x06006A73 RID: 27251 RVA: 0x00212750 File Offset: 0x00210950
 	public static void ResetStaticDefaultValue()
 	{
 		RoleSkinTrialConfig._Instance = null;
 	}
 
-	// Token: 0x060096DF RID: 38623 RVA: 0x002097EC File Offset: 0x002079EC
+	// Token: 0x06006A74 RID: 27252 RVA: 0x00212758 File Offset: 0x00210958
 	static RoleSkinTrialConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleSkinTrialConfig.CreateStaticDefaultValue), new Action(RoleSkinTrialConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004284 RID: 17028
+	// Token: 0x0400431C RID: 17180
 	[Nullable(2)]
 	private static RoleSkinTrialConfig _Instance;
 }

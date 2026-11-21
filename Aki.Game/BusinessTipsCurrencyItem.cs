@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001329 RID: 4905
+// Token: 0x020007DD RID: 2013
 public class BusinessTipsCurrencyItem : CommonCurrencyItem
 {
-	// Token: 0x0600882C RID: 34860 RVA: 0x001D0D70 File Offset: 0x001CEF70
+	// Token: 0x06005BC7 RID: 23495 RVA: 0x001D9BDC File Offset: 0x001D7DDC
 	public override void AddEventListener()
 	{
 	}
 
-	// Token: 0x0600882D RID: 34861 RVA: 0x001D0D72 File Offset: 0x001CEF72
+	// Token: 0x06005BC8 RID: 23496 RVA: 0x001D9BDE File Offset: 0x001D7DDE
 	public override void RemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600882E RID: 34862 RVA: 0x001D0D74 File Offset: 0x001CEF74
+	// Token: 0x06005BC9 RID: 23497 RVA: 0x001D9BE0 File Offset: 0x001D7DE0
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
 		this.RemoveTimer();
 	}
 
-	// Token: 0x0600882F RID: 34863 RVA: 0x001D0D84 File Offset: 0x001CEF84
+	// Token: 0x06005BCA RID: 23498 RVA: 0x001D9BF0 File Offset: 0x001D7DF0
 	public void PlayReduceTweener(int curValue, int targetValue)
 	{
 		if (this.RefreshTimer != null)
@@ -46,7 +46,7 @@ public class BusinessTipsCurrencyItem : CommonCurrencyItem
 		}, 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06008830 RID: 34864 RVA: 0x001D0DF9 File Offset: 0x001CEFF9
+	// Token: 0x06005BCB RID: 23499 RVA: 0x001D9C65 File Offset: 0x001D7E65
 	private void RemoveTimer()
 	{
 		if (this.RefreshTimer == null)
@@ -60,7 +60,7 @@ public class BusinessTipsCurrencyItem : CommonCurrencyItem
 		}
 	}
 
-	// Token: 0x04003CB7 RID: 15543
+	// Token: 0x04003D4F RID: 15695
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 }

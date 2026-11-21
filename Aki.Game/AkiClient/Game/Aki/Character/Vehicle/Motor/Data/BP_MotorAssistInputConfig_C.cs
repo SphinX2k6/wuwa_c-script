@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 {
-	// Token: 0x0200404B RID: 16459
+	// Token: 0x02003290 RID: 12944
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/Vehicle/Motor/Data/BP_MotorAssistInputConfig.BP_MotorAssistInputConfig_C")]
 	[UnrealStructLayout(200, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 195)]
 	public class BP_MotorAssistInputConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602A4A7 RID: 173223 RVA: 0x009DBB58 File Offset: 0x009D9D58
+		// Token: 0x060206B4 RID: 132788 RVA: 0x00946109 File Offset: 0x00944309
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_MotorAssistInputConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,34 +24,34 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 			return BP_MotorAssistInputConfig_C._ClassPtr;
 		}
 
-		// Token: 0x0602A4A8 RID: 173224 RVA: 0x009DBB7C File Offset: 0x009D9D7C
+		// Token: 0x060206B5 RID: 132789 RVA: 0x00946130 File Offset: 0x00944330
 		public BP_MotorAssistInputConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_MotorAssistInputConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602A4A9 RID: 173225 RVA: 0x009DBBA4 File Offset: 0x009D9DA4
+		// Token: 0x060206B6 RID: 132790 RVA: 0x00946158 File Offset: 0x00944358
 		public BP_MotorAssistInputConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_MotorAssistInputConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170067AC RID: 26540
-		// (get) Token: 0x0602A4AA RID: 173226 RVA: 0x009DBBD7 File Offset: 0x009D9DD7
-		// (set) Token: 0x0602A4AB RID: 173227 RVA: 0x009DBBE7 File Offset: 0x009D9DE7
+		// Token: 0x17003EEF RID: 16111
+		// (get) Token: 0x060206B7 RID: 132791 RVA: 0x0094618B File Offset: 0x0094438B
+		// (set) Token: 0x060206B8 RID: 132792 RVA: 0x0094619B File Offset: 0x0094439B
 		public unsafe int HoldThrottleTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_HoldThrottleTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_HoldThrottleTime) = value;
 			}
 		}
 
-		// Token: 0x170067AD RID: 26541
-		// (get) Token: 0x0602A4AC RID: 173228 RVA: 0x009DBBF8 File Offset: 0x009D9DF8
-		// (set) Token: 0x0602A4AD RID: 173229 RVA: 0x009DBC31 File Offset: 0x009D9E31
+		// Token: 0x17003EF0 RID: 16112
+		// (get) Token: 0x060206B9 RID: 132793 RVA: 0x009461AC File Offset: 0x009443AC
+		// (set) Token: 0x060206BA RID: 132794 RVA: 0x009461E5 File Offset: 0x009443E5
 		public FGameplayTagContainer ForbidHoldThrottleTag
 		{
 			get
@@ -60,19 +60,19 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 				FGameplayTagContainer result;
 				if ((result = this._ForbidHoldThrottleTag) == null)
 				{
-					result = (this._ForbidHoldThrottleTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_1, this));
+					result = (this._ForbidHoldThrottleTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_ForbidHoldThrottleTag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_ForbidHoldThrottleTag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170067AE RID: 26542
-		// (get) Token: 0x0602A4AE RID: 173230 RVA: 0x009DBC54 File Offset: 0x009D9E54
-		// (set) Token: 0x0602A4AF RID: 173231 RVA: 0x009DBC8D File Offset: 0x009D9E8D
+		// Token: 0x17003EF1 RID: 16113
+		// (get) Token: 0x060206BB RID: 132795 RVA: 0x00946208 File Offset: 0x00944408
+		// (set) Token: 0x060206BC RID: 132796 RVA: 0x00946241 File Offset: 0x00944441
 		public TArray<int> HoldThrottleSkill
 		{
 			get
@@ -81,7 +81,7 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 				TArray<int> result;
 				if ((result = this._HoldThrottleSkill) == null)
 				{
-					result = (this._HoldThrottleSkill = new TArray<int>(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_2, this));
+					result = (this._HoldThrottleSkill = new TArray<int>(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_HoldThrottleSkill, this));
 				}
 				return result;
 			}
@@ -91,24 +91,24 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 			}
 		}
 
-		// Token: 0x170067AF RID: 26543
-		// (get) Token: 0x0602A4B0 RID: 173232 RVA: 0x009DBC9B File Offset: 0x009D9E9B
-		// (set) Token: 0x0602A4B1 RID: 173233 RVA: 0x009DBCAB File Offset: 0x009D9EAB
+		// Token: 0x17003EF2 RID: 16114
+		// (get) Token: 0x060206BD RID: 132797 RVA: 0x0094624F File Offset: 0x0094444F
+		// (set) Token: 0x060206BE RID: 132798 RVA: 0x0094625F File Offset: 0x0094445F
 		public unsafe int NitroBoostTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_NitroBoostTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_NitroBoostTime) = value;
 			}
 		}
 
-		// Token: 0x170067B0 RID: 26544
-		// (get) Token: 0x0602A4B2 RID: 173234 RVA: 0x009DBCBC File Offset: 0x009D9EBC
-		// (set) Token: 0x0602A4B3 RID: 173235 RVA: 0x009DBCF5 File Offset: 0x009D9EF5
+		// Token: 0x17003EF3 RID: 16115
+		// (get) Token: 0x060206BF RID: 132799 RVA: 0x00946270 File Offset: 0x00944470
+		// (set) Token: 0x060206C0 RID: 132800 RVA: 0x009462A9 File Offset: 0x009444A9
 		public FGameplayTagContainer ForbidNitroBoostTag
 		{
 			get
@@ -117,19 +117,19 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 				FGameplayTagContainer result;
 				if ((result = this._ForbidNitroBoostTag) == null)
 				{
-					result = (this._ForbidNitroBoostTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_4, this));
+					result = (this._ForbidNitroBoostTag = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_ForbidNitroBoostTag, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_4, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_ForbidNitroBoostTag, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170067B1 RID: 26545
-		// (get) Token: 0x0602A4B4 RID: 173236 RVA: 0x009DBD18 File Offset: 0x009D9F18
-		// (set) Token: 0x0602A4B5 RID: 173237 RVA: 0x009DBD51 File Offset: 0x009D9F51
+		// Token: 0x17003EF4 RID: 16116
+		// (get) Token: 0x060206C1 RID: 132801 RVA: 0x009462CC File Offset: 0x009444CC
+		// (set) Token: 0x060206C2 RID: 132802 RVA: 0x00946305 File Offset: 0x00944505
 		public TArray<int> NitroBoostSkill
 		{
 			get
@@ -138,7 +138,7 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 				TArray<int> result;
 				if ((result = this._NitroBoostSkill) == null)
 				{
-					result = (this._NitroBoostSkill = new TArray<int>(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_5, this));
+					result = (this._NitroBoostSkill = new TArray<int>(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_NitroBoostSkill, this));
 				}
 				return result;
 			}
@@ -148,106 +148,106 @@ namespace AkiClient.Game.Aki.Character.Vehicle.Motor.Data
 			}
 		}
 
-		// Token: 0x170067B2 RID: 26546
-		// (get) Token: 0x0602A4B6 RID: 173238 RVA: 0x009DBD5F File Offset: 0x009D9F5F
-		// (set) Token: 0x0602A4B7 RID: 173239 RVA: 0x009DBD6F File Offset: 0x009D9F6F
+		// Token: 0x17003EF5 RID: 16117
+		// (get) Token: 0x060206C3 RID: 132803 RVA: 0x00946313 File Offset: 0x00944513
+		// (set) Token: 0x060206C4 RID: 132804 RVA: 0x00946323 File Offset: 0x00944523
 		public unsafe bool DebugHoldThrottle
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugHoldThrottle) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugHoldThrottle) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170067B3 RID: 26547
-		// (get) Token: 0x0602A4B8 RID: 173240 RVA: 0x009DBD80 File Offset: 0x009D9F80
-		// (set) Token: 0x0602A4B9 RID: 173241 RVA: 0x009DBD90 File Offset: 0x009D9F90
+		// Token: 0x17003EF6 RID: 16118
+		// (get) Token: 0x060206C5 RID: 132805 RVA: 0x00946334 File Offset: 0x00944534
+		// (set) Token: 0x060206C6 RID: 132806 RVA: 0x00946344 File Offset: 0x00944544
 		public unsafe bool DebugNitroBoost
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugNitroBoost) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugNitroBoost) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170067B4 RID: 26548
-		// (get) Token: 0x0602A4BA RID: 173242 RVA: 0x009DBDA1 File Offset: 0x009D9FA1
-		// (set) Token: 0x0602A4BB RID: 173243 RVA: 0x009DBDB1 File Offset: 0x009D9FB1
+		// Token: 0x17003EF7 RID: 16119
+		// (get) Token: 0x060206C7 RID: 132807 RVA: 0x00946355 File Offset: 0x00944555
+		// (set) Token: 0x060206C8 RID: 132808 RVA: 0x00946365 File Offset: 0x00944565
 		public unsafe bool DebugAssistDrift
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugAssistDrift) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_MotorAssistInputConfig_C.__PropertyOffset_DebugAssistDrift) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602A4BC RID: 173244 RVA: 0x009DBDC2 File Offset: 0x009D9FC2
+		// Token: 0x060206C9 RID: 132809 RVA: 0x00946376 File Offset: 0x00944576
 		protected BP_MotorAssistInputConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015CF7 RID: 89335
+		// Token: 0x0401182C RID: 71724
 		public new const string __ObjectPath = "/Game/Aki/Character/Vehicle/Motor/Data/BP_MotorAssistInputConfig.BP_MotorAssistInputConfig_C";
 
-		// Token: 0x04015CF8 RID: 89336
+		// Token: 0x0401182D RID: 71725
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015CF9 RID: 89337
+		// Token: 0x0401182E RID: 71726
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015CFA RID: 89338
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401182F RID: 71727
+		internal static int __PropertyOffset_HoldThrottleTime;
 
-		// Token: 0x04015CFB RID: 89339
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011830 RID: 71728
+		internal static int __PropertyOffset_ForbidHoldThrottleTag;
 
-		// Token: 0x04015CFC RID: 89340
+		// Token: 0x04011831 RID: 71729
 		[Nullable(2)]
 		private FGameplayTagContainer _ForbidHoldThrottleTag;
 
-		// Token: 0x04015CFD RID: 89341
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011832 RID: 71730
+		internal static int __PropertyOffset_HoldThrottleSkill;
 
-		// Token: 0x04015CFE RID: 89342
+		// Token: 0x04011833 RID: 71731
 		[Nullable(2)]
 		private TArray<int> _HoldThrottleSkill;
 
-		// Token: 0x04015CFF RID: 89343
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011834 RID: 71732
+		internal static int __PropertyOffset_NitroBoostTime;
 
-		// Token: 0x04015D00 RID: 89344
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011835 RID: 71733
+		internal static int __PropertyOffset_ForbidNitroBoostTag;
 
-		// Token: 0x04015D01 RID: 89345
+		// Token: 0x04011836 RID: 71734
 		[Nullable(2)]
 		private FGameplayTagContainer _ForbidNitroBoostTag;
 
-		// Token: 0x04015D02 RID: 89346
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011837 RID: 71735
+		internal static int __PropertyOffset_NitroBoostSkill;
 
-		// Token: 0x04015D03 RID: 89347
+		// Token: 0x04011838 RID: 71736
 		[Nullable(2)]
 		private TArray<int> _NitroBoostSkill;
 
-		// Token: 0x04015D04 RID: 89348
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011839 RID: 71737
+		internal static int __PropertyOffset_DebugHoldThrottle;
 
-		// Token: 0x04015D05 RID: 89349
-		internal static int __PropertyOffset_7;
+		// Token: 0x0401183A RID: 71738
+		internal static int __PropertyOffset_DebugNitroBoost;
 
-		// Token: 0x04015D06 RID: 89350
-		internal static int __PropertyOffset_8;
+		// Token: 0x0401183B RID: 71739
+		internal static int __PropertyOffset_DebugAssistDrift;
 	}
 }

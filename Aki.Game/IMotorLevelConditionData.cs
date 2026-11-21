@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200224E RID: 8782
+// Token: 0x02001732 RID: 5938
 [NullableContext(1)]
 public interface IMotorLevelConditionData
 {
-	// Token: 0x170015B8 RID: 5560
-	// (get) Token: 0x06011224 RID: 70180
-	// (set) Token: 0x06011225 RID: 70181
+	// Token: 0x170015EF RID: 5615
+	// (get) Token: 0x0600E6BA RID: 59066
+	// (set) Token: 0x0600E6BB RID: 59067
 	int ConditionId { get; set; }
 
-	// Token: 0x170015B9 RID: 5561
-	// (get) Token: 0x06011226 RID: 70182
-	// (set) Token: 0x06011227 RID: 70183
+	// Token: 0x170015F0 RID: 5616
+	// (get) Token: 0x0600E6BC RID: 59068
+	// (set) Token: 0x0600E6BD RID: 59069
 	string ConditionTextId { get; set; }
 
-	// Token: 0x170015BA RID: 5562
-	// (get) Token: 0x06011228 RID: 70184
-	// (set) Token: 0x06011229 RID: 70185
+	// Token: 0x170015F1 RID: 5617
+	// (get) Token: 0x0600E6BE RID: 59070
+	// (set) Token: 0x0600E6BF RID: 59071
 	bool IsFinished { get; set; }
 
-	// Token: 0x170015BB RID: 5563
-	// (get) Token: 0x0601122A RID: 70186
-	// (set) Token: 0x0601122B RID: 70187
+	// Token: 0x170015F2 RID: 5618
+	// (get) Token: 0x0600E6C0 RID: 59072
+	// (set) Token: 0x0600E6C1 RID: 59073
 	int AccessId { get; set; }
 
-	// Token: 0x170015BC RID: 5564
-	// (get) Token: 0x0601122C RID: 70188
-	// (set) Token: 0x0601122D RID: 70189
+	// Token: 0x170015F3 RID: 5619
+	// (get) Token: 0x0600E6C2 RID: 59074
+	// (set) Token: 0x0600E6C3 RID: 59075
 	int AccessType { get; set; }
 
-	// Token: 0x170015BD RID: 5565
-	// (get) Token: 0x0601122E RID: 70190
-	// (set) Token: 0x0601122F RID: 70191
+	// Token: 0x170015F4 RID: 5620
+	// (get) Token: 0x0600E6C4 RID: 59076
+	// (set) Token: 0x0600E6C5 RID: 59077
 	int RecommendQuestId { get; set; }
 }

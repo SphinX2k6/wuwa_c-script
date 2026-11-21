@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020019B9 RID: 6585
+// Token: 0x02000E77 RID: 3703
 public class CommonTabItemData
 {
-	// Token: 0x04005663 RID: 22115
+	// Token: 0x04005715 RID: 22293
 	public int Index;
 
-	// Token: 0x04005664 RID: 22116
+	// Token: 0x04005716 RID: 22294
 	[Nullable(2)]
 	public CommonTabData Data;
 
-	// Token: 0x04005665 RID: 22117
+	// Token: 0x04005717 RID: 22295
 	public ERedDotName? RedDotName;
 
-	// Token: 0x04005666 RID: 22118
+	// Token: 0x04005718 RID: 22296
 	public int? RedDotUid;
 
-	// Token: 0x04005667 RID: 22119
+	// Token: 0x04005719 RID: 22297
 	public bool NeedUnBindAllRedDot = true;
 }

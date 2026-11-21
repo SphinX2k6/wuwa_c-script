@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005345 RID: 21317
+	// Token: 0x020058CB RID: 22731
 	public class IGroupAiMonsterMemberActionTagAttachT
 	{
-		// Token: 0x17009C97 RID: 40087
-		// (get) Token: 0x06022DD0 RID: 142800 RVA: 0x004D46C9 File Offset: 0x004D28C9
-		// (set) Token: 0x06022DD1 RID: 142801 RVA: 0x004D46D1 File Offset: 0x004D28D1
+		// Token: 0x1700A4CF RID: 42191
+		// (get) Token: 0x06024E84 RID: 151172 RVA: 0x0051159D File Offset: 0x0050F79D
+		// (set) Token: 0x06024E85 RID: 151173 RVA: 0x005115A5 File Offset: 0x0050F7A5
 		public string ActionTag { get; set; }
 
-		// Token: 0x17009C98 RID: 40088
-		// (get) Token: 0x06022DD2 RID: 142802 RVA: 0x004D46DA File Offset: 0x004D28DA
-		// (set) Token: 0x06022DD3 RID: 142803 RVA: 0x004D46E2 File Offset: 0x004D28E2
+		// Token: 0x1700A4D0 RID: 42192
+		// (get) Token: 0x06024E86 RID: 151174 RVA: 0x005115AE File Offset: 0x0050F7AE
+		// (set) Token: 0x06024E87 RID: 151175 RVA: 0x005115B6 File Offset: 0x0050F7B6
 		public int AttachEntityId { get; set; }
 
-		// Token: 0x17009C99 RID: 40089
-		// (get) Token: 0x06022DD4 RID: 142804 RVA: 0x004D46EB File Offset: 0x004D28EB
-		// (set) Token: 0x06022DD5 RID: 142805 RVA: 0x004D46F3 File Offset: 0x004D28F3
+		// Token: 0x1700A4D1 RID: 42193
+		// (get) Token: 0x06024E88 RID: 151176 RVA: 0x005115BF File Offset: 0x0050F7BF
+		// (set) Token: 0x06024E89 RID: 151177 RVA: 0x005115C7 File Offset: 0x0050F7C7
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022DD6 RID: 142806 RVA: 0x004D46FC File Offset: 0x004D28FC
+		// Token: 0x06024E8A RID: 151178 RVA: 0x005115D0 File Offset: 0x0050F7D0
 		public IGroupAiMonsterMemberActionTagAttachT()
 		{
 			this.ActionTag = null;

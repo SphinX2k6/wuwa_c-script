@@ -8,25 +8,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x0200727B RID: 29307
+	// Token: 0x020063FA RID: 25594
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CombinationAxisHandle
 	{
-		// Token: 0x06047D52 RID: 294226 RVA: 0x01260CE7 File Offset: 0x0125EEE7
+		// Token: 0x0603E112 RID: 254226 RVA: 0x01201527 File Offset: 0x011FF727
 		public void Clear()
 		{
 			this.PressCombinationAxisBindingMap = null;
 			this.BlockInputKeySet.Clear();
 		}
 
-		// Token: 0x06047D53 RID: 294227 RVA: 0x01260CFB File Offset: 0x0125EEFB
+		// Token: 0x0603E113 RID: 254227 RVA: 0x0120153B File Offset: 0x011FF73B
 		public IReadOnlySet<string> GetBlockInputKeySet()
 		{
 			return this.BlockInputKeySet;
 		}
 
-		// Token: 0x06047D54 RID: 294228 RVA: 0x01260D04 File Offset: 0x0125EF04
+		// Token: 0x0603E114 RID: 254228 RVA: 0x01201544 File Offset: 0x011FF744
 		public void PressAnyKey(string keyName)
 		{
 			if (this.PressMainKeyName != null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Controller
 			this.PressOtherKeySet.Add(keyName);
 		}
 
-		// Token: 0x06047D55 RID: 294229 RVA: 0x01260D57 File Offset: 0x0125EF57
+		// Token: 0x0603E115 RID: 254229 RVA: 0x01201597 File Offset: 0x011FF797
 		public void ReleaseAnyKey(string keyName)
 		{
 			if (this.PressMainKeyName == keyName)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Controller
 			this.PressOtherKeySet.Remove(keyName);
 		}
 
-		// Token: 0x06047D56 RID: 294230 RVA: 0x01260D7C File Offset: 0x0125EF7C
+		// Token: 0x0603E116 RID: 254230 RVA: 0x012015BC File Offset: 0x011FF7BC
 		private void PressMainKey(string keyName)
 		{
 			Log instance = Log.Instance;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Controller
 			this.PressCombinationAxisBindingMap = InputSettingsManager.Instance.GetCombinationAxisBindingMapByMainKeyName(keyName);
 		}
 
-		// Token: 0x06047D57 RID: 294231 RVA: 0x01260DDC File Offset: 0x0125EFDC
+		// Token: 0x0603E117 RID: 254231 RVA: 0x0120161C File Offset: 0x011FF81C
 		private void ReleaseMainKey()
 		{
 			if (this.PressCombinationAxisBindingMap == null)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Controller
 			this.BlockInputKeySet.Clear();
 		}
 
-		// Token: 0x06047D58 RID: 294232 RVA: 0x01260E9C File Offset: 0x0125F09C
+		// Token: 0x0603E118 RID: 254232 RVA: 0x012016DC File Offset: 0x011FF8DC
 		public void Tick(float delta)
 		{
 			this.BlockInputKeySet.Clear();
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Controller
 			this.InCombinationAxis = inCombinationAxis;
 		}
 
-		// Token: 0x06047D59 RID: 294233 RVA: 0x0126111C File Offset: 0x0125F31C
+		// Token: 0x0603E119 RID: 254233 RVA: 0x0120195C File Offset: 0x011FFB5C
 		private void TryAddBlockInputKeys(InputCombinationAxisBinding combinationAxisBinding, [Nullable(2)] string axisName)
 		{
 			if (string.IsNullOrEmpty(axisName) || !InputDistributeController.Instance.IsAxisRespondable(axisName))
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D5A RID: 294234 RVA: 0x01261188 File Offset: 0x0125F388
+		// Token: 0x0603E11A RID: 254234 RVA: 0x012019C8 File Offset: 0x011FFBC8
 		public bool CheckCombinationAxis(string axisName)
 		{
 			if (this.PressMainKeyName == null)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Controller
 			return true;
 		}
 
-		// Token: 0x06047D5B RID: 294235 RVA: 0x0126122C File Offset: 0x0125F42C
+		// Token: 0x0603E11B RID: 254235 RVA: 0x01201A6C File Offset: 0x011FFC6C
 		private bool IsCombinationAxisOutputBound(string mainKeyName, string secondaryKeyName)
 		{
 			IReadOnlyList<InputCombinationAxisBinding> combinationAxisBindingByKeyName = InputSettingsManager.Instance.GetCombinationAxisBindingByKeyName(mainKeyName, secondaryKeyName);
@@ -226,14 +226,14 @@ namespace CSharpScript.Game.Controller
 			return false;
 		}
 
-		// Token: 0x04025C47 RID: 154695
+		// Token: 0x04020F07 RID: 134919
 		[Nullable(2)]
 		private string PressMainKeyName;
 
-		// Token: 0x04025C48 RID: 154696
+		// Token: 0x04020F08 RID: 134920
 		public long PressMainKeyTimeStamp;
 
-		// Token: 0x04025C49 RID: 154697
+		// Token: 0x04020F09 RID: 134921
 		[Nullable(new byte[]
 		{
 			2,
@@ -243,16 +243,16 @@ namespace CSharpScript.Game.Controller
 		})]
 		private IReadOnlyDictionary<string, List<InputCombinationAxisBinding>> PressCombinationAxisBindingMap;
 
-		// Token: 0x04025C4A RID: 154698
+		// Token: 0x04020F0A RID: 134922
 		private readonly HashSet<string> PressOtherKeySet = new HashSet<string>();
 
-		// Token: 0x04025C4B RID: 154699
+		// Token: 0x04020F0B RID: 134923
 		public bool InCombinationAxis;
 
-		// Token: 0x04025C4C RID: 154700
+		// Token: 0x04020F0C RID: 134924
 		private readonly HashSet<string> BlockInputKeySet = new HashSet<string>();
 
-		// Token: 0x04025C4D RID: 154701
+		// Token: 0x04020F0D RID: 134925
 		private readonly HashSet<string> FrameAxisNameSet = new HashSet<string>();
 	}
 }

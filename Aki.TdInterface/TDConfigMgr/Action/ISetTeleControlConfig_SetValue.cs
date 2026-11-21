@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E49 RID: 7753
+	// Token: 0x0200207E RID: 8318
 	public class ISetTeleControlConfig_SetValue
 	{
-		// Token: 0x04006328 RID: 25384
+		// Token: 0x0400690C RID: 26892
 		public ESetTeleControlType Type;
 
-		// Token: 0x04006329 RID: 25385
+		// Token: 0x0400690D RID: 26893
 		public int EntityId;
 	}
 }

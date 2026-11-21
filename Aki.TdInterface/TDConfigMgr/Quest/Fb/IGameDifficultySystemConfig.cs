@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012DF RID: 4831
+	// Token: 0x02001425 RID: 5157
 	public class IGameDifficultySystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E63 RID: 28259 RVA: 0x0010ACA5 File Offset: 0x00108EA5
-		[NullableContext(1)]
+		// Token: 0x060074E3 RID: 29923 RVA: 0x00118FA5 File Offset: 0x001171A5
 		public static IGameDifficultySystemConfig Create(IGameDifficultySystemConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002278 RID: 8824
-		// (get) Token: 0x06006E64 RID: 28260 RVA: 0x0010ACC4 File Offset: 0x00108EC4
+		// Token: 0x1700243B RID: 9275
+		// (get) Token: 0x060074E4 RID: 29924 RVA: 0x00118FC4 File Offset: 0x001171C4
 		public override EEnableSystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F3D RID: 16189
+		// Token: 0x040042AB RID: 17067
 		private IGameDifficultySystemConfig Instance;
 	}
 }

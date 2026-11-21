@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E5F RID: 7775
+	// Token: 0x02002094 RID: 8340
 	public class IShowTalkCameraMotion_SetValue
 	{
-		// Token: 0x04006362 RID: 25442
+		// Token: 0x04006946 RID: 26950
 		public EShowTalkCameraMotionType Type;
 	}
 }

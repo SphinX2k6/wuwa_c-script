@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000572 RID: 1394
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005D9 RID: 1497
 	public class INpcRideInVehiclePerformType
 	{
-		// Token: 0x06001C90 RID: 7312 RVA: 0x000518CC File Offset: 0x0004FACC
+		// Token: 0x06001E8C RID: 7820 RVA: 0x00056688 File Offset: 0x00054888
 		private INpcRideInVehiclePerformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C91 RID: 7313 RVA: 0x00051904 File Offset: 0x0004FB04
+		// Token: 0x06001E8D RID: 7821 RVA: 0x000566C0 File Offset: 0x000548C0
 		public static INpcRideInVehiclePerformType Create([Nullable(2)] INpcRideInVehiclePerformType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C92 RID: 7314 RVA: 0x00051917 File Offset: 0x0004FB17
+		// Token: 0x06001E8E RID: 7822 RVA: 0x000566D3 File Offset: 0x000548D3
 		public static INpcRideInVehiclePerformType CreateFromSetValue([Nullable(2)] INpcRideInVehiclePerformType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C93 RID: 7315 RVA: 0x0005192A File Offset: 0x0004FB2A
+		// Token: 0x06001E8F RID: 7823 RVA: 0x000566E6 File Offset: 0x000548E6
 		public INpcRideInVehiclePerformType_SetValue ToSetValue()
 		{
 			return new INpcRideInVehiclePerformType_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700077C RID: 1916
-		// (get) Token: 0x06001C94 RID: 7316 RVA: 0x00051949 File Offset: 0x0004FB49
-		// (set) Token: 0x06001C95 RID: 7317 RVA: 0x00051974 File Offset: 0x0004FB74
+		// Token: 0x170007FF RID: 2047
+		// (get) Token: 0x06001E90 RID: 7824 RVA: 0x00056705 File Offset: 0x00054905
+		// (set) Token: 0x06001E91 RID: 7825 RVA: 0x00056730 File Offset: 0x00054930
 		public virtual EVehicleType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700077D RID: 1917
-		// (get) Token: 0x06001C96 RID: 7318 RVA: 0x00051982 File Offset: 0x0004FB82
-		// (set) Token: 0x06001C97 RID: 7319 RVA: 0x000519AD File Offset: 0x0004FBAD
+		// Token: 0x17000800 RID: 2048
+		// (get) Token: 0x06001E92 RID: 7826 RVA: 0x0005673E File Offset: 0x0005493E
+		// (set) Token: 0x06001E93 RID: 7827 RVA: 0x00056769 File Offset: 0x00054969
 		public virtual string Montage
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400145A RID: 5210
+		// Token: 0x040015C4 RID: 5572
 		[Nullable(2)]
 		protected INpcRideInVehiclePerformType FbInstance;
 
-		// Token: 0x0400145B RID: 5211
+		// Token: 0x040015C5 RID: 5573
 		[Nullable(2)]
 		protected INpcRideInVehiclePerformType_SetValue PocoInterface;
 	}

@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D6A RID: 23914
+	// Token: 0x02004D4C RID: 19788
 	public abstract class MissionPanelControllerBase
 	{
-		// Token: 0x17008E1B RID: 36379
-		// (get) Token: 0x0603CB8D RID: 248717
+		// Token: 0x170061ED RID: 25069
+		// (get) Token: 0x06031AE9 RID: 203497
 		protected abstract EMissionPanelControllerType ControllerType { get; }
 
-		// Token: 0x0603CB8E RID: 248718
+		// Token: 0x06031AEA RID: 203498
 		public abstract void AddEvents();
 
-		// Token: 0x0603CB8F RID: 248719
+		// Token: 0x06031AEB RID: 203499
 		public abstract void RemoveEvents();
 
-		// Token: 0x0603CB90 RID: 248720
+		// Token: 0x06031AEC RID: 203500
 		public abstract void OnDestroy();
 	}
 }

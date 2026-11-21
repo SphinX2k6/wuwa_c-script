@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000174 RID: 372
+	// Token: 0x02000189 RID: 393
 	public class FlowComponent_SetValue
 	{
-		// Token: 0x04000717 RID: 1815
+		// Token: 0x04000764 RID: 1892
 		public bool? Disabled;
 
-		// Token: 0x04000718 RID: 1816
+		// Token: 0x04000765 RID: 1893
 		public bool? EdIsLocked;
 
-		// Token: 0x04000719 RID: 1817
-		[Nullable(1)]
+		// Token: 0x04000766 RID: 1894
 		public PlayFlow InitState;
 	}
 }

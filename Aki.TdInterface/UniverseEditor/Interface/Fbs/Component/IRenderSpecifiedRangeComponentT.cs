@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200584D RID: 22605
+	// Token: 0x02005E57 RID: 24151
 	public class IRenderSpecifiedRangeComponentT
 	{
-		// Token: 0x1700A8F2 RID: 43250
-		// (get) Token: 0x060260C3 RID: 155843 RVA: 0x0053F08B File Offset: 0x0053D28B
-		// (set) Token: 0x060260C4 RID: 155844 RVA: 0x0053F093 File Offset: 0x0053D293
+		// Token: 0x1700B21D RID: 45597
+		// (get) Token: 0x0602860B RID: 165387 RVA: 0x0058594B File Offset: 0x00583B4B
+		// (set) Token: 0x0602860C RID: 165388 RVA: 0x00585953 File Offset: 0x00583B53
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A8F3 RID: 43251
-		// (get) Token: 0x060260C5 RID: 155845 RVA: 0x0053F09C File Offset: 0x0053D29C
-		// (set) Token: 0x060260C6 RID: 155846 RVA: 0x0053F0A4 File Offset: 0x0053D2A4
+		// Token: 0x1700B21E RID: 45598
+		// (get) Token: 0x0602860D RID: 165389 RVA: 0x0058595C File Offset: 0x00583B5C
+		// (set) Token: 0x0602860E RID: 165390 RVA: 0x00585964 File Offset: 0x00583B64
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700A8F4 RID: 43252
-		// (get) Token: 0x060260C7 RID: 155847 RVA: 0x0053F0AD File Offset: 0x0053D2AD
-		// (set) Token: 0x060260C8 RID: 155848 RVA: 0x0053F0B5 File Offset: 0x0053D2B5
+		// Token: 0x1700B21F RID: 45599
+		// (get) Token: 0x0602860F RID: 165391 RVA: 0x0058596D File Offset: 0x00583B6D
+		// (set) Token: 0x06028610 RID: 165392 RVA: 0x00585975 File Offset: 0x00583B75
 		public TRenderSpecifiedRangeConfigUnion RenderConfig { get; set; }
 
-		// Token: 0x1700A8F5 RID: 43253
-		// (get) Token: 0x060260C9 RID: 155849 RVA: 0x0053F0BE File Offset: 0x0053D2BE
-		// (set) Token: 0x060260CA RID: 155850 RVA: 0x0053F0C6 File Offset: 0x0053D2C6
+		// Token: 0x1700B220 RID: 45600
+		// (get) Token: 0x06028611 RID: 165393 RVA: 0x0058597E File Offset: 0x00583B7E
+		// (set) Token: 0x06028612 RID: 165394 RVA: 0x00585986 File Offset: 0x00583B86
 		public byte NullMask { get; set; }
 
-		// Token: 0x060260CB RID: 155851 RVA: 0x0053F0CF File Offset: 0x0053D2CF
+		// Token: 0x06028613 RID: 165395 RVA: 0x0058598F File Offset: 0x00583B8F
 		public IRenderSpecifiedRangeComponentT()
 		{
 			this.Disabled = false;

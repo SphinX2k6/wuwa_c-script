@@ -5,34 +5,34 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069D3 RID: 27091
+	// Token: 0x02005B2F RID: 23343
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TuningStandGridBase : UiPanelBase
 	{
-		// Token: 0x0604367B RID: 276091 RVA: 0x01078D55 File Offset: 0x01076F55
+		// Token: 0x060396B7 RID: 235191 RVA: 0x0101D209 File Offset: 0x0101B409
 		public TuningStandGridBase(TuningGridData data)
 		{
 			this.Data = data;
 			this.GridType = new ETuningStandGridType?(data.GridType);
 		}
 
-		// Token: 0x1700987A RID: 39034
-		// (get) Token: 0x0604367C RID: 276092 RVA: 0x01078D75 File Offset: 0x01076F75
-		// (set) Token: 0x0604367D RID: 276093 RVA: 0x01078D7D File Offset: 0x01076F7D
+		// Token: 0x17006D5A RID: 27994
+		// (get) Token: 0x060396B8 RID: 235192 RVA: 0x0101D229 File Offset: 0x0101B429
+		// (set) Token: 0x060396B9 RID: 235193 RVA: 0x0101D231 File Offset: 0x0101B431
 		protected TuningGridData Data { get; set; }
 
-		// Token: 0x0604367E RID: 276094 RVA: 0x01078D86 File Offset: 0x01076F86
+		// Token: 0x060396BA RID: 235194 RVA: 0x0101D23A File Offset: 0x0101B43A
 		public virtual void OnRefreshGrid()
 		{
 		}
 
-		// Token: 0x0604367F RID: 276095 RVA: 0x01078D88 File Offset: 0x01076F88
+		// Token: 0x060396BB RID: 235195 RVA: 0x0101D23C File Offset: 0x0101B43C
 		protected virtual void OnResetGrid()
 		{
 		}
 
-		// Token: 0x06043680 RID: 276096 RVA: 0x01078D8A File Offset: 0x01076F8A
+		// Token: 0x060396BC RID: 235196 RVA: 0x0101D23E File Offset: 0x0101B43E
 		public void ResetGrid(TuningGridData data)
 		{
 			this.Data = data;
@@ -40,47 +40,47 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			this.OnResetGrid();
 		}
 
-		// Token: 0x06043681 RID: 276097 RVA: 0x01078DA0 File Offset: 0x01076FA0
+		// Token: 0x060396BD RID: 235197 RVA: 0x0101D254 File Offset: 0x0101B454
 		protected virtual void InitGrid()
 		{
 		}
 
-		// Token: 0x06043682 RID: 276098 RVA: 0x01078DA2 File Offset: 0x01076FA2
+		// Token: 0x060396BE RID: 235198 RVA: 0x0101D256 File Offset: 0x0101B456
 		protected virtual void OnToggleHover()
 		{
 		}
 
-		// Token: 0x06043683 RID: 276099 RVA: 0x01078DA4 File Offset: 0x01076FA4
+		// Token: 0x060396BF RID: 235199 RVA: 0x0101D258 File Offset: 0x0101B458
 		protected virtual void OnToggleUnHover()
 		{
 		}
 
-		// Token: 0x06043684 RID: 276100 RVA: 0x01078DA6 File Offset: 0x01076FA6
+		// Token: 0x060396C0 RID: 235200 RVA: 0x0101D25A File Offset: 0x0101B45A
 		protected virtual void OnTogglePress()
 		{
 		}
 
-		// Token: 0x06043685 RID: 276101 RVA: 0x01078DA8 File Offset: 0x01076FA8
+		// Token: 0x060396C1 RID: 235201 RVA: 0x0101D25C File Offset: 0x0101B45C
 		protected virtual void OnToggleRelease()
 		{
 		}
 
-		// Token: 0x06043686 RID: 276102 RVA: 0x01078DAA File Offset: 0x01076FAA
+		// Token: 0x060396C2 RID: 235202 RVA: 0x0101D25E File Offset: 0x0101B45E
 		protected virtual void OnToggleCancel()
 		{
 		}
 
-		// Token: 0x06043687 RID: 276103 RVA: 0x01078DAC File Offset: 0x01076FAC
+		// Token: 0x060396C3 RID: 235203 RVA: 0x0101D260 File Offset: 0x0101B460
 		public virtual void PlayInAnim(float dist)
 		{
 		}
 
-		// Token: 0x06043688 RID: 276104 RVA: 0x01078DAE File Offset: 0x01076FAE
+		// Token: 0x060396C4 RID: 235204 RVA: 0x0101D262 File Offset: 0x0101B462
 		public virtual void OnLinkMiss(bool isEnd)
 		{
 		}
 
-		// Token: 0x06043689 RID: 276105 RVA: 0x01078DB0 File Offset: 0x01076FB0
+		// Token: 0x060396C5 RID: 235205 RVA: 0x0101D264 File Offset: 0x0101B464
 		protected ETuningStandPrevDirect GetPrevDirection()
 		{
 			ITuningStateData curGridState = this.Data.GetCurGridState();
@@ -105,15 +105,15 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			return ETuningStandPrevDirect.Bottom;
 		}
 
-		// Token: 0x0604368A RID: 276106 RVA: 0x01078E0D File Offset: 0x0107700D
+		// Token: 0x060396C6 RID: 235206 RVA: 0x0101D2C1 File Offset: 0x0101B4C1
 		public virtual void StartRevolving()
 		{
 		}
 
-		// Token: 0x040232B1 RID: 144049
+		// Token: 0x0401E4A1 RID: 124065
 		protected ETuningStandGridType? GridType;
 
-		// Token: 0x040232B2 RID: 144050
+		// Token: 0x0401E4A2 RID: 124066
 		protected bool CurSelected;
 	}
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000435 RID: 1077
+	// Token: 0x0200048E RID: 1166
 	public class IHoldingTrackTarget_SetValue
 	{
-		// Token: 0x040010BF RID: 4287
-		[Nullable(1)]
+		// Token: 0x040011E1 RID: 4577
 		public string EffectPath;
 
-		// Token: 0x040010C0 RID: 4288
+		// Token: 0x040011E2 RID: 4578
 		public int EffectLength;
 
-		// Token: 0x040010C1 RID: 4289
+		// Token: 0x040011E3 RID: 4579
 		public int EntityId;
 	}
 }

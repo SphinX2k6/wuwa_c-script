@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnrealEngine;
 
-// Token: 0x020021B5 RID: 8629
+// Token: 0x02001699 RID: 5785
 public class LordGymThirdBossItem : LordGymLordEntranceItem
 {
-	// Token: 0x06010CA7 RID: 68775 RVA: 0x00413FAC File Offset: 0x004121AC
+	// Token: 0x0600E138 RID: 57656 RVA: 0x0042088C File Offset: 0x0041EA8C
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -15,7 +15,7 @@ public class LordGymThirdBossItem : LordGymLordEntranceItem
 		this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(7, typeof(UUISprite)));
 	}
 
-	// Token: 0x06010CA8 RID: 68776 RVA: 0x0041402C File Offset: 0x0041222C
+	// Token: 0x0600E139 RID: 57657 RVA: 0x0042090C File Offset: 0x0041EB0C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		if (data != 0)
@@ -62,22 +62,22 @@ public class LordGymThirdBossItem : LordGymLordEntranceItem
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnDetermined, false, false, false);
 	}
 
-	// Token: 0x020086F4 RID: 34548
+	// Token: 0x0200787F RID: 30847
 	private class EComponent
 	{
-		// Token: 0x0402BE6F RID: 179823
+		// Token: 0x04027190 RID: 160144
 		public const int ItemToggle = 3;
 
-		// Token: 0x0402BE70 RID: 179824
+		// Token: 0x04027191 RID: 160145
 		public const int NewItem = 4;
 
-		// Token: 0x0402BE71 RID: 179825
+		// Token: 0x04027192 RID: 160146
 		public const int NormalItem = 5;
 
-		// Token: 0x0402BE72 RID: 179826
+		// Token: 0x04027193 RID: 160147
 		public const int NoneItem = 6;
 
-		// Token: 0x0402BE73 RID: 179827
+		// Token: 0x04027194 RID: 160148
 		public const int BossIconSprite = 7;
 	}
 }

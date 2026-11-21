@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200112F RID: 4399
+	// Token: 0x02001265 RID: 4709
 	public struct TimeSchedule : IFlatbufferObject
 	{
-		// Token: 0x17003A77 RID: 14967
-		// (get) Token: 0x0600DEEC RID: 57068 RVA: 0x0032E18D File Offset: 0x0032C38D
+		// Token: 0x17003DDB RID: 15835
+		// (get) Token: 0x0600EC5A RID: 60506 RVA: 0x00359761 File Offset: 0x00357961
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEED RID: 57069 RVA: 0x0032E19A File Offset: 0x0032C39A
+		// Token: 0x0600EC5B RID: 60507 RVA: 0x0035976E File Offset: 0x0035796E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DEEE RID: 57070 RVA: 0x0032E1A4 File Offset: 0x0032C3A4
+		// Token: 0x0600EC5C RID: 60508 RVA: 0x00359778 File Offset: 0x00357978
 		public static TimeSchedule GetRootAsTimeSchedule(ByteBuffer _bb)
 		{
 			return TimeSchedule.GetRootAsTimeSchedule(_bb, default(TimeSchedule));
 		}
 
-		// Token: 0x0600DEEF RID: 57071 RVA: 0x0032E1C0 File Offset: 0x0032C3C0
+		// Token: 0x0600EC5D RID: 60509 RVA: 0x00359794 File Offset: 0x00357994
 		public static TimeSchedule GetRootAsTimeSchedule(ByteBuffer _bb, TimeSchedule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DEF0 RID: 57072 RVA: 0x0032E1DD File Offset: 0x0032C3DD
+		// Token: 0x0600EC5E RID: 60510 RVA: 0x003597B1 File Offset: 0x003579B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DEF1 RID: 57073 RVA: 0x0032E1EC File Offset: 0x0032C3EC
+		// Token: 0x0600EC5F RID: 60511 RVA: 0x003597C0 File Offset: 0x003579C0
 		public TimeSchedule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003A78 RID: 14968
-		// (get) Token: 0x0600DEF2 RID: 57074 RVA: 0x0032E1FC File Offset: 0x0032C3FC
+		// Token: 0x17003DDC RID: 15836
+		// (get) Token: 0x0600EC60 RID: 60512 RVA: 0x003597D0 File Offset: 0x003579D0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A79 RID: 14969
-		// (get) Token: 0x0600DEF3 RID: 57075 RVA: 0x0032E238 File Offset: 0x0032C438
+		// Token: 0x17003DDD RID: 15837
+		// (get) Token: 0x0600EC61 RID: 60513 RVA: 0x0035980C File Offset: 0x00357A0C
 		public string TimeScheduleTag
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEF4 RID: 57076 RVA: 0x0032E26F File Offset: 0x0032C46F
+		// Token: 0x0600EC62 RID: 60514 RVA: 0x00359843 File Offset: 0x00357A43
 		public Span<byte> GetTimeScheduleTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600DEF5 RID: 57077 RVA: 0x0032E27E File Offset: 0x0032C47E
+		// Token: 0x0600EC63 RID: 60515 RVA: 0x00359852 File Offset: 0x00357A52
 		public byte[] GetTimeScheduleTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003A7A RID: 14970
-		// (get) Token: 0x0600DEF6 RID: 57078 RVA: 0x0032E298 File Offset: 0x0032C498
+		// Token: 0x17003DDE RID: 15838
+		// (get) Token: 0x0600EC64 RID: 60516 RVA: 0x0035986C File Offset: 0x00357A6C
 		public string StartTime
 		{
 			get
@@ -106,19 +106,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEF7 RID: 57079 RVA: 0x0032E2CF File Offset: 0x0032C4CF
+		// Token: 0x0600EC65 RID: 60517 RVA: 0x003598A3 File Offset: 0x00357AA3
 		public Span<byte> GetStartTimeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600DEF8 RID: 57080 RVA: 0x0032E2DE File Offset: 0x0032C4DE
+		// Token: 0x0600EC66 RID: 60518 RVA: 0x003598B2 File Offset: 0x00357AB2
 		public byte[] GetStartTimeArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600DEF9 RID: 57081 RVA: 0x0032E2F8 File Offset: 0x0032C4F8
+		// Token: 0x0600EC67 RID: 60519 RVA: 0x003598CC File Offset: 0x00357ACC
 		public float Position(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -129,8 +129,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003A7B RID: 14971
-		// (get) Token: 0x0600DEFA RID: 57082 RVA: 0x0032E33C File Offset: 0x0032C53C
+		// Token: 0x17003DDF RID: 15839
+		// (get) Token: 0x0600EC68 RID: 60520 RVA: 0x00359910 File Offset: 0x00357B10
 		public int PositionLength
 		{
 			get
@@ -144,19 +144,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEFB RID: 57083 RVA: 0x0032E368 File Offset: 0x0032C568
+		// Token: 0x0600EC69 RID: 60521 RVA: 0x0035993C File Offset: 0x00357B3C
 		public Span<float> GetPositionBytes()
 		{
 			return this.__p.__vector_as_span<float>(10, 4);
 		}
 
-		// Token: 0x0600DEFC RID: 57084 RVA: 0x0032E378 File Offset: 0x0032C578
+		// Token: 0x0600EC6A RID: 60522 RVA: 0x0035994C File Offset: 0x00357B4C
 		public float[] GetPositionArray()
 		{
 			return this.__p.__vector_as_array<float>(10) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x0600DEFD RID: 57085 RVA: 0x0032E390 File Offset: 0x0032C590
+		// Token: 0x0600EC6B RID: 60523 RVA: 0x00359964 File Offset: 0x00357B64
 		public float Rotation(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -167,8 +167,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003A7C RID: 14972
-		// (get) Token: 0x0600DEFE RID: 57086 RVA: 0x0032E3D4 File Offset: 0x0032C5D4
+		// Token: 0x17003DE0 RID: 15840
+		// (get) Token: 0x0600EC6C RID: 60524 RVA: 0x003599A8 File Offset: 0x00357BA8
 		public int RotationLength
 		{
 			get
@@ -182,20 +182,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DEFF RID: 57087 RVA: 0x0032E400 File Offset: 0x0032C600
+		// Token: 0x0600EC6D RID: 60525 RVA: 0x003599D4 File Offset: 0x00357BD4
 		public Span<float> GetRotationBytes()
 		{
 			return this.__p.__vector_as_span<float>(12, 4);
 		}
 
-		// Token: 0x0600DF00 RID: 57088 RVA: 0x0032E410 File Offset: 0x0032C610
+		// Token: 0x0600EC6E RID: 60526 RVA: 0x003599E4 File Offset: 0x00357BE4
 		public float[] GetRotationArray()
 		{
 			return this.__p.__vector_as_array<float>(12) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x17003A7D RID: 14973
-		// (get) Token: 0x0600DF01 RID: 57089 RVA: 0x0032E428 File Offset: 0x0032C628
+		// Token: 0x17003DE1 RID: 15841
+		// (get) Token: 0x0600EC6F RID: 60527 RVA: 0x003599FC File Offset: 0x00357BFC
 		public int BehaviorTree
 		{
 			get
@@ -209,8 +209,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003A7E RID: 14974
-		// (get) Token: 0x0600DF02 RID: 57090 RVA: 0x0032E468 File Offset: 0x0032C668
+		// Token: 0x17003DE2 RID: 15842
+		// (get) Token: 0x0600EC70 RID: 60528 RVA: 0x00359A3C File Offset: 0x00357C3C
 		public string CommonBtOverride
 		{
 			get
@@ -224,20 +224,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DF03 RID: 57091 RVA: 0x0032E4A0 File Offset: 0x0032C6A0
+		// Token: 0x0600EC71 RID: 60529 RVA: 0x00359A74 File Offset: 0x00357C74
 		public Span<byte> GetCommonBtOverrideBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600DF04 RID: 57092 RVA: 0x0032E4B0 File Offset: 0x0032C6B0
+		// Token: 0x0600EC72 RID: 60530 RVA: 0x00359A84 File Offset: 0x00357C84
 		public byte[] GetCommonBtOverrideArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003A7F RID: 14975
-		// (get) Token: 0x0600DF05 RID: 57093 RVA: 0x0032E4C8 File Offset: 0x0032C6C8
+		// Token: 0x17003DE3 RID: 15843
+		// (get) Token: 0x0600EC73 RID: 60531 RVA: 0x00359A9C File Offset: 0x00357C9C
 		public string SplineEntityUid
 		{
 			get
@@ -251,55 +251,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DF06 RID: 57094 RVA: 0x0032E500 File Offset: 0x0032C700
+		// Token: 0x0600EC74 RID: 60532 RVA: 0x00359AD4 File Offset: 0x00357CD4
 		public Span<byte> GetSplineEntityUidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600DF07 RID: 57095 RVA: 0x0032E510 File Offset: 0x0032C710
+		// Token: 0x0600EC75 RID: 60533 RVA: 0x00359AE4 File Offset: 0x00357CE4
 		public byte[] GetSplineEntityUidArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600DF08 RID: 57096 RVA: 0x0032E528 File Offset: 0x0032C728
+		// Token: 0x0600EC76 RID: 60534 RVA: 0x00359AFC File Offset: 0x00357CFC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PositionIter()或GetPositionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] Position()
+		public float[] Position()
 		{
-			TimeSchedule timeSchedule = this;
-			return timeSchedule.GetPositionArray() ?? Array.Empty<float>();
+			return this.GetPositionArray();
 		}
 
-		// Token: 0x0600DF09 RID: 57097 RVA: 0x0032E54C File Offset: 0x0032C74C
+		// Token: 0x0600EC77 RID: 60535 RVA: 0x00359B04 File Offset: 0x00357D04
 		[NullableContext(1)]
-		public readonly IEnumerable<float> PositionIter()
+		public IEnumerable<float> PositionIter()
 		{
 			TimeSchedule.<PositionIter>d__39 <PositionIter>d__ = new TimeSchedule.<PositionIter>d__39(-2);
 			<PositionIter>d__.<>3__<>4__this = this;
 			return <PositionIter>d__;
 		}
 
-		// Token: 0x0600DF0A RID: 57098 RVA: 0x0032E564 File Offset: 0x0032C764
+		// Token: 0x0600EC78 RID: 60536 RVA: 0x00359B19 File Offset: 0x00357D19
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RotationIter()或GetRotationBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] Rotation()
+		public float[] Rotation()
 		{
-			TimeSchedule timeSchedule = this;
-			return timeSchedule.GetRotationArray() ?? Array.Empty<float>();
+			return this.GetRotationArray();
 		}
 
-		// Token: 0x0600DF0B RID: 57099 RVA: 0x0032E588 File Offset: 0x0032C788
+		// Token: 0x0600EC79 RID: 60537 RVA: 0x00359B21 File Offset: 0x00357D21
 		[NullableContext(1)]
-		public readonly IEnumerable<float> RotationIter()
+		public IEnumerable<float> RotationIter()
 		{
 			TimeSchedule.<RotationIter>d__41 <RotationIter>d__ = new TimeSchedule.<RotationIter>d__41(-2);
 			<RotationIter>d__.<>3__<>4__this = this;
 			return <RotationIter>d__;
 		}
 
-		// Token: 0x04005270 RID: 21104
+		// Token: 0x040058B3 RID: 22707
 		private Table __p;
 	}
 }

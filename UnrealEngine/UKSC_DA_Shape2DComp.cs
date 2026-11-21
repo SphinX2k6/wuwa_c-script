@@ -6,46 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DAD RID: 7597
+	// Token: 0x02000571 RID: 1393
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_DA_Shape2DComp")]
 	[UnrealStructLayout(240, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
 	public class UKSC_DA_Shape2DComp : UKSC_DA_SceneComp, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D0A6 RID: 118950 RVA: 0x002AEBDF File Offset: 0x002ACDDF
+		// Token: 0x06007E81 RID: 32385 RVA: 0x000BB782 File Offset: 0x000B9982
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_DA_Shape2DComp._ClassPtr;
 		}
 
-		// Token: 0x0601D0A7 RID: 118951 RVA: 0x002AEBEC File Offset: 0x002ACDEC
+		// Token: 0x06007E82 RID: 32386 RVA: 0x000BB790 File Offset: 0x000B9990
 		public UKSC_DA_Shape2DComp() : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Shape2DComp.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D0A8 RID: 118952 RVA: 0x002AEC14 File Offset: 0x002ACE14
+		// Token: 0x06007E83 RID: 32387 RVA: 0x000BB7B8 File Offset: 0x000B99B8
 		[NullableContext(1)]
 		public UKSC_DA_Shape2DComp(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Shape2DComp.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007528 RID: 29992
-		// (get) Token: 0x0601D0A9 RID: 118953 RVA: 0x002AEC47 File Offset: 0x002ACE47
-		// (set) Token: 0x0601D0AA RID: 118954 RVA: 0x002AEC57 File Offset: 0x002ACE57
-		public unsafe EKSC_ShapeCompType ShapeType
-		{
-			get
-			{
-				return (EKSC_ShapeCompType)(*(base.NativePtr + (IntPtr)UKSC_DA_Shape2DComp.__PropertyOffset_ShapeType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UKSC_DA_Shape2DComp.__PropertyOffset_ShapeType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007529 RID: 29993
-		// (get) Token: 0x0601D0AB RID: 118955 RVA: 0x002AEC68 File Offset: 0x002ACE68
-		// (set) Token: 0x0601D0AC RID: 118956 RVA: 0x002AEC7C File Offset: 0x002ACE7C
+		// Token: 0x17001877 RID: 6263
+		// (get) Token: 0x06007E84 RID: 32388 RVA: 0x000BB7EB File Offset: 0x000B99EB
+		// (set) Token: 0x06007E85 RID: 32389 RVA: 0x000BB7FF File Offset: 0x000B99FF
 		public unsafe FVector2D Size
 		{
 			get
@@ -58,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700752A RID: 29994
-		// (get) Token: 0x0601D0AD RID: 118957 RVA: 0x002AEC91 File Offset: 0x002ACE91
-		// (set) Token: 0x0601D0AE RID: 118958 RVA: 0x002AECA5 File Offset: 0x002ACEA5
+		// Token: 0x17001878 RID: 6264
+		// (get) Token: 0x06007E86 RID: 32390 RVA: 0x000BB814 File Offset: 0x000B9A14
+		// (set) Token: 0x06007E87 RID: 32391 RVA: 0x000BB828 File Offset: 0x000B9A28
 		public unsafe FVector2D Pivot
 		{
 			get
@@ -73,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700752B RID: 29995
-		// (get) Token: 0x0601D0AF RID: 118959 RVA: 0x002AECBA File Offset: 0x002ACEBA
-		// (set) Token: 0x0601D0B0 RID: 118960 RVA: 0x002AECCA File Offset: 0x002ACECA
+		// Token: 0x17001879 RID: 6265
+		// (get) Token: 0x06007E88 RID: 32392 RVA: 0x000BB83D File Offset: 0x000B9A3D
+		// (set) Token: 0x06007E89 RID: 32393 RVA: 0x000BB84D File Offset: 0x000B9A4D
 		public unsafe int MaterialID
 		{
 			get
@@ -88,37 +73,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D0B1 RID: 118961 RVA: 0x002AECDB File Offset: 0x002ACEDB
+		// Token: 0x06007E8A RID: 32394 RVA: 0x000BB85E File Offset: 0x000B9A5E
 		static UKSC_DA_Shape2DComp()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_DA_Shape2DComp");
 		}
 
-		// Token: 0x0601D0B2 RID: 118962 RVA: 0x002AECE9 File Offset: 0x002ACEE9
+		// Token: 0x06007E8B RID: 32395 RVA: 0x000BB86C File Offset: 0x000B9A6C
 		protected UKSC_DA_Shape2DComp(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FC3F RID: 64575
+		// Token: 0x04003739 RID: 14137
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_DA_Shape2DComp";
 
-		// Token: 0x0400FC40 RID: 64576
+		// Token: 0x0400373A RID: 14138
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FC41 RID: 64577
+		// Token: 0x0400373B RID: 14139
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FC42 RID: 64578
-		internal static int __PropertyOffset_ShapeType;
-
-		// Token: 0x0400FC43 RID: 64579
+		// Token: 0x0400373C RID: 14140
 		internal static int __PropertyOffset_Size;
 
-		// Token: 0x0400FC44 RID: 64580
+		// Token: 0x0400373D RID: 14141
 		internal static int __PropertyOffset_Pivot;
 
-		// Token: 0x0400FC45 RID: 64581
+		// Token: 0x0400373E RID: 14142
 		internal static int __PropertyOffset_MaterialID;
 	}
 }

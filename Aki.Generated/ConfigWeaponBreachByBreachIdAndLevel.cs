@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A79 RID: 2681
+	// Token: 0x02000B4E RID: 2894
 	public class ConfigWeaponBreachByBreachIdAndLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003EEA RID: 16106 RVA: 0x001BDD43 File Offset: 0x001BBF43
+		// Token: 0x060043E8 RID: 17384 RVA: 0x001DD0D7 File Offset: 0x001DB2D7
 		static ConfigWeaponBreachByBreachIdAndLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponBreachByBreachIdAndLevel.CreateStaticDefaultValue), new Action(ConfigWeaponBreachByBreachIdAndLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003EEB RID: 16107 RVA: 0x001BDD64 File Offset: 0x001BBF64
+		// Token: 0x060043E9 RID: 17385 RVA: 0x001DD0F8 File Offset: 0x001DB2F8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponBreachByBreachIdAndLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003EEC RID: 16108 RVA: 0x001BDDE3 File Offset: 0x001BBFE3
+		// Token: 0x060043EA RID: 17386 RVA: 0x001DD177 File Offset: 0x001DB377
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponBreachByBreachIdAndLevel.LogPair = null;
 			ConfigWeaponBreachByBreachIdAndLevel.HandleId = 0;
 		}
 
-		// Token: 0x06003EED RID: 16109 RVA: 0x001BDDF1 File Offset: 0x001BBFF1
+		// Token: 0x060043EB RID: 17387 RVA: 0x001DD185 File Offset: 0x001DB385
 		public static void Init()
 		{
 			ConfigWeaponBreachByBreachIdAndLevel.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponBreachByBreachIdAndLevel.HandleId, "db_weapon.db", "select BinData from `WeaponBreach` where BreachId = ? AND Level = ?");
 		}
 
-		// Token: 0x06003EEE RID: 16110 RVA: 0x001BDE0C File Offset: 0x001BC00C
+		// Token: 0x060043EC RID: 17388 RVA: 0x001DD1A0 File Offset: 0x001DB3A0
 		public static WeaponBreach? GetConfig(int p0BreachId, int p1Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeaponBreachByBreachIdAndLevel.HandleId, ConfigWeaponBreachByBreachIdAndLevel.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new WeaponBreach?(rootAsWeaponBreach);
 		}
 
-		// Token: 0x04004935 RID: 18741
+		// Token: 0x04004F08 RID: 20232
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x04004936 RID: 18742
+		// Token: 0x04004F09 RID: 20233
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x04004937 RID: 18743
+		// Token: 0x04004F0A RID: 20234
 		private const string TABLE = "WeaponBreach";
 
-		// Token: 0x04004938 RID: 18744
+		// Token: 0x04004F0B RID: 20235
 		private const string COMMAND = "select BinData from `WeaponBreach` where BreachId = ? AND Level = ?";
 
-		// Token: 0x04004939 RID: 18745
+		// Token: 0x04004F0C RID: 20236
 		private const string KEY_PREFIX = "WeaponBreachByBreachIdAndLevel";
 
-		// Token: 0x0400493A RID: 18746
+		// Token: 0x04004F0D RID: 20237
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400493B RID: 18747
+		// Token: 0x04004F0E RID: 20238
 		private static int HandleId;
 	}
 }

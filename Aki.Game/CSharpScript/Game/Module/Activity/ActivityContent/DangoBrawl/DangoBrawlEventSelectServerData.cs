@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C4 RID: 26564
+	// Token: 0x02005714 RID: 22292
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlEventSelectServerData
 	{
-		// Token: 0x170096BA RID: 38586
-		// (set) Token: 0x0604228A RID: 270986 RVA: 0x0100AFC8 File Offset: 0x010091C8
+		// Token: 0x170069FB RID: 27131
+		// (set) Token: 0x06036DE0 RID: 224736 RVA: 0x00F4C3AC File Offset: 0x00F4A5AC
 		public DangoBrawlEventInfo CurrentEventSelectInfo
 		{
 			set
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604228B RID: 270987 RVA: 0x0100B054 File Offset: 0x01009254
+		// Token: 0x06036DE1 RID: 224737 RVA: 0x00F4C438 File Offset: 0x00F4A638
 		public bool UpdateSlot(int index, DangoBrawlEventSlotInfo slot)
 		{
 			if (index < 0 || index >= this.CardInfos.Count)
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x040228A4 RID: 141476
+		// Token: 0x0401D101 RID: 119041
 		public readonly List<CardInfo> CardInfos = new List<CardInfo>();
 	}
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200047F RID: 1151
+	// Token: 0x02000468 RID: 1128
 	public sealed class EntityComponentPb : IMessage<EntityComponentPb>, IMessage, IEquatable<EntityComponentPb>, IDeepCloneable<EntityComponentPb>, IBufferMessage
 	{
-		// Token: 0x06006D86 RID: 28038 RVA: 0x00108234 File Offset: 0x00106434
+		// Token: 0x06006BF8 RID: 27640 RVA: 0x001051C0 File Offset: 0x001033C0
 		[NullableContext(1)]
 		public static EntityComponentPb Create()
 		{
 			return new EntityComponentPb();
 		}
 
-		// Token: 0x170014D2 RID: 5330
-		// (get) Token: 0x06006D87 RID: 28039 RVA: 0x0010823B File Offset: 0x0010643B
+		// Token: 0x1700147E RID: 5246
+		// (get) Token: 0x06006BF9 RID: 27641 RVA: 0x001051C7 File Offset: 0x001033C7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<EntityComponentPb> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D3 RID: 5331
-		// (get) Token: 0x06006D88 RID: 28040 RVA: 0x00108242 File Offset: 0x00106442
+		// Token: 0x1700147F RID: 5247
+		// (get) Token: 0x06006BFA RID: 27642 RVA: 0x001051CE File Offset: 0x001033CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D4 RID: 5332
-		// (get) Token: 0x06006D89 RID: 28041 RVA: 0x00108245 File Offset: 0x00106445
+		// Token: 0x17001480 RID: 5248
+		// (get) Token: 0x06006BFB RID: 27643 RVA: 0x001051D1 File Offset: 0x001033D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006D8A RID: 28042 RVA: 0x0010824C File Offset: 0x0010644C
+		// Token: 0x06006BFC RID: 27644 RVA: 0x001051D8 File Offset: 0x001033D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityComponentPb()
 		{
 		}
 
-		// Token: 0x06006D8B RID: 28043 RVA: 0x00108254 File Offset: 0x00106454
+		// Token: 0x06006BFD RID: 27645 RVA: 0x001051E0 File Offset: 0x001033E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityComponentPb(EntityComponentPb other) : this()
@@ -347,11 +347,11 @@ namespace Aki.Protocol
 			case EntityComponentPb.ComponentOneofCase.RoverRoguePortalComponentPb:
 				this.RoverRoguePortalComponentPb = other.RoverRoguePortalComponentPb.Clone();
 				break;
-			case EntityComponentPb.ComponentOneofCase.DarkTideComponentPb:
-				this.DarkTideComponentPb = other.DarkTideComponentPb.Clone();
-				break;
 			case EntityComponentPb.ComponentOneofCase.ElementalHolderComponentPb:
 				this.ElementalHolderComponentPb = other.ElementalHolderComponentPb.Clone();
+				break;
+			case EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb:
+				this.SkillAvatarComponentPb = other.SkillAvatarComponentPb.Clone();
 				break;
 			case EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb:
 				this.EntityFoundationComponentPb = other.EntityFoundationComponentPb.Clone();
@@ -366,7 +366,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006D8C RID: 28044 RVA: 0x00108C7D File Offset: 0x00106E7D
+		// Token: 0x06006BFE RID: 27646 RVA: 0x00105C09 File Offset: 0x00103E09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityComponentPb Clone()
@@ -374,9 +374,9 @@ namespace Aki.Protocol
 			return new EntityComponentPb(this);
 		}
 
-		// Token: 0x170014D5 RID: 5333
-		// (get) Token: 0x06006D8D RID: 28045 RVA: 0x00108C85 File Offset: 0x00106E85
-		// (set) Token: 0x06006D8E RID: 28046 RVA: 0x00108C9D File Offset: 0x00106E9D
+		// Token: 0x17001481 RID: 5249
+		// (get) Token: 0x06006BFF RID: 27647 RVA: 0x00105C11 File Offset: 0x00103E11
+		// (set) Token: 0x06006C00 RID: 27648 RVA: 0x00105C29 File Offset: 0x00103E29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AttributeComponentPb AttributeComponent
@@ -396,9 +396,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D6 RID: 5334
-		// (get) Token: 0x06006D8F RID: 28047 RVA: 0x00108CB3 File Offset: 0x00106EB3
-		// (set) Token: 0x06006D90 RID: 28048 RVA: 0x00108CCB File Offset: 0x00106ECB
+		// Token: 0x17001482 RID: 5250
+		// (get) Token: 0x06006C01 RID: 27649 RVA: 0x00105C3F File Offset: 0x00103E3F
+		// (set) Token: 0x06006C02 RID: 27650 RVA: 0x00105C57 File Offset: 0x00103E57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TagComponentPb TagComponent
@@ -418,9 +418,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D7 RID: 5335
-		// (get) Token: 0x06006D91 RID: 28049 RVA: 0x00108CE1 File Offset: 0x00106EE1
-		// (set) Token: 0x06006D92 RID: 28050 RVA: 0x00108CF9 File Offset: 0x00106EF9
+		// Token: 0x17001483 RID: 5251
+		// (get) Token: 0x06006C03 RID: 27651 RVA: 0x00105C6D File Offset: 0x00103E6D
+		// (set) Token: 0x06006C04 RID: 27652 RVA: 0x00105C85 File Offset: 0x00103E85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TriggerComponentPb TriggerComponent
@@ -440,9 +440,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D8 RID: 5336
-		// (get) Token: 0x06006D93 RID: 28051 RVA: 0x00108D0F File Offset: 0x00106F0F
-		// (set) Token: 0x06006D94 RID: 28052 RVA: 0x00108D27 File Offset: 0x00106F27
+		// Token: 0x17001484 RID: 5252
+		// (get) Token: 0x06006C05 RID: 27653 RVA: 0x00105C9B File Offset: 0x00103E9B
+		// (set) Token: 0x06006C06 RID: 27654 RVA: 0x00105CB3 File Offset: 0x00103EB3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SummonerComponentPb SummonerComponent
@@ -462,9 +462,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014D9 RID: 5337
-		// (get) Token: 0x06006D95 RID: 28053 RVA: 0x00108D3D File Offset: 0x00106F3D
-		// (set) Token: 0x06006D96 RID: 28054 RVA: 0x00108D55 File Offset: 0x00106F55
+		// Token: 0x17001485 RID: 5253
+		// (get) Token: 0x06006C07 RID: 27655 RVA: 0x00105CC9 File Offset: 0x00103EC9
+		// (set) Token: 0x06006C08 RID: 27656 RVA: 0x00105CE1 File Offset: 0x00103EE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartComponentPb PartComponent
@@ -484,9 +484,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DA RID: 5338
-		// (get) Token: 0x06006D97 RID: 28055 RVA: 0x00108D6B File Offset: 0x00106F6B
-		// (set) Token: 0x06006D98 RID: 28056 RVA: 0x00108D83 File Offset: 0x00106F83
+		// Token: 0x17001486 RID: 5254
+		// (get) Token: 0x06006C09 RID: 27657 RVA: 0x00105CF7 File Offset: 0x00103EF7
+		// (set) Token: 0x06006C0A RID: 27658 RVA: 0x00105D0F File Offset: 0x00103F0F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VisionSkillComponentPb VisionSkillComponent
@@ -506,9 +506,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DB RID: 5339
-		// (get) Token: 0x06006D99 RID: 28057 RVA: 0x00108D99 File Offset: 0x00106F99
-		// (set) Token: 0x06006D9A RID: 28058 RVA: 0x00108DB1 File Offset: 0x00106FB1
+		// Token: 0x17001487 RID: 5255
+		// (get) Token: 0x06006C0B RID: 27659 RVA: 0x00105D25 File Offset: 0x00103F25
+		// (set) Token: 0x06006C0C RID: 27660 RVA: 0x00105D3D File Offset: 0x00103F3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateComponentPb AnimationStateComponent
@@ -528,9 +528,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DC RID: 5340
-		// (get) Token: 0x06006D9B RID: 28059 RVA: 0x00108DC7 File Offset: 0x00106FC7
-		// (set) Token: 0x06006D9C RID: 28060 RVA: 0x00108DDF File Offset: 0x00106FDF
+		// Token: 0x17001488 RID: 5256
+		// (get) Token: 0x06006C0D RID: 27661 RVA: 0x00105D53 File Offset: 0x00103F53
+		// (set) Token: 0x06006C0E RID: 27662 RVA: 0x00105D6B File Offset: 0x00103F6B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackboardParamComponentPb BlackboardParamComponent
@@ -550,9 +550,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DD RID: 5341
-		// (get) Token: 0x06006D9D RID: 28061 RVA: 0x00108DF5 File Offset: 0x00106FF5
-		// (set) Token: 0x06006D9E RID: 28062 RVA: 0x00108E0E File Offset: 0x0010700E
+		// Token: 0x17001489 RID: 5257
+		// (get) Token: 0x06006C0F RID: 27663 RVA: 0x00105D81 File Offset: 0x00103F81
+		// (set) Token: 0x06006C10 RID: 27664 RVA: 0x00105D9A File Offset: 0x00103F9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SysBuffComponentPb SysBuffComponent
@@ -572,9 +572,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DE RID: 5342
-		// (get) Token: 0x06006D9F RID: 28063 RVA: 0x00108E25 File Offset: 0x00107025
-		// (set) Token: 0x06006DA0 RID: 28064 RVA: 0x00108E3E File Offset: 0x0010703E
+		// Token: 0x1700148A RID: 5258
+		// (get) Token: 0x06006C11 RID: 27665 RVA: 0x00105DB1 File Offset: 0x00103FB1
+		// (set) Token: 0x06006C12 RID: 27666 RVA: 0x00105DCA File Offset: 0x00103FCA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientDataComponentPb ClientDataComponent
@@ -594,9 +594,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014DF RID: 5343
-		// (get) Token: 0x06006DA1 RID: 28065 RVA: 0x00108E55 File Offset: 0x00107055
-		// (set) Token: 0x06006DA2 RID: 28066 RVA: 0x00108E6E File Offset: 0x0010706E
+		// Token: 0x1700148B RID: 5259
+		// (get) Token: 0x06006C13 RID: 27667 RVA: 0x00105DE1 File Offset: 0x00103FE1
+		// (set) Token: 0x06006C14 RID: 27668 RVA: 0x00105DFA File Offset: 0x00103FFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterWeaponComponentPb MonsterWeaponComponentPb
@@ -616,9 +616,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E0 RID: 5344
-		// (get) Token: 0x06006DA3 RID: 28067 RVA: 0x00108E85 File Offset: 0x00107085
-		// (set) Token: 0x06006DA4 RID: 28068 RVA: 0x00108E9E File Offset: 0x0010709E
+		// Token: 0x1700148C RID: 5260
+		// (get) Token: 0x06006C15 RID: 27669 RVA: 0x00105E11 File Offset: 0x00104011
+		// (set) Token: 0x06006C16 RID: 27670 RVA: 0x00105E2A File Offset: 0x0010402A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterAiComponentPb MonsterAiComponentPb
@@ -638,9 +638,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E1 RID: 5345
-		// (get) Token: 0x06006DA5 RID: 28069 RVA: 0x00108EB5 File Offset: 0x001070B5
-		// (set) Token: 0x06006DA6 RID: 28070 RVA: 0x00108ECE File Offset: 0x001070CE
+		// Token: 0x1700148D RID: 5261
+		// (get) Token: 0x06006C17 RID: 27671 RVA: 0x00105E41 File Offset: 0x00104041
+		// (set) Token: 0x06006C18 RID: 27672 RVA: 0x00105E5A File Offset: 0x0010405A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FightBuffComponentPb FightBuffComponent
@@ -660,9 +660,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E2 RID: 5346
-		// (get) Token: 0x06006DA7 RID: 28071 RVA: 0x00108EE5 File Offset: 0x001070E5
-		// (set) Token: 0x06006DA8 RID: 28072 RVA: 0x00108EFE File Offset: 0x001070FE
+		// Token: 0x1700148E RID: 5262
+		// (get) Token: 0x06006C19 RID: 27673 RVA: 0x00105E71 File Offset: 0x00104071
+		// (set) Token: 0x06006C1A RID: 27674 RVA: 0x00105E8A File Offset: 0x0010408A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NearbyTrackingComponentPb NearbyTrackingComponentPb
@@ -682,9 +682,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E3 RID: 5347
-		// (get) Token: 0x06006DA9 RID: 28073 RVA: 0x00108F15 File Offset: 0x00107115
-		// (set) Token: 0x06006DAA RID: 28074 RVA: 0x00108F2E File Offset: 0x0010712E
+		// Token: 0x1700148F RID: 5263
+		// (get) Token: 0x06006C1B RID: 27675 RVA: 0x00105EA1 File Offset: 0x001040A1
+		// (set) Token: 0x06006C1C RID: 27676 RVA: 0x00105EBA File Offset: 0x001040BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DropComponentPb DropComponentPb
@@ -704,9 +704,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E4 RID: 5348
-		// (get) Token: 0x06006DAB RID: 28075 RVA: 0x00108F45 File Offset: 0x00107145
-		// (set) Token: 0x06006DAC RID: 28076 RVA: 0x00108F5E File Offset: 0x0010715E
+		// Token: 0x17001490 RID: 5264
+		// (get) Token: 0x06006C1D RID: 27677 RVA: 0x00105ED1 File Offset: 0x001040D1
+		// (set) Token: 0x06006C1E RID: 27678 RVA: 0x00105EEA File Offset: 0x001040EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterCaptureComponentPb MonsterCaptureComponent
@@ -726,9 +726,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E5 RID: 5349
-		// (get) Token: 0x06006DAD RID: 28077 RVA: 0x00108F75 File Offset: 0x00107175
-		// (set) Token: 0x06006DAE RID: 28078 RVA: 0x00108F8E File Offset: 0x0010718E
+		// Token: 0x17001491 RID: 5265
+		// (get) Token: 0x06006C1F RID: 27679 RVA: 0x00105F01 File Offset: 0x00104101
+		// (set) Token: 0x06006C20 RID: 27680 RVA: 0x00105F1A File Offset: 0x0010411A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogicStateComponentPb LogicStateComponentPb
@@ -748,9 +748,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E6 RID: 5350
-		// (get) Token: 0x06006DAF RID: 28079 RVA: 0x00108FA5 File Offset: 0x001071A5
-		// (set) Token: 0x06006DB0 RID: 28080 RVA: 0x00108FBE File Offset: 0x001071BE
+		// Token: 0x17001492 RID: 5266
+		// (get) Token: 0x06006C21 RID: 27681 RVA: 0x00105F31 File Offset: 0x00104131
+		// (set) Token: 0x06006C22 RID: 27682 RVA: 0x00105F4A File Offset: 0x0010414A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AdviceComponentPb AdviceComponentPb
@@ -770,9 +770,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E7 RID: 5351
-		// (get) Token: 0x06006DB1 RID: 28081 RVA: 0x00108FD5 File Offset: 0x001071D5
-		// (set) Token: 0x06006DB2 RID: 28082 RVA: 0x00108FEE File Offset: 0x001071EE
+		// Token: 0x17001493 RID: 5267
+		// (get) Token: 0x06006C23 RID: 27683 RVA: 0x00105F61 File Offset: 0x00104161
+		// (set) Token: 0x06006C24 RID: 27684 RVA: 0x00105F7A File Offset: 0x0010417A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LiftComponentPb LiftComponentPb
@@ -792,9 +792,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E8 RID: 5352
-		// (get) Token: 0x06006DB3 RID: 28083 RVA: 0x00109005 File Offset: 0x00107205
-		// (set) Token: 0x06006DB4 RID: 28084 RVA: 0x0010901E File Offset: 0x0010721E
+		// Token: 0x17001494 RID: 5268
+		// (get) Token: 0x06006C25 RID: 27685 RVA: 0x00105F91 File Offset: 0x00104191
+		// (set) Token: 0x06006C26 RID: 27686 RVA: 0x00105FAA File Offset: 0x001041AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InteractComponentPb InteractComponent
@@ -814,9 +814,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014E9 RID: 5353
-		// (get) Token: 0x06006DB5 RID: 28085 RVA: 0x00109035 File Offset: 0x00107235
-		// (set) Token: 0x06006DB6 RID: 28086 RVA: 0x0010904E File Offset: 0x0010724E
+		// Token: 0x17001495 RID: 5269
+		// (get) Token: 0x06006C27 RID: 27687 RVA: 0x00105FC1 File Offset: 0x001041C1
+		// (set) Token: 0x06006C28 RID: 27688 RVA: 0x00105FDA File Offset: 0x001041DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EquipComponentPb EquipComponent
@@ -836,9 +836,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014EA RID: 5354
-		// (get) Token: 0x06006DB7 RID: 28087 RVA: 0x00109065 File Offset: 0x00107265
-		// (set) Token: 0x06006DB8 RID: 28088 RVA: 0x0010907E File Offset: 0x0010727E
+		// Token: 0x17001496 RID: 5270
+		// (get) Token: 0x06006C29 RID: 27689 RVA: 0x00105FF1 File Offset: 0x001041F1
+		// (set) Token: 0x06006C2A RID: 27690 RVA: 0x0010600A File Offset: 0x0010420A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BeControlledComponentPb BeControlledComponentPb
@@ -858,9 +858,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014EB RID: 5355
-		// (get) Token: 0x06006DB9 RID: 28089 RVA: 0x00109095 File Offset: 0x00107295
-		// (set) Token: 0x06006DBA RID: 28090 RVA: 0x001090AE File Offset: 0x001072AE
+		// Token: 0x17001497 RID: 5271
+		// (get) Token: 0x06006C2B RID: 27691 RVA: 0x00106021 File Offset: 0x00104221
+		// (set) Token: 0x06006C2C RID: 27692 RVA: 0x0010603A File Offset: 0x0010423A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConcomitantsComponentPb ConcomitantsComponentPb
@@ -880,9 +880,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014EC RID: 5356
-		// (get) Token: 0x06006DBB RID: 28091 RVA: 0x001090C5 File Offset: 0x001072C5
-		// (set) Token: 0x06006DBC RID: 28092 RVA: 0x001090DE File Offset: 0x001072DE
+		// Token: 0x17001498 RID: 5272
+		// (get) Token: 0x06006C2D RID: 27693 RVA: 0x00106051 File Offset: 0x00104251
+		// (set) Token: 0x06006C2E RID: 27694 RVA: 0x0010606A File Offset: 0x0010426A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TimelineTrackComponentPb TimelineTrackComponentPb
@@ -902,9 +902,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014ED RID: 5357
-		// (get) Token: 0x06006DBD RID: 28093 RVA: 0x001090F5 File Offset: 0x001072F5
-		// (set) Token: 0x06006DBE RID: 28094 RVA: 0x0010910E File Offset: 0x0010730E
+		// Token: 0x17001499 RID: 5273
+		// (get) Token: 0x06006C2F RID: 27695 RVA: 0x00106081 File Offset: 0x00104281
+		// (set) Token: 0x06006C30 RID: 27696 RVA: 0x0010609A File Offset: 0x0010429A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SummonsComponentPb SummonsComponentPb
@@ -924,9 +924,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014EE RID: 5358
-		// (get) Token: 0x06006DBF RID: 28095 RVA: 0x00109125 File Offset: 0x00107325
-		// (set) Token: 0x06006DC0 RID: 28096 RVA: 0x0010913E File Offset: 0x0010733E
+		// Token: 0x1700149A RID: 5274
+		// (get) Token: 0x06006C31 RID: 27697 RVA: 0x001060B1 File Offset: 0x001042B1
+		// (set) Token: 0x06006C32 RID: 27698 RVA: 0x001060CA File Offset: 0x001042CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityFsmComponentPb EntityFsmComponentPb
@@ -946,9 +946,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014EF RID: 5359
-		// (get) Token: 0x06006DC1 RID: 28097 RVA: 0x00109155 File Offset: 0x00107355
-		// (set) Token: 0x06006DC2 RID: 28098 RVA: 0x0010916E File Offset: 0x0010736E
+		// Token: 0x1700149B RID: 5275
+		// (get) Token: 0x06006C33 RID: 27699 RVA: 0x001060E1 File Offset: 0x001042E1
+		// (set) Token: 0x06006C34 RID: 27700 RVA: 0x001060FA File Offset: 0x001042FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoardPb BoardPb
@@ -968,9 +968,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F0 RID: 5360
-		// (get) Token: 0x06006DC3 RID: 28099 RVA: 0x00109185 File Offset: 0x00107385
-		// (set) Token: 0x06006DC4 RID: 28100 RVA: 0x0010919E File Offset: 0x0010739E
+		// Token: 0x1700149C RID: 5276
+		// (get) Token: 0x06006C35 RID: 27701 RVA: 0x00106111 File Offset: 0x00104311
+		// (set) Token: 0x06006C36 RID: 27702 RVA: 0x0010612A File Offset: 0x0010432A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlacementItemPb PlacementItemPb
@@ -990,9 +990,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F1 RID: 5361
-		// (get) Token: 0x06006DC5 RID: 28101 RVA: 0x001091B5 File Offset: 0x001073B5
-		// (set) Token: 0x06006DC6 RID: 28102 RVA: 0x001091CE File Offset: 0x001073CE
+		// Token: 0x1700149D RID: 5277
+		// (get) Token: 0x06006C37 RID: 27703 RVA: 0x00106141 File Offset: 0x00104341
+		// (set) Token: 0x06006C38 RID: 27704 RVA: 0x0010615A File Offset: 0x0010435A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public StateTagComponentPb StateTagComponentPb
@@ -1012,9 +1012,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F2 RID: 5362
-		// (get) Token: 0x06006DC7 RID: 28103 RVA: 0x001091E5 File Offset: 0x001073E5
-		// (set) Token: 0x06006DC8 RID: 28104 RVA: 0x001091FE File Offset: 0x001073FE
+		// Token: 0x1700149E RID: 5278
+		// (get) Token: 0x06006C39 RID: 27705 RVA: 0x00106171 File Offset: 0x00104371
+		// (set) Token: 0x06006C3A RID: 27706 RVA: 0x0010618A File Offset: 0x0010438A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterGachaDataPb MonsterGachaDataPb
@@ -1034,9 +1034,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F3 RID: 5363
-		// (get) Token: 0x06006DC9 RID: 28105 RVA: 0x00109215 File Offset: 0x00107415
-		// (set) Token: 0x06006DCA RID: 28106 RVA: 0x0010922E File Offset: 0x0010742E
+		// Token: 0x1700149F RID: 5279
+		// (get) Token: 0x06006C3B RID: 27707 RVA: 0x001061A1 File Offset: 0x001043A1
+		// (set) Token: 0x06006C3C RID: 27708 RVA: 0x001061BA File Offset: 0x001043BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FanComponentPb FanComponentPb
@@ -1056,9 +1056,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F4 RID: 5364
-		// (get) Token: 0x06006DCB RID: 28107 RVA: 0x00109245 File Offset: 0x00107445
-		// (set) Token: 0x06006DCC RID: 28108 RVA: 0x0010925E File Offset: 0x0010745E
+		// Token: 0x170014A0 RID: 5280
+		// (get) Token: 0x06006C3D RID: 27709 RVA: 0x001061D1 File Offset: 0x001043D1
+		// (set) Token: 0x06006C3E RID: 27710 RVA: 0x001061EA File Offset: 0x001043EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPb NpcPb
@@ -1078,9 +1078,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F5 RID: 5365
-		// (get) Token: 0x06006DCD RID: 28109 RVA: 0x00109275 File Offset: 0x00107475
-		// (set) Token: 0x06006DCE RID: 28110 RVA: 0x0010928E File Offset: 0x0010748E
+		// Token: 0x170014A1 RID: 5281
+		// (get) Token: 0x06006C3F RID: 27711 RVA: 0x00106201 File Offset: 0x00104401
+		// (set) Token: 0x06006C40 RID: 27712 RVA: 0x0010621A File Offset: 0x0010441A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BubbleComponentPb BubbleComponent
@@ -1100,9 +1100,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F6 RID: 5366
-		// (get) Token: 0x06006DCF RID: 28111 RVA: 0x001092A5 File Offset: 0x001074A5
-		// (set) Token: 0x06006DD0 RID: 28112 RVA: 0x001092BE File Offset: 0x001074BE
+		// Token: 0x170014A2 RID: 5282
+		// (get) Token: 0x06006C41 RID: 27713 RVA: 0x00106231 File Offset: 0x00104431
+		// (set) Token: 0x06006C42 RID: 27714 RVA: 0x0010624A File Offset: 0x0010444A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PatrolComponentPb PatrolComponent
@@ -1122,9 +1122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F7 RID: 5367
-		// (get) Token: 0x06006DD1 RID: 28113 RVA: 0x001092D5 File Offset: 0x001074D5
-		// (set) Token: 0x06006DD2 RID: 28114 RVA: 0x001092EE File Offset: 0x001074EE
+		// Token: 0x170014A3 RID: 5283
+		// (get) Token: 0x06006C43 RID: 27715 RVA: 0x00106261 File Offset: 0x00104461
+		// (set) Token: 0x06006C44 RID: 27716 RVA: 0x0010627A File Offset: 0x0010447A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RangeComponentPb RangeComponent
@@ -1144,9 +1144,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F8 RID: 5368
-		// (get) Token: 0x06006DD3 RID: 28115 RVA: 0x00109305 File Offset: 0x00107505
-		// (set) Token: 0x06006DD4 RID: 28116 RVA: 0x0010931E File Offset: 0x0010751E
+		// Token: 0x170014A4 RID: 5284
+		// (get) Token: 0x06006C45 RID: 27717 RVA: 0x00106291 File Offset: 0x00104491
+		// (set) Token: 0x06006C46 RID: 27718 RVA: 0x001062AA File Offset: 0x001044AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillComponentPb PassiveSkillComponentPb
@@ -1166,9 +1166,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014F9 RID: 5369
-		// (get) Token: 0x06006DD5 RID: 28117 RVA: 0x00109335 File Offset: 0x00107535
-		// (set) Token: 0x06006DD6 RID: 28118 RVA: 0x0010934E File Offset: 0x0010754E
+		// Token: 0x170014A5 RID: 5285
+		// (get) Token: 0x06006C47 RID: 27719 RVA: 0x001062C1 File Offset: 0x001044C1
+		// (set) Token: 0x06006C48 RID: 27720 RVA: 0x001062DA File Offset: 0x001044DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillComponentPb SkillComponentPb
@@ -1188,9 +1188,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FA RID: 5370
-		// (get) Token: 0x06006DD7 RID: 28119 RVA: 0x00109365 File Offset: 0x00107565
-		// (set) Token: 0x06006DD8 RID: 28120 RVA: 0x0010937E File Offset: 0x0010757E
+		// Token: 0x170014A6 RID: 5286
+		// (get) Token: 0x06006C49 RID: 27721 RVA: 0x001062F1 File Offset: 0x001044F1
+		// (set) Token: 0x06006C4A RID: 27722 RVA: 0x0010630A File Offset: 0x0010450A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DynamicAttachComponentPb DynamicAttachComponentPb
@@ -1210,9 +1210,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FB RID: 5371
-		// (get) Token: 0x06006DD9 RID: 28121 RVA: 0x00109395 File Offset: 0x00107595
-		// (set) Token: 0x06006DDA RID: 28122 RVA: 0x001093AE File Offset: 0x001075AE
+		// Token: 0x170014A7 RID: 5287
+		// (get) Token: 0x06006C4B RID: 27723 RVA: 0x00106321 File Offset: 0x00104521
+		// (set) Token: 0x06006C4C RID: 27724 RVA: 0x0010633A File Offset: 0x0010453A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VarComponentPb VarComponentPb
@@ -1232,9 +1232,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FC RID: 5372
-		// (get) Token: 0x06006DDB RID: 28123 RVA: 0x001093C5 File Offset: 0x001075C5
-		// (set) Token: 0x06006DDC RID: 28124 RVA: 0x001093DE File Offset: 0x001075DE
+		// Token: 0x170014A8 RID: 5288
+		// (get) Token: 0x06006C4D RID: 27725 RVA: 0x00106351 File Offset: 0x00104551
+		// (set) Token: 0x06006C4E RID: 27726 RVA: 0x0010636A File Offset: 0x0010456A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerFollowerSelfComponentPb PlayerFollowerSelfComponentPb
@@ -1254,9 +1254,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FD RID: 5373
-		// (get) Token: 0x06006DDD RID: 28125 RVA: 0x001093F5 File Offset: 0x001075F5
-		// (set) Token: 0x06006DDE RID: 28126 RVA: 0x0010940E File Offset: 0x0010760E
+		// Token: 0x170014A9 RID: 5289
+		// (get) Token: 0x06006C4F RID: 27727 RVA: 0x00106381 File Offset: 0x00104581
+		// (set) Token: 0x06006C50 RID: 27728 RVA: 0x0010639A File Offset: 0x0010459A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemLifeCycleComponentPb SceneItemLifeCycleComponentPb
@@ -1276,9 +1276,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FE RID: 5374
-		// (get) Token: 0x06006DDF RID: 28127 RVA: 0x00109425 File Offset: 0x00107625
-		// (set) Token: 0x06006DE0 RID: 28128 RVA: 0x0010943E File Offset: 0x0010763E
+		// Token: 0x170014AA RID: 5290
+		// (get) Token: 0x06006C51 RID: 27729 RVA: 0x001063B1 File Offset: 0x001045B1
+		// (set) Token: 0x06006C52 RID: 27730 RVA: 0x001063CA File Offset: 0x001045CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityBulletComponentPb EntityBulletComponentPb
@@ -1298,9 +1298,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170014FF RID: 5375
-		// (get) Token: 0x06006DE1 RID: 28129 RVA: 0x00109455 File Offset: 0x00107655
-		// (set) Token: 0x06006DE2 RID: 28130 RVA: 0x0010946E File Offset: 0x0010766E
+		// Token: 0x170014AB RID: 5291
+		// (get) Token: 0x06006C53 RID: 27731 RVA: 0x001063E1 File Offset: 0x001045E1
+		// (set) Token: 0x06006C54 RID: 27732 RVA: 0x001063FA File Offset: 0x001045FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffProducerComponentPb BuffProducerComponentPb
@@ -1320,9 +1320,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001500 RID: 5376
-		// (get) Token: 0x06006DE3 RID: 28131 RVA: 0x00109485 File Offset: 0x00107685
-		// (set) Token: 0x06006DE4 RID: 28132 RVA: 0x0010949E File Offset: 0x0010769E
+		// Token: 0x170014AC RID: 5292
+		// (get) Token: 0x06006C55 RID: 27733 RVA: 0x00106411 File Offset: 0x00104611
+		// (set) Token: 0x06006C56 RID: 27734 RVA: 0x0010642A File Offset: 0x0010462A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffConsumerComponentPb BuffConsumerComponentPb
@@ -1342,9 +1342,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001501 RID: 5377
-		// (get) Token: 0x06006DE5 RID: 28133 RVA: 0x001094B5 File Offset: 0x001076B5
-		// (set) Token: 0x06006DE6 RID: 28134 RVA: 0x001094CE File Offset: 0x001076CE
+		// Token: 0x170014AD RID: 5293
+		// (get) Token: 0x06006C57 RID: 27735 RVA: 0x00106441 File Offset: 0x00104641
+		// (set) Token: 0x06006C58 RID: 27736 RVA: 0x0010645A File Offset: 0x0010465A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemComponentPb SceneItemComponentPb
@@ -1364,9 +1364,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001502 RID: 5378
-		// (get) Token: 0x06006DE7 RID: 28135 RVA: 0x001094E5 File Offset: 0x001076E5
-		// (set) Token: 0x06006DE8 RID: 28136 RVA: 0x001094FE File Offset: 0x001076FE
+		// Token: 0x170014AE RID: 5294
+		// (get) Token: 0x06006C59 RID: 27737 RVA: 0x00106471 File Offset: 0x00104671
+		// (set) Token: 0x06006C5A RID: 27738 RVA: 0x0010648A File Offset: 0x0010468A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShieldComponentPb ShieldComponentPb
@@ -1386,9 +1386,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001503 RID: 5379
-		// (get) Token: 0x06006DE9 RID: 28137 RVA: 0x00109515 File Offset: 0x00107715
-		// (set) Token: 0x06006DEA RID: 28138 RVA: 0x0010952E File Offset: 0x0010772E
+		// Token: 0x170014AF RID: 5295
+		// (get) Token: 0x06006C5B RID: 27739 RVA: 0x001064A1 File Offset: 0x001046A1
+		// (set) Token: 0x06006C5C RID: 27740 RVA: 0x001064BA File Offset: 0x001046BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NpcPerformComponentPb NpcPerformComponentPb
@@ -1408,9 +1408,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001504 RID: 5380
-		// (get) Token: 0x06006DEB RID: 28139 RVA: 0x00109545 File Offset: 0x00107745
-		// (set) Token: 0x06006DEC RID: 28140 RVA: 0x0010955E File Offset: 0x0010775E
+		// Token: 0x170014B0 RID: 5296
+		// (get) Token: 0x06006C5D RID: 27741 RVA: 0x001064D1 File Offset: 0x001046D1
+		// (set) Token: 0x06006C5E RID: 27742 RVA: 0x001064EA File Offset: 0x001046EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DependenceComponentPb DependenceComponentPb
@@ -1430,9 +1430,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001505 RID: 5381
-		// (get) Token: 0x06006DED RID: 28141 RVA: 0x00109575 File Offset: 0x00107775
-		// (set) Token: 0x06006DEE RID: 28142 RVA: 0x0010958E File Offset: 0x0010778E
+		// Token: 0x170014B1 RID: 5297
+		// (get) Token: 0x06006C5F RID: 27743 RVA: 0x00106501 File Offset: 0x00104701
+		// (set) Token: 0x06006C60 RID: 27744 RVA: 0x0010651A File Offset: 0x0010471A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RenjuDataPb RenjuDataPb
@@ -1452,9 +1452,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001506 RID: 5382
-		// (get) Token: 0x06006DEF RID: 28143 RVA: 0x001095A5 File Offset: 0x001077A5
-		// (set) Token: 0x06006DF0 RID: 28144 RVA: 0x001095BE File Offset: 0x001077BE
+		// Token: 0x170014B2 RID: 5298
+		// (get) Token: 0x06006C61 RID: 27745 RVA: 0x00106531 File Offset: 0x00104731
+		// (set) Token: 0x06006C62 RID: 27746 RVA: 0x0010654A File Offset: 0x0010474A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiRoleComponentPb AiRoleComponentPb
@@ -1474,9 +1474,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001507 RID: 5383
-		// (get) Token: 0x06006DF1 RID: 28145 RVA: 0x001095D5 File Offset: 0x001077D5
-		// (set) Token: 0x06006DF2 RID: 28146 RVA: 0x001095EE File Offset: 0x001077EE
+		// Token: 0x170014B3 RID: 5299
+		// (get) Token: 0x06006C63 RID: 27747 RVA: 0x00106561 File Offset: 0x00104761
+		// (set) Token: 0x06006C64 RID: 27748 RVA: 0x0010657A File Offset: 0x0010477A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerFollowersComponentPb PlayerFollowersComponentPb
@@ -1496,9 +1496,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001508 RID: 5384
-		// (get) Token: 0x06006DF3 RID: 28147 RVA: 0x00109605 File Offset: 0x00107805
-		// (set) Token: 0x06006DF4 RID: 28148 RVA: 0x0010961E File Offset: 0x0010781E
+		// Token: 0x170014B4 RID: 5300
+		// (get) Token: 0x06006C65 RID: 27749 RVA: 0x00106591 File Offset: 0x00104791
+		// (set) Token: 0x06006C66 RID: 27750 RVA: 0x001065AA File Offset: 0x001047AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemAttributeComponentPb SceneItemAttributeComponentPb
@@ -1518,9 +1518,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001509 RID: 5385
-		// (get) Token: 0x06006DF5 RID: 28149 RVA: 0x00109635 File Offset: 0x00107835
-		// (set) Token: 0x06006DF6 RID: 28150 RVA: 0x0010964E File Offset: 0x0010784E
+		// Token: 0x170014B5 RID: 5301
+		// (get) Token: 0x06006C67 RID: 27751 RVA: 0x001065C1 File Offset: 0x001047C1
+		// (set) Token: 0x06006C68 RID: 27752 RVA: 0x001065DA File Offset: 0x001047DA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PullingFoundationComponentPb PullingFoundationComponentPb
@@ -1540,9 +1540,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150A RID: 5386
-		// (get) Token: 0x06006DF7 RID: 28151 RVA: 0x00109665 File Offset: 0x00107865
-		// (set) Token: 0x06006DF8 RID: 28152 RVA: 0x0010967E File Offset: 0x0010787E
+		// Token: 0x170014B6 RID: 5302
+		// (get) Token: 0x06006C69 RID: 27753 RVA: 0x001065F1 File Offset: 0x001047F1
+		// (set) Token: 0x06006C6A RID: 27754 RVA: 0x0010660A File Offset: 0x0010480A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BatchBulletCastComponentPb BatchBulletCastComponentPb
@@ -1562,9 +1562,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150B RID: 5387
-		// (get) Token: 0x06006DF9 RID: 28153 RVA: 0x00109695 File Offset: 0x00107895
-		// (set) Token: 0x06006DFA RID: 28154 RVA: 0x001096AE File Offset: 0x001078AE
+		// Token: 0x170014B7 RID: 5303
+		// (get) Token: 0x06006C6B RID: 27755 RVA: 0x00106621 File Offset: 0x00104821
+		// (set) Token: 0x06006C6C RID: 27756 RVA: 0x0010663A File Offset: 0x0010483A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleWeaponSkinComponentPb RoleWeaponSkinComponent
@@ -1584,9 +1584,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150C RID: 5388
-		// (get) Token: 0x06006DFB RID: 28155 RVA: 0x001096C5 File Offset: 0x001078C5
-		// (set) Token: 0x06006DFC RID: 28156 RVA: 0x001096DE File Offset: 0x001078DE
+		// Token: 0x170014B8 RID: 5304
+		// (get) Token: 0x06006C6D RID: 27757 RVA: 0x00106651 File Offset: 0x00104851
+		// (set) Token: 0x06006C6E RID: 27758 RVA: 0x0010666A File Offset: 0x0010486A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombineEntityInfoPb CombineEntityInfoPb
@@ -1606,9 +1606,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150D RID: 5389
-		// (get) Token: 0x06006DFD RID: 28157 RVA: 0x001096F5 File Offset: 0x001078F5
-		// (set) Token: 0x06006DFE RID: 28158 RVA: 0x0010970E File Offset: 0x0010790E
+		// Token: 0x170014B9 RID: 5305
+		// (get) Token: 0x06006C6F RID: 27759 RVA: 0x00106681 File Offset: 0x00104881
+		// (set) Token: 0x06006C70 RID: 27760 RVA: 0x0010669A File Offset: 0x0010489A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemAiComponentPb SceneItemAiComponentPb
@@ -1628,9 +1628,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150E RID: 5390
-		// (get) Token: 0x06006DFF RID: 28159 RVA: 0x00109725 File Offset: 0x00107925
-		// (set) Token: 0x06006E00 RID: 28160 RVA: 0x0010973E File Offset: 0x0010793E
+		// Token: 0x170014BA RID: 5306
+		// (get) Token: 0x06006C71 RID: 27761 RVA: 0x001066B1 File Offset: 0x001048B1
+		// (set) Token: 0x06006C72 RID: 27762 RVA: 0x001066CA File Offset: 0x001048CA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimalCollectComponentPb AnimalCollectComponentPb
@@ -1650,9 +1650,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700150F RID: 5391
-		// (get) Token: 0x06006E01 RID: 28161 RVA: 0x00109755 File Offset: 0x00107955
-		// (set) Token: 0x06006E02 RID: 28162 RVA: 0x0010976E File Offset: 0x0010796E
+		// Token: 0x170014BB RID: 5307
+		// (get) Token: 0x06006C73 RID: 27763 RVA: 0x001066E1 File Offset: 0x001048E1
+		// (set) Token: 0x06006C74 RID: 27764 RVA: 0x001066FA File Offset: 0x001048FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehiclePassengerComponentPb VehiclePassengerComponentPb
@@ -1672,9 +1672,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001510 RID: 5392
-		// (get) Token: 0x06006E03 RID: 28163 RVA: 0x00109785 File Offset: 0x00107985
-		// (set) Token: 0x06006E04 RID: 28164 RVA: 0x0010979E File Offset: 0x0010799E
+		// Token: 0x170014BC RID: 5308
+		// (get) Token: 0x06006C75 RID: 27765 RVA: 0x00106711 File Offset: 0x00104911
+		// (set) Token: 0x06006C76 RID: 27766 RVA: 0x0010672A File Offset: 0x0010492A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HookLockPointComponentPb HookLockPointComponentPb
@@ -1694,9 +1694,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001511 RID: 5393
-		// (get) Token: 0x06006E05 RID: 28165 RVA: 0x001097B5 File Offset: 0x001079B5
-		// (set) Token: 0x06006E06 RID: 28166 RVA: 0x001097CE File Offset: 0x001079CE
+		// Token: 0x170014BD RID: 5309
+		// (get) Token: 0x06006C77 RID: 27767 RVA: 0x00106741 File Offset: 0x00104941
+		// (set) Token: 0x06006C78 RID: 27768 RVA: 0x0010675A File Offset: 0x0010495A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HackingComponentPb HackingComponentPb
@@ -1716,9 +1716,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001512 RID: 5394
-		// (get) Token: 0x06006E07 RID: 28167 RVA: 0x001097E5 File Offset: 0x001079E5
-		// (set) Token: 0x06006E08 RID: 28168 RVA: 0x001097FE File Offset: 0x001079FE
+		// Token: 0x170014BE RID: 5310
+		// (get) Token: 0x06006C79 RID: 27769 RVA: 0x00106771 File Offset: 0x00104971
+		// (set) Token: 0x06006C7A RID: 27770 RVA: 0x0010678A File Offset: 0x0010498A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HackTargetComponentPb HackTargetComponentPb
@@ -1738,9 +1738,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001513 RID: 5395
-		// (get) Token: 0x06006E09 RID: 28169 RVA: 0x00109815 File Offset: 0x00107A15
-		// (set) Token: 0x06006E0A RID: 28170 RVA: 0x0010982E File Offset: 0x00107A2E
+		// Token: 0x170014BF RID: 5311
+		// (get) Token: 0x06006C7B RID: 27771 RVA: 0x001067A1 File Offset: 0x001049A1
+		// (set) Token: 0x06006C7C RID: 27772 RVA: 0x001067BA File Offset: 0x001049BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GravityFlipComponentPb GravityFlipComponentPb
@@ -1760,9 +1760,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001514 RID: 5396
-		// (get) Token: 0x06006E0B RID: 28171 RVA: 0x00109845 File Offset: 0x00107A45
-		// (set) Token: 0x06006E0C RID: 28172 RVA: 0x0010985E File Offset: 0x00107A5E
+		// Token: 0x170014C0 RID: 5312
+		// (get) Token: 0x06006C7D RID: 27773 RVA: 0x001067D1 File Offset: 0x001049D1
+		// (set) Token: 0x06006C7E RID: 27774 RVA: 0x001067EA File Offset: 0x001049EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityMoveSplineComponentPb EntityMoveSplineComponentPb
@@ -1782,9 +1782,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001515 RID: 5397
-		// (get) Token: 0x06006E0D RID: 28173 RVA: 0x00109875 File Offset: 0x00107A75
-		// (set) Token: 0x06006E0E RID: 28174 RVA: 0x0010988E File Offset: 0x00107A8E
+		// Token: 0x170014C1 RID: 5313
+		// (get) Token: 0x06006C7F RID: 27775 RVA: 0x00106801 File Offset: 0x00104A01
+		// (set) Token: 0x06006C80 RID: 27776 RVA: 0x0010681A File Offset: 0x00104A1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityRewardItemPb EntityRewardItemPb
@@ -1804,9 +1804,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001516 RID: 5398
-		// (get) Token: 0x06006E0F RID: 28175 RVA: 0x001098A5 File Offset: 0x00107AA5
-		// (set) Token: 0x06006E10 RID: 28176 RVA: 0x001098BE File Offset: 0x00107ABE
+		// Token: 0x170014C2 RID: 5314
+		// (get) Token: 0x06006C81 RID: 27777 RVA: 0x00106831 File Offset: 0x00104A31
+		// (set) Token: 0x06006C82 RID: 27778 RVA: 0x0010684A File Offset: 0x00104A4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TemplateEntitySpawnerComponentPb TemplateEntitySpawnerComponentPb
@@ -1826,9 +1826,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001517 RID: 5399
-		// (get) Token: 0x06006E11 RID: 28177 RVA: 0x001098D5 File Offset: 0x00107AD5
-		// (set) Token: 0x06006E12 RID: 28178 RVA: 0x001098EE File Offset: 0x00107AEE
+		// Token: 0x170014C3 RID: 5315
+		// (get) Token: 0x06006C83 RID: 27779 RVA: 0x00106861 File Offset: 0x00104A61
+		// (set) Token: 0x06006C84 RID: 27780 RVA: 0x0010687A File Offset: 0x00104A7A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GridObjectComponentPb GridObjectComponentPb
@@ -1848,9 +1848,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001518 RID: 5400
-		// (get) Token: 0x06006E13 RID: 28179 RVA: 0x00109905 File Offset: 0x00107B05
-		// (set) Token: 0x06006E14 RID: 28180 RVA: 0x0010991E File Offset: 0x00107B1E
+		// Token: 0x170014C4 RID: 5316
+		// (get) Token: 0x06006C85 RID: 27781 RVA: 0x00106891 File Offset: 0x00104A91
+		// (set) Token: 0x06006C86 RID: 27782 RVA: 0x001068AA File Offset: 0x00104AAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SimpleCombatComponentPb SimpleCombatComponentPb
@@ -1870,9 +1870,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001519 RID: 5401
-		// (get) Token: 0x06006E15 RID: 28181 RVA: 0x00109935 File Offset: 0x00107B35
-		// (set) Token: 0x06006E16 RID: 28182 RVA: 0x0010994E File Offset: 0x00107B4E
+		// Token: 0x170014C5 RID: 5317
+		// (get) Token: 0x06006C87 RID: 27783 RVA: 0x001068C1 File Offset: 0x00104AC1
+		// (set) Token: 0x06006C88 RID: 27784 RVA: 0x001068DA File Offset: 0x00104ADA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrapDefenseComponentPb TrapDefenseComponentPb
@@ -1892,9 +1892,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151A RID: 5402
-		// (get) Token: 0x06006E17 RID: 28183 RVA: 0x00109965 File Offset: 0x00107B65
-		// (set) Token: 0x06006E18 RID: 28184 RVA: 0x0010997E File Offset: 0x00107B7E
+		// Token: 0x170014C6 RID: 5318
+		// (get) Token: 0x06006C89 RID: 27785 RVA: 0x001068F1 File Offset: 0x00104AF1
+		// (set) Token: 0x06006C8A RID: 27786 RVA: 0x0010690A File Offset: 0x00104B0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HoldHandComponentPb HoldHandComponentPb
@@ -1914,9 +1914,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151B RID: 5403
-		// (get) Token: 0x06006E19 RID: 28185 RVA: 0x00109995 File Offset: 0x00107B95
-		// (set) Token: 0x06006E1A RID: 28186 RVA: 0x001099AE File Offset: 0x00107BAE
+		// Token: 0x170014C7 RID: 5319
+		// (get) Token: 0x06006C8B RID: 27787 RVA: 0x00106921 File Offset: 0x00104B21
+		// (set) Token: 0x06006C8C RID: 27788 RVA: 0x0010693A File Offset: 0x00104B3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneItemEventListenerComponentPb ListenerComponentPb
@@ -1936,9 +1936,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151C RID: 5404
-		// (get) Token: 0x06006E1B RID: 28187 RVA: 0x001099C5 File Offset: 0x00107BC5
-		// (set) Token: 0x06006E1C RID: 28188 RVA: 0x001099DE File Offset: 0x00107BDE
+		// Token: 0x170014C8 RID: 5320
+		// (get) Token: 0x06006C8D RID: 27789 RVA: 0x00106951 File Offset: 0x00104B51
+		// (set) Token: 0x06006C8E RID: 27790 RVA: 0x0010696A File Offset: 0x00104B6A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivityComponentPb ActivityComponentPb
@@ -1958,9 +1958,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151D RID: 5405
-		// (get) Token: 0x06006E1D RID: 28189 RVA: 0x001099F5 File Offset: 0x00107BF5
-		// (set) Token: 0x06006E1E RID: 28190 RVA: 0x00109A0E File Offset: 0x00107C0E
+		// Token: 0x170014C9 RID: 5321
+		// (get) Token: 0x06006C8F RID: 27791 RVA: 0x00106981 File Offset: 0x00104B81
+		// (set) Token: 0x06006C90 RID: 27792 RVA: 0x0010699A File Offset: 0x00104B9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashSkinComponentPb CalabashSkinComponentPb
@@ -1980,9 +1980,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151E RID: 5406
-		// (get) Token: 0x06006E1F RID: 28191 RVA: 0x00109A25 File Offset: 0x00107C25
-		// (set) Token: 0x06006E20 RID: 28192 RVA: 0x00109A3E File Offset: 0x00107C3E
+		// Token: 0x170014CA RID: 5322
+		// (get) Token: 0x06006C91 RID: 27793 RVA: 0x001069B1 File Offset: 0x00104BB1
+		// (set) Token: 0x06006C92 RID: 27794 RVA: 0x001069CA File Offset: 0x00104BCA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryDropItemComponentPb HonamiStoryDropItemComponentPb
@@ -2002,9 +2002,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700151F RID: 5407
-		// (get) Token: 0x06006E21 RID: 28193 RVA: 0x00109A55 File Offset: 0x00107C55
-		// (set) Token: 0x06006E22 RID: 28194 RVA: 0x00109A6E File Offset: 0x00107C6E
+		// Token: 0x170014CB RID: 5323
+		// (get) Token: 0x06006C93 RID: 27795 RVA: 0x001069E1 File Offset: 0x00104BE1
+		// (set) Token: 0x06006C94 RID: 27796 RVA: 0x001069FA File Offset: 0x00104BFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryEnhanceLevelComponentPb HonamiStoryEnhanceLevelComponentPb
@@ -2024,9 +2024,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001520 RID: 5408
-		// (get) Token: 0x06006E23 RID: 28195 RVA: 0x00109A85 File Offset: 0x00107C85
-		// (set) Token: 0x06006E24 RID: 28196 RVA: 0x00109A9E File Offset: 0x00107C9E
+		// Token: 0x170014CC RID: 5324
+		// (get) Token: 0x06006C95 RID: 27797 RVA: 0x00106A11 File Offset: 0x00104C11
+		// (set) Token: 0x06006C96 RID: 27798 RVA: 0x00106A2A File Offset: 0x00104C2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MoveToPointComponentPb MoveToPointComponentPb
@@ -2046,9 +2046,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001521 RID: 5409
-		// (get) Token: 0x06006E25 RID: 28197 RVA: 0x00109AB5 File Offset: 0x00107CB5
-		// (set) Token: 0x06006E26 RID: 28198 RVA: 0x00109ACE File Offset: 0x00107CCE
+		// Token: 0x170014CD RID: 5325
+		// (get) Token: 0x06006C97 RID: 27799 RVA: 0x00106A41 File Offset: 0x00104C41
+		// (set) Token: 0x06006C98 RID: 27800 RVA: 0x00106A5A File Offset: 0x00104C5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbBlockComponentPb RbBlockComponentPb
@@ -2068,9 +2068,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001522 RID: 5410
-		// (get) Token: 0x06006E27 RID: 28199 RVA: 0x00109AE5 File Offset: 0x00107CE5
-		// (set) Token: 0x06006E28 RID: 28200 RVA: 0x00109AFE File Offset: 0x00107CFE
+		// Token: 0x170014CE RID: 5326
+		// (get) Token: 0x06006C99 RID: 27801 RVA: 0x00106A71 File Offset: 0x00104C71
+		// (set) Token: 0x06006C9A RID: 27802 RVA: 0x00106A8A File Offset: 0x00104C8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SunSpiritGearComponentPb SpiritGearComponentPb
@@ -2090,9 +2090,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001523 RID: 5411
-		// (get) Token: 0x06006E29 RID: 28201 RVA: 0x00109B15 File Offset: 0x00107D15
-		// (set) Token: 0x06006E2A RID: 28202 RVA: 0x00109B2E File Offset: 0x00107D2E
+		// Token: 0x170014CF RID: 5327
+		// (get) Token: 0x06006C9B RID: 27803 RVA: 0x00106AA1 File Offset: 0x00104CA1
+		// (set) Token: 0x06006C9C RID: 27804 RVA: 0x00106ABA File Offset: 0x00104CBA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehiclePb VehiclePb
@@ -2112,9 +2112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001524 RID: 5412
-		// (get) Token: 0x06006E2B RID: 28203 RVA: 0x00109B45 File Offset: 0x00107D45
-		// (set) Token: 0x06006E2C RID: 28204 RVA: 0x00109B5E File Offset: 0x00107D5E
+		// Token: 0x170014D0 RID: 5328
+		// (get) Token: 0x06006C9D RID: 27805 RVA: 0x00106AD1 File Offset: 0x00104CD1
+		// (set) Token: 0x06006C9E RID: 27806 RVA: 0x00106AEA File Offset: 0x00104CEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbFloorComponentPb RbFloorComponentPb
@@ -2134,9 +2134,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001525 RID: 5413
-		// (get) Token: 0x06006E2D RID: 28205 RVA: 0x00109B75 File Offset: 0x00107D75
-		// (set) Token: 0x06006E2E RID: 28206 RVA: 0x00109B8E File Offset: 0x00107D8E
+		// Token: 0x170014D1 RID: 5329
+		// (get) Token: 0x06006C9F RID: 27807 RVA: 0x00106B01 File Offset: 0x00104D01
+		// (set) Token: 0x06006CA0 RID: 27808 RVA: 0x00106B1A File Offset: 0x00104D1A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RbItemComponentPb RbItemComponentPb
@@ -2156,9 +2156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001526 RID: 5414
-		// (get) Token: 0x06006E2F RID: 28207 RVA: 0x00109BA5 File Offset: 0x00107DA5
-		// (set) Token: 0x06006E30 RID: 28208 RVA: 0x00109BBE File Offset: 0x00107DBE
+		// Token: 0x170014D2 RID: 5330
+		// (get) Token: 0x06006CA1 RID: 27809 RVA: 0x00106B31 File Offset: 0x00104D31
+		// (set) Token: 0x06006CA2 RID: 27810 RVA: 0x00106B4A File Offset: 0x00104D4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoadNetworkComponentPb RoadNetworkComponentPb
@@ -2178,9 +2178,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001527 RID: 5415
-		// (get) Token: 0x06006E31 RID: 28209 RVA: 0x00109BD5 File Offset: 0x00107DD5
-		// (set) Token: 0x06006E32 RID: 28210 RVA: 0x00109BEE File Offset: 0x00107DEE
+		// Token: 0x170014D3 RID: 5331
+		// (get) Token: 0x06006CA3 RID: 27811 RVA: 0x00106B61 File Offset: 0x00104D61
+		// (set) Token: 0x06006CA4 RID: 27812 RVA: 0x00106B7A File Offset: 0x00104D7A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FollowEntityComponentPb FollowEntityComponentPb
@@ -2200,9 +2200,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001528 RID: 5416
-		// (get) Token: 0x06006E33 RID: 28211 RVA: 0x00109C05 File Offset: 0x00107E05
-		// (set) Token: 0x06006E34 RID: 28212 RVA: 0x00109C1E File Offset: 0x00107E1E
+		// Token: 0x170014D4 RID: 5332
+		// (get) Token: 0x06006CA5 RID: 27813 RVA: 0x00106B91 File Offset: 0x00104D91
+		// (set) Token: 0x06006CA6 RID: 27814 RVA: 0x00106BAA File Offset: 0x00104DAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorOutlookEquippedPb MotorOutlookComponentPb
@@ -2222,9 +2222,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001529 RID: 5417
-		// (get) Token: 0x06006E35 RID: 28213 RVA: 0x00109C35 File Offset: 0x00107E35
-		// (set) Token: 0x06006E36 RID: 28214 RVA: 0x00109C4E File Offset: 0x00107E4E
+		// Token: 0x170014D5 RID: 5333
+		// (get) Token: 0x06006CA7 RID: 27815 RVA: 0x00106BC1 File Offset: 0x00104DC1
+		// (set) Token: 0x06006CA8 RID: 27816 RVA: 0x00106BDA File Offset: 0x00104DDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorDaCtxComponentPb MotorDaCtxComponentPb
@@ -2244,9 +2244,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152A RID: 5418
-		// (get) Token: 0x06006E37 RID: 28215 RVA: 0x00109C65 File Offset: 0x00107E65
-		// (set) Token: 0x06006E38 RID: 28216 RVA: 0x00109C7E File Offset: 0x00107E7E
+		// Token: 0x170014D6 RID: 5334
+		// (get) Token: 0x06006CA9 RID: 27817 RVA: 0x00106BF1 File Offset: 0x00104DF1
+		// (set) Token: 0x06006CAA RID: 27818 RVA: 0x00106C0A File Offset: 0x00104E0A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExhibitionComponentPb ExhibitionComponentPb
@@ -2266,9 +2266,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152B RID: 5419
-		// (get) Token: 0x06006E39 RID: 28217 RVA: 0x00109C95 File Offset: 0x00107E95
-		// (set) Token: 0x06006E3A RID: 28218 RVA: 0x00109CAE File Offset: 0x00107EAE
+		// Token: 0x170014D7 RID: 5335
+		// (get) Token: 0x06006CAB RID: 27819 RVA: 0x00106C21 File Offset: 0x00104E21
+		// (set) Token: 0x06006CAC RID: 27820 RVA: 0x00106C3A File Offset: 0x00104E3A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FurnitureComponentPb FurnitureComponentPb
@@ -2288,9 +2288,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152C RID: 5420
-		// (get) Token: 0x06006E3B RID: 28219 RVA: 0x00109CC5 File Offset: 0x00107EC5
-		// (set) Token: 0x06006E3C RID: 28220 RVA: 0x00109CDE File Offset: 0x00107EDE
+		// Token: 0x170014D8 RID: 5336
+		// (get) Token: 0x06006CAD RID: 27821 RVA: 0x00106C51 File Offset: 0x00104E51
+		// (set) Token: 0x06006CAE RID: 27822 RVA: 0x00106C6A File Offset: 0x00104E6A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrnamentComponentPb OrnamentComponentPb
@@ -2310,9 +2310,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152D RID: 5421
-		// (get) Token: 0x06006E3D RID: 28221 RVA: 0x00109CF5 File Offset: 0x00107EF5
-		// (set) Token: 0x06006E3E RID: 28222 RVA: 0x00109D0E File Offset: 0x00107F0E
+		// Token: 0x170014D9 RID: 5337
+		// (get) Token: 0x06006CAF RID: 27823 RVA: 0x00106C81 File Offset: 0x00104E81
+		// (set) Token: 0x06006CB0 RID: 27824 RVA: 0x00106C9A File Offset: 0x00104E9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlowerPollutionComponentPb FlowerPollutionComponentPb
@@ -2332,9 +2332,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152E RID: 5422
-		// (get) Token: 0x06006E3F RID: 28223 RVA: 0x00109D25 File Offset: 0x00107F25
-		// (set) Token: 0x06006E40 RID: 28224 RVA: 0x00109D3E File Offset: 0x00107F3E
+		// Token: 0x170014DA RID: 5338
+		// (get) Token: 0x06006CB1 RID: 27825 RVA: 0x00106CB1 File Offset: 0x00104EB1
+		// (set) Token: 0x06006CB2 RID: 27826 RVA: 0x00106CCA File Offset: 0x00104ECA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollGrabMachineComponentPb DollGrabMachineComponentPb
@@ -2354,9 +2354,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700152F RID: 5423
-		// (get) Token: 0x06006E41 RID: 28225 RVA: 0x00109D55 File Offset: 0x00107F55
-		// (set) Token: 0x06006E42 RID: 28226 RVA: 0x00109D6E File Offset: 0x00107F6E
+		// Token: 0x170014DB RID: 5339
+		// (get) Token: 0x06006CB3 RID: 27827 RVA: 0x00106CE1 File Offset: 0x00104EE1
+		// (set) Token: 0x06006CB4 RID: 27828 RVA: 0x00106CFA File Offset: 0x00104EFA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DollGrabShowcaseComponentPb DollGrabShowcaseComponentPb
@@ -2376,9 +2376,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001530 RID: 5424
-		// (get) Token: 0x06006E43 RID: 28227 RVA: 0x00109D85 File Offset: 0x00107F85
-		// (set) Token: 0x06006E44 RID: 28228 RVA: 0x00109D9E File Offset: 0x00107F9E
+		// Token: 0x170014DC RID: 5340
+		// (get) Token: 0x06006CB5 RID: 27829 RVA: 0x00106D11 File Offset: 0x00104F11
+		// (set) Token: 0x06006CB6 RID: 27830 RVA: 0x00106D2A File Offset: 0x00104F2A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GpuEntityComponentPb GpuEntityComponentPb
@@ -2398,9 +2398,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001531 RID: 5425
-		// (get) Token: 0x06006E45 RID: 28229 RVA: 0x00109DB5 File Offset: 0x00107FB5
-		// (set) Token: 0x06006E46 RID: 28230 RVA: 0x00109DCE File Offset: 0x00107FCE
+		// Token: 0x170014DD RID: 5341
+		// (get) Token: 0x06006CB7 RID: 27831 RVA: 0x00106D41 File Offset: 0x00104F41
+		// (set) Token: 0x06006CB8 RID: 27832 RVA: 0x00106D5A File Offset: 0x00104F5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoverRoguePortalComponentPb RoverRoguePortalComponentPb
@@ -2420,31 +2420,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001532 RID: 5426
-		// (get) Token: 0x06006E47 RID: 28231 RVA: 0x00109DE5 File Offset: 0x00107FE5
-		// (set) Token: 0x06006E48 RID: 28232 RVA: 0x00109DFE File Offset: 0x00107FFE
-		[DebuggerNonUserCode]
-		[GeneratedCode("protoc", null)]
-		public DarkTideComponentPb DarkTideComponentPb
-		{
-			get
-			{
-				if (this.componentCase_ != EntityComponentPb.ComponentOneofCase.DarkTideComponentPb)
-				{
-					return null;
-				}
-				return (DarkTideComponentPb)this.component_;
-			}
-			set
-			{
-				this.component_ = value;
-				this.componentCase_ = ((value == null) ? EntityComponentPb.ComponentOneofCase.None : EntityComponentPb.ComponentOneofCase.DarkTideComponentPb);
-			}
-		}
-
-		// Token: 0x17001533 RID: 5427
-		// (get) Token: 0x06006E49 RID: 28233 RVA: 0x00109E15 File Offset: 0x00108015
-		// (set) Token: 0x06006E4A RID: 28234 RVA: 0x00109E2E File Offset: 0x0010802E
+		// Token: 0x170014DE RID: 5342
+		// (get) Token: 0x06006CB9 RID: 27833 RVA: 0x00106D71 File Offset: 0x00104F71
+		// (set) Token: 0x06006CBA RID: 27834 RVA: 0x00106D8A File Offset: 0x00104F8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ElementalHolderComponentPb ElementalHolderComponentPb
@@ -2464,9 +2442,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001534 RID: 5428
-		// (get) Token: 0x06006E4B RID: 28235 RVA: 0x00109E45 File Offset: 0x00108045
-		// (set) Token: 0x06006E4C RID: 28236 RVA: 0x00109E5E File Offset: 0x0010805E
+		// Token: 0x170014DF RID: 5343
+		// (get) Token: 0x06006CBB RID: 27835 RVA: 0x00106DA1 File Offset: 0x00104FA1
+		// (set) Token: 0x06006CBC RID: 27836 RVA: 0x00106DBA File Offset: 0x00104FBA
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public SkillAvatarComponentPb SkillAvatarComponentPb
+		{
+			get
+			{
+				if (this.componentCase_ != EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb)
+				{
+					return null;
+				}
+				return (SkillAvatarComponentPb)this.component_;
+			}
+			set
+			{
+				this.component_ = value;
+				this.componentCase_ = ((value == null) ? EntityComponentPb.ComponentOneofCase.None : EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb);
+			}
+		}
+
+		// Token: 0x170014E0 RID: 5344
+		// (get) Token: 0x06006CBD RID: 27837 RVA: 0x00106DD1 File Offset: 0x00104FD1
+		// (set) Token: 0x06006CBE RID: 27838 RVA: 0x00106DEA File Offset: 0x00104FEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityFoundationComponentPb EntityFoundationComponentPb
@@ -2486,9 +2486,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001535 RID: 5429
-		// (get) Token: 0x06006E4D RID: 28237 RVA: 0x00109E75 File Offset: 0x00108075
-		// (set) Token: 0x06006E4E RID: 28238 RVA: 0x00109E8E File Offset: 0x0010808E
+		// Token: 0x170014E1 RID: 5345
+		// (get) Token: 0x06006CBF RID: 27839 RVA: 0x00106E01 File Offset: 0x00105001
+		// (set) Token: 0x06006CC0 RID: 27840 RVA: 0x00106E1A File Offset: 0x0010501A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SquadPropComponentPb SquadPropComponentPb
@@ -2508,9 +2508,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001536 RID: 5430
-		// (get) Token: 0x06006E4F RID: 28239 RVA: 0x00109EA5 File Offset: 0x001080A5
-		// (set) Token: 0x06006E50 RID: 28240 RVA: 0x00109EBE File Offset: 0x001080BE
+		// Token: 0x170014E2 RID: 5346
+		// (get) Token: 0x06006CC1 RID: 27841 RVA: 0x00106E31 File Offset: 0x00105031
+		// (set) Token: 0x06006CC2 RID: 27842 RVA: 0x00106E4A File Offset: 0x0010504A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ConnectorComponentPb ConnectorComponentPb
@@ -2530,8 +2530,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001537 RID: 5431
-		// (get) Token: 0x06006E51 RID: 28241 RVA: 0x00109ED5 File Offset: 0x001080D5
+		// Token: 0x170014E3 RID: 5347
+		// (get) Token: 0x06006CC3 RID: 27843 RVA: 0x00106E61 File Offset: 0x00105061
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityComponentPb.ComponentOneofCase ComponentCase
@@ -2542,7 +2542,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006E52 RID: 28242 RVA: 0x00109EDD File Offset: 0x001080DD
+		// Token: 0x06006CC4 RID: 27844 RVA: 0x00106E69 File Offset: 0x00105069
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearComponent()
@@ -2551,7 +2551,7 @@ namespace Aki.Protocol
 			this.component_ = null;
 		}
 
-		// Token: 0x06006E53 RID: 28243 RVA: 0x00109EED File Offset: 0x001080ED
+		// Token: 0x06006CC5 RID: 27845 RVA: 0x00106E79 File Offset: 0x00105079
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -2559,15 +2559,15 @@ namespace Aki.Protocol
 			return this.Equals(other as EntityComponentPb);
 		}
 
-		// Token: 0x06006E54 RID: 28244 RVA: 0x00109EFC File Offset: 0x001080FC
+		// Token: 0x06006CC6 RID: 27846 RVA: 0x00106E88 File Offset: 0x00105088
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EntityComponentPb other)
 		{
-			return other != null && (other == this || (object.Equals(this.AttributeComponent, other.AttributeComponent) && object.Equals(this.TagComponent, other.TagComponent) && object.Equals(this.TriggerComponent, other.TriggerComponent) && object.Equals(this.SummonerComponent, other.SummonerComponent) && object.Equals(this.PartComponent, other.PartComponent) && object.Equals(this.VisionSkillComponent, other.VisionSkillComponent) && object.Equals(this.AnimationStateComponent, other.AnimationStateComponent) && object.Equals(this.BlackboardParamComponent, other.BlackboardParamComponent) && object.Equals(this.SysBuffComponent, other.SysBuffComponent) && object.Equals(this.ClientDataComponent, other.ClientDataComponent) && object.Equals(this.MonsterWeaponComponentPb, other.MonsterWeaponComponentPb) && object.Equals(this.MonsterAiComponentPb, other.MonsterAiComponentPb) && object.Equals(this.FightBuffComponent, other.FightBuffComponent) && object.Equals(this.NearbyTrackingComponentPb, other.NearbyTrackingComponentPb) && object.Equals(this.DropComponentPb, other.DropComponentPb) && object.Equals(this.MonsterCaptureComponent, other.MonsterCaptureComponent) && object.Equals(this.LogicStateComponentPb, other.LogicStateComponentPb) && object.Equals(this.AdviceComponentPb, other.AdviceComponentPb) && object.Equals(this.LiftComponentPb, other.LiftComponentPb) && object.Equals(this.InteractComponent, other.InteractComponent) && object.Equals(this.EquipComponent, other.EquipComponent) && object.Equals(this.BeControlledComponentPb, other.BeControlledComponentPb) && object.Equals(this.ConcomitantsComponentPb, other.ConcomitantsComponentPb) && object.Equals(this.TimelineTrackComponentPb, other.TimelineTrackComponentPb) && object.Equals(this.SummonsComponentPb, other.SummonsComponentPb) && object.Equals(this.EntityFsmComponentPb, other.EntityFsmComponentPb) && object.Equals(this.BoardPb, other.BoardPb) && object.Equals(this.PlacementItemPb, other.PlacementItemPb) && object.Equals(this.StateTagComponentPb, other.StateTagComponentPb) && object.Equals(this.MonsterGachaDataPb, other.MonsterGachaDataPb) && object.Equals(this.FanComponentPb, other.FanComponentPb) && object.Equals(this.NpcPb, other.NpcPb) && object.Equals(this.BubbleComponent, other.BubbleComponent) && object.Equals(this.PatrolComponent, other.PatrolComponent) && object.Equals(this.RangeComponent, other.RangeComponent) && object.Equals(this.PassiveSkillComponentPb, other.PassiveSkillComponentPb) && object.Equals(this.SkillComponentPb, other.SkillComponentPb) && object.Equals(this.DynamicAttachComponentPb, other.DynamicAttachComponentPb) && object.Equals(this.VarComponentPb, other.VarComponentPb) && object.Equals(this.PlayerFollowerSelfComponentPb, other.PlayerFollowerSelfComponentPb) && object.Equals(this.SceneItemLifeCycleComponentPb, other.SceneItemLifeCycleComponentPb) && object.Equals(this.EntityBulletComponentPb, other.EntityBulletComponentPb) && object.Equals(this.BuffProducerComponentPb, other.BuffProducerComponentPb) && object.Equals(this.BuffConsumerComponentPb, other.BuffConsumerComponentPb) && object.Equals(this.SceneItemComponentPb, other.SceneItemComponentPb) && object.Equals(this.ShieldComponentPb, other.ShieldComponentPb) && object.Equals(this.NpcPerformComponentPb, other.NpcPerformComponentPb) && object.Equals(this.DependenceComponentPb, other.DependenceComponentPb) && object.Equals(this.RenjuDataPb, other.RenjuDataPb) && object.Equals(this.AiRoleComponentPb, other.AiRoleComponentPb) && object.Equals(this.PlayerFollowersComponentPb, other.PlayerFollowersComponentPb) && object.Equals(this.SceneItemAttributeComponentPb, other.SceneItemAttributeComponentPb) && object.Equals(this.PullingFoundationComponentPb, other.PullingFoundationComponentPb) && object.Equals(this.BatchBulletCastComponentPb, other.BatchBulletCastComponentPb) && object.Equals(this.RoleWeaponSkinComponent, other.RoleWeaponSkinComponent) && object.Equals(this.CombineEntityInfoPb, other.CombineEntityInfoPb) && object.Equals(this.SceneItemAiComponentPb, other.SceneItemAiComponentPb) && object.Equals(this.AnimalCollectComponentPb, other.AnimalCollectComponentPb) && object.Equals(this.VehiclePassengerComponentPb, other.VehiclePassengerComponentPb) && object.Equals(this.HookLockPointComponentPb, other.HookLockPointComponentPb) && object.Equals(this.HackingComponentPb, other.HackingComponentPb) && object.Equals(this.HackTargetComponentPb, other.HackTargetComponentPb) && object.Equals(this.GravityFlipComponentPb, other.GravityFlipComponentPb) && object.Equals(this.EntityMoveSplineComponentPb, other.EntityMoveSplineComponentPb) && object.Equals(this.EntityRewardItemPb, other.EntityRewardItemPb) && object.Equals(this.TemplateEntitySpawnerComponentPb, other.TemplateEntitySpawnerComponentPb) && object.Equals(this.GridObjectComponentPb, other.GridObjectComponentPb) && object.Equals(this.SimpleCombatComponentPb, other.SimpleCombatComponentPb) && object.Equals(this.TrapDefenseComponentPb, other.TrapDefenseComponentPb) && object.Equals(this.HoldHandComponentPb, other.HoldHandComponentPb) && object.Equals(this.ListenerComponentPb, other.ListenerComponentPb) && object.Equals(this.ActivityComponentPb, other.ActivityComponentPb) && object.Equals(this.CalabashSkinComponentPb, other.CalabashSkinComponentPb) && object.Equals(this.HonamiStoryDropItemComponentPb, other.HonamiStoryDropItemComponentPb) && object.Equals(this.HonamiStoryEnhanceLevelComponentPb, other.HonamiStoryEnhanceLevelComponentPb) && object.Equals(this.MoveToPointComponentPb, other.MoveToPointComponentPb) && object.Equals(this.RbBlockComponentPb, other.RbBlockComponentPb) && object.Equals(this.SpiritGearComponentPb, other.SpiritGearComponentPb) && object.Equals(this.VehiclePb, other.VehiclePb) && object.Equals(this.RbFloorComponentPb, other.RbFloorComponentPb) && object.Equals(this.RbItemComponentPb, other.RbItemComponentPb) && object.Equals(this.RoadNetworkComponentPb, other.RoadNetworkComponentPb) && object.Equals(this.FollowEntityComponentPb, other.FollowEntityComponentPb) && object.Equals(this.MotorOutlookComponentPb, other.MotorOutlookComponentPb) && object.Equals(this.MotorDaCtxComponentPb, other.MotorDaCtxComponentPb) && object.Equals(this.ExhibitionComponentPb, other.ExhibitionComponentPb) && object.Equals(this.FurnitureComponentPb, other.FurnitureComponentPb) && object.Equals(this.OrnamentComponentPb, other.OrnamentComponentPb) && object.Equals(this.FlowerPollutionComponentPb, other.FlowerPollutionComponentPb) && object.Equals(this.DollGrabMachineComponentPb, other.DollGrabMachineComponentPb) && object.Equals(this.DollGrabShowcaseComponentPb, other.DollGrabShowcaseComponentPb) && object.Equals(this.GpuEntityComponentPb, other.GpuEntityComponentPb) && object.Equals(this.RoverRoguePortalComponentPb, other.RoverRoguePortalComponentPb) && object.Equals(this.DarkTideComponentPb, other.DarkTideComponentPb) && object.Equals(this.ElementalHolderComponentPb, other.ElementalHolderComponentPb) && object.Equals(this.EntityFoundationComponentPb, other.EntityFoundationComponentPb) && object.Equals(this.SquadPropComponentPb, other.SquadPropComponentPb) && object.Equals(this.ConnectorComponentPb, other.ConnectorComponentPb) && this.ComponentCase == other.ComponentCase && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (object.Equals(this.AttributeComponent, other.AttributeComponent) && object.Equals(this.TagComponent, other.TagComponent) && object.Equals(this.TriggerComponent, other.TriggerComponent) && object.Equals(this.SummonerComponent, other.SummonerComponent) && object.Equals(this.PartComponent, other.PartComponent) && object.Equals(this.VisionSkillComponent, other.VisionSkillComponent) && object.Equals(this.AnimationStateComponent, other.AnimationStateComponent) && object.Equals(this.BlackboardParamComponent, other.BlackboardParamComponent) && object.Equals(this.SysBuffComponent, other.SysBuffComponent) && object.Equals(this.ClientDataComponent, other.ClientDataComponent) && object.Equals(this.MonsterWeaponComponentPb, other.MonsterWeaponComponentPb) && object.Equals(this.MonsterAiComponentPb, other.MonsterAiComponentPb) && object.Equals(this.FightBuffComponent, other.FightBuffComponent) && object.Equals(this.NearbyTrackingComponentPb, other.NearbyTrackingComponentPb) && object.Equals(this.DropComponentPb, other.DropComponentPb) && object.Equals(this.MonsterCaptureComponent, other.MonsterCaptureComponent) && object.Equals(this.LogicStateComponentPb, other.LogicStateComponentPb) && object.Equals(this.AdviceComponentPb, other.AdviceComponentPb) && object.Equals(this.LiftComponentPb, other.LiftComponentPb) && object.Equals(this.InteractComponent, other.InteractComponent) && object.Equals(this.EquipComponent, other.EquipComponent) && object.Equals(this.BeControlledComponentPb, other.BeControlledComponentPb) && object.Equals(this.ConcomitantsComponentPb, other.ConcomitantsComponentPb) && object.Equals(this.TimelineTrackComponentPb, other.TimelineTrackComponentPb) && object.Equals(this.SummonsComponentPb, other.SummonsComponentPb) && object.Equals(this.EntityFsmComponentPb, other.EntityFsmComponentPb) && object.Equals(this.BoardPb, other.BoardPb) && object.Equals(this.PlacementItemPb, other.PlacementItemPb) && object.Equals(this.StateTagComponentPb, other.StateTagComponentPb) && object.Equals(this.MonsterGachaDataPb, other.MonsterGachaDataPb) && object.Equals(this.FanComponentPb, other.FanComponentPb) && object.Equals(this.NpcPb, other.NpcPb) && object.Equals(this.BubbleComponent, other.BubbleComponent) && object.Equals(this.PatrolComponent, other.PatrolComponent) && object.Equals(this.RangeComponent, other.RangeComponent) && object.Equals(this.PassiveSkillComponentPb, other.PassiveSkillComponentPb) && object.Equals(this.SkillComponentPb, other.SkillComponentPb) && object.Equals(this.DynamicAttachComponentPb, other.DynamicAttachComponentPb) && object.Equals(this.VarComponentPb, other.VarComponentPb) && object.Equals(this.PlayerFollowerSelfComponentPb, other.PlayerFollowerSelfComponentPb) && object.Equals(this.SceneItemLifeCycleComponentPb, other.SceneItemLifeCycleComponentPb) && object.Equals(this.EntityBulletComponentPb, other.EntityBulletComponentPb) && object.Equals(this.BuffProducerComponentPb, other.BuffProducerComponentPb) && object.Equals(this.BuffConsumerComponentPb, other.BuffConsumerComponentPb) && object.Equals(this.SceneItemComponentPb, other.SceneItemComponentPb) && object.Equals(this.ShieldComponentPb, other.ShieldComponentPb) && object.Equals(this.NpcPerformComponentPb, other.NpcPerformComponentPb) && object.Equals(this.DependenceComponentPb, other.DependenceComponentPb) && object.Equals(this.RenjuDataPb, other.RenjuDataPb) && object.Equals(this.AiRoleComponentPb, other.AiRoleComponentPb) && object.Equals(this.PlayerFollowersComponentPb, other.PlayerFollowersComponentPb) && object.Equals(this.SceneItemAttributeComponentPb, other.SceneItemAttributeComponentPb) && object.Equals(this.PullingFoundationComponentPb, other.PullingFoundationComponentPb) && object.Equals(this.BatchBulletCastComponentPb, other.BatchBulletCastComponentPb) && object.Equals(this.RoleWeaponSkinComponent, other.RoleWeaponSkinComponent) && object.Equals(this.CombineEntityInfoPb, other.CombineEntityInfoPb) && object.Equals(this.SceneItemAiComponentPb, other.SceneItemAiComponentPb) && object.Equals(this.AnimalCollectComponentPb, other.AnimalCollectComponentPb) && object.Equals(this.VehiclePassengerComponentPb, other.VehiclePassengerComponentPb) && object.Equals(this.HookLockPointComponentPb, other.HookLockPointComponentPb) && object.Equals(this.HackingComponentPb, other.HackingComponentPb) && object.Equals(this.HackTargetComponentPb, other.HackTargetComponentPb) && object.Equals(this.GravityFlipComponentPb, other.GravityFlipComponentPb) && object.Equals(this.EntityMoveSplineComponentPb, other.EntityMoveSplineComponentPb) && object.Equals(this.EntityRewardItemPb, other.EntityRewardItemPb) && object.Equals(this.TemplateEntitySpawnerComponentPb, other.TemplateEntitySpawnerComponentPb) && object.Equals(this.GridObjectComponentPb, other.GridObjectComponentPb) && object.Equals(this.SimpleCombatComponentPb, other.SimpleCombatComponentPb) && object.Equals(this.TrapDefenseComponentPb, other.TrapDefenseComponentPb) && object.Equals(this.HoldHandComponentPb, other.HoldHandComponentPb) && object.Equals(this.ListenerComponentPb, other.ListenerComponentPb) && object.Equals(this.ActivityComponentPb, other.ActivityComponentPb) && object.Equals(this.CalabashSkinComponentPb, other.CalabashSkinComponentPb) && object.Equals(this.HonamiStoryDropItemComponentPb, other.HonamiStoryDropItemComponentPb) && object.Equals(this.HonamiStoryEnhanceLevelComponentPb, other.HonamiStoryEnhanceLevelComponentPb) && object.Equals(this.MoveToPointComponentPb, other.MoveToPointComponentPb) && object.Equals(this.RbBlockComponentPb, other.RbBlockComponentPb) && object.Equals(this.SpiritGearComponentPb, other.SpiritGearComponentPb) && object.Equals(this.VehiclePb, other.VehiclePb) && object.Equals(this.RbFloorComponentPb, other.RbFloorComponentPb) && object.Equals(this.RbItemComponentPb, other.RbItemComponentPb) && object.Equals(this.RoadNetworkComponentPb, other.RoadNetworkComponentPb) && object.Equals(this.FollowEntityComponentPb, other.FollowEntityComponentPb) && object.Equals(this.MotorOutlookComponentPb, other.MotorOutlookComponentPb) && object.Equals(this.MotorDaCtxComponentPb, other.MotorDaCtxComponentPb) && object.Equals(this.ExhibitionComponentPb, other.ExhibitionComponentPb) && object.Equals(this.FurnitureComponentPb, other.FurnitureComponentPb) && object.Equals(this.OrnamentComponentPb, other.OrnamentComponentPb) && object.Equals(this.FlowerPollutionComponentPb, other.FlowerPollutionComponentPb) && object.Equals(this.DollGrabMachineComponentPb, other.DollGrabMachineComponentPb) && object.Equals(this.DollGrabShowcaseComponentPb, other.DollGrabShowcaseComponentPb) && object.Equals(this.GpuEntityComponentPb, other.GpuEntityComponentPb) && object.Equals(this.RoverRoguePortalComponentPb, other.RoverRoguePortalComponentPb) && object.Equals(this.ElementalHolderComponentPb, other.ElementalHolderComponentPb) && object.Equals(this.SkillAvatarComponentPb, other.SkillAvatarComponentPb) && object.Equals(this.EntityFoundationComponentPb, other.EntityFoundationComponentPb) && object.Equals(this.SquadPropComponentPb, other.SquadPropComponentPb) && object.Equals(this.ConnectorComponentPb, other.ConnectorComponentPb) && this.ComponentCase == other.ComponentCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006E55 RID: 28245 RVA: 0x0010A740 File Offset: 0x00108940
+		// Token: 0x06006CC7 RID: 27847 RVA: 0x001076CC File Offset: 0x001058CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -2945,13 +2945,13 @@ namespace Aki.Protocol
 			{
 				num ^= this.RoverRoguePortalComponentPb.GetHashCode();
 			}
-			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.DarkTideComponentPb)
-			{
-				num ^= this.DarkTideComponentPb.GetHashCode();
-			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.ElementalHolderComponentPb)
 			{
 				num ^= this.ElementalHolderComponentPb.GetHashCode();
+			}
+			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb)
+			{
+				num ^= this.SkillAvatarComponentPb.GetHashCode();
 			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb)
 			{
@@ -2973,7 +2973,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006E56 RID: 28246 RVA: 0x0010B097 File Offset: 0x00109297
+		// Token: 0x06006CC8 RID: 27848 RVA: 0x00108023 File Offset: 0x00106223
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -2981,7 +2981,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006E57 RID: 28247 RVA: 0x0010B0A4 File Offset: 0x001092A4
+		// Token: 0x06006CC9 RID: 27849 RVA: 0x00108030 File Offset: 0x00106230
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -2989,7 +2989,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06006E58 RID: 28248 RVA: 0x0010B0B0 File Offset: 0x001092B0
+		// Token: 0x06006CCA RID: 27850 RVA: 0x0010803C File Offset: 0x0010623C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -3459,24 +3459,24 @@ namespace Aki.Protocol
 				output.WriteRawTag(250, 5);
 				output.WriteMessage(this.RoverRoguePortalComponentPb);
 			}
-			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.DarkTideComponentPb)
-			{
-				output.WriteRawTag(130, 6);
-				output.WriteMessage(this.DarkTideComponentPb);
-			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.ElementalHolderComponentPb)
 			{
 				output.WriteRawTag(138, 6);
 				output.WriteMessage(this.ElementalHolderComponentPb);
 			}
-			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb)
+			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb)
 			{
 				output.WriteRawTag(146, 6);
+				output.WriteMessage(this.SkillAvatarComponentPb);
+			}
+			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb)
+			{
+				output.WriteRawTag(154, 6);
 				output.WriteMessage(this.EntityFoundationComponentPb);
 			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SquadPropComponentPb)
 			{
-				output.WriteRawTag(154, 6);
+				output.WriteRawTag(162, 6);
 				output.WriteMessage(this.SquadPropComponentPb);
 			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.ConnectorComponentPb)
@@ -3490,7 +3490,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006E59 RID: 28249 RVA: 0x0010BD9C File Offset: 0x00109F9C
+		// Token: 0x06006CCB RID: 27851 RVA: 0x00108D28 File Offset: 0x00106F28
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -3868,13 +3868,13 @@ namespace Aki.Protocol
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.RoverRoguePortalComponentPb);
 			}
-			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.DarkTideComponentPb)
-			{
-				num += 2 + CodedOutputStream.ComputeMessageSize(this.DarkTideComponentPb);
-			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.ElementalHolderComponentPb)
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.ElementalHolderComponentPb);
+			}
+			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb)
+			{
+				num += 2 + CodedOutputStream.ComputeMessageSize(this.SkillAvatarComponentPb);
 			}
 			if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb)
 			{
@@ -3895,7 +3895,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006E5A RID: 28250 RVA: 0x0010C7B0 File Offset: 0x0010A9B0
+		// Token: 0x06006CCC RID: 27852 RVA: 0x0010973C File Offset: 0x0010793C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EntityComponentPb other)
@@ -4557,19 +4557,19 @@ namespace Aki.Protocol
 				}
 				this.RoverRoguePortalComponentPb.MergeFrom(other.RoverRoguePortalComponentPb);
 				break;
-			case EntityComponentPb.ComponentOneofCase.DarkTideComponentPb:
-				if (this.DarkTideComponentPb == null)
-				{
-					this.DarkTideComponentPb = new DarkTideComponentPb();
-				}
-				this.DarkTideComponentPb.MergeFrom(other.DarkTideComponentPb);
-				break;
 			case EntityComponentPb.ComponentOneofCase.ElementalHolderComponentPb:
 				if (this.ElementalHolderComponentPb == null)
 				{
 					this.ElementalHolderComponentPb = new ElementalHolderComponentPb();
 				}
 				this.ElementalHolderComponentPb.MergeFrom(other.ElementalHolderComponentPb);
+				break;
+			case EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb:
+				if (this.SkillAvatarComponentPb == null)
+				{
+					this.SkillAvatarComponentPb = new SkillAvatarComponentPb();
+				}
+				this.SkillAvatarComponentPb.MergeFrom(other.SkillAvatarComponentPb);
 				break;
 			case EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb:
 				if (this.EntityFoundationComponentPb == null)
@@ -4596,7 +4596,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06006E5B RID: 28251 RVA: 0x0010D92C File Offset: 0x0010BB2C
+		// Token: 0x06006CCD RID: 27853 RVA: 0x0010A8B8 File Offset: 0x00108AB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -4604,7 +4604,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06006E5C RID: 28252 RVA: 0x0010D938 File Offset: 0x0010BB38
+		// Token: 0x06006CCE RID: 27854 RVA: 0x0010A8C4 File Offset: 0x00108AC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -5755,7 +5755,7 @@ namespace Aki.Protocol
 						}
 					}
 				}
-				else if (num <= 770U)
+				else if (num <= 778U)
 				{
 					if (num == 754U)
 					{
@@ -5779,20 +5779,6 @@ namespace Aki.Protocol
 						this.RoverRoguePortalComponentPb = roverRoguePortalComponentPb;
 						continue;
 					}
-					if (num == 770U)
-					{
-						DarkTideComponentPb darkTideComponentPb = new DarkTideComponentPb();
-						if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.DarkTideComponentPb)
-						{
-							darkTideComponentPb.MergeFrom(this.DarkTideComponentPb);
-						}
-						input.ReadMessage(darkTideComponentPb);
-						this.DarkTideComponentPb = darkTideComponentPb;
-						continue;
-					}
-				}
-				else if (num <= 786U)
-				{
 					if (num == 778U)
 					{
 						ElementalHolderComponentPb elementalHolderComponentPb = new ElementalHolderComponentPb();
@@ -5804,7 +5790,21 @@ namespace Aki.Protocol
 						this.ElementalHolderComponentPb = elementalHolderComponentPb;
 						continue;
 					}
+				}
+				else if (num <= 794U)
+				{
 					if (num == 786U)
+					{
+						SkillAvatarComponentPb skillAvatarComponentPb = new SkillAvatarComponentPb();
+						if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SkillAvatarComponentPb)
+						{
+							skillAvatarComponentPb.MergeFrom(this.SkillAvatarComponentPb);
+						}
+						input.ReadMessage(skillAvatarComponentPb);
+						this.SkillAvatarComponentPb = skillAvatarComponentPb;
+						continue;
+					}
+					if (num == 794U)
 					{
 						EntityFoundationComponentPb entityFoundationComponentPb = new EntityFoundationComponentPb();
 						if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.EntityFoundationComponentPb)
@@ -5818,7 +5818,7 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 794U)
+					if (num == 802U)
 					{
 						SquadPropComponentPb squadPropComponentPb = new SquadPropComponentPb();
 						if (this.componentCase_ == EntityComponentPb.ComponentOneofCase.SquadPropComponentPb)
@@ -5845,512 +5845,512 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003B3A RID: 15162
+		// Token: 0x04003B28 RID: 15144
 		private static readonly MessageParser<EntityComponentPb> _parser = new MessageParser<EntityComponentPb>(() => new EntityComponentPb());
 
-		// Token: 0x04003B3B RID: 15163
+		// Token: 0x04003B29 RID: 15145
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003B3C RID: 15164
+		// Token: 0x04003B2A RID: 15146
 		public const int AttributeComponentFieldNumber = 1;
 
-		// Token: 0x04003B3D RID: 15165
+		// Token: 0x04003B2B RID: 15147
 		public const int TagComponentFieldNumber = 2;
 
-		// Token: 0x04003B3E RID: 15166
+		// Token: 0x04003B2C RID: 15148
 		public const int TriggerComponentFieldNumber = 3;
 
-		// Token: 0x04003B3F RID: 15167
+		// Token: 0x04003B2D RID: 15149
 		public const int SummonerComponentFieldNumber = 4;
 
-		// Token: 0x04003B40 RID: 15168
+		// Token: 0x04003B2E RID: 15150
 		public const int PartComponentFieldNumber = 5;
 
-		// Token: 0x04003B41 RID: 15169
+		// Token: 0x04003B2F RID: 15151
 		public const int VisionSkillComponentFieldNumber = 6;
 
-		// Token: 0x04003B42 RID: 15170
+		// Token: 0x04003B30 RID: 15152
 		public const int AnimationStateComponentFieldNumber = 7;
 
-		// Token: 0x04003B43 RID: 15171
+		// Token: 0x04003B31 RID: 15153
 		public const int BlackboardParamComponentFieldNumber = 8;
 
-		// Token: 0x04003B44 RID: 15172
+		// Token: 0x04003B32 RID: 15154
 		public const int SysBuffComponentFieldNumber = 10;
 
-		// Token: 0x04003B45 RID: 15173
+		// Token: 0x04003B33 RID: 15155
 		public const int ClientDataComponentFieldNumber = 11;
 
-		// Token: 0x04003B46 RID: 15174
+		// Token: 0x04003B34 RID: 15156
 		public const int MonsterWeaponComponentPbFieldNumber = 12;
 
-		// Token: 0x04003B47 RID: 15175
+		// Token: 0x04003B35 RID: 15157
 		public const int MonsterAiComponentPbFieldNumber = 13;
 
-		// Token: 0x04003B48 RID: 15176
+		// Token: 0x04003B36 RID: 15158
 		public const int FightBuffComponentFieldNumber = 15;
 
-		// Token: 0x04003B49 RID: 15177
+		// Token: 0x04003B37 RID: 15159
 		public const int NearbyTrackingComponentPbFieldNumber = 16;
 
-		// Token: 0x04003B4A RID: 15178
+		// Token: 0x04003B38 RID: 15160
 		public const int DropComponentPbFieldNumber = 17;
 
-		// Token: 0x04003B4B RID: 15179
+		// Token: 0x04003B39 RID: 15161
 		public const int MonsterCaptureComponentFieldNumber = 18;
 
-		// Token: 0x04003B4C RID: 15180
+		// Token: 0x04003B3A RID: 15162
 		public const int LogicStateComponentPbFieldNumber = 19;
 
-		// Token: 0x04003B4D RID: 15181
+		// Token: 0x04003B3B RID: 15163
 		public const int AdviceComponentPbFieldNumber = 20;
 
-		// Token: 0x04003B4E RID: 15182
+		// Token: 0x04003B3C RID: 15164
 		public const int LiftComponentPbFieldNumber = 21;
 
-		// Token: 0x04003B4F RID: 15183
+		// Token: 0x04003B3D RID: 15165
 		public const int InteractComponentFieldNumber = 22;
 
-		// Token: 0x04003B50 RID: 15184
+		// Token: 0x04003B3E RID: 15166
 		public const int EquipComponentFieldNumber = 23;
 
-		// Token: 0x04003B51 RID: 15185
+		// Token: 0x04003B3F RID: 15167
 		public const int BeControlledComponentPbFieldNumber = 24;
 
-		// Token: 0x04003B52 RID: 15186
+		// Token: 0x04003B40 RID: 15168
 		public const int ConcomitantsComponentPbFieldNumber = 25;
 
-		// Token: 0x04003B53 RID: 15187
+		// Token: 0x04003B41 RID: 15169
 		public const int TimelineTrackComponentPbFieldNumber = 26;
 
-		// Token: 0x04003B54 RID: 15188
+		// Token: 0x04003B42 RID: 15170
 		public const int SummonsComponentPbFieldNumber = 27;
 
-		// Token: 0x04003B55 RID: 15189
+		// Token: 0x04003B43 RID: 15171
 		public const int EntityFsmComponentPbFieldNumber = 28;
 
-		// Token: 0x04003B56 RID: 15190
+		// Token: 0x04003B44 RID: 15172
 		public const int BoardPbFieldNumber = 29;
 
-		// Token: 0x04003B57 RID: 15191
+		// Token: 0x04003B45 RID: 15173
 		public const int PlacementItemPbFieldNumber = 30;
 
-		// Token: 0x04003B58 RID: 15192
+		// Token: 0x04003B46 RID: 15174
 		public const int StateTagComponentPbFieldNumber = 31;
 
-		// Token: 0x04003B59 RID: 15193
+		// Token: 0x04003B47 RID: 15175
 		public const int MonsterGachaDataPbFieldNumber = 32;
 
-		// Token: 0x04003B5A RID: 15194
+		// Token: 0x04003B48 RID: 15176
 		public const int FanComponentPbFieldNumber = 33;
 
-		// Token: 0x04003B5B RID: 15195
+		// Token: 0x04003B49 RID: 15177
 		public const int NpcPbFieldNumber = 34;
 
-		// Token: 0x04003B5C RID: 15196
+		// Token: 0x04003B4A RID: 15178
 		public const int BubbleComponentFieldNumber = 35;
 
-		// Token: 0x04003B5D RID: 15197
+		// Token: 0x04003B4B RID: 15179
 		public const int PatrolComponentFieldNumber = 36;
 
-		// Token: 0x04003B5E RID: 15198
+		// Token: 0x04003B4C RID: 15180
 		public const int RangeComponentFieldNumber = 37;
 
-		// Token: 0x04003B5F RID: 15199
+		// Token: 0x04003B4D RID: 15181
 		public const int PassiveSkillComponentPbFieldNumber = 38;
 
-		// Token: 0x04003B60 RID: 15200
+		// Token: 0x04003B4E RID: 15182
 		public const int SkillComponentPbFieldNumber = 39;
 
-		// Token: 0x04003B61 RID: 15201
+		// Token: 0x04003B4F RID: 15183
 		public const int DynamicAttachComponentPbFieldNumber = 40;
 
-		// Token: 0x04003B62 RID: 15202
+		// Token: 0x04003B50 RID: 15184
 		public const int VarComponentPbFieldNumber = 41;
 
-		// Token: 0x04003B63 RID: 15203
+		// Token: 0x04003B51 RID: 15185
 		public const int PlayerFollowerSelfComponentPbFieldNumber = 42;
 
-		// Token: 0x04003B64 RID: 15204
+		// Token: 0x04003B52 RID: 15186
 		public const int SceneItemLifeCycleComponentPbFieldNumber = 43;
 
-		// Token: 0x04003B65 RID: 15205
+		// Token: 0x04003B53 RID: 15187
 		public const int EntityBulletComponentPbFieldNumber = 44;
 
-		// Token: 0x04003B66 RID: 15206
+		// Token: 0x04003B54 RID: 15188
 		public const int BuffProducerComponentPbFieldNumber = 45;
 
-		// Token: 0x04003B67 RID: 15207
+		// Token: 0x04003B55 RID: 15189
 		public const int BuffConsumerComponentPbFieldNumber = 46;
 
-		// Token: 0x04003B68 RID: 15208
+		// Token: 0x04003B56 RID: 15190
 		public const int SceneItemComponentPbFieldNumber = 47;
 
-		// Token: 0x04003B69 RID: 15209
+		// Token: 0x04003B57 RID: 15191
 		public const int ShieldComponentPbFieldNumber = 48;
 
-		// Token: 0x04003B6A RID: 15210
+		// Token: 0x04003B58 RID: 15192
 		public const int NpcPerformComponentPbFieldNumber = 49;
 
-		// Token: 0x04003B6B RID: 15211
+		// Token: 0x04003B59 RID: 15193
 		public const int DependenceComponentPbFieldNumber = 50;
 
-		// Token: 0x04003B6C RID: 15212
+		// Token: 0x04003B5A RID: 15194
 		public const int RenjuDataPbFieldNumber = 51;
 
-		// Token: 0x04003B6D RID: 15213
+		// Token: 0x04003B5B RID: 15195
 		public const int AiRoleComponentPbFieldNumber = 52;
 
-		// Token: 0x04003B6E RID: 15214
+		// Token: 0x04003B5C RID: 15196
 		public const int PlayerFollowersComponentPbFieldNumber = 53;
 
-		// Token: 0x04003B6F RID: 15215
+		// Token: 0x04003B5D RID: 15197
 		public const int SceneItemAttributeComponentPbFieldNumber = 54;
 
-		// Token: 0x04003B70 RID: 15216
+		// Token: 0x04003B5E RID: 15198
 		public const int PullingFoundationComponentPbFieldNumber = 55;
 
-		// Token: 0x04003B71 RID: 15217
+		// Token: 0x04003B5F RID: 15199
 		public const int BatchBulletCastComponentPbFieldNumber = 56;
 
-		// Token: 0x04003B72 RID: 15218
+		// Token: 0x04003B60 RID: 15200
 		public const int RoleWeaponSkinComponentFieldNumber = 57;
 
-		// Token: 0x04003B73 RID: 15219
+		// Token: 0x04003B61 RID: 15201
 		public const int CombineEntityInfoPbFieldNumber = 58;
 
-		// Token: 0x04003B74 RID: 15220
+		// Token: 0x04003B62 RID: 15202
 		public const int SceneItemAiComponentPbFieldNumber = 59;
 
-		// Token: 0x04003B75 RID: 15221
+		// Token: 0x04003B63 RID: 15203
 		public const int AnimalCollectComponentPbFieldNumber = 60;
 
-		// Token: 0x04003B76 RID: 15222
+		// Token: 0x04003B64 RID: 15204
 		public const int VehiclePassengerComponentPbFieldNumber = 61;
 
-		// Token: 0x04003B77 RID: 15223
+		// Token: 0x04003B65 RID: 15205
 		public const int HookLockPointComponentPbFieldNumber = 62;
 
-		// Token: 0x04003B78 RID: 15224
+		// Token: 0x04003B66 RID: 15206
 		public const int HackingComponentPbFieldNumber = 63;
 
-		// Token: 0x04003B79 RID: 15225
+		// Token: 0x04003B67 RID: 15207
 		public const int HackTargetComponentPbFieldNumber = 64;
 
-		// Token: 0x04003B7A RID: 15226
+		// Token: 0x04003B68 RID: 15208
 		public const int GravityFlipComponentPbFieldNumber = 65;
 
-		// Token: 0x04003B7B RID: 15227
+		// Token: 0x04003B69 RID: 15209
 		public const int EntityMoveSplineComponentPbFieldNumber = 66;
 
-		// Token: 0x04003B7C RID: 15228
+		// Token: 0x04003B6A RID: 15210
 		public const int EntityRewardItemPbFieldNumber = 67;
 
-		// Token: 0x04003B7D RID: 15229
+		// Token: 0x04003B6B RID: 15211
 		public const int TemplateEntitySpawnerComponentPbFieldNumber = 68;
 
-		// Token: 0x04003B7E RID: 15230
+		// Token: 0x04003B6C RID: 15212
 		public const int GridObjectComponentPbFieldNumber = 69;
 
-		// Token: 0x04003B7F RID: 15231
+		// Token: 0x04003B6D RID: 15213
 		public const int SimpleCombatComponentPbFieldNumber = 70;
 
-		// Token: 0x04003B80 RID: 15232
+		// Token: 0x04003B6E RID: 15214
 		public const int TrapDefenseComponentPbFieldNumber = 71;
 
-		// Token: 0x04003B81 RID: 15233
+		// Token: 0x04003B6F RID: 15215
 		public const int HoldHandComponentPbFieldNumber = 72;
 
-		// Token: 0x04003B82 RID: 15234
+		// Token: 0x04003B70 RID: 15216
 		public const int ListenerComponentPbFieldNumber = 73;
 
-		// Token: 0x04003B83 RID: 15235
+		// Token: 0x04003B71 RID: 15217
 		public const int ActivityComponentPbFieldNumber = 74;
 
-		// Token: 0x04003B84 RID: 15236
+		// Token: 0x04003B72 RID: 15218
 		public const int CalabashSkinComponentPbFieldNumber = 75;
 
-		// Token: 0x04003B85 RID: 15237
+		// Token: 0x04003B73 RID: 15219
 		public const int HonamiStoryDropItemComponentPbFieldNumber = 76;
 
-		// Token: 0x04003B86 RID: 15238
+		// Token: 0x04003B74 RID: 15220
 		public const int HonamiStoryEnhanceLevelComponentPbFieldNumber = 77;
 
-		// Token: 0x04003B87 RID: 15239
+		// Token: 0x04003B75 RID: 15221
 		public const int MoveToPointComponentPbFieldNumber = 78;
 
-		// Token: 0x04003B88 RID: 15240
+		// Token: 0x04003B76 RID: 15222
 		public const int RbBlockComponentPbFieldNumber = 79;
 
-		// Token: 0x04003B89 RID: 15241
+		// Token: 0x04003B77 RID: 15223
 		public const int SpiritGearComponentPbFieldNumber = 80;
 
-		// Token: 0x04003B8A RID: 15242
+		// Token: 0x04003B78 RID: 15224
 		public const int VehiclePbFieldNumber = 81;
 
-		// Token: 0x04003B8B RID: 15243
+		// Token: 0x04003B79 RID: 15225
 		public const int RbFloorComponentPbFieldNumber = 82;
 
-		// Token: 0x04003B8C RID: 15244
+		// Token: 0x04003B7A RID: 15226
 		public const int RbItemComponentPbFieldNumber = 83;
 
-		// Token: 0x04003B8D RID: 15245
+		// Token: 0x04003B7B RID: 15227
 		public const int RoadNetworkComponentPbFieldNumber = 84;
 
-		// Token: 0x04003B8E RID: 15246
+		// Token: 0x04003B7C RID: 15228
 		public const int FollowEntityComponentPbFieldNumber = 85;
 
-		// Token: 0x04003B8F RID: 15247
+		// Token: 0x04003B7D RID: 15229
 		public const int MotorOutlookComponentPbFieldNumber = 86;
 
-		// Token: 0x04003B90 RID: 15248
+		// Token: 0x04003B7E RID: 15230
 		public const int MotorDaCtxComponentPbFieldNumber = 87;
 
-		// Token: 0x04003B91 RID: 15249
+		// Token: 0x04003B7F RID: 15231
 		public const int ExhibitionComponentPbFieldNumber = 88;
 
-		// Token: 0x04003B92 RID: 15250
+		// Token: 0x04003B80 RID: 15232
 		public const int FurnitureComponentPbFieldNumber = 89;
 
-		// Token: 0x04003B93 RID: 15251
+		// Token: 0x04003B81 RID: 15233
 		public const int OrnamentComponentPbFieldNumber = 90;
 
-		// Token: 0x04003B94 RID: 15252
+		// Token: 0x04003B82 RID: 15234
 		public const int FlowerPollutionComponentPbFieldNumber = 91;
 
-		// Token: 0x04003B95 RID: 15253
+		// Token: 0x04003B83 RID: 15235
 		public const int DollGrabMachineComponentPbFieldNumber = 92;
 
-		// Token: 0x04003B96 RID: 15254
+		// Token: 0x04003B84 RID: 15236
 		public const int DollGrabShowcaseComponentPbFieldNumber = 93;
 
-		// Token: 0x04003B97 RID: 15255
+		// Token: 0x04003B85 RID: 15237
 		public const int GpuEntityComponentPbFieldNumber = 94;
 
-		// Token: 0x04003B98 RID: 15256
+		// Token: 0x04003B86 RID: 15238
 		public const int RoverRoguePortalComponentPbFieldNumber = 95;
 
-		// Token: 0x04003B99 RID: 15257
-		public const int DarkTideComponentPbFieldNumber = 96;
-
-		// Token: 0x04003B9A RID: 15258
+		// Token: 0x04003B87 RID: 15239
 		public const int ElementalHolderComponentPbFieldNumber = 97;
 
-		// Token: 0x04003B9B RID: 15259
-		public const int EntityFoundationComponentPbFieldNumber = 98;
+		// Token: 0x04003B88 RID: 15240
+		public const int SkillAvatarComponentPbFieldNumber = 98;
 
-		// Token: 0x04003B9C RID: 15260
-		public const int SquadPropComponentPbFieldNumber = 99;
+		// Token: 0x04003B89 RID: 15241
+		public const int EntityFoundationComponentPbFieldNumber = 99;
 
-		// Token: 0x04003B9D RID: 15261
+		// Token: 0x04003B8A RID: 15242
+		public const int SquadPropComponentPbFieldNumber = 100;
+
+		// Token: 0x04003B8B RID: 15243
 		public const int ConnectorComponentPbFieldNumber = 103;
 
-		// Token: 0x04003B9E RID: 15262
+		// Token: 0x04003B8C RID: 15244
 		private object component_;
 
-		// Token: 0x04003B9F RID: 15263
+		// Token: 0x04003B8D RID: 15245
 		private EntityComponentPb.ComponentOneofCase componentCase_;
 
-		// Token: 0x0200176D RID: 5997
+		// Token: 0x020017E5 RID: 6117
 		public enum ComponentOneofCase
 		{
-			// Token: 0x0400C61A RID: 50714
+			// Token: 0x0400CB45 RID: 52037
 			None,
-			// Token: 0x0400C61B RID: 50715
+			// Token: 0x0400CB46 RID: 52038
 			AttributeComponent,
-			// Token: 0x0400C61C RID: 50716
+			// Token: 0x0400CB47 RID: 52039
 			TagComponent,
-			// Token: 0x0400C61D RID: 50717
+			// Token: 0x0400CB48 RID: 52040
 			TriggerComponent,
-			// Token: 0x0400C61E RID: 50718
+			// Token: 0x0400CB49 RID: 52041
 			SummonerComponent,
-			// Token: 0x0400C61F RID: 50719
+			// Token: 0x0400CB4A RID: 52042
 			PartComponent,
-			// Token: 0x0400C620 RID: 50720
+			// Token: 0x0400CB4B RID: 52043
 			VisionSkillComponent,
-			// Token: 0x0400C621 RID: 50721
+			// Token: 0x0400CB4C RID: 52044
 			AnimationStateComponent,
-			// Token: 0x0400C622 RID: 50722
+			// Token: 0x0400CB4D RID: 52045
 			BlackboardParamComponent,
-			// Token: 0x0400C623 RID: 50723
+			// Token: 0x0400CB4E RID: 52046
 			SysBuffComponent = 10,
-			// Token: 0x0400C624 RID: 50724
+			// Token: 0x0400CB4F RID: 52047
 			ClientDataComponent,
-			// Token: 0x0400C625 RID: 50725
+			// Token: 0x0400CB50 RID: 52048
 			MonsterWeaponComponentPb,
-			// Token: 0x0400C626 RID: 50726
+			// Token: 0x0400CB51 RID: 52049
 			MonsterAiComponentPb,
-			// Token: 0x0400C627 RID: 50727
+			// Token: 0x0400CB52 RID: 52050
 			FightBuffComponent = 15,
-			// Token: 0x0400C628 RID: 50728
+			// Token: 0x0400CB53 RID: 52051
 			NearbyTrackingComponentPb,
-			// Token: 0x0400C629 RID: 50729
+			// Token: 0x0400CB54 RID: 52052
 			DropComponentPb,
-			// Token: 0x0400C62A RID: 50730
+			// Token: 0x0400CB55 RID: 52053
 			MonsterCaptureComponent,
-			// Token: 0x0400C62B RID: 50731
+			// Token: 0x0400CB56 RID: 52054
 			LogicStateComponentPb,
-			// Token: 0x0400C62C RID: 50732
+			// Token: 0x0400CB57 RID: 52055
 			AdviceComponentPb,
-			// Token: 0x0400C62D RID: 50733
+			// Token: 0x0400CB58 RID: 52056
 			LiftComponentPb,
-			// Token: 0x0400C62E RID: 50734
+			// Token: 0x0400CB59 RID: 52057
 			InteractComponent,
-			// Token: 0x0400C62F RID: 50735
+			// Token: 0x0400CB5A RID: 52058
 			EquipComponent,
-			// Token: 0x0400C630 RID: 50736
+			// Token: 0x0400CB5B RID: 52059
 			BeControlledComponentPb,
-			// Token: 0x0400C631 RID: 50737
+			// Token: 0x0400CB5C RID: 52060
 			ConcomitantsComponentPb,
-			// Token: 0x0400C632 RID: 50738
+			// Token: 0x0400CB5D RID: 52061
 			TimelineTrackComponentPb,
-			// Token: 0x0400C633 RID: 50739
+			// Token: 0x0400CB5E RID: 52062
 			SummonsComponentPb,
-			// Token: 0x0400C634 RID: 50740
+			// Token: 0x0400CB5F RID: 52063
 			EntityFsmComponentPb,
-			// Token: 0x0400C635 RID: 50741
+			// Token: 0x0400CB60 RID: 52064
 			BoardPb,
-			// Token: 0x0400C636 RID: 50742
+			// Token: 0x0400CB61 RID: 52065
 			PlacementItemPb,
-			// Token: 0x0400C637 RID: 50743
+			// Token: 0x0400CB62 RID: 52066
 			StateTagComponentPb,
-			// Token: 0x0400C638 RID: 50744
+			// Token: 0x0400CB63 RID: 52067
 			MonsterGachaDataPb,
-			// Token: 0x0400C639 RID: 50745
+			// Token: 0x0400CB64 RID: 52068
 			FanComponentPb,
-			// Token: 0x0400C63A RID: 50746
+			// Token: 0x0400CB65 RID: 52069
 			NpcPb,
-			// Token: 0x0400C63B RID: 50747
+			// Token: 0x0400CB66 RID: 52070
 			BubbleComponent,
-			// Token: 0x0400C63C RID: 50748
+			// Token: 0x0400CB67 RID: 52071
 			PatrolComponent,
-			// Token: 0x0400C63D RID: 50749
+			// Token: 0x0400CB68 RID: 52072
 			RangeComponent,
-			// Token: 0x0400C63E RID: 50750
+			// Token: 0x0400CB69 RID: 52073
 			PassiveSkillComponentPb,
-			// Token: 0x0400C63F RID: 50751
+			// Token: 0x0400CB6A RID: 52074
 			SkillComponentPb,
-			// Token: 0x0400C640 RID: 50752
+			// Token: 0x0400CB6B RID: 52075
 			DynamicAttachComponentPb,
-			// Token: 0x0400C641 RID: 50753
+			// Token: 0x0400CB6C RID: 52076
 			VarComponentPb,
-			// Token: 0x0400C642 RID: 50754
+			// Token: 0x0400CB6D RID: 52077
 			PlayerFollowerSelfComponentPb,
-			// Token: 0x0400C643 RID: 50755
+			// Token: 0x0400CB6E RID: 52078
 			SceneItemLifeCycleComponentPb,
-			// Token: 0x0400C644 RID: 50756
+			// Token: 0x0400CB6F RID: 52079
 			EntityBulletComponentPb,
-			// Token: 0x0400C645 RID: 50757
+			// Token: 0x0400CB70 RID: 52080
 			BuffProducerComponentPb,
-			// Token: 0x0400C646 RID: 50758
+			// Token: 0x0400CB71 RID: 52081
 			BuffConsumerComponentPb,
-			// Token: 0x0400C647 RID: 50759
+			// Token: 0x0400CB72 RID: 52082
 			SceneItemComponentPb,
-			// Token: 0x0400C648 RID: 50760
+			// Token: 0x0400CB73 RID: 52083
 			ShieldComponentPb,
-			// Token: 0x0400C649 RID: 50761
+			// Token: 0x0400CB74 RID: 52084
 			NpcPerformComponentPb,
-			// Token: 0x0400C64A RID: 50762
+			// Token: 0x0400CB75 RID: 52085
 			DependenceComponentPb,
-			// Token: 0x0400C64B RID: 50763
+			// Token: 0x0400CB76 RID: 52086
 			RenjuDataPb,
-			// Token: 0x0400C64C RID: 50764
+			// Token: 0x0400CB77 RID: 52087
 			AiRoleComponentPb,
-			// Token: 0x0400C64D RID: 50765
+			// Token: 0x0400CB78 RID: 52088
 			PlayerFollowersComponentPb,
-			// Token: 0x0400C64E RID: 50766
+			// Token: 0x0400CB79 RID: 52089
 			SceneItemAttributeComponentPb,
-			// Token: 0x0400C64F RID: 50767
+			// Token: 0x0400CB7A RID: 52090
 			PullingFoundationComponentPb,
-			// Token: 0x0400C650 RID: 50768
+			// Token: 0x0400CB7B RID: 52091
 			BatchBulletCastComponentPb,
-			// Token: 0x0400C651 RID: 50769
+			// Token: 0x0400CB7C RID: 52092
 			RoleWeaponSkinComponent,
-			// Token: 0x0400C652 RID: 50770
+			// Token: 0x0400CB7D RID: 52093
 			CombineEntityInfoPb,
-			// Token: 0x0400C653 RID: 50771
+			// Token: 0x0400CB7E RID: 52094
 			SceneItemAiComponentPb,
-			// Token: 0x0400C654 RID: 50772
+			// Token: 0x0400CB7F RID: 52095
 			AnimalCollectComponentPb,
-			// Token: 0x0400C655 RID: 50773
+			// Token: 0x0400CB80 RID: 52096
 			VehiclePassengerComponentPb,
-			// Token: 0x0400C656 RID: 50774
+			// Token: 0x0400CB81 RID: 52097
 			HookLockPointComponentPb,
-			// Token: 0x0400C657 RID: 50775
+			// Token: 0x0400CB82 RID: 52098
 			HackingComponentPb,
-			// Token: 0x0400C658 RID: 50776
+			// Token: 0x0400CB83 RID: 52099
 			HackTargetComponentPb,
-			// Token: 0x0400C659 RID: 50777
+			// Token: 0x0400CB84 RID: 52100
 			GravityFlipComponentPb,
-			// Token: 0x0400C65A RID: 50778
+			// Token: 0x0400CB85 RID: 52101
 			EntityMoveSplineComponentPb,
-			// Token: 0x0400C65B RID: 50779
+			// Token: 0x0400CB86 RID: 52102
 			EntityRewardItemPb,
-			// Token: 0x0400C65C RID: 50780
+			// Token: 0x0400CB87 RID: 52103
 			TemplateEntitySpawnerComponentPb,
-			// Token: 0x0400C65D RID: 50781
+			// Token: 0x0400CB88 RID: 52104
 			GridObjectComponentPb,
-			// Token: 0x0400C65E RID: 50782
+			// Token: 0x0400CB89 RID: 52105
 			SimpleCombatComponentPb,
-			// Token: 0x0400C65F RID: 50783
+			// Token: 0x0400CB8A RID: 52106
 			TrapDefenseComponentPb,
-			// Token: 0x0400C660 RID: 50784
+			// Token: 0x0400CB8B RID: 52107
 			HoldHandComponentPb,
-			// Token: 0x0400C661 RID: 50785
+			// Token: 0x0400CB8C RID: 52108
 			ListenerComponentPb,
-			// Token: 0x0400C662 RID: 50786
+			// Token: 0x0400CB8D RID: 52109
 			ActivityComponentPb,
-			// Token: 0x0400C663 RID: 50787
+			// Token: 0x0400CB8E RID: 52110
 			CalabashSkinComponentPb,
-			// Token: 0x0400C664 RID: 50788
+			// Token: 0x0400CB8F RID: 52111
 			HonamiStoryDropItemComponentPb,
-			// Token: 0x0400C665 RID: 50789
+			// Token: 0x0400CB90 RID: 52112
 			HonamiStoryEnhanceLevelComponentPb,
-			// Token: 0x0400C666 RID: 50790
+			// Token: 0x0400CB91 RID: 52113
 			MoveToPointComponentPb,
-			// Token: 0x0400C667 RID: 50791
+			// Token: 0x0400CB92 RID: 52114
 			RbBlockComponentPb,
-			// Token: 0x0400C668 RID: 50792
+			// Token: 0x0400CB93 RID: 52115
 			SpiritGearComponentPb,
-			// Token: 0x0400C669 RID: 50793
+			// Token: 0x0400CB94 RID: 52116
 			VehiclePb,
-			// Token: 0x0400C66A RID: 50794
+			// Token: 0x0400CB95 RID: 52117
 			RbFloorComponentPb,
-			// Token: 0x0400C66B RID: 50795
+			// Token: 0x0400CB96 RID: 52118
 			RbItemComponentPb,
-			// Token: 0x0400C66C RID: 50796
+			// Token: 0x0400CB97 RID: 52119
 			RoadNetworkComponentPb,
-			// Token: 0x0400C66D RID: 50797
+			// Token: 0x0400CB98 RID: 52120
 			FollowEntityComponentPb,
-			// Token: 0x0400C66E RID: 50798
+			// Token: 0x0400CB99 RID: 52121
 			MotorOutlookComponentPb,
-			// Token: 0x0400C66F RID: 50799
+			// Token: 0x0400CB9A RID: 52122
 			MotorDaCtxComponentPb,
-			// Token: 0x0400C670 RID: 50800
+			// Token: 0x0400CB9B RID: 52123
 			ExhibitionComponentPb,
-			// Token: 0x0400C671 RID: 50801
+			// Token: 0x0400CB9C RID: 52124
 			FurnitureComponentPb,
-			// Token: 0x0400C672 RID: 50802
+			// Token: 0x0400CB9D RID: 52125
 			OrnamentComponentPb,
-			// Token: 0x0400C673 RID: 50803
+			// Token: 0x0400CB9E RID: 52126
 			FlowerPollutionComponentPb,
-			// Token: 0x0400C674 RID: 50804
+			// Token: 0x0400CB9F RID: 52127
 			DollGrabMachineComponentPb,
-			// Token: 0x0400C675 RID: 50805
+			// Token: 0x0400CBA0 RID: 52128
 			DollGrabShowcaseComponentPb,
-			// Token: 0x0400C676 RID: 50806
+			// Token: 0x0400CBA1 RID: 52129
 			GpuEntityComponentPb,
-			// Token: 0x0400C677 RID: 50807
+			// Token: 0x0400CBA2 RID: 52130
 			RoverRoguePortalComponentPb,
-			// Token: 0x0400C678 RID: 50808
-			DarkTideComponentPb,
-			// Token: 0x0400C679 RID: 50809
-			ElementalHolderComponentPb,
-			// Token: 0x0400C67A RID: 50810
+			// Token: 0x0400CBA3 RID: 52131
+			ElementalHolderComponentPb = 97,
+			// Token: 0x0400CBA4 RID: 52132
+			SkillAvatarComponentPb,
+			// Token: 0x0400CBA5 RID: 52133
 			EntityFoundationComponentPb,
-			// Token: 0x0400C67B RID: 50811
+			// Token: 0x0400CBA6 RID: 52134
 			SquadPropComponentPb,
-			// Token: 0x0400C67C RID: 50812
+			// Token: 0x0400CBA7 RID: 52135
 			ConnectorComponentPb = 103
 		}
 	}

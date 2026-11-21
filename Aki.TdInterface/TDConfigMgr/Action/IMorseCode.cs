@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C0E RID: 7182
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DFD RID: 7677
 	public class IMorseCode : IUiGame
 	{
-		// Token: 0x060099F7 RID: 39415 RVA: 0x001623E4 File Offset: 0x001605E4
+		// Token: 0x0600A327 RID: 41767 RVA: 0x00175330 File Offset: 0x00173530
 		private IMorseCode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060099F8 RID: 39416 RVA: 0x0016241C File Offset: 0x0016061C
+		// Token: 0x0600A328 RID: 41768 RVA: 0x00175368 File Offset: 0x00173568
 		public static IMorseCode Create([Nullable(2)] IMorseCode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099F9 RID: 39417 RVA: 0x0016242F File Offset: 0x0016062F
+		// Token: 0x0600A329 RID: 41769 RVA: 0x0017537B File Offset: 0x0017357B
 		public static IMorseCode CreateFromSetValue([Nullable(2)] IMorseCode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060099FA RID: 39418 RVA: 0x00162442 File Offset: 0x00160642
+		// Token: 0x0600A32A RID: 41770 RVA: 0x0017538E File Offset: 0x0017358E
 		public new IMorseCode_SetValue ToSetValue()
 		{
 			return new IMorseCode_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700303D RID: 12349
-		// (get) Token: 0x060099FB RID: 39419 RVA: 0x00162461 File Offset: 0x00160661
-		// (set) Token: 0x060099FC RID: 39420 RVA: 0x0016248C File Offset: 0x0016068C
+		// Token: 0x170032A6 RID: 12966
+		// (get) Token: 0x0600A32B RID: 41771 RVA: 0x001753AD File Offset: 0x001735AD
+		// (set) Token: 0x0600A32C RID: 41772 RVA: 0x001753D8 File Offset: 0x001735D8
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700303E RID: 12350
-		// (get) Token: 0x060099FD RID: 39421 RVA: 0x0016249A File Offset: 0x0016069A
-		// (set) Token: 0x060099FE RID: 39422 RVA: 0x001624C5 File Offset: 0x001606C5
+		// Token: 0x170032A7 RID: 12967
+		// (get) Token: 0x0600A32D RID: 41773 RVA: 0x001753E6 File Offset: 0x001735E6
+		// (set) Token: 0x0600A32E RID: 41774 RVA: 0x00175411 File Offset: 0x00173611
 		public virtual string MorseCodeId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005DB2 RID: 23986
+		// Token: 0x040062D9 RID: 25305
 		[Nullable(2)]
 		protected new IMorseCode FbInstance;
 
-		// Token: 0x04005DB3 RID: 23987
+		// Token: 0x040062DA RID: 25306
 		[Nullable(2)]
 		protected new IMorseCode_SetValue PocoInterface;
 	}

@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Level.Vehicle
 {
-	// Token: 0x02003EFA RID: 16122
+	// Token: 0x020031B7 RID: 12727
 	[UnrealObjectPath("/Game/Aki/Data/Level/Vehicle/BP_GongduolaConfig.BP_GongduolaConfig_C")]
 	[UnrealStructLayout(976, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 972)]
 	public class BP_GongduolaConfig_C : BP_VehicleConfig_C, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028D44 RID: 167236 RVA: 0x009B58DC File Offset: 0x009B3ADC
+		// Token: 0x0601F6E1 RID: 128737 RVA: 0x0092D9A4 File Offset: 0x0092BBA4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_GongduolaConfig_C._ClassPtr == IntPtr.Zero)
@@ -22,1020 +22,1020 @@ namespace AkiClient.Game.Aki.Data.Level.Vehicle
 			return BP_GongduolaConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06028D45 RID: 167237 RVA: 0x009B5900 File Offset: 0x009B3B00
+		// Token: 0x0601F6E2 RID: 128738 RVA: 0x0092D9C8 File Offset: 0x0092BBC8
 		public BP_GongduolaConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_GongduolaConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028D46 RID: 167238 RVA: 0x009B5928 File Offset: 0x009B3B28
+		// Token: 0x0601F6E3 RID: 128739 RVA: 0x0092D9F0 File Offset: 0x0092BBF0
 		[NullableContext(1)]
 		public BP_GongduolaConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_GongduolaConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FC5 RID: 24517
-		// (get) Token: 0x06028D47 RID: 167239 RVA: 0x009B595B File Offset: 0x009B3B5B
-		// (set) Token: 0x06028D48 RID: 167240 RVA: 0x009B596B File Offset: 0x009B3B6B
+		// Token: 0x17003932 RID: 14642
+		// (get) Token: 0x0601F6E4 RID: 128740 RVA: 0x0092DA23 File Offset: 0x0092BC23
+		// (set) Token: 0x0601F6E5 RID: 128741 RVA: 0x0092DA33 File Offset: 0x0092BC33
 		public unsafe float 前进最大移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_前进最大移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_前进最大移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005FC6 RID: 24518
-		// (get) Token: 0x06028D49 RID: 167241 RVA: 0x009B597C File Offset: 0x009B3B7C
-		// (set) Token: 0x06028D4A RID: 167242 RVA: 0x009B598C File Offset: 0x009B3B8C
+		// Token: 0x17003933 RID: 14643
+		// (get) Token: 0x0601F6E6 RID: 128742 RVA: 0x0092DA44 File Offset: 0x0092BC44
+		// (set) Token: 0x0601F6E7 RID: 128743 RVA: 0x0092DA54 File Offset: 0x0092BC54
 		public unsafe float 常态后退最大移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态后退最大移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态后退最大移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005FC7 RID: 24519
-		// (get) Token: 0x06028D4B RID: 167243 RVA: 0x009B599D File Offset: 0x009B3B9D
-		// (set) Token: 0x06028D4C RID: 167244 RVA: 0x009B59AD File Offset: 0x009B3BAD
+		// Token: 0x17003934 RID: 14644
+		// (get) Token: 0x0601F6E8 RID: 128744 RVA: 0x0092DA65 File Offset: 0x0092BC65
+		// (set) Token: 0x0601F6E9 RID: 128745 RVA: 0x0092DA75 File Offset: 0x0092BC75
 		public unsafe float 常态前进加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态前进加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态前进加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FC8 RID: 24520
-		// (get) Token: 0x06028D4D RID: 167245 RVA: 0x009B59BE File Offset: 0x009B3BBE
-		// (set) Token: 0x06028D4E RID: 167246 RVA: 0x009B59CE File Offset: 0x009B3BCE
+		// Token: 0x17003935 RID: 14645
+		// (get) Token: 0x0601F6EA RID: 128746 RVA: 0x0092DA86 File Offset: 0x0092BC86
+		// (set) Token: 0x0601F6EB RID: 128747 RVA: 0x0092DA96 File Offset: 0x0092BC96
 		public unsafe float 常态后退加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态后退加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态后退加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FC9 RID: 24521
-		// (get) Token: 0x06028D4F RID: 167247 RVA: 0x009B59DF File Offset: 0x009B3BDF
-		// (set) Token: 0x06028D50 RID: 167248 RVA: 0x009B59EF File Offset: 0x009B3BEF
+		// Token: 0x17003936 RID: 14646
+		// (get) Token: 0x0601F6EC RID: 128748 RVA: 0x0092DAA7 File Offset: 0x0092BCA7
+		// (set) Token: 0x0601F6ED RID: 128749 RVA: 0x0092DAB7 File Offset: 0x0092BCB7
 		public unsafe float 常态刹车加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态刹车加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态刹车加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FCA RID: 24522
-		// (get) Token: 0x06028D51 RID: 167249 RVA: 0x009B5A00 File Offset: 0x009B3C00
-		// (set) Token: 0x06028D52 RID: 167250 RVA: 0x009B5A10 File Offset: 0x009B3C10
+		// Token: 0x17003937 RID: 14647
+		// (get) Token: 0x0601F6EE RID: 128750 RVA: 0x0092DAC8 File Offset: 0x0092BCC8
+		// (set) Token: 0x0601F6EF RID: 128751 RVA: 0x0092DAD8 File Offset: 0x0092BCD8
 		public unsafe float 常态最小加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最小加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最小加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FCB RID: 24523
-		// (get) Token: 0x06028D53 RID: 167251 RVA: 0x009B5A21 File Offset: 0x009B3C21
-		// (set) Token: 0x06028D54 RID: 167252 RVA: 0x009B5A31 File Offset: 0x009B3C31
+		// Token: 0x17003938 RID: 14648
+		// (get) Token: 0x0601F6F0 RID: 128752 RVA: 0x0092DAE9 File Offset: 0x0092BCE9
+		// (set) Token: 0x0601F6F1 RID: 128753 RVA: 0x0092DAF9 File Offset: 0x0092BCF9
 		public unsafe float 常态最大转向加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大转向加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大转向加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FCC RID: 24524
-		// (get) Token: 0x06028D55 RID: 167253 RVA: 0x009B5A42 File Offset: 0x009B3C42
-		// (set) Token: 0x06028D56 RID: 167254 RVA: 0x009B5A52 File Offset: 0x009B3C52
+		// Token: 0x17003939 RID: 14649
+		// (get) Token: 0x0601F6F2 RID: 128754 RVA: 0x0092DB0A File Offset: 0x0092BD0A
+		// (set) Token: 0x0601F6F3 RID: 128755 RVA: 0x0092DB1A File Offset: 0x0092BD1A
 		public unsafe float 常态最小转向加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最小转向加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最小转向加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FCD RID: 24525
-		// (get) Token: 0x06028D57 RID: 167255 RVA: 0x009B5A63 File Offset: 0x009B3C63
-		// (set) Token: 0x06028D58 RID: 167256 RVA: 0x009B5A73 File Offset: 0x009B3C73
+		// Token: 0x1700393A RID: 14650
+		// (get) Token: 0x0601F6F4 RID: 128756 RVA: 0x0092DB2B File Offset: 0x0092BD2B
+		// (set) Token: 0x0601F6F5 RID: 128757 RVA: 0x0092DB3B File Offset: 0x0092BD3B
 		public unsafe float 常态转向公式角度修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式角度修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式角度修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FCE RID: 24526
-		// (get) Token: 0x06028D59 RID: 167257 RVA: 0x009B5A84 File Offset: 0x009B3C84
-		// (set) Token: 0x06028D5A RID: 167258 RVA: 0x009B5A94 File Offset: 0x009B3C94
+		// Token: 0x1700393B RID: 14651
+		// (get) Token: 0x0601F6F6 RID: 128758 RVA: 0x0092DB4C File Offset: 0x0092BD4C
+		// (set) Token: 0x0601F6F7 RID: 128759 RVA: 0x0092DB5C File Offset: 0x0092BD5C
 		public unsafe float 常态转向公式速度修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式速度修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式速度修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FCF RID: 24527
-		// (get) Token: 0x06028D5B RID: 167259 RVA: 0x009B5AA5 File Offset: 0x009B3CA5
-		// (set) Token: 0x06028D5C RID: 167260 RVA: 0x009B5AB5 File Offset: 0x009B3CB5
+		// Token: 0x1700393C RID: 14652
+		// (get) Token: 0x0601F6F8 RID: 128760 RVA: 0x0092DB6D File Offset: 0x0092BD6D
+		// (set) Token: 0x0601F6F9 RID: 128761 RVA: 0x0092DB7D File Offset: 0x0092BD7D
 		public unsafe float 常态转向公式最终修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式最终修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向公式最终修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FD0 RID: 24528
-		// (get) Token: 0x06028D5D RID: 167261 RVA: 0x009B5AC6 File Offset: 0x009B3CC6
-		// (set) Token: 0x06028D5E RID: 167262 RVA: 0x009B5AD6 File Offset: 0x009B3CD6
+		// Token: 0x1700393D RID: 14653
+		// (get) Token: 0x0601F6FA RID: 128762 RVA: 0x0092DB8E File Offset: 0x0092BD8E
+		// (set) Token: 0x0601F6FB RID: 128763 RVA: 0x0092DB9E File Offset: 0x0092BD9E
 		public unsafe float 常态径向运动摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态径向运动摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态径向运动摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FD1 RID: 24529
-		// (get) Token: 0x06028D5F RID: 167263 RVA: 0x009B5AE7 File Offset: 0x009B3CE7
-		// (set) Token: 0x06028D60 RID: 167264 RVA: 0x009B5AF7 File Offset: 0x009B3CF7
+		// Token: 0x1700393E RID: 14654
+		// (get) Token: 0x0601F6FC RID: 128764 RVA: 0x0092DBAF File Offset: 0x0092BDAF
+		// (set) Token: 0x0601F6FD RID: 128765 RVA: 0x0092DBBF File Offset: 0x0092BDBF
 		public unsafe float 常态横向运动摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态横向运动摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态横向运动摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FD2 RID: 24530
-		// (get) Token: 0x06028D61 RID: 167265 RVA: 0x009B5B08 File Offset: 0x009B3D08
-		// (set) Token: 0x06028D62 RID: 167266 RVA: 0x009B5B18 File Offset: 0x009B3D18
+		// Token: 0x1700393F RID: 14655
+		// (get) Token: 0x0601F6FE RID: 128766 RVA: 0x0092DBD0 File Offset: 0x0092BDD0
+		// (set) Token: 0x0601F6FF RID: 128767 RVA: 0x0092DBE0 File Offset: 0x0092BDE0
 		public unsafe float 常态最大转向速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大转向速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大转向速度) = value;
 			}
 		}
 
-		// Token: 0x17005FD3 RID: 24531
-		// (get) Token: 0x06028D63 RID: 167267 RVA: 0x009B5B29 File Offset: 0x009B3D29
-		// (set) Token: 0x06028D64 RID: 167268 RVA: 0x009B5B39 File Offset: 0x009B3D39
+		// Token: 0x17003940 RID: 14656
+		// (get) Token: 0x0601F700 RID: 128768 RVA: 0x0092DBF1 File Offset: 0x0092BDF1
+		// (set) Token: 0x0601F701 RID: 128769 RVA: 0x0092DC01 File Offset: 0x0092BE01
 		public unsafe float 常态转向摩擦力系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向摩擦力系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向摩擦力系数) = value;
 			}
 		}
 
-		// Token: 0x17005FD4 RID: 24532
-		// (get) Token: 0x06028D65 RID: 167269 RVA: 0x009B5B4A File Offset: 0x009B3D4A
-		// (set) Token: 0x06028D66 RID: 167270 RVA: 0x009B5B5A File Offset: 0x009B3D5A
+		// Token: 0x17003941 RID: 14657
+		// (get) Token: 0x0601F702 RID: 128770 RVA: 0x0092DC12 File Offset: 0x0092BE12
+		// (set) Token: 0x0601F703 RID: 128771 RVA: 0x0092DC22 File Offset: 0x0092BE22
 		public unsafe float 常态转向静止摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向静止摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向静止摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FD5 RID: 24533
-		// (get) Token: 0x06028D67 RID: 167271 RVA: 0x009B5B6B File Offset: 0x009B3D6B
-		// (set) Token: 0x06028D68 RID: 167272 RVA: 0x009B5B7B File Offset: 0x009B3D7B
+		// Token: 0x17003942 RID: 14658
+		// (get) Token: 0x0601F704 RID: 128772 RVA: 0x0092DC33 File Offset: 0x0092BE33
+		// (set) Token: 0x0601F705 RID: 128773 RVA: 0x0092DC43 File Offset: 0x0092BE43
 		public unsafe float 冲刺超限持续时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺超限持续时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺超限持续时间) = value;
 			}
 		}
 
-		// Token: 0x17005FD6 RID: 24534
-		// (get) Token: 0x06028D69 RID: 167273 RVA: 0x009B5B8C File Offset: 0x009B3D8C
-		// (set) Token: 0x06028D6A RID: 167274 RVA: 0x009B5B9C File Offset: 0x009B3D9C
+		// Token: 0x17003943 RID: 14659
+		// (get) Token: 0x0601F706 RID: 128774 RVA: 0x0092DC54 File Offset: 0x0092BE54
+		// (set) Token: 0x0601F707 RID: 128775 RVA: 0x0092DC64 File Offset: 0x0092BE64
 		public unsafe float 冲刺超限移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺超限移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺超限移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005FD7 RID: 24535
-		// (get) Token: 0x06028D6B RID: 167275 RVA: 0x009B5BAD File Offset: 0x009B3DAD
-		// (set) Token: 0x06028D6C RID: 167276 RVA: 0x009B5BBD File Offset: 0x009B3DBD
+		// Token: 0x17003944 RID: 14660
+		// (get) Token: 0x0601F708 RID: 128776 RVA: 0x0092DC75 File Offset: 0x0092BE75
+		// (set) Token: 0x0601F709 RID: 128777 RVA: 0x0092DC85 File Offset: 0x0092BE85
 		public unsafe float 冲刺最大移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005FD8 RID: 24536
-		// (get) Token: 0x06028D6D RID: 167277 RVA: 0x009B5BCE File Offset: 0x009B3DCE
-		// (set) Token: 0x06028D6E RID: 167278 RVA: 0x009B5BDE File Offset: 0x009B3DDE
+		// Token: 0x17003945 RID: 14661
+		// (get) Token: 0x0601F70A RID: 128778 RVA: 0x0092DC96 File Offset: 0x0092BE96
+		// (set) Token: 0x0601F70B RID: 128779 RVA: 0x0092DCA6 File Offset: 0x0092BEA6
 		public unsafe float 冲刺后退最大移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺后退最大移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺后退最大移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005FD9 RID: 24537
-		// (get) Token: 0x06028D6F RID: 167279 RVA: 0x009B5BEF File Offset: 0x009B3DEF
-		// (set) Token: 0x06028D70 RID: 167280 RVA: 0x009B5BFF File Offset: 0x009B3DFF
+		// Token: 0x17003946 RID: 14662
+		// (get) Token: 0x0601F70C RID: 128780 RVA: 0x0092DCB7 File Offset: 0x0092BEB7
+		// (set) Token: 0x0601F70D RID: 128781 RVA: 0x0092DCC7 File Offset: 0x0092BEC7
 		public unsafe float 冲刺停止速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_20);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺停止速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_20) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺停止速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDA RID: 24538
-		// (get) Token: 0x06028D71 RID: 167281 RVA: 0x009B5C10 File Offset: 0x009B3E10
-		// (set) Token: 0x06028D72 RID: 167282 RVA: 0x009B5C20 File Offset: 0x009B3E20
+		// Token: 0x17003947 RID: 14663
+		// (get) Token: 0x0601F70E RID: 128782 RVA: 0x0092DCD8 File Offset: 0x0092BED8
+		// (set) Token: 0x0601F70F RID: 128783 RVA: 0x0092DCE8 File Offset: 0x0092BEE8
 		public unsafe float 冲刺前进加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_21);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺前进加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_21) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺前进加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDB RID: 24539
-		// (get) Token: 0x06028D73 RID: 167283 RVA: 0x009B5C31 File Offset: 0x009B3E31
-		// (set) Token: 0x06028D74 RID: 167284 RVA: 0x009B5C41 File Offset: 0x009B3E41
+		// Token: 0x17003948 RID: 14664
+		// (get) Token: 0x0601F710 RID: 128784 RVA: 0x0092DCF9 File Offset: 0x0092BEF9
+		// (set) Token: 0x0601F711 RID: 128785 RVA: 0x0092DD09 File Offset: 0x0092BF09
 		public unsafe float 冲刺刹车加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺刹车加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺刹车加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDC RID: 24540
-		// (get) Token: 0x06028D75 RID: 167285 RVA: 0x009B5C52 File Offset: 0x009B3E52
-		// (set) Token: 0x06028D76 RID: 167286 RVA: 0x009B5C62 File Offset: 0x009B3E62
+		// Token: 0x17003949 RID: 14665
+		// (get) Token: 0x0601F712 RID: 128786 RVA: 0x0092DD1A File Offset: 0x0092BF1A
+		// (set) Token: 0x0601F713 RID: 128787 RVA: 0x0092DD2A File Offset: 0x0092BF2A
 		public unsafe float 冲刺后退加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_23);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺后退加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_23) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺后退加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDD RID: 24541
-		// (get) Token: 0x06028D77 RID: 167287 RVA: 0x009B5C73 File Offset: 0x009B3E73
-		// (set) Token: 0x06028D78 RID: 167288 RVA: 0x009B5C83 File Offset: 0x009B3E83
+		// Token: 0x1700394A RID: 14666
+		// (get) Token: 0x0601F714 RID: 128788 RVA: 0x0092DD3B File Offset: 0x0092BF3B
+		// (set) Token: 0x0601F715 RID: 128789 RVA: 0x0092DD4B File Offset: 0x0092BF4B
 		public unsafe float 冲刺最小加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_24);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最小加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_24) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最小加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDE RID: 24542
-		// (get) Token: 0x06028D79 RID: 167289 RVA: 0x009B5C94 File Offset: 0x009B3E94
-		// (set) Token: 0x06028D7A RID: 167290 RVA: 0x009B5CA4 File Offset: 0x009B3EA4
+		// Token: 0x1700394B RID: 14667
+		// (get) Token: 0x0601F716 RID: 128790 RVA: 0x0092DD5C File Offset: 0x0092BF5C
+		// (set) Token: 0x0601F717 RID: 128791 RVA: 0x0092DD6C File Offset: 0x0092BF6C
 		public unsafe float 冲刺最大转向加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大转向加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大转向加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FDF RID: 24543
-		// (get) Token: 0x06028D7B RID: 167291 RVA: 0x009B5CB5 File Offset: 0x009B3EB5
-		// (set) Token: 0x06028D7C RID: 167292 RVA: 0x009B5CC5 File Offset: 0x009B3EC5
+		// Token: 0x1700394C RID: 14668
+		// (get) Token: 0x0601F718 RID: 128792 RVA: 0x0092DD7D File Offset: 0x0092BF7D
+		// (set) Token: 0x0601F719 RID: 128793 RVA: 0x0092DD8D File Offset: 0x0092BF8D
 		public unsafe float 冲刺最小转向加速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最小转向加速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最小转向加速度) = value;
 			}
 		}
 
-		// Token: 0x17005FE0 RID: 24544
-		// (get) Token: 0x06028D7D RID: 167293 RVA: 0x009B5CD6 File Offset: 0x009B3ED6
-		// (set) Token: 0x06028D7E RID: 167294 RVA: 0x009B5CE6 File Offset: 0x009B3EE6
+		// Token: 0x1700394D RID: 14669
+		// (get) Token: 0x0601F71A RID: 128794 RVA: 0x0092DD9E File Offset: 0x0092BF9E
+		// (set) Token: 0x0601F71B RID: 128795 RVA: 0x0092DDAE File Offset: 0x0092BFAE
 		public unsafe float 冲刺转向公式角度修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_27);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式角度修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_27) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式角度修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FE1 RID: 24545
-		// (get) Token: 0x06028D7F RID: 167295 RVA: 0x009B5CF7 File Offset: 0x009B3EF7
-		// (set) Token: 0x06028D80 RID: 167296 RVA: 0x009B5D07 File Offset: 0x009B3F07
+		// Token: 0x1700394E RID: 14670
+		// (get) Token: 0x0601F71C RID: 128796 RVA: 0x0092DDBF File Offset: 0x0092BFBF
+		// (set) Token: 0x0601F71D RID: 128797 RVA: 0x0092DDCF File Offset: 0x0092BFCF
 		public unsafe float 冲刺转向公式速度修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_28);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式速度修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_28) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式速度修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FE2 RID: 24546
-		// (get) Token: 0x06028D81 RID: 167297 RVA: 0x009B5D18 File Offset: 0x009B3F18
-		// (set) Token: 0x06028D82 RID: 167298 RVA: 0x009B5D28 File Offset: 0x009B3F28
+		// Token: 0x1700394F RID: 14671
+		// (get) Token: 0x0601F71E RID: 128798 RVA: 0x0092DDE0 File Offset: 0x0092BFE0
+		// (set) Token: 0x0601F71F RID: 128799 RVA: 0x0092DDF0 File Offset: 0x0092BFF0
 		public unsafe float 冲刺转向公式最终修正系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_29);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式最终修正系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_29) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向公式最终修正系数) = value;
 			}
 		}
 
-		// Token: 0x17005FE3 RID: 24547
-		// (get) Token: 0x06028D83 RID: 167299 RVA: 0x009B5D39 File Offset: 0x009B3F39
-		// (set) Token: 0x06028D84 RID: 167300 RVA: 0x009B5D49 File Offset: 0x009B3F49
+		// Token: 0x17003950 RID: 14672
+		// (get) Token: 0x0601F720 RID: 128800 RVA: 0x0092DE01 File Offset: 0x0092C001
+		// (set) Token: 0x0601F721 RID: 128801 RVA: 0x0092DE11 File Offset: 0x0092C011
 		public unsafe float 冲刺径向运动摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_30);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺径向运动摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_30) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺径向运动摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FE4 RID: 24548
-		// (get) Token: 0x06028D85 RID: 167301 RVA: 0x009B5D5A File Offset: 0x009B3F5A
-		// (set) Token: 0x06028D86 RID: 167302 RVA: 0x009B5D6A File Offset: 0x009B3F6A
+		// Token: 0x17003951 RID: 14673
+		// (get) Token: 0x0601F722 RID: 128802 RVA: 0x0092DE22 File Offset: 0x0092C022
+		// (set) Token: 0x0601F723 RID: 128803 RVA: 0x0092DE32 File Offset: 0x0092C032
 		public unsafe float 冲刺横向运动摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_31);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺横向运动摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_31) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺横向运动摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FE5 RID: 24549
-		// (get) Token: 0x06028D87 RID: 167303 RVA: 0x009B5D7B File Offset: 0x009B3F7B
-		// (set) Token: 0x06028D88 RID: 167304 RVA: 0x009B5D8B File Offset: 0x009B3F8B
+		// Token: 0x17003952 RID: 14674
+		// (get) Token: 0x0601F724 RID: 128804 RVA: 0x0092DE43 File Offset: 0x0092C043
+		// (set) Token: 0x0601F725 RID: 128805 RVA: 0x0092DE53 File Offset: 0x0092C053
 		public unsafe float 冲刺最大转向速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_32);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大转向速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_32) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大转向速度) = value;
 			}
 		}
 
-		// Token: 0x17005FE6 RID: 24550
-		// (get) Token: 0x06028D89 RID: 167305 RVA: 0x009B5D9C File Offset: 0x009B3F9C
-		// (set) Token: 0x06028D8A RID: 167306 RVA: 0x009B5DAC File Offset: 0x009B3FAC
+		// Token: 0x17003953 RID: 14675
+		// (get) Token: 0x0601F726 RID: 128806 RVA: 0x0092DE64 File Offset: 0x0092C064
+		// (set) Token: 0x0601F727 RID: 128807 RVA: 0x0092DE74 File Offset: 0x0092C074
 		public unsafe float 冲刺转向摩擦力系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_33);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向摩擦力系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_33) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向摩擦力系数) = value;
 			}
 		}
 
-		// Token: 0x17005FE7 RID: 24551
-		// (get) Token: 0x06028D8B RID: 167307 RVA: 0x009B5DBD File Offset: 0x009B3FBD
-		// (set) Token: 0x06028D8C RID: 167308 RVA: 0x009B5DCD File Offset: 0x009B3FCD
+		// Token: 0x17003954 RID: 14676
+		// (get) Token: 0x0601F728 RID: 128808 RVA: 0x0092DE85 File Offset: 0x0092C085
+		// (set) Token: 0x0601F729 RID: 128809 RVA: 0x0092DE95 File Offset: 0x0092C095
 		public unsafe float 冲刺转向静止摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_34);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向静止摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_34) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向静止摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FE8 RID: 24552
-		// (get) Token: 0x06028D8D RID: 167309 RVA: 0x009B5DDE File Offset: 0x009B3FDE
-		// (set) Token: 0x06028D8E RID: 167310 RVA: 0x009B5DEE File Offset: 0x009B3FEE
+		// Token: 0x17003955 RID: 14677
+		// (get) Token: 0x0601F72A RID: 128810 RVA: 0x0092DEA6 File Offset: 0x0092C0A6
+		// (set) Token: 0x0601F72B RID: 128811 RVA: 0x0092DEB6 File Offset: 0x0092C0B6
 		public unsafe float 超出最大速度时的额外摩擦力
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_35);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_超出最大速度时的额外摩擦力);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_35) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_超出最大速度时的额外摩擦力) = value;
 			}
 		}
 
-		// Token: 0x17005FE9 RID: 24553
-		// (get) Token: 0x06028D8F RID: 167311 RVA: 0x009B5DFF File Offset: 0x009B3FFF
-		// (set) Token: 0x06028D90 RID: 167312 RVA: 0x009B5E0F File Offset: 0x009B400F
+		// Token: 0x17003956 RID: 14678
+		// (get) Token: 0x0601F72C RID: 128812 RVA: 0x0092DEC7 File Offset: 0x0092C0C7
+		// (set) Token: 0x0601F72D RID: 128813 RVA: 0x0092DED7 File Offset: 0x0092C0D7
 		public unsafe float 冲刺固定前向输入时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_36);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺固定前向输入时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_36) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺固定前向输入时间) = value;
 			}
 		}
 
-		// Token: 0x17005FEA RID: 24554
-		// (get) Token: 0x06028D91 RID: 167313 RVA: 0x009B5E20 File Offset: 0x009B4020
-		// (set) Token: 0x06028D92 RID: 167314 RVA: 0x009B5E30 File Offset: 0x009B4030
+		// Token: 0x17003957 RID: 14679
+		// (get) Token: 0x0601F72E RID: 128814 RVA: 0x0092DEE8 File Offset: 0x0092C0E8
+		// (set) Token: 0x0601F72F RID: 128815 RVA: 0x0092DEF8 File Offset: 0x0092C0F8
 		public unsafe float 最大上浮速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_37);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_最大上浮速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_37) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_最大上浮速度) = value;
 			}
 		}
 
-		// Token: 0x17005FEB RID: 24555
-		// (get) Token: 0x06028D93 RID: 167315 RVA: 0x009B5E41 File Offset: 0x009B4041
-		// (set) Token: 0x06028D94 RID: 167316 RVA: 0x009B5E51 File Offset: 0x009B4051
+		// Token: 0x17003958 RID: 14680
+		// (get) Token: 0x0601F730 RID: 128816 RVA: 0x0092DF09 File Offset: 0x0092C109
+		// (set) Token: 0x0601F731 RID: 128817 RVA: 0x0092DF19 File Offset: 0x0092C119
 		public unsafe float 浮力平衡位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_38);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_浮力平衡位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_38) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_浮力平衡位置) = value;
 			}
 		}
 
-		// Token: 0x17005FEC RID: 24556
-		// (get) Token: 0x06028D95 RID: 167317 RVA: 0x009B5E62 File Offset: 0x009B4062
-		// (set) Token: 0x06028D96 RID: 167318 RVA: 0x009B5E72 File Offset: 0x009B4072
+		// Token: 0x17003959 RID: 14681
+		// (get) Token: 0x0601F732 RID: 128818 RVA: 0x0092DF2A File Offset: 0x0092C12A
+		// (set) Token: 0x0601F733 RID: 128819 RVA: 0x0092DF3A File Offset: 0x0092C13A
 		public unsafe float 搁浅位置
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_39);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_搁浅位置);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_39) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_搁浅位置) = value;
 			}
 		}
 
-		// Token: 0x17005FED RID: 24557
-		// (get) Token: 0x06028D97 RID: 167319 RVA: 0x009B5E83 File Offset: 0x009B4083
-		// (set) Token: 0x06028D98 RID: 167320 RVA: 0x009B5E93 File Offset: 0x009B4093
+		// Token: 0x1700395A RID: 14682
+		// (get) Token: 0x0601F734 RID: 128820 RVA: 0x0092DF4B File Offset: 0x0092C14B
+		// (set) Token: 0x0601F735 RID: 128821 RVA: 0x0092DF5B File Offset: 0x0092C15B
 		public unsafe float 漂浮阻力系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_40);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_漂浮阻力系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_40) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_漂浮阻力系数) = value;
 			}
 		}
 
-		// Token: 0x17005FEE RID: 24558
-		// (get) Token: 0x06028D99 RID: 167321 RVA: 0x009B5EA4 File Offset: 0x009B40A4
-		// (set) Token: 0x06028D9A RID: 167322 RVA: 0x009B5EB4 File Offset: 0x009B40B4
+		// Token: 0x1700395B RID: 14683
+		// (get) Token: 0x0601F736 RID: 128822 RVA: 0x0092DF6C File Offset: 0x0092C16C
+		// (set) Token: 0x0601F737 RID: 128823 RVA: 0x0092DF7C File Offset: 0x0092C17C
 		public unsafe float 转动惯量
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_41);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_转动惯量);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_41) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_转动惯量) = value;
 			}
 		}
 
-		// Token: 0x17005FEF RID: 24559
-		// (get) Token: 0x06028D9B RID: 167323 RVA: 0x009B5EC5 File Offset: 0x009B40C5
-		// (set) Token: 0x06028D9C RID: 167324 RVA: 0x009B5ED5 File Offset: 0x009B40D5
+		// Token: 0x1700395C RID: 14684
+		// (get) Token: 0x0601F738 RID: 128824 RVA: 0x0092DF8D File Offset: 0x0092C18D
+		// (set) Token: 0x0601F739 RID: 128825 RVA: 0x0092DF9D File Offset: 0x0092C19D
 		public unsafe float 速度冲击力系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_42);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_速度冲击力系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_42) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_速度冲击力系数) = value;
 			}
 		}
 
-		// Token: 0x17005FF0 RID: 24560
-		// (get) Token: 0x06028D9D RID: 167325 RVA: 0x009B5EE6 File Offset: 0x009B40E6
-		// (set) Token: 0x06028D9E RID: 167326 RVA: 0x009B5EF6 File Offset: 0x009B40F6
+		// Token: 0x1700395D RID: 14685
+		// (get) Token: 0x0601F73A RID: 128826 RVA: 0x0092DFAE File Offset: 0x0092C1AE
+		// (set) Token: 0x0601F73B RID: 128827 RVA: 0x0092DFBE File Offset: 0x0092C1BE
 		public unsafe float 旋转冲击力系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_43);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_旋转冲击力系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_43) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_旋转冲击力系数) = value;
 			}
 		}
 
-		// Token: 0x17005FF1 RID: 24561
-		// (get) Token: 0x06028D9F RID: 167327 RVA: 0x009B5F07 File Offset: 0x009B4107
-		// (set) Token: 0x06028DA0 RID: 167328 RVA: 0x009B5F17 File Offset: 0x009B4117
+		// Token: 0x1700395E RID: 14686
+		// (get) Token: 0x0601F73C RID: 128828 RVA: 0x0092DFCF File Offset: 0x0092C1CF
+		// (set) Token: 0x0601F73D RID: 128829 RVA: 0x0092DFDF File Offset: 0x0092C1DF
 		public unsafe float 常态转向强制前向输入系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_44);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向强制前向输入系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_44) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态转向强制前向输入系数) = value;
 			}
 		}
 
-		// Token: 0x17005FF2 RID: 24562
-		// (get) Token: 0x06028DA1 RID: 167329 RVA: 0x009B5F28 File Offset: 0x009B4128
-		// (set) Token: 0x06028DA2 RID: 167330 RVA: 0x009B5F38 File Offset: 0x009B4138
+		// Token: 0x1700395F RID: 14687
+		// (get) Token: 0x0601F73E RID: 128830 RVA: 0x0092DFF0 File Offset: 0x0092C1F0
+		// (set) Token: 0x0601F73F RID: 128831 RVA: 0x0092E000 File Offset: 0x0092C200
 		public unsafe float 冲刺转向强制前向输入系数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_45);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向强制前向输入系数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_45) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺转向强制前向输入系数) = value;
 			}
 		}
 
-		// Token: 0x17005FF3 RID: 24563
-		// (get) Token: 0x06028DA3 RID: 167331 RVA: 0x009B5F49 File Offset: 0x009B4149
-		// (set) Token: 0x06028DA4 RID: 167332 RVA: 0x009B5F59 File Offset: 0x009B4159
+		// Token: 0x17003960 RID: 14688
+		// (get) Token: 0x0601F740 RID: 128832 RVA: 0x0092E011 File Offset: 0x0092C211
+		// (set) Token: 0x0601F741 RID: 128833 RVA: 0x0092E021 File Offset: 0x0092C221
 		public unsafe float 常态最大前后输入阈值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_46);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大前后输入阈值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_46) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大前后输入阈值) = value;
 			}
 		}
 
-		// Token: 0x17005FF4 RID: 24564
-		// (get) Token: 0x06028DA5 RID: 167333 RVA: 0x009B5F6A File Offset: 0x009B416A
-		// (set) Token: 0x06028DA6 RID: 167334 RVA: 0x009B5F7A File Offset: 0x009B417A
+		// Token: 0x17003961 RID: 14689
+		// (get) Token: 0x0601F742 RID: 128834 RVA: 0x0092E032 File Offset: 0x0092C232
+		// (set) Token: 0x0601F743 RID: 128835 RVA: 0x0092E042 File Offset: 0x0092C242
 		public unsafe float 常态最大左右输入阈值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_47);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大左右输入阈值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_47) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_常态最大左右输入阈值) = value;
 			}
 		}
 
-		// Token: 0x17005FF5 RID: 24565
-		// (get) Token: 0x06028DA7 RID: 167335 RVA: 0x009B5F8B File Offset: 0x009B418B
-		// (set) Token: 0x06028DA8 RID: 167336 RVA: 0x009B5F9B File Offset: 0x009B419B
+		// Token: 0x17003962 RID: 14690
+		// (get) Token: 0x0601F744 RID: 128836 RVA: 0x0092E053 File Offset: 0x0092C253
+		// (set) Token: 0x0601F745 RID: 128837 RVA: 0x0092E063 File Offset: 0x0092C263
 		public unsafe float 冲刺最大前后输入阈值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_48);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大前后输入阈值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_48) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大前后输入阈值) = value;
 			}
 		}
 
-		// Token: 0x17005FF6 RID: 24566
-		// (get) Token: 0x06028DA9 RID: 167337 RVA: 0x009B5FAC File Offset: 0x009B41AC
-		// (set) Token: 0x06028DAA RID: 167338 RVA: 0x009B5FBC File Offset: 0x009B41BC
+		// Token: 0x17003963 RID: 14691
+		// (get) Token: 0x0601F746 RID: 128838 RVA: 0x0092E074 File Offset: 0x0092C274
+		// (set) Token: 0x0601F747 RID: 128839 RVA: 0x0092E084 File Offset: 0x0092C284
 		public unsafe float 冲刺最大左右输入阈值
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_49);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大左右输入阈值);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_49) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大左右输入阈值) = value;
 			}
 		}
 
-		// Token: 0x17005FF7 RID: 24567
-		// (get) Token: 0x06028DAB RID: 167339 RVA: 0x009B5FCD File Offset: 0x009B41CD
-		// (set) Token: 0x06028DAC RID: 167340 RVA: 0x009B5FDD File Offset: 0x009B41DD
+		// Token: 0x17003964 RID: 14692
+		// (get) Token: 0x0601F748 RID: 128840 RVA: 0x0092E095 File Offset: 0x0092C295
+		// (set) Token: 0x0601F749 RID: 128841 RVA: 0x0092E0A5 File Offset: 0x0092C2A5
 		public unsafe float 冲刺持续时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_50);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺持续时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_50) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺持续时间) = value;
 			}
 		}
 
-		// Token: 0x17005FF8 RID: 24568
-		// (get) Token: 0x06028DAD RID: 167341 RVA: 0x009B5FEE File Offset: 0x009B41EE
-		// (set) Token: 0x06028DAE RID: 167342 RVA: 0x009B5FFE File Offset: 0x009B41FE
+		// Token: 0x17003965 RID: 14693
+		// (get) Token: 0x0601F74A RID: 128842 RVA: 0x0092E0B6 File Offset: 0x0092C2B6
+		// (set) Token: 0x0601F74B RID: 128843 RVA: 0x0092E0C6 File Offset: 0x0092C2C6
 		public unsafe float 冲刺冷却时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_51);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺冷却时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_51) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺冷却时间) = value;
 			}
 		}
 
-		// Token: 0x17005FF9 RID: 24569
-		// (get) Token: 0x06028DAF RID: 167343 RVA: 0x009B600F File Offset: 0x009B420F
-		// (set) Token: 0x06028DB0 RID: 167344 RVA: 0x009B601F File Offset: 0x009B421F
+		// Token: 0x17003966 RID: 14694
+		// (get) Token: 0x0601F74C RID: 128844 RVA: 0x0092E0D7 File Offset: 0x0092C2D7
+		// (set) Token: 0x0601F74D RID: 128845 RVA: 0x0092E0E7 File Offset: 0x0092C2E7
 		public unsafe int 冲刺最大使用次数
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_52);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大使用次数);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_52) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_冲刺最大使用次数) = value;
 			}
 		}
 
-		// Token: 0x17005FFA RID: 24570
-		// (get) Token: 0x06028DB1 RID: 167345 RVA: 0x009B6030 File Offset: 0x009B4230
-		// (set) Token: 0x06028DB2 RID: 167346 RVA: 0x009B6040 File Offset: 0x009B4240
+		// Token: 0x17003967 RID: 14695
+		// (get) Token: 0x0601F74E RID: 128846 RVA: 0x0092E0F8 File Offset: 0x0092C2F8
+		// (set) Token: 0x0601F74F RID: 128847 RVA: 0x0092E108 File Offset: 0x0092C308
 		public unsafe float 前向转弯最小X输入
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_53);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_前向转弯最小X输入);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_53) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_前向转弯最小X输入) = value;
 			}
 		}
 
-		// Token: 0x17005FFB RID: 24571
-		// (get) Token: 0x06028DB3 RID: 167347 RVA: 0x009B6051 File Offset: 0x009B4251
-		// (set) Token: 0x06028DB4 RID: 167348 RVA: 0x009B6061 File Offset: 0x009B4261
+		// Token: 0x17003968 RID: 14696
+		// (get) Token: 0x0601F750 RID: 128848 RVA: 0x0092E119 File Offset: 0x0092C319
+		// (set) Token: 0x0601F751 RID: 128849 RVA: 0x0092E129 File Offset: 0x0092C329
 		public unsafe float 后向转向最大X输入
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_54);
+				return *(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_后向转向最大X输入);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_54) = value;
+				*(base.NativePtr + (IntPtr)BP_GongduolaConfig_C.__PropertyOffset_后向转向最大X输入) = value;
 			}
 		}
 
-		// Token: 0x06028DB5 RID: 167349 RVA: 0x009B6072 File Offset: 0x009B4272
+		// Token: 0x0601F752 RID: 128850 RVA: 0x0092E13A File Offset: 0x0092C33A
 		protected BP_GongduolaConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014E06 RID: 85510
+		// Token: 0x04010DAB RID: 69035
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Level/Vehicle/BP_GongduolaConfig.BP_GongduolaConfig_C";
 
-		// Token: 0x04014E07 RID: 85511
+		// Token: 0x04010DAC RID: 69036
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014E08 RID: 85512
+		// Token: 0x04010DAD RID: 69037
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014E09 RID: 85513
-		internal new static int __PropertyOffset_0;
+		// Token: 0x04010DAE RID: 69038
+		internal static int __PropertyOffset_前进最大移动速度;
 
-		// Token: 0x04014E0A RID: 85514
-		internal new static int __PropertyOffset_1;
+		// Token: 0x04010DAF RID: 69039
+		internal static int __PropertyOffset_常态后退最大移动速度;
 
-		// Token: 0x04014E0B RID: 85515
-		internal new static int __PropertyOffset_2;
+		// Token: 0x04010DB0 RID: 69040
+		internal static int __PropertyOffset_常态前进加速度;
 
-		// Token: 0x04014E0C RID: 85516
-		internal new static int __PropertyOffset_3;
+		// Token: 0x04010DB1 RID: 69041
+		internal static int __PropertyOffset_常态后退加速度;
 
-		// Token: 0x04014E0D RID: 85517
-		internal new static int __PropertyOffset_4;
+		// Token: 0x04010DB2 RID: 69042
+		internal static int __PropertyOffset_常态刹车加速度;
 
-		// Token: 0x04014E0E RID: 85518
-		internal new static int __PropertyOffset_5;
+		// Token: 0x04010DB3 RID: 69043
+		internal static int __PropertyOffset_常态最小加速度;
 
-		// Token: 0x04014E0F RID: 85519
-		internal new static int __PropertyOffset_6;
+		// Token: 0x04010DB4 RID: 69044
+		internal static int __PropertyOffset_常态最大转向加速度;
 
-		// Token: 0x04014E10 RID: 85520
-		internal new static int __PropertyOffset_7;
+		// Token: 0x04010DB5 RID: 69045
+		internal static int __PropertyOffset_常态最小转向加速度;
 
-		// Token: 0x04014E11 RID: 85521
-		internal new static int __PropertyOffset_8;
+		// Token: 0x04010DB6 RID: 69046
+		internal static int __PropertyOffset_常态转向公式角度修正系数;
 
-		// Token: 0x04014E12 RID: 85522
-		internal new static int __PropertyOffset_9;
+		// Token: 0x04010DB7 RID: 69047
+		internal static int __PropertyOffset_常态转向公式速度修正系数;
 
-		// Token: 0x04014E13 RID: 85523
-		internal new static int __PropertyOffset_10;
+		// Token: 0x04010DB8 RID: 69048
+		internal static int __PropertyOffset_常态转向公式最终修正系数;
 
-		// Token: 0x04014E14 RID: 85524
-		internal new static int __PropertyOffset_11;
+		// Token: 0x04010DB9 RID: 69049
+		internal static int __PropertyOffset_常态径向运动摩擦力;
 
-		// Token: 0x04014E15 RID: 85525
-		internal new static int __PropertyOffset_12;
+		// Token: 0x04010DBA RID: 69050
+		internal static int __PropertyOffset_常态横向运动摩擦力;
 
-		// Token: 0x04014E16 RID: 85526
-		internal new static int __PropertyOffset_13;
+		// Token: 0x04010DBB RID: 69051
+		internal static int __PropertyOffset_常态最大转向速度;
 
-		// Token: 0x04014E17 RID: 85527
-		internal new static int __PropertyOffset_14;
+		// Token: 0x04010DBC RID: 69052
+		internal static int __PropertyOffset_常态转向摩擦力系数;
 
-		// Token: 0x04014E18 RID: 85528
-		internal new static int __PropertyOffset_15;
+		// Token: 0x04010DBD RID: 69053
+		internal static int __PropertyOffset_常态转向静止摩擦力;
 
-		// Token: 0x04014E19 RID: 85529
-		internal new static int __PropertyOffset_16;
+		// Token: 0x04010DBE RID: 69054
+		internal static int __PropertyOffset_冲刺超限持续时间;
 
-		// Token: 0x04014E1A RID: 85530
-		internal new static int __PropertyOffset_17;
+		// Token: 0x04010DBF RID: 69055
+		internal static int __PropertyOffset_冲刺超限移动速度;
 
-		// Token: 0x04014E1B RID: 85531
-		internal new static int __PropertyOffset_18;
+		// Token: 0x04010DC0 RID: 69056
+		internal static int __PropertyOffset_冲刺最大移动速度;
 
-		// Token: 0x04014E1C RID: 85532
-		internal new static int __PropertyOffset_19;
+		// Token: 0x04010DC1 RID: 69057
+		internal static int __PropertyOffset_冲刺后退最大移动速度;
 
-		// Token: 0x04014E1D RID: 85533
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010DC2 RID: 69058
+		internal static int __PropertyOffset_冲刺停止速度;
 
-		// Token: 0x04014E1E RID: 85534
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010DC3 RID: 69059
+		internal static int __PropertyOffset_冲刺前进加速度;
 
-		// Token: 0x04014E1F RID: 85535
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010DC4 RID: 69060
+		internal static int __PropertyOffset_冲刺刹车加速度;
 
-		// Token: 0x04014E20 RID: 85536
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010DC5 RID: 69061
+		internal static int __PropertyOffset_冲刺后退加速度;
 
-		// Token: 0x04014E21 RID: 85537
-		internal static int __PropertyOffset_24;
+		// Token: 0x04010DC6 RID: 69062
+		internal static int __PropertyOffset_冲刺最小加速度;
 
-		// Token: 0x04014E22 RID: 85538
-		internal static int __PropertyOffset_25;
+		// Token: 0x04010DC7 RID: 69063
+		internal static int __PropertyOffset_冲刺最大转向加速度;
 
-		// Token: 0x04014E23 RID: 85539
-		internal static int __PropertyOffset_26;
+		// Token: 0x04010DC8 RID: 69064
+		internal static int __PropertyOffset_冲刺最小转向加速度;
 
-		// Token: 0x04014E24 RID: 85540
-		internal static int __PropertyOffset_27;
+		// Token: 0x04010DC9 RID: 69065
+		internal static int __PropertyOffset_冲刺转向公式角度修正系数;
 
-		// Token: 0x04014E25 RID: 85541
-		internal static int __PropertyOffset_28;
+		// Token: 0x04010DCA RID: 69066
+		internal static int __PropertyOffset_冲刺转向公式速度修正系数;
 
-		// Token: 0x04014E26 RID: 85542
-		internal static int __PropertyOffset_29;
+		// Token: 0x04010DCB RID: 69067
+		internal static int __PropertyOffset_冲刺转向公式最终修正系数;
 
-		// Token: 0x04014E27 RID: 85543
-		internal static int __PropertyOffset_30;
+		// Token: 0x04010DCC RID: 69068
+		internal static int __PropertyOffset_冲刺径向运动摩擦力;
 
-		// Token: 0x04014E28 RID: 85544
-		internal static int __PropertyOffset_31;
+		// Token: 0x04010DCD RID: 69069
+		internal static int __PropertyOffset_冲刺横向运动摩擦力;
 
-		// Token: 0x04014E29 RID: 85545
-		internal static int __PropertyOffset_32;
+		// Token: 0x04010DCE RID: 69070
+		internal static int __PropertyOffset_冲刺最大转向速度;
 
-		// Token: 0x04014E2A RID: 85546
-		internal static int __PropertyOffset_33;
+		// Token: 0x04010DCF RID: 69071
+		internal static int __PropertyOffset_冲刺转向摩擦力系数;
 
-		// Token: 0x04014E2B RID: 85547
-		internal static int __PropertyOffset_34;
+		// Token: 0x04010DD0 RID: 69072
+		internal static int __PropertyOffset_冲刺转向静止摩擦力;
 
-		// Token: 0x04014E2C RID: 85548
-		internal static int __PropertyOffset_35;
+		// Token: 0x04010DD1 RID: 69073
+		internal static int __PropertyOffset_超出最大速度时的额外摩擦力;
 
-		// Token: 0x04014E2D RID: 85549
-		internal static int __PropertyOffset_36;
+		// Token: 0x04010DD2 RID: 69074
+		internal static int __PropertyOffset_冲刺固定前向输入时间;
 
-		// Token: 0x04014E2E RID: 85550
-		internal static int __PropertyOffset_37;
+		// Token: 0x04010DD3 RID: 69075
+		internal static int __PropertyOffset_最大上浮速度;
 
-		// Token: 0x04014E2F RID: 85551
-		internal static int __PropertyOffset_38;
+		// Token: 0x04010DD4 RID: 69076
+		internal static int __PropertyOffset_浮力平衡位置;
 
-		// Token: 0x04014E30 RID: 85552
-		internal static int __PropertyOffset_39;
+		// Token: 0x04010DD5 RID: 69077
+		internal static int __PropertyOffset_搁浅位置;
 
-		// Token: 0x04014E31 RID: 85553
-		internal static int __PropertyOffset_40;
+		// Token: 0x04010DD6 RID: 69078
+		internal static int __PropertyOffset_漂浮阻力系数;
 
-		// Token: 0x04014E32 RID: 85554
-		internal static int __PropertyOffset_41;
+		// Token: 0x04010DD7 RID: 69079
+		internal static int __PropertyOffset_转动惯量;
 
-		// Token: 0x04014E33 RID: 85555
-		internal static int __PropertyOffset_42;
+		// Token: 0x04010DD8 RID: 69080
+		internal static int __PropertyOffset_速度冲击力系数;
 
-		// Token: 0x04014E34 RID: 85556
-		internal static int __PropertyOffset_43;
+		// Token: 0x04010DD9 RID: 69081
+		internal static int __PropertyOffset_旋转冲击力系数;
 
-		// Token: 0x04014E35 RID: 85557
-		internal static int __PropertyOffset_44;
+		// Token: 0x04010DDA RID: 69082
+		internal static int __PropertyOffset_常态转向强制前向输入系数;
 
-		// Token: 0x04014E36 RID: 85558
-		internal static int __PropertyOffset_45;
+		// Token: 0x04010DDB RID: 69083
+		internal static int __PropertyOffset_冲刺转向强制前向输入系数;
 
-		// Token: 0x04014E37 RID: 85559
-		internal static int __PropertyOffset_46;
+		// Token: 0x04010DDC RID: 69084
+		internal static int __PropertyOffset_常态最大前后输入阈值;
 
-		// Token: 0x04014E38 RID: 85560
-		internal static int __PropertyOffset_47;
+		// Token: 0x04010DDD RID: 69085
+		internal static int __PropertyOffset_常态最大左右输入阈值;
 
-		// Token: 0x04014E39 RID: 85561
-		internal static int __PropertyOffset_48;
+		// Token: 0x04010DDE RID: 69086
+		internal static int __PropertyOffset_冲刺最大前后输入阈值;
 
-		// Token: 0x04014E3A RID: 85562
-		internal static int __PropertyOffset_49;
+		// Token: 0x04010DDF RID: 69087
+		internal static int __PropertyOffset_冲刺最大左右输入阈值;
 
-		// Token: 0x04014E3B RID: 85563
-		internal static int __PropertyOffset_50;
+		// Token: 0x04010DE0 RID: 69088
+		internal static int __PropertyOffset_冲刺持续时间;
 
-		// Token: 0x04014E3C RID: 85564
-		internal static int __PropertyOffset_51;
+		// Token: 0x04010DE1 RID: 69089
+		internal static int __PropertyOffset_冲刺冷却时间;
 
-		// Token: 0x04014E3D RID: 85565
-		internal static int __PropertyOffset_52;
+		// Token: 0x04010DE2 RID: 69090
+		internal static int __PropertyOffset_冲刺最大使用次数;
 
-		// Token: 0x04014E3E RID: 85566
-		internal static int __PropertyOffset_53;
+		// Token: 0x04010DE3 RID: 69091
+		internal static int __PropertyOffset_前向转弯最小X输入;
 
-		// Token: 0x04014E3F RID: 85567
-		internal static int __PropertyOffset_54;
+		// Token: 0x04010DE4 RID: 69092
+		internal static int __PropertyOffset_后向转向最大X输入;
 	}
 }

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200507F RID: 20607
+	// Token: 0x0200404F RID: 16463
 	public class PlotTextAudioComponentPlayToneContext
 	{
-		// Token: 0x17008065 RID: 32869
-		// (get) Token: 0x06034CC8 RID: 216264 RVA: 0x00C7DAEB File Offset: 0x00C7BCEB
-		// (set) Token: 0x06034CC9 RID: 216265 RVA: 0x00C7DAF3 File Offset: 0x00C7BCF3
+		// Token: 0x17005425 RID: 21541
+		// (get) Token: 0x06029BBD RID: 170941 RVA: 0x00BCAEC3 File Offset: 0x00BC90C3
+		// (set) Token: 0x06029BBE RID: 170942 RVA: 0x00BCAECB File Offset: 0x00BC90CB
 		public int TimberId { get; set; }
 
-		// Token: 0x17008066 RID: 32870
-		// (get) Token: 0x06034CCA RID: 216266 RVA: 0x00C7DAFC File Offset: 0x00C7BCFC
-		// (set) Token: 0x06034CCB RID: 216267 RVA: 0x00C7DB04 File Offset: 0x00C7BD04
+		// Token: 0x17005426 RID: 21542
+		// (get) Token: 0x06029BBF RID: 170943 RVA: 0x00BCAED4 File Offset: 0x00BC90D4
+		// (set) Token: 0x06029BC0 RID: 170944 RVA: 0x00BCAEDC File Offset: 0x00BC90DC
 		public int UniversalToneId { get; set; }
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020032B4 RID: 12980
+// Token: 0x02002825 RID: 10277
 public enum EForbidSettingLocAndRotReason
 {
-	// Token: 0x0400DE8C RID: 56972
+	// Token: 0x0400E332 RID: 58162
 	RideVehicle,
-	// Token: 0x0400DE8D RID: 56973
+	// Token: 0x0400E333 RID: 58163
 	Swing,
-	// Token: 0x0400DE8E RID: 56974
+	// Token: 0x0400E334 RID: 58164
 	GuessJokerSit
 }

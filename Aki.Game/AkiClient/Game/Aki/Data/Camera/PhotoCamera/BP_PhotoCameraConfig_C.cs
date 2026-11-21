@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 {
-	// Token: 0x02003FB0 RID: 16304
+	// Token: 0x02003238 RID: 12856
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Camera/PhotoCamera/BP_PhotoCameraConfig.BP_PhotoCameraConfig_C")]
 	[UnrealStructLayout(488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 488)]
 	public class BP_PhotoCameraConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029B6C RID: 170860 RVA: 0x009CAD90 File Offset: 0x009C8F90
+		// Token: 0x0602019C RID: 131484 RVA: 0x0093D6B4 File Offset: 0x0093B8B4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_PhotoCameraConfig_C._ClassPtr == IntPtr.Zero)
@@ -25,37 +25,37 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 			return BP_PhotoCameraConfig_C._ClassPtr;
 		}
 
-		// Token: 0x06029B6D RID: 170861 RVA: 0x009CADB4 File Offset: 0x009C8FB4
+		// Token: 0x0602019D RID: 131485 RVA: 0x0093D6D8 File Offset: 0x0093B8D8
 		public BP_PhotoCameraConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_PhotoCameraConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029B6E RID: 170862 RVA: 0x009CADDC File Offset: 0x009C8FDC
+		// Token: 0x0602019E RID: 131486 RVA: 0x0093D700 File Offset: 0x0093B900
 		public BP_PhotoCameraConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_PhotoCameraConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170064E6 RID: 25830
-		// (get) Token: 0x06029B6F RID: 170863 RVA: 0x009CAE0F File Offset: 0x009C900F
-		// (set) Token: 0x06029B70 RID: 170864 RVA: 0x009CAE23 File Offset: 0x009C9023
+		// Token: 0x17003D4D RID: 15693
+		// (get) Token: 0x0602019F RID: 131487 RVA: 0x0093D733 File Offset: 0x0093B933
+		// (set) Token: 0x060201A0 RID: 131488 RVA: 0x0093D747 File Offset: 0x0093B947
 		[Nullable(0)]
 		public unsafe TEnumAsByte<PhotoCameraType> Type
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_Type);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_Type) = value;
 			}
 		}
 
-		// Token: 0x170064E7 RID: 25831
-		// (get) Token: 0x06029B71 RID: 170865 RVA: 0x009CAE38 File Offset: 0x009C9038
-		// (set) Token: 0x06029B72 RID: 170866 RVA: 0x009CAE71 File Offset: 0x009C9071
+		// Token: 0x17003D4E RID: 15694
+		// (get) Token: 0x060201A1 RID: 131489 RVA: 0x0093D75C File Offset: 0x0093B95C
+		// (set) Token: 0x060201A2 RID: 131490 RVA: 0x0093D795 File Offset: 0x0093B995
 		public SPhotoCameraCommonConfig CommonConfig
 		{
 			get
@@ -64,19 +64,19 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 				SPhotoCameraCommonConfig result;
 				if ((result = this._CommonConfig) == null)
 				{
-					result = (this._CommonConfig = new SPhotoCameraCommonConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_1, this));
+					result = (this._CommonConfig = new SPhotoCameraCommonConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CommonConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraCommonConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraCommonConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CommonConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170064E8 RID: 25832
-		// (get) Token: 0x06029B73 RID: 170867 RVA: 0x009CAE94 File Offset: 0x009C9094
-		// (set) Token: 0x06029B74 RID: 170868 RVA: 0x009CAECD File Offset: 0x009C90CD
+		// Token: 0x17003D4F RID: 15695
+		// (get) Token: 0x060201A3 RID: 131491 RVA: 0x0093D7B8 File Offset: 0x0093B9B8
+		// (set) Token: 0x060201A4 RID: 131492 RVA: 0x0093D7F1 File Offset: 0x0093B9F1
 		public SPhotoCameraMoveConfig MoveConfig
 		{
 			get
@@ -85,34 +85,34 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 				SPhotoCameraMoveConfig result;
 				if ((result = this._MoveConfig) == null)
 				{
-					result = (this._MoveConfig = new SPhotoCameraMoveConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_2, this));
+					result = (this._MoveConfig = new SPhotoCameraMoveConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_MoveConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraMoveConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraMoveConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_MoveConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170064E9 RID: 25833
-		// (get) Token: 0x06029B75 RID: 170869 RVA: 0x009CAEEE File Offset: 0x009C90EE
-		// (set) Token: 0x06029B76 RID: 170870 RVA: 0x009CAF02 File Offset: 0x009C9102
+		// Token: 0x17003D50 RID: 15696
+		// (get) Token: 0x060201A5 RID: 131493 RVA: 0x0093D812 File Offset: 0x0093BA12
+		// (set) Token: 0x060201A6 RID: 131494 RVA: 0x0093D826 File Offset: 0x0093BA26
 		public unsafe SPhotoCameraSelfieIkConfig SelfieIkConfig
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_SelfieIkConfig);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_SelfieIkConfig) = value;
 			}
 		}
 
-		// Token: 0x170064EA RID: 25834
-		// (get) Token: 0x06029B77 RID: 170871 RVA: 0x009CAF18 File Offset: 0x009C9118
-		// (set) Token: 0x06029B78 RID: 170872 RVA: 0x009CAF51 File Offset: 0x009C9151
+		// Token: 0x17003D51 RID: 15697
+		// (get) Token: 0x060201A7 RID: 131495 RVA: 0x0093D83C File Offset: 0x0093BA3C
+		// (set) Token: 0x060201A8 RID: 131496 RVA: 0x0093D875 File Offset: 0x0093BA75
 		[Nullable(new byte[]
 		{
 			1,
@@ -133,7 +133,7 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 				TMap<TEnumAsByte<EPhotoCameraBodyType>, SPhotoCameraMorphDeltaConfig> result;
 				if ((result = this._BodyTypeDeltaConfig) == null)
 				{
-					result = (this._BodyTypeDeltaConfig = new TMap<TEnumAsByte<EPhotoCameraBodyType>, SPhotoCameraMorphDeltaConfig>(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_4, this));
+					result = (this._BodyTypeDeltaConfig = new TMap<TEnumAsByte<EPhotoCameraBodyType>, SPhotoCameraMorphDeltaConfig>(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_BodyTypeDeltaConfig, this));
 				}
 				return result;
 			}
@@ -149,39 +149,39 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 			}
 		}
 
-		// Token: 0x170064EB RID: 25835
-		// (get) Token: 0x06029B79 RID: 170873 RVA: 0x009CAF5F File Offset: 0x009C915F
-		// (set) Token: 0x06029B7A RID: 170874 RVA: 0x009CAF6F File Offset: 0x009C916F
+		// Token: 0x17003D52 RID: 15698
+		// (get) Token: 0x060201A9 RID: 131497 RVA: 0x0093D883 File Offset: 0x0093BA83
+		// (set) Token: 0x060201AA RID: 131498 RVA: 0x0093D893 File Offset: 0x0093BA93
 		public unsafe bool IsTemplate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_IsTemplate) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_IsTemplate) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170064EC RID: 25836
-		// (get) Token: 0x06029B7B RID: 170875 RVA: 0x009CAF80 File Offset: 0x009C9180
-		// (set) Token: 0x06029B7C RID: 170876 RVA: 0x009CAF90 File Offset: 0x009C9190
+		// Token: 0x17003D53 RID: 15699
+		// (get) Token: 0x060201AB RID: 131499 RVA: 0x0093D8A4 File Offset: 0x0093BAA4
+		// (set) Token: 0x060201AC RID: 131500 RVA: 0x0093D8B4 File Offset: 0x0093BAB4
 		public unsafe bool IsOpenDebugChangeConfigPreview
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_IsOpenDebugChangeConfigPreview) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_IsOpenDebugChangeConfigPreview) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170064ED RID: 25837
-		// (get) Token: 0x06029B7D RID: 170877 RVA: 0x009CAFA4 File Offset: 0x009C91A4
-		// (set) Token: 0x06029B7E RID: 170878 RVA: 0x009CAFDD File Offset: 0x009C91DD
+		// Token: 0x17003D54 RID: 15700
+		// (get) Token: 0x060201AD RID: 131501 RVA: 0x0093D8C8 File Offset: 0x0093BAC8
+		// (set) Token: 0x060201AE RID: 131502 RVA: 0x0093D901 File Offset: 0x0093BB01
 		public SPhotoCameraCompositionConfig CompositionConfig
 		{
 			get
@@ -190,49 +190,49 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 				SPhotoCameraCompositionConfig result;
 				if ((result = this._CompositionConfig) == null)
 				{
-					result = (this._CompositionConfig = new SPhotoCameraCompositionConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_7, this));
+					result = (this._CompositionConfig = new SPhotoCameraCompositionConfig(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CompositionConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraCompositionConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_7, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SPhotoCameraCompositionConfig.StaticStruct(), base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CompositionConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170064EE RID: 25838
-		// (get) Token: 0x06029B7F RID: 170879 RVA: 0x009CAFFE File Offset: 0x009C91FE
-		// (set) Token: 0x06029B80 RID: 170880 RVA: 0x009CB00E File Offset: 0x009C920E
+		// Token: 0x17003D55 RID: 15701
+		// (get) Token: 0x060201AF RID: 131503 RVA: 0x0093D922 File Offset: 0x0093BB22
+		// (set) Token: 0x060201B0 RID: 131504 RVA: 0x0093D932 File Offset: 0x0093BB32
 		public unsafe float CharacterMoveSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CharacterMoveSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_CharacterMoveSpeed) = value;
 			}
 		}
 
-		// Token: 0x170064EF RID: 25839
-		// (get) Token: 0x06029B81 RID: 170881 RVA: 0x009CB01F File Offset: 0x009C921F
-		// (set) Token: 0x06029B82 RID: 170882 RVA: 0x009CB02F File Offset: 0x009C922F
+		// Token: 0x17003D56 RID: 15702
+		// (get) Token: 0x060201B1 RID: 131505 RVA: 0x0093D943 File Offset: 0x0093BB43
+		// (set) Token: 0x060201B2 RID: 131506 RVA: 0x0093D953 File Offset: 0x0093BB53
 		public unsafe bool NeedLeaveSitDownBeforeEnter
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_NeedLeaveSitDownBeforeEnter) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_NeedLeaveSitDownBeforeEnter) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170064F0 RID: 25840
-		// (get) Token: 0x06029B83 RID: 170883 RVA: 0x009CB040 File Offset: 0x009C9240
-		// (set) Token: 0x06029B84 RID: 170884 RVA: 0x009CB079 File Offset: 0x009C9279
+		// Token: 0x17003D57 RID: 15703
+		// (get) Token: 0x060201B3 RID: 131507 RVA: 0x0093D964 File Offset: 0x0093BB64
+		// (set) Token: 0x060201B4 RID: 131508 RVA: 0x0093D99D File Offset: 0x0093BB9D
 		public TArray<string> Tags
 		{
 			get
@@ -241,7 +241,7 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 				TArray<string> result;
 				if ((result = this._Tags) == null)
 				{
-					result = (this._Tags = new TArray<string>(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_10, this));
+					result = (this._Tags = new TArray<string>(base.NativePtr + (IntPtr)BP_PhotoCameraConfig_C.__PropertyOffset_Tags, this));
 				}
 				return result;
 			}
@@ -251,44 +251,44 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 			}
 		}
 
-		// Token: 0x06029B85 RID: 170885 RVA: 0x009CB087 File Offset: 0x009C9287
+		// Token: 0x060201B5 RID: 131509 RVA: 0x0093D9AB File Offset: 0x0093BBAB
 		protected BP_PhotoCameraConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040156AF RID: 87727
+		// Token: 0x04011457 RID: 70743
 		public new const string __ObjectPath = "/Game/Aki/Data/Camera/PhotoCamera/BP_PhotoCameraConfig.BP_PhotoCameraConfig_C";
 
-		// Token: 0x040156B0 RID: 87728
+		// Token: 0x04011458 RID: 70744
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040156B1 RID: 87729
+		// Token: 0x04011459 RID: 70745
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040156B2 RID: 87730
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401145A RID: 70746
+		internal static int __PropertyOffset_Type;
 
-		// Token: 0x040156B3 RID: 87731
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401145B RID: 70747
+		internal static int __PropertyOffset_CommonConfig;
 
-		// Token: 0x040156B4 RID: 87732
+		// Token: 0x0401145C RID: 70748
 		[Nullable(2)]
 		private SPhotoCameraCommonConfig _CommonConfig;
 
-		// Token: 0x040156B5 RID: 87733
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401145D RID: 70749
+		internal static int __PropertyOffset_MoveConfig;
 
-		// Token: 0x040156B6 RID: 87734
+		// Token: 0x0401145E RID: 70750
 		[Nullable(2)]
 		private SPhotoCameraMoveConfig _MoveConfig;
 
-		// Token: 0x040156B7 RID: 87735
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401145F RID: 70751
+		internal static int __PropertyOffset_SelfieIkConfig;
 
-		// Token: 0x040156B8 RID: 87736
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011460 RID: 70752
+		internal static int __PropertyOffset_BodyTypeDeltaConfig;
 
-		// Token: 0x040156B9 RID: 87737
+		// Token: 0x04011461 RID: 70753
 		[Nullable(new byte[]
 		{
 			2,
@@ -297,29 +297,29 @@ namespace AkiClient.Game.Aki.Data.Camera.PhotoCamera
 		})]
 		private TMap<TEnumAsByte<EPhotoCameraBodyType>, SPhotoCameraMorphDeltaConfig> _BodyTypeDeltaConfig;
 
-		// Token: 0x040156BA RID: 87738
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011462 RID: 70754
+		internal static int __PropertyOffset_IsTemplate;
 
-		// Token: 0x040156BB RID: 87739
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011463 RID: 70755
+		internal static int __PropertyOffset_IsOpenDebugChangeConfigPreview;
 
-		// Token: 0x040156BC RID: 87740
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011464 RID: 70756
+		internal static int __PropertyOffset_CompositionConfig;
 
-		// Token: 0x040156BD RID: 87741
+		// Token: 0x04011465 RID: 70757
 		[Nullable(2)]
 		private SPhotoCameraCompositionConfig _CompositionConfig;
 
-		// Token: 0x040156BE RID: 87742
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011466 RID: 70758
+		internal static int __PropertyOffset_CharacterMoveSpeed;
 
-		// Token: 0x040156BF RID: 87743
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011467 RID: 70759
+		internal static int __PropertyOffset_NeedLeaveSitDownBeforeEnter;
 
-		// Token: 0x040156C0 RID: 87744
-		internal static int __PropertyOffset_10;
+		// Token: 0x04011468 RID: 70760
+		internal static int __PropertyOffset_Tags;
 
-		// Token: 0x040156C1 RID: 87745
+		// Token: 0x04011469 RID: 70761
 		[Nullable(new byte[]
 		{
 			2,

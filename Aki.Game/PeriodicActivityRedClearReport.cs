@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002156 RID: 8534
+// Token: 0x0200162E RID: 5678
 [NullableContext(1)]
 [Nullable(0)]
 public class PeriodicActivityRedClearReport : PlayerCommonLogData
 {
-	// Token: 0x170014F9 RID: 5369
-	// (get) Token: 0x06010A38 RID: 68152 RVA: 0x0040C0D7 File Offset: 0x0040A2D7
-	// (set) Token: 0x06010A39 RID: 68153 RVA: 0x0040C0DF File Offset: 0x0040A2DF
+	// Token: 0x17001527 RID: 5415
+	// (get) Token: 0x0600DEAB RID: 57003 RVA: 0x0041881F File Offset: 0x00416A1F
+	// (set) Token: 0x0600DEAC RID: 57004 RVA: 0x00418827 File Offset: 0x00416A27
 	public override string event_id { get; set; } = "1839";
 
-	// Token: 0x04007DFE RID: 32254
+	// Token: 0x04007F0E RID: 32526
 	public int i_activity_id;
 
-	// Token: 0x04007DFF RID: 32255
+	// Token: 0x04007F0F RID: 32527
 	public int i_round;
 
-	// Token: 0x04007E00 RID: 32256
+	// Token: 0x04007F10 RID: 32528
 	public int i_result;
 
-	// Token: 0x04007E01 RID: 32257
+	// Token: 0x04007F11 RID: 32529
 	public int i_way;
 }

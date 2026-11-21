@@ -4,93 +4,93 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CC6 RID: 19654
+	// Token: 0x02003C77 RID: 15479
 	[NullableContext(1)]
 	public interface IRoleDevRoleViewItemData
 	{
-		// Token: 0x17007D41 RID: 32065
-		// (get) Token: 0x06032BCB RID: 207819
-		// (set) Token: 0x06032BCC RID: 207820
+		// Token: 0x170050EB RID: 20715
+		// (get) Token: 0x0602797F RID: 162175
+		// (set) Token: 0x06027980 RID: 162176
 		int RoleId { get; set; }
 
-		// Token: 0x17007D42 RID: 32066
-		// (get) Token: 0x06032BCD RID: 207821
-		// (set) Token: 0x06032BCE RID: 207822
+		// Token: 0x170050EC RID: 20716
+		// (get) Token: 0x06027981 RID: 162177
+		// (set) Token: 0x06027982 RID: 162178
 		int RoleLevel { get; set; }
 
-		// Token: 0x17007D43 RID: 32067
-		// (get) Token: 0x06032BCF RID: 207823
-		// (set) Token: 0x06032BD0 RID: 207824
+		// Token: 0x170050ED RID: 20717
+		// (get) Token: 0x06027983 RID: 162179
+		// (set) Token: 0x06027984 RID: 162180
 		bool RoleLevelIsMax { get; set; }
 
-		// Token: 0x17007D44 RID: 32068
-		// (get) Token: 0x06032BD1 RID: 207825
-		// (set) Token: 0x06032BD2 RID: 207826
+		// Token: 0x170050EE RID: 20718
+		// (get) Token: 0x06027985 RID: 162181
+		// (set) Token: 0x06027986 RID: 162182
 		int BreachLevel { get; set; }
 
-		// Token: 0x17007D45 RID: 32069
-		// (get) Token: 0x06032BD3 RID: 207827
-		// (set) Token: 0x06032BD4 RID: 207828
+		// Token: 0x170050EF RID: 20719
+		// (get) Token: 0x06027987 RID: 162183
+		// (set) Token: 0x06027988 RID: 162184
 		int RoleGoalUpgradeLevel { get; set; }
 
-		// Token: 0x17007D46 RID: 32070
-		// (get) Token: 0x06032BD5 RID: 207829
-		// (set) Token: 0x06032BD6 RID: 207830
+		// Token: 0x170050F0 RID: 20720
+		// (get) Token: 0x06027989 RID: 162185
+		// (set) Token: 0x0602798A RID: 162186
 		int RoleGoalBreakLevel { get; set; }
 
-		// Token: 0x17007D47 RID: 32071
-		// (get) Token: 0x06032BD7 RID: 207831
-		// (set) Token: 0x06032BD8 RID: 207832
+		// Token: 0x170050F1 RID: 20721
+		// (get) Token: 0x0602798B RID: 162187
+		// (set) Token: 0x0602798C RID: 162188
 		string RoleName { get; set; }
 
-		// Token: 0x17007D48 RID: 32072
-		// (get) Token: 0x06032BD9 RID: 207833
-		// (set) Token: 0x06032BDA RID: 207834
+		// Token: 0x170050F2 RID: 20722
+		// (get) Token: 0x0602798D RID: 162189
+		// (set) Token: 0x0602798E RID: 162190
 		int GachaId { get; set; }
 
-		// Token: 0x17007D49 RID: 32073
-		// (get) Token: 0x06032BDB RID: 207835
-		// (set) Token: 0x06032BDC RID: 207836
+		// Token: 0x170050F3 RID: 20723
+		// (get) Token: 0x0602798F RID: 162191
+		// (set) Token: 0x06027990 RID: 162192
 		bool IsForecast { get; set; }
 
-		// Token: 0x17007D4A RID: 32074
-		// (get) Token: 0x06032BDD RID: 207837
-		// (set) Token: 0x06032BDE RID: 207838
+		// Token: 0x170050F4 RID: 20724
+		// (get) Token: 0x06027991 RID: 162193
+		// (set) Token: 0x06027992 RID: 162194
 		bool IsCall { get; set; }
 
-		// Token: 0x17007D4B RID: 32075
-		// (get) Token: 0x06032BDF RID: 207839
-		// (set) Token: 0x06032BE0 RID: 207840
+		// Token: 0x170050F5 RID: 20725
+		// (get) Token: 0x06027993 RID: 162195
+		// (set) Token: 0x06027994 RID: 162196
 		bool IsCanUpgrade { get; set; }
 
-		// Token: 0x17007D4C RID: 32076
-		// (get) Token: 0x06032BE1 RID: 207841
-		// (set) Token: 0x06032BE2 RID: 207842
+		// Token: 0x170050F6 RID: 20726
+		// (get) Token: 0x06027995 RID: 162197
+		// (set) Token: 0x06027996 RID: 162198
 		bool IsCanBreach { get; set; }
 
-		// Token: 0x17007D4D RID: 32077
-		// (get) Token: 0x06032BE3 RID: 207843
-		// (set) Token: 0x06032BE4 RID: 207844
+		// Token: 0x170050F7 RID: 20727
+		// (get) Token: 0x06027997 RID: 162199
+		// (set) Token: 0x06027998 RID: 162200
 		bool IsCanShowUpgradeItem { get; set; }
 
-		// Token: 0x17007D4E RID: 32078
-		// (get) Token: 0x06032BE5 RID: 207845
-		// (set) Token: 0x06032BE6 RID: 207846
+		// Token: 0x170050F8 RID: 20728
+		// (get) Token: 0x06027999 RID: 162201
+		// (set) Token: 0x0602799A RID: 162202
 		bool IsCanShowBreachItem { get; set; }
 
-		// Token: 0x17007D4F RID: 32079
-		// (get) Token: 0x06032BE7 RID: 207847
-		// (set) Token: 0x06032BE8 RID: 207848
+		// Token: 0x170050F9 RID: 20729
+		// (get) Token: 0x0602799B RID: 162203
+		// (set) Token: 0x0602799C RID: 162204
 		bool IsFinish { get; set; }
 
-		// Token: 0x17007D50 RID: 32080
-		// (get) Token: 0x06032BE9 RID: 207849
-		// (set) Token: 0x06032BEA RID: 207850
+		// Token: 0x170050FA RID: 20730
+		// (get) Token: 0x0602799D RID: 162205
+		// (set) Token: 0x0602799E RID: 162206
 		bool IsAllMaterialEnough { get; set; }
 
-		// Token: 0x17007D51 RID: 32081
-		// (get) Token: 0x06032BEB RID: 207851
-		// (set) Token: 0x06032BEC RID: 207852
+		// Token: 0x170050FB RID: 20731
+		// (get) Token: 0x0602799F RID: 162207
+		// (set) Token: 0x060279A0 RID: 162208
 		List<IRoleDevDetailItemData> DetailItems { get; set; }
 	}
 }

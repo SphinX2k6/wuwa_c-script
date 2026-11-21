@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015BD RID: 5565
+	// Token: 0x0200162F RID: 5679
 	public enum SwitchRoleType
 	{
-		// Token: 0x0400BC9F RID: 48287
+		// Token: 0x0400C192 RID: 49554
 		[OriginalName("SignleWorld")]
 		SignleWorld,
-		// Token: 0x0400BCA0 RID: 48288
+		// Token: 0x0400C193 RID: 49555
 		[OriginalName("MultiWorld")]
 		MultiWorld,
-		// Token: 0x0400BCA1 RID: 48289
+		// Token: 0x0400C194 RID: 49556
 		[OriginalName("FbInstance")]
 		FbInstance
 	}

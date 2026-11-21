@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002E84 RID: 11908
+// Token: 0x020023D6 RID: 9174
 public enum EBuffPeriodicInhibitionPolicy
 {
-	// Token: 0x0400BD94 RID: 48532
+	// Token: 0x0400C12B RID: 49451
 	None,
-	// Token: 0x0400BD95 RID: 48533
+	// Token: 0x0400C12C RID: 49452
 	Reset,
-	// Token: 0x0400BD96 RID: 48534
+	// Token: 0x0400C12D RID: 49453
 	ResetAndExecute
 }

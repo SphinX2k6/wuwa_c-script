@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001299 RID: 4761
+// Token: 0x0200074D RID: 1869
 public class LifePointDrawEntranceView : UiViewBase
 {
-	// Token: 0x0600824D RID: 33357 RVA: 0x001BA07F File Offset: 0x001B827F
+	// Token: 0x060055E4 RID: 21988 RVA: 0x001C2D4F File Offset: 0x001C0F4F
 	[NullableContext(1)]
 	public LifePointDrawEntranceView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600824E RID: 33358 RVA: 0x001BA094 File Offset: 0x001B8294
+	// Token: 0x060055E5 RID: 21989 RVA: 0x001C2D64 File Offset: 0x001C0F64
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -47,7 +47,7 @@ public class LifePointDrawEntranceView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600824F RID: 33359 RVA: 0x001BA208 File Offset: 0x001B8408
+	// Token: 0x060055E6 RID: 21990 RVA: 0x001C2ED8 File Offset: 0x001C10D8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LifePointDrawEntranceView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -58,20 +58,20 @@ public class LifePointDrawEntranceView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008250 RID: 33360 RVA: 0x001BA24B File Offset: 0x001B844B
+	// Token: 0x060055E7 RID: 21991 RVA: 0x001C2F1B File Offset: 0x001C111B
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008251 RID: 33361 RVA: 0x001BA254 File Offset: 0x001B8454
+	// Token: 0x060055E8 RID: 21992 RVA: 0x001C2F24 File Offset: 0x001C1124
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 		this.RefreshScrollPercentage();
 	}
 
-	// Token: 0x06008252 RID: 33362 RVA: 0x001BA264 File Offset: 0x001B8464
+	// Token: 0x060055E9 RID: 21993 RVA: 0x001C2F34 File Offset: 0x001C1134
 	public void RefreshView()
 	{
 		LifePointEntrance value = LifePointDrawConfig.Instance.GetLifePointEntranceById(this.LifePointDrawActivityData.Id).Value;
@@ -93,7 +93,7 @@ public class LifePointDrawEntranceView : UiViewBase
 		this.RefreshProgressText();
 	}
 
-	// Token: 0x06008253 RID: 33363 RVA: 0x001BA320 File Offset: 0x001B8520
+	// Token: 0x060055EA RID: 21994 RVA: 0x001C2FF0 File Offset: 0x001C11F0
 	private void RefreshScrollPercentage()
 	{
 		LifePointEntrance value = LifePointDrawConfig.Instance.GetLifePointEntranceById(this.LifePointDrawActivityData.Id).Value;
@@ -121,7 +121,7 @@ public class LifePointDrawEntranceView : UiViewBase
 		scrollItem.OnLateUpdate.Bind(callback);
 	}
 
-	// Token: 0x06008254 RID: 33364 RVA: 0x001BA3D8 File Offset: 0x001B85D8
+	// Token: 0x060055EB RID: 21995 RVA: 0x001C30A8 File Offset: 0x001C12A8
 	private void RefreshProgressText()
 	{
 		string progressByActivityId = LifePointDrawModel.Instance.GetProgressByActivityId(this.LifePointDrawActivityData.Id, "Colorful_Finish_Progress");
@@ -133,49 +133,49 @@ public class LifePointDrawEntranceView : UiViewBase
 		text.SetText(progressByActivityId, true);
 	}
 
-	// Token: 0x04003AE0 RID: 15072
+	// Token: 0x04003B78 RID: 15224
 	[Nullable(2)]
 	private LifePointDrawActivityData LifePointDrawActivityData;
 
-	// Token: 0x04003AE1 RID: 15073
+	// Token: 0x04003B79 RID: 15225
 	[Nullable(1)]
 	private readonly List<LifePointDrawItem> LifePointItemList = new List<LifePointDrawItem>();
 
-	// Token: 0x04003AE2 RID: 15074
+	// Token: 0x04003B7A RID: 15226
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x020078AE RID: 30894
+	// Token: 0x02006A39 RID: 27193
 	private class EComponent
 	{
-		// Token: 0x04027C1E RID: 162846
+		// Token: 0x04022F4F RID: 143183
 		public const int CaptionItem = 0;
 
-		// Token: 0x04027C1F RID: 162847
+		// Token: 0x04022F50 RID: 143184
 		public const int ItemScroll = 1;
 
-		// Token: 0x04027C20 RID: 162848
+		// Token: 0x04022F51 RID: 143185
 		public const int Point1 = 2;
 
-		// Token: 0x04027C21 RID: 162849
+		// Token: 0x04022F52 RID: 143186
 		public const int Point2 = 3;
 
-		// Token: 0x04027C22 RID: 162850
+		// Token: 0x04022F53 RID: 143187
 		public const int Point3 = 4;
 
-		// Token: 0x04027C23 RID: 162851
+		// Token: 0x04022F54 RID: 143188
 		public const int Point4 = 5;
 
-		// Token: 0x04027C24 RID: 162852
+		// Token: 0x04022F55 RID: 143189
 		public const int Point5 = 6;
 
-		// Token: 0x04027C25 RID: 162853
+		// Token: 0x04022F56 RID: 143190
 		public const int Point6 = 7;
 
-		// Token: 0x04027C26 RID: 162854
+		// Token: 0x04022F57 RID: 143191
 		public const int Point7 = 8;
 
-		// Token: 0x04027C27 RID: 162855
+		// Token: 0x04022F58 RID: 143192
 		public const int ProgressText = 9;
 	}
 }

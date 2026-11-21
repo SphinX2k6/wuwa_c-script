@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006625 RID: 26149
+	// Token: 0x020055A3 RID: 21923
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FishingRoleTechView : UiTabViewBase
 	{
-		// Token: 0x060418E5 RID: 268517 RVA: 0x00FE59C4 File Offset: 0x00FE3BC4
+		// Token: 0x060365AA RID: 222634 RVA: 0x00F2CA78 File Offset: 0x00F2AC78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060418E6 RID: 268518 RVA: 0x00FE5C20 File Offset: 0x00FE3E20
+		// Token: 0x060365AB RID: 222635 RVA: 0x00F2CCD4 File Offset: 0x00F2AED4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingRoleTechView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060418E7 RID: 268519 RVA: 0x00FE5C64 File Offset: 0x00FE3E64
+		// Token: 0x060365AC RID: 222636 RVA: 0x00F2CD18 File Offset: 0x00F2AF18
 		protected override void OnStart()
 		{
 			RoleTechToggle rightToggle = this.RightToggle;
@@ -133,14 +133,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418E8 RID: 268520 RVA: 0x00FE5D90 File Offset: 0x00FE3F90
+		// Token: 0x060365AD RID: 222637 RVA: 0x00F2CE44 File Offset: 0x00F2B044
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingRoleToggleTech, base.GetItem(12), 5);
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.FishingRoleToggleTech, base.GetItem(11), 4);
 		}
 
-		// Token: 0x060418E9 RID: 268521 RVA: 0x00FE5DC4 File Offset: 0x00FE3FC4
+		// Token: 0x060365AE RID: 222638 RVA: 0x00F2CE78 File Offset: 0x00F2B078
 		protected override void OnBeforeShow()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -151,21 +151,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelSequencePlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x060418EA RID: 268522 RVA: 0x00FE5DF1 File Offset: 0x00FE3FF1
+		// Token: 0x060365AF RID: 222639 RVA: 0x00F2CEA5 File Offset: 0x00F2B0A5
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
 			EventSystem.Instance.Add(EEventName.FishingTechViewComeBack, new Action(this.FishingTechViewComeBack));
 		}
 
-		// Token: 0x060418EB RID: 268523 RVA: 0x00FE5E2B File Offset: 0x00FE402B
+		// Token: 0x060365B0 RID: 222640 RVA: 0x00F2CEDF File Offset: 0x00F2B0DF
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFishingTechNodeRefresh, new Action<int>(this.OnFishingTechNodeRefresh));
 			EventSystem.Instance.Remove(EEventName.FishingTechViewComeBack, new Action(this.FishingTechViewComeBack));
 		}
 
-		// Token: 0x060418EC RID: 268524 RVA: 0x00FE5E65 File Offset: 0x00FE4065
+		// Token: 0x060365B1 RID: 222641 RVA: 0x00F2CF19 File Offset: 0x00F2B119
 		private void OnFishingTechNodeRefresh(int nodeId)
 		{
 			this.CurrentSelectToggle = null;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			EventSystem.Instance.Emit<EFishingTechNodeType>(EEventName.OnFishingRoleTechRefresh, (EFishingTechNodeType)this.CurrentRole);
 		}
 
-		// Token: 0x060418ED RID: 268525 RVA: 0x00FE5EA1 File Offset: 0x00FE40A1
+		// Token: 0x060365B2 RID: 222642 RVA: 0x00F2CF55 File Offset: 0x00F2B155
 		private void FishingTechViewComeBack()
 		{
 			if (this.CurrentRole != 0)
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418EE RID: 268526 RVA: 0x00FE5EB8 File Offset: 0x00FE40B8
+		// Token: 0x060365B3 RID: 222643 RVA: 0x00F2CF6C File Offset: 0x00F2B16C
 		private void RefreshView(int roleType)
 		{
 			this.CurrentRole = roleType;
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, false);
 		}
 
-		// Token: 0x060418EF RID: 268527 RVA: 0x00FE5F6F File Offset: 0x00FE416F
+		// Token: 0x060365B4 RID: 222644 RVA: 0x00F2D023 File Offset: 0x00F2B223
 		[NullableContext(1)]
 		private void OnClickRightToggle(UUIExtendToggle toggle)
 		{
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418F0 RID: 268528 RVA: 0x00FE5F9E File Offset: 0x00FE419E
+		// Token: 0x060365B5 RID: 222645 RVA: 0x00F2D052 File Offset: 0x00F2B252
 		[NullableContext(1)]
 		private void OnClickLeftToggle(UUIExtendToggle toggle)
 		{
@@ -287,7 +287,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418F1 RID: 268529 RVA: 0x00FE5FCD File Offset: 0x00FE41CD
+		// Token: 0x060365B6 RID: 222646 RVA: 0x00F2D081 File Offset: 0x00F2B281
 		private void OnClickLevelUpBtn()
 		{
 			if (this.CurrentNode != null)
@@ -296,14 +296,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418F2 RID: 268530 RVA: 0x00FE5FEC File Offset: 0x00FE41EC
+		// Token: 0x060365B7 RID: 222647 RVA: 0x00F2D0A0 File Offset: 0x00F2B2A0
 		[NullableContext(1)]
 		private FishingTechLevelUpItem InitItem()
 		{
 			return new FishingTechLevelUpItem();
 		}
 
-		// Token: 0x060418F3 RID: 268531 RVA: 0x00FE5FF3 File Offset: 0x00FE41F3
+		// Token: 0x060365B8 RID: 222648 RVA: 0x00F2D0A7 File Offset: 0x00F2B2A7
 		[NullableContext(1)]
 		private FishingRoleTechItem InitRoleTech()
 		{
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x060418F4 RID: 268532 RVA: 0x00FE600C File Offset: 0x00FE420C
+		// Token: 0x060365B9 RID: 222649 RVA: 0x00F2D0C0 File Offset: 0x00F2B2C0
 		[NullableContext(1)]
 		private void OnClickFishingRoleTechItem(IFishingTechNode node, UUIExtendToggle toggle)
 		{
@@ -387,19 +387,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			costItem3.SetUiActive(uiActive);
 		}
 
-		// Token: 0x040221BA RID: 139706
+		// Token: 0x0401CAEB RID: 117483
 		private int CurrentRole;
 
-		// Token: 0x040221BB RID: 139707
+		// Token: 0x0401CAEC RID: 117484
 		private IFishingTechNode CurrentNode;
 
-		// Token: 0x040221BC RID: 139708
+		// Token: 0x0401CAED RID: 117485
 		private RoleTechToggle RightToggle;
 
-		// Token: 0x040221BD RID: 139709
+		// Token: 0x0401CAEE RID: 117486
 		private RoleTechToggle LeftToggle;
 
-		// Token: 0x040221BE RID: 139710
+		// Token: 0x0401CAEF RID: 117487
 		[Nullable(new byte[]
 		{
 			2,
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingRoleTechItem, IFishingTechNode> RoleTechNodeLayout;
 
-		// Token: 0x040221BF RID: 139711
+		// Token: 0x0401CAF0 RID: 117488
 		[Nullable(new byte[]
 		{
 			2,
@@ -417,68 +417,68 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 		})]
 		private GenericLayout<FishingTechLevelUpItem, IFishingTechLevelUpItem> ItemLayout;
 
-		// Token: 0x040221C0 RID: 139712
+		// Token: 0x0401CAF1 RID: 117489
 		private UUIExtendToggle CurrentSelectToggle;
 
-		// Token: 0x040221C1 RID: 139713
+		// Token: 0x0401CAF2 RID: 117490
 		private UUIExtendToggle CurrentSelectRoleToggle;
 
-		// Token: 0x040221C2 RID: 139714
+		// Token: 0x0401CAF3 RID: 117491
 		private FishingTechCostItem CostItem;
 
-		// Token: 0x040221C3 RID: 139715
+		// Token: 0x0401CAF4 RID: 117492
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040221C4 RID: 139716
+		// Token: 0x0401CAF5 RID: 117493
 		private int TargetNodeId;
 
-		// Token: 0x0200C83D RID: 51261
+		// Token: 0x0200B21F RID: 45599
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403C7C5 RID: 247749
+			// Token: 0x0403710A RID: 225546
 			public const int RoleTexture = 0;
 
-			// Token: 0x0403C7C6 RID: 247750
+			// Token: 0x0403710B RID: 225547
 			public const int LeftToggleItem = 1;
 
-			// Token: 0x0403C7C7 RID: 247751
+			// Token: 0x0403710C RID: 225548
 			public const int RightToggleItem = 2;
 
-			// Token: 0x0403C7C8 RID: 247752
+			// Token: 0x0403710D RID: 225549
 			public const int RoleTechNodeItemLayout = 3;
 
-			// Token: 0x0403C7C9 RID: 247753
+			// Token: 0x0403710E RID: 225550
 			public const int RoleTechNodeItem = 4;
 
-			// Token: 0x0403C7CA RID: 247754
+			// Token: 0x0403710F RID: 225551
 			public const int CostItem = 5;
 
-			// Token: 0x0403C7CB RID: 247755
+			// Token: 0x04037110 RID: 225552
 			public const int NeedItemLayout = 6;
 
-			// Token: 0x0403C7CC RID: 247756
+			// Token: 0x04037111 RID: 225553
 			public const int NeedItem = 7;
 
-			// Token: 0x0403C7CD RID: 247757
+			// Token: 0x04037112 RID: 225554
 			public const int LevelUpBtn = 8;
 
-			// Token: 0x0403C7CE RID: 247758
+			// Token: 0x04037113 RID: 225555
 			public const int NotEnoughItem = 9;
 
-			// Token: 0x0403C7CF RID: 247759
+			// Token: 0x04037114 RID: 225556
 			public const int MaxLevelItem = 10;
 
-			// Token: 0x0403C7D0 RID: 247760
+			// Token: 0x04037115 RID: 225557
 			public const int LeftToggleRedDotItem = 11;
 
-			// Token: 0x0403C7D1 RID: 247761
+			// Token: 0x04037116 RID: 225558
 			public const int RightToggleRedDotItem = 12;
 
-			// Token: 0x0403C7D2 RID: 247762
+			// Token: 0x04037117 RID: 225559
 			public const int RoleTypeRootItem = 13;
 
-			// Token: 0x0403C7D3 RID: 247763
+			// Token: 0x04037118 RID: 225560
 			public const int CostDesItem = 14;
 		}
 	}
